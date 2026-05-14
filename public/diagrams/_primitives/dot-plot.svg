@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 200" role="img" aria-label="Dot plot of pets per family. 1 pet: 2 dots. 2 pets: 4 dots. 3 pets: 3 dots. 4 pets: 1 dot.">
+  <line x1="40" y1="170" x2="420" y2="170" stroke="#0f172a" stroke-width="2"/>
+  <g font-family="Nunito, sans-serif" font-size="14" font-weight="700" fill="#0f172a" text-anchor="middle">
+    <g><line x1="100" y1="165" x2="100" y2="175" stroke="#0f172a" stroke-width="2"/><text x="100" y="190">1</text></g>
+    <g><line x1="180" y1="165" x2="180" y2="175" stroke="#0f172a" stroke-width="2"/><text x="180" y="190">2</text></g>
+    <g><line x1="260" y1="165" x2="260" y2="175" stroke="#0f172a" stroke-width="2"/><text x="260" y="190">3</text></g>
+    <g><line x1="340" y1="165" x2="340" y2="175" stroke="#0f172a" stroke-width="2"/><text x="340" y="190">4</text></g>
+  </g>
+  <g fill="#1CB0F6" stroke="#0f172a" stroke-width="1.5">
+    <circle cx="100" cy="150" r="10"/>
+    <circle cx="100" cy="125" r="10"/>
+    <circle cx="180" cy="150" r="10"/>
+    <circle cx="180" cy="125" r="10"/>
+    <circle cx="180" cy="100" r="10"/>
+    <circle cx="180" cy="75" r="10"/>
+    <circle cx="260" cy="150" r="10"/>
+    <circle cx="260" cy="125" r="10"/>
+    <circle cx="260" cy="100" r="10"/>
+    <circle cx="340" cy="150" r="10"/>
+  </g>
+  <text x="230" y="20" font-family="Nunito, sans-serif" font-size="14" font-weight="700" fill="#0f172a" text-anchor="middle">Pets per family</text>
+</svg>

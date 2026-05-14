@@ -1,0 +1,26 @@
+{
+  "id": "6.RP.002",
+  "domain": "6.RP",
+  "unit": 1,
+  "orderInUnit": 2,
+  "standard": "6.RP.A.3",
+  "difficulty": 1,
+  "prompt": "A fraction bar is divided into $8$ equal parts. Three parts are shaded. What fraction of the bar is shaded? Write your answer as a fraction in the form $a/b$.",
+  "diagram": {
+    "kind": "svg-asset",
+    "src": "diagrams/_primitives/fraction-bar.svg",
+    "alt": "Fraction bar split into 8 equal parts with 3 shaded"
+  },
+  "answerType": "fraction",
+  "primaryAnswer": "3/8",
+  "alternativeAnswers": ["0.375"],
+  "acceptanceMode": "normalized",
+  "hint": "Count the shaded parts (numerator) and the total parts (denominator).",
+  "explanation": [
+    "There are $3$ shaded parts out of $8$ equal parts total.",
+    "Write that as a fraction: $\\frac{\\text{shaded}}{\\text{total}} = \\frac{3}{8}$.",
+    "Final answer: $\\frac{3}{8}$."
+  ],
+  "tags": ["MAP-practice", "ratios", "fractions"],
+  "estimatedSeconds": 40
+}

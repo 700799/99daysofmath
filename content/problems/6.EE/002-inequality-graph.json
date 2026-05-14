@@ -1,0 +1,32 @@
+{
+  "id": "6.EE.002",
+  "domain": "6.EE",
+  "unit": 1,
+  "orderInUnit": 2,
+  "standard": "6.EE.B.8",
+  "difficulty": 2,
+  "prompt": "Which inequality is shown on the number line below? (An **open** circle means the value itself is **not** included.)",
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Number line with open circle at 2 and arrow going right",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 80' role='img' aria-label='Number line, open circle at 2, ray going right'><line x1='20' y1='40' x2='420' y2='40' stroke='#0f172a' stroke-width='2'/><polygon points='20,40 30,34 30,46' fill='#0f172a'/><polygon points='420,40 410,34 410,46' fill='#0f172a'/><g font-family='Nunito, sans-serif' font-size='14' font-weight='700' fill='#0f172a' text-anchor='middle'><g><line x1='60' y1='30' x2='60' y2='50' stroke='#0f172a' stroke-width='2'/><text x='60' y='70'>-4</text></g><g><line x1='105' y1='30' x2='105' y2='50' stroke='#0f172a' stroke-width='2'/><text x='105' y='70'>-3</text></g><g><line x1='150' y1='30' x2='150' y2='50' stroke='#0f172a' stroke-width='2'/><text x='150' y='70'>-2</text></g><g><line x1='195' y1='30' x2='195' y2='50' stroke='#0f172a' stroke-width='2'/><text x='195' y='70'>-1</text></g><g><line x1='240' y1='30' x2='240' y2='50' stroke='#0f172a' stroke-width='2'/><text x='240' y='70'>0</text></g><g><line x1='285' y1='30' x2='285' y2='50' stroke='#0f172a' stroke-width='2'/><text x='285' y='70'>1</text></g><g><line x1='330' y1='30' x2='330' y2='50' stroke='#0f172a' stroke-width='2'/><text x='330' y='70'>2</text></g><g><line x1='375' y1='30' x2='375' y2='50' stroke='#0f172a' stroke-width='2'/><text x='375' y='70'>3</text></g></g><line x1='330' y1='40' x2='420' y2='40' stroke='#FF9600' stroke-width='6'/><polygon points='420,40 408,32 408,48' fill='#FF9600'/><circle cx='330' cy='40' r='8' fill='white' stroke='#FF9600' stroke-width='4'/></svg>"
+  },
+  "answerType": "multiple-choice",
+  "choices": [
+    { "id": "A", "label": "$x < 2$", "correct": false },
+    { "id": "B", "label": "$x \\le 2$", "correct": false },
+    { "id": "C", "label": "$x > 2$", "correct": true },
+    { "id": "D", "label": "$x \\ge 2$", "correct": false }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "An **open** circle means \"strictly greater than\" or \"strictly less than\" — the endpoint is **not** included.",
+  "explanation": [
+    "The circle is **open**, so $2$ itself is not part of the solution. That rules out $\\le$ and $\\ge$.",
+    "The arrow points **right** from $2$, meaning values **greater than** $2$.",
+    "So the inequality is $x > 2$."
+  ],
+  "tags": ["CA", "inequalities", "MAP-practice"],
+  "estimatedSeconds": 45
+}

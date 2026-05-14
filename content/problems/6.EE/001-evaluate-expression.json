@@ -1,0 +1,21 @@
+{
+  "id": "6.EE.001",
+  "domain": "6.EE",
+  "unit": 1,
+  "orderInUnit": 1,
+  "standard": "6.EE.A.2.c",
+  "difficulty": 1,
+  "prompt": "Evaluate the expression $3x + 5$ when $x = 4$.",
+  "answerType": "numeric",
+  "primaryAnswer": "17",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $4$ for $x$ first, then follow the order of operations: multiply before you add.",
+  "explanation": [
+    "Substitute $x = 4$ into $3x + 5$: $3(4) + 5$.",
+    "Multiply first: $3 \\times 4 = 12$.",
+    "Then add: $12 + 5 = 17$."
+  ],
+  "tags": ["CA", "expressions"],
+  "estimatedSeconds": 30
+}

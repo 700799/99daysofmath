@@ -1,0 +1,26 @@
+{
+  "id": "6.SP.002",
+  "domain": "6.SP",
+  "unit": 1,
+  "orderInUnit": 2,
+  "standard": "6.SP.B.4",
+  "difficulty": 1,
+  "prompt": "The dot plot shows the number of pets each family in a class has. How many families have **exactly $2$ pets**?",
+  "diagram": {
+    "kind": "svg-asset",
+    "src": "diagrams/_primitives/dot-plot.svg",
+    "alt": "Dot plot of pets per family: 1 pet has 2 dots, 2 pets has 4 dots, 3 pets has 3 dots, 4 pets has 1 dot"
+  },
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Count the number of dots stacked above the value $2$ on the number line.",
+  "explanation": [
+    "Look at the column **above 2** on the dot plot.",
+    "Count the dots in that column: there are $4$.",
+    "So $4$ families have exactly $2$ pets."
+  ],
+  "tags": ["CA", "statistics", "data-displays"],
+  "estimatedSeconds": 30
+}

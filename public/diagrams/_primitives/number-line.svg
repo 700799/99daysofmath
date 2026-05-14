@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 80" role="img" aria-label="Number line">
+  <line x1="20" y1="40" x2="420" y2="40" stroke="#0f172a" stroke-width="2"/>
+  <polygon points="20,40 30,34 30,46" fill="#0f172a"/>
+  <polygon points="420,40 410,34 410,46" fill="#0f172a"/>
+  <g font-family="Nunito, sans-serif" font-size="14" font-weight="700" fill="#0f172a" text-anchor="middle">
+    <g><line x1="60" y1="30" x2="60" y2="50" stroke="#0f172a" stroke-width="2"/><text x="60" y="70">-4</text></g>
+    <g><line x1="105" y1="30" x2="105" y2="50" stroke="#0f172a" stroke-width="2"/><text x="105" y="70">-3</text></g>
+    <g><line x1="150" y1="30" x2="150" y2="50" stroke="#0f172a" stroke-width="2"/><text x="150" y="70">-2</text></g>
+    <g><line x1="195" y1="30" x2="195" y2="50" stroke="#0f172a" stroke-width="2"/><text x="195" y="70">-1</text></g>
+    <g><line x1="240" y1="28" x2="240" y2="52" stroke="#0f172a" stroke-width="3"/><text x="240" y="72">0</text></g>
+    <g><line x1="285" y1="30" x2="285" y2="50" stroke="#0f172a" stroke-width="2"/><text x="285" y="70">1</text></g>
+    <g><line x1="330" y1="30" x2="330" y2="50" stroke="#0f172a" stroke-width="2"/><text x="330" y="70">2</text></g>
+    <g><line x1="375" y1="30" x2="375" y2="50" stroke="#0f172a" stroke-width="2"/><text x="375" y="70">3</text></g>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "id": "6.G.002",
+  "domain": "6.G",
+  "unit": 1,
+  "orderInUnit": 2,
+  "standard": "6.G.A.2",
+  "difficulty": 2,
+  "prompt": "A rectangular prism has length $3$ in, width $4$ in, and height $5$ in. What is its **volume** in cubic inches?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": ["60 in^3", "60 cubic inches"],
+  "acceptanceMode": "normalized",
+  "hint": "Volume of a rectangular prism is **length × width × height**.",
+  "explanation": [
+    "Volume = $l \\times w \\times h = 3 \\times 4 \\times 5$.",
+    "First multiply $3 \\times 4 = 12$.",
+    "Then $12 \\times 5 = 60$.",
+    "The volume is $60$ cubic inches."
+  ],
+  "tags": ["CA", "volume"],
+  "estimatedSeconds": 45
+}

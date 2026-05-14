@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "problems.schema.json",
+  "title": "Problem",
+  "type": "object",
+  "required": [
+    "id",
+    "domain",
+    "unit",
+    "orderInUnit",
+    "standard",
+    "difficulty",
+    "prompt",
+    "answerType",
+    "primaryAnswer",
+    "alternativeAnswers",
+    "acceptanceMode",
+    "hint",
+    "explanation",
+    "tags",
+    "estimatedSeconds"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^6\\.(RP|NS|EE|G|SP)\\.\\d{3}$" },
+    "domain": { "enum": ["6.RP", "6.NS", "6.EE", "6.G", "6.SP"] },
+    "unit": { "type": "integer", "minimum": 1, "maximum": 20 },
+    "orderInUnit": { "type": "integer", "minimum": 1 },
+    "standard": { "type": "string", "pattern": "^6\\.(RP|NS|EE|G|SP)\\." },
+    "difficulty": { "type": "integer", "enum": [1, 2, 3] },
+    "prompt": { "type": "string", "minLength": 3 },
+    "diagram": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["kind", "src", "alt"],
+          "properties": {
+            "kind": { "const": "svg-asset" },
+            "src": { "type": "string" },
+            "alt": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": ["kind", "svg", "alt"],
+          "properties": {
+            "kind": { "const": "inline-svg" },
+            "svg": { "type": "string" },
+            "alt": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": ["kind", "art"],
+          "properties": {
+            "kind": { "const": "ascii" },
+            "art": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "answerType": {
+      "enum": ["numeric", "fraction", "expression", "multiple-choice", "short-text"]
+    },
+    "choices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "correct"],
+        "properties": {
+          "id": { "enum": ["A", "B", "C", "D"] },
+          "label": { "type": "string" },
+          "correct": { "type": "boolean" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "primaryAnswer": { "type": "string" },
+    "alternativeAnswers": { "type": "array", "items": { "type": "string" } },
+    "acceptanceMode": { "enum": ["exact", "normalized", "numeric-tolerance"] },
+    "numericTolerance": { "type": "number" },
+    "hint": { "type": "string" },
+    "explanation": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "estimatedSeconds": { "type": "integer", "minimum": 5, "maximum": 600 }
+  },
+  "additionalProperties": false
+}
