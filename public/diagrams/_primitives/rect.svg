@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Rectangle, 8 cm by 5 cm">
+  <rect x="40" y="40" width="240" height="120" fill="#DBEAFE" stroke="#1E40AF" stroke-width="3"/>
+  <g font-family="Nunito, sans-serif" font-size="18" font-weight="700" fill="#0f172a" text-anchor="middle">
+    <text x="160" y="30">8 cm</text>
+    <text x="160" y="185">8 cm</text>
+    <text x="20" y="105" transform="rotate(-90 20 105)">5 cm</text>
+    <text x="300" y="105" transform="rotate(90 300 105)">5 cm</text>
+  </g>
+</svg>

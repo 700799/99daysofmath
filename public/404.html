@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>99 Days of Math</title>
+    <script>
+      // Defensive SPA fallback: redirect any 404 to the hash-routed root.
+      var base = '/99daysofmath/';
+      var path = window.location.pathname;
+      if (path.indexOf(base) === 0) {
+        window.location.replace(base + '#' + path.slice(base.length - 1));
+      } else {
+        window.location.replace(base);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

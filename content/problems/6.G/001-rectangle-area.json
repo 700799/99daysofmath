@@ -1,0 +1,26 @@
+{
+  "id": "6.G.001",
+  "domain": "6.G",
+  "unit": 1,
+  "orderInUnit": 1,
+  "standard": "6.G.A.1",
+  "difficulty": 1,
+  "prompt": "What is the **area** of the rectangle below? Give your answer in **square centimeters**.",
+  "diagram": {
+    "kind": "svg-asset",
+    "src": "diagrams/_primitives/rect.svg",
+    "alt": "Rectangle 8 centimeters wide and 5 centimeters tall"
+  },
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": ["40 cm^2", "40 square cm", "40 sq cm"],
+  "acceptanceMode": "normalized",
+  "hint": "Area of a rectangle is **length × width**.",
+  "explanation": [
+    "The rectangle is $8$ cm long and $5$ cm tall.",
+    "Area = length × width = $8 \\times 5$.",
+    "$8 \\times 5 = 40$ square centimeters."
+  ],
+  "tags": ["MAP-practice", "area"],
+  "estimatedSeconds": 35
+}
