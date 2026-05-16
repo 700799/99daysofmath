@@ -13,9 +13,13 @@ interface DomainProgress {
 interface ProgressState {
   byDomain: Record<Domain, DomainProgress>;
   xp: number;
-  streak: number;
+  streak: number;       // consecutive-correct streak within current session
   bestStreak: number;
+  dailyStreak: number;  // calendar-day streak
+  bestDailyStreak: number;
+  lastPracticeDate: string | null; // YYYY-MM-DD
   stickers: string[];
+  soundEnabled: boolean;
   recordUnitResult: (
     domain: Domain,
     unit: number,
@@ -27,10 +31,26 @@ interface ProgressState {
   awardXP: (n: number) => void;
   incrementStreak: () => void;
   resetStreak: () => void;
+  touchDay: () => void;
+  toggleSound: () => void;
   isUnitUnlocked: (domain: Domain, unit: number) => boolean;
   starsForUnit: (domain: Domain, unit: number) => Stars;
   totalStars: () => number;
   resetAll: () => void;
+}
+
+function todayISO(): string {
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+function daysBetween(a: string, b: string): number {
+  const da = new Date(a + 'T00:00:00Z').getTime();
+  const db = new Date(b + 'T00:00:00Z').getTime();
+  return Math.round((db - da) / 86400000);
 }
 
 const blankDomain = (): DomainProgress => ({
@@ -55,7 +75,11 @@ export const useProgress = create<ProgressState>()(
       xp: 0,
       streak: 0,
       bestStreak: 0,
+      dailyStreak: 0,
+      bestDailyStreak: 0,
+      lastPracticeDate: null,
       stickers: [],
+      soundEnabled: true,
       recordUnitResult: (domain, unit, stars, missedIds, xpEarned, sticker) =>
         set((state) => {
           const d = state.byDomain[domain] ?? blankDomain();
@@ -88,6 +112,24 @@ export const useProgress = create<ProgressState>()(
           };
         }),
       resetStreak: () => set({ streak: 0 }),
+      touchDay: () =>
+        set((state) => {
+          const today = todayISO();
+          if (state.lastPracticeDate === today) return state;
+          let nextStreak: number;
+          if (!state.lastPracticeDate) {
+            nextStreak = 1;
+          } else {
+            const gap = daysBetween(state.lastPracticeDate, today);
+            nextStreak = gap === 1 ? state.dailyStreak + 1 : 1;
+          }
+          return {
+            lastPracticeDate: today,
+            dailyStreak: nextStreak,
+            bestDailyStreak: Math.max(state.bestDailyStreak, nextStreak),
+          };
+        }),
+      toggleSound: () => set((s) => ({ soundEnabled: !s.soundEnabled })),
       isUnitUnlocked: (domain, unit) =>
         unit <= (get().byDomain[domain]?.unitsUnlocked ?? 1),
       starsForUnit: (domain, unit) =>
@@ -107,9 +149,12 @@ export const useProgress = create<ProgressState>()(
           xp: 0,
           streak: 0,
           bestStreak: 0,
+          dailyStreak: 0,
+          bestDailyStreak: 0,
+          lastPracticeDate: null,
           stickers: [],
         }),
     }),
-    { name: '99daysofmath:progress', version: 2 },
+    { name: '99daysofmath:progress', version: 3 },
   ),
 );

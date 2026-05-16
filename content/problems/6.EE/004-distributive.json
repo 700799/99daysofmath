@@ -1,0 +1,32 @@
+{
+  "id": "6.EE.004",
+  "domain": "6.EE",
+  "unit": 1,
+  "orderInUnit": 4,
+  "standard": "6.EE.A.3",
+  "difficulty": 2,
+  "prompt": "Use the distributive property to expand $4(x + 3)$.",
+  "answerType": "expression",
+  "primaryAnswer": "4x+12",
+  "alternativeAnswers": ["12+4x"],
+  "acceptanceMode": "exact",
+  "hint": "Distribute the $4$ to **both** terms inside the parentheses: $4 \\cdot x$ and $4 \\cdot 3$.",
+  "explanation": [
+    "Multiply $4$ by each term inside the parentheses.",
+    "$4 \\cdot x = 4x$.",
+    "$4 \\cdot 3 = 12$.",
+    "Add them: $4x + 12$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Area model",
+      "steps": [
+        "Draw a rectangle with height $4$ and width split into $x$ and $3$.",
+        "Left part: area $= 4 \\cdot x = 4x$. Right part: area $= 4 \\cdot 3 = 12$.",
+        "Total area $= 4x + 12$, which equals $4(x + 3)$."
+      ]
+    }
+  ],
+  "tags": ["CA", "distributive-property"],
+  "estimatedSeconds": 55
+}

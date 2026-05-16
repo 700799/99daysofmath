@@ -13,6 +13,7 @@ import { ProgressBar } from '../components/ProgressBar';
 import { Mascot } from '../components/Mascot';
 import { Confetti } from '../components/Celebration';
 import { correctMessage, wrongMessage, stickerForUnit } from '../utils/encouragement';
+import { playCorrect, playWrong, playUnitComplete } from '../utils/sound';
 
 type Phase = 'problem' | 'feedback-correct' | 'feedback-wrong';
 
@@ -22,6 +23,8 @@ export function Unit() {
   const record = useProgress((s) => s.recordUnitResult);
   const incStreak = useProgress((s) => s.incrementStreak);
   const resetStreak = useProgress((s) => s.resetStreak);
+  const touchDay = useProgress((s) => s.touchDay);
+  const soundOn = useProgress((s) => s.soundEnabled);
   const currentStreak = useProgress((s) => s.streak);
 
   if (!domain || !DOMAINS.includes(domain as Domain) || !unit) {
@@ -80,12 +83,12 @@ export function Unit() {
   const submit = () => {
     if (!current || !answer.trim()) return;
     if (isEquivalent(answer, current)) {
-      // XP: 10 base, -3 per hint shown on this problem, -3 per mistake on this problem
       const earn = Math.max(3, 10 - (hintsUsedThisProblem ? 3 : 0) - mistakesThisProblem * 3);
       setXpEarned((x) => x + earn);
       incStreak();
       flashMessage.current = correctMessage(currentStreak + 1);
       setPhase('feedback-correct');
+      if (soundOn) playCorrect();
     } else {
       setMistakesTotal((m) => m + 1);
       setMistakesThisProblem((m) => m + 1);
@@ -95,6 +98,7 @@ export function Unit() {
       );
       flashMessage.current = wrongMessage();
       setPhase('feedback-wrong');
+      if (soundOn) playWrong();
     }
   };
 
@@ -103,6 +107,8 @@ export function Unit() {
     if (index + 1 >= problems.length) {
       const sticker = finalStars === 3 ? stickerForUnit(d, u) : '';
       record(d, u, finalStars, missedIds, xpEarned, sticker);
+      touchDay();
+      if (soundOn) playUnitComplete();
       navigate(`/unit/${d}/${u}/results`, {
         state: {
           stars: finalStars,
@@ -163,6 +169,7 @@ export function Unit() {
               value={answer}
               onChange={setAnswer}
               disabled={phase !== 'problem'}
+              onSubmit={submit}
             />
 
             {phase === 'problem' && (

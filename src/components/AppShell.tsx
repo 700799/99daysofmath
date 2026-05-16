@@ -8,7 +8,7 @@ interface Props {
 export function AppShell({ children }: Props) {
   const totalStars = useProgress((s) => s.totalStars());
   const xp = useProgress((s) => s.xp);
-  const streak = useProgress((s) => s.streak);
+  const dailyStreak = useProgress((s) => s.dailyStreak);
   const location = useLocation();
   const isHome = location.pathname === '/' || location.pathname === '';
 
@@ -35,8 +35,8 @@ export function AppShell({ children }: Props) {
               <span className="font-display font-bold">Home</span>
             </Link>
           )}
-          <div className="flex items-center gap-2">
-            <Chip emoji="🔥" value={streak} bg="bg-orange-100" fg="text-orange-900" />
+          <div className="flex items-center gap-1.5">
+            <Chip emoji="🔥" value={dailyStreak} bg="bg-orange-100" fg="text-orange-900" />
             <Chip emoji="⚡" value={xp} bg="bg-yellow-100" fg="text-yellow-900" />
             <Chip emoji="⭐" value={totalStars} bg="bg-amber-100" fg="text-amber-900" />
           </div>

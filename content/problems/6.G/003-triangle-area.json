@@ -1,0 +1,33 @@
+{
+  "id": "6.G.003",
+  "domain": "6.G",
+  "unit": 1,
+  "orderInUnit": 3,
+  "standard": "6.G.A.1",
+  "difficulty": 1,
+  "prompt": "A triangle has base $10$ cm and height $6$ cm. What is its **area** in square centimeters?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": ["30 cm^2", "30 square cm"],
+  "acceptanceMode": "normalized",
+  "hint": "Area of a triangle is $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$.",
+  "explanation": [
+    "Use the formula: Area $= \\frac{1}{2} \\times b \\times h$.",
+    "Substitute: $\\frac{1}{2} \\times 10 \\times 6$.",
+    "$10 \\times 6 = 60$.",
+    "Half of $60$ is $30$. So the area is $30$ cm².",
+    "Or compute in another order: $\\frac{1}{2} \\times 10 = 5$, then $5 \\times 6 = 30$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the $\\frac{1}{2}$?",
+      "steps": [
+        "A triangle is **half** of a rectangle with the same base and height.",
+        "Rectangle area $= 10 \\times 6 = 60$ cm².",
+        "Triangle area is half: $\\frac{60}{2} = 30$ cm²."
+      ]
+    }
+  ],
+  "tags": ["CA", "area", "MAP-practice"],
+  "estimatedSeconds": 45
+}

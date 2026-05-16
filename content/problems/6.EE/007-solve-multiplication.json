@@ -1,0 +1,32 @@
+{
+  "id": "6.EE.007",
+  "domain": "6.EE",
+  "unit": 2,
+  "orderInUnit": 2,
+  "standard": "6.EE.B.7",
+  "difficulty": 2,
+  "prompt": "Solve for $x$: $3x = 24$.",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": ["x=8"],
+  "acceptanceMode": "normalized",
+  "hint": "Undo the multiplication by **dividing** both sides by $3$.",
+  "explanation": [
+    "Start with $3x = 24$.",
+    "Divide both sides by $3$: $\\frac{3x}{3} = \\frac{24}{3}$.",
+    "Simplify: $x = 8$.",
+    "Check: $3 \\times 8 = 24$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Multiplication facts",
+      "steps": [
+        "Ask: \"$3$ times what equals $24$?\"",
+        "From times tables: $3 \\times 8 = 24$.",
+        "So $x = 8$."
+      ]
+    }
+  ],
+  "tags": ["MAP-practice", "equations"],
+  "estimatedSeconds": 35
+}

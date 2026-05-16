@@ -1,0 +1,30 @@
+{
+  "id": "6.SP.004",
+  "domain": "6.SP",
+  "unit": 1,
+  "orderInUnit": 4,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 1,
+  "prompt": "What is the **range** of: $14, 8, 22, 11, 17$?",
+  "answerType": "numeric",
+  "primaryAnswer": "14",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Range $=$ largest $-$ smallest.",
+  "explanation": [
+    "Largest value: $22$. Smallest value: $8$.",
+    "Range $= 22 - 8 = 14$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why \"range\"?",
+      "steps": [
+        "The range tells you the **spread** of the data — how far apart the extremes are.",
+        "A large range means the values are very spread out; a small range means they're close together.",
+        "Here the data ranges $14$ units from low to high."
+      ]
+    }
+  ],
+  "tags": ["MAP-practice", "range"],
+  "estimatedSeconds": 30
+}

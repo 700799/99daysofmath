@@ -1,0 +1,32 @@
+{
+  "id": "6.RP.004",
+  "domain": "6.RP",
+  "unit": 1,
+  "orderInUnit": 4,
+  "standard": "6.RP.A.3.a",
+  "difficulty": 2,
+  "prompt": "A smoothie recipe uses $2$ cups of berries for every $3$ cups of yogurt. If a chef uses $12$ cups of berries, how many cups of yogurt are needed?",
+  "answerType": "numeric",
+  "primaryAnswer": "18",
+  "alternativeAnswers": ["18 cups"],
+  "acceptanceMode": "normalized",
+  "hint": "Find what you multiplied berries by, then do the same to yogurt.",
+  "explanation": [
+    "Set up the ratio: berries to yogurt = $2 : 3$.",
+    "From $2$ cups of berries to $12$ cups of berries, multiply by $6$ (because $2 \\times 6 = 12$).",
+    "Apply the same scale factor to yogurt: $3 \\times 6 = 18$.",
+    "$18$ cups of yogurt are needed."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a ratio table",
+      "steps": [
+        "Start with $2 : 3$.",
+        "Double: $4 : 6$. Double again: $8 : 12$. Add another step: $12 : 18$.",
+        "Yogurt = $18$ cups."
+      ]
+    }
+  ],
+  "tags": ["MAP-practice", "ratio-table"],
+  "estimatedSeconds": 60
+}

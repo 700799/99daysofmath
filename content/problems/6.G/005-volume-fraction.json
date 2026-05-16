@@ -1,0 +1,31 @@
+{
+  "id": "6.G.005",
+  "domain": "6.G",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "6.G.A.2",
+  "difficulty": 3,
+  "prompt": "A rectangular box has length $\\frac{1}{2}$ ft, width $\\frac{1}{2}$ ft, and height $\\frac{1}{2}$ ft. What is its **volume** in cubic feet?",
+  "answerType": "fraction",
+  "primaryAnswer": "1/8",
+  "alternativeAnswers": ["0.125"],
+  "acceptanceMode": "normalized",
+  "hint": "Volume $= l \\times w \\times h$. Multiply three fractions by multiplying numerators and denominators.",
+  "explanation": [
+    "Volume $= \\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2}$.",
+    "Numerators: $1 \\times 1 \\times 1 = 1$.",
+    "Denominators: $2 \\times 2 \\times 2 = 8$.",
+    "Volume $= \\frac{1}{8}$ cubic foot."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As $\\left(\\frac{1}{2}\\right)^3$",
+      "steps": [
+        "Same value all three sides means $\\left(\\frac{1}{2}\\right)^3$.",
+        "$\\left(\\frac{1}{2}\\right)^3 = \\frac{1^3}{2^3} = \\frac{1}{8}$."
+      ]
+    }
+  ],
+  "tags": ["CA", "volume", "fractional-sides"],
+  "estimatedSeconds": 70
+}

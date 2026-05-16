@@ -7,10 +7,12 @@ export interface TrailNode {
 }
 
 export const TRAIL_WIDTH = 480;
-export const TRAIL_HEIGHT = 720;
+export const TRAIL_HEIGHT = 600;
 
-function snakeTrail(units: number, startY = 80, endY = TRAIL_HEIGHT - 80): TrailNode[] {
+export function buildTrail(units: number): TrailNode[] {
   const nodes: TrailNode[] = [];
+  const startY = 80;
+  const endY = TRAIL_HEIGHT - 80;
   const step = (endY - startY) / Math.max(1, units - 1);
   for (let i = 0; i < units; i++) {
     const y = startY + step * i;
@@ -22,10 +24,11 @@ function snakeTrail(units: number, startY = 80, endY = TRAIL_HEIGHT - 80): Trail
   return nodes;
 }
 
+// Default fallback if a domain has no problems yet
 export const TRAIL_LAYOUTS: Record<Domain, TrailNode[]> = {
-  '6.RP': snakeTrail(6),
-  '6.NS': snakeTrail(6),
-  '6.EE': snakeTrail(6),
-  '6.G': snakeTrail(6),
-  '6.SP': snakeTrail(6),
+  '6.RP': buildTrail(2),
+  '6.NS': buildTrail(2),
+  '6.EE': buildTrail(2),
+  '6.G': buildTrail(2),
+  '6.SP': buildTrail(2),
 };

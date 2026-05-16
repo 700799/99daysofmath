@@ -1,0 +1,31 @@
+{
+  "id": "6.G.006",
+  "domain": "6.G",
+  "unit": 2,
+  "orderInUnit": 2,
+  "standard": "6.G.A.4",
+  "difficulty": 2,
+  "prompt": "A cube has side length $3$ in. What is its **total surface area** in square inches?",
+  "answerType": "numeric",
+  "primaryAnswer": "54",
+  "alternativeAnswers": ["54 in^2"],
+  "acceptanceMode": "normalized",
+  "hint": "A cube has **$6$ identical square faces**. Find the area of one face, then multiply by $6$.",
+  "explanation": [
+    "Each face is a $3 \\times 3$ square: area $= 9$ sq in.",
+    "There are $6$ faces in a cube.",
+    "Total surface area $= 6 \\times 9 = 54$ square inches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Net unfolding",
+      "steps": [
+        "Imagine unfolding the cube flat — you'd see $6$ squares connected like a plus-sign pattern.",
+        "Each square is $3 \\times 3 = 9$ sq in.",
+        "Add them up: $9 \\times 6 = 54$ sq in."
+      ]
+    }
+  ],
+  "tags": ["MAP-practice", "surface-area"],
+  "estimatedSeconds": 55
+}

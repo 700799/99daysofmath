@@ -1,0 +1,31 @@
+{
+  "id": "6.NS.005",
+  "domain": "6.NS",
+  "unit": 1,
+  "orderInUnit": 5,
+  "standard": "6.NS.C.7.a",
+  "difficulty": 1,
+  "prompt": "Which symbol makes this true? Compare: $-5 \\;?\\; -8$. Type $<$, $>$, or $=$.",
+  "answerType": "short-text",
+  "primaryAnswer": ">",
+  "alternativeAnswers": ["greater than", "gt"],
+  "acceptanceMode": "exact",
+  "hint": "On a number line, numbers get smaller as you go **left**. $-5$ is to the **right** of $-8$.",
+  "explanation": [
+    "Picture a number line: $-8$ is farther left than $-5$.",
+    "Numbers farther right are **larger**.",
+    "So $-5 > -8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think about temperature",
+      "steps": [
+        "$-5^\\circ$F and $-8^\\circ$F are both cold.",
+        "$-8^\\circ$F is **colder** than $-5^\\circ$F — so $-5$ is the warmer (larger) number.",
+        "$-5 > -8$."
+      ]
+    }
+  ],
+  "tags": ["CA", "integers", "MAP-practice"],
+  "estimatedSeconds": 35
+}

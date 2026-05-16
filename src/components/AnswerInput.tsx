@@ -1,14 +1,19 @@
+import { useRef } from 'react';
 import type { Problem } from '../types/problem';
 import { MathText } from './MathText';
+import { NumberKeypad } from './NumberKeypad';
 
 interface Props {
   problem: Problem;
   value: string;
   onChange: (v: string) => void;
   disabled?: boolean;
+  onSubmit?: () => void;
 }
 
-export function AnswerInput({ problem, value, onChange, disabled }: Props) {
+export function AnswerInput({ problem, value, onChange, disabled, onSubmit }: Props) {
+  const inputRef = useRef<HTMLInputElement>(null);
+
   if (problem.answerType === 'multiple-choice' && problem.choices) {
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
@@ -21,10 +26,10 @@ export function AnswerInput({ problem, value, onChange, disabled }: Props) {
               disabled={disabled}
               onClick={() => onChange(c.id)}
               className={[
-                'min-h-14 px-4 py-3 rounded-2xl border-2 text-left font-display font-bold transition-colors',
+                'min-h-14 px-4 py-3 rounded-2xl border-2 text-left font-display font-bold transition-all',
                 selected
-                  ? 'bg-duo-blue text-white border-duo-blue'
-                  : 'bg-white border-slate-200 hover:border-duo-blue text-slate-800',
+                  ? 'bg-duo-blue text-white border-duo-blue shadow-[0_3px_0_0_rgba(0,0,0,0.15)]'
+                  : 'bg-white border-slate-200 hover:border-duo-blue text-slate-800 shadow-[0_3px_0_0_rgba(0,0,0,0.08)]',
                 disabled ? 'opacity-60 cursor-not-allowed' : '',
               ].join(' ')}
             >
@@ -39,18 +44,42 @@ export function AnswerInput({ problem, value, onChange, disabled }: Props) {
     );
   }
 
-  const inputMode =
-    problem.answerType === 'numeric' ? 'decimal' : 'text';
+  const inputMode = problem.answerType === 'numeric' ? 'decimal' : 'text';
   const placeholder =
     problem.answerType === 'fraction'
-      ? 'e.g. 1/2'
+      ? 'e.g. 1/2 or 0.5'
       : problem.answerType === 'expression'
         ? 'e.g. 2x+4'
         : 'Type your answer';
 
+  const showKeypad =
+    !disabled &&
+    (problem.answerType === 'numeric' || problem.answerType === 'fraction');
+
+  const append = (k: string) => {
+    onChange(value + k);
+    inputRef.current?.focus();
+  };
+  const backspace = () => {
+    onChange(value.slice(0, -1));
+    inputRef.current?.focus();
+  };
+  const clear = () => {
+    onChange('');
+    inputRef.current?.focus();
+  };
+
+  const onKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && value.trim() && onSubmit) {
+      e.preventDefault();
+      onSubmit();
+    }
+  };
+
   return (
     <div className="mt-4">
       <input
+        ref={inputRef}
         type="text"
         inputMode={inputMode}
         autoComplete="off"
@@ -59,9 +88,19 @@ export function AnswerInput({ problem, value, onChange, disabled }: Props) {
         disabled={disabled}
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        onKeyDown={onKeyDown}
         placeholder={placeholder}
-        className="w-full min-h-14 px-4 py-3 rounded-2xl border-2 border-slate-200 focus:border-duo-blue focus:outline-none text-lg font-display font-bold text-slate-900 placeholder:text-slate-400 placeholder:font-normal disabled:bg-slate-100 disabled:opacity-60"
+        className="w-full min-h-14 px-4 py-3 rounded-2xl border-2 border-slate-200 focus:border-duo-blue focus:outline-none focus:ring-4 focus:ring-blue-100 text-xl font-display font-extrabold text-slate-900 placeholder:text-slate-400 placeholder:font-normal disabled:bg-slate-100 disabled:opacity-60 transition-all"
       />
+      {showKeypad && (
+        <NumberKeypad
+          onKey={append}
+          onBackspace={backspace}
+          onClear={clear}
+          showFraction={problem.answerType !== 'numeric' || true}
+          showNegative
+        />
+      )}
     </div>
   );
 }

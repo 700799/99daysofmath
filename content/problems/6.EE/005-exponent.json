@@ -1,0 +1,32 @@
+{
+  "id": "6.EE.005",
+  "domain": "6.EE",
+  "unit": 1,
+  "orderInUnit": 5,
+  "standard": "6.EE.A.1",
+  "difficulty": 1,
+  "prompt": "Evaluate $5^3$.",
+  "answerType": "numeric",
+  "primaryAnswer": "125",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$5^3$ means $5$ multiplied by itself $3$ times: $5 \\times 5 \\times 5$.",
+  "explanation": [
+    "$5^3 = 5 \\times 5 \\times 5$.",
+    "$5 \\times 5 = 25$.",
+    "$25 \\times 5 = 125$.",
+    "$5^3 = 125$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Common cube",
+      "steps": [
+        "$5^3$ is read \"five cubed\".",
+        "Think of a $5 \\times 5 \\times 5$ cube made of unit cubes.",
+        "Total cubes $= 5 \\times 5 \\times 5 = 125$."
+      ]
+    }
+  ],
+  "tags": ["MAP-practice", "exponents"],
+  "estimatedSeconds": 35
+}

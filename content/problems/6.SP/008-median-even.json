@@ -1,0 +1,32 @@
+{
+  "id": "6.SP.008",
+  "domain": "6.SP",
+  "unit": 2,
+  "orderInUnit": 3,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Find the **median** of: $4, 8, 11, 15$.",
+  "answerType": "numeric",
+  "primaryAnswer": "9.5",
+  "alternativeAnswers": ["19/2", "9 1/2"],
+  "acceptanceMode": "normalized",
+  "hint": "When there are **two middle values**, the median is the average of those two.",
+  "explanation": [
+    "Sort the list (already sorted): $4, 8, 11, 15$.",
+    "Even number of values ($4$) → two middle values: $8$ and $11$.",
+    "Average them: $\\frac{8 + 11}{2} = \\frac{19}{2} = 9.5$.",
+    "Median $= 9.5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why average the middle two?",
+      "steps": [
+        "The median should split the data so half is below and half is above.",
+        "With $4$ numbers, no single value splits them evenly — but the **midpoint between the middle two** does.",
+        "Midpoint of $8$ and $11$ is $9.5$."
+      ]
+    }
+  ],
+  "tags": ["CA", "median"],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,32 @@
+{
+  "id": "6.RP.007",
+  "domain": "6.RP",
+  "unit": 2,
+  "orderInUnit": 2,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 2,
+  "prompt": "Lia scored $18$ out of $24$ on a quiz. What percent did she get correct?",
+  "answerType": "numeric",
+  "primaryAnswer": "75",
+  "alternativeAnswers": ["75%", "75 %"],
+  "acceptanceMode": "normalized",
+  "hint": "Write the score as a fraction $\\frac{18}{24}$, then convert to a percent by multiplying by $100$.",
+  "explanation": [
+    "Write the score as a fraction: $\\frac{18}{24}$.",
+    "Convert to a decimal: $18 \\div 24 = 0.75$.",
+    "Multiply by $100$ to get a percent: $0.75 \\times 100 = 75$.",
+    "She got $75\\%$ correct."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Simplify, then scale to 100",
+      "steps": [
+        "$\\frac{18}{24} = \\frac{3}{4}$ after simplifying.",
+        "$\\frac{3}{4} = \\frac{75}{100}$.",
+        "$\\frac{75}{100} = 75\\%$."
+      ]
+    }
+  ],
+  "tags": ["CA", "percent"],
+  "estimatedSeconds": 60
+}

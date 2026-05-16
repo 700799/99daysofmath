@@ -1,0 +1,32 @@
+{
+  "id": "6.SP.007",
+  "domain": "6.SP",
+  "unit": 2,
+  "orderInUnit": 2,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "The test scores are: $80, 85, 90, 70, 75$. What is the **mean** score?",
+  "answerType": "numeric",
+  "primaryAnswer": "80",
+  "alternativeAnswers": ["80.0"],
+  "acceptanceMode": "normalized",
+  "hint": "Add up all the scores, then divide by how many there are.",
+  "explanation": [
+    "Add the scores: $80 + 85 + 90 + 70 + 75 = 400$.",
+    "Count: $5$ scores.",
+    "Divide: $400 \\div 5 = 80$.",
+    "Mean $= 80$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spot the middle around 80",
+      "steps": [
+        "Compare each score to $80$: $80$ ($+0$), $85$ ($+5$), $90$ ($+10$), $70$ ($-10$), $75$ ($-5$).",
+        "Sum of differences: $0 + 5 + 10 - 10 - 5 = 0$.",
+        "The differences cancel, so $80$ is exactly the mean. ✓"
+      ]
+    }
+  ],
+  "tags": ["mean", "MAP-practice"],
+  "estimatedSeconds": 60
+}

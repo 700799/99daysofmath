@@ -5,6 +5,7 @@ import { DomainTrail } from './routes/DomainTrail';
 import { Unit } from './routes/Unit';
 import { UnitResults } from './routes/UnitResults';
 import { Settings } from './routes/Settings';
+import { DailyMix } from './routes/DailyMix';
 import { NotFound } from './routes/NotFound';
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/trail/:domain" element={<DomainTrail />} />
         <Route path="/unit/:domain/:unit" element={<Unit />} />
         <Route path="/unit/:domain/:unit/results" element={<UnitResults />} />
+        <Route path="/mix" element={<DailyMix />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

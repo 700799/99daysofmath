@@ -1,0 +1,39 @@
+{
+  "id": "6.SP.006",
+  "domain": "6.SP",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "6.SP.A.1",
+  "difficulty": 2,
+  "prompt": "Which of the following is a **statistical question**?",
+  "answerType": "multiple-choice",
+  "choices": [
+    { "id": "A", "label": "How tall is Maria?", "correct": false },
+    { "id": "B", "label": "What is my dog's name?", "correct": false },
+    { "id": "C", "label": "How tall are the students in my class?", "correct": true },
+    { "id": "D", "label": "What time does school start?", "correct": false }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "A statistical question is one that has **variability** in the answers — you'd collect many data points to answer it.",
+  "explanation": [
+    "Statistical questions expect a **range of answers**, not a single fact.",
+    "(A), (B), and (D) each have one definite answer — not statistical.",
+    "(C) asks about **all the students**, who have many different heights — that's variable data.",
+    "So (C) is the statistical question."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Variability test",
+      "steps": [
+        "Ask yourself: if you asked $30$ people, would the answers vary?",
+        "\"How tall is Maria?\" — no, one answer.",
+        "\"How tall are the students in my class?\" — yes, $30$ different heights.",
+        "Variability $\\Rightarrow$ statistical question."
+      ]
+    }
+  ],
+  "tags": ["CA", "statistical-questions", "MAP-practice"],
+  "estimatedSeconds": 55
+}

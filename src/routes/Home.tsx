@@ -36,6 +36,24 @@ export function Home() {
         </div>
       )}
 
+      <Link
+        to="/mix"
+        className="block mb-4 rounded-3xl p-4 sm:p-5 bg-gradient-to-br from-purple-500 via-fuchsia-500 to-pink-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+      >
+        <div className="flex items-center gap-3 sm:gap-4">
+          <div className="text-4xl sm:text-5xl">🎲</div>
+          <div className="flex-1 min-w-0">
+            <div className="font-display font-extrabold text-lg sm:text-xl">
+              Daily Mix
+            </div>
+            <div className="text-xs sm:text-sm opacity-90 mt-0.5">
+              5 random problems across all domains — great MAP prep.
+            </div>
+          </div>
+          <div className="text-2xl shrink-0">→</div>
+        </div>
+      </Link>
+
       <div className="space-y-3">
         {DOMAINS.map((d, i) => {
           const dp = progress[d];
@@ -95,6 +113,13 @@ export function Home() {
           );
         })}
       </div>
+
+      <Link
+        to="/settings"
+        className="mt-6 inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+      >
+        ⚙️ Settings
+      </Link>
 
       {stickers.length > 0 && (
         <motion.div

@@ -1,0 +1,38 @@
+{
+  "id": "6.RP.003",
+  "domain": "6.RP",
+  "unit": 1,
+  "orderInUnit": 3,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 1,
+  "prompt": "What is $25\\%$ of $80$?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$25\\%$ means the same as $\\frac{1}{4}$. Or convert to a decimal: $25\\% = 0.25$.",
+  "explanation": [
+    "Convert $25\\%$ to a decimal: $25\\% = 0.25$.",
+    "Multiply: $0.25 \\times 80 = 20$.",
+    "So $25\\%$ of $80$ is $20$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the fraction $\\frac{1}{4}$",
+      "steps": [
+        "$25\\%$ equals $\\frac{1}{4}$ of the whole.",
+        "$\\frac{1}{4}$ of $80$ means $80 \\div 4 = 20$.",
+        "Same answer: $20$."
+      ]
+    },
+    {
+      "title": "10% trick",
+      "steps": [
+        "$10\\%$ of $80$ is $8$ (move the decimal one place).",
+        "$25\\%$ is two-and-a-half times $10\\%$: $8 + 8 + 4 = 20$."
+      ]
+    }
+  ],
+  "tags": ["CA", "percent"],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,32 @@
+{
+  "id": "6.RP.006",
+  "domain": "6.RP",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "6.RP.A.2",
+  "difficulty": 2,
+  "prompt": "A box of $6$ pens costs $\\$4.20$. What is the **unit price** per pen, in dollars?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.70",
+  "alternativeAnswers": ["0.7", "$0.70", "70 cents"],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.005,
+  "hint": "Unit price means cost per **one** pen. Divide the total cost by the number of pens.",
+  "explanation": [
+    "Set up the unit rate: $\\frac{\\$4.20}{6 \\text{ pens}}$.",
+    "Divide: $4.20 \\div 6 = 0.70$.",
+    "The unit price is $\\$0.70$ per pen."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Convert to cents first",
+      "steps": [
+        "$\\$4.20 = 420$ cents.",
+        "$420 \\div 6 = 70$ cents per pen.",
+        "$70$ cents $= \\$0.70$. Same answer."
+      ]
+    }
+  ],
+  "tags": ["MAP-practice", "unit-rate", "money"],
+  "estimatedSeconds": 50
+}
