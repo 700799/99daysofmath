@@ -87,6 +87,22 @@
       "items": { "type": "string" },
       "minItems": 1
     },
+    "alternativeExplanations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "steps"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "steps": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
     "tags": { "type": "array", "items": { "type": "string" } },
     "estimatedSeconds": { "type": "integer", "minimum": 5, "maximum": 600 }
   },

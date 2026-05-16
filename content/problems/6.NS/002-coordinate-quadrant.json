@@ -26,6 +26,25 @@
     "The point $(-3, 2)$ has a **negative** $x$-coordinate and a **positive** $y$-coordinate.",
     "That sign pattern (−, +) puts it in the **upper-left**, which is **Quadrant II**."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk it out",
+      "steps": [
+        "Start at the origin $(0, 0)$.",
+        "The $x$-coordinate is $-3$ — walk **3 steps left**.",
+        "The $y$-coordinate is $2$ — walk **2 steps up**.",
+        "You're now in the **upper-left** region. That's Quadrant II."
+      ]
+    },
+    {
+      "title": "The sign pattern trick",
+      "steps": [
+        "Each quadrant has a unique sign pattern for $(x, y)$:",
+        "Quadrant I: $(+,+)$ • Quadrant II: $(-,+)$ • Quadrant III: $(-,-)$ • Quadrant IV: $(+,-)$.",
+        "$(-3, 2)$ matches $(-,+)$ → Quadrant II."
+      ]
+    }
+  ],
   "tags": ["MAP-practice", "coordinate-plane"],
   "estimatedSeconds": 35
 }

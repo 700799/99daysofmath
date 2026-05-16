@@ -17,6 +17,25 @@
     "Then $12 \\times 5 = 60$.",
     "The volume is $60$ cubic inches."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Stack of layers method",
+      "steps": [
+        "The base of the prism is a $3 \\times 4$ rectangle. Its area is $12$ square inches.",
+        "Volume = base area × height = $12 \\times 5$.",
+        "$12 \\times 5 = 60$ cubic inches.",
+        "Think of it as $5$ stacked layers, each with $12$ unit cubes — that's $60$ unit cubes total."
+      ]
+    },
+    {
+      "title": "Why \"cubic\" inches?",
+      "steps": [
+        "Multiplying $3$ in × $4$ in × $5$ in multiplies the units: in × in × in = in³.",
+        "That's why volume uses **cubic** units — it fills a 3D space.",
+        "If you packed $1 \\text{ in} \\times 1 \\text{ in} \\times 1 \\text{ in}$ sugar cubes inside, you'd fit $60$ of them."
+      ]
+    }
+  ],
   "tags": ["CA", "volume"],
   "estimatedSeconds": 45
 }

@@ -21,6 +21,25 @@
     "Area = length × width = $8 \\times 5$.",
     "$8 \\times 5 = 40$ square centimeters."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the unit squares",
+      "steps": [
+        "Imagine the rectangle divided into a grid of $1$ cm $\\times$ $1$ cm squares.",
+        "Each row has $8$ unit squares. There are $5$ rows.",
+        "Total unit squares = $8 + 8 + 8 + 8 + 8 = 40$.",
+        "So the area is $40$ square cm."
+      ]
+    },
+    {
+      "title": "Why \"square\" centimeters?",
+      "steps": [
+        "When you multiply $8$ cm × $5$ cm, the units multiply too: cm × cm = cm².",
+        "That's why area is always in **square** units — it covers a 2D region.",
+        "$8 \\text{ cm} \\times 5 \\text{ cm} = 40 \\text{ cm}^2$."
+      ]
+    }
+  ],
   "tags": ["MAP-practice", "area"],
   "estimatedSeconds": 35
 }

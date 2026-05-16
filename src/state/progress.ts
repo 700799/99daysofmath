@@ -12,12 +12,21 @@ interface DomainProgress {
 
 interface ProgressState {
   byDomain: Record<Domain, DomainProgress>;
+  xp: number;
+  streak: number;
+  bestStreak: number;
+  stickers: string[];
   recordUnitResult: (
     domain: Domain,
     unit: number,
     stars: Stars,
     missedIds: string[],
+    xpEarned: number,
+    sticker: string,
   ) => void;
+  awardXP: (n: number) => void;
+  incrementStreak: () => void;
+  resetStreak: () => void;
   isUnitUnlocked: (domain: Domain, unit: number) => boolean;
   starsForUnit: (domain: Domain, unit: number) => Stars;
   totalStars: () => number;
@@ -43,14 +52,19 @@ export const useProgress = create<ProgressState>()(
   persist(
     (set, get) => ({
       byDomain: blankAll(),
-      recordUnitResult: (domain, unit, stars, missedIds) =>
+      xp: 0,
+      streak: 0,
+      bestStreak: 0,
+      stickers: [],
+      recordUnitResult: (domain, unit, stars, missedIds, xpEarned, sticker) =>
         set((state) => {
           const d = state.byDomain[domain] ?? blankDomain();
           const prevStars = d.unitStars[unit] ?? 0;
-          const nextStars: Stars = (Math.max(prevStars, stars) as Stars);
+          const nextStars: Stars = Math.max(prevStars, stars) as Stars;
           const unlocked =
             stars >= 1 ? Math.max(d.unitsUnlocked, unit + 1) : d.unitsUnlocked;
           const missedSet = new Set([...d.missedProblemIds, ...missedIds]);
+          const newSticker = sticker && !state.stickers.includes(sticker);
           return {
             byDomain: {
               ...state.byDomain,
@@ -60,8 +74,20 @@ export const useProgress = create<ProgressState>()(
                 missedProblemIds: Array.from(missedSet),
               },
             },
+            xp: state.xp + xpEarned,
+            stickers: newSticker ? [...state.stickers, sticker] : state.stickers,
           };
         }),
+      awardXP: (n) => set((state) => ({ xp: state.xp + n })),
+      incrementStreak: () =>
+        set((state) => {
+          const next = state.streak + 1;
+          return {
+            streak: next,
+            bestStreak: Math.max(state.bestStreak, next),
+          };
+        }),
+      resetStreak: () => set({ streak: 0 }),
       isUnitUnlocked: (domain, unit) =>
         unit <= (get().byDomain[domain]?.unitsUnlocked ?? 1),
       starsForUnit: (domain, unit) =>
@@ -75,8 +101,15 @@ export const useProgress = create<ProgressState>()(
         }
         return n;
       },
-      resetAll: () => set({ byDomain: blankAll() }),
+      resetAll: () =>
+        set({
+          byDomain: blankAll(),
+          xp: 0,
+          streak: 0,
+          bestStreak: 0,
+          stickers: [],
+        }),
     }),
-    { name: '99daysofmath:progress', version: 1 },
+    { name: '99daysofmath:progress', version: 2 },
   ),
 );

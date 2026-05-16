@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import { useNavigate, useParams, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { DOMAINS, type Domain } from '../types/problem';
@@ -10,13 +10,19 @@ import { AnswerInput } from '../components/AnswerInput';
 import { Hint } from '../components/Hint';
 import { Explanation } from '../components/Explanation';
 import { ProgressBar } from '../components/ProgressBar';
+import { Mascot } from '../components/Mascot';
+import { Confetti } from '../components/Celebration';
+import { correctMessage, wrongMessage, stickerForUnit } from '../utils/encouragement';
 
-type Phase = 'loading' | 'problem' | 'feedback-correct' | 'feedback-wrong' | 'done';
+type Phase = 'problem' | 'feedback-correct' | 'feedback-wrong';
 
 export function Unit() {
   const { domain, unit } = useParams<{ domain: string; unit: string }>();
   const navigate = useNavigate();
   const record = useProgress((s) => s.recordUnitResult);
+  const incStreak = useProgress((s) => s.incrementStreak);
+  const resetStreak = useProgress((s) => s.resetStreak);
+  const currentStreak = useProgress((s) => s.streak);
 
   if (!domain || !DOMAINS.includes(domain as Domain) || !unit) {
     return <Navigate to="/" replace />;
@@ -29,34 +35,43 @@ export function Unit() {
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState('');
   const [hintShown, setHintShown] = useState(false);
-  const [hintsUsed, setHintsUsed] = useState(0);
-  const [mistakes, setMistakes] = useState(0);
+  const [hintsUsedThisProblem, setHintsUsedThisProblem] = useState(false);
+  const [hintsUsedTotal, setHintsUsedTotal] = useState(0);
+  const [mistakesThisProblem, setMistakesThisProblem] = useState(0);
+  const [mistakesTotal, setMistakesTotal] = useState(0);
   const [missedIds, setMissedIds] = useState<string[]>([]);
+  const [xpEarned, setXpEarned] = useState(0);
   const [phase, setPhase] = useState<Phase>('problem');
+  const [showExplainOnCorrect, setShowExplainOnCorrect] = useState(false);
+  const flashMessage = useRef<string>('');
 
-  const phaseDerived: Phase = loading ? 'loading' : phase;
   const current = problems?.[index];
   const total = problems?.length ?? 0;
 
-  const stars: Stars = useMemo<Stars>(() => {
-    if (hintsUsed === 0 && mistakes === 0) return 3;
-    if (hintsUsed + mistakes <= 1) return 2;
+  const finalStars: Stars = useMemo<Stars>(() => {
+    if (hintsUsedTotal === 0 && mistakesTotal === 0) return 3;
+    if (hintsUsedTotal + mistakesTotal <= 1) return 2;
     return 1;
-  }, [hintsUsed, mistakes]);
+  }, [hintsUsedTotal, mistakesTotal]);
 
   if (loading) {
-    return <div className="text-center py-12 text-slate-500">Loading…</div>;
+    return (
+      <div className="text-center py-12">
+        <Mascot mood="thinking" size={80} />
+        <div className="mt-3 text-slate-500 font-display font-bold">Loading…</div>
+      </div>
+    );
   }
   if (error) {
     return (
-      <div className="bg-red-50 border border-red-200 rounded-2xl p-4 text-red-800">
+      <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-4 text-red-800">
         {error.message}
       </div>
     );
   }
   if (!problems || problems.length === 0) {
     return (
-      <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 text-center text-amber-900">
+      <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-6 text-center text-amber-900">
         This unit has no problems yet.
       </div>
     );
@@ -65,12 +80,20 @@ export function Unit() {
   const submit = () => {
     if (!current || !answer.trim()) return;
     if (isEquivalent(answer, current)) {
+      // XP: 10 base, -3 per hint shown on this problem, -3 per mistake on this problem
+      const earn = Math.max(3, 10 - (hintsUsedThisProblem ? 3 : 0) - mistakesThisProblem * 3);
+      setXpEarned((x) => x + earn);
+      incStreak();
+      flashMessage.current = correctMessage(currentStreak + 1);
       setPhase('feedback-correct');
     } else {
-      setMistakes((m) => m + 1);
+      setMistakesTotal((m) => m + 1);
+      setMistakesThisProblem((m) => m + 1);
+      resetStreak();
       setMissedIds((ids) =>
         ids.includes(current.id) ? ids : [...ids, current.id],
       );
+      flashMessage.current = wrongMessage();
       setPhase('feedback-wrong');
     }
   };
@@ -78,30 +101,50 @@ export function Unit() {
   const advance = () => {
     if (!problems) return;
     if (index + 1 >= problems.length) {
-      record(d, u, stars, missedIds);
-      setPhase('done');
+      const sticker = finalStars === 3 ? stickerForUnit(d, u) : '';
+      record(d, u, finalStars, missedIds, xpEarned, sticker);
+      navigate(`/unit/${d}/${u}/results`, {
+        state: {
+          stars: finalStars,
+          missedCount: missedIds.length,
+          total,
+          xpEarned,
+          sticker,
+        },
+        replace: true,
+      });
     } else {
       setIndex((i) => i + 1);
       setAnswer('');
       setHintShown(false);
+      setHintsUsedThisProblem(false);
+      setMistakesThisProblem(0);
+      setShowExplainOnCorrect(false);
       setPhase('problem');
     }
   };
 
-  if (phaseDerived === 'done') {
-    return (
-      <Navigate
-        to={`/unit/${d}/${u}/results`}
-        state={{ stars, missedCount: missedIds.length, total }}
-        replace
-      />
-    );
-  }
-
   return (
-    <div>
-      <div className="mb-4">
-        <ProgressBar current={index + (phase !== 'problem' ? 1 : 0)} total={total} />
+    <div className="relative">
+      <div className="mb-4 flex items-center gap-3">
+        <div className="flex-1">
+          <ProgressBar
+            current={index + (phase !== 'problem' ? 1 : 0)}
+            total={total}
+          />
+        </div>
+        <div className="shrink-0">
+          <Mascot
+            mood={
+              phase === 'feedback-correct'
+                ? 'cheer'
+                : phase === 'feedback-wrong'
+                  ? 'oops'
+                  : 'thinking'
+            }
+            size={48}
+          />
+        </div>
       </div>
 
       {current && (
@@ -119,7 +162,7 @@ export function Unit() {
               problem={current}
               value={answer}
               onChange={setAnswer}
-              disabled={phase === 'feedback-correct' || phase === 'feedback-wrong'}
+              disabled={phase !== 'problem'}
             />
 
             {phase === 'problem' && (
@@ -129,7 +172,8 @@ export function Unit() {
                   onReveal={() => {
                     if (!hintShown) {
                       setHintShown(true);
-                      setHintsUsed((h) => h + 1);
+                      setHintsUsedThisProblem(true);
+                      setHintsUsedTotal((h) => h + 1);
                     }
                   }}
                 />
@@ -137,7 +181,7 @@ export function Unit() {
                   type="button"
                   onClick={submit}
                   disabled={!answer.trim()}
-                  className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark disabled:bg-slate-300 text-white font-display font-extrabold text-lg shadow-sm disabled:cursor-not-allowed transition-colors"
+                  className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark disabled:bg-slate-300 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 disabled:cursor-not-allowed disabled:shadow-none disabled:active:translate-y-0 transition-all"
                 >
                   Check
                 </button>
@@ -145,48 +189,84 @@ export function Unit() {
             )}
 
             {phase === 'feedback-correct' && (
-              <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                className="mt-4 bg-green-50 border-2 border-green-300 rounded-2xl p-4 text-center"
-              >
-                <div className="text-4xl">🎉</div>
-                <div className="font-display font-extrabold text-green-800 mt-1">
-                  Correct!
-                </div>
-                <button
-                  type="button"
-                  onClick={advance}
-                  className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-sm"
+              <div className="relative">
+                <Confetti />
+                <motion.div
+                  initial={{ scale: 0.85, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ type: 'spring', stiffness: 320, damping: 18 }}
+                  className="mt-4 bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-green-300 rounded-3xl p-5 text-center relative overflow-hidden"
                 >
-                  Continue
-                </button>
-              </motion.div>
+                  <div className="text-5xl">🎉</div>
+                  <div className="font-display font-extrabold text-2xl text-green-800 mt-1">
+                    {flashMessage.current}
+                  </div>
+                  {currentStreak >= 2 && (
+                    <div className="mt-2 inline-flex items-center gap-1 bg-orange-100 px-3 py-1 rounded-full">
+                      <span>🔥</span>
+                      <span className="font-display font-extrabold text-orange-800 text-sm">
+                        {currentStreak} in a row!
+                      </span>
+                    </div>
+                  )}
+                  {showExplainOnCorrect && (
+                    <div className="text-left mt-3">
+                      <Explanation
+                        steps={current.explanation}
+                        alternatives={current.alternativeExplanations}
+                      />
+                    </div>
+                  )}
+                  {!showExplainOnCorrect && (
+                    <button
+                      type="button"
+                      onClick={() => setShowExplainOnCorrect(true)}
+                      className="mt-3 text-sm font-display font-bold text-green-800 underline underline-offset-2 hover:text-green-900"
+                    >
+                      Show how it works
+                    </button>
+                  )}
+                  <button
+                    type="button"
+                    onClick={advance}
+                    className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+                  >
+                    Continue
+                  </button>
+                </motion.div>
+              </div>
             )}
 
             {phase === 'feedback-wrong' && (
               <motion.div
-                initial={{ scale: 0.95, opacity: 0 }}
+                initial={{ scale: 0.96, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                className="mt-4 bg-red-50 border-2 border-red-300 rounded-2xl p-4"
+                className="mt-4 bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-300 rounded-3xl p-5"
               >
-                <div className="flex items-center gap-2">
-                  <span className="text-2xl">😅</span>
-                  <span className="font-display font-extrabold text-red-800">
-                    Not quite.
-                  </span>
+                <div className="flex items-start gap-3">
+                  <div className="text-4xl shrink-0">🤔</div>
+                  <div className="flex-1">
+                    <div className="font-display font-extrabold text-red-800 text-lg">
+                      {flashMessage.current}
+                    </div>
+                    <div className="mt-1 text-slate-800">
+                      <span className="font-display font-bold">Correct answer:</span>{' '}
+                      <span className="font-mono font-extrabold">
+                        {current.primaryAnswer}
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-2 text-slate-800">
-                  <span className="font-display font-bold">Correct answer:</span>{' '}
-                  <span className="font-mono">{current.primaryAnswer}</span>
-                </div>
-                <Explanation steps={current.explanation} />
+                <Explanation
+                  steps={current.explanation}
+                  alternatives={current.alternativeExplanations}
+                />
                 <button
                   type="button"
                   onClick={advance}
-                  className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold text-lg shadow-sm"
+                  className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
                 >
-                  Continue
+                  Got it
                 </button>
               </motion.div>
             )}

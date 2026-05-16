@@ -17,6 +17,25 @@
     "Multiply: $\\frac{3 \\times 2}{4 \\times 1} = \\frac{6}{4}$.",
     "Simplify: $\\frac{6}{4} = \\frac{3}{2} = 1\\frac{1}{2}$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Think: how many halves fit in three-fourths?",
+      "steps": [
+        "$\\frac{3}{4} \\div \\frac{1}{2}$ asks: **how many $\\frac{1}{2}$'s are inside $\\frac{3}{4}$?**",
+        "One $\\frac{1}{2}$ is the same as $\\frac{2}{4}$. So one whole half fits inside $\\frac{3}{4}$ with $\\frac{1}{4}$ left over.",
+        "That leftover $\\frac{1}{4}$ is half of $\\frac{1}{2}$, so $\\frac{1}{2}$ of another half fits.",
+        "Total: $1 + \\frac{1}{2} = 1\\frac{1}{2}$ halves fit inside $\\frac{3}{4}$."
+      ]
+    },
+    {
+      "title": "Common denominator method",
+      "steps": [
+        "Rewrite both with the same denominator: $\\frac{3}{4} \\div \\frac{2}{4}$.",
+        "When denominators match, just divide the numerators: $3 \\div 2 = \\frac{3}{2}$.",
+        "So $\\frac{3}{4} \\div \\frac{1}{2} = \\frac{3}{2} = 1\\frac{1}{2}$."
+      ]
+    }
+  ],
   "tags": ["CA", "fraction-division"],
   "estimatedSeconds": 60
 }

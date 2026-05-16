@@ -71,6 +71,7 @@ export interface Problem {
   numericTolerance?: number;
   hint: string;
   explanation: string[];
+  alternativeExplanations?: { title: string; steps: string[] }[];
   tags: string[];
   estimatedSeconds: number;
 }

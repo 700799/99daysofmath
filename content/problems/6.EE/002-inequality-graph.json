@@ -27,6 +27,26 @@
     "The arrow points **right** from $2$, meaning values **greater than** $2$.",
     "So the inequality is $x > 2$."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Test some numbers",
+      "steps": [
+        "Try $x = 3$. The point $3$ on the line is on the orange ray → it's a solution. So our inequality must accept $3$.",
+        "Try $x = 2$. The circle at $2$ is **open**, meaning $2$ is **not** a solution. So $x \\ge 2$ is wrong (it would accept $2$).",
+        "Try $x = 1$. The point $1$ is to the **left** of the open circle, not on the orange ray → not a solution.",
+        "Values $> 2$ work, values $\\le 2$ don't. That's exactly $x > 2$."
+      ]
+    },
+    {
+      "title": "Open vs closed circles cheat-sheet",
+      "steps": [
+        "**Open** circle ($\\circ$) → the endpoint is **not** included → use $<$ or $>$.",
+        "**Closed** circle ($\\bullet$) → the endpoint **is** included → use $\\le$ or $\\ge$.",
+        "Then the arrow tells you direction: right = $>$ or $\\ge$, left = $<$ or $\\le$.",
+        "Open circle at $2$ + arrow right = $x > 2$."
+      ]
+    }
+  ],
   "tags": ["CA", "inequalities", "MAP-practice"],
   "estimatedSeconds": 45
 }

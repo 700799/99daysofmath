@@ -9,25 +9,30 @@ import {
 } from '../types/problem';
 import { useProgress } from '../state/progress';
 import { useDomainSummary } from '../hooks/useProblems';
+import { Mascot } from '../components/Mascot';
 
 export function Home() {
   const { data: summary, loading, error } = useDomainSummary();
   const progress = useProgress((s) => s.byDomain);
+  const stickers = useProgress((s) => s.stickers);
 
   return (
     <div>
-      <div className="mb-6">
-        <h1 className="text-3xl font-display font-extrabold text-slate-900">
-          Pick a trail
-        </h1>
-        <p className="text-slate-600 mt-1">
-          Five 6th-grade Common Core domains. Each trail unlocks unit by unit.
-        </p>
+      <div className="mb-6 flex items-center gap-3">
+        <Mascot mood="happy" size={72} />
+        <div>
+          <h1 className="text-2xl sm:text-3xl font-display font-extrabold text-slate-900">
+            Pick a trail!
+          </h1>
+          <p className="text-slate-600 mt-0.5 text-sm sm:text-base">
+            Five 6th-grade math trails. Earn stars, stickers, and XP.
+          </p>
+        </div>
       </div>
 
       {error && (
-        <div className="bg-red-50 border border-red-200 rounded-2xl p-4 text-red-800 mb-4">
-          Couldn't load problem bank: {error.message}
+        <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-4 text-red-800 mb-4">
+          Couldn't load problems: {error.message}
         </div>
       )}
 
@@ -50,13 +55,16 @@ export function Home() {
             >
               <Link
                 to={`/trail/${d}`}
-                className="block rounded-3xl p-5 shadow-sm border border-slate-200 bg-white hover:shadow-md transition-shadow"
-                style={{ borderLeftWidth: 8, borderLeftColor: DOMAIN_COLORS[d] }}
+                className="block rounded-3xl p-4 sm:p-5 shadow-sm border-2 border-slate-200 bg-white hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all"
+                style={{
+                  borderLeftWidth: 10,
+                  borderLeftColor: DOMAIN_COLORS[d],
+                }}
               >
-                <div className="flex items-start gap-4">
-                  <div className="text-4xl">{DOMAIN_EMOJI[d]}</div>
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="text-4xl sm:text-5xl">{DOMAIN_EMOJI[d]}</div>
                   <div className="flex-1 min-w-0">
-                    <div className="font-display font-extrabold text-lg text-slate-900">
+                    <div className="font-display font-extrabold text-base sm:text-lg text-slate-900">
                       {DOMAIN_LABELS[d]}
                     </div>
                     <div className="text-xs font-display font-bold text-slate-500 uppercase tracking-wider mt-0.5">
@@ -69,14 +77,14 @@ export function Home() {
                       {loading
                         ? 'Loading…'
                         : counts
-                          ? `${counts.count} problems · ${counts.units} units`
-                          : 'No problems yet'}
+                          ? `${counts.count} problems · ${counts.units} unit${counts.units === 1 ? '' : 's'}`
+                          : 'Coming soon'}
                     </div>
                   </div>
-                  <div className="text-right">
-                    <div className="inline-flex items-center gap-1 bg-amber-100 px-2 py-1 rounded-full">
-                      <span>⭐</span>
-                      <span className="font-display font-bold text-amber-900 text-sm">
+                  <div className="text-right shrink-0">
+                    <div className="inline-flex items-center gap-1 bg-amber-100 px-2.5 py-1 rounded-full">
+                      <span aria-hidden="true">⭐</span>
+                      <span className="font-display font-extrabold text-amber-900 text-sm tabular-nums">
                         {earned}
                       </span>
                     </div>
@@ -87,6 +95,37 @@ export function Home() {
           );
         })}
       </div>
+
+      {stickers.length > 0 && (
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mt-8 bg-white rounded-3xl border-2 border-slate-200 p-4 sm:p-5"
+        >
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-2xl" aria-hidden="true">🎒</span>
+            <div>
+              <div className="font-display font-extrabold text-slate-900">
+                Sticker book
+              </div>
+              <div className="text-xs text-slate-500">
+                {stickers.length} earned
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {stickers.map((s) => (
+              <span
+                key={s}
+                className="inline-flex items-center gap-1 bg-gradient-to-br from-yellow-100 to-pink-100 border-2 border-pink-200 px-3 py-1.5 rounded-full font-display font-bold text-slate-800 text-sm"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 }

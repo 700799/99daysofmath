@@ -21,6 +21,25 @@
     "Count the dots in that column: there are $4$.",
     "So $4$ families have exactly $2$ pets."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Reading a dot plot",
+      "steps": [
+        "Each **dot** represents one family.",
+        "The **horizontal number** below the dots tells you how many pets that family has.",
+        "To find \"how many families have 2 pets\", count the dots stacked above the number $2$.",
+        "There are $4$ dots → $4$ families."
+      ]
+    },
+    {
+      "title": "Sanity-check with the total",
+      "steps": [
+        "If you count **all** the dots, you get the total number of families: $2 + 4 + 3 + 1 = 10$ families.",
+        "Of those $10$, the column above $2$ has $4$ dots.",
+        "So $4$ out of $10$ families have exactly $2$ pets. ✓"
+      ]
+    }
+  ],
   "tags": ["CA", "statistics", "data-displays"],
   "estimatedSeconds": 30
 }

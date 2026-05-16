@@ -16,6 +16,24 @@
     "Divide: $180 \\div 3 = 60$.",
     "Sam's unit rate is $60$ miles per hour."
   ],
+  "alternativeExplanations": [
+    {
+      "title": "Using a ratio table",
+      "steps": [
+        "Start with what you know: $180$ miles in $3$ hours.",
+        "Divide both sides by $3$ to find the **per-1** value: $\\frac{180}{3} = 60$ miles in $\\frac{3}{3} = 1$ hour.",
+        "So in $1$ hour Sam drives $60$ miles. That's $60$ mph."
+      ]
+    },
+    {
+      "title": "Think of it like a pizza",
+      "steps": [
+        "Imagine $180$ slices of pizza shared equally over $3$ hours.",
+        "How many slices per hour? Split $180$ into $3$ equal groups.",
+        "Each group has $60$ slices — so $60$ miles per hour."
+      ]
+    }
+  ],
   "tags": ["CA", "unit-rate"],
   "estimatedSeconds": 45
 }
