@@ -1,0 +1,40 @@
+{
+  "id": "6.NS.047",
+  "domain": "6.NS",
+  "unit": 5,
+  "orderInUnit": 7,
+  "standard": "6.NS.C.6.c",
+  "difficulty": 1,
+  "prompt": "A point is $4$ units right of the origin and $2$ units down. What are its coordinates?",
+  "answerType": "short-text",
+  "primaryAnswer": "(4, -2)",
+  "alternativeAnswers": [
+    "(4,-2)",
+    "4, -2",
+    "4,-2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Right is positive $x$, down is negative $y$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Right is positive $x$, down is negative $y$."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 4$, $y = -2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(4, -2)$."
+    }
+  ],
+  "explanation": [
+    "Right $4$: $x = 4$. Down $2$: $y = -2$.",
+    "$(4, -2)$."
+  ],
+  "tags": [
+    "coordinate"
+  ],
+  "estimatedSeconds": 40
+}

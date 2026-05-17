@@ -1,0 +1,40 @@
+{
+  "id": "6.NS.027",
+  "domain": "6.NS",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "6.NS.B.4",
+  "difficulty": 3,
+  "prompt": "You have $18$ apples and $24$ oranges. What is the **greatest** number of identical fruit baskets you can make using all the fruit?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [
+    "6 baskets"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "You need GCF of $18$ and $24$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You need GCF of $18$ and $24$."
+    },
+    {
+      "level": "guide",
+      "text": "Find the largest factor that divides both $18$ and $24$."
+    },
+    {
+      "level": "reveal",
+      "text": "GCF $= 6$. So $6$ baskets ($3$ apples + $4$ oranges each)."
+    }
+  ],
+  "explanation": [
+    "GCF of $18$ and $24$ is $6$.",
+    "$6$ baskets, each with $3$ apples and $4$ oranges."
+  ],
+  "tags": [
+    "MAP-practice",
+    "gcf",
+    "word"
+  ],
+  "estimatedSeconds": 70
+}

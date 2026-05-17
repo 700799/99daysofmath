@@ -1,0 +1,39 @@
+{
+  "id": "6.NS.055",
+  "domain": "6.NS",
+  "unit": 6,
+  "orderInUnit": 5,
+  "standard": "6.NS.C.6",
+  "difficulty": 2,
+  "prompt": "Reflect $(5, -2)$ over the $x$-axis. New point?",
+  "answerType": "short-text",
+  "primaryAnswer": "(5, 2)",
+  "alternativeAnswers": [
+    "(5,2)",
+    "5, 2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Flip the sign of $y$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Flip the sign of $y$."
+    },
+    {
+      "level": "guide",
+      "text": "$y = -2 \\to y = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(5, 2)$."
+    }
+  ],
+  "explanation": [
+    "Across $x$-axis: keep $x$, flip $y$.",
+    "$(5, -2) \\to (5, 2)$."
+  ],
+  "tags": [
+    "coordinate"
+  ],
+  "estimatedSeconds": 40
+}

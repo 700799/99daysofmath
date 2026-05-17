@@ -1,0 +1,40 @@
+{
+  "id": "6.NS.051",
+  "domain": "6.NS",
+  "unit": 6,
+  "orderInUnit": 1,
+  "standard": "6.NS.A.1",
+  "difficulty": 1,
+  "prompt": "Compute $\\frac{2}{3} \\times \\frac{3}{4}$.",
+  "answerType": "fraction",
+  "primaryAnswer": "1/2",
+  "alternativeAnswers": [
+    "0.5",
+    "2/4",
+    "6/12"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply numerators and denominators.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply numerators and denominators."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{2 \\times 3}{3 \\times 4} = \\frac{6}{12}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Simplify: $\\frac{6}{12} = \\frac{1}{2}$."
+    }
+  ],
+  "explanation": [
+    "$\\frac{2}{3} \\times \\frac{3}{4} = \\frac{6}{12} = \\frac{1}{2}$."
+  ],
+  "tags": [
+    "fraction",
+    "multiply"
+  ],
+  "estimatedSeconds": 50
+}

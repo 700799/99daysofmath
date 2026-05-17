@@ -1,0 +1,39 @@
+{
+  "id": "6.NS.038",
+  "domain": "6.NS",
+  "unit": 4,
+  "orderInUnit": 8,
+  "standard": "6.NS.C.7.b",
+  "difficulty": 2,
+  "prompt": "Which symbol makes this true: $-15 \\ ?\\ -10$? Type $<$ or $>$.",
+  "answerType": "short-text",
+  "primaryAnswer": "<",
+  "alternativeAnswers": [
+    "less than"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "More negative means smaller.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "More negative means smaller."
+    },
+    {
+      "level": "guide",
+      "text": "$-15$ is further left of $-10$ on the number line."
+    },
+    {
+      "level": "reveal",
+      "text": "$-15 < -10$."
+    }
+  ],
+  "explanation": [
+    "$-15$ is to the left of $-10$.",
+    "So $-15 < -10$."
+  ],
+  "tags": [
+    "integer",
+    "compare"
+  ],
+  "estimatedSeconds": 40
+}

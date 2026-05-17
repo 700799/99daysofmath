@@ -1,0 +1,41 @@
+{
+  "id": "6.NS.042",
+  "domain": "6.NS",
+  "unit": 5,
+  "orderInUnit": 2,
+  "standard": "6.NS.C.6.b",
+  "difficulty": 2,
+  "prompt": "Reflect $(2, 4)$ across the $y$-axis. What is the new point?",
+  "answerType": "short-text",
+  "primaryAnswer": "(-2, 4)",
+  "alternativeAnswers": [
+    "(-2,4)",
+    "-2, 4",
+    "-2,4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Reflecting across the $y$-axis flips the sign of $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Reflecting across the $y$-axis flips the sign of $x$."
+    },
+    {
+      "level": "guide",
+      "text": "$(2, 4) \\to (-2, 4)$."
+    },
+    {
+      "level": "reveal",
+      "text": "Answer: $(-2, 4)$."
+    }
+  ],
+  "explanation": [
+    "Across $y$-axis: flip $x$, keep $y$.",
+    "$(2, 4) \\to (-2, 4)$."
+  ],
+  "tags": [
+    "coordinate",
+    "reflect"
+  ],
+  "estimatedSeconds": 50
+}

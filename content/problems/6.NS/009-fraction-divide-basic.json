@@ -1,0 +1,38 @@
+{
+  "id": "6.NS.009",
+  "domain": "6.NS",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "6.NS.A.1",
+  "difficulty": 1,
+  "prompt": "Compute $\\frac{1}{2} \\div \\frac{1}{4}$.",
+  "answerType": "fraction",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [
+    "2/1"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Dividing by a fraction is the same as multiplying by its **reciprocal**.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Dividing by a fraction is the same as multiplying by its **reciprocal**."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{1}{2} \\div \\frac{1}{4} = \\frac{1}{2} \\times \\frac{4}{1}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2} \\times 4 = 2$."
+    }
+  ],
+  "explanation": [
+    "Flip the divisor: $\\frac{1}{4} \\to \\frac{4}{1}$.",
+    "Multiply: $\\frac{1}{2} \\cdot \\frac{4}{1} = \\frac{4}{2} = 2$."
+  ],
+  "tags": [
+    "fraction-division"
+  ],
+  "estimatedSeconds": 45
+}

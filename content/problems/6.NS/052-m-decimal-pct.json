@@ -1,0 +1,36 @@
+{
+  "id": "6.NS.052",
+  "domain": "6.NS",
+  "unit": 6,
+  "orderInUnit": 2,
+  "standard": "6.NS.B.3",
+  "difficulty": 2,
+  "prompt": "What is $0.15 \\times 80$?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$0.15 = 15\\%$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$0.15 = 15\\%$."
+    },
+    {
+      "level": "guide",
+      "text": "$10\\%$ of $80$ is $8$. $5\\%$ is $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$8 + 4 = 12$."
+    }
+  ],
+  "explanation": [
+    "$0.15 \\times 80 = 12$."
+  ],
+  "tags": [
+    "decimal",
+    "percent"
+  ],
+  "estimatedSeconds": 50
+}

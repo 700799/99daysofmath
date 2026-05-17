@@ -1,0 +1,40 @@
+{
+  "id": "6.NS.031",
+  "domain": "6.NS",
+  "unit": 4,
+  "orderInUnit": 1,
+  "standard": "6.NS.C.5",
+  "difficulty": 1,
+  "prompt": "A diver is $30$ feet **below** sea level. Represent this as an integer.",
+  "answerType": "numeric",
+  "primaryAnswer": "-30",
+  "alternativeAnswers": [
+    "−30",
+    "-30 ft"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Below\" sea level means negative.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Below\" sea level means negative."
+    },
+    {
+      "level": "guide",
+      "text": "Sea level is $0$. Below is negative."
+    },
+    {
+      "level": "reveal",
+      "text": "$-30$ feet."
+    }
+  ],
+  "explanation": [
+    "Below sea level is negative.",
+    "Answer: $-30$ feet."
+  ],
+  "tags": [
+    "integer",
+    "word"
+  ],
+  "estimatedSeconds": 35
+}

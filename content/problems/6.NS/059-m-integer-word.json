@@ -1,0 +1,39 @@
+{
+  "id": "6.NS.059",
+  "domain": "6.NS",
+  "unit": 6,
+  "orderInUnit": 9,
+  "standard": "6.NS.C.5",
+  "difficulty": 2,
+  "prompt": "An elevator goes from floor $5$ to floor $-2$. How many floors did it descend?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [
+    "7 floors"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Distance $= |5 - (-2)|$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Distance $= |5 - (-2)|$."
+    },
+    {
+      "level": "guide",
+      "text": "$5 - (-2) = 5 + 2 = 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$7$ floors."
+    }
+  ],
+  "explanation": [
+    "$|5 - (-2)| = 7$.",
+    "Elevator descended $7$ floors."
+  ],
+  "tags": [
+    "integer",
+    "word"
+  ],
+  "estimatedSeconds": 50
+}

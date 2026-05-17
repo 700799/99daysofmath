@@ -1,0 +1,38 @@
+{
+  "id": "6.NS.048",
+  "domain": "6.NS",
+  "unit": 5,
+  "orderInUnit": 8,
+  "standard": "6.NS.C.8",
+  "difficulty": 3,
+  "prompt": "A rectangle has corners at $(1, 2), (1, 6), (5, 2), (5, 6)$. What is its **perimeter**?",
+  "answerType": "numeric",
+  "primaryAnswer": "16",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find length and width from coordinates.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find length and width from coordinates."
+    },
+    {
+      "level": "guide",
+      "text": "Width: $|5 - 1| = 4$. Height: $|6 - 2| = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "Perimeter $= 2(4 + 4) = 16$."
+    }
+  ],
+  "explanation": [
+    "Width: $4$. Height: $4$.",
+    "Perimeter $= 2(4) + 2(4) = 16$."
+  ],
+  "tags": [
+    "CA",
+    "coordinate",
+    "perimeter"
+  ],
+  "estimatedSeconds": 85
+}

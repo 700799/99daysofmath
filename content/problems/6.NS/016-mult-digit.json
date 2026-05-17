@@ -1,0 +1,38 @@
+{
+  "id": "6.NS.016",
+  "domain": "6.NS",
+  "unit": 2,
+  "orderInUnit": 6,
+  "standard": "6.NS.B.2",
+  "difficulty": 2,
+  "prompt": "Multiply: $24 \\times 35$.",
+  "answerType": "numeric",
+  "primaryAnswer": "840",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Split: $24 \\times 35 = 24 \\times 30 + 24 \\times 5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Split: $24 \\times 35 = 24 \\times 30 + 24 \\times 5$."
+    },
+    {
+      "level": "guide",
+      "text": "$24 \\times 30 = 720$ and $24 \\times 5 = 120$."
+    },
+    {
+      "level": "reveal",
+      "text": "$720 + 120 = 840$."
+    }
+  ],
+  "explanation": [
+    "$24 \\times 30 = 720$.",
+    "$24 \\times 5 = 120$.",
+    "Sum: $840$."
+  ],
+  "tags": [
+    "multiply",
+    "multi-digit"
+  ],
+  "estimatedSeconds": 60
+}

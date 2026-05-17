@@ -1,0 +1,37 @@
+{
+  "id": "6.NS.039",
+  "domain": "6.NS",
+  "unit": 4,
+  "orderInUnit": 9,
+  "standard": "6.NS.C.7",
+  "difficulty": 3,
+  "prompt": "Compute $-5 + 8$.",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Start at $-5$ on the number line and move $8$ right.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Start at $-5$ on the number line and move $8$ right."
+    },
+    {
+      "level": "guide",
+      "text": "You'll pass $0$ and end up at $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-5 + 8 = 3$."
+    }
+  ],
+  "explanation": [
+    "Start at $-5$, move $8$ right: $-5 \\to 0 \\to 3$.",
+    "Result: $3$."
+  ],
+  "tags": [
+    "integer",
+    "add"
+  ],
+  "estimatedSeconds": 50
+}

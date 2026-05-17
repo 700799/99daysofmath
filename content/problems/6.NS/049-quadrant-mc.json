@@ -1,0 +1,58 @@
+{
+  "id": "6.NS.049",
+  "domain": "6.NS",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "6.NS.C.6.b",
+  "difficulty": 2,
+  "prompt": "Which point is in Quadrant II?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$(3, 5)$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$(-2, 4)$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$(-1, -1)$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$(4, -7)$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Quadrant II: $x < 0$, $y > 0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Quadrant II: $x < 0$, $y > 0$."
+    },
+    {
+      "level": "guide",
+      "text": "Find the point with negative $x$ and positive $y$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(-2, 4)$."
+    }
+  ],
+  "explanation": [
+    "Quadrant II: upper-left, $x < 0$, $y > 0$.",
+    "$(-2, 4)$ fits."
+  ],
+  "tags": [
+    "coordinate"
+  ],
+  "estimatedSeconds": 45
+}

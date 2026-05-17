@@ -1,0 +1,36 @@
+{
+  "id": "6.NS.045",
+  "domain": "6.NS",
+  "unit": 5,
+  "orderInUnit": 5,
+  "standard": "6.NS.C.8",
+  "difficulty": 2,
+  "prompt": "Find the distance between $(-4, 1)$ and $(6, 1)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$y$ is the same, so distance is the $x$ difference (absolute value).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$y$ is the same, so distance is the $x$ difference (absolute value)."
+    },
+    {
+      "level": "guide",
+      "text": "$|6 - (-4)| = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$|10| = 10$."
+    }
+  ],
+  "explanation": [
+    "Same $y$, so distance $= |6 - (-4)| = 10$."
+  ],
+  "tags": [
+    "coordinate",
+    "distance"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,37 @@
+{
+  "id": "6.NS.023",
+  "domain": "6.NS",
+  "unit": 3,
+  "orderInUnit": 3,
+  "standard": "6.NS.B.4",
+  "difficulty": 2,
+  "prompt": "Find the GCF of $24$ and $36$.",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Try common factors of $24$ and $36$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Try common factors of $24$ and $36$."
+    },
+    {
+      "level": "guide",
+      "text": "Both are divisible by $12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24 = 12 \\times 2$, $36 = 12 \\times 3$. GCF $= 12$."
+    }
+  ],
+  "explanation": [
+    "$24 = 2^3 \\times 3$.",
+    "$36 = 2^2 \\times 3^2$.",
+    "GCF $= 2^2 \\times 3 = 12$."
+  ],
+  "tags": [
+    "gcf"
+  ],
+  "estimatedSeconds": 50
+}

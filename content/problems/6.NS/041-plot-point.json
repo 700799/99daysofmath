@@ -1,0 +1,41 @@
+{
+  "id": "6.NS.041",
+  "domain": "6.NS",
+  "unit": 5,
+  "orderInUnit": 1,
+  "standard": "6.NS.C.6.b",
+  "difficulty": 1,
+  "prompt": "In which quadrant is the point $(3, -5)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [
+    "IV",
+    "iv",
+    "four",
+    "quadrant 4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$x$ positive, $y$ negative — which quadrant?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$x$ positive, $y$ negative — which quadrant?"
+    },
+    {
+      "level": "guide",
+      "text": "Quadrant I is upper-right ($+,+$). Quadrant IV is lower-right ($+,-$)."
+    },
+    {
+      "level": "reveal",
+      "text": "Quadrant IV (or $4$)."
+    }
+  ],
+  "explanation": [
+    "$x = 3 > 0$, $y = -5 < 0$ → lower-right.",
+    "Quadrant IV."
+  ],
+  "tags": [
+    "coordinate"
+  ],
+  "estimatedSeconds": 45
+}

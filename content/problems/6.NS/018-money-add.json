@@ -1,0 +1,42 @@
+{
+  "id": "6.NS.018",
+  "domain": "6.NS",
+  "unit": 2,
+  "orderInUnit": 8,
+  "standard": "6.NS.B.3",
+  "difficulty": 2,
+  "prompt": "You buy items for \\$$4.75$, \\$$3.20$, and \\$$1.05$. What is the total?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [
+    "$9",
+    "$9.00",
+    "9.00"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Add carefully — line up decimals.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add carefully — line up decimals."
+    },
+    {
+      "level": "guide",
+      "text": "$4.75 + 3.20 = 7.95$."
+    },
+    {
+      "level": "reveal",
+      "text": "$7.95 + 1.05 = 9.00$."
+    }
+  ],
+  "explanation": [
+    "$4.75 + 3.20 = 7.95$.",
+    "$7.95 + 1.05 = 9.00$."
+  ],
+  "tags": [
+    "CA",
+    "decimal",
+    "money"
+  ],
+  "estimatedSeconds": 55
+}

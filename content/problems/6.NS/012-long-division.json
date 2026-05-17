@@ -1,0 +1,36 @@
+{
+  "id": "6.NS.012",
+  "domain": "6.NS",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "6.NS.B.2",
+  "difficulty": 2,
+  "prompt": "Compute $156 \\div 12$.",
+  "answerType": "numeric",
+  "primaryAnswer": "13",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "How many $12$s in $156$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "How many $12$s in $156$?"
+    },
+    {
+      "level": "guide",
+      "text": "$12 \\times 10 = 120$. Subtract from $156$: $36$. How many $12$s in $36$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$10 + 3 = 13$."
+    }
+  ],
+  "explanation": [
+    "$12 \\times 10 = 120$, $156 - 120 = 36$.",
+    "$12 \\times 3 = 36$. Total: $13$."
+  ],
+  "tags": [
+    "long-division"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,37 @@
+{
+  "id": "6.NS.030",
+  "domain": "6.NS",
+  "unit": 3,
+  "orderInUnit": 10,
+  "standard": "6.NS.B.4",
+  "difficulty": 3,
+  "prompt": "Find the LCM of $8$ and $12$.",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "List multiples until you find a common one.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "List multiples until you find a common one."
+    },
+    {
+      "level": "guide",
+      "text": "Multiples of $8$: $8, 16, 24, 32$. Multiples of $12$: $12, 24, 36$."
+    },
+    {
+      "level": "reveal",
+      "text": "Smallest match: $24$."
+    }
+  ],
+  "explanation": [
+    "Multiples of $8$: $8, 16, \\mathbf{24}$.",
+    "Multiples of $12$: $12, \\mathbf{24}$.",
+    "LCM $= 24$."
+  ],
+  "tags": [
+    "lcm"
+  ],
+  "estimatedSeconds": 50
+}

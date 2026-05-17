@@ -1,0 +1,37 @@
+{
+  "id": "6.NS.015",
+  "domain": "6.NS",
+  "unit": 2,
+  "orderInUnit": 5,
+  "standard": "6.NS.B.3",
+  "difficulty": 2,
+  "prompt": "Divide: $4.8 \\div 6$.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$48 \\div 6 = 8$. Now place the decimal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$48 \\div 6 = 8$. Now place the decimal."
+    },
+    {
+      "level": "guide",
+      "text": "$4.8 \\div 6$ — same as $48 \\div 6 = 8$ with one decimal place."
+    },
+    {
+      "level": "reveal",
+      "text": "$4.8 \\div 6 = 0.8$."
+    }
+  ],
+  "explanation": [
+    "$48 \\div 6 = 8$.",
+    "Keep decimal place: $0.8$."
+  ],
+  "tags": [
+    "decimal",
+    "divide"
+  ],
+  "estimatedSeconds": 40
+}

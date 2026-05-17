@@ -1,0 +1,35 @@
+{
+  "id": "6.NS.053",
+  "domain": "6.NS",
+  "unit": 6,
+  "orderInUnit": 3,
+  "standard": "6.NS.C.7",
+  "difficulty": 2,
+  "prompt": "Compute $4 - (-2)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Subtracting a negative is adding.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Subtracting a negative is adding."
+    },
+    {
+      "level": "guide",
+      "text": "$4 - (-2) = 4 + 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6$."
+    }
+  ],
+  "explanation": [
+    "$4 - (-2) = 4 + 2 = 6$."
+  ],
+  "tags": [
+    "integer"
+  ],
+  "estimatedSeconds": 35
+}

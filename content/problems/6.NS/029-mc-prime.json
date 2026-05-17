@@ -1,0 +1,58 @@
+{
+  "id": "6.NS.029",
+  "domain": "6.NS",
+  "unit": 3,
+  "orderInUnit": 9,
+  "standard": "6.NS.B.4",
+  "difficulty": 1,
+  "prompt": "Which number is **prime**?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$9$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$15$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$17$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$21$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "A prime number has only $1$ and itself as factors.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A prime number has only $1$ and itself as factors."
+    },
+    {
+      "level": "guide",
+      "text": "$9 = 3 \\times 3$, $15 = 3 \\times 5$, $21 = 3 \\times 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$17$ has no factors except $1$ and $17$."
+    }
+  ],
+  "explanation": [
+    "$9, 15, 21$ all have factors besides $1$ and themselves.",
+    "$17$ is prime."
+  ],
+  "tags": [
+    "prime"
+  ],
+  "estimatedSeconds": 50
+}

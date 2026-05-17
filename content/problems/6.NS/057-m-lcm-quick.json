@@ -1,0 +1,37 @@
+{
+  "id": "6.NS.057",
+  "domain": "6.NS",
+  "unit": 6,
+  "orderInUnit": 7,
+  "standard": "6.NS.B.4",
+  "difficulty": 2,
+  "prompt": "Find the LCM of $6$ and $10$.",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiples of $6$: $6, 12, 18, 24, 30$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiples of $6$: $6, 12, 18, 24, 30$."
+    },
+    {
+      "level": "guide",
+      "text": "Multiples of $10$: $10, 20, 30$."
+    },
+    {
+      "level": "reveal",
+      "text": "Smallest match: $30$."
+    }
+  ],
+  "explanation": [
+    "Multiples of $6$: $6, 12, 18, 24, \\mathbf{30}$.",
+    "Multiples of $10$: $10, 20, \\mathbf{30}$.",
+    "LCM $= 30$."
+  ],
+  "tags": [
+    "lcm"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,58 @@
+{
+  "id": "6.NS.046",
+  "domain": "6.NS",
+  "unit": 5,
+  "orderInUnit": 6,
+  "standard": "6.NS.C.6.b",
+  "difficulty": 1,
+  "prompt": "Which quadrant has BOTH $x < 0$ and $y < 0$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "I",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "II",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "III",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "IV",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Both negative is the lower-left.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Both negative is the lower-left."
+    },
+    {
+      "level": "guide",
+      "text": "Quadrant III is lower-left ($-,-$)."
+    },
+    {
+      "level": "reveal",
+      "text": "III."
+    }
+  ],
+  "explanation": [
+    "Lower-left quadrant has $x < 0$ and $y < 0$ → Quadrant III."
+  ],
+  "tags": [
+    "coordinate",
+    "quadrant"
+  ],
+  "estimatedSeconds": 35
+}

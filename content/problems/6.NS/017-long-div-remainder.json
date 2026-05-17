@@ -1,0 +1,39 @@
+{
+  "id": "6.NS.017",
+  "domain": "6.NS",
+  "unit": 2,
+  "orderInUnit": 7,
+  "standard": "6.NS.B.2",
+  "difficulty": 2,
+  "prompt": "Compute $173 \\div 8$ and give the answer as a **decimal**.",
+  "answerType": "numeric",
+  "primaryAnswer": "21.625",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "$8 \\times 21 = 168$. What's left over?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$8 \\times 21 = 168$. What's left over?"
+    },
+    {
+      "level": "guide",
+      "text": "Remainder is $5$. Keep dividing: $50 \\div 8 = 6$ remainder $2$, etc."
+    },
+    {
+      "level": "reveal",
+      "text": "$173 \\div 8 = 21.625$."
+    }
+  ],
+  "explanation": [
+    "$8 \\times 21 = 168$, remainder $5$.",
+    "Decimal: $5 \\div 8 = 0.625$.",
+    "Total: $21.625$."
+  ],
+  "tags": [
+    "long-division",
+    "decimal"
+  ],
+  "estimatedSeconds": 75
+}

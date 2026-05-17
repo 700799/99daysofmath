@@ -1,0 +1,38 @@
+{
+  "id": "6.NS.014",
+  "domain": "6.NS",
+  "unit": 2,
+  "orderInUnit": 4,
+  "standard": "6.NS.B.3",
+  "difficulty": 2,
+  "prompt": "Multiply: $0.6 \\times 0.4$.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.24",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Ignore decimals first: $6 \\times 4 = 24$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Ignore decimals first: $6 \\times 4 = 24$."
+    },
+    {
+      "level": "guide",
+      "text": "Count decimal places: $0.6$ has $1$, $0.4$ has $1$. Total: $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "Move the decimal $2$ places left: $0.24$."
+    }
+  ],
+  "explanation": [
+    "$6 \\times 4 = 24$.",
+    "$1 + 1 = 2$ decimal places.",
+    "Result: $0.24$."
+  ],
+  "tags": [
+    "decimal",
+    "multiply"
+  ],
+  "estimatedSeconds": 45
+}
