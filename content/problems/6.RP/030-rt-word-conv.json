@@ -1,0 +1,41 @@
+{
+  "id": "6.RP.030",
+  "domain": "6.RP",
+  "unit": 3,
+  "orderInUnit": 10,
+  "standard": "6.RP.A.3.d",
+  "difficulty": 3,
+  "prompt": "There are $12$ inches in $1$ foot. How many inches in $4.5$ feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "54",
+  "alternativeAnswers": [
+    "54 in",
+    "54 inches"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Each foot adds $12$ inches.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each foot adds $12$ inches."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply $4.5 \\times 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 \\times 12 = 48$, plus $0.5 \\times 12 = 6$. Total: $54$ inches."
+    }
+  ],
+  "explanation": [
+    "$1$ ft $= 12$ in.",
+    "$4.5 \\times 12 = 54$ inches."
+  ],
+  "tags": [
+    "MAP-practice",
+    "conversion",
+    "ratio-table"
+  ],
+  "estimatedSeconds": 60
+}

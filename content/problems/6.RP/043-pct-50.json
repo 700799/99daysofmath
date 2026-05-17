@@ -1,0 +1,36 @@
+{
+  "id": "6.RP.043",
+  "domain": "6.RP",
+  "unit": 5,
+  "orderInUnit": 3,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 1,
+  "prompt": "What is $50\\%$ of $42$?",
+  "answerType": "numeric",
+  "primaryAnswer": "21",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$50\\%$ is one half.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$50\\%$ is one half."
+    },
+    {
+      "level": "guide",
+      "text": "Divide by $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$42 \\div 2 = 21$."
+    }
+  ],
+  "explanation": [
+    "$50\\% = \\frac{1}{2}$.",
+    "$42 \\div 2 = 21$."
+  ],
+  "tags": [
+    "percent"
+  ],
+  "estimatedSeconds": 25
+}

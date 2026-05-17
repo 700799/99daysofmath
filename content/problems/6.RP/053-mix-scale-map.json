@@ -1,0 +1,38 @@
+{
+  "id": "6.RP.053",
+  "domain": "6.RP",
+  "unit": 6,
+  "orderInUnit": 5,
+  "standard": "6.RP.A.3.d",
+  "difficulty": 2,
+  "prompt": "A map scale is $1$ inch $= 50$ miles. How many miles is $3.5$ inches?",
+  "answerType": "numeric",
+  "primaryAnswer": "175",
+  "alternativeAnswers": [
+    "175 miles"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Each inch represents $50$ miles.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each inch represents $50$ miles."
+    },
+    {
+      "level": "guide",
+      "text": "$3.5 \\times 50$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 50 = 150$, plus $0.5 \\times 50 = 25$. Total: $175$."
+    }
+  ],
+  "explanation": [
+    "$3.5 \\times 50 = 175$ miles."
+  ],
+  "tags": [
+    "conversion",
+    "scale"
+  ],
+  "estimatedSeconds": 55
+}

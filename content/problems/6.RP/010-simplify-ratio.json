@@ -1,0 +1,42 @@
+{
+  "id": "6.RP.010",
+  "domain": "6.RP",
+  "unit": 1,
+  "orderInUnit": 8,
+  "standard": "6.RP.A.1",
+  "difficulty": 2,
+  "prompt": "Simplify the ratio $12 : 18$ to its lowest terms.",
+  "answerType": "short-text",
+  "primaryAnswer": "2:3",
+  "alternativeAnswers": [
+    "2 to 3",
+    "2/3",
+    "2 : 3"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find a number that divides both sides evenly.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find a number that divides both sides evenly."
+    },
+    {
+      "level": "guide",
+      "text": "What is the greatest common factor of $12$ and $18$?"
+    },
+    {
+      "level": "reveal",
+      "text": "GCF is $6$. Divide both: $12 \\div 6 = 2$, $18 \\div 6 = 3$. Answer: $2:3$."
+    }
+  ],
+  "explanation": [
+    "The greatest common factor of $12$ and $18$ is $6$.",
+    "Divide both parts by $6$: $\\frac{12}{6} = 2$ and $\\frac{18}{6} = 3$.",
+    "Simplified ratio: $2:3$."
+  ],
+  "tags": [
+    "ratio",
+    "simplify"
+  ],
+  "estimatedSeconds": 45
+}

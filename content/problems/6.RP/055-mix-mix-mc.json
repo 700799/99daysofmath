@@ -1,0 +1,40 @@
+{
+  "id": "6.RP.055",
+  "domain": "6.RP",
+  "unit": 6,
+  "orderInUnit": 7,
+  "standard": "6.RP.A.3",
+  "difficulty": 3,
+  "prompt": "A bag has $\\frac{3}{5}$ red marbles. If there are $20$ marbles, how many are **NOT red**?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [
+    "8 marbles"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Not red means $\\frac{2}{5}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Not red means $\\frac{2}{5}$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{2}{5}$ of $20$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{2}{5} \\times 20 = 8$."
+    }
+  ],
+  "explanation": [
+    "Not red: $1 - \\frac{3}{5} = \\frac{2}{5}$.",
+    "$\\frac{2}{5} \\times 20 = 8$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "fraction",
+    "ratio"
+  ],
+  "estimatedSeconds": 65
+}

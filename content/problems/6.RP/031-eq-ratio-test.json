@@ -1,0 +1,49 @@
+{
+  "id": "6.RP.031",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 1,
+  "standard": "6.RP.A.1",
+  "difficulty": 1,
+  "prompt": "Is $3 : 4$ equivalent to $9 : 12$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Yes",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "No",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Simplify $9:12$ and compare.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Simplify $9:12$ and compare."
+    },
+    {
+      "level": "guide",
+      "text": "Divide both sides of $9:12$ by $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$9 \\div 3 = 3$, $12 \\div 3 = 4$. So $9:12 = 3:4$. Yes!"
+    }
+  ],
+  "explanation": [
+    "$9:12$ divided by $3$ on both sides gives $3:4$.",
+    "They are equivalent."
+  ],
+  "tags": [
+    "ratio",
+    "equivalent"
+  ],
+  "estimatedSeconds": 30
+}

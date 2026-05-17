@@ -1,0 +1,40 @@
+{
+  "id": "6.RP.018",
+  "domain": "6.RP",
+  "unit": 2,
+  "orderInUnit": 8,
+  "standard": "6.RP.A.3.b",
+  "difficulty": 2,
+  "prompt": "Liam earns \\$$72$ for $8$ hours of work. How much does he earn **per hour**?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [
+    "$9",
+    "9 dollars"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find pay for $1$ hour.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find pay for $1$ hour."
+    },
+    {
+      "level": "guide",
+      "text": "$72 \\div 8 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$72 \\div 8 = 9$. Liam earns \\$$9$/hour."
+    }
+  ],
+  "explanation": [
+    "Total pay ÷ hours: $72 \\div 8 = 9$.",
+    "Pay rate is \\$$9$ per hour."
+  ],
+  "tags": [
+    "unit-rate",
+    "money"
+  ],
+  "estimatedSeconds": 30
+}

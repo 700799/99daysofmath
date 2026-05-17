@@ -1,0 +1,36 @@
+{
+  "id": "6.RP.021",
+  "domain": "6.RP",
+  "unit": 3,
+  "orderInUnit": 1,
+  "standard": "6.RP.A.3.a",
+  "difficulty": 1,
+  "prompt": "In the ratio table $1 \\to 3$, $2 \\to 6$, $3 \\to 9$, $4 \\to ?$ — what fills the blank?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Look at the pattern: each output is $3$ times the input.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Look at the pattern: each output is $3$ times the input."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply $4$ by $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 \\times 3 = 12$."
+    }
+  ],
+  "explanation": [
+    "The pattern is \"multiply input by $3$\".",
+    "$4 \\times 3 = 12$."
+  ],
+  "tags": [
+    "ratio-table"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,39 @@
+{
+  "id": "6.RP.023",
+  "domain": "6.RP",
+  "unit": 3,
+  "orderInUnit": 3,
+  "standard": "6.RP.A.3.a",
+  "difficulty": 2,
+  "prompt": "A recipe makes $12$ cookies with $3$ cups of flour. How many cups of flour to make $4$ cookies?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [
+    "1 cup"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Set up: $12$ cookies → $3$ cups. What about $4$ cookies?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Set up: $12$ cookies → $3$ cups. What about $4$ cookies?"
+    },
+    {
+      "level": "guide",
+      "text": "$4$ is $\\frac{1}{3}$ of $12$. Apply the same scale."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times \\frac{1}{3} = 1$ cup."
+    }
+  ],
+  "explanation": [
+    "Scale: $4 \\div 12 = \\frac{1}{3}$.",
+    "Flour: $3 \\times \\frac{1}{3} = 1$ cup."
+  ],
+  "tags": [
+    "CA",
+    "ratio-table"
+  ],
+  "estimatedSeconds": 50
+}

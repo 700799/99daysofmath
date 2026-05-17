@@ -1,0 +1,45 @@
+{
+  "id": "6.RP.046",
+  "domain": "6.RP",
+  "unit": 5,
+  "orderInUnit": 6,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 2,
+  "prompt": "$20$ is $10\\%$ of what number?",
+  "answerType": "numeric",
+  "primaryAnswer": "200",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$10\\%$ of something is $20$. The whole is $10$ times bigger.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$10\\%$ of something is $20$. The whole is $10$ times bigger."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply $20 \\times 10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$20 \\times 10 = 200$."
+    }
+  ],
+  "explanation": [
+    "If $10\\%$ is $20$, then $100\\%$ is $20 \\times 10 = 200$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Using an equation",
+      "steps": [
+        "$0.10 \\cdot x = 20$.",
+        "Divide both sides by $0.10$: $x = 200$."
+      ]
+    }
+  ],
+  "tags": [
+    "percent",
+    "find-whole"
+  ],
+  "estimatedSeconds": 55
+}

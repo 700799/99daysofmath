@@ -1,0 +1,36 @@
+{
+  "id": "6.RP.028",
+  "domain": "6.RP",
+  "unit": 3,
+  "orderInUnit": 8,
+  "standard": "6.RP.A.3.a",
+  "difficulty": 3,
+  "prompt": "A ratio table has $3 \\to 21$ and $? \\to 49$. What is the missing input?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the rule first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the rule first."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{21}{3} = 7$, so output is $7 \\times$ input."
+    },
+    {
+      "level": "reveal",
+      "text": "If output is $49$, input $= 49 \\div 7 = 7$."
+    }
+  ],
+  "explanation": [
+    "Rule: output $= 7 \\times$ input.",
+    "Inverse: input $= 49 \\div 7 = 7$."
+  ],
+  "tags": [
+    "ratio-table"
+  ],
+  "estimatedSeconds": 55
+}

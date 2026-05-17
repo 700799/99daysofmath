@@ -1,0 +1,42 @@
+{
+  "id": "6.RP.032",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 2,
+  "standard": "6.RP.A.1",
+  "difficulty": 1,
+  "prompt": "Write a ratio equivalent to $2 : 5$ by multiplying both sides by $3$.",
+  "answerType": "short-text",
+  "primaryAnswer": "6:15",
+  "alternativeAnswers": [
+    "6 to 15",
+    "6/15",
+    "6 : 15"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply each side by $3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply each side by $3$."
+    },
+    {
+      "level": "guide",
+      "text": "$2 \\times 3 = ?$ and $5 \\times 3 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$6 : 15$."
+    }
+  ],
+  "explanation": [
+    "$2 \\times 3 = 6$.",
+    "$5 \\times 3 = 15$.",
+    "Answer: $6:15$."
+  ],
+  "tags": [
+    "equivalent",
+    "ratio"
+  ],
+  "estimatedSeconds": 35
+}

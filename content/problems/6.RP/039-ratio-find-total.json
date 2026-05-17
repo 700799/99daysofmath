@@ -1,0 +1,40 @@
+{
+  "id": "6.RP.039",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 9,
+  "standard": "6.RP.A.3",
+  "difficulty": 3,
+  "prompt": "The ratio of cats to dogs at a shelter is $5 : 2$. If there are $10$ cats, how many animals are there in total?",
+  "answerType": "numeric",
+  "primaryAnswer": "14",
+  "alternativeAnswers": [
+    "14 animals"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "First find the number of dogs.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find the number of dogs."
+    },
+    {
+      "level": "guide",
+      "text": "Cats scaled by $\\frac{10}{5} = 2$. Apply to dogs: $2 \\times 2 = 4$ dogs."
+    },
+    {
+      "level": "reveal",
+      "text": "Total: $10 + 4 = 14$."
+    }
+  ],
+  "explanation": [
+    "Scale: $10 / 5 = 2$.",
+    "Dogs: $2 \\times 2 = 4$.",
+    "Total: $10 + 4 = 14$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "ratio"
+  ],
+  "estimatedSeconds": 65
+}

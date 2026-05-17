@@ -1,0 +1,42 @@
+{
+  "id": "6.RP.035",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 5,
+  "standard": "6.RP.A.3.a",
+  "difficulty": 2,
+  "prompt": "A ratio of $1 : 2$ is plotted on the coordinate plane. The pairs are $(1, 2), (2, 4), (3, 6)$. What is the next pair?",
+  "answerType": "short-text",
+  "primaryAnswer": "(4, 8)",
+  "alternativeAnswers": [
+    "(4,8)",
+    "4, 8",
+    "4,8"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The $y$ value is always twice $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $y$ value is always twice $x$."
+    },
+    {
+      "level": "guide",
+      "text": "If $x = 4$, then $y = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 2 \\times 4 = 8$. Pair: $(4, 8)$."
+    }
+  ],
+  "explanation": [
+    "Each $y$ is $2 \\times$ the $x$.",
+    "$x = 4 \\Rightarrow y = 8$.",
+    "Pair: $(4, 8)$."
+  ],
+  "tags": [
+    "ratio",
+    "graph"
+  ],
+  "estimatedSeconds": 45
+}

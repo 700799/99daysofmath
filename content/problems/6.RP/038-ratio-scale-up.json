@@ -1,0 +1,38 @@
+{
+  "id": "6.RP.038",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 8,
+  "standard": "6.RP.A.3",
+  "difficulty": 3,
+  "prompt": "In a class, the ratio of boys to girls is $3 : 4$. If there are $12$ boys, how many girls?",
+  "answerType": "numeric",
+  "primaryAnswer": "16",
+  "alternativeAnswers": [
+    "16 girls"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the scale factor from $3$ to $12$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the scale factor from $3$ to $12$."
+    },
+    {
+      "level": "guide",
+      "text": "$12 \\div 3 = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "Girls: $4 \\times 4 = 16$."
+    }
+  ],
+  "explanation": [
+    "Scale: $12 \\div 3 = 4$.",
+    "Girls: $4 \\times 4 = 16$."
+  ],
+  "tags": [
+    "ratio"
+  ],
+  "estimatedSeconds": 50
+}

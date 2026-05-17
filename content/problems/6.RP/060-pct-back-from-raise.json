@@ -1,0 +1,42 @@
+{
+  "id": "6.RP.060",
+  "domain": "6.RP",
+  "unit": 5,
+  "orderInUnit": 10,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 3,
+  "prompt": "After a $10\\%$ raise, a worker earns \\$$22$/hr. What was the original hourly wage?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [
+    "$20",
+    "$20.00"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "New wage is $110\\%$ of original.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "New wage is $110\\%$ of original."
+    },
+    {
+      "level": "guide",
+      "text": "$1.10 \\cdot x = 22$, so $x = 22 / 1.10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$22 \\div 1.10 = 20$."
+    }
+  ],
+  "explanation": [
+    "$110\\%$ of original $= 22$.",
+    "$22 \\div 1.10 = 20$.",
+    "Original: \\$$20$/hr."
+  ],
+  "tags": [
+    "CA",
+    "percent",
+    "work-back"
+  ],
+  "estimatedSeconds": 90
+}

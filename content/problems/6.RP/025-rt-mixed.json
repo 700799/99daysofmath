@@ -1,0 +1,37 @@
+{
+  "id": "6.RP.025",
+  "domain": "6.RP",
+  "unit": 3,
+  "orderInUnit": 5,
+  "standard": "6.RP.A.3.a",
+  "difficulty": 2,
+  "prompt": "In a ratio table $\\frac{x}{y}$: $2/8$, $5/?$, $10/40$. What is the missing $y$?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the ratio $y \\div x$ from the other rows.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the ratio $y \\div x$ from the other rows."
+    },
+    {
+      "level": "guide",
+      "text": "$8/2 = 4$ and $40/10 = 4$, so $y = 4x$."
+    },
+    {
+      "level": "reveal",
+      "text": "For $x = 5$: $y = 5 \\times 4 = 20$."
+    }
+  ],
+  "explanation": [
+    "Pattern: $y = 4x$.",
+    "For $x = 5$: $y = 20$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "ratio-table"
+  ],
+  "estimatedSeconds": 50
+}

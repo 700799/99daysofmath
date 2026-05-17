@@ -1,0 +1,36 @@
+{
+  "id": "6.RP.041",
+  "domain": "6.RP",
+  "unit": 5,
+  "orderInUnit": 1,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 1,
+  "prompt": "What is $25\\%$ of $80$?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$25\\%$ is the same as $\\frac{1}{4}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$25\\%$ is the same as $\\frac{1}{4}$."
+    },
+    {
+      "level": "guide",
+      "text": "Find $\\frac{1}{4}$ of $80$."
+    },
+    {
+      "level": "reveal",
+      "text": "$80 \\div 4 = 20$."
+    }
+  ],
+  "explanation": [
+    "$25\\% = 0.25 = \\frac{1}{4}$.",
+    "$80 \\div 4 = 20$."
+  ],
+  "tags": [
+    "percent"
+  ],
+  "estimatedSeconds": 30
+}

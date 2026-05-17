@@ -1,0 +1,38 @@
+{
+  "id": "6.RP.054",
+  "domain": "6.RP",
+  "unit": 6,
+  "orderInUnit": 6,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 3,
+  "prompt": "A class has $30$ students. $40\\%$ are girls. How many girls?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [
+    "12 girls"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$40\\% = 0.40$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$40\\% = 0.40$."
+    },
+    {
+      "level": "guide",
+      "text": "$30 \\times 0.40 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$30 \\times 0.40 = 12$."
+    }
+  ],
+  "explanation": [
+    "$40\\%$ of $30$: $30 \\times 0.40 = 12$."
+  ],
+  "tags": [
+    "percent",
+    "word"
+  ],
+  "estimatedSeconds": 50
+}

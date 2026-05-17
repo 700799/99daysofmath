@@ -1,0 +1,43 @@
+{
+  "id": "6.RP.047",
+  "domain": "6.RP",
+  "unit": 5,
+  "orderInUnit": 7,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 3,
+  "prompt": "A shirt costs \\$$20$ plus $8\\%$ tax. What is the **total** cost?",
+  "answerType": "numeric",
+  "primaryAnswer": "21.60",
+  "alternativeAnswers": [
+    "$21.60",
+    "21.6",
+    "$21.6"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find $8\\%$ of $20$, then add to $20$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find $8\\%$ of $20$, then add to $20$."
+    },
+    {
+      "level": "guide",
+      "text": "$8\\%$ of $20 = 1.60$."
+    },
+    {
+      "level": "reveal",
+      "text": "$20 + 1.60 = 21.60$."
+    }
+  ],
+  "explanation": [
+    "Tax: $20 \\times 0.08 = 1.60$.",
+    "Total: $20 + 1.60 = 21.60$.",
+    "Cost is \\$$21.60$."
+  ],
+  "tags": [
+    "CA",
+    "percent",
+    "money"
+  ],
+  "estimatedSeconds": 65
+}

@@ -1,0 +1,40 @@
+{
+  "id": "6.RP.045",
+  "domain": "6.RP",
+  "unit": 5,
+  "orderInUnit": 5,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 2,
+  "prompt": "Express $75\\%$ as a **fraction** in simplest form.",
+  "answerType": "fraction",
+  "primaryAnswer": "3/4",
+  "alternativeAnswers": [
+    "3 over 4",
+    "0.75"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Percent means \"per $100$\".",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Percent means \"per $100$\"."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{75}{100}$. Simplify it."
+    },
+    {
+      "level": "reveal",
+      "text": "GCF of $75$ and $100$ is $25$. $\\frac{75}{100} = \\frac{3}{4}$."
+    }
+  ],
+  "explanation": [
+    "$75\\% = \\frac{75}{100}$.",
+    "Divide both by $25$: $\\frac{3}{4}$."
+  ],
+  "tags": [
+    "percent",
+    "fraction"
+  ],
+  "estimatedSeconds": 45
+}

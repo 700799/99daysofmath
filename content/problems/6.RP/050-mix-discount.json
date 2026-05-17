@@ -1,0 +1,50 @@
+{
+  "id": "6.RP.050",
+  "domain": "6.RP",
+  "unit": 6,
+  "orderInUnit": 2,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 2,
+  "prompt": "A \\$$60$ jacket is $25\\%$ off. What is the **sale price**?",
+  "answerType": "numeric",
+  "primaryAnswer": "45",
+  "alternativeAnswers": [
+    "$45",
+    "$45.00"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the discount, then subtract.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the discount, then subtract."
+    },
+    {
+      "level": "guide",
+      "text": "Discount $= 25\\%$ of $60 = 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "Sale: $60 - 15 = 45$ dollars."
+    }
+  ],
+  "explanation": [
+    "$25\\%$ of $60$: $60 \\div 4 = 15$.",
+    "Sale: $60 - 15 = 45$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pay percent shortcut",
+      "steps": [
+        "Sale price is $75\\%$ of original.",
+        "$60 \\times 0.75 = 45$ dollars."
+      ]
+    }
+  ],
+  "tags": [
+    "CA",
+    "percent",
+    "discount"
+  ],
+  "estimatedSeconds": 55
+}

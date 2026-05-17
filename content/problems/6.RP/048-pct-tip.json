@@ -1,0 +1,42 @@
+{
+  "id": "6.RP.048",
+  "domain": "6.RP",
+  "unit": 5,
+  "orderInUnit": 8,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 3,
+  "prompt": "You leave a $15\\%$ tip on a \\$$40$ meal. How much is the tip?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [
+    "$6",
+    "$6.00"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$10\\%$ of $40$ is $4$. What's $5\\%$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$10\\%$ of $40$ is $4$. What's $5\\%$?"
+    },
+    {
+      "level": "guide",
+      "text": "$5\\%$ is half of $10\\%$, so $5\\% = 2$. Add: $10\\% + 5\\% = 4 + 2 = 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$15\\%$ of $40 = 6$ dollars."
+    }
+  ],
+  "explanation": [
+    "$10\\%$ of $40 = 4$.",
+    "$5\\%$ of $40 = 2$.",
+    "Total $15\\%$: $4 + 2 = 6$ dollars."
+  ],
+  "tags": [
+    "MAP-practice",
+    "percent",
+    "tip"
+  ],
+  "estimatedSeconds": 65
+}

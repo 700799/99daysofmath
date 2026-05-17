@@ -1,0 +1,38 @@
+{
+  "id": "6.RP.017",
+  "domain": "6.RP",
+  "unit": 2,
+  "orderInUnit": 7,
+  "standard": "6.RP.A.2",
+  "difficulty": 2,
+  "prompt": "A car uses $4$ gallons of gas to drive $120$ miles. How many **miles per gallon**?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [
+    "30 mpg"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Per gallon\" means: miles for $1$ gallon.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Per gallon\" means: miles for $1$ gallon."
+    },
+    {
+      "level": "guide",
+      "text": "Divide miles by gallons."
+    },
+    {
+      "level": "reveal",
+      "text": "$120 \\div 4 = 30$ miles per gallon."
+    }
+  ],
+  "explanation": [
+    "$\\frac{120 \\text{ mi}}{4 \\text{ gal}} = 30$ mpg.",
+    "The car gets $30$ miles per gallon."
+  ],
+  "tags": [
+    "unit-rate"
+  ],
+  "estimatedSeconds": 35
+}

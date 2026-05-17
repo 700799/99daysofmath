@@ -1,0 +1,36 @@
+{
+  "id": "6.RP.022",
+  "domain": "6.RP",
+  "unit": 3,
+  "orderInUnit": 2,
+  "standard": "6.RP.A.3.a",
+  "difficulty": 1,
+  "prompt": "In a ratio table, $2 \\to 10$ and $5 \\to 25$. What does $8$ map to?",
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "What's the multiplier from input to output?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "What's the multiplier from input to output?"
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{10}{2} = 5$ and $\\frac{25}{5} = 5$. So output $= 5 \\times$ input."
+    },
+    {
+      "level": "reveal",
+      "text": "$8 \\times 5 = 40$."
+    }
+  ],
+  "explanation": [
+    "Each output is $5$ times the input.",
+    "$8 \\times 5 = 40$."
+  ],
+  "tags": [
+    "ratio-table"
+  ],
+  "estimatedSeconds": 35
+}

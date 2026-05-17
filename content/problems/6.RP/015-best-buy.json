@@ -1,0 +1,61 @@
+{
+  "id": "6.RP.015",
+  "domain": "6.RP",
+  "unit": 2,
+  "orderInUnit": 5,
+  "standard": "6.RP.A.2",
+  "difficulty": 2,
+  "prompt": "Bottle A: $12$ oz for \\$$3$. Bottle B: $20$ oz for \\$$4$. Which is the **better buy** (lower price per oz)?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Bottle A",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Bottle B",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Same price per oz",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Cannot tell",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Find price per ounce for each.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find price per ounce for each."
+    },
+    {
+      "level": "guide",
+      "text": "A: $3 \\div 12$. B: $4 \\div 20$."
+    },
+    {
+      "level": "reveal",
+      "text": "A: \\$$0.25$/oz. B: \\$$0.20$/oz. B is cheaper per oz."
+    }
+  ],
+  "explanation": [
+    "A: $3 \\div 12 = \\$0.25$/oz.",
+    "B: $4 \\div 20 = \\$0.20$/oz.",
+    "B costs less per ounce — better buy."
+  ],
+  "tags": [
+    "CA",
+    "MAP-practice",
+    "unit-price"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,36 @@
+{
+  "id": "6.RP.044",
+  "domain": "6.RP",
+  "unit": 5,
+  "orderInUnit": 4,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 2,
+  "prompt": "What is $30\\%$ of $90$?",
+  "answerType": "numeric",
+  "primaryAnswer": "27",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$30\\% = 0.30$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$30\\% = 0.30$."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply $90 \\times 0.30$."
+    },
+    {
+      "level": "reveal",
+      "text": "$90 \\times 0.30 = 27$."
+    }
+  ],
+  "explanation": [
+    "Convert: $30\\% = 0.30$.",
+    "$90 \\times 0.30 = 27$."
+  ],
+  "tags": [
+    "percent"
+  ],
+  "estimatedSeconds": 35
+}

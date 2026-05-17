@@ -1,0 +1,40 @@
+{
+  "id": "6.RP.052",
+  "domain": "6.RP",
+  "unit": 6,
+  "orderInUnit": 4,
+  "standard": "6.RP.A.3",
+  "difficulty": 2,
+  "prompt": "A recipe for $4$ servings uses $2$ cups of milk. How many cups for $10$ servings?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [
+    "5 cups"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "First find milk per serving.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find milk per serving."
+    },
+    {
+      "level": "guide",
+      "text": "Per serving: $2 \\div 4 = 0.5$ cup."
+    },
+    {
+      "level": "reveal",
+      "text": "$10 \\times 0.5 = 5$ cups."
+    }
+  ],
+  "explanation": [
+    "Per serving: $2 / 4 = 0.5$ cup.",
+    "For $10$: $10 \\times 0.5 = 5$ cups."
+  ],
+  "tags": [
+    "CA",
+    "recipe",
+    "ratio"
+  ],
+  "estimatedSeconds": 60
+}

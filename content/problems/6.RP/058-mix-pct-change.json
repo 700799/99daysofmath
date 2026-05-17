@@ -1,0 +1,41 @@
+{
+  "id": "6.RP.058",
+  "domain": "6.RP",
+  "unit": 6,
+  "orderInUnit": 10,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 3,
+  "prompt": "A book's price went from \\$$20$ to \\$$25$. What is the **percent increase**?",
+  "answerType": "short-text",
+  "primaryAnswer": "25%",
+  "alternativeAnswers": [
+    "25 percent",
+    "25 %"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Find the **change**, then divide by the **original**.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the **change**, then divide by the **original**."
+    },
+    {
+      "level": "guide",
+      "text": "Change: $25 - 20 = 5$. Divide by $20$: $5/20 = 0.25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.25 = 25\\%$ increase."
+    }
+  ],
+  "explanation": [
+    "Change: $25 - 20 = 5$.",
+    "$\\frac{5}{20} = 0.25 = 25\\%$.",
+    "Price went up $25\\%$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "percent-change"
+  ],
+  "estimatedSeconds": 85
+}

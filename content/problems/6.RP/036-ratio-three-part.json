@@ -1,0 +1,40 @@
+{
+  "id": "6.RP.036",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 6,
+  "standard": "6.RP.A.1",
+  "difficulty": 2,
+  "prompt": "A bracelet uses red, blue, and green beads in the ratio $2 : 3 : 5$. If there are $20$ beads total, how many are **green**?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [
+    "10 beads"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Add the parts of the ratio to get the total.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add the parts of the ratio to get the total."
+    },
+    {
+      "level": "guide",
+      "text": "Parts $= 2 + 3 + 5 = 10$. Each part $= 20 / 10 = 2$ beads."
+    },
+    {
+      "level": "reveal",
+      "text": "Green has $5$ parts: $5 \\times 2 = 10$."
+    }
+  ],
+  "explanation": [
+    "Total parts: $2 + 3 + 5 = 10$.",
+    "Each part: $20 \\div 10 = 2$ beads.",
+    "Green: $5 \\times 2 = 10$."
+  ],
+  "tags": [
+    "CA",
+    "ratio"
+  ],
+  "estimatedSeconds": 70
+}

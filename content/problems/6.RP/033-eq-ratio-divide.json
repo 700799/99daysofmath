@@ -1,0 +1,40 @@
+{
+  "id": "6.RP.033",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 3,
+  "standard": "6.RP.A.1",
+  "difficulty": 2,
+  "prompt": "Write $20 : 30$ as an equivalent ratio in **simplest form**.",
+  "answerType": "short-text",
+  "primaryAnswer": "2:3",
+  "alternativeAnswers": [
+    "2 to 3",
+    "2 : 3"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the GCF and divide both.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the GCF and divide both."
+    },
+    {
+      "level": "guide",
+      "text": "GCF of $20$ and $30$ is $10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$20 \\div 10 = 2$, $30 \\div 10 = 3$. → $2:3$."
+    }
+  ],
+  "explanation": [
+    "GCF$(20, 30) = 10$.",
+    "Divide: $2:3$."
+  ],
+  "tags": [
+    "equivalent",
+    "simplify"
+  ],
+  "estimatedSeconds": 40
+}

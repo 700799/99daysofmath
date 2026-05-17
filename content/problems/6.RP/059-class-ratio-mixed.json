@@ -1,0 +1,38 @@
+{
+  "id": "6.RP.059",
+  "domain": "6.RP",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "6.RP.A.1",
+  "difficulty": 2,
+  "prompt": "A class has $24$ students. The ratio of boys to girls is $2 : 1$. How many **boys** are there?",
+  "answerType": "numeric",
+  "primaryAnswer": "16",
+  "alternativeAnswers": [
+    "16 boys"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Add parts: $2 + 1 = 3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add parts: $2 + 1 = 3$."
+    },
+    {
+      "level": "guide",
+      "text": "Each part is $24 / 3 = 8$ students."
+    },
+    {
+      "level": "reveal",
+      "text": "Boys: $2 \\times 8 = 16$."
+    }
+  ],
+  "explanation": [
+    "Parts: $3$. Each part: $24 / 3 = 8$.",
+    "Boys: $2 \\times 8 = 16$."
+  ],
+  "tags": [
+    "ratio"
+  ],
+  "estimatedSeconds": 60
+}

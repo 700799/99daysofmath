@@ -1,0 +1,40 @@
+{
+  "id": "6.RP.026",
+  "domain": "6.RP",
+  "unit": 3,
+  "orderInUnit": 6,
+  "standard": "6.RP.A.3.b",
+  "difficulty": 2,
+  "prompt": "A bike goes $5$ miles in $20$ minutes. How many minutes for $15$ miles?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [
+    "60 minutes",
+    "1 hour"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$15$ is how many times $5$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$15$ is how many times $5$?"
+    },
+    {
+      "level": "guide",
+      "text": "Multiply both sides by $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5 \\times 3 = 15$ miles, $20 \\times 3 = 60$ min."
+    }
+  ],
+  "explanation": [
+    "Scale by $3$: $5 \\to 15$.",
+    "Time: $20 \\times 3 = 60$ minutes."
+  ],
+  "tags": [
+    "ratio-table",
+    "unit-rate"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,41 @@
+{
+  "id": "6.RP.011",
+  "domain": "6.RP",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "6.RP.A.3",
+  "difficulty": 2,
+  "prompt": "A recipe uses $2$ cups of flour for every $3$ cups of sugar. If you use $6$ cups of flour, how many cups of sugar do you need?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [
+    "9 cups"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "How many times more flour than $2$ is $6$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "How many times more flour than $2$ is $6$?"
+    },
+    {
+      "level": "guide",
+      "text": "Scale **both** sides by the same factor."
+    },
+    {
+      "level": "reveal",
+      "text": "Flour: $2 \\to 6$ is $\\times 3$. So sugar: $3 \\times 3 = 9$."
+    }
+  ],
+  "explanation": [
+    "Flour scaled by $6 \\div 2 = 3$.",
+    "Apply the same factor to sugar: $3 \\times 3 = 9$.",
+    "You need $9$ cups of sugar."
+  ],
+  "tags": [
+    "CA",
+    "ratio",
+    "recipe"
+  ],
+  "estimatedSeconds": 45
+}

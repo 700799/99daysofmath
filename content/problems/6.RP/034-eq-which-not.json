@@ -1,0 +1,60 @@
+{
+  "id": "6.RP.034",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 4,
+  "standard": "6.RP.A.1",
+  "difficulty": 2,
+  "prompt": "Which is **NOT** equivalent to $4 : 6$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$2 : 3$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$8 : 12$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$6 : 9$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$5 : 7$",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "D",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Simplify $4:6$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Simplify $4:6$."
+    },
+    {
+      "level": "guide",
+      "text": "$4:6 = 2:3$. Which option does NOT simplify to $2:3$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$5:7$ has no common factor — not equivalent."
+    }
+  ],
+  "explanation": [
+    "$4:6 = 2:3$.",
+    "$8:12 = 2:3$, $6:9 = 2:3$, $2:3$ ✓ — all equivalent.",
+    "$5:7$ has GCF $1$ — not equivalent."
+  ],
+  "tags": [
+    "MAP-practice",
+    "equivalent"
+  ],
+  "estimatedSeconds": 50
+}
