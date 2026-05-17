@@ -1,0 +1,36 @@
+{
+  "id": "6.SP.031",
+  "domain": "6.SP",
+  "unit": 4,
+  "orderInUnit": 1,
+  "standard": "6.SP.B.4",
+  "difficulty": 1,
+  "prompt": "A dot plot shows: value $2$ has $3$ dots, $4$ has $5$ dots, $6$ has $2$ dots. What is the mode?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Mode = most dots.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Mode = most dots."
+    },
+    {
+      "level": "guide",
+      "text": "Most dots is at $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4$."
+    }
+  ],
+  "explanation": [
+    "Value $4$ has $5$ dots — the most.",
+    "Mode: $4$."
+  ],
+  "tags": [
+    "dot-plot"
+  ],
+  "estimatedSeconds": 45
+}

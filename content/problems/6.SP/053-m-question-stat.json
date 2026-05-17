@@ -1,0 +1,47 @@
+{
+  "id": "6.SP.053",
+  "domain": "6.SP",
+  "unit": 6,
+  "orderInUnit": 3,
+  "standard": "6.SP.A.1",
+  "difficulty": 1,
+  "prompt": "Is \"How tall is the Empire State Building?\" a statistical question?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Yes",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "No",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "It has just one answer.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "It has just one answer."
+    },
+    {
+      "level": "guide",
+      "text": "Statistical questions anticipate variability."
+    },
+    {
+      "level": "reveal",
+      "text": "No — one fixed answer."
+    }
+  ],
+  "explanation": [
+    "One fixed answer → not statistical."
+  ],
+  "tags": [
+    "statistical-question"
+  ],
+  "estimatedSeconds": 35
+}

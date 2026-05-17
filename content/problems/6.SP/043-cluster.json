@@ -1,0 +1,38 @@
+{
+  "id": "6.SP.043",
+  "domain": "6.SP",
+  "unit": 5,
+  "orderInUnit": 3,
+  "standard": "6.SP.B.5.d",
+  "difficulty": 2,
+  "prompt": "In a histogram, a region where bins are very tall is called a:",
+  "answerType": "short-text",
+  "primaryAnswer": "cluster",
+  "alternativeAnswers": [
+    "Cluster"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A clustering of values.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A clustering of values."
+    },
+    {
+      "level": "guide",
+      "text": "Many values bunched together."
+    },
+    {
+      "level": "reveal",
+      "text": "Cluster."
+    }
+  ],
+  "explanation": [
+    "Tall bins close together form a cluster."
+  ],
+  "tags": [
+    "shape",
+    "vocabulary"
+  ],
+  "estimatedSeconds": 30
+}

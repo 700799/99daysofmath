@@ -1,0 +1,54 @@
+{
+  "id": "6.SP.039",
+  "domain": "6.SP",
+  "unit": 4,
+  "orderInUnit": 9,
+  "standard": "6.SP.B.5.d",
+  "difficulty": 2,
+  "prompt": "A histogram has a tail on the **right** (bigger bin heights on the left). The distribution is:",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Symmetric",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Skewed right",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Skewed left",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The skew direction follows the tail.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The skew direction follows the tail."
+    },
+    {
+      "level": "guide",
+      "text": "Tail on right = skewed right."
+    },
+    {
+      "level": "reveal",
+      "text": "Skewed right."
+    }
+  ],
+  "explanation": [
+    "Tail extends to the right → skewed right."
+  ],
+  "tags": [
+    "MAP-practice",
+    "histogram",
+    "shape"
+  ],
+  "estimatedSeconds": 50
+}

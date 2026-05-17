@@ -1,0 +1,36 @@
+{
+  "id": "6.SP.012",
+  "domain": "6.SP",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 1,
+  "prompt": "Find the **range** of $12, 5, 18, 9, 14$.",
+  "answerType": "numeric",
+  "primaryAnswer": "13",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Range = max - min.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Range = max - min."
+    },
+    {
+      "level": "guide",
+      "text": "Max: $18$. Min: $5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$18 - 5 = 13$."
+    }
+  ],
+  "explanation": [
+    "Max: $18$, Min: $5$.",
+    "Range: $13$."
+  ],
+  "tags": [
+    "range"
+  ],
+  "estimatedSeconds": 35
+}

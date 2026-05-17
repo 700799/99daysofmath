@@ -1,0 +1,36 @@
+{
+  "id": "6.SP.027",
+  "domain": "6.SP",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "For $2, 4, 6, 8, 10, 12, 14, 16, 18$: median is $10$. What is $Q3$?",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Upper half: $12, 14, 16, 18$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Upper half: $12, 14, 16, 18$."
+    },
+    {
+      "level": "guide",
+      "text": "Median of $12, 14, 16, 18$: average of $14$ and $16$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(14 + 16)/2 = 15$."
+    }
+  ],
+  "explanation": [
+    "Upper half (above median): $12, 14, 16, 18$.",
+    "Median of upper: $15$."
+  ],
+  "tags": [
+    "quartile"
+  ],
+  "estimatedSeconds": 60
+}

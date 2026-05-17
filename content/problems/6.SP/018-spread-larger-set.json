@@ -1,0 +1,49 @@
+{
+  "id": "6.SP.018",
+  "domain": "6.SP",
+  "unit": 2,
+  "orderInUnit": 8,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Which set has greater **range**: $\\{5, 7, 9\\}$ or $\\{2, 5, 9, 14\\}$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\{5, 7, 9\\}$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$\\{2, 5, 9, 14\\}$",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Range = max - min for each.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Range = max - min for each."
+    },
+    {
+      "level": "guide",
+      "text": "A: $9 - 5 = 4$. B: $14 - 2 = 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "B has range $12$."
+    }
+  ],
+  "explanation": [
+    "A range: $4$. B range: $12$.",
+    "B is greater."
+  ],
+  "tags": [
+    "range",
+    "compare"
+  ],
+  "estimatedSeconds": 55
+}

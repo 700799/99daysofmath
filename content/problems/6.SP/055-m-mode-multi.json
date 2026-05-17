@@ -1,0 +1,36 @@
+{
+  "id": "6.SP.055",
+  "domain": "6.SP",
+  "unit": 6,
+  "orderInUnit": 5,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "In $\\{3, 3, 5, 7, 7, 9\\}$, how many modes?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Count which values tie for most appearances.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Count which values tie for most appearances."
+    },
+    {
+      "level": "guide",
+      "text": "$3$ appears twice; $7$ appears twice."
+    },
+    {
+      "level": "reveal",
+      "text": "$2$ modes."
+    }
+  ],
+  "explanation": [
+    "$3$ and $7$ both appear $2$ times.",
+    "$2$ modes."
+  ],
+  "tags": [
+    "mode"
+  ],
+  "estimatedSeconds": 50
+}

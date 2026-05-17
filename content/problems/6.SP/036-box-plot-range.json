@@ -1,0 +1,36 @@
+{
+  "id": "6.SP.036",
+  "domain": "6.SP",
+  "unit": 4,
+  "orderInUnit": 6,
+  "standard": "6.SP.B.4",
+  "difficulty": 2,
+  "prompt": "A box plot shows min $= 5$ and max $= 25$. What is the range?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Max - min.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Max - min."
+    },
+    {
+      "level": "guide",
+      "text": "$25 - 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$20$."
+    }
+  ],
+  "explanation": [
+    "Range: $25 - 5 = 20$."
+  ],
+  "tags": [
+    "box-plot",
+    "range"
+  ],
+  "estimatedSeconds": 35
+}

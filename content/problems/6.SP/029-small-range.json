@@ -1,0 +1,35 @@
+{
+  "id": "6.SP.029",
+  "domain": "6.SP",
+  "unit": 3,
+  "orderInUnit": 9,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Find the range of $5, 5, 5, 5$.",
+  "answerType": "numeric",
+  "primaryAnswer": "0",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Max minus min.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Max minus min."
+    },
+    {
+      "level": "guide",
+      "text": "Max and min are both $5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5 - 5 = 0$."
+    }
+  ],
+  "explanation": [
+    "All values equal $5$. Range: $0$."
+  ],
+  "tags": [
+    "range"
+  ],
+  "estimatedSeconds": 25
+}

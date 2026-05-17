@@ -1,0 +1,35 @@
+{
+  "id": "6.SP.009",
+  "domain": "6.SP",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 1,
+  "prompt": "Find the **mean** of $3, 7, 8, 6$.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Mean = sum divided by count.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Mean = sum divided by count."
+    },
+    {
+      "level": "guide",
+      "text": "Sum: $3 + 7 + 8 + 6 = 24$. Count: $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24 \\div 4 = 6$."
+    }
+  ],
+  "explanation": [
+    "Sum: $24$. Count: $4$. Mean: $6$."
+  ],
+  "tags": [
+    "mean"
+  ],
+  "estimatedSeconds": 45
+}

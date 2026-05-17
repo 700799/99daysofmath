@@ -1,0 +1,53 @@
+{
+  "id": "6.SP.049",
+  "domain": "6.SP",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "6.SP.B.5.d",
+  "difficulty": 2,
+  "prompt": "You see a dot plot with most dots near $20$ and a few dots near $50$. What describes the spread?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Cluster + gap",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Symmetric",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Uniform",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "A bunch of dots, then nothing, then a few more.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A bunch of dots, then nothing, then a few more."
+    },
+    {
+      "level": "guide",
+      "text": "Cluster around $20$ and gap before the dots at $50$."
+    },
+    {
+      "level": "reveal",
+      "text": "Cluster + gap."
+    }
+  ],
+  "explanation": [
+    "Dots near $20$ are a cluster.",
+    "Empty area between $20$ and $50$ is a gap."
+  ],
+  "tags": [
+    "shape"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,35 @@
+{
+  "id": "6.SP.013",
+  "domain": "6.SP",
+  "unit": 1,
+  "orderInUnit": 10,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Find the mean of $0, 4, 6, 10$.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Don't forget to count $0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Don't forget to count $0$."
+    },
+    {
+      "level": "guide",
+      "text": "Sum: $0 + 4 + 6 + 10 = 20$. Count: $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$20 / 4 = 5$."
+    }
+  ],
+  "explanation": [
+    "Sum: $20$. Count: $4$. Mean: $5$."
+  ],
+  "tags": [
+    "mean"
+  ],
+  "estimatedSeconds": 45
+}

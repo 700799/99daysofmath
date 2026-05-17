@@ -1,0 +1,35 @@
+{
+  "id": "6.SP.019",
+  "domain": "6.SP",
+  "unit": 2,
+  "orderInUnit": 9,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Find the mean of $11, 13, 14, 16, 18, 18$.",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sum / count.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sum / count."
+    },
+    {
+      "level": "guide",
+      "text": "Sum: $11 + 13 + 14 + 16 + 18 + 18 = 90$. Count: $6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$90 / 6 = 15$."
+    }
+  ],
+  "explanation": [
+    "Sum: $90$. Count: $6$. Mean: $15$."
+  ],
+  "tags": [
+    "mean"
+  ],
+  "estimatedSeconds": 55
+}

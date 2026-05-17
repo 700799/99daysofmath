@@ -1,0 +1,36 @@
+{
+  "id": "6.SP.040",
+  "domain": "6.SP",
+  "unit": 4,
+  "orderInUnit": 10,
+  "standard": "6.SP.B.4",
+  "difficulty": 2,
+  "prompt": "A box plot has $Q1 = 12$ and $Q3 = 20$. What is the IQR?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "IQR = $Q3 - Q1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "IQR = $Q3 - Q1$."
+    },
+    {
+      "level": "guide",
+      "text": "$20 - 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$8$."
+    }
+  ],
+  "explanation": [
+    "IQR: $20 - 12 = 8$."
+  ],
+  "tags": [
+    "box-plot",
+    "IQR"
+  ],
+  "estimatedSeconds": 35
+}

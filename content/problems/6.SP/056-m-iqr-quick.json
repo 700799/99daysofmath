@@ -1,0 +1,35 @@
+{
+  "id": "6.SP.056",
+  "domain": "6.SP",
+  "unit": 6,
+  "orderInUnit": 6,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "Data: $5, 7, 9, 12, 15, 20, 25$ has $Q1 = 7$, $Q3 = 20$. Find IQR.",
+  "answerType": "numeric",
+  "primaryAnswer": "13",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "IQR $= Q3 - Q1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "IQR $= Q3 - Q1$."
+    },
+    {
+      "level": "guide",
+      "text": "$20 - 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$13$."
+    }
+  ],
+  "explanation": [
+    "IQR $= 13$."
+  ],
+  "tags": [
+    "IQR"
+  ],
+  "estimatedSeconds": 35
+}

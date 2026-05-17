@@ -1,0 +1,56 @@
+{
+  "id": "6.SP.015",
+  "domain": "6.SP",
+  "unit": 2,
+  "orderInUnit": 5,
+  "standard": "6.SP.A.3",
+  "difficulty": 2,
+  "prompt": "A dataset is: $4, 5, 6, 7, 100$. Which is **larger**, mean or median?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Mean",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Median",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "They are equal",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The $100$ is an outlier — it pulls the mean up.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $100$ is an outlier — it pulls the mean up."
+    },
+    {
+      "level": "guide",
+      "text": "Mean: $122/5 = 24.4$. Median: $6$."
+    },
+    {
+      "level": "reveal",
+      "text": "Mean ($24.4$) > median ($6$)."
+    }
+  ],
+  "explanation": [
+    "Mean: $(4 + 5 + 6 + 7 + 100)/5 = 24.4$.",
+    "Median: $6$.",
+    "Mean is much larger because of the outlier."
+  ],
+  "tags": [
+    "MAP-practice",
+    "mean",
+    "median"
+  ],
+  "estimatedSeconds": 70
+}

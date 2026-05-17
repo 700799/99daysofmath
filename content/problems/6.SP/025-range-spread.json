@@ -1,0 +1,35 @@
+{
+  "id": "6.SP.025",
+  "domain": "6.SP",
+  "unit": 3,
+  "orderInUnit": 5,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Find the range of $8, 12, 7, 15, 9$.",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Max minus min.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Max minus min."
+    },
+    {
+      "level": "guide",
+      "text": "Max: $15$, Min: $7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$15 - 7 = 8$."
+    }
+  ],
+  "explanation": [
+    "$15 - 7 = 8$."
+  ],
+  "tags": [
+    "range"
+  ],
+  "estimatedSeconds": 35
+}

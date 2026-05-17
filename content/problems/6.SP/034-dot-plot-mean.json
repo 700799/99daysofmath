@@ -1,0 +1,36 @@
+{
+  "id": "6.SP.034",
+  "domain": "6.SP",
+  "unit": 4,
+  "orderInUnit": 4,
+  "standard": "6.SP.B.4",
+  "difficulty": 2,
+  "prompt": "A dot plot shows: $2, 3, 3, 4, 5$. Find the mean.",
+  "answerType": "numeric",
+  "primaryAnswer": "3.4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Add all dot-values and divide by count.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add all dot-values and divide by count."
+    },
+    {
+      "level": "guide",
+      "text": "Sum: $2 + 3 + 3 + 4 + 5 = 17$. Count: $5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$17 / 5 = 3.4$."
+    }
+  ],
+  "explanation": [
+    "Sum: $17$. Count: $5$. Mean: $3.4$."
+  ],
+  "tags": [
+    "dot-plot",
+    "mean"
+  ],
+  "estimatedSeconds": 55
+}

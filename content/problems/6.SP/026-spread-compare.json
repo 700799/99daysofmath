@@ -1,0 +1,53 @@
+{
+  "id": "6.SP.026",
+  "domain": "6.SP",
+  "unit": 3,
+  "orderInUnit": 6,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "Set $A$: $5, 6, 7$. Set $B$: $1, 6, 11$. Which has greater spread?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "A",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "B",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Same",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Spread = how far apart the values are.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Spread = how far apart the values are."
+    },
+    {
+      "level": "guide",
+      "text": "A range: $2$. B range: $10$."
+    },
+    {
+      "level": "reveal",
+      "text": "B."
+    }
+  ],
+  "explanation": [
+    "A: range $2$. B: range $10$.",
+    "B has greater spread."
+  ],
+  "tags": [
+    "spread"
+  ],
+  "estimatedSeconds": 50
+}

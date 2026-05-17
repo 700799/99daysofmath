@@ -1,0 +1,58 @@
+{
+  "id": "6.SP.014",
+  "domain": "6.SP",
+  "unit": 2,
+  "orderInUnit": 4,
+  "standard": "6.SP.A.1",
+  "difficulty": 1,
+  "prompt": "Which is a **statistical** question?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "How old is my teacher?",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "How tall are students in our class?",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "What time is it now?",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "How many days in a week?",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Statistical questions have varied answers.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Statistical questions have varied answers."
+    },
+    {
+      "level": "guide",
+      "text": "Which one expects different answers from different people?"
+    },
+    {
+      "level": "reveal",
+      "text": "B — students' heights vary."
+    }
+  ],
+  "explanation": [
+    "Statistical questions anticipate variability.",
+    "Heights of students vary across the class."
+  ],
+  "tags": [
+    "statistical-question"
+  ],
+  "estimatedSeconds": 45
+}

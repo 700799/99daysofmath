@@ -1,0 +1,38 @@
+{
+  "id": "6.SP.042",
+  "domain": "6.SP",
+  "unit": 5,
+  "orderInUnit": 2,
+  "standard": "6.SP.B.5.d",
+  "difficulty": 2,
+  "prompt": "Outliers usually affect which measure more: mean or median?",
+  "answerType": "short-text",
+  "primaryAnswer": "mean",
+  "alternativeAnswers": [
+    "the mean"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "One big number can shift the average a lot.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "One big number can shift the average a lot."
+    },
+    {
+      "level": "guide",
+      "text": "Median uses position; mean uses value."
+    },
+    {
+      "level": "reveal",
+      "text": "Mean."
+    }
+  ],
+  "explanation": [
+    "Mean uses every value, so outliers shift it.",
+    "Median is based on rank — outliers barely affect it."
+  ],
+  "tags": [
+    "outlier"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,53 @@
+{
+  "id": "6.SP.037",
+  "domain": "6.SP",
+  "unit": 4,
+  "orderInUnit": 7,
+  "standard": "6.SP.B.4",
+  "difficulty": 2,
+  "prompt": "Which display is best for showing the **shape** of a distribution with many values?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Dot plot",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Histogram",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Box plot",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Dot plots get cluttered with many values.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Dot plots get cluttered with many values."
+    },
+    {
+      "level": "guide",
+      "text": "Histograms bin values to show shape."
+    },
+    {
+      "level": "reveal",
+      "text": "Histogram."
+    }
+  ],
+  "explanation": [
+    "Histograms group values into bins and show the shape clearly."
+  ],
+  "tags": [
+    "CA",
+    "display"
+  ],
+  "estimatedSeconds": 50
+}

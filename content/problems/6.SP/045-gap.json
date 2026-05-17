@@ -1,0 +1,37 @@
+{
+  "id": "6.SP.045",
+  "domain": "6.SP",
+  "unit": 5,
+  "orderInUnit": 5,
+  "standard": "6.SP.B.5.d",
+  "difficulty": 1,
+  "prompt": "In a dot plot, a region with no dots is called a:",
+  "answerType": "short-text",
+  "primaryAnswer": "gap",
+  "alternativeAnswers": [
+    "Gap"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "An empty space.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "An empty space."
+    },
+    {
+      "level": "guide",
+      "text": "Same word as for a space between things."
+    },
+    {
+      "level": "reveal",
+      "text": "Gap."
+    }
+  ],
+  "explanation": [
+    "Empty regions are called gaps."
+  ],
+  "tags": [
+    "vocabulary"
+  ],
+  "estimatedSeconds": 25
+}

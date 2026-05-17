@@ -1,0 +1,37 @@
+{
+  "id": "6.SP.060",
+  "domain": "6.SP",
+  "unit": 6,
+  "orderInUnit": 10,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "Four numbers have mean $10$. Three of them are $8, 11, 9$. What is the fourth?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Total sum is $40$ ($4 \\times 10$).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Total sum is $40$ ($4 \\times 10$)."
+    },
+    {
+      "level": "guide",
+      "text": "Three sum to $8 + 11 + 9 = 28$."
+    },
+    {
+      "level": "reveal",
+      "text": "$40 - 28 = 12$."
+    }
+  ],
+  "explanation": [
+    "Sum needed: $40$. Have: $28$.",
+    "Missing: $12$."
+  ],
+  "tags": [
+    "CA",
+    "mean"
+  ],
+  "estimatedSeconds": 80
+}

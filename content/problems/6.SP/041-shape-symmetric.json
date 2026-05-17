@@ -1,0 +1,52 @@
+{
+  "id": "6.SP.041",
+  "domain": "6.SP",
+  "unit": 5,
+  "orderInUnit": 1,
+  "standard": "6.SP.B.5.d",
+  "difficulty": 1,
+  "prompt": "In a **symmetric** distribution, the mean and median are typically:",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Equal",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Mean much greater",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Median much greater",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Symmetric means evenly balanced.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Symmetric means evenly balanced."
+    },
+    {
+      "level": "guide",
+      "text": "No outliers pulling either way."
+    },
+    {
+      "level": "reveal",
+      "text": "Equal."
+    }
+  ],
+  "explanation": [
+    "In symmetric distributions, mean ≈ median."
+  ],
+  "tags": [
+    "shape"
+  ],
+  "estimatedSeconds": 35
+}

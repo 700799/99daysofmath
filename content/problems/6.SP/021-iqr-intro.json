@@ -1,0 +1,35 @@
+{
+  "id": "6.SP.021",
+  "domain": "6.SP",
+  "unit": 3,
+  "orderInUnit": 1,
+  "standard": "6.SP.A.3",
+  "difficulty": 2,
+  "prompt": "In the data $1, 3, 5, 7, 9, 11, 13$, what is the median?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "It's already sorted. Find the middle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "It's already sorted. Find the middle."
+    },
+    {
+      "level": "guide",
+      "text": "$7$ numbers, middle is $4$th."
+    },
+    {
+      "level": "reveal",
+      "text": "$7$."
+    }
+  ],
+  "explanation": [
+    "Middle of $7$ sorted: $7$."
+  ],
+  "tags": [
+    "median"
+  ],
+  "estimatedSeconds": 30
+}

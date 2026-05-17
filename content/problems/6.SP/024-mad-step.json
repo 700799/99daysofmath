@@ -1,0 +1,40 @@
+{
+  "id": "6.SP.024",
+  "domain": "6.SP",
+  "unit": 3,
+  "orderInUnit": 4,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "For $\\{2, 4, 6\\}$ (mean $4$), find the mean absolute deviation (MAD).",
+  "answerType": "fraction",
+  "primaryAnswer": "4/3",
+  "alternativeAnswers": [
+    "1.33",
+    "1.333"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.05,
+  "hint": "Find each distance from the mean, then average.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find each distance from the mean, then average."
+    },
+    {
+      "level": "guide",
+      "text": "Distances: $|2-4| = 2, |4-4| = 0, |6-4| = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "Sum: $4$. Average: $4/3 \\approx 1.33$."
+    }
+  ],
+  "explanation": [
+    "Distances from $4$: $2, 0, 2$.",
+    "Mean: $4 / 3 \\approx 1.33$."
+  ],
+  "tags": [
+    "MAD"
+  ],
+  "estimatedSeconds": 80
+}

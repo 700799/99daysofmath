@@ -1,0 +1,35 @@
+{
+  "id": "6.SP.058",
+  "domain": "6.SP",
+  "unit": 6,
+  "orderInUnit": 8,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 1,
+  "prompt": "Find the range of $1, 8, 4, 12, 2$.",
+  "answerType": "numeric",
+  "primaryAnswer": "11",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Max - min.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Max - min."
+    },
+    {
+      "level": "guide",
+      "text": "$12 - 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$11$."
+    }
+  ],
+  "explanation": [
+    "$12 - 1 = 11$."
+  ],
+  "tags": [
+    "range"
+  ],
+  "estimatedSeconds": 30
+}

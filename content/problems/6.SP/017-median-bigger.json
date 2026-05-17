@@ -1,0 +1,36 @@
+{
+  "id": "6.SP.017",
+  "domain": "6.SP",
+  "unit": 2,
+  "orderInUnit": 7,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Find the median of $10, 4, 7, 12, 15, 9, 6$.",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sort the numbers.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sort the numbers."
+    },
+    {
+      "level": "guide",
+      "text": "Sorted: $4, 6, 7, 9, 10, 12, 15$. Find the middle."
+    },
+    {
+      "level": "reveal",
+      "text": "$9$."
+    }
+  ],
+  "explanation": [
+    "Sorted: $4, 6, 7, 9, 10, 12, 15$.",
+    "$7$ values, middle is the $4$th: $9$."
+  ],
+  "tags": [
+    "median"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,35 @@
+{
+  "id": "6.SP.051",
+  "domain": "6.SP",
+  "unit": 6,
+  "orderInUnit": 1,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 1,
+  "prompt": "Find the mean of $10, 20, 30, 40$.",
+  "answerType": "numeric",
+  "primaryAnswer": "25",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sum / count.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sum / count."
+    },
+    {
+      "level": "guide",
+      "text": "Sum: $100$. Count: $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$100 / 4 = 25$."
+    }
+  ],
+  "explanation": [
+    "Sum: $100$. Mean: $25$."
+  ],
+  "tags": [
+    "mean"
+  ],
+  "estimatedSeconds": 30
+}
