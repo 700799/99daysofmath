@@ -7,10 +7,16 @@ import fg from 'fast-glob';
 interface RawProblem {
   id: string;
   domain: string;
+  unit: number;
   answerType: string;
   primaryAnswer: string;
+  hint?: string;
+  hints?: { level: 'nudge' | 'guide' | 'reveal'; text: string }[];
   choices?: { id: string; label: string; correct: boolean }[];
 }
+
+const LEVEL_ORDER = { nudge: 1, guide: 2, reveal: 3 } as const;
+const STRICT = process.argv.includes('--strict');
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -70,6 +76,56 @@ async function main() {
         );
         errors++;
         continue;
+      }
+    }
+
+    // Multi-level hint sanity: strictly ascending tiers
+    if (Array.isArray(data.hints) && data.hints.length > 0) {
+      let lastOrder = 0;
+      for (const h of data.hints) {
+        const order = LEVEL_ORDER[h.level];
+        if (order <= lastOrder) {
+          console.error(
+            `✗ ${data.id}: hints must be strictly ascending (nudge → guide → reveal); got ${h.level} after order ${lastOrder}`,
+          );
+          errors++;
+          break;
+        }
+        lastOrder = order;
+      }
+    }
+  }
+
+  // Domain & unit counts
+  const domainCounts = new Map<string, number>();
+  const unitCounts = new Map<string, number>();
+  for (const file of files) {
+    const data = JSON.parse(fs.readFileSync(file, 'utf-8')) as RawProblem;
+    domainCounts.set(data.domain, (domainCounts.get(data.domain) ?? 0) + 1);
+    const key = `${data.domain}:${data.unit}`;
+    unitCounts.set(key, (unitCounts.get(key) ?? 0) + 1);
+  }
+  const TARGET_PER_DOMAIN = 60;
+  const TARGET_PER_UNIT = 10;
+  for (const [domain, count] of domainCounts) {
+    if (count !== TARGET_PER_DOMAIN) {
+      const msg = `${count}/${TARGET_PER_DOMAIN} problems in ${domain}`;
+      if (STRICT) {
+        console.error(`✗ ${msg}`);
+        errors++;
+      } else {
+        console.warn(`⚠ ${msg}`);
+      }
+    }
+  }
+  for (const [key, count] of unitCounts) {
+    if (count !== TARGET_PER_UNIT) {
+      const msg = `${count}/${TARGET_PER_UNIT} problems in unit ${key}`;
+      if (STRICT) {
+        console.error(`✗ ${msg}`);
+        errors++;
+      } else {
+        console.warn(`⚠ ${msg}`);
       }
     }
   }

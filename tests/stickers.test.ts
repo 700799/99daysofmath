@@ -1,0 +1,148 @@
+import { describe, it, expect } from 'vitest';
+import {
+  checkAllEarning,
+  STICKER_DEFS,
+  TOTAL_STICKERS,
+} from '../src/utils/encouragement';
+import { DOMAINS, type Domain } from '../src/types/problem';
+
+const blankDomainCounts = (): Record<Domain, number> =>
+  DOMAINS.reduce((acc, d) => ({ ...acc, [d]: 0 }), {} as Record<Domain, number>);
+
+const baseCtx = () => ({
+  xp: 0,
+  dailyStreak: 0,
+  bestSessionStreak: 0,
+  totalPerfectUnits: 0,
+  byDomainUnitsCompleted: blankDomainCounts(),
+  alreadyEarned: new Set<string>(),
+});
+
+describe('STICKER_DEFS', () => {
+  it('has 53 total stickers', () => {
+    // 30 unit (6 per domain × 5) + 8 streak + 4 accuracy + 5 XP + 6 mastery
+    expect(TOTAL_STICKERS).toBe(53);
+  });
+
+  it('every sticker ID is unique', () => {
+    const ids = new Set(STICKER_DEFS.map((s) => s.id));
+    expect(ids.size).toBe(STICKER_DEFS.length);
+  });
+});
+
+describe('checkAllEarning — streak family', () => {
+  it('awards streak-3 at dailyStreak 3', () => {
+    const earned = checkAllEarning({ ...baseCtx(), dailyStreak: 3 });
+    expect(earned).toContain('streak-3');
+    expect(earned).not.toContain('streak-7');
+  });
+
+  it('does not re-award streak-3 if already earned', () => {
+    const earned = checkAllEarning({
+      ...baseCtx(),
+      dailyStreak: 3,
+      alreadyEarned: new Set(['streak-3']),
+    });
+    expect(earned).not.toContain('streak-3');
+  });
+
+  it('awards multiple streak stickers when crossing several thresholds', () => {
+    const earned = checkAllEarning({ ...baseCtx(), dailyStreak: 30 });
+    expect(earned).toEqual(
+      expect.arrayContaining(['streak-3', 'streak-7', 'streak-14', 'streak-30']),
+    );
+    expect(earned).not.toContain('streak-50');
+  });
+
+  it('awards combo-10 at bestSessionStreak 10', () => {
+    const earned = checkAllEarning({ ...baseCtx(), bestSessionStreak: 10 });
+    expect(earned).toContain('combo-10');
+  });
+});
+
+describe('checkAllEarning — XP family', () => {
+  it('xp-100 at xp ≥ 100', () => {
+    const earned = checkAllEarning({ ...baseCtx(), xp: 100 });
+    expect(earned).toContain('xp-100');
+    expect(earned).not.toContain('xp-250');
+  });
+
+  it('xp-2500 awards all lower tiers too', () => {
+    const earned = checkAllEarning({ ...baseCtx(), xp: 2500 });
+    expect(earned).toEqual(
+      expect.arrayContaining(['xp-100', 'xp-250', 'xp-500', 'xp-1000', 'xp-2500']),
+    );
+  });
+});
+
+describe('checkAllEarning — accuracy family', () => {
+  it('awards acc-perfect-1 on first 3-star unit', () => {
+    const earned = checkAllEarning(
+      { ...baseCtx(), totalPerfectUnits: 1 },
+      { domain: '6.RP', unit: 1, stars: 3, mistakesTotal: 0 },
+    );
+    expect(earned).toContain('acc-perfect-1');
+  });
+
+  it('awards acc-no-mistakes-unit when unit done with 0 mistakes', () => {
+    const earned = checkAllEarning(
+      { ...baseCtx() },
+      { domain: '6.RP', unit: 1, stars: 2, mistakesTotal: 0 },
+    );
+    expect(earned).toContain('acc-no-mistakes-unit');
+  });
+
+  it('does NOT award acc-no-mistakes-unit when there were mistakes', () => {
+    const earned = checkAllEarning(
+      { ...baseCtx() },
+      { domain: '6.RP', unit: 1, stars: 1, mistakesTotal: 1 },
+    );
+    expect(earned).not.toContain('acc-no-mistakes-unit');
+  });
+});
+
+describe('checkAllEarning — mastery family', () => {
+  it('awards mastery-6.RP when 6 units in 6.RP completed at ≥ 2 stars', () => {
+    const counts = blankDomainCounts();
+    counts['6.RP'] = 6;
+    const earned = checkAllEarning({
+      ...baseCtx(),
+      byDomainUnitsCompleted: counts,
+    });
+    expect(earned).toContain('mastery-6.RP');
+    expect(earned).not.toContain('mastery-grand');
+  });
+
+  it('awards mastery-grand when all 5 domains completed', () => {
+    const counts = blankDomainCounts();
+    for (const d of DOMAINS) counts[d] = 6;
+    const earned = checkAllEarning({
+      ...baseCtx(),
+      byDomainUnitsCompleted: counts,
+    });
+    expect(earned).toContain('mastery-grand');
+    expect(earned).toContain('mastery-6.RP');
+  });
+});
+
+describe('checkAllEarning — unit stickers', () => {
+  it('awards unit sticker on 3-star unit completion', () => {
+    const earned = checkAllEarning(baseCtx(), {
+      domain: '6.RP',
+      unit: 1,
+      stars: 3,
+      mistakesTotal: 0,
+    });
+    expect(earned).toContain('unit:6.RP:1');
+  });
+
+  it('does NOT award unit sticker for fewer than 3 stars', () => {
+    const earned = checkAllEarning(baseCtx(), {
+      domain: '6.RP',
+      unit: 1,
+      stars: 2,
+      mistakesTotal: 0,
+    });
+    expect(earned).not.toContain('unit:6.RP:1');
+  });
+});

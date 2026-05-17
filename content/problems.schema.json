@@ -82,6 +82,22 @@
     "acceptanceMode": { "enum": ["exact", "normalized", "numeric-tolerance"] },
     "numericTolerance": { "type": "number" },
     "hint": { "type": "string" },
+    "hints": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["level", "text"],
+        "properties": {
+          "level": { "enum": ["nudge", "guide", "reveal"] },
+          "text": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "learningObjective": { "type": "string" },
+    "topic": { "type": "string" },
     "explanation": {
       "type": "array",
       "items": { "type": "string" },

@@ -54,6 +54,19 @@ export interface Choice {
   correct: boolean;
 }
 
+export type HintLevel = 'nudge' | 'guide' | 'reveal';
+
+export interface HintStep {
+  level: HintLevel;
+  text: string;
+}
+
+export const HINT_LEVEL_ORDER: Record<HintLevel, number> = {
+  nudge: 1,
+  guide: 2,
+  reveal: 3,
+};
+
 export interface Problem {
   id: string;
   domain: Domain;
@@ -70,6 +83,9 @@ export interface Problem {
   acceptanceMode: AcceptanceMode;
   numericTolerance?: number;
   hint: string;
+  hints?: HintStep[];
+  learningObjective?: string;
+  topic?: string;
   explanation: string[];
   alternativeExplanations?: { title: string; steps: string[] }[];
   tags: string[];

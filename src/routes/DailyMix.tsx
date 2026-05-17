@@ -8,11 +8,17 @@ import { AnswerInput } from '../components/AnswerInput';
 import { Hint } from '../components/Hint';
 import { Explanation } from '../components/Explanation';
 import { ProgressBar } from '../components/ProgressBar';
-import { Mascot } from '../components/Mascot';
+import { Mascot, type MascotMood } from '../components/Mascot';
 import { Confetti } from '../components/Celebration';
 import { correctMessage, wrongMessage } from '../utils/encouragement';
 import { playCorrect, playWrong, playUnitComplete } from '../utils/sound';
-import type { Problem } from '../types/problem';
+import { computeXPGain } from '../utils/hintEconomics';
+import type { Problem, HintLevel, HintStep } from '../types/problem';
+
+function tiersFor(problem: { hint: string; hints?: HintStep[] }): HintStep[] {
+  if (problem.hints && problem.hints.length > 0) return problem.hints;
+  return [{ level: 'guide', text: problem.hint }];
+}
 
 type Phase = 'loading' | 'problem' | 'feedback-correct' | 'feedback-wrong' | 'done';
 
@@ -40,8 +46,8 @@ export function DailyMix() {
   const [error, setError] = useState<Error | null>(null);
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState('');
-  const [hintsUsedThisProblem, setHintsUsedThisProblem] = useState(false);
-  const [hintShown, setHintShown] = useState(false);
+  const [hintLevelsThisProblem, setHintLevelsThisProblem] = useState<HintLevel[]>([]);
+  const [lastHintLevel, setLastHintLevel] = useState<HintLevel | null>(null);
   const [mistakesThisProblem, setMistakesThisProblem] = useState(0);
   const [phase, setPhase] = useState<Phase>('loading');
   const [correct, setCorrect] = useState(0);
@@ -93,7 +99,7 @@ export function DailyMix() {
   const submit = () => {
     if (!current || !answer.trim()) return;
     if (isEquivalent(answer, current)) {
-      const earn = Math.max(3, 10 - (hintsUsedThisProblem ? 3 : 0) - mistakesThisProblem * 3);
+      const earn = computeXPGain(hintLevelsThisProblem, mistakesThisProblem);
       setXpEarned((x) => x + earn);
       setCorrect((c) => c + 1);
       incStreak();
@@ -119,13 +125,22 @@ export function DailyMix() {
     } else {
       setIndex((i) => i + 1);
       setAnswer('');
-      setHintShown(false);
-      setHintsUsedThisProblem(false);
+      setHintLevelsThisProblem([]);
+      setLastHintLevel(null);
       setMistakesThisProblem(0);
       setShowExplainOnCorrect(false);
       setPhase('problem');
     }
   };
+
+  const hintMood: MascotMood | null =
+    lastHintLevel === 'reveal'
+      ? 'mentor'
+      : lastHintLevel === 'guide'
+        ? 'coach'
+        : lastHintLevel === 'nudge'
+          ? 'helpful'
+          : null;
 
   if (phase === 'done') {
     const stars: Stars = correct === total ? 3 : correct >= total - 1 ? 2 : 1;
@@ -179,7 +194,7 @@ export function DailyMix() {
                 ? 'cheer'
                 : phase === 'feedback-wrong'
                   ? 'oops'
-                  : 'thinking'
+                  : hintMood ?? 'thinking'
             }
             size={48}
           />
@@ -206,12 +221,10 @@ export function DailyMix() {
           {phase === 'problem' && (
             <>
               <Hint
-                text={current.hint}
-                onReveal={() => {
-                  if (!hintShown) {
-                    setHintShown(true);
-                    setHintsUsedThisProblem(true);
-                  }
+                tiers={tiersFor(current)}
+                onReveal={(level) => {
+                  setHintLevelsThisProblem((arr) => [...arr, level]);
+                  setLastHintLevel(level);
                 }}
               />
               <button

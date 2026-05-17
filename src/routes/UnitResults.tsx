@@ -4,6 +4,7 @@ import { DOMAINS, type Domain } from '../types/problem';
 import { StarRating } from '../components/StarRating';
 import { Mascot } from '../components/Mascot';
 import { Confetti } from '../components/Celebration';
+import { stickerById } from '../utils/encouragement';
 import type { Stars } from '../state/progress';
 
 interface ResultsState {
@@ -12,6 +13,7 @@ interface ResultsState {
   total: number;
   xpEarned: number;
   sticker: string;
+  newStickerIds?: string[];
 }
 
 export function UnitResults() {
@@ -56,22 +58,38 @@ export function UnitResults() {
           <StatBox value={state.xpEarned} label="XP" tone="yellow" />
         </div>
 
-        {state.sticker && (
-          <motion.div
-            initial={{ scale: 0, rotate: -20 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ type: 'spring', stiffness: 220, damping: 14, delay: 0.3 }}
-            className="mt-6 mx-auto inline-block"
-          >
-            <div className="bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 border-4 border-pink-300 rounded-3xl px-6 py-4">
-              <div className="text-xs font-display font-extrabold uppercase tracking-wider text-pink-700">
-                New sticker
-              </div>
-              <div className="text-2xl font-display font-extrabold text-slate-900 mt-1">
-                {state.sticker}
-              </div>
+        {state.newStickerIds && state.newStickerIds.length > 0 && (
+          <div className="mt-6 flex flex-col gap-3 items-center">
+            <div className="text-xs font-display font-extrabold uppercase tracking-wider text-pink-700">
+              {state.newStickerIds.length === 1 ? 'New sticker' : 'New stickers'}
             </div>
-          </motion.div>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {state.newStickerIds.map((id, i) => {
+                const def = stickerById(id);
+                if (!def) return null;
+                return (
+                  <motion.div
+                    key={id}
+                    initial={{ scale: 0, rotate: -20 }}
+                    animate={{ scale: 1, rotate: 0 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 220,
+                      damping: 14,
+                      delay: 0.2 + i * 0.15,
+                    }}
+                  >
+                    <div className="bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 border-4 border-pink-300 rounded-3xl px-5 py-3 text-center">
+                      <div className="text-3xl">{def.emoji}</div>
+                      <div className="text-sm font-display font-extrabold text-slate-900 mt-1">
+                        {def.label}
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
         )}
 
         <Link

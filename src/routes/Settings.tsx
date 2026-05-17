@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useProgress } from '../state/progress';
+import { TOTAL_STICKERS } from '../utils/encouragement';
 
 export function Settings() {
   const reset = useProgress((s) => s.resetAll);
@@ -26,7 +27,7 @@ export function Settings() {
           <Stat label="Best daily streak" value={`${bestDailyStreak}`} />
           <Stat label="Best in-a-row" value={`${bestStreak}`} />
           <Stat label="Total XP" value={`${xp} ⚡`} />
-          <Stat label="Stickers" value={`${stickers.length}`} />
+          <Stat label="Stickers earned" value={`${stickers.length} / ${TOTAL_STICKERS}`} />
         </dl>
       </div>
 

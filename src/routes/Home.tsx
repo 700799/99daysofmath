@@ -10,6 +10,22 @@ import {
 import { useProgress } from '../state/progress';
 import { useDomainSummary } from '../hooks/useProblems';
 import { Mascot } from '../components/Mascot';
+import {
+  STICKER_DEFS,
+  TOTAL_STICKERS,
+  type StickerCategory,
+  type StickerDef,
+} from '../utils/encouragement';
+
+const CATEGORY_LABELS: Record<StickerCategory, string> = {
+  unit: 'Units',
+  streak: 'Streak',
+  accuracy: 'Accuracy',
+  xp: 'XP',
+  mastery: 'Mastery',
+};
+
+const CATEGORY_ORDER: StickerCategory[] = ['unit', 'streak', 'accuracy', 'xp', 'mastery'];
 
 export function Home() {
   const { data: summary, loading, error } = useDomainSummary();
@@ -121,36 +137,71 @@ export function Home() {
         ⚙️ Settings
       </Link>
 
-      {stickers.length > 0 && (
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="mt-8 bg-white rounded-3xl border-2 border-slate-200 p-4 sm:p-5"
-        >
-          <div className="flex items-center gap-2 mb-3">
-            <span className="text-2xl" aria-hidden="true">🎒</span>
-            <div>
-              <div className="font-display font-extrabold text-slate-900">
-                Sticker book
+      <StickerBook earnedIds={stickers} />
+    </div>
+  );
+}
+
+function StickerBook({ earnedIds }: { earnedIds: string[] }) {
+  const earnedSet = new Set(earnedIds);
+  const byCategory = new Map<StickerCategory, StickerDef[]>();
+  for (const def of STICKER_DEFS) {
+    const list = byCategory.get(def.category) ?? [];
+    list.push(def);
+    byCategory.set(def.category, list);
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3 }}
+      className="mt-8 bg-white rounded-3xl border-2 border-slate-200 p-4 sm:p-5"
+    >
+      <div className="flex items-center gap-2 mb-4">
+        <span className="text-2xl" aria-hidden="true">🎒</span>
+        <div>
+          <div className="font-display font-extrabold text-slate-900">
+            Sticker book
+          </div>
+          <div className="text-xs text-slate-500">
+            {earnedIds.length} / {TOTAL_STICKERS} earned
+          </div>
+        </div>
+      </div>
+      <div className="space-y-4">
+        {CATEGORY_ORDER.map((cat) => {
+          const defs = byCategory.get(cat) ?? [];
+          if (defs.length === 0) return null;
+          const catEarned = defs.filter((d) => earnedSet.has(d.id)).length;
+          return (
+            <div key={cat}>
+              <div className="text-xs font-display font-extrabold uppercase tracking-wider text-slate-600 mb-2">
+                {CATEGORY_LABELS[cat]} · {catEarned}/{defs.length}
               </div>
-              <div className="text-xs text-slate-500">
-                {stickers.length} earned
+              <div className="flex flex-wrap gap-2">
+                {defs.map((def) => {
+                  const got = earnedSet.has(def.id);
+                  return (
+                    <span
+                      key={def.id}
+                      title={def.hint ?? def.label}
+                      className={
+                        got
+                          ? 'inline-flex items-center gap-1 bg-gradient-to-br from-yellow-100 to-pink-100 border-2 border-pink-200 px-3 py-1.5 rounded-full font-display font-bold text-slate-800 text-sm'
+                          : 'inline-flex items-center gap-1 bg-slate-100 border-2 border-slate-200 px-3 py-1.5 rounded-full font-display font-bold text-slate-400 text-sm opacity-60'
+                      }
+                    >
+                      <span aria-hidden="true">{got ? def.emoji : '🔒'}</span>
+                      <span>{def.label}</span>
+                    </span>
+                  );
+                })}
               </div>
             </div>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {stickers.map((s) => (
-              <span
-                key={s}
-                className="inline-flex items-center gap-1 bg-gradient-to-br from-yellow-100 to-pink-100 border-2 border-pink-200 px-3 py-1.5 rounded-full font-display font-bold text-slate-800 text-sm"
-              >
-                {s}
-              </span>
-            ))}
-          </div>
-        </motion.div>
-      )}
-    </div>
+          );
+        })}
+      </div>
+    </motion.div>
   );
 }

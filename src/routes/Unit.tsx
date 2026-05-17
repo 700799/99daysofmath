@@ -1,19 +1,25 @@
 import { useState, useMemo, useRef } from 'react';
 import { useNavigate, useParams, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { DOMAINS, type Domain } from '../types/problem';
+import { DOMAINS, type Domain, type HintLevel, type HintStep } from '../types/problem';
 import { useUnitProblems } from '../hooks/useProblems';
-import { useProgress, type Stars } from '../state/progress';
+import { useProgress } from '../state/progress';
 import { isEquivalent } from '../data/normalize';
 import { ProblemCard } from '../components/ProblemCard';
 import { AnswerInput } from '../components/AnswerInput';
 import { Hint } from '../components/Hint';
 import { Explanation } from '../components/Explanation';
 import { ProgressBar } from '../components/ProgressBar';
-import { Mascot } from '../components/Mascot';
+import { Mascot, type MascotMood } from '../components/Mascot';
 import { Confetti } from '../components/Celebration';
 import { correctMessage, wrongMessage, stickerForUnit } from '../utils/encouragement';
 import { playCorrect, playWrong, playUnitComplete } from '../utils/sound';
+import { computeStars, computeXPGain } from '../utils/hintEconomics';
+
+function tiersFor(problem: { hint: string; hints?: HintStep[] }): HintStep[] {
+  if (problem.hints && problem.hints.length > 0) return problem.hints;
+  return [{ level: 'guide', text: problem.hint }];
+}
 
 type Phase = 'problem' | 'feedback-correct' | 'feedback-wrong';
 
@@ -37,25 +43,24 @@ export function Unit() {
 
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState('');
-  const [hintShown, setHintShown] = useState(false);
-  const [hintsUsedThisProblem, setHintsUsedThisProblem] = useState(false);
-  const [hintsUsedTotal, setHintsUsedTotal] = useState(0);
+  const [hintLevelsThisProblem, setHintLevelsThisProblem] = useState<HintLevel[]>([]);
+  const [tierTotals, setTierTotals] = useState({ nudge: 0, guide: 0, reveal: 0 });
   const [mistakesThisProblem, setMistakesThisProblem] = useState(0);
   const [mistakesTotal, setMistakesTotal] = useState(0);
   const [missedIds, setMissedIds] = useState<string[]>([]);
   const [xpEarned, setXpEarned] = useState(0);
   const [phase, setPhase] = useState<Phase>('problem');
+  const [lastHintLevel, setLastHintLevel] = useState<HintLevel | null>(null);
   const [showExplainOnCorrect, setShowExplainOnCorrect] = useState(false);
   const flashMessage = useRef<string>('');
 
   const current = problems?.[index];
   const total = problems?.length ?? 0;
 
-  const finalStars: Stars = useMemo<Stars>(() => {
-    if (hintsUsedTotal === 0 && mistakesTotal === 0) return 3;
-    if (hintsUsedTotal + mistakesTotal <= 1) return 2;
-    return 1;
-  }, [hintsUsedTotal, mistakesTotal]);
+  const finalStars = useMemo(
+    () => computeStars(tierTotals, mistakesTotal, total),
+    [tierTotals, mistakesTotal, total],
+  );
 
   if (loading) {
     return (
@@ -83,7 +88,7 @@ export function Unit() {
   const submit = () => {
     if (!current || !answer.trim()) return;
     if (isEquivalent(answer, current)) {
-      const earn = Math.max(3, 10 - (hintsUsedThisProblem ? 3 : 0) - mistakesThisProblem * 3);
+      const earn = computeXPGain(hintLevelsThisProblem, mistakesThisProblem);
       setXpEarned((x) => x + earn);
       incStreak();
       flashMessage.current = correctMessage(currentStreak + 1);
@@ -105,30 +110,41 @@ export function Unit() {
   const advance = () => {
     if (!problems) return;
     if (index + 1 >= problems.length) {
-      const sticker = finalStars === 3 ? stickerForUnit(d, u) : '';
-      record(d, u, finalStars, missedIds, xpEarned, sticker);
-      touchDay();
+      const newStickerIds = record(d, u, finalStars, missedIds, xpEarned, mistakesTotal);
+      const dailyStickers = touchDay();
       if (soundOn) playUnitComplete();
+      const allNew = [...newStickerIds, ...dailyStickers];
+      const primarySticker = finalStars === 3 ? stickerForUnit(d, u) : null;
       navigate(`/unit/${d}/${u}/results`, {
         state: {
           stars: finalStars,
           missedCount: missedIds.length,
           total,
           xpEarned,
-          sticker,
+          sticker: primarySticker ? `${primarySticker.emoji} ${primarySticker.label}` : '',
+          newStickerIds: allNew,
         },
         replace: true,
       });
     } else {
       setIndex((i) => i + 1);
       setAnswer('');
-      setHintShown(false);
-      setHintsUsedThisProblem(false);
+      setHintLevelsThisProblem([]);
+      setLastHintLevel(null);
       setMistakesThisProblem(0);
       setShowExplainOnCorrect(false);
       setPhase('problem');
     }
   };
+
+  const hintMood: MascotMood | null =
+    lastHintLevel === 'reveal'
+      ? 'mentor'
+      : lastHintLevel === 'guide'
+        ? 'coach'
+        : lastHintLevel === 'nudge'
+          ? 'helpful'
+          : null;
 
   return (
     <div className="relative">
@@ -146,7 +162,7 @@ export function Unit() {
                 ? 'cheer'
                 : phase === 'feedback-wrong'
                   ? 'oops'
-                  : 'thinking'
+                  : hintMood ?? 'thinking'
             }
             size={48}
           />
@@ -175,13 +191,11 @@ export function Unit() {
             {phase === 'problem' && (
               <>
                 <Hint
-                  text={current.hint}
-                  onReveal={() => {
-                    if (!hintShown) {
-                      setHintShown(true);
-                      setHintsUsedThisProblem(true);
-                      setHintsUsedTotal((h) => h + 1);
-                    }
+                  tiers={tiersFor(current)}
+                  onReveal={(level) => {
+                    setHintLevelsThisProblem((arr) => [...arr, level]);
+                    setTierTotals((t) => ({ ...t, [level]: t[level] + 1 }));
+                    setLastHintLevel(level);
                   }}
                 />
                 <button
