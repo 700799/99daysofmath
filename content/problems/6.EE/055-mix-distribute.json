@@ -1,0 +1,37 @@
+{
+  "id": "6.EE.055",
+  "domain": "6.EE",
+  "unit": 6,
+  "orderInUnit": 5,
+  "standard": "6.EE.A.3",
+  "difficulty": 2,
+  "prompt": "Expand $2(3x - 4)$.",
+  "answerType": "short-text",
+  "primaryAnswer": "6x-8",
+  "alternativeAnswers": [
+    "6x - 8"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply $2$ by each term.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply $2$ by each term."
+    },
+    {
+      "level": "guide",
+      "text": "$2 \\cdot 3x - 2 \\cdot 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6x - 8$."
+    }
+  ],
+  "explanation": [
+    "$2(3x - 4) = 6x - 8$."
+  ],
+  "tags": [
+    "distributive"
+  ],
+  "estimatedSeconds": 40
+}

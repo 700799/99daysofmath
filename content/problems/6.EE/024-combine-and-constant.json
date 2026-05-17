@@ -1,0 +1,40 @@
+{
+  "id": "6.EE.024",
+  "domain": "6.EE",
+  "unit": 3,
+  "orderInUnit": 4,
+  "standard": "6.EE.A.3",
+  "difficulty": 2,
+  "prompt": "Simplify: $2x + 5 + 3x + 4$.",
+  "answerType": "short-text",
+  "primaryAnswer": "5x+9",
+  "alternativeAnswers": [
+    "5x + 9"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Combine $x$-terms; combine constants.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Combine $x$-terms; combine constants."
+    },
+    {
+      "level": "guide",
+      "text": "$2x + 3x = 5x$, $5 + 4 = 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5x + 9$."
+    }
+  ],
+  "explanation": [
+    "$x$-terms: $2x + 3x = 5x$.",
+    "Constants: $5 + 4 = 9$.",
+    "$5x + 9$."
+  ],
+  "tags": [
+    "CA",
+    "combine-like"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.017",
+  "domain": "6.EE",
+  "unit": 2,
+  "orderInUnit": 7,
+  "standard": "6.EE.A.2.b",
+  "difficulty": 2,
+  "prompt": "In the expression $7x + 4$, what is the **coefficient** of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The coefficient is the number multiplied by the variable.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The coefficient is the number multiplied by the variable."
+    },
+    {
+      "level": "guide",
+      "text": "In $7x$, what multiplies $x$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$7$."
+    }
+  ],
+  "explanation": [
+    "Coefficient of $x$ in $7x + 4$ is $7$."
+  ],
+  "tags": [
+    "vocabulary"
+  ],
+  "estimatedSeconds": 35
+}

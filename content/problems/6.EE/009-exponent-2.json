@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.009",
+  "domain": "6.EE",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "6.EE.A.1",
+  "difficulty": 1,
+  "prompt": "Evaluate $5^2$.",
+  "answerType": "numeric",
+  "primaryAnswer": "25",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$5^2$ means $5$ times $5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$5^2$ means $5$ times $5$."
+    },
+    {
+      "level": "guide",
+      "text": "$5 \\times 5 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$25$."
+    }
+  ],
+  "explanation": [
+    "$5^2 = 5 \\times 5 = 25$."
+  ],
+  "tags": [
+    "exponent"
+  ],
+  "estimatedSeconds": 25
+}

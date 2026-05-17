@@ -1,0 +1,42 @@
+{
+  "id": "6.EE.016",
+  "domain": "6.EE",
+  "unit": 2,
+  "orderInUnit": 6,
+  "standard": "6.EE.A.2.a",
+  "difficulty": 2,
+  "prompt": "Write an expression for \"$5$ more than $3$ times a number $n$\".",
+  "answerType": "short-text",
+  "primaryAnswer": "3n+5",
+  "alternativeAnswers": [
+    "3n + 5",
+    "5 + 3n",
+    "5+3n",
+    "3*n+5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"More than\" means addition.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"More than\" means addition."
+    },
+    {
+      "level": "guide",
+      "text": "\"$3$ times $n$\" is $3n$. Then add $5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3n + 5$."
+    }
+  ],
+  "explanation": [
+    "\"$3$ times $n$\" $\\to 3n$.",
+    "\"$5$ more than that\" $\\to 3n + 5$."
+  ],
+  "tags": [
+    "CA",
+    "translate"
+  ],
+  "estimatedSeconds": 60
+}

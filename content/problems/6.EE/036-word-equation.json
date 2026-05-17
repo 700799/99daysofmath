@@ -1,0 +1,38 @@
+{
+  "id": "6.EE.036",
+  "domain": "6.EE",
+  "unit": 4,
+  "orderInUnit": 6,
+  "standard": "6.EE.B.7",
+  "difficulty": 2,
+  "prompt": "Mia has some marbles. Tom gives her $7$ more and now she has $20$. How many did she have before?",
+  "answerType": "numeric",
+  "primaryAnswer": "13",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Let $x$ = before. $x + 7 = 20$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Let $x$ = before. $x + 7 = 20$."
+    },
+    {
+      "level": "guide",
+      "text": "Solve: $x = 20 - 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 13$."
+    }
+  ],
+  "explanation": [
+    "Set up: $x + 7 = 20$.",
+    "$x = 13$ marbles."
+  ],
+  "tags": [
+    "CA",
+    "word",
+    "solve"
+  ],
+  "estimatedSeconds": 60
+}

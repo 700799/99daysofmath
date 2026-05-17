@@ -1,0 +1,39 @@
+{
+  "id": "6.EE.042",
+  "domain": "6.EE",
+  "unit": 5,
+  "orderInUnit": 2,
+  "standard": "6.EE.B.8",
+  "difficulty": 1,
+  "prompt": "For $x \\geq 5$, is the circle at $5$ open or closed?",
+  "answerType": "short-text",
+  "primaryAnswer": "closed",
+  "alternativeAnswers": [
+    "closed circle",
+    "solid"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$\\geq$ includes equality.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$\\geq$ includes equality."
+    },
+    {
+      "level": "guide",
+      "text": "Closed (filled) circle when \"or equal to\"."
+    },
+    {
+      "level": "reveal",
+      "text": "Closed."
+    }
+  ],
+  "explanation": [
+    "$\\geq$ includes $5$.",
+    "Closed (solid) circle at $5$."
+  ],
+  "tags": [
+    "inequality"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.012",
+  "domain": "6.EE",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "6.EE.A.1",
+  "difficulty": 2,
+  "prompt": "Evaluate $2^3$.",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$2^3 = 2 \\times 2 \\times 2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$2^3 = 2 \\times 2 \\times 2$."
+    },
+    {
+      "level": "guide",
+      "text": "$2 \\times 2 = 4$, then $4 \\times 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 \\times 2 = 8$."
+    }
+  ],
+  "explanation": [
+    "$2^3 = 2 \\cdot 2 \\cdot 2 = 8$."
+  ],
+  "tags": [
+    "exponent"
+  ],
+  "estimatedSeconds": 30
+}

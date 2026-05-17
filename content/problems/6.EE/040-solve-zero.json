@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.040",
+  "domain": "6.EE",
+  "unit": 4,
+  "orderInUnit": 10,
+  "standard": "6.EE.B.7",
+  "difficulty": 2,
+  "prompt": "Solve: $x + 12 = 12$.",
+  "answerType": "numeric",
+  "primaryAnswer": "0",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Subtract $12$ from both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Subtract $12$ from both sides."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 12 - 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 0$."
+    }
+  ],
+  "explanation": [
+    "$x + 12 = 12 \\Rightarrow x = 0$."
+  ],
+  "tags": [
+    "solve"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,38 @@
+{
+  "id": "6.EE.059",
+  "domain": "6.EE",
+  "unit": 6,
+  "orderInUnit": 9,
+  "standard": "6.EE.B.6",
+  "difficulty": 2,
+  "prompt": "Write an equation: \"A number $n$ plus $13$ equals $20$\".",
+  "answerType": "short-text",
+  "primaryAnswer": "n+13=20",
+  "alternativeAnswers": [
+    "n + 13 = 20",
+    "13+n=20"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Translate word for word.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Translate word for word."
+    },
+    {
+      "level": "guide",
+      "text": "$n + 13 = 20$."
+    },
+    {
+      "level": "reveal",
+      "text": "$n + 13 = 20$."
+    }
+  ],
+  "explanation": [
+    "$n$ plus $13$ equals $20$: $n + 13 = 20$."
+  ],
+  "tags": [
+    "translate"
+  ],
+  "estimatedSeconds": 40
+}

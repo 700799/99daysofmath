@@ -1,0 +1,38 @@
+{
+  "id": "6.EE.039",
+  "domain": "6.EE",
+  "unit": 4,
+  "orderInUnit": 9,
+  "standard": "6.EE.B.7",
+  "difficulty": 2,
+  "prompt": "A box of cookies is shared equally by $5$ friends, each getting $4$ cookies. How many cookies in the box?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [
+    "20 cookies"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Let $x$ = total. $\\frac{x}{5} = 4$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Let $x$ = total. $\\frac{x}{5} = 4$."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 4 \\cdot 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 20$."
+    }
+  ],
+  "explanation": [
+    "Total $= 5 \\times 4 = 20$."
+  ],
+  "tags": [
+    "word",
+    "solve"
+  ],
+  "estimatedSeconds": 55
+}

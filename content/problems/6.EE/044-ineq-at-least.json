@@ -1,0 +1,39 @@
+{
+  "id": "6.EE.044",
+  "domain": "6.EE",
+  "unit": 5,
+  "orderInUnit": 4,
+  "standard": "6.EE.B.8",
+  "difficulty": 2,
+  "prompt": "Write an inequality: \"$y$ is at least $10$\".",
+  "answerType": "short-text",
+  "primaryAnswer": "y≥10",
+  "alternativeAnswers": [
+    "y >= 10",
+    "y ≥ 10"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"At least\" means \"greater than or equal to\".",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"At least\" means \"greater than or equal to\"."
+    },
+    {
+      "level": "guide",
+      "text": "$y$ ≥ ?"
+    },
+    {
+      "level": "reveal",
+      "text": "$y \\geq 10$."
+    }
+  ],
+  "explanation": [
+    "\"At least $10$\" means $y \\geq 10$."
+  ],
+  "tags": [
+    "inequality",
+    "translate"
+  ],
+  "estimatedSeconds": 45
+}

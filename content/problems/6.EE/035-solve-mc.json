@@ -1,0 +1,58 @@
+{
+  "id": "6.EE.035",
+  "domain": "6.EE",
+  "unit": 4,
+  "orderInUnit": 5,
+  "standard": "6.EE.B.5",
+  "difficulty": 1,
+  "prompt": "Which value makes $x + 6 = 10$ true?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$2$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$4$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$6$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$16$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Try each. Which one makes left side equal $10$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Try each. Which one makes left side equal $10$?"
+    },
+    {
+      "level": "guide",
+      "text": "$4 + 6 = 10$. ✓"
+    },
+    {
+      "level": "reveal",
+      "text": "B."
+    }
+  ],
+  "explanation": [
+    "Substitute each into $x + 6 = 10$.",
+    "$4 + 6 = 10$ ✓."
+  ],
+  "tags": [
+    "check-solution"
+  ],
+  "estimatedSeconds": 40
+}

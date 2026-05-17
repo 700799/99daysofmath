@@ -1,0 +1,38 @@
+{
+  "id": "6.EE.060",
+  "domain": "6.EE",
+  "unit": 6,
+  "orderInUnit": 10,
+  "standard": "6.EE.B.7",
+  "difficulty": 3,
+  "prompt": "Solve: $2x + 3 = 11$.",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Subtract $3$ first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Subtract $3$ first."
+    },
+    {
+      "level": "guide",
+      "text": "$2x = 8$. Now divide by $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 4$."
+    }
+  ],
+  "explanation": [
+    "$2x + 3 = 11$.",
+    "$2x = 8$.",
+    "$x = 4$."
+  ],
+  "tags": [
+    "CA",
+    "solve"
+  ],
+  "estimatedSeconds": 60
+}

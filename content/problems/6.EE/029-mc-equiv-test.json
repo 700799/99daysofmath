@@ -1,0 +1,58 @@
+{
+  "id": "6.EE.029",
+  "domain": "6.EE",
+  "unit": 3,
+  "orderInUnit": 9,
+  "standard": "6.EE.A.4",
+  "difficulty": 2,
+  "prompt": "Which is equivalent to $3(x + 2)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$3x + 2$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$x + 6$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$3x + 6$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$3x + 5$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Distribute the $3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Distribute the $3$."
+    },
+    {
+      "level": "guide",
+      "text": "$3 \\cdot x + 3 \\cdot 2 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$3x + 6$."
+    }
+  ],
+  "explanation": [
+    "$3(x + 2) = 3x + 6$."
+  ],
+  "tags": [
+    "distributive",
+    "equivalent"
+  ],
+  "estimatedSeconds": 40
+}

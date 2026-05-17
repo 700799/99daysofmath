@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.018",
+  "domain": "6.EE",
+  "unit": 2,
+  "orderInUnit": 8,
+  "standard": "6.EE.A.2.c",
+  "difficulty": 2,
+  "prompt": "If $a = 3$ and $b = 5$, evaluate $2a + b$.",
+  "answerType": "numeric",
+  "primaryAnswer": "11",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Replace $a$ with $3$ and $b$ with $5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Replace $a$ with $3$ and $b$ with $5$."
+    },
+    {
+      "level": "guide",
+      "text": "$2(3) + 5 = 6 + 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$11$."
+    }
+  ],
+  "explanation": [
+    "Substitute: $2(3) + 5 = 6 + 5 = 11$."
+  ],
+  "tags": [
+    "evaluate"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,49 @@
+{
+  "id": "6.EE.045",
+  "domain": "6.EE",
+  "unit": 5,
+  "orderInUnit": 5,
+  "standard": "6.EE.B.5",
+  "difficulty": 2,
+  "prompt": "Is $x = 4$ a solution to $x > 4$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Yes",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "No",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "$>$ means strictly greater (not equal).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$>$ means strictly greater (not equal)."
+    },
+    {
+      "level": "guide",
+      "text": "Is $4 > 4$ true?"
+    },
+    {
+      "level": "reveal",
+      "text": "No — they're equal, not greater."
+    }
+  ],
+  "explanation": [
+    "$x > 4$ excludes $4$.",
+    "$4$ is not a solution."
+  ],
+  "tags": [
+    "inequality",
+    "check"
+  ],
+  "estimatedSeconds": 35
+}

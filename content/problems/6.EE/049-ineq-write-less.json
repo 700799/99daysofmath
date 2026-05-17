@@ -1,0 +1,39 @@
+{
+  "id": "6.EE.049",
+  "domain": "6.EE",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "6.EE.B.8",
+  "difficulty": 2,
+  "prompt": "A bus can hold less than $30$ riders. Write an inequality for the number $n$ of riders.",
+  "answerType": "short-text",
+  "primaryAnswer": "n<30",
+  "alternativeAnswers": [
+    "n < 30"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Less than\" means $<$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Less than\" means $<$."
+    },
+    {
+      "level": "guide",
+      "text": "$n < 30$."
+    },
+    {
+      "level": "reveal",
+      "text": "$n < 30$."
+    }
+  ],
+  "explanation": [
+    "\"Less than $30$\" → $n < 30$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "inequality",
+    "translate"
+  ],
+  "estimatedSeconds": 45
+}

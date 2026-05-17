@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.034",
+  "domain": "6.EE",
+  "unit": 4,
+  "orderInUnit": 4,
+  "standard": "6.EE.B.7",
+  "difficulty": 2,
+  "prompt": "Solve: $\\frac{x}{4} = 5$.",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply both sides by $4$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply both sides by $4$."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 5 \\times 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 20$."
+    }
+  ],
+  "explanation": [
+    "$\\frac{x}{4} = 5 \\Rightarrow x = 20$."
+  ],
+  "tags": [
+    "solve"
+  ],
+  "estimatedSeconds": 35
+}

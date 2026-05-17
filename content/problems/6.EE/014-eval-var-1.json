@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.014",
+  "domain": "6.EE",
+  "unit": 2,
+  "orderInUnit": 4,
+  "standard": "6.EE.A.2.c",
+  "difficulty": 1,
+  "prompt": "If $x = 6$, what is $x + 4$?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Replace $x$ with $6$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Replace $x$ with $6$."
+    },
+    {
+      "level": "guide",
+      "text": "$6 + 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$10$."
+    }
+  ],
+  "explanation": [
+    "Substitute $x = 6$: $6 + 4 = 10$."
+  ],
+  "tags": [
+    "evaluate"
+  ],
+  "estimatedSeconds": 25
+}

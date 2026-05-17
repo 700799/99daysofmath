@@ -1,0 +1,38 @@
+{
+  "id": "6.EE.041",
+  "domain": "6.EE",
+  "unit": 5,
+  "orderInUnit": 1,
+  "standard": "6.EE.B.8",
+  "difficulty": 1,
+  "prompt": "On a number line, $x > 3$ has an open or closed circle at $3$?",
+  "answerType": "short-text",
+  "primaryAnswer": "open",
+  "alternativeAnswers": [
+    "open circle"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$>$ is strict (not equal).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$>$ is strict (not equal)."
+    },
+    {
+      "level": "guide",
+      "text": "Open circle = strict inequality."
+    },
+    {
+      "level": "reveal",
+      "text": "Open."
+    }
+  ],
+  "explanation": [
+    "$>$ excludes $3$.",
+    "Open circle at $3$."
+  ],
+  "tags": [
+    "inequality"
+  ],
+  "estimatedSeconds": 35
+}

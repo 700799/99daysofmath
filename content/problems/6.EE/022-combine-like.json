@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.022",
+  "domain": "6.EE",
+  "unit": 3,
+  "orderInUnit": 2,
+  "standard": "6.EE.A.3",
+  "difficulty": 1,
+  "prompt": "Simplify: $4x + 3x$.",
+  "answerType": "short-text",
+  "primaryAnswer": "7x",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Add the coefficients.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add the coefficients."
+    },
+    {
+      "level": "guide",
+      "text": "$4 + 3 = 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$7x$."
+    }
+  ],
+  "explanation": [
+    "$4x + 3x = (4 + 3)x = 7x$."
+  ],
+  "tags": [
+    "combine-like"
+  ],
+  "estimatedSeconds": 30
+}

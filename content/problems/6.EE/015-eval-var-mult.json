@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.015",
+  "domain": "6.EE",
+  "unit": 2,
+  "orderInUnit": 5,
+  "standard": "6.EE.A.2.c",
+  "difficulty": 1,
+  "prompt": "If $y = 4$, what is $5y$?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$5y$ means $5$ times $y$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$5y$ means $5$ times $y$."
+    },
+    {
+      "level": "guide",
+      "text": "$5 \\times 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$20$."
+    }
+  ],
+  "explanation": [
+    "$5y = 5 \\times 4 = 20$."
+  ],
+  "tags": [
+    "evaluate"
+  ],
+  "estimatedSeconds": 25
+}

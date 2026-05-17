@@ -1,0 +1,37 @@
+{
+  "id": "6.EE.010",
+  "domain": "6.EE",
+  "unit": 1,
+  "orderInUnit": 7,
+  "standard": "6.EE.A.1",
+  "difficulty": 2,
+  "prompt": "Evaluate: $3 + 2 \\times 4$.",
+  "answerType": "numeric",
+  "primaryAnswer": "11",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiplication before addition (PEMDAS).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiplication before addition (PEMDAS)."
+    },
+    {
+      "level": "guide",
+      "text": "$2 \\times 4 = 8$, then $3 + 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$11$."
+    }
+  ],
+  "explanation": [
+    "Order: multiply first.",
+    "$2 \\times 4 = 8$.",
+    "$3 + 8 = 11$."
+  ],
+  "tags": [
+    "order-of-ops"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,38 @@
+{
+  "id": "6.EE.019",
+  "domain": "6.EE",
+  "unit": 2,
+  "orderInUnit": 9,
+  "standard": "6.EE.A.2.a",
+  "difficulty": 2,
+  "prompt": "Write an expression for \"$x$ decreased by $9$\".",
+  "answerType": "short-text",
+  "primaryAnswer": "x-9",
+  "alternativeAnswers": [
+    "x - 9"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Decreased by\" means subtraction.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Decreased by\" means subtraction."
+    },
+    {
+      "level": "guide",
+      "text": "$x - 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x - 9$."
+    }
+  ],
+  "explanation": [
+    "Decreased by $9$: subtract $9$ from $x$.",
+    "$x - 9$."
+  ],
+  "tags": [
+    "translate"
+  ],
+  "estimatedSeconds": 35
+}

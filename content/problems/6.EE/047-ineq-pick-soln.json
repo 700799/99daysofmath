@@ -1,0 +1,59 @@
+{
+  "id": "6.EE.047",
+  "domain": "6.EE",
+  "unit": 5,
+  "orderInUnit": 7,
+  "standard": "6.EE.B.5",
+  "difficulty": 2,
+  "prompt": "Which is a solution to $x \\leq 3$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$5$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$4$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$3$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$7$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "$x \\leq 3$ means $x$ can be $3$ or less.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$x \\leq 3$ means $x$ can be $3$ or less."
+    },
+    {
+      "level": "guide",
+      "text": "Is $3 \\leq 3$ true? Yes."
+    },
+    {
+      "level": "reveal",
+      "text": "C."
+    }
+  ],
+  "explanation": [
+    "$x \\leq 3$ allows values $\\leq 3$.",
+    "$3 \\leq 3$ ✓. Answer: C."
+  ],
+  "tags": [
+    "inequality",
+    "check"
+  ],
+  "estimatedSeconds": 40
+}

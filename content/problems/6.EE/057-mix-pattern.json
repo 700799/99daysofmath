@@ -1,0 +1,41 @@
+{
+  "id": "6.EE.057",
+  "domain": "6.EE",
+  "unit": 6,
+  "orderInUnit": 7,
+  "standard": "6.EE.C.9",
+  "difficulty": 3,
+  "prompt": "A pattern: $1 \\to 5$, $2 \\to 9$, $3 \\to 13$. What is the rule (as $y = $ expression)?",
+  "answerType": "short-text",
+  "primaryAnswer": "y=4x+1",
+  "alternativeAnswers": [
+    "y = 4x + 1"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The output goes up by $4$ each time. What's the constant?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The output goes up by $4$ each time. What's the constant?"
+    },
+    {
+      "level": "guide",
+      "text": "When $x = 0$, $y$ would be $1$. So $y = 4x + 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 4x + 1$."
+    }
+  ],
+  "explanation": [
+    "Rate of change: $4$.",
+    "When $x = 1$: $4(1) + 1 = 5$ ✓.",
+    "Rule: $y = 4x + 1$."
+  ],
+  "tags": [
+    "CA",
+    "two-vars",
+    "pattern"
+  ],
+  "estimatedSeconds": 90
+}

@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.052",
+  "domain": "6.EE",
+  "unit": 6,
+  "orderInUnit": 2,
+  "standard": "6.EE.C.9",
+  "difficulty": 2,
+  "prompt": "If $y = x + 7$ and $y = 12$, what is $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$x + 7 = 12$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$x + 7 = 12$."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 12 - 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 5$."
+    }
+  ],
+  "explanation": [
+    "$x + 7 = 12 \\Rightarrow x = 5$."
+  ],
+  "tags": [
+    "two-vars"
+  ],
+  "estimatedSeconds": 40
+}

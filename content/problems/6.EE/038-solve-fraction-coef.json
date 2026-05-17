@@ -1,0 +1,38 @@
+{
+  "id": "6.EE.038",
+  "domain": "6.EE",
+  "unit": 4,
+  "orderInUnit": 8,
+  "standard": "6.EE.B.7",
+  "difficulty": 3,
+  "prompt": "Solve: $\\frac{2}{3} x = 10$.",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply both sides by $\\frac{3}{2}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply both sides by $\\frac{3}{2}$."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 10 \\cdot \\frac{3}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 15$."
+    }
+  ],
+  "explanation": [
+    "$\\frac{2}{3} x = 10$.",
+    "Multiply both sides by $\\frac{3}{2}$: $x = 15$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "solve",
+    "fraction"
+  ],
+  "estimatedSeconds": 70
+}

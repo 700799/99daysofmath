@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.054",
+  "domain": "6.EE",
+  "unit": 6,
+  "orderInUnit": 4,
+  "standard": "6.EE.C.9",
+  "difficulty": 2,
+  "prompt": "If $y = 3x + 1$, what is $y$ when $x = 4$?",
+  "answerType": "numeric",
+  "primaryAnswer": "13",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute and compute.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute and compute."
+    },
+    {
+      "level": "guide",
+      "text": "$y = 3(4) + 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 12 + 1 = 13$."
+    }
+  ],
+  "explanation": [
+    "$y = 3(4) + 1 = 13$."
+  ],
+  "tags": [
+    "two-vars"
+  ],
+  "estimatedSeconds": 35
+}
