@@ -1,0 +1,36 @@
+{
+  "id": "6.G.034",
+  "domain": "6.G",
+  "unit": 4,
+  "orderInUnit": 4,
+  "standard": "6.G.A.4",
+  "difficulty": 1,
+  "prompt": "How many faces does a rectangular prism have?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Think of a box.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Think of a box."
+    },
+    {
+      "level": "guide",
+      "text": "Top, bottom, $4$ sides."
+    },
+    {
+      "level": "reveal",
+      "text": "$6$."
+    }
+  ],
+  "explanation": [
+    "$1$ top + $1$ bottom + $4$ sides $= 6$ faces."
+  ],
+  "tags": [
+    "surface-area",
+    "faces"
+  ],
+  "estimatedSeconds": 30
+}

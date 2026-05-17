@@ -1,0 +1,39 @@
+{
+  "id": "6.G.025",
+  "domain": "6.G",
+  "unit": 3,
+  "orderInUnit": 5,
+  "standard": "6.G.A.2",
+  "difficulty": 3,
+  "prompt": "A prism is $\\frac{1}{2} \\times \\frac{3}{4} \\times 2$. Find its volume.",
+  "answerType": "fraction",
+  "primaryAnswer": "3/4",
+  "alternativeAnswers": [
+    "0.75"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply the three.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply the three."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{1}{2} \\cdot \\frac{3}{4} = \\frac{3}{8}$, then $\\times 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{3}{8} \\cdot 2 = \\frac{6}{8} = \\frac{3}{4}$."
+    }
+  ],
+  "explanation": [
+    "$V = \\frac{1}{2} \\cdot \\frac{3}{4} \\cdot 2 = \\frac{6}{8} = \\frac{3}{4}$."
+  ],
+  "tags": [
+    "CA",
+    "volume",
+    "fraction"
+  ],
+  "estimatedSeconds": 80
+}

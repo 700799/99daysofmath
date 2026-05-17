@@ -1,0 +1,36 @@
+{
+  "id": "6.G.053",
+  "domain": "6.G",
+  "unit": 6,
+  "orderInUnit": 3,
+  "standard": "6.G.A.3",
+  "difficulty": 2,
+  "prompt": "A rectangle has corners $(2, 1)$ and $(6, 5)$ as opposite vertices, with sides parallel to the axes. Find its area.",
+  "answerType": "numeric",
+  "primaryAnswer": "16",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Width: $|6 - 2| = 4$. Height: $|5 - 1| = 4$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Width: $|6 - 2| = 4$. Height: $|5 - 1| = 4$."
+    },
+    {
+      "level": "guide",
+      "text": "Area $= 4 \\times 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$16$."
+    }
+  ],
+  "explanation": [
+    "Width $4$, height $4$. Area $= 16$."
+  ],
+  "tags": [
+    "coord",
+    "area"
+  ],
+  "estimatedSeconds": 60
+}

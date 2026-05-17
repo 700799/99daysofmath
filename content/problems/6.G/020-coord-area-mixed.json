@@ -1,0 +1,38 @@
+{
+  "id": "6.G.020",
+  "domain": "6.G",
+  "unit": 2,
+  "orderInUnit": 10,
+  "standard": "6.G.A.3",
+  "difficulty": 3,
+  "prompt": "A rectangle has corners $(-3, -2), (5, -2), (5, 4), (-3, 4)$. Find its area.",
+  "answerType": "numeric",
+  "primaryAnswer": "48",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Width: $|5 - (-3)| = 8$. Height: $|4 - (-2)| = 6$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Width: $|5 - (-3)| = 8$. Height: $|4 - (-2)| = 6$."
+    },
+    {
+      "level": "guide",
+      "text": "$A = 8 \\times 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$48$."
+    }
+  ],
+  "explanation": [
+    "Width $8$, height $6$.",
+    "$A = 48$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "coord",
+    "area"
+  ],
+  "estimatedSeconds": 70
+}

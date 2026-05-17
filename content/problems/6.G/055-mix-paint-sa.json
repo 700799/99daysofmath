@@ -1,0 +1,36 @@
+{
+  "id": "6.G.055",
+  "domain": "6.G",
+  "unit": 6,
+  "orderInUnit": 5,
+  "standard": "6.G.A.4",
+  "difficulty": 3,
+  "prompt": "You paint all faces of a cube with side $3$ ft. How many square feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "54",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Surface area of cube: $6s^2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Surface area of cube: $6s^2$."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\times 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$54$."
+    }
+  ],
+  "explanation": [
+    "$SA = 6(3)^2 = 54$ sq ft."
+  ],
+  "tags": [
+    "surface-area",
+    "word"
+  ],
+  "estimatedSeconds": 55
+}

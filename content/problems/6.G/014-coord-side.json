@@ -1,0 +1,37 @@
+{
+  "id": "6.G.014",
+  "domain": "6.G",
+  "unit": 2,
+  "orderInUnit": 4,
+  "standard": "6.G.A.3",
+  "difficulty": 1,
+  "prompt": "Find the length of the side from $(2, 1)$ to $(2, 7)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Same $x$, vertical line.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same $x$, vertical line."
+    },
+    {
+      "level": "guide",
+      "text": "$|7 - 1| = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$6$."
+    }
+  ],
+  "explanation": [
+    "Same $x$ → vertical side.",
+    "Length $= |7 - 1| = 6$."
+  ],
+  "tags": [
+    "coord",
+    "side"
+  ],
+  "estimatedSeconds": 35
+}

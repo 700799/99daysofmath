@@ -1,0 +1,38 @@
+{
+  "id": "6.G.013",
+  "domain": "6.G",
+  "unit": 1,
+  "orderInUnit": 10,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A triangle has base $12$ ft and height $5$ ft. What is its area?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [
+    "30 sq ft"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$\\frac{1}{2} b h$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$\\frac{1}{2} b h$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{1}{2}(12)(5) = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$30$."
+    }
+  ],
+  "explanation": [
+    "$A = \\frac{1}{2}(12)(5) = 30$ sq ft."
+  ],
+  "tags": [
+    "area",
+    "triangle"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,38 @@
+{
+  "id": "6.G.060",
+  "domain": "6.G",
+  "unit": 6,
+  "orderInUnit": 10,
+  "standard": "6.G.A.2",
+  "difficulty": 3,
+  "prompt": "A box is $\\frac{1}{2}$ m wide, $1$ m long, $2$ m tall. Find its volume in m³.",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [
+    "1 m³"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply: $\\frac{1}{2} \\cdot 1 \\cdot 2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply: $\\frac{1}{2} \\cdot 1 \\cdot 2$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{1}{2} \\cdot 2 = 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$1$ m³."
+    }
+  ],
+  "explanation": [
+    "$V = \\frac{1}{2} \\cdot 1 \\cdot 2 = 1$ m³."
+  ],
+  "tags": [
+    "volume",
+    "fraction"
+  ],
+  "estimatedSeconds": 50
+}

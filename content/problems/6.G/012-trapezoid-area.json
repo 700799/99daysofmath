@@ -1,0 +1,37 @@
+{
+  "id": "6.G.012",
+  "domain": "6.G",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "6.G.A.1",
+  "difficulty": 3,
+  "prompt": "A trapezoid has parallel sides $6$ and $10$, height $4$. Find its area.",
+  "answerType": "numeric",
+  "primaryAnswer": "32",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Trapezoid area $= \\frac{1}{2}(b_1 + b_2) h$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Trapezoid area $= \\frac{1}{2}(b_1 + b_2) h$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{1}{2}(6 + 10)(4) = \\frac{1}{2}(16)(4)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2} \\cdot 64 = 32$."
+    }
+  ],
+  "explanation": [
+    "$A = \\frac{1}{2}(b_1 + b_2)h = \\frac{1}{2}(16)(4) = 32$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "area",
+    "trapezoid"
+  ],
+  "estimatedSeconds": 70
+}

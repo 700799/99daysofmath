@@ -1,0 +1,38 @@
+{
+  "id": "6.G.042",
+  "domain": "6.G",
+  "unit": 5,
+  "orderInUnit": 2,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A shape combines a rectangle ($6 \\times 4$) with a triangle on top (base $6$, height $3$). What is the total area?",
+  "answerType": "numeric",
+  "primaryAnswer": "33",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Rectangle area + triangle area.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Rectangle area + triangle area."
+    },
+    {
+      "level": "guide",
+      "text": "$24 + \\frac{1}{2}(6)(3) = 24 + 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$33$."
+    }
+  ],
+  "explanation": [
+    "$A_{rect} = 24$; $A_{tri} = 9$.",
+    "Total: $33$."
+  ],
+  "tags": [
+    "CA",
+    "composite",
+    "area"
+  ],
+  "estimatedSeconds": 75
+}

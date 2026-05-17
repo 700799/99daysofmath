@@ -1,0 +1,37 @@
+{
+  "id": "6.G.059",
+  "domain": "6.G",
+  "unit": 6,
+  "orderInUnit": 9,
+  "standard": "6.G.A.1",
+  "difficulty": 3,
+  "prompt": "A patio is L-shaped: $8 \\times 6$ minus a $3 \\times 2$ corner. Find the area.",
+  "answerType": "numeric",
+  "primaryAnswer": "42",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$48 - 6$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$48 - 6$."
+    },
+    {
+      "level": "guide",
+      "text": "Big minus cut."
+    },
+    {
+      "level": "reveal",
+      "text": "$42$."
+    }
+  ],
+  "explanation": [
+    "$48 - 6 = 42$."
+  ],
+  "tags": [
+    "CA",
+    "composite",
+    "word"
+  ],
+  "estimatedSeconds": 65
+}

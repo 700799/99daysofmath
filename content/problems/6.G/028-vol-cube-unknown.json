@@ -1,0 +1,36 @@
+{
+  "id": "6.G.028",
+  "domain": "6.G",
+  "unit": 3,
+  "orderInUnit": 8,
+  "standard": "6.G.A.2",
+  "difficulty": 3,
+  "prompt": "A cube has volume $125$. Find the length of one edge.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$V = s^3$. Find cube root.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$V = s^3$. Find cube root."
+    },
+    {
+      "level": "guide",
+      "text": "What number cubed is $125$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$5^3 = 125$, so $s = 5$."
+    }
+  ],
+  "explanation": [
+    "$s^3 = 125 \\Rightarrow s = 5$."
+  ],
+  "tags": [
+    "volume",
+    "cube"
+  ],
+  "estimatedSeconds": 60
+}

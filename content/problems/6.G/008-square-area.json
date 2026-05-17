@@ -1,0 +1,39 @@
+{
+  "id": "6.G.008",
+  "domain": "6.G",
+  "unit": 1,
+  "orderInUnit": 5,
+  "standard": "6.G.A.1",
+  "difficulty": 1,
+  "prompt": "What is the area of a square with side $7$ cm?",
+  "answerType": "numeric",
+  "primaryAnswer": "49",
+  "alternativeAnswers": [
+    "49 sq cm",
+    "49 cm²"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Area of square $= s^2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Area of square $= s^2$."
+    },
+    {
+      "level": "guide",
+      "text": "$7 \\times 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$49$."
+    }
+  ],
+  "explanation": [
+    "$A = s^2 = 7^2 = 49$ sq cm."
+  ],
+  "tags": [
+    "area",
+    "square"
+  ],
+  "estimatedSeconds": 30
+}

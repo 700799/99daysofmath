@@ -1,0 +1,35 @@
+{
+  "id": "6.G.049",
+  "domain": "6.G",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A shape combines a $5 \\times 4$ rectangle with a triangle (base $5$, height $2$). Find the total area.",
+  "answerType": "numeric",
+  "primaryAnswer": "25",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Add the areas.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add the areas."
+    },
+    {
+      "level": "guide",
+      "text": "$20 + 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$25$."
+    }
+  ],
+  "explanation": [
+    "$20 + 5 = 25$."
+  ],
+  "tags": [
+    "composite"
+  ],
+  "estimatedSeconds": 50
+}

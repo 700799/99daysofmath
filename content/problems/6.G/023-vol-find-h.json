@@ -1,0 +1,35 @@
+{
+  "id": "6.G.023",
+  "domain": "6.G",
+  "unit": 3,
+  "orderInUnit": 3,
+  "standard": "6.G.A.2",
+  "difficulty": 2,
+  "prompt": "A box has $V = 120$, length $5$, width $4$. Find the height.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$V = l w h$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$V = l w h$."
+    },
+    {
+      "level": "guide",
+      "text": "$h = V / (l w) = 120 / 20$."
+    },
+    {
+      "level": "reveal",
+      "text": "$h = 6$."
+    }
+  ],
+  "explanation": [
+    "$h = 120 / (5 \\cdot 4) = 6$."
+  ],
+  "tags": [
+    "volume"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,36 @@
+{
+  "id": "6.G.015",
+  "domain": "6.G",
+  "unit": 2,
+  "orderInUnit": 5,
+  "standard": "6.G.A.3",
+  "difficulty": 2,
+  "prompt": "A rectangle has corners at $(0, 0), (5, 0), (5, 3), (0, 3)$. Find its **perimeter**.",
+  "answerType": "numeric",
+  "primaryAnswer": "16",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Length $= 5$, width $= 3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Length $= 5$, width $= 3$."
+    },
+    {
+      "level": "guide",
+      "text": "Perimeter $= 2(l + w) = 2(5 + 3)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2(8) = 16$."
+    }
+  ],
+  "explanation": [
+    "$P = 2(5 + 3) = 16$."
+  ],
+  "tags": [
+    "coord",
+    "perimeter"
+  ],
+  "estimatedSeconds": 50
+}

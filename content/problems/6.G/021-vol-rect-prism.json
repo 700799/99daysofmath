@@ -1,0 +1,38 @@
+{
+  "id": "6.G.021",
+  "domain": "6.G",
+  "unit": 3,
+  "orderInUnit": 1,
+  "standard": "6.G.A.2",
+  "difficulty": 1,
+  "prompt": "A rectangular prism is $3 \\times 4 \\times 5$. Find its volume.",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [
+    "60 cubic units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$V = l \\cdot w \\cdot h$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$V = l \\cdot w \\cdot h$."
+    },
+    {
+      "level": "guide",
+      "text": "$3 \\times 4 \\times 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$60$."
+    }
+  ],
+  "explanation": [
+    "$V = 3 \\cdot 4 \\cdot 5 = 60$."
+  ],
+  "tags": [
+    "volume",
+    "prism"
+  ],
+  "estimatedSeconds": 35
+}

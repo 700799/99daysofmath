@@ -1,0 +1,36 @@
+{
+  "id": "6.G.039",
+  "domain": "6.G",
+  "unit": 4,
+  "orderInUnit": 9,
+  "standard": "6.G.A.4",
+  "difficulty": 3,
+  "prompt": "A rectangular prism has $l = 10, w = 5, h = 2$. Find SA.",
+  "answerType": "numeric",
+  "primaryAnswer": "160",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$SA = 2(lw + lh + wh)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$SA = 2(lw + lh + wh)$."
+    },
+    {
+      "level": "guide",
+      "text": "$2(50 + 20 + 10) = 2(80)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$160$."
+    }
+  ],
+  "explanation": [
+    "$lw = 50, lh = 20, wh = 10$.",
+    "$SA = 2(80) = 160$."
+  ],
+  "tags": [
+    "surface-area"
+  ],
+  "estimatedSeconds": 75
+}

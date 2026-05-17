@@ -1,0 +1,36 @@
+{
+  "id": "6.G.046",
+  "domain": "6.G",
+  "unit": 5,
+  "orderInUnit": 6,
+  "standard": "6.G.A.1",
+  "difficulty": 3,
+  "prompt": "A floor plan is an \"L\": $10 \\times 6$ minus a corner cut of $3 \\times 2$. Find the area.",
+  "answerType": "numeric",
+  "primaryAnswer": "54",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$60 - 6$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$60 - 6$."
+    },
+    {
+      "level": "guide",
+      "text": "$10 \\times 6 = 60$, cut: $3 \\times 2 = 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$54$."
+    }
+  ],
+  "explanation": [
+    "$60 - 6 = 54$."
+  ],
+  "tags": [
+    "composite",
+    "area"
+  ],
+  "estimatedSeconds": 70
+}

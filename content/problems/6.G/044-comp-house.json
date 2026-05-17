@@ -1,0 +1,37 @@
+{
+  "id": "6.G.044",
+  "domain": "6.G",
+  "unit": 5,
+  "orderInUnit": 4,
+  "standard": "6.G.A.1",
+  "difficulty": 3,
+  "prompt": "A house shape: rectangle $8 \\times 5$ + triangular roof (base $8$, height $4$). Total area?",
+  "answerType": "numeric",
+  "primaryAnswer": "56",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Rectangle + triangle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Rectangle + triangle."
+    },
+    {
+      "level": "guide",
+      "text": "$40 + \\frac{1}{2}(8)(4) = 40 + 16$."
+    },
+    {
+      "level": "reveal",
+      "text": "$56$."
+    }
+  ],
+  "explanation": [
+    "$A_{rect} = 40, A_{tri} = 16$.",
+    "Total: $56$."
+  ],
+  "tags": [
+    "composite",
+    "word"
+  ],
+  "estimatedSeconds": 80
+}

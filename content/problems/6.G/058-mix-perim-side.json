@@ -1,0 +1,37 @@
+{
+  "id": "6.G.058",
+  "domain": "6.G",
+  "unit": 6,
+  "orderInUnit": 8,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A regular hexagon has $6$ equal sides each $4$ cm. Find its perimeter.",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [
+    "24 cm"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Add all sides — or multiply.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add all sides — or multiply."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\times 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24$."
+    }
+  ],
+  "explanation": [
+    "$P = 6 \\times 4 = 24$ cm."
+  ],
+  "tags": [
+    "perimeter"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,36 @@
+{
+  "id": "6.G.027",
+  "domain": "6.G",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "6.G.A.2",
+  "difficulty": 2,
+  "prompt": "An aquarium is $40$ cm long, $20$ cm wide, $30$ cm tall. Find its volume in cm³.",
+  "answerType": "numeric",
+  "primaryAnswer": "24000",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply length × width × height.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply length × width × height."
+    },
+    {
+      "level": "guide",
+      "text": "$40 \\times 20 = 800$. $800 \\times 30 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$24{,}000$."
+    }
+  ],
+  "explanation": [
+    "$V = 40 \\times 20 \\times 30 = 24{,}000$ cm³."
+  ],
+  "tags": [
+    "volume",
+    "word"
+  ],
+  "estimatedSeconds": 60
+}

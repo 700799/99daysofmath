@@ -1,0 +1,39 @@
+{
+  "id": "6.G.054",
+  "domain": "6.G",
+  "unit": 6,
+  "orderInUnit": 4,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A rectangular garden is $15$ ft × $10$ ft. How much fencing for the perimeter?",
+  "answerType": "numeric",
+  "primaryAnswer": "50",
+  "alternativeAnswers": [
+    "50 ft"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$P = 2(l + w)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$P = 2(l + w)$."
+    },
+    {
+      "level": "guide",
+      "text": "$2(15 + 10) = 2(25)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$50$."
+    }
+  ],
+  "explanation": [
+    "$P = 2(15 + 10) = 50$ ft."
+  ],
+  "tags": [
+    "CA",
+    "perimeter",
+    "word"
+  ],
+  "estimatedSeconds": 55
+}

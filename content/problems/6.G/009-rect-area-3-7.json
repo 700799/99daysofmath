@@ -1,0 +1,36 @@
+{
+  "id": "6.G.009",
+  "domain": "6.G",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "6.G.A.1",
+  "difficulty": 1,
+  "prompt": "A rectangle has length $7$ and width $3$. What is its area?",
+  "answerType": "numeric",
+  "primaryAnswer": "21",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$A = l \\times w$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$A = l \\times w$."
+    },
+    {
+      "level": "guide",
+      "text": "$7 \\times 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$21$."
+    }
+  ],
+  "explanation": [
+    "$A = l \\times w = 7 \\times 3 = 21$."
+  ],
+  "tags": [
+    "area",
+    "rectangle"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,36 @@
+{
+  "id": "6.G.018",
+  "domain": "6.G",
+  "unit": 2,
+  "orderInUnit": 8,
+  "standard": "6.G.A.3",
+  "difficulty": 2,
+  "prompt": "A square has vertices at $(-2, -2), (-2, 4), (4, -2), (4, 4)$. What is its side length?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Distance from $-2$ to $4$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Distance from $-2$ to $4$."
+    },
+    {
+      "level": "guide",
+      "text": "$|4 - (-2)| = 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6$."
+    }
+  ],
+  "explanation": [
+    "Side $= |4 - (-2)| = 6$."
+  ],
+  "tags": [
+    "coord",
+    "square"
+  ],
+  "estimatedSeconds": 50
+}

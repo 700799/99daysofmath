@@ -1,0 +1,58 @@
+{
+  "id": "6.G.019",
+  "domain": "6.G",
+  "unit": 2,
+  "orderInUnit": 9,
+  "standard": "6.G.A.3",
+  "difficulty": 2,
+  "prompt": "Which two vertices form one side of a rectangle aligned with the axes?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$(1, 2)$ and $(3, 5)$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$(1, 2)$ and $(1, 5)$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$(1, 2)$ and $(4, 5)$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$(0, 0)$ and $(1, 1)$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "A vertical side has matching $x$ values.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A vertical side has matching $x$ values."
+    },
+    {
+      "level": "guide",
+      "text": "Both have $x = 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "B."
+    }
+  ],
+  "explanation": [
+    "Same $x$ means vertical side.",
+    "$(1, 2)$ and $(1, 5)$ both have $x = 1$."
+  ],
+  "tags": [
+    "coord"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,35 @@
+{
+  "id": "6.G.026",
+  "domain": "6.G",
+  "unit": 3,
+  "orderInUnit": 6,
+  "standard": "6.G.A.2",
+  "difficulty": 2,
+  "prompt": "A box has $V = 72$, width $3$, height $4$. Find the length.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$l = V / (w h)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$l = V / (w h)$."
+    },
+    {
+      "level": "guide",
+      "text": "$l = 72 / 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$l = 6$."
+    }
+  ],
+  "explanation": [
+    "$l = 72 / (3 \\cdot 4) = 6$."
+  ],
+  "tags": [
+    "volume"
+  ],
+  "estimatedSeconds": 50
+}

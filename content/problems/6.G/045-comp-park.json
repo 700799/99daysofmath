@@ -1,0 +1,37 @@
+{
+  "id": "6.G.045",
+  "domain": "6.G",
+  "unit": 5,
+  "orderInUnit": 5,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A park has a rectangular play area $20 \\times 15$ and a square sandbox $5 \\times 5$ next to it. Find the combined area.",
+  "answerType": "numeric",
+  "primaryAnswer": "325",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$300 + 25$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$300 + 25$."
+    },
+    {
+      "level": "guide",
+      "text": "Rectangle: $300$. Square: $25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$325$."
+    }
+  ],
+  "explanation": [
+    "$20 \\times 15 = 300$. $5 \\times 5 = 25$.",
+    "Total: $325$."
+  ],
+  "tags": [
+    "composite",
+    "word"
+  ],
+  "estimatedSeconds": 55
+}

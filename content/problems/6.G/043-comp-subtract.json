@@ -1,0 +1,37 @@
+{
+  "id": "6.G.043",
+  "domain": "6.G",
+  "unit": 5,
+  "orderInUnit": 3,
+  "standard": "6.G.A.1",
+  "difficulty": 3,
+  "prompt": "A large rectangle is $10 \\times 8$. A $2 \\times 3$ rectangle is cut out. Find the remaining area.",
+  "answerType": "numeric",
+  "primaryAnswer": "74",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Total minus cut-out.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Total minus cut-out."
+    },
+    {
+      "level": "guide",
+      "text": "$80 - 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$74$."
+    }
+  ],
+  "explanation": [
+    "$80 - 6 = 74$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "composite",
+    "area"
+  ],
+  "estimatedSeconds": 60
+}
