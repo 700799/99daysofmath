@@ -19,9 +19,9 @@ const baseCtx = () => ({
 });
 
 describe('STICKER_DEFS', () => {
-  it('has 53 total stickers', () => {
-    // 30 unit (6 per domain × 5) + 8 streak + 4 accuracy + 5 XP + 6 mastery
-    expect(TOTAL_STICKERS).toBe(53);
+  it('has 57 total stickers', () => {
+    // 30 unit + 8 streak + 4 accuracy + 5 XP + 6 mastery + 4 challenge
+    expect(TOTAL_STICKERS).toBe(57);
   });
 
   it('every sticker ID is unique', () => {
@@ -144,5 +144,36 @@ describe('checkAllEarning — unit stickers', () => {
       mistakesTotal: 0,
     });
     expect(earned).not.toContain('unit:6.RP:1');
+  });
+});
+
+describe('checkAllEarning — challenge family', () => {
+  it('awards mock-test-1 after a mock test', () => {
+    const earned = checkAllEarning({ ...baseCtx(), mockTestsCompleted: 1 });
+    expect(earned).toContain('mock-test-1');
+  });
+
+  it('awards quest-1 when daily quest streak ≥ 1', () => {
+    const earned = checkAllEarning({ ...baseCtx(), dailyQuestStreak: 1 });
+    expect(earned).toContain('quest-1');
+    expect(earned).not.toContain('quest-streak-7');
+  });
+
+  it('awards quest-streak-7 at a 7-day quest streak', () => {
+    const earned = checkAllEarning({ ...baseCtx(), dailyQuestStreak: 7 });
+    expect(earned).toContain('quest-1');
+    expect(earned).toContain('quest-streak-7');
+  });
+
+  it('awards freeze-saved when a freeze has been used', () => {
+    const earned = checkAllEarning({ ...baseCtx(), freezeUsedEver: true });
+    expect(earned).toContain('freeze-saved');
+  });
+
+  it('awards no challenge stickers in the default context', () => {
+    const earned = checkAllEarning(baseCtx());
+    expect(earned).not.toContain('mock-test-1');
+    expect(earned).not.toContain('quest-1');
+    expect(earned).not.toContain('freeze-saved');
   });
 });

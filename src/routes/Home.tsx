@@ -23,9 +23,17 @@ const CATEGORY_LABELS: Record<StickerCategory, string> = {
   accuracy: 'Accuracy',
   xp: 'XP',
   mastery: 'Mastery',
+  challenge: 'Challenges',
 };
 
-const CATEGORY_ORDER: StickerCategory[] = ['unit', 'streak', 'accuracy', 'xp', 'mastery'];
+const CATEGORY_ORDER: StickerCategory[] = [
+  'unit',
+  'streak',
+  'accuracy',
+  'xp',
+  'mastery',
+  'challenge',
+];
 
 export function Home() {
   const { data: summary, loading, error } = useDomainSummary();

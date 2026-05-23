@@ -49,7 +49,13 @@ const UNIT_STICKER_EMOJI = [
   '🪐 Planet Hopper',
 ];
 
-export type StickerCategory = 'unit' | 'streak' | 'accuracy' | 'xp' | 'mastery';
+export type StickerCategory =
+  | 'unit'
+  | 'streak'
+  | 'accuracy'
+  | 'xp'
+  | 'mastery'
+  | 'challenge';
 
 export interface StickerDef {
   id: string;
@@ -126,6 +132,13 @@ const MASTERY_STICKERS: StickerDef[] = [
   { id: 'mastery-grand', emoji: '🏅', label: '6th-Grade Champion', category: 'mastery', hint: 'Master every domain' },
 ];
 
+const CHALLENGE_STICKERS: StickerDef[] = [
+  { id: 'mock-test-1', emoji: '🎓', label: 'First Test', category: 'challenge', hint: 'Finish a mock MAP test' },
+  { id: 'quest-1', emoji: '🎯', label: 'First Daily Goal', category: 'challenge', hint: 'Hit your daily XP goal' },
+  { id: 'quest-streak-7', emoji: '🏃', label: 'Week of Goals', category: 'challenge', hint: 'Hit your daily goal 7 days in a row' },
+  { id: 'freeze-saved', emoji: '🧊', label: 'Saved by Ice', category: 'challenge', hint: 'A streak freeze saved your streak' },
+];
+
 const ALL_UNIT_STICKERS: StickerDef[] = (() => {
   const out: StickerDef[] = [];
   for (const d of DOMAINS) {
@@ -142,6 +155,7 @@ export const STICKER_DEFS: StickerDef[] = [
   ...ACCURACY_STICKERS,
   ...XP_STICKERS,
   ...MASTERY_STICKERS,
+  ...CHALLENGE_STICKERS,
 ];
 
 export const TOTAL_STICKERS = STICKER_DEFS.length;
@@ -165,6 +179,9 @@ export interface EarningContext {
   totalPerfectUnits: number;
   byDomainUnitsCompleted: Record<Domain, number>; // ≥2 stars units count
   alreadyEarned: Set<string>;
+  mockTestsCompleted?: number;
+  dailyQuestStreak?: number;
+  freezeUsedEver?: boolean;
 }
 
 export interface UnitDoneEvent {
@@ -238,6 +255,12 @@ export function checkAllEarning(
   // Grand mastery: every domain mastered
   const grandReady = DOMAINS.every((d) => (ctx.byDomainUnitsCompleted[d] ?? 0) >= 6);
   if (grandReady) add('mastery-grand');
+
+  // Challenges
+  if ((ctx.mockTestsCompleted ?? 0) >= 1) add('mock-test-1');
+  if ((ctx.dailyQuestStreak ?? 0) >= 1) add('quest-1');
+  if ((ctx.dailyQuestStreak ?? 0) >= 7) add('quest-streak-7');
+  if (ctx.freezeUsedEver) add('freeze-saved');
 
   return earned;
 }

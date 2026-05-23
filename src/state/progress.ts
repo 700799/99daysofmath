@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { DOMAINS, type Domain } from '../types/problem';
-import { checkAllEarning, STICKER_DEFS } from '../utils/encouragement';
+import { checkAllEarning, STICKER_DEFS, type EarningContext } from '../utils/encouragement';
 
 export type Stars = 0 | 1 | 2 | 3;
 
@@ -23,6 +23,19 @@ interface ProgressState {
   stickers: string[];   // sticker IDs (stable keys from STICKER_DEFS)
   totalPerfectUnits: number;
   soundEnabled: boolean;
+  // ---- v5 additions ----
+  mockTestsCompleted: number;
+  bestMockAccuracy: number;          // 0-1
+  dailyXp: number;                   // XP earned during dailyXpResetDate
+  dailyGoal: number;                 // target XP per day
+  dailyXpResetDate: string | null;   // date dailyXp corresponds to
+  dailyQuestStreak: number;          // consecutive days the goal was met
+  lastGoalDate: string | null;       // last day the goal was hit
+  practiceDates: string[];           // ISO dates with any practice
+  xpByDate: Record<string, number>;  // XP earned per ISO date (heatmap intensity)
+  lastFreezeDate: string | null;     // last day a streak freeze was used
+  onboardingComplete: boolean;
+  // ---- actions ----
   recordUnitResult: (
     domain: Domain,
     unit: number,
@@ -32,6 +45,10 @@ interface ProgressState {
     mistakesTotal: number,
   ) => string[]; // newly earned sticker IDs
   awardXP: (n: number) => string[];
+  recordMockTestResult: (accuracy: number) => string[];
+  clearMissed: (domain: Domain, problemId: string) => void;
+  setDailyGoal: (n: number) => void;
+  markOnboardingDone: () => void;
   incrementStreak: () => string[];
   resetStreak: () => void;
   touchDay: () => string[];
@@ -39,6 +56,7 @@ interface ProgressState {
   isUnitUnlocked: (domain: Domain, unit: number) => boolean;
   starsForUnit: (domain: Domain, unit: number) => Stars;
   totalStars: () => number;
+  todaysXp: () => number;
   resetAll: () => void;
 }
 
@@ -86,6 +104,83 @@ function unitsCompletedByDomain(
   return out;
 }
 
+// Build the standard earning context from a state snapshot, with overrides.
+function earningCtx(s: ProgressState, o: Partial<EarningContext> = {}): EarningContext {
+  return {
+    xp: s.xp,
+    dailyStreak: s.dailyStreak,
+    bestSessionStreak: s.bestSessionStreak,
+    totalPerfectUnits: s.totalPerfectUnits,
+    byDomainUnitsCompleted: unitsCompletedByDomain(s.byDomain),
+    alreadyEarned: new Set(s.stickers),
+    mockTestsCompleted: s.mockTestsCompleted,
+    dailyQuestStreak: s.dailyQuestStreak,
+    freezeUsedEver: s.lastFreezeDate != null,
+    ...o,
+  };
+}
+
+interface DailyXpResult {
+  dailyXp: number;
+  dailyXpResetDate: string;
+  dailyQuestStreak: number;
+  lastGoalDate: string | null;
+  xpByDate: Record<string, number>;
+}
+
+// Roll daily XP forward, handling day rollover and quest-streak bookkeeping.
+function rollDailyXp(s: ProgressState, xpEarned: number, today: string): DailyXpResult {
+  const isNewDay = s.dailyXpResetDate !== today;
+  const prevDailyXp = isNewDay ? 0 : s.dailyXp;
+  const newDailyXp = prevDailyXp + xpEarned;
+
+  let questStreak = s.dailyQuestStreak;
+  let lastGoalDate = s.lastGoalDate;
+  const goalNewlyHit =
+    prevDailyXp < s.dailyGoal &&
+    newDailyXp >= s.dailyGoal &&
+    s.lastGoalDate !== today;
+  if (goalNewlyHit) {
+    const consecutive = s.lastGoalDate
+      ? daysBetween(s.lastGoalDate, today) === 1
+      : false;
+    questStreak = consecutive ? s.dailyQuestStreak + 1 : 1;
+    lastGoalDate = today;
+  }
+
+  const xpByDate = {
+    ...s.xpByDate,
+    [today]: (s.xpByDate[today] ?? 0) + xpEarned,
+  };
+
+  return {
+    dailyXp: newDailyXp,
+    dailyXpResetDate: today,
+    dailyQuestStreak: questStreak,
+    lastGoalDate,
+    xpByDate,
+  };
+}
+
+function freezeAvailable(s: ProgressState, today: string): boolean {
+  if (!s.lastFreezeDate) return true;
+  return daysBetween(s.lastFreezeDate, today) >= 7;
+}
+
+const v5Defaults = {
+  mockTestsCompleted: 0,
+  bestMockAccuracy: 0,
+  dailyXp: 0,
+  dailyGoal: 30,
+  dailyXpResetDate: null as string | null,
+  dailyQuestStreak: 0,
+  lastGoalDate: null as string | null,
+  practiceDates: [] as string[],
+  xpByDate: {} as Record<string, number>,
+  lastFreezeDate: null as string | null,
+  onboardingComplete: false,
+};
+
 export const useProgress = create<ProgressState>()(
   persist(
     (set, get) => ({
@@ -100,8 +195,10 @@ export const useProgress = create<ProgressState>()(
       stickers: [],
       totalPerfectUnits: 0,
       soundEnabled: true,
+      ...v5Defaults,
       recordUnitResult: (domain, unit, stars, missedIds, xpEarned, mistakesTotal) => {
         const stateBefore = get();
+        const today = todayISO();
         const d = stateBefore.byDomain[domain] ?? blankDomain();
         const prevStars = d.unitStars[unit] ?? 0;
         const nextStars: Stars = Math.max(prevStars, stars) as Stars;
@@ -119,21 +216,25 @@ export const useProgress = create<ProgressState>()(
         const newPerfect = prevStars < 3 && nextStars === 3;
         const nextXp = stateBefore.xp + xpEarned;
         const nextTotalPerfect = stateBefore.totalPerfectUnits + (newPerfect ? 1 : 0);
+        const daily = rollDailyXp(stateBefore, xpEarned, today);
         const earned = checkAllEarning(
-          {
+          earningCtx(stateBefore, {
             xp: nextXp,
-            dailyStreak: stateBefore.dailyStreak,
-            bestSessionStreak: stateBefore.bestSessionStreak,
             totalPerfectUnits: nextTotalPerfect,
             byDomainUnitsCompleted: unitsCompletedByDomain(nextByDomain),
-            alreadyEarned: new Set(stateBefore.stickers),
-          },
+            dailyQuestStreak: daily.dailyQuestStreak,
+          }),
           { domain, unit, stars, mistakesTotal },
         );
         set({
           byDomain: nextByDomain,
           xp: nextXp,
           totalPerfectUnits: nextTotalPerfect,
+          dailyXp: daily.dailyXp,
+          dailyXpResetDate: daily.dailyXpResetDate,
+          dailyQuestStreak: daily.dailyQuestStreak,
+          lastGoalDate: daily.lastGoalDate,
+          xpByDate: daily.xpByDate,
           stickers:
             earned.length > 0
               ? [...stateBefore.stickers, ...earned]
@@ -143,34 +244,63 @@ export const useProgress = create<ProgressState>()(
       },
       awardXP: (n) => {
         const before = get();
+        const today = todayISO();
         const nextXp = before.xp + n;
-        const earned = checkAllEarning({
-          xp: nextXp,
-          dailyStreak: before.dailyStreak,
-          bestSessionStreak: before.bestSessionStreak,
-          totalPerfectUnits: before.totalPerfectUnits,
-          byDomainUnitsCompleted: unitsCompletedByDomain(before.byDomain),
-          alreadyEarned: new Set(before.stickers),
-        });
+        const daily = rollDailyXp(before, n, today);
+        const earned = checkAllEarning(
+          earningCtx(before, {
+            xp: nextXp,
+            dailyQuestStreak: daily.dailyQuestStreak,
+          }),
+        );
         set({
           xp: nextXp,
+          dailyXp: daily.dailyXp,
+          dailyXpResetDate: daily.dailyXpResetDate,
+          dailyQuestStreak: daily.dailyQuestStreak,
+          lastGoalDate: daily.lastGoalDate,
+          xpByDate: daily.xpByDate,
           stickers:
             earned.length > 0 ? [...before.stickers, ...earned] : before.stickers,
         });
         return earned;
       },
+      recordMockTestResult: (accuracy) => {
+        const before = get();
+        const mockTestsCompleted = before.mockTestsCompleted + 1;
+        const bestMockAccuracy = Math.max(before.bestMockAccuracy, accuracy);
+        const earned = checkAllEarning(earningCtx(before, { mockTestsCompleted }));
+        set({
+          mockTestsCompleted,
+          bestMockAccuracy,
+          stickers:
+            earned.length > 0 ? [...before.stickers, ...earned] : before.stickers,
+        });
+        return earned;
+      },
+      clearMissed: (domain, problemId) =>
+        set((s) => {
+          const dp = s.byDomain[domain];
+          if (!dp || !dp.missedProblemIds.includes(problemId)) return s;
+          return {
+            byDomain: {
+              ...s.byDomain,
+              [domain]: {
+                ...dp,
+                missedProblemIds: dp.missedProblemIds.filter((id) => id !== problemId),
+              },
+            },
+          };
+        }),
+      setDailyGoal: (n) => set({ dailyGoal: n }),
+      markOnboardingDone: () => set({ onboardingComplete: true }),
       incrementStreak: () => {
         const before = get();
         const next = before.streak + 1;
         const bestSession = Math.max(before.bestSessionStreak, next);
-        const earned = checkAllEarning({
-          xp: before.xp,
-          dailyStreak: before.dailyStreak,
-          bestSessionStreak: bestSession,
-          totalPerfectUnits: before.totalPerfectUnits,
-          byDomainUnitsCompleted: unitsCompletedByDomain(before.byDomain),
-          alreadyEarned: new Set(before.stickers),
-        });
+        const earned = checkAllEarning(
+          earningCtx(before, { bestSessionStreak: bestSession }),
+        );
         set({
           streak: next,
           bestStreak: Math.max(before.bestStreak, next),
@@ -186,24 +316,36 @@ export const useProgress = create<ProgressState>()(
         const today = todayISO();
         if (before.lastPracticeDate === today) return [];
         let nextStreak: number;
+        let lastFreezeDate = before.lastFreezeDate;
         if (!before.lastPracticeDate) {
           nextStreak = 1;
         } else {
           const gap = daysBetween(before.lastPracticeDate, today);
-          nextStreak = gap === 1 ? before.dailyStreak + 1 : 1;
+          if (gap === 1) {
+            nextStreak = before.dailyStreak + 1;
+          } else if (gap === 2 && before.dailyStreak >= 3 && freezeAvailable(before, today)) {
+            // A streak freeze covers a single missed day.
+            nextStreak = before.dailyStreak + 1;
+            lastFreezeDate = today;
+          } else {
+            nextStreak = 1;
+          }
         }
-        const earned = checkAllEarning({
-          xp: before.xp,
-          dailyStreak: nextStreak,
-          bestSessionStreak: before.bestSessionStreak,
-          totalPerfectUnits: before.totalPerfectUnits,
-          byDomainUnitsCompleted: unitsCompletedByDomain(before.byDomain),
-          alreadyEarned: new Set(before.stickers),
-        });
+        const practiceDates = before.practiceDates.includes(today)
+          ? before.practiceDates
+          : [...before.practiceDates, today];
+        const earned = checkAllEarning(
+          earningCtx(before, {
+            dailyStreak: nextStreak,
+            freezeUsedEver: lastFreezeDate != null,
+          }),
+        );
         set({
           lastPracticeDate: today,
           dailyStreak: nextStreak,
           bestDailyStreak: Math.max(before.bestDailyStreak, nextStreak),
+          lastFreezeDate,
+          practiceDates,
           stickers:
             earned.length > 0 ? [...before.stickers, ...earned] : before.stickers,
         });
@@ -223,6 +365,10 @@ export const useProgress = create<ProgressState>()(
         }
         return n;
       },
+      todaysXp: () => {
+        const s = get();
+        return s.dailyXpResetDate === todayISO() ? s.dailyXp : 0;
+      },
       resetAll: () =>
         set({
           byDomain: blankAll(),
@@ -235,11 +381,21 @@ export const useProgress = create<ProgressState>()(
           lastPracticeDate: null,
           stickers: [],
           totalPerfectUnits: 0,
+          // reset stats but preserve preferences (soundEnabled, dailyGoal, onboardingComplete)
+          mockTestsCompleted: 0,
+          bestMockAccuracy: 0,
+          dailyXp: 0,
+          dailyXpResetDate: null,
+          dailyQuestStreak: 0,
+          lastGoalDate: null,
+          practiceDates: [],
+          xpByDate: {},
+          lastFreezeDate: null,
         }),
     }),
     {
       name: '99daysofmath:progress',
-      version: 4,
+      version: 5,
       migrate: (persisted: unknown, fromVersion: number) => {
         if (!persisted || typeof persisted !== 'object') return persisted;
         const state = persisted as Partial<ProgressState> & {
@@ -247,7 +403,6 @@ export const useProgress = create<ProgressState>()(
         };
         if (fromVersion < 4) {
           // Map old emoji-prefixed sticker strings to new IDs (best-effort).
-          // Old format e.g. "⭐ Starlight" → unit:* with matching label.
           const oldStickers = state.stickers ?? [];
           const labelToId = new Map<string, string>();
           for (const def of STICKER_DEFS) {
@@ -259,7 +414,6 @@ export const useProgress = create<ProgressState>()(
             if (id) migratedIds.add(id);
           }
           state.stickers = Array.from(migratedIds);
-          // Recompute totalPerfectUnits from snapshot.
           let perfect = 0;
           const byDomain = state.byDomain;
           if (byDomain) {
@@ -272,6 +426,14 @@ export const useProgress = create<ProgressState>()(
           }
           state.totalPerfectUnits = perfect;
           state.bestSessionStreak = state.bestStreak ?? 0;
+        }
+        if (fromVersion < 5) {
+          // Seed all v5 fields with safe defaults if missing.
+          for (const [k, v] of Object.entries(v5Defaults)) {
+            if ((state as Record<string, unknown>)[k] === undefined) {
+              (state as Record<string, unknown>)[k] = v;
+            }
+          }
         }
         return state;
       },
