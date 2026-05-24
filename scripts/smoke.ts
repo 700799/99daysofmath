@@ -28,6 +28,29 @@ async function main() {
     await page.waitForSelector('text=Pick a trail', { timeout: 5000 });
     console.log('   ✓ Home rendered');
 
+    console.log('1b. Dismiss onboarding if shown...');
+    const onboardingVisible = await page.locator('[role="dialog"][aria-label="Welcome tour"]').isVisible().catch(() => false);
+    if (onboardingVisible) {
+      // Click through all 3 onboarding cards
+      for (let oi = 0; oi < 3; oi++) {
+        const nextBtn = page.locator('button:has-text("Next")');
+        const letsGoBtn = page.locator('button:has-text("Let\'s go!")');
+        if (await letsGoBtn.isVisible().catch(() => false)) {
+          await letsGoBtn.click();
+          break;
+        } else if (await nextBtn.isVisible().catch(() => false)) {
+          await nextBtn.click();
+          await page.waitForTimeout(300);
+        } else {
+          break;
+        }
+      }
+      await page.waitForSelector('[role="dialog"]', { state: 'hidden', timeout: 3000 }).catch(() => {});
+      console.log('   ✓ Onboarding dismissed');
+    } else {
+      console.log('   ✓ No onboarding (already seen)');
+    }
+
     console.log('2. Checking 5 domain cards visible...');
     const cards = await page.locator('a[href*="#/trail/"]').count();
     if (cards !== 5) throw new Error(`Expected 5 cards, got ${cards}`);
@@ -119,21 +142,20 @@ async function main() {
     await page.waitForSelector('text=Daily Mix', { timeout: 5000 });
     console.log('   ✓ Daily Mix loaded');
 
-    console.log('13. Verify sticker book sections on home...');
+    console.log('13. Verify sticker book sections on home (6 categories incl Challenges)...');
     await page.goto(BASE, { waitUntil: 'networkidle' });
     await page.waitForSelector('text=Sticker book', { timeout: 5000 });
-    for (const section of ['Units', 'Streak', 'Accuracy', 'XP', 'Mastery']) {
+    for (const section of ['Units', 'Streak', 'Accuracy', 'XP', 'Mastery', 'Challenges']) {
       const present = await page.locator(`text=${section}`).first().isVisible().catch(() => false);
       if (!present) throw new Error(`Sticker section "${section}" not visible on home`);
     }
-    console.log('   ✓ All 5 sticker sections present');
+    console.log('   ✓ All 6 sticker sections present (incl. Challenges)');
 
-    console.log('14. Verify Settings shows X / 53 sticker total...');
+    console.log('14. Verify Settings shows X / 57 sticker total...');
     await page.click('a[href="#/settings"]');
     await page.waitForSelector('text=Stickers earned', { timeout: 3000 });
-    // The "/ 53" lives in a sibling div; grab the containing card and check its full text.
     const card = await page.locator('text=Stickers earned').locator('xpath=..').textContent();
-    if (!card || !/\/\s*53/.test(card)) {
+    if (!card || !/\/\s*57/.test(card)) {
       throw new Error(`Settings sticker total wrong: ${card}`);
     }
     console.log(`   ✓ ${card?.trim()}`);
@@ -150,6 +172,56 @@ async function main() {
     const guideVisible = await page.locator('text=Guide').first().isVisible().catch(() => false);
     if (!guideVisible) throw new Error('Guide tier badge not visible after second click');
     console.log('   ✓ Hint tiers reveal progressively');
+
+    console.log('16. Mock test route renders with timer and first problem...');
+    await page.goto(BASE + '#/test', { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=Mock MAP Test', { timeout: 5000 });
+    const timerVisible = await page.locator('text=/\\d+:\\d{2}/').first().isVisible().catch(() => false);
+    if (!timerVisible) throw new Error('Timer not visible on mock test page');
+    console.log('   ✓ Mock test loaded with timer');
+
+    console.log('17. Review route handles empty state...');
+    await page.goto(BASE + '#/review', { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=/Review|All clear/', { timeout: 5000 });
+    console.log('   ✓ Review route loaded (empty state or queue)');
+
+    console.log('18. Daily quest ring visible in header on home...');
+    await page.goto(BASE, { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=Pick a trail', { timeout: 5000 });
+    // DailyQuestRing renders an SVG circle in the header
+    const ringVisible = await page.locator('header svg circle').first().isVisible().catch(() => false);
+    if (!ringVisible) throw new Error('Daily quest ring SVG not found in header');
+    console.log('   ✓ Daily quest ring visible in header');
+
+    console.log('19. Practice heatmap grid visible on home...');
+    // PracticeHeatmap renders 99 cells as divs inside a grid
+    const heatmapTitle = await page.locator('text=Practice').first().isVisible().catch(() => false);
+    if (!heatmapTitle) throw new Error('Practice heatmap section not visible on home');
+    console.log('   ✓ Practice heatmap visible on home');
+
+    console.log('20. Settings: daily goal buttons and mock test stats present...');
+    await page.goto(BASE + '#/settings', { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=Daily XP goal', { timeout: 3000 });
+    const goalBtn = await page.locator('button:has-text("30")').first().isVisible().catch(() => false);
+    if (!goalBtn) throw new Error('Daily goal 30 XP button not visible in Settings');
+    const mockStat = await page.locator('text=Mock tests').first().isVisible().catch(() => false);
+    if (!mockStat) throw new Error('"Mock tests" stat not visible in Settings');
+    console.log('   ✓ Settings: daily goal selector and mock test stats present');
+
+    console.log('21. Onboarding shows for fresh context...');
+    const freshCtx = await browser.newContext({ viewport: { width: 768, height: 1024 } });
+    const freshPage = await freshCtx.newPage();
+    await freshPage.goto(BASE, { waitUntil: 'networkidle' });
+    await freshPage.waitForSelector('text=Pick a trail', { timeout: 5000 });
+    const freshOnboarding = await freshPage.locator('[role="dialog"][aria-label="Welcome tour"]').isVisible().catch(() => false);
+    if (!freshOnboarding) throw new Error('Onboarding dialog not shown on fresh context');
+    await freshPage.locator('button:has-text("Skip")').click();
+    await freshPage.waitForSelector('[role="dialog"]', { state: 'hidden', timeout: 3000 }).catch(() => {});
+    const afterSkip = await freshPage.locator('[role="dialog"]').isVisible().catch(() => false);
+    if (afterSkip) throw new Error('Onboarding still visible after Skip');
+    await freshCtx.close();
+    console.log('   ✓ Onboarding shows on fresh context and dismisses on Skip');
+
   } catch (e) {
     errors.push(String(e instanceof Error ? e.stack ?? e.message : e));
   }

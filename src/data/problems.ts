@@ -47,3 +47,13 @@ export async function getProblem(id: string): Promise<Problem | null> {
   const problems = await loadProblems();
   return problems.find((p) => p.id === id) ?? null;
 }
+
+export async function getAllProblems(): Promise<Problem[]> {
+  return loadProblems();
+}
+
+export async function getProblemsByIds(ids: string[]): Promise<Problem[]> {
+  const problems = await loadProblems();
+  const set = new Set(ids);
+  return problems.filter((p) => set.has(p.id));
+}

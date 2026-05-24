@@ -6,6 +6,8 @@ import { Unit } from './routes/Unit';
 import { UnitResults } from './routes/UnitResults';
 import { Settings } from './routes/Settings';
 import { DailyMix } from './routes/DailyMix';
+import { MockTest } from './routes/MockTest';
+import { Review } from './routes/Review';
 import { NotFound } from './routes/NotFound';
 
 export default function App() {
@@ -17,6 +19,9 @@ export default function App() {
         <Route path="/unit/:domain/:unit" element={<Unit />} />
         <Route path="/unit/:domain/:unit/results" element={<UnitResults />} />
         <Route path="/mix" element={<DailyMix />} />
+        <Route path="/test" element={<MockTest />} />
+        <Route path="/review" element={<Review />} />
+        <Route path="/review/:domain" element={<Review />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useProgress } from '../state/progress';
 import { TOTAL_STICKERS } from '../utils/encouragement';
 
+const GOAL_OPTIONS = [10, 30, 50, 100];
+
 export function Settings() {
   const reset = useProgress((s) => s.resetAll);
   const soundOn = useProgress((s) => s.soundEnabled);
@@ -11,6 +13,11 @@ export function Settings() {
   const bestStreak = useProgress((s) => s.bestStreak);
   const xp = useProgress((s) => s.xp);
   const stickers = useProgress((s) => s.stickers);
+  const dailyGoal = useProgress((s) => s.dailyGoal);
+  const setDailyGoal = useProgress((s) => s.setDailyGoal);
+  const mockTestsCompleted = useProgress((s) => s.mockTestsCompleted);
+  const bestMockAccuracy = useProgress((s) => s.bestMockAccuracy);
+  const dailyQuestStreak = useProgress((s) => s.dailyQuestStreak);
   const [confirming, setConfirming] = useState(false);
   const [done, setDone] = useState(false);
 
@@ -26,9 +33,40 @@ export function Settings() {
           <Stat label="Daily streak" value={`${dailyStreak} 🔥`} />
           <Stat label="Best daily streak" value={`${bestDailyStreak}`} />
           <Stat label="Best in-a-row" value={`${bestStreak}`} />
+          <Stat label="Daily-goal streak" value={`${dailyQuestStreak} 🎯`} />
           <Stat label="Total XP" value={`${xp} ⚡`} />
           <Stat label="Stickers earned" value={`${stickers.length} / ${TOTAL_STICKERS}`} />
+          <Stat label="Mock tests" value={`${mockTestsCompleted}`} />
+          <Stat
+            label="Best mock score"
+            value={mockTestsCompleted > 0 ? `${Math.round(bestMockAccuracy * 100)}%` : '—'}
+          />
         </dl>
+      </div>
+
+      <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
+        <div className="font-display font-extrabold text-slate-900">Daily XP goal</div>
+        <div className="text-sm text-slate-600 mt-1">
+          How much XP to aim for each day.
+        </div>
+        <div className="mt-3 flex gap-2">
+          {GOAL_OPTIONS.map((g) => (
+            <button
+              key={g}
+              type="button"
+              onClick={() => setDailyGoal(g)}
+              aria-pressed={dailyGoal === g}
+              className={[
+                'min-h-11 flex-1 rounded-xl font-display font-extrabold text-sm transition-colors',
+                dailyGoal === g
+                  ? 'bg-duo-green text-white'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200',
+              ].join(' ')}
+            >
+              {g}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">

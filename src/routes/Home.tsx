@@ -10,6 +10,10 @@ import {
 import { useProgress } from '../state/progress';
 import { useDomainSummary } from '../hooks/useProblems';
 import { Mascot } from '../components/Mascot';
+import { DailyQuestRing } from '../components/DailyQuestRing';
+import { PracticeHeatmap } from '../components/PracticeHeatmap';
+import { Onboarding } from '../components/Onboarding';
+import { recommendNextUnit } from '../utils/recommendations';
 import {
   STICKER_DEFS,
   TOTAL_STICKERS,
@@ -39,9 +43,19 @@ export function Home() {
   const { data: summary, loading, error } = useDomainSummary();
   const progress = useProgress((s) => s.byDomain);
   const stickers = useProgress((s) => s.stickers);
+  const dailyGoal = useProgress((s) => s.dailyGoal);
+  const todaysXp = useProgress((s) => s.todaysXp());
+  const practiceDates = useProgress((s) => s.practiceDates);
+  const xpByDate = useProgress((s) => s.xpByDate);
+  const onboardingComplete = useProgress((s) => s.onboardingComplete);
+  const markOnboardingDone = useProgress((s) => s.markOnboardingDone);
+
+  const rec = recommendNextUnit(progress);
 
   return (
     <div>
+      {!onboardingComplete && <Onboarding onDone={markOnboardingDone} />}
+
       <div className="mb-6 flex items-center gap-3">
         <Mascot mood="happy" size={72} />
         <div>
@@ -60,23 +74,62 @@ export function Home() {
         </div>
       )}
 
-      <Link
-        to="/mix"
-        className="block mb-4 rounded-3xl p-4 sm:p-5 bg-gradient-to-br from-purple-500 via-fuchsia-500 to-pink-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-      >
-        <div className="flex items-center gap-3 sm:gap-4">
-          <div className="text-4xl sm:text-5xl">🎲</div>
-          <div className="flex-1 min-w-0">
-            <div className="font-display font-extrabold text-lg sm:text-xl">
-              Daily Mix
-            </div>
-            <div className="text-xs sm:text-sm opacity-90 mt-0.5">
-              5 random problems across all domains — great MAP prep.
-            </div>
+      {/* Daily quest */}
+      <div className="mb-4 rounded-3xl p-4 sm:p-5 bg-white border-2 border-slate-200 flex items-center gap-4">
+        <DailyQuestRing current={todaysXp} goal={dailyGoal} size={56} compact />
+        <div className="flex-1 min-w-0">
+          <div className="font-display font-extrabold text-slate-900">
+            {todaysXp >= dailyGoal ? 'Daily goal complete! 🎉' : 'Daily goal'}
           </div>
-          <div className="text-2xl shrink-0">→</div>
+          <div className="text-sm text-slate-600">
+            {todaysXp >= dailyGoal
+              ? `Nice — ${todaysXp} XP today.`
+              : `${todaysXp} / ${dailyGoal} XP today. Keep going!`}
+          </div>
         </div>
-      </Link>
+      </div>
+
+      {/* Recommended next */}
+      {rec && (
+        <Link
+          to={rec.allMastered ? '/test' : `/unit/${rec.domain}/${rec.unit}`}
+          className="block mb-4 rounded-3xl p-4 sm:p-5 bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="text-4xl sm:text-5xl">{rec.allMastered ? '🎓' : DOMAIN_EMOJI[rec.domain]}</div>
+            <div className="flex-1 min-w-0">
+              <div className="text-xs font-display font-bold uppercase tracking-wider opacity-90">
+                Recommended next
+              </div>
+              <div className="font-display font-extrabold text-lg sm:text-xl">
+                {rec.allMastered ? 'Mock MAP test' : `${DOMAIN_LABELS[rec.domain]} · Unit ${rec.unit}`}
+              </div>
+              <div className="text-xs sm:text-sm opacity-90 mt-0.5">{rec.reason}</div>
+            </div>
+            <div className="text-2xl shrink-0">→</div>
+          </div>
+        </Link>
+      )}
+
+      {/* Daily Mix + Mock Test */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+        <Link
+          to="/mix"
+          className="block rounded-3xl p-4 bg-gradient-to-br from-purple-500 via-fuchsia-500 to-pink-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-3xl">🎲</div>
+          <div className="font-display font-extrabold text-lg mt-1">Daily Mix</div>
+          <div className="text-xs opacity-90 mt-0.5">5 random problems across all domains.</div>
+        </Link>
+        <Link
+          to="/test"
+          className="block rounded-3xl p-4 bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-3xl">🎓</div>
+          <div className="font-display font-extrabold text-lg mt-1">Mock MAP Test</div>
+          <div className="text-xs opacity-90 mt-0.5">15 timed questions with a score estimate.</div>
+        </Link>
+      </div>
 
       <div className="space-y-3">
         {DOMAINS.map((d, i) => {
@@ -144,6 +197,8 @@ export function Home() {
       >
         ⚙️ Settings
       </Link>
+
+      <PracticeHeatmap practiceDates={practiceDates} xpByDate={xpByDate} />
 
       <StickerBook earnedIds={stickers} />
     </div>

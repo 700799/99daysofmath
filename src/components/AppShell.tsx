@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useProgress } from '../state/progress';
+import { DailyQuestRing } from './DailyQuestRing';
 
 interface Props {
   children: React.ReactNode;
@@ -7,8 +8,15 @@ interface Props {
 
 export function AppShell({ children }: Props) {
   const totalStars = useProgress((s) => s.totalStars());
-  const xp = useProgress((s) => s.xp);
+  const dailyGoal = useProgress((s) => s.dailyGoal);
+  const todaysXp = useProgress((s) => s.todaysXp());
   const dailyStreak = useProgress((s) => s.dailyStreak);
+  const usedFreezeRecently = useProgress((s) => {
+    if (!s.lastFreezeDate) return false;
+    const today = new Date();
+    const f = new Date(s.lastFreezeDate + 'T00:00:00Z');
+    return Math.round((today.getTime() - f.getTime()) / 86400000) <= 7;
+  });
   const location = useLocation();
   const isHome = location.pathname === '/' || location.pathname === '';
 
@@ -36,9 +44,14 @@ export function AppShell({ children }: Props) {
             </Link>
           )}
           <div className="flex items-center gap-1.5">
-            <Chip emoji="🔥" value={dailyStreak} bg="bg-orange-100" fg="text-orange-900" />
-            <Chip emoji="⚡" value={xp} bg="bg-yellow-100" fg="text-yellow-900" />
+            <Chip
+              emoji={usedFreezeRecently ? '🧊' : '🔥'}
+              value={dailyStreak}
+              bg="bg-orange-100"
+              fg="text-orange-900"
+            />
             <Chip emoji="⭐" value={totalStars} bg="bg-amber-100" fg="text-amber-900" />
+            <DailyQuestRing current={todaysXp} goal={dailyGoal} size={36} compact />
           </div>
         </div>
       </header>

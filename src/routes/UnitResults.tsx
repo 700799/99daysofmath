@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { useParams, useLocation, Navigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { DOMAINS, type Domain } from '../types/problem';
 import { StarRating } from '../components/StarRating';
 import { Mascot } from '../components/Mascot';
 import { Confetti } from '../components/Celebration';
+import { StickerCelebration } from '../components/StickerCelebration';
 import { stickerById } from '../utils/encouragement';
 import type { Stars } from '../state/progress';
 
@@ -19,6 +21,7 @@ interface ResultsState {
 export function UnitResults() {
   const { domain, unit } = useParams<{ domain: string; unit: string }>();
   const { state } = useLocation() as { state: ResultsState | null };
+  const [celebrated, setCelebrated] = useState(false);
 
   if (!domain || !DOMAINS.includes(domain as Domain) || !unit) {
     return <Navigate to="/" replace />;
@@ -29,9 +32,13 @@ export function UnitResults() {
 
   const correct = state.total - state.missedCount;
   const perfect = state.stars === 3;
+  const newStickerIds = state.newStickerIds ?? [];
 
   return (
     <div className="relative">
+      {!celebrated && newStickerIds.length > 0 && (
+        <StickerCelebration stickerIds={newStickerIds} onDone={() => setCelebrated(true)} />
+      )}
       {perfect && <Confetti count={24} />}
       <motion.div
         initial={{ opacity: 0, y: 12 }}
