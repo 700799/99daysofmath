@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useProgress } from '../state/progress';
 import { TOTAL_STICKERS } from '../utils/encouragement';
 
@@ -42,6 +43,12 @@ export function Settings() {
             value={mockTestsCompleted > 0 ? `${Math.round(bestMockAccuracy * 100)}%` : '—'}
           />
         </dl>
+        <Link
+          to="/report"
+          className="mt-4 inline-flex items-center gap-1.5 text-sm font-display font-extrabold text-duo-blue hover:text-blue-700"
+        >
+          📊 View full progress report →
+        </Link>
       </div>
 
       <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">

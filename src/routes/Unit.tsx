@@ -12,6 +12,8 @@ import { Explanation } from '../components/Explanation';
 import { ProgressBar } from '../components/ProgressBar';
 import { Mascot, type MascotMood } from '../components/Mascot';
 import { Confetti } from '../components/Celebration';
+import { LessonCard } from '../components/LessonCard';
+import { getLesson, lessonKey } from '../data/lessons';
 import { correctMessage, wrongMessage, stickerForUnit } from '../utils/encouragement';
 import { playCorrect, playWrong, playUnitComplete } from '../utils/sound';
 import { computeStars, computeXPGain } from '../utils/hintEconomics';
@@ -29,6 +31,7 @@ export function Unit() {
   const record = useProgress((s) => s.recordUnitResult);
   const incStreak = useProgress((s) => s.incrementStreak);
   const resetStreak = useProgress((s) => s.resetStreak);
+  const recordAttempt = useProgress((s) => s.recordAttempt);
   const touchDay = useProgress((s) => s.touchDay);
   const soundOn = useProgress((s) => s.soundEnabled);
   const currentStreak = useProgress((s) => s.streak);
@@ -53,6 +56,11 @@ export function Unit() {
   const [lastHintLevel, setLastHintLevel] = useState<HintLevel | null>(null);
   const [showExplainOnCorrect, setShowExplainOnCorrect] = useState(false);
   const flashMessage = useRef<string>('');
+
+  const lesson = getLesson(d, u);
+  const [showLesson, setShowLesson] = useState<boolean>(
+    () => !!lesson && !useProgress.getState().lessonsViewed.includes(lessonKey(d, u)),
+  );
 
   const current = problems?.[index];
   const total = problems?.length ?? 0;
@@ -87,7 +95,9 @@ export function Unit() {
 
   const submit = () => {
     if (!current || !answer.trim()) return;
-    if (isEquivalent(answer, current)) {
+    const correct = isEquivalent(answer, current);
+    recordAttempt(current.id, correct);
+    if (correct) {
       const earn = computeXPGain(hintLevelsThisProblem, mistakesThisProblem);
       setXpEarned((x) => x + earn);
       incStreak();
@@ -148,6 +158,13 @@ export function Unit() {
 
   return (
     <div className="relative">
+      {lesson && showLesson && (
+        <LessonCard
+          lesson={lesson}
+          onClose={() => setShowLesson(false)}
+          onStart={() => setShowLesson(false)}
+        />
+      )}
       <div className="mb-4 flex items-center gap-3">
         <div className="flex-1">
           <ProgressBar
@@ -168,6 +185,16 @@ export function Unit() {
           />
         </div>
       </div>
+
+      {lesson && (
+        <button
+          type="button"
+          onClick={() => setShowLesson(true)}
+          className="mb-3 inline-flex items-center gap-1.5 text-xs font-display font-extrabold text-sky-700 bg-sky-50 border border-sky-200 rounded-full px-3 py-1.5 hover:bg-sky-100 transition-colors"
+        >
+          📘 Review the lesson
+        </button>
+      )}
 
       {current && (
         <AnimatePresence mode="wait">

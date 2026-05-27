@@ -38,6 +38,19 @@ export function pickMockTestProblems(all: Problem[]): Problem[] {
   return shuffle(picks);
 }
 
+// Plausible 6th-grade NWEA MAP math RIT band (rough norms ~218 fall / ~225 spring).
+export const RIT_MIN = 190;
+export const RIT_MAX = 245;
+
+// Rough, monotonic RIT estimate from test accuracy and the set's average
+// difficulty. NOT an official RIT — a directional estimate for tracking growth.
+export function estimateRit(accuracy: number, avgDifficulty: number): number {
+  const a = Math.max(0, Math.min(1, accuracy));
+  const diffAdj = (avgDifficulty - 2) * 4;
+  const rit = 198 + a * 40 + diffAdj;
+  return Math.round(Math.max(RIT_MIN, Math.min(RIT_MAX, rit)));
+}
+
 export type RitZone = {
   label: string;
   tone: 'green' | 'blue' | 'yellow' | 'orange';

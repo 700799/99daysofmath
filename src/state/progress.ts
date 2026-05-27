@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { DOMAINS, type Domain } from '../types/problem';
 import { checkAllEarning, STICKER_DEFS, type EarningContext } from '../utils/encouragement';
+import { scheduleAfter } from '../utils/srs';
 
 export type Stars = 0 | 1 | 2 | 3;
 
@@ -9,6 +10,23 @@ interface DomainProgress {
   unitsUnlocked: number;
   unitStars: Record<number, Stars>;
   missedProblemIds: string[];
+}
+
+// Per-problem mastery record powering adaptive practice, the skill report,
+// and spaced-repetition review.
+export interface ProblemStat {
+  attempts: number;
+  correct: number;
+  lastResult: 'correct' | 'wrong';
+  lastSeen: string;        // ISO date
+  box: number;             // Leitner SRS box, 0..5 (scheduled only once missed)
+  due: string | null;      // ISO date the next review is due (null = not scheduled / graduated)
+}
+
+export interface RitPoint {
+  date: string;
+  rit: number;
+  accuracy: number;
 }
 
 interface ProgressState {
@@ -35,6 +53,10 @@ interface ProgressState {
   xpByDate: Record<string, number>;  // XP earned per ISO date (heatmap intensity)
   lastFreezeDate: string | null;     // last day a streak freeze was used
   onboardingComplete: boolean;
+  // ---- v6 additions ----
+  problemStats: Record<string, ProblemStat>; // keyed by problem id
+  ritHistory: RitPoint[];                     // appended per mock test
+  lessonsViewed: string[];                    // e.g. "6.RP-1" unit lesson keys
   // ---- actions ----
   recordUnitResult: (
     domain: Domain,
@@ -45,8 +67,10 @@ interface ProgressState {
     mistakesTotal: number,
   ) => string[]; // newly earned sticker IDs
   awardXP: (n: number) => string[];
-  recordMockTestResult: (accuracy: number) => string[];
+  recordMockTestResult: (accuracy: number, rit?: number) => string[];
+  recordAttempt: (problemId: string, correct: boolean) => void;
   clearMissed: (domain: Domain, problemId: string) => void;
+  markLessonViewed: (key: string) => void;
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
   incrementStreak: () => string[];
@@ -57,6 +81,7 @@ interface ProgressState {
   starsForUnit: (domain: Domain, unit: number) => Stars;
   totalStars: () => number;
   todaysXp: () => number;
+  dueReviewCount: () => number;
   resetAll: () => void;
 }
 
@@ -181,6 +206,80 @@ const v5Defaults = {
   onboardingComplete: false,
 };
 
+const v6Defaults = {
+  problemStats: {} as Record<string, ProblemStat>,
+  ritHistory: [] as RitPoint[],
+  lessonsViewed: [] as string[],
+};
+
+export function migrateProgress(persisted: unknown, fromVersion: number): unknown {
+  if (!persisted || typeof persisted !== 'object') return persisted;
+  const state = persisted as Partial<ProgressState> & { stickers?: string[] };
+  if (fromVersion < 4) {
+    // Map old emoji-prefixed sticker strings to new IDs (best-effort).
+    const oldStickers = state.stickers ?? [];
+    const labelToId = new Map<string, string>();
+    for (const def of STICKER_DEFS) {
+      labelToId.set(`${def.emoji} ${def.label}`, def.id);
+    }
+    const migratedIds = new Set<string>();
+    for (const s of oldStickers) {
+      const id = labelToId.get(s);
+      if (id) migratedIds.add(id);
+    }
+    state.stickers = Array.from(migratedIds);
+    let perfect = 0;
+    const byDomain = state.byDomain;
+    if (byDomain) {
+      for (const d of DOMAINS) {
+        const stars = byDomain[d]?.unitStars ?? {};
+        for (const v of Object.values(stars)) {
+          if ((v as number) === 3) perfect++;
+        }
+      }
+    }
+    state.totalPerfectUnits = perfect;
+    state.bestSessionStreak = state.bestStreak ?? 0;
+  }
+  if (fromVersion < 5) {
+    // Seed all v5 fields with safe defaults if missing.
+    for (const [k, v] of Object.entries(v5Defaults)) {
+      if ((state as Record<string, unknown>)[k] === undefined) {
+        (state as Record<string, unknown>)[k] = v;
+      }
+    }
+  }
+  if (fromVersion < 6) {
+    const stateAny = state as Record<string, unknown>;
+    for (const [k, v] of Object.entries(v6Defaults)) {
+      if (stateAny[k] === undefined) stateAny[k] = v;
+    }
+    // Seed the SRS queue from any pre-existing missed problems so Smart
+    // Review is useful immediately for returning users.
+    const today = todayISO();
+    const seeded = (stateAny.problemStats as Record<string, ProblemStat>) ?? {};
+    const byDomain = state.byDomain;
+    if (byDomain) {
+      for (const d of DOMAINS) {
+        for (const id of byDomain[d]?.missedProblemIds ?? []) {
+          if (!seeded[id]) {
+            seeded[id] = {
+              attempts: 1,
+              correct: 0,
+              lastResult: 'wrong',
+              lastSeen: today,
+              box: 0,
+              due: today,
+            };
+          }
+        }
+      }
+    }
+    stateAny.problemStats = seeded;
+  }
+  return state;
+}
+
 export const useProgress = create<ProgressState>()(
   persist(
     (set, get) => ({
@@ -196,6 +295,7 @@ export const useProgress = create<ProgressState>()(
       totalPerfectUnits: 0,
       soundEnabled: true,
       ...v5Defaults,
+      ...v6Defaults,
       recordUnitResult: (domain, unit, stars, missedIds, xpEarned, mistakesTotal) => {
         const stateBefore = get();
         const today = todayISO();
@@ -265,19 +365,54 @@ export const useProgress = create<ProgressState>()(
         });
         return earned;
       },
-      recordMockTestResult: (accuracy) => {
+      recordMockTestResult: (accuracy, rit) => {
         const before = get();
         const mockTestsCompleted = before.mockTestsCompleted + 1;
         const bestMockAccuracy = Math.max(before.bestMockAccuracy, accuracy);
         const earned = checkAllEarning(earningCtx(before, { mockTestsCompleted }));
+        const ritHistory =
+          rit != null
+            ? [...before.ritHistory, { date: todayISO(), rit, accuracy }]
+            : before.ritHistory;
         set({
           mockTestsCompleted,
           bestMockAccuracy,
+          ritHistory,
           stickers:
             earned.length > 0 ? [...before.stickers, ...earned] : before.stickers,
         });
         return earned;
       },
+      recordAttempt: (problemId, correct) =>
+        set((s) => {
+          const today = todayISO();
+          const prev = s.problemStats[problemId];
+          const prevBox = prev?.box ?? 0;
+          // Schedule SRS on every miss; on a correct answer only if the problem
+          // is already in the queue (so first-try-correct problems don't flood it).
+          let box = prevBox;
+          let due = prev?.due ?? null;
+          if (!correct) {
+            ({ box, due } = scheduleAfter(prevBox, false, today));
+          } else if (prev?.due != null) {
+            ({ box, due } = scheduleAfter(prevBox, true, today));
+          }
+          const stat: ProblemStat = {
+            attempts: (prev?.attempts ?? 0) + 1,
+            correct: (prev?.correct ?? 0) + (correct ? 1 : 0),
+            lastResult: correct ? 'correct' : 'wrong',
+            lastSeen: today,
+            box,
+            due,
+          };
+          return { problemStats: { ...s.problemStats, [problemId]: stat } };
+        }),
+      markLessonViewed: (key) =>
+        set((s) =>
+          s.lessonsViewed.includes(key)
+            ? s
+            : { lessonsViewed: [...s.lessonsViewed, key] },
+        ),
       clearMissed: (domain, problemId) =>
         set((s) => {
           const dp = s.byDomain[domain];
@@ -369,6 +504,14 @@ export const useProgress = create<ProgressState>()(
         const s = get();
         return s.dailyXpResetDate === todayISO() ? s.dailyXp : 0;
       },
+      dueReviewCount: () => {
+        const today = todayISO();
+        let n = 0;
+        for (const st of Object.values(get().problemStats)) {
+          if (st.due != null && st.due <= today) n++;
+        }
+        return n;
+      },
       resetAll: () =>
         set({
           byDomain: blankAll(),
@@ -391,52 +534,15 @@ export const useProgress = create<ProgressState>()(
           practiceDates: [],
           xpByDate: {},
           lastFreezeDate: null,
+          problemStats: {},
+          ritHistory: [],
+          lessonsViewed: [],
         }),
     }),
     {
       name: '99daysofmath:progress',
-      version: 5,
-      migrate: (persisted: unknown, fromVersion: number) => {
-        if (!persisted || typeof persisted !== 'object') return persisted;
-        const state = persisted as Partial<ProgressState> & {
-          stickers?: string[];
-        };
-        if (fromVersion < 4) {
-          // Map old emoji-prefixed sticker strings to new IDs (best-effort).
-          const oldStickers = state.stickers ?? [];
-          const labelToId = new Map<string, string>();
-          for (const def of STICKER_DEFS) {
-            labelToId.set(`${def.emoji} ${def.label}`, def.id);
-          }
-          const migratedIds = new Set<string>();
-          for (const s of oldStickers) {
-            const id = labelToId.get(s);
-            if (id) migratedIds.add(id);
-          }
-          state.stickers = Array.from(migratedIds);
-          let perfect = 0;
-          const byDomain = state.byDomain;
-          if (byDomain) {
-            for (const d of DOMAINS) {
-              const stars = byDomain[d]?.unitStars ?? {};
-              for (const v of Object.values(stars)) {
-                if ((v as number) === 3) perfect++;
-              }
-            }
-          }
-          state.totalPerfectUnits = perfect;
-          state.bestSessionStreak = state.bestStreak ?? 0;
-        }
-        if (fromVersion < 5) {
-          // Seed all v5 fields with safe defaults if missing.
-          for (const [k, v] of Object.entries(v5Defaults)) {
-            if ((state as Record<string, unknown>)[k] === undefined) {
-              (state as Record<string, unknown>)[k] = v;
-            }
-          }
-        }
-        return state;
-      },
+      version: 6,
+      migrate: migrateProgress,
     },
   ),
 );

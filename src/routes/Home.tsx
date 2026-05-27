@@ -47,6 +47,7 @@ export function Home() {
   const todaysXp = useProgress((s) => s.todaysXp());
   const practiceDates = useProgress((s) => s.practiceDates);
   const xpByDate = useProgress((s) => s.xpByDate);
+  const dueReview = useProgress((s) => s.dueReviewCount());
   const onboardingComplete = useProgress((s) => s.onboardingComplete);
   const markOnboardingDone = useProgress((s) => s.markOnboardingDone);
 
@@ -89,6 +90,30 @@ export function Home() {
         </div>
       </div>
 
+      {/* Due for review */}
+      {dueReview > 0 && (
+        <Link
+          to="/review"
+          className="block mb-4 rounded-3xl p-4 sm:p-5 bg-gradient-to-br from-rose-500 to-pink-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="text-4xl sm:text-5xl">📅</div>
+            <div className="flex-1 min-w-0">
+              <div className="text-xs font-display font-bold uppercase tracking-wider opacity-90">
+                Smart review
+              </div>
+              <div className="font-display font-extrabold text-lg sm:text-xl">
+                {dueReview} {dueReview === 1 ? 'problem' : 'problems'} due today
+              </div>
+              <div className="text-xs sm:text-sm opacity-90 mt-0.5">
+                Lock in the ones you missed — timed for memory.
+              </div>
+            </div>
+            <div className="text-2xl shrink-0">→</div>
+          </div>
+        </Link>
+      )}
+
       {/* Recommended next */}
       {rec && (
         <Link
@@ -111,8 +136,16 @@ export function Home() {
         </Link>
       )}
 
-      {/* Daily Mix + Mock Test */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+      {/* Adaptive Practice + Daily Mix + Mock Test */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+        <Link
+          to="/practice"
+          className="block rounded-3xl p-4 bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-3xl">🧠</div>
+          <div className="font-display font-extrabold text-lg mt-1">Adaptive Practice</div>
+          <div className="text-xs opacity-90 mt-0.5">Questions tune to your level, MAP-style.</div>
+        </Link>
         <Link
           to="/mix"
           className="block rounded-3xl p-4 bg-gradient-to-br from-purple-500 via-fuchsia-500 to-pink-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
@@ -191,12 +224,20 @@ export function Home() {
         })}
       </div>
 
-      <Link
-        to="/settings"
-        className="mt-6 inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
-      >
-        ⚙️ Settings
-      </Link>
+      <div className="mt-6 flex items-center gap-4">
+        <Link
+          to="/report"
+          className="inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+        >
+          📊 Progress report
+        </Link>
+        <Link
+          to="/settings"
+          className="inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+        >
+          ⚙️ Settings
+        </Link>
+      </div>
 
       <PracticeHeatmap practiceDates={practiceDates} xpByDate={xpByDate} />
 

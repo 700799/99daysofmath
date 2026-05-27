@@ -64,6 +64,11 @@ async function main() {
 
     console.log('4. Opening Unit 1 (visible chip in unit list)...');
     await page.getByRole('link', { name: /^Unit 1/ }).first().click();
+    // Teach-first lesson modal auto-opens on a fresh unit — dismiss it.
+    await page.waitForSelector('[role="dialog"][aria-label^="Lesson:"]', { timeout: 8000 });
+    await page.locator('button:has-text("Start practice")').click();
+    await page.waitForSelector('[role="dialog"]', { state: 'hidden', timeout: 3000 }).catch(() => {});
+    console.log('   ✓ Teach-first lesson modal shown and dismissed');
     await page.waitForSelector('text=Sam drives', { timeout: 5000 });
     console.log('   ✓ First problem loaded');
 
@@ -162,6 +167,14 @@ async function main() {
 
     console.log('15. Verify multi-tier hint on a new problem...');
     await page.goto(BASE + '#/unit/6.RP/3', { waitUntil: 'networkidle' });
+    // Dismiss the teach-first lesson modal for this fresh unit (wait for it to mount).
+    await page
+      .waitForSelector('[role="dialog"][aria-label^="Lesson:"]', { timeout: 6000 })
+      .then(async () => {
+        await page.locator('button:has-text("Maybe later")').click();
+        await page.waitForSelector('[role="dialog"]', { state: 'hidden', timeout: 3000 });
+      })
+      .catch(() => {});
     await page.waitForSelector('button:has-text("Show hint")', { timeout: 5000 });
     await page.click('button:has-text("Show hint")');
     await page.waitForTimeout(300);
@@ -180,10 +193,10 @@ async function main() {
     if (!timerVisible) throw new Error('Timer not visible on mock test page');
     console.log('   ✓ Mock test loaded with timer');
 
-    console.log('17. Review route handles empty state...');
+    console.log('17. Smart Review route loads (queue or empty state)...');
     await page.goto(BASE + '#/review', { waitUntil: 'networkidle' });
-    await page.waitForSelector('text=/Review|All clear/', { timeout: 5000 });
-    console.log('   ✓ Review route loaded (empty state or queue)');
+    await page.waitForSelector('text=/Smart Review|All caught up/', { timeout: 5000 });
+    console.log('   ✓ Smart Review route loaded');
 
     console.log('18. Daily quest ring visible in header on home...');
     await page.goto(BASE, { waitUntil: 'networkidle' });
@@ -221,6 +234,30 @@ async function main() {
     if (afterSkip) throw new Error('Onboarding still visible after Skip');
     await freshCtx.close();
     console.log('   ✓ Onboarding shows on fresh context and dismisses on Skip');
+
+    console.log('22. Adaptive Practice renders a problem...');
+    await page.goto(BASE + '#/practice', { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=Adaptive practice', { timeout: 5000 });
+    const practiceReady = await page.locator('button:has-text("Check")').first().isVisible().catch(() => false);
+    if (!practiceReady) throw new Error('Adaptive practice did not render a problem');
+    console.log('   ✓ Adaptive practice loaded');
+
+    console.log('23. Progress report shows skill breakdown + RIT section...');
+    await page.goto(BASE + '#/report', { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=Progress report', { timeout: 5000 });
+    // Earlier unit/mix flows recorded attempts, so the report renders skill areas.
+    const byTopic = await page.locator('text=By topic area').first().isVisible().catch(() => false);
+    if (!byTopic) throw new Error('Report missing "By topic area" section');
+    const ritSection = await page.locator('text=RIT growth').first().isVisible().catch(() => false);
+    if (!ritSection) throw new Error('Report missing RIT growth section');
+    console.log('   ✓ Progress report shows skill breakdown and RIT growth');
+
+    console.log('24. Home surfaces due-for-review card after a miss...');
+    await page.goto(BASE, { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=Pick a trail', { timeout: 5000 });
+    const dueCard = await page.locator('text=/due today/').first().isVisible().catch(() => false);
+    if (!dueCard) throw new Error('Expected a "due today" review card on home after missing a problem');
+    console.log('   ✓ Due-for-review card present on home');
 
   } catch (e) {
     errors.push(String(e instanceof Error ? e.stack ?? e.message : e));

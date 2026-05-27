@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useProgress } from '../state/progress';
 import { isEquivalent } from '../data/normalize';
 import { getAllProblems } from '../data/problems';
-import { pickMockTestProblems, ritZone } from '../utils/mockTest';
+import { pickMockTestProblems, ritZone, estimateRit } from '../utils/mockTest';
+import { RitTrend } from '../components/RitTrend';
 import { ProblemCard } from '../components/ProblemCard';
 import { AnswerInput } from '../components/AnswerInput';
 import { Hint } from '../components/Hint';
@@ -33,6 +34,7 @@ export function MockTest() {
   const navigate = useNavigate();
   const soundOn = useProgress((s) => s.soundEnabled);
   const recordMock = useProgress((s) => s.recordMockTestResult);
+  const recordAttempt = useProgress((s) => s.recordAttempt);
 
   const [problems, setProblems] = useState<Problem[] | null>(null);
   const [error, setError] = useState<Error | null>(null);
@@ -41,6 +43,7 @@ export function MockTest() {
   const [phase, setPhase] = useState<Phase>('loading');
   const [correct, setCorrect] = useState(0);
   const [elapsed, setElapsed] = useState(0);
+  const [ritEstimate, setRitEstimate] = useState(0);
   const [newStickerIds, setNewStickerIds] = useState<string[]>([]);
   const [showExplain, setShowExplain] = useState(false);
   const startedAt = useRef<number>(Date.now());
@@ -94,7 +97,9 @@ export function MockTest() {
 
   const submit = () => {
     if (!current || !answer.trim()) return;
-    if (isEquivalent(answer, current)) {
+    const isCorrect = isEquivalent(answer, current);
+    recordAttempt(current.id, isCorrect);
+    if (isCorrect) {
       setCorrect((c) => c + 1);
       setPhase('feedback-correct');
       if (soundOn) playCorrect();
@@ -108,9 +113,13 @@ export function MockTest() {
     if (index + 1 >= problems.length) {
       const finalCorrect = correct;
       const accuracy = finalCorrect / total;
+      const avgDifficulty =
+        problems.reduce((sum, p) => sum + p.difficulty, 0) / total;
+      const rit = estimateRit(accuracy, avgDifficulty);
+      setRitEstimate(rit);
       if (!recordedRef.current) {
         recordedRef.current = true;
-        const earned = recordMock(accuracy);
+        const earned = recordMock(accuracy, rit);
         setNewStickerIds(earned);
       }
       if (soundOn) playUnitComplete();
@@ -147,16 +156,19 @@ export function MockTest() {
           </h1>
           <div className={`mt-4 mx-auto max-w-md bg-gradient-to-br border-2 rounded-3xl p-5 ${toneStyles[zone.tone]}`}>
             <div className="text-xs font-display font-extrabold uppercase tracking-wider opacity-80">
-              Estimated level
+              Estimated RIT
             </div>
-            <div className="text-2xl font-display font-extrabold mt-1">{zone.label}</div>
+            <div className="text-4xl font-display font-extrabold mt-1 tabular-nums">~{ritEstimate}</div>
+            <div className="text-lg font-display font-extrabold mt-1">{zone.label}</div>
             <div className="text-sm mt-2 opacity-90">{zone.blurb}</div>
+            <div className="text-[10px] mt-2 opacity-70">Estimate for practice — not an official MAP score.</div>
           </div>
           <div className="mt-4 grid grid-cols-3 gap-3 max-w-md mx-auto">
             <StatBox value={`${correct}/${total}`} label="Correct" tone="green" />
             <StatBox value={`${Math.round(accuracy * 100)}%`} label="Accuracy" tone="blue" />
             <StatBox value={fmtTime(elapsed)} label="Time" tone="yellow" />
           </div>
+          <RitTrend className="mt-4 mx-auto max-w-md" />
           <div className="mt-8 flex flex-col gap-3 max-w-md mx-auto">
             <button
               type="button"

@@ -21,6 +21,19 @@ function tiersFor(problem: { hint: string; hints?: HintStep[] }): HintStep[] {
   return [{ level: 'guide', text: problem.hint }];
 }
 
+function todayISO(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(
+    d.getDate(),
+  ).padStart(2, '0')}`;
+}
+
+function daysUntil(iso: string): number {
+  const a = new Date(todayISO() + 'T00:00:00Z').getTime();
+  const b = new Date(iso + 'T00:00:00Z').getTime();
+  return Math.round((b - a) / 86400000);
+}
+
 export function Review() {
   const navigate = useNavigate();
   const params = useParams<{ domain?: string }>();
@@ -29,20 +42,18 @@ export function Review() {
       ? (params.domain as Domain)
       : null;
 
-  const byDomain = useProgress((s) => s.byDomain);
-  const clearMissed = useProgress((s) => s.clearMissed);
+  const recordAttempt = useProgress((s) => s.recordAttempt);
   const soundOn = useProgress((s) => s.soundEnabled);
 
-  // Snapshot the missed IDs once on mount so the queue is stable as we clear them.
-  const [queueIds] = useState<{ id: string; domain: Domain }[]>(() => {
-    const out: { id: string; domain: Domain }[] = [];
-    for (const d of DOMAINS) {
-      if (filterDomain && d !== filterDomain) continue;
-      for (const id of byDomain[d]?.missedProblemIds ?? []) {
-        out.push({ id, domain: d });
-      }
-    }
-    return out;
+  // Snapshot the due problem ids once on mount, most-overdue first, so the
+  // queue stays stable as we reschedule each one.
+  const [dueIds] = useState<string[]>(() => {
+    const today = todayISO();
+    const stats = useProgress.getState().problemStats;
+    return Object.entries(stats)
+      .filter(([, st]) => st.due != null && st.due <= today)
+      .sort((a, b) => (a[1].due! < b[1].due! ? -1 : 1))
+      .map(([id]) => id);
   });
 
   const [problems, setProblems] = useState<Problem[] | null>(null);
@@ -50,22 +61,23 @@ export function Review() {
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState('');
   const [phase, setPhase] = useState<Phase>('loading');
-  const [firstTry, setFirstTry] = useState(true);
-  const [cleared, setCleared] = useState(0);
+  const [advanced, setAdvanced] = useState(0);
+  const [rescheduleMsg, setRescheduleMsg] = useState('');
   const [showExplain, setShowExplain] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
       try {
-        const ids = queueIds.map((q) => q.id);
-        const loaded = await getProblemsByIds(ids);
+        const loaded = await getProblemsByIds(dueIds);
         if (cancelled) return;
-        // Preserve queue order.
         const byId = new Map(loaded.map((p) => [p.id, p]));
-        const ordered = queueIds.map((q) => byId.get(q.id)).filter((p): p is Problem => !!p);
+        let ordered = dueIds
+          .map((id) => byId.get(id))
+          .filter((p): p is Problem => !!p);
+        if (filterDomain) ordered = ordered.filter((p) => p.domain === filterDomain);
         setProblems(ordered);
-        setPhase(ordered.length > 0 ? 'problem' : 'done');
+        setPhase('problem');
       } catch (e) {
         if (!cancelled) setError(e instanceof Error ? e : new Error(String(e)));
       }
@@ -73,7 +85,7 @@ export function Review() {
     return () => {
       cancelled = true;
     };
-  }, [queueIds]);
+  }, [dueIds, filterDomain]);
 
   if (error) {
     return (
@@ -92,21 +104,24 @@ export function Review() {
     );
   }
 
-  // Empty state — nothing to review.
+  // Empty state — nothing scheduled for review right now.
   if (problems.length === 0) {
     return (
       <div className="text-center py-12">
         <Mascot mood="happy" size={120} />
-        <h1 className="text-2xl font-display font-extrabold text-slate-900 mt-3">All clear!</h1>
+        <h1 className="text-2xl font-display font-extrabold text-slate-900 mt-3">
+          All caught up!
+        </h1>
         <p className="text-slate-600 mt-1">
-          You have no missed problems to review{filterDomain ? ` in ${filterDomain}` : ''}.
+          No reviews are due{filterDomain ? ` in ${filterDomain}` : ''} right now. Missed
+          problems come back here on the best day to remember them.
         </p>
         <div className="mt-6 flex flex-col gap-3 max-w-xs mx-auto">
           <Link
-            to="/mix"
+            to="/practice"
             className="w-full min-h-12 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
           >
-            Try a Daily Mix
+            Adaptive practice
           </Link>
           <Link
             to="/test"
@@ -124,10 +139,14 @@ export function Review() {
       <div className="text-center py-12">
         <Confetti count={24} />
         <Mascot mood="cheer" size={120} />
-        <h1 className="text-3xl font-display font-extrabold text-slate-900 mt-2">Review complete!</h1>
+        <h1 className="text-3xl font-display font-extrabold text-slate-900 mt-2">
+          Review complete!
+        </h1>
         <p className="text-slate-600 mt-2">
-          You cleared <span className="font-display font-extrabold text-green-700">{cleared}</span> of{' '}
-          {problems.length} from your review queue.
+          You reviewed {problems.length}{' '}
+          {problems.length === 1 ? 'problem' : 'problems'} —{' '}
+          <span className="font-display font-extrabold text-green-700">{advanced}</span> moved
+          forward.
         </p>
         <button
           type="button"
@@ -141,20 +160,25 @@ export function Review() {
   }
 
   const current = problems[index];
-  const currentDomain = queueIds[index]?.domain ?? current.domain;
   const total = problems.length;
 
   const submit = () => {
     if (!current || !answer.trim()) return;
-    if (isEquivalent(answer, current)) {
-      if (firstTry) {
-        clearMissed(currentDomain, current.id);
-        setCleared((c) => c + 1);
+    const correct = isEquivalent(answer, current);
+    recordAttempt(current.id, correct);
+    if (correct) {
+      setAdvanced((n) => n + 1);
+      const stat = useProgress.getState().problemStats[current.id];
+      if (!stat || stat.due == null) {
+        setRescheduleMsg('Mastered — graduated from review! 🎓');
+      } else {
+        const n = daysUntil(stat.due);
+        setRescheduleMsg(n <= 1 ? 'Nice! Back tomorrow.' : `Nice! Back in ${n} days.`);
       }
       setPhase('feedback-correct');
       if (soundOn) playCorrect();
     } else {
-      setFirstTry(false);
+      setRescheduleMsg('No worries — back tomorrow to try again.');
       setPhase('feedback-wrong');
       if (soundOn) playWrong();
     }
@@ -166,7 +190,6 @@ export function Review() {
     } else {
       setIndex((i) => i + 1);
       setAnswer('');
-      setFirstTry(true);
       setShowExplain(false);
       setPhase('problem');
     }
@@ -178,7 +201,7 @@ export function Review() {
         <div className="flex-1">
           <ProgressBar current={index + (phase !== 'problem' ? 1 : 0)} total={total} />
           <div className="text-xs font-display font-bold text-amber-700 mt-1">
-            🔁 Review · {currentDomain}
+            🔁 Smart Review · {current.domain}
           </div>
         </div>
         <div className="shrink-0">
@@ -231,7 +254,7 @@ export function Review() {
               >
                 <div className="text-4xl">✅</div>
                 <div className="font-display font-extrabold text-xl text-green-800 mt-1">
-                  {firstTry ? 'Cleared from review! ✓' : 'Got it!'}
+                  {rescheduleMsg}
                 </div>
                 <button
                   type="button"
@@ -258,7 +281,7 @@ export function Review() {
                     <span className="font-display font-bold">Correct answer:</span>{' '}
                     <span className="font-mono font-extrabold">{current.primaryAnswer}</span>
                   </div>
-                  <div className="text-xs text-slate-500 mt-1">Stays in your review queue.</div>
+                  <div className="text-xs text-slate-500 mt-1">{rescheduleMsg}</div>
                 </div>
               </div>
               {showExplain ? (

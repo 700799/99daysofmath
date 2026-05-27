@@ -23,3 +23,16 @@ button {
 .katex {
   font-size: 1.05em;
 }
+
+@media print {
+  header,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff;
+  }
+  main {
+    padding: 0 !important;
+  }
+}

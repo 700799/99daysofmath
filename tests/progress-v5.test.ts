@@ -36,6 +36,9 @@ function freshState() {
     xpByDate: {},
     lastFreezeDate: null,
     onboardingComplete: false,
+    problemStats: {},
+    ritHistory: [],
+    lessonsViewed: [],
   });
 }
 
