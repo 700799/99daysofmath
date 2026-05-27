@@ -71,6 +71,7 @@ interface ProgressState {
   recordAttempt: (problemId: string, correct: boolean) => void;
   clearMissed: (domain: Domain, problemId: string) => void;
   markLessonViewed: (key: string) => void;
+  completeLesson: (key: string) => string[];
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
   incrementStreak: () => string[];
@@ -141,6 +142,7 @@ function earningCtx(s: ProgressState, o: Partial<EarningContext> = {}): EarningC
     mockTestsCompleted: s.mockTestsCompleted,
     dailyQuestStreak: s.dailyQuestStreak,
     freezeUsedEver: s.lastFreezeDate != null,
+    lessonsCompleted: s.lessonsViewed.length,
     ...o,
   };
 }
@@ -413,6 +415,34 @@ export const useProgress = create<ProgressState>()(
             ? s
             : { lessonsViewed: [...s.lessonsViewed, key] },
         ),
+      completeLesson: (key) => {
+        const before = get();
+        if (before.lessonsViewed.includes(key)) return [];
+        const today = todayISO();
+        const LESSON_XP = 8;
+        const lessonsViewed = [...before.lessonsViewed, key];
+        const nextXp = before.xp + LESSON_XP;
+        const daily = rollDailyXp(before, LESSON_XP, today);
+        const earned = checkAllEarning(
+          earningCtx(before, {
+            xp: nextXp,
+            dailyQuestStreak: daily.dailyQuestStreak,
+            lessonsCompleted: lessonsViewed.length,
+          }),
+        );
+        set({
+          lessonsViewed,
+          xp: nextXp,
+          dailyXp: daily.dailyXp,
+          dailyXpResetDate: daily.dailyXpResetDate,
+          dailyQuestStreak: daily.dailyQuestStreak,
+          lastGoalDate: daily.lastGoalDate,
+          xpByDate: daily.xpByDate,
+          stickers:
+            earned.length > 0 ? [...before.stickers, ...earned] : before.stickers,
+        });
+        return earned;
+      },
       clearMissed: (domain, problemId) =>
         set((s) => {
           const dp = s.byDomain[domain];

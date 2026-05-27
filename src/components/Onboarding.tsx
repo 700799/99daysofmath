@@ -17,7 +17,7 @@ const CARDS: { emoji: string; mood: MascotMood; title: string; body: string }[] 
     emoji: '⭐',
     mood: 'cheer',
     title: 'Earn stars & stickers',
-    body: 'Answer without hints or mistakes to earn 3 stars. Collect 57 stickers across streaks, accuracy, XP, and more!',
+    body: 'Answer without hints or mistakes to earn 3 stars. Collect 58 stickers across streaks, accuracy, XP, and more!',
   },
   {
     emoji: '⚡',

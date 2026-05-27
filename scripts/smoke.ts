@@ -64,11 +64,13 @@ async function main() {
 
     console.log('4. Opening Unit 1 (visible chip in unit list)...');
     await page.getByRole('link', { name: /^Unit 1/ }).first().click();
-    // Teach-first lesson modal auto-opens on a fresh unit — dismiss it.
+    // Teach-first lesson modal auto-opens on a fresh unit — finish it (earns the reward), then start practice.
     await page.waitForSelector('[role="dialog"][aria-label^="Lesson:"]', { timeout: 8000 });
+    await page.locator('button:has-text("Finish & practice")').click();
+    await page.waitForSelector('text=Lesson complete!', { timeout: 4000 });
     await page.locator('button:has-text("Start practice")').click();
     await page.waitForSelector('[role="dialog"]', { state: 'hidden', timeout: 3000 }).catch(() => {});
-    console.log('   ✓ Teach-first lesson modal shown and dismissed');
+    console.log('   ✓ Teach-first lesson: finished, rewarded, and started practice');
     await page.waitForSelector('text=Sam drives', { timeout: 5000 });
     console.log('   ✓ First problem loaded');
 
@@ -156,11 +158,11 @@ async function main() {
     }
     console.log('   ✓ All 6 sticker sections present (incl. Challenges)');
 
-    console.log('14. Verify Settings shows X / 57 sticker total...');
+    console.log('14. Verify Settings shows X / 58 sticker total...');
     await page.click('a[href="#/settings"]');
     await page.waitForSelector('text=Stickers earned', { timeout: 3000 });
     const card = await page.locator('text=Stickers earned').locator('xpath=..').textContent();
-    if (!card || !/\/\s*57/.test(card)) {
+    if (!card || !/\/\s*58/.test(card)) {
       throw new Error(`Settings sticker total wrong: ${card}`);
     }
     console.log(`   ✓ ${card?.trim()}`);

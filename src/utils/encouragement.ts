@@ -137,6 +137,7 @@ const CHALLENGE_STICKERS: StickerDef[] = [
   { id: 'quest-1', emoji: '🎯', label: 'First Daily Goal', category: 'challenge', hint: 'Hit your daily XP goal' },
   { id: 'quest-streak-7', emoji: '🏃', label: 'Week of Goals', category: 'challenge', hint: 'Hit your daily goal 7 days in a row' },
   { id: 'freeze-saved', emoji: '🧊', label: 'Saved by Ice', category: 'challenge', hint: 'A streak freeze saved your streak' },
+  { id: 'lesson-explorer', emoji: '📘', label: 'Bookworm', category: 'challenge', hint: 'Finish 5 lessons' },
 ];
 
 const ALL_UNIT_STICKERS: StickerDef[] = (() => {
@@ -182,6 +183,7 @@ export interface EarningContext {
   mockTestsCompleted?: number;
   dailyQuestStreak?: number;
   freezeUsedEver?: boolean;
+  lessonsCompleted?: number;
 }
 
 export interface UnitDoneEvent {
@@ -261,6 +263,7 @@ export function checkAllEarning(
   if ((ctx.dailyQuestStreak ?? 0) >= 1) add('quest-1');
   if ((ctx.dailyQuestStreak ?? 0) >= 7) add('quest-streak-7');
   if (ctx.freezeUsedEver) add('freeze-saved');
+  if ((ctx.lessonsCompleted ?? 0) >= 5) add('lesson-explorer');
 
   return earned;
 }

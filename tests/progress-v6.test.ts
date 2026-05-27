@@ -143,6 +143,41 @@ describe('markLessonViewed', () => {
   });
 });
 
+describe('completeLesson — rewards', () => {
+  beforeEach(() => {
+    vi.useFakeTimers();
+    setToday('2026-05-01');
+    freshState();
+  });
+  afterEach(() => vi.useRealTimers());
+
+  it('awards XP and records the lesson on first completion', () => {
+    useProgress.getState().completeLesson('6.RP-1');
+    const s = useProgress.getState();
+    expect(s.lessonsViewed).toContain('6.RP-1');
+    expect(s.xp).toBe(8);
+    expect(s.dailyXp).toBe(8);
+  });
+
+  it('does not double-reward the same lesson', () => {
+    useProgress.getState().completeLesson('6.RP-1');
+    const xpAfter = useProgress.getState().xp;
+    const earned = useProgress.getState().completeLesson('6.RP-1');
+    expect(earned).toEqual([]);
+    expect(useProgress.getState().xp).toBe(xpAfter);
+    expect(useProgress.getState().lessonsViewed.filter((k) => k === '6.RP-1')).toHaveLength(1);
+  });
+
+  it('awards the Bookworm sticker after finishing 5 lessons', () => {
+    for (const k of ['6.RP-1', '6.RP-2', '6.RP-3', '6.RP-4']) {
+      useProgress.getState().completeLesson(k);
+    }
+    expect(useProgress.getState().stickers).not.toContain('lesson-explorer');
+    const earned = useProgress.getState().completeLesson('6.RP-5');
+    expect(earned).toContain('lesson-explorer');
+  });
+});
+
 describe('v5 → v6 migration', () => {
   beforeEach(() => {
     vi.useFakeTimers();

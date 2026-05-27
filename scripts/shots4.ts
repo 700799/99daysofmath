@@ -113,7 +113,19 @@ async function main() {
   await page.goto(BASE + '#/unit/6.G/1', { waitUntil: 'networkidle' });
   await page.waitForSelector('[role="dialog"][aria-label^="Lesson:"]', { timeout: 6000 });
   await page.waitForTimeout(500);
-  await shoot(page, '/tmp/r4-lesson.png', 'lesson');
+  await shoot(page, '/tmp/r4-lesson.png', 'lesson (top)');
+
+  // Scroll to the in-lesson practice questions and reveal a worked solution
+  await page.locator('button:has-text("Show step-by-step")').first().click().catch(() => {});
+  await page.locator('text=Try it yourself').scrollIntoViewIfNeeded().catch(() => {});
+  await page.waitForTimeout(300);
+  await shoot(page, '/tmp/r4-lesson-practice.png', 'lesson (practice)');
+
+  // Finish the lesson to show the reward screen
+  await page.locator('button:has-text("Finish & practice")').click();
+  await page.waitForSelector('text=Lesson complete!', { timeout: 4000 });
+  await page.waitForTimeout(500);
+  await shoot(page, '/tmp/r4-lesson-reward.png', 'lesson reward');
 
   await browser.close();
 }

@@ -19,9 +19,9 @@ const baseCtx = () => ({
 });
 
 describe('STICKER_DEFS', () => {
-  it('has 57 total stickers', () => {
-    // 30 unit + 8 streak + 4 accuracy + 5 XP + 6 mastery + 4 challenge
-    expect(TOTAL_STICKERS).toBe(57);
+  it('has 58 total stickers', () => {
+    // 30 unit + 8 streak + 4 accuracy + 5 XP + 6 mastery + 5 challenge
+    expect(TOTAL_STICKERS).toBe(58);
   });
 
   it('every sticker ID is unique', () => {
@@ -170,10 +170,16 @@ describe('checkAllEarning — challenge family', () => {
     expect(earned).toContain('freeze-saved');
   });
 
+  it('awards lesson-explorer after finishing 5 lessons', () => {
+    expect(checkAllEarning({ ...baseCtx(), lessonsCompleted: 4 })).not.toContain('lesson-explorer');
+    expect(checkAllEarning({ ...baseCtx(), lessonsCompleted: 5 })).toContain('lesson-explorer');
+  });
+
   it('awards no challenge stickers in the default context', () => {
     const earned = checkAllEarning(baseCtx());
     expect(earned).not.toContain('mock-test-1');
     expect(earned).not.toContain('quest-1');
     expect(earned).not.toContain('freeze-saved');
+    expect(earned).not.toContain('lesson-explorer');
   });
 });
