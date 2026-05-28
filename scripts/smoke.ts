@@ -64,13 +64,21 @@ async function main() {
 
     console.log('4. Opening Unit 1 (visible chip in unit list)...');
     await page.getByRole('link', { name: /^Unit 1/ }).first().click();
-    // Teach-first lesson modal auto-opens on a fresh unit — finish it (earns the reward), then start practice.
+    // Teach-first lesson is a paginated card deck — walk Next until "Finish & practice" appears.
     await page.waitForSelector('[role="dialog"][aria-label^="Lesson:"]', { timeout: 8000 });
+    for (let i = 0; i < 12; i++) {
+      if (
+        await page.locator('button:has-text("Finish & practice")').isVisible().catch(() => false)
+      )
+        break;
+      await page.locator('button:has-text("Next")').click();
+      await page.waitForTimeout(150);
+    }
     await page.locator('button:has-text("Finish & practice")').click();
     await page.waitForSelector('text=Lesson complete!', { timeout: 4000 });
     await page.locator('button:has-text("Start practice")').click();
     await page.waitForSelector('[role="dialog"]', { state: 'hidden', timeout: 3000 }).catch(() => {});
-    console.log('   ✓ Teach-first lesson: finished, rewarded, and started practice');
+    console.log('   ✓ Teach-first lesson: walked deck, finished, rewarded, and started practice');
     await page.waitForSelector('text=Sam drives', { timeout: 5000 });
     console.log('   ✓ First problem loaded');
 

@@ -109,17 +109,48 @@ async function main() {
   await page.waitForTimeout(500);
   await shoot(page, '/tmp/r4-practice.png', 'practice');
 
-  // Teach-first lesson modal (fresh unit 6.G/1 — not in lessonsViewed)
+  // Teach-first lesson — paginated card deck (fresh unit 6.G/1 — not in lessonsViewed)
   await page.goto(BASE + '#/unit/6.G/1', { waitUntil: 'networkidle' });
   await page.waitForSelector('[role="dialog"][aria-label^="Lesson:"]', { timeout: 6000 });
   await page.waitForTimeout(500);
-  await shoot(page, '/tmp/r4-lesson.png', 'lesson (top)');
+  await shoot(page, '/tmp/r4-lesson-intro.png', 'lesson (intro card)');
 
-  // Scroll to the in-lesson practice questions and reveal a worked solution
-  await page.locator('button:has-text("Show step-by-step")').first().click().catch(() => {});
-  await page.locator('text=Try it yourself').scrollIntoViewIfNeeded().catch(() => {});
-  await page.waitForTimeout(300);
-  await shoot(page, '/tmp/r4-lesson-practice.png', 'lesson (practice)');
+  // Next → concept card (key idea)
+  await page.locator('button:has-text("Next")').click();
+  await page.locator('text=How it works').waitFor({ timeout: 4000 });
+  await page.waitForTimeout(400);
+  await shoot(page, '/tmp/r4-lesson-concept.png', 'lesson (concept card)');
+
+  // Next → example 1; reveal the step-by-step solution
+  await page.locator('button:has-text("Next")').click();
+  await page.locator('button:has-text("Show step-by-step")').waitFor({ timeout: 4000 });
+  await page.locator('button:has-text("Show step-by-step")').click();
+  await page.waitForTimeout(400);
+  await shoot(page, '/tmp/r4-lesson-example.png', 'lesson (example revealed)');
+
+  // Walk to the first practice card and check an answer
+  for (let i = 0; i < 4; i++) {
+    if (await page.locator('input[placeholder="Your answer"]').isVisible().catch(() => false))
+      break;
+    await page.locator('button:has-text("Next")').click();
+    await page.waitForTimeout(300);
+  }
+  const dialog = page.locator('[role="dialog"][aria-label^="Lesson:"]');
+  await dialog.locator('input[placeholder="Your answer"]').fill('54');
+  await dialog.locator('button:has-text("Check")').click();
+  await page.waitForTimeout(400);
+  await shoot(page, '/tmp/r4-lesson-practice.png', 'lesson (practice checked)');
+
+  // Walk to the final (watch-out) card and finish
+  for (let i = 0; i < 5; i++) {
+    if (await page.locator('button:has-text("Finish & practice")').isVisible().catch(() => false))
+      break;
+    await page.locator('button:has-text("Next")').click();
+    await page.waitForTimeout(300);
+  }
+  await page.locator('text=Watch out for this').waitFor({ timeout: 4000 });
+  await page.waitForTimeout(400);
+  await shoot(page, '/tmp/r4-lesson-watchout.png', 'lesson (watch-out card)');
 
   // Finish the lesson to show the reward screen
   await page.locator('button:has-text("Finish & practice")').click();
