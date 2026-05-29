@@ -6,10 +6,10 @@ Each problem is one JSON file under `content/problems/<domain>/`, validated agai
 
 ```sh
 npm run validate:content
-npm run build:content   # rebuilds public/data/problems.parquet
+npm run build:content   # rebuilds public/data/problems.json
 ```
 
-Commit both the JSON sources **and** `public/data/problems.parquet` (the runtime reads the Parquet, not the JSON).
+Commit both the JSON sources **and** the generated `public/data/problems.json` (the runtime fetches this compiled file).
 
 ## File naming
 
