@@ -1,6 +1,12 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { DOMAINS, type Domain } from '../types/problem';
+import {
+  coinsForUnitResult,
+  medalForPlace,
+  type RewardGameId,
+  type Trophy,
+} from '../rewards/economy';
 
 export type Stars = 0 | 1 | 2 | 3;
 
@@ -12,6 +18,10 @@ interface DomainProgress {
 
 interface ProgressState {
   byDomain: Record<Domain, DomainProgress>;
+  /** Coins earned from finishing units and won in reward games. */
+  coins: number;
+  /** Every trophy ever won in the reward arcade. */
+  trophies: Trophy[];
   recordUnitResult: (
     domain: Domain,
     unit: number,
@@ -21,6 +31,12 @@ interface ProgressState {
   isUnitUnlocked: (domain: Domain, unit: number) => boolean;
   starsForUnit: (domain: Domain, unit: number) => Stars;
   totalStars: () => number;
+  /** Add coins (e.g. a reward-game payout). Negative values are ignored. */
+  awardCoins: (amount: number) => void;
+  /** Spend coins; returns false (and changes nothing) if the balance is short. */
+  spendCoins: (amount: number) => boolean;
+  /** Record a finished reward game: banks coins and awards a placement trophy. */
+  recordGameResult: (game: RewardGameId, place: number, coinsEarned: number) => void;
   resetAll: () => void;
 }
 
@@ -43,6 +59,8 @@ export const useProgress = create<ProgressState>()(
   persist(
     (set, get) => ({
       byDomain: blankAll(),
+      coins: 0,
+      trophies: [],
       recordUnitResult: (domain, unit, stars, missedIds) =>
         set((state) => {
           const d = state.byDomain[domain] ?? blankDomain();
@@ -52,6 +70,7 @@ export const useProgress = create<ProgressState>()(
             stars >= 1 ? Math.max(d.unitsUnlocked, unit + 1) : d.unitsUnlocked;
           const missedSet = new Set([...d.missedProblemIds, ...missedIds]);
           return {
+            coins: state.coins + coinsForUnitResult(prevStars, stars),
             byDomain: {
               ...state.byDomain,
               [domain]: {
@@ -75,8 +94,36 @@ export const useProgress = create<ProgressState>()(
         }
         return n;
       },
-      resetAll: () => set({ byDomain: blankAll() }),
+      awardCoins: (amount) =>
+        set((state) => ({ coins: state.coins + Math.max(0, Math.round(amount)) })),
+      spendCoins: (amount) => {
+        const cost = Math.max(0, Math.round(amount));
+        if (get().coins < cost) return false;
+        set((state) => ({ coins: state.coins - cost }));
+        return true;
+      },
+      recordGameResult: (game, place, coinsEarned) =>
+        set((state) => ({
+          coins: state.coins + Math.max(0, Math.round(coinsEarned)),
+          trophies: [
+            ...state.trophies,
+            { game, medal: medalForPlace(place), at: Date.now() },
+          ],
+        })),
+      resetAll: () => set({ byDomain: blankAll(), coins: 0, trophies: [] }),
     }),
-    { name: '99daysofmath:progress', version: 1 },
+    {
+      name: '99daysofmath:progress',
+      version: 2,
+      // v1 had no coins/trophies; backfill them so older saves keep working.
+      migrate: (persisted) => {
+        const p = (persisted ?? {}) as Partial<ProgressState>;
+        return {
+          ...p,
+          coins: p.coins ?? 0,
+          trophies: p.trophies ?? [],
+        } as ProgressState;
+      },
+    },
   ),
 );

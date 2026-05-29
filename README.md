@@ -12,6 +12,27 @@ Live: https://700799.github.io/99daysofmath/
 - CA-Common-Core-specific and MAP-style items tagged inside the same bank
 - Phaser-rendered trail, KaTeX math, runs entirely on GitHub Pages
 
+## Rewards Arcade 🎉
+
+Finishing units earns 🪙 **coins**, which power a **Rewards Arcade** of mini-games
+(reachable from the home banner or the coin pill in the header):
+
+- **🎲 Math Party** — a Mario-Party-style board game. Roll the dice and race a CPU
+  rival (Foxy 🦊) around a 20-tile loop. Blue tiles pay coins, red tiles cost a few,
+  Lucky tiles are wildcards, and **Star tiles** let you spend 10 coins to buy a
+  Star — most Stars after 8 rounds wins. Math tiles pop a quick arithmetic
+  challenge for bonus coins. Unlocks at 1 ⭐.
+- **🏎️ Math Grand Prix** — a real-time kart race. Rivals drive at a steady pace
+  while you only move by answering math challenges, so solve fast to take the
+  checkered flag. Unlocks at 6 ⭐.
+
+Winning banks more coins and adds 🥇🥈🥉 trophies to your trophy case. Difficulty
+(Easy/Medium/Hard) controls the arithmetic in the challenge prompts. All game
+rules live in pure, unit-tested modules under [`src/rewards/`](src/rewards); the
+Phaser scenes (`src/phaser/MathPartyScene.ts`, `GrandPrixScene.ts`) handle only
+rendering and animation.
+
+
 ## Stack
 
 React 18, Vite 5, TypeScript, Tailwind CSS, Framer Motion, Phaser 3, Zustand, DuckDB-WASM reading a static Parquet file built from hand-authored JSON.

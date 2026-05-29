@@ -16,6 +16,24 @@ export function Home() {
 
   return (
     <div>
+      <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} className="mb-6">
+        <Link
+          to="/rewards"
+          className="block rounded-3xl p-5 text-white shadow-sm bg-gradient-to-br from-violet-500 to-fuchsia-500 hover:shadow-md transition-shadow"
+        >
+          <div className="flex items-center gap-4">
+            <div className="text-5xl">🎲</div>
+            <div className="flex-1 min-w-0">
+              <div className="font-display font-extrabold text-xl">Rewards Arcade</div>
+              <div className="text-sm text-white/90 mt-0.5">
+                Play <span className="font-bold">Math Party</span> &amp; Grand Prix — earn coins by finishing units!
+              </div>
+            </div>
+            <div className="text-2xl">▶</div>
+          </div>
+        </Link>
+      </motion.div>
+
       <div className="mb-6">
         <h1 className="text-3xl font-display font-extrabold text-slate-900">
           Pick a trail
