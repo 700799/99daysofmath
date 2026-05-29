@@ -7,6 +7,7 @@ interface Props {
 
 export function AppShell({ children }: Props) {
   const totalStars = useProgress((s) => s.totalStars());
+  const coins = useProgress((s) => s.coins);
   const location = useLocation();
   const isHome = location.pathname === '/' || location.pathname === '';
 
@@ -33,11 +34,21 @@ export function AppShell({ children }: Props) {
               <span className="font-display font-bold">Home</span>
             </Link>
           )}
-          <div className="flex items-center gap-1 bg-amber-100 px-3 py-1 rounded-full">
-            <span className="text-xl">⭐</span>
-            <span className="font-display font-bold text-amber-900">
-              {totalStars}
-            </span>
+          <div className="flex items-center gap-2">
+            <Link
+              to="/rewards"
+              aria-label="Rewards arcade"
+              className="flex items-center gap-1 bg-violet-100 hover:bg-violet-200 px-3 py-1 rounded-full transition-colors"
+            >
+              <span className="text-xl">🪙</span>
+              <span className="font-display font-bold text-violet-900 tabular-nums">{coins}</span>
+            </Link>
+            <div className="flex items-center gap-1 bg-amber-100 px-3 py-1 rounded-full">
+              <span className="text-xl">⭐</span>
+              <span className="font-display font-bold text-amber-900 tabular-nums">
+                {totalStars}
+              </span>
+            </div>
           </div>
         </div>
       </header>
