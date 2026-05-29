@@ -14,7 +14,7 @@ Live: https://700799.github.io/99daysofmath/
 
 ## Stack
 
-React 18, Vite 5, TypeScript, Tailwind CSS, Framer Motion, Phaser 3, Zustand, DuckDB-WASM reading a static Parquet file built from hand-authored JSON.
+React 18, Vite 5, TypeScript, Tailwind CSS, Framer Motion, Phaser 3, Zustand. Problems are hand-authored JSON, compiled into a single static `public/data/problems.json` the app fetches at runtime.
 
 ## Run locally
 
@@ -22,7 +22,7 @@ React 18, Vite 5, TypeScript, Tailwind CSS, Framer Motion, Phaser 3, Zustand, Du
 nvm use            # Node 22
 npm ci
 npm run validate:content
-npm run build:content   # writes public/data/problems.parquet
+npm run build:content   # writes public/data/problems.json
 npm run dev             # http://localhost:5173/99daysofmath/
 ```
 
@@ -35,7 +35,7 @@ After editing:
 ```sh
 npm run validate:content
 npm run build:content
-git add content/ public/data/problems.parquet
+git add content/ public/data/problems.json
 git commit -m "Add N problems to 6.XX"
 ```
 
