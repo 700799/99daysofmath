@@ -22,13 +22,16 @@ const LESSON_XP = 8;
 
 type Page =
   | { kind: 'intro' }
+  | { kind: 'video' }
   | { kind: 'concept' }
   | { kind: 'example'; idx: number }
   | { kind: 'practice'; idx: number }
   | { kind: 'watchout' };
 
 function buildPages(lesson: Lesson): Page[] {
-  const pages: Page[] = [{ kind: 'intro' }, { kind: 'concept' }];
+  const pages: Page[] = [{ kind: 'intro' }];
+  if (lesson.videoSrc) pages.push({ kind: 'video' });
+  pages.push({ kind: 'concept' });
   lesson.examples.forEach((_, i) => pages.push({ kind: 'example', idx: i }));
   lesson.practice.forEach((_, i) => pages.push({ kind: 'practice', idx: i }));
   pages.push({ kind: 'watchout' });
@@ -41,7 +44,9 @@ type SectionName = (typeof SECTION_ORDER)[number];
 
 function sectionOf(page: Page): SectionName {
   if (page.kind === 'intro') return 'Intro';
-  if (page.kind === 'concept') return 'Key idea';
+  // 'video' shares the 'Key idea' section with the text concept page so the
+  // breadcrumb structure stays at 5 fixed sections.
+  if (page.kind === 'video' || page.kind === 'concept') return 'Key idea';
   if (page.kind === 'example') return 'Examples';
   if (page.kind === 'practice') return 'Try it';
   return 'Wrap-up';
@@ -139,6 +144,9 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
                     transition={{ type: 'spring', stiffness: 280, damping: 24 }}
                   >
                     {current.kind === 'intro' && <IntroPage lesson={lesson} />}
+                    {current.kind === 'video' && lesson.videoSrc && (
+                      <VideoPage src={lesson.videoSrc} />
+                    )}
                     {current.kind === 'concept' && <ConceptPage lesson={lesson} />}
                     {current.kind === 'example' && (
                       <ExamplePage
@@ -299,6 +307,30 @@ function IntroPage({ lesson }: { lesson: Lesson }) {
           <li>• {lesson.practice.length} short questions to try</li>
         </ul>
       </div>
+    </div>
+  );
+}
+
+function VideoPage({ src }: { src: string }) {
+  const url = `${import.meta.env.BASE_URL}videos/lessons/${src}`;
+  return (
+    <div>
+      <PageTitle eyebrow="Animation" title="Watch how it works" />
+      <div className="mt-3 rounded-2xl overflow-hidden bg-slate-900 border-2 border-slate-200">
+        <video
+          src={url}
+          controls
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="w-full block"
+        />
+      </div>
+      <p className="text-xs text-slate-500 text-center mt-2">
+        Same idea, in motion. Loops automatically — tap the player to pause.
+      </p>
     </div>
   );
 }

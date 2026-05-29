@@ -21,6 +21,7 @@ export interface Lesson {
   examples: WorkedExample[]; // worked examples with step-by-step solutions
   practice: PracticeQuestion[]; // try-it questions with accepted alternatives
   watchOut: string;
+  videoSrc?: string; // optional Manim animation filename in public/videos/lessons/
 }
 
 export function lessonKey(domain: Domain, unit: number): string {
@@ -411,6 +412,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 1, title: 'Area of triangles & rectangles',
     objective: 'Find area with the right formula.',
+    videoSrc: '6.G-1.mp4',
     concept: [
       'Rectangle area = length × width.',
       'Triangle area = ½ × base × height.',

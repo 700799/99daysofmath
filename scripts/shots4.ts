@@ -115,7 +115,12 @@ async function main() {
   await page.waitForTimeout(500);
   await shoot(page, '/tmp/r4-lesson-intro.png', 'lesson (intro card)');
 
-  // Next → concept card (key idea)
+  // Next → animation card (only present when a Manim video is wired in)
+  await page.locator('button:has-text("Next")').click();
+  await page.waitForTimeout(600);
+  await shoot(page, '/tmp/r4-lesson-video.png', 'lesson (animation card)');
+
+  // Next → concept card (key idea — text)
   await page.locator('button:has-text("Next")').click();
   await page.locator('text=How it works').waitFor({ timeout: 4000 });
   await page.waitForTimeout(400);
