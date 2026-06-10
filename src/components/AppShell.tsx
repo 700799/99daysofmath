@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useProgress } from '../state/progress';
+import { Icon } from '../icons/Icon';
 
 interface Props {
   children: React.ReactNode;
@@ -20,7 +21,7 @@ export function AppShell({ children }: Props) {
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
           {isHome ? (
             <div className="flex items-center gap-2">
-              <span className="text-2xl">🦉</span>
+              <Icon name="owl" size={30} label="99 Days of Math owl mascot" />
               <span className="font-display font-extrabold text-xl text-slate-900">
                 99 Days of Math
               </span>
@@ -30,21 +31,24 @@ export function AppShell({ children }: Props) {
               to="/"
               className="flex items-center gap-2 text-slate-700 hover:text-slate-900"
             >
-              <span className="text-2xl">←</span>
+              <span className="text-2xl" aria-hidden="true">←</span>
               <span className="font-display font-bold">Home</span>
             </Link>
           )}
           <div className="flex items-center gap-2">
             <Link
               to="/rewards"
-              aria-label="Rewards arcade"
-              className="flex items-center gap-1 bg-violet-100 hover:bg-violet-200 px-3 py-1 rounded-full transition-colors"
+              aria-label={`Rewards arcade, ${coins} coins`}
+              className="flex items-center gap-1.5 bg-violet-100 hover:bg-violet-200 px-3 py-1 rounded-full transition-colors"
             >
-              <span className="text-xl">🪙</span>
+              <Icon name="coin" size={20} />
               <span className="font-display font-bold text-violet-900 tabular-nums">{coins}</span>
             </Link>
-            <div className="flex items-center gap-1 bg-amber-100 px-3 py-1 rounded-full">
-              <span className="text-xl">⭐</span>
+            <div
+              className="flex items-center gap-1.5 bg-amber-100 px-3 py-1 rounded-full"
+              aria-label={`${totalStars} stars earned`}
+            >
+              <Icon name="star" size={20} />
               <span className="font-display font-bold text-amber-900 tabular-nums">
                 {totalStars}
               </span>

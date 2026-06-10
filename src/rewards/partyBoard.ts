@@ -3,6 +3,7 @@
 // and deterministic helpers so the game logic can be unit-tested.
 
 import type { RNG } from './mathChallenge';
+import type { IconName } from '../icons/registry';
 
 export type PartyTileType = 'blue' | 'red' | 'star' | 'event' | 'challenge';
 
@@ -44,7 +45,7 @@ export const PARTY_CONFIG = {
 export interface PartyPlayer {
   id: 'you' | 'rival';
   name: string;
-  emoji: string;
+  icon: IconName;
   pos: number; // tile index
   coins: number;
   stars: number;
@@ -52,10 +53,23 @@ export interface PartyPlayer {
 
 export function makePlayers(): PartyPlayer[] {
   return [
-    { id: 'you', name: 'You', emoji: '🦉', pos: 0, coins: PARTY_CONFIG.startCoins, stars: 0 },
-    { id: 'rival', name: 'Foxy', emoji: '🦊', pos: 0, coins: PARTY_CONFIG.startCoins, stars: 0 },
+    { id: 'you', name: 'You', icon: 'owl', pos: 0, coins: PARTY_CONFIG.startCoins, stars: 0 },
+    { id: 'rival', name: 'Foxy', icon: 'fox', pos: 0, coins: PARTY_CONFIG.startCoins, stars: 0 },
   ];
 }
+
+/**
+ * Pip offsets for each die face (relative to the die center, ±10 grid).
+ * Shared by the Phaser dice renderer and unit tests.
+ */
+export const DICE_PIPS: Record<number, [number, number][]> = {
+  1: [[0, 0]],
+  2: [[-9, -9], [9, 9]],
+  3: [[-10, -10], [0, 0], [10, 10]],
+  4: [[-9, -9], [9, -9], [-9, 9], [9, 9]],
+  5: [[-9, -9], [9, -9], [0, 0], [-9, 9], [9, 9]],
+  6: [[-9, -10], [9, -10], [-9, 0], [9, 0], [-9, 10], [9, 10]],
+};
 
 /** Roll a six-sided die. */
 export function rollDie(rng: RNG = Math.random): number {
@@ -95,7 +109,7 @@ export function resolveEvent(rng: RNG = Math.random): EventOutcome {
     const loss = 2 + Math.floor(rng() * 3); // 2..4
     return { kind: 'penalty', coinDelta: -loss, stealAmount: 0, starDelta: 0, message: `Oops, −${loss} coins` };
   }
-  return { kind: 'jackpot', coinDelta: 0, stealAmount: 0, starDelta: 1, message: 'JACKPOT! ★ Star' };
+  return { kind: 'jackpot', coinDelta: 0, stealAmount: 0, starDelta: 1, message: 'JACKPOT! +1 Star' };
 }
 
 /** Whether the CPU rival gets a math tile right this turn. */

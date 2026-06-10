@@ -5,7 +5,9 @@ import {
   type ChallengeDifficulty,
 } from '../rewards/mathChallenge';
 import { GRAND_PRIX_CONFIG, grandPrixPayout } from '../rewards/grandPrix';
-import { MEDAL_EMOJI, medalForPlace } from '../rewards/economy';
+import { MEDAL_ICONS, medalForPlace } from '../rewards/economy';
+import { loadIconTextures } from '../icons/phaserTextures';
+import type { IconName } from '../icons/registry';
 
 export const PRIX_WIDTH = 420;
 export const PRIX_HEIGHT = 460;
@@ -28,7 +30,7 @@ const FINISH_X = 372;
 interface Kart {
   id: string;
   name: string;
-  emoji: string;
+  icon: IconName;
   dist: number;
   speed: number;
   isPlayer: boolean;
@@ -36,7 +38,7 @@ interface Kart {
   place: number;
   y: number;
   node: Phaser.GameObjects.Container;
-  placeText: Phaser.GameObjects.Text;
+  placeImg: Phaser.GameObjects.Image;
 }
 
 export class GrandPrixScene extends Phaser.Scene {
@@ -62,7 +64,7 @@ export class GrandPrixScene extends Phaser.Scene {
     this.onGameEnd = data.onGameEnd;
   }
 
-  create() {
+  async create() {
     this.isDead = false;
     this.raceOver = false;
     this.racing = false;
@@ -72,6 +74,18 @@ export class GrandPrixScene extends Phaser.Scene {
     this.events.once(Phaser.Scenes.Events.DESTROY, () => (this.isDead = true));
 
     this.cameras.main.setBackgroundColor('#0f172a');
+
+    await loadIconTextures(this, [
+      'kart',
+      'turtle',
+      'rabbit',
+      'flag',
+      'medal-gold',
+      'medal-silver',
+      'medal-bronze',
+    ]);
+    if (this.isDead) return;
+
     this.drawTrack();
     this.buildKarts();
 
@@ -97,8 +111,9 @@ export class GrandPrixScene extends Phaser.Scene {
 
   private drawTrack() {
     const W = PRIX_WIDTH;
+    this.add.image(W / 2 - 92, 26, 'flag').setDisplaySize(26, 26);
     this.add
-      .text(W / 2, 26, '🏁 Math Grand Prix', {
+      .text(W / 2 + 14, 26, 'Math Grand Prix', {
         fontFamily: FONT,
         fontSize: '20px',
         fontStyle: '900',
@@ -140,15 +155,15 @@ export class GrandPrixScene extends Phaser.Scene {
     const [rivalA, rivalB] = GRAND_PRIX_CONFIG.rivals;
     const [speedA, speedB] = GRAND_PRIX_CONFIG.cpuSpeeds;
 
-    const specs = [
-      { id: 'turbo', name: rivalA.name, emoji: rivalA.emoji, isPlayer: false, speed: speedA, y: lanes[0] },
-      { id: 'you', name: 'You', emoji: '🏎️', isPlayer: true, speed: 0, y: lanes[1] },
-      { id: 'zoom', name: rivalB.name, emoji: rivalB.emoji, isPlayer: false, speed: speedB, y: lanes[2] },
+    const specs: { id: string; name: string; icon: IconName; isPlayer: boolean; speed: number; y: number }[] = [
+      { id: 'turbo', name: rivalA.name, icon: rivalA.icon, isPlayer: false, speed: speedA, y: lanes[0] },
+      { id: 'you', name: 'You', icon: 'kart', isPlayer: true, speed: 0, y: lanes[1] },
+      { id: 'zoom', name: rivalB.name, icon: rivalB.icon, isPlayer: false, speed: speedB, y: lanes[2] },
     ];
 
     this.karts = specs.map((s) => {
       const node = this.add.container(START_X, s.y).setDepth(10);
-      const face = this.add.text(0, 0, s.emoji, { fontFamily: FONT, fontSize: '30px' }).setOrigin(0.5);
+      const face = this.add.image(0, -2, s.icon).setDisplaySize(34, 34);
       const tag = this.add
         .text(0, 22, s.name, {
           fontFamily: FONT,
@@ -158,9 +173,10 @@ export class GrandPrixScene extends Phaser.Scene {
         })
         .setOrigin(0.5);
       node.add([face, tag]);
-      const placeText = this.add
-        .text(START_X, s.y - 30, '', { fontFamily: FONT, fontSize: '22px' })
-        .setOrigin(0.5)
+      const placeImg = this.add
+        .image(START_X, s.y - 32, 'medal-gold')
+        .setDisplaySize(24, 24)
+        .setVisible(false)
         .setDepth(11);
       return {
         ...s,
@@ -168,7 +184,7 @@ export class GrandPrixScene extends Phaser.Scene {
         finished: false,
         place: 0,
         node,
-        placeText,
+        placeImg,
       } as Kart;
     });
 
@@ -205,7 +221,7 @@ export class GrandPrixScene extends Phaser.Scene {
 
   private start() {
     this.racing = true;
-    this.setHint('Solve to GO! ⚡');
+    this.setHint('Solve to GO!');
     void this.askLoop();
   }
 
@@ -235,7 +251,7 @@ export class GrandPrixScene extends Phaser.Scene {
         GRAND_PRIX_CONFIG.trackLength,
         this.player.dist + GRAND_PRIX_CONFIG.boostPerCorrect,
       );
-      this.floatText(this.player.node.x, this.player.y - 30, 'BOOST! ⚡', '#58CC02');
+      this.floatText(this.player.node.x, this.player.y - 30, 'BOOST!', '#58CC02');
       this.lurch(this.player);
     } else {
       this.player.dist = Math.max(0, this.player.dist - GRAND_PRIX_CONFIG.penaltyPerWrong);
@@ -257,7 +273,7 @@ export class GrandPrixScene extends Phaser.Scene {
     if (k.finished) return;
     k.finished = true;
     k.place = this.nextPlace++;
-    k.placeText.setText(MEDAL_EMOJI[medalForPlace(k.place)]);
+    k.placeImg.setTexture(MEDAL_ICONS[medalForPlace(k.place)]).setVisible(true);
     this.tweens.add({ targets: k.node, scale: 1.25, duration: 200, yoyo: true });
     if (k.isPlayer) this.endRace();
   }
@@ -267,7 +283,7 @@ export class GrandPrixScene extends Phaser.Scene {
   private layoutKart(k: Kart) {
     const x = START_X + (k.dist / GRAND_PRIX_CONFIG.trackLength) * (FINISH_X - START_X);
     k.node.x = x;
-    k.placeText.x = x;
+    k.placeImg.x = x;
   }
 
   private lurch(k: Kart) {
@@ -330,7 +346,7 @@ export class GrandPrixScene extends Phaser.Scene {
     bg.fillRoundedRect(-150, -140, 300, 280, 26);
 
     const title = this.add
-      .text(0, -100, won ? 'Checkered Flag! 🏁' : `You placed P${place}`, {
+      .text(0, -100, won ? 'Checkered Flag!' : `You placed P${place}`, {
         fontFamily: FONT,
         fontSize: '24px',
         fontStyle: '900',
@@ -338,8 +354,8 @@ export class GrandPrixScene extends Phaser.Scene {
       })
       .setOrigin(0.5);
     const medal = this.add
-      .text(0, -42, MEDAL_EMOJI[medalForPlace(place)], { fontFamily: FONT, fontSize: '60px' })
-      .setOrigin(0.5);
+      .image(0, -38, MEDAL_ICONS[medalForPlace(place)])
+      .setDisplaySize(64, 64);
     const reward = this.add
       .text(0, 28, `+${payout} coins banked!`, {
         fontFamily: FONT,
@@ -349,7 +365,7 @@ export class GrandPrixScene extends Phaser.Scene {
       })
       .setOrigin(0.5);
 
-    const again = this.makeButton(0, 96, 220, 58, '🔄 Race Again', 0xff9600, () => {
+    const again = this.makeButton(0, 96, 220, 58, 'Race Again', 0xff9600, () => {
       this.scene.restart();
     });
 

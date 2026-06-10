@@ -6,6 +6,7 @@ import {
 } from '../rewards/mathChallenge';
 import {
   BOARD,
+  DICE_PIPS,
   PARTY_CONFIG,
   TILE_STYLES,
   makePlayers,
@@ -17,6 +18,8 @@ import {
   partyPayout,
   type PartyPlayer,
 } from '../rewards/partyBoard';
+import { MEDAL_ICONS, medalForPlace } from '../rewards/economy';
+import { loadIconTextures } from '../icons/phaserTextures';
 
 export const PARTY_WIDTH = 420;
 export const PARTY_HEIGHT = 640;
@@ -45,6 +48,8 @@ const BOARD_CY = 232;
 const BOARD_RX = 152;
 const BOARD_RY = 158;
 const TILE_R = 16;
+/** DICE_PIPS offsets are on a ±10 grid; scale up for the 60px die face. */
+const PIP_SCALE = 1.4;
 
 export class MathPartyScene extends Phaser.Scene {
   private difficulty: ChallengeDifficulty = 2;
@@ -61,11 +66,11 @@ export class MathPartyScene extends Phaser.Scene {
 
   private tilePos: { x: number; y: number }[] = [];
   private tokens!: Record<PlayerId, Phaser.GameObjects.Container>;
-  private diceText!: Phaser.GameObjects.Text;
+  private diceBox!: Phaser.GameObjects.Container;
+  private diceFace!: Phaser.GameObjects.Graphics;
   private roundText!: Phaser.GameObjects.Text;
   private activeText!: Phaser.GameObjects.Text;
-  private youInfo!: Phaser.GameObjects.Text;
-  private rivalInfo!: Phaser.GameObjects.Text;
+  private scoreTexts!: Record<PlayerId, { coins: Phaser.GameObjects.Text; stars: Phaser.GameObjects.Text }>;
   private hintText!: Phaser.GameObjects.Text;
   private rollBtn!: Phaser.GameObjects.Container;
 
@@ -79,7 +84,7 @@ export class MathPartyScene extends Phaser.Scene {
     this.onGameEnd = data.onGameEnd;
   }
 
-  create() {
+  async create() {
     this.isDead = false;
     this.gameOver = false;
     this.busy = false;
@@ -92,6 +97,17 @@ export class MathPartyScene extends Phaser.Scene {
     this.events.once(Phaser.Scenes.Events.DESTROY, () => (this.isDead = true));
 
     this.cameras.main.setBackgroundColor('#F8FAFC');
+
+    await loadIconTextures(this, [
+      'owl',
+      'fox',
+      'star',
+      'coin',
+      'medal-gold',
+      'medal-silver',
+    ]);
+    if (this.isDead) return;
+
     this.computeBoard();
     this.drawBoardPath();
     this.drawTiles();
@@ -132,14 +148,18 @@ export class MathPartyScene extends Phaser.Scene {
       const r = type === 'star' ? TILE_R + 3 : TILE_R;
       this.add.circle(p.x, p.y + 3, r, 0x000000, 0.12);
       this.add.circle(p.x, p.y, r, style.color, 1).setStrokeStyle(3, 0xffffff, 1);
-      this.add
-        .text(p.x, p.y, style.label, {
-          fontFamily: FONT,
-          fontSize: type === 'star' ? '18px' : '16px',
-          fontStyle: '900',
-          color: '#ffffff',
-        })
-        .setOrigin(0.5);
+      if (type === 'star') {
+        this.add.image(p.x, p.y, 'star').setDisplaySize(22, 22);
+      } else {
+        this.add
+          .text(p.x, p.y, style.label, {
+            fontFamily: FONT,
+            fontSize: '16px',
+            fontStyle: '900',
+            color: '#ffffff',
+          })
+          .setOrigin(0.5);
+      }
     });
 
     // Mark the start tile.
@@ -165,12 +185,69 @@ export class MathPartyScene extends Phaser.Scene {
       const base = this.tilePos[p.pos];
       const c = this.add.container(base.x + off.dx, base.y + off.dy).setDepth(20);
       const ring = this.add.circle(0, 0, 15, 0xffffff, 1).setStrokeStyle(3, 0x0f172a, 0.15);
-      const face = this.add
-        .text(0, 0, p.emoji, { fontFamily: FONT, fontSize: '22px' })
-        .setOrigin(0.5);
+      const face = this.add.image(0, 0, p.icon).setDisplaySize(24, 24);
       c.add([ring, face]);
       this.tokens[p.id] = c;
     }
+  }
+
+  /** Legend row: a colored dot + label for each tile type, centered. */
+  private drawLegend(y: number) {
+    const entries: { color: number; label: string }[] = [
+      { color: TILE_STYLES.blue.color, label: 'coins' },
+      { color: TILE_STYLES.red.color, label: 'lose' },
+      { color: TILE_STYLES.star.color, label: 'star' },
+      { color: TILE_STYLES.event.color, label: 'luck' },
+      { color: TILE_STYLES.challenge.color, label: 'math' },
+    ];
+    const container = this.add.container(0, y);
+    let x = 0;
+    for (const e of entries) {
+      const dot = this.add.circle(x + 5, 0, 5, e.color, 1);
+      const label = this.add
+        .text(x + 13, 0, e.label, {
+          fontFamily: FONT,
+          fontSize: '11px',
+          fontStyle: '700',
+          color: '#94a3b8',
+        })
+        .setOrigin(0, 0.5);
+      container.add([dot, label]);
+      x += 13 + label.width + 12;
+    }
+    container.x = (PARTY_WIDTH - (x - 12)) / 2;
+  }
+
+  /** One score row: avatar, name, coin icon + count, star icon + count. */
+  private drawScoreRow(y: number, p: PartyPlayer) {
+    this.add.image(86, y, p.icon).setDisplaySize(22, 22);
+    this.add
+      .text(102, y, p.name, {
+        fontFamily: FONT,
+        fontSize: '17px',
+        fontStyle: '800',
+        color: '#0f172a',
+      })
+      .setOrigin(0, 0.5);
+    this.add.image(208, y, 'coin').setDisplaySize(18, 18);
+    const coins = this.add
+      .text(222, y, '0', {
+        fontFamily: FONT,
+        fontSize: '17px',
+        fontStyle: '800',
+        color: '#0f172a',
+      })
+      .setOrigin(0, 0.5);
+    this.add.image(286, y, 'star').setDisplaySize(18, 18);
+    const stars = this.add
+      .text(300, y, '0', {
+        fontFamily: FONT,
+        fontSize: '17px',
+        fontStyle: '800',
+        color: '#0f172a',
+      })
+      .setOrigin(0, 0.5);
+    this.scoreTexts[p.id] = { coins, stars };
   }
 
   private drawHud() {
@@ -192,28 +269,18 @@ export class MathPartyScene extends Phaser.Scene {
       })
       .setOrigin(1, 0);
 
-    this.add
-      .text(W / 2, 18, '🔵+  🔴−  ★star  ?luck  ×math', {
-        fontFamily: FONT,
-        fontSize: '11px',
-        fontStyle: '700',
-        color: '#94a3b8',
-      })
-      .setOrigin(0.5, 0);
+    this.drawLegend(40);
 
     const divider = this.add.graphics();
     divider.lineStyle(2, 0xe2e8f0, 1);
     divider.lineBetween(20, 414, W - 20, 414);
 
-    this.youInfo = this.add
-      .text(W / 2, 434, '', { fontFamily: FONT, fontSize: '18px', fontStyle: '800', color: '#0f172a' })
-      .setOrigin(0.5);
-    this.rivalInfo = this.add
-      .text(W / 2, 462, '', { fontFamily: FONT, fontSize: '18px', fontStyle: '800', color: '#0f172a' })
-      .setOrigin(0.5);
+    this.scoreTexts = {} as MathPartyScene['scoreTexts'];
+    this.drawScoreRow(436, this.players[0]);
+    this.drawScoreRow(466, this.players[1]);
 
     // Dice
-    const dice = this.add.container(98, 548).setDepth(5);
+    this.diceBox = this.add.container(98, 548).setDepth(5);
     const dg = this.add.graphics();
     dg.fillStyle(0x000000, 0.12);
     dg.fillRoundedRect(-28, -25, 60, 60, 14);
@@ -221,12 +288,11 @@ export class MathPartyScene extends Phaser.Scene {
     dg.fillRoundedRect(-30, -30, 60, 60, 14);
     dg.lineStyle(3, 0xe2e8f0, 1);
     dg.strokeRoundedRect(-30, -30, 60, 60, 14);
-    this.diceText = this.add
-      .text(0, 0, '🎲', { fontFamily: FONT, fontSize: '30px', fontStyle: '900', color: '#0f172a' })
-      .setOrigin(0.5);
-    dice.add([dg, this.diceText]);
+    this.diceFace = this.add.graphics();
+    this.diceBox.add([dg, this.diceFace]);
+    this.drawDieFace(5);
 
-    this.rollBtn = this.makeButton(W / 2 + 34, 548, 168, 64, '🎲 ROLL', 0x58cc02, () => {
+    this.rollBtn = this.makeButton(W / 2 + 34, 548, 168, 64, 'ROLL', 0x58cc02, () => {
       if (!this.canRoll || this.busy) return;
       void this.doTurn();
     });
@@ -240,6 +306,15 @@ export class MathPartyScene extends Phaser.Scene {
         align: 'center',
       })
       .setOrigin(0.5);
+  }
+
+  /** Draw the pip layout for a die face inside the dice box. */
+  private drawDieFace(n: number) {
+    this.diceFace.clear();
+    this.diceFace.fillStyle(0x7c3aed, 1);
+    for (const [px, py] of DICE_PIPS[n] ?? []) {
+      this.diceFace.fillCircle(px * PIP_SCALE, py * PIP_SCALE, 5);
+    }
   }
 
   private makeButton(
@@ -354,11 +429,11 @@ export class MathPartyScene extends Phaser.Scene {
         if (p.coins >= PARTY_CONFIG.starCost) {
           p.coins -= PARTY_CONFIG.starCost;
           p.stars += 1;
-          this.floatText(tile.x, tile.y, '★ +1 STAR!', '#f59e0b');
+          this.floatText(tile.x, tile.y, '+1 STAR!', '#f59e0b');
           this.celebrate(p);
           await this.wait(850);
         } else {
-          this.floatText(tile.x, tile.y, `Need ${PARTY_CONFIG.starCost}🪙`, '#94a3b8');
+          this.floatText(tile.x, tile.y, `Need ${PARTY_CONFIG.starCost} coins`, '#94a3b8');
           await this.wait(650);
         }
         break;
@@ -369,7 +444,7 @@ export class MathPartyScene extends Phaser.Scene {
           const taken = Math.min(opp.coins, out.stealAmount);
           opp.coins -= taken;
           p.coins += taken;
-          message = `Swiped ${taken}🪙!`;
+          message = `Swiped ${taken} coins!`;
         } else {
           p.coins = Math.max(0, p.coins + out.coinDelta);
         }
@@ -428,11 +503,11 @@ export class MathPartyScene extends Phaser.Scene {
         callback: () => {
           flips += 1;
           if (flips > flipsTotal) {
-            this.diceText.setText(String(final));
-            this.tweens.add({ targets: this.diceText, scale: 1.3, duration: 110, yoyo: true });
+            this.drawDieFace(final);
+            this.tweens.add({ targets: this.diceBox, scale: 1.18, duration: 110, yoyo: true });
             resolve(final);
           } else {
-            this.diceText.setText(String(1 + Math.floor(Math.random() * 6)));
+            this.drawDieFace(rollDie());
           }
         },
       });
@@ -466,8 +541,8 @@ export class MathPartyScene extends Phaser.Scene {
     this.tweens.add({ targets: token, scale: 1.5, duration: 180, yoyo: true, ease: 'Back.easeOut' });
     for (let i = 0; i < 6; i++) {
       const star = this.add
-        .text(token.x, token.y, '⭐', { fontFamily: FONT, fontSize: '16px' })
-        .setOrigin(0.5)
+        .image(token.x, token.y, 'star')
+        .setDisplaySize(16, 16)
         .setDepth(40);
       const ang = (i / 6) * Math.PI * 2;
       this.tweens.add({
@@ -506,10 +581,10 @@ export class MathPartyScene extends Phaser.Scene {
   }
 
   private updateHud() {
-    const you = this.players[0];
-    const rival = this.players[1];
-    this.youInfo.setText(`${you.emoji} You    🪙 ${you.coins}   ★ ${you.stars}`);
-    this.rivalInfo.setText(`${rival.emoji} ${rival.name}   🪙 ${rival.coins}   ★ ${rival.stars}`);
+    for (const p of this.players) {
+      this.scoreTexts[p.id].coins.setText(String(p.coins));
+      this.scoreTexts[p.id].stars.setText(String(p.stars));
+    }
     this.roundText.setText(`Round ${Math.min(this.round, PARTY_CONFIG.totalRounds)}/${PARTY_CONFIG.totalRounds}`);
   }
 
@@ -579,10 +654,10 @@ export class MathPartyScene extends Phaser.Scene {
       })
       .setOrigin(0.5);
     const medal = this.add
-      .text(0, -64, won ? '🥇' : '🥈', { fontFamily: FONT, fontSize: '64px' })
-      .setOrigin(0.5);
+      .image(0, -62, MEDAL_ICONS[medalForPlace(place)])
+      .setDisplaySize(72, 72);
     const score = this.add
-      .text(0, 6, `★ ${you.stars} Stars    🪙 ${you.coins} Coins`, {
+      .text(0, 6, `${you.stars} Stars   ·   ${you.coins} Coins`, {
         fontFamily: FONT,
         fontSize: '18px',
         fontStyle: '800',
@@ -598,7 +673,7 @@ export class MathPartyScene extends Phaser.Scene {
       })
       .setOrigin(0.5);
 
-    const again = this.makeButton(0, 122, 220, 60, '🔄 Play Again', 0xce82ff, () => {
+    const again = this.makeButton(0, 122, 220, 60, 'Play Again', 0xce82ff, () => {
       this.scene.restart();
     });
 

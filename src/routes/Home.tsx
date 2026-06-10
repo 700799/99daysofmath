@@ -5,10 +5,11 @@ import {
   DOMAIN_LABELS,
   DOMAIN_DESCRIPTIONS,
   DOMAIN_COLORS,
-  DOMAIN_EMOJI,
 } from '../types/problem';
 import { useProgress } from '../state/progress';
 import { useDomainSummary } from '../hooks/useProblems';
+import { Icon } from '../icons/Icon';
+import { DOMAIN_ICONS } from '../icons/registry';
 
 export function Home() {
   const { data: summary, loading, error } = useDomainSummary();
@@ -22,14 +23,14 @@ export function Home() {
           className="block rounded-3xl p-5 text-white shadow-sm bg-gradient-to-br from-violet-500 to-fuchsia-500 hover:shadow-md transition-shadow"
         >
           <div className="flex items-center gap-4">
-            <div className="text-5xl">🎲</div>
+            <Icon name="controller" size={52} />
             <div className="flex-1 min-w-0">
               <div className="font-display font-extrabold text-xl">Rewards Arcade</div>
               <div className="text-sm text-white/90 mt-0.5">
                 Play <span className="font-bold">Math Party</span> &amp; Grand Prix — earn coins by finishing units!
               </div>
             </div>
-            <div className="text-2xl">▶</div>
+            <Icon name="play" size={22} />
           </div>
         </Link>
       </motion.div>
@@ -72,7 +73,7 @@ export function Home() {
                 style={{ borderLeftWidth: 8, borderLeftColor: DOMAIN_COLORS[d] }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="text-4xl">{DOMAIN_EMOJI[d]}</div>
+                  <Icon name={DOMAIN_ICONS[d]} size={44} className="shrink-0 mt-1" />
                   <div className="flex-1 min-w-0">
                     <div className="font-display font-extrabold text-lg text-slate-900">
                       {DOMAIN_LABELS[d]}
@@ -93,7 +94,7 @@ export function Home() {
                   </div>
                   <div className="text-right">
                     <div className="inline-flex items-center gap-1 bg-amber-100 px-2 py-1 rounded-full">
-                      <span>⭐</span>
+                      <Icon name="star" size={16} />
                       <span className="font-display font-bold text-amber-900 text-sm">
                         {earned}
                       </span>

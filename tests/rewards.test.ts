@@ -16,6 +16,7 @@ import {
 } from '../src/rewards/mathChallenge';
 import {
   BOARD,
+  DICE_PIPS,
   rollDie,
   advancePos,
   resolveEvent,
@@ -167,6 +168,11 @@ describe('partyBoard basics', () => {
   it('has exactly two star tiles', () => {
     expect(BOARD.filter((t) => t === 'star')).toHaveLength(2);
   });
+  it('has a pip layout matching every die face', () => {
+    for (let face = 1; face <= 6; face++) {
+      expect(DICE_PIPS[face]).toHaveLength(face);
+    }
+  });
 });
 
 describe('resolveEvent', () => {
@@ -194,8 +200,8 @@ describe('resolveEvent', () => {
 
 describe('ranking + payout', () => {
   const players: PartyPlayer[] = [
-    { id: 'you', name: 'You', emoji: '🦉', pos: 0, coins: 8, stars: 2 },
-    { id: 'rival', name: 'Foxy', emoji: '🦊', pos: 0, coins: 30, stars: 2 },
+    { id: 'you', name: 'You', icon: 'owl', pos: 0, coins: 8, stars: 2 },
+    { id: 'rival', name: 'Foxy', icon: 'fox', pos: 0, coins: 30, stars: 2 },
   ];
   it('ranks by stars then coins', () => {
     const ranked = rankPlayers(players);
@@ -207,13 +213,13 @@ describe('ranking + payout', () => {
   });
   it('breaks exact ties in the human player favor', () => {
     const tied: PartyPlayer[] = [
-      { id: 'you', name: 'You', emoji: '🦉', pos: 0, coins: 5, stars: 1 },
-      { id: 'rival', name: 'Foxy', emoji: '🦊', pos: 0, coins: 5, stars: 1 },
+      { id: 'you', name: 'You', icon: 'owl', pos: 0, coins: 5, stars: 1 },
+      { id: 'rival', name: 'Foxy', icon: 'fox', pos: 0, coins: 5, stars: 1 },
     ];
     expect(placeOf(tied, 'you')).toBe(1);
   });
   it('pays more for winning', () => {
-    const winner: PartyPlayer = { id: 'you', name: 'You', emoji: '🦉', pos: 0, coins: 12, stars: 3 };
+    const winner: PartyPlayer = { id: 'you', name: 'You', icon: 'owl', pos: 0, coins: 12, stars: 3 };
     expect(partyPayout(winner, 1)).toBeGreaterThan(partyPayout(winner, 2));
   });
   it('starts both players with the configured coins', () => {

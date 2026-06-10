@@ -26,14 +26,6 @@ export const DOMAIN_COLORS: Record<Domain, string> = {
   '6.SP': '#FF4B4B',
 };
 
-export const DOMAIN_EMOJI: Record<Domain, string> = {
-  '6.RP': '⚖️',
-  '6.NS': '🔢',
-  '6.EE': '🧮',
-  '6.G': '📐',
-  '6.SP': '📊',
-};
-
 export type AnswerType =
   | 'numeric'
   | 'fraction'

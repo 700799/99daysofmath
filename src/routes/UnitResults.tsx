@@ -1,13 +1,14 @@
 import { useParams, useLocation, Navigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { DOMAINS, type Domain } from '../types/problem';
-import { StarRating } from '../components/StarRating';
 import type { Stars } from '../state/progress';
+import { Icon } from '../icons/Icon';
 
 interface ResultsState {
   stars: Stars;
   missedCount: number;
   total: number;
+  coinsEarned?: number;
 }
 
 export function UnitResults() {
@@ -22,6 +23,7 @@ export function UnitResults() {
   }
 
   const correct = state.total - state.missedCount;
+  const coins = state.coinsEarned ?? 0;
 
   return (
     <motion.div
@@ -29,7 +31,14 @@ export function UnitResults() {
       animate={{ opacity: 1, y: 0 }}
       className="text-center"
     >
-      <div className="text-5xl mb-3">🏆</div>
+      <motion.div
+        initial={{ scale: 0, rotate: -12 }}
+        animate={{ scale: 1, rotate: 0 }}
+        transition={{ type: 'spring', stiffness: 260, damping: 16 }}
+        className="flex justify-center mb-3"
+      >
+        <Icon name="trophy" size={72} label="Trophy" />
+      </motion.div>
       <h1 className="text-3xl font-display font-extrabold text-slate-900">
         Unit complete!
       </h1>
@@ -37,9 +46,36 @@ export function UnitResults() {
         {domain} · Unit {unit}
       </p>
 
-      <div className="mt-6 flex justify-center">
-        <StarRating stars={state.stars} size="lg" />
+      <div
+        className="mt-6 flex justify-center gap-1.5"
+        role="img"
+        aria-label={`${state.stars} of 3 stars`}
+      >
+        {[0, 1, 2].map((i) => (
+          <motion.div
+            key={i}
+            initial={{ scale: 0, y: 14 }}
+            animate={{ scale: 1, y: 0 }}
+            transition={{ delay: 0.25 + i * 0.18, type: 'spring', stiffness: 320, damping: 14 }}
+          >
+            <Icon name={i < state.stars ? 'star' : 'star-dim'} size={46} />
+          </motion.div>
+        ))}
       </div>
+
+      {coins > 0 && (
+        <motion.div
+          initial={{ scale: 0.6, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.85, type: 'spring', stiffness: 300, damping: 18 }}
+          className="mt-5 inline-flex items-center gap-2 bg-violet-100 px-4 py-2 rounded-full"
+        >
+          <Icon name="coin" size={22} />
+          <span className="font-display font-extrabold text-violet-900">
+            +{coins} coins for the Arcade!
+          </span>
+        </motion.div>
+      )}
 
       <div className="mt-6 grid grid-cols-2 gap-3">
         <div className="bg-green-50 border border-green-200 rounded-2xl p-4">
@@ -65,6 +101,13 @@ export function UnitResults() {
         className="mt-8 inline-block w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-sm"
       >
         Back to trail
+      </Link>
+      <Link
+        to="/rewards"
+        className="mt-3 inline-flex items-center justify-center gap-2 w-full min-h-12 px-6 py-2.5 rounded-2xl bg-violet-100 hover:bg-violet-200 text-violet-900 font-display font-extrabold shadow-sm"
+      >
+        <Icon name="controller" size={20} />
+        <span>Play in the Arcade</span>
       </Link>
     </motion.div>
   );

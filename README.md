@@ -32,10 +32,18 @@ rules live in pure, unit-tested modules under [`src/rewards/`](src/rewards); the
 Phaser scenes (`src/phaser/MathPartyScene.ts`, `GrandPrixScene.ts`) handle only
 rendering and animation.
 
+## Icons
+
+Every visual in the app — the owl mascot, Foxy the rival, stars, coins, medals,
+the dice, the kart, domain badges — is a hand-drawn flat SVG in
+[`src/icons/shapes.ts`](src/icons/shapes.ts) (no emoji, no icon fonts, no
+`<text>` elements). One registry feeds both worlds: React renders icons via the
+`<Icon>` component, and Phaser scenes rasterize the same markup into textures
+with `loadIconTextures`, so characters look identical in the UI and in-game.
 
 ## Stack
 
-React 18, Vite 5, TypeScript, Tailwind CSS, Framer Motion, Phaser 3, Zustand. Problems are hand-authored JSON, compiled into a single static `public/data/problems.json` the app fetches at runtime.
+React 18, Vite 5, TypeScript, Tailwind CSS, Framer Motion, Phaser 3, Zustand. Problems are hand-authored JSON, compiled into a single static `public/data/problems.json` the app fetches at runtime. Phaser (~1.4 MB) is code-split behind `React.lazy`, so the learning core loads without it.
 
 ## Run locally
 
