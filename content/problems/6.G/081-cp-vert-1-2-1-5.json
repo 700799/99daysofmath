@@ -1,0 +1,38 @@
+{
+  "id": "6.G.081",
+  "domain": "6.G",
+  "unit": 9,
+  "orderInUnit": 1,
+  "standard": "6.G.A.3",
+  "difficulty": 1,
+  "prompt": "On a coordinate grid, find the length of the segment from $(1, 2)$ to $(1, 5)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [
+    "3 units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Same x → subtract y-values.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same x → subtract y-values."
+    },
+    {
+      "level": "guide",
+      "text": "$|5 - 2|$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3$."
+    }
+  ],
+  "explanation": [
+    "Vertical segment: $|5 - 2| = 3$ units."
+  ],
+  "tags": [
+    "coordinate-plane",
+    "distance"
+  ],
+  "estimatedSeconds": 35
+}

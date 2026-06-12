@@ -1,0 +1,49 @@
+{
+  "id": "6.G.061",
+  "domain": "6.G",
+  "unit": 7,
+  "orderInUnit": 1,
+  "standard": "6.G.A.1",
+  "difficulty": 1,
+  "prompt": "Two rectangles sit side-by-side: a $4 \\times 3$ and a $4 \\times 2$. What is the **total area**?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [
+    "20 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find each area, then add.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find each area, then add."
+    },
+    {
+      "level": "guide",
+      "text": "$4 \\cdot 3 = 12$ and $4 \\cdot 2 = 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12 + 8 = 20$."
+    }
+  ],
+  "explanation": [
+    "Rect $1$: $4 \\times 3 = 12$.",
+    "Rect $2$: $4 \\times 2 = 8$.",
+    "Total: $12 + 8 = 20$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Treat as one rectangle",
+      "steps": [
+        "Side-by-side, total length $= 3 + 2 = 5$ and width $= 4$.",
+        "Area $= 4 \\cdot 5 = 20$."
+      ]
+    }
+  ],
+  "tags": [
+    "composite",
+    "area"
+  ],
+  "estimatedSeconds": 50
+}

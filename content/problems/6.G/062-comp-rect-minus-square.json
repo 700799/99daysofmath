@@ -1,0 +1,41 @@
+{
+  "id": "6.G.062",
+  "domain": "6.G",
+  "unit": 7,
+  "orderInUnit": 2,
+  "standard": "6.G.A.1",
+  "difficulty": 1,
+  "prompt": "A $6 \\times 5$ rectangle has a $2 \\times 2$ square cut out of it. What is the **area remaining**?",
+  "answerType": "numeric",
+  "primaryAnswer": "26",
+  "alternativeAnswers": [
+    "26 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Big area minus cut-out area.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Big area minus cut-out area."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\cdot 5 = 30$ and $2 \\cdot 2 = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$30 - 4 = 26$."
+    }
+  ],
+  "explanation": [
+    "Big rect: $6 \\times 5 = 30$.",
+    "Cut-out: $2 \\times 2 = 4$.",
+    "Remaining: $30 - 4 = 26$."
+  ],
+  "tags": [
+    "composite",
+    "area",
+    "subtract"
+  ],
+  "estimatedSeconds": 50
+}

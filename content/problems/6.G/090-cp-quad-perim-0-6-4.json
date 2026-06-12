@@ -1,0 +1,40 @@
+{
+  "id": "6.G.090",
+  "domain": "6.G",
+  "unit": 9,
+  "orderInUnit": 10,
+  "standard": "6.G.A.3",
+  "difficulty": 3,
+  "prompt": "A rectangle has vertices $(0, 0)$, $(6, 0)$, $(6, 4)$, $(0, 4)$. Find its **perimeter**.",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [
+    "20 units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Add all four sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add all four sides."
+    },
+    {
+      "level": "guide",
+      "text": "$L = 6$, $W = 4$. Perimeter $= 2(L + W)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2(6 + 4) = 20$."
+    }
+  ],
+  "explanation": [
+    "Length $6$, width $4$.",
+    "Perimeter: $2(10) = 20$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "coordinate-plane",
+    "perimeter"
+  ],
+  "estimatedSeconds": 60
+}

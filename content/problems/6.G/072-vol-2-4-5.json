@@ -1,0 +1,37 @@
+{
+  "id": "6.G.072",
+  "domain": "6.G",
+  "unit": 8,
+  "orderInUnit": 2,
+  "standard": "6.G.A.2",
+  "difficulty": 1,
+  "prompt": "Volume of a $2 \\times 4 \\times 5$ box?",
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": [
+    "40 cu units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$V = l \\cdot w \\cdot h$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$V = l \\cdot w \\cdot h$."
+    },
+    {
+      "level": "guide",
+      "text": "$2 \\cdot 4 \\cdot 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$40$."
+    }
+  ],
+  "explanation": [
+    "$2 \\cdot 4 = 8$, then $8 \\cdot 5 = 40$."
+  ],
+  "tags": [
+    "volume"
+  ],
+  "estimatedSeconds": 30
+}

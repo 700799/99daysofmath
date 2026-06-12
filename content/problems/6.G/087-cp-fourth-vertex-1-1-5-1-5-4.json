@@ -1,0 +1,41 @@
+{
+  "id": "6.G.087",
+  "domain": "6.G",
+  "unit": 9,
+  "orderInUnit": 7,
+  "standard": "6.G.A.3",
+  "difficulty": 2,
+  "prompt": "Three vertices of a rectangle are $(1,1)$, $(5,1)$, $(5,4)$. What is the **fourth vertex**?",
+  "answerType": "short-text",
+  "primaryAnswer": "(1, 4)",
+  "alternativeAnswers": [
+    "(1,4)",
+    "1, 4",
+    "1,4"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "It shares one coordinate with each of the others.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "It shares one coordinate with each of the others."
+    },
+    {
+      "level": "guide",
+      "text": "Same $x$ as $(1, 1)$ and same $y$ as $(5, 4)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(1, 4)$."
+    }
+  ],
+  "explanation": [
+    "Opposite of $(5, 4)$: needs $x = 1$, $y = 4$.",
+    "$(1, 4)$."
+  ],
+  "tags": [
+    "coordinate-plane",
+    "rectangle"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,40 @@
+{
+  "id": "6.G.099",
+  "domain": "6.G",
+  "unit": 10,
+  "orderInUnit": 9,
+  "standard": "6.G.A.4",
+  "difficulty": 3,
+  "prompt": "A gift box is $10 \\times 8 \\times 5$ inches. Find the amount of wrapping paper needed (in square inches) — i.e. its **surface area**.",
+  "answerType": "numeric",
+  "primaryAnswer": "340",
+  "alternativeAnswers": [
+    "340 sq in"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "SA $= 2(lw + lh + wh)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "SA $= 2(lw + lh + wh)$."
+    },
+    {
+      "level": "guide",
+      "text": "$10 \\cdot 8 = 80$, $10 \\cdot 5 = 50$, $8 \\cdot 5 = 40$. Sum $= 170$. Double $= 340$."
+    },
+    {
+      "level": "reveal",
+      "text": "$340$."
+    }
+  ],
+  "explanation": [
+    "Pairs of faces: $80$, $50$, $40$. Sum: $170$.",
+    "Total: $2(170) = 340$ sq in."
+  ],
+  "tags": [
+    "MAP-practice",
+    "surface-area",
+    "word"
+  ],
+  "estimatedSeconds": 100
+}

@@ -1,0 +1,40 @@
+{
+  "id": "6.G.066",
+  "domain": "6.G",
+  "unit": 7,
+  "orderInUnit": 6,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A figure has an $8 \\times 5$ rectangle with a triangle (base $4$, height $3$) attached. **Total area**?",
+  "answerType": "numeric",
+  "primaryAnswer": "46",
+  "alternativeAnswers": [
+    "46 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Rectangle area plus triangle area.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Rectangle area plus triangle area."
+    },
+    {
+      "level": "guide",
+      "text": "$8 \\cdot 5 = 40$ and $\\tfrac{1}{2} \\cdot 4 \\cdot 3 = 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$40 + 6 = 46$."
+    }
+  ],
+  "explanation": [
+    "Rectangle: $40$. Triangle: $\\tfrac{1}{2}(4)(3) = 6$.",
+    "Total: $46$."
+  ],
+  "tags": [
+    "composite",
+    "area",
+    "triangle"
+  ],
+  "estimatedSeconds": 65
+}

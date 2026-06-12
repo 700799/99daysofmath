@@ -1,0 +1,39 @@
+{
+  "id": "6.G.064",
+  "domain": "6.G",
+  "unit": 7,
+  "orderInUnit": 4,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A $10 \\times 10$ square has a $4 \\times 3$ rectangle removed. What is the **area remaining**?",
+  "answerType": "numeric",
+  "primaryAnswer": "88",
+  "alternativeAnswers": [
+    "88 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Big minus cut-out.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Big minus cut-out."
+    },
+    {
+      "level": "guide",
+      "text": "$10 \\cdot 10 = 100$, $4 \\cdot 3 = 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$100 - 12 = 88$."
+    }
+  ],
+  "explanation": [
+    "$100 - 12 = 88$ sq units."
+  ],
+  "tags": [
+    "composite",
+    "area",
+    "subtract"
+  ],
+  "estimatedSeconds": 45
+}

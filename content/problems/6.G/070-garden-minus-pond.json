@@ -1,0 +1,42 @@
+{
+  "id": "6.G.070",
+  "domain": "6.G",
+  "unit": 7,
+  "orderInUnit": 10,
+  "standard": "6.G.A.1",
+  "difficulty": 3,
+  "prompt": "A garden is a $20 \\times 15$ rectangle. A $5 \\times 5$ pond sits in one corner. What is the **area of the garden NOT covered by the pond**?",
+  "answerType": "numeric",
+  "primaryAnswer": "275",
+  "alternativeAnswers": [
+    "275 sq units",
+    "275 sq ft"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Garden area minus pond area.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Garden area minus pond area."
+    },
+    {
+      "level": "guide",
+      "text": "$20 \\cdot 15 = 300$, $5 \\cdot 5 = 25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$300 - 25 = 275$."
+    }
+  ],
+  "explanation": [
+    "Garden: $20 \\cdot 15 = 300$.",
+    "Pond: $25$.",
+    "Not pond: $300 - 25 = 275$ sq units."
+  ],
+  "tags": [
+    "MAP-practice",
+    "composite",
+    "word"
+  ],
+  "estimatedSeconds": 80
+}

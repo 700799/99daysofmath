@@ -1,0 +1,40 @@
+{
+  "id": "6.G.063",
+  "domain": "6.G",
+  "unit": 7,
+  "orderInUnit": 3,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "An L-shape is made of a $5 \\times 3$ rectangle and a $4 \\times 2$ rectangle. What is the **total area**?",
+  "answerType": "numeric",
+  "primaryAnswer": "23",
+  "alternativeAnswers": [
+    "23 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Split the L into the two named rectangles.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Split the L into the two named rectangles."
+    },
+    {
+      "level": "guide",
+      "text": "$5 \\cdot 3 = 15$ and $4 \\cdot 2 = 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$15 + 8 = 23$."
+    }
+  ],
+  "explanation": [
+    "Piece $1$: $15$ sq units. Piece $2$: $8$ sq units.",
+    "Total: $23$ sq units."
+  ],
+  "tags": [
+    "composite",
+    "area",
+    "L-shape"
+  ],
+  "estimatedSeconds": 55
+}

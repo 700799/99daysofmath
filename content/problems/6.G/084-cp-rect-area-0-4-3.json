@@ -1,0 +1,38 @@
+{
+  "id": "6.G.084",
+  "domain": "6.G",
+  "unit": 9,
+  "orderInUnit": 4,
+  "standard": "6.G.A.3",
+  "difficulty": 2,
+  "prompt": "A rectangle has corners $(0,0)$, $(4,0)$, $(4,3)$, $(0,3)$. Find its area.",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [
+    "12 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$A = L \\cdot W$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$A = L \\cdot W$."
+    },
+    {
+      "level": "guide",
+      "text": "$4 \\cdot 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12$."
+    }
+  ],
+  "explanation": [
+    "Length $4$ and width $3$: area $= 12$ sq units."
+  ],
+  "tags": [
+    "coordinate-plane",
+    "area"
+  ],
+  "estimatedSeconds": 35
+}

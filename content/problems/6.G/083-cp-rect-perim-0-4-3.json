@@ -1,0 +1,39 @@
+{
+  "id": "6.G.083",
+  "domain": "6.G",
+  "unit": 9,
+  "orderInUnit": 3,
+  "standard": "6.G.A.3",
+  "difficulty": 2,
+  "prompt": "A rectangle has corners $(0,0)$, $(4,0)$, $(4,3)$, $(0,3)$. Find its perimeter.",
+  "answerType": "numeric",
+  "primaryAnswer": "14",
+  "alternativeAnswers": [
+    "14 units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find length and width first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find length and width first."
+    },
+    {
+      "level": "guide",
+      "text": "L $= 4$, W $= 3$. Perimeter $= 2(L + W)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2(4 + 3) = 14$."
+    }
+  ],
+  "explanation": [
+    "Length: $4$, width: $3$.",
+    "Perimeter: $2(4 + 3) = 14$."
+  ],
+  "tags": [
+    "coordinate-plane",
+    "perimeter"
+  ],
+  "estimatedSeconds": 55
+}

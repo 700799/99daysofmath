@@ -1,0 +1,40 @@
+{
+  "id": "6.G.077",
+  "domain": "6.G",
+  "unit": 8,
+  "orderInUnit": 7,
+  "standard": "6.G.A.2",
+  "difficulty": 2,
+  "prompt": "Volume of a cube with edge $1.5$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3.375",
+  "alternativeAnswers": [
+    "3.375 cu units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$V = s^3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$V = s^3$."
+    },
+    {
+      "level": "guide",
+      "text": "$1.5 \\cdot 1.5 = 2.25$. Then $2.25 \\cdot 1.5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3.375$."
+    }
+  ],
+  "explanation": [
+    "$1.5^2 = 2.25$.",
+    "$2.25 \\cdot 1.5 = 3.375$."
+  ],
+  "tags": [
+    "volume",
+    "cube",
+    "decimal"
+  ],
+  "estimatedSeconds": 70
+}
