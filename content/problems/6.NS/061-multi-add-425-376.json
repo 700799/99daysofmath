@@ -1,0 +1,47 @@
+{
+  "id": "6.NS.061",
+  "domain": "6.NS",
+  "unit": 7,
+  "orderInUnit": 1,
+  "standard": "6.NS.B.3",
+  "difficulty": 1,
+  "prompt": "Compute $425 + 376$.",
+  "answerType": "numeric",
+  "primaryAnswer": "801",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Line up the digits by place value, then add.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Line up the digits by place value, then add."
+    },
+    {
+      "level": "guide",
+      "text": "Ones: $5 + 6 = 11$ (carry $1$). Tens: $2 + 7 + 1 = 10$ (carry $1$). Hundreds: $4 + 3 + 1 = 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$801$."
+    }
+  ],
+  "explanation": [
+    "Stack the numbers and add column by column.",
+    "Ones: $11$ (write 1, carry 1). Tens: $10$ (write 0, carry 1). Hundreds: $8$.",
+    "Result: $801$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Round-then-adjust",
+      "steps": [
+        "$425 + 400 = 825$.",
+        "We added $24$ extra, so subtract: $825 - 24 = 801$."
+      ]
+    }
+  ],
+  "tags": [
+    "add",
+    "multi-digit"
+  ],
+  "estimatedSeconds": 40
+}

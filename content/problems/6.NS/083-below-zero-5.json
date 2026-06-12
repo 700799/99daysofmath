@@ -1,0 +1,39 @@
+{
+  "id": "6.NS.083",
+  "domain": "6.NS",
+  "unit": 9,
+  "orderInUnit": 3,
+  "standard": "6.NS.C.5",
+  "difficulty": 1,
+  "prompt": "Which number represents \"$5$ degrees **below** zero\"?",
+  "answerType": "numeric",
+  "primaryAnswer": "-5",
+  "alternativeAnswers": [
+    "−5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Below\" zero means negative.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Below\" zero means negative."
+    },
+    {
+      "level": "guide",
+      "text": "Use a minus sign."
+    },
+    {
+      "level": "reveal",
+      "text": "$-5$."
+    }
+  ],
+  "explanation": [
+    "Below zero is represented by a negative number.",
+    "\"$5$ below\" $= -5$."
+  ],
+  "tags": [
+    "integer",
+    "context"
+  ],
+  "estimatedSeconds": 30
+}

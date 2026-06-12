@@ -1,0 +1,48 @@
+{
+  "id": "6.NS.092",
+  "domain": "6.NS",
+  "unit": 10,
+  "orderInUnit": 2,
+  "standard": "6.NS.C.8",
+  "difficulty": 2,
+  "prompt": "Find the distance from $(-2, 4)$ to $(5, 4)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [
+    "7 units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Same y-value means horizontal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same y-value means horizontal."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract the x-values: $|5 - (-2)|$."
+    },
+    {
+      "level": "reveal",
+      "text": "$|5 - (-2)| = 7$."
+    }
+  ],
+  "explanation": [
+    "Both points share $y = 4$ → horizontal segment.",
+    "$|5 - (-2)| = |7| = 7$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count along the x-axis",
+      "steps": [
+        "From $x = -2$, step right to $x = 5$.",
+        "That's $7$ steps."
+      ]
+    }
+  ],
+  "tags": [
+    "coordinate-plane",
+    "distance"
+  ],
+  "estimatedSeconds": 55
+}

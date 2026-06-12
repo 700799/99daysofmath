@@ -1,0 +1,41 @@
+{
+  "id": "6.NS.095",
+  "domain": "6.NS",
+  "unit": 10,
+  "orderInUnit": 5,
+  "standard": "6.NS.C.6.b",
+  "difficulty": 2,
+  "prompt": "Reflect the point $(-2, 4)$ across the **y-axis**.",
+  "answerType": "short-text",
+  "primaryAnswer": "(2, 4)",
+  "alternativeAnswers": [
+    "(2,4)",
+    "2, 4",
+    "2,4"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Across the y-axis: flip the sign of $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Across the y-axis: flip the sign of $x$."
+    },
+    {
+      "level": "guide",
+      "text": "$x = -2 \\to x = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(2, 4)$."
+    }
+  ],
+  "explanation": [
+    "Reflecting across the y-axis flips the sign of the x-coordinate.",
+    "$(-2, 4) \\to (2, 4)$."
+  ],
+  "tags": [
+    "coordinate-plane",
+    "reflection"
+  ],
+  "estimatedSeconds": 50
+}

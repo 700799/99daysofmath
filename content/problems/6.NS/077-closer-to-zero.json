@@ -1,0 +1,41 @@
+{
+  "id": "6.NS.077",
+  "domain": "6.NS",
+  "unit": 8,
+  "orderInUnit": 7,
+  "standard": "6.NS.C.7.c",
+  "difficulty": 3,
+  "prompt": "Which number is **closer to $0$** on a number line: $-4$ or $6$?",
+  "answerType": "short-text",
+  "primaryAnswer": "-4",
+  "alternativeAnswers": [
+    "−4",
+    "-4 is closer"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Distance to $0$ is the absolute value.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Distance to $0$ is the absolute value."
+    },
+    {
+      "level": "guide",
+      "text": "$|-4| = 4$ and $|6| = 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 < 6$, so $-4$ is closer to $0$."
+    }
+  ],
+  "explanation": [
+    "$|-4| = 4$ and $|6| = 6$.",
+    "$-4$ sits $4$ away from $0$; $6$ sits $6$ away.",
+    "$-4$ is closer to $0$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "absolute-value"
+  ],
+  "estimatedSeconds": 60
+}

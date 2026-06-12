@@ -1,0 +1,36 @@
+{
+  "id": "6.NS.082",
+  "domain": "6.NS",
+  "unit": 9,
+  "orderInUnit": 2,
+  "standard": "6.NS.C.6.a",
+  "difficulty": 1,
+  "prompt": "What is the opposite of $-12$?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Flip the sign.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Flip the sign."
+    },
+    {
+      "level": "guide",
+      "text": "$-12 \\to 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12$."
+    }
+  ],
+  "explanation": [
+    "Opposite of $-12$ is $12$."
+  ],
+  "tags": [
+    "integer",
+    "opposite"
+  ],
+  "estimatedSeconds": 25
+}

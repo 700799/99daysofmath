@@ -1,0 +1,46 @@
+{
+  "id": "6.NS.088",
+  "domain": "6.NS",
+  "unit": 9,
+  "orderInUnit": 8,
+  "standard": "6.NS.C.6",
+  "difficulty": 3,
+  "prompt": "Opposites are the same distance from $0$. What is the **distance from $-8$ to $8$** on a number line?",
+  "answerType": "numeric",
+  "primaryAnswer": "16",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Each opposite is $8$ from $0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each opposite is $8$ from $0$."
+    },
+    {
+      "level": "guide",
+      "text": "$8 + 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$16$."
+    }
+  ],
+  "explanation": [
+    "$-8$ is $8$ from $0$ on the left; $8$ is $8$ from $0$ on the right.",
+    "Total distance: $8 + 8 = 16$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Subtract with absolute value",
+      "steps": [
+        "Distance $= |8 - (-8)| = |16| = 16$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "integer",
+    "distance"
+  ],
+  "estimatedSeconds": 60
+}

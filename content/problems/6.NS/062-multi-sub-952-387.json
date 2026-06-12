@@ -1,0 +1,47 @@
+{
+  "id": "6.NS.062",
+  "domain": "6.NS",
+  "unit": 7,
+  "orderInUnit": 2,
+  "standard": "6.NS.B.3",
+  "difficulty": 1,
+  "prompt": "Compute $952 - 387$.",
+  "answerType": "numeric",
+  "primaryAnswer": "565",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Stack and subtract right to left, regrouping as needed.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Stack and subtract right to left, regrouping as needed."
+    },
+    {
+      "level": "guide",
+      "text": "Ones: regroup, $12 - 7 = 5$. Tens: $4 - 8$ regroup, $14 - 8 = 6$. Hundreds: $8 - 3 = 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$565$."
+    }
+  ],
+  "explanation": [
+    "Subtract column by column with regrouping.",
+    "Ones: $12 - 7 = 5$. Tens: $14 - 8 = 6$. Hundreds: $8 - 3 = 5$.",
+    "Result: $565$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use a friendly number",
+      "steps": [
+        "$952 - 400 = 552$.",
+        "We subtracted $13$ too many, so add back: $552 + 13 = 565$."
+      ]
+    }
+  ],
+  "tags": [
+    "subtract",
+    "multi-digit"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,41 @@
+{
+  "id": "6.NS.069",
+  "domain": "6.NS",
+  "unit": 7,
+  "orderInUnit": 9,
+  "standard": "6.NS.B.3",
+  "difficulty": 3,
+  "prompt": "Compute $13.6 \\times 4.5$.",
+  "answerType": "numeric",
+  "primaryAnswer": "61.2",
+  "alternativeAnswers": [
+    "61.20"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply as whole numbers, then place the decimal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply as whole numbers, then place the decimal."
+    },
+    {
+      "level": "guide",
+      "text": "$136 \\times 45 = 6120$. Total decimal places: $1 + 1 = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$61.20 = 61.2$."
+    }
+  ],
+  "explanation": [
+    "$136 \\times 45$: $136 \\times 40 = 5440$; $136 \\times 5 = 680$; sum $= 6120$.",
+    "Decimal places: $1 + 1 = 2$.",
+    "$6120 \\to 61.20 = 61.2$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimal",
+    "multiply"
+  ],
+  "estimatedSeconds": 95
+}

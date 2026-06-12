@@ -1,0 +1,39 @@
+{
+  "id": "6.NS.066",
+  "domain": "6.NS",
+  "unit": 7,
+  "orderInUnit": 6,
+  "standard": "6.NS.B.3",
+  "difficulty": 2,
+  "prompt": "Compute $6.5 - 2.78$.",
+  "answerType": "numeric",
+  "primaryAnswer": "3.72",
+  "alternativeAnswers": [
+    "3.72"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Pad to the same number of decimal places: $6.50 - 2.78$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Pad to the same number of decimal places: $6.50 - 2.78$."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract column by column, regrouping."
+    },
+    {
+      "level": "reveal",
+      "text": "$6.50 - 2.78 = 3.72$."
+    }
+  ],
+  "explanation": [
+    "Rewrite $6.5$ as $6.50$.",
+    "$6.50 - 2.78 = 3.72$."
+  ],
+  "tags": [
+    "decimal",
+    "subtract"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,38 @@
+{
+  "id": "6.NS.081",
+  "domain": "6.NS",
+  "unit": 9,
+  "orderInUnit": 1,
+  "standard": "6.NS.C.6.a",
+  "difficulty": 1,
+  "prompt": "What is the **opposite** of $7$?",
+  "answerType": "numeric",
+  "primaryAnswer": "-7",
+  "alternativeAnswers": [
+    "−7"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The opposite has the same distance from $0$ but the other sign.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The opposite has the same distance from $0$ but the other sign."
+    },
+    {
+      "level": "guide",
+      "text": "Flip the sign: $7 \\to -7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-7$."
+    }
+  ],
+  "explanation": [
+    "Opposite of $7$ is $-7$ (same distance from $0$, opposite sign)."
+  ],
+  "tags": [
+    "integer",
+    "opposite"
+  ],
+  "estimatedSeconds": 25
+}

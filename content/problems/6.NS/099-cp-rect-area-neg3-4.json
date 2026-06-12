@@ -1,0 +1,40 @@
+{
+  "id": "6.NS.099",
+  "domain": "6.NS",
+  "unit": 10,
+  "orderInUnit": 9,
+  "standard": "6.NS.C.8",
+  "difficulty": 3,
+  "prompt": "A rectangle has corners $(-3, 1)$, $(4, 1)$, $(4, 5)$, $(-3, 5)$. Find its **area**.",
+  "answerType": "numeric",
+  "primaryAnswer": "28",
+  "alternativeAnswers": [
+    "28 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the width and height first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the width and height first."
+    },
+    {
+      "level": "guide",
+      "text": "Width $= |4 - (-3)| = 7$. Height $= |5 - 1| = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$7 \\times 4 = 28$."
+    }
+  ],
+  "explanation": [
+    "Width: $|4 - (-3)| = 7$. Height: $|5 - 1| = 4$.",
+    "Area: $7 \\times 4 = 28$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "coordinate-plane",
+    "area"
+  ],
+  "estimatedSeconds": 85
+}

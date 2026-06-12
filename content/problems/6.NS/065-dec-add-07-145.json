@@ -1,0 +1,39 @@
+{
+  "id": "6.NS.065",
+  "domain": "6.NS",
+  "unit": 7,
+  "orderInUnit": 5,
+  "standard": "6.NS.B.3",
+  "difficulty": 2,
+  "prompt": "Compute $0.7 + 1.45$.",
+  "answerType": "numeric",
+  "primaryAnswer": "2.15",
+  "alternativeAnswers": [
+    "2.15"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Line up the decimal points.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Line up the decimal points."
+    },
+    {
+      "level": "guide",
+      "text": "Write $0.70 + 1.45$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.70 + 1.45 = 2.15$."
+    }
+  ],
+  "explanation": [
+    "Match decimal places: $0.70 + 1.45$.",
+    "Add: $2.15$."
+  ],
+  "tags": [
+    "decimal",
+    "add"
+  ],
+  "estimatedSeconds": 45
+}

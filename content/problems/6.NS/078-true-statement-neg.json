@@ -1,0 +1,55 @@
+{
+  "id": "6.NS.078",
+  "domain": "6.NS",
+  "unit": 8,
+  "orderInUnit": 8,
+  "standard": "6.NS.C.7.a",
+  "difficulty": 3,
+  "prompt": "Which statement is true?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$-10 > -5$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$-5 > -10$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$-5 = -10$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Which is farther right on a number line?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Which is farther right on a number line?"
+    },
+    {
+      "level": "guide",
+      "text": "$-5$ is to the right of $-10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-5 > -10$."
+    }
+  ],
+  "explanation": [
+    "$-5$ is closer to $0$ than $-10$, and on a number line closer-to-$0$ on the negative side means greater.",
+    "$-5 > -10$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "integer",
+    "compare"
+  ],
+  "estimatedSeconds": 55
+}

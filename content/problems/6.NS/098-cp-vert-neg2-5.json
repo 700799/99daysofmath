@@ -1,0 +1,40 @@
+{
+  "id": "6.NS.098",
+  "domain": "6.NS",
+  "unit": 10,
+  "orderInUnit": 8,
+  "standard": "6.NS.C.8",
+  "difficulty": 3,
+  "prompt": "Find the distance from $(1, -2)$ to $(1, 5)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [
+    "7 units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Same x — vertical distance.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same x — vertical distance."
+    },
+    {
+      "level": "guide",
+      "text": "$|5 - (-2)|$."
+    },
+    {
+      "level": "reveal",
+      "text": "$|5 - (-2)| = |7| = 7$."
+    }
+  ],
+  "explanation": [
+    "Same x → vertical segment.",
+    "$|5 - (-2)| = |7| = 7$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "coordinate-plane",
+    "distance"
+  ],
+  "estimatedSeconds": 60
+}

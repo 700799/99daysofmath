@@ -1,0 +1,41 @@
+{
+  "id": "6.NS.093",
+  "domain": "6.NS",
+  "unit": 10,
+  "orderInUnit": 3,
+  "standard": "6.NS.C.6.b",
+  "difficulty": 2,
+  "prompt": "In which quadrant is the point $(4, -3)$?",
+  "answerType": "short-text",
+  "primaryAnswer": "IV",
+  "alternativeAnswers": [
+    "4",
+    "iv",
+    "quadrant iv"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Check the signs of x and y.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Check the signs of x and y."
+    },
+    {
+      "level": "guide",
+      "text": "x positive, y negative → bottom-right."
+    },
+    {
+      "level": "reveal",
+      "text": "Quadrant IV."
+    }
+  ],
+  "explanation": [
+    "$x = 4 > 0$ (right side); $y = -3 < 0$ (below the x-axis).",
+    "Bottom-right = Quadrant IV."
+  ],
+  "tags": [
+    "coordinate-plane",
+    "quadrants"
+  ],
+  "estimatedSeconds": 35
+}

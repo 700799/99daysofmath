@@ -1,0 +1,47 @@
+{
+  "id": "6.NS.064",
+  "domain": "6.NS",
+  "unit": 7,
+  "orderInUnit": 4,
+  "standard": "6.NS.B.2",
+  "difficulty": 2,
+  "prompt": "Compute $256 \\div 8$.",
+  "answerType": "numeric",
+  "primaryAnswer": "32",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Think: $8 \\times \\boxed{?} = 256$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Think: $8 \\times \\boxed{?} = 256$."
+    },
+    {
+      "level": "guide",
+      "text": "$8 \\times 30 = 240$. $256 - 240 = 16$, and $16 \\div 8 = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$30 + 2 = 32$."
+    }
+  ],
+  "explanation": [
+    "$8$ goes into $25$ three times ($24$); bring down $6$ for $16$. $16 \\div 8 = 2$.",
+    "Quotient: $32$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Halve, halve, halve",
+      "steps": [
+        "$256 \\div 2 = 128$.",
+        "$128 \\div 2 = 64$.",
+        "$64 \\div 2 = 32$. (Three halvings = $\\div 8$.)"
+      ]
+    }
+  ],
+  "tags": [
+    "divide",
+    "multi-digit"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,39 @@
+{
+  "id": "6.NS.091",
+  "domain": "6.NS",
+  "unit": 10,
+  "orderInUnit": 1,
+  "standard": "6.NS.C.8",
+  "difficulty": 2,
+  "prompt": "On a coordinate plane, find the distance from $(3, 2)$ to $(3, 7)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [
+    "5 units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Same x-value means vertical.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same x-value means vertical."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract the y-values: $|7 - 2|$."
+    },
+    {
+      "level": "reveal",
+      "text": "$|7 - 2| = 5$."
+    }
+  ],
+  "explanation": [
+    "Both points share $x = 3$ → vertical segment.",
+    "$|7 - 2| = 5$ units."
+  ],
+  "tags": [
+    "coordinate-plane",
+    "distance"
+  ],
+  "estimatedSeconds": 45
+}

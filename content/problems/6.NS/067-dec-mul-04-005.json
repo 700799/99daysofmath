@@ -1,0 +1,41 @@
+{
+  "id": "6.NS.067",
+  "domain": "6.NS",
+  "unit": 7,
+  "orderInUnit": 7,
+  "standard": "6.NS.B.3",
+  "difficulty": 2,
+  "prompt": "Compute $0.4 \\times 0.05$.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.02",
+  "alternativeAnswers": [
+    ".02",
+    "0.020"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply as whole numbers, then count decimal places.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply as whole numbers, then count decimal places."
+    },
+    {
+      "level": "guide",
+      "text": "$4 \\times 5 = 20$. Decimal places: $1 + 2 = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.020 = 0.02$."
+    }
+  ],
+  "explanation": [
+    "$4 \\times 5 = 20$.",
+    "Total decimal places: $1 + 2 = 3$.",
+    "Place the point: $0.020 = 0.02$."
+  ],
+  "tags": [
+    "decimal",
+    "multiply"
+  ],
+  "estimatedSeconds": 60
+}

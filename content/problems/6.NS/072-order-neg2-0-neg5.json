@@ -1,0 +1,40 @@
+{
+  "id": "6.NS.072",
+  "domain": "6.NS",
+  "unit": 8,
+  "orderInUnit": 2,
+  "standard": "6.NS.C.7.a",
+  "difficulty": 1,
+  "prompt": "Order from **least to greatest**: $-2,\\ 0,\\ -5$ (separate with commas).",
+  "answerType": "short-text",
+  "primaryAnswer": "-5, -2, 0",
+  "alternativeAnswers": [
+    "-5,-2,0",
+    "-5 -2 0"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Most-negative first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Most-negative first."
+    },
+    {
+      "level": "guide",
+      "text": "$-5 < -2 < 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-5,\\ -2,\\ 0$."
+    }
+  ],
+  "explanation": [
+    "On a number line, $-5$ is farthest left, then $-2$, then $0$.",
+    "Order: $-5,\\ -2,\\ 0$."
+  ],
+  "tags": [
+    "integer",
+    "order"
+  ],
+  "estimatedSeconds": 40
+}

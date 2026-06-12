@@ -1,0 +1,41 @@
+{
+  "id": "6.NS.094",
+  "domain": "6.NS",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "6.NS.C.6.b",
+  "difficulty": 2,
+  "prompt": "Reflect the point $(3, -5)$ across the **x-axis**. Write the new coordinates.",
+  "answerType": "short-text",
+  "primaryAnswer": "(3, 5)",
+  "alternativeAnswers": [
+    "(3,5)",
+    "3, 5",
+    "3,5"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Across the x-axis: flip the sign of $y$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Across the x-axis: flip the sign of $y$."
+    },
+    {
+      "level": "guide",
+      "text": "$y = -5 \\to y = 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(3, 5)$."
+    }
+  ],
+  "explanation": [
+    "Reflecting across the x-axis flips the sign of the y-coordinate.",
+    "$(3, -5) \\to (3, 5)$."
+  ],
+  "tags": [
+    "coordinate-plane",
+    "reflection"
+  ],
+  "estimatedSeconds": 50
+}
