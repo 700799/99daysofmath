@@ -35,6 +35,7 @@ export function buildTrail(units: number): TrailNode[] {
 
 // Default fallback if a domain has no problems yet.
 export const TRAIL_LAYOUTS: Record<Domain, TrailNode[]> = {
+  '5.F': buildTrail(2),
   '6.RP': buildTrail(2),
   '6.NS': buildTrail(2),
   '6.EE': buildTrail(2),

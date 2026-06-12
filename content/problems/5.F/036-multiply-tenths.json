@@ -1,0 +1,49 @@
+{
+  "id": "5.F.036",
+  "domain": "5.F",
+  "unit": 4,
+  "orderInUnit": 6,
+  "standard": "5.NBT.B.7",
+  "difficulty": 2,
+  "prompt": "Multiply: $0.4 \\times 0.6$",
+  "answerType": "numeric",
+  "primaryAnswer": "0.24",
+  "alternativeAnswers": [
+    ".24",
+    "24/100"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply $4 \\times 6$ first, then place the decimal point.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply $4 \\times 6$ first, then place the decimal point."
+    },
+    {
+      "level": "guide",
+      "text": "Tenths × tenths = hundredths: two decimal places in the answer."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 \\times 6 = 24 \\to 0.24$."
+    }
+  ],
+  "explanation": [
+    "$4 \\times 6 = 24$.",
+    "Each factor has one decimal place, so the product has two: $0.24$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Fraction check",
+      "steps": [
+        "$\\frac{4}{10} \\times \\frac{6}{10} = \\frac{24}{100}$.",
+        "$= 0.24$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "decimals",
+    "multiplication"
+  ],
+  "estimatedSeconds": 45
+}

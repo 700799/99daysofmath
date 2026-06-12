@@ -52,7 +52,7 @@ export function DomainTrail() {
             </div>
             <div className="flex flex-wrap justify-center gap-2">
               {units.map((u) => {
-                const unlocked = u <= (dp?.unitsUnlocked ?? 1);
+                const unlocked = true; // open trails — later units just pay bigger bonuses
                 const stars = dp?.unitStars[u] ?? 0;
                 return (
                   <Link
@@ -66,7 +66,7 @@ export function DomainTrail() {
                         : 'bg-slate-100 border-slate-200 text-slate-400 pointer-events-none',
                     ].join(' ')}
                   >
-                    {unlocked ? `Unit ${u}` : `🔒 ${u}`}
+                    {`Unit ${u}`}
                     {stars > 0 && (
                       <span className="text-amber-600">
                         {'★'.repeat(stars)}

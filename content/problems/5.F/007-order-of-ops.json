@@ -1,0 +1,47 @@
+{
+  "id": "5.F.007",
+  "domain": "5.F",
+  "unit": 1,
+  "orderInUnit": 7,
+  "standard": "5.OA.A.1",
+  "difficulty": 2,
+  "prompt": "Evaluate: $3 \\times (8 + 4) - 6$",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Parentheses first!",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Parentheses first!"
+    },
+    {
+      "level": "guide",
+      "text": "$8 + 4 = 12$. Now the expression is $3 \\times 12 - 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 12 = 36$, then $36 - 6 = 30$."
+    }
+  ],
+  "explanation": [
+    "Parentheses first: $8 + 4 = 12$.",
+    "Multiply: $3 \\times 12 = 36$.",
+    "Subtract: $36 - 6 = 30$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why parentheses matter",
+      "steps": [
+        "Without parentheses, $3 \\times 8 + 4 - 6 = 24 + 4 - 6 = 22$ — a different answer!",
+        "Parentheses say: do this part first."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "order-of-operations"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,40 @@
+{
+  "id": "5.F.047",
+  "domain": "5.F",
+  "unit": 5,
+  "orderInUnit": 7,
+  "standard": "5.MD.A.1",
+  "difficulty": 2,
+  "prompt": "Convert: $3$ gallons $=$ ? quarts",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [
+    "12 qt",
+    "12 quarts"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$1$ gallon $= 4$ quarts.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$1$ gallon $= 4$ quarts."
+    },
+    {
+      "level": "guide",
+      "text": "Bigger unit to smaller unit → multiply."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 4 = 12$ quarts."
+    }
+  ],
+  "explanation": [
+    "$1$ gal $= 4$ qt.",
+    "$3 \\times 4 = 12$ quarts."
+  ],
+  "tags": [
+    "measurement",
+    "customary"
+  ],
+  "estimatedSeconds": 30
+}

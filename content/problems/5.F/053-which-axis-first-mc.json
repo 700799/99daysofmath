@@ -1,0 +1,58 @@
+{
+  "id": "5.F.053",
+  "domain": "5.F",
+  "unit": 6,
+  "orderInUnit": 3,
+  "standard": "5.G.A.1",
+  "difficulty": 2,
+  "prompt": "In the ordered pair $(7, 2)$, the first number tells you how far to travel along the…",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "x-axis (left–right)",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "y-axis (up–down)",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "diagonal",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "It depends on the graph",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Ordered pairs always follow the same order.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Ordered pairs always follow the same order."
+    },
+    {
+      "level": "guide",
+      "text": "Think: \"run before you jump\" — across before up."
+    },
+    {
+      "level": "reveal",
+      "text": "The first number is the x-coordinate (left–right). Choose A."
+    }
+  ],
+  "explanation": [
+    "An ordered pair is $(x, y)$.",
+    "The $x$-coordinate always comes first and measures left–right distance along the x-axis."
+  ],
+  "tags": [
+    "coordinate-plane"
+  ],
+  "estimatedSeconds": 30
+}

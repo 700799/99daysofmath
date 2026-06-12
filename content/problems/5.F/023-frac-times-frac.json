@@ -1,0 +1,49 @@
+{
+  "id": "5.F.023",
+  "domain": "5.F",
+  "unit": 3,
+  "orderInUnit": 3,
+  "standard": "5.NF.B.4",
+  "difficulty": 2,
+  "prompt": "Multiply and simplify: $\\frac{2}{3} \\times \\frac{3}{4}$",
+  "answerType": "fraction",
+  "primaryAnswer": "1/2",
+  "alternativeAnswers": [
+    "6/12",
+    "0.5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Tops together, bottoms together — then simplify.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Tops together, bottoms together — then simplify."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{2 \\times 3}{3 \\times 4} = \\frac{6}{12}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{6}{12} = \\frac{1}{2}$."
+    }
+  ],
+  "explanation": [
+    "$\\frac{2}{3} \\times \\frac{3}{4} = \\frac{6}{12}$.",
+    "Divide top and bottom by $6$: $\\frac{1}{2}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Cancel first",
+      "steps": [
+        "The $3$s cancel: $\\frac{2}{\\cancel{3}} \\times \\frac{\\cancel{3}}{4} = \\frac{2}{4}$.",
+        "$\\frac{2}{4} = \\frac{1}{2}$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "fractions"
+  ],
+  "estimatedSeconds": 50
+}

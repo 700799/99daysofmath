@@ -4,6 +4,16 @@ import type { ProblemStat } from '../state/progress';
 // CCSS 6th-grade cluster headings, paraphrased kid-friendly. The ~10 clusters
 // are granular enough to guide study without the noise of per-standard splits.
 export const CLUSTER_LABELS: Record<string, string> = {
+  '5.NBT.A': 'Place value (Gr 5)',
+  '5.NBT.B': 'Whole-number & decimal operations (Gr 5)',
+  '5.NF.A': 'Add & subtract fractions (Gr 5)',
+  '5.NF.B': 'Multiply & divide fractions (Gr 5)',
+  '5.MD.A': 'Measurement conversions (Gr 5)',
+  '5.MD.B': 'Line plots & data (Gr 5)',
+  '5.MD.C': 'Volume (Gr 5)',
+  '5.G.A': 'Coordinate plane (Gr 5)',
+  '5.OA.A': 'Expressions & grouping (Gr 5)',
+  '5.OA.B': 'Patterns & relationships (Gr 5)',
   '6.RP.A': 'Ratios & unit rates',
   '6.NS.A': 'Dividing fractions',
   '6.NS.B': 'Decimal & multi-digit computation',
@@ -120,6 +130,8 @@ export function skillBreakdown(
 }
 
 function domainOfCluster(cluster: string): Domain {
+  // All grade-5 standards live in the single 5.F Foundations domain.
+  if (cluster.startsWith('5.')) return '5.F';
   const parts = cluster.split('.');
   return `${parts[0]}.${parts[1]}` as Domain;
 }

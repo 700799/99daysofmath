@@ -51,9 +51,9 @@ async function main() {
       console.log('   ✓ No onboarding (already seen)');
     }
 
-    console.log('2. Checking 5 domain cards visible...');
+    console.log('2. Checking 6 domain cards visible...');
     const cards = await page.locator('a[href*="#/trail/"]').count();
-    if (cards !== 5) throw new Error(`Expected 5 cards, got ${cards}`);
+    if (cards !== 6) throw new Error(`Expected 6 cards, got ${cards}`);
     console.log(`   ✓ Found ${cards} domain cards`);
 
     console.log('3. Clicking into 6.RP trail...');
@@ -166,11 +166,11 @@ async function main() {
     }
     console.log('   ✓ All 6 sticker sections present (incl. Challenges)');
 
-    console.log('14. Verify Settings shows X / 78 sticker total...');
+    console.log('14. Verify Settings shows X / 90 sticker total...');
     await page.click('a[href="#/settings"]');
     await page.waitForSelector('text=Stickers earned', { timeout: 3000 });
     const card = await page.locator('text=Stickers earned').locator('xpath=..').textContent();
-    if (!card || !/\/\s*78/.test(card)) {
+    if (!card || !/\/\s*90/.test(card)) {
       throw new Error(`Settings sticker total wrong: ${card}`);
     }
     console.log(`   ✓ ${card?.trim()}`);

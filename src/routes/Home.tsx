@@ -64,7 +64,7 @@ export function Home() {
             Pick a trail!
           </h1>
           <p className="text-slate-600 mt-0.5 text-sm sm:text-base">
-            Five 6th-grade math trails. Earn stars, stickers, and XP.
+            Gr-5 foundations plus five 6th-grade trails. Earn stars, stickers, and XP.
           </p>
         </div>
       </div>
@@ -160,7 +160,7 @@ export function Home() {
         >
           <div className="text-3xl">🎓</div>
           <div className="font-display font-extrabold text-lg mt-1">Mock MAP Test</div>
-          <div className="text-xs opacity-90 mt-0.5">15 timed questions with a score estimate.</div>
+          <div className="text-xs opacity-90 mt-0.5">18 timed questions with a score estimate.</div>
         </Link>
       </div>
 

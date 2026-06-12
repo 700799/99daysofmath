@@ -1,4 +1,5 @@
 import { DOMAINS, type Domain } from '../types/problem';
+import { UNIT_COUNT_BY_DOMAIN } from './encouragement';
 
 interface DomainProgressLike {
   unitsUnlocked: number;
@@ -26,8 +27,8 @@ export function recommendNextUnit(
   for (const domain of DOMAINS) {
     const dp = byDomain[domain];
     if (!dp) continue;
-    const unlocked = dp.unitsUnlocked;
-    for (let unit = 1; unit <= unlocked; unit++) {
+    // Trails are open — consider every unit in the domain.
+    for (let unit = 1; unit <= UNIT_COUNT_BY_DOMAIN[domain]; unit++) {
       const stars = dp.unitStars[unit] ?? 0;
       // Track the weakest unlocked unit by stars.
       if (weakest === null || stars < weakest.stars) {

@@ -1,0 +1,40 @@
+{
+  "id": "5.F.051",
+  "domain": "5.F",
+  "unit": 6,
+  "orderInUnit": 1,
+  "standard": "5.G.A.1",
+  "difficulty": 1,
+  "prompt": "Start at the origin $(0,0)$. Move $3$ right and $4$ up. What are the coordinates of where you land? Write it like $(x,y)$.",
+  "answerType": "short-text",
+  "primaryAnswer": "(3,4)",
+  "alternativeAnswers": [
+    "(3, 4)",
+    "3,4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The first number is the sideways move; the second is the up move.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The first number is the sideways move; the second is the up move."
+    },
+    {
+      "level": "guide",
+      "text": "Right $3$ → $x = 3$. Up $4$ → $y = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "The point is $(3, 4)$."
+    }
+  ],
+  "explanation": [
+    "Coordinates are written $(x, y)$: across first, then up.",
+    "Right $3$ makes $x=3$; up $4$ makes $y=4$.",
+    "So you land on $(3, 4)$."
+  ],
+  "tags": [
+    "coordinate-plane"
+  ],
+  "estimatedSeconds": 35
+}

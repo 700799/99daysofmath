@@ -1,0 +1,39 @@
+{
+  "id": "5.F.041",
+  "domain": "5.F",
+  "unit": 5,
+  "orderInUnit": 1,
+  "standard": "5.MD.A.1",
+  "difficulty": 1,
+  "prompt": "Convert: $3$ meters $=$ ? centimeters",
+  "answerType": "numeric",
+  "primaryAnswer": "300",
+  "alternativeAnswers": [
+    "300 cm"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$1$ meter $= 100$ centimeters.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$1$ meter $= 100$ centimeters."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply the meters by $100$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 100 = 300$ cm."
+    }
+  ],
+  "explanation": [
+    "$1$ m $= 100$ cm.",
+    "$3 \\times 100 = 300$ cm."
+  ],
+  "tags": [
+    "measurement",
+    "metric"
+  ],
+  "estimatedSeconds": 30
+}

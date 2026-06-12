@@ -18,6 +18,7 @@ import { problems6NS } from './seeds/6.NS.js';
 import { problems6EE } from './seeds/6.EE.js';
 import { problems6G } from './seeds/6.G.js';
 import { problems6SP } from './seeds/6.SP.js';
+import { problems5F } from './seeds/5.F.js';
 import type { SeedProblem } from './seeds/types.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -67,6 +68,7 @@ async function main() {
     ...problems6EE,
     ...problems6G,
     ...problems6SP,
+    ...problems5F,
   ];
 
   let created = 0;

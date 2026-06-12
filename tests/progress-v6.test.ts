@@ -8,6 +8,7 @@ function setToday(iso: string) {
 function freshState() {
   useProgress.setState({
     byDomain: {
+      '5.F': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
       '6.RP': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
       '6.NS': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
       '6.EE': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },

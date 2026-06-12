@@ -1,0 +1,46 @@
+{
+  "id": "5.F.011",
+  "domain": "5.F",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "5.NF.A.1",
+  "difficulty": 1,
+  "prompt": "Add: $\\frac{1}{4} + \\frac{2}{4}$",
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg viewBox=\"0 0 260 44\" width=\"260\" height=\"44\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0.0\" y=\"4\" width=\"65.0\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"65.0\" y=\"4\" width=\"65.0\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"130.0\" y=\"4\" width=\"65.0\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"195.0\" y=\"4\" width=\"65.0\" height=\"36\" fill=\"#fff\" stroke=\"#0f172a\" stroke-width=\"1.5\"/></svg>",
+    "alt": "A bar split into 4 equal parts with 3 shaded"
+  },
+  "answerType": "fraction",
+  "primaryAnswer": "3/4",
+  "alternativeAnswers": [
+    "0.75",
+    "75%"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The denominators match, so just add the numerators.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The denominators match, so just add the numerators."
+    },
+    {
+      "level": "guide",
+      "text": "$1 + 2 = 3$ fourths."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{4} + \\frac{2}{4} = \\frac{3}{4}$."
+    }
+  ],
+  "explanation": [
+    "Same denominator means the pieces are the same size.",
+    "Add the counts: $1 + 2 = 3$ pieces.",
+    "So the sum is $\\frac{3}{4}$."
+  ],
+  "tags": [
+    "fractions",
+    "addition"
+  ],
+  "estimatedSeconds": 30
+}

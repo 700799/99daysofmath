@@ -1,0 +1,41 @@
+{
+  "id": "5.F.027",
+  "domain": "5.F",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "5.NF.B.4",
+  "difficulty": 2,
+  "prompt": "A sticker is a rectangle $\\frac{2}{3}$ inch by $\\frac{3}{2}$ inches. What is its area in square inches?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [
+    "6/6",
+    "1.0"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Area of a rectangle = length × width, even with fractions.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Area of a rectangle = length × width, even with fractions."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{2}{3} \\times \\frac{3}{2} = \\frac{6}{6}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{6}{6} = 1$ square inch."
+    }
+  ],
+  "explanation": [
+    "Area $= \\frac{2}{3} \\times \\frac{3}{2}$.",
+    "Multiply across: $\\frac{2 \\times 3}{3 \\times 2} = \\frac{6}{6} = 1$.",
+    "The fractions are reciprocals, so the product is exactly $1$ square inch."
+  ],
+  "tags": [
+    "fractions",
+    "area"
+  ],
+  "estimatedSeconds": 55
+}

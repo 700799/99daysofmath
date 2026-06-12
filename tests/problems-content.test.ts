@@ -10,9 +10,18 @@ const PROBLEMS_PATH = path.resolve(__dirname, '..', 'public', 'data', 'problems.
 
 const PROBLEMS: Problem[] = JSON.parse(fs.readFileSync(PROBLEMS_PATH, 'utf-8'));
 
+const EXPECTED_BY_DOMAIN: Record<string, { count: number; units: number }> = {
+  '5.F': { count: 60, units: 6 },
+  '6.RP': { count: 100, units: 10 },
+  '6.NS': { count: 100, units: 10 },
+  '6.EE': { count: 100, units: 10 },
+  '6.G': { count: 100, units: 10 },
+  '6.SP': { count: 100, units: 10 },
+};
+
 describe('problems bank — structure', () => {
-  it('contains exactly 500 problems', () => {
-    expect(PROBLEMS).toHaveLength(500);
+  it('contains exactly 560 problems', () => {
+    expect(PROBLEMS).toHaveLength(560);
   });
 
   it('every id is globally unique', () => {
@@ -20,11 +29,11 @@ describe('problems bank — structure', () => {
     expect(ids.size).toBe(PROBLEMS.length);
   });
 
-  it('each of the 5 domains has exactly 100 problems', () => {
+  it('every domain has its expected problem count', () => {
     const counts = new Map<string, number>();
     for (const p of PROBLEMS) counts.set(p.domain, (counts.get(p.domain) ?? 0) + 1);
     for (const d of DOMAINS) {
-      expect(counts.get(d)).toBe(100);
+      expect(counts.get(d), d).toBe(EXPECTED_BY_DOMAIN[d].count);
     }
   });
 
@@ -37,13 +46,48 @@ describe('problems bank — structure', () => {
       bucket.set(key, arr);
     }
     for (const d of DOMAINS) {
-      for (let u = 1; u <= 10; u++) {
+      for (let u = 1; u <= EXPECTED_BY_DOMAIN[d].units; u++) {
         const arr = bucket.get(`${d}:${u}`) ?? [];
-        expect(arr).toHaveLength(10);
+        expect(arr, `${d}:${u}`).toHaveLength(10);
         const orders = arr.map((p) => p.orderInUnit).sort((a, b) => a - b);
         expect(orders).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
       }
     }
+  });
+});
+
+describe('problems bank — 5.F Foundations quality bar', () => {
+  const foundations = PROBLEMS.filter((p) => p.domain === '5.F');
+
+  it('covers the six Gr-5 MAP gap areas with 60 problems', () => {
+    expect(foundations).toHaveLength(60);
+    const clusters = new Set(foundations.map((p) => p.standard.split('.').slice(0, 3).join('.')));
+    for (const c of ['5.NBT.A', '5.NBT.B', '5.NF.A', '5.NF.B', '5.MD.A', '5.MD.C', '5.G.A', '5.OA.B', '5.MD.B']) {
+      expect(clusters.has(c), c).toBe(true);
+    }
+  });
+
+  it('every 5.F problem has 3+ hints and a multi-step explanation', () => {
+    const failures: string[] = [];
+    for (const p of foundations) {
+      if (!Array.isArray(p.hints) || p.hints.length < 3) failures.push(`${p.id}: hints`);
+      if (!Array.isArray(p.explanation) || p.explanation.length < 2) failures.push(`${p.id}: explanation`);
+    }
+    expect(failures).toEqual([]);
+  });
+
+  it('every difficulty-3 5.F problem has a 4-step titled hint series', () => {
+    const failures: string[] = [];
+    for (const p of foundations.filter((q) => q.difficulty === 3)) {
+      if ((p.hints?.length ?? 0) !== 4) failures.push(`${p.id}: expected 4 hints`);
+      else if (!p.hints!.some((h) => h.title)) failures.push(`${p.id}: no titled hint`);
+    }
+    expect(failures).toEqual([]);
+  });
+
+  it('at least 10 5.F problems carry diagrams', () => {
+    const withDiagrams = foundations.filter((p) => p.diagram);
+    expect(withDiagrams.length).toBeGreaterThanOrEqual(10);
   });
 });
 

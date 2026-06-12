@@ -1,0 +1,38 @@
+{
+  "id": "5.F.006",
+  "domain": "5.F",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "5.NBT.B.6",
+  "difficulty": 2,
+  "prompt": "Divide: $4{,}329 \\div 9$",
+  "answerType": "numeric",
+  "primaryAnswer": "481",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Work place by place: how many $9$s in $43$ hundreds?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Work place by place: how many $9$s in $43$ hundreds?"
+    },
+    {
+      "level": "guide",
+      "text": "$9 \\times 400 = 3600$. Subtract, then keep dividing what is left."
+    },
+    {
+      "level": "reveal",
+      "text": "$4329 - 3600 = 729$; $9 \\times 80 = 720$; $9 \\times 1 = 9$. So $400 + 80 + 1 = 481$."
+    }
+  ],
+  "explanation": [
+    "$9 \\times 400 = 3600$, leaving $4329 - 3600 = 729$.",
+    "$9 \\times 80 = 720$, leaving $729 - 720 = 9$.",
+    "$9 \\times 1 = 9$, leaving $0$.",
+    "So $4329 \\div 9 = 400 + 80 + 1 = 481$."
+  ],
+  "tags": [
+    "division"
+  ],
+  "estimatedSeconds": 80
+}

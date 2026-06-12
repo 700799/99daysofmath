@@ -1,0 +1,62 @@
+{
+  "id": "5.F.058",
+  "domain": "5.F",
+  "unit": 6,
+  "orderInUnit": 8,
+  "standard": "5.MD.B.2",
+  "difficulty": 3,
+  "prompt": "Using the same line plot ($2$ ribbons of $\\frac{1}{4}$ ft, $3$ of $\\frac{1}{2}$ ft, $1$ of $\\frac{3}{4}$ ft): what is the **total** length of all the ribbons, in feet?",
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg viewBox=\"0 0 260 124\" width=\"260\" height=\"124\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"96\" x2=\"240\" y2=\"96\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"45\" y=\"82\" font-size=\"14\" fill=\"#0f172a\">X</text><text x=\"45\" y=\"66\" font-size=\"14\" fill=\"#0f172a\">X</text><line x1=\"50\" y1=\"92\" x2=\"50\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"40\" y=\"116\" font-size=\"12\" fill=\"#0f172a\">1/4</text><text x=\"125\" y=\"82\" font-size=\"14\" fill=\"#0f172a\">X</text><text x=\"125\" y=\"66\" font-size=\"14\" fill=\"#0f172a\">X</text><text x=\"125\" y=\"50\" font-size=\"14\" fill=\"#0f172a\">X</text><line x1=\"130\" y1=\"92\" x2=\"130\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"120\" y=\"116\" font-size=\"12\" fill=\"#0f172a\">1/2</text><text x=\"205\" y=\"82\" font-size=\"14\" fill=\"#0f172a\">X</text><line x1=\"210\" y1=\"92\" x2=\"210\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"200\" y=\"116\" font-size=\"12\" fill=\"#0f172a\">3/4</text></svg>",
+    "alt": "Line plot with 2 Xs above 1/4, 3 Xs above 1/2, and 1 X above 3/4"
+  },
+  "answerType": "numeric",
+  "primaryAnswer": "2.75",
+  "alternativeAnswers": [
+    "2 3/4",
+    "11/4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply each length by how many ribbons have it, then add everything.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply each length by how many ribbons have it, then add everything."
+    },
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Work in quarters: $\\frac{1}{4}$ is 1 quarter, $\\frac{1}{2}$ is 2 quarters, $\\frac{3}{4}$ is 3 quarters."
+    },
+    {
+      "level": "guide",
+      "text": "$2 \\times \\frac{1}{4} = \\frac{2}{4}$, $3 \\times \\frac{1}{2} = \\frac{3}{2}$, $1 \\times \\frac{3}{4} = \\frac{3}{4}$."
+    },
+    {
+      "level": "reveal",
+      "text": "In quarters: $2 + 6 + 3 = 11$ quarters $= \\frac{11}{4} = 2\\frac{3}{4}$ ft."
+    }
+  ],
+  "explanation": [
+    "Count in quarters of a foot: the $\\frac{1}{4}$-ribbons give $2 \\times 1 = 2$ quarters.",
+    "The $\\frac{1}{2}$-ribbons give $3 \\times 2 = 6$ quarters.",
+    "The $\\frac{3}{4}$-ribbon gives $3$ quarters.",
+    "Total: $2 + 6 + 3 = 11$ quarters $= \\frac{11}{4} = 2\\frac{3}{4} = 2.75$ feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Decimals",
+      "steps": [
+        "$2(0.25) + 3(0.5) + 1(0.75)$.",
+        "$0.5 + 1.5 + 0.75 = 2.75$ ft ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "line-plot",
+    "multi-step"
+  ],
+  "estimatedSeconds": 110
+}

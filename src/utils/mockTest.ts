@@ -1,7 +1,7 @@
 import { DOMAINS, type Problem } from '../types/problem';
 
-export const MOCK_TEST_SIZE = 15;
 const PER_DOMAIN = 3;
+export const MOCK_TEST_SIZE = DOMAINS.length * PER_DOMAIN;
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -12,7 +12,7 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-// Pick a balanced mock test: PER_DOMAIN problems from each of the 5 domains,
+// Pick a balanced mock test: PER_DOMAIN problems from each domain,
 // spread across difficulties where possible, then shuffled into one sequence.
 export function pickMockTestProblems(all: Problem[]): Problem[] {
   const picks: Problem[] = [];

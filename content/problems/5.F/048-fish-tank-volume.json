@@ -1,0 +1,60 @@
+{
+  "id": "5.F.048",
+  "domain": "5.F",
+  "unit": 5,
+  "orderInUnit": 8,
+  "standard": "5.MD.C.5",
+  "difficulty": 3,
+  "prompt": "A fish tank is $60$ cm long, $30$ cm wide, and $40$ cm tall. What is its volume in cubic centimeters?",
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg viewBox=\"0 0 250 150\" width=\"250\" height=\"150\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,50 160,50 160,120 40,120\" fill=\"#ccfbf1\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"40,50 80,25 200,25 160,50\" fill=\"#99f6e4\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"160,50 200,25 200,95 160,120\" fill=\"#5eead4\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"95\" y=\"138\" font-size=\"14\" fill=\"#0f172a\">60 cm</text><text x=\"205\" y=\"65\" font-size=\"14\" fill=\"#0f172a\">30 cm</text><text x=\"8\" y=\"90\" font-size=\"14\" fill=\"#0f172a\">40 cm</text></svg>",
+    "alt": "A tank labeled 60 cm by 30 cm by 40 cm"
+  },
+  "answerType": "numeric",
+  "primaryAnswer": "72000",
+  "alternativeAnswers": [
+    "72,000"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Same box formula, just bigger numbers: $l \\times w \\times h$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same box formula, just bigger numbers: $l \\times w \\times h$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "A $6 \\times 3 \\times 4$ box has volume $72$. Your tank is $10\\times$ bigger in every direction."
+    },
+    {
+      "level": "guide",
+      "text": "$60 \\times 30 = 1800$. Then multiply by $40$."
+    },
+    {
+      "level": "reveal",
+      "text": "$1800 \\times 40 = 72{,}000$ cubic cm."
+    }
+  ],
+  "explanation": [
+    "$V = 60 \\times 30 \\times 40$.",
+    "$60 \\times 30 = 1800$.",
+    "$1800 \\times 40 = 72{,}000$ cubic centimeters."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Scale up a small box",
+      "steps": [
+        "$6 \\times 3 \\times 4 = 72$.",
+        "Each edge is $10\\times$ longer, so the volume is $10 \\times 10 \\times 10 = 1000\\times$ bigger: $72 \\times 1000 = 72{,}000$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "volume",
+    "multi-step"
+  ],
+  "estimatedSeconds": 100
+}

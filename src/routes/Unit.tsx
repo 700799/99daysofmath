@@ -122,10 +122,10 @@ export function Unit() {
   const advance = () => {
     if (!problems) return;
     if (index + 1 >= problems.length) {
-      const newStickerIds = record(d, u, finalStars, missedIds, xpEarned, mistakesTotal);
+      const outcome = record(d, u, finalStars, missedIds, xpEarned, mistakesTotal);
       const dailyStickers = touchDay();
       if (soundOn) playUnitComplete();
-      const allNew = [...newStickerIds, ...dailyStickers];
+      const allNew = [...outcome.earned, ...dailyStickers];
       const primarySticker = finalStars === 3 ? stickerForUnit(d, u) : null;
       navigate(`/unit/${d}/${u}/results`, {
         state: {
@@ -133,6 +133,9 @@ export function Unit() {
           missedCount: missedIds.length,
           total,
           xpEarned,
+          unitBonus: outcome.unitBonus,
+          trailBonus: outcome.trailBonus,
+          allTrailsBonus: outcome.allTrailsBonus,
           sticker: primarySticker ? `${primarySticker.emoji} ${primarySticker.label}` : '',
           newStickerIds: allNew,
         },

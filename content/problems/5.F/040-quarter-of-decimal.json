@@ -1,0 +1,56 @@
+{
+  "id": "5.F.040",
+  "domain": "5.F",
+  "unit": 4,
+  "orderInUnit": 10,
+  "standard": "5.NBT.B.7",
+  "difficulty": 3,
+  "prompt": "Multiply: $0.25 \\times 3.2$",
+  "answerType": "numeric",
+  "primaryAnswer": "0.8",
+  "alternativeAnswers": [
+    ".8",
+    "0.80",
+    "4/5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$0.25$ is a familiar fraction in disguise.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$0.25$ is a familiar fraction in disguise."
+    },
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "$0.25 = \\frac{1}{4}$, so this is the same as $3.2 \\div 4$."
+    },
+    {
+      "level": "guide",
+      "text": "$3.2 \\div 4$: think $32 \\div 4 = 8$, then place the decimal."
+    },
+    {
+      "level": "reveal",
+      "text": "$3.2 \\div 4 = 0.8$."
+    }
+  ],
+  "explanation": [
+    "$0.25 = \\frac{1}{4}$, so $0.25 \\times 3.2$ is one quarter of $3.2$.",
+    "$3.2 \\div 4 = 0.8$.",
+    "Check by counting decimal places: $25 \\times 32 = 800$; three decimal places → $0.800 = 0.8$ ✓."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Money picture",
+      "steps": [
+        "A quarter (\\$0.25) of \\$3.20 is like splitting \\$3.20 among 4 people.",
+        "Each gets \\$0.80."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimals"
+  ],
+  "estimatedSeconds": 80
+}

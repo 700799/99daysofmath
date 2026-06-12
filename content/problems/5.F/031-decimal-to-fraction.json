@@ -1,0 +1,45 @@
+{
+  "id": "5.F.031",
+  "domain": "5.F",
+  "unit": 4,
+  "orderInUnit": 1,
+  "standard": "5.NBT.A.3",
+  "difficulty": 1,
+  "prompt": "Write $0.6$ as a fraction in simplest form.",
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg viewBox=\"0 0 260 44\" width=\"260\" height=\"44\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0.0\" y=\"4\" width=\"26.0\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"26.0\" y=\"4\" width=\"26.0\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"52.0\" y=\"4\" width=\"26.0\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"78.0\" y=\"4\" width=\"26.0\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"104.0\" y=\"4\" width=\"26.0\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"130.0\" y=\"4\" width=\"26.0\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"156.0\" y=\"4\" width=\"26.0\" height=\"36\" fill=\"#fff\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"182.0\" y=\"4\" width=\"26.0\" height=\"36\" fill=\"#fff\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"208.0\" y=\"4\" width=\"26.0\" height=\"36\" fill=\"#fff\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"234.0\" y=\"4\" width=\"26.0\" height=\"36\" fill=\"#fff\" stroke=\"#0f172a\" stroke-width=\"1.5\"/></svg>",
+    "alt": "A bar split into 10 equal parts with 6 shaded"
+  },
+  "answerType": "fraction",
+  "primaryAnswer": "3/5",
+  "alternativeAnswers": [
+    "6/10",
+    "0.6"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$0.6$ means $6$ tenths.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$0.6$ means $6$ tenths."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{6}{10}$ — divide top and bottom by $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{6}{10} = \\frac{3}{5}$."
+    }
+  ],
+  "explanation": [
+    "$0.6 = \\frac{6}{10}$ (six tenths).",
+    "Simplify by dividing both by $2$: $\\frac{3}{5}$."
+  ],
+  "tags": [
+    "decimals",
+    "fractions"
+  ],
+  "estimatedSeconds": 35
+}

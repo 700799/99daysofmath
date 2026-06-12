@@ -674,6 +674,122 @@ export const LESSONS: Lesson[] = [
     ],
     watchOut: 'Check whether the question wants center or spread before answering.',
   },
+
+  // ---------------- 5.F — Gr-5 Foundations ----------------
+  {
+    domain: '5.F', unit: 1, title: 'Place value & big operations',
+    objective: 'Read place value and multiply/divide big numbers with confidence.',
+    concept: [
+      'Each place is 10 times the place to its right — the 7 in 47,283 is worth 7,000.',
+      'To multiply big numbers, break them apart: 38 × 27 = 38 × 20 + 38 × 7.',
+      'To divide, peel off easy chunks: 504 ÷ 8 → 480 ÷ 8 = 60, then 24 ÷ 8 = 3.',
+    ],
+    examples: [
+      { q: 'What is the value of the 5 in 4,562?', steps: ['The 5 sits in the hundreds place.', '5 × 100 = 500.'], answer: '500' },
+      { q: 'Multiply 24 × 13.', steps: ['24 × 10 = 240.', '24 × 3 = 72.', '240 + 72 = 312.'], answer: '312' },
+      { q: 'Divide 432 ÷ 6.', steps: ['6 × 70 = 420.', '432 − 420 = 12, and 12 ÷ 6 = 2.', '70 + 2 = 72.'], answer: '72' },
+    ],
+    practice: [
+      { q: 'What is the value of the 8 in 28,514?', answers: ['8000', '8,000'], steps: ['The 8 is in the thousands place.', '8 × 1000 = 8000.'] },
+      { q: 'Multiply 60 × 40.', answers: ['2400', '2,400'], steps: ['6 × 4 = 24.', 'Attach the two zeros: 2400.'] },
+    ],
+    watchOut: 'The VALUE of a digit is not the digit itself — the 7 in 47,283 is worth 7,000, not 7.',
+  },
+  {
+    domain: '5.F', unit: 2, title: 'Adding & subtracting fractions',
+    objective: 'Combine fractions even when the denominators differ.',
+    concept: [
+      'You can only add or subtract pieces that are the SAME size — same denominator.',
+      'Rewrite each fraction using a common denominator first (often the LCM).',
+      'Then add or subtract just the numerators and simplify.',
+    ],
+    examples: [
+      { q: 'Add 1/2 + 1/3.', steps: ['Common denominator: 6.', '1/2 = 3/6 and 1/3 = 2/6.', '3/6 + 2/6 = 5/6.'], answer: '5/6' },
+      { q: 'Subtract 3/4 − 1/2.', steps: ['1/2 = 2/4.', '3/4 − 2/4 = 1/4.'], answer: '1/4' },
+      { q: 'Add 2/3 + 3/4.', steps: ['Twelfths: 8/12 + 9/12.', '= 17/12 = 1 5/12.'], answer: '1 5/12' },
+    ],
+    practice: [
+      { q: 'Add 1/4 + 1/4.', answers: ['1/2', '2/4', '0.5'], steps: ['Same denominator — add tops: 2/4.', 'Simplify: 1/2.'] },
+      { q: 'Subtract 5/8 − 1/8.', answers: ['1/2', '4/8', '0.5'], steps: ['5 − 1 = 4 eighths.', '4/8 = 1/2.'] },
+    ],
+    watchOut: 'Never add the denominators! 1/2 + 1/3 is NOT 2/5 — make the pieces match first.',
+  },
+  {
+    domain: '5.F', unit: 3, title: 'Multiplying & dividing fractions',
+    objective: 'Multiply fractions straight across and divide using reciprocals.',
+    concept: [
+      'To multiply fractions: tops together, bottoms together — then simplify.',
+      '"Of" means multiply: 3/5 of 40 is 3/5 × 40.',
+      'Dividing asks "how many fit?": 4 ÷ 1/3 = 12 because each whole holds 3 thirds.',
+    ],
+    examples: [
+      { q: 'Multiply 1/2 × 1/4.', steps: ['1 × 1 = 1 and 2 × 4 = 8.', 'Product: 1/8.'], answer: '1/8' },
+      { q: 'Divide 6 ÷ 1/2.', steps: ['Each whole holds 2 halves.', '6 × 2 = 12.'], answer: '12' },
+      { q: 'Find 2/3 of 12.', steps: ['1/3 of 12 is 4.', '2/3 is 2 × 4 = 8.'], answer: '8' },
+    ],
+    practice: [
+      { q: 'Multiply 1/3 × 1/2.', answers: ['1/6'], steps: ['Tops: 1. Bottoms: 6.', '= 1/6.'] },
+      { q: 'Divide 3 ÷ 1/4.', answers: ['12'], steps: ['Each whole holds 4 quarters.', '3 × 4 = 12.'] },
+    ],
+    watchOut: 'Dividing by a fraction makes the answer BIGGER, not smaller — 4 ÷ 1/3 = 12.',
+  },
+  {
+    domain: '5.F', unit: 4, title: 'Decimals: place value & operations',
+    objective: 'Compare, round, and compute with decimals.',
+    concept: [
+      'Line up the decimal points to add or subtract — 2.5 is 2.50.',
+      'To compare decimals, give them the same number of places: 0.5 = 0.50 > 0.45.',
+      'When multiplying, count decimal places: tenths × tenths = hundredths.',
+    ],
+    examples: [
+      { q: 'Add 0.3 + 0.45.', steps: ['Write 0.3 as 0.30.', '0.30 + 0.45 = 0.75.'], answer: '0.75' },
+      { q: 'Subtract 2 − 0.85.', steps: ['Count up: 0.85 + 0.15 = 1.', '1 + 1 = 2, so total counted = 1.15.'], answer: '1.15' },
+      { q: 'Multiply 0.5 × 0.8.', steps: ['5 × 8 = 40.', 'Two decimal places → 0.40 = 0.4.'], answer: '0.4' },
+    ],
+    practice: [
+      { q: 'Add 0.2 + 0.35.', answers: ['0.55', '.55'], steps: ['0.20 + 0.35.', '= 0.55.'] },
+      { q: 'Multiply 1.5 × 4.', answers: ['6', '6.0'], steps: ['1 × 4 = 4 and 0.5 × 4 = 2.', '4 + 2 = 6.'] },
+    ],
+    watchOut: 'Longer is not bigger: 0.5 beats 0.45 even though 45 has more digits.',
+  },
+  {
+    domain: '5.F', unit: 5, title: 'Measurement, conversions & volume',
+    objective: 'Convert units and find the volume of boxes.',
+    concept: [
+      'Bigger unit → smaller unit: multiply (3 m = 300 cm). Smaller → bigger: divide.',
+      'Memorize the anchors: 100 cm = 1 m, 1000 g = 1 kg, 12 in = 1 ft, 4 qt = 1 gal, 60 min = 1 hr.',
+      'Volume of a box = length × width × height, measured in cubic units.',
+    ],
+    examples: [
+      { q: 'Convert 2 meters to centimeters.', steps: ['1 m = 100 cm.', '2 × 100 = 200 cm.'], answer: '200' },
+      { q: 'Volume of a 3 × 2 × 4 box?', steps: ['3 × 2 = 6.', '6 × 4 = 24 cubic units.'], answer: '24' },
+      { q: 'Convert 5 feet to inches.', steps: ['1 ft = 12 in.', '5 × 12 = 60 inches.'], answer: '60' },
+    ],
+    practice: [
+      { q: 'Convert 400 cm to meters.', answers: ['4', '4 m'], steps: ['100 cm = 1 m.', '400 ÷ 100 = 4 m.'] },
+      { q: 'Volume of a cube with edge 3?', answers: ['27'], steps: ['3 × 3 × 3.', '= 27 cubic units.'] },
+    ],
+    watchOut: 'Multiply or divide? Going to a SMALLER unit means MORE of them — multiply.',
+  },
+  {
+    domain: '5.F', unit: 6, title: 'Coordinate plane, patterns & line plots',
+    objective: 'Plot points, extend patterns, and read line plots.',
+    concept: [
+      'A point is (x, y): go ACROSS x first, then UP y. "Run before you jump."',
+      'A pattern with a constant jump: term n = start + jump × (n − 1).',
+      'On a line plot, every X is one data value — count Xs to answer questions.',
+    ],
+    examples: [
+      { q: 'Plot: right 3, up 2 from the origin. Coordinates?', steps: ['Across 3 → x = 3.', 'Up 2 → y = 2.', 'Point: (3, 2).'], answer: '(3,2)' },
+      { q: 'Pattern 0, 4, 8, … what is the 5th term?', steps: ['Four jumps of +4 from 0.', '0 + 4 × 4 = 16.'], answer: '16' },
+      { q: 'A line plot shows 2 Xs above 1/2. How many items measured 1/2?', steps: ['Each X is one item.', 'Two Xs → 2 items.'], answer: '2' },
+    ],
+    practice: [
+      { q: 'Start at the origin, go right 4 and up 2. Coordinates? (like (x,y))', answers: ['(4,2)', '(4, 2)', '4,2'], steps: ['x = 4, y = 2.', '(4, 2).'] },
+      { q: 'Pattern 5, 10, 15, … what comes next?', answers: ['20'], steps: ['The jump is +5.', '15 + 5 = 20.'] },
+    ],
+    watchOut: 'Do not swap the coordinates — (3, 2) and (2, 3) are different points.',
+  },
 ];
 
 const byKey = new Map(LESSONS.map((l) => [lessonKey(l.domain, l.unit), l]));

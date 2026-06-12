@@ -1,10 +1,19 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { DOMAINS, type Domain } from '../types/problem';
-import { checkAllEarning, STICKER_DEFS, type EarningContext } from '../utils/encouragement';
+import { checkAllEarning, STICKER_DEFS, UNIT_COUNT_BY_DOMAIN, type EarningContext } from '../utils/encouragement';
 import { scheduleAfter } from '../utils/srs';
 
 export type Stars = 0 | 1 | 2 | 3;
+
+// Returned by recordUnitResult: newly earned sticker ids plus the XP bonuses
+// (later units pay more; finishing a whole trail / all trails pays extra).
+export interface UnitResultOutcome {
+  earned: string[];
+  unitBonus: number;
+  trailBonus: number;
+  allTrailsBonus: number;
+}
 
 interface DomainProgress {
   unitsUnlocked: number;
@@ -57,6 +66,9 @@ interface ProgressState {
   problemStats: Record<string, ProblemStat>; // keyed by problem id
   ritHistory: RitPoint[];                     // appended per mock test
   lessonsViewed: string[];                    // e.g. "6.RP-1" unit lesson keys
+  // ---- v7 additions ----
+  trailBonusGranted: Partial<Record<Domain, boolean>>; // one-time +50 per finished trail
+  allTrailsBonusGranted: boolean;                      // one-time +250 for finishing everything
   // ---- actions ----
   recordUnitResult: (
     domain: Domain,
@@ -65,7 +77,7 @@ interface ProgressState {
     missedIds: string[],
     xpEarned: number,
     mistakesTotal: number,
-  ) => string[]; // newly earned sticker IDs
+  ) => UnitResultOutcome;
   awardXP: (n: number) => string[];
   recordMockTestResult: (accuracy: number, rit?: number) => string[];
   recordAttempt: (problemId: string, correct: boolean) => void;
@@ -214,6 +226,11 @@ const v6Defaults = {
   lessonsViewed: [] as string[],
 };
 
+const v7Defaults = {
+  trailBonusGranted: {} as Partial<Record<Domain, boolean>>,
+  allTrailsBonusGranted: false,
+};
+
 export function migrateProgress(persisted: unknown, fromVersion: number): unknown {
   if (!persisted || typeof persisted !== 'object') return persisted;
   const state = persisted as Partial<ProgressState> & { stickers?: string[] };
@@ -279,6 +296,12 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
     }
     stateAny.problemStats = seeded;
   }
+  if (fromVersion < 7) {
+    const stateAny = state as Record<string, unknown>;
+    for (const [k, v] of Object.entries(v7Defaults)) {
+      if (stateAny[k] === undefined) stateAny[k] = v;
+    }
+  }
   return state;
 }
 
@@ -298,6 +321,7 @@ export const useProgress = create<ProgressState>()(
       soundEnabled: true,
       ...v5Defaults,
       ...v6Defaults,
+      ...v7Defaults,
       recordUnitResult: (domain, unit, stars, missedIds, xpEarned, mistakesTotal) => {
         const stateBefore = get();
         const today = todayISO();
@@ -316,9 +340,28 @@ export const useProgress = create<ProgressState>()(
           },
         };
         const newPerfect = prevStars < 3 && nextStars === 3;
-        const nextXp = stateBefore.xp + xpEarned;
+
+        // Later units pay more: +2 XP per unit number on every completion.
+        const unitBonus = 2 * unit;
+        // Finishing a whole trail (every unit ≥1 star) pays +50, once per trail;
+        // finishing every trail pays +250, once.
+        const trailDone = (dom: Domain) => {
+          const stars = nextByDomain[dom]?.unitStars ?? {};
+          for (let u = 1; u <= UNIT_COUNT_BY_DOMAIN[dom]; u++) {
+            if (((stars as Record<number, number>)[u] ?? 0) < 1) return false;
+          }
+          return true;
+        };
+        const trailBonus =
+          trailDone(domain) && !stateBefore.trailBonusGranted[domain] ? 50 : 0;
+        const allDone = DOMAINS.every((dom) => trailDone(dom));
+        const allTrailsBonus =
+          allDone && !stateBefore.allTrailsBonusGranted ? 250 : 0;
+        const totalXpAdd = xpEarned + unitBonus + trailBonus + allTrailsBonus;
+
+        const nextXp = stateBefore.xp + totalXpAdd;
         const nextTotalPerfect = stateBefore.totalPerfectUnits + (newPerfect ? 1 : 0);
-        const daily = rollDailyXp(stateBefore, xpEarned, today);
+        const daily = rollDailyXp(stateBefore, totalXpAdd, today);
         const earned = checkAllEarning(
           earningCtx(stateBefore, {
             xp: nextXp,
@@ -337,12 +380,18 @@ export const useProgress = create<ProgressState>()(
           dailyQuestStreak: daily.dailyQuestStreak,
           lastGoalDate: daily.lastGoalDate,
           xpByDate: daily.xpByDate,
+          trailBonusGranted:
+            trailBonus > 0
+              ? { ...stateBefore.trailBonusGranted, [domain]: true }
+              : stateBefore.trailBonusGranted,
+          allTrailsBonusGranted:
+            stateBefore.allTrailsBonusGranted || allTrailsBonus > 0,
           stickers:
             earned.length > 0
               ? [...stateBefore.stickers, ...earned]
               : stateBefore.stickers,
         });
-        return earned;
+        return { earned, unitBonus, trailBonus, allTrailsBonus };
       },
       awardXP: (n) => {
         const before = get();
@@ -517,8 +566,9 @@ export const useProgress = create<ProgressState>()(
         return earned;
       },
       toggleSound: () => set((s) => ({ soundEnabled: !s.soundEnabled })),
-      isUnitUnlocked: (domain, unit) =>
-        unit <= (get().byDomain[domain]?.unitsUnlocked ?? 1),
+      // Trails are open: every unit is playable. (Kept for API compatibility;
+      // later units award bigger bonuses instead of being locked.)
+      isUnitUnlocked: () => true,
       starsForUnit: (domain, unit) =>
         (get().byDomain[domain]?.unitStars[unit] ?? 0) as Stars,
       totalStars: () => {
@@ -567,11 +617,13 @@ export const useProgress = create<ProgressState>()(
           problemStats: {},
           ritHistory: [],
           lessonsViewed: [],
+          trailBonusGranted: {},
+          allTrailsBonusGranted: false,
         }),
     }),
     {
       name: '99daysofmath:progress',
-      version: 6,
+      version: 7,
       migrate: migrateProgress,
     },
   ),

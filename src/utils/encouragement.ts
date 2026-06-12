@@ -129,6 +129,7 @@ const MASTERY_STICKERS: StickerDef[] = [
   { id: 'mastery-6.EE', emoji: '🧮', label: 'Expression Expert', category: 'mastery', hint: 'Finish all 6.EE units' },
   { id: 'mastery-6.G', emoji: '📐', label: 'Geometry Guru', category: 'mastery', hint: 'Finish all 6.G units' },
   { id: 'mastery-6.SP', emoji: '📊', label: 'Stats Star', category: 'mastery', hint: 'Finish all 6.SP units' },
+  { id: 'mastery-5.F', emoji: '🧱', label: 'Foundation Builder', category: 'mastery', hint: 'Finish all Gr-5 Foundations units' },
   { id: 'mastery-grand', emoji: '🏅', label: '6th-Grade Champion', category: 'mastery', hint: 'Master every domain' },
 ];
 
@@ -138,14 +139,26 @@ const CHALLENGE_STICKERS: StickerDef[] = [
   { id: 'quest-streak-7', emoji: '🏃', label: 'Week of Goals', category: 'challenge', hint: 'Hit your daily goal 7 days in a row' },
   { id: 'freeze-saved', emoji: '🧊', label: 'Saved by Ice', category: 'challenge', hint: 'A streak freeze saved your streak' },
   { id: 'lesson-explorer', emoji: '📘', label: 'Bookworm', category: 'challenge', hint: 'Finish 5 lessons' },
+  { id: 'arcade-c4', emoji: '🔴', label: 'Four in a Row', category: 'challenge', hint: 'Beat the owl at Connect Four' },
+  { id: 'arcade-wheel', emoji: '🎡', label: 'Wheel of Fortune', category: 'challenge', hint: 'Spin the prize wheel' },
+  { id: 'arcade-variety', emoji: '🎪', label: 'Game Hopper', category: 'challenge', hint: 'Play 5 different arcade games in one day' },
+  { id: 'finals-first', emoji: '🎯', label: 'Final Boss I', category: 'challenge', hint: 'Finish a Final Challenge quiz' },
+  { id: 'finals-all', emoji: '👑', label: 'Champion of Finals', category: 'challenge', hint: 'Finish all 5 Final Challenge quizzes' },
 ];
 
-export const UNITS_PER_DOMAIN = 10;
+export const UNIT_COUNT_BY_DOMAIN: Record<Domain, number> = {
+  '5.F': 6,
+  '6.RP': 10,
+  '6.NS': 10,
+  '6.EE': 10,
+  '6.G': 10,
+  '6.SP': 10,
+};
 
 const ALL_UNIT_STICKERS: StickerDef[] = (() => {
   const out: StickerDef[] = [];
   for (const d of DOMAINS) {
-    for (let unit = 1; unit <= UNITS_PER_DOMAIN; unit++) {
+    for (let unit = 1; unit <= UNIT_COUNT_BY_DOMAIN[d]; unit++) {
       out.push(unitStickerFor(d, unit));
     }
   }
@@ -186,6 +199,10 @@ export interface EarningContext {
   dailyQuestStreak?: number;
   freezeUsedEver?: boolean;
   lessonsCompleted?: number;
+  c4Wins?: number;
+  wheelSpunEver?: boolean;
+  arcadeDistinctToday?: number;
+  finalsCompletedCount?: number;
 }
 
 export interface UnitDoneEvent {
@@ -253,12 +270,12 @@ export function checkAllEarning(
   // Mastery (domain): all units in domain have ≥2 stars
   for (const d of DOMAINS) {
     const completed = ctx.byDomainUnitsCompleted[d] ?? 0;
-    if (completed >= UNITS_PER_DOMAIN) add(`mastery-${d}`);
+    if (completed >= UNIT_COUNT_BY_DOMAIN[d]) add(`mastery-${d}`);
   }
 
   // Grand mastery: every domain mastered
   const grandReady = DOMAINS.every(
-    (d) => (ctx.byDomainUnitsCompleted[d] ?? 0) >= UNITS_PER_DOMAIN,
+    (d) => (ctx.byDomainUnitsCompleted[d] ?? 0) >= UNIT_COUNT_BY_DOMAIN[d],
   );
   if (grandReady) add('mastery-grand');
 
@@ -268,6 +285,11 @@ export function checkAllEarning(
   if ((ctx.dailyQuestStreak ?? 0) >= 7) add('quest-streak-7');
   if (ctx.freezeUsedEver) add('freeze-saved');
   if ((ctx.lessonsCompleted ?? 0) >= 5) add('lesson-explorer');
+  if ((ctx.c4Wins ?? 0) >= 1) add('arcade-c4');
+  if (ctx.wheelSpunEver) add('arcade-wheel');
+  if ((ctx.arcadeDistinctToday ?? 0) >= 5) add('arcade-variety');
+  if ((ctx.finalsCompletedCount ?? 0) >= 1) add('finals-first');
+  if ((ctx.finalsCompletedCount ?? 0) >= 5) add('finals-all');
 
   return earned;
 }

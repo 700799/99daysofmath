@@ -1,0 +1,48 @@
+{
+  "id": "5.F.025",
+  "domain": "5.F",
+  "unit": 3,
+  "orderInUnit": 5,
+  "standard": "5.NF.B.7",
+  "difficulty": 2,
+  "prompt": "Divide: $\\frac{1}{2} \\div 4$",
+  "answerType": "fraction",
+  "primaryAnswer": "1/8",
+  "alternativeAnswers": [
+    "0.125"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "You are sharing half of something among $4$ people.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You are sharing half of something among $4$ people."
+    },
+    {
+      "level": "guide",
+      "text": "Cutting $\\frac{1}{2}$ into $4$ equal pieces makes the pieces $4$ times smaller."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2} \\div 4 = \\frac{1}{8}$."
+    }
+  ],
+  "explanation": [
+    "Sharing $\\frac{1}{2}$ among $4$: each share is $\\frac{1}{2} \\times \\frac{1}{4}$.",
+    "$\\frac{1}{2} \\times \\frac{1}{4} = \\frac{1}{8}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture it",
+      "steps": [
+        "Half a pizza shared by 4 friends.",
+        "The whole pizza would give each person $\\frac{1}{8}$ × 2 = wait — half gives each $\\frac{1}{8}$ of the whole pizza."
+      ]
+    }
+  ],
+  "tags": [
+    "fractions",
+    "division"
+  ],
+  "estimatedSeconds": 50
+}

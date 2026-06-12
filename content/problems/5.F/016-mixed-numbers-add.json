@@ -1,0 +1,40 @@
+{
+  "id": "5.F.016",
+  "domain": "5.F",
+  "unit": 2,
+  "orderInUnit": 6,
+  "standard": "5.NF.A.1",
+  "difficulty": 2,
+  "prompt": "Add: $1\\frac{1}{2} + 2\\frac{1}{3}$ (answer as a mixed number)",
+  "answerType": "fraction",
+  "primaryAnswer": "3 5/6",
+  "alternativeAnswers": [
+    "23/6"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Add the whole numbers and the fractions separately.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add the whole numbers and the fractions separately."
+    },
+    {
+      "level": "guide",
+      "text": "Wholes: $1 + 2 = 3$. Fractions: $\\frac{1}{2} + \\frac{1}{3} = \\frac{5}{6}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 + \\frac{5}{6} = 3\\frac{5}{6}$."
+    }
+  ],
+  "explanation": [
+    "Split each mixed number: wholes $1 + 2 = 3$.",
+    "Fractions: $\\frac{1}{2} + \\frac{1}{3} = \\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}$.",
+    "Put them together: $3\\frac{5}{6}$."
+  ],
+  "tags": [
+    "fractions",
+    "mixed-numbers"
+  ],
+  "estimatedSeconds": 70
+}

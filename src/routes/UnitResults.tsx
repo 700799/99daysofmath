@@ -14,6 +14,9 @@ interface ResultsState {
   missedCount: number;
   total: number;
   xpEarned: number;
+  unitBonus?: number;
+  trailBonus?: number;
+  allTrailsBonus?: number;
   sticker: string;
   newStickerIds?: string[];
 }
@@ -64,6 +67,26 @@ export function UnitResults() {
           <StatBox value={state.missedCount} label="Missed" tone="red" />
           <StatBox value={state.xpEarned} label="XP" tone="yellow" />
         </div>
+
+        {((state.unitBonus ?? 0) > 0 || (state.trailBonus ?? 0) > 0 || (state.allTrailsBonus ?? 0) > 0) && (
+          <div className="mt-3 flex flex-wrap justify-center gap-2">
+            {(state.unitBonus ?? 0) > 0 && (
+              <span className="inline-flex items-center gap-1 bg-yellow-100 text-yellow-900 font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
+                🎁 Unit bonus +{state.unitBonus} XP
+              </span>
+            )}
+            {(state.trailBonus ?? 0) > 0 && (
+              <span className="inline-flex items-center gap-1 bg-green-100 text-green-900 font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
+                🏁 Trail complete +{state.trailBonus} XP
+              </span>
+            )}
+            {(state.allTrailsBonus ?? 0) > 0 && (
+              <span className="inline-flex items-center gap-1 bg-purple-100 text-purple-900 font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
+                👑 ALL trails done +{state.allTrailsBonus} XP
+              </span>
+            )}
+          </div>
+        )}
 
         {state.newStickerIds && state.newStickerIds.length > 0 && (
           <div className="mt-6 flex flex-col gap-3 items-center">

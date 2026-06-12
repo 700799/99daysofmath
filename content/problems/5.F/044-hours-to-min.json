@@ -1,0 +1,40 @@
+{
+  "id": "5.F.044",
+  "domain": "5.F",
+  "unit": 5,
+  "orderInUnit": 4,
+  "standard": "5.MD.A.1",
+  "difficulty": 2,
+  "prompt": "A movie lasts $3$ hours $15$ minutes. How many **minutes** is that?",
+  "answerType": "numeric",
+  "primaryAnswer": "195",
+  "alternativeAnswers": [
+    "195 min"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Convert the hours first; then add the leftover minutes.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Convert the hours first; then add the leftover minutes."
+    },
+    {
+      "level": "guide",
+      "text": "$3 \\times 60 = 180$ minutes."
+    },
+    {
+      "level": "reveal",
+      "text": "$180 + 15 = 195$ minutes."
+    }
+  ],
+  "explanation": [
+    "$1$ hour $= 60$ minutes, so $3$ hours $= 180$ minutes.",
+    "Add the extra $15$: $180 + 15 = 195$ minutes."
+  ],
+  "tags": [
+    "MAP-practice",
+    "measurement",
+    "time"
+  ],
+  "estimatedSeconds": 45
+}

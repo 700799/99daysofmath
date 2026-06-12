@@ -1,0 +1,53 @@
+{
+  "id": "5.F.049",
+  "domain": "5.F",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "5.MD.C.5",
+  "difficulty": 3,
+  "prompt": "A step is built from two boxes glued together: one is $5 \\times 4 \\times 3$ and the other is $5 \\times 4 \\times 2$. What is the **total volume**?",
+  "answerType": "numeric",
+  "primaryAnswer": "100",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find each box volume separately, then add.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find each box volume separately, then add."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Two boxes of volume $10$ and $20$ together hold $30$. Same plan here."
+    },
+    {
+      "level": "guide",
+      "text": "Box 1: $5 \\times 4 \\times 3 = 60$. Box 2: $5 \\times 4 \\times 2 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "Box 2 is $40$. Total: $60 + 40 = 100$."
+    }
+  ],
+  "explanation": [
+    "Box 1: $5 \\times 4 \\times 3 = 60$ cubic units.",
+    "Box 2: $5 \\times 4 \\times 2 = 40$ cubic units.",
+    "Total volume: $60 + 40 = 100$ cubic units."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Combine first",
+      "steps": [
+        "Both boxes share a $5 \\times 4$ base.",
+        "Stack the heights: $3 + 2 = 5$, so $V = 5 \\times 4 \\times 5 = 100$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "volume",
+    "composite"
+  ],
+  "estimatedSeconds": 95
+}

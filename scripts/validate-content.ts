@@ -84,9 +84,11 @@ async function main() {
       let lastOrder = 0;
       for (const h of data.hints) {
         const order = LEVEL_ORDER[h.level];
-        if (order <= lastOrder) {
+        // Non-descending: repeated levels are allowed (hint series), going
+        // backwards is not.
+        if (order < lastOrder) {
           console.error(
-            `✗ ${data.id}: hints must be strictly ascending (nudge → guide → reveal); got ${h.level} after order ${lastOrder}`,
+            `✗ ${data.id}: hints must be non-descending (nudge → guide → reveal); got ${h.level} after order ${lastOrder}`,
           );
           errors++;
           break;
@@ -105,11 +107,14 @@ async function main() {
     const key = `${data.domain}:${data.unit}`;
     unitCounts.set(key, (unitCounts.get(key) ?? 0) + 1);
   }
-  const TARGET_PER_DOMAIN = 100;
+  const TARGET_BY_DOMAIN: Record<string, number> = {
+    '6.RP': 100, '6.NS': 100, '6.EE': 100, '6.G': 100, '6.SP': 100, '5.F': 60,
+  };
   const TARGET_PER_UNIT = 10;
   for (const [domain, count] of domainCounts) {
-    if (count !== TARGET_PER_DOMAIN) {
-      const msg = `${count}/${TARGET_PER_DOMAIN} problems in ${domain}`;
+    const target = TARGET_BY_DOMAIN[domain] ?? 0;
+    if (count !== target) {
+      const msg = `${count}/${target} problems in ${domain}`;
       if (STRICT) {
         console.error(`✗ ${msg}`);
         errors++;

@@ -1,8 +1,9 @@
-export type Domain = '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP';
+export type Domain = '5.F' | '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP';
 
-export const DOMAINS: Domain[] = ['6.RP', '6.NS', '6.EE', '6.G', '6.SP'];
+export const DOMAINS: Domain[] = ['5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP'];
 
 export const DOMAIN_LABELS: Record<Domain, string> = {
+  '5.F': 'Gr-5 Foundations',
   '6.RP': 'Ratios & Proportions',
   '6.NS': 'The Number System',
   '6.EE': 'Expressions & Equations',
@@ -11,6 +12,7 @@ export const DOMAIN_LABELS: Record<Domain, string> = {
 };
 
 export const DOMAIN_DESCRIPTIONS: Record<Domain, string> = {
+  '5.F': 'Fractions, decimals, place value, measurement, volume, and the coordinate plane',
   '6.RP': 'Unit rates, percent, and ratio tables',
   '6.NS': 'Fractions, decimals, integers, and the coordinate plane',
   '6.EE': 'Variables, expressions, equations, and inequalities',
@@ -19,6 +21,7 @@ export const DOMAIN_DESCRIPTIONS: Record<Domain, string> = {
 };
 
 export const DOMAIN_COLORS: Record<Domain, string> = {
+  '5.F': '#14B8A6',
   '6.RP': '#58CC02',
   '6.NS': '#1CB0F6',
   '6.EE': '#CE82FF',
@@ -27,6 +30,7 @@ export const DOMAIN_COLORS: Record<Domain, string> = {
 };
 
 export const DOMAIN_EMOJI: Record<Domain, string> = {
+  '5.F': '🧱',
   '6.RP': '⚖️',
   '6.NS': '🔢',
   '6.EE': '🧮',

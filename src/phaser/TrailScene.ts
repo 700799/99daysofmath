@@ -93,15 +93,24 @@ export class TrailScene extends Phaser.Scene {
     }
   }
 
+  private firstIncompleteUnit(): number {
+    for (const node of this.layout) {
+      if ((this.state.unitStars[node.unit] ?? 0) === 0) return node.unit;
+    }
+    return -1;
+  }
+
   private drawNodes() {
     const color = Phaser.Display.Color.HexStringToColor(
       DOMAIN_COLORS[this.domain],
     ).color;
     for (const node of this.layout) {
-      const unlocked = node.unit <= this.state.unitsUnlocked;
+      // Open trails: every node is playable; the "current" node is simply the
+      // first one without a star yet.
+      const unlocked = true;
       const stars = this.state.unitStars[node.unit] ?? 0;
       const completed = stars > 0;
-      const isCurrent = node.unit === this.state.unitsUnlocked && !completed;
+      const isCurrent = node.unit === this.firstIncompleteUnit() && !completed;
 
       const container = this.add.container(node.x, node.y);
 
@@ -122,11 +131,7 @@ export class TrailScene extends Phaser.Scene {
       container.add(inner);
 
       // Label
-      const labelText = completed
-        ? '★'
-        : unlocked
-          ? String(node.unit)
-          : '🔒';
+      const labelText = completed ? '★' : String(node.unit);
       const label = this.add
         .text(0, 0, labelText, {
           fontFamily: 'Nunito, system-ui, sans-serif',
@@ -191,8 +196,7 @@ export class TrailScene extends Phaser.Scene {
     let targetNode: TrailNode | null = null;
     for (const node of this.layout) {
       const stars = this.state.unitStars[node.unit] ?? 0;
-      const unlocked = node.unit <= this.state.unitsUnlocked;
-      if (unlocked && stars === 0) {
+      if (stars === 0) {
         targetNode = node;
         break;
       }

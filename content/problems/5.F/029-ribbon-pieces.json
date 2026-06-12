@@ -1,0 +1,53 @@
+{
+  "id": "5.F.029",
+  "domain": "5.F",
+  "unit": 3,
+  "orderInUnit": 9,
+  "standard": "5.NF.B.7",
+  "difficulty": 3,
+  "prompt": "A ribbon is $6$ feet long. It is cut into pieces that are each $\\frac{3}{4}$ foot long. How many pieces are there?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "This asks: how many $\\frac{3}{4}$-foot pieces fit in $6$ feet?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This asks: how many $\\frac{3}{4}$-foot pieces fit in $6$ feet?"
+    },
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Every $3$ feet gives $4$ pieces (since $4 \\times \\frac{3}{4} = 3$). How many 3-foot chunks are in 6 feet?"
+    },
+    {
+      "level": "guide",
+      "text": "Compute $6 \\div \\frac{3}{4} = 6 \\times \\frac{4}{3}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 \\times \\frac{4}{3} = \\frac{24}{3} = 8$ pieces."
+    }
+  ],
+  "explanation": [
+    "Pieces $= 6 \\div \\frac{3}{4}$.",
+    "Keep-change-flip: $6 \\times \\frac{4}{3} = \\frac{24}{3} = 8$.",
+    "Check: $8 \\times \\frac{3}{4} = 6$ feet ✓."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count by chunks",
+      "steps": [
+        "$4$ pieces use $3$ feet of ribbon.",
+        "$6$ feet is two of those chunks: $2 \\times 4 = 8$ pieces."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "word-problem",
+    "division"
+  ],
+  "estimatedSeconds": 95
+}
