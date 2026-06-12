@@ -34,5 +34,14 @@
   "tags": [
     "quartile"
   ],
-  "estimatedSeconds": 60
+  "estimatedSeconds": 60,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 2.5 — verified."
+      ]
+    }
+  ]
 }

@@ -32,7 +32,8 @@
     }
   ],
   "explanation": [
-    "Measures of variability include range, IQR (interquartile range), and MAD (mean absolute deviation)."
+    "Measures of variability include range, IQR (interquartile range), and MAD (mean absolute deviation).",
+    "Final answer: range, IQR."
   ],
   "tags": [
     "vocabulary",

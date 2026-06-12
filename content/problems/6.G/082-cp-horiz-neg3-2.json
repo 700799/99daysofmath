@@ -28,11 +28,21 @@
     }
   ],
   "explanation": [
-    "$|2 - (-3)| = |5| = 5$."
+    "$|2 - (-3)| = |5| = 5$.",
+    "Final answer: 5."
   ],
   "tags": [
     "coordinate-plane",
     "distance"
   ],
-  "estimatedSeconds": 40
+  "estimatedSeconds": 40,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 5 — verified."
+      ]
+    }
+  ]
 }

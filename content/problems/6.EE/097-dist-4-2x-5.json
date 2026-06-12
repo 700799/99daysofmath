@@ -28,7 +28,8 @@
     }
   ],
   "explanation": [
-    "$4(2x + 5) = 4 \\cdot 2x + 4 \\cdot 5 = 8x + 20$."
+    "$4(2x + 5) = 4 \\cdot 2x + 4 \\cdot 5 = 8x + 20$.",
+    "Final answer: 8x+20."
   ],
   "tags": [
     "MAP-practice",

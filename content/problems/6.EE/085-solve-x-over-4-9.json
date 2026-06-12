@@ -26,7 +26,8 @@
     }
   ],
   "explanation": [
-    "$\\dfrac{x}{4} = 9$. Multiply both sides by $4$: $x = 36$."
+    "$\\dfrac{x}{4} = 9$. Multiply both sides by $4$: $x = 36$.",
+    "Final answer: 36."
   ],
   "alternativeExplanations": [
     {

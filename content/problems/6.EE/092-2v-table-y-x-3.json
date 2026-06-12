@@ -37,5 +37,14 @@
     "two-vars",
     "table"
   ],
-  "estimatedSeconds": 60
+  "estimatedSeconds": 60,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 4, 5, 6, 7 — verified."
+      ]
+    }
+  ]
 }

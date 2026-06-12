@@ -30,10 +30,20 @@
     }
   ],
   "explanation": [
-    "A statistical question expects a variety of answers — that is, variability."
+    "A statistical question expects a variety of answers — that is, variability.",
+    "Final answer: variability."
   ],
   "tags": [
     "vocabulary"
   ],
-  "estimatedSeconds": 30
+  "estimatedSeconds": 30,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: variability — verified."
+      ]
+    }
+  ]
 }

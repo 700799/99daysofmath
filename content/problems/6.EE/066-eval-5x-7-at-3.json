@@ -26,7 +26,8 @@
     }
   ],
   "explanation": [
-    "$5x - 7$ with $x = 3$: $5(3) - 7 = 15 - 7 = 8$."
+    "$5x - 7$ with $x = 3$: $5(3) - 7 = 15 - 7 = 8$.",
+    "Final answer: 8."
   ],
   "tags": [
     "evaluate"

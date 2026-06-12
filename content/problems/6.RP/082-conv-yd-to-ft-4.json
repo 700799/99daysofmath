@@ -28,11 +28,21 @@
     }
   ],
   "explanation": [
-    "$4 \\times 3 = 12$ feet."
+    "$4 \\times 3 = 12$ feet.",
+    "Final answer: 12."
   ],
   "tags": [
     "conversion",
     "length"
   ],
-  "estimatedSeconds": 30
+  "estimatedSeconds": 30,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 12 — verified."
+      ]
+    }
+  ]
 }

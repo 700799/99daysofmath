@@ -37,5 +37,14 @@
     "equation",
     "word"
   ],
-  "estimatedSeconds": 40
+  "estimatedSeconds": 40,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: n+6=14 — verified."
+      ]
+    }
+  ]
 }

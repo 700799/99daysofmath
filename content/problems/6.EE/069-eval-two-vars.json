@@ -26,7 +26,8 @@
     }
   ],
   "explanation": [
-    "$2x + y$ with $x = 3, y = 7$: $2(3) + 7 = 6 + 7 = 13$."
+    "$2x + y$ with $x = 3, y = 7$: $2(3) + 7 = 6 + 7 = 13$.",
+    "Final answer: 13."
   ],
   "tags": [
     "MAP-practice",

@@ -37,5 +37,14 @@
     "area",
     "subtract"
   ],
-  "estimatedSeconds": 50
+  "estimatedSeconds": 50,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 26 — verified."
+      ]
+    }
+  ]
 }

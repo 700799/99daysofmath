@@ -26,7 +26,8 @@
     }
   ],
   "explanation": [
-    "$y = 5x + 2$ with $x = 4$: $5(4) + 2 = 22$."
+    "$y = 5x + 2$ with $x = 4$: $5(4) + 2 = 22$.",
+    "Final answer: 22."
   ],
   "alternativeExplanations": [
     {

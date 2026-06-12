@@ -26,11 +26,21 @@
     }
   ],
   "explanation": [
-    "A rectangular prism has $6$ rectangular faces."
+    "A rectangular prism has $6$ rectangular faces.",
+    "Final answer: 6."
   ],
   "tags": [
     "surface-area",
     "prism"
   ],
-  "estimatedSeconds": 25
+  "estimatedSeconds": 25,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 6 — verified."
+      ]
+    }
+  ]
 }

@@ -26,7 +26,8 @@
     }
   ],
   "explanation": [
-    "$4(b + 1)$ with $b = 5$: $4(5 + 1) = 4 \\cdot 6 = 24$."
+    "$4(b + 1)$ with $b = 5$: $4(5 + 1) = 4 \\cdot 6 = 24$.",
+    "Final answer: 24."
   ],
   "alternativeExplanations": [
     {

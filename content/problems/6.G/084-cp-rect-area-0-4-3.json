@@ -28,11 +28,21 @@
     }
   ],
   "explanation": [
-    "Length $4$ and width $3$: area $= 12$ sq units."
+    "Length $4$ and width $3$: area $= 12$ sq units.",
+    "Final answer: 12."
   ],
   "tags": [
     "coordinate-plane",
     "area"
   ],
-  "estimatedSeconds": 35
+  "estimatedSeconds": 35,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 12 — verified."
+      ]
+    }
+  ]
 }

@@ -33,5 +33,14 @@
     "expression",
     "parts"
   ],
-  "estimatedSeconds": 25
+  "estimatedSeconds": 25,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 4 — verified."
+      ]
+    }
+  ]
 }

@@ -28,12 +28,22 @@
     }
   ],
   "explanation": [
-    "$5 \\times 100 = 500$ centimeters."
+    "$5 \\times 100 = 500$ centimeters.",
+    "Final answer: 500."
   ],
   "tags": [
     "conversion",
     "metric",
     "length"
   ],
-  "estimatedSeconds": 35
+  "estimatedSeconds": 35,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 500 — verified."
+      ]
+    }
+  ]
 }

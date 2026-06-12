@@ -28,7 +28,8 @@
     }
   ],
   "explanation": [
-    "$8 \\div 2 = 4$ pints."
+    "$8 \\div 2 = 4$ pints.",
+    "Final answer: 4."
   ],
   "tags": [
     "conversion",

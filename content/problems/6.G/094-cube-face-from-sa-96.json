@@ -28,12 +28,22 @@
     }
   ],
   "explanation": [
-    "$96 \\div 6 = 16$ sq units per face."
+    "$96 \\div 6 = 16$ sq units per face.",
+    "Final answer: 16."
   ],
   "tags": [
     "surface-area",
     "cube",
     "inverse"
   ],
-  "estimatedSeconds": 45
+  "estimatedSeconds": 45,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 16 — verified."
+      ]
+    }
+  ]
 }

@@ -29,12 +29,22 @@
     }
   ],
   "explanation": [
-    "$\\left(\\tfrac{1}{2}\\right)^3 = \\tfrac{1}{8}$ cubic units."
+    "$\\left(\\tfrac{1}{2}\\right)^3 = \\tfrac{1}{8}$ cubic units.",
+    "Final answer: 1/8."
   ],
   "tags": [
     "volume",
     "fraction",
     "cube"
   ],
-  "estimatedSeconds": 55
+  "estimatedSeconds": 55,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 1/8 — verified."
+      ]
+    }
+  ]
 }

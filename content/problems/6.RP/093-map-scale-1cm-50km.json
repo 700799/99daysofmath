@@ -28,11 +28,21 @@
     }
   ],
   "explanation": [
-    "$7 \\times 50 = 350$ kilometers."
+    "$7 \\times 50 = 350$ kilometers.",
+    "Final answer: 350."
   ],
   "tags": [
     "ratio",
     "scale"
   ],
-  "estimatedSeconds": 50
+  "estimatedSeconds": 50,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 350 — verified."
+      ]
+    }
+  ]
 }

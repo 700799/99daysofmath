@@ -26,7 +26,8 @@
     }
   ],
   "explanation": [
-    "$x - 5 = 12$. Add $5$: $x = 17$."
+    "$x - 5 = 12$. Add $5$: $x = 17$.",
+    "Final answer: 17."
   ],
   "alternativeExplanations": [
     {

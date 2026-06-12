@@ -28,10 +28,20 @@
     }
   ],
   "explanation": [
-    "$2 \\cdot 4 = 8$, then $8 \\cdot 5 = 40$."
+    "$2 \\cdot 4 = 8$, then $8 \\cdot 5 = 40$.",
+    "Final answer: 40."
   ],
   "tags": [
     "volume"
   ],
-  "estimatedSeconds": 30
+  "estimatedSeconds": 30,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 40 — verified."
+      ]
+    }
+  ]
 }

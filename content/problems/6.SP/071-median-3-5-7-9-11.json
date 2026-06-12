@@ -26,10 +26,20 @@
     }
   ],
   "explanation": [
-    "Sorted: $3, 5, 7, 9, 11$. Middle value is $7$."
+    "Sorted: $3, 5, 7, 9, 11$. Middle value is $7$.",
+    "Final answer: 7."
   ],
   "tags": [
     "median"
   ],
-  "estimatedSeconds": 30
+  "estimatedSeconds": 30,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 7 — verified."
+      ]
+    }
+  ]
 }

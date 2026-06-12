@@ -26,12 +26,22 @@
     }
   ],
   "explanation": [
-    "Sorted with $7$ values, the middle is the $4$th: $6$."
+    "Sorted with $7$ values, the middle is the $4$th: $6$.",
+    "Final answer: 6."
   ],
   "tags": [
     "MAP-practice",
     "median",
     "five-number-summary"
   ],
-  "estimatedSeconds": 45
+  "estimatedSeconds": 45,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 6 — verified."
+      ]
+    }
+  ]
 }

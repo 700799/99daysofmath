@@ -26,11 +26,21 @@
     }
   ],
   "explanation": [
-    "$y = 2x + 1$. Plug $x = 5$: $y = 2(5) + 1 = 11$."
+    "$y = 2x + 1$. Plug $x = 5$: $y = 2(5) + 1 = 11$.",
+    "Final answer: 11."
   ],
   "tags": [
     "two-vars",
     "evaluate"
   ],
-  "estimatedSeconds": 40
+  "estimatedSeconds": 40,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 11 — verified."
+      ]
+    }
+  ]
 }

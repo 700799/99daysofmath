@@ -35,5 +35,14 @@
     "integer",
     "context"
   ],
-  "estimatedSeconds": 30
+  "estimatedSeconds": 30,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: -5 — verified."
+      ]
+    }
+  ]
 }

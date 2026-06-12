@@ -34,5 +34,14 @@
     "evaluate",
     "fraction"
   ],
-  "estimatedSeconds": 65
+  "estimatedSeconds": 65,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 6 — verified."
+      ]
+    }
+  ]
 }

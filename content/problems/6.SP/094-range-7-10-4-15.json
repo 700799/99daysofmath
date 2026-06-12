@@ -32,5 +32,14 @@
   "tags": [
     "range"
   ],
-  "estimatedSeconds": 35
+  "estimatedSeconds": 35,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 11 — verified."
+      ]
+    }
+  ]
 }

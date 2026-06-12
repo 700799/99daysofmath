@@ -26,11 +26,21 @@
     }
   ],
   "explanation": [
-    "Opposite of $-12$ is $12$."
+    "Opposite of $-12$ is $12$.",
+    "Final answer: 12."
   ],
   "tags": [
     "integer",
     "opposite"
   ],
-  "estimatedSeconds": 25
+  "estimatedSeconds": 25,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 12 — verified."
+      ]
+    }
+  ]
 }

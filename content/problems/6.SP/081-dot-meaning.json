@@ -31,10 +31,20 @@
     }
   ],
   "explanation": [
-    "Each dot in a dot plot represents one observation (one data value)."
+    "Each dot in a dot plot represents one observation (one data value).",
+    "Final answer: one data point."
   ],
   "tags": [
     "dot-plot"
   ],
-  "estimatedSeconds": 30
+  "estimatedSeconds": 30,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: one data point — verified."
+      ]
+    }
+  ]
 }

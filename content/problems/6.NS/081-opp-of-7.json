@@ -28,11 +28,21 @@
     }
   ],
   "explanation": [
-    "Opposite of $7$ is $-7$ (same distance from $0$, opposite sign)."
+    "Opposite of $7$ is $-7$ (same distance from $0$, opposite sign).",
+    "Final answer: -7."
   ],
   "tags": [
     "integer",
     "opposite"
   ],
-  "estimatedSeconds": 25
+  "estimatedSeconds": 25,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: -7 — verified."
+      ]
+    }
+  ]
 }

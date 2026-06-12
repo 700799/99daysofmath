@@ -26,7 +26,8 @@
     }
   ],
   "explanation": [
-    "Sum $=$ mean $\\times$ count $= 85 \\cdot 20 = 1700$."
+    "Sum $=$ mean $\\times$ count $= 85 \\cdot 20 = 1700$.",
+    "Final answer: 1700."
   ],
   "tags": [
     "MAP-practice",

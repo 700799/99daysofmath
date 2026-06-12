@@ -30,11 +30,21 @@
     }
   ],
   "explanation": [
-    "Saving $25$ per week for $w$ weeks = $25 \\cdot w = 25w$ dollars."
+    "Saving $25$ per week for $w$ weeks = $25 \\cdot w = 25w$ dollars.",
+    "Final answer: 25w."
   ],
   "tags": [
     "expression",
     "word"
   ],
-  "estimatedSeconds": 40
+  "estimatedSeconds": 40,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 25w — verified."
+      ]
+    }
+  ]
 }

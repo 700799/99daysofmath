@@ -48,7 +48,8 @@
     }
   ],
   "explanation": [
-    "$6(2x + 5) = 6 \\cdot 2x + 6 \\cdot 5 = 12x + 30$."
+    "$6(2x + 5) = 6 \\cdot 2x + 6 \\cdot 5 = 12x + 30$.",
+    "Final answer: B."
   ],
   "alternativeExplanations": [
     {

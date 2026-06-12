@@ -26,7 +26,8 @@
     }
   ],
   "explanation": [
-    "IQR $= Q_3 - Q_1 = 22 - 10 = 12$."
+    "IQR $= Q_3 - Q_1 = 22 - 10 = 12$.",
+    "Final answer: 12."
   ],
   "tags": [
     "MAP-practice",

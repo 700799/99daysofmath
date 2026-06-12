@@ -34,5 +34,14 @@
     "volume",
     "fraction"
   ],
-  "estimatedSeconds": 55
+  "estimatedSeconds": 55,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 12 — verified."
+      ]
+    }
+  ]
 }

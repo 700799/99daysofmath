@@ -28,7 +28,8 @@
     }
   ],
   "explanation": [
-    "$3 \\times 4 = 12$ quarts."
+    "$3 \\times 4 = 12$ quarts.",
+    "Final answer: 12."
   ],
   "tags": [
     "conversion",
