@@ -1,0 +1,50 @@
+{
+  "id": "6.RP.072",
+  "domain": "6.RP",
+  "unit": 8,
+  "orderInUnit": 2,
+  "standard": "6.RP.A.2",
+  "difficulty": 1,
+  "prompt": "$12$ cookies cost \\$$6$. What is the cost **per cookie**?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.50",
+  "alternativeAnswers": [
+    "$0.50",
+    "0.5",
+    "50 cents"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Total dollars $\\div$ number of cookies.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Total dollars $\\div$ number of cookies."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\div 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\$0.50$."
+    }
+  ],
+  "explanation": [
+    "Per cookie = total $\\div$ count.",
+    "$6 \\div 12 = 0.50$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use a ratio table",
+      "steps": [
+        "$12$ cookies → \\$$6$.",
+        "Halve both: $6$ → \\$$3$. Halve again: $3$ → \\$$1.50$. Halve: $1.50$ → \\$$0.75$. Halve: $0.75$ → ... or just divide: $6 \\div 12 = 0.50$."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-rate",
+    "price"
+  ],
+  "estimatedSeconds": 40
+}

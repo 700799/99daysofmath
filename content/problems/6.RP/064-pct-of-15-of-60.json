@@ -1,0 +1,47 @@
+{
+  "id": "6.RP.064",
+  "domain": "6.RP",
+  "unit": 7,
+  "orderInUnit": 4,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 2,
+  "prompt": "What is $15\\%$ of $60$?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$15\\% = 0.15$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$15\\% = 0.15$."
+    },
+    {
+      "level": "guide",
+      "text": "$0.15 \\times 60$."
+    },
+    {
+      "level": "reveal",
+      "text": "$9$."
+    }
+  ],
+  "explanation": [
+    "$15\\% = 0.15$.",
+    "$0.15 \\times 60 = 9$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build it from 10% and 5%",
+      "steps": [
+        "$10\\%$ of $60 = 6$.",
+        "$5\\%$ is half of that: $3$.",
+        "$10\\% + 5\\% = 6 + 3 = 9$."
+      ]
+    }
+  ],
+  "tags": [
+    "percent",
+    "mental-math"
+  ],
+  "estimatedSeconds": 55
+}

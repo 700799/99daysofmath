@@ -1,0 +1,50 @@
+{
+  "id": "6.RP.098",
+  "domain": "6.RP",
+  "unit": 10,
+  "orderInUnit": 8,
+  "standard": "6.RP.A.3",
+  "difficulty": 3,
+  "prompt": "A paint mix uses blue and yellow in a $2 : 3$ ratio. To make $20$ gallons of mix, how many gallons of **yellow** are needed?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [
+    "12 gal",
+    "12 gallons"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find each part first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find each part first."
+    },
+    {
+      "level": "guide",
+      "text": "Parts: $2 + 3 = 5$. Each part: $20 \\div 5 = 4$. Yellow $= 3 \\times 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 4 = 12$ gallons."
+    }
+  ],
+  "explanation": [
+    "Total parts: $2 + 3 = 5$.",
+    "Each part: $20 \\div 5 = 4$ gal.",
+    "Yellow (3 parts): $3 \\times 4 = 12$ gal."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use $\\tfrac{3}{5}$ of the whole",
+      "steps": [
+        "Yellow is $\\tfrac{3}{5}$ of the mix.",
+        "$\\tfrac{3}{5} \\times 20 = 12$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "ratio"
+  ],
+  "estimatedSeconds": 80
+}

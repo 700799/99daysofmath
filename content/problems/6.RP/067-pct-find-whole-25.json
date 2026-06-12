@@ -1,0 +1,46 @@
+{
+  "id": "6.RP.067",
+  "domain": "6.RP",
+  "unit": 7,
+  "orderInUnit": 7,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 2,
+  "prompt": "$15$ is $25\\%$ of what number?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$25\\% \\cdot N = 15$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$25\\% \\cdot N = 15$."
+    },
+    {
+      "level": "guide",
+      "text": "$N = 15 \\div 0.25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$15 \\div 0.25 = 60$."
+    }
+  ],
+  "explanation": [
+    "Let $N$ be the whole. $0.25 \\cdot N = 15$.",
+    "$N = 15 \\div 0.25 = 60$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the fraction $\\tfrac{1}{4}$",
+      "steps": [
+        "$25\\% = \\tfrac{1}{4}$. So one quarter of $N$ is $15$.",
+        "The whole $N$ is $15 \\times 4 = 60$."
+      ]
+    }
+  ],
+  "tags": [
+    "percent",
+    "find-whole"
+  ],
+  "estimatedSeconds": 65
+}

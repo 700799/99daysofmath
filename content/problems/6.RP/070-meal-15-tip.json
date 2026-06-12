@@ -1,0 +1,59 @@
+{
+  "id": "6.RP.070",
+  "domain": "6.RP",
+  "unit": 7,
+  "orderInUnit": 10,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 3,
+  "prompt": "A meal costs \\$$24$. With a $15\\%$ tip, what is the **total**?",
+  "answerType": "numeric",
+  "primaryAnswer": "27.60",
+  "alternativeAnswers": [
+    "$27.60",
+    "27.6"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the tip, then add.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the tip, then add."
+    },
+    {
+      "level": "guide",
+      "text": "Tip $= 0.15 \\times 24 = 3.60$. Total $= 24 + 3.60$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24 + 3.60 = 27.60$."
+    }
+  ],
+  "explanation": [
+    "Tip: $0.15 \\times 24 = 3.60$.",
+    "Total: $24 + 3.60 = 27.60$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Multiply by 1.15",
+      "steps": [
+        "Total $=$ original $+$ tip $= 100\\% + 15\\% = 115\\%$.",
+        "$1.15 \\times 24 = 27.60$."
+      ]
+    },
+    {
+      "title": "Mental: 10% + 5%",
+      "steps": [
+        "$10\\%$ of $24 = 2.40$.",
+        "$5\\%$ is half: $1.20$.",
+        "Tip $= 2.40 + 1.20 = 3.60$. Total $= 27.60$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "percent",
+    "word",
+    "tip"
+  ],
+  "estimatedSeconds": 90
+}

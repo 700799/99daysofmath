@@ -1,0 +1,46 @@
+{
+  "id": "6.RP.062",
+  "domain": "6.RP",
+  "unit": 7,
+  "orderInUnit": 2,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 1,
+  "prompt": "What is $10\\%$ of $250$?",
+  "answerType": "numeric",
+  "primaryAnswer": "25",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$10\\% = 0.10$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$10\\% = 0.10$."
+    },
+    {
+      "level": "guide",
+      "text": "$0.10 \\times 250$."
+    },
+    {
+      "level": "reveal",
+      "text": "$25$."
+    }
+  ],
+  "explanation": [
+    "$10\\% = 0.10$.",
+    "$0.10 \\times 250 = 25$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Shortcut: move the decimal",
+      "steps": [
+        "$10\\%$ of any number = move its decimal point one place left.",
+        "$250 \\to 25.0 = 25$."
+      ]
+    }
+  ],
+  "tags": [
+    "percent",
+    "mental-math"
+  ],
+  "estimatedSeconds": 35
+}

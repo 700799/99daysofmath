@@ -1,0 +1,38 @@
+{
+  "id": "6.RP.073",
+  "domain": "6.RP",
+  "unit": 8,
+  "orderInUnit": 3,
+  "standard": "6.RP.A.2",
+  "difficulty": 1,
+  "prompt": "A runner covers $400$ meters in $50$ seconds. Find the rate in **meters per second**.",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [
+    "8 m/s"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Meters $\\div$ seconds.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Meters $\\div$ seconds."
+    },
+    {
+      "level": "guide",
+      "text": "$400 \\div 50$."
+    },
+    {
+      "level": "reveal",
+      "text": "$8$."
+    }
+  ],
+  "explanation": [
+    "$400 \\div 50 = 8$ m/s."
+  ],
+  "tags": [
+    "unit-rate",
+    "speed"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,50 @@
+{
+  "id": "6.RP.097",
+  "domain": "6.RP",
+  "unit": 10,
+  "orderInUnit": 7,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 3,
+  "prompt": "A store discounts a \\$$50$ toy by $30\\%$. What is the **sale price**?",
+  "answerType": "numeric",
+  "primaryAnswer": "35",
+  "alternativeAnswers": [
+    "$35",
+    "$35.00"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the discount, then subtract.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the discount, then subtract."
+    },
+    {
+      "level": "guide",
+      "text": "Discount $= 0.30 \\times 50 = 15$. Sale $= 50 - 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "$50 - 15 = 35$."
+    }
+  ],
+  "explanation": [
+    "Discount: $0.30 \\times 50 = 15$.",
+    "Sale price: $50 - 15 = 35$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pay 70% directly",
+      "steps": [
+        "$30\\%$ off → pay $70\\%$.",
+        "$0.70 \\times 50 = 35$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "percent",
+    "discount"
+  ],
+  "estimatedSeconds": 75
+}

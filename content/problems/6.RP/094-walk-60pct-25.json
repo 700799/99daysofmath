@@ -1,0 +1,47 @@
+{
+  "id": "6.RP.094",
+  "domain": "6.RP",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 2,
+  "prompt": "$60\\%$ of the $25$ students in a class walk to school. How many students walk?",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [
+    "15 students"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$60\\% = 0.60$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$60\\% = 0.60$."
+    },
+    {
+      "level": "guide",
+      "text": "$0.60 \\times 25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$15$."
+    }
+  ],
+  "explanation": [
+    "$0.60 \\times 25 = 15$ students."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use $\\tfrac{3}{5}$",
+      "steps": [
+        "$60\\% = \\tfrac{3}{5}$.",
+        "$\\tfrac{3}{5} \\times 25 = \\tfrac{75}{5} = 15$."
+      ]
+    }
+  ],
+  "tags": [
+    "percent",
+    "word"
+  ],
+  "estimatedSeconds": 55
+}

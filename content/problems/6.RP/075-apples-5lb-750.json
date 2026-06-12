@@ -1,0 +1,40 @@
+{
+  "id": "6.RP.075",
+  "domain": "6.RP",
+  "unit": 8,
+  "orderInUnit": 5,
+  "standard": "6.RP.A.2",
+  "difficulty": 2,
+  "prompt": "$5$ lb of apples costs \\$$7.50$. What is the cost **per pound**?",
+  "answerType": "numeric",
+  "primaryAnswer": "1.50",
+  "alternativeAnswers": [
+    "$1.50",
+    "1.5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Total cost $\\div$ pounds.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Total cost $\\div$ pounds."
+    },
+    {
+      "level": "guide",
+      "text": "$7.50 \\div 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\$1.50$."
+    }
+  ],
+  "explanation": [
+    "$7.50 \\div 5 = 1.50$.",
+    "Cost: \\$$1.50$/lb."
+  ],
+  "tags": [
+    "unit-rate",
+    "price"
+  ],
+  "estimatedSeconds": 50
+}

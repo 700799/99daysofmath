@@ -1,0 +1,50 @@
+{
+  "id": "6.RP.100",
+  "domain": "6.RP",
+  "unit": 10,
+  "orderInUnit": 10,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 3,
+  "prompt": "A coat is \\$$100$. It is marked $25\\%$ off, and a coupon takes an extra $10\\%$ off the reduced price. What is the **final price**?",
+  "answerType": "numeric",
+  "primaryAnswer": "67.50",
+  "alternativeAnswers": [
+    "$67.50",
+    "67.5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Apply one discount, then the other to the new price.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Apply one discount, then the other to the new price."
+    },
+    {
+      "level": "guide",
+      "text": "After $25\\%$ off: $100 \\times 0.75 = 75$. After $10\\%$ off: $75 \\times 0.90$."
+    },
+    {
+      "level": "reveal",
+      "text": "$75 \\times 0.90 = 67.50$."
+    }
+  ],
+  "explanation": [
+    "After $25\\%$ off: $100 \\times 0.75 = 75$.",
+    "After $10\\%$ more off: $75 \\times 0.90 = 67.50$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Multiply the factors",
+      "steps": [
+        "Combined factor: $0.75 \\times 0.90 = 0.675$.",
+        "$100 \\times 0.675 = 67.50$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "percent",
+    "stacked-discount"
+  ],
+  "estimatedSeconds": 110
+}

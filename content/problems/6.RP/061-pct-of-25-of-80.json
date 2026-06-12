@@ -1,0 +1,46 @@
+{
+  "id": "6.RP.061",
+  "domain": "6.RP",
+  "unit": 7,
+  "orderInUnit": 1,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 1,
+  "prompt": "What is $25\\%$ of $80$?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Change the percent to a decimal first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Change the percent to a decimal first."
+    },
+    {
+      "level": "guide",
+      "text": "$25\\% = 0.25$. Multiply: $0.25 \\times 80$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.25 \\times 80 = 20$."
+    }
+  ],
+  "explanation": [
+    "$25\\% = 25/100 = 0.25$.",
+    "$0.25 \\times 80 = 20$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use a friendly fraction",
+      "steps": [
+        "$25\\% = \\tfrac{1}{4}$.",
+        "One quarter of $80$ is $80 \\div 4 = 20$."
+      ]
+    }
+  ],
+  "tags": [
+    "percent",
+    "part-of-whole"
+  ],
+  "estimatedSeconds": 45
+}

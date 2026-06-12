@@ -1,0 +1,47 @@
+{
+  "id": "6.RP.068",
+  "domain": "6.RP",
+  "unit": 7,
+  "orderInUnit": 8,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 3,
+  "prompt": "$18$ is $30\\%$ of what number?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$30\\% \\cdot N = 18$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$30\\% \\cdot N = 18$."
+    },
+    {
+      "level": "guide",
+      "text": "$N = 18 \\div 0.30$."
+    },
+    {
+      "level": "reveal",
+      "text": "$18 \\div 0.30 = 60$."
+    }
+  ],
+  "explanation": [
+    "$0.30 \\cdot N = 18$.",
+    "$N = 18 \\div 0.30 = 60$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Scale up from 10%",
+      "steps": [
+        "If $30\\% = 18$, then $10\\% = 18 \\div 3 = 6$.",
+        "$100\\% = 6 \\times 10 = 60$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "percent",
+    "find-whole"
+  ],
+  "estimatedSeconds": 75
+}

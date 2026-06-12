@@ -1,0 +1,38 @@
+{
+  "id": "6.RP.071",
+  "domain": "6.RP",
+  "unit": 8,
+  "orderInUnit": 1,
+  "standard": "6.RP.A.2",
+  "difficulty": 1,
+  "prompt": "A car travels $180$ miles in $3$ hours. What is the speed in **miles per hour**?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [
+    "60 mph"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Per hour means divide by hours.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Per hour means divide by hours."
+    },
+    {
+      "level": "guide",
+      "text": "$180 \\div 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$60$."
+    }
+  ],
+  "explanation": [
+    "Speed = distance $\\div$ time.",
+    "$180 \\div 3 = 60$ mph."
+  ],
+  "tags": [
+    "unit-rate"
+  ],
+  "estimatedSeconds": 35
+}

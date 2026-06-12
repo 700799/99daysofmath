@@ -1,0 +1,38 @@
+{
+  "id": "6.RP.088",
+  "domain": "6.RP",
+  "unit": 9,
+  "orderInUnit": 8,
+  "standard": "6.RP.A.3.d",
+  "difficulty": 2,
+  "prompt": "Convert $3$ gallons to quarts. ($1$ gal $= 4$ qt)",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [
+    "12 qt"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$1$ gal $= 4$ qt.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$1$ gal $= 4$ qt."
+    },
+    {
+      "level": "guide",
+      "text": "$3 \\times 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12$ qt."
+    }
+  ],
+  "explanation": [
+    "$3 \\times 4 = 12$ quarts."
+  ],
+  "tags": [
+    "conversion",
+    "volume"
+  ],
+  "estimatedSeconds": 35
+}

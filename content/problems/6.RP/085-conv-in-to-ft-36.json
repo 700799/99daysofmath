@@ -1,0 +1,38 @@
+{
+  "id": "6.RP.085",
+  "domain": "6.RP",
+  "unit": 9,
+  "orderInUnit": 5,
+  "standard": "6.RP.A.3.d",
+  "difficulty": 2,
+  "prompt": "How many feet are in $36$ inches? ($12$ in $= 1$ ft)",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [
+    "3 ft"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Divide because feet are larger than inches.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Divide because feet are larger than inches."
+    },
+    {
+      "level": "guide",
+      "text": "$36 \\div 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3$ ft."
+    }
+  ],
+  "explanation": [
+    "$36 \\div 12 = 3$ feet."
+  ],
+  "tags": [
+    "conversion",
+    "length"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,40 @@
+{
+  "id": "6.RP.081",
+  "domain": "6.RP",
+  "unit": 9,
+  "orderInUnit": 1,
+  "standard": "6.RP.A.3.d",
+  "difficulty": 1,
+  "prompt": "How many inches are in $2$ feet? ($1$ ft $= 12$ in)",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [
+    "24 in",
+    "24 inches"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply by the conversion rate.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply by the conversion rate."
+    },
+    {
+      "level": "guide",
+      "text": "$2 \\times 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24$."
+    }
+  ],
+  "explanation": [
+    "Each foot has $12$ inches.",
+    "$2 \\times 12 = 24$ inches."
+  ],
+  "tags": [
+    "conversion",
+    "length"
+  ],
+  "estimatedSeconds": 35
+}

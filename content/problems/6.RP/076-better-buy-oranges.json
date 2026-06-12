@@ -1,0 +1,61 @@
+{
+  "id": "6.RP.076",
+  "domain": "6.RP",
+  "unit": 8,
+  "orderInUnit": 6,
+  "standard": "6.RP.A.3.b",
+  "difficulty": 2,
+  "prompt": "Which is the **better buy**? A: $6$ oranges for \\$$3$.   B: $10$ oranges for \\$$4$.",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "A: 6 for \\$3",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "B: 10 for \\$4",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Find each unit price, then compare.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find each unit price, then compare."
+    },
+    {
+      "level": "guide",
+      "text": "A: $3 \\div 6 = \\$0.50$ each. B: $4 \\div 10 = \\$0.40$ each."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\$0.40 < \\$0.50$, so B is the better buy."
+    }
+  ],
+  "explanation": [
+    "Unit price A: $3 \\div 6 = 0.50$.",
+    "Unit price B: $4 \\div 10 = 0.40$.",
+    "$0.40 < 0.50$, so B costs less per orange."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare oranges per dollar",
+      "steps": [
+        "A: $6 / 3 = 2$ oranges per \\$.",
+        "B: $10 / 4 = 2.5$ oranges per \\$.",
+        "B gives more oranges per dollar → B."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "better-buy",
+    "compare-rate"
+  ],
+  "estimatedSeconds": 75
+}

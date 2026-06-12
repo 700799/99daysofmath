@@ -1,0 +1,38 @@
+{
+  "id": "6.RP.087",
+  "domain": "6.RP",
+  "unit": 9,
+  "orderInUnit": 7,
+  "standard": "6.RP.A.3.d",
+  "difficulty": 2,
+  "prompt": "How many pints are in $8$ cups? ($2$ cups $= 1$ pint)",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [
+    "4 pints"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Divide cups by the rate.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Divide cups by the rate."
+    },
+    {
+      "level": "guide",
+      "text": "$8 \\div 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4$ pints."
+    }
+  ],
+  "explanation": [
+    "$8 \\div 2 = 4$ pints."
+  ],
+  "tags": [
+    "conversion",
+    "volume"
+  ],
+  "estimatedSeconds": 35
+}

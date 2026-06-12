@@ -1,0 +1,50 @@
+{
+  "id": "6.RP.096",
+  "domain": "6.RP",
+  "unit": 10,
+  "orderInUnit": 6,
+  "standard": "6.RP.A.2",
+  "difficulty": 3,
+  "prompt": "A car drives $240$ miles on $8$ gallons of gas. How far can it go on $15$ gallons at the same rate?",
+  "answerType": "numeric",
+  "primaryAnswer": "450",
+  "alternativeAnswers": [
+    "450 mi",
+    "450 miles"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find miles per gallon, then multiply.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find miles per gallon, then multiply."
+    },
+    {
+      "level": "guide",
+      "text": "mpg $= 240 \\div 8 = 30$. Miles $= 30 \\times 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "$30 \\times 15 = 450$."
+    }
+  ],
+  "explanation": [
+    "mpg: $240 \\div 8 = 30$.",
+    "$30 \\times 15 = 450$ miles."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Proportion",
+      "steps": [
+        "$\\dfrac{240}{8} = \\dfrac{x}{15}$.",
+        "$8x = 240 \\cdot 15 = 3600$, so $x = 450$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "unit-rate",
+    "word"
+  ],
+  "estimatedSeconds": 80
+}

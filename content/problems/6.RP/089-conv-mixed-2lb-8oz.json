@@ -1,0 +1,49 @@
+{
+  "id": "6.RP.089",
+  "domain": "6.RP",
+  "unit": 9,
+  "orderInUnit": 9,
+  "standard": "6.RP.A.3.d",
+  "difficulty": 3,
+  "prompt": "A package weighs $2$ lb $8$ oz. How many **total ounces**? ($1$ lb $= 16$ oz)",
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": [
+    "40 oz"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Convert the pounds first, then add the leftover ounces.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Convert the pounds first, then add the leftover ounces."
+    },
+    {
+      "level": "guide",
+      "text": "$2 \\times 16 = 32$, then $32 + 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$32 + 8 = 40$ oz."
+    }
+  ],
+  "explanation": [
+    "Pounds to ounces: $2 \\times 16 = 32$.",
+    "Add the extra $8$: $32 + 8 = 40$ oz."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count groups of 16",
+      "steps": [
+        "Two pounds is $16 + 16 = 32$ oz.",
+        "Plus $8$ more: $40$ oz total."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "conversion",
+    "weight"
+  ],
+  "estimatedSeconds": 70
+}

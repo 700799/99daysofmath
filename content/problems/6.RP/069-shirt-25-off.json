@@ -1,0 +1,51 @@
+{
+  "id": "6.RP.069",
+  "domain": "6.RP",
+  "unit": 7,
+  "orderInUnit": 9,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 3,
+  "prompt": "A shirt costs \\$$40$. It is on sale for $25\\%$ off. What is the **sale price**?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [
+    "$30",
+    "$30.00"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the discount, then subtract.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the discount, then subtract."
+    },
+    {
+      "level": "guide",
+      "text": "Discount $= 0.25 \\times 40 = 10$. Sale $= 40 - 10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$40 - 10 = 30$."
+    }
+  ],
+  "explanation": [
+    "Discount: $0.25 \\times 40 = 10$.",
+    "Sale price: $40 - 10 = 30$.",
+    "You pay \\$$30$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pay 75% directly",
+      "steps": [
+        "$25\\%$ off means you pay $75\\%$.",
+        "$0.75 \\times 40 = 30$."
+      ]
+    }
+  ],
+  "tags": [
+    "percent",
+    "discount",
+    "word"
+  ],
+  "estimatedSeconds": 80
+}

@@ -1,0 +1,49 @@
+{
+  "id": "6.RP.092",
+  "domain": "6.RP",
+  "unit": 10,
+  "orderInUnit": 2,
+  "standard": "6.RP.A.1",
+  "difficulty": 2,
+  "prompt": "A shelter has dogs and cats in a $3 : 5$ ratio. There are $24$ animals in total. How many **dogs**?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [
+    "9 dogs"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Add the parts to find each part size.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add the parts to find each part size."
+    },
+    {
+      "level": "guide",
+      "text": "Parts: $3 + 5 = 8$. Each part: $24 \\div 8 = 3$. Dogs $= 3 \\times 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 3 = 9$."
+    }
+  ],
+  "explanation": [
+    "Total parts: $3 + 5 = 8$.",
+    "Each part: $24 \\div 8 = 3$.",
+    "Dogs (3 parts): $3 \\times 3 = 9$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Fraction of the whole",
+      "steps": [
+        "Dogs make up $\\tfrac{3}{8}$ of the total.",
+        "$\\tfrac{3}{8} \\times 24 = 9$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "ratio"
+  ],
+  "estimatedSeconds": 75
+}
