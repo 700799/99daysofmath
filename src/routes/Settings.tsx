@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useProgress } from '../state/progress';
+import { Icon } from '../icons/Icon';
 
 export function Settings() {
   const reset = useProgress((s) => s.resetAll);
@@ -14,8 +15,8 @@ export function Settings() {
       <div className="bg-white border border-slate-200 rounded-2xl p-5">
         <div className="font-display font-bold text-slate-900">Reset progress</div>
         <div className="text-sm text-slate-600 mt-1">
-          Clears all stars and unlocked units. The problem bank itself is
-          unchanged.
+          Clears all stars, coins, trophies, and unlocked units. The problem
+          bank itself is unchanged.
         </div>
         {!confirming && !done && (
           <button
@@ -49,8 +50,9 @@ export function Settings() {
           </div>
         )}
         {done && (
-          <div className="mt-3 text-green-700 font-display font-bold">
-            Progress reset ✅
+          <div className="mt-3 text-green-700 font-display font-bold inline-flex items-center gap-1.5">
+            <Icon name="check" size={18} />
+            <span>Progress reset</span>
           </div>
         )}
       </div>

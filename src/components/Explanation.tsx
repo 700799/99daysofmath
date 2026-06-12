@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { MathText } from './MathText';
+import { Icon } from '../icons/Icon';
 
 interface Props {
   steps: string[];
@@ -14,7 +15,7 @@ export function Explanation({ steps }: Props) {
       className="mt-4 bg-blue-50 border border-blue-200 rounded-2xl p-4"
     >
       <div className="flex items-center gap-2 mb-3">
-        <span className="text-xl">📘</span>
+        <Icon name="book" size={22} />
         <span className="font-display font-bold text-blue-900">
           Step-by-step
         </span>

@@ -1,13 +1,15 @@
 // Reward economy: coins earned from math, reward-game unlocks, and trophies.
 // Pure functions only so they can be unit-tested without React or Phaser.
 
+import type { IconName } from '../icons/registry';
+
 export type RewardGameId = 'math-party' | 'grand-prix';
 
 export interface RewardGameMeta {
   id: RewardGameId;
   name: string;
   tagline: string;
-  emoji: string;
+  icon: IconName;
   /** Accent color (hex) used for the arcade card and in-game theming. */
   accent: string;
   /** Total stars across all trails required before the game unlocks. */
@@ -23,7 +25,7 @@ export const REWARD_GAMES: RewardGameMeta[] = [
     id: 'math-party',
     name: 'Math Party',
     tagline: 'Roll the dice, race a rival, and grab Stars on the party board!',
-    emoji: '🎲',
+    icon: 'dice',
     accent: '#CE82FF',
     unlockStars: 1,
     featured: true,
@@ -32,7 +34,7 @@ export const REWARD_GAMES: RewardGameMeta[] = [
     id: 'grand-prix',
     name: 'Math Grand Prix',
     tagline: 'Answer fast, boost your kart, and take the checkered flag!',
-    emoji: '🏎️',
+    icon: 'kart',
     accent: '#FF9600',
     unlockStars: 6,
   },
@@ -76,10 +78,10 @@ export function coinsForUnitResult(prevStars: number, newStars: number): number 
 
 export type Medal = 'gold' | 'silver' | 'bronze';
 
-export const MEDAL_EMOJI: Record<Medal, string> = {
-  gold: '🥇',
-  silver: '🥈',
-  bronze: '🥉',
+export const MEDAL_ICONS: Record<Medal, IconName> = {
+  gold: 'medal-gold',
+  silver: 'medal-silver',
+  bronze: 'medal-bronze',
 };
 
 export const MEDAL_LABEL: Record<Medal, string> = {

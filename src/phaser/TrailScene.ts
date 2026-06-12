@@ -6,6 +6,7 @@ import {
   type TrailNode,
 } from './trailLayouts';
 import { DOMAIN_COLORS, type Domain } from '../types/problem';
+import { loadIconTextures } from '../icons/phaserTextures';
 
 export interface TrailSceneState {
   unitsUnlocked: number;
@@ -25,6 +26,7 @@ export class TrailScene extends Phaser.Scene {
   private onNodeSelect!: (unit: number) => void;
   private nodeContainers: Map<number, Phaser.GameObjects.Container> = new Map();
   private pathGraphics?: Phaser.GameObjects.Graphics;
+  private isDead = false;
 
   constructor() {
     super('TrailScene');
@@ -37,8 +39,13 @@ export class TrailScene extends Phaser.Scene {
     this.layout = TRAIL_LAYOUTS[data.domain] ?? [];
   }
 
-  create() {
+  async create() {
+    this.isDead = false;
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => (this.isDead = true));
+    this.events.once(Phaser.Scenes.Events.DESTROY, () => (this.isDead = true));
     this.cameras.main.setBackgroundColor('#F8FAFC');
+    await loadIconTextures(this, ['star', 'lock']);
+    if (this.isDead) return;
     this.drawPath();
     this.drawNodes();
   }
@@ -107,21 +114,25 @@ export class TrailScene extends Phaser.Scene {
         unlocked ? 0xffffff : 0xe5e7eb,
         1,
       );
-      const label = this.add
-        .text(
-          0,
-          0,
-          completed ? '★' : unlocked ? String(node.unit) : '🔒',
-          {
-            fontFamily: 'Nunito, system-ui, sans-serif',
-            fontSize: completed ? '32px' : '24px',
-            fontStyle: '900',
-            color: unlocked ? '#0F172A' : '#6B7280',
-          },
-        )
-        .setOrigin(0.5);
+      container.add([shadow, ring, inner]);
 
-      container.add([shadow, ring, inner, label]);
+      if (completed) {
+        const starImg = this.add.image(0, 0, 'star').setDisplaySize(38, 38);
+        container.add(starImg);
+      } else if (unlocked) {
+        const label = this.add
+          .text(0, 0, String(node.unit), {
+            fontFamily: 'Nunito, system-ui, sans-serif',
+            fontSize: '24px',
+            fontStyle: '900',
+            color: '#0F172A',
+          })
+          .setOrigin(0.5);
+        container.add(label);
+      } else {
+        const lockImg = this.add.image(0, 0, 'lock').setDisplaySize(28, 28);
+        container.add(lockImg);
+      }
       container.setSize(76, 76);
       container.setInteractive({ useHandCursor: unlocked });
 

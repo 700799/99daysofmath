@@ -2,6 +2,8 @@
 // CPU karts creep forward steadily while the player only advances by answering
 // math challenges, so solving quickly is what wins the race.
 
+import type { IconName } from '../icons/registry';
+
 export const GRAND_PRIX_CONFIG = {
   /** Track distance in abstract units the karts race across. */
   trackLength: 100,
@@ -14,9 +16,9 @@ export const GRAND_PRIX_CONFIG = {
   /** Small jitter (± fraction) applied to CPU speed each tick. */
   cpuJitter: 0.35,
   rivals: [
-    { name: 'Turbo', emoji: '🐢' },
-    { name: 'Zoom', emoji: '🐇' },
-  ],
+    { name: 'Turbo', icon: 'turtle' },
+    { name: 'Zoom', icon: 'rabbit' },
+  ] as { name: string; icon: IconName }[],
 };
 
 /** Persistent coin payout for finishing the race in `place` (1-based). */

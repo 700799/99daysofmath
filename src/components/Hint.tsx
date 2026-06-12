@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MathText } from './MathText';
+import { Icon } from '../icons/Icon';
 
 interface Props {
   text: string;
@@ -20,7 +21,7 @@ export function Hint({ text, onReveal }: Props) {
         onClick={handleClick}
         className="min-h-11 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 hover:bg-amber-200 text-amber-900 font-display font-bold text-sm transition-colors"
       >
-        <span>💡</span>
+        <Icon name="bulb" size={18} />
         <span>{open ? 'Hide hint' : 'Show hint'}</span>
       </button>
       <AnimatePresence initial={false}>
