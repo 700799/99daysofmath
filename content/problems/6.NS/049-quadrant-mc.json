@@ -4,55 +4,81 @@
   "unit": 5,
   "orderInUnit": 9,
   "standard": "6.NS.C.6.b",
-  "difficulty": 2,
-  "prompt": "Which point is in Quadrant II?",
+  "difficulty": 3,
+  "prompt": "A point $P$ is reflected across the $y$-axis to get $P'$. The original $P$ is in **Quadrant III**. Which quadrant contains $P'$?",
   "answerType": "multiple-choice",
   "choices": [
     {
       "id": "A",
-      "label": "$(3, 5)$",
+      "label": "Quadrant I",
       "correct": false
     },
     {
       "id": "B",
-      "label": "$(-2, 4)$",
-      "correct": true
+      "label": "Quadrant II",
+      "correct": false
     },
     {
       "id": "C",
-      "label": "$(-1, -1)$",
+      "label": "Quadrant III",
       "correct": false
     },
     {
       "id": "D",
-      "label": "$(4, -7)$",
-      "correct": false
+      "label": "Quadrant IV",
+      "correct": true
     }
   ],
-  "primaryAnswer": "B",
+  "primaryAnswer": "D",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Quadrant II: $x < 0$, $y > 0$.",
+  "hint": "Quadrant III has signs $(-, -)$. Reflecting across the $y$-axis flips only the $x$-sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Quadrant II: $x < 0$, $y > 0$."
+      "title": "🪜 Try a simpler one",
+      "text": "Pick a concrete point in Quadrant III, like $(-4, -2)$. Reflect across the $y$-axis. What signs does the result have?"
+    },
+    {
+      "level": "nudge",
+      "text": "Quadrant signs: I$(+,+)$, II$(-,+)$, III$(-,-)$, IV$(+,-)$. Reflection across $y$-axis flips just the $x$."
     },
     {
       "level": "guide",
-      "text": "Find the point with negative $x$ and positive $y$."
+      "text": "$P$ in III has signs $(-, -)$. Reflect across $y$-axis → flip $x$-sign: $(+, -)$. That's Quadrant IV."
     },
     {
       "level": "reveal",
-      "text": "$(-2, 4)$."
+      "text": "$P'$ is in Quadrant IV."
     }
   ],
   "explanation": [
-    "Quadrant II: upper-left, $x < 0$, $y > 0$.",
-    "$(-2, 4)$ fits."
+    "Quadrant III is where **both** coordinates are negative: $(-x, -y)$.",
+    "Reflection across the **$y$-axis** keeps $y$, negates $x$: $(x, y) \\to (-x, y)$.",
+    "Starting signs $(-, -)$ → after flip → $(+, -)$.",
+    "A point with signs $(+, -)$ — positive $x$, negative $y$ — lives in **Quadrant IV**."
   ],
   "tags": [
-    "coordinate"
+    "coordinate",
+    "MAP-practice"
   ],
-  "estimatedSeconds": 45
+  "estimatedSeconds": 90,
+  "alternativeExplanations": [
+    {
+      "title": "Quadrant sign chart",
+      "steps": [
+        "Quadrant I: $(+, +)$ (top-right). Quadrant II: $(-, +)$ (top-left).",
+        "Quadrant III: $(-, -)$ (bottom-left). Quadrant IV: $(+, -)$ (bottom-right).",
+        "Reflecting across the $y$-axis swaps left ↔ right, so the quadrant changes side: III ↔ IV, II ↔ I."
+      ]
+    },
+    {
+      "title": "Concrete check",
+      "steps": [
+        "Let $P = (-3, -5)$ (Quadrant III).",
+        "Reflect across $y$-axis: $P' = (3, -5)$.",
+        "Positive $x$, negative $y$ → Quadrant IV. ✓"
+      ]
+    }
+  ]
 }

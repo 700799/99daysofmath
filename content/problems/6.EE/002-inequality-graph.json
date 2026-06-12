@@ -4,7 +4,7 @@
   "unit": 1,
   "orderInUnit": 2,
   "standard": "6.EE.B.8",
-  "difficulty": 2,
+  "difficulty": 3,
   "prompt": "Which inequality is shown on the number line below? (An **open** circle means the value itself is **not** included.)",
   "diagram": {
     "kind": "inline-svg",
@@ -15,51 +15,51 @@
   "choices": [
     {
       "id": "A",
-      "label": "$x < 2$",
+      "label": "$x \\le -1$ or $x > 2$",
       "correct": false
     },
     {
       "id": "B",
-      "label": "$x \\le 2$",
-      "correct": false
-    },
-    {
-      "id": "C",
-      "label": "$x > 2$",
+      "label": "$-1 \\le x < 2$",
       "correct": true
     },
     {
+      "id": "C",
+      "label": "$-1 < x \\le 2$",
+      "correct": false
+    },
+    {
       "id": "D",
-      "label": "$x \\ge 2$",
+      "label": "$-1 < x < 2$",
       "correct": false
     }
   ],
-  "primaryAnswer": "C",
+  "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "An **open** circle means \"strictly greater than\" or \"strictly less than\" — the endpoint is **not** included.",
+  "hint": "There are **two** endpoints. Look at each circle (open vs filled) separately.",
   "explanation": [
-    "The circle is **open**, so $2$ itself is not part of the solution. That rules out $\\le$ and $\\ge$.",
-    "The arrow points **right** from $2$, meaning values **greater than** $2$.",
-    "So the inequality is $x > 2$."
+    "The shaded segment runs from $-1$ to $2$, so $x$ is **between** these values.",
+    "Left endpoint: circle at $-1$ is **closed** → $-1$ **is** included → $-1 \\le x$.",
+    "Right endpoint: circle at $2$ is **open** → $2$ is **not** included → $x < 2$.",
+    "Combine: $-1 \\le x < 2$."
   ],
   "alternativeExplanations": [
     {
-      "title": "Test some numbers",
+      "title": "Test values",
       "steps": [
-        "Try $x = 3$. The point $3$ on the line is on the orange ray → it's a solution. So our inequality must accept $3$.",
-        "Try $x = 2$. The circle at $2$ is **open**, meaning $2$ is **not** a solution. So $x \\ge 2$ is wrong (it would accept $2$).",
-        "Try $x = 1$. The point $1$ is to the **left** of the open circle, not on the orange ray → not a solution.",
-        "Values $> 2$ work, values $\\le 2$ don't. That's exactly $x > 2$."
+        "Try $x = -1$: on the closed circle → **included**. So the inequality must accept $-1$ → rules out $-1 < x$.",
+        "Try $x = 2$: on the open circle → **not included**. Rules out $x \\le 2$.",
+        "Try $x = 0$: in the middle of the shaded segment → included ✓.",
+        "Only $-1 \\le x < 2$ matches all three checks."
       ]
     },
     {
-      "title": "Open vs closed circles cheat-sheet",
+      "title": "Compound-inequality shorthand",
       "steps": [
-        "**Open** circle ($\\circ$) → the endpoint is **not** included → use $<$ or $>$.",
-        "**Closed** circle ($\\bullet$) → the endpoint **is** included → use $\\le$ or $\\ge$.",
-        "Then the arrow tells you direction: right = $>$ or $\\ge$, left = $<$ or $\\le$.",
-        "Open circle at $2$ + arrow right = $x > 2$."
+        "A \"sandwich\" inequality $a \\le x < b$ packs two conditions: $a \\le x$ AND $x < b$.",
+        "Always read the **inner** symbol pointing toward $x$: it tells you the relation at that side.",
+        "Closed circle → $\\le$ or $\\ge$. Open → $<$ or $>$. Direction follows the shaded region."
       ]
     }
   ],
@@ -68,19 +68,24 @@
     "inequalities",
     "MAP-practice"
   ],
-  "estimatedSeconds": 45,
+  "estimatedSeconds": 100,
   "hints": [
     {
       "level": "nudge",
-      "text": "An **open** circle means \"strictly greater than\" or \"strictly less than\" — the endpoint is **not** included."
+      "title": "🪜 Try a simpler one",
+      "text": "For a single endpoint: filled $= \\le$ or $\\ge$; open $= <$ or $>$. Now apply that rule to **both** ends of this segment."
+    },
+    {
+      "level": "nudge",
+      "text": "Walk the segment left to right. Each end: is the circle filled or open?"
     },
     {
       "level": "guide",
-      "text": "The circle is **open**, so $2$ itself is not part of the solution. That rules out $\\le$ and $\\ge$."
+      "text": "Left circle is **filled** at $-1$ → $-1 \\le x$. Right circle is **open** at $2$ → $x < 2$. Combine: $-1 \\le x < 2$."
     },
     {
       "level": "reveal",
-      "text": "So the inequality is $x > 2$."
+      "text": "Answer: $-1 \\le x < 2$."
     }
   ]
 }

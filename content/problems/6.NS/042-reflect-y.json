@@ -4,38 +4,65 @@
   "unit": 5,
   "orderInUnit": 2,
   "standard": "6.NS.C.6.b",
-  "difficulty": 2,
-  "prompt": "Reflect $(2, 4)$ across the $y$-axis. What is the new point?",
+  "difficulty": 3,
+  "prompt": "Start at $(5, -3)$. Reflect across the $x$-axis, then reflect that result across the $y$-axis. What are the final coordinates? Use form $(x,y)$.",
   "answerType": "short-text",
-  "primaryAnswer": "(-2, 4)",
+  "primaryAnswer": "(-5,3)",
   "alternativeAnswers": [
-    "(-2,4)",
-    "-2, 4",
-    "-2,4"
+    "(-5, 3)",
+    "-5,3",
+    "(−5,3)"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Reflecting across the $y$-axis flips the sign of $x$.",
+  "hint": "One reflection at a time. Reflecting across $x$-axis flips the **$y$-coord**; reflecting across $y$-axis flips the **$x$-coord**.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Reflecting across the $y$-axis flips the sign of $x$."
+      "title": "🪜 Try a simpler one",
+      "text": "Practice with $(2, 4)$: reflect across $x$-axis → $(2, -4)$. Reflect across $y$-axis → $(-2, -4)$. Same recipe here."
+    },
+    {
+      "level": "nudge",
+      "text": "Reflecting across the $x$-axis negates the $y$-coordinate. Reflecting across the $y$-axis negates the $x$-coordinate."
     },
     {
       "level": "guide",
-      "text": "$(2, 4) \\to (-2, 4)$."
+      "text": "$(5, -3) \\to_{x\\text{-axis}} (5, 3) \\to_{y\\text{-axis}} (-5, 3)$."
     },
     {
       "level": "reveal",
-      "text": "Answer: $(-2, 4)$."
+      "text": "Final point: $(-5, 3)$."
     }
   ],
   "explanation": [
-    "Across $y$-axis: flip $x$, keep $y$.",
-    "$(2, 4) \\to (-2, 4)$."
+    "Reflection across the **$x$-axis** keeps $x$, negates $y$: $(x, y) \\to (x, -y)$.",
+    "Apply to $(5, -3)$: $(5, -(-3)) = (5, 3)$.",
+    "Reflection across the **$y$-axis** negates $x$, keeps $y$: $(x, y) \\to (-x, y)$.",
+    "Apply to $(5, 3)$: $(-5, 3)$. **Final answer.**"
   ],
   "tags": [
     "coordinate",
-    "reflect"
+    "reflect",
+    "MAP-practice"
   ],
-  "estimatedSeconds": 50
+  "estimatedSeconds": 100,
+  "alternativeExplanations": [
+    {
+      "title": "Visualize on the plane",
+      "steps": [
+        "$(5, -3)$ sits in Quadrant IV (right, below).",
+        "Mirroring across the $x$-axis flips it **up** into Quadrant I: $(5, 3)$.",
+        "Mirroring across the $y$-axis flips it **left** into Quadrant II: $(-5, 3)$.",
+        "You moved through three quadrants — IV → I → II."
+      ]
+    },
+    {
+      "title": "Shortcut: both axes at once",
+      "steps": [
+        "Reflecting across BOTH axes (in either order) is the same as **negating both coordinates**.",
+        "$(x, y) \\to (-x, -y)$ — equivalent to a $180°$ rotation about the origin.",
+        "Apply to $(5, -3)$: $(-5, 3)$. Same answer, fewer steps."
+      ]
+    }
+  ]
 }

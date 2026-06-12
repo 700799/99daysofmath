@@ -4,36 +4,63 @@
   "unit": 4,
   "orderInUnit": 8,
   "standard": "6.NS.C.7.b",
-  "difficulty": 2,
-  "prompt": "Which symbol makes this true: $-15 \\ ?\\ -10$? Type $<$ or $>$.",
+  "difficulty": 3,
+  "prompt": "Four cities reported these temperatures (°F): Anchorage $-12$, Buffalo $-5$, Chicago $-18$, Denver $4$. List them from **coldest to warmest** using just the **first letter** of each city, separated by commas (no spaces). Example: $A,B,C,D$.",
   "answerType": "short-text",
-  "primaryAnswer": "<",
+  "primaryAnswer": "C,A,B,D",
   "alternativeAnswers": [
-    "less than"
+    "C, A, B, D",
+    "c,a,b,d"
   ],
-  "acceptanceMode": "exact",
-  "hint": "More negative means smaller.",
+  "acceptanceMode": "normalized",
+  "hint": "Coldest = **most negative** = farthest **left** on the number line. Don't confuse magnitude with order!",
   "hints": [
     {
       "level": "nudge",
-      "text": "More negative means smaller."
+      "title": "🪜 Try a simpler one",
+      "text": "Warm-up: $-3$ vs $-10$ — which is colder? $-10$, even though its **absolute value** is bigger. Negative numbers reverse the usual size order."
+    },
+    {
+      "level": "nudge",
+      "text": "Plot all four temperatures on a number line. Reading left → right gives coldest → warmest."
     },
     {
       "level": "guide",
-      "text": "$-15$ is further left of $-10$ on the number line."
+      "text": "From least to greatest: $-18 < -12 < -5 < 4$. That's Chicago ($-18$), Anchorage ($-12$), Buffalo ($-5$), Denver ($4$)."
     },
     {
       "level": "reveal",
-      "text": "$-15 < -10$."
+      "text": "Order: $C, A, B, D$."
     }
   ],
   "explanation": [
-    "$-15$ is to the left of $-10$.",
-    "So $-15 < -10$."
+    "Coldest = lowest temperature = farthest **left** on a number line.",
+    "On a number line: $-18$ is leftmost, then $-12$, then $-5$, then $0$, then $4$.",
+    "So coldest to warmest: $-18, -12, -5, 4$ → Chicago, Anchorage, Buffalo, Denver.",
+    "Answer: $C, A, B, D$."
   ],
   "tags": [
     "integer",
-    "compare"
+    "compare",
+    "MAP-practice"
   ],
-  "estimatedSeconds": 40
+  "estimatedSeconds": 100,
+  "alternativeExplanations": [
+    {
+      "title": "Watch the absolute-value trap",
+      "steps": [
+        "$|-18| = 18$ and $|-5| = 5$. The number with the **bigger** absolute value is **smaller** (when both are negative).",
+        "So $-18 < -5$, NOT the other way around — even though $18 > 5$.",
+        "For negatives, bigger digits = colder."
+      ]
+    },
+    {
+      "title": "Inequality chain",
+      "steps": [
+        "Compare pairwise: $-18 < -12$ (deeper negative), $-12 < -5$, $-5 < 4$.",
+        "Chain: $-18 < -12 < -5 < 4$.",
+        "Cities in that order: Chicago, Anchorage, Buffalo, Denver."
+      ]
+    }
+  ]
 }

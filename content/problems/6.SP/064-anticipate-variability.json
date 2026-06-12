@@ -4,45 +4,66 @@
   "unit": 7,
   "orderInUnit": 4,
   "standard": "6.SP.A.1",
-  "difficulty": 2,
-  "prompt": "Fill in the blank: A statistical question anticipates ___.",
+  "difficulty": 3,
+  "prompt": "For each question, decide if it is a **statistical question** (S) or **not** (N). Combine your $4$ answers in order as a string (e.g., $SNSN$):\\n1) How tall am I?\\n2) How tall is each player on the team?\\n3) How tall is the tallest building in Dubai?\\n4) How many minutes does it take students in my class to eat lunch?",
   "answerType": "short-text",
-  "primaryAnswer": "variability",
+  "primaryAnswer": "NSNS",
   "alternativeAnswers": [
-    "Variability",
-    "variation",
-    "different answers"
+    "nsns",
+    "N,S,N,S",
+    "N S N S"
   ],
-  "acceptanceMode": "exact",
-  "hint": "It expects answers to differ.",
+  "acceptanceMode": "normalized",
+  "hint": "Mark a question $S$ if its answer **varies** across the group; $N$ if it has one fixed answer.",
   "hints": [
     {
       "level": "nudge",
-      "text": "It expects answers to differ."
+      "title": "🪜 Try a simpler one",
+      "text": "Easy ones first: \"How tall am I?\" has only **one** answer — not statistical. \"How tall is each player?\" → different heights, so statistical."
+    },
+    {
+      "level": "nudge",
+      "text": "Look for the giveaway \"**each**\", \"**every**\", or \"**students in my class**\" — those signal variability."
     },
     {
       "level": "guide",
-      "text": "The word starts with V."
+      "text": "1) one fact → N. 2) many players → S. 3) one building → N. 4) many students → S. Answer: $NSNS$."
     },
     {
       "level": "reveal",
-      "text": "variability."
+      "text": "Answer: $NSNS$."
     }
   ],
   "explanation": [
-    "A statistical question expects a variety of answers — that is, variability.",
-    "Final answer: variability."
+    "A statistical question expects **variability**. Walk each one:",
+    "1) \"How tall am I?\" → one specific person, one answer. **N**.",
+    "2) \"How tall is each player on the team?\" → many players, each different height. **S**.",
+    "3) \"How tall is the tallest building in Dubai?\" → one specific building, one answer. **N**.",
+    "4) \"How many minutes does it take students in my class to eat lunch?\" → many students, varying times. **S**.",
+    "Sequence: **$NSNS$**."
   ],
   "tags": [
-    "vocabulary"
+    "vocabulary",
+    "MAP-practice"
   ],
-  "estimatedSeconds": 30,
+  "estimatedSeconds": 100,
   "alternativeExplanations": [
     {
-      "title": "Check the answer",
+      "title": "Rule of thumb",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: variability — verified."
+        "Singular subject + specific fact = not statistical (one answer).",
+        "Group subject + measurable quantity = statistical (many answers, varying).",
+        "The words \"**each**\", \"**every**\", \"**students**\", \"**players**\" almost always signal a statistical question."
+      ]
+    },
+    {
+      "title": "Could you graph the data?",
+      "steps": [
+        "If you imagined collecting data, would there be a spread to **plot**?",
+        "1) Just one height → nothing to spread. N.",
+        "2) Heights of many players → dot plot of heights. S.",
+        "3) One building's height → no spread. N.",
+        "4) Lunchtimes of many students → dot plot of times. S."
       ]
     }
   ]

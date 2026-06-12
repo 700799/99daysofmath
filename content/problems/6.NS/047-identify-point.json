@@ -4,37 +4,63 @@
   "unit": 5,
   "orderInUnit": 7,
   "standard": "6.NS.C.6.c",
-  "difficulty": 1,
-  "prompt": "A point is $4$ units right of the origin and $2$ units down. What are its coordinates?",
+  "difficulty": 3,
+  "prompt": "Point $M$ has coordinates $(-4, 2)$. Point $N$ has the **same $x$-coordinate** as $M$, but the **opposite $y$-coordinate**. What are the coordinates of $N$, and how many units apart are $M$ and $N$? Use form $(x,y);d$ (e.g., $(3,5);6$).",
   "answerType": "short-text",
-  "primaryAnswer": "(4, -2)",
+  "primaryAnswer": "(-4,-2);4",
   "alternativeAnswers": [
-    "(4,-2)",
-    "4, -2",
-    "4,-2"
+    "(-4, -2); 4",
+    "(-4,-2); 4",
+    "(−4,−2);4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Right is positive $x$, down is negative $y$.",
+  "hint": "Same $x$ means $M$ and $N$ are stacked vertically. Distance is the gap between their $y$-coordinates.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Right is positive $x$, down is negative $y$."
+      "title": "🔁 Another angle",
+      "text": "Two points with the same $x$ form a **vertical segment**. The distance is $|y_1 - y_2|$ — no need for a fancy formula."
+    },
+    {
+      "level": "nudge",
+      "text": "Opposite of $y = 2$ is $y = -2$. So $N = (-4, -2)$."
     },
     {
       "level": "guide",
-      "text": "$x = 4$, $y = -2$."
+      "text": "$M = (-4, 2)$, $N = (-4, -2)$. Vertical distance = $|2 - (-2)| = 4$ units."
     },
     {
       "level": "reveal",
-      "text": "$(4, -2)$."
+      "text": "$N = (-4, -2)$; distance $= 4$."
     }
   ],
   "explanation": [
-    "Right $4$: $x = 4$. Down $2$: $y = -2$.",
-    "$(4, -2)$."
+    "$M = (-4, 2)$. \"Same $x$\" → $N$'s $x$-coordinate is also $-4$.",
+    "\"Opposite $y$\" → $N$'s $y$-coordinate is $-2$. So $N = (-4, -2)$.",
+    "Both points lie on the vertical line $x = -4$.",
+    "Distance between points with the same $x$ = $|y_M - y_N| = |2 - (-2)| = 4$ units."
   ],
   "tags": [
-    "coordinate"
+    "coordinate",
+    "MAP-practice"
   ],
-  "estimatedSeconds": 40
+  "estimatedSeconds": 100,
+  "alternativeExplanations": [
+    {
+      "title": "Picture on the coordinate plane",
+      "steps": [
+        "Plot $M$ at $(-4, 2)$ (Quadrant II) and $N$ at $(-4, -2)$ (Quadrant III).",
+        "Both sit on the vertical line $x = -4$, mirror images across the $x$-axis.",
+        "Count grid squares: from $y = 2$ down to $y = -2$ is $4$ steps."
+      ]
+    },
+    {
+      "title": "Why $|y_1 - y_2|$ always works",
+      "steps": [
+        "Distance is never negative — use absolute value.",
+        "$|2 - (-2)| = |4| = 4$ and $|-2 - 2| = |-4| = 4$. The order doesn't matter.",
+        "For points on the **same vertical line**, only the $y$-gap counts; for the **same horizontal line**, only the $x$-gap."
+      ]
+    }
+  ]
 }

@@ -4,49 +4,57 @@
   "unit": 2,
   "orderInUnit": 1,
   "standard": "6.SP.A.1",
-  "difficulty": 2,
-  "prompt": "Which of the following is a **statistical question**?",
+  "difficulty": 3,
+  "prompt": "A teacher wants data about her class. Which question is a **statistical question** (one that **anticipates variability**)?",
   "answerType": "multiple-choice",
   "choices": [
     {
       "id": "A",
-      "label": "How tall is Maria?",
+      "label": "How old is Ms. Lee?",
       "correct": false
     },
     {
       "id": "B",
-      "label": "What is my dog's name?",
+      "label": "What is the school's start time?",
       "correct": false
     },
     {
       "id": "C",
-      "label": "How tall are the students in my class?",
+      "label": "How many minutes does each student spend on homework per night?",
       "correct": true
     },
     {
       "id": "D",
-      "label": "What time does school start?",
+      "label": "How many days are in February this year?",
       "correct": false
     }
   ],
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "A statistical question is one that has **variability** in the answers — you'd collect many data points to answer it.",
+  "hint": "A statistical question can have **many different answers** across the people or things being measured.",
   "explanation": [
-    "Statistical questions expect a **range of answers**, not a single fact.",
-    "(A), (B), and (D) each have one definite answer — not statistical.",
-    "(C) asks about **all the students**, who have many different heights — that's variable data.",
-    "So (C) is the statistical question."
+    "A **statistical question** anticipates **variability** in the answers — different respondents give different numbers/responses.",
+    "A: \"How old is Ms. Lee?\" → one answer. Not statistical.",
+    "B: \"What is the school's start time?\" → one answer. Not statistical.",
+    "C: \"How many minutes does each student spend on homework?\" → expect many different answers across students. **Statistical.**",
+    "D: \"How many days are in February this year?\" → one answer. Not statistical."
   ],
   "alternativeExplanations": [
     {
-      "title": "Variability test",
+      "title": "Quick test",
       "steps": [
-        "Ask yourself: if you asked $30$ people, would the answers vary?",
-        "\"How tall is Maria?\" — no, one answer.",
-        "\"How tall are the students in my class?\" — yes, $30$ different heights.",
-        "Variability $\\Rightarrow$ statistical question."
+        "Imagine asking the question to $30$ different students.",
+        "If you expect the **same answer** from all $30$ → NOT a statistical question.",
+        "If you expect **different answers** that vary across the group → statistical."
+      ]
+    },
+    {
+      "title": "Statistical-question patterns",
+      "steps": [
+        "Often phrased about a **group** (\"each student\", \"the class\", \"students in $6$th grade\").",
+        "Often involves measurable traits that differ from person to person: height, time, score, preference.",
+        "A question about a **single** person/object with a fixed property is NOT statistical."
       ]
     }
   ],
@@ -55,19 +63,24 @@
     "statistical-questions",
     "MAP-practice"
   ],
-  "estimatedSeconds": 55,
+  "estimatedSeconds": 80,
   "hints": [
     {
       "level": "nudge",
-      "text": "A statistical question is one that has **variability** in the answers — you'd collect many data points to answer it."
+      "title": "🪜 Try a simpler one",
+      "text": "Ask: \"would different students give different answers to this?\" If yes → statistical. If everyone gives the same answer → not."
+    },
+    {
+      "level": "nudge",
+      "text": "Statistical = expects spread/variability. A single-answer question (one fact) is NOT statistical."
     },
     {
       "level": "guide",
-      "text": "Statistical questions expect a **range of answers**, not a single fact."
+      "text": "A, B, D each have **one** answer (a fact). C will have many different answers across students. Only C is statistical."
     },
     {
       "level": "reveal",
-      "text": "So (C) is the statistical question."
+      "text": "Answer: C."
     }
   ]
 }

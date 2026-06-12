@@ -4,33 +4,63 @@
   "unit": 4,
   "orderInUnit": 2,
   "standard": "6.NS.C.6.a",
-  "difficulty": 1,
-  "prompt": "What is the opposite of $-7$?",
+  "difficulty": 3,
+  "prompt": "Let $a$ be the opposite of $-7$. Let $b$ be the opposite of $a$. What is $a - b$?",
   "answerType": "numeric",
-  "primaryAnswer": "7",
-  "alternativeAnswers": [],
+  "primaryAnswer": "14",
+  "alternativeAnswers": [
+    "14.0",
+    "+14"
+  ],
   "acceptanceMode": "normalized",
-  "hint": "Opposite means flip the sign.",
+  "hint": "Find $a$ first, then $b$. The opposite of a positive number is negative.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Opposite means flip the sign."
+      "title": "🔁 Another angle",
+      "text": "Opposites flip the sign. Two flips bring you back: $-(-(-7)) = -7$."
+    },
+    {
+      "level": "nudge",
+      "text": "Step 1: opposite of $-7$ is $+7$, so $a = 7$. Step 2: opposite of $a$ flips it again."
     },
     {
       "level": "guide",
-      "text": "$-(-7) = ?$"
+      "text": "$a = -(-7) = 7$. $b = -(a) = -7$. So $a - b = 7 - (-7) = 7 + 7 = 14$."
     },
     {
       "level": "reveal",
-      "text": "$7$."
+      "text": "$a - b = 14$."
     }
   ],
   "explanation": [
-    "The opposite of $-7$ is $7$."
+    "The **opposite** of a number $n$ is $-n$ — same distance from $0$, flipped side.",
+    "Opposite of $-7$: $-(-7) = 7$. So $a = 7$.",
+    "Opposite of $a = 7$: $-(7) = -7$. So $b = -7$.",
+    "Compute $a - b = 7 - (-7) = 7 + 7 = 14$."
   ],
   "tags": [
     "integer",
-    "opposite"
+    "opposite",
+    "MAP-practice"
   ],
-  "estimatedSeconds": 25
+  "estimatedSeconds": 90,
+  "alternativeExplanations": [
+    {
+      "title": "Number-line picture",
+      "steps": [
+        "Plot $-7$ on a number line. Its opposite is the **mirror image** across $0$: that's $+7$. So $a = 7$.",
+        "Now plot $a = 7$ and mirror across $0$ again: back to $-7$. So $b = -7$.",
+        "$a - b$ = distance from $b$ to $a$ moving right = $7 - (-7) = 14$ units."
+      ]
+    },
+    {
+      "title": "Why two flips undo",
+      "steps": [
+        "The opposite operation is its own inverse: opposite-of-opposite gets you home.",
+        "$-(-n) = n$ for every number $n$.",
+        "So whenever you see double negatives, cancel them in pairs."
+      ]
+    }
+  ]
 }

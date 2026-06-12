@@ -4,58 +4,81 @@
   "unit": 7,
   "orderInUnit": 3,
   "standard": "6.SP.A.1",
-  "difficulty": 2,
-  "prompt": "Which is a **statistical question**?",
+  "difficulty": 3,
+  "prompt": "A reporter wants to write a story about cell-phone usage. Which question is a **statistical question**?",
   "answerType": "multiple-choice",
   "choices": [
     {
       "id": "A",
-      "label": "How old is your teacher?",
+      "label": "How much does the newest phone cost?",
       "correct": false
     },
     {
       "id": "B",
-      "label": "How many siblings do students in your school have?",
+      "label": "How many hours per day do $7$th graders spend on their phones?",
       "correct": true
     },
     {
       "id": "C",
-      "label": "What is the boiling point of water?",
+      "label": "When did the first cell phone come out?",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "What is the screen size of the iPhone $15$?",
       "correct": false
     }
   ],
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Look for the question with many possible answers.",
+  "hint": "Look for a question whose answer **varies** from person to person.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Look for the question with many possible answers."
+      "title": "🔁 Another angle",
+      "text": "Three of the four choices are about a **single fact**. The odd one out asks about a **group of people**, so answers will vary."
+    },
+    {
+      "level": "nudge",
+      "text": "A, C, D each have one fixed answer (a price, a date, a measurement). Only one option asks about a group."
     },
     {
       "level": "guide",
-      "text": "Sibling counts vary across students."
+      "text": "B asks \"how many hours per day do **$7$th graders** spend\" — different students give different answers. Statistical."
     },
     {
       "level": "reveal",
-      "text": "B."
+      "text": "Answer: B."
     }
   ],
   "explanation": [
-    "A and C each have a single answer.",
-    "B asks across many students with varying counts → statistical."
+    "A statistical question anticipates **variability** in its answers.",
+    "A: \"How much does the newest phone cost?\" — one price → not statistical.",
+    "B: \"How many hours per day do $7$th graders spend?\" — every student likely has a different number → **statistical**.",
+    "C: \"When did the first cell phone come out?\" — one date → not statistical.",
+    "D: \"What is the screen size of the iPhone $15$?\" — one measurement → not statistical."
   ],
   "tags": [
-    "statistical-question"
+    "statistical-question",
+    "MAP-practice"
   ],
-  "estimatedSeconds": 50,
+  "estimatedSeconds": 80,
   "alternativeExplanations": [
     {
-      "title": "Check the answer",
+      "title": "Spot the keyword",
       "steps": [
-        "Plug the result back into the question and confirm the values match.",
-        "Answer: B — verified."
+        "Statistical questions often refer to **many subjects** at once: \"$7$th graders\", \"the team\", \"students\", \"people\".",
+        "Non-statistical questions usually ask for a **single fact** about **one** specific thing or person.",
+        "Phrase like \"**how many hours per day**\" almost always means asking each person and collecting answers."
+      ]
+    },
+    {
+      "title": "Visualize the data",
+      "steps": [
+        "A statistical question can be answered with a **dot plot** or **histogram** — the spread *is* the answer.",
+        "Plotting $30$ students' daily phone hours would show a range from maybe $0$ to $8+$ hours.",
+        "For A, C, D you couldn't make a data plot — there's nothing to spread out."
       ]
     }
   ]

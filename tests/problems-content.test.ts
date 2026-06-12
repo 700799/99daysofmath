@@ -186,6 +186,43 @@ describe('problems bank — units 7-10 quality bar', () => {
   });
 });
 
+describe('problems bank — Round 6 challenge upgrades (no zero-d3 standards)', () => {
+  const MAP_TARGET_STANDARDS = [
+    '6.EE.A.2.a',
+    '6.EE.A.2.b',
+    '6.EE.B.8',
+    '6.NS.B.2',
+    '6.NS.C.6.a',
+    '6.NS.C.6.b',
+    '6.NS.C.6.c',
+    '6.NS.C.7.b',
+    '6.SP.A.1',
+  ];
+
+  it('every MAP-gap standard has at least one d3 problem', () => {
+    const failures: string[] = [];
+    for (const std of MAP_TARGET_STANDARDS) {
+      const d3 = PROBLEMS.filter((p) => p.standard === std && p.difficulty === 3);
+      if (d3.length === 0) failures.push(std);
+    }
+    expect(failures).toEqual([]);
+  });
+
+  it('every MAP-gap d3 problem carries the "MAP-practice" tag and ≥1 alternativeExplanation', () => {
+    const failures: string[] = [];
+    for (const std of MAP_TARGET_STANDARDS) {
+      const d3 = PROBLEMS.filter((p) => p.standard === std && p.difficulty === 3);
+      for (const p of d3) {
+        if (!(p.tags ?? []).includes('MAP-practice')) failures.push(`${p.id}: missing MAP-practice tag`);
+        if (!Array.isArray(p.alternativeExplanations) || p.alternativeExplanations.length < 1) {
+          failures.push(`${p.id}: missing alternativeExplanations`);
+        }
+      }
+    }
+    expect(failures).toEqual([]);
+  });
+});
+
 describe('problems bank — Round 6 hint enrichment invariants', () => {
   it('every problem has at least 3 hints (legacy singletons enriched)', () => {
     const failures: string[] = [];
