@@ -285,7 +285,7 @@ export function MockTest() {
                   onClick={() => setShowExplain(true)}
                   className="mt-2 text-sm font-display font-bold text-red-800 underline underline-offset-2"
                 >
-                  Show how it works
+                  Explain step by step
                 </button>
               )}
               <button

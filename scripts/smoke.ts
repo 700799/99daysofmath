@@ -262,6 +262,31 @@ async function main() {
     if (!ritSection) throw new Error('Report missing RIT growth section');
     console.log('   ✓ Progress report shows skill breakdown and RIT growth');
 
+    console.log('25. Explain-the-concept drawer opens from a problem...');
+    await page.goto(BASE + '#/unit/6.RP/2', { waitUntil: 'networkidle' });
+    // dismiss the auto-opened lesson deck if present
+    await page
+      .waitForSelector('[role="dialog"][aria-label^="Lesson:"]', { timeout: 5000 })
+      .then(async () => {
+        await page.locator('button:has-text("Maybe later")').click();
+        await page.waitForSelector('[role="dialog"]', { state: 'hidden', timeout: 3000 });
+      })
+      .catch(() => {});
+    await page.locator('button:has-text("Explain the concept")').first().click();
+    await page.waitForSelector('text=The key idea', { timeout: 4000 });
+    const conceptTab = await page.locator('button:has-text("Concept")').first().isVisible().catch(() => false);
+    if (!conceptTab) throw new Error('Concept drawer tabs not visible');
+    await page.locator('button[aria-label="Close"]').click();
+    await page.waitForTimeout(300);
+    console.log('   ✓ Concept drawer opens with Concept/Videos tabs');
+
+    console.log('26. Video & lesson library renders...');
+    await page.goto(BASE + '#/videos', { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=Video & lesson library', { timeout: 5000 });
+    const unitRow = await page.locator('summary').first().isVisible().catch(() => false);
+    if (!unitRow) throw new Error('No unit rows in the video library');
+    console.log('   ✓ Library lists units with videos + lessons');
+
     console.log('24. Home surfaces due-for-review card after a miss...');
     await page.goto(BASE, { waitUntil: 'networkidle' });
     await page.waitForSelector('text=Pick a trail', { timeout: 5000 });

@@ -13,6 +13,7 @@ import { ProgressBar } from '../components/ProgressBar';
 import { Mascot, type MascotMood } from '../components/Mascot';
 import { Confetti } from '../components/Celebration';
 import { LessonCard } from '../components/LessonCard';
+import { ConceptHelp } from '../components/ConceptHelp';
 import { getLesson, lessonKey } from '../data/lessons';
 import { correctMessage, wrongMessage, stickerForUnit } from '../utils/encouragement';
 import { playCorrect, playWrong, playUnitComplete } from '../utils/sound';
@@ -58,6 +59,7 @@ export function Unit() {
   const flashMessage = useRef<string>('');
 
   const lesson = getLesson(d, u);
+  const [showHelp, setShowHelp] = useState(false);
   const [showLesson, setShowLesson] = useState<boolean>(
     () => !!lesson && !useProgress.getState().lessonsViewed.includes(lessonKey(d, u)),
   );
@@ -165,6 +167,16 @@ export function Unit() {
           onStart={() => setShowLesson(false)}
         />
       )}
+      <ConceptHelp
+        domain={d}
+        unit={u}
+        open={showHelp}
+        onClose={() => setShowHelp(false)}
+        onOpenLesson={() => {
+          setShowHelp(false);
+          setShowLesson(true);
+        }}
+      />
       <div className="mb-4 flex items-center gap-3">
         <div className="flex-1">
           <ProgressBar
@@ -186,15 +198,24 @@ export function Unit() {
         </div>
       </div>
 
-      {lesson && (
+      <div className="mb-3 flex flex-wrap gap-2">
+        {lesson && (
+          <button
+            type="button"
+            onClick={() => setShowLesson(true)}
+            className="inline-flex items-center gap-1.5 text-xs font-display font-extrabold text-sky-700 bg-sky-50 border border-sky-200 rounded-full px-3 py-1.5 hover:bg-sky-100 transition-colors"
+          >
+            📘 Review the lesson
+          </button>
+        )}
         <button
           type="button"
-          onClick={() => setShowLesson(true)}
-          className="mb-3 inline-flex items-center gap-1.5 text-xs font-display font-extrabold text-sky-700 bg-sky-50 border border-sky-200 rounded-full px-3 py-1.5 hover:bg-sky-100 transition-colors"
+          onClick={() => setShowHelp(true)}
+          className="inline-flex items-center gap-1.5 text-xs font-display font-extrabold text-violet-700 bg-violet-50 border border-violet-200 rounded-full px-3 py-1.5 hover:bg-violet-100 transition-colors"
         >
-          📘 Review the lesson
+          📖 Explain the concept
         </button>
-      )}
+      </div>
 
       {current && (
         <AnimatePresence mode="wait">
@@ -224,6 +245,7 @@ export function Unit() {
                     setTierTotals((t) => ({ ...t, [level]: t[level] + 1 }));
                     setLastHintLevel(level);
                   }}
+                  onExplain={() => setShowHelp(true)}
                 />
                 <button
                   type="button"
@@ -271,7 +293,7 @@ export function Unit() {
                       onClick={() => setShowExplainOnCorrect(true)}
                       className="mt-3 text-sm font-display font-bold text-green-800 underline underline-offset-2 hover:text-green-900"
                     >
-                      Show how it works
+                      Explain step by step
                     </button>
                   )}
                   <button

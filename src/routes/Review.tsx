@@ -8,6 +8,7 @@ import { getProblemsByIds } from '../data/problems';
 import { ProblemCard } from '../components/ProblemCard';
 import { AnswerInput } from '../components/AnswerInput';
 import { Hint } from '../components/Hint';
+import { ConceptHelp } from '../components/ConceptHelp';
 import { Explanation } from '../components/Explanation';
 import { ProgressBar } from '../components/ProgressBar';
 import { Mascot } from '../components/Mascot';
@@ -60,6 +61,7 @@ export function Review() {
   const [error, setError] = useState<Error | null>(null);
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState('');
+  const [showHelp, setShowHelp] = useState(false);
   const [phase, setPhase] = useState<Phase>('loading');
   const [advanced, setAdvanced] = useState(0);
   const [rescheduleMsg, setRescheduleMsg] = useState('');
@@ -203,6 +205,13 @@ export function Review() {
           <div className="text-xs font-display font-bold text-amber-700 mt-1">
             🔁 Smart Review · {current.domain}
           </div>
+          <button
+            type="button"
+            onClick={() => setShowHelp(true)}
+            className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-display font-extrabold text-violet-700 bg-violet-50 border border-violet-200 rounded-full px-2.5 py-1 hover:bg-violet-100 transition-colors"
+          >
+            📖 Explain the concept
+          </button>
         </div>
         <div className="shrink-0">
           <Mascot
@@ -212,6 +221,14 @@ export function Review() {
         </div>
       </div>
 
+      {current && (
+        <ConceptHelp
+          domain={current.domain}
+          unit={current.unit}
+          open={showHelp}
+          onClose={() => setShowHelp(false)}
+        />
+      )}
       <AnimatePresence mode="wait">
         <motion.div
           key={`${current.id}-${phase}`}
@@ -231,7 +248,7 @@ export function Review() {
 
           {phase === 'problem' && (
             <>
-              <Hint tiers={tiersFor(current)} />
+              <Hint tiers={tiersFor(current)} onExplain={() => setShowHelp(true)} />
               <button
                 type="button"
                 onClick={submit}
@@ -294,7 +311,7 @@ export function Review() {
                   onClick={() => setShowExplain(true)}
                   className="mt-2 text-sm font-display font-bold text-red-800 underline underline-offset-2"
                 >
-                  Show how it works
+                  Explain step by step
                 </button>
               )}
               <button

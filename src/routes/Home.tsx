@@ -232,6 +232,12 @@ export function Home() {
           📊 Progress report
         </Link>
         <Link
+          to="/videos"
+          className="inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+        >
+          🎬 Video library
+        </Link>
+        <Link
           to="/settings"
           className="inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
         >

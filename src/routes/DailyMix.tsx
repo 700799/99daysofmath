@@ -6,6 +6,7 @@ import { isEquivalent } from '../data/normalize';
 import { ProblemCard } from '../components/ProblemCard';
 import { AnswerInput } from '../components/AnswerInput';
 import { Hint } from '../components/Hint';
+import { ConceptHelp } from '../components/ConceptHelp';
 import { Explanation } from '../components/Explanation';
 import { ProgressBar } from '../components/ProgressBar';
 import { Mascot, type MascotMood } from '../components/Mascot';
@@ -47,6 +48,7 @@ export function DailyMix() {
   const [error, setError] = useState<Error | null>(null);
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState('');
+  const [showHelp, setShowHelp] = useState(false);
   const [hintLevelsThisProblem, setHintLevelsThisProblem] = useState<HintLevel[]>([]);
   const [lastHintLevel, setLastHintLevel] = useState<HintLevel | null>(null);
   const [mistakesThisProblem, setMistakesThisProblem] = useState(0);
@@ -189,6 +191,13 @@ export function DailyMix() {
           <div className="text-xs font-display font-bold text-slate-500 mt-1">
             🎲 Daily Mix · {current.domain}
           </div>
+          <button
+            type="button"
+            onClick={() => setShowHelp(true)}
+            className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-display font-extrabold text-violet-700 bg-violet-50 border border-violet-200 rounded-full px-2.5 py-1 hover:bg-violet-100 transition-colors"
+          >
+            📖 Explain the concept
+          </button>
         </div>
         <div className="shrink-0">
           <Mascot
@@ -204,6 +213,14 @@ export function DailyMix() {
         </div>
       </div>
 
+      {current && (
+        <ConceptHelp
+          domain={current.domain}
+          unit={current.unit}
+          open={showHelp}
+          onClose={() => setShowHelp(false)}
+        />
+      )}
       <AnimatePresence mode="wait">
         <motion.div
           key={`${current.id}-${phase}`}
@@ -229,6 +246,7 @@ export function DailyMix() {
                   setHintLevelsThisProblem((arr) => [...arr, level]);
                   setLastHintLevel(level);
                 }}
+                onExplain={() => setShowHelp(true)}
               />
               <button
                 type="button"
@@ -268,7 +286,7 @@ export function DailyMix() {
                     onClick={() => setShowExplainOnCorrect(true)}
                     className="mt-3 text-sm font-display font-bold text-green-800 underline underline-offset-2 hover:text-green-900"
                   >
-                    Show how it works
+                    Explain step by step
                   </button>
                 )}
                 <button

@@ -13,6 +13,7 @@ const MockTest = lazy(() => import('./routes/MockTest').then((m) => ({ default: 
 const Review = lazy(() => import('./routes/Review').then((m) => ({ default: m.Review })));
 const Practice = lazy(() => import('./routes/Practice').then((m) => ({ default: m.Practice })));
 const Report = lazy(() => import('./routes/Report').then((m) => ({ default: m.Report })));
+const Videos = lazy(() => import('./routes/Videos').then((m) => ({ default: m.Videos })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 function RouteFallback() {
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/review/:domain" element={<Review />} />
           <Route path="/practice" element={<Practice />} />
           <Route path="/report" element={<Report />} />
+          <Route path="/videos" element={<Videos />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

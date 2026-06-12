@@ -22,18 +22,24 @@ const LESSON_XP = 8;
 
 type Page =
   | { kind: 'intro' }
-  | { kind: 'video' }
+  | { kind: 'video'; idx: number }
   | { kind: 'concept' }
   | { kind: 'example'; idx: number }
   | { kind: 'practice'; idx: number }
   | { kind: 'watchout' };
 
+// Video slots are positional: videos[0] = the idea (after intro),
+// videos[1] = worked examples (after the example pages),
+// videos[2+] = avoid-the-trap (right before the wrap-up).
 function buildPages(lesson: Lesson): Page[] {
+  const vids = lesson.videos ?? [];
   const pages: Page[] = [{ kind: 'intro' }];
-  if (lesson.videoSrc) pages.push({ kind: 'video' });
+  if (vids.length > 0) pages.push({ kind: 'video', idx: 0 });
   pages.push({ kind: 'concept' });
   lesson.examples.forEach((_, i) => pages.push({ kind: 'example', idx: i }));
+  if (vids.length > 1) pages.push({ kind: 'video', idx: 1 });
   lesson.practice.forEach((_, i) => pages.push({ kind: 'practice', idx: i }));
+  for (let i = 2; i < vids.length; i++) pages.push({ kind: 'video', idx: i });
   pages.push({ kind: 'watchout' });
   return pages;
 }
@@ -44,9 +50,14 @@ type SectionName = (typeof SECTION_ORDER)[number];
 
 function sectionOf(page: Page): SectionName {
   if (page.kind === 'intro') return 'Intro';
-  // 'video' shares the 'Key idea' section with the text concept page so the
-  // breadcrumb structure stays at 5 fixed sections.
-  if (page.kind === 'video' || page.kind === 'concept') return 'Key idea';
+  if (page.kind === 'concept') return 'Key idea';
+  // Video pages roll into the section they support so the breadcrumb
+  // structure stays at 5 fixed sections.
+  if (page.kind === 'video') {
+    if (page.idx === 0) return 'Key idea';
+    if (page.idx === 1) return 'Examples';
+    return 'Wrap-up';
+  }
   if (page.kind === 'example') return 'Examples';
   if (page.kind === 'practice') return 'Try it';
   return 'Wrap-up';
@@ -144,8 +155,11 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
                     transition={{ type: 'spring', stiffness: 280, damping: 24 }}
                   >
                     {current.kind === 'intro' && <IntroPage lesson={lesson} />}
-                    {current.kind === 'video' && lesson.videoSrc && (
-                      <VideoPage src={lesson.videoSrc} />
+                    {current.kind === 'video' && lesson.videos?.[current.idx] && (
+                      <VideoPage
+                        src={lesson.videos[current.idx].src}
+                        title={lesson.videos[current.idx].title}
+                      />
                     )}
                     {current.kind === 'concept' && <ConceptPage lesson={lesson} />}
                     {current.kind === 'example' && (
@@ -311,11 +325,11 @@ function IntroPage({ lesson }: { lesson: Lesson }) {
   );
 }
 
-function VideoPage({ src }: { src: string }) {
+function VideoPage({ src, title }: { src: string; title: string }) {
   const url = `${import.meta.env.BASE_URL}videos/lessons/${src}`;
   return (
     <div>
-      <PageTitle eyebrow="Animation" title="Watch how it works" />
+      <PageTitle eyebrow="Animation" title={title} />
       <div className="mt-3 rounded-2xl overflow-hidden bg-slate-900 border-2 border-slate-200">
         <video
           src={url}

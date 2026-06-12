@@ -59,6 +59,7 @@ export type HintLevel = 'nudge' | 'guide' | 'reveal';
 export interface HintStep {
   level: HintLevel;
   text: string;
+  title?: string; // optional label, e.g. "Another angle" / "Try a simpler one"
 }
 
 export const HINT_LEVEL_ORDER: Record<HintLevel, number> = {

@@ -6,6 +6,7 @@ import type { HintStep, HintLevel } from '../types/problem';
 interface Props {
   tiers: HintStep[];
   onReveal?: (level: HintLevel, tierIndex: number) => void;
+  onExplain?: () => void; // opens the "Explain the concept" drawer
 }
 
 const TIER_BADGE: Record<HintLevel, string> = {
@@ -26,7 +27,7 @@ const TIER_BADGE_STYLES: Record<HintLevel, string> = {
   reveal: 'bg-rose-200 text-rose-900',
 };
 
-export function Hint({ tiers, onReveal }: Props) {
+export function Hint({ tiers, onReveal, onExplain }: Props) {
   const [revealed, setRevealed] = useState(0);
 
   if (tiers.length === 0) return null;
@@ -80,15 +81,31 @@ export function Hint({ tiers, onReveal }: Props) {
                 className={`border rounded-2xl p-4 text-slate-800 ${TIER_STYLES[tier.level]}`}
               >
                 {tiers.length > 1 && (
-                  <div
-                    className={`inline-block text-xs font-display font-bold px-2 py-1 rounded-full mb-2 ${TIER_BADGE_STYLES[tier.level]}`}
-                  >
-                    {TIER_BADGE[tier.level]}
+                  <div className="flex items-center gap-1.5 mb-2 flex-wrap">
+                    <span
+                      className={`inline-block text-xs font-display font-bold px-2 py-1 rounded-full ${TIER_BADGE_STYLES[tier.level]}`}
+                    >
+                      {TIER_BADGE[tier.level]}
+                    </span>
+                    {tier.title && (
+                      <span className="inline-block text-xs font-display font-extrabold px-2 py-1 rounded-full bg-violet-100 text-violet-800">
+                        {tier.title}
+                      </span>
+                    )}
                   </div>
                 )}
                 <MathText text={tier.text} />
               </div>
             ))}
+            {!more && onExplain && (
+              <button
+                type="button"
+                onClick={onExplain}
+                className="self-start min-h-11 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-100 hover:bg-sky-200 text-sky-800 font-display font-bold text-sm transition-colors"
+              >
+                Still stuck? 📖 Explain the concept
+              </button>
+            )}
           </motion.div>
         )}
       </AnimatePresence>

@@ -12,6 +12,11 @@ export interface PracticeQuestion {
   steps: string[];
 }
 
+export interface VideoRef {
+  title: string;
+  src: string; // filename in public/videos/lessons/
+}
+
 export interface Lesson {
   domain: Domain;
   unit: number;
@@ -21,7 +26,7 @@ export interface Lesson {
   examples: WorkedExample[]; // worked examples with step-by-step solutions
   practice: PracticeQuestion[]; // try-it questions with accepted alternatives
   watchOut: string;
-  videoSrc?: string; // optional Manim animation filename in public/videos/lessons/
+  videos?: VideoRef[]; // ordered Manim animations in public/videos/lessons/
 }
 
 export function lessonKey(domain: Domain, unit: number): string {
@@ -64,7 +69,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 1, title: 'What is a ratio?',
     objective: 'Compare two quantities using a ratio.',
-    videoSrc: '6.RP-1.mp4',
+    videos: [{ title: 'The idea', src: '6.RP-1.mp4' }],
     concept: [
       "A ratio compares two amounts, like 3 red to 2 blue. Write it 3:2 or '3 to 2'.",
       'Order matters — 3:2 is not the same as 2:3.',
@@ -84,7 +89,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 2, title: 'Unit rates',
     objective: 'Find how much for just one.',
-    videoSrc: '6.RP-2.mp4',
+    videos: [{ title: 'The idea', src: '6.RP-2.mp4' }],
     concept: [
       'A rate compares two different units, like miles and hours.',
       'A unit rate is the amount for exactly 1 (per hour, per pound).',
@@ -104,7 +109,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 3, title: 'Ratio tables',
     objective: 'Use a table to find equivalent ratios.',
-    videoSrc: '6.RP-3.mp4',
+    videos: [{ title: 'The idea', src: '6.RP-3.mp4' }],
     concept: [
       'Equivalent ratios make the same comparison: 1:3, 2:6, 3:9.',
       'In a ratio table, multiply both columns by the same number to move across.',
@@ -124,7 +129,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 4, title: 'Part-to-part vs part-to-whole',
     objective: 'Tell different kinds of ratios apart.',
-    videoSrc: '6.RP-4.mp4',
+    videos: [{ title: 'The idea', src: '6.RP-4.mp4' }],
     concept: [
       'Part-to-part compares two groups (boys to girls).',
       'Part-to-whole compares one group to the total (boys to all students).',
@@ -144,7 +149,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 5, title: 'Percents',
     objective: "Understand percent as 'out of 100'.",
-    videoSrc: '6.RP-5.mp4',
+    videos: [{ title: 'The idea', src: '6.RP-5.mp4' }],
     concept: [
       'Percent means per hundred: 25% = 25 out of 100 = 0.25.',
       'To find a percent OF a number, multiply by the decimal form.',
@@ -164,7 +169,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 6, title: 'Converting with rates',
     objective: 'Switch units using a rate.',
-    videoSrc: '6.RP-5.mp4',
+    videos: [{ title: 'The idea', src: '6.RP-5.mp4' }],
     concept: [
       'A conversion is just a rate: 12 inches per 1 foot.',
       'Multiply by the rate so the unit you do not want cancels out.',
@@ -186,7 +191,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 1, title: 'Adding & subtracting decimals',
     objective: 'Compute carefully with decimals.',
-    videoSrc: '6.NS-1.mp4',
+    videos: [{ title: 'The idea', src: '6.NS-1.mp4' }],
     concept: [
       'Line up the decimal points before adding or subtracting.',
       'Fill in zeros so both numbers have the same number of places.',
@@ -206,7 +211,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 2, title: 'Multiplying & dividing decimals',
     objective: 'Multiply and divide decimal numbers.',
-    videoSrc: '6.NS-2.mp4',
+    videos: [{ title: 'The idea', src: '6.NS-2.mp4' }],
     concept: [
       'Multiply as if there were no decimals, then count total decimal places.',
       'To divide, move both decimal points right until the divisor is a whole number.',
@@ -226,7 +231,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 3, title: 'GCF, LCM & distributing',
     objective: 'Break numbers apart with common factors.',
-    videoSrc: '6.NS-3.mp4',
+    videos: [{ title: 'The idea', src: '6.NS-3.mp4' }],
     concept: [
       'The GCF is the biggest number that divides both.',
       'The LCM is the smallest number both divide into.',
@@ -246,7 +251,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 4, title: 'Integers & absolute value',
     objective: 'Work with positive and negative numbers.',
-    videoSrc: '6.NS-4.mp4',
+    videos: [{ title: 'The idea', src: '6.NS-4.mp4' }],
     concept: [
       'Negatives are below 0 (owing money, below sea level).',
       'On a number line, bigger is always to the right.',
@@ -266,7 +271,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 5, title: 'The coordinate plane',
     objective: 'Plot and read ordered pairs.',
-    videoSrc: '6.NS-5.mp4',
+    videos: [{ title: 'The idea', src: '6.NS-5.mp4' }],
     concept: [
       'A point is (x, y): x is across, y is up or down.',
       'The four quadrants are set by the signs of x and y.',
@@ -286,7 +291,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 6, title: 'Dividing fractions',
     objective: 'Divide a fraction by a fraction.',
-    videoSrc: '6.NS-6.mp4',
+    videos: [{ title: 'The idea', src: '6.NS-6.mp4' }],
     concept: [
       "Dividing asks 'how many of these fit?'",
       'Keep the first fraction, change ÷ to ×, and flip the second (its reciprocal).',
@@ -308,7 +313,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 1, title: 'Exponents',
     objective: 'Read and evaluate powers.',
-    videoSrc: '6.EE-1.mp4',
+    videos: [{ title: 'The idea', src: '6.EE-1.mp4' }],
     concept: [
       'An exponent counts repeated multiplication: 2³ = 2 × 2 × 2.',
       'The base is multiplied, not added to the exponent.',
@@ -328,7 +333,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 2, title: 'Writing & evaluating expressions',
     objective: 'Turn words into expressions and evaluate them.',
-    videoSrc: '6.EE-2.mp4',
+    videos: [{ title: 'The idea', src: '6.EE-2.mp4' }],
     concept: [
       'A variable is a letter that stands for a number.',
       "Translate words: 'more than' = +, 'product' = ×, 'less than' flips the order.",
@@ -348,7 +353,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 3, title: 'Equivalent expressions',
     objective: 'Rewrite expressions that mean the same thing.',
-    videoSrc: '6.EE-3.mp4',
+    videos: [{ title: 'The idea', src: '6.EE-3.mp4' }],
     concept: [
       'Distributive property: a(b + c) = ab + ac.',
       'Combine like terms: 3x + 2x = 5x.',
@@ -368,7 +373,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 4, title: 'One-step equations',
     objective: 'Solve for a variable in one move.',
-    videoSrc: '6.EE-4.mp4',
+    videos: [{ title: 'The idea', src: '6.EE-4.mp4' }],
     concept: [
       'An equation says two things are equal.',
       'Undo what is done to x using the opposite operation.',
@@ -388,7 +393,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 5, title: 'Inequalities',
     objective: 'Write and graph inequalities.',
-    videoSrc: '6.EE-5.mp4',
+    videos: [{ title: 'The idea', src: '6.EE-5.mp4' }],
     concept: [
       '< less than, > greater than, ≤ at most, ≥ at least.',
       'x > 3 means every number bigger than 3 (but not 3 itself).',
@@ -408,7 +413,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 6, title: 'Variables that change together',
     objective: 'Relate independent and dependent variables.',
-    videoSrc: '6.EE-6.mp4',
+    videos: [{ title: 'The idea', src: '6.EE-6.mp4' }],
     concept: [
       'The independent variable is the one you choose (like time).',
       'The dependent variable responds to it (like distance).',
@@ -430,7 +435,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 1, title: 'Area of triangles & rectangles',
     objective: 'Find area with the right formula.',
-    videoSrc: '6.G-1.mp4',
+    videos: [{ title: 'The idea', src: '6.G-1.mp4' }],
     concept: [
       'Rectangle area = length × width.',
       'Triangle area = ½ × base × height.',
@@ -450,7 +455,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 2, title: 'Polygons on the grid',
     objective: 'Use coordinates to find side lengths.',
-    videoSrc: '6.G-2.mp4',
+    videos: [{ title: 'The idea', src: '6.G-2.mp4' }],
     concept: [
       'Plot the vertices in order.',
       'Horizontal side length = difference of x-values; vertical = difference of y-values.',
@@ -470,7 +475,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 3, title: 'Volume of prisms',
     objective: 'Find the volume of a rectangular prism.',
-    videoSrc: '6.G-3.mp4',
+    videos: [{ title: 'The idea', src: '6.G-3.mp4' }],
     concept: [
       'Volume = length × width × height.',
       'It works even with fraction edge lengths.',
@@ -490,7 +495,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 4, title: 'Surface area with nets',
     objective: 'Add up the faces of a 3-D shape.',
-    videoSrc: '6.G-4.mp4',
+    videos: [{ title: 'The idea', src: '6.G-4.mp4' }],
     concept: [
       'A net unfolds a solid into flat faces.',
       'Find the area of each face, then add them all up.',
@@ -510,7 +515,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 5, title: 'Composite figures',
     objective: 'Find the area of combined shapes.',
-    videoSrc: '6.G-5.mp4',
+    videos: [{ title: 'The idea', src: '6.G-5.mp4' }],
     concept: [
       'Split the figure into rectangles and triangles.',
       'Find each piece’s area.',
@@ -530,7 +535,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 6, title: 'Area & volume review',
     objective: 'Pick the right formula for the shape.',
-    videoSrc: '6.G-6.mp4',
+    videos: [{ title: 'The idea', src: '6.G-6.mp4' }],
     concept: [
       'Flat shape → area (square units). Solid → volume (cubic units).',
       'Triangle: ½·b·h. Rectangle: l·w. Prism: l·w·h.',
@@ -552,7 +557,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.SP', unit: 1, title: 'Mean, median & mode',
     objective: 'Find the measures of center.',
-    videoSrc: '6.SP-1.mp4',
+    videos: [{ title: 'The idea', src: '6.SP-1.mp4' }],
     concept: [
       'Mean = add all the values, then divide by how many there are.',
       'Median = the middle value once they are sorted.',
@@ -572,7 +577,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.SP', unit: 2, title: 'Choosing a center',
     objective: 'Decide which average to use.',
-    videoSrc: '6.SP-2.mp4',
+    videos: [{ title: 'The idea', src: '6.SP-2.mp4' }],
     concept: [
       'The mean uses every value, so outliers pull it.',
       'The median is the middle and resists outliers.',
@@ -592,7 +597,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.SP', unit: 3, title: 'Spread: range, IQR & MAD',
     objective: 'Measure how spread out data is.',
-    videoSrc: '6.SP-3.mp4',
+    videos: [{ title: 'The idea', src: '6.SP-3.mp4' }],
     concept: [
       'Range = maximum − minimum.',
       'IQR = upper quartile − lower quartile (spread of the middle half).',
@@ -612,7 +617,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.SP', unit: 4, title: 'Displaying data',
     objective: 'Read dot plots, histograms & box plots.',
-    videoSrc: '6.SP-4.mp4',
+    videos: [{ title: 'The idea', src: '6.SP-4.mp4' }],
     concept: [
       'Dot plot: one dot per value.',
       'Histogram: bars over equal intervals, with no gaps.',
@@ -632,7 +637,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.SP', unit: 5, title: 'Describing a distribution',
     objective: 'Summarize data in context.',
-    videoSrc: '6.SP-5.mp4',
+    videos: [{ title: 'The idea', src: '6.SP-5.mp4' }],
     concept: [
       'Mention center (typical value), spread (variability), and shape.',
       'Note any outliers or clusters.',
@@ -652,7 +657,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.SP', unit: 6, title: 'Summarizing data sets',
     objective: 'Pull the key numbers from a data set.',
-    videoSrc: '6.SP-6.mp4',
+    videos: [{ title: 'The idea', src: '6.SP-6.mp4' }],
     concept: [
       'Count how many values there are (n).',
       'Find the center (mean or median).',
