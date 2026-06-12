@@ -8,7 +8,9 @@
   "prompt": "Solve for $x$: $x + 7 = 15$.",
   "answerType": "numeric",
   "primaryAnswer": "8",
-  "alternativeAnswers": ["x=8"],
+  "alternativeAnswers": [
+    "x=8"
+  ],
   "acceptanceMode": "normalized",
   "hint": "Get $x$ alone by undoing the $+7$. Subtract $7$ from **both** sides.",
   "explanation": [
@@ -26,6 +28,23 @@
       ]
     }
   ],
-  "tags": ["CA", "equations"],
-  "estimatedSeconds": 35
+  "tags": [
+    "CA",
+    "equations"
+  ],
+  "estimatedSeconds": 35,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Get $x$ alone by undoing the $+7$. Subtract $7$ from **both** sides."
+    },
+    {
+      "level": "guide",
+      "text": "Start with $x + 7 = 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "Check: $8 + 7 = 15$. ✓"
+    }
+  ]
 }

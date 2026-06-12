@@ -8,7 +8,11 @@
   "prompt": "What is $\\frac{3}{4} \\div \\frac{1}{2}$? Give your answer as a fraction, mixed number, or decimal.",
   "answerType": "fraction",
   "primaryAnswer": "3/2",
-  "alternativeAnswers": ["1 1/2", "1.5", "6/4"],
+  "alternativeAnswers": [
+    "1 1/2",
+    "1.5",
+    "6/4"
+  ],
   "acceptanceMode": "normalized",
   "hint": "Dividing by a fraction is the same as multiplying by its **reciprocal**. Flip the second fraction.",
   "explanation": [
@@ -36,6 +40,23 @@
       ]
     }
   ],
-  "tags": ["CA", "fraction-division"],
-  "estimatedSeconds": 60
+  "tags": [
+    "CA",
+    "fraction-division"
+  ],
+  "estimatedSeconds": 60,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Dividing by a fraction is the same as multiplying by its **reciprocal**. Flip the second fraction."
+    },
+    {
+      "level": "guide",
+      "text": "Rewrite $\\div \\frac{1}{2}$ as $\\times \\frac{2}{1}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Simplify: $\\frac{6}{4} = \\frac{3}{2} = 1\\frac{1}{2}$."
+    }
+  ]
 }

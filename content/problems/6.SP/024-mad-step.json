@@ -18,6 +18,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Mean is fair-shares; median is the middle. Pick the one the question actually asks for."
+    },
+    {
+      "level": "nudge",
       "text": "Find each distance from the mean, then average."
     },
     {

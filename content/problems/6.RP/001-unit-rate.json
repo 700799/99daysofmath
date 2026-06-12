@@ -8,7 +8,10 @@
   "prompt": "Sam drives $180$ miles in $3$ hours. What is his rate in **miles per hour**?",
   "answerType": "numeric",
   "primaryAnswer": "60",
-  "alternativeAnswers": ["60 mph", "60mph"],
+  "alternativeAnswers": [
+    "60 mph",
+    "60mph"
+  ],
   "acceptanceMode": "normalized",
   "hint": "A unit rate is the amount **per 1**. Divide the total miles by the total hours.",
   "explanation": [
@@ -34,6 +37,23 @@
       ]
     }
   ],
-  "tags": ["CA", "unit-rate"],
-  "estimatedSeconds": 45
+  "tags": [
+    "CA",
+    "unit-rate"
+  ],
+  "estimatedSeconds": 45,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A unit rate is the amount **per 1**. Divide the total miles by the total hours."
+    },
+    {
+      "level": "guide",
+      "text": "Set up the rate: $\\frac{180 \\text{ miles}}{3 \\text{ hours}}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Sam's unit rate is $60$ miles per hour."
+    }
+  ]
 }

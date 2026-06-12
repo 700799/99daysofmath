@@ -145,19 +145,20 @@ describe('problems bank — units 7-10 quality bar', () => {
     expect(advanced).toHaveLength(200);
   });
 
-  it('every unit-7-10 problem has 3 ascending hint tiers', () => {
+  it('every unit-7-10 problem has 3 or 4 non-descending hint tiers', () => {
     const failures: string[] = [];
     const order: Record<string, number> = { nudge: 1, guide: 2, reveal: 3 };
     for (const p of advanced) {
-      if (!Array.isArray(p.hints) || p.hints.length !== 3) {
-        failures.push(`${p.id}: expected exactly 3 hint tiers, got ${p.hints?.length ?? 0}`);
+      const len = p.hints?.length ?? 0;
+      if (!Array.isArray(p.hints) || len < 3 || len > 4) {
+        failures.push(`${p.id}: expected 3 or 4 hint tiers, got ${len}`);
         continue;
       }
       let last = 0;
       for (const h of p.hints) {
         const n = order[h.level];
-        if (n <= last) {
-          failures.push(`${p.id}: hint tiers not strictly ascending at "${h.level}"`);
+        if (n < last) {
+          failures.push(`${p.id}: hint tiers must be non-descending (saw "${h.level}" after a later tier)`);
           break;
         }
         last = n;
@@ -182,5 +183,54 @@ describe('problems bank — units 7-10 quality bar', () => {
     );
     const ratio = withAlts.length / advanced.length;
     expect(ratio).toBeGreaterThanOrEqual(0.55);
+  });
+});
+
+describe('problems bank — Round 6 hint enrichment invariants', () => {
+  it('every problem has at least 3 hints (legacy singletons enriched)', () => {
+    const failures: string[] = [];
+    for (const p of PROBLEMS) {
+      if (!Array.isArray(p.hints) || p.hints.length < 3) {
+        failures.push(`${p.id}: only ${p.hints?.length ?? 0} hint(s)`);
+      }
+    }
+    expect(failures).toEqual([]);
+  });
+
+  it('every difficulty-3 problem across all domains has exactly 4 hints', () => {
+    const failures: string[] = [];
+    for (const p of PROBLEMS.filter((q) => q.difficulty === 3)) {
+      if ((p.hints?.length ?? 0) !== 4) {
+        failures.push(`${p.id} (${p.domain}): expected 4 hints, got ${p.hints?.length ?? 0}`);
+      }
+    }
+    expect(failures).toEqual([]);
+  });
+
+  it('every difficulty-3 problem carries at least one titled hint', () => {
+    const failures: string[] = [];
+    for (const p of PROBLEMS.filter((q) => q.difficulty === 3)) {
+      if (!(p.hints ?? []).some((h) => !!h.title)) {
+        failures.push(`${p.id} (${p.domain}): no titled hint`);
+      }
+    }
+    expect(failures).toEqual([]);
+  });
+
+  it('all hint series are non-descending in tier (nudge→guide→reveal)', () => {
+    const order: Record<string, number> = { nudge: 1, guide: 2, reveal: 3 };
+    const failures: string[] = [];
+    for (const p of PROBLEMS) {
+      let last = 0;
+      for (const h of p.hints ?? []) {
+        const n = order[h.level];
+        if (n < last) {
+          failures.push(`${p.id}: tier dropped at "${h.level}"`);
+          break;
+        }
+        last = n;
+      }
+    }
+    expect(failures).toEqual([]);
   });
 });

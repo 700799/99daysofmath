@@ -16,6 +16,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a 10×-easier version: shrink each number by a factor of 10 and watch the structure."
+    },
+    {
+      "level": "nudge",
       "text": "Same x — vertical distance."
     },
     {

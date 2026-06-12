@@ -8,7 +8,9 @@
   "prompt": "A rectangular box has length $\\frac{1}{2}$ ft, width $\\frac{1}{2}$ ft, and height $\\frac{1}{2}$ ft. What is its **volume** in cubic feet?",
   "answerType": "fraction",
   "primaryAnswer": "1/8",
-  "alternativeAnswers": ["0.125"],
+  "alternativeAnswers": [
+    "0.125"
+  ],
   "acceptanceMode": "normalized",
   "hint": "Volume $= l \\times w \\times h$. Multiply three fractions by multiplying numerators and denominators.",
   "explanation": [
@@ -26,6 +28,29 @@
       ]
     }
   ],
-  "tags": ["CA", "volume", "fractional-sides"],
-  "estimatedSeconds": 70
+  "tags": [
+    "CA",
+    "volume",
+    "fractional-sides"
+  ],
+  "estimatedSeconds": 70,
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a similar but smaller shape (all sides ÷ 2) and look at how the formula behaves."
+    },
+    {
+      "level": "nudge",
+      "text": "Volume $= l \\times w \\times h$. Multiply three fractions by multiplying numerators and denominators."
+    },
+    {
+      "level": "guide",
+      "text": "Volume $= \\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Volume $= \\frac{1}{8}$ cubic foot."
+    }
+  ]
 }

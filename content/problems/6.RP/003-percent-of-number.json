@@ -33,6 +33,23 @@
       ]
     }
   ],
-  "tags": ["CA", "percent"],
-  "estimatedSeconds": 45
+  "tags": [
+    "CA",
+    "percent"
+  ],
+  "estimatedSeconds": 45,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$25\\%$ means the same as $\\frac{1}{4}$. Or convert to a decimal: $25\\% = 0.25$."
+    },
+    {
+      "level": "guide",
+      "text": "Convert $25\\%$ to a decimal: $25\\% = 0.25$."
+    },
+    {
+      "level": "reveal",
+      "text": "So $25\\%$ of $80$ is $20$."
+    }
+  ]
 }

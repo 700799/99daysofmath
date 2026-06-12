@@ -17,6 +17,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Picture a ratio table: write the rate in one row, then scale both columns by the same number."
+    },
+    {
+      "level": "nudge",
       "text": "Find each part first."
     },
     {

@@ -8,7 +8,10 @@
   "prompt": "Lia scored $18$ out of $24$ on a quiz. What percent did she get correct?",
   "answerType": "numeric",
   "primaryAnswer": "75",
-  "alternativeAnswers": ["75%", "75 %"],
+  "alternativeAnswers": [
+    "75%",
+    "75 %"
+  ],
   "acceptanceMode": "normalized",
   "hint": "Write the score as a fraction $\\frac{18}{24}$, then convert to a percent by multiplying by $100$.",
   "explanation": [
@@ -27,6 +30,23 @@
       ]
     }
   ],
-  "tags": ["CA", "percent"],
-  "estimatedSeconds": 60
+  "tags": [
+    "CA",
+    "percent"
+  ],
+  "estimatedSeconds": 60,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Write the score as a fraction $\\frac{18}{24}$, then convert to a percent by multiplying by $100$."
+    },
+    {
+      "level": "guide",
+      "text": "Write the score as a fraction: $\\frac{18}{24}$."
+    },
+    {
+      "level": "reveal",
+      "text": "She got $75\\%$ correct."
+    }
+  ]
 }

@@ -8,7 +8,9 @@
   "prompt": "A cube has side length $3$ in. What is its **total surface area** in square inches?",
   "answerType": "numeric",
   "primaryAnswer": "54",
-  "alternativeAnswers": ["54 in^2"],
+  "alternativeAnswers": [
+    "54 in^2"
+  ],
   "acceptanceMode": "normalized",
   "hint": "A cube has **$6$ identical square faces**. Find the area of one face, then multiply by $6$.",
   "explanation": [
@@ -26,6 +28,23 @@
       ]
     }
   ],
-  "tags": ["MAP-practice", "surface-area"],
-  "estimatedSeconds": 55
+  "tags": [
+    "MAP-practice",
+    "surface-area"
+  ],
+  "estimatedSeconds": 55,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A cube has **$6$ identical square faces**. Find the area of one face, then multiply by $6$."
+    },
+    {
+      "level": "guide",
+      "text": "Each face is a $3 \\times 3$ square: area $= 9$ sq in."
+    },
+    {
+      "level": "reveal",
+      "text": "Total surface area $= 6 \\times 9 = 54$ square inches."
+    }
+  ]
 }

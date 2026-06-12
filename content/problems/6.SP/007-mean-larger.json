@@ -8,7 +8,9 @@
   "prompt": "The test scores are: $80, 85, 90, 70, 75$. What is the **mean** score?",
   "answerType": "numeric",
   "primaryAnswer": "80",
-  "alternativeAnswers": ["80.0"],
+  "alternativeAnswers": [
+    "80.0"
+  ],
   "acceptanceMode": "normalized",
   "hint": "Add up all the scores, then divide by how many there are.",
   "explanation": [
@@ -27,6 +29,23 @@
       ]
     }
   ],
-  "tags": ["mean", "MAP-practice"],
-  "estimatedSeconds": 60
+  "tags": [
+    "mean",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 60,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add up all the scores, then divide by how many there are."
+    },
+    {
+      "level": "guide",
+      "text": "Add the scores: $80 + 85 + 90 + 70 + 75 = 400$."
+    },
+    {
+      "level": "reveal",
+      "text": "Mean $= 80$."
+    }
+  ]
 }

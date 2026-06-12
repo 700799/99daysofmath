@@ -16,6 +16,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a similar but smaller shape (all sides ÷ 2) and look at how the formula behaves."
+    },
+    {
+      "level": "nudge",
       "text": "Use the base on the x-axis. The height is the y-value of the apex."
     },
     {

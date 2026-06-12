@@ -16,6 +16,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+    },
+    {
+      "level": "nudge",
       "text": "Multiply $4$ by each term inside."
     },
     {

@@ -14,6 +14,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Draw a tiny dot plot. The shape of the data tells you which statistic to use."
+    },
+    {
+      "level": "nudge",
       "text": "Lower half: $1, 3, 5$."
     },
     {

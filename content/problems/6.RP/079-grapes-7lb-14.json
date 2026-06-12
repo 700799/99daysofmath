@@ -17,6 +17,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sketch a tape diagram: equal blocks for each part. What does one block represent here?"
+    },
+    {
+      "level": "nudge",
       "text": "Find cost per pound first."
     },
     {

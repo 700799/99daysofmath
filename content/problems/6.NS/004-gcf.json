@@ -28,6 +28,23 @@
       ]
     }
   ],
-  "tags": ["MAP-practice", "gcf"],
-  "estimatedSeconds": 60
+  "tags": [
+    "MAP-practice",
+    "gcf"
+  ],
+  "estimatedSeconds": 60,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "List the factors of each number. The largest one that's in both lists is the GCF."
+    },
+    {
+      "level": "guide",
+      "text": "Factors of $18$: $1, 2, 3, 6, 9, 18$."
+    },
+    {
+      "level": "reveal",
+      "text": "So $\\text{GCF}(18, 24) = 6$."
+    }
+  ]
 }

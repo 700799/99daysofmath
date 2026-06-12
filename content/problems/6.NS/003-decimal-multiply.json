@@ -8,7 +8,10 @@
   "prompt": "Multiply: $0.6 \\times 0.4$.",
   "answerType": "numeric",
   "primaryAnswer": "0.24",
-  "alternativeAnswers": ["0.240", ".24"],
+  "alternativeAnswers": [
+    "0.240",
+    ".24"
+  ],
   "acceptanceMode": "normalized",
   "hint": "Multiply as if there were no decimal points, then count total decimal places in both factors and place the decimal in the answer.",
   "explanation": [
@@ -26,6 +29,23 @@
       ]
     }
   ],
-  "tags": ["CA", "decimal-multiplication"],
-  "estimatedSeconds": 40
+  "tags": [
+    "CA",
+    "decimal-multiplication"
+  ],
+  "estimatedSeconds": 40,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply as if there were no decimal points, then count total decimal places in both factors and place the decimal in the answer."
+    },
+    {
+      "level": "guide",
+      "text": "Ignore the decimals: $6 \\times 4 = 24$."
+    },
+    {
+      "level": "reveal",
+      "text": "Place the decimal $2$ places from the right of $24$: $0.24$."
+    }
+  ]
 }

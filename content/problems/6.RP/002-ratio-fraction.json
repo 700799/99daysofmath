@@ -13,7 +13,9 @@
   },
   "answerType": "fraction",
   "primaryAnswer": "3/8",
-  "alternativeAnswers": ["0.375"],
+  "alternativeAnswers": [
+    "0.375"
+  ],
   "acceptanceMode": "normalized",
   "hint": "Count the shaded parts (numerator) and the total parts (denominator).",
   "explanation": [
@@ -47,6 +49,24 @@
       ]
     }
   ],
-  "tags": ["MAP-practice", "ratios", "fractions"],
-  "estimatedSeconds": 40
+  "tags": [
+    "MAP-practice",
+    "ratios",
+    "fractions"
+  ],
+  "estimatedSeconds": 40,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Count the shaded parts (numerator) and the total parts (denominator)."
+    },
+    {
+      "level": "guide",
+      "text": "There are $3$ shaded parts out of $8$ equal parts total."
+    },
+    {
+      "level": "reveal",
+      "text": "Final answer: $\\frac{3}{8}$."
+    }
+  ]
 }

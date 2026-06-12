@@ -17,6 +17,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Rewrite the numbers in matching form (all fractions OR all decimals) before you operate."
+    },
+    {
+      "level": "nudge",
       "text": "Distance to $0$ is the absolute value."
     },
     {

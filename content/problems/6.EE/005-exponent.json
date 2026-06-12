@@ -27,6 +27,23 @@
       ]
     }
   ],
-  "tags": ["MAP-practice", "exponents"],
-  "estimatedSeconds": 35
+  "tags": [
+    "MAP-practice",
+    "exponents"
+  ],
+  "estimatedSeconds": 35,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$5^3$ means $5$ multiplied by itself $3$ times: $5 \\times 5 \\times 5$."
+    },
+    {
+      "level": "guide",
+      "text": "$5^3 = 5 \\times 5 \\times 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5^3 = 125$."
+    }
+  ]
 }

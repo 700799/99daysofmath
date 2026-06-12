@@ -36,6 +36,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Substitute a guess back into the equation. If both sides match, the guess is the answer."
+    },
+    {
+      "level": "nudge",
       "text": "Use the distributive property."
     },
     {

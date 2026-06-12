@@ -17,6 +17,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Convert percent ↔ fraction ↔ decimal. Sometimes the easiest form unlocks the answer."
+    },
+    {
+      "level": "nudge",
       "text": "Find the scale factor from $3$ blue to $9$ blue."
     },
     {

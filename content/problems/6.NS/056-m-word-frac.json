@@ -17,6 +17,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Plot each number on a quick number line. Distances and order get obvious right away."
+    },
+    {
+      "level": "nudge",
       "text": "Set up: $\\frac{5}{6} \\div \\frac{1}{3}$."
     },
     {

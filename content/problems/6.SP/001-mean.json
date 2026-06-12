@@ -8,7 +8,9 @@
   "prompt": "Find the **mean** of this data set: $4, 5, 6, 7, 8$.",
   "answerType": "numeric",
   "primaryAnswer": "6",
-  "alternativeAnswers": ["6.0"],
+  "alternativeAnswers": [
+    "6.0"
+  ],
   "acceptanceMode": "normalized",
   "hint": "The **mean** is the sum of all values divided by the number of values.",
   "explanation": [
@@ -36,6 +38,24 @@
       ]
     }
   ],
-  "tags": ["MAP-practice", "statistics", "mean"],
-  "estimatedSeconds": 45
+  "tags": [
+    "MAP-practice",
+    "statistics",
+    "mean"
+  ],
+  "estimatedSeconds": 45,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The **mean** is the sum of all values divided by the number of values."
+    },
+    {
+      "level": "guide",
+      "text": "Add the values: $4 + 5 + 6 + 7 + 8 = 30$."
+    },
+    {
+      "level": "reveal",
+      "text": "The mean is $6$."
+    }
+  ]
 }

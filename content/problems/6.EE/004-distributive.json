@@ -8,7 +8,9 @@
   "prompt": "Use the distributive property to expand $4(x + 3)$.",
   "answerType": "expression",
   "primaryAnswer": "4x+12",
-  "alternativeAnswers": ["12+4x"],
+  "alternativeAnswers": [
+    "12+4x"
+  ],
   "acceptanceMode": "exact",
   "hint": "Distribute the $4$ to **both** terms inside the parentheses: $4 \\cdot x$ and $4 \\cdot 3$.",
   "explanation": [
@@ -27,6 +29,23 @@
       ]
     }
   ],
-  "tags": ["CA", "distributive-property"],
-  "estimatedSeconds": 55
+  "tags": [
+    "CA",
+    "distributive-property"
+  ],
+  "estimatedSeconds": 55,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Distribute the $4$ to **both** terms inside the parentheses: $4 \\cdot x$ and $4 \\cdot 3$."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply $4$ by each term inside the parentheses."
+    },
+    {
+      "level": "reveal",
+      "text": "Add them: $4x + 12$."
+    }
+  ]
 }

@@ -14,6 +14,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Mean is fair-shares; median is the middle. Pick the one the question actually asks for."
+    },
+    {
+      "level": "nudge",
       "text": "Total sum is $40$ ($4 \\times 10$)."
     },
     {

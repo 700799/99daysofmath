@@ -26,6 +26,22 @@
       ]
     }
   ],
-  "tags": ["absolute-value"],
-  "estimatedSeconds": 25
+  "tags": [
+    "absolute-value"
+  ],
+  "estimatedSeconds": 25,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Absolute value is the **distance** from $0$ on the number line. Distance is always positive (or zero)."
+    },
+    {
+      "level": "guide",
+      "text": "Absolute value bars $|\\;|$ ask for the distance from $0$."
+    },
+    {
+      "level": "reveal",
+      "text": "Distance is always positive: $|-7| = 7$."
+    }
+  ]
 }

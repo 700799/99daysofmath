@@ -13,10 +13,26 @@
   },
   "answerType": "multiple-choice",
   "choices": [
-    { "id": "A", "label": "$x < 2$", "correct": false },
-    { "id": "B", "label": "$x \\le 2$", "correct": false },
-    { "id": "C", "label": "$x > 2$", "correct": true },
-    { "id": "D", "label": "$x \\ge 2$", "correct": false }
+    {
+      "id": "A",
+      "label": "$x < 2$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$x \\le 2$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$x > 2$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$x \\ge 2$",
+      "correct": false
+    }
   ],
   "primaryAnswer": "C",
   "alternativeAnswers": [],
@@ -47,6 +63,24 @@
       ]
     }
   ],
-  "tags": ["CA", "inequalities", "MAP-practice"],
-  "estimatedSeconds": 45
+  "tags": [
+    "CA",
+    "inequalities",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 45,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "An **open** circle means \"strictly greater than\" or \"strictly less than\" — the endpoint is **not** included."
+    },
+    {
+      "level": "guide",
+      "text": "The circle is **open**, so $2$ itself is not part of the solution. That rules out $\\le$ and $\\ge$."
+    },
+    {
+      "level": "reveal",
+      "text": "So the inequality is $x > 2$."
+    }
+  ]
 }

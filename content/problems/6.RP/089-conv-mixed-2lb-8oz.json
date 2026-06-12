@@ -16,6 +16,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Convert percent ↔ fraction ↔ decimal. Sometimes the easiest form unlocks the answer."
+    },
+    {
+      "level": "nudge",
       "text": "Convert the pounds first, then add the leftover ounces."
     },
     {

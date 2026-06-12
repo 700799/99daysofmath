@@ -14,6 +14,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Whatever operation is acting on the variable, do its OPPOSITE on both sides."
+    },
+    {
+      "level": "nudge",
       "text": "Compute the numerator first, then divide."
     },
     {

@@ -36,6 +36,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try the same problem with friendlier numbers first — say \"20% of 50\" — then come back to this one."
+    },
+    {
+      "level": "nudge",
       "text": "Find the unit rate from $120 / 2$ first."
     },
     {

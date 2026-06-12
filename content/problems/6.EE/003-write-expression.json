@@ -8,7 +8,9 @@
   "prompt": "Write an expression for: **\"$8$ more than a number $x$\"**.",
   "answerType": "expression",
   "primaryAnswer": "x+8",
-  "alternativeAnswers": ["8+x"],
+  "alternativeAnswers": [
+    "8+x"
+  ],
   "acceptanceMode": "exact",
   "hint": "\"More than\" means add. \"$8$ more than $x$\" starts with $x$, then adds $8$.",
   "explanation": [
@@ -26,6 +28,23 @@
       ]
     }
   ],
-  "tags": ["CA", "writing-expressions"],
-  "estimatedSeconds": 45
+  "tags": [
+    "CA",
+    "writing-expressions"
+  ],
+  "estimatedSeconds": 45,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"More than\" means add. \"$8$ more than $x$\" starts with $x$, then adds $8$."
+    },
+    {
+      "level": "guide",
+      "text": "\"More than a number\" means **add** to that number."
+    },
+    {
+      "level": "reveal",
+      "text": "By the commutative property, $8 + x$ is also correct."
+    }
+  ]
 }

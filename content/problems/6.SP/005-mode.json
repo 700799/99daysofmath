@@ -25,6 +25,22 @@
       ]
     }
   ],
-  "tags": ["mode"],
-  "estimatedSeconds": 35
+  "tags": [
+    "mode"
+  ],
+  "estimatedSeconds": 35,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The mode is the value that **appears most often**."
+    },
+    {
+      "level": "guide",
+      "text": "Count how often each value appears:"
+    },
+    {
+      "level": "reveal",
+      "text": "$4$ appears the most — so the mode is $4$."
+    }
+  ]
 }

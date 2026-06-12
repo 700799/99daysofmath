@@ -16,6 +16,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Translate piece-by-piece: \"more than\" = +, \"product\" = ×, \"less than\" flips the order."
+    },
+    {
+      "level": "nudge",
       "text": "Distribute first, then combine."
     },
     {

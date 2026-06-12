@@ -16,6 +16,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+    },
+    {
+      "level": "nudge",
       "text": "Multiply: $\\frac{1}{2} \\cdot 1 \\cdot 2$."
     },
     {

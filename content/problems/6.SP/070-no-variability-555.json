@@ -14,6 +14,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sort the data from least to greatest first — many statistics get easy after that."
+    },
+    {
+      "level": "nudge",
       "text": "Compare the values to each other."
     },
     {

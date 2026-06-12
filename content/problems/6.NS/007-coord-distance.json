@@ -8,7 +8,9 @@
   "prompt": "Two points are at $(3, 2)$ and $(3, -4)$. What is the **distance** between them?",
   "answerType": "numeric",
   "primaryAnswer": "6",
-  "alternativeAnswers": ["6 units"],
+  "alternativeAnswers": [
+    "6 units"
+  ],
   "acceptanceMode": "normalized",
   "hint": "The two points have the **same** $x$-coordinate, so they lie on a vertical line. Find the difference in $y$-values.",
   "explanation": [
@@ -34,6 +36,24 @@
       ]
     }
   ],
-  "tags": ["CA", "coordinate-plane", "MAP-practice"],
-  "estimatedSeconds": 60
+  "tags": [
+    "CA",
+    "coordinate-plane",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 60,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The two points have the **same** $x$-coordinate, so they lie on a vertical line. Find the difference in $y$-values."
+    },
+    {
+      "level": "guide",
+      "text": "Both points have $x = 3$, so they're on a vertical line."
+    },
+    {
+      "level": "reveal",
+      "text": "The distance is $6$ units."
+    }
+  ]
 }

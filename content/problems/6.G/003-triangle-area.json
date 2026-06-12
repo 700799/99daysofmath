@@ -8,7 +8,10 @@
   "prompt": "A triangle has base $10$ cm and height $6$ cm. What is its **area** in square centimeters?",
   "answerType": "numeric",
   "primaryAnswer": "30",
-  "alternativeAnswers": ["30 cm^2", "30 square cm"],
+  "alternativeAnswers": [
+    "30 cm^2",
+    "30 square cm"
+  ],
   "acceptanceMode": "normalized",
   "hint": "Area of a triangle is $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$.",
   "explanation": [
@@ -28,6 +31,24 @@
       ]
     }
   ],
-  "tags": ["CA", "area", "MAP-practice"],
-  "estimatedSeconds": 45
+  "tags": [
+    "CA",
+    "area",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 45,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Area of a triangle is $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$."
+    },
+    {
+      "level": "guide",
+      "text": "Use the formula: Area $= \\frac{1}{2} \\times b \\times h$."
+    },
+    {
+      "level": "reveal",
+      "text": "Or compute in another order: $\\frac{1}{2} \\times 10 = 5$, then $5 \\times 6 = 30$."
+    }
+  ]
 }

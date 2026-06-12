@@ -17,6 +17,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Convert percent ↔ fraction ↔ decimal. Sometimes the easiest form unlocks the answer."
+    },
+    {
+      "level": "nudge",
       "text": "Find cost per ticket first."
     },
     {

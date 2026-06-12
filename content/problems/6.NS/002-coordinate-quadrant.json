@@ -13,10 +13,26 @@
   },
   "answerType": "multiple-choice",
   "choices": [
-    { "id": "A", "label": "Quadrant I", "correct": false },
-    { "id": "B", "label": "Quadrant II", "correct": true },
-    { "id": "C", "label": "Quadrant III", "correct": false },
-    { "id": "D", "label": "Quadrant IV", "correct": false }
+    {
+      "id": "A",
+      "label": "Quadrant I",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Quadrant II",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Quadrant III",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Quadrant IV",
+      "correct": false
+    }
   ],
   "primaryAnswer": "B",
   "alternativeAnswers": [],
@@ -45,6 +61,23 @@
       ]
     }
   ],
-  "tags": ["MAP-practice", "coordinate-plane"],
-  "estimatedSeconds": 35
+  "tags": [
+    "MAP-practice",
+    "coordinate-plane"
+  ],
+  "estimatedSeconds": 35,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Quadrants are numbered counter-clockwise starting from the top-right. The signs are I: (+,+), II: (−,+), III: (−,−), IV: (+,−)."
+    },
+    {
+      "level": "guide",
+      "text": "The point $(-3, 2)$ has a **negative** $x$-coordinate and a **positive** $y$-coordinate."
+    },
+    {
+      "level": "reveal",
+      "text": "That sign pattern (−, +) puts it in the **upper-left**, which is **Quadrant II**."
+    }
+  ]
 }

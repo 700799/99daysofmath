@@ -17,6 +17,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try the same problem with friendlier numbers first — say \"20% of 50\" — then come back to this one."
+    },
+    {
+      "level": "nudge",
       "text": "$10\\%$ of $40$ is $4$. What's $5\\%$?"
     },
     {

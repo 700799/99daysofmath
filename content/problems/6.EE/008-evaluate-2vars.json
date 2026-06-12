@@ -25,6 +25,23 @@
       ]
     }
   ],
-  "tags": ["CA", "evaluating-expressions"],
-  "estimatedSeconds": 40
+  "tags": [
+    "CA",
+    "evaluating-expressions"
+  ],
+  "estimatedSeconds": 40,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Replace each letter with its value, then follow order of operations."
+    },
+    {
+      "level": "guide",
+      "text": "Substitute: $2(5) + 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "Then add: $10 + 3 = 13$."
+    }
+  ]
 }

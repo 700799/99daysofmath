@@ -8,7 +8,9 @@
   "prompt": "A rectangle has vertices at $(1, 1)$, $(5, 1)$, $(5, 4)$, and $(1, 4)$. What is its **perimeter**?",
   "answerType": "numeric",
   "primaryAnswer": "14",
-  "alternativeAnswers": ["14 units"],
+  "alternativeAnswers": [
+    "14 units"
+  ],
   "acceptanceMode": "normalized",
   "hint": "Find the length and width by counting between vertices that share a coordinate.",
   "explanation": [
@@ -25,6 +27,23 @@
       ]
     }
   ],
-  "tags": ["MAP-practice", "polygons-on-grid"],
-  "estimatedSeconds": 60
+  "tags": [
+    "MAP-practice",
+    "polygons-on-grid"
+  ],
+  "estimatedSeconds": 60,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the length and width by counting between vertices that share a coordinate."
+    },
+    {
+      "level": "guide",
+      "text": "Length: from $(1, 1)$ to $(5, 1)$ → $5 - 1 = 4$ units."
+    },
+    {
+      "level": "reveal",
+      "text": "Perimeter $= 2(l + w) = 2(4 + 3) = 2 \\times 7 = 14$ units."
+    }
+  ]
 }

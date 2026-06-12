@@ -27,6 +27,23 @@
       ]
     }
   ],
-  "tags": ["lcm", "MAP-practice"],
-  "estimatedSeconds": 60
+  "tags": [
+    "lcm",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 60,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "List multiples of each number. The smallest one in both lists is the LCM."
+    },
+    {
+      "level": "guide",
+      "text": "Multiples of $4$: $4, 8, 12, 16, 20, 24, \\ldots$"
+    },
+    {
+      "level": "reveal",
+      "text": "LCM $= 12$."
+    }
+  ]
 }

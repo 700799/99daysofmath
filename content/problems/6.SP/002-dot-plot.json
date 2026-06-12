@@ -40,6 +40,24 @@
       ]
     }
   ],
-  "tags": ["CA", "statistics", "data-displays"],
-  "estimatedSeconds": 30
+  "tags": [
+    "CA",
+    "statistics",
+    "data-displays"
+  ],
+  "estimatedSeconds": 30,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Count the number of dots stacked above the value $2$ on the number line."
+    },
+    {
+      "level": "guide",
+      "text": "Look at the column **above 2** on the dot plot."
+    },
+    {
+      "level": "reveal",
+      "text": "So $4$ families have exactly $2$ pets."
+    }
+  ]
 }

@@ -31,6 +31,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Plot each number on a quick number line. Distances and order get obvious right away."
+    },
+    {
+      "level": "nudge",
       "text": "Which is farther right on a number line?"
     },
     {

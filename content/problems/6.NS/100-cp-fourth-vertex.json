@@ -18,6 +18,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Plot each number on a quick number line. Distances and order get obvious right away."
+    },
+    {
+      "level": "nudge",
       "text": "In a rectangle, opposite sides have the same length."
     },
     {

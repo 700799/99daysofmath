@@ -8,10 +8,26 @@
   "prompt": "Which of the following is a **statistical question**?",
   "answerType": "multiple-choice",
   "choices": [
-    { "id": "A", "label": "How tall is Maria?", "correct": false },
-    { "id": "B", "label": "What is my dog's name?", "correct": false },
-    { "id": "C", "label": "How tall are the students in my class?", "correct": true },
-    { "id": "D", "label": "What time does school start?", "correct": false }
+    {
+      "id": "A",
+      "label": "How tall is Maria?",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "What is my dog's name?",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "How tall are the students in my class?",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "What time does school start?",
+      "correct": false
+    }
   ],
   "primaryAnswer": "C",
   "alternativeAnswers": [],
@@ -34,6 +50,24 @@
       ]
     }
   ],
-  "tags": ["CA", "statistical-questions", "MAP-practice"],
-  "estimatedSeconds": 55
+  "tags": [
+    "CA",
+    "statistical-questions",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 55,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A statistical question is one that has **variability** in the answers — you'd collect many data points to answer it."
+    },
+    {
+      "level": "guide",
+      "text": "Statistical questions expect a **range of answers**, not a single fact."
+    },
+    {
+      "level": "reveal",
+      "text": "So (C) is the statistical question."
+    }
+  ]
 }

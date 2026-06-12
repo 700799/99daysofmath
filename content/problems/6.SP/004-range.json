@@ -25,6 +25,23 @@
       ]
     }
   ],
-  "tags": ["MAP-practice", "range"],
-  "estimatedSeconds": 30
+  "tags": [
+    "MAP-practice",
+    "range"
+  ],
+  "estimatedSeconds": 30,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Range $=$ largest $-$ smallest."
+    },
+    {
+      "level": "guide",
+      "text": "Largest value: $22$. Smallest value: $8$."
+    },
+    {
+      "level": "reveal",
+      "text": "Range $= 22 - 8 = 14$."
+    }
+  ]
 }

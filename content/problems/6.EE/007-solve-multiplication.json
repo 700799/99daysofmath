@@ -8,7 +8,9 @@
   "prompt": "Solve for $x$: $3x = 24$.",
   "answerType": "numeric",
   "primaryAnswer": "8",
-  "alternativeAnswers": ["x=8"],
+  "alternativeAnswers": [
+    "x=8"
+  ],
   "acceptanceMode": "normalized",
   "hint": "Undo the multiplication by **dividing** both sides by $3$.",
   "explanation": [
@@ -27,6 +29,23 @@
       ]
     }
   ],
-  "tags": ["MAP-practice", "equations"],
-  "estimatedSeconds": 35
+  "tags": [
+    "MAP-practice",
+    "equations"
+  ],
+  "estimatedSeconds": 35,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Undo the multiplication by **dividing** both sides by $3$."
+    },
+    {
+      "level": "guide",
+      "text": "Start with $3x = 24$."
+    },
+    {
+      "level": "reveal",
+      "text": "Check: $3 \\times 8 = 24$. ✓"
+    }
+  ]
 }

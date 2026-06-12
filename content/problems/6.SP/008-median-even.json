@@ -8,7 +8,10 @@
   "prompt": "Find the **median** of: $4, 8, 11, 15$.",
   "answerType": "numeric",
   "primaryAnswer": "9.5",
-  "alternativeAnswers": ["19/2", "9 1/2"],
+  "alternativeAnswers": [
+    "19/2",
+    "9 1/2"
+  ],
   "acceptanceMode": "normalized",
   "hint": "When there are **two middle values**, the median is the average of those two.",
   "explanation": [
@@ -27,6 +30,23 @@
       ]
     }
   ],
-  "tags": ["CA", "median"],
-  "estimatedSeconds": 60
+  "tags": [
+    "CA",
+    "median"
+  ],
+  "estimatedSeconds": 60,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "When there are **two middle values**, the median is the average of those two."
+    },
+    {
+      "level": "guide",
+      "text": "Sort the list (already sorted): $4, 8, 11, 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "Median $= 9.5$."
+    }
+  ]
 }

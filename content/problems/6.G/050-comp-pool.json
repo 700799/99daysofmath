@@ -16,6 +16,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sketch the shape and label every length. A 30-second drawing saves 5 minutes of thinking."
+    },
+    {
+      "level": "nudge",
       "text": "Total minus pool."
     },
     {

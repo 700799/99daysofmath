@@ -8,10 +8,26 @@
   "prompt": "Which ratio is equivalent to $4 : 10$?",
   "answerType": "multiple-choice",
   "choices": [
-    { "id": "A", "label": "$8 : 15$", "correct": false },
-    { "id": "B", "label": "$2 : 5$", "correct": true },
-    { "id": "C", "label": "$4 : 5$", "correct": false },
-    { "id": "D", "label": "$5 : 10$", "correct": false }
+    {
+      "id": "A",
+      "label": "$8 : 15$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$2 : 5$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$4 : 5$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$5 : 10$",
+      "correct": false
+    }
   ],
   "primaryAnswer": "B",
   "alternativeAnswers": [],
@@ -32,6 +48,23 @@
       ]
     }
   ],
-  "tags": ["CA", "equivalent-ratios"],
-  "estimatedSeconds": 40
+  "tags": [
+    "CA",
+    "equivalent-ratios"
+  ],
+  "estimatedSeconds": 40,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Simplify $4 : 10$ by dividing both numbers by their greatest common factor."
+    },
+    {
+      "level": "guide",
+      "text": "The greatest common factor of $4$ and $10$ is $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "So $4 : 10 = 2 : 5$."
+    }
+  ]
 }

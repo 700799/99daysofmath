@@ -14,6 +14,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+    },
+    {
+      "level": "nudge",
       "text": "$SA = 2(lw + lh + wh)$."
     },
     {

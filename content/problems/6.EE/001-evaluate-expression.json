@@ -35,6 +35,23 @@
       ]
     }
   ],
-  "tags": ["CA", "expressions"],
-  "estimatedSeconds": 30
+  "tags": [
+    "CA",
+    "expressions"
+  ],
+  "estimatedSeconds": 30,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $4$ for $x$ first, then follow the order of operations: multiply before you add."
+    },
+    {
+      "level": "guide",
+      "text": "Substitute $x = 4$ into $3x + 5$: $3(4) + 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "Then add: $12 + 5 = 17$."
+    }
+  ]
 }

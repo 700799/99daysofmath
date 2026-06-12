@@ -8,7 +8,10 @@
   "prompt": "A parallelogram has base $9$ in and height $4$ in. What is its **area** in square inches?",
   "answerType": "numeric",
   "primaryAnswer": "36",
-  "alternativeAnswers": ["36 in^2", "36 sq in"],
+  "alternativeAnswers": [
+    "36 in^2",
+    "36 sq in"
+  ],
   "acceptanceMode": "normalized",
   "hint": "Area of a parallelogram is $\\text{base} \\times \\text{height}$, just like a rectangle.",
   "explanation": [
@@ -26,6 +29,22 @@
       ]
     }
   ],
-  "tags": ["area"],
-  "estimatedSeconds": 40
+  "tags": [
+    "area"
+  ],
+  "estimatedSeconds": 40,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Area of a parallelogram is $\\text{base} \\times \\text{height}$, just like a rectangle."
+    },
+    {
+      "level": "guide",
+      "text": "Use the formula: Area $= b \\times h$."
+    },
+    {
+      "level": "reveal",
+      "text": "The area is $36$ square inches."
+    }
+  ]
 }

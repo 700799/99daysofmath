@@ -8,7 +8,10 @@
   "prompt": "Which symbol makes this true? Compare: $-5 \\;?\\; -8$. Type $<$, $>$, or $=$.",
   "answerType": "short-text",
   "primaryAnswer": ">",
-  "alternativeAnswers": ["greater than", "gt"],
+  "alternativeAnswers": [
+    "greater than",
+    "gt"
+  ],
   "acceptanceMode": "exact",
   "hint": "On a number line, numbers get smaller as you go **left**. $-5$ is to the **right** of $-8$.",
   "explanation": [
@@ -26,6 +29,24 @@
       ]
     }
   ],
-  "tags": ["CA", "integers", "MAP-practice"],
-  "estimatedSeconds": 35
+  "tags": [
+    "CA",
+    "integers",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 35,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "On a number line, numbers get smaller as you go **left**. $-5$ is to the **right** of $-8$."
+    },
+    {
+      "level": "guide",
+      "text": "Picture a number line: $-8$ is farther left than $-5$."
+    },
+    {
+      "level": "reveal",
+      "text": "So $-5 > -8$."
+    }
+  ]
 }

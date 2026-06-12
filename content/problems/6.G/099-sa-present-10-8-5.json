@@ -16,6 +16,11 @@
   "hints": [
     {
       "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Split or rearrange the shape into pieces whose formulas you already know."
+    },
+    {
+      "level": "nudge",
       "text": "SA $= 2(lw + lh + wh)$."
     },
     {

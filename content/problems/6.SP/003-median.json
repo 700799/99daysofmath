@@ -28,6 +28,23 @@
       ]
     }
   ],
-  "tags": ["CA", "median"],
-  "estimatedSeconds": 45
+  "tags": [
+    "CA",
+    "median"
+  ],
+  "estimatedSeconds": 45,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First put the numbers in **order**. The median is the middle value."
+    },
+    {
+      "level": "guide",
+      "text": "Sort the list: $2, 3, 5, 7, 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "Median $= 5$."
+    }
+  ]
 }
