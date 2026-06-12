@@ -1,0 +1,37 @@
+{
+  "id": "6.EE.084",
+  "domain": "6.EE",
+  "unit": 9,
+  "orderInUnit": 4,
+  "standard": "6.EE.B.7",
+  "difficulty": 2,
+  "prompt": "Solve: $6x = 48$.",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Divide both sides by $6$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Divide both sides by $6$."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 48 \\div 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$8$."
+    }
+  ],
+  "explanation": [
+    "$6x = 48$.",
+    "$x = 48 \\div 6 = 8$."
+  ],
+  "tags": [
+    "solve",
+    "one-step"
+  ],
+  "estimatedSeconds": 35
+}

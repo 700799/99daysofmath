@@ -1,0 +1,40 @@
+{
+  "id": "6.EE.081",
+  "domain": "6.EE",
+  "unit": 9,
+  "orderInUnit": 1,
+  "standard": "6.EE.B.6",
+  "difficulty": 1,
+  "prompt": "Marcos saves \\$$25$ each week for $w$ weeks. Write an expression for his total savings (in dollars).",
+  "answerType": "short-text",
+  "primaryAnswer": "25w",
+  "alternativeAnswers": [
+    "25*w",
+    "25 w",
+    "25·w"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Total = dollars per week $\\times$ weeks.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Total = dollars per week $\\times$ weeks."
+    },
+    {
+      "level": "guide",
+      "text": "$25 \\cdot w$."
+    },
+    {
+      "level": "reveal",
+      "text": "$25w$."
+    }
+  ],
+  "explanation": [
+    "Saving $25$ per week for $w$ weeks = $25 \\cdot w = 25w$ dollars."
+  ],
+  "tags": [
+    "expression",
+    "word"
+  ],
+  "estimatedSeconds": 40
+}

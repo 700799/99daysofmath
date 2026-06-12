@@ -1,0 +1,37 @@
+{
+  "id": "6.EE.069",
+  "domain": "6.EE",
+  "unit": 7,
+  "orderInUnit": 9,
+  "standard": "6.EE.A.2.c",
+  "difficulty": 3,
+  "prompt": "Evaluate $2x + y$ when $x = 3$ and $y = 7$.",
+  "answerType": "numeric",
+  "primaryAnswer": "13",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute both values.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute both values."
+    },
+    {
+      "level": "guide",
+      "text": "$2(3) + 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 + 7 = 13$."
+    }
+  ],
+  "explanation": [
+    "$2x + y$ with $x = 3, y = 7$: $2(3) + 7 = 6 + 7 = 13$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "evaluate",
+    "two-vars"
+  ],
+  "estimatedSeconds": 60
+}

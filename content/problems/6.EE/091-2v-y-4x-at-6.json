@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.091",
+  "domain": "6.EE",
+  "unit": 10,
+  "orderInUnit": 1,
+  "standard": "6.EE.C.9",
+  "difficulty": 2,
+  "prompt": "For $y = 4x$, find $y$ when $x = 6$.",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $6$ for $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $6$ for $x$."
+    },
+    {
+      "level": "guide",
+      "text": "$y = 4 \\cdot 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24$."
+    }
+  ],
+  "explanation": [
+    "$y = 4x$ with $x = 6$: $y = 24$."
+  ],
+  "tags": [
+    "two-vars"
+  ],
+  "estimatedSeconds": 35
+}

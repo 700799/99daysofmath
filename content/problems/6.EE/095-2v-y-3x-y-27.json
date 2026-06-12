@@ -1,0 +1,38 @@
+{
+  "id": "6.EE.095",
+  "domain": "6.EE",
+  "unit": 10,
+  "orderInUnit": 5,
+  "standard": "6.EE.C.9",
+  "difficulty": 3,
+  "prompt": "For $y = 3x$, find $x$ when $y = 27$.",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You're solving $3x = 27$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You're solving $3x = 27$."
+    },
+    {
+      "level": "guide",
+      "text": "Divide both sides by $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 27 \\div 3 = 9$."
+    }
+  ],
+  "explanation": [
+    "Set $y = 27$: $27 = 3x$.",
+    "Divide: $x = 9$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "two-vars",
+    "solve"
+  ],
+  "estimatedSeconds": 55
+}

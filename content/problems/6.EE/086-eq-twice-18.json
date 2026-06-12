@@ -1,0 +1,42 @@
+{
+  "id": "6.EE.086",
+  "domain": "6.EE",
+  "unit": 9,
+  "orderInUnit": 6,
+  "standard": "6.EE.B.7",
+  "difficulty": 2,
+  "prompt": "Write an equation for \"Twice a number is $18$\" using $n$.",
+  "answerType": "short-text",
+  "primaryAnswer": "2n=18",
+  "alternativeAnswers": [
+    "2*n=18",
+    "2 n = 18",
+    "2 \\cdot n = 18"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "\"Twice\" means $\\times 2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Twice\" means $\\times 2$."
+    },
+    {
+      "level": "guide",
+      "text": "$2n = 18$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2n = 18$."
+    }
+  ],
+  "explanation": [
+    "\"Twice $n$\" → $2n$.",
+    "\"Is $18$\" → $= 18$.",
+    "$2n = 18$."
+  ],
+  "tags": [
+    "equation",
+    "word"
+  ],
+  "estimatedSeconds": 40
+}

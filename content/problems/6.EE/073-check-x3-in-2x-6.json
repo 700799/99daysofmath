@@ -1,0 +1,39 @@
+{
+  "id": "6.EE.073",
+  "domain": "6.EE",
+  "unit": 8,
+  "orderInUnit": 3,
+  "standard": "6.EE.B.5",
+  "difficulty": 2,
+  "prompt": "Is $x = 3$ a solution to $2x = 6$? (yes/no)",
+  "answerType": "short-text",
+  "primaryAnswer": "yes",
+  "alternativeAnswers": [
+    "Yes",
+    "y"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Substitute and check.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute and check."
+    },
+    {
+      "level": "guide",
+      "text": "$2(3) = 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "True → yes."
+    }
+  ],
+  "explanation": [
+    "Substitute $x = 3$: $2(3) = 6$. ✓",
+    "Yes."
+  ],
+  "tags": [
+    "check-solution"
+  ],
+  "estimatedSeconds": 30
+}

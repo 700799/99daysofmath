@@ -1,0 +1,44 @@
+{
+  "id": "6.EE.083",
+  "domain": "6.EE",
+  "unit": 9,
+  "orderInUnit": 3,
+  "standard": "6.EE.B.7",
+  "difficulty": 2,
+  "prompt": "Solve: $x - 5 = 12$.",
+  "answerType": "numeric",
+  "primaryAnswer": "17",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Add $5$ to both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add $5$ to both sides."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 12 + 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$17$."
+    }
+  ],
+  "explanation": [
+    "$x - 5 = 12$. Add $5$: $x = 17$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test the answer",
+      "steps": [
+        "Check: $17 - 5 = 12$. ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "solve",
+    "one-step"
+  ],
+  "estimatedSeconds": 40
+}

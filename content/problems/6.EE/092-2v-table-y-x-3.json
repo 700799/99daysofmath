@@ -1,0 +1,41 @@
+{
+  "id": "6.EE.092",
+  "domain": "6.EE",
+  "unit": 10,
+  "orderInUnit": 2,
+  "standard": "6.EE.C.9",
+  "difficulty": 2,
+  "prompt": "Fill in the table for $y = x + 3$ when $x = 1, 2, 3, 4$. List the $y$-values (comma-separated).",
+  "answerType": "short-text",
+  "primaryAnswer": "4, 5, 6, 7",
+  "alternativeAnswers": [
+    "4,5,6,7"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Plug each $x$ into $x + 3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Plug each $x$ into $x + 3$."
+    },
+    {
+      "level": "guide",
+      "text": "$1+3, 2+3, 3+3, 4+3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4, 5, 6, 7$."
+    }
+  ],
+  "explanation": [
+    "$x = 1 \\to y = 4$.",
+    "$x = 2 \\to y = 5$.",
+    "$x = 3 \\to y = 6$.",
+    "$x = 4 \\to y = 7$."
+  ],
+  "tags": [
+    "two-vars",
+    "table"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,48 @@
+{
+  "id": "6.EE.077",
+  "domain": "6.EE",
+  "unit": 8,
+  "orderInUnit": 7,
+  "standard": "6.EE.B.5",
+  "difficulty": 2,
+  "prompt": "Is $y = 2$ a solution to $4y + 1 = 10$? (yes/no)",
+  "answerType": "short-text",
+  "primaryAnswer": "no",
+  "alternativeAnswers": [
+    "No",
+    "n"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Substitute and check the left side.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute and check the left side."
+    },
+    {
+      "level": "guide",
+      "text": "$4(2) + 1 = 8 + 1 = 9 \\ne 10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$9 \\ne 10$ → no."
+    }
+  ],
+  "explanation": [
+    "$4(2) + 1 = 9$.",
+    "$9 \\ne 10$ → not a solution."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Solve for $y$ instead",
+      "steps": [
+        "$4y + 1 = 10 \\to 4y = 9 \\to y = 9/4 = 2.25$.",
+        "The true solution is $2.25$, not $2$. So $y = 2$ is not a solution."
+      ]
+    }
+  ],
+  "tags": [
+    "check-solution"
+  ],
+  "estimatedSeconds": 55
+}

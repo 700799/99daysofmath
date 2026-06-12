@@ -1,0 +1,39 @@
+{
+  "id": "6.EE.076",
+  "domain": "6.EE",
+  "unit": 8,
+  "orderInUnit": 6,
+  "standard": "6.EE.B.5",
+  "difficulty": 2,
+  "prompt": "Is $x = 5$ a solution to $3x - 4 = 11$? (yes/no)",
+  "answerType": "short-text",
+  "primaryAnswer": "yes",
+  "alternativeAnswers": [
+    "Yes",
+    "y"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Substitute and simplify the left side.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute and simplify the left side."
+    },
+    {
+      "level": "guide",
+      "text": "$3(5) - 4 = 15 - 4 = 11$."
+    },
+    {
+      "level": "reveal",
+      "text": "Matches $11$ → yes."
+    }
+  ],
+  "explanation": [
+    "$3(5) - 4 = 15 - 4 = 11$. ✓",
+    "Yes."
+  ],
+  "tags": [
+    "check-solution"
+  ],
+  "estimatedSeconds": 45
+}

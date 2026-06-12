@@ -1,0 +1,37 @@
+{
+  "id": "6.EE.089",
+  "domain": "6.EE",
+  "unit": 9,
+  "orderInUnit": 9,
+  "standard": "6.EE.B.7",
+  "difficulty": 3,
+  "prompt": "Solve: $y - 12 = 5$.",
+  "answerType": "numeric",
+  "primaryAnswer": "17",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Add $12$ to both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add $12$ to both sides."
+    },
+    {
+      "level": "guide",
+      "text": "$y = 5 + 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$17$."
+    }
+  ],
+  "explanation": [
+    "$y - 12 = 5$.",
+    "$y = 5 + 12 = 17$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "solve"
+  ],
+  "estimatedSeconds": 40
+}

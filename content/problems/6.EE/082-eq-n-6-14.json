@@ -1,0 +1,41 @@
+{
+  "id": "6.EE.082",
+  "domain": "6.EE",
+  "unit": 9,
+  "orderInUnit": 2,
+  "standard": "6.EE.B.7",
+  "difficulty": 1,
+  "prompt": "Write an equation for \"A number plus $6$ equals $14$\" using $n$ as the variable.",
+  "answerType": "short-text",
+  "primaryAnswer": "n+6=14",
+  "alternativeAnswers": [
+    "n + 6 = 14",
+    "6+n=14"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "\"Plus\" means $+$; \"equals\" means $=$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Plus\" means $+$; \"equals\" means $=$."
+    },
+    {
+      "level": "guide",
+      "text": "Write: number + 6 = 14."
+    },
+    {
+      "level": "reveal",
+      "text": "$n + 6 = 14$."
+    }
+  ],
+  "explanation": [
+    "\"A number $n$ plus $6$\" → $n + 6$.",
+    "\"Equals $14$\" → $= 14$.",
+    "$n + 6 = 14$."
+  ],
+  "tags": [
+    "equation",
+    "word"
+  ],
+  "estimatedSeconds": 40
+}

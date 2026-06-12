@@ -1,0 +1,45 @@
+{
+  "id": "6.EE.067",
+  "domain": "6.EE",
+  "unit": 7,
+  "orderInUnit": 7,
+  "standard": "6.EE.A.2.c",
+  "difficulty": 2,
+  "prompt": "Evaluate $4(b + 1)$ when $b = 5$.",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Parentheses first, then multiply.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Parentheses first, then multiply."
+    },
+    {
+      "level": "guide",
+      "text": "$4(5 + 1) = 4 \\cdot 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24$."
+    }
+  ],
+  "explanation": [
+    "$4(b + 1)$ with $b = 5$: $4(5 + 1) = 4 \\cdot 6 = 24$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Distribute first",
+      "steps": [
+        "$4(b + 1) = 4b + 4$.",
+        "With $b = 5$: $4(5) + 4 = 20 + 4 = 24$."
+      ]
+    }
+  ],
+  "tags": [
+    "evaluate",
+    "order-of-ops"
+  ],
+  "estimatedSeconds": 55
+}

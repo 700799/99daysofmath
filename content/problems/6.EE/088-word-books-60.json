@@ -1,0 +1,53 @@
+{
+  "id": "6.EE.088",
+  "domain": "6.EE",
+  "unit": 9,
+  "orderInUnit": 8,
+  "standard": "6.EE.B.7",
+  "difficulty": 3,
+  "prompt": "A book costs \\$$12$. With \\$$60$, how many books can you buy if you spend all the money?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [
+    "5 books"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Set up an equation: cost per book $\\times$ books $=$ total.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Set up an equation: cost per book $\\times$ books $=$ total."
+    },
+    {
+      "level": "guide",
+      "text": "$12b = 60$, so $b = 60 \\div 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$60 \\div 12 = 5$."
+    }
+  ],
+  "explanation": [
+    "Let $b$ = number of books.",
+    "$12b = 60$.",
+    "$b = 60 \\div 12 = 5$ books."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Repeated subtraction",
+      "steps": [
+        "$60 - 12 = 48$; one book bought.",
+        "$48 - 12 = 36$; two.",
+        "$36 - 12 = 24$; three.",
+        "$24 - 12 = 12$; four.",
+        "$12 - 12 = 0$; five."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "word",
+    "equation"
+  ],
+  "estimatedSeconds": 75
+}

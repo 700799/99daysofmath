@@ -1,0 +1,49 @@
+{
+  "id": "6.EE.090",
+  "domain": "6.EE",
+  "unit": 9,
+  "orderInUnit": 10,
+  "standard": "6.EE.B.7",
+  "difficulty": 3,
+  "prompt": "A school has $245$ cans and needs $500$. They will collect $c$ more cans to reach the goal. Write the equation and solve for $c$.",
+  "answerType": "numeric",
+  "primaryAnswer": "255",
+  "alternativeAnswers": [
+    "255 cans"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Current $+$ collected $=$ goal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Current $+$ collected $=$ goal."
+    },
+    {
+      "level": "guide",
+      "text": "$245 + c = 500$. Subtract $245$."
+    },
+    {
+      "level": "reveal",
+      "text": "$c = 500 - 245 = 255$."
+    }
+  ],
+  "explanation": [
+    "Set up: $245 + c = 500$.",
+    "Subtract $245$ from both sides: $c = 255$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count up",
+      "steps": [
+        "From $245$ to $500$: $245 + 5 = 250$; $250 + 250 = 500$.",
+        "$5 + 250 = 255$ cans."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "equation",
+    "word"
+  ],
+  "estimatedSeconds": 85
+}

@@ -1,0 +1,41 @@
+{
+  "id": "6.EE.078",
+  "domain": "6.EE",
+  "unit": 8,
+  "orderInUnit": 8,
+  "standard": "6.EE.A.4",
+  "difficulty": 3,
+  "prompt": "Combine like terms: $4x + 3 + 2x$.",
+  "answerType": "short-text",
+  "primaryAnswer": "6x+3",
+  "alternativeAnswers": [
+    "6x + 3",
+    "3 + 6x"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Group the $x$ terms together.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Group the $x$ terms together."
+    },
+    {
+      "level": "guide",
+      "text": "$4x + 2x = 6x$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6x + 3$."
+    }
+  ],
+  "explanation": [
+    "Like terms: $4x$ and $2x$ → $6x$.",
+    "Constant: $3$.",
+    "Result: $6x + 3$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "combine-like-terms"
+  ],
+  "estimatedSeconds": 55
+}

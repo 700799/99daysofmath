@@ -1,0 +1,49 @@
+{
+  "id": "6.EE.099",
+  "domain": "6.EE",
+  "unit": 10,
+  "orderInUnit": 9,
+  "standard": "6.EE.B.6",
+  "difficulty": 3,
+  "prompt": "$p$ friends share a pizza equally. Each gets $\\dfrac{1}{8}$ of the pizza. How many friends?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [
+    "8 friends"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Each share is $1$ divided by how many friends.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each share is $1$ divided by how many friends."
+    },
+    {
+      "level": "guide",
+      "text": "$\\dfrac{1}{p} = \\dfrac{1}{8}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$p = 8$."
+    }
+  ],
+  "explanation": [
+    "Each friend's share is $\\dfrac{1}{p}$. Set $\\dfrac{1}{p} = \\dfrac{1}{8}$.",
+    "$p = 8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Eighths fit into a whole",
+      "steps": [
+        "A whole pizza has $8$ eighths.",
+        "So $8$ friends each get one eighth."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "fraction",
+    "word"
+  ],
+  "estimatedSeconds": 70
+}

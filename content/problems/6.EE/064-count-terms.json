@@ -1,0 +1,37 @@
+{
+  "id": "6.EE.064",
+  "domain": "6.EE",
+  "unit": 7,
+  "orderInUnit": 4,
+  "standard": "6.EE.A.2.b",
+  "difficulty": 2,
+  "prompt": "How many **terms** are in $3x + 5 - 2y$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Terms are separated by $+$ or $-$ signs.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Terms are separated by $+$ or $-$ signs."
+    },
+    {
+      "level": "guide",
+      "text": "Identify each piece: $3x$, $5$, $-2y$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3$ terms."
+    }
+  ],
+  "explanation": [
+    "Terms in $3x + 5 - 2y$: $3x$, $5$, and $-2y$.",
+    "Count: $3$."
+  ],
+  "tags": [
+    "expression",
+    "parts"
+  ],
+  "estimatedSeconds": 35
+}

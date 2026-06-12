@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.066",
+  "domain": "6.EE",
+  "unit": 7,
+  "orderInUnit": 6,
+  "standard": "6.EE.A.2.c",
+  "difficulty": 2,
+  "prompt": "Evaluate $5x - 7$ when $x = 3$.",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $3$ for $x$, then compute.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $3$ for $x$, then compute."
+    },
+    {
+      "level": "guide",
+      "text": "$5(3) - 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$15 - 7 = 8$."
+    }
+  ],
+  "explanation": [
+    "$5x - 7$ with $x = 3$: $5(3) - 7 = 15 - 7 = 8$."
+  ],
+  "tags": [
+    "evaluate"
+  ],
+  "estimatedSeconds": 40
+}

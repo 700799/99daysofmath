@@ -1,0 +1,39 @@
+{
+  "id": "6.EE.063",
+  "domain": "6.EE",
+  "unit": 7,
+  "orderInUnit": 3,
+  "standard": "6.EE.A.2.b",
+  "difficulty": 2,
+  "prompt": "What is the **variable** in $5a + 2$?",
+  "answerType": "short-text",
+  "primaryAnswer": "a",
+  "alternativeAnswers": [
+    "A"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "A variable is a letter standing for a number.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A variable is a letter standing for a number."
+    },
+    {
+      "level": "guide",
+      "text": "Which letter appears in $5a + 2$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$a$."
+    }
+  ],
+  "explanation": [
+    "The variable is the letter that represents an unknown.",
+    "In $5a + 2$, the variable is $a$."
+  ],
+  "tags": [
+    "expression",
+    "parts"
+  ],
+  "estimatedSeconds": 25
+}

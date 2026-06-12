@@ -1,0 +1,38 @@
+{
+  "id": "6.EE.070",
+  "domain": "6.EE",
+  "unit": 7,
+  "orderInUnit": 10,
+  "standard": "6.EE.A.2.c",
+  "difficulty": 3,
+  "prompt": "Evaluate $\\dfrac{x + 5}{2}$ when $x = 7$.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Compute the numerator first, then divide.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Compute the numerator first, then divide."
+    },
+    {
+      "level": "guide",
+      "text": "Numerator: $7 + 5 = 12$. Then $12 \\div 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6$."
+    }
+  ],
+  "explanation": [
+    "$x + 5 = 7 + 5 = 12$.",
+    "$\\dfrac{12}{2} = 6$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "evaluate",
+    "fraction"
+  ],
+  "estimatedSeconds": 65
+}

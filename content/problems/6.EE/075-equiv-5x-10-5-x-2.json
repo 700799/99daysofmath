@@ -1,0 +1,40 @@
+{
+  "id": "6.EE.075",
+  "domain": "6.EE",
+  "unit": 8,
+  "orderInUnit": 5,
+  "standard": "6.EE.A.4",
+  "difficulty": 2,
+  "prompt": "Are $5x - 10$ and $5(x - 2)$ equivalent? (yes/no)",
+  "answerType": "short-text",
+  "primaryAnswer": "yes",
+  "alternativeAnswers": [
+    "Yes",
+    "y"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Distribute: $5(x - 2)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Distribute: $5(x - 2)$."
+    },
+    {
+      "level": "guide",
+      "text": "$5 \\cdot x - 5 \\cdot 2 = 5x - 10$."
+    },
+    {
+      "level": "reveal",
+      "text": "Yes."
+    }
+  ],
+  "explanation": [
+    "$5(x - 2) = 5x - 10$.",
+    "Equivalent."
+  ],
+  "tags": [
+    "equivalent",
+    "distribute"
+  ],
+  "estimatedSeconds": 45
+}
