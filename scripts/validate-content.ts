@@ -105,7 +105,7 @@ async function main() {
     const key = `${data.domain}:${data.unit}`;
     unitCounts.set(key, (unitCounts.get(key) ?? 0) + 1);
   }
-  const TARGET_PER_DOMAIN = 60;
+  const TARGET_PER_DOMAIN = 100;
   const TARGET_PER_UNIT = 10;
   for (const [domain, count] of domainCounts) {
     if (count !== TARGET_PER_DOMAIN) {

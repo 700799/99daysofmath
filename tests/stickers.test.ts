@@ -19,9 +19,9 @@ const baseCtx = () => ({
 });
 
 describe('STICKER_DEFS', () => {
-  it('has 58 total stickers', () => {
-    // 30 unit + 8 streak + 4 accuracy + 5 XP + 6 mastery + 5 challenge
-    expect(TOTAL_STICKERS).toBe(58);
+  it('has 78 total stickers', () => {
+    // 50 unit (5 domains × 10 units) + 8 streak + 4 accuracy + 5 XP + 6 mastery + 5 challenge
+    expect(TOTAL_STICKERS).toBe(78);
   });
 
   it('every sticker ID is unique', () => {
@@ -102,9 +102,9 @@ describe('checkAllEarning — accuracy family', () => {
 });
 
 describe('checkAllEarning — mastery family', () => {
-  it('awards mastery-6.RP when 6 units in 6.RP completed at ≥ 2 stars', () => {
+  it('awards mastery-6.RP when all 10 units in 6.RP completed at ≥ 2 stars', () => {
     const counts = blankDomainCounts();
-    counts['6.RP'] = 6;
+    counts['6.RP'] = 10;
     const earned = checkAllEarning({
       ...baseCtx(),
       byDomainUnitsCompleted: counts,
@@ -113,9 +113,19 @@ describe('checkAllEarning — mastery family', () => {
     expect(earned).not.toContain('mastery-grand');
   });
 
+  it('does NOT award mastery-6.RP at fewer than 10 completed units', () => {
+    const counts = blankDomainCounts();
+    counts['6.RP'] = 9;
+    const earned = checkAllEarning({
+      ...baseCtx(),
+      byDomainUnitsCompleted: counts,
+    });
+    expect(earned).not.toContain('mastery-6.RP');
+  });
+
   it('awards mastery-grand when all 5 domains completed', () => {
     const counts = blankDomainCounts();
-    for (const d of DOMAINS) counts[d] = 6;
+    for (const d of DOMAINS) counts[d] = 10;
     const earned = checkAllEarning({
       ...baseCtx(),
       byDomainUnitsCompleted: counts,

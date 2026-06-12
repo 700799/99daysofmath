@@ -166,11 +166,11 @@ async function main() {
     }
     console.log('   ✓ All 6 sticker sections present (incl. Challenges)');
 
-    console.log('14. Verify Settings shows X / 58 sticker total...');
+    console.log('14. Verify Settings shows X / 78 sticker total...');
     await page.click('a[href="#/settings"]');
     await page.waitForSelector('text=Stickers earned', { timeout: 3000 });
     const card = await page.locator('text=Stickers earned').locator('xpath=..').textContent();
-    if (!card || !/\/\s*58/.test(card)) {
+    if (!card || !/\/\s*78/.test(card)) {
       throw new Error(`Settings sticker total wrong: ${card}`);
     }
     console.log(`   ✓ ${card?.trim()}`);

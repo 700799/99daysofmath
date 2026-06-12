@@ -7,12 +7,21 @@ export interface TrailNode {
 }
 
 export const TRAIL_WIDTH = 480;
-export const TRAIL_HEIGHT = 600;
+
+// The canvas grows with the number of units so the nodes never overlap.
+// 88 px per gap fits comfortably alongside the 76 px node diameter.
+const Y_PADDING = 80;
+const Y_PER_UNIT = 88;
+
+export function trailHeightFor(units: number): number {
+  return Y_PADDING * 2 + Y_PER_UNIT * Math.max(0, units - 1);
+}
 
 export function buildTrail(units: number): TrailNode[] {
   const nodes: TrailNode[] = [];
-  const startY = 80;
-  const endY = TRAIL_HEIGHT - 80;
+  const height = trailHeightFor(units);
+  const startY = Y_PADDING;
+  const endY = height - Y_PADDING;
   const step = (endY - startY) / Math.max(1, units - 1);
   for (let i = 0; i < units; i++) {
     const y = startY + step * i;
@@ -24,7 +33,7 @@ export function buildTrail(units: number): TrailNode[] {
   return nodes;
 }
 
-// Default fallback if a domain has no problems yet
+// Default fallback if a domain has no problems yet.
 export const TRAIL_LAYOUTS: Record<Domain, TrailNode[]> = {
   '6.RP': buildTrail(2),
   '6.NS': buildTrail(2),

@@ -2,19 +2,19 @@ import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useProgress } from '../state/progress';
 import type { Domain } from '../types/problem';
+import { TRAIL_WIDTH, trailHeightFor } from '../phaser/trailLayouts';
 
 interface Props {
   domain: Domain;
   units: number[];
 }
 
-const CANVAS_W = 480;
-const CANVAS_H = 600;
-
 export function TrailMount({ domain, units }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const dp = useProgress((s) => s.byDomain[domain]);
+  const canvasW = TRAIL_WIDTH;
+  const canvasH = trailHeightFor(Math.max(2, units.length));
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -31,8 +31,8 @@ export function TrailMount({ domain, units }: Props) {
       game = new Phaser.Game({
         type: Phaser.AUTO,
         parent: containerRef.current,
-        width: CANVAS_W,
-        height: CANVAS_H,
+        width: canvasW,
+        height: canvasH,
         backgroundColor: '#F8FAFC',
         scale: {
           mode: Phaser.Scale.FIT,
@@ -62,12 +62,12 @@ export function TrailMount({ domain, units }: Props) {
       game?.destroy(true);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [domain]);
+  }, [domain, canvasH]);
 
   return (
     <div
       ref={containerRef}
-      style={{ aspectRatio: `${CANVAS_W} / ${CANVAS_H}` }}
+      style={{ aspectRatio: `${canvasW} / ${canvasH}` }}
       className="w-full max-w-sm mx-auto bg-gradient-to-b from-sky-100 to-emerald-50 rounded-3xl overflow-hidden border-2 border-slate-200 shadow-inner"
       role="img"
       aria-label={`${units.length}-unit trail for ${domain}. Use the unit list below to start a unit.`}

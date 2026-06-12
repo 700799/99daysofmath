@@ -1,10 +1,5 @@
 import Phaser from 'phaser';
-import {
-  buildTrail,
-  TRAIL_WIDTH,
-  TRAIL_HEIGHT,
-  type TrailNode,
-} from './trailLayouts';
+import { buildTrail, TRAIL_WIDTH, type TrailNode } from './trailLayouts';
 import { DOMAIN_COLORS, type Domain } from '../types/problem';
 
 export interface TrailSceneState {
@@ -53,10 +48,11 @@ export class TrailScene extends Phaser.Scene {
       g.fillCircle(cx + r * 0.7, cy + 4, r * 0.8);
       g.fillCircle(cx - r * 0.7, cy + 4, r * 0.75);
     };
+    const h = this.scale.height;
     cloud(80, 60, 24);
     cloud(TRAIL_WIDTH - 90, 120, 28);
-    cloud(60, TRAIL_HEIGHT - 100, 22);
-    cloud(TRAIL_WIDTH - 60, TRAIL_HEIGHT - 60, 26);
+    cloud(60, h - 100, 22);
+    cloud(TRAIL_WIDTH - 60, h - 60, 26);
   }
 
   private drawPath() {
@@ -224,4 +220,4 @@ export class TrailScene extends Phaser.Scene {
   }
 }
 
-export { TRAIL_WIDTH, TRAIL_HEIGHT };
+export { TRAIL_WIDTH };

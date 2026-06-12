@@ -140,10 +140,12 @@ const CHALLENGE_STICKERS: StickerDef[] = [
   { id: 'lesson-explorer', emoji: '📘', label: 'Bookworm', category: 'challenge', hint: 'Finish 5 lessons' },
 ];
 
+export const UNITS_PER_DOMAIN = 10;
+
 const ALL_UNIT_STICKERS: StickerDef[] = (() => {
   const out: StickerDef[] = [];
   for (const d of DOMAINS) {
-    for (let unit = 1; unit <= 6; unit++) {
+    for (let unit = 1; unit <= UNITS_PER_DOMAIN; unit++) {
       out.push(unitStickerFor(d, unit));
     }
   }
@@ -248,14 +250,16 @@ export function checkAllEarning(
     add(`unit:${unitDone.domain}:${unitDone.unit}`);
   }
 
-  // Mastery (domain): all 6 units in domain have ≥2 stars
+  // Mastery (domain): all units in domain have ≥2 stars
   for (const d of DOMAINS) {
     const completed = ctx.byDomainUnitsCompleted[d] ?? 0;
-    if (completed >= 6) add(`mastery-${d}`);
+    if (completed >= UNITS_PER_DOMAIN) add(`mastery-${d}`);
   }
 
   // Grand mastery: every domain mastered
-  const grandReady = DOMAINS.every((d) => (ctx.byDomainUnitsCompleted[d] ?? 0) >= 6);
+  const grandReady = DOMAINS.every(
+    (d) => (ctx.byDomainUnitsCompleted[d] ?? 0) >= UNITS_PER_DOMAIN,
+  );
   if (grandReady) add('mastery-grand');
 
   // Challenges
