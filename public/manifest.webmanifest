@@ -1,0 +1,19 @@
+{
+  "name": "99 Days of Math",
+  "short_name": "99daysofmath",
+  "description": "A Duolingo-style 6th-grade math practice app — lessons, adaptive practice, and a mock MAP test.",
+  "start_url": "/99daysofmath/",
+  "scope": "/99daysofmath/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F8FAFC",
+  "theme_color": "#58CC02",
+  "icons": [
+    {
+      "src": "/99daysofmath/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
