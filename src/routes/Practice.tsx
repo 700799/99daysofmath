@@ -9,6 +9,7 @@ import { ProblemCard } from '../components/ProblemCard';
 import { AnswerInput } from '../components/AnswerInput';
 import { Hint } from '../components/Hint';
 import { ConceptHelp } from '../components/ConceptHelp';
+import { GeniusTipCard } from '../components/GeniusTip';
 import { Explanation } from '../components/Explanation';
 import { ProgressBar } from '../components/ProgressBar';
 import { Mascot, type MascotMood } from '../components/Mascot';
@@ -289,6 +290,7 @@ export function Practice() {
                 <div className="font-display font-extrabold text-2xl text-green-800 mt-1">
                   {flashMessage.current}
                 </div>
+                <GeniusTipCard problemId={current.id} domain={current.domain} />
                 {showExplainOnCorrect && (
                   <div className="text-left mt-3">
                     <Explanation steps={current.explanation} alternatives={current.alternativeExplanations} />

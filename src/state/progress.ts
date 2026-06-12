@@ -15,6 +15,23 @@ export interface UnitResultOutcome {
   allTrailsBonus: number;
 }
 
+// Arcade rewards: full XP for the first play of each game per day, half for
+// repeats, plus one-time-per-day variety bonuses for playing many DIFFERENT
+// games (+10 at 3 distinct, +20 at 5).
+export interface ArcadePlayOutcome {
+  xpAwarded: number;      // base (possibly halved) XP actually granted
+  varietyBonus: number;   // extra XP from the variety thresholds, if just crossed
+  repeatToday: boolean;   // true when this game was already played today
+  distinctToday: number;  // how many different games played today (incl. this one)
+  earned: string[];       // newly earned sticker ids
+}
+
+export interface FinalOutcome {
+  bonus: number;          // XP granted: 40 + 2 × correct
+  earned: string[];
+  best: number;           // best score recorded for this quiz
+}
+
 interface DomainProgress {
   unitsUnlocked: number;
   unitStars: Record<number, Stars>;
@@ -69,6 +86,12 @@ interface ProgressState {
   // ---- v7 additions ----
   trailBonusGranted: Partial<Record<Domain, boolean>>; // one-time +50 per finished trail
   allTrailsBonusGranted: boolean;                      // one-time +250 for finishing everything
+  // ---- v8 additions (arcade + finals) ----
+  arcadeDaily: { date: string | null; played: string[]; varietyAwarded: number[] };
+  arcadeTotals: Record<string, number>; // lifetime plays per game id
+  lastWheelSpinDate: string | null;     // prize wheel is once per day
+  c4Wins: number;
+  finalsResults: Record<number, { best: number; completedAt: string }>;
   // ---- actions ----
   recordUnitResult: (
     domain: Domain,
@@ -83,6 +106,12 @@ interface ProgressState {
   recordAttempt: (problemId: string, correct: boolean) => void;
   clearMissed: (domain: Domain, problemId: string) => void;
   markLessonViewed: (key: string) => void;
+  recordArcadePlay: (
+    gameId: string,
+    baseXp: number,
+    opts?: { c4Win?: boolean; wheelSpin?: boolean },
+  ) => ArcadePlayOutcome;
+  recordFinalResult: (quizN: number, correct: number, total: number) => FinalOutcome;
   completeLesson: (key: string) => string[];
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
@@ -231,6 +260,14 @@ const v7Defaults = {
   allTrailsBonusGranted: false,
 };
 
+const v8Defaults = {
+  arcadeDaily: { date: null as string | null, played: [] as string[], varietyAwarded: [] as number[] },
+  arcadeTotals: {} as Record<string, number>,
+  lastWheelSpinDate: null as string | null,
+  c4Wins: 0,
+  finalsResults: {} as Record<number, { best: number; completedAt: string }>,
+};
+
 export function migrateProgress(persisted: unknown, fromVersion: number): unknown {
   if (!persisted || typeof persisted !== 'object') return persisted;
   const state = persisted as Partial<ProgressState> & { stickers?: string[] };
@@ -302,6 +339,12 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       if (stateAny[k] === undefined) stateAny[k] = v;
     }
   }
+  if (fromVersion < 8) {
+    const stateAny = state as Record<string, unknown>;
+    for (const [k, v] of Object.entries(v8Defaults)) {
+      if (stateAny[k] === undefined) stateAny[k] = v;
+    }
+  }
   return state;
 }
 
@@ -322,6 +365,7 @@ export const useProgress = create<ProgressState>()(
       ...v5Defaults,
       ...v6Defaults,
       ...v7Defaults,
+      ...v8Defaults,
       recordUnitResult: (domain, unit, stars, missedIds, xpEarned, mistakesTotal) => {
         const stateBefore = get();
         const today = todayISO();
@@ -464,6 +508,105 @@ export const useProgress = create<ProgressState>()(
             ? s
             : { lessonsViewed: [...s.lessonsViewed, key] },
         ),
+      recordArcadePlay: (gameId, baseXp, opts = {}) => {
+        const before = get();
+        const today = todayISO();
+        const daily =
+          before.arcadeDaily.date === today
+            ? before.arcadeDaily
+            : { date: today, played: [] as string[], varietyAwarded: [] as number[] };
+
+        const repeatToday = daily.played.includes(gameId);
+        const xpAwarded =
+          baseXp <= 0 ? 0 : repeatToday ? Math.max(1, Math.floor(baseXp / 2)) : baseXp;
+
+        const played = repeatToday ? daily.played : [...daily.played, gameId];
+        const distinctToday = played.length;
+
+        // Variety bonuses: +10 at 3 distinct games, +20 at 5 — once per day each.
+        let varietyBonus = 0;
+        const varietyAwarded = [...daily.varietyAwarded];
+        for (const [threshold, bonus] of [
+          [3, 10],
+          [5, 20],
+        ] as const) {
+          if (distinctToday >= threshold && !varietyAwarded.includes(threshold)) {
+            varietyAwarded.push(threshold);
+            varietyBonus += bonus;
+          }
+        }
+
+        const c4Wins = before.c4Wins + (opts.c4Win ? 1 : 0);
+        const lastWheelSpinDate = opts.wheelSpin ? today : before.lastWheelSpinDate;
+        const totalAdd = xpAwarded + varietyBonus;
+        const nextXp = before.xp + totalAdd;
+        const dailyXpRoll = rollDailyXp(before, totalAdd, today);
+
+        const earned = checkAllEarning(
+          earningCtx(before, {
+            xp: nextXp,
+            dailyQuestStreak: dailyXpRoll.dailyQuestStreak,
+            c4Wins,
+            wheelSpunEver: lastWheelSpinDate != null,
+            arcadeDistinctToday: distinctToday,
+          }),
+        );
+
+        set({
+          arcadeDaily: { date: today, played, varietyAwarded },
+          arcadeTotals: {
+            ...before.arcadeTotals,
+            [gameId]: (before.arcadeTotals[gameId] ?? 0) + 1,
+          },
+          c4Wins,
+          lastWheelSpinDate,
+          xp: nextXp,
+          dailyXp: dailyXpRoll.dailyXp,
+          dailyXpResetDate: dailyXpRoll.dailyXpResetDate,
+          dailyQuestStreak: dailyXpRoll.dailyQuestStreak,
+          lastGoalDate: dailyXpRoll.lastGoalDate,
+          xpByDate: dailyXpRoll.xpByDate,
+          stickers:
+            earned.length > 0 ? [...before.stickers, ...earned] : before.stickers,
+        });
+        return { xpAwarded, varietyBonus, repeatToday, distinctToday, earned };
+      },
+      recordFinalResult: (quizN, correct, total) => {
+        const before = get();
+        const today = todayISO();
+        const bonus = 40 + 2 * correct;
+        const prevBest = before.finalsResults[quizN]?.best ?? -1;
+        const finalsResults = {
+          ...before.finalsResults,
+          [quizN]: {
+            best: Math.max(prevBest, correct),
+            completedAt: today,
+          },
+        };
+        const finalsCompletedCount = Object.keys(finalsResults).length;
+        const nextXp = before.xp + bonus;
+        const daily = rollDailyXp(before, bonus, today);
+        const earned = checkAllEarning(
+          earningCtx(before, {
+            xp: nextXp,
+            dailyQuestStreak: daily.dailyQuestStreak,
+            finalsCompletedCount,
+          }),
+        );
+        set({
+          finalsResults,
+          xp: nextXp,
+          dailyXp: daily.dailyXp,
+          dailyXpResetDate: daily.dailyXpResetDate,
+          dailyQuestStreak: daily.dailyQuestStreak,
+          lastGoalDate: daily.lastGoalDate,
+          xpByDate: daily.xpByDate,
+          stickers:
+            earned.length > 0 ? [...before.stickers, ...earned] : before.stickers,
+        });
+        void total;
+        return { bonus, earned, best: finalsResults[quizN].best };
+      },
       completeLesson: (key) => {
         const before = get();
         if (before.lessonsViewed.includes(key)) return [];
@@ -619,11 +762,16 @@ export const useProgress = create<ProgressState>()(
           lessonsViewed: [],
           trailBonusGranted: {},
           allTrailsBonusGranted: false,
+          arcadeDaily: { date: null, played: [], varietyAwarded: [] },
+          arcadeTotals: {},
+          lastWheelSpinDate: null,
+          c4Wins: 0,
+          finalsResults: {},
         }),
     }),
     {
       name: '99daysofmath:progress',
-      version: 7,
+      version: 8,
       migrate: migrateProgress,
     },
   ),

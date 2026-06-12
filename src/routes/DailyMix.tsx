@@ -7,10 +7,12 @@ import { ProblemCard } from '../components/ProblemCard';
 import { AnswerInput } from '../components/AnswerInput';
 import { Hint } from '../components/Hint';
 import { ConceptHelp } from '../components/ConceptHelp';
+import { GeniusTipCard } from '../components/GeniusTip';
 import { Explanation } from '../components/Explanation';
 import { ProgressBar } from '../components/ProgressBar';
 import { Mascot, type MascotMood } from '../components/Mascot';
 import { Confetti } from '../components/Celebration';
+import { StickerCelebration } from '../components/StickerCelebration';
 import { correctMessage, wrongMessage } from '../utils/encouragement';
 import { playCorrect, playWrong, playUnitComplete } from '../utils/sound';
 import { computeXPGain } from '../utils/hintEconomics';
@@ -57,6 +59,7 @@ export function DailyMix() {
   const [missedCount, setMissedCount] = useState(0);
   const [xpEarned, setXpEarned] = useState(0);
   const [showExplainOnCorrect, setShowExplainOnCorrect] = useState(false);
+  const [newStickerIds, setNewStickerIds] = useState<string[]>([]);
   const flashMessage = useRef<string>('');
 
   useEffect(() => {
@@ -123,8 +126,9 @@ export function DailyMix() {
 
   const advance = () => {
     if (index + 1 >= problems.length) {
-      awardXP(xpEarned);
-      touchDay();
+      const earnedStickers = awardXP(xpEarned);
+      const dayStickers = touchDay();
+      setNewStickerIds([...earnedStickers, ...dayStickers]);
       if (soundOn) playUnitComplete();
       setPhase('done');
     } else {
@@ -151,6 +155,9 @@ export function DailyMix() {
     const stars: Stars = correct === total ? 3 : correct >= total - 1 ? 2 : 1;
     return (
       <div className="relative">
+        {newStickerIds.length > 0 && (
+          <StickerCelebration stickerIds={newStickerIds} onDone={() => setNewStickerIds([])} />
+        )}
         {stars === 3 && <Confetti count={24} />}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -272,6 +279,7 @@ export function DailyMix() {
                 <div className="font-display font-extrabold text-2xl text-green-800 mt-1">
                   {flashMessage.current}
                 </div>
+                <GeniusTipCard problemId={current.id} domain={current.domain} />
                 {showExplainOnCorrect && (
                   <div className="text-left mt-3">
                     <Explanation

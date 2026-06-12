@@ -13,6 +13,7 @@ import { Explanation } from '../components/Explanation';
 import { ProgressBar } from '../components/ProgressBar';
 import { Mascot } from '../components/Mascot';
 import { Confetti } from '../components/Celebration';
+import { StickerCelebration } from '../components/StickerCelebration';
 import { playCorrect, playWrong } from '../utils/sound';
 
 type Phase = 'loading' | 'problem' | 'feedback-correct' | 'feedback-wrong' | 'done';
@@ -44,6 +45,8 @@ export function Review() {
       : null;
 
   const recordAttempt = useProgress((s) => s.recordAttempt);
+  const awardXP = useProgress((s) => s.awardXP);
+  const touchDay = useProgress((s) => s.touchDay);
   const soundOn = useProgress((s) => s.soundEnabled);
 
   // Snapshot the due problem ids once on mount, most-overdue first, so the
@@ -66,6 +69,9 @@ export function Review() {
   const [advanced, setAdvanced] = useState(0);
   const [rescheduleMsg, setRescheduleMsg] = useState('');
   const [showExplain, setShowExplain] = useState(false);
+  const [reviewXp, setReviewXp] = useState(0);
+  const [newStickerIds, setNewStickerIds] = useState<string[]>([]);
+  const rewardedRef = useState({ done: false })[0];
 
   useEffect(() => {
     let cancelled = false;
@@ -139,6 +145,9 @@ export function Review() {
   if (phase === 'done') {
     return (
       <div className="text-center py-12">
+        {newStickerIds.length > 0 && (
+          <StickerCelebration stickerIds={newStickerIds} onDone={() => setNewStickerIds([])} />
+        )}
         <Confetti count={24} />
         <Mascot mood="cheer" size={120} />
         <h1 className="text-3xl font-display font-extrabold text-slate-900 mt-2">
@@ -150,6 +159,11 @@ export function Review() {
           <span className="font-display font-extrabold text-green-700">{advanced}</span> moved
           forward.
         </p>
+        {reviewXp > 0 && (
+          <div className="mt-3 inline-flex items-center gap-1 bg-yellow-100 text-yellow-900 font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
+            ⚡ +{reviewXp} XP for reviewing
+          </div>
+        )}
         <button
           type="button"
           onClick={() => navigate('/')}
@@ -188,6 +202,15 @@ export function Review() {
 
   const advance = () => {
     if (index + 1 >= problems.length) {
+      // Reviews now pay: +2 XP per problem moved forward, plus streak credit.
+      if (!rewardedRef.done) {
+        rewardedRef.done = true;
+        const xp = advanced * 2;
+        setReviewXp(xp);
+        const earnedStickers = xp > 0 ? awardXP(xp) : [];
+        const dayStickers = touchDay();
+        setNewStickerIds([...earnedStickers, ...dayStickers]);
+      }
       setPhase('done');
     } else {
       setIndex((i) => i + 1);

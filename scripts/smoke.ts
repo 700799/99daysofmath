@@ -287,6 +287,26 @@ async function main() {
     if (!unitRow) throw new Error('No unit rows in the video library');
     console.log('   ✓ Library lists units with videos + lessons');
 
+    console.log('27. Arcade hub renders 6 game tiles + variety meter...');
+    await page.goto(BASE + '#/arcade', { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=Variety bonus', { timeout: 5000 });
+    const tiles = await page.locator('a[href^="#/arcade/"]').count();
+    if (tiles < 6) throw new Error(`Expected 6 arcade tiles, got ${tiles}`);
+    console.log('   ✓ Arcade hub with 6 games');
+
+    console.log('28. Memory Match starts and flips a card...');
+    await page.goto(BASE + '#/arcade/memory', { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=Memory Match', { timeout: 5000 });
+    await page.locator('button[aria-label="Hidden card"]').first().click();
+    await page.waitForTimeout(400);
+    console.log('   ✓ Memory Match playable');
+
+    console.log('29. Level badge visible...');
+    await page.goto(BASE, { waitUntil: 'networkidle' });
+    const badge = await page.locator('a[aria-label*="Open progress report"]').isVisible().catch(() => false);
+    if (!badge) throw new Error('Level badge not visible');
+    console.log('   ✓ Level badge present');
+
     console.log('24. Home surfaces due-for-review card after a miss...');
     await page.goto(BASE, { waitUntil: 'networkidle' });
     await page.waitForSelector('text=Pick a trail', { timeout: 5000 });

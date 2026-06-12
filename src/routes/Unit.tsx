@@ -14,6 +14,7 @@ import { Mascot, type MascotMood } from '../components/Mascot';
 import { Confetti } from '../components/Celebration';
 import { LessonCard } from '../components/LessonCard';
 import { ConceptHelp } from '../components/ConceptHelp';
+import { GeniusTipCard } from '../components/GeniusTip';
 import { getLesson, lessonKey } from '../data/lessons';
 import { correctMessage, wrongMessage, stickerForUnit } from '../utils/encouragement';
 import { playCorrect, playWrong, playUnitComplete } from '../utils/sound';
@@ -274,6 +275,7 @@ export function Unit() {
                   <div className="font-display font-extrabold text-2xl text-green-800 mt-1">
                     {flashMessage.current}
                   </div>
+                  <GeniusTipCard problemId={current.id} domain={current.domain} />
                   {currentStreak >= 2 && (
                     <div className="mt-2 inline-flex items-center gap-1 bg-orange-100 px-3 py-1 rounded-full">
                       <span>🔥</span>

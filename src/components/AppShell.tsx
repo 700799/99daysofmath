@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useProgress } from '../state/progress';
 import { DailyQuestRing } from './DailyQuestRing';
+import { LevelBadge } from './LevelBadge';
 
 interface Props {
   children: React.ReactNode;
@@ -55,9 +56,10 @@ export function AppShell({ children }: Props) {
           </div>
         </div>
       </header>
-      <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-6">
+      <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-6 pb-20">
         {children}
       </main>
+      <LevelBadge />
     </div>
   );
 }

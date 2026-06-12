@@ -136,8 +136,11 @@ export function Home() {
         </Link>
       )}
 
-      {/* Adaptive Practice + Daily Mix + Mock Test */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+      {/* Play — every game one tap away */}
+      <div className="mt-1 mb-2 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
+        ▶ Play
+      </div>
+      <div className="grid grid-cols-2 gap-3 mb-4">
         <Link
           to="/practice"
           className="block rounded-3xl p-4 bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
@@ -161,6 +164,34 @@ export function Home() {
           <div className="text-3xl">🎓</div>
           <div className="font-display font-extrabold text-lg mt-1">Mock MAP Test</div>
           <div className="text-xs opacity-90 mt-0.5">18 timed questions with a score estimate.</div>
+        </Link>
+        <Link
+          to="/review"
+          className="relative block rounded-3xl p-4 bg-gradient-to-br from-rose-500 to-pink-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          {dueReview > 0 && (
+            <span className="absolute top-3 right-3 bg-white text-rose-600 text-[11px] font-display font-extrabold px-2 py-0.5 rounded-full">
+              {dueReview} due
+            </span>
+          )}
+          <div className="text-3xl">📅</div>
+          <div className="font-display font-extrabold text-lg mt-1">Smart Review</div>
+          <div className="text-xs opacity-90 mt-0.5">Missed problems come back at the right time.</div>
+        </Link>
+        <Link
+          to="/arcade"
+          className="block rounded-3xl p-4 bg-gradient-to-br from-violet-500 to-purple-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all sm:col-span-2"
+        >
+          <div className="flex items-center gap-3">
+            <div className="text-4xl">🕹️</div>
+            <div className="flex-1 min-w-0">
+              <div className="font-display font-extrabold text-lg">Arcade — 6 reward games</div>
+              <div className="text-xs opacity-90 mt-0.5">
+                Connect 4, prize wheel, memory, shootout, zombies & fishing. Play different games for bonus XP!
+              </div>
+            </div>
+            <div className="text-2xl shrink-0">→</div>
+          </div>
         </Link>
       </div>
 
