@@ -1,0 +1,37 @@
+{
+  "id": "6.SP.070",
+  "domain": "6.SP",
+  "unit": 7,
+  "orderInUnit": 10,
+  "standard": "6.SP.A.2",
+  "difficulty": 3,
+  "prompt": "What is the variability of the data set $\\{5,\\ 5,\\ 5\\}$?",
+  "answerType": "numeric",
+  "primaryAnswer": "0",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Compare the values to each other.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Compare the values to each other."
+    },
+    {
+      "level": "guide",
+      "text": "All values are the same."
+    },
+    {
+      "level": "reveal",
+      "text": "Variability $= 0$."
+    }
+  ],
+  "explanation": [
+    "Every value equals $5$, so the data does not spread at all.",
+    "Range $= 5 - 5 = 0$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "variability"
+  ],
+  "estimatedSeconds": 50
+}

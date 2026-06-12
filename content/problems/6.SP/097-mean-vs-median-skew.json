@@ -1,0 +1,55 @@
+{
+  "id": "6.SP.097",
+  "domain": "6.SP",
+  "unit": 10,
+  "orderInUnit": 7,
+  "standard": "6.SP.B.5.d",
+  "difficulty": 3,
+  "prompt": "A teacher reports a mean of $70$ but a median of $85$. This suggests there are likely some ___?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "low outliers (a few very small values)",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "high outliers (a few very large values)",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "no outliers — perfectly normal data",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Which type of outlier pulls the mean DOWN, away from the median?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Which type of outlier pulls the mean DOWN, away from the median?"
+    },
+    {
+      "level": "guide",
+      "text": "Low values pull the mean below the median."
+    },
+    {
+      "level": "reveal",
+      "text": "A."
+    }
+  ],
+  "explanation": [
+    "Outliers pull the mean toward them but barely move the median.",
+    "Mean ($70$) is less than median ($85$) → some low outliers pulled it down."
+  ],
+  "tags": [
+    "MAP-practice",
+    "mean-vs-median",
+    "outliers"
+  ],
+  "estimatedSeconds": 110
+}

@@ -1,0 +1,42 @@
+{
+  "id": "6.SP.069",
+  "domain": "6.SP",
+  "unit": 7,
+  "orderInUnit": 9,
+  "standard": "6.SP.A.3",
+  "difficulty": 3,
+  "prompt": "Name TWO measures of **variability** for a data set (separate with a comma).",
+  "answerType": "short-text",
+  "primaryAnswer": "range, IQR",
+  "alternativeAnswers": [
+    "IQR, range",
+    "range, MAD",
+    "MAD, range",
+    "IQR, MAD",
+    "range and IQR"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Variability = how spread out the data is.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Variability = how spread out the data is."
+    },
+    {
+      "level": "guide",
+      "text": "Two of: range, IQR, MAD."
+    },
+    {
+      "level": "reveal",
+      "text": "range, IQR (or any two of range / IQR / MAD)."
+    }
+  ],
+  "explanation": [
+    "Measures of variability include range, IQR (interquartile range), and MAD (mean absolute deviation)."
+  ],
+  "tags": [
+    "vocabulary",
+    "spread"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,38 @@
+{
+  "id": "6.SP.099",
+  "domain": "6.SP",
+  "unit": 10,
+  "orderInUnit": 9,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "Find the median of $\\{12, 14, 18, 20, 25, 26\\}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "19",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Six values: average the middle two.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Six values: average the middle two."
+    },
+    {
+      "level": "guide",
+      "text": "Middle two: $18$ and $20$. Average: $(18+20)/2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$19$."
+    }
+  ],
+  "explanation": [
+    "Six values (already sorted).",
+    "Middle two: $18, 20$. Median: $(18+20)/2 = 19$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "median",
+    "even-count"
+  ],
+  "estimatedSeconds": 55
+}

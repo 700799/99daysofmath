@@ -1,0 +1,36 @@
+{
+  "id": "6.SP.082",
+  "domain": "6.SP",
+  "unit": 9,
+  "orderInUnit": 2,
+  "standard": "6.SP.B.4",
+  "difficulty": 1,
+  "prompt": "A histogram bar over the interval $10$–$19$ has height $5$. How many data points are in that interval?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Bar height = count.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Bar height = count."
+    },
+    {
+      "level": "guide",
+      "text": "Height $= 5$ → $5$ data points."
+    },
+    {
+      "level": "reveal",
+      "text": "$5$."
+    }
+  ],
+  "explanation": [
+    "On a histogram, the height of a bar tells how many data points fall in that interval.",
+    "$5$."
+  ],
+  "tags": [
+    "histogram"
+  ],
+  "estimatedSeconds": 30
+}

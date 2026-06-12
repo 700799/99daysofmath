@@ -1,0 +1,38 @@
+{
+  "id": "6.SP.074",
+  "domain": "6.SP",
+  "unit": 8,
+  "orderInUnit": 4,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Find $Q_3$ (the upper quartile) of $\\{1,\\ 2,\\ 3,\\ 4,\\ 5,\\ 6,\\ 7,\\ 8\\}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "6.5",
+  "alternativeAnswers": [
+    "13/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Upper half: $\\{5, 6, 7, 8\\}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Upper half: $\\{5, 6, 7, 8\\}$."
+    },
+    {
+      "level": "guide",
+      "text": "Median: $(6 + 7)/2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6.5$."
+    }
+  ],
+  "explanation": [
+    "Upper half: $\\{5, 6, 7, 8\\}$.",
+    "Median: $(6 + 7)/2 = 6.5$."
+  ],
+  "tags": [
+    "quartile"
+  ],
+  "estimatedSeconds": 60
+}

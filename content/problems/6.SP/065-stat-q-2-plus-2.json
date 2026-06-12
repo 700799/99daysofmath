@@ -1,0 +1,39 @@
+{
+  "id": "6.SP.065",
+  "domain": "6.SP",
+  "unit": 7,
+  "orderInUnit": 5,
+  "standard": "6.SP.A.1",
+  "difficulty": 2,
+  "prompt": "Is \"What is $2 + 2$?\" a statistical question? (yes/no)",
+  "answerType": "short-text",
+  "primaryAnswer": "no",
+  "alternativeAnswers": [
+    "No",
+    "n"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Is there variability?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Is there variability?"
+    },
+    {
+      "level": "guide",
+      "text": "$2 + 2$ has exactly one answer."
+    },
+    {
+      "level": "reveal",
+      "text": "No."
+    }
+  ],
+  "explanation": [
+    "$2 + 2 = 4$ — single fixed answer, no variability.",
+    "Not statistical."
+  ],
+  "tags": [
+    "statistical-question"
+  ],
+  "estimatedSeconds": 30
+}

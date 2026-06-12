@@ -1,0 +1,41 @@
+{
+  "id": "6.SP.090",
+  "domain": "6.SP",
+  "unit": 9,
+  "orderInUnit": 10,
+  "standard": "6.SP.B.4",
+  "difficulty": 3,
+  "prompt": "Which display has bars drawn over **numerical intervals** with no gaps: a bar graph or a histogram?",
+  "answerType": "short-text",
+  "primaryAnswer": "histogram",
+  "alternativeAnswers": [
+    "Histogram",
+    "a histogram"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Bar graphs use categories; the other uses ranges.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Bar graphs use categories; the other uses ranges."
+    },
+    {
+      "level": "guide",
+      "text": "Equal-width intervals, no gaps."
+    },
+    {
+      "level": "reveal",
+      "text": "Histogram."
+    }
+  ],
+  "explanation": [
+    "Bar graphs compare separate categories (and bars have gaps).",
+    "Histograms group numerical data into intervals (bars touch)."
+  ],
+  "tags": [
+    "MAP-practice",
+    "histogram",
+    "bar-graph"
+  ],
+  "estimatedSeconds": 50
+}

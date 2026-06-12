@@ -1,0 +1,39 @@
+{
+  "id": "6.SP.096",
+  "domain": "6.SP",
+  "unit": 10,
+  "orderInUnit": 6,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "The mean of $\\{2, 4, 6\\}$ is $4$. If you add the value $12$ to the data, what is the new mean?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the new sum, then divide by the new count.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the new sum, then divide by the new count."
+    },
+    {
+      "level": "guide",
+      "text": "Old sum $= 12$. New sum $= 24$. New count $= 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24 / 4 = 6$."
+    }
+  ],
+  "explanation": [
+    "Old sum: $2+4+6 = 12$.",
+    "Add $12$: new sum $= 24$.",
+    "New count: $4$. New mean: $24 / 4 = 6$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "mean",
+    "effect"
+  ],
+  "estimatedSeconds": 80
+}

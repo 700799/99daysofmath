@@ -1,0 +1,53 @@
+{
+  "id": "6.SP.063",
+  "domain": "6.SP",
+  "unit": 7,
+  "orderInUnit": 3,
+  "standard": "6.SP.A.1",
+  "difficulty": 2,
+  "prompt": "Which is a **statistical question**?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "How old is your teacher?",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "How many siblings do students in your school have?",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "What is the boiling point of water?",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Look for the question with many possible answers.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Look for the question with many possible answers."
+    },
+    {
+      "level": "guide",
+      "text": "Sibling counts vary across students."
+    },
+    {
+      "level": "reveal",
+      "text": "B."
+    }
+  ],
+  "explanation": [
+    "A and C each have a single answer.",
+    "B asks across many students with varying counts → statistical."
+  ],
+  "tags": [
+    "statistical-question"
+  ],
+  "estimatedSeconds": 50
+}

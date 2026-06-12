@@ -1,0 +1,37 @@
+{
+  "id": "6.SP.080",
+  "domain": "6.SP",
+  "unit": 8,
+  "orderInUnit": 10,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "In the five-number summary of $\\{3,\\ 4,\\ 5,\\ 6,\\ 7,\\ 8,\\ 9\\}$, what is the **median**?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Seven values → middle value at position $4$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Seven values → middle value at position $4$."
+    },
+    {
+      "level": "guide",
+      "text": "$3, 4, 5, \\boxed{6}, 7, 8, 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6$."
+    }
+  ],
+  "explanation": [
+    "Sorted with $7$ values, the middle is the $4$th: $6$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "median",
+    "five-number-summary"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,40 @@
+{
+  "id": "6.SP.081",
+  "domain": "6.SP",
+  "unit": 9,
+  "orderInUnit": 1,
+  "standard": "6.SP.B.4",
+  "difficulty": 1,
+  "prompt": "On a dot plot, each dot represents ___?",
+  "answerType": "short-text",
+  "primaryAnswer": "one data point",
+  "alternativeAnswers": [
+    "one value",
+    "one data value",
+    "a data point",
+    "1 value"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Each dot is one observation.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each dot is one observation."
+    },
+    {
+      "level": "guide",
+      "text": "\"One data ___\"."
+    },
+    {
+      "level": "reveal",
+      "text": "one data point (or one value)."
+    }
+  ],
+  "explanation": [
+    "Each dot in a dot plot represents one observation (one data value)."
+  ],
+  "tags": [
+    "dot-plot"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,35 @@
+{
+  "id": "6.SP.071",
+  "domain": "6.SP",
+  "unit": 8,
+  "orderInUnit": 1,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 1,
+  "prompt": "Find the median of $\\{3,\\ 5,\\ 7,\\ 9,\\ 11\\}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The middle value (data is already sorted).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The middle value (data is already sorted)."
+    },
+    {
+      "level": "guide",
+      "text": "Five values; middle is position $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$7$."
+    }
+  ],
+  "explanation": [
+    "Sorted: $3, 5, 7, 9, 11$. Middle value is $7$."
+  ],
+  "tags": [
+    "median"
+  ],
+  "estimatedSeconds": 30
+}

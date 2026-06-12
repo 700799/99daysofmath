@@ -1,0 +1,36 @@
+{
+  "id": "6.SP.094",
+  "domain": "6.SP",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Find the range of $\\{7, 10, 4, 15\\}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "11",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Range $= \\text{max} - \\text{min}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Range $= \\text{max} - \\text{min}$."
+    },
+    {
+      "level": "guide",
+      "text": "Max $= 15$, min $= 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$15 - 4 = 11$."
+    }
+  ],
+  "explanation": [
+    "Max $= 15$, min $= 4$.",
+    "Range $= 15 - 4 = 11$."
+  ],
+  "tags": [
+    "range"
+  ],
+  "estimatedSeconds": 35
+}

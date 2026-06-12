@@ -1,0 +1,47 @@
+{
+  "id": "6.SP.100",
+  "domain": "6.SP",
+  "unit": 10,
+  "orderInUnit": 10,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "The mean of $\\{6, 8, 10, 12\\}$ is $9$. If you add $4$ to **each** value, what is the new mean?",
+  "answerType": "numeric",
+  "primaryAnswer": "13",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Adding the same number to every value shifts the mean by that number.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Adding the same number to every value shifts the mean by that number."
+    },
+    {
+      "level": "guide",
+      "text": "New mean $= 9 + 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$13$."
+    }
+  ],
+  "explanation": [
+    "Adding a constant to every value shifts the mean by the same constant.",
+    "New mean: $9 + 4 = 13$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Recompute",
+      "steps": [
+        "New data: $\\{10, 12, 14, 16\\}$, sum $= 52$.",
+        "$52 / 4 = 13$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "mean",
+    "transformation"
+  ],
+  "estimatedSeconds": 100
+}

@@ -1,0 +1,40 @@
+{
+  "id": "6.SP.084",
+  "domain": "6.SP",
+  "unit": 9,
+  "orderInUnit": 4,
+  "standard": "6.SP.B.4",
+  "difficulty": 2,
+  "prompt": "True or false: Box plots show both the median and the quartiles.",
+  "answerType": "short-text",
+  "primaryAnswer": "true",
+  "alternativeAnswers": [
+    "True",
+    "t",
+    "yes"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "The box ends are quartiles, the middle line is the median.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The box ends are quartiles, the middle line is the median."
+    },
+    {
+      "level": "guide",
+      "text": "Both are visible."
+    },
+    {
+      "level": "reveal",
+      "text": "True."
+    }
+  ],
+  "explanation": [
+    "On a box plot: box edges $= Q_1$ and $Q_3$; the line inside $=$ median.",
+    "True."
+  ],
+  "tags": [
+    "box-plot"
+  ],
+  "estimatedSeconds": 35
+}

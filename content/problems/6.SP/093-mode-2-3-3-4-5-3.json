@@ -1,0 +1,36 @@
+{
+  "id": "6.SP.093",
+  "domain": "6.SP",
+  "unit": 10,
+  "orderInUnit": 3,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Find the mode of $\\{2, 3, 3, 4, 5, 3\\}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Most common value.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Most common value."
+    },
+    {
+      "level": "guide",
+      "text": "$3$ appears three times."
+    },
+    {
+      "level": "reveal",
+      "text": "$3$."
+    }
+  ],
+  "explanation": [
+    "$3$ appears three times — more than any other value.",
+    "Mode = $3$."
+  ],
+  "tags": [
+    "mode"
+  ],
+  "estimatedSeconds": 35
+}

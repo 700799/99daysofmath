@@ -1,0 +1,35 @@
+{
+  "id": "6.SP.086",
+  "domain": "6.SP",
+  "unit": 9,
+  "orderInUnit": 6,
+  "standard": "6.SP.B.4",
+  "difficulty": 2,
+  "prompt": "A dot plot shows the data $\\{2, 3, 3, 5, 5, 5\\}$. How many dots sit **above the value $5$**?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Count how many $5$'s.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Count how many $5$'s."
+    },
+    {
+      "level": "guide",
+      "text": "$5$ appears in the data three times."
+    },
+    {
+      "level": "reveal",
+      "text": "$3$."
+    }
+  ],
+  "explanation": [
+    "Three $5$'s → three dots above $5$."
+  ],
+  "tags": [
+    "dot-plot"
+  ],
+  "estimatedSeconds": 35
+}

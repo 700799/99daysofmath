@@ -1,0 +1,39 @@
+{
+  "id": "6.SP.064",
+  "domain": "6.SP",
+  "unit": 7,
+  "orderInUnit": 4,
+  "standard": "6.SP.A.1",
+  "difficulty": 2,
+  "prompt": "Fill in the blank: A statistical question anticipates ___.",
+  "answerType": "short-text",
+  "primaryAnswer": "variability",
+  "alternativeAnswers": [
+    "Variability",
+    "variation",
+    "different answers"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "It expects answers to differ.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "It expects answers to differ."
+    },
+    {
+      "level": "guide",
+      "text": "The word starts with V."
+    },
+    {
+      "level": "reveal",
+      "text": "variability."
+    }
+  ],
+  "explanation": [
+    "A statistical question expects a variety of answers — that is, variability."
+  ],
+  "tags": [
+    "vocabulary"
+  ],
+  "estimatedSeconds": 30
+}

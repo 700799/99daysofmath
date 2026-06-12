@@ -1,0 +1,45 @@
+{
+  "id": "6.SP.091",
+  "domain": "6.SP",
+  "unit": 10,
+  "orderInUnit": 1,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Find the mean of $\\{10, 20, 30, 40, 50\\}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sum and divide by $5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sum and divide by $5$."
+    },
+    {
+      "level": "guide",
+      "text": "Sum $= 150$."
+    },
+    {
+      "level": "reveal",
+      "text": "$150 / 5 = 30$."
+    }
+  ],
+  "explanation": [
+    "Sum: $150$.",
+    "Mean: $150 / 5 = 30$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Symmetry shortcut",
+      "steps": [
+        "Values evenly spaced around $30$.",
+        "Mean equals the middle: $30$."
+      ]
+    }
+  ],
+  "tags": [
+    "mean"
+  ],
+  "estimatedSeconds": 45
+}
