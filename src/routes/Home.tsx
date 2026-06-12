@@ -193,6 +193,21 @@ export function Home() {
             <div className="text-2xl shrink-0">→</div>
           </div>
         </Link>
+        <Link
+          to="/finals"
+          className="block rounded-3xl p-4 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all sm:col-span-2"
+        >
+          <div className="flex items-center gap-3">
+            <div className="text-4xl">🏆</div>
+            <div className="flex-1 min-w-0">
+              <div className="font-display font-extrabold text-lg">Final Challenge</div>
+              <div className="text-xs opacity-90 mt-0.5">
+                5 big quizzes × 20 questions. Answers only at the end — BIG bonus XP!
+              </div>
+            </div>
+            <div className="text-2xl shrink-0">→</div>
+          </div>
+        </Link>
       </div>
 
       <div className="space-y-3">

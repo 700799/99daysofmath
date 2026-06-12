@@ -14,6 +14,8 @@ const Review = lazy(() => import('./routes/Review').then((m) => ({ default: m.Re
 const Practice = lazy(() => import('./routes/Practice').then((m) => ({ default: m.Practice })));
 const Report = lazy(() => import('./routes/Report').then((m) => ({ default: m.Report })));
 const Videos = lazy(() => import('./routes/Videos').then((m) => ({ default: m.Videos })));
+const Finals = lazy(() => import('./routes/Finals').then((m) => ({ default: m.Finals })));
+const FinalQuiz = lazy(() => import('./routes/FinalQuiz').then((m) => ({ default: m.FinalQuiz })));
 const ArcadeHub = lazy(() => import('./routes/arcade/ArcadeHub').then((m) => ({ default: m.ArcadeHub })));
 const ConnectFour = lazy(() => import('./routes/arcade/ConnectFour').then((m) => ({ default: m.ConnectFour })));
 const Wheel = lazy(() => import('./routes/arcade/Wheel').then((m) => ({ default: m.Wheel })));
@@ -48,6 +50,8 @@ export default function App() {
           <Route path="/practice" element={<Practice />} />
           <Route path="/report" element={<Report />} />
           <Route path="/videos" element={<Videos />} />
+          <Route path="/finals" element={<Finals />} />
+          <Route path="/finals/:n" element={<FinalQuiz />} />
           <Route path="/arcade" element={<ArcadeHub />} />
           <Route path="/arcade/connect4" element={<ConnectFour />} />
           <Route path="/arcade/wheel" element={<Wheel />} />

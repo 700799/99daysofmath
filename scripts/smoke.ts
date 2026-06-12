@@ -307,6 +307,17 @@ async function main() {
     if (!badge) throw new Error('Level badge not visible');
     console.log('   ✓ Level badge present');
 
+    console.log('30. Final Challenge hub lists 5 quizzes; quiz 1 starts...');
+    await page.goto(BASE + '#/finals', { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=Final Challenge', { timeout: 5000 });
+    const quizCards = await page.locator('a[href^="#/finals/"]').count();
+    if (quizCards !== 5) throw new Error(`Expected 5 final quiz cards, got ${quizCards}`);
+    await page.locator('a[href="#/finals/1"]').click();
+    await page.waitForSelector('text=Answers revealed at the end', { timeout: 6000 });
+    const lockBtn = await page.locator('button:has-text("Lock it in")').isVisible().catch(() => false);
+    if (!lockBtn) throw new Error('Final quiz runner did not start');
+    console.log('   ✓ Finals hub + deferred-answer runner');
+
     console.log('24. Home surfaces due-for-review card after a miss...');
     await page.goto(BASE, { waitUntil: 'networkidle' });
     await page.waitForSelector('text=Pick a trail', { timeout: 5000 });
