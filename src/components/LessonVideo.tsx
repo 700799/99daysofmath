@@ -46,6 +46,7 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
   const rawRef = useRef<Chapters | null>(null);
   const marksRef = useRef<number[]>([]);
   const nextIdxRef = useRef(0);
+  const computeMarksRef = useRef<() => void>(() => {});
   const [atCheckpoint, setAtCheckpoint] = useState(false);
 
   useEffect(() => {
@@ -62,13 +63,18 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
     window.localStorage.setItem(PAUSE_KEY, autoPause ? 'on' : 'off');
   }, [autoPause]);
 
-  // Load the chapters sidecar (graceful no-op if missing).
+  // Load the chapters sidecar (graceful no-op if missing) and recompute marks
+  // once it arrives — it may resolve after loadedmetadata already fired.
   useEffect(() => {
     let cancelled = false;
     fetch(chaptersUrl)
       .then((r) => (r.ok ? r.json() : null))
       .then((j: Chapters | null) => {
-        if (!cancelled && j && Array.isArray(j.checkpoints)) rawRef.current = j;
+        if (!cancelled && j && Array.isArray(j.checkpoints)) {
+          rawRef.current = j;
+          const v = ref.current;
+          if (v && isFinite(v.duration) && v.duration > 0) computeMarksRef.current();
+        }
       })
       .catch(() => {});
     return () => {
@@ -78,19 +84,29 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
 
   const computeMarks = useCallback(() => {
     const v = ref.current;
-    const raw = rawRef.current;
-    if (!v || !raw || !raw.total || !isFinite(v.duration)) {
+    if (!v || !isFinite(v.duration) || v.duration <= 0) {
       marksRef.current = [];
       return;
     }
-    const ratio = v.duration / raw.total;
-    // Scale, drop any too close to the very end, and sort.
-    marksRef.current = raw.checkpoints
-      .map((c) => c * ratio)
-      .filter((t) => t > 0.5 && t < v.duration - 0.4)
-      .sort((a, b) => a - b);
+    const raw = rawRef.current;
+    if (raw && raw.total && raw.checkpoints.length) {
+      // Precise section checkpoints from the render-time sidecar.
+      const ratio = v.duration / raw.total;
+      marksRef.current = raw.checkpoints
+        .map((c) => c * ratio)
+        .filter((t) => t > 0.5 && t < v.duration - 0.4)
+        .sort((a, b) => a - b);
+    } else {
+      // Fallback: pause every ~9s so EVERY video lets kids go at their pace,
+      // even the ones without a checkpoint sidecar.
+      const PERIOD = 9;
+      const marks: number[] = [];
+      for (let t = PERIOD; t < v.duration - 1; t += PERIOD) marks.push(t);
+      marksRef.current = marks;
+    }
     nextIdxRef.current = 0;
   }, []);
+  computeMarksRef.current = computeMarks;
 
   const play = () => {
     const v = ref.current;
