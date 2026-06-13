@@ -146,6 +146,10 @@ def _wrap(s: str, width: int = 40) -> str:
 
 def title_bar(scene, text, color=YELLOW, size=40):
     title = Text(text, font_size=size, weight="BOLD", color=color)
+    # Never let a long title run off the screen.
+    max_w = 12.8
+    if title.width > max_w:
+        title.scale(max_w / title.width)
     title.to_edge(UP, buff=0.28)
     scene.play(Write(title), run_time=_rt(0.8))
     return title
@@ -196,12 +200,13 @@ def method_label(text, color):
     return Text(text, font_size=22, weight="BOLD", color=color)
 
 
-def _fit_hero(hero, max_w=5.4, max_h=3.6):
-    """Scale a hero up/down so it's as large as possible within a box — keeps
-    illustrations and their labels clearly visible without overflowing."""
+def _fit_hero(hero, max_w=5.4, max_h=3.8):
+    """Shrink a hero only if it would overflow the box — never scale it DOWN
+    below its built size by upscaling fonts. Heroes are built with large bold
+    numbers, so capping at 1.0 keeps every number clearly readable."""
     sw = max_w / max(hero.width, 0.01)
     sh = max_h / max(hero.height, 0.01)
-    hero.scale(min(sw, sh))
+    hero.scale(min(1.0, sw, sh))
     return hero
 
 
