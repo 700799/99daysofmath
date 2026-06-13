@@ -228,6 +228,130 @@ def split_pizza(scene, p, color=YELLOW, run_time=0.7):
     scene.play(pulses.animate.scale(1 / 1.06).set_color(BLUE), run_time=run_time / 2)
 
 
+# ── place-value column boxes (ones / tens / hundreds / thousands) ───────
+# Used by the column-addition / column-subtraction examples in 5.F + 6.NS.
+# Each row is a VGroup of boxed digits, ordered LEFT→RIGHT from highest to
+# lowest place (so the ones column lives on the right, matching how kids
+# write it).  Cells are tagged on the returned group as `.cells` (a list of
+# `(label_text, digit_text, box)` tuples per place) so action helpers can
+# pulse / change / animate specific columns.
+
+_PV_LABELS = ["thousands", "hundreds", "tens", "ones",
+              "tenths", "hundredths", "thousandths"]
+
+
+def _zero_pad(value: int, places: int) -> list[str]:
+    s = str(value).rjust(places, " ")
+    return list(s)
+
+
+def place_value_row(value: int, places: int = 3, color=WHITE,
+                    box_color=BLUE, cell_w=0.95, cell_h=0.95) -> VGroup:
+    """One row of `places` boxed digits.  Spaces become blanks."""
+    digits = _zero_pad(value, places)
+    cells = []
+    boxes = VGroup()
+    nums = VGroup()
+    for i, d in enumerate(digits):
+        box = RoundedRectangle(width=cell_w, height=cell_h, corner_radius=0.08,
+                               stroke_color=box_color, stroke_width=3,
+                               fill_color=box_color, fill_opacity=0.07)
+        box.move_to([(i - (places - 1) / 2) * (cell_w + 0.1), 0, 0])
+        n = Text(d if d.strip() else "", font_size=48, weight="BOLD",
+                 color=color).move_to(box.get_center())
+        cells.append((d, n, box))
+        boxes.add(box)
+        nums.add(n)
+    g = VGroup(boxes, nums)
+    g.cells = cells  # type: ignore[attr-defined]
+    g.boxes = boxes  # type: ignore[attr-defined]
+    g.nums = nums    # type: ignore[attr-defined]
+    return g
+
+
+def place_value_stack(top: int, bottom: int, op: str = "+",
+                      places: int = 3, op_color=YELLOW,
+                      top_color=BLUE, bot_color=ORANGE) -> VGroup:
+    """Two place-value rows stacked vertically with an op symbol on the left
+    of the bottom row and an underline below — exactly how column arithmetic
+    is written in a notebook.  The `.top`, `.bot`, `.op_sym`, `.rule` are
+    tagged so the deck can animate them individually."""
+    top_row = place_value_row(top, places=places, box_color=top_color)
+    bot_row = place_value_row(bottom, places=places, box_color=bot_color)
+    bot_row.next_to(top_row, DOWN, buff=0.18)
+    op_sym = Text(op, font_size=44, weight="BOLD", color=op_color)
+    op_sym.next_to(bot_row, LEFT, buff=0.35)
+    rule = Line(start=bot_row.get_left() + LEFT * 0.25 + DOWN * 0.55,
+                end=bot_row.get_right() + RIGHT * 0.05 + DOWN * 0.55,
+                stroke_color=YELLOW, stroke_width=5)
+    g = VGroup(top_row, bot_row, op_sym, rule)
+    g.top = top_row     # type: ignore[attr-defined]
+    g.bot = bot_row     # type: ignore[attr-defined]
+    g.op_sym = op_sym   # type: ignore[attr-defined]
+    g.rule = rule       # type: ignore[attr-defined]
+    return g
+
+
+_WHOLE_LABELS = ["thousands", "hundreds", "tens", "ones"]
+_DECIMAL_LABELS = ["tenths", "hundredths", "thousandths"]
+
+
+def column_label_band(places: int = 3, cell_w: float = 0.95,
+                      decimal_places: int = 0) -> VGroup:
+    """Thin column-name band that sits above a place_value_row /
+    place_value_stack.  Defaults to whole-number labels (hundreds → ones).
+    Pass `decimal_places > 0` to label the tenths/hundredths/etc. trailing
+    columns instead."""
+    whole = places - decimal_places
+    # Whole-number side: take the rightmost `whole` of ["thousands","hundreds","tens","ones"].
+    whole_names = _WHOLE_LABELS[-whole:] if 0 < whole <= len(_WHOLE_LABELS) else ["place"] * max(whole, 0)
+    dec_names = _DECIMAL_LABELS[:decimal_places]
+    names = whole_names + dec_names
+    band = VGroup()
+    for i, name in enumerate(names):
+        t = Text(name, font_size=16, weight="BOLD", color=YELLOW)
+        # Shrink if it overflows the cell.
+        if t.width > cell_w - 0.05:
+            t.scale((cell_w - 0.05) / t.width)
+        t.move_to([(i - (places - 1) / 2) * (cell_w + 0.1), 0, 0])
+        band.add(t)
+    return band
+
+
+def highlight_column(scene, row: VGroup, col: int, color=YELLOW,
+                     run_time: float = 0.45):
+    """Pulse one column of a place_value_row to draw the eye to it."""
+    box = row.boxes[col]
+    num = row.nums[col]
+    scene.play(box.animate.set_stroke(color, width=6).set_fill(color, 0.25),
+               num.animate.set_color(color),
+               run_time=run_time)
+
+
+def carry_above(scene, target_row: VGroup, col: int, digit: str,
+                color=YELLOW, run_time: float = 0.55):
+    """Draw a small carried digit ABOVE the target column, like a teacher
+    would tick `1` over the tens column when carrying.  Returns the carried
+    Text so the deck can fade it out later."""
+    box = target_row.boxes[col]
+    carry = Text(digit, font_size=22, weight="BOLD", color=color)
+    # Tuck the carry just above the cell, slightly to the upper-left corner
+    # — exactly how the standard algorithm is taught on paper.
+    carry.move_to(box.get_corner(UP + LEFT) + UP * 0.05 + RIGHT * 0.16)
+    scene.play(FadeIn(carry, shift=DOWN * 0.15), run_time=run_time)
+    return carry
+
+
+def write_result_digit(scene, result_row: VGroup, col: int, digit: str,
+                       color=GREEN, run_time: float = 0.45):
+    """Reveal the answer digit in a result row's cell."""
+    box = result_row.boxes[col]
+    num = result_row.nums[col]
+    new = Text(digit, font_size=48, weight="BOLD", color=color).move_to(box.get_center())
+    scene.play(Transform(num, new), box.animate.set_stroke(color, width=5),
+               run_time=run_time)
+
+
 # ── domain hero default ────────────────────────────────────────────────
 
 _DOMAIN_HERO = {
