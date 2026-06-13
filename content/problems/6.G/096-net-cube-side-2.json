@@ -36,5 +36,10 @@
     "surface-area",
     "cube"
   ],
-  "estimatedSeconds": 45
+  "estimatedSeconds": 45,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Square with side 2",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 148 148\" role=\"img\"><rect x=\"38\" y=\"38\" width=\"72\" height=\"72\" fill=\"#FFE8B5\" stroke=\"#F59E0B\" stroke-width=\"3\"/><g font-family=\"Nunito, sans-serif\" font-size=\"16\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"74\" y=\"28\">2</text><text x=\"74\" y=\"132\">2</text><text x=\"24\" y=\"79\" transform=\"rotate(-90 24 79)\">2</text><text x=\"124\" y=\"79\" transform=\"rotate(90 124 79)\">2</text></g></svg>"
+  }
 }

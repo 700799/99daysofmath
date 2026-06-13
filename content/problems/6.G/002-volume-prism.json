@@ -57,5 +57,10 @@
       "level": "reveal",
       "text": "The volume is $60$ cubic inches."
     }
-  ]
+  ],
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Rectangular prism 3×4×5",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 247.2 297.6\" role=\"img\"><g fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.5\" stroke-linejoin=\"round\"><polygon points=\"30,87.6 138,87.6 138,267.6 30,267.6\" fill=\"#BAE6FD\"/><polygon points=\"30,87.6 109.2,29.999999999999993 217.2,29.999999999999993 138,87.6\" fill=\"#BAE6FD\"/><polygon points=\"138,87.6 217.2,29.999999999999993 217.2,210.00000000000003 138,267.6\" fill=\"#BAE6FD\"/></g><g font-family=\"Nunito, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"84\" y=\"289.6\">l = 3</text><text x=\"191.6\" y=\"62.8\">w = 4</text><text x=\"241.2\" y=\"125\">h = 5</text></g></svg>"
+  }
 }

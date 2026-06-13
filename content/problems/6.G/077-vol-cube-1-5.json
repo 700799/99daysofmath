@@ -36,5 +36,10 @@
     "cube",
     "decimal"
   ],
-  "estimatedSeconds": 70
+  "estimatedSeconds": 70,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Cube with side 1.5",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 143.7 135.6\" role=\"img\"><g fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.5\" stroke-linejoin=\"round\"><polygon points=\"30,51.6 84,51.6 84,105.6 30,105.6\" fill=\"#BAE6FD\"/><polygon points=\"30,51.6 59.7,30 113.7,30 84,51.6\" fill=\"#BAE6FD\"/><polygon points=\"84,51.6 113.7,30 113.7,84 84,105.6\" fill=\"#BAE6FD\"/></g><g font-family=\"Nunito, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"57\" y=\"127.6\">l = 1.5</text><text x=\"112.85\" y=\"44.8\">w = 1.5</text><text x=\"137.7\" y=\"62\">h = 1.5</text></g></svg>"
+  }
 }

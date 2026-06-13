@@ -66,5 +66,10 @@
       "level": "reveal",
       "text": "So $4 : 10 = 2 : 5$."
     }
-  ]
+  ],
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Tape diagram for ratio 4 : 10",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 80\" role=\"img\"><rect x=\"20\" y=\"30\" width=\"97.14285714285714\" height=\"36\" fill=\"#0EA5E9\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"68.57142857142857\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">4</text><rect x=\"117.14285714285714\" y=\"30\" width=\"242.85714285714286\" height=\"36\" fill=\"#10B981\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"238.57142857142856\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">10</text></svg>"
+  }
 }

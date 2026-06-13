@@ -34,5 +34,10 @@
     "area",
     "triangle"
   ],
-  "estimatedSeconds": 35
+  "estimatedSeconds": 35,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Triangle with base 12 and height 5",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 296 167.66666666666666\" role=\"img\"><polygon points=\"38,129.66666666666666 258,129.66666666666666 126,38\" fill=\"#A7F3D0\" stroke=\"#10B981\" stroke-width=\"3\"/><line x1=\"126\" y1=\"38\" x2=\"126\" y2=\"129.66666666666666\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><g font-family=\"Nunito, sans-serif\" font-size=\"16\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"148\" y=\"151.66666666666666\">b = 12</text><text x=\"165.6\" y=\"88.83333333333333\">h = 5</text></g></svg>"
+  }
 }

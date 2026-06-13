@@ -32,5 +32,10 @@
     "surface-area",
     "cube"
   ],
-  "estimatedSeconds": 40
+  "estimatedSeconds": 40,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Cube with side 5",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 339 312\" role=\"img\"><g fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.5\" stroke-linejoin=\"round\"><polygon points=\"30,102 210,102 210,282 30,282\" fill=\"#BAE6FD\"/><polygon points=\"30,102 129,30 309,30 210,102\" fill=\"#BAE6FD\"/><polygon points=\"210,102 309,30 309,210 210,282\" fill=\"#BAE6FD\"/></g><g font-family=\"Nunito, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"120\" y=\"304\">l = 5</text><text x=\"273.5\" y=\"70\">w = 5</text><text x=\"333\" y=\"125\">h = 5</text></g></svg>"
+  }
 }

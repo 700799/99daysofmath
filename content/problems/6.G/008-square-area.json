@@ -35,5 +35,10 @@
     "area",
     "square"
   ],
-  "estimatedSeconds": 30
+  "estimatedSeconds": 30,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Square with side 7",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 296 296\" role=\"img\"><rect x=\"38\" y=\"38\" width=\"220\" height=\"220\" fill=\"#FFE8B5\" stroke=\"#F59E0B\" stroke-width=\"3\"/><g font-family=\"Nunito, sans-serif\" font-size=\"16\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"148\" y=\"28\">7</text><text x=\"148\" y=\"280\">7</text><text x=\"24\" y=\"153\" transform=\"rotate(-90 24 153)\">7</text><text x=\"272\" y=\"153\" transform=\"rotate(90 272 153)\">7</text></g></svg>"
+  }
 }

@@ -44,5 +44,10 @@
         "Answer: 54 — verified."
       ]
     }
-  ]
+  ],
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Cube with side 3",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 227.4 211.2\" role=\"img\"><g fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.5\" stroke-linejoin=\"round\"><polygon points=\"30,73.2 138,73.2 138,181.2 30,181.2\" fill=\"#BAE6FD\"/><polygon points=\"30,73.2 89.4,30 197.4,30 138,73.2\" fill=\"#BAE6FD\"/><polygon points=\"138,73.2 197.4,30 197.4,138 138,181.2\" fill=\"#BAE6FD\"/></g><g font-family=\"Nunito, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"84\" y=\"203.2\">l = 3</text><text x=\"181.7\" y=\"55.6\">w = 3</text><text x=\"221.4\" y=\"89\">h = 3</text></g></svg>"
+  }
 }

@@ -46,5 +46,10 @@
       "level": "reveal",
       "text": "The area is $36$ square inches."
     }
-  ]
+  ],
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Parallelogram base 9 height 4",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 296 173.77777777777777\" role=\"img\"><rect x=\"38\" y=\"38\" width=\"220\" height=\"97.77777777777777\" fill=\"#FFE8B5\" stroke=\"#F59E0B\" stroke-width=\"3\"/><g font-family=\"Nunito, sans-serif\" font-size=\"16\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"148\" y=\"28\">9</text><text x=\"148\" y=\"157.77777777777777\">9</text><text x=\"24\" y=\"91.88888888888889\" transform=\"rotate(-90 24 91.88888888888889)\">4</text><text x=\"272\" y=\"91.88888888888889\" transform=\"rotate(90 272 91.88888888888889)\">4</text></g></svg>"
+  }
 }

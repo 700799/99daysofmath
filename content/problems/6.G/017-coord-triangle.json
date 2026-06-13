@@ -39,5 +39,10 @@
     "coord",
     "triangle"
   ],
-  "estimatedSeconds": 70
+  "estimatedSeconds": 70,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Right triangle with legs 6 and 4",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 292 220\" role=\"img\"><polygon points=\"38,182 254,182 124.4,38\" fill=\"#A7F3D0\" stroke=\"#10B981\" stroke-width=\"3\"/><line x1=\"124.4\" y1=\"38\" x2=\"124.4\" y2=\"182\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><g font-family=\"Nunito, sans-serif\" font-size=\"16\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"146\" y=\"204\">b = 6</text><text x=\"163.28\" y=\"115\">h = 4</text></g></svg>"
+  }
 }

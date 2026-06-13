@@ -32,5 +32,10 @@
     "composite",
     "area"
   ],
-  "estimatedSeconds": 60
+  "estimatedSeconds": 60,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "L-shape from two rectangles",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 228 200\" role=\"img\"><g><rect x=\"30\" y=\"30\" width=\"112\" height=\"84\" fill=\"#FFE8B5\" stroke=\"#F59E0B\" stroke-width=\"3\"/><rect x=\"142\" y=\"30\" width=\"56\" height=\"140\" fill=\"#A7F3D0\" stroke=\"#10B981\" stroke-width=\"3\"/></g><g font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"86\" y=\"22\">4</text><text x=\"18\" y=\"77\">3</text><text x=\"170\" y=\"22\">2</text><text x=\"212\" y=\"105\">5</text></g></svg>"
+  }
 }

@@ -34,5 +34,10 @@
     "composite",
     "area"
   ],
-  "estimatedSeconds": 75
+  "estimatedSeconds": 75,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Triangle with base 6 and height 3",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 292 184\" role=\"img\"><polygon points=\"38,146 254,146 124.4,38\" fill=\"#A7F3D0\" stroke=\"#10B981\" stroke-width=\"3\"/><line x1=\"124.4\" y1=\"38\" x2=\"124.4\" y2=\"146\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><g font-family=\"Nunito, sans-serif\" font-size=\"16\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"146\" y=\"168\">b = 6</text><text x=\"163.28\" y=\"97\">h = 3</text></g></svg>"
+  }
 }
