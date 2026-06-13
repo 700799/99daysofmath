@@ -14,7 +14,7 @@ import math
 import numpy as np
 from manim import (
     Scene, Text, VGroup, FadeIn, FadeOut, Write, Create, Transform, GrowFromCenter,
-    SurroundingRectangle, Cross, Line, Dot, Circle, RoundedRectangle,
+    SurroundingRectangle, Cross, Line, Dot, Circle, RoundedRectangle, Polygon,
     UP, DOWN, LEFT, RIGHT, ORIGIN, PI,
     WHITE, BLUE, GREEN, RED, ORANGE, YELLOW, GOLD,
 )
@@ -548,3 +548,110 @@ class StoryDeck(LearningExperienceDeck):
             self.play(_Fi(learned_head), run_time=_rt(0.5))
             self.play(_Fi(learned, shift=DOWN * 0.15), run_time=_rt(0.85))
             self.wait(1.6)
+
+
+# ── CombinedDeck — idea + examples + trap in one video ──────────────────────
+
+def _section_header(scene, text, color):
+    """Flash a full-width divider banner when transitioning between lesson parts."""
+    bar = RoundedRectangle(width=11.5, height=1.0, corner_radius=0.2,
+                           stroke_color=color, stroke_width=4,
+                           fill_color=color, fill_opacity=0.12)
+    bar.move_to(ORIGIN)
+    label = Text(text, font_size=32, weight="BOLD", color=color).move_to(bar)
+    g = VGroup(bar, label)
+    scene.play(FadeIn(g, scale=1.05), run_time=_rt(0.6))
+    scene.wait(0.8)
+    scene.play(FadeOut(g), run_time=_rt(0.4))
+
+
+class CombinedDeck(LearningExperienceDeck):
+    """One continuous video: The Idea → Worked Examples → Avoid the Trap."""
+    BULLETS = []
+    EXAMPLES = []
+    WRONG = ""
+    RIGHT = ""
+
+    def outro_pool(self):
+        return TRAP_OUTROS
+
+    def lesson(self):
+        pal = self.pal
+
+        # ── Part 1: The Idea ─────────────────────────────────────────────
+        _section_header(self, "The Idea", pal["accent"])
+        hero = V.hero_for(self.DOMAIN)()
+        _fit_hero(hero, max_w=5.4, max_h=3.8)
+        hero.move_to(RIGHT * 3.5 + DOWN * 0.1)
+        self.play(FadeIn(hero, shift=DOWN * 0.2), run_time=_rt(0.7))
+
+        bullet_objs = VGroup()
+        lines = VGroup(*[Text(_wrap(s, 26), font_size=26, color=pal["step"]) for s in self.BULLETS])
+        lines.arrange(DOWN, buff=0.5, aligned_edge=LEFT)
+        lines.move_to(LEFT * 3.2 + DOWN * 0.1)
+        for i, ln in enumerate(lines):
+            bullet = Polygon([-0.14, 0.14, 0], [-0.14, -0.14, 0], [0.12, 0, 0],
+                             fill_color=pal["accent"], fill_opacity=1, stroke_width=0)
+            bullet.next_to(ln, LEFT, buff=0.2)
+            bullet_objs.add(bullet)
+            self.play(FadeIn(bullet), FadeIn(ln, shift=DOWN * 0.2), run_time=_rt(0.7))
+            if i % 2 == 0:
+                M.blink(self, self.mascot)
+            else:
+                M.think(self, self.mascot)
+            self.wait(0.35)
+        self.section_break()
+        self.play(FadeOut(VGroup(hero, lines, bullet_objs)), run_time=_rt(0.45))
+
+        # ── Part 2: Worked Examples ──────────────────────────────────────
+        _section_header(self, "Worked Examples", pal["title"])
+        em = expert_move(self, self.DOMAIN, self.seed, pal)
+        self.play(FadeOut(em), run_time=_rt(0.4))
+
+        for ei, (q, steps, answer) in enumerate(self.EXAMPLES):
+            q_text = Text(_wrap("Q:  " + q, 38), font_size=32, color=pal["accent"], weight="BOLD")
+            q_text.to_edge(UP, buff=1.0)
+            self.play(Write(q_text), run_time=_rt(0.85))
+            M.think(self, self.mascot)
+
+            hero2 = V.hero_for(self.DOMAIN)()
+            _fit_hero(hero2, max_w=5.4, max_h=3.6)
+            hero2.move_to(RIGHT * 3.5 + DOWN * 0.1)
+            self.play(FadeIn(hero2, shift=DOWN * 0.2), run_time=_rt(0.6))
+
+            step_objs = VGroup(*[Text(_wrap(s, 24), font_size=30, color=pal["step"]) for s in steps])
+            step_objs.arrange(DOWN, buff=0.55, aligned_edge=LEFT)
+            step_objs.move_to(LEFT * 3.3 + DOWN * 0.1)
+            for i, so in enumerate(step_objs):
+                self.play(FadeIn(so, shift=DOWN * 0.2), run_time=_rt(0.65))
+                if i == 0:
+                    M.blink(self, self.mascot)
+                self.wait(0.35)
+
+            ans = answer_card(self, f"= {answer}", pal["answer"], self.mascot, pos=DOWN * 3.0)
+            self.wait(0.3)
+            self.section_break()
+            self.play(FadeOut(VGroup(q_text, step_objs, hero2, ans)), run_time=_rt(0.45))
+
+        tip = pro_tip(self, self.DOMAIN, self.seed, pal)
+        self.wait(0.8)
+        self.play(FadeOut(tip), run_time=_rt(0.45))
+
+        # ── Part 3: Avoid the Trap ───────────────────────────────────────
+        _section_header(self, "Avoid the Trap", RED)
+        w_lbl = Text("WRONG", font_size=26, weight="BOLD", color=RED).shift(LEFT * 3.4 + UP * 1.7)
+        r_lbl = Text("RIGHT", font_size=26, weight="BOLD", color=GREEN).shift(RIGHT * 3.4 + UP * 1.7)
+        w_body = Text(_wrap(self.WRONG, 20), font_size=26, color=RED).shift(LEFT * 3.4 + DOWN * 0.2)
+        r_body = Text(_wrap(self.RIGHT, 20), font_size=26, color=GREEN).shift(RIGHT * 3.4 + DOWN * 0.2)
+        w_box = SurroundingRectangle(VGroup(w_lbl, w_body), color=RED, buff=0.35, corner_radius=0.12)
+        r_box = SurroundingRectangle(VGroup(r_lbl, r_body), color=GREEN, buff=0.35, corner_radius=0.12)
+        cross = Cross(w_box, color=RED, stroke_width=5)
+
+        self.play(FadeIn(w_lbl), FadeIn(w_body), Create(w_box), run_time=_rt(1.0))
+        M.think(self, self.mascot)
+        self.play(Create(cross), run_time=_rt(0.55))
+        self.checkpoint()
+        self.play(FadeIn(r_lbl), FadeIn(r_body), Create(r_box), run_time=_rt(1.0))
+        check = Text("✓", font_size=52, color=GREEN).move_to(r_box.get_top())
+        self.play(FadeIn(check, scale=1.3), run_time=_rt(0.45))
+        self.section_break()
