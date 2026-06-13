@@ -790,6 +790,397 @@ export const LESSONS: Lesson[] = [
     ],
     watchOut: 'Do not swap the coordinates — (3, 2) and (2, 3) are different points.',
   },
+
+  // ---------------- 6.x — Units 7–10 (advanced) ----------------
+  // 6.RP
+  {
+    domain: '6.RP', unit: 7, title: 'Percent applications',
+    objective: 'Find a percent of a number; use percent for tips, tax, and discounts.',
+    concept: [
+      'A percent is a fraction out of 100. So 25% = 25/100 = 1/4.',
+      'To find X% of Y: convert the percent to a decimal (move dot LEFT two places), then multiply.',
+      'Discount: subtract from the original. Tax/tip: add on top.',
+    ],
+    examples: [
+      { q: 'What is 25% of 80?', steps: ['25% = 0.25.', '0.25 × 80 = 20.'], answer: '20' },
+      { q: '15% of 60?', steps: ['10% of 60 = 6. 5% of 60 = 3.', '10% + 5% = 6 + 3 = 9.'], answer: '9' },
+      { q: 'A $40 shirt is 30% off. Sale price?', steps: ['30% of $40 = $12 off.', '$40 − $12 = $28.'], answer: '$28' },
+    ],
+    practice: [
+      { q: '10% of 250?', answers: ['25'], steps: ['Move the dot one place left.', '250 → 25.'] },
+      { q: '50% of 86?', answers: ['43'], steps: ['50% is half.', '86 ÷ 2 = 43.'] },
+    ],
+    watchOut: '"% off" means subtract; "% increase" means add. Read the question carefully.',
+  },
+  {
+    domain: '6.RP', unit: 8, title: 'Rates & unit pricing',
+    objective: 'Compute speeds, unit prices, and "better-deal" comparisons.',
+    concept: [
+      'A unit rate is "per 1": miles per hour, dollars per pound, cost per item.',
+      'Divide the total by the number of units to get the unit rate.',
+      'To compare two deals, find the unit price of EACH and pick the smaller.',
+    ],
+    examples: [
+      { q: '180 miles in 3 hours — what is the speed?', steps: ['Speed = miles ÷ hours.', '180 ÷ 3 = 60 mph.'], answer: '60' },
+      { q: '12 cookies cost $6. Cost per cookie?', steps: ['$6 ÷ 12 cookies.', '= $0.50 per cookie.'], answer: '$0.50' },
+      { q: 'Is 4 lbs for $10 or 6 lbs for $12 cheaper per lb?', steps: ['$10/4 = $2.50/lb.', '$12/6 = $2.00/lb.', 'Pick the smaller: $2.00/lb (6 for $12).'], answer: '6 for $12' },
+    ],
+    practice: [
+      { q: 'A car drives 240 miles in 4 hours. Speed in mph?', answers: ['60'], steps: ['240 ÷ 4 = 60 mph.'] },
+      { q: '8 oranges cost $4. Cost per orange?', answers: ['$0.50', '0.5', '0.50'], steps: ['$4 ÷ 8.', '= $0.50 each.'] },
+    ],
+    watchOut: 'Match the units: a "mph" answer always means miles ON TOP, hours on the bottom.',
+  },
+  {
+    domain: '6.RP', unit: 9, title: 'Measurement conversions',
+    objective: 'Convert between standard and metric units using ratio reasoning.',
+    concept: [
+      'Use the anchor: 12 in = 1 ft, 3 ft = 1 yd, 100 cm = 1 m, 1000 m = 1 km, 16 oz = 1 lb.',
+      'Going to a SMALLER unit → MORE of them → multiply by the anchor.',
+      'Going to a BIGGER unit → FEWER of them → divide.',
+    ],
+    examples: [
+      { q: 'How many inches in 2 feet?', steps: ['1 ft = 12 in.', '2 × 12 = 24 in.'], answer: '24' },
+      { q: 'Convert 4 yards to feet.', steps: ['1 yd = 3 ft.', '4 × 3 = 12 ft.'], answer: '12' },
+      { q: 'Convert 250 cm to meters.', steps: ['100 cm = 1 m.', '250 ÷ 100 = 2.5 m.'], answer: '2.5' },
+    ],
+    practice: [
+      { q: 'How many feet in 36 inches?', answers: ['3'], steps: ['12 in = 1 ft.', '36 ÷ 12 = 3 ft.'] },
+      { q: 'Convert 5 km to meters.', answers: ['5000'], steps: ['1 km = 1000 m.', '5 × 1000 = 5000 m.'] },
+    ],
+    watchOut: 'Inches → feet uses DIVISION (smaller-of-bigger fits FEWER times).',
+  },
+  {
+    domain: '6.RP', unit: 10, title: 'Ratio & proportion problem-solving',
+    objective: 'Use ratio tables and equivalent ratios to scale recipes and groups.',
+    concept: [
+      'An equivalent ratio multiplies BOTH parts by the same number.',
+      'A ratio table is one fast way: write the rate as a row, then scale columns.',
+      'For a recipe scaled by factor k: multiply EVERY ingredient by k.',
+    ],
+    examples: [
+      { q: '4 servings need 6 cups of flour. Flour for 6 servings?', steps: ['Scale factor = 6 ÷ 4 = 1.5.', '6 × 1.5 = 9 cups.'], answer: '9' },
+      { q: 'A shelter has dogs : cats = 3 : 5, with 20 cats. How many dogs?', steps: ['Cat ratio number is 5; actual count is 20.', 'Multiplier = 20 ÷ 5 = 4.', 'Dogs = 3 × 4 = 12.'], answer: '12' },
+      { q: 'Is 2:3 equivalent to 8:12?', steps: ['Multiply 2:3 by 4: 8:12. ✓', 'Yes, equivalent.'], answer: 'yes' },
+    ],
+    practice: [
+      { q: '5 packs cost $20. Cost for 8 packs?', answers: ['$32', '32'], steps: ['Per-pack: $20 ÷ 5 = $4.', '$4 × 8 = $32.'] },
+      { q: 'A recipe uses 3 eggs for 12 cookies. Eggs for 36 cookies?', answers: ['9'], steps: ['36 ÷ 12 = 3× the cookies.', '3 × 3 = 9 eggs.'] },
+    ],
+    watchOut: 'Scale BOTH parts of the ratio by the same factor — never just one side.',
+  },
+
+  // 6.NS
+  {
+    domain: '6.NS', unit: 7, title: 'Whole-number addition & subtraction',
+    objective: 'Add and subtract multi-digit whole numbers fluently.',
+    concept: [
+      'Stack place values: ones under ones, tens under tens.',
+      'When digits add to 10 or more, carry the 1 to the next column.',
+      'When a digit is too small to subtract, borrow from the next column.',
+    ],
+    examples: [
+      { q: '425 + 376?', steps: ['5+6 = 11. Write 1, carry 1.', '2+7+1 = 10. Write 0, carry 1.', '4+3+1 = 8. Answer: 801.'], answer: '801' },
+      { q: '952 − 387?', steps: ['Borrow: 2→12, ten becomes 4. 12−7 = 5.', '4→14 (borrowed), hundred becomes 8. 14−8 = 6.', '8−3 = 5. Answer: 565.'], answer: '565' },
+      { q: '1003 − 247?', steps: ['Borrow across zeros carefully.', '1003 − 247 = 756.'], answer: '756' },
+    ],
+    practice: [
+      { q: '618 + 274?', answers: ['892'], steps: ['8+4=12 (write 2 carry 1).', '1+7+1=9, 6+2=8 → 892.'] },
+      { q: '500 − 173?', answers: ['327'], steps: ['Borrow across the zeros.', '500 − 173 = 327.'] },
+    ],
+    watchOut: 'Carrying and borrowing pass to the NEXT-LARGER column. Don\'t skip a place.',
+  },
+  {
+    domain: '6.NS', unit: 8, title: 'Comparing & ordering signed numbers',
+    objective: 'Order positive and negative numbers using a number line.',
+    concept: [
+      'On a number line, RIGHT is bigger, LEFT is smaller.',
+      'Any negative number is less than ANY positive number.',
+      'Among negatives, the one CLOSER to zero is bigger.',
+    ],
+    examples: [
+      { q: 'Which is greater: −3 or 1?', steps: ['1 is to the right of 0; −3 is left.', '1 > −3.'], answer: '1' },
+      { q: 'Order −2, 0, −5 from least to greatest.', steps: ['−5 is leftmost.', 'Then −2, then 0.', '−5, −2, 0.'], answer: '-5,-2,0' },
+      { q: 'Which is greater: −4 or −9?', steps: ['Both negative; −4 is closer to 0.', '−4 > −9.'], answer: '-4' },
+    ],
+    practice: [
+      { q: 'Greater: −1 or −7?', answers: ['-1'], steps: ['−1 is closer to 0.', '−1 > −7.'] },
+      { q: 'Order −3, 2, −5 least to greatest.', answers: ['-5,-3,2', '-5, -3, 2'], steps: ['Leftmost first.', '−5 < −3 < 2.'] },
+    ],
+    watchOut: 'Negative numbers reverse the size order — −10 is SMALLER than −2, not bigger.',
+  },
+  {
+    domain: '6.NS', unit: 9, title: 'Opposites & absolute value',
+    objective: 'Find opposites and compute absolute value as distance from 0.',
+    concept: [
+      'The OPPOSITE of n is its mirror image across 0: opposite of 5 is −5.',
+      'Absolute value |n| is the distance from 0 — always 0 or positive.',
+      'Opposite of opposite returns home: −(−n) = n.',
+    ],
+    examples: [
+      { q: 'What is the opposite of 7?', steps: ['Mirror across 0.', 'Opposite of 7 is −7.'], answer: '-7' },
+      { q: 'What is |−12|?', steps: ['Distance from 0 to −12 is 12.', '|−12| = 12.'], answer: '12' },
+      { q: 'Opposite of (opposite of −3)?', steps: ['Opposite of −3 = 3.', 'Opposite of 3 = −3.'], answer: '-3' },
+    ],
+    practice: [
+      { q: 'Opposite of −15?', answers: ['15'], steps: ['Mirror across 0.', '15.'] },
+      { q: '|9|?', answers: ['9'], steps: ['Distance from 0 is 9.', '|9| = 9.'] },
+    ],
+    watchOut: 'Absolute value bars are NOT parentheses — |−5| = 5, not −5.',
+  },
+  {
+    domain: '6.NS', unit: 10, title: 'Coordinate plane: distance & polygons',
+    objective: 'Find distances between points on a grid and side lengths of axis-aligned polygons.',
+    concept: [
+      'If two points share an x-coordinate, distance = |y₁ − y₂| (vertical).',
+      'If they share a y-coordinate, distance = |x₁ − x₂| (horizontal).',
+      'For a rectangle from corners, count the horizontal gap and the vertical gap.',
+    ],
+    examples: [
+      { q: 'Distance from (3, 2) to (3, 7)?', steps: ['Same x → vertical distance.', '|7 − 2| = 5 units.'], answer: '5' },
+      { q: 'Distance from (−2, 4) to (5, 4)?', steps: ['Same y → horizontal.', '|5 − (−2)| = 7 units.'], answer: '7' },
+      { q: 'Side lengths of the rectangle with corners (1, 1), (5, 1), (5, 4), (1, 4)?', steps: ['Width = |5 − 1| = 4.', 'Height = |4 − 1| = 3.'], answer: '4 and 3' },
+    ],
+    practice: [
+      { q: 'Distance from (0, 0) to (0, 6)?', answers: ['6'], steps: ['Same x; vertical.', '|6 − 0| = 6.'] },
+      { q: 'Distance from (−3, 1) to (4, 1)?', answers: ['7'], steps: ['Same y; horizontal.', '|4 − (−3)| = 7.'] },
+    ],
+    watchOut: 'Subtract carefully when one coordinate is negative: 5 − (−2) = 7, not 3.',
+  },
+
+  // 6.EE
+  {
+    domain: '6.EE', unit: 7, title: 'Parts of expressions',
+    objective: 'Identify coefficients, terms, factors, and constants.',
+    concept: [
+      'A TERM is one piece separated by + or −. In 4x + 7, the terms are 4x and 7.',
+      'A COEFFICIENT is the number multiplied by a variable. In 4x, the coefficient is 4.',
+      'A CONSTANT term has no variable. In 7 + 3x, the constant is 7.',
+    ],
+    examples: [
+      { q: 'Coefficient of y in 4y?', steps: ['Number stuck to y.', '4.'], answer: '4' },
+      { q: 'Constant term in 7 + 3x?', steps: ['No variable attached.', '7.'], answer: '7' },
+      { q: 'How many terms in 5x − 2 + 3?', steps: ['Combine constants first: 5x − 2 + 3 = 5x + 1.', '2 terms.'], answer: '2' },
+    ],
+    practice: [
+      { q: 'Coefficient of x in 9x?', answers: ['9'], steps: ['Number in front of x.', '9.'] },
+      { q: 'Constant term in 3x + 8?', answers: ['8'], steps: ['The number with no variable.', '8.'] },
+    ],
+    watchOut: 'Always SIMPLIFY first before counting parts — hidden like-terms can fool you.',
+  },
+  {
+    domain: '6.EE', unit: 8, title: 'Equivalent expressions & checking solutions',
+    objective: 'Verify equivalence with substitution; test solutions to equations.',
+    concept: [
+      'Two expressions are EQUIVALENT if they give the same value for every variable choice.',
+      'Quick test: pick an easy value (like x = 2 or x = 10) and evaluate both.',
+      'A value is a SOLUTION to an equation if substituting it makes both sides equal.',
+    ],
+    examples: [
+      { q: 'Is 2x + 6 equivalent to 2(x + 3)?', steps: ['Distribute: 2(x + 3) = 2x + 6.', 'Same expression. Yes.'], answer: 'yes' },
+      { q: 'Is x = 4 a solution to x + 5 = 9?', steps: ['Substitute: 4 + 5 = 9. ✓', 'Yes.'], answer: 'yes' },
+      { q: 'Is x = 3 a solution to 2x = 8?', steps: ['Check: 2(3) = 6, not 8.', 'No.'], answer: 'no' },
+    ],
+    practice: [
+      { q: 'Is 3(x + 2) equivalent to 3x + 6?', answers: ['yes'], steps: ['Distribute the 3.', 'Same expression.'] },
+      { q: 'Is x = 5 a solution to x − 3 = 2?', answers: ['yes'], steps: ['5 − 3 = 2. ✓'] },
+    ],
+    watchOut: 'Two expressions can MATCH at one value but still differ — use the algebra to be sure.',
+  },
+  {
+    domain: '6.EE', unit: 9, title: 'Writing & solving equations from words',
+    objective: 'Translate word problems into equations and solve.',
+    concept: [
+      'Identify the unknown and name it (let x = number of weeks, etc.).',
+      'Translate each phrase: "sum of" → +, "product of" → ×, "is" → =.',
+      'Solve by doing the OPPOSITE operation to both sides.',
+    ],
+    examples: [
+      { q: 'Marcos saves $25 per week for w weeks. Expression for total?', steps: ['Total = price per week × number of weeks.', '25w.'], answer: '25w' },
+      { q: 'Equation for "a number plus 6 equals 14".', steps: ['Let the number be x.', 'x + 6 = 14.'], answer: 'x+6=14' },
+      { q: 'Solve x + 6 = 14.', steps: ['Subtract 6 from both sides.', 'x = 8.'], answer: '8' },
+    ],
+    practice: [
+      { q: 'Expression for "n less than 12".', answers: ['12-n', '12 - n'], steps: ['Order matters.', '12 − n.'] },
+      { q: 'Solve 3x = 21.', answers: ['7'], steps: ['Divide both sides by 3.', 'x = 7.'] },
+    ],
+    watchOut: '"n less than 12" is 12 − n, NOT n − 12. Order of "less than" is reversed.',
+  },
+  {
+    domain: '6.EE', unit: 10, title: 'Tables & relationships',
+    objective: 'Use equations to fill tables and describe how two variables change.',
+    concept: [
+      'An equation like y = 4x gives one y for every x. Plug in to fill the table.',
+      'Identify the RULE: how does y change when x grows by 1?',
+      'A table lets you SEE the pattern — same change in y each step.',
+    ],
+    examples: [
+      { q: 'For y = 4x, find y when x = 6.', steps: ['Substitute x = 6.', 'y = 4 × 6 = 24.'], answer: '24' },
+      { q: 'Fill in y for y = x + 3 at x = 1, 2, 3.', steps: ['x = 1 → 4. x = 2 → 5. x = 3 → 6.'], answer: '4, 5, 6' },
+      { q: 'Rule for the pairs (1, 5), (2, 10), (3, 15)?', steps: ['y is 5 times x.', 'y = 5x.'], answer: 'y=5x' },
+    ],
+    practice: [
+      { q: 'For y = 2x + 1, find y when x = 4.', answers: ['9'], steps: ['Substitute.', '2(4) + 1 = 9.'] },
+      { q: 'Rule for (1, 3), (2, 6), (3, 9)?', answers: ['y=3x', 'y = 3x'], steps: ['y is 3 times x.', 'y = 3x.'] },
+    ],
+    watchOut: 'Match each x to its matching y row — don\'t swap them when reading the table.',
+  },
+
+  // 6.G
+  {
+    domain: '6.G', unit: 7, title: 'Composite figures (area)',
+    objective: 'Find the area of shapes built from rectangles and triangles.',
+    concept: [
+      'Break the shape into pieces whose area formulas you already know.',
+      'Compute each piece, then ADD them. (For cutouts, SUBTRACT.)',
+      'Label every length first — most errors come from missing or confused side lengths.',
+    ],
+    examples: [
+      { q: 'Two rectangles side-by-side: 4 × 3 and 4 × 2. Total area?', steps: ['Piece 1: 4 × 3 = 12.', 'Piece 2: 4 × 2 = 8.', 'Total: 20.'], answer: '20' },
+      { q: 'A 6 × 5 rectangle with a 2 × 2 square cut out. Area left?', steps: ['Big: 6 × 5 = 30.', 'Cutout: 2 × 2 = 4.', 'Left: 30 − 4 = 26.'], answer: '26' },
+      { q: 'A "house": rectangle 8 × 5 plus triangle base 8, height 4 on top.', steps: ['Rectangle: 8 × 5 = 40.', 'Triangle: ½ × 8 × 4 = 16.', 'Total: 56.'], answer: '56' },
+    ],
+    practice: [
+      { q: 'Two rectangles: 5 × 4 and 5 × 3 side-by-side. Total area?', answers: ['35'], steps: ['20 + 15 = 35.'] },
+      { q: 'A 10 × 6 rectangle with a 3 × 2 square cut out. Area?', answers: ['54'], steps: ['60 − 6 = 54.'] },
+    ],
+    watchOut: 'For cutouts, SUBTRACT — for additions (like a triangular roof), ADD.',
+  },
+  {
+    domain: '6.G', unit: 8, title: 'Volume of right rectangular prisms',
+    objective: 'Compute volume as length × width × height (including fractional edges).',
+    concept: [
+      'Volume = l × w × h, measured in CUBIC units (in³, cm³, ft³).',
+      'Multiplying fractions: numerator × numerator, denominator × denominator.',
+      'A cube has all three edges equal: V = s³.',
+    ],
+    examples: [
+      { q: 'Volume of a 1 × 3 × 5 box?', steps: ['1 × 3 × 5 = 15 cubic units.'], answer: '15' },
+      { q: 'Volume of a 2 × 4 × 5 box?', steps: ['2 × 4 = 8.', '8 × 5 = 40.'], answer: '40' },
+      { q: 'Volume of a ½ × ½ × 4 box?', steps: ['½ × ½ = ¼.', '¼ × 4 = 1.'], answer: '1' },
+    ],
+    practice: [
+      { q: 'Volume of a 3 × 3 × 3 cube?', answers: ['27'], steps: ['3 × 3 × 3 = 27.'] },
+      { q: 'Volume of a 1 × 2 × ½ box?', answers: ['1'], steps: ['1 × 2 = 2.', '2 × ½ = 1.'] },
+    ],
+    watchOut: 'Volume uses CUBIC units. An answer in plain or square units is the wrong dimension.',
+  },
+  {
+    domain: '6.G', unit: 9, title: 'Polygons on the coordinate plane',
+    objective: 'Find side lengths and areas of polygons whose vertices are on a grid.',
+    concept: [
+      'For a horizontal segment (same y), length = |x₂ − x₁|.',
+      'For a vertical segment (same x), length = |y₂ − y₁|.',
+      'For an axis-aligned rectangle, area = horizontal length × vertical length.',
+    ],
+    examples: [
+      { q: 'Length from (2, 1) to (7, 1)?', steps: ['Same y, horizontal.', '|7 − 2| = 5.'], answer: '5' },
+      { q: 'Length from (−3, 4) to (2, 4)?', steps: ['Same y, horizontal.', '|2 − (−3)| = 5.'], answer: '5' },
+      { q: 'Area of rectangle with corners (0, 0), (4, 0), (4, 3), (0, 3)?', steps: ['Width = 4. Height = 3.', 'Area = 12.'], answer: '12' },
+    ],
+    practice: [
+      { q: 'Length from (1, 2) to (1, 6)?', answers: ['4'], steps: ['Same x.', '|6 − 2| = 4.'] },
+      { q: 'Area of rectangle with corners (0, 0), (5, 0), (5, 2), (0, 2)?', answers: ['10'], steps: ['Width 5 × Height 2 = 10.'] },
+    ],
+    watchOut: 'Subtract with the absolute value — a "negative distance" means you flipped the subtraction order.',
+  },
+  {
+    domain: '6.G', unit: 10, title: 'Surface area & nets',
+    objective: 'Compute surface area as the sum of all face areas.',
+    concept: [
+      'A NET is the prism unfolded flat — each face becomes a rectangle on paper.',
+      'Surface area = SUM of the face areas (measured in SQUARE units).',
+      'A cube has 6 equal square faces: SA = 6s². A rectangular prism has 3 pairs of identical rectangles.',
+    ],
+    examples: [
+      { q: 'Surface area of a cube with edge 3?', steps: ['Each face: 3 × 3 = 9.', '6 faces.', '6 × 9 = 54.'], answer: '54' },
+      { q: 'How many faces does a rectangular prism have?', steps: ['Top, bottom, front, back, left, right.', '6 faces.'], answer: '6' },
+      { q: 'SA of a 2 × 3 × 4 prism?', steps: ['Pairs: 2·3 = 6, 2·4 = 8, 3·4 = 12.', '2(6 + 8 + 12) = 2·26 = 52.'], answer: '52' },
+    ],
+    practice: [
+      { q: 'SA of a cube with edge 5?', answers: ['150'], steps: ['Each face: 25.', '6 × 25 = 150.'] },
+      { q: 'How many faces on a cube?', answers: ['6'], steps: ['All 6 are equal squares.'] },
+    ],
+    watchOut: 'Surface area uses SQUARE units. Volume uses cubic — don\'t mix them up.',
+  },
+
+  // 6.SP
+  {
+    domain: '6.SP', unit: 7, title: 'Statistical questions',
+    objective: 'Distinguish statistical questions (variability expected) from fact questions.',
+    concept: [
+      'A STATISTICAL question expects answers to VARY: "How tall are the kids in 6th grade?"',
+      'A non-statistical question has ONE answer: "How tall am I?"',
+      'Look for group words: "each", "every", "students", "players".',
+    ],
+    examples: [
+      { q: 'Is "How tall am I?" statistical?', steps: ['One answer — about ME.', 'No.'], answer: 'no' },
+      { q: 'Is "How tall are the students in my class?" statistical?', steps: ['Many students, many heights.', 'Yes.'], answer: 'yes' },
+      { q: 'Is "How many days are in February 2025?" statistical?', steps: ['One fact, one answer.', 'No.'], answer: 'no' },
+    ],
+    practice: [
+      { q: 'Is "How long does it take each student to eat lunch?" statistical?', answers: ['yes'], steps: ['Each student varies.', 'Yes.'] },
+      { q: 'Is "What is the capital of California?" statistical?', answers: ['no'], steps: ['One fact.', 'No.'] },
+    ],
+    watchOut: 'It\'s about WHETHER answers vary — not whether the topic is mathematical.',
+  },
+  {
+    domain: '6.SP', unit: 8, title: 'Center: mean & median in depth',
+    objective: 'Compute mean and median; pick the right center for the situation.',
+    concept: [
+      'MEAN = sum ÷ count. Best when data is symmetric (no outliers).',
+      'MEDIAN = middle value of the SORTED data. Best when there are outliers.',
+      'For an even count, the median is the average of the two middle values.',
+    ],
+    examples: [
+      { q: 'Median of {3, 5, 7, 9, 11}?', steps: ['Sorted; 5 items.', 'Middle is the 3rd value: 7.'], answer: '7' },
+      { q: 'Median of {2, 4, 6, 8}?', steps: ['4 items.', 'Middle two: 4 and 6.', 'Average: 5.'], answer: '5' },
+      { q: 'Mean of {5, 5, 5, 100}?', steps: ['Sum: 115. Count: 4.', '115 ÷ 4 = 28.75.'], answer: '28.75' },
+    ],
+    practice: [
+      { q: 'Median of {1, 3, 7, 9}?', answers: ['5'], steps: ['4 items; middle two are 3 and 7.', '(3+7)÷2 = 5.'] },
+      { q: 'Mean of {6, 8, 10}?', answers: ['8'], steps: ['Sum 24, count 3.', '24÷3 = 8.'] },
+    ],
+    watchOut: 'Sort the data FIRST when finding the median — order is everything.',
+  },
+  {
+    domain: '6.SP', unit: 9, title: 'Displays: dot plots, histograms & box plots',
+    objective: 'Read and interpret common 6th-grade statistical displays.',
+    concept: [
+      'DOT PLOT: each dot is one data value. Tall stacks = common values.',
+      'HISTOGRAM: bar HEIGHTS = how many values fall in each interval.',
+      'BOX PLOT: the box shows the middle 50% (Q1 to Q3); the line is the median.',
+    ],
+    examples: [
+      { q: 'On a dot plot, each dot represents?', steps: ['One data value.', 'A single observation.'], answer: 'one data value' },
+      { q: 'A histogram bar over 10–19 has height 5. How many values in 10–19?', steps: ['Bar height = count.', '5 values.'], answer: '5' },
+      { q: 'On a box plot, what does the box show?', steps: ['Middle 50% of the data.', 'From Q1 to Q3.'], answer: 'middle 50%' },
+    ],
+    practice: [
+      { q: 'A dot plot has 4 dots above the value 3. How many measurements equal 3?', answers: ['4'], steps: ['Each dot is one item.', '4.'] },
+      { q: 'A histogram bar from 20–29 has height 8. How many values in that range?', answers: ['8'], steps: ['Bar height = count.', '8.'] },
+    ],
+    watchOut: 'Bar HEIGHT — not width — equals the count in a histogram.',
+  },
+  {
+    domain: '6.SP', unit: 10, title: 'Summarizing data sets',
+    objective: 'Compute mean and median on a dataset and report a quick summary.',
+    concept: [
+      'A summary describes the shape, center, and spread.',
+      'Center: mean or median. Spread: range = max − min.',
+      'Pair the right center with the right context — outliers pull the MEAN, not the median.',
+    ],
+    examples: [
+      { q: 'Mean of {10, 20, 30, 40, 50}?', steps: ['Sum: 150. Count: 5.', '150 ÷ 5 = 30.'], answer: '30' },
+      { q: 'Median of {3, 7, 1, 9, 5}?', steps: ['Sort: 1, 3, 5, 7, 9.', 'Middle: 5.'], answer: '5' },
+      { q: 'Range of {12, 5, 18, 7, 20}?', steps: ['Max 20, min 5.', '20 − 5 = 15.'], answer: '15' },
+    ],
+    practice: [
+      { q: 'Mean of {2, 4, 6, 8}?', answers: ['5'], steps: ['Sum 20, count 4.', '20 ÷ 4 = 5.'] },
+      { q: 'Range of {7, 2, 11, 4}?', answers: ['9'], steps: ['Max 11, min 2.', '11 − 2 = 9.'] },
+    ],
+    watchOut: 'SORT data before finding median or range — unsorted data hides the extremes.',
+  },
 ];
 
 const byKey = new Map(LESSONS.map((l) => [lessonKey(l.domain, l.unit), l]));

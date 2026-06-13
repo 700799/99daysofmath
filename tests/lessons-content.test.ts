@@ -54,4 +54,13 @@ describe('lessons content', () => {
       }
     }
   });
+
+  it('every 6.x unit 1-10 has a teach-first lesson', () => {
+    for (const d of ['6.RP', '6.NS', '6.EE', '6.G', '6.SP'] as const) {
+      for (let u = 1; u <= 10; u++) {
+        const l = getLesson(d, u);
+        expect(l, `${d}-${u} lesson missing`).not.toBeNull();
+      }
+    }
+  });
 });
