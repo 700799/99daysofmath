@@ -89,7 +89,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 2, title: 'Unit rates',
     objective: 'Find how much for just one.',
-    videos: [{ title: 'The idea', src: '6.RP-2.mp4' }, { title: 'Worked examples', src: '6.RP-2-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-2-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.RP-2.mp4' }, { title: 'Worked examples', src: '6.RP-2-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-2-trap.mp4' }, { title: "Story: Baseball batting average", src: '6.RP-2-story.mp4' }],
     concept: [
       'A rate compares two different units, like miles and hours.',
       'A unit rate is the amount for exactly 1 (per hour, per pound).',
@@ -129,7 +129,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 4, title: 'Part-to-part vs part-to-whole',
     objective: 'Tell different kinds of ratios apart.',
-    videos: [{ title: 'The idea', src: '6.RP-4.mp4' }, { title: 'Worked examples', src: '6.RP-4-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-4-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.RP-4.mp4' }, { title: 'Worked examples', src: '6.RP-4-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-4-trap.mp4' }, { title: "Story: Turing's secret codes", src: '6.RP-4-story.mp4' }],
     concept: [
       'Part-to-part compares two groups (boys to girls).',
       'Part-to-whole compares one group to the total (boys to all students).',
@@ -149,7 +149,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 5, title: 'Percents',
     objective: "Understand percent as 'out of 100'.",
-    videos: [{ title: 'The idea', src: '6.RP-5.mp4' }, { title: 'Worked examples', src: '6.RP-5-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-5-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.RP-5.mp4' }, { title: 'Worked examples', src: '6.RP-5-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-5-trap.mp4' }, { title: "Story: Soccer penalty kicks", src: '6.RP-5-story.mp4' }],
     concept: [
       'Percent means per hundred: 25% = 25 out of 100 = 0.25.',
       'To find a percent OF a number, multiply by the decimal form.',
@@ -231,7 +231,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 3, title: 'GCF, LCM & distributing',
     objective: 'Break numbers apart with common factors.',
-    videos: [{ title: 'The idea', src: '6.NS-3.mp4' }, { title: 'Worked examples', src: '6.NS-3-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-3-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.NS-3.mp4' }, { title: 'Worked examples', src: '6.NS-3-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-3-trap.mp4' }, { title: "Story: Ramanujan's taxi number", src: '6.NS-3-story.mp4' }],
     concept: [
       'The GCF is the biggest number that divides both.',
       'The LCM is the smallest number both divide into.',
@@ -251,7 +251,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 4, title: 'Integers & absolute value',
     objective: 'Work with positive and negative numbers.',
-    videos: [{ title: 'The idea', src: '6.NS-4.mp4' }, { title: 'Worked examples', src: '6.NS-4-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-4-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.NS-4.mp4' }, { title: 'Worked examples', src: '6.NS-4-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-4-trap.mp4' }, { title: "Story: The invention of zero", src: '6.NS-4-story.mp4' }],
     concept: [
       'Negatives are below 0 (owing money, below sea level).',
       'On a number line, bigger is always to the right.',
@@ -271,7 +271,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 5, title: 'The coordinate plane',
     objective: 'Plot and read ordered pairs.',
-    videos: [{ title: 'The idea', src: '6.NS-5.mp4' }, { title: 'Worked examples', src: '6.NS-5-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-5-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.NS-5.mp4' }, { title: 'Worked examples', src: '6.NS-5-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-5-trap.mp4' }, { title: "Story: Katherine Johnson & Apollo", src: '6.NS-5-story.mp4' }],
     concept: [
       'A point is (x, y): x is across, y is up or down.',
       'The four quadrants are set by the signs of x and y.',
@@ -313,7 +313,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 1, title: 'Exponents',
     objective: 'Read and evaluate powers.',
-    videos: [{ title: 'The idea', src: '6.EE-1.mp4' }, { title: 'Worked examples', src: '6.EE-1-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-1-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.EE-1.mp4' }, { title: 'Worked examples', src: '6.EE-1-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-1-trap.mp4' }, { title: "Story: Penny doubles every day", src: '6.EE-1-story.mp4' }],
     concept: [
       'An exponent counts repeated multiplication: 2³ = 2 × 2 × 2.',
       'The base is multiplied, not added to the exponent.',
@@ -413,7 +413,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 6, title: 'Variables that change together',
     objective: 'Relate independent and dependent variables.',
-    videos: [{ title: 'The idea', src: '6.EE-6.mp4' }, { title: 'Worked examples', src: '6.EE-6-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-6-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.EE-6.mp4' }, { title: 'Worked examples', src: '6.EE-6-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-6-trap.mp4' }, { title: "Story: Fibonacci's rabbits", src: '6.EE-6-story.mp4' }],
     concept: [
       'The independent variable is the one you choose (like time).',
       'The dependent variable responds to it (like distance).',
@@ -435,7 +435,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 1, title: 'Area of triangles & rectangles',
     objective: 'Find area with the right formula.',
-    videos: [{ title: 'The idea', src: '6.G-1.mp4' }, { title: 'Worked examples', src: '6.G-1-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-1-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.G-1.mp4' }, { title: 'Worked examples', src: '6.G-1-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-1-trap.mp4' }, { title: "Story: The Egyptian 3-4-5 triangle", src: '6.G-1-story.mp4' }],
     concept: [
       'Rectangle area = length × width.',
       'Triangle area = ½ × base × height.',
@@ -475,7 +475,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 3, title: 'Volume of prisms',
     objective: 'Find the volume of a rectangular prism.',
-    videos: [{ title: 'The idea', src: '6.G-3.mp4' }, { title: 'Worked examples', src: '6.G-3-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-3-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.G-3.mp4' }, { title: 'Worked examples', src: '6.G-3-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-3-trap.mp4' }, { title: "Story: Archimedes & the golden crown", src: '6.G-3-story.mp4' }],
     concept: [
       'Volume = length × width × height.',
       'It works even with fraction edge lengths.',
@@ -535,7 +535,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 6, title: 'Area & volume review',
     objective: 'Pick the right formula for the shape.',
-    videos: [{ title: 'The idea', src: '6.G-6.mp4' }, { title: 'Worked examples', src: '6.G-6-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-6-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.G-6.mp4' }, { title: 'Worked examples', src: '6.G-6-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-6-trap.mp4' }, { title: "Story: Why honeycombs are hexagons", src: '6.G-6-story.mp4' }],
     concept: [
       'Flat shape → area (square units). Solid → volume (cubic units).',
       'Triangle: ½·b·h. Rectangle: l·w. Prism: l·w·h.',
@@ -557,7 +557,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.SP', unit: 1, title: 'Mean, median & mode',
     objective: 'Find the measures of center.',
-    videos: [{ title: 'The idea', src: '6.SP-1.mp4' }, { title: 'Worked examples', src: '6.SP-1-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-1-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.SP-1.mp4' }, { title: 'Worked examples', src: '6.SP-1-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-1-trap.mp4' }, { title: "Story: Tic-tac-toe strategy", src: '6.SP-1-story.mp4' }],
     concept: [
       'Mean = add all the values, then divide by how many there are.',
       'Median = the middle value once they are sorted.',
@@ -617,7 +617,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.SP', unit: 4, title: 'Displaying data',
     objective: 'Read dot plots, histograms & box plots.',
-    videos: [{ title: 'The idea', src: '6.SP-4.mp4' }, { title: 'Worked examples', src: '6.SP-4-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-4-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.SP-4.mp4' }, { title: 'Worked examples', src: '6.SP-4-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-4-trap.mp4' }, { title: "Story: The birthday paradox", src: '6.SP-4-story.mp4' }],
     concept: [
       'Dot plot: one dot per value.',
       'Histogram: bars over equal intervals, with no gaps.',
@@ -719,7 +719,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '5.F', unit: 3, title: 'Multiplying & dividing fractions',
     objective: 'Multiply fractions straight across and divide using reciprocals.',
-    videos: [{ title: 'The idea', src: '5.F-3-idea.mp4' }, { title: 'Worked examples', src: '5.F-3-examples.mp4' }, { title: 'Avoid the trap', src: '5.F-3-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '5.F-3-idea.mp4' }, { title: 'Worked examples', src: '5.F-3-examples.mp4' }, { title: 'Avoid the trap', src: '5.F-3-trap.mp4' }, { title: "Story: The pizza size scam", src: '5.F-3-story.mp4' }],
     concept: [
       'To multiply fractions: tops together, bottoms together — then simplify.',
       '"Of" means multiply: 3/5 of 40 is 3/5 × 40.',
@@ -779,7 +779,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '5.F', unit: 6, title: 'Coordinate plane, patterns & line plots',
     objective: 'Plot points, extend patterns, and read line plots.',
-    videos: [{ title: 'The idea', src: '5.F-6-idea.mp4' }, { title: 'Worked examples', src: '5.F-6-examples.mp4' }, { title: 'Avoid the trap', src: '5.F-6-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '5.F-6-idea.mp4' }, { title: 'Worked examples', src: '5.F-6-examples.mp4' }, { title: 'Avoid the trap', src: '5.F-6-trap.mp4' }, { title: "Story: The Olympic running shortcut", src: '5.F-6-story.mp4' }],
     concept: [
       'A point is (x, y): go ACROSS x first, then UP y. "Run before you jump."',
       'A pattern with a constant jump: term n = start + jump × (n − 1).',
@@ -884,7 +884,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 7, title: 'Whole-number addition & subtraction',
     objective: 'Add and subtract multi-digit whole numbers fluently.',
-    videos: [{ title: 'Worked examples', src: '6.NS-7-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-7-trap.mp4' }],
+    videos: [{ title: 'Worked examples', src: '6.NS-7-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-7-trap.mp4' }, { title: "Story: Gauss adds 1 to 100", src: '6.NS-7-story.mp4' }],
     concept: [
       'Stack place values: ones under ones, tens under tens.',
       'When digits add to 10 or more, carry the 1 to the next column.',
@@ -1006,7 +1006,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 9, title: 'Writing & solving equations from words',
     objective: 'Translate word problems into equations and solve.',
-    videos: [{ title: 'Worked examples', src: '6.EE-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-9-trap.mp4' }],
+    videos: [{ title: 'Worked examples', src: '6.EE-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-9-trap.mp4' }, { title: "Story: The handshake problem", src: '6.EE-9-story.mp4' }],
     concept: [
       'Identify the unknown and name it (let x = number of weeks, etc.).',
       'Translate each phrase: "sum of" → +, "product of" → ×, "is" → =.',
@@ -1026,7 +1026,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 10, title: 'Tables & relationships',
     objective: 'Use equations to fill tables and describe how two variables change.',
-    videos: [{ title: 'Worked examples', src: '6.EE-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-10-trap.mp4' }],
+    videos: [{ title: 'Worked examples', src: '6.EE-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-10-trap.mp4' }, { title: "Story: The chessboard rice puzzle", src: '6.EE-10-story.mp4' }],
     concept: [
       'An equation like y = 4x gives one y for every x. Plug in to fill the table.',
       'Identify the RULE: how does y change when x grows by 1?',

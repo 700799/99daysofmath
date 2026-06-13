@@ -348,14 +348,11 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
       )}
 
       {atCheckpoint && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/55">
-          <div className="text-white font-display font-extrabold text-lg drop-shadow">
-            Take your time! 🧠
-          </div>
+        <div className="absolute bottom-3 right-3 z-10 flex flex-col items-end gap-1.5">
           <button
             type="button"
             onClick={continuePlayback}
-            className="rounded-full bg-duo-green hover:bg-green-600 text-white font-display font-extrabold text-xl px-8 h-16 flex items-center gap-2 shadow-lg active:translate-y-0.5 transition"
+            className="rounded-full bg-duo-green hover:bg-green-600 text-white font-display font-extrabold text-sm px-4 h-10 flex items-center gap-1.5 shadow-lg active:translate-y-0.5 transition"
           >
             Continue ▶
           </button>
@@ -365,7 +362,7 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
               setAutoPause(false);
               continuePlayback();
             }}
-            className="text-white/80 text-xs font-display font-bold underline"
+            className="text-white/90 text-[10px] font-display font-bold underline bg-black/40 px-2 py-0.5 rounded"
           >
             Don't pause again
           </button>

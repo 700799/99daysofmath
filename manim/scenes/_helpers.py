@@ -456,3 +456,91 @@ class IdeaDeck(LearningExperienceDeck):
                 M.think(self, self.mascot)
             self.wait(0.35)
         self.section_break()  # emphasis beat at the end of the concept
+
+
+# ── StoryDeck — narrative "Math Stories" videos (2-3 min) ───────────────
+
+STORY_OUTROS = [
+    "Cool story, right?",
+    "Math everywhere!",
+    "Bet you'll never forget that one.",
+    "Now you know!",
+    "Math is sneaky cool.",
+]
+
+
+class StoryDeck(LearningExperienceDeck):
+    """Famous-people-and-scenarios story videos. More text than the regular
+    decks, but still illustrated. Each story is a sequence of beats — each beat
+    is one paragraph + a simple visual that matches the moment.
+
+    Subclasses set:
+      TITLE     — short title for the player tile.
+      DOMAIN    — '6.RP' etc. (controls palette + hero default).
+      SUBTITLE  — a one-line teaser shown on the title card.
+      BEATS     — list of dicts: {"head": str, "body": str, "visual": fn}.
+                  visual is a callable(scene, palette, mascot) that draws a
+                  small illustration in the right pane while the body text
+                  fades in on the left. Use story_visuals.* helpers.
+      LEARNED   — one-line "what you learned" closer.
+    """
+    SUBTITLE = ""
+    BEATS = []
+    LEARNED = ""
+
+    def outro_pool(self):
+        return STORY_OUTROS
+
+    def lesson(self):
+        from manim import Text as _T, FadeIn as _Fi, FadeOut as _Fo, VGroup as _Vg
+        pal = self.pal
+
+        # Subtitle teaser, fades in under the title.
+        if self.SUBTITLE:
+            sub = _T(_wrap(self.SUBTITLE, 48), font_size=28, color=pal["accent"], weight="BOLD")
+            sub.to_edge(UP, buff=1.05)
+            self.play(_Fi(sub, shift=DOWN * 0.1), run_time=_rt(0.7))
+            self.wait(0.5)
+            self.section_break()
+            self.play(_Fo(sub), run_time=_rt(0.4))
+
+        # Beats: paragraph on the LEFT, illustration on the RIGHT.
+        for bi, beat in enumerate(self.BEATS):
+            head = _T(_wrap(beat.get("head", ""), 24),
+                      font_size=30, color=pal["accent"], weight="BOLD")
+            head.to_edge(UP, buff=1.0).to_edge(LEFT, buff=0.6)
+            body = _T(_wrap(beat.get("body", ""), 30),
+                      font_size=24, color=pal["step"])
+            body.next_to(head, DOWN, buff=0.45, aligned_edge=LEFT)
+            self.play(_Fi(head, shift=DOWN * 0.15), run_time=_rt(0.6))
+            self.play(_Fi(body, shift=DOWN * 0.15), run_time=_rt(0.7))
+            if bi % 2 == 0:
+                M.blink(self, self.mascot)
+            else:
+                M.think(self, self.mascot)
+
+            visual_fn = beat.get("visual")
+            v_objs = None
+            if visual_fn is not None:
+                # BEAT visual is a method defined on the deck class; pass `self`
+                # twice so it lands as both the bound instance AND the scene
+                # argument the visual helper uses.
+                v_objs = visual_fn(self, self, pal, self.mascot)
+
+            self.wait(0.5)
+            self.section_break()
+            cleanup = [head, body]
+            if v_objs is not None:
+                cleanup.append(v_objs)
+            self.play(_Fo(_Vg(*cleanup)), run_time=_rt(0.45))
+
+        # "What you learned" closer.
+        if self.LEARNED:
+            learned_head = _T("What you learned", font_size=24,
+                              color=GOLD, weight="BOLD").to_edge(UP, buff=1.0)
+            learned = _T(_wrap(self.LEARNED, 36), font_size=32,
+                         color=pal["accent"], weight="BOLD")
+            learned.next_to(learned_head, DOWN, buff=0.5)
+            self.play(_Fi(learned_head), run_time=_rt(0.5))
+            self.play(_Fi(learned, shift=DOWN * 0.15), run_time=_rt(0.85))
+            self.wait(1.0)
