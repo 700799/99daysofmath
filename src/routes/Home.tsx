@@ -136,73 +136,126 @@ export function Home() {
         </Link>
       )}
 
-      {/* Play — every game one tap away */}
+      {/* Video Library — quick access to learning resources */}
+      <div className="mt-6 mb-4 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
+        🎬 Video Library
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+        <Link
+          to="/videos"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-2xl">📘</div>
+          <div className="font-display font-extrabold text-sm mt-1">Lessons</div>
+          <div className="text-[11px] opacity-90 mt-0.5 line-clamp-1">Step-by-step guides</div>
+        </Link>
+        <Link
+          to="/mathematicians"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-purple-500 to-violet-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-2xl">🧑‍🔬</div>
+          <div className="font-display font-extrabold text-sm mt-1">Mathematicians</div>
+          <div className="text-[11px] opacity-90 mt-0.5 line-clamp-1">Famous minds</div>
+        </Link>
+        <Link
+          to="/stories"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-pink-500 to-rose-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-2xl">🌟</div>
+          <div className="font-display font-extrabold text-sm mt-1">Stories</div>
+          <div className="text-[11px] opacity-90 mt-0.5 line-clamp-1">Math history</div>
+        </Link>
+        <Link
+          to="/settings"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-slate-500 to-slate-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-2xl">⚙️</div>
+          <div className="font-display font-extrabold text-sm mt-1">Settings</div>
+          <div className="text-[11px] opacity-90 mt-0.5 line-clamp-1">Preferences</div>
+        </Link>
+      </div>
+
+      {/* Play — 3x3 grid of game modes */}
       <div className="mt-1 mb-2 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
         ▶ Play
       </div>
-      <div className="grid grid-cols-2 gap-3 mb-4">
+      <div className="grid grid-cols-3 gap-3 mb-4">
         <Link
           to="/practice"
-          className="block rounded-3xl p-4 bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
-          <div className="text-3xl">🧠</div>
-          <div className="font-display font-extrabold text-lg mt-1">Practice</div>
-          <div className="text-xs opacity-90 mt-0.5 line-clamp-2">Adaptive, MAP-style questions.</div>
+          <div className="text-2xl">🧠</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Practice</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Adaptive</div>
         </Link>
         <Link
           to="/mix"
-          className="block rounded-3xl p-4 bg-gradient-to-br from-purple-500 via-fuchsia-500 to-pink-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-purple-500 via-fuchsia-500 to-pink-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
-          <div className="text-3xl">🎲</div>
-          <div className="font-display font-extrabold text-lg mt-1">Daily Mix</div>
-          <div className="text-xs opacity-90 mt-0.5 line-clamp-2">5 random problems.</div>
+          <div className="text-2xl">🎲</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Daily Mix</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Random</div>
         </Link>
         <Link
           to="/test"
-          className="block rounded-3xl p-4 bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
-          <div className="text-3xl">🎓</div>
-          <div className="font-display font-extrabold text-lg mt-1">Mock Test</div>
-          <div className="text-xs opacity-90 mt-0.5 line-clamp-2">18 timed questions.</div>
+          <div className="text-2xl">🎓</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Mock Test</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Timed</div>
         </Link>
         <Link
           to="/review"
-          className="relative block rounded-3xl p-4 bg-gradient-to-br from-rose-500 to-pink-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+          className="relative block rounded-2xl p-3 bg-gradient-to-br from-rose-500 to-pink-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           {dueReview > 0 && (
-            <span className="absolute top-3 right-3 bg-white text-rose-600 text-[11px] font-display font-extrabold px-2 py-0.5 rounded-full">
-              {dueReview} due
+            <span className="absolute top-2 right-2 bg-white text-rose-600 text-[9px] font-display font-extrabold px-1.5 py-0.5 rounded-full">
+              {dueReview}
             </span>
           )}
-          <div className="text-3xl">📅</div>
-          <div className="font-display font-extrabold text-lg mt-1">Review</div>
-          <div className="text-xs opacity-90 mt-0.5 line-clamp-2">Missed problems, smart timing.</div>
+          <div className="text-2xl">📅</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Review</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Missed</div>
         </Link>
         <Link
           to="/arcade"
-          className="block rounded-3xl p-4 bg-gradient-to-br from-violet-500 to-purple-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all sm:col-span-2"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-violet-500 to-purple-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
-          <div className="flex items-center gap-3">
-            <div className="text-4xl">🕹️</div>
-            <div className="flex-1 min-w-0">
-              <div className="font-display font-extrabold text-lg">Arcade</div>
-              <div className="text-xs opacity-90 mt-0.5 line-clamp-2">9 games. Mix it up for bonus XP.</div>
-            </div>
-            <div className="text-2xl shrink-0">→</div>
-          </div>
+          <div className="text-2xl">🕹️</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Arcade</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Games</div>
         </Link>
         <Link
           to="/finals"
-          className="block rounded-3xl p-4 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all sm:col-span-2"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
-          <div className="flex items-center gap-3">
-            <div className="text-4xl">🏆</div>
-            <div className="flex-1 min-w-0">
-              <div className="font-display font-extrabold text-lg">Finals</div>
-              <div className="text-xs opacity-90 mt-0.5 line-clamp-2">5 quizzes × 20. Big bonus XP.</div>
-            </div>
-            <div className="text-2xl shrink-0">→</div>
-          </div>
+          <div className="text-2xl">🏆</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Finals</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Quizzes</div>
+        </Link>
+        <Link
+          to="/report"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-2xl">📊</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Progress</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Report</div>
+        </Link>
+        <Link
+          to="/"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-teal-500 to-emerald-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-2xl">🏔️</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Trails</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Topics</div>
+        </Link>
+        <Link
+          to="/"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-indigo-500 to-blue-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-2xl">🎯</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Domains</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">All</div>
         </Link>
       </div>
 
@@ -266,26 +319,6 @@ export function Home() {
         })}
       </div>
 
-      <div className="mt-6 flex items-center gap-4">
-        <Link
-          to="/report"
-          className="inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
-        >
-          📊 Progress report
-        </Link>
-        <Link
-          to="/videos"
-          className="inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
-        >
-          🎬 Video library
-        </Link>
-        <Link
-          to="/settings"
-          className="inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
-        >
-          ⚙️ Settings
-        </Link>
-      </div>
 
       <PracticeHeatmap practiceDates={practiceDates} xpByDate={xpByDate} />
 
