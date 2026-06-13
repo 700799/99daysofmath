@@ -5,7 +5,12 @@
 html,
 body,
 #root {
+  /* `100%` is the universal fallback; `100dvh` (dynamic viewport height)
+     follows Safari's collapsing URL bar so bottom-anchored UI (drawers,
+     keypad, level badge) is never covered. */
   height: 100%;
+  height: 100dvh;
+  min-height: 100dvh;
 }
 
 body {

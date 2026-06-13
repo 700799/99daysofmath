@@ -113,7 +113,8 @@ function VideoDrawer({ open, onClose, title, src }: DrawerProps) {
           aria-label={`Video: ${title}`}
         >
           <motion.div
-            // Bottom sheet on phone; centered card from sm: up.
+            // Phone: full-screen (uses 100dvh so Safari's URL bar doesn't
+            // overlap). Tablet/desktop: centered card capped at max-w-3xl.
             initial={{ y: '100%', opacity: 1, scale: 1 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: '100%', opacity: 1, scale: 1 }}
@@ -126,23 +127,23 @@ function VideoDrawer({ open, onClose, title, src }: DrawerProps) {
             }}
             onClick={(e) => e.stopPropagation()}
             className={[
-              'relative w-full max-h-[94vh] bg-white rounded-t-3xl shadow-2xl flex flex-col',
-              'sm:max-h-[88vh] sm:max-w-3xl sm:w-[92vw] sm:rounded-3xl sm:m-auto',
+              'relative w-full bg-black shadow-2xl flex flex-col',
+              'sm:max-h-[88vh] sm:max-w-3xl sm:w-[92vw] sm:rounded-3xl sm:m-auto sm:bg-white',
             ].join(' ')}
-            style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+            style={{
+              height: '100dvh',
+              maxHeight: '100dvh',
+              paddingTop: 'env(safe-area-inset-top)',
+              paddingBottom: 'env(safe-area-inset-bottom)',
+            }}
           >
-            {/* drag handle (phone only) */}
-            <div className="sm:hidden pt-2.5 pb-1 flex justify-center shrink-0 cursor-grab">
-              <div className="w-10 h-1.5 rounded-full bg-slate-300" />
-            </div>
-
-            {/* header */}
-            <div className="px-4 sm:px-5 pt-2 sm:pt-4 pb-3 flex items-center justify-between gap-3 shrink-0">
+            {/* slim phone header — sits on the black stage with white text */}
+            <div className="px-3 sm:px-5 py-2 sm:py-4 flex items-center justify-between gap-3 shrink-0 sm:bg-white">
               <div className="min-w-0">
-                <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-sky-600">
+                <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-sky-300 sm:text-sky-600">
                   Animation
                 </div>
-                <h2 className="text-base sm:text-lg font-display font-extrabold text-slate-900 truncate">
+                <h2 className="text-sm sm:text-lg font-display font-extrabold text-white sm:text-slate-900 truncate">
                   {title}
                 </h2>
               </div>
@@ -150,14 +151,14 @@ function VideoDrawer({ open, onClose, title, src }: DrawerProps) {
                 type="button"
                 onClick={onClose}
                 aria-label="Close"
-                className="shrink-0 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 font-display font-extrabold text-lg"
+                className="shrink-0 w-10 h-10 rounded-full bg-white/15 sm:bg-slate-100 hover:bg-white/25 sm:hover:bg-slate-200 text-white sm:text-slate-600 font-display font-extrabold text-lg"
               >
                 ✕
               </button>
             </div>
 
-            {/* the video itself — drawer sizes to it so there's no dead space */}
-            <div className="px-3 sm:px-5 pb-3 sm:pb-5">
+            {/* video stage — flex-1 so the player stretches to fill the screen */}
+            <div className="flex-1 min-h-0 flex items-center justify-center sm:px-5 sm:pb-5 sm:bg-white">
               <VideoPlayer src={src} title={title} />
             </div>
           </motion.div>
@@ -305,8 +306,11 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
     ref.current?.play().catch(() => {});
   };
 
+  // On phone the parent gives us a flex-1 black stage; we fill it.
+  // On desktop (sm:) we use aspect-video so the video doesn't stretch the
+  // centered modal too tall.
   return (
-    <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-slate-200">
+    <div className="relative w-full h-full sm:h-auto sm:aspect-video sm:rounded-2xl overflow-hidden bg-black sm:border sm:border-slate-200 flex items-center justify-center">
       <video
         ref={ref}
         src={url}

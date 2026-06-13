@@ -146,34 +146,28 @@ export function ArcadeHub() {
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
         {ARCADE_GAMES.map((g) => {
           const done = playedToday.includes(g.id);
-          const disabled = isLocked;
-          const inner = (
-            <>
+          // Every tile stays clickable — even when the daily cap is hit. The
+          // game itself short-circuits to the hub when locked, so it's safe to
+          // explore freely.
+          return (
+            <Link
+              key={g.id}
+              to={g.path}
+              className={`relative block rounded-3xl p-4 bg-gradient-to-br ${g.gradient} text-white shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0`}
+            >
               {done && (
                 <span className="absolute top-3 right-3 bg-white/90 text-green-700 text-[10px] font-display font-extrabold px-2 py-0.5 rounded-full">
                   ✓ Played today
                 </span>
               )}
-              {disabled && (
-                <span className="absolute top-3 right-3 text-white text-base">🔒</span>
+              {isLocked && !done && (
+                <span className="absolute top-3 right-3 bg-white/90 text-rose-700 text-[10px] font-display font-extrabold px-2 py-0.5 rounded-full">
+                  ⏱ Math first
+                </span>
               )}
               <div className="text-3xl">{g.emoji}</div>
               <div className="font-display font-extrabold text-lg mt-1">{g.name}</div>
-              <div className="text-xs opacity-90 mt-0.5">{g.blurb}</div>
-            </>
-          );
-          const cls = `relative block rounded-3xl p-4 bg-gradient-to-br ${g.gradient} text-white shadow-md transition-all ${
-            disabled
-              ? 'opacity-50 grayscale pointer-events-none'
-              : 'hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0'
-          }`;
-          return disabled ? (
-            <div key={g.id} className={cls} aria-disabled="true">
-              {inner}
-            </div>
-          ) : (
-            <Link key={g.id} to={g.path} className={cls}>
-              {inner}
+              <div className="text-xs opacity-90 mt-0.5 line-clamp-2">{g.blurb}</div>
             </Link>
           );
         })}

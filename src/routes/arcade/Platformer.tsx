@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
@@ -15,21 +16,102 @@ const JUMP_VY = -540;
 const MOVE_SPEED = 170;
 const ENEMY_SPEED = 50;
 
-// Level: . air, T ground/brick, P platform, G goomba spawn, C math-coin,
-// F flagpole. Single source of truth — 30 cols × 8 rows.
+// Levels: . air, T ground/brick, P platform, G goomba spawn, C math-coin,
+// F flagpole. Each row is 30 cols × 8 rows. Difficulty ramps with index:
+// more enemies, longer pits, narrower platforms.
 // prettier-ignore
-const LEVEL: string[] = [
-  '..............................',
-  '..............................',
-  '...........C.................F',
-  '..............P.P.P..........F',
-  '......C.................C....F',
-  '..........TT........TT..PP...F',
-  '........G............G.......F',
-  'TTTTTTTTTTTTTT..TTTTTTTTTTTTTT',
+const LEVELS: string[][] = [
+  // Level 1 — easy intro, one pit, two goombas
+  [
+    '..............................',
+    '..............................',
+    '...........C.................F',
+    '..............P.P.P..........F',
+    '......C.................C....F',
+    '..........TT........TT..PP...F',
+    '........G............G.......F',
+    'TTTTTTTTTTTTTT..TTTTTTTTTTTTTT',
+  ],
+  // Level 2 — narrower pit, three goombas
+  [
+    '..............................',
+    '...........C..................',
+    '.......P..........C..........F',
+    '...........PP..PP.............F',
+    '.....C.................C.....F',
+    '....G......TT.....TTTT.G.....F',
+    '..G..............G............',
+    'TTTTTTT...TTTTT...TTTTTTTTTTTT',
+  ],
+  // Level 3 — two pits, more coins
+  [
+    '..............................',
+    '.....C.........C........C....F',
+    '..........P...........P......F',
+    '....PP........PPP.............',
+    '............C................F',
+    '.......G..........G..........F',
+    '.G..........G.................',
+    'TTTTT..TTTTT...TTTTT...TTTTTTT',
+  ],
+  // Level 4 — floating platforms, sky path
+  [
+    '..............................',
+    '..C........C...........C.....F',
+    '...PPP....PP....PPP....PP....F',
+    '..............................',
+    '......C....C....C....C......F',
+    '.....PP...PP...PP...PP........',
+    '..G....G....G....G....G......F',
+    'TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT',
+  ],
+  // Level 5 — wide pit, you have to jump precisely
+  [
+    '..............................',
+    '...........C..................',
+    '.....P............P..........F',
+    '.........C...........C......F',
+    '............PP........PP....F',
+    '...G..G.................G...F',
+    'G.......G............G.G....F',
+    'TTTTTT......TTTT......TTTTTTT',
+  ],
+  // Level 6 — many enemies
+  [
+    '...............C..............',
+    '...........P............P....F',
+    '.....C........C.....C.........',
+    '....PP....PP....PP....PP.....F',
+    '..G..G..G..G..G..G..G..G..G..',
+    '...G..G..G..G..G..G..G..G....',
+    '..............................',
+    'TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT',
+  ],
+  // Level 7 — coins galore + two pits + goombas
+  [
+    '..C..C..C..C..C..C..C..C..C..',
+    '.PP..PP..PP..PP..PP..PP..PP..F',
+    '..............................',
+    '.....C............C..........F',
+    '......PPP..........PPP........',
+    '..G......G......G......G....F',
+    'G............G.............G.',
+    'TTTT...TTTTTT....TTTTT..TTTTT',
+  ],
+  // Level 8 — boss-ish: three pits, lots of enemies, narrow platforms
+  [
+    '..C..........C..........C....F',
+    'P............P............PP.F',
+    '.....C............C..........F',
+    '....PP............PP..........',
+    '....G..G......G..G......G....F',
+    'G..G..G..G..G..G..G..G..G..G..',
+    '..............................',
+    'TTT..TTT..TTT...TTT..TTT.TTTTT',
+  ],
 ];
 
-const LEVEL_W = LEVEL[0].length * TILE;
+export const PLATFORMER_LEVEL_COUNT = LEVELS.length;
 
 type Vec = { x: number; y: number };
 type Player = Vec & { vx: number; vy: number; onGround: boolean; invuln: number };
@@ -55,16 +137,19 @@ function makeMathCoin(id: number, x: number, y: number): Coin {
 }
 
 // Parse level once at module load — every game session uses fresh copies.
-function buildLevel(): {
+function buildLevel(idx: number): {
   walls: { x: number; y: number; w: number; h: number }[];
   enemySpawns: Vec[];
   coinSpawns: Vec[];
   flagX: number;
+  levelW: number;
 } {
+  const LEVEL = LEVELS[Math.max(0, Math.min(LEVELS.length - 1, idx))];
+  const levelW = LEVEL[0].length * TILE;
   const walls: { x: number; y: number; w: number; h: number }[] = [];
   const enemySpawns: Vec[] = [];
   const coinSpawns: Vec[] = [];
-  let flagX = LEVEL_W;
+  let flagX = levelW;
   for (let row = 0; row < LEVEL.length; row++) {
     for (let col = 0; col < LEVEL[row].length; col++) {
       const ch = LEVEL[row][col];
@@ -76,15 +161,24 @@ function buildLevel(): {
       if (ch === 'F') flagX = Math.min(flagX, x);
     }
   }
-  return { walls, enemySpawns, coinSpawns, flagX };
+  return { walls, enemySpawns, coinSpawns, flagX, levelW };
 }
 
 export function Platformer() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
+  const setPlatformerMaxLevel = useProgress((s) => s.setPlatformerMaxLevel);
+  const platformerMaxLevel = useProgress((s) => s.platformerMaxLevel ?? 0);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialLevel = (() => {
+    const fromUrl = parseInt(searchParams.get('level') || '', 10);
+    if (Number.isFinite(fromUrl) && fromUrl >= 0 && fromUrl < LEVELS.length) return fromUrl;
+    return Math.min(platformerMaxLevel, LEVELS.length - 1);
+  })();
+  const [levelIdx, setLevelIdx] = useState(initialLevel);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
 
-  const level = useRef(buildLevel());
+  const level = useRef(buildLevel(levelIdx));
   const playerRef = useRef<Player>({ x: TILE, y: TILE * 5, vx: 0, vy: 0, onGround: false, invuln: 0 });
   const enemiesRef = useRef<Enemy[]>([]);
   const coinsRef = useRef<Coin[]>([]);
@@ -250,7 +344,7 @@ export function Platformer() {
 
       // Camera: follow player, clamp to level.
       const target = p.x - VIEW_W * 0.35;
-      cameraRef.current = Math.max(0, Math.min(target, LEVEL_W - VIEW_W));
+      cameraRef.current = Math.max(0, Math.min(target, level.current.levelW - VIEW_W));
 
       redraw();
       rafRef.current = requestAnimationFrame(tick);
@@ -262,12 +356,29 @@ export function Platformer() {
   }, [outcome]);
 
   const finish = () => {
-    const reach = reachedFlagRef.current ? 10 : 0;
+    const reach = reachedFlagRef.current ? 10 + levelIdx * 2 : 0;
     const xp = Math.max(
       1,
       livesRef.current * 3 + stompXpRef.current + correctCoinXpRef.current * 2 + reach,
     );
+    if (reachedFlagRef.current && levelIdx >= platformerMaxLevel) {
+      setPlatformerMaxLevel(Math.min(LEVELS.length - 1, levelIdx + 1));
+    }
     setOutcome(recordArcadePlay('platformer', xp));
+  };
+
+  const advanceLevel = () => {
+    const next = levelIdx + 1;
+    if (next >= LEVELS.length) return;
+    setLevelIdx(next);
+    level.current = buildLevel(next);
+    setSearchParams({ level: String(next) }, { replace: true });
+    initWorld();
+  };
+
+  const restartLevel = () => {
+    level.current = buildLevel(levelIdx);
+    initWorld();
   };
 
   const answerCoin = (coin: Coin, pick: number) => {
@@ -277,20 +388,37 @@ export function Platformer() {
   };
 
   if (outcome) {
+    const hasNext = reachedFlagRef.current && levelIdx + 1 < LEVELS.length;
     return (
       <div>
-        <ArcadeHeader title="Math Platformer" emoji="🍄" />
+        <ArcadeHeader title={`Math Platformer · Level ${levelIdx + 1}`} emoji="🍄" />
         <ArcadeEndCard
           gameId="platformer"
           outcome={outcome}
           win={reachedFlagRef.current}
           scoreLine={
             reachedFlagRef.current
-              ? `Flag reached! 🚩  ${livesRef.current}❤️ left · ${stompXpRef.current} stomps`
-              : `Game over — ${stompXpRef.current} stomps`
+              ? `Level ${levelIdx + 1} cleared! 🚩  ${livesRef.current}❤️ left · ${stompXpRef.current} stomps`
+              : `Game over on level ${levelIdx + 1} — ${stompXpRef.current} stomps`
           }
-          onReplay={initWorld}
+          onReplay={restartLevel}
         />
+        {hasNext && (
+          <div className="mt-3 text-center">
+            <button
+              type="button"
+              onClick={advanceLevel}
+              className="inline-flex items-center gap-2 rounded-full bg-duo-green hover:bg-green-600 text-white font-display font-extrabold text-lg px-6 h-12 shadow-lg active:translate-y-0.5 transition"
+            >
+              Level {levelIdx + 2} →
+            </button>
+          </div>
+        )}
+        {reachedFlagRef.current && !hasNext && (
+          <div className="mt-3 text-center text-sm font-display font-extrabold text-amber-700">
+            🏆 You beat every level!
+          </div>
+        )}
       </div>
     );
   }
@@ -300,7 +428,7 @@ export function Platformer() {
 
   return (
     <div>
-      <ArcadeHeader title="Math Platformer" emoji="🍄" />
+      <ArcadeHeader title={`Math Platformer · Level ${levelIdx + 1} of ${LEVELS.length}`} emoji="🍄" />
       <div className="mb-2 flex items-center justify-between">
         <div className="text-sm font-display font-extrabold text-slate-900">
           {'❤️'.repeat(livesRef.current)}

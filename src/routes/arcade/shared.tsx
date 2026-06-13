@@ -16,14 +16,15 @@ export interface ArcadeGameDef {
 }
 
 export const ARCADE_GAMES: ArcadeGameDef[] = [
-  { id: 'connect4', path: '/arcade/connect4', emoji: '🔴', name: 'Connect Four', blurb: 'Beat the owl — four in a row wins.', baseXp: 5, gradient: 'from-red-500 to-rose-600' },
-  { id: 'wheel', path: '/arcade/wheel', emoji: '🎡', name: 'Prize Wheel', blurb: 'One spin a day. What will you win?', baseXp: 0, gradient: 'from-fuchsia-500 to-purple-600' },
-  { id: 'memory', path: '/arcade/memory', emoji: '🃏', name: 'Memory Match', blurb: 'Find all 8 pairs in as few flips as you can.', baseXp: 8, gradient: 'from-sky-500 to-blue-600' },
-  { id: 'shootout', path: '/arcade/shootout', emoji: '🏀', name: 'Shootout', blurb: 'Time your tap — 5 shots at the hoop.', baseXp: 5, gradient: 'from-orange-500 to-amber-600' },
-  { id: 'zapper', path: '/arcade/zapper', emoji: '🧟', name: 'Zombie Zapper', blurb: 'Tap the silly zombies before they reach the fence!', baseXp: 6, gradient: 'from-lime-500 to-green-600' },
-  { id: 'fishing', path: '/arcade/fishing', emoji: '🎣', name: 'Fishing', blurb: 'Drop the hook as the fish swim by.', baseXp: 6, gradient: 'from-cyan-500 to-teal-600' },
-  { id: 'runner', path: '/arcade/runner', emoji: '🏃', name: 'Math Runner', blurb: 'Steer into the right answer before the gate hits!', baseXp: 8, gradient: 'from-emerald-500 to-teal-600' },
-  { id: 'platformer', path: '/arcade/platformer', emoji: '🍄', name: 'Math Platformer', blurb: 'Jump and stomp through the level to the flag.', baseXp: 10, gradient: 'from-pink-500 to-rose-600' },
+  { id: 'connect4', path: '/arcade/connect4', emoji: '🔴', name: 'Connect 4', blurb: 'Beat the owl.', baseXp: 5, gradient: 'from-red-500 to-rose-600' },
+  { id: 'wheel', path: '/arcade/wheel', emoji: '🎡', name: 'Prize Wheel', blurb: 'One spin a day.', baseXp: 0, gradient: 'from-fuchsia-500 to-purple-600' },
+  { id: 'memory', path: '/arcade/memory', emoji: '🃏', name: 'Memory', blurb: 'Match all 8 pairs.', baseXp: 8, gradient: 'from-sky-500 to-blue-600' },
+  { id: 'shootout', path: '/arcade/shootout', emoji: '🏀', name: 'Shootout', blurb: 'Score 8 baskets in 30s.', baseXp: 5, gradient: 'from-orange-500 to-amber-600' },
+  { id: 'zapper', path: '/arcade/zapper', emoji: '🧟', name: 'Zapper', blurb: 'Tap the zombies!', baseXp: 6, gradient: 'from-lime-500 to-green-600' },
+  { id: 'fishing', path: '/arcade/fishing', emoji: '🎣', name: 'Fishing', blurb: 'Drop the hook.', baseXp: 6, gradient: 'from-cyan-500 to-teal-600' },
+  { id: 'runner', path: '/arcade/runner', emoji: '🏃', name: 'Math Runner', blurb: 'Right lane, right answer.', baseXp: 8, gradient: 'from-emerald-500 to-teal-600' },
+  { id: 'platformer', path: '/arcade/platformer', emoji: '🍄', name: 'Platformer', blurb: '8 levels. Stomp to the flag.', baseXp: 10, gradient: 'from-pink-500 to-rose-600' },
+  { id: 'racer', path: '/arcade/racer', emoji: '🏎️', name: 'Race Car', blurb: 'Dodge cones. Grab fuel.', baseXp: 9, gradient: 'from-rose-500 to-orange-500' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {

@@ -146,8 +146,8 @@ export function Home() {
           className="block rounded-3xl p-4 bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-3xl">🧠</div>
-          <div className="font-display font-extrabold text-lg mt-1">Adaptive Practice</div>
-          <div className="text-xs opacity-90 mt-0.5">Questions tune to your level, MAP-style.</div>
+          <div className="font-display font-extrabold text-lg mt-1">Practice</div>
+          <div className="text-xs opacity-90 mt-0.5 line-clamp-2">Adaptive, MAP-style questions.</div>
         </Link>
         <Link
           to="/mix"
@@ -155,15 +155,15 @@ export function Home() {
         >
           <div className="text-3xl">🎲</div>
           <div className="font-display font-extrabold text-lg mt-1">Daily Mix</div>
-          <div className="text-xs opacity-90 mt-0.5">5 random problems across all domains.</div>
+          <div className="text-xs opacity-90 mt-0.5 line-clamp-2">5 random problems.</div>
         </Link>
         <Link
           to="/test"
           className="block rounded-3xl p-4 bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-3xl">🎓</div>
-          <div className="font-display font-extrabold text-lg mt-1">Mock MAP Test</div>
-          <div className="text-xs opacity-90 mt-0.5">18 timed questions with a score estimate.</div>
+          <div className="font-display font-extrabold text-lg mt-1">Mock Test</div>
+          <div className="text-xs opacity-90 mt-0.5 line-clamp-2">18 timed questions.</div>
         </Link>
         <Link
           to="/review"
@@ -175,8 +175,8 @@ export function Home() {
             </span>
           )}
           <div className="text-3xl">📅</div>
-          <div className="font-display font-extrabold text-lg mt-1">Smart Review</div>
-          <div className="text-xs opacity-90 mt-0.5">Missed problems come back at the right time.</div>
+          <div className="font-display font-extrabold text-lg mt-1">Review</div>
+          <div className="text-xs opacity-90 mt-0.5 line-clamp-2">Missed problems, smart timing.</div>
         </Link>
         <Link
           to="/arcade"
@@ -185,10 +185,8 @@ export function Home() {
           <div className="flex items-center gap-3">
             <div className="text-4xl">🕹️</div>
             <div className="flex-1 min-w-0">
-              <div className="font-display font-extrabold text-lg">Arcade — 6 reward games</div>
-              <div className="text-xs opacity-90 mt-0.5">
-                Connect 4, prize wheel, memory, shootout, zombies & fishing. Play different games for bonus XP!
-              </div>
+              <div className="font-display font-extrabold text-lg">Arcade</div>
+              <div className="text-xs opacity-90 mt-0.5 line-clamp-2">9 games. Mix it up for bonus XP.</div>
             </div>
             <div className="text-2xl shrink-0">→</div>
           </div>
@@ -200,10 +198,8 @@ export function Home() {
           <div className="flex items-center gap-3">
             <div className="text-4xl">🏆</div>
             <div className="flex-1 min-w-0">
-              <div className="font-display font-extrabold text-lg">Final Challenge</div>
-              <div className="text-xs opacity-90 mt-0.5">
-                5 big quizzes × 20 questions. Answers only at the end — BIG bonus XP!
-              </div>
+              <div className="font-display font-extrabold text-lg">Finals</div>
+              <div className="text-xs opacity-90 mt-0.5 line-clamp-2">5 quizzes × 20. Big bonus XP.</div>
             </div>
             <div className="text-2xl shrink-0">→</div>
           </div>

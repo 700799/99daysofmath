@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { DOMAINS, type Domain } from '../types/problem';
+import { flashXp } from './xpFlash';
 import { checkAllEarning, STICKER_DEFS, UNIT_COUNT_BY_DOMAIN, type EarningContext } from '../utils/encouragement';
 import { scheduleAfter } from '../utils/srs';
 
@@ -124,6 +125,8 @@ interface ProgressState {
   isArcadeLocked: () => boolean;
   arcadeRemainingSeconds: () => number;
   mathRemainingSeconds: () => number;
+  platformerMaxLevel: number;
+  setPlatformerMaxLevel: (n: number) => void;
   completeLesson: (key: string) => string[];
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
@@ -289,6 +292,10 @@ const v9Defaults = {
   },
 };
 
+const v10Defaults = {
+  platformerMaxLevel: 0, // furthest Math Platformer level the kid has reached
+};
+
 export const ARCADE_DAILY_CAP_SECONDS = 180;     // 3 minutes per day
 export const MATH_UNLOCK_SECONDS = 900;          // 15 minutes of math unlocks again
 
@@ -375,6 +382,12 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       if (stateAny[k] === undefined) stateAny[k] = v;
     }
   }
+  if (fromVersion < 10) {
+    const stateAny = state as Record<string, unknown>;
+    for (const [k, v] of Object.entries(v10Defaults)) {
+      if (stateAny[k] === undefined) stateAny[k] = v;
+    }
+  }
   return state;
 }
 
@@ -397,6 +410,9 @@ export const useProgress = create<ProgressState>()(
       ...v7Defaults,
       ...v8Defaults,
       ...v9Defaults,
+      ...v10Defaults,
+      setPlatformerMaxLevel: (n) =>
+        set((s) => ({ platformerMaxLevel: Math.max(s.platformerMaxLevel, n) })),
       recordUnitResult: (domain, unit, stars, missedIds, xpEarned, mistakesTotal) => {
         const stateBefore = get();
         const today = todayISO();
@@ -433,6 +449,7 @@ export const useProgress = create<ProgressState>()(
         const allTrailsBonus =
           allDone && !stateBefore.allTrailsBonusGranted ? 250 : 0;
         const totalXpAdd = xpEarned + unitBonus + trailBonus + allTrailsBonus;
+        if (totalXpAdd > 0) flashXp(totalXpAdd);
 
         const nextXp = stateBefore.xp + totalXpAdd;
         const nextTotalPerfect = stateBefore.totalPerfectUnits + (newPerfect ? 1 : 0);
@@ -469,6 +486,7 @@ export const useProgress = create<ProgressState>()(
         return { earned, unitBonus, trailBonus, allTrailsBonus };
       },
       awardXP: (n) => {
+        if (n > 0) flashXp(n);
         const before = get();
         const today = todayISO();
         const nextXp = before.xp + n;
@@ -570,6 +588,7 @@ export const useProgress = create<ProgressState>()(
         const c4Wins = before.c4Wins + (opts.c4Win ? 1 : 0);
         const lastWheelSpinDate = opts.wheelSpin ? today : before.lastWheelSpinDate;
         const totalAdd = xpAwarded + varietyBonus;
+        if (totalAdd > 0) flashXp(totalAdd);
         const nextXp = before.xp + totalAdd;
         const dailyXpRoll = rollDailyXp(before, totalAdd, today);
 
@@ -872,7 +891,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 9,
+      version: 10,
       migrate: migrateProgress,
     },
   ),

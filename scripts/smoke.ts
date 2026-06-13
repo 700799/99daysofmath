@@ -208,13 +208,13 @@ async function main() {
     await page.waitForSelector('text=/Smart Review|All caught up/', { timeout: 5000 });
     console.log('   ✓ Smart Review route loaded');
 
-    console.log('18. Daily quest ring visible in header on home...');
+    console.log('18. LevelBadge visible in header on home...');
     await page.goto(BASE, { waitUntil: 'networkidle' });
     await page.waitForSelector('text=Pick a trail', { timeout: 5000 });
-    // DailyQuestRing renders an SVG circle in the header
-    const ringVisible = await page.locator('header svg circle').first().isVisible().catch(() => false);
-    if (!ringVisible) throw new Error('Daily quest ring SVG not found in header');
-    console.log('   ✓ Daily quest ring visible in header');
+    // LevelBadge (header variant) renders an inline pill with "Lv N" label
+    const levelVisible = await page.locator('header a[aria-label^="Level"]').first().isVisible().catch(() => false);
+    if (!levelVisible) throw new Error('Level badge pill not found in header');
+    console.log('   ✓ Level badge pill visible in header');
 
     console.log('19. Practice heatmap grid visible on home...');
     // PracticeHeatmap renders 99 cells as divs inside a grid
@@ -295,21 +295,23 @@ async function main() {
     await page.waitForTimeout(200);
     console.log('   ✓ Library lists units; video drawer opens + closes');
 
-    console.log('27. Arcade hub renders 8 game tiles + variety meter + daily timer...');
+    console.log('27. Arcade hub renders 9 game tiles + variety meter + daily timer...');
     await page.goto(BASE + '#/arcade', { waitUntil: 'networkidle' });
     await page.waitForSelector('text=Variety bonus', { timeout: 5000 });
     await page.waitForSelector("text=Today's arcade timer", { timeout: 5000 });
     const tiles = await page.locator('a[href^="#/arcade/"]').count();
-    if (tiles < 8) throw new Error(`Expected 8 arcade tiles, got ${tiles}`);
+    if (tiles < 9) throw new Error(`Expected 9 arcade tiles, got ${tiles}`);
     await page.goto(BASE + '#/arcade/runner', { waitUntil: 'networkidle' });
     await page.waitForSelector('text=Math Runner', { timeout: 5000 });
     await page.goto(BASE + '#/arcade/platformer', { waitUntil: 'networkidle' });
     await page.waitForSelector('text=Math Platformer', { timeout: 5000 });
-    console.log('   ✓ Arcade hub with 8 games + new routes mount');
+    await page.goto(BASE + '#/arcade/racer', { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=Race Car', { timeout: 5000 });
+    console.log('   ✓ Arcade hub with 9 games + new routes mount');
 
     console.log('28. Memory Match starts and flips a card...');
     await page.goto(BASE + '#/arcade/memory', { waitUntil: 'networkidle' });
-    await page.waitForSelector('text=Memory Match', { timeout: 5000 });
+    await page.waitForSelector('text=Memory', { timeout: 5000 });
     await page.locator('button[aria-label="Hidden card"]').first().click();
     await page.waitForTimeout(400);
     console.log('   ✓ Memory Match playable');

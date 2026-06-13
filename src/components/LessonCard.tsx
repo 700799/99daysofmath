@@ -266,13 +266,15 @@ function Breadcrumbs({
           isActive && subTotal > 1
             ? `${sec} ${subIdx}/${subTotal}`
             : sec;
-        const clickable = isPast || isActive;
+        // Every section is freely clickable — kids should be able to jump
+        // anywhere in the lesson, not be gated. Future sections still look
+        // visually distinct (lighter slate) so the current progress is clear.
         return (
           <div key={sec} className="flex items-center gap-1 shrink-0">
             {sIdx > 0 && (
               <span
                 aria-hidden="true"
-                className={`text-xs ${sIdx <= activeSectionIdx ? 'text-slate-400' : 'text-slate-200'}`}
+                className={`text-xs ${sIdx <= activeSectionIdx ? 'text-slate-400' : 'text-slate-300'}`}
               >
                 ›
               </span>
@@ -280,16 +282,15 @@ function Breadcrumbs({
             <button
               ref={isActive ? activeRef : undefined}
               type="button"
-              onClick={() => clickable && onJump(firstIdx)}
-              disabled={!clickable}
+              onClick={() => onJump(firstIdx)}
               aria-current={isActive ? 'step' : undefined}
               className={[
-                'text-[10px] font-display font-extrabold uppercase tracking-wider px-2 py-1 rounded-full transition-colors whitespace-nowrap',
+                'text-[10px] font-display font-extrabold uppercase tracking-wider px-2 py-1 rounded-full transition-colors whitespace-nowrap cursor-pointer',
                 isActive
                   ? 'bg-duo-green text-white shadow-sm'
                   : isPast
-                    ? 'text-slate-700 bg-slate-100 hover:bg-slate-200 cursor-pointer'
-                    : 'text-slate-300',
+                    ? 'text-slate-700 bg-slate-100 hover:bg-slate-200'
+                    : 'text-slate-500 bg-slate-50 hover:bg-slate-100',
               ].join(' ')}
             >
               {isPast && <span className="mr-0.5">✓</span>}

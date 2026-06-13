@@ -2,11 +2,38 @@ import { Link } from 'react-router-dom';
 import { useProgress } from '../state/progress';
 import { levelForXp } from '../utils/levels';
 
-// Always-visible points + level badge. Fixed bottom-right, small and
-// semi-transparent so it never blocks content; sits below modals (z-40 < z-50).
-export function LevelBadge() {
+interface Props {
+  /** "floating" pins bottom-right (default for any orphan use).
+   *  "header" renders an inline compact pill, no fixed positioning. */
+  variant?: 'floating' | 'header';
+}
+
+// Always-visible level + XP badge. Two visual variants share the same data.
+export function LevelBadge({ variant = 'floating' }: Props) {
   const xp = useProgress((s) => s.xp);
   const info = levelForXp(xp);
+
+  if (variant === 'header') {
+    return (
+      <Link
+        to="/report"
+        aria-label={`Level ${info.level}, ${xp} XP. Open progress report.`}
+        className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-100 to-orange-100 border-2 border-amber-200 rounded-full pl-1 pr-3 py-1 hover:from-amber-200 hover:to-orange-200 transition-colors"
+      >
+        <span className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-300 to-orange-400 text-white font-display font-extrabold text-sm flex items-center justify-center shadow-inner shrink-0">
+          {info.level}
+        </span>
+        <div className="leading-tight">
+          <div className="text-[9px] font-display font-extrabold uppercase tracking-wider text-orange-700">
+            Lv {info.level}
+          </div>
+          <div className="text-xs font-display font-extrabold text-orange-900 tabular-nums">
+            ⚡ {xp}
+          </div>
+        </div>
+      </Link>
+    );
+  }
 
   return (
     <Link

@@ -1,80 +1,63 @@
 # 99 Days of Math
 
-A Duolingo-style 6th-grade Common Core math practice app. Built for a 5th-grader prepping for the SRVUSD NWEA MAP test.
+A friendly, gamified math app to help a 5th or 6th grader get strong at school math — and feel good doing it.
 
-Live: https://700799.github.io/99daysofmath/
+**Try it live:** https://700799.github.io/99daysofmath/
 
-## What it does
+---
 
-- Five trails, one per 6th-grade CCSS domain (6.RP, 6.NS, 6.EE, 6.G, 6.SP)
-- Each trail is a chain of units; complete a unit to unlock the next
-- Hint, full step-by-step explanation, and alternative answer forms on every problem
-- CA-Common-Core-specific and MAP-style items tagged inside the same bank
-- Phaser-rendered trail, KaTeX math, runs entirely on GitHub Pages
+## What it is
 
-## Rewards Arcade 🎉
+Kid-shaped practice for the math their teacher is teaching. Quick, colorful, kind. Built for a 5th-grader prepping for the SRVUSD NWEA MAP test, but useful to any 5th–6th grader (or curious 4th).
 
-Finishing units earns 🪙 **coins**, which power a **Rewards Arcade** of mini-games
-(reachable from the home banner or the coin pill in the header):
+- **560 hand-checked problems** covering all 6th-grade Common Core domains, plus a full Gr-5 "Foundations" track (fractions, decimals, place value, measurement, volume, coordinate plane).
+- **Bite-sized lessons** for every unit — title → key idea → 3 worked examples → "try one yourself".
+- **Hints that don't spoil it** — three or four progressively bigger nudges before the answer.
+- **"Explain the concept" drawer** on every problem screen — open up to a written lesson plan with worked examples, an "alt angle" perspective, and step-by-step video animations.
+- **148 short math videos** (Manim animations) — every unit has a cute cartoon guide who explains *the idea*, walks through *worked examples*, points out *the trap to avoid*, and tells you a *math story* from history.
+- **Math Stories** — 18 quick narrative videos covering Gauss, Fibonacci, Katherine Johnson, Archimedes, the chessboard rice trick, the pizza-size scam, the birthday paradox, and more. Math that connects to real life.
+- **Final Challenge** — five 20-question quizzes that hold all the feedback until the end, like a real test.
+- **An arcade with 9 games** — Connect 4, Prize Wheel, Memory, Shootout, Zapper, Fishing, Math Runner, Math Platformer (8 levels), and Race Car. Earn extra XP for variety.
+- **Smart Review** — missed problems quietly come back at the right time, so they don't slip away.
 
-- **🎲 Math Party** — a Mario-Party-style board game. Roll the dice and race a CPU
-  rival (Foxy 🦊) around a 20-tile loop. Blue tiles pay coins, red tiles cost a few,
-  Lucky tiles are wildcards, and **Star tiles** let you spend 10 coins to buy a
-  Star — most Stars after 8 rounds wins. Math tiles pop a quick arithmetic
-  challenge for bonus coins. Unlocks at 1 ⭐.
-- **🏎️ Math Grand Prix** — a real-time kart race. Rivals drive at a steady pace
-  while you only move by answering math challenges, so solve fast to take the
-  checkered flag. Unlocks at 6 ⭐.
+## How the rewards work
 
-Winning banks more coins and adds 🥇🥈🥉 trophies to your trophy case. Difficulty
-(Easy/Medium/Hard) controls the arithmetic in the challenge prompts. All game
-rules live in pure, unit-tested modules under [`src/rewards/`](src/rewards); the
-Phaser scenes (`src/phaser/MathPartyScene.ts`, `GrandPrixScene.ts`) handle only
-rendering and animation.
+- Solve a problem → earn ⚡ XP. A little XP popup flashes so you see it.
+- 🔥 Streak: come back every day to grow it (one freeze a week is allowed).
+- ⭐ Stars: 1, 2, or 3 per completed unit (and a small bonus for a perfect run).
+- 🎖 Stickers for everything from "first lesson" to "all five trails finished".
+- 🕹 Arcade: 3 minutes a day of free play. After that the games take a break and you do 15 minutes of math to open them again. Game tiles stay clickable so kids can still look around.
+- 🎓 Level badge in the top-right shows your XP level + progress to the next.
 
-## Icons
+## How a kid uses it
 
-Every visual in the app — the owl mascot, Foxy the rival, stars, coins, medals,
-the dice, the kart, domain badges — is a hand-drawn flat SVG in
-[`src/icons/shapes.ts`](src/icons/shapes.ts) (no emoji, no icon fonts, no
-`<text>` elements). One registry feeds both worlds: React renders icons via the
-`<Icon>` component, and Phaser scenes rasterize the same markup into textures
-with `loadIconTextures`, so characters look identical in the UI and in-game.
+1. Open the app on a phone, tablet, or laptop — it works the same everywhere.
+2. Pick a trail (a domain). Pick a unit. It opens to a short lesson card.
+3. Watch *The idea*, walk through *Worked examples* with the cartoon guide, then try a few problems.
+4. Stuck? Tap **📖 Explain the concept** for a written walkthrough. Tap **🔊 Read aloud** to have the page read to you.
+5. Done? You'll see your XP flash. Streak goes up if it's a new day. Maybe a sticker pops.
+6. Tired? Hop into the arcade for a quick brain-break game. Don't go longer than 3 minutes — math first.
 
-## Stack
+## Designed for the way kids actually use phones
 
-React 18, Vite 5, TypeScript, Tailwind CSS, Framer Motion, Phaser 3, Zustand. Problems are hand-authored JSON, compiled into a single static `public/data/problems.json` the app fetches at runtime. Phaser (~1.4 MB) is code-split behind `React.lazy`, so the learning core loads without it.
+- Big tap targets, no tiny buttons.
+- The number pad we built is the only one that shows — no double keyboards.
+- Videos open in a full-screen drawer; no need to hunt for the fullscreen button.
+- Lesson tabs are all clickable — kids can jump around freely; the app never blocks them with grey "locked" tiles.
+- Reads + plays well over the lunchbox-sized URL bar Safari adds at the bottom.
 
-## Run locally
+## A note for parents
 
-```sh
-nvm use            # Node 22
-npm ci
-npm run validate:content
-npm run build:content   # writes public/data/problems.json
-npm run dev             # http://localhost:5173/99daysofmath/
-```
+Built with the goal of *less screen time, more brain time*. The arcade is capped at 3 minutes a day on purpose; the streak system rewards short daily sessions over marathon ones; every screen tries to point back to the math rather than away from it.
 
-## Add or edit problems
+Free, open-source, no ads, no accounts, no data leaving the device. All progress is stored in your browser. If you reset the browser data, you start fresh.
 
-Each problem is one JSON file under `content/problems/<domain>/`. See [`content/README.md`](content/README.md) for the schema, LaTeX cheatsheet, and authoring conventions.
+## License
 
-After editing:
+MIT — see [LICENSE](LICENSE). Use it, fork it, remix it; please keep the credit.
 
-```sh
-npm run validate:content
-npm run build:content
-git add content/ public/data/problems.json
-git commit -m "Add N problems to 6.XX"
-```
+## Credits
 
-## Tests
-
-```sh
-npm test
-npm run test:watch
-```
-
-## Deploy
-
-Pushes to `main` deploy automatically via GitHub Actions to GitHub Pages. The repo's Pages source must be set to "GitHub Actions" in repo settings.
+- Math animations made with [Manim](https://www.manim.community/) by 3Blue1Brown's community.
+- App built with React, Vite, Tailwind CSS, Framer Motion, Zustand, and KaTeX.
+- Made with love for one specific kid in Northern California 🐕.

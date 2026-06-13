@@ -25,6 +25,7 @@ const ZombieZapper = lazy(() => import('./routes/arcade/ZombieZapper').then((m) 
 const Fishing = lazy(() => import('./routes/arcade/Fishing').then((m) => ({ default: m.Fishing })));
 const MathRunner = lazy(() => import('./routes/arcade/MathRunner').then((m) => ({ default: m.MathRunner })));
 const Platformer = lazy(() => import('./routes/arcade/Platformer').then((m) => ({ default: m.Platformer })));
+const RaceCar = lazy(() => import('./routes/arcade/RaceCar').then((m) => ({ default: m.RaceCar })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 function RouteFallback() {
@@ -63,6 +64,7 @@ export default function App() {
           <Route path="/arcade/fishing" element={<Fishing />} />
           <Route path="/arcade/runner" element={<MathRunner />} />
           <Route path="/arcade/platformer" element={<Platformer />} />
+          <Route path="/arcade/racer" element={<RaceCar />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

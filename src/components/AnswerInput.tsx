@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Problem } from '../types/problem';
 import { MathText } from './MathText';
 import { NumberKeypad } from './NumberKeypad';
@@ -11,8 +11,25 @@ interface Props {
   onSubmit?: () => void;
 }
 
+// Detect touch primaries — we suppress the native iOS/Android keyboard for
+// these users (our NumberKeypad is the input surface) but keep it available
+// on desktop so physical keyboards still work.
+function useIsTouch(): boolean {
+  const [touch, setTouch] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const mq = window.matchMedia('(pointer: coarse)');
+    setTouch(mq.matches);
+    const on = (e: MediaQueryListEvent) => setTouch(e.matches);
+    mq.addEventListener?.('change', on);
+    return () => mq.removeEventListener?.('change', on);
+  }, []);
+  return touch;
+}
+
 export function AnswerInput({ problem, value, onChange, disabled, onSubmit }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
+  const isTouch = useIsTouch();
 
   if (problem.answerType === 'multiple-choice' && problem.choices) {
     return (
@@ -44,7 +61,17 @@ export function AnswerInput({ problem, value, onChange, disabled, onSubmit }: Pr
     );
   }
 
-  const inputMode = problem.answerType === 'numeric' ? 'decimal' : 'text';
+  const showKeypadType =
+    problem.answerType === 'numeric' || problem.answerType === 'fraction';
+  // On touch devices when our on-screen keypad is showing, suppress the OS
+  // keyboard via inputMode="none" — otherwise iOS opens a duplicate numpad on
+  // top of ours. Desktop keeps "decimal"/"text" so physical keys work.
+  const inputMode: React.HTMLAttributes<HTMLInputElement>['inputMode'] =
+    isTouch && showKeypadType
+      ? 'none'
+      : problem.answerType === 'numeric'
+        ? 'decimal'
+        : 'text';
   const placeholder =
     problem.answerType === 'fraction'
       ? 'e.g. 1/2 or 0.5'

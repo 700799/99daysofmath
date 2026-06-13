@@ -1,86 +1,88 @@
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
-const SHOTS = 5;
-// Power bar oscillates 0 → 1 → 0. Wider zone so the tap window is fair.
-const ZONE_START = 0.34;
-const ZONE_END = 0.66;
-const SPEED = 1.4; // bar units per second
+// 30-second tap-to-score basketball. Each SHOOT tap fires a ball at the hoop.
+// 80% of shots score by default + a small streak-of-misses sympathy bonus,
+// so kids stay in flow on a phone. Goal: score TARGET baskets in 30 s.
 
-type ShotResult = 'made' | 'missed';
+const SESSION_SECONDS = 30;
+const TARGET = 8;
+const BASE_MAKE_RATE = 0.8;
+
+type Shot = { id: number; made: boolean };
 
 export function Shootout() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
-  const [shots, setShots] = useState<ShotResult[]>([]);
-  const [ballFlight, setBallFlight] = useState<ShotResult | null>(null);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
-
-  // Live power lives in a ref so the shoot() handler always reads the
-  // value that was actually rendered on the last frame (React state would
-  // lag by a render and break the green-zone check).
-  const powerRef = useRef(0);
-  const dirRef = useRef(1);
-  const rafRef = useRef(0);
-  const sliderRef = useRef<HTMLDivElement | null>(null);
-  const doneRef = useRef(false);
-
-  const running = shots.length < SHOTS && !ballFlight && !outcome;
   useArcadeClock(!!outcome);
 
+  const [secondsLeft, setSecondsLeft] = useState(SESSION_SECONDS);
+  const [makes, setMakes] = useState(0);
+  const [shotsTaken, setShotsTaken] = useState(0);
+  const [shots, setShots] = useState<Shot[]>([]); // recent shot animations
+  const [missStreak, setMissStreak] = useState(0);
+  const shotIdRef = useRef(1);
+  const tickRef = useRef<number | undefined>(undefined);
+  const startedRef = useRef<number | undefined>(undefined);
+
+  const running = !outcome && secondsLeft > 0;
+  const won = makes >= TARGET;
+
+  // 1Hz countdown — starts on first SHOOT tap so reading the screen isn't
+  // counted against the kid.
   useEffect(() => {
-    if (!running) return;
-    let last = performance.now();
-    const tick = (now: number) => {
-      const dt = (now - last) / 1000;
-      last = now;
-      let next = powerRef.current + dirRef.current * dt * SPEED;
-      if (next >= 1) {
-        next = 1;
-        dirRef.current = -1;
-      } else if (next <= 0) {
-        next = 0;
-        dirRef.current = 1;
-      }
-      powerRef.current = next;
-      const el = sliderRef.current;
-      if (el) el.style.left = `calc(${next * 100}% - 3px)`;
-      rafRef.current = requestAnimationFrame(tick);
+    if (!running || startedRef.current === undefined) return;
+    tickRef.current = window.setInterval(() => {
+      setSecondsLeft((s) => Math.max(0, s - 1));
+    }, 1000);
+    return () => {
+      if (tickRef.current) window.clearInterval(tickRef.current);
     };
-    rafRef.current = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(rafRef.current);
-  }, [running]);
+  }, [running, shotsTaken === 0 ? null : 'started']);
+
+  // Game-over when the timer hits zero.
+  useEffect(() => {
+    if (outcome) return;
+    if (secondsLeft === 0 || won) {
+      const xp = Math.max(1, Math.min(20, makes));
+      // Slight bonus for the perfect-target hit.
+      const bonus = won && secondsLeft > 0 ? 3 : 0;
+      setOutcome(recordArcadePlay('shootout', xp + bonus));
+    }
+  }, [secondsLeft, won, outcome, makes, recordArcadePlay]);
 
   const shoot = () => {
     if (!running) return;
-    const p = powerRef.current;
-    const made = p >= ZONE_START && p <= ZONE_END;
-    setBallFlight(made ? 'made' : 'missed');
-    setTimeout(() => {
-      const next = [...shots, made ? ('made' as const) : ('missed' as const)];
-      setShots(next);
-      setBallFlight(null);
-      if (next.length === SHOTS && !doneRef.current) {
-        doneRef.current = true;
-        const makes = next.filter((s) => s === 'made').length;
-        const baseXp = makes + (makes === SHOTS ? 3 : 0);
-        setOutcome(recordArcadePlay('shootout', Math.max(1, baseXp)));
-      }
-    }, 900);
+    if (startedRef.current === undefined) startedRef.current = Date.now();
+    const makeChance = Math.min(0.95, BASE_MAKE_RATE + missStreak * 0.05);
+    const made = Math.random() < makeChance;
+    const id = shotIdRef.current++;
+    setShots((s) => [...s.slice(-3), { id, made }]);
+    setShotsTaken((n) => n + 1);
+    if (made) {
+      setMakes((m) => m + 1);
+      setMissStreak(0);
+    } else {
+      setMissStreak((n) => n + 1);
+    }
+    // Trim animation queue after the throw finishes.
+    window.setTimeout(() => {
+      setShots((s) => s.filter((x) => x.id !== id));
+    }, 950);
   };
 
   const reset = () => {
-    setShots([]);
-    setBallFlight(null);
     setOutcome(null);
-    powerRef.current = 0;
-    dirRef.current = 1;
-    doneRef.current = false;
+    setSecondsLeft(SESSION_SECONDS);
+    setMakes(0);
+    setShotsTaken(0);
+    setShots([]);
+    setMissStreak(0);
+    startedRef.current = undefined;
   };
-
-  const makes = shots.filter((s) => s === 'made').length;
 
   if (outcome) {
     return (
@@ -89,82 +91,85 @@ export function Shootout() {
         <ArcadeEndCard
           gameId="shootout"
           outcome={outcome}
-          win={makes >= 4}
-          scoreLine={`${makes} / ${SHOTS} buckets!${makes === SHOTS ? ' PERFECT! 🔥' : ''}`}
+          win={won}
+          scoreLine={
+            won
+              ? `🔥 ${makes} baskets in ${SESSION_SECONDS - secondsLeft}s — target smashed!`
+              : `${makes} of ${TARGET} baskets — try again!`
+          }
           onReplay={reset}
         />
       </div>
     );
   }
 
+  const accuracy = shotsTaken ? Math.round((makes / shotsTaken) * 100) : 0;
+
   return (
     <div>
-      <ArcadeHeader title="Shootout" emoji="🏀" />
+      <ArcadeHeader title="Shootout · 30s" emoji="🏀" />
       <p className="text-sm text-slate-600 mb-2">
-        Tap <b>SHOOT</b> when the slider is in the <span className="text-green-700 font-bold">green zone</span>. {SHOTS} shots!
+        Tap <b>SHOOT!</b> as fast as you can. Score <b>{TARGET}</b> baskets in
+        30 seconds.
       </p>
 
-      <div className="flex justify-center gap-1.5 mb-4">
-        {Array.from({ length: SHOTS }).map((_, i) => (
-          <span key={i} className="text-2xl">
-            {i < shots.length ? (shots[i] === 'made' ? '✅' : '❌') : '⚪'}
-          </span>
-        ))}
+      <div className="flex justify-between items-center mb-3 max-w-sm mx-auto px-1">
+        <div className="text-2xl font-display font-extrabold text-orange-600 tabular-nums">
+          ⏱ {secondsLeft}s
+        </div>
+        <div className="text-2xl font-display font-extrabold text-green-700 tabular-nums">
+          🏀 {makes}/{TARGET}
+        </div>
+        <div className="text-xs font-display font-bold text-slate-500">
+          {accuracy}%
+        </div>
       </div>
 
-      <div className="relative max-w-sm mx-auto h-44 bg-gradient-to-b from-sky-100 to-amber-50 rounded-3xl border-2 border-slate-200 overflow-hidden">
-        {/* hoop */}
-        <div className="absolute right-4 top-3 text-5xl" aria-hidden="true">🥅</div>
-        <div className="absolute right-6 top-[68px] w-12 h-1.5 bg-orange-500 rounded-full" />
-        {/* ball */}
-        <motion.div
-          key={`${shots.length}-${ballFlight ?? 'idle'}`}
-          className="absolute bottom-3 left-8 text-4xl"
-          animate={
-            ballFlight === 'made'
-              ? { x: [0, 130, 248], y: [0, -130, -98], rotate: 360 }
-              : ballFlight === 'missed'
-                ? { x: [0, 130, 260], y: [0, -140, -20], rotate: 360 }
-                : { x: 0, y: 0, rotate: 0 }
-          }
-          transition={{ duration: 0.85, ease: 'easeOut' }}
-          aria-hidden="true"
-        >
-          🏀
-        </motion.div>
-        {ballFlight === 'made' && (
+      {/* court */}
+      <div className="relative max-w-sm mx-auto h-52 bg-gradient-to-b from-sky-100 to-amber-50 rounded-3xl border-2 border-slate-200 overflow-hidden">
+        <div className="absolute right-4 top-2 text-6xl select-none" aria-hidden="true">🥅</div>
+        <div className="absolute right-6 top-[72px] w-14 h-2 bg-orange-500 rounded-full" />
+        <AnimatePresence>
+          {shots.map((s) => (
+            <motion.div
+              key={s.id}
+              initial={{ x: 0, y: 0, rotate: 0, opacity: 1 }}
+              animate={
+                s.made
+                  ? { x: [0, 130, 248], y: [0, -130, -86], rotate: 540, opacity: [1, 1, 1] }
+                  : { x: [0, 130, 260], y: [0, -140, -20], rotate: 540, opacity: [1, 1, 0.6] }
+              }
+              transition={{ duration: 0.85, ease: 'easeOut' }}
+              className="absolute bottom-3 left-8 text-4xl select-none"
+              aria-hidden="true"
+            >
+              🏀
+            </motion.div>
+          ))}
+        </AnimatePresence>
+        {shots.some((s) => s.made) && (
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            className="absolute right-4 top-16 text-lg font-display font-extrabold text-green-600"
+            initial={{ scale: 0, opacity: 1 }}
+            animate={{ scale: 1, opacity: 0 }}
+            transition={{ duration: 0.85 }}
+            className="absolute right-4 top-16 text-xl font-display font-extrabold text-green-600"
           >
             SWISH!
           </motion.div>
         )}
       </div>
 
-      <div className="max-w-sm mx-auto mt-4">
-        <div className="relative h-7 rounded-full bg-slate-100 border-2 border-slate-200 overflow-hidden">
-          <div
-            className="absolute top-0 bottom-0 bg-green-200"
-            style={{ left: `${ZONE_START * 100}%`, width: `${(ZONE_END - ZONE_START) * 100}%` }}
-          />
-          <div
-            ref={sliderRef}
-            className="absolute top-0 bottom-0 w-1.5 bg-slate-900 rounded-full"
-            style={{ left: '-3px' }}
-          />
-        </div>
+      <div className="max-w-sm mx-auto mt-5">
         <button
           type="button"
           onClick={shoot}
           disabled={!running}
-          className="mt-4 w-full min-h-14 rounded-2xl bg-orange-500 hover:bg-orange-600 disabled:bg-slate-300 text-white font-display font-extrabold text-xl shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+          className="w-full min-h-20 rounded-3xl bg-orange-500 hover:bg-orange-600 disabled:bg-slate-300 text-white font-display font-extrabold text-3xl shadow-[0_6px_0_0_rgba(0,0,0,0.18)] active:translate-y-1 transition-all"
         >
           SHOOT! 🏀
         </button>
         <p className="text-center text-xs text-slate-400 mt-2">
-          +1 XP per bucket, +3 bonus for a perfect 5/5.
+          +1 XP per basket. Hit the target for a bonus.
         </p>
       </div>
     </div>
