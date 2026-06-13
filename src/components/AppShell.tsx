@@ -1,7 +1,9 @@
+import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useProgress } from '../state/progress';
 import { LevelBadge } from './LevelBadge';
 import { XpFlash } from './XpFlash';
+import { submitHaptic, tapHaptic } from '../utils/haptics';
 
 interface Props {
   children: React.ReactNode;
@@ -17,6 +19,43 @@ export function AppShell({ children }: Props) {
   });
   const location = useLocation();
   const isHome = location.pathname === '/' || location.pathname === '';
+
+  // Wire global haptics for buttons. Opt-in via `data-haptic="tap|submit"`.
+  // Also auto-detect by text — "Submit"/"Check"/"Continue"/"Next" trigger a
+  // soft tap even if the markup doesn't carry the attribute. Cheap and
+  // universal; no per-route edits needed.
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement | null)?.closest('button, [role="button"]');
+      if (!target) return;
+      const explicit = (target as HTMLElement).dataset.haptic;
+      if (explicit === 'submit') {
+        submitHaptic();
+        return;
+      }
+      if (explicit === 'tap') {
+        tapHaptic();
+        return;
+      }
+      const txt = (target.textContent || '').trim().toLowerCase();
+      if (
+        txt.startsWith('submit') ||
+        txt.startsWith('check') ||
+        txt === 'check answer'
+      ) {
+        submitHaptic();
+      } else if (
+        txt.startsWith('next') ||
+        txt.startsWith('continue') ||
+        txt.startsWith('replay') ||
+        txt.startsWith('try again')
+      ) {
+        tapHaptic();
+      }
+    };
+    document.addEventListener('click', onClick);
+    return () => document.removeEventListener('click', onClick);
+  }, []);
 
   return (
     <div

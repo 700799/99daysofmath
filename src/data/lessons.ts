@@ -191,7 +191,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 1, title: 'Adding & subtracting decimals',
     objective: 'Compute carefully with decimals.',
-    videos: [{ title: 'The idea', src: '6.NS-1.mp4' }, { title: 'Worked examples', src: '6.NS-1-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-1-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.NS-1.mp4' }, { title: 'Worked examples', src: '6.NS-1-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-1-trap.mp4' }, { title: "Story: Benjamin Banneker", src: '6.NS-1-story.mp4' }],
     concept: [
       'Line up the decimal points before adding or subtracting.',
       'Fill in zeros so both numbers have the same number of places.',
@@ -455,7 +455,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 2, title: 'Polygons on the grid',
     objective: 'Use coordinates to find side lengths.',
-    videos: [{ title: 'The idea', src: '6.G-2.mp4' }, { title: 'Worked examples', src: '6.G-2-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-2-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.G-2.mp4' }, { title: 'Worked examples', src: '6.G-2-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-2-trap.mp4' }, { title: "Story: Hypatia of Alexandria", src: '6.G-2-story.mp4' }],
     concept: [
       'Plot the vertices in order.',
       'Horizontal side length = difference of x-values; vertical = difference of y-values.',
@@ -495,7 +495,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 4, title: 'Surface area with nets',
     objective: 'Add up the faces of a 3-D shape.',
-    videos: [{ title: 'The idea', src: '6.G-4.mp4' }, { title: 'Worked examples', src: '6.G-4-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-4-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.G-4.mp4' }, { title: 'Worked examples', src: '6.G-4-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-4-trap.mp4' }, { title: "Story: Maryam Mirzakhani", src: '6.G-4-story.mp4' }],
     concept: [
       'A net unfolds a solid into flat faces.',
       'Find the area of each face, then add them all up.',
@@ -944,7 +944,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 10, title: 'Coordinate plane: distance & polygons',
     objective: 'Find distances between points on a grid and side lengths of axis-aligned polygons.',
-    videos: [{ title: 'Worked examples', src: '6.NS-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-10-trap.mp4' }],
+    videos: [{ title: 'Worked examples', src: '6.NS-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-10-trap.mp4' }, { title: "Story: Descartes and the fly", src: '6.NS-10-story.mp4' }],
     concept: [
       'If two points share an x-coordinate, distance = |y₁ − y₂| (vertical).',
       'If they share a y-coordinate, distance = |x₁ − x₂| (horizontal).',
@@ -1170,7 +1170,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.SP', unit: 9, title: 'Displays: dot plots, histograms & box plots',
     objective: 'Read and interpret common 6th-grade statistical displays.',
-    videos: [{ title: 'Worked examples', src: '6.SP-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-9-trap.mp4' }],
+    videos: [{ title: 'Worked examples', src: '6.SP-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-9-trap.mp4' }, { title: "Story: Florence Nightingale", src: '6.SP-9-story.mp4' }],
     concept: [
       'DOT PLOT: each dot is one data value. Tall stacks = common values.',
       'HISTOGRAM: bar HEIGHTS = how many values fall in each interval.',

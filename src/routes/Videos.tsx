@@ -17,9 +17,17 @@ export function Videos() {
         <LessonCard lesson={openLesson} onClose={() => setOpenLesson(null)} />
       )}
 
-      <h1 className="text-2xl font-display font-extrabold text-slate-900">
-        🎬 Video & lesson library
-      </h1>
+      <div className="flex items-baseline justify-between gap-3">
+        <h1 className="text-2xl font-display font-extrabold text-slate-900">
+          🎬 Video library
+        </h1>
+        <Link
+          to="/stories"
+          className="text-sm font-display font-bold text-violet-700 hover:text-violet-900"
+        >
+          🌟 Famous Math Stories →
+        </Link>
+      </div>
       <p className="text-sm text-slate-600 mt-1 mb-5">
         Every unit has short animations <em>and</em> a written step-by-step
         lesson — watch, read, or both. Tap a unit to open it.

@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { successHaptic } from '../utils/haptics';
 
 interface XpFlashItem {
   id: number;
@@ -23,6 +24,7 @@ export const useXpFlash = create<XpFlashState>((set) => ({
   queue: [],
   flashXp: (amount, label) => {
     if (amount <= 0) return;
+    successHaptic();
     const id = nextId++;
     set((s) => ({ queue: [...s.queue, { id, amount, label }] }));
     // Auto-dismiss after 1.6s so the queue self-cleans even if the component

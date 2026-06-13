@@ -36,6 +36,12 @@ const STORIES: Wire[] = [
   { domain: '6.EE', unit: 10, title: 'Story: The chessboard rice puzzle' },
   { domain: '6.NS', unit: 4,  title: 'Story: The invention of zero' },
   { domain: '6.SP', unit: 1,  title: 'Story: Tic-tac-toe strategy' },
+  // Five additional famous-mathematician stories.
+  { domain: '6.G',  unit: 2,  title: 'Story: Hypatia of Alexandria' },
+  { domain: '6.SP', unit: 9,  title: 'Story: Florence Nightingale' },
+  { domain: '6.NS', unit: 10, title: 'Story: Descartes and the fly' },
+  { domain: '6.NS', unit: 1,  title: 'Story: Benjamin Banneker' },
+  { domain: '6.G',  unit: 4,  title: 'Story: Maryam Mirzakhani' },
 ];
 
 function main() {

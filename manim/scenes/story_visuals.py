@@ -8,7 +8,7 @@ from manim import (
     VGroup, Text, Circle, Line, Dot, Polygon, Rectangle, AnnularSector,
     NumberLine, Arc, RoundedRectangle, FadeIn, FadeOut, Write, Create,
     WHITE, BLUE, GREEN, RED, ORANGE, YELLOW, GOLD,
-    UP, DOWN, LEFT, RIGHT, PI, TAU,
+    UP, DOWN, LEFT, RIGHT, ORIGIN, PI, TAU,
 )
 import math
 
@@ -337,3 +337,197 @@ def number_line_zero():
 
 def big_label(text, color=YELLOW):
     return Text(text, font_size=42, color=color, weight="BOLD")
+
+
+# ── Hypatia — Alexandria, polygons & conic sections ────────────────────
+
+def alexandria_scroll():
+    scroll = Rectangle(width=2.4, height=1.6, fill_color=GOLD, fill_opacity=0.25,
+                       stroke_color=GOLD, stroke_width=3)
+    return VGroup(scroll, Text("ΑΛΕΞΑΝΔΡΕΙΑ", font_size=22, color=YELLOW, weight="BOLD").move_to(scroll))
+
+
+def regular_polygons():
+    g = VGroup()
+    sides = [3, 4, 5, 6]
+    colors = [BLUE, ORANGE, GREEN, YELLOW]
+    for i, n in enumerate(sides):
+        verts = [[math.cos(PI / 2 + k * TAU / n) * 0.5,
+                  math.sin(PI / 2 + k * TAU / n) * 0.5, 0]
+                 for k in range(n)]
+        poly = Polygon(*verts, stroke_color=colors[i], stroke_width=3,
+                       fill_color=colors[i], fill_opacity=0.25)
+        poly.shift(RIGHT * (i % 2) * 1.5 + UP * (1 - i // 2) * 1.3)
+        g.add(poly)
+    return g
+
+
+def cone_section():
+    cone = Polygon([0, 1.2, 0], [-0.9, -0.5, 0], [0.9, -0.5, 0],
+                   fill_color=BLUE, fill_opacity=0.25,
+                   stroke_color=BLUE, stroke_width=3)
+    slice_line = Line([-1.0, 0.3, 0], [1.0, -0.1, 0], color=YELLOW, stroke_width=4)
+    label = Text("Slice = curve", font_size=24, color=YELLOW, weight="BOLD")
+    label.next_to(cone, DOWN, buff=0.4)
+    return VGroup(cone, slice_line, label)
+
+
+# ── Florence Nightingale — rose diagram for cause of death ──────────────
+
+def crimea_map():
+    map_box = Rectangle(width=2.8, height=2.0, fill_color=BLUE, fill_opacity=0.15,
+                        stroke_color=BLUE, stroke_width=2)
+    title = Text("Crimea, 1854", font_size=22, color=BLUE, weight="BOLD").next_to(map_box, UP, buff=0.2)
+    flag = Text("🏴", font_size=36).move_to(map_box.get_center())
+    return VGroup(map_box, title, flag)
+
+
+def hospital_cost():
+    bars = VGroup()
+    causes = [("Disease", 0.85, RED), ("Wounds", 0.15, ORANGE)]
+    for i, (label, frac, color) in enumerate(causes):
+        bar = Rectangle(width=3.0 * frac, height=0.6, fill_color=color,
+                        fill_opacity=0.85, stroke_color=WHITE, stroke_width=2)
+        lab = Text(label, font_size=22, color=color, weight="BOLD")
+        pct = Text(f"{int(frac*100)}%", font_size=22, color=WHITE)
+        row = VGroup(lab, bar, pct).arrange(RIGHT, buff=0.25)
+        bars.add(row)
+    return VGroup(*bars).arrange(DOWN, buff=0.3, aligned_edge=LEFT)
+
+
+def rose_diagram():
+    # Coxcomb / rose chart with 4 wedges, varying radii.
+    g = VGroup()
+    months = [(0.6, RED), (0.95, RED), (0.45, ORANGE), (0.3, BLUE)]
+    for i, (r, color) in enumerate(months):
+        ang0 = i * TAU / 4
+        ang1 = (i + 1) * TAU / 4
+        wedge = AnnularSector(inner_radius=0.0, outer_radius=r * 1.6,
+                              angle=ang1 - ang0, start_angle=ang0,
+                              fill_color=color, fill_opacity=0.7,
+                              stroke_color=WHITE, stroke_width=2)
+        g.add(wedge)
+    label = Text("Disease deaths", font_size=22, color=RED, weight="BOLD")
+    label.next_to(g, DOWN, buff=0.3)
+    return VGroup(g, label)
+
+
+# ── Descartes — fly on the ceiling → coordinate plane ──────────────────
+
+def ceiling_fly():
+    ceiling = Rectangle(width=3.6, height=2.4, fill_color="#FAFAFA", fill_opacity=0.15,
+                        stroke_color=WHITE, stroke_width=2)
+    fly = Text("🪰", font_size=42).shift(RIGHT * 0.8 + UP * 0.6)
+    return VGroup(ceiling, fly)
+
+
+def coord_with_fly():
+    from manim import Axes
+    grid = NumberLine(x_range=[0, 5, 1], length=3.4, include_numbers=True,
+                      font_size=26, color=WHITE, stroke_width=3)
+    grid_y = NumberLine(x_range=[0, 4, 1], length=2.8, include_numbers=True,
+                        font_size=26, color=WHITE, stroke_width=3).rotate(PI / 2)
+    grid_y.next_to(grid, UP, buff=0).align_to(grid, LEFT)
+    point = Dot(grid.n2p(3) + UP * 1.6, color=YELLOW, radius=0.12)
+    fly = Text("🪰", font_size=28).next_to(point, UP + RIGHT, buff=0.04)
+    coord = Text("(3, 2)", font_size=30, color=YELLOW, weight="BOLD")
+    coord.next_to(point, DOWN + RIGHT, buff=0.2)
+    return VGroup(grid, grid_y, point, fly, coord)
+
+
+def x_y_anywhere():
+    return VGroup(
+        Text("Any point =", font_size=26, color=WHITE),
+        Text("(x, y)", font_size=46, color=YELLOW, weight="BOLD"),
+    ).arrange(DOWN, buff=0.25)
+
+
+# ── Banneker — clock + almanac + DC compass ────────────────────────────
+
+def wooden_clock():
+    face = Circle(radius=0.9, fill_color="#A87C5A", fill_opacity=0.9, stroke_color=GOLD, stroke_width=3)
+    hour = Line([0, 0, 0], [0, 0.55, 0], stroke_width=6, color=DARK)
+    minute = Line([0, 0, 0], [0.7, 0, 0], stroke_width=5, color=DARK)
+    pivot = Dot(ORIGIN, radius=0.06, color=GOLD)
+    return VGroup(face, hour, minute, pivot)
+
+
+def almanac_grid():
+    rows = []
+    days = ["Mar 1", "Mar 15", "Apr 1", "Apr 15"]
+    times = ["6:32", "6:18", "5:54", "5:30"]
+    rows.append(VGroup(
+        Text("Date", font_size=22, color=BLUE, weight="BOLD"),
+        Text("Sunrise", font_size=22, color=ORANGE, weight="BOLD"),
+    ).arrange(RIGHT, buff=1.4))
+    for d, t in zip(days, times):
+        rows.append(VGroup(
+            Text(d, font_size=22, color=WHITE),
+            Text(t, font_size=22, color=YELLOW, weight="BOLD"),
+        ).arrange(RIGHT, buff=1.8))
+    return VGroup(*rows).arrange(DOWN, buff=0.22, aligned_edge=LEFT)
+
+
+def dc_compass():
+    diamond = Polygon([0, 1.2, 0], [1.2, 0, 0], [0, -1.2, 0], [-1.2, 0, 0],
+                      fill_color=WHITE, fill_opacity=0.1,
+                      stroke_color=YELLOW, stroke_width=3)
+    n = Text("N", font_size=24, color=YELLOW, weight="BOLD").next_to(diamond, UP, buff=0.05)
+    label = Text("D.C.", font_size=30, color=YELLOW, weight="BOLD").move_to(diamond)
+    return VGroup(diamond, n, label)
+
+
+# ── Mirzakhani — surfaces, doodles, Fields Medal ───────────────────────
+
+def doodle_curves():
+    from manim import ParametricFunction
+    f = ParametricFunction(
+        lambda t: [1.4 * math.cos(t), 0.8 * math.sin(t) + 0.4 * math.sin(2 * t), 0],
+        t_range=[0, TAU],
+        color=BLUE, stroke_width=4,
+    )
+    f2 = ParametricFunction(
+        lambda t: [1.4 * math.cos(t) * 0.6, 0.8 * math.sin(t), 0],
+        t_range=[0, TAU],
+        color=ORANGE, stroke_width=4,
+    )
+    return VGroup(f, f2)
+
+
+def fields_medal():
+    coin = Circle(radius=1.0, fill_color=GOLD, fill_opacity=0.95,
+                  stroke_color=YELLOW, stroke_width=4)
+    text = Text("Fields\nMedal", font_size=24, color=DARK, weight="BOLD").move_to(coin)
+    return VGroup(coin, text)
+
+
+def hex_net():
+    # Hexagonal "net" (a flat thing that folds into a shape).
+    hex_top = []
+    verts = [[math.cos(PI / 6 + k * PI / 3) * 0.7,
+              math.sin(PI / 6 + k * PI / 3) * 0.7, 0]
+             for k in range(6)]
+    hex_top = Polygon(*verts, stroke_color=YELLOW, stroke_width=3,
+                      fill_color=YELLOW, fill_opacity=0.3)
+    return hex_top
+
+
+def saddle_surface():
+    # Wireframe saddle (suggesting curved surface).
+    from manim import ParametricFunction
+    g = VGroup()
+    for u in [-1, -0.5, 0, 0.5, 1]:
+        f = ParametricFunction(
+            lambda t, u=u: [t, u, 0],
+            t_range=[-1.2, 1.2],
+            color=BLUE, stroke_width=2,
+        )
+        g.add(f)
+    for v in [-1, -0.5, 0, 0.5, 1]:
+        f = ParametricFunction(
+            lambda t, v=v: [v, t * 0.7, 0],
+            t_range=[-1.2, 1.2],
+            color=ORANGE, stroke_width=2,
+        )
+        g.add(f)
+    return g

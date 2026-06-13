@@ -500,20 +500,24 @@ class StoryDeck(LearningExperienceDeck):
             sub = _T(_wrap(self.SUBTITLE, 48), font_size=28, color=pal["accent"], weight="BOLD")
             sub.to_edge(UP, buff=1.05)
             self.play(_Fi(sub, shift=DOWN * 0.1), run_time=_rt(0.7))
-            self.wait(0.5)
+            # Give kids time to read the subtitle before moving on.
+            self.wait(1.2)
             self.section_break()
             self.play(_Fo(sub), run_time=_rt(0.4))
 
         # Beats: paragraph on the LEFT, illustration on the RIGHT.
+        # `body` text is auto-paced — longer text = longer hold, so 3-5 minute
+        # stories naturally land at the right speed without manual tuning.
         for bi, beat in enumerate(self.BEATS):
             head = _T(_wrap(beat.get("head", ""), 24),
                       font_size=30, color=pal["accent"], weight="BOLD")
             head.to_edge(UP, buff=1.0).to_edge(LEFT, buff=0.6)
-            body = _T(_wrap(beat.get("body", ""), 30),
+            body_str = beat.get("body", "")
+            body = _T(_wrap(body_str, 30),
                       font_size=24, color=pal["step"])
             body.next_to(head, DOWN, buff=0.45, aligned_edge=LEFT)
             self.play(_Fi(head, shift=DOWN * 0.15), run_time=_rt(0.6))
-            self.play(_Fi(body, shift=DOWN * 0.15), run_time=_rt(0.7))
+            self.play(_Fi(body, shift=DOWN * 0.15), run_time=_rt(0.9))
             if bi % 2 == 0:
                 M.blink(self, self.mascot)
             else:
@@ -522,12 +526,12 @@ class StoryDeck(LearningExperienceDeck):
             visual_fn = beat.get("visual")
             v_objs = None
             if visual_fn is not None:
-                # BEAT visual is a method defined on the deck class; pass `self`
-                # twice so it lands as both the bound instance AND the scene
-                # argument the visual helper uses.
                 v_objs = visual_fn(self, self, pal, self.mascot)
 
-            self.wait(0.5)
+            # Pace the hold to the length of the body text so kids can read.
+            # ~ 18 chars/sec ≈ 200 words/min reading pace for ages 10-11.
+            read_seconds = max(2.6, min(8.5, len(body_str) / 18))
+            self.wait(read_seconds)
             self.section_break()
             cleanup = [head, body]
             if v_objs is not None:
@@ -543,4 +547,4 @@ class StoryDeck(LearningExperienceDeck):
             learned.next_to(learned_head, DOWN, buff=0.5)
             self.play(_Fi(learned_head), run_time=_rt(0.5))
             self.play(_Fi(learned, shift=DOWN * 0.15), run_time=_rt(0.85))
-            self.wait(1.0)
+            self.wait(1.6)
