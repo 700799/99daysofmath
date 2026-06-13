@@ -1,26 +1,34 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 const SHOTS = 5;
-// The power bar oscillates; tapping inside the green zone scores.
-const ZONE_START = 0.38;
-const ZONE_END = 0.62;
+// Power bar oscillates 0 → 1 → 0. Wider zone so the tap window is fair.
+const ZONE_START = 0.34;
+const ZONE_END = 0.66;
+const SPEED = 1.4; // bar units per second
 
 type ShotResult = 'made' | 'missed';
 
 export function Shootout() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
-  const [power, setPower] = useState(0);
   const [shots, setShots] = useState<ShotResult[]>([]);
   const [ballFlight, setBallFlight] = useState<ShotResult | null>(null);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
+
+  // Live power lives in a ref so the shoot() handler always reads the
+  // value that was actually rendered on the last frame (React state would
+  // lag by a render and break the green-zone check).
+  const powerRef = useRef(0);
   const dirRef = useRef(1);
   const rafRef = useRef(0);
+  const sliderRef = useRef<HTMLDivElement | null>(null);
   const doneRef = useRef(false);
 
   const running = shots.length < SHOTS && !ballFlight && !outcome;
+  useArcadeClock(!!outcome);
 
   useEffect(() => {
     if (!running) return;
@@ -28,17 +36,17 @@ export function Shootout() {
     const tick = (now: number) => {
       const dt = (now - last) / 1000;
       last = now;
-      setPower((p) => {
-        let next = p + dirRef.current * dt * 1.4;
-        if (next >= 1) {
-          next = 1;
-          dirRef.current = -1;
-        } else if (next <= 0) {
-          next = 0;
-          dirRef.current = 1;
-        }
-        return next;
-      });
+      let next = powerRef.current + dirRef.current * dt * SPEED;
+      if (next >= 1) {
+        next = 1;
+        dirRef.current = -1;
+      } else if (next <= 0) {
+        next = 0;
+        dirRef.current = 1;
+      }
+      powerRef.current = next;
+      const el = sliderRef.current;
+      if (el) el.style.left = `calc(${next * 100}% - 3px)`;
       rafRef.current = requestAnimationFrame(tick);
     };
     rafRef.current = requestAnimationFrame(tick);
@@ -47,7 +55,8 @@ export function Shootout() {
 
   const shoot = () => {
     if (!running) return;
-    const made = power >= ZONE_START && power <= ZONE_END;
+    const p = powerRef.current;
+    const made = p >= ZONE_START && p <= ZONE_END;
     setBallFlight(made ? 'made' : 'missed');
     setTimeout(() => {
       const next = [...shots, made ? ('made' as const) : ('missed' as const)];
@@ -56,7 +65,7 @@ export function Shootout() {
       if (next.length === SHOTS && !doneRef.current) {
         doneRef.current = true;
         const makes = next.filter((s) => s === 'made').length;
-        const baseXp = makes + (makes === SHOTS ? 3 : 0); // perfect round bonus
+        const baseXp = makes + (makes === SHOTS ? 3 : 0);
         setOutcome(recordArcadePlay('shootout', Math.max(1, baseXp)));
       }
     }, 900);
@@ -66,7 +75,7 @@ export function Shootout() {
     setShots([]);
     setBallFlight(null);
     setOutcome(null);
-    setPower(0);
+    powerRef.current = 0;
     dirRef.current = 1;
     doneRef.current = false;
   };
@@ -92,10 +101,9 @@ export function Shootout() {
     <div>
       <ArcadeHeader title="Shootout" emoji="🏀" />
       <p className="text-sm text-slate-600 mb-2">
-        Tap <b>SHOOT</b> when the slider is in the green zone. {SHOTS} shots!
+        Tap <b>SHOOT</b> when the slider is in the <span className="text-green-700 font-bold">green zone</span>. {SHOTS} shots!
       </p>
 
-      {/* scoreboard */}
       <div className="flex justify-center gap-1.5 mb-4">
         {Array.from({ length: SHOTS }).map((_, i) => (
           <span key={i} className="text-2xl">
@@ -104,18 +112,19 @@ export function Shootout() {
         ))}
       </div>
 
-      {/* court */}
       <div className="relative max-w-sm mx-auto h-44 bg-gradient-to-b from-sky-100 to-amber-50 rounded-3xl border-2 border-slate-200 overflow-hidden">
-        <div className="absolute right-6 top-4 text-4xl" aria-hidden="true">🏀🥅</div>
-        <div className="absolute right-7 top-12 w-10 h-1.5 bg-orange-500 rounded-full" />
+        {/* hoop */}
+        <div className="absolute right-4 top-3 text-5xl" aria-hidden="true">🥅</div>
+        <div className="absolute right-6 top-[68px] w-12 h-1.5 bg-orange-500 rounded-full" />
+        {/* ball */}
         <motion.div
           key={`${shots.length}-${ballFlight ?? 'idle'}`}
           className="absolute bottom-3 left-8 text-4xl"
           animate={
             ballFlight === 'made'
-              ? { x: [0, 110, 215], y: [0, -120, -78], rotate: 360 }
+              ? { x: [0, 130, 248], y: [0, -130, -98], rotate: 360 }
               : ballFlight === 'missed'
-                ? { x: [0, 110, 230], y: [0, -130, -20], rotate: 360 }
+                ? { x: [0, 130, 260], y: [0, -140, -20], rotate: 360 }
                 : { x: 0, y: 0, rotate: 0 }
           }
           transition={{ duration: 0.85, ease: 'easeOut' }}
@@ -134,7 +143,6 @@ export function Shootout() {
         )}
       </div>
 
-      {/* power bar */}
       <div className="max-w-sm mx-auto mt-4">
         <div className="relative h-7 rounded-full bg-slate-100 border-2 border-slate-200 overflow-hidden">
           <div
@@ -142,8 +150,9 @@ export function Shootout() {
             style={{ left: `${ZONE_START * 100}%`, width: `${(ZONE_END - ZONE_START) * 100}%` }}
           />
           <div
+            ref={sliderRef}
             className="absolute top-0 bottom-0 w-1.5 bg-slate-900 rounded-full"
-            style={{ left: `calc(${power * 100}% - 3px)` }}
+            style={{ left: '-3px' }}
           />
         </div>
         <button

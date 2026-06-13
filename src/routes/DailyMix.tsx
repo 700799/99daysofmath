@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useProgress, type Stars } from '../state/progress';
+import { useMathClock } from '../hooks/useMathClock';
 import { isEquivalent } from '../data/normalize';
 import { ProblemCard } from '../components/ProblemCard';
 import { AnswerInput } from '../components/AnswerInput';
@@ -37,6 +38,7 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export function DailyMix() {
+  useMathClock();
   const navigate = useNavigate();
   const awardXP = useProgress((s) => s.awardXP);
   const incStreak = useProgress((s) => s.incrementStreak);

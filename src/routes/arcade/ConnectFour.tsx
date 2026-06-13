@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 const COLS = 7;
 const ROWS = 6;
@@ -98,6 +99,7 @@ export function ConnectFour() {
   const [phase, setPhase] = useState<Phase>('playing');
   const [result, setResult] = useState<'win' | 'lose' | 'draw' | null>(null);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
+  useArcadeClock(!!outcome);
   const recordedRef = useRef(false);
 
   const finish = (res: 'win' | 'lose' | 'draw', finalBoard: Board) => {

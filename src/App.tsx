@@ -23,6 +23,8 @@ const MemoryMatch = lazy(() => import('./routes/arcade/MemoryMatch').then((m) =>
 const Shootout = lazy(() => import('./routes/arcade/Shootout').then((m) => ({ default: m.Shootout })));
 const ZombieZapper = lazy(() => import('./routes/arcade/ZombieZapper').then((m) => ({ default: m.ZombieZapper })));
 const Fishing = lazy(() => import('./routes/arcade/Fishing').then((m) => ({ default: m.Fishing })));
+const MathRunner = lazy(() => import('./routes/arcade/MathRunner').then((m) => ({ default: m.MathRunner })));
+const Platformer = lazy(() => import('./routes/arcade/Platformer').then((m) => ({ default: m.Platformer })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 function RouteFallback() {
@@ -59,6 +61,8 @@ export default function App() {
           <Route path="/arcade/shootout" element={<Shootout />} />
           <Route path="/arcade/zapper" element={<ZombieZapper />} />
           <Route path="/arcade/fishing" element={<Fishing />} />
+          <Route path="/arcade/runner" element={<MathRunner />} />
+          <Route path="/arcade/platformer" element={<Platformer />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

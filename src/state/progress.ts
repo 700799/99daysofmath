@@ -92,6 +92,13 @@ interface ProgressState {
   lastWheelSpinDate: string | null;     // prize wheel is once per day
   c4Wins: number;
   finalsResults: Record<number, { best: number; completedAt: string }>;
+  // ---- v9 additions (daily cap + math-unlock) ----
+  arcadeBudget: {
+    date: string | null;
+    secondsPlayed: number;
+    lockedAt: string | null;
+    mathSecondsTowardUnlock: number;
+  };
   // ---- actions ----
   recordUnitResult: (
     domain: Domain,
@@ -112,6 +119,11 @@ interface ProgressState {
     opts?: { c4Win?: boolean; wheelSpin?: boolean },
   ) => ArcadePlayOutcome;
   recordFinalResult: (quizN: number, correct: number, total: number) => FinalOutcome;
+  tickArcadeSeconds: (n: number) => void;
+  tickMathSeconds: (n: number) => void;
+  isArcadeLocked: () => boolean;
+  arcadeRemainingSeconds: () => number;
+  mathRemainingSeconds: () => number;
   completeLesson: (key: string) => string[];
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
@@ -268,6 +280,18 @@ const v8Defaults = {
   finalsResults: {} as Record<number, { best: number; completedAt: string }>,
 };
 
+const v9Defaults = {
+  arcadeBudget: {
+    date: null as string | null,
+    secondsPlayed: 0,
+    lockedAt: null as string | null,
+    mathSecondsTowardUnlock: 0,
+  },
+};
+
+export const ARCADE_DAILY_CAP_SECONDS = 180;     // 3 minutes per day
+export const MATH_UNLOCK_SECONDS = 900;          // 15 minutes of math unlocks again
+
 export function migrateProgress(persisted: unknown, fromVersion: number): unknown {
   if (!persisted || typeof persisted !== 'object') return persisted;
   const state = persisted as Partial<ProgressState> & { stickers?: string[] };
@@ -345,6 +369,12 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       if (stateAny[k] === undefined) stateAny[k] = v;
     }
   }
+  if (fromVersion < 9) {
+    const stateAny = state as Record<string, unknown>;
+    for (const [k, v] of Object.entries(v9Defaults)) {
+      if (stateAny[k] === undefined) stateAny[k] = v;
+    }
+  }
   return state;
 }
 
@@ -366,6 +396,7 @@ export const useProgress = create<ProgressState>()(
       ...v6Defaults,
       ...v7Defaults,
       ...v8Defaults,
+      ...v9Defaults,
       recordUnitResult: (domain, unit, stars, missedIds, xpEarned, mistakesTotal) => {
         const stateBefore = get();
         const today = todayISO();
@@ -708,6 +739,70 @@ export const useProgress = create<ProgressState>()(
         });
         return earned;
       },
+      tickArcadeSeconds: (n) => {
+        if (n <= 0) return;
+        const before = get();
+        const today = todayISO();
+        const stale = before.arcadeBudget.date !== today;
+        const baseSeconds = stale ? 0 : before.arcadeBudget.secondsPlayed;
+        const baseMath = stale ? 0 : before.arcadeBudget.mathSecondsTowardUnlock;
+        const baseLockedAt = stale ? null : before.arcadeBudget.lockedAt;
+        const nextSeconds = baseSeconds + n;
+        const lockedAt =
+          baseLockedAt ?? (nextSeconds >= ARCADE_DAILY_CAP_SECONDS ? new Date().toISOString() : null);
+        set({
+          arcadeBudget: {
+            date: today,
+            secondsPlayed: nextSeconds,
+            lockedAt,
+            mathSecondsTowardUnlock: baseMath,
+          },
+        });
+      },
+      tickMathSeconds: (n) => {
+        if (n <= 0) return;
+        const before = get();
+        const today = todayISO();
+        const stale = before.arcadeBudget.date !== today;
+        // Stale day → leave the v9 block alone; new arcade play will create today's block.
+        if (stale) return;
+        if (!before.arcadeBudget.lockedAt) return; // only credit math while locked
+        const nextMath = before.arcadeBudget.mathSecondsTowardUnlock + n;
+        if (nextMath >= MATH_UNLOCK_SECONDS) {
+          set({
+            arcadeBudget: {
+              date: today,
+              secondsPlayed: 0,
+              lockedAt: null,
+              mathSecondsTowardUnlock: 0,
+            },
+          });
+        } else {
+          set({
+            arcadeBudget: {
+              ...before.arcadeBudget,
+              date: today,
+              mathSecondsTowardUnlock: nextMath,
+            },
+          });
+        }
+      },
+      isArcadeLocked: () => {
+        const s = get();
+        if (s.arcadeBudget.date !== todayISO()) return false;
+        return !!s.arcadeBudget.lockedAt;
+      },
+      arcadeRemainingSeconds: () => {
+        const s = get();
+        if (s.arcadeBudget.date !== todayISO()) return ARCADE_DAILY_CAP_SECONDS;
+        return Math.max(0, ARCADE_DAILY_CAP_SECONDS - s.arcadeBudget.secondsPlayed);
+      },
+      mathRemainingSeconds: () => {
+        const s = get();
+        if (s.arcadeBudget.date !== todayISO()) return 0;
+        if (!s.arcadeBudget.lockedAt) return 0;
+        return Math.max(0, MATH_UNLOCK_SECONDS - s.arcadeBudget.mathSecondsTowardUnlock);
+      },
       toggleSound: () => set((s) => ({ soundEnabled: !s.soundEnabled })),
       // Trails are open: every unit is playable. (Kept for API compatibility;
       // later units award bigger bonuses instead of being locked.)
@@ -767,11 +862,17 @@ export const useProgress = create<ProgressState>()(
           lastWheelSpinDate: null,
           c4Wins: 0,
           finalsResults: {},
+          arcadeBudget: {
+            date: null,
+            secondsPlayed: 0,
+            lockedAt: null,
+            mathSecondsTowardUnlock: 0,
+          },
         }),
     }),
     {
       name: '99daysofmath:progress',
-      version: 8,
+      version: 9,
       migrate: migrateProgress,
     },
   ),

@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 const SEGMENTS = [5, 20, 8, 12, 40, 10, 25, 15]; // XP prizes around the wheel
 const COLORS = ['#f59e0b', '#8b5cf6', '#10b981', '#ef4444', '#facc15', '#3b82f6', '#ec4899', '#14b8a6'];
@@ -30,6 +31,7 @@ export function Wheel() {
   const [rotation, setRotation] = useState(0);
   const [prize, setPrize] = useState<number | null>(null);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
+  useArcadeClock(!!outcome);
   const doneRef = useRef(false);
 
   const spin = () => {

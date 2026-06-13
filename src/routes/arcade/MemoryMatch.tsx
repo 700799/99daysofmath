@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 const EMOJI = ['➗', '📐', '🔢', '⚖️', '📊', '🧮', '🎯', '⭐'];
 
@@ -31,6 +32,7 @@ export function MemoryMatch() {
   const [flips, setFlips] = useState(0);
   const [locked, setLocked] = useState(false);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
+  useArcadeClock(!!outcome);
   const doneRef = useRef(false);
 
   const allMatched = cards.every((c) => c.matched);

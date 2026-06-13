@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 const GAME_SECONDS = 45;
 const LIVES = 3;
@@ -23,6 +24,7 @@ export function ZombieZapper() {
   const [lives, setLives] = useState(LIVES);
   const [timeLeft, setTimeLeft] = useState(GAME_SECONDS);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
+  useArcadeClock(!!outcome);
   const nextId = useRef(1);
   const doneRef = useRef(false);
   const stateRef = useRef({ zapped: 0, lives: LIVES, timeLeft: GAME_SECONDS });

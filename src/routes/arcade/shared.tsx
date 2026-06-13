@@ -22,6 +22,8 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'shootout', path: '/arcade/shootout', emoji: '🏀', name: 'Shootout', blurb: 'Time your tap — 5 shots at the hoop.', baseXp: 5, gradient: 'from-orange-500 to-amber-600' },
   { id: 'zapper', path: '/arcade/zapper', emoji: '🧟', name: 'Zombie Zapper', blurb: 'Tap the silly zombies before they reach the fence!', baseXp: 6, gradient: 'from-lime-500 to-green-600' },
   { id: 'fishing', path: '/arcade/fishing', emoji: '🎣', name: 'Fishing', blurb: 'Drop the hook as the fish swim by.', baseXp: 6, gradient: 'from-cyan-500 to-teal-600' },
+  { id: 'runner', path: '/arcade/runner', emoji: '🏃', name: 'Math Runner', blurb: 'Steer into the right answer before the gate hits!', baseXp: 8, gradient: 'from-emerald-500 to-teal-600' },
+  { id: 'platformer', path: '/arcade/platformer', emoji: '🍄', name: 'Math Platformer', blurb: 'Jump and stomp through the level to the flag.', baseXp: 10, gradient: 'from-pink-500 to-rose-600' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {

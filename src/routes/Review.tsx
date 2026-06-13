@@ -3,6 +3,7 @@ import { useNavigate, useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { DOMAINS, type Domain, type Problem, type HintStep } from '../types/problem';
 import { useProgress } from '../state/progress';
+import { useMathClock } from '../hooks/useMathClock';
 import { isEquivalent } from '../data/normalize';
 import { getProblemsByIds } from '../data/problems';
 import { ProblemCard } from '../components/ProblemCard';
@@ -37,6 +38,7 @@ function daysUntil(iso: string): number {
 }
 
 export function Review() {
+  useMathClock();
   const navigate = useNavigate();
   const params = useParams<{ domain?: string }>();
   const filterDomain =

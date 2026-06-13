@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 const GAME_SECONDS = 60;
 const POND_W = 340;
@@ -32,6 +33,7 @@ export function Fishing() {
   const [casting, setCasting] = useState(false);
   const [splash, setSplash] = useState<string | null>(null);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
+  useArcadeClock(!!outcome);
   const nextId = useRef(1);
   const doneRef = useRef(false);
   const scoreRef = useRef(0);

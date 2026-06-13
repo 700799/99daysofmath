@@ -287,12 +287,17 @@ async function main() {
     if (!unitRow) throw new Error('No unit rows in the video library');
     console.log('   ✓ Library lists units with videos + lessons');
 
-    console.log('27. Arcade hub renders 6 game tiles + variety meter...');
+    console.log('27. Arcade hub renders 8 game tiles + variety meter + daily timer...');
     await page.goto(BASE + '#/arcade', { waitUntil: 'networkidle' });
     await page.waitForSelector('text=Variety bonus', { timeout: 5000 });
+    await page.waitForSelector("text=Today's arcade timer", { timeout: 5000 });
     const tiles = await page.locator('a[href^="#/arcade/"]').count();
-    if (tiles < 6) throw new Error(`Expected 6 arcade tiles, got ${tiles}`);
-    console.log('   ✓ Arcade hub with 6 games');
+    if (tiles < 8) throw new Error(`Expected 8 arcade tiles, got ${tiles}`);
+    await page.goto(BASE + '#/arcade/runner', { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=Math Runner', { timeout: 5000 });
+    await page.goto(BASE + '#/arcade/platformer', { waitUntil: 'networkidle' });
+    await page.waitForSelector('text=Math Platformer', { timeout: 5000 });
+    console.log('   ✓ Arcade hub with 8 games + new routes mount');
 
     console.log('28. Memory Match starts and flips a card...');
     await page.goto(BASE + '#/arcade/memory', { waitUntil: 'networkidle' });

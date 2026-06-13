@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { DOMAINS, type Domain, type HintLevel, type HintStep } from '../types/problem';
 import { useUnitProblems } from '../hooks/useProblems';
 import { useProgress } from '../state/progress';
+import { useMathClock } from '../hooks/useMathClock';
 import { isEquivalent } from '../data/normalize';
 import { ProblemCard } from '../components/ProblemCard';
 import { AnswerInput } from '../components/AnswerInput';
@@ -28,6 +29,7 @@ function tiersFor(problem: { hint: string; hints?: HintStep[] }): HintStep[] {
 type Phase = 'problem' | 'feedback-correct' | 'feedback-wrong';
 
 export function Unit() {
+  useMathClock();
   const { domain, unit } = useParams<{ domain: string; unit: string }>();
   const navigate = useNavigate();
   const record = useProgress((s) => s.recordUnitResult);
