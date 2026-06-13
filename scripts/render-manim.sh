@@ -47,8 +47,10 @@ for f in $glob; do
   fi
 
   echo "==> rendering $klass → $out_name"
-  "$MANIM" -qm --disable_caching -o "$out_name" "$f" "$klass" >/dev/null
-  cp "media/videos/${base}/720p30/${out_name}" "$OUT_DIR/$out_name"
+  QUALITY=${MANIM_QUALITY:-qm}
+  if [ "$QUALITY" = "ql" ]; then SUBDIR=480p15; else SUBDIR=720p30; fi
+  "$MANIM" "-${QUALITY}" --disable_caching -o "$out_name" "$f" "$klass" >/dev/null
+  cp "media/videos/${base}/${SUBDIR}/${out_name}" "$OUT_DIR/$out_name"
 done
 done
 
