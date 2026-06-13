@@ -13,7 +13,6 @@ import { Mascot } from '../components/Mascot';
 import { DailyQuestRing } from '../components/DailyQuestRing';
 import { PracticeHeatmap } from '../components/PracticeHeatmap';
 import { Onboarding } from '../components/Onboarding';
-import { recommendNextUnit } from '../utils/recommendations';
 
 export function Home() {
   const { data: summary, loading, error } = useDomainSummary();
@@ -22,11 +21,8 @@ export function Home() {
   const todaysXp = useProgress((s) => s.todaysXp());
   const practiceDates = useProgress((s) => s.practiceDates);
   const xpByDate = useProgress((s) => s.xpByDate);
-  const dueReview = useProgress((s) => s.dueReviewCount());
   const onboardingComplete = useProgress((s) => s.onboardingComplete);
   const markOnboardingDone = useProgress((s) => s.markOnboardingDone);
-
-  const rec = recommendNextUnit(progress);
 
   return (
     <div>
@@ -65,57 +61,11 @@ export function Home() {
         </div>
       </div>
 
-      {/* Due for review */}
-      {dueReview > 0 && (
-        <Link
-          to="/review"
-          className="block mb-4 rounded-3xl p-4 sm:p-5 bg-gradient-to-br from-rose-500 to-pink-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="flex items-center gap-3 sm:gap-4">
-            <div className="text-4xl sm:text-5xl">📅</div>
-            <div className="flex-1 min-w-0">
-              <div className="text-xs font-display font-bold uppercase tracking-wider opacity-90">
-                Smart review
-              </div>
-              <div className="font-display font-extrabold text-lg sm:text-xl">
-                {dueReview} {dueReview === 1 ? 'problem' : 'problems'} due today
-              </div>
-              <div className="text-xs sm:text-sm opacity-90 mt-0.5">
-                Lock in the ones you missed — timed for memory.
-              </div>
-            </div>
-            <div className="text-2xl shrink-0">→</div>
-          </div>
-        </Link>
-      )}
-
-      {/* Recommended next */}
-      {rec && (
-        <Link
-          to={rec.allMastered ? '/test' : `/unit/${rec.domain}/${rec.unit}`}
-          className="block mb-4 rounded-3xl p-4 sm:p-5 bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="flex items-center gap-3 sm:gap-4">
-            <div className="text-4xl sm:text-5xl">{rec.allMastered ? '🎓' : DOMAIN_EMOJI[rec.domain]}</div>
-            <div className="flex-1 min-w-0">
-              <div className="text-xs font-display font-bold uppercase tracking-wider opacity-90">
-                Recommended next
-              </div>
-              <div className="font-display font-extrabold text-lg sm:text-xl">
-                {rec.allMastered ? 'Mock MAP test' : `${DOMAIN_LABELS[rec.domain]} · Unit ${rec.unit}`}
-              </div>
-              <div className="text-xs sm:text-sm opacity-90 mt-0.5">{rec.reason}</div>
-            </div>
-            <div className="text-2xl shrink-0">→</div>
-          </div>
-        </Link>
-      )}
-
-      {/* Play — 3x3 grid */}
-      <div className="mt-1 mb-2 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
-        ▶ Play
+      {/* Video Library */}
+      <div className="mt-6 mb-4 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
+        🎬 Video
       </div>
-      <div className="grid grid-cols-3 gap-3 mb-6">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
         <Link
           to="/videos"
           className="block rounded-2xl p-3 bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
@@ -141,6 +91,18 @@ export function Home() {
           <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">History</div>
         </Link>
         <Link
+          to="/settings"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-slate-500 to-slate-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-2xl">⚙️</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Settings</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Preferences</div>
+        </Link>
+      </div>
+
+      {/* Core Play Tiles */}
+      <div className="grid grid-cols-3 gap-3 mb-6">
+        <Link
           to="/practice"
           className="block rounded-2xl p-3 bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
@@ -149,41 +111,12 @@ export function Home() {
           <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Adaptive</div>
         </Link>
         <Link
-          to="/review"
-          className="relative block rounded-2xl p-3 bg-gradient-to-br from-rose-500 to-pink-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          {dueReview > 0 && (
-            <span className="absolute top-2 right-2 bg-white text-rose-600 text-[9px] font-display font-extrabold px-1.5 py-0.5 rounded-full">
-              {dueReview}
-            </span>
-          )}
-          <div className="text-2xl">📅</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Review</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Missed</div>
-        </Link>
-        <Link
           to="/arcade"
           className="block rounded-2xl p-3 bg-gradient-to-br from-violet-500 to-purple-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">🕹️</div>
           <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Arcade</div>
           <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Games</div>
-        </Link>
-        <Link
-          to="/"
-          className="block rounded-2xl p-3 bg-gradient-to-br from-teal-500 to-emerald-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">🏔️</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Trails</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Topics</div>
-        </Link>
-        <Link
-          to="/test"
-          className="block rounded-2xl p-3 bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">🎓</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Mock Test</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Timed</div>
         </Link>
         <Link
           to="/finals"
