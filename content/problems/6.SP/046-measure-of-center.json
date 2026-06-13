@@ -1,0 +1,58 @@
+{
+  "id": "6.SP.046",
+  "domain": "6.SP",
+  "unit": 5,
+  "orderInUnit": 6,
+  "standard": "6.SP.A.2",
+  "difficulty": 1,
+  "prompt": "Which is NOT a measure of center?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Mean",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Median",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Range",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "Mode",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Range measures **spread**, not center.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Range measures **spread**, not center."
+    },
+    {
+      "level": "guide",
+      "text": "Mean, median, mode = center. Range = spread."
+    },
+    {
+      "level": "reveal",
+      "text": "Range."
+    }
+  ],
+  "explanation": [
+    "Mean, median, mode describe center.",
+    "Range describes spread."
+  ],
+  "tags": [
+    "vocabulary"
+  ],
+  "estimatedSeconds": 35
+}

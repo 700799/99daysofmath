@@ -1,0 +1,36 @@
+{
+  "id": "6.EE.065",
+  "domain": "6.EE",
+  "unit": 7,
+  "orderInUnit": 5,
+  "standard": "6.EE.A.2.c",
+  "difficulty": 2,
+  "prompt": "Evaluate $3a + 2$ when $a = 4$.",
+  "answerType": "numeric",
+  "primaryAnswer": "14",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $4$ in place of $a$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $4$ in place of $a$."
+    },
+    {
+      "level": "guide",
+      "text": "$3(4) + 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12 + 2 = 14$."
+    }
+  ],
+  "explanation": [
+    "$3a + 2$ with $a = 4$: $3(4) + 2$.",
+    "$12 + 2 = 14$."
+  ],
+  "tags": [
+    "evaluate"
+  ],
+  "estimatedSeconds": 40
+}

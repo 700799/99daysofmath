@@ -1,0 +1,38 @@
+{
+  "id": "6.G.051",
+  "domain": "6.G",
+  "unit": 6,
+  "orderInUnit": 1,
+  "standard": "6.G.A.1",
+  "difficulty": 1,
+  "prompt": "A room is $12 \\times 10$ ft. Find its area.",
+  "answerType": "numeric",
+  "primaryAnswer": "120",
+  "alternativeAnswers": [
+    "120 sq ft"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$A = l \\times w$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$A = l \\times w$."
+    },
+    {
+      "level": "guide",
+      "text": "$12 \\times 10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$120$."
+    }
+  ],
+  "explanation": [
+    "$A = 12 \\times 10 = 120$ sq ft."
+  ],
+  "tags": [
+    "area",
+    "word"
+  ],
+  "estimatedSeconds": 30
+}

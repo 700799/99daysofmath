@@ -1,0 +1,50 @@
+{
+  "id": "6.G.073",
+  "domain": "6.G",
+  "unit": 8,
+  "orderInUnit": 3,
+  "standard": "6.G.A.2",
+  "difficulty": 2,
+  "prompt": "Find the volume of a cube with edge length $\\frac{1}{2}$.",
+  "answerType": "fraction",
+  "primaryAnswer": "1/8",
+  "alternativeAnswers": [
+    "1/8 cu units",
+    "0.125"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$V = s^3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$V = s^3$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\left(\\tfrac{1}{2}\\right)^3 = \\tfrac{1}{2} \\cdot \\tfrac{1}{2} \\cdot \\tfrac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\tfrac{1}{8}$."
+    }
+  ],
+  "explanation": [
+    "$\\left(\\tfrac{1}{2}\\right)^3 = \\tfrac{1}{8}$ cubic units.",
+    "Final answer: 1/8."
+  ],
+  "tags": [
+    "volume",
+    "fraction",
+    "cube"
+  ],
+  "estimatedSeconds": 55,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 1/8 — verified."
+      ]
+    }
+  ]
+}

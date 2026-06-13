@@ -1,0 +1,50 @@
+{
+  "id": "6.NS.074",
+  "domain": "6.NS",
+  "unit": 8,
+  "orderInUnit": 4,
+  "standard": "6.NS.C.7.c",
+  "difficulty": 2,
+  "prompt": "Which is greater: $|-7|$ or $|3|$?",
+  "answerType": "short-text",
+  "primaryAnswer": "|-7|",
+  "alternativeAnswers": [
+    "|−7|",
+    "abs(-7)",
+    "7"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Absolute value = distance from $0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Absolute value = distance from $0$."
+    },
+    {
+      "level": "guide",
+      "text": "$|-7| = 7$ and $|3| = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$7 > 3$, so $|-7| > |3|$."
+    }
+  ],
+  "explanation": [
+    "$|-7| = 7$ and $|3| = 3$.",
+    "$7 > 3$, so $|-7|$ is greater."
+  ],
+  "tags": [
+    "absolute-value",
+    "compare"
+  ],
+  "estimatedSeconds": 45,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: |-7| — verified."
+      ]
+    }
+  ]
+}

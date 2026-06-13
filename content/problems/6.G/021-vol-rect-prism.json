@@ -1,0 +1,43 @@
+{
+  "id": "6.G.021",
+  "domain": "6.G",
+  "unit": 3,
+  "orderInUnit": 1,
+  "standard": "6.G.A.2",
+  "difficulty": 1,
+  "prompt": "A rectangular prism is $3 \\times 4 \\times 5$. Find its volume.",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [
+    "60 cubic units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$V = l \\cdot w \\cdot h$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$V = l \\cdot w \\cdot h$."
+    },
+    {
+      "level": "guide",
+      "text": "$3 \\times 4 \\times 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$60$."
+    }
+  ],
+  "explanation": [
+    "$V = 3 \\cdot 4 \\cdot 5 = 60$."
+  ],
+  "tags": [
+    "volume",
+    "prism"
+  ],
+  "estimatedSeconds": 35,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Rectangular prism 3×4×5",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 247.2 297.6\" role=\"img\"><g fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.5\" stroke-linejoin=\"round\"><polygon points=\"30,87.6 138,87.6 138,267.6 30,267.6\" fill=\"#BAE6FD\"/><polygon points=\"30,87.6 109.2,29.999999999999993 217.2,29.999999999999993 138,87.6\" fill=\"#BAE6FD\"/><polygon points=\"138,87.6 217.2,29.999999999999993 217.2,210.00000000000003 138,267.6\" fill=\"#BAE6FD\"/></g><g font-family=\"Nunito, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"84\" y=\"289.6\">l = 3</text><text x=\"191.6\" y=\"62.8\">w = 4</text><text x=\"241.2\" y=\"125\">h = 5</text></g></svg>"
+  }
+}

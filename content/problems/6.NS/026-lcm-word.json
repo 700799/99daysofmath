@@ -1,0 +1,46 @@
+{
+  "id": "6.NS.026",
+  "domain": "6.NS",
+  "unit": 3,
+  "orderInUnit": 6,
+  "standard": "6.NS.B.4",
+  "difficulty": 3,
+  "prompt": "Two friends visit a park: Ana every $4$ days, Ben every $6$ days. In how many days will they both visit on the same day next?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [
+    "12 days"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "You need the LCM of $4$ and $6$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Rewrite the numbers in matching form (all fractions OR all decimals) before you operate."
+    },
+    {
+      "level": "nudge",
+      "text": "You need the LCM of $4$ and $6$."
+    },
+    {
+      "level": "guide",
+      "text": "Smallest number that's a multiple of both $4$ and $6$."
+    },
+    {
+      "level": "reveal",
+      "text": "LCM$(4, 6) = 12$."
+    }
+  ],
+  "explanation": [
+    "Ana: $4, 8, 12, \\ldots$",
+    "Ben: $6, 12, \\ldots$",
+    "Both on day $12$."
+  ],
+  "tags": [
+    "CA",
+    "lcm",
+    "word"
+  ],
+  "estimatedSeconds": 70
+}

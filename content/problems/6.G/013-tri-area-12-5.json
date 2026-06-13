@@ -1,0 +1,43 @@
+{
+  "id": "6.G.013",
+  "domain": "6.G",
+  "unit": 1,
+  "orderInUnit": 10,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A triangle has base $12$ ft and height $5$ ft. What is its area?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [
+    "30 sq ft"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$\\frac{1}{2} b h$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$\\frac{1}{2} b h$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{1}{2}(12)(5) = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$30$."
+    }
+  ],
+  "explanation": [
+    "$A = \\frac{1}{2}(12)(5) = 30$ sq ft."
+  ],
+  "tags": [
+    "area",
+    "triangle"
+  ],
+  "estimatedSeconds": 35,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Triangle with base 12 and height 5",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 296 167.66666666666666\" role=\"img\"><polygon points=\"38,129.66666666666666 258,129.66666666666666 126,38\" fill=\"#A7F3D0\" stroke=\"#10B981\" stroke-width=\"3\"/><line x1=\"126\" y1=\"38\" x2=\"126\" y2=\"129.66666666666666\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><g font-family=\"Nunito, sans-serif\" font-size=\"16\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"148\" y=\"151.66666666666666\">b = 12</text><text x=\"165.6\" y=\"88.83333333333333\">h = 5</text></g></svg>"
+  }
+}

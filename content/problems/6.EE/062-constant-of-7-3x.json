@@ -1,0 +1,46 @@
+{
+  "id": "6.EE.062",
+  "domain": "6.EE",
+  "unit": 7,
+  "orderInUnit": 2,
+  "standard": "6.EE.A.2.b",
+  "difficulty": 1,
+  "prompt": "What is the **constant term** in the expression $7 + 3x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A constant has no variable.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A constant has no variable."
+    },
+    {
+      "level": "guide",
+      "text": "In $7 + 3x$, $3x$ has $x$; $7$ does not."
+    },
+    {
+      "level": "reveal",
+      "text": "$7$."
+    }
+  ],
+  "explanation": [
+    "A constant term contains no variable.",
+    "In $7 + 3x$, the constant is $7$."
+  ],
+  "tags": [
+    "expression",
+    "parts"
+  ],
+  "estimatedSeconds": 25,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 7 — verified."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "6.RP.095",
+  "domain": "6.RP",
+  "unit": 10,
+  "orderInUnit": 5,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 3,
+  "prompt": "A bike originally costs \\$$200$ and is on sale for \\$$160$. What is the **percent off**?",
+  "answerType": "short-text",
+  "primaryAnswer": "20%",
+  "alternativeAnswers": [
+    "20 percent",
+    "20 %"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Find the dollars discounted first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try the same problem with friendlier numbers first — say \"20% of 50\" — then come back to this one."
+    },
+    {
+      "level": "nudge",
+      "text": "Find the dollars discounted first."
+    },
+    {
+      "level": "guide",
+      "text": "Change: $200 - 160 = 40$. Divide: $40 \\div 200$."
+    },
+    {
+      "level": "reveal",
+      "text": "$40 / 200 = 0.20 = 20\\%$."
+    }
+  ],
+  "explanation": [
+    "Discount: $200 - 160 = 40$.",
+    "$40 \\div 200 = 0.20 = 20\\%$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare sale to original",
+      "steps": [
+        "Sale is $\\tfrac{160}{200} = 80\\%$ of original.",
+        "So the discount is $100\\% - 80\\% = 20\\%$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "percent",
+    "discount"
+  ],
+  "estimatedSeconds": 90
+}

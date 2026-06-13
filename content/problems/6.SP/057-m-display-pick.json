@@ -1,0 +1,52 @@
+{
+  "id": "6.SP.057",
+  "domain": "6.SP",
+  "unit": 6,
+  "orderInUnit": 7,
+  "standard": "6.SP.B.4",
+  "difficulty": 2,
+  "prompt": "You have $5$ test scores from $5$ students. Which display works well?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Dot plot",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Histogram with $1$-point bins",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Pie chart of grade letters",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "For small datasets, dots show every value.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "For small datasets, dots show every value."
+    },
+    {
+      "level": "guide",
+      "text": "Histograms shine with many values."
+    },
+    {
+      "level": "reveal",
+      "text": "Dot plot."
+    }
+  ],
+  "explanation": [
+    "Dot plots are great for small datasets — every value is visible."
+  ],
+  "tags": [
+    "display"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,35 @@
+{
+  "id": "6.G.024",
+  "domain": "6.G",
+  "unit": 3,
+  "orderInUnit": 4,
+  "standard": "6.G.A.2",
+  "difficulty": 1,
+  "prompt": "A box is $2$ cm × $3$ cm × $4$ cm. Volume in cubic centimeters?",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply all three.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply all three."
+    },
+    {
+      "level": "guide",
+      "text": "$2 \\times 3 \\times 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24$."
+    }
+  ],
+  "explanation": [
+    "$V = 24$ cm³."
+  ],
+  "tags": [
+    "volume"
+  ],
+  "estimatedSeconds": 30
+}

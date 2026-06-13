@@ -1,0 +1,44 @@
+{
+  "id": "6.EE.098",
+  "domain": "6.EE",
+  "unit": 10,
+  "orderInUnit": 8,
+  "standard": "6.EE.A.4",
+  "difficulty": 3,
+  "prompt": "Simplify: $3(x + 2) - x$.",
+  "answerType": "short-text",
+  "primaryAnswer": "2x+6",
+  "alternativeAnswers": [
+    "2x + 6"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Distribute first, then combine.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Translate piece-by-piece: \"more than\" = +, \"product\" = ×, \"less than\" flips the order."
+    },
+    {
+      "level": "nudge",
+      "text": "Distribute first, then combine."
+    },
+    {
+      "level": "guide",
+      "text": "$3(x + 2) = 3x + 6$. Then $3x + 6 - x$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2x + 6$."
+    }
+  ],
+  "explanation": [
+    "Distribute: $3(x + 2) = 3x + 6$.",
+    "Combine: $3x + 6 - x = 2x + 6$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "simplify"
+  ],
+  "estimatedSeconds": 65
+}

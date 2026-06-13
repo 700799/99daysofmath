@@ -1,0 +1,48 @@
+{
+  "id": "6.RP.093",
+  "domain": "6.RP",
+  "unit": 10,
+  "orderInUnit": 3,
+  "standard": "6.RP.A.3",
+  "difficulty": 2,
+  "prompt": "A map uses scale $1$ cm $: 50$ km. Two cities are $7$ cm apart on the map. What is the real distance?",
+  "answerType": "numeric",
+  "primaryAnswer": "350",
+  "alternativeAnswers": [
+    "350 km"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Each cm represents $50$ km.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each cm represents $50$ km."
+    },
+    {
+      "level": "guide",
+      "text": "$7 \\times 50$."
+    },
+    {
+      "level": "reveal",
+      "text": "$350$ km."
+    }
+  ],
+  "explanation": [
+    "$7 \\times 50 = 350$ kilometers.",
+    "Final answer: 350."
+  ],
+  "tags": [
+    "ratio",
+    "scale"
+  ],
+  "estimatedSeconds": 50,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 350 — verified."
+      ]
+    }
+  ]
+}

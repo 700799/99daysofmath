@@ -1,0 +1,48 @@
+{
+  "id": "6.EE.094",
+  "domain": "6.EE",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "6.EE.C.9",
+  "difficulty": 2,
+  "prompt": "A movie ticket costs \\$$12$. The total cost $c = 12n$ for $n$ tickets. Find $c$ when $n = 7$.",
+  "answerType": "numeric",
+  "primaryAnswer": "84",
+  "alternativeAnswers": [
+    "$84"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply $12$ by $7$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply $12$ by $7$."
+    },
+    {
+      "level": "guide",
+      "text": "$12 \\times 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$84$."
+    }
+  ],
+  "explanation": [
+    "$c = 12n$ with $n = 7$: $c = 12 \\cdot 7 = 84$.",
+    "Cost: \\$$84$."
+  ],
+  "tags": [
+    "two-vars",
+    "word"
+  ],
+  "estimatedSeconds": 45,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 84 — verified."
+      ]
+    }
+  ]
+}

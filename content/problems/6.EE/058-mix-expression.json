@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.058",
+  "domain": "6.EE",
+  "unit": 6,
+  "orderInUnit": 8,
+  "standard": "6.EE.A.2.c",
+  "difficulty": 2,
+  "prompt": "Evaluate $a^2 + b$ when $a = 4, b = 5$.",
+  "answerType": "numeric",
+  "primaryAnswer": "21",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Compute exponent first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Compute exponent first."
+    },
+    {
+      "level": "guide",
+      "text": "$4^2 + 5 = 16 + 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$21$."
+    }
+  ],
+  "explanation": [
+    "$4^2 = 16$. $16 + 5 = 21$."
+  ],
+  "tags": [
+    "evaluate"
+  ],
+  "estimatedSeconds": 45
+}

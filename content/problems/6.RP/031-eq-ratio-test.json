@@ -1,0 +1,54 @@
+{
+  "id": "6.RP.031",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 1,
+  "standard": "6.RP.A.1",
+  "difficulty": 1,
+  "prompt": "Is $3 : 4$ equivalent to $9 : 12$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Yes",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "No",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Simplify $9:12$ and compare.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Simplify $9:12$ and compare."
+    },
+    {
+      "level": "guide",
+      "text": "Divide both sides of $9:12$ by $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$9 \\div 3 = 3$, $12 \\div 3 = 4$. So $9:12 = 3:4$. Yes!"
+    }
+  ],
+  "explanation": [
+    "$9:12$ divided by $3$ on both sides gives $3:4$.",
+    "They are equivalent."
+  ],
+  "tags": [
+    "ratio",
+    "equivalent"
+  ],
+  "estimatedSeconds": 30,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Tape diagram for ratio 3 : 4",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 80\" role=\"img\"><rect x=\"20\" y=\"30\" width=\"145.7142857142857\" height=\"36\" fill=\"#0EA5E9\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"92.85714285714285\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">3</text><rect x=\"165.7142857142857\" y=\"30\" width=\"194.28571428571428\" height=\"36\" fill=\"#10B981\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"262.85714285714283\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">4</text></svg>"
+  }
+}

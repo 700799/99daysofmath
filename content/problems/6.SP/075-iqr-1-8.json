@@ -1,0 +1,36 @@
+{
+  "id": "6.SP.075",
+  "domain": "6.SP",
+  "unit": 8,
+  "orderInUnit": 5,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Find the IQR of $\\{1,\\ 2,\\ 3,\\ 4,\\ 5,\\ 6,\\ 7,\\ 8\\}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "IQR $= Q_3 - Q_1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "IQR $= Q_3 - Q_1$."
+    },
+    {
+      "level": "guide",
+      "text": "$Q_3 = 6.5$ and $Q_1 = 2.5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6.5 - 2.5 = 4$."
+    }
+  ],
+  "explanation": [
+    "From the previous two problems: $Q_1 = 2.5$, $Q_3 = 6.5$.",
+    "IQR: $6.5 - 2.5 = 4$."
+  ],
+  "tags": [
+    "IQR"
+  ],
+  "estimatedSeconds": 50
+}

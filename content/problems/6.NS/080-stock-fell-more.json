@@ -1,0 +1,55 @@
+{
+  "id": "6.NS.080",
+  "domain": "6.NS",
+  "unit": 8,
+  "orderInUnit": 10,
+  "standard": "6.NS.C.7.c",
+  "difficulty": 3,
+  "prompt": "Stock A changed by $-3.5$ points; Stock B changed by $-1.25$ points. **Which stock fell more**?",
+  "answerType": "short-text",
+  "primaryAnswer": "A",
+  "alternativeAnswers": [
+    "Stock A",
+    "A fell more"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Compare how far each is from $0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Rewrite the numbers in matching form (all fractions OR all decimals) before you operate."
+    },
+    {
+      "level": "nudge",
+      "text": "Compare how far each is from $0$."
+    },
+    {
+      "level": "guide",
+      "text": "$|-3.5| = 3.5$ and $|-1.25| = 1.25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3.5 > 1.25$, so Stock A fell more."
+    }
+  ],
+  "explanation": [
+    "Absolute values: $|-3.5| = 3.5,\\ |-1.25| = 1.25$.",
+    "$3.5 > 1.25$, so A had the bigger drop."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Be careful with comparison",
+      "steps": [
+        "$-3.5 < -1.25$ (more negative), but the **size** of the drop is what matters.",
+        "A drop of $3.5$ is bigger than a drop of $1.25$, so A fell more."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "absolute-value",
+    "word"
+  ],
+  "estimatedSeconds": 80
+}

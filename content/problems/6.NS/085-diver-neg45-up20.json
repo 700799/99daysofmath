@@ -1,0 +1,40 @@
+{
+  "id": "6.NS.085",
+  "domain": "6.NS",
+  "unit": 9,
+  "orderInUnit": 5,
+  "standard": "6.NS.C.5",
+  "difficulty": 2,
+  "prompt": "A diver is at $-45$ ft (below sea level) and rises $20$ ft. What is the diver's new position?",
+  "answerType": "numeric",
+  "primaryAnswer": "-25",
+  "alternativeAnswers": [
+    "−25",
+    "-25 ft"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Rising is positive.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Rising is positive."
+    },
+    {
+      "level": "guide",
+      "text": "$-45 + 20$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-25$."
+    }
+  ],
+  "explanation": [
+    "Start at $-45$. Add the rise: $-45 + 20 = -25$ ft.",
+    "Final answer: -25."
+  ],
+  "tags": [
+    "integer",
+    "word"
+  ],
+  "estimatedSeconds": 55
+}

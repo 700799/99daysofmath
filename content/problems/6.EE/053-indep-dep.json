@@ -1,0 +1,41 @@
+{
+  "id": "6.EE.053",
+  "domain": "6.EE",
+  "unit": 6,
+  "orderInUnit": 3,
+  "standard": "6.EE.C.9",
+  "difficulty": 2,
+  "prompt": "A cab charges \\$$3$ plus \\$$2$ per mile. Write the cost $c$ as a function of miles $m$.",
+  "answerType": "short-text",
+  "primaryAnswer": "c=2m+3",
+  "alternativeAnswers": [
+    "c = 2m + 3",
+    "c=3+2m"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Start fee plus per-mile rate.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Start fee plus per-mile rate."
+    },
+    {
+      "level": "guide",
+      "text": "$c = 2m + 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$c = 2m + 3$."
+    }
+  ],
+  "explanation": [
+    "Base fee $3$ + per mile $2$ × $m$ miles.",
+    "$c = 2m + 3$."
+  ],
+  "tags": [
+    "CA",
+    "two-vars",
+    "word"
+  ],
+  "estimatedSeconds": 70
+}

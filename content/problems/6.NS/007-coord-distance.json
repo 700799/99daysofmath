@@ -1,0 +1,59 @@
+{
+  "id": "6.NS.007",
+  "domain": "6.NS",
+  "unit": 2,
+  "orderInUnit": 2,
+  "standard": "6.NS.C.8",
+  "difficulty": 2,
+  "prompt": "Two points are at $(3, 2)$ and $(3, -4)$. What is the **distance** between them?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [
+    "6 units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The two points have the **same** $x$-coordinate, so they lie on a vertical line. Find the difference in $y$-values.",
+  "explanation": [
+    "Both points have $x = 3$, so they're on a vertical line.",
+    "Subtract the $y$-values: $2 - (-4) = 2 + 4 = 6$.",
+    "The distance is $6$ units."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count along the y-axis",
+      "steps": [
+        "Start at $(3, 2)$. To reach $(3, -4)$, go **down**.",
+        "From $y = 2$ down to $y = 0$: $2$ units.",
+        "From $y = 0$ down to $y = -4$: $4$ units.",
+        "Total: $2 + 4 = 6$ units."
+      ]
+    },
+    {
+      "title": "Use absolute values",
+      "steps": [
+        "When points share an $x$-coordinate, distance $= |y_1 - y_2|$.",
+        "$|2 - (-4)| = |6| = 6$."
+      ]
+    }
+  ],
+  "tags": [
+    "CA",
+    "coordinate-plane",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 60,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The two points have the **same** $x$-coordinate, so they lie on a vertical line. Find the difference in $y$-values."
+    },
+    {
+      "level": "guide",
+      "text": "Both points have $x = 3$, so they're on a vertical line."
+    },
+    {
+      "level": "reveal",
+      "text": "The distance is $6$ units."
+    }
+  ]
+}

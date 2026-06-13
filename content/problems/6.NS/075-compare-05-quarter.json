@@ -1,0 +1,49 @@
+{
+  "id": "6.NS.075",
+  "domain": "6.NS",
+  "unit": 8,
+  "orderInUnit": 5,
+  "standard": "6.NS.C.7.a",
+  "difficulty": 2,
+  "prompt": "Compare: $0.5$ ___ $\\frac{1}{4}$ (use $>$, $<$, or $=$).",
+  "answerType": "short-text",
+  "primaryAnswer": ">",
+  "alternativeAnswers": [
+    "gt",
+    "greater than"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Put both in the same form.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Put both in the same form."
+    },
+    {
+      "level": "guide",
+      "text": "$\\tfrac{1}{4} = 0.25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.5 > 0.25$, so $0.5 > \\tfrac{1}{4}$."
+    }
+  ],
+  "explanation": [
+    "$\\tfrac{1}{4} = 0.25$.",
+    "$0.5 > 0.25$, so $0.5 > \\tfrac{1}{4}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use a common fraction",
+      "steps": [
+        "$0.5 = \\tfrac{1}{2} = \\tfrac{2}{4}$.",
+        "$\\tfrac{2}{4} > \\tfrac{1}{4}$."
+      ]
+    }
+  ],
+  "tags": [
+    "compare",
+    "fraction-decimal"
+  ],
+  "estimatedSeconds": 55
+}

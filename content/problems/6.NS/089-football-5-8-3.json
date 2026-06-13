@@ -1,0 +1,44 @@
+{
+  "id": "6.NS.089",
+  "domain": "6.NS",
+  "unit": 9,
+  "orderInUnit": 9,
+  "standard": "6.NS.C.5",
+  "difficulty": 3,
+  "prompt": "A football team gains $5$ yards, loses $8$ yards, then gains $3$ yards. What is the **net yardage**?",
+  "answerType": "numeric",
+  "primaryAnswer": "0",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Gains are $+$, losses are $-$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Plot each number on a quick number line. Distances and order get obvious right away."
+    },
+    {
+      "level": "nudge",
+      "text": "Gains are $+$, losses are $-$."
+    },
+    {
+      "level": "guide",
+      "text": "$5 - 8 + 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0$."
+    }
+  ],
+  "explanation": [
+    "$5 - 8 = -3$.",
+    "$-3 + 3 = 0$.",
+    "Net: no change."
+  ],
+  "tags": [
+    "MAP-practice",
+    "integer",
+    "word"
+  ],
+  "estimatedSeconds": 60
+}

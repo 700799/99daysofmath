@@ -1,0 +1,86 @@
+{
+  "id": "6.SP.006",
+  "domain": "6.SP",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "6.SP.A.1",
+  "difficulty": 3,
+  "prompt": "A teacher wants data about her class. Which question is a **statistical question** (one that **anticipates variability**)?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "How old is Ms. Lee?",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "What is the school's start time?",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "How many minutes does each student spend on homework per night?",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "How many days are in February this year?",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "A statistical question can have **many different answers** across the people or things being measured.",
+  "explanation": [
+    "A **statistical question** anticipates **variability** in the answers — different respondents give different numbers/responses.",
+    "A: \"How old is Ms. Lee?\" → one answer. Not statistical.",
+    "B: \"What is the school's start time?\" → one answer. Not statistical.",
+    "C: \"How many minutes does each student spend on homework?\" → expect many different answers across students. **Statistical.**",
+    "D: \"How many days are in February this year?\" → one answer. Not statistical."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Quick test",
+      "steps": [
+        "Imagine asking the question to $30$ different students.",
+        "If you expect the **same answer** from all $30$ → NOT a statistical question.",
+        "If you expect **different answers** that vary across the group → statistical."
+      ]
+    },
+    {
+      "title": "Statistical-question patterns",
+      "steps": [
+        "Often phrased about a **group** (\"each student\", \"the class\", \"students in $6$th grade\").",
+        "Often involves measurable traits that differ from person to person: height, time, score, preference.",
+        "A question about a **single** person/object with a fixed property is NOT statistical."
+      ]
+    }
+  ],
+  "tags": [
+    "CA",
+    "statistical-questions",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 80,
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Ask: \"would different students give different answers to this?\" If yes → statistical. If everyone gives the same answer → not."
+    },
+    {
+      "level": "nudge",
+      "text": "Statistical = expects spread/variability. A single-answer question (one fact) is NOT statistical."
+    },
+    {
+      "level": "guide",
+      "text": "A, B, D each have **one** answer (a fact). C will have many different answers across students. Only C is statistical."
+    },
+    {
+      "level": "reveal",
+      "text": "Answer: C."
+    }
+  ]
+}

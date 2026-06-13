@@ -1,0 +1,44 @@
+{
+  "id": "6.EE.097",
+  "domain": "6.EE",
+  "unit": 10,
+  "orderInUnit": 7,
+  "standard": "6.EE.A.3",
+  "difficulty": 3,
+  "prompt": "Distribute: $4(2x + 5)$.",
+  "answerType": "short-text",
+  "primaryAnswer": "8x+20",
+  "alternativeAnswers": [
+    "8x + 20"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Multiply $4$ by each term inside.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+    },
+    {
+      "level": "nudge",
+      "text": "Multiply $4$ by each term inside."
+    },
+    {
+      "level": "guide",
+      "text": "$4 \\cdot 2x + 4 \\cdot 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$8x + 20$."
+    }
+  ],
+  "explanation": [
+    "$4(2x + 5) = 4 \\cdot 2x + 4 \\cdot 5 = 8x + 20$.",
+    "Final answer: 8x+20."
+  ],
+  "tags": [
+    "MAP-practice",
+    "distribute"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,46 @@
+{
+  "id": "6.RP.077",
+  "domain": "6.RP",
+  "unit": 8,
+  "orderInUnit": 7,
+  "standard": "6.RP.A.2",
+  "difficulty": 2,
+  "prompt": "A printer prints $24$ pages in $3$ minutes. How many pages can it print in $10$ minutes at the same rate?",
+  "answerType": "numeric",
+  "primaryAnswer": "80",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find pages per minute first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find pages per minute first."
+    },
+    {
+      "level": "guide",
+      "text": "Rate $= 24 \\div 3 = 8$ pages/min."
+    },
+    {
+      "level": "reveal",
+      "text": "$8 \\times 10 = 80$."
+    }
+  ],
+  "explanation": [
+    "Rate: $24 \\div 3 = 8$ pages/min.",
+    "In $10$ min: $8 \\times 10 = 80$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Ratio scaling",
+      "steps": [
+        "$3$ min : $24$ pages. Multiply both by $10/3$.",
+        "$3 \\times \\tfrac{10}{3} = 10$ and $24 \\times \\tfrac{10}{3} = 80$."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-rate",
+    "word"
+  ],
+  "estimatedSeconds": 65
+}

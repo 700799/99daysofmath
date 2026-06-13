@@ -1,0 +1,48 @@
+{
+  "id": "6.RP.082",
+  "domain": "6.RP",
+  "unit": 9,
+  "orderInUnit": 2,
+  "standard": "6.RP.A.3.d",
+  "difficulty": 1,
+  "prompt": "Convert $4$ yards to feet. ($1$ yd $= 3$ ft)",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [
+    "12 ft"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$1$ yd $= 3$ ft.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$1$ yd $= 3$ ft."
+    },
+    {
+      "level": "guide",
+      "text": "$4 \\times 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12$ ft."
+    }
+  ],
+  "explanation": [
+    "$4 \\times 3 = 12$ feet.",
+    "Final answer: 12."
+  ],
+  "tags": [
+    "conversion",
+    "length"
+  ],
+  "estimatedSeconds": 30,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 12 — verified."
+      ]
+    }
+  ]
+}

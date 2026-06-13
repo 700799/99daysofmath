@@ -1,0 +1,44 @@
+{
+  "id": "6.EE.068",
+  "domain": "6.EE",
+  "unit": 7,
+  "orderInUnit": 8,
+  "standard": "6.EE.A.2.c",
+  "difficulty": 3,
+  "prompt": "Evaluate $x^2 + 1$ when $x = 4$.",
+  "answerType": "numeric",
+  "primaryAnswer": "17",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Square first, then add.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+    },
+    {
+      "level": "nudge",
+      "text": "Square first, then add."
+    },
+    {
+      "level": "guide",
+      "text": "$4^2 = 16$, then $16 + 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$17$."
+    }
+  ],
+  "explanation": [
+    "$x^2 + 1$ with $x = 4$.",
+    "$4^2 = 16$.",
+    "$16 + 1 = 17$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "evaluate",
+    "exponent"
+  ],
+  "estimatedSeconds": 55
+}

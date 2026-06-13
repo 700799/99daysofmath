@@ -1,0 +1,40 @@
+{
+  "id": "6.G.040",
+  "domain": "6.G",
+  "unit": 4,
+  "orderInUnit": 10,
+  "standard": "6.G.A.4",
+  "difficulty": 3,
+  "prompt": "A cube has each face with area $9$ cm². What is the total SA?",
+  "answerType": "numeric",
+  "primaryAnswer": "54",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$6$ faces, each $9$ cm².",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Split or rearrange the shape into pieces whose formulas you already know."
+    },
+    {
+      "level": "nudge",
+      "text": "$6$ faces, each $9$ cm²."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\times 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$54$."
+    }
+  ],
+  "explanation": [
+    "Total SA $= 6 \\times 9 = 54$ cm²."
+  ],
+  "tags": [
+    "surface-area"
+  ],
+  "estimatedSeconds": 40
+}

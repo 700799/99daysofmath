@@ -1,0 +1,39 @@
+{
+  "id": "6.EE.087",
+  "domain": "6.EE",
+  "unit": 9,
+  "orderInUnit": 7,
+  "standard": "6.EE.B.8",
+  "difficulty": 2,
+  "prompt": "Write an inequality for \"$x$ is more than $5$\".",
+  "answerType": "short-text",
+  "primaryAnswer": "x>5",
+  "alternativeAnswers": [
+    "x > 5"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "\"More than\" means greater than.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"More than\" means greater than."
+    },
+    {
+      "level": "guide",
+      "text": "Use the symbol $>$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x > 5$."
+    }
+  ],
+  "explanation": [
+    "\"More than\" → greater than → $>$.",
+    "$x > 5$."
+  ],
+  "tags": [
+    "inequality",
+    "word"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,48 @@
+{
+  "id": "6.EE.025",
+  "domain": "6.EE",
+  "unit": 3,
+  "orderInUnit": 5,
+  "standard": "6.EE.A.4",
+  "difficulty": 2,
+  "prompt": "Is $2(x + 3)$ equivalent to $2x + 6$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Yes",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "No",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Apply the distributive property.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Apply the distributive property."
+    },
+    {
+      "level": "guide",
+      "text": "$2(x + 3) = 2x + 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "They match. Yes."
+    }
+  ],
+  "explanation": [
+    "$2(x + 3) = 2x + 6$.",
+    "They are equivalent."
+  ],
+  "tags": [
+    "equivalent"
+  ],
+  "estimatedSeconds": 40
+}

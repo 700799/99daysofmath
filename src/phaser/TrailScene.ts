@@ -1,12 +1,6 @@
 import Phaser from 'phaser';
-import {
-  TRAIL_LAYOUTS,
-  TRAIL_WIDTH,
-  TRAIL_HEIGHT,
-  type TrailNode,
-} from './trailLayouts';
+import { buildTrail, TRAIL_WIDTH, type TrailNode } from './trailLayouts';
 import { DOMAIN_COLORS, type Domain } from '../types/problem';
-import { loadIconTextures } from '../icons/phaserTextures';
 
 export interface TrailSceneState {
   unitsUnlocked: number;
@@ -17,6 +11,7 @@ export interface TrailSceneInit {
   domain: Domain;
   state: TrailSceneState;
   onNodeSelect: (unit: number) => void;
+  units?: number[];
 }
 
 export class TrailScene extends Phaser.Scene {
@@ -24,9 +19,6 @@ export class TrailScene extends Phaser.Scene {
   private layout: TrailNode[] = [];
   private state!: TrailSceneState;
   private onNodeSelect!: (unit: number) => void;
-  private nodeContainers: Map<number, Phaser.GameObjects.Container> = new Map();
-  private pathGraphics?: Phaser.GameObjects.Graphics;
-  private isDead = false;
 
   constructor() {
     super('TrailScene');
@@ -36,24 +28,37 @@ export class TrailScene extends Phaser.Scene {
     this.domain = data.domain;
     this.state = data.state;
     this.onNodeSelect = data.onNodeSelect;
-    this.layout = TRAIL_LAYOUTS[data.domain] ?? [];
+    const unitCount = data.units?.length ?? 2;
+    this.layout = buildTrail(Math.max(2, unitCount));
   }
 
-  async create() {
-    this.isDead = false;
-    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => (this.isDead = true));
-    this.events.once(Phaser.Scenes.Events.DESTROY, () => (this.isDead = true));
-    this.cameras.main.setBackgroundColor('#F8FAFC');
-    await loadIconTextures(this, ['star', 'lock']);
-    if (this.isDead) return;
+  create() {
+    this.drawClouds();
     this.drawPath();
     this.drawNodes();
+    this.placeCharacter();
+  }
+
+  private drawClouds() {
+    // Decorative pale cloud blobs in the background.
+    const cloud = (cx: number, cy: number, r: number) => {
+      const g = this.add.graphics();
+      g.fillStyle(0xffffff, 0.7);
+      g.fillCircle(cx, cy, r);
+      g.fillCircle(cx + r * 0.7, cy + 4, r * 0.8);
+      g.fillCircle(cx - r * 0.7, cy + 4, r * 0.75);
+    };
+    const h = this.scale.height;
+    cloud(80, 60, 24);
+    cloud(TRAIL_WIDTH - 90, 120, 28);
+    cloud(60, h - 100, 22);
+    cloud(TRAIL_WIDTH - 60, h - 60, 26);
   }
 
   private drawPath() {
-    if (this.pathGraphics) this.pathGraphics.destroy();
     const g = this.add.graphics();
-    g.lineStyle(18, 0xfed7aa, 1);
+    // Outer path
+    g.lineStyle(20, 0xfed7aa, 1);
     g.beginPath();
     for (let i = 0; i < this.layout.length; i++) {
       const n = this.layout[i];
@@ -61,8 +66,8 @@ export class TrailScene extends Phaser.Scene {
       else g.lineTo(n.x, n.y);
     }
     g.strokePath();
-    // Dashed inner line.
-    g.lineStyle(4, 0xffffff, 1);
+    // Dashed inner line
+    g.lineStyle(4, 0xffffff, 0.9);
     for (let i = 0; i < this.layout.length - 1; i++) {
       const a = this.layout[i];
       const b = this.layout[i + 1];
@@ -86,7 +91,13 @@ export class TrailScene extends Phaser.Scene {
         dist += dashLen + gapLen;
       }
     }
-    this.pathGraphics = g;
+  }
+
+  private firstIncompleteUnit(): number {
+    for (const node of this.layout) {
+      if ((this.state.unitStars[node.unit] ?? 0) === 0) return node.unit;
+    }
+    return -1;
   }
 
   private drawNodes() {
@@ -94,71 +105,77 @@ export class TrailScene extends Phaser.Scene {
       DOMAIN_COLORS[this.domain],
     ).color;
     for (const node of this.layout) {
-      const unlocked = node.unit <= this.state.unitsUnlocked;
+      // Open trails: every node is playable; the "current" node is simply the
+      // first one without a star yet.
+      const unlocked = true;
       const stars = this.state.unitStars[node.unit] ?? 0;
       const completed = stars > 0;
+      const isCurrent = node.unit === this.firstIncompleteUnit() && !completed;
 
       const container = this.add.container(node.x, node.y);
-      const shadow = this.add.circle(0, 6, 36, 0x000000, 0.12);
-      const ring = this.add.circle(
-        0,
-        0,
-        38,
-        unlocked ? color : 0xd1d5db,
-        1,
-      );
-      const inner = this.add.circle(
-        0,
-        0,
-        30,
-        unlocked ? 0xffffff : 0xe5e7eb,
-        1,
-      );
-      container.add([shadow, ring, inner]);
 
-      if (completed) {
-        const starImg = this.add.image(0, 0, 'star').setDisplaySize(38, 38);
-        container.add(starImg);
-      } else if (unlocked) {
-        const label = this.add
-          .text(0, 0, String(node.unit), {
-            fontFamily: 'Nunito, system-ui, sans-serif',
-            fontSize: '24px',
-            fontStyle: '900',
-            color: '#0F172A',
-          })
-          .setOrigin(0.5);
-        container.add(label);
-      } else {
-        const lockImg = this.add.image(0, 0, 'lock').setDisplaySize(28, 28);
-        container.add(lockImg);
-      }
-      container.setSize(76, 76);
-      container.setInteractive({ useHandCursor: unlocked });
+      // Drop shadow
+      const shadow = this.add.ellipse(0, 38, 64, 12, 0x000000, 0.18);
+      container.add(shadow);
 
+      // Bottom ring (darker)
+      const ringBottom = this.add.circle(0, 4, 38, unlocked ? color : 0x9ca3af, 1);
+      container.add(ringBottom);
+
+      // Top ring
+      const ring = this.add.circle(0, 0, 38, unlocked ? color : 0xd1d5db, 1);
+      container.add(ring);
+
+      // Inner disc
+      const inner = this.add.circle(0, 0, 30, unlocked ? 0xffffff : 0xe5e7eb, 1);
+      container.add(inner);
+
+      // Label
+      const labelText = completed ? '★' : String(node.unit);
+      const label = this.add
+        .text(0, 0, labelText, {
+          fontFamily: 'Nunito, system-ui, sans-serif',
+          fontSize: completed ? '34px' : '24px',
+          fontStyle: '900',
+          color: unlocked ? '#0F172A' : '#6B7280',
+        })
+        .setOrigin(0.5);
+      container.add(label);
+
+      container.setSize(80, 80);
       if (unlocked) {
-        container.on('pointerover', () => this.tweens.add({
-          targets: container,
-          scale: 1.08,
-          duration: 120,
-        }));
-        container.on('pointerout', () => this.tweens.add({
-          targets: container,
-          scale: 1,
-          duration: 120,
-        }));
-        container.on('pointerdown', () => this.tweens.add({
-          targets: container,
-          scale: 0.92,
-          duration: 80,
-          yoyo: true,
-          onComplete: () => this.onNodeSelect(node.unit),
-        }));
+        container.setInteractive({ useHandCursor: true });
+        container.on('pointerover', () =>
+          this.tweens.add({ targets: container, scale: 1.08, duration: 120 }),
+        );
+        container.on('pointerout', () =>
+          this.tweens.add({ targets: container, scale: 1, duration: 120 }),
+        );
+        container.on('pointerdown', () =>
+          this.tweens.add({
+            targets: container,
+            scale: 0.92,
+            duration: 80,
+            yoyo: true,
+            onComplete: () => this.onNodeSelect(node.unit),
+          }),
+        );
+        if (isCurrent) {
+          // Pulse animation on the current node
+          this.tweens.add({
+            targets: ring,
+            scale: { from: 1, to: 1.1 },
+            yoyo: true,
+            repeat: -1,
+            duration: 700,
+            ease: 'Sine.easeInOut',
+          });
+        }
       }
 
       // Star badge above completed nodes
       if (completed) {
-        const badge = this.add.container(28, -28);
+        const badge = this.add.container(30, -30);
         const badgeBg = this.add.circle(0, 0, 14, 0xfbbf24, 1);
         const badgeText = this.add
           .text(0, 0, `${stars}`, {
@@ -171,10 +188,40 @@ export class TrailScene extends Phaser.Scene {
         badge.add([badgeBg, badgeText]);
         container.add(badge);
       }
-
-      this.nodeContainers.set(node.unit, container);
     }
+  }
+
+  private placeCharacter() {
+    // Place a little owl character on the highest unlocked but not-completed node
+    let targetNode: TrailNode | null = null;
+    for (const node of this.layout) {
+      const stars = this.state.unitStars[node.unit] ?? 0;
+      if (stars === 0) {
+        targetNode = node;
+        break;
+      }
+    }
+    if (!targetNode) return;
+    const c = this.add.container(targetNode.x - 30, targetNode.y - 50);
+    const body = this.add.circle(0, 0, 12, 0x58cc02, 1);
+    body.setStrokeStyle(2, 0x0f172a);
+    const eyeL = this.add.circle(-4, -2, 3, 0xffffff, 1);
+    eyeL.setStrokeStyle(1, 0x0f172a);
+    const eyeR = this.add.circle(4, -2, 3, 0xffffff, 1);
+    eyeR.setStrokeStyle(1, 0x0f172a);
+    const pupilL = this.add.circle(-4, -2, 1.2, 0x0f172a);
+    const pupilR = this.add.circle(4, -2, 1.2, 0x0f172a);
+    const beak = this.add.triangle(0, 4, 0, 0, -3, 5, 3, 5, 0xff9600);
+    c.add([body, eyeL, eyeR, pupilL, pupilR, beak]);
+    this.tweens.add({
+      targets: c,
+      y: c.y - 6,
+      yoyo: true,
+      repeat: -1,
+      duration: 700,
+      ease: 'Sine.easeInOut',
+    });
   }
 }
 
-export { TRAIL_WIDTH, TRAIL_HEIGHT };
+export { TRAIL_WIDTH };

@@ -1,0 +1,65 @@
+{
+  "id": "6.RP.034",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 4,
+  "standard": "6.RP.A.1",
+  "difficulty": 2,
+  "prompt": "Which is **NOT** equivalent to $4 : 6$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$2 : 3$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$8 : 12$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$6 : 9$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$5 : 7$",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "D",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Simplify $4:6$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Simplify $4:6$."
+    },
+    {
+      "level": "guide",
+      "text": "$4:6 = 2:3$. Which option does NOT simplify to $2:3$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$5:7$ has no common factor — not equivalent."
+    }
+  ],
+  "explanation": [
+    "$4:6 = 2:3$.",
+    "$8:12 = 2:3$, $6:9 = 2:3$, $2:3$ ✓ — all equivalent.",
+    "$5:7$ has GCF $1$ — not equivalent."
+  ],
+  "tags": [
+    "MAP-practice",
+    "equivalent"
+  ],
+  "estimatedSeconds": 50,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Tape diagram for ratio 4 : 6",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 80\" role=\"img\"><rect x=\"20\" y=\"30\" width=\"136\" height=\"36\" fill=\"#0EA5E9\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"88\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">4</text><rect x=\"156\" y=\"30\" width=\"204\" height=\"36\" fill=\"#10B981\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"258\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">6</text></svg>"
+  }
+}

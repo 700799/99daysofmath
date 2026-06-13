@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.032",
+  "domain": "6.EE",
+  "unit": 4,
+  "orderInUnit": 2,
+  "standard": "6.EE.B.7",
+  "difficulty": 1,
+  "prompt": "Solve: $x - 4 = 9$.",
+  "answerType": "numeric",
+  "primaryAnswer": "13",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Add $4$ to both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add $4$ to both sides."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 9 + 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 13$."
+    }
+  ],
+  "explanation": [
+    "$x - 4 = 9 \\Rightarrow x = 13$."
+  ],
+  "tags": [
+    "solve"
+  ],
+  "estimatedSeconds": 30
+}

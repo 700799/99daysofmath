@@ -1,0 +1,57 @@
+{
+  "id": "6.NS.054",
+  "domain": "6.NS",
+  "unit": 6,
+  "orderInUnit": 4,
+  "standard": "6.NS.A.1",
+  "difficulty": 2,
+  "prompt": "Which equals $\\frac{2}{5} \\div \\frac{1}{10}$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\frac{1}{25}$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$\\frac{2}{50}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$4$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$\\frac{1}{5}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Flip and multiply.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Flip and multiply."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{2}{5} \\times 10 = \\frac{20}{5}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{20}{5} = 4$."
+    }
+  ],
+  "explanation": [
+    "$\\frac{2}{5} \\div \\frac{1}{10} = \\frac{2}{5} \\times \\frac{10}{1} = \\frac{20}{5} = 4$."
+  ],
+  "tags": [
+    "fraction-division"
+  ],
+  "estimatedSeconds": 55
+}

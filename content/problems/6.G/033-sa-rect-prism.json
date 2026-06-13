@@ -1,0 +1,42 @@
+{
+  "id": "6.G.033",
+  "domain": "6.G",
+  "unit": 4,
+  "orderInUnit": 3,
+  "standard": "6.G.A.4",
+  "difficulty": 2,
+  "prompt": "A rectangular prism is $4 \\times 3 \\times 2$. Find its surface area.",
+  "answerType": "numeric",
+  "primaryAnswer": "52",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$SA = 2(lw + lh + wh)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$SA = 2(lw + lh + wh)$."
+    },
+    {
+      "level": "guide",
+      "text": "$2(12 + 8 + 6) = 2(26)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$52$."
+    }
+  ],
+  "explanation": [
+    "$lw = 12$, $lh = 8$, $wh = 6$.",
+    "$SA = 2(12 + 8 + 6) = 52$."
+  ],
+  "tags": [
+    "surface-area",
+    "prism"
+  ],
+  "estimatedSeconds": 70,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Rectangular prism 4×3×2",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 263.4 175.2\" role=\"img\"><g fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.5\" stroke-linejoin=\"round\"><polygon points=\"30,73.2 174,73.2 174,145.2 30,145.2\" fill=\"#BAE6FD\"/><polygon points=\"30,73.2 89.4,30 233.4,30 174,73.2\" fill=\"#BAE6FD\"/><polygon points=\"174,73.2 233.4,30 233.4,101.99999999999999 174,145.2\" fill=\"#BAE6FD\"/></g><g font-family=\"Nunito, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"102\" y=\"167.2\">l = 4</text><text x=\"217.7\" y=\"55.6\">w = 3</text><text x=\"257.4\" y=\"71\">h = 2</text></g></svg>"
+  }
+}

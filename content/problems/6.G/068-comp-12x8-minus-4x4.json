@@ -1,0 +1,53 @@
+{
+  "id": "6.G.068",
+  "domain": "6.G",
+  "unit": 7,
+  "orderInUnit": 8,
+  "standard": "6.G.A.1",
+  "difficulty": 3,
+  "prompt": "A $12 \\times 8$ rectangle has a $4 \\times 4$ square removed from one corner. **Area remaining**?",
+  "answerType": "numeric",
+  "primaryAnswer": "80",
+  "alternativeAnswers": [
+    "80 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Subtract the removed area.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+    },
+    {
+      "level": "nudge",
+      "text": "Subtract the removed area."
+    },
+    {
+      "level": "guide",
+      "text": "$12 \\cdot 8 = 96$, $4 \\cdot 4 = 16$."
+    },
+    {
+      "level": "reveal",
+      "text": "$96 - 16 = 80$."
+    }
+  ],
+  "explanation": [
+    "$96 - 16 = 80$ sq units.",
+    "Final answer: 80."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Decompose into rectangles",
+      "steps": [
+        "The remaining shape can be split into a $12 \\times 4$ and an $8 \\times 4$ rectangle.",
+        "$48 + 32 = 80$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "composite"
+  ],
+  "estimatedSeconds": 75
+}

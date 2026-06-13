@@ -1,0 +1,42 @@
+{
+  "id": "6.RP.024",
+  "domain": "6.RP",
+  "unit": 3,
+  "orderInUnit": 4,
+  "standard": "6.RP.A.3.a",
+  "difficulty": 2,
+  "prompt": "$3$ pencils cost \\$$1.50$. How much do $7$ pencils cost?",
+  "answerType": "numeric",
+  "primaryAnswer": "3.50",
+  "alternativeAnswers": [
+    "$3.50",
+    "3.5",
+    "$3.5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "First find the cost per pencil.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find the cost per pencil."
+    },
+    {
+      "level": "guide",
+      "text": "Cost per pencil $= 1.50 \\div 3 = 0.50$."
+    },
+    {
+      "level": "reveal",
+      "text": "$7 \\times 0.50 = 3.50$."
+    }
+  ],
+  "explanation": [
+    "Per pencil: $1.50 \\div 3 = 0.50$.",
+    "For $7$: $7 \\times 0.50 = 3.50$.",
+    "Total: \\$$3.50$."
+  ],
+  "tags": [
+    "ratio-table",
+    "money"
+  ],
+  "estimatedSeconds": 50
+}

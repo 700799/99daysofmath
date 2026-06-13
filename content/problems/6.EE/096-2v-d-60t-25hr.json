@@ -1,0 +1,56 @@
+{
+  "id": "6.EE.096",
+  "domain": "6.EE",
+  "unit": 10,
+  "orderInUnit": 6,
+  "standard": "6.EE.C.9",
+  "difficulty": 3,
+  "prompt": "A car drives $d = 60t$ miles in $t$ hours. How far does it go in $2.5$ hours?",
+  "answerType": "numeric",
+  "primaryAnswer": "150",
+  "alternativeAnswers": [
+    "150 mi",
+    "150 miles"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $t = 2.5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Whatever operation is acting on the variable, do its OPPOSITE on both sides."
+    },
+    {
+      "level": "nudge",
+      "text": "Substitute $t = 2.5$."
+    },
+    {
+      "level": "guide",
+      "text": "$d = 60 \\cdot 2.5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$150$."
+    }
+  ],
+  "explanation": [
+    "$d = 60(2.5) = 150$ miles.",
+    "Final answer: 150."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Break $2.5$ into $2 + 0.5$",
+      "steps": [
+        "$60 \\cdot 2 = 120$.",
+        "$60 \\cdot 0.5 = 30$.",
+        "$120 + 30 = 150$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "two-vars",
+    "word"
+  ],
+  "estimatedSeconds": 70
+}

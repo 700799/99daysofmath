@@ -1,0 +1,41 @@
+{
+  "id": "6.G.009",
+  "domain": "6.G",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "6.G.A.1",
+  "difficulty": 1,
+  "prompt": "A rectangle has length $7$ and width $3$. What is its area?",
+  "answerType": "numeric",
+  "primaryAnswer": "21",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$A = l \\times w$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$A = l \\times w$."
+    },
+    {
+      "level": "guide",
+      "text": "$7 \\times 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$21$."
+    }
+  ],
+  "explanation": [
+    "$A = l \\times w = 7 \\times 3 = 21$."
+  ],
+  "tags": [
+    "area",
+    "rectangle"
+  ],
+  "estimatedSeconds": 30,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Rectangle with width 7 and height 3",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 296 170.28571428571428\" role=\"img\"><rect x=\"38\" y=\"38\" width=\"220\" height=\"94.28571428571428\" fill=\"#FFE8B5\" stroke=\"#F59E0B\" stroke-width=\"3\"/><g font-family=\"Nunito, sans-serif\" font-size=\"16\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"148\" y=\"28\">7</text><text x=\"148\" y=\"154.28571428571428\">7</text><text x=\"24\" y=\"90.14285714285714\" transform=\"rotate(-90 24 90.14285714285714)\">3</text><text x=\"272\" y=\"90.14285714285714\" transform=\"rotate(90 272 90.14285714285714)\">3</text></g></svg>"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "6.SP.085",
+  "domain": "6.SP",
+  "unit": 9,
+  "orderInUnit": 5,
+  "standard": "6.SP.B.4",
+  "difficulty": 2,
+  "prompt": "The middle $50\\%$ of the data sits between which two quartiles?",
+  "answerType": "short-text",
+  "primaryAnswer": "Q1 and Q3",
+  "alternativeAnswers": [
+    "Q1, Q3",
+    "Q_1 and Q_3",
+    "q1 and q3"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "The box of a box plot.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The box of a box plot."
+    },
+    {
+      "level": "guide",
+      "text": "Lower and upper quartiles."
+    },
+    {
+      "level": "reveal",
+      "text": "$Q_1$ and $Q_3$."
+    }
+  ],
+  "explanation": [
+    "$Q_1$ marks the $25\\%$ point and $Q_3$ marks the $75\\%$ point.",
+    "Between them sits the middle $50\\%$ of the data."
+  ],
+  "tags": [
+    "quartile",
+    "box-plot"
+  ],
+  "estimatedSeconds": 50
+}

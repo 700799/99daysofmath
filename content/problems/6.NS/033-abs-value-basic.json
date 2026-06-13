@@ -1,0 +1,36 @@
+{
+  "id": "6.NS.033",
+  "domain": "6.NS",
+  "unit": 4,
+  "orderInUnit": 3,
+  "standard": "6.NS.C.7.c",
+  "difficulty": 1,
+  "prompt": "Compute $|{-8}|$.",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Absolute value is the distance from $0$ — always non-negative.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Absolute value is the distance from $0$ — always non-negative."
+    },
+    {
+      "level": "guide",
+      "text": "How far is $-8$ from $0$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$8$ units."
+    }
+  ],
+  "explanation": [
+    "$|{-8}|$ is the distance from $-8$ to $0$.",
+    "That distance is $8$."
+  ],
+  "tags": [
+    "absolute-value"
+  ],
+  "estimatedSeconds": 30
+}

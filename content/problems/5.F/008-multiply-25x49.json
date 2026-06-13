@@ -1,0 +1,50 @@
+{
+  "id": "5.F.008",
+  "domain": "5.F",
+  "unit": 1,
+  "orderInUnit": 8,
+  "standard": "5.NBT.B.5",
+  "difficulty": 2,
+  "prompt": "Multiply: $25 \\times 49$",
+  "answerType": "numeric",
+  "primaryAnswer": "1225",
+  "alternativeAnswers": [
+    "1,225"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$49$ is just one less than $50$ — that makes a shortcut possible.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$49$ is just one less than $50$ — that makes a shortcut possible."
+    },
+    {
+      "level": "guide",
+      "text": "$25 \\times 50 = 1250$. You multiplied one extra $25$, so take it back off."
+    },
+    {
+      "level": "reveal",
+      "text": "$1250 - 25 = 1225$."
+    }
+  ],
+  "explanation": [
+    "Use a friendly number: $49 = 50 - 1$.",
+    "$25 \\times 50 = 1250$.",
+    "$25 \\times 1 = 25$, so subtract it: $1250 - 25 = 1225$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Standard algorithm",
+      "steps": [
+        "$25 \\times 9 = 225$.",
+        "$25 \\times 40 = 1000$.",
+        "$1000 + 225 = 1225$."
+      ]
+    }
+  ],
+  "tags": [
+    "multiplication",
+    "mental-math"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,36 @@
+{
+  "id": "6.NS.011",
+  "domain": "6.NS",
+  "unit": 1,
+  "orderInUnit": 8,
+  "standard": "6.NS.B.3",
+  "difficulty": 2,
+  "prompt": "Subtract: $5.6 - 2.84$.",
+  "answerType": "numeric",
+  "primaryAnswer": "2.76",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Line up the decimal points.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Line up the decimal points."
+    },
+    {
+      "level": "guide",
+      "text": "Rewrite as $5.60 - 2.84$."
+    },
+    {
+      "level": "reveal",
+      "text": "Borrow as needed: $5.60 - 2.84 = 2.76$."
+    }
+  ],
+  "explanation": [
+    "Align: $5.60 - 2.84$.",
+    "Subtract: $2.76$."
+  ],
+  "tags": [
+    "decimal"
+  ],
+  "estimatedSeconds": 40
+}

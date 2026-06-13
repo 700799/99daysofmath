@@ -1,0 +1,44 @@
+{
+  "id": "6.EE.030",
+  "domain": "6.EE",
+  "unit": 3,
+  "orderInUnit": 10,
+  "standard": "6.EE.A.3",
+  "difficulty": 3,
+  "prompt": "Simplify: $5y - 2y + 3$.",
+  "answerType": "short-text",
+  "primaryAnswer": "3y+3",
+  "alternativeAnswers": [
+    "3y + 3"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Combine $y$-terms.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Whatever operation is acting on the variable, do its OPPOSITE on both sides."
+    },
+    {
+      "level": "nudge",
+      "text": "Combine $y$-terms."
+    },
+    {
+      "level": "guide",
+      "text": "$5y - 2y = 3y$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3y + 3$."
+    }
+  ],
+  "explanation": [
+    "$5y - 2y = 3y$.",
+    "Constant: $+3$.",
+    "$3y + 3$."
+  ],
+  "tags": [
+    "combine-like"
+  ],
+  "estimatedSeconds": 45
+}

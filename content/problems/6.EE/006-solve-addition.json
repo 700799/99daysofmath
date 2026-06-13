@@ -1,0 +1,50 @@
+{
+  "id": "6.EE.006",
+  "domain": "6.EE",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "6.EE.B.7",
+  "difficulty": 2,
+  "prompt": "Solve for $x$: $x + 7 = 15$.",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [
+    "x=8"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Get $x$ alone by undoing the $+7$. Subtract $7$ from **both** sides.",
+  "explanation": [
+    "Start with $x + 7 = 15$.",
+    "Subtract $7$ from both sides: $x + 7 - 7 = 15 - 7$.",
+    "Simplify: $x = 8$.",
+    "Check: $8 + 7 = 15$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think: \"what plus 7 is 15?\"",
+      "steps": [
+        "The equation asks: some number plus $7$ equals $15$.",
+        "Count up: $8 + 7 = 15$. So $x = 8$."
+      ]
+    }
+  ],
+  "tags": [
+    "CA",
+    "equations"
+  ],
+  "estimatedSeconds": 35,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Get $x$ alone by undoing the $+7$. Subtract $7$ from **both** sides."
+    },
+    {
+      "level": "guide",
+      "text": "Start with $x + 7 = 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "Check: $8 + 7 = 15$. ✓"
+    }
+  ]
+}

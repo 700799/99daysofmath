@@ -1,0 +1,49 @@
+{
+  "id": "6.NS.071",
+  "domain": "6.NS",
+  "unit": 8,
+  "orderInUnit": 1,
+  "standard": "6.NS.C.7.a",
+  "difficulty": 1,
+  "prompt": "Which is greater: $-3$ or $1$?",
+  "answerType": "short-text",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [
+    "+1",
+    "one"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "On a number line, greater means farther to the right.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "On a number line, greater means farther to the right."
+    },
+    {
+      "level": "guide",
+      "text": "$1$ is to the right of $-3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$1 > -3$."
+    }
+  ],
+  "explanation": [
+    "Positive numbers are always greater than negative numbers.",
+    "$1 > -3$."
+  ],
+  "tags": [
+    "integer",
+    "compare"
+  ],
+  "estimatedSeconds": 30,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 1 — verified."
+      ]
+    }
+  ]
+}

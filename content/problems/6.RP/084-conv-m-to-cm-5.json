@@ -1,0 +1,49 @@
+{
+  "id": "6.RP.084",
+  "domain": "6.RP",
+  "unit": 9,
+  "orderInUnit": 4,
+  "standard": "6.RP.A.3.d",
+  "difficulty": 2,
+  "prompt": "Convert $5$ meters to centimeters. ($1$ m $= 100$ cm)",
+  "answerType": "numeric",
+  "primaryAnswer": "500",
+  "alternativeAnswers": [
+    "500 cm"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$1$ m $= 100$ cm. Multiply.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$1$ m $= 100$ cm. Multiply."
+    },
+    {
+      "level": "guide",
+      "text": "$5 \\times 100$."
+    },
+    {
+      "level": "reveal",
+      "text": "$500$ cm."
+    }
+  ],
+  "explanation": [
+    "$5 \\times 100 = 500$ centimeters.",
+    "Final answer: 500."
+  ],
+  "tags": [
+    "conversion",
+    "metric",
+    "length"
+  ],
+  "estimatedSeconds": 35,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 500 — verified."
+      ]
+    }
+  ]
+}

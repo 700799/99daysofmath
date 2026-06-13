@@ -1,0 +1,47 @@
+{
+  "id": "6.SP.022",
+  "domain": "6.SP",
+  "unit": 3,
+  "orderInUnit": 2,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "For $1, 3, 5, 7, 9, 11, 13$: $Q1$ is the median of the lower half. What is $Q1$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Lower half: $1, 3, 5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Draw a tiny dot plot. The shape of the data tells you which statistic to use."
+    },
+    {
+      "level": "nudge",
+      "text": "Lower half: $1, 3, 5$."
+    },
+    {
+      "level": "guide",
+      "text": "Median of $1, 3, 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3$."
+    }
+  ],
+  "explanation": [
+    "Lower half: $1, 3, 5$.",
+    "Median: $3$."
+  ],
+  "tags": [
+    "CA",
+    "quartile"
+  ],
+  "estimatedSeconds": 50,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Dot plot for 6.SP.022",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 130\" role=\"img\"><line x1=\"20\" y1=\"100\" x2=\"400\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"30\" y1=\"96\" x2=\"30\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"30\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">0</text><line x1=\"55.71428571428571\" y1=\"96\" x2=\"55.71428571428571\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"55.71428571428571\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><line x1=\"81.42857142857142\" y1=\"96\" x2=\"81.42857142857142\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"81.42857142857142\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">2</text><line x1=\"107.14285714285714\" y1=\"96\" x2=\"107.14285714285714\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"107.14285714285714\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">3</text><line x1=\"132.85714285714283\" y1=\"96\" x2=\"132.85714285714283\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"132.85714285714283\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">4</text><line x1=\"158.57142857142858\" y1=\"96\" x2=\"158.57142857142858\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"158.57142857142858\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><line x1=\"184.28571428571428\" y1=\"96\" x2=\"184.28571428571428\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"184.28571428571428\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">6</text><line x1=\"210\" y1=\"96\" x2=\"210\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"210\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">7</text><line x1=\"235.7142857142857\" y1=\"96\" x2=\"235.7142857142857\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"235.7142857142857\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">8</text><line x1=\"261.42857142857144\" y1=\"96\" x2=\"261.42857142857144\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"261.42857142857144\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">9</text><line x1=\"287.14285714285717\" y1=\"96\" x2=\"287.14285714285717\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"287.14285714285717\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">10</text><line x1=\"312.85714285714283\" y1=\"96\" x2=\"312.85714285714283\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"312.85714285714283\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">11</text><line x1=\"338.57142857142856\" y1=\"96\" x2=\"338.57142857142856\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"338.57142857142856\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">12</text><line x1=\"364.2857142857143\" y1=\"96\" x2=\"364.2857142857143\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"364.2857142857143\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">13</text><line x1=\"390\" y1=\"96\" x2=\"390\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"390\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">14</text><circle cx=\"55.71428571428571\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"107.14285714285714\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"158.57142857142858\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"210\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"261.42857142857144\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"312.85714285714283\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"364.2857142857143\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/></svg>"
+  }
+}

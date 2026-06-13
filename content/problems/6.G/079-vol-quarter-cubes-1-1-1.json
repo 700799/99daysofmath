@@ -1,0 +1,56 @@
+{
+  "id": "6.G.079",
+  "domain": "6.G",
+  "unit": 8,
+  "orderInUnit": 9,
+  "standard": "6.G.A.2",
+  "difficulty": 3,
+  "prompt": "How many $\\frac{1}{4}$-inch cubes fit inside a $1$-inch $\\times$ $1$-inch $\\times$ $1$-inch box?",
+  "answerType": "numeric",
+  "primaryAnswer": "64",
+  "alternativeAnswers": [
+    "64 cubes"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "How many fit along each edge?",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+    },
+    {
+      "level": "nudge",
+      "text": "How many fit along each edge?"
+    },
+    {
+      "level": "guide",
+      "text": "Each edge fits $4$ cubes ($1 \\div \\tfrac{1}{4} = 4$)."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 \\cdot 4 \\cdot 4 = 64$."
+    }
+  ],
+  "explanation": [
+    "Each edge of the big box fits $1 \\div \\tfrac{1}{4} = 4$ small cubes.",
+    "Total: $4^3 = 64$ cubes."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Volume ratio",
+      "steps": [
+        "Big volume: $1$ cu in.",
+        "Small cube volume: $\\left(\\tfrac{1}{4}\\right)^3 = \\tfrac{1}{64}$.",
+        "Number that fit: $1 \\div \\tfrac{1}{64} = 64$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "volume",
+    "fraction",
+    "word"
+  ],
+  "estimatedSeconds": 100
+}

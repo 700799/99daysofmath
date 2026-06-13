@@ -1,0 +1,41 @@
+{
+  "id": "6.RP.029",
+  "domain": "6.RP",
+  "unit": 3,
+  "orderInUnit": 9,
+  "standard": "6.RP.A.3",
+  "difficulty": 3,
+  "prompt": "On a double number line, $4$ matches $24$. What value on the bottom line matches $7$ on the top?",
+  "answerType": "numeric",
+  "primaryAnswer": "42",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The pairs form a constant ratio.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Picture a ratio table: write the rate in one row, then scale both columns by the same number."
+    },
+    {
+      "level": "nudge",
+      "text": "The pairs form a constant ratio."
+    },
+    {
+      "level": "guide",
+      "text": "$24 / 4 = 6$, so bottom is $6 \\times$ top."
+    },
+    {
+      "level": "reveal",
+      "text": "$7 \\times 6 = 42$."
+    }
+  ],
+  "explanation": [
+    "Ratio: $6$ per $1$.",
+    "$7 \\times 6 = 42$."
+  ],
+  "tags": [
+    "double-number-line"
+  ],
+  "estimatedSeconds": 55
+}

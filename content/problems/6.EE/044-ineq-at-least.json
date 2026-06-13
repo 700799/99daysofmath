@@ -1,0 +1,68 @@
+{
+  "id": "6.EE.044",
+  "domain": "6.EE",
+  "unit": 5,
+  "orderInUnit": 4,
+  "standard": "6.EE.B.8",
+  "difficulty": 3,
+  "prompt": "A movie theater needs **at least** $\\$500$ in ticket sales tonight. Each ticket sells for $\\$8$. Let $y$ = number of tickets sold. Write an inequality in $y$. Use no spaces; example form: $8y≥500$.",
+  "answerType": "short-text",
+  "primaryAnswer": "8y≥500",
+  "alternativeAnswers": [
+    "8y >= 500",
+    "8y ≥ 500",
+    "8*y>=500",
+    "8y>=500"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Sales = price × number of tickets. \"**At least** $\\$500$\" means sales must be ≥ $500$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "You don't have to solve for $y$ — the question wants the **inequality**, not the minimum number of tickets."
+    },
+    {
+      "level": "nudge",
+      "text": "Translate piece by piece: total sales = $8y$. \"At least $\\$500$\" → $\\ge 500$."
+    },
+    {
+      "level": "guide",
+      "text": "Sales $= 8y$. They need sales $\\ge 500$, so $8y \\ge 500$."
+    },
+    {
+      "level": "reveal",
+      "text": "Inequality: $8y \\ge 500$. (Solving: $y \\ge 62.5$, so they need at least $63$ tickets.)"
+    }
+  ],
+  "explanation": [
+    "Let $y$ = number of tickets. Each costs $\\$8$, so total sales $= 8y$ dollars.",
+    "Goal: sales must be **at least** $\\$500$.",
+    "\"At least\" → $\\ge$. So $8y \\ge 500$.",
+    "Bonus: divide by $8$ → $y \\ge 62.5$. Since tickets are whole, they need at least $63$ tickets."
+  ],
+  "tags": [
+    "inequality",
+    "translate",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 100,
+  "alternativeExplanations": [
+    {
+      "title": "Why \"at least\" uses $\\ge$",
+      "steps": [
+        "\"At least $\\$500$\" means the sales **could be exactly** $\\$500$ or **more** — but not less.",
+        "The inequality $8y \\ge 500$ includes equality (the endpoint counts).",
+        "Compare: \"more than $\\$500$\" would be $8y > 500$ (strictly above, $500$ wouldn't count)."
+      ]
+    },
+    {
+      "title": "Sanity-check with numbers",
+      "steps": [
+        "$y = 60$: sales $= 8 \\cdot 60 = 480$. $480 \\ge 500$? No. Not enough.",
+        "$y = 63$: sales $= 504$. $504 \\ge 500$? Yes. Enough.",
+        "$y = 100$: sales $= 800$. Plenty. All values $\\ge 63$ work, matching $8y \\ge 500$."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "6.RP.036",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 6,
+  "standard": "6.RP.A.1",
+  "difficulty": 2,
+  "prompt": "A bracelet uses red, blue, and green beads in the ratio $2 : 3 : 5$. If there are $20$ beads total, how many are **green**?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [
+    "10 beads"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Add the parts of the ratio to get the total.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add the parts of the ratio to get the total."
+    },
+    {
+      "level": "guide",
+      "text": "Parts $= 2 + 3 + 5 = 10$. Each part $= 20 / 10 = 2$ beads."
+    },
+    {
+      "level": "reveal",
+      "text": "Green has $5$ parts: $5 \\times 2 = 10$."
+    }
+  ],
+  "explanation": [
+    "Total parts: $2 + 3 + 5 = 10$.",
+    "Each part: $20 \\div 10 = 2$ beads.",
+    "Green: $5 \\times 2 = 10$."
+  ],
+  "tags": [
+    "CA",
+    "ratio"
+  ],
+  "estimatedSeconds": 70,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Tape diagram for ratio 2 : 3",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 80\" role=\"img\"><rect x=\"20\" y=\"30\" width=\"136\" height=\"36\" fill=\"#0EA5E9\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"88\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">2</text><rect x=\"156\" y=\"30\" width=\"204\" height=\"36\" fill=\"#10B981\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"258\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">3</text></svg>"
+  }
+}

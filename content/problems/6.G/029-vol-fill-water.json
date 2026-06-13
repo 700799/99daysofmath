@@ -1,0 +1,44 @@
+{
+  "id": "6.G.029",
+  "domain": "6.G",
+  "unit": 3,
+  "orderInUnit": 9,
+  "standard": "6.G.A.2",
+  "difficulty": 3,
+  "prompt": "A tank is $5$ ft × $3$ ft × $2$ ft. How many cubic feet of water to fill it?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [
+    "30 cubic feet"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$V = lwh$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sketch the shape and label every length. A 30-second drawing saves 5 minutes of thinking."
+    },
+    {
+      "level": "nudge",
+      "text": "$V = lwh$."
+    },
+    {
+      "level": "guide",
+      "text": "$5 \\times 3 \\times 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$30$."
+    }
+  ],
+  "explanation": [
+    "$V = 5 \\cdot 3 \\cdot 2 = 30$ ft³."
+  ],
+  "tags": [
+    "MAP-practice",
+    "volume",
+    "word"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,36 @@
+{
+  "id": "6.NS.028",
+  "domain": "6.NS",
+  "unit": 3,
+  "orderInUnit": 8,
+  "standard": "6.NS.B.4",
+  "difficulty": 1,
+  "prompt": "How many factors does $20$ have?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "List them: $1$ × what?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "List them: $1$ × what?"
+    },
+    {
+      "level": "guide",
+      "text": "$1, 2, 4, 5, 10, 20$."
+    },
+    {
+      "level": "reveal",
+      "text": "That's $6$ factors."
+    }
+  ],
+  "explanation": [
+    "Factors of $20$: $1, 2, 4, 5, 10, 20$.",
+    "Count: $6$."
+  ],
+  "tags": [
+    "factors"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,43 @@
+{
+  "id": "6.SP.098",
+  "domain": "6.SP",
+  "unit": 10,
+  "orderInUnit": 8,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "A class of $20$ students has a mean test score of $85$. What is the **total** of all the scores?",
+  "answerType": "numeric",
+  "primaryAnswer": "1700",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Total $=$ mean $\\times$ count.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Use a sample of 3–4 values to see how the rule works, then apply it to the real data."
+    },
+    {
+      "level": "nudge",
+      "text": "Total $=$ mean $\\times$ count."
+    },
+    {
+      "level": "guide",
+      "text": "$20 \\cdot 85$."
+    },
+    {
+      "level": "reveal",
+      "text": "$1700$."
+    }
+  ],
+  "explanation": [
+    "Sum $=$ mean $\\times$ count $= 85 \\cdot 20 = 1700$.",
+    "Final answer: 1700."
+  ],
+  "tags": [
+    "MAP-practice",
+    "mean",
+    "inverse"
+  ],
+  "estimatedSeconds": 60
+}

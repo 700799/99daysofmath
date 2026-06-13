@@ -1,0 +1,36 @@
+{
+  "id": "6.NS.024",
+  "domain": "6.NS",
+  "unit": 3,
+  "orderInUnit": 4,
+  "standard": "6.NS.B.4",
+  "difficulty": 1,
+  "prompt": "Find the LCM of $3$ and $5$.",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "When numbers share no factors, LCM is their product.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "When numbers share no factors, LCM is their product."
+    },
+    {
+      "level": "guide",
+      "text": "$3 \\times 5 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$15$."
+    }
+  ],
+  "explanation": [
+    "$3$ and $5$ share no common factors.",
+    "LCM $= 3 \\times 5 = 15$."
+  ],
+  "tags": [
+    "lcm"
+  ],
+  "estimatedSeconds": 35
+}

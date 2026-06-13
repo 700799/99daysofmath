@@ -1,19 +1,30 @@
+import { useState } from 'react';
 import { useParams, useLocation, Navigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { DOMAINS, type Domain } from '../types/problem';
+import { StarRating } from '../components/StarRating';
+import { Mascot } from '../components/Mascot';
+import { Confetti } from '../components/Celebration';
+import { StickerCelebration } from '../components/StickerCelebration';
+import { stickerById } from '../utils/encouragement';
 import type { Stars } from '../state/progress';
-import { Icon } from '../icons/Icon';
 
 interface ResultsState {
   stars: Stars;
   missedCount: number;
   total: number;
-  coinsEarned?: number;
+  xpEarned: number;
+  unitBonus?: number;
+  trailBonus?: number;
+  allTrailsBonus?: number;
+  sticker: string;
+  newStickerIds?: string[];
 }
 
 export function UnitResults() {
   const { domain, unit } = useParams<{ domain: string; unit: string }>();
   const { state } = useLocation() as { state: ResultsState | null };
+  const [celebrated, setCelebrated] = useState(false);
 
   if (!domain || !DOMAINS.includes(domain as Domain) || !unit) {
     return <Navigate to="/" replace />;
@@ -23,92 +34,127 @@ export function UnitResults() {
   }
 
   const correct = state.total - state.missedCount;
-  const coins = state.coinsEarned ?? 0;
+  const perfect = state.stars === 3;
+  const newStickerIds = state.newStickerIds ?? [];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="text-center"
-    >
-      <motion.div
-        initial={{ scale: 0, rotate: -12 }}
-        animate={{ scale: 1, rotate: 0 }}
-        transition={{ type: 'spring', stiffness: 260, damping: 16 }}
-        className="flex justify-center mb-3"
-      >
-        <Icon name="trophy" size={72} label="Trophy" />
-      </motion.div>
-      <h1 className="text-3xl font-display font-extrabold text-slate-900">
-        Unit complete!
-      </h1>
-      <p className="text-slate-600 mt-1">
-        {domain} · Unit {unit}
-      </p>
-
-      <div
-        className="mt-6 flex justify-center gap-1.5"
-        role="img"
-        aria-label={`${state.stars} of 3 stars`}
-      >
-        {[0, 1, 2].map((i) => (
-          <motion.div
-            key={i}
-            initial={{ scale: 0, y: 14 }}
-            animate={{ scale: 1, y: 0 }}
-            transition={{ delay: 0.25 + i * 0.18, type: 'spring', stiffness: 320, damping: 14 }}
-          >
-            <Icon name={i < state.stars ? 'star' : 'star-dim'} size={46} />
-          </motion.div>
-        ))}
-      </div>
-
-      {coins > 0 && (
-        <motion.div
-          initial={{ scale: 0.6, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.85, type: 'spring', stiffness: 300, damping: 18 }}
-          className="mt-5 inline-flex items-center gap-2 bg-violet-100 px-4 py-2 rounded-full"
-        >
-          <Icon name="coin" size={22} />
-          <span className="font-display font-extrabold text-violet-900">
-            +{coins} coins for the Arcade!
-          </span>
-        </motion.div>
+    <div className="relative">
+      {!celebrated && newStickerIds.length > 0 && (
+        <StickerCelebration stickerIds={newStickerIds} onDone={() => setCelebrated(true)} />
       )}
+      {perfect && <Confetti count={24} />}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-center"
+      >
+        <div className="flex justify-center">
+          <Mascot mood={perfect ? 'cheer' : 'happy'} size={120} />
+        </div>
+        <h1 className="text-3xl font-display font-extrabold text-slate-900 mt-2">
+          {perfect ? 'Perfect unit!' : 'Unit complete!'}
+        </h1>
+        <p className="text-slate-600 mt-1">
+          {domain} · Unit {unit}
+        </p>
 
-      <div className="mt-6 grid grid-cols-2 gap-3">
-        <div className="bg-green-50 border border-green-200 rounded-2xl p-4">
-          <div className="text-2xl font-display font-extrabold text-green-800">
-            {correct}
-          </div>
-          <div className="text-xs font-display font-bold text-green-700 uppercase tracking-wider">
-            Correct
-          </div>
+        <div className="mt-6 flex justify-center">
+          <StarRating stars={state.stars} size="lg" />
         </div>
-        <div className="bg-red-50 border border-red-200 rounded-2xl p-4">
-          <div className="text-2xl font-display font-extrabold text-red-800">
-            {state.missedCount}
-          </div>
-          <div className="text-xs font-display font-bold text-red-700 uppercase tracking-wider">
-            Missed
-          </div>
+
+        <div className="mt-6 grid grid-cols-3 gap-3">
+          <StatBox value={correct} label="Correct" tone="green" />
+          <StatBox value={state.missedCount} label="Missed" tone="red" />
+          <StatBox value={state.xpEarned} label="XP" tone="yellow" />
         </div>
+
+        {((state.unitBonus ?? 0) > 0 || (state.trailBonus ?? 0) > 0 || (state.allTrailsBonus ?? 0) > 0) && (
+          <div className="mt-3 flex flex-wrap justify-center gap-2">
+            {(state.unitBonus ?? 0) > 0 && (
+              <span className="inline-flex items-center gap-1 bg-yellow-100 text-yellow-900 font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
+                🎁 Unit bonus +{state.unitBonus} XP
+              </span>
+            )}
+            {(state.trailBonus ?? 0) > 0 && (
+              <span className="inline-flex items-center gap-1 bg-green-100 text-green-900 font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
+                🏁 Trail complete +{state.trailBonus} XP
+              </span>
+            )}
+            {(state.allTrailsBonus ?? 0) > 0 && (
+              <span className="inline-flex items-center gap-1 bg-purple-100 text-purple-900 font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
+                👑 ALL trails done +{state.allTrailsBonus} XP
+              </span>
+            )}
+          </div>
+        )}
+
+        {state.newStickerIds && state.newStickerIds.length > 0 && (
+          <div className="mt-6 flex flex-col gap-3 items-center">
+            <div className="text-xs font-display font-extrabold uppercase tracking-wider text-pink-700">
+              {state.newStickerIds.length === 1 ? 'New sticker' : 'New stickers'}
+            </div>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {state.newStickerIds.map((id, i) => {
+                const def = stickerById(id);
+                if (!def) return null;
+                return (
+                  <motion.div
+                    key={id}
+                    initial={{ scale: 0, rotate: -20 }}
+                    animate={{ scale: 1, rotate: 0 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 220,
+                      damping: 14,
+                      delay: 0.2 + i * 0.15,
+                    }}
+                  >
+                    <div className="bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 border-4 border-pink-300 rounded-3xl px-5 py-3 text-center">
+                      <div className="text-3xl">{def.emoji}</div>
+                      <div className="text-sm font-display font-extrabold text-slate-900 mt-1">
+                        {def.label}
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        <Link
+          to={`/trail/${domain}`}
+          className="mt-8 inline-block w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+        >
+          Back to trail
+        </Link>
+      </motion.div>
+    </div>
+  );
+}
+
+function StatBox({
+  value,
+  label,
+  tone,
+}: {
+  value: number;
+  label: string;
+  tone: 'green' | 'red' | 'yellow';
+}) {
+  const styles = {
+    green: 'bg-green-50 border-green-200 text-green-800',
+    red: 'bg-red-50 border-red-200 text-red-800',
+    yellow: 'bg-yellow-50 border-yellow-200 text-yellow-800',
+  }[tone];
+  return (
+    <div className={`border-2 rounded-2xl p-3 ${styles}`}>
+      <div className="text-2xl font-display font-extrabold tabular-nums">
+        {value}
       </div>
-
-      <Link
-        to={`/trail/${domain}`}
-        className="mt-8 inline-block w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-sm"
-      >
-        Back to trail
-      </Link>
-      <Link
-        to="/rewards"
-        className="mt-3 inline-flex items-center justify-center gap-2 w-full min-h-12 px-6 py-2.5 rounded-2xl bg-violet-100 hover:bg-violet-200 text-violet-900 font-display font-extrabold shadow-sm"
-      >
-        <Icon name="controller" size={20} />
-        <span>Play in the Arcade</span>
-      </Link>
-    </motion.div>
+      <div className="text-xs font-display font-bold uppercase tracking-wider">
+        {label}
+      </div>
+    </div>
   );
 }

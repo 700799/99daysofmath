@@ -1,0 +1,41 @@
+{
+  "id": "5.F.022",
+  "domain": "5.F",
+  "unit": 3,
+  "orderInUnit": 2,
+  "standard": "5.NF.B.4",
+  "difficulty": 1,
+  "prompt": "Multiply: $3 \\times \\frac{2}{5}$ (improper fraction or mixed number)",
+  "answerType": "fraction",
+  "primaryAnswer": "6/5",
+  "alternativeAnswers": [
+    "1 1/5",
+    "1.2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Three copies of $\\frac{2}{5}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Three copies of $\\frac{2}{5}$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{2}{5} + \\frac{2}{5} + \\frac{2}{5} = \\frac{6}{5}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times \\frac{2}{5} = \\frac{6}{5} = 1\\frac{1}{5}$."
+    }
+  ],
+  "explanation": [
+    "$3 \\times \\frac{2}{5}$ means three copies of two-fifths.",
+    "$2 \\times 3 = 6$ fifths → $\\frac{6}{5}$.",
+    "As a mixed number: $1\\frac{1}{5}$."
+  ],
+  "tags": [
+    "fractions",
+    "multiplication"
+  ],
+  "estimatedSeconds": 40
+}

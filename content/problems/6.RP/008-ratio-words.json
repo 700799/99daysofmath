@@ -1,0 +1,51 @@
+{
+  "id": "6.RP.008",
+  "domain": "6.RP",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "6.RP.A.1",
+  "difficulty": 1,
+  "prompt": "A bag has $5$ red marbles and $3$ blue marbles. What is the ratio of **red to blue**?",
+  "answerType": "short-text",
+  "primaryAnswer": "5:3",
+  "alternativeAnswers": [
+    "5 to 3",
+    "5/3",
+    "5 : 3"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A ratio compares two amounts. The order matters!",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A ratio compares two amounts. The order matters!"
+    },
+    {
+      "level": "guide",
+      "text": "You want **red : blue**, so write the red count first."
+    },
+    {
+      "level": "reveal",
+      "text": "Red is $5$, blue is $3$. Write it as $5:3$ (or $5$ to $3$)."
+    }
+  ],
+  "explanation": [
+    "A ratio compares two quantities. **Red : blue** puts red first.",
+    "There are $5$ red and $3$ blue.",
+    "Write it as $5:3$ or \"$5$ to $3$\"."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As a fraction",
+      "steps": [
+        "Ratios can be written as fractions: $\\frac{5}{3}$.",
+        "This means $5$ reds **for every** $3$ blues."
+      ]
+    }
+  ],
+  "tags": [
+    "CA",
+    "ratio"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,39 @@
+{
+  "id": "6.NS.034",
+  "domain": "6.NS",
+  "unit": 4,
+  "orderInUnit": 4,
+  "standard": "6.NS.C.7.a",
+  "difficulty": 2,
+  "prompt": "Which is greater: $-3$ or $-8$?",
+  "answerType": "numeric",
+  "primaryAnswer": "-3",
+  "alternativeAnswers": [
+    "−3"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "On a number line, greater means further right.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "On a number line, greater means further right."
+    },
+    {
+      "level": "guide",
+      "text": "$-3$ is to the right of $-8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-3 > -8$."
+    }
+  ],
+  "explanation": [
+    "On the number line, $-3$ is to the right of $-8$.",
+    "$-3$ is greater."
+  ],
+  "tags": [
+    "integer",
+    "compare"
+  ],
+  "estimatedSeconds": 40
+}

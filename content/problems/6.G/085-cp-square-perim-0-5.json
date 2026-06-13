@@ -1,0 +1,40 @@
+{
+  "id": "6.G.085",
+  "domain": "6.G",
+  "unit": 9,
+  "orderInUnit": 5,
+  "standard": "6.G.A.3",
+  "difficulty": 2,
+  "prompt": "A square has vertices $(0,0)$, $(5,0)$, $(5,5)$, $(0,5)$. Find its perimeter.",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [
+    "20 units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Squares have $4$ equal sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Squares have $4$ equal sides."
+    },
+    {
+      "level": "guide",
+      "text": "Side $= 5$. Perimeter $= 4 \\cdot 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$20$."
+    }
+  ],
+  "explanation": [
+    "Side $= 5$.",
+    "Perimeter $= 4 \\cdot 5 = 20$."
+  ],
+  "tags": [
+    "coordinate-plane",
+    "square",
+    "perimeter"
+  ],
+  "estimatedSeconds": 40
+}

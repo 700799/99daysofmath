@@ -1,0 +1,36 @@
+{
+  "id": "6.G.052",
+  "domain": "6.G",
+  "unit": 6,
+  "orderInUnit": 2,
+  "standard": "6.G.A.2",
+  "difficulty": 2,
+  "prompt": "A water tank is $4$ ft × $5$ ft × $3$ ft. Find its volume in ft³.",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply all three.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply all three."
+    },
+    {
+      "level": "guide",
+      "text": "$4 \\times 5 \\times 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$60$."
+    }
+  ],
+  "explanation": [
+    "$V = 60$ ft³."
+  ],
+  "tags": [
+    "volume",
+    "word"
+  ],
+  "estimatedSeconds": 40
+}

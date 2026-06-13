@@ -1,0 +1,45 @@
+{
+  "id": "6.SP.078",
+  "domain": "6.SP",
+  "unit": 8,
+  "orderInUnit": 8,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "Find the MAD of $\\{2,\\ 5,\\ 8,\\ 9\\}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "2.5",
+  "alternativeAnswers": [
+    "5/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Mean first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sort the data from least to greatest first — many statistics get easy after that."
+    },
+    {
+      "level": "nudge",
+      "text": "Mean first."
+    },
+    {
+      "level": "guide",
+      "text": "Mean $= 24/4 = 6$. Distances: $4, 1, 2, 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "MAD $= (4+1+2+3)/4 = 10/4 = 2.5$."
+    }
+  ],
+  "explanation": [
+    "Mean: $24/4 = 6$.",
+    "$|2-6|=4,\\ |5-6|=1,\\ |8-6|=2,\\ |9-6|=3$. Sum: $10$.",
+    "MAD: $10/4 = 2.5$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "MAD"
+  ],
+  "estimatedSeconds": 90
+}

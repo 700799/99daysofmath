@@ -1,0 +1,69 @@
+{
+  "id": "6.EE.016",
+  "domain": "6.EE",
+  "unit": 2,
+  "orderInUnit": 6,
+  "standard": "6.EE.A.2.a",
+  "difficulty": 3,
+  "prompt": "Write an expression for \"**twice the sum of a number $x$ and $7$, decreased by $4$**\". Use no spaces.",
+  "answerType": "short-text",
+  "primaryAnswer": "2(x+7)-4",
+  "alternativeAnswers": [
+    "2(x+7) - 4",
+    "2*(x+7)-4",
+    "2x+10",
+    "2x + 10",
+    "(x+7)*2-4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Wrap the \"**sum of $x$ and $7$**\" inside parentheses before you multiply by $2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: write \"**twice the sum of $a$ and $3$**\" first. Answer: $2(a+3)$. Apply the same shape here."
+    },
+    {
+      "level": "nudge",
+      "text": "Order of words = order of operations. Build the **inside** first, multiply by $2$, then subtract $4$."
+    },
+    {
+      "level": "guide",
+      "text": "Sum of $x$ and $7$ → $(x+7)$. Twice that → $2(x+7)$. Decreased by $4$ → $2(x+7) - 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "Answer: $2(x+7) - 4$ (equivalently $2x + 10$)."
+    }
+  ],
+  "explanation": [
+    "Read in pieces: \"sum of $x$ and $7$\" → $(x+7)$.",
+    "\"Twice [that sum]\" → multiply the **whole sum** by $2$: $2(x+7)$.",
+    "\"Decreased by $4$\" → subtract $4$ from the result: $2(x+7) - 4$.",
+    "Distribute to check: $2(x+7) - 4 = 2x + 14 - 4 = 2x + 10$."
+  ],
+  "tags": [
+    "CA",
+    "translate",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 90,
+  "alternativeExplanations": [
+    {
+      "title": "Substitute & check",
+      "steps": [
+        "Pick $x = 3$. The words: \"twice the sum of $3$ and $7$, decreased by $4$\" = twice $10$, minus $4$ = $16$.",
+        "Test $2(x+7) - 4$ at $x=3$: $2(10) - 4 = 16$. ✓",
+        "Test $2x + 10$ at $x=3$: $6 + 10 = 16$. ✓ Both forms are equivalent."
+      ]
+    },
+    {
+      "title": "Common trap",
+      "steps": [
+        "\"$2x + 7 - 4$\" is **wrong** — that means \"$7$ more than twice $x$, then subtract $4$\".",
+        "The word **sum** before $7$ is what forces the parentheses around $(x+7)$.",
+        "Whenever you see \"twice the sum…\", \"$3$ times the difference…\", etc., the next part belongs **inside** the grouping."
+      ]
+    }
+  ]
+}

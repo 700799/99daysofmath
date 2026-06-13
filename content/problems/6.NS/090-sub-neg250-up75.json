@@ -1,0 +1,55 @@
+{
+  "id": "6.NS.090",
+  "domain": "6.NS",
+  "unit": 9,
+  "orderInUnit": 10,
+  "standard": "6.NS.C.5",
+  "difficulty": 3,
+  "prompt": "A submarine dives to $-250$ ft, then rises $75$ ft. **How far from sea level** is the submarine now?",
+  "answerType": "numeric",
+  "primaryAnswer": "175",
+  "alternativeAnswers": [
+    "175 ft"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the new position first, then take its absolute value.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a 10×-easier version: shrink each number by a factor of 10 and watch the structure."
+    },
+    {
+      "level": "nudge",
+      "text": "Find the new position first, then take its absolute value."
+    },
+    {
+      "level": "guide",
+      "text": "Position: $-250 + 75 = -175$. Distance: $|-175|$."
+    },
+    {
+      "level": "reveal",
+      "text": "$175$ ft below sea level — $175$ ft from sea level."
+    }
+  ],
+  "explanation": [
+    "New position: $-250 + 75 = -175$.",
+    "Distance from sea level (the value $0$): $|-175| = 175$ ft."
+  ],
+  "tags": [
+    "MAP-practice",
+    "integer",
+    "absolute-value",
+    "word"
+  ],
+  "estimatedSeconds": 90,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 175 — verified."
+      ]
+    }
+  ]
+}

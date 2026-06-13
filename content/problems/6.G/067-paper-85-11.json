@@ -1,0 +1,39 @@
+{
+  "id": "6.G.067",
+  "domain": "6.G",
+  "unit": 7,
+  "orderInUnit": 7,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A standard sheet of paper measures $11$ in by $8.5$ in. What is its area?",
+  "answerType": "numeric",
+  "primaryAnswer": "93.5",
+  "alternativeAnswers": [
+    "93.5 sq in"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Length $\\times$ width.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Length $\\times$ width."
+    },
+    {
+      "level": "guide",
+      "text": "$11 \\times 8.5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$93.5$."
+    }
+  ],
+  "explanation": [
+    "$11 \\times 8.5$: $11 \\cdot 8 = 88$ and $11 \\cdot 0.5 = 5.5$.",
+    "$88 + 5.5 = 93.5$ sq in."
+  ],
+  "tags": [
+    "area",
+    "rectangle"
+  ],
+  "estimatedSeconds": 60
+}

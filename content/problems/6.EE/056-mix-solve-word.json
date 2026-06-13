@@ -1,0 +1,44 @@
+{
+  "id": "6.EE.056",
+  "domain": "6.EE",
+  "unit": 6,
+  "orderInUnit": 6,
+  "standard": "6.EE.B.7",
+  "difficulty": 3,
+  "prompt": "Tickets cost $4$ each. With \\$$24$, you bought some tickets. How many?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [
+    "6 tickets"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Set up: $4t = 24$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Whatever operation is acting on the variable, do its OPPOSITE on both sides."
+    },
+    {
+      "level": "nudge",
+      "text": "Set up: $4t = 24$."
+    },
+    {
+      "level": "guide",
+      "text": "$t = 24 / 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$t = 6$."
+    }
+  ],
+  "explanation": [
+    "$4t = 24 \\Rightarrow t = 6$ tickets."
+  ],
+  "tags": [
+    "MAP-practice",
+    "solve",
+    "word"
+  ],
+  "estimatedSeconds": 60
+}

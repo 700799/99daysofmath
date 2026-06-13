@@ -1,0 +1,48 @@
+{
+  "id": "6.RP.083",
+  "domain": "6.RP",
+  "unit": 9,
+  "orderInUnit": 3,
+  "standard": "6.RP.A.3.d",
+  "difficulty": 1,
+  "prompt": "Convert $64$ ounces to pounds. ($16$ oz $= 1$ lb)",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [
+    "4 lb"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$16$ oz make $1$ lb. Divide.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$16$ oz make $1$ lb. Divide."
+    },
+    {
+      "level": "guide",
+      "text": "$64 \\div 16$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4$ lb."
+    }
+  ],
+  "explanation": [
+    "$64 \\div 16 = 4$ pounds.",
+    "Final answer: 4."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count groups of 16",
+      "steps": [
+        "$16 + 16 + 16 + 16 = 64$.",
+        "Four groups, so $4$ lb."
+      ]
+    }
+  ],
+  "tags": [
+    "conversion",
+    "weight"
+  ],
+  "estimatedSeconds": 40
+}

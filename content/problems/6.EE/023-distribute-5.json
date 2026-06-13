@@ -1,0 +1,37 @@
+{
+  "id": "6.EE.023",
+  "domain": "6.EE",
+  "unit": 3,
+  "orderInUnit": 3,
+  "standard": "6.EE.A.3",
+  "difficulty": 2,
+  "prompt": "Expand $5(2x + 3)$.",
+  "answerType": "short-text",
+  "primaryAnswer": "10x+15",
+  "alternativeAnswers": [
+    "10x + 15"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Distribute $5$ to both terms.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Distribute $5$ to both terms."
+    },
+    {
+      "level": "guide",
+      "text": "$5 \\cdot 2x = 10x$, $5 \\cdot 3 = 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "$10x + 15$."
+    }
+  ],
+  "explanation": [
+    "$5(2x + 3) = 10x + 15$."
+  ],
+  "tags": [
+    "distributive"
+  ],
+  "estimatedSeconds": 40
+}

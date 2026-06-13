@@ -1,0 +1,67 @@
+{
+  "id": "6.NS.043",
+  "domain": "6.NS",
+  "unit": 5,
+  "orderInUnit": 3,
+  "standard": "6.NS.C.6.b",
+  "difficulty": 3,
+  "prompt": "A triangle has vertices $A(-2, 5)$, $B(4, 1)$, and $C(0, -3)$. The triangle is reflected across the $x$-axis. What are the new coordinates of vertex $A$? Use form $(x,y)$.",
+  "answerType": "short-text",
+  "primaryAnswer": "(-2,-5)",
+  "alternativeAnswers": [
+    "(-2, -5)",
+    "-2,-5",
+    "(−2,−5)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Reflecting across the $x$-axis: keep $x$, flip the sign of $y$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "You only need to reflect vertex $A$. Ignore $B$ and $C$ — they're distractors. Focus on $(-2, 5)$."
+    },
+    {
+      "level": "nudge",
+      "text": "Rule for $x$-axis reflection: $(x, y) \\to (x, -y)$."
+    },
+    {
+      "level": "guide",
+      "text": "Apply to $A(-2, 5)$: $(-2, -5)$."
+    },
+    {
+      "level": "reveal",
+      "text": "New $A$: $(-2, -5)$."
+    }
+  ],
+  "explanation": [
+    "Reflecting across the **$x$-axis** is \"flip up/down\": the $x$-coordinate stays, the $y$-coordinate negates.",
+    "Rule: $(x, y) \\to (x, -y)$.",
+    "Apply to $A(-2, 5)$: new $A$ = $(-2, -5)$.",
+    "(The full reflected triangle would also have $B(4, -1)$ and $C(0, 3)$, but the question only asks about $A$.)"
+  ],
+  "tags": [
+    "coordinate",
+    "reflect",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 90,
+  "alternativeExplanations": [
+    {
+      "title": "Distance from the axis",
+      "steps": [
+        "$A(-2, 5)$ is $5$ units **above** the $x$-axis.",
+        "Reflection puts its image $5$ units **below** the $x$-axis, same $x$-position.",
+        "That's $(-2, -5)$."
+      ]
+    },
+    {
+      "title": "Compare reflection types",
+      "steps": [
+        "Reflect across $x$-axis: $(x, y) \\to (x, -y)$ — flip the $y$.",
+        "Reflect across $y$-axis: $(x, y) \\to (-x, y)$ — flip the $x$.",
+        "Reflect across origin (both axes): $(x, y) \\to (-x, -y)$ — flip both."
+      ]
+    }
+  ]
+}

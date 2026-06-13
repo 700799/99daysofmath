@@ -1,0 +1,64 @@
+{
+  "id": "6.RP.040",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 10,
+  "standard": "6.RP.A.1",
+  "difficulty": 3,
+  "prompt": "A constant-speed car covers $\\frac{120 \\text{ mi}}{2 \\text{ hr}}$. Which pair gives an equivalent rate?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$180$ mi in $4$ hr",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$300$ mi in $5$ hr",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$240$ mi in $3$ hr",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$90$ mi in $2$ hr",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Find the unit rate from $120 / 2$ first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try the same problem with friendlier numbers first — say \"20% of 50\" — then come back to this one."
+    },
+    {
+      "level": "nudge",
+      "text": "Find the unit rate from $120 / 2$ first."
+    },
+    {
+      "level": "guide",
+      "text": "$120 / 2 = 60$ mph. Check each option."
+    },
+    {
+      "level": "reveal",
+      "text": "B: $300 / 5 = 60$ mph ✓."
+    }
+  ],
+  "explanation": [
+    "Unit rate: $120 / 2 = 60$ mph.",
+    "A: $45$ mph; B: $60$ mph ✓; C: $80$ mph; D: $45$ mph."
+  ],
+  "tags": [
+    "CA",
+    "equivalent"
+  ],
+  "estimatedSeconds": 75
+}

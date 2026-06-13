@@ -1,0 +1,48 @@
+{
+  "id": "6.SP.061",
+  "domain": "6.SP",
+  "unit": 7,
+  "orderInUnit": 1,
+  "standard": "6.SP.A.1",
+  "difficulty": 1,
+  "prompt": "Is \"How tall am I?\" a **statistical question**? (yes/no)",
+  "answerType": "short-text",
+  "primaryAnswer": "no",
+  "alternativeAnswers": [
+    "No",
+    "n"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Statistical questions expect a variety of answers.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Statistical questions expect a variety of answers."
+    },
+    {
+      "level": "guide",
+      "text": "\"How tall am I?\" has just one answer."
+    },
+    {
+      "level": "reveal",
+      "text": "No — no variability."
+    }
+  ],
+  "explanation": [
+    "A statistical question anticipates variability.",
+    "\"How tall am I?\" has a single answer → not statistical."
+  ],
+  "tags": [
+    "statistical-question"
+  ],
+  "estimatedSeconds": 35,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: no — verified."
+      ]
+    }
+  ]
+}

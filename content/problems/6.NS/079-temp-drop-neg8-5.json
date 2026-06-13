@@ -1,0 +1,56 @@
+{
+  "id": "6.NS.079",
+  "domain": "6.NS",
+  "unit": 8,
+  "orderInUnit": 9,
+  "standard": "6.NS.C.5",
+  "difficulty": 3,
+  "prompt": "The temperature was $-8\\degree$F. It dropped another $5$ degrees. What is the new temperature?",
+  "answerType": "numeric",
+  "primaryAnswer": "-13",
+  "alternativeAnswers": [
+    "−13",
+    "-13 F",
+    "-13°F"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Dropping makes it more negative.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Use the \"keep–change–flip\" trick whenever you see division by a fraction."
+    },
+    {
+      "level": "nudge",
+      "text": "Dropping makes it more negative."
+    },
+    {
+      "level": "guide",
+      "text": "$-8 - 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-13$."
+    }
+  ],
+  "explanation": [
+    "Subtract: $-8 - 5 = -13$.",
+    "New temperature: $-13\\degree$F."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Number-line walk",
+      "steps": [
+        "Start at $-8$.",
+        "Move $5$ to the left (colder): $-9,\\ -10,\\ -11,\\ -12,\\ -13$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "integer",
+    "word"
+  ],
+  "estimatedSeconds": 65
+}

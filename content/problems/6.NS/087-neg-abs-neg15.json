@@ -1,0 +1,39 @@
+{
+  "id": "6.NS.087",
+  "domain": "6.NS",
+  "unit": 9,
+  "orderInUnit": 7,
+  "standard": "6.NS.C.7.c",
+  "difficulty": 2,
+  "prompt": "Evaluate $-|-15|$.",
+  "answerType": "numeric",
+  "primaryAnswer": "-15",
+  "alternativeAnswers": [
+    "−15"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Work the absolute value first, then take the opposite.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Work the absolute value first, then take the opposite."
+    },
+    {
+      "level": "guide",
+      "text": "$|-15| = 15$. The leading minus makes it $-15$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-15$."
+    }
+  ],
+  "explanation": [
+    "Inside the bars: $|-15| = 15$.",
+    "The negative outside: $-(15) = -15$."
+  ],
+  "tags": [
+    "absolute-value",
+    "order-of-ops"
+  ],
+  "estimatedSeconds": 55
+}

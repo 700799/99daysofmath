@@ -1,0 +1,46 @@
+{
+  "id": "6.EE.061",
+  "domain": "6.EE",
+  "unit": 7,
+  "orderInUnit": 1,
+  "standard": "6.EE.A.2.b",
+  "difficulty": 1,
+  "prompt": "What is the **coefficient** of $y$ in the term $4y$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The coefficient is the number multiplied by the variable.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The coefficient is the number multiplied by the variable."
+    },
+    {
+      "level": "guide",
+      "text": "In $4y$, the number in front of $y$ is the coefficient."
+    },
+    {
+      "level": "reveal",
+      "text": "$4$."
+    }
+  ],
+  "explanation": [
+    "$4y$ means $4 \\times y$.",
+    "The coefficient is $4$."
+  ],
+  "tags": [
+    "expression",
+    "parts"
+  ],
+  "estimatedSeconds": 25,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 4 — verified."
+      ]
+    }
+  ]
+}

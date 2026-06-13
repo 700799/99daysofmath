@@ -1,0 +1,45 @@
+{
+  "id": "5.F.012",
+  "domain": "5.F",
+  "unit": 2,
+  "orderInUnit": 2,
+  "standard": "5.NF.A.1",
+  "difficulty": 1,
+  "prompt": "Subtract and simplify: $\\frac{5}{6} - \\frac{2}{6}$",
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg viewBox=\"0 0 260 44\" width=\"260\" height=\"44\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0.0\" y=\"4\" width=\"43.3\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"43.3\" y=\"4\" width=\"43.3\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"86.7\" y=\"4\" width=\"43.3\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"130.0\" y=\"4\" width=\"43.3\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"173.3\" y=\"4\" width=\"43.3\" height=\"36\" fill=\"#14B8A6\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><rect x=\"216.7\" y=\"4\" width=\"43.3\" height=\"36\" fill=\"#fff\" stroke=\"#0f172a\" stroke-width=\"1.5\"/></svg>",
+    "alt": "A bar split into 6 equal parts with 5 shaded"
+  },
+  "answerType": "fraction",
+  "primaryAnswer": "1/2",
+  "alternativeAnswers": [
+    "3/6",
+    "0.5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Same denominators — subtract the numerators.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same denominators — subtract the numerators."
+    },
+    {
+      "level": "guide",
+      "text": "$5 - 2 = 3$, so you have $\\frac{3}{6}$. Can it simplify?"
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{3}{6} = \\frac{1}{2}$."
+    }
+  ],
+  "explanation": [
+    "$\\frac{5}{6} - \\frac{2}{6} = \\frac{3}{6}$.",
+    "Divide top and bottom by $3$: $\\frac{3}{6} = \\frac{1}{2}$."
+  ],
+  "tags": [
+    "fractions",
+    "subtraction"
+  ],
+  "estimatedSeconds": 35
+}

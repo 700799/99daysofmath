@@ -1,0 +1,65 @@
+{
+  "id": "6.RP.012",
+  "domain": "6.RP",
+  "unit": 1,
+  "orderInUnit": 10,
+  "standard": "6.RP.A.1",
+  "difficulty": 2,
+  "prompt": "Which ratio is equivalent to $4 : 6$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$3 : 4$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$6 : 9$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$8 : 10$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$2 : 4$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Equivalent ratios reduce to the same simplest form.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Equivalent ratios reduce to the same simplest form."
+    },
+    {
+      "level": "guide",
+      "text": "Simplify $4:6$ first."
+    },
+    {
+      "level": "reveal",
+      "text": "$4:6 = 2:3$. Check each option: $6:9 = 2:3$ ✓."
+    }
+  ],
+  "explanation": [
+    "$4:6$ simplifies to $2:3$ (divide both by $2$).",
+    "Check $6:9$: divide both by $3$ → $2:3$. ✓",
+    "Answer: $6:9$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "ratio"
+  ],
+  "estimatedSeconds": 50,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Tape diagram for ratio 4 : 6",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 80\" role=\"img\"><rect x=\"20\" y=\"30\" width=\"136\" height=\"36\" fill=\"#0EA5E9\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"88\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">4</text><rect x=\"156\" y=\"30\" width=\"204\" height=\"36\" fill=\"#10B981\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"258\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">6</text></svg>"
+  }
+}

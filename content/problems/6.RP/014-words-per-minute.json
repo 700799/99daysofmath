@@ -1,0 +1,38 @@
+{
+  "id": "6.RP.014",
+  "domain": "6.RP",
+  "unit": 2,
+  "orderInUnit": 4,
+  "standard": "6.RP.A.2",
+  "difficulty": 1,
+  "prompt": "Mia types $240$ words in $4$ minutes. How many words **per minute**?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [
+    "60 wpm"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find words for $1$ minute.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find words for $1$ minute."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{240}{4} = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$240 \\div 4 = 60$ words per minute."
+    }
+  ],
+  "explanation": [
+    "Divide: $240 \\div 4 = 60$.",
+    "Mia types $60$ words per minute."
+  ],
+  "tags": [
+    "unit-rate"
+  ],
+  "estimatedSeconds": 30
+}

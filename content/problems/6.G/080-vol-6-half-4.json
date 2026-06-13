@@ -1,0 +1,52 @@
+{
+  "id": "6.G.080",
+  "domain": "6.G",
+  "unit": 8,
+  "orderInUnit": 10,
+  "standard": "6.G.A.2",
+  "difficulty": 3,
+  "prompt": "A storage box is $6 \\times \\frac{1}{2} \\times 4$. Find its volume.",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply in any order.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Split or rearrange the shape into pieces whose formulas you already know."
+    },
+    {
+      "level": "nudge",
+      "text": "Multiply in any order."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\cdot 4 = 24$. Then $24 \\cdot \\tfrac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12$."
+    }
+  ],
+  "explanation": [
+    "$6 \\cdot 4 = 24$.",
+    "$24 \\cdot \\tfrac{1}{2} = 12$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "volume",
+    "fraction"
+  ],
+  "estimatedSeconds": 55,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 12 — verified."
+      ]
+    }
+  ]
+}

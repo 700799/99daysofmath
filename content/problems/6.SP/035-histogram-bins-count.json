@@ -1,0 +1,35 @@
+{
+  "id": "6.SP.035",
+  "domain": "6.SP",
+  "unit": 4,
+  "orderInUnit": 5,
+  "standard": "6.SP.B.4",
+  "difficulty": 1,
+  "prompt": "A histogram has bins for $0-4, 5-9, 10-14, 15-19, 20-24$. How many bins?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Just count them.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Just count them."
+    },
+    {
+      "level": "guide",
+      "text": "List them out."
+    },
+    {
+      "level": "reveal",
+      "text": "$5$."
+    }
+  ],
+  "explanation": [
+    "Bins: $5$."
+  ],
+  "tags": [
+    "histogram"
+  ],
+  "estimatedSeconds": 25
+}

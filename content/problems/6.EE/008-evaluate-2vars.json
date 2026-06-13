@@ -1,0 +1,47 @@
+{
+  "id": "6.EE.008",
+  "domain": "6.EE",
+  "unit": 2,
+  "orderInUnit": 3,
+  "standard": "6.EE.A.2.c",
+  "difficulty": 2,
+  "prompt": "Evaluate $2a + b$ when $a = 5$ and $b = 3$.",
+  "answerType": "numeric",
+  "primaryAnswer": "13",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Replace each letter with its value, then follow order of operations.",
+  "explanation": [
+    "Substitute: $2(5) + 3$.",
+    "Multiply first: $2 \\times 5 = 10$.",
+    "Then add: $10 + 3 = 13$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Step it out in words",
+      "steps": [
+        "\"$2a$\" means two times $a$. With $a = 5$ that's $10$.",
+        "Then add $b = 3$ to get $13$."
+      ]
+    }
+  ],
+  "tags": [
+    "CA",
+    "evaluating-expressions"
+  ],
+  "estimatedSeconds": 40,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Replace each letter with its value, then follow order of operations."
+    },
+    {
+      "level": "guide",
+      "text": "Substitute: $2(5) + 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "Then add: $10 + 3 = 13$."
+    }
+  ]
+}

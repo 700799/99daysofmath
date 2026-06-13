@@ -1,0 +1,45 @@
+{
+  "id": "6.RP.027",
+  "domain": "6.RP",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "6.RP.A.3",
+  "difficulty": 3,
+  "prompt": "Paint mix: $2$ red : $3$ blue makes purple. To make purple with $9$ blue, how much red?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [
+    "6 cups",
+    "6 parts"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the scale factor from $3$ blue to $9$ blue.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Convert percent ↔ fraction ↔ decimal. Sometimes the easiest form unlocks the answer."
+    },
+    {
+      "level": "nudge",
+      "text": "Find the scale factor from $3$ blue to $9$ blue."
+    },
+    {
+      "level": "guide",
+      "text": "$9 \\div 3 = 3$. Apply $\\times 3$ to red."
+    },
+    {
+      "level": "reveal",
+      "text": "$2 \\times 3 = 6$ parts red."
+    }
+  ],
+  "explanation": [
+    "$3 \\to 9$ is $\\times 3$.",
+    "Red: $2 \\times 3 = 6$."
+  ],
+  "tags": [
+    "CA",
+    "ratio"
+  ],
+  "estimatedSeconds": 60
+}

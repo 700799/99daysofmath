@@ -1,0 +1,65 @@
+{
+  "id": "6.NS.012",
+  "domain": "6.NS",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "6.NS.B.2",
+  "difficulty": 3,
+  "prompt": "Compute $8{,}649 \\div 31$ using long division. Give your answer as a **decimal**.",
+  "answerType": "numeric",
+  "primaryAnswer": "279",
+  "alternativeAnswers": [
+    "279.0",
+    "279.00"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$31$ goes into $86$ about how many times? Try $2$ or $3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm-up: try $93 \\div 31$ first. $31 \\times 3 = 93$, so $93 \\div 31 = 3$. Carry that intuition forward."
+    },
+    {
+      "level": "nudge",
+      "text": "Bring down one digit at a time. After each step, check that your remainder is **less than** $31$."
+    },
+    {
+      "level": "guide",
+      "text": "$31 \\times 200 = 6200$, leaving $2449$. $31 \\times 70 = 2170$, leaving $279$. $31 \\times 9 = 279$ exactly. Total: $279$."
+    },
+    {
+      "level": "reveal",
+      "text": "$8649 \\div 31 = 279$."
+    }
+  ],
+  "explanation": [
+    "Estimate first: $8649 \\div 31 \\approx 8649 \\div 30 \\approx 288$. Expect a 3-digit answer near $280$.",
+    "$31$ into $86$: $31 \\times 2 = 62$, $31 \\times 3 = 93$ (too big). So digit = $2$. Subtract: $86 - 62 = 24$. Bring down the $4$ → $244$.",
+    "$31$ into $244$: $31 \\times 7 = 217$, $31 \\times 8 = 248$ (too big). Digit = $7$. Subtract: $244 - 217 = 27$. Bring down the $9$ → $279$.",
+    "$31$ into $279$: $31 \\times 9 = 279$ exactly. Digit = $9$. Remainder = $0$.",
+    "Quotient digits: $2$, $7$, $9$ → $8649 \\div 31 = 279$."
+  ],
+  "tags": [
+    "long-division",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 120,
+  "alternativeExplanations": [
+    {
+      "title": "Check by multiplying back",
+      "steps": [
+        "$279 \\times 31 = 279 \\times 30 + 279 \\times 1 = 8370 + 279 = 8649$. ✓",
+        "If multiplying back doesn't hit the original dividend, redo the long division."
+      ]
+    },
+    {
+      "title": "Estimate to spot mistakes",
+      "steps": [
+        "Round: $8649 \\approx 9000$, $31 \\approx 30$. $9000 \\div 30 = 300$.",
+        "So the true answer should be **close to but a little less than** $300$. $279$ fits.",
+        "If you had gotten $2790$ or $28$, the estimate would have flagged the missing place value."
+      ]
+    }
+  ]
+}

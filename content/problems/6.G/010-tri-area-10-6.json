@@ -1,0 +1,41 @@
+{
+  "id": "6.G.010",
+  "domain": "6.G",
+  "unit": 1,
+  "orderInUnit": 7,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A triangle has base $10$ and height $6$. Find its area.",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Triangle area $= \\frac{1}{2} \\cdot b \\cdot h$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Triangle area $= \\frac{1}{2} \\cdot b \\cdot h$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{1}{2} \\cdot 10 \\cdot 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$30$."
+    }
+  ],
+  "explanation": [
+    "$A = \\frac{1}{2}(10)(6) = 30$."
+  ],
+  "tags": [
+    "area",
+    "triangle"
+  ],
+  "estimatedSeconds": 40,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Triangle with base 10 and height 6",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 296 208\" role=\"img\"><polygon points=\"38,170 258,170 126,38\" fill=\"#A7F3D0\" stroke=\"#10B981\" stroke-width=\"3\"/><line x1=\"126\" y1=\"38\" x2=\"126\" y2=\"170\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><g font-family=\"Nunito, sans-serif\" font-size=\"16\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"148\" y=\"192\">b = 10</text><text x=\"165.6\" y=\"109\">h = 6</text></g></svg>"
+  }
+}

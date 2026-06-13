@@ -1,0 +1,40 @@
+{
+  "id": "6.RP.016",
+  "domain": "6.RP",
+  "unit": 2,
+  "orderInUnit": 6,
+  "standard": "6.RP.A.3.b",
+  "difficulty": 2,
+  "prompt": "A train goes $300$ miles in $5$ hours. At this rate, how far in $7$ hours?",
+  "answerType": "numeric",
+  "primaryAnswer": "420",
+  "alternativeAnswers": [
+    "420 miles",
+    "420mi"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "First find the rate per hour.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find the rate per hour."
+    },
+    {
+      "level": "guide",
+      "text": "Then multiply that rate by $7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$300 \\div 5 = 60$ mph. $60 \\times 7 = 420$ miles."
+    }
+  ],
+  "explanation": [
+    "Unit rate: $300 \\div 5 = 60$ mph.",
+    "Distance in $7$ hours: $60 \\times 7 = 420$ miles."
+  ],
+  "tags": [
+    "unit-rate",
+    "speed"
+  ],
+  "estimatedSeconds": 60
+}

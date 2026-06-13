@@ -1,0 +1,45 @@
+{
+  "id": "6.EE.026",
+  "domain": "6.EE",
+  "unit": 3,
+  "orderInUnit": 6,
+  "standard": "6.EE.A.3",
+  "difficulty": 3,
+  "prompt": "Factor $6x + 9$ using the GCF.",
+  "answerType": "short-text",
+  "primaryAnswer": "3(2x+3)",
+  "alternativeAnswers": [
+    "3(2x + 3)",
+    "3 (2x+3)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "GCF of $6$ and $9$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Substitute a guess back into the equation. If both sides match, the guess is the answer."
+    },
+    {
+      "level": "nudge",
+      "text": "GCF of $6$ and $9$."
+    },
+    {
+      "level": "guide",
+      "text": "GCF is $3$. Divide each: $6x/3 = 2x$, $9/3 = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3(2x + 3)$."
+    }
+  ],
+  "explanation": [
+    "GCF$(6, 9) = 3$.",
+    "Factor: $3 \\cdot 2x + 3 \\cdot 3 = 3(2x + 3)$."
+  ],
+  "tags": [
+    "CA",
+    "factor"
+  ],
+  "estimatedSeconds": 70
+}

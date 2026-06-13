@@ -1,0 +1,41 @@
+{
+  "id": "6.SP.086",
+  "domain": "6.SP",
+  "unit": 9,
+  "orderInUnit": 6,
+  "standard": "6.SP.B.4",
+  "difficulty": 2,
+  "prompt": "A dot plot shows the data $\\{2, 3, 3, 5, 5, 5\\}$. How many dots sit **above the value $5$**?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Count how many $5$'s.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Count how many $5$'s."
+    },
+    {
+      "level": "guide",
+      "text": "$5$ appears in the data three times."
+    },
+    {
+      "level": "reveal",
+      "text": "$3$."
+    }
+  ],
+  "explanation": [
+    "Three $5$'s → three dots above $5$.",
+    "Final answer: 3."
+  ],
+  "tags": [
+    "dot-plot"
+  ],
+  "estimatedSeconds": 35,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Dot plot of dataset",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 130\" role=\"img\"><line x1=\"20\" y1=\"100\" x2=\"400\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"30\" y1=\"96\" x2=\"30\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"30\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><line x1=\"102\" y1=\"96\" x2=\"102\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"102\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">2</text><line x1=\"174\" y1=\"96\" x2=\"174\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"174\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">3</text><line x1=\"246\" y1=\"96\" x2=\"246\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"246\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">4</text><line x1=\"318\" y1=\"96\" x2=\"318\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"318\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><line x1=\"390\" y1=\"96\" x2=\"390\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"390\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">6</text><circle cx=\"102\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"174\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"174\" cy=\"72\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"318\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"318\" cy=\"72\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"318\" cy=\"58\" r=\"5\" fill=\"#0EA5E9\"/></svg>"
+  }
+}

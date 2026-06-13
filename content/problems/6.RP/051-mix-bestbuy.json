@@ -1,0 +1,55 @@
+{
+  "id": "6.RP.051",
+  "domain": "6.RP",
+  "unit": 6,
+  "orderInUnit": 3,
+  "standard": "6.RP.A.2",
+  "difficulty": 2,
+  "prompt": "$6$ pencils for \\$$1.20$ or $10$ pencils for \\$$1.80$. Which has the **lower** price per pencil?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$6$ for \\$$1.20$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$10$ for \\$$1.80$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Same",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Find price per pencil for both.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find price per pencil for both."
+    },
+    {
+      "level": "guide",
+      "text": "A: $1.20 / 6$. B: $1.80 / 10$."
+    },
+    {
+      "level": "reveal",
+      "text": "A: \\$$0.20$/pencil; B: \\$$0.18$/pencil. B wins."
+    }
+  ],
+  "explanation": [
+    "A: $\\$1.20 \\div 6 = \\$0.20$.",
+    "B: $\\$1.80 \\div 10 = \\$0.18$.",
+    "B is cheaper per pencil."
+  ],
+  "tags": [
+    "MAP-practice",
+    "unit-price"
+  ],
+  "estimatedSeconds": 60
+}

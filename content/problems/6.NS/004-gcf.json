@@ -1,0 +1,50 @@
+{
+  "id": "6.NS.004",
+  "domain": "6.NS",
+  "unit": 1,
+  "orderInUnit": 4,
+  "standard": "6.NS.B.4",
+  "difficulty": 2,
+  "prompt": "What is the **greatest common factor (GCF)** of $18$ and $24$?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "List the factors of each number. The largest one that's in both lists is the GCF.",
+  "explanation": [
+    "Factors of $18$: $1, 2, 3, 6, 9, 18$.",
+    "Factors of $24$: $1, 2, 3, 4, 6, 8, 12, 24$.",
+    "The largest number in both lists is $6$.",
+    "So $\\text{GCF}(18, 24) = 6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Prime factorization",
+      "steps": [
+        "$18 = 2 \\times 3 \\times 3$.",
+        "$24 = 2 \\times 2 \\times 2 \\times 3$.",
+        "Common primes: one $2$ and one $3$. Multiply: $2 \\times 3 = 6$.",
+        "GCF $= 6$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "gcf"
+  ],
+  "estimatedSeconds": 60,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "List the factors of each number. The largest one that's in both lists is the GCF."
+    },
+    {
+      "level": "guide",
+      "text": "Factors of $18$: $1, 2, 3, 6, 9, 18$."
+    },
+    {
+      "level": "reveal",
+      "text": "So $\\text{GCF}(18, 24) = 6$."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "6.NS.017",
+  "domain": "6.NS",
+  "unit": 2,
+  "orderInUnit": 7,
+  "standard": "6.NS.B.2",
+  "difficulty": 3,
+  "prompt": "Compute $4{,}872 \\div 24$ using long division. Express the remainder as a **decimal**. (Continue dividing past the decimal point as needed.)",
+  "answerType": "numeric",
+  "primaryAnswer": "203",
+  "alternativeAnswers": [
+    "203.0",
+    "203.00"
+  ],
+  "acceptanceMode": "normalized",
+  "numericTolerance": 0.001,
+  "hint": "Estimate first: $4800 \\div 24 = 200$, so expect the answer to be near $200$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Notice $24 \\times 2 = 48$. So $4800 \\div 24 = 200$ exactly. The \"extra\" $72$ tells you the rest."
+    },
+    {
+      "level": "nudge",
+      "text": "Split: $4872 = 4800 + 72$. Divide each piece by $24$ separately."
+    },
+    {
+      "level": "guide",
+      "text": "$4800 \\div 24 = 200$. $72 \\div 24 = 3$. Total: $200 + 3 = 203$. (Remainder is $0$, no decimal needed.)"
+    },
+    {
+      "level": "reveal",
+      "text": "$4872 \\div 24 = 203$."
+    }
+  ],
+  "explanation": [
+    "Use friendly chunks: $4872 = 4800 + 72$.",
+    "$4800 \\div 24 = 200$ (since $24 \\times 2 = 48$, so $24 \\times 200 = 4800$).",
+    "$72 \\div 24 = 3$ (since $24 \\times 3 = 72$).",
+    "Sum the partial quotients: $200 + 3 = 203$. The remainder is $0$."
+  ],
+  "tags": [
+    "long-division",
+    "decimal",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 120,
+  "alternativeExplanations": [
+    {
+      "title": "Long division",
+      "steps": [
+        "$24$ into $48$ → $2$ times ($24 \\times 2 = 48$). Subtract: $0$. Bring down $7$ → $7$.",
+        "$24$ into $7$ → $0$ times. Bring down $2$ → $72$.",
+        "$24$ into $72$ → $3$ times ($24 \\times 3 = 72$). Subtract: $0$. Done.",
+        "Digits: $2$, $0$, $3$ → $203$, remainder $0$."
+      ]
+    },
+    {
+      "title": "Check",
+      "steps": [
+        "Multiply back: $203 \\times 24 = 200 \\times 24 + 3 \\times 24 = 4800 + 72 = 4872$. ✓",
+        "Estimate: $4900 \\div 25 \\approx 196$. The true answer $203$ is right in the same neighborhood. ✓"
+      ]
+    }
+  ]
+}

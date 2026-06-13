@@ -1,0 +1,40 @@
+{
+  "id": "6.G.065",
+  "domain": "6.G",
+  "unit": 7,
+  "orderInUnit": 5,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A T-shape has a $6 \\times 2$ top bar and a $4 \\times 3$ stem. **Total area**?",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [
+    "24 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find each piece, then add.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find each piece, then add."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\cdot 2 = 12$ and $4 \\cdot 3 = 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12 + 12 = 24$."
+    }
+  ],
+  "explanation": [
+    "Top: $12$. Stem: $12$.",
+    "Total: $24$."
+  ],
+  "tags": [
+    "composite",
+    "area",
+    "T-shape"
+  ],
+  "estimatedSeconds": 55
+}

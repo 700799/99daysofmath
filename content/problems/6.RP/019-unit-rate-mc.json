@@ -1,0 +1,62 @@
+{
+  "id": "6.RP.019",
+  "domain": "6.RP",
+  "unit": 2,
+  "orderInUnit": 9,
+  "standard": "6.RP.A.2",
+  "difficulty": 2,
+  "prompt": "Which unit rate is greatest?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$150$ miles in $3$ hr",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$240$ miles in $4$ hr",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$300$ miles in $6$ hr",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$80$ miles in $2$ hr",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Find each as miles per $1$ hour.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find each as miles per $1$ hour."
+    },
+    {
+      "level": "guide",
+      "text": "A: $50$ mph. B: $60$ mph. C: $50$ mph. D: $40$ mph."
+    },
+    {
+      "level": "reveal",
+      "text": "B gives $60$ mph — the largest unit rate."
+    }
+  ],
+  "explanation": [
+    "A: $150 \\div 3 = 50$ mph.",
+    "B: $240 \\div 4 = 60$ mph.",
+    "C: $300 \\div 6 = 50$ mph.",
+    "D: $80 \\div 2 = 40$ mph.",
+    "Largest: B at $60$ mph."
+  ],
+  "tags": [
+    "MAP-practice",
+    "unit-rate"
+  ],
+  "estimatedSeconds": 70
+}

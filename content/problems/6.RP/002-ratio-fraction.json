@@ -13,7 +13,9 @@
   },
   "answerType": "fraction",
   "primaryAnswer": "3/8",
-  "alternativeAnswers": ["0.375"],
+  "alternativeAnswers": [
+    "0.375"
+  ],
   "acceptanceMode": "normalized",
   "hint": "Count the shaded parts (numerator) and the total parts (denominator).",
   "explanation": [
@@ -21,6 +23,50 @@
     "Write that as a fraction: $\\frac{\\text{shaded}}{\\text{total}} = \\frac{3}{8}$.",
     "Final answer: $\\frac{3}{8}$."
   ],
-  "tags": ["MAP-practice", "ratios", "fractions"],
-  "estimatedSeconds": 40
+  "alternativeExplanations": [
+    {
+      "title": "As a decimal",
+      "steps": [
+        "$\\frac{3}{8}$ means $3 \\div 8$.",
+        "$3 \\div 8 = 0.375$.",
+        "So $\\frac{3}{8}$ and $0.375$ name the same amount."
+      ]
+    },
+    {
+      "title": "As a percent",
+      "steps": [
+        "Take the decimal $0.375$ and multiply by $100$.",
+        "$0.375 \\times 100 = 37.5$.",
+        "So $\\frac{3}{8} = 37.5\\%$ of the whole bar is shaded."
+      ]
+    },
+    {
+      "title": "Ratio of shaded to unshaded",
+      "steps": [
+        "$3$ parts are shaded, $5$ parts are not.",
+        "The ratio shaded $:$ unshaded is $3:5$.",
+        "But the question asks for the **fraction of the whole**, which is shaded out of total: $\\frac{3}{8}$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "ratios",
+    "fractions"
+  ],
+  "estimatedSeconds": 40,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Count the shaded parts (numerator) and the total parts (denominator)."
+    },
+    {
+      "level": "guide",
+      "text": "There are $3$ shaded parts out of $8$ equal parts total."
+    },
+    {
+      "level": "reveal",
+      "text": "Final answer: $\\frac{3}{8}$."
+    }
+  ]
 }

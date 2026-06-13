@@ -16,6 +16,42 @@
     "Multiply first: $3 \\times 4 = 12$.",
     "Then add: $12 + 5 = 17$."
   ],
-  "tags": ["CA", "expressions"],
-  "estimatedSeconds": 30
+  "alternativeExplanations": [
+    {
+      "title": "As a real-world story",
+      "steps": [
+        "Imagine candy bars cost $\\$3$ each plus a fixed $\\$5$ shipping fee.",
+        "If you buy $x = 4$ candy bars, the cost is $3 \\times 4 + 5$.",
+        "That's $\\$12$ for the candy plus $\\$5$ shipping = $\\$17$ total."
+      ]
+    },
+    {
+      "title": "Build a function table",
+      "steps": [
+        "Let's see the pattern: when $x = 1$, $3x + 5 = 3 + 5 = 8$.",
+        "When $x = 2$, $3x + 5 = 6 + 5 = 11$.",
+        "When $x = 3$, $3x + 5 = 9 + 5 = 14$.",
+        "When $x = 4$, $3x + 5 = 12 + 5 = 17$. The answer goes up by $3$ each time."
+      ]
+    }
+  ],
+  "tags": [
+    "CA",
+    "expressions"
+  ],
+  "estimatedSeconds": 30,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $4$ for $x$ first, then follow the order of operations: multiply before you add."
+    },
+    {
+      "level": "guide",
+      "text": "Substitute $x = 4$ into $3x + 5$: $3(4) + 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "Then add: $12 + 5 = 17$."
+    }
+  ]
 }

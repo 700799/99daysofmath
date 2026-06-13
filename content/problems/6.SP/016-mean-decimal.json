@@ -1,0 +1,42 @@
+{
+  "id": "6.SP.016",
+  "domain": "6.SP",
+  "unit": 2,
+  "orderInUnit": 6,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Find the mean of $2.5, 3.5, 4$.",
+  "answerType": "numeric",
+  "primaryAnswer": "3.33",
+  "alternativeAnswers": [
+    "10/3",
+    "3.333",
+    "3.3"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.05,
+  "hint": "Sum then divide by count.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sum then divide by count."
+    },
+    {
+      "level": "guide",
+      "text": "Sum: $10$. Count: $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$10 / 3 \\approx 3.33$."
+    }
+  ],
+  "explanation": [
+    "Sum: $2.5 + 3.5 + 4 = 10$.",
+    "$10 / 3 \\approx 3.33$."
+  ],
+  "tags": [
+    "mean",
+    "decimal"
+  ],
+  "estimatedSeconds": 50
+}

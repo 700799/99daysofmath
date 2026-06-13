@@ -8,7 +8,10 @@
   "prompt": "A rectangular prism has length $3$ in, width $4$ in, and height $5$ in. What is its **volume** in cubic inches?",
   "answerType": "numeric",
   "primaryAnswer": "60",
-  "alternativeAnswers": ["60 in^3", "60 cubic inches"],
+  "alternativeAnswers": [
+    "60 in^3",
+    "60 cubic inches"
+  ],
   "acceptanceMode": "normalized",
   "hint": "Volume of a rectangular prism is **length × width × height**.",
   "explanation": [
@@ -17,6 +20,47 @@
     "Then $12 \\times 5 = 60$.",
     "The volume is $60$ cubic inches."
   ],
-  "tags": ["CA", "volume"],
-  "estimatedSeconds": 45
+  "alternativeExplanations": [
+    {
+      "title": "Stack of layers method",
+      "steps": [
+        "The base of the prism is a $3 \\times 4$ rectangle. Its area is $12$ square inches.",
+        "Volume = base area × height = $12 \\times 5$.",
+        "$12 \\times 5 = 60$ cubic inches.",
+        "Think of it as $5$ stacked layers, each with $12$ unit cubes — that's $60$ unit cubes total."
+      ]
+    },
+    {
+      "title": "Why \"cubic\" inches?",
+      "steps": [
+        "Multiplying $3$ in × $4$ in × $5$ in multiplies the units: in × in × in = in³.",
+        "That's why volume uses **cubic** units — it fills a 3D space.",
+        "If you packed $1 \\text{ in} \\times 1 \\text{ in} \\times 1 \\text{ in}$ sugar cubes inside, you'd fit $60$ of them."
+      ]
+    }
+  ],
+  "tags": [
+    "CA",
+    "volume"
+  ],
+  "estimatedSeconds": 45,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Volume of a rectangular prism is **length × width × height**."
+    },
+    {
+      "level": "guide",
+      "text": "Volume = $l \\times w \\times h = 3 \\times 4 \\times 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "The volume is $60$ cubic inches."
+    }
+  ],
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Rectangular prism 3×4×5",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 247.2 297.6\" role=\"img\"><g fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.5\" stroke-linejoin=\"round\"><polygon points=\"30,87.6 138,87.6 138,267.6 30,267.6\" fill=\"#BAE6FD\"/><polygon points=\"30,87.6 109.2,29.999999999999993 217.2,29.999999999999993 138,87.6\" fill=\"#BAE6FD\"/><polygon points=\"138,87.6 217.2,29.999999999999993 217.2,210.00000000000003 138,267.6\" fill=\"#BAE6FD\"/></g><g font-family=\"Nunito, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"84\" y=\"289.6\">l = 3</text><text x=\"191.6\" y=\"62.8\">w = 4</text><text x=\"241.2\" y=\"125\">h = 5</text></g></svg>"
+  }
 }

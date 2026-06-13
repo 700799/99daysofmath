@@ -1,0 +1,43 @@
+{
+  "id": "6.EE.020",
+  "domain": "6.EE",
+  "unit": 2,
+  "orderInUnit": 10,
+  "standard": "6.EE.A.2.c",
+  "difficulty": 3,
+  "prompt": "If $x = 3$, evaluate $x^2 + 2x$.",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute, then evaluate exponent before multiplication.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+    },
+    {
+      "level": "nudge",
+      "text": "Substitute, then evaluate exponent before multiplication."
+    },
+    {
+      "level": "guide",
+      "text": "$3^2 + 2(3) = 9 + 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$9 + 6 = 15$."
+    }
+  ],
+  "explanation": [
+    "$x^2 = 9$. $2x = 6$.",
+    "Sum: $15$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "evaluate",
+    "exponent"
+  ],
+  "estimatedSeconds": 60
+}

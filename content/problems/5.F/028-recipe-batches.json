@@ -1,0 +1,56 @@
+{
+  "id": "5.F.028",
+  "domain": "5.F",
+  "unit": 3,
+  "orderInUnit": 8,
+  "standard": "5.NF.B.4",
+  "difficulty": 3,
+  "prompt": "One batch of muffins uses $\\frac{3}{4}$ cup of flour. How much flour do $5$ batches need? (mixed number)",
+  "answerType": "fraction",
+  "primaryAnswer": "3 3/4",
+  "alternativeAnswers": [
+    "15/4",
+    "3.75"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Five copies of $\\frac{3}{4}$ — that is multiplication.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Five copies of $\\frac{3}{4}$ — that is multiplication."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Two batches would take $\\frac{3}{4} + \\frac{3}{4} = \\frac{6}{4} = 1\\frac{1}{2}$ cups. Same idea for 5."
+    },
+    {
+      "level": "guide",
+      "text": "$5 \\times \\frac{3}{4} = \\frac{15}{4}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{15}{4} = 3\\frac{3}{4}$ cups."
+    }
+  ],
+  "explanation": [
+    "$5 \\times \\frac{3}{4} = \\frac{5 \\times 3}{4} = \\frac{15}{4}$.",
+    "$15 \\div 4 = 3$ remainder $3$, so $\\frac{15}{4} = 3\\frac{3}{4}$.",
+    "Five batches need $3\\frac{3}{4}$ cups of flour."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Decimal check",
+      "steps": [
+        "$\\frac{3}{4} = 0.75$.",
+        "$5 \\times 0.75 = 3.75 = 3\\frac{3}{4}$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "word-problem",
+    "fractions"
+  ],
+  "estimatedSeconds": 90
+}

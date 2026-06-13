@@ -1,0 +1,60 @@
+{
+  "id": "6.SP.047",
+  "domain": "6.SP",
+  "unit": 5,
+  "orderInUnit": 7,
+  "standard": "6.SP.B.5.d",
+  "difficulty": 3,
+  "prompt": "A dataset has a big outlier. Which measure of center is most reliable?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Mean",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Median",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Mode",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Outliers shift the mean.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Use a sample of 3–4 values to see how the rule works, then apply it to the real data."
+    },
+    {
+      "level": "nudge",
+      "text": "Outliers shift the mean."
+    },
+    {
+      "level": "guide",
+      "text": "Median is based on rank, so it's stable."
+    },
+    {
+      "level": "reveal",
+      "text": "Median."
+    }
+  ],
+  "explanation": [
+    "Median is resistant to outliers.",
+    "Mean is pulled by extreme values."
+  ],
+  "tags": [
+    "CA",
+    "outlier",
+    "center"
+  ],
+  "estimatedSeconds": 50
+}

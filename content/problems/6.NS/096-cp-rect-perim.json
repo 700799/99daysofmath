@@ -1,0 +1,45 @@
+{
+  "id": "6.NS.096",
+  "domain": "6.NS",
+  "unit": 10,
+  "orderInUnit": 6,
+  "standard": "6.NS.C.8",
+  "difficulty": 3,
+  "prompt": "A rectangle has vertices $(0, 0)$, $(5, 0)$, $(5, 3)$, $(0, 3)$. Find its **perimeter**.",
+  "answerType": "numeric",
+  "primaryAnswer": "16",
+  "alternativeAnswers": [
+    "16 units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the side lengths.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Plot each number on a quick number line. Distances and order get obvious right away."
+    },
+    {
+      "level": "nudge",
+      "text": "Find the side lengths."
+    },
+    {
+      "level": "guide",
+      "text": "Length = $5 - 0 = 5$. Width = $3 - 0 = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "Perimeter $= 2(5 + 3) = 16$."
+    }
+  ],
+  "explanation": [
+    "Length: $|5 - 0| = 5$. Width: $|3 - 0| = 3$.",
+    "Perimeter $= 2(L + W) = 2(8) = 16$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "coordinate-plane",
+    "perimeter"
+  ],
+  "estimatedSeconds": 75
+}

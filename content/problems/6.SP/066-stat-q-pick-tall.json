@@ -1,0 +1,48 @@
+{
+  "id": "6.SP.066",
+  "domain": "6.SP",
+  "unit": 7,
+  "orderInUnit": 6,
+  "standard": "6.SP.A.1",
+  "difficulty": 2,
+  "prompt": "Which one is a statistical question?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "How tall is the Empire State Building?",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "How tall are 6th graders in our school?",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Which has many possible answers?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Which has many possible answers?"
+    },
+    {
+      "level": "guide",
+      "text": "Many 6th graders, many heights."
+    },
+    {
+      "level": "reveal",
+      "text": "B."
+    }
+  ],
+  "explanation": [
+    "A has one fixed answer.",
+    "B varies across students → statistical."
+  ],
+  "tags": [
+    "statistical-question"
+  ],
+  "estimatedSeconds": 50
+}

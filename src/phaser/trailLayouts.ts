@@ -7,10 +7,21 @@ export interface TrailNode {
 }
 
 export const TRAIL_WIDTH = 480;
-export const TRAIL_HEIGHT = 720;
 
-function snakeTrail(units: number, startY = 80, endY = TRAIL_HEIGHT - 80): TrailNode[] {
+// The canvas grows with the number of units so the nodes never overlap.
+// 88 px per gap fits comfortably alongside the 76 px node diameter.
+const Y_PADDING = 80;
+const Y_PER_UNIT = 88;
+
+export function trailHeightFor(units: number): number {
+  return Y_PADDING * 2 + Y_PER_UNIT * Math.max(0, units - 1);
+}
+
+export function buildTrail(units: number): TrailNode[] {
   const nodes: TrailNode[] = [];
+  const height = trailHeightFor(units);
+  const startY = Y_PADDING;
+  const endY = height - Y_PADDING;
   const step = (endY - startY) / Math.max(1, units - 1);
   for (let i = 0; i < units; i++) {
     const y = startY + step * i;
@@ -22,10 +33,12 @@ function snakeTrail(units: number, startY = 80, endY = TRAIL_HEIGHT - 80): Trail
   return nodes;
 }
 
+// Default fallback if a domain has no problems yet.
 export const TRAIL_LAYOUTS: Record<Domain, TrailNode[]> = {
-  '6.RP': snakeTrail(6),
-  '6.NS': snakeTrail(6),
-  '6.EE': snakeTrail(6),
-  '6.G': snakeTrail(6),
-  '6.SP': snakeTrail(6),
+  '5.F': buildTrail(2),
+  '6.RP': buildTrail(2),
+  '6.NS': buildTrail(2),
+  '6.EE': buildTrail(2),
+  '6.G': buildTrail(2),
+  '6.SP': buildTrail(2),
 };

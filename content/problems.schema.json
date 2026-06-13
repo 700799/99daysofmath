@@ -21,74 +21,242 @@
     "estimatedSeconds"
   ],
   "properties": {
-    "id": { "type": "string", "pattern": "^6\\.(RP|NS|EE|G|SP)\\.\\d{3}$" },
-    "domain": { "enum": ["6.RP", "6.NS", "6.EE", "6.G", "6.SP"] },
-    "unit": { "type": "integer", "minimum": 1, "maximum": 20 },
-    "orderInUnit": { "type": "integer", "minimum": 1 },
-    "standard": { "type": "string", "pattern": "^6\\.(RP|NS|EE|G|SP)\\." },
-    "difficulty": { "type": "integer", "enum": [1, 2, 3] },
-    "prompt": { "type": "string", "minLength": 3 },
+    "id": {
+      "type": "string",
+      "pattern": "^(6\\.(RP|NS|EE|G|SP)|5\\.F)\\.\\d{3}$"
+    },
+    "domain": {
+      "enum": [
+        "6.RP",
+        "6.NS",
+        "6.EE",
+        "6.G",
+        "6.SP",
+        "5.F"
+      ]
+    },
+    "unit": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20
+    },
+    "orderInUnit": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "standard": {
+      "type": "string",
+      "pattern": "^(6\\.(RP|NS|EE|G|SP)|5\\.(NBT|NF|MD|G|OA))\\."
+    },
+    "difficulty": {
+      "type": "integer",
+      "enum": [
+        1,
+        2,
+        3
+      ]
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 3
+    },
     "diagram": {
       "oneOf": [
         {
           "type": "object",
-          "required": ["kind", "src", "alt"],
+          "required": [
+            "kind",
+            "src",
+            "alt"
+          ],
           "properties": {
-            "kind": { "const": "svg-asset" },
-            "src": { "type": "string" },
-            "alt": { "type": "string" }
+            "kind": {
+              "const": "svg-asset"
+            },
+            "src": {
+              "type": "string"
+            },
+            "alt": {
+              "type": "string"
+            }
           },
           "additionalProperties": false
         },
         {
           "type": "object",
-          "required": ["kind", "svg", "alt"],
+          "required": [
+            "kind",
+            "svg",
+            "alt"
+          ],
           "properties": {
-            "kind": { "const": "inline-svg" },
-            "svg": { "type": "string" },
-            "alt": { "type": "string" }
+            "kind": {
+              "const": "inline-svg"
+            },
+            "svg": {
+              "type": "string"
+            },
+            "alt": {
+              "type": "string"
+            }
           },
           "additionalProperties": false
         },
         {
           "type": "object",
-          "required": ["kind", "art"],
+          "required": [
+            "kind",
+            "art"
+          ],
           "properties": {
-            "kind": { "const": "ascii" },
-            "art": { "type": "string" }
+            "kind": {
+              "const": "ascii"
+            },
+            "art": {
+              "type": "string"
+            }
           },
           "additionalProperties": false
         }
       ]
     },
     "answerType": {
-      "enum": ["numeric", "fraction", "expression", "multiple-choice", "short-text"]
+      "enum": [
+        "numeric",
+        "fraction",
+        "expression",
+        "multiple-choice",
+        "short-text"
+      ]
     },
     "choices": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "label", "correct"],
+        "required": [
+          "id",
+          "label",
+          "correct"
+        ],
         "properties": {
-          "id": { "enum": ["A", "B", "C", "D"] },
-          "label": { "type": "string" },
-          "correct": { "type": "boolean" }
+          "id": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "label": {
+            "type": "string"
+          },
+          "correct": {
+            "type": "boolean"
+          }
         },
         "additionalProperties": false
       }
     },
-    "primaryAnswer": { "type": "string" },
-    "alternativeAnswers": { "type": "array", "items": { "type": "string" } },
-    "acceptanceMode": { "enum": ["exact", "normalized", "numeric-tolerance"] },
-    "numericTolerance": { "type": "number" },
-    "hint": { "type": "string" },
+    "primaryAnswer": {
+      "type": "string"
+    },
+    "alternativeAnswers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "acceptanceMode": {
+      "enum": [
+        "exact",
+        "normalized",
+        "numeric-tolerance"
+      ]
+    },
+    "numericTolerance": {
+      "type": "number"
+    },
+    "hint": {
+      "type": "string"
+    },
+    "hints": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": [
+          "level",
+          "text"
+        ],
+        "properties": {
+          "level": {
+            "enum": [
+              "nudge",
+              "guide",
+              "reveal"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "learningObjective": {
+      "type": "string"
+    },
+    "topic": {
+      "type": "string"
+    },
     "explanation": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "minItems": 1
     },
-    "tags": { "type": "array", "items": { "type": "string" } },
-    "estimatedSeconds": { "type": "integer", "minimum": 5, "maximum": 600 }
+    "alternativeExplanations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "steps"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "estimatedSeconds": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 600
+    }
   },
   "additionalProperties": false
 }

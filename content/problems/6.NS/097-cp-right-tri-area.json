@@ -1,0 +1,45 @@
+{
+  "id": "6.NS.097",
+  "domain": "6.NS",
+  "unit": 10,
+  "orderInUnit": 7,
+  "standard": "6.NS.C.8",
+  "difficulty": 3,
+  "prompt": "A right triangle has vertices $(0, 0)$, $(6, 0)$, $(6, 4)$. Find its **area**.",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [
+    "12 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the leg lengths first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Use the \"keep–change–flip\" trick whenever you see division by a fraction."
+    },
+    {
+      "level": "nudge",
+      "text": "Find the leg lengths first."
+    },
+    {
+      "level": "guide",
+      "text": "Horizontal leg = $6$, vertical leg = $4$. Area = $\\tfrac{1}{2} \\cdot 6 \\cdot 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\tfrac{1}{2} \\cdot 24 = 12$."
+    }
+  ],
+  "explanation": [
+    "Legs are $6$ (horizontal) and $4$ (vertical).",
+    "Area of right triangle: $\\tfrac{1}{2} \\cdot 6 \\cdot 4 = 12$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "coordinate-plane",
+    "area"
+  ],
+  "estimatedSeconds": 80
+}

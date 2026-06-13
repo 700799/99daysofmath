@@ -1,0 +1,42 @@
+{
+  "id": "6.SP.054",
+  "domain": "6.SP",
+  "unit": 6,
+  "orderInUnit": 4,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "$5$ scores have mean $80$. If a $6$th score of $74$ is added, the new mean is approximately:",
+  "answerType": "numeric",
+  "primaryAnswer": "79",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Old sum is $5 \\times 80 = 400$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Use a sample of 3–4 values to see how the rule works, then apply it to the real data."
+    },
+    {
+      "level": "nudge",
+      "text": "Old sum is $5 \\times 80 = 400$."
+    },
+    {
+      "level": "guide",
+      "text": "New sum: $474$. New count: $6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$474 / 6 = 79$."
+    }
+  ],
+  "explanation": [
+    "Old sum: $400$. Add $74$: $474$.",
+    "Divide by $6$: $79$."
+  ],
+  "tags": [
+    "CA",
+    "mean"
+  ],
+  "estimatedSeconds": 75
+}

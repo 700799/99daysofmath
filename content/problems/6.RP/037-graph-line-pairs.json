@@ -1,0 +1,37 @@
+{
+  "id": "6.RP.037",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 7,
+  "standard": "6.RP.A.3.a",
+  "difficulty": 2,
+  "prompt": "A line through the origin passes through $(3, 12)$. What is the unit rate ($y$ per $1$ $x$)?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Unit rate = $y / x$ at one point.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Unit rate = $y / x$ at one point."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{12}{3} = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$12 \\div 3 = 4$."
+    }
+  ],
+  "explanation": [
+    "Unit rate: $\\frac{12}{3} = 4$.",
+    "For every $1$ $x$, $y$ goes up by $4$."
+  ],
+  "tags": [
+    "graph",
+    "unit-rate"
+  ],
+  "estimatedSeconds": 50
+}

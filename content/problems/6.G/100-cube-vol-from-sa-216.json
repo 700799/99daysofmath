@@ -1,0 +1,57 @@
+{
+  "id": "6.G.100",
+  "domain": "6.G",
+  "unit": 10,
+  "orderInUnit": 10,
+  "standard": "6.G.A.4",
+  "difficulty": 3,
+  "prompt": "A cube has surface area $216$ square units. What is its **volume**?",
+  "answerType": "numeric",
+  "primaryAnswer": "216",
+  "alternativeAnswers": [
+    "216 cu units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the area of one face first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a similar but smaller shape (all sides ÷ 2) and look at how the formula behaves."
+    },
+    {
+      "level": "nudge",
+      "text": "Find the area of one face first."
+    },
+    {
+      "level": "guide",
+      "text": "One face: $216 \\div 6 = 36$, so the side is $6$."
+    },
+    {
+      "level": "reveal",
+      "text": "Volume: $6^3 = 216$."
+    }
+  ],
+  "explanation": [
+    "One face: $216 / 6 = 36$ sq units.",
+    "Edge length: $\\sqrt{36} = 6$.",
+    "Volume: $6^3 = 216$ cu units."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why SA = V here",
+      "steps": [
+        "SA $= 6s^2$ and V $= s^3$.",
+        "They're equal when $6s^2 = s^3$, i.e. $s = 6$.",
+        "At $s = 6$, both are $216$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "cube",
+    "volume",
+    "surface-area"
+  ],
+  "estimatedSeconds": 110
+}

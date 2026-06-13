@@ -1,0 +1,35 @@
+{
+  "id": "6.G.035",
+  "domain": "6.G",
+  "unit": 4,
+  "orderInUnit": 5,
+  "standard": "6.G.A.4",
+  "difficulty": 2,
+  "prompt": "A net of a cube has how many squares?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Same as the number of faces.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same as the number of faces."
+    },
+    {
+      "level": "guide",
+      "text": "Cube has $6$ faces."
+    },
+    {
+      "level": "reveal",
+      "text": "$6$ squares."
+    }
+  ],
+  "explanation": [
+    "A cube net unfolds into $6$ square faces."
+  ],
+  "tags": [
+    "net"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,46 @@
+{
+  "id": "6.SP.027",
+  "domain": "6.SP",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "For $2, 4, 6, 8, 10, 12, 14, 16, 18$: median is $10$. What is $Q3$?",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Upper half: $12, 14, 16, 18$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sort the data from least to greatest first — many statistics get easy after that."
+    },
+    {
+      "level": "nudge",
+      "text": "Upper half: $12, 14, 16, 18$."
+    },
+    {
+      "level": "guide",
+      "text": "Median of $12, 14, 16, 18$: average of $14$ and $16$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(14 + 16)/2 = 15$."
+    }
+  ],
+  "explanation": [
+    "Upper half (above median): $12, 14, 16, 18$.",
+    "Median of upper: $15$."
+  ],
+  "tags": [
+    "quartile"
+  ],
+  "estimatedSeconds": 60,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Dot plot for 6.SP.027",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 130\" role=\"img\"><line x1=\"20\" y1=\"100\" x2=\"400\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"30\" y1=\"96\" x2=\"30\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"30\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><line x1=\"50\" y1=\"96\" x2=\"50\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"50\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">2</text><line x1=\"70\" y1=\"96\" x2=\"70\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"70\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">3</text><line x1=\"90\" y1=\"96\" x2=\"90\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"90\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">4</text><line x1=\"110\" y1=\"96\" x2=\"110\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"110\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><line x1=\"130\" y1=\"96\" x2=\"130\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"130\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">6</text><line x1=\"150\" y1=\"96\" x2=\"150\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"150\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">7</text><line x1=\"170\" y1=\"96\" x2=\"170\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"170\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">8</text><line x1=\"190\" y1=\"96\" x2=\"190\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"190\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">9</text><line x1=\"210\" y1=\"96\" x2=\"210\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"210\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">10</text><line x1=\"230\" y1=\"96\" x2=\"230\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"230\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">11</text><line x1=\"250.00000000000003\" y1=\"96\" x2=\"250.00000000000003\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"250.00000000000003\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">12</text><line x1=\"270\" y1=\"96\" x2=\"270\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"270\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">13</text><line x1=\"290\" y1=\"96\" x2=\"290\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"290\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">14</text><line x1=\"310\" y1=\"96\" x2=\"310\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"310\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">15</text><line x1=\"330\" y1=\"96\" x2=\"330\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"330\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">16</text><line x1=\"350\" y1=\"96\" x2=\"350\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"350\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">17</text><line x1=\"370\" y1=\"96\" x2=\"370\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"370\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">18</text><line x1=\"390\" y1=\"96\" x2=\"390\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"390\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">19</text><circle cx=\"50\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"90\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"130\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"170\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"210\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"250.00000000000003\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"290\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"330\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"370\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/></svg>"
+  }
+}

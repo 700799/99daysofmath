@@ -1,0 +1,48 @@
+{
+  "id": "5.F.005",
+  "domain": "5.F",
+  "unit": 1,
+  "orderInUnit": 5,
+  "standard": "5.NBT.B.6",
+  "difficulty": 2,
+  "prompt": "Divide: $504 \\div 8$",
+  "answerType": "numeric",
+  "primaryAnswer": "63",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "How many $8$s fit in $50$? Start there.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "How many $8$s fit in $50$? Start there."
+    },
+    {
+      "level": "guide",
+      "text": "$8 \\times 6 = 48$, so $8 \\times 60 = 480$. How much is left over from $504$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$504 - 480 = 24$, and $24 \\div 8 = 3$, so $60 + 3 = 63$."
+    }
+  ],
+  "explanation": [
+    "$8 \\times 60 = 480$ — that uses up most of $504$.",
+    "$504 - 480 = 24$.",
+    "$24 \\div 8 = 3$.",
+    "So $504 \\div 8 = 60 + 3 = 63$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check by multiplying",
+      "steps": [
+        "Try $63 \\times 8$.",
+        "$60 \\times 8 = 480$ and $3 \\times 8 = 24$.",
+        "$480 + 24 = 504$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "division"
+  ],
+  "estimatedSeconds": 60
+}

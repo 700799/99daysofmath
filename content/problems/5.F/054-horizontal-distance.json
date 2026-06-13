@@ -1,0 +1,39 @@
+{
+  "id": "5.F.054",
+  "domain": "5.F",
+  "unit": 6,
+  "orderInUnit": 4,
+  "standard": "5.G.A.2",
+  "difficulty": 2,
+  "prompt": "How far apart are the points $(1, 2)$ and $(6, 2)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [
+    "5 units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The y-coordinates match, so the points sit on the same horizontal line.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The y-coordinates match, so the points sit on the same horizontal line."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract the x-coordinates."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 - 1 = 5$ units."
+    }
+  ],
+  "explanation": [
+    "Both points have $y = 2$, so the distance is purely horizontal.",
+    "Distance $= 6 - 1 = 5$ units."
+  ],
+  "tags": [
+    "coordinate-plane",
+    "distance"
+  ],
+  "estimatedSeconds": 40
+}

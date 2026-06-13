@@ -1,0 +1,41 @@
+{
+  "id": "6.G.031",
+  "domain": "6.G",
+  "unit": 4,
+  "orderInUnit": 1,
+  "standard": "6.G.A.4",
+  "difficulty": 1,
+  "prompt": "Find the surface area of a cube with side $2$.",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A cube has $6$ identical square faces.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A cube has $6$ identical square faces."
+    },
+    {
+      "level": "guide",
+      "text": "Each face: $2 \\times 2 = 4$. Total: $6 \\times 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24$."
+    }
+  ],
+  "explanation": [
+    "$6$ faces of $4$: $6 \\times 4 = 24$."
+  ],
+  "tags": [
+    "surface-area",
+    "cube"
+  ],
+  "estimatedSeconds": 40,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Cube with side 2",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 171.6 160.8\" role=\"img\"><g fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.5\" stroke-linejoin=\"round\"><polygon points=\"30,58.8 102,58.8 102,130.8 30,130.8\" fill=\"#BAE6FD\"/><polygon points=\"30,58.8 69.6,29.999999999999996 141.6,29.999999999999996 102,58.8\" fill=\"#BAE6FD\"/><polygon points=\"102,58.8 141.6,29.999999999999996 141.6,102.00000000000001 102,130.8\" fill=\"#BAE6FD\"/></g><g font-family=\"Nunito, sans-serif\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"66\" y=\"152.8\">l = 2</text><text x=\"135.8\" y=\"48.4\">w = 2</text><text x=\"165.6\" y=\"71\">h = 2</text></g></svg>"
+  }
+}

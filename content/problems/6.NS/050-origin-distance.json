@@ -1,0 +1,36 @@
+{
+  "id": "6.NS.050",
+  "domain": "6.NS",
+  "unit": 5,
+  "orderInUnit": 10,
+  "standard": "6.NS.C.8",
+  "difficulty": 2,
+  "prompt": "What is the distance from $(0, 0)$ to $(0, 7)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Same $x$ — vertical distance.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same $x$ — vertical distance."
+    },
+    {
+      "level": "guide",
+      "text": "$|7 - 0| = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$7$."
+    }
+  ],
+  "explanation": [
+    "Distance from origin to $(0, 7)$ is $7$ units."
+  ],
+  "tags": [
+    "coordinate",
+    "distance"
+  ],
+  "estimatedSeconds": 30
+}

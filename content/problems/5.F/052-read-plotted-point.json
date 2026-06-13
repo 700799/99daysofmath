@@ -1,0 +1,46 @@
+{
+  "id": "5.F.052",
+  "domain": "5.F",
+  "unit": 6,
+  "orderInUnit": 2,
+  "standard": "5.G.A.1",
+  "difficulty": 1,
+  "prompt": "What are the coordinates of the point shown? Write it like $(x,y)$.",
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg viewBox=\"0 0 220 220\" width=\"220\" height=\"220\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"24\" y1=\"196\" x2=\"24\" y2=\"24\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"24\" y1=\"196\" x2=\"196\" y2=\"196\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"52.66666666666667\" y1=\"196\" x2=\"52.66666666666667\" y2=\"24\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"24\" y1=\"167.33333333333334\" x2=\"196\" y2=\"167.33333333333334\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"48.66666666666667\" y=\"212\" font-size=\"10\" fill=\"#475569\">1</text><text x=\"10\" y=\"171.33333333333334\" font-size=\"10\" fill=\"#475569\">1</text><line x1=\"81.33333333333334\" y1=\"196\" x2=\"81.33333333333334\" y2=\"24\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"24\" y1=\"138.66666666666666\" x2=\"196\" y2=\"138.66666666666666\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"77.33333333333334\" y=\"212\" font-size=\"10\" fill=\"#475569\">2</text><text x=\"10\" y=\"142.66666666666666\" font-size=\"10\" fill=\"#475569\">2</text><line x1=\"110\" y1=\"196\" x2=\"110\" y2=\"24\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"24\" y1=\"110\" x2=\"196\" y2=\"110\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"106\" y=\"212\" font-size=\"10\" fill=\"#475569\">3</text><text x=\"10\" y=\"114\" font-size=\"10\" fill=\"#475569\">3</text><line x1=\"138.66666666666669\" y1=\"196\" x2=\"138.66666666666669\" y2=\"24\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"24\" y1=\"81.33333333333333\" x2=\"196\" y2=\"81.33333333333333\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"134.66666666666669\" y=\"212\" font-size=\"10\" fill=\"#475569\">4</text><text x=\"10\" y=\"85.33333333333333\" font-size=\"10\" fill=\"#475569\">4</text><line x1=\"167.33333333333334\" y1=\"196\" x2=\"167.33333333333334\" y2=\"24\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"24\" y1=\"52.66666666666666\" x2=\"196\" y2=\"52.66666666666666\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"163.33333333333334\" y=\"212\" font-size=\"10\" fill=\"#475569\">5</text><text x=\"10\" y=\"56.66666666666666\" font-size=\"10\" fill=\"#475569\">5</text><line x1=\"196\" y1=\"196\" x2=\"196\" y2=\"24\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><line x1=\"24\" y1=\"24\" x2=\"196\" y2=\"24\" stroke=\"#cbd5e1\" stroke-width=\"1\"/><text x=\"192\" y=\"212\" font-size=\"10\" fill=\"#475569\">6</text><text x=\"10\" y=\"28\" font-size=\"10\" fill=\"#475569\">6</text><line x1=\"24\" y1=\"196\" x2=\"196\" y2=\"196\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"24\" y1=\"196\" x2=\"24\" y2=\"24\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"81.33333333333334\" cy=\"52.66666666666666\" r=\"6\" fill=\"#ef4444\" stroke=\"#0f172a\" stroke-width=\"1.5\"/></svg>",
+    "alt": "A grid with one red point plotted at 2 across and 5 up"
+  },
+  "answerType": "short-text",
+  "primaryAnswer": "(2,5)",
+  "alternativeAnswers": [
+    "(2, 5)",
+    "2,5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Count across from the corner first, then count up.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Count across from the corner first, then count up."
+    },
+    {
+      "level": "guide",
+      "text": "The point is $2$ across and $5$ up."
+    },
+    {
+      "level": "reveal",
+      "text": "$(2, 5)$."
+    }
+  ],
+  "explanation": [
+    "From the origin, the point is $2$ units across — that is the $x$-coordinate.",
+    "It is $5$ units up — that is the $y$-coordinate.",
+    "So the point is $(2, 5)$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "coordinate-plane"
+  ],
+  "estimatedSeconds": 35
+}

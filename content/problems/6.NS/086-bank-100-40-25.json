@@ -1,0 +1,40 @@
+{
+  "id": "6.NS.086",
+  "domain": "6.NS",
+  "unit": 9,
+  "orderInUnit": 6,
+  "standard": "6.NS.C.5",
+  "difficulty": 2,
+  "prompt": "Starting balance \\$$100$. Withdraw \\$$40$, deposit \\$$25$. What is the final balance?",
+  "answerType": "numeric",
+  "primaryAnswer": "85",
+  "alternativeAnswers": [
+    "$85"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Withdraw subtracts; deposit adds.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Withdraw subtracts; deposit adds."
+    },
+    {
+      "level": "guide",
+      "text": "$100 - 40 + 25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$85$."
+    }
+  ],
+  "explanation": [
+    "$100 - 40 = 60$.",
+    "$60 + 25 = 85$."
+  ],
+  "tags": [
+    "integer",
+    "word",
+    "money"
+  ],
+  "estimatedSeconds": 50
+}

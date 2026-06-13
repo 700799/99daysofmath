@@ -1,0 +1,55 @@
+{
+  "id": "6.RP.079",
+  "domain": "6.RP",
+  "unit": 8,
+  "orderInUnit": 9,
+  "standard": "6.RP.A.2",
+  "difficulty": 3,
+  "prompt": "$7$ lb of grapes costs \\$$14$. At this rate, how much for $12$ lb?",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [
+    "$24",
+    "$24.00"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find cost per pound first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sketch a tape diagram: equal blocks for each part. What does one block represent here?"
+    },
+    {
+      "level": "nudge",
+      "text": "Find cost per pound first."
+    },
+    {
+      "level": "guide",
+      "text": "Per lb: $14 \\div 7 = 2$. For $12$ lb: $12 \\times 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12 \\times 2 = 24$."
+    }
+  ],
+  "explanation": [
+    "Cost per lb: $14 \\div 7 = 2$.",
+    "$12$ lb cost $12 \\times 2 = 24$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Proportion",
+      "steps": [
+        "$\\dfrac{14}{7} = \\dfrac{x}{12}$.",
+        "Cross-multiply: $7x = 14 \\cdot 12 = 168$. So $x = 24$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "unit-rate",
+    "word"
+  ],
+  "estimatedSeconds": 75
+}

@@ -42,6 +42,7 @@ export const ICON_NAMES = Object.keys(ICONS) as IconName[];
 
 /** Icon for each math domain (palettes match DOMAIN_COLORS). */
 export const DOMAIN_ICONS: Record<Domain, IconName> = {
+  '5.F': 'book',
   '6.RP': 'scale',
   '6.NS': 'numberline',
   '6.EE': 'equation',

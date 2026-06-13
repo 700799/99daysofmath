@@ -1,0 +1,44 @@
+{
+  "id": "6.G.069",
+  "domain": "6.G",
+  "unit": 7,
+  "orderInUnit": 9,
+  "standard": "6.G.A.1",
+  "difficulty": 3,
+  "prompt": "A figure has a $7 \\times 4$ rectangle stacked on top of a $10 \\times 3$ rectangle. **Total area**?",
+  "answerType": "numeric",
+  "primaryAnswer": "58",
+  "alternativeAnswers": [
+    "58 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Add the two areas.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sketch the shape and label every length. A 30-second drawing saves 5 minutes of thinking."
+    },
+    {
+      "level": "nudge",
+      "text": "Add the two areas."
+    },
+    {
+      "level": "guide",
+      "text": "$7 \\cdot 4 = 28$, $10 \\cdot 3 = 30$."
+    },
+    {
+      "level": "reveal",
+      "text": "$28 + 30 = 58$."
+    }
+  ],
+  "explanation": [
+    "Top: $28$. Bottom: $30$.",
+    "Total: $58$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "composite"
+  ],
+  "estimatedSeconds": 60
+}

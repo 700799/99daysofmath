@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.031",
+  "domain": "6.EE",
+  "unit": 4,
+  "orderInUnit": 1,
+  "standard": "6.EE.B.7",
+  "difficulty": 1,
+  "prompt": "Solve: $x + 5 = 12$.",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Subtract $5$ from both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Subtract $5$ from both sides."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 12 - 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 7$."
+    }
+  ],
+  "explanation": [
+    "$x + 5 = 12 \\Rightarrow x = 12 - 5 = 7$."
+  ],
+  "tags": [
+    "solve"
+  ],
+  "estimatedSeconds": 35
+}

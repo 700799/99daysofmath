@@ -1,0 +1,36 @@
+{
+  "id": "6.EE.037",
+  "domain": "6.EE",
+  "unit": 4,
+  "orderInUnit": 7,
+  "standard": "6.EE.B.7",
+  "difficulty": 2,
+  "prompt": "Solve: $0.5x = 4$.",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Divide both sides by $0.5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Divide both sides by $0.5$."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 4 / 0.5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 8$."
+    }
+  ],
+  "explanation": [
+    "$0.5x = 4 \\Rightarrow x = 8$."
+  ],
+  "tags": [
+    "solve",
+    "decimal"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,46 @@
+{
+  "id": "5.F.059",
+  "domain": "5.F",
+  "unit": 6,
+  "orderInUnit": 9,
+  "standard": "5.G.A.2",
+  "difficulty": 3,
+  "prompt": "Point $P$ is at $(4, 1)$. You move it $2$ units right and $3$ units up. Where is $P$ now? Write it like $(x,y)$.",
+  "answerType": "short-text",
+  "primaryAnswer": "(6,4)",
+  "alternativeAnswers": [
+    "(6, 4)",
+    "6,4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Right changes $x$; up changes $y$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Right changes $x$; up changes $y$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Moving $(1,1)$ right 2 gives $(3,1)$. Then up 3 gives $(3,4)$. Same moves for $P$."
+    },
+    {
+      "level": "guide",
+      "text": "$x: 4 + 2$ and $y: 1 + 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "New point: $(6, 4)$."
+    }
+  ],
+  "explanation": [
+    "Moving right adds to the $x$-coordinate: $4 + 2 = 6$.",
+    "Moving up adds to the $y$-coordinate: $1 + 3 = 4$.",
+    "So $P$ lands on $(6, 4)$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "coordinate-plane"
+  ],
+  "estimatedSeconds": 60
+}

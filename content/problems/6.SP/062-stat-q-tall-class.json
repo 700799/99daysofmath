@@ -1,0 +1,48 @@
+{
+  "id": "6.SP.062",
+  "domain": "6.SP",
+  "unit": 7,
+  "orderInUnit": 2,
+  "standard": "6.SP.A.1",
+  "difficulty": 1,
+  "prompt": "Is \"How tall are the students in my class?\" a statistical question? (yes/no)",
+  "answerType": "short-text",
+  "primaryAnswer": "yes",
+  "alternativeAnswers": [
+    "Yes",
+    "y"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Different students may have different heights.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Different students may have different heights."
+    },
+    {
+      "level": "guide",
+      "text": "Multiple answers expected → statistical."
+    },
+    {
+      "level": "reveal",
+      "text": "Yes."
+    }
+  ],
+  "explanation": [
+    "Different students have different heights, so the question anticipates variability.",
+    "Yes — it is statistical."
+  ],
+  "tags": [
+    "statistical-question"
+  ],
+  "estimatedSeconds": 35,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: yes — verified."
+      ]
+    }
+  ]
+}

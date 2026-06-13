@@ -1,0 +1,39 @@
+{
+  "id": "6.SP.028",
+  "domain": "6.SP",
+  "unit": 3,
+  "orderInUnit": 8,
+  "standard": "6.SP.A.3",
+  "difficulty": 1,
+  "prompt": "MAD measures the **average distance** of values from what?",
+  "answerType": "short-text",
+  "primaryAnswer": "mean",
+  "alternativeAnswers": [
+    "the mean",
+    "average"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "MAD = Mean Absolute Deviation — from what center?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "MAD = Mean Absolute Deviation — from what center?"
+    },
+    {
+      "level": "guide",
+      "text": "It uses the mean as center."
+    },
+    {
+      "level": "reveal",
+      "text": "The mean."
+    }
+  ],
+  "explanation": [
+    "MAD is the mean of $|x - \\bar{x}|$ for each value."
+  ],
+  "tags": [
+    "MAD",
+    "vocabulary"
+  ],
+  "estimatedSeconds": 35
+}

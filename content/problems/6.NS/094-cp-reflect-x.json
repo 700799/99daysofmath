@@ -1,0 +1,55 @@
+{
+  "id": "6.NS.094",
+  "domain": "6.NS",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "6.NS.C.6.b",
+  "difficulty": 2,
+  "prompt": "Reflect the point $(3, -5)$ across the **x-axis**. Write the new coordinates.",
+  "answerType": "short-text",
+  "primaryAnswer": "(3, 5)",
+  "alternativeAnswers": [
+    "(3,5)",
+    "3, 5",
+    "3,5"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Across the x-axis: flip the sign of $y$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Across the x-axis: flip the sign of $y$."
+    },
+    {
+      "level": "guide",
+      "text": "$y = -5 \\to y = 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(3, 5)$."
+    }
+  ],
+  "explanation": [
+    "Reflecting across the x-axis flips the sign of the y-coordinate.",
+    "$(3, -5) \\to (3, 5)$."
+  ],
+  "tags": [
+    "coordinate-plane",
+    "reflection"
+  ],
+  "estimatedSeconds": 50,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: (3, 5) — verified."
+      ]
+    }
+  ],
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Coordinate plane with point (3, -5) plotted",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 276 276\" role=\"img\"><line x1=\"30\" y1=\"30\" x2=\"30\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"246\" x2=\"246\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"48\" y1=\"30\" x2=\"48\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"228\" x2=\"246\" y2=\"228\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"66\" y1=\"30\" x2=\"66\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"210\" x2=\"246\" y2=\"210\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"84\" y1=\"30\" x2=\"84\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"192\" x2=\"246\" y2=\"192\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"102\" y1=\"30\" x2=\"102\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"174\" x2=\"246\" y2=\"174\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"120\" y1=\"30\" x2=\"120\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"156\" x2=\"246\" y2=\"156\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"138\" y1=\"30\" x2=\"138\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"138\" x2=\"246\" y2=\"138\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"156\" y1=\"30\" x2=\"156\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"120\" x2=\"246\" y2=\"120\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"174\" y1=\"30\" x2=\"174\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"102\" x2=\"246\" y2=\"102\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"192\" y1=\"30\" x2=\"192\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"84\" x2=\"246\" y2=\"84\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"210\" y1=\"30\" x2=\"210\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"66\" x2=\"246\" y2=\"66\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"228\" y1=\"30\" x2=\"228\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"48\" x2=\"246\" y2=\"48\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"246\" y1=\"30\" x2=\"246\" y2=\"246\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"30\" x2=\"246\" y2=\"30\" stroke=\"#E2E8F0\" stroke-width=\"1\"/><line x1=\"30\" y1=\"138\" x2=\"246\" y2=\"138\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"138\" y1=\"30\" x2=\"138\" y2=\"246\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"30\" y=\"152\" font-family=\"Nunito\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"middle\">-6</text><text x=\"130\" y=\"250\" font-family=\"Nunito\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"end\">-6</text><text x=\"66\" y=\"152\" font-family=\"Nunito\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"middle\">-4</text><text x=\"130\" y=\"214\" font-family=\"Nunito\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"end\">-4</text><text x=\"102\" y=\"152\" font-family=\"Nunito\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"middle\">-2</text><text x=\"130\" y=\"178\" font-family=\"Nunito\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"end\">-2</text><text x=\"174\" y=\"152\" font-family=\"Nunito\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"middle\">2</text><text x=\"130\" y=\"106\" font-family=\"Nunito\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"end\">2</text><text x=\"210\" y=\"152\" font-family=\"Nunito\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"middle\">4</text><text x=\"130\" y=\"70\" font-family=\"Nunito\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"end\">4</text><text x=\"246\" y=\"152\" font-family=\"Nunito\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"middle\">6</text><text x=\"130\" y=\"34\" font-family=\"Nunito\" font-size=\"11\" fill=\"#64748b\" text-anchor=\"end\">6</text><circle cx=\"192\" cy=\"228\" r=\"5\" fill=\"#EF4444\"/><text x=\"202\" y=\"220\" font-family=\"Nunito\" font-size=\"13\" font-weight=\"700\" fill=\"#EF4444\">(3, -5)</text></svg>"
+  }
+}

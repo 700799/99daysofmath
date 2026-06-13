@@ -1,0 +1,53 @@
+{
+  "id": "6.SP.067",
+  "domain": "6.SP",
+  "unit": 7,
+  "orderInUnit": 7,
+  "standard": "6.SP.A.2",
+  "difficulty": 2,
+  "prompt": "Why might the data \"ages of students in 6th grade\" show variability?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Different students have different birthdays.",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "All students are exactly the same age.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Age is the same for everyone in 6th grade.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Are all 6th graders born on the same day?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Are all 6th graders born on the same day?"
+    },
+    {
+      "level": "guide",
+      "text": "No — birthdays spread across many months."
+    },
+    {
+      "level": "reveal",
+      "text": "A."
+    }
+  ],
+  "explanation": [
+    "6th graders are typically $11$ or $12$ depending on birthday — different ages → variability.",
+    "Final answer: A."
+  ],
+  "tags": [
+    "variability"
+  ],
+  "estimatedSeconds": 60
+}

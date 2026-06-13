@@ -1,0 +1,42 @@
+{
+  "id": "5.F.057",
+  "domain": "5.F",
+  "unit": 6,
+  "orderInUnit": 7,
+  "standard": "5.MD.B.2",
+  "difficulty": 2,
+  "prompt": "The line plot shows ribbon lengths in feet. How many ribbons measured $\\frac{1}{2}$ foot?",
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg viewBox=\"0 0 260 124\" width=\"260\" height=\"124\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"96\" x2=\"240\" y2=\"96\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"45\" y=\"82\" font-size=\"14\" fill=\"#0f172a\">X</text><text x=\"45\" y=\"66\" font-size=\"14\" fill=\"#0f172a\">X</text><line x1=\"50\" y1=\"92\" x2=\"50\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"40\" y=\"116\" font-size=\"12\" fill=\"#0f172a\">1/4</text><text x=\"125\" y=\"82\" font-size=\"14\" fill=\"#0f172a\">X</text><text x=\"125\" y=\"66\" font-size=\"14\" fill=\"#0f172a\">X</text><text x=\"125\" y=\"50\" font-size=\"14\" fill=\"#0f172a\">X</text><line x1=\"130\" y1=\"92\" x2=\"130\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"120\" y=\"116\" font-size=\"12\" fill=\"#0f172a\">1/2</text><text x=\"205\" y=\"82\" font-size=\"14\" fill=\"#0f172a\">X</text><line x1=\"210\" y1=\"92\" x2=\"210\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"200\" y=\"116\" font-size=\"12\" fill=\"#0f172a\">3/4</text></svg>",
+    "alt": "Line plot with 2 Xs above 1/4, 3 Xs above 1/2, and 1 X above 3/4"
+  },
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Each X is one ribbon.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each X is one ribbon."
+    },
+    {
+      "level": "guide",
+      "text": "Count the Xs stacked above the $\\frac{1}{2}$ mark."
+    },
+    {
+      "level": "reveal",
+      "text": "There are $3$ Xs above $\\frac{1}{2}$."
+    }
+  ],
+  "explanation": [
+    "On a line plot, each X is one data point.",
+    "Above $\\frac{1}{2}$ there are $3$ Xs, so $3$ ribbons measured $\\frac{1}{2}$ foot."
+  ],
+  "tags": [
+    "line-plot",
+    "data"
+  ],
+  "estimatedSeconds": 35
+}

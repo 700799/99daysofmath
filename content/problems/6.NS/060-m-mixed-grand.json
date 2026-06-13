@@ -1,0 +1,44 @@
+{
+  "id": "6.NS.060",
+  "domain": "6.NS",
+  "unit": 6,
+  "orderInUnit": 10,
+  "standard": "6.NS.A.1",
+  "difficulty": 3,
+  "prompt": "A box holds $\\frac{3}{4}$ pound of nuts. How many boxes can be filled from $6$ pounds?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [
+    "8 boxes"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$6 \\div \\frac{3}{4}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Use the \"keep–change–flip\" trick whenever you see division by a fraction."
+    },
+    {
+      "level": "nudge",
+      "text": "$6 \\div \\frac{3}{4}$."
+    },
+    {
+      "level": "guide",
+      "text": "Flip: $6 \\times \\frac{4}{3} = \\frac{24}{3}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{24}{3} = 8$."
+    }
+  ],
+  "explanation": [
+    "$6 \\div \\frac{3}{4} = 6 \\times \\frac{4}{3} = \\frac{24}{3} = 8$."
+  ],
+  "tags": [
+    "CA",
+    "fraction-division",
+    "word"
+  ],
+  "estimatedSeconds": 75
+}

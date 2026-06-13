@@ -1,0 +1,49 @@
+{
+  "id": "6.SP.076",
+  "domain": "6.SP",
+  "unit": 8,
+  "orderInUnit": 6,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 2,
+  "prompt": "Find the MAD (mean absolute deviation) of $\\{1,\\ 4,\\ 7,\\ 12\\}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "3.5",
+  "alternativeAnswers": [
+    "7/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the mean first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the mean first."
+    },
+    {
+      "level": "guide",
+      "text": "Mean $= (1+4+7+12)/4 = 24/4 = 6$. Distances from $6$: $5, 2, 1, 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "MAD $= (5+2+1+6)/4 = 14/4 = 3.5$."
+    }
+  ],
+  "explanation": [
+    "Mean: $24/4 = 6$.",
+    "$|1-6|=5,\\ |4-6|=2,\\ |7-6|=1,\\ |12-6|=6$. Sum: $14$.",
+    "MAD: $14/4 = 3.5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think of it as average distance",
+      "steps": [
+        "Each value's distance from the mean: $5, 2, 1, 6$.",
+        "Average: $3.5$ — the typical distance from the mean."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "MAD"
+  ],
+  "estimatedSeconds": 100
+}

@@ -1,0 +1,59 @@
+{
+  "id": "5.F.060",
+  "domain": "5.F",
+  "unit": 6,
+  "orderInUnit": 10,
+  "standard": "5.G.A.1",
+  "difficulty": 2,
+  "prompt": "A point sits exactly **on the x-axis**. What must be true about its coordinates?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Its x-coordinate is 0",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Its y-coordinate is 0",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Both coordinates are 0",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Both coordinates are equal",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The y-coordinate measures how far UP a point is.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The y-coordinate measures how far UP a point is."
+    },
+    {
+      "level": "guide",
+      "text": "A point on the x-axis is not up or down at all."
+    },
+    {
+      "level": "reveal",
+      "text": "No height means $y = 0$ — choose B."
+    }
+  ],
+  "explanation": [
+    "The $y$-coordinate is the distance above (or below) the x-axis.",
+    "On the x-axis that distance is $0$, so every such point looks like $(x, 0)$.",
+    "Example: $(5, 0)$ is on the x-axis."
+  ],
+  "tags": [
+    "coordinate-plane"
+  ],
+  "estimatedSeconds": 40
+}

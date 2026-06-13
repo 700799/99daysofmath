@@ -1,0 +1,49 @@
+{
+  "id": "6.NS.063",
+  "domain": "6.NS",
+  "unit": 7,
+  "orderInUnit": 3,
+  "standard": "6.NS.B.3",
+  "difficulty": 2,
+  "prompt": "Compute $38 \\times 24$.",
+  "answerType": "numeric",
+  "primaryAnswer": "912",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply by tens and ones separately, then add.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply by tens and ones separately, then add."
+    },
+    {
+      "level": "guide",
+      "text": "$38 \\times 20 = 760$. $38 \\times 4 = 152$."
+    },
+    {
+      "level": "reveal",
+      "text": "$760 + 152 = 912$."
+    }
+  ],
+  "explanation": [
+    "Break $24$ into $20 + 4$.",
+    "$38 \\times 20 = 760$.",
+    "$38 \\times 4 = 152$.",
+    "$760 + 152 = 912$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Area-model rectangles",
+      "steps": [
+        "Split: $(30 + 8)(20 + 4)$.",
+        "$30 \\cdot 20 = 600$; $30 \\cdot 4 = 120$; $8 \\cdot 20 = 160$; $8 \\cdot 4 = 32$.",
+        "Sum: $600 + 120 + 160 + 32 = 912$."
+      ]
+    }
+  ],
+  "tags": [
+    "multiply",
+    "multi-digit"
+  ],
+  "estimatedSeconds": 65
+}

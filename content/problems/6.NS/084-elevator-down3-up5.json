@@ -1,0 +1,51 @@
+{
+  "id": "6.NS.084",
+  "domain": "6.NS",
+  "unit": 9,
+  "orderInUnit": 4,
+  "standard": "6.NS.C.5",
+  "difficulty": 2,
+  "prompt": "An elevator goes **down** $3$ floors, then **up** $5$ floors. What is the **net change** in floors?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [
+    "+2",
+    "2 floors up"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Down is negative, up is positive.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Down is negative, up is positive."
+    },
+    {
+      "level": "guide",
+      "text": "$-3 + 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$+2$."
+    }
+  ],
+  "explanation": [
+    "Down $3 \\to -3$. Up $5 \\to +5$.",
+    "$-3 + 5 = 2$.",
+    "Net: $2$ floors up."
+  ],
+  "tags": [
+    "integer",
+    "context",
+    "word"
+  ],
+  "estimatedSeconds": 55,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 2 — verified."
+      ]
+    }
+  ]
+}

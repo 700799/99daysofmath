@@ -1,0 +1,67 @@
+{
+  "id": "6.EE.019",
+  "domain": "6.EE",
+  "unit": 2,
+  "orderInUnit": 9,
+  "standard": "6.EE.A.2.a",
+  "difficulty": 3,
+  "prompt": "Write an expression for \"**$3$ times the quantity \"$8$ less than $x$\", increased by $x$**\" and then **simplify**. Use no spaces.",
+  "answerType": "short-text",
+  "primaryAnswer": "4x-24",
+  "alternativeAnswers": [
+    "4x - 24",
+    "-24+4x",
+    "3(x-8)+x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"$8$ less than $x$\" means $x - 8$, NOT $8 - x$. The order matters!",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "\"$8$ less than $x$\" is \"start at $x$, subtract $8$\": $x - 8$. (Think: \"$8$ less than my age\" — if I'm $20$, the answer is $12$, not $-12$.)"
+    },
+    {
+      "level": "nudge",
+      "text": "Build the quantity inside parentheses first, multiply by $3$, then add $x$."
+    },
+    {
+      "level": "guide",
+      "text": "$3(x - 8) + x$. Distribute: $3x - 24 + x$. Combine like terms: $4x - 24$."
+    },
+    {
+      "level": "reveal",
+      "text": "Simplified: $4x - 24$."
+    }
+  ],
+  "explanation": [
+    "\"$8$ less than $x$\" → $x - 8$ (the bigger thing comes first).",
+    "\"$3$ times the quantity\" → $3(x - 8)$.",
+    "\"Increased by $x$\" → $3(x - 8) + x$.",
+    "Distribute: $3 \\cdot x - 3 \\cdot 8 + x = 3x - 24 + x$.",
+    "Combine like terms: $3x + x = 4x$, so the answer is $4x - 24$."
+  ],
+  "tags": [
+    "translate",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 105,
+  "alternativeExplanations": [
+    {
+      "title": "Check at $x=10$",
+      "steps": [
+        "Words: \"$3$ times ($8$ less than $10$), plus $10$\" = $3 \\cdot 2 + 10 = 16$.",
+        "Test $4x - 24$ at $x=10$: $40 - 24 = 16$. ✓",
+        "Test $3(x-8) + x$ at $x=10$: $3(2) + 10 = 16$. ✓"
+      ]
+    },
+    {
+      "title": "Why \"less than\" flips the order",
+      "steps": [
+        "\"$8$ less than $x$\" describes a number that is **$8$ smaller than $x$**.",
+        "If $x = 100$, \"$8$ less than $x$\" must equal $92$, not $-92$. So the expression is $x - 8$.",
+        "Same logic for \"more than\": \"$5$ more than $y$\" is $y + 5$, but addition is symmetric so it doesn't bite you. Subtraction does."
+      ]
+    }
+  ]
+}

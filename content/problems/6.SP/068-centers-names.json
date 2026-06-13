@@ -1,0 +1,48 @@
+{
+  "id": "6.SP.068",
+  "domain": "6.SP",
+  "unit": 7,
+  "orderInUnit": 8,
+  "standard": "6.SP.A.3",
+  "difficulty": 3,
+  "prompt": "Name TWO measures of **center** for a data set (separate with a comma).",
+  "answerType": "short-text",
+  "primaryAnswer": "mean, median",
+  "alternativeAnswers": [
+    "median, mean",
+    "mean,median",
+    "mean and median",
+    "mode, mean",
+    "mean, mode"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Center asks \"what is typical?\"",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Mean is fair-shares; median is the middle. Pick the one the question actually asks for."
+    },
+    {
+      "level": "nudge",
+      "text": "Center asks \"what is typical?\""
+    },
+    {
+      "level": "guide",
+      "text": "Two of: mean, median, mode."
+    },
+    {
+      "level": "reveal",
+      "text": "mean, median (or mean, mode, or median, mode)."
+    }
+  ],
+  "explanation": [
+    "The three measures of center are mean, median, and mode.",
+    "Naming any two is fine."
+  ],
+  "tags": [
+    "vocabulary",
+    "center"
+  ],
+  "estimatedSeconds": 50
+}

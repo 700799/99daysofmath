@@ -1,0 +1,55 @@
+{
+  "id": "6.RP.090",
+  "domain": "6.RP",
+  "unit": 9,
+  "orderInUnit": 10,
+  "standard": "6.RP.A.3.d",
+  "difficulty": 3,
+  "prompt": "A pool holds $180$ gallons. How many quarts is that? ($1$ gal $= 4$ qt)",
+  "answerType": "numeric",
+  "primaryAnswer": "720",
+  "alternativeAnswers": [
+    "720 qt"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply by $4$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Picture a ratio table: write the rate in one row, then scale both columns by the same number."
+    },
+    {
+      "level": "nudge",
+      "text": "Multiply by $4$."
+    },
+    {
+      "level": "guide",
+      "text": "$180 \\times 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$720$ qt."
+    }
+  ],
+  "explanation": [
+    "$180 \\times 4 = 720$ quarts.",
+    "Final answer: 720."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Break it up",
+      "steps": [
+        "$100 \\times 4 = 400$.",
+        "$80 \\times 4 = 320$.",
+        "Sum: $400 + 320 = 720$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "conversion",
+    "volume"
+  ],
+  "estimatedSeconds": 70
+}

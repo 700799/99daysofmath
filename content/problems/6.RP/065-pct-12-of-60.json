@@ -1,0 +1,50 @@
+{
+  "id": "6.RP.065",
+  "domain": "6.RP",
+  "unit": 7,
+  "orderInUnit": 5,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 2,
+  "prompt": "$12$ is what percent of $60$?",
+  "answerType": "short-text",
+  "primaryAnswer": "20%",
+  "alternativeAnswers": [
+    "20 percent",
+    "20 %"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Divide the part by the whole.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Divide the part by the whole."
+    },
+    {
+      "level": "guide",
+      "text": "$12 \\div 60 = 0.20$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.20 = 20\\%$."
+    }
+  ],
+  "explanation": [
+    "Part over whole: $\\frac{12}{60}$.",
+    "$12 \\div 60 = 0.20$.",
+    "$0.20 = 20\\%$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Simplify the fraction first",
+      "steps": [
+        "$\\frac{12}{60} = \\frac{1}{5}$.",
+        "$\\frac{1}{5} = \\frac{20}{100} = 20\\%$."
+      ]
+    }
+  ],
+  "tags": [
+    "percent",
+    "find-percent"
+  ],
+  "estimatedSeconds": 55
+}

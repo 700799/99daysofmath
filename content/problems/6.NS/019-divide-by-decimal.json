@@ -1,0 +1,41 @@
+{
+  "id": "6.NS.019",
+  "domain": "6.NS",
+  "unit": 2,
+  "orderInUnit": 9,
+  "standard": "6.NS.B.3",
+  "difficulty": 3,
+  "prompt": "Compute $1.5 \\div 0.3$.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply both numbers by $10$ to remove the decimal in the divisor.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Rewrite the numbers in matching form (all fractions OR all decimals) before you operate."
+    },
+    {
+      "level": "nudge",
+      "text": "Multiply both numbers by $10$ to remove the decimal in the divisor."
+    },
+    {
+      "level": "guide",
+      "text": "$1.5 \\div 0.3 = 15 \\div 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$15 \\div 3 = 5$."
+    }
+  ],
+  "explanation": [
+    "$1.5 \\div 0.3 = \\frac{15}{3} = 5$."
+  ],
+  "tags": [
+    "decimal",
+    "divide"
+  ],
+  "estimatedSeconds": 60
+}

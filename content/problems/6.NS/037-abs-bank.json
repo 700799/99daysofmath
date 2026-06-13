@@ -1,0 +1,39 @@
+{
+  "id": "6.NS.037",
+  "domain": "6.NS",
+  "unit": 4,
+  "orderInUnit": 7,
+  "standard": "6.NS.C.7.c",
+  "difficulty": 2,
+  "prompt": "A bank statement shows $-\\$45$ (overdraft). What is the size of the debt?",
+  "answerType": "numeric",
+  "primaryAnswer": "45",
+  "alternativeAnswers": [
+    "$45"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Size\" of debt means absolute value.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Size\" of debt means absolute value."
+    },
+    {
+      "level": "guide",
+      "text": "$|{-45}| = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$45$."
+    }
+  ],
+  "explanation": [
+    "$|{-45}| = 45$.",
+    "Debt size: \\$$45$."
+  ],
+  "tags": [
+    "absolute-value",
+    "word"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,39 @@
+{
+  "id": "6.G.095",
+  "domain": "6.G",
+  "unit": 10,
+  "orderInUnit": 5,
+  "standard": "6.G.A.4",
+  "difficulty": 2,
+  "prompt": "Each face of a cube has area $25$ square units. What is the **total surface area**?",
+  "answerType": "numeric",
+  "primaryAnswer": "150",
+  "alternativeAnswers": [
+    "150 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$6$ faces, each $25$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$6$ faces, each $25$."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\cdot 25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$150$."
+    }
+  ],
+  "explanation": [
+    "$6 \\cdot 25 = 150$ sq units.",
+    "Final answer: 150."
+  ],
+  "tags": [
+    "surface-area",
+    "cube"
+  ],
+  "estimatedSeconds": 35
+}

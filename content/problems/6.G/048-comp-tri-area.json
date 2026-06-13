@@ -1,0 +1,41 @@
+{
+  "id": "6.G.048",
+  "domain": "6.G",
+  "unit": 5,
+  "orderInUnit": 8,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A composite figure has $2$ triangles each with base $4$ and height $3$. What is the total area?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "One triangle: $\\frac{1}{2}(4)(3) = 6$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "One triangle: $\\frac{1}{2}(4)(3) = 6$."
+    },
+    {
+      "level": "guide",
+      "text": "Two of them."
+    },
+    {
+      "level": "reveal",
+      "text": "$2 \\times 6 = 12$."
+    }
+  ],
+  "explanation": [
+    "Each: $\\frac{1}{2}(4)(3) = 6$.",
+    "Two: $12$."
+  ],
+  "tags": [
+    "composite"
+  ],
+  "estimatedSeconds": 55,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Triangle base 4 height 3",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 220 184\" role=\"img\"><polygon points=\"38,146 182,146 95.6,38\" fill=\"#A7F3D0\" stroke=\"#10B981\" stroke-width=\"3\"/><line x1=\"95.6\" y1=\"38\" x2=\"95.6\" y2=\"146\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><g font-family=\"Nunito, sans-serif\" font-size=\"16\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"110\" y=\"168\">b = 4</text><text x=\"121.52\" y=\"97\">h = 3</text></g></svg>"
+  }
+}

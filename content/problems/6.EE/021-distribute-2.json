@@ -1,0 +1,38 @@
+{
+  "id": "6.EE.021",
+  "domain": "6.EE",
+  "unit": 3,
+  "orderInUnit": 1,
+  "standard": "6.EE.A.3",
+  "difficulty": 1,
+  "prompt": "Use the distributive property: $3(x + 4)$.",
+  "answerType": "short-text",
+  "primaryAnswer": "3x+12",
+  "alternativeAnswers": [
+    "3x + 12",
+    "12+3x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply $3$ by each term inside.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply $3$ by each term inside."
+    },
+    {
+      "level": "guide",
+      "text": "$3 \\cdot x + 3 \\cdot 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3x + 12$."
+    }
+  ],
+  "explanation": [
+    "$3(x + 4) = 3x + 12$."
+  ],
+  "tags": [
+    "distributive"
+  ],
+  "estimatedSeconds": 40
+}

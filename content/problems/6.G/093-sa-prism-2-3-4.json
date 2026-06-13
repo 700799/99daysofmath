@@ -1,0 +1,51 @@
+{
+  "id": "6.G.093",
+  "domain": "6.G",
+  "unit": 10,
+  "orderInUnit": 3,
+  "standard": "6.G.A.4",
+  "difficulty": 2,
+  "prompt": "Find the surface area of a $2 \\times 3 \\times 4$ rectangular prism.",
+  "answerType": "numeric",
+  "primaryAnswer": "52",
+  "alternativeAnswers": [
+    "52 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Use SA $= 2(lw + lh + wh)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use SA $= 2(lw + lh + wh)$."
+    },
+    {
+      "level": "guide",
+      "text": "$lw = 6, lh = 8, wh = 12$. Sum: $26$. Double: $52$."
+    },
+    {
+      "level": "reveal",
+      "text": "$52$."
+    }
+  ],
+  "explanation": [
+    "Pairs of faces: $lw = 6$, $lh = 8$, $wh = 12$.",
+    "Sum: $6 + 8 + 12 = 26$.",
+    "Total: $2(26) = 52$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "List all 6 faces",
+      "steps": [
+        "Two $2 \\times 3 = 6$ faces → $12$.",
+        "Two $2 \\times 4 = 8$ faces → $16$.",
+        "Two $3 \\times 4 = 12$ faces → $24$.",
+        "Sum: $12 + 16 + 24 = 52$."
+      ]
+    }
+  ],
+  "tags": [
+    "surface-area",
+    "prism"
+  ],
+  "estimatedSeconds": 75
+}

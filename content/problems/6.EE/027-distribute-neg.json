@@ -1,0 +1,37 @@
+{
+  "id": "6.EE.027",
+  "domain": "6.EE",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "6.EE.A.3",
+  "difficulty": 2,
+  "prompt": "Expand $4(x + 7)$.",
+  "answerType": "short-text",
+  "primaryAnswer": "4x+28",
+  "alternativeAnswers": [
+    "4x + 28"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply $4$ by each.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply $4$ by each."
+    },
+    {
+      "level": "guide",
+      "text": "$4x + 4 \\cdot 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4x + 28$."
+    }
+  ],
+  "explanation": [
+    "$4(x + 7) = 4x + 28$."
+  ],
+  "tags": [
+    "distributive"
+  ],
+  "estimatedSeconds": 35
+}

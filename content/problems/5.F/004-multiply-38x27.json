@@ -1,0 +1,51 @@
+{
+  "id": "5.F.004",
+  "domain": "5.F",
+  "unit": 1,
+  "orderInUnit": 4,
+  "standard": "5.NBT.B.5",
+  "difficulty": 2,
+  "prompt": "Multiply: $38 \\times 27$",
+  "answerType": "numeric",
+  "primaryAnswer": "1026",
+  "alternativeAnswers": [
+    "1,026"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Break $27$ into $20 + 7$ and multiply each part by $38$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Break $27$ into $20 + 7$ and multiply each part by $38$."
+    },
+    {
+      "level": "guide",
+      "text": "$38 \\times 20 = 760$ and $38 \\times 7 = 266$. Add them."
+    },
+    {
+      "level": "reveal",
+      "text": "$760 + 266 = 1026$."
+    }
+  ],
+  "explanation": [
+    "Split $27$ into $20 + 7$.",
+    "$38 \\times 20 = 760$.",
+    "$38 \\times 7 = 266$.",
+    "$760 + 266 = 1026$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Area model",
+      "steps": [
+        "Draw a box split into $30 + 8$ across and $20 + 7$ down.",
+        "The four parts: $600, 160, 210, 56$.",
+        "$600 + 160 + 210 + 56 = 1026$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "multiplication"
+  ],
+  "estimatedSeconds": 70
+}

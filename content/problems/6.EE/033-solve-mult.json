@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.033",
+  "domain": "6.EE",
+  "unit": 4,
+  "orderInUnit": 3,
+  "standard": "6.EE.B.7",
+  "difficulty": 1,
+  "prompt": "Solve: $3x = 24$.",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Divide both sides by $3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Divide both sides by $3$."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 24 / 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 8$."
+    }
+  ],
+  "explanation": [
+    "$3x = 24 \\Rightarrow x = 8$."
+  ],
+  "tags": [
+    "solve"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,47 @@
+{
+  "id": "6.NS.006",
+  "domain": "6.NS",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "6.NS.C.7.c",
+  "difficulty": 1,
+  "prompt": "What is $|-7|$?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Absolute value is the **distance** from $0$ on the number line. Distance is always positive (or zero).",
+  "explanation": [
+    "Absolute value bars $|\\;|$ ask for the distance from $0$.",
+    "$-7$ is $7$ units to the **left** of $0$ on the number line.",
+    "Distance is always positive: $|-7| = 7$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Drop the sign",
+      "steps": [
+        "Easy rule: $|x|$ takes off the negative sign if there is one.",
+        "$|-7|$ → drop the minus → $7$.",
+        "Works for any number: $|3| = 3$, $|-12| = 12$, $|0| = 0$."
+      ]
+    }
+  ],
+  "tags": [
+    "absolute-value"
+  ],
+  "estimatedSeconds": 25,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Absolute value is the **distance** from $0$ on the number line. Distance is always positive (or zero)."
+    },
+    {
+      "level": "guide",
+      "text": "Absolute value bars $|\\;|$ ask for the distance from $0$."
+    },
+    {
+      "level": "reveal",
+      "text": "Distance is always positive: $|-7| = 7$."
+    }
+  ]
+}

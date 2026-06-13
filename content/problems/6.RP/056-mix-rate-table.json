@@ -1,0 +1,45 @@
+{
+  "id": "6.RP.056",
+  "domain": "6.RP",
+  "unit": 6,
+  "orderInUnit": 8,
+  "standard": "6.RP.A.3.b",
+  "difficulty": 3,
+  "prompt": "At a rate of $4$ tickets for \\$$10$, how much do $14$ tickets cost?",
+  "answerType": "numeric",
+  "primaryAnswer": "35",
+  "alternativeAnswers": [
+    "$35",
+    "$35.00"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find cost per ticket first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Convert percent ↔ fraction ↔ decimal. Sometimes the easiest form unlocks the answer."
+    },
+    {
+      "level": "nudge",
+      "text": "Find cost per ticket first."
+    },
+    {
+      "level": "guide",
+      "text": "Per ticket: $10 / 4 = 2.50$."
+    },
+    {
+      "level": "reveal",
+      "text": "$14 \\times 2.50 = 35$."
+    }
+  ],
+  "explanation": [
+    "Per ticket: $10 \\div 4 = 2.50$.",
+    "$14 \\times 2.50 = 35$ dollars."
+  ],
+  "tags": [
+    "CA",
+    "rate"
+  ],
+  "estimatedSeconds": 70
+}

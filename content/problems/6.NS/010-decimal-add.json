@@ -1,0 +1,36 @@
+{
+  "id": "6.NS.010",
+  "domain": "6.NS",
+  "unit": 1,
+  "orderInUnit": 7,
+  "standard": "6.NS.B.3",
+  "difficulty": 1,
+  "prompt": "Add: $2.45 + 1.7$.",
+  "answerType": "numeric",
+  "primaryAnswer": "4.15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Line up the decimal points.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Line up the decimal points."
+    },
+    {
+      "level": "guide",
+      "text": "Rewrite $1.7$ as $1.70$ for the same place values."
+    },
+    {
+      "level": "reveal",
+      "text": "$2.45 + 1.70 = 4.15$."
+    }
+  ],
+  "explanation": [
+    "Align decimals: $2.45 + 1.70$.",
+    "Add column-by-column: $4.15$."
+  ],
+  "tags": [
+    "decimal"
+  ],
+  "estimatedSeconds": 30
+}

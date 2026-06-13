@@ -1,0 +1,40 @@
+{
+  "id": "6.SP.087",
+  "domain": "6.SP",
+  "unit": 9,
+  "orderInUnit": 7,
+  "standard": "6.SP.B.4",
+  "difficulty": 2,
+  "prompt": "True or false: Histogram bars are drawn **without gaps** between them.",
+  "answerType": "short-text",
+  "primaryAnswer": "true",
+  "alternativeAnswers": [
+    "True",
+    "t",
+    "yes"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Histograms group continuous intervals.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Histograms group continuous intervals."
+    },
+    {
+      "level": "guide",
+      "text": "Bars touch."
+    },
+    {
+      "level": "reveal",
+      "text": "True."
+    }
+  ],
+  "explanation": [
+    "Histograms cover continuous intervals, so bars share edges.",
+    "True."
+  ],
+  "tags": [
+    "histogram"
+  ],
+  "estimatedSeconds": 35
+}

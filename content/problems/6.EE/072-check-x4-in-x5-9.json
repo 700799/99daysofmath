@@ -1,0 +1,48 @@
+{
+  "id": "6.EE.072",
+  "domain": "6.EE",
+  "unit": 8,
+  "orderInUnit": 2,
+  "standard": "6.EE.B.5",
+  "difficulty": 1,
+  "prompt": "Is $x = 4$ a solution to $x + 5 = 9$? (yes/no)",
+  "answerType": "short-text",
+  "primaryAnswer": "yes",
+  "alternativeAnswers": [
+    "Yes",
+    "y"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Substitute $4$ for $x$ and check.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $4$ for $x$ and check."
+    },
+    {
+      "level": "guide",
+      "text": "$4 + 5 = 9$. Is this true?"
+    },
+    {
+      "level": "reveal",
+      "text": "True → yes."
+    }
+  ],
+  "explanation": [
+    "Substitute $x = 4$: $4 + 5 = 9$. ✓",
+    "Yes — $x = 4$ is a solution."
+  ],
+  "tags": [
+    "check-solution"
+  ],
+  "estimatedSeconds": 30,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: yes — verified."
+      ]
+    }
+  ]
+}

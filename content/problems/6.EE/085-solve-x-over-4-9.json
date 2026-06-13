@@ -1,0 +1,45 @@
+{
+  "id": "6.EE.085",
+  "domain": "6.EE",
+  "unit": 9,
+  "orderInUnit": 5,
+  "standard": "6.EE.B.7",
+  "difficulty": 2,
+  "prompt": "Solve: $\\dfrac{x}{4} = 9$.",
+  "answerType": "numeric",
+  "primaryAnswer": "36",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply both sides by $4$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply both sides by $4$."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 9 \\cdot 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$36$."
+    }
+  ],
+  "explanation": [
+    "$\\dfrac{x}{4} = 9$. Multiply both sides by $4$: $x = 36$.",
+    "Final answer: 36."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check by dividing",
+      "steps": [
+        "$36 \\div 4 = 9$. ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "solve",
+    "one-step"
+  ],
+  "estimatedSeconds": 45
+}

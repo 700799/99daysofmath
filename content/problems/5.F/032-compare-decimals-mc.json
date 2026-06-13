@@ -1,0 +1,70 @@
+{
+  "id": "5.F.032",
+  "domain": "5.F",
+  "unit": 4,
+  "orderInUnit": 2,
+  "standard": "5.NBT.A.3",
+  "difficulty": 1,
+  "prompt": "Which number is **greater**?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "0.45",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "0.5",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "They are equal",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Impossible to tell",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Give both numbers the same number of decimal places.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Give both numbers the same number of decimal places."
+    },
+    {
+      "level": "guide",
+      "text": "$0.5 = 0.50$. Now compare $0.45$ and $0.50$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.50 > 0.45$, so $0.5$ is greater — choose B."
+    }
+  ],
+  "explanation": [
+    "Write both as hundredths: $0.45$ and $0.50$.",
+    "$50$ hundredths is more than $45$ hundredths.",
+    "So $0.5 > 0.45$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Money picture",
+      "steps": [
+        "$0.45$ is 45 cents; $0.5$ is 50 cents.",
+        "50 cents is more."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimals",
+    "comparing"
+  ],
+  "estimatedSeconds": 35
+}

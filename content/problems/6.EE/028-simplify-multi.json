@@ -1,0 +1,44 @@
+{
+  "id": "6.EE.028",
+  "domain": "6.EE",
+  "unit": 3,
+  "orderInUnit": 8,
+  "standard": "6.EE.A.3",
+  "difficulty": 3,
+  "prompt": "Simplify: $3x + 2(x + 4)$.",
+  "answerType": "short-text",
+  "primaryAnswer": "5x+8",
+  "alternativeAnswers": [
+    "5x + 8"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Distribute first, then combine.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+    },
+    {
+      "level": "nudge",
+      "text": "Distribute first, then combine."
+    },
+    {
+      "level": "guide",
+      "text": "$3x + 2x + 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5x + 8$."
+    }
+  ],
+  "explanation": [
+    "$2(x + 4) = 2x + 8$.",
+    "$3x + 2x + 8 = 5x + 8$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "simplify"
+  ],
+  "estimatedSeconds": 70
+}

@@ -1,0 +1,62 @@
+{
+  "id": "5.F.010",
+  "domain": "5.F",
+  "unit": 1,
+  "orderInUnit": 10,
+  "standard": "5.NBT.B.7",
+  "difficulty": 3,
+  "prompt": "Jaylen pays for a $\\$13.87$ book with a $\\$50$ bill. How much change should he get?",
+  "answerType": "numeric",
+  "primaryAnswer": "36.13",
+  "alternativeAnswers": [
+    "$36.13"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Change means subtract: $50.00 - 13.87$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Change means subtract: $50.00 - 13.87$."
+    },
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Count UP from $13.87$: $+0.13$ gets to $14$, then $+36$ gets to $50$."
+    },
+    {
+      "level": "guide",
+      "text": "Write $50$ as $50.00$ and line up the decimal points before subtracting."
+    },
+    {
+      "level": "reveal",
+      "text": "$50.00 - 13.87 = 36.13$."
+    }
+  ],
+  "explanation": [
+    "Write the money with two decimal places: $50.00 - 13.87$.",
+    "Counting up is easiest: $13.87 + 0.13 = 14.00$.",
+    "$14.00 + 36.00 = 50.00$.",
+    "Total counted up: $0.13 + 36.00 = 36.13$. The change is $\\$36.13$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Column subtraction",
+      "steps": [
+        "$50.00 - 13.87$: borrow across the zeros.",
+        "$50.00 - 13.87 = 36.13$."
+      ]
+    },
+    {
+      "title": "Estimate check",
+      "steps": [
+        "$50 - 14 = 36$, so $36.13$ is reasonable."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "money",
+    "decimals"
+  ],
+  "estimatedSeconds": 80
+}

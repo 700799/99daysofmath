@@ -1,0 +1,47 @@
+{
+  "id": "6.G.012",
+  "domain": "6.G",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "6.G.A.1",
+  "difficulty": 3,
+  "prompt": "A trapezoid has parallel sides $6$ and $10$, height $4$. Find its area.",
+  "answerType": "numeric",
+  "primaryAnswer": "32",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Trapezoid area $= \\frac{1}{2}(b_1 + b_2) h$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a similar but smaller shape (all sides ÷ 2) and look at how the formula behaves."
+    },
+    {
+      "level": "nudge",
+      "text": "Trapezoid area $= \\frac{1}{2}(b_1 + b_2) h$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{1}{2}(6 + 10)(4) = \\frac{1}{2}(16)(4)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2} \\cdot 64 = 32$."
+    }
+  ],
+  "explanation": [
+    "$A = \\frac{1}{2}(b_1 + b_2)h = \\frac{1}{2}(16)(4) = 32$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "area",
+    "trapezoid"
+  ],
+  "estimatedSeconds": 70,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Trapezoid with parallel sides 6 and 10, height 4",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 140\" role=\"img\"><polygon points=\"70,30 190,30 230,110 30,110\" fill=\"#BAE6FD\" stroke=\"#0EA5E9\" stroke-width=\"3\"/><line x1=\"130\" y1=\"30\" x2=\"130\" y2=\"110\" stroke=\"#0EA5E9\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><g font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"130\" y=\"22\">6</text><text x=\"130\" y=\"130\">10</text><text x=\"204\" y=\"75\">4</text></g></svg>"
+  }
+}

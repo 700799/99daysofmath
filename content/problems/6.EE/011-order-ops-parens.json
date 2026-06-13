@@ -1,0 +1,37 @@
+{
+  "id": "6.EE.011",
+  "domain": "6.EE",
+  "unit": 1,
+  "orderInUnit": 8,
+  "standard": "6.EE.A.1",
+  "difficulty": 2,
+  "prompt": "Evaluate: $(6 + 2) \\times 3$.",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Parentheses first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Parentheses first."
+    },
+    {
+      "level": "guide",
+      "text": "$6 + 2 = 8$, then $8 \\times 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24$."
+    }
+  ],
+  "explanation": [
+    "$(6 + 2) = 8$.",
+    "$8 \\times 3 = 24$."
+  ],
+  "tags": [
+    "order-of-ops",
+    "parens"
+  ],
+  "estimatedSeconds": 35
+}

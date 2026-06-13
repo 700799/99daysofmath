@@ -1,0 +1,35 @@
+{
+  "id": "6.EE.051",
+  "domain": "6.EE",
+  "unit": 6,
+  "orderInUnit": 1,
+  "standard": "6.EE.C.9",
+  "difficulty": 1,
+  "prompt": "If $y = 2x$, what is $y$ when $x = 5$?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $x = 5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $x = 5$."
+    },
+    {
+      "level": "guide",
+      "text": "$y = 2 \\cdot 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 10$."
+    }
+  ],
+  "explanation": [
+    "$y = 2x = 2(5) = 10$."
+  ],
+  "tags": [
+    "two-vars"
+  ],
+  "estimatedSeconds": 30
+}

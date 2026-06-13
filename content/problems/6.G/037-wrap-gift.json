@@ -1,0 +1,42 @@
+{
+  "id": "6.G.037",
+  "domain": "6.G",
+  "unit": 4,
+  "orderInUnit": 7,
+  "standard": "6.G.A.4",
+  "difficulty": 3,
+  "prompt": "You want to wrap a $3 \\times 3 \\times 3$ cube. How much paper (in cm²) do you need?",
+  "answerType": "numeric",
+  "primaryAnswer": "54",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Wrapping covers the surface — $6s^2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Split or rearrange the shape into pieces whose formulas you already know."
+    },
+    {
+      "level": "nudge",
+      "text": "Wrapping covers the surface — $6s^2$."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\times 9 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$54$."
+    }
+  ],
+  "explanation": [
+    "$SA = 6s^2 = 6(9) = 54$."
+  ],
+  "tags": [
+    "CA",
+    "surface-area",
+    "word"
+  ],
+  "estimatedSeconds": 55
+}

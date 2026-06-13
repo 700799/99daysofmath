@@ -1,0 +1,50 @@
+{
+  "id": "6.RP.086",
+  "domain": "6.RP",
+  "unit": 9,
+  "orderInUnit": 6,
+  "standard": "6.RP.A.3.d",
+  "difficulty": 2,
+  "prompt": "Convert $2.5$ kilograms to grams. ($1$ kg $= 1000$ g)",
+  "answerType": "numeric",
+  "primaryAnswer": "2500",
+  "alternativeAnswers": [
+    "2500 g",
+    "2,500"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$1$ kg $= 1000$ g. Multiply.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$1$ kg $= 1000$ g. Multiply."
+    },
+    {
+      "level": "guide",
+      "text": "$2.5 \\times 1000$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2500$ g."
+    }
+  ],
+  "explanation": [
+    "$2.5 \\times 1000 = 2500$ grams.",
+    "Final answer: 2500."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Shift the decimal",
+      "steps": [
+        "Multiplying by $1000$ moves the decimal three places right.",
+        "$2.5 \\to 2500.0 = 2500$."
+      ]
+    }
+  ],
+  "tags": [
+    "conversion",
+    "metric",
+    "weight"
+  ],
+  "estimatedSeconds": 45
+}

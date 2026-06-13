@@ -1,0 +1,46 @@
+{
+  "id": "6.RP.099",
+  "domain": "6.RP",
+  "unit": 10,
+  "orderInUnit": 9,
+  "standard": "6.RP.A.2",
+  "difficulty": 3,
+  "prompt": "A pump fills a tank at $4$ gallons per minute. How long to fill a $100$-gallon tank?",
+  "answerType": "numeric",
+  "primaryAnswer": "25",
+  "alternativeAnswers": [
+    "25 min",
+    "25 minutes"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Divide total gallons by the rate.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try the same problem with friendlier numbers first — say \"20% of 50\" — then come back to this one."
+    },
+    {
+      "level": "nudge",
+      "text": "Divide total gallons by the rate."
+    },
+    {
+      "level": "guide",
+      "text": "$100 \\div 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$25$ minutes."
+    }
+  ],
+  "explanation": [
+    "Time = gallons $\\div$ rate.",
+    "$100 \\div 4 = 25$ minutes."
+  ],
+  "tags": [
+    "MAP-practice",
+    "unit-rate",
+    "word"
+  ],
+  "estimatedSeconds": 55
+}

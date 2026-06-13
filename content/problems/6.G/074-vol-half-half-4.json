@@ -1,0 +1,46 @@
+{
+  "id": "6.G.074",
+  "domain": "6.G",
+  "unit": 8,
+  "orderInUnit": 4,
+  "standard": "6.G.A.2",
+  "difficulty": 2,
+  "prompt": "Find the volume of a box with dimensions $\\frac{1}{2} \\times \\frac{1}{2} \\times 4$.",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$V = l \\cdot w \\cdot h$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$V = l \\cdot w \\cdot h$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\tfrac{1}{2} \\cdot \\tfrac{1}{2} = \\tfrac{1}{4}$. Then $\\tfrac{1}{4} \\cdot 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$1$."
+    }
+  ],
+  "explanation": [
+    "$\\tfrac{1}{2} \\cdot \\tfrac{1}{2} = \\tfrac{1}{4}$.",
+    "$\\tfrac{1}{4} \\cdot 4 = 1$ cu unit."
+  ],
+  "tags": [
+    "volume",
+    "fraction"
+  ],
+  "estimatedSeconds": 55,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 1 — verified."
+      ]
+    }
+  ]
+}

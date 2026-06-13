@@ -1,0 +1,51 @@
+{
+  "id": "6.NS.082",
+  "domain": "6.NS",
+  "unit": 9,
+  "orderInUnit": 2,
+  "standard": "6.NS.C.6.a",
+  "difficulty": 1,
+  "prompt": "What is the opposite of $-12$?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Flip the sign.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Flip the sign."
+    },
+    {
+      "level": "guide",
+      "text": "$-12 \\to 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12$."
+    }
+  ],
+  "explanation": [
+    "Opposite of $-12$ is $12$.",
+    "Final answer: 12."
+  ],
+  "tags": [
+    "integer",
+    "opposite"
+  ],
+  "estimatedSeconds": 25,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 12 — verified."
+      ]
+    }
+  ],
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Number line marking -12 and its opposite",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 80\" role=\"img\"><line x1=\"22\" y1=\"40\" x2=\"418\" y2=\"40\" stroke=\"#0f172a\" stroke-width=\"2\"/><polygon points=\"22,40 30,34 30,46\" fill=\"#0f172a\"/><polygon points=\"418,40 410,34 410,46\" fill=\"#0f172a\"/><line x1=\"30\" y1=\"32\" x2=\"30\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"30\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-14</text><line x1=\"43.57142857142857\" y1=\"32\" x2=\"43.57142857142857\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"43.57142857142857\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-13</text><line x1=\"57.14285714285714\" y1=\"32\" x2=\"57.14285714285714\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"57.14285714285714\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-12</text><line x1=\"70.71428571428572\" y1=\"32\" x2=\"70.71428571428572\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"70.71428571428572\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-11</text><line x1=\"84.28571428571428\" y1=\"32\" x2=\"84.28571428571428\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"84.28571428571428\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-10</text><line x1=\"97.85714285714286\" y1=\"32\" x2=\"97.85714285714286\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"97.85714285714286\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-9</text><line x1=\"111.42857142857143\" y1=\"32\" x2=\"111.42857142857143\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"111.42857142857143\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-8</text><line x1=\"125\" y1=\"32\" x2=\"125\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"125\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-7</text><line x1=\"138.57142857142856\" y1=\"32\" x2=\"138.57142857142856\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"138.57142857142856\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-6</text><line x1=\"152.14285714285717\" y1=\"32\" x2=\"152.14285714285717\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"152.14285714285717\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-5</text><line x1=\"165.71428571428572\" y1=\"32\" x2=\"165.71428571428572\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"165.71428571428572\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-4</text><line x1=\"179.28571428571428\" y1=\"32\" x2=\"179.28571428571428\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"179.28571428571428\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-3</text><line x1=\"192.85714285714286\" y1=\"32\" x2=\"192.85714285714286\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"192.85714285714286\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-2</text><line x1=\"206.42857142857144\" y1=\"32\" x2=\"206.42857142857144\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"206.42857142857144\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">-1</text><line x1=\"220\" y1=\"32\" x2=\"220\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"220\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">0</text><line x1=\"233.57142857142856\" y1=\"32\" x2=\"233.57142857142856\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"233.57142857142856\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">1</text><line x1=\"247.14285714285714\" y1=\"32\" x2=\"247.14285714285714\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"247.14285714285714\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">2</text><line x1=\"260.71428571428567\" y1=\"32\" x2=\"260.71428571428567\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"260.71428571428567\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">3</text><line x1=\"274.28571428571433\" y1=\"32\" x2=\"274.28571428571433\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"274.28571428571433\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">4</text><line x1=\"287.8571428571429\" y1=\"32\" x2=\"287.8571428571429\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"287.8571428571429\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><line x1=\"301.42857142857144\" y1=\"32\" x2=\"301.42857142857144\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"301.42857142857144\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">6</text><line x1=\"315\" y1=\"32\" x2=\"315\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"315\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">7</text><line x1=\"328.57142857142856\" y1=\"32\" x2=\"328.57142857142856\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"328.57142857142856\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">8</text><line x1=\"342.1428571428571\" y1=\"32\" x2=\"342.1428571428571\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"342.1428571428571\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">9</text><line x1=\"355.7142857142857\" y1=\"32\" x2=\"355.7142857142857\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"355.7142857142857\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">10</text><line x1=\"369.2857142857143\" y1=\"32\" x2=\"369.2857142857143\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"369.2857142857143\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">11</text><line x1=\"382.8571428571429\" y1=\"32\" x2=\"382.8571428571429\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"382.8571428571429\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">12</text><line x1=\"396.42857142857144\" y1=\"32\" x2=\"396.42857142857144\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"396.42857142857144\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">13</text><line x1=\"410\" y1=\"32\" x2=\"410\" y2=\"48\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"410\" y=\"68\" font-family=\"Nunito\" font-size=\"12\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">14</text><circle cx=\"57.14285714285714\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/><text x=\"57.14285714285714\" y=\"26\" font-family=\"Nunito\" font-size=\"13\" font-weight=\"700\" fill=\"#EF4444\" text-anchor=\"middle\">-12</text><circle cx=\"382.8571428571429\" cy=\"40\" r=\"6\" fill=\"#10B981\"/><text x=\"382.8571428571429\" y=\"26\" font-family=\"Nunito\" font-size=\"13\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"middle\">12</text></svg>"
+  }
+}

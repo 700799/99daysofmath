@@ -1,0 +1,51 @@
+{
+  "id": "6.NS.003",
+  "domain": "6.NS",
+  "unit": 1,
+  "orderInUnit": 3,
+  "standard": "6.NS.B.3",
+  "difficulty": 1,
+  "prompt": "Multiply: $0.6 \\times 0.4$.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.24",
+  "alternativeAnswers": [
+    "0.240",
+    ".24"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply as if there were no decimal points, then count total decimal places in both factors and place the decimal in the answer.",
+  "explanation": [
+    "Ignore the decimals: $6 \\times 4 = 24$.",
+    "Count the decimal places: $0.6$ has $1$, $0.4$ has $1$, total $= 2$.",
+    "Place the decimal $2$ places from the right of $24$: $0.24$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Convert to fractions",
+      "steps": [
+        "$0.6 = \\frac{6}{10}$ and $0.4 = \\frac{4}{10}$.",
+        "Multiply: $\\frac{6}{10} \\times \\frac{4}{10} = \\frac{24}{100}$.",
+        "$\\frac{24}{100} = 0.24$."
+      ]
+    }
+  ],
+  "tags": [
+    "CA",
+    "decimal-multiplication"
+  ],
+  "estimatedSeconds": 40,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply as if there were no decimal points, then count total decimal places in both factors and place the decimal in the answer."
+    },
+    {
+      "level": "guide",
+      "text": "Ignore the decimals: $6 \\times 4 = 24$."
+    },
+    {
+      "level": "reveal",
+      "text": "Place the decimal $2$ places from the right of $24$: $0.24$."
+    }
+  ]
+}

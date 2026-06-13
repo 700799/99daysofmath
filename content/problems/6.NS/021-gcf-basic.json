@@ -1,0 +1,37 @@
+{
+  "id": "6.NS.021",
+  "domain": "6.NS",
+  "unit": 3,
+  "orderInUnit": 1,
+  "standard": "6.NS.B.4",
+  "difficulty": 1,
+  "prompt": "Find the GCF (greatest common factor) of $12$ and $18$.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "List factors of each, find the largest in both.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "List factors of each, find the largest in both."
+    },
+    {
+      "level": "guide",
+      "text": "Factors of $12$: $1, 2, 3, 4, 6, 12$. Factors of $18$: $1, 2, 3, 6, 9, 18$."
+    },
+    {
+      "level": "reveal",
+      "text": "Common factors: $1, 2, 3, 6$. Greatest: $6$."
+    }
+  ],
+  "explanation": [
+    "Factors of $12$: $1, 2, 3, 4, 6, 12$.",
+    "Factors of $18$: $1, 2, 3, 6, 9, 18$.",
+    "GCF $= 6$."
+  ],
+  "tags": [
+    "gcf"
+  ],
+  "estimatedSeconds": 50
+}

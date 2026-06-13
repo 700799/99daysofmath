@@ -1,0 +1,49 @@
+{
+  "id": "6.SP.020",
+  "domain": "6.SP",
+  "unit": 2,
+  "orderInUnit": 10,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 3,
+  "prompt": "A dataset $\\{8, 10, 12, 14\\}$ has mean $11$. Add an outlier of $50$. What is the new mean?",
+  "answerType": "numeric",
+  "primaryAnswer": "18.8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sum increases by $50$, count increases by $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Mean is fair-shares; median is the middle. Pick the one the question actually asks for."
+    },
+    {
+      "level": "nudge",
+      "text": "Sum increases by $50$, count increases by $1$."
+    },
+    {
+      "level": "guide",
+      "text": "New sum: $44 + 50 = 94$. New count: $5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$94 / 5 = 18.8$."
+    }
+  ],
+  "explanation": [
+    "Old sum: $44$. New sum: $94$.",
+    "New count: $5$.",
+    "New mean: $18.8$."
+  ],
+  "tags": [
+    "CA",
+    "mean",
+    "outlier"
+  ],
+  "estimatedSeconds": 80,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Dot plot of dataset",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 130\" role=\"img\"><line x1=\"20\" y1=\"100\" x2=\"400\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"30\" y1=\"96\" x2=\"30\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"30\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">7</text><line x1=\"75\" y1=\"96\" x2=\"75\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"75\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">8</text><line x1=\"120\" y1=\"96\" x2=\"120\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"120\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">9</text><line x1=\"165\" y1=\"96\" x2=\"165\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"165\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">10</text><line x1=\"210\" y1=\"96\" x2=\"210\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"210\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">11</text><line x1=\"255\" y1=\"96\" x2=\"255\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"255\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">12</text><line x1=\"300\" y1=\"96\" x2=\"300\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"300\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">13</text><line x1=\"345\" y1=\"96\" x2=\"345\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"345\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">14</text><line x1=\"390\" y1=\"96\" x2=\"390\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"390\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">15</text><circle cx=\"75\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"165\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"255\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"345\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/></svg>"
+  }
+}

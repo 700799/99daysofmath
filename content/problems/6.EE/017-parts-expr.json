@@ -1,0 +1,65 @@
+{
+  "id": "6.EE.017",
+  "domain": "6.EE",
+  "unit": 2,
+  "orderInUnit": 7,
+  "standard": "6.EE.A.2.b",
+  "difficulty": 3,
+  "prompt": "In the expression $4(2y + 3) - 5y + 8$, what is the **coefficient of $y$** **after fully simplifying**?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [
+    "3.0"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Simplify the expression first — then read off the number in front of $y$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm-up: coefficient of $x$ in $2(3x) - 4x$? Distribute: $6x - 4x = 2x$. Coefficient = $2$. Same idea here."
+    },
+    {
+      "level": "nudge",
+      "text": "You can't read off the coefficient until **all** like-$y$ terms are combined."
+    },
+    {
+      "level": "guide",
+      "text": "Distribute: $4(2y + 3) = 8y + 12$. So the expression is $8y + 12 - 5y + 8 = 3y + 20$."
+    },
+    {
+      "level": "reveal",
+      "text": "Coefficient of $y$ in $3y + 20$ is $\\boxed{3}$."
+    }
+  ],
+  "explanation": [
+    "A **coefficient** is the number multiplied by a variable — but you only see the **true** coefficient after combining like terms.",
+    "Distribute the $4$: $4(2y + 3) = 8y + 12$.",
+    "Substitute back: $8y + 12 - 5y + 8$.",
+    "Group like terms: $(8y - 5y) + (12 + 8) = 3y + 20$.",
+    "The coefficient of $y$ is $3$."
+  ],
+  "tags": [
+    "vocabulary",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 90,
+  "alternativeExplanations": [
+    {
+      "title": "Verify by plugging in",
+      "steps": [
+        "Pick $y = 10$. Original: $4(20 + 3) - 50 + 8 = 4(23) - 42 = 92 - 42 = 50$.",
+        "Check $3y + 20$ at $y = 10$: $30 + 20 = 50$. ✓ The simplified form is correct.",
+        "Try $y = 0$: original = $4 \\cdot 3 + 8 = 20$. $3(0) + 20 = 20$. ✓"
+      ]
+    },
+    {
+      "title": "Coefficient vs constant",
+      "steps": [
+        "In $3y + 20$, $3$ is the **coefficient** of $y$ (number stuck to a variable).",
+        "$20$ is a **constant term** (no variable). It is NOT a coefficient.",
+        "Don't pick the bigger number — pick the one **next to $y$**."
+      ]
+    }
+  ]
+}

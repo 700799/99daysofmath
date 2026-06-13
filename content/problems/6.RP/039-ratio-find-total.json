@@ -1,0 +1,50 @@
+{
+  "id": "6.RP.039",
+  "domain": "6.RP",
+  "unit": 4,
+  "orderInUnit": 9,
+  "standard": "6.RP.A.3",
+  "difficulty": 3,
+  "prompt": "The ratio of cats to dogs at a shelter is $5 : 2$. If there are $10$ cats, how many animals are there in total?",
+  "answerType": "numeric",
+  "primaryAnswer": "14",
+  "alternativeAnswers": [
+    "14 animals"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "First find the number of dogs.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sketch a tape diagram: equal blocks for each part. What does one block represent here?"
+    },
+    {
+      "level": "nudge",
+      "text": "First find the number of dogs."
+    },
+    {
+      "level": "guide",
+      "text": "Cats scaled by $\\frac{10}{5} = 2$. Apply to dogs: $2 \\times 2 = 4$ dogs."
+    },
+    {
+      "level": "reveal",
+      "text": "Total: $10 + 4 = 14$."
+    }
+  ],
+  "explanation": [
+    "Scale: $10 / 5 = 2$.",
+    "Dogs: $2 \\times 2 = 4$.",
+    "Total: $10 + 4 = 14$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "ratio"
+  ],
+  "estimatedSeconds": 65,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Tape diagram for ratio 5 : 2",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 80\" role=\"img\"><rect x=\"20\" y=\"30\" width=\"242.85714285714286\" height=\"36\" fill=\"#0EA5E9\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"141.42857142857144\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">5</text><rect x=\"262.8571428571429\" y=\"30\" width=\"97.14285714285714\" height=\"36\" fill=\"#10B981\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"311.42857142857144\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">2</text></svg>"
+  }
+}

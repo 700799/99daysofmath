@@ -1,0 +1,73 @@
+{
+  "id": "6.EE.080",
+  "domain": "6.EE",
+  "unit": 8,
+  "orderInUnit": 10,
+  "standard": "6.EE.A.4",
+  "difficulty": 3,
+  "prompt": "Which expression is equivalent to $6(2x + 5)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$12x + 5$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$12x + 30$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$8x + 11$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$6x + 30$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Use the distributive property.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Substitute a guess back into the equation. If both sides match, the guess is the answer."
+    },
+    {
+      "level": "nudge",
+      "text": "Use the distributive property."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\cdot 2x + 6 \\cdot 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12x + 30$."
+    }
+  ],
+  "explanation": [
+    "$6(2x + 5) = 6 \\cdot 2x + 6 \\cdot 5 = 12x + 30$.",
+    "Final answer: B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test with $x = 1$",
+      "steps": [
+        "$6(2 + 5) = 6 \\cdot 7 = 42$.",
+        "A: $17$. B: $42$ ✓. C: $19$. D: $36$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "distribute"
+  ],
+  "estimatedSeconds": 70
+}

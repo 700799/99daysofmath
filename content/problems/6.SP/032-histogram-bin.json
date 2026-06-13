@@ -1,0 +1,39 @@
+{
+  "id": "6.SP.032",
+  "domain": "6.SP",
+  "unit": 4,
+  "orderInUnit": 2,
+  "standard": "6.SP.B.4",
+  "difficulty": 2,
+  "prompt": "A histogram groups data into bins. If bin $0-9$ has $4$ values and bin $10-19$ has $7$ values, which bin has more?",
+  "answerType": "short-text",
+  "primaryAnswer": "10-19",
+  "alternativeAnswers": [
+    "10–19",
+    "10 to 19"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Higher bar = more values.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Higher bar = more values."
+    },
+    {
+      "level": "guide",
+      "text": "$7 > 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$10$–$19$."
+    }
+  ],
+  "explanation": [
+    "$10$–$19$ has $7$ vs. $4$ in $0$–$9$.",
+    "More values in $10$–$19$."
+  ],
+  "tags": [
+    "histogram"
+  ],
+  "estimatedSeconds": 45
+}

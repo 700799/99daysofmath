@@ -1,0 +1,54 @@
+{
+  "id": "6.RP.020",
+  "domain": "6.RP",
+  "unit": 2,
+  "orderInUnit": 10,
+  "standard": "6.RP.A.3.b",
+  "difficulty": 3,
+  "prompt": "A printer prints $5$ pages in $20$ seconds. At this rate, how many pages in $2$ minutes?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [
+    "30 pages"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$2$ minutes is how many seconds?",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sketch a tape diagram: equal blocks for each part. What does one block represent here?"
+    },
+    {
+      "level": "nudge",
+      "text": "$2$ minutes is how many seconds?"
+    },
+    {
+      "level": "guide",
+      "text": "Find pages per second, then multiply by $120$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{5}{20} = 0.25$ pages/sec. $0.25 \\times 120 = 30$ pages."
+    }
+  ],
+  "explanation": [
+    "Rate: $5 \\div 20 = 0.25$ pages/sec.",
+    "$2$ minutes $= 120$ sec.",
+    "Pages: $0.25 \\times 120 = 30$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Scale up the ratio",
+      "steps": [
+        "$5$ pages : $20$ sec. Multiply both sides by $6$ (since $20 \\times 6 = 120$).",
+        "$5 \\times 6 = 30$ pages in $120$ sec."
+      ]
+    }
+  ],
+  "tags": [
+    "CA",
+    "unit-rate"
+  ],
+  "estimatedSeconds": 75
+}

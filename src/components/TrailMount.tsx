@@ -1,9 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Phaser from 'phaser';
-import { TrailScene, TRAIL_WIDTH, TRAIL_HEIGHT } from '../phaser/TrailScene';
 import { useProgress } from '../state/progress';
 import type { Domain } from '../types/problem';
+import { TRAIL_WIDTH, trailHeightFor } from '../phaser/trailLayouts';
 
 interface Props {
   domain: Domain;
@@ -12,60 +11,66 @@ interface Props {
 
 export function TrailMount({ domain, units }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const gameRef = useRef<Phaser.Game | null>(null);
   const navigate = useNavigate();
   const dp = useProgress((s) => s.byDomain[domain]);
+  const canvasW = TRAIL_WIDTH;
+  const canvasH = trailHeightFor(Math.max(2, units.length));
 
   useEffect(() => {
     if (!containerRef.current) return;
-    const game = new Phaser.Game({
-      type: Phaser.AUTO,
-      parent: containerRef.current,
-      width: TRAIL_WIDTH,
-      height: TRAIL_HEIGHT,
-      backgroundColor: '#F8FAFC',
-      scale: {
-        mode: Phaser.Scale.FIT,
-        autoCenter: Phaser.Scale.CENTER_BOTH,
-      },
-      scene: [TrailScene],
-      banner: false,
-      // @ts-expect-error: legacy resolution option
-      resolution: window.devicePixelRatio,
+    let game: { destroy: (b: boolean) => void } | null = null;
+    let cancelled = false;
+
+    (async () => {
+      const [{ default: Phaser }, { TrailScene }] = await Promise.all([
+        import('phaser'),
+        import('../phaser/TrailScene'),
+      ]);
+      if (cancelled || !containerRef.current) return;
+
+      game = new Phaser.Game({
+        type: Phaser.AUTO,
+        parent: containerRef.current,
+        width: canvasW,
+        height: canvasH,
+        backgroundColor: '#F8FAFC',
+        scale: {
+          mode: Phaser.Scale.FIT,
+          autoCenter: Phaser.Scale.CENTER_BOTH,
+        },
+        scene: [TrailScene],
+        banner: false,
+      });
+      (game as unknown as { scene: { start: (k: string, d: unknown) => void } }).scene.start(
+        'TrailScene',
+        {
+          domain,
+          state: {
+            unitsUnlocked: dp?.unitsUnlocked ?? 1,
+            unitStars: dp?.unitStars ?? {},
+          },
+          units,
+          onNodeSelect: (unit: number) => navigate(`/unit/${domain}/${unit}`),
+        },
+      );
+    })().catch((e) => {
+      console.error('Failed to load trail scene:', e);
     });
-    gameRef.current = game;
-    game.scene.start('TrailScene', {
-      domain,
-      state: {
-        unitsUnlocked: dp?.unitsUnlocked ?? 1,
-        unitStars: dp?.unitStars ?? {},
-      },
-      onNodeSelect: (unit: number) => navigate(`/unit/${domain}/${unit}`),
-    });
+
     return () => {
-      game.destroy(true);
-      gameRef.current = null;
+      cancelled = true;
+      game?.destroy(true);
     };
-    // Mount-once: the scene reads progress at init. Re-render not needed for first cut.
-    // Progress changes after a unit completes are reflected when user returns to this route.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [domain]);
+  }, [domain, canvasH]);
 
   return (
-    <div className="flex flex-col items-center">
-      <div
-        ref={containerRef}
-        className="w-full max-w-md aspect-[2/3] bg-slate-50 rounded-3xl overflow-hidden border border-slate-200"
-        aria-hidden="true"
-      />
-      {/* Accessibility fallback: keyboard/screen-reader navigation */}
-      <ul className="sr-only">
-        {units.map((u) => (
-          <li key={u}>
-            <a href={`#/unit/${domain}/${u}`}>Unit {u}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <div
+      ref={containerRef}
+      style={{ aspectRatio: `${canvasW} / ${canvasH}` }}
+      className="w-full max-w-sm mx-auto bg-gradient-to-b from-sky-100 to-emerald-50 rounded-3xl overflow-hidden border-2 border-slate-200 shadow-inner"
+      role="img"
+      aria-label={`${units.length}-unit trail for ${domain}. Use the unit list below to start a unit.`}
+    />
   );
 }

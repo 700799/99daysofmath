@@ -1,0 +1,41 @@
+{
+  "id": "6.G.038",
+  "domain": "6.G",
+  "unit": 4,
+  "orderInUnit": 8,
+  "standard": "6.G.A.4",
+  "difficulty": 3,
+  "prompt": "A cube has SA $= 24$. What is the side length?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$6s^2 = 24$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a similar but smaller shape (all sides ÷ 2) and look at how the formula behaves."
+    },
+    {
+      "level": "nudge",
+      "text": "$6s^2 = 24$."
+    },
+    {
+      "level": "guide",
+      "text": "$s^2 = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$s = 2$."
+    }
+  ],
+  "explanation": [
+    "$6s^2 = 24 \\Rightarrow s^2 = 4 \\Rightarrow s = 2$."
+  ],
+  "tags": [
+    "surface-area",
+    "cube"
+  ],
+  "estimatedSeconds": 60
+}

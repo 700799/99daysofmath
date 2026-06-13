@@ -1,0 +1,58 @@
+{
+  "id": "6.SP.050",
+  "domain": "6.SP",
+  "unit": 5,
+  "orderInUnit": 10,
+  "standard": "6.SP.B.5.d",
+  "difficulty": 3,
+  "prompt": "When describing a data set, which features should you mention?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Center, spread, shape",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Just the mean",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Color and pattern",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Three big things to look at.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Use a sample of 3–4 values to see how the rule works, then apply it to the real data."
+    },
+    {
+      "level": "nudge",
+      "text": "Three big things to look at."
+    },
+    {
+      "level": "guide",
+      "text": "Where it's centered, how spread out, what shape."
+    },
+    {
+      "level": "reveal",
+      "text": "Center, spread, and shape."
+    }
+  ],
+  "explanation": [
+    "A complete description includes center (mean/median), spread (range/IQR), and shape (symmetric, skewed, clusters, gaps, outliers)."
+  ],
+  "tags": [
+    "MAP-practice",
+    "describe"
+  ],
+  "estimatedSeconds": 55
+}

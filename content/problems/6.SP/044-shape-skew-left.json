@@ -1,0 +1,55 @@
+{
+  "id": "6.SP.044",
+  "domain": "6.SP",
+  "unit": 5,
+  "orderInUnit": 4,
+  "standard": "6.SP.B.5.d",
+  "difficulty": 2,
+  "prompt": "A distribution has a long tail on the **left**. The mean is typically:",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Less than median",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Greater than median",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Equal to median",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Skew direction = tail direction.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Skew direction = tail direction."
+    },
+    {
+      "level": "guide",
+      "text": "Skewed left → tail of small values pulls mean down."
+    },
+    {
+      "level": "reveal",
+      "text": "Mean < median."
+    }
+  ],
+  "explanation": [
+    "Long tail on left pulls the mean toward small values.",
+    "Mean < median."
+  ],
+  "tags": [
+    "MAP-practice",
+    "shape",
+    "skew"
+  ],
+  "estimatedSeconds": 60
+}

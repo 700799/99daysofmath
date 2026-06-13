@@ -1,0 +1,52 @@
+{
+  "id": "6.NS.068",
+  "domain": "6.NS",
+  "unit": 7,
+  "orderInUnit": 8,
+  "standard": "6.NS.B.3",
+  "difficulty": 3,
+  "prompt": "Compute $5 \\div 0.2$.",
+  "answerType": "numeric",
+  "primaryAnswer": "25",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Move both decimal points so the divisor is a whole number.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Use the \"keep–change–flip\" trick whenever you see division by a fraction."
+    },
+    {
+      "level": "nudge",
+      "text": "Move both decimal points so the divisor is a whole number."
+    },
+    {
+      "level": "guide",
+      "text": "Move one place: $50 \\div 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$50 \\div 2 = 25$."
+    }
+  ],
+  "explanation": [
+    "Shift both numbers $\\times 10$: $5 \\div 0.2 = 50 \\div 2$.",
+    "$50 \\div 2 = 25$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "How many 0.2s fit?",
+      "steps": [
+        "$0.2 + 0.2 + 0.2 + 0.2 + 0.2 = 1$.",
+        "So $5$ ones contain $5 \\times 5 = 25$ groups of $0.2$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimal",
+    "divide"
+  ],
+  "estimatedSeconds": 75
+}

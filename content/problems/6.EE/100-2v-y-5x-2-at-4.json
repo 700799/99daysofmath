@@ -1,0 +1,53 @@
+{
+  "id": "6.EE.100",
+  "domain": "6.EE",
+  "unit": 10,
+  "orderInUnit": 10,
+  "standard": "6.EE.C.9",
+  "difficulty": 3,
+  "prompt": "For $y = 5x + 2$, find $y$ when $x = 4$.",
+  "answerType": "numeric",
+  "primaryAnswer": "22",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $4$ for $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Whatever operation is acting on the variable, do its OPPOSITE on both sides."
+    },
+    {
+      "level": "nudge",
+      "text": "Substitute $4$ for $x$."
+    },
+    {
+      "level": "guide",
+      "text": "$5(4) + 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$20 + 2 = 22$."
+    }
+  ],
+  "explanation": [
+    "$y = 5x + 2$ with $x = 4$: $5(4) + 2 = 22$.",
+    "Final answer: 22."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the table",
+      "steps": [
+        "$x = 0 \\to y = 2$.",
+        "Each $+1$ in $x$ adds $5$ to $y$.",
+        "From $0$ to $4$ is $4 \\cdot 5 = 20$. $y = 2 + 20 = 22$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "two-vars",
+    "evaluate"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,38 @@
+{
+  "id": "6.SP.048",
+  "domain": "6.SP",
+  "unit": 5,
+  "orderInUnit": 8,
+  "standard": "6.SP.B.5.d",
+  "difficulty": 2,
+  "prompt": "A symmetric dataset has mean $50$. The median is approximately:",
+  "answerType": "numeric",
+  "primaryAnswer": "50",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Symmetric → mean ≈ median.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Symmetric → mean ≈ median."
+    },
+    {
+      "level": "guide",
+      "text": "Median ≈ mean."
+    },
+    {
+      "level": "reveal",
+      "text": "$50$."
+    }
+  ],
+  "explanation": [
+    "Symmetric: mean ≈ median.",
+    "Both ≈ $50$."
+  ],
+  "tags": [
+    "shape",
+    "mean",
+    "median"
+  ],
+  "estimatedSeconds": 35
+}

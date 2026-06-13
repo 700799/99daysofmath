@@ -1,0 +1,38 @@
+{
+  "id": "6.EE.048",
+  "domain": "6.EE",
+  "unit": 5,
+  "orderInUnit": 8,
+  "standard": "6.EE.B.8",
+  "difficulty": 2,
+  "prompt": "On a number line for $x < -2$, the arrow points which direction?",
+  "answerType": "short-text",
+  "primaryAnswer": "left",
+  "alternativeAnswers": [
+    "Left",
+    "negative direction"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$<$ means smaller — to the left.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$<$ means smaller — to the left."
+    },
+    {
+      "level": "guide",
+      "text": "From $-2$, smaller values are to the left."
+    },
+    {
+      "level": "reveal",
+      "text": "Left."
+    }
+  ],
+  "explanation": [
+    "$x < -2$ → values smaller than $-2$, which are to the left."
+  ],
+  "tags": [
+    "inequality"
+  ],
+  "estimatedSeconds": 35
+}

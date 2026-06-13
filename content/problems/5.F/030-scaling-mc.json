@@ -1,0 +1,61 @@
+{
+  "id": "5.F.030",
+  "domain": "5.F",
+  "unit": 3,
+  "orderInUnit": 10,
+  "standard": "5.NF.B.5",
+  "difficulty": 2,
+  "prompt": "Without multiplying, which product is **greater than** $\\frac{5}{6}$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "5/6 × 7/8",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "5/6 × 1",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "5/6 × 9/8",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "5/6 × 3/4",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Multiplying by a number bigger than 1 makes things bigger; smaller than 1 makes them smaller.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiplying by a number bigger than 1 makes things bigger; smaller than 1 makes them smaller."
+    },
+    {
+      "level": "guide",
+      "text": "Which factor is greater than $1$? Only $\\frac{9}{8}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{5}{6} \\times \\frac{9}{8} > \\frac{5}{6}$ because $\\frac{9}{8} > 1$. Choose C."
+    }
+  ],
+  "explanation": [
+    "Multiplying by a factor greater than $1$ scales a number **up**; by a factor less than $1$ scales it **down**.",
+    "$\\frac{7}{8}$, $\\frac{3}{4}$ are less than $1$ (products shrink); $\\times 1$ keeps it equal.",
+    "$\\frac{9}{8} > 1$, so $\\frac{5}{6} \\times \\frac{9}{8}$ is the only product bigger than $\\frac{5}{6}$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "scaling",
+    "fractions"
+  ],
+  "estimatedSeconds": 60
+}

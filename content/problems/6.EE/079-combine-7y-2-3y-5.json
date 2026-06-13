@@ -1,0 +1,55 @@
+{
+  "id": "6.EE.079",
+  "domain": "6.EE",
+  "unit": 8,
+  "orderInUnit": 9,
+  "standard": "6.EE.A.4",
+  "difficulty": 3,
+  "prompt": "Combine like terms: $7y - 2 + 3y + 5$.",
+  "answerType": "short-text",
+  "primaryAnswer": "10y+3",
+  "alternativeAnswers": [
+    "10y + 3",
+    "3 + 10y"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Combine $y$ terms, then combine numbers.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+    },
+    {
+      "level": "nudge",
+      "text": "Combine $y$ terms, then combine numbers."
+    },
+    {
+      "level": "guide",
+      "text": "$7y + 3y = 10y$ and $-2 + 5 = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$10y + 3$."
+    }
+  ],
+  "explanation": [
+    "$y$ terms: $7y + 3y = 10y$.",
+    "Constants: $-2 + 5 = 3$.",
+    "Result: $10y + 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Rearrange first",
+      "steps": [
+        "$7y - 2 + 3y + 5 = 7y + 3y - 2 + 5$.",
+        "$10y + 3$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "combine-like-terms"
+  ],
+  "estimatedSeconds": 65
+}

@@ -1,0 +1,66 @@
+{
+  "id": "6.EE.063",
+  "domain": "6.EE",
+  "unit": 7,
+  "orderInUnit": 3,
+  "standard": "6.EE.A.2.b",
+  "difficulty": 3,
+  "prompt": "Fully simplify $3(x + 2) + 4x - 5$. How many **terms** does the simplified expression have?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [
+    "2.0",
+    "two"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A **term** is a number or variable expression separated by $+$ or $-$. Count after combining like terms.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Before simplifying, this expression has $4$ pieces. After combining like terms it shrinks. Do the work first."
+    },
+    {
+      "level": "nudge",
+      "text": "Distribute the $3$, then collect $x$-terms separately from constants."
+    },
+    {
+      "level": "guide",
+      "text": "$3(x + 2) + 4x - 5 = 3x + 6 + 4x - 5 = (3x + 4x) + (6 - 5) = 7x + 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$7x + 1$ has $\\boxed{2}$ terms ($7x$ and $1$)."
+    }
+  ],
+  "explanation": [
+    "Distribute: $3(x + 2) = 3x + 6$. So the expression becomes $3x + 6 + 4x - 5$.",
+    "Group like terms: $(3x + 4x) + (6 - 5)$.",
+    "Combine: $7x + 1$.",
+    "Count the terms: $7x$ is one term, $+1$ is another. **Total: $2$ terms.**"
+  ],
+  "tags": [
+    "expression",
+    "parts",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 90,
+  "alternativeExplanations": [
+    {
+      "title": "What counts as one term?",
+      "steps": [
+        "A **term** is bounded by $+$ or $-$ signs (the sign goes with the term to its right).",
+        "$7x + 1$ → terms are $7x$ and $+1$. Two terms.",
+        "If the answer had been $7x + 1 - 4$, you would first combine $1 - 4 = -3$ to get $7x - 3$ — still two terms."
+      ]
+    },
+    {
+      "title": "Why distribute first?",
+      "steps": [
+        "Without distributing, you might count $(x + 2)$ as one term, but parentheses hide structure.",
+        "After distributing, every term is visible. Then like-term combining tells you the true number of terms.",
+        "Rule: **simplify completely** before counting parts of an expression."
+      ]
+    }
+  ]
+}

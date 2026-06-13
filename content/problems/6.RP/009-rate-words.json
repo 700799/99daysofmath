@@ -1,0 +1,40 @@
+{
+  "id": "6.RP.009",
+  "domain": "6.RP",
+  "unit": 1,
+  "orderInUnit": 7,
+  "standard": "6.RP.A.2",
+  "difficulty": 1,
+  "prompt": "A car travels $120$ km in $2$ hours. What is the rate in **km per hour**?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [
+    "60 km/h",
+    "60kmh"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A rate per hour means: per **1** hour.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A rate per hour means: per **1** hour."
+    },
+    {
+      "level": "guide",
+      "text": "Divide the total km by the total hours."
+    },
+    {
+      "level": "reveal",
+      "text": "$120 \\div 2 = ?$"
+    }
+  ],
+  "explanation": [
+    "Set up: $\\frac{120 \\text{ km}}{2 \\text{ hr}}$.",
+    "Divide: $120 \\div 2 = 60$.",
+    "Rate is $60$ km/h."
+  ],
+  "tags": [
+    "rate"
+  ],
+  "estimatedSeconds": 40
+}

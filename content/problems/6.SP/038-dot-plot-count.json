@@ -1,0 +1,35 @@
+{
+  "id": "6.SP.038",
+  "domain": "6.SP",
+  "unit": 4,
+  "orderInUnit": 8,
+  "standard": "6.SP.B.4",
+  "difficulty": 1,
+  "prompt": "A dot plot has $3, 4, 5$ dots at three values. How many data points total?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Add the dots.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add the dots."
+    },
+    {
+      "level": "guide",
+      "text": "$3 + 4 + 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12$."
+    }
+  ],
+  "explanation": [
+    "$3 + 4 + 5 = 12$."
+  ],
+  "tags": [
+    "dot-plot"
+  ],
+  "estimatedSeconds": 30
+}

@@ -8,7 +8,10 @@
   "prompt": "Sam drives $180$ miles in $3$ hours. What is his rate in **miles per hour**?",
   "answerType": "numeric",
   "primaryAnswer": "60",
-  "alternativeAnswers": ["60 mph", "60mph"],
+  "alternativeAnswers": [
+    "60 mph",
+    "60mph"
+  ],
   "acceptanceMode": "normalized",
   "hint": "A unit rate is the amount **per 1**. Divide the total miles by the total hours.",
   "explanation": [
@@ -16,6 +19,41 @@
     "Divide: $180 \\div 3 = 60$.",
     "Sam's unit rate is $60$ miles per hour."
   ],
-  "tags": ["CA", "unit-rate"],
-  "estimatedSeconds": 45
+  "alternativeExplanations": [
+    {
+      "title": "Using a ratio table",
+      "steps": [
+        "Start with what you know: $180$ miles in $3$ hours.",
+        "Divide both sides by $3$ to find the **per-1** value: $\\frac{180}{3} = 60$ miles in $\\frac{3}{3} = 1$ hour.",
+        "So in $1$ hour Sam drives $60$ miles. That's $60$ mph."
+      ]
+    },
+    {
+      "title": "Think of it like a pizza",
+      "steps": [
+        "Imagine $180$ slices of pizza shared equally over $3$ hours.",
+        "How many slices per hour? Split $180$ into $3$ equal groups.",
+        "Each group has $60$ slices — so $60$ miles per hour."
+      ]
+    }
+  ],
+  "tags": [
+    "CA",
+    "unit-rate"
+  ],
+  "estimatedSeconds": 45,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A unit rate is the amount **per 1**. Divide the total miles by the total hours."
+    },
+    {
+      "level": "guide",
+      "text": "Set up the rate: $\\frac{180 \\text{ miles}}{3 \\text{ hours}}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Sam's unit rate is $60$ miles per hour."
+    }
+  ]
 }

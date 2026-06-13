@@ -7,9 +7,6 @@ import {
   iconDataUri,
 } from '../src/icons/registry';
 import { DOMAINS } from '../src/types/problem';
-import { REWARD_GAMES, MEDAL_ICONS } from '../src/rewards/economy';
-import { makePlayers } from '../src/rewards/partyBoard';
-import { GRAND_PRIX_CONFIG } from '../src/rewards/grandPrix';
 
 describe('icon registry', () => {
   it('has non-empty markup for every icon', () => {
@@ -51,15 +48,5 @@ describe('icon references resolve', () => {
     for (const d of DOMAINS) {
       expect(ICONS[DOMAIN_ICONS[d]], d).toBeDefined();
     }
-  });
-
-  it('every reward game and medal has an icon', () => {
-    for (const g of REWARD_GAMES) expect(ICONS[g.icon], g.id).toBeDefined();
-    for (const icon of Object.values(MEDAL_ICONS)) expect(ICONS[icon]).toBeDefined();
-  });
-
-  it('party players and race rivals have icons', () => {
-    for (const p of makePlayers()) expect(ICONS[p.icon], p.id).toBeDefined();
-    for (const r of GRAND_PRIX_CONFIG.rivals) expect(ICONS[r.icon], r.name).toBeDefined();
   });
 });

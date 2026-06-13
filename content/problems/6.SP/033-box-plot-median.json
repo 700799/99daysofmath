@@ -1,0 +1,37 @@
+{
+  "id": "6.SP.033",
+  "domain": "6.SP",
+  "unit": 4,
+  "orderInUnit": 3,
+  "standard": "6.SP.B.4",
+  "difficulty": 2,
+  "prompt": "In a box plot, the line inside the box represents what?",
+  "answerType": "short-text",
+  "primaryAnswer": "median",
+  "alternativeAnswers": [
+    "the median"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A box plot shows 5 numbers: min, Q1, ?, Q3, max.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A box plot shows 5 numbers: min, Q1, ?, Q3, max."
+    },
+    {
+      "level": "guide",
+      "text": "Center of the box is the median."
+    },
+    {
+      "level": "reveal",
+      "text": "Median."
+    }
+  ],
+  "explanation": [
+    "The vertical line in a box plot marks the median."
+  ],
+  "tags": [
+    "box-plot"
+  ],
+  "estimatedSeconds": 30
+}

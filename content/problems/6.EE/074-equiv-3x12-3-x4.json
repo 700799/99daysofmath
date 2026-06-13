@@ -1,0 +1,49 @@
+{
+  "id": "6.EE.074",
+  "domain": "6.EE",
+  "unit": 8,
+  "orderInUnit": 4,
+  "standard": "6.EE.A.4",
+  "difficulty": 2,
+  "prompt": "Are $3x + 12$ and $3(x + 4)$ equivalent? (yes/no)",
+  "answerType": "short-text",
+  "primaryAnswer": "yes",
+  "alternativeAnswers": [
+    "Yes",
+    "y"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Distribute the right side.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Distribute the right side."
+    },
+    {
+      "level": "guide",
+      "text": "$3(x + 4) = 3x + 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "Yes — they're equal."
+    }
+  ],
+  "explanation": [
+    "$3(x + 4) = 3 \\cdot x + 3 \\cdot 4 = 3x + 12$.",
+    "Equivalent."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test with a value",
+      "steps": [
+        "Pick $x = 2$: $3(2) + 12 = 18$ and $3(2 + 4) = 3 \\cdot 6 = 18$. Match.",
+        "Try another, $x = 0$: both give $12$."
+      ]
+    }
+  ],
+  "tags": [
+    "equivalent",
+    "distribute"
+  ],
+  "estimatedSeconds": 50
+}

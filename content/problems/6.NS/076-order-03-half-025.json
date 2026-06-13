@@ -1,0 +1,41 @@
+{
+  "id": "6.NS.076",
+  "domain": "6.NS",
+  "unit": 8,
+  "orderInUnit": 6,
+  "standard": "6.NS.C.7.a",
+  "difficulty": 2,
+  "prompt": "Order from **least to greatest**: $0.3,\\ \\frac{1}{2},\\ 0.25$ (separate with commas).",
+  "answerType": "short-text",
+  "primaryAnswer": "0.25, 0.3, 1/2",
+  "alternativeAnswers": [
+    "0.25,0.3,1/2",
+    "0.25, 0.3, 0.5"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Convert each to a decimal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Convert each to a decimal."
+    },
+    {
+      "level": "guide",
+      "text": "$\\tfrac{1}{2} = 0.5$. Now order $0.3,\\ 0.5,\\ 0.25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.25 < 0.3 < 0.5$."
+    }
+  ],
+  "explanation": [
+    "Convert: $\\tfrac{1}{2} = 0.5$.",
+    "Decimals: $0.3,\\ 0.5,\\ 0.25$.",
+    "Sorted: $0.25,\\ 0.3,\\ \\tfrac{1}{2}$."
+  ],
+  "tags": [
+    "order",
+    "fraction-decimal"
+  ],
+  "estimatedSeconds": 65
+}

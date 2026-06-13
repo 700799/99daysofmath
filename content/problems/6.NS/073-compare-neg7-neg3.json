@@ -1,0 +1,50 @@
+{
+  "id": "6.NS.073",
+  "domain": "6.NS",
+  "unit": 8,
+  "orderInUnit": 3,
+  "standard": "6.NS.C.7.a",
+  "difficulty": 2,
+  "prompt": "Which is greater: $-7$ or $-3$?",
+  "answerType": "short-text",
+  "primaryAnswer": "-3",
+  "alternativeAnswers": [
+    "−3",
+    "neg 3"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Closer to $0$ on the number line means greater.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Closer to $0$ on the number line means greater."
+    },
+    {
+      "level": "guide",
+      "text": "$-3$ is to the right of $-7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-3 > -7$."
+    }
+  ],
+  "explanation": [
+    "$-3$ is closer to $0$ than $-7$ is.",
+    "So $-3 > -7$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Owe-money picture",
+      "steps": [
+        "Owing \\$$3$ is better than owing \\$$7$.",
+        "So $-3$ is greater than $-7$."
+      ]
+    }
+  ],
+  "tags": [
+    "integer",
+    "compare",
+    "common-error"
+  ],
+  "estimatedSeconds": 45
+}

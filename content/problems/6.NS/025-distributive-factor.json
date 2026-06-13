@@ -1,0 +1,42 @@
+{
+  "id": "6.NS.025",
+  "domain": "6.NS",
+  "unit": 3,
+  "orderInUnit": 5,
+  "standard": "6.NS.B.4",
+  "difficulty": 2,
+  "prompt": "Use the distributive property to rewrite $24 + 32$ as a multiplication.",
+  "answerType": "short-text",
+  "primaryAnswer": "8(3+4)",
+  "alternativeAnswers": [
+    "8 (3+4)",
+    "8 × (3 + 4)",
+    "8*(3+4)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find GCF of $24$ and $32$ first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find GCF of $24$ and $32$ first."
+    },
+    {
+      "level": "guide",
+      "text": "GCF is $8$. So $24 = 8 \\times 3$ and $32 = 8 \\times 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24 + 32 = 8(3 + 4)$."
+    }
+  ],
+  "explanation": [
+    "GCF of $24$ and $32$ is $8$.",
+    "Factor: $24 + 32 = 8 \\times 3 + 8 \\times 4 = 8(3+4)$."
+  ],
+  "tags": [
+    "CA",
+    "gcf",
+    "distributive"
+  ],
+  "estimatedSeconds": 75
+}

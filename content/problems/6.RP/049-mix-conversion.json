@@ -1,0 +1,37 @@
+{
+  "id": "6.RP.049",
+  "domain": "6.RP",
+  "unit": 6,
+  "orderInUnit": 1,
+  "standard": "6.RP.A.3.d",
+  "difficulty": 1,
+  "prompt": "There are $4$ quarts in $1$ gallon. How many quarts in $3$ gallons?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [
+    "12 quarts"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Each gallon adds $4$ quarts.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each gallon adds $4$ quarts."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply $3 \\times 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 4 = 12$."
+    }
+  ],
+  "explanation": [
+    "$3 \\times 4 = 12$ quarts."
+  ],
+  "tags": [
+    "conversion"
+  ],
+  "estimatedSeconds": 30
+}

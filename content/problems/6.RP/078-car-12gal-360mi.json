@@ -1,0 +1,39 @@
+{
+  "id": "6.RP.078",
+  "domain": "6.RP",
+  "unit": 8,
+  "orderInUnit": 8,
+  "standard": "6.RP.A.2",
+  "difficulty": 2,
+  "prompt": "A car uses $12$ gallons to drive $360$ miles. Find **miles per gallon**.",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [
+    "30 mpg"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Miles $\\div$ gallons.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Miles $\\div$ gallons."
+    },
+    {
+      "level": "guide",
+      "text": "$360 \\div 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$30$."
+    }
+  ],
+  "explanation": [
+    "$360 \\div 12 = 30$ mpg.",
+    "Final answer: 30."
+  ],
+  "tags": [
+    "unit-rate",
+    "mpg"
+  ],
+  "estimatedSeconds": 45
+}

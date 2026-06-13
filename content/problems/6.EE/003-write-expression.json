@@ -1,0 +1,50 @@
+{
+  "id": "6.EE.003",
+  "domain": "6.EE",
+  "unit": 1,
+  "orderInUnit": 3,
+  "standard": "6.EE.A.2.a",
+  "difficulty": 1,
+  "prompt": "Write an expression for: **\"$8$ more than a number $x$\"**.",
+  "answerType": "expression",
+  "primaryAnswer": "x+8",
+  "alternativeAnswers": [
+    "8+x"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "\"More than\" means add. \"$8$ more than $x$\" starts with $x$, then adds $8$.",
+  "explanation": [
+    "\"More than a number\" means **add** to that number.",
+    "\"$8$ more than $x$\" means $x + 8$.",
+    "By the commutative property, $8 + x$ is also correct."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Try a concrete value",
+      "steps": [
+        "Let's check with $x = 5$: \"$8$ more than $5$\" should be $13$.",
+        "Plug $x = 5$ into $x + 8$: $5 + 8 = 13$. ✓",
+        "So the expression $x + 8$ matches the description."
+      ]
+    }
+  ],
+  "tags": [
+    "CA",
+    "writing-expressions"
+  ],
+  "estimatedSeconds": 45,
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"More than\" means add. \"$8$ more than $x$\" starts with $x$, then adds $8$."
+    },
+    {
+      "level": "guide",
+      "text": "\"More than a number\" means **add** to that number."
+    },
+    {
+      "level": "reveal",
+      "text": "By the commutative property, $8 + x$ is also correct."
+    }
+  ]
+}

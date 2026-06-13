@@ -1,0 +1,40 @@
+{
+  "id": "6.SP.009",
+  "domain": "6.SP",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "6.SP.B.5.c",
+  "difficulty": 1,
+  "prompt": "Find the **mean** of $3, 7, 8, 6$.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Mean = sum divided by count.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Mean = sum divided by count."
+    },
+    {
+      "level": "guide",
+      "text": "Sum: $3 + 7 + 8 + 6 = 24$. Count: $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24 \\div 4 = 6$."
+    }
+  ],
+  "explanation": [
+    "Sum: $24$. Count: $4$. Mean: $6$."
+  ],
+  "tags": [
+    "mean"
+  ],
+  "estimatedSeconds": 45,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Dot plot for 6.SP.009",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 130\" role=\"img\"><line x1=\"20\" y1=\"100\" x2=\"400\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"2\"/><line x1=\"30\" y1=\"96\" x2=\"30\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"30\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">2</text><line x1=\"81.42857142857142\" y1=\"96\" x2=\"81.42857142857142\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"81.42857142857142\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">3</text><line x1=\"132.85714285714283\" y1=\"96\" x2=\"132.85714285714283\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"132.85714285714283\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">4</text><line x1=\"184.28571428571428\" y1=\"96\" x2=\"184.28571428571428\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"184.28571428571428\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">5</text><line x1=\"235.7142857142857\" y1=\"96\" x2=\"235.7142857142857\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"235.7142857142857\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">6</text><line x1=\"287.14285714285717\" y1=\"96\" x2=\"287.14285714285717\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"287.14285714285717\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">7</text><line x1=\"338.57142857142856\" y1=\"96\" x2=\"338.57142857142856\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"338.57142857142856\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">8</text><line x1=\"390\" y1=\"96\" x2=\"390\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"390\" y=\"120\" font-family=\"Nunito\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\">9</text><circle cx=\"81.42857142857142\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"235.7142857142857\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"287.14285714285717\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/><circle cx=\"338.57142857142856\" cy=\"86\" r=\"5\" fill=\"#0EA5E9\"/></svg>"
+  }
+}

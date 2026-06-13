@@ -1,0 +1,54 @@
+{
+  "id": "5.F.009",
+  "domain": "5.F",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "5.NBT.B.5",
+  "difficulty": 3,
+  "prompt": "A school orders $24$ boxes of pencils with $36$ pencils in each box. The office keeps $150$ pencils. How many pencils are left for the classrooms?",
+  "answerType": "numeric",
+  "primaryAnswer": "714",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two steps: first find the total pencils, then take away what the office keeps.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two steps: first find the total pencils, then take away what the office keeps."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "If there were $2$ boxes of $36$, that would be $72$ pencils. Now scale the same idea up to $24$ boxes."
+    },
+    {
+      "level": "guide",
+      "text": "Total: $24 \\times 36$. Try $24 \\times 36 = 24 \\times 30 + 24 \\times 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24 \\times 36 = 720 + 144 = 864$. Then $864 - 150 = 714$."
+    }
+  ],
+  "explanation": [
+    "Step 1 — total pencils: $24 \\times 36$.",
+    "$24 \\times 30 = 720$ and $24 \\times 6 = 144$, so the total is $720 + 144 = 864$.",
+    "Step 2 — remove the office pencils: $864 - 150 = 714$.",
+    "So $714$ pencils go to the classrooms."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate first",
+      "steps": [
+        "$24 \\times 36$ is about $25 \\times 36 = 900$.",
+        "$900 - 150 = 750$, so an answer near $714$ makes sense."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 100
+}

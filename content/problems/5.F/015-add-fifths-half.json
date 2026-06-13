@@ -1,0 +1,49 @@
+{
+  "id": "5.F.015",
+  "domain": "5.F",
+  "unit": 2,
+  "orderInUnit": 5,
+  "standard": "5.NF.A.1",
+  "difficulty": 2,
+  "prompt": "Add: $\\frac{2}{5} + \\frac{1}{2}$",
+  "answerType": "fraction",
+  "primaryAnswer": "9/10",
+  "alternativeAnswers": [
+    "0.9",
+    "90%"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "What denominator works for both fifths and halves?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "What denominator works for both fifths and halves?"
+    },
+    {
+      "level": "guide",
+      "text": "Tenths: $\\frac{2}{5} = \\frac{4}{10}$ and $\\frac{1}{2} = \\frac{5}{10}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{4}{10} + \\frac{5}{10} = \\frac{9}{10}$."
+    }
+  ],
+  "explanation": [
+    "The least common denominator of $5$ and $2$ is $10$.",
+    "$\\frac{2}{5} = \\frac{4}{10}$ and $\\frac{1}{2} = \\frac{5}{10}$.",
+    "$\\frac{4}{10} + \\frac{5}{10} = \\frac{9}{10}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Decimal check",
+      "steps": [
+        "$0.4 + 0.5 = 0.9 = \\frac{9}{10}$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "fractions",
+    "common-denominator"
+  ],
+  "estimatedSeconds": 55
+}

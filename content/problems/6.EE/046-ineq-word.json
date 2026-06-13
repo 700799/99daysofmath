@@ -1,0 +1,40 @@
+{
+  "id": "6.EE.046",
+  "domain": "6.EE",
+  "unit": 5,
+  "orderInUnit": 6,
+  "standard": "6.EE.B.8",
+  "difficulty": 2,
+  "prompt": "A roller coaster has a height requirement of $48$ inches. Write an inequality showing acceptable heights $h$.",
+  "answerType": "short-text",
+  "primaryAnswer": "h≥48",
+  "alternativeAnswers": [
+    "h >= 48",
+    "h ≥ 48"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"At least $48$\" — riders need $h \\geq 48$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"At least $48$\" — riders need $h \\geq 48$."
+    },
+    {
+      "level": "guide",
+      "text": "$h \\geq ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$h \\geq 48$."
+    }
+  ],
+  "explanation": [
+    "Riders must be at least $48$ inches: $h \\geq 48$."
+  ],
+  "tags": [
+    "CA",
+    "inequality",
+    "word"
+  ],
+  "estimatedSeconds": 60
+}

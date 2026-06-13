@@ -1,0 +1,43 @@
+{
+  "id": "6.SP.089",
+  "domain": "6.SP",
+  "unit": 9,
+  "orderInUnit": 9,
+  "standard": "6.SP.B.4",
+  "difficulty": 3,
+  "prompt": "A box plot has min $= 2$, $Q_1 = 5$, median $= 8$, $Q_3 = 11$, max $= 14$. What is the **range**?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Range $= \\text{max} - \\text{min}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sort the data from least to greatest first — many statistics get easy after that."
+    },
+    {
+      "level": "nudge",
+      "text": "Range $= \\text{max} - \\text{min}$."
+    },
+    {
+      "level": "guide",
+      "text": "$14 - 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12$."
+    }
+  ],
+  "explanation": [
+    "Range = maximum $-$ minimum $= 14 - 2 = 12$.",
+    "Final answer: 12."
+  ],
+  "tags": [
+    "MAP-practice",
+    "range",
+    "box-plot"
+  ],
+  "estimatedSeconds": 45
+}

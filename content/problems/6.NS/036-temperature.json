@@ -1,0 +1,41 @@
+{
+  "id": "6.NS.036",
+  "domain": "6.NS",
+  "unit": 4,
+  "orderInUnit": 6,
+  "standard": "6.NS.C.5",
+  "difficulty": 2,
+  "prompt": "The temperature was $-3°$F at $6$ a.m. and rose by $12°$F by noon. What is the noon temperature?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [
+    "9°F",
+    "9 degrees"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Rose\" means add.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Rose\" means add."
+    },
+    {
+      "level": "guide",
+      "text": "$-3 + 12 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$-3 + 12 = 9$."
+    }
+  ],
+  "explanation": [
+    "$-3 + 12 = 9$.",
+    "Noon temperature: $9°$F."
+  ],
+  "tags": [
+    "CA",
+    "integer",
+    "word"
+  ],
+  "estimatedSeconds": 55
+}

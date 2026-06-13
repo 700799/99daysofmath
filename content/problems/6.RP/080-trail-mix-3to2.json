@@ -1,0 +1,57 @@
+{
+  "id": "6.RP.080",
+  "domain": "6.RP",
+  "unit": 8,
+  "orderInUnit": 10,
+  "standard": "6.RP.A.3",
+  "difficulty": 3,
+  "prompt": "A trail-mix recipe uses peanuts and raisins in the ratio $3 : 2$. To make a batch with $12$ cups of peanuts, how many cups of raisins are needed?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the scale factor on peanuts.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try the same problem with friendlier numbers first — say \"20% of 50\" — then come back to this one."
+    },
+    {
+      "level": "nudge",
+      "text": "Find the scale factor on peanuts."
+    },
+    {
+      "level": "guide",
+      "text": "Peanuts go from $3$ to $12$ — multiplied by $4$. So scale raisins by $4$ too."
+    },
+    {
+      "level": "reveal",
+      "text": "$2 \\times 4 = 8$ cups of raisins."
+    }
+  ],
+  "explanation": [
+    "$3$ scales to $12$ by $\\times 4$.",
+    "Raisins scale by the same factor: $2 \\times 4 = 8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use a proportion",
+      "steps": [
+        "$\\dfrac{3}{2} = \\dfrac{12}{r}$.",
+        "$3r = 24$, so $r = 8$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "ratio",
+    "recipe"
+  ],
+  "estimatedSeconds": 80,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Tape diagram for ratio 3 : 2",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 80\" role=\"img\"><rect x=\"20\" y=\"30\" width=\"204\" height=\"36\" fill=\"#0EA5E9\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"122\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">3</text><rect x=\"224\" y=\"30\" width=\"136\" height=\"36\" fill=\"#10B981\" opacity=\"0.7\" stroke=\"#0f172a\" stroke-width=\"1\"/><text x=\"292\" y=\"53\" font-family=\"Nunito\" font-size=\"14\" font-weight=\"700\" fill=\"white\" text-anchor=\"middle\">2</text></svg>"
+  }
+}

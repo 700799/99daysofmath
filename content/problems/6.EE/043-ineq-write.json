@@ -1,0 +1,69 @@
+{
+  "id": "6.EE.043",
+  "domain": "6.EE",
+  "unit": 5,
+  "orderInUnit": 3,
+  "standard": "6.EE.B.8",
+  "difficulty": 3,
+  "prompt": "A bus seats **at most** $40$ people. Already $13$ riders are on board, and $x$ more want to board. Write an inequality in $x$ (use $≤$ or $≥$). Use no spaces; example form: $x≤27$.",
+  "answerType": "short-text",
+  "primaryAnswer": "x≤27",
+  "alternativeAnswers": [
+    "x <= 27",
+    "x ≤ 27",
+    "x<=27"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"At most $40$ total\" means the **sum** of riders cannot exceed $40$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm-up: if a parking lot fits at most $20$ cars and $5$ are parked, how many more can come? Up to $15$. That's exactly this kind of problem."
+    },
+    {
+      "level": "nudge",
+      "text": "Build the inequality in two steps: total ≤ 40, then solve for $x$."
+    },
+    {
+      "level": "guide",
+      "text": "Riders on the bus = $13 + x$. \"At most $40$\" → $13 + x ≤ 40$. Subtract $13$: $x ≤ 27$."
+    },
+    {
+      "level": "reveal",
+      "text": "Answer: $x ≤ 27$."
+    }
+  ],
+  "explanation": [
+    "Set up: total riders after boarding $= 13 + x$.",
+    "\"At most\" $40$ means $13 + x \\le 40$.",
+    "Subtract $13$ from both sides: $x \\le 27$.",
+    "Sanity-check: $x = 27$ gives $40$ riders (full bus, still allowed). $x = 28$ gives $41$ — too many."
+  ],
+  "tags": [
+    "inequality",
+    "translate",
+    "MAP-practice"
+  ],
+  "estimatedSeconds": 105,
+  "alternativeExplanations": [
+    {
+      "title": "Vocabulary check",
+      "steps": [
+        "\"**At most** $N$\" → $\\le N$ (could be that much, no more).",
+        "\"**At least** $N$\" → $\\ge N$ (could be that much, no less).",
+        "\"**Fewer than** $N$\" → $< N$ (strictly under). \"**More than** $N$\" → $> N$.",
+        "This problem uses \"at most\", so $\\le$ — and the endpoint $40$ **is** allowed."
+      ]
+    },
+    {
+      "title": "Test values",
+      "steps": [
+        "Try $x = 0$: bus has $13$ riders. $13 \\le 40$ ✓.",
+        "Try $x = 27$: bus has $40$ riders. $40 \\le 40$ ✓ (full but legal).",
+        "Try $x = 30$: bus would have $43$. $43 \\le 40$? **No.** So $x = 30$ is not a solution.",
+        "The cutoff is $x = 27$, matching $x \\le 27$."
+      ]
+    }
+  ]
+}

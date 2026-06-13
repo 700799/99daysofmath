@@ -1,0 +1,44 @@
+{
+  "id": "6.NS.058",
+  "domain": "6.NS",
+  "unit": 6,
+  "orderInUnit": 8,
+  "standard": "6.NS.B.3",
+  "difficulty": 3,
+  "prompt": "You buy $3$ items costing \\$$2.49$ each. How much total?",
+  "answerType": "numeric",
+  "primaryAnswer": "7.47",
+  "alternativeAnswers": [
+    "$7.47"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply $2.49 \\times 3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a 10×-easier version: shrink each number by a factor of 10 and watch the structure."
+    },
+    {
+      "level": "nudge",
+      "text": "Multiply $2.49 \\times 3$."
+    },
+    {
+      "level": "guide",
+      "text": "$2 \\times 3 + 0.49 \\times 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 + 1.47 = 7.47$."
+    }
+  ],
+  "explanation": [
+    "$2.49 \\times 3 = 7.47$."
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimal",
+    "money"
+  ],
+  "estimatedSeconds": 60
+}

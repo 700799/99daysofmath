@@ -1,0 +1,49 @@
+{
+  "id": "6.RP.066",
+  "domain": "6.RP",
+  "unit": 7,
+  "orderInUnit": 6,
+  "standard": "6.RP.A.3.c",
+  "difficulty": 2,
+  "prompt": "$8$ is what percent of $32$?",
+  "answerType": "short-text",
+  "primaryAnswer": "25%",
+  "alternativeAnswers": [
+    "25 percent",
+    "25 %"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Part $\\div$ whole.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Part $\\div$ whole."
+    },
+    {
+      "level": "guide",
+      "text": "$8 / 32 = 0.25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.25 = 25\\%$."
+    }
+  ],
+  "explanation": [
+    "$\\frac{8}{32} = 0.25$.",
+    "$0.25 = 25\\%$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Reduce the fraction",
+      "steps": [
+        "$\\frac{8}{32} = \\frac{1}{4}$.",
+        "$\\frac{1}{4} = 25\\%$."
+      ]
+    }
+  ],
+  "tags": [
+    "percent",
+    "find-percent"
+  ],
+  "estimatedSeconds": 50
+}

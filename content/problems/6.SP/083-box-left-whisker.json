@@ -1,0 +1,50 @@
+{
+  "id": "6.SP.083",
+  "domain": "6.SP",
+  "unit": 9,
+  "orderInUnit": 3,
+  "standard": "6.SP.B.4",
+  "difficulty": 2,
+  "prompt": "On a box plot, the left whisker reaches the ___?",
+  "answerType": "short-text",
+  "primaryAnswer": "minimum",
+  "alternativeAnswers": [
+    "Minimum",
+    "min",
+    "smallest value",
+    "lowest value"
+  ],
+  "acceptanceMode": "exact",
+  "hint": "Whiskers extend to the extremes.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Whiskers extend to the extremes."
+    },
+    {
+      "level": "guide",
+      "text": "Left = smallest."
+    },
+    {
+      "level": "reveal",
+      "text": "minimum."
+    }
+  ],
+  "explanation": [
+    "Left whisker → minimum value of the data. Right whisker → maximum.",
+    "Final answer: minimum."
+  ],
+  "tags": [
+    "box-plot"
+  ],
+  "estimatedSeconds": 35,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: minimum — verified."
+      ]
+    }
+  ]
+}

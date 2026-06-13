@@ -1,0 +1,39 @@
+{
+  "id": "6.NS.035",
+  "domain": "6.NS",
+  "unit": 4,
+  "orderInUnit": 5,
+  "standard": "6.NS.C.7.a",
+  "difficulty": 2,
+  "prompt": "Order from least to greatest: $5, -2, 0, -7, 3$. What is the **second** number?",
+  "answerType": "numeric",
+  "primaryAnswer": "-2",
+  "alternativeAnswers": [
+    "−2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Smallest first — that's the most negative.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Smallest first — that's the most negative."
+    },
+    {
+      "level": "guide",
+      "text": "Sorted: $-7, -2, 0, 3, 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "Second is $-2$."
+    }
+  ],
+  "explanation": [
+    "Ordered: $-7, -2, 0, 3, 5$.",
+    "Second: $-2$."
+  ],
+  "tags": [
+    "integer",
+    "order"
+  ],
+  "estimatedSeconds": 50
+}

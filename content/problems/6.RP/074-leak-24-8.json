@@ -1,0 +1,46 @@
+{
+  "id": "6.RP.074",
+  "domain": "6.RP",
+  "unit": 8,
+  "orderInUnit": 4,
+  "standard": "6.RP.A.2",
+  "difficulty": 2,
+  "prompt": "A faucet leaks $24$ cups in $8$ hours. How many **cups per hour**?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Cups $\\div$ hours.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Cups $\\div$ hours."
+    },
+    {
+      "level": "guide",
+      "text": "$24 \\div 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3$."
+    }
+  ],
+  "explanation": [
+    "$24 \\div 8 = 3$ cups/hour.",
+    "Final answer: 3."
+  ],
+  "tags": [
+    "unit-rate",
+    "word"
+  ],
+  "estimatedSeconds": 45,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 3 — verified."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "6.G.047",
+  "domain": "6.G",
+  "unit": 5,
+  "orderInUnit": 7,
+  "standard": "6.G.A.1",
+  "difficulty": 3,
+  "prompt": "An L-shape has outer dimensions $6 \\times 4$. The inner cut is $2 \\times 2$. Find the perimeter.",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Trace around the entire boundary.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sketch the shape and label every length. A 30-second drawing saves 5 minutes of thinking."
+    },
+    {
+      "level": "nudge",
+      "text": "Trace around the entire boundary."
+    },
+    {
+      "level": "guide",
+      "text": "Sides: $6 + 4 + (6-2) + 2 + 2 + 2 = 20$."
+    },
+    {
+      "level": "reveal",
+      "text": "$20$."
+    }
+  ],
+  "explanation": [
+    "Outer L-shape perimeter sums to $20$ when you walk along all edges."
+  ],
+  "tags": [
+    "composite",
+    "perimeter"
+  ],
+  "estimatedSeconds": 90
+}

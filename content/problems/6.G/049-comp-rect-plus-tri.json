@@ -1,0 +1,40 @@
+{
+  "id": "6.G.049",
+  "domain": "6.G",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "6.G.A.1",
+  "difficulty": 2,
+  "prompt": "A shape combines a $5 \\times 4$ rectangle with a triangle (base $5$, height $2$). Find the total area.",
+  "answerType": "numeric",
+  "primaryAnswer": "25",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Add the areas.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add the areas."
+    },
+    {
+      "level": "guide",
+      "text": "$20 + 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$25$."
+    }
+  ],
+  "explanation": [
+    "$20 + 5 = 25$."
+  ],
+  "tags": [
+    "composite"
+  ],
+  "estimatedSeconds": 50,
+  "diagram": {
+    "kind": "inline-svg",
+    "alt": "Triangle with base 5 and height 2",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 148\" role=\"img\"><polygon points=\"38,110 218,110 110,38\" fill=\"#A7F3D0\" stroke=\"#10B981\" stroke-width=\"3\"/><line x1=\"110\" y1=\"38\" x2=\"110\" y2=\"110\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><g font-family=\"Nunito, sans-serif\" font-size=\"16\" font-weight=\"700\" fill=\"#0f172a\" text-anchor=\"middle\"><text x=\"128\" y=\"132\">b = 5</text><text x=\"142.4\" y=\"79\">h = 2</text></g></svg>"
+  }
+}

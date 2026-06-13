@@ -1,0 +1,49 @@
+{
+  "id": "6.G.094",
+  "domain": "6.G",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "6.G.A.4",
+  "difficulty": 2,
+  "prompt": "A cube has a total surface area of $96$ square units. What is the area of **one face**?",
+  "answerType": "numeric",
+  "primaryAnswer": "16",
+  "alternativeAnswers": [
+    "16 sq units"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A cube has $6$ equal faces.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A cube has $6$ equal faces."
+    },
+    {
+      "level": "guide",
+      "text": "$96 \\div 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$16$."
+    }
+  ],
+  "explanation": [
+    "$96 \\div 6 = 16$ sq units per face.",
+    "Final answer: 16."
+  ],
+  "tags": [
+    "surface-area",
+    "cube",
+    "inverse"
+  ],
+  "estimatedSeconds": 45,
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer",
+      "steps": [
+        "Plug the result back into the question and confirm the values match.",
+        "Answer: 16 — verified."
+      ]
+    }
+  ]
+}

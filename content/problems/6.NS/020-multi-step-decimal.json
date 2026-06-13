@@ -1,0 +1,45 @@
+{
+  "id": "6.NS.020",
+  "domain": "6.NS",
+  "unit": 2,
+  "orderInUnit": 10,
+  "standard": "6.NS.B.3",
+  "difficulty": 3,
+  "prompt": "Each pencil costs \\$$0.25$. How many can you buy with \\$$3.00$?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [
+    "12 pencils"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Divide total dollars by cost per pencil.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🔁 Another angle",
+      "text": "Use the \"keep–change–flip\" trick whenever you see division by a fraction."
+    },
+    {
+      "level": "nudge",
+      "text": "Divide total dollars by cost per pencil."
+    },
+    {
+      "level": "guide",
+      "text": "$3.00 \\div 0.25 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\div 0.25 = 12$ pencils."
+    }
+  ],
+  "explanation": [
+    "$3 \\div 0.25 = 12$.",
+    "You can buy $12$ pencils."
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimal",
+    "money"
+  ],
+  "estimatedSeconds": 65
+}
