@@ -10,6 +10,7 @@ import {
 } from '../data/lessons';
 import { LessonVideo } from './LessonVideo';
 import { ReadAloud } from './ReadAloud';
+import { tipForLesson } from '../data/geniusTips';
 import { DOMAIN_EMOJI } from '../types/problem';
 import { stickerById } from '../utils/encouragement';
 import { Mascot } from './Mascot';
@@ -346,6 +347,8 @@ function VideoPage({ src, title }: { src: string; title: string }) {
 }
 
 function ConceptPage({ lesson }: { lesson: Lesson }) {
+  // Pull a deterministic pro tip keyed to the lesson so it doesn't flicker.
+  const tip = tipForLesson(`lesson-${lesson.domain}-${lesson.unit}`, lesson.domain);
   return (
     <div>
       <PageTitle eyebrow="The key idea" title="How it works" />
@@ -362,6 +365,14 @@ function ConceptPage({ lesson }: { lesson: Lesson }) {
           </li>
         ))}
       </ol>
+      {tip && (
+        <div className="mt-4 rounded-2xl bg-gradient-to-br from-violet-50 to-fuchsia-50 border-2 border-violet-200 p-3">
+          <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-violet-700">
+            🧠 Genius tip
+          </div>
+          <p className="text-sm text-slate-800 mt-1">{tip.text}</p>
+        </div>
+      )}
     </div>
   );
 }

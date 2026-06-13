@@ -206,6 +206,28 @@ export function Home() {
         </Link>
       </div>
 
+      <div className="mt-1 mb-2 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
+        🎬 Watch
+      </div>
+      <div className="grid grid-cols-2 gap-3 mb-4">
+        <Link
+          to="/stories"
+          className="block rounded-3xl p-4 bg-gradient-to-br from-violet-500 to-fuchsia-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-3xl">🌟</div>
+          <div className="font-display font-extrabold text-lg mt-1">Math Stories</div>
+          <div className="text-xs opacity-90 mt-0.5 line-clamp-2">Famous mathematicians. Read at your pace.</div>
+        </Link>
+        <Link
+          to="/videos"
+          className="block rounded-3xl p-4 bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-3xl">🎬</div>
+          <div className="font-display font-extrabold text-lg mt-1">Lesson Videos</div>
+          <div className="text-xs opacity-90 mt-0.5 line-clamp-2">Animated explanations for every unit.</div>
+        </Link>
+      </div>
+
       <div className="space-y-3">
         {DOMAINS.map((d, i) => {
           const dp = progress[d];

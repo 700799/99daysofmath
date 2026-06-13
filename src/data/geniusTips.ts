@@ -88,3 +88,14 @@ export function tipForProblem(problemId: string, domain: Domain): GeniusTip | nu
   ];
   return pool[h % pool.length] ?? null;
 }
+
+// Always-on variant for surfaces that aren't problem cards (lesson concept
+// page, unit overview, etc). Stable per id + domain.
+export function tipForLesson(seed: string, domain: Domain): GeniusTip {
+  const h = hashStr(seed);
+  const pool = [
+    ...GENIUS_TIPS.filter((t) => t.domain === domain),
+    ...GENIUS_TIPS.filter((t) => !t.domain),
+  ];
+  return pool[h % pool.length] ?? GENIUS_TIPS[0];
+}
