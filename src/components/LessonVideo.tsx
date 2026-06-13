@@ -306,6 +306,48 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
     ref.current?.play().catch(() => {});
   };
 
+  // Section labels for merged lessons.  The chapters sidecar carries
+  // checkpoint timings but no names — derive labels from the count.
+  //   3 parts (idea + examples + trap) → 2 checkpoints
+  //   2 parts (examples + trap)        → 1 checkpoint
+  // Use generic labels for any other shape.
+  const sectionLabels: string[] = (() => {
+    if (!src.endsWith('-lesson.mp4')) return [];
+    const n = (marksRef.current?.length ?? 0) + 1;
+    if (n === 3) return ['The idea', 'Worked examples', 'Avoid the trap'];
+    if (n === 2) return ['Worked examples', 'Avoid the trap'];
+    return Array.from({ length: n }, (_, i) => `Section ${i + 1}`);
+  })();
+  // nextIdx is the index of the NEXT pending checkpoint, so the section that
+  // *just* completed is nextIdx - 1, and the one we're about to play is nextIdx.
+  const justFinishedIdx = Math.max(0, nextIdxRef.current - 1);
+  const upNextIdx = Math.min(sectionLabels.length - 1, nextIdxRef.current);
+
+  // Jump back to the start of the section we just finished (or the previous
+  // one if we're at the start of a fresh section). Useful when the kid
+  // wants to re-watch the explanation they just heard.
+  const backSection = () => {
+    const v = ref.current;
+    if (!v) return;
+    const marks = marksRef.current;
+    // Target = either the start of the current section, or the previous
+    // checkpoint if we're already there.
+    const cur = v.currentTime;
+    let target = 0;
+    for (let i = marks.length - 1; i >= 0; i--) {
+      if (marks[i] < cur - 0.6) {
+        target = marks[i];
+        break;
+      }
+    }
+    v.currentTime = target;
+    nextIdxRef.current = marks.findIndex((m) => m > target + 0.1);
+    if (nextIdxRef.current < 0) nextIdxRef.current = marks.length;
+    setAtCheckpoint(false);
+    setEnded(false);
+    v.play().catch(() => {});
+  };
+
   // On phone the parent gives us a flex-1 black stage; we fill it.
   // On desktop (sm:) we use aspect-video so the video doesn't stretch the
   // centered modal too tall.
@@ -352,21 +394,46 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
       )}
 
       {atCheckpoint && (
-        <div className="absolute bottom-3 right-3 z-10 flex flex-col items-end gap-1.5">
-          <button
-            type="button"
-            onClick={continuePlayback}
-            className="rounded-full bg-duo-green hover:bg-green-600 text-white font-display font-extrabold text-sm px-4 h-10 flex items-center gap-1.5 shadow-lg active:translate-y-0.5 transition"
-          >
-            Continue ▶
-          </button>
+        <div className="absolute inset-x-0 bottom-0 z-10 px-3 sm:px-5 pb-3 sm:pb-4 pt-3 bg-gradient-to-t from-black/85 via-black/65 to-transparent">
+          {sectionLabels.length > 0 && (
+            <div className="flex items-center justify-between gap-2 text-white mb-2">
+              <div className="text-xs sm:text-sm font-display font-extrabold uppercase tracking-wider text-emerald-300">
+                ✓ {sectionLabels[justFinishedIdx]}
+              </div>
+              <div className="text-[10px] sm:text-xs font-display font-bold text-white/70 tabular-nums">
+                {justFinishedIdx + 1} / {sectionLabels.length}
+              </div>
+            </div>
+          )}
+          <div className="flex items-stretch gap-2 sm:gap-3">
+            <button
+              type="button"
+              onClick={backSection}
+              aria-label="Watch previous section"
+              className="flex items-center gap-2 rounded-full bg-white/95 hover:bg-white text-slate-800 font-display font-extrabold text-sm sm:text-base px-4 sm:px-5 h-12 shadow-lg active:-translate-x-0.5 transition"
+            >
+              <span>←</span>
+              <span className="hidden sm:inline">Watch again</span>
+              <span className="inline sm:hidden">Back</span>
+            </button>
+            <button
+              type="button"
+              onClick={continuePlayback}
+              className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-display font-extrabold text-base sm:text-lg px-5 sm:px-7 h-12 shadow-lg shadow-emerald-500/40 active:translate-y-0.5 transition"
+            >
+              <span>{nextIdxRef.current < sectionLabels.length
+                ? `Next: ${sectionLabels[upNextIdx]}`
+                : 'Continue'}</span>
+              <span>▶</span>
+            </button>
+          </div>
           <button
             type="button"
             onClick={() => {
               setAutoPause(false);
               continuePlayback();
             }}
-            className="text-white/90 text-[10px] font-display font-bold underline bg-black/40 px-2 py-0.5 rounded"
+            className="mt-1.5 text-white/80 text-[10px] sm:text-xs font-display font-bold underline"
           >
             Don't pause again
           </button>

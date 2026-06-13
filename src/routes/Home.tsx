@@ -191,19 +191,6 @@ export function Home() {
             <div className="text-2xl shrink-0">→</div>
           </div>
         </Link>
-        <Link
-          to="/finals"
-          className="block rounded-3xl p-4 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all sm:col-span-2"
-        >
-          <div className="flex items-center gap-3">
-            <div className="text-4xl">🏆</div>
-            <div className="flex-1 min-w-0">
-              <div className="font-display font-extrabold text-lg">Finals</div>
-              <div className="text-xs opacity-90 mt-0.5 line-clamp-2">5 quizzes × 20. Big bonus XP.</div>
-            </div>
-            <div className="text-2xl shrink-0">→</div>
-          </div>
-        </Link>
       </div>
 
       <div className="mt-1 mb-2 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
@@ -225,6 +212,25 @@ export function Home() {
           <div className="text-3xl">🎬</div>
           <div className="font-display font-extrabold text-lg mt-1">Lesson Videos</div>
           <div className="text-xs opacity-90 mt-0.5 line-clamp-2">Animated explanations for every unit.</div>
+        </Link>
+      </div>
+
+      <div className="mt-1 mb-2 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
+        🏆 Test yourself
+      </div>
+      <div className="grid grid-cols-1 gap-3 mb-4">
+        <Link
+          to="/finals"
+          className="block rounded-3xl p-4 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="flex items-center gap-3">
+            <div className="text-4xl">🏆</div>
+            <div className="flex-1 min-w-0">
+              <div className="font-display font-extrabold text-lg">Finals</div>
+              <div className="text-xs opacity-90 mt-0.5 line-clamp-2">5 quizzes × 20. Big bonus XP.</div>
+            </div>
+            <div className="text-2xl shrink-0">→</div>
+          </div>
         </Link>
       </div>
 
