@@ -118,7 +118,7 @@ class Lesson6NS7Examples(LearningExperienceDeck):
         self.play(FadeOut(em), run_time=_rt(0.4))
 
         # ── Example 1: 425 + 376 ───────────────────────────────────────
-        q1 = Text("Q:  425 + 376 = ?", font_size=34, weight="BOLD",
+        q1 = Text("Q:  425 + 376 = ?", font_size=48, weight="BOLD",
                   color=pal["accent"]).to_edge(UP, buff=0.9)
         self.play(Write(q1), run_time=_rt(0.9))
         M.blink(self, self.mascot)
@@ -130,7 +130,7 @@ class Lesson6NS7Examples(LearningExperienceDeck):
                 (2, "8", ""),    # hundreds: 4+3+1=8
             ],
         )
-        ans1 = Text("= 801", font_size=48, weight="BOLD", color=GREEN)
+        ans1 = Text("= 801", font_size=72, weight="BOLD", color=GREEN)
         ans1.to_edge(DOWN, buff=0.55)
         self.play(FadeIn(ans1, scale=1.15), run_time=_rt(0.6))
         M.cheer(self, self.mascot)
@@ -139,7 +139,7 @@ class Lesson6NS7Examples(LearningExperienceDeck):
         self.play(FadeOut(VGroup(q1, ex1, ans1)), run_time=_rt(0.5))
 
         # ── Example 2: 952 − 387 ───────────────────────────────────────
-        q2 = Text("Q:  952 − 387 = ?", font_size=34, weight="BOLD",
+        q2 = Text("Q:  952 − 387 = ?", font_size=48, weight="BOLD",
                   color=pal["accent"]).to_edge(UP, buff=0.9)
         self.play(Write(q2), run_time=_rt(0.9))
         M.think(self, self.mascot)
@@ -151,7 +151,7 @@ class Lesson6NS7Examples(LearningExperienceDeck):
                 (2, "5", None),  # hundreds 9→8 (since borrowed) − 3 = 5
             ],
         )
-        ans2 = Text("= 565", font_size=48, weight="BOLD", color=GREEN)
+        ans2 = Text("= 565", font_size=72, weight="BOLD", color=GREEN)
         ans2.to_edge(DOWN, buff=0.55)
         self.play(FadeIn(ans2, scale=1.15), run_time=_rt(0.6))
         M.cheer(self, self.mascot)
@@ -160,7 +160,7 @@ class Lesson6NS7Examples(LearningExperienceDeck):
         self.play(FadeOut(VGroup(q2, ex2, ans2)), run_time=_rt(0.5))
 
         # ── Example 3: 1003 − 247 (4-column variant) ───────────────────
-        q3 = Text("Q:  1003 − 247 = ?", font_size=34, weight="BOLD",
+        q3 = Text("Q:  1003 − 247 = ?", font_size=48, weight="BOLD",
                   color=pal["accent"]).to_edge(UP, buff=0.9)
         self.play(Write(q3), run_time=_rt(0.9))
         ex3 = _column_sub(
@@ -172,7 +172,7 @@ class Lesson6NS7Examples(LearningExperienceDeck):
                 (3, "0", None),
             ],
         )
-        ans3 = Text("= 756", font_size=48, weight="BOLD", color=GREEN)
+        ans3 = Text("= 756", font_size=72, weight="BOLD", color=GREEN)
         ans3.to_edge(DOWN, buff=0.55)
         self.play(FadeIn(ans3, scale=1.15), run_time=_rt(0.6))
         M.cheer(self, self.mascot)

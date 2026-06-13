@@ -31,6 +31,18 @@ import _visuals as V
 # "Continue" overlay (auto-pause at each checkpoint), kids set their own pace.
 PACE = 1.7
 
+# Phone-first font scale. Every text role in this module multiplies its
+# base size by FS().  Default 1.0 keeps backward-compatible (we set the
+# actual sizes via FS-multiplied integers).  Bump the constant to make
+# everything bigger in one place.
+FONT_SCALE = 1.45
+
+
+def FS(n: int) -> int:
+    """Apply the global font scale and round to an even integer."""
+    return int(round(n * FONT_SCALE))
+
+
 
 def _rt(t):
     return t * PACE
@@ -159,7 +171,7 @@ def _wrap(s: str, width: int = 40) -> str:
 # ── reusable furniture ──────────────────────────────────────────────────
 
 def title_bar(scene, text, color=YELLOW, size=40):
-    title = Text(text, font_size=size, weight="BOLD", color=color)
+    title = Text(text, font_size=FS(size), weight="BOLD", color=color)
     # Never let a long title run off the screen.
     max_w = 12.8
     if title.width > max_w:
@@ -183,8 +195,8 @@ def prediction_hook(scene, prompt, pal):
                            stroke_color=pal["accent"], stroke_width=4,
                            fill_color=BLUE, fill_opacity=0.10)
     box.move_to(UP * 1.4)
-    q = Text("Guess first!", font_size=26, color=pal["accent"], weight="BOLD")
-    label = Text(prompt, font_size=40, color=WHITE, weight="BOLD")
+    q = Text("Guess first!", font_size=FS(26), color=pal["accent"], weight="BOLD")
+    label = Text(prompt, font_size=FS(40), color=WHITE, weight="BOLD")
     grp = VGroup(q, label).arrange(DOWN, buff=0.18).move_to(box)
     scene.play(Create(box), FadeIn(grp), run_time=_rt(0.7))
     scene.wait(1.4)
@@ -200,8 +212,8 @@ def expert_move(scene, domain, seed, pal):
                               stroke_color=BLUE, stroke_width=3,
                               fill_color=BLUE, fill_opacity=0.10)
     ribbon.move_to(UP * 1.2)
-    head = Text("Think like a pro", font_size=22, color=BLUE, weight="BOLD")
-    body = Text(_wrap(move, 44), font_size=28, color=WHITE, weight="BOLD")
+    head = Text("Think like a pro", font_size=FS(22), color=BLUE, weight="BOLD")
+    body = Text(_wrap(move, 44), font_size=FS(28), color=WHITE, weight="BOLD")
     inner = VGroup(head, body).arrange(DOWN, buff=0.12).move_to(ribbon)
     marker.next_to(ribbon, LEFT, buff=0.2)
     g = VGroup(marker, ribbon, inner)
@@ -211,7 +223,7 @@ def expert_move(scene, domain, seed, pal):
 
 
 def method_label(text, color):
-    return Text(text, font_size=22, weight="BOLD", color=color)
+    return Text(text, font_size=FS(22), weight="BOLD", color=color)
 
 
 def _fit_hero(hero, max_w=5.4, max_h=3.8):
@@ -227,9 +239,9 @@ def _fit_hero(hero, max_w=5.4, max_h=3.8):
 def misconception_scene(scene, wrong_expr, correct_expr, mascot, pal):
     """Show a red wrong attempt, strike it through, then reveal green correction.
     Stacked vertically and centered so long expressions still fit on 480p15."""
-    header = Text("Common slip-up", font_size=24, weight="BOLD", color=RED)
+    header = Text("Common slip-up", font_size=FS(24), weight="BOLD", color=RED)
     header.to_edge(UP, buff=1.0)
-    wrong = Text(wrong_expr, font_size=32, color=RED)
+    wrong = Text(wrong_expr, font_size=FS(32), color=RED)
     wrong.next_to(header, DOWN, buff=0.35)
     scene.play(Write(header), Write(wrong), run_time=_rt(0.9))
     M.think(scene, mascot)
@@ -239,8 +251,8 @@ def misconception_scene(scene, wrong_expr, correct_expr, mascot, pal):
     scene.play(Create(strike), run_time=_rt(0.45))
     scene.wait(0.35)
 
-    arrow = Text("↓", font_size=36, color=YELLOW, weight="BOLD").next_to(wrong, DOWN, buff=0.25)
-    correct = Text(correct_expr, font_size=32, color=GREEN, weight="BOLD")
+    arrow = Text("↓", font_size=FS(36), color=YELLOW, weight="BOLD").next_to(wrong, DOWN, buff=0.25)
+    correct = Text(correct_expr, font_size=FS(32), color=GREEN, weight="BOLD")
     correct.next_to(arrow, DOWN, buff=0.25)
     scene.play(FadeIn(arrow, shift=DOWN * 0.2), FadeIn(correct, shift=DOWN * 0.2),
                run_time=_rt(0.7))
@@ -265,8 +277,8 @@ def pro_tip(scene, domain, seed, pal):
                               stroke_color=YELLOW, stroke_width=3,
                               fill_color=YELLOW, fill_opacity=0.10)
     ribbon.move_to(DOWN * 1.2)
-    head = Text("Pro tip", font_size=22, color=GOLD, weight="BOLD")
-    body = Text(_wrap(tip, 46), font_size=28, color=YELLOW, weight="BOLD")
+    head = Text("Pro tip", font_size=FS(22), color=GOLD, weight="BOLD")
+    body = Text(_wrap(tip, 46), font_size=FS(28), color=YELLOW, weight="BOLD")
     inner = VGroup(head, body).arrange(DOWN, buff=0.12).move_to(ribbon)
     bulb_g.next_to(ribbon, LEFT, buff=0.2)
     g = VGroup(bulb_g, ribbon, inner)
@@ -276,7 +288,7 @@ def pro_tip(scene, domain, seed, pal):
 
 def answer_card(scene, expr, color, mascot, pos=ORIGIN):
     """Big highlighted answer card with mascot cheer beat."""
-    a = Text(expr, font_size=56, weight="BOLD", color=color)
+    a = Text(expr, font_size=FS(56), weight="BOLD", color=color)
     a.move_to(pos)
     box = SurroundingRectangle(a, color=color, buff=0.22, corner_radius=0.16)
     scene.play(FadeIn(a, scale=1.2), Create(box), run_time=_rt(0.85))
@@ -355,7 +367,7 @@ class LearningExperienceDeck(Scene):
         else:
             outro_pool = self.outro_pool()
             outro = Text(outro_pool[seed % len(outro_pool)],
-                         font_size=34, weight="BOLD", color=pal["accent"])
+                         font_size=FS(34), weight="BOLD", color=pal["accent"])
             outro.to_edge(DOWN, buff=0.6)
             self.play(FadeIn(outro, scale=1.1), run_time=_rt(0.7))
             M.cheer(self, self.mascot)
@@ -388,7 +400,7 @@ class ExamplesDeck(LearningExperienceDeck):
             # Full-screen composition: question across the top, worked steps
             # filling the LEFT half, a big topical illustration on the RIGHT
             # half, and a large answer across the bottom. Even margins.
-            q_text = Text(_wrap("Q:  " + q, 38), font_size=32, color=pal["accent"], weight="BOLD")
+            q_text = Text(_wrap("Q:  " + q, 38), font_size=FS(32), color=pal["accent"], weight="BOLD")
             q_text.to_edge(UP, buff=1.0)
             self.play(Write(q_text), run_time=_rt(0.85))
             M.think(self, self.mascot)
@@ -398,7 +410,7 @@ class ExamplesDeck(LearningExperienceDeck):
             hero.move_to(RIGHT * 3.5 + DOWN * 0.1)
             self.play(FadeIn(hero, shift=DOWN * 0.2), run_time=_rt(0.6))
 
-            step_objs = VGroup(*[Text(_wrap(s, 24), font_size=30, color=pal["step"]) for s in steps])
+            step_objs = VGroup(*[Text(_wrap(s, 24), font_size=FS(30), color=pal["step"]) for s in steps])
             step_objs.arrange(DOWN, buff=0.55, aligned_edge=LEFT)
             step_objs.move_to(LEFT * 3.3 + DOWN * 0.1)
             for i, so in enumerate(step_objs):
@@ -429,10 +441,10 @@ class TrapDeck(LearningExperienceDeck):
 
     def lesson(self):
         # Full-width two-column layout with even margins.
-        w_lbl = Text("WRONG", font_size=26, weight="BOLD", color=RED).shift(LEFT * 3.4 + UP * 1.7)
-        r_lbl = Text("RIGHT", font_size=26, weight="BOLD", color=GREEN).shift(RIGHT * 3.4 + UP * 1.7)
-        w_body = Text(_wrap(self.WRONG, 20), font_size=26, color=RED).shift(LEFT * 3.4 + DOWN * 0.2)
-        r_body = Text(_wrap(self.RIGHT, 20), font_size=26, color=GREEN).shift(RIGHT * 3.4 + DOWN * 0.2)
+        w_lbl = Text("WRONG", font_size=FS(26), weight="BOLD", color=RED).shift(LEFT * 3.4 + UP * 1.7)
+        r_lbl = Text("RIGHT", font_size=FS(26), weight="BOLD", color=GREEN).shift(RIGHT * 3.4 + UP * 1.7)
+        w_body = Text(_wrap(self.WRONG, 20), font_size=FS(26), color=RED).shift(LEFT * 3.4 + DOWN * 0.2)
+        r_body = Text(_wrap(self.RIGHT, 20), font_size=FS(26), color=GREEN).shift(RIGHT * 3.4 + DOWN * 0.2)
         w_box = SurroundingRectangle(VGroup(w_lbl, w_body), color=RED, buff=0.35, corner_radius=0.12)
         r_box = SurroundingRectangle(VGroup(r_lbl, r_body), color=GREEN, buff=0.35, corner_radius=0.12)
         cross = Cross(w_box, color=RED, stroke_width=5)
@@ -442,7 +454,7 @@ class TrapDeck(LearningExperienceDeck):
         self.play(Create(cross), run_time=_rt(0.55))
         self.checkpoint()
         self.play(FadeIn(r_lbl), FadeIn(r_body), Create(r_box), run_time=_rt(1.0))
-        check = Text("✓", font_size=52, color=GREEN).move_to(r_box.get_top())
+        check = Text("✓", font_size=FS(52), color=GREEN).move_to(r_box.get_top())
         self.play(FadeIn(check, scale=1.3), run_time=_rt(0.45))
         self.section_break()  # emphasis beat to drive the correction home
 
@@ -461,7 +473,7 @@ class IdeaDeck(LearningExperienceDeck):
         hero.move_to(RIGHT * 3.5 + DOWN * 0.1)
         self.play(FadeIn(hero, shift=DOWN * 0.2), run_time=_rt(0.7))
 
-        lines = VGroup(*[Text(_wrap(s, 26), font_size=26, color=pal["step"]) for s in self.BULLETS])
+        lines = VGroup(*[Text(_wrap(s, 26), font_size=FS(26), color=pal["step"]) for s in self.BULLETS])
         lines.arrange(DOWN, buff=0.5, aligned_edge=LEFT)
         lines.move_to(LEFT * 3.2 + DOWN * 0.1)
         from manim import Polygon
@@ -518,7 +530,7 @@ class StoryDeck(LearningExperienceDeck):
         # Subtitle teaser, fades in under the title. Graphics-only mode skips
         # it — the React deck shows the subtitle on the title card.
         if self.SUBTITLE and not STORY_GRAPHICS_ONLY:
-            sub = _T(_wrap(self.SUBTITLE, 48), font_size=28, color=pal["accent"], weight="BOLD")
+            sub = _T(_wrap(self.SUBTITLE, 48), font_size=FS(28), color=pal["accent"], weight="BOLD")
             sub.to_edge(UP, buff=1.05)
             self.play(_Fi(sub, shift=DOWN * 0.1), run_time=_rt(0.7))
             self.wait(1.2)
@@ -539,10 +551,10 @@ class StoryDeck(LearningExperienceDeck):
             body_str = beat.get("body", "")
             if not STORY_GRAPHICS_ONLY:
                 head = _T(_wrap(beat.get("head", ""), 24),
-                          font_size=30, color=pal["accent"], weight="BOLD")
+                          font_size=FS(30), color=pal["accent"], weight="BOLD")
                 head.to_edge(UP, buff=1.0).to_edge(LEFT, buff=0.6)
                 body = _T(_wrap(body_str, 30),
-                          font_size=24, color=pal["step"])
+                          font_size=FS(24), color=pal["step"])
                 body.next_to(head, DOWN, buff=0.45, aligned_edge=LEFT)
                 self.play(_Fi(head, shift=DOWN * 0.15), run_time=_rt(0.6))
                 self.play(_Fi(body, shift=DOWN * 0.15), run_time=_rt(0.9))
@@ -578,9 +590,9 @@ class StoryDeck(LearningExperienceDeck):
 
         # "What you learned" closer. Skipped in graphics-only mode.
         if self.LEARNED and not STORY_GRAPHICS_ONLY:
-            learned_head = _T("What you learned", font_size=24,
+            learned_head = _T("What you learned", font_size=FS(24),
                               color=GOLD, weight="BOLD").to_edge(UP, buff=1.0)
-            learned = _T(_wrap(self.LEARNED, 36), font_size=32,
+            learned = _T(_wrap(self.LEARNED, 36), font_size=FS(32),
                          color=pal["accent"], weight="BOLD")
             learned.next_to(learned_head, DOWN, buff=0.5)
             self.play(_Fi(learned_head), run_time=_rt(0.5))

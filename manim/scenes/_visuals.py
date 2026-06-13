@@ -20,7 +20,7 @@ DARK = "#0F172A"
 
 def number_line(lo=-3, hi=3, dots=(1,), color=BLUE) -> VGroup:
     nl = NumberLine(x_range=[lo, hi, 1], length=5.4, include_numbers=True,
-                    font_size=40, color=WHITE, stroke_width=5)
+                    font_size=58, color=WHITE, stroke_width=5)
     marks = VGroup(*[Dot(nl.n2p(v), radius=0.16, color=color) for v in dots])
     g = VGroup(nl, marks)
     g.nl = nl
@@ -39,7 +39,7 @@ def fraction_bar(num=2, den=3, color=BLUE) -> VGroup:
                       fill_opacity=1 if i < num else 0.12)
         cells.add(c)
     cells.arrange(RIGHT, buff=0)
-    label = Text(f"{num}/{den}", font_size=40, color=YELLOW, weight="BOLD").next_to(cells, DOWN, buff=0.24)
+    label = Text(f"{num}/{den}", font_size=58, color=YELLOW, weight="BOLD").next_to(cells, DOWN, buff=0.24)
     g = VGroup(cells, label)
     g.cells = cells
     g.label = label
@@ -94,8 +94,8 @@ def area_rect(color=ORANGE) -> VGroup:
     for gy in (-0.5, 0.5):
         grid.add(Line(box.get_left() + UP * gy * 1.3, box.get_right() + UP * gy * 1.3,
                       stroke_width=1.5, color=WHITE).set_opacity(0.35))
-    wl = Text("base", font_size=34, color=WHITE, weight="BOLD").next_to(box, DOWN, buff=0.22)
-    hl = Text("height", font_size=34, color=WHITE, weight="BOLD").next_to(box, LEFT, buff=0.22).rotate(PI / 2)
+    wl = Text("base", font_size=49, color=WHITE, weight="BOLD").next_to(box, DOWN, buff=0.22)
+    hl = Text("height", font_size=49, color=WHITE, weight="BOLD").next_to(box, LEFT, buff=0.22).rotate(PI / 2)
     g = VGroup(box, grid, wl, hl)
     g.box = box
     return g
@@ -115,7 +115,7 @@ def tape_diagram(parts=(3, 5), colors=(BLUE, ORANGE), labels=None) -> VGroup:
                         stroke_color=WHITE, stroke_width=2)
         seg.move_to([x + seg_w / 2, 0, 0])
         lab = Text(str(p) if labels is None else str(labels[i]),
-                   font_size=24, color=WHITE, weight="BOLD").move_to(seg)
+                   font_size=35, color=WHITE, weight="BOLD").move_to(seg)
         bar.add(VGroup(seg, lab))
         x += seg_w
     g = VGroup(bar)
@@ -125,12 +125,12 @@ def tape_diagram(parts=(3, 5), colors=(BLUE, ORANGE), labels=None) -> VGroup:
 
 def number_bond(whole=10, parts=(3, 7), color=BLUE) -> VGroup:
     big = Circle(radius=0.7, fill_color=color, fill_opacity=0.85, stroke_color=WHITE, stroke_width=3)
-    big_t = Text(str(whole), font_size=40, color=WHITE, weight="BOLD").move_to(big)
+    big_t = Text(str(whole), font_size=58, color=WHITE, weight="BOLD").move_to(big)
     big_g = VGroup(big, big_t).shift(UP * 1.1)
     sub_l = Circle(radius=0.58, fill_color=YELLOW, fill_opacity=0.9, stroke_color=WHITE, stroke_width=3).shift(LEFT * 1.7 + DOWN * 0.6)
-    sub_lt = Text(str(parts[0]), font_size=38, color=DARK, weight="BOLD").move_to(sub_l)
+    sub_lt = Text(str(parts[0]), font_size=55, color=DARK, weight="BOLD").move_to(sub_l)
     sub_r = Circle(radius=0.58, fill_color=GREEN, fill_opacity=0.9, stroke_color=WHITE, stroke_width=3).shift(RIGHT * 1.7 + DOWN * 0.6)
-    sub_rt = Text(str(parts[1]), font_size=38, color=DARK, weight="BOLD").move_to(sub_r)
+    sub_rt = Text(str(parts[1]), font_size=55, color=DARK, weight="BOLD").move_to(sub_r)
     line_l = Line(big.get_bottom(), sub_l.get_top(), stroke_width=3, color=WHITE)
     line_r = Line(big.get_bottom(), sub_r.get_top(), stroke_width=3, color=WHITE)
     return VGroup(line_l, line_r, big_g, sub_l, sub_lt, sub_r, sub_rt)
@@ -142,15 +142,15 @@ def comparison_strip(a=4, b=7, color_a=BLUE, color_b=ORANGE) -> VGroup:
                       stroke_color=WHITE, stroke_width=2)
     bar_b = Rectangle(width=b * unit, height=0.6, fill_color=color_b, fill_opacity=0.85,
                       stroke_color=WHITE, stroke_width=2)
-    la = Text(f"A = {a}", font_size=22, color=color_a).next_to(bar_a, LEFT, buff=0.2)
-    lb = Text(f"B = {b}", font_size=22, color=color_b).next_to(bar_b, LEFT, buff=0.2)
+    la = Text(f"A = {a}", font_size=32, color=color_a).next_to(bar_a, LEFT, buff=0.2)
+    lb = Text(f"B = {b}", font_size=32, color=color_b).next_to(bar_b, LEFT, buff=0.2)
     grp = VGroup(VGroup(la, bar_a), VGroup(lb, bar_b)).arrange(DOWN, buff=0.5, aligned_edge=LEFT)
     return grp
 
 
 def scaling_arrow(factor="×3", color=YELLOW) -> VGroup:
     arr = Arrow(LEFT * 1.0, RIGHT * 1.0, color=color, buff=0, stroke_width=6, max_tip_length_to_length_ratio=0.18)
-    lab = Text(factor, font_size=26, color=color, weight="BOLD").next_to(arr, UP, buff=0.12)
+    lab = Text(factor, font_size=38, color=color, weight="BOLD").next_to(arr, UP, buff=0.12)
     return VGroup(arr, lab)
 
 
@@ -159,7 +159,7 @@ def scaling_arrow(factor="×3", color=YELLOW) -> VGroup:
 def dot_plot(data=(1, 2, 2, 3, 3, 3, 4), color=BLUE) -> VGroup:
     lo, hi = min(data), max(data)
     nl = NumberLine(x_range=[lo - 1, hi + 1, 1], length=4.8, include_numbers=True,
-                    font_size=36, color=WHITE, stroke_width=4)
+                    font_size=52, color=WHITE, stroke_width=4)
     counts = {}
     dots = VGroup()
     for v in data:
@@ -171,12 +171,12 @@ def dot_plot(data=(1, 2, 2, 3, 3, 3, 4), color=BLUE) -> VGroup:
 
 def ratio_table(pairs=((1, 3), (2, 6), (3, 9)), c1=BLUE, c2=ORANGE) -> VGroup:
     rows = VGroup()
-    head = VGroup(Text("in", font_size=38, color=c1, weight="BOLD"),
-                  Text("out", font_size=38, color=c2, weight="BOLD")).arrange(RIGHT, buff=1.5)
+    head = VGroup(Text("in", font_size=55, color=c1, weight="BOLD"),
+                  Text("out", font_size=55, color=c2, weight="BOLD")).arrange(RIGHT, buff=1.5)
     rows.add(head)
     for a, b in pairs:
-        rows.add(VGroup(Text(str(a), font_size=42, color=WHITE, weight="BOLD"),
-                        Text(str(b), font_size=42, color=WHITE, weight="BOLD")).arrange(RIGHT, buff=2.0))
+        rows.add(VGroup(Text(str(a), font_size=61, color=WHITE, weight="BOLD"),
+                        Text(str(b), font_size=61, color=WHITE, weight="BOLD")).arrange(RIGHT, buff=2.0))
     rows.arrange(DOWN, buff=0.4)
     box = Rectangle(width=rows.width + 0.8, height=rows.height + 0.6,
                     stroke_color=WHITE, stroke_width=3).move_to(rows)
@@ -197,8 +197,8 @@ def balance_scale(left="2x+5", right="13", color=BLUE) -> VGroup:
         Polygon([1.1, 0.1, 0], [1.9, 0.1, 0], [1.7, -0.15, 0], [1.3, -0.15, 0],
                 fill_color=ORANGE, fill_opacity=0.4, stroke_color=ORANGE, stroke_width=2),
     )
-    lt = Text(left, font_size=34, color=color, weight="BOLD").move_to([-1.5, 0.36, 0])
-    rt = Text(right, font_size=34, color=ORANGE, weight="BOLD").move_to([1.5, 0.36, 0])
+    lt = Text(left, font_size=49, color=color, weight="BOLD").move_to([-1.5, 0.36, 0])
+    rt = Text(right, font_size=49, color=ORANGE, weight="BOLD").move_to([1.5, 0.36, 0])
     return VGroup(base, post, beam, lpan, rpan, lt, rt)
 
 
@@ -246,18 +246,20 @@ def _zero_pad(value: int, places: int) -> list[str]:
 
 
 def place_value_row(value: int, places: int = 3, color=WHITE,
-                    box_color=BLUE, cell_w=0.95, cell_h=0.95) -> VGroup:
-    """One row of `places` boxed digits.  Spaces become blanks."""
+                    box_color=BLUE, cell_w=1.25, cell_h=1.25) -> VGroup:
+    """One row of `places` boxed digits.  Spaces become blanks.  Cells default
+    to 1.25 wide so the digit + the column label above it both read large on
+    a phone."""
     digits = _zero_pad(value, places)
     cells = []
     boxes = VGroup()
     nums = VGroup()
     for i, d in enumerate(digits):
-        box = RoundedRectangle(width=cell_w, height=cell_h, corner_radius=0.08,
-                               stroke_color=box_color, stroke_width=3,
-                               fill_color=box_color, fill_opacity=0.07)
+        box = RoundedRectangle(width=cell_w, height=cell_h, corner_radius=0.1,
+                               stroke_color=box_color, stroke_width=4,
+                               fill_color=box_color, fill_opacity=0.10)
         box.move_to([(i - (places - 1) / 2) * (cell_w + 0.1), 0, 0])
-        n = Text(d if d.strip() else "", font_size=48, weight="BOLD",
+        n = Text(d if d.strip() else "", font_size=86, weight="BOLD",
                  color=color).move_to(box.get_center())
         cells.append((d, n, box))
         boxes.add(box)
@@ -279,7 +281,7 @@ def place_value_stack(top: int, bottom: int, op: str = "+",
     top_row = place_value_row(top, places=places, box_color=top_color)
     bot_row = place_value_row(bottom, places=places, box_color=bot_color)
     bot_row.next_to(top_row, DOWN, buff=0.18)
-    op_sym = Text(op, font_size=44, weight="BOLD", color=op_color)
+    op_sym = Text(op, font_size=64, weight="BOLD", color=op_color)
     op_sym.next_to(bot_row, LEFT, buff=0.35)
     rule = Line(start=bot_row.get_left() + LEFT * 0.25 + DOWN * 0.55,
                 end=bot_row.get_right() + RIGHT * 0.05 + DOWN * 0.55,
@@ -296,23 +298,26 @@ _WHOLE_LABELS = ["thousands", "hundreds", "tens", "ones"]
 _DECIMAL_LABELS = ["tenths", "hundredths", "thousandths"]
 
 
-def column_label_band(places: int = 3, cell_w: float = 0.95,
+def column_label_band(places: int = 3, cell_w: float = 1.25,
                       decimal_places: int = 0) -> VGroup:
-    """Thin column-name band that sits above a place_value_row /
+    """Phone-readable column-name band that sits above a place_value_row /
     place_value_stack.  Defaults to whole-number labels (hundreds → ones).
     Pass `decimal_places > 0` to label the tenths/hundredths/etc. trailing
-    columns instead."""
+    columns instead.  Labels are big and bold so a kid can read them from
+    arm's length on a phone.  All labels share the same scale so the row
+    reads as a uniform band, not a mismatched grab-bag."""
     whole = places - decimal_places
-    # Whole-number side: take the rightmost `whole` of ["thousands","hundreds","tens","ones"].
     whole_names = _WHOLE_LABELS[-whole:] if 0 < whole <= len(_WHOLE_LABELS) else ["place"] * max(whole, 0)
     dec_names = _DECIMAL_LABELS[:decimal_places]
     names = whole_names + dec_names
+    # Build at full size first, then shrink uniformly so all labels match.
+    raw = [Text(n, font_size=34, weight="BOLD", color=YELLOW) for n in names]
+    max_w = max((t.width for t in raw), default=1.0)
+    budget = cell_w + 0.18
+    scale = min(1.0, budget / max_w) if max_w > 0 else 1.0
     band = VGroup()
-    for i, name in enumerate(names):
-        t = Text(name, font_size=16, weight="BOLD", color=YELLOW)
-        # Shrink if it overflows the cell.
-        if t.width > cell_w - 0.05:
-            t.scale((cell_w - 0.05) / t.width)
+    for i, t in enumerate(raw):
+        t.scale(scale)
         t.move_to([(i - (places - 1) / 2) * (cell_w + 0.1), 0, 0])
         band.add(t)
     return band
@@ -334,10 +339,10 @@ def carry_above(scene, target_row: VGroup, col: int, digit: str,
     would tick `1` over the tens column when carrying.  Returns the carried
     Text so the deck can fade it out later."""
     box = target_row.boxes[col]
-    carry = Text(digit, font_size=22, weight="BOLD", color=color)
+    carry = Text(digit, font_size=44, weight="BOLD", color=color)
     # Tuck the carry just above the cell, slightly to the upper-left corner
     # — exactly how the standard algorithm is taught on paper.
-    carry.move_to(box.get_corner(UP + LEFT) + UP * 0.05 + RIGHT * 0.16)
+    carry.move_to(box.get_corner(UP + LEFT) + UP * 0.08 + RIGHT * 0.22)
     scene.play(FadeIn(carry, shift=DOWN * 0.15), run_time=run_time)
     return carry
 
@@ -347,8 +352,8 @@ def write_result_digit(scene, result_row: VGroup, col: int, digit: str,
     """Reveal the answer digit in a result row's cell."""
     box = result_row.boxes[col]
     num = result_row.nums[col]
-    new = Text(digit, font_size=48, weight="BOLD", color=color).move_to(box.get_center())
-    scene.play(Transform(num, new), box.animate.set_stroke(color, width=5),
+    new = Text(digit, font_size=86, weight="BOLD", color=color).move_to(box.get_center())
+    scene.play(Transform(num, new), box.animate.set_stroke(color, width=6),
                run_time=run_time)
 
 
