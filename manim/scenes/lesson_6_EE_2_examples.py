@@ -1,17 +1,16 @@
-"""6.EE Unit 2 examples - Substitute & evaluate (pedagogy sample).
+"""6.EE Unit 2 examples - Substitute & evaluate (pedagogy sample, big visuals).
 Math (verified):
   1. Evaluate 2x + 5 when x = 4   -> 13
   2. Evaluate 3 + x  when x = 6   -> 9
   3. Evaluate x - 4  when x = 7   -> 3
-Misconception shown: 2x + 5 read as 2 + x + 5 (drops the multiplication).
+Misconception: 2x read as 2 + x (drops the multiplication).
 """
 from manim import *  # noqa: F401,F403
 import _mascot as M
 import _visuals as V
 from _helpers import (
-    LearningExperienceDeck, title_bar, place_mascot,
-    prediction_hook, method_label, misconception_scene, pro_tip, answer_card,
-    EXAMPLE_OUTROS, palette_for, _seed, _rt,
+    LearningExperienceDeck, prediction_hook, method_label, misconception_scene,
+    pro_tip, expert_move, answer_card, EXAMPLE_OUTROS, _rt,
 )
 
 
@@ -26,102 +25,99 @@ class Lesson6EE2Examples(LearningExperienceDeck):
         pal = self.pal
         mascot = self.mascot
 
-        # ── Prediction hook ───────────────────────────────────────
+        # ── Prediction hook (big, centered) ──────────────────────
         hook = prediction_hook(self, "If x = 4, what is 2x?", pal)
         M.think(self, mascot)
-        self.wait(0.3)
         self.play(FadeOut(hook), run_time=_rt(0.4))
 
-        # ── Method A: dot array (visual / intuitive) ─────────────
-        lblA = method_label("Visual: 2 groups of 4", BLUE)
-        lblA.to_edge(UP, buff=1.1).shift(LEFT * 3.1)
+        # ── Expert move: think-like-a-pro strategy ───────────────
+        em = expert_move(self, self.DOMAIN, self.seed, pal)
+        self.play(FadeOut(em), run_time=_rt(0.4))
+
+        # ── Method A: ONE big picture filling the frame ──────────
+        # [ 2 x 4 blue dots ]  +  [ 5 yellow dots ]  = 13
+        lblA = Text("2 groups of 4  +  5 more", font_size=32, color=BLUE, weight="BOLD")
+        lblA.to_edge(UP, buff=1.05)
         self.play(FadeIn(lblA, shift=UP * 0.15), run_time=_rt(0.5))
 
-        grid = V.dot_array(rows=2, cols=4, color=BLUE, dot_r=0.18, gap=0.55)
-        grid.move_to(LEFT * 3.0 + DOWN * 0.4)
+        grid = V.dot_array(rows=2, cols=4, color=BLUE, dot_r=0.30, gap=0.95)
+        grid.move_to(LEFT * 3.1 + DOWN * 0.2)
         self.play(FadeIn(grid, shift=DOWN * 0.2), run_time=_rt(0.6))
-        # Pulse each row to encode "2 × 4 = 8" as motion.
-        V.group_array(self, grid, run_time=0.9)
-        eq_8 = Text("= 8", font_size=28, color=BLUE, weight="BOLD").next_to(grid, DOWN, buff=0.3)
-        self.play(Write(eq_8), run_time=_rt(0.5))
+        V.group_array(self, grid, run_time=1.0)
+
+        plus = Text("+", font_size=60, color=WHITE, weight="BOLD").move_to(LEFT * 0.5 + DOWN * 0.2)
+        self.play(FadeIn(plus), run_time=_rt(0.3))
+
+        extras = VGroup(*[
+            Dot([(1.2 + (i % 3) * 0.85), (0.45 - (i // 3) * 0.85), 0], radius=0.30, color=YELLOW)
+            for i in range(5)
+        ])
+        self.play(FadeIn(extras, lag_ratio=0.1), run_time=_rt(0.9))
         M.blink(self, mascot)
 
-        # Add 5 yellow dots for "+ 5".
-        plus = Text("+ 5", font_size=28, color=YELLOW, weight="BOLD").next_to(eq_8, RIGHT, buff=0.35)
-        self.play(FadeIn(plus, shift=RIGHT * 0.2), run_time=_rt(0.4))
-        extras = VGroup(*[Dot([(-2.6 + i * 0.45), -2.0, 0], radius=0.16, color=YELLOW) for i in range(5)])
-        self.play(FadeIn(extras, lag_ratio=0.08), run_time=_rt(0.8))
-        self.wait(0.3)
+        # Big running total under the picture.
+        total = Text("8  +  5  =  13", font_size=40, color=WHITE, weight="BOLD")
+        total.to_edge(DOWN, buff=1.4)
+        self.play(Write(total), run_time=_rt(0.7))
+        ans = answer_card(self, "13", pal["answer"], mascot, pos=DOWN * 3.1)
+        self.section_break("eureka")
+        self.play(FadeOut(VGroup(lblA, grid, plus, extras, total, ans)), run_time=_rt(0.5))
 
-        # ── Method B: symbolic (right side) ──────────────────────
-        lblB = method_label("Symbolic", GREEN)
-        lblB.to_edge(UP, buff=1.1).shift(RIGHT * 3.0)
+        # ── Method B: symbolic, big and centered ─────────────────
+        lblB = Text("Now the symbol way", font_size=32, color=GREEN, weight="BOLD")
+        lblB.to_edge(UP, buff=1.05)
         self.play(FadeIn(lblB, shift=UP * 0.15), run_time=_rt(0.5))
-
-        sym_lines = VGroup(
-            Text("2x + 5", font_size=28, color=WHITE),
-            Text("2(4) + 5", font_size=28, color=WHITE),
-            Text("8 + 5", font_size=28, color=WHITE),
-        ).arrange(DOWN, buff=0.32, aligned_edge=LEFT)
-        sym_lines.next_to(lblB, DOWN, buff=0.3)
-        for ln in sym_lines:
-            self.play(FadeIn(ln, shift=DOWN * 0.15), run_time=_rt(0.55))
-        # Big green answer card centered between the two methods.
-        ans = answer_card(self, "= 13", GREEN, mascot, pos=DOWN * 2.7 + RIGHT * 2.6)
-        self.wait(0.5)
-
-        # Clear out the example before the misconception.
-        self.play(FadeOut(VGroup(lblA, grid, eq_8, plus, extras, lblB, sym_lines, ans)),
-                  run_time=_rt(0.55))
+        sym = VGroup(
+            Text("2x + 5", font_size=44, color=WHITE),
+            Text("2(4) + 5", font_size=44, color=WHITE),
+            Text("8 + 5  =  13", font_size=44, color=GREEN, weight="BOLD"),
+        ).arrange(DOWN, buff=0.5)
+        sym.move_to(DOWN * 0.2)
+        for ln in sym:
+            self.play(FadeIn(ln, shift=DOWN * 0.15), run_time=_rt(0.6))
+        self.section_break("bounce")
+        self.play(FadeOut(VGroup(lblB, sym)), run_time=_rt(0.45))
 
         # ── Misconception scene ──────────────────────────────────
         misc = misconception_scene(
             self,
-            wrong_expr="2x = 2 + x  → 11",
-            correct_expr="2x = 2·x  → 13",
+            wrong_expr="2x = 2 + x  →  11",
+            correct_expr="2x = 2·x  →  13",
             mascot=mascot,
             pal=pal,
         )
-        self.wait(0.6)
+        self.section_break("wave_arm")
         self.play(FadeOut(misc), run_time=_rt(0.5))
 
-        # ── A second quick example to hit the ≥3 example bar ─────
-        q2 = Text("Q: 3 + x   when x = 6", font_size=26, color=YELLOW, weight="BOLD")
-        q2.to_edge(UP, buff=1.1).shift(LEFT * 2.4)
+        # ── Example 2: number bond, big ──────────────────────────
+        q2 = Text("3 + x   when x = 6", font_size=34, color=YELLOW, weight="BOLD")
+        q2.to_edge(UP, buff=1.05)
         self.play(Write(q2), run_time=_rt(0.6))
         nb = V.number_bond(whole=9, parts=(3, 6), color=BLUE)
-        nb.move_to(LEFT * 2.8 + DOWN * 0.4)
+        nb.scale(1.5).move_to(DOWN * 0.4)
         self.play(FadeIn(nb, shift=DOWN * 0.15), run_time=_rt(0.6))
-        sym2 = VGroup(
-            Text("3 + x", font_size=26, color=WHITE),
-            Text("3 + 6", font_size=26, color=WHITE),
-            Text("= 9", font_size=30, color=GREEN, weight="BOLD"),
-        ).arrange(DOWN, buff=0.28, aligned_edge=LEFT).next_to(q2, DOWN, buff=0.3).shift(RIGHT * 4.6)
-        for ln in sym2:
-            self.play(FadeIn(ln, shift=DOWN * 0.15), run_time=_rt(0.45))
-        M.cheer(self, mascot)
-        self.wait(0.4)
-        self.play(FadeOut(VGroup(q2, nb, sym2)), run_time=_rt(0.45))
+        a2 = answer_card(self, "= 9", GREEN, mascot, pos=DOWN * 2.9)
+        self.section_break("eureka")
+        self.play(FadeOut(VGroup(q2, nb, a2)), run_time=_rt(0.45))
 
-        # ── Third example ────────────────────────────────────────
-        q3 = Text("Q: x - 4   when x = 7", font_size=26, color=YELLOW, weight="BOLD")
-        q3.to_edge(UP, buff=1.1).shift(LEFT * 2.4)
+        # ── Example 3: number-line slide, big ────────────────────
+        q3 = Text("x - 4   when x = 7", font_size=34, color=YELLOW, weight="BOLD")
+        q3.to_edge(UP, buff=1.05)
         self.play(Write(q3), run_time=_rt(0.6))
-        nl = V.number_line(lo=0, hi=8, dots=(7,), color=BLUE)
-        nl.move_to(LEFT * 1.5 + DOWN * 0.5)
+        nl = V.number_line(lo=0, hi=8, dots=(), color=BLUE)
+        nl.scale(1.25).move_to(UP * 0.1)
         self.play(FadeIn(nl), run_time=_rt(0.5))
-        runner = Dot(nl.nl.n2p(7), color=YELLOW, radius=0.14)
-        self.play(FadeIn(runner), run_time=_rt(0.3))
-        # Slide the marker 4 steps left to encode subtraction.
-        V.slide_on_number_line(self, nl, runner, 7, 3, run_time=0.9)
-        sym3 = Text("7 - 4 = 3", font_size=32, color=GREEN, weight="BOLD")
-        sym3.next_to(nl, DOWN, buff=0.45)
-        self.play(Write(sym3), run_time=_rt(0.6))
-        M.cheer(self, mascot)
-        self.wait(0.4)
-        self.play(FadeOut(VGroup(q3, nl, runner, sym3)), run_time=_rt(0.45))
+        runner = Dot(nl.nl.n2p(7), color=YELLOW, radius=0.20)
+        self.play(FadeIn(runner, scale=1.4), run_time=_rt(0.3))
+        slide_label = Text("slide back 4", font_size=26, color=YELLOW).next_to(nl, UP, buff=0.3)
+        self.play(FadeIn(slide_label), run_time=_rt(0.3))
+        # n2p uses the scaled coordinates via the submobject transform.
+        self.play(runner.animate.move_to(nl.nl.n2p(3)), run_time=_rt(1.0))
+        a3 = answer_card(self, "7 - 4 = 3", GREEN, mascot, pos=DOWN * 2.6)
+        self.section_break("bounce")
+        self.play(FadeOut(VGroup(q3, nl, runner, slide_label, a3)), run_time=_rt(0.45))
 
-        # ── Pro tip ──────────────────────────────────────────────
+        # ── Closing pro tip ──────────────────────────────────────
         tip = pro_tip(self, self.DOMAIN, self.seed, pal)
-        self.wait(0.9)
+        self.wait(1.0)
         self.play(FadeOut(tip), run_time=_rt(0.4))

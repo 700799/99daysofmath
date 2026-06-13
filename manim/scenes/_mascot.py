@@ -175,3 +175,28 @@ def spin(scene, m, run_time=0.8):
 
 def wave_in(scene, m, run_time=0.6):
     scene.play(GrowFromCenter(m), run_time=run_time)
+
+
+def bounce(scene, m, run_time=0.8):
+    # Two playful hops in place.
+    c = m.get_center()
+    scene.play(m.animate.shift(UP * 0.35), run_time=run_time / 4)
+    scene.play(m.animate.move_to(c), run_time=run_time / 4)
+    scene.play(m.animate.shift(UP * 0.22), run_time=run_time / 4)
+    scene.play(m.animate.move_to(c), run_time=run_time / 4)
+
+
+def wave_arm(scene, m, run_time=0.7):
+    # Tilt side to side like a friendly wave.
+    scene.play(m.animate.rotate(0.18), run_time=run_time / 3)
+    scene.play(m.animate.rotate(-0.36), run_time=run_time / 3)
+    scene.play(m.animate.rotate(0.18), run_time=run_time / 3)
+
+
+def eureka(scene, m, run_time=0.8):
+    # Pop + a yellow spark above the head.
+    from manim import Dot, FadeIn, FadeOut, YELLOW as _Y, UP as _UP
+    spark = Dot(m.get_top() + _UP * 0.25, radius=0.12, color=_Y)
+    c = m.get_center()
+    scene.play(m.animate.scale(1.12).shift(_UP * 0.18), FadeIn(spark, scale=1.5), run_time=run_time / 2)
+    scene.play(m.animate.scale(1 / 1.12).move_to(c), FadeOut(spark), run_time=run_time / 2)

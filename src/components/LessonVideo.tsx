@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
 interface Props {
   src: string;
@@ -8,6 +8,7 @@ interface Props {
 }
 
 const RATE_KEY = 'lesson:video-rate';
+const PAUSE_KEY = 'lesson:auto-pause';
 
 function getInitialRate(): number {
   if (typeof window === 'undefined') return 1;
@@ -15,17 +16,37 @@ function getInitialRate(): number {
   return v === '0.75' ? 0.75 : 1;
 }
 
+function getInitialAutoPause(): boolean {
+  if (typeof window === 'undefined') return true;
+  return window.localStorage.getItem(PAUSE_KEY) !== 'off';
+}
+
+interface Chapters {
+  checkpoints: number[];
+  total: number;
+}
+
 /**
- * Reusable lesson-video player. Big prominent Play / Pause overlay, freezes
- * on the final frame (no auto-loop), and offers a 🐢 slow-it-down toggle.
- * The native browser controls bar is still available for fine seeking.
+ * Reusable lesson-video player. Big prominent Play / Pause overlay, freezes on
+ * the final frame (no auto-loop), a 🐢 slow-it-down toggle, and Khan-style
+ * "Continue" checkpoints: if a `<src>.chapters.json` sidecar exists, the video
+ * auto-pauses at each section boundary and shows a big Continue button so kids
+ * set their own pace.
  */
 export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
   const url = `${import.meta.env.BASE_URL}videos/lessons/${src}`;
+  const chaptersUrl = `${import.meta.env.BASE_URL}videos/lessons/${src.replace(/\.mp4$/, '.chapters.json')}`;
   const ref = useRef<HTMLVideoElement | null>(null);
   const [playing, setPlaying] = useState(false);
   const [ended, setEnded] = useState(false);
   const [rate, setRate] = useState<number>(() => getInitialRate());
+  const [autoPause, setAutoPause] = useState<boolean>(() => getInitialAutoPause());
+
+  // Checkpoints (scaled to real duration once metadata loads).
+  const rawRef = useRef<Chapters | null>(null);
+  const marksRef = useRef<number[]>([]);
+  const nextIdxRef = useRef(0);
+  const [atCheckpoint, setAtCheckpoint] = useState(false);
 
   useEffect(() => {
     const v = ref.current;
@@ -37,10 +58,45 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
     window.localStorage.setItem(RATE_KEY, String(rate));
   }, [rate]);
 
+  useEffect(() => {
+    window.localStorage.setItem(PAUSE_KEY, autoPause ? 'on' : 'off');
+  }, [autoPause]);
+
+  // Load the chapters sidecar (graceful no-op if missing).
+  useEffect(() => {
+    let cancelled = false;
+    fetch(chaptersUrl)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j: Chapters | null) => {
+        if (!cancelled && j && Array.isArray(j.checkpoints)) rawRef.current = j;
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [chaptersUrl]);
+
+  const computeMarks = useCallback(() => {
+    const v = ref.current;
+    const raw = rawRef.current;
+    if (!v || !raw || !raw.total || !isFinite(v.duration)) {
+      marksRef.current = [];
+      return;
+    }
+    const ratio = v.duration / raw.total;
+    // Scale, drop any too close to the very end, and sort.
+    marksRef.current = raw.checkpoints
+      .map((c) => c * ratio)
+      .filter((t) => t > 0.5 && t < v.duration - 0.4)
+      .sort((a, b) => a - b);
+    nextIdxRef.current = 0;
+  }, []);
+
   const play = () => {
     const v = ref.current;
     if (!v) return;
     setEnded(false);
+    setAtCheckpoint(false);
     v.play().catch(() => {});
   };
 
@@ -50,8 +106,28 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
     const v = ref.current;
     if (!v) return;
     v.currentTime = 0;
+    nextIdxRef.current = 0;
     setEnded(false);
+    setAtCheckpoint(false);
     v.play().catch(() => {});
+  };
+
+  const onTimeUpdate = () => {
+    if (!autoPause) return;
+    const v = ref.current;
+    const marks = marksRef.current;
+    if (!v || marks.length === 0) return;
+    const i = nextIdxRef.current;
+    if (i < marks.length && v.currentTime >= marks[i]) {
+      nextIdxRef.current = i + 1;
+      v.pause();
+      setAtCheckpoint(true);
+    }
+  };
+
+  const continuePlayback = () => {
+    setAtCheckpoint(false);
+    ref.current?.play().catch(() => {});
   };
 
   return (
@@ -65,8 +141,19 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
         preload={preload}
         className="w-full block"
         aria-label={title ?? 'Lesson animation'}
+        onLoadedMetadata={computeMarks}
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
+        onSeeked={() => {
+          // Recompute which checkpoint is next after a manual scrub.
+          const v = ref.current;
+          if (!v) return;
+          const marks = marksRef.current;
+          let i = 0;
+          while (i < marks.length && marks[i] <= v.currentTime + 0.05) i++;
+          nextIdxRef.current = i;
+        }}
+        onTimeUpdate={onTimeUpdate}
         onEnded={() => {
           setEnded(true);
           setPlaying(false);
@@ -74,7 +161,7 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
       />
 
       {/* Big center overlay — visible until first play, fades out while playing. */}
-      {!playing && !ended && (
+      {!playing && !ended && !atCheckpoint && (
         <button
           type="button"
           onClick={play}
@@ -87,8 +174,34 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
         </button>
       )}
 
+      {/* Checkpoint "Continue" overlay — kid sets their own pace. */}
+      {atCheckpoint && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/55">
+          <div className="text-white font-display font-extrabold text-lg drop-shadow">
+            Take your time! 🧠
+          </div>
+          <button
+            type="button"
+            onClick={continuePlayback}
+            className="rounded-full bg-duo-green hover:bg-green-600 text-white font-display font-extrabold text-xl px-8 h-16 flex items-center gap-2 shadow-lg active:translate-y-0.5 transition"
+          >
+            Continue ▶
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setAutoPause(false);
+              continuePlayback();
+            }}
+            className="text-white/80 text-xs font-display font-bold underline"
+          >
+            Don't pause again
+          </button>
+        </div>
+      )}
+
       {/* Pause button — shows briefly when playing (tap the video to surface it). */}
-      {playing && (
+      {playing && !atCheckpoint && (
         <button
           type="button"
           onClick={pause}
