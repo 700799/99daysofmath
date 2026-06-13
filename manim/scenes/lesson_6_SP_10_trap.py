@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6SP10Trap(TrapDeck):
-    TITLE = "Avoid the trap - Summarizing data sets"
+    TITLE = "Avoid the trap · Summarizing data sets"
+    DOMAIN = "6.SP"
     WRONG = "SORT data before finding median or range"
     RIGHT = "unsorted data hides the extremes."

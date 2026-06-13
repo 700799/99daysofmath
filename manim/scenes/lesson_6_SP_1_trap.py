@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6SP1Trap(TrapDeck):
-    TITLE = "Avoid the trap - Mean, median & mode"
+    TITLE = "Avoid the trap · Mean, median & mode"
+    DOMAIN = "6.SP"
     WRONG = "Sort the numbers before finding the median."
     RIGHT = "Slow down and re-read."

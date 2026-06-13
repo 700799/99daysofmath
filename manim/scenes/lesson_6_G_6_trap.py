@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6G6Trap(TrapDeck):
-    TITLE = "Avoid the trap - Area & volume review"
+    TITLE = "Avoid the trap · Area & volume review"
+    DOMAIN = "6.G"
     WRONG = "Square units for area, cubic units for volume."
     RIGHT = "Slow down and re-read."

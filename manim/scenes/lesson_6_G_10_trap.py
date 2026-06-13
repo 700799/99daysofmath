@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6G10Trap(TrapDeck):
-    TITLE = "Avoid the trap - Surface area & nets"
+    TITLE = "Avoid the trap · Surface area & nets"
+    DOMAIN = "6.G"
     WRONG = "Surface area uses SQUARE units. Volume uses cubic"
     RIGHT = "don't mix them up."

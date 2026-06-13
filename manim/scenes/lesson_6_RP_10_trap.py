@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6RP10Trap(TrapDeck):
-    TITLE = "Avoid the trap - Ratio & proportion problem-solving"
+    TITLE = "Avoid the trap · Ratio & proportion problem-solving"
+    DOMAIN = "6.RP"
     WRONG = "Scale BOTH parts of the ratio by the same factor"
     RIGHT = "never just one side."

@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6G9Trap(TrapDeck):
-    TITLE = "Avoid the trap - Polygons on the coordinate plane"
+    TITLE = "Avoid the trap · Polygons on the coordinate plane"
+    DOMAIN = "6.G"
     WRONG = "Subtract with the absolute value"
     RIGHT = "a \"negative distance\" means you flipped the subtraction order."

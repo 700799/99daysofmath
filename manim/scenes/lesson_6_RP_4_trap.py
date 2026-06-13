@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6RP4Trap(TrapDeck):
-    TITLE = "Avoid the trap - Part-to-part vs part-to-whole"
+    TITLE = "Avoid the trap · Part-to-part vs part-to-whole"
+    DOMAIN = "6.RP"
     WRONG = "For part-to-whole, add the parts first to get the total."
     RIGHT = "Slow down and re-read."

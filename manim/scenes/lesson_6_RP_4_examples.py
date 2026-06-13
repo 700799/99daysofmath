@@ -9,7 +9,8 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6RP4Examples(ExamplesDeck):
-    TITLE = "Examples - Part-to-part vs part-to-whole"
+    TITLE = "Examples · Part-to-part vs part-to-whole"
+    DOMAIN = "6.RP"
     EXAMPLES = [
         ("3 boys and 2 girls. Ratio of boys to the whole class?", ["Whole = 3 + 2 = 5.", "Boys to whole = 3 to 5.", "= 3:5."], "3:5"),
         ("A bowl has 4 apples and 6 pears. Ratio of apples to all fruit?", ["Total = 4 + 6 = 10.", "Apples to total = 4:10.", "Simplify: 2:5."], "2:5"),

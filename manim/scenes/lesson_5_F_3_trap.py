@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson5F3Trap(TrapDeck):
-    TITLE = "Avoid the trap - Multiplying & dividing fractions"
+    TITLE = "Avoid the trap · Multiplying & dividing fractions"
+    DOMAIN = "5.F"
     WRONG = "Dividing by a fraction makes the answer BIGGER, not smaller"
-    RIGHT = "4 / 1/3 = 12."
+    RIGHT = "4 ÷ 1/3 = 12."

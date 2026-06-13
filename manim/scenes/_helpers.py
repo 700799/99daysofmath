@@ -342,15 +342,22 @@ class ExamplesDeck(LearningExperienceDeck):
         # One expert strategy up front so the whole deck has a "how to think" frame.
         em = expert_move(self, self.DOMAIN, self.seed, pal)
         self.play(FadeOut(em), run_time=_rt(0.4))
-        for q, steps, answer in self.EXAMPLES:
-            q_text = Text(_wrap("Q: " + q, 34), font_size=32, color=pal["accent"], weight="BOLD")
-            q_text.to_edge(UP, buff=1.05)
+
+        # A topical illustration anchors the right side the whole time, so the
+        # screen is never just text.
+        hero = V.hero_for(self.DOMAIN)()
+        hero.scale(0.62).to_corner(UP + RIGHT, buff=0.5).shift(DOWN * 1.4)
+        self.play(FadeIn(hero, shift=DOWN * 0.2), run_time=_rt(0.6))
+
+        for ei, (q, steps, answer) in enumerate(self.EXAMPLES):
+            q_text = Text(_wrap("Q: " + q, 26), font_size=30, color=pal["accent"], weight="BOLD")
+            q_text.to_edge(UP, buff=1.05).to_edge(LEFT, buff=0.6)
             self.play(Write(q_text), run_time=_rt(0.85))
             M.think(self, self.mascot)
 
-            step_objs = VGroup(*[Text(_wrap(s, 32), font_size=30, color=pal["step"]) for s in steps])
+            step_objs = VGroup(*[Text(_wrap(s, 26), font_size=28, color=pal["step"]) for s in steps])
             step_objs.arrange(DOWN, buff=0.4, aligned_edge=LEFT)
-            step_objs.next_to(q_text, DOWN, buff=0.55)
+            step_objs.next_to(q_text, DOWN, buff=0.5).to_edge(LEFT, buff=0.8)
             for i, so in enumerate(step_objs):
                 self.play(FadeIn(so, shift=DOWN * 0.2), run_time=_rt(0.65))
                 if i == 0:
@@ -358,9 +365,15 @@ class ExamplesDeck(LearningExperienceDeck):
                 self.wait(0.3)
 
             ans = answer_card(self, f"= {answer}", pal["answer"], self.mascot,
-                              pos=DOWN * 2.6)
-            self.wait(0.55)
+                              pos=DOWN * 2.7 + LEFT * 1.5)
+            self.section_break("bounce")
             self.play(FadeOut(VGroup(q_text, step_objs, ans)), run_time=_rt(0.45))
+
+        # Strategy reinforcement at the end (clear the hero first for a clean ribbon).
+        self.play(FadeOut(hero), run_time=_rt(0.35))
+        tip = pro_tip(self, self.DOMAIN, self.seed, pal)
+        self.wait(0.8)
+        self.play(FadeOut(tip), run_time=_rt(0.45))
 
 
 class TrapDeck(LearningExperienceDeck):

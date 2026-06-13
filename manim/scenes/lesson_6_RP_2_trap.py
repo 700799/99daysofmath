@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6RP2Trap(TrapDeck):
-    TITLE = "Avoid the trap - Unit rates"
+    TITLE = "Avoid the trap · Unit rates"
+    DOMAIN = "6.RP"
     WRONG = "'Per' means divide by that quantity"
     RIGHT = "cost per muffin divides money by muffins."

@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6NS3Trap(TrapDeck):
-    TITLE = "Avoid the trap - GCF, LCM & distributing"
+    TITLE = "Avoid the trap · GCF, LCM & distributing"
+    DOMAIN = "6.NS"
     WRONG = "GCF = what divides INTO them; LCM = what they divide into."
     RIGHT = "Slow down and re-read."

@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6EE2Trap(TrapDeck):
-    TITLE = "Avoid the trap - Writing & evaluating expressions"
+    TITLE = "Avoid the trap · Writing & evaluating expressions"
+    DOMAIN = "6.EE"
     WRONG = "2x means 2 times x"
     RIGHT = "multiply before you add."

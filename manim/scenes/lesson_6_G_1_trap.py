@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6G1Trap(TrapDeck):
-    TITLE = "Avoid the trap - Area of triangles & rectangles"
-    WRONG = "Do not forget the ? for triangles."
+    TITLE = "Avoid the trap · Area of triangles & rectangles"
+    DOMAIN = "6.G"
+    WRONG = "Do not forget the ½ for triangles."
     RIGHT = "Slow down and re-read."

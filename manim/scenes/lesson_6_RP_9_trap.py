@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6RP9Trap(TrapDeck):
-    TITLE = "Avoid the trap - Measurement conversions"
+    TITLE = "Avoid the trap · Measurement conversions"
+    DOMAIN = "6.RP"
     WRONG = "Inches -> feet uses DIVISION (smaller-of-bigger fits FEWER times)."
     RIGHT = "Slow down and re-read."

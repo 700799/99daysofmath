@@ -9,9 +9,10 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6EE8Examples(ExamplesDeck):
-    TITLE = "Examples - Equivalent expressions & checking solutions"
+    TITLE = "Examples · Equivalent expressions & checking solutions"
+    DOMAIN = "6.EE"
     EXAMPLES = [
         ("Is 2x + 6 equivalent to 2(x + 3)?", ["Distribute: 2(x + 3) = 2x + 6.", "Same expression. Yes."], "yes"),
-        ("Is x = 4 a solution to x + 5 = 9?", ["Substitute: 4 + 5 = 9. ?", "Yes."], "yes"),
+        ("Is x = 4 a solution to x + 5 = 9?", ["Substitute: 4 + 5 = 9. ", "Yes."], "yes"),
         ("Is x = 3 a solution to 2x = 8?", ["Check: 2(3) = 6, not 8.", "No."], "no"),
     ]

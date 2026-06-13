@@ -9,5 +9,6 @@ from _helpers import IdeaDeck
 
 
 class Lesson5F5Idea(IdeaDeck):
-    TITLE = "The idea - Measurement, conversions & volume"
-    BULLETS = ["Bigger unit -> smaller unit: multiply (3 m = 300 cm). Smaller -> bigger: divide.", "Memorize the anchors: 100 cm = 1 m, 1000 g = 1 kg, 12 in = 1 ft, 4 qt = 1 gal, 60 min = 1 hr.", "Volume of a box = length x width x height, measured in cubic units."]
+    TITLE = "The idea · Measurement, conversions & volume"
+    DOMAIN = "5.F"
+    BULLETS = ["Bigger unit -> smaller unit: multiply (3 m = 300 cm). Smaller -> bigger: divide.", "Memorize the anchors: 100 cm = 1 m, 1000 g = 1 kg, 12 in = 1 ft, 4 qt = 1 gal, 60 min = 1 hr.", "Volume of a box = length × width × height, measured in cubic units."]

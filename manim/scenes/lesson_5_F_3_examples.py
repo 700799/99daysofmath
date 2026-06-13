@@ -9,9 +9,10 @@ from _helpers import ExamplesDeck
 
 
 class Lesson5F3Examples(ExamplesDeck):
-    TITLE = "Examples - Multiplying & dividing fractions"
+    TITLE = "Examples · Multiplying & dividing fractions"
+    DOMAIN = "5.F"
     EXAMPLES = [
-        ("Multiply 1/2 x 1/4.", ["1 x 1 = 1 and 2 x 4 = 8.", "Product: 1/8."], "1/8"),
-        ("Divide 6 / 1/2.", ["Each whole holds 2 halves.", "6 x 2 = 12."], "12"),
-        ("Find 2/3 of 12.", ["1/3 of 12 is 4.", "2/3 is 2 x 4 = 8."], "8"),
+        ("Multiply 1/2 × 1/4.", ["1 × 1 = 1 and 2 × 4 = 8.", "Product: 1/8."], "1/8"),
+        ("Divide 6 ÷ 1/2.", ["Each whole holds 2 halves.", "6 × 2 = 12."], "12"),
+        ("Find 2/3 of 12.", ["1/3 of 12 is 4.", "2/3 is 2 × 4 = 8."], "8"),
     ]

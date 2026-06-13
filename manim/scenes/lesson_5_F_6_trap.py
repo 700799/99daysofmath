@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson5F6Trap(TrapDeck):
-    TITLE = "Avoid the trap - Coordinate plane, patterns & line plots"
+    TITLE = "Avoid the trap · Coordinate plane, patterns & line plots"
+    DOMAIN = "5.F"
     WRONG = "Do not swap the coordinates"
     RIGHT = "(3, 2) and (2, 3) are different points."

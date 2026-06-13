@@ -9,7 +9,8 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6SP7Examples(ExamplesDeck):
-    TITLE = "Examples - Statistical questions"
+    TITLE = "Examples · Statistical questions"
+    DOMAIN = "6.SP"
     EXAMPLES = [
         ("Is \"How tall am I?\" statistical?", ["One answer - about ME.", "No."], "no"),
         ("Is \"How tall are the students in my class?\" statistical?", ["Many students, many heights.", "Yes."], "yes"),

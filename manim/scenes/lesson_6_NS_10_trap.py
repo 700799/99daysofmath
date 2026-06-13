@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6NS10Trap(TrapDeck):
-    TITLE = "Avoid the trap - Coordinate plane: distance & polygons"
+    TITLE = "Avoid the trap · Coordinate plane: distance & polygons"
+    DOMAIN = "6.NS"
     WRONG = "Subtract carefully when one coordinate is negative"
-    RIGHT = "5 - (-2) = 7, not 3."
+    RIGHT = "5 − (−2) = 7, not 3."

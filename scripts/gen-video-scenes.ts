@@ -20,6 +20,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const SCENES_DIR = path.join(ROOT, 'manim', 'scenes');
 
+// Clean LaTeX-ish lesson text into Manim-safe strings WITHOUT corrupting math.
+// Multiplication must stay multiplication: \cdot / \times / * / · all become a
+// middle dot "·" (mathematically standard, unambiguous next to a variable x),
+// never a minus sign. Common math glyphs are kept (Pango renders them); only
+// genuinely unsupported characters are dropped.
+const KEEP = '\\u00b7\\u00d7\\u00f7\\u2212\\u2264\\u2265\\u2248\\u00bd\\u00bc\\u00be\\u00b0';
+const STRIP_RE = new RegExp(`[^\\x20-\\x7e${KEEP}\\n]`, 'g');
 const py = (s: string) =>
   '"' +
   s
@@ -27,26 +34,22 @@ const py = (s: string) =>
     .replace(/"/g, '\\"')
     .replace(/\n/g, ' ')
     .replace(/[$]/g, '')
-    .replace(/[≤]/g, '<=')
-    .replace(/[≥]/g, '>=')
-    .replace(/[÷]/g, '/')
-    .replace(/[×]/g, 'x')
-    .replace(/[·•]/g, '-')
-    .replace(/[→↦]/g, '->')
-    .replace(/[←]/g, '<-')
-    .replace(/[≈]/g, '~')
-    .replace(/[−–—]/g, '-')
-    .replace(/[‘’]/g, "'")
-    .replace(/[“”]/g, '"')
     .replace(/\\?frac\{(\d+)\}\{(\d+)\}/g, '$1/$2')
     .replace(/\\boxed\{([^}]+)\}/g, '$1')
-    .replace(/\\le\b/g, '<=')
-    .replace(/\\ge\b/g, '>=')
-    .replace(/\\times\b/g, 'x')
-    .replace(/\\div\b/g, '/')
-    .replace(/\\cdot\b/g, '*')
+    .replace(/\\le\b/g, '≤')
+    .replace(/\\ge\b/g, '≥')
+    .replace(/\\times\b/g, '×')
+    .replace(/\\div\b/g, '÷')
+    .replace(/\\cdot\b/g, '·')
+    .replace(/[•]/g, '·') // bullet -> middle dot (multiplication)
+    .replace(/[→↦]/g, '->')
+    .replace(/[←]/g, '<-')
+    .replace(/[–—]/g, '-') // en/em dash -> hyphen (NOT the minus/dot)
+    .replace(/[‘’]/g, "'")
+    .replace(/[“”]/g, '"')
     .replace(/\*\*/g, '')
-    .replace(/[^\x20-\x7e\n]/g, '?') +
+    .replace(/\*/g, '·') // bare asterisk means multiply
+    .replace(STRIP_RE, '') +
   '"';
 
 function classBase(domain: string, unit: number): string {
@@ -73,6 +76,7 @@ from _helpers import ExamplesDeck
 
 class ${cls}(ExamplesDeck):
     TITLE = ${py('Examples · ' + l.title)}
+    DOMAIN = "${l.domain}"
     EXAMPLES = [
 ${ex}
     ]
@@ -112,6 +116,7 @@ from _helpers import TrapDeck
 
 class ${cls}(TrapDeck):
     TITLE = ${py('Avoid the trap · ' + l.title)}
+    DOMAIN = "${l.domain}"
     WRONG = ${py(wrong)}
     RIGHT = ${py(right)}
 `;
@@ -131,10 +136,15 @@ from _helpers import IdeaDeck
 
 class ${cls}(IdeaDeck):
     TITLE = ${py('The idea · ' + l.title)}
+    DOMAIN = "${l.domain}"
     BULLETS = [${bullets}]
 `;
   return { file: `${fileBase(l.domain, l.unit)}_idea.py`, src };
 }
+
+// Pass --force to overwrite existing scene files (used to push the upgraded
+// templates + symbol fixes through the whole library).
+const FORCE = process.argv.includes('--force');
 
 function main() {
   let written = 0;
@@ -145,7 +155,7 @@ function main() {
 
     for (const s of scenes) {
       const fp = path.join(SCENES_DIR, s.file);
-      if (fs.existsSync(fp)) {
+      if (fs.existsSync(fp) && !FORCE) {
         skipped++;
         continue;
       }
@@ -153,7 +163,7 @@ function main() {
       written++;
     }
   }
-  console.log(`✓ Wrote ${written} new scene files (skipped ${skipped} pre-existing).`);
+  console.log(`✓ Wrote ${written} scene file(s) (skipped ${skipped}; force=${FORCE}).`);
 }
 
 main();

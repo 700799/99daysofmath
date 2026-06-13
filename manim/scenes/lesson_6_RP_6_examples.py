@@ -9,9 +9,10 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6RP6Examples(ExamplesDeck):
-    TITLE = "Examples - Converting with rates"
+    TITLE = "Examples · Converting with rates"
+    DOMAIN = "6.RP"
     EXAMPLES = [
-        ("How many inches are in 3 feet?", ["1 foot = 12 inches.", "3 x 12.", "= 36 inches."], "36"),
-        ("How many feet are in 48 inches?", ["12 inches = 1 foot.", "48 / 12.", "= 4 feet."], "4"),
-        ("A recipe needs 2 quarts. How many cups? (1 quart = 4 cups)", ["1 quart = 4 cups.", "2 x 4.", "= 8 cups."], "8"),
+        ("How many inches are in 3 feet?", ["1 foot = 12 inches.", "3 × 12.", "= 36 inches."], "36"),
+        ("How many feet are in 48 inches?", ["12 inches = 1 foot.", "48 ÷ 12.", "= 4 feet."], "4"),
+        ("A recipe needs 2 quarts. How many cups? (1 quart = 4 cups)", ["1 quart = 4 cups.", "2 × 4.", "= 8 cups."], "8"),
     ]

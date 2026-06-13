@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6RP6Trap(TrapDeck):
-    TITLE = "Avoid the trap - Converting with rates"
+    TITLE = "Avoid the trap · Converting with rates"
+    DOMAIN = "6.RP"
     WRONG = "Decide multiply vs divide by thinking about which unit is bigger."
     RIGHT = "Slow down and re-read."

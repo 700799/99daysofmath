@@ -13,7 +13,7 @@ import numpy as np
 from manim import (
     VGroup, Circle, Ellipse, Polygon, Line, Dot, ArcBetweenPoints, RoundedRectangle,
     Rotate, Wiggle, GrowFromCenter,
-    WHITE, ORANGE, GREY_BROWN, GREEN, YELLOW, PINK,
+    WHITE, ORANGE, GREY_BROWN, GREEN, YELLOW, PINK, GOLD,
     UP, DOWN, TAU,
 )
 
@@ -138,14 +138,62 @@ def pencil() -> VGroup:
     return _finish(g, eyes)
 
 
-_CAST = [fox, owl, cat, dog, alien, pencil]
-_NAMES = ["fox", "owl", "cat", "dog", "alien", "pencil"]
+def puppy() -> VGroup:
+    """The star: a black-and-white Japanese Chin with a yellow sun hat,
+    big dark eyes, a white forehead blaze, and a little pink tongue."""
+    BLACKFUR = "#1B1B1F"
+    # Floppy feathered ears hanging at the sides (drawn first, behind head).
+    lear = Ellipse(width=0.62, height=1.15, fill_color=BLACKFUR, fill_opacity=1,
+                   stroke_color=DARK, stroke_width=2).move_to([-0.66, -0.18, 0]).rotate(0.18)
+    rear = Ellipse(width=0.62, height=1.15, fill_color=BLACKFUR, fill_opacity=1,
+                   stroke_color=DARK, stroke_width=2).move_to([0.66, -0.18, 0]).rotate(-0.18)
+    # White face.
+    head = Circle(radius=0.74, fill_color=WHITE, fill_opacity=1, stroke_color=DARK, stroke_width=3)
+    # Black cap over the top of the head, split by a white blaze.
+    cap = Ellipse(width=1.5, height=0.92, fill_color=BLACKFUR, fill_opacity=1,
+                  stroke_width=0).move_to([0, 0.42, 0])
+    blaze = Ellipse(width=0.3, height=1.05, fill_color=WHITE, fill_opacity=1,
+                    stroke_width=0).move_to([0, 0.32, 0])
+    # Big dark Chin eyes with catchlights.
+    le = Circle(radius=0.2, fill_color=BLACKFUR, fill_opacity=1, stroke_color=DARK, stroke_width=2).move_to([-0.3, 0.06, 0])
+    re = Circle(radius=0.2, fill_color=BLACKFUR, fill_opacity=1, stroke_color=DARK, stroke_width=2).move_to([0.3, 0.06, 0])
+    lshine = Dot([-0.24, 0.13, 0], radius=0.05, color=WHITE)
+    rshine = Dot([0.36, 0.13, 0], radius=0.05, color=WHITE)
+    eyes = VGroup(le, re, lshine, rshine)
+    # Nose + tongue.
+    nose = Ellipse(width=0.2, height=0.14, fill_color=BLACKFUR, fill_opacity=1, stroke_width=0).move_to([0, -0.26, 0])
+    TONGUE = "#FF8FB0"
+    tongue = VGroup(
+        RoundedRectangle(width=0.22, height=0.3, corner_radius=0.1, fill_color=TONGUE,
+                         fill_opacity=1, stroke_color="#E0608A", stroke_width=1.5).move_to([0, -0.5, 0]),
+        Line([0, -0.4, 0], [0, -0.58, 0], stroke_width=1.5, color="#E0608A"),
+    )
+    # Yellow bucket sun hat.
+    brim = Ellipse(width=1.9, height=0.42, fill_color=YELLOW, fill_opacity=1,
+                   stroke_color=GOLD, stroke_width=2).move_to([0, 0.78, 0])
+    crown = Polygon([-0.58, 0.78, 0], [0.58, 0.78, 0], [0.42, 1.32, 0], [-0.42, 1.32, 0],
+                    fill_color=YELLOW, fill_opacity=1, stroke_color=GOLD, stroke_width=2)
+    band = Polygon([-0.5, 0.92, 0], [0.5, 0.92, 0], [0.46, 1.04, 0], [-0.46, 1.04, 0],
+                   fill_color=GOLD, fill_opacity=0.7, stroke_width=0)
+    hat = VGroup(crown, band, brim)
+    g = VGroup(lear, rear, head, cap, blaze, eyes, nose, tongue, hat)
+    return _finish(g, eyes)
 
 
-def mascot_for(seed: int):
-    """Deterministically pick a mascot VGroup + its name from a seed."""
-    i = abs(int(seed)) % len(_CAST)
-    return _CAST[i](), _NAMES[i]
+# Featured cast — the kid's dog stars; the others add occasional variety.
+_CAST = [puppy, fox, owl, cat, dog, alien, pencil]
+_NAMES = ["puppy", "fox", "owl", "cat", "dog", "alien", "pencil"]
+
+
+def mascot_for(seed: int, featured: bool = True):
+    """Pick a mascot. The star puppy headlines ~2 of every 3 videos; the rest
+    of the cast (fox/owl/cat/dog/alien/pencil) fills the others for variety."""
+    if featured and (abs(int(seed)) % 3 != 0):
+        return puppy(), "puppy"
+    others = [fox, owl, cat, dog, alien, pencil]
+    onames = ["fox", "owl", "cat", "dog", "alien", "pencil"]
+    i = abs(int(seed)) % len(others)
+    return others[i](), onames[i]
 
 
 # ---- beats: each calls scene.play directly and stays short ----

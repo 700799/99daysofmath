@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6EE6Trap(TrapDeck):
-    TITLE = "Avoid the trap - Variables that change together"
-    WRONG = "The dependent variable is usually alone on one side (y = ?)."
+    TITLE = "Avoid the trap · Variables that change together"
+    DOMAIN = "6.EE"
+    WRONG = "The dependent variable is usually alone on one side (y = )."
     RIGHT = "Slow down and re-read."

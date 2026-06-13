@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6G2Trap(TrapDeck):
-    TITLE = "Avoid the trap - Polygons on the grid"
+    TITLE = "Avoid the trap · Polygons on the grid"
+    DOMAIN = "6.G"
     WRONG = "Subtract directly only when points share an x (vertical) or y (horizontal)."
     RIGHT = "Slow down and re-read."

@@ -9,9 +9,10 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6G2Examples(ExamplesDeck):
-    TITLE = "Examples - Polygons on the grid"
+    TITLE = "Examples · Polygons on the grid"
+    DOMAIN = "6.G"
     EXAMPLES = [
-        ("Length from (2, 1) to (2, 6)?", ["Same x -> vertical.", "6 - 1.", "= 5."], "5"),
-        ("Length from (1, 3) to (7, 3)?", ["Same y -> horizontal.", "7 - 1.", "= 6."], "6"),
-        ("Rectangle with corners (0,0),(4,0),(4,2),(0,2). Area?", ["Width 4, height 2.", "4 x 2.", "= 8."], "8"),
+        ("Length from (2, 1) to (2, 6)?", ["Same x -> vertical.", "6 − 1.", "= 5."], "5"),
+        ("Length from (1, 3) to (7, 3)?", ["Same y -> horizontal.", "7 − 1.", "= 6."], "6"),
+        ("Rectangle with corners (0,0),(4,0),(4,2),(0,2). Area?", ["Width 4, height 2.", "4 × 2.", "= 8."], "8"),
     ]

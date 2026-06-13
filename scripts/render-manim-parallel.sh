@@ -27,18 +27,30 @@ render_one() {
     klass="Lesson${maj}${min}${unit}"
     out_name="${domain}-${unit}.mp4"
   fi
-  if [ -f "$OUT_DIR/$out_name" ]; then return 0; fi
+  # FORCE=1 re-renders even if the mp4 exists (used for the batch upgrade).
+  if [ -z "${FORCE:-}" ] && [ -f "$OUT_DIR/$out_name" ]; then return 0; fi
   echo "→ $out_name"
   "$MANIM" -ql --disable_caching -o "$out_name" "$f" "$klass" >/dev/null 2>&1
   cp "media/videos/${base}/480p15/${out_name}" "$OUT_DIR/$out_name" 2>/dev/null || echo "FAIL: $out_name"
+  # Copy the per-section checkpoint sidecar if the deck wrote one.
+  local chap="chapters/${klass}.json"
+  if [ -f "$chap" ]; then
+    cp "$chap" "$OUT_DIR/${out_name%.mp4}.chapters.json" 2>/dev/null || true
+  fi
 }
 export -f render_one
 export MANIM OUT_DIR
 
-# Build the file list.
+# Build the file list. Pass globs as args to restrict (e.g. just the
+# generated examples/trap/idea scenes); default renders the whole library.
 shopt -s nullglob
+if [ "$#" -gt 0 ]; then
+  GLOBS=("$@")
+else
+  GLOBS=(lesson_6_RP_[1-9].py lesson_6_RP_10.py lesson_6_NS_[1-9].py lesson_6_NS_10.py lesson_6_EE_[1-9].py lesson_6_EE_10.py lesson_6_G_[1-9].py lesson_6_G_10.py lesson_6_SP_[1-9].py lesson_6_SP_10.py lesson_*_examples.py lesson_*_trap.py lesson_5_F_*_idea.py)
+fi
 files=()
-for glob in lesson_6_RP_[1-9].py lesson_6_RP_10.py lesson_6_NS_[1-9].py lesson_6_NS_10.py lesson_6_EE_[1-9].py lesson_6_EE_10.py lesson_6_G_[1-9].py lesson_6_G_10.py lesson_6_SP_[1-9].py lesson_6_SP_10.py lesson_*_examples.py lesson_*_trap.py lesson_5_F_*_idea.py; do
+for glob in "${GLOBS[@]}"; do
   for f in $glob; do
     files+=("$f")
   done

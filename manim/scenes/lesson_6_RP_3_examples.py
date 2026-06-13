@@ -9,9 +9,10 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6RP3Examples(ExamplesDeck):
-    TITLE = "Examples - Ratio tables"
+    TITLE = "Examples · Ratio tables"
+    DOMAIN = "6.RP"
     EXAMPLES = [
-        ("If 2 -> 6 and 3 -> 9, what does 5 map to?", ["Each input is x3.", "5 x 3.", "= 15."], "15"),
-        ("A table shows 1 -> 4 and 2 -> 8. Output for 6?", ["Pattern: output = input x 4.", "6 x 4.", "= 24."], "24"),
-        ("If 4 pens cost 3, what do 8 pens cost?", ["8 is 4 x 2, so double the cost.", "3 x 2.", "= 6."], "6"),
+        ("If 2 -> 6 and 3 -> 9, what does 5 map to?", ["Each input is ×3.", "5 × 3.", "= 15."], "15"),
+        ("A table shows 1 -> 4 and 2 -> 8. Output for 6?", ["Pattern: output = input × 4.", "6 × 4.", "= 24."], "24"),
+        ("If 4 pens cost 3, what do 8 pens cost?", ["8 is 4 × 2, so double the cost.", "3 × 2.", "= 6."], "6"),
     ]

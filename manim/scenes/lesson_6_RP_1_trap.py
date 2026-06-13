@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6RP1Trap(TrapDeck):
-    TITLE = "Avoid the trap - What is a ratio?"
+    TITLE = "Avoid the trap · What is a ratio?"
+    DOMAIN = "6.RP"
     WRONG = "Keep the order asked for"
     RIGHT = "'apples to oranges' puts the apples number first."

@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6SP4Trap(TrapDeck):
-    TITLE = "Avoid the trap - Displaying data"
+    TITLE = "Avoid the trap · Displaying data"
+    DOMAIN = "6.SP"
     WRONG = "Histograms group data into ranges; bar graphs use separate categories."
     RIGHT = "Slow down and re-read."

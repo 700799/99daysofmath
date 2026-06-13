@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6NS7Trap(TrapDeck):
-    TITLE = "Avoid the trap - Whole-number addition & subtraction"
+    TITLE = "Avoid the trap · Whole-number addition & subtraction"
+    DOMAIN = "6.NS"
     WRONG = "Carrying and borrowing pass to the NEXT-LARGER column"
     RIGHT = "Don't skip a place."

@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6NS6Trap(TrapDeck):
-    TITLE = "Avoid the trap - Dividing fractions"
+    TITLE = "Avoid the trap · Dividing fractions"
+    DOMAIN = "6.NS"
     WRONG = "Flip only the SECOND fraction, not both."
     RIGHT = "Slow down and re-read."

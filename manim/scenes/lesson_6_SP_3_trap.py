@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6SP3Trap(TrapDeck):
-    TITLE = "Avoid the trap - Spread: range, IQR & MAD"
+    TITLE = "Avoid the trap · Spread: range, IQR & MAD"
+    DOMAIN = "6.SP"
     WRONG = "Spread is different from center"
     RIGHT = "they answer different questions."

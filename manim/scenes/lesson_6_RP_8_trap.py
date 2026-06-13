@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6RP8Trap(TrapDeck):
-    TITLE = "Avoid the trap - Rates & unit pricing"
+    TITLE = "Avoid the trap · Rates & unit pricing"
+    DOMAIN = "6.RP"
     WRONG = "Match the units"
     RIGHT = "a \"mph\" answer always means miles ON TOP, hours on the bottom."

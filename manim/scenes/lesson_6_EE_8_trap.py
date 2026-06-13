@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6EE8Trap(TrapDeck):
-    TITLE = "Avoid the trap - Equivalent expressions & checking solutions"
+    TITLE = "Avoid the trap · Equivalent expressions & checking solutions"
+    DOMAIN = "6.EE"
     WRONG = "Two expressions can MATCH at one value but still differ"
     RIGHT = "use the algebra to be sure."

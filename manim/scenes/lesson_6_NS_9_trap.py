@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6NS9Trap(TrapDeck):
-    TITLE = "Avoid the trap - Opposites & absolute value"
+    TITLE = "Avoid the trap · Opposites & absolute value"
+    DOMAIN = "6.NS"
     WRONG = "Absolute value bars are NOT parentheses"
-    RIGHT = "|-5| = 5, not -5."
+    RIGHT = "|−5| = 5, not −5."

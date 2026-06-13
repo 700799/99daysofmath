@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6SP6Trap(TrapDeck):
-    TITLE = "Avoid the trap - Summarizing data sets"
+    TITLE = "Avoid the trap · Summarizing data sets"
+    DOMAIN = "6.SP"
     WRONG = "Check whether the question wants center or spread before answering."
     RIGHT = "Slow down and re-read."

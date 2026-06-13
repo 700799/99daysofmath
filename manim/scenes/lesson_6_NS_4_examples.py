@@ -9,7 +9,8 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6NS4Examples(ExamplesDeck):
-    TITLE = "Examples - Integers & absolute value"
+    TITLE = "Examples · Integers & absolute value"
+    DOMAIN = "6.NS"
     EXAMPLES = [
         ("What is |-7|?", ["Distance of -7 from 0.", "= 7."], "7"),
         ("Which is greater, -5 or -2?", ["-2 is to the right of -5.", "So -2 is greater."], "-2"),

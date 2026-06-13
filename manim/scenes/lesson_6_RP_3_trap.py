@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6RP3Trap(TrapDeck):
-    TITLE = "Avoid the trap - Ratio tables"
+    TITLE = "Avoid the trap · Ratio tables"
+    DOMAIN = "6.RP"
     WRONG = "Whatever you multiply one column by, multiply the other by too."
     RIGHT = "Slow down and re-read."

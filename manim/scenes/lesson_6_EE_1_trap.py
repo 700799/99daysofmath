@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6EE1Trap(TrapDeck):
-    TITLE = "Avoid the trap - Exponents"
-    WRONG = "2? is 8, not 6"
+    TITLE = "Avoid the trap · Exponents"
+    DOMAIN = "6.EE"
+    WRONG = "2 is 8, not 6"
     RIGHT = "do not multiply the base by the exponent."

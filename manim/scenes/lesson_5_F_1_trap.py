@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson5F1Trap(TrapDeck):
-    TITLE = "Avoid the trap - Place value & big operations"
+    TITLE = "Avoid the trap · Place value & big operations"
+    DOMAIN = "5.F"
     WRONG = "The VALUE of a digit is not the digit itself"
     RIGHT = "the 7 in 47,283 is worth 7,000, not 7."

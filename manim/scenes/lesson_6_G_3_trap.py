@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6G3Trap(TrapDeck):
-    TITLE = "Avoid the trap - Volume of prisms"
+    TITLE = "Avoid the trap · Volume of prisms"
+    DOMAIN = "6.G"
     WRONG = "Volume uses three dimensions"
     RIGHT = "the answer is in cubic units."

@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson5F5Trap(TrapDeck):
-    TITLE = "Avoid the trap - Measurement, conversions & volume"
+    TITLE = "Avoid the trap · Measurement, conversions & volume"
+    DOMAIN = "5.F"
     WRONG = "Multiply or divide? Going to a SMALLER unit means MORE of them"
     RIGHT = "multiply."

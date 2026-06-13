@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6SP9Trap(TrapDeck):
-    TITLE = "Avoid the trap - Displays: dot plots, histograms & box plots"
+    TITLE = "Avoid the trap · Displays: dot plots, histograms & box plots"
+    DOMAIN = "6.SP"
     WRONG = "Bar HEIGHT"
     RIGHT = "not width - equals the count in a histogram."

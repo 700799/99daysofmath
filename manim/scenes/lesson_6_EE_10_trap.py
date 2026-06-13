@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6EE10Trap(TrapDeck):
-    TITLE = "Avoid the trap - Tables & relationships"
+    TITLE = "Avoid the trap · Tables & relationships"
+    DOMAIN = "6.EE"
     WRONG = "Match each x to its matching y row"
     RIGHT = "don't swap them when reading the table."

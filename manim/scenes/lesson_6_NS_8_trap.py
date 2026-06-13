@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6NS8Trap(TrapDeck):
-    TITLE = "Avoid the trap - Comparing & ordering signed numbers"
+    TITLE = "Avoid the trap · Comparing & ordering signed numbers"
+    DOMAIN = "6.NS"
     WRONG = "Negative numbers reverse the size order"
-    RIGHT = "-10 is SMALLER than -2, not bigger."
+    RIGHT = "−10 is SMALLER than −2, not bigger."

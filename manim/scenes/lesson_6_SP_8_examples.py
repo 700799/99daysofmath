@@ -9,9 +9,10 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6SP8Examples(ExamplesDeck):
-    TITLE = "Examples - Center: mean & median in depth"
+    TITLE = "Examples · Center: mean & median in depth"
+    DOMAIN = "6.SP"
     EXAMPLES = [
         ("Median of {3, 5, 7, 9, 11}?", ["Sorted; 5 items.", "Middle is the 3rd value: 7."], "7"),
         ("Median of {2, 4, 6, 8}?", ["4 items.", "Middle two: 4 and 6.", "Average: 5."], "5"),
-        ("Mean of {5, 5, 5, 100}?", ["Sum: 115. Count: 4.", "115 / 4 = 28.75."], "28.75"),
+        ("Mean of {5, 5, 5, 100}?", ["Sum: 115. Count: 4.", "115 ÷ 4 = 28.75."], "28.75"),
     ]

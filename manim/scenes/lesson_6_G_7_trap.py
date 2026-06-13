@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6G7Trap(TrapDeck):
-    TITLE = "Avoid the trap - Composite figures (area)"
+    TITLE = "Avoid the trap · Composite figures (area)"
+    DOMAIN = "6.G"
     WRONG = "For cutouts, SUBTRACT"
     RIGHT = "for additions (like a triangular roof), ADD."

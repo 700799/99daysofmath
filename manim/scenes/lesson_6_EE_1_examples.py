@@ -9,9 +9,10 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6EE1Examples(ExamplesDeck):
-    TITLE = "Examples - Exponents"
+    TITLE = "Examples · Exponents"
+    DOMAIN = "6.EE"
     EXAMPLES = [
-        ("Evaluate 3?.", ["3 x 3 x 3.", "= 27."], "27"),
-        ("Evaluate 5?.", ["5 x 5.", "= 25."], "25"),
-        ("Evaluate 2?.", ["2 x 2 x 2 x 2.", "= 16."], "16"),
+        ("Evaluate 3.", ["3 × 3 × 3.", "= 27."], "27"),
+        ("Evaluate 5.", ["5 × 5.", "= 25."], "25"),
+        ("Evaluate 2.", ["2 × 2 × 2 × 2.", "= 16."], "16"),
     ]

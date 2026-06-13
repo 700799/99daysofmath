@@ -9,9 +9,10 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6EE7Examples(ExamplesDeck):
-    TITLE = "Examples - Parts of expressions"
+    TITLE = "Examples · Parts of expressions"
+    DOMAIN = "6.EE"
     EXAMPLES = [
         ("Coefficient of y in 4y?", ["Number stuck to y.", "4."], "4"),
         ("Constant term in 7 + 3x?", ["No variable attached.", "7."], "7"),
-        ("How many terms in 5x - 2 + 3?", ["Combine constants first: 5x - 2 + 3 = 5x + 1.", "2 terms."], "2"),
+        ("How many terms in 5x − 2 + 3?", ["Combine constants first: 5x − 2 + 3 = 5x + 1.", "2 terms."], "2"),
     ]

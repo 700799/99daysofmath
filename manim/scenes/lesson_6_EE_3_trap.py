@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6EE3Trap(TrapDeck):
-    TITLE = "Avoid the trap - Equivalent expressions"
+    TITLE = "Avoid the trap · Equivalent expressions"
+    DOMAIN = "6.EE"
     WRONG = "Multiply the outside number by EVERY term inside the parentheses."
     RIGHT = "Slow down and re-read."

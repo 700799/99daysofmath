@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6RP7Trap(TrapDeck):
-    TITLE = "Avoid the trap - Percent applications"
+    TITLE = "Avoid the trap · Percent applications"
+    DOMAIN = "6.RP"
     WRONG = "\"% off\" means subtract; \"% increase\" means add"
     RIGHT = "Read the question carefully."

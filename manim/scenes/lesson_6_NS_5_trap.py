@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6NS5Trap(TrapDeck):
-    TITLE = "Avoid the trap - The coordinate plane"
+    TITLE = "Avoid the trap · The coordinate plane"
+    DOMAIN = "6.NS"
     WRONG = "Always go across (x) first, then up or down (y)."
     RIGHT = "Slow down and re-read."

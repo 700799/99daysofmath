@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6EE4Trap(TrapDeck):
-    TITLE = "Avoid the trap - One-step equations"
+    TITLE = "Avoid the trap · One-step equations"
+    DOMAIN = "6.EE"
     WRONG = "Whatever you do to one side, do to the other side too."
     RIGHT = "Slow down and re-read."

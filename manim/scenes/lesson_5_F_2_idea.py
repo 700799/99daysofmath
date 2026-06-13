@@ -9,5 +9,6 @@ from _helpers import IdeaDeck
 
 
 class Lesson5F2Idea(IdeaDeck):
-    TITLE = "The idea - Adding & subtracting fractions"
+    TITLE = "The idea · Adding & subtracting fractions"
+    DOMAIN = "5.F"
     BULLETS = ["You can only add or subtract pieces that are the SAME size - same denominator.", "Rewrite each fraction using a common denominator first (often the LCM).", "Then add or subtract just the numerators and simplify."]

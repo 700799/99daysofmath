@@ -9,9 +9,10 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6RP9Examples(ExamplesDeck):
-    TITLE = "Examples - Measurement conversions"
+    TITLE = "Examples · Measurement conversions"
+    DOMAIN = "6.RP"
     EXAMPLES = [
-        ("How many inches in 2 feet?", ["1 ft = 12 in.", "2 x 12 = 24 in."], "24"),
-        ("Convert 4 yards to feet.", ["1 yd = 3 ft.", "4 x 3 = 12 ft."], "12"),
-        ("Convert 250 cm to meters.", ["100 cm = 1 m.", "250 / 100 = 2.5 m."], "2.5"),
+        ("How many inches in 2 feet?", ["1 ft = 12 in.", "2 × 12 = 24 in."], "24"),
+        ("Convert 4 yards to feet.", ["1 yd = 3 ft.", "4 × 3 = 12 ft."], "12"),
+        ("Convert 250 cm to meters.", ["100 cm = 1 m.", "250 ÷ 100 = 2.5 m."], "2.5"),
     ]

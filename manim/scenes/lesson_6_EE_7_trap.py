@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6EE7Trap(TrapDeck):
-    TITLE = "Avoid the trap - Parts of expressions"
+    TITLE = "Avoid the trap · Parts of expressions"
+    DOMAIN = "6.EE"
     WRONG = "Always SIMPLIFY first before counting parts"
     RIGHT = "hidden like-terms can fool you."

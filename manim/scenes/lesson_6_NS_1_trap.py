@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6NS1Trap(TrapDeck):
-    TITLE = "Avoid the trap - Adding & subtracting decimals"
+    TITLE = "Avoid the trap · Adding & subtracting decimals"
+    DOMAIN = "6.NS"
     WRONG = "Line up the decimal points"
     RIGHT = "not just the last digits."

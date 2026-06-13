@@ -9,9 +9,10 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6G4Examples(ExamplesDeck):
-    TITLE = "Examples - Surface area with nets"
+    TITLE = "Examples · Surface area with nets"
+    DOMAIN = "6.G"
     EXAMPLES = [
-        ("Cube with side 2 - surface area?", ["One face = 2 x 2 = 4.", "6 faces.", "6 x 4 = 24."], "24"),
-        ("Cube with side 3 - surface area?", ["One face = 9.", "6 x 9.", "= 54."], "54"),
-        ("A box 2x3x1: area of the 2x3 face?", ["2 x 3.", "= 6 square units."], "6"),
+        ("Cube with side 2 - surface area?", ["One face = 2 × 2 = 4.", "6 faces.", "6 × 4 = 24."], "24"),
+        ("Cube with side 3 - surface area?", ["One face = 9.", "6 × 9.", "= 54."], "54"),
+        ("A box 2×3×1: area of the 2×3 face?", ["2 × 3.", "= 6 square units."], "6"),
     ]

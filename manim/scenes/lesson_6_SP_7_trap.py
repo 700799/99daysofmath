@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson6SP7Trap(TrapDeck):
-    TITLE = "Avoid the trap - Statistical questions"
+    TITLE = "Avoid the trap · Statistical questions"
+    DOMAIN = "6.SP"
     WRONG = "It's about WHETHER answers vary"
     RIGHT = "not whether the topic is mathematical."

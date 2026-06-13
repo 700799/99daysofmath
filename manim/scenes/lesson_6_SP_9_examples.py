@@ -9,7 +9,8 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6SP9Examples(ExamplesDeck):
-    TITLE = "Examples - Displays: dot plots, histograms & box plots"
+    TITLE = "Examples · Displays: dot plots, histograms & box plots"
+    DOMAIN = "6.SP"
     EXAMPLES = [
         ("On a dot plot, each dot represents?", ["One data value.", "A single observation."], "one data value"),
         ("A histogram bar over 10-19 has height 5. How many values in 10-19?", ["Bar height = count.", "5 values."], "5"),

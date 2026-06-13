@@ -9,9 +9,10 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6G9Examples(ExamplesDeck):
-    TITLE = "Examples - Polygons on the coordinate plane"
+    TITLE = "Examples · Polygons on the coordinate plane"
+    DOMAIN = "6.G"
     EXAMPLES = [
-        ("Length from (2, 1) to (7, 1)?", ["Same y, horizontal.", "|7 - 2| = 5."], "5"),
-        ("Length from (-3, 4) to (2, 4)?", ["Same y, horizontal.", "|2 - (-3)| = 5."], "5"),
+        ("Length from (2, 1) to (7, 1)?", ["Same y, horizontal.", "|7 − 2| = 5."], "5"),
+        ("Length from (−3, 4) to (2, 4)?", ["Same y, horizontal.", "|2 − (−3)| = 5."], "5"),
         ("Area of rectangle with corners (0, 0), (4, 0), (4, 3), (0, 3)?", ["Width = 4. Height = 3.", "Area = 12."], "12"),
     ]

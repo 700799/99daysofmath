@@ -9,7 +9,8 @@ from _helpers import ExamplesDeck
 
 
 class Lesson6SP4Examples(ExamplesDeck):
-    TITLE = "Examples - Displaying data"
+    TITLE = "Examples · Displaying data"
+    DOMAIN = "6.SP"
     EXAMPLES = [
         ("On a box plot, what does the line inside the box show?", ["The box spans the middle half.", "The inside line is the middle.", "= the median."], "median"),
         ("A dot plot has 3 dots above 5. How many values equal 5?", ["One dot = one value.", "= 3."], "3"),

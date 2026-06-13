@@ -7,6 +7,7 @@ from _helpers import TrapDeck
 
 
 class Lesson5F4Trap(TrapDeck):
-    TITLE = "Avoid the trap - Decimals: place value & operations"
+    TITLE = "Avoid the trap · Decimals: place value & operations"
+    DOMAIN = "5.F"
     WRONG = "Longer is not bigger"
     RIGHT = "0.5 beats 0.45 even though 45 has more digits."
