@@ -13,45 +13,16 @@ import { Mascot } from '../components/Mascot';
 import { DailyQuestRing } from '../components/DailyQuestRing';
 import { PracticeHeatmap } from '../components/PracticeHeatmap';
 import { Onboarding } from '../components/Onboarding';
-import { recommendNextUnit } from '../utils/recommendations';
-import {
-  STICKER_DEFS,
-  TOTAL_STICKERS,
-  type StickerCategory,
-  type StickerDef,
-} from '../utils/encouragement';
-
-const CATEGORY_LABELS: Record<StickerCategory, string> = {
-  unit: 'Units',
-  streak: 'Streak',
-  accuracy: 'Accuracy',
-  xp: 'XP',
-  mastery: 'Mastery',
-  challenge: 'Challenges',
-};
-
-const CATEGORY_ORDER: StickerCategory[] = [
-  'unit',
-  'streak',
-  'accuracy',
-  'xp',
-  'mastery',
-  'challenge',
-];
 
 export function Home() {
   const { data: summary, loading, error } = useDomainSummary();
   const progress = useProgress((s) => s.byDomain);
-  const stickers = useProgress((s) => s.stickers);
   const dailyGoal = useProgress((s) => s.dailyGoal);
   const todaysXp = useProgress((s) => s.todaysXp());
   const practiceDates = useProgress((s) => s.practiceDates);
   const xpByDate = useProgress((s) => s.xpByDate);
-  const dueReview = useProgress((s) => s.dueReviewCount());
   const onboardingComplete = useProgress((s) => s.onboardingComplete);
   const markOnboardingDone = useProgress((s) => s.markOnboardingDone);
-
-  const rec = recommendNextUnit(progress);
 
   return (
     <div>
@@ -90,55 +61,9 @@ export function Home() {
         </div>
       </div>
 
-      {/* Due for review */}
-      {dueReview > 0 && (
-        <Link
-          to="/review"
-          className="block mb-4 rounded-3xl p-4 sm:p-5 bg-gradient-to-br from-rose-500 to-pink-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="flex items-center gap-3 sm:gap-4">
-            <div className="text-4xl sm:text-5xl">📅</div>
-            <div className="flex-1 min-w-0">
-              <div className="text-xs font-display font-bold uppercase tracking-wider opacity-90">
-                Smart review
-              </div>
-              <div className="font-display font-extrabold text-lg sm:text-xl">
-                {dueReview} {dueReview === 1 ? 'problem' : 'problems'} due today
-              </div>
-              <div className="text-xs sm:text-sm opacity-90 mt-0.5">
-                Lock in the ones you missed — timed for memory.
-              </div>
-            </div>
-            <div className="text-2xl shrink-0">→</div>
-          </div>
-        </Link>
-      )}
-
-      {/* Recommended next */}
-      {rec && (
-        <Link
-          to={rec.allMastered ? '/test' : `/unit/${rec.domain}/${rec.unit}`}
-          className="block mb-4 rounded-3xl p-4 sm:p-5 bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="flex items-center gap-3 sm:gap-4">
-            <div className="text-4xl sm:text-5xl">{rec.allMastered ? '🎓' : DOMAIN_EMOJI[rec.domain]}</div>
-            <div className="flex-1 min-w-0">
-              <div className="text-xs font-display font-bold uppercase tracking-wider opacity-90">
-                Recommended next
-              </div>
-              <div className="font-display font-extrabold text-lg sm:text-xl">
-                {rec.allMastered ? 'Mock MAP test' : `${DOMAIN_LABELS[rec.domain]} · Unit ${rec.unit}`}
-              </div>
-              <div className="text-xs sm:text-sm opacity-90 mt-0.5">{rec.reason}</div>
-            </div>
-            <div className="text-2xl shrink-0">→</div>
-          </div>
-        </Link>
-      )}
-
-      {/* Video Library — quick access to learning resources */}
+      {/* Video Library */}
       <div className="mt-6 mb-4 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
-        🎬 Video Library
+        🎬 Video
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
         <Link
@@ -146,40 +71,37 @@ export function Home() {
           className="block rounded-2xl p-3 bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">📘</div>
-          <div className="font-display font-extrabold text-sm mt-1">Lessons</div>
-          <div className="text-[11px] opacity-90 mt-0.5 line-clamp-1">Step-by-step guides</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Lessons</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Step-by-step</div>
         </Link>
         <Link
           to="/mathematicians"
           className="block rounded-2xl p-3 bg-gradient-to-br from-purple-500 to-violet-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">🧑‍🔬</div>
-          <div className="font-display font-extrabold text-sm mt-1">Mathematicians</div>
-          <div className="text-[11px] opacity-90 mt-0.5 line-clamp-1">Famous minds</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Mathematicians</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Famous minds</div>
         </Link>
         <Link
           to="/stories"
           className="block rounded-2xl p-3 bg-gradient-to-br from-pink-500 to-rose-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">🌟</div>
-          <div className="font-display font-extrabold text-sm mt-1">Stories</div>
-          <div className="text-[11px] opacity-90 mt-0.5 line-clamp-1">Math history</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Math Stories</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">History</div>
         </Link>
         <Link
           to="/settings"
           className="block rounded-2xl p-3 bg-gradient-to-br from-slate-500 to-slate-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">⚙️</div>
-          <div className="font-display font-extrabold text-sm mt-1">Settings</div>
-          <div className="text-[11px] opacity-90 mt-0.5 line-clamp-1">Preferences</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Settings</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Preferences</div>
         </Link>
       </div>
 
-      {/* Play — 3x3 grid of game modes */}
-      <div className="mt-1 mb-2 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
-        ▶ Play
-      </div>
-      <div className="grid grid-cols-3 gap-3 mb-4">
+      {/* Core Play Tiles */}
+      <div className="grid grid-cols-3 gap-3 mb-6">
         <Link
           to="/practice"
           className="block rounded-2xl p-3 bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
@@ -187,35 +109,6 @@ export function Home() {
           <div className="text-2xl">🧠</div>
           <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Practice</div>
           <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Adaptive</div>
-        </Link>
-        <Link
-          to="/mix"
-          className="block rounded-2xl p-3 bg-gradient-to-br from-purple-500 via-fuchsia-500 to-pink-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">🎲</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Daily Mix</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Random</div>
-        </Link>
-        <Link
-          to="/test"
-          className="block rounded-2xl p-3 bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">🎓</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Mock Test</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Timed</div>
-        </Link>
-        <Link
-          to="/review"
-          className="relative block rounded-2xl p-3 bg-gradient-to-br from-rose-500 to-pink-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          {dueReview > 0 && (
-            <span className="absolute top-2 right-2 bg-white text-rose-600 text-[9px] font-display font-extrabold px-1.5 py-0.5 rounded-full">
-              {dueReview}
-            </span>
-          )}
-          <div className="text-2xl">📅</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Review</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Missed</div>
         </Link>
         <Link
           to="/arcade"
@@ -232,30 +125,6 @@ export function Home() {
           <div className="text-2xl">🏆</div>
           <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Finals</div>
           <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Quizzes</div>
-        </Link>
-        <Link
-          to="/report"
-          className="block rounded-2xl p-3 bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">📊</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Progress</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Report</div>
-        </Link>
-        <Link
-          to="/"
-          className="block rounded-2xl p-3 bg-gradient-to-br from-teal-500 to-emerald-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">🏔️</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Trails</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Topics</div>
-        </Link>
-        <Link
-          to="/"
-          className="block rounded-2xl p-3 bg-gradient-to-br from-indigo-500 to-blue-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">🎯</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Domains</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">All</div>
         </Link>
       </div>
 
@@ -321,72 +190,6 @@ export function Home() {
 
 
       <PracticeHeatmap practiceDates={practiceDates} xpByDate={xpByDate} />
-
-      <StickerBook earnedIds={stickers} />
     </div>
-  );
-}
-
-function StickerBook({ earnedIds }: { earnedIds: string[] }) {
-  const earnedSet = new Set(earnedIds);
-  const byCategory = new Map<StickerCategory, StickerDef[]>();
-  for (const def of STICKER_DEFS) {
-    const list = byCategory.get(def.category) ?? [];
-    list.push(def);
-    byCategory.set(def.category, list);
-  }
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.3 }}
-      className="mt-8 bg-white rounded-3xl border-2 border-slate-200 p-4 sm:p-5"
-    >
-      <div className="flex items-center gap-2 mb-4">
-        <span className="text-2xl" aria-hidden="true">🎒</span>
-        <div>
-          <div className="font-display font-extrabold text-slate-900">
-            Sticker book
-          </div>
-          <div className="text-xs text-slate-500">
-            {earnedIds.length} / {TOTAL_STICKERS} earned
-          </div>
-        </div>
-      </div>
-      <div className="space-y-4">
-        {CATEGORY_ORDER.map((cat) => {
-          const defs = byCategory.get(cat) ?? [];
-          if (defs.length === 0) return null;
-          const catEarned = defs.filter((d) => earnedSet.has(d.id)).length;
-          return (
-            <div key={cat}>
-              <div className="text-xs font-display font-extrabold uppercase tracking-wider text-slate-600 mb-2">
-                {CATEGORY_LABELS[cat]} · {catEarned}/{defs.length}
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {defs.map((def) => {
-                  const got = earnedSet.has(def.id);
-                  return (
-                    <span
-                      key={def.id}
-                      title={def.hint ?? def.label}
-                      className={
-                        got
-                          ? 'inline-flex items-center gap-1 bg-gradient-to-br from-yellow-100 to-pink-100 border-2 border-pink-200 px-3 py-1.5 rounded-full font-display font-bold text-slate-800 text-sm'
-                          : 'inline-flex items-center gap-1 bg-slate-100 border-2 border-slate-200 px-3 py-1.5 rounded-full font-display font-bold text-slate-400 text-sm opacity-60'
-                      }
-                    >
-                      <span aria-hidden="true">{got ? def.emoji : '🔒'}</span>
-                      <span>{def.label}</span>
-                    </span>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </motion.div>
   );
 }
