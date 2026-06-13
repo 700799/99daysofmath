@@ -19,9 +19,9 @@ DARK = "#0F172A"
 # ── number line ─────────────────────────────────────────────────────────
 
 def number_line(lo=-3, hi=3, dots=(1,), color=BLUE) -> VGroup:
-    nl = NumberLine(x_range=[lo, hi, 1], length=5.0, include_numbers=True,
-                    font_size=18, color=WHITE, stroke_width=3)
-    marks = VGroup(*[Dot(nl.n2p(v), radius=0.09, color=color) for v in dots])
+    nl = NumberLine(x_range=[lo, hi, 1], length=5.4, include_numbers=True,
+                    font_size=28, color=WHITE, stroke_width=4)
+    marks = VGroup(*[Dot(nl.n2p(v), radius=0.13, color=color) for v in dots])
     g = VGroup(nl, marks)
     g.nl = nl
     g.marks = marks
@@ -83,12 +83,20 @@ def dot_array(rows=2, cols=4, color=BLUE, dot_r=0.16, gap=0.5) -> VGroup:
     return grid
 
 
-def area_rect(w=4, h=3, color=ORANGE) -> VGroup:
-    box = Rectangle(width=2.4, height=1.7, fill_color=color, fill_opacity=0.35,
-                    stroke_color=color, stroke_width=3)
-    wl = Text(str(w), font_size=22, color=WHITE).next_to(box, DOWN, buff=0.14)
-    hl = Text(str(h), font_size=22, color=WHITE).next_to(box, LEFT, buff=0.14)
-    g = VGroup(box, wl, hl)
+def area_rect(color=ORANGE) -> VGroup:
+    # Generic shape (no specific numbers) so it never contradicts the example.
+    box = Rectangle(width=3.4, height=2.3, fill_color=color, fill_opacity=0.35,
+                    stroke_color=color, stroke_width=4)
+    grid = VGroup()
+    for gx in (-1, 0, 1):
+        grid.add(Line(box.get_top() + RIGHT * gx * 0.85, box.get_bottom() + RIGHT * gx * 0.85,
+                      stroke_width=1.5, color=WHITE).set_opacity(0.35))
+    for gy in (-0.5, 0.5):
+        grid.add(Line(box.get_left() + UP * gy * 1.3, box.get_right() + UP * gy * 1.3,
+                      stroke_width=1.5, color=WHITE).set_opacity(0.35))
+    wl = Text("base", font_size=28, color=WHITE, weight="BOLD").next_to(box, DOWN, buff=0.2)
+    hl = Text("height", font_size=28, color=WHITE, weight="BOLD").next_to(box, LEFT, buff=0.2).rotate(PI / 2)
+    g = VGroup(box, grid, wl, hl)
     g.box = box
     return g
 
@@ -150,28 +158,28 @@ def scaling_arrow(factor="×3", color=YELLOW) -> VGroup:
 
 def dot_plot(data=(1, 2, 2, 3, 3, 3, 4), color=BLUE) -> VGroup:
     lo, hi = min(data), max(data)
-    nl = NumberLine(x_range=[lo - 1, hi + 1, 1], length=4.0, include_numbers=True,
-                    font_size=18, color=WHITE, stroke_width=2)
+    nl = NumberLine(x_range=[lo - 1, hi + 1, 1], length=4.6, include_numbers=True,
+                    font_size=26, color=WHITE, stroke_width=3)
     counts = {}
     dots = VGroup()
     for v in data:
         counts[v] = counts.get(v, 0) + 1
-        p = nl.n2p(v) + UP * (0.22 * counts[v])
-        dots.add(Dot(p, radius=0.08, color=color))
+        p = nl.n2p(v) + UP * (0.3 * counts[v])
+        dots.add(Dot(p, radius=0.13, color=color))
     return VGroup(nl, dots)
 
 
 def ratio_table(pairs=((1, 3), (2, 6), (3, 9)), c1=BLUE, c2=ORANGE) -> VGroup:
     rows = VGroup()
-    head = VGroup(Text("in", font_size=22, color=c1, weight="BOLD"),
-                  Text("out", font_size=22, color=c2, weight="BOLD")).arrange(RIGHT, buff=1.0)
+    head = VGroup(Text("in", font_size=30, color=c1, weight="BOLD"),
+                  Text("out", font_size=30, color=c2, weight="BOLD")).arrange(RIGHT, buff=1.3)
     rows.add(head)
     for a, b in pairs:
-        rows.add(VGroup(Text(str(a), font_size=24, color=WHITE),
-                        Text(str(b), font_size=24, color=WHITE)).arrange(RIGHT, buff=1.4))
-    rows.arrange(DOWN, buff=0.22)
-    box = Rectangle(width=rows.width + 0.5, height=rows.height + 0.4,
-                    stroke_color=WHITE, stroke_width=2).move_to(rows)
+        rows.add(VGroup(Text(str(a), font_size=32, color=WHITE),
+                        Text(str(b), font_size=32, color=WHITE)).arrange(RIGHT, buff=1.8))
+    rows.arrange(DOWN, buff=0.34)
+    box = Rectangle(width=rows.width + 0.7, height=rows.height + 0.5,
+                    stroke_color=WHITE, stroke_width=3).move_to(rows)
     return VGroup(box, rows)
 
 
@@ -189,8 +197,8 @@ def balance_scale(left="2x+5", right="13", color=BLUE) -> VGroup:
         Polygon([1.1, 0.1, 0], [1.9, 0.1, 0], [1.7, -0.15, 0], [1.3, -0.15, 0],
                 fill_color=ORANGE, fill_opacity=0.4, stroke_color=ORANGE, stroke_width=2),
     )
-    lt = Text(left, font_size=22, color=color).move_to([-1.5, 0.32, 0])
-    rt = Text(right, font_size=22, color=ORANGE).move_to([1.5, 0.32, 0])
+    lt = Text(left, font_size=28, color=color, weight="BOLD").move_to([-1.5, 0.34, 0])
+    rt = Text(right, font_size=28, color=ORANGE, weight="BOLD").move_to([1.5, 0.34, 0])
     return VGroup(base, post, beam, lpan, rpan, lt, rt)
 
 

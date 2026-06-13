@@ -196,6 +196,15 @@ def method_label(text, color):
     return Text(text, font_size=22, weight="BOLD", color=color)
 
 
+def _fit_hero(hero, max_w=5.4, max_h=3.6):
+    """Scale a hero up/down so it's as large as possible within a box — keeps
+    illustrations and their labels clearly visible without overflowing."""
+    sw = max_w / max(hero.width, 0.01)
+    sh = max_h / max(hero.height, 0.01)
+    hero.scale(min(sw, sh))
+    return hero
+
+
 def misconception_scene(scene, wrong_expr, correct_expr, mascot, pal):
     """Show a red wrong attempt, strike it through, then reveal green correction.
     Stacked vertically and centered so long expressions still fit on 480p15."""
@@ -273,6 +282,7 @@ class LearningExperienceDeck(Scene):
     def setup(self):
         self._elapsed = 0.0
         self._checkpoints = []
+        self._beat_i = 0
 
     def play(self, *args, **kwargs):
         rt = kwargs.get("run_time", 1.0)
@@ -286,9 +296,15 @@ class LearningExperienceDeck(Scene):
     def checkpoint(self):
         self._checkpoints.append(round(self._elapsed, 2))
 
-    def section_break(self, beat="bounce"):
-        """End-of-section: mascot animates, then mark a Continue checkpoint."""
-        getattr(M, beat, M.bounce)(self, self.mascot)
+    def section_break(self, beat=None):
+        """End of a concept: the mascot does an emphasis beat (wink / shake /
+        rock / cheer / eureka, cycling) to drive the point home, then we mark a
+        Continue checkpoint so the player can pause here."""
+        if beat is not None:
+            getattr(M, beat, M.bounce)(self, self.mascot)
+        else:
+            M.emphasis(self, self.mascot, self._beat_i)
+            self._beat_i += 1
         self.wait(0.6)
         self.checkpoint()
 
@@ -343,34 +359,37 @@ class ExamplesDeck(LearningExperienceDeck):
         em = expert_move(self, self.DOMAIN, self.seed, pal)
         self.play(FadeOut(em), run_time=_rt(0.4))
 
-        # A topical illustration anchors the right side the whole time, so the
-        # screen is never just text.
-        hero = V.hero_for(self.DOMAIN)()
-        hero.scale(0.62).to_corner(UP + RIGHT, buff=0.5).shift(DOWN * 1.4)
-        self.play(FadeIn(hero, shift=DOWN * 0.2), run_time=_rt(0.6))
-
         for ei, (q, steps, answer) in enumerate(self.EXAMPLES):
-            q_text = Text(_wrap("Q: " + q, 26), font_size=30, color=pal["accent"], weight="BOLD")
-            q_text.to_edge(UP, buff=1.05).to_edge(LEFT, buff=0.6)
+            # Full-screen composition: question across the top, worked steps
+            # filling the LEFT half, a big topical illustration on the RIGHT
+            # half, and a large answer across the bottom. Even margins.
+            q_text = Text(_wrap("Q:  " + q, 38), font_size=32, color=pal["accent"], weight="BOLD")
+            q_text.to_edge(UP, buff=1.0)
             self.play(Write(q_text), run_time=_rt(0.85))
             M.think(self, self.mascot)
 
-            step_objs = VGroup(*[Text(_wrap(s, 26), font_size=28, color=pal["step"]) for s in steps])
-            step_objs.arrange(DOWN, buff=0.4, aligned_edge=LEFT)
-            step_objs.next_to(q_text, DOWN, buff=0.5).to_edge(LEFT, buff=0.8)
+            hero = V.hero_for(self.DOMAIN)()
+            _fit_hero(hero, max_w=5.4, max_h=3.6)
+            hero.move_to(RIGHT * 3.5 + DOWN * 0.1)
+            self.play(FadeIn(hero, shift=DOWN * 0.2), run_time=_rt(0.6))
+
+            step_objs = VGroup(*[Text(_wrap(s, 24), font_size=30, color=pal["step"]) for s in steps])
+            step_objs.arrange(DOWN, buff=0.55, aligned_edge=LEFT)
+            step_objs.move_to(LEFT * 3.3 + DOWN * 0.1)
             for i, so in enumerate(step_objs):
                 self.play(FadeIn(so, shift=DOWN * 0.2), run_time=_rt(0.65))
                 if i == 0:
                     M.blink(self, self.mascot)
-                self.wait(0.3)
+                self.wait(0.35)
 
+            # Big answer band across the bottom; full screen is now in use.
             ans = answer_card(self, f"= {answer}", pal["answer"], self.mascot,
-                              pos=DOWN * 2.7 + LEFT * 1.5)
-            self.section_break("bounce")
-            self.play(FadeOut(VGroup(q_text, step_objs, ans)), run_time=_rt(0.45))
+                              pos=DOWN * 3.0)
+            self.wait(0.3)
+            self.section_break()  # varied emphasis beat at the end of the concept
+            self.play(FadeOut(VGroup(q_text, step_objs, hero, ans)), run_time=_rt(0.45))
 
-        # Strategy reinforcement at the end (clear the hero first for a clean ribbon).
-        self.play(FadeOut(hero), run_time=_rt(0.35))
+        # Strategy reinforcement at the end.
         tip = pro_tip(self, self.DOMAIN, self.seed, pal)
         self.wait(0.8)
         self.play(FadeOut(tip), run_time=_rt(0.45))
@@ -384,22 +403,23 @@ class TrapDeck(LearningExperienceDeck):
         return TRAP_OUTROS
 
     def lesson(self):
-        w_lbl = Text("WRONG", font_size=22, weight="BOLD", color=RED).shift(LEFT * 3.0 + UP * 1.4)
-        r_lbl = Text("RIGHT", font_size=22, weight="BOLD", color=GREEN).shift(RIGHT * 3.0 + UP * 1.4)
-        w_body = Text(_wrap(self.WRONG, 18), font_size=22, color=RED).shift(LEFT * 3.0)
-        r_body = Text(_wrap(self.RIGHT, 18), font_size=22, color=GREEN).shift(RIGHT * 3.0)
-        w_box = SurroundingRectangle(VGroup(w_lbl, w_body), color=RED, buff=0.25, corner_radius=0.1)
-        r_box = SurroundingRectangle(VGroup(r_lbl, r_body), color=GREEN, buff=0.25, corner_radius=0.1)
-        cross = Cross(w_box, color=RED, stroke_width=4)
+        # Full-width two-column layout with even margins.
+        w_lbl = Text("WRONG", font_size=26, weight="BOLD", color=RED).shift(LEFT * 3.4 + UP * 1.7)
+        r_lbl = Text("RIGHT", font_size=26, weight="BOLD", color=GREEN).shift(RIGHT * 3.4 + UP * 1.7)
+        w_body = Text(_wrap(self.WRONG, 20), font_size=26, color=RED).shift(LEFT * 3.4 + DOWN * 0.2)
+        r_body = Text(_wrap(self.RIGHT, 20), font_size=26, color=GREEN).shift(RIGHT * 3.4 + DOWN * 0.2)
+        w_box = SurroundingRectangle(VGroup(w_lbl, w_body), color=RED, buff=0.35, corner_radius=0.12)
+        r_box = SurroundingRectangle(VGroup(r_lbl, r_body), color=GREEN, buff=0.35, corner_radius=0.12)
+        cross = Cross(w_box, color=RED, stroke_width=5)
 
         self.play(FadeIn(w_lbl), FadeIn(w_body), Create(w_box), run_time=_rt(1.0))
         M.think(self, self.mascot)
         self.play(Create(cross), run_time=_rt(0.55))
+        self.checkpoint()
         self.play(FadeIn(r_lbl), FadeIn(r_body), Create(r_box), run_time=_rt(1.0))
-        check = Text("✓", font_size=42, color=GREEN).move_to(r_box.get_top())
+        check = Text("✓", font_size=52, color=GREEN).move_to(r_box.get_top())
         self.play(FadeIn(check, scale=1.3), run_time=_rt(0.45))
-        M.cheer(self, self.mascot)
-        self.wait(0.7)
+        self.section_break()  # emphasis beat to drive the correction home
 
 
 class IdeaDeck(LearningExperienceDeck):
@@ -410,22 +430,24 @@ class IdeaDeck(LearningExperienceDeck):
 
     def lesson(self):
         pal = self.pal
-        # The hero visual sits to the right; bullets stack on the left.
+        # Big hero on the RIGHT half, concept bullets filling the LEFT half.
         hero = V.hero_for(self.DOMAIN)()
-        hero.scale(0.65).to_edge(RIGHT, buff=0.6).shift(DOWN * 0.1)
+        _fit_hero(hero, max_w=5.4, max_h=3.8)
+        hero.move_to(RIGHT * 3.5 + DOWN * 0.1)
         self.play(FadeIn(hero, shift=DOWN * 0.2), run_time=_rt(0.7))
 
-        lines = VGroup(*[Text(_wrap(s, 30), font_size=22, color=pal["step"]) for s in self.BULLETS])
-        lines.arrange(DOWN, buff=0.35, aligned_edge=LEFT)
-        lines.to_edge(LEFT, buff=0.8).shift(DOWN * 0.1)
+        lines = VGroup(*[Text(_wrap(s, 26), font_size=26, color=pal["step"]) for s in self.BULLETS])
+        lines.arrange(DOWN, buff=0.5, aligned_edge=LEFT)
+        lines.move_to(LEFT * 3.2 + DOWN * 0.1)
+        from manim import Polygon
         for i, ln in enumerate(lines):
-            from manim import Polygon
-            bullet = Polygon([-0.12, 0.12, 0], [-0.12, -0.12, 0], [0.1, 0, 0],
+            bullet = Polygon([-0.14, 0.14, 0], [-0.14, -0.14, 0], [0.12, 0, 0],
                              fill_color=pal["accent"], fill_opacity=1, stroke_width=0)
-            bullet.next_to(ln, LEFT, buff=0.18)
+            bullet.next_to(ln, LEFT, buff=0.2)
             self.play(FadeIn(bullet), FadeIn(ln, shift=DOWN * 0.2), run_time=_rt(0.7))
             if i % 2 == 0:
                 M.blink(self, self.mascot)
             else:
                 M.think(self, self.mascot)
-            self.wait(0.3)
+            self.wait(0.35)
+        self.section_break()  # emphasis beat at the end of the concept

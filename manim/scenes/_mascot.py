@@ -14,7 +14,7 @@ from manim import (
     VGroup, Circle, Ellipse, Polygon, Line, Dot, ArcBetweenPoints, RoundedRectangle,
     Rotate, Wiggle, GrowFromCenter,
     WHITE, ORANGE, GREY_BROWN, GREEN, YELLOW, PINK, GOLD,
-    UP, DOWN, TAU,
+    UP, DOWN, RIGHT, TAU, PI,
 )
 
 DARK = "#0F172A"
@@ -186,14 +186,10 @@ _NAMES = ["puppy", "fox", "owl", "cat", "dog", "alien", "pencil"]
 
 
 def mascot_for(seed: int, featured: bool = True):
-    """Pick a mascot. The star puppy headlines ~2 of every 3 videos; the rest
-    of the cast (fox/owl/cat/dog/alien/pencil) fills the others for variety."""
-    if featured and (abs(int(seed)) % 3 != 0):
-        return puppy(), "puppy"
-    others = [fox, owl, cat, dog, alien, pencil]
-    onames = ["fox", "owl", "cat", "dog", "alien", "pencil"]
-    i = abs(int(seed)) % len(others)
-    return others[i](), onames[i]
+    """Pick a mascot. The Japanese Chin (puppy) is mixed in EQUALLY with the
+    rest of the cast — one of seven, chosen deterministically by seed."""
+    i = abs(int(seed)) % len(_CAST)
+    return _CAST[i](), _NAMES[i]
 
 
 # ---- beats: each calls scene.play directly and stays short ----
@@ -248,3 +244,37 @@ def eureka(scene, m, run_time=0.8):
     c = m.get_center()
     scene.play(m.animate.scale(1.12).shift(_UP * 0.18), FadeIn(spark, scale=1.5), run_time=run_time / 2)
     scene.play(m.animate.scale(1 / 1.12).move_to(c), FadeOut(spark), run_time=run_time / 2)
+
+
+def wink(scene, m, run_time=0.5):
+    # Close one eye briefly with a cheeky head tilt.
+    eyes = m.eyes
+    if len(eyes) >= 1:
+        eye = eyes[0]
+        cy = eye.get_center()
+        scene.play(m.animate.rotate(0.08), eye.animate.stretch(0.12, 1).move_to(cy), run_time=run_time / 2)
+        scene.play(m.animate.rotate(-0.08), eye.animate.stretch(1 / 0.12, 1).move_to(cy), run_time=run_time / 2)
+    else:
+        scene.play(m.animate.rotate(0.1), run_time=run_time / 2)
+        scene.play(m.animate.rotate(-0.1), run_time=run_time / 2)
+
+
+def shake(scene, m, run_time=0.6):
+    # Quick side-to-side shimmy.
+    c = m.get_center()
+    for dx in (0.18, -0.18, 0.12, 0):
+        scene.play(m.animate.move_to(c + RIGHT * dx), run_time=run_time / 4)
+
+
+def rock(scene, m, run_time=0.8):
+    # Rotate halfway (180°) and back — a playful flip-and-return.
+    scene.play(Rotate(m, angle=PI, run_time=run_time / 2))
+    scene.play(Rotate(m, angle=-PI, run_time=run_time / 2))
+
+
+# Emphasis beats used at the end of a concept to drive a point home.
+EMPHASIS = [wink, cheer, shake, rock, eureka, bounce]
+
+
+def emphasis(scene, m, i=0):
+    EMPHASIS[i % len(EMPHASIS)](scene, m)
