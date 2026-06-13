@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getLesson, type Lesson } from '../data/lessons';
 import { DOMAIN_EMOJI, DOMAIN_LABELS, type Domain } from '../types/problem';
+import { LessonVideo } from './LessonVideo';
+import { ReadAloud } from './ReadAloud';
 
 interface Props {
   domain: Domain;
@@ -127,8 +129,11 @@ function ConceptTab({ lesson, onOpenLesson }: { lesson: Lesson; onOpenLesson?: (
   return (
     <div>
       <p className="text-sm text-slate-600">{lesson.objective}</p>
-      <div className="mt-3 text-[10px] font-display font-extrabold uppercase tracking-wider text-slate-500">
-        The key idea
+      <div className="mt-3 flex items-center justify-between">
+        <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-slate-500">
+          The key idea
+        </div>
+        <ReadAloud text={[lesson.objective, ...lesson.concept]} label="Read aloud" />
       </div>
       <ol className="mt-2 space-y-2.5">
         {lesson.concept.map((c, i) => (
@@ -202,21 +207,11 @@ function VideosTab({ lesson }: { lesson: Lesson }) {
           <div className="text-sm font-display font-extrabold text-slate-900 mb-1.5">
             ▶ {v.title}
           </div>
-          <div className="rounded-2xl overflow-hidden bg-slate-900 border-2 border-slate-200">
-            <video
-              src={`${import.meta.env.BASE_URL}videos/lessons/${v.src}`}
-              controls
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              className="w-full block"
-            />
-          </div>
+          <LessonVideo src={v.src} title={v.title} />
         </div>
       ))}
       <p className="text-xs text-slate-500 text-center">
-        Tap a video to play. They loop so you can watch the steps again.
+        Plays once and stops on the last frame — tap ↻ Replay to watch again.
       </p>
     </div>
   );

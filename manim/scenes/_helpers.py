@@ -34,7 +34,7 @@ def title_bar(scene: Scene, text: str, color=BLUE, size: int = 36):
     """Animated title bar that pins to the top edge."""
     title = Text(text, font_size=size, weight="BOLD", color=color)
     title.to_edge(UP, buff=0.4)
-    scene.play(Write(title), run_time=0.6)
+    scene.play(Write(title), run_time=1.0)
     return title
 
 
@@ -44,8 +44,8 @@ def step_reveal(scene: Scene, steps, color=WHITE, size: int = 26):
     lines.arrange(DOWN, buff=0.35, aligned_edge=LEFT)
     lines.move_to([0, 0, 0])
     for ln in lines:
-        scene.play(FadeIn(ln, shift=DOWN * 0.3), run_time=0.6)
-        scene.wait(0.2)
+        scene.play(FadeIn(ln, shift=DOWN * 0.3), run_time=0.9)
+        scene.wait(0.55)
     return lines
 
 
@@ -54,8 +54,8 @@ def answer_pop(scene: Scene, answer: str, color=GREEN, size: int = 44):
     a = Text(f"= {answer}", font_size=size, weight="BOLD", color=color)
     a.to_edge(DOWN, buff=0.7)
     box = SurroundingRectangle(a, color=color, buff=0.15, corner_radius=0.12)
-    scene.play(FadeIn(a, scale=1.2), Create(box), run_time=0.7)
-    scene.wait(1.0)
+    scene.play(FadeIn(a, scale=1.2), Create(box), run_time=1.0)
+    scene.wait(1.6)
     return VGroup(a, box)
 
 
@@ -63,19 +63,19 @@ def example_panel(scene: Scene, q: str, steps, answer: str):
     """Render one worked example, then clear before the next."""
     q_text = Text(_wrap("Q: " + q, 50), font_size=28, color=YELLOW)
     q_text.to_edge(UP, buff=1.4)
-    scene.play(Write(q_text), run_time=0.7)
-    scene.wait(0.4)
+    scene.play(Write(q_text), run_time=1.0)
+    scene.wait(0.7)
 
     step_objs = VGroup(*[Text(_wrap(s, 50), font_size=24) for s in steps])
     step_objs.arrange(DOWN, buff=0.3, aligned_edge=LEFT)
     step_objs.next_to(q_text, DOWN, buff=0.5)
     for so in step_objs:
-        scene.play(FadeIn(so, shift=DOWN * 0.2), run_time=0.5)
-        scene.wait(0.15)
+        scene.play(FadeIn(so, shift=DOWN * 0.2), run_time=0.8)
+        scene.wait(0.45)
 
     ans = answer_pop(scene, answer)
-    scene.wait(0.6)
-    scene.play(FadeOut(VGroup(q_text, step_objs, ans)), run_time=0.4)
+    scene.wait(1.0)
+    scene.play(FadeOut(VGroup(q_text, step_objs, ans)), run_time=0.6)
 
 
 def wrong_vs_right(scene: Scene, wrong: str, right: str):
@@ -95,8 +95,8 @@ def wrong_vs_right(scene: Scene, wrong: str, right: str):
         FadeIn(w_lbl), FadeIn(w_body), Create(w_box), Create(cross),
         FadeIn(r_lbl), FadeIn(r_body), Create(r_box),
         lag_ratio=0.1,
-    ), run_time=2.0)
-    scene.wait(2.5)
+    ), run_time=2.6)
+    scene.wait(3.2)
 
 
 class ExamplesDeck(Scene):
@@ -109,8 +109,8 @@ class ExamplesDeck(Scene):
         for q, steps, answer in self.EXAMPLES:
             example_panel(self, q, steps, answer)
         outro = Text("You try one!", font_size=32, weight="BOLD", color=YELLOW)
-        self.play(FadeIn(outro), run_time=0.6)
-        self.wait(1.4)
+        self.play(FadeIn(outro), run_time=1.0)
+        self.wait(2.0)
 
 
 class TrapDeck(Scene):
@@ -124,8 +124,8 @@ class TrapDeck(Scene):
         wrong_vs_right(self, self.WRONG, self.RIGHT)
         outro = Text("Read the question twice.", font_size=28, color=YELLOW)
         outro.to_edge(DOWN, buff=0.6)
-        self.play(FadeIn(outro), run_time=0.5)
-        self.wait(1.5)
+        self.play(FadeIn(outro), run_time=1.0)
+        self.wait(2.0)
 
 
 class IdeaDeck(Scene):
@@ -136,4 +136,4 @@ class IdeaDeck(Scene):
     def construct(self):
         title_bar(self, self.TITLE, color=BLUE)
         step_reveal(self, self.BULLETS, color=WHITE, size=28)
-        self.wait(1.4)
+        self.wait(2.0)

@@ -8,10 +8,10 @@ class Lesson6SP6(Scene):
     def construct(self):
         title = Text("Mode = the most-common value", font_size=40, weight=BOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
+        self.play(Write(title), run_time=1.4)
 
         data = Text("Data: 3, 5, 5, 7", font_size=36, color=YELLOW).shift(UP * 1.5)
-        self.play(Write(data))
+        self.play(Write(data), run_time=1.4)
 
         # Show each number on its own; emphasize the duplicate 5s.
         nums = VGroup(
@@ -27,8 +27,9 @@ class Lesson6SP6(Scene):
         fives = VGroup(nums[1], nums[2])
         box = SurroundingRectangle(fives, color=GREEN, buff=0.18, stroke_width=3)
         twice = Text("5 appears twice", font_size=26, color=GREEN).next_to(box, DOWN, buff=0.3)
-        self.play(Create(box), Write(twice))
+        self.play(Create(box), Write(twice), run_time=1.4)
 
         ans = Text("Mode = 5", font_size=52, color=GREEN, weight=BOLD).shift(DOWN * 2.8)
-        self.play(Write(ans))
-        self.wait(2)
+        self.play(Write(ans), run_time=1.4)
+        self.wait(2.8)
+# slowed

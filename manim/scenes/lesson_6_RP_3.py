@@ -9,14 +9,14 @@ class Lesson6RP3(Scene):
     def construct(self):
         title = Text("Ratio tables: equivalent ratios", font_size=40, weight=BOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
+        self.play(Write(title), run_time=1.4)
 
         # Two-column table: input | output
         header = VGroup(
             Text("Input", font_size=28, color=BLUE),
             Text("Output", font_size=28, color=ORANGE),
         ).arrange(RIGHT, buff=2.2).shift(UP * 1.4)
-        self.play(Write(header))
+        self.play(Write(header), run_time=1.4)
 
         rows = [(2, 6), (3, 9), (4, 12), (5, None)]
         row_groups = []
@@ -32,12 +32,13 @@ class Lesson6RP3(Scene):
         # Highlight the pattern.
         pattern = Text("Pattern: output = input × 3", font_size=28, color=YELLOW)
         pattern.shift(DOWN * 2.6)
-        self.play(Write(pattern))
-        self.wait(0.6)
+        self.play(Write(pattern), run_time=1.4)
+        self.wait(0.84)
 
         # Fill in 5 × 3 = 15
         compute = Text("5 × 3 = 15", font_size=32).shift(DOWN * 3.4)
-        self.play(Write(compute))
+        self.play(Write(compute), run_time=1.4)
         final_15 = Text("15", font_size=34, color=GREEN, weight=BOLD).move_to(row_groups[-1][1].get_center())
-        self.play(FadeOut(row_groups[-1][1]), FadeIn(final_15))
-        self.wait(2)
+        self.play(FadeOut(row_groups[-1][1]), FadeIn(final_15), run_time=1.4)
+        self.wait(2.8)
+# slowed

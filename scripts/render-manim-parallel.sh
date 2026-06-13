@@ -38,7 +38,7 @@ export MANIM OUT_DIR
 # Build the file list.
 shopt -s nullglob
 files=()
-for glob in lesson_*_examples.py lesson_*_trap.py lesson_5_F_*_idea.py; do
+for glob in lesson_6_RP_[1-9].py lesson_6_RP_10.py lesson_6_NS_[1-9].py lesson_6_NS_10.py lesson_6_EE_[1-9].py lesson_6_EE_10.py lesson_6_G_[1-9].py lesson_6_G_10.py lesson_6_SP_[1-9].py lesson_6_SP_10.py lesson_*_examples.py lesson_*_trap.py lesson_5_F_*_idea.py; do
   for f in $glob; do
     files+=("$f")
   done

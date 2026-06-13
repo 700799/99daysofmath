@@ -10,7 +10,7 @@ class Lesson6RP1(Scene):
     def construct(self):
         title = Text("Ratios compare two amounts", font_size=40, weight=BOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
+        self.play(Write(title), run_time=1.4)
 
         # 4 red apples + 6 orange circles, in two rows.
         apples = VGroup(*[
@@ -27,16 +27,17 @@ class Lesson6RP1(Scene):
         row_a = VGroup(a_lbl, apples).arrange(RIGHT, buff=0.5)
         row_o = VGroup(o_lbl, oranges).arrange(RIGHT, buff=0.5)
         rows = VGroup(row_a, row_o).arrange(DOWN, buff=0.5).shift(UP * 0.6)
-        self.play(LaggedStart(FadeIn(row_a), FadeIn(row_o), lag_ratio=0.3))
-        self.wait(0.4)
+        self.play(LaggedStart(FadeIn(row_a), FadeIn(row_o), lag_ratio=0.3), run_time=1.4)
+        self.wait(0.56)
 
         ratio1 = Text("Apples to oranges = 4 : 6", font_size=32).shift(DOWN * 1.4)
-        self.play(Write(ratio1))
-        self.wait(1)
+        self.play(Write(ratio1), run_time=1.4)
+        self.wait(1.4)
 
         reduce = Text("Divide both by 2", font_size=26, color=YELLOW).shift(DOWN * 2.2)
-        self.play(Write(reduce))
+        self.play(Write(reduce), run_time=1.4)
 
         simplified = Text("= 2 : 3", font_size=46, color=GREEN, weight=BOLD).shift(DOWN * 3.1)
-        self.play(Write(simplified))
-        self.wait(2)
+        self.play(Write(simplified), run_time=1.4)
+        self.wait(2.8)
+# slowed

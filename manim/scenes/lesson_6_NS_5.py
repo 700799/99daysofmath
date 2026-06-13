@@ -8,7 +8,7 @@ class Lesson6NS5(Scene):
     def construct(self):
         title = Text("The four quadrants", font_size=40, weight=BOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
+        self.play(Write(title), run_time=1.4)
 
         axes = Axes(
             x_range=[-6, 6, 1],
@@ -20,7 +20,7 @@ class Lesson6NS5(Scene):
         ).shift(DOWN * 0.3)
         x_lbl = Text("x", font_size=22).next_to(axes.x_axis.get_right(), DOWN, buff=0.1)
         y_lbl = Text("y", font_size=22).next_to(axes.y_axis.get_top(), LEFT, buff=0.1)
-        self.play(Create(axes), Write(x_lbl), Write(y_lbl))
+        self.play(Create(axes), Write(x_lbl), Write(y_lbl), run_time=1.4)
 
         # Label the four quadrants
         q_offsets = [
@@ -33,20 +33,21 @@ class Lesson6NS5(Scene):
         for name, dx, dy in q_offsets:
             t = Text(name, font_size=24, color=GREY).move_to(axes.c2p(dx, dy))
             q_mobs.append(t)
-        self.play(*[FadeIn(m) for m in q_mobs])
-        self.wait(0.4)
+        self.play(*[FadeIn(m) for m in q_mobs], run_time=1.4)
+        self.wait(0.56)
 
         # Plot the point (-3, 5)
         pt = Dot(axes.c2p(-3, 5), color=RED, radius=0.12)
         pt_lbl = Text("(-3, 5)", font_size=26, color=RED).next_to(pt, UP, buff=0.18)
-        self.play(FadeIn(pt), Write(pt_lbl))
+        self.play(FadeIn(pt), Write(pt_lbl), run_time=1.4)
 
         # Highlight Quadrant II
         q2_label = q_mobs[1]
-        self.play(q2_label.animate.set_color(GREEN).scale(1.4))
+        self.play(q2_label.animate.set_color(GREEN).scale(1.4), run_time=1.4)
 
         # Conclusion
         ans = Text("(-3, 5)  is in  Quadrant II",
                    font_size=32, color=GREEN, weight=BOLD).to_edge(DOWN, buff=0.6)
-        self.play(Write(ans))
-        self.wait(2)
+        self.play(Write(ans), run_time=1.4)
+        self.wait(2.8)
+# slowed

@@ -10,7 +10,7 @@ class Lesson6RP5(Scene):
     def construct(self):
         title = Text("Percent means 'out of 100'", font_size=40, weight=BOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
+        self.play(Write(title), run_time=1.4)
 
         # A 10x10 grid; shade 20 squares to show 20%.
         cell = 0.32
@@ -23,23 +23,24 @@ class Lesson6RP5(Scene):
                 cells.append(sq)
                 grid.add(sq)
         grid.move_to(LEFT * 3.4 + UP * 0.0)
-        self.play(FadeIn(grid))
+        self.play(FadeIn(grid), run_time=1.4)
 
         # Shade the first 20 squares blue
         shaded = VGroup(*cells[:20]).copy()
         shaded.set_fill(BLUE, opacity=0.85)
         shaded.set_stroke(BLUE, width=1)
-        self.play(LaggedStartMap(FadeIn, shaded, lag_ratio=0.02))
+        self.play(LaggedStartMap(FadeIn, shaded, lag_ratio=0.02), run_time=1.4)
 
         eq1 = Text("20 / 100 = 0.20 = 20%", font_size=30).shift(RIGHT * 2.0 + UP * 1.6)
-        self.play(Write(eq1))
+        self.play(Write(eq1), run_time=1.4)
 
         prob = Text("What is 20% of 45?", font_size=30, color=YELLOW).shift(RIGHT * 2.0 + UP * 0.6)
-        self.play(Write(prob))
+        self.play(Write(prob), run_time=1.4)
 
         calc = Text("0.20 × 45", font_size=32).shift(RIGHT * 2.0 + DOWN * 0.4)
-        self.play(Write(calc))
+        self.play(Write(calc), run_time=1.4)
 
         ans = Text("= 9", font_size=44, color=GREEN, weight=BOLD).shift(RIGHT * 2.0 + DOWN * 1.5)
-        self.play(Write(ans))
-        self.wait(2)
+        self.play(Write(ans), run_time=1.4)
+        self.wait(2.8)
+# slowed

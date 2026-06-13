@@ -8,10 +8,10 @@ class Lesson6SP3(Scene):
     def construct(self):
         title = Text("Range = maximum − minimum", font_size=40, weight=BOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
+        self.play(Write(title), run_time=1.4)
 
         data = Text("Data: 5, 9, 12, 20", font_size=34, color=YELLOW).shift(UP * 1.6)
-        self.play(Write(data))
+        self.play(Write(data), run_time=1.4)
 
         nl = NumberLine(
             x_range=[0, 25, 5],
@@ -21,7 +21,7 @@ class Lesson6SP3(Scene):
             font_size=22,
             color=GREY,
         ).shift(UP * 0.2)
-        self.play(Create(nl))
+        self.play(Create(nl), run_time=1.4)
 
         # Dots at each data point
         dots = []
@@ -35,15 +35,16 @@ class Lesson6SP3(Scene):
         max_dot = Dot(nl.n2p(20), color=GREEN, radius=0.18)
         min_lbl = Text("min = 5", font_size=24, color=GREEN).next_to(min_dot, UP, buff=0.3)
         max_lbl = Text("max = 20", font_size=24, color=GREEN).next_to(max_dot, UP, buff=0.3)
-        self.play(FadeIn(min_dot), FadeIn(max_dot))
-        self.play(Write(min_lbl), Write(max_lbl))
+        self.play(FadeIn(min_dot), FadeIn(max_dot), run_time=1.4)
+        self.play(Write(min_lbl), Write(max_lbl), run_time=1.4)
 
         bracket = DoubleArrow(nl.n2p(5), nl.n2p(20), color=YELLOW, buff=0.05, stroke_width=4)
         bracket.shift(DOWN * 0.6)
-        self.play(GrowArrow(bracket))
+        self.play(GrowArrow(bracket), run_time=1.4)
 
         calc = Text("Range = 20 − 5", font_size=30).shift(DOWN * 1.8)
-        self.play(Write(calc))
+        self.play(Write(calc), run_time=1.4)
         ans = Text("= 15", font_size=48, color=GREEN, weight=BOLD).shift(DOWN * 2.9)
-        self.play(Write(ans))
-        self.wait(2)
+        self.play(Write(ans), run_time=1.4)
+        self.wait(2.8)
+# slowed

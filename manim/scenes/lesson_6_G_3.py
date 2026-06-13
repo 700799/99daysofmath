@@ -8,7 +8,7 @@ class Lesson6G3(Scene):
     def construct(self):
         title = Text("Volume of a rectangular prism", font_size=40, weight=BOLD)
         title.to_edge(UP, buff=0.4)
-        self.play(Write(title))
+        self.play(Write(title), run_time=1.4)
 
         # Pseudo-3D box drawn with two overlapping quadrilaterals (front + back) and 4 edges.
         # Dimensions chosen for clarity, labeled 2 × 3 × 5.
@@ -28,19 +28,20 @@ class Lesson6G3(Scene):
             Line(ftl, ftl + off, color=BLUE),
             Line(ftr, ftr + off, color=BLUE),
         )
-        self.play(Create(front))
-        self.play(Create(back), Create(edges))
+        self.play(Create(front), run_time=1.4)
+        self.play(Create(back), Create(edges), run_time=1.4)
 
         # Dimension labels
         l_lbl = Text("length = 2", font_size=24, color=BLUE).next_to(front, DOWN, buff=0.3)
         h_lbl = Text("height = 3", font_size=24, color=BLUE).next_to(front, LEFT, buff=0.2)
         w_lbl = Text("width = 5", font_size=24, color=BLUE).move_to(back.get_center() + RIGHT * 1.2 + UP * 0.6)
-        self.play(Write(l_lbl), Write(h_lbl), Write(w_lbl))
+        self.play(Write(l_lbl), Write(h_lbl), Write(w_lbl), run_time=1.4)
 
         formula = Text("V = length × width × height", font_size=28).shift(RIGHT * 2.7 + UP * 0.8)
-        self.play(Write(formula))
+        self.play(Write(formula), run_time=1.4)
         calc = Text("V = 2 × 5 × 3", font_size=32).shift(RIGHT * 2.7 + DOWN * 0.2)
-        self.play(Write(calc))
+        self.play(Write(calc), run_time=1.4)
         ans = Text("V = 30 cubic units", font_size=34, color=GREEN, weight=BOLD).shift(RIGHT * 2.7 + DOWN * 1.3)
-        self.play(Write(ans))
-        self.wait(2)
+        self.play(Write(ans), run_time=1.4)
+        self.wait(2.8)
+# slowed

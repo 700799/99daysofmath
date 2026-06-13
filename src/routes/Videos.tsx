@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { DOMAINS, DOMAIN_EMOJI, DOMAIN_LABELS } from '../types/problem';
 import { LESSONS, type Lesson } from '../data/lessons';
 import { LessonCard } from '../components/LessonCard';
+import { LessonVideo } from '../components/LessonVideo';
 
 // Learning library: every unit's Manim animations side-by-side with the
 // written lesson plan (concept bullets + the full step-by-step deck).
@@ -84,17 +85,7 @@ export function Videos() {
                               <div className="text-sm font-display font-extrabold text-slate-900 mb-1.5">
                                 ▶ {v.title}
                               </div>
-                              <div className="rounded-2xl overflow-hidden bg-slate-900 border-2 border-slate-200">
-                                <video
-                                  src={`${import.meta.env.BASE_URL}videos/lessons/${v.src}`}
-                                  controls
-                                  muted
-                                  loop
-                                  playsInline
-                                  preload="none"
-                                  className="w-full block"
-                                />
-                              </div>
+                              <LessonVideo src={v.src} title={v.title} preload="none" />
                             </div>
                           ))}
                         </div>
