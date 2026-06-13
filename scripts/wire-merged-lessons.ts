@@ -54,7 +54,12 @@ src = src.replace(/videos:\s*\[(.*?)\]/g, (whole, body) => {
     } else if (/-trap\.mp4$/.test(file)) {
       sawTrap = true;
       stem = file.replace(/-trap\.mp4$/, '');
+    } else if (/-idea\.mp4$/.test(file)) {
+      // 5.F uses an explicit `-idea` suffix.
+      sawIdea = true;
+      stem = file.replace(/-idea\.mp4$/, '');
     } else if (/^[^/]+-\d+\.mp4$/.test(file) && !/-(examples|trap|story|lesson)\.mp4$/.test(file)) {
+      // 6.x decks use the bare `<stem>.mp4` filename for the idea video.
       sawIdea = true;
       stem = file.replace(/\.mp4$/, '');
     }
