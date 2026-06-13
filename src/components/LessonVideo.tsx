@@ -1,9 +1,18 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import {
+  useEffect,
+  useRef,
+  useState,
+  useCallback,
+  type ReactNode,
+} from 'react';
+import { createPortal } from 'react-dom';
+import { motion, AnimatePresence, type PanInfo } from 'framer-motion';
 
 interface Props {
   src: string;
   title?: string;
-  /** Browser preload hint; default 'metadata'. Pass 'none' in libraries with many videos. */
+  /** Browser preload hint; default 'metadata'. Unused on the launcher (no
+   *  <video> mounts until the drawer opens) — kept for API compatibility. */
   preload?: 'none' | 'metadata' | 'auto';
 }
 
@@ -27,13 +36,144 @@ interface Chapters {
 }
 
 /**
- * Reusable lesson-video player. Big prominent Play / Pause overlay, freezes on
- * the final frame (no auto-loop), a 🐢 slow-it-down toggle, and Khan-style
- * "Continue" checkpoints: if a `<src>.chapters.json` sidecar exists, the video
- * auto-pauses at each section boundary and shows a big Continue button so kids
- * set their own pace.
+ * Lesson-video launcher: a compact tappable tile that opens a big slide-out
+ * drawer containing the actual <video> + the Continue overlay + the 🐢
+ * slow-it-down toggle. The drawer fills most of the screen on phones and is a
+ * centered modal on tablet/desktop, so the kid never needs native fullscreen.
+ *
+ * No <video> mounts (or fetches metadata) until the drawer opens — important
+ * for the library page which lists 100+ videos.
  */
-export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
+export function LessonVideo({ src, title }: Props) {
+  const [open, setOpen] = useState(false);
+  const label = title ?? 'Lesson animation';
+
+  // Close on Esc.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open]);
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        aria-label={`Open video: ${label}`}
+        className="group relative w-full block rounded-2xl overflow-hidden bg-slate-900 border-2 border-slate-200 text-left aspect-video active:scale-[0.99] transition-transform"
+      >
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-white">
+          <span className="rounded-full bg-white/95 shadow-lg w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center text-2xl sm:text-3xl text-slate-900">
+            ▶
+          </span>
+          <span className="px-3 text-center font-display font-extrabold text-sm sm:text-base text-white drop-shadow line-clamp-2">
+            {label}
+          </span>
+          <span className="text-[10px] sm:text-xs font-display font-bold text-white/80 uppercase tracking-wider">
+            Tap to watch
+          </span>
+        </div>
+      </button>
+
+      <VideoDrawer
+        open={open}
+        onClose={() => setOpen(false)}
+        title={label}
+        src={src}
+      />
+    </>
+  );
+}
+
+interface DrawerProps {
+  open: boolean;
+  onClose: () => void;
+  title: string;
+  src: string;
+}
+
+function VideoDrawer({ open, onClose, title, src }: DrawerProps) {
+  if (typeof document === 'undefined') return null;
+
+  return createPortal(
+    <AnimatePresence>
+      {open && (
+        <motion.div
+          key="video-drawer"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-[60] bg-slate-900/70 backdrop-blur-[2px] flex items-end sm:items-center sm:justify-center"
+          onClick={onClose}
+          role="dialog"
+          aria-label={`Video: ${title}`}
+        >
+          <motion.div
+            // Bottom sheet on phone; centered card from sm: up.
+            initial={{ y: '100%', opacity: 1, scale: 1 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            exit={{ y: '100%', opacity: 1, scale: 1 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 32 }}
+            drag="y"
+            dragConstraints={{ top: 0, bottom: 0 }}
+            dragElastic={{ top: 0, bottom: 0.6 }}
+            onDragEnd={(_: unknown, info: PanInfo) => {
+              if (info.offset.y > 90 || info.velocity.y > 600) onClose();
+            }}
+            onClick={(e) => e.stopPropagation()}
+            className={[
+              'relative w-full max-h-[94vh] bg-white rounded-t-3xl shadow-2xl flex flex-col',
+              'sm:max-h-[88vh] sm:max-w-3xl sm:w-[92vw] sm:rounded-3xl sm:m-auto',
+            ].join(' ')}
+            style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+          >
+            {/* drag handle (phone only) */}
+            <div className="sm:hidden pt-2.5 pb-1 flex justify-center shrink-0 cursor-grab">
+              <div className="w-10 h-1.5 rounded-full bg-slate-300" />
+            </div>
+
+            {/* header */}
+            <div className="px-4 sm:px-5 pt-2 sm:pt-4 pb-3 flex items-center justify-between gap-3 shrink-0">
+              <div className="min-w-0">
+                <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-sky-600">
+                  Animation
+                </div>
+                <h2 className="text-base sm:text-lg font-display font-extrabold text-slate-900 truncate">
+                  {title}
+                </h2>
+              </div>
+              <button
+                type="button"
+                onClick={onClose}
+                aria-label="Close"
+                className="shrink-0 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 font-display font-extrabold text-lg"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* the video itself — drawer sizes to it so there's no dead space */}
+            <div className="px-3 sm:px-5 pb-3 sm:pb-5">
+              <VideoPlayer src={src} title={title} />
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>,
+    document.body,
+  );
+}
+
+/**
+ * The actual playback surface. Lives only inside the drawer — there's no
+ * inline use. Keeps the existing Continue checkpoints, 🐢 slow toggle, big
+ * play / replay overlays, and tries to autoplay muted on open.
+ */
+function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode {
   const url = `${import.meta.env.BASE_URL}videos/lessons/${src}`;
   const chaptersUrl = `${import.meta.env.BASE_URL}videos/lessons/${src.replace(/\.mp4$/, '.chapters.json')}`;
   const ref = useRef<HTMLVideoElement | null>(null);
@@ -42,7 +182,6 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
   const [rate, setRate] = useState<number>(() => getInitialRate());
   const [autoPause, setAutoPause] = useState<boolean>(() => getInitialAutoPause());
 
-  // Checkpoints (scaled to real duration once metadata loads).
   const rawRef = useRef<Chapters | null>(null);
   const marksRef = useRef<number[]>([]);
   const nextIdxRef = useRef(0);
@@ -63,8 +202,31 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
     window.localStorage.setItem(PAUSE_KEY, autoPause ? 'on' : 'off');
   }, [autoPause]);
 
-  // Load the chapters sidecar (graceful no-op if missing) and recompute marks
-  // once it arrives — it may resolve after loadedmetadata already fired.
+  // Pause + release on unmount (drawer close).
+  useEffect(() => {
+    return () => {
+      const v = ref.current;
+      if (v) {
+        try {
+          v.pause();
+        } catch {
+          /* ignore */
+        }
+      }
+    };
+  }, []);
+
+  // Try to autoplay (muted) once mounted — drawers are user-initiated so
+  // browsers allow it. If autoplay is blocked, the big Play overlay still
+  // shows.
+  useEffect(() => {
+    const v = ref.current;
+    if (!v) return;
+    const tryPlay = () => v.play().catch(() => {});
+    if (v.readyState >= 2) tryPlay();
+    else v.addEventListener('loadedmetadata', tryPlay, { once: true });
+  }, []);
+
   useEffect(() => {
     let cancelled = false;
     fetch(chaptersUrl)
@@ -90,15 +252,12 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
     }
     const raw = rawRef.current;
     if (raw && raw.total && raw.checkpoints.length) {
-      // Precise section checkpoints from the render-time sidecar.
       const ratio = v.duration / raw.total;
       marksRef.current = raw.checkpoints
         .map((c) => c * ratio)
         .filter((t) => t > 0.5 && t < v.duration - 0.4)
         .sort((a, b) => a - b);
     } else {
-      // Fallback: pause every ~9s so EVERY video lets kids go at their pace,
-      // even the ones without a checkpoint sidecar.
       const PERIOD = 9;
       const marks: number[] = [];
       for (let t = PERIOD; t < v.duration - 1; t += PERIOD) marks.push(t);
@@ -147,21 +306,20 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
   };
 
   return (
-    <div className="relative rounded-2xl overflow-hidden bg-slate-900 border-2 border-slate-200">
+    <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-slate-200">
       <video
         ref={ref}
         src={url}
         controls
         muted
         playsInline
-        preload={preload}
-        className="w-full block"
-        aria-label={title ?? 'Lesson animation'}
+        preload="metadata"
+        className="absolute inset-0 w-full h-full bg-black object-contain"
+        aria-label={title}
         onLoadedMetadata={computeMarks}
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
         onSeeked={() => {
-          // Recompute which checkpoint is next after a manual scrub.
           const v = ref.current;
           if (!v) return;
           const marks = marksRef.current;
@@ -176,7 +334,6 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
         }}
       />
 
-      {/* Big center overlay — visible until first play, fades out while playing. */}
       {!playing && !ended && !atCheckpoint && (
         <button
           type="button"
@@ -190,7 +347,6 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
         </button>
       )}
 
-      {/* Checkpoint "Continue" overlay — kid sets their own pace. */}
       {atCheckpoint && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/55">
           <div className="text-white font-display font-extrabold text-lg drop-shadow">
@@ -216,7 +372,6 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
         </div>
       )}
 
-      {/* Pause button — shows briefly when playing (tap the video to surface it). */}
       {playing && !atCheckpoint && (
         <button
           type="button"
@@ -228,7 +383,6 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
         </button>
       )}
 
-      {/* End-of-video replay pill — replaces the play overlay when the clip stops. */}
       {ended && (
         <button
           type="button"
@@ -242,7 +396,6 @@ export function LessonVideo({ src, title, preload = 'metadata' }: Props) {
         </button>
       )}
 
-      {/* Slow-it-down toggle, pinned bottom-left so it doesn't compete with native controls. */}
       <button
         type="button"
         onClick={() => setRate((r) => (r === 1 ? 0.75 : 1))}

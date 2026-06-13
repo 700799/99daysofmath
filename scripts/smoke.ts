@@ -280,12 +280,20 @@ async function main() {
     await page.waitForTimeout(300);
     console.log('   ✓ Concept drawer opens with Concept/Videos tabs');
 
-    console.log('26. Video & lesson library renders...');
+    console.log('26. Video & lesson library renders + video drawer opens...');
     await page.goto(BASE + '#/videos', { waitUntil: 'networkidle' });
     await page.waitForSelector('text=Video & lesson library', { timeout: 5000 });
     const unitRow = await page.locator('summary').first().isVisible().catch(() => false);
     if (!unitRow) throw new Error('No unit rows in the video library');
-    console.log('   ✓ Library lists units with videos + lessons');
+    // Expand the first unit and open the first video launcher.
+    await page.locator('summary').first().click();
+    await page.waitForTimeout(200);
+    const launcher = page.locator('button[aria-label^="Open video"]').first();
+    await launcher.click({ timeout: 5000 });
+    await page.waitForSelector('[role="dialog"][aria-label^="Video:"] video', { timeout: 5000 });
+    await page.locator('[role="dialog"][aria-label^="Video:"] button[aria-label="Close"]').click();
+    await page.waitForTimeout(200);
+    console.log('   ✓ Library lists units; video drawer opens + closes');
 
     console.log('27. Arcade hub renders 8 game tiles + variety meter + daily timer...');
     await page.goto(BASE + '#/arcade', { waitUntil: 'networkidle' });
