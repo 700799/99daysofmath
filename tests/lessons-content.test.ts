@@ -64,10 +64,10 @@ describe('lessons content', () => {
     }
   });
 
-  it('every lesson has at least 2 videos referenced on disk (idea + examples + trap)', () => {
+  it('every lesson references at least one video (merged lesson or stand-alone)', () => {
     const missing: string[] = [];
     for (const l of LESSONS) {
-      if (!Array.isArray(l.videos) || l.videos.length < 2) {
+      if (!Array.isArray(l.videos) || l.videos.length < 1) {
         missing.push(`${l.domain}-${l.unit}: ${l.videos?.length ?? 0} video(s)`);
       }
     }
