@@ -136,50 +136,35 @@ export function Home() {
         </Link>
       )}
 
-      {/* Video Library — quick access to learning resources */}
-      <div className="mt-6 mb-4 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
-        🎬 Video Library
+      {/* Play — 3x3 grid */}
+      <div className="mt-1 mb-2 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
+        ▶ Play
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+      <div className="grid grid-cols-3 gap-3 mb-6">
         <Link
           to="/videos"
           className="block rounded-2xl p-3 bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">📘</div>
-          <div className="font-display font-extrabold text-sm mt-1">Lessons</div>
-          <div className="text-[11px] opacity-90 mt-0.5 line-clamp-1">Step-by-step guides</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Lessons</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Step-by-step</div>
         </Link>
         <Link
           to="/mathematicians"
           className="block rounded-2xl p-3 bg-gradient-to-br from-purple-500 to-violet-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">🧑‍🔬</div>
-          <div className="font-display font-extrabold text-sm mt-1">Mathematicians</div>
-          <div className="text-[11px] opacity-90 mt-0.5 line-clamp-1">Famous minds</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Mathematicians</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Famous minds</div>
         </Link>
         <Link
           to="/stories"
           className="block rounded-2xl p-3 bg-gradient-to-br from-pink-500 to-rose-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">🌟</div>
-          <div className="font-display font-extrabold text-sm mt-1">Stories</div>
-          <div className="text-[11px] opacity-90 mt-0.5 line-clamp-1">Math history</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Math Stories</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">History</div>
         </Link>
-        <Link
-          to="/settings"
-          className="block rounded-2xl p-3 bg-gradient-to-br from-slate-500 to-slate-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">⚙️</div>
-          <div className="font-display font-extrabold text-sm mt-1">Settings</div>
-          <div className="text-[11px] opacity-90 mt-0.5 line-clamp-1">Preferences</div>
-        </Link>
-      </div>
-
-      {/* Play — 3x3 grid of game modes */}
-      <div className="mt-1 mb-2 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
-        ▶ Play
-      </div>
-      <div className="grid grid-cols-3 gap-3 mb-4">
         <Link
           to="/practice"
           className="block rounded-2xl p-3 bg-gradient-to-br from-sky-500 to-indigo-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
@@ -187,22 +172,6 @@ export function Home() {
           <div className="text-2xl">🧠</div>
           <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Practice</div>
           <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Adaptive</div>
-        </Link>
-        <Link
-          to="/mix"
-          className="block rounded-2xl p-3 bg-gradient-to-br from-purple-500 via-fuchsia-500 to-pink-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">🎲</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Daily Mix</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Random</div>
-        </Link>
-        <Link
-          to="/test"
-          className="block rounded-2xl p-3 bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">🎓</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Mock Test</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Timed</div>
         </Link>
         <Link
           to="/review"
@@ -226,22 +195,6 @@ export function Home() {
           <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Games</div>
         </Link>
         <Link
-          to="/finals"
-          className="block rounded-2xl p-3 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">🏆</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Finals</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Quizzes</div>
-        </Link>
-        <Link
-          to="/report"
-          className="block rounded-2xl p-3 bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">📊</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Progress</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Report</div>
-        </Link>
-        <Link
           to="/"
           className="block rounded-2xl p-3 bg-gradient-to-br from-teal-500 to-emerald-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
@@ -250,12 +203,20 @@ export function Home() {
           <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Topics</div>
         </Link>
         <Link
-          to="/"
-          className="block rounded-2xl p-3 bg-gradient-to-br from-indigo-500 to-blue-700 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+          to="/test"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
-          <div className="text-2xl">🎯</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Domains</div>
-          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">All</div>
+          <div className="text-2xl">🎓</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Mock Test</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Timed</div>
+        </Link>
+        <Link
+          to="/finals"
+          className="block rounded-2xl p-3 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-2xl">🏆</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Finals</div>
+          <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Quizzes</div>
         </Link>
       </div>
 
