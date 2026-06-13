@@ -9,8 +9,13 @@ Text color rule (hard): every text role is bright-on-black. We use only
 YELLOW, WHITE, BLUE (manim's bright cyan #58C4DD), GREEN (manim's #83C167),
 ORANGE, GOLD. Coral RED (#FC6255) is reserved for the misconception "WRONG"
 label and its strikethrough.
+
+Story videos opt out of baked-in text via the STORY_GRAPHICS_ONLY env var so
+the React slide deck (src/components/StorySlide.tsx) is the single source of
+text. Only the visuals + a small mascot remain on screen.
 """
 import math
+import os
 import numpy as np
 from manim import (
     Scene, Text, VGroup, FadeIn, FadeOut, Write, Create, Transform, GrowFromCenter,
@@ -29,6 +34,15 @@ PACE = 1.7
 
 def _rt(t):
     return t * PACE
+
+
+# ── graphics-only mode (for story videos) ───────────────────────────────
+# When STORY_GRAPHICS_ONLY=1, StoryDeck renders ONLY the per-beat visuals +
+# a small mascot — no title bar, no subtitle, no head/body paragraphs, no
+# "What you learned" closer, no outro text. The React slide deck (StorySlide
+# .tsx) supplies all text on a clean white card so two layers of words can't
+# fight each other. Affects construct() and StoryDeck.lesson() only.
+STORY_GRAPHICS_ONLY = os.environ.get("STORY_GRAPHICS_ONLY", "0") in ("1", "true", "yes", "on")
 
 
 # ── palettes: only high-contrast-on-black roles ─────────────────────────
@@ -327,20 +341,26 @@ class LearningExperienceDeck(Scene):
     def construct(self):
         seed = _seed(self.TITLE)
         pal = palette_for(seed)
-        title_bar(self, self.TITLE, color=pal["title"])
+        if not STORY_GRAPHICS_ONLY:
+            title_bar(self, self.TITLE, color=pal["title"])
         self.mascot = place_mascot(self, seed)
         self.pal = pal
         self.seed = seed
         self.lesson()
-        # Closer beat: varied outro + cheer cartwheel.
-        outro_pool = self.outro_pool()
-        outro = Text(outro_pool[seed % len(outro_pool)],
-                     font_size=34, weight="BOLD", color=pal["accent"])
-        outro.to_edge(DOWN, buff=0.6)
-        self.play(FadeIn(outro, scale=1.1), run_time=_rt(0.7))
-        M.cheer(self, self.mascot)
-        M.spin(self, self.mascot)
-        self.wait(0.4)
+        # Closer beat: varied outro + cheer cartwheel. Skipped in graphics-only
+        # mode — the React deck owns the "What you learned" copy.
+        if STORY_GRAPHICS_ONLY:
+            M.bounce(self, self.mascot)
+            self.wait(0.3)
+        else:
+            outro_pool = self.outro_pool()
+            outro = Text(outro_pool[seed % len(outro_pool)],
+                         font_size=34, weight="BOLD", color=pal["accent"])
+            outro.to_edge(DOWN, buff=0.6)
+            self.play(FadeIn(outro, scale=1.1), run_time=_rt(0.7))
+            M.cheer(self, self.mascot)
+            M.spin(self, self.mascot)
+            self.wait(0.4)
         self._write_chapters()
 
     def outro_pool(self):
@@ -495,29 +515,37 @@ class StoryDeck(LearningExperienceDeck):
         from manim import Text as _T, FadeIn as _Fi, FadeOut as _Fo, VGroup as _Vg
         pal = self.pal
 
-        # Subtitle teaser, fades in under the title.
-        if self.SUBTITLE:
+        # Subtitle teaser, fades in under the title. Graphics-only mode skips
+        # it — the React deck shows the subtitle on the title card.
+        if self.SUBTITLE and not STORY_GRAPHICS_ONLY:
             sub = _T(_wrap(self.SUBTITLE, 48), font_size=28, color=pal["accent"], weight="BOLD")
             sub.to_edge(UP, buff=1.05)
             self.play(_Fi(sub, shift=DOWN * 0.1), run_time=_rt(0.7))
-            # Give kids time to read the subtitle before moving on.
             self.wait(1.2)
             self.section_break()
             self.play(_Fo(sub), run_time=_rt(0.4))
+        elif STORY_GRAPHICS_ONLY:
+            # Mark a checkpoint at the start so the React deck has a segment
+            # boundary between the title card and the first beat.
+            self.wait(0.4)
+            self.section_break(beat="blink")
 
-        # Beats: paragraph on the LEFT, illustration on the RIGHT.
-        # `body` text is auto-paced — longer text = longer hold, so 3-5 minute
-        # stories naturally land at the right speed without manual tuning.
+        # Beats. In default mode: paragraph on the LEFT, illustration on the
+        # RIGHT. In graphics-only mode: just the illustration + a tiny mascot
+        # reaction — React supplies all text. Each beat ends with a checkpoint
+        # so the slide deck has one segment per beat.
         for bi, beat in enumerate(self.BEATS):
-            head = _T(_wrap(beat.get("head", ""), 24),
-                      font_size=30, color=pal["accent"], weight="BOLD")
-            head.to_edge(UP, buff=1.0).to_edge(LEFT, buff=0.6)
+            head = body = None
             body_str = beat.get("body", "")
-            body = _T(_wrap(body_str, 30),
-                      font_size=24, color=pal["step"])
-            body.next_to(head, DOWN, buff=0.45, aligned_edge=LEFT)
-            self.play(_Fi(head, shift=DOWN * 0.15), run_time=_rt(0.6))
-            self.play(_Fi(body, shift=DOWN * 0.15), run_time=_rt(0.9))
+            if not STORY_GRAPHICS_ONLY:
+                head = _T(_wrap(beat.get("head", ""), 24),
+                          font_size=30, color=pal["accent"], weight="BOLD")
+                head.to_edge(UP, buff=1.0).to_edge(LEFT, buff=0.6)
+                body = _T(_wrap(body_str, 30),
+                          font_size=24, color=pal["step"])
+                body.next_to(head, DOWN, buff=0.45, aligned_edge=LEFT)
+                self.play(_Fi(head, shift=DOWN * 0.15), run_time=_rt(0.6))
+                self.play(_Fi(body, shift=DOWN * 0.15), run_time=_rt(0.9))
             if bi % 2 == 0:
                 M.blink(self, self.mascot)
             else:
@@ -528,18 +556,28 @@ class StoryDeck(LearningExperienceDeck):
             if visual_fn is not None:
                 v_objs = visual_fn(self, self, pal, self.mascot)
 
-            # Pace the hold to the length of the body text so kids can read.
-            # ~ 18 chars/sec ≈ 200 words/min reading pace for ages 10-11.
-            read_seconds = max(2.6, min(8.5, len(body_str) / 18))
-            self.wait(read_seconds)
+            if STORY_GRAPHICS_ONLY:
+                # Brief hold so the visual lands, then checkpoint so the React
+                # deck can pause here. No text means we don't need reading time.
+                self.wait(1.2)
+            else:
+                # Pace the hold to the length of the body text so kids can read.
+                # ~ 18 chars/sec ≈ 200 words/min reading pace for ages 10-11.
+                read_seconds = max(2.6, min(8.5, len(body_str) / 18))
+                self.wait(read_seconds)
             self.section_break()
-            cleanup = [head, body]
+            cleanup = []
+            if head is not None:
+                cleanup.append(head)
+            if body is not None:
+                cleanup.append(body)
             if v_objs is not None:
                 cleanup.append(v_objs)
-            self.play(_Fo(_Vg(*cleanup)), run_time=_rt(0.45))
+            if cleanup:
+                self.play(_Fo(_Vg(*cleanup)), run_time=_rt(0.45))
 
-        # "What you learned" closer.
-        if self.LEARNED:
+        # "What you learned" closer. Skipped in graphics-only mode.
+        if self.LEARNED and not STORY_GRAPHICS_ONLY:
             learned_head = _T("What you learned", font_size=24,
                               color=GOLD, weight="BOLD").to_edge(UP, buff=1.0)
             learned = _T(_wrap(self.LEARNED, 36), font_size=32,

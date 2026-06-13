@@ -280,9 +280,9 @@ async function main() {
     await page.waitForTimeout(300);
     console.log('   ✓ Concept drawer opens with Concept/Videos tabs');
 
-    console.log('26. Video & lesson library renders + video drawer opens...');
+    console.log('26. Video library renders + video drawer opens...');
     await page.goto(BASE + '#/videos', { waitUntil: 'networkidle' });
-    await page.waitForSelector('text=Video & lesson library', { timeout: 5000 });
+    await page.waitForSelector('text=Video library', { timeout: 5000 });
     const unitRow = await page.locator('summary').first().isVisible().catch(() => false);
     if (!unitRow) throw new Error('No unit rows in the video library');
     // Expand the first unit and open the first video launcher.

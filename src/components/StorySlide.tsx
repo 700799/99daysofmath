@@ -34,7 +34,7 @@ interface Slide {
   head: string;
   /** Single sentence to show on this slide. */
   body: string;
-  /** Beat index — controls which video segment plays. */
+  /** Beat index — controls which video segment plays. Title card is -1. */
   beatIdx: number;
   /** Slide kind for styling. */
   kind: 'title' | 'beat' | 'learned';
@@ -49,7 +49,12 @@ function splitSentences(text: string): string[] {
 
 function buildSlides(story: Story): Slide[] {
   const slides: Slide[] = [
-    { head: story.title.replace(/^Story[:\s]+/i, ''), body: story.subtitle ?? '', beatIdx: -1, kind: 'title' },
+    {
+      head: story.title.replace(/^Story[:\s]+/i, ''),
+      body: story.subtitle ?? '',
+      beatIdx: -1,
+      kind: 'title',
+    },
   ];
   story.beats.forEach((b, bi) => {
     const sentences = splitSentences(b.body);
@@ -68,32 +73,29 @@ function buildSlides(story: Story): Slide[] {
   return slides;
 }
 
-const AUTOPLAY_KEY = 'story:autoplay';
-
 /**
  * Kid-paced story player.
- * - Background: the Manim animation video, NO native controls.
- * - The video is segmented by the existing chapters.json checkpoints. Each
- *   beat plays its own segment, freezes on the last frame, then the text
- *   appears for the kid to read.
- * - Text overlays one sentence at a time. Tap "Continue" (or anywhere on the
- *   slide) to advance. Auto-play optional (6 s holds), default OFF.
- * - Cleanup pauses the video on unmount.
+ * - Top: the Manim animation video (graphics-only — no baked-in text).
+ * - Bottom: a solid white card with the head + body sentence for THIS slide.
+ *   Back / Continue buttons are dog-mascot pills, big and thumb-friendly.
+ * - Each beat's video segment is bounded by the chapters.json sidecar.
+ *   The slide deck plays the segment ONCE when we enter a new beat, then
+ *   freezes on the last frame. Advancing to another sentence of the SAME beat
+ *   leaves the video alone — no rewind, no "reset" feel.
+ * - The kid drives every transition (no auto-advance timer).
  */
 export function StorySlide({ story, onClose }: Props) {
   const slides = buildSlides(story);
   const totalSlides = slides.length;
 
   const [idx, setIdx] = useState(0);
-  const [autoPlay, setAutoPlay] = useState<boolean>(() => {
-    if (typeof window === 'undefined') return false;
-    return window.localStorage.getItem(AUTOPLAY_KEY) === 'on';
-  });
-  const [animationDone, setAnimationDone] = useState(false);
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const chaptersRef = useRef<Chapters | null>(null);
   const segmentEndRef = useRef<number>(Infinity);
+  /** The beatIdx whose segment is currently loaded in the video. -2 means
+   *  "nothing loaded yet" so the very first slide always triggers a seek. */
+  const lastBeatRef = useRef<number>(-2);
 
   const url = `${import.meta.env.BASE_URL}videos/lessons/${story.videoSrc}`;
   const chaptersUrl = url.replace(/\.mp4$/, '.chapters.json');
@@ -119,28 +121,35 @@ export function StorySlide({ story, onClose }: Props) {
     const beat = slides[slideIdx].beatIdx;
     const ch = chaptersRef.current;
     if (!ch) {
-      // No sidecar yet — let the video play from the start and the slide-deck
-      // controls become a pure text reader.
       return { start: 0, end: Infinity };
     }
     if (beat < 0) {
-      // Title card → play the very first segment.
+      // Title card → play the very first segment (intro / subtitle area).
       return { start: 0, end: ch.checkpoints[0] ?? ch.total };
     }
-    const start = beat === 0 ? 0 : ch.checkpoints[beat - 1] ?? 0;
-    const end = ch.checkpoints[beat] ?? ch.total;
+    // Beat i runs from checkpoint[i] to checkpoint[i+1]. We have one
+    // checkpoint at the start (from the subtitle break) so beat 0's start is
+    // checkpoint[0], beat 1's start is checkpoint[1], etc.
+    const start = ch.checkpoints[beat] ?? 0;
+    const end = ch.checkpoints[beat + 1] ?? ch.total;
     return { start, end };
   };
 
-  // When the slide changes, seek + play the matching segment.
+  // Slide change: only touch the video when we're moving to a NEW beat.
+  // Same-beat advances (e.g. sentence 1 → sentence 2) leave the video frozen.
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
-    setAnimationDone(false);
+    const beatIdx = slides[idx].beatIdx;
+    if (lastBeatRef.current === beatIdx) {
+      // Same segment — text changed but the visual stays put.
+      return;
+    }
+    lastBeatRef.current = beatIdx;
 
-    const seg = segmentFor(idx);
-    segmentEndRef.current = seg.end;
     const startVideo = () => {
+      const seg = segmentFor(idx);
+      segmentEndRef.current = seg.end;
       try {
         v.currentTime = seg.start + 0.01;
       } catch {
@@ -152,27 +161,22 @@ export function StorySlide({ story, onClose }: Props) {
       startVideo();
     } else {
       v.addEventListener('loadedmetadata', startVideo, { once: true });
+      return () => v.removeEventListener('loadedmetadata', startVideo);
     }
-    return () => {
-      v.removeEventListener('loadedmetadata', startVideo);
-    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx]);
 
-  // Pause when we hit the segment end → freeze on the last frame.
+  // Pause at the segment end → freeze on the last frame.
   const onTimeUpdate = () => {
     const v = videoRef.current;
     if (!v) return;
     if (v.currentTime >= segmentEndRef.current - 0.05) {
       v.pause();
-      // Seek slightly before the boundary so the freeze shows the segment's
-      // last interesting frame, not the next segment's first.
       try {
         v.currentTime = Math.max(0, segmentEndRef.current - 0.1);
       } catch {
         /* ignore */
       }
-      setAnimationDone(true);
     }
   };
 
@@ -186,21 +190,6 @@ export function StorySlide({ story, onClose }: Props) {
       }
     };
   }, []);
-
-  // Auto-play timer — only after animation finishes so kids actually see it.
-  useEffect(() => {
-    if (!autoPlay || !animationDone) return;
-    const ms = slides[idx].kind === 'beat' ? 6000 : 8000;
-    const id = window.setTimeout(() => advance(), ms);
-    return () => window.clearTimeout(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [autoPlay, animationDone, idx]);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.localStorage.setItem(AUTOPLAY_KEY, autoPlay ? 'on' : 'off');
-    }
-  }, [autoPlay]);
 
   // Keyboard nav.
   useEffect(() => {
@@ -227,6 +216,8 @@ export function StorySlide({ story, onClose }: Props) {
 
   const slide = slides[idx];
   const progressPct = ((idx + 1) / totalSlides) * 100;
+  const atStart = idx <= 0;
+  const atEnd = idx >= totalSlides - 1;
 
   return (
     <div
@@ -247,33 +238,17 @@ export function StorySlide({ story, onClose }: Props) {
             {story.title.replace(/^Story[:\s]+/i, '')}
           </div>
         </div>
-        <div className="flex items-center gap-2 shrink-0">
+        {onClose && (
           <button
             type="button"
-            onClick={() => setAutoPlay((v) => !v)}
-            aria-pressed={autoPlay}
-            className={
-              'inline-flex items-center gap-1 rounded-full px-3 h-8 text-xs font-display font-extrabold border-2 ' +
-              (autoPlay
-                ? 'bg-violet-500/30 border-violet-400 text-violet-100'
-                : 'bg-white/10 border-white/30 text-white/80')
-            }
+            onClick={onClose}
+            aria-label="Close"
+            className="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white font-display font-extrabold text-lg shrink-0"
             data-haptic="tap"
           >
-            {autoPlay ? '⏵ Auto on' : '⏵ Auto off'}
+            ✕
           </button>
-          {onClose && (
-            <button
-              type="button"
-              onClick={onClose}
-              aria-label="Close"
-              className="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white font-display font-extrabold text-lg"
-              data-haptic="tap"
-            >
-              ✕
-            </button>
-          )}
-        </div>
+        )}
       </div>
 
       {/* progress bar */}
@@ -284,11 +259,11 @@ export function StorySlide({ story, onClose }: Props) {
         />
       </div>
 
-      {/* video stage — animation fills the upper portion */}
+      {/* video stage — graphics fill the top half */}
       <button
         type="button"
         onClick={advance}
-        className="relative flex-1 min-h-0 w-full text-left"
+        className="relative flex-1 min-h-0 w-full text-left bg-black"
         aria-label="Tap to continue"
       >
         <video
@@ -297,78 +272,90 @@ export function StorySlide({ story, onClose }: Props) {
           muted
           playsInline
           preload="metadata"
-          // No native controls — we drive playback ourselves.
           className="absolute inset-0 w-full h-full object-contain bg-black"
           onTimeUpdate={onTimeUpdate}
         />
-
-        {/* dimming gradient at the bottom so the text overlay reads cleanly */}
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/50 to-transparent pointer-events-none" />
-
-        {/* text overlay — appears AFTER the animation finishes its segment */}
-        <AnimatePresence mode="wait">
-          {animationDone && (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.35 }}
-              className="absolute left-0 right-0 bottom-3 sm:bottom-6 px-5 sm:px-10 flex flex-col items-center text-center"
-            >
-              {slide.kind === 'beat' && (
-                <div className="text-xs sm:text-sm font-display font-extrabold uppercase tracking-wider text-violet-300 mb-2">
-                  {slide.head}
-                </div>
-              )}
-              <p
-                className={
-                  slide.kind === 'title'
-                    ? 'font-display font-extrabold text-3xl sm:text-5xl text-white leading-tight drop-shadow-lg max-w-2xl'
-                    : slide.kind === 'learned'
-                      ? 'font-display font-extrabold text-xl sm:text-3xl text-emerald-200 leading-snug drop-shadow-lg max-w-2xl'
-                      : 'font-display font-extrabold text-xl sm:text-3xl text-white leading-snug drop-shadow-lg max-w-2xl'
-                }
-              >
-                {slide.body}
-              </p>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* watching-the-animation hint */}
-        {!animationDone && (
-          <div className="absolute inset-x-0 bottom-6 flex justify-center pointer-events-none">
-            <span className="text-white/60 text-xs font-display font-bold uppercase tracking-wider">
-              Watching…
-            </span>
-          </div>
-        )}
       </button>
 
-      {/* nav bar */}
-      <div className="px-4 pb-4 pt-2 shrink-0 flex items-center justify-between gap-2 bg-black/60 border-t border-white/10">
-        <button
-          type="button"
-          onClick={back}
-          disabled={idx <= 0}
-          className="rounded-full bg-white/15 hover:bg-white/25 text-white font-display font-extrabold text-base px-5 h-12 disabled:opacity-30 disabled:cursor-not-allowed"
-          data-haptic="tap"
-        >
-          ← Back
-        </button>
-        <div className="text-xs font-display font-bold text-white/60 tabular-nums">
-          {idx + 1} / {totalSlides}
+      {/* big solid text card — always visible, holds the current sentence */}
+      <div
+        className="shrink-0 bg-white text-slate-900 rounded-t-3xl px-5 sm:px-8 pt-5 sm:pt-7 pb-4 sm:pb-6 shadow-[0_-12px_30px_rgba(0,0,0,0.4)]"
+        style={{ minHeight: '42vh' }}
+      >
+        <div className="flex flex-col h-full min-h-[36vh]">
+          {/* head pill */}
+          <div className="flex items-center justify-between gap-2 mb-3">
+            {slide.kind === 'beat' && (
+              <div className="text-xs sm:text-sm font-display font-extrabold uppercase tracking-wider text-violet-600">
+                {slide.head}
+              </div>
+            )}
+            {slide.kind === 'title' && (
+              <div className="text-xs sm:text-sm font-display font-extrabold uppercase tracking-wider text-amber-600">
+                Math Story · {story.domain}
+              </div>
+            )}
+            {slide.kind === 'learned' && (
+              <div className="text-xs sm:text-sm font-display font-extrabold uppercase tracking-wider text-emerald-600">
+                🎓 What you learned
+              </div>
+            )}
+            <div className="text-[11px] sm:text-xs font-display font-bold text-slate-400 tabular-nums shrink-0">
+              {idx + 1} / {totalSlides}
+            </div>
+          </div>
+
+          {/* body sentence — big and readable */}
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={idx}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -4 }}
+              transition={{ duration: 0.18 }}
+              className={
+                slide.kind === 'title'
+                  ? 'font-display font-extrabold text-3xl sm:text-5xl text-slate-900 leading-tight'
+                  : slide.kind === 'learned'
+                    ? 'font-display font-extrabold text-2xl sm:text-3xl text-emerald-800 leading-snug'
+                    : 'font-display font-extrabold text-2xl sm:text-3xl text-slate-900 leading-snug'
+              }
+            >
+              {slide.body || (slide.kind === 'title' ? story.title.replace(/^Story[:\s]+/i, '') : '')}
+            </motion.p>
+          </AnimatePresence>
+
+          <div className="flex-1" />
+
+          {/* mascot-dog nav buttons */}
+          <div className="mt-4 flex items-center gap-3">
+            <button
+              type="button"
+              onClick={back}
+              disabled={atStart}
+              className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 rounded-full h-14 px-5 sm:px-7 bg-slate-200 hover:bg-slate-300 active:-translate-x-1 text-slate-800 font-display font-extrabold text-base sm:text-lg disabled:opacity-40 disabled:cursor-not-allowed transition-transform"
+              data-haptic="tap"
+              aria-label="Back"
+            >
+              <span aria-hidden="true" className="inline-block scale-x-[-1] text-xl">🐕</span>
+              <span>Back</span>
+            </button>
+            <button
+              type="button"
+              onClick={advance}
+              disabled={atEnd}
+              className="flex-[2] sm:flex-initial inline-flex items-center justify-center gap-2 rounded-full h-14 px-6 sm:px-8 bg-emerald-500 hover:bg-emerald-600 active:translate-x-1 text-white font-display font-extrabold text-lg sm:text-xl shadow-lg shadow-emerald-500/30 disabled:bg-slate-400 disabled:shadow-none transition-transform"
+              data-haptic="tap"
+              aria-label={atEnd ? 'Done' : 'Continue'}
+            >
+              <span>{atEnd ? '✓ Done' : 'Continue'}</span>
+              {!atEnd && (
+                <span aria-hidden="true" className="inline-block text-xl">🐕</span>
+              )}
+              {!atEnd && <span aria-hidden="true" className="text-base">🐾</span>}
+            </button>
+          </div>
         </div>
-        <button
-          type="button"
-          onClick={advance}
-          disabled={idx >= totalSlides - 1}
-          className="rounded-full bg-emerald-500 hover:bg-emerald-600 active:translate-y-0.5 text-white font-display font-extrabold text-lg px-7 h-14 shadow-lg shadow-emerald-500/30 disabled:bg-slate-600 disabled:shadow-none transition"
-          data-haptic="tap"
-        >
-          {idx >= totalSlides - 1 ? '✓ Done' : 'Continue ▶'}
-        </button>
       </div>
     </div>
   );
