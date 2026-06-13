@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
+import { Icon } from '../icons/Icon';
 
 export function NotFound() {
   return (
     <div className="text-center py-12">
-      <div className="text-6xl mb-3">🦉</div>
+      <div className="mb-3 flex justify-center">
+        <Icon name="owl" size={72} />
+      </div>
       <h1 className="text-2xl font-display font-extrabold text-slate-900">
         Lost on the trail
       </h1>

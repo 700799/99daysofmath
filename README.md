@@ -12,9 +12,38 @@ Live: https://700799.github.io/99daysofmath/
 - CA-Common-Core-specific and MAP-style items tagged inside the same bank
 - Phaser-rendered trail, KaTeX math, runs entirely on GitHub Pages
 
+## Rewards Arcade 🎉
+
+Finishing units earns 🪙 **coins**, which power a **Rewards Arcade** of mini-games
+(reachable from the home banner or the coin pill in the header):
+
+- **🎲 Math Party** — a Mario-Party-style board game. Roll the dice and race a CPU
+  rival (Foxy 🦊) around a 20-tile loop. Blue tiles pay coins, red tiles cost a few,
+  Lucky tiles are wildcards, and **Star tiles** let you spend 10 coins to buy a
+  Star — most Stars after 8 rounds wins. Math tiles pop a quick arithmetic
+  challenge for bonus coins. Unlocks at 1 ⭐.
+- **🏎️ Math Grand Prix** — a real-time kart race. Rivals drive at a steady pace
+  while you only move by answering math challenges, so solve fast to take the
+  checkered flag. Unlocks at 6 ⭐.
+
+Winning banks more coins and adds 🥇🥈🥉 trophies to your trophy case. Difficulty
+(Easy/Medium/Hard) controls the arithmetic in the challenge prompts. All game
+rules live in pure, unit-tested modules under [`src/rewards/`](src/rewards); the
+Phaser scenes (`src/phaser/MathPartyScene.ts`, `GrandPrixScene.ts`) handle only
+rendering and animation.
+
+## Icons
+
+Every visual in the app — the owl mascot, Foxy the rival, stars, coins, medals,
+the dice, the kart, domain badges — is a hand-drawn flat SVG in
+[`src/icons/shapes.ts`](src/icons/shapes.ts) (no emoji, no icon fonts, no
+`<text>` elements). One registry feeds both worlds: React renders icons via the
+`<Icon>` component, and Phaser scenes rasterize the same markup into textures
+with `loadIconTextures`, so characters look identical in the UI and in-game.
+
 ## Stack
 
-React 18, Vite 5, TypeScript, Tailwind CSS, Framer Motion, Phaser 3, Zustand, DuckDB-WASM reading a static Parquet file built from hand-authored JSON.
+React 18, Vite 5, TypeScript, Tailwind CSS, Framer Motion, Phaser 3, Zustand. Problems are hand-authored JSON, compiled into a single static `public/data/problems.json` the app fetches at runtime. Phaser (~1.4 MB) is code-split behind `React.lazy`, so the learning core loads without it.
 
 ## Run locally
 
@@ -22,7 +51,7 @@ React 18, Vite 5, TypeScript, Tailwind CSS, Framer Motion, Phaser 3, Zustand, Du
 nvm use            # Node 22
 npm ci
 npm run validate:content
-npm run build:content   # writes public/data/problems.parquet
+npm run build:content   # writes public/data/problems.json
 npm run dev             # http://localhost:5173/99daysofmath/
 ```
 
@@ -35,7 +64,7 @@ After editing:
 ```sh
 npm run validate:content
 npm run build:content
-git add content/ public/data/problems.parquet
+git add content/ public/data/problems.json
 git commit -m "Add N problems to 6.XX"
 ```
 

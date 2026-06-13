@@ -1,16 +1,22 @@
+import { Icon } from '../icons/Icon';
+
 interface Props {
   stars: 0 | 1 | 2 | 3;
   size?: 'sm' | 'md' | 'lg';
 }
 
+const PX = { sm: 16, md: 26, lg: 42 } as const;
+
 export function StarRating({ stars, size = 'md' }: Props) {
-  const cls = size === 'lg' ? 'text-4xl' : size === 'sm' ? 'text-base' : 'text-2xl';
+  const px = PX[size];
   return (
-    <div className={`inline-flex items-center gap-1 ${cls}`} aria-label={`${stars} of 3 stars`}>
+    <div
+      className="inline-flex items-center gap-1"
+      role="img"
+      aria-label={`${stars} of 3 stars`}
+    >
       {[0, 1, 2].map((i) => (
-        <span key={i} className={i < stars ? '' : 'opacity-25 grayscale'}>
-          ⭐
-        </span>
+        <Icon key={i} name={i < stars ? 'star' : 'star-dim'} size={px} />
       ))}
     </div>
   );
