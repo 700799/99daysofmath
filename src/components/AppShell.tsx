@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useProgress } from '../state/progress';
+import { useSessionClicks } from '../state/sessionClicks';
 import { LevelBadge } from './LevelBadge';
 import { XpFlash } from './XpFlash';
 import { submitHaptic, tapHaptic } from '../utils/haptics';
@@ -17,17 +18,23 @@ export function AppShell({ children }: Props) {
     const f = new Date(s.lastFreezeDate + 'T00:00:00Z');
     return Math.round((today.getTime() - f.getTime()) / 86400000) <= 7;
   });
+  const clicks = useSessionClicks((s) => s.count);
   const location = useLocation();
   const isHome = location.pathname === '/' || location.pathname === '';
 
-  // Wire global haptics for buttons. Opt-in via `data-haptic="tap|submit"`.
-  // Also auto-detect by text — "Submit"/"Check"/"Continue"/"Next" trigger a
-  // soft tap even if the markup doesn't carry the attribute. Cheap and
-  // universal; no per-route edits needed.
+  // Wire global haptics + click counter for buttons. Opt-in to specific
+  // haptic patterns via `data-haptic="tap|submit"`; auto-detect by text
+  // ("Submit"/"Check"/"Continue"/"Next") for everything else. Every click
+  // that matches a button / link / role=button also bumps the daily click
+  // counter shown in the header — the user asked to "measure by points not
+  // time" so each tap is one point.
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
-      const target = (e.target as HTMLElement | null)?.closest('button, [role="button"]');
+      const target = (e.target as HTMLElement | null)?.closest(
+        'button, a, [role="button"]',
+      );
       if (!target) return;
+      useSessionClicks.getState().bump();
       const explicit = (target as HTMLElement).dataset.haptic;
       if (explicit === 'submit') {
         submitHaptic();
@@ -92,6 +99,13 @@ export function AppShell({ children }: Props) {
                 {usedFreezeRecently ? '🧊' : '🔥'} {dailyStreak}
               </span>
             )}
+            <span
+              className="inline-flex items-center gap-1 bg-sky-100 text-sky-900 px-2 py-1 rounded-full font-display font-extrabold text-xs tabular-nums"
+              aria-label={`Today's taps: ${clicks}`}
+              title="Taps today"
+            >
+              👆 {clicks}
+            </span>
             <LevelBadge variant="header" />
           </div>
         </div>
