@@ -277,22 +277,22 @@ export function StorySlide({ story, onClose }: Props) {
 
   return (
     <div
-      className="relative w-full bg-black text-white flex flex-col"
+      className="relative w-full bg-slate-950 text-white flex flex-col"
       style={{
-        minHeight: '100dvh',
+        height: '100dvh',
         paddingTop: 'env(safe-area-inset-top)',
         paddingBottom: 'env(safe-area-inset-bottom)',
       }}
     >
-      {/* slim header */}
-      <div className="px-4 py-2 flex items-center justify-between gap-3 shrink-0 bg-black/40 backdrop-blur">
+      {/* ── Header — the story title, shown ONCE, big, at the very top. ── */}
+      <div className="px-4 sm:px-6 py-3 flex items-center justify-between gap-4 shrink-0 bg-black/50 backdrop-blur border-b border-white/10">
         <div className="min-w-0">
-          <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-violet-300">
+          <div className="text-[10px] sm:text-xs font-display font-extrabold uppercase tracking-wider text-violet-300">
             🌟 Math Story · {story.domain} · Unit {story.unit}
           </div>
-          <div className="text-sm font-display font-extrabold text-white truncate">
-            {story.title.replace(/^Story[:\s]+/i, '')}
-          </div>
+          <h1 className="font-display font-extrabold text-white leading-tight text-lg sm:text-2xl md:text-3xl">
+            {story.title}
+          </h1>
         </div>
         <div className="flex items-center gap-2 shrink-0">
           <button
@@ -300,7 +300,7 @@ export function StorySlide({ story, onClose }: Props) {
             onClick={() => setAutoPlay(!autoPlay)}
             aria-pressed={autoPlay}
             className={
-              'inline-flex items-center gap-1 rounded-full px-3 h-8 text-xs font-display font-extrabold border-2 ' +
+              'inline-flex items-center gap-1 rounded-full px-3 sm:px-4 h-9 text-xs sm:text-sm font-display font-extrabold border-2 ' +
               (autoPlay
                 ? 'bg-violet-500/30 border-violet-400 text-violet-100'
                 : 'bg-white/10 border-white/30 text-white/80')
@@ -314,7 +314,7 @@ export function StorySlide({ story, onClose }: Props) {
               type="button"
               onClick={onClose}
               aria-label="Close"
-              className="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white font-display font-extrabold text-lg"
+              className="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white font-display font-extrabold text-lg shrink-0"
               data-haptic="tap"
             >
               ✕
@@ -324,51 +324,31 @@ export function StorySlide({ story, onClose }: Props) {
       </div>
 
       {/* progress bar */}
-      <div className="h-1 bg-black/60 shrink-0">
+      <div className="h-1.5 bg-black/60 shrink-0">
         <div
           className="h-full bg-gradient-to-r from-violet-400 to-fuchsia-500 transition-[width] duration-500"
           style={{ width: `${((idx + 1) / slides.length) * 100}%` }}
         />
       </div>
 
-      {/* stage — video illustration on top, big readable narration below */}
-      <button
-        type="button"
+      {/* ── Stage — half / half. On desktop: TEXT on the left, VIDEO on the
+          right. On phones it stacks (video on top, text below) thanks to
+          flex-col-reverse, so reading order stays natural. The onClick/touch
+          handlers make the whole stage a giant "tap to continue" surface. ── */}
+      <div
         onClick={() => {
           nextSlide();
           tapHaptic();
         }}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
-        className="relative flex-1 min-h-0 w-full flex flex-col items-center justify-center gap-4 sm:gap-6 py-4 text-left"
+        className="relative flex-1 min-h-0 w-full flex flex-col-reverse md:flex-row cursor-pointer select-none"
+        role="button"
+        tabIndex={0}
         aria-label="Tap to continue"
       >
-        {/* video illustration — sized to its 16:9 frame. The video + text are
-            centered together as one block, so leftover space becomes small even
-            top/bottom margins instead of one big void in the middle. */}
-        <div className="relative w-full aspect-video max-h-[40vh] shrink-0 bg-black">
-          <video
-            ref={videoRef}
-            src={url}
-            muted
-            playsInline
-            preload="metadata"
-            // No native controls — we drive playback ourselves.
-            className="absolute inset-0 w-full h-full object-contain bg-black"
-            onTimeUpdate={onTimeUpdate}
-          />
-          {!animationDone && (
-            <div className="absolute inset-x-0 bottom-2 flex justify-center pointer-events-none">
-              <span className="text-white/60 text-xs font-display font-bold uppercase tracking-wider">
-                Watching…
-              </span>
-            </div>
-          )}
-        </div>
-
-        {/* narration — large, high-contrast white text directly under the video.
-            No repeated section header; the title shows once. */}
-        <div className="relative w-full shrink-0 flex items-center justify-center px-6 sm:px-12">
+        {/* LEFT half — big, high-contrast narration that fills the space. */}
+        <div className="relative flex-1 min-h-0 flex items-center justify-center px-6 sm:px-10 py-6 md:py-8">
           <AnimatePresence mode="wait">
             {animationDone && (
               <motion.div
@@ -377,27 +357,52 @@ export function StorySlide({ story, onClose }: Props) {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.35 }}
-                className="flex flex-col items-center text-center gap-3"
+                className="flex flex-col items-start md:items-start text-left gap-4 max-w-xl"
               >
                 {slide.kind === 'learned' && (
-                  <div className="text-sm sm:text-base font-display font-extrabold uppercase tracking-wider text-white/70">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 border-2 border-emerald-400/60 px-4 py-1.5 text-sm sm:text-base font-display font-extrabold uppercase tracking-wider text-emerald-200">
                     ✅ What you learned
                   </div>
                 )}
-                <p className="font-display font-extrabold text-white leading-snug drop-shadow-lg text-2xl sm:text-4xl md:text-5xl max-w-3xl">
-                  {/* On the title slide the name is already in the header and
-                      the video, so show the unique subtitle instead of
-                      repeating it. Fall back to the name only if no subtitle. */}
+                {slide.kind !== 'title' && slide.kind !== 'learned' && (
+                  <div className="text-base sm:text-lg font-display font-extrabold uppercase tracking-wide text-violet-300">
+                    {slide.head}
+                  </div>
+                )}
+                <p className="font-display font-extrabold text-white leading-snug drop-shadow-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+                  {/* The title is already in the header, so on the title slide
+                      show the subtitle instead of repeating the name. */}
                   {slide.kind === 'title' ? slide.body || slide.head : slide.body}
                 </p>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
-      </button>
 
-      {/* nav bar */}
-      <div className="px-4 pb-4 pt-2 shrink-0 flex items-center justify-between gap-2 bg-black/60 border-t border-white/10">
+        {/* RIGHT half — the video illustration, filling its half edge to edge. */}
+        <div className="relative flex-1 min-h-0 flex items-center justify-center bg-black md:border-l border-white/10 overflow-hidden">
+          <video
+            ref={videoRef}
+            src={url}
+            muted
+            playsInline
+            preload="metadata"
+            // No native controls — we drive playback ourselves.
+            className="w-full h-full object-contain bg-black"
+            onTimeUpdate={onTimeUpdate}
+          />
+          {!animationDone && (
+            <div className="absolute inset-x-0 bottom-3 flex justify-center pointer-events-none">
+              <span className="rounded-full bg-black/60 px-3 py-1 text-white/70 text-xs font-display font-bold uppercase tracking-wider">
+                Watching…
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* ── Nav bar — big pill buttons. ── */}
+      <div className="px-4 sm:px-6 pb-4 pt-3 shrink-0 flex items-center justify-between gap-3 bg-black/60 border-t border-white/10">
         <button
           type="button"
           onClick={() => {
@@ -405,12 +410,12 @@ export function StorySlide({ story, onClose }: Props) {
             tapHaptic();
           }}
           disabled={idx <= 0}
-          className="rounded-full bg-white/15 hover:bg-white/25 text-white font-display font-extrabold text-base px-5 h-12 disabled:opacity-30 disabled:cursor-not-allowed"
+          className="rounded-full bg-white/15 hover:bg-white/25 active:translate-y-0.5 text-white font-display font-extrabold text-base sm:text-lg px-6 sm:px-8 h-14 shadow-lg disabled:opacity-30 disabled:cursor-not-allowed transition"
           data-haptic="tap"
         >
           ← Back
         </button>
-        <div className="text-xs font-display font-bold text-white/60 tabular-nums">
+        <div className="text-sm font-display font-bold text-white/60 tabular-nums shrink-0">
           {idx + 1} / {slides.length}
         </div>
         <button
@@ -420,7 +425,7 @@ export function StorySlide({ story, onClose }: Props) {
             tapHaptic();
           }}
           disabled={idx >= slides.length - 1}
-          className="rounded-full bg-emerald-500 hover:bg-emerald-600 active:translate-y-0.5 text-white font-display font-extrabold text-lg px-7 h-14 shadow-lg shadow-emerald-500/30 disabled:bg-slate-600 disabled:shadow-none transition"
+          className="rounded-full bg-emerald-500 hover:bg-emerald-600 active:translate-y-0.5 text-white font-display font-extrabold text-lg sm:text-xl px-8 sm:px-10 h-14 shadow-lg shadow-emerald-500/30 disabled:bg-slate-600 disabled:shadow-none transition"
           data-haptic="tap"
         >
           {idx >= slides.length - 1 ? '✓ Done' : 'Continue ▶'}
