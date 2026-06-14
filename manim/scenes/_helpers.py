@@ -374,34 +374,33 @@ class ExamplesDeck(LearningExperienceDeck):
         self.play(FadeOut(em), run_time=_rt(0.4))
 
         for ei, (q, steps, answer) in enumerate(self.EXAMPLES):
-            # Full-screen composition: question across the top, worked steps
-            # filling the LEFT half, a big topical illustration on the RIGHT
-            # half, and a large answer across the bottom. Even margins.
-            q_text = Text(_wrap("Q:  " + q, 38), font_size=32, color=pal["accent"], weight="BOLD")
-            q_text.to_edge(UP, buff=1.0)
+            # Question across the top, then the worked steps BIG and centred —
+            # the math itself is the illustration, so there's no generic domain
+            # hero cluttering the frame (a pizza next to a multiplication
+            # problem helps nobody). Large answer band across the bottom.
+            q_text = Text(_wrap("Q:  " + q, 40), font_size=36, color=pal["accent"], weight="BOLD")
+            q_text.to_edge(UP, buff=0.85)
             self.play(Write(q_text), run_time=_rt(0.85))
             M.think(self, self.mascot)
 
-            hero = V.hero_for(self.DOMAIN)()
-            _fit_hero(hero, max_w=5.4, max_h=3.6)
-            hero.move_to(RIGHT * 3.5 + DOWN * 0.1)
-            self.play(FadeIn(hero, shift=DOWN * 0.2), run_time=_rt(0.6))
-
-            step_objs = VGroup(*[Text(_wrap(s, 24), font_size=30, color=pal["step"]) for s in steps])
-            step_objs.arrange(DOWN, buff=0.55, aligned_edge=LEFT)
-            step_objs.move_to(LEFT * 3.3 + DOWN * 0.1)
+            step_objs = VGroup(*[Text(_wrap(s, 34), font_size=42, color=pal["step"]) for s in steps])
+            step_objs.arrange(DOWN, buff=0.6, aligned_edge=LEFT)
+            # Keep the steps within the frame even when a line is long.
+            if step_objs.width > 11.8:
+                step_objs.scale(11.8 / step_objs.width)
+            step_objs.move_to(UP * 0.15)
             for i, so in enumerate(step_objs):
                 self.play(FadeIn(so, shift=DOWN * 0.2), run_time=_rt(0.65))
                 if i == 0:
                     M.blink(self, self.mascot)
-                self.wait(0.35)
+                self.wait(0.4)
 
-            # Big answer band across the bottom; full screen is now in use.
+            # Big answer band across the bottom.
             ans = answer_card(self, f"= {answer}", pal["answer"], self.mascot,
-                              pos=DOWN * 3.0)
+                              pos=DOWN * 2.7)
             self.wait(0.3)
             self.section_break()  # varied emphasis beat at the end of the concept
-            self.play(FadeOut(VGroup(q_text, step_objs, hero, ans)), run_time=_rt(0.45))
+            self.play(FadeOut(VGroup(q_text, step_objs, ans)), run_time=_rt(0.45))
 
         # Strategy reinforcement at the end.
         tip = pro_tip(self, self.DOMAIN, self.seed, pal)
@@ -444,26 +443,25 @@ class IdeaDeck(LearningExperienceDeck):
 
     def lesson(self):
         pal = self.pal
-        # Big hero on the RIGHT half, concept bullets filling the LEFT half.
-        hero = V.hero_for(self.DOMAIN)()
-        _fit_hero(hero, max_w=5.4, max_h=3.8)
-        hero.move_to(RIGHT * 3.5 + DOWN * 0.1)
-        self.play(FadeIn(hero, shift=DOWN * 0.2), run_time=_rt(0.7))
-
-        lines = VGroup(*[Text(_wrap(s, 26), font_size=26, color=pal["step"]) for s in self.BULLETS])
-        lines.arrange(DOWN, buff=0.5, aligned_edge=LEFT)
-        lines.move_to(LEFT * 3.2 + DOWN * 0.1)
+        # Concept bullets, centred and large. No generic domain hero — the
+        # words are the point, and a stock pizza/dot-plot next to them just
+        # distracts.
         from manim import Polygon
+        lines = VGroup(*[Text(_wrap(s, 32), font_size=34, color=pal["step"]) for s in self.BULLETS])
+        lines.arrange(DOWN, buff=0.62, aligned_edge=LEFT)
+        if lines.width > 11.4:
+            lines.scale(11.4 / lines.width)
+        lines.move_to(UP * 0.1 + RIGHT * 0.2)
         for i, ln in enumerate(lines):
-            bullet = Polygon([-0.14, 0.14, 0], [-0.14, -0.14, 0], [0.12, 0, 0],
+            bullet = Polygon([-0.16, 0.16, 0], [-0.16, -0.16, 0], [0.14, 0, 0],
                              fill_color=pal["accent"], fill_opacity=1, stroke_width=0)
-            bullet.next_to(ln, LEFT, buff=0.2)
+            bullet.next_to(ln, LEFT, buff=0.25)
             self.play(FadeIn(bullet), FadeIn(ln, shift=DOWN * 0.2), run_time=_rt(0.7))
             if i % 2 == 0:
                 M.blink(self, self.mascot)
             else:
                 M.think(self, self.mascot)
-            self.wait(0.35)
+            self.wait(0.4)
         self.section_break()  # emphasis beat at the end of the concept
 
 
@@ -617,28 +615,25 @@ class CombinedDeck(LearningExperienceDeck):
 
         # ── Part 1: The Idea ─────────────────────────────────────────────
         _section_header(self, "The Idea", pal["accent"])
-        hero = V.hero_for(self.DOMAIN)()
-        _fit_hero(hero, max_w=5.4, max_h=3.8)
-        hero.move_to(RIGHT * 3.5 + DOWN * 0.1)
-        self.play(FadeIn(hero, shift=DOWN * 0.2), run_time=_rt(0.7))
-
         bullet_objs = VGroup()
-        lines = VGroup(*[Text(_wrap(s, 26), font_size=26, color=pal["step"]) for s in self.BULLETS])
-        lines.arrange(DOWN, buff=0.5, aligned_edge=LEFT)
-        lines.move_to(LEFT * 3.2 + DOWN * 0.1)
+        lines = VGroup(*[Text(_wrap(s, 32), font_size=34, color=pal["step"]) for s in self.BULLETS])
+        lines.arrange(DOWN, buff=0.62, aligned_edge=LEFT)
+        if lines.width > 11.4:
+            lines.scale(11.4 / lines.width)
+        lines.move_to(UP * 0.1 + RIGHT * 0.2)
         for i, ln in enumerate(lines):
-            bullet = Polygon([-0.14, 0.14, 0], [-0.14, -0.14, 0], [0.12, 0, 0],
+            bullet = Polygon([-0.16, 0.16, 0], [-0.16, -0.16, 0], [0.14, 0, 0],
                              fill_color=pal["accent"], fill_opacity=1, stroke_width=0)
-            bullet.next_to(ln, LEFT, buff=0.2)
+            bullet.next_to(ln, LEFT, buff=0.25)
             bullet_objs.add(bullet)
             self.play(FadeIn(bullet), FadeIn(ln, shift=DOWN * 0.2), run_time=_rt(0.7))
             if i % 2 == 0:
                 M.blink(self, self.mascot)
             else:
                 M.think(self, self.mascot)
-            self.wait(0.35)
+            self.wait(0.4)
         self.section_break()
-        self.play(FadeOut(VGroup(hero, lines, bullet_objs)), run_time=_rt(0.45))
+        self.play(FadeOut(VGroup(lines, bullet_objs)), run_time=_rt(0.45))
 
         # ── Part 2: Worked Examples ──────────────────────────────────────
         _section_header(self, "Worked Examples", pal["title"])
@@ -646,29 +641,26 @@ class CombinedDeck(LearningExperienceDeck):
         self.play(FadeOut(em), run_time=_rt(0.4))
 
         for ei, (q, steps, answer) in enumerate(self.EXAMPLES):
-            q_text = Text(_wrap("Q:  " + q, 38), font_size=32, color=pal["accent"], weight="BOLD")
-            q_text.to_edge(UP, buff=1.0)
+            q_text = Text(_wrap("Q:  " + q, 40), font_size=36, color=pal["accent"], weight="BOLD")
+            q_text.to_edge(UP, buff=0.85)
             self.play(Write(q_text), run_time=_rt(0.85))
             M.think(self, self.mascot)
 
-            hero2 = V.hero_for(self.DOMAIN)()
-            _fit_hero(hero2, max_w=5.4, max_h=3.6)
-            hero2.move_to(RIGHT * 3.5 + DOWN * 0.1)
-            self.play(FadeIn(hero2, shift=DOWN * 0.2), run_time=_rt(0.6))
-
-            step_objs = VGroup(*[Text(_wrap(s, 24), font_size=30, color=pal["step"]) for s in steps])
-            step_objs.arrange(DOWN, buff=0.55, aligned_edge=LEFT)
-            step_objs.move_to(LEFT * 3.3 + DOWN * 0.1)
+            step_objs = VGroup(*[Text(_wrap(s, 34), font_size=42, color=pal["step"]) for s in steps])
+            step_objs.arrange(DOWN, buff=0.6, aligned_edge=LEFT)
+            if step_objs.width > 11.8:
+                step_objs.scale(11.8 / step_objs.width)
+            step_objs.move_to(UP * 0.15)
             for i, so in enumerate(step_objs):
                 self.play(FadeIn(so, shift=DOWN * 0.2), run_time=_rt(0.65))
                 if i == 0:
                     M.blink(self, self.mascot)
-                self.wait(0.35)
+                self.wait(0.4)
 
-            ans = answer_card(self, f"= {answer}", pal["answer"], self.mascot, pos=DOWN * 3.0)
+            ans = answer_card(self, f"= {answer}", pal["answer"], self.mascot, pos=DOWN * 2.7)
             self.wait(0.3)
             self.section_break()
-            self.play(FadeOut(VGroup(q_text, step_objs, hero2, ans)), run_time=_rt(0.45))
+            self.play(FadeOut(VGroup(q_text, step_objs, ans)), run_time=_rt(0.45))
 
         tip = pro_tip(self, self.DOMAIN, self.seed, pal)
         self.wait(0.8)
