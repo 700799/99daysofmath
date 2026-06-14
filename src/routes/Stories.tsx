@@ -4,6 +4,7 @@ import { createPortal } from 'react-dom';
 import storiesData from '../data/mathStories.json';
 import { DOMAINS, DOMAIN_LABELS, type Domain } from '../types/problem';
 import { StorySlide } from '../components/StorySlide';
+import { useStoryPlayer } from '../state/storyPlayer';
 
 interface Beat {
   head: string;
@@ -22,6 +23,17 @@ interface Story {
 
 const STORIES = storiesData as Story[];
 
+/** Calculate total slides for a story (title + beat sentences + learned). */
+function getTotalSlides(story: Story): number {
+  let count = 1; // title slide
+  for (const beat of story.beats) {
+    const sentences = beat.body.split(/(?<=[.!?])\s+(?=[A-Z"'])/);
+    count += sentences.length;
+  }
+  if (story.learned) count += 1; // learned slide
+  return count;
+}
+
 const EMOJI_BY_DOMAIN: Record<string, string> = {
   '5.F': '🧱',
   '6.RP': '⚖️',
@@ -33,6 +45,13 @@ const EMOJI_BY_DOMAIN: Record<string, string> = {
 
 export function Stories() {
   const [opened, setOpened] = useState<Story | null>(null);
+  const storyPlayer = useStoryPlayer();
+
+  const handleStoryClick = (story: Story) => {
+    const totalSlides = getTotalSlides(story);
+    storyPlayer.setStory(story.videoSrc, totalSlides);
+    setOpened(story);
+  };
 
   const byDomain: Record<string, Story[]> = {};
   for (const s of STORIES) {
@@ -72,7 +91,7 @@ export function Stories() {
                   <button
                     key={s.videoSrc}
                     type="button"
-                    onClick={() => setOpened(s)}
+                    onClick={() => handleStoryClick(s)}
                     className="text-left rounded-3xl p-4 bg-gradient-to-br from-violet-500 to-fuchsia-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
                     data-haptic="tap"
                   >
