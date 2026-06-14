@@ -307,7 +307,7 @@ export function StorySlide({ story, onClose }: Props) {
         />
       </div>
 
-      {/* video stage — animation fills the upper portion */}
+      {/* stage — video illustration on top, big readable narration below */}
       <button
         type="button"
         onClick={() => {
@@ -316,62 +316,70 @@ export function StorySlide({ story, onClose }: Props) {
         }}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
-        className="relative flex-1 min-h-0 w-full text-left"
+        className="relative flex-1 min-h-0 w-full flex flex-col text-left"
         aria-label="Tap to continue"
       >
-        <video
-          ref={videoRef}
-          src={url}
-          muted
-          playsInline
-          preload="metadata"
-          // No native controls — we drive playback ourselves.
-          className="absolute inset-0 w-full h-full object-contain bg-black"
-          onTimeUpdate={onTimeUpdate}
-        />
-
-        {/* dimming gradient at the bottom so the text overlay reads cleanly */}
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/50 to-transparent pointer-events-none" />
-
-        {/* text overlay — appears AFTER the animation finishes its segment */}
-        <AnimatePresence mode="wait">
-          {animationDone && (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.35 }}
-              className="absolute left-0 right-0 bottom-3 sm:bottom-6 px-5 sm:px-10 flex flex-col items-center text-center"
-            >
-              {slide.kind === 'beat' && (
-                <div className="text-xs sm:text-sm font-display font-extrabold uppercase tracking-wider text-violet-300 mb-2">
-                  {slide.head}
-                </div>
-              )}
-              <p
-                className={
-                  slide.kind === 'title'
-                    ? 'font-display font-extrabold text-3xl sm:text-5xl text-white leading-tight drop-shadow-lg max-w-2xl'
-                    : slide.kind === 'learned'
-                      ? 'font-display font-extrabold text-xl sm:text-3xl text-emerald-200 leading-snug drop-shadow-lg max-w-2xl'
-                      : 'font-display font-extrabold text-xl sm:text-3xl text-white leading-snug drop-shadow-lg max-w-2xl'
-                }
-              >
-                {slide.body}
-              </p>
-            </motion.div>
+        {/* video illustration — sized to its 16:9 frame so there's no dead space */}
+        <div className="relative w-full aspect-video max-h-[46vh] shrink-0 bg-black">
+          <video
+            ref={videoRef}
+            src={url}
+            muted
+            playsInline
+            preload="metadata"
+            // No native controls — we drive playback ourselves.
+            className="absolute inset-0 w-full h-full object-contain bg-black"
+            onTimeUpdate={onTimeUpdate}
+          />
+          {!animationDone && (
+            <div className="absolute inset-x-0 bottom-2 flex justify-center pointer-events-none">
+              <span className="text-white/60 text-xs font-display font-bold uppercase tracking-wider">
+                Watching…
+              </span>
+            </div>
           )}
-        </AnimatePresence>
+        </div>
 
-        {/* watching-the-animation hint */}
-        {!animationDone && (
-          <div className="absolute inset-x-0 bottom-6 flex justify-center pointer-events-none">
-            <span className="text-white/60 text-xs font-display font-bold uppercase tracking-wider">
-              Watching…
-            </span>
-          </div>
-        )}
+        {/* narration panel — fills the remaining space with large, high-contrast
+            white text. No repeated section header; the title shows once. */}
+        <div className="relative flex-1 min-h-0 w-full flex items-center justify-center px-6 sm:px-12 py-6">
+          <AnimatePresence mode="wait">
+            {animationDone && (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.35 }}
+                className="flex flex-col items-center text-center gap-3"
+              >
+                {slide.kind === 'title' ? (
+                  <>
+                    <p className="font-display font-extrabold text-white leading-tight drop-shadow-lg text-4xl sm:text-6xl max-w-3xl">
+                      {slide.head}
+                    </p>
+                    {slide.body && (
+                      <p className="font-display font-bold text-white/80 leading-snug text-xl sm:text-3xl max-w-2xl">
+                        {slide.body}
+                      </p>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    {slide.kind === 'learned' && (
+                      <div className="text-sm sm:text-base font-display font-extrabold uppercase tracking-wider text-white/70">
+                        ✅ What you learned
+                      </div>
+                    )}
+                    <p className="font-display font-extrabold text-white leading-snug drop-shadow-lg text-2xl sm:text-4xl md:text-5xl max-w-3xl">
+                      {slide.body}
+                    </p>
+                  </>
+                )}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </button>
 
       {/* nav bar */}
