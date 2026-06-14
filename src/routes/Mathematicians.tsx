@@ -5,6 +5,8 @@ interface Mathematician {
   era: string;
   contribution: string;
   emoji: string;
+  /** videoSrc of a matching Math Story, if one exists. Makes the card a link. */
+  storySrc?: string;
 }
 
 const MATHEMATICIANS: Mathematician[] = [
@@ -31,12 +33,14 @@ const MATHEMATICIANS: Mathematician[] = [
     era: '1777–1855',
     contribution: 'Prince of mathematicians, advanced many fields',
     emoji: '👑',
+    storySrc: '6.NS-7-story.mp4',
   },
   {
     name: 'Srinivasa Ramanujan',
     era: '1887–1920',
     contribution: 'Extraordinary intuition in number theory',
     emoji: '✨',
+    storySrc: '6.NS-3-story.mp4',
   },
   {
     name: 'Emmy Noether',
@@ -58,6 +62,29 @@ const MATHEMATICIANS: Mathematician[] = [
   },
 ];
 
+/** Inner card content, shared by the link and static variants. */
+function CardBody({ m }: { m: Mathematician }) {
+  return (
+    <div className="flex items-start gap-3">
+      <div className="text-4xl shrink-0">{m.emoji}</div>
+      <div className="flex-1 min-w-0">
+        <div className="font-display font-extrabold text-slate-900">
+          {m.name}
+        </div>
+        <div className="text-xs font-display font-bold text-purple-700 uppercase tracking-wider mt-0.5">
+          {m.era}
+        </div>
+        <div className="text-sm text-slate-700 mt-1.5">{m.contribution}</div>
+        {m.storySrc && (
+          <div className="inline-flex items-center gap-1 mt-2 rounded-full bg-violet-600 text-white text-xs font-display font-extrabold px-2.5 py-1">
+            🌟 Watch the story →
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export function Mathematicians() {
   return (
     <div>
@@ -74,29 +101,31 @@ export function Mathematicians() {
       </div>
       <p className="text-sm text-slate-600 mb-5">
         Learn about the brilliant minds who shaped mathematics throughout
-        history. From ancient geometry to modern breakthroughs.
+        history. From ancient geometry to modern breakthroughs. Cards with a{' '}
+        <b>🌟 Watch the story</b> badge open an animated lesson.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-        {MATHEMATICIANS.map((m) => (
-          <div
-            key={m.name}
-            className="rounded-2xl p-4 bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 hover:border-purple-300 hover:shadow-md transition-all"
-          >
-            <div className="flex items-start gap-3">
-              <div className="text-4xl shrink-0">{m.emoji}</div>
-              <div className="flex-1 min-w-0">
-                <div className="font-display font-extrabold text-slate-900">
-                  {m.name}
-                </div>
-                <div className="text-xs font-display font-bold text-purple-700 uppercase tracking-wider mt-0.5">
-                  {m.era}
-                </div>
-                <div className="text-sm text-slate-700 mt-1.5">{m.contribution}</div>
-              </div>
+        {MATHEMATICIANS.map((m) =>
+          m.storySrc ? (
+            <Link
+              key={m.name}
+              to="/stories"
+              state={{ openStory: m.storySrc }}
+              className="block text-left rounded-2xl p-4 bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 hover:border-violet-400 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all"
+              data-haptic="tap"
+            >
+              <CardBody m={m} />
+            </Link>
+          ) : (
+            <div
+              key={m.name}
+              className="rounded-2xl p-4 bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200"
+            >
+              <CardBody m={m} />
             </div>
-          </div>
-        ))}
+          ),
+        )}
       </div>
 
       <Link

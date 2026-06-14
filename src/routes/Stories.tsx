@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { createPortal } from 'react-dom';
 import storiesData from '../data/mathStories.json';
 import { DOMAINS, DOMAIN_LABELS, type Domain } from '../types/problem';
@@ -46,12 +46,24 @@ const EMOJI_BY_DOMAIN: Record<string, string> = {
 export function Stories() {
   const [opened, setOpened] = useState<Story | null>(null);
   const storyPlayer = useStoryPlayer();
+  const location = useLocation();
 
   const handleStoryClick = (story: Story) => {
     const totalSlides = getTotalSlides(story);
     storyPlayer.setStory(story.videoSrc, totalSlides);
     setOpened(story);
   };
+
+  // Auto-open a story when arriving with router state (e.g. from a
+  // mathematician card linking to its matching story).
+  useEffect(() => {
+    const openStory = (location.state as { openStory?: string } | null)
+      ?.openStory;
+    if (!openStory) return;
+    const story = STORIES.find((s) => s.videoSrc === openStory);
+    if (story) handleStoryClick(story);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.state]);
 
   const byDomain: Record<string, Story[]> = {};
   for (const s of STORIES) {
