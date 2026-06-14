@@ -5,7 +5,7 @@ RIGHT pane while the body paragraph fades in on the LEFT. They return a
 VGroup so the parent deck can fade them out at the end of the beat.
 """
 from manim import (
-    VGroup, Text, Circle, Line, Dot, Polygon, Rectangle, AnnularSector,
+    VGroup, Text, Circle, Ellipse, Line, Dot, Polygon, Rectangle, AnnularSector,
     NumberLine, Arc, RoundedRectangle, FadeIn, FadeOut, Write, Create,
     WHITE, BLUE, GREEN, RED, ORANGE, YELLOW, GOLD,
     UP, DOWN, LEFT, RIGHT, ORIGIN, PI, TAU,
@@ -14,6 +14,44 @@ import math
 
 DARK = "#0F172A"
 RIGHT_ANCHOR = RIGHT * 3.4 + DOWN * 0.4
+
+
+# ── Vector icons (Cairo can't render colour emoji, so we draw them) ──────
+
+def vec_rabbit(scale=1.0):
+    """A simple bunny from shapes — head, two ears, eyes, nose."""
+    head = Circle(radius=0.30, fill_color="#F3F4F6", fill_opacity=1,
+                  stroke_color=WHITE, stroke_width=2)
+    ear_l = Ellipse(width=0.15, height=0.42, fill_color="#F3F4F6",
+                    fill_opacity=1, stroke_color=WHITE, stroke_width=2)
+    ear_l.move_to(head.get_top() + UP * 0.16 + LEFT * 0.10)
+    ear_r = ear_l.copy().move_to(head.get_top() + UP * 0.16 + RIGHT * 0.10)
+    in_l = Ellipse(width=0.06, height=0.26, fill_color="#F9A8D4",
+                   fill_opacity=1, stroke_width=0).move_to(ear_l)
+    in_r = in_l.copy().move_to(ear_r)
+    eye_l = Dot(head.get_center() + LEFT * 0.10 + UP * 0.03, radius=0.038, color="#111827")
+    eye_r = Dot(head.get_center() + RIGHT * 0.10 + UP * 0.03, radius=0.038, color="#111827")
+    nose = Dot(head.get_center() + DOWN * 0.07, radius=0.033, color="#FB7185")
+    return VGroup(ear_l, ear_r, in_l, in_r, head, eye_l, eye_r, nose).scale(scale)
+
+
+def vec_fly(scale=1.0):
+    """A tiny fly — dark body with two translucent wings."""
+    body = Ellipse(width=0.20, height=0.11, fill_color="#1F2937",
+                   fill_opacity=1, stroke_width=0)
+    wing_l = Ellipse(width=0.17, height=0.10, fill_color=WHITE, fill_opacity=0.55,
+                     stroke_color=WHITE, stroke_width=1)
+    wing_l.move_to(body.get_center() + UP * 0.06 + LEFT * 0.05)
+    wing_r = wing_l.copy().move_to(body.get_center() + UP * 0.06 + RIGHT * 0.05)
+    return VGroup(wing_l, wing_r, body).scale(scale)
+
+
+def vec_flag(scale=1.0, color=RED):
+    """A pennant flag on a pole."""
+    pole = Line([0, -0.38, 0], [0, 0.42, 0], stroke_color=WHITE, stroke_width=3)
+    cloth = Polygon([0, 0.42, 0], [0.48, 0.29, 0], [0, 0.16, 0],
+                    fill_color=color, fill_opacity=1, stroke_width=0)
+    return VGroup(pole, cloth).scale(scale)
 
 
 # ── number / counting visuals ──────────────────────────────────────────
@@ -98,7 +136,7 @@ def fib_sequence():
 
 
 def rabbit_row(count):
-    return VGroup(*[Text("🐰", font_size=30) for _ in range(min(count, 10))]).arrange(RIGHT, buff=0.1)
+    return VGroup(*[vec_rabbit() for _ in range(min(count, 10))]).arrange(RIGHT, buff=0.16)
 
 
 # ── Pizza ──────────────────────────────────────────────────────────────
@@ -378,7 +416,7 @@ def crimea_map():
     map_box = Rectangle(width=2.8, height=2.0, fill_color=BLUE, fill_opacity=0.15,
                         stroke_color=BLUE, stroke_width=2)
     title = Text("Crimea, 1854", font_size=22, color=BLUE, weight="BOLD").next_to(map_box, UP, buff=0.2)
-    flag = Text("🏴", font_size=36).move_to(map_box.get_center())
+    flag = vec_flag().move_to(map_box.get_center())
     return VGroup(map_box, title, flag)
 
 
@@ -417,7 +455,7 @@ def rose_diagram():
 def ceiling_fly():
     ceiling = Rectangle(width=3.6, height=2.4, fill_color="#FAFAFA", fill_opacity=0.15,
                         stroke_color=WHITE, stroke_width=2)
-    fly = Text("🪰", font_size=42).shift(RIGHT * 0.8 + UP * 0.6)
+    fly = vec_fly(1.4).shift(RIGHT * 0.8 + UP * 0.6)
     return VGroup(ceiling, fly)
 
 
@@ -429,7 +467,7 @@ def coord_with_fly():
                         font_size=26, color=WHITE, stroke_width=3).rotate(PI / 2)
     grid_y.next_to(grid, UP, buff=0).align_to(grid, LEFT)
     point = Dot(grid.n2p(3) + UP * 1.6, color=YELLOW, radius=0.12)
-    fly = Text("🪰", font_size=28).next_to(point, UP + RIGHT, buff=0.04)
+    fly = vec_fly(0.9).next_to(point, UP + RIGHT, buff=0.04)
     coord = Text("(3, 2)", font_size=30, color=YELLOW, weight="BOLD")
     coord.next_to(point, DOWN + RIGHT, buff=0.2)
     return VGroup(grid, grid_y, point, fly, coord)

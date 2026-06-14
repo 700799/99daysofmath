@@ -17,6 +17,23 @@ import _mascot as M
 from _helpers import StoryDeck, _rt
 
 
+def _rocket(scale=1.0):
+    """Vector rocket (Cairo can't render the 🚀 emoji) — points UP."""
+    body = Polygon([-0.12, -0.26, 0], [0.12, -0.26, 0], [0.12, 0.20, 0], [-0.12, 0.20, 0],
+                   fill_color=WHITE, fill_opacity=1, stroke_color=BLUE, stroke_width=2)
+    nose = Polygon([-0.12, 0.20, 0], [0.12, 0.20, 0], [0, 0.48, 0],
+                   fill_color=RED, fill_opacity=1, stroke_width=0)
+    fin_l = Polygon([-0.12, -0.26, 0], [-0.28, -0.40, 0], [-0.12, -0.04, 0],
+                    fill_color=RED, fill_opacity=1, stroke_width=0)
+    fin_r = Polygon([0.12, -0.26, 0], [0.28, -0.40, 0], [0.12, -0.04, 0],
+                    fill_color=RED, fill_opacity=1, stroke_width=0)
+    window = Circle(radius=0.07, fill_color=BLUE, fill_opacity=1,
+                    stroke_color=WHITE, stroke_width=1.5).move_to([0, 0.0, 0])
+    flame = Polygon([-0.08, -0.26, 0], [0.08, -0.26, 0], [0, -0.52, 0],
+                    fill_color=ORANGE, fill_opacity=1, stroke_width=0)
+    return VGroup(flame, fin_l, fin_r, body, nose, window).scale(scale)
+
+
 class Lesson6NS5Story(StoryDeck):
     TITLE = "Story: Katherine Johnson & Apollo"
     DOMAIN = "6.NS"
@@ -94,7 +111,7 @@ class Lesson6NS5Story(StoryDeck):
         scene.play(Create(curve), run_time=_rt(1.6))
 
         # Rocket icon traces the curve.
-        rocket = Text("🚀", font_size=32).move_to(path(0))
+        rocket = _rocket(0.8).move_to(path(0))
         scene.play(FadeIn(rocket), run_time=_rt(0.35))
         scene.play(MoveAlongPath(rocket, curve, run_time=_rt(2.0)))
 
@@ -127,7 +144,7 @@ class Lesson6NS5Story(StoryDeck):
             Polygon([0, 0.4, 0], [0.5, 0.3, 0], [0, 0.1, 0],
                     fill_color=RED, fill_opacity=0.9, stroke_color=RED, stroke_width=1),
         ).move_to(RIGHT * 2.7 + DOWN * 0.4)
-        lander = Text("🚀", font_size=44).move_to(RIGHT * 3.5 + DOWN * 0.35)
+        lander = _rocket(1.3).move_to(RIGHT * 3.5 + DOWN * 0.35)
         year = Text("July 1969", font_size=30, color=YELLOW, weight="BOLD")
         year.move_to(RIGHT * 3.2 + UP * 0.8)
         scene.play(FadeIn(moon_ground), run_time=_rt(0.6))
