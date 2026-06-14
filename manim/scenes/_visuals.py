@@ -202,6 +202,258 @@ def balance_scale(left="2x+5", right="13", color=BLUE) -> VGroup:
     return VGroup(base, post, beam, lpan, rpan, lt, rt)
 
 
+# ── Geometry: labeled shapes for area/volume lessons ──────────────────────
+
+def labeled_right_triangle(base=3.0, height=2.0, base_color=BLUE, height_color=ORANGE,
+                           label_size=28) -> VGroup:
+    """Right triangle with base and height labeled and color-coded."""
+    # Triangle vertices: right angle at origin, base horizontal, height vertical
+    tri = Polygon(
+        [0, 0, 0],
+        [base, 0, 0],
+        [0, height, 0],
+        fill_color=BLUE, fill_opacity=0.2, stroke_color=BLUE, stroke_width=3
+    )
+
+    # Right angle indicator
+    right_angle = Polygon(
+        [0.3, 0, 0],
+        [0.3, 0.3, 0],
+        [0, 0.3, 0],
+        fill_color=WHITE, fill_opacity=0, stroke_color=WHITE, stroke_width=2
+    )
+
+    # Base label
+    base_label = Text(f"{int(base)}", font_size=label_size, color=base_color, weight="BOLD")
+    base_label.next_to([base/2, -0.4, 0], DOWN, buff=0.1)
+
+    # Height label
+    height_label = Text(f"{int(height)}", font_size=label_size, color=height_color, weight="BOLD")
+    height_label.next_to([-0.5, height/2, 0], LEFT, buff=0.1)
+
+    g = VGroup(tri, right_angle, base_label, height_label)
+    g.triangle = tri
+    g.base_label = base_label
+    g.height_label = height_label
+    return g
+
+
+def labeled_rectangle(width=4.0, height=2.5, width_color=BLUE, height_color=ORANGE,
+                     label_size=28) -> VGroup:
+    """Rectangle with width and height labeled and color-coded."""
+    rect = Rectangle(width=width, height=height, stroke_color=BLUE, stroke_width=3,
+                    fill_color=BLUE, fill_opacity=0.15)
+
+    # Width label
+    width_label = Text(f"{int(width)}", font_size=label_size, color=width_color, weight="BOLD")
+    width_label.next_to([0, -height/2-0.4, 0], DOWN, buff=0.1)
+
+    # Height label
+    height_label = Text(f"{int(height)}", font_size=label_size, color=height_color, weight="BOLD")
+    height_label.next_to([-width/2-0.5, 0, 0], LEFT, buff=0.1)
+
+    g = VGroup(rect, width_label, height_label)
+    g.rect = rect
+    g.width_label = width_label
+    g.height_label = height_label
+    return g
+
+
+def area_formula_display(base, height, result=None, result_color=GREEN) -> VGroup:
+    """Show area formula with numbers: base × height ÷ 2 = result."""
+    if result is None:
+        result = int(base * height / 2)
+
+    formula = VGroup(
+        Text(f"{int(base)}", font_size=48, color=BLUE, weight="BOLD"),
+        Text("×", font_size=40, color=WHITE),
+        Text(f"{int(height)}", font_size=48, color=ORANGE, weight="BOLD"),
+        Text("÷", font_size=40, color=WHITE),
+        Text("2", font_size=40, color=WHITE),
+        Text("=", font_size=40, color=WHITE),
+        Text(f"{result}", font_size=48, color=result_color, weight="BOLD"),
+    ).arrange(RIGHT, buff=0.2)
+    return formula
+
+
+# ── Coordinate grids for distance/polygon lessons ──────────────────────
+
+def coordinate_grid_with_points(x_max=6, y_max=5, points=None, point_labels=True,
+                               point_color=YELLOW) -> VGroup:
+    """Coordinate grid with optional plotted points and labels."""
+    from manim import Axes
+
+    grid = Axes(
+        x_range=[0, x_max, 1],
+        y_range=[0, y_max, 1],
+        x_length=3.6,
+        y_length=3.0,
+        axis_config={"color": WHITE, "stroke_width": 2, "include_numbers": True, "font_size": 22},
+        tips=False,
+    )
+
+    g = VGroup(grid)
+    g.grid = grid
+    g.points = VGroup()
+    g.labels = VGroup()
+
+    if points:
+        for pt, label in points:
+            x, y = pt
+            dot = Dot(grid.c2p(x, y), radius=0.10, color=point_color)
+            g.points.add(dot)
+
+            if point_labels:
+                pt_label = Text(f"({int(x)}, {int(y)})", font_size=20, color=point_color, weight="BOLD")
+                pt_label.next_to(dot, RIGHT + UP, buff=0.15)
+                g.labels.add(pt_label)
+                g.add(pt_label)
+
+            g.add(dot)
+
+    return g
+
+
+def distance_line_on_grid(grid, p1, p2, show_label=True, label_color=YELLOW) -> VGroup:
+    """Line connecting two points on a coordinate grid with optional distance label."""
+    pt1 = grid.c2p(p1[0], p1[1])
+    pt2 = grid.c2p(p2[0], p2[1])
+
+    line = Line(pt1, pt2, stroke_color=label_color, stroke_width=3)
+
+    g = VGroup(line)
+    g.line = line
+
+    if show_label:
+        # Calculate distance
+        dx = p2[0] - p1[0]
+        dy = p2[1] - p1[1]
+        distance = math.sqrt(dx**2 + dy**2)
+
+        # Place label at midpoint
+        mid = [(pt1[0] + pt2[0])/2, (pt1[1] + pt2[1])/2, 0]
+        label = Text(f"d ≈ {distance:.1f}", font_size=20, color=label_color, weight="BOLD")
+        label.move_to(mid).shift(UP*0.3)
+        g.add(label)
+        g.label = label
+
+    return g
+
+
+def polygon_on_grid(grid, corners, fill=True, color=ORANGE) -> VGroup:
+    """Polygon (usually rectangle) drawn on coordinate grid using corner coordinates."""
+    pts_3d = [grid.c2p(c[0], c[1]) for c in corners]
+
+    poly = Polygon(*pts_3d,
+                  fill_color=color, fill_opacity=0.3 if fill else 0,
+                  stroke_color=color, stroke_width=3)
+
+    g = VGroup(poly)
+    g.polygon = poly
+    return g
+
+
+# ── 3D shapes for volume lessons ───────────────────────────────────────
+
+def box_wireframe(width=3, height=2, depth=2, labels=True, label_size=24) -> VGroup:
+    """Isometric 3D box wireframe with dimension labels."""
+    # Isometric projection for a box
+    # Front face (at z=0)
+    front_bl = [0, 0, 0]
+    front_br = [width, 0, 0]
+    front_tr = [width, height, 0]
+    front_tl = [0, height, 0]
+
+    # Back face (at z=depth, offset for isometric)
+    iso_offset_x = depth * 0.3
+    iso_offset_y = depth * 0.2
+    back_bl = [iso_offset_x, iso_offset_y, 0]
+    back_br = [width + iso_offset_x, iso_offset_y, 0]
+    back_tr = [width + iso_offset_x, height + iso_offset_y, 0]
+    back_tl = [iso_offset_x, height + iso_offset_y, 0]
+
+    # Draw edges
+    edges = VGroup(
+        # Front face
+        Line(front_bl, front_br, stroke_width=3, color=WHITE),
+        Line(front_br, front_tr, stroke_width=3, color=WHITE),
+        Line(front_tr, front_tl, stroke_width=3, color=WHITE),
+        Line(front_tl, front_bl, stroke_width=3, color=WHITE),
+        # Back face
+        Line(back_bl, back_br, stroke_width=3, color=WHITE),
+        Line(back_br, back_tr, stroke_width=3, color=WHITE),
+        Line(back_tr, back_tl, stroke_width=3, color=WHITE),
+        Line(back_tl, back_bl, stroke_width=3, color=WHITE),
+        # Connecting edges
+        Line(front_bl, back_bl, stroke_width=2, color=GREY_BROWN),
+        Line(front_br, back_br, stroke_width=2, color=GREY_BROWN),
+        Line(front_tr, back_tr, stroke_width=2, color=GREY_BROWN),
+        Line(front_tl, back_tl, stroke_width=2, color=GREY_BROWN),
+    )
+
+    g = VGroup(edges)
+    g.edges = edges
+
+    if labels:
+        # Width label (bottom)
+        w_label = Text(f"{width}", font_size=label_size, color=BLUE, weight="BOLD")
+        w_label.move_to([(front_bl[0] + front_br[0])/2, front_bl[1]-0.4, 0])
+
+        # Height label (left)
+        h_label = Text(f"{height}", font_size=label_size, color=ORANGE, weight="BOLD")
+        h_label.move_to([front_bl[0]-0.5, (front_bl[1] + front_tl[1])/2, 0])
+
+        # Depth label (diagonal)
+        d_label = Text(f"{depth}", font_size=label_size, color=GREEN, weight="BOLD")
+        d_label.move_to([(front_bl[0] + back_bl[0])/2, (front_bl[1] + back_bl[1])/2-0.3, 0])
+
+        g.add(w_label, h_label, d_label)
+        g.w_label = w_label
+        g.h_label = h_label
+        g.d_label = d_label
+
+    return g
+
+
+def unit_cubes_in_box(width=3, height=2, depth=2, sample_rate=1, cube_color=BLUE) -> VGroup:
+    """Show a sampling of unit cubes filling a box."""
+    cubes = VGroup()
+
+    for i in range(0, width, sample_rate):
+        for j in range(0, height, sample_rate):
+            for k in range(0, min(depth, 3), sample_rate):  # Limit depth to show clearly
+                # Isometric position
+                iso_x = i + k * 0.3
+                iso_y = j + k * 0.2
+
+                # Draw a small cube
+                cube = Rectangle(width=0.8, height=0.8, stroke_width=1,
+                               stroke_color=WHITE, fill_color=cube_color, fill_opacity=0.6)
+                cube.move_to([iso_x, iso_y, 0])
+                cubes.add(cube)
+
+    g = VGroup(cubes)
+    g.cubes = cubes
+    return g
+
+
+def volume_formula_display(width, height, depth, result=None, result_color=GREEN) -> VGroup:
+    """Show volume formula: width × height × depth = result."""
+    if result is None:
+        result = width * height * depth
+
+    formula = VGroup(
+        Text(f"{int(width)}", font_size=44, color=BLUE, weight="BOLD"),
+        Text("×", font_size=36, color=WHITE),
+        Text(f"{int(height)}", font_size=44, color=ORANGE, weight="BOLD"),
+        Text("×", font_size=36, color=WHITE),
+        Text(f"{int(depth)}", font_size=44, color=GREEN, weight="BOLD"),
+        Text("=", font_size=36, color=WHITE),
+        Text(f"{int(result)}", font_size=44, color=result_color, weight="BOLD"),
+    ).arrange(RIGHT, buff=0.15)
+    return formula
+
+
 # ── action helpers (motion = reasoning) ─────────────────────────────────
 
 def slide_on_number_line(scene, nl_group, mover, frm, to, run_time=0.8):
