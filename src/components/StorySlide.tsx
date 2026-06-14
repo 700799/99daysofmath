@@ -82,15 +82,22 @@ function buildSlides(story: Story): Slide[] {
 export function StorySlide({ story, onClose }: Props) {
   const slides = buildSlides(story);
 
-  // Use Zustand store for persistent state across component re-renders
-  const storyPlayer = useStoryPlayer();
-  const idx = storyPlayer.slideIndex;
-  const autoPlay = storyPlayer.autoPlay;
-  const animationDone = storyPlayer.animationDone;
+  // Use Zustand store for persistent state across component re-renders.
+  // Select fields/actions individually — actions are stable references, so
+  // they're safe in effect deps (selecting the whole store would return a new
+  // reference on every change and cause an infinite render loop).
+  const idx = useStoryPlayer((s) => s.slideIndex);
+  const autoPlay = useStoryPlayer((s) => s.autoPlay);
+  const animationDone = useStoryPlayer((s) => s.animationDone);
+  const setStory = useStoryPlayer((s) => s.setStory);
+  const setAnimationDone = useStoryPlayer((s) => s.setAnimationDone);
+  const nextSlide = useStoryPlayer((s) => s.nextSlide);
+  const prevSlide = useStoryPlayer((s) => s.prevSlide);
+  const setAutoPlay = useStoryPlayer((s) => s.setAutoPlay);
 
   // Initialize story session on mount or when story changes
   useEffect(() => {
-    storyPlayer.setStory(story.videoSrc, slides.length);
+    setStory(story.videoSrc, slides.length);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [story.videoSrc]);
 
@@ -141,7 +148,7 @@ export function StorySlide({ story, onClose }: Props) {
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
-    storyPlayer.setAnimationDone(false);
+    setAnimationDone(false);
 
     const seg = segmentFor(idx);
     segmentEndRef.current = seg.end;
@@ -162,7 +169,7 @@ export function StorySlide({ story, onClose }: Props) {
       v.removeEventListener('loadedmetadata', startVideo);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [idx, storyPlayer]);
+  }, [idx]);
 
   // Pause when we hit the segment end → freeze on the last frame.
   const onTimeUpdate = () => {
@@ -177,7 +184,7 @@ export function StorySlide({ story, onClose }: Props) {
       } catch {
         /* ignore */
       }
-      storyPlayer.setAnimationDone(true);
+      setAnimationDone(true);
     }
   };
 
@@ -197,7 +204,7 @@ export function StorySlide({ story, onClose }: Props) {
     if (!autoPlay || !animationDone) return;
     const ms = slides[idx].kind === 'beat' ? 6000 : 8000;
     const id = window.setTimeout(() => {
-      storyPlayer.nextSlide();
+      nextSlide();
       tapHaptic();
     }, ms);
     return () => window.clearTimeout(id);
@@ -208,11 +215,11 @@ export function StorySlide({ story, onClose }: Props) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
-        storyPlayer.nextSlide();
+        nextSlide();
         tapHaptic();
       }
       if (e.key === 'ArrowLeft') {
-        storyPlayer.prevSlide();
+        prevSlide();
         tapHaptic();
       }
       if (e.key === 'Escape') onClose?.();
@@ -220,7 +227,7 @@ export function StorySlide({ story, onClose }: Props) {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [onClose, storyPlayer]);
+  }, [onClose]);
 
   // Touch swipe detection
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -232,11 +239,11 @@ export function StorySlide({ story, onClose }: Props) {
     const delta = (e.changedTouches[0]?.clientX ?? 0) - touchStart;
     if (delta > 50) {
       // Swipe right → go back
-      storyPlayer.prevSlide();
+      prevSlide();
       tapHaptic();
     } else if (delta < -50) {
       // Swipe left → advance
-      storyPlayer.nextSlide();
+      nextSlide();
       tapHaptic();
     }
     setTouchStart(null);
@@ -266,7 +273,7 @@ export function StorySlide({ story, onClose }: Props) {
         <div className="flex items-center gap-2 shrink-0">
           <button
             type="button"
-            onClick={() => storyPlayer.setAutoPlay(!autoPlay)}
+            onClick={() => setAutoPlay(!autoPlay)}
             aria-pressed={autoPlay}
             className={
               'inline-flex items-center gap-1 rounded-full px-3 h-8 text-xs font-display font-extrabold border-2 ' +
@@ -304,7 +311,7 @@ export function StorySlide({ story, onClose }: Props) {
       <button
         type="button"
         onClick={() => {
-          storyPlayer.nextSlide();
+          nextSlide();
           tapHaptic();
         }}
         onTouchStart={handleTouchStart}
@@ -372,7 +379,7 @@ export function StorySlide({ story, onClose }: Props) {
         <button
           type="button"
           onClick={() => {
-            storyPlayer.prevSlide();
+            prevSlide();
             tapHaptic();
           }}
           disabled={idx <= 0}
@@ -387,7 +394,7 @@ export function StorySlide({ story, onClose }: Props) {
         <button
           type="button"
           onClick={() => {
-            storyPlayer.nextSlide();
+            nextSlide();
             tapHaptic();
           }}
           disabled={idx >= slides.length - 1}

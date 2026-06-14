@@ -45,12 +45,12 @@ const EMOJI_BY_DOMAIN: Record<string, string> = {
 
 export function Stories() {
   const [opened, setOpened] = useState<Story | null>(null);
-  const storyPlayer = useStoryPlayer();
+  const setStory = useStoryPlayer((s) => s.setStory);
   const location = useLocation();
 
   const handleStoryClick = (story: Story) => {
     const totalSlides = getTotalSlides(story);
-    storyPlayer.setStory(story.videoSrc, totalSlides);
+    setStory(story.videoSrc, totalSlides);
     setOpened(story);
   };
 
