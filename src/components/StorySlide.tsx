@@ -340,11 +340,13 @@ export function StorySlide({ story, onClose }: Props) {
         }}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
-        className="relative flex-1 min-h-0 w-full flex flex-col text-left"
+        className="relative flex-1 min-h-0 w-full flex flex-col items-center justify-center gap-4 sm:gap-6 py-4 text-left"
         aria-label="Tap to continue"
       >
-        {/* video illustration — sized to its 16:9 frame so there's no dead space */}
-        <div className="relative w-full aspect-video max-h-[46vh] shrink-0 bg-black">
+        {/* video illustration — sized to its 16:9 frame. The video + text are
+            centered together as one block, so leftover space becomes small even
+            top/bottom margins instead of one big void in the middle. */}
+        <div className="relative w-full aspect-video max-h-[40vh] shrink-0 bg-black">
           <video
             ref={videoRef}
             src={url}
@@ -364,9 +366,9 @@ export function StorySlide({ story, onClose }: Props) {
           )}
         </div>
 
-        {/* narration panel — fills the remaining space with large, high-contrast
-            white text. No repeated section header; the title shows once. */}
-        <div className="relative flex-1 min-h-0 w-full flex items-center justify-center px-6 sm:px-12 py-6">
+        {/* narration — large, high-contrast white text directly under the video.
+            No repeated section header; the title shows once. */}
+        <div className="relative w-full shrink-0 flex items-center justify-center px-6 sm:px-12">
           <AnimatePresence mode="wait">
             {animationDone && (
               <motion.div
