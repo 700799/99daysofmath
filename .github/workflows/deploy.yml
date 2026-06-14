@@ -1,10 +1,9 @@
 name: Deploy to GitHub Pages
 
+# Disabled: this project now deploys from Vercel (served at root, base '/').
+# The GitHub Pages build expects base '/99daysofmath/' and would 404 at root.
+# Kept for reference / manual runs only — no automatic push triggers.
 on:
-  push:
-    branches:
-      - main
-      - claude/math-quiz-creator-XKNoo
   workflow_dispatch:
 
 permissions:
