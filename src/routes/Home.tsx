@@ -8,6 +8,7 @@ import {
   DOMAIN_EMOJI,
 } from '../types/problem';
 import { useProgress } from '../state/progress';
+import { useDisplayName } from '../state/auth';
 import { useDomainSummary } from '../hooks/useProblems';
 import { Mascot } from '../components/Mascot';
 import { DailyQuestRing } from '../components/DailyQuestRing';
@@ -23,6 +24,7 @@ export function Home() {
   const xpByDate = useProgress((s) => s.xpByDate);
   const onboardingComplete = useProgress((s) => s.onboardingComplete);
   const markOnboardingDone = useProgress((s) => s.markOnboardingDone);
+  const displayName = useDisplayName();
 
   return (
     <div>
@@ -32,7 +34,7 @@ export function Home() {
         <Mascot mood="happy" size={72} />
         <div>
           <h1 className="text-2xl sm:text-3xl font-display font-extrabold text-slate-900">
-            Pick a trail!
+            Pick a trail, {displayName}!
           </h1>
           <p className="text-slate-600 mt-0.5 text-sm sm:text-base">
             Gr-5 foundations plus five 6th-grade trails. Earn stars, stickers, and XP.
