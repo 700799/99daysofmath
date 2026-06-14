@@ -148,11 +148,13 @@ export function StorySlide({ story, onClose }: Props) {
       return { start: 0, end: Infinity };
     }
     if (beat < 0) {
-      // Title card → play the very first segment.
+      // Title card → the intro segment (before the first checkpoint).
       return { start: 0, end: ch.checkpoints[0] ?? ch.total };
     }
-    const start = beat === 0 ? 0 : ch.checkpoints[beat - 1] ?? 0;
-    const end = ch.checkpoints[beat] ?? ch.total;
+    // checkpoints[b] marks the END of the intro / previous beat and the START
+    // of beat b's illustration; checkpoints[b+1] marks its end.
+    const start = ch.checkpoints[beat] ?? 0;
+    const end = ch.checkpoints[beat + 1] ?? ch.total;
     return { start, end };
   };
 

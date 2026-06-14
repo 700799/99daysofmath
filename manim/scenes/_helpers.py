@@ -298,8 +298,17 @@ class LearningExperienceDeck(Scene):
         super().wait(duration, **kwargs)
         self._elapsed += duration
 
+    def _video_time(self):
+        """Real rendered video timestamp. The manual `_elapsed` clock drifts
+        because some animations set `run_time` on the Animation object instead
+        of passing it to `play()`, so prefer the renderer's own clock — that's
+        exactly where a frame lands in the output MP4, which is what the
+        player's seek/freeze logic needs."""
+        t = getattr(self.renderer, "time", None)
+        return t if t is not None else self._elapsed
+
     def checkpoint(self):
-        self._checkpoints.append(round(self._elapsed, 2))
+        self._checkpoints.append(round(self._video_time(), 2))
 
     def section_break(self, beat=None):
         """End of a concept: the mascot does an emphasis beat (wink / shake /
@@ -320,7 +329,7 @@ class LearningExperienceDeck(Scene):
             os.makedirs(out_dir, exist_ok=True)
             with open(os.path.join(out_dir, f"{type(self).__name__}.json"), "w") as f:
                 json.dump({"checkpoints": self._checkpoints,
-                           "total": round(self._elapsed, 2)}, f)
+                           "total": round(self._video_time(), 2)}, f)
         except Exception:
             pass
 
@@ -491,63 +500,91 @@ class StoryDeck(LearningExperienceDeck):
     def outro_pool(self):
         return STORY_OUTROS
 
-    def lesson(self):
-        from manim import Text as _T, FadeIn as _Fi, FadeOut as _Fo, VGroup as _Vg
+    def construct(self):
+        # Clean, ILLUSTRATION-ONLY story video. The app's story player already
+        # shows the title (header) and the narration text (left half) itself —
+        # so the video is purely the moving illustration, centred and filling
+        # the frame. No persistent title bar, no duplicated body text: that
+        # kills the "same info three times" look and the big black void.
+        seed = _seed(self.TITLE)
+        pal = palette_for(seed)
+        self.mascot = place_mascot(self, seed)
+        self.pal = pal
+        self.seed = seed
+        self.story()
+        # Closer beat: varied outro + cheer.
+        outro_pool = self.outro_pool()
+        outro = Text(outro_pool[seed % len(outro_pool)],
+                     font_size=34, weight="BOLD", color=pal["accent"])
+        outro.to_edge(DOWN, buff=0.6)
+        self.play(FadeIn(outro, scale=1.1), run_time=_rt(0.7))
+        M.cheer(self, self.mascot)
+        M.spin(self, self.mascot)
+        self.wait(0.4)
+        self._write_chapters()
+
+    def _center_visual(self, v_objs, max_w=11.8, max_h=6.0):
+        """Slide + scale an illustration to fill the centre of the frame. The
+        bespoke visuals are authored to sit in a right-hand pane (next to text
+        that no longer exists), so we recentre and enlarge them to use the
+        whole stage."""
+        if v_objs is None:
+            return
+        try:
+            sw = max_w / max(v_objs.width, 0.01)
+            sh = max_h / max(v_objs.height, 0.01)
+            scale = max(0.85, min(1.9, sw, sh))
+            self.play(
+                v_objs.animate.scale(scale).move_to(UP * 0.2),
+                run_time=_rt(0.45),
+            )
+        except Exception:
+            pass
+
+    def _intro_visual(self):
+        """A friendly centred hero for the title segment (the app's title slide
+        shows the subtitle text itself, so the video just needs a visual)."""
+        hero = V.hero_for(self.DOMAIN)()
+        _fit_hero(hero, max_w=6.6, max_h=4.8)
+        hero.move_to(UP * 0.2)
+        return hero
+
+    def story(self):
         pal = self.pal
 
-        # Subtitle teaser, fades in under the title.
-        if self.SUBTITLE:
-            sub = _T(_wrap(self.SUBTITLE, 48), font_size=28, color=pal["accent"], weight="BOLD")
-            sub.to_edge(UP, buff=1.05)
-            self.play(_Fi(sub, shift=DOWN * 0.1), run_time=_rt(0.7))
-            # Give kids time to read the subtitle before moving on.
-            self.wait(1.2)
-            self.section_break()
-            self.play(_Fo(sub), run_time=_rt(0.4))
+        # ── Intro segment → checkpoint[0]. The app's title slide plays this. ──
+        hero = self._intro_visual()
+        self.play(FadeIn(hero, shift=DOWN * 0.2), run_time=_rt(0.7))
+        M.blink(self, self.mascot)
+        self.wait(1.2)
+        self.section_break()
+        self.play(FadeOut(hero), run_time=_rt(0.4))
 
-        # Beats: paragraph on the LEFT, illustration on the RIGHT.
-        # `body` text is auto-paced — longer text = longer hold, so 3-5 minute
-        # stories naturally land at the right speed without manual tuning.
+        # ── Beats — illustration only, centred + enlarged. One section_break
+        #    per beat, so checkpoints[b+1] marks the END of beat b. The app maps
+        #    beat b → [checkpoints[b], checkpoints[b+1]]. ──
         for bi, beat in enumerate(self.BEATS):
-            head = _T(_wrap(beat.get("head", ""), 24),
-                      font_size=30, color=pal["accent"], weight="BOLD")
-            head.to_edge(UP, buff=1.0).to_edge(LEFT, buff=0.6)
             body_str = beat.get("body", "")
-            body = _T(_wrap(body_str, 30),
-                      font_size=24, color=pal["step"])
-            body.next_to(head, DOWN, buff=0.45, aligned_edge=LEFT)
-            self.play(_Fi(head, shift=DOWN * 0.15), run_time=_rt(0.6))
-            self.play(_Fi(body, shift=DOWN * 0.15), run_time=_rt(0.9))
+            visual_fn = beat.get("visual")
+            if visual_fn is not None:
+                v_objs = visual_fn(self, self, pal, self.mascot)
+                self._center_visual(v_objs)
+            else:
+                # No bespoke visual → fall back to a hero so it's never blank.
+                v_objs = self._intro_visual()
+                self.play(FadeIn(v_objs, shift=DOWN * 0.2), run_time=_rt(0.6))
             if bi % 2 == 0:
                 M.blink(self, self.mascot)
             else:
                 M.think(self, self.mascot)
 
-            visual_fn = beat.get("visual")
-            v_objs = None
-            if visual_fn is not None:
-                v_objs = visual_fn(self, self, pal, self.mascot)
-
-            # Pace the hold to the length of the body text so kids can read.
-            # ~ 18 chars/sec ≈ 200 words/min reading pace for ages 10-11.
+            # Pace the hold to the length of the narration so kids can read it
+            # in the app. ~18 chars/sec ≈ 200 wpm for ages 10-11.
             read_seconds = max(2.6, min(8.5, len(body_str) / 18))
             self.wait(read_seconds)
             self.section_break()
-            cleanup = [head, body]
             if v_objs is not None:
-                cleanup.append(v_objs)
-            self.play(_Fo(_Vg(*cleanup)), run_time=_rt(0.45))
-
-        # "What you learned" closer.
-        if self.LEARNED:
-            learned_head = _T("What you learned", font_size=24,
-                              color=GOLD, weight="BOLD").to_edge(UP, buff=1.0)
-            learned = _T(_wrap(self.LEARNED, 36), font_size=32,
-                         color=pal["accent"], weight="BOLD")
-            learned.next_to(learned_head, DOWN, buff=0.5)
-            self.play(_Fi(learned_head), run_time=_rt(0.5))
-            self.play(_Fi(learned, shift=DOWN * 0.15), run_time=_rt(0.85))
-            self.wait(1.6)
+                self.play(FadeOut(v_objs), run_time=_rt(0.45))
 
 
 # ── CombinedDeck — idea + examples + trap in one video ──────────────────────
