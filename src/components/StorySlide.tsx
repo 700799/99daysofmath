@@ -102,10 +102,14 @@ export function StorySlide({ story, onClose }: Props) {
   }, [story.videoSrc]);
 
   const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [chaptersLoaded, setChaptersLoaded] = useState(false);
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const chaptersRef = useRef<Chapters | null>(null);
   const segmentEndRef = useRef<number>(Infinity);
+  // The video segment that is currently loaded/frozen on screen. Used to avoid
+  // replaying the same clip when several text slides share one beat segment.
+  const lastSegRef = useRef<{ start: number; end: number } | null>(null);
 
   const url = `${import.meta.env.BASE_URL}videos/lessons/${story.videoSrc}`;
   const chaptersUrl = url.replace(/\.mp4$/, '.chapters.json');
@@ -113,14 +117,22 @@ export function StorySlide({ story, onClose }: Props) {
   // Load chapters once.
   useEffect(() => {
     let cancelled = false;
+    setChaptersLoaded(false);
     fetch(chaptersUrl)
       .then((r) => (r.ok ? r.json() : null))
       .then((j: Chapters | null) => {
-        if (!cancelled && j && Array.isArray(j.checkpoints)) {
+        if (cancelled) return;
+        if (j && Array.isArray(j.checkpoints)) {
           chaptersRef.current = j;
         }
+        // Reset the dedup tracker and flag chapters ready so the seek effect
+        // recomputes segments now that real checkpoints are available.
+        lastSegRef.current = null;
+        setChaptersLoaded(true);
       })
-      .catch(() => {});
+      .catch(() => {
+        if (!cancelled) setChaptersLoaded(true);
+      });
     return () => {
       cancelled = true;
     };
@@ -148,10 +160,22 @@ export function StorySlide({ story, onClose }: Props) {
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
-    setAnimationDone(false);
 
     const seg = segmentFor(idx);
     segmentEndRef.current = seg.end;
+
+    // If this slide maps to the SAME video segment as the slide we're already
+    // showing (another sentence in the same beat, or beat 0 reusing the title
+    // clip), don't replay the animation. Keep the frozen frame and just reveal
+    // the new text. This stops the intro/title from re-printing on every tap.
+    const last = lastSegRef.current;
+    if (last && last.start === seg.start && last.end === seg.end) {
+      setAnimationDone(true);
+      return;
+    }
+    lastSegRef.current = seg;
+    setAnimationDone(false);
+
     const startVideo = () => {
       try {
         v.currentTime = seg.start + 0.01;
@@ -169,7 +193,7 @@ export function StorySlide({ story, onClose }: Props) {
       v.removeEventListener('loadedmetadata', startVideo);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [idx]);
+  }, [idx, chaptersLoaded]);
 
   // Pause when we hit the segment end → freeze on the last frame.
   const onTimeUpdate = () => {
@@ -353,29 +377,17 @@ export function StorySlide({ story, onClose }: Props) {
                 transition={{ duration: 0.35 }}
                 className="flex flex-col items-center text-center gap-3"
               >
-                {slide.kind === 'title' ? (
-                  <>
-                    <p className="font-display font-extrabold text-white leading-tight drop-shadow-lg text-4xl sm:text-6xl max-w-3xl">
-                      {slide.head}
-                    </p>
-                    {slide.body && (
-                      <p className="font-display font-bold text-white/80 leading-snug text-xl sm:text-3xl max-w-2xl">
-                        {slide.body}
-                      </p>
-                    )}
-                  </>
-                ) : (
-                  <>
-                    {slide.kind === 'learned' && (
-                      <div className="text-sm sm:text-base font-display font-extrabold uppercase tracking-wider text-white/70">
-                        ✅ What you learned
-                      </div>
-                    )}
-                    <p className="font-display font-extrabold text-white leading-snug drop-shadow-lg text-2xl sm:text-4xl md:text-5xl max-w-3xl">
-                      {slide.body}
-                    </p>
-                  </>
+                {slide.kind === 'learned' && (
+                  <div className="text-sm sm:text-base font-display font-extrabold uppercase tracking-wider text-white/70">
+                    ✅ What you learned
+                  </div>
                 )}
+                <p className="font-display font-extrabold text-white leading-snug drop-shadow-lg text-2xl sm:text-4xl md:text-5xl max-w-3xl">
+                  {/* On the title slide the name is already in the header and
+                      the video, so show the unique subtitle instead of
+                      repeating it. Fall back to the name only if no subtitle. */}
+                  {slide.kind === 'title' ? slide.body || slide.head : slide.body}
+                </p>
               </motion.div>
             )}
           </AnimatePresence>
