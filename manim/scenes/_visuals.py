@@ -292,32 +292,41 @@ def coordinate_grid_with_points(x_max=6, y_max=5, points=None, point_labels=True
         tips=False,
     )
 
-    g = VGroup(grid)
-    g.grid = grid
-    g.points = VGroup()
-    g.labels = VGroup()
+    parts = VGroup(grid)
+    points_group = VGroup()
+    labels_group = VGroup()
 
     if points:
-        for pt, label in points:
+        for pt, label_text in points:
             x, y = pt
             dot = Dot(grid.c2p(x, y), radius=0.10, color=point_color)
-            g.points.add(dot)
+            points_group.add(dot)
 
             if point_labels:
                 pt_label = Text(f"({int(x)}, {int(y)})", font_size=20, color=point_color, weight="BOLD")
                 pt_label.next_to(dot, RIGHT + UP, buff=0.15)
-                g.labels.add(pt_label)
-                g.add(pt_label)
+                labels_group.add(pt_label)
+                parts.add(pt_label)
 
-            g.add(dot)
+            parts.add(dot)
 
-    return g
+    # Attach attributes to the VGroup for later access
+    parts.grid = grid
+    parts.points = points_group
+    parts.labels = labels_group
+    return parts
 
 
 def distance_line_on_grid(grid, p1, p2, show_label=True, label_color=YELLOW) -> VGroup:
     """Line connecting two points on a coordinate grid with optional distance label."""
-    pt1 = grid.c2p(p1[0], p1[1])
-    pt2 = grid.c2p(p2[0], p2[1])
+    # Extract grid object if passed as VGroup
+    if hasattr(grid, 'grid'):
+        axes = grid.grid
+    else:
+        axes = grid
+
+    pt1 = axes.c2p(p1[0], p1[1])
+    pt2 = axes.c2p(p2[0], p2[1])
 
     line = Line(pt1, pt2, stroke_color=label_color, stroke_width=3)
 
@@ -342,7 +351,13 @@ def distance_line_on_grid(grid, p1, p2, show_label=True, label_color=YELLOW) -> 
 
 def polygon_on_grid(grid, corners, fill=True, color=ORANGE) -> VGroup:
     """Polygon (usually rectangle) drawn on coordinate grid using corner coordinates."""
-    pts_3d = [grid.c2p(c[0], c[1]) for c in corners]
+    # Extract grid object if passed as VGroup
+    if hasattr(grid, 'grid'):
+        axes = grid.grid
+    else:
+        axes = grid
+
+    pts_3d = [axes.c2p(c[0], c[1]) for c in corners]
 
     poly = Polygon(*pts_3d,
                   fill_color=color, fill_opacity=0.3 if fill else 0,
