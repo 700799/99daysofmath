@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useProgress } from '../state/progress';
+import { useAuth } from '../state/auth';
+import { Avatar } from './AccountCard';
 import { LevelBadge } from './LevelBadge';
 import { XpFlash } from './XpFlash';
 import { submitHaptic, tapHaptic } from '../utils/haptics';
@@ -17,6 +19,7 @@ export function AppShell({ children }: Props) {
     const f = new Date(s.lastFreezeDate + 'T00:00:00Z');
     return Math.round((today.getTime() - f.getTime()) / 86400000) <= 7;
   });
+  const user = useAuth((s) => s.user);
   const location = useLocation();
   const isHome = location.pathname === '/' || location.pathname === '';
 
@@ -93,6 +96,15 @@ export function AppShell({ children }: Props) {
               </span>
             )}
             <LevelBadge variant="header" />
+            {user && (
+              <Link
+                to="/settings"
+                aria-label="Account"
+                className="ml-0.5 inline-flex items-center min-h-11"
+              >
+                <Avatar user={user} size={32} />
+              </Link>
+            )}
           </div>
         </div>
       </header>

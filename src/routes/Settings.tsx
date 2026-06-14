@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useProgress } from '../state/progress';
 import { TOTAL_STICKERS } from '../utils/encouragement';
+import { AccountCard } from '../components/AccountCard';
 
 const GOAL_OPTIONS = [10, 30, 50, 100];
 
@@ -27,6 +28,8 @@ export function Settings() {
       <h1 className="text-2xl font-display font-extrabold text-slate-900">
         Settings
       </h1>
+
+      <AccountCard />
 
       <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
         <div className="font-display font-extrabold text-slate-900">Your stats</div>

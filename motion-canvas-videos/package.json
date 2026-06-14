@@ -1,0 +1,20 @@
+{
+  "name": "motion-canvas-videos",
+  "version": "1.0.0",
+  "description": "Motion Canvas educational videos for 99 Days of Math",
+  "type": "module",
+  "scripts": {
+    "dev": "motion-canvas serve",
+    "build": "motion-canvas build",
+    "render": "motion-canvas render --quality 2"
+  },
+  "dependencies": {
+    "@motion-canvas/core": "~3.7.0",
+    "@motion-canvas/2d": "~3.7.0"
+  },
+  "devDependencies": {
+    "@motion-canvas/vite-plugin": "~3.7.0",
+    "typescript": "^5.3.3",
+    "vite": "^4.1.4"
+  }
+}

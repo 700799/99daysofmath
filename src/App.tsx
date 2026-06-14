@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
+import { AuthBootstrap } from './components/AuthBootstrap';
 import { Home } from './routes/Home';
 import { Mascot } from './components/Mascot';
 
@@ -42,6 +43,7 @@ function RouteFallback() {
 export default function App() {
   return (
     <AppShell>
+      <AuthBootstrap />
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<Home />} />
