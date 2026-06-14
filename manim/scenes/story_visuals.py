@@ -5,7 +5,7 @@ RIGHT pane while the body paragraph fades in on the LEFT. They return a
 VGroup so the parent deck can fade them out at the end of the beat.
 """
 from manim import (
-    VGroup, Text, Circle, Line, Dot, Polygon, Rectangle, AnnularSector,
+    VGroup, Text, Circle, Ellipse, Line, Dot, Polygon, Rectangle, AnnularSector,
     NumberLine, Arc, RoundedRectangle, FadeIn, FadeOut, Write, Create,
     WHITE, BLUE, GREEN, RED, ORANGE, YELLOW, GOLD,
     UP, DOWN, LEFT, RIGHT, ORIGIN, PI, TAU,
@@ -14,6 +14,44 @@ import math
 
 DARK = "#0F172A"
 RIGHT_ANCHOR = RIGHT * 3.4 + DOWN * 0.4
+
+
+# ── Vector icons (Cairo can't render colour emoji, so we draw them) ──────
+
+def vec_rabbit(scale=1.0):
+    """A simple bunny from shapes — head, two ears, eyes, nose."""
+    head = Circle(radius=0.30, fill_color="#F3F4F6", fill_opacity=1,
+                  stroke_color=WHITE, stroke_width=2)
+    ear_l = Ellipse(width=0.15, height=0.42, fill_color="#F3F4F6",
+                    fill_opacity=1, stroke_color=WHITE, stroke_width=2)
+    ear_l.move_to(head.get_top() + UP * 0.16 + LEFT * 0.10)
+    ear_r = ear_l.copy().move_to(head.get_top() + UP * 0.16 + RIGHT * 0.10)
+    in_l = Ellipse(width=0.06, height=0.26, fill_color="#F9A8D4",
+                   fill_opacity=1, stroke_width=0).move_to(ear_l)
+    in_r = in_l.copy().move_to(ear_r)
+    eye_l = Dot(head.get_center() + LEFT * 0.10 + UP * 0.03, radius=0.038, color="#111827")
+    eye_r = Dot(head.get_center() + RIGHT * 0.10 + UP * 0.03, radius=0.038, color="#111827")
+    nose = Dot(head.get_center() + DOWN * 0.07, radius=0.033, color="#FB7185")
+    return VGroup(ear_l, ear_r, in_l, in_r, head, eye_l, eye_r, nose).scale(scale)
+
+
+def vec_fly(scale=1.0):
+    """A tiny fly — dark body with two translucent wings."""
+    body = Ellipse(width=0.20, height=0.11, fill_color="#1F2937",
+                   fill_opacity=1, stroke_width=0)
+    wing_l = Ellipse(width=0.17, height=0.10, fill_color=WHITE, fill_opacity=0.55,
+                     stroke_color=WHITE, stroke_width=1)
+    wing_l.move_to(body.get_center() + UP * 0.06 + LEFT * 0.05)
+    wing_r = wing_l.copy().move_to(body.get_center() + UP * 0.06 + RIGHT * 0.05)
+    return VGroup(wing_l, wing_r, body).scale(scale)
+
+
+def vec_flag(scale=1.0, color=RED):
+    """A pennant flag on a pole."""
+    pole = Line([0, -0.38, 0], [0, 0.42, 0], stroke_color=WHITE, stroke_width=3)
+    cloth = Polygon([0, 0.42, 0], [0.48, 0.29, 0], [0, 0.16, 0],
+                    fill_color=color, fill_opacity=1, stroke_width=0)
+    return VGroup(pole, cloth).scale(scale)
 
 
 # ── number / counting visuals ──────────────────────────────────────────
@@ -98,7 +136,7 @@ def fib_sequence():
 
 
 def rabbit_row(count):
-    return VGroup(*[Text("🐰", font_size=30) for _ in range(min(count, 10))]).arrange(RIGHT, buff=0.1)
+    return VGroup(*[vec_rabbit() for _ in range(min(count, 10))]).arrange(RIGHT, buff=0.16)
 
 
 # ── Pizza ──────────────────────────────────────────────────────────────
@@ -378,7 +416,7 @@ def crimea_map():
     map_box = Rectangle(width=2.8, height=2.0, fill_color=BLUE, fill_opacity=0.15,
                         stroke_color=BLUE, stroke_width=2)
     title = Text("Crimea, 1854", font_size=22, color=BLUE, weight="BOLD").next_to(map_box, UP, buff=0.2)
-    flag = Text("🏴", font_size=36).move_to(map_box.get_center())
+    flag = vec_flag().move_to(map_box.get_center())
     return VGroup(map_box, title, flag)
 
 
@@ -417,7 +455,7 @@ def rose_diagram():
 def ceiling_fly():
     ceiling = Rectangle(width=3.6, height=2.4, fill_color="#FAFAFA", fill_opacity=0.15,
                         stroke_color=WHITE, stroke_width=2)
-    fly = Text("🪰", font_size=42).shift(RIGHT * 0.8 + UP * 0.6)
+    fly = vec_fly(1.4).shift(RIGHT * 0.8 + UP * 0.6)
     return VGroup(ceiling, fly)
 
 
@@ -429,7 +467,7 @@ def coord_with_fly():
                         font_size=26, color=WHITE, stroke_width=3).rotate(PI / 2)
     grid_y.next_to(grid, UP, buff=0).align_to(grid, LEFT)
     point = Dot(grid.n2p(3) + UP * 1.6, color=YELLOW, radius=0.12)
-    fly = Text("🪰", font_size=28).next_to(point, UP + RIGHT, buff=0.04)
+    fly = vec_fly(0.9).next_to(point, UP + RIGHT, buff=0.04)
     coord = Text("(3, 2)", font_size=30, color=YELLOW, weight="BOLD")
     coord.next_to(point, DOWN + RIGHT, buff=0.2)
     return VGroup(grid, grid_y, point, fly, coord)
@@ -531,3 +569,204 @@ def saddle_surface():
         )
         g.add(f)
     return g
+
+
+# ── Ramanujan — cube comparison (1729 as sum of cubes) ───────────────────
+
+def stacked_cubes(value, color=BLUE, max_show=8):
+    """Stack of value³ unit cubes in isometric 2D projection."""
+    # Draw an isometric representation of value³ cubes
+    g = VGroup()
+    # Draw a simple 3D-looking cube grid
+    for i in range(value):
+        for j in range(value):
+            for k in range(min(value, max_show)):
+                # Isometric projection: x_iso = x - z, y_iso = y + (x+z)/2
+                x_iso = (i - k) * 0.18
+                y_iso = (j + i + k) * 0.1
+                cube = Rectangle(width=0.15, height=0.15, stroke_width=1,
+                                stroke_color=WHITE, fill_color=color, fill_opacity=0.7)
+                cube.move_to([x_iso, y_iso, 0])
+                g.add(cube)
+                if k >= max_show - 1:
+                    break
+    return g.scale(0.8)
+
+
+def cubes_comparison(left_val, right_val, left_label="", right_label="", left_color=BLUE, right_color=GREEN):
+    """Side-by-side stacks of left_val³ and right_val³ cubes with optional labels."""
+    left_cubes = stacked_cubes(left_val, color=left_color, max_show=4)
+    right_cubes = stacked_cubes(right_val, color=right_color, max_show=4)
+
+    left_text = Text(f"{left_val}³", font_size=28, color=left_color, weight="BOLD") if left_label == "" else Text(left_label, font_size=24, color=left_color)
+    right_text = Text(f"{right_val}³", font_size=28, color=right_color, weight="BOLD") if right_label == "" else Text(right_label, font_size=24, color=right_color)
+
+    left_group = VGroup(left_cubes, left_text).arrange(DOWN, buff=0.25)
+    right_group = VGroup(right_cubes, right_text).arrange(DOWN, buff=0.25)
+
+    return VGroup(left_group, right_group).arrange(RIGHT, buff=0.6)
+
+
+# ── Zero crossing on number line ───────────────────────────────────────
+
+def number_line_crossing():
+    """Number line from -3 to 3 with zero highlighted."""
+    nl = NumberLine(x_range=[-4, 4, 1], length=5.2, include_numbers=True,
+                    font_size=28, color=WHITE, stroke_width=3)
+    zero_dot = Dot(nl.n2p(0), color=YELLOW, radius=0.20)
+    label = Text("Zero", font_size=26, color=YELLOW, weight="BOLD").next_to(zero_dot, UP, buff=0.35)
+    return VGroup(nl, zero_dot, label)
+
+
+def negative_positive_progression():
+    """Show -2, 0, +2 with arrows and emphasis."""
+    positions = VGroup(
+        Text("-2", font_size=48, color=RED, weight="BOLD"),
+        Text("→", font_size=36, color=WHITE),
+        Text("0", font_size=48, color=YELLOW, weight="BOLD"),
+        Text("→", font_size=36, color=WHITE),
+        Text("+2", font_size=48, color=GREEN, weight="BOLD"),
+    ).arrange(RIGHT, buff=0.3)
+    return positions
+
+
+# ── Tic-tac-toe board with all 8 winning lines ────────────────────────
+
+def tictac_board_with_lines(highlight_all=False):
+    """Tic-tac-toe board with all 8 winning lines (3 rows, 3 cols, 2 diagonals)."""
+    cells = VGroup()
+    for r in range(3):
+        for c in range(3):
+            cell = Rectangle(width=0.65, height=0.65, stroke_color=WHITE, stroke_width=2.5, fill_opacity=0)
+            cell.move_to([(c - 1) * 0.67, (1 - r) * 0.67, 0])
+            cells.add(cell)
+
+    # X in center
+    X = Text("X", font_size=32, color=YELLOW, weight="BOLD").move_to([0, 0, 0])
+
+    # Draw all 8 winning lines
+    lines = VGroup()
+    # 3 horizontal
+    for r in range(3):
+        y = (1 - r) * 0.67
+        line = Line([-1.0, y, 0], [1.0, y, 0], stroke_color=GREEN, stroke_width=2.5)
+        if not highlight_all:
+            line.set_opacity(0.2)
+        lines.add(line)
+    # 3 vertical
+    for c in range(3):
+        x = (c - 1) * 0.67
+        line = Line([x, -1.0, 0], [x, 1.0, 0], stroke_color=GREEN, stroke_width=2.5)
+        if not highlight_all:
+            line.set_opacity(0.2)
+        lines.add(line)
+    # 2 diagonal
+    diag1 = Line([-1.0, 1.0, 0], [1.0, -1.0, 0], stroke_color=GREEN, stroke_width=2.5)
+    diag2 = Line([-1.0, -1.0, 0], [1.0, 1.0, 0], stroke_color=GREEN, stroke_width=2.5)
+    if not highlight_all:
+        diag1.set_opacity(0.2)
+        diag2.set_opacity(0.2)
+    lines.add(diag1, diag2)
+
+    label = Text("8 ways to win!", font_size=26, color=GREEN, weight="BOLD").next_to(cells, DOWN, buff=0.3)
+
+    return VGroup(lines, cells, X, label)
+
+
+# ── Birthday paradox: people entering room ─────────────────────────────
+
+def people_dots_random(count=10, radius=0.10):
+    """Generate random colored dots representing people."""
+    import random
+    random.seed(42)  # Consistent randomization
+    colors = [BLUE, RED, ORANGE, GREEN, YELLOW, GOLD]
+    people = VGroup()
+    for i in range(count):
+        x = (i % 5) * 0.6 - 1.2
+        y = (i // 5) * 0.6 - 0.3
+        color = colors[random.randint(0, len(colors) - 1)]
+        dot = Dot([x, y, 0], radius=radius, color=color)
+        people.add(dot)
+    return people
+
+
+def match_lines(person_a, person_b):
+    """Line connecting two people (a matching pair)."""
+    return Line(person_a.get_center(), person_b.get_center(),
+               stroke_color=YELLOW, stroke_width=3)
+
+
+# ── Descartes fly crawling with coordinate labels ───────────────────────
+
+def fly_at_position(x, y, scale=1.0):
+    """A fly at coordinates (x, y) with label."""
+    fly = vec_fly(scale)
+    label = Text(f"({x}, {y})", font_size=22, color=YELLOW, weight="BOLD")
+    return VGroup(fly, label).arrange(DOWN, buff=0.15)
+
+
+def coordinate_grid_simple(x_max=5, y_max=4):
+    """Simple coordinate grid."""
+    from manim import Axes
+    grid = Axes(
+        x_range=[0, x_max, 1],
+        y_range=[0, y_max, 1],
+        x_length=3.2,
+        y_length=2.4,
+        axis_config={"color": WHITE, "stroke_width": 2, "include_numbers": True, "font_size": 20},
+        tips=False,
+    )
+    return grid
+
+
+# ── Baseball: batter and ball trajectory ───────────────────────────────
+
+def batter_at_plate():
+    """Simple batter stance at home plate."""
+    plate = Polygon([-0.3, 0, 0], [0.3, 0, 0], [0.25, -0.4, 0], [-0.25, -0.4, 0],
+                   fill_color="#8B4513", fill_opacity=0.7, stroke_color=WHITE, stroke_width=2)
+    # Simple stick figure batter
+    body = Line([0, 0.2, 0], [0, 0.8, 0], stroke_width=4, color=YELLOW)
+    head = Circle(radius=0.15, fill_color=YELLOW, fill_opacity=1, stroke_width=0).move_to([0, 1.0, 0])
+    bat = Line([0, 0.6, 0], [0.8, 0.8, 0], stroke_width=5, color=ORANGE)
+    return VGroup(plate, body, head, bat)
+
+
+def ball_trajectory_arc(distance=2.0, success=True):
+    """Parabolic trajectory for a hit ball."""
+    if success:
+        # Upward arc (successful hit)
+        from manim import ArcBetweenPoints
+        start = [0, 0, 0]
+        end = [distance, 0.8, 0]
+        arc = ArcBetweenPoints(start, end, angle=PI / 3)
+        arc.set_stroke(YELLOW, 3)
+        label = Text("HOME RUN!", font_size=24, color=GREEN, weight="BOLD").move_to([distance / 2, 1.0, 0])
+    else:
+        # Downward arc (unsuccessful)
+        from manim import ArcBetweenPoints
+        start = [0, 0, 0]
+        end = [distance * 0.5, -0.5, 0]
+        arc = ArcBetweenPoints(start, end, angle=-PI / 4)
+        arc.set_stroke(RED, 3)
+        label = Text("Out", font_size=20, color=RED, weight="BOLD").move_to([distance * 0.25, -0.8, 0])
+    return VGroup(arc, label)
+
+
+# ── Soccer penalty kick ────────────────────────────────────────────────
+
+def penalty_box_setup():
+    """Soccer field with penalty kick setup."""
+    field = Rectangle(width=3.2, height=2.0, fill_color="#2D5016", fill_opacity=0.6, stroke_color=WHITE, stroke_width=2)
+    goal = Line([-1.4, 1.0, 0], [-1.4, -1.0, 0], stroke_color=WHITE, stroke_width=4)
+    post_l = Circle(radius=0.1, fill_color=WHITE).move_to([-1.4, 1.0, 0])
+    post_r = Circle(radius=0.1, fill_color=WHITE).move_to([-1.4, -1.0, 0])
+
+    kicker = Text("⚽", font_size=32).move_to([0.8, 0, 0])  # Ball at penalty spot
+    keeper = Text("🧤", font_size=28).move_to([-1.2, 0.3, 0])  # Keeper
+
+    # Simple visual for goal box
+    box = Rectangle(width=0.8, height=1.6, stroke_color=YELLOW, stroke_width=2, fill_opacity=0)
+    box.move_to([-1.0, 0, 0])
+
+    return VGroup(field, goal, post_l, post_r, box)  # Omit emoji text for now
