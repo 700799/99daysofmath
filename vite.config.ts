@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: process.env.VERCEL ? '/' : '/99daysofmath/',
+  base: '/',
   plugins: [react()],
   build: {
     target: 'es2022',
