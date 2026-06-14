@@ -30,6 +30,20 @@ class Lesson6NS10Story(StoryDeck):
         from manim import Text, DOWN
         return place_right(scene, Text("(x, y)", font_size=72, color=pal["answer"], weight="BOLD"))
 
+    def b_fly_position_1(self, scene, pal, mascot):
+        from manim import VGroup, Dot, Text
+        grid = SV.coordinate_grid_simple()
+        p1 = Dot(grid.c2p(2, 1), radius=0.12, color=pal["accent"])
+        label = Text("(2, 1)", font_size=26, color=pal["accent"], weight="BOLD").next_to(p1, DOWN, buff=0.2)
+        return place_right(scene, VGroup(grid, p1, label), scale=0.85)
+
+    def b_fly_position_2(self, scene, pal, mascot):
+        from manim import VGroup, Dot, Text
+        grid = SV.coordinate_grid_simple()
+        p2 = Dot(grid.c2p(4, 3), radius=0.12, color=pal["step"])
+        label = Text("(4, 3)", font_size=26, color=pal["step"], weight="BOLD").next_to(p2, DOWN, buff=0.2)
+        return place_right(scene, VGroup(grid, p2, label), scale=0.85)
+
     BEATS = [
         {"head": "Paris, winter 1637",
          "body": "A French philosopher named René Descartes is in bed with the flu. He's bored out of his mind. To kill time, he stares at the ceiling above his bed.",
@@ -43,6 +57,12 @@ class Lesson6NS10Story(StoryDeck):
         {"head": "His insight",
          "body": "Pick any corner of the ceiling. Now I just need TWO numbers: how far ACROSS the fly is, and how far UP from that corner. Boom — exact location, no pointing required.",
          "visual": b_fly},
+        {"head": "First position",
+         "body": "The fly is 2 steps across and 1 step up from the corner. Descartes writes: (2, 1).",
+         "visual": b_fly_position_1},
+        {"head": "Moving to a new spot",
+         "body": "Now the fly crawls to a different place — 4 steps across, 3 steps up. New name: (4, 3). Simple!",
+         "visual": b_fly_position_2},
         {"head": "x and y are born",
          "body": "Descartes labels the across number 'x' and the up number 'y'. Every point on the ceiling — every point on ANY flat surface — can be named with just two numbers: (x, y).",
          "visual": b_grid},

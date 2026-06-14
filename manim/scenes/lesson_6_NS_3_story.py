@@ -24,6 +24,12 @@ class Lesson6NS3Story(StoryDeck):
     def b_wow(self, scene, pal, mascot):
         return place_right(scene, SV.taxi_1729(), scale=0.85)
 
+    def b_cubes_first(self, scene, pal, mascot):
+        return place_right(scene, SV.cubes_comparison(1, 12, left_color=pal["accent"], right_color=pal["step"]), scale=0.9)
+
+    def b_cubes_second(self, scene, pal, mascot):
+        return place_right(scene, SV.cubes_comparison(9, 10, left_color=pal["accent"], right_color=pal["step"]), scale=0.9)
+
     BEATS = [
         {"head": "Hospital visit",
          "body": "Ramanujan was the world's greatest self-taught mathematician. His friend G.H. Hardy visited him in the hospital.",
@@ -34,8 +40,14 @@ class Lesson6NS3Story(StoryDeck):
         {"head": "Two ways!",
          "body": "'1729 is the smallest number that's the sum of TWO cubes in two different ways!' he said. 1³ + 12³ AND 9³ + 10³.",
          "visual": b_wow},
+        {"head": "First pair",
+         "body": "One way: 1³ = 1, and 12³ = 1728. Together they make 1729.",
+         "visual": b_cubes_first},
+        {"head": "Second pair",
+         "body": "Another way: 9³ = 729, and 10³ = 1000. Also 1729 together!",
+         "visual": b_cubes_second},
         {"head": "Check it",
-         "body": "1 + 1728 = 1729. 729 + 1000 = 1729. Both. He saw it instantly.",
+         "body": "Both pairs add to the same number. That's the magic of 1729 — the Hardy-Ramanujan number.",
          "visual": b_wow},
     ]
     LEARNED = "Numbers hide secrets. The deeper you look, the more patterns appear."

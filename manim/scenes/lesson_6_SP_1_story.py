@@ -27,6 +27,9 @@ class Lesson6SP1Story(StoryDeck):
         from manim import Text, DOWN
         return place_right(scene, Text("Center: 4 of 8\nCorners: 3 each\nEdges: 2 each", font_size=28, color=pal["accent"], weight="BOLD"))
 
+    def b_board_with_lines(self, scene, pal, mascot):
+        return place_right(scene, SV.tictac_board_with_lines(highlight_all=True), scale=1.0)
+
     BEATS = [
         {"head": "First move",
          "body": "Watch any expert: they grab the CENTER square first, every time. Why?",
@@ -34,6 +37,9 @@ class Lesson6SP1Story(StoryDeck):
         {"head": "Count the lines",
          "body": "There are 8 ways to win: 3 rows, 3 columns, 2 diagonals. Every winning line goes through certain cells.",
          "visual": b_8lines},
+        {"head": "See all 8 lines",
+         "body": "Look at the board. Each green line is a way to win. The center square is touched by 4 of them.",
+         "visual": b_board_with_lines},
         {"head": "Center wins",
          "body": "The center square is on 4 of the 8 lines. Corners are on 3. Edges only on 2.",
          "visual": b_center},

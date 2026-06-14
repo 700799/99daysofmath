@@ -23,6 +23,12 @@ class Lesson6NS4Story(StoryDeck):
     def b_line(self, scene, pal, mascot):
         return place_right(scene, SV.number_line_zero(), scale=0.95)
 
+    def b_crossing(self, scene, pal, mascot):
+        return place_right(scene, SV.number_line_crossing(), scale=0.9)
+
+    def b_progression(self, scene, pal, mascot):
+        return place_right(scene, SV.negative_positive_progression())
+
     BEATS = [
         {"head": "No zero?!",
          "body": "Most ancient cultures had no symbol for 'nothing'. Try doing math without zero — it's a nightmare.",
@@ -32,7 +38,10 @@ class Lesson6NS4Story(StoryDeck):
          "visual": b_brahma},
         {"head": "Negatives unlocked",
          "body": "Once you have zero, you can have NEGATIVE numbers — anything less than zero. Hello, integers!",
-         "visual": b_line},
+         "visual": b_crossing},
+        {"head": "The crossing",
+         "body": "Watch: negative numbers on the LEFT of zero, positive numbers on the RIGHT. Zero is the anchor in the middle.",
+         "visual": b_progression},
         {"head": "Modern math",
          "body": "Every number line, every coordinate plane, every computer chip uses zero. Quietly the most important number ever.",
          "visual": b_line},

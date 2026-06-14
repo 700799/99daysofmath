@@ -569,3 +569,204 @@ def saddle_surface():
         )
         g.add(f)
     return g
+
+
+# ── Ramanujan — cube comparison (1729 as sum of cubes) ───────────────────
+
+def stacked_cubes(value, color=BLUE, max_show=8):
+    """Stack of value³ unit cubes in isometric 2D projection."""
+    # Draw an isometric representation of value³ cubes
+    g = VGroup()
+    # Draw a simple 3D-looking cube grid
+    for i in range(value):
+        for j in range(value):
+            for k in range(min(value, max_show)):
+                # Isometric projection: x_iso = x - z, y_iso = y + (x+z)/2
+                x_iso = (i - k) * 0.18
+                y_iso = (j + i + k) * 0.1
+                cube = Rectangle(width=0.15, height=0.15, stroke_width=1,
+                                stroke_color=WHITE, fill_color=color, fill_opacity=0.7)
+                cube.move_to([x_iso, y_iso, 0])
+                g.add(cube)
+                if k >= max_show - 1:
+                    break
+    return g.scale(0.8)
+
+
+def cubes_comparison(left_val, right_val, left_label="", right_label="", left_color=BLUE, right_color=GREEN):
+    """Side-by-side stacks of left_val³ and right_val³ cubes with optional labels."""
+    left_cubes = stacked_cubes(left_val, color=left_color, max_show=4)
+    right_cubes = stacked_cubes(right_val, color=right_color, max_show=4)
+
+    left_text = Text(f"{left_val}³", font_size=28, color=left_color, weight="BOLD") if left_label == "" else Text(left_label, font_size=24, color=left_color)
+    right_text = Text(f"{right_val}³", font_size=28, color=right_color, weight="BOLD") if right_label == "" else Text(right_label, font_size=24, color=right_color)
+
+    left_group = VGroup(left_cubes, left_text).arrange(DOWN, buff=0.25)
+    right_group = VGroup(right_cubes, right_text).arrange(DOWN, buff=0.25)
+
+    return VGroup(left_group, right_group).arrange(RIGHT, buff=0.6)
+
+
+# ── Zero crossing on number line ───────────────────────────────────────
+
+def number_line_crossing():
+    """Number line from -3 to 3 with zero highlighted."""
+    nl = NumberLine(x_range=[-4, 4, 1], length=5.2, include_numbers=True,
+                    font_size=28, color=WHITE, stroke_width=3)
+    zero_dot = Dot(nl.n2p(0), color=YELLOW, radius=0.20)
+    label = Text("Zero", font_size=26, color=YELLOW, weight="BOLD").next_to(zero_dot, UP, buff=0.35)
+    return VGroup(nl, zero_dot, label)
+
+
+def negative_positive_progression():
+    """Show -2, 0, +2 with arrows and emphasis."""
+    positions = VGroup(
+        Text("-2", font_size=48, color=RED, weight="BOLD"),
+        Text("→", font_size=36, color=WHITE),
+        Text("0", font_size=48, color=YELLOW, weight="BOLD"),
+        Text("→", font_size=36, color=WHITE),
+        Text("+2", font_size=48, color=GREEN, weight="BOLD"),
+    ).arrange(RIGHT, buff=0.3)
+    return positions
+
+
+# ── Tic-tac-toe board with all 8 winning lines ────────────────────────
+
+def tictac_board_with_lines(highlight_all=False):
+    """Tic-tac-toe board with all 8 winning lines (3 rows, 3 cols, 2 diagonals)."""
+    cells = VGroup()
+    for r in range(3):
+        for c in range(3):
+            cell = Rectangle(width=0.65, height=0.65, stroke_color=WHITE, stroke_width=2.5, fill_opacity=0)
+            cell.move_to([(c - 1) * 0.67, (1 - r) * 0.67, 0])
+            cells.add(cell)
+
+    # X in center
+    X = Text("X", font_size=32, color=YELLOW, weight="BOLD").move_to([0, 0, 0])
+
+    # Draw all 8 winning lines
+    lines = VGroup()
+    # 3 horizontal
+    for r in range(3):
+        y = (1 - r) * 0.67
+        line = Line([-1.0, y, 0], [1.0, y, 0], stroke_color=GREEN, stroke_width=2.5)
+        if not highlight_all:
+            line.set_opacity(0.2)
+        lines.add(line)
+    # 3 vertical
+    for c in range(3):
+        x = (c - 1) * 0.67
+        line = Line([x, -1.0, 0], [x, 1.0, 0], stroke_color=GREEN, stroke_width=2.5)
+        if not highlight_all:
+            line.set_opacity(0.2)
+        lines.add(line)
+    # 2 diagonal
+    diag1 = Line([-1.0, 1.0, 0], [1.0, -1.0, 0], stroke_color=GREEN, stroke_width=2.5)
+    diag2 = Line([-1.0, -1.0, 0], [1.0, 1.0, 0], stroke_color=GREEN, stroke_width=2.5)
+    if not highlight_all:
+        diag1.set_opacity(0.2)
+        diag2.set_opacity(0.2)
+    lines.add(diag1, diag2)
+
+    label = Text("8 ways to win!", font_size=26, color=GREEN, weight="BOLD").next_to(cells, DOWN, buff=0.3)
+
+    return VGroup(lines, cells, X, label)
+
+
+# ── Birthday paradox: people entering room ─────────────────────────────
+
+def people_dots_random(count=10, radius=0.10):
+    """Generate random colored dots representing people."""
+    import random
+    random.seed(42)  # Consistent randomization
+    colors = [BLUE, RED, ORANGE, GREEN, YELLOW, GOLD]
+    people = VGroup()
+    for i in range(count):
+        x = (i % 5) * 0.6 - 1.2
+        y = (i // 5) * 0.6 - 0.3
+        color = colors[random.randint(0, len(colors) - 1)]
+        dot = Dot([x, y, 0], radius=radius, color=color)
+        people.add(dot)
+    return people
+
+
+def match_lines(person_a, person_b):
+    """Line connecting two people (a matching pair)."""
+    return Line(person_a.get_center(), person_b.get_center(),
+               stroke_color=YELLOW, stroke_width=3)
+
+
+# ── Descartes fly crawling with coordinate labels ───────────────────────
+
+def fly_at_position(x, y, scale=1.0):
+    """A fly at coordinates (x, y) with label."""
+    fly = vec_fly(scale)
+    label = Text(f"({x}, {y})", font_size=22, color=YELLOW, weight="BOLD")
+    return VGroup(fly, label).arrange(DOWN, buff=0.15)
+
+
+def coordinate_grid_simple(x_max=5, y_max=4):
+    """Simple coordinate grid."""
+    from manim import Axes
+    grid = Axes(
+        x_range=[0, x_max, 1],
+        y_range=[0, y_max, 1],
+        x_length=3.2,
+        y_length=2.4,
+        axis_config={"color": WHITE, "stroke_width": 2, "include_numbers": True, "font_size": 20},
+        tips=False,
+    )
+    return grid
+
+
+# ── Baseball: batter and ball trajectory ───────────────────────────────
+
+def batter_at_plate():
+    """Simple batter stance at home plate."""
+    plate = Polygon([-0.3, 0, 0], [0.3, 0, 0], [0.25, -0.4, 0], [-0.25, -0.4, 0],
+                   fill_color="#8B4513", fill_opacity=0.7, stroke_color=WHITE, stroke_width=2)
+    # Simple stick figure batter
+    body = Line([0, 0.2, 0], [0, 0.8, 0], stroke_width=4, color=YELLOW)
+    head = Circle(radius=0.15, fill_color=YELLOW, fill_opacity=1, stroke_width=0).move_to([0, 1.0, 0])
+    bat = Line([0, 0.6, 0], [0.8, 0.8, 0], stroke_width=5, color=ORANGE)
+    return VGroup(plate, body, head, bat)
+
+
+def ball_trajectory_arc(distance=2.0, success=True):
+    """Parabolic trajectory for a hit ball."""
+    if success:
+        # Upward arc (successful hit)
+        from manim import ArcBetweenPoints
+        start = [0, 0, 0]
+        end = [distance, 0.8, 0]
+        arc = ArcBetweenPoints(start, end, angle=PI / 3)
+        arc.set_stroke(YELLOW, 3)
+        label = Text("HOME RUN!", font_size=24, color=GREEN, weight="BOLD").move_to([distance / 2, 1.0, 0])
+    else:
+        # Downward arc (unsuccessful)
+        from manim import ArcBetweenPoints
+        start = [0, 0, 0]
+        end = [distance * 0.5, -0.5, 0]
+        arc = ArcBetweenPoints(start, end, angle=-PI / 4)
+        arc.set_stroke(RED, 3)
+        label = Text("Out", font_size=20, color=RED, weight="BOLD").move_to([distance * 0.25, -0.8, 0])
+    return VGroup(arc, label)
+
+
+# ── Soccer penalty kick ────────────────────────────────────────────────
+
+def penalty_box_setup():
+    """Soccer field with penalty kick setup."""
+    field = Rectangle(width=3.2, height=2.0, fill_color="#2D5016", fill_opacity=0.6, stroke_color=WHITE, stroke_width=2)
+    goal = Line([-1.4, 1.0, 0], [-1.4, -1.0, 0], stroke_color=WHITE, stroke_width=4)
+    post_l = Circle(radius=0.1, fill_color=WHITE).move_to([-1.4, 1.0, 0])
+    post_r = Circle(radius=0.1, fill_color=WHITE).move_to([-1.4, -1.0, 0])
+
+    kicker = Text("⚽", font_size=32).move_to([0.8, 0, 0])  # Ball at penalty spot
+    keeper = Text("🧤", font_size=28).move_to([-1.2, 0.3, 0])  # Keeper
+
+    # Simple visual for goal box
+    box = Rectangle(width=0.8, height=1.6, stroke_color=YELLOW, stroke_width=2, fill_opacity=0)
+    box.move_to([-1.0, 0, 0])
+
+    return VGroup(field, goal, post_l, post_r, box)  # Omit emoji text for now
