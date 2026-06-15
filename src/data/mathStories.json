@@ -728,5 +728,149 @@
     ],
     "learned": "A good chart can tell a story numbers alone cannot. Florence proved it in 1854 and saved a million lives.",
     "videoSrc": "6.SP-9-story.mp4"
+  },
+  {
+    "domain": "6.G",
+    "unit": 5,
+    "title": "Story: Euclid's perfect rules",
+    "subtitle": "How one man organized all of geometry—2,300 years ago.",
+    "beats": [
+      {
+        "head": "Alexandria, 300 BC",
+        "body": "**Euclid** is a brilliant mathematician living in Alexandria, Egypt. Geometry exists, but it's **scattered, messy, disconnected**. Nobody has written it down in an organized way. Euclid decides to **fix that.**"
+      },
+      {
+        "head": "The problem",
+        "body": "Mathematicians know hundreds of facts about shapes—triangles, circles, angles, areas. But they don't know **WHY**. Some facts seem true, but **how do you PROVE them?** Euclid asks a radical question: **what are the rules?**"
+      },
+      {
+        "head": "Starting from axioms",
+        "body": "Euclid starts with **5 simple truths**—things so obvious nobody questions them. **'You can draw a straight line between any two points.' 'You can extend a line forever.'** From these **5 basic rules, everything else follows.**"
+      },
+      {
+        "head": "Building the pyramid",
+        "body": "He writes **13 books** called the **'Elements'**. Each book builds on the previous one. **Definition → axiom → proof → theorem.** Everything is **logical and connected**. One step leads to the next."
+      },
+      {
+        "head": "The Elements survives",
+        "body": "For **2,000 years, Euclid's 'Elements' is THE geometry textbook.** **It's copied by hand, translated into every language, studied by every mathematician.** Only the Bible has been translated more often."
+      },
+      {
+        "head": "Why it matters",
+        "body": "Euclid showed that **math isn't just facts—it's a CHAIN of logic.** Every theorem rests on the ones before it. **Proof matters. Rigor matters.** That idea shaped every science and math field forever."
+      }
+    ],
+    "learned": "Geometry is built on a few simple rules. Everything else proves from there—that's Euclid's gift.",
+    "videoSrc": "6.G-5-story.mp4"
+  },
+  {
+    "domain": "6.EE",
+    "unit": 11,
+    "title": "Story: Isaac Newton's apple",
+    "subtitle": "How one man invented calculus AND physics AND gravity.",
+    "beats": [
+      {
+        "head": "Cambridge, 1665",
+        "body": "**Isaac Newton** is studying at Cambridge University. The plague hits England and **universities close**. At **age 23, Newton goes home to his mother's farm** and **stops going to school.** But that's when the magic happens."
+      },
+      {
+        "head": "The big question",
+        "body": "Newton sits in the garden. An **apple falls from a tree.** Why does it fall DOWN? **Why not sideways or up?** Most people wouldn't think twice. **Newton asks: what's the LAW that makes it fall?**"
+      },
+      {
+        "head": "Everything is motion",
+        "body": "He realizes: **'Everything moves. Planets orbit. Light travels. Balls roll.'** **What rules describe all motion?** He invents **calculus**—a brand new type of math to describe change and speed."
+      },
+      {
+        "head": "The laws of motion",
+        "body": "Newton writes down **3 simple rules about motion**: **'Objects stay still unless pushed.' 'The harder you push, the faster it goes.' 'Every action has an equal opposite reaction.'** From these, **everything else follows.**"
+      },
+      {
+        "head": "Gravity unlocked",
+        "body": "He realizes the **apple falling and planets orbiting are the SAME phenomenon**. **Gravity pulls everything toward everything else.** He writes the **formula for gravitational force.** Suddenly **the universe makes sense.**"
+      },
+      {
+        "head": "The Principia",
+        "body": "In **1687, Newton publishes 'Principia Mathematica'**—perhaps the most important science book ever written. **It explains motion, gravity, light, everything.** One man invented half of physics during the plague."
+      },
+      {
+        "head": "Why it matters",
+        "body": "Newton showed that **the universe follows mathematical rules.** Every planet, every falling object, every launched rocket obeys **Newton's laws.** For **300 years, Newton's laws ruled physics.** He changed how we see the world."
+      }
+    ],
+    "learned": "Motion and gravity follow mathematical laws—Newton found them by thinking deeply about a falling apple.",
+    "videoSrc": "6.EE-11-story.mp4"
+  },
+  {
+    "domain": "6.RP",
+    "unit": 6,
+    "title": "Story: Leonhard Euler's prolific mind",
+    "subtitle": "How one blind mathematician wrote more than 900 papers.",
+    "beats": [
+      {
+        "head": "Basel, Switzerland, 1707",
+        "body": "**Leonhard Euler** is born in Switzerland. He's **brilliant at math from childhood**. But here's the thing: he's not just brilliant at ONE area. He's brilliant at **everything.**"
+      },
+      {
+        "head": "Prolific beyond belief",
+        "body": "Euler **publishes 900+ papers and books.** In **ONE year, he writes 100 papers.** He works in **geometry, algebra, number theory, calculus, physics, astronomy, music theory.** **Everything.** He sets the record for most papers published by any mathematician ever."
+      },
+      {
+        "head": "Going blind",
+        "body": "At **age 31, Euler goes blind in one eye.** At **age 60, he goes blind in both eyes.** Most people would stop. **Euler doesn't stop. He keeps publishing.** Without seeing, **he writes faster than before.**"
+      },
+      {
+        "head": "Mental math superhero",
+        "body": "Blind, Euler does **massive calculations in his head.** He **dictates his work to his students.** They watch in awe as he **solves 20-step math problems verbally, without writing anything down.** His mind is **a living computer.**"
+      },
+      {
+        "head": "Euler's formula",
+        "body": "His most famous discovery: **e^(iπ) + 1 = 0.** This equation connects **five of the most important numbers in math**: **e, i, π, 1, and 0.** Mathematicians call it the most beautiful equation ever written."
+      },
+      {
+        "head": "Why it matters",
+        "body": "Euler **proved that one person can master the entire mathematical universe.** He connected **every field**, showed that **all math is related**. His **notations and methods** are still used today. He's the **Mozart of mathematics.**"
+      }
+    ],
+    "learned": "Euler proved that math is all connected—every field relates to every other. One brilliant mind saw them all.",
+    "videoSrc": "6.RP-6-story.mp4"
+  },
+  {
+    "domain": "6.NS",
+    "unit": 8,
+    "title": "Story: Carl Friedrich Gauss",
+    "subtitle": "The Prince of Mathematicians who mastered everything.",
+    "beats": [
+      {
+        "head": "Brunswick, Germany, 1777",
+        "body": "**Carl Friedrich Gauss** is born in Germany to a poor family. His father is a brick-layer. **Nobody expects greatness.** But at **age 3, Gauss corrects his father's arithmetic.** By **age 7, he's solving his teacher's homework.** This kid is **different.**"
+      },
+      {
+        "head": "The young prodigy",
+        "body": "At **age 9, his teacher gives the class a task: add all numbers from 1 to 100.** It should take **all morning**. **Gauss writes one number and puts his hand up immediately: 5,050.** The teacher's shocked. **Gauss spotted the pattern instantly.**"
+      },
+      {
+        "head": "The conjecture",
+        "body": "By **age 19, Gauss proves something mathematicians had wondered about for centuries**: the **Prime Number Theorem**. **Prime numbers follow a pattern.** Though individual primes seem random, **they obey a hidden mathematical law.** He unlocked a 2,000-year mystery."
+      },
+      {
+        "head": "Master of all trades",
+        "body": "Gauss works in **every area**: algebra, geometry, statistics, physics, astronomy, surveying. **Whatever he touches, he revolutionizes.** In **astronomy, he discovers a lost planet** using math. He invents the **normal distribution curve** (the bell curve—**you use it today for grades, test scores, everything**)."
+      },
+      {
+        "head": "The secret notebook",
+        "body": "Gauss keeps a **private notebook** of his discoveries. When he dies, **mathematicians find 100+ world-changing ideas** nobody knew about. He **kept them secret** because he hadn't fully written them up yet. He **never published half his genius.**"
+      },
+      {
+        "head": "The Prince of Mathematics",
+        "body": "**Gauss is crowned 'Princeps Mathematicorum'—the Prince of Mathematicians.** **For 200 years, nobody matches his breadth and depth.** He **mastered arithmetic, algebra, geometry, and analysis—basically, all of math.** One brilliant mind, infinite range."
+      },
+      {
+        "head": "Why it matters",
+        "body": "Gauss proved that **one person can understand everything.** The **normal distribution curve he discovered** is used to **understand test scores, heights, IQ, weather—everything in nature.**  **Gauss shaped how the world sees data and patterns.**"
+      }
+    ],
+    "learned": "Gauss showed that math connects everything—and that one brilliant mind can master it all.",
+    "videoSrc": "6.NS-8-story.mp4"
   }
 ]
