@@ -12,7 +12,7 @@ class Lesson6NS4Examples(ExamplesDeck):
     TITLE = "Examples · Integers & absolute value"
     DOMAIN = "6.NS"
     EXAMPLES = [
-        ("What is |-7|?", ["Distance of -7 from 0.", "= 7."], "7"),
-        ("Which is greater, -5 or -2?", ["-2 is to the right of -5.", "So -2 is greater."], "-2"),
-        ("A diver is at -30 ft, a kite at 12 ft. Who is farther from sea level (0)?", ["|-30| = 30, |12| = 12.", "30 > 12.", "The diver."], "diver"),
+        ("What is |-7|?", ["**Absolute value** is the **distance from 0**, always positive. **-7 is 7 units away from 0**.", "**|-7| = 7**."], "**7**"),
+        ("Which is greater, -5 or -2?", ["On a **number line**, **-2 is to the right of -5**. Numbers on the right are **bigger**.", "So **-2 > -5**."], "**-2**"),
+        ("Diver at -30 ft, kite at 12 ft. Farther from sea level?", ["**Absolute values**: **|-30| = 30 ft** and **|12| = 12 ft**. Compare: **30 > 12**.", "The **diver is farther from sea level**."], "**diver**"),
     ]
