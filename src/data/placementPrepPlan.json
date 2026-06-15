@@ -1,0 +1,285 @@
+{
+  "title": "SRVUSD 5th Grade Placement Prep — 6-Week Calendar",
+  "subtitle": "Stories + Famous Mathematicians + Practice Problems",
+  "goal": "Master fluency, problem translation, and multi-step reasoning for Course 1/2/3 placement",
+  "weeks": [
+    {
+      "week": 1,
+      "title": "Foundation: Multi-Digit Fluency & Word Problems",
+      "focus": "Building speed with multiplication/division; translating English to math",
+      "domains": ["5.F", "6.EE"],
+      "relatedStories": [
+        {
+          "storyId": "6.EE-10",
+          "title": "The Chessboard & Rice (exponential growth)",
+          "reason": "Shows why multiplication is powerful; introduces doubling/exponential concepts"
+        },
+        {
+          "storyId": "6.EE-1",
+          "title": "Penny Doubling",
+          "reason": "Real money scenario; makes multiplication meaningful"
+        }
+      ],
+      "relatedMathematicians": [
+        {
+          "name": "Carl Friedrich Gauss",
+          "achievement": "Found a shortcut to add 1+2+3+...+100 in seconds",
+          "lesssonConnection": "Shows how pattern-finding beats brute-force calculation"
+        }
+      ],
+      "practiceTopics": [
+        "3-4 digit × 1 digit (fluency: 30 sec per problem)",
+        "Multi-digit ÷ 1 digit (with remainders)",
+        "Word problem: Reading → Setting up the math",
+        "PEMDAS review (no exponents yet)"
+      ],
+      "sampleProblems": [
+        "3,456 × 7 = ?",
+        "8,004 ÷ 6 = ?",
+        "A school has 245 students. Each classroom holds 28 students. How many classrooms are needed?",
+        "Evaluate: 5 + 3 × 2 = ?"
+      ]
+    },
+    {
+      "week": 2,
+      "title": "Decimals & Fractions (Addition/Subtraction)",
+      "focus": "Operating with fractional parts of wholes; converting between forms",
+      "domains": ["5.F", "6.NS"],
+      "relatedStories": [
+        {
+          "storyId": "6.NS-4",
+          "title": "The Invention of Zero",
+          "reason": "Shows how humans invented NOTHING as a number; fractions didn't make sense without 0"
+        }
+      ],
+      "relatedMathematicians": [
+        {
+          "name": "Ancient Indian Mathematicians",
+          "achievement": "Invented zero and decimal system (~500 CE)",
+          "lesssonConnection": "Without zero, fractions and decimals are impossible"
+        }
+      ],
+      "practiceTopics": [
+        "Adding/subtracting decimals (0.6 + 0.45)",
+        "Adding/subtracting fractions with common denominators",
+        "Adding/subtracting mixed numbers",
+        "Word problems with money (realistic scenarios)"
+      ],
+      "sampleProblems": [
+        "0.6 + 0.45 = ?",
+        "2 1/3 + 1 5/6 = ?",
+        "3/4 − 1/6 = ?",
+        "A recipe uses 2.5 cups of flour per batch. How much flour is needed for 4 batches?"
+      ]
+    },
+    {
+      "week": 3,
+      "title": "Ratios & Unit Rates (High Priority)",
+      "focus": "Seeing relationships; scaling; proportional thinking",
+      "domains": ["6.RP"],
+      "relatedStories": [
+        {
+          "storyId": "6.RP-1",
+          "title": "What is a Ratio?",
+          "reason": "Apples to oranges, cats to dogs; everyday ratio scenarios"
+        },
+        {
+          "storyId": "6.RP-2",
+          "title": "Unit Rates",
+          "reason": "Cost per muffin, miles per hour; real shopping/travel applications"
+        },
+        {
+          "storyId": "6.RP-5",
+          "title": "Soccer Penalty Kick Probability",
+          "reason": "Ratios show success rates; why practice matters"
+        }
+      ],
+      "relatedMathematicians": [
+        {
+          "name": "Srinivasa Ramanujan",
+          "achievement": "Saw number patterns instantly; understood ratios & fractions deeply",
+          "lesssonConnection": "Ratios are hidden everywhere in math"
+        }
+      ],
+      "practiceTopics": [
+        "Simplifying ratios (GCF method)",
+        "Equivalent ratios / scaling",
+        "Unit rates (cost per item, speed per hour)",
+        "Ratio tables (finding patterns)",
+        "Percent as a ratio (intro)"
+      ],
+      "sampleProblems": [
+        "Simplify 12 apples to 8 oranges.",
+        "If 3 notebooks cost $6, what is the unit rate?",
+        "A map scale is 1 inch = 5 miles. How many miles is 7 inches?",
+        "A car travels 180 miles in 3 hours. What is the speed per hour?"
+      ]
+    },
+    {
+      "week": 4,
+      "title": "Expressions & Equations (High Priority)",
+      "focus": "Writing math from English; solving for unknown",
+      "domains": ["6.EE"],
+      "relatedStories": [
+        {
+          "storyId": "6.NS-10",
+          "title": "Descartes' Fly on the Ceiling",
+          "reason": "Coordinates & variables; algebra's origin story"
+        }
+      ],
+      "relatedMathematicians": [
+        {
+          "name": "René Descartes",
+          "achievement": "Invented the coordinate system so flies on ceilings can be described mathematically",
+          "lesssonConnection": "Variables (x, y) let us describe ANY position, ANY unknown"
+        }
+      ],
+      "practiceTopics": [
+        "Evaluating expressions with variables (3x + 5 when x = 7)",
+        "Writing expressions from words ('5 more than twice a number')",
+        "One-step equations (x + 18 = 42)",
+        "Two-step equations (4x = 36)",
+        "Intro to distributive property"
+      ],
+      "sampleProblems": [
+        "Evaluate: 3x + 5 when x = 7",
+        "Solve: x + 18 = 42",
+        "Solve: 4x = 36",
+        "Write an expression: 'The cost of 3 items at $4.50 each, minus a $5 coupon'"
+      ]
+    },
+    {
+      "week": 5,
+      "title": "Geometry & Spatial Reasoning",
+      "focus": "Area, volume, coordinate plane; connecting to real buildings/objects",
+      "domains": ["6.G"],
+      "relatedStories": [
+        {
+          "storyId": "6.G-1",
+          "title": "Egyptian Right Triangle (3-4-5)",
+          "reason": "Ancient builders used this to make perfect corners; shows geometry's history"
+        },
+        {
+          "storyId": "6.G-6",
+          "title": "Honeycomb Hexagons",
+          "reason": "Nature's geometry; why bees are brilliant mathematicians"
+        }
+      ],
+      "relatedMathematicians": [
+        {
+          "name": "Euclid",
+          "achievement": "Organized all geometry into logical rules (Elements, 300 BCE)",
+          "lesssonConnection": "Area & volume formulas come from geometric logic"
+        }
+      ],
+      "practiceTopics": [
+        "Area of rectangles & triangles (base × height formulas)",
+        "Perimeter of rectangles (and solving for missing sides)",
+        "Volume of rectangular prisms (length × width × height)",
+        "Coordinate plane basics (plotting points)"
+      ],
+      "sampleProblems": [
+        "Find the area of a triangle with base 10 and height 6.",
+        "Find the volume of a prism with dimensions 4 × 3 × 5.",
+        "A rectangle has perimeter 50. Length is 15. Find width.",
+        "A rectangle is 12 by 8. What is its area?"
+      ]
+    },
+    {
+      "week": 6,
+      "title": "Statistics, Probability & Mixed Review",
+      "focus": "Data interpretation; chance; integrating all 5 weeks",
+      "domains": ["6.SP"],
+      "relatedStories": [
+        {
+          "storyId": "6.SP-4",
+          "title": "Birthday Paradox",
+          "reason": "Surprising probability result; why intuition fails in statistics"
+        },
+        {
+          "storyId": "6.SP-1",
+          "title": "Tic-Tac-Toe Strategy",
+          "reason": "Counting outcomes; why games are mathematical"
+        }
+      ],
+      "relatedMathematicians": [
+        {
+          "name": "Florence Nightingale",
+          "achievement": "Used data visualization (rose diagrams) to save lives during the Crimean War",
+          "lesssonConnection": "Statistics & graphs tell stories that numbers alone cannot"
+        }
+      ],
+      "practiceTopics": [
+        "Mean, median, mode, range",
+        "Interpreting bar graphs, line plots, data displays",
+        "Basic probability (single-step, equally likely events)",
+        "Multi-step word problems mixing all domains",
+        "MOCK EXAM 3 (full placement simulation)"
+      ],
+      "sampleProblems": [
+        "Find the mean of: 4, 8, 10, 6",
+        "A bag has 3 red, 2 blue, 5 green marbles. What is P(red)?",
+        "A student scores 85, 90, 95 on three tests. What score is needed on the 4th test to average 90?",
+        "A shirt costs $24 with a 25% discount. What is the final price?"
+      ]
+    }
+  ],
+  "mockExams": {
+    "exam1": {
+      "title": "MOCK EXAM 1 — NUMBER SENSE & FLUENCY",
+      "when": "End of Week 2",
+      "timeLimit": "45 minutes",
+      "sections": 4
+    },
+    "exam2": {
+      "title": "MOCK EXAM 2 — RATIOS & EXPRESSIONS",
+      "when": "End of Week 4",
+      "timeLimit": "45 minutes",
+      "sections": 4
+    },
+    "exam3": {
+      "title": "MOCK EXAM 3 — MIXED PLACEMENT SIMULATION",
+      "when": "End of Week 6 (FINAL)",
+      "timeLimit": "60 minutes",
+      "sections": 5
+    }
+  },
+  "readinessRubric": {
+    "course1": {
+      "title": "Course 1 (Traditional 6th Grade)",
+      "score": "Below 70%",
+      "description": "Solid 5th grade foundation; ready for core 6th grade curriculum at standard pace",
+      "keySkills": [
+        "Multi-digit fluency (×÷)",
+        "Fraction/decimal add/subtract",
+        "Basic word problem translation",
+        "One-step equations"
+      ]
+    },
+    "course2": {
+      "title": "Course 2 (Accelerated 6th Grade)",
+      "score": "70-85%",
+      "description": "Strong grasp of ratios, algebra, geometry; ready for faster pace and challenge",
+      "keySkills": [
+        "All Course 1 skills PLUS",
+        "Ratio/unit rate fluency",
+        "Two-step equations & expressions",
+        "Area/volume formulas",
+        "Multi-step word problem solving"
+      ]
+    },
+    "course3": {
+      "title": "Course 3 (Advanced; Algebra Focus)",
+      "score": "85%+",
+      "description": "Mastery of concepts AND speed; ready for algebra-heavy curriculum with proofs/extensions",
+      "keySkills": [
+        "All Course 2 skills PLUS",
+        "Distributive property fluency",
+        "Multi-variable equations",
+        "Coordinate plane graphing",
+        "Probability/statistics reasoning",
+        "Problem-solving creativity & pattern recognition"
+      ]
+    }
+  }
+}
