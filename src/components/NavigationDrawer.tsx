@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NAV_SECTIONS } from '../data/navigationMenu';
@@ -10,7 +10,6 @@ interface Props {
 
 export function NavigationDrawer({ open, onClose }: Props) {
   const navigate = useNavigate();
-  const [scrollable, setScrollable] = useState(false);
 
   const handleNavClick = (to: string) => {
     navigate(to);

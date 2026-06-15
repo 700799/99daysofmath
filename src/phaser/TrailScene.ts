@@ -180,8 +180,8 @@ export class TrailScene extends Phaser.Scene {
       // Unit description below circle
       const lesson = getLesson(this.domain, node.unit);
       if (lesson) {
-        const shortTitle = lesson.title.length > 15
-          ? lesson.title.substring(0, 12) + '...'
+        const shortTitle = lesson.title.length > 16
+          ? lesson.title.substring(0, 13) + '...'
           : lesson.title;
         const unitDescription = this.add
           .text(0, 52, shortTitle, {
@@ -190,9 +190,9 @@ export class TrailScene extends Phaser.Scene {
             fontStyle: '600',
             color: '#475569',
             align: 'center',
+            wordWrap: { width: 70 },
           })
-          .setOrigin(0.5)
-          .setMaxWidth(70);
+          .setOrigin(0.5);
         container.add(unitDescription);
       }
 

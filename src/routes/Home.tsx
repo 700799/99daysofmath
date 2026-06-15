@@ -11,7 +11,6 @@ import { useProgress } from '../state/progress';
 import { useDisplayName } from '../state/auth';
 import { useDomainSummary } from '../hooks/useProblems';
 import { Mascot } from '../components/Mascot';
-import { DailyQuestRing } from '../components/DailyQuestRing';
 import { PracticeHeatmap } from '../components/PracticeHeatmap';
 import { Onboarding } from '../components/Onboarding';
 
