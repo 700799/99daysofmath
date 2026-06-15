@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useProgress } from '../state/progress';
 import { useAuth } from '../state/auth';
 import { Avatar } from './AccountCard';
 import { LevelBadge } from './LevelBadge';
 import { XpFlash } from './XpFlash';
+import { NavigationDrawer } from './NavigationDrawer';
 import { submitHaptic, tapHaptic } from '../utils/haptics';
 
 interface Props {
@@ -12,6 +13,7 @@ interface Props {
 }
 
 export function AppShell({ children }: Props) {
+  const [navOpen, setNavOpen] = useState(false);
   const dailyStreak = useProgress((s) => s.dailyStreak);
   const usedFreezeRecently = useProgress((s) => {
     if (!s.lastFreezeDate) return false;
@@ -78,14 +80,18 @@ export function AppShell({ children }: Props) {
               </span>
             </div>
           ) : (
-            <Link
-              to="/"
-              className="flex items-center gap-1 text-slate-700 hover:text-slate-900 min-h-11"
-            >
-              <span className="text-2xl">←</span>
-              <span className="font-display font-bold">Home</span>
-            </Link>
+            <span className="text-sm font-display font-bold text-slate-600 truncate">
+              {/* Contextual title could go here in the future */}
+            </span>
           )}
+          <button
+            type="button"
+            onClick={() => setNavOpen(true)}
+            aria-label="Open navigation menu"
+            className="w-10 h-10 flex items-center justify-center text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
+          >
+            <span className="text-xl">≡</span>
+          </button>
           <div className="flex items-center gap-1.5">
             {dailyStreak > 0 && (
               <span
@@ -110,6 +116,7 @@ export function AppShell({ children }: Props) {
       </header>
       <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-6">{children}</main>
       <XpFlash />
+      <NavigationDrawer open={navOpen} onClose={() => setNavOpen(false)} />
     </div>
   );
 }
