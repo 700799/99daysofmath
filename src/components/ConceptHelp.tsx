@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { getLesson, type Lesson } from '../data/lessons';
 import { DOMAIN_EMOJI, DOMAIN_LABELS, type Domain } from '../types/problem';
 import { LessonVideo } from './LessonVideo';
-import { ReadAloud } from './ReadAloud';
 
 interface Props {
   domain: Domain;
@@ -129,11 +128,10 @@ function ConceptTab({ lesson, onOpenLesson }: { lesson: Lesson; onOpenLesson?: (
   return (
     <div>
       <p className="text-sm text-slate-600">{lesson.objective}</p>
-      <div className="mt-3 flex items-center justify-between">
+      <div className="mt-3">
         <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-slate-500">
           The key idea
         </div>
-        <ReadAloud text={[lesson.objective, ...lesson.concept]} label="Read aloud" />
       </div>
       <ol className="mt-2 space-y-2.5">
         {lesson.concept.map((c, i) => (

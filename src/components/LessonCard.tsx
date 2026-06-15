@@ -9,7 +9,6 @@ import {
   type PracticeQuestion,
 } from '../data/lessons';
 import { LessonVideo } from './LessonVideo';
-import { ReadAloud } from './ReadAloud';
 import { DOMAIN_EMOJI } from '../types/problem';
 import { stickerById } from '../utils/encouragement';
 import { Mascot } from './Mascot';
@@ -314,9 +313,6 @@ function IntroPage({ lesson }: { lesson: Lesson }) {
         {lesson.title}
       </h2>
       <p className="text-sm text-slate-600 mt-2">{lesson.objective}</p>
-      <div className="mt-3 flex justify-center">
-        <ReadAloud text={[lesson.title, lesson.objective]} />
-      </div>
       <div className="mt-5 rounded-2xl bg-sky-50 border border-sky-200 p-3 text-sm text-sky-900 text-left">
         <div className="font-display font-extrabold text-sky-700 text-xs uppercase tracking-wider">
           What's in this lesson
@@ -349,9 +345,6 @@ function ConceptPage({ lesson }: { lesson: Lesson }) {
   return (
     <div>
       <PageTitle eyebrow="The key idea" title="How it works" />
-      <div className="mt-2">
-        <ReadAloud text={lesson.concept} label="Read these aloud" />
-      </div>
       <ol className="mt-3 space-y-3">
         {lesson.concept.map((s, i) => (
           <li key={i} className="flex gap-3">
@@ -383,13 +376,7 @@ function ExamplePage({
     <div>
       <PageTitle eyebrow={`Worked example ${index + 1} of ${total}`} title="Try in your head first" />
       <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 p-4">
-        <div className="flex items-start justify-between gap-3">
-          <div className="text-base font-display font-extrabold text-slate-900 flex-1">{ex.q}</div>
-          <ReadAloud
-            text={open ? [ex.q, ...ex.steps, `Answer: ${ex.answer}`] : [ex.q]}
-            label=""
-          />
-        </div>
+        <div className="text-base font-display font-extrabold text-slate-900">{ex.q}</div>
         {open ? (
           <div className="mt-3">
             <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">
@@ -497,7 +484,6 @@ function WatchOutPage({ lesson, hasPractice }: { lesson: Lesson; hasPractice: bo
       <div className="mt-3 rounded-2xl bg-amber-50 border-2 border-amber-200 p-4">
         <div className="flex items-start justify-between gap-3">
           <div className="text-3xl">⚠️</div>
-          <ReadAloud text={lesson.watchOut} label="" />
         </div>
         <p className="text-sm text-amber-900 mt-1.5 leading-snug">{lesson.watchOut}</p>
       </div>
