@@ -4,13 +4,63 @@ import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // 3-lane top-down racer. Auto-drives forward; tap left/right to swap lanes.
-// Avoid cones, grab fuel cans for time bonus. 45-second session.
+// Avoid obstacles, grab power-ups for time bonus. 45-second session.
 
 const VIEW_W = 360;
 const VIEW_H = 440;
 const LANES = [60, 180, 300]; // pixel x-centers for each lane
 const CAR_Y = VIEW_H - 90;
 const SESSION_SECONDS = 45;
+
+// Environment themes
+interface RaceTheme {
+  name: string;
+  car: string;
+  obstacle: string;
+  powerup: string;
+  bgGradient: string; // Tailwind classes
+  laneColor: string;
+  laneGradient: string;
+}
+
+const THEMES: RaceTheme[] = [
+  {
+    name: 'Desert',
+    car: '🏎️',
+    obstacle: '🪨',
+    powerup: '⚡',
+    bgGradient: 'from-amber-700 to-amber-900',
+    laneColor: 'amber-300',
+    laneGradient: 'linear-gradient(180deg, transparent 0 16px, #FBBF24 16px 36px, transparent 36px 52px)',
+  },
+  {
+    name: 'Forest',
+    car: '🚙',
+    obstacle: '🌲',
+    powerup: '🍎',
+    bgGradient: 'from-green-700 to-green-900',
+    laneColor: 'lime-300',
+    laneGradient: 'linear-gradient(180deg, transparent 0 16px, #BFEF45 16px 36px, transparent 36px 52px)',
+  },
+  {
+    name: 'City',
+    car: '🚗',
+    obstacle: '🚙',
+    powerup: '⚡',
+    bgGradient: 'from-slate-600 to-slate-800',
+    laneColor: 'yellow-300',
+    laneGradient: 'linear-gradient(180deg, transparent 0 16px, #FCD34D 16px 36px, transparent 36px 52px)',
+  },
+  {
+    name: 'Space',
+    car: '🚀',
+    obstacle: '☄️',
+    powerup: '⭐',
+    bgGradient: 'from-indigo-900 to-slate-900',
+    laneColor: 'cyan-300',
+    laneGradient: 'linear-gradient(180deg, transparent 0 16px, #06B6D4 16px 36px, transparent 36px 52px)',
+  },
+];
 
 type Obstacle = {
   id: number;
@@ -22,6 +72,11 @@ type Obstacle = {
 export function RaceCar() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
+  const [themeIdx, setThemeIdx] = useState(() => {
+    const saved = localStorage.getItem('racer_theme');
+    return saved ? Math.min(parseInt(saved), THEMES.length - 1) : 0;
+  });
+  const [showThemeSelector, setShowThemeSelector] = useState(true);
   useArcadeClock(!!outcome);
 
   const laneRef = useRef<0 | 1 | 2>(1);
@@ -37,6 +92,13 @@ export function RaceCar() {
 
   const [, force] = useState(0);
   const redraw = () => force((n) => n + 1);
+  const theme = THEMES[themeIdx];
+
+  const selectTheme = (idx: number) => {
+    setThemeIdx(idx);
+    localStorage.setItem('racer_theme', idx.toString());
+    setShowThemeSelector(false);
+  };
 
   const setLane = (n: 0 | 1 | 2) => {
     if (outcome) return;
@@ -125,12 +187,13 @@ export function RaceCar() {
     timeLeftRef.current = SESSION_SECONDS;
     spawnTimerRef.current = 0;
     setOutcome(null);
+    setShowThemeSelector(true);
   };
 
   if (outcome) {
     return (
       <div>
-        <ArcadeHeader title="Race Car" emoji="🏎️" />
+        <ArcadeHeader title="Race Car" emoji={theme.car} />
         <ArcadeEndCard
           gameId="racer"
           outcome={outcome}
@@ -144,7 +207,29 @@ export function RaceCar() {
 
   return (
     <div>
-      <ArcadeHeader title="Race Car · 45s" emoji="🏎️" />
+      <ArcadeHeader title={`${theme.name} Race · 45s`} emoji={theme.car} />
+      {showThemeSelector && (
+        <div className="mb-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-4">
+          <p className="text-sm font-display font-bold text-slate-900 mb-3">Pick your track:</p>
+          <div className="grid grid-cols-2 gap-2">
+            {THEMES.map((t, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => selectTheme(idx)}
+                className={`p-3 rounded-xl text-sm font-display font-bold transition-all ${
+                  themeIdx === idx
+                    ? 'bg-white ring-2 ring-blue-500 shadow-lg'
+                    : 'bg-white/50 hover:bg-white'
+                }`}
+              >
+                <span className="text-2xl block mb-1">{t.car}</span>
+                <span className="text-slate-700">{t.name}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
       <div className="mb-2 flex items-center justify-between">
         <div className="text-sm font-display font-extrabold text-slate-900">
           {'❤️'.repeat(livesRef.current)}
@@ -156,12 +241,12 @@ export function RaceCar() {
       </div>
 
       <div
-        className="relative mx-auto rounded-2xl bg-gradient-to-b from-slate-700 to-slate-900 border-2 border-slate-300 overflow-hidden select-none"
+        className={`relative mx-auto rounded-2xl bg-gradient-to-b ${theme.bgGradient} border-2 border-slate-300 overflow-hidden select-none`}
         style={{ width: '100%', maxWidth: VIEW_W, height: VIEW_H }}
       >
         {/* lane stripes — scroll using a CSS animation tied to speed */}
-        <div className="absolute inset-y-0 left-1/3 w-1.5 bg-amber-300 opacity-80" style={{ backgroundImage: 'linear-gradient(180deg, transparent 0 16px, #FBBF24 16px 36px, transparent 36px 52px)', backgroundSize: '100% 52px' }} />
-        <div className="absolute inset-y-0 left-2/3 w-1.5 bg-amber-300 opacity-80" style={{ backgroundImage: 'linear-gradient(180deg, transparent 0 16px, #FBBF24 16px 36px, transparent 36px 52px)', backgroundSize: '100% 52px' }} />
+        <div className="absolute inset-y-0 left-1/3 w-1.5 opacity-80" style={{ backgroundImage: theme.laneGradient, backgroundSize: '100% 52px' }} />
+        <div className="absolute inset-y-0 left-2/3 w-1.5 opacity-80" style={{ backgroundImage: theme.laneGradient, backgroundSize: '100% 52px' }} />
 
         {/* obstacles */}
         {obstaclesRef.current.map((ob) => (
@@ -171,7 +256,7 @@ export function RaceCar() {
             style={{ left: LANES[ob.lane] - 22, top: ob.y, transition: 'none' }}
             aria-hidden="true"
           >
-            {ob.kind === 'cone' ? '🚧' : '⛽'}
+            {ob.kind === 'cone' ? theme.obstacle : theme.powerup}
           </div>
         ))}
 
@@ -181,7 +266,7 @@ export function RaceCar() {
           style={{ left: LANES[laneRef.current] - 28, top: CAR_Y - 28 }}
           aria-hidden="true"
         >
-          🏎️
+          {theme.car}
         </div>
       </div>
 
@@ -190,20 +275,22 @@ export function RaceCar() {
         <button
           type="button"
           onClick={() => setLane(Math.max(0, laneRef.current - 1) as 0 | 1 | 2)}
-          className="min-h-16 rounded-2xl bg-white border-2 border-slate-200 font-display font-extrabold text-2xl shadow"
+          disabled={showThemeSelector}
+          className="min-h-16 rounded-2xl bg-white border-2 border-slate-200 font-display font-extrabold text-2xl shadow disabled:opacity-50"
         >
           ← Left
         </button>
         <button
           type="button"
           onClick={() => setLane(Math.min(2, laneRef.current + 1) as 0 | 1 | 2)}
-          className="min-h-16 rounded-2xl bg-white border-2 border-slate-200 font-display font-extrabold text-2xl shadow"
+          disabled={showThemeSelector}
+          className="min-h-16 rounded-2xl bg-white border-2 border-slate-200 font-display font-extrabold text-2xl shadow disabled:opacity-50"
         >
           Right →
         </button>
       </div>
       <p className="text-center text-xs text-slate-500 mt-2">
-        Swerve around 🚧. Grab ⛽ for time bonuses!
+        Swerve around {theme.obstacle}. Grab {theme.powerup} for time bonuses!
       </p>
     </div>
   );
