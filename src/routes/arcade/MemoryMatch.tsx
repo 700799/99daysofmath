@@ -4,13 +4,39 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
-const EMOJI = ['➗', '📐', '🔢', '⚖️', '📊', '🧮', '🎯', '⭐'];
-
 interface Card {
   id: number;
   emoji: string;
   matched: boolean;
 }
+
+interface MemoryTheme {
+  name: string;
+  emoji: string[];
+}
+
+const THEMES: MemoryTheme[] = [
+  {
+    name: 'Math',
+    emoji: ['➗', '📐', '🔢', '⚖️', '📊', '🧮', '🎯', '⭐'],
+  },
+  {
+    name: 'Animals',
+    emoji: ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼'],
+  },
+  {
+    name: 'Sports',
+    emoji: ['⚽', '🏀', '🏈', '⚾', '🎾', '🏐', '🏉', '🥎'],
+  },
+  {
+    name: 'Food',
+    emoji: ['🍎', '🍊', '🍋', '🍌', '🍉', '🍓', '🍒', '🍰'],
+  },
+  {
+    name: 'Space',
+    emoji: ['🌟', '🌙', '⭐', '☄️', '🪐', '🛸', '🚀', '🛰️'],
+  },
+];
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -21,19 +47,32 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-function deal(): Card[] {
-  return shuffle([...EMOJI, ...EMOJI]).map((emoji, id) => ({ id, emoji, matched: false }));
+function deal(emoji: string[]): Card[] {
+  return shuffle([...emoji, ...emoji]).map((e, id) => ({ id, emoji: e, matched: false }));
 }
 
 export function MemoryMatch() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
-  const [cards, setCards] = useState<Card[]>(deal);
+  const [themeIdx, setThemeIdx] = useState(() => {
+    const saved = localStorage.getItem('memory_theme');
+    return saved ? Math.min(parseInt(saved), THEMES.length - 1) : 0;
+  });
+  const [showThemeSelector, setShowThemeSelector] = useState(true);
+  const theme = THEMES[themeIdx];
+  const [cards, setCards] = useState<Card[]>(() => deal(theme.emoji));
   const [faceUp, setFaceUp] = useState<number[]>([]); // ids currently flipped
   const [flips, setFlips] = useState(0);
   const [locked, setLocked] = useState(false);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
   const doneRef = useRef(false);
+
+  const selectTheme = (idx: number) => {
+    setThemeIdx(idx);
+    localStorage.setItem('memory_theme', idx.toString());
+    setShowThemeSelector(false);
+    setCards(deal(THEMES[idx].emoji));
+  };
 
   const allMatched = cards.every((c) => c.matched);
 
@@ -71,17 +110,18 @@ export function MemoryMatch() {
   };
 
   const reset = () => {
-    setCards(deal());
+    setCards(deal(theme.emoji));
     setFaceUp([]);
     setFlips(0);
     setLocked(false);
     setOutcome(null);
     doneRef.current = false;
+    setShowThemeSelector(true);
   };
 
   return (
     <div>
-      <ArcadeHeader title="Memory Match" emoji="🃏" />
+      <ArcadeHeader title={`${theme.name} Memory`} emoji="🃏" />
       {outcome && allMatched ? (
         <ArcadeEndCard
           gameId="memory"
@@ -92,6 +132,28 @@ export function MemoryMatch() {
         />
       ) : (
         <>
+          {showThemeSelector && (
+            <div className="mb-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-4">
+              <p className="text-sm font-display font-bold text-slate-900 mb-3">Pick your emoji set:</p>
+              <div className="grid grid-cols-2 gap-2">
+                {THEMES.map((t, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => selectTheme(idx)}
+                    className={`p-3 rounded-xl text-sm font-display font-bold transition-all ${
+                      themeIdx === idx
+                        ? 'bg-white ring-2 ring-blue-500 shadow-lg'
+                        : 'bg-white/50 hover:bg-white'
+                    }`}
+                  >
+                    <span className="text-2xl block mb-1">{t.emoji[0]}</span>
+                    <span className="text-slate-700">{t.name}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
           <p className="text-sm text-slate-600 mb-3">
             Flip two cards — find all 8 pairs. Fewer flips, more XP! Flips:{' '}
             <span className="font-display font-extrabold text-slate-900 tabular-nums">{flips}</span>
@@ -104,8 +166,9 @@ export function MemoryMatch() {
                   key={card.id}
                   type="button"
                   onClick={() => flip(card.id)}
+                  disabled={showThemeSelector}
                   aria-label={up ? card.emoji : 'Hidden card'}
-                  className="aspect-square [perspective:600px]"
+                  className="aspect-square [perspective:600px] disabled:opacity-50"
                 >
                   <motion.div
                     animate={{ rotateY: up ? 180 : 0 }}
