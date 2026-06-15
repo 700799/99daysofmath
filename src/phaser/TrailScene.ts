@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { buildTrail, TRAIL_WIDTH, type TrailNode } from './trailLayouts';
 import { DOMAIN_COLORS, type Domain } from '../types/problem';
+import { getLesson } from '../data/lessons';
 
 export interface TrailSceneState {
   unitsUnlocked: number;
@@ -101,7 +102,7 @@ export class TrailScene extends Phaser.Scene {
   }
 
   private drawNodes() {
-    const color = Phaser.Display.Color.HexStringToColor(
+    const domainColor = Phaser.Display.Color.HexStringToColor(
       DOMAIN_COLORS[this.domain],
     ).color;
     for (const node of this.layout) {
@@ -112,6 +113,9 @@ export class TrailScene extends Phaser.Scene {
       const completed = stars > 0;
       const isCurrent = node.unit === this.firstIncompleteUnit() && !completed;
 
+      // Determine node color based on completion
+      const nodeColor = completed ? 0xfbbf24 : domainColor; // Gold for complete, domain color otherwise
+
       const container = this.add.container(node.x, node.y);
 
       // Drop shadow
@@ -119,12 +123,43 @@ export class TrailScene extends Phaser.Scene {
       container.add(shadow);
 
       // Bottom ring (darker)
-      const ringBottom = this.add.circle(0, 4, 38, unlocked ? color : 0x9ca3af, 1);
+      const ringBottom = this.add.circle(0, 4, 38, unlocked ? nodeColor : 0x9ca3af, 1);
       container.add(ringBottom);
 
       // Top ring
-      const ring = this.add.circle(0, 0, 38, unlocked ? color : 0xd1d5db, 1);
+      const ring = this.add.circle(0, 0, 38, unlocked ? nodeColor : 0xd1d5db, 1);
       container.add(ring);
+
+      // Progress ring (animated arc showing completion)
+      if (unlocked && !completed) {
+        const progressRing = this.add.graphics();
+        const progress = Math.min(stars / 3, 1); // 0-1 based on stars out of 3
+        const startAngle = -Math.PI / 2; // Start at top
+        const endAngle = startAngle + (progress * 2 * Math.PI);
+
+        progressRing.lineStyle(3, 0x3b82f6, 1); // Blue progress ring
+        progressRing.arc(0, 0, 42, startAngle, endAngle, false);
+        progressRing.strokePath();
+        container.add(progressRing);
+
+        // Animate progress ring when stars change
+        if (progress > 0) {
+          this.tweens.add({
+            targets: { val: 0 },
+            val: progress,
+            duration: 500,
+            ease: 'Power2.easeOut',
+            onUpdate: (tween) => {
+              progressRing.clear();
+              const currentProgress = (tween.progress as number) * progress;
+              const currentEndAngle = startAngle + (currentProgress * 2 * Math.PI);
+              progressRing.lineStyle(3, 0x3b82f6, 1);
+              progressRing.arc(0, 0, 42, startAngle, currentEndAngle, false);
+              progressRing.strokePath();
+            },
+          });
+        }
+      }
 
       // Inner disc
       const inner = this.add.circle(0, 0, 30, unlocked ? 0xffffff : 0xe5e7eb, 1);
@@ -137,10 +172,29 @@ export class TrailScene extends Phaser.Scene {
           fontFamily: 'Nunito, system-ui, sans-serif',
           fontSize: completed ? '34px' : '24px',
           fontStyle: '900',
-          color: unlocked ? '#0F172A' : '#6B7280',
+          color: completed ? '#78350f' : '#0F172A', // Darker gold for complete, dark for incomplete
         })
         .setOrigin(0.5);
       container.add(label);
+
+      // Unit description below circle
+      const lesson = getLesson(this.domain, node.unit);
+      if (lesson) {
+        const shortTitle = lesson.title.length > 15
+          ? lesson.title.substring(0, 12) + '...'
+          : lesson.title;
+        const unitDescription = this.add
+          .text(0, 52, shortTitle, {
+            fontFamily: 'Nunito, system-ui, sans-serif',
+            fontSize: '11px',
+            fontStyle: '600',
+            color: '#475569',
+            align: 'center',
+          })
+          .setOrigin(0.5)
+          .setMaxWidth(70);
+        container.add(unitDescription);
+      }
 
       container.setSize(80, 80);
       if (unlocked) {
@@ -173,16 +227,16 @@ export class TrailScene extends Phaser.Scene {
         }
       }
 
-      // Star badge above completed nodes
+      // Star badge above completed nodes (updated color to gold)
       if (completed) {
         const badge = this.add.container(30, -30);
-        const badgeBg = this.add.circle(0, 0, 14, 0xfbbf24, 1);
+        const badgeBg = this.add.circle(0, 0, 14, 0xfbbf24, 1); // Gold
         const badgeText = this.add
           .text(0, 0, `${stars}`, {
             fontFamily: 'Nunito, system-ui, sans-serif',
             fontSize: '14px',
             fontStyle: '900',
-            color: '#0F172A',
+            color: '#78350f',
           })
           .setOrigin(0.5);
         badge.add([badgeBg, badgeText]);
