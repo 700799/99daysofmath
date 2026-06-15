@@ -12,7 +12,7 @@ class Lesson6EE8Examples(ExamplesDeck):
     TITLE = "Examples · Equivalent expressions & checking solutions"
     DOMAIN = "6.EE"
     EXAMPLES = [
-        ("Is 2x + 6 equivalent to 2(x + 3)?", ["Distribute: 2(x + 3) = 2x + 6.", "Same expression. Yes."], "yes"),
-        ("Is x = 4 a solution to x + 5 = 9?", ["Substitute: 4 + 5 = 9. ", "Yes."], "yes"),
-        ("Is x = 3 a solution to 2x = 8?", ["Check: 2(3) = 6, not 8.", "No."], "no"),
+        ("Is 2x + 6 equivalent to 2(x + 3)?", ["**Expand** the second expression using the **distributive property**: **2(x + 3) = 2·x + 2·3 = 2x + 6**.", "Both expressions simplify to **2x + 6**. They're **equivalent!**"], "**yes**"),
+        ("Is x = 4 a solution to x + 5 = 9?", ["**Substitute x = 4** into the equation: **4 + 5 = 9**.", "**True!** So **x = 4 IS a solution**."], "**yes**"),
+        ("Is x = 3 a solution to 2x = 8?", ["**Substitute x = 3**: **2(3) = 6**. Is **6 = 8**? No, they're not equal.", "So **x = 3 is NOT a solution**."], "**no**"),
     ]
