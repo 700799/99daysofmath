@@ -17,14 +17,73 @@ interface Fish {
   points: number;
 }
 
-const FISH_TYPES = [
-  { emoji: '🐟', points: 1, speed: 60 },
-  { emoji: '🐠', points: 2, speed: 85 },
-  { emoji: '🐡', points: 3, speed: 110 },
+interface FishingTheme {
+  name: string;
+  boat: string;
+  waterGradient: string;
+  fish: Array<{ emoji: string; points: number; speed: number }>;
+}
+
+const THEMES: FishingTheme[] = [
+  {
+    name: 'Pond',
+    boat: '🚣',
+    waterGradient: 'from-sky-200 via-cyan-300 to-cyan-600',
+    fish: [
+      { emoji: '🐟', points: 1, speed: 60 },
+      { emoji: '🐠', points: 2, speed: 85 },
+      { emoji: '🐡', points: 3, speed: 110 },
+    ],
+  },
+  {
+    name: 'Ocean',
+    boat: '⛵',
+    waterGradient: 'from-blue-400 via-blue-500 to-blue-700',
+    fish: [
+      { emoji: '🦈', points: 3, speed: 100 },
+      { emoji: '🐙', points: 2, speed: 75 },
+      { emoji: '🦑', points: 3, speed: 95 },
+    ],
+  },
+  {
+    name: 'River',
+    boat: '🛶',
+    waterGradient: 'from-emerald-200 via-emerald-400 to-emerald-600',
+    fish: [
+      { emoji: '🐟', points: 1, speed: 70 },
+      { emoji: '🦐', points: 2, speed: 80 },
+      { emoji: '🦀', points: 3, speed: 60 },
+    ],
+  },
+  {
+    name: 'Lake',
+    boat: '🚤',
+    waterGradient: 'from-slate-300 via-slate-400 to-slate-600',
+    fish: [
+      { emoji: '🐠', points: 1, speed: 65 },
+      { emoji: '🐟', points: 2, speed: 85 },
+      { emoji: '🦆', points: 2, speed: 100 },
+    ],
+  },
+  {
+    name: 'Swamp',
+    boat: '🪵',
+    waterGradient: 'from-green-700 via-green-800 to-green-900',
+    fish: [
+      { emoji: '🐢', points: 2, speed: 40 },
+      { emoji: '🦑', points: 3, speed: 70 },
+      { emoji: '🐍', points: 3, speed: 65 },
+    ],
+  },
 ];
 
 export function Fishing() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
+  const [themeIdx, setThemeIdx] = useState(() => {
+    const saved = localStorage.getItem('fishing_theme');
+    return saved ? Math.min(parseInt(saved), THEMES.length - 1) : 0;
+  });
+  const [showThemeSelector, setShowThemeSelector] = useState(true);
   const [fish, setFish] = useState<Fish[]>([]);
   const [score, setScore] = useState(0);
   const [caught, setCaught] = useState(0);
@@ -38,6 +97,13 @@ export function Fishing() {
   const doneRef = useRef(false);
   const scoreRef = useRef(0);
   scoreRef.current = score;
+  const theme = THEMES[themeIdx];
+
+  const selectTheme = (idx: number) => {
+    setThemeIdx(idx);
+    localStorage.setItem('fishing_theme', idx.toString());
+    setShowThemeSelector(false);
+  };
 
   const over = timeLeft <= 0;
 
@@ -57,7 +123,7 @@ export function Fishing() {
           .filter((f) => f.x > -60 && f.x < POND_W + 60);
         if (spawnIn <= 0) {
           spawnIn = 0.9 + Math.random() * 1.1;
-          const t = FISH_TYPES[Math.floor(Math.random() * FISH_TYPES.length)];
+          const t = theme.fish[Math.floor(Math.random() * theme.fish.length)];
           const fromLeft = Math.random() < 0.5;
           next = [
             ...next,
@@ -81,7 +147,7 @@ export function Fishing() {
       cancelAnimationFrame(raf);
       clearInterval(timer);
     };
-  }, [over, outcome]);
+  }, [over, outcome, theme.fish]);
 
   useEffect(() => {
     if (over && !doneRef.current) {
@@ -93,7 +159,7 @@ export function Fishing() {
 
   // Cast: hook drops, catches the first fish within range of its path.
   const cast = () => {
-    if (casting || over || outcome) return;
+    if (casting || over || outcome || showThemeSelector) return;
     setCasting(true);
     const drop = { y: 0 };
     const start = performance.now();
@@ -137,12 +203,13 @@ export function Fishing() {
     setCasting(false);
     setOutcome(null);
     doneRef.current = false;
+    setShowThemeSelector(true);
   };
 
   if (outcome) {
     return (
       <div>
-        <ArcadeHeader title="Fishing" emoji="🎣" />
+        <ArcadeHeader title={theme.name} emoji={theme.boat} />
         <ArcadeEndCard
           gameId="fishing"
           outcome={outcome}
@@ -156,17 +223,39 @@ export function Fishing() {
 
   return (
     <div>
-      <ArcadeHeader title="Fishing" emoji="🎣" />
+      <ArcadeHeader title={`${theme.name} Fishing`} emoji={theme.boat} />
+      {showThemeSelector && (
+        <div className="mb-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-4">
+          <p className="text-sm font-display font-bold text-slate-900 mb-3">Pick your fishing spot:</p>
+          <div className="grid grid-cols-2 gap-2">
+            {THEMES.map((t, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => selectTheme(idx)}
+                className={`p-3 rounded-xl text-sm font-display font-bold transition-all ${
+                  themeIdx === idx
+                    ? 'bg-white ring-2 ring-blue-500 shadow-lg'
+                    : 'bg-white/50 hover:bg-white'
+                }`}
+              >
+                <span className="text-2xl block mb-1">{t.boat}</span>
+                <span className="text-slate-700">{t.name}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
       <div className="flex items-center justify-between max-w-sm mx-auto mb-2 text-sm font-display font-extrabold text-slate-700 tabular-nums">
-        <span>🐟 {caught} caught · {score} pts</span>
+        <span>{theme.fish[0].emoji} {caught} caught · {score} pts</span>
         <span>⏱ {timeLeft}s</span>
       </div>
       <div
-        className="relative mx-auto rounded-3xl border-2 border-slate-200 overflow-hidden select-none bg-gradient-to-b from-sky-200 via-cyan-300 to-cyan-600"
+        className={`relative mx-auto rounded-3xl border-2 border-slate-200 overflow-hidden select-none bg-gradient-to-b ${theme.waterGradient}`}
         style={{ width: POND_W, height: POND_H }}
       >
         {/* boat + line + hook */}
-        <div className="absolute -top-1 left-1/2 -translate-x-1/2 text-3xl" aria-hidden="true">🚣</div>
+        <div className="absolute -top-1 left-1/2 -translate-x-1/2 text-3xl" aria-hidden="true">{theme.boat}</div>
         <div
           className="absolute bg-slate-700"
           style={{ left: HOOK_X, top: 24, width: 2, height: Math.max(0, hookY - 14) }}
@@ -199,13 +288,13 @@ export function Fishing() {
         <button
           type="button"
           onClick={cast}
-          disabled={casting}
+          disabled={casting || showThemeSelector}
           className="mt-4 w-full min-h-14 rounded-2xl bg-cyan-600 hover:bg-cyan-700 disabled:bg-slate-300 text-white font-display font-extrabold text-xl shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
         >
           {casting ? 'Reeling…' : 'Drop the hook! 🎣'}
         </button>
         <p className="text-center text-xs text-slate-400 mt-2">
-          Time it so a fish swims under the boat. 🐡 are worth 3!
+          Time it so a fish swims under the boat. {theme.fish[theme.fish.length - 1].emoji} are worth {theme.fish[theme.fish.length - 1].points}!
         </p>
       </div>
     </div>
