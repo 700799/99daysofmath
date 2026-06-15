@@ -6,11 +6,29 @@ import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 const COLS = 7;
 const ROWS = 6;
-type Cell = 0 | 1 | 2; // 0 empty, 1 player (red), 2 owl (green)
+type Cell = 0 | 1 | 2; // 0 empty, 1 player, 2 owl
 type Board = Cell[][]; // [row][col], row 0 = top
+
+// Theme definitions with animal pairs
+interface Theme {
+  name: string;
+  player: string; // emoji for player pieces
+  owl: string;    // emoji for owl pieces
+}
+
+const THEMES: Theme[] = [
+  { name: 'Chickens vs Sheep', player: '🐔', owl: '🐑' },
+  { name: 'Dinosaurs vs Birds', player: '🦕', owl: '🦅' },
+  { name: 'Cats vs Dogs', player: '🐱', owl: '🐶' },
+  { name: 'Frogs vs Fish', player: '🐸', owl: '🐟' },
+  { name: 'Classic', player: '🔴', owl: '🟢' },
+];
 
 const emptyBoard = (): Board =>
   Array.from({ length: ROWS }, () => Array<Cell>(COLS).fill(0));
+
+const isBoardEmpty = (board: Board): boolean =>
+  board.every((row) => row.every((cell) => cell === 0));
 
 function dropRow(board: Board, col: number): number {
   for (let r = ROWS - 1; r >= 0; r--) {
@@ -99,8 +117,14 @@ export function ConnectFour() {
   const [phase, setPhase] = useState<Phase>('playing');
   const [result, setResult] = useState<'win' | 'lose' | 'draw' | null>(null);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
+  const [themeIdx, setThemeIdx] = useState(() => {
+    const saved = localStorage.getItem('c4_theme');
+    return saved ? Math.min(parseInt(saved), THEMES.length - 1) : 0;
+  });
+  const [showThemeSelector, setShowThemeSelector] = useState(!outcome && result === null && phase === 'playing');
   useArcadeClock(!!outcome);
   const recordedRef = useRef(false);
+  const theme = THEMES[themeIdx];
 
   const finish = (res: 'win' | 'lose' | 'draw', finalBoard: Board) => {
     setBoard(finalBoard);
@@ -113,8 +137,14 @@ export function ConnectFour() {
     }
   };
 
+  const selectTheme = (idx: number) => {
+    setThemeIdx(idx);
+    localStorage.setItem('c4_theme', idx.toString());
+    setShowThemeSelector(false);
+  };
+
   const play = (col: number) => {
-    if (phase !== 'playing') return;
+    if (phase !== 'playing' || showThemeSelector) return;
     const r = dropRow(board, col);
     if (r < 0) return;
     const b1 = board.map((row) => [...row]) as Board;
@@ -141,11 +171,12 @@ export function ConnectFour() {
     setResult(null);
     setOutcome(null);
     recordedRef.current = false;
+    setShowThemeSelector(true);
   };
 
   return (
     <div>
-      <ArcadeHeader title="Connect Four" emoji="🔴" />
+      <ArcadeHeader title="Connect Four" emoji={theme.player} />
       {phase === 'done' && outcome ? (
         <ArcadeEndCard
           gameId="connect4"
@@ -162,8 +193,32 @@ export function ConnectFour() {
         />
       ) : (
         <>
+          {showThemeSelector && result === null && isBoardEmpty(board) && (
+            <div className="mb-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-4">
+              <p className="text-sm font-display font-bold text-slate-900 mb-3">Pick your opponent:</p>
+              <div className="grid grid-cols-2 gap-2">
+                {THEMES.map((t, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => selectTheme(idx)}
+                    className={`p-3 rounded-xl text-sm font-display font-bold transition-all ${
+                      themeIdx === idx
+                        ? 'bg-white ring-2 ring-blue-500 shadow-lg'
+                        : 'bg-white/50 hover:bg-white'
+                    }`}
+                  >
+                    <span className="text-2xl block mb-1">{t.player}</span>
+                    <span className="text-slate-700">{t.name}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
           <p className="text-sm text-slate-600 mb-3">
-            {phase === 'owl-thinking' ? '🦉 The owl is thinking…' : 'Your move — tap a column. You are red.'}
+            {phase === 'owl-thinking'
+              ? '🦉 The owl is thinking…'
+              : `Your move — tap a column. You are ${theme.player}`}
           </p>
           <div className="bg-blue-600 rounded-3xl p-2.5 max-w-sm mx-auto shadow-inner">
             <div className="grid grid-cols-7 gap-1.5">
@@ -173,7 +228,7 @@ export function ConnectFour() {
                   type="button"
                   aria-label={`Drop in column ${c + 1}`}
                   onClick={() => play(c)}
-                  disabled={phase !== 'playing' || dropRow(board, c) < 0}
+                  disabled={phase !== 'playing' || dropRow(board, c) < 0 || showThemeSelector}
                   className="flex flex-col gap-1.5 disabled:cursor-not-allowed group"
                 >
                   {Array.from({ length: ROWS }).map((__, r) => {
@@ -181,7 +236,7 @@ export function ConnectFour() {
                     return (
                       <div
                         key={r}
-                        className="aspect-square rounded-full bg-blue-800 group-enabled:group-hover:bg-blue-700 flex items-center justify-center"
+                        className="aspect-square rounded-full bg-blue-800 group-enabled:group-hover:bg-blue-700 flex items-center justify-center text-xl"
                       >
                         <AnimatePresence>
                           {v !== 0 && (
@@ -189,10 +244,10 @@ export function ConnectFour() {
                               initial={{ y: -40 * (r + 1), opacity: 0.8 }}
                               animate={{ y: 0, opacity: 1 }}
                               transition={{ type: 'spring', stiffness: 380, damping: 26 }}
-                              className={`w-[86%] h-[86%] rounded-full shadow-inner ${
-                                v === 1 ? 'bg-red-500' : 'bg-duo-green'
-                              }`}
-                            />
+                              className="w-[86%] h-[86%] flex items-center justify-center text-lg"
+                            >
+                              {v === 1 ? theme.player : theme.owl}
+                            </motion.div>
                           )}
                         </AnimatePresence>
                       </div>
@@ -203,7 +258,7 @@ export function ConnectFour() {
             </div>
           </div>
           <p className="text-center text-xs text-slate-400 mt-3">
-            Win: +5 XP · Draw: +3 · Loss: +2 — first win earns the 🔴 sticker!
+            Win: +5 XP · Draw: +3 · Loss: +2 — first win earns the {theme.player} sticker!
           </p>
         </>
       )}
