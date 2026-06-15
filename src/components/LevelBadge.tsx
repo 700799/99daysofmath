@@ -18,16 +18,16 @@ export function LevelBadge({ variant = 'floating' }: Props) {
       <Link
         to="/report"
         aria-label={`Level ${info.level}, ${xp} XP. Open progress report.`}
-        className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-100 to-orange-100 border-2 border-amber-200 rounded-full pl-1 pr-3 py-1 hover:from-amber-200 hover:to-orange-200 transition-colors"
+        className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-100 to-orange-100 border-2 border-amber-300 rounded-full pl-1 pr-3 py-1 hover:from-amber-200 hover:to-orange-200 transition-colors"
       >
         <span className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-300 to-orange-400 text-white font-display font-extrabold text-sm flex items-center justify-center shadow-inner shrink-0">
           {info.level}
         </span>
         <div className="leading-tight">
-          <div className="text-[9px] font-display font-extrabold uppercase tracking-wider text-orange-700">
+          <div className="text-[9px] font-display font-extrabold uppercase tracking-wider text-amber-950">
             Lv {info.level}
           </div>
-          <div className="text-xs font-display font-extrabold text-orange-900 tabular-nums">
+          <div className="text-xs font-display font-extrabold text-amber-950 tabular-nums">
             ⚡ {xp}
           </div>
         </div>
