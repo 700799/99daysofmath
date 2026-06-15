@@ -5,7 +5,45 @@ import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 const SEGMENTS = [5, 20, 8, 12, 40, 10, 25, 15]; // XP prizes around the wheel
-const COLORS = ['#f59e0b', '#8b5cf6', '#10b981', '#ef4444', '#facc15', '#3b82f6', '#ec4899', '#14b8a6'];
+
+interface WheelTheme {
+  name: string;
+  emoji: string;
+  colors: string[];
+  buttonColor: string;
+  buttonHoverColor: string;
+}
+
+const THEMES: WheelTheme[] = [
+  {
+    name: 'Classic',
+    emoji: '🎡',
+    colors: ['#f59e0b', '#8b5cf6', '#10b981', '#ef4444', '#facc15', '#3b82f6', '#ec4899', '#14b8a6'],
+    buttonColor: '#d946ef',
+    buttonHoverColor: '#c026d3',
+  },
+  {
+    name: 'Summer',
+    emoji: '☀️',
+    colors: ['#fbbf24', '#fcd34d', '#fef08a', '#fef3c7', '#fed7aa', '#fdba74', '#fb923c', '#f97316'],
+    buttonColor: '#f59e0b',
+    buttonHoverColor: '#d97706',
+  },
+  {
+    name: 'Ocean',
+    emoji: '🌊',
+    colors: ['#0ea5e9', '#06b6d4', '#10b981', '#14b8a6', '#0d9488', '#0891b2', '#1e40af', '#3b82f6'],
+    buttonColor: '#0284c7',
+    buttonHoverColor: '#0369a1',
+  },
+  {
+    name: 'Neon',
+    emoji: '✨',
+    colors: ['#ec4899', '#a855f7', '#6366f1', '#8b5cf6', '#d946ef', '#06b6d4', '#10b981', '#fbbf24'],
+    buttonColor: '#7c3aed',
+    buttonHoverColor: '#6d28d9',
+  },
+];
 
 function todayISO(): string {
   const d = new Date();
@@ -27,12 +65,25 @@ export function Wheel() {
   const lastSpin = useProgress((s) => s.lastWheelSpinDate);
   const alreadySpun = lastSpin === todayISO();
 
+  const [themeIdx, setThemeIdx] = useState(() => {
+    const saved = localStorage.getItem('wheel_theme');
+    return saved ? Math.min(parseInt(saved), THEMES.length - 1) : 0;
+  });
+  const [showThemeSelector, setShowThemeSelector] = useState(true);
+  const theme = THEMES[themeIdx];
+
   const [spinning, setSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [prize, setPrize] = useState<number | null>(null);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
   const doneRef = useRef(false);
+
+  const selectTheme = (idx: number) => {
+    setThemeIdx(idx);
+    localStorage.setItem('wheel_theme', idx.toString());
+    setShowThemeSelector(false);
+  };
 
   const spin = () => {
     if (spinning || alreadySpun || doneRef.current) return;
@@ -58,7 +109,7 @@ export function Wheel() {
   if (prize != null && outcome) {
     return (
       <div>
-        <ArcadeHeader title="Prize Wheel" emoji="🎡" />
+        <ArcadeHeader title={`${theme.name} Wheel`} emoji={theme.emoji} />
         <ArcadeEndCard
           gameId="wheel"
           outcome={outcome}
@@ -75,7 +126,29 @@ export function Wheel() {
 
   return (
     <div>
-      <ArcadeHeader title="Prize Wheel" emoji="🎡" />
+      <ArcadeHeader title={`${theme.name} Wheel`} emoji={theme.emoji} />
+      {showThemeSelector && (
+        <div className="mb-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-4">
+          <p className="text-sm font-display font-bold text-slate-900 mb-3">Pick your wheel theme:</p>
+          <div className="grid grid-cols-2 gap-2">
+            {THEMES.map((t, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => selectTheme(idx)}
+                className={`p-3 rounded-xl text-sm font-display font-bold transition-all ${
+                  themeIdx === idx
+                    ? 'bg-white ring-2 ring-blue-500 shadow-lg'
+                    : 'bg-white/50 hover:bg-white'
+                }`}
+              >
+                <span className="text-2xl block mb-1">{t.emoji}</span>
+                <span className="text-slate-700">{t.name}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
       <p className="text-sm text-slate-600 mb-4 text-center">
         {alreadySpun
           ? 'You already spun today — come back tomorrow! 🌙'
@@ -104,7 +177,7 @@ export function Wheel() {
             const ty = c + c * 0.62 * Math.sin(mid);
             return (
               <g key={i}>
-                <path d={wedgePath(c, c, c - 4, a0, a1)} fill={COLORS[i]} stroke="#fff" strokeWidth={3} />
+                <path d={wedgePath(c, c, c - 4, a0, a1)} fill={theme.colors[i]} stroke="#fff" strokeWidth={3} />
                 <text
                   x={tx}
                   y={ty}
@@ -131,8 +204,21 @@ export function Wheel() {
         <button
           type="button"
           onClick={spin}
-          disabled={spinning || alreadySpun}
-          className="min-h-14 px-10 py-3 rounded-2xl bg-fuchsia-600 hover:bg-fuchsia-700 disabled:bg-slate-300 text-white font-display font-extrabold text-xl shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 disabled:cursor-not-allowed transition-all"
+          disabled={spinning || alreadySpun || showThemeSelector}
+          style={{
+            backgroundColor: spinning || alreadySpun || showThemeSelector ? '#d1d5db' : theme.buttonColor,
+          }}
+          onMouseEnter={(e) => {
+            if (!spinning && !alreadySpun && !showThemeSelector) {
+              e.currentTarget.style.backgroundColor = theme.buttonHoverColor;
+            }
+          }}
+          onMouseLeave={(e) => {
+            if (!spinning && !alreadySpun && !showThemeSelector) {
+              e.currentTarget.style.backgroundColor = theme.buttonColor;
+            }
+          }}
+          className="min-h-14 px-10 py-3 rounded-2xl text-white font-display font-extrabold text-xl shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 disabled:cursor-not-allowed transition-all"
         >
           {spinning ? 'Spinning…' : alreadySpun ? 'Come back tomorrow' : 'SPIN!'}
         </button>
