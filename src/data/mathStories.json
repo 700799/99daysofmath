@@ -7,19 +7,19 @@
     "beats": [
       {
         "head": "The diner offer",
-        "body": "Two 7-inch pizzas for $12, or one 14-inch for $12. The 14-inch is double the diameter — same deal, right?"
+        "body": "You're at your favorite pizza place. The menu says: 'Two small 7-inch pizzas for $12, or one large 14-inch pizza for $12.' Your friend thinks they're the same deal. But are they really?"
       },
       {
         "head": "Diameters double, areas QUADRUPLE",
-        "body": "Pizza is round. Area = π × radius × radius. Double the radius means 4× the area."
+        "body": "Here's the trick: pizza is round. **Area = π × radius²**. When you **double the radius, the area doesn't double—it quadruples**. That's a **4× difference**, not 2×."
       },
       {
         "head": "The numbers",
-        "body": "One 7-inch ≈ 38 in² of pizza. One 14-inch ≈ 154 in². Two 7-inchers? Only 76 in²."
+        "body": "A 7-inch pizza has about **38 square inches**. A 14-inch pizza has about **154 square inches**. Two 7-inchers? Only **76 square inches total**. So the big pizza has **twice the amount** of food, for the same price!"
       },
       {
         "head": "Pick the big one",
-        "body": "Always. A bigger circle gives WAY more pizza per dollar than two small ones at the same diameter total."
+        "body": "When you see 'double the size,' always ask: **are they doubling the width or the area?** A shape that looks 2× bigger is actually **4× bigger**. Always pick the big one—you get way more for your money."
       }
     ],
     "learned": "Area grows by the SQUARE of the size — circles especially.",
@@ -33,19 +33,19 @@
     "beats": [
       {
         "head": "Track day",
-        "body": "A runner wants to get from point A to point B on the track. They could run east 3 meters, then north 4. Or just go diagonally."
+        "body": "Imagine a sprinter running around a track. They want to get from point A to point B as fast as possible. They could run **3 meters east, then 4 meters north**—the long way. Or they could go **diagonally**, cutting across the corner."
       },
       {
         "head": "Which is shorter?",
-        "body": "East 3 + North 4 = 7 meters total. The diagonal is shorter — but how much?"
+        "body": "The long way = 3 + 4 = **7 meters total**. The diagonal is clearly shorter. But **how much shorter**? That's the question."
       },
       {
         "head": "Pythagoras to the rescue",
-        "body": "Diagonal² = 3² + 4² = 25. So diagonal = 5. Six steps shorter? Actually only 2."
+        "body": "Use the **Pythagorean theorem**: **diagonal² = 3² + 4² = 9 + 16 = 25**. So **diagonal = 5 meters**. The straight shot saves **2 meters** compared to the L-shape route. That doesn't sound like much, but in a race, 2 meters is huge!"
       },
       {
         "head": "Coords matter",
-        "body": "On a coordinate plane, going (3, 4) means 3 right and 4 up. The straight-line distance is what really counts."
+        "body": "On a **coordinate plane**, going from (0,0) to **(3, 4)** means 3 right and 4 up. The **straight-line distance is what really counts** in a race. Curves and bends waste time."
       }
     ],
     "learned": "Diagonal distance on the grid is ALWAYS shorter than the L-shape.",
@@ -59,19 +59,19 @@
     "beats": [
       {
         "head": "The deal",
-        "body": "Your boss offers: $1,000,000 cash, OR one penny today that doubles every day for 30 days. Which wins?"
+        "body": "Your boss makes you a choice: take **$1,000,000 cash right now**, OR start with **one penny today that doubles every single day for 30 days**. Which would you pick? Most kids grab the million."
       },
       {
         "head": "Most kids pick the million",
-        "body": "It looks like a no-brainer. But that 'tiny' penny is hiding a secret: exponents grow scary fast."
+        "body": "A million dollars sounds SO big. But here's the thing: that tiny penny is **hiding a secret. Exponents grow crazy fast** — way faster than you'd think."
       },
       {
         "head": "Let's count",
-        "body": "Day 5: 16¢. Day 10: $5. Day 20: $5,000. Day 30: BOOM."
+        "body": "Day 5: **16 cents**. Day 10: **$5.12**. Day 20: **$5,243**. Day 30: **BOOM.**"
       },
       {
         "head": "The winner",
-        "body": "Day 30: $5,368,709.12. Five times the million!"
+        "body": "Day 30 your penny is worth **$5,368,709.12**. That's **5× the million!** Doubling is **powerful beyond belief**. Never underestimate exponential growth."
       }
     ],
     "learned": "Exponents (doubling, tripling…) explode much faster than adding.",
@@ -85,19 +85,19 @@
     "beats": [
       {
         "head": "Italy, year 1202",
-        "body": "Fibonacci asks: if a pair of rabbits has a new pair every month, how many pairs after a year?"
+        "body": "A mathematician named Fibonacci posed a wild question: **If you start with one pair of rabbits, and every month each pair creates a new pair, how many pairs will you have after one year?**"
       },
       {
         "head": "Each month",
-        "body": "Every rabbit pair from last month is still here, PLUS every pair that was around two months ago has a new pair."
+        "body": "Here's the rule: **every rabbit pair from last month stays alive**, PLUS **every pair that was alive two months ago creates a new baby pair**. Things get weird fast."
       },
       {
         "head": "The pattern",
-        "body": "1, 1, 2, 3, 5, 8, 13, 21… Each number = sum of the two before it."
+        "body": "**1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144.** Look at the pattern: **each number = the sum of the two numbers before it**. That's the Fibonacci sequence."
       },
       {
         "head": "It's everywhere",
-        "body": "Sunflower seeds spiral in Fibonacci numbers. So do pinecones and seashells. Nature loves this pattern."
+        "body": "This isn't just rabbit math. **Sunflower seeds spiral in Fibonacci numbers**. **Pinecones, seashells, flower petals**—nature LOVES this pattern. It's like a secret code in nature itself."
       }
     ],
     "learned": "A rule that links each term to the previous ones is called a RECURRENCE.",
@@ -111,19 +111,19 @@
     "beats": [
       {
         "head": "A party",
-        "body": "20 friends at a party. Everyone shakes hands with everyone else, ONCE. How many handshakes total?"
+        "body": "You're at a party with 20 friends. **Everyone shakes hands with everyone else ONCE**. No repeat handshakes. So how many total handshakes happen? Take a guess."
       },
       {
         "head": "Start small",
-        "body": "With 6 people, draw lines between every pair. Count: 15 lines."
+        "body": "This is easier to see with fewer people. With 6 people, draw a dot for each person. Then draw a line between every pair. Count the lines: **15 handshakes**."
       },
       {
         "head": "The pattern",
-        "body": "Each of n people shakes hands with n-1 others. Each handshake is counted TWICE, so divide by 2."
+        "body": "**Person 1 shakes hands with 5 others. Person 2 shakes with 4 remaining (skip person 1—already shook!). Person 3 shakes with 3. And so on.** Total: **5 + 4 + 3 + 2 + 1 = 15**."
       },
       {
         "head": "Solve it",
-        "body": "20 × 19 ÷ 2 = 190 handshakes. The formula n(n-1)/2 works for any size party."
+        "body": "With 20 people: **20 × 19 ÷ 2 = 190 handshakes**. The formula **n(n-1)/2** works for any crowd. Once you see the pattern, the answer jumps out."
       }
     ],
     "learned": "When you spot a pattern, write a formula — it works for ANY size.",
@@ -137,19 +137,19 @@
     "beats": [
       {
         "head": "The inventor's prize",
-        "body": "Long ago, a wise man invented chess. The king offered any reward. The inventor asked for rice."
+        "body": "Long ago, a wise man invented the game of chess. The king was so thrilled he said: 'Ask for anything!' The inventor smiled and asked for **rice**."
       },
       {
         "head": "Sounds small",
-        "body": "'One grain on square 1, two on square 2, four on square 3, doubling all the way.' The king laughed and agreed."
+        "body": "'**One grain on square 1, two on square 2, four on square 3**—just double the grains each square, all the way to square 64.' The king laughed. 'Easy! You'll get a few bags of rice.'"
       },
       {
         "head": "Filling the table",
-        "body": "Square 10 = 512. Square 20 = a million. Square 32 = 2.1 billion. The numbers EXPLODE."
+        "body": "But doubling is **crazy powerful**. **Square 10 = 512 grains. Square 20 = over a million grains. Square 32 = 2.1 BILLION grains.** The numbers EXPLODE."
       },
       {
         "head": "Bankrupt",
-        "body": "Square 64 alone needs 2⁶³ grains — more rice than has ever existed on Earth."
+        "body": "**Square 64 alone needs 2⁶³ grains—over 9 quintillion grains**. That's more rice than **has ever been harvested on Earth**. The king couldn't pay. The inventor won big."
       }
     ],
     "learned": "When a table doubles row by row, the values get scary big — fast.",
@@ -163,19 +163,19 @@
     "beats": [
       {
         "head": "4,500 years ago",
-        "body": "Egyptians had no rulers or fancy tools — yet the Pyramid corners are PERFECT right angles. How?"
+        "body": "The Egyptian pyramids have **PERFECT right angles**—every corner is exactly 90°. But the Egyptians had **no rulers, no fancy tools, no protractors**. How did they do it?"
       },
       {
         "head": "A knotted rope",
-        "body": "They tied 12 evenly spaced knots in a rope. Three workers stretched it into a triangle with sides 3, 4, and 5 knots."
+        "body": "They used a simple trick: **tie 12 evenly spaced knots in a rope**. Three workers stretch it into a triangle. **Knot 1 to knot 4 = one side. Knot 4 to knot 8 = second side. Knot 8 back to knot 1 = third side.** Sides are 3, 4, and 5 knot-lengths."
       },
       {
         "head": "Why those numbers?",
-        "body": "3² + 4² = 5². When sides are 3, 4, 5 (or any 3:4:5 ratio), the corner is EXACTLY 90°. Magic."
+        "body": "**3² + 4² = 9 + 16 = 25 = 5²**. This is the **Pythagorean theorem in action**. Whenever the three sides are 3, 4, and 5 (or any 3:4:5 ratio like 6:8:10), **the corner is EXACTLY 90°—perfect.**"
       },
       {
         "head": "Still used today",
-        "body": "Carpenters, builders, and gardeners still use this trick to make square corners without fancy tools."
+        "body": "**Carpenters, builders, and gardeners** still use this trick—even now. **3:4:5 always makes a right angle.** Ancient tech that never got old."
       }
     ],
     "learned": "The 3-4-5 ratio always makes a right angle. Ancient tech, still works.",
@@ -189,43 +189,43 @@
     "beats": [
       {
         "head": "Ancient Egypt, 350 AD",
-        "body": "A baby girl named Hypatia is born in the city of Alexandria, Egypt. Her father runs the most famous school of math and astronomy in the entire world: the Library of Alexandria."
+        "body": "A baby girl named **Hypatia** is born in Alexandria, Egypt. Her father runs the most famous school in the ancient world: the **Library of Alexandria**—the internet of its time."
       },
       {
         "head": "Her dad's bet",
-        "body": "Most girls of her time would learn to weave cloth. Her father makes a wild bet: he'll teach her math, science, and philosophy — the same way he'd teach a son. Hypatia turns out to be a prodigy."
+        "body": "Most girls back then learned to weave cloth. But her father **teaches her math, astronomy, and philosophy**—the same way he'd teach a son. Hypatia becomes a **prodigy**."
       },
       {
         "head": "The shapes nobody could explain",
-        "body": "Hypatia falls in love with POLYGONS — triangles, squares, pentagons, hexagons. Especially regular ones, where every side and every angle is exactly the same."
+        "body": "Hypatia falls in love with **POLYGONS—triangles, squares, pentagons, hexagons**. She studies **regular polygons** where every side and angle is identical. These shapes hide **powerful mathematics**."
       },
       {
         "head": "Why polygons matter",
-        "body": "Builders used polygons to make pillars. Sailors used them to navigate. Painters used them to make perspective work. Polygons were like the LEGO bricks of the ancient world."
+        "body": "**Builders** used polygons for strong pillars. **Sailors** used them to navigate. **Painters** used them for perspective. **Polygons were the LEGO bricks of the ancient world.**"
       },
       {
         "head": "Slicing a cone",
-        "body": "Her best work was about 'conic sections' — what shapes you get when you slice a cone at different angles. A flat slice gives a circle. A tilted slice gives a stretched circle called an ellipse. Wild stuff."
+        "body": "Her greatest work studied **conic sections**—the shapes you get when you **slice a cone at different angles**. **Flat slice = circle. Tilted slice = ellipse (stretched circle)**. Mind-bending stuff."
       },
       {
         "head": "Famous teacher",
-        "body": "By age 30, Hypatia is the most respected teacher in Alexandria. Students travel for months from Italy, Greece, Syria, and Persia just to sit in her classroom. Her name appears in letters across the Mediterranean."
+        "body": "By **age 30, Hypatia is the most respected teacher in Alexandria**. **Students from Italy, Greece, Syria, and Persia** travel for months just to sit in her classes. She's a **celebrity mathematician**."
       },
       {
         "head": "Her style",
-        "body": "She wears a philosopher's robe instead of fancy clothes. She invents teaching tools — a hydrometer, an astrolabe — so students can SEE the math instead of just hearing it."
+        "body": "She wears a **simple philosopher's robe**. She **invents teaching tools**—hydrometers, astrolabes—so students **SEE the math** instead of just hearing about it. Math comes alive in her hands."
       },
       {
         "head": "Dangerous times",
-        "body": "But Alexandria is splitting apart. Different religious groups fight for power. Hypatia refuses to pick a side — she just wants to do math. That makes her enemies in 415 AD."
+        "body": "But Alexandria is tearing apart. **Different religious groups fight for power**. **Hypatia refuses to pick a side**—she just wants to study math. That makes **enemies**. By 415 AD, her life is in danger."
       },
       {
         "head": "Her math survives",
-        "body": "Even though her enemies destroy much of her work, students copy what they remember and carry it abroad. Her commentaries on polygons and conic sections survive for 1,600 years — long enough for us to read them today."
+        "body": "Though enemies destroy her original works, **her students copy everything from memory**. They carry her ideas across the Mediterranean. **Her commentaries survive for 1,600 years**—enough for us to read them today."
       },
       {
         "head": "Why she matters",
-        "body": "Hypatia proved that math has no gender, no nationality, no religion. A polygon is a polygon for anyone who studies it carefully. That idea is the foundation of every math class you'll ever take."
+        "body": "**Hypatia proved math has no gender, no nationality, no religion.** A polygon is a polygon for anyone who studies it carefully. That idea—**math is for everyone**—is the foundation of every math class you take."
       }
     ],
     "learned": "Polygons (3 sides, 4 sides, 6 sides…) are the LEGO bricks of geometry. Hypatia studied them 1,600 years ago and the same rules still work today.",
@@ -239,19 +239,19 @@
     "beats": [
       {
         "head": "Suspicious king",
-        "body": "A Greek king gave his goldsmith pure gold for a crown. He suspects the smith mixed in cheap silver."
+        "body": "A Greek king gives a goldsmith pure gold and asks for a crown. But he gets suspicious: **did the smith mix in cheap silver to keep some gold?** The crown weighs right, but how can he prove it's pure?"
       },
       {
         "head": "How to test?",
-        "body": "The crown weighs the right amount. But silver is LIGHTER per volume than gold — so a fake would take up MORE space."
+        "body": "He asks **Archimedes**, the world's greatest mathematician. **Silver is LIGHTER per volume than gold**. So if the crown is fake, it would **take up MORE space** than real gold of the same weight."
       },
       {
         "head": "Bath time",
-        "body": "Archimedes hops in a full tub and water spills over. He realizes: an object pushes out water equal to its OWN volume."
+        "body": "Archimedes gets in a full bath and water spills over the edge. Suddenly it hits him: **an object pushes out water equal to its OWN volume**. He can use this to test the crown!"
       },
       {
         "head": "Caught!",
-        "body": "He dunks the crown. It pushes out more water than pure gold would. The crown was a fake."
+        "body": "He dunks the crown. It **pushes out more water than pure gold would**. Proof: the crown is fake. The goldsmith **got caught cheating**. Math solved the mystery."
       }
     ],
     "learned": "Volume = space something takes up. Water can measure it directly.",
@@ -265,47 +265,47 @@
     "beats": [
       {
         "head": "Tehran, Iran, 1977",
-        "body": "Maryam Mirzakhani is born to a normal middle-class family in Tehran. As a kid, she WANTS to be a writer. She reads novels, writes stories, dreams of being the next Jane Austen."
+        "body": "**Maryam Mirzakhani** is born to a middle-class family in Tehran. As a kid, she **dreams of being a writer**—reading novels, writing stories, imagining she's the next Jane Austen."
       },
       {
         "head": "Math finds her",
-        "body": "At 13, Maryam fails her first math test. She HATES the subject. But the next year, a different teacher hands her a real puzzle. Maryam solves it… and falls in love."
+        "body": "At **age 13, Maryam fails her first math test**. She **HATES the subject**. But the next year, a **different teacher gives her a real puzzle**—not busy work, a real mystery. She solves it. She falls in love."
       },
       {
         "head": "Olympiad champion",
-        "body": "By age 17, Maryam wins gold at the International Math Olympiad — the world's hardest math contest for high schoolers. She's the first Iranian girl to make the team. The next year she wins gold AGAIN."
+        "body": "By **age 17, Maryam wins gold at the International Math Olympiad**—the **world's hardest math contest for high schoolers**. She's the **first Iranian girl ever on the team**. The next year? **Gold again.**"
       },
       {
         "head": "Off to Harvard",
-        "body": "She moves to America for grad school at Harvard. Her style is unusual: she draws GIANT doodles on huge sheets of paper. Her office floor is covered in them. Other professors think she's odd. They're wrong."
+        "body": "She goes to **Harvard for grad school**. Her style is **wild**: she draws **GIANT doodles on huge sheets of paper**, covering her office floor. Other professors think she's odd. **They're wrong.**"
       },
       {
         "head": "Her question",
-        "body": "Maryam studies SHAPES — but not flat ones. CURVED shapes like saddles, donuts, pretzels. She asks: what's the SURFACE AREA of a wavy shape? How does it bend?"
+        "body": "Maryam studies **SHAPES—but not flat ones**. **Curved shapes: saddles, donuts, pretzels**. She asks: **what's the SURFACE AREA of a wavy shape? How does it bend and twist?**"
       },
       {
         "head": "Nets, but curved",
-        "body": "In school you learn nets — the flat shape you fold to make a cube or pyramid. Maryam asks the wild version: what does the 'net' of a shape that BENDS look like?"
+        "body": "In school you learn **nets**—flat patterns you fold into cubes and pyramids. Maryam asks: **what does the 'net' of a CURVED shape look like? What if you unfold a pretzel?** Nobody knew."
       },
       {
         "head": "Why curves matter",
-        "body": "Curved surfaces appear everywhere in real life: planets, soap bubbles, eggshells, the universe itself. Knowing their surface area tells us about gravity, light, even how the universe began."
+        "body": "**Curved surfaces are everywhere**: planets, soap bubbles, eggshells, black holes. **Understanding their surface area tells us about gravity, light, the universe itself.** This wasn't abstract—it mattered hugely."
       },
       {
         "head": "The breakthrough",
-        "body": "After years of giant-paper doodling, Maryam proves something nobody could prove before — a math rule about how curved surfaces deform. Other mathematicians can't believe it. It opens a brand-new branch of math."
+        "body": "After **years of giant-paper doodling**, Maryam proves something **nobody could prove before**—a breakthrough rule about how **curved surfaces deform and change**. **Other mathematicians are stunned.** She **opens an entire new branch of math.**"
       },
       {
         "head": "Fields Medal, 2014",
-        "body": "At age 37, Maryam becomes the FIRST woman EVER to win the Fields Medal — math's biggest prize. Only 60 people have won it in 90 years. Iran throws a national celebration."
+        "body": "At **age 37, Maryam wins the Fields Medal**—**math's BIGGEST prize. Only 60 people have won it in 90 years.** She's the **FIRST WOMAN EVER.** Iran throws a **national celebration.**"
       },
       {
         "head": "Her secret",
-        "body": "Reporters ask her secret. She says: 'I find it more enjoyable when it's slow. The beauty comes when you give it time.' Math, for her, was art. Doodling was the work."
+        "body": "Reporters ask her secret. She says: **'I find it more enjoyable when it's slow. The beauty comes when you give it time.'** Math wasn't work for Maryam. **It was art.**"
       },
       {
         "head": "Why she matters",
-        "body": "Maryam died young in 2017, but her ideas live on. Today, kids around the world (especially girls in Iran) keep her photo on their walls. Math is for everyone — even the kid who failed her first test."
+        "body": "**Maryam died young in 2017**, but her ideas live on. Today, **kids around the world—especially girls in Iran—keep her photo on their walls.** **Math is for everyone—even the kid who failed her first test.**"
       }
     ],
     "learned": "Surface area + nets aren't just for cubes — they describe any shape, even curvy ones. Maryam Mirzakhani proved it.",
@@ -319,19 +319,19 @@
     "beats": [
       {
         "head": "Inside a hive",
-        "body": "Honeybees build cells in PERFECT hexagons — every single one. They've been doing this for 100 million years."
+        "body": "Open a honeycomb. Every cell is a **PERFECT hexagon**—six equal sides, six equal angles. **Every single cell, forever.** Bees have been building this for **100 million years.**"
       },
       {
         "head": "Why not squares?",
-        "body": "Squares tile fine. Circles waste tons of space. But hexagons use the LEAST wall material to enclose the same area."
+        "body": "Squares tile fine and are easy to build. Circles are beautiful but **waste tons of space**. But **hexagons use the LEAST wall material to enclose the same area.** It's mathematically optimal."
       },
       {
         "head": "Why it matters",
-        "body": "Bees have to make wax — and wax is expensive! Less wall means more honey storage with less wax."
+        "body": "**Bees have to make wax from nectar**—it's **expensive**, taking huge energy. **Less wall = more honey storage with less wax**. Efficiency is **survival**."
       },
       {
         "head": "Bees know math",
-        "body": "Without ever taking a class, evolution found the most EFFICIENT shape. Hexagons win."
+        "body": "Here's the crazy part: bees **never took a geometry class**. **Evolution found the MOST EFFICIENT SHAPE** through trial and error. **Hexagons won**—and won forever."
       }
     ],
     "learned": "Shape choice matters. Hexagons pack space the most efficiently.",
@@ -345,43 +345,43 @@
     "beats": [
       {
         "head": "Maryland, 1731",
-        "body": "Benjamin Banneker is born to a free Black father and a former slave mother in colonial Maryland. He gets only about six weeks of formal school — his family needs him on the tobacco farm."
+        "body": "**Benjamin Banneker** is born in colonial Maryland to a **free Black father and a formerly enslaved mother**. His family needs him on the farm. He gets **only six weeks of formal school**."
       },
       {
         "head": "He teaches himself",
-        "body": "Benjamin borrows books from his neighbor — math books, astronomy books, surveying books. He reads them by candlelight after farm work. He works through every problem."
+        "body": "Benjamin **borrows books from his neighbor**—math books, astronomy books, surveying books. He **reads by candlelight after farm work, working through every problem** on his own. **Self-taught from scratch.**"
       },
       {
         "head": "The wooden clock",
-        "body": "At 22, he borrows a pocket watch from a traveling salesman. He takes it apart, draws every gear, then carves an entire LIFE-SIZE clock out of WOOD. His clock keeps perfect time for 40 years."
+        "body": "At **age 22, he borrows a pocket watch** from a traveling merchant. He **takes it apart, draws every gear, then carves a LIFE-SIZE clock out of WOOD**. His clock keeps **perfect time for 40 years.**"
       },
       {
         "head": "Stars on the ceiling",
-        "body": "Decades later, neighbors lend him an old telescope. Benjamin teaches himself ASTRONOMY — predicting the exact moment of a solar eclipse before any famous European does."
+        "body": "Later, neighbors lend him an old telescope. **Benjamin teaches himself ASTRONOMY**. He makes **precise predictions**—calculating the exact moment of a **solar eclipse before any famous European astronomer.**"
       },
       {
         "head": "The almanac",
-        "body": "He starts publishing an almanac — a yearly book of sunrise times, tide tables, weather predictions, moon phases. To make it, he has to compute thousands of DECIMAL numbers by hand. Down to the second."
+        "body": "He publishes a yearly **almanac**—sunrise times, tide tables, weather predictions, moon phases. To do it, he **computes thousands of DECIMAL numbers by hand, down to the second.** Pure math, no calculator."
       },
       {
         "head": "Why decimals matter",
-        "body": "Sunrise at 6.32 means 6 hours and just past 1/3 of the next hour. Each tiny decimal makes a big difference. Off by 0.05 means 3 minutes off — and a wrong fishing tide."
+        "body": "**Sunrise at 6:32 means 6 hours + 32/100 of an hour**. **Each tiny decimal makes a huge difference.** Off by **0.05 means 3 minutes wrong**—and a **fishing boat misses the tide.** **Precision saves lives.**"
       },
       {
         "head": "Surveying D.C.",
-        "body": "In 1791, President Washington picks Banneker to help mark the boundary of America's new capital city. Benjamin uses a telescope and decimal math to lay out the perfect square that becomes Washington, D.C."
+        "body": "In **1791, President Washington picks Banneker to help mark the boundary of America's new capital.** Benjamin uses a **telescope and decimal math to lay out the perfect square** that becomes Washington, D.C."
       },
       {
         "head": "The famous letter",
-        "body": "Around the same time, Banneker writes to Thomas Jefferson — author of the Declaration of Independence and slave owner. He sends Jefferson a copy of his almanac as PROOF that Black people can do math just as well as anyone."
+        "body": "Around the same time, **Banneker writes to Thomas Jefferson**—author of the Declaration of Independence and slave owner. He sends **his almanac as PROOF that Black people can do math** just as well as anyone."
       },
       {
         "head": "Jefferson replies",
-        "body": "Jefferson writes back, admitting he's impressed. He shares the almanac with the French Academy of Sciences as evidence of African American genius. The letters are still studied today."
+        "body": "**Jefferson writes back, impressed.** He **shares the almanac with the French Academy of Sciences** as evidence of **African American genius**. The **exchange is studied in schools today.**"
       },
       {
         "head": "Decimals = precision",
-        "body": "Every calculation Banneker did — eclipses, tides, the angles of Washington — used DECIMALS. Add a decimal place, double the precision. Hidden behind every almanac entry is the same math you do today."
+        "body": "Every calculation Banneker did—**eclipses, tides, angles of cities**—used **DECIMALS. Add a decimal place, double the precision.** Hidden behind every page of his almanac is **the same math you do today.**"
       }
     ],
     "learned": "Decimals turn 'about 6 hours' into 'exactly 6.32 hours'. Banneker used them by candlelight to predict the sky.",
@@ -395,19 +395,19 @@
     "beats": [
       {
         "head": "Hospital visit",
-        "body": "Ramanujan was the world's greatest self-taught mathematician. His friend G.H. Hardy visited him in the hospital."
+        "body": "**Srinivasa Ramanujan** is the world's greatest self-taught mathematician. His friend **G.H. Hardy visits him in a hospital in India.** Hardy wants to cheer him up with casual conversation."
       },
       {
         "head": "Boring taxi",
-        "body": "Hardy said: 'I came in taxi #1729 — a rather dull number.' Ramanujan instantly disagreed."
+        "body": "Hardy says, 'I came in **taxi number 1729**—a rather **dull, ordinary number.**' Ramanujan's eyes light up. 'Dull?! **Not at all!**' he says."
       },
       {
         "head": "Two ways!",
-        "body": "'1729 is the smallest number that's the sum of TWO cubes in two different ways!' he said. 1³ + 12³ AND 9³ + 10³."
+        "body": "'**1729 is the SMALLEST number that's the sum of TWO cubes in TWO DIFFERENT WAYS!**' Ramanujan explains. **1³ + 12³ = 1729** (that's 1 + 1,728). But ALSO **9³ + 10³ = 1729** (that's 729 + 1,000). **Same number, two completely different ways!**'"
       },
       {
         "head": "Check it",
-        "body": "1 + 1728 = 1729. 729 + 1000 = 1729. Both. He saw it instantly."
+        "body": "Most people would **need a calculator and hours of work** to find ONE way to write 1729 as a sum of cubes. **Ramanujan SAW BOTH WAYS INSTANTLY** just from hearing the number. **That's why he's a legend.**"
       }
     ],
     "learned": "Numbers hide secrets. The deeper you look, the more patterns appear.",
@@ -421,19 +421,19 @@
     "beats": [
       {
         "head": "No zero?!",
-        "body": "Most ancient cultures had no symbol for 'nothing'. Try doing math without zero — it's a nightmare."
+        "body": "Most ancient cultures had **no symbol for 'nothing.'** Try doing math without zero—**it's a nightmare.** How do you write 101? Or 1,000? **You can't, without zero.**"
       },
       {
         "head": "Indian breakthrough",
-        "body": "A mathematician named Brahmagupta in India officially defined zero in 628 AD: a number that means 'nothing here'."
+        "body": "In **628 AD, a mathematician named Brahmagupta in India officially defined zero**: a number meaning **'nothing here.'** It sounds simple now, but **this was revolutionary.** **Zero was INVENTED.**"
       },
       {
         "head": "Negatives unlocked",
-        "body": "Once you have zero, you can have NEGATIVE numbers — anything less than zero. Hello, integers!"
+        "body": "Once you **have zero, you unlock NEGATIVE numbers**—anything less than zero. **5 - 5 = 0. 5 - 6 = -1.** **Hello, negative numbers! Hello, integers!** A whole new world opened up."
       },
       {
         "head": "Modern math",
-        "body": "Every number line, every coordinate plane, every computer chip uses zero. Quietly the most important number ever."
+        "body": "Every **number line, every coordinate plane, every computer chip** uses zero. **Quietly, zero is the MOST IMPORTANT NUMBER EVER**. Your phone, your internet, your life—**all built on zero.**"
       }
     ],
     "learned": "Zero is the ANCHOR of the number line. Positives right, negatives left.",
@@ -447,23 +447,23 @@
     "beats": [
       {
         "head": "Math superstar",
-        "body": "Katherine Johnson was a Black mathematician at NASA. She did some of the hardest math humans had ever attempted."
+        "body": "**Katherine Johnson** is a Black mathematician at NASA. She does **some of the hardest math humans had ever attempted.** Her calculations need to be **PERFECT.**"
       },
       {
         "head": "Plotting a path",
-        "body": "She used the coordinate plane. Every point in space gets a label like (x, y). Earth here, Moon way over there."
+        "body": "She uses the **coordinate plane.** Every point in space gets a label like **(x, y)**. Earth is here. The Moon is way over there. **She needs a path.**"
       },
       {
         "head": "The trajectory",
-        "body": "Katherine calculated the EXACT curve a rocket would follow from Earth to Moon — every (x, y) point along the way."
+        "body": "**Katherine calculates the EXACT curve a rocket must follow** from Earth to Moon—**every single (x, y) point along the path.** One mistake and the rocket misses the Moon entirely."
       },
       {
         "head": "Astronaut's choice",
-        "body": "Astronaut John Glenn refused to fly unless Katherine personally checked the trajectory. The computers might be wrong — but she wouldn't be."
+        "body": "**Astronaut John Glenn refuses to fly unless Katherine personally checks the trajectory.** The computers might be wrong. **But Katherine wouldn't be.** He trusts her math more than machines."
       },
       {
         "head": "We made it",
-        "body": "Her work helped Apollo 11 land on the Moon in July 1969. The coordinate plane took humans to another world."
+        "body": "**Katherine's work helps Apollo 11 land on the Moon in July 1969.** The **coordinate plane took humans to another world.** Math and skill got them there safely."
       }
     ],
     "learned": "The coordinate plane pinpoints any location — even a spacecraft (x, y) million miles from home.",
@@ -477,19 +477,19 @@
     "beats": [
       {
         "head": "Long, long ago",
-        "body": "Young Carl Gauss is in class. His teacher is grumpy and wants the kids to be quiet for an hour."
+        "body": "Young **Carl Gauss** is in class. His teacher is **grumpy** and wants the kids **quiet for an hour.** So she assigns busywork."
       },
       {
         "head": "The mean assignment",
-        "body": "She says: 'Add every number from 1 to 100.' She thinks that should take all day."
+        "body": "She says: '**Add every number from 1 to 100.**' She thinks this will **take all day**—500 additions, error-prone, boring. Perfect punishment."
       },
       {
         "head": "Gauss's trick",
-        "body": "Gauss sees 1+100 = 101, 2+99 = 101, 3+98 = 101. Each pair sums to 101 — and there are 50 pairs."
+        "body": "But **Gauss sees the pattern instantly**: **1 + 100 = 101. 2 + 99 = 101. 3 + 98 = 101.** **Each pair sums to 101—and there are 50 pairs.**"
       },
       {
         "head": "30 seconds later",
-        "body": "Gauss walks up: 50 × 101 = 5050. The teacher's jaw drops."
+        "body": "**Gauss walks up: 50 × 101 = 5,050.** **The teacher's jaw drops.** He solved it in half a minute. **Pattern-spotting beats brute force**, every time."
       }
     ],
     "learned": "Look for PATTERNS, not just brute force. Math is sneaky.",
@@ -503,43 +503,43 @@
     "beats": [
       {
         "head": "Paris, winter 1637",
-        "body": "A French philosopher named René Descartes is in bed with the flu. He's bored out of his mind. To kill time, he stares at the ceiling above his bed."
+        "body": "**René Descartes**, a French philosopher, is **in bed with the flu.** He's **bored out of his mind.** So he stares at the ceiling."
       },
       {
         "head": "Enter: the fly",
-        "body": "A fly lands on the ceiling and starts crawling around. Descartes watches it walk to one corner, then the other, then the middle. He gets curious."
+        "body": "A fly **lands on the ceiling and starts crawling.** Descartes watches it walk to one corner, then another, then the middle. **He gets curious.**"
       },
       {
         "head": "The question",
-        "body": "Can I describe EXACTLY where the fly is — without pointing? Could I write the fly's spot in a letter to a friend who can't see my ceiling?"
+        "body": "**Can I describe EXACTLY where the fly is—without pointing?** Could he **write the fly's location in a letter** to someone who can't see the ceiling?"
       },
       {
         "head": "His insight",
-        "body": "Pick any corner of the ceiling. Now I just need TWO numbers: how far ACROSS the fly is, and how far UP from that corner. Boom — exact location, no pointing required."
+        "body": "**Pick any corner.** Then he only needs **TWO NUMBERS**: **how far ACROSS** the fly is from that corner, and **how far UP.** That's enough to pinpoint it exactly."
       },
       {
         "head": "x and y are born",
-        "body": "Descartes labels the across number 'x' and the up number 'y'. Every point on the ceiling — every point on ANY flat surface — can be named with just two numbers: (x, y)."
+        "body": "He labels the **across distance 'x'** and the **up distance 'y'.** Now **every point on the ceiling can be named with two numbers: (x, y).** Simple, elegant, revolutionary."
       },
       {
         "head": "The big leap",
-        "body": "If I can name a POINT with two numbers, I can name a whole LINE. And a CURVE. And a SHAPE. Anything geometric becomes pairs of numbers I can compute with."
+        "body": "**If a POINT has two numbers, what about a LINE?** What about a **CURVE? A SHAPE?** Suddenly, **geometry becomes numbers. Pictures become algebra.**"
       },
       {
         "head": "Math fuses with geometry",
-        "body": "Before Descartes, math and geometry were separate subjects. He glued them together. Algebra problems became pictures; pictures became algebra. Game changer."
+        "body": "Before **Descartes, math and geometry were separate worlds.** He **glued them together.** **Algebra problems became pictures; pictures became equations.** Total game-changer."
       },
       {
         "head": "Every screen, every map",
-        "body": "Every map app, every video game, every weather radar uses Descartes' idea. They all describe locations as pairs (x, y) — or, in 3D, triples (x, y, z)."
+        "body": "**Every map app, every video game, every weather radar** uses **Descartes' idea.** They all describe locations as **pairs (x, y)—or in 3D, triples (x, y, z).**"
       },
       {
         "head": "Apollo and beyond",
-        "body": "300 years later, NASA used Descartes' coordinate plane to plot the path of Apollo 11 to the Moon. (Katherine Johnson did those calculations by hand!) Same idea, same math."
+        "body": "**300 years later, NASA used Descartes' coordinate plane** to plot Apollo 11's path to the Moon. **Katherine Johnson did those calculations by hand!** **Same idea, same math, different scale.**"
       },
       {
         "head": "Look around",
-        "body": "Look at any screen, any grid, any graph in your math book. The two axes — x going right, y going up — are Descartes' fly, ascended to the world of pure math."
+        "body": "Look at **any screen, any grid, any graph** in your math book. **The two axes—x going right, y going up—are Descartes' fly,** ascended into pure mathematics."
       }
     ],
     "learned": "Any point on a plane = two numbers, (x, y). Descartes saw it first while watching a fly walk on his ceiling.",
@@ -553,19 +553,19 @@
     "beats": [
       {
         "head": "A weird number",
-        "body": "A baseball announcer says 'he's batting three-hundred'. What does .300 even mean?"
+        "body": "A baseball announcer says the batter is '**batting .300.**' What does **.300 even mean?** It sounds like a score on a test, but it's something completely different."
       },
       {
         "head": "It's a rate",
-        "body": "Batting average = hits per at-bat. 150 hits in 500 tries is 150 ÷ 500 = 0.300."
+        "body": "**Batting average = hits per at-bat.** If a player gets **150 hits in 500 at-bats**, that's **150 ÷ 500 = 0.300**. **It's a ratio.** Out of every at-bat, they get a hit **30% of the time.**"
       },
       {
         "head": "Per ONE",
-        "body": "0.300 means '0.3 hits per 1 at-bat' — a UNIT rate. We always scale down to per-one to compare."
+        "body": "**.300 means '0.3 hits per 1 at-bat'**—a **UNIT RATE.** We always **scale down to per-one** to compare fairly. That's how we compare batters across different numbers of games."
       },
       {
         "head": "Why it's good",
-        "body": "Most major leaguers hit around .250. Hitting .300 means succeeding 3 of every 10 tries — and that's elite!"
+        "body": "**Most major leaguers hit around .250.** Hitting **.300 means succeeding 3 out of every 10 at-bats**—connecting 3 times per 10 chances. **That's elite.** Even the best players fail 70% of the time."
       }
     ],
     "learned": "A UNIT RATE answers 'how much per ONE' — perfect for comparing.",
@@ -579,19 +579,19 @@
     "beats": [
       {
         "head": "Unbreakable code",
-        "body": "In World War II, Germany used a machine called Enigma to scramble messages. Billions of possible settings."
+        "body": "In **World War II, Germany used the Enigma machine** to scramble secret messages. **Billions of possible settings.** The British thought it was **unbreakable.** But one man figured it out."
       },
       {
         "head": "Frequency trick",
-        "body": "In English, the letter E shows up ~13% of the time, T about 9%, A about 8%. Every language has its own 'fingerprint'."
+        "body": "**Every language has a fingerprint.** In English, the letter **E shows up ~13% of the time, T about 9%, A about 8%.** **No other language matches this pattern.** It's like a hidden signature."
       },
       {
         "head": "Pattern hunting",
-        "body": "Alan Turing built a machine that compared letter frequencies in coded messages to known patterns — until they matched."
+        "body": "**Alan Turing built a machine** that **compared letter frequencies in coded messages** to the known English pattern—**until they matched.** Once he found the frequency match, he **cracked the code.**"
       },
       {
         "head": "History changed",
-        "body": "Code-cracking shortened the war by years. Counting RATIOS literally saved lives."
+        "body": "**Code-cracking shortened the war by years.** Historians say it **saved hundreds of thousands of lives.** **Counting RATIOS and frequencies—just percentages—literally changed history.**"
       }
     ],
     "learned": "A ratio (E : everything else) is a powerful clue, even in spy stuff.",
@@ -605,19 +605,19 @@
     "beats": [
       {
         "head": "12 yards from goal",
-        "body": "A penalty kick is a one-on-one: just you and the keeper. Goals happen about 75% of the time."
+        "body": "In soccer, a **penalty kick is one-on-one: just you and the keeper.** It's a high-pressure moment. **Goals happen about 75% of the time.** That's crazy high. Why?"
       },
       {
         "head": "Why so often?",
-        "body": "The keeper has to GUESS before you kick. If they guess wrong, you score easily."
+        "body": "The **keeper has to GUESS before you kick.** They don't know left, right, or center. **If they guess wrong, you score easily.** **You know where you're shooting; they don't.**"
       },
       {
         "head": "3 out of 4 = 75%",
-        "body": "We can write that as a fraction OR a percent. Same thing — both mean 3 in every 4 attempts."
+        "body": "**We can write 75% as a fraction: 3/4.** **3 out of every 4 penalty attempts = a goal.** **Same number, two ways to say it**: **fraction OR percent.** Pick whichever is easier."
       },
       {
         "head": "Keeper's job",
-        "body": "About 25% of the time the keeper guesses right and saves. Tough job!"
+        "body": "The keeper **guesses right about 25% of the time**—only **1 out of 4.** When they guess right, they **make an amazing save.** But **3 out of 4, they're wrong.** Tough job!"
       }
     ],
     "learned": "Percent = how many out of 100. Useful for comparing chances.",
@@ -631,19 +631,19 @@
     "beats": [
       {
         "head": "First move",
-        "body": "Watch any expert: they grab the CENTER square first, every time. Why?"
+        "body": "Watch any expert tic-tac-toe player: **they grab the CENTER square first, every single game.** **Always center.** Why not a corner? There must be a reason."
       },
       {
         "head": "Count the lines",
-        "body": "There are 8 ways to win: 3 rows, 3 columns, 2 diagonals. Every winning line goes through certain cells."
+        "body": "**There are 8 ways to win in tic-tac-toe**: **3 rows, 3 columns, 2 diagonals.** **Every winning line goes through certain squares.** Not all squares are equally powerful."
       },
       {
         "head": "Center wins",
-        "body": "The center square is on 4 of the 8 lines. Corners are on 3. Edges only on 2."
+        "body": "**The center square is on 4 out of 8 winning lines.** **Corner squares are on only 3 lines.** **Edge squares are on only 2 lines.** **Center is the power position.**"
       },
       {
         "head": "Most chances",
-        "body": "By taking center, you start in the cell with the MOST chances to win. It's a stats decision — find the spot with the most chances!"
+        "body": "**By taking center, you start in the square with the MOST winning chances.** It's a **statistics decision**—count your options and pick the square with the most winning paths. **Strategy beats luck.**"
       }
     ],
     "learned": "Counting OPTIONS helps you pick the smartest move.",
@@ -657,19 +657,19 @@
     "beats": [
       {
         "head": "Make a guess",
-        "body": "Imagine a room. How many people do you need for a 50/50 chance that TWO of them share a birthday?"
+        "body": "Imagine a room with random people. **How many people do you need for a 50/50 chance that TWO of them share the same birthday?** Make a guess before reading."
       },
       {
         "head": "Most people say 180",
-        "body": "Half of 365 sounds smart. But the answer is MUCH smaller — and surprises everyone."
+        "body": "Most people guess **half of 365**—so **180 or 183 people.** It sounds logical: half the year, half the people, right? **But the answer is MUCH, MUCH smaller.** Most people are shocked."
       },
       {
         "head": "Just 23!",
-        "body": "Why? With 23 people, there are 23×22÷2 = 253 PAIRS to check. Plenty of chances to match."
+        "body": "**With just 23 people, there's already a 50% chance two share a birthday!** Why? **You're not checking 23 dates; you're checking 23×22÷2 = 253 PAIRS.** **253 chances to match—that's huge.**"
       },
       {
         "head": "The whole curve",
-        "body": "40 people: 89%. 60 people: 99%. Try this with your classroom!"
+        "body": "**With 40 people: 89% chance. With 60 people: 99% chance.** The probability shoots up **crazy fast** as you add more people. Try this at your school—it'll blow minds!"
       }
     ],
     "learned": "Counting PAIRS gets big fast — way faster than counting people.",
@@ -683,47 +683,47 @@
     "beats": [
       {
         "head": "London, 1820",
-        "body": "Florence Nightingale is born to a rich British family. Her parents expect her to marry a duke and host fancy parties. She has other plans."
+        "body": "**Florence Nightingale** is born to a rich British family. **Her parents expect her to marry a duke and host fancy parties.** She has a **completely different dream.**"
       },
       {
         "head": "Off to nursing school",
-        "body": "At age 16, Florence announces she wants to be a NURSE. Her parents are horrified — nursing is a low-paying, dirty job back then. She does it anyway."
+        "body": "At **age 16, Florence announces she wants to be a NURSE.** **Her parents are horrified.** Nursing is a low-paying, dirty job back then. She does it anyway—**against her family's wishes.**"
       },
       {
         "head": "War, 1854",
-        "body": "Britain is fighting a brutal war in Crimea, near modern Russia. Soldiers are dying by the thousands — but mostly NOT from battle wounds. Something else is killing them in the hospitals."
+        "body": "Britain fights a **brutal war in Crimea** (near modern Russia). **Soldiers are dying by the thousands**. But not mostly from battle wounds. **Something else is killing them in the hospitals.**"
       },
       {
         "head": "What she found",
-        "body": "Florence shows up to the war hospital with 38 nurses. It's a horror show: rats, no clean water, soldiers crammed in dirty rooms. She's furious. She starts WRITING DOWN every death."
+        "body": "Florence arrives at the war hospital with **38 nurses.** It's a **nightmare**: rats, no clean water, soldiers packed in dirty rooms. **She's furious.** She starts **WRITING DOWN every death—carefully counting.**"
       },
       {
         "head": "The math nobody wanted",
-        "body": "Out of 4 soldiers who came to the hospital, ONE was dying — not from bullets, but from disease, infections, and bad food. Florence proves it with numbers."
+        "body": "**Out of 4 soldiers who came to the hospital, ONE was dying**—not from battle wounds, but from **disease, infections, bad food.** She **proves it with numbers.** But generals ignore her reports."
       },
       {
         "head": "Nobody listens to numbers",
-        "body": "Florence sends report after report to British generals. They ignore her. Long lists of numbers don't move politicians. She needs something stronger."
+        "body": "**Florence sends report after report with statistics.** **They ignore her.** **Long lists of numbers don't move politicians.** Numbers are boring. She needs a **game-changer.**"
       },
       {
         "head": "Her invention",
-        "body": "Florence invents a brand-new kind of chart: the ROSE DIAGRAM (also called a 'coxcomb'). Each wedge shows one month. The BIGGER the wedge, the MORE soldiers died that month."
+        "body": "Florence invents a **brand-new kind of chart**: the **ROSE DIAGRAM** (also called a 'coxcomb'). **Each wedge = one month. The BIGGER the wedge, the MORE soldiers died.**"
       },
       {
         "head": "RED for the truth",
-        "body": "She colors disease deaths RED and battle deaths a tiny blue sliver. One look and you can see it: the red wedges DWARF the blue. Disease — not the war — was the real killer."
+        "body": "She colors **disease deaths RED** and **battle deaths a tiny blue sliver.** **One look and you see it immediately: the red wedges DWARF the blue.** **Disease—not the war—was the real killer.**"
       },
       {
         "head": "Hospitals get fixed",
-        "body": "Florence sends her rose diagram to Queen Victoria and Parliament. Within a year, hospitals start cleaning up: fresh water, clean bandages, better food. Deaths drop from 42% to 2%."
+        "body": "She sends her **rose diagram to Queen Victoria and Parliament.** **Within a year, hospitals clean up**: fresh water, clean bandages, better food. **Deaths drop from 42% to 2%.** One chart changed everything."
       },
       {
         "head": "First woman in the club",
-        "body": "In 1859, Florence becomes the first woman ever elected to the Royal Statistical Society. The men have to admit it: graphs that tell a clear story are math you can't argue with."
+        "body": "In **1859, Florence becomes the first woman EVER elected to the Royal Statistical Society.** The men finally admit: **graphs that tell a clear story are math nobody can argue with.**"
       },
       {
         "head": "Why she matters",
-        "body": "Every modern chart you see — bar graphs, pie charts, line charts, infographics — comes from Florence's idea: turn data into a picture and the truth jumps out."
+        "body": "**Every modern chart you see**—bar graphs, pie charts, line charts, infographics—**comes from Florence's idea**: **turn data into a picture and the truth jumps out.** She changed how the world uses data."
       }
     ],
     "learned": "A good chart can tell a story numbers alone cannot. Florence proved it in 1854 and saved a million lives.",
