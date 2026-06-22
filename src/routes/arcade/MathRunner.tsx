@@ -14,6 +14,10 @@ const FIELD_H = 200;
 const PLAYER_X = 48;
 const SESSION_SECONDS = 60;
 
+// Players pick which runner they want before the game starts.
+const CHARACTERS = ['🏃', '🐱', '🐶', '🦊', '🤖', '🦸', '🐢', '🦄'] as const;
+type Character = (typeof CHARACTERS)[number];
+
 type Gate = {
   id: number;
   x: number;
@@ -25,6 +29,14 @@ type Gate = {
 };
 
 type Coin = {
+  id: number;
+  x: number;
+  lane: 0 | 1 | 2;
+  alive: boolean;
+};
+
+// Obstacles sit in a single lane. Stay out of their lane or lose a heart.
+type Obstacle = {
   id: number;
   x: number;
   lane: 0 | 1 | 2;
@@ -86,9 +98,21 @@ function makeCoin(id: number, startX: number): Coin {
   };
 }
 
+function makeObstacle(id: number, startX: number): Obstacle {
+  return {
+    id,
+    x: startX,
+    lane: Math.floor(Math.random() * LANES) as 0 | 1 | 2,
+    alive: true,
+  };
+}
+
 export function MathRunner() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
+  // Character pick happens on a start screen before the run begins.
+  const [character, setCharacter] = useState<Character>('🏃');
+  const [started, setStarted] = useState(false);
   useArcadeClock(!!outcome);
 
   // World state — refs because the RAF loop drives them; render is via a
@@ -96,6 +120,7 @@ export function MathRunner() {
   const laneRef = useRef<0 | 1 | 2>(1);
   const gatesRef = useRef<Gate[]>([]);
   const coinsRef = useRef<Coin[]>([]);
+  const obstaclesRef = useRef<Obstacle[]>([]);
   const heartsRef = useRef(3);
   const scoreRef = useRef(0); // coins + correct gates
   const timeLeftRef = useRef(SESSION_SECONDS);
@@ -103,6 +128,7 @@ export function MathRunner() {
   const idRef = useRef(1);
   const lastGateXRef = useRef(FIELD_W + 120);
   const lastCoinXRef = useRef(FIELD_W + 60);
+  const lastObstacleXRef = useRef(FIELD_W + 200);
   const lastTickRef = useRef(performance.now());
   const rafRef = useRef(0);
 
@@ -112,6 +138,7 @@ export function MathRunner() {
   const lane = laneRef.current;
   const gates = gatesRef.current;
   const coins = coinsRef.current;
+  const obstacles = obstaclesRef.current;
 
   // Input
   const setLane = (next: 0 | 1 | 2) => {
@@ -131,7 +158,7 @@ export function MathRunner() {
 
   // Main game loop
   useEffect(() => {
-    if (outcome) return;
+    if (outcome || !started) return;
     const tick = (now: number) => {
       const dt = Math.min(0.05, (now - lastTickRef.current) / 1000);
       lastTickRef.current = now;
@@ -151,10 +178,17 @@ export function MathRunner() {
         coinsRef.current.push(makeCoin(idRef.current++, FIELD_W + 30));
         lastCoinXRef.current = FIELD_W + 30;
       }
+      // Spawn obstacles between gates — these must be dodged.
+      lastObstacleXRef.current -= speed * dt;
+      if (lastObstacleXRef.current < FIELD_W - 150 && Math.random() < 0.4) {
+        obstaclesRef.current.push(makeObstacle(idRef.current++, FIELD_W + 45));
+        lastObstacleXRef.current = FIELD_W + 45;
+      }
 
       // Move world leftward
       for (const g of gatesRef.current) g.x -= speed * dt;
       for (const c of coinsRef.current) c.x -= speed * dt;
+      for (const o of obstaclesRef.current) o.x -= speed * dt;
 
       // Collisions / resolution
       for (const g of gatesRef.current) {
@@ -178,8 +212,17 @@ export function MathRunner() {
         }
         if (c.x < -40) c.alive = false;
       }
+      for (const o of obstaclesRef.current) {
+        if (!o.alive) continue;
+        if (o.x <= PLAYER_X + 8 && o.x > PLAYER_X - 36 && o.lane === laneRef.current) {
+          heartsRef.current -= 1;
+          o.alive = false;
+        }
+        if (o.x < -40) o.alive = false;
+      }
       gatesRef.current = gatesRef.current.filter((g) => g.x > -90);
       coinsRef.current = coinsRef.current.filter((c) => c.alive || c.x > -50);
+      obstaclesRef.current = obstaclesRef.current.filter((o) => o.alive || o.x > -50);
 
       if (heartsRef.current <= 0 || timeLeftRef.current <= 0) {
         finish();
@@ -192,7 +235,7 @@ export function MathRunner() {
     rafRef.current = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafRef.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [outcome]);
+  }, [outcome, started]);
 
   const finish = () => {
     const xp = Math.max(1, Math.min(20, Math.floor(scoreRef.current * 0.7)));
@@ -203,6 +246,7 @@ export function MathRunner() {
     laneRef.current = 1;
     gatesRef.current = [];
     coinsRef.current = [];
+    obstaclesRef.current = [];
     heartsRef.current = 3;
     scoreRef.current = 0;
     timeLeftRef.current = SESSION_SECONDS;
@@ -210,7 +254,15 @@ export function MathRunner() {
     idRef.current = 1;
     lastGateXRef.current = FIELD_W + 120;
     lastCoinXRef.current = FIELD_W + 60;
+    lastObstacleXRef.current = FIELD_W + 200;
+    lastTickRef.current = performance.now();
     setOutcome(null);
+    setStarted(false);
+  };
+
+  const start = () => {
+    lastTickRef.current = performance.now();
+    setStarted(true);
   };
 
   const playerY = useMemo(() => `${LANE_HEIGHTS[lane]}%`, [lane]);
@@ -227,6 +279,47 @@ export function MathRunner() {
           scoreLine={`${reached} points · ${SESSION_SECONDS - Math.floor(timeLeftRef.current)}s`}
           onReplay={reset}
         />
+      </div>
+    );
+  }
+
+  if (!started) {
+    return (
+      <div>
+        <ArcadeHeader title="Math Runner" emoji="🏃" />
+        <div className="mx-auto max-w-sm text-center">
+          <p className="mb-3 text-sm font-display font-bold text-slate-600">
+            Pick your runner
+          </p>
+          <div className="grid grid-cols-4 gap-2">
+            {CHARACTERS.map((c) => (
+              <button
+                key={c}
+                type="button"
+                onClick={() => setCharacter(c)}
+                aria-pressed={character === c}
+                className={`aspect-square rounded-2xl text-3xl shadow flex items-center justify-center ${
+                  character === c
+                    ? 'bg-emerald-500 ring-4 ring-emerald-300'
+                    : 'bg-white border-2 border-slate-200'
+                }`}
+              >
+                {c}
+              </button>
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={start}
+            className="mt-5 min-h-12 w-full rounded-2xl bg-slate-900 px-6 font-display font-extrabold text-white shadow"
+          >
+            Start as {character}
+          </button>
+          <p className="mt-3 text-xs text-slate-500">
+            Steer into the lane with the correct answer. Catch ⭐ for bonus points and
+            dodge the 🌵 cacti.
+          </p>
+        </div>
       </div>
     );
   }
@@ -273,6 +366,22 @@ export function MathRunner() {
             </div>
           ))}
 
+        {/* Obstacles */}
+        {obstacles
+          .filter((o) => o.alive)
+          .map((o) => (
+            <div
+              key={o.id}
+              className="absolute text-2xl"
+              style={{
+                left: o.x,
+                top: `calc(${LANE_HEIGHTS[o.lane]}% - 14px)`,
+              }}
+            >
+              🌵
+            </div>
+          ))}
+
         {/* Gates */}
         {gates
           .filter((g) => g.alive)
@@ -304,7 +413,7 @@ export function MathRunner() {
           className="absolute text-3xl transition-[top] duration-150 ease-out"
           style={{ left: PLAYER_X - 16, top: `calc(${playerY} - 18px)` }}
         >
-          🏃
+          {character}
         </div>
       </div>
 
@@ -326,7 +435,7 @@ export function MathRunner() {
         ))}
       </div>
       <p className="text-center text-xs text-slate-500 mt-2">
-        Steer into the lane with the correct answer. Catch ⭐ for bonus points.
+        Steer into the lane with the correct answer. Catch ⭐ and dodge 🌵.
       </p>
     </div>
   );
