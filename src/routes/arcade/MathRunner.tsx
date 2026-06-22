@@ -99,7 +99,7 @@ export function MathRunner() {
   const heartsRef = useRef(3);
   const scoreRef = useRef(0); // coins + correct gates
   const timeLeftRef = useRef(SESSION_SECONDS);
-  const speedRef = useRef(180); // px / second
+  const speedRef = useRef(110); // px / second
   const idRef = useRef(1);
   const lastGateXRef = useRef(FIELD_W + 120);
   const lastCoinXRef = useRef(FIELD_W + 60);
@@ -137,7 +137,7 @@ export function MathRunner() {
       lastTickRef.current = now;
       timeLeftRef.current -= dt;
 
-      const speed = (speedRef.current = Math.min(360, 180 + scoreRef.current * 4));
+      const speed = (speedRef.current = Math.min(220, 110 + scoreRef.current * 2.5));
 
       // Spawn gates every ~2 s based on x-distance.
       lastGateXRef.current -= speed * dt;
@@ -206,7 +206,7 @@ export function MathRunner() {
     heartsRef.current = 3;
     scoreRef.current = 0;
     timeLeftRef.current = SESSION_SECONDS;
-    speedRef.current = 180;
+    speedRef.current = 110;
     idRef.current = 1;
     lastGateXRef.current = FIELD_W + 120;
     lastCoinXRef.current = FIELD_W + 60;
