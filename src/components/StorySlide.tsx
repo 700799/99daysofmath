@@ -176,7 +176,7 @@ export function StorySlide({ story, onClose }: Props) {
       return;
     }
     lastSegRef.current = seg;
-    setAnimationDone(false);
+    setAnimationDone(true);
 
     const startVideo = () => {
       try {
@@ -210,7 +210,6 @@ export function StorySlide({ story, onClose }: Props) {
       } catch {
         /* ignore */
       }
-      setAnimationDone(true);
     }
   };
 
@@ -393,13 +392,6 @@ export function StorySlide({ story, onClose }: Props) {
             className="w-full h-full object-contain bg-black"
             onTimeUpdate={onTimeUpdate}
           />
-          {!animationDone && (
-            <div className="absolute inset-x-0 bottom-3 flex justify-center pointer-events-none">
-              <span className="rounded-full bg-black/60 px-3 py-1 text-white/70 text-xs font-display font-bold uppercase tracking-wider">
-                Watching…
-              </span>
-            </div>
-          )}
         </div>
       </div>
 
