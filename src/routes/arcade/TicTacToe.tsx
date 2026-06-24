@@ -85,7 +85,7 @@ function findWinLine(board: Board, n: number, p: Player): [number, number][] {
   return [];
 }
 
-function hasMove(sup: Supply, board: Board, n: number): boolean {
+function hasMove(sup: Supply, board: Board, _n: number): boolean {
   return (['big','med','small'] as SupKey[]).some(k =>
     sup[k] > 0 &&
     board.some(row => row.some(cell => canPlace(cell, KEY_TO_SIZE[k])))
