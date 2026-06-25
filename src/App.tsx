@@ -29,6 +29,7 @@ const Fishing = lazy(() => import('./routes/arcade/Fishing').then((m) => ({ defa
 const MathRunner = lazy(() => import('./routes/arcade/MathRunner').then((m) => ({ default: m.MathRunner })));
 const Platformer = lazy(() => import('./routes/arcade/Platformer').then((m) => ({ default: m.Platformer })));
 const RaceCar = lazy(() => import('./routes/arcade/RaceCar').then((m) => ({ default: m.RaceCar })));
+const TicTacToe = lazy(() => import('./routes/arcade/TicTacToe').then((m) => ({ default: m.TicTacToe })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 function RouteFallback() {
@@ -71,6 +72,7 @@ export default function App() {
           <Route path="/arcade/runner" element={<MathRunner />} />
           <Route path="/arcade/platformer" element={<Platformer />} />
           <Route path="/arcade/racer" element={<RaceCar />} />
+          <Route path="/arcade/tictactoe" element={<TicTacToe />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
