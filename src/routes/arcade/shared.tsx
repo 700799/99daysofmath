@@ -25,6 +25,9 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'runner', path: '/arcade/runner', emoji: '🏃', name: 'Math Runner', blurb: 'Right lane, right answer.', baseXp: 8, gradient: 'from-emerald-500 to-teal-600' },
   { id: 'platformer', path: '/arcade/platformer', emoji: '🍄', name: 'Platformer', blurb: '8 levels. Stomp to the flag.', baseXp: 10, gradient: 'from-pink-500 to-rose-600' },
   { id: 'racer', path: '/arcade/racer', emoji: '🏎️', name: 'Race Car', blurb: 'Dodge cones. Grab fuel.', baseXp: 9, gradient: 'from-rose-500 to-orange-500' },
+  { id: 'hippo', path: '/arcade/hippo', emoji: '🦛', name: 'Hungry Hippo', blurb: 'Munch the maze. Dodge ghosts.', baseXp: 10, gradient: 'from-indigo-500 to-purple-600' },
+  { id: 'frogger', path: '/arcade/frogger', emoji: '🐸', name: 'Leap Frog', blurb: 'Cross traffic and river.', baseXp: 10, gradient: 'from-green-500 to-emerald-600' },
+  { id: 'digger', path: '/arcade/digger', emoji: '⛏️', name: 'Gem Digger', blurb: 'Dig for gems. Dodge monsters.', baseXp: 10, gradient: 'from-amber-600 to-yellow-700' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {
