@@ -31,6 +31,9 @@ const Platformer = lazy(() => import('./routes/arcade/Platformer').then((m) => (
 const RaceCar = lazy(() => import('./routes/arcade/RaceCar').then((m) => ({ default: m.RaceCar })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
+// Warm-up gate wraps every arcade game with a short adaptive quiz.
+const ArcadeGate = lazy(() => import('./routes/arcade/ArcadeWarmup').then((m) => ({ default: m.ArcadeGate })));
+
 function RouteFallback() {
   return (
     <div className="text-center py-12">
@@ -62,15 +65,15 @@ export default function App() {
           <Route path="/finals" element={<Finals />} />
           <Route path="/finals/:n" element={<FinalQuiz />} />
           <Route path="/arcade" element={<ArcadeHub />} />
-          <Route path="/arcade/connect4" element={<ConnectFour />} />
-          <Route path="/arcade/wheel" element={<Wheel />} />
-          <Route path="/arcade/memory" element={<MemoryMatch />} />
-          <Route path="/arcade/shootout" element={<Shootout />} />
-          <Route path="/arcade/zapper" element={<ZombieZapper />} />
-          <Route path="/arcade/fishing" element={<Fishing />} />
-          <Route path="/arcade/runner" element={<MathRunner />} />
-          <Route path="/arcade/platformer" element={<Platformer />} />
-          <Route path="/arcade/racer" element={<RaceCar />} />
+          <Route path="/arcade/connect4" element={<ArcadeGate title="Connect 4"><ConnectFour /></ArcadeGate>} />
+          <Route path="/arcade/wheel" element={<ArcadeGate title="Prize Wheel"><Wheel /></ArcadeGate>} />
+          <Route path="/arcade/memory" element={<ArcadeGate title="Memory Match"><MemoryMatch /></ArcadeGate>} />
+          <Route path="/arcade/shootout" element={<ArcadeGate title="Shootout"><Shootout /></ArcadeGate>} />
+          <Route path="/arcade/zapper" element={<ArcadeGate title="Zombie Zapper"><ZombieZapper /></ArcadeGate>} />
+          <Route path="/arcade/fishing" element={<ArcadeGate title="Fishing"><Fishing /></ArcadeGate>} />
+          <Route path="/arcade/runner" element={<ArcadeGate title="Math Runner"><MathRunner /></ArcadeGate>} />
+          <Route path="/arcade/platformer" element={<ArcadeGate title="Platformer"><Platformer /></ArcadeGate>} />
+          <Route path="/arcade/racer" element={<ArcadeGate title="Race Car"><RaceCar /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
