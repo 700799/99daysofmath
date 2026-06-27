@@ -38,6 +38,8 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'digger', path: '/arcade/digger', emoji: '⛏️', name: 'Gem Digger', blurb: 'Dig for gems. Dodge monsters.', baseXp: 10, gradient: 'from-amber-600 to-yellow-700' },
   { id: 'tiles', path: '/arcade/2048', emoji: '🔢', name: '2048', blurb: 'Merge tiles to 2048.', baseXp: 10, gradient: 'from-yellow-500 to-amber-600' },
   { id: 'snake', path: '/arcade/snake', emoji: '🐍', name: 'Math Snake', blurb: 'Eat the right answer.', baseXp: 10, gradient: 'from-lime-500 to-green-700' },
+  { id: 'bricks', path: '/arcade/bricks', emoji: '🧱', name: 'Brick Breaker', blurb: 'Bounce and smash bricks.', baseXp: 10, gradient: 'from-violet-500 to-indigo-700' },
+  { id: 'sudoku', path: '/arcade/sudoku', emoji: '🧩', name: 'Sudoku', blurb: 'Fill the 9×9 grid.', baseXp: 10, gradient: 'from-slate-500 to-slate-700' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {

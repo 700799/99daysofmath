@@ -34,6 +34,8 @@ const LeapFrog = lazy(() => import('./routes/arcade/LeapFrog').then((m) => ({ de
 const GemDigger = lazy(() => import('./routes/arcade/GemDigger').then((m) => ({ default: m.GemDigger })));
 const Twenty48 = lazy(() => import('./routes/arcade/Twenty48').then((m) => ({ default: m.Twenty48 })));
 const Snake = lazy(() => import('./routes/arcade/Snake').then((m) => ({ default: m.Snake })));
+const BrickBreaker = lazy(() => import('./routes/arcade/BrickBreaker').then((m) => ({ default: m.BrickBreaker })));
+const Sudoku = lazy(() => import('./routes/arcade/Sudoku').then((m) => ({ default: m.Sudoku })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -84,6 +86,8 @@ export default function App() {
           <Route path="/arcade/digger" element={<ArcadeGate title="Gem Digger"><GemDigger /></ArcadeGate>} />
           <Route path="/arcade/2048" element={<ArcadeGate title="2048"><Twenty48 /></ArcadeGate>} />
           <Route path="/arcade/snake" element={<ArcadeGate title="Math Snake"><Snake /></ArcadeGate>} />
+          <Route path="/arcade/bricks" element={<ArcadeGate title="Brick Breaker"><BrickBreaker /></ArcadeGate>} />
+          <Route path="/arcade/sudoku" element={<ArcadeGate title="Sudoku"><Sudoku /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
