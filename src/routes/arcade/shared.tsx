@@ -42,6 +42,10 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'sudoku', path: '/arcade/sudoku', emoji: '🧩', name: 'Sudoku', blurb: 'Fill the 9×9 grid.', baseXp: 10, gradient: 'from-slate-500 to-slate-700' },
   { id: 'tetris', path: '/arcade/tetris', emoji: '👾', name: 'Alien Tetris', blurb: 'Stack & clear the aliens.', baseXp: 10, gradient: 'from-purple-500 to-fuchsia-700' },
   { id: 'bubbles', path: '/arcade/bubbles', emoji: '🫧', name: 'Bubble Pop', blurb: 'Match 3 to pop.', baseXp: 10, gradient: 'from-sky-500 to-cyan-600' },
+  { id: 'boba', path: '/arcade/boba', emoji: '🧋', name: 'Boba Shop', blurb: 'Mix drinks by ratio.', baseXp: 10, gradient: 'from-pink-500 to-rose-600' },
+  { id: 'sushi', path: '/arcade/sushi', emoji: '🍣', name: 'Sushi Match', blurb: 'Match 3 sushi.', baseXp: 10, gradient: 'from-red-500 to-pink-600' },
+  { id: 'taiko', path: '/arcade/taiko', emoji: '🥁', name: 'Taiko Tap', blurb: 'Tap to the beat.', baseXp: 10, gradient: 'from-rose-500 to-red-600' },
+  { id: 'tangram', path: '/arcade/tangram', emoji: '🧩', name: 'Tangram', blurb: 'Fill the frame.', baseXp: 10, gradient: 'from-teal-500 to-emerald-600' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {

@@ -38,6 +38,10 @@ const BrickBreaker = lazy(() => import('./routes/arcade/BrickBreaker').then((m) 
 const Sudoku = lazy(() => import('./routes/arcade/Sudoku').then((m) => ({ default: m.Sudoku })));
 const Tetris = lazy(() => import('./routes/arcade/Tetris').then((m) => ({ default: m.Tetris })));
 const BubblePop = lazy(() => import('./routes/arcade/BubblePop').then((m) => ({ default: m.BubblePop })));
+const BobaShop = lazy(() => import('./routes/arcade/BobaShop').then((m) => ({ default: m.BobaShop })));
+const SushiMatch = lazy(() => import('./routes/arcade/SushiMatch').then((m) => ({ default: m.SushiMatch })));
+const TaikoTap = lazy(() => import('./routes/arcade/TaikoTap').then((m) => ({ default: m.TaikoTap })));
+const Tangram = lazy(() => import('./routes/arcade/Tangram').then((m) => ({ default: m.Tangram })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -92,6 +96,10 @@ export default function App() {
           <Route path="/arcade/sudoku" element={<ArcadeGate title="Sudoku"><Sudoku /></ArcadeGate>} />
           <Route path="/arcade/tetris" element={<ArcadeGate title="Alien Tetris"><Tetris /></ArcadeGate>} />
           <Route path="/arcade/bubbles" element={<ArcadeGate title="Bubble Pop"><BubblePop /></ArcadeGate>} />
+          <Route path="/arcade/boba" element={<ArcadeGate title="Boba Shop"><BobaShop /></ArcadeGate>} />
+          <Route path="/arcade/sushi" element={<ArcadeGate title="Sushi Match"><SushiMatch /></ArcadeGate>} />
+          <Route path="/arcade/taiko" element={<ArcadeGate title="Taiko Tap"><TaikoTap /></ArcadeGate>} />
+          <Route path="/arcade/tangram" element={<ArcadeGate title="Tangram"><Tangram /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
