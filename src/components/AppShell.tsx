@@ -20,8 +20,30 @@ export function AppShell({ children }: Props) {
     return Math.round((today.getTime() - f.getTime()) / 86400000) <= 7;
   });
   const user = useAuth((s) => s.user);
+  const tickAppSeconds = useProgress((s) => s.tickAppSeconds);
   const location = useLocation();
   const isHome = location.pathname === '/' || location.pathname === '';
+
+  // Track lifetime time-on-app (paused while the tab is hidden).
+  useEffect(() => {
+    let id: ReturnType<typeof setInterval> | null = null;
+    const start = () => {
+      if (id == null) id = setInterval(() => tickAppSeconds(1), 1000);
+    };
+    const stop = () => {
+      if (id != null) {
+        clearInterval(id);
+        id = null;
+      }
+    };
+    if (!document.hidden) start();
+    const onVis = () => (document.hidden ? stop() : start());
+    document.addEventListener('visibilitychange', onVis);
+    return () => {
+      document.removeEventListener('visibilitychange', onVis);
+      stop();
+    };
+  }, [tickAppSeconds]);
 
   // Wire global haptics for buttons. Opt-in via `data-haptic="tap|submit"`.
   // Also auto-detect by text — "Submit"/"Check"/"Continue"/"Next" trigger a

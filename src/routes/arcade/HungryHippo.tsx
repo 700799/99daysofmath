@@ -2,7 +2,6 @@ import { memo, useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
-import { MiniLesson } from './MiniLesson';
 import { chooseGhostDir, UP, DOWN, LEFT, RIGHT, type Dir, type Target } from './mazeAI';
 
 // "Hungry Hippo" — a Pac-Man maze. The hippo munches pellets while ghosts give
@@ -137,8 +136,9 @@ const PelletsLayer = memo(function PelletsLayer({
 
 export function HungryHippo() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
+  const addArcadePoints = useProgress((s) => s.addArcadePoints);
+  const config = useProgress((s) => s.arcadeConfig);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
-  const [phase, setPhase] = useState<'play' | 'lesson' | 'over'>('play');
   useArcadeClock(!!outcome);
 
   const hippoRef = useRef<Mob>({ c: 9, r: ROWS - 2, tc: 9, tr: ROWS - 2, prog: 0, dir: null });
@@ -149,9 +149,8 @@ export function HungryHippo() {
   const nextDirRef = useRef<Dir | null>(null);
   const faceRef = useRef(1); // 1 = facing right, -1 = left
   const scoreRef = useRef(0);
-  const livesRef = useRef(3);
-  const levelRef = useRef(1);
-  const pendingRef = useRef<'eaten' | 'levelup' | null>(null);
+  const livesRef = useRef(config.livesPerSession);
+  const levelRef = useRef(config.startLevel);
   const lastRef = useRef(0);
   const rafRef = useRef(0);
 
@@ -234,7 +233,7 @@ export function HungryHippo() {
 
   // Game loop — runs only while playing.
   useEffect(() => {
-    if (phase !== 'play' || outcome) return;
+    if (outcome) return;
     lastRef.current = performance.now();
 
     const decideHippo = (m: Mob) => {
@@ -294,12 +293,6 @@ export function HungryHippo() {
       }
     };
 
-    const trigger = (kind: 'eaten' | 'levelup') => {
-      cancelAnimationFrame(rafRef.current);
-      pendingRef.current = kind;
-      setPhase('lesson');
-    };
-
     const tick = (now: number) => {
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
@@ -328,14 +321,25 @@ export function HungryHippo() {
             g.prog = 0;
             g.dir = null;
           } else {
-            trigger('eaten');
+            livesRef.current -= 1;
+            if (livesRef.current <= 0) {
+              finish();
+              return;
+            }
+            respawnMobs();
+            redraw();
+            rafRef.current = requestAnimationFrame(tick);
             return;
           }
         }
       }
 
       if (pelletsRef.current.size === 0) {
-        trigger('levelup');
+        levelRef.current += 1;
+        scoreRef.current += 100; // level-clear bonus
+        loadLevel();
+        redraw();
+        rafRef.current = requestAnimationFrame(tick);
         return;
       }
 
@@ -346,7 +350,7 @@ export function HungryHippo() {
     rafRef.current = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafRef.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, outcome]);
+  }, [outcome]);
 
   // keyboard input
   useEffect(() => {
@@ -366,38 +370,17 @@ export function HungryHippo() {
   }, []);
 
   const finish = () => {
+    addArcadePoints(scoreRef.current);
     const xp = Math.max(1, Math.min(20, Math.floor(scoreRef.current / 40) + levelRef.current * 2));
     setOutcome(recordArcadePlay('hippo', xp));
-    setPhase('over');
-  };
-
-  const onLessonDone = () => {
-    const kind = pendingRef.current;
-    pendingRef.current = null;
-    if (kind === 'eaten') {
-      livesRef.current -= 1;
-      if (livesRef.current <= 0) {
-        finish();
-        return;
-      }
-      respawnMobs();
-      setPhase('play');
-    } else if (kind === 'levelup') {
-      levelRef.current += 1;
-      scoreRef.current += 100;
-      loadLevel();
-      setPhase('play');
-    }
   };
 
   const reset = () => {
     scoreRef.current = 0;
-    livesRef.current = 3;
-    levelRef.current = 1;
-    pendingRef.current = null;
+    livesRef.current = config.livesPerSession;
+    levelRef.current = config.startLevel;
     loadLevel();
     setOutcome(null);
-    setPhase('play');
   };
 
   if (outcome) {
@@ -415,18 +398,6 @@ export function HungryHippo() {
     );
   }
 
-  if (phase === 'lesson') {
-    return (
-      <div>
-        <ArcadeHeader title="Hungry Hippo" emoji="🦛" />
-        <MiniLesson
-          onDone={onLessonDone}
-          heading={pendingRef.current === 'levelup' ? 'Level cleared — quick lesson' : 'Caught! Quick lesson'}
-        />
-      </div>
-    );
-  }
-
   const hp = renderPos(hippoRef.current);
   const frightened = frightRef.current > 0;
 
@@ -434,7 +405,7 @@ export function HungryHippo() {
     <div>
       <ArcadeHeader title="Hungry Hippo" emoji="🦛" />
       <div className="flex justify-between items-center mb-2 max-w-sm mx-auto px-1 text-sm font-display font-extrabold">
-        <span className="text-rose-600">{'❤️'.repeat(livesRef.current)}{'🤍'.repeat(Math.max(0, 3 - livesRef.current))}</span>
+        <span className="text-rose-600">{'❤️'.repeat(Math.max(0, livesRef.current))}{'🤍'.repeat(Math.max(0, config.livesPerSession - livesRef.current))}</span>
         <span className="text-slate-700 tabular-nums">⭐ {scoreRef.current}</span>
         <span className="text-indigo-600">Lvl {levelRef.current}</span>
       </div>

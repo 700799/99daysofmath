@@ -1,10 +1,5 @@
 import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest';
-import {
-  useProgress,
-  migrateProgress,
-  ARCADE_DAILY_CAP_SECONDS,
-  MATH_UNLOCK_SECONDS,
-} from '../src/state/progress';
+import { useProgress, migrateProgress } from '../src/state/progress';
 
 function setToday(iso: string) {
   vi.setSystemTime(new Date(`${iso}T12:00:00`));
@@ -14,7 +9,10 @@ function fresh() {
   useProgress.getState().resetAll();
 }
 
-describe('arcade daily cap (v9)', () => {
+// The old daily 3-min arcade cap / 15-min math-unlock was replaced by the
+// lesson-to-play gate, so the arcade is never time-locked. We still track
+// play-time stats.
+describe('arcade time tracking (cap replaced by lesson gate)', () => {
   beforeEach(() => {
     vi.useFakeTimers();
     setToday('2026-06-01');
@@ -22,56 +20,62 @@ describe('arcade daily cap (v9)', () => {
   });
   afterEach(() => vi.useRealTimers());
 
-  it('starts unlocked with full 3-min budget on a fresh day', () => {
+  it('is never time-locked, no matter how long you play', () => {
     const s = useProgress.getState();
     expect(s.isArcadeLocked()).toBe(false);
-    expect(s.arcadeRemainingSeconds()).toBe(ARCADE_DAILY_CAP_SECONDS);
-    expect(s.mathRemainingSeconds()).toBe(0);
+    useProgress.getState().tickArcadeSeconds(10_000);
+    expect(useProgress.getState().isArcadeLocked()).toBe(false);
   });
 
-  it('tickArcadeSeconds counts down and locks once the cap is hit', () => {
+  it('tickArcadeSeconds accrues lifetime play seconds', () => {
     useProgress.getState().tickArcadeSeconds(60);
-    expect(useProgress.getState().arcadeRemainingSeconds()).toBe(120);
-    expect(useProgress.getState().isArcadeLocked()).toBe(false);
-
-    useProgress.getState().tickArcadeSeconds(120);
-    expect(useProgress.getState().arcadeRemainingSeconds()).toBe(0);
-    expect(useProgress.getState().isArcadeLocked()).toBe(true);
-    expect(useProgress.getState().mathRemainingSeconds()).toBe(MATH_UNLOCK_SECONDS);
-  });
-
-  it('tickMathSeconds only counts while locked', () => {
-    useProgress.getState().tickMathSeconds(300);
-    // Not locked yet — credit must not accrue ahead of time.
-    expect(useProgress.getState().mathRemainingSeconds()).toBe(0);
-
-    useProgress.getState().tickArcadeSeconds(ARCADE_DAILY_CAP_SECONDS);
-    expect(useProgress.getState().isArcadeLocked()).toBe(true);
-
-    useProgress.getState().tickMathSeconds(300);
-    expect(useProgress.getState().mathRemainingSeconds()).toBe(MATH_UNLOCK_SECONDS - 300);
-  });
-
-  it('reaching MATH_UNLOCK_SECONDS unlocks and resets the day', () => {
-    useProgress.getState().tickArcadeSeconds(ARCADE_DAILY_CAP_SECONDS);
-    expect(useProgress.getState().isArcadeLocked()).toBe(true);
-
-    useProgress.getState().tickMathSeconds(MATH_UNLOCK_SECONDS);
-    expect(useProgress.getState().isArcadeLocked()).toBe(false);
-    expect(useProgress.getState().arcadeRemainingSeconds()).toBe(ARCADE_DAILY_CAP_SECONDS);
-    expect(useProgress.getState().mathRemainingSeconds()).toBe(0);
-  });
-
-  it('rolls over the budget on a new day', () => {
-    useProgress.getState().tickArcadeSeconds(ARCADE_DAILY_CAP_SECONDS);
-    expect(useProgress.getState().isArcadeLocked()).toBe(true);
-    setToday('2026-06-02');
-    expect(useProgress.getState().isArcadeLocked()).toBe(false);
-    expect(useProgress.getState().arcadeRemainingSeconds()).toBe(ARCADE_DAILY_CAP_SECONDS);
-
-    // Subsequent ticks land on the new day's budget.
     useProgress.getState().tickArcadeSeconds(30);
-    expect(useProgress.getState().arcadeRemainingSeconds()).toBe(ARCADE_DAILY_CAP_SECONDS - 30);
+    expect(useProgress.getState().cumArcadeSeconds).toBe(90);
+  });
+
+  it('tracks lesson time, app time, and points cumulatively', () => {
+    useProgress.getState().tickLessonSeconds(45);
+    useProgress.getState().tickAppSeconds(120);
+    useProgress.getState().addArcadePoints(250);
+    const s = useProgress.getState();
+    expect(s.cumLessonSeconds).toBe(45);
+    expect(s.cumAppSeconds).toBe(120);
+    expect(s.cumArcadePoints).toBe(250);
+  });
+});
+
+describe('arcadeConfig (v11)', () => {
+  beforeEach(() => fresh());
+
+  it('has sensible defaults', () => {
+    const c = useProgress.getState().arcadeConfig;
+    expect(c.lessonsPerSession).toBe(1);
+    expect(c.startLevel).toBe(1);
+    expect(c.livesPerSession).toBe(3);
+    expect(c.checkProblems).toBe(2);
+  });
+
+  it('setArcadeConfig merges a partial update', () => {
+    useProgress.getState().setArcadeConfig({ lessonsPerSession: 2, startLevel: 3 });
+    const c = useProgress.getState().arcadeConfig;
+    expect(c.lessonsPerSession).toBe(2);
+    expect(c.startLevel).toBe(3);
+    expect(c.livesPerSession).toBe(3); // untouched
+  });
+
+  it('migrate v10 -> v11 seeds arcadeConfig + cumulative counters', () => {
+    const migrated = migrateProgress({}, 10) as {
+      arcadeConfig?: { lessonsPerSession: number };
+      cumArcadeSeconds?: number;
+      cumLessonSeconds?: number;
+      cumArcadePoints?: number;
+      cumAppSeconds?: number;
+    };
+    expect(migrated.arcadeConfig?.lessonsPerSession).toBe(1);
+    expect(migrated.cumArcadeSeconds).toBe(0);
+    expect(migrated.cumLessonSeconds).toBe(0);
+    expect(migrated.cumArcadePoints).toBe(0);
+    expect(migrated.cumAppSeconds).toBe(0);
   });
 });
 

@@ -1,9 +1,17 @@
+import { createContext, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mascot } from '../../components/Mascot';
 import { Confetti } from '../../components/Celebration';
 import { StickerCelebration } from '../../components/StickerCelebration';
-import type { ArcadePlayOutcome } from '../../state/progress';
+import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
+
+// Provided by the lesson gate (ArcadeWarmup). When present, an in-game "Play
+// again" routes back through a fresh lesson rather than restarting in place.
+export const ArcadeSessionContext = createContext<{ requestReplay: () => void } | null>(null);
+export function useArcadeSession() {
+  return useContext(ArcadeSessionContext);
+}
 
 export interface ArcadeGameDef {
   id: string;
@@ -32,16 +40,50 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {
   return (
-    <div className="mb-4 flex items-center justify-between gap-3">
-      <h1 className="text-xl font-display font-extrabold text-slate-900">
-        {emoji} {title}
-      </h1>
-      <Link
-        to="/arcade"
-        className="text-sm font-display font-bold text-slate-500 hover:text-slate-700"
-      >
-        ← Arcade
-      </Link>
+    <div className="mb-4">
+      <div className="flex items-center justify-between gap-3">
+        <h1 className="text-xl font-display font-extrabold text-slate-900">
+          {emoji} {title}
+        </h1>
+        <Link
+          to="/arcade"
+          className="text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+        >
+          ← Arcade
+        </Link>
+      </div>
+      <BalanceClock />
+    </div>
+  );
+}
+
+function fmtClock(total: number): string {
+  const s = Math.max(0, Math.floor(total));
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const sec = s % 60;
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return h > 0 ? `${h}:${pad(m)}:${pad(sec)}` : `${m}:${pad(sec)}`;
+}
+
+// A small lifetime readout shown on every arcade screen (games + the lesson
+// gate): time spent playing vs. learning, and the running lessons:games ratio,
+// so the 50/50 balance is always visible.
+export function BalanceClock() {
+  const play = useProgress((s) => s.cumArcadeSeconds);
+  const lesson = useProgress((s) => s.cumLessonSeconds);
+  const ratio = play > 0 ? lesson / play : lesson > 0 ? Infinity : 0;
+  const ratioLabel = play === 0 && lesson === 0 ? '—' : `${ratio.toFixed(1)} : 1`;
+  const total = play + lesson;
+  const lessonPct = total > 0 ? Math.round((lesson / total) * 100) : 50;
+  return (
+    <div className="mt-2 flex items-center gap-2 text-[11px] font-display font-bold text-slate-500">
+      <span className="text-indigo-600">📘 {fmtClock(lesson)}</span>
+      <div className="flex-1 h-1.5 rounded-full bg-emerald-200 overflow-hidden" title="lessons vs games">
+        <div className="h-full bg-indigo-500" style={{ width: `${lessonPct}%` }} />
+      </div>
+      <span className="text-emerald-600">🎮 {fmtClock(play)}</span>
+      <span className="tabular-nums text-slate-400">L:G {ratioLabel}</span>
     </div>
   );
 }
@@ -62,6 +104,9 @@ export function ArcadeEndCard({
   gameId: string;
 }) {
   const others = ARCADE_GAMES.filter((g) => g.id !== gameId).slice(0, 3);
+  const session = useArcadeSession();
+  const replay = session ? session.requestReplay : onReplay;
+  const replayLabel = session ? '📚 Learn & play again' : 'Play again';
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
@@ -95,10 +140,10 @@ export function ArcadeEndCard({
       )}
       <button
         type="button"
-        onClick={onReplay}
+        onClick={replay}
         className="mt-5 w-full max-w-xs min-h-12 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
       >
-        Play again
+        {replayLabel}
       </button>
       <div className="mt-4">
         <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-slate-400 mb-2">

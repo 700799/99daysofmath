@@ -2,7 +2,6 @@ import { memo, useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
-import { MiniLesson } from './MiniLesson';
 import { chooseGhostDir, DIRS, UP, DOWN, LEFT, RIGHT, type Dir } from './mazeAI';
 
 // "Gem Digger" — a Dig Dug. Tunnel through the dirt to collect every gem while
@@ -61,8 +60,9 @@ const DirtLayer = memo(function DirtLayer({ dirt }: { dirt: boolean[][]; version
 
 export function GemDigger() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
+  const addArcadePoints = useProgress((s) => s.addArcadePoints);
+  const config = useProgress((s) => s.arcadeConfig);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
-  const [phase, setPhase] = useState<'play' | 'lesson' | 'over'>('play');
   useArcadeClock(!!outcome);
 
   const dirtRef = useRef<boolean[][]>([]);
@@ -74,11 +74,10 @@ export function GemDigger() {
   const faceRef = useRef(1);
   const elapsedRef = useRef(0);
   const scoreRef = useRef(0);
-  const livesRef = useRef(3);
-  const levelRef = useRef(1);
+  const livesRef = useRef(config.livesPerSession);
+  const levelRef = useRef(config.startLevel);
   const lastRef = useRef(0);
   const rafRef = useRef(0);
-  const pendingClearRef = useRef(false);
 
   const [dirtVersion, setDirtVersion] = useState(0);
   const [, force] = useState(0);
@@ -165,7 +164,7 @@ export function GemDigger() {
   };
 
   useEffect(() => {
-    if (phase !== 'play' || outcome) return;
+    if (outcome) return;
     lastRef.current = performance.now();
 
     const playerWall = (c: number, r: number) =>
@@ -230,9 +229,17 @@ export function GemDigger() {
       }
     };
 
-    const fail = () => {
-      cancelAnimationFrame(rafRef.current);
-      setPhase('lesson');
+    // Lose a life on being caught/crushed; if any remain, respawn and keep the
+    // loop running (no mid-game lesson — the gate handles learning).
+    const wipeout = () => {
+      livesRef.current -= 1;
+      if (livesRef.current <= 0) {
+        finish();
+        return;
+      }
+      respawn();
+      redraw();
+      rafRef.current = requestAnimationFrame(tick);
     };
 
     const tick = (now: number) => {
@@ -286,7 +293,7 @@ export function GemDigger() {
           }
           const pp = renderPos(p);
           if (rk.c === p.c && Math.abs(pp.y - rk.y) < 0.6 && rk.y > p.r - 0.6) {
-            fail();
+            wipeout();
             return;
           }
           if (rk.y >= rk.stop) rk.falling = false;
@@ -298,18 +305,17 @@ export function GemDigger() {
       for (const mon of monstersRef.current) {
         const mp = renderPos(mon);
         if (Math.hypot(pp.x - mp.x, pp.y - mp.y) < 0.6) {
-          fail();
+          wipeout();
           return;
         }
       }
 
       if (gemsRef.current.size === 0) {
-        cancelAnimationFrame(rafRef.current);
         levelRef.current += 1;
-        scoreRef.current += 200;
-        // brief lesson on clear, then next level
-        pendingClearRef.current = true;
-        setPhase('lesson');
+        scoreRef.current += 200; // cave-clear bonus
+        loadLevel();
+        redraw();
+        rafRef.current = requestAnimationFrame(tick);
         return;
       }
 
@@ -320,7 +326,7 @@ export function GemDigger() {
     rafRef.current = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafRef.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, outcome]);
+  }, [outcome]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -339,36 +345,17 @@ export function GemDigger() {
   }, []);
 
   const finish = () => {
+    addArcadePoints(scoreRef.current);
     const xp = Math.max(1, Math.min(20, Math.floor(scoreRef.current / 60) + levelRef.current * 2));
     setOutcome(recordArcadePlay('digger', xp));
-    setPhase('over');
-  };
-
-  const onLessonDone = () => {
-    if (pendingClearRef.current) {
-      pendingClearRef.current = false;
-      loadLevel();
-      elapsedRef.current = 0;
-      setPhase('play');
-      return;
-    }
-    livesRef.current -= 1;
-    if (livesRef.current <= 0) {
-      finish();
-      return;
-    }
-    respawn();
-    setPhase('play');
   };
 
   const reset = () => {
     scoreRef.current = 0;
-    livesRef.current = 3;
-    levelRef.current = 1;
-    pendingClearRef.current = false;
+    livesRef.current = config.livesPerSession;
+    levelRef.current = config.startLevel;
     loadLevel();
     setOutcome(null);
-    setPhase('play');
   };
 
   if (outcome) {
@@ -386,17 +373,6 @@ export function GemDigger() {
     );
   }
 
-  if (phase === 'lesson') {
-    return (
-      <div>
-        <ArcadeHeader title="Gem Digger" emoji="⛏️" />
-        <MiniLesson
-          onDone={onLessonDone}
-          heading={pendingClearRef.current ? 'Cave cleared — quick lesson' : 'Caught! Quick lesson'}
-        />
-      </div>
-    );
-  }
 
   const pp = renderPos(playerRef.current);
 
@@ -404,7 +380,7 @@ export function GemDigger() {
     <div>
       <ArcadeHeader title="Gem Digger" emoji="⛏️" />
       <div className="flex justify-between items-center mb-2 max-w-sm mx-auto px-1 text-sm font-display font-extrabold">
-        <span className="text-rose-600">{'❤️'.repeat(livesRef.current)}{'🤍'.repeat(Math.max(0, 3 - livesRef.current))}</span>
+        <span className="text-rose-600">{'❤️'.repeat(Math.max(0, livesRef.current))}{'🤍'.repeat(Math.max(0, config.livesPerSession - livesRef.current))}</span>
         <span className="text-slate-700 tabular-nums">⭐ {scoreRef.current}</span>
         <span className="text-cyan-600 tabular-nums">💎 {gemsRef.current.size}</span>
         <span className="text-indigo-600">Lvl {levelRef.current}</span>

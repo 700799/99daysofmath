@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
-import { MiniLesson } from './MiniLesson';
 
 // "Leap Frog" — a Frogger. Hop up across lanes of traffic, then ride logs and
 // turtles over a river to reach the lily pads up top. Get squashed, drowned,
@@ -70,19 +69,19 @@ function turtleUp(elapsed: number, laneRow: number): boolean {
 
 export function LeapFrog() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
+  const addArcadePoints = useProgress((s) => s.addArcadePoints);
+  const config = useProgress((s) => s.arcadeConfig);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
-  const [phase, setPhase] = useState<'play' | 'lesson' | 'over'>('play');
   useArcadeClock(!!outcome);
 
   const frogRef = useRef({ x: 6, r: START_ROW });
-  const lanesRef = useRef<Lane[]>(buildLanes(1));
+  const lanesRef = useRef<Lane[]>(buildLanes(config.startLevel));
   const filledRef = useRef<boolean[]>([false, false, false]);
   const elapsedRef = useRef(0);
   const timerRef = useRef(20);
   const scoreRef = useRef(0);
-  const livesRef = useRef(3);
-  const levelRef = useRef(1);
-  const pendingFailRef = useRef(false);
+  const livesRef = useRef(config.livesPerSession);
+  const levelRef = useRef(config.startLevel);
   const lastRef = useRef(0);
   const rafRef = useRef(0);
   const [, force] = useState(0);
@@ -93,15 +92,20 @@ export function LeapFrog() {
     timerRef.current = Math.max(9, 20 - levelRef.current * 1.5);
   };
 
-  const fail = () => {
-    cancelAnimationFrame(rafRef.current);
-    pendingFailRef.current = true;
-    setPhase('lesson');
+  // Lose a life; if none left, end the run. Otherwise reset the frog and the
+  // session keeps going (no mid-game lesson — the gate handles learning).
+  const loseLife = () => {
+    livesRef.current -= 1;
+    if (livesRef.current <= 0) {
+      finish();
+      return;
+    }
+    resetFrog();
   };
 
   // hop input
   const hop = (dx: number, dy: number) => {
-    if (phase !== 'play') return;
+    if (outcome) return;
     const f = frogRef.current;
     const nr = Math.max(0, Math.min(ROWS - 1, f.r + dy));
     let nx = f.x + dx;
@@ -123,7 +127,7 @@ export function LeapFrog() {
         }
         resetFrog();
       } else {
-        fail(); // missed the pad
+        loseLife(); // missed the pad
       }
     }
     redraw();
@@ -142,13 +146,22 @@ export function LeapFrog() {
   });
 
   useEffect(() => {
-    if (phase !== 'play' || outcome) return;
+    if (outcome) return;
     lastRef.current = performance.now();
     const tick = (now: number) => {
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
       elapsedRef.current += dt;
       timerRef.current -= dt;
+
+      // On any wipe-out: lose a life and (if still alive) keep the loop going.
+      const wipeout = () => {
+        loseLife();
+        if (livesRef.current > 0) {
+          redraw();
+          rafRef.current = requestAnimationFrame(tick);
+        }
+      };
 
       // move lane objects
       for (const lane of lanesRef.current) {
@@ -179,11 +192,11 @@ export function LeapFrog() {
         if (onRide && lane) {
           f.x += lane.dir * lane.speed * dt;
           if (f.x < -0.2 || f.x > COLS - 0.8) {
-            fail();
+            wipeout();
             return;
           }
         } else {
-          fail(); // drowned
+          wipeout(); // drowned
           return;
         }
       }
@@ -194,7 +207,7 @@ export function LeapFrog() {
         if (lane) {
           for (const o of lane.objs) {
             if (f.x + 0.5 > o.x && f.x + 0.5 < o.x + o.w) {
-              fail(); // squashed
+              wipeout(); // squashed
               return;
             }
           }
@@ -202,7 +215,7 @@ export function LeapFrog() {
       }
 
       if (timerRef.current <= 0) {
-        fail();
+        wipeout();
         return;
       }
 
@@ -212,35 +225,23 @@ export function LeapFrog() {
     rafRef.current = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafRef.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, outcome]);
+  }, [outcome]);
 
   const finish = () => {
+    addArcadePoints(scoreRef.current);
     const xp = Math.max(1, Math.min(20, Math.floor(scoreRef.current / 60) + levelRef.current * 2));
     setOutcome(recordArcadePlay('frogger', xp));
-    setPhase('over');
-  };
-
-  const onLessonDone = () => {
-    pendingFailRef.current = false;
-    livesRef.current -= 1;
-    if (livesRef.current <= 0) {
-      finish();
-      return;
-    }
-    resetFrog();
-    setPhase('play');
   };
 
   const reset = () => {
     scoreRef.current = 0;
-    livesRef.current = 3;
-    levelRef.current = 1;
+    livesRef.current = config.livesPerSession;
+    levelRef.current = config.startLevel;
     filledRef.current = [false, false, false];
-    lanesRef.current = buildLanes(1);
+    lanesRef.current = buildLanes(config.startLevel);
     elapsedRef.current = 0;
     resetFrog();
     setOutcome(null);
-    setPhase('play');
   };
 
   if (outcome) {
@@ -254,15 +255,6 @@ export function LeapFrog() {
           scoreLine={`Level ${levelRef.current} · ${scoreRef.current} points`}
           onReplay={reset}
         />
-      </div>
-    );
-  }
-
-  if (phase === 'lesson') {
-    return (
-      <div>
-        <ArcadeHeader title="Leap Frog" emoji="🐸" />
-        <MiniLesson onDone={onLessonDone} heading="Wiped out — quick lesson" />
       </div>
     );
   }
@@ -281,7 +273,7 @@ export function LeapFrog() {
     <div>
       <ArcadeHeader title="Leap Frog" emoji="🐸" />
       <div className="flex justify-between items-center mb-2 max-w-sm mx-auto px-1 text-sm font-display font-extrabold">
-        <span className="text-rose-600">{'❤️'.repeat(livesRef.current)}{'🤍'.repeat(Math.max(0, 3 - livesRef.current))}</span>
+        <span className="text-rose-600">{'❤️'.repeat(Math.max(0, livesRef.current))}{'🤍'.repeat(Math.max(0, config.livesPerSession - livesRef.current))}</span>
         <span className="text-slate-700 tabular-nums">⭐ {scoreRef.current}</span>
         <span className="text-orange-600 tabular-nums">⏱ {Math.max(0, Math.ceil(timerRef.current))}s</span>
         <span className="text-indigo-600">Lvl {levelRef.current}</span>
