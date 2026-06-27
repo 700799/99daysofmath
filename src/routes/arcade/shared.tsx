@@ -40,6 +40,8 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'snake', path: '/arcade/snake', emoji: '🐍', name: 'Math Snake', blurb: 'Eat the right answer.', baseXp: 10, gradient: 'from-lime-500 to-green-700' },
   { id: 'bricks', path: '/arcade/bricks', emoji: '🧱', name: 'Brick Breaker', blurb: 'Bounce and smash bricks.', baseXp: 10, gradient: 'from-violet-500 to-indigo-700' },
   { id: 'sudoku', path: '/arcade/sudoku', emoji: '🧩', name: 'Sudoku', blurb: 'Fill the 9×9 grid.', baseXp: 10, gradient: 'from-slate-500 to-slate-700' },
+  { id: 'tetris', path: '/arcade/tetris', emoji: '👾', name: 'Alien Tetris', blurb: 'Stack & clear the aliens.', baseXp: 10, gradient: 'from-purple-500 to-fuchsia-700' },
+  { id: 'bubbles', path: '/arcade/bubbles', emoji: '🫧', name: 'Bubble Pop', blurb: 'Match 3 to pop.', baseXp: 10, gradient: 'from-sky-500 to-cyan-600' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {
