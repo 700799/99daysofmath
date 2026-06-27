@@ -32,6 +32,8 @@ const RaceCar = lazy(() => import('./routes/arcade/RaceCar').then((m) => ({ defa
 const HungryHippo = lazy(() => import('./routes/arcade/HungryHippo').then((m) => ({ default: m.HungryHippo })));
 const LeapFrog = lazy(() => import('./routes/arcade/LeapFrog').then((m) => ({ default: m.LeapFrog })));
 const GemDigger = lazy(() => import('./routes/arcade/GemDigger').then((m) => ({ default: m.GemDigger })));
+const Twenty48 = lazy(() => import('./routes/arcade/Twenty48').then((m) => ({ default: m.Twenty48 })));
+const Snake = lazy(() => import('./routes/arcade/Snake').then((m) => ({ default: m.Snake })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -80,6 +82,8 @@ export default function App() {
           <Route path="/arcade/hippo" element={<ArcadeGate title="Hungry Hippo"><HungryHippo /></ArcadeGate>} />
           <Route path="/arcade/frogger" element={<ArcadeGate title="Leap Frog"><LeapFrog /></ArcadeGate>} />
           <Route path="/arcade/digger" element={<ArcadeGate title="Gem Digger"><GemDigger /></ArcadeGate>} />
+          <Route path="/arcade/2048" element={<ArcadeGate title="2048"><Twenty48 /></ArcadeGate>} />
+          <Route path="/arcade/snake" element={<ArcadeGate title="Math Snake"><Snake /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
