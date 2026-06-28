@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 const GAME_SECONDS = 60;
@@ -34,6 +34,7 @@ export function Fishing() {
   const [splash, setSplash] = useState<string | null>(null);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
   const nextId = useRef(1);
   const doneRef = useRef(false);
   const scoreRef = useRef(0);
@@ -48,6 +49,11 @@ export function Fishing() {
     let spawnIn = 0.2;
     let raf = 0;
     const tick = (now: number) => {
+      if (pausedRef.current) {
+        last = now;
+        raf = requestAnimationFrame(tick);
+        return;
+      }
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       spawnIn -= dt;
@@ -76,7 +82,9 @@ export function Fishing() {
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
-    const timer = setInterval(() => setTimeLeft((s) => Math.max(0, s - 1)), 1000);
+    const timer = setInterval(() => {
+      if (!pausedRef.current) setTimeLeft((s) => Math.max(0, s - 1));
+    }, 1000);
     return () => {
       cancelAnimationFrame(raf);
       clearInterval(timer);

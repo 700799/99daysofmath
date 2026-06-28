@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // "Leap Frog" — a Frogger. Hop up across lanes of traffic, then ride logs and
@@ -34,8 +34,8 @@ type Lane = {
 
 function buildLanes(level: number): Lane[] {
   const lanes: Lane[] = [];
-  const roadBase = 2.0 + level * 0.55;
-  const riverBase = 1.4 + level * 0.35;
+  const roadBase = 1.3 + level * 0.35;
+  const riverBase = 0.95 + level * 0.22;
   ROAD_ROWS.forEach((row, i) => {
     const dir: 1 | -1 = i % 2 === 0 ? -1 : 1;
     const truck = i % 2 === 1;
@@ -73,6 +73,7 @@ export function LeapFrog() {
   const config = useProgress((s) => s.arcadeConfig);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
 
   const frogRef = useRef({ x: 6, r: START_ROW });
   const lanesRef = useRef<Lane[]>(buildLanes(config.startLevel));
@@ -149,6 +150,11 @@ export function LeapFrog() {
     if (outcome) return;
     lastRef.current = performance.now();
     const tick = (now: number) => {
+      if (pausedRef.current) {
+        lastRef.current = now;
+        rafRef.current = requestAnimationFrame(tick);
+        return;
+      }
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
       elapsedRef.current += dt;

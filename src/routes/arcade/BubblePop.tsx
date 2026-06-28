@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Bubble Pop — a number bubble shooter. Aim with the sweeping arrow, tap to
@@ -37,6 +37,7 @@ export function BubblePop() {
   const [, force] = useState(0);
   const redraw = () => force((n) => n + 1);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
 
   const buildGrid = () => {
     const g: number[][] = Array.from({ length: ROWS }, () => new Array(COLS).fill(0));
@@ -78,6 +79,11 @@ export function BubblePop() {
     if (outcome) return;
     lastRef.current = performance.now();
     const loop = (now: number) => {
+      if (pausedRef.current) {
+        lastRef.current = now;
+        rafRef.current = requestAnimationFrame(loop);
+        return;
+      }
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
       let a = angleRef.current + dirRef.current * SWEEP * dt;

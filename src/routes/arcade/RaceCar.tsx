@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // 3-lane top-down racer. Auto-drives forward; tap left/right to swap lanes.
@@ -23,6 +23,7 @@ export function RaceCar() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
 
   const laneRef = useRef<0 | 1 | 2>(1);
   const obstaclesRef = useRef<Obstacle[]>([]);
@@ -57,6 +58,11 @@ export function RaceCar() {
   useEffect(() => {
     if (outcome) return;
     const tick = (now: number) => {
+      if (pausedRef.current) {
+        lastTickRef.current = now;
+        rafRef.current = requestAnimationFrame(tick);
+        return;
+      }
       const dt = Math.min(0.05, (now - lastTickRef.current) / 1000);
       lastTickRef.current = now;
 

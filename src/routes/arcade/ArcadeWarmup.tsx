@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type { Problem } from '../../types/problem';
 import { getAllProblems } from '../../data/problems';
 import { isEquivalent } from '../../data/normalize';
@@ -9,13 +9,16 @@ import { LessonCard } from '../../components/LessonCard';
 import { LESSONS, type Lesson } from '../../data/lessons';
 import { useProgress, type ArcadeConfig } from '../../state/progress';
 import { useLessonClock } from '../../hooks/useLessonClock';
-import { ArcadeHeader, ArcadeSessionContext } from './shared';
+import { ArcadeHeader, ArcadeSessionContext, ARCADE_GAMES } from './shared';
+import { MidGameChallenge } from './MidGameChallenge';
+import { HeroSplash } from './HeroSplash';
 
 // The arcade "learn-to-play" gate. A full lesson + a hard difficulty-3 check
 // must be completed to start a game (and to play again). One lesson unlocks one
 // game session; the admin can require more than one via `lessonsPerSession`.
 // Lessons are always hard, never easy. Lesson time is tracked toward the
-// cumulative lesson:game balance.
+// cumulative lesson:game balance, and (via `earnRatio`) earns game time.
+// While unlocked, a mid-game math challenge can interrupt play at an interval.
 
 function pick<T>(a: T[]): T {
   return a[Math.floor(Math.random() * a.length)];
@@ -38,56 +41,105 @@ function pickHardLesson(startLevel: number): Lesson {
 
 export function ArcadeGate({ title, children }: { title: string; children: ReactNode }) {
   const config = useProgress((s) => s.arcadeConfig);
+  const cumArcade = useProgress((s) => s.cumArcadeSeconds);
+  const cumLesson = useProgress((s) => s.cumLessonSeconds);
   const [unlocked, setUnlocked] = useState(false);
   const [sessionKey, setSessionKey] = useState(0);
   const [lessonsDone, setLessonsDone] = useState(0);
+  const [challengeActive, setChallengeActive] = useState(false);
+  const [showSplash, setShowSplash] = useState(config.unlimited);
+  const playSecRef = useRef(0);
 
   // Count lesson time toward the balance only while the gate is showing.
   useLessonClock(unlocked);
 
   const need = Math.max(1, config.lessonsPerSession);
+  const game = ARCADE_GAMES.find((g) => g.name === title);
+
+  // Time budget: you can't play more game time than your lessons have earned.
+  const overBudget = config.earnRatio > 0 && cumArcade >= cumLesson * config.earnRatio;
+  useEffect(() => {
+    if (unlocked && !config.unlimited && overBudget) {
+      setUnlocked(false);
+      setLessonsDone(0);
+      setChallengeActive(false);
+    }
+  }, [unlocked, overBudget, config.unlimited]);
+
+  // Mid-game challenge timer — counts active play seconds while a game is up.
+  useEffect(() => {
+    if (!unlocked || challengeActive || config.challengeInterval <= 0) return;
+    const id = window.setInterval(() => {
+      if (document.hidden) return;
+      playSecRef.current += 1;
+      if (playSecRef.current >= config.challengeInterval) {
+        playSecRef.current = 0;
+        setChallengeActive(true);
+      }
+    }, 1000);
+    return () => window.clearInterval(id);
+  }, [unlocked, challengeActive, config.challengeInterval]);
+
+  const enterPlay = () => {
+    setLessonsDone(0);
+    setSessionKey((k) => k + 1);
+    playSecRef.current = 0;
+    setChallengeActive(false);
+    setShowSplash(true);
+    setUnlocked(true);
+  };
 
   const onLessonComplete = () => {
     const n = lessonsDone + 1;
-    if (n >= need) {
-      setLessonsDone(0);
-      setSessionKey((k) => k + 1);
-      setUnlocked(true);
-    } else {
-      setLessonsDone(n);
-    }
+    if (n >= need) enterPlay();
+    else setLessonsDone(n);
   };
 
   const requestReplay = () => {
     if (config.unlimited) {
       setSessionKey((k) => k + 1); // unlimited: just restart, no lesson
+      playSecRef.current = 0;
+      setChallengeActive(false);
+      setShowSplash(true);
       return;
     }
     setUnlocked(false);
     setLessonsDone(0);
+    setChallengeActive(false);
   };
 
-  // Admin override: skip the lesson gate entirely and play freely.
-  if (config.unlimited) {
-    return (
-      <ArcadeSessionContext.Provider value={{ requestReplay }}>
-        <div key={sessionKey}>{children}</div>
-      </ArcadeSessionContext.Provider>
-    );
-  }
+  const playArea = (
+    <ArcadeSessionContext.Provider value={{ requestReplay, paused: challengeActive }}>
+      <div key={sessionKey}>{children}</div>
+      {challengeActive && config.challengeInterval > 0 && (
+        <MidGameChallenge
+          count={config.challengeCount}
+          level={config.challengeLevel}
+          onDone={() => {
+            setChallengeActive(false);
+            playSecRef.current = 0;
+          }}
+        />
+      )}
+      {showSplash && game && (
+        <HeroSplash
+          emoji={game.emoji}
+          name={game.name}
+          subtitle="Let's play!"
+          gradient={game.gradient}
+          onDone={() => setShowSplash(false)}
+        />
+      )}
+    </ArcadeSessionContext.Provider>
+  );
 
-  if (unlocked) {
-    return (
-      <ArcadeSessionContext.Provider value={{ requestReplay }}>
-        <div key={sessionKey}>{children}</div>
-      </ArcadeSessionContext.Provider>
-    );
-  }
+  if (config.unlimited || unlocked) return playArea;
 
   return (
     <LessonGate
       key={`${sessionKey}-${lessonsDone}`}
       title={title}
+      emoji={game?.emoji ?? '🎯'}
       config={config}
       index={lessonsDone}
       total={need}
@@ -98,22 +150,35 @@ export function ArcadeGate({ title, children }: { title: string; children: React
 
 function LessonGate({
   title,
+  emoji,
   config,
   index,
   total,
   onComplete,
 }: {
   title: string;
+  emoji: string;
   config: ArcadeConfig;
   index: number;
   total: number;
   onComplete: () => void;
 }) {
   const [lesson] = useState(() => pickHardLesson(config.startLevel));
-  const [phase, setPhase] = useState<'teach' | 'check'>('teach');
+  const [phase, setPhase] = useState<'teach' | 'check' | 'wait'>('teach');
   const [problems, setProblems] = useState<Problem[] | null>(null);
+  const [splash, setSplash] = useState(index === 0);
+  const [gateSecs, setGateSecs] = useState(0);
 
   const count = Math.max(1, config.checkProblems);
+  const floor = Math.max(0, config.minLessonSeconds);
+
+  // Track time spent in this lesson visit (for the min-lesson-time floor).
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      if (!document.hidden) setGateSecs((s) => s + 1);
+    }, 1000);
+    return () => window.clearInterval(id);
+  }, []);
 
   useEffect(() => {
     if (phase !== 'check' || problems) return;
@@ -132,19 +197,59 @@ function LessonGate({
     };
   }, [phase, problems, lesson.domain, count]);
 
+  // When the hard check passes, only unlock once the lesson-time floor is met.
+  const onPassed = () => {
+    if (gateSecs >= floor) onComplete();
+    else setPhase('wait');
+  };
+
+  useEffect(() => {
+    if (phase === 'wait' && gateSecs >= floor) onComplete();
+  }, [phase, gateSecs, floor, onComplete]);
+
+  if (splash) {
+    return (
+      <HeroSplash
+        emoji="📚"
+        name="Warm-up!"
+        subtitle={title}
+        gradient="from-indigo-500 to-violet-600"
+        onDone={() => setSplash(false)}
+      />
+    );
+  }
+
   if (phase === 'teach') {
     // The full lesson (concept + worked examples + practice). It walks every
     // page each time; on finish we move to the hard check.
     return <LessonCard lesson={lesson} onClose={() => setPhase('check')} onStart={() => setPhase('check')} />;
   }
 
+  if (phase === 'wait') {
+    const left = Math.max(0, floor - gateSecs);
+    return (
+      <div>
+        <ArcadeHeader title={title} emoji={emoji} />
+        <div className="max-w-md mx-auto text-center py-12">
+          <div className="text-5xl">⏳</div>
+          <h2 className="mt-3 text-xl font-display font-extrabold text-slate-900">
+            Keep learning!
+          </h2>
+          <p className="mt-2 text-slate-600 font-display font-bold">
+            A little more practice time before you play — {left}s to go.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div>
-      <ArcadeHeader title={title} emoji="🎯" />
+      <ArcadeHeader title={title} emoji={emoji} />
       <HardCheck
         problems={problems}
         lessonLabel={total > 1 ? `Lesson ${index + 1} of ${total} · ` : ''}
-        onPassed={onComplete}
+        onPassed={onPassed}
       />
     </div>
   );

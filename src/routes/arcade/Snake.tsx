@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Math Snake — steer the snake to eat the food labelled with the correct
@@ -64,6 +64,7 @@ export function Snake() {
   const redraw = () => force((n) => n + 1);
 
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
 
   const level = () => config.startLevel + Math.floor(eatenRef.current / 5);
   const stepInterval = () => Math.max(0.08, 0.22 - snakeRef.current.length * 0.004 - level() * 0.01);
@@ -169,6 +170,11 @@ export function Snake() {
       }
     };
     const tick = (now: number) => {
+      if (pausedRef.current) {
+        lastRef.current = now;
+        rafRef.current = requestAnimationFrame(tick);
+        return;
+      }
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
       accRef.current += dt;

@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // 2048 — slide and merge numbered tiles. Pure math (doubling/addition), and
@@ -105,11 +105,13 @@ export function Twenty48() {
   const [best, setBest] = useState(0);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
+  const swipeRef = useRef<{ x: number; y: number } | null>(null);
 
   // The keydown effect re-registers every render and the D-pad calls this from
   // render, so `grid`/`score` here are always current.
   const doMove = (dir: Dir) => {
-    if (outcome) return;
+    if (outcome || pausedRef.current) return;
     const { grid: ng, gained, moved } = move(grid, dir);
     if (!moved) return;
     const withSpawn = spawn(ng);
@@ -126,6 +128,7 @@ export function Twenty48() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      if (pausedRef.current) return;
       let d: Dir | null = null;
       if (e.key === 'ArrowLeft' || e.key === 'a') d = 'left';
       else if (e.key === 'ArrowRight' || e.key === 'd') d = 'right';
@@ -172,7 +175,23 @@ export function Twenty48() {
         <span className="text-amber-600 tabular-nums">Best {best}</span>
       </div>
 
-      <div className="mx-auto rounded-2xl bg-[#bbada0] p-2" style={{ width: '100%', maxWidth: 320 }}>
+      <div
+        className="mx-auto rounded-2xl bg-[#bbada0] p-2 touch-none"
+        style={{ width: '100%', maxWidth: 320 }}
+        onPointerDown={(e) => {
+          swipeRef.current = { x: e.clientX, y: e.clientY };
+        }}
+        onPointerUp={(e) => {
+          const s = swipeRef.current;
+          swipeRef.current = null;
+          if (!s) return;
+          const dx = e.clientX - s.x;
+          const dy = e.clientY - s.y;
+          if (Math.max(Math.abs(dx), Math.abs(dy)) < 24) return;
+          if (Math.abs(dx) > Math.abs(dy)) doMove(dx > 0 ? 'right' : 'left');
+          else doMove(dy > 0 ? 'down' : 'up');
+        }}
+      >
         <div className="grid grid-cols-4 gap-2" style={{ aspectRatio: '1 / 1' }}>
           {grid.flatMap((row, r) =>
             row.map((v, c) => (

@@ -1,6 +1,6 @@
 import { memo, useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { chooseGhostDir, UP, DOWN, LEFT, RIGHT, type Dir, type Target } from './mazeAI';
 
@@ -140,6 +140,7 @@ export function HungryHippo() {
   const config = useProgress((s) => s.arcadeConfig);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
 
   const hippoRef = useRef<Mob>({ c: 9, r: ROWS - 2, tc: 9, tr: ROWS - 2, prog: 0, dir: null });
   const ghostsRef = useRef<Ghost[]>([]);
@@ -294,18 +295,23 @@ export function HungryHippo() {
     };
 
     const tick = (now: number) => {
+      if (pausedRef.current) {
+        lastRef.current = now;
+        rafRef.current = requestAnimationFrame(tick);
+        return;
+      }
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
       if (frightRef.current > 0) frightRef.current = Math.max(0, frightRef.current - dt);
 
       const hp = hippoRef.current;
-      const hippoSpeed = 5.2;
+      const hippoSpeed = 3.8;
       stepMob(hp, dt, hippoSpeed, decideHippo, () => eatAt(hp.c, hp.r));
       eatAt(hp.c, hp.r);
 
-      const gSpeedBase = 4.0 + (levelRef.current - 1) * 0.4;
+      const gSpeedBase = 2.8 + (levelRef.current - 1) * 0.28;
       for (const g of ghostsRef.current) {
-        const speed = frightRef.current > 0 ? 2.6 : Math.min(6, gSpeedBase);
+        const speed = frightRef.current > 0 ? 1.9 : Math.min(6, gSpeedBase);
         stepMob(g, dt, speed, () => decideGhost(g));
       }
 

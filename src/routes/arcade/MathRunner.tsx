@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Three-lane endless runner. The player picks a lane to "catch" the correct
@@ -114,6 +114,7 @@ export function MathRunner() {
   const [character, setCharacter] = useState<Character>('🏃');
   const [started, setStarted] = useState(false);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
 
   // World state — refs because the RAF loop drives them; render is via a
   // single redraw tick.
@@ -160,6 +161,11 @@ export function MathRunner() {
   useEffect(() => {
     if (outcome || !started) return;
     const tick = (now: number) => {
+      if (pausedRef.current) {
+        lastTickRef.current = now;
+        rafRef.current = requestAnimationFrame(tick);
+        return;
+      }
       const dt = Math.min(0.05, (now - lastTickRef.current) / 1000);
       lastTickRef.current = now;
       timeLeftRef.current -= dt;

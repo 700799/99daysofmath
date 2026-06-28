@@ -63,6 +63,12 @@ export interface ArcadeConfig {
   checkProblems: number; // # of difficulty-3 problems in the hard check
   adminPin: string; // gate for the grown-ups settings panel
   unlimited?: boolean; // admin override: skip the lesson gate, play freely
+  challengeInterval: number; // seconds of play between mid-game challenges (0 = off)
+  challengeCount: number; // # of problems per mid-game challenge
+  challengeLevel: number; // difficulty (1–5) of mid-game challenge problems
+  minLessonSeconds: number; // min lesson time required per gate before unlock (0 = off)
+  earnRatio: number; // game seconds earned per lesson second; play capped at lessonTime*ratio (0 = off)
+  hiddenGames: string[]; // arcade game ids the parent has turned off (hidden from the hub)
 }
 
 interface ProgressState {
@@ -323,6 +329,12 @@ const v11Defaults = {
     checkProblems: 2,
     adminPin: '13680',
     unlimited: false,
+    challengeInterval: 20,
+    challengeCount: 3,
+    challengeLevel: 2,
+    minLessonSeconds: 0,
+    earnRatio: 1,
+    hiddenGames: [],
   } as ArcadeConfig,
   cumArcadeSeconds: 0,
   cumLessonSeconds: 0,
@@ -439,6 +451,21 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
     // default (custom PINs untouched).
     const cfg = (state as Record<string, unknown>).arcadeConfig as ArcadeConfig | undefined;
     if (cfg && cfg.adminPin === '3680') cfg.adminPin = '13680';
+  }
+  if (fromVersion < 14) {
+    // New arcade-config fields: mid-game math challenge (on by default) and an
+    // optional lesson-time floor. Seed any install missing them.
+    const cfg = (state as Record<string, unknown>).arcadeConfig as
+      | (ArcadeConfig & Record<string, unknown>)
+      | undefined;
+    if (cfg) {
+      if (cfg.challengeInterval === undefined) cfg.challengeInterval = 20;
+      if (cfg.challengeCount === undefined) cfg.challengeCount = 3;
+      if (cfg.challengeLevel === undefined) cfg.challengeLevel = 2;
+      if (cfg.minLessonSeconds === undefined) cfg.minLessonSeconds = 0;
+      if (cfg.earnRatio === undefined) cfg.earnRatio = 1;
+      if (cfg.hiddenGames === undefined) cfg.hiddenGames = [];
+    }
   }
   return state;
 }
@@ -955,7 +982,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 13,
+      version: 14,
       migrate: migrateProgress,
     },
   ),

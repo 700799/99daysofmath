@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Taiko-style rhythm tap — cute characters drift into the hit zone; tap the
@@ -38,6 +38,7 @@ export function TaikoTap() {
   const [, force] = useState(0);
   const redraw = () => force((n) => n + 1);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
 
   const speed = () => 150 + config.startLevel * 15 + (SESSION - timeRef.current) * 2;
 
@@ -53,6 +54,11 @@ export function TaikoTap() {
     if (outcome) return;
     lastRef.current = performance.now();
     const tick = (now: number) => {
+      if (pausedRef.current) {
+        lastRef.current = now;
+        rafRef.current = requestAnimationFrame(tick);
+        return;
+      }
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
       elapsedRef.current += dt;

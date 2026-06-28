@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Minimal 2D Mario-style platformer. Tile-based level, gravity + jump physics,
@@ -177,6 +177,7 @@ export function Platformer() {
   const [levelIdx, setLevelIdx] = useState(initialLevel);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
 
   const level = useRef(buildLevel(levelIdx));
   const playerRef = useRef<Player>({ x: TILE, y: TILE * 5, vx: 0, vy: 0, onGround: false, invuln: 0 });
@@ -241,7 +242,7 @@ export function Platformer() {
       const dt = Math.min(0.04, (now - lastTickRef.current) / 1000);
       lastTickRef.current = now;
 
-      if (pausedQuestionRef.current) {
+      if (pausedQuestionRef.current || pausedRef.current) {
         rafRef.current = requestAnimationFrame(tick);
         return;
       }

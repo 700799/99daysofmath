@@ -1,6 +1,6 @@
 import { memo, useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { chooseGhostDir, DIRS, UP, DOWN, LEFT, RIGHT, type Dir } from './mazeAI';
 
@@ -14,7 +14,7 @@ const ROWS = 13;
 const TILE = 24;
 const W = COLS * TILE;
 const H = ROWS * TILE;
-const FALL_SPEED = 9; // tiles / sec
+const FALL_SPEED = 6; // tiles / sec
 
 type Mob = { c: number; r: number; tc: number; tr: number; prog: number; dir: Dir | null };
 type Monster = Mob & { home: { c: number; r: number }; canDig: boolean };
@@ -64,6 +64,7 @@ export function GemDigger() {
   const config = useProgress((s) => s.arcadeConfig);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
 
   const dirtRef = useRef<boolean[][]>([]);
   const gemsRef = useRef<Set<string>>(new Set());
@@ -243,16 +244,21 @@ export function GemDigger() {
     };
 
     const tick = (now: number) => {
+      if (pausedRef.current) {
+        lastRef.current = now;
+        rafRef.current = requestAnimationFrame(tick);
+        return;
+      }
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
       elapsedRef.current += dt;
 
       const p = playerRef.current;
-      stepMob(p, dt, 5.4, decidePlayer, () => dig(p.c, p.r));
+      stepMob(p, dt, 3.8, decidePlayer, () => dig(p.c, p.r));
 
       // monsters wake / gain digging with time (sooner on higher levels)
       const digDelay = Math.max(2.5, 6 - levelRef.current);
-      const mSpeed = Math.min(4.8, 3.0 + (levelRef.current - 1) * 0.35);
+      const mSpeed = Math.min(4.8, 2.1 + (levelRef.current - 1) * 0.24);
       for (const mon of monstersRef.current) {
         if (!mon.canDig && elapsedRef.current > digDelay) mon.canDig = true;
         stepMob(mon, dt, mon.canDig ? mSpeed * 0.85 : mSpeed, () => decideMonster(mon), () => {
