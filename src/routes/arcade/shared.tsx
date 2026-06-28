@@ -64,6 +64,10 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'kpop', path: '/arcade/kpop', emoji: '🎤', name: 'K-Pop Dress-Up', blurb: 'Memorize & match the look.', baseXp: 10, gradient: 'from-fuchsia-500 to-pink-600' },
   { id: 'survival', path: '/arcade/survival', emoji: '🏕️', name: 'Forest Survival', blurb: 'Last as many days as you can.', baseXp: 12, gradient: 'from-green-700 to-emerald-900' },
   { id: 'fruit', path: '/arcade/fruit', emoji: '🍉', name: 'Fruit Slice', blurb: 'Swipe to slice. Dodge bombs!', baseXp: 10, gradient: 'from-lime-500 to-red-500' },
+  { id: 'survivors', path: '/arcade/survivors', emoji: '🐹', name: 'Mochi Survivors', blurb: 'Auto-battle the swarm. 5 stages.', baseXp: 12, gradient: 'from-indigo-500 to-purple-700' },
+  { id: 'town', path: '/arcade/town', emoji: '🏙️', name: 'Pocket Town', blurb: 'Build a city. Grow the tiers.', baseXp: 12, gradient: 'from-sky-500 to-emerald-600' },
+  { id: 'rogue', path: '/arcade/rogue', emoji: '🗡️', name: 'Rogue Dungeon', blurb: 'Crawl deeper. Don\'t die.', baseXp: 12, gradient: 'from-stone-600 to-amber-900' },
+  { id: 'space', path: '/arcade/space', emoji: '🚀', name: 'Space Blaster', blurb: 'Blast waves. Beat the bosses.', baseXp: 12, gradient: 'from-slate-700 to-indigo-900' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {

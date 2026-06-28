@@ -11,6 +11,8 @@ export function Settings() {
   const reset = useProgress((s) => s.resetAll);
   const soundOn = useProgress((s) => s.soundEnabled);
   const toggleSound = useProgress((s) => s.toggleSound);
+  const hapticsOn = useProgress((s) => s.hapticsEnabled);
+  const toggleHaptics = useProgress((s) => s.toggleHaptics);
   const dailyStreak = useProgress((s) => s.dailyStreak);
   const bestDailyStreak = useProgress((s) => s.bestDailyStreak);
   const bestStreak = useProgress((s) => s.bestStreak);
@@ -100,6 +102,30 @@ export function Settings() {
             ].join(' ')}
           >
             {soundOn ? '🔊 On' : '🔇 Off'}
+          </button>
+        </div>
+      </div>
+
+      <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
+        <div className="flex items-center justify-between gap-4">
+          <div>
+            <div className="font-display font-extrabold text-slate-900">Vibration</div>
+            <div className="text-sm text-slate-600 mt-1">
+              Haptic buzzes in the arcade games (where supported).
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={toggleHaptics}
+            aria-pressed={hapticsOn}
+            className={[
+              'min-h-11 px-4 rounded-full font-display font-extrabold text-sm transition-colors',
+              hapticsOn
+                ? 'bg-duo-green text-white hover:bg-duo-green-dark'
+                : 'bg-slate-200 text-slate-700 hover:bg-slate-300',
+            ].join(' ')}
+          >
+            {hapticsOn ? '📳 On' : 'Off'}
           </button>
         </div>
       </div>

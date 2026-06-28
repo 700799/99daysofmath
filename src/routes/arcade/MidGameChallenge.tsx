@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useProgress } from '../../state/progress';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // A quick math interruption that pops up during any game at an admin-set
 // interval. The player must answer every problem correctly to resume — a wrong
@@ -76,6 +77,7 @@ export function MidGameChallenge({
   onDone: () => void;
 }) {
   const addArcadePoints = useProgress((s) => s.addArcadePoints);
+  const addAchievement = useProgress((s) => s.addAchievement);
   const problems = useMemo(
     () => Array.from({ length: Math.max(1, count) }, () => makeChallenge(level)),
     [count, level],
@@ -91,8 +93,13 @@ export function MidGameChallenge({
     const n = Number(value.trim());
     if (value.trim() === '' || Number.isNaN(n)) return;
     if (n === current.answer) {
+      addAchievement(10);
+      sfx.coin();
+      haptic(HAPTIC.pickup);
       if (idx + 1 >= problems.length) {
         addArcadePoints(5);
+        sfx.levelUp();
+        haptic(HAPTIC.levelUp);
         onDone();
         return;
       }
@@ -102,6 +109,8 @@ export function MidGameChallenge({
     } else {
       setWrong(true);
       setShakeKey((k) => k + 1);
+      sfx.hurt();
+      haptic(HAPTIC.hit);
     }
   };
 

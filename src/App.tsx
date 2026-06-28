@@ -46,6 +46,10 @@ const TicTacToe = lazy(() => import('./routes/arcade/TicTacToe').then((m) => ({ 
 const KpopDressMatch = lazy(() => import('./routes/arcade/KpopDressMatch').then((m) => ({ default: m.KpopDressMatch })));
 const ForestSurvival = lazy(() => import('./routes/arcade/ForestSurvival').then((m) => ({ default: m.ForestSurvival })));
 const FruitSlice = lazy(() => import('./routes/arcade/FruitSlice').then((m) => ({ default: m.FruitSlice })));
+const MochiSurvivors = lazy(() => import('./routes/arcade/MochiSurvivors').then((m) => ({ default: m.MochiSurvivors })));
+const PocketTown = lazy(() => import('./routes/arcade/PocketTown').then((m) => ({ default: m.PocketTown })));
+const RogueDelve = lazy(() => import('./routes/arcade/RogueDelve').then((m) => ({ default: m.RogueDelve })));
+const SpaceBlaster = lazy(() => import('./routes/arcade/SpaceBlaster').then((m) => ({ default: m.SpaceBlaster })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -108,6 +112,10 @@ export default function App() {
           <Route path="/arcade/kpop" element={<ArcadeGate title="K-Pop Dress-Up"><KpopDressMatch /></ArcadeGate>} />
           <Route path="/arcade/survival" element={<ArcadeGate title="Forest Survival"><ForestSurvival /></ArcadeGate>} />
           <Route path="/arcade/fruit" element={<ArcadeGate title="Fruit Slice"><FruitSlice /></ArcadeGate>} />
+          <Route path="/arcade/survivors" element={<ArcadeGate title="Mochi Survivors"><MochiSurvivors /></ArcadeGate>} />
+          <Route path="/arcade/town" element={<ArcadeGate title="Pocket Town"><PocketTown /></ArcadeGate>} />
+          <Route path="/arcade/rogue" element={<ArcadeGate title="Rogue Dungeon"><RogueDelve /></ArcadeGate>} />
+          <Route path="/arcade/space" element={<ArcadeGate title="Space Blaster"><SpaceBlaster /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

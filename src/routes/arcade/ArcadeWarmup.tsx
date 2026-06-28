@@ -12,6 +12,7 @@ import { useLessonClock } from '../../hooks/useLessonClock';
 import { ArcadeHeader, ArcadeSessionContext, ARCADE_GAMES } from './shared';
 import { MidGameChallenge } from './MidGameChallenge';
 import { HeroSplash } from './HeroSplash';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // The arcade "learn-to-play" gate. A full lesson + a hard difficulty-3 check
 // must be completed to start a game (and to play again). One lesson unlocks one
@@ -269,6 +270,7 @@ function HardCheck({
   const [submitted, setSubmitted] = useState(false);
   const [correct, setCorrect] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
+  const addAchievement = useProgress((s) => s.addAchievement);
 
   if (!problems) {
     return <p className="text-center text-slate-500 font-display font-bold py-12">Loading check…</p>;
@@ -287,7 +289,15 @@ function HardCheck({
     const ok = isEquivalent(answer, current);
     setCorrect(ok);
     setSubmitted(true);
-    if (!ok) setShowHelp(true);
+    if (ok) {
+      addAchievement(15);
+      sfx.levelUp();
+      haptic(HAPTIC.levelUp);
+    } else {
+      setShowHelp(true);
+      sfx.hurt();
+      haptic(HAPTIC.hit);
+    }
   };
 
   const next = () => {

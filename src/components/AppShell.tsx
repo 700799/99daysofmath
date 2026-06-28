@@ -109,6 +109,7 @@ export function AppShell({ children }: Props) {
             </Link>
           )}
           <div className="flex items-center gap-1.5">
+            <StatsBadge />
             {dailyStreak > 0 && (
               <span
                 className="inline-flex items-center gap-1 bg-orange-100 text-orange-900 px-2 py-1 rounded-full font-display font-extrabold text-xs tabular-nums"
@@ -132,6 +133,34 @@ export function AppShell({ children }: Props) {
       </header>
       <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-6">{children}</main>
       <XpFlash />
+    </div>
+  );
+}
+
+function fmtDur(total: number): string {
+  const s = Math.max(0, Math.floor(total));
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const sec = s % 60;
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return h > 0 ? `${h}:${pad(m)}` : `${m}:${pad(sec)}`;
+}
+
+// Always-visible tracker: total study time, total game time, and the achievement
+// bonus earned from correct answers — so kids are rewarded for time and accuracy.
+function StatsBadge() {
+  const study = useProgress((s) => s.cumLessonSeconds);
+  const game = useProgress((s) => s.cumArcadeSeconds);
+  const ach = useProgress((s) => s.achievementPoints);
+  return (
+    <div
+      className="inline-flex items-center gap-1.5 bg-slate-100 rounded-full px-2 py-1 font-display font-extrabold text-[11px] tabular-nums"
+      aria-label={`Study ${fmtDur(study)}, game ${fmtDur(game)}, achievement bonus ${ach}`}
+      title="Study time · Game time · Achievement bonus"
+    >
+      <span className="text-indigo-600">📚 {fmtDur(study)}</span>
+      <span className="text-emerald-600">🎮 {fmtDur(game)}</span>
+      <span className="text-amber-600">🏆 {ach}</span>
     </div>
   );
 }
