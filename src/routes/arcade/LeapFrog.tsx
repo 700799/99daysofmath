@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
+import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // "Leap Frog" — a Frogger. Hop up across lanes of traffic, then ride logs and
@@ -285,9 +286,10 @@ export function LeapFrog() {
         <span className="text-indigo-600">Lvl {levelRef.current}</span>
       </div>
 
+      <GameStage theme="meadow" className="mx-auto p-2" style={{ maxWidth: W + 16 }}>
       <div
-        className="relative mx-auto rounded-xl overflow-hidden border-2 border-slate-200"
-        style={{ width: '100%', maxWidth: W, aspectRatio: `${W} / ${H}` }}
+        className="relative mx-auto rounded-xl overflow-hidden border-2 border-slate-200/60"
+        style={{ width: '100%', aspectRatio: `${W} / ${H}` }}
       >
         <div className="absolute top-0 left-0" style={{ width: W, height: H }}>
           {/* row bands */}
@@ -349,6 +351,7 @@ export function LeapFrog() {
           </div>
         </div>
       </div>
+      </GameStage>
 
       {/* D-pad */}
       <div className="mt-3 grid grid-cols-3 gap-1.5 w-40 mx-auto select-none">

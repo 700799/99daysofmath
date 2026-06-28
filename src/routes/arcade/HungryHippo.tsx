@@ -1,6 +1,7 @@
 import { memo, useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
+import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { chooseGhostDir, UP, DOWN, LEFT, RIGHT, type Dir, type Target } from './mazeAI';
 
@@ -416,9 +417,10 @@ export function HungryHippo() {
         <span className="text-indigo-600">Lvl {levelRef.current}</span>
       </div>
 
+      <GameStage theme="hippo" className="mx-auto p-2" style={{ maxWidth: W + 16 }}>
       <div
-        className="relative mx-auto rounded-xl bg-slate-900 overflow-hidden"
-        style={{ width: '100%', maxWidth: W, aspectRatio: `${W} / ${H}` }}
+        className="relative mx-auto rounded-xl bg-slate-900/90 overflow-hidden"
+        style={{ width: '100%', aspectRatio: `${W} / ${H}` }}
       >
         {/* fixed-size inner board scaled to fit */}
         <div className="absolute top-0 left-0" style={{ width: W, height: H, transformOrigin: 'top left' }}>
@@ -464,6 +466,7 @@ export function HungryHippo() {
           </div>
         </div>
       </div>
+      </GameStage>
 
       {/* D-pad */}
       <div className="mt-3 grid grid-cols-3 gap-1.5 w-40 mx-auto select-none">

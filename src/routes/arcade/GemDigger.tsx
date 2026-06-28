@@ -1,6 +1,7 @@
 import { memo, useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
+import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { chooseGhostDir, DIRS, UP, DOWN, LEFT, RIGHT, type Dir } from './mazeAI';
 
@@ -392,9 +393,10 @@ export function GemDigger() {
         <span className="text-indigo-600">Lvl {levelRef.current}</span>
       </div>
 
+      <GameStage theme="digger" className="mx-auto p-2" style={{ maxWidth: W + 16 }}>
       <div
         className="relative mx-auto rounded-xl overflow-hidden border-2 border-amber-900"
-        style={{ width: '100%', maxWidth: W, aspectRatio: `${W} / ${H}`, background: '#1c1206' }}
+        style={{ width: '100%', aspectRatio: `${W} / ${H}`, background: '#1c1206' }}
       >
         <div className="absolute top-0 left-0" style={{ width: W, height: H }}>
           <DirtLayer dirt={dirtRef.current} version={dirtVersion} />
@@ -445,6 +447,7 @@ export function GemDigger() {
           </div>
         </div>
       </div>
+      </GameStage>
 
       {/* D-pad */}
       <div className="mt-3 grid grid-cols-3 gap-1.5 w-40 mx-auto select-none">
