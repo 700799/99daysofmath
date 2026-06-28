@@ -1,0 +1,33 @@
+import { useEffect } from 'react';
+import { useProgress } from '../state/progress';
+
+/**
+ * Ticks the lifetime arcade-lesson counter while a lesson/gate is on screen.
+ * Pauses when `paused` is true or when the tab is hidden. Mirrors
+ * {@link useArcadeClock}, which ticks game-play time.
+ */
+export function useLessonClock(paused = false): void {
+  const tick = useProgress((s) => s.tickLessonSeconds);
+
+  useEffect(() => {
+    if (paused) return;
+    let id: ReturnType<typeof setInterval> | null = null;
+    const start = () => {
+      if (id != null) return;
+      id = setInterval(() => tick(1), 1000);
+    };
+    const stop = () => {
+      if (id != null) {
+        clearInterval(id);
+        id = null;
+      }
+    };
+    if (!document.hidden) start();
+    const onVis = () => (document.hidden ? stop() : start());
+    document.addEventListener('visibilitychange', onVis);
+    return () => {
+      document.removeEventListener('visibilitychange', onVis);
+      stop();
+    };
+  }, [paused, tick]);
+}

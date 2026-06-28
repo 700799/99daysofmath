@@ -56,6 +56,14 @@ export interface RitPoint {
   accuracy: number;
 }
 
+export interface ArcadeConfig {
+  lessonsPerSession: number; // full lessons required to unlock one game session
+  startLevel: number; // starting level for leveled games; difficulty floor
+  livesPerSession: number; // lives granted per session for life-based games
+  checkProblems: number; // # of difficulty-3 problems in the hard check
+  adminPin: string; // gate for the grown-ups settings panel
+}
+
 interface ProgressState {
   byDomain: Record<Domain, DomainProgress>;
   xp: number;
@@ -100,7 +108,17 @@ interface ProgressState {
     lockedAt: string | null;
     mathSecondsTowardUnlock: number;
   };
+  // ---- v11 additions (learn-to-play rework + progression) ----
+  arcadeConfig: ArcadeConfig;
+  cumArcadeSeconds: number;  // lifetime seconds spent playing arcade games
+  cumLessonSeconds: number;  // lifetime seconds spent in arcade lessons
+  cumArcadePoints: number;   // lifetime arcade points scored
+  cumAppSeconds: number;     // lifetime seconds the app has been open
   // ---- actions ----
+  setArcadeConfig: (partial: Partial<ArcadeConfig>) => void;
+  tickLessonSeconds: (n: number) => void;
+  tickAppSeconds: (n: number) => void;
+  addArcadePoints: (n: number) => void;
   recordUnitResult: (
     domain: Domain,
     unit: number,
@@ -296,6 +314,20 @@ const v10Defaults = {
   platformerMaxLevel: 0, // furthest Math Platformer level the kid has reached
 };
 
+const v11Defaults = {
+  arcadeConfig: {
+    lessonsPerSession: 1,
+    startLevel: 1,
+    livesPerSession: 3,
+    checkProblems: 2,
+    adminPin: '1234',
+  } as ArcadeConfig,
+  cumArcadeSeconds: 0,
+  cumLessonSeconds: 0,
+  cumArcadePoints: 0,
+  cumAppSeconds: 0,
+};
+
 export const ARCADE_DAILY_CAP_SECONDS = 180;     // 3 minutes per day
 export const MATH_UNLOCK_SECONDS = 900;          // 15 minutes of math unlocks again
 
@@ -388,6 +420,12 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       if (stateAny[k] === undefined) stateAny[k] = v;
     }
   }
+  if (fromVersion < 11) {
+    const stateAny = state as Record<string, unknown>;
+    for (const [k, v] of Object.entries(v11Defaults)) {
+      if (stateAny[k] === undefined) stateAny[k] = v;
+    }
+  }
   return state;
 }
 
@@ -411,8 +449,20 @@ export const useProgress = create<ProgressState>()(
       ...v8Defaults,
       ...v9Defaults,
       ...v10Defaults,
+      ...v11Defaults,
       setPlatformerMaxLevel: (n) =>
         set((s) => ({ platformerMaxLevel: Math.max(s.platformerMaxLevel, n) })),
+      setArcadeConfig: (partial) =>
+        set((s) => ({ arcadeConfig: { ...s.arcadeConfig, ...partial } })),
+      tickLessonSeconds: (n) => {
+        if (n > 0) set((s) => ({ cumLessonSeconds: s.cumLessonSeconds + n }));
+      },
+      tickAppSeconds: (n) => {
+        if (n > 0) set((s) => ({ cumAppSeconds: s.cumAppSeconds + n }));
+      },
+      addArcadePoints: (n) => {
+        if (n > 0) set((s) => ({ cumArcadePoints: s.cumArcadePoints + n }));
+      },
       recordUnitResult: (domain, unit, stars, missedIds, xpEarned, mistakesTotal) => {
         const stateBefore = get();
         const today = todayISO();
@@ -764,18 +814,16 @@ export const useProgress = create<ProgressState>()(
         const today = todayISO();
         const stale = before.arcadeBudget.date !== today;
         const baseSeconds = stale ? 0 : before.arcadeBudget.secondsPlayed;
-        const baseMath = stale ? 0 : before.arcadeBudget.mathSecondsTowardUnlock;
-        const baseLockedAt = stale ? null : before.arcadeBudget.lockedAt;
-        const nextSeconds = baseSeconds + n;
-        const lockedAt =
-          baseLockedAt ?? (nextSeconds >= ARCADE_DAILY_CAP_SECONDS ? new Date().toISOString() : null);
+        // The old daily-cap lock has been replaced by the lesson-to-play gate,
+        // so we never lock here — we just keep play-time stats (daily + lifetime).
         set({
           arcadeBudget: {
             date: today,
-            secondsPlayed: nextSeconds,
-            lockedAt,
-            mathSecondsTowardUnlock: baseMath,
+            secondsPlayed: baseSeconds + n,
+            lockedAt: null,
+            mathSecondsTowardUnlock: 0,
           },
+          cumArcadeSeconds: before.cumArcadeSeconds + n,
         });
       },
       tickMathSeconds: (n) => {
@@ -806,11 +854,8 @@ export const useProgress = create<ProgressState>()(
           });
         }
       },
-      isArcadeLocked: () => {
-        const s = get();
-        if (s.arcadeBudget.date !== todayISO()) return false;
-        return !!s.arcadeBudget.lockedAt;
-      },
+      // Replaced by the lesson-to-play gate — the arcade is never time-locked.
+      isArcadeLocked: () => false,
       arcadeRemainingSeconds: () => {
         const s = get();
         if (s.arcadeBudget.date !== todayISO()) return ARCADE_DAILY_CAP_SECONDS;
@@ -887,11 +932,16 @@ export const useProgress = create<ProgressState>()(
             lockedAt: null,
             mathSecondsTowardUnlock: 0,
           },
+          cumArcadeSeconds: 0,
+          cumLessonSeconds: 0,
+          cumArcadePoints: 0,
+          cumAppSeconds: 0,
+          // arcadeConfig is a preference — preserved across resets like soundEnabled.
         }),
     }),
     {
       name: '99daysofmath:progress',
-      version: 10,
+      version: 11,
       migrate: migrateProgress,
     },
   ),

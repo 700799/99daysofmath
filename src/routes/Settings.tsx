@@ -103,6 +103,8 @@ export function Settings() {
         </div>
       </div>
 
+      <AdminPanel />
+
       <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
         <div className="font-display font-extrabold text-slate-900">Reset progress</div>
         <div className="text-sm text-slate-600 mt-1">
@@ -144,6 +146,108 @@ export function Settings() {
             Progress reset.
           </div>
         )}
+      </div>
+    </div>
+  );
+}
+
+// Parent/admin controls for the arcade learn-to-play balance. PIN-gated so kids
+// don't change the ratio or difficulty themselves.
+function AdminPanel() {
+  const config = useProgress((s) => s.arcadeConfig);
+  const setArcadeConfig = useProgress((s) => s.setArcadeConfig);
+  const [pin, setPin] = useState('');
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
+      <div className="font-display font-extrabold text-slate-900">Grown-ups 🔒</div>
+      <div className="text-sm text-slate-600 mt-1">
+        Tune the learn-to-play balance: how many full lessons unlock a game, the
+        starting level, lives per game, and how many hard problems each lesson check has.
+      </div>
+
+      {!open ? (
+        <div className="mt-3 flex gap-2">
+          <input
+            type="password"
+            inputMode="numeric"
+            value={pin}
+            onChange={(e) => setPin(e.target.value)}
+            placeholder="Enter PIN"
+            className="flex-1 min-w-0 rounded-xl border-2 border-slate-200 px-3 py-2 text-sm font-display font-bold text-slate-900 focus:border-duo-blue focus:outline-none"
+          />
+          <button
+            type="button"
+            onClick={() => setOpen(pin === config.adminPin)}
+            className="shrink-0 px-4 rounded-xl bg-slate-900 text-white font-display font-extrabold text-sm"
+          >
+            Unlock
+          </button>
+        </div>
+      ) : (
+        <div className="mt-4 space-y-4">
+          <AdminChoice
+            label="Lessons per game (ratio)"
+            options={[1, 2, 3]}
+            value={config.lessonsPerSession}
+            onPick={(n) => setArcadeConfig({ lessonsPerSession: n })}
+          />
+          <AdminChoice
+            label="Start level"
+            options={[1, 2, 3, 4, 5]}
+            value={config.startLevel}
+            onPick={(n) => setArcadeConfig({ startLevel: n })}
+          />
+          <AdminChoice
+            label="Lives per game"
+            options={[1, 2, 3, 5]}
+            value={config.livesPerSession}
+            onPick={(n) => setArcadeConfig({ livesPerSession: n })}
+          />
+          <AdminChoice
+            label="Hard problems per check"
+            options={[1, 2, 3]}
+            value={config.checkProblems}
+            onPick={(n) => setArcadeConfig({ checkProblems: n })}
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
+function AdminChoice({
+  label,
+  options,
+  value,
+  onPick,
+}: {
+  label: string;
+  options: number[];
+  value: number;
+  onPick: (n: number) => void;
+}) {
+  return (
+    <div>
+      <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">
+        {label}
+      </div>
+      <div className="flex gap-2">
+        {options.map((o) => (
+          <button
+            key={o}
+            type="button"
+            onClick={() => onPick(o)}
+            aria-pressed={value === o}
+            className={[
+              'min-h-11 flex-1 rounded-xl font-display font-extrabold text-sm transition-colors',
+              value === o ? 'bg-duo-green text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200',
+            ].join(' ')}
+          >
+            {o}
+          </button>
+        ))}
       </div>
     </div>
   );

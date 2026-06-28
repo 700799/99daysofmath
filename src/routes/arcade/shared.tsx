@@ -1,9 +1,17 @@
+import { createContext, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mascot } from '../../components/Mascot';
 import { Confetti } from '../../components/Celebration';
 import { StickerCelebration } from '../../components/StickerCelebration';
-import type { ArcadePlayOutcome } from '../../state/progress';
+import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
+
+// Provided by the lesson gate (ArcadeWarmup). When present, an in-game "Play
+// again" routes back through a fresh lesson rather than restarting in place.
+export const ArcadeSessionContext = createContext<{ requestReplay: () => void } | null>(null);
+export function useArcadeSession() {
+  return useContext(ArcadeSessionContext);
+}
 
 export interface ArcadeGameDef {
   id: string;
@@ -25,21 +33,68 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'runner', path: '/arcade/runner', emoji: '🏃', name: 'Math Runner', blurb: 'Right lane, right answer.', baseXp: 8, gradient: 'from-emerald-500 to-teal-600' },
   { id: 'platformer', path: '/arcade/platformer', emoji: '🍄', name: 'Platformer', blurb: '8 levels. Stomp to the flag.', baseXp: 10, gradient: 'from-pink-500 to-rose-600' },
   { id: 'racer', path: '/arcade/racer', emoji: '🏎️', name: 'Race Car', blurb: 'Dodge cones. Grab fuel.', baseXp: 9, gradient: 'from-rose-500 to-orange-500' },
+  { id: 'hippo', path: '/arcade/hippo', emoji: '🦛', name: 'Hungry Hippo', blurb: 'Munch the maze. Dodge ghosts.', baseXp: 10, gradient: 'from-indigo-500 to-purple-600' },
+  { id: 'frogger', path: '/arcade/frogger', emoji: '🐸', name: 'Leap Frog', blurb: 'Cross traffic and river.', baseXp: 10, gradient: 'from-green-500 to-emerald-600' },
+  { id: 'digger', path: '/arcade/digger', emoji: '⛏️', name: 'Gem Digger', blurb: 'Dig for gems. Dodge monsters.', baseXp: 10, gradient: 'from-amber-600 to-yellow-700' },
+  { id: 'tiles', path: '/arcade/2048', emoji: '🔢', name: '2048', blurb: 'Merge tiles to 2048.', baseXp: 10, gradient: 'from-yellow-500 to-amber-600' },
+  { id: 'snake', path: '/arcade/snake', emoji: '🐍', name: 'Math Snake', blurb: 'Eat the right answer.', baseXp: 10, gradient: 'from-lime-500 to-green-700' },
+  { id: 'bricks', path: '/arcade/bricks', emoji: '🧱', name: 'Brick Breaker', blurb: 'Bounce and smash bricks.', baseXp: 10, gradient: 'from-violet-500 to-indigo-700' },
+  { id: 'sudoku', path: '/arcade/sudoku', emoji: '🧩', name: 'Sudoku', blurb: 'Fill the 9×9 grid.', baseXp: 10, gradient: 'from-slate-500 to-slate-700' },
+  { id: 'tetris', path: '/arcade/tetris', emoji: '👾', name: 'Alien Tetris', blurb: 'Stack & clear the aliens.', baseXp: 10, gradient: 'from-purple-500 to-fuchsia-700' },
+  { id: 'bubbles', path: '/arcade/bubbles', emoji: '🫧', name: 'Bubble Pop', blurb: 'Match 3 to pop.', baseXp: 10, gradient: 'from-sky-500 to-cyan-600' },
+  { id: 'boba', path: '/arcade/boba', emoji: '🧋', name: 'Boba Shop', blurb: 'Mix drinks by ratio.', baseXp: 10, gradient: 'from-pink-500 to-rose-600' },
+  { id: 'sushi', path: '/arcade/sushi', emoji: '🍣', name: 'Sushi Match', blurb: 'Match 3 sushi.', baseXp: 10, gradient: 'from-red-500 to-pink-600' },
+  { id: 'taiko', path: '/arcade/taiko', emoji: '🥁', name: 'Taiko Tap', blurb: 'Tap to the beat.', baseXp: 10, gradient: 'from-rose-500 to-red-600' },
+  { id: 'tangram', path: '/arcade/tangram', emoji: '🧩', name: 'Tangram', blurb: 'Fill the frame.', baseXp: 10, gradient: 'from-teal-500 to-emerald-600' },
   { id: 'tictactoe', path: '/arcade/tictactoe', emoji: '🐕', name: 'Tic Tac Toe', blurb: 'Dogs vs cats. Bigger beats smaller.', baseXp: 8, gradient: 'from-amber-400 to-orange-500' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {
   return (
-    <div className="mb-4 flex items-center justify-between gap-3">
-      <h1 className="text-xl font-display font-extrabold text-slate-900">
-        {emoji} {title}
-      </h1>
-      <Link
-        to="/arcade"
-        className="text-sm font-display font-bold text-slate-500 hover:text-slate-700"
-      >
-        ← Arcade
-      </Link>
+    <div className="mb-4">
+      <div className="flex items-center justify-between gap-3">
+        <h1 className="text-xl font-display font-extrabold text-slate-900">
+          {emoji} {title}
+        </h1>
+        <Link
+          to="/arcade"
+          className="text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+        >
+          ← Arcade
+        </Link>
+      </div>
+      <BalanceClock />
+    </div>
+  );
+}
+
+function fmtClock(total: number): string {
+  const s = Math.max(0, Math.floor(total));
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const sec = s % 60;
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return h > 0 ? `${h}:${pad(m)}:${pad(sec)}` : `${m}:${pad(sec)}`;
+}
+
+// A small lifetime readout shown on every arcade screen (games + the lesson
+// gate): time spent playing vs. learning, and the running lessons:games ratio,
+// so the 50/50 balance is always visible.
+export function BalanceClock() {
+  const play = useProgress((s) => s.cumArcadeSeconds);
+  const lesson = useProgress((s) => s.cumLessonSeconds);
+  const ratio = play > 0 ? lesson / play : lesson > 0 ? Infinity : 0;
+  const ratioLabel = play === 0 && lesson === 0 ? '—' : `${ratio.toFixed(1)} : 1`;
+  const total = play + lesson;
+  const lessonPct = total > 0 ? Math.round((lesson / total) * 100) : 50;
+  return (
+    <div className="mt-2 flex items-center gap-2 text-[11px] font-display font-bold text-slate-500">
+      <span className="text-indigo-600">📘 {fmtClock(lesson)}</span>
+      <div className="flex-1 h-1.5 rounded-full bg-emerald-200 overflow-hidden" title="lessons vs games">
+        <div className="h-full bg-indigo-500" style={{ width: `${lessonPct}%` }} />
+      </div>
+      <span className="text-emerald-600">🎮 {fmtClock(play)}</span>
+      <span className="tabular-nums text-slate-400">L:G {ratioLabel}</span>
     </div>
   );
 }
@@ -60,6 +115,9 @@ export function ArcadeEndCard({
   gameId: string;
 }) {
   const others = ARCADE_GAMES.filter((g) => g.id !== gameId).slice(0, 3);
+  const session = useArcadeSession();
+  const replay = session ? session.requestReplay : onReplay;
+  const replayLabel = session ? '📚 Learn & play again' : 'Play again';
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
@@ -93,10 +151,10 @@ export function ArcadeEndCard({
       )}
       <button
         type="button"
-        onClick={onReplay}
+        onClick={replay}
         className="mt-5 w-full max-w-xs min-h-12 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
       >
-        Play again
+        {replayLabel}
       </button>
       <div className="mt-4">
         <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-slate-400 mb-2">
