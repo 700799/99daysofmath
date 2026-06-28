@@ -60,6 +60,7 @@ export const GAME_THEME: Record<string, StageTheme> = {
   rogue: 'cave',
   space: 'space',
   sumo: 'meadow',
+  monster: 'night',
 };
 
 interface SceneSpec {
