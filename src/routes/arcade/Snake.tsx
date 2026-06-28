@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
+import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Math Snake — steer the snake to eat the food labelled with the correct
@@ -245,9 +246,10 @@ export function Snake() {
         <span className="text-emerald-700">Eat: <b>{problemRef.current.text}</b></span>
       </div>
 
+      <GameStage theme="snake" className="max-w-sm mx-auto p-2">
       <div
-        className="relative mx-auto rounded-xl bg-emerald-950 overflow-hidden"
-        style={{ width: '100%', maxWidth: W, aspectRatio: `${W} / ${H}` }}
+        className="relative mx-auto rounded-xl bg-emerald-950/90 overflow-hidden"
+        style={{ width: '100%', aspectRatio: `${W} / ${H}` }}
       >
         <div className="absolute top-0 left-0" style={{ width: W, height: H }}>
           {foodsRef.current.map((f, i) => (
@@ -274,6 +276,7 @@ export function Snake() {
           ))}
         </div>
       </div>
+      </GameStage>
 
       <div className="mt-3 grid grid-cols-3 gap-1.5 w-44 mx-auto select-none">
         <span />

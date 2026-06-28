@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
+import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // 2048 — slide and merge numbered tiles. Pure math (doubling/addition), and
@@ -175,9 +176,10 @@ export function Twenty48() {
         <span className="text-amber-600 tabular-nums">Best {best}</span>
       </div>
 
+      <GameStage theme="tiles" className="max-w-[320px] mx-auto p-2">
       <div
-        className="mx-auto rounded-2xl bg-[#bbada0] p-2 touch-none"
-        style={{ width: '100%', maxWidth: 320 }}
+        className="mx-auto rounded-2xl bg-[#bbada0]/90 p-2 touch-none"
+        style={{ width: '100%' }}
         onPointerDown={(e) => {
           swipeRef.current = { x: e.clientX, y: e.clientY };
         }}
@@ -210,6 +212,7 @@ export function Twenty48() {
           )}
         </div>
       </div>
+      </GameStage>
 
       {/* D-pad */}
       <div className="mt-4 grid grid-cols-3 gap-1.5 w-44 mx-auto select-none">

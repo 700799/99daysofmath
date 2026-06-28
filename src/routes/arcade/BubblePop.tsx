@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
+import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Bubble Pop — a number bubble shooter. Aim with the sweeping arrow, tap to
@@ -223,9 +224,10 @@ export function BubblePop() {
         </span>
       </div>
 
+      <GameStage theme="bubbles" className="max-w-sm mx-auto p-2">
       <div
-        className="relative mx-auto rounded-xl bg-slate-800 overflow-hidden"
-        style={{ width: '100%', maxWidth: W, aspectRatio: `${W} / ${H}` }}
+        className="relative mx-auto rounded-xl bg-slate-800/85 overflow-hidden"
+        style={{ width: '100%', aspectRatio: `${W} / ${H}` }}
       >
         <div className="absolute top-0 left-0" style={{ width: W, height: H }}>
           {grid.flatMap((row, r) =>
@@ -279,6 +281,7 @@ export function BubblePop() {
           </div>
         </div>
       </div>
+      </GameStage>
 
       <div className="max-w-sm mx-auto mt-4">
         <button

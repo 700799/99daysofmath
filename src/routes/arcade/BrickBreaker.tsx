@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
+import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Brick Breaker — bounce the ball to clear numbered bricks. Break the brick
@@ -284,9 +285,10 @@ export function BrickBreaker() {
         <span className="text-amber-600">Target <b>{targetRef.current}</b></span>
       </div>
 
+      <GameStage theme="bricks" className="max-w-sm mx-auto p-2">
       <div
-        className="relative mx-auto rounded-xl bg-slate-900 overflow-hidden touch-none"
-        style={{ width: '100%', maxWidth: W, aspectRatio: `${W} / ${H}` }}
+        className="relative mx-auto rounded-xl bg-slate-900/85 overflow-hidden touch-none"
+        style={{ width: '100%', aspectRatio: `${W} / ${H}` }}
         onPointerMove={(e) => movePaddleTo(e.clientX, e.currentTarget)}
         onPointerDown={(e) => movePaddleTo(e.clientX, e.currentTarget)}
       >
@@ -325,6 +327,7 @@ export function BrickBreaker() {
           />
         </div>
       </div>
+      </GameStage>
 
       <div className="mt-3 grid grid-cols-2 gap-2 max-w-xs mx-auto select-none">
         <Hold label="← Left" on={() => (inputRef.current.left = true)} off={() => (inputRef.current.left = false)} />

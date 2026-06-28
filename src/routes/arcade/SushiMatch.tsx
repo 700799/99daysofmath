@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Sushi Match — a cute match-3. Swap adjacent sushi to line up 3+; cascades
@@ -146,11 +147,11 @@ export function SushiMatch() {
         <span className="text-indigo-600 tabular-nums">Moves {moves}</span>
       </div>
 
+      <GameStage theme="counter" className="mx-auto p-2" style={{ maxWidth: W + 16 }}>
       <div
-        className="mx-auto bg-amber-100 rounded-xl p-1 grid"
+        className="mx-auto bg-amber-100/90 rounded-xl p-1 grid"
         style={{
           width: '100%',
-          maxWidth: W,
           aspectRatio: `${W} / ${H}`,
           gridTemplateColumns: `repeat(${COLS}, 1fr)`,
           gap: 2,
@@ -177,6 +178,7 @@ export function SushiMatch() {
           }),
         )}
       </div>
+      </GameStage>
       <p className="text-center text-xs text-slate-500 mt-2">
         Tap two neighbours to swap. Line up 3+ to clear them. Make them count!
       </p>

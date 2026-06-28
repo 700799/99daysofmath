@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
+import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Alien Tetris — falling tetrominoes made of cute aliens. Clear full rows;
@@ -253,11 +254,11 @@ export function Tetris() {
         <span className="text-indigo-600">Lvl {level()}</span>
       </div>
 
+      <GameStage theme="tetris" className="mx-auto p-2" style={{ maxWidth: W + 16 }}>
       <div
-        className="mx-auto bg-slate-900 grid"
+        className="mx-auto bg-slate-900/90 grid"
         style={{
           width: '100%',
-          maxWidth: W,
           aspectRatio: `${W} / ${H}`,
           gridTemplateColumns: `repeat(${COLS}, 1fr)`,
           gap: 1,
@@ -275,6 +276,7 @@ export function Tetris() {
           )),
         )}
       </div>
+      </GameStage>
 
       <div className="mt-3 grid grid-cols-4 gap-1.5 max-w-xs mx-auto select-none">
         <Pad label="←" onPress={() => moveX(-1)} />
