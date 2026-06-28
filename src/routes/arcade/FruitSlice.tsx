@@ -12,8 +12,16 @@ import { useArcadeClock } from '../../hooks/useArcadeClock';
 const W = 340;
 const H = 440;
 const GRAVITY = 620; // px/s²
-const FRUITS = ['🍎', '🍉', '🍊', '🍓', '🍌', '🍇', '🥝', '🍑'];
-const RADIUS = 26; // slice hit radius
+const FRUITS = ['🍎', '🍉', '🍊', '🍓', '🍌', '🍇', '🥝', '🍑', '🍍', '🥭'];
+
+// Choose your slicing weapon — each has its own blade trail, reach, and splat.
+type Weapon = { id: string; name: string; emoji: string; color: string; radius: number; fx: string; width: number };
+const WEAPONS: Weapon[] = [
+  { id: 'katana', name: 'Katana', emoji: '🗡️', color: '#ffffff', radius: 28, fx: '✨', width: 6 },
+  { id: 'laser', name: 'Laser', emoji: '🔦', color: '#67e8f9', radius: 32, fx: '⚡', width: 7 },
+  { id: 'magic', name: 'Magic Wand', emoji: '✨', color: '#f0abfc', radius: 36, fx: '💫', width: 8 },
+  { id: 'hammer', name: 'War Hammer', emoji: '🔨', color: '#fdba74', radius: 44, fx: '💥', width: 10 },
+];
 
 type Item = {
   id: number;
@@ -50,6 +58,9 @@ export function FruitSlice() {
   const slicingRef = useRef(false);
   const lastPtRef = useRef<{ x: number; y: number } | null>(null);
   const [trail, setTrail] = useState<{ x: number; y: number }[]>([]);
+  const [weapon, setWeapon] = useState<Weapon | null>(null);
+  const weaponRef = useRef<Weapon>(WEAPONS[0]);
+  const [flash, setFlash] = useState(false);
   const doneRef = useRef(false);
   const [, force] = useState(0);
   const redraw = () => force((n) => n + 1);
@@ -63,7 +74,7 @@ export function FruitSlice() {
   };
 
   useEffect(() => {
-    if (outcome) return;
+    if (outcome || !weapon) return;
     lastRef.current = performance.now();
     const tick = (now: number) => {
       if (pausedRef.current) {
@@ -129,7 +140,7 @@ export function FruitSlice() {
     rafRef.current = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafRef.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [outcome]);
+  }, [outcome, weapon]);
 
   // distance from point P to segment AB
   const segDist = (px: number, py: number, ax: number, ay: number, bx: number, by: number) => {
@@ -145,14 +156,18 @@ export function FruitSlice() {
 
   const sliceAt = (from: { x: number; y: number }, to: { x: number; y: number }) => {
     if (outcome || pausedRef.current) return;
+    const wp = weaponRef.current;
     for (const it of itemsRef.current) {
       if (it.sliced) continue;
-      if (segDist(it.x, it.y, from.x, from.y, to.x, to.y) <= RADIUS) {
+      if (segDist(it.x, it.y, from.x, from.y, to.x, to.y) <= wp.radius) {
         if (it.bomb) {
           it.sliced = true;
           livesRef.current -= 1;
           shake();
-          burst(it.x, it.y, { emoji: '💥', count: 16 });
+          burst(it.x, it.y, { emoji: '💥', count: 26 });
+          burst(it.x, it.y, { color: '#ef4444', count: 18 });
+          setFlash(true);
+          window.setTimeout(() => setFlash(false), 140);
           comboRef.current = { n: 0, t: 0 };
           if (livesRef.current <= 0) {
             finish();
@@ -165,7 +180,10 @@ export function FruitSlice() {
           comboRef.current = { n: combo, t: 0.6 };
           const gained = 1 + Math.floor((combo - 1) / 2);
           scoreRef.current += gained;
-          burst(it.x, it.y, { emoji: it.emoji, count: 8 });
+          // strong, juicy splat: weapon fx + a spray of the fruit + a flash
+          burst(it.x, it.y, { emoji: it.emoji, count: 14 });
+          burst(it.x, it.y, { emoji: wp.fx, count: 10 });
+          if (combo >= 3) { setFlash(true); window.setTimeout(() => setFlash(false), 100); }
           pop(it.x - 10, it.y - 10, combo > 1 ? `🔥${combo}!` : `+${gained}`, '#16a34a');
         }
       }
@@ -221,8 +239,33 @@ export function FruitSlice() {
           outcome={outcome}
           win={scoreRef.current >= 20}
           scoreLine={`${scoreRef.current} sliced!`}
-          onReplay={reset}
+          onReplay={() => { reset(); setWeapon(null); }}
         />
+      </div>
+    );
+  }
+
+  // weapon picker (also the start screen)
+  if (!weapon) {
+    return (
+      <div>
+        <ArcadeHeader title="Fruit Slice" emoji="🍉" />
+        <p className="text-center text-sm text-slate-600 mb-3">Pick your blade, then swipe to slice the fruit — dodge 💣!</p>
+        <div className="max-w-sm mx-auto grid grid-cols-2 gap-3">
+          {WEAPONS.map((wp) => (
+            <button
+              key={wp.id}
+              type="button"
+              onClick={() => { weaponRef.current = wp; setWeapon(wp); }}
+              className="rounded-2xl border-2 border-slate-200 bg-white p-4 text-center hover:border-indigo-400 active:translate-y-0.5"
+            >
+              <div className="text-4xl">{wp.emoji}</div>
+              <div className="font-display font-extrabold text-slate-800 mt-1">{wp.name}</div>
+              <div className="text-[11px] text-slate-500">reach {wp.radius > 40 ? 'huge' : wp.radius > 32 ? 'big' : 'sharp'} · {wp.fx}</div>
+              <div className="mt-1 mx-auto h-1.5 w-16 rounded-full" style={{ background: wp.color }} />
+            </button>
+          ))}
+        </div>
       </div>
     );
   }
@@ -250,17 +293,19 @@ export function FruitSlice() {
         >
           <BurstLayer api={{ burst, particles }} />
           <ScorePopLayer pops={pops} />
+          {flash && <div className="absolute inset-0 z-20 bg-white/40 pointer-events-none" aria-hidden />}
 
-          {/* swipe trail */}
+          {/* weapon blade trail */}
           {trail.length > 1 && (
             <svg className="absolute inset-0 w-full h-full pointer-events-none z-20" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none">
               <polyline
                 points={trail.map((p) => `${p.x},${p.y}`).join(' ')}
                 fill="none"
-                stroke="rgba(255,255,255,0.85)"
-                strokeWidth={5}
+                stroke={weapon.color}
+                strokeWidth={weapon.width}
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ filter: `drop-shadow(0 0 6px ${weapon.color})` }}
               />
             </svg>
           )}

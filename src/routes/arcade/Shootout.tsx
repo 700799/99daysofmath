@@ -16,11 +16,11 @@ const COURT_H = 240;
 const LAUNCH = { x: COURT_W / 2, y: COURT_H - 22 };
 const AIM_MIN = -170; // degrees (pointing up-left)
 const AIM_MAX = -10; //  degrees (pointing up-right)
-const SWEEP_SPEED = 120; // degrees per second — fast = hard
+const SWEEP_SPEED = 72; // degrees per second — slower = easier to time the angle
 const ARROW_LEN = 70;
-const MAX_RANGE = 300; // px the ball can travel at full power
-const POWER_SPEED = 130; // power-meter units per second (0..100 sweep)
-const HOOP_RADIUS = 26; // how close the landing must be to count as a make
+const MAX_RANGE = 320; // px the ball can travel at full power
+const POWER_SPEED = 78; // power-meter units per second (slower = easier distance)
+const HOOP_RADIUS = 46; // generous tolerance so a close angle + distance still counts
 
 const SESSION_SECONDS = 45;
 const TARGET = 5;

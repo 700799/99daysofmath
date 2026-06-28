@@ -48,6 +48,10 @@ const ForestSurvival = lazy(() => import('./routes/arcade/ForestSurvival').then(
 const FruitSlice = lazy(() => import('./routes/arcade/FruitSlice').then((m) => ({ default: m.FruitSlice })));
 const MochiSurvivors = lazy(() => import('./routes/arcade/MochiSurvivors').then((m) => ({ default: m.MochiSurvivors })));
 const SumoMath = lazy(() => import('./routes/arcade/SumoMath').then((m) => ({ default: m.SumoMath })));
+const MonsterRogue = lazy(() => import('./routes/arcade/MonsterRogue').then((m) => ({ default: m.MonsterRogue })));
+const ShinobiMatch = lazy(() => import('./routes/arcade/ShinobiMatch').then((m) => ({ default: m.ShinobiMatch })));
+const Mode7Racer = lazy(() => import('./routes/arcade/Mode7Racer').then((m) => ({ default: m.Mode7Racer })));
+const JungleBlitz = lazy(() => import('./routes/arcade/JungleBlitz').then((m) => ({ default: m.JungleBlitz })));
 const PocketTown = lazy(() => import('./routes/arcade/PocketTown').then((m) => ({ default: m.PocketTown })));
 const RogueDelve = lazy(() => import('./routes/arcade/RogueDelve').then((m) => ({ default: m.RogueDelve })));
 const SpaceBlaster = lazy(() => import('./routes/arcade/SpaceBlaster').then((m) => ({ default: m.SpaceBlaster })));
@@ -115,6 +119,10 @@ export default function App() {
           <Route path="/arcade/fruit" element={<ArcadeGate title="Fruit Slice"><FruitSlice /></ArcadeGate>} />
           <Route path="/arcade/survivors" element={<ArcadeGate title="Mochi Survivors"><MochiSurvivors /></ArcadeGate>} />
           <Route path="/arcade/sumo" element={<ArcadeGate title="Sumo Math"><SumoMath /></ArcadeGate>} />
+          <Route path="/arcade/monster" element={<ArcadeGate title="Monster Rogue"><MonsterRogue /></ArcadeGate>} />
+          <Route path="/arcade/shinobi" element={<ArcadeGate title="Shinobi Match"><ShinobiMatch /></ArcadeGate>} />
+          <Route path="/arcade/racer2" element={<ArcadeGate title="Turbo Dash"><Mode7Racer /></ArcadeGate>} />
+          <Route path="/arcade/blitz" element={<ArcadeGate title="Jungle Blitz"><JungleBlitz /></ArcadeGate>} />
           <Route path="/arcade/town" element={<ArcadeGate title="Pocket Town"><PocketTown /></ArcadeGate>} />
           <Route path="/arcade/rogue" element={<ArcadeGate title="Rogue Dungeon"><RogueDelve /></ArcadeGate>} />
           <Route path="/arcade/space" element={<ArcadeGate title="Space Blaster"><SpaceBlaster /></ArcadeGate>} />

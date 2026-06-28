@@ -12,6 +12,7 @@ import { useLessonClock } from '../../hooks/useLessonClock';
 import { ArcadeHeader, ArcadeSessionContext, ARCADE_GAMES } from './shared';
 import { MidGameChallenge } from './MidGameChallenge';
 import { HeroSplash, Countdown } from './HeroSplash';
+import { MathBreak } from './MathBreak';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // The arcade "learn-to-play" gate. A full lesson + a hard difficulty-3 check
@@ -48,9 +49,11 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   const [sessionKey, setSessionKey] = useState(0);
   const [lessonsDone, setLessonsDone] = useState(0);
   const [challengeActive, setChallengeActive] = useState(false);
+  const [storyActive, setStoryActive] = useState(false);
   const [showSplash, setShowSplash] = useState(config.unlimited);
   const [counting, setCounting] = useState(config.unlimited);
   const playSecRef = useRef(0);
+  const storySecRef = useRef(0);
 
   // Count lesson time toward the balance only while the gate is showing.
   useLessonClock(unlocked);
@@ -72,7 +75,7 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   useEffect(() => {
     if (!unlocked || challengeActive || config.challengeInterval <= 0) return;
     const id = window.setInterval(() => {
-      if (document.hidden) return;
+      if (document.hidden || storyActive || counting) return;
       playSecRef.current += 1;
       if (playSecRef.current >= config.challengeInterval) {
         playSecRef.current = 0;
@@ -80,13 +83,29 @@ export function ArcadeGate({ title, children }: { title: string; children: React
       }
     }, 1000);
     return () => window.clearInterval(id);
-  }, [unlocked, challengeActive, config.challengeInterval]);
+  }, [unlocked, challengeActive, storyActive, counting, config.challengeInterval]);
+
+  // Math-break timer — a forced math story / mathematician every N minutes.
+  useEffect(() => {
+    if (!unlocked || storyActive || config.storyInterval <= 0) return;
+    const id = window.setInterval(() => {
+      if (document.hidden || challengeActive || counting) return;
+      storySecRef.current += 1;
+      if (storySecRef.current >= config.storyInterval * 60) {
+        storySecRef.current = 0;
+        setStoryActive(true);
+      }
+    }, 1000);
+    return () => window.clearInterval(id);
+  }, [unlocked, storyActive, challengeActive, counting, config.storyInterval]);
 
   const enterPlay = () => {
     setLessonsDone(0);
     setSessionKey((k) => k + 1);
     playSecRef.current = 0;
+    storySecRef.current = 0;
     setChallengeActive(false);
+    setStoryActive(false);
     setShowSplash(true);
     setCounting(true);
     setUnlocked(true);
@@ -102,7 +121,9 @@ export function ArcadeGate({ title, children }: { title: string; children: React
     if (config.unlimited) {
       setSessionKey((k) => k + 1); // unlimited: just restart, no lesson
       playSecRef.current = 0;
+      storySecRef.current = 0;
       setChallengeActive(false);
+      setStoryActive(false);
       setShowSplash(true);
       setCounting(true);
       return;
@@ -113,8 +134,16 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   };
 
   const playArea = (
-    <ArcadeSessionContext.Provider value={{ requestReplay, paused: challengeActive || counting }}>
+    <ArcadeSessionContext.Provider value={{ requestReplay, paused: challengeActive || counting || storyActive }}>
       <div key={sessionKey}>{children}</div>
+      {storyActive && (
+        <MathBreak
+          onDone={() => {
+            setStoryActive(false);
+            storySecRef.current = 0;
+          }}
+        />
+      )}
       {challengeActive && config.challengeInterval > 0 && (
         <MidGameChallenge
           count={config.challengeCount}

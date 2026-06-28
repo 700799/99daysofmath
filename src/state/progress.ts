@@ -69,6 +69,7 @@ export interface ArcadeConfig {
   minLessonSeconds: number; // min lesson time required per gate before unlock (0 = off)
   earnRatio: number; // game seconds earned per lesson second; play capped at lessonTime*ratio (0 = off)
   hiddenGames: string[]; // arcade game ids the parent has turned off (hidden from the hub)
+  storyInterval: number; // minutes of play between forced math-story / mathematician breaks (0 = off)
 }
 
 interface ProgressState {
@@ -164,6 +165,12 @@ interface ProgressState {
   setTownMaxTier: (n: number) => void;
   spaceMaxLevel: number;
   setSpaceMaxLevel: (n: number) => void;
+  monsterMaxWave: number;
+  setMonsterMaxWave: (n: number) => void;
+  shinobiMaxLevel: number;
+  setShinobiMaxLevel: (n: number) => void;
+  racerMaxStage: number;
+  setRacerMaxStage: (n: number) => void;
   completeLesson: (key: string) => string[];
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
@@ -347,6 +354,7 @@ const v11Defaults = {
     minLessonSeconds: 0,
     earnRatio: 1,
     hiddenGames: [],
+    storyInterval: 5,
   } as ArcadeConfig,
   cumArcadeSeconds: 0,
   cumLessonSeconds: 0,
@@ -361,6 +369,12 @@ const v15Defaults = {
   spaceMaxLevel: 0,
   achievementPoints: 0,
   hapticsEnabled: true,
+};
+
+const v16Defaults = {
+  monsterMaxWave: 0,
+  shinobiMaxLevel: 0,
+  racerMaxStage: 0,
 };
 
 export const ARCADE_DAILY_CAP_SECONDS = 180;     // 3 minutes per day
@@ -495,6 +509,18 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       if (stateAny[k] === undefined) stateAny[k] = v;
     }
   }
+  if (fromVersion < 16) {
+    // Progress fields for Monster Rogue, Shinobi Match, and Turbo Dash.
+    const stateAny = state as Record<string, unknown>;
+    for (const [k, v] of Object.entries(v16Defaults)) {
+      if (stateAny[k] === undefined) stateAny[k] = v;
+    }
+    // New admin option: forced math-story / mathematician breaks.
+    const cfg = (state as Record<string, unknown>).arcadeConfig as
+      | (ArcadeConfig & Record<string, unknown>)
+      | undefined;
+    if (cfg && cfg.storyInterval === undefined) cfg.storyInterval = 5;
+  }
   return state;
 }
 
@@ -520,6 +546,7 @@ export const useProgress = create<ProgressState>()(
       ...v10Defaults,
       ...v11Defaults,
       ...v15Defaults,
+      ...v16Defaults,
       setPlatformerMaxLevel: (n) =>
         set((s) => ({ platformerMaxLevel: Math.max(s.platformerMaxLevel, n) })),
       setSurvivorsMaxStage: (n) =>
@@ -527,6 +554,9 @@ export const useProgress = create<ProgressState>()(
       setRogueMaxDepth: (n) => set((s) => ({ rogueMaxDepth: Math.max(s.rogueMaxDepth, n) })),
       setTownMaxTier: (n) => set((s) => ({ townMaxTier: Math.max(s.townMaxTier, n) })),
       setSpaceMaxLevel: (n) => set((s) => ({ spaceMaxLevel: Math.max(s.spaceMaxLevel, n) })),
+      setMonsterMaxWave: (n) => set((s) => ({ monsterMaxWave: Math.max(s.monsterMaxWave, n) })),
+      setShinobiMaxLevel: (n) => set((s) => ({ shinobiMaxLevel: Math.max(s.shinobiMaxLevel, n) })),
+      setRacerMaxStage: (n) => set((s) => ({ racerMaxStage: Math.max(s.racerMaxStage, n) })),
       addAchievement: (n) => {
         if (n > 0) set((s) => ({ achievementPoints: s.achievementPoints + n }));
       },
@@ -1023,7 +1053,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 15,
+      version: 16,
       migrate: migrateProgress,
     },
   ),

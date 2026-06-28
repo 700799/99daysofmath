@@ -179,8 +179,8 @@ export function SushiMatch() {
         )}
       </div>
       </GameStage>
-      <p className="text-center text-xs text-slate-500 mt-2">
-        Tap two neighbours to swap. Line up 3+ to clear them. Make them count!
+      <p className="text-center text-base font-display font-bold text-slate-700 mt-3 max-w-sm mx-auto leading-snug">
+        👆 Tap two neighbours to swap. Line up <b>3 or more</b> to clear them. Make them count!
       </p>
     </div>
   );

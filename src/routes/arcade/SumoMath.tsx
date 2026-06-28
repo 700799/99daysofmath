@@ -23,18 +23,23 @@ function ri(a: number, b: number) {
   return Math.floor(Math.random() * (b - a + 1)) + a;
 }
 
+const SUP: Record<number, string> = { 2: '²', 3: '³' };
+
 function makeQ(): Q {
   const kind = ri(0, 2);
   if (kind === 0) {
-    const a = ri(3, 12), b = ri(3, 12);
+    // multiplication: single-digit operands
+    const a = ri(2, 9), b = ri(2, 9);
     return { prompt: `${a} × ${b}`, answer: a * b };
   }
   if (kind === 1) {
-    const b = ri(3, 12), ans = ri(3, 12);
+    // division: 1–2 digit dividend, single-digit divisor & answer
+    const b = ri(2, 9), ans = ri(2, 9);
     return { prompt: `${b * ans} ÷ ${b}`, answer: ans };
   }
+  // exponent: shown as a real superscript (e.g. 4²), not "4^2"
   const base = ri(2, 7), exp = ri(2, 3);
-  return { prompt: `${base}^${exp}`, answer: Math.pow(base, exp) };
+  return { prompt: `${base}${SUP[exp]}`, answer: Math.pow(base, exp) };
 }
 
 const PRAISE = ['Yokozuna! 🏆', 'Powerful! 💪', 'Banzai! 🎌', 'Great shove! 🙌', 'Too strong! 🔥', 'Nice one! ⭐'];
@@ -57,6 +62,7 @@ export function SumoMath() {
   const [refGood, setRefGood] = useState<boolean | null>(null);
   const [flash, setFlash] = useState<'good' | 'bad' | null>(null);
   const [tossing, setTossing] = useState<null | 'win' | 'lose'>(null);
+  const [zoom, setZoom] = useState(1);
   const rightsRef = useRef(0);
   const posRef = useRef(0);
   const idxRef = useRef(0);
@@ -84,6 +90,8 @@ export function SumoMath() {
     const np = Math.max(-100, Math.min(100, posRef.current + (success ? STEP : -STEP)));
     posRef.current = np;
     setPos(np);
+    setZoom(1.12);
+    window.setTimeout(() => setZoom(1), 260);
     if (success) {
       rightsRef.current += 1;
       addAchievement(10);
@@ -183,7 +191,10 @@ export function SumoMath() {
         )}
 
         {/* dohyō ring */}
-        <div className="relative mx-auto rounded-full bg-amber-200 border-4 border-amber-400 overflow-hidden" style={{ width: '100%', aspectRatio: '2 / 1' }}>
+        <div
+          className="relative mx-auto rounded-full bg-amber-200 border-4 border-amber-400 overflow-hidden transition-transform duration-200"
+          style={{ width: '100%', aspectRatio: '2 / 1', transform: `scale(${zoom})` }}
+        >
           {/* edge zones */}
           <div className="absolute left-0 top-0 bottom-0 w-[15%] bg-rose-400/40" />
           <div className="absolute right-0 top-0 bottom-0 w-[15%] bg-emerald-400/40" />
@@ -191,39 +202,39 @@ export function SumoMath() {
           <div className="absolute left-1/2 -translate-x-1/2 top-1 text-2xl" aria-hidden>🐵</div>
           {/* sumos at the clash point */}
           <motion.div
-            className="absolute top-1/2 -translate-y-1/2 text-4xl"
-            style={{ left: `calc(${meetPct}% - 34px)` }}
-            animate={tossing === 'win' ? {} : { x: [0, 4, 0] }}
+            className="absolute top-1/2 -translate-y-1/2"
+            style={{ left: `calc(${meetPct}% - 44px)` }}
+            animate={tossing === 'win' ? {} : { x: [0, 5, 0] }}
             transition={{ duration: 0.4, repeat: tossing ? 0 : Infinity }}
             aria-hidden
           >
-            {YOU}
+            <Sumo face={YOU} />
           </motion.div>
           <motion.div
-            className="absolute top-1/2 -translate-y-1/2 text-4xl"
-            style={{ left: `calc(${meetPct}% + 2px)` }}
+            className="absolute top-1/2 -translate-y-1/2"
+            style={{ left: `calc(${meetPct}% + 4px)` }}
             animate={
               tossing === 'win'
                 ? { x: 240, y: -120, rotate: 540, opacity: 0 }
                 : tossing === 'lose'
                   ? {}
-                  : { x: [0, -4, 0] }
+                  : { x: [0, -5, 0] }
             }
             transition={{ duration: tossing === 'win' ? 1.2 : 0.4, repeat: tossing ? 0 : Infinity }}
             aria-hidden
           >
-            {RIVAL}
+            <Sumo face={RIVAL} flip />
           </motion.div>
           {/* on a loss, you go flying */}
           {tossing === 'lose' && (
             <motion.div
-              className="absolute top-1/2 -translate-y-1/2 text-4xl"
-              style={{ left: `calc(${meetPct}% - 34px)` }}
+              className="absolute top-1/2 -translate-y-1/2"
+              style={{ left: `calc(${meetPct}% - 44px)` }}
               animate={{ x: -240, y: -120, rotate: -540, opacity: 0 }}
               transition={{ duration: 1.2 }}
               aria-hidden
             >
-              {YOU}
+              <Sumo face={YOU} />
             </motion.div>
           )}
           {/* clash spark */}
@@ -282,6 +293,28 @@ export function SumoMath() {
       <p className="text-center text-[11px] text-slate-500 mt-2">
         Answer ×, ÷ and exponents in under {PER_Q}s to shove your rival! Get 7/10 to toss him out.
       </p>
+    </div>
+  );
+}
+
+// A little CSS sumo wrestler: a round body with a mawashi belt, stubby arms, a
+// topknot, and a face emoji. `flip` mirrors it to face the other way.
+function Sumo({ face, flip }: { face: string; flip?: boolean }) {
+  return (
+    <div className="relative" style={{ width: 56, height: 56, transform: flip ? 'scaleX(-1)' : undefined }} aria-hidden>
+      {/* body */}
+      <div className="absolute left-1/2 -translate-x-1/2 rounded-[45%]" style={{ bottom: 0, width: 48, height: 40, background: '#f3c79f', boxShadow: 'inset 0 -4px 6px rgba(0,0,0,0.15)' }} />
+      {/* arms */}
+      <div className="absolute rounded-full" style={{ left: -2, bottom: 16, width: 14, height: 12, background: '#eab483' }} />
+      <div className="absolute rounded-full" style={{ right: -2, bottom: 16, width: 14, height: 12, background: '#eab483' }} />
+      {/* mawashi belt */}
+      <div className="absolute left-1/2 -translate-x-1/2 rounded" style={{ bottom: 4, width: 48, height: 10, background: '#7c2d12' }} />
+      {/* topknot */}
+      <div className="absolute left-1/2 -translate-x-1/2 rounded-full" style={{ top: 0, width: 10, height: 10, background: '#1f2937' }} />
+      {/* face */}
+      <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center" style={{ top: 4, width: 30, height: 30, fontSize: 22, transform: flip ? 'scaleX(-1)' : undefined }}>
+        {face}
+      </div>
     </div>
   );
 }

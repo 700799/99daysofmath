@@ -318,6 +318,18 @@ function AdminPanel() {
               value={config.challengeLevel}
               onPick={(n) => setArcadeConfig({ challengeLevel: n })}
             />
+            <div className="mt-3" />
+            <AdminPick
+              label="Math story / mathematician break every"
+              options={[
+                { value: 0, label: 'Off' },
+                { value: 3, label: '3m' },
+                { value: 5, label: '5m' },
+                { value: 10, label: '10m' },
+              ]}
+              value={config.storyInterval}
+              onPick={(n) => setArcadeConfig({ storyInterval: n })}
+            />
           </div>
 
           <div className="pt-2 border-t border-slate-100">

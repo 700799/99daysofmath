@@ -5,6 +5,7 @@ import {
   useState,
   type CSSProperties,
   type ReactNode,
+  type PointerEvent as ReactPointerEvent,
 } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -59,6 +60,10 @@ export const GAME_THEME: Record<string, StageTheme> = {
   rogue: 'cave',
   space: 'space',
   sumo: 'meadow',
+  monster: 'night',
+  shinobi: 'night',
+  turbo: 'sky',
+  blitz: 'meadow',
 };
 
 interface SceneSpec {
@@ -360,6 +365,35 @@ function shade(hex: string, pct: number): string {
   const g = adj(parseInt(m[2], 16));
   const b = adj(parseInt(m[3], 16));
   return `#${[r, g, b].map((x) => x.toString(16).padStart(2, '0')).join('')}`;
+}
+
+// Directional finger-swipe (and tap) for any board element. Pointer-capture based
+// so it works on touch (avoids the `e.buttons === 0` pitfall). Spread the returned
+// handlers onto the play-area element.
+export function useSwipe(
+  onDir: (d: 'up' | 'down' | 'left' | 'right') => void,
+  opts?: { threshold?: number; onTap?: () => void },
+) {
+  const start = useRef<{ x: number; y: number } | null>(null);
+  const threshold = opts?.threshold ?? 24;
+  return {
+    onPointerDown: (e: ReactPointerEvent) => {
+      (e.currentTarget as Element).setPointerCapture?.(e.pointerId);
+      start.current = { x: e.clientX, y: e.clientY };
+    },
+    onPointerUp: (e: ReactPointerEvent) => {
+      const s = start.current;
+      start.current = null;
+      if (!s) return;
+      const dx = e.clientX - s.x;
+      const dy = e.clientY - s.y;
+      if (Math.max(Math.abs(dx), Math.abs(dy)) < threshold) {
+        opts?.onTap?.();
+        return;
+      }
+      onDir(Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? 'right' : 'left') : (dy > 0 ? 'down' : 'up'));
+    },
+  };
 }
 
 export { BurstContext };
