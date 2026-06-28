@@ -121,7 +121,11 @@ interface ProgressState {
   cumLessonSeconds: number;  // lifetime seconds spent in arcade lessons
   cumArcadePoints: number;   // lifetime arcade points scored
   cumAppSeconds: number;     // lifetime seconds the app has been open
+  achievementPoints: number; // lifetime bonus for answering questions correctly
+  hapticsEnabled: boolean;   // vibration feedback in games
   // ---- actions ----
+  addAchievement: (n: number) => void;
+  toggleHaptics: () => void;
   setArcadeConfig: (partial: Partial<ArcadeConfig>) => void;
   tickLessonSeconds: (n: number) => void;
   tickAppSeconds: (n: number) => void;
@@ -152,6 +156,14 @@ interface ProgressState {
   mathRemainingSeconds: () => number;
   platformerMaxLevel: number;
   setPlatformerMaxLevel: (n: number) => void;
+  survivorsMaxStage: number;
+  setSurvivorsMaxStage: (n: number) => void;
+  rogueMaxDepth: number;
+  setRogueMaxDepth: (n: number) => void;
+  townMaxTier: number;
+  setTownMaxTier: (n: number) => void;
+  spaceMaxLevel: number;
+  setSpaceMaxLevel: (n: number) => void;
   completeLesson: (key: string) => string[];
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
@@ -342,6 +354,15 @@ const v11Defaults = {
   cumAppSeconds: 0,
 };
 
+const v15Defaults = {
+  survivorsMaxStage: 0,
+  rogueMaxDepth: 0,
+  townMaxTier: 0,
+  spaceMaxLevel: 0,
+  achievementPoints: 0,
+  hapticsEnabled: true,
+};
+
 export const ARCADE_DAILY_CAP_SECONDS = 180;     // 3 minutes per day
 export const MATH_UNLOCK_SECONDS = 900;          // 15 minutes of math unlocks again
 
@@ -467,6 +488,13 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       if (cfg.hiddenGames === undefined) cfg.hiddenGames = [];
     }
   }
+  if (fromVersion < 15) {
+    // New games' furthest-progress fields, achievement points, and haptics pref.
+    const stateAny = state as Record<string, unknown>;
+    for (const [k, v] of Object.entries(v15Defaults)) {
+      if (stateAny[k] === undefined) stateAny[k] = v;
+    }
+  }
   return state;
 }
 
@@ -491,8 +519,18 @@ export const useProgress = create<ProgressState>()(
       ...v9Defaults,
       ...v10Defaults,
       ...v11Defaults,
+      ...v15Defaults,
       setPlatformerMaxLevel: (n) =>
         set((s) => ({ platformerMaxLevel: Math.max(s.platformerMaxLevel, n) })),
+      setSurvivorsMaxStage: (n) =>
+        set((s) => ({ survivorsMaxStage: Math.max(s.survivorsMaxStage, n) })),
+      setRogueMaxDepth: (n) => set((s) => ({ rogueMaxDepth: Math.max(s.rogueMaxDepth, n) })),
+      setTownMaxTier: (n) => set((s) => ({ townMaxTier: Math.max(s.townMaxTier, n) })),
+      setSpaceMaxLevel: (n) => set((s) => ({ spaceMaxLevel: Math.max(s.spaceMaxLevel, n) })),
+      addAchievement: (n) => {
+        if (n > 0) set((s) => ({ achievementPoints: s.achievementPoints + n }));
+      },
+      toggleHaptics: () => set((s) => ({ hapticsEnabled: !s.hapticsEnabled })),
       setArcadeConfig: (partial) =>
         set((s) => ({ arcadeConfig: { ...s.arcadeConfig, ...partial } })),
       tickLessonSeconds: (n) => {
@@ -977,12 +1015,15 @@ export const useProgress = create<ProgressState>()(
           cumLessonSeconds: 0,
           cumArcadePoints: 0,
           cumAppSeconds: 0,
-          // arcadeConfig is a preference — preserved across resets like soundEnabled.
+          achievementPoints: 0,
+          // arcadeConfig + hapticsEnabled are preferences — preserved across resets
+          // like soundEnabled. Game high-water marks (…MaxStage/Depth/Tier/Level)
+          // are preserved too, matching platformerMaxLevel.
         }),
     }),
     {
       name: '99daysofmath:progress',
-      version: 14,
+      version: 15,
       migrate: migrateProgress,
     },
   ),
