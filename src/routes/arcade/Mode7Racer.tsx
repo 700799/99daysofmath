@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
-import { HowToPlay } from './HowToPlay';
+import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
 import { makeChallenge, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
@@ -22,6 +22,17 @@ const SCENERY = [
 const TRAFFIC = ['🚗', '🚙', '🚌', '🚜', '🚚'];
 
 type Car = { z: number; lane: number; emoji: string };
+
+const RACER_CONTROLS = 'Drag to steer · ◀ ▶ buttons · arrow keys. Auto-accelerates.';
+function racerSections(maxStage: number): HowToSection[] {
+  return [
+    { heading: 'Goal', body: 'Race as far as you can! Reach each checkpoint before the timer hits zero to keep going. New scenery every stage.' },
+    { heading: 'Steering', body: 'Drag your finger left/right on the road to steer (or use ◀ ▶ / arrow keys). The road curves — lean into the bend or you’ll slide onto the grass and slow down.' },
+    { heading: 'Watch out', body: 'Dodge traffic 🚗🚌🚜 — bumping one slows you and costs time!' },
+    { heading: 'Nitro', body: 'At each checkpoint, solve a quick math problem for a nitro speed boost. ' },
+    { heading: 'Best', body: 'Furthest stage so far: ' + maxStage + '.' },
+  ];
+}
 
 export function Mode7Racer() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
@@ -201,14 +212,8 @@ export function Mode7Racer() {
           emoji="🏎️"
           title="Turbo Dash"
           gradient="from-sky-500 to-indigo-700"
-          sections={[
-            { heading: 'Goal', body: 'Race as far as you can! Reach each checkpoint before the timer hits zero to keep going. New scenery every stage.' },
-            { heading: 'Steering', body: 'Drag your finger left/right on the road to steer (or use ◀ ▶ / arrow keys). The road curves — lean into the bend or you’ll slide onto the grass and slow down.' },
-            { heading: 'Watch out', body: 'Dodge traffic 🚗🚌🚜 — bumping one slows you and costs time!' },
-            { heading: 'Nitro', body: 'At each checkpoint, solve a quick math problem for a nitro speed boost. ' },
-            { heading: 'Best', body: 'Furthest stage so far: ' + maxStage + '.' },
-          ]}
-          controls="Drag to steer · ◀ ▶ buttons · arrow keys. Auto-accelerates."
+          sections={racerSections(maxStage)}
+          controls={RACER_CONTROLS}
           onStart={start}
         />
       </div>
@@ -291,6 +296,8 @@ export function Mode7Racer() {
           </div>
         </div>
       )}
+
+      <GameInstructions emoji="🏎️" title="Turbo Dash" sections={racerSections(maxStage)} controls={RACER_CONTROLS} />
     </div>
   );
 }

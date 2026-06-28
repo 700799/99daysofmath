@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage, useBurst, BurstLayer } from './fx';
-import { HowToPlay } from './HowToPlay';
+import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
 import { makeChallenge, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
@@ -25,6 +25,15 @@ type Bullet = { active: boolean; x: number; y: number; vx: number; vy: number };
 type Enemy = { x: number; y: number; hp: number; emoji: string; vx: number; w: number };
 type Plat = { x: number; y: number; w: number };
 type Crate = { x: number; taken: boolean };
+
+const BLITZ_CONTROLS = '◀ ▶ move · JUMP (or Space / swipe up) · FIRE (or Z/X) · hold ⬆️/⬇️ to aim.';
+const BLITZ_SECTIONS: HowToSection[] = [
+  { heading: 'Goal', body: 'Run and gun to the 🏁 flag at the end of each stage. Survive the jungle of enemies!' },
+  { heading: 'Move & jump', body: 'Run left/right, jump onto floating platforms (you can hop up THROUGH them and land on top).' },
+  { heading: 'Shoot 8 ways', body: 'Fire in the direction you face; hold ⬆️ Up to aim upward, or ⬇️ Down while jumping to aim down — for diagonal shots.' },
+  { heading: 'Supply drawers', body: 'Touch a 📦 supply crate to open the supply drawer. Solve the math problem to claim a SPREAD GUN + bonus life — you can’t close the drawer until you solve it!' },
+  { heading: 'Lives', body: 'Touching an enemy costs a life. Lose all 3 and the run ends.' },
+];
 
 export function JungleBlitz() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
@@ -261,14 +270,8 @@ export function JungleBlitz() {
           emoji="🪖"
           title="Jungle Blitz"
           gradient="from-green-700 to-lime-700"
-          sections={[
-            { heading: 'Goal', body: 'Run and gun to the 🏁 flag at the end of each stage. Survive the jungle of enemies!' },
-            { heading: 'Move & jump', body: 'Run left/right, jump onto floating platforms (you can hop up THROUGH them and land on top).' },
-            { heading: 'Shoot 8 ways', body: 'Fire in the direction you face; hold ⬆️ Up to aim upward, or ⬇️ Down while jumping to aim down — for diagonal shots.' },
-            { heading: 'Supply drawers', body: 'Touch a 📦 supply crate to open the supply drawer. Solve the math problem to claim a SPREAD GUN + bonus life — you can’t close the drawer until you solve it!' },
-            { heading: 'Lives', body: 'Touching an enemy costs a life. Lose all 3 and the run ends.' },
-          ]}
-          controls="◀ ▶ move · JUMP (or Space / swipe up) · FIRE (or Z/X) · hold ⬆️/⬇️ to aim."
+          sections={BLITZ_SECTIONS}
+          controls={BLITZ_CONTROLS}
           onStart={start}
         />
       </div>
@@ -351,6 +354,8 @@ export function JungleBlitz() {
           </div>
         </div>
       )}
+
+      <GameInstructions emoji="🪖" title="Jungle Blitz" sections={BLITZ_SECTIONS} controls={BLITZ_CONTROLS} />
     </div>
   );
 }

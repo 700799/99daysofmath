@@ -1,11 +1,74 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { GameStage } from './fx';
-import { HowToPlay } from './HowToPlay';
-import { makeChallenge, type Challenge } from './MidGameChallenge';
+import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
+import type { Problem } from '../../types/problem';
+import { getAllProblems } from '../../data/problems';
+import { isEquivalent } from '../../data/normalize';
+import { ProblemCard } from '../../components/ProblemCard';
+import { AnswerInput } from '../../components/AnswerInput';
+import { Explanation } from '../../components/Explanation';
+
+// The Special attack is powered by a real, medium-to-difficult math problem —
+// either an exponent challenge or a word problem pulled from the lesson bank
+// (difficulty 2–3). No more trivial one-digit add/sub.
+const SUP: Record<number, string> = { 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴', 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹' };
+function sup(n: number): string {
+  return String(n).split('').map((d) => SUP[Number(d)] ?? d).join('');
+}
+
+let expId = 1;
+// Build a synthetic exponent Problem so it renders through the same
+// ProblemCard / AnswerInput / isEquivalent path as the lesson bank.
+function makeExponentProblem(wave: number): Problem {
+  const hard = wave >= 6;
+  const kind = Math.floor(Math.random() * (hard ? 4 : 3));
+  let prompt = '';
+  let val = 0;
+  if (kind === 0) {
+    // square
+    const b = 4 + Math.floor(Math.random() * (hard ? 12 : 8)); // 4..15 (or 4..11)
+    prompt = `Evaluate ${b}${sup(2)}.`;
+    val = b * b;
+  } else if (kind === 1) {
+    // cube
+    const b = 2 + Math.floor(Math.random() * (hard ? 6 : 4)); // 2..7 (or 2..5)
+    prompt = `Evaluate ${b}${sup(3)}.`;
+    val = b * b * b;
+  } else if (kind === 2) {
+    // power of two/three
+    const b = Math.random() < 0.5 ? 2 : 3;
+    const e = (hard ? 4 : 3) + Math.floor(Math.random() * 2); // 3–5
+    prompt = `Evaluate ${b}${sup(e)}.`;
+    val = Math.pow(b, e);
+  } else {
+    // two-square word problem
+    const s = 6 + Math.floor(Math.random() * 9); // 6..14
+    prompt = `A square arena has sides of ${s} steps. What is its area (${s}${sup(2)})?`;
+    val = s * s;
+  }
+  return {
+    id: `rogue-exp-${expId++}`,
+    domain: '6.EE',
+    unit: 0,
+    orderInUnit: 0,
+    standard: 'Exponents',
+    difficulty: hard ? 3 : 2,
+    prompt,
+    answerType: 'numeric',
+    primaryAnswer: String(val),
+    alternativeAnswers: [],
+    acceptanceMode: 'numeric-tolerance',
+    numericTolerance: 1e-6,
+    hint: 'An exponent means repeated multiplication.',
+    explanation: [`${prompt.replace(/^Evaluate |\?.*$/g, '')} = ${val}.`],
+    tags: [],
+    estimatedSeconds: 25,
+  };
+}
 
 // Monster Rogue — an original creature-collecting roguelike battler. Pick a
 // starter, then climb an endless gauntlet of turn-based battles across biomes.
@@ -43,6 +106,17 @@ const SPECIES: Species[] = [
 
 const BIOMES = ['meadow', 'ocean', 'cave', 'night', 'space', 'candy'] as const;
 
+const HOWTO_CONTROLS = 'Tap the action buttons. Special problems use the on-screen keypad — scroll the problem if it is long.';
+function howtoSections(maxWave: number): HowToSection[] {
+  return [
+    { heading: 'Goal', body: 'Pick a starter critter and climb an endless gauntlet of turn-based battles. Survive as many waves as you can!' },
+    { heading: 'Elements', body: '🔥Ember 💧Aqua 🍃Leaf ⚡Spark 🪨Stone ❄️Frost. Some beat others (×1.5) and are weak to others (×0.66) — match types to hit hard!' },
+    { heading: 'Your turn', body: 'Attack = normal hit. Special = a CRITICAL (×2) hit, but you must solve a real math problem (an exponent or a word problem from the lesson — medium to hard). Get it right to crit, or Fizzle for a weak hit. Catch = add a weakened wild critter to your party (up to 4). Swap = change your active critter.' },
+    { heading: 'Leveling', body: 'Win a battle and your active critter levels up (and may evolve!). A boss appears every 5th wave.' },
+    { heading: 'Game over', body: 'If your whole party faints, the run ends. Best wave so far: ' + maxWave + '.' },
+  ];
+}
+
 type Mon = { key: number; emoji: string; name: string; el: Element; level: number; hp: number; max: number; atk: number; evo?: string };
 
 let keyer = 1;
@@ -69,9 +143,26 @@ export function MonsterRogue() {
   const [caught, setCaught] = useState(0);
   const [log, setLog] = useState('A wild critter appears!');
   const [busy, setBusy] = useState(false);
-  const [special, setSpecial] = useState<Challenge | null>(null);
+  const [special, setSpecial] = useState<Problem | null>(null);
   const [specialInput, setSpecialInput] = useState('');
+  const [specialResult, setSpecialResult] = useState<null | boolean>(null);
+  const [showHelp, setShowHelp] = useState(false);
   const [swapOpen, setSwapOpen] = useState(false);
+
+  // Medium-to-difficult word problems from the lesson bank, loaded once.
+  const bankRef = useRef<Problem[]>([]);
+  useEffect(() => {
+    let alive = true;
+    getAllProblems()
+      .then((all) => {
+        if (!alive) return;
+        bankRef.current = all.filter((p) => p.difficulty >= 2);
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, []);
 
   const biome = BIOMES[Math.min(BIOMES.length - 1, Math.floor((wave - 1) / 5))];
   const isBoss = wave % 5 === 0;
@@ -163,21 +254,50 @@ export function MonsterRogue() {
 
   const doSpecial = () => {
     if (!foe || busy) return;
-    setSpecial(makeChallenge(Math.min(5, 1 + Math.floor(wave / 3))));
+    // Bias toward word problems from the lesson bank; otherwise an exponent
+    // challenge. Difficulty scales harder with deeper waves.
+    const bank = bankRef.current;
+    const wantHard = wave >= 6;
+    const pool = bank.filter((p) => (wantHard ? p.difficulty >= 2 : true));
+    let prob: Problem | null = null;
+    if (pool.length && Math.random() < 0.6) {
+      // prefer difficulty 3 on deep waves
+      const tough = pool.filter((p) => p.difficulty === 3);
+      const src = wantHard && tough.length ? tough : pool;
+      prob = src[Math.floor(Math.random() * src.length)];
+    }
+    if (!prob) prob = makeExponentProblem(wave);
+    setSpecial(prob);
     setSpecialInput('');
+    setSpecialResult(null);
+    setShowHelp(false);
   };
   const resolveSpecial = () => {
     if (!special || !foe) return;
-    const ok = Number(specialInput.trim()) === special.answer && specialInput.trim() !== '';
+    const ok = isEquivalent(specialInput, special);
+    if (!ok) {
+      // Let them see it's wrong + the explanation before it resolves.
+      setSpecialResult(false);
+      setShowHelp(true);
+      sfx.hurt();
+      haptic(HAPTIC.hit);
+      return;
+    }
     setSpecial(null);
+    setSpecialResult(null);
     const a = party[active];
     const base = a.atk * typeMult(a.el, foe.el);
-    if (ok) {
-      addAchievement(10);
-      hurtFoe(Math.round(base * 2 + 4), `💥 Critical Special by ${a.name}!`);
-    } else {
-      hurtFoe(Math.max(1, Math.round(base * 0.5)), `${a.name}'s Special fizzled…`);
-    }
+    addAchievement(10);
+    hurtFoe(Math.round(base * 2 + 4), `💥 Critical Special by ${a.name}!`);
+  };
+  // Give up on the problem — the Special fizzles for weak damage.
+  const fizzleSpecial = () => {
+    if (!special || !foe) return;
+    setSpecial(null);
+    setSpecialResult(null);
+    const a = party[active];
+    const base = a.atk * typeMult(a.el, foe.el);
+    hurtFoe(Math.max(1, Math.round(base * 0.5)), `${a.name}'s Special fizzled…`);
   };
 
   const tryCatch = () => {
@@ -218,7 +338,8 @@ export function MonsterRogue() {
 
   const reset = () => {
     setParty([]); setActive(0); setFoe(null); setWave(1); setCaught(0);
-    setBusy(false); setSpecial(null); setSwapOpen(false); setOutcome(null);
+    setBusy(false); setSpecial(null); setSpecialResult(null); setShowHelp(false);
+    setSwapOpen(false); setOutcome(null);
     setPhase('howto');
   };
 
@@ -245,14 +366,8 @@ export function MonsterRogue() {
           emoji="🐲"
           title="Monster Rogue"
           gradient="from-indigo-500 to-purple-700"
-          sections={[
-            { heading: 'Goal', body: 'Pick a starter critter and climb an endless gauntlet of turn-based battles. Survive as many waves as you can!' },
-            { heading: 'Elements', body: '🔥Ember 💧Aqua 🍃Leaf ⚡Spark 🪨Stone ❄️Frost. Some beat others (×1.5) and are weak to others (×0.66) — match types to hit hard!' },
-            { heading: 'Your turn', body: 'Attack = normal hit. Special = a quick math problem; answer right for a CRITICAL (×2)! Catch = add a weakened wild critter to your party (up to 4). Swap = change your active critter.' },
-            { heading: 'Leveling', body: 'Win a battle and your active critter levels up (and may evolve!). A boss appears every 5th wave.' },
-            { heading: 'Game over', body: 'If your whole party faints, the run ends. Best wave so far: ' + maxWave + '.' },
-          ]}
-          controls="Tap the action buttons. Special problems use the on-screen keypad."
+          sections={howtoSections(maxWave)}
+          controls={HOWTO_CONTROLS}
           onStart={() => setPhase('starter')}
         />
       </div>
@@ -348,18 +463,51 @@ export function MonsterRogue() {
       )}
 
       {special && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
-          <div className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl">
-            <div className="text-3xl">✨</div>
-            <div className="mt-1 font-display font-extrabold text-slate-900">Special! Solve for a CRITICAL hit:</div>
-            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 py-4 text-2xl font-display font-extrabold tabular-nums">{special.prompt}</div>
-            <input autoFocus inputMode="numeric" value={specialInput} onChange={(e) => setSpecialInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && resolveSpecial()}
-              className="mt-3 w-full rounded-xl border-2 border-slate-200 px-3 py-2 text-center text-xl font-display font-extrabold focus:border-violet-500 focus:outline-none" placeholder="?" />
-            <button type="button" onClick={resolveSpecial} className="mt-3 w-full min-h-11 rounded-2xl bg-violet-500 text-white font-display font-extrabold">Unleash ✨</button>
+        <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-slate-900/70 p-4">
+          <div className="w-full max-w-md my-auto rounded-3xl bg-white p-5 shadow-2xl">
+            <div className="text-center text-3xl">✨</div>
+            <div className="mt-1 text-center font-display font-extrabold text-slate-900">Special! Solve for a CRITICAL hit (×2):</div>
+
+            <div className="mt-3">
+              <ProblemCard problem={special} />
+            </div>
+
+            <AnswerInput
+              problem={special}
+              value={specialInput}
+              onChange={(v) => { setSpecialInput(v); if (specialResult === false) setSpecialResult(null); }}
+              onSubmit={resolveSpecial}
+            />
+
+            {specialResult === false && (
+              <div className="mt-3 rounded-2xl bg-rose-50 px-4 py-3 text-sm font-display font-bold text-rose-800">
+                Not quite — check the steps and try again, or fizzle for a weak hit.
+              </div>
+            )}
+
+            <button
+              type="button"
+              onClick={() => setShowHelp((s) => !s)}
+              className="mt-3 text-sm font-display font-bold text-violet-700 hover:text-violet-800"
+            >
+              {showHelp ? '− Hide explanation' : '💡 Show explanation'}
+            </button>
+            {showHelp && (
+              <div className="mt-2">
+                <Explanation steps={special.explanation} alternatives={special.alternativeExplanations} />
+              </div>
+            )}
+
+            <div className="mt-4 grid grid-cols-2 gap-2">
+              <button type="button" onClick={fizzleSpecial} className="min-h-11 rounded-2xl bg-slate-200 text-slate-700 font-display font-extrabold">Fizzle 💨</button>
+              <button type="button" disabled={!specialInput.trim()} onClick={resolveSpecial} className="min-h-11 rounded-2xl bg-violet-500 disabled:bg-slate-300 text-white font-display font-extrabold">Unleash ✨</button>
+            </div>
           </div>
         </div>
       )}
+
+      {/* Scroll down during play to re-read the rules. */}
+      <GameInstructions emoji="🐲" title="Monster Rogue" sections={howtoSections(maxWave)} controls={HOWTO_CONTROLS} />
     </div>
   );
 }

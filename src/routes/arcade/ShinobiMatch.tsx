@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { GameStage } from './fx';
-import { HowToPlay } from './HowToPlay';
+import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
 import { makeChallenge, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
@@ -39,6 +39,17 @@ function newGrid(): number[] {
 }
 
 type Foe = { lane: number; pos: number; hp: number; emoji: string };
+
+const SHINOBI_CONTROLS = 'Tap a rune then a neighbour to swap — or swipe a rune toward its neighbour.';
+function shinobiSections(maxLevel: number): HowToSection[] {
+  return [
+    { heading: 'Goal', body: 'Match runes to fight off foes that creep down 3 lanes toward your shinobi. Survive as many levels as you can!' },
+    { heading: 'Match-3', body: 'Swap two neighbouring runes to line up 3 or more of a kind. Each successful swap is one turn — then every foe steps closer.' },
+    { heading: 'What runes do', body: '⚔️ Strike the front foe · 🌀 Shuriken hits a whole lane · 🛡️ Guard adds block · 💚 Heal restores HP · ⚡ Chi charges your ultimate.' },
+    { heading: 'Ninjutsu', body: 'When the ⚡ chi meter is full, tap Ninjutsu and solve a math problem to clear the whole screen!' },
+    { heading: 'Danger', body: 'If a foe reaches your shinobi it hurts you (block absorbs some). Lose all HP and the run ends. Best level: ' + maxLevel + '.' },
+  ];
+}
 
 export function ShinobiMatch() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
@@ -254,14 +265,8 @@ export function ShinobiMatch() {
           emoji="🥷"
           title="Shinobi Match"
           gradient="from-slate-700 to-rose-700"
-          sections={[
-            { heading: 'Goal', body: 'Match runes to fight off foes that creep down 3 lanes toward your shinobi. Survive as many levels as you can!' },
-            { heading: 'Match-3', body: 'Swap two neighbouring runes to line up 3 or more of a kind. Each successful swap is one turn — then every foe steps closer.' },
-            { heading: 'What runes do', body: '⚔️ Strike the front foe · 🌀 Shuriken hits a whole lane · 🛡️ Guard adds block · 💚 Heal restores HP · ⚡ Chi charges your ultimate.' },
-            { heading: 'Ninjutsu', body: 'When the ⚡ chi meter is full, tap Ninjutsu and solve a math problem to clear the whole screen!' },
-            { heading: 'Danger', body: 'If a foe reaches your shinobi it hurts you (block absorbs some). Lose all HP and the run ends. Best level: ' + maxLevel + '.' },
-          ]}
-          controls="Tap a rune then a neighbour to swap — or swipe a rune toward its neighbour."
+          sections={shinobiSections(maxLevel)}
+          controls={SHINOBI_CONTROLS}
           onStart={start}
         />
       </div>
@@ -340,6 +345,8 @@ export function ShinobiMatch() {
           </div>
         </div>
       )}
+
+      <GameInstructions emoji="🥷" title="Shinobi Match" sections={shinobiSections(maxLevel)} controls={SHINOBI_CONTROLS} />
     </div>
   );
 }

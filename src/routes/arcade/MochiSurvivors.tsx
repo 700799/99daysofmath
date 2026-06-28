@@ -3,8 +3,11 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage, useBurst, BurstLayer } from './fx';
 import { makeChallenge, type Challenge } from './MidGameChallenge';
+import { MathBreak } from './MathBreak';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
+
+const STORY_EVERY = 60; // force a math-story break this many seconds into play
 
 const NUKE_COST = 40;
 const HEAL_COST = 25;
@@ -99,6 +102,12 @@ export function MochiSurvivors() {
   const levelUpRef = useRef(false);
   const [zoom, setZoom] = useState(1);
   const [math, setMath] = useState(() => mathChoices(1));
+  // forced math-story break ~1 min into play
+  const [story, setStory] = useState(false);
+  const storyRef = useRef(false);
+  const nextStoryRef = useRef(STORY_EVERY);
+  // "how to move" arrow hint shown until the player first drags
+  const [showHint, setShowHint] = useState(true);
 
   // solve math → earn cash (gold) to buy power-ups while you dodge
   const answerMath = (n: number) => {
@@ -150,7 +159,10 @@ export function MochiSurvivors() {
     enemiesRef.current = []; bulletsRef.current = []; gemsRef.current = [];
     elapsedRef.current = 0; spawnRef.current = 0.8; killsRef.current = 0; goldRef.current = 0;
     bossRef.current = null; bossSpawnedRef.current = false; iframeRef.current = 0;
+    miniSpawnedRef.current = false;
     doneRef.current = false; wonRef.current = false; levelUpRef.current = false;
+    storyRef.current = false; nextStoryRef.current = STORY_EVERY;
+    setStory(false); setShowHint(true);
     setLevelUp(null); setOutcome(null); setStageIdx(idx);
   };
 
@@ -173,7 +185,7 @@ export function MochiSurvivors() {
     const stage = STAGES[stageIdx];
     lastRef.current = performance.now();
     const tick = (now: number) => {
-      if (pausedRef.current || levelUpRef.current) {
+      if (pausedRef.current || levelUpRef.current || storyRef.current) {
         lastRef.current = now;
         rafRef.current = requestAnimationFrame(tick);
         return;
@@ -181,6 +193,14 @@ export function MochiSurvivors() {
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
       elapsedRef.current += dt;
+
+      // forced math-story break ~every minute — must tap to continue
+      if (elapsedRef.current >= nextStoryRef.current) {
+        storyRef.current = true;
+        setStory(true);
+        rafRef.current = requestAnimationFrame(tick);
+        return;
+      }
       if (iframeRef.current > 0) iframeRef.current -= dt;
       const h = heroRef.current;
 
@@ -409,6 +429,13 @@ export function MochiSurvivors() {
     lastRef.current = performance.now();
   };
 
+  const finishStory = () => {
+    setStory(false);
+    storyRef.current = false;
+    nextStoryRef.current = elapsedRef.current + STORY_EVERY;
+    lastRef.current = performance.now();
+  };
+
   // --- stage select ---
   if (stageIdx === null && !outcome) {
     return (
@@ -483,7 +510,7 @@ export function MochiSurvivors() {
         <div
           className="relative overflow-hidden mx-auto touch-none"
           style={{ width: '100%', aspectRatio: `${VW} / ${VH}` }}
-          onPointerDown={(e) => { (e.currentTarget as Element).setPointerCapture?.(e.pointerId); updateDrag(e, dragRef); }}
+          onPointerDown={(e) => { (e.currentTarget as Element).setPointerCapture?.(e.pointerId); setShowHint(false); updateDrag(e, dragRef); }}
           onPointerMove={(e) => { if (dragRef.current) updateDrag(e, dragRef); }}
           onPointerUp={() => (dragRef.current = null)}
           onPointerLeave={() => (dragRef.current = null)}
@@ -518,6 +545,19 @@ export function MochiSurvivors() {
             )}
             {/* hero */}
             <Sprite x={VW / 2} y={VH / 2} size={30} emoji={HERO} flash={iframeRef.current > 0} />
+
+            {/* navigation hint — arrows around the hero until you first move */}
+            {showHint && (
+              <div className="pointer-events-none absolute inset-0 z-30">
+                <div className="absolute left-1/2 top-[34%] -translate-x-1/2 text-2xl animate-bounce">⬆️</div>
+                <div className="absolute left-1/2 top-[58%] -translate-x-1/2 text-2xl animate-bounce">⬇️</div>
+                <div className="absolute top-1/2 left-[34%] -translate-y-1/2 text-2xl animate-pulse">⬅️</div>
+                <div className="absolute top-1/2 left-[60%] -translate-y-1/2 text-2xl animate-pulse">➡️</div>
+                <div className="absolute left-1/2 bottom-3 -translate-x-1/2 rounded-full bg-slate-900/70 px-3 py-1 text-xs font-display font-extrabold text-white">
+                  👆 Drag to move!
+                </div>
+              </div>
+            )}
           </div>
 
           {levelUp && (
@@ -569,6 +609,8 @@ export function MochiSurvivors() {
       <p className="text-center text-[11px] text-slate-500 mt-2">
         Dodge with drag/WASD — weapons auto-fire. <b>Answer math to earn 💰</b> for Nukes &amp; Heals!
       </p>
+
+      {story && <MathBreak onDone={finishStory} />}
     </div>
   );
 }
