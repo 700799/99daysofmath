@@ -62,6 +62,7 @@ export interface ArcadeConfig {
   livesPerSession: number; // lives granted per session for life-based games
   checkProblems: number; // # of difficulty-3 problems in the hard check
   adminPin: string; // gate for the grown-ups settings panel
+  unlimited?: boolean; // admin override: skip the lesson gate, play freely
 }
 
 interface ProgressState {
@@ -321,6 +322,7 @@ const v11Defaults = {
     livesPerSession: 3,
     checkProblems: 2,
     adminPin: '1234',
+    unlimited: false,
   } as ArcadeConfig,
   cumArcadeSeconds: 0,
   cumLessonSeconds: 0,

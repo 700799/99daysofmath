@@ -163,8 +163,8 @@ function AdminPanel() {
     <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
       <div className="font-display font-extrabold text-slate-900">Grown-ups 🔒</div>
       <div className="text-sm text-slate-600 mt-1">
-        Tune the learn-to-play balance: how many full lessons unlock a game, the
-        starting level, lives per game, and how many hard problems each lesson check has.
+        Enter the passcode (default <b>1234</b>) to tune the learn-to-play balance — including
+        <b> Unlimited play</b>, which lets you skip the lessons and play any game freely.
       </div>
 
       {!open ? (
@@ -187,6 +187,25 @@ function AdminPanel() {
         </div>
       ) : (
         <div className="mt-4 space-y-4">
+          <div className="flex items-center justify-between gap-3 rounded-xl bg-slate-50 border border-slate-200 px-3 py-2">
+            <div>
+              <div className="font-display font-extrabold text-slate-900 text-sm">Unlimited play</div>
+              <div className="text-xs text-slate-600">Skip the lesson gate — play any game freely.</div>
+            </div>
+            <button
+              type="button"
+              onClick={() => setArcadeConfig({ unlimited: !config.unlimited })}
+              aria-pressed={!!config.unlimited}
+              className={[
+                'min-h-11 px-4 rounded-full font-display font-extrabold text-sm transition-colors',
+                config.unlimited
+                  ? 'bg-duo-green text-white hover:bg-duo-green-dark'
+                  : 'bg-slate-200 text-slate-700 hover:bg-slate-300',
+              ].join(' ')}
+            >
+              {config.unlimited ? '♾️ On' : 'Off'}
+            </button>
+          </div>
           <AdminChoice
             label="Lessons per game (ratio)"
             options={[1, 2, 3]}

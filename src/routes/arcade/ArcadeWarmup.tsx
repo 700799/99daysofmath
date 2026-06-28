@@ -59,9 +59,22 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   };
 
   const requestReplay = () => {
+    if (config.unlimited) {
+      setSessionKey((k) => k + 1); // unlimited: just restart, no lesson
+      return;
+    }
     setUnlocked(false);
     setLessonsDone(0);
   };
+
+  // Admin override: skip the lesson gate entirely and play freely.
+  if (config.unlimited) {
+    return (
+      <ArcadeSessionContext.Provider value={{ requestReplay }}>
+        <div key={sessionKey}>{children}</div>
+      </ArcadeSessionContext.Provider>
+    );
+  }
 
   if (unlocked) {
     return (

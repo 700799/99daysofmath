@@ -47,6 +47,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'taiko', path: '/arcade/taiko', emoji: '🥁', name: 'Taiko Tap', blurb: 'Tap to the beat.', baseXp: 10, gradient: 'from-rose-500 to-red-600' },
   { id: 'tangram', path: '/arcade/tangram', emoji: '🧩', name: 'Tangram', blurb: 'Fill the frame.', baseXp: 10, gradient: 'from-teal-500 to-emerald-600' },
   { id: 'tictactoe', path: '/arcade/tictactoe', emoji: '🐕', name: 'Tic Tac Toe', blurb: 'Dogs vs cats. Bigger beats smaller.', baseXp: 8, gradient: 'from-amber-400 to-orange-500' },
+  { id: 'kpop', path: '/arcade/kpop', emoji: '🎤', name: 'K-Pop Dress-Up', blurb: 'Memorize & match the look.', baseXp: 10, gradient: 'from-fuchsia-500 to-pink-600' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {

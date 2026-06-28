@@ -60,12 +60,14 @@ export function BobaShop() {
   const livesRef = useRef(config.livesPerSession);
   const levelRef = useRef(config.startLevel);
   const timeRef = useRef(15);
+  const comboRef = useRef(0);
   const doneRef = useRef(false);
+  const [reaction, setReaction] = useState<string | null>(null);
   const [, force] = useState(0);
   const redraw = () => force((n) => n + 1);
   useArcadeClock(!!outcome);
 
-  const orderTime = () => Math.max(8, 16 - levelRef.current);
+  const orderTime = () => Math.max(6, 14 - levelRef.current * 1.5);
 
   const finish = () => {
     if (doneRef.current) return;
@@ -76,7 +78,7 @@ export function BobaShop() {
   };
 
   const nextOrder = () => {
-    levelRef.current = config.startLevel + Math.floor(servedRef.current / 4);
+    levelRef.current = config.startLevel + Math.floor(servedRef.current / 3);
     setOrder(makeOrder(levelRef.current));
     setCup([0, 0, 0]);
     timeRef.current = orderTime();
@@ -97,7 +99,10 @@ export function BobaShop() {
     const id = setInterval(() => {
       timeRef.current -= 1;
       if (timeRef.current <= 0) {
+        comboRef.current = 0;
         setFlash('bad');
+        setReaction('😖');
+        window.setTimeout(() => setReaction(null), 600);
         loseLife();
       }
       redraw();
@@ -118,15 +123,23 @@ export function BobaShop() {
   const serve = () => {
     if (outcome) return;
     if (equivalent(cup, order.target)) {
-      scoreRef.current += 10 + levelRef.current * 2;
+      comboRef.current += 1;
+      const mult = 1 + Math.floor((comboRef.current - 1) / 3); // x1, then x2 after 3 in a row, ...
+      scoreRef.current += (10 + levelRef.current * 2) * mult;
       servedRef.current += 1;
       setFlash('good');
+      setReaction('😋');
       nextOrder();
     } else {
+      comboRef.current = 0;
       setFlash('bad');
+      setReaction('😖');
       loseLife();
     }
-    setTimeout(() => setFlash(null), 500);
+    setTimeout(() => {
+      setFlash(null);
+      setReaction(null);
+    }, 600);
   };
 
   const reset = () => {
@@ -162,7 +175,10 @@ export function BobaShop() {
       <div className="flex justify-between items-center mb-2 max-w-sm mx-auto px-1 text-sm font-display font-extrabold">
         <span className="text-rose-600">{'❤️'.repeat(Math.max(0, livesRef.current))}{'🤍'.repeat(Math.max(0, config.livesPerSession - livesRef.current))}</span>
         <span className="text-slate-700 tabular-nums">⭐ {scoreRef.current}</span>
-        <span className="text-orange-600 tabular-nums">⏱ {Math.max(0, timeRef.current)}s</span>
+        {comboRef.current > 1 && (
+          <span className="text-pink-600">🔥 x{1 + Math.floor((comboRef.current - 1) / 3)}</span>
+        )}
+        <span className="text-orange-600 tabular-nums">⏱ {Math.max(0, Math.ceil(timeRef.current))}s</span>
       </div>
 
       <div
@@ -174,7 +190,10 @@ export function BobaShop() {
               : 'bg-amber-50 border-amber-200'
         }`}
       >
-        <div className="text-5xl">{order.who}</div>
+        <div className="text-5xl relative inline-block">
+          {order.who}
+          {reaction && <span className="absolute -right-7 -top-1 text-3xl">{reaction}</span>}
+        </div>
         <div className="mt-1 text-sm font-display font-bold text-slate-700">wants this ratio</div>
         <div className="mt-2 flex items-center justify-center gap-2 text-xl font-display font-extrabold text-slate-900">
           {ING.map((ing, i) => (
@@ -186,7 +205,21 @@ export function BobaShop() {
         </div>
       </div>
 
-      {/* cup */}
+      {/* layered cup — see the ratio build up */}
+      <div className="max-w-sm mx-auto mt-3 flex justify-center">
+        <div className="relative w-16 h-24 rounded-b-2xl rounded-t-md border-2 border-slate-300 bg-white/70 overflow-hidden flex flex-col-reverse">
+          <div style={{ flexGrow: cup[0], background: '#b45309' }} title="tea" />
+          <div style={{ flexGrow: cup[1], background: '#fde68a' }} title="milk" />
+          <div style={{ flexGrow: cup[2], background: '#3f2d23' }} title="boba" />
+          {cup[0] + cup[1] + cup[2] === 0 && (
+            <div className="absolute inset-0 flex items-center justify-center text-xs text-slate-400 font-display font-bold">
+              empty
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* cup controls */}
       <div className="max-w-sm mx-auto mt-3 grid grid-cols-3 gap-2">
         {ING.map((ing, i) => (
           <div key={ing.key} className="rounded-2xl bg-white border-2 border-slate-200 p-2 text-center">
