@@ -255,24 +255,29 @@ export function Snake() {
           {foodsRef.current.map((f, i) => (
             <div
               key={i}
-              className="absolute flex items-center justify-center rounded-md bg-white font-display font-extrabold text-slate-900"
-              style={{ left: f.c * TILE + 1, top: f.r * TILE + 1, width: TILE - 2, height: TILE - 2, fontSize: 11 }}
+              className="absolute flex items-center justify-center font-display font-extrabold text-slate-900"
+              style={{ left: f.c * TILE, top: f.r * TILE, width: TILE, height: TILE, fontSize: TILE - 5 }}
             >
-              {f.val}
+              <span className="absolute" aria-hidden>🍰</span>
+              <span className="relative text-white" style={{ fontSize: 11, textShadow: '0 1px 2px rgba(0,0,0,0.9)' }}>{f.val}</span>
             </div>
           ))}
           {snake.map((s, i) => (
             <div
               key={i}
-              className="absolute rounded-sm"
+              className="absolute flex items-center justify-center"
               style={{
-                left: s.c * TILE + 1,
-                top: s.r * TILE + 1,
-                width: TILE - 2,
-                height: TILE - 2,
-                background: i === 0 ? '#a3e635' : '#65a30d',
+                left: s.c * TILE,
+                top: s.r * TILE,
+                width: TILE,
+                height: TILE,
+                fontSize: TILE - 3,
+                zIndex: i === 0 ? 2 : 1,
+                filter: 'drop-shadow(0 1px 1px rgba(0,0,0,0.4))',
               }}
-            />
+            >
+              {i === 0 ? '🐷' : '🐖'}
+            </div>
           ))}
         </div>
       </div>

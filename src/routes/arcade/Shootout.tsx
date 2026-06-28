@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // Skill-based basketball. The hoop jumps to a new spot every shot. A direction
 // arrow sweeps back and forth from the launch point — tap SHOOT to fire at the
@@ -51,6 +52,7 @@ export function Shootout() {
   const [arrowAngle, setArrowAngle] = useState(AIM_MIN);
   const [power, setPower] = useState(0);
   const [flight, setFlight] = useState<Flight | null>(null);
+  const [reaction, setReaction] = useState<'make' | 'miss' | null>(null);
 
   const angleRef = useRef(AIM_MIN);
   const dirRef = useRef(1);
@@ -168,15 +170,28 @@ export function Shootout() {
   const onFlightDone = () => {
     const made = flight?.made;
     setFlight(null);
-    if (made) setMakes((m) => m + 1);
-    setHoop((h) => randomHoop(h));
-    angleRef.current = AIM_MIN;
-    dirRef.current = 1;
-    setArrowAngle(AIM_MIN);
-    powerRef.current = 0;
-    powerDirRef.current = 1;
-    setPower(0);
-    setPhase('aim');
+    if (made) {
+      setMakes((m) => m + 1);
+      setReaction('make');
+      sfx.win();
+      haptic(HAPTIC.win);
+    } else {
+      setReaction('miss');
+      sfx.lose();
+      haptic(HAPTIC.heavy);
+    }
+    // Hold on the swish / boo for a beat before resetting for the next shot.
+    window.setTimeout(() => {
+      setReaction(null);
+      setHoop((h) => randomHoop(h));
+      angleRef.current = AIM_MIN;
+      dirRef.current = 1;
+      setArrowAngle(AIM_MIN);
+      powerRef.current = 0;
+      powerDirRef.current = 1;
+      setPower(0);
+      setPhase('aim');
+    }, 950);
   };
 
   // Space bar shoots, too.
@@ -323,16 +338,84 @@ export function Shootout() {
           </motion.div>
         )}
 
-        {flight?.made && (
-          <motion.div
-            initial={{ scale: 0, opacity: 1 }}
-            animate={{ scale: 1.1, opacity: 0 }}
-            transition={{ duration: 0.6 }}
-            className="absolute text-xl font-display font-extrabold text-green-600"
-            style={{ left: hoop.x - 24, top: hoop.y - 28 }}
-          >
-            SWISH!
-          </motion.div>
+        {/* MAKE: ball swishes in the net with sparkles */}
+        {reaction === 'make' && (
+          <>
+            <motion.div
+              initial={{ y: -10, scale: 1 }}
+              animate={{ y: [-10, 6, -3, 2, 0], scale: [1, 1.1, 0.95, 1] }}
+              transition={{ duration: 0.7 }}
+              className="absolute text-3xl select-none"
+              style={{ left: hoop.x - 16, top: hoop.y - 6 }}
+              aria-hidden="true"
+            >
+              🏀
+            </motion.div>
+            {['✨', '⭐', '✨', '🌟'].map((s, i) => (
+              <motion.div
+                key={i}
+                initial={{ x: hoop.x, y: hoop.y, scale: 0, opacity: 1 }}
+                animate={{ x: hoop.x + Math.cos((i / 4) * Math.PI * 2) * 40, y: hoop.y + Math.sin((i / 4) * Math.PI * 2) * 40, scale: 1.2, opacity: 0 }}
+                transition={{ duration: 0.7 }}
+                className="absolute text-lg"
+                style={{ left: -8, top: -8 }}
+                aria-hidden="true"
+              >
+                {s}
+              </motion.div>
+            ))}
+            <motion.div
+              initial={{ scale: 0, opacity: 1 }}
+              animate={{ scale: 1.1, opacity: 0 }}
+              transition={{ duration: 0.7 }}
+              className="absolute text-xl font-display font-extrabold text-green-600"
+              style={{ left: hoop.x - 24, top: hoop.y - 30 }}
+            >
+              SWISH!
+            </motion.div>
+            {/* monkey does a celebratory flip */}
+            <motion.div
+              initial={{ rotate: 0, y: 0 }}
+              animate={{ rotate: 360, y: [-6, -22, -6] }}
+              transition={{ duration: 0.7 }}
+              className="absolute text-3xl"
+              style={{ right: 6, bottom: 6 }}
+              aria-hidden="true"
+            >
+              🐵
+            </motion.div>
+          </>
+        )}
+
+        {/* MISS: boos + a red miss flash + a laughing thumbs-down monkey */}
+        {reaction === 'miss' && (
+          <>
+            <motion.div
+              initial={{ opacity: 0.5 }}
+              animate={{ opacity: 0 }}
+              transition={{ duration: 0.8 }}
+              className="absolute inset-0 bg-rose-500/40"
+              aria-hidden="true"
+            />
+            <motion.div
+              initial={{ scale: 0.6, opacity: 1 }}
+              animate={{ scale: 1.2, opacity: 0 }}
+              transition={{ duration: 0.85 }}
+              className="absolute left-1/2 top-1/3 -translate-x-1/2 text-2xl font-display font-extrabold text-rose-600"
+            >
+              BOO! 👎
+            </motion.div>
+            <motion.div
+              initial={{ rotate: 0 }}
+              animate={{ rotate: [0, -12, 12, -8, 0] }}
+              transition={{ duration: 0.7 }}
+              className="absolute text-3xl"
+              style={{ right: 6, bottom: 6 }}
+              aria-hidden="true"
+            >
+              🙊👎
+            </motion.div>
+          </>
         )}
       </div>
 

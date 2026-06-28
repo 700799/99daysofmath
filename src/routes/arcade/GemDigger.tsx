@@ -73,6 +73,7 @@ export function GemDigger() {
   const playerRef = useRef<Mob>({ c: 1, r: ROWS - 2, tc: 1, tr: ROWS - 2, prog: 0, dir: null });
   const monstersRef = useRef<Monster[]>([]);
   const nextDirRef = useRef<Dir | null>(null);
+  const swipeRef = useRef<{ x: number; y: number } | null>(null);
   const faceRef = useRef(1);
   const elapsedRef = useRef(0);
   const scoreRef = useRef(0);
@@ -393,10 +394,18 @@ export function GemDigger() {
         <span className="text-indigo-600">Lvl {levelRef.current}</span>
       </div>
 
-      <GameStage theme="digger" className="mx-auto p-2" style={{ maxWidth: W + 16 }}>
+      <GameStage theme="digger" className="mx-auto p-2" style={{ width: 'min(100%, 52vh)' }}>
       <div
-        className="relative mx-auto rounded-xl overflow-hidden border-2 border-amber-900"
+        className="relative mx-auto rounded-xl overflow-hidden border-2 border-amber-900 touch-none"
         style={{ width: '100%', aspectRatio: `${W} / ${H}`, background: '#1c1206' }}
+        onPointerDown={(e) => { swipeRef.current = { x: e.clientX, y: e.clientY }; }}
+        onPointerUp={(e) => {
+          const s = swipeRef.current; swipeRef.current = null;
+          if (!s) return;
+          const dx = e.clientX - s.x, dy = e.clientY - s.y;
+          if (Math.max(Math.abs(dx), Math.abs(dy)) < 16) return;
+          nextDirRef.current = Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? RIGHT : LEFT) : (dy > 0 ? DOWN : UP);
+        }}
       >
         <div className="absolute top-0 left-0" style={{ width: W, height: H }}>
           <DirtLayer dirt={dirtRef.current} version={dirtVersion} />
