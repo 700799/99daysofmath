@@ -67,6 +67,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'survivors', path: '/arcade/survivors', emoji: '🐹', name: 'Mochi Survivors', blurb: 'Auto-battle the swarm. 5 stages.', baseXp: 12, gradient: 'from-indigo-500 to-purple-700' },
   { id: 'town', path: '/arcade/town', emoji: '🏙️', name: 'Pocket Town', blurb: 'Build a city. Grow the tiers.', baseXp: 12, gradient: 'from-sky-500 to-emerald-600' },
   { id: 'rogue', path: '/arcade/rogue', emoji: '🗡️', name: 'Rogue Dungeon', blurb: 'Crawl deeper. Don\'t die.', baseXp: 12, gradient: 'from-stone-600 to-amber-900' },
+  { id: 'space', path: '/arcade/space', emoji: '🚀', name: 'Space Blaster', blurb: 'Blast waves. Beat the bosses.', baseXp: 12, gradient: 'from-slate-700 to-indigo-900' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {
