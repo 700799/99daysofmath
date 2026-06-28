@@ -69,6 +69,7 @@ export interface ArcadeConfig {
   minLessonSeconds: number; // min lesson time required per gate before unlock (0 = off)
   earnRatio: number; // game seconds earned per lesson second; play capped at lessonTime*ratio (0 = off)
   hiddenGames: string[]; // arcade game ids the parent has turned off (hidden from the hub)
+  storyInterval: number; // minutes of play between forced math-story / mathematician breaks (0 = off)
 }
 
 interface ProgressState {
@@ -353,6 +354,7 @@ const v11Defaults = {
     minLessonSeconds: 0,
     earnRatio: 1,
     hiddenGames: [],
+    storyInterval: 5,
   } as ArcadeConfig,
   cumArcadeSeconds: 0,
   cumLessonSeconds: 0,
@@ -513,6 +515,11 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
     for (const [k, v] of Object.entries(v16Defaults)) {
       if (stateAny[k] === undefined) stateAny[k] = v;
     }
+    // New admin option: forced math-story / mathematician breaks.
+    const cfg = (state as Record<string, unknown>).arcadeConfig as
+      | (ArcadeConfig & Record<string, unknown>)
+      | undefined;
+    if (cfg && cfg.storyInterval === undefined) cfg.storyInterval = 5;
   }
   return state;
 }

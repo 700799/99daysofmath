@@ -1,10 +1,11 @@
-import { createContext, useContext, useRef, useState, type MutableRefObject } from 'react';
+import { createContext, useContext, useEffect, useRef, useState, type MutableRefObject } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mascot } from '../../components/Mascot';
 import { Confetti } from '../../components/Celebration';
 import { StickerCelebration } from '../../components/StickerCelebration';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // Provided by the lesson gate (ArcadeWarmup). When present, an in-game "Play
 // again" routes back through a fresh lesson rather than restarting in place, and
@@ -151,6 +152,13 @@ export function ArcadeEndCard({
   const replay = session ? session.requestReplay : onReplay;
   const replayLabel = session ? '📚 Learn & play again' : 'Play again';
   const [showStickers, setShowStickers] = useState(true);
+  // Central end-of-game sound + haptic so every game gets feedback.
+  useEffect(() => {
+    if (win) sfx.win();
+    else sfx.lose();
+    haptic(win ? HAPTIC.win : HAPTIC.death);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}

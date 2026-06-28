@@ -6,6 +6,7 @@ import { Avatar } from './AccountCard';
 import { LevelBadge } from './LevelBadge';
 import { XpFlash } from './XpFlash';
 import { submitHaptic, tapHaptic } from '../utils/haptics';
+import { playClick } from '../utils/sound';
 
 interface Props {
   children: React.ReactNode;
@@ -53,6 +54,14 @@ export function AppShell({ children }: Props) {
     const onClick = (e: MouseEvent) => {
       const target = (e.target as HTMLElement | null)?.closest('button, [role="button"]');
       if (!target) return;
+      // Soft click sound on every arcade tap (gated by the sound setting).
+      if (window.location.pathname.startsWith('/arcade')) {
+        try {
+          if (useProgress.getState().soundEnabled) playClick();
+        } catch {
+          /* ignore */
+        }
+      }
       const explicit = (target as HTMLElement).dataset.haptic;
       if (explicit === 'submit') {
         submitHaptic();
