@@ -11,7 +11,7 @@ import { useProgress, type ArcadeConfig } from '../../state/progress';
 import { useLessonClock } from '../../hooks/useLessonClock';
 import { ArcadeHeader, ArcadeSessionContext, ARCADE_GAMES } from './shared';
 import { MidGameChallenge } from './MidGameChallenge';
-import { HeroSplash } from './HeroSplash';
+import { HeroSplash, Countdown } from './HeroSplash';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // The arcade "learn-to-play" gate. A full lesson + a hard difficulty-3 check
@@ -49,6 +49,7 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   const [lessonsDone, setLessonsDone] = useState(0);
   const [challengeActive, setChallengeActive] = useState(false);
   const [showSplash, setShowSplash] = useState(config.unlimited);
+  const [counting, setCounting] = useState(config.unlimited);
   const playSecRef = useRef(0);
 
   // Count lesson time toward the balance only while the gate is showing.
@@ -87,6 +88,7 @@ export function ArcadeGate({ title, children }: { title: string; children: React
     playSecRef.current = 0;
     setChallengeActive(false);
     setShowSplash(true);
+    setCounting(true);
     setUnlocked(true);
   };
 
@@ -102,6 +104,7 @@ export function ArcadeGate({ title, children }: { title: string; children: React
       playSecRef.current = 0;
       setChallengeActive(false);
       setShowSplash(true);
+      setCounting(true);
       return;
     }
     setUnlocked(false);
@@ -110,7 +113,7 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   };
 
   const playArea = (
-    <ArcadeSessionContext.Provider value={{ requestReplay, paused: challengeActive }}>
+    <ArcadeSessionContext.Provider value={{ requestReplay, paused: challengeActive || counting }}>
       <div key={sessionKey}>{children}</div>
       {challengeActive && config.challengeInterval > 0 && (
         <MidGameChallenge
@@ -122,14 +125,17 @@ export function ArcadeGate({ title, children }: { title: string; children: React
           }}
         />
       )}
-      {showSplash && game && (
+      {showSplash && game ? (
         <HeroSplash
           emoji={game.emoji}
           name={game.name}
           subtitle="Let's play!"
           gradient={game.gradient}
+          duration={900}
           onDone={() => setShowSplash(false)}
         />
+      ) : (
+        counting && <Countdown onDone={() => setCounting(false)} />
       )}
     </ArcadeSessionContext.Provider>
   );

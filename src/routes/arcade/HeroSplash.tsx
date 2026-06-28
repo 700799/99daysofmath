@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // A short, springy intro card shown before each lesson and each game. Big emoji
 // hero + title; auto-dismisses after ~1.3s or on tap. Purely cosmetic.
@@ -67,5 +67,54 @@ export function HeroSplash({
         tap to skip
       </motion.div>
     </motion.button>
+  );
+}
+
+// A 3·2·1·GO! countdown with a cheering monkey mascot, shown before every game
+// starts (and while it runs, the game is held paused). Calls onDone after "GO!".
+const MONKEY_CHEERS = ['Get ready!', 'You got this!', "Let's go!", 'Have fun!', 'Go go go!'];
+
+export function Countdown({ onDone }: { onDone: () => void }) {
+  const [n, setN] = useState(3);
+  const [cheer] = useState(() => MONKEY_CHEERS[Math.floor(Math.random() * MONKEY_CHEERS.length)]);
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setN((v) => {
+        if (v <= 1) {
+          window.clearInterval(id);
+          window.setTimeout(onDone, 650);
+          return 0; // 0 → render "GO!"
+        }
+        return v - 1;
+      });
+    }, 750);
+    return () => window.clearInterval(id);
+  }, [onDone]);
+
+  return (
+    <div className="absolute inset-0 z-40 flex flex-col items-center justify-center bg-slate-900/55 backdrop-blur-[1px]">
+      <motion.div
+        animate={{ y: [0, -14, 0], rotate: [-6, 6, -6] }}
+        transition={{ duration: 0.6, repeat: Infinity, ease: 'easeInOut' }}
+        className="text-6xl drop-shadow-lg"
+      >
+        🐵
+      </motion.div>
+      <div className="mt-1 font-display font-extrabold text-white drop-shadow">{cheer}</div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={n}
+          initial={{ scale: 0.3, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 1.6, opacity: 0 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 16 }}
+          className="mt-2 font-display font-extrabold text-white drop-shadow-lg"
+          style={{ fontSize: 96, lineHeight: 1 }}
+        >
+          {n > 0 ? n : 'GO!'}
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 }

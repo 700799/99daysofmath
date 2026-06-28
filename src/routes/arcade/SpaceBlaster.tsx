@@ -12,7 +12,9 @@ import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 const W = 360;
 const H = 480;
 const SHIP_Y = H - 40;
-const ALIENS = ['👾', '🛸', '👽', '🤖', '🦠'];
+// Kawaii aliens + evil critters to blast — variety grows with the level.
+const ALIENS = ['👾', '👽', '🛸', '🤖', '🦠', '🐙', '🦑', '🦂', '🦀', '🐲', '🦇', '🐍', '🪼', '👻'];
+const BOSSES = ['🛸', '🐉', '👾', '🦖', '🐙', '🤖'];
 
 type Bolt = { x: number; y: number };
 type Alien = { x: number; y: number; bx: number; by: number; hp: number; emoji: string; diving: boolean; vx: number; vy: number };
@@ -36,7 +38,7 @@ export function SpaceBlaster() {
   const bombsRef = useRef<Bomb[]>([]);
   const powersRef = useRef<Power[]>([]);
   const dirRef = useRef(1);
-  const bossRef = useRef<{ x: number; y: number; hp: number; max: number; t: number } | null>(null);
+  const bossRef = useRef<{ x: number; y: number; hp: number; max: number; t: number; emoji: string } | null>(null);
   const levelRef = useRef(1);
   const scoreRef = useRef(0);
   const livesRef = useRef(3);
@@ -56,7 +58,7 @@ export function SpaceBlaster() {
     dirRef.current = 1;
     if (lv % 5 === 0) {
       const hp = 60 + lv * 10;
-      bossRef.current = { x: W / 2, y: 70, hp, max: hp, t: 0 };
+      bossRef.current = { x: W / 2, y: 70, hp, max: hp, t: 0, emoji: BOSSES[Math.floor(lv / 5 - 1) % BOSSES.length] };
       aliensRef.current = [];
       sfx.boss(); haptic(HAPTIC.heavy); punch();
       return;
@@ -64,11 +66,13 @@ export function SpaceBlaster() {
     const cols = Math.min(8, 4 + Math.floor(lv / 2));
     const rows = Math.min(5, 2 + Math.floor(lv / 3));
     const aliens: Alien[] = [];
+    // each level shows a different mix of kawaii aliens & evil critters
+    const pal = ALIENS.slice(0, Math.min(ALIENS.length, 5 + (lv % 6)));
     const gapX = 36, gapY = 34, ox = (W - (cols - 1) * gapX) / 2, oy = 60;
     for (let r = 0; r < rows; r++)
       for (let c = 0; c < cols; c++) {
         const bx = ox + c * gapX, by = oy + r * gapY;
-        aliens.push({ x: bx, y: by, bx, by, hp: 1 + Math.floor(lv / 4), emoji: ALIENS[r % ALIENS.length], diving: false, vx: 0, vy: 0 });
+        aliens.push({ x: bx, y: by, bx, by, hp: 1 + Math.floor(lv / 4), emoji: pal[(r + lv) % pal.length], diving: false, vx: 0, vy: 0 });
       }
     aliensRef.current = aliens;
   };
@@ -139,12 +143,13 @@ export function SpaceBlaster() {
           sfx.explode(); haptic(HAPTIC.explode); shake();
           scoreRef.current += 500 * lv;
           nextLevel();
+          rafRef.current = requestAnimationFrame(tick);
           return;
         }
       } else {
         // formation shuffle
         let edge = false;
-        const sp = 26 + lv * 6;
+        const sp = 18 + lv * 4;
         for (const a of aliensRef.current) {
           if (a.diving) { a.x += a.vx * dt; a.y += a.vy * dt; }
           else {
@@ -186,11 +191,11 @@ export function SpaceBlaster() {
           if (a.y > SHIP_Y - 6) { hitShip(); a.hp = 0; }
         }
         aliensRef.current = aliensRef.current.filter((a) => a.hp > 0);
-        if (aliensRef.current.length === 0) { nextLevel(); return; }
+        if (aliensRef.current.length === 0) { nextLevel(); rafRef.current = requestAnimationFrame(tick); return; }
       }
 
       // bombs fall
-      for (const bomb of bombsRef.current) bomb.y += (160 + lv * 6) * dt;
+      for (const bomb of bombsRef.current) bomb.y += (120 + lv * 5) * dt;
       for (const bomb of bombsRef.current) {
         if (bomb.y > SHIP_Y - 12 && Math.abs(bomb.x - s.x) < 18) { hitShip(); bomb.y = 9999; }
       }
@@ -290,12 +295,12 @@ export function SpaceBlaster() {
         <span className="text-indigo-600">{levelRef.current % 5 === 0 ? '☠️ BOSS' : `Lv ${levelRef.current}`}</span>
       </div>
 
-      <GameStage theme="space" className="max-w-sm mx-auto">
+      <GameStage theme="space" className="mx-auto" style={{ width: 'min(100%, 42vh)' }}>
         <div
           className="relative overflow-hidden mx-auto touch-none"
           style={{ width: '100%', aspectRatio: `${W} / ${H}`, ...shakeStyle }}
-          onPointerDown={(e) => (dragXRef.current = toX(e.clientX, e.currentTarget))}
-          onPointerMove={(e) => { if (e.buttons & 1) dragXRef.current = toX(e.clientX, e.currentTarget); }}
+          onPointerDown={(e) => { (e.currentTarget as Element).setPointerCapture?.(e.pointerId); dragXRef.current = toX(e.clientX, e.currentTarget); }}
+          onPointerMove={(e) => { if (dragXRef.current != null) dragXRef.current = toX(e.clientX, e.currentTarget); }}
           onPointerUp={() => (dragXRef.current = null)}
           onPointerLeave={() => (dragXRef.current = null)}
         >
@@ -308,7 +313,7 @@ export function SpaceBlaster() {
             {/* boss */}
             {boss && (
               <>
-                <Spr x={boss.x} y={boss.y} s={56} e="🛸" />
+                <Spr x={boss.x} y={boss.y} s={56} e={boss.emoji} />
                 <div className="absolute" style={{ left: '10%', top: 8, width: '80%' }}>
                   <div className="h-1.5 rounded-full bg-rose-900/50 overflow-hidden">
                     <div className="h-full bg-rose-400" style={{ width: `${(boss.hp / boss.max) * 100}%` }} />

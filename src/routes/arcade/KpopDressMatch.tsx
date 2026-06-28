@@ -74,7 +74,7 @@ export function KpopDressMatch() {
   useArcadeClock(!!outcome);
 
   const optionCount = () => Math.min(5, 2 + levelRef.current);
-  const memSecs = () => Math.max(2, 4 - Math.floor(levelRef.current / 2));
+  const memSecs = () => Math.max(3, 5 - Math.floor(levelRef.current / 2));
 
   const startRound = () => {
     const oc = optionCount();

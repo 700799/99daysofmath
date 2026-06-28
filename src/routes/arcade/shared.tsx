@@ -1,4 +1,4 @@
-import { createContext, useContext, useRef, type MutableRefObject } from 'react';
+import { createContext, useContext, useRef, useState, type MutableRefObject } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mascot } from '../../components/Mascot';
@@ -149,14 +149,15 @@ export function ArcadeEndCard({
   const session = useArcadeSession();
   const replay = session ? session.requestReplay : onReplay;
   const replayLabel = session ? '📚 Learn & play again' : 'Play again';
+  const [showStickers, setShowStickers] = useState(true);
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       className="text-center relative"
     >
-      {outcome.earned.length > 0 && (
-        <StickerCelebration stickerIds={outcome.earned} onDone={() => {}} />
+      {showStickers && outcome.earned.length > 0 && (
+        <StickerCelebration stickerIds={outcome.earned} onDone={() => setShowStickers(false)} />
       )}
       {win && <Confetti count={24} />}
       <div className="flex justify-center">

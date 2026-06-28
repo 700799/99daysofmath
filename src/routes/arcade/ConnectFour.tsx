@@ -163,7 +163,7 @@ export function ConnectFour() {
       ) : (
         <>
           <p className="text-sm text-slate-600 mb-3">
-            {phase === 'owl-thinking' ? '🦉 The owl is thinking…' : 'Your move — tap a column. You are red.'}
+            {phase === 'owl-thinking' ? '🦉 The owl is thinking…' : 'Your move — tap a column. You are the 😆 pup!'}
           </p>
           <div className="bg-blue-600 rounded-3xl p-2.5 max-w-sm mx-auto shadow-inner">
             <div className="grid grid-cols-7 gap-1.5">
@@ -189,10 +189,13 @@ export function ConnectFour() {
                               initial={{ y: -40 * (r + 1), opacity: 0.8 }}
                               animate={{ y: 0, opacity: 1 }}
                               transition={{ type: 'spring', stiffness: 380, damping: 26 }}
-                              className={`w-[86%] h-[86%] rounded-full shadow-inner ${
-                                v === 1 ? 'bg-red-500' : 'bg-duo-green'
+                              className={`w-[86%] h-[86%] rounded-full shadow-inner flex items-center justify-center ${
+                                v === 1 ? 'bg-amber-300' : 'bg-lime-300'
                               }`}
-                            />
+                              style={{ fontSize: 'min(6vw, 26px)' }}
+                            >
+                              {v === 1 ? '😆' : '🐸'}
+                            </motion.div>
                           )}
                         </AnimatePresence>
                       </div>

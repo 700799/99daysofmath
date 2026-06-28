@@ -29,24 +29,30 @@ type Lane = {
   dir: 1 | -1;
   speed: number;
   objs: Obj[];
-  vehicle?: '🚗' | '🚚';
+  vehicle?: string; // emoji shown for road obstacles (funny animal "cars")
   turtle?: boolean; // river lane made of diving turtles
 };
 
+// Funny "animal cars" cruising the road — small critters and big beasts.
+const CRITTER_CARS = ['🐸', '🐷', '🐵', '🐔', '🦔', '🐰'];
+const BEAST_CARS = ['🐘', '🐮', '🦛', '🐊', '🦏', '🐢'];
+
 function buildLanes(level: number): Lane[] {
   const lanes: Lane[] = [];
-  const roadBase = 1.3 + level * 0.35;
-  const riverBase = 0.95 + level * 0.22;
+  // gentler than before, and ramps slowly
+  const roadBase = 0.95 + level * 0.22;
+  const riverBase = 0.75 + level * 0.16;
   ROAD_ROWS.forEach((row, i) => {
     const dir: 1 | -1 = i % 2 === 0 ? -1 : 1;
     const truck = i % 2 === 1;
     const w = truck ? 2 : 1;
-    const speed = roadBase + i * 0.25;
-    const n = 3;
+    const speed = roadBase + i * 0.18;
+    const n = truck ? 2 : 2; // fewer obstacles per lane
     const gap = COLS / n;
     const objs: Obj[] = [];
     for (let k = 0; k < n; k++) objs.push({ x: k * gap + (i % 2) * 1.3, w });
-    lanes.push({ row, kind: 'road', dir, speed, objs, vehicle: truck ? '🚚' : '🚗' });
+    const pool = truck ? BEAST_CARS : CRITTER_CARS;
+    lanes.push({ row, kind: 'road', dir, speed, objs, vehicle: pool[i % pool.length] as Lane['vehicle'] });
   });
   RIVER_ROWS.forEach((row, i) => {
     const dir: 1 | -1 = i % 2 === 0 ? 1 : -1;
@@ -286,7 +292,7 @@ export function LeapFrog() {
         <span className="text-indigo-600">Lvl {levelRef.current}</span>
       </div>
 
-      <GameStage theme="meadow" className="mx-auto p-2" style={{ maxWidth: W + 16 }}>
+      <GameStage theme="meadow" className="mx-auto p-2" style={{ width: 'min(100%, 52vh)' }}>
       <div
         className="relative mx-auto rounded-xl overflow-hidden border-2 border-slate-200/60"
         style={{ width: '100%', aspectRatio: `${W} / ${H}` }}
