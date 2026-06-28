@@ -62,6 +62,7 @@ export interface ArcadeConfig {
   livesPerSession: number; // lives granted per session for life-based games
   checkProblems: number; // # of difficulty-3 problems in the hard check
   adminPin: string; // gate for the grown-ups settings panel
+  unlimited?: boolean; // admin override: skip the lesson gate, play freely
 }
 
 interface ProgressState {
@@ -320,7 +321,8 @@ const v11Defaults = {
     startLevel: 1,
     livesPerSession: 3,
     checkProblems: 2,
-    adminPin: '1234',
+    adminPin: '3680',
+    unlimited: false,
   } as ArcadeConfig,
   cumArcadeSeconds: 0,
   cumLessonSeconds: 0,
@@ -425,6 +427,12 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
     for (const [k, v] of Object.entries(v11Defaults)) {
       if (stateAny[k] === undefined) stateAny[k] = v;
     }
+  }
+  if (fromVersion < 12) {
+    // Admin passcode changed 1234 → 3680. Update existing configs that still
+    // use the old default (leave any custom PIN untouched).
+    const cfg = (state as Record<string, unknown>).arcadeConfig as ArcadeConfig | undefined;
+    if (cfg && cfg.adminPin === '1234') cfg.adminPin = '3680';
   }
   return state;
 }
@@ -941,7 +949,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 11,
+      version: 12,
       migrate: migrateProgress,
     },
   ),
