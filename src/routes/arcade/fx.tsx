@@ -56,6 +56,7 @@ export const GAME_THEME: Record<string, StageTheme> = {
   fruit: 'ocean',
   survivors: 'night',
   town: 'candy',
+  rogue: 'cave',
 };
 
 interface SceneSpec {
