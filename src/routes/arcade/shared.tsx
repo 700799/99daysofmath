@@ -68,6 +68,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'town', path: '/arcade/town', emoji: '🏙️', name: 'Pocket Town', blurb: 'Build a city. Grow the tiers.', baseXp: 12, gradient: 'from-sky-500 to-emerald-600' },
   { id: 'rogue', path: '/arcade/rogue', emoji: '🗡️', name: 'Rogue Dungeon', blurb: 'Crawl deeper. Don\'t die.', baseXp: 12, gradient: 'from-stone-600 to-amber-900' },
   { id: 'space', path: '/arcade/space', emoji: '🚀', name: 'Space Blaster', blurb: 'Blast waves. Beat the bosses.', baseXp: 12, gradient: 'from-slate-700 to-indigo-900' },
+  { id: 'sumo', path: '/arcade/sumo', emoji: '🛐', name: 'Sumo Math', blurb: 'Fast ×÷^ duel. Shove him out!', baseXp: 12, gradient: 'from-amber-500 to-rose-700' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {

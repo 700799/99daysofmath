@@ -47,6 +47,7 @@ const KpopDressMatch = lazy(() => import('./routes/arcade/KpopDressMatch').then(
 const ForestSurvival = lazy(() => import('./routes/arcade/ForestSurvival').then((m) => ({ default: m.ForestSurvival })));
 const FruitSlice = lazy(() => import('./routes/arcade/FruitSlice').then((m) => ({ default: m.FruitSlice })));
 const MochiSurvivors = lazy(() => import('./routes/arcade/MochiSurvivors').then((m) => ({ default: m.MochiSurvivors })));
+const SumoMath = lazy(() => import('./routes/arcade/SumoMath').then((m) => ({ default: m.SumoMath })));
 const PocketTown = lazy(() => import('./routes/arcade/PocketTown').then((m) => ({ default: m.PocketTown })));
 const RogueDelve = lazy(() => import('./routes/arcade/RogueDelve').then((m) => ({ default: m.RogueDelve })));
 const SpaceBlaster = lazy(() => import('./routes/arcade/SpaceBlaster').then((m) => ({ default: m.SpaceBlaster })));
@@ -113,6 +114,7 @@ export default function App() {
           <Route path="/arcade/survival" element={<ArcadeGate title="Forest Survival"><ForestSurvival /></ArcadeGate>} />
           <Route path="/arcade/fruit" element={<ArcadeGate title="Fruit Slice"><FruitSlice /></ArcadeGate>} />
           <Route path="/arcade/survivors" element={<ArcadeGate title="Mochi Survivors"><MochiSurvivors /></ArcadeGate>} />
+          <Route path="/arcade/sumo" element={<ArcadeGate title="Sumo Math"><SumoMath /></ArcadeGate>} />
           <Route path="/arcade/town" element={<ArcadeGate title="Pocket Town"><PocketTown /></ArcadeGate>} />
           <Route path="/arcade/rogue" element={<ArcadeGate title="Rogue Dungeon"><RogueDelve /></ArcadeGate>} />
           <Route path="/arcade/space" element={<ArcadeGate title="Space Blaster"><SpaceBlaster /></ArcadeGate>} />
