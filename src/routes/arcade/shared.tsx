@@ -65,6 +65,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'survival', path: '/arcade/survival', emoji: '🏕️', name: 'Forest Survival', blurb: 'Last as many days as you can.', baseXp: 12, gradient: 'from-green-700 to-emerald-900' },
   { id: 'fruit', path: '/arcade/fruit', emoji: '🍉', name: 'Fruit Slice', blurb: 'Swipe to slice. Dodge bombs!', baseXp: 10, gradient: 'from-lime-500 to-red-500' },
   { id: 'survivors', path: '/arcade/survivors', emoji: '🐹', name: 'Mochi Survivors', blurb: 'Auto-battle the swarm. 5 stages.', baseXp: 12, gradient: 'from-indigo-500 to-purple-700' },
+  { id: 'town', path: '/arcade/town', emoji: '🏙️', name: 'Pocket Town', blurb: 'Build a city. Grow the tiers.', baseXp: 12, gradient: 'from-sky-500 to-emerald-600' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {
