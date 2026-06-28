@@ -2,8 +2,24 @@ import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage, useBurst, BurstLayer } from './fx';
+import { makeChallenge, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
+
+const NUKE_COST = 40;
+const HEAL_COST = 25;
+
+function mathChoices(level: number): { c: Challenge; choices: number[] } {
+  const c = makeChallenge(level);
+  const set = new Set<number>([c.answer]);
+  while (set.size < 3) {
+    const delta = Math.floor(Math.random() * 9) - 4 || 2;
+    const v = c.answer + delta;
+    if (v >= 0) set.add(v);
+  }
+  const choices = [...set].sort(() => Math.random() - 0.5);
+  return { c, choices };
+}
 
 // Mochi Survivors — an original auto-battler in the Vampire-Survivors mould. You
 // only move; your weapons fire on their own. Swarms of kawaii critters close in,
@@ -82,6 +98,42 @@ export function MochiSurvivors() {
   const [levelUp, setLevelUp] = useState<{ choices: Upgrade[] } | null>(null);
   const levelUpRef = useRef(false);
   const [zoom, setZoom] = useState(1);
+  const [math, setMath] = useState(() => mathChoices(1));
+
+  // solve math → earn cash (gold) to buy power-ups while you dodge
+  const answerMath = (n: number) => {
+    if (outcome) return;
+    if (n === math.c.answer) {
+      goldRef.current += 8 + (stageIdx ?? 0) * 2;
+      sfx.coin(); haptic(HAPTIC.pickup);
+      burst(VW / 2, VH - 30, { emoji: '💰', count: 6 });
+    } else {
+      sfx.hurt();
+    }
+    setMath(mathChoices(1 + (stageIdx ?? 0)));
+  };
+
+  const buyNuke = () => {
+    if (outcome || goldRef.current < NUKE_COST) return;
+    goldRef.current -= NUKE_COST;
+    const h = heroRef.current;
+    for (const e of enemiesRef.current) {
+      if (!e.boss) { gemsRef.current.push({ x: e.x, y: e.y, val: e.gem }); killsRef.current += 1; }
+      else e.hp -= 80;
+    }
+    enemiesRef.current = enemiesRef.current.filter((e) => e.boss && e.hp > 0);
+    burst(VW / 2, VH / 2, { emoji: '💥', count: 24 });
+    sfx.explode(); haptic(HAPTIC.explode);
+    void h;
+  };
+
+  const buyHeal = () => {
+    if (outcome || goldRef.current < HEAL_COST) return;
+    goldRef.current -= HEAL_COST;
+    const h = heroRef.current;
+    h.hp = Math.min(h.max, h.hp + 35);
+    sfx.powerup(); haptic(HAPTIC.pickup);
+  };
   const [, force] = useState(0);
   const redraw = () => force((n) => n + 1);
 
@@ -489,8 +541,33 @@ export function MochiSurvivors() {
         </div>
       </GameStage>
 
+      {/* solve math → earn 💰 cash → buy power-ups (while you keep dodging!) */}
+      <div className="max-w-sm mx-auto mt-2 rounded-2xl bg-white border-2 border-slate-200 p-2">
+        <div className="flex items-center justify-between gap-2">
+          <span className="font-display font-extrabold text-slate-800 tabular-nums">🧮 {math.c.prompt} =</span>
+          <div className="flex gap-1">
+            {math.choices.map((n, i) => (
+              <button key={i} type="button" onClick={() => answerMath(n)}
+                className="min-w-10 min-h-9 px-2 rounded-lg bg-slate-100 hover:bg-slate-200 font-display font-extrabold text-slate-800 tabular-nums">
+                {n}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="mt-2 flex gap-2">
+          <button type="button" onClick={buyNuke} disabled={goldRef.current < NUKE_COST}
+            className="flex-1 min-h-10 rounded-xl bg-rose-500 disabled:bg-slate-200 disabled:text-slate-400 text-white font-display font-extrabold text-sm">
+            💥 Nuke (💰{NUKE_COST})
+          </button>
+          <button type="button" onClick={buyHeal} disabled={goldRef.current < HEAL_COST}
+            className="flex-1 min-h-10 rounded-xl bg-emerald-500 disabled:bg-slate-200 disabled:text-slate-400 text-white font-display font-extrabold text-sm">
+            ❤️ Heal (💰{HEAL_COST})
+          </button>
+        </div>
+      </div>
+
       <p className="text-center text-[11px] text-slate-500 mt-2">
-        Move with WASD / arrows or drag. Weapons fire automatically. Grab 💎 to level up!
+        Dodge with drag/WASD — weapons auto-fire. <b>Answer math to earn 💰</b> for Nukes &amp; Heals!
       </p>
     </div>
   );
