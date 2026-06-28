@@ -14,6 +14,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@twemoji/api": "^17.0.3",
     "firebase": "^12.14.0",
     "framer-motion": "^11.11.0",
     "katex": "^0.16.11",
