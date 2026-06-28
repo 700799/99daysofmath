@@ -14,19 +14,34 @@ const VW = 360; // viewport (logical px)
 const VH = 480;
 const HERO = '🐹';
 
-type Weapon = 'bolt' | 'aura' | 'whisk' | 'zap';
-type WState = { type: Weapon; level: number; t: number };
-type Enemy = { x: number; y: number; hp: number; max: number; spd: number; r: number; emoji: string; dmg: number; boss?: boolean };
-type Bullet = { x: number; y: number; vx: number; vy: number; dmg: number; r: number; life: number };
+type Weapon = 'bolt' | 'aura' | 'whisk' | 'zap' | 'boomerang' | 'fire' | 'frost' | 'orbit' | 'missile';
+type WState = { type: Weapon; level: number; t: number; a?: number };
+type EKind = 'normal' | 'fast' | 'tank' | 'elite';
+type Enemy = { x: number; y: number; hp: number; max: number; spd: number; r: number; emoji: string; dmg: number; boss?: boolean; kind: EKind; slow: number; gem: number };
+type Bullet = { x: number; y: number; vx: number; vy: number; dmg: number; r: number; life: number; homing?: boolean; pierce?: number };
 type Gem = { x: number; y: number; val: number };
 
 const STAGES = [
-  { name: 'Clover Meadow', theme: 'meadow', dur: 120, foes: ['🐛', '🐌', '🐜'], boss: '🐲' },
-  { name: 'Spooky Woods', theme: 'night', dur: 150, foes: ['👻', '🦇', '🕷️'], boss: '👹' },
-  { name: 'Frost Cavern', theme: 'cave', dur: 180, foes: ['🧊', '🐻‍❄️', '🦂'], boss: '🐙' },
-  { name: 'Star Ocean', theme: 'ocean', dur: 200, foes: ['🐡', '🦈', '🪼'], boss: '🐋' },
-  { name: 'Cosmic Rift', theme: 'space', dur: 240, foes: ['👾', '🛸', '☄️'], boss: '🤖' },
+  { name: 'Clover Meadow', theme: 'meadow', dur: 120, foes: ['🐛', '🐌', '🐜', '🐝', '🦗'], elite: '🐗', boss: '🐲' },
+  { name: 'Spooky Woods', theme: 'night', dur: 150, foes: ['👻', '🦇', '🕷️', '🧟', '🦉'], elite: '🧛', boss: '👹' },
+  { name: 'Frost Cavern', theme: 'cave', dur: 180, foes: ['🧊', '🐻‍❄️', '🦂', '🦟', '🪲'], elite: '🦣', boss: '🐙' },
+  { name: 'Star Ocean', theme: 'ocean', dur: 200, foes: ['🐡', '🦈', '🪼', '🦑', '🦀'], elite: '🐊', boss: '🐋' },
+  { name: 'Cosmic Rift', theme: 'space', dur: 240, foes: ['👾', '🛸', '☄️', '🌑', '🦾'], elite: '🛰️', boss: '🤖' },
+  { name: 'Dragon Keep', theme: 'cave', dur: 260, foes: ['🦎', '🐉', '🦅', '🦬', '🐃'], elite: '🦏', boss: '👺' },
+  { name: 'Candy Nebula', theme: 'candy', dur: 300, foes: ['🍬', '🍭', '🧁', '🍩', '🍪'], elite: '🎂', boss: '🍫' },
 ];
+
+const WLABEL: Record<Weapon, { label: string; emoji: string }> = {
+  bolt: { label: 'Star Bolt', emoji: '⭐' },
+  aura: { label: 'Garlic Aura', emoji: '🧄' },
+  whisk: { label: 'Whisk', emoji: '🍥' },
+  zap: { label: 'Lightning', emoji: '⚡' },
+  boomerang: { label: 'Boomerang', emoji: '🪃' },
+  fire: { label: 'Fireball', emoji: '🔥' },
+  frost: { label: 'Frost Nova', emoji: '❄️' },
+  orbit: { label: 'Star Shield', emoji: '🌟' },
+  missile: { label: 'Homing Missile', emoji: '🚀' },
+};
 
 function dist(ax: number, ay: number, bx: number, by: number) {
   return Math.hypot(ax - bx, ay - by);
@@ -44,7 +59,7 @@ export function MochiSurvivors() {
   const { burst, particles } = useBurst();
 
   // refs for the live game (avoid re-render churn)
-  const heroRef = useRef({ x: 0, y: 0, hp: 100, max: 100, level: 1, xp: 0, xpNext: 5, speed: 95, pickup: 46, might: 1 });
+  const heroRef = useRef({ x: 0, y: 0, hp: 100, max: 100, level: 1, xp: 0, xpNext: 5, speed: 95, pickup: 46, might: 1, regen: 0, cool: 1, armor: 0, crit: 0 });
   const weaponsRef = useRef<WState[]>([{ type: 'bolt', level: 1, t: 0 }]);
   const enemiesRef = useRef<Enemy[]>([]);
   const bulletsRef = useRef<Bullet[]>([]);
@@ -57,6 +72,7 @@ export function MochiSurvivors() {
   const goldRef = useRef(0);
   const bossRef = useRef<Enemy | null>(null);
   const bossSpawnedRef = useRef(false);
+  const miniSpawnedRef = useRef(false);
   const iframeRef = useRef(0);
   const lastRef = useRef(0);
   const rafRef = useRef(0);
@@ -77,6 +93,7 @@ export function MochiSurvivors() {
   const start = (idx: number) => {
     const h = heroRef.current;
     h.x = 0; h.y = 0; h.hp = 100; h.max = 100; h.level = 1; h.xp = 0; h.xpNext = 5; h.speed = 95; h.pickup = 46; h.might = 1;
+    h.regen = 0; h.cool = 1; h.armor = 0; h.crit = 0;
     weaponsRef.current = [{ type: 'bolt', level: 1, t: 0 }];
     enemiesRef.current = []; bulletsRef.current = []; gemsRef.current = [];
     elapsedRef.current = 0; spawnRef.current = 0.8; killsRef.current = 0; goldRef.current = 0;
@@ -123,91 +140,149 @@ export function MochiSurvivors() {
       h.x += (mx / ml) * h.speed * dt;
       h.y += (my / ml) * h.speed * dt;
 
-      // spawn enemies around the viewport ring
+      // passive regen
+      if (h.regen > 0 && h.hp < h.max) h.hp = Math.min(h.max, h.hp + h.regen * dt);
+
+      // spawn enemies around the viewport ring — with varied kinds
       const t = elapsedRef.current;
       spawnRef.current -= dt;
-      if (spawnRef.current <= 0 && enemiesRef.current.length < 80) {
-        spawnRef.current = Math.max(0.2, 0.9 - t * 0.004);
-        const n = 1 + Math.floor(t / 30);
+      if (spawnRef.current <= 0 && enemiesRef.current.length < 90) {
+        spawnRef.current = Math.max(0.18, 0.9 - t * 0.0045);
+        const n = 1 + Math.floor(t / 25);
         for (let k = 0; k < n; k++) {
           const ang = Math.random() * Math.PI * 2;
           const rad = 280 + Math.random() * 60;
-          const tier = Math.min(2, Math.floor(Math.random() * (1 + t / 60)));
-          const hp = 3 + tier * 3 + Math.floor(t / 20);
+          const roll = Math.random();
+          let kind: EKind = 'normal';
+          if (roll < 0.06 + t * 0.0004) kind = 'elite';
+          else if (roll < 0.28) kind = 'fast';
+          else if (roll < 0.48) kind = 'tank';
+          const baseHp = 3 + Math.floor(t / 16);
+          let hp = baseHp, spd = 34 + t * 0.05, r = 14, dmg = 6, gem = 1, emoji = stage.foes[Math.floor(Math.random() * stage.foes.length)];
+          if (kind === 'fast') { spd *= 1.6; hp = Math.ceil(hp * 0.7); r = 12; dmg = 5; }
+          else if (kind === 'tank') { hp = Math.ceil(hp * 2.4); spd *= 0.7; r = 18; dmg = 9; gem = 2; }
+          else if (kind === 'elite') { hp = Math.ceil(hp * 4); spd *= 0.9; r = 22; dmg = 12; gem = 6; emoji = stage.elite; }
           enemiesRef.current.push({
-            x: h.x + Math.cos(ang) * rad,
-            y: h.y + Math.sin(ang) * rad,
-            hp, max: hp, spd: 34 + tier * 8 + t * 0.05, r: 14, emoji: stage.foes[tier] ?? stage.foes[0], dmg: 6 + tier * 2,
+            x: h.x + Math.cos(ang) * rad, y: h.y + Math.sin(ang) * rad,
+            hp, max: hp, spd, r, emoji, dmg, kind, slow: 0, gem,
           });
         }
+      }
+      // mid-stage mini-boss
+      if (!miniSpawnedRef.current && t >= stage.dur / 2) {
+        miniSpawnedRef.current = true;
+        const hp = 90 + stageIdx * 50;
+        enemiesRef.current.push({ x: h.x + 240, y: h.y - 120, hp, max: hp, spd: 36, r: 24, emoji: stage.elite, dmg: 14, kind: 'elite', slow: 0, gem: 12 });
+        sfx.boss(); haptic(HAPTIC.heavy);
       }
       // boss at the end of the stage timer
       if (!bossSpawnedRef.current && t >= stage.dur) {
         bossSpawnedRef.current = true;
         const hp = 220 + stageIdx * 120;
-        const b: Enemy = { x: h.x, y: h.y - 260, hp, max: hp, spd: 30, r: 30, emoji: stage.boss, dmg: 18, boss: true };
+        const b: Enemy = { x: h.x, y: h.y - 260, hp, max: hp, spd: 30, r: 30, emoji: stage.boss, dmg: 18, boss: true, kind: 'elite', slow: 0, gem: 30 };
         bossRef.current = b; enemiesRef.current.push(b);
         sfx.boss(); haptic(HAPTIC.heavy); punchZoom();
       }
 
-      // move enemies toward hero
+      // move enemies toward hero (frost slows them)
       for (const e of enemiesRef.current) {
+        if (e.slow > 0) e.slow -= dt;
+        const sp = e.slow > 0 ? e.spd * 0.45 : e.spd;
         const d = dist(e.x, e.y, h.x, h.y) || 1;
-        e.x += ((h.x - e.x) / d) * e.spd * dt;
-        e.y += ((h.y - e.y) / d) * e.spd * dt;
+        e.x += ((h.x - e.x) / d) * sp * dt;
+        e.y += ((h.y - e.y) / d) * sp * dt;
         if (d < e.r + 12 && iframeRef.current <= 0) {
-          h.hp -= e.dmg; iframeRef.current = 0.6; sfx.hurt(); haptic(HAPTIC.hit);
+          h.hp -= Math.max(1, e.dmg - h.armor); iframeRef.current = 0.6; sfx.hurt(); haptic(HAPTIC.hit);
           if (h.hp <= 0) { finish(false); return; }
         }
       }
 
       // weapons fire
+      const crit = () => (Math.random() < h.crit ? 2 : 1);
       for (const w of weaponsRef.current) {
-        w.t -= dt;
+        const L = w.level;
+        // continuous weapons (no cooldown gate)
         if (w.type === 'aura') {
-          // continuous ring damage
-          const R = 52 + w.level * 12;
-          if (w.t <= 0) {
-            w.t = 0.5;
-            for (const e of enemiesRef.current) {
-              if (dist(e.x, e.y, h.x, h.y) < R) e.hp -= (2 + w.level) * h.might;
-            }
+          w.t -= dt;
+          const R = 52 + L * 12;
+          if (w.t <= 0) { w.t = 0.5; for (const e of enemiesRef.current) if (dist(e.x, e.y, h.x, h.y) < R) e.hp -= (2 + L) * h.might; }
+          continue;
+        }
+        if (w.type === 'orbit') {
+          w.a = (w.a ?? 0) + dt * 2.4;
+          const cnt = 1 + L;
+          const R = 64;
+          for (let i = 0; i < cnt; i++) {
+            const a = (w.a ?? 0) + (Math.PI * 2 * i) / cnt;
+            const ox = h.x + Math.cos(a) * R, oy = h.y + Math.sin(a) * R;
+            for (const e of enemiesRef.current) if (dist(e.x, e.y, ox, oy) < e.r + 12) e.hp -= (3 + L) * h.might * dt * 6;
           }
           continue;
         }
+        w.t -= dt;
         if (w.t > 0) continue;
         if (w.type === 'bolt') {
-          w.t = Math.max(0.25, 0.8 - w.level * 0.06);
-          const shots = w.level;
-          const targets = nearest(enemiesRef.current, h, shots);
-          for (const e of targets) {
+          w.t = Math.max(0.2, 0.8 - L * 0.06) * h.cool;
+          for (const e of nearest(enemiesRef.current, h, L)) {
             const d = dist(h.x, h.y, e.x, e.y) || 1;
-            bulletsRef.current.push({ x: h.x, y: h.y, vx: ((e.x - h.x) / d) * 280, vy: ((e.y - h.y) / d) * 280, dmg: (4 + w.level * 2) * h.might, r: 7, life: 1.6 });
+            bulletsRef.current.push({ x: h.x, y: h.y, vx: ((e.x - h.x) / d) * 300, vy: ((e.y - h.y) / d) * 300, dmg: (4 + L * 2) * h.might * crit(), r: 7, life: 1.6 });
           }
           sfx.shoot();
         } else if (w.type === 'whisk') {
-          w.t = Math.max(0.5, 1.4 - w.level * 0.1);
-          const cnt = 2 + w.level;
-          for (let i = 0; i < cnt; i++) {
-            const a = (Math.PI * 2 * i) / cnt;
-            bulletsRef.current.push({ x: h.x, y: h.y, vx: Math.cos(a) * 200, vy: Math.sin(a) * 200, dmg: (3 + w.level) * h.might, r: 9, life: 1.0 });
-          }
+          w.t = Math.max(0.5, 1.4 - L * 0.1) * h.cool;
+          const cnt = 2 + L;
+          for (let i = 0; i < cnt; i++) { const a = (Math.PI * 2 * i) / cnt; bulletsRef.current.push({ x: h.x, y: h.y, vx: Math.cos(a) * 200, vy: Math.sin(a) * 200, dmg: (3 + L) * h.might, r: 9, life: 1.0 }); }
         } else if (w.type === 'zap') {
-          w.t = Math.max(0.4, 1.2 - w.level * 0.08);
-          const hits = Math.min(enemiesRef.current.length, 1 + w.level);
-          for (const e of nearest(enemiesRef.current, h, hits)) {
-            e.hp -= (8 + w.level * 3) * h.might;
+          w.t = Math.max(0.4, 1.2 - L * 0.08) * h.cool;
+          for (const e of nearest(enemiesRef.current, h, Math.min(enemiesRef.current.length, 1 + L))) {
+            e.hp -= (8 + L * 3) * h.might * crit();
             burst(e.x - h.x + VW / 2, e.y - h.y + VH / 2, { emoji: '⚡', count: 6 });
           }
+        } else if (w.type === 'boomerang') {
+          w.t = Math.max(0.6, 1.5 - L * 0.1) * h.cool;
+          const tgt = nearest(enemiesRef.current, h, 1)[0];
+          const ang = tgt ? Math.atan2(tgt.y - h.y, tgt.x - h.x) : 0;
+          bulletsRef.current.push({ x: h.x, y: h.y, vx: Math.cos(ang) * 240, vy: Math.sin(ang) * 240, dmg: (5 + L * 2) * h.might, r: 12, life: 1.4, pierce: 2 + L });
+        } else if (w.type === 'missile') {
+          w.t = Math.max(0.6, 1.6 - L * 0.12) * h.cool;
+          const cnt = Math.min(3, 1 + Math.floor(L / 2));
+          for (let i = 0; i < cnt; i++) bulletsRef.current.push({ x: h.x, y: h.y, vx: (Math.random() - 0.5) * 120, vy: -140, dmg: (6 + L * 3) * h.might * crit(), r: 8, life: 2.2, homing: true });
+          sfx.shoot();
+        } else if (w.type === 'fire') {
+          w.t = Math.max(0.8, 1.8 - L * 0.1) * h.cool;
+          const tgt = nearest(enemiesRef.current, h, 1)[0];
+          if (tgt) {
+            const R = 40 + L * 8;
+            for (const e of enemiesRef.current) if (dist(e.x, e.y, tgt.x, tgt.y) < R) e.hp -= (10 + L * 4) * h.might;
+            burst(tgt.x - h.x + VW / 2, tgt.y - h.y + VH / 2, { emoji: '🔥', count: 12 });
+            sfx.explode();
+          }
+        } else if (w.type === 'frost') {
+          w.t = Math.max(0.9, 2.0 - L * 0.1) * h.cool;
+          const R = 90 + L * 14;
+          for (const e of enemiesRef.current) if (dist(e.x, e.y, h.x, h.y) < R) { e.hp -= (2 + L) * h.might; e.slow = 2.5; }
+          burst(VW / 2, VH / 2, { emoji: '❄️', count: 10 });
         }
       }
 
-      // bullets
+      // bullets (with homing + pierce)
       for (const b of bulletsRef.current) {
+        if (b.homing) {
+          const tgt = nearest(enemiesRef.current, { x: b.x, y: b.y }, 1)[0];
+          if (tgt) {
+            const d = dist(b.x, b.y, tgt.x, tgt.y) || 1;
+            const sp = Math.hypot(b.vx, b.vy) || 200;
+            b.vx += ((tgt.x - b.x) / d) * sp * dt * 3; b.vy += ((tgt.y - b.y) / d) * sp * dt * 3;
+            const ns = Math.hypot(b.vx, b.vy) || 1; b.vx = (b.vx / ns) * sp; b.vy = (b.vy / ns) * sp;
+          }
+        }
         b.x += b.vx * dt; b.y += b.vy * dt; b.life -= dt;
         for (const e of enemiesRef.current) {
           if (e.hp > 0 && dist(b.x, b.y, e.x, e.y) < e.r + b.r) {
-            e.hp -= b.dmg; b.life = Math.min(b.life, 0); break;
+            e.hp -= b.dmg;
+            if (b.pierce && b.pierce > 0) b.pierce -= 1;
+            else b.life = Math.min(b.life, 0);
+            break;
           }
         }
       }
@@ -249,7 +324,7 @@ export function MochiSurvivors() {
       h.hp = Math.min(h.max, h.hp + 8);
       sfx.levelUp(); haptic(HAPTIC.levelUp); punchZoom();
       levelUpRef.current = true;
-      setLevelUp({ choices: rollUpgrades() });
+      setLevelUp({ choices: rollUpgrades(weaponsRef.current) });
     };
 
     rafRef.current = requestAnimationFrame(tick);
@@ -352,12 +427,12 @@ export function MochiSurvivors() {
         <div className="h-full bg-indigo-500" style={{ width: `${Math.min(100, (h.xp / h.xpNext) * 100)}%` }} />
       </div>
 
-      <GameStage theme={stage.theme} className="max-w-sm mx-auto">
+      <GameStage theme={stage.theme} className="mx-auto" style={{ width: 'min(100%, 42vh)' }}>
         <div
           className="relative overflow-hidden mx-auto touch-none"
           style={{ width: '100%', aspectRatio: `${VW} / ${VH}` }}
-          onPointerDown={(e) => updateDrag(e, dragRef)}
-          onPointerMove={(e) => { if (dragRef.current !== undefined && (e.buttons & 1)) updateDrag(e, dragRef); }}
+          onPointerDown={(e) => { (e.currentTarget as Element).setPointerCapture?.(e.pointerId); updateDrag(e, dragRef); }}
+          onPointerMove={(e) => { if (dragRef.current) updateDrag(e, dragRef); }}
           onPointerUp={() => (dragRef.current = null)}
           onPointerLeave={() => (dragRef.current = null)}
         >
@@ -423,19 +498,29 @@ export function MochiSurvivors() {
 
 // --- helpers ---
 
-type Upgrade = { kind: 'weapon' | 'levelup' | 'passive'; weapon?: Weapon; passive?: 'hp' | 'speed' | 'pickup' | 'might'; label: string; emoji: string };
+type Passive = 'hp' | 'speed' | 'pickup' | 'might' | 'regen' | 'cool' | 'armor' | 'crit';
+type Upgrade = { kind: 'weapon' | 'passive'; weapon?: Weapon; passive?: Passive; label: string; emoji: string };
 
-function rollUpgrades(): Upgrade[] {
-  const pool: Upgrade[] = [
-    { kind: 'passive', passive: 'hp', label: '+25 Max HP', emoji: '❤️' },
-    { kind: 'passive', passive: 'speed', label: '+12% Move Speed', emoji: '👟' },
-    { kind: 'passive', passive: 'pickup', label: '+30% Pickup Range', emoji: '🧲' },
-    { kind: 'passive', passive: 'might', label: '+20% Damage', emoji: '💪' },
-    { kind: 'weapon', weapon: 'bolt', label: 'Star Bolt ⭐', emoji: '⭐' },
-    { kind: 'weapon', weapon: 'aura', label: 'Garlic Aura 🧄', emoji: '🧄' },
-    { kind: 'weapon', weapon: 'whisk', label: 'Whisk 🍥', emoji: '🍥' },
-    { kind: 'weapon', weapon: 'zap', label: 'Lightning ⚡', emoji: '⚡' },
-  ];
+const PASSIVE_UPGRADES: Upgrade[] = [
+  { kind: 'passive', passive: 'hp', label: '+25 Max HP', emoji: '❤️' },
+  { kind: 'passive', passive: 'speed', label: '+12% Move Speed', emoji: '👟' },
+  { kind: 'passive', passive: 'pickup', label: '+30% Pickup Range', emoji: '🧲' },
+  { kind: 'passive', passive: 'might', label: '+20% Damage', emoji: '💪' },
+  { kind: 'passive', passive: 'regen', label: '+2 HP/sec regen', emoji: '💖' },
+  { kind: 'passive', passive: 'cool', label: '-12% Cooldown', emoji: '⏱️' },
+  { kind: 'passive', passive: 'armor', label: '+2 Armor', emoji: '🪖' },
+  { kind: 'passive', passive: 'crit', label: '+10% Crit chance', emoji: '🎯' },
+];
+
+function rollUpgrades(weapons: WState[]): Upgrade[] {
+  const weaponUps: Upgrade[] = (Object.keys(WLABEL) as Weapon[])
+    .filter((wp) => weapons.length < 6 || weapons.some((w) => w.type === wp && w.level < 5))
+    .map((wp) => {
+      const owned = weapons.find((w) => w.type === wp);
+      const info = WLABEL[wp];
+      return { kind: 'weapon', weapon: wp, emoji: info.emoji, label: owned ? `${info.label} ${info.emoji} → Lv ${owned.level + 1}` : `New: ${info.label} ${info.emoji}` };
+    });
+  const pool = [...PASSIVE_UPGRADES, ...weaponUps];
   const out: Upgrade[] = [];
   const copy = [...pool];
   for (let i = 0; i < 3 && copy.length; i++) {
@@ -444,12 +529,20 @@ function rollUpgrades(): Upgrade[] {
   return out;
 }
 
-function applyUpgrade(u: Upgrade, h: { max: number; hp: number; speed: number; pickup: number; might: number }, weapons: WState[]) {
+function applyUpgrade(
+  u: Upgrade,
+  h: { max: number; hp: number; speed: number; pickup: number; might: number; regen: number; cool: number; armor: number; crit: number },
+  weapons: WState[],
+) {
   if (u.kind === 'passive') {
     if (u.passive === 'hp') { h.max += 25; h.hp += 25; }
     else if (u.passive === 'speed') h.speed *= 1.12;
     else if (u.passive === 'pickup') h.pickup *= 1.3;
     else if (u.passive === 'might') h.might *= 1.2;
+    else if (u.passive === 'regen') h.regen += 2;
+    else if (u.passive === 'cool') h.cool *= 0.88;
+    else if (u.passive === 'armor') h.armor += 2;
+    else if (u.passive === 'crit') h.crit = Math.min(0.8, h.crit + 0.1);
   } else if (u.kind === 'weapon' && u.weapon) {
     const existing = weapons.find((w) => w.type === u.weapon);
     if (existing) existing.level = Math.min(5, existing.level + 1);
