@@ -46,6 +46,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'sushi', path: '/arcade/sushi', emoji: '🍣', name: 'Sushi Match', blurb: 'Match 3 sushi.', baseXp: 10, gradient: 'from-red-500 to-pink-600' },
   { id: 'taiko', path: '/arcade/taiko', emoji: '🥁', name: 'Taiko Tap', blurb: 'Tap to the beat.', baseXp: 10, gradient: 'from-rose-500 to-red-600' },
   { id: 'tangram', path: '/arcade/tangram', emoji: '🧩', name: 'Tangram', blurb: 'Fill the frame.', baseXp: 10, gradient: 'from-teal-500 to-emerald-600' },
+  { id: 'tictactoe', path: '/arcade/tictactoe', emoji: '🐕', name: 'Tic Tac Toe', blurb: 'Dogs vs cats. Bigger beats smaller.', baseXp: 8, gradient: 'from-amber-400 to-orange-500' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {
