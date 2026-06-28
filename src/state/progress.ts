@@ -321,7 +321,7 @@ const v11Defaults = {
     startLevel: 1,
     livesPerSession: 3,
     checkProblems: 2,
-    adminPin: '3680',
+    adminPin: '13680',
     unlimited: false,
   } as ArcadeConfig,
   cumArcadeSeconds: 0,
@@ -433,6 +433,12 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
     // use the old default (leave any custom PIN untouched).
     const cfg = (state as Record<string, unknown>).arcadeConfig as ArcadeConfig | undefined;
     if (cfg && cfg.adminPin === '1234') cfg.adminPin = '3680';
+  }
+  if (fromVersion < 13) {
+    // Admin passcode changed 3680 → 13680. Update installs still on the old
+    // default (custom PINs untouched).
+    const cfg = (state as Record<string, unknown>).arcadeConfig as ArcadeConfig | undefined;
+    if (cfg && cfg.adminPin === '3680') cfg.adminPin = '13680';
   }
   return state;
 }
@@ -949,7 +955,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 12,
+      version: 13,
       migrate: migrateProgress,
     },
   ),
