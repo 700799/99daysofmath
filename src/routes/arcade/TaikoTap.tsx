@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
+import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Taiko-style rhythm tap — cute characters drift into the hit zone; tap the
@@ -38,6 +39,7 @@ export function TaikoTap() {
   const [, force] = useState(0);
   const redraw = () => force((n) => n + 1);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
 
   const speed = () => 150 + config.startLevel * 15 + (SESSION - timeRef.current) * 2;
 
@@ -53,6 +55,11 @@ export function TaikoTap() {
     if (outcome) return;
     lastRef.current = performance.now();
     const tick = (now: number) => {
+      if (pausedRef.current) {
+        lastRef.current = now;
+        rafRef.current = requestAnimationFrame(tick);
+        return;
+      }
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
       elapsedRef.current += dt;
@@ -176,9 +183,10 @@ export function TaikoTap() {
         <span className="text-orange-600 tabular-nums">⏱ {Math.max(0, Math.ceil(timeRef.current))}s</span>
       </div>
 
+      <GameStage theme="night" className="mx-auto p-2" style={{ maxWidth: W + 16 }}>
       <div
-        className="relative mx-auto rounded-2xl bg-amber-100 border-2 border-amber-200 overflow-hidden"
-        style={{ width: '100%', maxWidth: W, aspectRatio: `${W} / ${H}` }}
+        className="relative mx-auto rounded-2xl bg-amber-100/90 border-2 border-amber-200 overflow-hidden"
+        style={{ width: '100%', aspectRatio: `${W} / ${H}` }}
       >
         <div className="absolute top-0 left-0" style={{ width: W, height: H }}>
           {/* hit zone */}
@@ -205,6 +213,7 @@ export function TaikoTap() {
           )}
         </div>
       </div>
+      </GameStage>
 
       <div className="max-w-sm mx-auto mt-4">
         <button

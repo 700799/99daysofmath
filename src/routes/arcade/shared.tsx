@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useRef, type MutableRefObject } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mascot } from '../../components/Mascot';
@@ -7,10 +7,24 @@ import { StickerCelebration } from '../../components/StickerCelebration';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 
 // Provided by the lesson gate (ArcadeWarmup). When present, an in-game "Play
-// again" routes back through a fresh lesson rather than restarting in place.
-export const ArcadeSessionContext = createContext<{ requestReplay: () => void } | null>(null);
+// again" routes back through a fresh lesson rather than restarting in place, and
+// `paused` is true while a mid-game math challenge overlay is showing.
+export const ArcadeSessionContext = createContext<{
+  requestReplay: () => void;
+  paused?: boolean;
+} | null>(null);
 export function useArcadeSession() {
   return useContext(ArcadeSessionContext);
+}
+
+// Real-time/timed games read this ref at the top of their game loop to freeze
+// while a mid-game challenge overlay is up. Returns a ref that always mirrors the
+// current paused flag, so loops can check it without re-subscribing each frame.
+export function useArcadePausedRef(): MutableRefObject<boolean> {
+  const session = useArcadeSession();
+  const ref = useRef(false);
+  ref.current = !!session?.paused;
+  return ref;
 }
 
 export interface ArcadeGameDef {
@@ -48,6 +62,8 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'tangram', path: '/arcade/tangram', emoji: '🧩', name: 'Tangram', blurb: 'Fill the frame.', baseXp: 10, gradient: 'from-teal-500 to-emerald-600' },
   { id: 'tictactoe', path: '/arcade/tictactoe', emoji: '🐕', name: 'Tic Tac Toe', blurb: 'Dogs vs cats. Bigger beats smaller.', baseXp: 8, gradient: 'from-amber-400 to-orange-500' },
   { id: 'kpop', path: '/arcade/kpop', emoji: '🎤', name: 'K-Pop Dress-Up', blurb: 'Memorize & match the look.', baseXp: 10, gradient: 'from-fuchsia-500 to-pink-600' },
+  { id: 'survival', path: '/arcade/survival', emoji: '🏕️', name: 'Forest Survival', blurb: 'Last as many days as you can.', baseXp: 12, gradient: 'from-green-700 to-emerald-900' },
+  { id: 'fruit', path: '/arcade/fruit', emoji: '🍉', name: 'Fruit Slice', blurb: 'Swipe to slice. Dodge bombs!', baseXp: 10, gradient: 'from-lime-500 to-red-500' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {
@@ -84,18 +100,28 @@ function fmtClock(total: number): string {
 export function BalanceClock() {
   const play = useProgress((s) => s.cumArcadeSeconds);
   const lesson = useProgress((s) => s.cumLessonSeconds);
+  const earnRatio = useProgress((s) => s.arcadeConfig.earnRatio);
   const ratio = play > 0 ? lesson / play : lesson > 0 ? Infinity : 0;
   const ratioLabel = play === 0 && lesson === 0 ? '—' : `${ratio.toFixed(1)} : 1`;
   const total = play + lesson;
   const lessonPct = total > 0 ? Math.round((lesson / total) * 100) : 50;
+  // Game time earned from lessons but not yet spent (when the time budget is on).
+  const remaining = earnRatio > 0 ? Math.max(0, lesson * earnRatio - play) : null;
   return (
-    <div className="mt-2 flex items-center gap-2 text-[11px] font-display font-bold text-slate-500">
-      <span className="text-indigo-600">📘 {fmtClock(lesson)}</span>
-      <div className="flex-1 h-1.5 rounded-full bg-emerald-200 overflow-hidden" title="lessons vs games">
-        <div className="h-full bg-indigo-500" style={{ width: `${lessonPct}%` }} />
+    <div className="mt-2 space-y-1">
+      <div className="flex items-center gap-2 text-[11px] font-display font-bold text-slate-500">
+        <span className="text-indigo-600">📘 {fmtClock(lesson)}</span>
+        <div className="flex-1 h-1.5 rounded-full bg-emerald-200 overflow-hidden" title="lessons vs games">
+          <div className="h-full bg-indigo-500" style={{ width: `${lessonPct}%` }} />
+        </div>
+        <span className="text-emerald-600">🎮 {fmtClock(play)}</span>
+        <span className="tabular-nums text-slate-400">L:G {ratioLabel}</span>
       </div>
-      <span className="text-emerald-600">🎮 {fmtClock(play)}</span>
-      <span className="tabular-nums text-slate-400">L:G {ratioLabel}</span>
+      {remaining !== null && (
+        <div className="text-[11px] font-display font-extrabold tabular-nums text-emerald-700">
+          ⏳ Game time left: {fmtClock(remaining)}
+        </div>
+      )}
     </div>
   );
 }

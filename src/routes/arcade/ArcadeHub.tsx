@@ -29,6 +29,7 @@ function useClockTick(): void {
 export function ArcadeHub() {
   useClockTick();
   const arcadeDaily = useProgress((s) => s.arcadeDaily);
+  const hiddenGames = useProgress((s) => s.arcadeConfig.hiddenGames);
   const points = useProgress((s) => s.cumArcadePoints);
   const playSecs = useProgress((s) => s.cumArcadeSeconds);
   const lessonSecs = useProgress((s) => s.cumLessonSeconds);
@@ -36,6 +37,9 @@ export function ArcadeHub() {
 
   const playedToday = arcadeDaily.date === todayISO() ? arcadeDaily.played : [];
   const distinct = playedToday.length;
+  // A grown-up may turn off individual games in parent mode.
+  const hidden = new Set(hiddenGames ?? []);
+  const visibleGames = ARCADE_GAMES.filter((g) => !hidden.has(g.id));
 
   const ratio = playSecs > 0 ? lessonSecs / playSecs : lessonSecs > 0 ? Infinity : 0;
   const ratioLabel = playSecs === 0 && lessonSecs === 0 ? '—' : `${ratio.toFixed(1)} : 1`;
@@ -100,8 +104,14 @@ export function ArcadeHub() {
         </div>
       </div>
 
+      {visibleGames.length === 0 && (
+        <div className="mt-4 rounded-3xl bg-amber-50 border-2 border-amber-200 p-5 text-center font-display font-bold text-amber-800">
+          No games are turned on right now — ask a grown-up. 🧑‍🍼
+        </div>
+      )}
+
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-        {ARCADE_GAMES.map((g) => {
+        {visibleGames.map((g) => {
           const done = playedToday.includes(g.id);
           // A full lesson gates each game (handled by ArcadeGate on the route),
           // so every tile stays clickable here.

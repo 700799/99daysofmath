@@ -75,6 +75,8 @@ export function Sudoku() {
   const [sel, setSel] = useState<number | null>(null);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   const [showHelp, setShowHelp] = useState(false);
+  // transient per-entry feedback: which cell was just placed and whether it matched
+  const [feedback, setFeedback] = useState<{ cell: number; ok: boolean } | null>(null);
   useArcadeClock(!!outcome);
 
   const bad = conflicts(cells);
@@ -86,6 +88,16 @@ export function Sudoku() {
     const next = [...cells];
     next[sel] = n;
     setCells(next);
+    // immediate right/wrong feedback for the placed number (not for erasing)
+    if (n !== 0) {
+      const ok = n === game.solution[sel];
+      const cell = sel;
+      setFeedback({ cell, ok });
+      window.setTimeout(
+        () => setFeedback((f) => (f && f.cell === cell ? null : f)),
+        900,
+      );
+    }
     if (next.every((v, i) => v === game.solution[i])) {
       addArcadePoints(100);
       setOutcome(recordArcadePlay('sudoku', 15));
@@ -134,6 +146,18 @@ export function Sudoku() {
         </div>
       )}
 
+      <div className="h-7 mb-1 flex items-center justify-center">
+        {feedback && (
+          <span
+            className={`font-display font-extrabold text-sm px-3 py-1 rounded-full ${
+              feedback.ok ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'
+            }`}
+          >
+            {feedback.ok ? '✓ Correct!' : '✗ Try again'}
+          </span>
+        )}
+      </div>
+
       <div
         className="mx-auto bg-slate-900 p-[2px] grid"
         style={{
@@ -156,13 +180,18 @@ export function Sudoku() {
               onClick={() => setSel(i)}
               className="flex items-center justify-center font-display font-extrabold"
               style={{
-                background: selected
-                  ? '#bfdbfe'
-                  : sameVal
-                    ? '#e0e7ff'
-                    : (Math.floor(r / 3) + Math.floor(c / 3)) % 2 === 0
-                      ? '#ffffff'
-                      : '#f1f5f9',
+                background:
+                  feedback && feedback.cell === i
+                    ? feedback.ok
+                      ? '#bbf7d0'
+                      : '#fecaca'
+                    : selected
+                      ? '#bfdbfe'
+                      : sameVal
+                        ? '#e0e7ff'
+                        : (Math.floor(r / 3) + Math.floor(c / 3)) % 2 === 0
+                          ? '#ffffff'
+                          : '#f1f5f9',
                 color: bad[i] ? '#dc2626' : game.given[i] ? '#0f172a' : '#2563eb',
                 fontSize: 18,
                 // thicker separators between 3x3 boxes

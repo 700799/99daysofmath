@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useProgress } from '../state/progress';
 import { TOTAL_STICKERS } from '../utils/encouragement';
 import { AccountCard } from '../components/AccountCard';
+import { ARCADE_GAMES } from './arcade/shared';
 
 const GOAL_OPTIONS = [10, 30, 50, 100];
 
@@ -163,8 +164,9 @@ function AdminPanel() {
     <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
       <div className="font-display font-extrabold text-slate-900">Grown-ups 🔒</div>
       <div className="text-sm text-slate-600 mt-1">
-        Enter the passcode (default <b>13680</b>) to tune the learn-to-play balance — including
-        <b> Unlimited play</b>, which lets you skip the lessons and play any game freely.
+        Enter the grown-ups passcode to tune the learn-to-play balance — including
+        <b> Unlimited play</b>, which games show, the lesson-to-game time budget, and the
+        in-game math challenges.
       </div>
 
       {!open ? (
@@ -230,8 +232,156 @@ function AdminPanel() {
             value={config.checkProblems}
             onPick={(n) => setArcadeConfig({ checkProblems: n })}
           />
+
+          <div className="pt-2 border-t border-slate-100">
+            <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-2">
+              Time budget — lessons earn game time
+            </div>
+            <AdminPick
+              label="Game time per lesson minute"
+              options={[
+                { value: 0, label: 'Off' },
+                { value: 0.5, label: '½×' },
+                { value: 1, label: '1×' },
+                { value: 2, label: '2×' },
+              ]}
+              value={config.earnRatio}
+              onPick={(n) => setArcadeConfig({ earnRatio: n })}
+            />
+            <div className="mt-3" />
+            <AdminPick
+              label="Lesson time before play"
+              options={[
+                { value: 0, label: 'Off' },
+                { value: 60, label: '1m' },
+                { value: 120, label: '2m' },
+                { value: 180, label: '3m' },
+              ]}
+              value={config.minLessonSeconds}
+              onPick={(n) => setArcadeConfig({ minLessonSeconds: n })}
+            />
+          </div>
+
+          <div className="pt-2 border-t border-slate-100">
+            <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-2">
+              In-game math challenges
+            </div>
+            <AdminPick
+              label="Math challenge every"
+              options={[
+                { value: 0, label: 'Off' },
+                { value: 20, label: '20s' },
+                { value: 30, label: '30s' },
+                { value: 60, label: '60s' },
+                { value: 90, label: '90s' },
+              ]}
+              value={config.challengeInterval}
+              onPick={(n) => setArcadeConfig({ challengeInterval: n })}
+            />
+            <div className="mt-3" />
+            <AdminChoice
+              label="Problems each time"
+              options={[1, 2, 3, 5]}
+              value={config.challengeCount}
+              onPick={(n) => setArcadeConfig({ challengeCount: n })}
+            />
+            <div className="mt-3" />
+            <AdminChoice
+              label="Challenge level (1–5)"
+              options={[1, 2, 3, 4, 5]}
+              value={config.challengeLevel}
+              onPick={(n) => setArcadeConfig({ challengeLevel: n })}
+            />
+          </div>
+
+          <div className="pt-2 border-t border-slate-100">
+            <GameVisibility
+              hidden={config.hiddenGames ?? []}
+              onToggle={(id) => {
+                const set = new Set(config.hiddenGames ?? []);
+                if (set.has(id)) set.delete(id);
+                else set.add(id);
+                setArcadeConfig({ hiddenGames: Array.from(set) });
+              }}
+            />
+          </div>
         </div>
       )}
+    </div>
+  );
+}
+
+// Numbered chooser variant that shows custom labels (for non-integer / unit values).
+function AdminPick({
+  label,
+  options,
+  value,
+  onPick,
+}: {
+  label: string;
+  options: { value: number; label: string }[];
+  value: number;
+  onPick: (n: number) => void;
+}) {
+  return (
+    <div>
+      <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">
+        {label}
+      </div>
+      <div className="flex gap-2">
+        {options.map((o) => (
+          <button
+            key={o.value}
+            type="button"
+            onClick={() => onPick(o.value)}
+            aria-pressed={value === o.value}
+            className={[
+              'min-h-11 flex-1 rounded-xl font-display font-extrabold text-sm transition-colors',
+              value === o.value ? 'bg-duo-green text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200',
+            ].join(' ')}
+          >
+            {o.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Toggle which games appear in the Arcade hub. Parent mode governs the menu.
+function GameVisibility({
+  hidden,
+  onToggle,
+}: {
+  hidden: string[];
+  onToggle: (id: string) => void;
+}) {
+  const hiddenSet = new Set(hidden);
+  return (
+    <div>
+      <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">
+        Games shown in the arcade
+      </div>
+      <div className="flex flex-wrap gap-2">
+        {ARCADE_GAMES.map((g) => {
+          const on = !hiddenSet.has(g.id);
+          return (
+            <button
+              key={g.id}
+              type="button"
+              onClick={() => onToggle(g.id)}
+              aria-pressed={on}
+              className={[
+                'min-h-9 px-3 rounded-full font-display font-extrabold text-xs transition-colors',
+                on ? 'bg-duo-green text-white' : 'bg-slate-200 text-slate-500 line-through',
+              ].join(' ')}
+            >
+              {g.emoji} {g.name}
+            </button>
+          );
+        })}
+      </div>
+      <div className="mt-1.5 text-[11px] text-slate-500">Tap to hide/show. Hidden games leave the kid's menu.</div>
     </div>
   );
 }

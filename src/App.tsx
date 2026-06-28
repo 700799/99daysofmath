@@ -44,6 +44,8 @@ const TaikoTap = lazy(() => import('./routes/arcade/TaikoTap').then((m) => ({ de
 const Tangram = lazy(() => import('./routes/arcade/Tangram').then((m) => ({ default: m.Tangram })));
 const TicTacToe = lazy(() => import('./routes/arcade/TicTacToe').then((m) => ({ default: m.TicTacToe })));
 const KpopDressMatch = lazy(() => import('./routes/arcade/KpopDressMatch').then((m) => ({ default: m.KpopDressMatch })));
+const ForestSurvival = lazy(() => import('./routes/arcade/ForestSurvival').then((m) => ({ default: m.ForestSurvival })));
+const FruitSlice = lazy(() => import('./routes/arcade/FruitSlice').then((m) => ({ default: m.FruitSlice })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -104,6 +106,8 @@ export default function App() {
           <Route path="/arcade/tangram" element={<ArcadeGate title="Tangram"><Tangram /></ArcadeGate>} />
           <Route path="/arcade/tictactoe" element={<ArcadeGate title="Tic Tac Toe"><TicTacToe /></ArcadeGate>} />
           <Route path="/arcade/kpop" element={<ArcadeGate title="K-Pop Dress-Up"><KpopDressMatch /></ArcadeGate>} />
+          <Route path="/arcade/survival" element={<ArcadeGate title="Forest Survival"><ForestSurvival /></ArcadeGate>} />
+          <Route path="/arcade/fruit" element={<ArcadeGate title="Fruit Slice"><FruitSlice /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

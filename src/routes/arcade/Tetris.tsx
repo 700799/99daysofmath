@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
+import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Alien Tetris — falling tetrominoes made of cute aliens. Clear full rows;
@@ -54,6 +55,7 @@ export function Tetris() {
   const [, force] = useState(0);
   const redraw = () => force((n) => n + 1);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
 
   const level = () => 1 + Math.floor(linesRef.current / 10);
   const dropInterval = () => (softRef.current ? 0.05 : Math.max(0.08, 0.6 - level() * 0.05));
@@ -128,6 +130,11 @@ export function Tetris() {
     if (outcome) return;
     lastRef.current = performance.now();
     const tick = (now: number) => {
+      if (pausedRef.current) {
+        lastRef.current = now;
+        rafRef.current = requestAnimationFrame(tick);
+        return;
+      }
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
       accRef.current += dt;
@@ -247,11 +254,11 @@ export function Tetris() {
         <span className="text-indigo-600">Lvl {level()}</span>
       </div>
 
+      <GameStage theme="tetris" className="mx-auto p-2" style={{ maxWidth: W + 16 }}>
       <div
-        className="mx-auto bg-slate-900 grid"
+        className="mx-auto bg-slate-900/90 grid"
         style={{
           width: '100%',
-          maxWidth: W,
           aspectRatio: `${W} / ${H}`,
           gridTemplateColumns: `repeat(${COLS}, 1fr)`,
           gap: 1,
@@ -269,6 +276,7 @@ export function Tetris() {
           )),
         )}
       </div>
+      </GameStage>
 
       <div className="mt-3 grid grid-cols-4 gap-1.5 max-w-xs mx-auto select-none">
         <Pad label="←" onPress={() => moveX(-1)} />

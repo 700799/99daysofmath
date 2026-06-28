@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Skill-based basketball. The hoop jumps to a new spot every shot. A direction
@@ -15,19 +15,17 @@ const COURT_H = 240;
 const LAUNCH = { x: COURT_W / 2, y: COURT_H - 22 };
 const AIM_MIN = -170; // degrees (pointing up-left)
 const AIM_MAX = -10; //  degrees (pointing up-right)
-const SWEEP_SPEED = 165; // degrees per second — fast = hard
-const TOLERANCE = 7; // degrees of aim error allowed for a make
+const SWEEP_SPEED = 120; // degrees per second — fast = hard
 const ARROW_LEN = 70;
+const MAX_RANGE = 300; // px the ball can travel at full power
+const POWER_SPEED = 130; // power-meter units per second (0..100 sweep)
+const HOOP_RADIUS = 26; // how close the landing must be to count as a make
 
 const SESSION_SECONDS = 45;
 const TARGET = 5;
 
 type Hoop = { x: number; y: number };
 type Flight = { id: number; dx: number; dy: number; dist: number; made: boolean };
-
-function angleDelta(a: number, b: number): number {
-  return (((a - b) % 360) + 540) % 360 - 180;
-}
 
 function randomHoop(prev: Hoop | null): Hoop {
   for (let i = 0; i < 24; i++) {
@@ -42,18 +40,23 @@ export function Shootout() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
 
   const [secondsLeft, setSecondsLeft] = useState(SESSION_SECONDS);
   const [makes, setMakes] = useState(0);
   const [shotsTaken, setShotsTaken] = useState(0);
   const [started, setStarted] = useState(false);
-  const [phase, setPhase] = useState<'aim' | 'fly'>('aim');
+  const [phase, setPhase] = useState<'aim' | 'power' | 'fly'>('aim');
   const [hoop, setHoop] = useState<Hoop>(() => randomHoop(null));
   const [arrowAngle, setArrowAngle] = useState(AIM_MIN);
+  const [power, setPower] = useState(0);
   const [flight, setFlight] = useState<Flight | null>(null);
 
   const angleRef = useRef(AIM_MIN);
   const dirRef = useRef(1);
+  const lockedAngleRef = useRef(AIM_MIN);
+  const powerRef = useRef(0);
+  const powerDirRef = useRef(1);
   const rafRef = useRef(0);
   const lastRef = useRef(0);
   const shotIdRef = useRef(1);
@@ -73,6 +76,11 @@ export function Shootout() {
     if (!running || phase !== 'aim') return;
     lastRef.current = performance.now();
     const loop = (now: number) => {
+      if (pausedRef.current) {
+        lastRef.current = now;
+        rafRef.current = requestAnimationFrame(loop);
+        return;
+      }
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
       let a = angleRef.current + dirRef.current * SWEEP_SPEED * dt;
@@ -89,6 +97,36 @@ export function Shootout() {
     };
     rafRef.current = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(rafRef.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [running, phase]);
+
+  // Oscillate the power meter while choosing power.
+  useEffect(() => {
+    if (!running || phase !== 'power') return;
+    lastRef.current = performance.now();
+    const loop = (now: number) => {
+      if (pausedRef.current) {
+        lastRef.current = now;
+        rafRef.current = requestAnimationFrame(loop);
+        return;
+      }
+      const dt = Math.min(0.05, (now - lastRef.current) / 1000);
+      lastRef.current = now;
+      let p = powerRef.current + powerDirRef.current * POWER_SPEED * dt;
+      if (p >= 100) {
+        p = 100;
+        powerDirRef.current = -1;
+      } else if (p <= 0) {
+        p = 0;
+        powerDirRef.current = 1;
+      }
+      powerRef.current = p;
+      setPower(p);
+      rafRef.current = requestAnimationFrame(loop);
+    };
+    rafRef.current = requestAnimationFrame(loop);
+    return () => cancelAnimationFrame(rafRef.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [running, phase]);
 
   // Game-over when the timer hits zero or the target is reached.
@@ -102,15 +140,26 @@ export function Shootout() {
   }, [secondsLeft, won, outcome, makes, recordArcadePlay]);
 
   const shoot = () => {
-    if (!running || phase !== 'aim') return;
+    if (!running || pausedRef.current) return;
     if (!started) setStarted(true);
-    const a = angleRef.current;
-    const trueAngle = (Math.atan2(hoop.y - LAUNCH.y, hoop.x - LAUNCH.x) * 180) / Math.PI;
-    const made = Math.abs(angleDelta(a, trueAngle)) <= TOLERANCE;
+    // First tap locks the aim angle; second tap locks the power and fires.
+    if (phase === 'aim') {
+      lockedAngleRef.current = angleRef.current;
+      powerRef.current = 0;
+      powerDirRef.current = 1;
+      setPower(0);
+      setPhase('power');
+      return;
+    }
+    if (phase !== 'power') return;
+    const a = lockedAngleRef.current;
+    const pw = powerRef.current;
     const rad = (a * Math.PI) / 180;
-    const dist = made
-      ? Math.hypot(hoop.x - LAUNCH.x, hoop.y - LAUNCH.y)
-      : Math.hypot(COURT_W, COURT_H);
+    const dist = (pw / 100) * MAX_RANGE;
+    const landX = LAUNCH.x + Math.cos(rad) * dist;
+    const landY = LAUNCH.y + Math.sin(rad) * dist;
+    // make needs BOTH a good angle and the right power (close landing).
+    const made = Math.hypot(landX - hoop.x, landY - hoop.y) <= HOOP_RADIUS;
     setFlight({ id: shotIdRef.current++, dx: Math.cos(rad), dy: Math.sin(rad), dist, made });
     setShotsTaken((n) => n + 1);
     setPhase('fly');
@@ -124,6 +173,9 @@ export function Shootout() {
     angleRef.current = AIM_MIN;
     dirRef.current = 1;
     setArrowAngle(AIM_MIN);
+    powerRef.current = 0;
+    powerDirRef.current = 1;
+    setPower(0);
     setPhase('aim');
   };
 
@@ -179,8 +231,8 @@ export function Shootout() {
     <div>
       <ArcadeHeader title="Shootout · 45s" emoji="🏀" />
       <p className="text-sm text-slate-600 mb-2">
-        Time your tap! The arrow sweeps — fire it at the hoop. The hoop <b>moves every shot</b>.
-        Sink <b>{TARGET}</b> in 45 seconds.
+        Two taps: first lock the <b>aim</b>, then lock the <b>power</b>. You need both right!
+        The hoop <b>moves every shot</b>. Sink <b>{TARGET}</b> in 45 seconds.
       </p>
 
       <div className="flex justify-between items-center mb-3 max-w-sm mx-auto px-1">
@@ -208,28 +260,44 @@ export function Shootout() {
           <div className="mx-auto w-12 h-1.5 bg-orange-500 rounded-full" />
         </div>
 
-        {/* aim arrow */}
-        {phase === 'aim' && running && (
+        {/* aim arrow (sweeps while aiming, freezes at the locked angle while powering) */}
+        {(phase === 'aim' || phase === 'power') && running && (
           <div
             className="absolute"
             style={{
               left: LAUNCH.x,
               top: LAUNCH.y,
-              transform: `rotate(${arrowAngle}deg)`,
+              transform: `rotate(${phase === 'aim' ? arrowAngle : lockedAngleRef.current}deg)`,
               transformOrigin: '0 50%',
             }}
           >
             <div className="flex items-center">
-              <div style={{ width: ARROW_LEN, height: 5 }} className="bg-orange-500 rounded-full" />
-              <div className="text-orange-500 -ml-1 leading-none" style={{ fontSize: 20 }}>
+              <div
+                style={{ width: ARROW_LEN, height: 5 }}
+                className={`rounded-full ${phase === 'power' ? 'bg-emerald-500' : 'bg-orange-500'}`}
+              />
+              <div
+                className={`-ml-1 leading-none ${phase === 'power' ? 'text-emerald-500' : 'text-orange-500'}`}
+                style={{ fontSize: 20 }}
+              >
                 ▶
               </div>
             </div>
           </div>
         )}
 
-        {/* resting ball at the launch point while aiming */}
-        {phase === 'aim' && (
+        {/* power meter (vertical) while choosing power */}
+        {phase === 'power' && running && (
+          <div className="absolute right-2 bottom-2 top-2 w-4 rounded-full bg-slate-200/80 overflow-hidden flex flex-col-reverse">
+            <div
+              style={{ height: `${power}%` }}
+              className="w-full bg-gradient-to-t from-emerald-500 to-yellow-400"
+            />
+          </div>
+        )}
+
+        {/* resting ball at the launch point while aiming / powering */}
+        {(phase === 'aim' || phase === 'power') && (
           <div
             className="absolute text-3xl select-none"
             style={{ left: LAUNCH.x - 16, top: LAUNCH.y - 16 }}
@@ -272,10 +340,12 @@ export function Shootout() {
         <button
           type="button"
           onClick={shoot}
-          disabled={!running || phase !== 'aim'}
-          className="w-full min-h-20 rounded-3xl bg-orange-500 hover:bg-orange-600 disabled:bg-slate-300 text-white font-display font-extrabold text-3xl shadow-[0_6px_0_0_rgba(0,0,0,0.18)] active:translate-y-1 transition-all"
+          disabled={!running || phase === 'fly'}
+          className={`w-full min-h-20 rounded-3xl disabled:bg-slate-300 text-white font-display font-extrabold text-3xl shadow-[0_6px_0_0_rgba(0,0,0,0.18)] active:translate-y-1 transition-all ${
+            phase === 'power' ? 'bg-emerald-500 hover:bg-emerald-600' : 'bg-orange-500 hover:bg-orange-600'
+          }`}
         >
-          SHOOT! 🏀
+          {phase === 'power' ? 'SET POWER! 💥' : 'LOCK AIM! 🎯'}
         </button>
         <p className="text-center text-xs text-slate-400 mt-2">
           +2 XP per basket. Sink the target for a bonus.

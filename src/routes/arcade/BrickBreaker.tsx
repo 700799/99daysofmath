@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
+import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Brick Breaker — bounce the ball to clear numbered bricks. Break the brick
@@ -47,6 +48,7 @@ export function BrickBreaker() {
   const redraw = () => force((n) => n + 1);
 
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
 
   const newTarget = () => {
     const alive = bricksRef.current.filter((b) => b.alive);
@@ -107,6 +109,11 @@ export function BrickBreaker() {
     if (outcome) return;
     lastRef.current = performance.now();
     const tick = (now: number) => {
+      if (pausedRef.current) {
+        lastRef.current = now;
+        rafRef.current = requestAnimationFrame(tick);
+        return;
+      }
       const dt = Math.min(0.04, (now - lastRef.current) / 1000);
       lastRef.current = now;
       elapsedRef.current += dt;
@@ -148,6 +155,17 @@ export function BrickBreaker() {
         const speed = Math.hypot(b.vx, b.vy);
         b.vx = hit * speed * 0.75;
         b.vy = -Math.sqrt(Math.max(40, speed * speed - b.vx * b.vx));
+      }
+      // after 10s the ball creeps faster, up to ~1.6x the launch speed
+      if (elapsedRef.current > 10) {
+        const launch = 200 + levelRef.current * 15;
+        const cap = launch * 1.6;
+        const sp = Math.hypot(b.vx, b.vy);
+        if (sp < cap) {
+          const f = Math.min(cap / sp, 1.0006);
+          b.vx *= f;
+          b.vy *= f;
+        }
       }
       // brick collisions
       for (const br of bricksRef.current) {
@@ -267,9 +285,10 @@ export function BrickBreaker() {
         <span className="text-amber-600">Target <b>{targetRef.current}</b></span>
       </div>
 
+      <GameStage theme="bricks" className="max-w-sm mx-auto p-2">
       <div
-        className="relative mx-auto rounded-xl bg-slate-900 overflow-hidden touch-none"
-        style={{ width: '100%', maxWidth: W, aspectRatio: `${W} / ${H}` }}
+        className="relative mx-auto rounded-xl bg-slate-900/85 overflow-hidden touch-none"
+        style={{ width: '100%', aspectRatio: `${W} / ${H}` }}
         onPointerMove={(e) => movePaddleTo(e.clientX, e.currentTarget)}
         onPointerDown={(e) => movePaddleTo(e.clientX, e.currentTarget)}
       >
@@ -308,6 +327,7 @@ export function BrickBreaker() {
           />
         </div>
       </div>
+      </GameStage>
 
       <div className="mt-3 grid grid-cols-2 gap-2 max-w-xs mx-auto select-none">
         <Hold label="← Left" on={() => (inputRef.current.left = true)} off={() => (inputRef.current.left = false)} />

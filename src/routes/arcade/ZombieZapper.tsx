@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
-import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 const GAME_SECONDS = 45;
@@ -25,6 +25,7 @@ export function ZombieZapper() {
   const [timeLeft, setTimeLeft] = useState(GAME_SECONDS);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
+  const pausedRef = useArcadePausedRef();
   const nextId = useRef(1);
   const doneRef = useRef(false);
   const stateRef = useRef({ zapped: 0, lives: LIVES, timeLeft: GAME_SECONDS });
@@ -39,6 +40,11 @@ export function ZombieZapper() {
     let spawnIn = 0.4;
     let raf = 0;
     const tick = (now: number) => {
+      if (pausedRef.current) {
+        last = now;
+        raf = requestAnimationFrame(tick);
+        return;
+      }
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
       spawnIn -= dt;
@@ -71,7 +77,9 @@ export function ZombieZapper() {
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
-    const timer = setInterval(() => setTimeLeft((t) => Math.max(0, t - 1)), 1000);
+    const timer = setInterval(() => {
+      if (!pausedRef.current) setTimeLeft((t) => Math.max(0, t - 1));
+    }, 1000);
     return () => {
       cancelAnimationFrame(raf);
       clearInterval(timer);
