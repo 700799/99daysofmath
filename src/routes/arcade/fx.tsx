@@ -52,6 +52,8 @@ export const GAME_THEME: Record<string, StageTheme> = {
   wheel: 'candy',
   tictactoe: 'meadow',
   kpop: 'candy',
+  survival: 'meadow',
+  fruit: 'ocean',
 };
 
 interface SceneSpec {
