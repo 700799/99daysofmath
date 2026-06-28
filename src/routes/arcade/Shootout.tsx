@@ -5,36 +5,66 @@ import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
-// Skill-based basketball. The hoop jumps to a new spot every shot. A direction
-// arrow sweeps back and forth from the launch point — tap SHOOT to fire at the
-// current angle. You only score if the arrow is aimed within a tight tolerance
-// of the hoop. One shot at a time: the ball flies, resolves, then the hoop
-// moves again. No freebies — pure aim.
+// Angle Shootout — a basketball game that teaches angles in DEGREES and RADIANS.
+// A protractor (0°–180°) is drawn from the launch point. The hoop always sits on
+// one of the labelled radian rays. The aim arrow snaps between those radian
+// angles — tap LOCK when it points at the hoop, then pick the distance
+// (Close / Medium / Far). Match BOTH the angle and the distance to score.
 
 const COURT_W = 340;
-const COURT_H = 240;
-const LAUNCH = { x: COURT_W / 2, y: COURT_H - 22 };
-const AIM_MIN = -170; // degrees (pointing up-left)
-const AIM_MAX = -10; //  degrees (pointing up-right)
-const SWEEP_SPEED = 72; // degrees per second — slower = easier to time the angle
-const ARROW_LEN = 70;
-const MAX_RANGE = 320; // px the ball can travel at full power
-const POWER_SPEED = 78; // power-meter units per second (slower = easier distance)
-const HOOP_RADIUS = 46; // generous tolerance so a close angle + distance still counts
+const COURT_H = 300;
+const LAUNCH = { x: COURT_W / 2, y: COURT_H - 26 };
 
+// The teachable angles: degrees + their exact radian names. 0°/180° are shown on
+// the protractor scale for context; hoops only spawn on the upward rays so the
+// shot actually arcs to a basket.
+type Ang = { deg: number; rad: string };
+const SCALE: Ang[] = [
+  { deg: 0, rad: '0' },
+  { deg: 30, rad: 'π/6' },
+  { deg: 45, rad: 'π/4' },
+  { deg: 60, rad: 'π/3' },
+  { deg: 90, rad: 'π/2' },
+  { deg: 120, rad: '2π/3' },
+  { deg: 135, rad: '3π/4' },
+  { deg: 150, rad: '5π/6' },
+  { deg: 180, rad: 'π' },
+];
+// Aimable angles (the arrow snaps to these — the upward rays).
+const ANGLES: Ang[] = SCALE.filter((a) => a.deg >= 30 && a.deg <= 150);
+
+type PowerLvl = { key: 'close' | 'medium' | 'far'; label: string; dist: number; emoji: string };
+const POWERS: PowerLvl[] = [
+  { key: 'close', label: 'Close', dist: 70, emoji: '🟢' },
+  { key: 'medium', label: 'Medium', dist: 116, emoji: '🟡' },
+  { key: 'far', label: 'Far', dist: 160, emoji: '🔴' },
+];
+
+const PROT_R = 58; // protractor radius (court units)
+const ARROW_LEN = 88; // aim arrow length (px)
+const STEP_MS = 650; // how fast the arrow steps between radian angles
 const SESSION_SECONDS = 45;
 const TARGET = 5;
 
-type Hoop = { x: number; y: number };
-type Flight = { id: number; dx: number; dy: number; dist: number; made: boolean };
+type Hoop = { angleIdx: number; powerIdx: number };
+type Flight = { id: number; theta: number; dist: number; made: boolean; angleRight: boolean; powerRight: boolean };
+
+function rad(deg: number) {
+  return (deg * Math.PI) / 180;
+}
+// court coord of a point at angle/dist from the launch (screen y grows downward)
+function landing(theta: number, dist: number) {
+  return { x: LAUNCH.x + Math.cos(theta) * dist, y: LAUNCH.y - Math.sin(theta) * dist };
+}
+const px = (v: number, total: number) => `${(v / total) * 100}%`;
 
 function randomHoop(prev: Hoop | null): Hoop {
   for (let i = 0; i < 24; i++) {
-    const x = 40 + Math.random() * (COURT_W - 80);
-    const y = 24 + Math.random() * (COURT_H * 0.45);
-    if (!prev || Math.hypot(x - prev.x, y - prev.y) > 90) return { x, y };
+    const angleIdx = Math.floor(Math.random() * ANGLES.length);
+    const powerIdx = Math.floor(Math.random() * POWERS.length);
+    if (!prev || prev.angleIdx !== angleIdx || prev.powerIdx !== powerIdx) return { angleIdx, powerIdx };
   }
-  return { x: 40 + Math.random() * (COURT_W - 80), y: 24 + Math.random() * (COURT_H * 0.45) };
+  return { angleIdx: 0, powerIdx: 1 };
 }
 
 export function Shootout() {
@@ -49,87 +79,32 @@ export function Shootout() {
   const [started, setStarted] = useState(false);
   const [phase, setPhase] = useState<'aim' | 'power' | 'fly'>('aim');
   const [hoop, setHoop] = useState<Hoop>(() => randomHoop(null));
-  const [arrowAngle, setArrowAngle] = useState(AIM_MIN);
-  const [power, setPower] = useState(0);
+  const [aimIdx, setAimIdx] = useState(0);
+  const [lockedIdx, setLockedIdx] = useState(0);
   const [flight, setFlight] = useState<Flight | null>(null);
-  const [reaction, setReaction] = useState<'make' | 'miss' | null>(null);
+  const [reaction, setReaction] = useState<{ kind: 'make' | 'miss'; text: string } | null>(null);
 
-  const angleRef = useRef(AIM_MIN);
-  const dirRef = useRef(1);
-  const lockedAngleRef = useRef(AIM_MIN);
-  const powerRef = useRef(0);
-  const powerDirRef = useRef(1);
-  const rafRef = useRef(0);
-  const lastRef = useRef(0);
   const shotIdRef = useRef(1);
 
   const running = !outcome && secondsLeft > 0;
   const won = makes >= TARGET;
 
-  // Countdown — starts on the first shot so reading the screen isn't penalised.
+  // Countdown — starts on the first lock so reading the screen isn't penalised.
   useEffect(() => {
     if (!running || !started) return;
     const id = window.setInterval(() => setSecondsLeft((s) => Math.max(0, s - 1)), 1000);
     return () => window.clearInterval(id);
   }, [running, started]);
 
-  // Sweep the aim arrow while aiming.
+  // Step the aim arrow through the radian angles while aiming.
   useEffect(() => {
     if (!running || phase !== 'aim') return;
-    lastRef.current = performance.now();
-    const loop = (now: number) => {
-      if (pausedRef.current) {
-        lastRef.current = now;
-        rafRef.current = requestAnimationFrame(loop);
-        return;
-      }
-      const dt = Math.min(0.05, (now - lastRef.current) / 1000);
-      lastRef.current = now;
-      let a = angleRef.current + dirRef.current * SWEEP_SPEED * dt;
-      if (a >= AIM_MAX) {
-        a = AIM_MAX;
-        dirRef.current = -1;
-      } else if (a <= AIM_MIN) {
-        a = AIM_MIN;
-        dirRef.current = 1;
-      }
-      angleRef.current = a;
-      setArrowAngle(a);
-      rafRef.current = requestAnimationFrame(loop);
-    };
-    rafRef.current = requestAnimationFrame(loop);
-    return () => cancelAnimationFrame(rafRef.current);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [running, phase]);
-
-  // Oscillate the power meter while choosing power.
-  useEffect(() => {
-    if (!running || phase !== 'power') return;
-    lastRef.current = performance.now();
-    const loop = (now: number) => {
-      if (pausedRef.current) {
-        lastRef.current = now;
-        rafRef.current = requestAnimationFrame(loop);
-        return;
-      }
-      const dt = Math.min(0.05, (now - lastRef.current) / 1000);
-      lastRef.current = now;
-      let p = powerRef.current + powerDirRef.current * POWER_SPEED * dt;
-      if (p >= 100) {
-        p = 100;
-        powerDirRef.current = -1;
-      } else if (p <= 0) {
-        p = 0;
-        powerDirRef.current = 1;
-      }
-      powerRef.current = p;
-      setPower(p);
-      rafRef.current = requestAnimationFrame(loop);
-    };
-    rafRef.current = requestAnimationFrame(loop);
-    return () => cancelAnimationFrame(rafRef.current);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [running, phase]);
+    const id = window.setInterval(() => {
+      if (pausedRef.current) return;
+      setAimIdx((i) => (i + 1) % ANGLES.length);
+    }, STEP_MS);
+    return () => window.clearInterval(id);
+  }, [running, phase, pausedRef]);
 
   // Game-over when the timer hits zero or the target is reached.
   useEffect(() => {
@@ -141,65 +116,57 @@ export function Shootout() {
     }
   }, [secondsLeft, won, outcome, makes, recordArcadePlay]);
 
-  const shoot = () => {
-    if (!running || pausedRef.current) return;
+  const lockAim = () => {
+    if (!running) return;
     if (!started) setStarted(true);
-    // First tap locks the aim angle; second tap locks the power and fires.
-    if (phase === 'aim') {
-      lockedAngleRef.current = angleRef.current;
-      powerRef.current = 0;
-      powerDirRef.current = 1;
-      setPower(0);
-      setPhase('power');
-      return;
-    }
-    if (phase !== 'power') return;
-    const a = lockedAngleRef.current;
-    const pw = powerRef.current;
-    const rad = (a * Math.PI) / 180;
-    const dist = (pw / 100) * MAX_RANGE;
-    const landX = LAUNCH.x + Math.cos(rad) * dist;
-    const landY = LAUNCH.y + Math.sin(rad) * dist;
-    // make needs BOTH a good angle and the right power (close landing).
-    const made = Math.hypot(landX - hoop.x, landY - hoop.y) <= HOOP_RADIUS;
-    setFlight({ id: shotIdRef.current++, dx: Math.cos(rad), dy: Math.sin(rad), dist, made });
+    setLockedIdx(aimIdx);
+    setPhase('power');
+  };
+
+  const fire = (powerIdx: number) => {
+    if (!running || phase !== 'power') return;
+    const ang = ANGLES[lockedIdx];
+    const theta = rad(ang.deg);
+    const dist = POWERS[powerIdx].dist;
+    const angleRight = lockedIdx === hoop.angleIdx;
+    const powerRight = powerIdx === hoop.powerIdx;
+    setFlight({ id: shotIdRef.current++, theta, dist, made: angleRight && powerRight, angleRight, powerRight });
     setShotsTaken((n) => n + 1);
     setPhase('fly');
   };
 
   const onFlightDone = () => {
-    const made = flight?.made;
+    const f = flight;
     setFlight(null);
-    if (made) {
+    if (!f) return;
+    const correct = ANGLES[hoop.angleIdx];
+    if (f.made) {
       setMakes((m) => m + 1);
-      setReaction('make');
+      setReaction({ kind: 'make', text: `SWISH! ${correct.deg}° = ${correct.rad} rad 🏀` });
       sfx.win();
       haptic(HAPTIC.win);
     } else {
-      setReaction('miss');
+      const why = !f.angleRight
+        ? `The basket was at ${correct.deg}° = ${correct.rad} rad.`
+        : `Right angle! Try ${POWERS[hoop.powerIdx].label} distance.`;
+      setReaction({ kind: 'miss', text: why });
       sfx.lose();
       haptic(HAPTIC.heavy);
     }
-    // Hold on the swish / boo for a beat before resetting for the next shot.
     window.setTimeout(() => {
       setReaction(null);
       setHoop((h) => randomHoop(h));
-      angleRef.current = AIM_MIN;
-      dirRef.current = 1;
-      setArrowAngle(AIM_MIN);
-      powerRef.current = 0;
-      powerDirRef.current = 1;
-      setPower(0);
       setPhase('aim');
-    }, 950);
+    }, 1300);
   };
 
-  // Space bar shoots, too.
+  // Space bar: lock the aim, or fire medium power.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === ' ' || e.code === 'Space') {
         e.preventDefault();
-        shoot();
+        if (phase === 'aim') lockAim();
+        else if (phase === 'power') fire(1);
       }
     };
     window.addEventListener('keydown', onKey);
@@ -216,23 +183,23 @@ export function Shootout() {
     setPhase('aim');
     setHoop(randomHoop(null));
     setFlight(null);
-    angleRef.current = AIM_MIN;
-    dirRef.current = 1;
-    setArrowAngle(AIM_MIN);
+    setAimIdx(0);
+    setLockedIdx(0);
+    setReaction(null);
   };
 
   if (outcome) {
     return (
       <div>
-        <ArcadeHeader title="Shootout" emoji="🏀" />
+        <ArcadeHeader title="Angle Shootout" emoji="🏀" />
         <ArcadeEndCard
           gameId="shootout"
           outcome={outcome}
           win={won}
           scoreLine={
             won
-              ? `🔥 ${makes} baskets in ${SESSION_SECONDS - secondsLeft}s — sharpshooter!`
-              : `${makes} of ${TARGET} baskets — keep practising your aim!`
+              ? `🔥 ${makes} baskets in ${SESSION_SECONDS - secondsLeft}s — angle ace!`
+              : `${makes} of ${TARGET} baskets — keep reading those angles!`
           }
           onReplay={reset}
         />
@@ -241,83 +208,124 @@ export function Shootout() {
   }
 
   const accuracy = shotsTaken ? Math.round((makes / shotsTaken) * 100) : 0;
+  const shownIdx = phase === 'aim' ? aimIdx : lockedIdx;
+  const shown = ANGLES[shownIdx];
+  const hoopLand = landing(rad(ANGLES[hoop.angleIdx].deg), POWERS[hoop.powerIdx].dist);
 
   return (
     <div>
-      <ArcadeHeader title="Shootout · 45s" emoji="🏀" />
-      <p className="text-sm text-slate-600 mb-2">
-        Two taps: first lock the <b>aim</b>, then lock the <b>power</b>. You need both right!
-        The hoop <b>moves every shot</b>. Sink <b>{TARGET}</b> in 45 seconds.
+      <ArcadeHeader title="Angle Shootout · 45s" emoji="🏀" />
+      <p className="text-sm text-slate-600 mb-2 max-w-sm mx-auto text-center">
+        Read the angle to the hoop! The arrow snaps to each <b>radian</b>. Tap <b>LOCK</b> on the right
+        angle, then pick <b>Close / Medium / Far</b>. Sink <b>{TARGET}</b> in 45s.
       </p>
 
-      <div className="flex justify-between items-center mb-3 max-w-sm mx-auto px-1">
-        <div className="text-2xl font-display font-extrabold text-orange-600 tabular-nums">
-          ⏱ {secondsLeft}s
-        </div>
-        <div className="text-2xl font-display font-extrabold text-green-700 tabular-nums">
-          🏀 {makes}/{TARGET}
-        </div>
+      <div className="flex justify-between items-center mb-2 max-w-sm mx-auto px-1">
+        <div className="text-2xl font-display font-extrabold text-orange-600 tabular-nums">⏱ {secondsLeft}s</div>
+        <div className="text-2xl font-display font-extrabold text-green-700 tabular-nums">🏀 {makes}/{TARGET}</div>
         <div className="text-xs font-display font-bold text-slate-500">{accuracy}%</div>
       </div>
+
+      {/* live angle readout — the teaching surface */}
+      <div className="max-w-sm mx-auto mb-2 rounded-2xl bg-indigo-50 border-2 border-indigo-200 px-3 py-2 text-center">
+        <span className="text-xs font-display font-bold text-indigo-500 uppercase tracking-wide">
+          {phase === 'aim' ? 'Aiming' : phase === 'power' ? 'Locked — pick distance' : 'Shooting'}
+        </span>
+        <div className="text-2xl font-display font-extrabold text-indigo-700 tabular-nums">
+          {shown.deg}° = {shown.rad} rad
+        </div>
+      </div>
+
+      {/* after locking the angle: show every possible angle/radian, chosen one lit */}
+      {phase !== 'aim' && (
+        <div className="max-w-sm mx-auto mb-2 rounded-2xl bg-white border-2 border-slate-200 p-2">
+          <div className="text-[11px] font-display font-bold text-slate-500 text-center mb-1">
+            You chose <span className="text-indigo-700">{ANGLES[lockedIdx].deg}° = {ANGLES[lockedIdx].rad} rad</span> — all the angles:
+          </div>
+          <div className="flex flex-wrap justify-center gap-1">
+            {ANGLES.map((a, i) => (
+              <span
+                key={a.deg}
+                className={`rounded-lg px-2 py-1 text-xs font-display font-extrabold tabular-nums border-2 ${
+                  i === lockedIdx ? 'bg-indigo-600 border-indigo-700 text-white' : 'bg-slate-50 border-slate-200 text-slate-600'
+                }`}
+              >
+                {a.deg}°<span className="opacity-70"> · {a.rad}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* court */}
       <div
         className="relative mx-auto bg-gradient-to-b from-sky-100 to-amber-50 rounded-3xl border-2 border-slate-200 overflow-hidden"
-        style={{ width: '100%', maxWidth: COURT_W, height: COURT_H }}
+        style={{ width: '100%', maxWidth: COURT_W, aspectRatio: `${COURT_W} / ${COURT_H}` }}
       >
-        {/* hoop */}
+        {/* protractor: arc, ticks, degree + radian labels (scales with the court) */}
+        <svg viewBox={`0 0 ${COURT_W} ${COURT_H}`} className="absolute inset-0 w-full h-full" aria-hidden="true">
+          <path
+            d={`M ${LAUNCH.x - PROT_R} ${LAUNCH.y} A ${PROT_R} ${PROT_R} 0 0 1 ${LAUNCH.x + PROT_R} ${LAUNCH.y}`}
+            fill="none"
+            stroke="#94a3b8"
+            strokeWidth={1.5}
+          />
+          {SCALE.map((a) => {
+            const t = rad(a.deg);
+            const ix = LAUNCH.x + Math.cos(t) * (PROT_R - 8);
+            const iy = LAUNCH.y - Math.sin(t) * (PROT_R - 8);
+            const ox = LAUNCH.x + Math.cos(t) * PROT_R;
+            const oy = LAUNCH.y - Math.sin(t) * PROT_R;
+            const lx = LAUNCH.x + Math.cos(t) * (PROT_R + 13);
+            const ly = LAUNCH.y - Math.sin(t) * (PROT_R + 13);
+            const rx = LAUNCH.x + Math.cos(t) * (PROT_R + 27);
+            const ry = LAUNCH.y - Math.sin(t) * (PROT_R + 27);
+            const isCur = phase !== 'fly' && a.deg === shown.deg;
+            return (
+              <g key={a.deg}>
+                <line x1={ix} y1={iy} x2={ox} y2={oy} stroke={isCur ? '#4f46e5' : '#cbd5e1'} strokeWidth={isCur ? 3 : 1.5} />
+                <text x={lx} y={ly} fontSize={9} fontWeight={700} textAnchor="middle" dominantBaseline="middle" fill={isCur ? '#4f46e5' : '#64748b'}>
+                  {a.deg}°
+                </text>
+                <text x={rx} y={ry} fontSize={8} textAnchor="middle" dominantBaseline="middle" fill={isCur ? '#7c3aed' : '#94a3b8'}>
+                  {a.rad}
+                </text>
+              </g>
+            );
+          })}
+        </svg>
+
+        {/* hoop — sits exactly on one radian ray */}
         <div
-          className="absolute select-none"
-          style={{ left: hoop.x - 24, top: hoop.y - 26 }}
+          className="absolute -translate-x-1/2 -translate-y-1/2 select-none"
+          style={{ left: px(hoopLand.x, COURT_W), top: px(hoopLand.y, COURT_H) }}
           aria-hidden="true"
         >
-          <div className="text-5xl leading-none">🥅</div>
-          <div className="mx-auto w-12 h-1.5 bg-orange-500 rounded-full" />
+          <div className="text-4xl leading-none">🥅</div>
+          <div className="mx-auto w-10 h-1.5 bg-orange-500 rounded-full" />
         </div>
 
-        {/* aim arrow (sweeps while aiming, freezes at the locked angle while powering) */}
+        {/* aim arrow (snaps to the current radian; freezes while choosing power) */}
         {(phase === 'aim' || phase === 'power') && running && (
           <div
             className="absolute"
             style={{
-              left: LAUNCH.x,
-              top: LAUNCH.y,
-              transform: `rotate(${phase === 'aim' ? arrowAngle : lockedAngleRef.current}deg)`,
+              left: px(LAUNCH.x, COURT_W),
+              top: px(LAUNCH.y, COURT_H),
+              transform: `rotate(${-shown.deg}deg)`,
               transformOrigin: '0 50%',
             }}
           >
             <div className="flex items-center">
-              <div
-                style={{ width: ARROW_LEN, height: 5 }}
-                className={`rounded-full ${phase === 'power' ? 'bg-emerald-500' : 'bg-orange-500'}`}
-              />
-              <div
-                className={`-ml-1 leading-none ${phase === 'power' ? 'text-emerald-500' : 'text-orange-500'}`}
-                style={{ fontSize: 20 }}
-              >
-                ▶
-              </div>
+              <div style={{ width: ARROW_LEN, height: 5 }} className={`rounded-full ${phase === 'power' ? 'bg-emerald-500' : 'bg-orange-500'}`} />
+              <div className={`-ml-1 leading-none ${phase === 'power' ? 'text-emerald-500' : 'text-orange-500'}`} style={{ fontSize: 20 }}>▶</div>
             </div>
           </div>
         )}
 
-        {/* power meter (vertical) while choosing power */}
-        {phase === 'power' && running && (
-          <div className="absolute right-2 bottom-2 top-2 w-4 rounded-full bg-slate-200/80 overflow-hidden flex flex-col-reverse">
-            <div
-              style={{ height: `${power}%` }}
-              className="w-full bg-gradient-to-t from-emerald-500 to-yellow-400"
-            />
-          </div>
-        )}
-
-        {/* resting ball at the launch point while aiming / powering */}
+        {/* resting ball at the launch point */}
         {(phase === 'aim' || phase === 'power') && (
-          <div
-            className="absolute text-3xl select-none"
-            style={{ left: LAUNCH.x - 16, top: LAUNCH.y - 16 }}
-            aria-hidden="true"
-          >
+          <div className="absolute -translate-x-1/2 -translate-y-1/2 text-3xl select-none" style={{ left: px(LAUNCH.x, COURT_W), top: px(LAUNCH.y, COURT_H) }} aria-hidden="true">
             🏀
           </div>
         )}
@@ -327,53 +335,28 @@ export function Shootout() {
           <motion.div
             key={flight.id}
             initial={{ x: 0, y: 0, rotate: 0 }}
-            animate={{ x: flight.dx * flight.dist, y: flight.dy * flight.dist, rotate: 540 }}
+            animate={{ x: Math.cos(flight.theta) * flight.dist, y: -Math.sin(flight.theta) * flight.dist, rotate: 540 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
             onAnimationComplete={onFlightDone}
-            className="absolute text-3xl select-none"
-            style={{ left: LAUNCH.x - 16, top: LAUNCH.y - 16 }}
+            className="absolute -translate-x-1/2 -translate-y-1/2 text-3xl select-none"
+            style={{ left: px(LAUNCH.x, COURT_W), top: px(LAUNCH.y, COURT_H) }}
             aria-hidden="true"
           >
             🏀
           </motion.div>
         )}
 
-        {/* MAKE: ball swishes in the net with sparkles */}
-        {reaction === 'make' && (
+        {/* MAKE: swish + sparkles + flipping monkey */}
+        {reaction?.kind === 'make' && (
           <>
-            <motion.div
-              initial={{ y: -10, scale: 1 }}
-              animate={{ y: [-10, 6, -3, 2, 0], scale: [1, 1.1, 0.95, 1] }}
-              transition={{ duration: 0.7 }}
-              className="absolute text-3xl select-none"
-              style={{ left: hoop.x - 16, top: hoop.y - 6 }}
-              aria-hidden="true"
-            >
-              🏀
-            </motion.div>
-            {['✨', '⭐', '✨', '🌟'].map((s, i) => (
-              <motion.div
-                key={i}
-                initial={{ x: hoop.x, y: hoop.y, scale: 0, opacity: 1 }}
-                animate={{ x: hoop.x + Math.cos((i / 4) * Math.PI * 2) * 40, y: hoop.y + Math.sin((i / 4) * Math.PI * 2) * 40, scale: 1.2, opacity: 0 }}
-                transition={{ duration: 0.7 }}
-                className="absolute text-lg"
-                style={{ left: -8, top: -8 }}
-                aria-hidden="true"
-              >
-                {s}
-              </motion.div>
-            ))}
             <motion.div
               initial={{ scale: 0, opacity: 1 }}
               animate={{ scale: 1.1, opacity: 0 }}
-              transition={{ duration: 0.7 }}
-              className="absolute text-xl font-display font-extrabold text-green-600"
-              style={{ left: hoop.x - 24, top: hoop.y - 30 }}
+              transition={{ duration: 1 }}
+              className="absolute left-1/2 top-1/3 -translate-x-1/2 text-xl font-display font-extrabold text-green-600 text-center"
             >
-              SWISH!
+              {reaction.text}
             </motion.div>
-            {/* monkey does a celebratory flip */}
             <motion.div
               initial={{ rotate: 0, y: 0 }}
               animate={{ rotate: 360, y: [-6, -22, -6] }}
@@ -387,23 +370,17 @@ export function Shootout() {
           </>
         )}
 
-        {/* MISS: boos + a red miss flash + a laughing thumbs-down monkey */}
-        {reaction === 'miss' && (
+        {/* MISS: red flash + a teaching hint + a thumbs-down monkey */}
+        {reaction?.kind === 'miss' && (
           <>
+            <motion.div initial={{ opacity: 0.4 }} animate={{ opacity: 0 }} transition={{ duration: 0.8 }} className="absolute inset-0 bg-rose-500/40" aria-hidden="true" />
             <motion.div
-              initial={{ opacity: 0.5 }}
-              animate={{ opacity: 0 }}
-              transition={{ duration: 0.8 }}
-              className="absolute inset-0 bg-rose-500/40"
-              aria-hidden="true"
-            />
-            <motion.div
-              initial={{ scale: 0.6, opacity: 1 }}
-              animate={{ scale: 1.2, opacity: 0 }}
-              transition={{ duration: 0.85 }}
-              className="absolute left-1/2 top-1/3 -translate-x-1/2 text-2xl font-display font-extrabold text-rose-600"
+              initial={{ scale: 0.7, opacity: 1 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="absolute left-1/2 top-1/4 -translate-x-1/2 w-[90%] text-center text-sm font-display font-extrabold text-rose-700 bg-white/80 rounded-xl px-2 py-1"
             >
-              BOO! 👎
+              {reaction.text}
             </motion.div>
             <motion.div
               initial={{ rotate: 0 }}
@@ -419,19 +396,34 @@ export function Shootout() {
         )}
       </div>
 
-      <div className="max-w-sm mx-auto mt-5">
-        <button
-          type="button"
-          onClick={shoot}
-          disabled={!running || phase === 'fly'}
-          className={`w-full min-h-20 rounded-3xl disabled:bg-slate-300 text-white font-display font-extrabold text-3xl shadow-[0_6px_0_0_rgba(0,0,0,0.18)] active:translate-y-1 transition-all ${
-            phase === 'power' ? 'bg-emerald-500 hover:bg-emerald-600' : 'bg-orange-500 hover:bg-orange-600'
-          }`}
-        >
-          {phase === 'power' ? 'SET POWER! 💥' : 'LOCK AIM! 🎯'}
-        </button>
+      {/* controls */}
+      <div className="max-w-sm mx-auto mt-4">
+        {phase !== 'power' ? (
+          <button
+            type="button"
+            onClick={lockAim}
+            disabled={!running || phase === 'fly'}
+            className="w-full min-h-16 rounded-3xl bg-orange-500 hover:bg-orange-600 disabled:bg-slate-300 text-white font-display font-extrabold text-2xl shadow-[0_6px_0_0_rgba(0,0,0,0.18)] active:translate-y-1 transition-all"
+          >
+            🎯 LOCK {shown.deg}° ({shown.rad})
+          </button>
+        ) : (
+          <div className="grid grid-cols-3 gap-2">
+            {POWERS.map((p, i) => (
+              <button
+                key={p.key}
+                type="button"
+                onClick={() => fire(i)}
+                className="min-h-16 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-display font-extrabold shadow-[0_5px_0_0_rgba(0,0,0,0.18)] active:translate-y-1 transition-all"
+              >
+                <div className="text-xl">{p.emoji}</div>
+                {p.label}
+              </button>
+            ))}
+          </div>
+        )}
         <p className="text-center text-xs text-slate-400 mt-2">
-          +2 XP per basket. Sink the target for a bonus.
+          +2 XP per basket. A full circle is 360° = 2π rad; half is 180° = π rad.
         </p>
       </div>
     </div>
