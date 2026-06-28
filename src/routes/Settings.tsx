@@ -163,7 +163,7 @@ function AdminPanel() {
     <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
       <div className="font-display font-extrabold text-slate-900">Grown-ups 🔒</div>
       <div className="text-sm text-slate-600 mt-1">
-        Enter the passcode (default <b>1234</b>) to tune the learn-to-play balance — including
+        Enter the passcode (default <b>3680</b>) to tune the learn-to-play balance — including
         <b> Unlimited play</b>, which lets you skip the lessons and play any game freely.
       </div>
 
