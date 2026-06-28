@@ -74,7 +74,7 @@ export function Mode7Racer() {
     addArcadePoints(Math.round(kmRef.current) * 5 + stageRef.current * 40);
     const xp = Math.max(2, Math.min(20, stageRef.current * 3));
     sfx.lose(); haptic(HAPTIC.death);
-    setOutcome(recordArcadePlay('racer', xp));
+    setOutcome(recordArcadePlay('turbo', xp));
   };
 
   useEffect(() => {
@@ -187,7 +187,7 @@ export function Mode7Racer() {
     return (
       <div>
         <ArcadeHeader title="Turbo Dash" emoji="🏎️" />
-        <ArcadeEndCard gameId="racer" outcome={outcome} win={stageRef.current >= 4}
+        <ArcadeEndCard gameId="turbo" outcome={outcome} win={stageRef.current >= 4}
           scoreLine={`Reached stage ${stageRef.current} · ${Math.round(kmRef.current)} km`} onReplay={start} />
       </div>
     );

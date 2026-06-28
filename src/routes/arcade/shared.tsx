@@ -71,6 +71,9 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'space', path: '/arcade/space', emoji: '🚀', name: 'Space Blaster', blurb: 'Blast waves. Beat the bosses.', baseXp: 12, gradient: 'from-slate-700 to-indigo-900' },
   { id: 'sumo', path: '/arcade/sumo', emoji: '🛐', name: 'Sumo Math', blurb: 'Fast ×÷^ duel. Shove him out!', baseXp: 12, gradient: 'from-amber-500 to-rose-700' },
   { id: 'monster', path: '/arcade/monster', emoji: '🐲', name: 'Monster Rogue', blurb: 'Catch critters. Climb the gauntlet.', baseXp: 14, gradient: 'from-violet-500 to-indigo-800' },
+  { id: 'shinobi', path: '/arcade/shinobi', emoji: '🥷', name: 'Shinobi Match', blurb: 'Match runes. Defend the lanes.', baseXp: 12, gradient: 'from-slate-700 to-rose-700' },
+  { id: 'turbo', path: '/arcade/racer2', emoji: '🏎️', name: 'Turbo Dash', blurb: 'Mode-7 racer. Beat the clock.', baseXp: 12, gradient: 'from-sky-500 to-indigo-700' },
+  { id: 'blitz', path: '/arcade/blitz', emoji: '🪖', name: 'Jungle Blitz', blurb: 'Run & gun. Solve to power up.', baseXp: 14, gradient: 'from-green-700 to-lime-700' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {

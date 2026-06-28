@@ -61,6 +61,9 @@ export const GAME_THEME: Record<string, StageTheme> = {
   space: 'space',
   sumo: 'meadow',
   monster: 'night',
+  shinobi: 'night',
+  turbo: 'sky',
+  blitz: 'meadow',
 };
 
 interface SceneSpec {
