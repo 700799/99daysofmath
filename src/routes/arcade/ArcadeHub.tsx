@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useProgress, ARCADE_UNITS, ARCADE_UNIT_LABELS } from '../../state/progress';
 import { ARCADE_GAMES } from './shared';
-import { Mascot, type MascotKind } from './Mascots';
+import { Mascot, gameMascot, type MascotKind } from './Mascots';
 
 const UNIT_MASCOT: Record<string, MascotKind> = { '6.RP': 'frog', '6.NS': 'robot', '6.EE': 'dragon', mixed: 'pet' };
 
@@ -169,7 +169,12 @@ export function ArcadeHub() {
               <span className="absolute top-3 left-3 bg-black/20 text-white text-[10px] font-display font-extrabold px-2 py-0.5 rounded-full">
                 📚 Lesson first
               </span>
-              <div className="text-3xl">{g.emoji}</div>
+              <div className="flex items-center gap-1.5">
+                <span className="rounded-2xl bg-white/25 p-1">
+                  <Mascot kind={gameMascot(g.id)} size={40} expr="cheer" />
+                </span>
+                <span className="text-2xl">{g.emoji}</span>
+              </div>
               <div className="font-display font-extrabold text-lg mt-1">{g.name}</div>
               <div className="text-xs opacity-90 mt-0.5 line-clamp-2">{g.blurb}</div>
             </Link>

@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useRef, useState, type MutableRef
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mascot } from '../../components/Mascot';
+import { Mascot as CharMascot, gameMascot } from './Mascots';
 import { Confetti } from '../../components/Celebration';
 import { StickerCelebration } from '../../components/StickerCelebration';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
@@ -164,8 +165,15 @@ export function ArcadeEndCard({
         <StickerCelebration stickerIds={outcome.earned} onDone={() => setShowStickers(false)} />
       )}
       {win && <Confetti count={24} />}
-      <div className="flex justify-center">
+      <div className="flex items-end justify-center gap-1">
         <Mascot mood={win ? 'cheer' : 'happy'} size={110} />
+        <motion.div
+          initial={{ scale: 0, rotate: -12 }}
+          animate={{ scale: 1, rotate: 0 }}
+          transition={{ delay: 0.2, type: 'spring', stiffness: 280, damping: 14 }}
+        >
+          <CharMascot kind={gameMascot(gameId)} size={84} expr={win ? 'cheer' : 'dizzy'} />
+        </motion.div>
       </div>
       <h2 className="text-2xl font-display font-extrabold text-slate-900 mt-2">
         {scoreLine}

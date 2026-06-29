@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Mascot, type MascotKind } from './Mascots';
 
-// A short, springy intro card shown before each lesson and each game. Big emoji
-// hero + title; auto-dismisses after ~1.3s or on tap. Purely cosmetic.
+// A short, springy intro card shown before each lesson and each game. Big mascot
+// (or emoji) hero + title; auto-dismisses after ~1.3s or on tap. Purely cosmetic.
 export function HeroSplash({
   emoji,
+  mascot,
   name,
   subtitle,
   gradient = 'from-fuchsia-500 to-indigo-600',
@@ -12,6 +14,7 @@ export function HeroSplash({
   duration = 1300,
 }: {
   emoji: string;
+  mascot?: MascotKind;
   name: string;
   subtitle?: string;
   gradient?: string;
@@ -38,7 +41,7 @@ export function HeroSplash({
         transition={{ type: 'spring', stiffness: 260, damping: 14 }}
         className="text-7xl drop-shadow-lg"
       >
-        {emoji}
+        {mascot ? <Mascot kind={mascot} size={120} expr="cheer" /> : emoji}
       </motion.div>
       <motion.div
         initial={{ y: 16, opacity: 0 }}
@@ -97,9 +100,9 @@ export function Countdown({ onDone }: { onDone: () => void }) {
       <motion.div
         animate={{ y: [0, -14, 0], rotate: [-6, 6, -6] }}
         transition={{ duration: 0.6, repeat: Infinity, ease: 'easeInOut' }}
-        className="text-6xl drop-shadow-lg"
+        className="drop-shadow-lg"
       >
-        🐵
+        <Mascot kind="monkey" size={84} expr="cheer" />
       </motion.div>
       <div className="mt-1 font-display font-extrabold text-white drop-shadow">{cheer}</div>
       <AnimatePresence mode="wait">

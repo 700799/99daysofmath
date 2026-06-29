@@ -151,7 +151,7 @@ export function MasteryCelebration() {
                 transition={phase === 'win' ? { duration: 0.9, delay: 0.15 } : { duration: 0.7, repeat: Infinity }}
                 className="absolute inset-0 flex items-center justify-center drop-shadow-[0_3px_4px_rgba(0,0,0,0.35)]"
               >
-                <Mascot kind={champ.kind} size={104} />
+                <Mascot kind={champ.kind} size={104} expr={phase === 'win' ? 'cheer' : 'surprised'} />
               </motion.div>
 
               {/* missiles fly in + explode (barrage phase) */}
