@@ -1,7 +1,22 @@
 import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
-import { useProgress } from '../../state/progress';
+import { useProgress, type ArcadeUnit, ARCADE_UNIT_LABELS } from '../../state/progress';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
+import { LESSONS, type Lesson } from '../../data/lessons';
+import { LessonCard } from '../../components/LessonCard';
+
+function pickLesson(unit: ArcadeUnit): Lesson | null {
+  const usable = LESSONS.filter((l) => l.examples.length > 0);
+  const pool = unit === 'mixed' ? usable : usable.filter((l) => l.domain === unit);
+  const src = pool.length ? pool : usable;
+  return src[Math.floor(Math.random() * src.length)] ?? null;
+}
+
+const FORMATS: { len: RoundLen; emoji: string; label: string; sub: string; count: number }[] = [
+  { len: 'short', emoji: '⚡', label: 'Quick', sub: 'many short questions', count: 5 },
+  { len: 'medium', emoji: '🧠', label: 'Think', sub: '1–2 medium problems', count: 2 },
+  { len: 'word', emoji: '📖', label: 'Story', sub: 'one word problem', count: 1 },
+];
 
 // A quick math interruption that pops up during any game at an admin-set
 // interval. The player must answer every problem correctly to resume — a wrong
@@ -111,6 +126,29 @@ export function makeChallengeFrom(level: number, kinds: ChallengeKind[]): Challe
   return GENERATORS[list[ri(0, list.length - 1)]](hard);
 }
 
+// --- adaptive engine: pick questions by chosen unit + level + round length -----
+export type RoundLen = 'short' | 'medium' | 'word';
+const UNIT_KINDS: Record<ArcadeUnit, ChallengeKind[]> = {
+  '6.RP': ['ratio'],
+  '6.NS': ['fraction', 'factor'],
+  '6.EE': ['exponent', 'word'],
+  mixed: ['word', 'exponent', 'factor', 'ratio', 'fraction'],
+};
+
+/** A challenge tailored to the student's chosen unit and adaptive level, in one
+ *  of three length flavors: short (quick), medium (a bit harder), word (a story). */
+export function makeAdaptive(unit: ArcadeUnit, level: number, len: RoundLen): Challenge {
+  let kinds = UNIT_KINDS[unit] ?? UNIT_KINDS.mixed;
+  if (len === 'short') {
+    const noWord = kinds.filter((k) => k !== 'word');
+    if (noWord.length) kinds = noWord;
+  } else if (len === 'word') {
+    kinds = kinds.includes('word') ? ['word'] : kinds;
+  }
+  const diff = len === 'medium' ? Math.min(5, level + 1) : level;
+  return makeChallengeFrom(diff, kinds);
+}
+
 /** Generate one challenge scaled by difficulty level (1–5). Never an easy
  *  one-digit add/subtract — always a word problem, exponent, factor, or ratio. */
 export function makeChallenge(level: number): Challenge {
@@ -123,32 +161,46 @@ export function makeChallenge(level: number): Challenge {
   return pool[ri(0, pool.length - 1)](hard);
 }
 
-export function MidGameChallenge({
-  count,
-  level,
-  onDone,
-}: {
-  count: number;
-  level: number;
-  onDone: () => void;
-}) {
+// The adaptive "speed round": the student picks a format (Quick / Think / Story),
+// then answers questions drawn from their chosen unit at their adaptive level.
+// Each answer nudges the level up (5 right in a row) or down (3 wrong in a row),
+// and a "Need help?" button opens the unit's lesson + worked examples.
+export function MidGameChallenge({ onDone }: { count?: number; level?: number; onDone: () => void }) {
+  const unit = useProgress((s) => s.arcadeUnit);
+  const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
   const addArcadePoints = useProgress((s) => s.addArcadePoints);
   const addAchievement = useProgress((s) => s.addAchievement);
-  const problems = useMemo(
-    () => Array.from({ length: Math.max(1, count) }, () => makeChallenge(level)),
-    [count, level],
-  );
+  const level0 = useProgress((s) => s.arcadeLevels[unit] ?? 1);
+  const streak0 = useProgress((s) => s.arcadeStreak[unit] ?? 0);
+
+  const [fmt, setFmt] = useState<RoundLen | null>(null);
+  const [problems, setProblems] = useState<Challenge[]>([]);
   const [idx, setIdx] = useState(0);
   const [value, setValue] = useState('');
   const [wrong, setWrong] = useState(false);
   const [shakeKey, setShakeKey] = useState(0);
+  const [help, setHelp] = useState(false);
+  const [mastery, setMastery] = useState({ level: level0, streak: streak0 });
+  const helpLesson = useMemo(() => (help ? pickLesson(unit) : null), [help, unit]);
+
+  const startFormat = (len: RoundLen, n: number) => {
+    const lvl = useProgress.getState().arcadeLevels[unit] ?? 1;
+    setProblems(Array.from({ length: n }, () => makeAdaptive(unit, lvl, len)));
+    setFmt(len);
+    setIdx(0);
+    setValue('');
+    setWrong(false);
+  };
 
   const current = problems[idx];
 
   const submit = () => {
     const n = Number(value.trim());
-    if (value.trim() === '' || Number.isNaN(n)) return;
-    if (n === current.answer) {
+    if (value.trim() === '' || Number.isNaN(n) || !current) return;
+    const correct = n === current.answer;
+    const res = recordArcadeAnswer(unit, correct);
+    setMastery(res);
+    if (correct) {
       addAchievement(10);
       sfx.coin();
       haptic(HAPTIC.pickup);
@@ -177,69 +229,93 @@ export function MidGameChallenge({
     else setValue((v) => (v.length < 6 ? v + d : v));
   };
 
+  // tutor help — the unit's lesson + worked examples (answers click-to-reveal)
+  if (help && helpLesson) {
+    return (
+      <div className="fixed inset-0 z-[60] overflow-y-auto bg-white p-3">
+        <LessonCard lesson={helpLesson} onClose={() => setHelp(false)} onStart={() => setHelp(false)} />
+      </div>
+    );
+  }
+
+  // format chooser
+  if (!fmt) {
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 backdrop-blur-sm p-4">
+        <div className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl">
+          <div className="text-3xl">🧠</div>
+          <div className="mt-1 font-display font-extrabold text-slate-900">Brain Break!</div>
+          <div className="mt-0.5 text-xs font-display font-bold text-slate-500">
+            {ARCADE_UNIT_LABELS[unit]} · Level {mastery.level} · {mastery.streak}/5 to master
+          </div>
+          <div className="mt-2 h-2 rounded-full bg-slate-200 overflow-hidden">
+            <div className="h-full bg-indigo-500 transition-all" style={{ width: `${(mastery.streak / 5) * 100}%` }} />
+          </div>
+          <div className="mt-3 text-sm font-display font-bold text-slate-600">Pick your round:</div>
+          <div className="mt-2 space-y-2">
+            {FORMATS.map((f) => (
+              <button
+                key={f.len}
+                type="button"
+                onClick={() => startFormat(f.len, f.count)}
+                className="w-full rounded-2xl border-2 border-slate-200 bg-white px-4 py-3 text-left hover:border-indigo-400 active:translate-y-0.5"
+              >
+                <span className="text-2xl mr-2">{f.emoji}</span>
+                <span className="font-display font-extrabold text-slate-800">{f.label}</span>
+                <span className="block text-xs text-slate-500 ml-9 -mt-1">{f.sub}</span>
+              </button>
+            ))}
+          </div>
+          <button type="button" onClick={() => setHelp(true)} className="mt-3 text-sm font-display font-bold text-blue-700 hover:text-blue-800">
+            🧑‍🏫 Need help? See the lesson
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 backdrop-blur-sm p-4">
       <motion.div
         key={shakeKey}
         initial={{ scale: 0.85, opacity: 0 }}
-        animate={
-          wrong
-            ? { scale: 1, opacity: 1, x: [0, -8, 8, -6, 6, 0] }
-            : { scale: 1, opacity: 1, x: 0 }
-        }
+        animate={wrong ? { scale: 1, opacity: 1, x: [0, -8, 8, -6, 6, 0] } : { scale: 1, opacity: 1, x: 0 }}
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}
         className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl"
       >
-        <div className="text-3xl">🧠</div>
-        <div className="mt-1 font-display font-extrabold text-slate-900">Quick Math Break!</div>
-        <div className="mt-0.5 text-xs font-display font-bold text-slate-500">
-          Answer all {problems.length} to keep playing
+        <div className="text-[11px] font-display font-extrabold uppercase tracking-wide text-indigo-500">
+          {ARCADE_UNIT_LABELS[unit]} · Lvl {mastery.level} · {mastery.streak}/5 ⭐
+        </div>
+        <div className="mt-1 h-1.5 rounded-full bg-slate-200 overflow-hidden">
+          <div className="h-full bg-indigo-500 transition-all" style={{ width: `${(mastery.streak / 5) * 100}%` }} />
         </div>
 
-        <div className="mt-3 flex justify-center gap-1.5">
+        <div className="mt-2 flex justify-center gap-1.5">
           {problems.map((_, i) => (
-            <span
-              key={i}
-              className={`h-2 w-2 rounded-full ${
-                i < idx ? 'bg-emerald-500' : i === idx ? 'bg-amber-400' : 'bg-slate-200'
-              }`}
-            />
+            <span key={i} className={`h-2 w-2 rounded-full ${i < idx ? 'bg-emerald-500' : i === idx ? 'bg-amber-400' : 'bg-slate-200'}`} />
           ))}
         </div>
 
-        <div className="mt-4 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-xl font-display font-extrabold text-slate-900 leading-snug break-words">
-          {current.prompt}
+        <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-xl font-display font-extrabold text-slate-900 leading-snug break-words">
+          {current?.prompt}
         </div>
-        <div
-          className={`mt-3 h-12 rounded-xl border-2 flex items-center justify-center text-2xl font-display font-extrabold tabular-nums ${
-            wrong ? 'border-rose-300 bg-rose-50 text-rose-700' : 'border-slate-200 text-slate-900'
-          }`}
-        >
+        <div className={`mt-3 h-12 rounded-xl border-2 flex items-center justify-center text-2xl font-display font-extrabold tabular-nums ${wrong ? 'border-rose-300 bg-rose-50 text-rose-700' : 'border-slate-200 text-slate-900'}`}>
           {value || <span className="text-slate-300">?</span>}
         </div>
-        {wrong && (
-          <div className="mt-1 text-xs font-display font-bold text-rose-500">Try again!</div>
-        )}
+        {wrong && <div className="mt-1 text-xs font-display font-bold text-rose-500">Try again — or get help below.</div>}
 
         <div className="mt-3 grid grid-cols-3 gap-2">
           {['1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '0', 'del'].map((k) => (
-            <button
-              key={k}
-              type="button"
-              onClick={() => press(k)}
-              className="min-h-11 rounded-xl bg-slate-100 hover:bg-slate-200 font-display font-extrabold text-lg text-slate-800 active:translate-y-0.5"
-            >
+            <button key={k} type="button" onClick={() => press(k)} className="min-h-11 rounded-xl bg-slate-100 hover:bg-slate-200 font-display font-extrabold text-lg text-slate-800 active:translate-y-0.5">
               {k === 'del' ? '⌫' : k}
             </button>
           ))}
         </div>
-        <button
-          type="button"
-          onClick={submit}
-          disabled={!value.trim()}
-          className="mt-3 w-full min-h-12 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-display font-extrabold text-lg shadow disabled:bg-slate-300 active:translate-y-0.5"
-        >
+        <button type="button" onClick={submit} disabled={!value.trim()} className="mt-3 w-full min-h-12 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-display font-extrabold text-lg shadow disabled:bg-slate-300 active:translate-y-0.5">
           Check ✓
+        </button>
+        <button type="button" onClick={() => setHelp(true)} className="mt-2 text-xs font-display font-bold text-blue-700 hover:text-blue-800">
+          🧑‍🏫 Need help? See the lesson
         </button>
       </motion.div>
     </div>

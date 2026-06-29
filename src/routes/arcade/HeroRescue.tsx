@@ -3,7 +3,7 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { GameStage } from './fx';
 import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
-import { makeChallenge, type Challenge } from './MidGameChallenge';
+import { makeAdaptive, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
@@ -152,6 +152,8 @@ export function HeroRescue() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const addArcadePoints = useProgress((s) => s.addArcadePoints);
   const addAchievement = useProgress((s) => s.addAchievement);
+  const arcadeUnit = useProgress((s) => s.arcadeUnit);
+  const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
 
@@ -186,7 +188,7 @@ export function HeroRescue() {
   const tapPin = (pin: Pin) => {
     if (status !== 'playing' || open.has(pin.id) || pinId) return;
     setPinId(pin.id);
-    setChal(makeChallenge(Math.min(5, 2 + Math.floor(levelIdx / 2))));
+    setChal(makeAdaptive(arcadeUnit, useProgress.getState().arcadeLevels[arcadeUnit] ?? 1, 'short'));
     setInput('');
     setWrong(false);
   };
@@ -194,11 +196,13 @@ export function HeroRescue() {
   const resolvePin = () => {
     if (!chal || !pinId) return;
     if (Number(input.trim()) !== chal.answer || input.trim() === '') {
+      recordArcadeAnswer(arcadeUnit, false);
       setWrong(true);
       sfx.hurt();
       haptic(HAPTIC.hit);
       return;
     }
+    recordArcadeAnswer(arcadeUnit, true);
     // correct → open the pin and run the flow
     const nextOpen = new Set(open);
     nextOpen.add(pinId);

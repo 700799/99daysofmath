@@ -56,6 +56,16 @@ export interface RitPoint {
   accuracy: number;
 }
 
+// Units the student can pick at the arcade entry. Drives every game's questions.
+export type ArcadeUnit = '6.RP' | '6.NS' | '6.EE' | 'mixed';
+export const ARCADE_UNITS: ArcadeUnit[] = ['6.RP', '6.NS', '6.EE', 'mixed'];
+export const ARCADE_UNIT_LABELS: Record<ArcadeUnit, string> = {
+  '6.RP': 'Ratios & Proportions',
+  '6.NS': 'Number System',
+  '6.EE': 'Expressions & Equations',
+  mixed: 'Mixed (all units)',
+};
+
 export interface ArcadeConfig {
   lessonsPerSession: number; // full lessons required to unlock one game session
   startLevel: number; // starting level for leveled games; difficulty floor
@@ -171,6 +181,14 @@ interface ProgressState {
   setShinobiMaxLevel: (n: number) => void;
   racerMaxStage: number;
   setRacerMaxStage: (n: number) => void;
+  // Adaptive arcade: chosen unit + per-unit level/mastery (v17)
+  arcadeUnit: ArcadeUnit;
+  arcadeLevels: Record<ArcadeUnit, number>;
+  arcadeStreak: Record<ArcadeUnit, number>;
+  arcadeMiss: Record<ArcadeUnit, number>;
+  setArcadeUnit: (u: ArcadeUnit) => void;
+  recordArcadeAnswer: (u: ArcadeUnit, correct: boolean) => { level: number; streak: number };
+  resetArcadeMastery: () => void;
   completeLesson: (key: string) => string[];
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
@@ -348,7 +366,7 @@ const v11Defaults = {
     checkProblems: 2,
     adminPin: '13680',
     unlimited: false,
-    challengeInterval: 20,
+    challengeInterval: 120, // speed-round pause every 2 minutes by default
     challengeCount: 3,
     challengeLevel: 2,
     minLessonSeconds: 0,
@@ -376,6 +394,18 @@ const v16Defaults = {
   shinobiMaxLevel: 0,
   racerMaxStage: 0,
 };
+
+const v17Defaults = {
+  arcadeUnit: 'mixed' as ArcadeUnit,
+  arcadeLevels: { '6.RP': 1, '6.NS': 1, '6.EE': 1, mixed: 1 } as Record<ArcadeUnit, number>,
+  arcadeStreak: { '6.RP': 0, '6.NS': 0, '6.EE': 0, mixed: 0 } as Record<ArcadeUnit, number>,
+  arcadeMiss: { '6.RP': 0, '6.NS': 0, '6.EE': 0, mixed: 0 } as Record<ArcadeUnit, number>,
+};
+const freshMastery = () => ({
+  arcadeLevels: { '6.RP': 1, '6.NS': 1, '6.EE': 1, mixed: 1 } as Record<ArcadeUnit, number>,
+  arcadeStreak: { '6.RP': 0, '6.NS': 0, '6.EE': 0, mixed: 0 } as Record<ArcadeUnit, number>,
+  arcadeMiss: { '6.RP': 0, '6.NS': 0, '6.EE': 0, mixed: 0 } as Record<ArcadeUnit, number>,
+});
 
 export const ARCADE_DAILY_CAP_SECONDS = 180;     // 3 minutes per day
 export const MATH_UNLOCK_SECONDS = 900;          // 15 minutes of math unlocks again
@@ -521,6 +551,18 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       | undefined;
     if (cfg && cfg.storyInterval === undefined) cfg.storyInterval = 5;
   }
+  if (fromVersion < 17) {
+    // Adaptive arcade: chosen unit + per-unit level/mastery state.
+    const stateAny = state as Record<string, unknown>;
+    for (const [k, v] of Object.entries(v17Defaults)) {
+      if (stateAny[k] === undefined) stateAny[k] = v;
+    }
+    // Default the 2-minute speed-round pause only when none was ever set.
+    const cfg = (state as Record<string, unknown>).arcadeConfig as
+      | (ArcadeConfig & Record<string, unknown>)
+      | undefined;
+    if (cfg && cfg.challengeInterval === undefined) cfg.challengeInterval = 120;
+  }
   return state;
 }
 
@@ -547,6 +589,34 @@ export const useProgress = create<ProgressState>()(
       ...v11Defaults,
       ...v15Defaults,
       ...v16Defaults,
+      ...v17Defaults,
+      setArcadeUnit: (u) => set(() => ({ arcadeUnit: u })),
+      recordArcadeAnswer: (u, correct) => {
+        let result = { level: 1, streak: 0 };
+        set((s) => {
+          const level = s.arcadeLevels[u] ?? 1;
+          let streak = s.arcadeStreak[u] ?? 0;
+          let miss = s.arcadeMiss[u] ?? 0;
+          let newLevel = level;
+          if (correct) {
+            miss = 0;
+            streak += 1;
+            if (streak >= 5) { newLevel = Math.min(5, level + 1); streak = 0; } // mastered → level up
+          } else {
+            streak = 0;
+            miss += 1;
+            if (miss >= 3) { newLevel = Math.max(1, level - 1); miss = 0; } // 3 wrong in a row → drop
+          }
+          result = { level: newLevel, streak };
+          return {
+            arcadeLevels: { ...s.arcadeLevels, [u]: newLevel },
+            arcadeStreak: { ...s.arcadeStreak, [u]: streak },
+            arcadeMiss: { ...s.arcadeMiss, [u]: miss },
+          };
+        });
+        return result;
+      },
+      resetArcadeMastery: () => set(() => freshMastery()),
       setPlatformerMaxLevel: (n) =>
         set((s) => ({ platformerMaxLevel: Math.max(s.platformerMaxLevel, n) })),
       setSurvivorsMaxStage: (n) =>
@@ -1053,7 +1123,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 16,
+      version: 17,
       migrate: migrateProgress,
     },
   ),

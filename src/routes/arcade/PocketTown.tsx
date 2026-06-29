@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
-import { makeChallenge, type Challenge } from './MidGameChallenge';
+import { makeAdaptive, type Challenge } from './MidGameChallenge';
 import { MathBreak } from './MathBreak';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
@@ -56,6 +56,8 @@ export function PocketTown() {
   const addAchievement = useProgress((s) => s.addAchievement);
   const maxTier = useProgress((s) => s.townMaxTier);
   const setMaxTier = useProgress((s) => s.setTownMaxTier);
+  const arcadeUnit = useProgress((s) => s.arcadeUnit);
+  const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
@@ -187,13 +189,15 @@ export function PocketTown() {
     if (tax) return;
     const c = counts();
     const reward = 30 + c.com * 5 + Math.floor(pop * 0.5);
-    setTax({ c: makeChallenge(Math.min(5, 2 + tier)), reward });
+    const lvl = useProgress.getState().arcadeLevels[arcadeUnit] ?? 1;
+    setTax({ c: makeAdaptive(arcadeUnit, lvl, 'medium'), reward });
     setTaxInput('');
   };
   const submitTax = () => {
     if (!tax) return;
     const n = Number(taxInput.trim());
     if (taxInput.trim() === '' || Number.isNaN(n)) return;
+    recordArcadeAnswer(arcadeUnit, n === tax.c.answer);
     if (n === tax.c.answer) {
       setMoney((m) => m + tax.reward * 2);
       addAchievement(10);

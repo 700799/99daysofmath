@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useProgress } from '../../state/progress';
+import { useProgress, ARCADE_UNITS, ARCADE_UNIT_LABELS } from '../../state/progress';
 import { ARCADE_GAMES } from './shared';
+
+const UNIT_EMOJI: Record<string, string> = { '6.RP': '⚖️', '6.NS': '🔢', '6.EE': '🧮', mixed: '🎲' };
 
 function todayISO(): string {
   const d = new Date();
@@ -29,6 +31,10 @@ function useClockTick(): void {
 export function ArcadeHub() {
   useClockTick();
   const arcadeDaily = useProgress((s) => s.arcadeDaily);
+  const arcadeUnit = useProgress((s) => s.arcadeUnit);
+  const setArcadeUnit = useProgress((s) => s.setArcadeUnit);
+  const arcadeLevels = useProgress((s) => s.arcadeLevels);
+  const arcadeStreak = useProgress((s) => s.arcadeStreak);
   const hiddenGames = useProgress((s) => s.arcadeConfig.hiddenGames);
   const points = useProgress((s) => s.cumArcadePoints);
   const playSecs = useProgress((s) => s.cumArcadeSeconds);
@@ -53,6 +59,38 @@ export function ArcadeHub() {
         Finish a <b>full math lesson</b> to unlock a game. Keep learning and
         playing balanced — aim for 50/50!
       </p>
+
+      {/* Unit + level picker — drives every game's questions */}
+      <div className="mt-4 rounded-3xl p-4 border-2 bg-white border-slate-200">
+        <div className="font-display font-extrabold text-slate-900 text-sm">🎯 Choose your math unit</div>
+        <div className="mt-2 grid grid-cols-2 gap-2">
+          {ARCADE_UNITS.map((u) => {
+            const sel = arcadeUnit === u;
+            return (
+              <button
+                key={u}
+                type="button"
+                onClick={() => setArcadeUnit(u)}
+                aria-pressed={sel}
+                className={`rounded-2xl border-2 px-3 py-2 text-left ${sel ? 'border-indigo-500 bg-indigo-50' : 'border-slate-200 bg-white hover:border-indigo-300'}`}
+              >
+                <div className="font-display font-extrabold text-slate-800 text-sm">
+                  {UNIT_EMOJI[u]} {ARCADE_UNIT_LABELS[u]}
+                </div>
+                <div className="text-[11px] font-display font-bold text-slate-500">
+                  Level {arcadeLevels[u]}/5 · {arcadeStreak[u]}/5 to master
+                </div>
+              </button>
+            );
+          })}
+        </div>
+        <div className="mt-2 h-2 rounded-full bg-slate-200 overflow-hidden">
+          <div className="h-full bg-indigo-500 transition-all" style={{ width: `${(arcadeStreak[arcadeUnit] / 5) * 100}%` }} />
+        </div>
+        <div className="mt-1.5 text-[11px] text-slate-500">
+          All games will ask <b>{ARCADE_UNIT_LABELS[arcadeUnit]}</b> questions at <b>Level {arcadeLevels[arcadeUnit]}</b>. Get 5 right in a row to level up!
+        </div>
+      </div>
 
       {/* Learn-to-play balance card */}
       <div className="mt-4 rounded-3xl p-4 border-2 bg-indigo-50 border-indigo-200">
