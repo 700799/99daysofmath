@@ -46,6 +46,7 @@ const Wordle = lazy(() => import('./routes/arcade/Wordle').then((m) => ({ defaul
 const HeroRescue = lazy(() => import('./routes/arcade/HeroRescue').then((m) => ({ default: m.HeroRescue })));
 const EscapeRoom = lazy(() => import('./routes/arcade/EscapeRoom').then((m) => ({ default: m.EscapeRoom })));
 const PocketTown = lazy(() => import('./routes/arcade/PocketTown').then((m) => ({ default: m.PocketTown })));
+const TankAttack = lazy(() => import('./routes/arcade/TankAttack').then((m) => ({ default: m.TankAttack })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -108,6 +109,7 @@ export default function App() {
           <Route path="/arcade/hero" element={<ArcadeGate title="Hero Rescue"><HeroRescue /></ArcadeGate>} />
           <Route path="/arcade/escape" element={<ArcadeGate title="Math Escape"><EscapeRoom /></ArcadeGate>} />
           <Route path="/arcade/town" element={<ArcadeGate title="Pocket Town"><PocketTown /></ArcadeGate>} />
+          <Route path="/arcade/tank" element={<ArcadeGate title="Tank Attack"><TankAttack /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

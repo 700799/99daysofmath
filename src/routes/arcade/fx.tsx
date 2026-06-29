@@ -68,6 +68,7 @@ export const GAME_THEME: Record<string, StageTheme> = {
   wordle: 'meadow',
   hero: 'cave',
   escape: 'cave',
+  tank: 'sky',
 };
 
 interface SceneSpec {

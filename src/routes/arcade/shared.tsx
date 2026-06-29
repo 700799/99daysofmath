@@ -66,6 +66,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'wordle', path: '/arcade/wordle', emoji: '🟩', name: 'Word Guess', blurb: 'Crack the 5-letter word in 6 tries.', baseXp: 10, gradient: 'from-green-500 to-emerald-700' },
   { id: 'hero', path: '/arcade/hero', emoji: '🦸', name: 'Hero Rescue', blurb: 'Pull pins in the right order. Solve to act.', baseXp: 12, gradient: 'from-amber-500 to-rose-700' },
   { id: 'escape', path: '/arcade/escape', emoji: '🔐', name: 'Math Escape', blurb: 'Crack the locks. Escape before time runs out!', baseXp: 12, gradient: 'from-slate-700 to-amber-700' },
+  { id: 'tank', path: '/arcade/tank', emoji: '🎯', name: 'Tank Attack', blurb: 'Aim with angle + power. Blast the evil robots!', baseXp: 12, gradient: 'from-stone-600 to-emerald-800' },
 ];
 
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {
