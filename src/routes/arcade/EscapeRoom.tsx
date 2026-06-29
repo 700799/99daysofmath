@@ -3,14 +3,53 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
 import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
-import { makeAdaptive, type Challenge, type RoundLen } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
-// Math Escape — a timed escape room. Each room has several locks; solve a math
-// puzzle (from your chosen unit + adaptive level) to open each lock and reveal a
-// clue digit. Enter all the digits on the door keypad to escape to the next room
+// Logic Escape — a timed escape room with NO math, only logic. Each room has
+// several locks; each lock is an indirect logic puzzle — a riddle, a pattern, an
+// analogy, or an odd-one-out — that you crack by reasoning, not arithmetic. Open
+// every lock, then solve the door's deduction puzzle to escape to the next room
 // before the clock runs out. Five escalating themed rooms.
+
+type Puzzle = { kind: string; q: string; choices: string[]; a: number };
+
+// Lock puzzles: riddles, patterns, analogies, odd-one-out. All indirect — the
+// answer is reasoned from the clue, never calculated.
+const LOCK_PUZZLES: Puzzle[] = [
+  { kind: 'Riddle', q: 'I have hands but cannot clap, and a face but never smile. What am I?', choices: ['🕰️', '🧤', '🪞', '🎭'], a: 0 },
+  { kind: 'Riddle', q: 'I fall from the sky but never get hurt. I am white and cold. What am I?', choices: ['🔥', '❄️', '🍦', '🪨'], a: 1 },
+  { kind: 'Riddle', q: 'I shine at night and pull the ocean tides. What am I?', choices: ['☀️', '🌙', '💡', '⚡'], a: 1 },
+  { kind: 'Riddle', q: 'I buzz, I make honey, and I live in a hive. What am I?', choices: ['🦋', '🐝', '🐞', '🪰'], a: 1 },
+  { kind: 'Riddle', q: 'I have a trunk, but I am not a tree. What am I?', choices: ['🌳', '🐘', '🚗', '🧳'], a: 1 },
+  { kind: 'Riddle', q: 'I am full of holes but I still hold water. What am I?', choices: ['🧽', '🪣', '🍉', '☂️'], a: 0 },
+  { kind: 'Riddle', q: 'I run all day but never walk, and have a bed but never sleep. What am I?', choices: ['🛏️', '🏃', '🌊', '🚪'], a: 2 },
+  { kind: 'Riddle', q: 'The more you take from me, the bigger I get. What am I?', choices: ['🕳️', '🎈', '🍰', '📦'], a: 0 },
+  { kind: 'Odd one out', q: 'Which one does NOT belong?', choices: ['🍎', '🍌', '🔨', '🍇'], a: 2 },
+  { kind: 'Odd one out', q: 'Which is NOT an animal?', choices: ['🐶', '🐱', '🌵', '🐰'], a: 2 },
+  { kind: 'Odd one out', q: 'Which one canNOT fly?', choices: ['🦅', '🦋', '🐧', '🛩️'], a: 2 },
+  { kind: 'Odd one out', q: 'Which is NOT a fruit?', choices: ['🍓', '🥕', '🍑', '🍍'], a: 1 },
+  { kind: 'Pattern', q: 'What comes next?  🔺 🔵 🔺 🔵 🔺 __', choices: ['🔺', '🔵', '🟢', '⭐'], a: 1 },
+  { kind: 'Pattern', q: 'What comes next?  🌑 🌒 🌓 🌔 __', choices: ['🌕', '🌑', '⭐', '☀️'], a: 0 },
+  { kind: 'Pattern', q: 'Finish the pattern:  🍎 🍎 🍌 🍎 🍎 🍌 🍎 🍎 __', choices: ['🍌', '🍎', '🍇', '🍒'], a: 0 },
+  { kind: 'Pattern', q: 'What comes next?  ⬆️ ➡️ ⬇️ ⬅️ ⬆️ ➡️ __', choices: ['⬇️', '⬆️', '⬅️', '➡️'], a: 0 },
+  { kind: 'Analogy', q: 'Day is to ☀️ as Night is to __', choices: ['🌙', '🔥', '🌧️', '🍂'], a: 0 },
+  { kind: 'Analogy', q: 'Cow is to 🥛 as Bee is to __', choices: ['🍯', '🥚', '🧀', '🍷'], a: 0 },
+  { kind: 'Analogy', q: 'Fish is to 🌊 as Bird is to __', choices: ['☁️', '🌳', '🪺', '🐛'], a: 0 },
+  { kind: 'Analogy', q: 'Hot is to 🔥 as Cold is to __', choices: ['❄️', '💧', '🌙', '🍦'], a: 0 },
+  { kind: 'Analogy', q: 'Puppy is to 🐶 as Kitten is to __', choices: ['🐱', '🐭', '🦊', '🐹'], a: 0 },
+];
+
+// Door puzzles: harder deduction / ordering. Still pure logic.
+const DOOR_PUZZLES: Puzzle[] = [
+  { kind: 'Deduction', q: 'The escape key is round, NOT yellow, and NOT a square. Which is it?', choices: ['🟡', '🟦', '🔴', '🟩'], a: 2 },
+  { kind: 'Deduction', q: 'One box hides the key. It is NOT the starred box and NOT the locked box. Which box?', choices: ['⭐📦', '🔒📦', '📦', '🎀📦'], a: 2 },
+  { kind: 'Logic', q: 'Anya is taller than Bo. Bo is taller than Cy. Who is the SHORTEST?', choices: ['Anya', 'Bo', 'Cy', 'Same'], a: 2 },
+  { kind: 'Logic', q: 'All keys on the wall are gold. The door key is on the wall. So the door key is…', choices: ['Silver', 'Gold', 'Broken', 'Hidden'], a: 1 },
+  { kind: 'Logic', q: 'The exit is right of the plant and left of the lamp. 🪴 ? 💡 — what is between them?', choices: ['🚪', '🪟', '🖼️', '🔒'], a: 0 },
+  { kind: 'Deduction', q: 'Three colored doors. The exit is NOT blue, NOT green, and not on either end. Which?', choices: ['🟦', '🟥', '🟩', '🟨'], a: 1 },
+  { kind: 'Logic', q: 'If it is raining, the floor is wet. The floor is dry. So it is…', choices: ['Raining', 'NOT raining', 'Snowing', 'Foggy'], a: 1 },
+];
 
 const PROP_EMOJI = ['🧰', '🖼️', '📦', '🗄️', '🛢️', '🕰️', '📚', '🔮', '🗃️', '🧳', '🪆', '⚱️'];
 
@@ -19,62 +58,64 @@ const ROOMS: Room[] = [
   { name: 'Dungeon Cell', theme: 'cave', props: 3, seconds: 90 },
   { name: 'Midnight Library', theme: 'night', props: 3, seconds: 85 },
   { name: 'Space Lab', theme: 'space', props: 4, seconds: 85 },
-  { name: 'Jungle Temple', theme: 'meadow', props: 4, seconds: 75 },
-  { name: 'Candy Vault', theme: 'candy', props: 5, seconds: 75 },
+  { name: 'Jungle Temple', theme: 'meadow', props: 4, seconds: 80 },
+  { name: 'Candy Vault', theme: 'candy', props: 5, seconds: 80 },
 ];
 
-type Prop = { emoji: string; digit: number; open: boolean };
+type Lock = { emoji: string; puzzle: Puzzle; open: boolean };
 
 const HOWTO: HowToSection[] = [
-  { heading: 'Goal', body: 'Escape each room before the timer runs out — then escape all 5 rooms to win!' },
-  { heading: 'Locks', body: 'Tap a lock 🔒 to face a math problem. Solve it to open the lock and reveal a secret clue digit.' },
-  { heading: 'The door', body: 'Open every lock, then type the clue digits (in order, left to right) on the 🚪 door keypad to escape.' },
-  { heading: 'Clock', body: 'Each room is timed. The clock pauses for brain breaks. Beat the clock for a bonus!' },
+  { heading: 'Goal', body: 'Escape each room before the timer runs out — escape all 5 rooms to win! No math here, just clever thinking.' },
+  { heading: 'Locks', body: 'Tap a lock 🔒 to face a logic puzzle — a riddle, a pattern, an analogy, or an odd-one-out. Pick the right answer to pop the lock open.' },
+  { heading: 'Think it through', body: 'The clues are indirect — the puzzle never gives the answer away. Reason it out: what fits the riddle? what comes next? what does NOT belong?' },
+  { heading: 'The door', body: 'Open every lock, then crack the door’s deduction puzzle to escape to the next room.' },
+  { heading: 'Clock', body: 'Each room is timed and pauses for brain breaks. Beat the clock for a bonus!' },
 ];
-const CONTROLS = 'Tap a lock to solve it. Type answers and the door code on the on-screen keypad.';
+const CONTROLS = 'Tap a lock, then tap the answer you reason out. Solve the door puzzle to escape.';
 
 function shuffle<T>(a: T[]): T[] {
   const r = [...a];
   for (let i = r.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; }
   return r;
 }
-function makeProps(n: number): Prop[] {
-  return shuffle(PROP_EMOJI).slice(0, n).map((emoji) => ({ emoji, digit: 1 + Math.floor(Math.random() * 9), open: false }));
+function makeLocks(n: number): Lock[] {
+  const emojis = shuffle(PROP_EMOJI).slice(0, n);
+  const puzzles = shuffle(LOCK_PUZZLES).slice(0, n);
+  return emojis.map((emoji, i) => ({ emoji, puzzle: puzzles[i], open: false }));
+}
+function pickDoor(): Puzzle {
+  return DOOR_PUZZLES[Math.floor(Math.random() * DOOR_PUZZLES.length)];
 }
 
 export function EscapeRoom() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const addArcadePoints = useProgress((s) => s.addArcadePoints);
-  const arcadeUnit = useProgress((s) => s.arcadeUnit);
-  const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
 
   const [phase, setPhase] = useState<'howto' | 'play'>('howto');
   const [roomIdx, setRoomIdx] = useState(0);
-  const [props, setProps] = useState<Prop[]>([]);
+  const [locks, setLocks] = useState<Lock[]>([]);
+  const [doorPuzzle, setDoorPuzzle] = useState<Puzzle>(DOOR_PUZZLES[0]);
   const [timeLeft, setTimeLeft] = useState(0);
   const [active, setActive] = useState<number | null>(null); // which lock's puzzle is open
-  const [chal, setChal] = useState<Challenge | null>(null);
-  const [input, setInput] = useState('');
   const [wrong, setWrong] = useState(false);
-  const [door, setDoor] = useState(false); // door keypad open
-  const [code, setCode] = useState('');
-  const [codeWrong, setCodeWrong] = useState(false);
+  const [door, setDoor] = useState(false); // door puzzle open
+  const [doorWrong, setDoorWrong] = useState(false);
   const wonRef = useRef(false);
   const doneRef = useRef(false);
 
   const room = ROOMS[roomIdx];
-  const allOpen = props.length > 0 && props.every((p) => p.open);
-  const answer = props.map((p) => p.digit).join('');
+  const allOpen = locks.length > 0 && locks.every((p) => p.open);
 
   const loadRoom = (i: number) => {
     setRoomIdx(i);
-    setProps(makeProps(ROOMS[i].props));
+    setLocks(makeLocks(ROOMS[i].props));
+    setDoorPuzzle(pickDoor());
     setTimeLeft(ROOMS[i].seconds);
-    setActive(null); setChal(null); setInput(''); setWrong(false);
-    setDoor(false); setCode(''); setCodeWrong(false);
+    setActive(null); setWrong(false);
+    setDoor(false); setDoorWrong(false);
   };
 
   const start = () => { wonRef.current = false; doneRef.current = false; setOutcome(null); loadRoom(0); setPhase('play'); };
@@ -102,39 +143,35 @@ export function EscapeRoom() {
   }, [phase, outcome, pausedRef, roomIdx]);
 
   useEffect(() => {
-    if (phase === 'play' && !outcome && timeLeft === 0 && props.length > 0) finish(false);
+    if (phase === 'play' && !outcome && timeLeft === 0 && locks.length > 0) finish(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft, phase, outcome]);
 
-  const tapProp = (i: number) => {
-    if (outcome || props[i].open || active != null || door) return;
+  const tapLock = (i: number) => {
+    if (outcome || locks[i].open || active != null || door) return;
     setActive(i);
-    const lvl = useProgress.getState().arcadeLevels[arcadeUnit] ?? 1;
-    const len: RoundLen = i % 2 === 0 ? 'short' : 'medium';
-    setChal(makeAdaptive(arcadeUnit, lvl, len));
-    setInput(''); setWrong(false);
+    setWrong(false);
   };
 
-  const resolve = () => {
-    if (!chal || active == null || input.trim() === '') return;
-    const correct = Number(input.trim()) === chal.answer;
-    recordArcadeAnswer(arcadeUnit, correct);
+  const answerLock = (choice: number) => {
+    if (active == null) return;
+    const correct = choice === locks[active].puzzle.a;
     if (correct) {
       sfx.coin(); haptic(HAPTIC.pickup);
-      setProps((ps) => ps.map((p, i) => (i === active ? { ...p, open: true } : p)));
-      setActive(null); setChal(null); setInput('');
+      setLocks((ps) => ps.map((p, i) => (i === active ? { ...p, open: true } : p)));
+      setActive(null); setWrong(false);
     } else {
       sfx.hurt(); haptic(HAPTIC.hit); setWrong(true);
     }
   };
 
-  const submitCode = () => {
-    if (code === answer) {
+  const answerDoor = (choice: number) => {
+    if (choice === doorPuzzle.a) {
       sfx.win(); haptic(HAPTIC.win);
       if (roomIdx + 1 >= ROOMS.length) finish(true);
       else loadRoom(roomIdx + 1);
     } else {
-      sfx.hurt(); haptic(HAPTIC.hit); setCodeWrong(true);
+      sfx.hurt(); haptic(HAPTIC.hit); setDoorWrong(true);
     }
   };
 
@@ -143,7 +180,7 @@ export function EscapeRoom() {
   if (outcome) {
     return (
       <div>
-        <ArcadeHeader title="Math Escape" emoji="🔐" />
+        <ArcadeHeader title="Logic Escape" emoji="🔐" />
         <ArcadeEndCard
           gameId="escape"
           outcome={outcome}
@@ -158,8 +195,8 @@ export function EscapeRoom() {
   if (phase === 'howto') {
     return (
       <div>
-        <ArcadeHeader title="Math Escape" emoji="🔐" />
-        <HowToPlay emoji="🔐" title="Math Escape" gradient="from-slate-700 to-amber-700" sections={HOWTO} controls={CONTROLS} onStart={start} />
+        <ArcadeHeader title="Logic Escape" emoji="🔐" />
+        <HowToPlay emoji="🔐" title="Logic Escape" gradient="from-slate-700 to-amber-700" sections={HOWTO} controls={CONTROLS} onStart={start} />
       </div>
     );
   }
@@ -168,7 +205,7 @@ export function EscapeRoom() {
 
   return (
     <div>
-      <ArcadeHeader title="Math Escape" emoji="🔐" />
+      <ArcadeHeader title="Logic Escape" emoji="🔐" />
       <div className="flex justify-between items-center mb-1 max-w-sm mx-auto px-1 text-xs font-display font-extrabold">
         <span className="text-slate-700">Room {roomIdx + 1}/{ROOMS.length} · {room.name}</span>
         <span className={`tabular-nums ${lowTime ? 'text-rose-600 animate-pulse' : 'text-amber-600'}`}>⏱ {timeLeft}s</span>
@@ -177,16 +214,16 @@ export function EscapeRoom() {
       <GameStage theme={room.theme} className="max-w-sm mx-auto p-3">
         {/* locks */}
         <div className="relative z-10 grid grid-cols-3 gap-2">
-          {props.map((p, i) => (
+          {locks.map((p, i) => (
             <button
               key={i}
               type="button"
-              onClick={() => tapProp(i)}
+              onClick={() => tapLock(i)}
               className={`aspect-square rounded-2xl border-2 flex flex-col items-center justify-center ${p.open ? 'bg-emerald-50 border-emerald-300' : 'bg-white/85 border-slate-300 active:scale-95'}`}
             >
               <span className="text-3xl leading-none">{p.emoji}</span>
               {p.open ? (
-                <span className="mt-1 text-lg font-display font-extrabold text-emerald-700">{p.digit}</span>
+                <span className="mt-1 text-lg font-display font-extrabold text-emerald-700">✓</span>
               ) : (
                 <span className="mt-1 text-sm">🔒</span>
               )}
@@ -198,72 +235,60 @@ export function EscapeRoom() {
         <div className="relative z-10 mt-3 rounded-2xl bg-white/85 p-3 text-center">
           <div className="text-4xl">🚪</div>
           <div className="mt-1 text-xs font-display font-bold text-slate-600">
-            {allOpen ? 'All locks open — enter the code to escape!' : `Open all ${props.length} locks to reveal the door code.`}
+            {allOpen ? 'All locks open — solve the door puzzle to escape!' : `Open all ${locks.length} locks to reach the door.`}
           </div>
-          <div className="mt-1 font-display font-extrabold text-2xl tracking-[0.3em] tabular-nums text-slate-800">
-            {props.map((p) => (p.open ? p.digit : '_')).join(' ')}
+          <div className="mt-1 font-display font-extrabold text-2xl tracking-[0.3em] text-slate-800">
+            {locks.map((p) => (p.open ? '🔓' : '🔒')).join(' ')}
           </div>
           {allOpen && (
-            <button type="button" onClick={() => { setDoor(true); setCode(''); setCodeWrong(false); }} className="mt-2 min-h-10 px-5 rounded-2xl bg-amber-500 text-white font-display font-extrabold">
-              🔑 Enter code
+            <button type="button" onClick={() => { setDoor(true); setDoorWrong(false); }} className="mt-2 min-h-10 px-5 rounded-2xl bg-amber-500 text-white font-display font-extrabold">
+              🔑 Try the door
             </button>
           )}
         </div>
       </GameStage>
 
-      <GameInstructions emoji="🔐" title="Math Escape" sections={HOWTO} controls={CONTROLS} />
+      <GameInstructions emoji="🔐" title="Logic Escape" sections={HOWTO} controls={CONTROLS} />
 
       {/* lock puzzle modal */}
-      {chal && active != null && (
+      {active != null && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
           <div className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl">
-            <div className="text-3xl">{props[active].emoji}🔒</div>
-            <div className="mt-1 font-display font-extrabold text-slate-900">Solve to open the lock:</div>
-            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-xl font-display font-extrabold leading-snug break-words">{chal.prompt}</div>
-            <div className={`mt-3 h-12 rounded-xl border-2 flex items-center justify-center text-2xl font-display font-extrabold tabular-nums ${wrong ? 'border-rose-300 bg-rose-50 text-rose-700' : 'border-slate-200 text-slate-900'}`}>
-              {input || <span className="text-slate-300">?</span>}
-            </div>
-            {wrong && <div className="mt-1 text-xs font-display font-bold text-rose-500">Try again!</div>}
-            <Keypad onKey={(k) => { setWrong(false); setInput((v) => (k === 'del' ? v.slice(0, -1) : k === '-' ? (v.startsWith('-') ? v.slice(1) : '-' + v) : v.length < 6 ? v + k : v)); }} />
+            <div className="text-3xl">{locks[active].emoji}🔒</div>
+            <div className="mt-1 text-[11px] font-display font-extrabold uppercase tracking-widest text-amber-500">{locks[active].puzzle.kind}</div>
+            <div className="mt-2 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-base font-display font-extrabold leading-snug break-words text-slate-800">{locks[active].puzzle.q}</div>
+            {wrong && <div className="mt-2 text-xs font-display font-bold text-rose-500">Not quite — think again!</div>}
             <div className="mt-3 grid grid-cols-2 gap-2">
-              <button type="button" onClick={() => { setActive(null); setChal(null); }} className="min-h-11 rounded-2xl bg-slate-200 text-slate-700 font-display font-extrabold">Back</button>
-              <button type="button" onClick={resolve} disabled={!input.trim()} className="min-h-11 rounded-2xl bg-emerald-500 disabled:bg-slate-300 text-white font-display font-extrabold">Open 🔓</button>
+              {locks[active].puzzle.choices.map((c, ci) => (
+                <button key={ci} type="button" onClick={() => answerLock(ci)} className="min-h-14 rounded-2xl bg-slate-100 hover:bg-amber-100 border-2 border-slate-200 font-display font-extrabold text-2xl text-slate-800 active:translate-y-0.5">
+                  {c}
+                </button>
+              ))}
             </div>
+            <button type="button" onClick={() => { setActive(null); setWrong(false); }} className="mt-3 w-full min-h-11 rounded-2xl bg-slate-200 text-slate-700 font-display font-extrabold">Back</button>
           </div>
         </div>
       )}
 
-      {/* door code modal */}
+      {/* door puzzle modal */}
       {door && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
           <div className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl">
             <div className="text-3xl">🚪🔑</div>
-            <div className="mt-1 font-display font-extrabold text-slate-900">Enter the {props.length}-digit code</div>
-            <div className="mt-1 text-xs font-display font-bold text-slate-500">Read the clue digits left → right.</div>
-            <div className={`mt-3 h-12 rounded-xl border-2 flex items-center justify-center text-2xl tracking-[0.3em] font-display font-extrabold tabular-nums ${codeWrong ? 'border-rose-300 bg-rose-50 text-rose-700' : 'border-slate-200 text-slate-900'}`}>
-              {code || <span className="text-slate-300">{'•'.repeat(props.length)}</span>}
-            </div>
-            {codeWrong && <div className="mt-1 text-xs font-display font-bold text-rose-500">Wrong code — check the clues!</div>}
-            <Keypad onKey={(k) => { setCodeWrong(false); setCode((v) => (k === 'del' ? v.slice(0, -1) : k === '-' ? v : v.length < props.length ? v + k : v)); }} />
+            <div className="mt-1 text-[11px] font-display font-extrabold uppercase tracking-widest text-amber-500">Door · {doorPuzzle.kind}</div>
+            <div className="mt-2 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-base font-display font-extrabold leading-snug break-words text-slate-800">{doorPuzzle.q}</div>
+            {doorWrong && <div className="mt-2 text-xs font-display font-bold text-rose-500">Wrong — reason it through again!</div>}
             <div className="mt-3 grid grid-cols-2 gap-2">
-              <button type="button" onClick={() => setDoor(false)} className="min-h-11 rounded-2xl bg-slate-200 text-slate-700 font-display font-extrabold">Back</button>
-              <button type="button" onClick={submitCode} disabled={code.length !== props.length} className="min-h-11 rounded-2xl bg-amber-500 disabled:bg-slate-300 text-white font-display font-extrabold">Escape 🚪</button>
+              {doorPuzzle.choices.map((c, ci) => (
+                <button key={ci} type="button" onClick={() => answerDoor(ci)} className="min-h-14 rounded-2xl bg-slate-100 hover:bg-amber-100 border-2 border-slate-200 font-display font-extrabold text-xl text-slate-800 active:translate-y-0.5">
+                  {c}
+                </button>
+              ))}
             </div>
+            <button type="button" onClick={() => setDoor(false)} className="mt-3 w-full min-h-11 rounded-2xl bg-slate-200 text-slate-700 font-display font-extrabold">Back</button>
           </div>
         </div>
       )}
-    </div>
-  );
-}
-
-function Keypad({ onKey }: { onKey: (k: string) => void }) {
-  return (
-    <div className="mt-3 grid grid-cols-3 gap-2">
-      {['1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '0', 'del'].map((k) => (
-        <button key={k} type="button" onClick={() => onKey(k)} className="min-h-11 rounded-xl bg-slate-100 hover:bg-slate-200 font-display font-extrabold text-lg text-slate-800 active:translate-y-0.5">
-          {k === 'del' ? '⌫' : k}
-        </button>
-      ))}
     </div>
   );
 }

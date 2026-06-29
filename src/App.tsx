@@ -108,7 +108,7 @@ export default function App() {
           <Route path="/arcade/racer2" element={<ArcadeGate title="Turbo Dash"><Mode7Racer /></ArcadeGate>} />
           <Route path="/arcade/wordle" element={<ArcadeGate title="Word Guess"><Wordle /></ArcadeGate>} />
           <Route path="/arcade/hero" element={<ArcadeGate title="Hero Rescue"><HeroRescue /></ArcadeGate>} />
-          <Route path="/arcade/escape" element={<ArcadeGate title="Math Escape"><EscapeRoom /></ArcadeGate>} />
+          <Route path="/arcade/escape" element={<ArcadeGate title="Logic Escape"><EscapeRoom /></ArcadeGate>} />
           <Route path="/arcade/town" element={<ArcadeGate title="Pocket Town"><PocketTown /></ArcadeGate>} />
           <Route path="/arcade/tank" element={<ArcadeGate title="Tank Attack"><TankAttack /></ArcadeGate>} />
           <Route path="/arcade/dress" element={<ArcadeGate title="Dress to Impress"><DressToImpress /></ArcadeGate>} />
