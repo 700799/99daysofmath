@@ -7,15 +7,18 @@ import { MathBreak } from './MathBreak';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
-const STORY_EVERY = 180; // force a math story every 3 minutes of play
-const STORY_MIN_READ = 10; // must read for at least this many seconds
+// Pocket Town — a city builder split into small, phone-friendly NEIGHBORHOODS.
+// Hop between districts with N/S/E/W arrows or a floating map menu. Build homes,
+// shops, services and utilities, then open the City Inspector REPORT CARD: it
+// grades your city with real math — population = homes × people, services by
+// RATIO (1 power plant per 4 homes…), happiness/coverage as PERCENTAGES, and a
+// budget-efficiency RATE — plus a disaster-resilience verdict. Original art.
 
-// Pocket Town — an original Pocket-City-style builder. Lay roads, zone homes,
-// shops and factories, and add services to grow population, income and
-// happiness. The city climbs tiers (Village → Megalopolis) and dishes out
-// missions. Collect taxes with a quick math problem for a bonus.
+const STORY_EVERY = 180; // force a fresh math story every 3 minutes of play
+const STORY_MIN_READ = 10;
+const ND = 6; // small per-district grid (easy to see on a phone)
+const PEOPLE_PER_HOME = 8;
 
-const N = 11; // grid size (bigger map → more to build)
 type Cell =
   | '' | 'road' | 'res' | 'com' | 'ind' | 'park' | 'police' | 'fire' | 'hospital' | 'school'
   | 'farm' | 'power' | 'water' | 'mall' | 'university' | 'stadium';
@@ -38,7 +41,7 @@ const TOOLS: { key: Cell | 'bulldoze'; emoji: string; label: string; cost: numbe
   { key: 'stadium', emoji: '🏟️', label: 'Stadium', cost: 160 },
   { key: 'bulldoze', emoji: '🧹', label: 'Clear', cost: 2 },
 ];
-
+const COST: Record<string, number> = Object.fromEntries(TOOLS.map((t) => [t.key, t.cost]));
 const EMOJI: Record<Cell, string> = {
   '': '', road: '🛣️', res: '🏠', com: '🏢', ind: '🏭', park: '🌳', police: '🚓', fire: '🚒', hospital: '🏥', school: '🏫',
   farm: '🌾', power: '⚡', water: '🚰', mall: '🏬', university: '🎓', stadium: '🏟️',
@@ -47,8 +50,35 @@ const EMOJI: Record<Cell, string> = {
 const TIERS = ['Hamlet', 'Village', 'Town', 'City', 'Metropolis', 'Megalopolis', 'Capital', 'Wonder'];
 const TIER_POP = [0, 60, 180, 450, 1000, 2000, 3500, 6000];
 
-type Mission = { id: string; label: string; reward: number; done: boolean; check: (s: Stats) => boolean };
-type Stats = { money: number; pop: number; happy: number; counts: Record<Cell, number> };
+type Dir = 'N' | 'S' | 'E' | 'W';
+type District = { id: string; name: string; emoji: string };
+const DISTRICTS: District[] = [
+  { id: 'downtown', name: 'Downtown', emoji: '🏙️' },
+  { id: 'uptown', name: 'Uptown', emoji: '🌆' },
+  { id: 'harbor', name: 'Harbor', emoji: '⚓' },
+  { id: 'meadows', name: 'Meadows', emoji: '🌾' },
+  { id: 'westend', name: 'West End', emoji: '🌳' },
+];
+// Compass adjacency (a plus-shaped map centered on Downtown).
+const NEIGHBORS: Record<string, Partial<Record<Dir, string>>> = {
+  downtown: { N: 'uptown', S: 'meadows', E: 'harbor', W: 'westend' },
+  uptown: { S: 'downtown' },
+  meadows: { N: 'downtown' },
+  harbor: { W: 'downtown' },
+  westend: { E: 'downtown' },
+};
+
+type Counts = Record<Cell, number>;
+const emptyCounts = (): Counts => ({ '': 0, road: 0, res: 0, com: 0, ind: 0, park: 0, police: 0, fire: 0, hospital: 0, school: 0, farm: 0, power: 0, water: 0, mall: 0, university: 0, stadium: 0 });
+
+type Grids = Record<string, Cell[]>;
+const freshGrids = (): Grids => Object.fromEntries(DISTRICTS.map((d) => [d.id, Array(ND * ND).fill('') as Cell[]]));
+
+const grade = (pct: number) => (pct >= 90 ? 'A' : pct >= 80 ? 'B' : pct >= 70 ? 'C' : pct >= 60 ? 'D' : 'F');
+const GRADE_COLOR: Record<string, string> = { A: 'text-emerald-600', B: 'text-lime-600', C: 'text-amber-600', D: 'text-orange-600', F: 'text-rose-600' };
+
+type ReportRow = { label: string; math: string; pct: number };
+type Report = { rows: ReportRow[]; overall: number; population: number; capacity: number; resilience: number };
 
 export function PocketTown() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
@@ -62,132 +92,138 @@ export function PocketTown() {
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
 
-  const [grid, setGrid] = useState<Cell[]>(() => Array(N * N).fill(''));
+  const [grids, setGrids] = useState<Grids>(freshGrids);
+  const [cur, setCur] = useState('downtown');
   const [tool, setTool] = useState<Cell | 'bulldoze'>('road');
-  const [money, setMoney] = useState(280);
+  const [money, setMoney] = useState(340);
   const [pop, setPop] = useState(0);
   const [happy, setHappy] = useState(70);
   const [tier, setTier] = useState(0);
   const [tax, setTax] = useState<{ c: Challenge; reward: number } | null>(null);
   const [taxInput, setTaxInput] = useState('');
-  const [msg, setMsg] = useState('Lay roads, then zone homes & shops next to them!');
+  const [msg, setMsg] = useState('Build roads, then homes & shops. Use the arrows to visit other neighborhoods!');
   const [zoom, setZoom] = useState(1);
   const [story, setStory] = useState(false);
+  const [report, setReport] = useState<Report | null>(null);
+  const [mapOpen, setMapOpen] = useState(false);
+
   const storyRef = useRef(false);
   const playSecRef = useRef(0);
   const moneyRef = useRef(money);
-  const gridRef = useRef(grid);
+  const gridsRef = useRef(grids);
   const popRef = useRef(0);
   const happyRef = useRef(70);
+  const spentRef = useRef(0);
   moneyRef.current = money;
-  gridRef.current = grid;
+  gridsRef.current = grids;
   popRef.current = pop;
   happyRef.current = happy;
 
-  const [missions, setMissions] = useState<Mission[]>(() => [
-    { id: 'pop60', label: 'Reach 60 population', reward: 120, done: false, check: (s) => s.pop >= 60 },
-    { id: 'parks', label: 'Plant 3 parks', reward: 80, done: false, check: (s) => s.counts.park >= 3 },
-    { id: 'school', label: 'Build a school', reward: 100, done: false, check: (s) => s.counts.school >= 1 },
-    { id: 'power', label: 'Build a power plant ⚡', reward: 120, done: false, check: (s) => s.counts.power >= 1 },
-    { id: 'water', label: 'Build a water plant 🚰', reward: 120, done: false, check: (s) => s.counts.water >= 1 },
-    { id: 'happy', label: 'Reach 85% happiness', reward: 150, done: false, check: (s) => s.happy >= 85 },
-    { id: 'city', label: 'Grow to a City', reward: 250, done: false, check: (s) => s.pop >= TIER_POP[3] },
-    { id: 'mall', label: 'Open a mall 🏬', reward: 160, done: false, check: (s) => s.counts.mall >= 1 },
-    { id: 'univ', label: 'Found a university 🎓', reward: 200, done: false, check: (s) => s.counts.university >= 1 },
-    { id: 'stadium', label: 'Build a stadium 🏟️', reward: 220, done: false, check: (s) => s.counts.stadium >= 1 },
-    { id: 'metro', label: 'Grow to a Metropolis', reward: 400, done: false, check: (s) => s.pop >= TIER_POP[4] },
-    { id: 'mega', label: 'Reach 2000 people', reward: 600, done: false, check: (s) => s.pop >= TIER_POP[5] },
-  ]);
-
-  const counts = (): Record<Cell, number> => {
-    const c: Record<Cell, number> = { '': 0, road: 0, res: 0, com: 0, ind: 0, park: 0, police: 0, fire: 0, hospital: 0, school: 0, farm: 0, power: 0, water: 0, mall: 0, university: 0, stadium: 0 };
-    for (const cell of gridRef.current) c[cell]++;
+  const allCounts = (): Counts => {
+    const c = emptyCounts();
+    for (const d of DISTRICTS) for (const cell of gridsRef.current[d.id]) c[cell]++;
     return c;
   };
 
-  const punch = () => { setZoom(1.08); window.setTimeout(() => setZoom(1), 240); };
+  const punch = () => { setZoom(1.08); window.setTimeout(() => setZoom(1), 220); };
 
-  // economy tick
+  // economy tick (aggregates every district)
   useEffect(() => {
     if (outcome) return;
     const id = window.setInterval(() => {
       if (pausedRef.current || storyRef.current) return;
-      const c = counts();
+      const c = allCounts();
       const jobs = c.com * 4 + c.ind * 6 + c.mall * 9 + c.university * 2;
       const services = c.police + c.fire + c.hospital + c.school + c.university;
-      // utilities + farms raise how many people the town can hold
       const utilityCap = c.power * 14 + c.water * 14 + c.farm * 6;
-      const housingCap = c.res * 8 + Math.min(c.res * 8, services * 6) + utilityCap;
+      const housingCap = c.res * PEOPLE_PER_HOME + Math.min(c.res * 8, services * 6) + utilityCap;
       const target = Math.min(housingCap, jobs * 6 + (c.res > 0 ? 8 : 0));
       const p = popRef.current;
-      const np = Math.round(p + Math.sign(target - p) * Math.min(12, Math.abs(target - p)));
-      // happiness (parks, stadiums, farms, services up — heavy industry down)
-      let hh = 66 + c.park * 4 + c.stadium * 10 + c.farm * 1 + services * 3 - c.ind * 2 - Math.max(0, np - housingCap) * 0.5;
+      const np = Math.round(p + Math.sign(target - p) * Math.min(14, Math.abs(target - p)));
+      let hh = 66 + c.park * 4 + c.stadium * 10 + c.farm + services * 3 - c.ind * 2 - Math.max(0, np - housingCap) * 0.5;
       hh = Math.max(0, Math.min(100, hh));
-      // income
-      const income = Math.round(c.com * 3 + c.ind * 5 + c.mall * 8 + c.farm * 1 + c.university * 3 + np * 0.6 - services * 4 - (c.power + c.water) * 2 - c.road * 0.2);
+      const income = Math.round(c.com * 3 + c.ind * 5 + c.mall * 8 + c.farm + c.university * 3 + np * 0.6 - services * 4 - (c.power + c.water) * 2 - c.road * 0.2);
       setPop(np);
       setHappy(Math.round(hh));
       setMoney((m) => Math.max(0, m + income));
-      // tier up
       let tnew = 0;
       for (let i = TIER_POP.length - 1; i >= 0; i--) if (np >= TIER_POP[i]) { tnew = i; break; }
       setTier((prev) => {
-        if (tnew > prev) { sfx.levelUp(); haptic(HAPTIC.levelUp); punch(); setMsg(`🎉 Your town grew into a ${TIERS[tnew]}!`); setMaxTier(Math.max(maxTier, tnew)); }
+        if (tnew > prev) { sfx.levelUp(); haptic(HAPTIC.levelUp); punch(); setMsg(`🎉 Your city grew into a ${TIERS[tnew]}!`); setMaxTier(Math.max(maxTier, tnew)); }
         return Math.max(prev, tnew);
       });
-      // missions
-      setMissions((ms) => ms.map((m) => {
-        if (!m.done && m.check({ money: moneyRef.current, pop: np, happy: hh, counts: c })) {
-          setMoney((mm) => mm + m.reward);
-          sfx.coin(); haptic(HAPTIC.pickup);
-          setMsg(`✅ Mission: ${m.label} (+💰${m.reward})`);
-          return { ...m, done: true };
-        }
-        return m;
-      }));
     }, 2500);
     return () => window.clearInterval(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [outcome]);
 
-  // Force a fresh math story / mathematician every 3 minutes of play.
+  // forced fresh math story every 3 minutes
   useEffect(() => {
     if (outcome) return;
     const id = window.setInterval(() => {
       if (pausedRef.current || storyRef.current || document.hidden) return;
       playSecRef.current += 1;
-      if (playSecRef.current >= STORY_EVERY) {
-        playSecRef.current = 0;
-        storyRef.current = true;
-        setStory(true);
-      }
+      if (playSecRef.current >= STORY_EVERY) { playSecRef.current = 0; storyRef.current = true; setStory(true); }
     }, 1000);
     return () => window.clearInterval(id);
   }, [outcome, pausedRef]);
 
   const build = (i: number) => {
     if (outcome || pausedRef.current || storyRef.current) return;
-    const t = TOOLS.find((x) => x.key === tool)!;
-    setGrid((g) => {
-      const cur = g[i];
+    setGrids((gs) => {
+      const g = gs[cur];
+      const c = g[i];
       if (tool === 'bulldoze') {
-        if (!cur) return g;
-        if (moneyRef.current < 2) { setMsg('Need 💰2 to clear.'); return g; }
+        if (!c) return gs;
+        if (moneyRef.current < 2) { setMsg('Need 💰2 to clear.'); return gs; }
         setMoney((m) => m - 2);
-        const ng = [...g]; ng[i] = ''; return ng;
+        const ng = [...g]; ng[i] = ''; return { ...gs, [cur]: ng };
       }
-      if (cur === tool) return g; // already that
-      if (moneyRef.current < t.cost) { setMsg(`Need 💰${t.cost} for ${t.label}.`); sfx.hurt(); return g; }
-      setMoney((m) => m - t.cost);
+      if (c === tool) return gs;
+      const cost = COST[tool];
+      if (moneyRef.current < cost) { setMsg(`Need 💰${cost} for that.`); sfx.hurt(); return gs; }
+      setMoney((m) => m - cost);
+      spentRef.current += cost;
       sfx.build(); haptic(HAPTIC.tap);
-      const ng = [...g]; ng[i] = tool as Cell; return ng;
+      const ng = [...g]; ng[i] = tool as Cell; return { ...gs, [cur]: ng };
     });
   };
 
+  const go = (dir: Dir) => {
+    const next = NEIGHBORS[cur]?.[dir];
+    if (next) { setCur(next); sfx.step(); }
+  };
+
+  // ---- Report card math ----
+  const buildReport = (): Report => {
+    const c = allCounts();
+    const homes = c.res;
+    const capacity = homes * PEOPLE_PER_HOME;
+    const need = (per: number) => Math.max(homes > 0 ? 1 : 0, Math.ceil(homes / per));
+    const cover = (have: number, per: number) => (homes === 0 ? 100 : Math.min(100, Math.round((have / need(per)) * 100)));
+    const rows: ReportRow[] = [
+      { label: '⚡ Power', math: `${homes} homes ÷ 4 = ${need(4)} needed · have ${c.power}`, pct: cover(c.power, 4) },
+      { label: '🚰 Water', math: `${homes} homes ÷ 5 = ${need(5)} needed · have ${c.water}`, pct: cover(c.water, 5) },
+      { label: '🌳 Green space', math: `${homes} homes ÷ 6 = ${need(6)} parks · have ${c.park}`, pct: cover(c.park, 6) },
+      { label: '🏫 Schools', math: `${homes} homes ÷ 8 = ${need(8)} needed · have ${c.school}`, pct: cover(c.school, 8) },
+      { label: '🚓🚒🏥 Safety', math: `${homes} homes ÷ 6 = ${need(6)} needed · have ${c.police + c.fire + c.hospital}`, pct: cover(c.police + c.fire + c.hospital, 6) },
+      { label: '😀 Happiness', math: `${happy} out of 100 = ${happy}%`, pct: happy },
+    ];
+    const cityValue = pop + happy + c.com * 3 + c.mall * 5;
+    const spent = Math.max(1, spentRef.current);
+    const effRate = cityValue / spent; // value per coin
+    const effPct = Math.min(100, Math.round(effRate * 140));
+    rows.push({ label: '💰 Budget efficiency', math: `${cityValue} value ÷ ${spent} coins ≈ ${effRate.toFixed(2)} value/coin`, pct: effPct });
+    const resilience = Math.round((cover(c.power, 4) + cover(c.water, 5) + cover(c.police + c.fire + c.hospital, 6)) / 3);
+    const overall = Math.round(rows.reduce((s, r) => s + r.pct, 0) / rows.length);
+    return { rows, overall, population: pop, capacity, resilience };
+  };
+
+  const openReport = () => { setReport(buildReport()); sfx.powerup(); };
+
   const collectTaxes = () => {
     if (tax) return;
-    const c = counts();
+    const c = allCounts();
     const reward = 30 + c.com * 5 + Math.floor(pop * 0.5);
     const lvl = useProgress.getState().arcadeLevels[arcadeUnit] ?? 1;
     setTax({ c: makeAdaptive(arcadeUnit, lvl, 'medium'), reward });
@@ -211,18 +247,18 @@ export function PocketTown() {
     setTax(null);
   };
 
-  const finish = () => {
-    addArcadePoints(pop * 2 + money);
-    const xp = Math.max(2, Math.min(20, tier * 4 + Math.floor(pop / 50)));
-    sfx.win(); haptic(HAPTIC.win);
+  const endGame = () => {
+    const xp = Math.max(2, Math.min(20, tier * 3 + Math.floor(pop / 200)));
+    addArcadePoints(pop + tier * 50);
     setOutcome(recordArcadePlay('town', xp));
   };
 
   const reset = () => {
-    setGrid(Array(N * N).fill('')); setMoney(220); setPop(0); setHappy(70); setTier(0);
-    setMissions((ms) => ms.map((m) => ({ ...m, done: false })));
-    setMsg('Lay roads, then zone homes & shops next to them!');
-    setStory(false); storyRef.current = false; playSecRef.current = 0;
+    setGrids(freshGrids());
+    setCur('downtown'); setTool('road'); setMoney(340); setPop(0); setHappy(70); setTier(0);
+    setTax(null); setTaxInput(''); setReport(null); setMapOpen(false);
+    spentRef.current = 0; playSecRef.current = 0; storyRef.current = false;
+    setMsg('Build roads, then homes & shops. Use the arrows to visit other neighborhoods!');
     setOutcome(null);
   };
 
@@ -230,45 +266,52 @@ export function PocketTown() {
     return (
       <div>
         <ArcadeHeader title="Pocket Town" emoji="🏙️" />
-        <ArcadeEndCard
-          gameId="town"
-          outcome={outcome}
-          win={tier >= 3}
-          scoreLine={`${TIERS[tier]} · 👥 ${pop} · 💰 ${money}`}
-          onReplay={reset}
-        />
+        <ArcadeEndCard gameId="town" outcome={outcome} win={tier >= 3} scoreLine={`${TIERS[tier]} · 👥 ${pop} · 💰 ${money}`} onReplay={reset} />
       </div>
     );
   }
 
-  const nextPop = TIER_POP[Math.min(TIER_POP.length - 1, tier + 1)];
+  const district = DISTRICTS.find((d) => d.id === cur)!;
+  const nbr = NEIGHBORS[cur] ?? {};
+  const nextPop = TIER_POP[Math.min(tier + 1, TIER_POP.length - 1)];
   const tierPct = tier >= TIERS.length - 1 ? 100 : Math.min(100, Math.round((pop / nextPop) * 100));
 
   return (
     <div>
       <ArcadeHeader title="Pocket Town" emoji="🏙️" />
-      <div className="flex justify-between items-center mb-1 max-w-md mx-auto px-1 text-xs font-display font-extrabold">
-        <span className="text-amber-600">💰 {money}</span>
-        <span className="text-sky-700">👥 {pop}</span>
-        <span className="text-emerald-600">😊 {happy}%</span>
+
+      <div className="flex justify-between items-center mb-1 max-w-md mx-auto px-1 text-sm font-display font-extrabold">
         <span className="text-indigo-600">🏛️ {TIERS[tier]}</span>
+        <span className="text-slate-700">👥 {pop.toLocaleString()}</span>
+        <span className="text-amber-600">💰 {money}</span>
+        <span className="text-rose-500">😀 {happy}%</span>
       </div>
-      <div className="max-w-md mx-auto mb-1 h-1.5 rounded-full bg-slate-200 overflow-hidden">
-        <div className="h-full bg-indigo-500" style={{ width: `${tierPct}%` }} />
+      <div className="max-w-md mx-auto mb-2 h-1.5 rounded-full bg-slate-200 overflow-hidden">
+        <div className="h-full bg-indigo-500 transition-all" style={{ width: `${tierPct}%` }} />
+      </div>
+
+      {/* neighborhood nav */}
+      <div className="max-w-md mx-auto mb-2 flex items-center justify-between gap-2">
+        <button type="button" onClick={() => setMapOpen(true)} className="rounded-2xl bg-white border-2 border-slate-200 px-3 py-1.5 font-display font-extrabold text-sm">🗺️ Map</button>
+        <div className="font-display font-extrabold text-slate-800">{district.emoji} {district.name}</div>
+        <div className="grid grid-cols-3 grid-rows-2 gap-0.5 w-24">
+          <span /><CompassBtn dir="N" on={!!nbr.N} go={go} /><span />
+          <CompassBtn dir="W" on={!!nbr.W} go={go} /><CompassBtn dir="E" on={!!nbr.E} go={go} /><span className="hidden" />
+          <span /><CompassBtn dir="S" on={!!nbr.S} go={go} /><span />
+        </div>
       </div>
 
       <GameStage theme="candy" className="max-w-md mx-auto p-2">
         <div
-          className="grid mx-auto transition-transform duration-200"
-          style={{ gridTemplateColumns: `repeat(${N}, 1fr)`, gap: 2, width: '100%', transform: `scale(${zoom})` }}
+          className="grid gap-0.5 mx-auto transition-transform"
+          style={{ gridTemplateColumns: `repeat(${ND}, minmax(0, 1fr))`, transform: `scale(${zoom})`, maxWidth: 360 }}
         >
-          {grid.map((cell, i) => (
+          {grids[cur].map((cell, i) => (
             <button
               key={i}
               type="button"
               onClick={() => build(i)}
-              className="aspect-square rounded-md flex items-center justify-center bg-white/80 active:scale-95 transition-transform"
-              style={{ fontSize: 'min(5vw, 22px)' }}
+              className="aspect-square rounded-md bg-white/80 border border-emerald-200 flex items-center justify-center text-lg active:scale-95"
             >
               {EMOJI[cell]}
             </button>
@@ -276,75 +319,125 @@ export function PocketTown() {
         </div>
       </GameStage>
 
-      <div className="max-w-md mx-auto mt-2 text-center text-[11px] font-display font-bold text-slate-600 min-h-4">{msg}</div>
+      <div className="max-w-md mx-auto mt-2 rounded-xl bg-white/85 px-3 py-1.5 text-center text-xs font-display font-bold text-slate-700 min-h-8 flex items-center justify-center">
+        {msg}
+      </div>
 
-      {/* build palette */}
-      <div className="max-w-md mx-auto mt-2 grid grid-cols-5 gap-1.5">
+      {/* tool palette */}
+      <div className="max-w-md mx-auto mt-2 grid grid-cols-8 gap-1">
         {TOOLS.map((t) => (
           <button
             key={t.key}
             type="button"
             onClick={() => setTool(t.key)}
-            aria-pressed={tool === t.key}
-            className={`rounded-xl border-2 py-1.5 text-center ${tool === t.key ? 'border-indigo-500 bg-indigo-50' : 'border-slate-200 bg-white'}`}
+            className={`rounded-lg p-1 text-center border-2 ${tool === t.key ? 'border-indigo-500 bg-indigo-50' : 'border-slate-200 bg-white'}`}
           >
             <div className="text-lg leading-none">{t.emoji}</div>
-            <div className="text-[9px] font-display font-extrabold text-slate-600">{t.label}</div>
-            <div className="text-[9px] font-display font-bold text-amber-600">{t.key === 'bulldoze' ? '💰2' : `💰${t.cost}`}</div>
+            <div className="text-[7px] font-display font-bold text-slate-500">💰{t.cost}</div>
           </button>
         ))}
       </div>
 
-      <div className="max-w-md mx-auto mt-3 flex gap-2">
-        <button type="button" onClick={collectTaxes} className="flex-1 min-h-11 rounded-2xl bg-emerald-500 text-white font-display font-extrabold">
-          💸 Collect taxes
-        </button>
-        <button type="button" onClick={finish} className="min-h-11 px-4 rounded-2xl bg-slate-800 text-white font-display font-extrabold">
-          Finish 🏁
-        </button>
+      {/* actions */}
+      <div className="max-w-md mx-auto mt-2 grid grid-cols-2 gap-2">
+        <button type="button" onClick={collectTaxes} className="min-h-11 rounded-2xl bg-amber-500 text-white font-display font-extrabold active:translate-y-0.5">💸 Collect taxes</button>
+        <button type="button" onClick={openReport} className="min-h-11 rounded-2xl bg-indigo-600 text-white font-display font-extrabold active:translate-y-0.5">📋 Report card</button>
       </div>
+      <button type="button" onClick={endGame} className="max-w-md mx-auto mt-2 block w-full min-h-10 rounded-2xl bg-slate-200 text-slate-700 font-display font-bold">Finish & score</button>
 
-      {/* missions */}
-      <div className="max-w-md mx-auto mt-3">
-        <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-1">Missions</div>
-        <div className="space-y-1">
-          {missions.map((m) => (
-            <div key={m.id} className={`flex justify-between rounded-lg px-3 py-1.5 text-xs font-display font-bold ${m.done ? 'bg-emerald-50 text-emerald-700' : 'bg-white border border-slate-200 text-slate-600'}`}>
-              <span>{m.done ? '✅' : '⬜'} {m.label}</span>
-              <span className="text-amber-600">💰{m.reward}</span>
+      {/* floating district map */}
+      {mapOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4" onClick={() => setMapOpen(false)}>
+          <div className="w-full max-w-xs rounded-3xl bg-white p-5 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="font-display font-extrabold text-slate-900 text-center">🗺️ Jump to a neighborhood</div>
+            <div className="mt-3 grid grid-cols-1 gap-2">
+              {DISTRICTS.map((d) => (
+                <button key={d.id} type="button" onClick={() => { setCur(d.id); setMapOpen(false); sfx.step(); }} className={`min-h-11 rounded-2xl border-2 font-display font-extrabold ${d.id === cur ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-slate-200 text-slate-700'}`}>
+                  {d.emoji} {d.name}
+                </button>
+              ))}
             </div>
-          ))}
+            <button type="button" onClick={() => setMapOpen(false)} className="mt-3 w-full min-h-10 rounded-2xl bg-slate-200 text-slate-700 font-display font-bold">Close</button>
+          </div>
         </div>
-      </div>
+      )}
 
+      {/* report card */}
+      {report && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4 overflow-y-auto" onClick={() => setReport(null)}>
+          <div className="w-full max-w-sm rounded-3xl bg-white p-5 shadow-2xl my-6" onClick={(e) => e.stopPropagation()}>
+            <div className="text-center">
+              <div className="text-xs font-display font-extrabold uppercase tracking-widest text-indigo-500">🏛️ City Inspector</div>
+              <div className={`font-display font-extrabold text-5xl ${GRADE_COLOR[grade(report.overall)]}`}>{grade(report.overall)}</div>
+              <div className="text-sm font-display font-bold text-slate-500">Overall {report.overall}%</div>
+            </div>
+            <div className="mt-2 rounded-2xl bg-indigo-50 border-2 border-indigo-200 p-2 text-center text-xs font-display font-bold text-indigo-800">
+              Population: {report.population.toLocaleString()} · Housing capacity = homes × {PEOPLE_PER_HOME} = {report.capacity.toLocaleString()}
+            </div>
+            <div className="mt-3 space-y-2">
+              {report.rows.map((r) => (
+                <div key={r.label}>
+                  <div className="flex justify-between text-[11px] font-display font-bold text-slate-700">
+                    <span>{r.label}</span>
+                    <span className={`tabular-nums ${GRADE_COLOR[grade(r.pct)]}`}>{grade(r.pct)} · {r.pct}%</span>
+                  </div>
+                  <div className="h-2 rounded-full bg-slate-200 overflow-hidden">
+                    <div className="h-full bg-indigo-500" style={{ width: `${r.pct}%` }} />
+                  </div>
+                  <div className="text-[10px] font-display font-bold text-slate-400">{r.math}</div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-3 rounded-2xl bg-amber-50 border-2 border-amber-200 p-3 text-center">
+              <div className="font-display font-extrabold text-amber-800">🌪️ Disaster resilience: {report.resilience}%</div>
+              <div className="text-[11px] font-display font-bold text-amber-700 mt-0.5">
+                {report.resilience >= 80 ? 'Your city can withstand a disaster! 🛡️' : report.resilience >= 50 ? 'Risky — add more power, water & safety!' : 'Danger! Build utilities & services to survive.'}
+              </div>
+            </div>
+            <button type="button" onClick={() => setReport(null)} className="mt-4 w-full min-h-11 rounded-2xl bg-emerald-500 text-white font-display font-extrabold">Keep building ▶</button>
+          </div>
+        </div>
+      )}
+
+      {/* tax math modal */}
       {tax && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
           <div className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl">
-            <div className="text-3xl">💸</div>
-            <div className="mt-1 font-display font-extrabold text-slate-900">Tax time! Solve for double:</div>
+            <div className="font-display font-extrabold text-slate-900">💸 Solve to collect double taxes!</div>
             <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-xl font-display font-extrabold leading-snug break-words">{tax.c.prompt}</div>
-            <input
-              autoFocus
-              inputMode="numeric"
-              value={taxInput}
-              onChange={(e) => setTaxInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && submitTax()}
-              className="mt-3 w-full rounded-xl border-2 border-slate-200 px-3 py-2 text-center text-xl font-display font-extrabold focus:border-emerald-500 focus:outline-none"
-              placeholder="?"
-            />
-            <button type="button" onClick={submitTax} className="mt-3 w-full min-h-11 rounded-2xl bg-emerald-500 text-white font-display font-extrabold">
-              Collect ✓
-            </button>
+            <div className="mt-2 h-11 rounded-xl border-2 border-slate-200 flex items-center justify-center text-xl font-display font-extrabold tabular-nums">{taxInput || <span className="text-slate-300">?</span>}</div>
+            <div className="mt-2 grid grid-cols-3 gap-1.5">
+              {['1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '0', 'del'].map((k) => (
+                <button key={k} type="button" onClick={() => setTaxInput((v) => (k === 'del' ? v.slice(0, -1) : k === '-' ? (v.startsWith('-') ? v.slice(1) : '-' + v) : v.length < 6 ? v + k : v))} className="min-h-10 rounded-lg bg-slate-100 hover:bg-slate-200 font-display font-extrabold text-slate-800 active:translate-y-0.5">
+                  {k === 'del' ? '⌫' : k}
+                </button>
+              ))}
+            </div>
+            <div className="mt-2 grid grid-cols-2 gap-2">
+              <button type="button" onClick={() => setTax(null)} className="min-h-11 rounded-2xl bg-slate-200 text-slate-700 font-display font-extrabold">Skip</button>
+              <button type="button" onClick={submitTax} disabled={!taxInput.trim()} className="min-h-11 rounded-2xl bg-emerald-500 disabled:bg-slate-300 text-white font-display font-extrabold">Collect ✓</button>
+            </div>
           </div>
         </div>
       )}
 
       {story && (
-        <MathBreak
-          minSeconds={STORY_MIN_READ}
-          onDone={() => { setStory(false); storyRef.current = false; playSecRef.current = 0; }}
-        />
+        <MathBreak minSeconds={STORY_MIN_READ} onDone={() => { setStory(false); storyRef.current = false; playSecRef.current = 0; }} />
       )}
     </div>
+  );
+}
+
+function CompassBtn({ dir, on, go }: { dir: Dir; on: boolean; go: (d: Dir) => void }) {
+  const arrow = dir === 'N' ? '▲' : dir === 'S' ? '▼' : dir === 'E' ? '▶' : '◀';
+  return (
+    <button
+      type="button"
+      disabled={!on}
+      onClick={() => go(dir)}
+      className={`min-h-7 rounded-md text-xs font-display font-extrabold ${on ? 'bg-indigo-500 text-white active:translate-y-0.5' : 'bg-slate-100 text-slate-300'}`}
+    >
+      {arrow}
+    </button>
   );
 }
