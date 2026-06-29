@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useProgress, ARCADE_UNITS, ARCADE_UNIT_LABELS } from '../../state/progress';
 import { ARCADE_GAMES } from './shared';
+import { Mascot, type MascotKind } from './Mascots';
 
-const UNIT_EMOJI: Record<string, string> = { '6.RP': '⚖️', '6.NS': '🔢', '6.EE': '🧮', mixed: '🎲' };
+const UNIT_MASCOT: Record<string, MascotKind> = { '6.RP': 'frog', '6.NS': 'robot', '6.EE': 'dragon', mixed: 'pet' };
 
 function todayISO(): string {
   const d = new Date();
@@ -72,14 +73,15 @@ export function ArcadeHub() {
                 type="button"
                 onClick={() => setArcadeUnit(u)}
                 aria-pressed={sel}
-                className={`rounded-2xl border-2 px-3 py-2 text-left ${sel ? 'border-indigo-500 bg-indigo-50' : 'border-slate-200 bg-white hover:border-indigo-300'}`}
+                className={`rounded-2xl border-2 px-3 py-2 text-left flex items-center gap-2 ${sel ? 'border-indigo-500 bg-indigo-50' : 'border-slate-200 bg-white hover:border-indigo-300'}`}
               >
-                <div className="font-display font-extrabold text-slate-800 text-sm">
-                  {UNIT_EMOJI[u]} {ARCADE_UNIT_LABELS[u]}
-                </div>
-                <div className="text-[11px] font-display font-bold text-slate-500">
-                  Level {arcadeLevels[u]}/5 · {arcadeStreak[u]}/5 to master
-                </div>
+                <Mascot kind={UNIT_MASCOT[u]} size={34} title={ARCADE_UNIT_LABELS[u]} />
+                <span>
+                  <span className="block font-display font-extrabold text-slate-800 text-sm leading-tight">{ARCADE_UNIT_LABELS[u]}</span>
+                  <span className="block text-[11px] font-display font-bold text-slate-500">
+                    Level {arcadeLevels[u]}/5 · {arcadeStreak[u]}/5 ⭐
+                  </span>
+                </span>
               </button>
             );
           })}

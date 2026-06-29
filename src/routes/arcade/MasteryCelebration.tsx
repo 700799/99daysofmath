@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useProgress, ARCADE_UNIT_LABELS, type ArcadeUnit } from '../../state/progress';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
+import { Mascot, type MascotKind } from './Mascots';
 
 // A full celebratory cinematic that fires on every level-up (and reward): the
 // unit's champion — a mighty dragon 🐉, robot 🤖, frog 🐸, or pocket-pet 🐣 —
@@ -10,11 +11,11 @@ import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 // medal + trophy. More armor (higher level) = survives more and becomes the champ.
 // Characters are original (generic emoji, not trademarked mascots).
 
-const CHAMPIONS: Record<ArcadeUnit, { emoji: string; name: string }> = {
-  '6.RP': { emoji: '🐸', name: 'Hopper' },
-  '6.NS': { emoji: '🤖', name: 'Mech' },
-  '6.EE': { emoji: '🐉', name: 'Drake' },
-  mixed: { emoji: '🐣', name: 'Pip' },
+const CHAMPIONS: Record<ArcadeUnit, { kind: MascotKind; name: string; word: string }> = {
+  '6.RP': { kind: 'frog', name: 'Hopper', word: 'frog' },
+  '6.NS': { kind: 'robot', name: 'Mech', word: 'robot' },
+  '6.EE': { kind: 'dragon', name: 'Drake', word: 'dragon' },
+  mixed: { kind: 'pet', name: 'Pip', word: 'chick' },
 };
 // gear earned at levels 2, 3, 4, 5
 const GEAR = ['🎀', '🛡️', '⚔️', '👑'];
@@ -148,9 +149,9 @@ export function MasteryCelebration() {
                     : { y: [0, -6, 0] }
                 }
                 transition={phase === 'win' ? { duration: 0.9, delay: 0.15 } : { duration: 0.7, repeat: Infinity }}
-                className="absolute inset-0 flex items-center justify-center text-7xl drop-shadow-[0_3px_4px_rgba(0,0,0,0.35)]"
+                className="absolute inset-0 flex items-center justify-center drop-shadow-[0_3px_4px_rgba(0,0,0,0.35)]"
               >
-                {champ.emoji}
+                <Mascot kind={champ.kind} size={104} />
               </motion.div>
 
               {/* missiles fly in + explode (barrage phase) */}
@@ -191,7 +192,7 @@ export function MasteryCelebration() {
 
             {cur.kind === 'levelup' && newestIdx >= 0 && newestIdx < GEAR_NAME.length && (
               <div className="mt-1 text-sm font-display font-bold text-slate-600">
-                {champ.name} the {champ.emoji === '🐉' ? 'dragon' : champ.emoji === '🤖' ? 'robot' : champ.emoji === '🐸' ? 'frog' : 'pet'} earned {GEAR_NAME[newestIdx]}!
+                {champ.name} the {champ.word} earned {GEAR_NAME[newestIdx]}!
               </div>
             )}
             <div className="mt-1 text-xs font-display font-bold text-slate-500">
