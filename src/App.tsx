@@ -24,40 +24,27 @@ const ConnectFour = lazy(() => import('./routes/arcade/ConnectFour').then((m) =>
 const Wheel = lazy(() => import('./routes/arcade/Wheel').then((m) => ({ default: m.Wheel })));
 const MemoryMatch = lazy(() => import('./routes/arcade/MemoryMatch').then((m) => ({ default: m.MemoryMatch })));
 const Shootout = lazy(() => import('./routes/arcade/Shootout').then((m) => ({ default: m.Shootout })));
-const ZombieZapper = lazy(() => import('./routes/arcade/ZombieZapper').then((m) => ({ default: m.ZombieZapper })));
-const Fishing = lazy(() => import('./routes/arcade/Fishing').then((m) => ({ default: m.Fishing })));
 const MathRunner = lazy(() => import('./routes/arcade/MathRunner').then((m) => ({ default: m.MathRunner })));
 const Platformer = lazy(() => import('./routes/arcade/Platformer').then((m) => ({ default: m.Platformer })));
 const RaceCar = lazy(() => import('./routes/arcade/RaceCar').then((m) => ({ default: m.RaceCar })));
-const HungryHippo = lazy(() => import('./routes/arcade/HungryHippo').then((m) => ({ default: m.HungryHippo })));
-const LeapFrog = lazy(() => import('./routes/arcade/LeapFrog').then((m) => ({ default: m.LeapFrog })));
 const GemDigger = lazy(() => import('./routes/arcade/GemDigger').then((m) => ({ default: m.GemDigger })));
 const Twenty48 = lazy(() => import('./routes/arcade/Twenty48').then((m) => ({ default: m.Twenty48 })));
 const Snake = lazy(() => import('./routes/arcade/Snake').then((m) => ({ default: m.Snake })));
 const BrickBreaker = lazy(() => import('./routes/arcade/BrickBreaker').then((m) => ({ default: m.BrickBreaker })));
 const Sudoku = lazy(() => import('./routes/arcade/Sudoku').then((m) => ({ default: m.Sudoku })));
 const Tetris = lazy(() => import('./routes/arcade/Tetris').then((m) => ({ default: m.Tetris })));
-const BubblePop = lazy(() => import('./routes/arcade/BubblePop').then((m) => ({ default: m.BubblePop })));
 const BobaShop = lazy(() => import('./routes/arcade/BobaShop').then((m) => ({ default: m.BobaShop })));
 const SushiMatch = lazy(() => import('./routes/arcade/SushiMatch').then((m) => ({ default: m.SushiMatch })));
-const TaikoTap = lazy(() => import('./routes/arcade/TaikoTap').then((m) => ({ default: m.TaikoTap })));
-const Tangram = lazy(() => import('./routes/arcade/Tangram').then((m) => ({ default: m.Tangram })));
 const TicTacToe = lazy(() => import('./routes/arcade/TicTacToe').then((m) => ({ default: m.TicTacToe })));
 const KpopDressMatch = lazy(() => import('./routes/arcade/KpopDressMatch').then((m) => ({ default: m.KpopDressMatch })));
 const ForestSurvival = lazy(() => import('./routes/arcade/ForestSurvival').then((m) => ({ default: m.ForestSurvival })));
 const FruitSlice = lazy(() => import('./routes/arcade/FruitSlice').then((m) => ({ default: m.FruitSlice })));
-const MochiSurvivors = lazy(() => import('./routes/arcade/MochiSurvivors').then((m) => ({ default: m.MochiSurvivors })));
 const SumoMath = lazy(() => import('./routes/arcade/SumoMath').then((m) => ({ default: m.SumoMath })));
 const MonsterRogue = lazy(() => import('./routes/arcade/MonsterRogue').then((m) => ({ default: m.MonsterRogue })));
-const ShinobiMatch = lazy(() => import('./routes/arcade/ShinobiMatch').then((m) => ({ default: m.ShinobiMatch })));
 const Mode7Racer = lazy(() => import('./routes/arcade/Mode7Racer').then((m) => ({ default: m.Mode7Racer })));
-const JungleBlitz = lazy(() => import('./routes/arcade/JungleBlitz').then((m) => ({ default: m.JungleBlitz })));
-const Asteroids = lazy(() => import('./routes/arcade/Asteroids').then((m) => ({ default: m.Asteroids })));
 const Wordle = lazy(() => import('./routes/arcade/Wordle').then((m) => ({ default: m.Wordle })));
 const HeroRescue = lazy(() => import('./routes/arcade/HeroRescue').then((m) => ({ default: m.HeroRescue })));
 const PocketTown = lazy(() => import('./routes/arcade/PocketTown').then((m) => ({ default: m.PocketTown })));
-const RogueDelve = lazy(() => import('./routes/arcade/RogueDelve').then((m) => ({ default: m.RogueDelve })));
-const SpaceBlaster = lazy(() => import('./routes/arcade/SpaceBlaster').then((m) => ({ default: m.SpaceBlaster })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -98,40 +85,27 @@ export default function App() {
           <Route path="/arcade/wheel" element={<ArcadeGate title="Prize Wheel"><Wheel /></ArcadeGate>} />
           <Route path="/arcade/memory" element={<ArcadeGate title="Memory Match"><MemoryMatch /></ArcadeGate>} />
           <Route path="/arcade/shootout" element={<ArcadeGate title="Shootout"><Shootout /></ArcadeGate>} />
-          <Route path="/arcade/zapper" element={<ArcadeGate title="Zombie Zapper"><ZombieZapper /></ArcadeGate>} />
-          <Route path="/arcade/fishing" element={<ArcadeGate title="Fishing"><Fishing /></ArcadeGate>} />
           <Route path="/arcade/runner" element={<ArcadeGate title="Math Runner"><MathRunner /></ArcadeGate>} />
           <Route path="/arcade/platformer" element={<ArcadeGate title="Platformer"><Platformer /></ArcadeGate>} />
           <Route path="/arcade/racer" element={<ArcadeGate title="Race Car"><RaceCar /></ArcadeGate>} />
-          <Route path="/arcade/hippo" element={<ArcadeGate title="Hungry Hippo"><HungryHippo /></ArcadeGate>} />
-          <Route path="/arcade/frogger" element={<ArcadeGate title="Leap Frog"><LeapFrog /></ArcadeGate>} />
           <Route path="/arcade/digger" element={<ArcadeGate title="Gem Digger"><GemDigger /></ArcadeGate>} />
           <Route path="/arcade/2048" element={<ArcadeGate title="2048"><Twenty48 /></ArcadeGate>} />
           <Route path="/arcade/snake" element={<ArcadeGate title="Math Snake"><Snake /></ArcadeGate>} />
           <Route path="/arcade/bricks" element={<ArcadeGate title="Brick Breaker"><BrickBreaker /></ArcadeGate>} />
           <Route path="/arcade/sudoku" element={<ArcadeGate title="Sudoku"><Sudoku /></ArcadeGate>} />
           <Route path="/arcade/tetris" element={<ArcadeGate title="Alien Tetris"><Tetris /></ArcadeGate>} />
-          <Route path="/arcade/bubbles" element={<ArcadeGate title="Bubble Pop"><BubblePop /></ArcadeGate>} />
           <Route path="/arcade/boba" element={<ArcadeGate title="Boba Shop"><BobaShop /></ArcadeGate>} />
           <Route path="/arcade/sushi" element={<ArcadeGate title="Sushi Match"><SushiMatch /></ArcadeGate>} />
-          <Route path="/arcade/taiko" element={<ArcadeGate title="Taiko Tap"><TaikoTap /></ArcadeGate>} />
-          <Route path="/arcade/tangram" element={<ArcadeGate title="Tangram"><Tangram /></ArcadeGate>} />
           <Route path="/arcade/tictactoe" element={<ArcadeGate title="Tic Tac Toe"><TicTacToe /></ArcadeGate>} />
           <Route path="/arcade/kpop" element={<ArcadeGate title="K-Pop Dress-Up"><KpopDressMatch /></ArcadeGate>} />
           <Route path="/arcade/survival" element={<ArcadeGate title="Forest Survival"><ForestSurvival /></ArcadeGate>} />
           <Route path="/arcade/fruit" element={<ArcadeGate title="Fruit Slice"><FruitSlice /></ArcadeGate>} />
-          <Route path="/arcade/survivors" element={<ArcadeGate title="Mochi Survivors"><MochiSurvivors /></ArcadeGate>} />
           <Route path="/arcade/sumo" element={<ArcadeGate title="Sumo Math"><SumoMath /></ArcadeGate>} />
           <Route path="/arcade/monster" element={<ArcadeGate title="Monster Rogue"><MonsterRogue /></ArcadeGate>} />
-          <Route path="/arcade/shinobi" element={<ArcadeGate title="Shinobi Match"><ShinobiMatch /></ArcadeGate>} />
           <Route path="/arcade/racer2" element={<ArcadeGate title="Turbo Dash"><Mode7Racer /></ArcadeGate>} />
-          <Route path="/arcade/blitz" element={<ArcadeGate title="Jungle Blitz"><JungleBlitz /></ArcadeGate>} />
-          <Route path="/arcade/asteroids" element={<ArcadeGate title="Asteroids"><Asteroids /></ArcadeGate>} />
           <Route path="/arcade/wordle" element={<ArcadeGate title="Word Guess"><Wordle /></ArcadeGate>} />
           <Route path="/arcade/hero" element={<ArcadeGate title="Hero Rescue"><HeroRescue /></ArcadeGate>} />
           <Route path="/arcade/town" element={<ArcadeGate title="Pocket Town"><PocketTown /></ArcadeGate>} />
-          <Route path="/arcade/rogue" element={<ArcadeGate title="Rogue Dungeon"><RogueDelve /></ArcadeGate>} />
-          <Route path="/arcade/space" element={<ArcadeGate title="Space Blaster"><SpaceBlaster /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
