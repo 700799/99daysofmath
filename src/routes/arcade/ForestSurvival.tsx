@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { GameStage, useBurst, BurstLayer, useScorePops, ScorePopLayer } from './fx';
-import { makeChallenge, type Challenge } from './MidGameChallenge';
+import { makeChallengeFrom, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Forest Survival — an ultra-long, endless survival game where MATH powers every
@@ -61,7 +61,7 @@ export function ForestSurvival() {
       setLog('No wood to burn! Chop some first. 🪵');
       return;
     }
-    setPending({ action, challenge: makeChallenge(challengeLevel) });
+    setPending({ action, challenge: makeChallengeFrom(challengeLevel, ['fraction', 'exponent', 'ratio', 'word']) });
     setValue('');
     setWrong(false);
   };

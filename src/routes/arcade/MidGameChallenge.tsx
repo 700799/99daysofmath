@@ -85,6 +85,32 @@ function gWord(hard: boolean): Challenge {
   return { prompt: `There are ${a} packs of ${b} markers, plus ${c} loose markers. How many markers in all?`, answer: a * b + c };
 }
 
+function gFraction(hard: boolean): Challenge {
+  const r = Math.random();
+  if (r < 0.5) { const d = ri(2, hard ? 8 : 5); const m = ri(2, hard ? 9 : 6); return { prompt: `What is 1/${d} of ${d * m}?`, answer: m }; }
+  if (r < 0.8) { const d = ri(3, hard ? 8 : 5); const num = ri(2, d - 1); const k = ri(2, hard ? 6 : 4); return { prompt: `What is ${num}/${d} of ${d * k}?`, answer: num * k }; }
+  const d = ri(2, 5); const num = ri(1, d - 1); const k = ri(2, hard ? 6 : 4);
+  return { prompt: `Equivalent fraction:  ${num}/${d} = ?/${d * k}`, answer: num * k };
+}
+
+export type ChallengeKind = 'word' | 'exponent' | 'factor' | 'ratio' | 'fraction';
+const GENERATORS: Record<ChallengeKind, (hard: boolean) => Challenge> = {
+  word: gWord,
+  exponent: gExponent,
+  factor: gFactor,
+  ratio: gRatio,
+  fraction: gFraction,
+};
+
+/** Generate a challenge restricted to the given kinds, scaled by level (1–5).
+ *  Lets each game choose exactly which math types it shows. */
+export function makeChallengeFrom(level: number, kinds: ChallengeKind[]): Challenge {
+  const L = Math.max(1, Math.min(5, Math.round(level)));
+  const hard = L >= 4;
+  const list = kinds.length ? kinds : (['word', 'exponent', 'ratio'] as ChallengeKind[]);
+  return GENERATORS[list[ri(0, list.length - 1)]](hard);
+}
+
 /** Generate one challenge scaled by difficulty level (1–5). Never an easy
  *  one-digit add/subtract — always a word problem, exponent, factor, or ratio. */
 export function makeChallenge(level: number): Challenge {
