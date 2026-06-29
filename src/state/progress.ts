@@ -189,6 +189,8 @@ interface ProgressState {
   setArcadeUnit: (u: ArcadeUnit) => void;
   recordArcadeAnswer: (u: ArcadeUnit, correct: boolean) => { level: number; streak: number };
   resetArcadeMastery: () => void;
+  arcadeCelebrate: number; // transient pulse → fires the champion cinematic on a reward
+  celebrate: () => void;
   completeLesson: (key: string) => string[];
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
@@ -590,6 +592,8 @@ export const useProgress = create<ProgressState>()(
       ...v15Defaults,
       ...v16Defaults,
       ...v17Defaults,
+      arcadeCelebrate: 0,
+      celebrate: () => set((s) => ({ arcadeCelebrate: (s.arcadeCelebrate ?? 0) + 1 })),
       setArcadeUnit: (u) => set(() => ({ arcadeUnit: u })),
       recordArcadeAnswer: (u, correct) => {
         let result = { level: 1, streak: 0 };

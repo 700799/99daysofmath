@@ -44,6 +44,7 @@ function wedgePath(cx: number, cy: number, r: number, a0: number, a1: number): s
 
 export function Wheel() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
+  const celebrate = useProgress((s) => s.celebrate);
   const lastSpin = useProgress((s) => s.lastWheelSpinDate);
   const alreadySpun = lastSpin === todayISO();
 
@@ -68,6 +69,7 @@ export function Wheel() {
       setPrize(won);
       setOutcome(recordArcadePlay('wheel', won, { wheelSpin: true }));
       setSpinning(false);
+      celebrate(); // champion cinematic for the reward
     }, 3600);
   };
 
