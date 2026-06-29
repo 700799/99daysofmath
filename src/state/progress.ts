@@ -191,6 +191,15 @@ interface ProgressState {
   resetArcadeMastery: () => void;
   arcadeCelebrate: number; // transient pulse → fires the champion cinematic on a reward
   celebrate: () => void;
+  // Shop (v18): coins earned by playing, owned/equipped avatar cosmetics, unlocked premium games.
+  coins: number;
+  ownedCosmetics: string[];
+  equipped: { hat?: string; outfit?: string; pet?: string; bg?: string };
+  unlockedGames: string[];
+  addCoins: (n: number) => void;
+  buyCosmetic: (id: string, price: number) => boolean;
+  equipCosmetic: (slot: 'hat' | 'outfit' | 'pet' | 'bg', id: string | null) => void;
+  unlockGame: (id: string, price: number) => boolean;
   completeLesson: (key: string) => string[];
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
@@ -403,6 +412,12 @@ const v17Defaults = {
   arcadeStreak: { '6.RP': 0, '6.NS': 0, '6.EE': 0, mixed: 0 } as Record<ArcadeUnit, number>,
   arcadeMiss: { '6.RP': 0, '6.NS': 0, '6.EE': 0, mixed: 0 } as Record<ArcadeUnit, number>,
 };
+const v18Defaults = {
+  coins: 0,
+  ownedCosmetics: [] as string[],
+  equipped: {} as { hat?: string; outfit?: string; pet?: string; bg?: string },
+  unlockedGames: [] as string[],
+};
 const freshMastery = () => ({
   arcadeLevels: { '6.RP': 1, '6.NS': 1, '6.EE': 1, mixed: 1 } as Record<ArcadeUnit, number>,
   arcadeStreak: { '6.RP': 0, '6.NS': 0, '6.EE': 0, mixed: 0 } as Record<ArcadeUnit, number>,
@@ -565,6 +580,13 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       | undefined;
     if (cfg && cfg.challengeInterval === undefined) cfg.challengeInterval = 120;
   }
+  if (fromVersion < 18) {
+    // Shop: coins currency, owned/equipped cosmetics, unlocked premium games.
+    const stateAny = state as Record<string, unknown>;
+    for (const [k, v] of Object.entries(v18Defaults)) {
+      if (stateAny[k] === undefined) stateAny[k] = v;
+    }
+  }
   return state;
 }
 
@@ -592,6 +614,29 @@ export const useProgress = create<ProgressState>()(
       ...v15Defaults,
       ...v16Defaults,
       ...v17Defaults,
+      ...v18Defaults,
+      addCoins: (n) => set((s) => ({ coins: Math.max(0, (s.coins ?? 0) + n) })),
+      buyCosmetic: (id, price) => {
+        const s = get();
+        if ((s.ownedCosmetics ?? []).includes(id)) return true;
+        if ((s.coins ?? 0) < price) return false;
+        set({ coins: (s.coins ?? 0) - price, ownedCosmetics: [...(s.ownedCosmetics ?? []), id] });
+        return true;
+      },
+      equipCosmetic: (slot, id) =>
+        set((s) => {
+          const eq = { ...(s.equipped ?? {}) };
+          if (id == null) delete eq[slot];
+          else eq[slot] = id;
+          return { equipped: eq };
+        }),
+      unlockGame: (id, price) => {
+        const s = get();
+        if ((s.unlockedGames ?? []).includes(id)) return true;
+        if ((s.coins ?? 0) < price) return false;
+        set({ coins: (s.coins ?? 0) - price, unlockedGames: [...(s.unlockedGames ?? []), id] });
+        return true;
+      },
       arcadeCelebrate: 0,
       celebrate: () => set((s) => ({ arcadeCelebrate: (s.arcadeCelebrate ?? 0) + 1 })),
       setArcadeUnit: (u) => set(() => ({ arcadeUnit: u })),
@@ -836,6 +881,7 @@ export const useProgress = create<ProgressState>()(
         );
 
         set({
+          coins: (before.coins ?? 0) + totalAdd, // earn coins for the shop by playing/winning
           arcadeDaily: { date: today, played, varietyAwarded },
           arcadeTotals: {
             ...before.arcadeTotals,
@@ -1127,7 +1173,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 17,
+      version: 18,
       migrate: migrateProgress,
     },
   ),

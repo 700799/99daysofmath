@@ -23,6 +23,7 @@ export function Home() {
   const practiceDates = useProgress((s) => s.practiceDates);
   const xpByDate = useProgress((s) => s.xpByDate);
   const onboardingComplete = useProgress((s) => s.onboardingComplete);
+  const coins = useProgress((s) => s.coins);
   const markOnboardingDone = useProgress((s) => s.markOnboardingDone);
   const displayName = useDisplayName();
 
@@ -101,6 +102,21 @@ export function Home() {
           <div className="text-[10px] opacity-90 mt-0.5 line-clamp-1">Preferences</div>
         </Link>
       </div>
+
+      {/* Shop banner */}
+      <Link
+        to="/shop"
+        className="mb-4 flex items-center gap-3 rounded-3xl p-4 bg-gradient-to-br from-pink-500 to-fuchsia-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
+      >
+        <div className="text-3xl">🛍️</div>
+        <div className="flex-1 min-w-0">
+          <div className="font-display font-extrabold">Coin Shop</div>
+          <div className="text-xs opacity-90">Dress up your avatar & unlock games!</div>
+        </div>
+        <div className="rounded-full bg-white/25 px-3 py-1.5 font-display font-extrabold tabular-nums whitespace-nowrap">
+          🪙 {coins.toLocaleString()}
+        </div>
+      </Link>
 
       {/* Core Play Tiles */}
       <div className="grid grid-cols-3 gap-3 mb-6">
