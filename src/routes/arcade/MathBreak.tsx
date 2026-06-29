@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 // A short "math break" the parent can schedule during play: a quick fact about a
@@ -30,11 +30,27 @@ const FACTS: Break[] = [
   { emoji: '⚖️', title: 'Symmetry', body: 'Math describes symmetry — the balanced patterns in snowflakes, butterflies, and faces.' },
 ];
 
-export function MathBreak({ onDone }: { onDone: () => void }) {
-  const item = useMemo(() => {
-    const pool = Math.random() < 0.5 ? PEOPLE : FACTS;
-    return pool[Math.floor(Math.random() * pool.length)];
-  }, []);
+// Remember which breaks have been shown so a forced break is one they haven't
+// seen yet; once every break has been seen, the pool resets.
+const ALL_BREAKS: Break[] = [...PEOPLE, ...FACTS];
+const seenBreaks = new Set<string>();
+function pickUnseen(): Break {
+  let pool = ALL_BREAKS.filter((b) => !seenBreaks.has(b.title));
+  if (pool.length === 0) { seenBreaks.clear(); pool = ALL_BREAKS; }
+  const item = pool[Math.floor(Math.random() * pool.length)];
+  seenBreaks.add(item.title);
+  return item;
+}
+
+export function MathBreak({ onDone, minSeconds = 0 }: { onDone: () => void; minSeconds?: number }) {
+  const [item] = useState(pickUnseen);
+  const [left, setLeft] = useState(Math.max(0, Math.round(minSeconds)));
+  useEffect(() => {
+    if (left <= 0) return;
+    const id = window.setInterval(() => setLeft((l) => Math.max(0, l - 1)), 1000);
+    return () => window.clearInterval(id);
+  }, [left]);
+  const ready = left <= 0;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 backdrop-blur-sm p-4">
       <motion.div
@@ -52,9 +68,10 @@ export function MathBreak({ onDone }: { onDone: () => void }) {
         <button
           type="button"
           onClick={onDone}
-          className="mt-5 w-full min-h-12 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-display font-extrabold shadow active:translate-y-0.5"
+          disabled={!ready}
+          className="mt-5 w-full min-h-12 rounded-2xl bg-emerald-500 enabled:hover:bg-emerald-600 text-white font-display font-extrabold shadow enabled:active:translate-y-0.5 disabled:bg-slate-300"
         >
-          Keep playing ▶
+          {ready ? 'Keep playing ▶' : `Read… ${left}s`}
         </button>
       </motion.div>
     </div>
