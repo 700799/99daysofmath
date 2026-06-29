@@ -10,10 +10,10 @@ import { sfx, haptic, HAPTIC } from '../utils/arcadeAV';
 // games) to buy avatar cosmetics (hats, outfits, pets, backgrounds) and to unlock
 // premium games. All original art (emoji + SVG mascots).
 
-type Slot = 'hat' | 'outfit' | 'pet' | 'bg';
-type Cosmetic = { id: string; slot: Slot; emoji: string; name: string; price: number };
+export type Slot = 'hat' | 'outfit' | 'pet' | 'bg';
+export type Cosmetic = { id: string; slot: Slot; emoji: string; name: string; price: number };
 
-const COSMETICS: Cosmetic[] = [
+export const COSMETICS: Cosmetic[] = [
   // hats
   { id: 'hat_crown', slot: 'hat', emoji: '👑', name: 'Gold Crown', price: 120 },
   { id: 'hat_tophat', slot: 'hat', emoji: '🎩', name: 'Top Hat', price: 60 },
@@ -41,14 +41,14 @@ const COSMETICS: Cosmetic[] = [
   { id: 'bg_candy', slot: 'bg', emoji: '🍭', name: 'Candy Land', price: 50 },
 ];
 
-const BG_GRADIENT: Record<string, string> = {
+export const BG_GRADIENT: Record<string, string> = {
   bg_rainbow: 'from-rose-400 via-amber-300 to-sky-400',
   bg_sunset: 'from-orange-400 to-pink-600',
   bg_galaxy: 'from-indigo-700 to-fuchsia-800',
   bg_ocean: 'from-cyan-400 to-blue-700',
   bg_candy: 'from-pink-300 to-fuchsia-400',
 };
-const emojiOf = (id?: string) => COSMETICS.find((c) => c.id === id)?.emoji;
+export const emojiOf = (id?: string) => COSMETICS.find((c) => c.id === id)?.emoji;
 
 const TABS: { key: Slot | 'games'; label: string; emoji: string }[] = [
   { key: 'hat', label: 'Hats', emoji: '🎩' },

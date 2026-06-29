@@ -10,6 +10,7 @@ const Unit = lazy(() => import('./routes/Unit').then((m) => ({ default: m.Unit }
 const UnitResults = lazy(() => import('./routes/UnitResults').then((m) => ({ default: m.UnitResults })));
 const Settings = lazy(() => import('./routes/Settings').then((m) => ({ default: m.Settings })));
 const Shop = lazy(() => import('./routes/Shop').then((m) => ({ default: m.Shop })));
+const Rewards = lazy(() => import('./routes/Rewards').then((m) => ({ default: m.Rewards })));
 const DailyMix = lazy(() => import('./routes/DailyMix').then((m) => ({ default: m.DailyMix })));
 const MockTest = lazy(() => import('./routes/MockTest').then((m) => ({ default: m.MockTest })));
 const Review = lazy(() => import('./routes/Review').then((m) => ({ default: m.Review })));
@@ -115,6 +116,7 @@ export default function App() {
           <Route path="/arcade/dress" element={<ArcadeGate title="Dress to Impress"><DressToImpress /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/rewards" element={<Rewards />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

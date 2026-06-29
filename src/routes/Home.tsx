@@ -117,6 +117,12 @@ export function Home() {
           🪙 {coins.toLocaleString()}
         </div>
       </Link>
+      <Link
+        to="/rewards"
+        className="mb-4 -mt-2 flex items-center gap-2 rounded-2xl px-4 py-2 bg-white border-2 border-amber-200 text-amber-800 font-display font-extrabold text-sm hover:border-amber-300 transition-colors"
+      >
+        🏆 My Collection <span className="text-slate-400 font-bold">· rewards, power-ups & your avatar</span>
+      </Link>
 
       {/* Core Play Tiles */}
       <div className="grid grid-cols-3 gap-3 mb-6">
