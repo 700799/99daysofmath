@@ -4,8 +4,28 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
-const SEGMENTS = [5, 20, 8, 12, 40, 10, 25, 15]; // XP prizes around the wheel
-const COLORS = ['#f59e0b', '#8b5cf6', '#10b981', '#ef4444', '#facc15', '#3b82f6', '#ec4899', '#14b8a6'];
+// A 12-slice wheel whose prizes repeat so each prize has TIDY odds:
+//   5 XP ×4 = 4/12 = 1/3 · 10 XP ×3 = 3/12 = 1/4 · 20 XP ×2 = 1/6 ·
+//   30 XP ×2 = 1/6 · 50 XP ×1 = 1/12. Slices are interleaved for variety.
+const SEGMENTS = [5, 10, 20, 5, 30, 10, 5, 20, 30, 5, 10, 50];
+const VALUE_COLOR: Record<number, string> = {
+  5: '#f59e0b', 10: '#3b82f6', 20: '#10b981', 30: '#ec4899', 50: '#facc15',
+};
+
+function gcd(a: number, b: number): number { while (b) { [a, b] = [b, a % b]; } return a; }
+function fraction(count: number, total: number): string {
+  const g = gcd(count, total) || 1;
+  return `${count / g}/${total / g}`;
+}
+// Each distinct prize with its probability as a reduced fraction, richest first.
+function oddsLegend(): { xp: number; frac: string; color: string }[] {
+  const total = SEGMENTS.length;
+  const counts = new Map<number, number>();
+  for (const v of SEGMENTS) counts.set(v, (counts.get(v) ?? 0) + 1);
+  return [...counts.entries()]
+    .sort((a, b) => b[0] - a[0])
+    .map(([xp, count]) => ({ xp, frac: fraction(count, total), color: VALUE_COLOR[xp] }));
+}
 
 function todayISO(): string {
   const d = new Date();
@@ -104,7 +124,7 @@ export function Wheel() {
             const ty = c + c * 0.62 * Math.sin(mid);
             return (
               <g key={i}>
-                <path d={wedgePath(c, c, c - 4, a0, a1)} fill={COLORS[i]} stroke="#fff" strokeWidth={3} />
+                <path d={wedgePath(c, c, c - 4, a0, a1)} fill={VALUE_COLOR[xp]} stroke="#fff" strokeWidth={3} />
                 <text
                   x={tx}
                   y={ty}
@@ -125,6 +145,22 @@ export function Wheel() {
             XP
           </text>
         </motion.svg>
+      </div>
+
+      {/* exact odds for each prize, as reduced fractions */}
+      <div className="mt-4 max-w-sm mx-auto rounded-2xl bg-white border-2 border-slate-200 p-3">
+        <div className="text-xs font-display font-extrabold uppercase tracking-wide text-slate-500 text-center mb-2">
+          Your chances (12 slices)
+        </div>
+        <div className="grid grid-cols-2 gap-x-3 gap-y-1.5">
+          {oddsLegend().map((o) => (
+            <div key={o.xp} className="flex items-center gap-2 text-sm font-display font-bold text-slate-700">
+              <span className="inline-block w-4 h-4 rounded-sm" style={{ background: o.color }} />
+              <span className="tabular-nums">{o.xp} XP</span>
+              <span className="ml-auto tabular-nums text-indigo-600">{o.frac}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="mt-6 text-center">

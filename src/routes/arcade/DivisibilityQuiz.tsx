@@ -109,7 +109,7 @@ export function DivisibilityQuiz({
               }}
               className="mt-3 w-full min-h-12 rounded-2xl bg-indigo-500 text-white font-display font-extrabold"
             >
-              {curDiv ? (revealIdx < divisors.length - 1 ? `Show ÷ ${divisors[revealIdx + 1]} →` : 'Got it!') : divisors.length ? `Show ÷ ${divisors[0]} →` : 'Keep going ▶'}
+              {curDiv ? (revealIdx < divisors.length - 1 ? `Show ÷ ${divisors[revealIdx + 1]} →` : 'Got it!') : divisors.length ? 'Done ▶' : 'Keep going ▶'}
             </button>
           </>
         )}
