@@ -102,26 +102,33 @@ export function Tangram() {
       </p>
 
       <div
-        className="mx-auto bg-slate-800 p-1 grid"
+        className="mx-auto grid rounded-lg"
         style={{
           width: '100%',
           maxWidth: N * TILE,
           aspectRatio: '1 / 1',
           gridTemplateColumns: `repeat(${N}, 1fr)`,
-          gap: 2,
+          gap: 4,
+          background: '#475569', // grid-line colour shows through the gaps
+          padding: 4,
         }}
       >
         {Array.from({ length: N * N }).map((_, i) => {
           const v = occ[i];
+          const empty = v < 0;
           return (
             <button
               key={i}
               type="button"
               onClick={() => tapCell(Math.floor(i / N), i % N)}
-              className="flex items-center justify-center rounded"
-              style={{ background: v >= 0 ? PIECES[v].color : '#1e293b', fontSize: 24 }}
+              className="flex items-center justify-center rounded-md"
+              style={{
+                background: empty ? '#f1f5f9' : PIECES[v].color,
+                border: empty ? '2px dashed #94a3b8' : '2px solid rgba(255,255,255,0.5)',
+                fontSize: 24,
+              }}
             >
-              {v >= 0 ? PIECES[v].emoji : ''}
+              {empty ? '' : PIECES[v].emoji}
             </button>
           );
         })}

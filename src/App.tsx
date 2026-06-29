@@ -52,6 +52,9 @@ const MonsterRogue = lazy(() => import('./routes/arcade/MonsterRogue').then((m) 
 const ShinobiMatch = lazy(() => import('./routes/arcade/ShinobiMatch').then((m) => ({ default: m.ShinobiMatch })));
 const Mode7Racer = lazy(() => import('./routes/arcade/Mode7Racer').then((m) => ({ default: m.Mode7Racer })));
 const JungleBlitz = lazy(() => import('./routes/arcade/JungleBlitz').then((m) => ({ default: m.JungleBlitz })));
+const Asteroids = lazy(() => import('./routes/arcade/Asteroids').then((m) => ({ default: m.Asteroids })));
+const Wordle = lazy(() => import('./routes/arcade/Wordle').then((m) => ({ default: m.Wordle })));
+const HeroRescue = lazy(() => import('./routes/arcade/HeroRescue').then((m) => ({ default: m.HeroRescue })));
 const PocketTown = lazy(() => import('./routes/arcade/PocketTown').then((m) => ({ default: m.PocketTown })));
 const RogueDelve = lazy(() => import('./routes/arcade/RogueDelve').then((m) => ({ default: m.RogueDelve })));
 const SpaceBlaster = lazy(() => import('./routes/arcade/SpaceBlaster').then((m) => ({ default: m.SpaceBlaster })));
@@ -123,6 +126,9 @@ export default function App() {
           <Route path="/arcade/shinobi" element={<ArcadeGate title="Shinobi Match"><ShinobiMatch /></ArcadeGate>} />
           <Route path="/arcade/racer2" element={<ArcadeGate title="Turbo Dash"><Mode7Racer /></ArcadeGate>} />
           <Route path="/arcade/blitz" element={<ArcadeGate title="Jungle Blitz"><JungleBlitz /></ArcadeGate>} />
+          <Route path="/arcade/asteroids" element={<ArcadeGate title="Asteroids"><Asteroids /></ArcadeGate>} />
+          <Route path="/arcade/wordle" element={<ArcadeGate title="Word Guess"><Wordle /></ArcadeGate>} />
+          <Route path="/arcade/hero" element={<ArcadeGate title="Hero Rescue"><HeroRescue /></ArcadeGate>} />
           <Route path="/arcade/town" element={<ArcadeGate title="Pocket Town"><PocketTown /></ArcadeGate>} />
           <Route path="/arcade/rogue" element={<ArcadeGate title="Rogue Dungeon"><RogueDelve /></ArcadeGate>} />
           <Route path="/arcade/space" element={<ArcadeGate title="Space Blaster"><SpaceBlaster /></ArcadeGate>} />

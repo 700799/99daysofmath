@@ -95,39 +95,35 @@ function hasMove(sup: Supply, board: Board, _n: number): boolean {
 // ── Math problems ─────────────────────────────────────────────────────────────
 
 const rnd = (lo: number, hi: number) => Math.floor(Math.random() * (hi - lo + 1)) + lo;
+function gcf(a: number, b: number): number { while (b) { [a, b] = [b, a % b]; } return a; }
 
+// Tic Tac Toe math is ONLY word problems, factor/divisibility, or fraction
+// problems — never plain add/subtract. Every answer is a whole number.
+function wordQ(hard: boolean): MathQ {
+  const r = Math.random();
+  if (r < 0.4) { const box = rnd(4, hard ? 12 : 8); const n = rnd(3, hard ? 9 : 7); return { q: `A box holds ${box} treats. How many treats in ${n} boxes?`, a: box * n }; }
+  if (r < 0.7) { const per = rnd(3, hard ? 9 : 7); const g = rnd(3, hard ? 8 : 6); return { q: `${per * g} bones are shared equally among ${g} dogs. How many each?`, a: per }; }
+  const a = rnd(2, hard ? 7 : 5); const b = rnd(3, hard ? 9 : 6); const c = rnd(2, 9);
+  return { q: `${a} packs of ${b} toys, plus ${c} extra toys. How many toys in all?`, a: a * b + c };
+}
+function factorQ(hard: boolean): MathQ {
+  const r = Math.random();
+  if (r < 0.4) { const k = rnd(2, 9); const yes = Math.random() < 0.5; const n = yes ? k * rnd(3, hard ? 14 : 9) : k * rnd(2, hard ? 14 : 9) + rnd(1, k - 1); return { q: `Is ${n} divisible by ${k}?  (1 = yes, 0 = no)`, a: n % k === 0 ? 1 : 0 }; }
+  if (r < 0.7) { const a = rnd(3, hard ? 12 : 9); const b = rnd(3, hard ? 12 : 9); return { q: `Missing factor:  ${a} × ? = ${a * b}`, a: b }; }
+  const g = rnd(2, hard ? 9 : 6); const x = g * rnd(2, 6); const y = g * rnd(2, 6);
+  return { q: `Greatest common factor of ${x} and ${y}?`, a: gcf(x, y) };
+}
+function fractionQ(hard: boolean): MathQ {
+  const r = Math.random();
+  if (r < 0.5) { const d = rnd(2, hard ? 8 : 5); const m = rnd(2, hard ? 9 : 6); return { q: `What is 1/${d} of ${d * m}?`, a: m }; }
+  if (r < 0.8) { const d = rnd(3, hard ? 8 : 5); const num = rnd(2, d - 1); const k = rnd(2, hard ? 6 : 4); return { q: `What is ${num}/${d} of ${d * k}?`, a: num * k }; }
+  const d = rnd(2, 5); const num = rnd(1, d - 1); const k = rnd(2, hard ? 6 : 4);
+  return { q: `Equivalent fraction:  ${num}/${d} = ?/${d * k}`, a: num * k };
+}
 function makeMath(level: number): MathQ {
-  if (level <= 1) {
-    const a = rnd(1, 10), b = rnd(1, 10);
-    return { q: `${a} + ${b} = ?`, a: a + b };
-  }
-  if (level === 2) {
-    const b = rnd(1, 15), a = b + rnd(0, 15);
-    return { q: `${a} − ${b} = ?`, a: a - b };
-  }
-  if (level === 3) {
-    const a = rnd(2, 5), b = rnd(2, 5);
-    return { q: `${a} × ${b} = ?`, a: a * b };
-  }
-  if (level === 4) {
-    const a = rnd(3, 9), b = rnd(3, 9);
-    return { q: `${a} × ${b} = ?`, a: a * b };
-  }
-  if (level === 5) {
-    const b = rnd(2, 9), ans = rnd(2, 12);
-    return { q: `${b * ans} ÷ ${b} = ?`, a: ans };
-  }
-  if (level <= 7) {
-    const a = rnd(2,9), b = rnd(2,9), c = rnd(1,20);
-    return { q: `${a} × ${b} + ${c} = ?`, a: a*b+c };
-  }
-  if (level <= 9) {
-    const a = rnd(3,9), b = rnd(2,9), c = rnd(2,a*b-1);
-    return { q: `${a} × ${b} − ${c} = ?`, a: a*b-c };
-  }
-  // Level 10+: solve for n
-  const coef = rnd(2,6), ans = rnd(3,15);
-  return { q: `${coef} × n = ${coef*ans} → n = ?`, a: ans };
+  const hard = level >= 5;
+  const cat = Math.floor(Math.random() * 3); // 0 word · 1 factor · 2 fraction
+  return cat === 0 ? wordQ(hard) : cat === 1 ? factorQ(hard) : fractionQ(hard);
 }
 
 // ── AI ────────────────────────────────────────────────────────────────────────
@@ -386,7 +382,7 @@ export function TicTacToe() {
               <p className="text-center text-xs font-display font-extrabold uppercase tracking-wider text-slate-500 mb-1">
                 Solve to unlock level {level}
               </p>
-              <p className="text-center text-2xl font-display font-extrabold text-slate-800 mb-5">
+              <p className="text-center text-xl leading-snug font-display font-extrabold text-slate-800 mb-5">
                 {mathQ.q}
               </p>
               <input

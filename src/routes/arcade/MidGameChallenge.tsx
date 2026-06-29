@@ -17,54 +17,110 @@ export interface Challenge {
 function ri(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+function gcf(a: number, b: number): number {
+  while (b) { [a, b] = [b, a % b]; }
+  return a;
+}
+const SUP: Record<string, string> = { '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹' };
+const sup = (n: number) => String(n).split('').map((d) => SUP[d] ?? d).join('');
 
-/** Generate one arithmetic challenge scaled by difficulty level (1–5). */
+// --- challenge generators (every answer is numeric) ---------------------------
+// No trivial one-digit add/subtract anywhere: every game's mid-play math is a
+// word problem, exponent, factor/divisibility, or ratio/proportion question.
+
+function gExponent(hard: boolean): Challenge {
+  const r = Math.random();
+  if (!hard) {
+    if (r < 0.6) { const b = ri(2, 9); return { prompt: `${b}${sup(2)}  (${b} squared)`, answer: b * b }; }
+    const b = ri(2, 5); return { prompt: `${b}${sup(3)}  (${b} cubed)`, answer: b * b * b };
+  }
+  if (r < 0.4) { const b = ri(6, 15); return { prompt: `${b}${sup(2)}`, answer: b * b }; }
+  if (r < 0.7) { const b = ri(2, 6); return { prompt: `${b}${sup(3)}`, answer: b * b * b }; }
+  const base = Math.random() < 0.5 ? 2 : 3; const e = ri(3, 5);
+  return { prompt: `${base}${sup(e)}  (${base} to the ${e})`, answer: Math.pow(base, e) };
+}
+
+function gFactor(hard: boolean): Challenge {
+  const r = Math.random();
+  if (r < 0.4) {
+    const k = ri(2, 9);
+    const yes = Math.random() < 0.5;
+    const n = yes ? k * ri(3, hard ? 14 : 9) : k * ri(2, hard ? 14 : 9) + ri(1, k - 1);
+    return { prompt: `Is ${n} divisible by ${k}?  (1 = yes, 0 = no)`, answer: n % k === 0 ? 1 : 0 };
+  }
+  if (r < 0.7) {
+    const a = ri(3, hard ? 12 : 9); const b = ri(3, hard ? 12 : 9);
+    return { prompt: `Missing factor:  ${a} × ? = ${a * b}`, answer: b };
+  }
+  const g = ri(2, hard ? 9 : 6); const x = g * ri(2, 6); const y = g * ri(2, 6);
+  return { prompt: `Greatest common factor of ${x} and ${y}?`, answer: gcf(x, y) };
+}
+
+function gRatio(hard: boolean): Challenge {
+  const r = Math.random();
+  if (r < 0.4) {
+    const a = ri(2, 6); const b = ri(2, 6); const k = ri(2, hard ? 8 : 4);
+    return { prompt: `Solve the proportion:  ${a}/${b} = ?/${b * k}`, answer: a * k };
+  }
+  if (r < 0.7) {
+    const per = ri(2, 9); const q1 = ri(2, 4); const q2 = q1 + ri(2, hard ? 6 : 3);
+    return { prompt: `${q1} pens cost $${per * q1}. How much for ${q2} pens?`, answer: per * q2 };
+  }
+  const cups = ri(2, 4); const batch = ri(2, 4); const times = ri(2, hard ? 5 : 3);
+  return { prompt: `A recipe uses ${cups} cups for ${batch} cakes. How many cups for ${batch * times} cakes?`, answer: cups * times };
+}
+
+function gWord(hard: boolean): Challenge {
+  const r = Math.random();
+  if (r < 0.4) {
+    const box = ri(4, hard ? 12 : 8); const n = ri(3, hard ? 9 : 7);
+    return { prompt: `A box holds ${box} crayons. How many crayons are in ${n} boxes?`, answer: box * n };
+  }
+  if (r < 0.7) {
+    const per = ri(3, hard ? 9 : 7); const groups = ri(3, hard ? 9 : 6);
+    return { prompt: `${per * groups} stickers are shared equally among ${groups} kids. How many each?`, answer: per };
+  }
+  // multi-step word problem
+  const a = ri(2, hard ? 7 : 5); const b = ri(3, hard ? 9 : 6); const c = ri(2, 9);
+  return { prompt: `There are ${a} packs of ${b} markers, plus ${c} loose markers. How many markers in all?`, answer: a * b + c };
+}
+
+function gFraction(hard: boolean): Challenge {
+  const r = Math.random();
+  if (r < 0.5) { const d = ri(2, hard ? 8 : 5); const m = ri(2, hard ? 9 : 6); return { prompt: `What is 1/${d} of ${d * m}?`, answer: m }; }
+  if (r < 0.8) { const d = ri(3, hard ? 8 : 5); const num = ri(2, d - 1); const k = ri(2, hard ? 6 : 4); return { prompt: `What is ${num}/${d} of ${d * k}?`, answer: num * k }; }
+  const d = ri(2, 5); const num = ri(1, d - 1); const k = ri(2, hard ? 6 : 4);
+  return { prompt: `Equivalent fraction:  ${num}/${d} = ?/${d * k}`, answer: num * k };
+}
+
+export type ChallengeKind = 'word' | 'exponent' | 'factor' | 'ratio' | 'fraction';
+const GENERATORS: Record<ChallengeKind, (hard: boolean) => Challenge> = {
+  word: gWord,
+  exponent: gExponent,
+  factor: gFactor,
+  ratio: gRatio,
+  fraction: gFraction,
+};
+
+/** Generate a challenge restricted to the given kinds, scaled by level (1–5).
+ *  Lets each game choose exactly which math types it shows. */
+export function makeChallengeFrom(level: number, kinds: ChallengeKind[]): Challenge {
+  const L = Math.max(1, Math.min(5, Math.round(level)));
+  const hard = L >= 4;
+  const list = kinds.length ? kinds : (['word', 'exponent', 'ratio'] as ChallengeKind[]);
+  return GENERATORS[list[ri(0, list.length - 1)]](hard);
+}
+
+/** Generate one challenge scaled by difficulty level (1–5). Never an easy
+ *  one-digit add/subtract — always a word problem, exponent, factor, or ratio. */
 export function makeChallenge(level: number): Challenge {
   const L = Math.max(1, Math.min(5, Math.round(level)));
-  if (L === 1) {
-    // single-digit add / subtract (non-negative)
-    const a = ri(1, 9);
-    const b = ri(1, 9);
-    if (Math.random() < 0.5) return { prompt: `${a} + ${b}`, answer: a + b };
-    const [hi, lo] = a >= b ? [a, b] : [b, a];
-    return { prompt: `${hi} − ${lo}`, answer: hi - lo };
-  }
-  if (L === 2) {
-    // two-digit add / subtract
-    const a = ri(10, 50);
-    const b = ri(10, 50);
-    if (Math.random() < 0.5) return { prompt: `${a} + ${b}`, answer: a + b };
-    const [hi, lo] = a >= b ? [a, b] : [b, a];
-    return { prompt: `${hi} − ${lo}`, answer: hi - lo };
-  }
-  if (L === 3) {
-    // simple multiplication
-    const a = ri(2, 9);
-    const b = ri(2, 9);
-    return { prompt: `${a} × ${b}`, answer: a * b };
-  }
-  if (L === 4) {
-    // harder multiply / exact division
-    if (Math.random() < 0.5) {
-      const a = ri(11, 19);
-      const b = ri(3, 9);
-      return { prompt: `${a} × ${b}`, answer: a * b };
-    }
-    const b = ri(3, 9);
-    const ans = ri(3, 12);
-    return { prompt: `${b * ans} ÷ ${b}`, answer: ans };
-  }
-  // L === 5: two-step or fraction-of
-  if (Math.random() < 0.5) {
-    const a = ri(3, 9);
-    const b = ri(3, 9);
-    const c = ri(2, 9);
-    return { prompt: `${a} × ${b} + ${c}`, answer: a * b + c };
-  }
-  const denom = ri(2, 6);
-  const mult = ri(2, 8);
-  const whole = denom * mult;
-  return { prompt: `${1}/${denom} of ${whole}`, answer: mult };
+  const hard = L >= 4;
+  const pool: ((h: boolean) => Challenge)[] = [gExponent, gWord, gRatio];
+  if (L >= 2) pool.push(gFactor);
+  if (L >= 3) pool.push(gRatio, gWord); // weight the applied problems more
+  if (L >= 4) pool.push(gFactor, gExponent);
+  return pool[ri(0, pool.length - 1)](hard);
 }
 
 export function MidGameChallenge({
@@ -151,7 +207,7 @@ export function MidGameChallenge({
           ))}
         </div>
 
-        <div className="mt-4 rounded-2xl bg-slate-50 border-2 border-slate-200 py-5 text-3xl font-display font-extrabold text-slate-900 tabular-nums">
+        <div className="mt-4 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-xl font-display font-extrabold text-slate-900 leading-snug break-words">
           {current.prompt}
         </div>
         <div

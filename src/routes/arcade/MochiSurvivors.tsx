@@ -583,16 +583,14 @@ export function MochiSurvivors() {
 
       {/* solve math → earn 💰 cash → buy power-ups (while you keep dodging!) */}
       <div className="max-w-sm mx-auto mt-2 rounded-2xl bg-white border-2 border-slate-200 p-2">
-        <div className="flex items-center justify-between gap-2">
-          <span className="font-display font-extrabold text-slate-800 tabular-nums">🧮 {math.c.prompt} =</span>
-          <div className="flex gap-1">
-            {math.choices.map((n, i) => (
-              <button key={i} type="button" onClick={() => answerMath(n)}
-                className="min-w-10 min-h-9 px-2 rounded-lg bg-slate-100 hover:bg-slate-200 font-display font-extrabold text-slate-800 tabular-nums">
-                {n}
-              </button>
-            ))}
-          </div>
+        <div className="font-display font-extrabold text-slate-800 text-sm leading-snug break-words">🧮 {math.c.prompt}</div>
+        <div className="mt-1.5 flex gap-1 justify-center">
+          {math.choices.map((n, i) => (
+            <button key={i} type="button" onClick={() => answerMath(n)}
+              className="flex-1 min-h-9 px-2 rounded-lg bg-slate-100 hover:bg-slate-200 font-display font-extrabold text-slate-800 tabular-nums">
+              {n}
+            </button>
+          ))}
         </div>
         <div className="mt-2 flex gap-2">
           <button type="button" onClick={buyNuke} disabled={goldRef.current < NUKE_COST}
