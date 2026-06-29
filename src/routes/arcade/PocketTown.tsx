@@ -277,7 +277,7 @@ export function PocketTown() {
           <div className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl">
             <div className="text-3xl">💸</div>
             <div className="mt-1 font-display font-extrabold text-slate-900">Tax time! Solve for double:</div>
-            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 py-4 text-2xl font-display font-extrabold tabular-nums">{tax.c.prompt}</div>
+            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-xl font-display font-extrabold leading-snug break-words">{tax.c.prompt}</div>
             <input
               autoFocus
               inputMode="numeric"

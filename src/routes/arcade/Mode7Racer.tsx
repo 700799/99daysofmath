@@ -29,7 +29,7 @@ function racerSections(maxStage: number): HowToSection[] {
     { heading: 'Goal', body: 'Race as far as you can! Reach each checkpoint before the timer hits zero to keep going. New scenery every stage.' },
     { heading: 'Steering', body: 'Drag your finger left/right on the road to steer (or use ◀ ▶ / arrow keys). The road curves — lean into the bend or you’ll slide onto the grass and slow down.' },
     { heading: 'Watch out', body: 'Dodge traffic 🚗🚌🚜 — bumping one slows you and costs time!' },
-    { heading: 'Nitro', body: 'At each checkpoint, solve a quick math problem for a nitro speed boost. ' },
+    { heading: 'Pit stops', body: 'Every 30 seconds you pull into a pit stop — solve a quick math problem for a nitro speed boost, then keep racing.' },
     { heading: 'Best', body: 'Furthest stage so far: ' + maxStage + '.' },
   ];
 }
@@ -58,6 +58,8 @@ export function Mode7Racer() {
   const stageRef = useRef(1);
   const timeRef = useRef(30);
   const nextCpRef = useRef(600); // distance of next checkpoint
+  const runRef = useRef(0); // seconds of driving elapsed
+  const nextPitRef = useRef(30); // next pit-stop (math) time
   const kmRef = useRef(0);
   const lastRef = useRef(0);
   const rafRef = useRef(0);
@@ -75,6 +77,7 @@ export function Mode7Racer() {
     curveRef.current = 0; curveTargetRef.current = 0; segRef.current = 0;
     trafficRef.current = []; spawnRef.current = 1; stageRef.current = 1; timeRef.current = 30;
     nextCpRef.current = 600; kmRef.current = 0; doneRef.current = false; challengeRef.current = false;
+    runRef.current = 0; nextPitRef.current = 30;
     setChallenge(null); setOutcome(null); setPhase('race');
   };
 
@@ -125,16 +128,21 @@ export function Mode7Racer() {
 
       // timer
       timeRef.current -= dt;
+      runRef.current += dt;
       if (timeRef.current <= 0) { finish(); return; }
 
-      // checkpoint reached
+      // checkpoint reached — advance the stage + add time (NO math here)
       if (zRef.current >= nextCpRef.current) {
         nextCpRef.current += 600 + stage * 80;
         stageRef.current = stage + 1;
         setMaxStage(Math.max(maxStage, stageRef.current));
         timeRef.current += 12;
         sfx.levelUp(); haptic(HAPTIC.levelUp);
-        // nitro math hook (skippable feel — but pause briefly)
+      }
+
+      // pit stop — a math problem only every 30 seconds of driving
+      if (runRef.current >= nextPitRef.current) {
+        nextPitRef.current += 30;
         challengeRef.current = true;
         setChallenge(makeChallenge(Math.min(5, 1 + Math.floor(stage / 2))));
         setCInput('');
@@ -285,9 +293,9 @@ export function Mode7Racer() {
       {challenge && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
           <div className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl">
-            <div className="text-3xl">🏁</div>
-            <div className="mt-1 font-display font-extrabold text-slate-900">Checkpoint! Solve for NITRO 🔥</div>
-            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 py-4 text-2xl font-display font-extrabold tabular-nums">{challenge.prompt}</div>
+            <div className="text-3xl">🛠️</div>
+            <div className="mt-1 font-display font-extrabold text-slate-900">Pit stop! Solve for NITRO 🔥</div>
+            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-xl font-display font-extrabold leading-snug break-words">{challenge.prompt}</div>
             <input autoFocus inputMode="numeric" value={cInput} onChange={(e) => setCInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && resolveChallenge()}
               className="mt-3 w-full rounded-xl border-2 border-slate-200 px-3 py-2 text-center text-xl font-display font-extrabold focus:border-orange-500 focus:outline-none" placeholder="?" />

@@ -261,7 +261,7 @@ export function ForestSurvival() {
           <div className="text-sm font-display font-extrabold text-slate-700">
             {pending.action.emoji} {pending.action.label} — solve to succeed!
           </div>
-          <div className="mt-2 rounded-2xl bg-slate-50 border-2 border-slate-200 py-4 text-2xl font-display font-extrabold text-slate-900 tabular-nums">
+          <div className="mt-2 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-xl font-display font-extrabold text-slate-900 leading-snug break-words">
             {pending.challenge.prompt}
           </div>
           <div

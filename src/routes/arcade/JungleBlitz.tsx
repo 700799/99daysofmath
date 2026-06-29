@@ -346,7 +346,7 @@ export function JungleBlitz() {
             <div className="text-3xl">📦</div>
             <div className="mt-1 font-display font-extrabold text-slate-900">Supply Drawer — solve to claim the 🔱 Spread Gun!</div>
             <div className="text-[11px] font-display font-bold text-rose-500">You can’t close this until you solve it.</div>
-            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 py-4 text-2xl font-display font-extrabold tabular-nums">{drawer.prompt}</div>
+            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-xl font-display font-extrabold leading-snug break-words">{drawer.prompt}</div>
             <input autoFocus inputMode="numeric" value={drawerInput} onChange={(e) => setDrawerInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && resolveDrawer()}
               className="mt-3 w-full rounded-xl border-2 border-slate-200 px-3 py-2 text-center text-xl font-display font-extrabold focus:border-emerald-500 focus:outline-none" placeholder="?" />
