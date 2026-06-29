@@ -108,13 +108,54 @@ function gFraction(hard: boolean): Challenge {
   return { prompt: `Equivalent fraction:  ${num}/${d} = ?/${d * k}`, answer: num * k };
 }
 
-export type ChallengeKind = 'word' | 'exponent' | 'factor' | 'ratio' | 'fraction';
+function gGeometry(hard: boolean): Challenge {
+  const r = Math.random();
+  if (r < 0.35) {
+    const w = ri(3, hard ? 14 : 9); const h = ri(2, hard ? 12 : 8);
+    return { prompt: `A rectangle is ${w} wide and ${h} tall. What is its AREA?`, answer: w * h };
+  }
+  if (r < 0.6) {
+    const w = ri(3, hard ? 14 : 9); const h = ri(2, hard ? 12 : 8);
+    return { prompt: `A rectangle is ${w} by ${h}. What is its PERIMETER?`, answer: 2 * (w + h) };
+  }
+  if (r < 0.8) {
+    const b = ri(2, hard ? 14 : 9); const h = (Math.random() < 0.5 ? 2 : ri(1, hard ? 7 : 4) * 2);
+    return { prompt: `A triangle has base ${b} and height ${h}. Its area = ½ × base × height = ?`, answer: (b * h) / 2 };
+  }
+  const l = ri(2, hard ? 8 : 5); const w = ri(2, hard ? 6 : 4); const h = ri(2, hard ? 6 : 4);
+  return { prompt: `A box is ${l} × ${w} × ${h}. What is its VOLUME?`, answer: l * w * h };
+}
+
+function gStats(hard: boolean): Challenge {
+  const n = hard ? 5 : 4;
+  const data = Array.from({ length: n }, () => ri(2, hard ? 20 : 12));
+  const r = Math.random();
+  const sum = data.reduce((a, b) => a + b, 0);
+  if (r < 0.35 && sum % n === 0) {
+    return { prompt: `Find the MEAN (average) of: ${data.join(', ')}`, answer: sum / n };
+  }
+  if (r < 0.6) {
+    return { prompt: `Find the RANGE (biggest − smallest) of: ${data.join(', ')}`, answer: Math.max(...data) - Math.min(...data) };
+  }
+  if (r < 0.8) {
+    const sorted = [...data].sort((a, b) => a - b);
+    // median of an even count → make it clean by using a guaranteed-integer middle pair
+    const mid = sorted.length % 2 ? sorted[(sorted.length - 1) / 2] : (sorted[sorted.length / 2 - 1] + sorted[sorted.length / 2]) / 2;
+    if (Number.isInteger(mid)) return { prompt: `Find the MEDIAN (middle value) of: ${sorted.join(', ')}`, answer: mid };
+  }
+  // fallback: sum total (a clean, always-integer stat question)
+  return { prompt: `What is the TOTAL of: ${data.join(', ')}?`, answer: sum };
+}
+
+export type ChallengeKind = 'word' | 'exponent' | 'factor' | 'ratio' | 'fraction' | 'geometry' | 'stats';
 const GENERATORS: Record<ChallengeKind, (hard: boolean) => Challenge> = {
   word: gWord,
   exponent: gExponent,
   factor: gFactor,
   ratio: gRatio,
   fraction: gFraction,
+  geometry: gGeometry,
+  stats: gStats,
 };
 
 /** Generate a challenge restricted to the given kinds, scaled by level (1–5).
@@ -132,7 +173,10 @@ const UNIT_KINDS: Record<ArcadeUnit, ChallengeKind[]> = {
   '6.RP': ['ratio'],
   '6.NS': ['fraction', 'factor'],
   '6.EE': ['exponent', 'word'],
-  mixed: ['word', 'exponent', 'factor', 'ratio', 'fraction'],
+  '6.G': ['geometry'],
+  '6.SP': ['stats'],
+  g5: ['word', 'fraction', 'factor'], // gentler Grade-5 review pool
+  mixed: ['word', 'exponent', 'factor', 'ratio', 'fraction', 'geometry', 'stats'],
 };
 
 /** A challenge tailored to the student's chosen unit and adaptive level, in one
