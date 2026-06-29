@@ -42,7 +42,11 @@ function makeOrder(level: number): Order {
   const base: [number, number, number] = [t / g, m / g, b / g];
   // multiplier ramps with level and leans on ×5 / ×7
   const choices =
-    level <= 1 ? [2, 3, 4] : level === 2 ? [3, 4, 5] : level === 3 ? [5, 6, 7] : [5, 7, 8, 9];
+    level <= 1 ? [2, 3, 4]
+      : level === 2 ? [4, 5, 6]
+        : level === 3 ? [5, 6, 7]
+          : level <= 5 ? [6, 7, 8, 9]
+            : [7, 8, 9, 11, 12];
   const mult = choices[Math.floor(Math.random() * choices.length)];
   const target: [number, number, number] = [base[0] * mult, base[1] * mult, base[2] * mult];
   return { base, mult, target, who: CUSTOMERS[Math.floor(Math.random() * CUSTOMERS.length)] };
@@ -132,13 +136,14 @@ export function BobaShop() {
     if (exact) {
       comboRef.current += 1;
       const mult = 1 + Math.floor((comboRef.current - 1) / 3); // x1, then x2 after 3 in a row, ...
-      const gained = (10 + levelRef.current * 2) * mult;
+      const speedBonus = Math.max(0, Math.ceil(timeRef.current)); // quick service tips!
+      const gained = (10 + levelRef.current * 2) * mult + speedBonus;
       scoreRef.current += gained;
       servedRef.current += 1;
       setFlash('good');
       setReaction('😋');
       burst(150, 120, { emoji: '✨', count: 14 });
-      pop(120, 90, `+${gained}`, '#16a34a');
+      pop(120, 90, `+${gained}${speedBonus ? ` (⚡${speedBonus})` : ''}`, '#16a34a');
       nextOrder();
     } else {
       comboRef.current = 0;
@@ -273,6 +278,13 @@ export function BobaShop() {
                 className="w-9 h-9 rounded-lg bg-emerald-600 text-white font-display font-extrabold text-xs"
               >
                 +5
+              </button>
+              <button
+                type="button"
+                onClick={() => add(i, 10)}
+                className="w-9 h-9 rounded-lg bg-emerald-700 text-white font-display font-extrabold text-xs"
+              >
+                +10
               </button>
             </div>
           </div>
