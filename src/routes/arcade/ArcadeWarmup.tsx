@@ -12,6 +12,7 @@ import { useLessonClock } from '../../hooks/useLessonClock';
 import { ArcadeHeader, ArcadeSessionContext, ARCADE_GAMES } from './shared';
 import { MidGameChallenge } from './MidGameChallenge';
 import { HeroSplash, Countdown } from './HeroSplash';
+import { gameMascot } from './Mascots';
 import { MathBreak } from './MathBreak';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
@@ -157,6 +158,7 @@ export function ArcadeGate({ title, children }: { title: string; children: React
       {showSplash && game ? (
         <HeroSplash
           emoji={game.emoji}
+          mascot={gameMascot(game.id)}
           name={game.name}
           subtitle="Let's play!"
           gradient={game.gradient}

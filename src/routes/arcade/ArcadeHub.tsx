@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useProgress } from '../../state/progress';
+import { useProgress, ARCADE_UNITS, ARCADE_UNIT_LABELS } from '../../state/progress';
 import { ARCADE_GAMES } from './shared';
+import { Mascot, gameMascot, type MascotKind } from './Mascots';
+
+const UNIT_MASCOT: Record<string, MascotKind> = { '6.RP': 'frog', '6.NS': 'robot', '6.EE': 'dragon', mixed: 'pet' };
 
 function todayISO(): string {
   const d = new Date();
@@ -29,6 +32,10 @@ function useClockTick(): void {
 export function ArcadeHub() {
   useClockTick();
   const arcadeDaily = useProgress((s) => s.arcadeDaily);
+  const arcadeUnit = useProgress((s) => s.arcadeUnit);
+  const setArcadeUnit = useProgress((s) => s.setArcadeUnit);
+  const arcadeLevels = useProgress((s) => s.arcadeLevels);
+  const arcadeStreak = useProgress((s) => s.arcadeStreak);
   const hiddenGames = useProgress((s) => s.arcadeConfig.hiddenGames);
   const points = useProgress((s) => s.cumArcadePoints);
   const playSecs = useProgress((s) => s.cumArcadeSeconds);
@@ -53,6 +60,39 @@ export function ArcadeHub() {
         Finish a <b>full math lesson</b> to unlock a game. Keep learning and
         playing balanced — aim for 50/50!
       </p>
+
+      {/* Unit + level picker — drives every game's questions */}
+      <div className="mt-4 rounded-3xl p-4 border-2 bg-white border-slate-200">
+        <div className="font-display font-extrabold text-slate-900 text-sm">🎯 Choose your math unit</div>
+        <div className="mt-2 grid grid-cols-2 gap-2">
+          {ARCADE_UNITS.map((u) => {
+            const sel = arcadeUnit === u;
+            return (
+              <button
+                key={u}
+                type="button"
+                onClick={() => setArcadeUnit(u)}
+                aria-pressed={sel}
+                className={`rounded-2xl border-2 px-3 py-2 text-left flex items-center gap-2 ${sel ? 'border-indigo-500 bg-indigo-50' : 'border-slate-200 bg-white hover:border-indigo-300'}`}
+              >
+                <Mascot kind={UNIT_MASCOT[u]} size={34} title={ARCADE_UNIT_LABELS[u]} />
+                <span>
+                  <span className="block font-display font-extrabold text-slate-800 text-sm leading-tight">{ARCADE_UNIT_LABELS[u]}</span>
+                  <span className="block text-[11px] font-display font-bold text-slate-500">
+                    Level {arcadeLevels[u]}/5 · {arcadeStreak[u]}/5 ⭐
+                  </span>
+                </span>
+              </button>
+            );
+          })}
+        </div>
+        <div className="mt-2 h-2 rounded-full bg-slate-200 overflow-hidden">
+          <div className="h-full bg-indigo-500 transition-all" style={{ width: `${(arcadeStreak[arcadeUnit] / 5) * 100}%` }} />
+        </div>
+        <div className="mt-1.5 text-[11px] text-slate-500">
+          All games will ask <b>{ARCADE_UNIT_LABELS[arcadeUnit]}</b> questions at <b>Level {arcadeLevels[arcadeUnit]}</b>. Get 5 right in a row to level up!
+        </div>
+      </div>
 
       {/* Learn-to-play balance card */}
       <div className="mt-4 rounded-3xl p-4 border-2 bg-indigo-50 border-indigo-200">
@@ -129,7 +169,12 @@ export function ArcadeHub() {
               <span className="absolute top-3 left-3 bg-black/20 text-white text-[10px] font-display font-extrabold px-2 py-0.5 rounded-full">
                 📚 Lesson first
               </span>
-              <div className="text-3xl">{g.emoji}</div>
+              <div className="flex items-center gap-1.5">
+                <span className="rounded-2xl bg-white/25 p-1">
+                  <Mascot kind={gameMascot(g.id)} size={40} expr="cheer" />
+                </span>
+                <span className="text-2xl">{g.emoji}</span>
+              </div>
               <div className="font-display font-extrabold text-lg mt-1">{g.name}</div>
               <div className="text-xs opacity-90 mt-0.5 line-clamp-2">{g.blurb}</div>
             </Link>

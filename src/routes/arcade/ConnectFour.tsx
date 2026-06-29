@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { DivisibilityQuiz } from './DivisibilityQuiz';
 
 const COLS = 7;
 const ROWS = 6;
@@ -99,6 +100,7 @@ export function ConnectFour() {
   const [phase, setPhase] = useState<Phase>('playing');
   const [result, setResult] = useState<'win' | 'lose' | 'draw' | null>(null);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
+  const [quizDiscs, setQuizDiscs] = useState<number | null>(null);
   useArcadeClock(!!outcome);
   const recordedRef = useRef(false);
 
@@ -106,6 +108,9 @@ export function ConnectFour() {
     setBoard(finalBoard);
     setResult(res);
     setPhase('done');
+    // Teach divisibility on the number of discs the player placed this game.
+    const myDiscs = finalBoard.flat().filter((c) => c === 1).length;
+    setQuizDiscs(myDiscs);
     if (!recordedRef.current) {
       recordedRef.current = true;
       const baseXp = res === 'win' ? 5 : res === 'draw' ? 3 : 2;
@@ -140,12 +145,16 @@ export function ConnectFour() {
     setPhase('playing');
     setResult(null);
     setOutcome(null);
+    setQuizDiscs(null);
     recordedRef.current = false;
   };
 
   return (
     <div>
       <ArcadeHeader title="Connect Four" emoji="🔴" />
+      {phase === 'done' && quizDiscs != null && (
+        <DivisibilityQuiz total={quizDiscs} token="😆" onDone={() => setQuizDiscs(null)} />
+      )}
       {phase === 'done' && outcome ? (
         <ArcadeEndCard
           gameId="connect4"

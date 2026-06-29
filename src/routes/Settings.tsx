@@ -183,6 +183,7 @@ export function Settings() {
 function AdminPanel() {
   const config = useProgress((s) => s.arcadeConfig);
   const setArcadeConfig = useProgress((s) => s.setArcadeConfig);
+  const resetArcadeMastery = useProgress((s) => s.resetArcadeMastery);
   const [pin, setPin] = useState('');
   const [open, setOpen] = useState(false);
 
@@ -300,6 +301,7 @@ function AdminPanel() {
                 { value: 30, label: '30s' },
                 { value: 60, label: '60s' },
                 { value: 90, label: '90s' },
+                { value: 120, label: '2m' },
               ]}
               value={config.challengeInterval}
               onPick={(n) => setArcadeConfig({ challengeInterval: n })}
@@ -330,6 +332,17 @@ function AdminPanel() {
               value={config.storyInterval}
               onPick={(n) => setArcadeConfig({ storyInterval: n })}
             />
+            <div className="mt-3" />
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-sm font-display font-bold text-slate-700">Adaptive level &amp; mastery</span>
+              <button
+                type="button"
+                onClick={() => { if (window.confirm('Reset every unit back to Level 1 and clear mastery progress?')) resetArcadeMastery(); }}
+                className="rounded-xl bg-rose-100 text-rose-700 font-display font-extrabold text-sm px-3 py-2"
+              >
+                Reset mastery
+              </button>
+            </div>
           </div>
 
           <div className="pt-2 border-t border-slate-100">

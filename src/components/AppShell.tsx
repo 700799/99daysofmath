@@ -5,6 +5,7 @@ import { useAuth } from '../state/auth';
 import { Avatar } from './AccountCard';
 import { LevelBadge } from './LevelBadge';
 import { XpFlash } from './XpFlash';
+import { MasteryCelebration } from '../routes/arcade/MasteryCelebration';
 import { submitHaptic, tapHaptic } from '../utils/haptics';
 import { playClick } from '../utils/sound';
 
@@ -142,6 +143,7 @@ export function AppShell({ children }: Props) {
       </header>
       <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-6">{children}</main>
       <XpFlash />
+      <MasteryCelebration />
     </div>
   );
 }

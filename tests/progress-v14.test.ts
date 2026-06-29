@@ -50,7 +50,7 @@ describe('migrateProgress v13 -> v14 (challenge + time-budget + game visibility)
 
   it('fresh state has the v14 defaults', () => {
     const cfg = useProgress.getState().arcadeConfig;
-    expect(cfg.challengeInterval).toBe(20);
+    expect(cfg.challengeInterval).toBe(120); // v17: 2-minute speed-round default
     expect(cfg.challengeCount).toBe(3);
     expect(cfg.earnRatio).toBe(1);
     expect(Array.isArray(cfg.hiddenGames)).toBe(true);

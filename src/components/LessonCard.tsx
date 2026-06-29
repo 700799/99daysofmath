@@ -379,6 +379,8 @@ function ExamplePage({
   open: boolean;
   onReveal: () => void;
 }) {
+  const [ansShown, setAnsShown] = useState(false);
+  useEffect(() => setAnsShown(false), [index, open]);
   return (
     <div>
       <PageTitle eyebrow={`Worked example ${index + 1} of ${total}`} title="Try in your head first" />
@@ -405,9 +407,19 @@ function ExamplePage({
                 </li>
               ))}
             </ol>
-            <div className="mt-3 inline-flex items-center gap-1.5 bg-green-100 text-green-800 font-display font-extrabold text-sm rounded-full px-3 py-1">
-              ✅ Answer: {ex.answer}
-            </div>
+            {ansShown ? (
+              <div className="mt-3 inline-flex items-center gap-1.5 bg-green-100 text-green-800 font-display font-extrabold text-sm rounded-full px-3 py-1">
+                ✅ Answer: {ex.answer}
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setAnsShown(true)}
+                className="mt-3 w-full min-h-11 px-4 py-2 rounded-xl bg-white border-2 border-green-200 text-green-700 font-display font-extrabold text-sm hover:bg-green-50 transition-colors"
+              >
+                👁 Reveal the final answer
+              </button>
+            )}
           </div>
         ) : (
           <button

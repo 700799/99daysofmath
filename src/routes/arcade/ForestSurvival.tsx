@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { GameStage, useBurst, BurstLayer, useScorePops, ScorePopLayer } from './fx';
-import { makeChallengeFrom, type Challenge } from './MidGameChallenge';
+import { makeAdaptive, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Forest Survival — an ultra-long, endless survival game where MATH powers every
@@ -38,6 +38,8 @@ function clamp(v: number): number {
 export function ForestSurvival() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const addArcadePoints = useProgress((s) => s.addArcadePoints);
+  const arcadeUnit = useProgress((s) => s.arcadeUnit);
+  const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
   const { burst, particles } = useBurst();
@@ -61,7 +63,7 @@ export function ForestSurvival() {
       setLog('No wood to burn! Chop some first. 🪵');
       return;
     }
-    setPending({ action, challenge: makeChallengeFrom(challengeLevel, ['fraction', 'exponent', 'ratio', 'word']) });
+    setPending({ action, challenge: makeAdaptive(arcadeUnit, useProgress.getState().arcadeLevels[arcadeUnit] ?? challengeLevel, 'medium') });
     setValue('');
     setWrong(false);
   };
@@ -171,7 +173,9 @@ export function ForestSurvival() {
     if (!pending) return;
     const n = Number(value.trim());
     if (value.trim() === '' || Number.isNaN(n)) return;
-    if (n === pending.challenge.answer) resolve(true);
+    const correct = n === pending.challenge.answer;
+    recordArcadeAnswer(arcadeUnit, correct);
+    if (correct) resolve(true);
     else resolve(false); // wrong answer still resolves, just with the weak reward
   };
 

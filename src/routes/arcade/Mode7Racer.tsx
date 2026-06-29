@@ -3,7 +3,7 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
 import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
-import { makeChallenge, type Challenge } from './MidGameChallenge';
+import { makeAdaptive, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
@@ -40,6 +40,8 @@ export function Mode7Racer() {
   const addAchievement = useProgress((s) => s.addAchievement);
   const maxStage = useProgress((s) => s.racerMaxStage);
   const setMaxStage = useProgress((s) => s.setRacerMaxStage);
+  const arcadeUnit = useProgress((s) => s.arcadeUnit);
+  const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
@@ -144,7 +146,7 @@ export function Mode7Racer() {
       if (runRef.current >= nextPitRef.current) {
         nextPitRef.current += 30;
         challengeRef.current = true;
-        setChallenge(makeChallenge(Math.min(5, 1 + Math.floor(stage / 2))));
+        setChallenge(makeAdaptive(arcadeUnit, useProgress.getState().arcadeLevels[arcadeUnit] ?? 1, 'medium'));
         setCInput('');
       }
 
@@ -191,6 +193,7 @@ export function Mode7Racer() {
   const resolveChallenge = () => {
     if (!challenge) return;
     const ok = Number(cInput.trim()) === challenge.answer && cInput.trim() !== '';
+    recordArcadeAnswer(arcadeUnit, ok);
     setChallenge(null);
     challengeRef.current = false;
     lastRef.current = performance.now();
