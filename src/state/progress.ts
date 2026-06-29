@@ -57,14 +57,20 @@ export interface RitPoint {
 }
 
 // Units the student can pick at the arcade entry. Drives every game's questions.
-export type ArcadeUnit = '6.RP' | '6.NS' | '6.EE' | 'mixed';
-export const ARCADE_UNITS: ArcadeUnit[] = ['6.RP', '6.NS', '6.EE', 'mixed'];
+export type ArcadeUnit = '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'g5' | 'mixed';
+export const ARCADE_UNITS: ArcadeUnit[] = ['6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'g5', 'mixed'];
 export const ARCADE_UNIT_LABELS: Record<ArcadeUnit, string> = {
   '6.RP': 'Ratios & Proportions',
   '6.NS': 'Number System',
   '6.EE': 'Expressions & Equations',
+  '6.G': 'Geometry',
+  '6.SP': 'Statistics',
+  g5: 'Grade-5 Review',
   mixed: 'Mixed (all units)',
 };
+// Per-unit mastery records, seeded for every unit.
+const unitMap = <T,>(v: T): Record<ArcadeUnit, T> =>
+  ({ '6.RP': v, '6.NS': v, '6.EE': v, '6.G': v, '6.SP': v, g5: v, mixed: v });
 
 export interface ArcadeConfig {
   lessonsPerSession: number; // full lessons required to unlock one game session
@@ -408,9 +414,9 @@ const v16Defaults = {
 
 const v17Defaults = {
   arcadeUnit: 'mixed' as ArcadeUnit,
-  arcadeLevels: { '6.RP': 1, '6.NS': 1, '6.EE': 1, mixed: 1 } as Record<ArcadeUnit, number>,
-  arcadeStreak: { '6.RP': 0, '6.NS': 0, '6.EE': 0, mixed: 0 } as Record<ArcadeUnit, number>,
-  arcadeMiss: { '6.RP': 0, '6.NS': 0, '6.EE': 0, mixed: 0 } as Record<ArcadeUnit, number>,
+  arcadeLevels: unitMap(1),
+  arcadeStreak: unitMap(0),
+  arcadeMiss: unitMap(0),
 };
 const v18Defaults = {
   coins: 0,
@@ -419,9 +425,9 @@ const v18Defaults = {
   unlockedGames: [] as string[],
 };
 const freshMastery = () => ({
-  arcadeLevels: { '6.RP': 1, '6.NS': 1, '6.EE': 1, mixed: 1 } as Record<ArcadeUnit, number>,
-  arcadeStreak: { '6.RP': 0, '6.NS': 0, '6.EE': 0, mixed: 0 } as Record<ArcadeUnit, number>,
-  arcadeMiss: { '6.RP': 0, '6.NS': 0, '6.EE': 0, mixed: 0 } as Record<ArcadeUnit, number>,
+  arcadeLevels: unitMap(1),
+  arcadeStreak: unitMap(0),
+  arcadeMiss: unitMap(0),
 });
 
 export const ARCADE_DAILY_CAP_SECONDS = 180;     // 3 minutes per day
@@ -585,6 +591,17 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
     const stateAny = state as Record<string, unknown>;
     for (const [k, v] of Object.entries(v18Defaults)) {
       if (stateAny[k] === undefined) stateAny[k] = v;
+    }
+  }
+  if (fromVersion < 19) {
+    // New arcade units (Geometry 6.G, Statistics 6.SP, Grade-5 review). Backfill
+    // the per-unit mastery records so every unit has a level/streak/miss entry.
+    const stateAny = state as Record<string, unknown>;
+    const seed: Array<[string, number]> = [['arcadeLevels', 1], ['arcadeStreak', 0], ['arcadeMiss', 0]];
+    for (const [key, base] of seed) {
+      const rec = (stateAny[key] as Record<string, number>) ?? {};
+      for (const u of ARCADE_UNITS) if (rec[u] === undefined) rec[u] = base;
+      stateAny[key] = rec;
     }
   }
   return state;
@@ -1173,7 +1190,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 18,
+      version: 19,
       migrate: migrateProgress,
     },
   ),
