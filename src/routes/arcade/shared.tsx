@@ -70,6 +70,14 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'dress', path: '/arcade/dress', emoji: '👗', name: 'Dress to Impress', blurb: 'Style the theme. Match the palette ratio. Walk the runway!', baseXp: 12, gradient: 'from-fuchsia-500 to-violet-600' },
 ];
 
+// Premium games: locked until bought with coins in the Shop (id → coin price).
+export const PREMIUM_GAMES: Record<string, number> = {
+  tank: 120,
+  dress: 120,
+  hero: 100,
+  turbo: 100,
+};
+
 export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {
   return (
     <div className="mb-4">

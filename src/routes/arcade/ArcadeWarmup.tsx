@@ -9,7 +9,8 @@ import { LessonCard } from '../../components/LessonCard';
 import { LESSONS, type Lesson } from '../../data/lessons';
 import { useProgress, type ArcadeConfig } from '../../state/progress';
 import { useLessonClock } from '../../hooks/useLessonClock';
-import { ArcadeHeader, ArcadeSessionContext, ARCADE_GAMES } from './shared';
+import { Link } from 'react-router-dom';
+import { ArcadeHeader, ArcadeSessionContext, ARCADE_GAMES, PREMIUM_GAMES } from './shared';
 import { MidGameChallenge } from './MidGameChallenge';
 import { HeroSplash, Countdown } from './HeroSplash';
 import { gameMascot } from './Mascots';
@@ -46,6 +47,7 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   const config = useProgress((s) => s.arcadeConfig);
   const cumArcade = useProgress((s) => s.cumArcadeSeconds);
   const cumLesson = useProgress((s) => s.cumLessonSeconds);
+  const unlockedGames = useProgress((s) => s.unlockedGames);
   const [unlocked, setUnlocked] = useState(false);
   const [sessionKey, setSessionKey] = useState(0);
   const [lessonsDone, setLessonsDone] = useState(0);
@@ -170,6 +172,22 @@ export function ArcadeGate({ title, children }: { title: string; children: React
       )}
     </ArcadeSessionContext.Provider>
   );
+
+  // Premium games must be unlocked in the Shop with coins first.
+  const premiumPrice = game ? PREMIUM_GAMES[game.id] : undefined;
+  if (premiumPrice != null && !unlockedGames.includes(game!.id)) {
+    return (
+      <div>
+        <ArcadeHeader title={title} emoji={game?.emoji ?? '🔒'} />
+        <div className="max-w-sm mx-auto mt-6 rounded-3xl border-2 border-slate-200 bg-white p-6 text-center shadow">
+          <div className="text-5xl">🔒</div>
+          <div className="mt-2 font-display font-extrabold text-xl text-slate-900">{title} is locked</div>
+          <div className="mt-1 text-sm text-slate-600">Unlock it in the Coin Shop for 🪙 {premiumPrice}. Earn coins by playing games!</div>
+          <Link to="/shop" className="mt-4 inline-block min-h-11 leading-[2.75rem] px-6 rounded-2xl bg-fuchsia-500 text-white font-display font-extrabold">🛍️ Go to Shop</Link>
+        </div>
+      </div>
+    );
+  }
 
   if (config.unlimited || unlocked) return playArea;
 

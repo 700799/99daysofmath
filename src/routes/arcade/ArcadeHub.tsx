@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useProgress, ARCADE_UNITS, ARCADE_UNIT_LABELS } from '../../state/progress';
-import { ARCADE_GAMES } from './shared';
+import { ARCADE_GAMES, PREMIUM_GAMES } from './shared';
 import { Mascot, gameMascot, type MascotKind } from './Mascots';
 
 const UNIT_MASCOT: Record<string, MascotKind> = { '6.RP': 'frog', '6.NS': 'robot', '6.EE': 'dragon', mixed: 'pet' };
@@ -37,6 +37,7 @@ export function ArcadeHub() {
   const arcadeLevels = useProgress((s) => s.arcadeLevels);
   const arcadeStreak = useProgress((s) => s.arcadeStreak);
   const hiddenGames = useProgress((s) => s.arcadeConfig.hiddenGames);
+  const unlockedGames = useProgress((s) => s.unlockedGames);
   const points = useProgress((s) => s.cumArcadePoints);
   const playSecs = useProgress((s) => s.cumArcadeSeconds);
   const lessonSecs = useProgress((s) => s.cumLessonSeconds);
@@ -153,8 +154,28 @@ export function ArcadeHub() {
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
         {visibleGames.map((g) => {
           const done = playedToday.includes(g.id);
+          const price = PREMIUM_GAMES[g.id];
+          const locked = price != null && !unlockedGames.includes(g.id);
           // A full lesson gates each game (handled by ArcadeGate on the route),
-          // so every tile stays clickable here.
+          // so every unlocked tile stays clickable here. Locked premium games
+          // route to the Shop to unlock with coins instead.
+          if (locked) {
+            return (
+              <Link
+                key={g.id}
+                to="/shop"
+                className={`relative block rounded-3xl p-4 bg-gradient-to-br ${g.gradient} text-white shadow-md transition-all hover:shadow-lg`}
+              >
+                <div className="absolute inset-0 rounded-3xl bg-slate-900/55 flex flex-col items-center justify-center">
+                  <div className="text-3xl">🔒</div>
+                  <div className="mt-1 rounded-full bg-amber-400 text-amber-900 text-xs font-display font-extrabold px-3 py-1">Unlock · 🪙{price}</div>
+                </div>
+                <div className="text-3xl opacity-40">{g.emoji}</div>
+                <div className="font-display font-extrabold text-lg mt-1 opacity-40">{g.name}</div>
+                <div className="text-xs opacity-30 mt-0.5 line-clamp-2">{g.blurb}</div>
+              </Link>
+            );
+          }
           return (
             <Link
               key={g.id}
