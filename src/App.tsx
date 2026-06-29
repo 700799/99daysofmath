@@ -44,6 +44,7 @@ const MonsterRogue = lazy(() => import('./routes/arcade/MonsterRogue').then((m) 
 const Mode7Racer = lazy(() => import('./routes/arcade/Mode7Racer').then((m) => ({ default: m.Mode7Racer })));
 const Wordle = lazy(() => import('./routes/arcade/Wordle').then((m) => ({ default: m.Wordle })));
 const HeroRescue = lazy(() => import('./routes/arcade/HeroRescue').then((m) => ({ default: m.HeroRescue })));
+const EscapeRoom = lazy(() => import('./routes/arcade/EscapeRoom').then((m) => ({ default: m.EscapeRoom })));
 const PocketTown = lazy(() => import('./routes/arcade/PocketTown').then((m) => ({ default: m.PocketTown })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
@@ -105,6 +106,7 @@ export default function App() {
           <Route path="/arcade/racer2" element={<ArcadeGate title="Turbo Dash"><Mode7Racer /></ArcadeGate>} />
           <Route path="/arcade/wordle" element={<ArcadeGate title="Word Guess"><Wordle /></ArcadeGate>} />
           <Route path="/arcade/hero" element={<ArcadeGate title="Hero Rescue"><HeroRescue /></ArcadeGate>} />
+          <Route path="/arcade/escape" element={<ArcadeGate title="Math Escape"><EscapeRoom /></ArcadeGate>} />
           <Route path="/arcade/town" element={<ArcadeGate title="Pocket Town"><PocketTown /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
