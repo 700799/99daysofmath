@@ -87,6 +87,7 @@ export interface ArcadeConfig {
   hiddenGames: string[]; // arcade game ids the parent has turned off (hidden from the hub)
   storyInterval: number; // minutes of play between forced math-story / mathematician breaks (0 = off)
   lessonScreenSeconds: number; // min seconds to read each lesson screen before Next (0 = off)
+  answerRevealSeconds: number; // think-time before the worked solution un-hides in explanations (0 = instant)
 }
 
 interface ProgressState {
@@ -396,6 +397,7 @@ const v11Defaults = {
     hiddenGames: [],
     storyInterval: 5,
     lessonScreenSeconds: 6,
+    answerRevealSeconds: 15,
   } as ArcadeConfig,
   cumArcadeSeconds: 0,
   cumLessonSeconds: 0,
@@ -625,6 +627,14 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
     if (cfg && cfg.lessonScreenSeconds === undefined) cfg.lessonScreenSeconds = 6;
     const stateAny = state as Record<string, unknown>;
     if (stateAny.videosWatched === undefined) stateAny.videosWatched = [];
+  }
+  if (fromVersion < 21) {
+    // Explanations now hide the worked solution for a "think-time" delay before
+    // revealing it. Seed the default (15s) for any install missing the field.
+    const cfg = (state as Record<string, unknown>).arcadeConfig as
+      | (ArcadeConfig & Record<string, unknown>)
+      | undefined;
+    if (cfg && cfg.answerRevealSeconds === undefined) cfg.answerRevealSeconds = 15;
   }
   return state;
 }
@@ -1225,7 +1235,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 20,
+      version: 21,
       migrate: migrateProgress,
     },
   ),

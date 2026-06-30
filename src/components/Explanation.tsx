@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MathText } from './MathText';
+import { useProgress } from '../state/progress';
 
 interface AltExplanation {
   title: string;
@@ -12,8 +13,68 @@ interface Props {
   alternatives?: AltExplanation[];
 }
 
+// Think-time cover: hides the worked solution for a configurable delay so the
+// student tries the problem first, then auto-reveals. Delay is set by the
+// grown-ups in Settings (arcadeConfig.answerRevealSeconds; 0 = instant).
+function ThinkTimeCover({ total, left }: { total: number; left: number }) {
+  const pct = total > 0 ? Math.max(0, Math.min(1, left / total)) : 0;
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="mt-4 bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 text-center"
+    >
+      <div className="text-3xl">🧠</div>
+      <div className="mt-2 font-display font-extrabold text-amber-900">
+        Give it a try first!
+      </div>
+      <p className="text-sm text-amber-800/90 mt-1">
+        Work it out yourself — the step-by-step answer appears in a moment.
+      </p>
+      <div className="mt-4 flex items-center justify-center gap-2">
+        <span className="text-2xl font-display font-extrabold tabular-nums text-amber-900">
+          {left}s
+        </span>
+      </div>
+      <div className="mt-2 h-2 w-full rounded-full bg-amber-200 overflow-hidden">
+        <motion.div
+          className="h-full bg-amber-500"
+          animate={{ width: `${pct * 100}%` }}
+          transition={{ duration: 0.25, ease: 'linear' }}
+        />
+      </div>
+    </motion.div>
+  );
+}
+
 export function Explanation({ steps, alternatives }: Props) {
   const [openAlt, setOpenAlt] = useState<number | null>(null);
+  const delay = useProgress((s) => s.arcadeConfig.answerRevealSeconds) ?? 15;
+  const [revealed, setRevealed] = useState(delay <= 0);
+  const [left, setLeft] = useState(delay);
+
+  useEffect(() => {
+    if (delay <= 0) {
+      setRevealed(true);
+      return;
+    }
+    setRevealed(false);
+    setLeft(delay);
+    const start = Date.now();
+    const id = window.setInterval(() => {
+      const rem = Math.max(0, delay - Math.round((Date.now() - start) / 1000));
+      setLeft(rem);
+      if (rem <= 0) {
+        window.clearInterval(id);
+        setRevealed(true);
+      }
+    }, 250);
+    return () => window.clearInterval(id);
+  }, [delay]);
+
+  if (!revealed) {
+    return <ThinkTimeCover total={delay} left={left} />;
+  }
 
   return (
     <motion.div

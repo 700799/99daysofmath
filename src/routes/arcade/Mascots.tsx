@@ -23,14 +23,18 @@ export type MascotKind =
   | 'crewmate3'
   | 'panda'
   | 'ninja'
-  | 'clerk';
+  | 'clerk'
+  | 'redpanda'
+  | 'raccoon'
+  | 'turtle'
+  | 'shark';
 
 export type MascotExpr = 'happy' | 'surprised' | 'dizzy' | 'cheer' | 'ko';
 
 export const MASCOT_KINDS: MascotKind[] = [
   'dragon', 'robot', 'frog', 'pet', 'cat', 'bunny', 'fox',
   'unicorn', 'penguin', 'monkey', 'crewmate', 'crewmate2', 'crewmate3',
-  'panda', 'ninja', 'clerk',
+  'panda', 'ninja', 'clerk', 'redpanda', 'raccoon', 'turtle', 'shark',
 ];
 
 const OUTLINE = { stroke: '#1f2937', strokeWidth: 4, strokeLinejoin: 'round' as const, strokeLinecap: 'round' as const };
@@ -519,6 +523,120 @@ function Clerk(e: MascotExpr) {
   );
 }
 
+// Red panda — pointed cream-tipped ears, white cheek/brow markings, dark tear
+// stripes and a striped curling tail.
+function RedPanda(e: MascotExpr) {
+  return (
+    <g {...OUTLINE}>
+      <defs>
+        <radialGradient id="m-rpan" cx="50%" cy="40%" r="65%">
+          <stop offset="0%" stopColor="#fb923c" />
+          <stop offset="100%" stopColor="#c2410c" />
+        </radialGradient>
+      </defs>
+      {/* striped tail */}
+      <path d="M68 74 q22 4 18 -16 q-3 -11 -12 -8" fill="#9a3412" />
+      <path d="M84 60 q4 5 1 10 M77 56 q4 6 1 12 M71 53 q4 6 1 12" stroke="#451a03" strokeWidth={2.4} fill="none" />
+      {/* ears */}
+      <path d="M28 26 L22 7 L43 22 Z" fill="url(#m-rpan)" />
+      <path d="M72 26 L78 7 L57 22 Z" fill="url(#m-rpan)" />
+      <path d="M30 22 L27 13 L39 21 Z" fill="#fff7ed" stroke="none" />
+      <path d="M70 22 L73 13 L61 21 Z" fill="#fff7ed" stroke="none" />
+      {/* head */}
+      <circle cx="50" cy="48" r="27" fill="url(#m-rpan)" />
+      {/* white cheek + muzzle markings */}
+      <path d="M50 42 Q30 44 34 64 Q42 72 50 70 Q58 72 66 64 Q70 44 50 42 Z" fill="#fff7ed" stroke="none" />
+      <ellipse cx="35" cy="37" rx="6.5" ry="4.5" fill="#fff7ed" stroke="none" />
+      <ellipse cx="65" cy="37" rx="6.5" ry="4.5" fill="#fff7ed" stroke="none" />
+      {/* dark tear stripes */}
+      <path d="M42 50 q-3 8 -5 13 M58 50 q3 8 5 13" stroke="#7c2d12" strokeWidth={3} fill="none" />
+      {/* nose */}
+      <path d="M47 52 L53 52 L50 57 Z" fill="#7c2d12" stroke="none" />
+      <Face cx={50} ey={46} spread={8} eyeR={5} mouthY={58} expr={e} cheek="#fb7185" />
+    </g>
+  );
+}
+
+// Raccoon — round grey head, dark bandit mask behind the eyes, white muzzle.
+function Raccoon(e: MascotExpr) {
+  return (
+    <g {...OUTLINE}>
+      <defs>
+        <radialGradient id="m-rac" cx="50%" cy="40%" r="66%">
+          <stop offset="0%" stopColor="#cbd5e1" />
+          <stop offset="100%" stopColor="#94a3b8" />
+        </radialGradient>
+      </defs>
+      {/* striped tail */}
+      <path d="M70 76 q20 6 16 -14 q-3 -10 -11 -7" fill="#64748b" />
+      <path d="M84 62 q3 5 0 10 M77 58 q3 6 0 11" stroke="#334155" strokeWidth={2.4} fill="none" />
+      {/* ears */}
+      <circle cx="30" cy="26" r="10" fill="url(#m-rac)" />
+      <circle cx="70" cy="26" r="10" fill="url(#m-rac)" />
+      <circle cx="30" cy="27" r="4.5" fill="#475569" stroke="none" />
+      <circle cx="70" cy="27" r="4.5" fill="#475569" stroke="none" />
+      {/* head */}
+      <circle cx="50" cy="50" r="27" fill="url(#m-rac)" />
+      {/* bandit mask behind eyes */}
+      <path d="M28 45 Q39 38 46 44 Q50 47 54 44 Q61 38 72 45 Q70 57 60 56 Q54 53 50 54 Q46 53 40 56 Q30 57 28 45 Z" fill="#334155" stroke="none" />
+      {/* white muzzle */}
+      <path d="M50 52 Q37 54 41 68 Q50 74 59 68 Q63 54 50 52 Z" fill="#f8fafc" stroke="none" />
+      <path d="M47 58 L53 58 L50 63 Z" fill="#1f2937" stroke="none" />
+      <Face cx={50} ey={48} spread={8} eyeR={5} mouthY={63} expr={e} cheek="#fb7185" />
+    </g>
+  );
+}
+
+// Turtle — domed segmented shell, little feet, and a friendly head poking out.
+function Turtle(e: MascotExpr) {
+  return (
+    <g {...OUTLINE}>
+      <defs>
+        <radialGradient id="m-tur" cx="50%" cy="35%" r="70%">
+          <stop offset="0%" stopColor="#6ee7b7" />
+          <stop offset="100%" stopColor="#059669" />
+        </radialGradient>
+      </defs>
+      {/* feet */}
+      <ellipse cx="24" cy="70" rx="8" ry="6" fill="#34d399" />
+      <ellipse cx="76" cy="70" rx="8" ry="6" fill="#34d399" />
+      {/* shell */}
+      <path d="M18 68 Q18 30 50 30 Q82 30 82 68 Z" fill="url(#m-tur)" />
+      <path d="M50 30 V68 M30 40 Q50 52 70 40 M24 56 Q50 62 76 56" stroke="#065f46" strokeWidth={3} fill="none" />
+      <path d="M44 45 L56 45 L60 55 L50 61 L40 55 Z" fill="#10b981" stroke="#065f46" strokeWidth={2.5} />
+      {/* head */}
+      <circle cx="50" cy="80" r="12" fill="#6ee7b7" />
+      <Face cx={50} ey={78} spread={5} eyeR={3.4} mouthY={85} expr={e} cheek="#fb7185" />
+    </g>
+  );
+}
+
+// Shark — steel-blue body, dorsal fin, gills, white belly and a toothy grin.
+function Shark(e: MascotExpr) {
+  return (
+    <g {...OUTLINE}>
+      <defs>
+        <radialGradient id="m-shk" cx="50%" cy="38%" r="68%">
+          <stop offset="0%" stopColor="#60a5fa" />
+          <stop offset="100%" stopColor="#2563eb" />
+        </radialGradient>
+      </defs>
+      {/* dorsal fin */}
+      <path d="M50 6 L39 30 L60 30 Z" fill="url(#m-shk)" />
+      {/* body */}
+      <circle cx="50" cy="52" r="30" fill="url(#m-shk)" />
+      {/* white belly */}
+      <path d="M23 60 Q50 80 77 60 Q73 78 50 81 Q27 78 23 60 Z" fill="#eff6ff" stroke="none" />
+      {/* gills */}
+      <path d="M29 46 q3 7 0 13 M36 43 q3 8 0 15" stroke="#1e3a8a" strokeWidth={2.2} fill="none" />
+      <Face cx={50} ey={44} spread={9} eyeR={5} mouthY={62} expr={e} cheek="#fb7185" />
+      {/* fang accents at the mouth corners */}
+      <path d="M41 60 l2.5 4 l2.5 -4 Z" fill="#fff" stroke={INK} strokeWidth={1.4} strokeLinejoin="round" />
+      <path d="M54 60 l2.5 4 l2.5 -4 Z" fill="#fff" stroke={INK} strokeWidth={1.4} strokeLinejoin="round" />
+    </g>
+  );
+}
+
 const PARTS: Record<MascotKind, (e: MascotExpr) => JSX.Element> = {
   dragon: Dragon,
   robot: Robot,
@@ -536,6 +654,10 @@ const PARTS: Record<MascotKind, (e: MascotExpr) => JSX.Element> = {
   panda: Panda,
   ninja: Ninja,
   clerk: Clerk,
+  redpanda: RedPanda,
+  raccoon: Raccoon,
+  turtle: Turtle,
+  shark: Shark,
 };
 
 export function Mascot({
@@ -569,19 +691,19 @@ export const GAME_MASCOT: Record<string, MascotKind> = {
   runner: 'fox',
   platformer: 'frog',
   racer: 'robot',
-  digger: 'monkey',
+  digger: 'raccoon',
   tiles: 'robot',
   snake: 'frog',
   bricks: 'robot',
   sudoku: 'penguin',
   tetris: 'crewmate',
-  boba: 'cat',
+  boba: 'redpanda',
   sushi: 'penguin',
   tictactoe: 'cat',
   kpop: 'unicorn',
   survival: 'fox',
-  fruit: 'bunny',
-  town: 'penguin',
+  fruit: 'shark',
+  town: 'turtle',
   sumo: 'monkey',
   monster: 'dragon',
   turbo: 'robot',
