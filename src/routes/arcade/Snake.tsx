@@ -3,6 +3,7 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // Math Snake — steer the snake to eat the food labelled with the correct
 // answer to the shown problem. Right answer = grow + score; a wrong answer, a
@@ -47,6 +48,8 @@ export function Snake() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const addArcadePoints = useProgress((s) => s.addArcadePoints);
   const config = useProgress((s) => s.arcadeConfig);
+  const hapticsOn = useProgress((s) => s.hapticsEnabled);
+  const buzz = (p: number | number[]) => { if (hapticsOn) haptic(p); };
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
 
   const snakeRef = useRef<Cell[]>([]);
@@ -124,12 +127,14 @@ export function Snake() {
     if (doneRef.current) return;
     doneRef.current = true;
     addArcadePoints(scoreRef.current);
+    sfx.lose();
     const xp = Math.max(1, Math.min(20, Math.floor(scoreRef.current / 30) + 1));
     setOutcome(recordArcadePlay('snake', xp));
   };
 
   const loseLife = () => {
     livesRef.current -= 1;
+    sfx.hurt(); buzz(HAPTIC.death);
     if (livesRef.current <= 0) {
       finish();
       return false;
@@ -161,6 +166,7 @@ export function Snake() {
           snakeRef.current.unshift(nh); // grow
           scoreRef.current += 10;
           eatenRef.current += 1;
+          sfx.coin(); buzz(HAPTIC.pickup);
           placeFoods();
         } else {
           loseLife(); // wrong answer
