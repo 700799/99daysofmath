@@ -10,9 +10,9 @@ import { chooseGhostDir, DIRS, UP, DOWN, LEFT, RIGHT, type Dir } from './mazeAI'
 // Loosen a boulder by digging beneath it to crush a chaser. Caught or crushed
 // and you do a quick math lesson and lose a life. Clear the gems to advance.
 
-const COLS = 15;
-const ROWS = 13;
-const TILE = 24;
+const COLS = 9;
+const ROWS = 9;
+const TILE = 40;
 const W = COLS * TILE;
 const H = ROWS * TILE;
 const FALL_SPEED = 6; // tiles / sec
@@ -21,16 +21,17 @@ type Mob = { c: number; r: number; tc: number; tr: number; prog: number; dir: Di
 type Monster = Mob & { home: { c: number; r: number }; canDig: boolean };
 type Rock = { c: number; y: number; stop: number; falling: boolean; dead: boolean };
 
+const GEM_EMOJI = ['💎', '💍', '👑', '🔶', '🔷', '🟣', '🔴', '🟢', '🟡', '🪙', '💠', '🟠'];
 const GEM_CELLS = [
-  [3, 2], [7, 3], [11, 4], [2, 6], [6, 7], [10, 8], [4, 10], [12, 10], [8, 5],
+  [3, 1], [6, 2], [2, 3], [7, 4], [4, 4], [1, 5], [6, 6], [3, 7],
 ];
 const ROCK_CELLS = [
-  [5, 1], [9, 2], [3, 4], [11, 6], [7, 8],
+  [4, 2], [2, 4], [5, 5], [7, 6],
 ];
 const MONSTER_SPAWNS = [
   { c: COLS - 2, r: 1 },
   { c: COLS - 2, r: ROWS - 2 },
-  { c: 7, r: 1 },
+  { c: 4, r: 1 },
 ];
 
 function renderPos(m: Mob): { x: number; y: number } {
@@ -68,7 +69,7 @@ export function GemDigger() {
   const pausedRef = useArcadePausedRef();
 
   const dirtRef = useRef<boolean[][]>([]);
-  const gemsRef = useRef<Set<string>>(new Set());
+  const gemsRef = useRef<Map<string, string>>(new Map());
   const rocksRef = useRef<Rock[]>([]);
   const playerRef = useRef<Mob>({ c: 1, r: ROWS - 2, tc: 1, tr: ROWS - 2, prog: 0, dir: null });
   const monstersRef = useRef<Monster[]>([]);
@@ -101,9 +102,10 @@ export function GemDigger() {
     spawns.forEach((s) => (dirt[s.r][s.c] = false));
     dirtRef.current = dirt;
 
-    const gems = new Set<string>();
+    const gems = new Map<string, string>();
     GEM_CELLS.forEach(([c, r]) => {
-      if (dirt[r]?.[c] !== undefined && !(c === 1 && r === ROWS - 2)) gems.add(`${c},${r}`);
+      if (dirt[r]?.[c] !== undefined && !(c === 1 && r === ROWS - 2))
+        gems.set(`${c},${r}`, GEM_EMOJI[Math.floor(Math.random() * GEM_EMOJI.length)]);
     });
     gemsRef.current = gems;
 
@@ -410,15 +412,15 @@ export function GemDigger() {
         <div className="absolute top-0 left-0" style={{ width: W, height: H }}>
           <DirtLayer dirt={dirtRef.current} version={dirtVersion} />
           {/* gems */}
-          {Array.from(gemsRef.current).map((k) => {
+          {Array.from(gemsRef.current.entries()).map(([k, gem]) => {
             const [c, r] = k.split(',').map(Number);
             return (
               <div
                 key={k}
                 className="absolute flex items-center justify-center"
-                style={{ left: c * TILE, top: r * TILE, width: TILE, height: TILE, fontSize: TILE - 8 }}
+                style={{ left: c * TILE, top: r * TILE, width: TILE, height: TILE, fontSize: TILE - 12 }}
               >
-                💎
+                {gem}
               </div>
             );
           })}
@@ -450,9 +452,9 @@ export function GemDigger() {
           {/* player */}
           <div
             className="absolute flex items-center justify-center"
-            style={{ left: pp.x * TILE, top: pp.y * TILE, width: TILE, height: TILE, fontSize: TILE - 4, transform: `scaleX(${faceRef.current})` }}
+            style={{ left: pp.x * TILE, top: pp.y * TILE, width: TILE, height: TILE, fontSize: TILE - 8, transform: `scaleX(${faceRef.current})` }}
           >
-            ⛏️
+            🦝
           </div>
         </div>
       </div>
@@ -468,7 +470,7 @@ export function GemDigger() {
         <DigBtn label="→" onPress={() => (nextDirRef.current = RIGHT)} />
       </div>
       <p className="text-center text-xs text-slate-500 mt-2">
-        Dig out all 💎. Drop a 🪨 on a 👾 to squash it. Don't get cornered!
+        Dig out all the gems 💎. Drop a 🪨 on a 👾 to squash it. Don't get cornered!
       </p>
     </div>
   );

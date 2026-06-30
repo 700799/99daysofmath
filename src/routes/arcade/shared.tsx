@@ -207,7 +207,7 @@ export function ArcadeEndCard({
           Tip: a game you haven't played today pays full XP!
         </p>
       )}
-      {!bonusDone && <MilestoneQuiz onDone={() => setBonusDone(true)} />}
+      {!bonusDone && <MilestoneQuiz onDone={() => setBonusDone(true)} len="word" label="📖 Milestone story problem!" />}
       <button
         type="button"
         onClick={replay}
