@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mascot } from '../../components/Mascot';
 import { Mascot as CharMascot, gameMascot } from './Mascots';
+import { MilestoneQuiz } from './MilestoneQuiz';
 import { Confetti } from '../../components/Celebration';
 import { StickerCelebration } from '../../components/StickerCelebration';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
@@ -160,6 +161,7 @@ export function ArcadeEndCard({
   const replay = session ? session.requestReplay : onReplay;
   const replayLabel = session ? '📚 Learn & play again' : 'Play again';
   const [showStickers, setShowStickers] = useState(true);
+  const [bonusDone, setBonusDone] = useState(false);
   // Central end-of-game sound + haptic so every game gets feedback.
   useEffect(() => {
     if (win) sfx.win();
@@ -205,6 +207,7 @@ export function ArcadeEndCard({
           Tip: a game you haven't played today pays full XP!
         </p>
       )}
+      {!bonusDone && <MilestoneQuiz onDone={() => setBonusDone(true)} len="word" label="📖 Milestone story problem!" />}
       <button
         type="button"
         onClick={replay}

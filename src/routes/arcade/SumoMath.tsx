@@ -23,10 +23,18 @@ function ri(a: number, b: number) {
   return Math.floor(Math.random() * (b - a + 1)) + a;
 }
 
-const SUP: Record<number, string> = { 2: '²', 3: '³' };
+const SUP: Record<number, string> = { 2: '²', 3: '³', 4: '⁴', 5: '⁵', 6: '⁶' };
+
+function factorsOf(n: number): number[] {
+  const f: number[] = [];
+  for (let i = 1; i <= n; i++) if (n % i === 0) f.push(i);
+  return f;
+}
+
+const FACTOR_NUMS = [8, 10, 12, 14, 15, 16, 18, 20, 21, 22, 27, 28];
 
 function makeQ(): Q {
-  const kind = ri(0, 2);
+  const kind = ri(0, 3);
   if (kind === 0) {
     // multiplication: single-digit operands
     const a = ri(2, 9), b = ri(2, 9);
@@ -37,9 +45,18 @@ function makeQ(): Q {
     const b = ri(2, 9), ans = ri(2, 9);
     return { prompt: `${b * ans} ÷ ${b}`, answer: ans };
   }
-  // exponent: shown as a real superscript (e.g. 4²), not "4^2"
-  const base = ri(2, 7), exp = ri(2, 3);
-  return { prompt: `${base}${SUP[exp]}`, answer: Math.pow(base, exp) };
+  if (kind === 2) {
+    // exponent: power > 2 only when the base is 2 or 10; otherwise just squares
+    const base = [2, 3, 4, 5, 6, 7, 10][ri(0, 6)];
+    const exp = base === 2 ? ri(2, 6) : base === 10 ? ri(2, 3) : 2;
+    return { prompt: `${base}${SUP[exp]}`, answer: Math.pow(base, exp) };
+  }
+  // factor: show the whole factor list with one blank — find the missing factor
+  const n = FACTOR_NUMS[ri(0, FACTOR_NUMS.length - 1)];
+  const fs = factorsOf(n);
+  const hideAt = ri(1, fs.length - 2); // never hide 1 or n itself
+  const shown = fs.map((f, i) => (i === hideAt ? '?' : String(f))).join(' · ');
+  return { prompt: `Factors of ${n}: ${shown}`, answer: fs[hideAt] };
 }
 
 const PRAISE = ['Yokozuna! 🏆', 'Powerful! 💪', 'Banzai! 🎌', 'Great shove! 🙌', 'Too strong! 🔥', 'Nice one! ⭐'];
@@ -261,7 +278,7 @@ export function SumoMath() {
         {!tossing && (
           <div className="relative z-30 mt-2">
             <div
-              className={`mx-auto max-w-[200px] rounded-2xl border-2 py-4 text-center text-3xl font-display font-extrabold tabular-nums ${
+              className={`mx-auto max-w-[280px] rounded-2xl border-2 py-4 px-2 text-center font-display font-extrabold ${q.prompt.length > 8 ? 'text-base leading-snug' : 'text-3xl tabular-nums'} ${
                 flash === 'good' ? 'border-emerald-300 bg-emerald-50' : flash === 'bad' ? 'border-rose-300 bg-rose-50' : 'border-slate-200 bg-white/90'
               }`}
             >
@@ -291,7 +308,7 @@ export function SumoMath() {
         </div>
       )}
       <p className="text-center text-[11px] text-slate-500 mt-2">
-        Answer ×, ÷ and exponents in under {PER_Q}s to shove your rival! Get 7/10 to toss him out.
+        Answer ×, ÷, exponents &amp; factors in under {PER_Q}s to shove your rival! Get 7/10 to toss him out.
       </p>
     </div>
   );
