@@ -67,6 +67,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'hero', path: '/arcade/hero', emoji: '🦸', name: 'Hero Rescue', blurb: 'Pull pins in the right order. Solve to act.', baseXp: 12, gradient: 'from-amber-500 to-rose-700' },
   { id: 'escape', path: '/arcade/escape', emoji: '🔐', name: 'Logic Escape', blurb: 'Crack the logic puzzles. Escape before time runs out!', baseXp: 12, gradient: 'from-slate-700 to-amber-700' },
   { id: 'tank', path: '/arcade/tank', emoji: '🎯', name: 'Tank Attack', blurb: 'Aim with angle + power. Blast the evil robots!', baseXp: 12, gradient: 'from-stone-600 to-emerald-800' },
+  { id: 'rig', path: '/arcade/rig', emoji: '🛻', name: 'Desert Rig', blurb: 'Defend the War Rig! Solve fast to fire.', baseXp: 12, gradient: 'from-amber-600 to-orange-800' },
   { id: 'dress', path: '/arcade/dress', emoji: '👗', name: 'Dress to Impress', blurb: 'Style the theme. Match the palette ratio. Walk the runway!', baseXp: 12, gradient: 'from-fuchsia-500 to-violet-600' },
 ];
 

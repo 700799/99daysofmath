@@ -69,6 +69,7 @@ export const GAME_THEME: Record<string, StageTheme> = {
   hero: 'cave',
   escape: 'cave',
   tank: 'sky',
+  rig: 'sky',
   dress: 'candy',
 };
 

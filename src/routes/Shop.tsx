@@ -4,7 +4,12 @@ import { motion } from 'framer-motion';
 import { useProgress } from '../state/progress';
 import { ARCADE_GAMES, PREMIUM_GAMES } from './arcade/shared';
 import { Mascot, gameMascot } from './arcade/Mascots';
+import { makeAdaptive, pickLesson, type Challenge } from './arcade/MidGameChallenge';
+import { LessonCard } from '../components/LessonCard';
 import { sfx, haptic, HAPTIC } from '../utils/arcadeAV';
+
+const EARN_PER = 15; // coins per correct word problem
+const EARN_ROUND = 3; // problems per earning round
 
 // Coin Shop — an in-app store (not a game). Spend coins (earned by playing arcade
 // games) to buy avatar cosmetics (hats, outfits, pets, backgrounds) and to unlock
@@ -66,8 +71,13 @@ export function Shop() {
   const buyCosmetic = useProgress((s) => s.buyCosmetic);
   const equipCosmetic = useProgress((s) => s.equipCosmetic);
   const unlockGame = useProgress((s) => s.unlockGame);
+  const addCoins = useProgress((s) => s.addCoins);
+  const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
+  const arcadeUnit = useProgress((s) => s.arcadeUnit);
   const [tab, setTab] = useState<Slot | 'games'>('hat');
   const [flash, setFlash] = useState<string | null>(null);
+  const [earn, setEarn] = useState<{ c: Challenge; input: string; wrong: boolean; done: number } | null>(null);
+  const [help, setHelp] = useState(false);
 
   const note = (msg: string) => {
     setFlash(msg);
@@ -96,6 +106,24 @@ export function Shop() {
     note('Game unlocked! 🎮');
   };
 
+  const startEarn = () => {
+    const lvl = useProgress.getState().arcadeLevels[arcadeUnit] ?? 1;
+    setEarn({ c: makeAdaptive(arcadeUnit, lvl, 'word'), input: '', wrong: false, done: 0 });
+  };
+  const submitEarn = () => {
+    if (!earn) return;
+    const n = Number(earn.input.trim());
+    if (earn.input.trim() === '' || Number.isNaN(n)) return;
+    const correct = n === earn.c.answer;
+    recordArcadeAnswer(arcadeUnit, correct);
+    if (!correct) { sfx.hurt(); haptic(HAPTIC.hit); setEarn({ ...earn, wrong: true, input: '' }); return; }
+    addCoins(EARN_PER); sfx.coin(); haptic(HAPTIC.win);
+    const done = earn.done + 1;
+    if (done >= EARN_ROUND) { setEarn(null); note(`Earned 🪙 ${EARN_PER * done}!`); return; }
+    const lvl = useProgress.getState().arcadeLevels[arcadeUnit] ?? 1;
+    setEarn({ c: makeAdaptive(arcadeUnit, lvl, 'word'), input: '', wrong: false, done });
+  };
+
   const bgGrad = (equipped.bg && BG_GRADIENT[equipped.bg]) || 'from-slate-200 to-slate-300';
 
   return (
@@ -120,6 +148,16 @@ export function Shop() {
           )}
         </div>
         <div className="mt-1 text-center text-xs font-display font-extrabold text-white/90 drop-shadow">Your avatar</div>
+      </div>
+
+      {/* earn coins (word problems) + always-available lessons */}
+      <div className="mt-3 grid grid-cols-2 gap-2">
+        <button type="button" onClick={startEarn} className="min-h-12 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5">
+          💰 Earn coins
+        </button>
+        <button type="button" onClick={() => setHelp(true)} className="min-h-12 rounded-2xl bg-indigo-500 hover:bg-indigo-600 text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5">
+          📚 How-to lessons
+        </button>
       </div>
 
       {flash && (
@@ -186,6 +224,42 @@ export function Shop() {
       )}
 
       <Link to="/" className="mt-6 inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700">← Back home</Link>
+
+      {/* earn-coins word-problem round */}
+      {earn && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
+          <div className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl">
+            <div className="text-xs font-display font-extrabold uppercase tracking-widest text-emerald-600">💰 Earn coins · {earn.done + 1}/{EARN_ROUND}</div>
+            <div className="mt-2 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-base font-display font-extrabold leading-snug break-words text-slate-800">{earn.c.prompt}</div>
+            <div className={`mt-3 h-11 rounded-xl border-2 flex items-center justify-center text-2xl font-display font-extrabold tabular-nums ${earn.wrong ? 'border-rose-300 bg-rose-50 text-rose-700' : 'border-slate-200 text-slate-900'}`}>
+              {earn.input || (earn.wrong ? 'Try again!' : '?')}
+            </div>
+            <div className="mt-3 grid grid-cols-3 gap-2">
+              {['1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '0', 'del'].map((k) => (
+                <button key={k} type="button" onClick={() => setEarn((e) => (e ? { ...e, wrong: false, input: k === 'del' ? e.input.slice(0, -1) : k === '-' ? (e.input.startsWith('-') ? e.input.slice(1) : '-' + e.input) : e.input.length < 6 ? e.input + k : e.input } : e))} className="min-h-11 rounded-xl bg-slate-100 hover:bg-slate-200 font-display font-extrabold text-lg text-slate-800 active:translate-y-0.5">
+                  {k === 'del' ? '⌫' : k}
+                </button>
+              ))}
+            </div>
+            <button type="button" onClick={submitEarn} disabled={!earn.input.trim()} className="mt-3 w-full min-h-11 rounded-2xl bg-emerald-500 disabled:bg-slate-300 text-white font-display font-extrabold">Answer (+🪙{EARN_PER})</button>
+            <div className="mt-2 flex gap-2">
+              <button type="button" onClick={() => { setEarn(null); setHelp(true); }} className="flex-1 min-h-10 rounded-2xl bg-indigo-100 text-indigo-800 font-display font-extrabold text-sm">📚 Show me how</button>
+              <button type="button" onClick={() => setEarn(null)} className="flex-1 min-h-10 rounded-2xl bg-slate-200 text-slate-700 font-display font-extrabold text-sm">Done</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* always-available how-to lesson */}
+      {help && (() => {
+        const lesson = pickLesson(arcadeUnit);
+        if (!lesson) { setHelp(false); return null; }
+        return (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
+            <LessonCard lesson={lesson} onClose={() => setHelp(false)} onStart={() => setHelp(false)} />
+          </div>
+        );
+      })()}
     </div>
   );
 }
