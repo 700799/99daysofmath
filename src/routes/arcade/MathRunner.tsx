@@ -20,7 +20,7 @@ const SESSION_SECONDS = 60;
 const FRUITS = ['🍎', '🍓', '🍌', '🍉', '🍇', '🍊', '🍑', '🥝', '🍒', '🥭'] as const;
 
 // Players pick which runner they want — all the new bold mascots.
-const RUNNERS: MascotKind[] = ['ninja', 'panda', 'redpanda', 'raccoon', 'turtle', 'shark', 'fox', 'cat'];
+const RUNNERS: MascotKind[] = ['ninja', 'panda', 'redpanda', 'raccoon', 'turtle', 'shark', 'capsuleR', 'capsuleB', 'capsuleP', 'capsuleM', 'fox', 'cat'];
 
 type Scene = 'mountain' | 'city' | 'parking';
 const SCENES: Scene[] = ['mountain', 'city', 'parking'];

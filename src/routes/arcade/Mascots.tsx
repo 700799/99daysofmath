@@ -27,7 +27,11 @@ export type MascotKind =
   | 'redpanda'
   | 'raccoon'
   | 'turtle'
-  | 'shark';
+  | 'shark'
+  | 'capsuleR'
+  | 'capsuleB'
+  | 'capsuleP'
+  | 'capsuleM';
 
 export type MascotExpr = 'happy' | 'surprised' | 'dizzy' | 'cheer' | 'ko';
 
@@ -35,6 +39,7 @@ export const MASCOT_KINDS: MascotKind[] = [
   'dragon', 'robot', 'frog', 'pet', 'cat', 'bunny', 'fox',
   'unicorn', 'penguin', 'monkey', 'crewmate', 'crewmate2', 'crewmate3',
   'panda', 'ninja', 'clerk', 'redpanda', 'raccoon', 'turtle', 'shark',
+  'capsuleR', 'capsuleB', 'capsuleP', 'capsuleM',
 ];
 
 const OUTLINE = { stroke: '#1f2937', strokeWidth: 4, strokeLinejoin: 'round' as const, strokeLinecap: 'round' as const };
@@ -637,6 +642,42 @@ function Shark(e: MascotExpr) {
   );
 }
 
+// Capsule-toy buddy — a round yellow blob popping out of a coloured gachapon
+// capsule shell, with little ear-tufts and stub arms. Four colourways. (Inspired
+// by capsule-toy-store mascots; all original art.)
+function makeCapsule(shell: string, shellDark: string, bow = false) {
+  return (e: MascotExpr) => (
+    <g {...OUTLINE}>
+      <defs>
+        <radialGradient id={`m-cap-${shell.slice(1)}`} cx="50%" cy="40%" r="62%">
+          <stop offset="0%" stopColor="#fde68a" />
+          <stop offset="100%" stopColor="#f59e0b" />
+        </radialGradient>
+      </defs>
+      {/* capsule cup */}
+      <path d="M19 58 Q19 92 50 92 Q81 92 81 58 Z" fill={shell} />
+      {/* stub arms */}
+      <ellipse cx="21" cy="60" rx="6.5" ry="4.5" fill="#fcd34d" />
+      <ellipse cx="79" cy="60" rx="6.5" ry="4.5" fill="#fcd34d" />
+      {/* ear tufts */}
+      <path d="M39 20 L35 8 L46 16 Z" fill="#fcd34d" />
+      <path d="M61 20 L65 8 L54 16 Z" fill="#fcd34d" />
+      {/* body / head */}
+      <circle cx="50" cy="46" r="27" fill={`url(#m-cap-${shell.slice(1)})`} />
+      {/* capsule seam rim over the body */}
+      <path d="M20 60 Q50 72 80 60 L81 65 Q50 78 19 65 Z" fill={shellDark} stroke="none" />
+      {bow && (
+        <g>
+          <path d="M50 13 L41 8 L41 19 Z" fill={shell} />
+          <path d="M50 13 L59 8 L59 19 Z" fill={shell} />
+          <circle cx="50" cy="13.5" r="3" fill={shellDark} stroke="none" />
+        </g>
+      )}
+      <Face cx={50} ey={44} spread={8} eyeR={5.5} mouthY={54} expr={e} cheek="#fb7185" />
+    </g>
+  );
+}
+
 const PARTS: Record<MascotKind, (e: MascotExpr) => JSX.Element> = {
   dragon: Dragon,
   robot: Robot,
@@ -658,6 +699,10 @@ const PARTS: Record<MascotKind, (e: MascotExpr) => JSX.Element> = {
   raccoon: Raccoon,
   turtle: Turtle,
   shark: Shark,
+  capsuleR: makeCapsule('#ef4444', '#b91c1c'),
+  capsuleB: makeCapsule('#3b82f6', '#1d4ed8'),
+  capsuleP: makeCapsule('#ec4899', '#be185d', true),
+  capsuleM: makeCapsule('#10b981', '#047857'),
 };
 
 export function Mascot({
@@ -692,14 +737,14 @@ export const GAME_MASCOT: Record<string, MascotKind> = {
   platformer: 'frog',
   racer: 'robot',
   digger: 'raccoon',
-  tiles: 'robot',
+  tiles: 'capsuleB',
   snake: 'frog',
   bricks: 'robot',
   sudoku: 'penguin',
   tetris: 'crewmate',
   boba: 'redpanda',
   sushi: 'penguin',
-  tictactoe: 'cat',
+  tictactoe: 'capsuleP',
   kpop: 'unicorn',
   survival: 'fox',
   fruit: 'shark',
@@ -707,13 +752,13 @@ export const GAME_MASCOT: Record<string, MascotKind> = {
   sumo: 'monkey',
   monster: 'dragon',
   turbo: 'robot',
-  wordle: 'pet',
+  wordle: 'capsuleR',
   hero: 'crewmate2',
   escape: 'crewmate3',
   asteroids: 'crewmate',
   tank: 'crewmate2',
   rig: 'crewmate',
-  mathpop: 'frog',
+  mathpop: 'capsuleM',
   dress: 'unicorn',
   taiko: 'panda',
   shinobi: 'ninja',

@@ -13,7 +13,7 @@ import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 const W = 360;
 const H = 320;
-const R = 19;           // bubble radius
+const R = 24;           // bubble radius
 const TOP = 30;         // ceiling where bubbles stick
 const MAX_STUCK = 12;   // screen "full" → game over
 
@@ -161,10 +161,39 @@ export function MathPop() {
   return (
     <div>
       <ArcadeHeader title="Math Pop" emoji="🫧" />
-      <div className="max-w-md mx-auto mb-2 flex items-center justify-between gap-2 text-sm font-display font-extrabold">
-        <span className="rounded-full bg-cyan-100 text-cyan-800 px-3 py-1">🎯 Target {target.current}</span>
-        <span className={`rounded-full px-3 py-1 tabular-nums ${sum > target.current ? 'bg-rose-100 text-rose-700' : sum === target.current ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-700'}`}>Σ {sum}</span>
-        <span className="rounded-full bg-amber-100 text-amber-800 px-3 py-1 tabular-nums">⭐ {score.current}</span>
+      {/* big, obvious Target = Sum circles */}
+      <div className="max-w-md mx-auto mb-2 flex items-center justify-center gap-3">
+        <div className="flex flex-col items-center">
+          <span className="text-[11px] font-display font-extrabold uppercase tracking-wider text-cyan-600">🎯 Target</span>
+          <div
+            className="flex items-center justify-center rounded-full bg-cyan-50 border-[5px] border-cyan-500 text-cyan-700 font-display font-black tabular-nums shadow-[0_4px_0_0_rgba(0,0,0,0.12)]"
+            style={{ width: 88, height: 88, fontSize: 42 }}
+          >
+            {target.current}
+          </div>
+        </div>
+        <div className="text-3xl font-display font-black text-slate-400">=?</div>
+        <div className="flex flex-col items-center">
+          <span className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500">Your Σ</span>
+          <div
+            className={`flex items-center justify-center rounded-full border-[5px] font-display font-black tabular-nums shadow-[0_4px_0_0_rgba(0,0,0,0.12)] ${
+              sum > target.current
+                ? 'bg-rose-50 border-rose-500 text-rose-600'
+                : sum === target.current
+                  ? 'bg-emerald-50 border-emerald-500 text-emerald-700 animate-pulse'
+                  : 'bg-slate-50 border-slate-400 text-slate-700'
+            }`}
+            style={{ width: 88, height: 88, fontSize: 42 }}
+          >
+            {sum}
+          </div>
+        </div>
+        <div className="ml-1 flex flex-col items-center">
+          <span className="text-[11px] font-display font-extrabold uppercase tracking-wider text-amber-600">⭐ Score</span>
+          <div className="flex h-11 min-w-11 items-center justify-center rounded-full bg-amber-100 px-2 font-display font-extrabold tabular-nums text-amber-800">
+            {score.current}
+          </div>
+        </div>
       </div>
       {/* danger meter */}
       <div className="max-w-md mx-auto mb-2 h-2 rounded-full bg-slate-200 overflow-hidden">
@@ -178,9 +207,9 @@ export function MathPop() {
           {flash.current && <rect x={0} y={0} width={W} height={H} fill={flash.current === 'good' ? 'rgba(16,185,129,0.18)' : 'rgba(244,63,94,0.18)'} />}
           {bubbles.current.map((b) => (
             <g key={b.id} onClick={() => tapBubble(b.id)} style={{ cursor: 'pointer' }}>
-              <circle cx={b.x} cy={b.y} r={R} fill={b.sel ? '#34d399' : b.stuck ? '#fca5a5' : '#7dd3fc'} stroke={b.sel ? '#059669' : '#0284c7'} strokeWidth={b.sel ? 3 : 2} opacity={0.95} />
-              <circle cx={b.x - 6} cy={b.y - 7} r={4} fill="rgba(255,255,255,0.6)" />
-              <text x={b.x} y={b.y} fontSize={17} fontWeight={800} fill="#0c4a6e" textAnchor="middle" dominantBaseline="central">{b.n}</text>
+              <circle cx={b.x} cy={b.y} r={R} fill={b.sel ? '#34d399' : b.stuck ? '#fca5a5' : '#7dd3fc'} stroke={b.sel ? '#059669' : '#0284c7'} strokeWidth={b.sel ? 5 : 3.5} opacity={0.97} />
+              <circle cx={b.x - 8} cy={b.y - 9} r={5} fill="rgba(255,255,255,0.65)" />
+              <text x={b.x} y={b.y} fontSize={23} fontWeight={900} fill="#0c4a6e" textAnchor="middle" dominantBaseline="central">{b.n}</text>
             </g>
           ))}
         </svg>
