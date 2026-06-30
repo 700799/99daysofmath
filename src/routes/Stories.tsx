@@ -23,15 +23,9 @@ interface Story {
 
 const STORIES = storiesData as Story[];
 
-/** Calculate total slides for a story (title + beat sentences + learned). */
+/** Total slides for a story: title + one slide per beat + the learned slide. */
 function getTotalSlides(story: Story): number {
-  let count = 1; // title slide
-  for (const beat of story.beats) {
-    const sentences = beat.body.split(/(?<=[.!?])\s+(?=[A-Z"'])/);
-    count += sentences.length;
-  }
-  if (story.learned) count += 1; // learned slide
-  return count;
+  return 1 + story.beats.length + (story.learned ? 1 : 0);
 }
 
 const EMOJI_BY_DOMAIN: Record<string, string> = {
@@ -85,8 +79,8 @@ export function Stories() {
       </div>
       <p className="text-sm text-slate-600 mb-5">
         Quick stories about famous math people and clever scenarios — animated,
-        one sentence at a time. Tap <b>Continue</b> when you're ready for the
-        next slide.
+        one whole idea at a time. They never move on their own: tap{' '}
+        <b>Continue</b> when you're ready for the next slide.
       </p>
 
       <div className="space-y-6">
