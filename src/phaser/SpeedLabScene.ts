@@ -91,10 +91,11 @@ export class SpeedLabScene extends Phaser.Scene {
 
   private levelIdx = 0;
   private cleared = 0;
-  private phase: 'prompt' | 'run' | 'result' = 'prompt';
+  private phase: 'select' | 'prompt' | 'run' | 'result' = 'select';
   private clock = 0;
   private chosen = 0;
   private car!: Phaser.Physics.Arcade.Image;
+  private idleTween?: Phaser.Tweens.Tween;
   private ui: Phaser.GameObjects.GameObject[] = [];
   private telemetry!: Phaser.GameObjects.Text;
   private clockText!: Phaser.GameObjects.Text;
@@ -112,12 +113,12 @@ export class SpeedLabScene extends Phaser.Scene {
   }
 
   create() {
-    this.drawCarTexture();
+    this.drawVehicleTextures();
     this.drawChrome();
 
-    // the vehicle (Arcade Physics body)
-    this.car = this.physics.add.image(START_X, TRACK_Y, 'speedlab-car');
-    this.car.setDepth(5);
+    // the vehicle (Arcade Physics body) — texture chosen on the select screen
+    this.car = this.physics.add.image(START_X, TRACK_Y, 'sl-car');
+    this.car.setDepth(5).setDisplaySize(54, 32).setVisible(false);
     (this.car.body as Phaser.Physics.Arcade.Body).setAllowGravity(false);
 
     // live telemetry panel
@@ -129,7 +130,47 @@ export class SpeedLabScene extends Phaser.Scene {
       .setOrigin(1, 0)
       .setDepth(20);
 
-    this.startLevel();
+    this.showSelect();
+  }
+
+  // --- vehicle select --------------------------------------------------------
+  private showSelect() {
+    this.phase = 'select';
+    this.clearUI();
+    this.telemetry.setVisible(false);
+    this.clockText.setVisible(false);
+    const vehicles = [
+      { key: 'sl-car', label: 'KEI CAR' },
+      { key: 'sl-boat', label: 'BOAT' },
+      { key: 'sl-rocket', label: 'ROCKET' },
+      { key: 'sl-plane', label: 'JET' },
+      { key: 'sl-tiger', label: 'TIGER' },
+    ];
+    this.ui.push(this.add.text(W / 2, 110, 'SELECT YOUR VEHICLE  乗り物をえらぶ', { fontFamily: MONO, fontSize: '18px', color: HEX(C.amber), fontStyle: 'bold' }).setOrigin(0.5).setDepth(11));
+    const n = vehicles.length;
+    const cw = 140;
+    const gap = 16;
+    const total = n * cw + (n - 1) * gap;
+    let x0 = (W - total) / 2 + cw / 2;
+    vehicles.forEach((v) => {
+      const cx = x0;
+      x0 += cw + gap;
+      const rect = this.add.rectangle(cx, 250, cw, 150, C.panel, 1).setStrokeStyle(2, C.cyan).setDepth(11).setInteractive({ useHandCursor: true });
+      const img = this.add.image(cx, 232, v.key).setDisplaySize(96, 58).setDepth(12);
+      const lbl = this.add.text(cx, 300, v.label, { fontFamily: MONO, fontSize: '14px', color: HEX(C.white), fontStyle: 'bold' }).setOrigin(0.5).setDepth(12);
+      this.tweens.add({ targets: img, angle: { from: -4, to: 4 }, yoyo: true, repeat: -1, duration: 700, ease: 'sine.inOut' });
+      rect.on('pointerover', () => rect.setStrokeStyle(3, C.amber));
+      rect.on('pointerout', () => rect.setStrokeStyle(2, C.cyan));
+      rect.on('pointerdown', () => {
+        if (this.phase !== 'select') return;
+        this.car.setTexture(v.key).setDisplaySize(54, 32).setVisible(true);
+        this.idleTween?.stop();
+        this.car.setAngle(0);
+        this.idleTween = this.tweens.add({ targets: this.car, angle: { from: -3, to: 3 }, yoyo: true, repeat: -1, duration: 520, ease: 'sine.inOut' });
+        this.startLevel();
+      });
+      this.ui.push(rect, img, lbl);
+    });
   }
 
   // --- static chrome (title, telemetry frame, gauge) -------------------------
@@ -162,16 +203,73 @@ export class SpeedLabScene extends Phaser.Scene {
     this.gaugeNeedle = this.add.graphics().setDepth(16);
   }
 
-  private drawCarTexture() {
-    const g = this.make.graphics();
-    // body
-    g.fillStyle(C.cyan, 1).fillRoundedRect(2, 8, 56, 16, 6);
-    g.fillStyle(C.white, 1).fillRoundedRect(20, 2, 22, 12, 5); // cockpit
-    g.fillStyle(C.red, 1).fillRect(2, 14, 56, 4); // racing stripe
-    g.fillStyle(0x0b1220, 1).fillCircle(16, 26, 6).fillCircle(46, 26, 6); // wheels
-    g.fillStyle(C.amber, 1).fillCircle(57, 14, 2); // headlight
-    g.generateTexture('speedlab-car', 64, 34);
-    g.destroy();
+  // Five bold, cartoon vehicle textures (all face right, the travel direction).
+  private drawVehicleTextures() {
+    const ink = 0x111827;
+    const mk = (key: string, w: number, h: number, draw: (g: Phaser.GameObjects.Graphics) => void) => {
+      const g = this.make.graphics();
+      g.lineStyle(4, ink, 1);
+      draw(g);
+      g.generateTexture(key, w, h);
+      g.destroy();
+    };
+
+    // KEI CAR — red/white Japanese mini-car
+    mk('sl-car', 68, 40, (g) => {
+      g.fillStyle(0xef4444, 1); g.fillRoundedRect(4, 14, 58, 16, 6); g.strokeRoundedRect(4, 14, 58, 16, 6);
+      g.fillStyle(0xffffff, 1); g.fillRoundedRect(16, 5, 30, 13, 5); g.strokeRoundedRect(16, 5, 30, 13, 5);
+      g.fillStyle(0x38bdf8, 1); g.fillRect(20, 8, 9, 8); g.fillRect(33, 8, 9, 8);
+      g.fillStyle(ink, 1); g.fillCircle(18, 32, 6); g.fillCircle(48, 32, 6); g.strokeCircle(18, 32, 6); g.strokeCircle(48, 32, 6);
+      g.fillStyle(0xe5e7eb, 1); g.fillCircle(18, 32, 2.5); g.fillCircle(48, 32, 2.5);
+      g.fillStyle(0xfbbf24, 1); g.fillCircle(61, 20, 2.5);
+    });
+
+    // BOAT — blue hull, white cabin, flag
+    mk('sl-boat', 68, 40, (g) => {
+      g.fillStyle(0x2563eb, 1); g.beginPath(); g.moveTo(6, 22); g.lineTo(60, 22); g.lineTo(50, 37); g.lineTo(16, 37); g.closePath(); g.fillPath(); g.strokePath();
+      g.fillStyle(0xffffff, 1); g.fillRoundedRect(24, 8, 20, 14, 4); g.strokeRoundedRect(24, 8, 20, 14, 4);
+      g.fillStyle(0x38bdf8, 1); g.fillCircle(34, 15, 3.5);
+      g.lineBetween(52, 22, 52, 4);
+      g.fillStyle(0xef4444, 1); g.beginPath(); g.moveTo(52, 4); g.lineTo(64, 9); g.lineTo(52, 13); g.closePath(); g.fillPath(); g.strokePath();
+    });
+
+    // ROCKET — nose right, flame left
+    mk('sl-rocket', 74, 40, (g) => {
+      g.fillStyle(0xfb923c, 1); g.beginPath(); g.moveTo(46, 8); g.lineTo(66, 20); g.lineTo(46, 32); g.closePath(); g.fillPath(); g.strokePath();
+      g.fillStyle(0xe2e8f0, 1); g.fillRoundedRect(14, 11, 34, 18, 8); g.strokeRoundedRect(14, 11, 34, 18, 8);
+      g.fillStyle(0xef4444, 1);
+      g.beginPath(); g.moveTo(18, 11); g.lineTo(6, 2); g.lineTo(22, 12); g.closePath(); g.fillPath(); g.strokePath();
+      g.beginPath(); g.moveTo(18, 29); g.lineTo(6, 38); g.lineTo(22, 28); g.closePath(); g.fillPath(); g.strokePath();
+      g.fillStyle(0x38bdf8, 1); g.fillCircle(34, 20, 5); g.strokeCircle(34, 20, 5);
+      g.fillStyle(0xfbbf24, 1); g.beginPath(); g.moveTo(14, 15); g.lineTo(2, 20); g.lineTo(14, 25); g.closePath(); g.fillPath();
+    });
+
+    // JET — fuselage, wings, tail
+    mk('sl-plane', 74, 40, (g) => {
+      g.fillStyle(0xe2e8f0, 1); g.fillRoundedRect(8, 15, 48, 12, 6); g.strokeRoundedRect(8, 15, 48, 12, 6);
+      g.beginPath(); g.moveTo(56, 15); g.lineTo(70, 21); g.lineTo(56, 27); g.closePath(); g.fillPath(); g.strokePath();
+      g.fillStyle(0x3b82f6, 1);
+      g.beginPath(); g.moveTo(24, 16); g.lineTo(36, 2); g.lineTo(42, 16); g.closePath(); g.fillPath(); g.strokePath();
+      g.beginPath(); g.moveTo(24, 26); g.lineTo(36, 38); g.lineTo(42, 26); g.closePath(); g.fillPath(); g.strokePath();
+      g.beginPath(); g.moveTo(8, 16); g.lineTo(2, 6); g.lineTo(15, 16); g.closePath(); g.fillPath(); g.strokePath();
+      g.fillStyle(0x38bdf8, 1); g.fillCircle(50, 21, 3); g.fillCircle(42, 21, 3);
+    });
+
+    // TIGER — orange cartoon, stripes, facing right
+    mk('sl-tiger', 74, 44, (g) => {
+      g.fillStyle(0xf97316, 1);
+      g.fillEllipse(30, 26, 42, 22); g.strokeEllipse(30, 26, 42, 22);
+      g.fillStyle(0xf97316, 1); g.fillCircle(54, 20, 13); g.strokeCircle(54, 20, 13);
+      g.beginPath(); g.moveTo(46, 8); g.lineTo(49, 1); g.lineTo(53, 10); g.closePath(); g.fillPath(); g.strokePath();
+      g.beginPath(); g.moveTo(62, 8); g.lineTo(59, 1); g.lineTo(55, 10); g.closePath(); g.fillPath(); g.strokePath();
+      g.fillStyle(0xfff7ed, 1); g.fillCircle(57, 24, 6);
+      g.fillStyle(ink, 1); g.fillCircle(62, 21, 1.8); g.fillCircle(51, 17, 1.9);
+      g.lineStyle(3, 0x7c2d12, 1); g.lineBetween(18, 18, 22, 32); g.lineBetween(28, 16, 31, 32); g.lineBetween(38, 18, 41, 31);
+      g.lineStyle(4, ink, 1);
+      g.fillStyle(0xf97316, 1); g.fillRect(18, 34, 6, 8); g.fillRect(40, 34, 6, 8); g.strokeRect(18, 34, 6, 8); g.strokeRect(40, 34, 6, 8);
+      g.lineStyle(5, 0xf97316, 1); g.lineBetween(10, 24, 2, 14);
+      g.lineStyle(4, ink, 1);
+    });
   }
 
   // --- per-level setup -------------------------------------------------------
@@ -187,6 +285,8 @@ export class SpeedLabScene extends Phaser.Scene {
   private startLevel() {
     const lv = LEVELS[this.levelIdx];
     this.onLevel?.(lv.id);
+    this.telemetry.setVisible(true);
+    this.clockText.setVisible(true);
     this.phase = 'prompt';
     this.clock = 0;
     this.chosen = 0;

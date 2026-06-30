@@ -46,6 +46,7 @@ export function MathPop() {
   const pops = useRef(0);
   const spawnCd = useRef(1.0);
   const rise = useRef(26); // upward speed (grows over time)
+  const elapsed = useRef(0); // seconds played — used to ease the opening round
   const flash = useRef<'good' | 'bad' | null>(null);
   const doneRef = useRef(false);
   const lastRef = useRef(0);
@@ -55,11 +56,11 @@ export function MathPop() {
 
   const start = () => {
     bubbles.current = [];
-    score.current = 0; pops.current = 0; spawnCd.current = 0.6; rise.current = 26;
+    score.current = 0; pops.current = 0; spawnCd.current = 1.4; rise.current = 16; elapsed.current = 0;
     flash.current = null; doneRef.current = false;
     newTarget();
-    // seed a few bubbles
-    for (let i = 0; i < 5; i++) bubbles.current.push(mk(H - 30 - i * 36));
+    // seed a few bubbles (gentle opening)
+    for (let i = 0; i < 4; i++) bubbles.current.push(mk(H - 30 - i * 40));
     setOutcome(null);
     setPhase('play');
   };
@@ -90,7 +91,10 @@ export function MathPop() {
       if (pausedRef.current) { lastRef.current = now; rafRef.current = requestAnimationFrame(loop); return; }
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
-      rise.current = Math.min(70, rise.current + dt * 1.5);
+      elapsed.current += dt;
+      // Ease the opening round: slower rise + gentler ramp for the first ~12s.
+      const opening = elapsed.current < 12;
+      rise.current = Math.min(70, rise.current + dt * (opening ? 0.6 : 1.6));
 
       // rise + stick
       for (const b of bubbles.current) {
@@ -101,7 +105,7 @@ export function MathPop() {
       // spawn
       spawnCd.current -= dt;
       if (spawnCd.current <= 0) {
-        spawnCd.current = Math.max(0.5, 1.4 - pops.current * 0.03);
+        spawnCd.current = Math.max(0.5, (opening ? 2.1 : 1.4) - pops.current * 0.03);
         bubbles.current.push(mk(H + R));
       }
       // overflow → lose

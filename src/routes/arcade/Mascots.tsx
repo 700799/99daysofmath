@@ -31,7 +31,9 @@ export type MascotKind =
   | 'capsuleR'
   | 'capsuleB'
   | 'capsuleP'
-  | 'capsuleM';
+  | 'capsuleM'
+  | 'cow'
+  | 'bull';
 
 export type MascotExpr = 'happy' | 'surprised' | 'dizzy' | 'cheer' | 'ko';
 
@@ -39,7 +41,7 @@ export const MASCOT_KINDS: MascotKind[] = [
   'dragon', 'robot', 'frog', 'pet', 'cat', 'bunny', 'fox',
   'unicorn', 'penguin', 'monkey', 'crewmate', 'crewmate2', 'crewmate3',
   'panda', 'ninja', 'clerk', 'redpanda', 'raccoon', 'turtle', 'shark',
-  'capsuleR', 'capsuleB', 'capsuleP', 'capsuleM',
+  'capsuleR', 'capsuleB', 'capsuleP', 'capsuleM', 'cow', 'bull',
 ];
 
 const OUTLINE = { stroke: '#1f2937', strokeWidth: 4, strokeLinejoin: 'round' as const, strokeLinecap: 'round' as const };
@@ -678,6 +680,65 @@ function makeCapsule(shell: string, shellDark: string, bow = false) {
   );
 }
 
+// Chibi cow — tan head with pointy ears, little horns, a beige muzzle, blush and
+// a colourful cheek badge. (Inspired by a cow-mascot lineage; original art.)
+function Cow(e: MascotExpr) {
+  return (
+    <g {...OUTLINE}>
+      <defs>
+        <radialGradient id="m-cow" cx="50%" cy="40%" r="64%">
+          <stop offset="0%" stopColor="#e8a36b" />
+          <stop offset="100%" stopColor="#b9763f" />
+        </radialGradient>
+      </defs>
+      {/* horns */}
+      <path d="M40 18 Q34 5 27 6 Q33 12 36 22 Z" fill="#f5e6c8" />
+      <path d="M60 18 Q66 5 73 6 Q67 12 64 22 Z" fill="#f5e6c8" />
+      {/* ears */}
+      <path d="M26 42 L9 33 L31 27 Z" fill="url(#m-cow)" />
+      <path d="M74 42 L91 33 L69 27 Z" fill="url(#m-cow)" />
+      {/* head */}
+      <circle cx="50" cy="46" r="27" fill="url(#m-cow)" />
+      {/* muzzle */}
+      <ellipse cx="50" cy="58" rx="20" ry="14" fill="#f5e6c8" stroke="none" />
+      <ellipse cx="43" cy="58" rx="2.4" ry="3.2" fill="#8a5a2b" stroke="none" />
+      <ellipse cx="57" cy="58" rx="2.4" ry="3.2" fill="#8a5a2b" stroke="none" />
+      {/* cheek badge */}
+      <circle cx="71" cy="50" r="4.5" fill="#3b82f6" stroke={INK} strokeWidth={2} />
+      <Face cx={50} ey={42} spread={8} eyeR={5} mouthY={62} expr={e} cheek="#fb7185" />
+    </g>
+  );
+}
+
+// Red bull — round orange head, cream horns, a dark snout and a gold nose ring.
+function Bull(e: MascotExpr) {
+  return (
+    <g {...OUTLINE}>
+      <defs>
+        <radialGradient id="m-bull" cx="50%" cy="40%" r="65%">
+          <stop offset="0%" stopColor="#fb923c" />
+          <stop offset="100%" stopColor="#ea580c" />
+        </radialGradient>
+      </defs>
+      {/* horns */}
+      <path d="M30 28 Q14 22 10 8 Q24 14 34 22 Z" fill="#f5e6c8" />
+      <path d="M70 28 Q86 22 90 8 Q76 14 66 22 Z" fill="#f5e6c8" />
+      {/* ears */}
+      <ellipse cx="22" cy="44" rx="8" ry="6" fill="url(#m-bull)" />
+      <ellipse cx="78" cy="44" rx="8" ry="6" fill="url(#m-bull)" />
+      {/* head */}
+      <circle cx="50" cy="48" r="28" fill="url(#m-bull)" />
+      {/* snout */}
+      <ellipse cx="50" cy="63" rx="16" ry="11" fill="#7c2d12" stroke="none" />
+      <ellipse cx="43" cy="61" rx="2.6" ry="3.4" fill="#fed7aa" stroke="none" />
+      <ellipse cx="57" cy="61" rx="2.6" ry="3.4" fill="#fed7aa" stroke="none" />
+      {/* nose ring */}
+      <circle cx="50" cy="71" r="6" fill="none" stroke="#fbbf24" strokeWidth={3} />
+      <Face cx={50} ey={42} spread={9} eyeR={5} mouthY={50} expr={e} cheek="#fda4af" />
+    </g>
+  );
+}
+
 const PARTS: Record<MascotKind, (e: MascotExpr) => JSX.Element> = {
   dragon: Dragon,
   robot: Robot,
@@ -703,6 +764,8 @@ const PARTS: Record<MascotKind, (e: MascotExpr) => JSX.Element> = {
   capsuleB: makeCapsule('#3b82f6', '#1d4ed8'),
   capsuleP: makeCapsule('#ec4899', '#be185d', true),
   capsuleM: makeCapsule('#10b981', '#047857'),
+  cow: Cow,
+  bull: Bull,
 };
 
 export function Mascot({
@@ -749,9 +812,9 @@ export const GAME_MASCOT: Record<string, MascotKind> = {
   survival: 'fox',
   fruit: 'shark',
   town: 'turtle',
-  sumo: 'monkey',
+  sumo: 'bull',
   monster: 'dragon',
-  turbo: 'robot',
+  turbo: 'cow',
   wordle: 'capsuleR',
   hero: 'crewmate2',
   escape: 'crewmate3',
