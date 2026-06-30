@@ -81,6 +81,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'fraction', path: '/arcade/fraction', emoji: '🍕', name: 'Fraction Pizzeria', blurb: 'Serve each pizza fraction!', baseXp: 10, gradient: 'from-amber-500 to-orange-600' },
   { id: 'chess', path: '/arcade/chess', emoji: '♟️', name: 'Checkmate Lab', blurb: 'One move wins — or the computer beats you!', baseXp: 12, gradient: 'from-slate-700 to-indigo-800' },
   { id: 'starhop', path: '/arcade/starhop', emoji: '🌟', name: 'Star Hop', blurb: 'Chinese Checkers — hop to the far star!', baseXp: 10, gradient: 'from-indigo-500 to-fuchsia-600' },
+  { id: 'crawler', path: '/arcade/crawler', emoji: '🎲', name: 'Lucky Crawl', blurb: 'Push your luck for treasure — bank before the alarm!', baseXp: 12, gradient: 'from-amber-600 to-yellow-700' },
 ];
 
 // Premium games: locked until bought with coins in the Shop (id → coin price).

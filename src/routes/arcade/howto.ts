@@ -183,6 +183,17 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
     ],
     controls: 'Tap the action buttons. Special problems use the on-screen keypad — scroll the problem if it is long.',
   },
+
+  crawler: {
+    sections: [
+      { heading: 'Goal', body: 'Push your luck through a treasure vault and BANK 50 gold to win. Each room you enter adds loot to your pot — but the alarm gets more likely the deeper you go.' },
+      { heading: 'Push or Bank', body: 'After each room, choose: 🎲 Push deeper for a bigger pot (and bigger risk), or 🏦 Bank to lock your pot into the safe and start a fresh run. If the alarm trips on a push, you LOSE the whole un-banked pot!' },
+      { heading: 'The math — expected value', body: 'The panel shows the odds. PUSH is worth (chance to survive) × (pot + next reward) on average. BANK is your pot for sure. When the "expected value" of pushing drops below your pot, it is smarter to bank!' },
+      { heading: 'Example', body: 'Pot 12, next room is 70% safe for +5. Push ≈ 0.70 × (12 + 5) = 11.9, which is LESS than banking 12 — so bank it. Early on (high odds, small pot) pushing usually wins.' },
+      { heading: 'Bonus puzzle', body: 'Each time you bank, solve a quick word problem for extra coins, then start your next run.' },
+    ],
+    controls: 'Tap 🎲 Push deeper or 🏦 Bank. Watch the expected-value panel to decide!',
+  },
 };
 
 // Directions for the gate: the game's detailed how-to if we have one, else a
