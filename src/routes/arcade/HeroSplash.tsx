@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import { Mascot, type MascotKind } from './Mascots';
 
 // A short, springy intro card shown before each lesson and each game. Big mascot
@@ -21,10 +21,14 @@ export function HeroSplash({
   onDone: () => void;
   duration?: number;
 }) {
+  // Keep onDone in a ref so a changing inline callback (the parent re-renders
+  // ~1×/sec from the global clock) can't restart and stall this timer.
+  const onDoneRef = useRef(onDone);
+  onDoneRef.current = onDone;
   useEffect(() => {
-    const id = window.setTimeout(onDone, duration);
+    const id = window.setTimeout(() => onDoneRef.current(), duration);
     return () => window.clearTimeout(id);
-  }, [onDone, duration]);
+  }, [duration]);
 
   return (
     <motion.button
@@ -81,19 +85,24 @@ export function Countdown({ onDone }: { onDone: () => void }) {
   const [n, setN] = useState(3);
   const [cheer] = useState(() => MONKEY_CHEERS[Math.floor(Math.random() * MONKEY_CHEERS.length)]);
 
+  // Run the 3·2·1 timer exactly once on mount. onDone is read through a ref so a
+  // changing inline callback / parent re-render (the global clock ticks every
+  // second) can never clear+restart the interval mid-count — which previously
+  // left it stuck on 3 or skipping a number.
+  const onDoneRef = useRef(onDone);
+  onDoneRef.current = onDone;
   useEffect(() => {
+    let cur = 3;
     const id = window.setInterval(() => {
-      setN((v) => {
-        if (v <= 1) {
-          window.clearInterval(id);
-          window.setTimeout(onDone, 650);
-          return 0; // 0 → render "GO!"
-        }
-        return v - 1;
-      });
+      cur -= 1;
+      setN(cur);
+      if (cur <= 0) {
+        window.clearInterval(id);
+        window.setTimeout(() => onDoneRef.current(), 650);
+      }
     }, 750);
     return () => window.clearInterval(id);
-  }, [onDone]);
+  }, []);
 
   return (
     <div className="absolute inset-0 z-40 flex flex-col items-center justify-center bg-slate-900/55 backdrop-blur-[1px]">
@@ -105,19 +114,18 @@ export function Countdown({ onDone }: { onDone: () => void }) {
         <Mascot kind="monkey" size={84} expr="cheer" />
       </motion.div>
       <div className="mt-1 font-display font-extrabold text-white drop-shadow">{cheer}</div>
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={n}
-          initial={{ scale: 0.4 }}
-          animate={{ scale: 1 }}
-          exit={{ scale: 1.5 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 16 }}
-          className="mt-3 flex items-center justify-center rounded-full bg-white text-indigo-600 font-display font-black tabular-nums shadow-[0_8px_0_0_rgba(0,0,0,0.25)] ring-8 ring-indigo-500/70"
-          style={{ width: 168, height: 168, fontSize: n > 0 ? 132 : 64, lineHeight: 1 }}
-        >
-          {n > 0 ? n : 'GO!'}
-        </motion.div>
-      </AnimatePresence>
+      {/* Single keyed digit (no AnimatePresence mode="wait", which was dropping
+          numbers as state changed faster than the exit animation finished). */}
+      <motion.div
+        key={n}
+        initial={{ scale: 0.4 }}
+        animate={{ scale: 1 }}
+        transition={{ type: 'spring', stiffness: 300, damping: 16 }}
+        className="mt-3 flex items-center justify-center rounded-full bg-white text-indigo-600 font-display font-black tabular-nums shadow-[0_8px_0_0_rgba(0,0,0,0.25)] ring-8 ring-indigo-500/70"
+        style={{ width: 168, height: 168, fontSize: n > 0 ? 132 : 64, lineHeight: 1 }}
+      >
+        {n > 0 ? n : 'GO!'}
+      </motion.div>
     </div>
   );
 }

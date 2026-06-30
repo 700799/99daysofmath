@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { GameStage } from './fx';
-import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
+import { GameInstructions, type HowToSection } from './HowToPlay';
 import { makeChallenge, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
@@ -60,7 +60,6 @@ export function ShinobiMatch() {
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
 
-  const [phase, setPhase] = useState<'howto' | 'play'>('howto');
   const [grid, setGrid] = useState<number[]>(newGrid);
   const [sel, setSel] = useState<number | null>(null);
   const [foes, setFoes] = useState<Foe[]>([]);
@@ -78,8 +77,10 @@ export function ShinobiMatch() {
   const start = () => {
     setGrid(newGrid()); setFoes(spawnWave(1)); setHp(20); setBlock(0); setChi(0);
     setLevel(1); setCleared(0); setSel(null); setLog('Match runes to fight!'); setOutcome(null);
-    setPhase('play');
   };
+
+  // Auto-start on mount — the arcade gate now shows the directions + countdown.
+  useEffect(() => { start(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   function spawnWave(lv: number): Foe[] {
     const n = Math.min(6, 2 + lv);
@@ -253,22 +254,6 @@ export function ShinobiMatch() {
       <div>
         <ArcadeHeader title="Shinobi Match" emoji="🥷" />
         <ArcadeEndCard gameId="shinobi" outcome={outcome} win={level >= 4} scoreLine={`Level ${level} · ${cleared + (level - 1) * 4} foes felled`} onReplay={start} />
-      </div>
-    );
-  }
-
-  if (phase === 'howto') {
-    return (
-      <div>
-        <ArcadeHeader title="Shinobi Match" emoji="🥷" />
-        <HowToPlay
-          emoji="🥷"
-          title="Shinobi Match"
-          gradient="from-slate-700 to-rose-700"
-          sections={shinobiSections(maxLevel)}
-          controls={SHINOBI_CONTROLS}
-          onStart={start}
-        />
       </div>
     );
   }

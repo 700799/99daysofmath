@@ -13,6 +13,38 @@ import type { ArcadeGameDef } from './shared';
 export type GameHowTo = { sections: HowToSection[]; controls?: string };
 
 export const GAME_HOWTO: Record<string, GameHowTo> = {
+  taiko: {
+    sections: [
+      { heading: 'Goal', body: 'Notes scroll in along 3 drum lanes toward the hit-ring on the left. Tap each note right as it lands in its ring for points and combo!' },
+      { heading: 'Timing', body: 'The closer to the ring center you tap, the better the judgement — Perfect beats Good. Keep a streak going to build your combo and trigger Fever mode 🔥.' },
+      { heading: 'Tempo shifts', body: 'The song speeds up through phases (Warm-up → Groovy → Fast → Frenzy). Notes scroll faster and spawn more often — stay on the beat!' },
+      { heading: 'Lives', body: 'Missing notes costs a life. Run out and the song ends — so don’t let notes slip past the ring.' },
+    ],
+    controls: 'Tap the lane (or the matching key) as a note reaches its hit-ring. Three lanes — keep all three covered.',
+  },
+
+  shinobi: {
+    sections: [
+      { heading: 'Goal', body: 'Match runes to fight off foes that creep down 3 lanes toward your shinobi 🥷. Survive as many levels as you can!' },
+      { heading: 'Match-3', body: 'Swap two neighbouring runes to line up 3 or more of a kind. Each successful swap is one turn — then every foe steps closer.' },
+      { heading: 'What runes do', body: '⚔️ Strike the front foe · 🌀 Shuriken hits a whole lane · 🛡️ Guard adds block · 💚 Heal restores HP · ⚡ Chi charges your ultimate.' },
+      { heading: 'Ninjutsu', body: 'When the ⚡ chi meter is full, tap Ninjutsu and solve a math problem to clear the whole screen!' },
+      { heading: 'Danger', body: 'If a foe reaches your shinobi it hurts you (block absorbs some). Lose all HP and the run ends.' },
+    ],
+    controls: 'Tap a rune then a neighbour, or swipe to swap. Fill the ⚡ chi meter, then tap 🌟 Ninjutsu and solve to clear the board.',
+  },
+
+  speedlab: {
+    sections: [
+      { heading: 'Goal', body: 'A mission-control driving lab that teaches the formula distance = rate × time (d = r × t). Clear 3 stages by solving for the missing piece each time.' },
+      { heading: 'Stage 1 — find the RATE', body: 'You must reach a checkpoint 600px away in exactly 4 seconds. Pick the speed: r = d ÷ t = 600 ÷ 4 = 150 px/s.' },
+      { heading: 'Stage 2 — find the TIME', body: 'Speed is locked at 200 px/s over 1000px. Set the countdown so it hits zero as you cross the line: t = d ÷ r = 1000 ÷ 200 = 5 s.' },
+      { heading: 'Stage 3 — find the DISTANCE', body: 'Your fuel lasts 8 s at 120 px/s. Pick the waypoint you can exactly reach: d = r × t = 120 × 8 = 960 px.' },
+      { heading: 'Telemetry', body: 'Watch the live readouts — your X position, velocity, and the mission clock — so you can SEE the formula working.' },
+    ],
+    controls: 'Tap a value chip to launch the car at that setting. Read the telemetry, then tap to continue between stages.',
+  },
+
   mathpop: {
     sections: [
       { heading: 'Goal', body: 'Numbered bubbles float up the screen. Pop a group of bubbles that ADDS UP to the target number 🎯!' },

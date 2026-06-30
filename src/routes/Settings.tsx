@@ -300,6 +300,20 @@ function AdminPanel() {
               value={config.lessonScreenSeconds}
               onPick={(n) => setArcadeConfig({ lessonScreenSeconds: n })}
             />
+            <div className="mt-3" />
+            <AdminPick
+              label="Hide answer in explanations for"
+              options={[
+                { value: 0, label: 'Off' },
+                { value: 5, label: '5s' },
+                { value: 10, label: '10s' },
+                { value: 15, label: '15s' },
+                { value: 30, label: '30s' },
+                { value: 60, label: '60s' },
+              ]}
+              value={config.answerRevealSeconds ?? 15}
+              onPick={(n) => setArcadeConfig({ answerRevealSeconds: n })}
+            />
           </div>
 
           <div className="pt-2 border-t border-slate-100">

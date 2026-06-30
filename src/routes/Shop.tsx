@@ -133,6 +133,14 @@ export function Shop() {
         <div className="rounded-full bg-amber-100 text-amber-800 px-3 py-1.5 font-display font-extrabold tabular-nums">🪙 {coins.toLocaleString()}</div>
       </div>
 
+      {/* shopkeeper greeter */}
+      <div className="mb-3 flex items-center gap-2 rounded-3xl border-2 border-sky-200 bg-sky-50 px-3 py-2">
+        <Mascot kind="clerk" size={56} expr="happy" />
+        <div className="relative rounded-2xl rounded-bl-sm bg-white px-3 py-1.5 font-display text-sm font-bold text-slate-700 shadow-sm">
+          Welcome to the shop! Spend your 🪙 here — play games to earn more.
+        </div>
+      </div>
+
       {/* avatar preview */}
       <div className={`rounded-3xl p-4 bg-gradient-to-br ${bgGrad} shadow-md`}>
         <div className="relative mx-auto w-40 h-40 flex items-center justify-center">

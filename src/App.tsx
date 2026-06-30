@@ -52,6 +52,9 @@ const TankAttack = lazy(() => import('./routes/arcade/TankAttack').then((m) => (
 const DressToImpress = lazy(() => import('./routes/arcade/DressToImpress').then((m) => ({ default: m.DressToImpress })));
 const DesertRig = lazy(() => import('./routes/arcade/DesertRig').then((m) => ({ default: m.DesertRig })));
 const MathPop = lazy(() => import('./routes/arcade/MathPop').then((m) => ({ default: m.MathPop })));
+const TaikoTap = lazy(() => import('./routes/arcade/TaikoTap').then((m) => ({ default: m.TaikoTap })));
+const ShinobiMatch = lazy(() => import('./routes/arcade/ShinobiMatch').then((m) => ({ default: m.ShinobiMatch })));
+const SpeedLab = lazy(() => import('./routes/arcade/SpeedLab').then((m) => ({ default: m.SpeedLab })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -118,6 +121,9 @@ export default function App() {
           <Route path="/arcade/dress" element={<ArcadeGate title="Dress to Impress"><DressToImpress /></ArcadeGate>} />
           <Route path="/arcade/rig" element={<ArcadeGate title="Desert Rig"><DesertRig /></ArcadeGate>} />
           <Route path="/arcade/mathpop" element={<ArcadeGate title="Math Pop"><MathPop /></ArcadeGate>} />
+          <Route path="/arcade/taiko" element={<ArcadeGate title="Taiko Tap"><TaikoTap /></ArcadeGate>} />
+          <Route path="/arcade/shinobi" element={<ArcadeGate title="Shinobi Match"><ShinobiMatch /></ArcadeGate>} />
+          <Route path="/arcade/speedlab" element={<ArcadeGate title="Speed Lab"><SpeedLab /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/rewards" element={<Rewards />} />
