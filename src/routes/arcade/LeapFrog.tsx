@@ -3,6 +3,8 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { Mascot as CharMascot } from './Mascots';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // "Leap Frog" — a Frogger. Hop up across lanes of traffic, then ride logs and
 // turtles over a river to reach the lily pads up top. Get squashed, drowned,
@@ -81,6 +83,8 @@ export function LeapFrog() {
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
+  const hapticsOn = useProgress((s) => s.hapticsEnabled);
+  const buzz = (p: number | number[]) => { if (hapticsOn) haptic(p); };
 
   const frogRef = useRef({ x: 6, r: START_ROW });
   const lanesRef = useRef<Lane[]>(buildLanes(config.startLevel));
@@ -104,6 +108,7 @@ export function LeapFrog() {
   // session keeps going (no mid-game lesson — the gate handles learning).
   const loseLife = () => {
     livesRef.current -= 1;
+    sfx.hurt(); buzz(HAPTIC.death);
     if (livesRef.current <= 0) {
       finish();
       return;
@@ -120,18 +125,21 @@ export function LeapFrog() {
     nx = Math.max(0, Math.min(COLS - 1, nx));
     f.r = nr;
     f.x = nx;
+    if (dx !== 0 || dy !== 0) { sfx.step(); buzz(HAPTIC.light); } // hop
     if (nr === HOME_ROW) {
       // must land on an open lily pad
       const idx = HOME_SLOTS.findIndex((c, i) => Math.abs(c - f.x) < 0.9 && !filledRef.current[i]);
       if (idx >= 0) {
         filledRef.current[idx] = true;
         scoreRef.current += 100;
+        sfx.coin(); buzz(HAPTIC.pickup);
         if (filledRef.current.every(Boolean)) {
           // level up
           levelRef.current += 1;
           scoreRef.current += 150;
           filledRef.current = [false, false, false];
           lanesRef.current = buildLanes(levelRef.current);
+          sfx.levelUp(); buzz(HAPTIC.levelUp);
         }
         resetFrog();
       } else {
@@ -242,6 +250,7 @@ export function LeapFrog() {
 
   const finish = () => {
     addArcadePoints(scoreRef.current);
+    sfx.lose();
     const xp = Math.max(1, Math.min(20, Math.floor(scoreRef.current / 60) + levelRef.current * 2));
     setOutcome(recordArcadePlay('frogger', xp));
   };
@@ -351,9 +360,9 @@ export function LeapFrog() {
           {/* frog */}
           <div
             className="absolute flex items-center justify-center"
-            style={{ left: f.x * TILE, top: f.r * TILE, width: TILE, height: TILE, fontSize: TILE - 4 }}
+            style={{ left: f.x * TILE, top: f.r * TILE, width: TILE, height: TILE }}
           >
-            🐸
+            <CharMascot kind="frog" size={TILE - 2} expr="happy" />
           </div>
         </div>
       </div>

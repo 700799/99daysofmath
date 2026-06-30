@@ -1,9 +1,12 @@
 import Phaser from 'phaser';
 
 // Speed Lab — an "Aerospace Syllabus" driving simulator that teaches d = r × t.
-// Three sequential challenges (find rate, find time, find distance) run on Arcade
-// Physics: a car body is launched at a real velocity and the scene shows live
-// telemetry (X position, velocity, mission clock) so the formula is tangible.
+// Numbers start SINGLE-DIGIT so the idea is obvious, then step up to TWO-DIGIT.
+// Distances are whole "units" shown on a clearly numbered ruler, so you can count
+// the blocks and SEE d = r × t come true. Runs on Arcade Physics.
+//
+// Layout is PORTRAIT (560×780) so Phaser's Scale.FIT scales the canvas UP to fill
+// a phone screen — making the telemetry, prompt and answer chips large and legible.
 
 export interface SpeedLabInit {
   onComplete: (cleared: number) => void;
@@ -15,60 +18,72 @@ interface Level {
   id: number;
   name: string;
   find: Find;
-  dist: number; // px
+  dist: number; // units
   time: number; // s
-  rate: number; // px/s
+  rate: number; // units/s
   choices: number[];
   unit: string;
   formula: string; // worked solution
   prompt: string;
+  max: number; // ruler max, in units
+  minor: number; // minor tick step (units)
+  tick: number; // labelled tick step (units)
 }
 
 const LEVELS: Level[] = [
   {
     id: 1,
-    name: 'FIND RATE',
-    find: 'r',
-    dist: 600,
-    time: 4,
-    rate: 150,
-    choices: [100, 120, 150, 200],
-    unit: 'px/s',
-    formula: 'r = d ÷ t = 600 ÷ 4 = 150 px/s',
-    prompt: 'Reach the checkpoint at d = 600px in exactly t = 4s. SET THE RATE.',
+    name: 'FIND DISTANCE',
+    find: 'd',
+    dist: 6,
+    time: 3,
+    rate: 2,
+    choices: [4, 6, 8, 9],
+    unit: 'units',
+    formula: 'd = r × t = 2 × 3 = 6',
+    prompt: 'Drive r = 2 units/s for t = 3 s.\nHow FAR do you go?   d = r × t',
+    max: 10,
+    minor: 1,
+    tick: 2,
   },
   {
     id: 2,
     name: 'FIND TIME',
     find: 't',
-    dist: 1000,
-    time: 5,
-    rate: 200,
-    choices: [3, 4, 5, 6],
+    dist: 8,
+    time: 4,
+    rate: 2,
+    choices: [2, 3, 4, 5],
     unit: 's',
-    formula: 't = d ÷ r = 1000 ÷ 200 = 5 s',
-    prompt: 'Speed is fixed at r = 200px/s over d = 1000px. SET THE COUNTDOWN.',
+    formula: 't = d ÷ r = 8 ÷ 2 = 4',
+    prompt: 'Travel d = 8 units at r = 2 units/s.\nHow LONG does it take?   t = d ÷ r',
+    max: 10,
+    minor: 1,
+    tick: 2,
   },
   {
     id: 3,
-    name: 'FIND DISTANCE',
-    find: 'd',
-    dist: 960,
-    time: 8,
-    rate: 120,
-    choices: [720, 840, 960, 1080],
-    unit: 'px',
-    formula: 'd = r × t = 120 × 8 = 960 px',
-    prompt: 'Fuel lasts t = 8s at r = 120px/s. PICK THE WAYPOINT YOU CAN REACH.',
+    name: 'FIND RATE',
+    find: 'r',
+    dist: 40,
+    time: 4,
+    rate: 10,
+    choices: [5, 8, 10, 12],
+    unit: 'units/s',
+    formula: 'r = d ÷ t = 40 ÷ 4 = 10',
+    prompt: 'Cover d = 40 units in t = 4 s.\nHow FAST? (two-digit)   r = d ÷ t',
+    max: 50,
+    minor: 10,
+    tick: 10,
   },
 ];
 
-const W = 820;
-const H = 480;
-const START_X = 96;
-const TRACK_Y = 250;
-const MARGIN_R = 110;
-const VIEW_SCALE = (W - START_X - MARGIN_R) / 1000; // longest range (1000px) fits
+const W = 560;
+const H = 780;
+const START_X = 70;
+const TRACK_Y = 372;
+const MARGIN_R = 70;
+const TRACK_PX = W - START_X - MARGIN_R; // pixels the ruler spans
 
 // Aerospace palette
 const C = {
@@ -85,6 +100,11 @@ const C = {
 const HEX = (n: number) => '#' + n.toString(16).padStart(6, '0');
 const MONO = 'Menlo, Consolas, "Courier New", monospace';
 
+// gauge position (top-right dashboard, under the header)
+const GX = W - 64;
+const GY = 250;
+const GR = 38;
+
 export class SpeedLabScene extends Phaser.Scene {
   private onComplete!: (cleared: number) => void;
   private onLevel?: (level: number) => void;
@@ -94,12 +114,16 @@ export class SpeedLabScene extends Phaser.Scene {
   private phase: 'select' | 'prompt' | 'run' | 'result' = 'select';
   private clock = 0;
   private chosen = 0;
+  private pxPerUnit = TRACK_PX / 10;
+  private gaugeMax = 5;
   private car!: Phaser.Physics.Arcade.Image;
   private idleTween?: Phaser.Tweens.Tween;
   private ui: Phaser.GameObjects.GameObject[] = [];
   private telemetry!: Phaser.GameObjects.Text;
   private clockText!: Phaser.GameObjects.Text;
   private gaugeNeedle!: Phaser.GameObjects.Graphics;
+  private gaugeArc!: Phaser.GameObjects.Graphics;
+  private gaugeLabel!: Phaser.GameObjects.Text;
 
   constructor() {
     super('SpeedLabScene');
@@ -118,15 +142,15 @@ export class SpeedLabScene extends Phaser.Scene {
 
     // the vehicle (Arcade Physics body) — texture chosen on the select screen
     this.car = this.physics.add.image(START_X, TRACK_Y, 'sl-car');
-    this.car.setDepth(5).setDisplaySize(54, 32).setVisible(false);
+    this.car.setDepth(5).setDisplaySize(66, 40).setVisible(false);
     (this.car.body as Phaser.Physics.Arcade.Body).setAllowGravity(false);
 
-    // live telemetry panel
+    // live telemetry panel (big, top-left)
     this.telemetry = this.add
-      .text(16, 132, '', { fontFamily: MONO, fontSize: '15px', color: HEX(C.cyan), lineSpacing: 4 })
+      .text(18, 178, '', { fontFamily: MONO, fontSize: '22px', color: HEX(C.cyan), lineSpacing: 6, fontStyle: 'bold' })
       .setDepth(20);
     this.clockText = this.add
-      .text(W - 16, 132, '', { fontFamily: MONO, fontSize: '15px', color: HEX(C.amber), align: 'right' })
+      .text(W - 18, 178, '', { fontFamily: MONO, fontSize: '20px', color: HEX(C.amber), align: 'right', fontStyle: 'bold' })
       .setOrigin(1, 0)
       .setDepth(20);
 
@@ -139,6 +163,9 @@ export class SpeedLabScene extends Phaser.Scene {
     this.clearUI();
     this.telemetry.setVisible(false);
     this.clockText.setVisible(false);
+    this.gaugeNeedle.clear();
+    this.gaugeArc.setVisible(false);
+    this.gaugeLabel.setVisible(false);
     const vehicles = [
       { key: 'sl-car', label: 'KEI CAR' },
       { key: 'sl-boat', label: 'BOAT' },
@@ -146,24 +173,41 @@ export class SpeedLabScene extends Phaser.Scene {
       { key: 'sl-plane', label: 'JET' },
       { key: 'sl-tiger', label: 'TIGER' },
     ];
-    this.ui.push(this.add.text(W / 2, 110, 'SELECT YOUR VEHICLE  乗り物をえらぶ', { fontFamily: MONO, fontSize: '18px', color: HEX(C.amber), fontStyle: 'bold' }).setOrigin(0.5).setDepth(11));
+    this.ui.push(
+      this.add
+        .text(W / 2, 100, 'SELECT YOUR VEHICLE', { fontFamily: MONO, fontSize: '22px', color: HEX(C.amber), fontStyle: 'bold' })
+        .setOrigin(0.5)
+        .setDepth(11),
+    );
+    this.ui.push(
+      this.add
+        .text(W / 2, 128, '乗り物をえらぶ', { fontFamily: MONO, fontSize: '14px', color: HEX(C.dim) })
+        .setOrigin(0.5)
+        .setDepth(11),
+    );
+
     const n = vehicles.length;
-    const cw = 140;
+    const cols = 3;
+    const cw = 158;
+    const ch = 150;
     const gap = 16;
-    const total = n * cw + (n - 1) * gap;
-    let x0 = (W - total) / 2 + cw / 2;
-    vehicles.forEach((v) => {
-      const cx = x0;
-      x0 += cw + gap;
-      const rect = this.add.rectangle(cx, 250, cw, 150, C.panel, 1).setStrokeStyle(2, C.cyan).setDepth(11).setInteractive({ useHandCursor: true });
-      const img = this.add.image(cx, 232, v.key).setDisplaySize(96, 58).setDepth(12);
-      const lbl = this.add.text(cx, 300, v.label, { fontFamily: MONO, fontSize: '14px', color: HEX(C.white), fontStyle: 'bold' }).setOrigin(0.5).setDepth(12);
+    vehicles.forEach((v, i) => {
+      const row = Math.floor(i / cols);
+      const inRow = Math.min(cols, n - row * cols);
+      const colIdx = i % cols;
+      const rowW = inRow * cw + (inRow - 1) * gap;
+      const startX = (W - rowW) / 2 + cw / 2;
+      const cx = startX + colIdx * (cw + gap);
+      const cy = 230 + row * (ch + 18);
+      const rect = this.add.rectangle(cx, cy, cw, ch, C.panel, 1).setStrokeStyle(2, C.cyan).setDepth(11).setInteractive({ useHandCursor: true });
+      const img = this.add.image(cx, cy - 22, v.key).setDisplaySize(108, 64).setDepth(12);
+      const lbl = this.add.text(cx, cy + 46, v.label, { fontFamily: MONO, fontSize: '16px', color: HEX(C.white), fontStyle: 'bold' }).setOrigin(0.5).setDepth(12);
       this.tweens.add({ targets: img, angle: { from: -4, to: 4 }, yoyo: true, repeat: -1, duration: 700, ease: 'sine.inOut' });
       rect.on('pointerover', () => rect.setStrokeStyle(3, C.amber));
       rect.on('pointerout', () => rect.setStrokeStyle(2, C.cyan));
       rect.on('pointerdown', () => {
         if (this.phase !== 'select') return;
-        this.car.setTexture(v.key).setDisplaySize(54, 32).setVisible(true);
+        this.car.setTexture(v.key).setDisplaySize(66, 40).setVisible(true);
         this.idleTween?.stop();
         this.car.setAngle(0);
         this.idleTween = this.tweens.add({ targets: this.car, angle: { from: -3, to: 3 }, yoyo: true, repeat: -1, duration: 520, ease: 'sine.inOut' });
@@ -173,7 +217,7 @@ export class SpeedLabScene extends Phaser.Scene {
     });
   }
 
-  // --- static chrome (title, telemetry frame, gauge) -------------------------
+  // --- static chrome (title, header, gauge) ----------------------------------
   private drawChrome() {
     this.add.rectangle(0, 0, W, H, C.bg).setOrigin(0);
     const g = this.add.graphics();
@@ -182,24 +226,23 @@ export class SpeedLabScene extends Phaser.Scene {
     for (let x = 0; x <= W; x += 40) g.lineBetween(x, 0, x, H);
     for (let y = 0; y <= H; y += 40) g.lineBetween(0, y, W, y);
     // header band
-    g.fillStyle(C.panel, 1).fillRect(0, 0, W, 46);
-    g.lineStyle(2, C.cyan, 0.7).lineBetween(0, 46, W, 46);
+    g.fillStyle(C.panel, 1).fillRect(0, 0, W, 52);
+    g.lineStyle(2, C.cyan, 0.7).lineBetween(0, 52, W, 52);
     // Japanese-bold accent tab
-    g.fillStyle(C.red, 1).fillRect(0, 0, 10, 46);
-    this.add.text(22, 12, 'SPEED LAB', { fontFamily: MONO, fontSize: '20px', color: HEX(C.white), fontStyle: 'bold' });
-    this.add.text(150, 17, '// d = r × t  運動', { fontFamily: MONO, fontSize: '13px', color: HEX(C.amber) });
+    g.fillStyle(C.red, 1).fillRect(0, 0, 10, 52);
+    this.add.text(24, 14, 'SPEED LAB', { fontFamily: MONO, fontSize: '24px', color: HEX(C.white), fontStyle: 'bold' });
+    this.add.text(W - 16, 19, 'd = r × t', { fontFamily: MONO, fontSize: '16px', color: HEX(C.amber) }).setOrigin(1, 0);
 
-    // velocity gauge (bottom-right dashboard)
-    const gx = W - 80;
-    const gy = H - 70;
+    // velocity gauge (top-right dashboard) — hidden on the vehicle-select screen
     const gg = this.add.graphics().setDepth(15);
-    gg.lineStyle(6, C.grid, 1).beginPath();
-    gg.arc(gx, gy, 46, Phaser.Math.DegToRad(140), Phaser.Math.DegToRad(40), false);
+    gg.lineStyle(7, C.grid, 1).beginPath();
+    gg.arc(GX, GY, GR, Phaser.Math.DegToRad(140), Phaser.Math.DegToRad(40), false);
     gg.strokePath();
     gg.lineStyle(2, C.cyan, 0.8).beginPath();
-    gg.arc(gx, gy, 46, Phaser.Math.DegToRad(140), Phaser.Math.DegToRad(40), false);
+    gg.arc(GX, GY, GR, Phaser.Math.DegToRad(140), Phaser.Math.DegToRad(40), false);
     gg.strokePath();
-    this.add.text(gx, gy + 18, 'VEL', { fontFamily: MONO, fontSize: '11px', color: HEX(C.dim) }).setOrigin(0.5).setDepth(15);
+    this.gaugeArc = gg;
+    this.gaugeLabel = this.add.text(GX, GY + 20, 'VEL', { fontFamily: MONO, fontSize: '12px', color: HEX(C.dim) }).setOrigin(0.5).setDepth(15);
     this.gaugeNeedle = this.add.graphics().setDepth(16);
   }
 
@@ -278,15 +321,39 @@ export class SpeedLabScene extends Phaser.Scene {
     this.ui = [];
   }
 
-  private screenX(posPx: number) {
-    return START_X + posPx * VIEW_SCALE;
+  private screenX(units: number) {
+    return START_X + units * this.pxPerUnit;
+  }
+
+  private drawTrack(g: Phaser.GameObjects.Graphics, lv: Level) {
+    g.lineStyle(5, C.dim, 1).lineBetween(START_X, TRACK_Y + 26, this.screenX(lv.max), TRACK_Y + 26);
+    // minor unit ticks — so single units are countable
+    g.lineStyle(1, C.grid, 1);
+    for (let u = 0; u <= lv.max; u += lv.minor) {
+      const x = this.screenX(u);
+      g.lineBetween(x, TRACK_Y + 20, x, TRACK_Y + 32);
+    }
+    // labelled ticks (bigger) + numbers
+    g.lineStyle(2, C.cyan, 0.9);
+    for (let u = 0; u <= lv.max; u += lv.tick) {
+      const x = this.screenX(u);
+      g.lineBetween(x, TRACK_Y + 16, x, TRACK_Y + 36);
+      this.ui.push(
+        this.add.text(x, TRACK_Y + 42, String(u), { fontFamily: MONO, fontSize: '14px', color: HEX(C.white), fontStyle: 'bold' }).setOrigin(0.5).setDepth(2),
+      );
+    }
+    this.ui.push(this.add.text(this.screenX(lv.max / 2), TRACK_Y + 62, 'distance (units)', { fontFamily: MONO, fontSize: '12px', color: HEX(C.dim) }).setOrigin(0.5).setDepth(2));
   }
 
   private startLevel() {
     const lv = LEVELS[this.levelIdx];
     this.onLevel?.(lv.id);
+    this.pxPerUnit = TRACK_PX / lv.max;
+    this.gaugeMax = (lv.find === 'r' ? Math.max(...lv.choices) : lv.rate) * 1.3;
     this.telemetry.setVisible(true);
     this.clockText.setVisible(true);
+    this.gaugeArc.setVisible(true);
+    this.gaugeLabel.setVisible(true);
     this.phase = 'prompt';
     this.clock = 0;
     this.chosen = 0;
@@ -297,58 +364,56 @@ export class SpeedLabScene extends Phaser.Scene {
 
     // track line + ruler
     const g = this.add.graphics().setDepth(2);
-    g.lineStyle(4, C.dim, 1).lineBetween(START_X, TRACK_Y + 22, this.screenX(1000), TRACK_Y + 22);
-    g.lineStyle(2, C.grid, 1);
-    for (let d = 0; d <= 1000; d += 100) {
-      const x = this.screenX(d);
-      g.lineBetween(x, TRACK_Y + 16, x, TRACK_Y + 28);
-      this.ui.push(
-        this.add.text(x, TRACK_Y + 32, String(d), { fontFamily: MONO, fontSize: '10px', color: HEX(C.dim) }).setOrigin(0.5).setDepth(2),
-      );
-    }
+    this.drawTrack(g, lv);
     this.ui.push(g);
 
     // start flag
-    this.ui.push(this.add.text(START_X, TRACK_Y - 30, '▌START', { fontFamily: MONO, fontSize: '11px', color: HEX(C.green) }).setOrigin(0, 0.5).setDepth(3));
+    this.ui.push(this.add.text(START_X, TRACK_Y - 32, '▌START', { fontFamily: MONO, fontSize: '13px', color: HEX(C.green) }).setOrigin(0, 0.5).setDepth(3));
 
     // targets per level
     if (lv.find === 'd') {
       // waypoint flags at each choice distance
       lv.choices.forEach((dch) => {
         const x = this.screenX(dch);
-        const flag = this.add.text(x, TRACK_Y - 18, '⚑', { fontFamily: MONO, fontSize: '22px', color: HEX(dch === lv.dist ? C.amber : C.dim) }).setOrigin(0.5).setDepth(3);
+        const flag = this.add.text(x, TRACK_Y - 20, '⚑', { fontFamily: MONO, fontSize: '24px', color: HEX(dch === lv.dist ? C.amber : C.dim) }).setOrigin(0.5).setDepth(3);
         this.ui.push(flag);
-        this.ui.push(this.add.text(x, TRACK_Y - 40, `${dch}`, { fontFamily: MONO, fontSize: '11px', color: HEX(C.white) }).setOrigin(0.5).setDepth(3));
+        this.ui.push(this.add.text(x, TRACK_Y - 44, `${dch}`, { fontFamily: MONO, fontSize: '13px', color: HEX(C.white), fontStyle: 'bold' }).setOrigin(0.5).setDepth(3));
       });
     } else {
       // single checkpoint/finish at the level distance
       const x = this.screenX(lv.dist);
-      this.ui.push(this.add.rectangle(x, TRACK_Y, 4, 60, C.amber).setDepth(3));
-      this.ui.push(this.add.text(x, TRACK_Y - 34, lv.find === 'r' ? 'CHECKPOINT' : 'FINISH', { fontFamily: MONO, fontSize: '11px', color: HEX(C.amber) }).setOrigin(0.5).setDepth(3));
-      this.ui.push(this.add.text(x, TRACK_Y + 46, `${lv.dist}px`, { fontFamily: MONO, fontSize: '11px', color: HEX(C.white) }).setOrigin(0.5).setDepth(3));
+      this.ui.push(this.add.rectangle(x, TRACK_Y, 4, 64, C.amber).setDepth(3));
+      this.ui.push(this.add.text(x, TRACK_Y - 38, lv.find === 'r' ? 'CHECKPOINT' : 'FINISH', { fontFamily: MONO, fontSize: '12px', color: HEX(C.amber) }).setOrigin(0.5).setDepth(3));
+      this.ui.push(this.add.text(x, TRACK_Y - 56, `${lv.dist} units`, { fontFamily: MONO, fontSize: '13px', color: HEX(C.white), fontStyle: 'bold' }).setOrigin(0.5).setDepth(3));
     }
 
-    // prompt card
-    this.ui.push(this.add.rectangle(W / 2, 92, W - 40, 56, C.panel, 0.95).setStrokeStyle(2, C.cyan).setDepth(10));
-    this.ui.push(this.add.text(W / 2, 76, `LEVEL ${lv.id} · ${lv.name}`, { fontFamily: MONO, fontSize: '15px', color: HEX(C.amber), fontStyle: 'bold' }).setOrigin(0.5).setDepth(11));
-    this.ui.push(this.add.text(W / 2, 100, lv.prompt, { fontFamily: MONO, fontSize: '12px', color: HEX(C.white), align: 'center', wordWrap: { width: W - 80 } }).setOrigin(0.5).setDepth(11));
+    // prompt card (below the header, above the telemetry)
+    this.ui.push(this.add.rectangle(W / 2, 96, W - 24, 80, C.panel, 0.95).setStrokeStyle(2, C.cyan).setDepth(10));
+    this.ui.push(this.add.text(W / 2, 74, `LEVEL ${lv.id} · ${lv.name}`, { fontFamily: MONO, fontSize: '17px', color: HEX(C.amber), fontStyle: 'bold' }).setOrigin(0.5).setDepth(11));
+    this.ui.push(this.add.text(W / 2, 104, lv.prompt, { fontFamily: MONO, fontSize: '14px', color: HEX(C.white), align: 'center', lineSpacing: 3, wordWrap: { width: W - 56 } }).setOrigin(0.5).setDepth(11));
 
     this.drawChoices(lv);
   }
 
   private drawChoices(lv: Level) {
-    const labelMap: Record<Find, string> = { r: 'SET RATE', t: 'SET COUNTDOWN', d: 'SELECT WAYPOINT' };
-    this.ui.push(this.add.text(W / 2, H - 116, labelMap[lv.find], { fontFamily: MONO, fontSize: '12px', color: HEX(C.cyan) }).setOrigin(0.5).setDepth(11));
-    const n = lv.choices.length;
-    const bw = 150;
-    const gap = 14;
-    const total = n * bw + (n - 1) * gap;
-    let x0 = (W - total) / 2 + bw / 2;
-    lv.choices.forEach((val) => {
-      const cx = x0;
-      x0 += bw + gap;
-      const rect = this.add.rectangle(cx, H - 78, bw, 46, C.panel, 1).setStrokeStyle(2, C.cyan).setDepth(11).setInteractive({ useHandCursor: true });
-      const txt = this.add.text(cx, H - 78, `${val} ${lv.unit}`, { fontFamily: MONO, fontSize: '17px', color: HEX(C.white), fontStyle: 'bold' }).setOrigin(0.5).setDepth(12);
+    const labelMap: Record<Find, string> = { r: 'SET THE RATE', t: 'SET THE TIME', d: 'PICK THE DISTANCE' };
+    this.ui.push(this.add.text(W / 2, 488, labelMap[lv.find], { fontFamily: MONO, fontSize: '15px', color: HEX(C.cyan), fontStyle: 'bold' }).setOrigin(0.5).setDepth(11));
+    // 2×2 grid of large chips
+    const cols = 2;
+    const bw = 238;
+    const bh = 64;
+    const gapX = 18;
+    const gapY = 18;
+    const gridW = cols * bw + gapX;
+    const x0 = (W - gridW) / 2 + bw / 2;
+    const y0 = 542;
+    lv.choices.forEach((val, i) => {
+      const colIdx = i % cols;
+      const row = Math.floor(i / cols);
+      const cx = x0 + colIdx * (bw + gapX);
+      const cy = y0 + row * (bh + gapY);
+      const rect = this.add.rectangle(cx, cy, bw, bh, C.panel, 1).setStrokeStyle(2, C.cyan).setDepth(11).setInteractive({ useHandCursor: true });
+      const txt = this.add.text(cx, cy, `${val} ${lv.unit}`, { fontFamily: MONO, fontSize: '23px', color: HEX(C.white), fontStyle: 'bold' }).setOrigin(0.5).setDepth(12);
       rect.on('pointerover', () => rect.setStrokeStyle(3, C.amber));
       rect.on('pointerout', () => rect.setStrokeStyle(2, C.cyan));
       rect.on('pointerdown', () => {
@@ -365,24 +430,22 @@ export class SpeedLabScene extends Phaser.Scene {
     this.phase = 'run';
     this.clock = 0;
     this.clearUI();
-    // re-draw static track bits quickly by restarting the static layer:
-    // keep it simple — redraw ruler/targets via startLevel's graphics is gone, so
-    // draw a minimal lane here.
+    // minimal lane + targets for the run
     const g = this.add.graphics().setDepth(2);
-    g.lineStyle(4, C.dim, 1).lineBetween(START_X, TRACK_Y + 22, this.screenX(1000), TRACK_Y + 22);
+    this.drawTrack(g, lv);
     this.ui.push(g);
     if (lv.find === 'd') {
       lv.choices.forEach((dch) => {
         const x = this.screenX(dch);
-        this.ui.push(this.add.text(x, TRACK_Y - 18, '⚑', { fontFamily: MONO, fontSize: '22px', color: HEX(dch === val ? C.amber : C.dim) }).setOrigin(0.5).setDepth(3));
+        this.ui.push(this.add.text(x, TRACK_Y - 20, '⚑', { fontFamily: MONO, fontSize: '24px', color: HEX(dch === val ? C.amber : C.dim) }).setOrigin(0.5).setDepth(3));
       });
     } else {
       const x = this.screenX(lv.dist);
-      this.ui.push(this.add.rectangle(x, TRACK_Y, 4, 60, C.amber).setDepth(3));
+      this.ui.push(this.add.rectangle(x, TRACK_Y, 4, 64, C.amber).setDepth(3));
     }
 
     const rate = lv.find === 'r' ? val : lv.rate;
-    (this.car.body as Phaser.Physics.Arcade.Body).setVelocityX(rate * VIEW_SCALE);
+    (this.car.body as Phaser.Physics.Arcade.Body).setVelocityX(rate * this.pxPerUnit);
     this.car.setData('rate', rate);
     this.car.setData('val', val);
   }
@@ -400,18 +463,18 @@ export class SpeedLabScene extends Phaser.Scene {
 
   private showResult(lv: Level, correct: boolean) {
     const col = correct ? C.green : C.red;
-    this.ui.push(this.add.rectangle(W / 2, H / 2, W - 80, 132, C.panel, 0.97).setStrokeStyle(3, col).setDepth(30));
+    this.ui.push(this.add.rectangle(W / 2, H / 2, W - 56, 150, C.panel, 0.97).setStrokeStyle(3, col).setDepth(30));
     this.ui.push(
-      this.add.text(W / 2, H / 2 - 42, correct ? '✔ LOCKED ON TARGET' : '✘ TRAJECTORY OFF', { fontFamily: MONO, fontSize: '20px', color: HEX(col), fontStyle: 'bold' }).setOrigin(0.5).setDepth(31),
+      this.add.text(W / 2, H / 2 - 46, correct ? '✔ LOCKED ON TARGET' : '✘ TRAJECTORY OFF', { fontFamily: MONO, fontSize: '21px', color: HEX(col), fontStyle: 'bold' }).setOrigin(0.5).setDepth(31),
     );
-    this.ui.push(this.add.text(W / 2, H / 2 - 8, lv.formula, { fontFamily: MONO, fontSize: '16px', color: HEX(C.amber) }).setOrigin(0.5).setDepth(31));
+    this.ui.push(this.add.text(W / 2, H / 2 - 6, lv.formula, { fontFamily: MONO, fontSize: '18px', color: HEX(C.amber), fontStyle: 'bold' }).setOrigin(0.5).setDepth(31));
 
     if (correct) {
       this.cleared += 1;
-      this.ui.push(this.add.text(W / 2, H / 2 + 28, this.levelIdx >= LEVELS.length - 1 ? 'ALL SYSTEMS GO — tap to finish' : 'tap to continue ▶', { fontFamily: MONO, fontSize: '13px', color: HEX(C.white) }).setOrigin(0.5).setDepth(31));
+      this.ui.push(this.add.text(W / 2, H / 2 + 34, this.levelIdx >= LEVELS.length - 1 ? 'ALL SYSTEMS GO — tap to finish' : 'tap to continue ▶', { fontFamily: MONO, fontSize: '14px', color: HEX(C.white) }).setOrigin(0.5).setDepth(31));
       this.flashImpact(C.green);
     } else {
-      this.ui.push(this.add.text(W / 2, H / 2 + 28, 'tap to recompute ▶', { fontFamily: MONO, fontSize: '13px', color: HEX(C.white) }).setOrigin(0.5).setDepth(31));
+      this.ui.push(this.add.text(W / 2, H / 2 + 34, 'tap to recompute ▶', { fontFamily: MONO, fontSize: '14px', color: HEX(C.white) }).setOrigin(0.5).setDepth(31));
     }
 
     const advance = () => {
@@ -440,7 +503,7 @@ export class SpeedLabScene extends Phaser.Scene {
 
     if (this.phase === 'run') {
       this.clock += deltaMs / 1000;
-      const posPx = Math.max(0, (this.car.x - START_X) / VIEW_SCALE);
+      const posUnits = Math.max(0, (this.car.x - START_X) / this.pxPerUnit);
 
       if (lv.find === 'r' || lv.find === 'd') {
         // fixed time / fuel: stop when the clock runs out
@@ -451,7 +514,7 @@ export class SpeedLabScene extends Phaser.Scene {
         // find time: the car always crosses the finish; the countdown the player
         // set must hit zero exactly then.
         const countdownLeft = this.chosen - this.clock;
-        if (posPx >= lv.dist) {
+        if (posUnits >= lv.dist) {
           this.finishRun(lv, this.chosen);
         } else if (countdownLeft <= 0) {
           // ran out of time before the finish
@@ -465,29 +528,24 @@ export class SpeedLabScene extends Phaser.Scene {
 
   private updateTelemetry(lv: Level) {
     const body = this.car.body as Phaser.Physics.Arcade.Body | undefined;
-    const posPx = Math.max(0, Math.round((this.car.x - START_X) / VIEW_SCALE));
-    const vel = body ? Math.round(body.velocity.x / VIEW_SCALE) : 0;
+    const posUnits = Math.max(0, Math.round((this.car.x - START_X) / this.pxPerUnit));
+    const velUnits = body ? Math.round(body.velocity.x / this.pxPerUnit) : 0;
     this.telemetry.setText(
       [
-        `X  : ${String(posPx).padStart(4, ' ')} px`,
-        `VEL: ${String(vel).padStart(4, ' ')} px/s`,
-        `─────────────`,
-        `d = r × t`,
+        `DIST:${String(posUnits).padStart(3, ' ')}`,
+        `SPD :${String(velUnits).padStart(3, ' ')}/s`,
       ].join('\n'),
     );
 
-    let clockLine = `T : ${this.clock.toFixed(1)} s`;
+    let clockLine = `T:${this.clock.toFixed(1)}s`;
     if (lv.find === 't' && this.phase === 'run') {
-      clockLine = `COUNTDOWN: ${Math.max(0, this.chosen - this.clock).toFixed(1)} s`;
+      clockLine = `⏱${Math.max(0, this.chosen - this.clock).toFixed(1)}s`;
     }
     this.clockText.setText([clockLine, `LVL ${lv.id}/3`].join('\n'));
 
     // gauge needle
-    const maxV = 220;
-    const v = body ? Math.min(maxV, Math.abs(body.velocity.x / VIEW_SCALE)) : 0;
-    const a = Phaser.Math.DegToRad(140 + (v / maxV) * 260);
-    const gx = W - 80;
-    const gy = H - 70;
-    this.gaugeNeedle.clear().lineStyle(3, C.red, 1).lineBetween(gx, gy, gx + Math.cos(a) * 38, gy + Math.sin(a) * 38);
+    const v = body ? Math.min(this.gaugeMax, Math.abs(body.velocity.x / this.pxPerUnit)) : 0;
+    const a = Phaser.Math.DegToRad(140 + (v / this.gaugeMax) * 260);
+    this.gaugeNeedle.clear().lineStyle(3, C.red, 1).lineBetween(GX, GY, GX + Math.cos(a) * (GR - 6), GY + Math.sin(a) * (GR - 6));
   }
 }

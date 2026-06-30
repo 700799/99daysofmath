@@ -3,6 +3,7 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 import { chooseGhostDir, UP, DOWN, LEFT, RIGHT, type Dir, type Target } from './mazeAI';
 
 // "Hungry Hippo" — a Pac-Man maze. The hippo munches pellets while ghosts give
@@ -139,6 +140,8 @@ export function HungryHippo() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const addArcadePoints = useProgress((s) => s.addArcadePoints);
   const config = useProgress((s) => s.arcadeConfig);
+  const hapticsOn = useProgress((s) => s.hapticsEnabled);
+  const buzz = (p: number | number[]) => { if (hapticsOn) haptic(p); };
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
@@ -227,6 +230,7 @@ export function HungryHippo() {
     if (powerRef.current.has(k)) {
       scoreRef.current += 50;
       frightRef.current = FRIGHT_SECONDS;
+      sfx.pickup(); buzz(HAPTIC.heavy);
     } else {
       scoreRef.current += 10;
     }
@@ -323,12 +327,14 @@ export function HungryHippo() {
         if (Math.hypot(hpp.x - gp.x, hpp.y - gp.y) < 0.6) {
           if (frightRef.current > 0) {
             scoreRef.current += 200;
+            sfx.coin(); buzz(HAPTIC.pickup);
             g.c = g.tc = g.home.c;
             g.r = g.tr = g.home.r;
             g.prog = 0;
             g.dir = null;
           } else {
             livesRef.current -= 1;
+            sfx.hurt(); buzz(HAPTIC.death);
             if (livesRef.current <= 0) {
               finish();
               return;
@@ -344,6 +350,7 @@ export function HungryHippo() {
       if (pelletsRef.current.size === 0) {
         levelRef.current += 1;
         scoreRef.current += 100; // level-clear bonus
+        sfx.levelUp(); buzz(HAPTIC.levelUp);
         loadLevel();
         redraw();
         rafRef.current = requestAnimationFrame(tick);
@@ -378,6 +385,7 @@ export function HungryHippo() {
 
   const finish = () => {
     addArcadePoints(scoreRef.current);
+    sfx.lose();
     const xp = Math.max(1, Math.min(20, Math.floor(scoreRef.current / 40) + levelRef.current * 2));
     setOutcome(recordArcadePlay('hippo', xp));
   };

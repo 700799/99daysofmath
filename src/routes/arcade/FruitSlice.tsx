@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage, useBurst, BurstLayer, useScorePops, ScorePopLayer, useShake } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // Fruit Slice — a Fruit-Ninja-style slicer. Fruit arcs up from the bottom;
 // swipe across it to slice for points and combos. Slice a 💣 bomb or let three
@@ -12,7 +14,11 @@ import { useArcadeClock } from '../../hooks/useArcadeClock';
 const W = 340;
 const H = 440;
 const GRAVITY = 620; // px/s²
-const FRUITS = ['🍎', '🍉', '🍊', '🍓', '🍌', '🍇', '🥝', '🍑', '🍍', '🥭'];
+// Apples 🍎 and bananas 🍌 are doubled so a run almost always slices some of each
+// — that powers the end-of-run "apples : bananas" ratio question.
+const FRUITS = ['🍎', '🍎', '🍌', '🍌', '🍉', '🍊', '🍓', '🍇', '🥝', '🍑', '🍍', '🥭'];
+
+const gcd = (a: number, b: number): number => (b === 0 ? a : gcd(b, a % b));
 
 // Choose your slicing weapon — each has its own blade trail, reach, and splat.
 type Weapon = { id: string; name: string; emoji: string; color: string; radius: number; fx: string; width: number };
@@ -49,7 +55,9 @@ export function FruitSlice() {
   const spawnRef = useRef(0.6);
   const elapsedRef = useRef(0);
   const scoreRef = useRef(0);
+  const hitsRef = useRef(0); // fruit actually sliced (count, not points)
   const missedRef = useRef(0);
+  const countsRef = useRef<Record<string, number>>({}); // sliced count per fruit emoji
   const livesRef = useRef(3);
   const comboRef = useRef({ n: 0, t: 0 });
   const lastRef = useRef(0);
@@ -62,21 +70,32 @@ export function FruitSlice() {
   const weaponRef = useRef<Weapon>(WEAPONS[0]);
   const [flash, setFlash] = useState(false);
   const doneRef = useRef(false);
+  const [statsOpen, setStatsOpen] = useState(false);
   const [, force] = useState(0);
   const redraw = () => force((n) => n + 1);
 
-  const finish = () => {
-    if (doneRef.current) return;
-    doneRef.current = true;
+  // commit the run: bank points + XP and show the end card
+  const commit = () => {
     addArcadePoints(scoreRef.current);
     const xp = Math.max(1, Math.min(20, Math.floor(scoreRef.current / 8) + 1));
     setOutcome(recordArcadePlay('fruit', xp));
+  };
+
+  // end the run — first show the data-driven "Stats Lab" math beat when there is
+  // enough data, otherwise go straight to the end card.
+  const finish = () => {
+    if (doneRef.current) return;
+    doneRef.current = true;
+    const total = hitsRef.current + missedRef.current;
+    if (total >= 4) setStatsOpen(true);
+    else commit();
   };
 
   useEffect(() => {
     if (outcome || !weapon) return;
     lastRef.current = performance.now();
     const tick = (now: number) => {
+      if (doneRef.current) return; // run ended (stats screen / end card) — stop the loop
       if (pausedRef.current) {
         lastRef.current = now;
         rafRef.current = requestAnimationFrame(tick);
@@ -175,6 +194,8 @@ export function FruitSlice() {
           }
         } else {
           it.sliced = true;
+          hitsRef.current += 1;
+          countsRef.current[it.emoji] = (countsRef.current[it.emoji] || 0) + 1;
           // combo within 0.6s of the last slice
           const combo = comboRef.current.t > 0 ? comboRef.current.n + 1 : 1;
           comboRef.current = { n: combo, t: 0.6 };
@@ -222,13 +243,32 @@ export function FruitSlice() {
     spawnRef.current = 0.6;
     elapsedRef.current = 0;
     scoreRef.current = 0;
+    hitsRef.current = 0;
     missedRef.current = 0;
+    countsRef.current = {};
     livesRef.current = 3;
     comboRef.current = { n: 0, t: 0 };
     doneRef.current = false;
+    setStatsOpen(false);
     setTrail([]);
     setOutcome(null);
   };
+
+  // data-driven math beat: questions built from THIS run's real stats
+  if (statsOpen && !outcome) {
+    return (
+      <div>
+        <ArcadeHeader title="Fruit Slice" emoji="🍉" />
+        <FruitStatsLab
+          hits={hitsRef.current}
+          misses={missedRef.current}
+          apples={countsRef.current['🍎'] || 0}
+          bananas={countsRef.current['🍌'] || 0}
+          onDone={commit}
+        />
+      </div>
+    );
+  }
 
   if (outcome) {
     return (
@@ -279,6 +319,14 @@ export function FruitSlice() {
         {comboRef.current.t > 0 && comboRef.current.n > 1 && (
           <span className="text-orange-600">🔥 x{comboRef.current.n}</span>
         )}
+      </div>
+      {/* live stat strip — sliced / missed / percent made */}
+      <div className="flex justify-center gap-3 mb-2 max-w-sm mx-auto px-1 text-xs font-display font-bold text-slate-500 tabular-nums">
+        <span className="text-emerald-600">✅ made {hitsRef.current}</span>
+        <span className="text-rose-500">❌ missed {missedRef.current}</span>
+        <span className="text-indigo-600">
+          {(() => { const t = hitsRef.current + missedRef.current; return t ? Math.round((hitsRef.current / t) * 100) : 0; })()}% made
+        </span>
       </div>
 
       <GameStage theme="ocean" className="max-w-sm mx-auto">
@@ -333,5 +381,126 @@ export function FruitSlice() {
         Swipe to slice the fruit! Avoid 💣 bombs, and don't let fruit fall.
       </p>
     </div>
+  );
+}
+
+// --- Stats Lab: data-driven percent / ratio questions from the player's run ---
+
+type StatQ = { prompt: string; options: string[]; answer: string; explain: string };
+
+const shuffle = <T,>(a: T[]): T[] => {
+  const r = [...a];
+  for (let i = r.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [r[i], r[j]] = [r[j], r[i]];
+  }
+  return r;
+};
+
+const pctOptions = (ans: number): string[] => {
+  const s = new Set<number>([ans]);
+  for (const cand of [100 - ans, ans + 10, ans - 10, ans + 20, ans - 5, ans + 5]) {
+    if (cand >= 0 && cand <= 100) s.add(cand);
+  }
+  let i = 1;
+  while (s.size < 4) { s.add(Math.min(100, Math.max(0, ans + i * 7))); i++; }
+  return shuffle([...s].slice(0, 4)).map((v) => `${v}%`);
+};
+
+const ratioOptions = (a: number, b: number): string[] => {
+  const g = gcd(a, b);
+  const sa = a / g, sb = b / g;
+  const s = new Set<string>([`${sa}:${sb}`]);
+  if (g > 1) s.add(`${a}:${b}`);
+  s.add(`${sb}:${sa}`);
+  s.add(`${sa + 1}:${sb}`);
+  s.add(`${sa}:${sb + 1}`);
+  s.add(`${a}:${a + b}`);
+  return shuffle([...s].slice(0, 4));
+};
+
+function FruitStatsLab({ hits, misses, apples, bananas, onDone }: { hits: number; misses: number; apples: number; bananas: number; onDone: () => void }) {
+  const arcadeUnit = useProgress((s) => s.arcadeUnit);
+  const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
+  const addCoins = useProgress((s) => s.addCoins);
+  const addArcadePoints = useProgress((s) => s.addArcadePoints);
+
+  const [questions] = useState<StatQ[]>(() => {
+    const total = hits + misses;
+    const pctMade = total ? Math.round((hits / total) * 100) : 0;
+    const pctMiss = total ? Math.round((misses / total) * 100) : 0;
+    const qs: StatQ[] = [
+      { prompt: `You sliced ${hits} and missed ${misses} — ${total} fruit in all. What PERCENT did you make?`, answer: `${pctMade}%`, options: pctOptions(pctMade), explain: `made ÷ total = ${hits} ÷ ${total} = ${pctMade}%` },
+      { prompt: `Out of the ${total} fruit, what PERCENT did you MISS?`, answer: `${pctMiss}%`, options: pctOptions(pctMiss), explain: `missed ÷ total = ${misses} ÷ ${total} = ${pctMiss}%` },
+    ];
+    if (apples > 0 && bananas > 0) {
+      const g = gcd(apples, bananas);
+      qs.push({
+        prompt: `You sliced 🍎 × ${apples} and 🍌 × ${bananas}. Simplify the ratio apples : bananas.`,
+        answer: `${apples / g}:${bananas / g}`,
+        options: ratioOptions(apples, bananas),
+        explain: g > 1 ? `${apples}:${bananas} = ${apples / g}:${bananas / g}  (divide both by ${g})` : `${apples}:${bananas} is already in simplest form`,
+      });
+    }
+    return qs;
+  });
+
+  const [idx, setIdx] = useState(0);
+  const [picked, setPicked] = useState<string | null>(null);
+  const [right, setRight] = useState(false);
+
+  if (questions.length === 0) { onDone(); return null; }
+  const q = questions[idx];
+
+  const choose = (opt: string) => {
+    if (right) return;
+    setPicked(opt);
+    const ok = opt === q.answer;
+    recordArcadeAnswer(arcadeUnit, ok);
+    if (ok) {
+      addCoins(8); addArcadePoints(8);
+      sfx.coin(); haptic(HAPTIC.win);
+      setRight(true);
+      window.setTimeout(() => {
+        if (idx + 1 < questions.length) { setIdx(idx + 1); setPicked(null); setRight(false); }
+        else onDone();
+      }, 1200);
+    } else {
+      sfx.hurt(); haptic(HAPTIC.hit);
+      window.setTimeout(() => setPicked(null), 650);
+    }
+  };
+
+  return (
+    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mx-auto max-w-sm rounded-3xl border-2 border-indigo-200 bg-indigo-50 p-4 text-center">
+      <div className="text-[11px] font-display font-extrabold uppercase tracking-widest text-indigo-500">
+        📊 Stats Lab · question {idx + 1}/{questions.length}
+      </div>
+      <div className="mt-2 rounded-2xl bg-white border-2 border-slate-200 px-3 py-3 text-base font-display font-extrabold leading-snug text-slate-800">
+        {q.prompt}
+      </div>
+      <div className="mt-3 grid grid-cols-2 gap-2">
+        {q.options.map((opt) => {
+          const isPicked = picked === opt;
+          const isAnswer = opt === q.answer;
+          const cls = right && isAnswer
+            ? 'border-emerald-400 bg-emerald-100 text-emerald-800'
+            : isPicked && !right
+              ? 'border-rose-300 bg-rose-50 text-rose-600'
+              : 'border-slate-200 bg-white text-slate-800 hover:border-indigo-400';
+          return (
+            <button key={opt} type="button" disabled={right} onClick={() => choose(opt)}
+              className={`min-h-12 rounded-xl border-2 font-display font-extrabold text-xl tabular-nums active:translate-y-0.5 ${cls}`}>
+              {opt}
+            </button>
+          );
+        })}
+      </div>
+      <div className="mt-3 h-6 text-sm font-display font-bold">
+        {right ? <span className="text-emerald-700">✓ {q.explain} · +🪙 8</span>
+          : picked ? <span className="text-rose-600">Not quite — try again!</span>
+            : <span className="text-slate-400">Tap the right answer</span>}
+      </div>
+    </motion.div>
   );
 }

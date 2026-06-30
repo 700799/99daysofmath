@@ -34,13 +34,45 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
     controls: 'Tap a rune then a neighbour, or swipe to swap. Fill the ⚡ chi meter, then tap 🌟 Ninjutsu and solve to clear the board.',
   },
 
+  starhop: {
+    sections: [
+      { heading: 'Goal', body: 'Classic Chinese Checkers vs the computer. Move all 10 of your red pegs from the top point of the star to the bottom point before the computer fills your start.' },
+      { heading: 'Two kinds of move', body: 'Tap a peg to select it, then tap a glowing hole: either STEP to a touching empty hole, or JUMP over a neighbouring peg into the empty hole beyond.' },
+      { heading: 'Chain jumps', body: 'After a jump you can keep jumping — long chains rocket you across the board. Glowing holes show every place the selected peg can land.' },
+      { heading: 'Win', body: 'First player to completely fill the opposite star point wins. Plan paths that set up big jump chains!' },
+    ],
+    controls: 'Tap a red peg, then tap a glowing target hole. Step to a neighbour or jump over pegs (including chains).',
+  },
+
+  chess: {
+    sections: [
+      { heading: 'Goal', body: 'Each puzzle gives YOU a big material lead — but only ONE move actually wins. Play any other move and the computer punishes you and wins. Solve all 5 endgames!' },
+      { heading: 'How to move', body: 'Tap your (white) piece, then tap the square to move it to. White pieces are ♔♕♖♗♘♙; the computer is black.' },
+      { heading: 'The big idea', body: 'Sometimes extra material is a LIABILITY (zugzwang), sometimes you must SACRIFICE your queen to force mate, and sometimes a few minor pieces out-coordinate a queen. Read the lesson on each puzzle.' },
+      { heading: 'Wrong move?', body: 'No problem — you’ll see exactly how the computer would pounce, then you can try the same puzzle again.' },
+    ],
+    controls: 'Tap a white piece, then tap its destination. Find the one move that wins; solve all 5.',
+  },
+
+  fraction: {
+    sections: [
+      { heading: 'Goal', body: 'Run the pizzeria! Each customer orders a fraction of a pizza — serve them exactly that many slices.' },
+      { heading: 'Read the order', body: 'The ticket shows a fraction like 3/4. The bottom number (denominator) is how many equal slices the pizza is cut into; the top number (numerator) is how many you shade.' },
+      { heading: 'Shade & serve', body: 'Tap slices to add a topping. When the shaded slices match the numerator, tap “Serve it!”. Correct orders score; serve 8 to win.' },
+      { heading: 'Math', body: 'A fraction is parts of a whole. 3/4 means 3 of 4 equal pieces. The pizza makes it easy to see.' },
+    ],
+    controls: 'Tap pizza slices to shade them, then tap “Serve it!”. Beat the clock and fill 8 orders.',
+  },
+
   speedlab: {
     sections: [
-      { heading: 'Goal', body: 'A mission-control driving lab that teaches the formula distance = rate × time (d = r × t). Clear 3 stages by solving for the missing piece each time.' },
-      { heading: 'Stage 1 — find the RATE', body: 'You must reach a checkpoint 600px away in exactly 4 seconds. Pick the speed: r = d ÷ t = 600 ÷ 4 = 150 px/s.' },
-      { heading: 'Stage 2 — find the TIME', body: 'Speed is locked at 200 px/s over 1000px. Set the countdown so it hits zero as you cross the line: t = d ÷ r = 1000 ÷ 200 = 5 s.' },
-      { heading: 'Stage 3 — find the DISTANCE', body: 'Your fuel lasts 8 s at 120 px/s. Pick the waypoint you can exactly reach: d = r × t = 120 × 8 = 960 px.' },
-      { heading: 'Telemetry', body: 'Watch the live readouts — your X position, velocity, and the mission clock — so you can SEE the formula working.' },
+      { heading: 'The big idea', body: 'Distance = rate × time, written d = r × t. "Rate" just means speed — how much distance you cover each second (or hour). Know any TWO of the three and you can always find the third.' },
+      { heading: 'The triangle trick', body: 'Picture d on top, with r and t underneath: d over (r · t). Cover the one you want and the triangle shows the math. Cover d → d = r × t. Cover r → r = d ÷ t. Cover t → t = d ÷ r. Top-over-bottom means divide; side-by-side means multiply.' },
+      { heading: 'Example — find DISTANCE', body: 'A car drives 60 mph for 2 hours. d = r × t = 60 × 2 = 120 miles. Drive twice as long → twice the distance.' },
+      { heading: 'Example — find RATE (speed)', body: 'You ran 100 meters in 20 seconds. r = d ÷ t = 100 ÷ 20 = 5 meters per second. Distance shared out over the time.' },
+      { heading: 'Example — find TIME', body: 'You need to travel 150 miles at 50 mph. t = d ÷ r = 150 ÷ 50 = 3 hours. Farther to go, or slower speed → more time.' },
+      { heading: 'Same triangle, both ways', body: 'A train at 80 km/h for 3 h covers d = 80 × 3 = 240 km. And a 240 km trip in 3 h means r = 240 ÷ 3 = 80 km/h. Just covering a different corner.' },
+      { heading: 'In the game', body: 'You start with easy SINGLE-DIGIT numbers to get the idea, then step up to TWO-DIGIT ones. Level 1 find the DISTANCE (d = r × t, e.g. 2 × 3 = 6), Level 2 find the TIME (t = d ÷ r), Level 3 find the RATE with bigger numbers (r = d ÷ t = 40 ÷ 4 = 10). Count the units on the ruler and watch the telemetry so you SEE the formula come true.' },
     ],
     controls: 'Tap a value chip to launch the car at that setting. Read the telemetry, then tap to continue between stages.',
   },
@@ -150,6 +182,17 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
       { heading: 'Game over', body: 'If your whole party faints, the run ends. Climb for your best wave!' },
     ],
     controls: 'Tap the action buttons. Special problems use the on-screen keypad — scroll the problem if it is long.',
+  },
+
+  crawler: {
+    sections: [
+      { heading: 'Goal', body: 'Push your luck through a treasure vault and BANK 50 gold to win. Each room you enter adds loot to your pot — but the alarm gets more likely the deeper you go.' },
+      { heading: 'Push or Bank', body: 'After each room, choose: 🎲 Push deeper for a bigger pot (and bigger risk), or 🏦 Bank to lock your pot into the safe and start a fresh run. If the alarm trips on a push, you LOSE the whole un-banked pot!' },
+      { heading: 'The math — expected value', body: 'The panel shows the odds. PUSH is worth (chance to survive) × (pot + next reward) on average. BANK is your pot for sure. When the "expected value" of pushing drops below your pot, it is smarter to bank!' },
+      { heading: 'Example', body: 'Pot 12, next room is 70% safe for +5. Push ≈ 0.70 × (12 + 5) = 11.9, which is LESS than banking 12 — so bank it. Early on (high odds, small pot) pushing usually wins.' },
+      { heading: 'Bonus puzzle', body: 'Each time you bank, solve a quick word problem for extra coins, then start your next run.' },
+    ],
+    controls: 'Tap 🎲 Push deeper or 🏦 Bank. Watch the expected-value panel to decide!',
   },
 };
 

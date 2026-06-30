@@ -55,6 +55,10 @@ const MathPop = lazy(() => import('./routes/arcade/MathPop').then((m) => ({ defa
 const TaikoTap = lazy(() => import('./routes/arcade/TaikoTap').then((m) => ({ default: m.TaikoTap })));
 const ShinobiMatch = lazy(() => import('./routes/arcade/ShinobiMatch').then((m) => ({ default: m.ShinobiMatch })));
 const SpeedLab = lazy(() => import('./routes/arcade/SpeedLab').then((m) => ({ default: m.SpeedLab })));
+const FractionPizza = lazy(() => import('./routes/arcade/FractionPizza').then((m) => ({ default: m.FractionPizza })));
+const ChessPuzzle = lazy(() => import('./routes/arcade/ChessPuzzle').then((m) => ({ default: m.ChessPuzzle })));
+const ChineseCheckers = lazy(() => import('./routes/arcade/ChineseCheckers').then((m) => ({ default: m.ChineseCheckers })));
+const GreedyCrawler = lazy(() => import('./routes/arcade/GreedyCrawler').then((m) => ({ default: m.GreedyCrawler })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -94,7 +98,7 @@ export default function App() {
           <Route path="/arcade/connect4" element={<ArcadeGate title="Connect 4"><ConnectFour /></ArcadeGate>} />
           <Route path="/arcade/wheel" element={<ArcadeGate title="Prize Wheel"><Wheel /></ArcadeGate>} />
           <Route path="/arcade/memory" element={<ArcadeGate title="Memory Match"><MemoryMatch /></ArcadeGate>} />
-          <Route path="/arcade/shootout" element={<ArcadeGate title="Shootout"><Shootout /></ArcadeGate>} />
+          <Route path="/arcade/shootout" element={<ArcadeGate title="Cannon Shot"><Shootout /></ArcadeGate>} />
           <Route path="/arcade/runner" element={<ArcadeGate title="Math Runner"><MathRunner /></ArcadeGate>} />
           <Route path="/arcade/platformer" element={<ArcadeGate title="Platformer"><Platformer /></ArcadeGate>} />
           <Route path="/arcade/racer" element={<ArcadeGate title="Race Car"><RaceCar /></ArcadeGate>} />
@@ -124,6 +128,10 @@ export default function App() {
           <Route path="/arcade/taiko" element={<ArcadeGate title="Taiko Tap"><TaikoTap /></ArcadeGate>} />
           <Route path="/arcade/shinobi" element={<ArcadeGate title="Shinobi Match"><ShinobiMatch /></ArcadeGate>} />
           <Route path="/arcade/speedlab" element={<ArcadeGate title="Speed Lab"><SpeedLab /></ArcadeGate>} />
+          <Route path="/arcade/fraction" element={<ArcadeGate title="Fraction Pizzeria"><FractionPizza /></ArcadeGate>} />
+          <Route path="/arcade/chess" element={<ArcadeGate title="Checkmate Lab"><ChessPuzzle /></ArcadeGate>} />
+          <Route path="/arcade/starhop" element={<ArcadeGate title="Star Hop"><ChineseCheckers /></ArcadeGate>} />
+          <Route path="/arcade/crawler" element={<ArcadeGate title="Lucky Crawl"><GreedyCrawler /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/rewards" element={<Rewards />} />

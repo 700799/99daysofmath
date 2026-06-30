@@ -3,6 +3,7 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 import { chooseGhostDir, DIRS, UP, DOWN, LEFT, RIGHT, type Dir } from './mazeAI';
 
 // "Gem Digger" — a Dig Dug. Tunnel through the dirt to collect every gem while
@@ -64,6 +65,8 @@ export function GemDigger() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const addArcadePoints = useProgress((s) => s.addArcadePoints);
   const config = useProgress((s) => s.arcadeConfig);
+  const hapticsOn = useProgress((s) => s.hapticsEnabled);
+  const buzz = (p: number | number[]) => { if (hapticsOn) haptic(p); };
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
@@ -165,6 +168,7 @@ export function GemDigger() {
     if (gemsRef.current.has(k)) {
       gemsRef.current.delete(k);
       scoreRef.current += 100;
+      sfx.coin(); buzz(HAPTIC.pickup);
     }
   };
 
@@ -238,6 +242,7 @@ export function GemDigger() {
     // loop running (no mid-game lesson — the gate handles learning).
     const wipeout = () => {
       livesRef.current -= 1;
+      sfx.hurt(); buzz(HAPTIC.death);
       if (livesRef.current <= 0) {
         finish();
         return;
@@ -294,6 +299,7 @@ export function GemDigger() {
           for (const mon of monstersRef.current) {
             if (mon.c === rk.c && Math.round(renderPos(mon).y) === cell) {
               scoreRef.current += 300;
+              sfx.pickup(); buzz(HAPTIC.heavy);
               mon.c = mon.tc = mon.home.c;
               mon.r = mon.tr = mon.home.r;
               mon.prog = 0;
@@ -323,6 +329,7 @@ export function GemDigger() {
       if (gemsRef.current.size === 0) {
         levelRef.current += 1;
         scoreRef.current += 200; // cave-clear bonus
+        sfx.levelUp(); buzz(HAPTIC.levelUp);
         loadLevel();
         redraw();
         rafRef.current = requestAnimationFrame(tick);
@@ -356,6 +363,7 @@ export function GemDigger() {
 
   const finish = () => {
     addArcadePoints(scoreRef.current);
+    sfx.lose();
     const xp = Math.max(1, Math.min(20, Math.floor(scoreRef.current / 60) + levelRef.current * 2));
     setOutcome(recordArcadePlay('digger', xp));
   };

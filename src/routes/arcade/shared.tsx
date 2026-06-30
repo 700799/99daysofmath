@@ -8,6 +8,9 @@ import { Confetti } from '../../components/Celebration';
 import { StickerCelebration } from '../../components/StickerCelebration';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
+import { AnimatePresence } from 'framer-motion';
+import { helpPause, useHelpPaused } from './helpPause';
+import { getHowTo } from './howto';
 
 // Provided by the lesson gate (ArcadeWarmup). When present, an in-game "Play
 // again" routes back through a fresh lesson rather than restarting in place, and
@@ -25,8 +28,9 @@ export function useArcadeSession() {
 // current paused flag, so loops can check it without re-subscribing each frame.
 export function useArcadePausedRef(): MutableRefObject<boolean> {
   const session = useArcadeSession();
+  const helpP = useHelpPaused();
   const ref = useRef(false);
-  ref.current = !!session?.paused;
+  ref.current = !!session?.paused || helpP;
   return ref;
 }
 
@@ -44,7 +48,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'connect4', path: '/arcade/connect4', emoji: '🔴', name: 'Connect 4', blurb: 'Beat the owl.', baseXp: 5, gradient: 'from-red-500 to-rose-600' },
   { id: 'wheel', path: '/arcade/wheel', emoji: '🎡', name: 'Prize Wheel', blurb: 'One spin a day.', baseXp: 0, gradient: 'from-fuchsia-500 to-purple-600' },
   { id: 'memory', path: '/arcade/memory', emoji: '🃏', name: 'Memory', blurb: 'Match all 8 pairs.', baseXp: 8, gradient: 'from-sky-500 to-blue-600' },
-  { id: 'shootout', path: '/arcade/shootout', emoji: '💥', name: 'Angle Cannon', blurb: 'Aim the cannon by angle. Knock targets down!', baseXp: 5, gradient: 'from-orange-500 to-amber-600' },
+  { id: 'shootout', path: '/arcade/shootout', emoji: '💥', name: 'Cannon Shot', blurb: 'Aim by angle. Launch a volley to knock the targets down!', baseXp: 5, gradient: 'from-orange-500 to-amber-600' },
   { id: 'runner', path: '/arcade/runner', emoji: '🏃', name: 'Math Runner', blurb: 'Right lane, right answer.', baseXp: 8, gradient: 'from-emerald-500 to-teal-600' },
   { id: 'platformer', path: '/arcade/platformer', emoji: '🍄', name: 'Platformer', blurb: '8 levels. Stomp to the flag.', baseXp: 10, gradient: 'from-pink-500 to-rose-600' },
   { id: 'racer', path: '/arcade/racer', emoji: '🏎️', name: 'Race Car', blurb: 'Dodge cones. Grab fuel.', baseXp: 9, gradient: 'from-rose-500 to-orange-500' },
@@ -74,6 +78,10 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'taiko', path: '/arcade/taiko', emoji: '🥁', name: 'Taiko Tap', blurb: 'Tap the drum notes on the beat!', baseXp: 10, gradient: 'from-red-500 to-orange-600' },
   { id: 'shinobi', path: '/arcade/shinobi', emoji: '🥷', name: 'Shinobi Match', blurb: 'Match runes to fend off the foes.', baseXp: 12, gradient: 'from-slate-700 to-rose-700' },
   { id: 'speedlab', path: '/arcade/speedlab', emoji: '🚀', name: 'Speed Lab', blurb: 'Drive the d = r × t formula!', baseXp: 12, gradient: 'from-slate-800 to-cyan-700' },
+  { id: 'fraction', path: '/arcade/fraction', emoji: '🍕', name: 'Fraction Pizzeria', blurb: 'Serve each pizza fraction!', baseXp: 10, gradient: 'from-amber-500 to-orange-600' },
+  { id: 'chess', path: '/arcade/chess', emoji: '♟️', name: 'Checkmate Lab', blurb: 'One move wins — or the computer beats you!', baseXp: 12, gradient: 'from-slate-700 to-indigo-800' },
+  { id: 'starhop', path: '/arcade/starhop', emoji: '🌟', name: 'Star Hop', blurb: 'Chinese Checkers — hop to the far star!', baseXp: 10, gradient: 'from-indigo-500 to-fuchsia-600' },
+  { id: 'crawler', path: '/arcade/crawler', emoji: '🎲', name: 'Lucky Crawl', blurb: 'Push your luck for treasure — bank before the alarm!', baseXp: 12, gradient: 'from-amber-600 to-yellow-700' },
 ];
 
 // Premium games: locked until bought with coins in the Shop (id → coin price).
@@ -84,22 +92,119 @@ export const PREMIUM_GAMES: Record<string, number> = {
   turbo: 100,
 };
 
-export function ArcadeHeader({ title, emoji }: { title: string; emoji: string }) {
+export function ArcadeHeader({ title, emoji, gameId, help = true }: { title: string; emoji: string; gameId?: string; help?: boolean }) {
+  const def = ARCADE_GAMES.find((g) => g.id === gameId || g.name === title);
   return (
     <div className="mb-4">
       <div className="flex items-center justify-between gap-3">
         <h1 className="text-xl font-display font-extrabold text-slate-900">
           {emoji} {title}
         </h1>
-        <Link
-          to="/arcade"
-          className="text-sm font-display font-bold text-slate-500 hover:text-slate-700"
-        >
-          ← Arcade
-        </Link>
+        <div className="flex items-center gap-2">
+          {help && def && <HelpDrawer def={def} />}
+          <Link
+            to="/arcade"
+            className="text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+          >
+            ← Arcade
+          </Link>
+        </div>
       </div>
       <BalanceClock />
     </div>
+  );
+}
+
+// A pause-the-game "📖 Help" drawer available on every arcade screen: it freezes
+// real-time games (via the global help-pause that useArcadePausedRef honors) so
+// the player can read the rules or do a calculation on the built-in scratchpad
+// without the clock running them over.
+export function HelpDrawer({ def }: { def: ArcadeGameDef }) {
+  const [open, setOpen] = useState(false);
+  const [scratch, setScratch] = useState('');
+  const howto = getHowTo(def);
+
+  const setOpenPaused = (v: boolean) => {
+    setOpen(v);
+    helpPause.set(v);
+  };
+  // make sure we never leave the game frozen if the drawer unmounts while open
+  useEffect(() => () => helpPause.set(false), []);
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpenPaused(true)}
+        className="shrink-0 rounded-full border border-indigo-300 bg-white px-3 py-1 text-sm font-display font-bold text-indigo-600 shadow-sm active:translate-y-0.5"
+      >
+        📖 Help
+      </button>
+      <AnimatePresence>
+        {open && (
+          <>
+            <motion.div
+              className="fixed inset-0 z-40 bg-slate-950/40"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setOpenPaused(false)}
+            />
+            <motion.div
+              className="fixed inset-x-0 bottom-0 z-50 mx-auto max-h-[82vh] max-w-sm overflow-y-auto rounded-t-3xl border-2 border-b-0 border-indigo-200 bg-white p-5 pb-8 shadow-2xl"
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ type: 'spring', stiffness: 320, damping: 32 }}
+              role="dialog"
+              aria-label={`${def.name} help`}
+            >
+              <div className="mx-auto mb-3 h-1.5 w-12 rounded-full bg-slate-200" />
+              <div className="flex items-center justify-between">
+                <h2 className="font-display text-lg font-extrabold text-slate-900">{def.emoji} {def.name} — help</h2>
+                <button type="button" onClick={() => setOpenPaused(false)} className="rounded-lg px-2 py-1 text-xs font-display font-bold text-slate-400 hover:text-slate-700">
+                  resume ✕
+                </button>
+              </div>
+              <p className="mt-0.5 text-[11px] font-display font-bold uppercase tracking-widest text-emerald-600">⏸ game paused</p>
+
+              <div className="mt-3 space-y-2">
+                {howto.sections.map((s, i) => (
+                  <div key={i} className="rounded-xl bg-slate-50 px-3 py-2">
+                    <div className="font-display text-sm font-extrabold text-slate-800">{s.heading}</div>
+                    <div className="text-sm leading-snug text-slate-600">{s.body}</div>
+                  </div>
+                ))}
+                {howto.controls && (
+                  <div className="rounded-xl bg-indigo-50 px-3 py-2 text-sm text-indigo-700">
+                    <span className="font-display font-extrabold">Controls: </span>{howto.controls}
+                  </div>
+                )}
+              </div>
+
+              <div className="mt-4">
+                <div className="mb-1 font-display text-sm font-extrabold text-slate-800">✏️ Scratchpad</div>
+                <textarea
+                  value={scratch}
+                  onChange={(e) => setScratch(e.target.value)}
+                  placeholder="Work it out here…"
+                  rows={3}
+                  className="w-full rounded-xl border-2 border-slate-200 bg-white p-2 font-mono text-base text-slate-800 focus:border-indigo-400 focus:outline-none"
+                />
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setOpenPaused(false)}
+                className="mt-4 w-full rounded-2xl bg-indigo-600 py-3 font-display font-extrabold text-white active:translate-y-0.5"
+              >
+                ▶ Resume game
+              </button>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
 

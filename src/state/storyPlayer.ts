@@ -6,7 +6,6 @@ export interface StorySession {
   totalSlides: number;
   isPlaying: boolean;
   animationDone: boolean;
-  autoPlay: boolean;
 }
 
 interface StoryPlayerStore extends StorySession {
@@ -17,7 +16,6 @@ interface StoryPlayerStore extends StorySession {
   setTotalSlides: (total: number) => void;
   setIsPlaying: (playing: boolean) => void;
   setAnimationDone: (done: boolean) => void;
-  setAutoPlay: (auto: boolean) => void;
   resetSession: () => void;
 }
 
@@ -38,7 +36,6 @@ export const useStoryPlayer = create<StoryPlayerStore>((set) => {
     totalSlides: initial.totalSlides ?? 0,
     isPlaying: initial.isPlaying ?? false,
     animationDone: initial.animationDone ?? false,
-    autoPlay: initial.autoPlay ?? localStorage.getItem('story:autoplay') === 'true',
 
     setStory: (storyId: string, totalSlides: number) =>
       set(() => {
@@ -85,13 +82,6 @@ export const useStoryPlayer = create<StoryPlayerStore>((set) => {
 
     setAnimationDone: (done: boolean) =>
       set(() => ({ animationDone: done })),
-
-    setAutoPlay: (auto: boolean) =>
-      set((state) => {
-        localStorage.setItem('story:autoplay', auto ? 'true' : 'false');
-        persistSession({ ...state, autoPlay: auto });
-        return { autoPlay: auto };
-      }),
 
     resetSession: () =>
       set(() => {

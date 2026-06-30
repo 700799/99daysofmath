@@ -826,6 +826,10 @@ export const GAME_MASCOT: Record<string, MascotKind> = {
   taiko: 'panda',
   shinobi: 'ninja',
   speedlab: 'robot',
+  fraction: 'clerk',
+  chess: 'robot',
+  starhop: 'unicorn',
+  crawler: 'fox',
 };
 
 export function gameMascot(id: string): MascotKind {

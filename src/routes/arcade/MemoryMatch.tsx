@@ -2,13 +2,15 @@ import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { Mascot as CharMascot, type MascotKind } from './Mascots';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
-const EMOJI = ['➗', '📐', '🔢', '⚖️', '📊', '🧮', '🎯', '⭐'];
+// Cute mascot faces from the inventory — 8 distinct kinds make the 8 pairs.
+const FACES: MascotKind[] = ['panda', 'ninja', 'fox', 'cat', 'bunny', 'redpanda', 'capsuleR', 'cow'];
 
 interface Card {
   id: number;
-  emoji: string;
+  kind: MascotKind;
   matched: boolean;
 }
 
@@ -24,7 +26,7 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 function deal(): Card[] {
-  return shuffle([...EMOJI, ...EMOJI]).map((emoji, id) => ({ id, emoji, matched: false }));
+  return shuffle([...FACES, ...FACES]).map((kind, id) => ({ id, kind, matched: false }));
 }
 
 // Scatter the 16 cards over the mountain: each card gets its own 4×4 cell (so
@@ -104,7 +106,7 @@ export function MemoryMatch() {
     if (next.length === 2) {
       setFlips((f) => f + 1);
       const [a, b] = next.map((i) => cards.find((c) => c.id === i)!);
-      if (a.emoji === b.emoji) {
+      if (a.kind === b.kind) {
         const updated = cards.map((c) =>
           c.id === a.id || c.id === b.id ? { ...c, matched: true } : c,
         );
@@ -164,7 +166,7 @@ export function MemoryMatch() {
                   key={card.id}
                   type="button"
                   onClick={() => flip(card.id)}
-                  aria-label={up ? card.emoji : 'Hidden card'}
+                  aria-label={up ? card.kind : 'Hidden card'}
                   className="absolute h-[15%] w-[18%] [perspective:600px]"
                   style={{
                     left: `${p.x}%`,
@@ -182,11 +184,11 @@ export function MemoryMatch() {
                       ?
                     </div>
                     <div
-                      className={`absolute inset-0 flex items-center justify-center rounded-xl border-2 text-2xl shadow-md [backface-visibility:hidden] [transform:rotateY(180deg)] ${
+                      className={`absolute inset-0 flex items-center justify-center rounded-xl border-2 p-0.5 shadow-md [backface-visibility:hidden] [transform:rotateY(180deg)] ${
                         card.matched ? 'border-green-400 bg-green-50' : 'border-slate-200 bg-white'
                       }`}
                     >
-                      {card.emoji}
+                      <CharMascot kind={card.kind} size={44} expr={card.matched ? 'cheer' : 'happy'} />
                     </div>
                   </motion.div>
                 </button>

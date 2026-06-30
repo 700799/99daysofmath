@@ -220,16 +220,8 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
     };
   }, []);
 
-  // Try to autoplay (muted) once mounted — drawers are user-initiated so
-  // browsers allow it. If autoplay is blocked, the big Play overlay still
-  // shows.
-  useEffect(() => {
-    const v = ref.current;
-    if (!v) return;
-    const tryPlay = () => v.play().catch(() => {});
-    if (v.readyState >= 2) tryPlay();
-    else v.addEventListener('loadedmetadata', tryPlay, { once: true });
-  }, []);
+  // No time-based autoplay: the animation waits on the big Play button so it
+  // only ever starts (and continues) on a button press.
 
   useEffect(() => {
     let cancelled = false;
@@ -369,11 +361,14 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
       )}
 
       {atCheckpoint && (
-        <div className="absolute bottom-3 right-3 z-10 flex flex-col items-end gap-1.5">
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-black/50 px-4 text-center">
+          <div className="font-display font-extrabold text-white text-lg sm:text-xl drop-shadow">
+            ⏸ Paused — ready for the next part?
+          </div>
           <button
             type="button"
             onClick={continuePlayback}
-            className="rounded-full bg-duo-green hover:bg-green-600 text-white font-display font-extrabold text-sm px-4 h-10 flex items-center gap-1.5 shadow-lg active:translate-y-0.5 transition"
+            className="rounded-full bg-duo-green hover:bg-green-600 text-white font-display font-extrabold text-lg sm:text-xl px-8 h-14 flex items-center gap-2 shadow-lg shadow-green-600/30 active:translate-y-0.5 transition"
           >
             Continue ▶
           </button>
@@ -383,9 +378,9 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
               setAutoPause(false);
               continuePlayback();
             }}
-            className="text-white/90 text-[10px] font-display font-bold underline bg-black/40 px-2 py-0.5 rounded"
+            className="text-white/80 text-xs font-display font-bold underline"
           >
-            Don't pause again
+            Play straight through (don't pause)
           </button>
         </div>
       )}
