@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useProgress } from '../../state/progress';
-import { makeAdaptive, pickLesson, type Challenge, type RoundLen } from './MidGameChallenge';
-import { LessonCard } from '../../components/LessonCard';
+import { makeAdaptive, type Challenge, type RoundLen } from './MidGameChallenge';
+import { ProblemAidDrawer } from './ProblemAid';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // MilestoneQuiz — a compact, reusable "you hit a milestone, solve for a bonus!"
@@ -61,20 +61,12 @@ export function MilestoneQuiz({ onDone, len = 'short', label = '🎁 Milestone b
             ))}
           </div>
           <div className="mt-2 grid grid-cols-3 gap-2">
-            <button type="button" onClick={() => setHelp(true)} className="min-h-10 rounded-2xl bg-white border-2 border-indigo-200 text-indigo-700 font-display font-extrabold text-sm">📚</button>
+            <button type="button" onClick={() => setHelp(true)} aria-label="How to solve" className="min-h-10 rounded-2xl bg-white border-2 border-indigo-200 text-indigo-700 font-display font-extrabold text-sm">📝</button>
             <button type="button" onClick={submit} disabled={!input.trim()} className="col-span-2 min-h-10 rounded-2xl bg-emerald-500 disabled:bg-slate-300 text-white font-display font-extrabold text-sm">Check</button>
           </div>
         </>
       )}
-      {help && (() => {
-        const lesson = pickLesson(arcadeUnit);
-        if (!lesson) { setHelp(false); return null; }
-        return (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
-            <LessonCard lesson={lesson} onClose={() => setHelp(false)} onStart={() => setHelp(false)} />
-          </div>
-        );
-      })()}
+      <ProblemAidDrawer prompt={chal.prompt} open={help} onClose={() => setHelp(false)} />
     </motion.div>
   );
 }
