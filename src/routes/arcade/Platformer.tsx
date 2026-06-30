@@ -2,170 +2,85 @@ import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
+import { makeAdaptive, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
-// Minimal 2D Mario-style platformer. Tile-based level, gravity + jump physics,
-// Goomba enemies (stomp from above), math-coin questions, and a flag at the
-// end. All-SVG/emoji rendering. ~45 s playthrough.
+// Dino Blaster — a Contra/Mario-style run-and-gun platformer. You play a cute
+// Dino 🦖 who shoots fireballs 🔥 at baddies across 8 wildly different worlds
+// (hills, desert, beach, cave, ice, jungle, sky, robot fortress) with unique
+// backgrounds, enemies, and incoming rockets 🚀. The math NEVER interrupts the
+// action mid-run: a "refuel your blaster" WORD problem only appears after ~30s of
+// play or when you clear a level. No easy single-digit arithmetic — word problems
+// from your chosen unit + level. All-emoji/SVG rendering.
 
 const TILE = 28;
 const VIEW_W = 360;
 const VIEW_H = 232;
 const GRAVITY = 1400;
 const JUMP_VY = -540;
-const MOVE_SPEED = 170;
+const MOVE_SPEED = 175;
 const ENEMY_SPEED = 50;
+const AMMO_MAX = 8;
+const FIRE_SPEED = 330;
+const FIRE_LIFE = 0.9;
+const ROCKET_SPEED = 250;
+const REFUEL_EVERY = 30; // seconds of play before the blaster needs a refuel
 
-// Levels: . air, T ground/brick, P platform, G goomba spawn, C math-coin,
-// F flagpole. Each row is 30 cols × 8 rows. Difficulty ramps with index:
-// more enemies, longer pits, narrower platforms.
 // prettier-ignore
 const LEVELS: string[][] = [
-  // Level 1 — easy intro, one pit, two goombas
-  [
-    '..............................',
-    '..............................',
-    '...........C.................F',
-    '..............P.P.P..........F',
-    '......C.................C....F',
-    '..........TT........TT..PP...F',
-    '........G............G.......F',
-    'TTTTTTTTTTTTTT..TTTTTTTTTTTTTT',
-  ],
-  // Level 2 — narrower pit, three goombas
-  [
-    '..............................',
-    '...........C..................',
-    '.......P..........C..........F',
-    '...........PP..PP.............F',
-    '.....C.................C.....F',
-    '....G......TT.....TTTT.G.....F',
-    '..G..............G............',
-    'TTTTTTT...TTTTT...TTTTTTTTTTTT',
-  ],
-  // Level 3 — two pits, more coins
-  [
-    '..............................',
-    '.....C.........C........C....F',
-    '..........P...........P......F',
-    '....PP........PPP.............',
-    '............C................F',
-    '.......G..........G..........F',
-    '.G..........G.................',
-    'TTTTT..TTTTT...TTTTT...TTTTTTT',
-  ],
-  // Level 4 — floating platforms, sky path
-  [
-    '..............................',
-    '..C........C...........C.....F',
-    '...PPP....PP....PPP....PP....F',
-    '..............................',
-    '......C....C....C....C......F',
-    '.....PP...PP...PP...PP........',
-    '..G....G....G....G....G......F',
-    'TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT',
-  ],
-  // Level 5 — wide pit, you have to jump precisely
-  [
-    '..............................',
-    '...........C..................',
-    '.....P............P..........F',
-    '.........C...........C......F',
-    '............PP........PP....F',
-    '...G..G.................G...F',
-    'G.......G............G.G....F',
-    'TTTTTT......TTTT......TTTTTTT',
-  ],
-  // Level 6 — many enemies
-  [
-    '...............C..............',
-    '...........P............P....F',
-    '.....C........C.....C.........',
-    '....PP....PP....PP....PP.....F',
-    '..G..G..G..G..G..G..G..G..G..',
-    '...G..G..G..G..G..G..G..G....',
-    '..............................',
-    'TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT',
-  ],
-  // Level 7 — coins galore + two pits + goombas
-  [
-    '..C..C..C..C..C..C..C..C..C..',
-    '.PP..PP..PP..PP..PP..PP..PP..F',
-    '..............................',
-    '.....C............C..........F',
-    '......PPP..........PPP........',
-    '..G......G......G......G....F',
-    'G............G.............G.',
-    'TTTT...TTTTTT....TTTTT..TTTTT',
-  ],
-  // Level 8 — boss-ish: three pits, lots of enemies, narrow platforms
-  [
-    '..C..........C..........C....F',
-    'P............P............PP.F',
-    '.....C............C..........F',
-    '....PP............PP..........',
-    '....G..G......G..G......G....F',
-    'G..G..G..G..G..G..G..G..G..G..',
-    '..............................',
-    'TTT..TTT..TTT...TTT..TTT.TTTTT',
-  ],
+  ['..............................','..............................','...........C.................F','..............P.P.P..........F','......C.................C....F','..........TT........TT..PP...F','........G............G.......F','TTTTTTTTTTTTTT..TTTTTTTTTTTTTT'],
+  ['..............................','...........C..................','.......P..........C..........F','...........PP..PP.............F','.....C.................C.....F','....G......TT.....TTTT.G.....F','..G..............G............','TTTTTTT...TTTTT...TTTTTTTTTTTT'],
+  ['..............................','.....C.........C........C....F','..........P...........P......F','....PP........PPP.............','............C................F','.......G..........G..........F','.G..........G.................','TTTTT..TTTTT...TTTTT...TTTTTTT'],
+  ['..............................','..C........C...........C.....F','...PPP....PP....PPP....PP....F','..............................','......C....C....C....C......F','.....PP...PP...PP...PP........','..G....G....G....G....G......F','TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT'],
+  ['..............................','...........C..................','.....P............P..........F','.........C...........C......F','............PP........PP....F','...G..G.................G...F','G.......G............G.G....F','TTTTTT......TTTT......TTTTTTT'],
+  ['...............C..............','...........P............P....F','.....C........C.....C.........','....PP....PP....PP....PP.....F','..G..G..G..G..G..G..G..G..G..','...G..G..G..G..G..G..G..G....','..............................','TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT'],
+  ['..C..C..C..C..C..C..C..C..C..','.PP..PP..PP..PP..PP..PP..PP..F','..............................','.....C............C..........F','......PPP..........PPP........','..G......G......G......G....F','G............G.............G.','TTTT...TTTTTT....TTTTT..TTTTT'],
+  ['..C..........C..........C....F','P............P............PP.F','.....C............C..........F','....PP............PP..........','....G..G......G..G......G....F','G..G..G..G..G..G..G..G..G..G..','..............................','TTT..TTT..TTT...TTT..TTT.TTTTT'],
 ];
 
 export const PLATFORMER_LEVEL_COUNT = LEVELS.length;
 
+type World = { name: string; sky: [string, string]; ground: string; brick: string; decor: string[]; foes: string[]; rocketEvery: number };
+const WORLDS: World[] = [
+  { name: 'Green Hills', sky: ['#7dd3fc', '#dbeafe'], ground: '#15803d', brick: '#a16207', decor: ['☁️', '🌳', '🌼'], foes: ['👾', '🐢'], rocketEvery: 0 },
+  { name: 'Sandy Desert', sky: ['#fcd34d', '#fef3c7'], ground: '#b45309', brick: '#92400e', decor: ['☀️', '🌵', '🦴'], foes: ['🦂', '🐍'], rocketEvery: 0 },
+  { name: 'Coral Beach', sky: ['#67e8f9', '#cffafe'], ground: '#0e7490', brick: '#155e75', decor: ['🌊', '🐚', '⛵'], foes: ['🦀', '🐙'], rocketEvery: 0 },
+  { name: 'Crystal Cave', sky: ['#4338ca', '#1e1b4b'], ground: '#4c1d95', brick: '#312e81', decor: ['💎', '🦇', '🔮'], foes: ['🦇', '🕷️'], rocketEvery: 5 },
+  { name: 'Frosty Peaks', sky: ['#bae6fd', '#e0f2fe'], ground: '#0369a1', brick: '#075985', decor: ['❄️', '⛄', '🏔️'], foes: ['🐧', '☃️'], rocketEvery: 7 },
+  { name: 'Wild Jungle', sky: ['#86efac', '#bbf7d0'], ground: '#166534', brick: '#14532d', decor: ['🌴', '🦜', '🍌'], foes: ['🐒', '🐗'], rocketEvery: 6 },
+  { name: 'Sky Kingdom', sky: ['#a5b4fc', '#e0e7ff'], ground: '#6d28d9', brick: '#5b21b6', decor: ['☁️', '🌈', '⭐'], foes: ['🦅', '🐝'], rocketEvery: 5 },
+  { name: 'Robot Fortress', sky: ['#111827', '#1f2937'], ground: '#374151', brick: '#4b5563', decor: ['🛸', '🛰️', '🚀'], foes: ['🤖', '👽'], rocketEvery: 3 },
+];
+
 type Vec = { x: number; y: number };
-type Player = Vec & { vx: number; vy: number; onGround: boolean; invuln: number };
-type Enemy = Vec & { vx: number; alive: boolean };
-type Coin = Vec & { id: number; collected: boolean; question: string; correct: number; choices: number[] };
+type Player = Vec & { vx: number; vy: number; onGround: boolean; invuln: number; dir: number };
+type Enemy = Vec & { vx: number; alive: boolean; emoji: string };
+type Fireball = Vec & { vx: number; life: number };
+type Rocket = Vec & { vx: number; alive: boolean };
 
-function makeMathCoin(id: number, x: number, y: number): Coin {
-  const a = 2 + Math.floor(Math.random() * 9);
-  const b = 2 + Math.floor(Math.random() * 9);
-  const correct = a * b;
-  const wrongs = new Set<number>();
-  while (wrongs.size < 3) {
-    const drift = (Math.random() < 0.5 ? -1 : 1) * (1 + Math.floor(Math.random() * 7));
-    const w = correct + drift;
-    if (w !== correct && w > 0) wrongs.add(w);
-  }
-  const choices = [correct, ...Array.from(wrongs)];
-  for (let i = choices.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [choices[i], choices[j]] = [choices[j], choices[i]];
-  }
-  return { id, x, y, collected: false, question: `${a} × ${b}`, correct, choices };
-}
-
-// Parse level once at module load — every game session uses fresh copies.
-function buildLevel(idx: number): {
-  walls: { x: number; y: number; w: number; h: number }[];
-  enemySpawns: Vec[];
-  coinSpawns: Vec[];
-  flagX: number;
-  levelW: number;
-} {
+function buildLevel(idx: number): { walls: { x: number; y: number; w: number; h: number }[]; enemySpawns: Vec[]; flagX: number; levelW: number } {
   const LEVEL = LEVELS[Math.max(0, Math.min(LEVELS.length - 1, idx))];
   const levelW = LEVEL[0].length * TILE;
   const walls: { x: number; y: number; w: number; h: number }[] = [];
   const enemySpawns: Vec[] = [];
-  const coinSpawns: Vec[] = [];
   let flagX = levelW;
   for (let row = 0; row < LEVEL.length; row++) {
     for (let col = 0; col < LEVEL[row].length; col++) {
       const ch = LEVEL[row][col];
-      const x = col * TILE;
-      const y = row * TILE;
+      const x = col * TILE; const y = row * TILE;
       if (ch === 'T' || ch === 'P') walls.push({ x, y, w: TILE, h: TILE });
       if (ch === 'G') enemySpawns.push({ x, y: y - 4 });
-      if (ch === 'C') coinSpawns.push({ x, y });
       if (ch === 'F') flagX = Math.min(flagX, x);
     }
   }
-  return { walls, enemySpawns, coinSpawns, flagX, levelW };
+  return { walls, enemySpawns, flagX, levelW };
 }
 
 export function Platformer() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
+  const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
+  const arcadeUnit = useProgress((s) => s.arcadeUnit);
   const setPlatformerMaxLevel = useProgress((s) => s.setPlatformerMaxLevel);
   const platformerMaxLevel = useProgress((s) => s.platformerMaxLevel ?? 0);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -179,41 +94,68 @@ export function Platformer() {
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
 
+  const world = WORLDS[levelIdx % WORLDS.length];
   const level = useRef(buildLevel(levelIdx));
-  const playerRef = useRef<Player>({ x: TILE, y: TILE * 5, vx: 0, vy: 0, onGround: false, invuln: 0 });
+  const worldRef = useRef(world);
+  worldRef.current = world;
+
+  const playerRef = useRef<Player>({ x: TILE, y: TILE * 5, vx: 0, vy: 0, onGround: false, invuln: 0, dir: 1 });
   const enemiesRef = useRef<Enemy[]>([]);
-  const coinsRef = useRef<Coin[]>([]);
+  const fireRef = useRef<Fireball[]>([]);
+  const rocketsRef = useRef<Rocket[]>([]);
   const livesRef = useRef(3);
+  const ammoRef = useRef(AMMO_MAX);
   const cameraRef = useRef(0);
   const inputRef = useRef({ left: false, right: false, jump: false });
-  const stompXpRef = useRef(0);
-  const correctCoinXpRef = useRef(0);
+  const killsRef = useRef(0);
+  const correctRef = useRef(0);
   const reachedFlagRef = useRef(false);
-  const pausedQuestionRef = useRef<Coin | null>(null);
+  const playTimeRef = useRef(0);
+  const fireCdRef = useRef(0);
+  const rocketCdRef = useRef(0);
+  const gateRef = useRef(false);
   const rafRef = useRef(0);
   const lastTickRef = useRef(performance.now());
 
-  const [pendingQuestion, setPendingQuestion] = useState<Coin | null>(null);
+  const [gate, setGate] = useState<{ kind: 'refuel' | 'complete'; c: Challenge } | null>(null);
+  const [input, setInput] = useState('');
+  const [wrong, setWrong] = useState(false);
   const [, force] = useState(0);
   const redraw = () => force((n) => n + 1);
 
-  // Reset level objects on mount / replay.
   const initWorld = () => {
     const lv = level.current;
-    playerRef.current = { x: TILE, y: TILE * 5, vx: 0, vy: 0, onGround: false, invuln: 0 };
-    enemiesRef.current = lv.enemySpawns.map((s) => ({ ...s, vx: -ENEMY_SPEED, alive: true }));
-    coinsRef.current = lv.coinSpawns.map((s, i) => makeMathCoin(i, s.x, s.y));
+    const w = worldRef.current;
+    playerRef.current = { x: TILE, y: TILE * 5, vx: 0, vy: 0, onGround: false, invuln: 0, dir: 1 };
+    enemiesRef.current = lv.enemySpawns.map((s, i) => ({ ...s, vx: -ENEMY_SPEED, alive: true, emoji: w.foes[i % w.foes.length] }));
+    fireRef.current = [];
+    rocketsRef.current = [];
     livesRef.current = 3;
+    ammoRef.current = AMMO_MAX;
     cameraRef.current = 0;
-    stompXpRef.current = 0;
-    correctCoinXpRef.current = 0;
+    killsRef.current = 0;
+    correctRef.current = 0;
     reachedFlagRef.current = false;
-    pausedQuestionRef.current = null;
-    setPendingQuestion(null);
+    playTimeRef.current = 0;
+    fireCdRef.current = 0;
+    rocketCdRef.current = worldRef.current.rocketEvery;
+    gateRef.current = false;
+    setGate(null);
+    setInput(''); setWrong(false);
     setOutcome(null);
   };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => initWorld(), []);
+
+  const shoot = () => {
+    if (gateRef.current || pausedRef.current) return;
+    if (ammoRef.current <= 0 || fireCdRef.current > 0) return;
+    const p = playerRef.current;
+    ammoRef.current -= 1;
+    fireCdRef.current = 0.22;
+    fireRef.current.push({ x: p.x + (p.dir > 0 ? 18 : -6), y: p.y + 6, vx: p.dir * FIRE_SPEED, life: FIRE_LIFE });
+    sfx.shoot(); haptic(HAPTIC.tap);
+  };
 
   // Input
   useEffect(() => {
@@ -221,6 +163,7 @@ export function Platformer() {
       if (e.key === 'ArrowLeft' || e.key === 'a') inputRef.current.left = true;
       if (e.key === 'ArrowRight' || e.key === 'd') inputRef.current.right = true;
       if (e.key === ' ' || e.key === 'ArrowUp' || e.key === 'w') inputRef.current.jump = true;
+      if (e.key === 'f' || e.key === 'x' || e.key === 'Enter') shoot();
     };
     const onUp = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft' || e.key === 'a') inputRef.current.left = false;
@@ -229,10 +172,8 @@ export function Platformer() {
     };
     window.addEventListener('keydown', onDown);
     window.addEventListener('keyup', onUp);
-    return () => {
-      window.removeEventListener('keydown', onDown);
-      window.removeEventListener('keyup', onUp);
-    };
+    return () => { window.removeEventListener('keydown', onDown); window.removeEventListener('keyup', onUp); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Main loop
@@ -241,32 +182,25 @@ export function Platformer() {
     const tick = (now: number) => {
       const dt = Math.min(0.04, (now - lastTickRef.current) / 1000);
       lastTickRef.current = now;
-
-      if (pausedQuestionRef.current || pausedRef.current) {
-        rafRef.current = requestAnimationFrame(tick);
-        return;
-      }
+      if (gateRef.current || pausedRef.current) { rafRef.current = requestAnimationFrame(tick); return; }
 
       const p = playerRef.current;
-      const input = inputRef.current;
+      const inp = inputRef.current;
+      const W = worldRef.current;
 
-      // Horizontal velocity
-      p.vx = (input.left ? -MOVE_SPEED : 0) + (input.right ? MOVE_SPEED : 0);
-      // Jump
-      if (input.jump && p.onGround) {
-        p.vy = JUMP_VY;
-        p.onGround = false;
-      }
-      // Gravity
+      // refuel timer
+      playTimeRef.current += dt;
+      if (playTimeRef.current >= REFUEL_EVERY) { openGate('refuel'); rafRef.current = requestAnimationFrame(tick); return; }
+
+      p.vx = (inp.left ? -MOVE_SPEED : 0) + (inp.right ? MOVE_SPEED : 0);
+      if (inp.left) p.dir = -1; else if (inp.right) p.dir = 1;
+      if (inp.jump && p.onGround) { p.vy = JUMP_VY; p.onGround = false; }
       p.vy += GRAVITY * dt;
 
-      // Integrate + collide
       p.x += p.vx * dt;
-      // Horizontal collision
       for (const w of level.current.walls) {
         if (rectOverlap(p.x, p.y, 18, 22, w.x, w.y, w.w, w.h)) {
-          if (p.vx > 0) p.x = w.x - 18;
-          else if (p.vx < 0) p.x = w.x + w.w;
+          if (p.vx > 0) p.x = w.x - 18; else if (p.vx < 0) p.x = w.x + w.w;
           p.vx = 0;
         }
       }
@@ -274,79 +208,74 @@ export function Platformer() {
       p.onGround = false;
       for (const w of level.current.walls) {
         if (rectOverlap(p.x, p.y, 18, 22, w.x, w.y, w.w, w.h)) {
-          if (p.vy > 0) {
-            p.y = w.y - 22;
-            p.vy = 0;
-            p.onGround = true;
-          } else if (p.vy < 0) {
-            p.y = w.y + w.h;
-            p.vy = 0;
-          }
+          if (p.vy > 0) { p.y = w.y - 22; p.vy = 0; p.onGround = true; }
+          else if (p.vy < 0) { p.y = w.y + w.h; p.vy = 0; }
         }
       }
-      // Bounds: don't fall through bottom; pit kills.
       if (p.y > VIEW_H + 32) {
         livesRef.current -= 1;
-        if (livesRef.current <= 0) {
-          finish();
-          return;
-        }
-        playerRef.current = { x: TILE, y: TILE * 5, vx: 0, vy: 0, onGround: false, invuln: 1.0 };
+        if (livesRef.current <= 0) { finish(); return; }
+        playerRef.current = { x: Math.max(TILE, cameraRef.current + 40), y: TILE * 3, vx: 0, vy: 0, onGround: false, invuln: 1.0, dir: 1 };
       }
       if (p.invuln > 0) p.invuln = Math.max(0, p.invuln - dt);
+      if (fireCdRef.current > 0) fireCdRef.current = Math.max(0, fireCdRef.current - dt);
 
-      // Enemies
+      // fireballs
+      for (const f of fireRef.current) { f.x += f.vx * dt; f.life -= dt; }
+      fireRef.current = fireRef.current.filter((f) => f.life > 0);
+
+      // enemies
       for (const e of enemiesRef.current) {
         if (!e.alive) continue;
         e.x += e.vx * dt;
-        // Reverse at walls (lazy: turn on touching a wall).
         for (const w of level.current.walls) {
           if (rectOverlap(e.x, e.y, 22, 22, w.x, w.y, w.w, w.h)) {
-            if (e.vx > 0) e.x = w.x - 22;
-            else if (e.vx < 0) e.x = w.x + w.w;
+            if (e.vx > 0) e.x = w.x - 22; else if (e.vx < 0) e.x = w.x + w.w;
             e.vx = -e.vx;
           }
         }
-        // Collide with player
+        // fireball kill
+        for (const f of fireRef.current) {
+          if (rectOverlap(f.x, f.y, 12, 12, e.x, e.y, 22, 22)) { e.alive = false; f.life = 0; killsRef.current += 1; sfx.hit(); haptic(HAPTIC.hit); break; }
+        }
+        if (!e.alive) continue;
         if (rectOverlap(p.x, p.y, 18, 22, e.x, e.y, 22, 22)) {
-          if (p.vy > 80) {
-            // Stomp
-            e.alive = false;
-            p.vy = JUMP_VY * 0.7;
-            stompXpRef.current += 1;
-          } else if (p.invuln <= 0) {
-            livesRef.current -= 1;
-            p.invuln = 1.2;
-            p.vy = JUMP_VY * 0.4;
-            if (livesRef.current <= 0) {
-              finish();
-              return;
-            }
+          if (p.vy > 80) { e.alive = false; p.vy = JUMP_VY * 0.7; killsRef.current += 1; }
+          else if (p.invuln <= 0) {
+            livesRef.current -= 1; p.invuln = 1.2; p.vy = JUMP_VY * 0.4;
+            sfx.hurt(); haptic(HAPTIC.heavy);
+            if (livesRef.current <= 0) { finish(); return; }
           }
         }
       }
 
-      // Math coins
-      for (const c of coinsRef.current) {
-        if (c.collected) continue;
-        if (rectOverlap(p.x, p.y, 18, 22, c.x, c.y, 22, 22)) {
-          c.collected = true;
-          pausedQuestionRef.current = c;
-          setPendingQuestion(c);
+      // rockets blasted from the right edge toward the player
+      if (W.rocketEvery > 0) {
+        rocketCdRef.current -= dt;
+        if (rocketCdRef.current <= 0) {
+          rocketCdRef.current = W.rocketEvery;
+          rocketsRef.current.push({ x: cameraRef.current + VIEW_W + 12, y: Math.max(20, p.y - 6), vx: -ROCKET_SPEED, alive: true });
+          sfx.laser();
         }
       }
-
-      // Flag
-      if (p.x >= level.current.flagX) {
-        reachedFlagRef.current = true;
-        finish();
-        return;
+      for (const r of rocketsRef.current) {
+        if (!r.alive) continue;
+        r.x += r.vx * dt;
+        for (const f of fireRef.current) {
+          if (rectOverlap(f.x, f.y, 12, 12, r.x, r.y, 22, 16)) { r.alive = false; f.life = 0; killsRef.current += 1; sfx.explode(); haptic(HAPTIC.explode); break; }
+        }
+        if (r.alive && p.invuln <= 0 && rectOverlap(p.x, p.y, 18, 22, r.x, r.y, 22, 16)) {
+          r.alive = false; livesRef.current -= 1; p.invuln = 1.2; sfx.explode(); haptic(HAPTIC.explode);
+          if (livesRef.current <= 0) { finish(); return; }
+        }
       }
+      rocketsRef.current = rocketsRef.current.filter((r) => r.alive && r.x > cameraRef.current - 40);
 
-      // Camera: follow player, clamp to level.
+      // flag → level-complete word problem (reload), then finish
+      if (p.x >= level.current.flagX) { reachedFlagRef.current = true; openGate('complete'); return; }
+
       const target = p.x - VIEW_W * 0.35;
       cameraRef.current = Math.max(0, Math.min(target, level.current.levelW - VIEW_W));
-
       redraw();
       rafRef.current = requestAnimationFrame(tick);
     };
@@ -356,15 +285,38 @@ export function Platformer() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [outcome]);
 
-  const finish = () => {
-    const reach = reachedFlagRef.current ? 10 + levelIdx * 2 : 0;
-    const xp = Math.max(
-      1,
-      livesRef.current * 3 + stompXpRef.current + correctCoinXpRef.current * 2 + reach,
-    );
-    if (reachedFlagRef.current && levelIdx >= platformerMaxLevel) {
-      setPlatformerMaxLevel(Math.min(LEVELS.length - 1, levelIdx + 1));
+  const openGate = (kind: 'refuel' | 'complete') => {
+    gateRef.current = true;
+    const lvl = useProgress.getState().arcadeLevels[arcadeUnit] ?? 1;
+    setGate({ kind, c: makeAdaptive(arcadeUnit, lvl, 'word') });
+    setInput(''); setWrong(false);
+    redraw();
+  };
+
+  const submitGate = () => {
+    if (!gate) return;
+    const n = Number(input.trim());
+    if (input.trim() === '' || Number.isNaN(n)) return;
+    const correct = n === gate.c.answer;
+    recordArcadeAnswer(arcadeUnit, correct);
+    if (correct) { correctRef.current += 1; sfx.powerup(); haptic(HAPTIC.levelUp); }
+    else { sfx.hurt(); haptic(HAPTIC.hit); }
+    if (gate.kind === 'refuel') {
+      ammoRef.current = correct ? AMMO_MAX : Math.floor(AMMO_MAX / 2);
+      playTimeRef.current = 0;
+      gateRef.current = false;
+      setGate(null); setInput(''); setWrong(false);
+      lastTickRef.current = performance.now();
+    } else {
+      setGate(null);
+      finish();
     }
+  };
+
+  const finish = () => {
+    const reach = reachedFlagRef.current ? 8 + levelIdx * 2 : 0;
+    const xp = Math.max(1, Math.min(20, livesRef.current * 2 + killsRef.current + correctRef.current * 2 + reach));
+    if (reachedFlagRef.current && levelIdx >= platformerMaxLevel) setPlatformerMaxLevel(Math.min(LEVELS.length - 1, levelIdx + 1));
     setOutcome(recordArcadePlay('platformer', xp));
   };
 
@@ -373,53 +325,32 @@ export function Platformer() {
     if (next >= LEVELS.length) return;
     setLevelIdx(next);
     level.current = buildLevel(next);
+    worldRef.current = WORLDS[next % WORLDS.length];
     setSearchParams({ level: String(next) }, { replace: true });
     initWorld();
   };
-
-  const restartLevel = () => {
-    level.current = buildLevel(levelIdx);
-    initWorld();
-  };
-
-  const answerCoin = (coin: Coin, pick: number) => {
-    if (pick === coin.correct) correctCoinXpRef.current += 1;
-    pausedQuestionRef.current = null;
-    setPendingQuestion(null);
-  };
+  const restartLevel = () => { level.current = buildLevel(levelIdx); worldRef.current = WORLDS[levelIdx % WORLDS.length]; initWorld(); };
 
   if (outcome) {
     const hasNext = reachedFlagRef.current && levelIdx + 1 < LEVELS.length;
     return (
       <div>
-        <ArcadeHeader title={`Math Platformer · Level ${levelIdx + 1}`} emoji="🍄" />
+        <ArcadeHeader title={`Dino Blaster · ${world.name}`} emoji="🦖" />
         <ArcadeEndCard
           gameId="platformer"
           outcome={outcome}
           win={reachedFlagRef.current}
-          scoreLine={
-            reachedFlagRef.current
-              ? `Level ${levelIdx + 1} cleared! 🚩  ${livesRef.current}❤️ left · ${stompXpRef.current} stomps`
-              : `Game over on level ${levelIdx + 1} — ${stompXpRef.current} stomps`
-          }
+          scoreLine={reachedFlagRef.current ? `🚩 ${world.name} cleared! ${livesRef.current}❤️ · ${killsRef.current} blasted` : `Game over in ${world.name} — ${killsRef.current} blasted`}
           onReplay={restartLevel}
         />
         {hasNext && (
           <div className="mt-3 text-center">
-            <button
-              type="button"
-              onClick={advanceLevel}
-              className="inline-flex items-center gap-2 rounded-full bg-duo-green hover:bg-green-600 text-white font-display font-extrabold text-lg px-6 h-12 shadow-lg active:translate-y-0.5 transition"
-            >
-              Level {levelIdx + 2} →
+            <button type="button" onClick={advanceLevel} className="inline-flex items-center gap-2 rounded-full bg-duo-green hover:bg-green-600 text-white font-display font-extrabold text-lg px-6 h-12 shadow-lg active:translate-y-0.5 transition">
+              World {levelIdx + 2}: {WORLDS[(levelIdx + 1) % WORLDS.length].name} →
             </button>
           </div>
         )}
-        {reachedFlagRef.current && !hasNext && (
-          <div className="mt-3 text-center text-sm font-display font-extrabold text-amber-700">
-            🏆 You beat every level!
-          </div>
-        )}
+        {reachedFlagRef.current && !hasNext && <div className="mt-3 text-center text-sm font-display font-extrabold text-amber-700">🏆 You beat all 8 worlds!</div>}
       </div>
     );
   }
@@ -429,157 +360,86 @@ export function Platformer() {
 
   return (
     <div>
-      <ArcadeHeader title={`Math Platformer · Level ${levelIdx + 1} of ${LEVELS.length}`} emoji="🍄" />
+      <ArcadeHeader title={`Dino Blaster · World ${levelIdx + 1}: ${world.name}`} emoji="🦖" />
       <div className="mb-2 flex items-center justify-between">
-        <div className="text-sm font-display font-extrabold text-slate-900">
-          {'❤️'.repeat(livesRef.current)}
-          {'🤍'.repeat(Math.max(0, 3 - livesRef.current))}
-        </div>
-        <div className="text-sm font-display font-bold text-slate-600 tabular-nums">
-          👟 {stompXpRef.current} · 🪙 {correctCoinXpRef.current}
-        </div>
+        <div className="text-sm font-display font-extrabold text-slate-900">{'❤️'.repeat(livesRef.current)}{'🤍'.repeat(Math.max(0, 3 - livesRef.current))}</div>
+        <div className="text-sm font-display font-bold text-slate-600 tabular-nums">🔥 {ammoRef.current}/{AMMO_MAX} · 💥 {killsRef.current}</div>
       </div>
 
-      <div
-        className="relative mx-auto rounded-2xl bg-gradient-to-b from-sky-300 to-sky-100 border-2 border-slate-200 overflow-hidden select-none"
-        style={{ width: '100%', maxWidth: VIEW_W, height: VIEW_H }}
-      >
+      <div className="relative mx-auto rounded-2xl border-2 border-slate-200 overflow-hidden select-none" style={{ width: '100%', maxWidth: VIEW_W, height: VIEW_H, backgroundImage: `linear-gradient(to bottom, ${world.sky[0]}, ${world.sky[1]})` }}>
+        {/* parallax decor */}
+        {world.decor.map((d, i) => (
+          <div key={i} className="absolute text-3xl opacity-80" style={{ left: ((i * 130 + 40 - cam * 0.3) % (VIEW_W + 80)) - 40, top: 14 + (i % 3) * 30 }}>{d}</div>
+        ))}
         {/* Walls */}
         {level.current.walls.map((w, i) => (
-          <div
-            key={i}
-            className="absolute bg-amber-700 border border-amber-900"
-            style={{ left: w.x - cam, top: w.y, width: w.w, height: w.h }}
-          />
+          <div key={i} className="absolute border" style={{ left: w.x - cam, top: w.y, width: w.w, height: w.h, background: world.ground, borderColor: world.brick }} />
         ))}
         {/* Flag */}
-        <div
-          className="absolute text-3xl"
-          style={{ left: level.current.flagX - cam - 6, top: VIEW_H - TILE - 32 }}
-        >
-          🚩
-        </div>
-        {/* Coins */}
-        {coinsRef.current
-          .filter((c) => !c.collected)
-          .map((c) => (
-            <div
-              key={c.id}
-              className="absolute text-xl animate-pulse"
-              style={{ left: c.x - cam, top: c.y }}
-            >
-              🪙
-            </div>
-          ))}
+        <div className="absolute text-3xl" style={{ left: level.current.flagX - cam - 6, top: VIEW_H - TILE - 32 }}>🚩</div>
         {/* Enemies */}
-        {enemiesRef.current
-          .filter((e) => e.alive)
-          .map((e, i) => (
-            <div
-              key={i}
-              className="absolute text-2xl"
-              style={{ left: e.x - cam, top: e.y - 2 }}
-            >
-              👾
+        {enemiesRef.current.filter((e) => e.alive).map((e, i) => (
+          <div key={i} className="absolute text-2xl" style={{ left: e.x - cam, top: e.y - 2 }}>{e.emoji}</div>
+        ))}
+        {/* Rockets */}
+        {rocketsRef.current.filter((r) => r.alive).map((r, i) => (
+          <div key={i} className="absolute text-xl" style={{ left: r.x - cam, top: r.y, transform: 'scaleX(-1)' }}>🚀</div>
+        ))}
+        {/* Fireballs */}
+        {fireRef.current.map((f, i) => (
+          <div key={i} className="absolute text-base" style={{ left: f.x - cam, top: f.y }}>🔥</div>
+        ))}
+        {/* Dino */}
+        <div className="absolute text-2xl" style={{ left: p.x - cam, top: p.y - 6, opacity: p.invuln > 0 ? 0.5 : 1, transform: p.dir < 0 ? 'scaleX(-1)' : 'none' }}>🦖</div>
+      </div>
+
+      {/* controls */}
+      <div className="mt-3 max-w-sm mx-auto grid grid-cols-4 gap-2">
+        <CtlBtn label="←" onDown={() => (inputRef.current.left = true)} onUp={() => (inputRef.current.left = false)} />
+        <CtlBtn label="JUMP" cls="bg-pink-500 text-white" onDown={() => (inputRef.current.jump = true)} onUp={() => (inputRef.current.jump = false)} />
+        <CtlBtn label="🔥" cls="bg-orange-500 text-white" onDown={shoot} onUp={() => {}} />
+        <CtlBtn label="→" onDown={() => (inputRef.current.right = true)} onUp={() => (inputRef.current.right = false)} />
+      </div>
+      <p className="text-center text-xs text-slate-500 mt-2">Move &amp; jump, tap 🔥 to blast baddies and rockets. Reach the 🚩! Refuel with a word problem every {REFUEL_EVERY}s.</p>
+
+      {gate && (
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 p-4">
+          <div className="bg-white rounded-3xl border-2 border-slate-200 p-5 max-w-sm w-full">
+            <div className="text-center text-3xl">{gate.kind === 'complete' ? '🚩' : '⛽'}</div>
+            <div className="mt-1 text-center font-display font-extrabold text-slate-900">{gate.kind === 'complete' ? 'Level clear — reload to finish!' : 'Refuel your blaster! Solve to reload 🔥'}</div>
+            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-lg font-display font-extrabold leading-snug break-words text-center">{gate.c.prompt}</div>
+            <div className={`mt-3 h-12 rounded-xl border-2 flex items-center justify-center text-2xl font-display font-extrabold tabular-nums ${wrong ? 'border-rose-300 bg-rose-50 text-rose-700' : 'border-slate-200 text-slate-900'}`}>{input || <span className="text-slate-300">?</span>}</div>
+            <div className="mt-3 grid grid-cols-3 gap-2">
+              {['1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '0', 'del'].map((k) => (
+                <button key={k} type="button" onClick={() => { setWrong(false); setInput((v) => (k === 'del' ? v.slice(0, -1) : k === '-' ? (v.startsWith('-') ? v.slice(1) : '-' + v) : v.length < 6 ? v + k : v)); }} className="min-h-11 rounded-xl bg-slate-100 hover:bg-slate-200 font-display font-extrabold text-lg text-slate-800 active:translate-y-0.5">
+                  {k === 'del' ? '⌫' : k}
+                </button>
+              ))}
             </div>
-          ))}
-        {/* Player */}
-        <div
-          className="absolute text-2xl"
-          style={{
-            left: p.x - cam,
-            top: p.y - 4,
-            opacity: p.invuln > 0 ? 0.5 : 1,
-          }}
-        >
-          🍄
+            <button type="button" onClick={submitGate} disabled={!input.trim()} className="mt-3 w-full min-h-12 rounded-2xl bg-emerald-500 disabled:bg-slate-300 text-white font-display font-extrabold text-lg">{gate.kind === 'complete' ? 'Finish ✓' : 'Reload 🔥'}</button>
+          </div>
         </div>
-      </div>
-
-      {/* Controls (touch) */}
-      <div className="mt-3 max-w-sm mx-auto grid grid-cols-3 gap-2">
-        <button
-          type="button"
-          onTouchStart={() => (inputRef.current.left = true)}
-          onTouchEnd={() => (inputRef.current.left = false)}
-          onMouseDown={() => (inputRef.current.left = true)}
-          onMouseUp={() => (inputRef.current.left = false)}
-          onMouseLeave={() => (inputRef.current.left = false)}
-          className="min-h-14 rounded-2xl bg-white border-2 border-slate-200 text-2xl font-display font-extrabold"
-        >
-          ←
-        </button>
-        <button
-          type="button"
-          onTouchStart={() => (inputRef.current.jump = true)}
-          onTouchEnd={() => (inputRef.current.jump = false)}
-          onMouseDown={() => (inputRef.current.jump = true)}
-          onMouseUp={() => (inputRef.current.jump = false)}
-          onMouseLeave={() => (inputRef.current.jump = false)}
-          className="min-h-14 rounded-2xl bg-pink-500 text-white text-lg font-display font-extrabold"
-        >
-          JUMP
-        </button>
-        <button
-          type="button"
-          onTouchStart={() => (inputRef.current.right = true)}
-          onTouchEnd={() => (inputRef.current.right = false)}
-          onMouseDown={() => (inputRef.current.right = true)}
-          onMouseUp={() => (inputRef.current.right = false)}
-          onMouseLeave={() => (inputRef.current.right = false)}
-          className="min-h-14 rounded-2xl bg-white border-2 border-slate-200 text-2xl font-display font-extrabold"
-        >
-          →
-        </button>
-      </div>
-      <p className="text-center text-xs text-slate-500 mt-2">
-        Stomp 👾 from above, grab 🪙 for a math question, reach the 🚩.
-      </p>
-
-      {pendingQuestion && (
-        <CoinQuestion coin={pendingQuestion} onAnswer={answerCoin} />
       )}
     </div>
   );
 }
 
-function CoinQuestion({ coin, onAnswer }: { coin: Coin; onAnswer: (coin: Coin, pick: number) => void }) {
+function CtlBtn({ label, cls = 'bg-white border-2 border-slate-200', onDown, onUp }: { label: string; cls?: string; onDown: () => void; onUp: () => void }) {
   return (
-    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/40">
-      <div className="bg-white rounded-3xl border-2 border-slate-200 p-5 max-w-sm w-full mx-4">
-        <div className="text-center text-3xl">🪙</div>
-        <div className="mt-2 text-center text-2xl font-display font-extrabold text-slate-900">
-          {coin.question} = ?
-        </div>
-        <div className="mt-3 grid grid-cols-2 gap-2">
-          {coin.choices.map((c) => (
-            <button
-              key={c}
-              type="button"
-              onClick={() => onAnswer(coin, c)}
-              className="min-h-12 rounded-2xl bg-pink-500 hover:bg-pink-600 text-white font-display font-extrabold text-lg"
-            >
-              {c}
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-[11px] text-slate-500 mt-3">
-          Correct = +2 XP. Wrong = no penalty, no bonus.
-        </p>
-      </div>
-    </div>
+    <button
+      type="button"
+      onTouchStart={(e) => { e.preventDefault(); onDown(); }}
+      onTouchEnd={(e) => { e.preventDefault(); onUp(); }}
+      onMouseDown={onDown}
+      onMouseUp={onUp}
+      onMouseLeave={onUp}
+      className={`min-h-14 rounded-2xl text-xl font-display font-extrabold ${cls}`}
+    >
+      {label}
+    </button>
   );
 }
 
-function rectOverlap(
-  ax: number,
-  ay: number,
-  aw: number,
-  ah: number,
-  bx: number,
-  by: number,
-  bw: number,
-  bh: number,
-): boolean {
+function rectOverlap(ax: number, ay: number, aw: number, ah: number, bx: number, by: number, bw: number, bh: number): boolean {
   return ax < bx + bw && ax + aw > bx && ay < by + bh && ay + ah > by;
 }

@@ -37,7 +37,8 @@ const ANGLES: Ang[] = [
 ];
 
 type Pt = { x: number; y: number };
-type Robot = { x: number; y: number; r: number; alive: boolean };
+type Robot = { x: number; y: number; r: number; alive: boolean; emoji: string };
+const TARGET_EMOJI = ['🤖', '🚙', '🚚', '👹', '🛻', '👾'];
 type Wall = { x: number; y: number; w: number; h: number };
 type Level = { robots: Pt[]; walls: Wall[]; shots: number; g: number; wind: number; hills?: Pt[] };
 
@@ -178,6 +179,8 @@ export function TankAttack() {
   const exKeyRef = useRef(1);
   const [banner, setBanner] = useState<string | null>(null);
   const [solving, setSolving] = useState<{ q: TrigQ; input: string; wrong: boolean } | null>(null);
+  const [shake, setShake] = useState(0); // bump to trigger a screen shake
+  const [bomb, setBomb] = useState(false); // a bomb drops on you when you miss
 
   const [score, setScore] = useState(0);
   const [kills, setKills] = useState(0);
@@ -190,7 +193,7 @@ export function TankAttack() {
   const loadLevel = (i: number) => {
     const L = LEVELS[i];
     setLevelIdx(i);
-    setRobots(L.robots.map((p) => ({ x: p.x, y: p.y, r: 14, alive: true })));
+    setRobots(L.robots.map((p, k) => ({ x: p.x, y: p.y, r: 14, alive: true, emoji: TARGET_EMOJI[(i + k) % TARGET_EMOJI.length] })));
     setWalls(L.walls.map((w) => ({ ...w })));
     setHills(L.hills ? L.hills.map((p) => ({ ...p })) : []);
     setShotsLeft(L.shots);
@@ -274,13 +277,18 @@ export function TankAttack() {
       addExplosion(r.x, r.y);
       sfx.explode();
       haptic(HAPTIC.explode);
+      setShake((k) => k + 1);
       const pts = 100 + Math.round((r.x - PIV.x) / 4);
       setScore((s) => s + pts);
       killsRef.current += 1;
       setKills(killsRef.current);
     } else {
-      sfx.hurt();
-      haptic(HAPTIC.heavy);
+      sfx.explode();
+      haptic(HAPTIC.explode);
+      setShake((k) => k + 1);
+      setBomb(true);
+      addExplosion(PIV.x, PIV.y - 6);
+      window.setTimeout(() => setBomb(false), 700);
     }
     setRobots(newRobots);
     setFlight(null);
@@ -437,6 +445,7 @@ export function TankAttack() {
 
       {/* battlefield */}
       <GameStage theme="tank" className="max-w-md mx-auto">
+        <motion.div key={shake} animate={shake ? { x: [0, -7, 7, -5, 5, 0], y: [0, 4, -4, 3, 0] } : undefined} transition={{ duration: 0.4 }}>
         <svg viewBox={`0 0 ${W} ${H}`} className="w-full block" style={{ aspectRatio: `${W} / ${H}` }}>
           {/* protractor (0–90°) at the cannon */}
           <path d={`M ${PIV.x + PROT} ${PIV.y} A ${PROT} ${PROT} 0 0 0 ${PIV.x} ${PIV.y - PROT}`} fill="none" stroke="rgba(255,255,255,0.45)" strokeWidth={1.5} />
@@ -514,7 +523,7 @@ export function TankAttack() {
           {robots.map((r, i) =>
             r.alive ? (
               <text key={i} x={r.x} y={r.y} fontSize={26} textAnchor="middle" dominantBaseline="central">
-                🤖
+                {r.emoji}
               </text>
             ) : null,
           )}
@@ -545,7 +554,11 @@ export function TankAttack() {
               💥
             </text>
           ))}
+          {bomb && (
+            <text x={PIV.x} y={PIV.y - 12} fontSize={28} textAnchor="middle" dominantBaseline="central">💣</text>
+          )}
         </svg>
+        </motion.div>
 
         {/* level banner */}
         <AnimatePresence>

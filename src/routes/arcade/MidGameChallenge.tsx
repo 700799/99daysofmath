@@ -5,7 +5,7 @@ import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 import { LESSONS, type Lesson } from '../../data/lessons';
 import { LessonCard } from '../../components/LessonCard';
 
-function pickLesson(unit: ArcadeUnit): Lesson | null {
+export function pickLesson(unit: ArcadeUnit): Lesson | null {
   const usable = LESSONS.filter((l) => l.examples.length > 0);
   const pool = unit === 'mixed' ? usable : usable.filter((l) => l.domain === unit);
   const src = pool.length ? pool : usable;
