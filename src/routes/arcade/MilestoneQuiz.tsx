@@ -62,8 +62,7 @@ export function MilestoneQuiz({ onDone, len = 'short', label = '🎁 Milestone b
           </div>
           <div className="mt-2 grid grid-cols-3 gap-2">
             <button type="button" onClick={() => setHelp(true)} className="min-h-10 rounded-2xl bg-white border-2 border-indigo-200 text-indigo-700 font-display font-extrabold text-sm">📚</button>
-            <button type="button" onClick={onDone} className="min-h-10 rounded-2xl bg-slate-200 text-slate-700 font-display font-extrabold text-sm">Skip</button>
-            <button type="button" onClick={submit} disabled={!input.trim()} className="min-h-10 rounded-2xl bg-emerald-500 disabled:bg-slate-300 text-white font-display font-extrabold text-sm">Check</button>
+            <button type="button" onClick={submit} disabled={!input.trim()} className="col-span-2 min-h-10 rounded-2xl bg-emerald-500 disabled:bg-slate-300 text-white font-display font-extrabold text-sm">Check</button>
           </div>
         </>
       )}

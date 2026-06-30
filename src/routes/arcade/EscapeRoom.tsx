@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
-import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
+import { GameInstructions, type HowToSection } from './HowToPlay';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
@@ -94,7 +94,7 @@ export function EscapeRoom() {
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
 
-  const [phase, setPhase] = useState<'howto' | 'play'>('howto');
+  const [phase, setPhase] = useState<'howto' | 'play'>('play');
   const [roomIdx, setRoomIdx] = useState(0);
   const [locks, setLocks] = useState<Lock[]>([]);
   const [doorPuzzle, setDoorPuzzle] = useState<Puzzle>(DOOR_PUZZLES[0]);
@@ -119,6 +119,9 @@ export function EscapeRoom() {
   };
 
   const start = () => { wonRef.current = false; doneRef.current = false; setOutcome(null); loadRoom(0); setPhase('play'); };
+
+  // Auto-start on mount — the arcade gate now shows the directions + countdown.
+  useEffect(() => { start(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const finish = (won: boolean) => {
     if (doneRef.current) return;
@@ -175,7 +178,7 @@ export function EscapeRoom() {
     }
   };
 
-  const reset = () => { setOutcome(null); setPhase('howto'); };
+  const reset = () => { start(); };
 
   if (outcome) {
     return (
@@ -192,14 +195,6 @@ export function EscapeRoom() {
     );
   }
 
-  if (phase === 'howto') {
-    return (
-      <div>
-        <ArcadeHeader title="Logic Escape" emoji="🔐" />
-        <HowToPlay emoji="🔐" title="Logic Escape" gradient="from-slate-700 to-amber-700" sections={HOWTO} controls={CONTROLS} onStart={start} />
-      </div>
-    );
-  }
 
   const lowTime = timeLeft <= 10;
 

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
-import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
+import { GameInstructions, type HowToSection } from './HowToPlay';
 import { makeAdaptive, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
@@ -45,7 +45,7 @@ export function DesertRig() {
   const arcadeUnit = useProgress((s) => s.arcadeUnit);
   const pausedRef = useArcadePausedRef();
 
-  const [phase, setPhase] = useState<'howto' | 'play'>('howto');
+  const [phase, setPhase] = useState<'howto' | 'play'>('play');
   const [, setTick] = useState(0);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
@@ -85,6 +85,9 @@ export function DesertRig() {
     newChallenge(false);
     setPhase('play');
   };
+
+  // Auto-start on mount — the arcade gate now shows the directions + countdown.
+  useEffect(() => { start(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const boom = (x: number, y: number, big: boolean) => {
     const key = exKey.current++;
@@ -192,14 +195,6 @@ export function DesertRig() {
     );
   }
 
-  if (phase === 'howto') {
-    return (
-      <div>
-        <ArcadeHeader title="Desert Rig" emoji="🛻" />
-        <HowToPlay emoji="🛻" title="Desert Rig" gradient="from-amber-600 to-orange-800" sections={HOWTO} controls={CONTROLS} onStart={start} />
-      </div>
-    );
-  }
 
   return (
     <div>

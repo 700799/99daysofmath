@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { GameStage } from './fx';
-import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
+import { GameInstructions, type HowToSection } from './HowToPlay';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 import type { Problem } from '../../types/problem';
@@ -134,7 +134,7 @@ export function MonsterRogue() {
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
 
-  const [phase, setPhase] = useState<'howto' | 'starter' | 'battle'>('howto');
+  const [phase, setPhase] = useState<'howto' | 'starter' | 'battle'>('starter');
   const [starters] = useState(() => shuffle(SPECIES).slice(0, 3));
   const [party, setParty] = useState<Mon[]>([]);
   const [active, setActive] = useState(0);
@@ -340,7 +340,7 @@ export function MonsterRogue() {
     setParty([]); setActive(0); setFoe(null); setWave(1); setCaught(0);
     setBusy(false); setSpecial(null); setSpecialResult(null); setShowHelp(false);
     setSwapOpen(false); setOutcome(null);
-    setPhase('howto');
+    setPhase('starter');
   };
 
   if (outcome) {
@@ -358,21 +358,6 @@ export function MonsterRogue() {
     );
   }
 
-  if (phase === 'howto') {
-    return (
-      <div>
-        <ArcadeHeader title="Monster Rogue" emoji="🐲" />
-        <HowToPlay
-          emoji="🐲"
-          title="Monster Rogue"
-          gradient="from-indigo-500 to-purple-700"
-          sections={howtoSections(maxWave)}
-          controls={HOWTO_CONTROLS}
-          onStart={() => setPhase('starter')}
-        />
-      </div>
-    );
-  }
 
   if (phase === 'starter') {
     return (

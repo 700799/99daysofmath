@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
-import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
+import { GameInstructions, type HowToSection } from './HowToPlay';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
@@ -88,7 +88,7 @@ export function DressToImpress() {
   const arcadeUnit = useProgress((s) => s.arcadeUnit);
   const pausedRef = useArcadePausedRef();
 
-  const [phase, setPhase] = useState<'howto' | 'style' | 'runway'>('howto');
+  const [phase, setPhase] = useState<'howto' | 'style' | 'runway'>('style');
   const [roundIdx, setRoundIdx] = useState(0);
   const [equipped, setEquipped] = useState<Equipped>({});
   const [secondsLeft, setSecondsLeft] = useState(STYLE_SECONDS);
@@ -133,6 +133,9 @@ export function DressToImpress() {
     setOutcome(null);
     loadRound(0);
   };
+
+  // Auto-start on mount — the arcade gate now shows the directions + countdown.
+  useEffect(() => { startGame(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // styling countdown
   useEffect(() => {
@@ -260,14 +263,6 @@ export function DressToImpress() {
     );
   }
 
-  if (phase === 'howto') {
-    return (
-      <div>
-        <ArcadeHeader title="Dress to Impress" emoji="👗" />
-        <HowToPlay emoji="👗" title="Dress to Impress" gradient="from-fuchsia-500 to-violet-600" sections={HOWTO} controls={CONTROLS} onStart={startGame} />
-      </div>
-    );
-  }
 
   // shared avatar card
   const Avatar = (

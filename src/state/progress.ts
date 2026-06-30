@@ -86,6 +86,7 @@ export interface ArcadeConfig {
   earnRatio: number; // game seconds earned per lesson second; play capped at lessonTime*ratio (0 = off)
   hiddenGames: string[]; // arcade game ids the parent has turned off (hidden from the hub)
   storyInterval: number; // minutes of play between forced math-story / mathematician breaks (0 = off)
+  lessonScreenSeconds: number; // min seconds to read each lesson screen before Next (0 = off)
 }
 
 interface ProgressState {
@@ -206,6 +207,10 @@ interface ProgressState {
   buyCosmetic: (id: string, price: number) => boolean;
   equipCosmetic: (slot: 'hat' | 'outfit' | 'pet' | 'bg', id: string | null) => void;
   unlockGame: (id: string, price: number) => boolean;
+  // Coins are also earned for learning: every first-time lesson completion and
+  // every first-time math-video watch. videosWatched dedupes the video reward.
+  videosWatched: string[];
+  completeVideo: (src: string) => number; // returns coins awarded (0 if already watched)
   completeLesson: (key: string) => string[];
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
@@ -390,6 +395,7 @@ const v11Defaults = {
     earnRatio: 1,
     hiddenGames: [],
     storyInterval: 5,
+    lessonScreenSeconds: 6,
   } as ArcadeConfig,
   cumArcadeSeconds: 0,
   cumLessonSeconds: 0,
@@ -424,6 +430,12 @@ const v18Defaults = {
   equipped: {} as { hat?: string; outfit?: string; pet?: string; bg?: string },
   unlockedGames: [] as string[],
 };
+const v20Defaults = {
+  videosWatched: [] as string[],
+};
+// Coins awarded for learning activities.
+export const LESSON_COINS = 10;
+export const VIDEO_COINS = 5;
 const freshMastery = () => ({
   arcadeLevels: unitMap(1),
   arcadeStreak: unitMap(0),
@@ -604,6 +616,16 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       stateAny[key] = rec;
     }
   }
+  if (fromVersion < 20) {
+    // Per-screen minimum read time on lessons (anti-click-through) + coins for
+    // watching math videos. Seed defaults for any install missing them.
+    const cfg = (state as Record<string, unknown>).arcadeConfig as
+      | (ArcadeConfig & Record<string, unknown>)
+      | undefined;
+    if (cfg && cfg.lessonScreenSeconds === undefined) cfg.lessonScreenSeconds = 6;
+    const stateAny = state as Record<string, unknown>;
+    if (stateAny.videosWatched === undefined) stateAny.videosWatched = [];
+  }
   return state;
 }
 
@@ -632,6 +654,7 @@ export const useProgress = create<ProgressState>()(
       ...v16Defaults,
       ...v17Defaults,
       ...v18Defaults,
+      ...v20Defaults,
       addCoins: (n) => set((s) => ({ coins: Math.max(0, (s.coins ?? 0) + n) })),
       buyCosmetic: (id, price) => {
         const s = get();
@@ -953,6 +976,16 @@ export const useProgress = create<ProgressState>()(
         void total;
         return { bonus, earned, best: finalsResults[quizN].best };
       },
+      completeVideo: (src) => {
+        const before = get();
+        const watched = before.videosWatched ?? [];
+        if (watched.includes(src)) return 0;
+        set({
+          videosWatched: [...watched, src],
+          coins: (before.coins ?? 0) + VIDEO_COINS, // earn coins for watching a math video
+        });
+        return VIDEO_COINS;
+      },
       completeLesson: (key) => {
         const before = get();
         if (before.lessonsViewed.includes(key)) return [];
@@ -970,6 +1003,7 @@ export const useProgress = create<ProgressState>()(
         );
         set({
           lessonsViewed,
+          coins: (before.coins ?? 0) + LESSON_COINS, // earn coins for finishing a lesson
           xp: nextXp,
           dailyXp: daily.dailyXp,
           dailyXpResetDate: daily.dailyXpResetDate,
@@ -1165,6 +1199,7 @@ export const useProgress = create<ProgressState>()(
           problemStats: {},
           ritHistory: [],
           lessonsViewed: [],
+          videosWatched: [],
           trailBonusGranted: {},
           allTrailsBonusGranted: false,
           arcadeDaily: { date: null, played: [], varietyAwarded: [] },
@@ -1190,7 +1225,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 19,
+      version: 20,
       migrate: migrateProgress,
     },
   ),

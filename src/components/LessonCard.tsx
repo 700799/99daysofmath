@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useProgress } from '../state/progress';
+import { useProgress, LESSON_COINS } from '../state/progress';
 import {
   lessonKey,
   lessonAnswerMatches,
@@ -83,6 +83,23 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
   const [pageIndex, setPageIndex] = useState(0);
   const [exampleOpen, setExampleOpen] = useState<Record<number, boolean>>({});
   const [practiceState, setPracticeState] = useState<Record<number, PracticeState>>({});
+
+  // Per-screen minimum read time (anti-click-through). Default 6s, set by the
+  // parent/admin controls. The primary Next/Finish button is disabled until the
+  // countdown for the current page elapses. 0 = off (instant advance).
+  const screenSecs = useProgress((s) => s.arcadeConfig.lessonScreenSeconds ?? 6);
+  const [remain, setRemain] = useState(screenSecs);
+  useEffect(() => {
+    if (phase !== 'learn' || screenSecs <= 0) {
+      setRemain(0);
+      return;
+    }
+    setRemain(screenSecs);
+    const id = setInterval(() => {
+      setRemain((r) => (r <= 1 ? 0 : r - 1));
+    }, 1000);
+    return () => clearInterval(id);
+  }, [pageIndex, screenSecs, phase]);
 
   const finish = () => {
     if (alreadyDone) {
@@ -205,9 +222,10 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
                 <button
                   type="button"
                   onClick={goNext}
-                  className="flex-1 min-h-12 px-4 py-2.5 rounded-2xl bg-duo-green hover:bg-duo-green-dark text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+                  disabled={remain > 0}
+                  className="flex-1 min-h-12 px-4 py-2.5 rounded-2xl bg-duo-green hover:bg-duo-green-dark disabled:bg-slate-200 disabled:text-slate-400 disabled:shadow-none disabled:active:translate-y-0 text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all disabled:cursor-not-allowed"
                 >
-                  {primaryLabel}
+                  {remain > 0 ? `Read… ${remain}s` : primaryLabel}
                 </button>
               </div>
 
@@ -551,8 +569,13 @@ function RewardView({
       <h2 className="text-2xl font-display font-extrabold text-slate-900 mt-2">
         Lesson complete!
       </h2>
-      <div className="mt-3 inline-flex items-center gap-2 bg-yellow-100 text-yellow-900 font-display font-extrabold px-4 py-2 rounded-full">
-        ⚡ +{xp} XP
+      <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+        <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-900 font-display font-extrabold px-4 py-2 rounded-full">
+          ⚡ +{xp} XP
+        </div>
+        <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-900 font-display font-extrabold px-4 py-2 rounded-full">
+          🪙 +{LESSON_COINS} coins
+        </div>
       </div>
       {stickers.length > 0 && (
         <div className="mt-4">

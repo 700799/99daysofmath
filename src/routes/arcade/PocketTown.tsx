@@ -413,9 +413,8 @@ export function PocketTown() {
                 </button>
               ))}
             </div>
-            <div className="mt-2 grid grid-cols-2 gap-2">
-              <button type="button" onClick={() => setTax(null)} className="min-h-11 rounded-2xl bg-slate-200 text-slate-700 font-display font-extrabold">Skip</button>
-              <button type="button" onClick={submitTax} disabled={!taxInput.trim()} className="min-h-11 rounded-2xl bg-emerald-500 disabled:bg-slate-300 text-white font-display font-extrabold">Collect ✓</button>
+            <div className="mt-2">
+              <button type="button" onClick={submitTax} disabled={!taxInput.trim()} className="w-full min-h-11 rounded-2xl bg-emerald-500 disabled:bg-slate-300 text-white font-display font-extrabold">Collect ✓</button>
             </div>
           </div>
         </div>

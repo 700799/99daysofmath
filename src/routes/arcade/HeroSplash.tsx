@@ -108,12 +108,12 @@ export function Countdown({ onDone }: { onDone: () => void }) {
       <AnimatePresence mode="wait">
         <motion.div
           key={n}
-          initial={{ scale: 0.3, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 1.6, opacity: 0 }}
+          initial={{ scale: 0.4 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 1.5 }}
           transition={{ type: 'spring', stiffness: 300, damping: 16 }}
-          className="mt-2 font-display font-extrabold text-white drop-shadow-lg"
-          style={{ fontSize: 96, lineHeight: 1 }}
+          className="mt-3 flex items-center justify-center rounded-full bg-white text-indigo-600 font-display font-black tabular-nums shadow-[0_8px_0_0_rgba(0,0,0,0.25)] ring-8 ring-indigo-500/70"
+          style={{ width: 168, height: 168, fontSize: n > 0 ? 132 : 64, lineHeight: 1 }}
         >
           {n > 0 ? n : 'GO!'}
         </motion.div>

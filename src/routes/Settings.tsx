@@ -287,6 +287,19 @@ function AdminPanel() {
               value={config.minLessonSeconds}
               onPick={(n) => setArcadeConfig({ minLessonSeconds: n })}
             />
+            <div className="mt-3" />
+            <AdminPick
+              label="Read time per lesson screen"
+              options={[
+                { value: 0, label: 'Off' },
+                { value: 4, label: '4s' },
+                { value: 6, label: '6s' },
+                { value: 8, label: '8s' },
+                { value: 10, label: '10s' },
+              ]}
+              value={config.lessonScreenSeconds}
+              onPick={(n) => setArcadeConfig({ lessonScreenSeconds: n })}
+            />
           </div>
 
           <div className="pt-2 border-t border-slate-100">

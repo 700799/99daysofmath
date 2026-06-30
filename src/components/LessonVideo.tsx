@@ -7,6 +7,7 @@ import {
 } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion';
+import { useProgress } from '../state/progress';
 
 interface Props {
   src: string;
@@ -182,6 +183,8 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
   const [ended, setEnded] = useState(false);
   const [rate, setRate] = useState<number>(() => getInitialRate());
   const [autoPause, setAutoPause] = useState<boolean>(() => getInitialAutoPause());
+  const completeVideo = useProgress((s) => s.completeVideo);
+  const [coinAward, setCoinAward] = useState(0); // >0 → show the "you earned coins" toast
 
   const rawRef = useRef<Chapters | null>(null);
   const marksRef = useRef<number[]>([]);
@@ -285,6 +288,7 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
     nextIdxRef.current = 0;
     setEnded(false);
     setAtCheckpoint(false);
+    setCoinAward(0);
     v.play().catch(() => {});
   };
 
@@ -335,8 +339,21 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
         onEnded={() => {
           setEnded(true);
           setPlaying(false);
+          // Reward coins the first time each math video is watched to the end.
+          const got = completeVideo(src);
+          if (got > 0) setCoinAward(got);
         }}
       />
+
+      {coinAward > 0 && (
+        <motion.div
+          initial={{ opacity: 0, y: 12, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          className="absolute top-3 left-1/2 -translate-x-1/2 z-20 rounded-full bg-yellow-300 text-yellow-900 font-display font-extrabold text-sm px-4 py-1.5 shadow-lg"
+        >
+          🪙 +{coinAward} coins!
+        </motion.div>
+      )}
 
       {!playing && !ended && !atCheckpoint && (
         <button

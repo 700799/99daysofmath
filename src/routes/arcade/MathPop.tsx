@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
-import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
+import { GameInstructions, type HowToSection } from './HowToPlay';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
@@ -35,7 +35,7 @@ export function MathPop() {
   const addArcadePoints = useProgress((s) => s.addArcadePoints);
   const pausedRef = useArcadePausedRef();
 
-  const [phase, setPhase] = useState<'howto' | 'play'>('howto');
+  const [phase, setPhase] = useState<'howto' | 'play'>('play');
   const [, setTick] = useState(0);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
@@ -63,6 +63,9 @@ export function MathPop() {
     setOutcome(null);
     setPhase('play');
   };
+
+  // Auto-start on mount — the arcade gate now shows the directions + countdown.
+  useEffect(() => { start(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   function mk(y: number): Bubble {
     return { id: BID++, x: 26 + Math.random() * (W - 52), y, n: 1 + Math.floor(Math.random() * 9), vy: rise.current, sel: false, stuck: false };
@@ -148,15 +151,6 @@ export function MathPop() {
       <div>
         <ArcadeHeader title="Math Pop" emoji="🫧" />
         <ArcadeEndCard gameId="mathpop" outcome={outcome} win={pops.current >= 12} scoreLine={`${score.current} pts · ${pops.current} pops`} onReplay={start} />
-      </div>
-    );
-  }
-
-  if (phase === 'howto') {
-    return (
-      <div>
-        <ArcadeHeader title="Math Pop" emoji="🫧" />
-        <HowToPlay emoji="🫧" title="Math Pop" gradient="from-sky-500 to-cyan-600" sections={HOWTO} controls={CONTROLS} onStart={start} />
       </div>
     );
   }
