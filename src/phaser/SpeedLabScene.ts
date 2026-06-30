@@ -1,9 +1,9 @@
 import Phaser from 'phaser';
 
 // Speed Lab — an "Aerospace Syllabus" driving simulator that teaches d = r × t.
-// Three sequential challenges (find rate, find time, find distance) run on Arcade
-// Physics: a car body is launched at a real velocity and the scene shows live
-// telemetry (X position, velocity, mission clock) so the formula is tangible.
+// Numbers start SINGLE-DIGIT so the idea is obvious, then step up to TWO-DIGIT.
+// Distances are whole "units" shown on a clearly numbered ruler, so you can count
+// the blocks and SEE d = r × t come true. Runs on Arcade Physics.
 //
 // Layout is PORTRAIT (560×780) so Phaser's Scale.FIT scales the canvas UP to fill
 // a phone screen — making the telemetry, prompt and answer chips large and legible.
@@ -18,51 +18,63 @@ interface Level {
   id: number;
   name: string;
   find: Find;
-  dist: number; // px
+  dist: number; // units
   time: number; // s
-  rate: number; // px/s
+  rate: number; // units/s
   choices: number[];
   unit: string;
   formula: string; // worked solution
   prompt: string;
+  max: number; // ruler max, in units
+  minor: number; // minor tick step (units)
+  tick: number; // labelled tick step (units)
 }
 
 const LEVELS: Level[] = [
   {
     id: 1,
-    name: 'FIND RATE',
-    find: 'r',
-    dist: 600,
-    time: 4,
-    rate: 150,
-    choices: [100, 120, 150, 200],
-    unit: 'px/s',
-    formula: 'r = d ÷ t = 600 ÷ 4 = 150',
-    prompt: 'Reach d = 600px in exactly t = 4s.\nSET THE RATE:  r = d ÷ t',
+    name: 'FIND DISTANCE',
+    find: 'd',
+    dist: 6,
+    time: 3,
+    rate: 2,
+    choices: [4, 6, 8, 9],
+    unit: 'units',
+    formula: 'd = r × t = 2 × 3 = 6',
+    prompt: 'Drive r = 2 units/s for t = 3 s.\nHow FAR do you go?   d = r × t',
+    max: 10,
+    minor: 1,
+    tick: 2,
   },
   {
     id: 2,
     name: 'FIND TIME',
     find: 't',
-    dist: 1000,
-    time: 5,
-    rate: 200,
-    choices: [3, 4, 5, 6],
+    dist: 8,
+    time: 4,
+    rate: 2,
+    choices: [2, 3, 4, 5],
     unit: 's',
-    formula: 't = d ÷ r = 1000 ÷ 200 = 5',
-    prompt: 'Speed fixed r = 200px/s over d = 1000px.\nSET THE COUNTDOWN:  t = d ÷ r',
+    formula: 't = d ÷ r = 8 ÷ 2 = 4',
+    prompt: 'Travel d = 8 units at r = 2 units/s.\nHow LONG does it take?   t = d ÷ r',
+    max: 10,
+    minor: 1,
+    tick: 2,
   },
   {
     id: 3,
-    name: 'FIND DISTANCE',
-    find: 'd',
-    dist: 960,
-    time: 8,
-    rate: 120,
-    choices: [720, 840, 960, 1080],
-    unit: 'px',
-    formula: 'd = r × t = 120 × 8 = 960',
-    prompt: 'Fuel lasts t = 8s at r = 120px/s.\nPICK THE WAYPOINT:  d = r × t',
+    name: 'FIND RATE',
+    find: 'r',
+    dist: 40,
+    time: 4,
+    rate: 10,
+    choices: [5, 8, 10, 12],
+    unit: 'units/s',
+    formula: 'r = d ÷ t = 40 ÷ 4 = 10',
+    prompt: 'Cover d = 40 units in t = 4 s.\nHow FAST? (two-digit)   r = d ÷ t',
+    max: 50,
+    minor: 10,
+    tick: 10,
   },
 ];
 
@@ -71,7 +83,7 @@ const H = 780;
 const START_X = 70;
 const TRACK_Y = 372;
 const MARGIN_R = 70;
-const VIEW_SCALE = (W - START_X - MARGIN_R) / 1000; // longest range (1000px) fits
+const TRACK_PX = W - START_X - MARGIN_R; // pixels the ruler spans
 
 // Aerospace palette
 const C = {
@@ -102,6 +114,8 @@ export class SpeedLabScene extends Phaser.Scene {
   private phase: 'select' | 'prompt' | 'run' | 'result' = 'select';
   private clock = 0;
   private chosen = 0;
+  private pxPerUnit = TRACK_PX / 10;
+  private gaugeMax = 5;
   private car!: Phaser.Physics.Arcade.Image;
   private idleTween?: Phaser.Tweens.Tween;
   private ui: Phaser.GameObjects.GameObject[] = [];
@@ -128,7 +142,7 @@ export class SpeedLabScene extends Phaser.Scene {
 
     // the vehicle (Arcade Physics body) — texture chosen on the select screen
     this.car = this.physics.add.image(START_X, TRACK_Y, 'sl-car');
-    this.car.setDepth(5).setDisplaySize(60, 36).setVisible(false);
+    this.car.setDepth(5).setDisplaySize(66, 40).setVisible(false);
     (this.car.body as Phaser.Physics.Arcade.Body).setAllowGravity(false);
 
     // live telemetry panel (big, top-left)
@@ -193,7 +207,7 @@ export class SpeedLabScene extends Phaser.Scene {
       rect.on('pointerout', () => rect.setStrokeStyle(2, C.cyan));
       rect.on('pointerdown', () => {
         if (this.phase !== 'select') return;
-        this.car.setTexture(v.key).setDisplaySize(60, 36).setVisible(true);
+        this.car.setTexture(v.key).setDisplaySize(66, 40).setVisible(true);
         this.idleTween?.stop();
         this.car.setAngle(0);
         this.idleTween = this.tweens.add({ targets: this.car, angle: { from: -3, to: 3 }, yoyo: true, repeat: -1, duration: 520, ease: 'sine.inOut' });
@@ -307,26 +321,35 @@ export class SpeedLabScene extends Phaser.Scene {
     this.ui = [];
   }
 
-  private screenX(posPx: number) {
-    return START_X + posPx * VIEW_SCALE;
+  private screenX(units: number) {
+    return START_X + units * this.pxPerUnit;
   }
 
-  private drawTrack(g: Phaser.GameObjects.Graphics) {
-    g.lineStyle(5, C.dim, 1).lineBetween(START_X, TRACK_Y + 26, this.screenX(1000), TRACK_Y + 26);
-    g.lineStyle(2, C.grid, 1);
-    // ticks/labels every 200px to declutter on a phone
-    for (let d = 0; d <= 1000; d += 200) {
-      const x = this.screenX(d);
-      g.lineBetween(x, TRACK_Y + 18, x, TRACK_Y + 34);
+  private drawTrack(g: Phaser.GameObjects.Graphics, lv: Level) {
+    g.lineStyle(5, C.dim, 1).lineBetween(START_X, TRACK_Y + 26, this.screenX(lv.max), TRACK_Y + 26);
+    // minor unit ticks — so single units are countable
+    g.lineStyle(1, C.grid, 1);
+    for (let u = 0; u <= lv.max; u += lv.minor) {
+      const x = this.screenX(u);
+      g.lineBetween(x, TRACK_Y + 20, x, TRACK_Y + 32);
+    }
+    // labelled ticks (bigger) + numbers
+    g.lineStyle(2, C.cyan, 0.9);
+    for (let u = 0; u <= lv.max; u += lv.tick) {
+      const x = this.screenX(u);
+      g.lineBetween(x, TRACK_Y + 16, x, TRACK_Y + 36);
       this.ui.push(
-        this.add.text(x, TRACK_Y + 40, String(d), { fontFamily: MONO, fontSize: '13px', color: HEX(C.dim) }).setOrigin(0.5).setDepth(2),
+        this.add.text(x, TRACK_Y + 42, String(u), { fontFamily: MONO, fontSize: '14px', color: HEX(C.white), fontStyle: 'bold' }).setOrigin(0.5).setDepth(2),
       );
     }
+    this.ui.push(this.add.text(this.screenX(lv.max / 2), TRACK_Y + 62, 'distance (units)', { fontFamily: MONO, fontSize: '12px', color: HEX(C.dim) }).setOrigin(0.5).setDepth(2));
   }
 
   private startLevel() {
     const lv = LEVELS[this.levelIdx];
     this.onLevel?.(lv.id);
+    this.pxPerUnit = TRACK_PX / lv.max;
+    this.gaugeMax = (lv.find === 'r' ? Math.max(...lv.choices) : lv.rate) * 1.3;
     this.telemetry.setVisible(true);
     this.clockText.setVisible(true);
     this.gaugeArc.setVisible(true);
@@ -341,7 +364,7 @@ export class SpeedLabScene extends Phaser.Scene {
 
     // track line + ruler
     const g = this.add.graphics().setDepth(2);
-    this.drawTrack(g);
+    this.drawTrack(g, lv);
     this.ui.push(g);
 
     // start flag
@@ -354,14 +377,14 @@ export class SpeedLabScene extends Phaser.Scene {
         const x = this.screenX(dch);
         const flag = this.add.text(x, TRACK_Y - 20, '⚑', { fontFamily: MONO, fontSize: '24px', color: HEX(dch === lv.dist ? C.amber : C.dim) }).setOrigin(0.5).setDepth(3);
         this.ui.push(flag);
-        this.ui.push(this.add.text(x, TRACK_Y - 44, `${dch}`, { fontFamily: MONO, fontSize: '12px', color: HEX(C.white) }).setOrigin(0.5).setDepth(3));
+        this.ui.push(this.add.text(x, TRACK_Y - 44, `${dch}`, { fontFamily: MONO, fontSize: '13px', color: HEX(C.white), fontStyle: 'bold' }).setOrigin(0.5).setDepth(3));
       });
     } else {
       // single checkpoint/finish at the level distance
       const x = this.screenX(lv.dist);
       this.ui.push(this.add.rectangle(x, TRACK_Y, 4, 64, C.amber).setDepth(3));
       this.ui.push(this.add.text(x, TRACK_Y - 38, lv.find === 'r' ? 'CHECKPOINT' : 'FINISH', { fontFamily: MONO, fontSize: '12px', color: HEX(C.amber) }).setOrigin(0.5).setDepth(3));
-      this.ui.push(this.add.text(x, TRACK_Y + 52, `${lv.dist}px`, { fontFamily: MONO, fontSize: '12px', color: HEX(C.white) }).setOrigin(0.5).setDepth(3));
+      this.ui.push(this.add.text(x, TRACK_Y - 56, `${lv.dist} units`, { fontFamily: MONO, fontSize: '13px', color: HEX(C.white), fontStyle: 'bold' }).setOrigin(0.5).setDepth(3));
     }
 
     // prompt card (below the header, above the telemetry)
@@ -373,7 +396,7 @@ export class SpeedLabScene extends Phaser.Scene {
   }
 
   private drawChoices(lv: Level) {
-    const labelMap: Record<Find, string> = { r: 'SET RATE', t: 'SET COUNTDOWN', d: 'SELECT WAYPOINT' };
+    const labelMap: Record<Find, string> = { r: 'SET THE RATE', t: 'SET THE TIME', d: 'PICK THE DISTANCE' };
     this.ui.push(this.add.text(W / 2, 488, labelMap[lv.find], { fontFamily: MONO, fontSize: '15px', color: HEX(C.cyan), fontStyle: 'bold' }).setOrigin(0.5).setDepth(11));
     // 2×2 grid of large chips
     const cols = 2;
@@ -390,7 +413,7 @@ export class SpeedLabScene extends Phaser.Scene {
       const cx = x0 + colIdx * (bw + gapX);
       const cy = y0 + row * (bh + gapY);
       const rect = this.add.rectangle(cx, cy, bw, bh, C.panel, 1).setStrokeStyle(2, C.cyan).setDepth(11).setInteractive({ useHandCursor: true });
-      const txt = this.add.text(cx, cy, `${val} ${lv.unit}`, { fontFamily: MONO, fontSize: '24px', color: HEX(C.white), fontStyle: 'bold' }).setOrigin(0.5).setDepth(12);
+      const txt = this.add.text(cx, cy, `${val} ${lv.unit}`, { fontFamily: MONO, fontSize: '23px', color: HEX(C.white), fontStyle: 'bold' }).setOrigin(0.5).setDepth(12);
       rect.on('pointerover', () => rect.setStrokeStyle(3, C.amber));
       rect.on('pointerout', () => rect.setStrokeStyle(2, C.cyan));
       rect.on('pointerdown', () => {
@@ -409,7 +432,7 @@ export class SpeedLabScene extends Phaser.Scene {
     this.clearUI();
     // minimal lane + targets for the run
     const g = this.add.graphics().setDepth(2);
-    this.drawTrack(g);
+    this.drawTrack(g, lv);
     this.ui.push(g);
     if (lv.find === 'd') {
       lv.choices.forEach((dch) => {
@@ -422,7 +445,7 @@ export class SpeedLabScene extends Phaser.Scene {
     }
 
     const rate = lv.find === 'r' ? val : lv.rate;
-    (this.car.body as Phaser.Physics.Arcade.Body).setVelocityX(rate * VIEW_SCALE);
+    (this.car.body as Phaser.Physics.Arcade.Body).setVelocityX(rate * this.pxPerUnit);
     this.car.setData('rate', rate);
     this.car.setData('val', val);
   }
@@ -480,7 +503,7 @@ export class SpeedLabScene extends Phaser.Scene {
 
     if (this.phase === 'run') {
       this.clock += deltaMs / 1000;
-      const posPx = Math.max(0, (this.car.x - START_X) / VIEW_SCALE);
+      const posUnits = Math.max(0, (this.car.x - START_X) / this.pxPerUnit);
 
       if (lv.find === 'r' || lv.find === 'd') {
         // fixed time / fuel: stop when the clock runs out
@@ -491,7 +514,7 @@ export class SpeedLabScene extends Phaser.Scene {
         // find time: the car always crosses the finish; the countdown the player
         // set must hit zero exactly then.
         const countdownLeft = this.chosen - this.clock;
-        if (posPx >= lv.dist) {
+        if (posUnits >= lv.dist) {
           this.finishRun(lv, this.chosen);
         } else if (countdownLeft <= 0) {
           // ran out of time before the finish
@@ -505,12 +528,12 @@ export class SpeedLabScene extends Phaser.Scene {
 
   private updateTelemetry(lv: Level) {
     const body = this.car.body as Phaser.Physics.Arcade.Body | undefined;
-    const posPx = Math.max(0, Math.round((this.car.x - START_X) / VIEW_SCALE));
-    const vel = body ? Math.round(body.velocity.x / VIEW_SCALE) : 0;
+    const posUnits = Math.max(0, Math.round((this.car.x - START_X) / this.pxPerUnit));
+    const velUnits = body ? Math.round(body.velocity.x / this.pxPerUnit) : 0;
     this.telemetry.setText(
       [
-        `X  :${String(posPx).padStart(4, ' ')}px`,
-        `VEL:${String(vel).padStart(4, ' ')}px/s`,
+        `DIST:${String(posUnits).padStart(3, ' ')}`,
+        `SPD :${String(velUnits).padStart(3, ' ')}/s`,
       ].join('\n'),
     );
 
@@ -521,9 +544,8 @@ export class SpeedLabScene extends Phaser.Scene {
     this.clockText.setText([clockLine, `LVL ${lv.id}/3`].join('\n'));
 
     // gauge needle
-    const maxV = 220;
-    const v = body ? Math.min(maxV, Math.abs(body.velocity.x / VIEW_SCALE)) : 0;
-    const a = Phaser.Math.DegToRad(140 + (v / maxV) * 260);
+    const v = body ? Math.min(this.gaugeMax, Math.abs(body.velocity.x / this.pxPerUnit)) : 0;
+    const a = Phaser.Math.DegToRad(140 + (v / this.gaugeMax) * 260);
     this.gaugeNeedle.clear().lineStyle(3, C.red, 1).lineBetween(GX, GY, GX + Math.cos(a) * (GR - 6), GY + Math.sin(a) * (GR - 6));
   }
 }

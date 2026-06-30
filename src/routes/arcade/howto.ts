@@ -72,7 +72,7 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
       { heading: 'Example — find RATE (speed)', body: 'You ran 100 meters in 20 seconds. r = d ÷ t = 100 ÷ 20 = 5 meters per second. Distance shared out over the time.' },
       { heading: 'Example — find TIME', body: 'You need to travel 150 miles at 50 mph. t = d ÷ r = 150 ÷ 50 = 3 hours. Farther to go, or slower speed → more time.' },
       { heading: 'Same triangle, both ways', body: 'A train at 80 km/h for 3 h covers d = 80 × 3 = 240 km. And a 240 km trip in 3 h means r = 240 ÷ 3 = 80 km/h. Just covering a different corner.' },
-      { heading: 'In the game', body: 'Three stages: find the RATE (r = d ÷ t), find the TIME (t = d ÷ r), then find the DISTANCE (d = r × t). Watch the live telemetry — X position, velocity and clock — so you SEE the formula come true.' },
+      { heading: 'In the game', body: 'You start with easy SINGLE-DIGIT numbers to get the idea, then step up to TWO-DIGIT ones. Level 1 find the DISTANCE (d = r × t, e.g. 2 × 3 = 6), Level 2 find the TIME (t = d ÷ r), Level 3 find the RATE with bigger numbers (r = d ÷ t = 40 ÷ 4 = 10). Count the units on the ruler and watch the telemetry so you SEE the formula come true.' },
     ],
     controls: 'Tap a value chip to launch the car at that setting. Read the telemetry, then tap to continue between stages.',
   },
