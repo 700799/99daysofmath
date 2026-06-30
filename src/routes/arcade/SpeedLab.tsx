@@ -7,8 +7,8 @@ import { useArcadeClock } from '../../hooks/useArcadeClock';
 // The React shell carries the "Aerospace Syllabus" chrome; the Phaser canvas runs
 // the physics, telemetry and the three sequential challenges.
 
-const CANVAS_W = 820;
-const CANVAS_H = 480;
+const CANVAS_W = 560;
+const CANVAS_H = 780;
 
 export function SpeedLab() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
@@ -82,19 +82,19 @@ export function SpeedLab() {
     <div>
       <ArcadeHeader title="Speed Lab" emoji="🚀" />
       {/* aerospace-syllabus mission strip */}
-      <div className="mx-auto mb-2 flex max-w-3xl items-center justify-between rounded-lg border border-cyan-700/60 bg-slate-900 px-3 py-1.5 font-mono text-xs text-cyan-300">
-        <span className="font-bold text-amber-400">MISSION: d = r × t</span>
+      <div className="mx-auto mb-2 flex max-w-sm items-center justify-between rounded-lg border border-cyan-700/60 bg-slate-900 px-3 py-1.5 font-mono text-xs text-cyan-300">
+        <span className="font-bold text-amber-400">d = r × t</span>
         <span>STAGE {level}/3</span>
-        <span className="text-rose-400">● LIVE TELEMETRY</span>
+        <span className="text-rose-400">● LIVE</span>
       </div>
       <div
         ref={containerRef}
         style={{ aspectRatio: `${CANVAS_W} / ${CANVAS_H}` }}
-        className="mx-auto w-full max-w-3xl overflow-hidden rounded-xl border-2 border-cyan-800 shadow-[0_0_30px_rgba(56,189,248,0.15)]"
+        className="mx-auto w-full max-w-sm overflow-hidden rounded-xl border-2 border-cyan-800 shadow-[0_0_30px_rgba(56,189,248,0.15)]"
         role="img"
         aria-label="Speed Lab driving simulator: solve for rate, time, and distance."
       />
-      <p className="mx-auto mt-2 max-w-3xl text-center font-mono text-xs text-slate-500">
+      <p className="mx-auto mt-2 max-w-sm text-center font-mono text-xs text-slate-500">
         Tap a value to launch the car. Watch the telemetry — distance = rate × time.
       </p>
     </div>

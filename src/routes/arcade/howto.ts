@@ -66,11 +66,13 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
 
   speedlab: {
     sections: [
-      { heading: 'Goal', body: 'A mission-control driving lab that teaches the formula distance = rate × time (d = r × t). Clear 3 stages by solving for the missing piece each time.' },
-      { heading: 'Stage 1 — find the RATE', body: 'You must reach a checkpoint 600px away in exactly 4 seconds. Pick the speed: r = d ÷ t = 600 ÷ 4 = 150 px/s.' },
-      { heading: 'Stage 2 — find the TIME', body: 'Speed is locked at 200 px/s over 1000px. Set the countdown so it hits zero as you cross the line: t = d ÷ r = 1000 ÷ 200 = 5 s.' },
-      { heading: 'Stage 3 — find the DISTANCE', body: 'Your fuel lasts 8 s at 120 px/s. Pick the waypoint you can exactly reach: d = r × t = 120 × 8 = 960 px.' },
-      { heading: 'Telemetry', body: 'Watch the live readouts — your X position, velocity, and the mission clock — so you can SEE the formula working.' },
+      { heading: 'The big idea', body: 'Distance = rate × time, written d = r × t. "Rate" just means speed — how much distance you cover each second (or hour). Know any TWO of the three and you can always find the third.' },
+      { heading: 'The triangle trick', body: 'Picture d on top, with r and t underneath: d over (r · t). Cover the one you want and the triangle shows the math. Cover d → d = r × t. Cover r → r = d ÷ t. Cover t → t = d ÷ r. Top-over-bottom means divide; side-by-side means multiply.' },
+      { heading: 'Example — find DISTANCE', body: 'A car drives 60 mph for 2 hours. d = r × t = 60 × 2 = 120 miles. Drive twice as long → twice the distance.' },
+      { heading: 'Example — find RATE (speed)', body: 'You ran 100 meters in 20 seconds. r = d ÷ t = 100 ÷ 20 = 5 meters per second. Distance shared out over the time.' },
+      { heading: 'Example — find TIME', body: 'You need to travel 150 miles at 50 mph. t = d ÷ r = 150 ÷ 50 = 3 hours. Farther to go, or slower speed → more time.' },
+      { heading: 'Same triangle, both ways', body: 'A train at 80 km/h for 3 h covers d = 80 × 3 = 240 km. And a 240 km trip in 3 h means r = 240 ÷ 3 = 80 km/h. Just covering a different corner.' },
+      { heading: 'In the game', body: 'Three stages: find the RATE (r = d ÷ t), find the TIME (t = d ÷ r), then find the DISTANCE (d = r × t). Watch the live telemetry — X position, velocity and clock — so you SEE the formula come true.' },
     ],
     controls: 'Tap a value chip to launch the car at that setting. Read the telemetry, then tap to continue between stages.',
   },
