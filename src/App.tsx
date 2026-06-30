@@ -51,6 +51,7 @@ const PocketTown = lazy(() => import('./routes/arcade/PocketTown').then((m) => (
 const TankAttack = lazy(() => import('./routes/arcade/TankAttack').then((m) => ({ default: m.TankAttack })));
 const DressToImpress = lazy(() => import('./routes/arcade/DressToImpress').then((m) => ({ default: m.DressToImpress })));
 const DesertRig = lazy(() => import('./routes/arcade/DesertRig').then((m) => ({ default: m.DesertRig })));
+const MathPop = lazy(() => import('./routes/arcade/MathPop').then((m) => ({ default: m.MathPop })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -116,6 +117,7 @@ export default function App() {
           <Route path="/arcade/tank" element={<ArcadeGate title="Tank Attack"><TankAttack /></ArcadeGate>} />
           <Route path="/arcade/dress" element={<ArcadeGate title="Dress to Impress"><DressToImpress /></ArcadeGate>} />
           <Route path="/arcade/rig" element={<ArcadeGate title="Desert Rig"><DesertRig /></ArcadeGate>} />
+          <Route path="/arcade/mathpop" element={<ArcadeGate title="Math Pop"><MathPop /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/rewards" element={<Rewards />} />

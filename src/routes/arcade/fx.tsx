@@ -70,6 +70,7 @@ export const GAME_THEME: Record<string, StageTheme> = {
   escape: 'cave',
   tank: 'sky',
   rig: 'sky',
+  mathpop: 'ocean',
   dress: 'candy',
 };
 

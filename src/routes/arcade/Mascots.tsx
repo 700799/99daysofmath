@@ -477,6 +477,7 @@ export const GAME_MASCOT: Record<string, MascotKind> = {
   asteroids: 'crewmate',
   tank: 'crewmate2',
   rig: 'crewmate',
+  mathpop: 'frog',
   dress: 'unicorn',
 };
 
