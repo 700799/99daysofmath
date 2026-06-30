@@ -34,6 +34,17 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
     controls: 'Tap a rune then a neighbour, or swipe to swap. Fill the ⚡ chi meter, then tap 🌟 Ninjutsu and solve to clear the board.',
   },
 
+  speedlab: {
+    sections: [
+      { heading: 'Goal', body: 'A mission-control driving lab that teaches the formula distance = rate × time (d = r × t). Clear 3 stages by solving for the missing piece each time.' },
+      { heading: 'Stage 1 — find the RATE', body: 'You must reach a checkpoint 600px away in exactly 4 seconds. Pick the speed: r = d ÷ t = 600 ÷ 4 = 150 px/s.' },
+      { heading: 'Stage 2 — find the TIME', body: 'Speed is locked at 200 px/s over 1000px. Set the countdown so it hits zero as you cross the line: t = d ÷ r = 1000 ÷ 200 = 5 s.' },
+      { heading: 'Stage 3 — find the DISTANCE', body: 'Your fuel lasts 8 s at 120 px/s. Pick the waypoint you can exactly reach: d = r × t = 120 × 8 = 960 px.' },
+      { heading: 'Telemetry', body: 'Watch the live readouts — your X position, velocity, and the mission clock — so you can SEE the formula working.' },
+    ],
+    controls: 'Tap a value chip to launch the car at that setting. Read the telemetry, then tap to continue between stages.',
+  },
+
   mathpop: {
     sections: [
       { heading: 'Goal', body: 'Numbered bubbles float up the screen. Pop a group of bubbles that ADDS UP to the target number 🎯!' },

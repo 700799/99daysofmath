@@ -717,6 +717,7 @@ export const GAME_MASCOT: Record<string, MascotKind> = {
   dress: 'unicorn',
   taiko: 'panda',
   shinobi: 'ninja',
+  speedlab: 'robot',
 };
 
 export function gameMascot(id: string): MascotKind {

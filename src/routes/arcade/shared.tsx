@@ -73,6 +73,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'dress', path: '/arcade/dress', emoji: '👗', name: 'Dress to Impress', blurb: 'Style the theme. Match the palette ratio. Walk the runway!', baseXp: 12, gradient: 'from-fuchsia-500 to-violet-600' },
   { id: 'taiko', path: '/arcade/taiko', emoji: '🥁', name: 'Taiko Tap', blurb: 'Tap the drum notes on the beat!', baseXp: 10, gradient: 'from-red-500 to-orange-600' },
   { id: 'shinobi', path: '/arcade/shinobi', emoji: '🥷', name: 'Shinobi Match', blurb: 'Match runes to fend off the foes.', baseXp: 12, gradient: 'from-slate-700 to-rose-700' },
+  { id: 'speedlab', path: '/arcade/speedlab', emoji: '🚀', name: 'Speed Lab', blurb: 'Drive the d = r × t formula!', baseXp: 12, gradient: 'from-slate-800 to-cyan-700' },
 ];
 
 // Premium games: locked until bought with coins in the Shop (id → coin price).
