@@ -44,7 +44,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'connect4', path: '/arcade/connect4', emoji: '🔴', name: 'Connect 4', blurb: 'Beat the owl.', baseXp: 5, gradient: 'from-red-500 to-rose-600' },
   { id: 'wheel', path: '/arcade/wheel', emoji: '🎡', name: 'Prize Wheel', blurb: 'One spin a day.', baseXp: 0, gradient: 'from-fuchsia-500 to-purple-600' },
   { id: 'memory', path: '/arcade/memory', emoji: '🃏', name: 'Memory', blurb: 'Match all 8 pairs.', baseXp: 8, gradient: 'from-sky-500 to-blue-600' },
-  { id: 'shootout', path: '/arcade/shootout', emoji: '🏀', name: 'Shootout', blurb: 'Score 8 baskets in 30s.', baseXp: 5, gradient: 'from-orange-500 to-amber-600' },
+  { id: 'shootout', path: '/arcade/shootout', emoji: '💥', name: 'Angle Cannon', blurb: 'Aim the cannon by angle. Knock targets down!', baseXp: 5, gradient: 'from-orange-500 to-amber-600' },
   { id: 'runner', path: '/arcade/runner', emoji: '🏃', name: 'Math Runner', blurb: 'Right lane, right answer.', baseXp: 8, gradient: 'from-emerald-500 to-teal-600' },
   { id: 'platformer', path: '/arcade/platformer', emoji: '🍄', name: 'Platformer', blurb: '8 levels. Stomp to the flag.', baseXp: 10, gradient: 'from-pink-500 to-rose-600' },
   { id: 'racer', path: '/arcade/racer', emoji: '🏎️', name: 'Race Car', blurb: 'Dodge cones. Grab fuel.', baseXp: 9, gradient: 'from-rose-500 to-orange-500' },
