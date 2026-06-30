@@ -20,13 +20,17 @@ export type MascotKind =
   | 'monkey'
   | 'crewmate'
   | 'crewmate2'
-  | 'crewmate3';
+  | 'crewmate3'
+  | 'panda'
+  | 'ninja'
+  | 'clerk';
 
-export type MascotExpr = 'happy' | 'surprised' | 'dizzy' | 'cheer';
+export type MascotExpr = 'happy' | 'surprised' | 'dizzy' | 'cheer' | 'ko';
 
 export const MASCOT_KINDS: MascotKind[] = [
   'dragon', 'robot', 'frog', 'pet', 'cat', 'bunny', 'fox',
   'unicorn', 'penguin', 'monkey', 'crewmate', 'crewmate2', 'crewmate3',
+  'panda', 'ninja', 'clerk',
 ];
 
 const OUTLINE = { stroke: '#1f2937', strokeWidth: 4, strokeLinejoin: 'round' as const, strokeLinecap: 'round' as const };
@@ -61,7 +65,12 @@ function Face({
       <circle cx={rx + eyeR + 1} cy={ey + 5} r="3" fill={cheek} stroke="none" />
 
       {/* eyes */}
-      {expr === 'dizzy' ? (
+      {expr === 'ko' ? (
+        <g stroke={INK} strokeWidth={1.9} fill="none">
+          <path d={`M${lx} ${ey - 1} q2.4 0 2.4 2.4 q0 3.4 -3.4 3.4 q-4.4 0 -4.4 -4.4 q0 -5.4 5.4 -5.4 q6.4 0 6.4 6.4`} />
+          <path d={`M${rx} ${ey - 1} q2.4 0 2.4 2.4 q0 3.4 -3.4 3.4 q-4.4 0 -4.4 -4.4 q0 -5.4 5.4 -5.4 q6.4 0 6.4 6.4`} />
+        </g>
+      ) : expr === 'dizzy' ? (
         <g stroke={INK} strokeWidth={2.2} fill="none">
           <path d={`M${lx - 3} ${ey - 3} l6 6 M${lx + 3} ${ey - 3} l-6 6`} />
           <path d={`M${rx - 3} ${ey - 3} l6 6 M${rx + 3} ${ey - 3} l-6 6`} />
@@ -87,6 +96,8 @@ function Face({
       {/* mouth */}
       {expr === 'cheer' ? (
         <path d={`M${cx - 7} ${my - 1} Q${cx} ${my + 9} ${cx + 7} ${my - 1} Z`} fill="#7f1d1d" stroke={INK} strokeWidth={2} strokeLinejoin="round" />
+      ) : expr === 'ko' ? (
+        <ellipse cx={cx} cy={my + 1} rx="4" ry="3" fill="#7f1d1d" stroke={INK} strokeWidth={2} />
       ) : expr === 'surprised' ? (
         <ellipse cx={cx} cy={my + 1} rx="3.5" ry="4.5" fill="#7f1d1d" stroke={INK} strokeWidth={2} />
       ) : (
@@ -408,6 +419,106 @@ function makeCrewmate(suit: string, suitDark: string) {
   );
 }
 
+// Panda taiko-drummer — B/W head with eye-patches, a red fighter's headband and
+// two crossed drumsticks with soft drum-tips. Uses the shared Face (incl. 'ko').
+function Panda(e: MascotExpr) {
+  return (
+    <g {...OUTLINE}>
+      <defs>
+        <radialGradient id="m-pan" cx="50%" cy="42%" r="68%">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="100%" stopColor="#e5e7eb" />
+        </radialGradient>
+      </defs>
+      {/* ears */}
+      <circle cx="27" cy="24" r="11" fill="#1f2937" />
+      <circle cx="73" cy="24" r="11" fill="#1f2937" />
+      <circle cx="27" cy="24" r="5" fill="#9ca3af" stroke="none" />
+      <circle cx="73" cy="24" r="5" fill="#9ca3af" stroke="none" />
+      {/* head */}
+      <circle cx="50" cy="48" r="28" fill="url(#m-pan)" />
+      {/* eye patches */}
+      <g transform="rotate(-14 40 46)"><ellipse cx="40" cy="46" rx="7.5" ry="10" fill="#1f2937" stroke="none" /></g>
+      <g transform="rotate(14 60 46)"><ellipse cx="60" cy="46" rx="7.5" ry="10" fill="#1f2937" stroke="none" /></g>
+      {/* headband + knot */}
+      <path d="M21 39 Q50 31 79 39 L78 46 Q50 38 22 46 Z" fill="#dc2626" />
+      <path d="M76 42 q12 -1 15 7 q-7 -2 -10 1 q5 3 1 7 q-6 -5 -10 -8 Z" fill="#dc2626" />
+      {/* nose */}
+      <path d="M46 55 L54 55 L50 60 Z" fill="#1f2937" stroke="none" />
+      <Face cx={50} ey={46} spread={10} eyeR={5} mouthY={60} expr={e} />
+      {/* drumsticks + tips */}
+      <g stroke="#b45309" strokeWidth={5} strokeLinecap="round">
+        <line x1="28" y1="90" x2="44" y2="66" />
+        <line x1="72" y1="90" x2="56" y2="66" />
+      </g>
+      <circle cx="44" cy="64" r="4.5" fill="#fde68a" stroke={INK} strokeWidth={2.5} />
+      <circle cx="56" cy="64" r="4.5" fill="#fde68a" stroke={INK} strokeWidth={2.5} />
+    </g>
+  );
+}
+
+// Ninja — spiky crown, indigo headband with streaming tails, cool black shades,
+// a confident smirk and a red scarf.
+function Ninja(e: MascotExpr) {
+  return (
+    <g {...OUTLINE}>
+      <defs>
+        <radialGradient id="m-nin" cx="50%" cy="40%" r="65%">
+          <stop offset="0%" stopColor="#ffe0bd" />
+          <stop offset="100%" stopColor="#f1c08a" />
+        </radialGradient>
+      </defs>
+      <path d="M24 38 L18 16 L31 30 L36 12 L44 28 L50 10 L56 28 L64 12 L69 30 L82 16 L76 38 Z" fill="#312e81" />
+      <circle cx="50" cy="50" r="26" fill="url(#m-nin)" />
+      <path d="M24 41 Q50 33 76 41 L76 49 Q50 41 24 49 Z" fill="#1e3a8a" />
+      <path d="M74 45 q16 -2 22 7 q-8 -1 -12 2 q6 4 1 9 q-8 -7 -13 -10 Z" fill="#1e3a8a" />
+      {/* shades */}
+      <g fill="#0b1220" stroke={INK} strokeWidth={3} strokeLinejoin="round">
+        <path d="M33 51 L47 49 L46 59 Q40 61 35 58 Z" />
+        <path d="M53 49 L67 51 L65 58 Q59 61 54 59 Z" />
+      </g>
+      <rect x="46" y="51" width="8" height="3" rx="1.5" fill="#0b1220" stroke="none" />
+      <path d="M37 53 l4 -0.5" stroke="#93c5fd" strokeWidth={2} fill="none" />
+      {/* smirk + cheeks */}
+      {e === 'ko' || e === 'dizzy' ? (
+        <path d="M44 67 Q52 62 61 67" fill="none" stroke={INK} strokeWidth={2.6} />
+      ) : (
+        <path d="M44 66 Q52 71 61 64" fill="none" stroke={INK} strokeWidth={2.6} />
+      )}
+      <circle cx="35" cy="62" r="3" fill="#fb7185" stroke="none" />
+      <circle cx="65" cy="62" r="3" fill="#fb7185" stroke="none" />
+      <path d="M30 73 Q50 83 70 73 L72 82 Q50 92 28 82 Z" fill="#dc2626" />
+    </g>
+  );
+}
+
+// Station clerk — peaked navy cap with a gold star badge, friendly face and a
+// buttoned uniform with gold lapels.
+function Clerk(e: MascotExpr) {
+  return (
+    <g {...OUTLINE}>
+      <defs>
+        <radialGradient id="m-clk" cx="50%" cy="42%" r="64%">
+          <stop offset="0%" stopColor="#ffe0bd" />
+          <stop offset="100%" stopColor="#f1c08a" />
+        </radialGradient>
+      </defs>
+      <circle cx="50" cy="50" r="24" fill="url(#m-clk)" />
+      {/* cap */}
+      <path d="M27 39 Q50 19 73 39 Z" fill="#1e3a8a" />
+      <path d="M21 40 Q50 47 79 40 L79 45 Q50 52 21 45 Z" fill="#172554" />
+      <rect x="43" y="26" width="14" height="9" rx="2" fill="#fcd34d" />
+      <path d="M50 28 l1.3 2.7 3 .3 -2.2 2 .7 3 -2.8 -1.6 -2.8 1.6 .7 -3 -2.2 -2 3 -.3 Z" fill="#b45309" stroke="none" />
+      <Face cx={50} ey={50} spread={8} eyeR={5} mouthY={61} expr={e} />
+      {/* uniform */}
+      <path d="M30 74 L42 67 L50 73 L58 67 L70 74 L70 86 Q50 93 30 86 Z" fill="#1e3a8a" />
+      <path d="M42 67 L50 73 L46 80 Z" fill="#fcd34d" stroke="none" />
+      <path d="M58 67 L50 73 L54 80 Z" fill="#fcd34d" stroke="none" />
+      <circle cx="50" cy="83" r="1.6" fill="#fcd34d" stroke="none" />
+    </g>
+  );
+}
+
 const PARTS: Record<MascotKind, (e: MascotExpr) => JSX.Element> = {
   dragon: Dragon,
   robot: Robot,
@@ -422,6 +533,9 @@ const PARTS: Record<MascotKind, (e: MascotExpr) => JSX.Element> = {
   crewmate: makeCrewmate('#ef4444', '#b91c1c'),
   crewmate2: makeCrewmate('#3b82f6', '#1d4ed8'),
   crewmate3: makeCrewmate('#22c55e', '#15803d'),
+  panda: Panda,
+  ninja: Ninja,
+  clerk: Clerk,
 };
 
 export function Mascot({
@@ -479,6 +593,8 @@ export const GAME_MASCOT: Record<string, MascotKind> = {
   rig: 'crewmate',
   mathpop: 'frog',
   dress: 'unicorn',
+  taiko: 'panda',
+  shinobi: 'ninja',
 };
 
 export function gameMascot(id: string): MascotKind {

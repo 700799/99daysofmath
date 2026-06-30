@@ -71,6 +71,8 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'rig', path: '/arcade/rig', emoji: '🛻', name: 'Desert Rig', blurb: 'Defend the War Rig! Solve fast to fire.', baseXp: 12, gradient: 'from-amber-600 to-orange-800' },
   { id: 'mathpop', path: '/arcade/mathpop', emoji: '🫧', name: 'Math Pop', blurb: 'Pop bubbles that add up to the target!', baseXp: 10, gradient: 'from-sky-500 to-cyan-600' },
   { id: 'dress', path: '/arcade/dress', emoji: '👗', name: 'Dress to Impress', blurb: 'Style the theme. Match the palette ratio. Walk the runway!', baseXp: 12, gradient: 'from-fuchsia-500 to-violet-600' },
+  { id: 'taiko', path: '/arcade/taiko', emoji: '🥁', name: 'Taiko Tap', blurb: 'Tap the drum notes on the beat!', baseXp: 10, gradient: 'from-red-500 to-orange-600' },
+  { id: 'shinobi', path: '/arcade/shinobi', emoji: '🥷', name: 'Shinobi Match', blurb: 'Match runes to fend off the foes.', baseXp: 12, gradient: 'from-slate-700 to-rose-700' },
 ];
 
 // Premium games: locked until bought with coins in the Shop (id → coin price).
@@ -143,6 +145,120 @@ export function BalanceClock() {
 
 // Shared end-of-game card: score, XP breakdown (incl. half-XP repeats and
 // variety bonuses), sticker celebration, replay + "try a different game" nudge.
+// --- end-card reaction effects (pure SVG, app mascot style) ---
+function Sparkle({ x, y, s, c = '#fff7cc' }: { x: number; y: number; s: number; c?: string }) {
+  return (
+    <path
+      transform={`translate(${x},${y}) scale(${s})`}
+      d="M0,-8 C1,-2 2,-1 8,0 C2,1 1,2 0,8 C-1,2 -2,1 -8,0 C-2,-1 -1,-2 0,-8 Z"
+      fill={c}
+      stroke="#f59e0b"
+      strokeWidth={1}
+    />
+  );
+}
+function Shuriken({ x, y, r, rot }: { x: number; y: number; r: number; rot: number }) {
+  return (
+    <g transform={`translate(${x},${y}) rotate(${rot})`}>
+      <path
+        d={`M0,-${r} L${r * 0.32},-${r * 0.32} L${r},0 L${r * 0.32},${r * 0.32} L0,${r} L-${r * 0.32},${r * 0.32} L-${r},0 L-${r * 0.32},-${r * 0.32} Z`}
+        fill="#64748b"
+        stroke="#1f2937"
+        strokeWidth={2.5}
+        strokeLinejoin="round"
+      />
+      <circle cx={0} cy={0} r={r * 0.18} fill="#1e293b" />
+    </g>
+  );
+}
+function ActionLines({ cx, cy, n, r0, r1, color, w }: { cx: number; cy: number; n: number; r0: number; r1: number; color: string; w: number }) {
+  return (
+    <g>
+      {Array.from({ length: n }, (_, i) => {
+        const a = (i / n) * Math.PI * 2;
+        return (
+          <line
+            key={i}
+            x1={cx + Math.cos(a) * r0}
+            y1={cy + Math.sin(a) * r0}
+            x2={cx + Math.cos(a) * r1}
+            y2={cy + Math.sin(a) * r1}
+            stroke={color}
+            strokeWidth={w}
+            strokeLinecap="round"
+          />
+        );
+      })}
+    </g>
+  );
+}
+function TrophyIcon({ size = 54 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 88 60" width={size} height={(size * 60) / 88} style={{ overflow: 'visible' }} aria-hidden>
+      <g stroke="#1f2937" strokeWidth={4} strokeLinejoin="round">
+        <path d="M30 6 H58 V18 Q58 36 44 38 Q30 36 30 18 Z" fill="#fcd34d" />
+        <path d="M30 10 Q18 10 20 20 Q22 27 31 26" fill="none" />
+        <path d="M58 10 Q70 10 68 20 Q66 27 57 26" fill="none" />
+        <rect x="39" y="38" width="10" height="8" fill="#f59e0b" />
+        <rect x="30" y="46" width="28" height="7" rx="2" fill="#f59e0b" />
+        <path d="M44 16 l1.6 3.4 3.8 .4 -2.8 2.6 .8 3.7 -3.4 -2 -3.4 2 .8 -3.7 -2.8 -2.6 3.8 -.4 Z" fill="#fff7cc" stroke="none" />
+      </g>
+    </svg>
+  );
+}
+
+// Win/lose reaction scene over the score: action lines + sparkles/trophy (win)
+// or red speed-lines + flying shuriken + a KO'd game mascot (lose).
+function ReactionScene({ win, gameId }: { win: boolean; gameId: string }) {
+  return (
+    <div className="relative mx-auto" style={{ width: 240, height: 144 }}>
+      <svg viewBox="0 0 240 144" className="absolute inset-0 h-full w-full" style={{ overflow: 'visible' }} aria-hidden>
+        {win ? (
+          <>
+            <g opacity={0.5}><ActionLines cx={120} cy={66} n={28} r0={44} r1={150} color="#fcd34d" w={3} /></g>
+            <Sparkle x={34} y={28} s={1.5} />
+            <Sparkle x={206} y={40} s={1.8} />
+            <Sparkle x={26} y={104} s={1.2} />
+            <Sparkle x={212} y={108} s={1.4} />
+          </>
+        ) : (
+          <>
+            <g opacity={0.45}><ActionLines cx={120} cy={66} n={30} r0={40} r1={160} color="#fca5a5" w={3} /></g>
+            <Shuriken x={36} y={28} r={12} rot={20} />
+            <Shuriken x={202} y={24} r={9} rot={60} />
+            <Shuriken x={24} y={108} r={10} rot={15} />
+            <g stroke="#6366f1" strokeWidth={3} fill="none" opacity={0.6}>
+              <path d="M150 24 q12 -8 20 2" />
+              <path d="M198 92 q10 8 0 18" />
+            </g>
+          </>
+        )}
+      </svg>
+      <div className="absolute inset-0 flex items-end justify-center gap-1">
+        <Mascot mood={win ? 'cheer' : 'happy'} size={102} />
+        <motion.div
+          initial={{ scale: 0, rotate: win ? -12 : 18 }}
+          animate={{ scale: 1, rotate: win ? 0 : 14 }}
+          transition={{ delay: 0.2, type: 'spring', stiffness: 280, damping: 14 }}
+        >
+          <CharMascot kind={gameMascot(gameId)} size={86} expr={win ? 'cheer' : 'ko'} />
+        </motion.div>
+      </div>
+      {win && (
+        <motion.div
+          className="absolute"
+          style={{ right: 2, top: 2 }}
+          initial={{ scale: 0, y: -8, rotate: -12 }}
+          animate={{ scale: 1, y: 0, rotate: 0 }}
+          transition={{ delay: 0.35, type: 'spring', stiffness: 260, damping: 12 }}
+        >
+          <TrophyIcon size={52} />
+        </motion.div>
+      )}
+    </div>
+  );
+}
+
 export function ArcadeEndCard({
   outcome,
   scoreLine,
@@ -179,15 +295,16 @@ export function ArcadeEndCard({
         <StickerCelebration stickerIds={outcome.earned} onDone={() => setShowStickers(false)} />
       )}
       {win && <Confetti count={24} />}
-      <div className="flex items-end justify-center gap-1">
-        <Mascot mood={win ? 'cheer' : 'happy'} size={110} />
-        <motion.div
-          initial={{ scale: 0, rotate: -12 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ delay: 0.2, type: 'spring', stiffness: 280, damping: 14 }}
+      <ReactionScene win={win} gameId={gameId} />
+      <div className="-mt-1 flex justify-center">
+        <motion.span
+          initial={{ scale: 0.6, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.15, type: 'spring', stiffness: 300, damping: 13 }}
+          className={`inline-block rounded-full px-5 py-1.5 font-display text-lg font-extrabold text-white shadow-[0_3px_0_0_rgba(0,0,0,0.15)] ${win ? 'bg-rose-500' : 'bg-indigo-700'}`}
         >
-          <CharMascot kind={gameMascot(gameId)} size={84} expr={win ? 'cheer' : 'dizzy'} />
-        </motion.div>
+          {win ? 'WINNER!' : 'Try again!'}
+        </motion.span>
       </div>
       <h2 className="text-2xl font-display font-extrabold text-slate-900 mt-2">
         {scoreLine}

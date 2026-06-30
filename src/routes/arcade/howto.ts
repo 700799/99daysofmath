@@ -13,6 +13,27 @@ import type { ArcadeGameDef } from './shared';
 export type GameHowTo = { sections: HowToSection[]; controls?: string };
 
 export const GAME_HOWTO: Record<string, GameHowTo> = {
+  taiko: {
+    sections: [
+      { heading: 'Goal', body: 'Notes scroll in along 3 drum lanes toward the hit-ring on the left. Tap each note right as it lands in its ring for points and combo!' },
+      { heading: 'Timing', body: 'The closer to the ring center you tap, the better the judgement — Perfect beats Good. Keep a streak going to build your combo and trigger Fever mode 🔥.' },
+      { heading: 'Tempo shifts', body: 'The song speeds up through phases (Warm-up → Groovy → Fast → Frenzy). Notes scroll faster and spawn more often — stay on the beat!' },
+      { heading: 'Lives', body: 'Missing notes costs a life. Run out and the song ends — so don’t let notes slip past the ring.' },
+    ],
+    controls: 'Tap the lane (or the matching key) as a note reaches its hit-ring. Three lanes — keep all three covered.',
+  },
+
+  shinobi: {
+    sections: [
+      { heading: 'Goal', body: 'Match runes to fight off foes that creep down 3 lanes toward your shinobi 🥷. Survive as many levels as you can!' },
+      { heading: 'Match-3', body: 'Swap two neighbouring runes to line up 3 or more of a kind. Each successful swap is one turn — then every foe steps closer.' },
+      { heading: 'What runes do', body: '⚔️ Strike the front foe · 🌀 Shuriken hits a whole lane · 🛡️ Guard adds block · 💚 Heal restores HP · ⚡ Chi charges your ultimate.' },
+      { heading: 'Ninjutsu', body: 'When the ⚡ chi meter is full, tap Ninjutsu and solve a math problem to clear the whole screen!' },
+      { heading: 'Danger', body: 'If a foe reaches your shinobi it hurts you (block absorbs some). Lose all HP and the run ends.' },
+    ],
+    controls: 'Tap a rune then a neighbour, or swipe to swap. Fill the ⚡ chi meter, then tap 🌟 Ninjutsu and solve to clear the board.',
+  },
+
   mathpop: {
     sections: [
       { heading: 'Goal', body: 'Numbered bubbles float up the screen. Pop a group of bubbles that ADDS UP to the target number 🎯!' },
