@@ -10,9 +10,9 @@ import { chooseGhostDir, DIRS, UP, DOWN, LEFT, RIGHT, type Dir } from './mazeAI'
 // Loosen a boulder by digging beneath it to crush a chaser. Caught or crushed
 // and you do a quick math lesson and lose a life. Clear the gems to advance.
 
-const COLS = 9;
-const ROWS = 9;
-const TILE = 40;
+const COLS = 7;
+const ROWS = 7;
+const TILE = 52;
 const W = COLS * TILE;
 const H = ROWS * TILE;
 const FALL_SPEED = 6; // tiles / sec
@@ -23,15 +23,15 @@ type Rock = { c: number; y: number; stop: number; falling: boolean; dead: boolea
 
 const GEM_EMOJI = ['💎', '💍', '👑', '🔶', '🔷', '🟣', '🔴', '🟢', '🟡', '🪙', '💠', '🟠'];
 const GEM_CELLS = [
-  [3, 1], [6, 2], [2, 3], [7, 4], [4, 4], [1, 5], [6, 6], [3, 7],
+  [1, 1], [4, 1], [2, 2], [5, 2], [3, 4], [5, 4], [2, 6], [4, 6],
 ];
 const ROCK_CELLS = [
-  [4, 2], [2, 4], [5, 5], [7, 6],
+  [3, 2], [1, 3], [5, 3],
 ];
 const MONSTER_SPAWNS = [
   { c: COLS - 2, r: 1 },
   { c: COLS - 2, r: ROWS - 2 },
-  { c: 4, r: 1 },
+  { c: 3, r: 1 },
 ];
 
 function renderPos(m: Mob): { x: number; y: number } {
@@ -385,6 +385,9 @@ export function GemDigger() {
 
 
   const pp = renderPos(playerRef.current);
+  // Munch while tunnelling between tiles (the loop re-renders every frame).
+  const pMoving = playerRef.current.prog > 0.02 && playerRef.current.prog < 0.98;
+  const chomp = pMoving && Math.floor(performance.now() / 110) % 2 === 0;
 
   return (
     <div>
@@ -452,9 +455,11 @@ export function GemDigger() {
           {/* player */}
           <div
             className="absolute flex items-center justify-center"
-            style={{ left: pp.x * TILE, top: pp.y * TILE, width: TILE, height: TILE, fontSize: TILE - 8, transform: `scaleX(${faceRef.current})` }}
+            style={{ left: pp.x * TILE, top: pp.y * TILE, width: TILE, height: TILE, transform: `scaleX(${faceRef.current})` }}
           >
-            🦝
+            <div style={{ width: TILE - 6, height: TILE - 6 }}>
+              <DiggerHero chomp={chomp} />
+            </div>
           </div>
         </div>
       </div>
@@ -473,6 +478,42 @@ export function GemDigger() {
         Dig out all the gems 💎. Drop a 🪨 on a 👾 to squash it. Don't get cornered!
       </p>
     </div>
+  );
+}
+
+// The digger hero: a round, angry critter with big chomping teeth. `chomp`
+// alternates the open/closed mouth while it's tunnelling so it looks like it's
+// munching through the dirt.
+function DiggerHero({ chomp }: { chomp: boolean }) {
+  return (
+    <svg viewBox="0 0 100 100" width="100%" height="100%" style={{ overflow: 'visible' }} aria-hidden>
+      <g stroke="#7c2d12" strokeWidth={5} strokeLinejoin="round" strokeLinecap="round">
+        <circle cx="50" cy="50" r="40" fill="#fb923c" />
+        {/* angry brows */}
+        <path d="M22 33 L43 41" strokeWidth={6} />
+        <path d="M78 33 L57 41" strokeWidth={6} />
+        {/* eyes */}
+        <circle cx="38" cy="45" r="6.5" fill="#fff" strokeWidth={3} />
+        <circle cx="62" cy="45" r="6.5" fill="#fff" strokeWidth={3} />
+        <circle cx="39" cy="46" r="3" fill="#1f2937" stroke="none" />
+        <circle cx="61" cy="46" r="3" fill="#1f2937" stroke="none" />
+        {chomp ? (
+          <g>
+            {/* open maw */}
+            <path d="M26 60 Q50 66 74 60 L74 80 Q50 94 26 80 Z" fill="#7f1d1d" strokeWidth={4} />
+            {/* big upper + lower teeth */}
+            <path d="M28 61 L36 72 L44 61 L52 72 L60 61 L68 72 L74 61 Z" fill="#ffffff" strokeWidth={2} />
+            <path d="M30 82 L38 73 L46 82 L54 73 L62 82 L70 73 L72 82 Z" fill="#ffffff" strokeWidth={2} />
+          </g>
+        ) : (
+          <g>
+            {/* gritted teeth */}
+            <path d="M28 64 Q50 74 72 64 L72 73 Q50 82 28 73 Z" fill="#ffffff" strokeWidth={3} />
+            <path d="M37 66 L37 78 M46 67 L46 80 M55 67 L55 80 M64 66 L64 78" strokeWidth={2.4} />
+          </g>
+        )}
+      </g>
+    </svg>
   );
 }
 
