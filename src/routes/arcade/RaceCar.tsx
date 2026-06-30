@@ -2,25 +2,60 @@ import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { Mascot as CharMascot, type MascotExpr } from './Mascots';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
-// 3-lane top-down racer. Auto-drives forward; tap left/right to swap lanes.
-// Avoid cones, grab fuel cans for time bonus. 45-second session.
+// Race Car — a FIRST-PERSON perspective dash. You ARE the big-helmeted racer at
+// the bottom of the screen; the road rushes toward you from the horizon and
+// hazards (rocks, eggs, carrots, toothy heads, snakes, spikes) come barreling in
+// from the distance, growing as they approach. Swerve between the three lanes to
+// dodge them and grab ⭐ for a time bonus. 45-second session.
 
 const VIEW_W = 360;
-const VIEW_H = 440;
-const LANES = [60, 180, 300]; // pixel x-centers for each lane
-const CAR_Y = VIEW_H - 90;
+const VIEW_H = 470;
+const HORIZON_Y = 64;
+const CAR_Y = VIEW_H - 74;
+const LANES = [72, 180, 288]; // bottom-of-road x-centers
+const VP_X = VIEW_W / 2; // vanishing point x
+const CONVERGE = 0.16; // how tightly lanes pinch at the horizon
 const SESSION_SECONDS = 45;
+
+const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+
+type HazKind = 'rock' | 'egg' | 'carrot' | 'head' | 'snake' | 'spike' | 'star';
+const HAZARDS: { kind: HazKind; emoji: string }[] = [
+  { kind: 'rock', emoji: '🪨' },
+  { kind: 'egg', emoji: '🥚' },
+  { kind: 'carrot', emoji: '🥕' },
+  { kind: 'head', emoji: '👹' },
+  { kind: 'snake', emoji: '🐍' },
+  { kind: 'spike', emoji: '🔺' },
+];
 
 type Obstacle = {
   id: number;
-  kind: 'cone' | 'fuel';
+  kind: HazKind;
+  emoji: string;
   lane: 0 | 1 | 2;
-  y: number;
+  t: number; // 0 = far horizon, 1 = at the player
+  hit: boolean;
 };
+
+// project a (lane, t) into a screen position + scale for the perspective road
+function project(lane: 0 | 1 | 2, t: number) {
+  const bx = LANES[lane];
+  const tx = VP_X + (bx - VP_X) * CONVERGE;
+  return {
+    x: lerp(tx, bx, t),
+    y: lerp(HORIZON_Y, CAR_Y, t),
+    size: 14 + t * 48,
+  };
+}
 
 export function RaceCar() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
+  const hapticsOn = useProgress((s) => s.hapticsEnabled);
+  const buzz = (p: number | number[]) => { if (hapticsOn) haptic(p); };
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
@@ -28,19 +63,21 @@ export function RaceCar() {
   const laneRef = useRef<0 | 1 | 2>(1);
   const obstaclesRef = useRef<Obstacle[]>([]);
   const distanceRef = useRef(0);
-  const speedRef = useRef(220);
   const livesRef = useRef(3);
   const timeLeftRef = useRef(SESSION_SECONDS);
   const lastTickRef = useRef(performance.now());
   const spawnTimerRef = useRef(0);
   const idRef = useRef(1);
   const rafRef = useRef(0);
+  const exprRef = useRef<MascotExpr>('happy');
+  const shakeRef = useRef(0);
 
   const [, force] = useState(0);
   const redraw = () => force((n) => n + 1);
 
   const setLane = (n: 0 | 1 | 2) => {
     if (outcome) return;
+    if (n !== laneRef.current) { sfx.step(); buzz(HAPTIC.light); }
     laneRef.current = n;
     redraw();
   };
@@ -67,46 +104,51 @@ export function RaceCar() {
       lastTickRef.current = now;
 
       timeLeftRef.current -= dt;
-      const speed = (speedRef.current = Math.min(440, 220 + distanceRef.current * 0.05));
+      const speed = Math.min(440, 220 + distanceRef.current * 0.05);
       distanceRef.current += speed * dt;
+      if (shakeRef.current > 0) shakeRef.current = Math.max(0, shakeRef.current - dt);
 
-      // Spawn obstacles every ~0.55 s (faster as speed creeps up).
+      // how fast hazards travel from horizon → player (faster over time)
+      const tSpeed = 0.55 + Math.min(0.6, distanceRef.current / 6000);
+
+      // spawn
       spawnTimerRef.current -= dt;
       if (spawnTimerRef.current <= 0) {
         const lane = Math.floor(Math.random() * 3) as 0 | 1 | 2;
-        const kind = Math.random() < 0.18 ? 'fuel' : 'cone';
+        const star = Math.random() < 0.16;
+        const h = HAZARDS[Math.floor(Math.random() * HAZARDS.length)];
         obstaclesRef.current.push({
           id: idRef.current++,
-          kind,
+          kind: star ? 'star' : h.kind,
+          emoji: star ? '⭐' : h.emoji,
           lane,
-          y: -40,
+          t: 0,
+          hit: false,
         });
-        spawnTimerRef.current = 0.45 + Math.random() * 0.25;
+        spawnTimerRef.current = 0.5 + Math.random() * 0.28;
       }
 
-      // Move + collide.
+      // advance + collide near the player (t ≈ 1)
       for (const ob of obstaclesRef.current) {
-        ob.y += speed * dt;
-        if (ob.y > CAR_Y - 30 && ob.y < CAR_Y + 30 && ob.lane === laneRef.current) {
-          if (ob.kind === 'cone') {
+        ob.t += tSpeed * dt;
+        if (!ob.hit && ob.t >= 0.88 && ob.t <= 1.06 && ob.lane === laneRef.current) {
+          ob.hit = true;
+          if (ob.kind === 'star') {
+            timeLeftRef.current = Math.min(SESSION_SECONDS + 6, timeLeftRef.current + 3);
+            sfx.coin(); buzz(HAPTIC.pickup);
+          } else {
             livesRef.current -= 1;
-            ob.y = VIEW_H + 100; // remove
-            if (livesRef.current <= 0) {
-              finish();
-              return;
-            }
-          } else if (ob.kind === 'fuel') {
-            timeLeftRef.current = Math.min(SESSION_SECONDS + 5, timeLeftRef.current + 3);
-            ob.y = VIEW_H + 100;
+            shakeRef.current = 0.35;
+            exprRef.current = 'dizzy';
+            sfx.hurt(); buzz(HAPTIC.death);
+            window.setTimeout(() => { exprRef.current = 'happy'; }, 500);
+            if (livesRef.current <= 0) { finish(); return; }
           }
         }
       }
-      obstaclesRef.current = obstaclesRef.current.filter((ob) => ob.y < VIEW_H + 80);
+      obstaclesRef.current = obstaclesRef.current.filter((ob) => ob.t < 1.15);
 
-      if (timeLeftRef.current <= 0) {
-        finish();
-        return;
-      }
+      if (timeLeftRef.current <= 0) { finish(); return; }
 
       redraw();
       rafRef.current = requestAnimationFrame(tick);
@@ -118,6 +160,7 @@ export function RaceCar() {
   }, [outcome]);
 
   const finish = () => {
+    sfx.lose();
     const xp = Math.max(1, Math.min(22, Math.floor(distanceRef.current / 200)));
     setOutcome(recordArcadePlay('racer', xp));
   };
@@ -126,10 +169,11 @@ export function RaceCar() {
     laneRef.current = 1;
     obstaclesRef.current = [];
     distanceRef.current = 0;
-    speedRef.current = 220;
     livesRef.current = 3;
     timeLeftRef.current = SESSION_SECONDS;
     spawnTimerRef.current = 0;
+    exprRef.current = 'happy';
+    shakeRef.current = 0;
     setOutcome(null);
   };
 
@@ -148,10 +192,14 @@ export function RaceCar() {
     );
   }
 
+  const shake = shakeRef.current > 0 ? (Math.random() - 0.5) * 10 : 0;
+  // sort far→near so nearer hazards paint on top
+  const drawList = [...obstaclesRef.current].sort((a, b) => a.t - b.t);
+
   return (
     <div>
-      <ArcadeHeader title="Race Car · 45s" emoji="🏎️" />
-      <div className="mb-2 flex items-center justify-between">
+      <ArcadeHeader title="Race Car · 45s" emoji="🏎️" gameId="racer" />
+      <div className="mb-2 flex items-center justify-between max-w-sm mx-auto px-1">
         <div className="text-sm font-display font-extrabold text-slate-900">
           {'❤️'.repeat(livesRef.current)}
           {'🤍'.repeat(Math.max(0, 3 - livesRef.current))}
@@ -162,32 +210,54 @@ export function RaceCar() {
       </div>
 
       <div
-        className="relative mx-auto rounded-2xl bg-gradient-to-b from-slate-700 to-slate-900 border-2 border-slate-300 overflow-hidden select-none"
-        style={{ width: '100%', maxWidth: VIEW_W, height: VIEW_H }}
+        className="relative mx-auto overflow-hidden rounded-2xl border-2 border-slate-300 select-none"
+        style={{ width: '100%', maxWidth: VIEW_W, height: VIEW_H, transform: `translateX(${shake}px)` }}
       >
-        {/* lane stripes — scroll using a CSS animation tied to speed */}
-        <div className="absolute inset-y-0 left-1/3 w-1.5 bg-amber-300 opacity-80" style={{ backgroundImage: 'linear-gradient(180deg, transparent 0 16px, #FBBF24 16px 36px, transparent 36px 52px)', backgroundSize: '100% 52px' }} />
-        <div className="absolute inset-y-0 left-2/3 w-1.5 bg-amber-300 opacity-80" style={{ backgroundImage: 'linear-gradient(180deg, transparent 0 16px, #FBBF24 16px 36px, transparent 36px 52px)', backgroundSize: '100% 52px' }} />
+        {/* sky */}
+        <div className="absolute inset-x-0 top-0" style={{ height: HORIZON_Y, background: 'linear-gradient(180deg,#7dd3fc,#bae6fd)' }} />
+        <div className="absolute" style={{ left: VP_X - 16, top: 12, fontSize: 26 }}>☀️</div>
 
-        {/* obstacles */}
-        {obstaclesRef.current.map((ob) => (
-          <div
-            key={ob.id}
-            className="absolute text-4xl"
-            style={{ left: LANES[ob.lane] - 22, top: ob.y, transition: 'none' }}
-            aria-hidden="true"
-          >
-            {ob.kind === 'cone' ? '🚧' : '⛽'}
-          </div>
-        ))}
+        {/* perspective road */}
+        <svg className="absolute inset-0" viewBox={`0 0 ${VIEW_W} ${VIEW_H}`} width="100%" height="100%" preserveAspectRatio="none">
+          <rect x="0" y={HORIZON_Y} width={VIEW_W} height={VIEW_H - HORIZON_Y} fill="#4b5563" />
+          <polygon
+            points={`${VP_X - 30},${HORIZON_Y} ${VP_X + 30},${HORIZON_Y} ${VIEW_W + 60},${VIEW_H} ${-60},${VIEW_H}`}
+            fill="#374151"
+          />
+          {/* lane dividers converging to the vanishing point */}
+          {[0, 1].map((i) => {
+            const bx = i === 0 ? (LANES[0] + LANES[1]) / 2 : (LANES[1] + LANES[2]) / 2;
+            const tx = VP_X + (bx - VP_X) * CONVERGE;
+            return (
+              <line key={i} x1={tx} y1={HORIZON_Y} x2={bx} y2={VIEW_H} stroke="#fbbf24" strokeWidth="3" strokeDasharray="10 14" opacity="0.85" />
+            );
+          })}
+          {/* shoulders */}
+          <line x1={VP_X - 30} y1={HORIZON_Y} x2={-60} y2={VIEW_H} stroke="#e5e7eb" strokeWidth="3" />
+          <line x1={VP_X + 30} y1={HORIZON_Y} x2={VIEW_W + 60} y2={VIEW_H} stroke="#e5e7eb" strokeWidth="3" />
+        </svg>
 
-        {/* car */}
+        {/* hazards rushing in */}
+        {drawList.map((ob) => {
+          const pr = project(ob.lane, Math.min(1, ob.t));
+          return (
+            <div
+              key={ob.id}
+              className="absolute"
+              style={{ left: pr.x, top: pr.y, transform: 'translate(-50%,-50%)', fontSize: pr.size, lineHeight: 1, filter: 'drop-shadow(0 3px 3px rgba(0,0,0,0.4))' }}
+              aria-hidden="true"
+            >
+              {ob.emoji}
+            </div>
+          );
+        })}
+
+        {/* YOU — the big-helmeted racer, front and center */}
         <div
-          className="absolute text-5xl transition-[left] duration-150 ease-out"
-          style={{ left: LANES[laneRef.current] - 28, top: CAR_Y - 28 }}
-          aria-hidden="true"
+          className="absolute transition-[left] duration-150 ease-out"
+          style={{ left: LANES[laneRef.current], top: CAR_Y, transform: 'translate(-50%,-50%)' }}
         >
-          🏎️
+          <CharMascot kind="crewmate" size={92} expr={exprRef.current} />
         </div>
       </div>
 
@@ -196,20 +266,20 @@ export function RaceCar() {
         <button
           type="button"
           onClick={() => setLane(Math.max(0, laneRef.current - 1) as 0 | 1 | 2)}
-          className="min-h-16 rounded-2xl bg-white border-2 border-slate-200 font-display font-extrabold text-2xl shadow"
+          className="min-h-16 rounded-2xl bg-white border-2 border-slate-200 font-display font-extrabold text-2xl shadow active:translate-y-0.5"
         >
           ← Left
         </button>
         <button
           type="button"
           onClick={() => setLane(Math.min(2, laneRef.current + 1) as 0 | 1 | 2)}
-          className="min-h-16 rounded-2xl bg-white border-2 border-slate-200 font-display font-extrabold text-2xl shadow"
+          className="min-h-16 rounded-2xl bg-white border-2 border-slate-200 font-display font-extrabold text-2xl shadow active:translate-y-0.5"
         >
           Right →
         </button>
       </div>
       <p className="text-center text-xs text-slate-500 mt-2">
-        Swerve around 🚧. Grab ⛽ for time bonuses!
+        Swerve to dodge 🪨🥚🥕👹🐍🔺 rushing in — grab ⭐ for time!
       </p>
     </div>
   );

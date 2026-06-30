@@ -184,6 +184,15 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
     controls: 'Tap the action buttons. Special problems use the on-screen keypad — scroll the problem if it is long.',
   },
 
+  racer: {
+    sections: [
+      { heading: 'Goal', body: "You're the big-helmeted racer at the bottom — it's a first-person dash! The road rushes toward you and hazards come barreling in from the horizon, getting bigger as they get closer. Survive 45 seconds and drive as far as you can." },
+      { heading: 'Dodge everything', body: 'Swerve between the three lanes to avoid 🪨 rocks, 🥚 eggs, 🥕 carrots, 👹 toothy heads, 🐍 snakes and 🔺 spikes. Each one you hit costs a life — three hits and the run ends.' },
+      { heading: 'Grab the stars', body: 'Catch ⭐ stars in your lane for a +3 second time bonus. The longer you last, the faster everything comes!' },
+    ],
+    controls: 'Tap ← Left / Right → (or the arrow keys) to switch lanes. Line up the gaps and grab the stars!',
+  },
+
   crawler: {
     sections: [
       { heading: 'Goal', body: 'Push your luck through a treasure vault and BANK 50 gold to win. Each room you enter adds loot to your pot — but the alarm gets more likely the deeper you go.' },
