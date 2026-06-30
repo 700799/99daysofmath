@@ -34,6 +34,16 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
     controls: 'Tap a rune then a neighbour, or swipe to swap. Fill the ⚡ chi meter, then tap 🌟 Ninjutsu and solve to clear the board.',
   },
 
+  chess: {
+    sections: [
+      { heading: 'Goal', body: 'Each puzzle gives YOU a big material lead — but only ONE move actually wins. Play any other move and the computer punishes you and wins. Solve all 5 endgames!' },
+      { heading: 'How to move', body: 'Tap your (white) piece, then tap the square to move it to. White pieces are ♔♕♖♗♘♙; the computer is black.' },
+      { heading: 'The big idea', body: 'Sometimes extra material is a LIABILITY (zugzwang), sometimes you must SACRIFICE your queen to force mate, and sometimes a few minor pieces out-coordinate a queen. Read the lesson on each puzzle.' },
+      { heading: 'Wrong move?', body: 'No problem — you’ll see exactly how the computer would pounce, then you can try the same puzzle again.' },
+    ],
+    controls: 'Tap a white piece, then tap its destination. Find the one move that wins; solve all 5.',
+  },
+
   fraction: {
     sections: [
       { heading: 'Goal', body: 'Run the pizzeria! Each customer orders a fraction of a pizza — serve them exactly that many slices.' },

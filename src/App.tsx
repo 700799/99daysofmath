@@ -56,6 +56,7 @@ const TaikoTap = lazy(() => import('./routes/arcade/TaikoTap').then((m) => ({ de
 const ShinobiMatch = lazy(() => import('./routes/arcade/ShinobiMatch').then((m) => ({ default: m.ShinobiMatch })));
 const SpeedLab = lazy(() => import('./routes/arcade/SpeedLab').then((m) => ({ default: m.SpeedLab })));
 const FractionPizza = lazy(() => import('./routes/arcade/FractionPizza').then((m) => ({ default: m.FractionPizza })));
+const ChessPuzzle = lazy(() => import('./routes/arcade/ChessPuzzle').then((m) => ({ default: m.ChessPuzzle })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -126,6 +127,7 @@ export default function App() {
           <Route path="/arcade/shinobi" element={<ArcadeGate title="Shinobi Match"><ShinobiMatch /></ArcadeGate>} />
           <Route path="/arcade/speedlab" element={<ArcadeGate title="Speed Lab"><SpeedLab /></ArcadeGate>} />
           <Route path="/arcade/fraction" element={<ArcadeGate title="Fraction Pizzeria"><FractionPizza /></ArcadeGate>} />
+          <Route path="/arcade/chess" element={<ArcadeGate title="Checkmate Lab"><ChessPuzzle /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/rewards" element={<Rewards />} />
