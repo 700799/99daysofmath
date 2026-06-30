@@ -13,6 +13,8 @@ import { Link } from 'react-router-dom';
 import { ArcadeHeader, ArcadeSessionContext, ARCADE_GAMES, PREMIUM_GAMES } from './shared';
 import { MidGameChallenge } from './MidGameChallenge';
 import { HeroSplash, Countdown } from './HeroSplash';
+import { HowToPlay } from './HowToPlay';
+import { getHowTo } from './howto';
 import { gameMascot } from './Mascots';
 import { MathBreak } from './MathBreak';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
@@ -54,6 +56,7 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   const [challengeActive, setChallengeActive] = useState(false);
   const [storyActive, setStoryActive] = useState(false);
   const [showSplash, setShowSplash] = useState(config.unlimited);
+  const [showDirections, setShowDirections] = useState(config.unlimited);
   const [counting, setCounting] = useState(config.unlimited);
   const playSecRef = useRef(0);
   const storySecRef = useRef(0);
@@ -110,6 +113,7 @@ export function ArcadeGate({ title, children }: { title: string; children: React
     setChallengeActive(false);
     setStoryActive(false);
     setShowSplash(true);
+    setShowDirections(true);
     setCounting(true);
     setUnlocked(true);
   };
@@ -128,6 +132,7 @@ export function ArcadeGate({ title, children }: { title: string; children: React
       setChallengeActive(false);
       setStoryActive(false);
       setShowSplash(true);
+      setShowDirections(true);
       setCounting(true);
       return;
     }
@@ -136,8 +141,14 @@ export function ArcadeGate({ title, children }: { title: string; children: React
     setChallengeActive(false);
   };
 
+  // Entry sequence overlays, in order. They only show when we have a game def;
+  // games without one (title not in ARCADE_GAMES) skip straight to the countdown.
+  const splashVisible = showSplash && !!game;
+  const directionsVisible = !splashVisible && showDirections && !!game;
+  const countdownVisible = !splashVisible && !directionsVisible && counting;
+
   const playArea = (
-    <ArcadeSessionContext.Provider value={{ requestReplay, paused: challengeActive || counting || storyActive }}>
+    <ArcadeSessionContext.Provider value={{ requestReplay, paused: challengeActive || splashVisible || directionsVisible || countdownVisible || storyActive }}>
       <div key={sessionKey}>{children}</div>
       {storyActive && (
         <MathBreak
@@ -157,7 +168,7 @@ export function ArcadeGate({ title, children }: { title: string; children: React
           }}
         />
       )}
-      {showSplash && game ? (
+      {splashVisible && game ? (
         <HeroSplash
           emoji={game.emoji}
           mascot={gameMascot(game.id)}
@@ -167,8 +178,21 @@ export function ArcadeGate({ title, children }: { title: string; children: React
           duration={900}
           onDone={() => setShowSplash(false)}
         />
+      ) : directionsVisible && game ? (
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm px-3 py-8 flex items-start justify-center">
+          <HowToPlay
+            emoji={game.emoji}
+            title={game.name}
+            gradient={game.gradient}
+            {...getHowTo(game)}
+            onStart={() => {
+              setShowDirections(false);
+              setCounting(true);
+            }}
+          />
+        </div>
       ) : (
-        counting && <Countdown onDone={() => setCounting(false)} />
+        countdownVisible && <Countdown onDone={() => setCounting(false)} />
       )}
     </ArcadeSessionContext.Provider>
   );

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
-import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
+import { GameInstructions, type HowToSection } from './HowToPlay';
 import { makeAdaptive, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
@@ -46,7 +46,7 @@ export function Mode7Racer() {
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
 
-  const [phase, setPhase] = useState<'howto' | 'race'>('howto');
+  const [phase, setPhase] = useState<'howto' | 'race'>('race');
   const carXRef = useRef(0); // -1..1 screen position
   const steerRef = useRef(0); // target from input
   const keyRef = useRef({ left: false, right: false });
@@ -82,6 +82,9 @@ export function Mode7Racer() {
     runRef.current = 0; nextPitRef.current = 30;
     setChallenge(null); setOutcome(null); setPhase('race');
   };
+
+  // Auto-start on mount — the arcade gate now shows the directions + countdown.
+  useEffect(() => { start(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const finish = () => {
     if (doneRef.current) return;
@@ -215,22 +218,6 @@ export function Mode7Racer() {
     );
   }
 
-  if (phase === 'howto') {
-    return (
-      <div>
-        <ArcadeHeader title="Turbo Dash" emoji="🏎️" />
-        <HowToPlay
-          emoji="🏎️"
-          title="Turbo Dash"
-          gradient="from-sky-500 to-indigo-700"
-          sections={racerSections(maxStage)}
-          controls={RACER_CONTROLS}
-          onStart={start}
-        />
-      </div>
-    );
-  }
-
   // --- render perspective road ---
   const bands = [];
   for (let i = 0; i < BANDS; i++) {
@@ -302,8 +289,7 @@ export function Mode7Racer() {
             <input autoFocus inputMode="numeric" value={cInput} onChange={(e) => setCInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && resolveChallenge()}
               className="mt-3 w-full rounded-xl border-2 border-slate-200 px-3 py-2 text-center text-xl font-display font-extrabold focus:border-orange-500 focus:outline-none" placeholder="?" />
-            <button type="button" onClick={resolveChallenge} className="mt-3 w-full min-h-11 rounded-2xl bg-orange-500 text-white font-display font-extrabold">Go! 🏁</button>
-            <button type="button" onClick={() => { setChallenge(null); challengeRef.current = false; lastRef.current = performance.now(); }} className="mt-2 w-full text-xs font-display font-bold text-slate-400">skip</button>
+            <button type="button" onClick={resolveChallenge} disabled={!cInput.trim()} className="mt-3 w-full min-h-11 rounded-2xl bg-orange-500 disabled:bg-slate-300 text-white font-display font-extrabold">Go! 🏁</button>
           </div>
         </div>
       )}

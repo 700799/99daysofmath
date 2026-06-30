@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { GameStage } from './fx';
-import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
+import { GameInstructions, type HowToSection } from './HowToPlay';
 import { makeAdaptive, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
@@ -157,7 +157,6 @@ export function HeroRescue() {
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
 
-  const [phase, setPhase] = useState<'howto' | 'play'>('howto');
   const [levelIdx, setLevelIdx] = useState(0);
   const [fills, setFills] = useState<Record<string, Fill>>(() => ({ ...LEVELS[0].fills }));
   const [open, setOpen] = useState<Set<string>>(() => new Set());
@@ -184,6 +183,9 @@ export function HeroRescue() {
   };
 
   const retry = () => loadLevel(levelIdx);
+
+  // Auto-start on mount — the arcade gate now shows the directions + countdown.
+  useEffect(() => { loadLevel(0); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const tapPin = (pin: Pin) => {
     if (status !== 'playing' || open.has(pin.id) || pinId) return;
@@ -268,14 +270,6 @@ export function HeroRescue() {
     );
   }
 
-  if (phase === 'howto') {
-    return (
-      <div>
-        <ArcadeHeader title="Hero Rescue" emoji="🦸" />
-        <HowToPlay emoji="🦸" title="Hero Rescue" gradient="from-amber-500 to-rose-700" sections={HOWTO} controls={CONTROLS} onStart={() => { loadLevel(0); setPhase('play'); }} />
-      </div>
-    );
-  }
 
   return (
     <div>

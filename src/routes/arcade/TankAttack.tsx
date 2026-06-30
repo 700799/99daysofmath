@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
-import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
+import { GameInstructions, type HowToSection } from './HowToPlay';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
@@ -160,7 +160,7 @@ export function TankAttack() {
   const arcadeUnit = useProgress((s) => s.arcadeUnit);
   const pausedRef = useArcadePausedRef();
 
-  const [phase, setPhase] = useState<'howto' | 'aim' | 'fly'>('howto');
+  const [phase, setPhase] = useState<'howto' | 'aim' | 'fly'>('aim');
   const [levelIdx, setLevelIdx] = useState(0);
   const [robots, setRobots] = useState<Robot[]>([]);
   const [walls, setWalls] = useState<Wall[]>([]);
@@ -214,6 +214,9 @@ export function TankAttack() {
     setOutcome(null);
     loadLevel(0);
   };
+
+  // Auto-start on mount — the arcade gate now shows the directions + countdown.
+  useEffect(() => { startGame(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const addExplosion = (x: number, y: number) => {
     const key = exKeyRef.current++;
@@ -349,7 +352,7 @@ export function TankAttack() {
     } else {
       sfx.hurt();
       haptic(HAPTIC.heavy);
-      setSolving({ ...solving, wrong: true, input: '' });
+      setSolving(null); // answered (wrong) — no auto-solution, but no skipping either
     }
   };
 
@@ -390,14 +393,6 @@ export function TankAttack() {
     );
   }
 
-  if (phase === 'howto') {
-    return (
-      <div>
-        <ArcadeHeader title="Tank Attack" emoji="🎯" />
-        <HowToPlay emoji="🎯" title="Tank Attack" gradient="from-stone-600 to-emerald-800" sections={HOWTO} controls={CONTROLS} onStart={startGame} />
-      </div>
-    );
-  }
 
   // live trig readout for the chosen angle + power
   const deg = ANGLES[angleIdx].deg;
@@ -696,12 +691,10 @@ export function TankAttack() {
             <button
               type="button"
               onClick={submitTargeting}
-              className="mt-3 w-full min-h-11 rounded-2xl bg-cyan-500 hover:bg-cyan-600 text-white font-display font-extrabold"
+              disabled={!solving.input.trim()}
+              className="mt-3 w-full min-h-11 rounded-2xl bg-cyan-500 hover:bg-cyan-600 disabled:bg-slate-300 text-white font-display font-extrabold"
             >
               Compute solution ▶
-            </button>
-            <button type="button" onClick={() => setSolving(null)} className="mt-2 w-full text-xs font-display font-bold text-slate-400">
-              skip
             </button>
           </div>
         </div>

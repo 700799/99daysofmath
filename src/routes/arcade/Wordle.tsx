@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
-import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
+import { GameInstructions, type HowToSection } from './HowToPlay';
 import { LetterKeypad, type KeyStatus } from '../../components/LetterKeypad';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
@@ -54,7 +54,7 @@ export function Wordle() {
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
 
-  const [phase, setPhase] = useState<'howto' | 'play'>('howto');
+  const [phase, setPhase] = useState<'howto' | 'play'>('play');
   const [answer, setAnswer] = useState(() => randomAnswer());
   const [guesses, setGuesses] = useState<{ word: string; marks: KeyStatus[] }[]>([]);
   const [current, setCurrent] = useState('');
@@ -165,14 +165,6 @@ export function Wordle() {
     );
   }
 
-  if (phase === 'howto') {
-    return (
-      <div>
-        <ArcadeHeader title="Word Guess" emoji="🟩" />
-        <HowToPlay emoji="🟩" title="Word Guess" gradient="from-green-500 to-emerald-700" sections={HOWTO} controls={CONTROLS} onStart={() => setPhase('play')} />
-      </div>
-    );
-  }
 
   const tileColor = (m: KeyStatus) =>
     m === 'correct' ? 'bg-emerald-500 text-white border-emerald-600'

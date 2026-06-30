@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage, useBurst, BurstLayer } from './fx';
-import { HowToPlay, GameInstructions, type HowToSection } from './HowToPlay';
+import { GameInstructions, type HowToSection } from './HowToPlay';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
@@ -49,7 +49,7 @@ export function ForestSurvival() {
   const pausedRef = useArcadePausedRef();
   const { burst, particles } = useBurst();
 
-  const [phase, setPhase] = useState<'howto' | 'play'>('howto');
+  const [phase, setPhase] = useState<'howto' | 'play'>('play');
   const [weapon, setWeapon] = useState<Weapon>('axe');
   const weaponRef = useRef<Weapon>('axe');
   const [, setTick] = useState(0);
@@ -104,6 +104,9 @@ export function ForestSurvival() {
     setOutcome(null);
     setPhase('play');
   };
+
+  // Auto-start on mount — the arcade gate now shows the directions + countdown.
+  useEffect(() => { start(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const finish = () => {
     if (doneRef.current) return;
@@ -377,14 +380,6 @@ export function ForestSurvival() {
     );
   }
 
-  if (phase === 'howto') {
-    return (
-      <div>
-        <ArcadeHeader title="Forest Survival" emoji="🏕️" />
-        <HowToPlay emoji="🏕️" title="Forest Survival" gradient="from-green-700 to-emerald-900" sections={HOWTO} controls={CONTROLS} onStart={start} />
-      </div>
-    );
-  }
 
   const p = player.current;
   const s = stats.current;
