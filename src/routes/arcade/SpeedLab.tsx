@@ -18,7 +18,12 @@ export function SpeedLab() {
   const [runId, setRunId] = useState(0);
   const [level, setLevel] = useState(1);
   const [drawer, setDrawer] = useState(false);
+  const gameRef = useRef<{ destroy: (b: boolean) => void; scene: { pause: (k: string) => void; resume: (k: string) => void } } | null>(null);
   useArcadeClock(!!outcome);
+
+  // opening the formula drawer freezes the Phaser scene so the car/clock wait
+  const openDrawer = () => { gameRef.current?.scene.pause('SpeedLabScene'); setDrawer(true); };
+  const closeDrawer = () => { gameRef.current?.scene.resume('SpeedLabScene'); setDrawer(false); };
 
   useEffect(() => {
     if (outcome || !containerRef.current) return;
@@ -43,6 +48,7 @@ export function SpeedLab() {
         scene: [SpeedLabScene],
         banner: false,
       });
+      gameRef.current = game as unknown as typeof gameRef.current;
       (game as unknown as { scene: { start: (k: string, d: unknown) => void } }).scene.start('SpeedLabScene', {
         onLevel: (lv: number) => setLevel(lv),
         onComplete: (cleared: number) => {
@@ -54,6 +60,7 @@ export function SpeedLab() {
 
     return () => {
       cancelled = true;
+      gameRef.current = null;
       game?.destroy(true);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -82,7 +89,7 @@ export function SpeedLab() {
 
   return (
     <div>
-      <ArcadeHeader title="Speed Lab" emoji="🚀" />
+      <ArcadeHeader title="Speed Lab" emoji="🚀" help={false} />
       {/* aerospace-syllabus mission strip */}
       <div className="mx-auto mb-2 flex max-w-sm items-center justify-between rounded-lg border border-cyan-700/60 bg-slate-900 px-3 py-1.5 font-mono text-xs text-cyan-300">
         <span className="font-bold text-amber-400">d = r × t</span>
@@ -102,14 +109,14 @@ export function SpeedLab() {
         </p>
         <button
           type="button"
-          onClick={() => setDrawer(true)}
+          onClick={openDrawer}
           className="shrink-0 rounded-full border border-cyan-600/60 bg-slate-900 px-3 py-1.5 font-mono text-xs font-bold text-cyan-300 active:translate-y-0.5"
         >
           📖 Formula
         </button>
       </div>
 
-      <FormulaDrawer open={drawer} onClose={() => setDrawer(false)} />
+      <FormulaDrawer open={drawer} onClose={closeDrawer} />
     </div>
   );
 }
@@ -142,9 +149,10 @@ function FormulaDrawer({ open, onClose }: { open: boolean; onClose: () => void }
             <div className="flex items-center justify-between">
               <h2 className="font-display text-lg font-extrabold text-amber-400">Speed formula 📖</h2>
               <button type="button" onClick={onClose} className="rounded-lg px-2 py-1 font-mono text-xs font-bold text-slate-400 hover:text-white">
-                close ✕
+                resume ✕
               </button>
             </div>
+            <p className="mt-0.5 font-mono text-[11px] font-bold uppercase tracking-widest text-emerald-400">⏸ game paused</p>
 
             {/* the triangle: d on top, r · t underneath */}
             <div className="mx-auto mt-3 w-40 text-center font-mono font-extrabold">
