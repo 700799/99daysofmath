@@ -34,6 +34,16 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
     controls: 'Tap a rune then a neighbour, or swipe to swap. Fill the ⚡ chi meter, then tap 🌟 Ninjutsu and solve to clear the board.',
   },
 
+  starhop: {
+    sections: [
+      { heading: 'Goal', body: 'Classic Chinese Checkers vs the computer. Move all 10 of your red pegs from the top point of the star to the bottom point before the computer fills your start.' },
+      { heading: 'Two kinds of move', body: 'Tap a peg to select it, then tap a glowing hole: either STEP to a touching empty hole, or JUMP over a neighbouring peg into the empty hole beyond.' },
+      { heading: 'Chain jumps', body: 'After a jump you can keep jumping — long chains rocket you across the board. Glowing holes show every place the selected peg can land.' },
+      { heading: 'Win', body: 'First player to completely fill the opposite star point wins. Plan paths that set up big jump chains!' },
+    ],
+    controls: 'Tap a red peg, then tap a glowing target hole. Step to a neighbour or jump over pegs (including chains).',
+  },
+
   chess: {
     sections: [
       { heading: 'Goal', body: 'Each puzzle gives YOU a big material lead — but only ONE move actually wins. Play any other move and the computer punishes you and wins. Solve all 5 endgames!' },

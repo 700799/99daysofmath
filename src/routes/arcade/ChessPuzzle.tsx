@@ -13,10 +13,9 @@ import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 type Piece = { color: 'w' | 'b'; type: 'k' | 'q' | 'r' | 'b' | 'n' | 'p' };
 type Board = (Piece | null)[][];
 
-const GLYPH: Record<string, string> = {
-  wk: '♔', wq: '♕', wr: '♖', wb: '♗', wn: '♘', wp: '♙',
-  bk: '♚', bq: '♛', br: '♜', bb: '♝', bn: '♞', bp: '♟',
-};
+// Use the SOLID (filled) glyphs for BOTH colours and differentiate by fill +
+// outline stroke, so white pieces stay readable on light squares too.
+const SOLID: Record<string, string> = { k: '♚', q: '♛', r: '♜', b: '♝', n: '♞', p: '♟' };
 
 interface Puzzle {
   concept: string;
@@ -223,12 +222,15 @@ export function ChessPuzzle() {
                     <span
                       className="select-none"
                       style={{
-                        fontSize: '30px',
+                        fontSize: '32px',
+                        lineHeight: 1,
                         color: piece.color === 'w' ? '#f8fafc' : '#0f172a',
-                        textShadow: piece.color === 'w' ? '0 1px 1px rgba(0,0,0,0.6)' : '0 1px 1px rgba(255,255,255,0.3)',
+                        WebkitTextStroke: piece.color === 'w' ? '2px #0f172a' : '1.5px #f1f5f9',
+                        paintOrder: 'stroke',
+                        filter: 'drop-shadow(0 1px 1px rgba(0,0,0,0.35))',
                       }}
                     >
-                      {GLYPH[piece.color + piece.type]}
+                      {SOLID[piece.type]}
                     </span>
                   )}
                 </button>

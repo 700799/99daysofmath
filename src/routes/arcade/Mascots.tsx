@@ -828,6 +828,7 @@ export const GAME_MASCOT: Record<string, MascotKind> = {
   speedlab: 'robot',
   fraction: 'clerk',
   chess: 'robot',
+  starhop: 'unicorn',
 };
 
 export function gameMascot(id: string): MascotKind {
