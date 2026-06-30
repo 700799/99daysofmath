@@ -95,7 +95,7 @@ export default function App() {
           <Route path="/arcade/connect4" element={<ArcadeGate title="Connect 4"><ConnectFour /></ArcadeGate>} />
           <Route path="/arcade/wheel" element={<ArcadeGate title="Prize Wheel"><Wheel /></ArcadeGate>} />
           <Route path="/arcade/memory" element={<ArcadeGate title="Memory Match"><MemoryMatch /></ArcadeGate>} />
-          <Route path="/arcade/shootout" element={<ArcadeGate title="Shootout"><Shootout /></ArcadeGate>} />
+          <Route path="/arcade/shootout" element={<ArcadeGate title="Cannon Shot"><Shootout /></ArcadeGate>} />
           <Route path="/arcade/runner" element={<ArcadeGate title="Math Runner"><MathRunner /></ArcadeGate>} />
           <Route path="/arcade/platformer" element={<ArcadeGate title="Platformer"><Platformer /></ArcadeGate>} />
           <Route path="/arcade/racer" element={<ArcadeGate title="Race Car"><RaceCar /></ArcadeGate>} />

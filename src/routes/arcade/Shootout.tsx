@@ -6,11 +6,13 @@ import { Mascot as CharMascot } from './Mascots';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
-// Angle Cannon — a trig game. A fat cannon launches a projectile (bowling ball /
-// watermelon / bananas) to knock down a stack of targets sitting on a labelled
-// angle ray. While aiming you only see DEGREES; after each shot the screen zooms
-// in to reveal the matching RADIAN and the SOH-CAH-TOA right triangle for that
-// angle. Match the angle AND the distance to score.
+// Cannon Shot — a trig game. A fat cannon launches a fresh volley of objects
+// (bananas, watermelons, apples, monkeys, snakes, candies, fists) to knock down a
+// stack of targets that always sit in the back 2/3 of the field on a labelled
+// angle ray. The court has a quadrant grid and fixed degree+radian labels. Match
+// the angle AND the distance to score; after each shot the breakdown (radian +
+// SOH-CAH-TOA triangle with ORIGIN/TARGET) is revealed one section at a time via
+// Next — it never auto-closes.
 
 const COURT_W = 380;
 const COURT_H = 460;
@@ -46,18 +48,22 @@ const TRIG: Record<number, { sin: string; cos: string; tan: string }> = {
 };
 
 type PowerLvl = { key: 'close' | 'medium' | 'far'; label: string; frac: number; emoji: string };
+// Distance still matters (low/medium/high) but all three sit in the back 2/3 of
+// the field so targets are never right next to the cannon.
 const POWERS: PowerLvl[] = [
-  { key: 'close', label: 'Close', frac: 0.52, emoji: '🟢' },
-  { key: 'medium', label: 'Medium', frac: 0.72, emoji: '🟡' },
-  { key: 'far', label: 'Far', frac: 0.93, emoji: '🔴' },
+  { key: 'close', label: 'Close', frac: 0.62, emoji: '🟢' },
+  { key: 'medium', label: 'Medium', frac: 0.78, emoji: '🟡' },
+  { key: 'far', label: 'Far', frac: 0.95, emoji: '🔴' },
 ];
 
-const PROJECTILES = ['🎳', '🍉', '🍌'] as const;
+// A fresh set of objects is launched each shot.
+const PROJECTILES = ['🍌', '🍉', '🍎', '🐒', '🐍', '🍬', '👊'] as const;
 const TARGETS = [
   { emoji: '🥕', name: 'carrots' },
   { emoji: '🥛', name: 'milk bottles' },
   { emoji: '🎈', name: 'water balloons' },
   { emoji: '🍶', name: 'bottles' },
+  { emoji: '🧱', name: 'bricks' },
 ] as const;
 
 type Hoop = { angleIdx: number; powerIdx: number; target: number };
@@ -93,37 +99,43 @@ function randomHoop(prev: Hoop | null): Hoop {
   return { angleIdx: 0, powerIdx: 1, target: 0 };
 }
 
-// SOH-CAH-TOA right triangle for the chosen angle, drawn fresh each shot.
-function TrigTriangle({ deg }: { deg: number }) {
+// SOH-CAH-TOA right triangle, revealed one section at a time as `step` grows:
+// 0 = shot path + ORIGIN + TARGET + angle · 1 = adjacent · 2 = opposite + right
+// angle · 3 = hypotenuse label.
+function TrigTriangle({ deg, step }: { deg: number; step: number }) {
   const t = rad(deg);
-  const O = { x: 100, y: 132 };
+  const O = { x: 100, y: 138 };
   const L = 104;
   const H = { x: O.x + Math.cos(t) * L, y: O.y - Math.sin(t) * L };
   const A = { x: H.x, y: O.y }; // right-angle foot
+  const right = H.x > O.x;
   return (
-    <svg viewBox="0 0 200 160" className="w-full" style={{ maxHeight: 150 }} aria-hidden>
-      {/* adjacent */}
-      <line x1={O.x} y1={O.y} x2={A.x} y2={A.y} stroke="#0ea5e9" strokeWidth={4} strokeLinecap="round" />
-      {/* opposite */}
-      <line x1={A.x} y1={A.y} x2={H.x} y2={H.y} stroke="#22c55e" strokeWidth={4} strokeLinecap="round" />
-      {/* hypotenuse */}
+    <svg viewBox="0 0 200 172" className="w-full" style={{ maxHeight: 168 }} aria-hidden>
+      {/* shot path = hypotenuse (shown from the start) */}
       <line x1={O.x} y1={O.y} x2={H.x} y2={H.y} stroke="#f59e0b" strokeWidth={4} strokeLinecap="round" />
-      {/* right-angle marker */}
-      <rect x={A.x - (H.x > O.x ? 10 : 0)} y={A.y - 10} width={10} height={10} fill="none" stroke="#94a3b8" strokeWidth={2} />
-      {/* angle dot */}
-      <circle cx={O.x} cy={O.y} r={4} fill="#1f2937" />
-      <text x={O.x + (H.x > O.x ? 16 : -16) * 1} y={O.y - 6} fontSize={13} fontWeight={800} textAnchor="middle" fill="#1f2937">
-        {deg}°
-      </text>
-      <text x={(O.x + A.x) / 2} y={O.y + 16} fontSize={11} fontWeight={700} textAnchor="middle" fill="#0284c7">
-        adj
-      </text>
-      <text x={A.x + (H.x > O.x ? 14 : -14)} y={(A.y + H.y) / 2} fontSize={11} fontWeight={700} textAnchor="middle" fill="#16a34a">
-        opp
-      </text>
-      <text x={(O.x + H.x) / 2 + (H.x > O.x ? -10 : 10)} y={(O.y + H.y) / 2 - 6} fontSize={11} fontWeight={700} textAnchor="middle" fill="#d97706">
-        hyp
-      </text>
+      {step >= 1 && (
+        <>
+          <line x1={O.x} y1={O.y} x2={A.x} y2={A.y} stroke="#0ea5e9" strokeWidth={4} strokeLinecap="round" />
+          <text x={(O.x + A.x) / 2} y={O.y + 16} fontSize={12} fontWeight={800} textAnchor="middle" fill="#0284c7">adj</text>
+        </>
+      )}
+      {step >= 2 && (
+        <>
+          <line x1={A.x} y1={A.y} x2={H.x} y2={H.y} stroke="#22c55e" strokeWidth={4} strokeLinecap="round" />
+          <rect x={A.x - (right ? 10 : 0)} y={A.y - 10} width={10} height={10} fill="none" stroke="#94a3b8" strokeWidth={2} />
+          <text x={A.x + (right ? 15 : -15)} y={(A.y + H.y) / 2} fontSize={12} fontWeight={800} textAnchor="middle" fill="#16a34a">opp</text>
+        </>
+      )}
+      {step >= 3 && (
+        <text x={(O.x + H.x) / 2 + (right ? -10 : 10)} y={(O.y + H.y) / 2 - 6} fontSize={12} fontWeight={800} textAnchor="middle" fill="#d97706">hyp</text>
+      )}
+      {/* angle */}
+      <text x={O.x + (right ? 18 : -18)} y={O.y - 7} fontSize={14} fontWeight={800} textAnchor="middle" fill="#1f2937">{deg}°</text>
+      {/* ORIGIN (cannon) + TARGET (where the shot lands) */}
+      <circle cx={O.x} cy={O.y} r={5} fill="#1f2937" />
+      <text x={O.x} y={O.y + 24} fontSize={11} fontWeight={800} textAnchor="middle" fill="#1f2937">ORIGIN 💥</text>
+      <circle cx={H.x} cy={H.y} r={5} fill="#ef4444" />
+      <text x={H.x} y={H.y - 9} fontSize={11} fontWeight={800} textAnchor="middle" fill="#ef4444">TARGET 🎯</text>
     </svg>
   );
 }
@@ -148,7 +160,9 @@ export function Shootout() {
   const [lockedIdx, setLockedIdx] = useState(0);
   const [flight, setFlight] = useState<Flight | null>(null);
   const [zoom, setZoom] = useState<{ made: boolean; deg: number; powerRight: boolean } | null>(null);
+  const [zoomStep, setZoomStep] = useState(0); // 0–3 reveal triangle parts, 4 = ratios
   const shotIdRef = useRef(1);
+  const ZOOM_LAST = 4;
 
   const running = !outcome && secondsLeft > 0;
   const won = makes >= TARGET;
@@ -197,7 +211,7 @@ export function Shootout() {
       made: angleRight && powerRight,
       angleRight,
       powerRight,
-      proj: PROJECTILES[Math.floor(Math.random() * PROJECTILES.length)],
+      proj: PROJECTILES[Math.floor(Math.random() * PROJECTILES.length)].repeat(3),
     });
     setShotsTaken((n) => n + 1);
     setPhase('fly');
@@ -215,22 +229,24 @@ export function Shootout() {
       buzz(HAPTIC.heavy);
     }
     setZoom({ made: f.made, deg: ANGLES[lockedIdx].deg, powerRight: f.powerRight });
+    setZoomStep(0);
     setPhase('zoom');
   };
 
   const nextRound = () => {
     setFlight(null);
     setZoom(null);
+    setZoomStep(0);
     setHoop((h) => randomHoop(h));
     setPhase('aim');
   };
 
-  useEffect(() => {
-    if (phase !== 'zoom') return;
-    const id = window.setTimeout(nextRound, 3200);
-    return () => window.clearTimeout(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase]);
+  // Step through the trig breakdown one section at a time; only continue to the
+  // next shot once everything has been revealed (no auto-close).
+  const advanceZoom = () => {
+    if (zoomStep < ZOOM_LAST) setZoomStep((s) => s + 1);
+    else nextRound();
+  };
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -238,7 +254,7 @@ export function Shootout() {
         e.preventDefault();
         if (phase === 'aim') lockAim();
         else if (phase === 'power') fire(1);
-        else if (phase === 'zoom') nextRound();
+        else if (phase === 'zoom') advanceZoom();
       }
     };
     window.addEventListener('keydown', onKey);
@@ -263,7 +279,7 @@ export function Shootout() {
   if (outcome) {
     return (
       <div>
-        <ArcadeHeader title="Angle Cannon" emoji="💥" />
+        <ArcadeHeader title="Cannon Shot" emoji="💥" />
         <ArcadeEndCard
           gameId="shootout"
           outcome={outcome}
@@ -283,7 +299,7 @@ export function Shootout() {
 
   return (
     <div>
-      <ArcadeHeader title="Angle Cannon" emoji="💥" />
+      <ArcadeHeader title="Cannon Shot" emoji="💥" />
 
       <div className="mx-auto mb-2 flex max-w-md items-center justify-between px-1">
         <div className="text-2xl font-display font-extrabold text-orange-600 tabular-nums">⏱ {secondsLeft}s</div>
@@ -305,6 +321,16 @@ export function Shootout() {
         style={{ width: '100%', maxWidth: 460, aspectRatio: `${COURT_W} / ${COURT_H}` }}
       >
         <svg viewBox={`0 0 ${COURT_W} ${COURT_H}`} className="absolute inset-0 h-full w-full" aria-hidden>
+          {/* quadrant grid across the whole screen */}
+          {Array.from({ length: Math.ceil(COURT_W / 38) + 1 }).map((_, i) => (
+            <line key={`gx${i}`} x1={i * 38} y1={0} x2={i * 38} y2={COURT_H} stroke="#bcd3e8" strokeWidth={1} opacity={0.5} />
+          ))}
+          {Array.from({ length: Math.ceil(COURT_H / 38) + 1 }).map((_, i) => (
+            <line key={`gy${i}`} x1={0} y1={i * 38} x2={COURT_W} y2={i * 38} stroke="#bcd3e8" strokeWidth={1} opacity={0.5} />
+          ))}
+          {/* axes through the cannon origin */}
+          <line x1={LAUNCH.x} y1={0} x2={LAUNCH.x} y2={COURT_H} stroke="#64748b" strokeWidth={1.5} opacity={0.6} />
+          <line x1={0} y1={LAUNCH.y} x2={COURT_W} y2={LAUNCH.y} stroke="#64748b" strokeWidth={1.5} opacity={0.6} />
           {/* ground */}
           <rect x={0} y={LAUNCH.y + 8} width={COURT_W} height={COURT_H - LAUNCH.y} fill="#86efac" />
           {/* protractor arc + DEGREE ticks only */}
@@ -323,6 +349,18 @@ export function Shootout() {
                 <line x1={ix} y1={iy} x2={ox} y2={oy} stroke={isCur ? '#4f46e5' : '#cbd5e1'} strokeWidth={isCur ? 3.5 : 1.5} />
                 <text x={lx} y={ly} fontSize={12} fontWeight={800} textAnchor="middle" dominantBaseline="middle" fill={isCur ? '#4f46e5' : '#64748b'}>
                   {a.deg}°
+                </text>
+                {/* fixed radian label */}
+                <text
+                  x={LAUNCH.x + Math.cos(t) * (PROT_R + 31)}
+                  y={LAUNCH.y - Math.sin(t) * (PROT_R + 31)}
+                  fontSize={9}
+                  fontWeight={700}
+                  textAnchor="middle"
+                  dominantBaseline="middle"
+                  fill={isCur ? '#7c3aed' : '#a0a9b8'}
+                >
+                  {a.rad}
                 </text>
               </g>
             );
@@ -412,7 +450,6 @@ export function Shootout() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            onClick={nextRound}
             className="absolute inset-0 flex flex-col items-center justify-start gap-1 bg-white/95 p-3 text-center"
           >
             <div className="flex items-center gap-3">
@@ -431,13 +468,25 @@ export function Shootout() {
                 </div>
               </div>
             </div>
-            <TrigTriangle deg={zoom.deg} />
-            <div className="grid w-full max-w-xs grid-cols-3 gap-1 text-xs font-display font-extrabold">
-              <div className="rounded-lg bg-green-50 px-1 py-1 text-green-700">sin = opp/hyp<br />= {TRIG[zoom.deg]?.sin}</div>
-              <div className="rounded-lg bg-sky-50 px-1 py-1 text-sky-700">cos = adj/hyp<br />= {TRIG[zoom.deg]?.cos}</div>
-              <div className="rounded-lg bg-amber-50 px-1 py-1 text-amber-700">tan = opp/adj<br />= {TRIG[zoom.deg]?.tan}</div>
+            <TrigTriangle deg={zoom.deg} step={zoomStep} />
+            <div className="min-h-[18px] text-xs font-display font-bold text-indigo-500">
+              {zoomStep === 0 ? 'The shot path is the hypotenuse, from ORIGIN to TARGET.'
+                : zoomStep === 1 ? 'Adjacent (adj) — the flat distance along the ground.'
+                : zoomStep === 2 ? 'Opposite (opp) — the height, across from the angle.'
+                : zoomStep === 3 ? 'Hypotenuse (hyp) — the longest side, the shot path.'
+                : 'SOH-CAH-TOA — the three ratios for this angle:'}
             </div>
-            <div className="text-[11px] font-display font-bold text-slate-400">tap to continue</div>
+            {zoomStep >= ZOOM_LAST && (
+              <motion.div
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="grid w-full max-w-xs grid-cols-3 gap-1 text-xs font-display font-extrabold"
+              >
+                <div className="rounded-lg bg-green-50 px-1 py-1 text-green-700">sin = opp/hyp<br />= {TRIG[zoom.deg]?.sin}</div>
+                <div className="rounded-lg bg-sky-50 px-1 py-1 text-sky-700">cos = adj/hyp<br />= {TRIG[zoom.deg]?.cos}</div>
+                <div className="rounded-lg bg-amber-50 px-1 py-1 text-amber-700">tan = opp/adj<br />= {TRIG[zoom.deg]?.tan}</div>
+              </motion.div>
+            )}
           </motion.div>
         )}
       </div>
@@ -470,10 +519,10 @@ export function Shootout() {
         ) : (
           <button
             type="button"
-            onClick={nextRound}
+            onClick={advanceZoom}
             className="min-h-16 w-full rounded-3xl bg-indigo-500 px-6 text-xl font-display font-extrabold text-white shadow-[0_6px_0_0_rgba(0,0,0,0.18)] transition-all hover:bg-indigo-600 active:translate-y-1"
           >
-            ▶ Next shot
+            {zoomStep < ZOOM_LAST ? 'Next ▶' : '▶ Next shot'}
           </button>
         )}
         <p className="mt-2 text-center text-xs text-slate-400">
