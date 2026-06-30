@@ -34,6 +34,16 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
     controls: 'Tap a rune then a neighbour, or swipe to swap. Fill the ⚡ chi meter, then tap 🌟 Ninjutsu and solve to clear the board.',
   },
 
+  fraction: {
+    sections: [
+      { heading: 'Goal', body: 'Run the pizzeria! Each customer orders a fraction of a pizza — serve them exactly that many slices.' },
+      { heading: 'Read the order', body: 'The ticket shows a fraction like 3/4. The bottom number (denominator) is how many equal slices the pizza is cut into; the top number (numerator) is how many you shade.' },
+      { heading: 'Shade & serve', body: 'Tap slices to add a topping. When the shaded slices match the numerator, tap “Serve it!”. Correct orders score; serve 8 to win.' },
+      { heading: 'Math', body: 'A fraction is parts of a whole. 3/4 means 3 of 4 equal pieces. The pizza makes it easy to see.' },
+    ],
+    controls: 'Tap pizza slices to shade them, then tap “Serve it!”. Beat the clock and fill 8 orders.',
+  },
+
   speedlab: {
     sections: [
       { heading: 'Goal', body: 'A mission-control driving lab that teaches the formula distance = rate × time (d = r × t). Clear 3 stages by solving for the missing piece each time.' },
