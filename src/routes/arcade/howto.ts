@@ -46,13 +46,13 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
 
   chess: {
     sections: [
-      { heading: 'Goal', body: 'Each puzzle gives YOU a big material lead and a winning line — you PLAY IT OUT move by move. Choose each of your moves; the computer’s forced reply plays automatically until checkmate (or you win the queen). Solve all 5 endgames!' },
-      { heading: 'How to move', body: 'Tap your (white) piece, then tap the square to move it to. White pieces are ♔♕♖♗♘♙; the computer is black. Some wins take more than one move — a counter shows “Your move 1 of 2”.' },
-      { heading: 'Stuck? Show the move', body: 'Tap “💡 Show me the move” to light up where your piece should go (amber = from, green = to). Then make the move yourself.' },
-      { heading: 'The big idea', body: 'Sometimes extra material is a LIABILITY (zugzwang), sometimes you SACRIFICE your queen to force mate, and sometimes a few minor pieces out-coordinate a queen. Read the lesson on each puzzle.' },
-      { heading: 'Wrong move?', body: 'No problem — you’ll see exactly how the computer would pounce, then you can replay the whole line again.' },
+      { heading: 'Goal', body: 'Each puzzle hands you a sharp position with exactly ONE right move — often a checkmate of your own! You (white) CHOOSE your move from the buttons. Find the only move and you win. Solve all 5!' },
+      { heading: 'How to play', body: 'Read the position on the board (white is ♔♕♖♗♘♙, the computer is black), then tap the move you want from the choices below the board. Each choice shows the move and the idea behind it.' },
+      { heading: 'Wrong move? You get mated', body: 'Blunder and you don’t just get a warning — the computer plays on and beats you, showing the checkmate right on the board. Then tap “↺ Try again” to replay the position.' },
+      { heading: 'Stuck? Show the move', body: 'Tap “💡 Show me the move” to light up the winning move (amber = from, green = to) and highlight the right button — then tap it.' },
+      { heading: 'The big idea', body: 'These are “only-move” positions: back-rank and Arabian mates, smothered mates, the long diagonal, and a mate-in-one race. One precise move saves the day — anything else loses. Read the lesson on each puzzle.' },
     ],
-    controls: 'Tap a white piece, then its destination. Play out the winning line one move at a time; tap 💡 if you need the next move shown.',
+    controls: 'Tap the move you want from the choices under the board. Find the only move — a wrong one lets the computer mate you. Tap 💡 to reveal the answer.',
   },
 
   fraction: {
