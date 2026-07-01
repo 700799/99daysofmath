@@ -89,6 +89,13 @@ export function playClick() {
   tone(900, 0.04, 0, 'sine', 0.08);
 }
 
+// Energizing "advance" cue for Next / Continue / Start / Replay buttons — a
+// quick rising whoosh capped with a bright ping.
+export function playAdvance() {
+  sweep(420, 940, 0.13, 0, 'triangle', 0.09);
+  tone(1046.5, 0.1, 0.09, 'sine', 0.09); // C6 ping
+}
+
 export function playUnitComplete() {
   tone(523.25, 0.12);
   tone(659.25, 0.12, 0.1);

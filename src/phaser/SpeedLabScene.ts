@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { sfx } from '../utils/arcadeAV';
 
 // Speed Lab — a d = r × t driving lab with TEN themed scenarios (a biker, a
 // turtle to its lettuce, a baby to a rattle, a boat to an island, a mama dino to
@@ -239,6 +240,7 @@ export class SpeedLabScene extends Phaser.Scene {
     this.clock = 0;
     this.heroUnits = 0;
     this.runRate = lv.find === 'r' ? val : lv.rate;
+    sfx.step();
     this.clearUI();
     const g = this.add.graphics().setDepth(2);
     this.drawTrack(g, lv);
@@ -264,9 +266,11 @@ export class SpeedLabScene extends Phaser.Scene {
     const last = this.levelIdx >= LEVELS.length - 1;
     if (correct) {
       this.cleared += 1;
+      sfx.win();
       this.ui.push(this.add.text(W / 2, H / 2 + 34, last ? 'ALL 10 CLEARED — tap to finish' : 'tap to continue ▶', { fontFamily: MONO, fontSize: '14px', color: HEX(C.white) }).setOrigin(0.5).setDepth(31));
       this.flashImpact(C.green);
     } else {
+      sfx.lose();
       this.ui.push(this.add.text(W / 2, H / 2 + 34, 'tap to recompute ▶', { fontFamily: MONO, fontSize: '14px', color: HEX(C.white) }).setOrigin(0.5).setDepth(31));
     }
     const advance = () => {

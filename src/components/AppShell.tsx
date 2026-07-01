@@ -6,8 +6,8 @@ import { Avatar } from './AccountCard';
 import { LevelBadge } from './LevelBadge';
 import { XpFlash } from './XpFlash';
 import { MasteryCelebration } from '../routes/arcade/MasteryCelebration';
-import { submitHaptic, tapHaptic } from '../utils/haptics';
-import { playClick } from '../utils/sound';
+import { submitHaptic, tapHaptic, successHaptic } from '../utils/haptics';
+import { playClick, playAdvance } from '../utils/sound';
 
 interface Props {
   children: React.ReactNode;
@@ -47,45 +47,55 @@ export function AppShell({ children }: Props) {
     };
   }, [tickAppSeconds]);
 
-  // Wire global haptics for buttons. Opt-in via `data-haptic="tap|submit"`.
-  // Also auto-detect by text — "Submit"/"Check"/"Continue"/"Next" trigger a
-  // soft tap even if the markup doesn't carry the attribute. Cheap and
-  // universal; no per-route edits needed.
+  // Energize EVERY button, app-wide: a soft fx click + a light haptic on any
+  // tap, a punchier cue for Submit/Check, and a rising "advance" whoosh for
+  // Next / Continue / Start / Replay / Play again. Both channels are gated by
+  // their settings (soundEnabled / hapticsEnabled). Cheap and universal — no
+  // per-route or per-button edits needed. (Works under HashRouter: no path
+  // check, so the fx fires everywhere, not just /arcade.)
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
-      const target = (e.target as HTMLElement | null)?.closest('button, [role="button"]');
-      if (!target) return;
-      // Soft click sound on every arcade tap (gated by the sound setting).
-      if (window.location.pathname.startsWith('/arcade')) {
+      const target = (e.target as HTMLElement | null)?.closest('button, [role="button"], a[href]');
+      if (!target || (target as HTMLButtonElement).disabled) return;
+
+      let sound = true;
+      let haptics = true;
+      try {
+        const st = useProgress.getState();
+        sound = st.soundEnabled;
+        haptics = st.hapticsEnabled;
+      } catch {
+        /* store not ready — default on */
+      }
+
+      const explicit = (target as HTMLElement).dataset.haptic;
+      const txt = (target.textContent || '').trim().toLowerCase();
+      const isSubmit = explicit === 'submit' || txt.startsWith('submit') || txt.startsWith('check');
+      const isAdvance =
+        explicit === 'advance' ||
+        txt.startsWith('next') ||
+        txt.startsWith('continue') ||
+        txt.startsWith('replay') ||
+        txt.startsWith('try again') ||
+        txt.startsWith('play again') ||
+        txt.startsWith('start') ||
+        txt.startsWith('resume') ||
+        txt.startsWith('finish') ||
+        txt.startsWith('let’s go') ||
+        txt.startsWith("let's go");
+
+      if (sound) {
         try {
-          if (useProgress.getState().soundEnabled) playClick();
+          if (isAdvance) playAdvance();
+          else playClick();
         } catch {
           /* ignore */
         }
       }
-      const explicit = (target as HTMLElement).dataset.haptic;
-      if (explicit === 'submit') {
-        submitHaptic();
-        return;
-      }
-      if (explicit === 'tap') {
-        tapHaptic();
-        return;
-      }
-      const txt = (target.textContent || '').trim().toLowerCase();
-      if (
-        txt.startsWith('submit') ||
-        txt.startsWith('check') ||
-        txt === 'check answer'
-      ) {
-        submitHaptic();
-      } else if (
-        txt.startsWith('next') ||
-        txt.startsWith('continue') ||
-        txt.startsWith('replay') ||
-        txt.startsWith('try again')
-      ) {
-        tapHaptic();
+      if (haptics) {
+        if (isSubmit) submitHaptic();
+        else if (isAdvance) successHaptic();
+        else tapHaptic();
       }
     };
     document.addEventListener('click', onClick);
