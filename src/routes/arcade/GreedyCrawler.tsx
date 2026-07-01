@@ -15,7 +15,7 @@ import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 // gamble stops being worth it. Trip the alarm and you lose the un-banked loot.
 
 const TARGET = 50; // gold you must BANK to win
-const HEROES: MascotKind[] = ['fox', 'panda', 'bunny', 'penguin', 'redpanda', 'cat'];
+const HEROES: MascotKind[] = ['fox', 'panda', 'bunny', 'penguin', 'gizmoTeal', 'gizmoCoral', 'gizmoViolet', 'gizmoLime', 'gizmoCyan'];
 
 // reward for entering the n-th room of a run (1-based) — deeper = richer
 const rewardForRoom = (n: number) => 2 + 2 * n;

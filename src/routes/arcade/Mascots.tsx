@@ -33,7 +33,12 @@ export type MascotKind =
   | 'capsuleP'
   | 'capsuleM'
   | 'cow'
-  | 'bull';
+  | 'bull'
+  | 'gizmoTeal'
+  | 'gizmoCoral'
+  | 'gizmoViolet'
+  | 'gizmoLime'
+  | 'gizmoCyan';
 
 export type MascotExpr = 'happy' | 'surprised' | 'dizzy' | 'cheer' | 'ko';
 
@@ -42,6 +47,7 @@ export const MASCOT_KINDS: MascotKind[] = [
   'unicorn', 'penguin', 'monkey', 'crewmate', 'crewmate2', 'crewmate3',
   'panda', 'ninja', 'clerk', 'redpanda', 'raccoon', 'turtle', 'shark',
   'capsuleR', 'capsuleB', 'capsuleP', 'capsuleM', 'cow', 'bull',
+  'gizmoTeal', 'gizmoCoral', 'gizmoViolet', 'gizmoLime', 'gizmoCyan',
 ];
 
 const OUTLINE = { stroke: '#1f2937', strokeWidth: 4, strokeLinejoin: 'round' as const, strokeLinecap: 'round' as const };
@@ -680,6 +686,70 @@ function makeCapsule(shell: string, shellDark: string, bow = false) {
   );
 }
 
+// "Gizmo" goggle-buddies — ORIGINAL capsule creatures (NOT Minions): an upright
+// pill body with a bolt antenna and a riveted goggle strap holding one or two
+// metal lenses. Bright non-yellow shells and a distinct tall silhouette keep them
+// clearly original.
+function makeGoggle(shell: string, shellDark: string, opts: { eyes?: 1 | 2; antenna?: string } = {}) {
+  const eyes = opts.eyes ?? 2;
+  const ant = opts.antenna ?? shellDark;
+  const gid = `m-gg-${shell.slice(1)}`;
+  const my = 66; // mouth y
+  const lens = (cx: number, r: number, e: MascotExpr) => (
+    <g key={cx}>
+      <circle cx={cx} cy={48} r={r + 2.5} fill="#cbd5e1" />
+      <circle cx={cx} cy={48} r={r} fill="#fff" stroke={INK} strokeWidth={2} />
+      {e === 'dizzy' ? (
+        <path d={`M${cx - 3} 45 l6 6 M${cx + 3} 45 l-6 6`} stroke={INK} strokeWidth={2.2} fill="none" />
+      ) : e === 'ko' ? (
+        <path d={`M${cx - 3} 48 h6`} stroke={INK} strokeWidth={2.4} fill="none" />
+      ) : (
+        <g stroke="none">
+          <circle cx={cx + 1} cy={49} r={(e === 'surprised' ? 0.62 : 0.5) * r} fill={INK} />
+          <circle cx={cx - 1} cy={47} r="1.2" fill="#fff" />
+        </g>
+      )}
+    </g>
+  );
+  return (e: MascotExpr) => (
+    <g {...OUTLINE}>
+      <defs>
+        <radialGradient id={gid} cx="50%" cy="32%" r="72%">
+          <stop offset="0%" stopColor={shell} />
+          <stop offset="100%" stopColor={shellDark} />
+        </radialGradient>
+      </defs>
+      {/* antenna + bolt */}
+      <line x1="50" y1="22" x2="50" y2="10" />
+      <circle cx="50" cy="7" r="4" fill={ant} />
+      {/* feet */}
+      <ellipse cx="40" cy="90" rx="7.5" ry="5" fill={shellDark} />
+      <ellipse cx="60" cy="90" rx="7.5" ry="5" fill={shellDark} />
+      {/* stub arms */}
+      <ellipse cx="24" cy="60" rx="6" ry="9" fill={shell} />
+      <ellipse cx="76" cy="60" rx="6" ry="9" fill={shell} />
+      {/* pill body */}
+      <rect x="26" y="22" width="48" height="66" rx="24" fill={`url(#${gid})`} />
+      {/* goggle strap with rivets */}
+      <rect x="20" y="40" width="60" height="16" rx="8" fill="#374151" />
+      <circle cx="23" cy="48" r="3" fill="#111827" stroke="none" />
+      <circle cx="77" cy="48" r="3" fill="#111827" stroke="none" />
+      {/* lenses */}
+      {eyes === 1 ? lens(50, 9, e) : [lens(41, 7, e), lens(59, 7, e)]}
+      {/* mouth */}
+      {e === 'cheer' ? (
+        <path d={`M43 ${my - 1} Q50 ${my + 9} 57 ${my - 1} Z`} fill="#7f1d1d" stroke={INK} strokeWidth={2} strokeLinejoin="round" />
+      ) : e === 'surprised' ? (
+        <ellipse cx="50" cy={my + 1} rx="4" ry="5" fill="#7f1d1d" stroke={INK} strokeWidth={2} />
+      ) : e === 'ko' ? (
+        <ellipse cx="50" cy={my + 1} rx="4" ry="3" fill="#7f1d1d" stroke={INK} strokeWidth={2} />
+      ) : (
+        <path d={`M44 ${my} Q50 ${my + 6} 56 ${my}`} fill="none" stroke={INK} strokeWidth={2.4} />
+      )}
+    </g>
+  );
+}
+
 // Chibi cow — tan head with pointy ears, little horns, a beige muzzle, blush and
 // a colourful cheek badge. (Inspired by a cow-mascot lineage; original art.)
 function Cow(e: MascotExpr) {
@@ -766,6 +836,11 @@ const PARTS: Record<MascotKind, (e: MascotExpr) => JSX.Element> = {
   capsuleM: makeCapsule('#10b981', '#047857'),
   cow: Cow,
   bull: Bull,
+  gizmoTeal: makeGoggle('#2dd4bf', '#0f766e', { antenna: '#f59e0b' }),
+  gizmoCoral: makeGoggle('#fb7185', '#be123c', { antenna: '#fcd34d' }),
+  gizmoViolet: makeGoggle('#a78bfa', '#6d28d9', { antenna: '#34d399' }),
+  gizmoLime: makeGoggle('#a3e635', '#4d7c0f', { antenna: '#f472b6' }),
+  gizmoCyan: makeGoggle('#38bdf8', '#0369a1', { eyes: 1, antenna: '#f59e0b' }),
 };
 
 export function Mascot({
