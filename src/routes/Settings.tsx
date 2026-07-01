@@ -318,48 +318,12 @@ function AdminPanel() {
 
           <div className="pt-2 border-t border-slate-100">
             <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-2">
-              In-game math challenges
+              Adaptive difficulty
             </div>
-            <AdminPick
-              label="Math challenge every"
-              options={[
-                { value: 0, label: 'Off' },
-                { value: 20, label: '20s' },
-                { value: 30, label: '30s' },
-                { value: 60, label: '60s' },
-                { value: 90, label: '90s' },
-                { value: 120, label: '2m' },
-              ]}
-              value={config.challengeInterval}
-              onPick={(n) => setArcadeConfig({ challengeInterval: n })}
-            />
-            <div className="mt-3" />
-            <AdminChoice
-              label="Problems each time"
-              options={[1, 2, 3, 5]}
-              value={config.challengeCount}
-              onPick={(n) => setArcadeConfig({ challengeCount: n })}
-            />
-            <div className="mt-3" />
-            <AdminChoice
-              label="Challenge level (1–5)"
-              options={[1, 2, 3, 4, 5]}
-              value={config.challengeLevel}
-              onPick={(n) => setArcadeConfig({ challengeLevel: n })}
-            />
-            <div className="mt-3" />
-            <AdminPick
-              label="Math story / mathematician break every"
-              options={[
-                { value: 0, label: 'Off' },
-                { value: 3, label: '3m' },
-                { value: 5, label: '5m' },
-                { value: 10, label: '10m' },
-              ]}
-              value={config.storyInterval}
-              onPick={(n) => setArcadeConfig({ storyInterval: n })}
-            />
-            <div className="mt-3" />
+            <p className="text-xs text-slate-500 mb-2">
+              Games are never interrupted mid-play — math happens between games, at big in-game
+              milestones, and on each game’s end screen.
+            </p>
             <div className="flex items-center justify-between gap-3">
               <span className="text-sm font-display font-bold text-slate-700">Adaptive level &amp; mastery</span>
               <button

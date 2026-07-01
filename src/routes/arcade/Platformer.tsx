@@ -10,9 +10,9 @@ import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 // Dino 🦖 who shoots fireballs 🔥 at baddies across 8 wildly different worlds
 // (hills, desert, beach, cave, ice, jungle, sky, robot fortress) with unique
 // backgrounds, enemies, and incoming rockets 🚀. The math NEVER interrupts the
-// action mid-run: a "refuel your blaster" WORD problem only appears after ~30s of
-// play or when you clear a level. No easy single-digit arithmetic — word problems
-// from your chosen unit + level. All-emoji/SVG rendering.
+// action on a timer: a "refuel your blaster" WORD problem only appears when you
+// RUN OUT of ammo (solve to reload) or when you clear a level. No easy single-digit
+// arithmetic — word problems from your chosen unit + level. All-emoji/SVG rendering.
 
 const TILE = 28;
 const VIEW_W = 360;
@@ -25,7 +25,6 @@ const AMMO_MAX = 8;
 const FIRE_SPEED = 330;
 const FIRE_LIFE = 0.9;
 const ROCKET_SPEED = 250;
-const REFUEL_EVERY = 30; // seconds of play before the blaster needs a refuel
 
 // prettier-ignore
 const LEVELS: string[][] = [
@@ -110,7 +109,6 @@ export function Platformer() {
   const killsRef = useRef(0);
   const correctRef = useRef(0);
   const reachedFlagRef = useRef(false);
-  const playTimeRef = useRef(0);
   const fireCdRef = useRef(0);
   const rocketCdRef = useRef(0);
   const gateRef = useRef(false);
@@ -136,7 +134,6 @@ export function Platformer() {
     killsRef.current = 0;
     correctRef.current = 0;
     reachedFlagRef.current = false;
-    playTimeRef.current = 0;
     fireCdRef.current = 0;
     rocketCdRef.current = worldRef.current.rocketEvery;
     gateRef.current = false;
@@ -149,7 +146,9 @@ export function Platformer() {
 
   const shoot = () => {
     if (gateRef.current || pausedRef.current) return;
-    if (ammoRef.current <= 0 || fireCdRef.current > 0) return;
+    if (fireCdRef.current > 0) return;
+    // out of ammo → solve a word problem to reload (a gameplay milestone, not a timer)
+    if (ammoRef.current <= 0) { openGate('refuel'); return; }
     const p = playerRef.current;
     ammoRef.current -= 1;
     fireCdRef.current = 0.22;
@@ -188,9 +187,6 @@ export function Platformer() {
       const inp = inputRef.current;
       const W = worldRef.current;
 
-      // refuel timer
-      playTimeRef.current += dt;
-      if (playTimeRef.current >= REFUEL_EVERY) { openGate('refuel'); rafRef.current = requestAnimationFrame(tick); return; }
 
       p.vx = (inp.left ? -MOVE_SPEED : 0) + (inp.right ? MOVE_SPEED : 0);
       if (inp.left) p.dir = -1; else if (inp.right) p.dir = 1;
@@ -303,7 +299,6 @@ export function Platformer() {
     else { sfx.hurt(); haptic(HAPTIC.hit); }
     if (gate.kind === 'refuel') {
       ammoRef.current = correct ? AMMO_MAX : Math.floor(AMMO_MAX / 2);
-      playTimeRef.current = 0;
       gateRef.current = false;
       setGate(null); setInput(''); setWrong(false);
       lastTickRef.current = performance.now();
@@ -400,7 +395,7 @@ export function Platformer() {
         <CtlBtn label="🔥" cls="bg-orange-500 text-white" onDown={shoot} onUp={() => {}} />
         <CtlBtn label="→" onDown={() => (inputRef.current.right = true)} onUp={() => (inputRef.current.right = false)} />
       </div>
-      <p className="text-center text-xs text-slate-500 mt-2">Move &amp; jump, tap 🔥 to blast baddies and rockets. Reach the 🚩! Refuel with a word problem every {REFUEL_EVERY}s.</p>
+      <p className="text-center text-xs text-slate-500 mt-2">Move &amp; jump, tap 🔥 to blast baddies and rockets. Reach the 🚩! Out of ammo? Solve a word problem to reload 🔥.</p>
 
       {gate && (
         <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 p-4">

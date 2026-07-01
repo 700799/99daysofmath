@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import type { Problem } from '../../types/problem';
 import { getAllProblems } from '../../data/problems';
 import { isEquivalent } from '../../data/normalize';
@@ -11,12 +11,10 @@ import { useProgress, type ArcadeConfig } from '../../state/progress';
 import { useLessonClock } from '../../hooks/useLessonClock';
 import { Link } from 'react-router-dom';
 import { ArcadeHeader, ArcadeSessionContext, ARCADE_GAMES, PREMIUM_GAMES } from './shared';
-import { MidGameChallenge } from './MidGameChallenge';
 import { HeroSplash, Countdown } from './HeroSplash';
 import { HowToPlay } from './HowToPlay';
 import { getHowTo } from './howto';
 import { gameMascot } from './Mascots';
-import { MathBreak } from './MathBreak';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // The arcade "learn-to-play" gate. A full lesson + a hard difficulty-3 check
@@ -24,7 +22,8 @@ import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 // game session; the admin can require more than one via `lessonsPerSession`.
 // Lessons are always hard, never easy. Lesson time is tracked toward the
 // cumulative lesson:game balance, and (via `earnRatio`) earns game time.
-// While unlocked, a mid-game math challenge can interrupt play at an interval.
+// Play is NEVER interrupted mid-game: math happens between games (this gate),
+// at big in-game milestones, and on each game's end card.
 
 function pick<T>(a: T[]): T {
   return a[Math.floor(Math.random() * a.length)];
@@ -53,13 +52,9 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   const [unlocked, setUnlocked] = useState(false);
   const [sessionKey, setSessionKey] = useState(0);
   const [lessonsDone, setLessonsDone] = useState(0);
-  const [challengeActive, setChallengeActive] = useState(false);
-  const [storyActive, setStoryActive] = useState(false);
   const [showSplash, setShowSplash] = useState(config.unlimited);
   const [showDirections, setShowDirections] = useState(config.unlimited);
   const [counting, setCounting] = useState(config.unlimited);
-  const playSecRef = useRef(0);
-  const storySecRef = useRef(0);
 
   // Count lesson time toward the balance only while the gate is showing.
   useLessonClock(unlocked);
@@ -73,45 +68,12 @@ export function ArcadeGate({ title, children }: { title: string; children: React
     if (unlocked && !config.unlimited && overBudget) {
       setUnlocked(false);
       setLessonsDone(0);
-      setChallengeActive(false);
     }
   }, [unlocked, overBudget, config.unlimited]);
-
-  // Mid-game challenge timer — counts active play seconds while a game is up.
-  useEffect(() => {
-    if (!unlocked || challengeActive || config.challengeInterval <= 0) return;
-    const id = window.setInterval(() => {
-      if (document.hidden || storyActive || counting) return;
-      playSecRef.current += 1;
-      if (playSecRef.current >= config.challengeInterval) {
-        playSecRef.current = 0;
-        setChallengeActive(true);
-      }
-    }, 1000);
-    return () => window.clearInterval(id);
-  }, [unlocked, challengeActive, storyActive, counting, config.challengeInterval]);
-
-  // Math-break timer — a forced math story / mathematician every N minutes.
-  useEffect(() => {
-    if (!unlocked || storyActive || config.storyInterval <= 0) return;
-    const id = window.setInterval(() => {
-      if (document.hidden || challengeActive || counting) return;
-      storySecRef.current += 1;
-      if (storySecRef.current >= config.storyInterval * 60) {
-        storySecRef.current = 0;
-        setStoryActive(true);
-      }
-    }, 1000);
-    return () => window.clearInterval(id);
-  }, [unlocked, storyActive, challengeActive, counting, config.storyInterval]);
 
   const enterPlay = () => {
     setLessonsDone(0);
     setSessionKey((k) => k + 1);
-    playSecRef.current = 0;
-    storySecRef.current = 0;
-    setChallengeActive(false);
-    setStoryActive(false);
     setShowSplash(true);
     setShowDirections(true);
     setCounting(true);
@@ -127,10 +89,6 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   const requestReplay = () => {
     if (config.unlimited) {
       setSessionKey((k) => k + 1); // unlimited: just restart, no lesson
-      playSecRef.current = 0;
-      storySecRef.current = 0;
-      setChallengeActive(false);
-      setStoryActive(false);
       setShowSplash(true);
       setShowDirections(true);
       setCounting(true);
@@ -138,7 +96,6 @@ export function ArcadeGate({ title, children }: { title: string; children: React
     }
     setUnlocked(false);
     setLessonsDone(0);
-    setChallengeActive(false);
   };
 
   // Entry sequence overlays, in order. They only show when we have a game def;
@@ -148,26 +105,8 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   const countdownVisible = !splashVisible && !directionsVisible && counting;
 
   const playArea = (
-    <ArcadeSessionContext.Provider value={{ requestReplay, paused: challengeActive || splashVisible || directionsVisible || countdownVisible || storyActive }}>
+    <ArcadeSessionContext.Provider value={{ requestReplay, paused: splashVisible || directionsVisible || countdownVisible }}>
       <div key={sessionKey}>{children}</div>
-      {storyActive && (
-        <MathBreak
-          onDone={() => {
-            setStoryActive(false);
-            storySecRef.current = 0;
-          }}
-        />
-      )}
-      {challengeActive && config.challengeInterval > 0 && (
-        <MidGameChallenge
-          count={config.challengeCount}
-          level={config.challengeLevel}
-          onDone={() => {
-            setChallengeActive(false);
-            playSecRef.current = 0;
-          }}
-        />
-      )}
       {splashVisible && game ? (
         <HeroSplash
           emoji={game.emoji}

@@ -3,11 +3,8 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage, useBurst, BurstLayer } from './fx';
 import { makeChallenge, type Challenge } from './MidGameChallenge';
-import { MathBreak } from './MathBreak';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
-
-const STORY_EVERY = 60; // force a math-story break this many seconds into play
 
 const NUKE_COST = 40;
 const HEAL_COST = 25;
@@ -102,10 +99,6 @@ export function MochiSurvivors() {
   const levelUpRef = useRef(false);
   const [zoom, setZoom] = useState(1);
   const [math, setMath] = useState(() => mathChoices(1));
-  // forced math-story break ~1 min into play
-  const [story, setStory] = useState(false);
-  const storyRef = useRef(false);
-  const nextStoryRef = useRef(STORY_EVERY);
   // "how to move" arrow hint shown until the player first drags
   const [showHint, setShowHint] = useState(true);
 
@@ -161,8 +154,7 @@ export function MochiSurvivors() {
     bossRef.current = null; bossSpawnedRef.current = false; iframeRef.current = 0;
     miniSpawnedRef.current = false;
     doneRef.current = false; wonRef.current = false; levelUpRef.current = false;
-    storyRef.current = false; nextStoryRef.current = STORY_EVERY;
-    setStory(false); setShowHint(true);
+    setShowHint(true);
     setLevelUp(null); setOutcome(null); setStageIdx(idx);
   };
 
@@ -185,7 +177,7 @@ export function MochiSurvivors() {
     const stage = STAGES[stageIdx];
     lastRef.current = performance.now();
     const tick = (now: number) => {
-      if (pausedRef.current || levelUpRef.current || storyRef.current) {
+      if (pausedRef.current || levelUpRef.current) {
         lastRef.current = now;
         rafRef.current = requestAnimationFrame(tick);
         return;
@@ -194,13 +186,6 @@ export function MochiSurvivors() {
       lastRef.current = now;
       elapsedRef.current += dt;
 
-      // forced math-story break ~every minute — must tap to continue
-      if (elapsedRef.current >= nextStoryRef.current) {
-        storyRef.current = true;
-        setStory(true);
-        rafRef.current = requestAnimationFrame(tick);
-        return;
-      }
       if (iframeRef.current > 0) iframeRef.current -= dt;
       const h = heroRef.current;
 
@@ -429,13 +414,6 @@ export function MochiSurvivors() {
     lastRef.current = performance.now();
   };
 
-  const finishStory = () => {
-    setStory(false);
-    storyRef.current = false;
-    nextStoryRef.current = elapsedRef.current + STORY_EVERY;
-    lastRef.current = performance.now();
-  };
-
   // --- stage select ---
   if (stageIdx === null && !outcome) {
     return (
@@ -608,7 +586,6 @@ export function MochiSurvivors() {
         Dodge with drag/WASD — weapons auto-fire. <b>Answer math to earn 💰</b> for Nukes &amp; Heals!
       </p>
 
-      {story && <MathBreak onDone={finishStory} />}
     </div>
   );
 }
