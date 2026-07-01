@@ -6,14 +6,16 @@ import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { Mascot as CharMascot, type MascotKind, type MascotExpr } from './Mascots';
 import { MilestoneQuiz } from './MilestoneQuiz';
 import { ProblemAidDrawer } from './ProblemAid';
+import { useShake } from './fx';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
-// Critter Cottage — a 7-level carpentry builder that teaches AREA (rectangle L×W,
-// triangle ½·b·h, circle π·r²), AREA SUBTRACTION (siding = wall − window), and
-// ANGLES (90/180/45/15/270). Mario-style thick borders. You measure (tap a chip),
-// then SWIPE to saw the board, and the piece snaps onto the cottage. A Big Bad
-// Wolf tests the build's sturdiness, then cute raccoons move in. Relates to the
-// 6.G Geometry unit (answers recorded under '6.G').
+// Critter Cottage — an 8-level carpentry builder that teaches AREA (rectangle L×W,
+// square s·s, triangle ½·b·h, circle π·r²), AREA SUBTRACTION (siding = wall − window),
+// and ANGLES (90/180/45/15/270). Mario-style thick borders. You measure (tap a chip),
+// then SWIPE to saw the board, and the piece snaps onto the cottage. A Big Bad Wolf
+// tests the build's sturdiness (Level 7), then you size a SQUARE trapdoor and spring a
+// dramatic capture (Level 8) — and cute raccoons move in. Relates to the 6.G Geometry
+// unit (answers recorded under '6.G').
 
 const BUILDERS: MascotKind[] = ['raccoon', 'fox', 'bull', 'panda', 'turtle', 'cow'];
 const STROKES_NEEDED = 3;
@@ -26,12 +28,14 @@ interface QA {
   unit: string; // 'sq units' | '°'
   aid?: string; // prompt handed to ProblemAidDrawer (rect/triangle auto-explained)
   hint?: string; // inline hint for circle / angle / subtraction
+  goldilocks?: boolean; // sizing judgment: too small / too big / just right
 }
 interface Phase {
   key: string;
   title: string;
   emoji: string;
   wolf?: boolean;
+  trap?: boolean;
   steps: QA[];
 }
 
@@ -84,10 +88,17 @@ const PHASES: Phase[] = [
       { prompt: 'The Big Bad Wolf huffs and puffs! 💨\nStrong walls meet at sturdy SQUARE corners.\nWhat angle makes the sturdiest corner?', answer: 90, choices: [15, 45, 90, 180], unit: '°', hint: 'Square corners (90°) brace the frame — the sturdiest build!' },
     ],
   },
+  {
+    key: 'trap', title: 'Set the Trap', emoji: '🕳️', trap: true,
+    steps: [
+      { prompt: 'To stop the wolf, dig a SQUARE trapdoor, side 5.\nA square is a rectangle with equal sides.\nArea = side × side = ?', answer: 25, choices: [10, 20, 25, 30], unit: 'sq units', aid: 'A rectangle is 5 wide and 5 tall. What is its AREA?', hint: 'A square: side × side = 5 × 5 = 25.' },
+      { prompt: "The wolf's paw needs a trap of about 36 sq units.\nPick the JUST-RIGHT square trap —\nnot too small, not too big!", answer: 36, choices: [9, 25, 36, 100], unit: 'sq units', goldilocks: true, hint: 'Square areas: 3×3=9, 5×5=25, 6×6=36, 10×10=100. You want 36.' },
+    ],
+  },
 ];
 
 // which house pieces are visible = number of fully-built phases
-function House({ built, wolf, movedIn, hero }: { built: number; wolf: boolean; movedIn: boolean; hero: MascotKind }) {
+function House({ built, wolf, trap, caged, movedIn, hero }: { built: number; wolf: boolean; trap?: boolean; caged?: boolean; movedIn: boolean; hero: MascotKind }) {
   const S = { stroke: '#0f172a', strokeWidth: 4, strokeLinejoin: 'round' as const, strokeLinecap: 'round' as const };
   const show = (n: number) => built >= n; // n = 1-based phase number
   return (
@@ -148,11 +159,30 @@ function House({ built, wolf, movedIn, hero }: { built: number; wolf: boolean; m
         </g>
       )}
 
-      {/* the Big Bad Wolf huffing (phase 7, until moved in) */}
-      {wolf && !movedIn && (
+      {/* circular trap pad in the front yard (phase 8) */}
+      {trap && (
+        <g {...S}>
+          <ellipse cx="46" cy="170" rx="20" ry="9" fill="#166534" opacity="0.5" />
+          <ellipse cx="46" cy="168" rx="18" ry="8" fill="#4ade80" stroke="#15803d" strokeDasharray="4 4" strokeWidth="3" />
+          <text x="46" y="172" fontSize="12" textAnchor="middle">🍂</text>
+        </g>
+      )}
+
+      {/* the Big Bad Wolf — huffing (phase 7) or caged in the trap (phase 8) */}
+      {wolf && !movedIn && !caged && (
         <g>
           <text x="196" y="118" fontSize="30" textAnchor="middle">🐺</text>
           <text x="170" y="96" fontSize="18" textAnchor="middle">💨</text>
+        </g>
+      )}
+      {caged && (
+        <g>
+          <text x="46" y="164" fontSize="22" textAnchor="middle">🐺</text>
+          <g {...S} fill="none">
+            <rect x="34" y="140" width="24" height="30" rx="2" stroke="#334155" strokeWidth="3" />
+            <line x1="42" y1="140" x2="42" y2="170" stroke="#334155" strokeWidth="2" />
+            <line x1="50" y1="140" x2="50" y2="170" stroke="#334155" strokeWidth="2" />
+          </g>
         </g>
       )}
 
@@ -237,6 +267,7 @@ function GuideDrawer({ open, onClose }: { open: boolean; onClose: () => void }) 
   const [scratch, setScratch] = useState('');
   const AREAS: [string, string, string][] = [
     ['▭ Rectangle', 'Area = length × width', 'e.g. 6 × 4 = 24'],
+    ['◼ Square (trap)', 'Area = side × side', 'e.g. 6 × 6 = 36'],
     ['🔺 Triangle (roof)', 'Area = ½ × base × height', 'e.g. ½ × 8 × 5 = 20'],
     ['⭕ Circle (window/yard)', 'Area = π × r × r  (π ≈ 3)', 'e.g. 3 × 4 × 4 = 48'],
     ['✂️ Trim / siding', 'SUBTRACT: wall − window', 'e.g. 40 − 6 = 34'],
@@ -300,6 +331,158 @@ function GuideDrawer({ open, onClose }: { open: boolean; onClose: () => void }) 
   );
 }
 
+// ── Level 8 climax: a dramatic, zoomed-in, multi-scene wolf-capture cutscene.
+// The camera (a motion.div) zooms/pans per scene; the story advances on a big
+// "Continue ▶" button press (never on a timer), consistent with the rest of the app.
+const CUT_SCENES: { cam: { scale: number; x: number; y: number }; caged: boolean; caption: string; btn: string }[] = [
+  { cam: { scale: 1, x: 0, y: 0 }, caged: false, caption: 'The Big Bad Wolf creeps back to the cottage… 🐺', btn: 'Continue ▶' },
+  { cam: { scale: 1.9, x: 46, y: 8 }, caged: false, caption: 'He sniffs at the leaves — and steps toward the hidden trap… 🍂', btn: 'Continue ▶' },
+  { cam: { scale: 1.9, x: 46, y: 8 }, caged: true, caption: 'SNAP! 🕸️ The square trapdoor springs — GOTCHA!', btn: 'Continue ▶' },
+  { cam: { scale: 1, x: 0, y: 0 }, caged: true, caption: 'The wolf is caught and the cottage is safe! 🎉', btn: 'Let the critters move in ▶' },
+];
+
+function WolfTrapCutscene({ onDone, buzz }: { onDone: () => void; buzz: (p: number | number[]) => void }) {
+  const [i, setI] = useState(0);
+  const { style: shakeStyle, shake } = useShake();
+  const sc = CUT_SCENES[i];
+  // dramatic pan: shift the SVG toward the trap (front-left yard) as the camera zooms
+  const camX = (110 - sc.cam.x) * (sc.cam.scale - 1);
+  const camY = (168 - (168 + sc.cam.y)) * (sc.cam.scale - 1);
+
+  const next = () => {
+    buzz(HAPTIC.light);
+    if (i >= CUT_SCENES.length - 1) { onDone(); return; }
+    const to = i + 1;
+    setI(to);
+    if (CUT_SCENES[to].caged && !sc.caged) {
+      // the SNAP scene: shake + boom
+      shake(); sfx.boss(); buzz(HAPTIC.explode);
+    } else if (to === 1) {
+      sfx.step();
+    } else if (to === CUT_SCENES.length - 1) {
+      sfx.win();
+    }
+  };
+
+  return (
+    <div className="mx-auto mt-3 max-w-sm text-center">
+      <div className="overflow-hidden rounded-2xl border-4 border-slate-900 bg-sky-100 shadow-[0_4px_0_0_rgba(0,0,0,0.25)]" style={shakeStyle}>
+        <motion.div
+          animate={{ scale: sc.cam.scale, x: camX, y: camY }}
+          transition={{ type: 'spring', stiffness: 120, damping: 20 }}
+          style={{ transformOrigin: 'center center' }}
+        >
+          <svg viewBox="0 0 220 200" className="w-full">
+            {/* sky + ground */}
+            <rect x="0" y="0" width="220" height="200" fill="#bae6fd" />
+            <rect x="0" y="168" width="220" height="32" fill="#86efac" />
+            {/* cottage silhouette on the right */}
+            <g stroke="#0f172a" strokeWidth={4} strokeLinejoin="round">
+              <rect x="120" y="96" width="72" height="72" fill="#fde68a" />
+              <path d="M112 98 L156 58 L200 98 Z" fill="#dc2626" />
+              <rect x="140" y="128" width="20" height="40" rx="2" fill="#b45309" />
+              <rect x="168" y="112" width="16" height="16" rx="2" fill="#93c5fd" />
+            </g>
+            {/* the circular trap in the front-left yard */}
+            <g stroke="#0f172a" strokeWidth={4}>
+              <ellipse cx="46" cy="172" rx="22" ry="10" fill="#166534" opacity="0.55" />
+              <ellipse cx="46" cy="170" rx="20" ry="9" fill="#4ade80" stroke="#15803d" strokeDasharray="5 4" strokeWidth={3} />
+              {!sc.caged && <text x="46" y="175" fontSize="14" textAnchor="middle">🍂</text>}
+            </g>
+            {/* the wolf: approaching (scenes 0-1) or caged (2-3) */}
+            {!sc.caged && <text x={i === 0 ? 92 : 60} y={i === 0 ? 150 : 160} fontSize={i === 0 ? 26 : 30} textAnchor="middle">🐺</text>}
+            {sc.caged && (
+              <g>
+                <text x="46" y="166" fontSize="26" textAnchor="middle">🐺</text>
+                <g fill="none" stroke="#334155" strokeWidth={3}>
+                  <rect x="30" y="138" width="32" height="34" rx="2" />
+                  <line x1="40" y1="138" x2="40" y2="172" />
+                  <line x1="52" y1="138" x2="52" y2="172" />
+                  <line x1="30" y1="152" x2="62" y2="152" />
+                </g>
+              </g>
+            )}
+          </svg>
+        </motion.div>
+      </div>
+      <motion.p key={i} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+        className="mx-auto mt-3 max-w-sm whitespace-pre-line font-display text-lg font-extrabold leading-snug text-slate-800">
+        {sc.caption}
+      </motion.p>
+      <button type="button" onClick={next}
+        className="mt-3 w-full rounded-2xl border-4 border-slate-900 bg-amber-400 py-3 font-display text-lg font-extrabold text-slate-900 shadow-[0_4px_0_0_rgba(0,0,0,0.25)] active:translate-y-0.5">
+        {sc.btn}
+      </button>
+      <div className="mt-2 flex justify-center gap-1.5">
+        {CUT_SCENES.map((_, k) => (
+          <span key={k} className={`h-2 w-2 rounded-full ${k <= i ? 'bg-amber-500' : 'bg-slate-300'}`} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── The Building Inspector's graded report, scored on first-try accuracy.
+function InspectorReport({ built, total, first, miss, onCollect }: { built: number; total: number; first: number; miss: number; onCollect: () => void }) {
+  const accuracy = total > 0 ? Math.round((first / total) * 100) : 100;
+  const grade = accuracy >= 95 ? 'A+' : accuracy >= 90 ? 'A' : accuracy >= 80 ? 'B' : accuracy >= 70 ? 'C' : 'D';
+  const comment =
+    accuracy >= 95 ? 'Master carpenter! Flawless measuring.' :
+    accuracy >= 90 ? 'Excellent work — sturdy and square.' :
+    accuracy >= 80 ? 'Solid build. A little more care and it\'s perfect.' :
+    accuracy >= 70 ? 'It stands! Keep practicing your areas.' :
+    'It stands — every builder learns by re-cutting. Great effort!';
+  const SKILLS = [
+    'Rectangle area (length × width)',
+    'Square area (side × side)',
+    'Triangle roof area (½ × base × height)',
+    'Circle area (π × r × r)',
+    'Trim by subtracting areas',
+    'Angles (15° / 45° / 90° / 180° / 270°)',
+  ];
+  const tiles: [string, string][] = [
+    ['🏠 Rooms built', String(built)],
+    ['🎯 First-try', `${first}/${total}`],
+    ['🪚 Re-cuts', String(miss)],
+  ];
+  return (
+    <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+      className="mx-auto mt-3 max-w-sm rounded-2xl border-4 border-slate-900 bg-amber-50 p-4 shadow-[0_4px_0_0_rgba(0,0,0,0.25)]">
+      <div className="flex items-center justify-between">
+        <h3 className="font-display text-lg font-extrabold text-slate-900">🏅 Building Inspection</h3>
+        <div className="flex items-center gap-2">
+          <CharMascot kind="clerk" size={34} expr="happy" />
+          <span className="rounded-xl border-4 border-slate-900 bg-emerald-300 px-3 py-1 font-display text-2xl font-black tabular-nums text-slate-900">{grade}</span>
+        </div>
+      </div>
+      <p className="mt-1 font-display text-sm font-bold text-slate-600">Inspector says: “{comment}”</p>
+
+      <div className="mt-3 grid grid-cols-3 gap-2">
+        {tiles.map(([t, v]) => (
+          <div key={t} className="rounded-xl border-2 border-slate-900 bg-white px-2 py-2 text-center">
+            <div className="font-display text-xl font-black tabular-nums text-slate-900">{v}</div>
+            <div className="font-display text-[10px] font-bold uppercase tracking-wide text-slate-500">{t}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-3 text-xs font-display font-extrabold uppercase tracking-wide text-amber-700">Skills inspected</div>
+      <div className="mt-1 grid gap-1">
+        {SKILLS.map((s) => (
+          <div key={s} className="flex items-center gap-2 rounded-lg bg-white/70 px-2 py-1 font-display text-sm font-bold text-slate-800">
+            <span className="text-emerald-600">✓</span> {s}
+          </div>
+        ))}
+      </div>
+
+      <button type="button" onClick={onCollect}
+        className="mt-4 w-full rounded-2xl border-4 border-slate-900 bg-amber-400 py-3 font-display text-lg font-extrabold text-slate-900 shadow-[0_4px_0_0_rgba(0,0,0,0.25)] active:translate-y-0.5">
+        🎁 Collect house-warming bonus ▶
+      </button>
+    </motion.div>
+  );
+}
+
 export function CritterCottage() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
@@ -311,15 +494,23 @@ export function CritterCottage() {
   const [phaseIdx, setPhaseIdx] = useState(0);
   const [stepIdx, setStepIdx] = useState(0);
   const [built, setBuilt] = useState(0); // completed phases
-  const [mode, setMode] = useState<'measure' | 'saw' | 'movein'>('measure');
+  const [mode, setMode] = useState<'measure' | 'saw' | 'cutscene' | 'movein'>('measure');
   const [picked, setPicked] = useState<number | null>(null);
   const [wrong, setWrong] = useState(false);
+  const [note, setNote] = useState(''); // Goldilocks sizing feedback (too small / too big)
   const [aidOpen, setAidOpen] = useState(false);
   const [guideOpen, setGuideOpen] = useState(false);
   const [quizOpen, setQuizOpen] = useState(false);
+  const [reportDone, setReportDone] = useState(false);
   const [heroExpr, setHeroExpr] = useState<MascotExpr>('happy');
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
+
+  // stats for the Inspector's graded report (first-try accuracy)
+  const totalRef = useRef(0); // questions attempted
+  const firstRef = useRef(0); // right on the first try
+  const missRef = useRef(0); // total wrong taps (re-cuts)
+  const missedStep = useRef(false); // did the current step get a wrong answer yet?
 
   const phase = PHASES[phaseIdx];
   const step = phase?.steps[stepIdx];
@@ -336,10 +527,14 @@ export function CritterCottage() {
     const ok = val === step.answer;
     recordArcadeAnswer('6.G', ok);
     if (ok) {
+      totalRef.current += 1;
+      if (!missedStep.current) firstRef.current += 1; // right on the first try
       sfx.coin(); buzz(HAPTIC.pickup);
+      setNote('');
       setHeroExpr('cheer');
       window.setTimeout(() => {
         setPicked(null);
+        missedStep.current = false;
         if (stepIdx < phase.steps.length - 1) {
           setStepIdx((s) => s + 1);
           setHeroExpr('happy');
@@ -348,9 +543,13 @@ export function CritterCottage() {
         }
       }, 650);
     } else {
+      missedStep.current = true;
+      missRef.current += 1;
       sfx.hurt(); buzz(HAPTIC.death);
       setHeroExpr('dizzy');
       setWrong(true);
+      // Goldilocks sizing hint: too small won't catch him, too big he'll see it
+      if (step.goldilocks) setNote(val < step.answer ? 'Too small — it won\'t catch him!' : 'Too big — he\'ll see it!');
       window.setTimeout(() => { setWrong(false); setPicked(null); setHeroExpr('happy'); }, 600);
     }
   };
@@ -359,23 +558,29 @@ export function CritterCottage() {
     sfx.build();
     const done = phaseIdx + 1;
     setBuilt(done);
-    if (phase.wolf) {
-      // house withstood the wolf → the critters move in
-      setMode('movein');
-      sfx.win(); buzz(HAPTIC.win);
-      window.setTimeout(() => setQuizOpen(true), 1600);
+    if (phase.trap) {
+      // trapdoor is cut → play the dramatic wolf-capture cutscene
+      setMode('cutscene');
       return;
     }
+    // wolf phase (and every earlier phase) just advances to the next level
     setPhaseIdx((p) => p + 1);
     setStepIdx(0);
     setMode('measure');
     setHeroExpr('happy');
   };
 
+  // cutscene finished → move the critters in, then the Inspector's graded report
+  const onCutsceneDone = () => {
+    setMode('movein');
+    sfx.win(); buzz(HAPTIC.win);
+  };
+
   const reset = () => {
     setPhaseIdx(0); setStepIdx(0); setBuilt(0); setMode('measure');
-    setPicked(null); setWrong(false); setAidOpen(false); setQuizOpen(false);
-    setHeroExpr('happy'); setOutcome(null);
+    setPicked(null); setWrong(false); setNote(''); setAidOpen(false);
+    setQuizOpen(false); setReportDone(false); setHeroExpr('happy'); setOutcome(null);
+    totalRef.current = 0; firstRef.current = 0; missRef.current = 0; missedStep.current = false;
   };
 
   // ── end card ──
@@ -403,7 +608,7 @@ export function CritterCottage() {
           📐 6.G · Geometry — Area &amp; Angles
         </p>
         <p className="mx-auto mb-3 max-w-sm text-center text-sm font-display font-bold text-slate-600">
-          Pick your builder, then measure, saw and raise a cottage — a wolf will test it, then critters move in!
+          Pick your builder, then measure, saw and raise a cottage across 8 levels — a wolf tests it, you spring a square trap, then critters move in!
         </p>
         <div className="mx-auto grid max-w-sm grid-cols-3 gap-3">
           {BUILDERS.map((k) => (
@@ -433,24 +638,40 @@ export function CritterCottage() {
         <span className="text-slate-600 text-sm">Level {Math.min(phaseIdx + 1, PHASES.length)} / {PHASES.length}</span>
       </div>
 
-      {/* the assembling cottage */}
-      <div className="mx-auto max-w-sm rounded-2xl border-4 border-slate-900 bg-sky-100 p-2 shadow-[0_4px_0_0_rgba(0,0,0,0.25)]">
-        <div className="flex items-center gap-1 px-1 pb-1">
-          <CharMascot kind={hero} size={30} expr={heroExpr} />
-          <span className="font-display text-sm font-extrabold text-slate-800">{phase.emoji} {phase.title}</span>
+      {/* the assembling cottage (hidden during the capture cutscene) */}
+      {mode !== 'cutscene' && (
+        <div className="mx-auto max-w-sm rounded-2xl border-4 border-slate-900 bg-sky-100 p-2 shadow-[0_4px_0_0_rgba(0,0,0,0.25)]">
+          <div className="flex items-center gap-1 px-1 pb-1">
+            <CharMascot kind={hero} size={30} expr={heroExpr} />
+            <span className="font-display text-sm font-extrabold text-slate-800">{phase.emoji} {phase.title}</span>
+          </div>
+          <House built={built} wolf={!!phase.wolf} trap={!!phase.trap || movedIn} caged={movedIn} movedIn={movedIn} hero={hero} />
         </div>
-        <House built={built} wolf={!!phase.wolf} movedIn={movedIn} hero={hero} />
-      </div>
+      )}
+
+      {/* Level 8 climax: dramatic zoom-in wolf-capture cutscene */}
+      {mode === 'cutscene' && <WolfTrapCutscene onDone={onCutsceneDone} buzz={buzz} />}
 
       {/* move-in celebration */}
-      {movedIn && !quizOpen && (
+      {movedIn && (
         <motion.p initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
           className="mx-auto mt-3 max-w-sm text-center font-display text-lg font-extrabold text-emerald-700">
           🦝 The raccoons move in — home sweet home! 🏡
         </motion.p>
       )}
 
-      {/* milestone bonus quiz after move-in, then end */}
+      {/* the Inspector's graded report, then Collect opens the bonus quiz */}
+      {movedIn && !reportDone && (
+        <InspectorReport
+          built={built}
+          total={totalRef.current}
+          first={firstRef.current}
+          miss={missRef.current}
+          onCollect={() => { sfx.win(); buzz(HAPTIC.win); setReportDone(true); setQuizOpen(true); }}
+        />
+      )}
+
+      {/* milestone bonus quiz after the report, then end */}
       {quizOpen && (
         <div className="mx-auto mt-3 max-w-sm text-center">
           <MilestoneQuiz onDone={() => { addCoins(10); finish(); }} len="word" label="🎁 House-warming bonus — solve for coins!" />
@@ -478,6 +699,12 @@ export function CritterCottage() {
               );
             })}
           </div>
+          {note && (
+            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+              className="mt-2 rounded-xl border-2 border-rose-300 bg-rose-50 px-3 py-2 text-center font-display text-sm font-extrabold text-rose-600">
+              {note}
+            </motion.p>
+          )}
           <button type="button" onClick={() => setAidOpen(true)}
             className="mt-3 min-h-10 w-full rounded-2xl border-2 border-amber-300 bg-amber-50 font-display font-extrabold text-amber-700 active:translate-y-0.5">
             📝 How to solve

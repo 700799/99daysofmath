@@ -196,10 +196,11 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
 
   carpenter: {
     sections: [
-      { heading: 'Goal', body: 'Build a cozy cottage across 7 levels — measure each piece, saw it, and raise it. Survive the Big Bad Wolf and cute raccoons move in! This is a GEOMETRY (6.G) build: it’s all about AREA and ANGLES.' },
+      { heading: 'Goal', body: 'Build a cozy cottage across 8 levels — measure each piece, saw it, and raise it. Survive the Big Bad Wolf (Level 7), then size a SQUARE trapdoor and spring a dramatic capture (Level 8) — and cute raccoons move in! This is a GEOMETRY (6.G) build: it’s all about AREA and ANGLES.' },
       { heading: 'How to play', body: 'Each level shows a measuring question — tap the correct answer chip. Then SWIPE back and forth across the board to saw it (it buzzes and rasps!), and the piece snaps onto your cottage.' },
-      { heading: 'The math — AREA', body: 'Rectangle area = length × width. Triangle (roof) area = ½ × base × height. Circle (round window & yard) area = π × r × r — we use π ≈ 3 to keep it tidy (real π ≈ 3.14). Trim/siding SUBTRACTS: wall area − window area.' },
+      { heading: 'The math — AREA', body: 'Rectangle area = length × width. Square (the trapdoor) = side × side. Triangle (roof) area = ½ × base × height. Circle (round window & yard) area = π × r × r — we use π ≈ 3 to keep it tidy (real π ≈ 3.14). Trim/siding SUBTRACTS: wall area − window area.' },
       { heading: 'The math — ANGLES', body: 'Square corner = 90°, straight line = 180°, roof pitch = 45°, a gentle trim = 15°, and a three-quarter turn = 270°.' },
+      { heading: 'The trap (Level 8)', body: 'The wolf’s paw needs a trap of about 36 sq units. Pick the JUST-RIGHT square: too small won’t catch him, too big and he’ll see it. 6 × 6 = 36 is just right — then watch the zoom-in capture!' },
       { heading: 'Stuck?', body: 'Tap “📝 How to solve” for a step-by-step hint on the current piece.' },
     ],
     controls: 'Tap an answer chip, then swipe the board back and forth to saw. Tap 📝 for a hint.',
