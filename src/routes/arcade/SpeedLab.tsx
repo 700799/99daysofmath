@@ -52,7 +52,7 @@ export function SpeedLab() {
       (game as unknown as { scene: { start: (k: string, d: unknown) => void } }).scene.start('SpeedLabScene', {
         onLevel: (lv: number) => setLevel(lv),
         onComplete: (cleared: number) => {
-          const xp = Math.max(1, Math.min(20, cleared * 6));
+          const xp = Math.max(2, Math.min(22, cleared * 2));
           setOutcome(recordArcadePlay('speedlab', xp));
         },
       });
@@ -93,7 +93,7 @@ export function SpeedLab() {
       {/* aerospace-syllabus mission strip */}
       <div className="mx-auto mb-2 flex max-w-sm items-center justify-between rounded-lg border border-cyan-700/60 bg-slate-900 px-3 py-1.5 font-mono text-xs text-cyan-300">
         <span className="font-bold text-amber-400">d = r × t</span>
-        <span>STAGE {level}/3</span>
+        <span>STAGE {level}/10</span>
         <span className="text-rose-400">● LIVE</span>
       </div>
       <div
@@ -164,14 +164,33 @@ function FormulaDrawer({ open, onClose }: { open: boolean; onClose: () => void }
               <div className="mt-1 text-[11px] font-bold text-slate-400">cover the one you want</div>
             </div>
 
-            <div className="mt-4 grid gap-2 font-mono text-sm font-bold">
-              <div className="rounded-lg bg-slate-800 px-3 py-2"><span className="text-amber-400">d</span> = r × t <span className="text-slate-500">→ side by side, multiply</span></div>
-              <div className="rounded-lg bg-slate-800 px-3 py-2"><span className="text-amber-400">r</span> = d ÷ t <span className="text-slate-500">→ top over bottom, divide</span></div>
-              <div className="rounded-lg bg-slate-800 px-3 py-2"><span className="text-amber-400">t</span> = d ÷ r <span className="text-slate-500">→ top over bottom, divide</span></div>
+            <div className="mt-4 grid gap-2 font-mono text-base font-bold">
+              <div className="rounded-lg bg-slate-800 px-3 py-2"><span className="text-amber-400">d</span> = r × t <span className="text-slate-400 text-sm">→ side by side, multiply</span></div>
+              <div className="rounded-lg bg-slate-800 px-3 py-2"><span className="text-amber-400">r</span> = d ÷ t <span className="text-slate-400 text-sm">→ top over bottom, divide</span></div>
+              <div className="rounded-lg bg-slate-800 px-3 py-2"><span className="text-amber-400">t</span> = d ÷ r <span className="text-slate-400 text-sm">→ top over bottom, divide</span></div>
             </div>
 
-            <div className="mt-3 rounded-lg border border-cyan-700/60 bg-slate-800/60 px-3 py-2 font-mono text-xs text-cyan-200">
-              Example: 60 mph for 2 h → d = 60 × 2 = <span className="font-bold text-white">120 miles</span>.
+            <div className="mt-4 text-sm font-display font-extrabold uppercase tracking-wide text-cyan-300">Worked examples</div>
+            <div className="mt-2 grid gap-2 font-mono text-sm leading-snug text-cyan-100">
+              {[
+                ['🚴', 'Biker: 3 units/s for 2 s', 'd = 3 × 2 = 6 units'],
+                ['🐢', 'Turtle: 8 units at 2 units/s', 't = 8 ÷ 2 = 4 s'],
+                ['👶', 'Baby: 6 units in 3 s', 'r = 6 ÷ 3 = 2 units/s'],
+                ['⛵', 'Boat: 4 units/s for 2 s', 'd = 4 × 2 = 8 units'],
+                ['🦖', 'Dino: 40 units at 5 units/s', 't = 40 ÷ 5 = 8 s'],
+                ['🚀', 'Rocket: 10 units/s for 5 s', 'd = 10 × 5 = 50 units'],
+                ['🤼', 'Sumo: 36 units in 6 s', 'r = 36 ÷ 6 = 6 units/s'],
+                ['🐟', 'Fish: 60 units at 10 units/s', 't = 60 ÷ 10 = 6 s'],
+                ['🏎️', 'Race car: 60 units in 5 s', 'r = 60 ÷ 5 = 12 units/s'],
+                ['🚆', 'Train: 20 units/s for 4 s', 'd = 20 × 4 = 80 units'],
+                ['🚗', 'Real life: 60 mph for 2 h', 'd = 60 × 2 = 120 miles'],
+                ['🏃', 'Real life: 100 m in 20 s', 'r = 100 ÷ 20 = 5 m/s'],
+              ].map(([e, q, a], i) => (
+                <div key={i} className="rounded-lg bg-slate-800/70 px-3 py-2">
+                  <div className="text-slate-300">{e} {q}</div>
+                  <div className="font-bold text-white">{a}</div>
+                </div>
+              ))}
             </div>
           </motion.div>
         </>

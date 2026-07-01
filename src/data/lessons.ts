@@ -879,6 +879,27 @@ export const LESSONS: Lesson[] = [
     ],
     watchOut: 'Scale BOTH parts of the ratio by the same factor — never just one side.',
   },
+  {
+    domain: '6.RP', unit: 11, title: 'Speed: distance, rate & time',
+    objective: 'Use d = r × t to find distance, speed, or time — and convert units so they match.',
+    concept: [
+      'Speed is a rate: distance per unit of time (miles per hour, meters per second).',
+      'The three are linked by d = r × t (distance = rate × time). Picture the triangle d on top of r · t: cover the one you want — d = r × t, r = d ÷ t, t = d ÷ r.',
+      'Match the units first! "Miles per HOUR" needs the time in HOURS and the distance in MILES. Convert minutes → hours (÷ 60) or km ↔ m before you calculate.',
+    ],
+    examples: [
+      { q: 'A cyclist rides at 12 mph for 3 hours. How far do they go?', steps: ['Find DISTANCE, so d = r × t.', 'd = 12 × 3.', '= 36 miles.'], answer: '36' },
+      { q: 'A train covers 240 km in 4 hours. What is its speed?', steps: ['Find RATE, so r = d ÷ t.', 'r = 240 ÷ 4.', '= 60 km/h.'], answer: '60' },
+      { q: 'How long to travel 150 miles at 50 mph?', steps: ['Find TIME, so t = d ÷ r.', 't = 150 ÷ 50.', '= 3 hours.'], answer: '3' },
+      { q: 'A car drives 60 mph. How far does it go in 30 minutes?', steps: ['Units must match: change 30 minutes to hours.', '30 ÷ 60 = 0.5 hour.', 'd = r × t = 60 × 0.5 = 30 miles.'], answer: '30' },
+    ],
+    practice: [
+      { q: 'A boat sails at 20 km/h for 2 hours. How far does it travel?', answers: ['40', '40 km'], steps: ['Find distance: d = r × t.', 'd = 20 × 2 = 40 km.'] },
+      { q: 'A jet flies 900 miles in 3 hours. What is its speed in mph?', answers: ['300', '300 mph'], steps: ['Find rate: r = d ÷ t.', 'r = 900 ÷ 3 = 300 mph.'] },
+      { q: 'A runner moves at 5 meters per second. How many meters in 1 minute?', answers: ['300', '300 m'], steps: ['Match units: 1 minute = 60 seconds.', 'd = r × t = 5 × 60 = 300 m.'] },
+    ],
+    watchOut: 'Units must match! Miles per HOUR needs time in HOURS — convert minutes to hours (÷ 60) before you multiply.',
+  },
 
   // 6.NS
   {

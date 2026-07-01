@@ -46,12 +46,13 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
 
   chess: {
     sections: [
-      { heading: 'Goal', body: 'Each puzzle gives YOU a big material lead — but only ONE move actually wins. Play any other move and the computer punishes you and wins. Solve all 5 endgames!' },
-      { heading: 'How to move', body: 'Tap your (white) piece, then tap the square to move it to. White pieces are ♔♕♖♗♘♙; the computer is black.' },
-      { heading: 'The big idea', body: 'Sometimes extra material is a LIABILITY (zugzwang), sometimes you must SACRIFICE your queen to force mate, and sometimes a few minor pieces out-coordinate a queen. Read the lesson on each puzzle.' },
-      { heading: 'Wrong move?', body: 'No problem — you’ll see exactly how the computer would pounce, then you can try the same puzzle again.' },
+      { heading: 'Goal', body: 'Each puzzle gives YOU a big material lead and a winning line — you PLAY IT OUT move by move. Choose each of your moves; the computer’s forced reply plays automatically until checkmate (or you win the queen). Solve all 5 endgames!' },
+      { heading: 'How to move', body: 'Tap your (white) piece, then tap the square to move it to. White pieces are ♔♕♖♗♘♙; the computer is black. Some wins take more than one move — a counter shows “Your move 1 of 2”.' },
+      { heading: 'Stuck? Show the move', body: 'Tap “💡 Show me the move” to light up where your piece should go (amber = from, green = to). Then make the move yourself.' },
+      { heading: 'The big idea', body: 'Sometimes extra material is a LIABILITY (zugzwang), sometimes you SACRIFICE your queen to force mate, and sometimes a few minor pieces out-coordinate a queen. Read the lesson on each puzzle.' },
+      { heading: 'Wrong move?', body: 'No problem — you’ll see exactly how the computer would pounce, then you can replay the whole line again.' },
     ],
-    controls: 'Tap a white piece, then tap its destination. Find the one move that wins; solve all 5.',
+    controls: 'Tap a white piece, then its destination. Play out the winning line one move at a time; tap 💡 if you need the next move shown.',
   },
 
   fraction: {
@@ -182,6 +183,15 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
       { heading: 'Game over', body: 'If your whole party faints, the run ends. Climb for your best wave!' },
     ],
     controls: 'Tap the action buttons. Special problems use the on-screen keypad — scroll the problem if it is long.',
+  },
+
+  racer: {
+    sections: [
+      { heading: 'Goal', body: "You're the big-helmeted racer at the bottom — it's a first-person dash! The road rushes toward you and hazards come barreling in from the horizon, getting bigger as they get closer. Survive 45 seconds and drive as far as you can." },
+      { heading: 'Dodge everything', body: 'Swerve between the three lanes to avoid 🪨 rocks, 🥚 eggs, 🥕 carrots, 👹 toothy heads, 🐍 snakes and 🔺 spikes. Each one you hit costs a life — three hits and the run ends.' },
+      { heading: 'Grab the stars', body: 'Catch ⭐ stars in your lane for a +3 second time bonus. The longer you last, the faster everything comes!' },
+    ],
+    controls: 'Tap ← Left / Right → (or the arrow keys) to switch lanes. Line up the gaps and grab the stars!',
   },
 
   crawler: {
