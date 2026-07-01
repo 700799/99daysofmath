@@ -98,6 +98,18 @@ export const sfx = {
     tone(160, 0.06, 0, 'square', 0.08);
     tone(320, 0.05, 0.05, 'sine', 0.06);
   },
+  // one raspy back-and-forth saw stroke through wood
+  saw() {
+    if (!soundOn()) return;
+    sweep(1100, 700, 0.28, 0, 'sawtooth', 0.12);
+    noiseBurst(0.25, 0.02, 0.07, 2200);
+  },
+  // short snap when a board is cut clean through
+  cut() {
+    if (!soundOn()) return;
+    tone(200, 0.05, 0, 'square', 0.11);
+    noiseBurst(0.12, 0, 0.12, 1500);
+  },
   boss() {
     if (!soundOn()) return;
     noiseBurst(0.5, 0, 0.12, 400);

@@ -194,6 +194,17 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
     controls: 'Tap ← Left / Right → (or the arrow keys) to switch lanes. Line up the gaps and grab the stars!',
   },
 
+  carpenter: {
+    sections: [
+      { heading: 'Goal', body: 'Build a cozy cottage across 7 levels — measure each piece, saw it, and raise it. Survive the Big Bad Wolf and cute raccoons move in! This is a GEOMETRY (6.G) build: it’s all about AREA and ANGLES.' },
+      { heading: 'How to play', body: 'Each level shows a measuring question — tap the correct answer chip. Then SWIPE back and forth across the board to saw it (it buzzes and rasps!), and the piece snaps onto your cottage.' },
+      { heading: 'The math — AREA', body: 'Rectangle area = length × width. Triangle (roof) area = ½ × base × height. Circle (round window & yard) area = π × r × r — we use π ≈ 3 to keep it tidy (real π ≈ 3.14). Trim/siding SUBTRACTS: wall area − window area.' },
+      { heading: 'The math — ANGLES', body: 'Square corner = 90°, straight line = 180°, roof pitch = 45°, a gentle trim = 15°, and a three-quarter turn = 270°.' },
+      { heading: 'Stuck?', body: 'Tap “📝 How to solve” for a step-by-step hint on the current piece.' },
+    ],
+    controls: 'Tap an answer chip, then swipe the board back and forth to saw. Tap 📝 for a hint.',
+  },
+
   crawler: {
     sections: [
       { heading: 'Goal', body: 'Push your luck through a treasure vault and BANK 50 gold to win. Each room you enter adds loot to your pot — but the alarm gets more likely the deeper you go.' },

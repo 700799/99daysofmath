@@ -82,6 +82,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'chess', path: '/arcade/chess', emoji: '♟️', name: 'Checkmate Lab', blurb: 'One move wins — or the computer beats you!', baseXp: 12, gradient: 'from-slate-700 to-indigo-800' },
   { id: 'starhop', path: '/arcade/starhop', emoji: '🌟', name: 'Star Hop', blurb: 'Chinese Checkers — hop to the far star!', baseXp: 10, gradient: 'from-indigo-500 to-fuchsia-600' },
   { id: 'crawler', path: '/arcade/crawler', emoji: '🎲', name: 'Lucky Crawl', blurb: 'Push your luck for treasure — bank before the alarm!', baseXp: 12, gradient: 'from-amber-600 to-yellow-700' },
+  { id: 'carpenter', path: '/arcade/carpenter', emoji: '🔨', name: 'Critter Cottage', blurb: 'Measure, saw & build a cottage — then critters move in!', baseXp: 12, gradient: 'from-amber-700 to-orange-800' },
 ];
 
 // Premium games: locked until bought with coins in the Shop (id → coin price).

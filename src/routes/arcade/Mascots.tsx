@@ -958,6 +958,7 @@ export const GAME_MASCOT: Record<string, MascotKind> = {
   chess: 'robot',
   starhop: 'unicorn',
   crawler: 'fox',
+  carpenter: 'raccoon',
 };
 
 export function gameMascot(id: string): MascotKind {
