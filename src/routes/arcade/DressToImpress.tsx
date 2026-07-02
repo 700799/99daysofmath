@@ -7,7 +7,7 @@ import { GameInstructions, type HowToSection } from './HowToPlay';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
-// Dress to Impress — an original theme-styling + runway game. A theme asks for a
+// Cool vs Warm Dress Up — an original theme-styling + runway game. A theme asks for a
 // look; you assemble an outfit from a wardrobe before the clock runs out, then
 // walk the runway for a percent score. The math is woven through four of our
 // units: RATIOS (match the theme's warm:cool palette ratio), PERCENTAGES (the
@@ -251,7 +251,7 @@ export function DressToImpress() {
     const avg = list.length ? Math.round(list.reduce((a, b) => a + b, 0) / list.length) : 0;
     return (
       <div>
-        <ArcadeHeader title="Dress to Impress" emoji="👗" />
+        <ArcadeHeader title="Cool vs Warm Dress Up" emoji="👗" />
         <ArcadeEndCard
           gameId="dress"
           outcome={outcome}
@@ -280,7 +280,7 @@ export function DressToImpress() {
     const stars = result.pct >= 90 ? 3 : result.pct >= 70 ? 2 : result.pct >= 50 ? 1 : 0;
     return (
       <div>
-        <ArcadeHeader title="Dress to Impress" emoji="👗" />
+        <ArcadeHeader title="Cool vs Warm Dress Up" emoji="👗" />
         <GameStage theme="dress" className="max-w-md mx-auto p-4">
           <div className="text-center">
             <div className="text-xs font-display font-extrabold uppercase tracking-widest text-white/80">{theme.emoji} {theme.name} — Runway!</div>
@@ -374,7 +374,7 @@ export function DressToImpress() {
   // ---- styling screen ----
   return (
     <div>
-      <ArcadeHeader title="Dress to Impress" emoji="👗" />
+      <ArcadeHeader title="Cool vs Warm Dress Up" emoji="👗" />
 
       {/* theme + HUD */}
       <div className="max-w-md mx-auto mb-2 rounded-2xl bg-fuchsia-50 border-2 border-fuchsia-200 px-3 py-2">
@@ -438,7 +438,7 @@ export function DressToImpress() {
         💃 Walk the runway!
       </button>
 
-      <GameInstructions emoji="👗" title="Dress to Impress" sections={HOWTO} controls={CONTROLS} />
+      <GameInstructions emoji="👗" title="Cool vs Warm Dress Up" sections={HOWTO} controls={CONTROLS} />
 
       <AnimatePresence>
         {toast && (
