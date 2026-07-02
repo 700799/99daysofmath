@@ -1,4 +1,8 @@
 import type { Domain } from '../types/problem';
+import { LESSON_SLIDES } from './lessonSlides';
+import type { LessonSlide } from './lessonSlides';
+
+export type { LessonSlide };
 
 export interface WorkedExample {
   q: string;
@@ -27,6 +31,7 @@ export interface Lesson {
   practice: PracticeQuestion[]; // try-it questions with accepted alternatives
   watchOut: string;
   videos?: VideoRef[]; // ordered Manim animations in public/videos/lessons/
+  slides?: LessonSlide[]; // story-style deck (12–20 slides), merged from lessonSlides/
 }
 
 export function lessonKey(domain: Domain, unit: number): string {
@@ -1229,6 +1234,12 @@ export const LESSONS: Lesson[] = [
     watchOut: 'SORT data before finding median or range — unsorted data hides the extremes.',
   },
 ];
+
+// Attach each lesson's story-style slide deck (authored per-domain in lessonSlides/).
+for (const l of LESSONS) {
+  const s = LESSON_SLIDES[lessonKey(l.domain, l.unit)];
+  if (s && s.length) l.slides = s;
+}
 
 const byKey = new Map(LESSONS.map((l) => [lessonKey(l.domain, l.unit), l]));
 

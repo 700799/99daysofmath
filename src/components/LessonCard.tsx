@@ -5,6 +5,7 @@ import {
   lessonKey,
   lessonAnswerMatches,
   type Lesson,
+  type LessonSlide,
   type WorkedExample,
   type PracticeQuestion,
 } from '../data/lessons';
@@ -26,16 +27,35 @@ type Page =
   | { kind: 'intro' }
   | { kind: 'video'; idx: number }
   | { kind: 'concept' }
+  | { kind: 'slide'; idx: number }
   | { kind: 'example'; idx: number }
   | { kind: 'practice'; idx: number }
   | { kind: 'watchout' };
 
-// Video slots are positional: videos[0] = the idea (after intro),
-// videos[1] = worked examples (after the example pages),
-// videos[2+] = avoid-the-trap (right before the wrap-up).
+// Story-style deck: ONE video (the "idea" Manim animation) after the objective,
+// then the authored slides (concepts → examples → pro tips), then interactive
+// practice, then the trap/summary slides + watch-out. Lessons without an
+// authored `slides` deck fall back to the legacy page set (all videos).
 function buildPages(lesson: Lesson): Page[] {
   const vids = lesson.videos ?? [];
+  const slides = lesson.slides ?? [];
   const pages: Page[] = [{ kind: 'intro' }];
+
+  if (slides.length > 0) {
+    const idxOf = (s: LessonSlide) => slides.indexOf(s);
+    const objectives = slides.filter((s) => s.kind === 'objective');
+    const middle = slides.filter((s) => s.kind === 'concept' || s.kind === 'example' || s.kind === 'protip');
+    const tail = slides.filter((s) => s.kind === 'trap' || s.kind === 'summary');
+    objectives.forEach((s) => pages.push({ kind: 'slide', idx: idxOf(s) }));
+    if (vids.length > 0) pages.push({ kind: 'video', idx: 0 }); // the one lesson video
+    middle.forEach((s) => pages.push({ kind: 'slide', idx: idxOf(s) }));
+    lesson.practice.forEach((_, i) => pages.push({ kind: 'practice', idx: i }));
+    tail.forEach((s) => pages.push({ kind: 'slide', idx: idxOf(s) }));
+    pages.push({ kind: 'watchout' });
+    return pages;
+  }
+
+  // legacy layout (no slide deck authored)
   if (vids.length > 0) pages.push({ kind: 'video', idx: 0 });
   pages.push({ kind: 'concept' });
   lesson.examples.forEach((_, i) => pages.push({ kind: 'example', idx: i }));
@@ -50,19 +70,45 @@ function buildPages(lesson: Lesson): Page[] {
 const SECTION_ORDER = ['Intro', 'Key idea', 'Examples', 'Try it', 'Wrap-up'] as const;
 type SectionName = (typeof SECTION_ORDER)[number];
 
-function sectionOf(page: Page): SectionName {
-  if (page.kind === 'intro') return 'Intro';
-  if (page.kind === 'concept') return 'Key idea';
-  // Video pages roll into the section they support so the breadcrumb
-  // structure stays at 5 fixed sections.
-  if (page.kind === 'video') {
-    if (page.idx === 0) return 'Key idea';
-    if (page.idx === 1) return 'Examples';
+function sectionOfSlide(kind: LessonSlide['kind']): SectionName {
+  if (kind === 'objective') return 'Intro';
+  if (kind === 'concept') return 'Key idea';
+  if (kind === 'example' || kind === 'protip') return 'Examples';
+  return 'Wrap-up'; // trap | summary
+}
+
+function makeSectionOf(lesson: Lesson): (page: Page) => SectionName {
+  const slides = lesson.slides ?? [];
+  return (page: Page): SectionName => {
+    if (page.kind === 'intro') return 'Intro';
+    if (page.kind === 'concept') return 'Key idea';
+    if (page.kind === 'slide') return sectionOfSlide(slides[page.idx]?.kind ?? 'concept');
+    // Video pages roll into the section they support so the breadcrumb
+    // structure stays at 5 fixed sections.
+    if (page.kind === 'video') {
+      if (page.idx === 0) return 'Key idea';
+      if (page.idx === 1) return 'Examples';
+      return 'Wrap-up';
+    }
+    if (page.kind === 'example') return 'Examples';
+    if (page.kind === 'practice') return 'Try it';
     return 'Wrap-up';
+  };
+}
+
+// Minimum read time per page kind (seconds) before Next unlocks. The deck
+// still ONLY advances on a button press — this just stops click-through.
+// Scaled by the admin's lessonScreenSeconds (default 6 = 1×; 0 disables).
+function baseSecsFor(page: Page, lesson: Lesson): number {
+  if (page.kind === 'slide') {
+    const k = (lesson.slides ?? [])[page.idx]?.kind;
+    if (k === 'example') return 8;
+    if (k === 'concept') return 5;
+    return 3; // objective | protip | trap | summary
   }
-  if (page.kind === 'example') return 'Examples';
-  if (page.kind === 'practice') return 'Try it';
-  return 'Wrap-up';
+  if (page.kind === 'example' || page.kind === 'practice') return 8;
+  if (page.kind === 'concept') return 5;
+  return 3; // intro | video | watchout
 }
 
 interface PracticeState {
@@ -84,21 +130,23 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
   const [exampleOpen, setExampleOpen] = useState<Record<number, boolean>>({});
   const [practiceState, setPracticeState] = useState<Record<number, PracticeState>>({});
 
-  // Per-screen minimum read time (anti-click-through). Default 6s, set by the
-  // parent/admin controls. The primary Next/Finish button is disabled until the
-  // countdown for the current page elapses. 0 = off (instant advance).
+  // Per-slide minimum read time (anti-click-through): 8s example slides, 5s
+  // concept/explanation slides, 3s short slides. The admin's lessonScreenSeconds
+  // scales the pacing (6 = 1×; 0 = off). The deck still advances only on press.
   const screenSecs = useProgress((s) => s.arcadeConfig.lessonScreenSeconds ?? 6);
-  const [remain, setRemain] = useState(screenSecs);
+  const [remain, setRemain] = useState(0);
   useEffect(() => {
     if (phase !== 'learn' || screenSecs <= 0) {
       setRemain(0);
       return;
     }
-    setRemain(screenSecs);
+    const secs = Math.max(1, Math.round(baseSecsFor(pages[pageIndex], lesson) * (screenSecs / 6)));
+    setRemain(secs);
     const id = setInterval(() => {
       setRemain((r) => (r <= 1 ? 0 : r - 1));
     }, 1000);
     return () => clearInterval(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pageIndex, screenSecs, phase]);
 
   const finish = () => {
@@ -127,6 +175,7 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
   const goBack = () => setPageIndex((i) => Math.max(0, i - 1));
 
   const current = pages[pageIndex];
+  const sectionOf = makeSectionOf(lesson);
 
   return (
     <AnimatePresence>
@@ -161,6 +210,7 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
               <Breadcrumbs
                 pages={pages}
                 pageIndex={pageIndex}
+                sectionOf={sectionOf}
                 onJump={(idx) => setPageIndex(idx)}
               />
 
@@ -181,6 +231,9 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
                       />
                     )}
                     {current.kind === 'concept' && <ConceptPage lesson={lesson} />}
+                    {current.kind === 'slide' && lesson.slides?.[current.idx] && (
+                      <SlidePage slide={lesson.slides[current.idx]} />
+                    )}
                     {current.kind === 'example' && (
                       <ExamplePage
                         ex={lesson.examples[current.idx]}
@@ -247,10 +300,12 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
 function Breadcrumbs({
   pages,
   pageIndex,
+  sectionOf,
   onJump,
 }: {
   pages: Page[];
   pageIndex: number;
+  sectionOf: (page: Page) => SectionName;
   onJump: (idx: number) => void;
 }) {
   const activeSection = sectionOf(pages[pageIndex]);
@@ -380,6 +435,35 @@ function ConceptPage({ lesson }: { lesson: Lesson }) {
           </li>
         ))}
       </ol>
+    </div>
+  );
+}
+
+// One story-style slide: a kind badge, a big headline, and ~3 readable
+// sentences. Renders lesson `slides` decks (the math-stories format).
+const SLIDE_STYLE: Record<LessonSlide['kind'], { badge: string; emoji: string; card: string; badgeCls: string }> = {
+  objective: { badge: "Today's goal", emoji: '🎯', card: 'bg-sky-50 border-sky-200', badgeCls: 'bg-sky-200 text-sky-900' },
+  concept: { badge: 'How it works', emoji: '💡', card: 'bg-blue-50 border-blue-200', badgeCls: 'bg-blue-200 text-blue-900' },
+  example: { badge: 'Worked example', emoji: '✏️', card: 'bg-emerald-50 border-emerald-200', badgeCls: 'bg-emerald-200 text-emerald-900' },
+  protip: { badge: 'Pro tip', emoji: '⭐', card: 'bg-violet-50 border-violet-200', badgeCls: 'bg-violet-200 text-violet-900' },
+  trap: { badge: 'Trap to avoid', emoji: '⚠️', card: 'bg-amber-50 border-amber-200', badgeCls: 'bg-amber-200 text-amber-900' },
+  summary: { badge: 'Summary', emoji: '🏁', card: 'bg-green-50 border-green-200', badgeCls: 'bg-green-200 text-green-900' },
+};
+
+function SlidePage({ slide }: { slide: LessonSlide }) {
+  const st = SLIDE_STYLE[slide.kind];
+  return (
+    <div>
+      <div className="flex items-center justify-between gap-2">
+        <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-display font-extrabold uppercase tracking-wider ${st.badgeCls}`}>
+          <span aria-hidden="true">{st.emoji}</span> {st.badge}
+        </span>
+        <ReadAloud text={[slide.head, slide.body]} label="" />
+      </div>
+      <div className={`mt-3 rounded-2xl border-2 p-4 ${st.card}`}>
+        <h3 className="text-xl font-display font-extrabold leading-tight text-slate-900">{slide.head}</h3>
+        <p className="mt-2 whitespace-pre-line text-[15px] leading-relaxed text-slate-800">{slide.body}</p>
+      </div>
     </div>
   );
 }

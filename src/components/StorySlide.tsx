@@ -120,14 +120,17 @@ export function StorySlide({ story, onClose }: Props) {
     };
   }, [chaptersUrl]);
 
-  // Map a slide index to its [start, end] in the underlying video.
+  // Map a slide index to its [start, end] in the underlying video. Beats past
+  // the video's rendered segments (stories now have MORE beats than the video
+  // has chapters) clamp to the final segment, freezing on the last frame.
   const segmentFor = (slideIdx: number): { start: number; end: number } => {
     const beat = slides[slideIdx].beatIdx;
     const ch = chaptersRef.current;
     if (!ch) return { start: 0, end: Infinity };
     if (beat < 0) return { start: 0, end: ch.checkpoints[0] ?? ch.total };
-    const start = ch.checkpoints[beat] ?? 0;
-    const end = ch.checkpoints[beat + 1] ?? ch.total;
+    const b = Math.min(beat, Math.max(0, ch.checkpoints.length - 1));
+    const start = ch.checkpoints[b] ?? 0;
+    const end = ch.checkpoints[b + 1] ?? ch.total;
     return { start, end };
   };
 
