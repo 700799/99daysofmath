@@ -88,6 +88,9 @@ export interface ArcadeConfig {
   storyInterval: number; // minutes of play between forced math-story / mathematician breaks (0 = off)
   lessonScreenSeconds: number; // min seconds to read each lesson screen before Next (0 = off)
   answerRevealSeconds: number; // think-time before the worked solution un-hides in explanations (0 = instant)
+  gameMaxSeconds: number; // hard cap on a single game session in seconds (0 = no cap); default 180 (3 min)
+  extendMinutes: number; // minutes added when you extend play (lesson or coins)
+  extendCoinCost: number; // coins to buy one extension
 }
 
 interface ProgressState {
@@ -205,6 +208,7 @@ interface ProgressState {
   equipped: { hat?: string; outfit?: string; pet?: string; bg?: string };
   unlockedGames: string[];
   addCoins: (n: number) => void;
+  spendCoins: (n: number) => boolean; // deduct coins if affordable; returns false if too few
   buyCosmetic: (id: string, price: number) => boolean;
   equipCosmetic: (slot: 'hat' | 'outfit' | 'pet' | 'bg', id: string | null) => void;
   unlockGame: (id: string, price: number) => boolean;
@@ -398,6 +402,9 @@ const v11Defaults = {
     storyInterval: 5,
     lessonScreenSeconds: 6,
     answerRevealSeconds: 15,
+    gameMaxSeconds: 180, // 3-minute cap per game by default (parent-adjustable)
+    extendMinutes: 3,
+    extendCoinCost: 10, // one lesson (LESSON_COINS) buys one extension
   } as ArcadeConfig,
   cumArcadeSeconds: 0,
   cumLessonSeconds: 0,
@@ -666,6 +673,12 @@ export const useProgress = create<ProgressState>()(
       ...v18Defaults,
       ...v20Defaults,
       addCoins: (n) => set((s) => ({ coins: Math.max(0, (s.coins ?? 0) + n) })),
+      spendCoins: (n) => {
+        const s = get();
+        if ((s.coins ?? 0) < n) return false;
+        set({ coins: (s.coins ?? 0) - n });
+        return true;
+      },
       buyCosmetic: (id, price) => {
         const s = get();
         if ((s.ownedCosmetics ?? []).includes(id)) return true;

@@ -302,7 +302,7 @@ function AdminPanel() {
             />
             <div className="mt-3" />
             <AdminPick
-              label="Hide answer in explanations for"
+              label="Think-time before the answer reveal"
               options={[
                 { value: 0, label: 'Off' },
                 { value: 5, label: '5s' },
@@ -314,6 +314,45 @@ function AdminPanel() {
               value={config.answerRevealSeconds ?? 15}
               onPick={(n) => setArcadeConfig({ answerRevealSeconds: n })}
             />
+          </div>
+
+          <div className="pt-2 border-t border-slate-100">
+            <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-2">
+              Play time
+            </div>
+            <AdminPick
+              label="Max time per game"
+              options={[
+                { value: 0, label: 'Off' },
+                { value: 120, label: '2m' },
+                { value: 180, label: '3m' },
+                { value: 300, label: '5m' },
+                { value: 600, label: '10m' },
+              ]}
+              value={config.gameMaxSeconds ?? 180}
+              onPick={(n) => setArcadeConfig({ gameMaxSeconds: n })}
+            />
+            <div className="mt-3" />
+            <AdminPick
+              label="Each extension adds"
+              options={[
+                { value: 3, label: '3m' },
+                { value: 5, label: '5m' },
+                { value: 10, label: '10m' },
+              ]}
+              value={config.extendMinutes ?? 3}
+              onPick={(n) => setArcadeConfig({ extendMinutes: n })}
+            />
+            <div className="mt-3" />
+            <AdminChoice
+              label="Extension costs (🪙 coins)"
+              options={[5, 10, 15, 20]}
+              value={config.extendCoinCost ?? 10}
+              onPick={(n) => setArcadeConfig({ extendCoinCost: n })}
+            />
+            <p className="mt-2 text-xs text-slate-500">
+              At the cap, kids spend coins (earned from lessons) or do a lesson to add more time.
+            </p>
           </div>
 
           <div className="pt-2 border-t border-slate-100">
