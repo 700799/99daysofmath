@@ -1,11 +1,14 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { MATHEMATICIAN_DECKS, type MathematicianDeck } from '../data/mathematicianDecks';
+import { MathematicianDeckPlayer } from '../components/MathematicianDeck';
 
 interface Mathematician {
   name: string;
   era: string;
   contribution: string;
   emoji: string;
-  /** videoSrc of a matching Math Story, if one exists. Makes the card a link. */
+  /** videoSrc of a matching Math Story, if one exists. Adds a story link. */
   storySrc?: string;
 }
 
@@ -62,30 +65,12 @@ const MATHEMATICIANS: Mathematician[] = [
   },
 ];
 
-/** Inner card content, shared by the link and static variants. */
-function CardBody({ m }: { m: Mathematician }) {
-  return (
-    <div className="flex items-start gap-3">
-      <div className="text-4xl shrink-0">{m.emoji}</div>
-      <div className="flex-1 min-w-0">
-        <div className="font-display font-extrabold text-slate-900">
-          {m.name}
-        </div>
-        <div className="text-xs font-display font-bold text-purple-700 uppercase tracking-wider mt-0.5">
-          {m.era}
-        </div>
-        <div className="text-sm text-slate-700 mt-1.5">{m.contribution}</div>
-        {m.storySrc && (
-          <div className="inline-flex items-center gap-1 mt-2 rounded-full bg-violet-600 text-white text-xs font-display font-extrabold px-2.5 py-1">
-            🌟 Watch the story →
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
+const deckFor = (name: string): MathematicianDeck | undefined =>
+  MATHEMATICIAN_DECKS.find((d) => d.id === name);
 
 export function Mathematicians() {
+  const [open, setOpen] = useState<MathematicianDeck | null>(null);
+
   return (
     <div>
       <div className="flex items-baseline justify-between gap-3 mb-3">
@@ -101,31 +86,53 @@ export function Mathematicians() {
       </div>
       <p className="text-sm text-slate-600 mb-5">
         Learn about the brilliant minds who shaped mathematics throughout
-        history. From ancient geometry to modern breakthroughs. Cards with a{' '}
-        <b>🌟 Watch the story</b> badge open an animated lesson.
+        history — tap <b>📖 Their story</b> for a slide-by-slide tale of what
+        they did, why it matters, and how it connects to what you're learning.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-        {MATHEMATICIANS.map((m) =>
-          m.storySrc ? (
-            <Link
-              key={m.name}
-              to="/stories"
-              state={{ openStory: m.storySrc }}
-              className="block text-left rounded-2xl p-4 bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 hover:border-violet-400 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all"
-              data-haptic="tap"
-            >
-              <CardBody m={m} />
-            </Link>
-          ) : (
+        {MATHEMATICIANS.map((m) => {
+          const deck = deckFor(m.name);
+          return (
             <div
               key={m.name}
               className="rounded-2xl p-4 bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200"
             >
-              <CardBody m={m} />
+              <div className="flex items-start gap-3">
+                <div className="text-4xl shrink-0">{m.emoji}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="font-display font-extrabold text-slate-900">{m.name}</div>
+                  <div className="text-xs font-display font-bold text-purple-700 uppercase tracking-wider mt-0.5">
+                    {m.era}
+                  </div>
+                  <div className="text-sm text-slate-700 mt-1.5">{m.contribution}</div>
+                  <div className="mt-2.5 flex flex-wrap items-center gap-2">
+                    {deck && (
+                      <button
+                        type="button"
+                        onClick={() => setOpen(deck)}
+                        className="inline-flex items-center gap-1 rounded-full bg-violet-600 hover:bg-violet-700 text-white text-xs font-display font-extrabold px-3 py-1.5 active:translate-y-0.5"
+                        data-haptic="tap"
+                      >
+                        📖 Their story ({deck.slides.length + 1} slides) →
+                      </button>
+                    )}
+                    {m.storySrc && (
+                      <Link
+                        to="/stories"
+                        state={{ openStory: m.storySrc }}
+                        className="inline-flex items-center gap-1 rounded-full bg-white border-2 border-violet-300 text-violet-700 text-xs font-display font-extrabold px-3 py-1"
+                        data-haptic="tap"
+                      >
+                        🌟 Animated story
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
-          ),
-        )}
+          );
+        })}
       </div>
 
       <Link
@@ -134,6 +141,8 @@ export function Mathematicians() {
       >
         ← Back home
       </Link>
+
+      {open && <MathematicianDeckPlayer deck={open} onClose={() => setOpen(null)} />}
     </div>
   );
 }

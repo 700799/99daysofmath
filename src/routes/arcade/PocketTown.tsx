@@ -3,7 +3,6 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
 import { makeAdaptive, type Challenge } from './MidGameChallenge';
-import { MathBreak } from './MathBreak';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
@@ -14,8 +13,6 @@ import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 // RATIO (1 power plant per 4 homes…), happiness/coverage as PERCENTAGES, and a
 // budget-efficiency RATE — plus a disaster-resilience verdict. Original art.
 
-const STORY_EVERY = 180; // force a fresh math story every 3 minutes of play
-const STORY_MIN_READ = 10;
 const ND = 6; // small per-district grid (easy to see on a phone)
 const PEOPLE_PER_HOME = 8;
 
@@ -103,12 +100,9 @@ export function PocketTown() {
   const [taxInput, setTaxInput] = useState('');
   const [msg, setMsg] = useState('Build roads, then homes & shops. Use the arrows to visit other neighborhoods!');
   const [zoom, setZoom] = useState(1);
-  const [story, setStory] = useState(false);
   const [report, setReport] = useState<Report | null>(null);
   const [mapOpen, setMapOpen] = useState(false);
 
-  const storyRef = useRef(false);
-  const playSecRef = useRef(0);
   const moneyRef = useRef(money);
   const gridsRef = useRef(grids);
   const popRef = useRef(0);
@@ -131,7 +125,7 @@ export function PocketTown() {
   useEffect(() => {
     if (outcome) return;
     const id = window.setInterval(() => {
-      if (pausedRef.current || storyRef.current) return;
+      if (pausedRef.current) return;
       const c = allCounts();
       const jobs = c.com * 4 + c.ind * 6 + c.mall * 9 + c.university * 2;
       const services = c.police + c.fire + c.hospital + c.school + c.university;
@@ -157,19 +151,8 @@ export function PocketTown() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [outcome]);
 
-  // forced fresh math story every 3 minutes
-  useEffect(() => {
-    if (outcome) return;
-    const id = window.setInterval(() => {
-      if (pausedRef.current || storyRef.current || document.hidden) return;
-      playSecRef.current += 1;
-      if (playSecRef.current >= STORY_EVERY) { playSecRef.current = 0; storyRef.current = true; setStory(true); }
-    }, 1000);
-    return () => window.clearInterval(id);
-  }, [outcome, pausedRef]);
-
   const build = (i: number) => {
-    if (outcome || pausedRef.current || storyRef.current) return;
+    if (outcome || pausedRef.current) return;
     setGrids((gs) => {
       const g = gs[cur];
       const c = g[i];
@@ -257,7 +240,7 @@ export function PocketTown() {
     setGrids(freshGrids());
     setCur('downtown'); setTool('road'); setMoney(340); setPop(0); setHappy(70); setTier(0);
     setTax(null); setTaxInput(''); setReport(null); setMapOpen(false);
-    spentRef.current = 0; playSecRef.current = 0; storyRef.current = false;
+    spentRef.current = 0;
     setMsg('Build roads, then homes & shops. Use the arrows to visit other neighborhoods!');
     setOutcome(null);
   };
@@ -420,9 +403,6 @@ export function PocketTown() {
         </div>
       )}
 
-      {story && (
-        <MathBreak minSeconds={STORY_MIN_READ} onDone={() => { setStory(false); storyRef.current = false; playSecRef.current = 0; }} />
-      )}
     </div>
   );
 }

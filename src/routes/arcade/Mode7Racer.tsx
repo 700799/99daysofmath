@@ -29,7 +29,7 @@ function racerSections(maxStage: number): HowToSection[] {
     { heading: 'Goal', body: 'Race as far as you can! Reach each checkpoint before the timer hits zero to keep going. New scenery every stage.' },
     { heading: 'Steering', body: 'Drag your finger left/right on the road to steer (or use ◀ ▶ / arrow keys). The road curves — lean into the bend or you’ll slide onto the grass and slow down.' },
     { heading: 'Watch out', body: 'Dodge traffic 🚗🚌🚜 — bumping one slows you and costs time!' },
-    { heading: 'Pit stops', body: 'Every 30 seconds you pull into a pit stop — solve a quick math problem for a nitro speed boost, then keep racing.' },
+    { heading: 'Pit stops', body: 'At each checkpoint you pull into a pit stop — solve a quick math problem for a nitro speed boost, then keep racing.' },
     { heading: 'Best', body: 'Furthest stage so far: ' + maxStage + '.' },
   ];
 }
@@ -60,8 +60,6 @@ export function Mode7Racer() {
   const stageRef = useRef(1);
   const timeRef = useRef(30);
   const nextCpRef = useRef(600); // distance of next checkpoint
-  const runRef = useRef(0); // seconds of driving elapsed
-  const nextPitRef = useRef(30); // next pit-stop (math) time
   const kmRef = useRef(0);
   const lastRef = useRef(0);
   const rafRef = useRef(0);
@@ -79,7 +77,6 @@ export function Mode7Racer() {
     curveRef.current = 0; curveTargetRef.current = 0; segRef.current = 0;
     trafficRef.current = []; spawnRef.current = 1; stageRef.current = 1; timeRef.current = 30;
     nextCpRef.current = 600; kmRef.current = 0; doneRef.current = false; challengeRef.current = false;
-    runRef.current = 0; nextPitRef.current = 30;
     setChallenge(null); setOutcome(null); setPhase('race');
   };
 
@@ -133,21 +130,16 @@ export function Mode7Racer() {
 
       // timer
       timeRef.current -= dt;
-      runRef.current += dt;
       if (timeRef.current <= 0) { finish(); return; }
 
-      // checkpoint reached — advance the stage + add time (NO math here)
+      // checkpoint reached (a milestone) — advance the stage, add time, and pull
+      // into a pit stop for a quick math boost. Never a wall-clock interruption.
       if (zRef.current >= nextCpRef.current) {
         nextCpRef.current += 600 + stage * 80;
         stageRef.current = stage + 1;
         setMaxStage(Math.max(maxStage, stageRef.current));
         timeRef.current += 12;
         sfx.levelUp(); haptic(HAPTIC.levelUp);
-      }
-
-      // pit stop — a math problem only every 30 seconds of driving
-      if (runRef.current >= nextPitRef.current) {
-        nextPitRef.current += 30;
         challengeRef.current = true;
         setChallenge(makeAdaptive(arcadeUnit, useProgress.getState().arcadeLevels[arcadeUnit] ?? 1, 'medium'));
         setCInput('');

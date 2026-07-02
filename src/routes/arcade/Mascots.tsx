@@ -33,7 +33,18 @@ export type MascotKind =
   | 'capsuleP'
   | 'capsuleM'
   | 'cow'
-  | 'bull';
+  | 'bull'
+  | 'gizmoTeal'
+  | 'gizmoCoral'
+  | 'gizmoViolet'
+  | 'gizmoLime'
+  | 'gizmoCyan'
+  | 'gizmoSun'
+  | 'gizmoRose'
+  | 'gizmoSlate'
+  | 'racerRed'
+  | 'racerGreen'
+  | 'racerViolet';
 
 export type MascotExpr = 'happy' | 'surprised' | 'dizzy' | 'cheer' | 'ko';
 
@@ -42,6 +53,9 @@ export const MASCOT_KINDS: MascotKind[] = [
   'unicorn', 'penguin', 'monkey', 'crewmate', 'crewmate2', 'crewmate3',
   'panda', 'ninja', 'clerk', 'redpanda', 'raccoon', 'turtle', 'shark',
   'capsuleR', 'capsuleB', 'capsuleP', 'capsuleM', 'cow', 'bull',
+  'gizmoTeal', 'gizmoCoral', 'gizmoViolet', 'gizmoLime', 'gizmoCyan',
+  'gizmoSun', 'gizmoRose', 'gizmoSlate',
+  'racerRed', 'racerGreen', 'racerViolet',
 ];
 
 const OUTLINE = { stroke: '#1f2937', strokeWidth: 4, strokeLinejoin: 'round' as const, strokeLinecap: 'round' as const };
@@ -680,6 +694,109 @@ function makeCapsule(shell: string, shellDark: string, bow = false) {
   );
 }
 
+// "Gizmo" goggle-buddies — ORIGINAL capsule creatures (NOT Minions): an upright
+// pill body with a bolt antenna and a riveted goggle strap holding one or two
+// metal lenses. Bright non-yellow shells and a distinct tall silhouette keep them
+// clearly original.
+function makeGoggle(shell: string, shellDark: string, opts: { eyes?: 1 | 2 | 3; antenna?: string; spring?: boolean } = {}) {
+  const eyes = opts.eyes ?? 2;
+  const ant = opts.antenna ?? shellDark;
+  const gid = `m-gg-${shell.slice(1)}`;
+  const my = 66; // mouth y
+  const lens = (cx: number, r: number, e: MascotExpr) => (
+    <g key={cx}>
+      <circle cx={cx} cy={48} r={r + 2.5} fill="#cbd5e1" />
+      <circle cx={cx} cy={48} r={r} fill="#fff" stroke={INK} strokeWidth={2} />
+      {e === 'dizzy' ? (
+        <path d={`M${cx - 3} 45 l6 6 M${cx + 3} 45 l-6 6`} stroke={INK} strokeWidth={2.2} fill="none" />
+      ) : e === 'ko' ? (
+        <path d={`M${cx - 3} 48 h6`} stroke={INK} strokeWidth={2.4} fill="none" />
+      ) : (
+        <g stroke="none">
+          <circle cx={cx + 1} cy={49} r={(e === 'surprised' ? 0.62 : 0.5) * r} fill={INK} />
+          <circle cx={cx - 1} cy={47} r="1.2" fill="#fff" />
+        </g>
+      )}
+    </g>
+  );
+  return (e: MascotExpr) => (
+    <g {...OUTLINE}>
+      <defs>
+        <radialGradient id={gid} cx="50%" cy="32%" r="72%">
+          <stop offset="0%" stopColor={shell} />
+          <stop offset="100%" stopColor={shellDark} />
+        </radialGradient>
+      </defs>
+      {/* antenna + bolt (straight or springy) */}
+      {opts.spring ? (
+        <path d="M50 22 L46 18 L54 14 L46 10" fill="none" />
+      ) : (
+        <line x1="50" y1="22" x2="50" y2="10" />
+      )}
+      <circle cx="50" cy={opts.spring ? 8 : 7} r="4" fill={ant} />
+      {/* feet */}
+      <ellipse cx="40" cy="90" rx="7.5" ry="5" fill={shellDark} />
+      <ellipse cx="60" cy="90" rx="7.5" ry="5" fill={shellDark} />
+      {/* stub arms */}
+      <ellipse cx="24" cy="60" rx="6" ry="9" fill={shell} />
+      <ellipse cx="76" cy="60" rx="6" ry="9" fill={shell} />
+      {/* pill body */}
+      <rect x="26" y="22" width="48" height="66" rx="24" fill={`url(#${gid})`} />
+      {/* goggle strap with rivets */}
+      <rect x="20" y="40" width="60" height="16" rx="8" fill="#374151" />
+      <circle cx="23" cy="48" r="3" fill="#111827" stroke="none" />
+      <circle cx="77" cy="48" r="3" fill="#111827" stroke="none" />
+      {/* lenses */}
+      {eyes === 1
+        ? lens(50, 9, e)
+        : eyes === 3
+          ? [lens(35, 5.5, e), lens(50, 5.5, e), lens(65, 5.5, e)]
+          : [lens(41, 7, e), lens(59, 7, e)]}
+      {/* mouth */}
+      {e === 'cheer' ? (
+        <path d={`M43 ${my - 1} Q50 ${my + 9} 57 ${my - 1} Z`} fill="#7f1d1d" stroke={INK} strokeWidth={2} strokeLinejoin="round" />
+      ) : e === 'surprised' ? (
+        <ellipse cx="50" cy={my + 1} rx="4" ry="5" fill="#7f1d1d" stroke={INK} strokeWidth={2} />
+      ) : e === 'ko' ? (
+        <ellipse cx="50" cy={my + 1} rx="4" ry="3" fill="#7f1d1d" stroke={INK} strokeWidth={2} />
+      ) : (
+        <path d={`M44 ${my} Q50 ${my + 6} 56 ${my}`} fill="none" stroke={INK} strokeWidth={2.4} />
+      )}
+    </g>
+  );
+}
+
+// "Racer" buddies — ORIGINAL cartoon racers inspired by kart-racer art (cap with
+// a short brim + goggles pushed up on the forehead). No logos or real-character
+// likeness — just a friendly helmeted racer head in different team colors.
+function makeRacer(cap: string, capDark: string, opts: { skin?: string } = {}) {
+  const skin = opts.skin ?? '#f4c8a1';
+  return (e: MascotExpr) => (
+    <g {...OUTLINE}>
+      {/* ears */}
+      <circle cx="25" cy="56" r="5" fill={skin} />
+      <circle cx="75" cy="56" r="5" fill={skin} />
+      {/* head */}
+      <circle cx="50" cy="55" r="26" fill={skin} />
+      {/* hair peeking at the sides/back */}
+      <path d="M24 52 Q22 66 28 74 Q30 60 32 54 Z" fill="#3b2a1a" />
+      <path d="M76 52 Q78 66 72 74 Q70 60 68 54 Z" fill="#3b2a1a" />
+      {/* cap dome + brim to the right */}
+      <path d="M22 41 Q50 6 78 41 Q50 31 22 41 Z" fill={cap} />
+      <path d="M68 40 Q92 39 90 50 Q78 47 68 45 Z" fill={cap} />
+      <path d="M22 41 Q50 31 78 41 L78 45 Q50 35 22 45 Z" fill={capDark} stroke="none" />
+      {/* goggles pushed up on the forehead */}
+      <rect x="26" y="40" width="48" height="9" rx="4" fill="#374151" />
+      <circle cx="39" cy="44.5" r="6" fill="#93c5fd" stroke={INK} strokeWidth={2} />
+      <circle cx="61" cy="44.5" r="6" fill="#93c5fd" stroke={INK} strokeWidth={2} />
+      <circle cx="37" cy="42.5" r="1.6" fill="#fff" stroke="none" />
+      <circle cx="59" cy="42.5" r="1.6" fill="#fff" stroke="none" />
+      {/* face below the goggles */}
+      <Face cx={50} ey={58} spread={8} eyeR={5} mouthY={68} expr={e} cheek="#fb7185" />
+    </g>
+  );
+}
+
 // Chibi cow — tan head with pointy ears, little horns, a beige muzzle, blush and
 // a colourful cheek badge. (Inspired by a cow-mascot lineage; original art.)
 function Cow(e: MascotExpr) {
@@ -766,6 +883,17 @@ const PARTS: Record<MascotKind, (e: MascotExpr) => JSX.Element> = {
   capsuleM: makeCapsule('#10b981', '#047857'),
   cow: Cow,
   bull: Bull,
+  gizmoTeal: makeGoggle('#2dd4bf', '#0f766e', { antenna: '#f59e0b' }),
+  gizmoCoral: makeGoggle('#fb7185', '#be123c', { antenna: '#fcd34d' }),
+  gizmoViolet: makeGoggle('#a78bfa', '#6d28d9', { antenna: '#34d399' }),
+  gizmoLime: makeGoggle('#a3e635', '#4d7c0f', { antenna: '#f472b6' }),
+  gizmoCyan: makeGoggle('#38bdf8', '#0369a1', { eyes: 1, antenna: '#f59e0b' }),
+  gizmoSun: makeGoggle('#fb923c', '#c2410c', { eyes: 3, antenna: '#22d3ee' }),
+  gizmoRose: makeGoggle('#f472b6', '#be185d', { antenna: '#a3e635', spring: true }),
+  gizmoSlate: makeGoggle('#94a3b8', '#475569', { antenna: '#f43f5e' }),
+  racerRed: makeRacer('#ef4444', '#b91c1c'),
+  racerGreen: makeRacer('#22c55e', '#15803d', { skin: '#e8b58a' }),
+  racerViolet: makeRacer('#a855f7', '#7e22ce', { skin: '#caa27a' }),
 };
 
 export function Mascot({
@@ -830,6 +958,7 @@ export const GAME_MASCOT: Record<string, MascotKind> = {
   chess: 'robot',
   starhop: 'unicorn',
   crawler: 'fox',
+  carpenter: 'raccoon',
 };
 
 export function gameMascot(id: string): MascotKind {

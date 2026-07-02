@@ -7,16 +7,14 @@ import { AnswerInput } from '../../components/AnswerInput';
 import { Explanation } from '../../components/Explanation';
 import { LessonCard } from '../../components/LessonCard';
 import { LESSONS, type Lesson } from '../../data/lessons';
-import { useProgress, type ArcadeConfig } from '../../state/progress';
+import { useProgress, type ArcadeConfig, LESSON_COINS } from '../../state/progress';
 import { useLessonClock } from '../../hooks/useLessonClock';
 import { Link } from 'react-router-dom';
 import { ArcadeHeader, ArcadeSessionContext, ARCADE_GAMES, PREMIUM_GAMES } from './shared';
-import { MidGameChallenge } from './MidGameChallenge';
 import { HeroSplash, Countdown } from './HeroSplash';
 import { HowToPlay } from './HowToPlay';
 import { getHowTo } from './howto';
 import { gameMascot } from './Mascots';
-import { MathBreak } from './MathBreak';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // The arcade "learn-to-play" gate. A full lesson + a hard difficulty-3 check
@@ -24,7 +22,8 @@ import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 // game session; the admin can require more than one via `lessonsPerSession`.
 // Lessons are always hard, never easy. Lesson time is tracked toward the
 // cumulative lesson:game balance, and (via `earnRatio`) earns game time.
-// While unlocked, a mid-game math challenge can interrupt play at an interval.
+// Play is NEVER interrupted mid-game: math happens between games (this gate),
+// at big in-game milestones, and on each game's end card.
 
 function pick<T>(a: T[]): T {
   return a[Math.floor(Math.random() * a.length)];
@@ -50,16 +49,19 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   const cumArcade = useProgress((s) => s.cumArcadeSeconds);
   const cumLesson = useProgress((s) => s.cumLessonSeconds);
   const unlockedGames = useProgress((s) => s.unlockedGames);
+  const coins = useProgress((s) => s.coins);
+  const spendCoins = useProgress((s) => s.spendCoins);
+  const addCoins = useProgress((s) => s.addCoins);
   const [unlocked, setUnlocked] = useState(false);
   const [sessionKey, setSessionKey] = useState(0);
   const [lessonsDone, setLessonsDone] = useState(0);
-  const [challengeActive, setChallengeActive] = useState(false);
-  const [storyActive, setStoryActive] = useState(false);
   const [showSplash, setShowSplash] = useState(config.unlimited);
   const [showDirections, setShowDirections] = useState(config.unlimited);
   const [counting, setCounting] = useState(config.unlimited);
-  const playSecRef = useRef(0);
-  const storySecRef = useRef(0);
+  // Per-game time cap (default 3 min) + extend flow.
+  const sessionRef = useRef(0);
+  const [timeUp, setTimeUp] = useState(false);
+  const [extending, setExtending] = useState(false);
 
   // Count lesson time toward the balance only while the gate is showing.
   useLessonClock(unlocked);
@@ -67,51 +69,38 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   const need = Math.max(1, config.lessonsPerSession);
   const game = ARCADE_GAMES.find((g) => g.name === title);
 
-  // Time budget: you can't play more game time than your lessons have earned.
-  const overBudget = config.earnRatio > 0 && cumArcade >= cumLesson * config.earnRatio;
+  const cap = config.gameMaxSeconds ?? 180;
+  const extendMin = config.extendMinutes ?? 3;
+  const extendCost = config.extendCoinCost ?? 10;
+  const capOn = !config.unlimited && cap > 0;
+
+  // Time budget (legacy): only enforced when the simpler per-game cap is OFF.
+  const overBudget = !capOn && config.earnRatio > 0 && cumArcade >= cumLesson * config.earnRatio;
   useEffect(() => {
     if (unlocked && !config.unlimited && overBudget) {
       setUnlocked(false);
       setLessonsDone(0);
-      setChallengeActive(false);
     }
   }, [unlocked, overBudget, config.unlimited]);
 
-  // Mid-game challenge timer — counts active play seconds while a game is up.
+  // Per-game session cap: count active play seconds; freeze at the cap.
   useEffect(() => {
-    if (!unlocked || challengeActive || config.challengeInterval <= 0) return;
+    if (!unlocked || !capOn || timeUp || extending) return;
     const id = window.setInterval(() => {
-      if (document.hidden || storyActive || counting) return;
-      playSecRef.current += 1;
-      if (playSecRef.current >= config.challengeInterval) {
-        playSecRef.current = 0;
-        setChallengeActive(true);
-      }
+      if (document.hidden || showSplash || showDirections || counting) return;
+      sessionRef.current += 1;
+      if (sessionRef.current >= cap) setTimeUp(true);
     }, 1000);
     return () => window.clearInterval(id);
-  }, [unlocked, challengeActive, storyActive, counting, config.challengeInterval]);
+  }, [unlocked, capOn, timeUp, extending, cap, showSplash, showDirections, counting]);
 
-  // Math-break timer — a forced math story / mathematician every N minutes.
-  useEffect(() => {
-    if (!unlocked || storyActive || config.storyInterval <= 0) return;
-    const id = window.setInterval(() => {
-      if (document.hidden || challengeActive || counting) return;
-      storySecRef.current += 1;
-      if (storySecRef.current >= config.storyInterval * 60) {
-        storySecRef.current = 0;
-        setStoryActive(true);
-      }
-    }, 1000);
-    return () => window.clearInterval(id);
-  }, [unlocked, storyActive, challengeActive, counting, config.storyInterval]);
+  const resetSession = () => { sessionRef.current = 0; setTimeUp(false); setExtending(false); };
+  const buyTime = () => { if (spendCoins(extendCost)) resetSession(); };
 
   const enterPlay = () => {
     setLessonsDone(0);
     setSessionKey((k) => k + 1);
-    playSecRef.current = 0;
-    storySecRef.current = 0;
-    setChallengeActive(false);
-    setStoryActive(false);
+    resetSession();
     setShowSplash(true);
     setShowDirections(true);
     setCounting(true);
@@ -125,12 +114,9 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   };
 
   const requestReplay = () => {
+    resetSession();
     if (config.unlimited) {
       setSessionKey((k) => k + 1); // unlimited: just restart, no lesson
-      playSecRef.current = 0;
-      storySecRef.current = 0;
-      setChallengeActive(false);
-      setStoryActive(false);
       setShowSplash(true);
       setShowDirections(true);
       setCounting(true);
@@ -138,7 +124,6 @@ export function ArcadeGate({ title, children }: { title: string; children: React
     }
     setUnlocked(false);
     setLessonsDone(0);
-    setChallengeActive(false);
   };
 
   // Entry sequence overlays, in order. They only show when we have a game def;
@@ -148,25 +133,30 @@ export function ArcadeGate({ title, children }: { title: string; children: React
   const countdownVisible = !splashVisible && !directionsVisible && counting;
 
   const playArea = (
-    <ArcadeSessionContext.Provider value={{ requestReplay, paused: challengeActive || splashVisible || directionsVisible || countdownVisible || storyActive }}>
+    <ArcadeSessionContext.Provider value={{ requestReplay, paused: splashVisible || directionsVisible || countdownVisible || timeUp || extending }}>
       <div key={sessionKey}>{children}</div>
-      {storyActive && (
-        <MathBreak
-          onDone={() => {
-            setStoryActive(false);
-            storySecRef.current = 0;
-          }}
+      {/* per-game time cap: freeze and offer a lesson / coins to extend */}
+      {timeUp && !extending && (
+        <TimeUpOverlay
+          coins={coins}
+          cost={extendCost}
+          minutes={extendMin}
+          onCoins={buyTime}
+          onLesson={() => setExtending(true)}
         />
       )}
-      {challengeActive && config.challengeInterval > 0 && (
-        <MidGameChallenge
-          count={config.challengeCount}
-          level={config.challengeLevel}
-          onDone={() => {
-            setChallengeActive(false);
-            playSecRef.current = 0;
-          }}
-        />
+      {extending && (
+        <div className="fixed inset-0 z-[60] overflow-y-auto bg-white">
+          <LessonGate
+            key={`extend-${sessionKey}`}
+            title={title}
+            emoji={game?.emoji ?? '🎯'}
+            config={config}
+            index={0}
+            total={1}
+            onComplete={() => { addCoins(LESSON_COINS); resetSession(); }}
+          />
+        </div>
       )}
       {splashVisible && game ? (
         <HeroSplash
@@ -225,6 +215,69 @@ export function ArcadeGate({ title, children }: { title: string; children: React
       total={need}
       onComplete={onLessonComplete}
     />
+  );
+}
+
+// Shown when a game hits its per-session time cap. Two ways to keep playing:
+// spend coins earned from lessons, or do a lesson (which earns more coins).
+function TimeUpOverlay({
+  coins,
+  cost,
+  minutes,
+  onCoins,
+  onLesson,
+}: {
+  coins: number;
+  cost: number;
+  minutes: number;
+  onCoins: () => void;
+  onLesson: () => void;
+}) {
+  const canAfford = coins >= cost;
+  return (
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-slate-900/70 backdrop-blur-sm p-4">
+      <div className="w-full max-w-xs rounded-3xl border-4 border-slate-900 bg-white p-5 text-center shadow-2xl">
+        <div className="text-5xl">⏰</div>
+        <div className="mt-1 font-display text-2xl font-black text-slate-900">Time&apos;s up!</div>
+        <p className="mt-1 text-sm font-display font-bold text-slate-600">
+          Great playing! Earn more time with math.
+        </p>
+        <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1 font-display font-extrabold text-amber-800">
+          🪙 {coins} coins
+        </div>
+
+        <button
+          type="button"
+          onClick={onCoins}
+          disabled={!canAfford}
+          className={`mt-4 w-full min-h-14 rounded-2xl border-4 border-slate-900 font-display text-lg font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.25)] active:translate-y-0.5 ${
+            canAfford ? 'bg-amber-400 text-slate-900' : 'bg-slate-100 text-slate-400 border-slate-300 cursor-not-allowed shadow-none'
+          }`}
+        >
+          🪙 Spend {cost} → +{minutes} min
+        </button>
+        {!canAfford && (
+          <p className="mt-1 text-xs font-display font-bold text-slate-500">
+            Not enough coins — do a lesson to earn {LESSON_COINS}!
+          </p>
+        )}
+
+        <button
+          type="button"
+          onClick={onLesson}
+          className="mt-3 w-full min-h-14 rounded-2xl border-4 border-slate-900 bg-indigo-500 font-display text-lg font-extrabold text-white shadow-[0_4px_0_0_rgba(0,0,0,0.25)] active:translate-y-0.5"
+        >
+          📚 Do a lesson → +{minutes} min
+        </button>
+
+        <Link
+          to="/arcade"
+          className="mt-3 inline-block text-sm font-display font-bold text-slate-500 underline underline-offset-2"
+        >
+          ← Back to the arcade
+        </Link>
+      </div>
+    </div>
   );
 }
 

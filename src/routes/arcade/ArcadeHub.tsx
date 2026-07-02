@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useProgress, ARCADE_UNITS, ARCADE_UNIT_LABELS } from '../../state/progress';
 import { ARCADE_GAMES, PREMIUM_GAMES } from './shared';
-import { Mascot, gameMascot, type MascotKind } from './Mascots';
+import { Mascot, type MascotKind } from './Mascots';
 
 const UNIT_MASCOT: Record<string, MascotKind> = { '6.RP': 'frog', '6.NS': 'robot', '6.EE': 'dragon', '6.G': 'unicorn', '6.SP': 'penguin', g5: 'bunny', mixed: 'pet' };
 
@@ -151,53 +151,42 @@ export function ArcadeHub() {
         </div>
       )}
 
-      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {/* Mario-style game grid — 3 across on phones so you can see more games.
+          One big icon that matches the game, chunky black borders, no subtitle. */}
+      <div className="mt-4 grid grid-cols-3 sm:grid-cols-4 gap-2.5">
         {visibleGames.map((g) => {
           const done = playedToday.includes(g.id);
           const price = PREMIUM_GAMES[g.id];
           const locked = price != null && !unlockedGames.includes(g.id);
-          // A full lesson gates each game (handled by ArcadeGate on the route),
-          // so every unlocked tile stays clickable here. Locked premium games
-          // route to the Shop to unlock with coins instead.
-          if (locked) {
-            return (
-              <Link
-                key={g.id}
-                to="/shop"
-                className={`relative block rounded-3xl p-4 bg-gradient-to-br ${g.gradient} text-white shadow-md transition-all hover:shadow-lg`}
-              >
-                <div className="absolute inset-0 rounded-3xl bg-slate-900/55 flex flex-col items-center justify-center">
-                  <div className="text-3xl">🔒</div>
-                  <div className="mt-1 rounded-full bg-amber-400 text-amber-900 text-xs font-display font-extrabold px-3 py-1">Unlock · 🪙{price}</div>
-                </div>
-                <div className="text-3xl opacity-40">{g.emoji}</div>
-                <div className="font-display font-extrabold text-lg mt-1 opacity-40">{g.name}</div>
-                <div className="text-xs opacity-30 mt-0.5 line-clamp-2">{g.blurb}</div>
-              </Link>
-            );
-          }
+          const tile =
+            `relative flex flex-col items-center justify-start text-center rounded-2xl border-4 border-slate-900 ` +
+            `bg-gradient-to-br ${g.gradient} text-white px-1.5 pt-3 pb-2 ` +
+            `shadow-[0_5px_0_0_rgba(15,23,42,0.9)] transition-transform active:translate-y-1 active:shadow-[0_2px_0_0_rgba(15,23,42,0.9)]`;
+          // A full lesson gates each game (handled by ArcadeGate on the route);
+          // locked premium games route to the Shop to unlock with coins instead.
           return (
-            <Link
-              key={g.id}
-              to={g.path}
-              className={`relative block rounded-3xl p-4 bg-gradient-to-br ${g.gradient} text-white shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0`}
-            >
-              {done && (
-                <span className="absolute top-3 right-3 bg-white/90 text-green-700 text-[10px] font-display font-extrabold px-2 py-0.5 rounded-full">
-                  ✓ Played today
-                </span>
+            <Link key={g.id} to={locked ? '/shop' : g.path} className={tile}>
+              {done && !locked && (
+                <span className="absolute -top-1.5 -right-1.5 grid h-5 w-5 place-items-center rounded-full border-2 border-slate-900 bg-emerald-400 text-[10px] font-black text-slate-900">✓</span>
               )}
-              <span className="absolute top-3 left-3 bg-black/20 text-white text-[10px] font-display font-extrabold px-2 py-0.5 rounded-full">
-                📚 Lesson first
+              <span
+                className="text-4xl leading-none"
+                style={{ filter: 'drop-shadow(0 2px 0 rgba(0,0,0,0.35))' }}
+              >
+                {g.emoji}
               </span>
-              <div className="flex items-center gap-1.5">
-                <span className="rounded-2xl bg-white/25 p-1">
-                  <Mascot kind={gameMascot(g.id)} size={40} expr="cheer" />
-                </span>
-                <span className="text-2xl">{g.emoji}</span>
-              </div>
-              <div className="font-display font-extrabold text-lg mt-1">{g.name}</div>
-              <div className="text-xs opacity-90 mt-0.5 line-clamp-2">{g.blurb}</div>
+              <span
+                className="mt-1.5 font-display text-[11px] font-extrabold leading-tight line-clamp-2"
+                style={{ WebkitTextStroke: '0.4px rgba(0,0,0,0.35)' }}
+              >
+                {g.name}
+              </span>
+              {locked && (
+                <div className="absolute inset-0 grid place-items-center rounded-xl bg-slate-900/60">
+                  <div className="text-2xl">🔒</div>
+                  <div className="rounded-full border-2 border-slate-900 bg-amber-400 px-2 py-0.5 text-[10px] font-display font-black text-amber-900">🪙{price}</div>
+                </div>
+              )}
             </Link>
           );
         })}

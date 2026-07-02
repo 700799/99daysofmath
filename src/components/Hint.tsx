@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MathText } from './MathText';
+import { useProgress } from '../state/progress';
 import type { HintStep, HintLevel } from '../types/problem';
 
 interface Props {
@@ -29,8 +30,31 @@ const TIER_BADGE_STYLES: Record<HintLevel, string> = {
 
 export function Hint({ tiers, onReveal, onExplain }: Props) {
   const [revealed, setRevealed] = useState(0);
+  // Think-time pause applies to the ANSWER reveal only: before the final "Reveal"
+  // tier unlocks, a short countdown nudges the student to try first. Set by the
+  // grown-ups in Settings (arcadeConfig.answerRevealSeconds; 0 = instant).
+  const delay = useProgress((s) => s.arcadeConfig.answerRevealSeconds) ?? 15;
+  const [left, setLeft] = useState(0);
+
+  const nextTier = tiers[revealed]; // the tier the button would reveal next
+  const gateNext = !!nextTier && nextTier.level === 'reveal' && delay > 0;
+
+  // run the think-time countdown while the next tier to reveal is the answer
+  useEffect(() => {
+    if (!gateNext) { setLeft(0); return; }
+    setLeft(delay);
+    const start = Date.now();
+    const id = window.setInterval(() => {
+      const rem = Math.max(0, delay - Math.round((Date.now() - start) / 1000));
+      setLeft(rem);
+      if (rem <= 0) window.clearInterval(id);
+    }, 250);
+    return () => window.clearInterval(id);
+  }, [gateNext, delay, revealed]);
 
   if (tiers.length === 0) return null;
+
+  const locked = gateNext && left > 0; // answer reveal held during think-time
 
   const reveal = () => {
     if (revealed >= tiers.length) return;
@@ -40,19 +64,20 @@ export function Hint({ tiers, onReveal, onExplain }: Props) {
   };
 
   const more = revealed < tiers.length;
-  const buttonLabel =
-    revealed === 0
-      ? 'Show hint'
-      : more
-        ? 'Need another hint?'
-        : 'Hide hints';
+  const buttonLabel = !more
+    ? 'Hide hints'
+    : locked
+      ? `🧠 Think first… answer in ${left}s`
+      : nextTier?.level === 'reveal'
+        ? 'Reveal the answer'
+        : revealed === 0
+          ? 'Show hint'
+          : 'Need another hint?';
 
   const handleClick = () => {
-    if (more) {
-      reveal();
-    } else {
-      setRevealed(0);
-    }
+    if (!more) { setRevealed(0); return; }
+    if (locked) return;
+    reveal();
   };
 
   return (
@@ -60,9 +85,12 @@ export function Hint({ tiers, onReveal, onExplain }: Props) {
       <button
         type="button"
         onClick={handleClick}
-        className="min-h-11 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 hover:bg-amber-200 text-amber-900 font-display font-bold text-sm transition-colors"
+        disabled={locked}
+        className={`min-h-11 inline-flex items-center gap-2 px-4 py-2 rounded-full font-display font-bold text-sm transition-colors ${
+          locked ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : 'bg-amber-100 hover:bg-amber-200 text-amber-900'
+        }`}
       >
-        <span>💡</span>
+        <span>{locked ? '⏳' : '💡'}</span>
         <span>{buttonLabel}</span>
       </button>
       <AnimatePresence initial={false}>

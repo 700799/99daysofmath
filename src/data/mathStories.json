@@ -7,19 +7,35 @@
     "beats": [
       {
         "head": "The diner offer",
-        "body": "Two 7-inch pizzas for $12, or one 14-inch for $12. The 14-inch is double the diameter — same deal, right?"
+        "body": "Two 7-inch pizzas for $12, or one 14-inch for $12. The 14-inch is double the diameter — same deal, right? Before you answer, remember that pizza value is about AREA, not width."
       },
       {
         "head": "Diameters double, areas QUADRUPLE",
-        "body": "Pizza is round. Area = π × radius × radius. Double the radius means 4× the area."
+        "body": "Pizza is round, so we measure it with circle area: Area = π × radius × radius. Because the radius gets multiplied by ITSELF, doubling the radius means 2 × 2 = 4 times the area."
       },
       {
         "head": "The numbers",
-        "body": "One 7-inch ≈ 38 in² of pizza. One 14-inch ≈ 154 in². Two 7-inchers? Only 76 in²."
+        "body": "One 7-inch pizza is about 38 in² of food. One 14-inch is about 154 in². Two 7-inchers together? Only 76 in² — barely half of the big one, for the same price."
       },
       {
         "head": "Pick the big one",
-        "body": "Always. A bigger circle gives WAY more pizza per dollar than two small ones at the same diameter total."
+        "body": "Pick the big one — always. A bigger circle gives WAY more pizza per dollar than two small ones with the same total diameter, because area grows with the SQUARE of the size."
+      },
+      {
+        "head": "Work it with π ≈ 3",
+        "body": "Try the math yourself with π ≈ 3. The 7-inch has radius 3.5, so area ≈ 3 × 3.5 × 3.5 ≈ 37 in². The 14-inch has radius 7: 3 × 7 × 7 = 147 in². Four times bigger!"
+      },
+      {
+        "head": "Pro tip: compare per dollar",
+        "body": "Pro tip: divide area by price to get square inches per dollar. 154 ÷ 12 ≈ 13 in² per dollar for the big pizza, but only 76 ÷ 12 ≈ 6 for the two small ones."
+      },
+      {
+        "head": "Trap: judging by diameter",
+        "body": "Trap: “14 is double 7, so it’s double the pizza.” Wrong! Diameter is a LENGTH, but food is an AREA. Lengths double; areas quadruple. Never compare circles by width alone."
+      },
+      {
+        "head": "Real-world radar",
+        "body": "This shows up everywhere: TV screens, cake pans, garden hoses, even pupil sizes. Whenever something is measured by one length but used as an area, small size changes make surprisingly big differences."
       }
     ],
     "learned": "Area grows by the SQUARE of the size — circles especially.",
@@ -33,19 +49,35 @@
     "beats": [
       {
         "head": "Track day",
-        "body": "A runner wants to get from point A to point B on the track. They could run east 3 meters, then north 4. Or just go diagonally."
+        "body": "A runner wants to get from point A to point B on the track. They could run east 3 meters, then north 4 meters — or just cut straight across the grass diagonally. Which path is smarter?"
       },
       {
         "head": "Which is shorter?",
-        "body": "East 3 + North 4 = 7 meters total. The diagonal is shorter — but how much?"
+        "body": "Going east 3 + north 4 = 7 meters of running in total. The diagonal is clearly shorter — but by exactly how much? Guessing isn’t enough; geometry can tell us the precise answer."
       },
       {
         "head": "Pythagoras to the rescue",
-        "body": "Diagonal² = 3² + 4² = 25. So diagonal = 5. Six steps shorter? Actually only 2."
+        "body": "Pythagoras to the rescue: in a right triangle, diagonal² = 3² + 4² = 9 + 16 = 25, so the diagonal = 5 meters. You expected to save a lot? The shortcut saves exactly 2 meters."
       },
       {
         "head": "Coords matter",
-        "body": "On a coordinate plane, going (3, 4) means 3 right and 4 up. The straight-line distance is what really counts."
+        "body": "On a coordinate plane, moving (3, 4) means 3 right and 4 up — two separate legs of a right triangle. The straight-line distance between the points is the hypotenuse, and that’s what really counts."
+      },
+      {
+        "head": "Another example: 6 and 8",
+        "body": "Try legs of 6 and 8. Then diagonal² = 36 + 64 = 100, so the diagonal is 10. Notice it’s just the 3-4-5 triangle doubled — scaling a right triangle keeps the same ratios."
+      },
+      {
+        "head": "Pro tip: spot the right angle",
+        "body": "Pro tip: the shortcut formula only works when the two legs meet at a RIGHT angle, like grid streets. East and north always do, which is why coordinate grids and Pythagoras are best friends."
+      },
+      {
+        "head": "Trap: adding the legs",
+        "body": "Trap: adding 3 + 4 and calling the diagonal 7. The diagonal is always SHORTER than the two legs combined — that’s the whole point of a shortcut. Square, add, then take the root."
+      },
+      {
+        "head": "Where you’ll use it",
+        "body": "Game designers use this constantly: how far apart are two characters on screen? Drones, GPS apps, and even football commentators computing a pass distance all use the same right-triangle math."
       }
     ],
     "learned": "Diagonal distance on the grid is ALWAYS shorter than the L-shape.",
@@ -59,19 +91,35 @@
     "beats": [
       {
         "head": "The deal",
-        "body": "Your boss offers: $1,000,000 cash, OR one penny today that doubles every day for 30 days. Which wins?"
+        "body": "Your boss offers a choice: $1,000,000 cash right now, OR one penny today that doubles every single day for 30 days. Which offer actually wins? Your instinct might betray you here."
       },
       {
         "head": "Most kids pick the million",
-        "body": "It looks like a no-brainer. But that 'tiny' penny is hiding a secret: exponents grow scary fast."
+        "body": "Most kids pick the million — it looks like a no-brainer. But that “tiny” penny is hiding a secret: doubling is an EXPONENT, and exponential growth starts slow, then grows scary fast."
       },
       {
         "head": "Let's count",
-        "body": "Day 5: 16¢. Day 10: $5. Day 20: $5,000. Day 30: BOOM."
+        "body": "Let’s count the doubling: Day 5 is only 16¢. Day 10 is about $5. Day 20 jumps to roughly $5,000. Each doubling multiplies everything that came before — Day 30: BOOM."
       },
       {
         "head": "The winner",
-        "body": "Day 30: $5,368,709.12. Five times the million!"
+        "body": "Day 30 lands on $5,368,709.12 — more than FIVE times the million dollars. The penny wins because 2 multiplied by itself 29 times is over 500 million pennies."
+      },
+      {
+        "head": "The math behind it",
+        "body": "The amount on day n is 1¢ × 2 raised to the (n − 1) power. Day 30 means 2²⁹ pennies. Exponents count repeated MULTIPLICATION, and multiplication compounds far faster than addition ever can."
+      },
+      {
+        "head": "Pro tip: watch the last doubles",
+        "body": "Pro tip: half of all the money arrives on the very last day! Each double equals everything before it, so with exponential growth the final steps matter the most. Never quit doubling early."
+      },
+      {
+        "head": "Trap: thinking in straight lines",
+        "body": "Trap: assuming growth is a straight line, like +$100 a day. Linear growth adds; exponential growth multiplies. Our brains expect lines, which is exactly why the penny fools almost everyone."
+      },
+      {
+        "head": "Doubling in real life",
+        "body": "Doubling rules the real world: bank interest compounds, viral videos spread, bacteria colonies double every few hours. Understanding exponents helps you spot when something small is about to become enormous."
       }
     ],
     "learned": "Exponents (doubling, tripling…) explode much faster than adding.",
@@ -85,19 +133,35 @@
     "beats": [
       {
         "head": "Italy, year 1202",
-        "body": "Fibonacci asks: if a pair of rabbits has a new pair every month, how many pairs after a year?"
+        "body": "In Italy, year 1202, Fibonacci poses a puzzle: if a pair of rabbits produces a new pair every month, how many pairs will there be after a year? The answer hides a famous pattern."
       },
       {
         "head": "Each month",
-        "body": "Every rabbit pair from last month is still here, PLUS every pair that was around two months ago has a new pair."
+        "body": "Every rabbit pair from last month is still here, PLUS every pair that was around two months ago has a new pair. So each month’s total is built from the two months before it."
       },
       {
         "head": "The pattern",
-        "body": "1, 1, 2, 3, 5, 8, 13, 21… Each number = sum of the two before it."
+        "body": "The pattern goes 1, 1, 2, 3, 5, 8, 13, 21… Each number equals the SUM of the two numbers before it — a simple rule that generates the sequence forever."
       },
       {
         "head": "It's everywhere",
-        "body": "Sunflower seeds spiral in Fibonacci numbers. So do pinecones and seashells. Nature loves this pattern."
+        "body": "It’s everywhere in nature: sunflower seeds spiral in Fibonacci counts, and so do pinecones, pineapples, and seashells. Nature loves this pattern because it packs new growth efficiently around old growth."
+      },
+      {
+        "head": "Work the next terms",
+        "body": "Extend it yourself: after 21 comes 13 + 21 = 34, then 21 + 34 = 55, then 34 + 55 = 89. After twelve months, Fibonacci’s rabbit count reaches 144 pairs!"
+      },
+      {
+        "head": "Pro tip: write the rule",
+        "body": "Pro tip: don’t memorize the list — memorize the RULE: next = previous + one-before-previous. A rule that builds each term from earlier terms is called a recurrence, and it fits in one sentence."
+      },
+      {
+        "head": "Trap: adding the wrong pair",
+        "body": "Trap: adding a number to ITSELF instead of to its neighbor. After 5, 8 the next term is 5 + 8 = 13, not 8 + 8 = 16. Always add the LAST TWO terms."
+      },
+      {
+        "head": "The golden connection",
+        "body": "Divide neighboring Fibonacci numbers — 21 ÷ 13, 34 ÷ 21, 55 ÷ 34 — and the answers creep toward 1.618, the “golden ratio” that artists and architects have loved for centuries."
       }
     ],
     "learned": "A rule that links each term to the previous ones is called a RECURRENCE.",
@@ -111,19 +175,35 @@
     "beats": [
       {
         "head": "A party",
-        "body": "20 friends at a party. Everyone shakes hands with everyone else, ONCE. How many handshakes total?"
+        "body": "Twenty friends are at a party, and everyone shakes hands with everyone else exactly ONCE. How many handshakes happen in total? Counting them one by one would take all night."
       },
       {
         "head": "Start small",
-        "body": "With 6 people, draw lines between every pair. Count: 15 lines."
+        "body": "Start small to find the pattern: with 6 people, draw a dot for each person and a line between every pair. Count the lines carefully and you get exactly 15 handshakes."
       },
       {
         "head": "The pattern",
-        "body": "Each of n people shakes hands with n-1 others. Each handshake is counted TWICE, so divide by 2."
+        "body": "Here’s the pattern: each of n people shakes hands with the other n − 1 people. But that counts every handshake TWICE — once from each side — so we divide the product by 2."
       },
       {
         "head": "Solve it",
-        "body": "20 × 19 ÷ 2 = 190 handshakes. The formula n(n-1)/2 works for any size party."
+        "body": "Now solve the party: 20 × 19 ÷ 2 = 380 ÷ 2 = 190 handshakes. The formula n(n − 1) ÷ 2 works instantly for any size party, no drawing required."
+      },
+      {
+        "head": "Try a bigger party",
+        "body": "A school dance with 100 students? 100 × 99 ÷ 2 = 4,950 handshakes. Notice how doubling isn’t what happens — five times the people gave us about twenty-six times the handshakes. Pairs explode fast."
+      },
+      {
+        "head": "Pro tip: pairs are everywhere",
+        "body": "Pro tip: this same formula counts ANY kind of pairing — matches in a round-robin tournament, high-fives, direct flights between cities, or lines connecting dots. Spot the word “every pair” and reach for n(n − 1) ÷ 2."
+      },
+      {
+        "head": "Trap: forgetting to halve",
+        "body": "Trap: answering 20 × 19 = 380. That counts Ana-shaking-Ben AND Ben-shaking-Ana as two different handshakes, but it’s the same event. One handshake involves two people, so always divide by 2."
+      },
+      {
+        "head": "From pattern to formula",
+        "body": "This is how real mathematicians work: test tiny cases, spot the structure, then write a formula that answers EVERY case at once. A good formula is a pattern you never have to re-count."
       }
     ],
     "learned": "When you spot a pattern, write a formula — it works for ANY size.",
@@ -137,19 +217,35 @@
     "beats": [
       {
         "head": "The inventor's prize",
-        "body": "Long ago, a wise man invented chess. The king offered any reward. The inventor asked for rice."
+        "body": "Long ago, a wise man invented the game of chess. The delighted king offered him any reward he could name. The inventor smiled and asked for something that sounded humble: rice."
       },
       {
         "head": "Sounds small",
-        "body": "'One grain on square 1, two on square 2, four on square 3, doubling all the way.' The king laughed and agreed."
+        "body": "“One grain on square 1, two on square 2, four on square 3 — doubling on every square, all 64 of them.” The king laughed at such a small request and agreed instantly."
       },
       {
         "head": "Filling the table",
-        "body": "Square 10 = 512. Square 20 = a million. Square 32 = 2.1 billion. The numbers EXPLODE."
+        "body": "Filling the board starts calmly, then explodes: square 10 holds 512 grains, square 20 over a million, square 32 about 2.1 billion. Doubling multiplies everything that came before, so the numbers EXPLODE."
       },
       {
         "head": "Bankrupt",
-        "body": "Square 64 alone needs 2⁶³ grains — more rice than has ever existed on Earth."
+        "body": "Square 64 alone needs 2⁶³ grains — about 9 quintillion, more rice than has ever existed on Earth. The king was bankrupted by exponents he mistook for simple addition."
+      },
+      {
+        "head": "Feel the powers of 2",
+        "body": "The pattern is powers of two: square n holds 2 to the (n − 1) power. Ten doublings multiply by about 1,000. So every 10 squares, the pile grows a THOUSAND times bigger."
+      },
+      {
+        "head": "Pro tip: the 2-4-8 ladder",
+        "body": "Pro tip: memorize the small ladder 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024. Knowing that 2¹⁰ ≈ 1,000 lets you estimate huge doubling problems in your head."
+      },
+      {
+        "head": "Trap: doubling ≠ adding 2",
+        "body": "Trap: treating doubling like adding. 2, 4, 6, 8 is an ADDING pattern that reaches only 128 by square 64. True doubling — 2, 4, 8, 16 — reaches 9,223,372,036,854,775,808. Exponents are a different universe."
+      },
+      {
+        "head": "Same math, new places",
+        "body": "Computer memory doubles this way too — kilobyte, megabyte, gigabyte, terabyte each jump by about 1,000 (ten doublings). The chessboard puzzle is literally how engineers think about data sizes."
       }
     ],
     "learned": "When a table doubles row by row, the values get scary big — fast.",
@@ -163,19 +259,35 @@
     "beats": [
       {
         "head": "4,500 years ago",
-        "body": "Egyptians had no rulers or fancy tools — yet the Pyramid corners are PERFECT right angles. How?"
+        "body": "About 4,500 years ago, Egyptians had no steel rulers or laser levels — yet the Great Pyramid’s corners are PERFECT right angles. How did they build so precisely with just rope and rocks?"
       },
       {
         "head": "A knotted rope",
-        "body": "They tied 12 evenly spaced knots in a rope. Three workers stretched it into a triangle with sides 3, 4, and 5 knots."
+        "body": "Their tool was a knotted rope: 12 evenly spaced knots tied in a loop. Three workers pulled it tight into a triangle with sides of exactly 3, 4, and 5 knot-lengths."
       },
       {
         "head": "Why those numbers?",
-        "body": "3² + 4² = 5². When sides are 3, 4, 5 (or any 3:4:5 ratio), the corner is EXACTLY 90°. Magic."
+        "body": "Why those numbers? Because 3² + 4² = 9 + 16 = 25 = 5². Whenever a triangle’s sides fit that squared relationship, the corner opposite the longest side is EXACTLY 90°. Rope-made magic."
       },
       {
         "head": "Still used today",
-        "body": "Carpenters, builders, and gardeners still use this trick to make square corners without fancy tools."
+        "body": "The trick never expired: carpenters, builders, and gardeners still measure 3 feet, 4 feet, and check the diagonal is 5 to make square corners. Ancient technology, still perfectly accurate today."
+      },
+      {
+        "head": "Scale it up",
+        "body": "Any multiple works too: 6-8-10, 9-12-15, even 30-40-50 for a whole building site. Multiplying all three sides by the same number keeps the ratios — and the right angle — perfectly intact."
+      },
+      {
+        "head": "Pro tip: check corners backwards",
+        "body": "Pro tip: use it in reverse to TEST a corner. Mark 3 units along one edge and 4 along the other; if the diagonal between the marks isn’t exactly 5, your corner isn’t square."
+      },
+      {
+        "head": "Trap: any old triangle",
+        "body": "Trap: thinking every triangle with a 5 side has a right angle. Sides 2-4-5 give 4 + 16 = 20, not 25 — no right angle. The SQUARES must add up exactly."
+      },
+      {
+        "head": "Why right angles matter",
+        "body": "Right angles make walls stand straight, floors lie flat, and bricks stack without leaning. One knotted rope solved a problem that every builder in history has faced: how do you trust a corner?"
       }
     ],
     "learned": "The 3-4-5 ratio always makes a right angle. Ancient tech, still works.",
@@ -189,43 +301,59 @@
     "beats": [
       {
         "head": "Ancient Egypt, 350 AD",
-        "body": "A baby girl named Hypatia is born in the city of Alexandria, Egypt. Her father runs the most famous school of math and astronomy in the entire world: the Library of Alexandria."
+        "body": "A baby girl named Hypatia is born around 350 AD in Alexandria, Egypt. Her father runs the most famous school of math and astronomy in the entire ancient world: the great Library of Alexandria."
       },
       {
         "head": "Her dad's bet",
-        "body": "Most girls of her time would learn to weave cloth. Her father makes a wild bet: he'll teach her math, science, and philosophy — the same way he'd teach a son. Hypatia turns out to be a prodigy."
+        "body": "Most girls of her time would learn only to weave cloth and run a home. Her father makes a wild bet: he’ll teach her math, science, and philosophy — exactly as he’d teach a son. Hypatia turns out to be a prodigy."
       },
       {
         "head": "The shapes nobody could explain",
-        "body": "Hypatia falls in love with POLYGONS — triangles, squares, pentagons, hexagons. Especially regular ones, where every side and every angle is exactly the same."
+        "body": "Hypatia falls in love with POLYGONS — triangles, squares, pentagons, hexagons. Especially the regular ones, where every side and every angle is exactly the same, because their perfect symmetry makes their properties predictable."
       },
       {
         "head": "Why polygons matter",
-        "body": "Builders used polygons to make pillars. Sailors used them to navigate. Painters used them to make perspective work. Polygons were like the LEGO bricks of the ancient world."
+        "body": "Why did polygons matter so much? Builders used them to design pillars, sailors used them to navigate by the stars, and painters used them to make perspective work. Polygons were the LEGO bricks of the ancient world."
       },
       {
         "head": "Slicing a cone",
-        "body": "Her best work was about 'conic sections' — what shapes you get when you slice a cone at different angles. A flat slice gives a circle. A tilted slice gives a stretched circle called an ellipse. Wild stuff."
+        "body": "Her best work explained “conic sections” — the shapes you get when you slice a cone at different angles. A level slice gives a circle; a tilted slice stretches it into an ellipse. One solid, a whole family of curves."
       },
       {
         "head": "Famous teacher",
-        "body": "By age 30, Hypatia is the most respected teacher in Alexandria. Students travel for months from Italy, Greece, Syria, and Persia just to sit in her classroom. Her name appears in letters across the Mediterranean."
+        "body": "By age 30, Hypatia is the most respected teacher in Alexandria. Students travel for months from Italy, Greece, Syria, and Persia just to sit in her classroom, and her name appears in letters all across the Mediterranean."
       },
       {
         "head": "Her style",
-        "body": "She wears a philosopher's robe instead of fancy clothes. She invents teaching tools — a hydrometer, an astrolabe — so students can SEE the math instead of just hearing it."
+        "body": "Her style was hands-on: she wears a plain philosopher’s robe instead of fancy clothes and invents teaching tools — a hydrometer, an astrolabe — so students can SEE and touch the math instead of just hearing it described."
       },
       {
         "head": "Dangerous times",
-        "body": "But Alexandria is splitting apart. Different religious groups fight for power. Hypatia refuses to pick a side — she just wants to do math. That makes her enemies in 415 AD."
+        "body": "But Alexandria is splitting apart as different religious and political groups fight for power. Hypatia refuses to pick a side — she just wants to teach mathematics. In the year 415 AD, staying neutral makes her powerful enemies."
       },
       {
         "head": "Her math survives",
-        "body": "Even though her enemies destroy much of her work, students copy what they remember and carry it abroad. Her commentaries on polygons and conic sections survive for 1,600 years — long enough for us to read them today."
+        "body": "Even though her enemies destroy much of her work, her students copy what they remember and carry it abroad to new schools. Her commentaries on polygons and conic sections survive for 1,600 years — long enough for us to read today."
       },
       {
         "head": "Why she matters",
-        "body": "Hypatia proved that math has no gender, no nationality, no religion. A polygon is a polygon for anyone who studies it carefully. That idea is the foundation of every math class you'll ever take."
+        "body": "Hypatia proved that math has no gender, no nationality, and no religion. A polygon obeys the same rules for anyone who studies it carefully, and that fairness is the quiet foundation of every math class you will ever take."
+      },
+      {
+        "head": "Polygon math you can do",
+        "body": "Here’s polygon math Hypatia knew: a hexagon splits into 6 identical triangles from its center. If each triangle has area 4, the hexagon’s area is 6 × 4 = 24. Split, solve, multiply."
+      },
+      {
+        "head": "Pro tip: cut shapes apart",
+        "body": "Pro tip: when a shape looks hard, slice it into triangles and rectangles you already understand. Every polygon area formula — even the fancy ones — comes from clever cutting and re-adding."
+      },
+      {
+        "head": "Trap: “regular” means special",
+        "body": "Trap: calling any six-sided shape a regular hexagon. Regular means ALL sides equal AND all angles equal. A stretched, lopsided hexagon is still a hexagon — but none of the neat regular-polygon rules apply."
+      },
+      {
+        "head": "Her legacy in your app",
+        "body": "When you compute the area of a triangle or figure out a composite shape in the Geometry unit, you’re using tools Hypatia taught in a stone classroom sixteen centuries ago. Good math never expires."
       }
     ],
     "learned": "Polygons (3 sides, 4 sides, 6 sides…) are the LEGO bricks of geometry. Hypatia studied them 1,600 years ago and the same rules still work today.",
@@ -239,19 +367,35 @@
     "beats": [
       {
         "head": "Suspicious king",
-        "body": "A Greek king gave his goldsmith pure gold for a crown. He suspects the smith mixed in cheap silver."
+        "body": "A Greek king gave his goldsmith a lump of pure gold to make a crown. When it came back, the king grew suspicious: had the smith secretly mixed in cheaper silver and pocketed some gold?"
       },
       {
         "head": "How to test?",
-        "body": "The crown weighs the right amount. But silver is LIGHTER per volume than gold — so a fake would take up MORE space."
+        "body": "How could anyone test it? The crown weighs exactly the right amount. But silver is LIGHTER per volume than gold — so a fake crown of equal weight would have to take up MORE space."
       },
       {
         "head": "Bath time",
-        "body": "Archimedes hops in a full tub and water spills over. He realizes: an object pushes out water equal to its OWN volume."
+        "body": "At bath time, Archimedes hops into a full tub and water spills over the edge. Eureka! He realizes an object pushes aside water equal to its OWN volume — a way to measure any shape."
       },
       {
         "head": "Caught!",
-        "body": "He dunks the crown. It pushes out more water than pure gold would. The crown was a fake."
+        "body": "Caught! He dunks the crown and measures the overflow. It pushes out more water than an equal weight of pure gold would. More volume means silver inside — the crown was a fake."
+      },
+      {
+        "head": "The numbers behind it",
+        "body": "Try it with numbers: 1,000 grams of gold fills about 52 mL, but 1,000 grams of silver fills about 95 mL. Same weight, nearly double the space — the overflow gap is easy to spot."
+      },
+      {
+        "head": "Pro tip: volume by dunking",
+        "body": "Pro tip: you can measure ANY weird shape’s volume this way. Fill a measuring cup, submerge the object, and read how much the water rises. The rise IS the volume — no formula needed."
+      },
+      {
+        "head": "Trap: weight vs volume",
+        "body": "Trap: thinking equal weight means equal size. Weight measures how heavy; volume measures how much SPACE. A kilogram of feathers and a kilogram of gold weigh the same but fill wildly different volumes."
+      },
+      {
+        "head": "Density: the ratio",
+        "body": "Weight ÷ volume gives DENSITY, a ratio fingerprint for every material. Gold is about 19 g/mL, silver 10.5 g/mL, water exactly 1. Scientists still identify unknown materials with Archimedes’ bathtub idea."
       }
     ],
     "learned": "Volume = space something takes up. Water can measure it directly.",
@@ -265,47 +409,63 @@
     "beats": [
       {
         "head": "Tehran, Iran, 1977",
-        "body": "Maryam Mirzakhani is born to a normal middle-class family in Tehran. As a kid, she WANTS to be a writer. She reads novels, writes stories, dreams of being the next Jane Austen."
+        "body": "Maryam Mirzakhani is born in 1977 to a normal middle-class family in Tehran, Iran. As a kid she WANTS to be a writer — she devours novels, writes stories, and dreams of being the next Jane Austen."
       },
       {
         "head": "Math finds her",
-        "body": "At 13, Maryam fails her first math test. She HATES the subject. But the next year, a different teacher hands her a real puzzle. Maryam solves it… and falls in love."
+        "body": "At 13, Maryam fails her first math test and decides she HATES the subject. But the next year a different teacher hands her a genuine puzzle instead of a drill sheet. Maryam solves it… and falls completely in love."
       },
       {
         "head": "Olympiad champion",
-        "body": "By age 17, Maryam wins gold at the International Math Olympiad — the world's hardest math contest for high schoolers. She's the first Iranian girl to make the team. The next year she wins gold AGAIN."
+        "body": "By age 17, Maryam wins gold at the International Math Olympiad — the world’s hardest math contest for high schoolers — as the first Iranian girl ever on the team. The next year she returns and wins gold AGAIN."
       },
       {
         "head": "Off to Harvard",
-        "body": "She moves to America for grad school at Harvard. Her style is unusual: she draws GIANT doodles on huge sheets of paper. Her office floor is covered in them. Other professors think she's odd. They're wrong."
+        "body": "She moves to America for grad school at Harvard. Her working style is unusual: she draws GIANT doodles on huge sheets of paper spread across her office floor. Other professors think she’s odd. They are very wrong."
       },
       {
         "head": "Her question",
-        "body": "Maryam studies SHAPES — but not flat ones. CURVED shapes like saddles, donuts, pretzels. She asks: what's the SURFACE AREA of a wavy shape? How does it bend?"
+        "body": "Maryam studies SHAPES — but not flat ones. She explores CURVED surfaces like saddles, donuts, and pretzels, asking questions like: what is the SURFACE AREA of a wavy shape, and how exactly does it bend and stretch?"
       },
       {
         "head": "Nets, but curved",
-        "body": "In school you learn nets — the flat shape you fold to make a cube or pyramid. Maryam asks the wild version: what does the 'net' of a shape that BENDS look like?"
+        "body": "In school you learn nets — the flat pattern you fold up to make a cube or pyramid. Maryam asks the wild grown-up version of the same question: what does the “net” of a surface that BENDS everywhere look like?"
       },
       {
         "head": "Why curves matter",
-        "body": "Curved surfaces appear everywhere in real life: planets, soap bubbles, eggshells, the universe itself. Knowing their surface area tells us about gravity, light, even how the universe began."
+        "body": "Curved surfaces appear all over real life: planets, soap bubbles, eggshells, even spacetime itself. Knowing their areas and curves tells scientists about gravity, light, and how the universe began — geometry at the largest possible scale."
       },
       {
         "head": "The breakthrough",
-        "body": "After years of giant-paper doodling, Maryam proves something nobody could prove before — a math rule about how curved surfaces deform. Other mathematicians can't believe it. It opens a brand-new branch of math."
+        "body": "After years of giant-paper doodling, Maryam proves a theorem about how curved surfaces deform that nobody had cracked before. Other mathematicians can hardly believe it, and her proof opens a brand-new branch of geometry."
       },
       {
         "head": "Fields Medal, 2014",
-        "body": "At age 37, Maryam becomes the FIRST woman EVER to win the Fields Medal — math's biggest prize. Only 60 people have won it in 90 years. Iran throws a national celebration."
+        "body": "In 2014, at age 37, Maryam becomes the FIRST woman EVER to win the Fields Medal — math’s biggest prize, given to only about 60 people in 90 years. Iran throws a national celebration in her honor."
       },
       {
         "head": "Her secret",
-        "body": "Reporters ask her secret. She says: 'I find it more enjoyable when it's slow. The beauty comes when you give it time.' Math, for her, was art. Doodling was the work."
+        "body": "Reporters ask for her secret. She answers: “I find it more enjoyable when it’s slow. The beauty comes when you give it time.” For Maryam math was art, and the doodling WAS the work."
       },
       {
         "head": "Why she matters",
-        "body": "Maryam died young in 2017, but her ideas live on. Today, kids around the world (especially girls in Iran) keep her photo on their walls. Math is for everyone — even the kid who failed her first test."
+        "body": "Maryam died young in 2017, but her ideas live on and keep growing. Kids around the world — especially girls in Iran — keep her photo on their walls as proof that math belongs to everyone, even the kid who failed her first test."
+      },
+      {
+        "head": "Nets you can try",
+        "body": "Try Maryam’s starting idea today: unfold a cereal box into its flat net and add up the six rectangle areas. That total IS the surface area. Curved shapes work the same way — just with bendier pieces."
+      },
+      {
+        "head": "Pro tip: go slow on purpose",
+        "body": "Pro tip: Maryam’s superpower was patience. When a problem feels impossible, slow down, draw it big, and stare. Fast answers win quizzes; slow, deep thinking wins Fields Medals."
+      },
+      {
+        "head": "Trap: mixing up area and surface area",
+        "body": "Trap: confusing area with surface area. Area covers ONE flat face; surface area adds up EVERY face of a 3D object. A cube with 2-unit edges has faces of 4 — but a total surface area of 6 × 4 = 24."
+      },
+      {
+        "head": "Her legacy in your app",
+        "body": "When you unfold nets and total up surface areas in the Geometry unit, you’re standing at the entrance of Maryam’s world. She simply kept walking — from cubes, to donuts, to the shape of the universe."
       }
     ],
     "learned": "Surface area + nets aren't just for cubes — they describe any shape, even curvy ones. Maryam Mirzakhani proved it.",
@@ -319,19 +479,35 @@
     "beats": [
       {
         "head": "Inside a hive",
-        "body": "Honeybees build cells in PERFECT hexagons — every single one. They've been doing this for 100 million years."
+        "body": "Look inside any beehive and you’ll find cells built in PERFECT hexagons — every single one, six walls each. Bees have been building this exact shape for around 100 million years."
       },
       {
         "head": "Why not squares?",
-        "body": "Squares tile fine. Circles waste tons of space. But hexagons use the LEAST wall material to enclose the same area."
+        "body": "Why not squares? Squares tile a surface just fine, and circles are strong but waste space between them. Among all shapes that tile perfectly, hexagons enclose the same area using the LEAST total wall material."
       },
       {
         "head": "Why it matters",
-        "body": "Bees have to make wax — and wax is expensive! Less wall means more honey storage with less wax."
+        "body": "Why does wall material matter to a bee? Because bees must MAKE the wax themselves — eating about eight grams of honey to produce one gram of wax. Less wall means more honey stored for less costly wax."
       },
       {
         "head": "Bees know math",
-        "body": "Without ever taking a class, evolution found the most EFFICIENT shape. Hexagons win."
+        "body": "Bees never took a geometry class, yet evolution found the most EFFICIENT shape by trial and error over millions of years. Mathematicians finally PROVED hexagons are optimal in 1999. The bees knew first."
+      },
+      {
+        "head": "Compare the perimeters",
+        "body": "Check the efficiency yourself: to enclose an area of about 10 square units, a triangle needs roughly 15 units of wall, a square 12.6, and a hexagon only about 11.8. Six sides wins."
+      },
+      {
+        "head": "Pro tip: only 3 shapes tile",
+        "body": "Pro tip: only three regular polygons can tile a flat surface with no gaps — triangles, squares, and hexagons. Their corner angles (60°, 90°, 120°) divide evenly into 360°, so corners meet perfectly."
+      },
+      {
+        "head": "Trap: pentagons don’t fit",
+        "body": "Trap: assuming any shape can tile. Try regular pentagons: each corner is 108°, and 360 ÷ 108 isn’t a whole number, so gaps always appear. That’s why you never see pentagon honeycombs."
+      },
+      {
+        "head": "Hexagons all around you",
+        "body": "Engineers copy the bees constantly: aircraft panels, cardboard packing, telescope mirrors, and soccer nets all use hexagonal patterns to get maximum strength from minimum material. Nature’s geometry became human technology."
       }
     ],
     "learned": "Shape choice matters. Hexagons pack space the most efficiently.",
@@ -345,43 +521,59 @@
     "beats": [
       {
         "head": "Maryland, 1731",
-        "body": "Benjamin Banneker is born to a free Black father and a former slave mother in colonial Maryland. He gets only about six weeks of formal school — his family needs him on the tobacco farm."
+        "body": "Benjamin Banneker is born in 1731 to a free Black father and a formerly enslaved mother in colonial Maryland. He gets only about six weeks of formal schooling — his family needs his hands on the tobacco farm."
       },
       {
         "head": "He teaches himself",
-        "body": "Benjamin borrows books from his neighbor — math books, astronomy books, surveying books. He reads them by candlelight after farm work. He works through every problem."
+        "body": "So Benjamin teaches himself. He borrows books from a kind neighbor — math books, astronomy books, surveying books — and reads them by candlelight after long days of farm work, patiently working through every single problem."
       },
       {
         "head": "The wooden clock",
-        "body": "At 22, he borrows a pocket watch from a traveling salesman. He takes it apart, draws every gear, then carves an entire LIFE-SIZE clock out of WOOD. His clock keeps perfect time for 40 years."
+        "body": "At 22, he borrows a pocket watch from a traveling salesman, takes it apart, and draws every tiny gear. Then he carves an entire LIFE-SIZE striking clock out of WOOD. His homemade clock keeps accurate time for 40 years."
       },
       {
         "head": "Stars on the ceiling",
-        "body": "Decades later, neighbors lend him an old telescope. Benjamin teaches himself ASTRONOMY — predicting the exact moment of a solar eclipse before any famous European does."
+        "body": "Decades later, neighbors lend him a telescope. Benjamin teaches himself ASTRONOMY from books and observation, eventually predicting the exact moment of a solar eclipse — beating the published forecasts of famous European astronomers."
       },
       {
         "head": "The almanac",
-        "body": "He starts publishing an almanac — a yearly book of sunrise times, tide tables, weather predictions, moon phases. To make it, he has to compute thousands of DECIMAL numbers by hand. Down to the second."
+        "body": "He begins publishing an almanac — a yearly book of sunrise times, tide tables, weather predictions, and moon phases. Producing it means computing thousands of DECIMAL numbers entirely by hand, each one precise down to the second."
       },
       {
         "head": "Why decimals matter",
-        "body": "Sunrise at 6.32 means 6 hours and just past 1/3 of the next hour. Each tiny decimal makes a big difference. Off by 0.05 means 3 minutes off — and a wrong fishing tide."
+        "body": "Why do decimals matter so much here? Sunrise at 6.32 means 6 hours plus 32 hundredths of an hour. Being off by just 0.05 — three minutes — could ruin a farmer’s planting plan or a fisherman’s tide window."
       },
       {
         "head": "Surveying D.C.",
-        "body": "In 1791, President Washington picks Banneker to help mark the boundary of America's new capital city. Benjamin uses a telescope and decimal math to lay out the perfect square that becomes Washington, D.C."
+        "body": "In 1791, President Washington’s team picks Banneker to help survey the boundary of America’s new capital city. Using a telescope, the stars, and decimal arithmetic, he helps lay out the ten-mile square that becomes Washington, D.C."
       },
       {
         "head": "The famous letter",
-        "body": "Around the same time, Banneker writes to Thomas Jefferson — author of the Declaration of Independence and slave owner. He sends Jefferson a copy of his almanac as PROOF that Black people can do math just as well as anyone."
+        "body": "Around the same time, Banneker writes boldly to Thomas Jefferson — author of the Declaration of Independence and a slave owner — enclosing his almanac as living PROOF that Black people possess every bit of mathematical genius."
       },
       {
         "head": "Jefferson replies",
-        "body": "Jefferson writes back, admitting he's impressed. He shares the almanac with the French Academy of Sciences as evidence of African American genius. The letters are still studied today."
+        "body": "Jefferson writes back, admitting he is impressed, and forwards the almanac to the French Academy of Sciences as evidence of African American brilliance. Historians still study this exchange of letters today."
       },
       {
         "head": "Decimals = precision",
-        "body": "Every calculation Banneker did — eclipses, tides, the angles of Washington — used DECIMALS. Add a decimal place, double the precision. Hidden behind every almanac entry is the same math you do today."
+        "body": "Every calculation Banneker made — eclipses, tides, the survey angles of Washington — ran on DECIMALS. Each extra decimal place multiplies the precision by ten. Behind every almanac entry is exactly the math you practice today."
+      },
+      {
+        "head": "Decimal precision, worked out",
+        "body": "Feel the power of one decimal place: 6.3 hours could be anywhere in a six-minute window, but 6.32 pins it inside 36 seconds. Every digit you add divides the uncertainty by ten."
+      },
+      {
+        "head": "Pro tip: estimate, then refine",
+        "body": "Pro tip: Banneker computed like this — rough answer first, then refine digit by digit. Estimate 6.3, check, adjust to 6.32. Working coarse-to-fine catches big errors before they poison hours of work."
+      },
+      {
+        "head": "Trap: decimals aren’t minutes",
+        "body": "Trap: reading 6.32 hours as “6 hours 32 minutes.” It’s 6 hours plus 0.32 × 60 ≈ 19 minutes! Converting decimal hours to minutes means multiplying the decimal part by 60."
+      },
+      {
+        "head": "Self-taught is still taught",
+        "body": "Banneker had six weeks of school and a candle. You have lessons, videos, and games in your pocket. His story’s real lesson: curiosity plus steady practice outruns any head start."
       }
     ],
     "learned": "Decimals turn 'about 6 hours' into 'exactly 6.32 hours'. Banneker used them by candlelight to predict the sky.",
@@ -395,19 +587,35 @@
     "beats": [
       {
         "head": "Hospital visit",
-        "body": "Ramanujan was the world's greatest self-taught mathematician. His friend G.H. Hardy visited him in the hospital."
+        "body": "Srinivasa Ramanujan was the world’s greatest self-taught mathematician, famous for seeing patterns nobody else could. One day his friend and collaborator G.H. Hardy visited him in a London hospital."
       },
       {
         "head": "Boring taxi",
-        "body": "Hardy said: 'I came in taxi #1729 — a rather dull number.' Ramanujan instantly disagreed."
+        "body": "Making small talk, Hardy said: “I came in taxi number 1729 — a rather dull number.” Ramanujan instantly disagreed, because to him no number was ever boring once you looked closely."
       },
       {
         "head": "Two ways!",
-        "body": "'1729 is the smallest number that's the sum of TWO cubes in two different ways!' he said. 1³ + 12³ AND 9³ + 10³."
+        "body": "“1729 is the smallest number that is the sum of TWO cubes in two different ways!” he said. A cube means a number times itself twice: 1³ + 12³ works, AND so does 9³ + 10³."
       },
       {
         "head": "Check it",
-        "body": "1 + 1728 = 1729. 729 + 1000 = 1729. Both. He saw it instantly."
+        "body": "Check it yourself: 1 + 1,728 = 1,729, and 729 + 1,000 = 1,729. Both routes land on the same number. He saw both decompositions instantly, from a hospital bed."
+      },
+      {
+        "head": "Build the cubes",
+        "body": "Work the cubes step by step: 12³ means 12 × 12 × 12 = 144 × 12 = 1,728. And 9³ = 729 while 10³ = 1,000. Two totally different cube pairs, one shared sum."
+      },
+      {
+        "head": "Pro tip: play with numbers",
+        "body": "Pro tip: Ramanujan filled notebooks by simply PLAYING — cubing numbers, adding pairs, hunting coincidences. Try it: list the cubes 1, 8, 27, 64, 125 and see which sums repeat. That’s real research."
+      },
+      {
+        "head": "Trap: cubes aren’t triples",
+        "body": "Trap: confusing 12³ with 12 × 3. Cubing means multiplying a number by itself twice (12 × 12 × 12 = 1,728), not multiplying by three (36). Exponents count repeated multiplication."
+      },
+      {
+        "head": "Taxicab numbers live on",
+        "body": "Mathematicians now call these “taxicab numbers” in honor of that hospital chat, and computers still hunt for bigger ones today. One casual joke about a dull number became a whole field of study."
       }
     ],
     "learned": "Numbers hide secrets. The deeper you look, the more patterns appear.",
@@ -421,19 +629,35 @@
     "beats": [
       {
         "head": "No zero?!",
-        "body": "Most ancient cultures had no symbol for 'nothing'. Try doing math without zero — it's a nightmare."
+        "body": "Most ancient cultures had no symbol for “nothing” at all. Try doing math without zero — how do you tell 205 from 25, or mark an empty column? It’s a genuine nightmare."
       },
       {
         "head": "Indian breakthrough",
-        "body": "A mathematician named Brahmagupta in India officially defined zero in 628 AD: a number that means 'nothing here'."
+        "body": "The breakthrough came from India: in 628 AD the mathematician Brahmagupta officially defined zero as a real number meaning “nothing here,” and wrote down rules for adding and multiplying with it."
       },
       {
         "head": "Negatives unlocked",
-        "body": "Once you have zero, you can have NEGATIVE numbers — anything less than zero. Hello, integers!"
+        "body": "Once zero exists as a true anchor point, you can go BELOW it — NEGATIVE numbers, for debts, temperatures, and depths. Zero unlocked the whole family of integers stretching in both directions."
       },
       {
         "head": "Modern math",
-        "body": "Every number line, every coordinate plane, every computer chip uses zero. Quietly the most important number ever."
+        "body": "Today every number line, every coordinate plane, every thermometer, and every computer chip is built on zero. Computers literally think in 1s and 0s. Quietly, zero became the most important number ever invented."
+      },
+      {
+        "head": "Zero as placeholder",
+        "body": "Zero’s first job is holding places: in 507, the zero shouts “no tens here!” Without it, 57 and 507 would look identical. Place value only works because empty columns get their own symbol."
+      },
+      {
+        "head": "Pro tip: anchor at zero",
+        "body": "Pro tip: when comparing integers, always picture zero as the anchor. Numbers right of zero are positive, left are negative, and −3 is LESS than −1 because it sits farther left."
+      },
+      {
+        "head": "Trap: zero isn’t “nothing to do”",
+        "body": "Trap: treating zero like it does nothing in every operation. Adding 0 changes nothing, true — but multiplying by 0 wipes any number to 0, and dividing BY zero is forbidden entirely. Zero has sharp rules."
+      },
+      {
+        "head": "From India to your phone",
+        "body": "Zero traveled from India through Arab mathematicians like al-Khwarizmi into Europe, arriving around 1200 AD with Fibonacci’s books. Eight centuries later, every app you open runs on oceans of zeros."
       }
     ],
     "learned": "Zero is the ANCHOR of the number line. Positives right, negatives left.",
@@ -447,23 +671,39 @@
     "beats": [
       {
         "head": "Math superstar",
-        "body": "Katherine Johnson was a Black mathematician at NASA. She did some of the hardest math humans had ever attempted."
+        "body": "Katherine Johnson was a Black mathematician at NASA during the Space Race, hired as a human “computer.” She did some of the hardest and most important math humans had ever attempted — by hand."
       },
       {
         "head": "Plotting a path",
-        "body": "She used the coordinate plane. Every point in space gets a label like (x, y). Earth here, Moon way over there."
+        "body": "Her canvas was the coordinate plane. Every point in space gets a label like (x, y): Earth sits here, the Moon way over there, and a spacecraft is just a moving point between them."
       },
       {
         "head": "The trajectory",
-        "body": "Katherine calculated the EXACT curve a rocket would follow from Earth to Moon — every (x, y) point along the way."
+        "body": "Katherine calculated the EXACT curve a rocket must follow from Earth to the Moon — every (x, y) point along the path, accounting for gravity bending the route the entire way."
       },
       {
         "head": "Astronaut's choice",
-        "body": "Astronaut John Glenn refused to fly unless Katherine personally checked the trajectory. The computers might be wrong — but she wouldn't be."
+        "body": "Astronaut John Glenn famously refused to fly his orbital mission unless Katherine personally re-checked the electronic computer’s trajectory numbers. The machines might be wrong — but her math wouldn’t be."
       },
       {
         "head": "We made it",
-        "body": "Her work helped Apollo 11 land on the Moon in July 1969. The coordinate plane took humans to another world."
+        "body": "Her calculations helped Apollo 11 land on the Moon in July 1969 and — just as critically — return home safely. The humble coordinate plane carried humans to another world."
+      },
+      {
+        "head": "Plot a mini-trajectory",
+        "body": "Try a tiny version: a ball’s path passes through (0, 0), (1, 4), (2, 6), (3, 6), (4, 4), (5, 0). Plot the points and connect them — you just graphed a trajectory, exactly Katherine’s core move."
+      },
+      {
+        "head": "Pro tip: label your axes",
+        "body": "Pro tip: Katherine’s work only made sense because every axis had meaning — x might be downrange distance, y altitude. Always say what your axes measure; an unlabeled graph is a story with no characters."
+      },
+      {
+        "head": "Trap: swapping x and y",
+        "body": "Trap: plotting (3, 5) by going UP 3 and ACROSS 5. Order matters: x comes first and runs horizontally. For a spacecraft, swapping coordinates wouldn’t be a small mistake — it would miss the Moon."
+      },
+      {
+        "head": "Hidden Figures, real math",
+        "body": "Katherine’s story became the film Hidden Figures, but the math was no Hollywood prop: geometry, coordinates, and careful arithmetic. She received the Presidential Medal of Freedom at age 97 for that pencil-and-paper heroism."
       }
     ],
     "learned": "The coordinate plane pinpoints any location — even a spacecraft (x, y) million miles from home.",
@@ -477,19 +717,35 @@
     "beats": [
       {
         "head": "Long, long ago",
-        "body": "Young Carl Gauss is in class. His teacher is grumpy and wants the kids to be quiet for an hour."
+        "body": "Long ago in Germany, young Carl Gauss sits in elementary school. His teacher is grumpy, the class is noisy, and the teacher wants everyone silently busy for a full hour."
       },
       {
         "head": "The mean assignment",
-        "body": "She says: 'Add every number from 1 to 100.' She thinks that should take all day."
+        "body": "So she assigns the meanest problem she can think of: “Add every whole number from 1 to 100.” One hundred additions in a row — she expects it to take the class all day."
       },
       {
         "head": "Gauss's trick",
-        "body": "Gauss sees 1+100 = 101, 2+99 = 101, 3+98 = 101. Each pair sums to 101 — and there are 50 pairs."
+        "body": "Gauss stares for a moment and sees a hidden structure: pair the ends! 1 + 100 = 101, 2 + 99 = 101, 3 + 98 = 101… every pair sums to 101, and 100 numbers make exactly 50 pairs."
       },
       {
         "head": "30 seconds later",
-        "body": "Gauss walks up: 50 × 101 = 5050. The teacher's jaw drops."
+        "body": "About thirty seconds later, Gauss walks up with his slate: 50 × 101 = 5,050. The teacher’s jaw drops. One clever pairing replaced ninety-nine tedious additions with a single multiplication."
+      },
+      {
+        "head": "Use the trick yourself",
+        "body": "Add 1 to 20 with Gauss’s trick: 1 + 20 = 21, and there are 10 pairs, so the total is 10 × 21 = 210. The general formula is n × (n + 1) ÷ 2."
+      },
+      {
+        "head": "Pro tip: hunt for structure",
+        "body": "Pro tip: before grinding through a long calculation, pause and ask “is there a pattern that collapses this?” Pairing, grouping, and reordering are legal because addition doesn’t care about order."
+      },
+      {
+        "head": "Trap: miscounting the pairs",
+        "body": "Trap: pairing 1 to 100 and claiming 100 pairs. Each pair uses TWO numbers, so 100 numbers form only 50 pairs. Halve the count, or the famous shortcut doubles your answer."
+      },
+      {
+        "head": "Gauss grew up",
+        "body": "That schoolboy became the “Prince of Mathematicians,” reshaping algebra, geometry, astronomy, and statistics. The instinct was the same all his life: never brute-force what a pattern can finish in one line."
       }
     ],
     "learned": "Look for PATTERNS, not just brute force. Math is sneaky.",
@@ -503,43 +759,59 @@
     "beats": [
       {
         "head": "Paris, winter 1637",
-        "body": "A French philosopher named René Descartes is in bed with the flu. He's bored out of his mind. To kill time, he stares at the ceiling above his bed."
+        "body": "Paris, winter 1637. The French philosopher René Descartes lies in bed with the flu, bored out of his mind. With nothing else to do, he stares at the ceiling above his bed."
       },
       {
         "head": "Enter: the fly",
-        "body": "A fly lands on the ceiling and starts crawling around. Descartes watches it walk to one corner, then the other, then the middle. He gets curious."
+        "body": "Enter: the fly. It lands on the ceiling and starts crawling — to one corner, across the middle, back again. Descartes watches it wander and feels a question forming."
       },
       {
         "head": "The question",
-        "body": "Can I describe EXACTLY where the fly is — without pointing? Could I write the fly's spot in a letter to a friend who can't see my ceiling?"
+        "body": "The question: can I describe EXACTLY where the fly is — without pointing at it? Could I write the fly’s position in a letter to a friend who has never seen my ceiling?"
       },
       {
         "head": "His insight",
-        "body": "Pick any corner of the ceiling. Now I just need TWO numbers: how far ACROSS the fly is, and how far UP from that corner. Boom — exact location, no pointing required."
+        "body": "His insight: pick a corner of the ceiling as a starting point. Then just TWO numbers pin the fly down: how far ACROSS it is, and how far UP from that corner. Exact location, no pointing required."
       },
       {
         "head": "x and y are born",
-        "body": "Descartes labels the across number 'x' and the up number 'y'. Every point on the ceiling — every point on ANY flat surface — can be named with just two numbers: (x, y)."
+        "body": "Descartes names the across-number “x” and the up-number “y.” Every point on the ceiling — every point on ANY flat surface — can now be named with an ordered pair of numbers: (x, y)."
       },
       {
         "head": "The big leap",
-        "body": "If I can name a POINT with two numbers, I can name a whole LINE. And a CURVE. And a SHAPE. Anything geometric becomes pairs of numbers I can compute with."
+        "body": "Then the big leap: if a POINT is two numbers, a whole LINE is an equation relating x and y — and so is a curve, a circle, any shape. Geometry becomes something you can CALCULATE with."
       },
       {
         "head": "Math fuses with geometry",
-        "body": "Before Descartes, math and geometry were separate subjects. He glued them together. Algebra problems became pictures; pictures became algebra. Game changer."
+        "body": "Before Descartes, algebra and geometry were separate school subjects. He glued them together forever: equations became pictures, pictures became equations. Mathematicians call it the greatest merger in math history."
       },
       {
         "head": "Every screen, every map",
-        "body": "Every map app, every video game, every weather radar uses Descartes' idea. They all describe locations as pairs (x, y) — or, in 3D, triples (x, y, z)."
+        "body": "Every map app, video game, spreadsheet, and weather radar runs on his idea, describing every location as a pair (x, y) — or a triple (x, y, z) once you add height for 3D worlds."
       },
       {
         "head": "Apollo and beyond",
-        "body": "300 years later, NASA used Descartes' coordinate plane to plot the path of Apollo 11 to the Moon. (Katherine Johnson did those calculations by hand!) Same idea, same math."
+        "body": "Three hundred years later, NASA plotted Apollo 11’s path to the Moon on Descartes’ coordinate plane — with Katherine Johnson doing those calculations by hand. Same fly-on-the-ceiling idea, scaled to the Moon."
       },
       {
         "head": "Look around",
-        "body": "Look at any screen, any grid, any graph in your math book. The two axes — x going right, y going up — are Descartes' fly, ascended to the world of pure math."
+        "body": "Now look around: every screen, every grid, every graph in your math book carries two axes — x running right, y running up. That’s Descartes’ fly, immortalized in the world of pure math."
+      },
+      {
+        "head": "Name the fly’s spot",
+        "body": "Play Descartes for a second: the fly sits 4 tiles right and 2 tiles up from the corner. Its address is (4, 2). Another fly at (2, 4) is at a completely DIFFERENT spot — order matters."
+      },
+      {
+        "head": "Pro tip: run before you jump",
+        "body": "Pro tip: remember “run before you jump.” The first coordinate always runs horizontally, the second jumps vertically. Whisper it every time you plot and you will never reverse a point again."
+      },
+      {
+        "head": "Trap: forgetting the origin",
+        "body": "Trap: coordinates mean nothing without an agreed starting corner — the ORIGIN (0, 0). Two people using different corners will describe the same fly with different numbers. Fix the origin first, then measure."
+      },
+      {
+        "head": "From flu to framework",
+        "body": "One bored sick day produced the framework for graphs, GPS, animation, and rocket science. Keep a notebook when you’re curious — Descartes’ ceiling doodle became the backbone of modern mathematics."
       }
     ],
     "learned": "Any point on a plane = two numbers, (x, y). Descartes saw it first while watching a fly walk on his ceiling.",
@@ -553,19 +825,35 @@
     "beats": [
       {
         "head": "A weird number",
-        "body": "A baseball announcer says 'he's batting three-hundred'. What does .300 even mean?"
+        "body": "A baseball announcer says a player is “batting three hundred” and the crowd nods along. But what does the mysterious number .300 actually mean? It isn’t three hundred of anything."
       },
       {
         "head": "It's a rate",
-        "body": "Batting average = hits per at-bat. 150 hits in 500 tries is 150 ÷ 500 = 0.300."
+        "body": "It’s a RATE in disguise: batting average = hits ÷ at-bats. A player with 150 hits in 500 tries has 150 ÷ 500 = 0.300. The division turns two counts into one comparable number."
       },
       {
         "head": "Per ONE",
-        "body": "0.300 means '0.3 hits per 1 at-bat' — a UNIT rate. We always scale down to per-one to compare."
+        "body": "That 0.300 means “0.3 hits per 1 at-bat” — a UNIT rate. Scaling everything down to per-ONE is what lets us fairly compare players with totally different numbers of at-bats."
       },
       {
         "head": "Why it's good",
-        "body": "Most major leaguers hit around .250. Hitting .300 means succeeding 3 of every 10 tries — and that's elite!"
+        "body": "Why is .300 special? Most major leaguers hit around .250, or 1 hit in 4 tries. Batting .300 means succeeding 3 times in every 10 attempts — and in baseball, that’s elite."
+      },
+      {
+        "head": "Compare two players",
+        "body": "Player A: 90 hits in 300 at-bats → 90 ÷ 300 = 0.300. Player B: 120 hits in 480 → 0.250. B has MORE hits, but A is the better hitter per try. Unit rates reveal it."
+      },
+      {
+        "head": "Pro tip: per-one everything",
+        "body": "Pro tip: “per-one” thinking works everywhere — price per ounce at the store, points per game, kilometers per liter. Divide the total by the count and suddenly any two options become comparable."
+      },
+      {
+        "head": "Trap: comparing raw totals",
+        "body": "Trap: judging by totals alone. 120 hits sounds better than 90 — until you notice the 480 tries behind it. Raw counts ignore opportunity; rates account for it. Always ask “out of how many?”"
+      },
+      {
+        "head": "Decimals as percents",
+        "body": "Batting .300 is just 30% written as a decimal, since 0.300 × 100 = 30. Sports quietly train you to read decimals, rates, and percents — the exact skills in your Ratios unit."
       }
     ],
     "learned": "A UNIT RATE answers 'how much per ONE' — perfect for comparing.",
@@ -579,19 +867,35 @@
     "beats": [
       {
         "head": "Unbreakable code",
-        "body": "In World War II, Germany used a machine called Enigma to scramble messages. Billions of possible settings."
+        "body": "In World War II, Germany scrambled its military messages with a machine called Enigma. With billions of possible settings that changed daily, everyone believed the code was completely unbreakable."
       },
       {
         "head": "Frequency trick",
-        "body": "In English, the letter E shows up ~13% of the time, T about 9%, A about 8%. Every language has its own 'fingerprint'."
+        "body": "But language leaves fingerprints: in ordinary English text the letter E appears about 13% of the time, T about 9%, A about 8%. Every language has its own stable ratio pattern."
       },
       {
         "head": "Pattern hunting",
-        "body": "Alan Turing built a machine that compared letter frequencies in coded messages to known patterns — until they matched."
+        "body": "Alan Turing and the team at Bletchley Park built machines that compared letter frequencies in coded messages against those known ratios — testing settings at superhuman speed until the fingerprint matched."
       },
       {
         "head": "History changed",
-        "body": "Code-cracking shortened the war by years. Counting RATIOS literally saved lives."
+        "body": "Cracking Enigma is estimated to have shortened the war by two years or more. Counting letters and comparing RATIOS — humble statistics — literally saved millions of lives."
+      },
+      {
+        "head": "Try frequency counting",
+        "body": "Test the fingerprint yourself: take any paragraph and tally its letters. In 100 letters you’ll find roughly 13 Es but only 1 or 2 Zs. Even short texts echo the language-wide ratios."
+      },
+      {
+        "head": "Pro tip: big samples, steady ratios",
+        "body": "Pro tip: ratios stabilize as samples grow. Ten letters might fool you, but a thousand letters almost never lie. When using data, more observations mean the pattern you see is the pattern that’s real."
+      },
+      {
+        "head": "Trap: tiny samples",
+        "body": "Trap: trusting a ratio from a tiny sample. The word “fizz” is 50% Z — but English isn’t! Codebreakers needed long messages for the frequencies to emerge. Small data makes loud, wrong claims."
+      },
+      {
+        "head": "Statistics still guard secrets",
+        "body": "Modern cybersecurity still runs on Turing’s insight: computers detect spam, fraud, and hacked accounts by spotting when letter and number patterns drift from expected ratios. Statistical fingerprints never went out of style."
       }
     ],
     "learned": "A ratio (E : everything else) is a powerful clue, even in spy stuff.",
@@ -605,19 +909,35 @@
     "beats": [
       {
         "head": "12 yards from goal",
-        "body": "A penalty kick is a one-on-one: just you and the keeper. Goals happen about 75% of the time."
+        "body": "A penalty kick puts the ball 12 yards from goal: just you against the keeper, whole stadium holding its breath. Across professional soccer, kickers score about 75% of the time."
       },
       {
         "head": "Why so often?",
-        "body": "The keeper has to GUESS before you kick. If they guess wrong, you score easily."
+        "body": "Why do kickers win so often? The goal is huge and the ball flies fast, so the keeper must GUESS a direction and dive BEFORE the kick. Guess wrong, and the kicker scores easily."
       },
       {
         "head": "3 out of 4 = 75%",
-        "body": "We can write that as a fraction OR a percent. Same thing — both mean 3 in every 4 attempts."
+        "body": "That 75% can be written as the fraction 3/4 or the percent 75% — the exact same quantity in two costumes. Both simply mean 3 successes in every 4 attempts."
       },
       {
         "head": "Keeper's job",
-        "body": "About 25% of the time the keeper guesses right and saves. Tough job!"
+        "body": "The keeper’s side of the math: only about 25% of penalties are saved, mostly when the dive guesses correctly. One save in four attempts — a genuinely tough job description."
+      },
+      {
+        "head": "Expected goals, worked out",
+        "body": "A team taking 8 penalties over a season at 75% expects 0.75 × 8 = 6 goals. Percents become predictions when you multiply the rate by the number of chances."
+      },
+      {
+        "head": "Pro tip: percent ↔ fraction ↔ decimal",
+        "body": "Pro tip: master the outfit changes — 75% = 3/4 = 0.75. Use whichever form makes the arithmetic easy: fractions for shares, decimals for multiplying, percents for talking. They’re one number, three costumes."
+      },
+      {
+        "head": "Trap: 75% isn’t a promise",
+        "body": "Trap: expecting exactly 3 goals in every 4 kicks. Percents describe LONG-RUN averages, not guarantees. A star can miss two in a row and still be a 75% kicker over the season."
+      },
+      {
+        "head": "Data changes the game",
+        "body": "Real teams keep spreadsheets of every kicker’s favorite corner, and keepers study them before finals. Sports analytics is percents, ratios, and probability applied at full sprint — your math unit, on grass."
       }
     ],
     "learned": "Percent = how many out of 100. Useful for comparing chances.",
@@ -631,19 +951,35 @@
     "beats": [
       {
         "head": "First move",
-        "body": "Watch any expert: they grab the CENTER square first, every time. Why?"
+        "body": "Watch any tic-tac-toe expert and you’ll spot the same opening: they grab the CENTER square first, every single time. Is that superstition, or is there real math behind the habit?"
       },
       {
         "head": "Count the lines",
-        "body": "There are 8 ways to win: 3 rows, 3 columns, 2 diagonals. Every winning line goes through certain cells."
+        "body": "Count the ways to win: 3 rows, 3 columns, and 2 diagonals make exactly 8 winning lines. Every one of those lines passes through some specific set of three cells."
       },
       {
         "head": "Center wins",
-        "body": "The center square is on 4 of the 8 lines. Corners are on 3. Edges only on 2."
+        "body": "Now score each square by the lines it touches: the center sits on 4 of the 8 winning lines, each corner on 3, and each edge square on only 2."
       },
       {
         "head": "Most chances",
-        "body": "By taking center, you start in the cell with the MOST chances to win. It's a stats decision — find the spot with the most chances!"
+        "body": "By taking the center you start in the square with the MOST winning chances. It’s a counting decision, not luck — enumerate the options, then pick the spot with the highest count."
+      },
+      {
+        "head": "Verify the center’s count",
+        "body": "Check the center’s 4 lines yourself: its row, its column, and BOTH diagonals all pass through it. A corner only catches one row, one column, and one diagonal — three lines, one fewer."
+      },
+      {
+        "head": "Pro tip: count before you move",
+        "body": "Pro tip: in any game, rank moves by counting the future options each one keeps open. More open lines means more ways to threaten. Great players are quietly doing combinatorics every turn."
+      },
+      {
+        "head": "Trap: edges feel safe",
+        "body": "Trap: grabbing an edge square because it “looks central enough.” Edges touch just 2 winning lines — the weakest cells on the board. Feelings lie; counts don’t. Corners beat edges every time."
+      },
+      {
+        "head": "Solved games",
+        "body": "Tic-tac-toe is fully “solved”: with perfect play by both sides, every game ends in a draw. Mathematicians proved it by counting all 255,168 possible games — counting, at heroic scale."
       }
     ],
     "learned": "Counting OPTIONS helps you pick the smartest move.",
@@ -657,19 +993,35 @@
     "beats": [
       {
         "head": "Make a guess",
-        "body": "Imagine a room. How many people do you need for a 50/50 chance that TWO of them share a birthday?"
+        "body": "Make a guess: how many people must be in a room for a 50/50 chance that at least TWO of them share the exact same birthday? Lock in your number before reading on."
       },
       {
         "head": "Most people say 180",
-        "body": "Half of 365 sounds smart. But the answer is MUCH smaller — and surprises everyone."
+        "body": "Most people guess around 180, reasoning that it should take half of 365. But the true answer is dramatically smaller — and it surprises nearly everyone the first time they hear it."
       },
       {
         "head": "Just 23!",
-        "body": "Why? With 23 people, there are 23×22÷2 = 253 PAIRS to check. Plenty of chances to match."
+        "body": "Just 23 people! The secret is that we’re matching PAIRS, not individuals: 23 people create 23 × 22 ÷ 2 = 253 different pairs, and each pair is a fresh chance to match."
       },
       {
         "head": "The whole curve",
-        "body": "40 people: 89%. 60 people: 99%. Try this with your classroom!"
+        "body": "The curve climbs shockingly fast: with 40 people the chance of a shared birthday is 89%, and with 60 it passes 99%. Try the experiment with your own classroom!"
+      },
+      {
+        "head": "Why pairs, worked out",
+        "body": "Each of 23 people can pair with 22 others, giving 23 × 22 = 506 orderings — but Ana-Ben and Ben-Ana are the same pair, so halve it: 253 pairs. That’s 253 lottery tickets for a match."
+      },
+      {
+        "head": "Pro tip: flip the question",
+        "body": "Pro tip: mathematicians compute the chance of NO shared birthday first — multiplying 365/365 × 364/365 × 363/365… — then subtract from 100%. Flipping to the opposite event often makes impossible-looking problems easy."
+      },
+      {
+        "head": "Trap: “it’s about MY birthday”",
+        "body": "Trap: hearing “someone shares MY birthday.” That’s a different, much rarer event needing 253 people for 50/50. The paradox asks about ANY two people matching — and pairs multiply much faster than people."
+      },
+      {
+        "head": "Paradox with a job",
+        "body": "This isn’t just a party trick: computer scientists use “birthday attacks” to test password security, because random collisions appear far sooner than intuition expects. Counting pairs correctly protects your accounts."
       }
     ],
     "learned": "Counting PAIRS gets big fast — way faster than counting people.",
@@ -683,47 +1035,63 @@
     "beats": [
       {
         "head": "London, 1820",
-        "body": "Florence Nightingale is born to a rich British family. Her parents expect her to marry a duke and host fancy parties. She has other plans."
+        "body": "Florence Nightingale is born in 1820 to a wealthy British family. Her parents expect her to marry a duke and host elegant parties. Florence, stubborn and brilliant, has entirely other plans."
       },
       {
         "head": "Off to nursing school",
-        "body": "At age 16, Florence announces she wants to be a NURSE. Her parents are horrified — nursing is a low-paying, dirty job back then. She does it anyway."
+        "body": "At 16 she announces she will become a NURSE. Her parents are horrified — nursing then is considered dirty, low-paid work far beneath her class. She studies mathematics and nursing anyway."
       },
       {
         "head": "War, 1854",
-        "body": "Britain is fighting a brutal war in Crimea, near modern Russia. Soldiers are dying by the thousands — but mostly NOT from battle wounds. Something else is killing them in the hospitals."
+        "body": "In 1854 Britain is fighting a brutal war in Crimea, near modern Russia. Soldiers are dying by the thousands — but mostly NOT from battle wounds. Something invisible is killing them inside the hospitals."
       },
       {
         "head": "What she found",
-        "body": "Florence shows up to the war hospital with 38 nurses. It's a horror show: rats, no clean water, soldiers crammed in dirty rooms. She's furious. She starts WRITING DOWN every death."
+        "body": "Florence arrives at the war hospital with 38 nurses and finds a horror show: rats, filthy water, wounded men packed into dirty rooms. Furious, she starts systematically WRITING DOWN every single death and its cause."
       },
       {
         "head": "The math nobody wanted",
-        "body": "Out of 4 soldiers who came to the hospital, ONE was dying — not from bullets, but from disease, infections, and bad food. Florence proves it with numbers."
+        "body": "Her ledger reveals the truth: of every 4 soldiers who entered the hospital, 1 was dying — not from bullets, but from disease, infection, and rotten food. Florence can prove it with numbers."
       },
       {
         "head": "Nobody listens to numbers",
-        "body": "Florence sends report after report to British generals. They ignore her. Long lists of numbers don't move politicians. She needs something stronger."
+        "body": "She mails report after report to the British generals, packed with careful tables. They ignore her. Long columns of numbers don’t move busy politicians — she realizes she needs something they cannot look away from."
       },
       {
         "head": "Her invention",
-        "body": "Florence invents a brand-new kind of chart: the ROSE DIAGRAM (also called a 'coxcomb'). Each wedge shows one month. The BIGGER the wedge, the MORE soldiers died that month."
+        "body": "So Florence invents a brand-new kind of chart: the ROSE DIAGRAM (also called a coxcomb). Each wedge is one month of the war, and the BIGGER the wedge, the MORE soldiers died that month."
       },
       {
         "head": "RED for the truth",
-        "body": "She colors disease deaths RED and battle deaths a tiny blue sliver. One look and you can see it: the red wedges DWARF the blue. Disease — not the war — was the real killer."
+        "body": "She colors deaths from disease RED and battle deaths a thin blue sliver. One glance tells the whole story: the red utterly DWARFS the blue. Filth — not fighting — was the real killer."
       },
       {
         "head": "Hospitals get fixed",
-        "body": "Florence sends her rose diagram to Queen Victoria and Parliament. Within a year, hospitals start cleaning up: fresh water, clean bandages, better food. Deaths drop from 42% to 2%."
+        "body": "Florence sends her rose diagram to Queen Victoria and Parliament. Within a year hospitals begin transforming: clean water, fresh bandages, decent food. The death rate collapses from 42% to just 2%."
       },
       {
         "head": "First woman in the club",
-        "body": "In 1859, Florence becomes the first woman ever elected to the Royal Statistical Society. The men have to admit it: graphs that tell a clear story are math you can't argue with."
+        "body": "In 1859 Florence becomes the first woman ever elected to the Royal Statistical Society. The members concede what her diagram proved: a graph that tells a clear, honest story is math you cannot argue with."
       },
       {
         "head": "Why she matters",
-        "body": "Every modern chart you see — bar graphs, pie charts, line charts, infographics — comes from Florence's idea: turn data into a picture and the truth jumps out."
+        "body": "Every modern chart you meet — bar graphs, pie charts, line plots, infographics — descends from Florence’s insight: turn raw data into the RIGHT picture and the truth jumps out where words and tables failed."
+      },
+      {
+        "head": "Read her numbers",
+        "body": "Feel her data: in January 1855 alone, about 2,761 soldiers died of disease versus 83 of wounds — a ratio of roughly 33 to 1. No wonder her red wedges swallowed the blue slivers."
+      },
+      {
+        "head": "Pro tip: match chart to question",
+        "body": "Pro tip: choose the chart that answers YOUR question. Comparing categories? Bars. Showing change over time? A line. Parts of a whole? Pie or rose. The right picture makes the answer obvious before any words."
+      },
+      {
+        "head": "Trap: charts can lie",
+        "body": "Trap: a bad chart misleads as powerfully as a good one persuades. Watch for stretched axes, missing zero lines, and cherry-picked months. Florence’s power came from honest data honestly drawn — always check the scales."
+      },
+      {
+        "head": "Data saves lives today",
+        "body": "Modern hospitals still run on Nightingale’s method: dashboards track infections, and health agencies graph outbreaks to decide where help goes first. When you read a data display in this unit, you’re training for that work."
       }
     ],
     "learned": "A good chart can tell a story numbers alone cannot. Florence proved it in 1854 and saved a million lives.",

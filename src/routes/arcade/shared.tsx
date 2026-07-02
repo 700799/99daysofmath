@@ -65,7 +65,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'survival', path: '/arcade/survival', emoji: '🏕️', name: 'Forest Survival', blurb: 'Last as many days as you can.', baseXp: 12, gradient: 'from-green-700 to-emerald-900' },
   { id: 'fruit', path: '/arcade/fruit', emoji: '🍉', name: 'Fruit Slice', blurb: 'Swipe to slice. Dodge bombs!', baseXp: 10, gradient: 'from-lime-500 to-red-500' },
   { id: 'town', path: '/arcade/town', emoji: '🏙️', name: 'Pocket Town', blurb: 'Build a city. Grow the tiers.', baseXp: 12, gradient: 'from-sky-500 to-emerald-600' },
-  { id: 'sumo', path: '/arcade/sumo', emoji: '🛐', name: 'Sumo Math', blurb: 'Fast ×÷^ duel. Shove him out!', baseXp: 12, gradient: 'from-amber-500 to-rose-700' },
+  { id: 'sumo', path: '/arcade/sumo', emoji: '🤼', name: 'Sumo Math', blurb: 'Fast ×÷^ duel. Shove him out!', baseXp: 12, gradient: 'from-amber-500 to-rose-700' },
   { id: 'monster', path: '/arcade/monster', emoji: '🐲', name: 'Monster Rogue', blurb: 'Catch critters. Climb the gauntlet.', baseXp: 14, gradient: 'from-violet-500 to-indigo-800' },
   { id: 'turbo', path: '/arcade/racer2', emoji: '🏎️', name: 'Turbo Dash', blurb: 'Mode-7 racer. Beat the clock.', baseXp: 12, gradient: 'from-sky-500 to-indigo-700' },
   { id: 'wordle', path: '/arcade/wordle', emoji: '🟩', name: 'Word Guess', blurb: 'Crack the 5-letter word in 6 tries.', baseXp: 10, gradient: 'from-green-500 to-emerald-700' },
@@ -74,7 +74,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'tank', path: '/arcade/tank', emoji: '🎯', name: 'Tank Attack', blurb: 'Aim with angle + power. Blast the evil robots!', baseXp: 12, gradient: 'from-stone-600 to-emerald-800' },
   { id: 'rig', path: '/arcade/rig', emoji: '🛻', name: 'Desert Rig', blurb: 'Defend the War Rig! Solve fast to fire.', baseXp: 12, gradient: 'from-amber-600 to-orange-800' },
   { id: 'mathpop', path: '/arcade/mathpop', emoji: '🫧', name: 'Math Pop', blurb: 'Pop bubbles that add up to the target!', baseXp: 10, gradient: 'from-sky-500 to-cyan-600' },
-  { id: 'dress', path: '/arcade/dress', emoji: '👗', name: 'Dress to Impress', blurb: 'Style the theme. Match the palette ratio. Walk the runway!', baseXp: 12, gradient: 'from-fuchsia-500 to-violet-600' },
+  { id: 'dress', path: '/arcade/dress', emoji: '👗', name: 'Cool vs Warm Dress Up', blurb: 'Style the theme. Match the palette ratio. Walk the runway!', baseXp: 12, gradient: 'from-fuchsia-500 to-violet-600' },
   { id: 'taiko', path: '/arcade/taiko', emoji: '🥁', name: 'Taiko Tap', blurb: 'Tap the drum notes on the beat!', baseXp: 10, gradient: 'from-red-500 to-orange-600' },
   { id: 'shinobi', path: '/arcade/shinobi', emoji: '🥷', name: 'Shinobi Match', blurb: 'Match runes to fend off the foes.', baseXp: 12, gradient: 'from-slate-700 to-rose-700' },
   { id: 'speedlab', path: '/arcade/speedlab', emoji: '🚀', name: 'Speed Lab', blurb: 'Drive the d = r × t formula!', baseXp: 12, gradient: 'from-slate-800 to-cyan-700' },
@@ -82,6 +82,7 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'chess', path: '/arcade/chess', emoji: '♟️', name: 'Checkmate Lab', blurb: 'One move wins — or the computer beats you!', baseXp: 12, gradient: 'from-slate-700 to-indigo-800' },
   { id: 'starhop', path: '/arcade/starhop', emoji: '🌟', name: 'Star Hop', blurb: 'Chinese Checkers — hop to the far star!', baseXp: 10, gradient: 'from-indigo-500 to-fuchsia-600' },
   { id: 'crawler', path: '/arcade/crawler', emoji: '🎲', name: 'Lucky Crawl', blurb: 'Push your luck for treasure — bank before the alarm!', baseXp: 12, gradient: 'from-amber-600 to-yellow-700' },
+  { id: 'carpenter', path: '/arcade/carpenter', emoji: '🔨', name: 'Critter Cottage', blurb: 'Measure, saw & build a cottage — then critters move in!', baseXp: 12, gradient: 'from-amber-700 to-orange-800' },
 ];
 
 // Premium games: locked until bought with coins in the Shop (id → coin price).

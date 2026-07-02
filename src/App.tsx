@@ -59,6 +59,7 @@ const FractionPizza = lazy(() => import('./routes/arcade/FractionPizza').then((m
 const ChessPuzzle = lazy(() => import('./routes/arcade/ChessPuzzle').then((m) => ({ default: m.ChessPuzzle })));
 const ChineseCheckers = lazy(() => import('./routes/arcade/ChineseCheckers').then((m) => ({ default: m.ChineseCheckers })));
 const GreedyCrawler = lazy(() => import('./routes/arcade/GreedyCrawler').then((m) => ({ default: m.GreedyCrawler })));
+const CritterCottage = lazy(() => import('./routes/arcade/CritterCottage').then((m) => ({ default: m.CritterCottage })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -122,7 +123,7 @@ export default function App() {
           <Route path="/arcade/escape" element={<ArcadeGate title="Logic Escape"><EscapeRoom /></ArcadeGate>} />
           <Route path="/arcade/town" element={<ArcadeGate title="Pocket Town"><PocketTown /></ArcadeGate>} />
           <Route path="/arcade/tank" element={<ArcadeGate title="Tank Attack"><TankAttack /></ArcadeGate>} />
-          <Route path="/arcade/dress" element={<ArcadeGate title="Dress to Impress"><DressToImpress /></ArcadeGate>} />
+          <Route path="/arcade/dress" element={<ArcadeGate title="Cool vs Warm Dress Up"><DressToImpress /></ArcadeGate>} />
           <Route path="/arcade/rig" element={<ArcadeGate title="Desert Rig"><DesertRig /></ArcadeGate>} />
           <Route path="/arcade/mathpop" element={<ArcadeGate title="Math Pop"><MathPop /></ArcadeGate>} />
           <Route path="/arcade/taiko" element={<ArcadeGate title="Taiko Tap"><TaikoTap /></ArcadeGate>} />
@@ -132,6 +133,7 @@ export default function App() {
           <Route path="/arcade/chess" element={<ArcadeGate title="Checkmate Lab"><ChessPuzzle /></ArcadeGate>} />
           <Route path="/arcade/starhop" element={<ArcadeGate title="Star Hop"><ChineseCheckers /></ArcadeGate>} />
           <Route path="/arcade/crawler" element={<ArcadeGate title="Lucky Crawl"><GreedyCrawler /></ArcadeGate>} />
+          <Route path="/arcade/carpenter" element={<ArcadeGate title="Critter Cottage"><CritterCottage /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/rewards" element={<Rewards />} />
