@@ -807,7 +807,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 7, title: 'Percent applications',
     objective: 'Find a percent of a number; use percent for tips, tax, and discounts.',
-    videos: [{ title: 'Worked examples', src: '6.RP-7-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-7-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.RP-7.mp4' }, { title: 'Worked examples', src: '6.RP-7-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-7-trap.mp4' }],
     concept: [
       'A percent is a fraction out of 100. So 25% = 25/100 = 1/4.',
       'To find X% of Y: convert the percent to a decimal (move dot LEFT two places), then multiply.',
@@ -827,7 +827,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 8, title: 'Rates & unit pricing',
     objective: 'Compute speeds, unit prices, and "better-deal" comparisons.',
-    videos: [{ title: 'Worked examples', src: '6.RP-8-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-8-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.RP-8.mp4' }, { title: 'Worked examples', src: '6.RP-8-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-8-trap.mp4' }],
     concept: [
       'A unit rate is "per 1": miles per hour, dollars per pound, cost per item.',
       'Divide the total by the number of units to get the unit rate.',
@@ -847,7 +847,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 9, title: 'Measurement conversions',
     objective: 'Convert between standard and metric units using ratio reasoning.',
-    videos: [{ title: 'Worked examples', src: '6.RP-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-9-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.RP-9.mp4' }, { title: 'Worked examples', src: '6.RP-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-9-trap.mp4' }],
     concept: [
       'Use the anchor: 12 in = 1 ft, 3 ft = 1 yd, 100 cm = 1 m, 1000 m = 1 km, 16 oz = 1 lb.',
       'Going to a SMALLER unit → MORE of them → multiply by the anchor.',
@@ -867,7 +867,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 10, title: 'Ratio & proportion problem-solving',
     objective: 'Use ratio tables and equivalent ratios to scale recipes and groups.',
-    videos: [{ title: 'Worked examples', src: '6.RP-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-10-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.RP-10.mp4' }, { title: 'Worked examples', src: '6.RP-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-10-trap.mp4' }],
     concept: [
       'An equivalent ratio multiplies BOTH parts by the same number.',
       'A ratio table is one fast way: write the rate as a row, then scale columns.',
@@ -887,6 +887,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 11, title: 'Speed: distance, rate & time',
     objective: 'Use d = r × t to find distance, speed, or time — and convert units so they match.',
+    videos: [{ title: 'The idea', src: '6.RP-11.mp4' }],
     concept: [
       'Speed is a rate: distance per unit of time (miles per hour, meters per second).',
       'The three are linked by d = r × t (distance = rate × time). Picture the triangle d on top of r · t: cover the one you want — d = r × t, r = d ÷ t, t = d ÷ r.',
@@ -910,7 +911,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 7, title: 'Whole-number addition & subtraction',
     objective: 'Add and subtract multi-digit whole numbers fluently.',
-    videos: [{ title: 'Worked examples', src: '6.NS-7-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-7-trap.mp4' }, { title: "Story: Gauss adds 1 to 100", src: '6.NS-7-story.mp4' }],
+    videos: [{ title: 'The idea', src: '6.NS-7.mp4' }, { title: 'Worked examples', src: '6.NS-7-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-7-trap.mp4' }, { title: "Story: Gauss adds 1 to 100", src: '6.NS-7-story.mp4' }],
     concept: [
       'Stack place values: ones under ones, tens under tens.',
       'When digits add to 10 or more, carry the 1 to the next column.',
@@ -930,7 +931,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 8, title: 'Comparing & ordering signed numbers',
     objective: 'Order positive and negative numbers using a number line.',
-    videos: [{ title: 'Worked examples', src: '6.NS-8-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-8-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.NS-8.mp4' }, { title: 'Worked examples', src: '6.NS-8-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-8-trap.mp4' }],
     concept: [
       'On a number line, RIGHT is bigger, LEFT is smaller.',
       'Any negative number is less than ANY positive number.',
@@ -950,7 +951,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 9, title: 'Opposites & absolute value',
     objective: 'Find opposites and compute absolute value as distance from 0.',
-    videos: [{ title: 'Worked examples', src: '6.NS-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-9-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.NS-9.mp4' }, { title: 'Worked examples', src: '6.NS-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-9-trap.mp4' }],
     concept: [
       'The OPPOSITE of n is its mirror image across 0: opposite of 5 is −5.',
       'Absolute value |n| is the distance from 0 — always 0 or positive.',
@@ -970,7 +971,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.NS', unit: 10, title: 'Coordinate plane: distance & polygons',
     objective: 'Find distances between points on a grid and side lengths of axis-aligned polygons.',
-    videos: [{ title: 'Worked examples', src: '6.NS-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-10-trap.mp4' }, { title: "Story: Descartes and the fly", src: '6.NS-10-story.mp4' }],
+    videos: [{ title: 'The idea', src: '6.NS-10.mp4' }, { title: 'Worked examples', src: '6.NS-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.NS-10-trap.mp4' }, { title: "Story: Descartes and the fly", src: '6.NS-10-story.mp4' }],
     concept: [
       'If two points share an x-coordinate, distance = |y₁ − y₂| (vertical).',
       'If they share a y-coordinate, distance = |x₁ − x₂| (horizontal).',
@@ -992,7 +993,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 7, title: 'Parts of expressions',
     objective: 'Identify coefficients, terms, factors, and constants.',
-    videos: [{ title: 'Worked examples', src: '6.EE-7-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-7-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.EE-7.mp4' }, { title: 'Worked examples', src: '6.EE-7-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-7-trap.mp4' }],
     concept: [
       'A TERM is one piece separated by + or −. In 4x + 7, the terms are 4x and 7.',
       'A COEFFICIENT is the number multiplied by a variable. In 4x, the coefficient is 4.',
@@ -1012,7 +1013,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 8, title: 'Equivalent expressions & checking solutions',
     objective: 'Verify equivalence with substitution; test solutions to equations.',
-    videos: [{ title: 'Worked examples', src: '6.EE-8-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-8-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.EE-8.mp4' }, { title: 'Worked examples', src: '6.EE-8-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-8-trap.mp4' }],
     concept: [
       'Two expressions are EQUIVALENT if they give the same value for every variable choice.',
       'Quick test: pick an easy value (like x = 2 or x = 10) and evaluate both.',
@@ -1032,7 +1033,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 9, title: 'Writing & solving equations from words',
     objective: 'Translate word problems into equations and solve.',
-    videos: [{ title: 'Worked examples', src: '6.EE-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-9-trap.mp4' }, { title: "Story: The handshake problem", src: '6.EE-9-story.mp4' }],
+    videos: [{ title: 'The idea', src: '6.EE-9.mp4' }, { title: 'Worked examples', src: '6.EE-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-9-trap.mp4' }, { title: "Story: The handshake problem", src: '6.EE-9-story.mp4' }],
     concept: [
       'Identify the unknown and name it (let x = number of weeks, etc.).',
       'Translate each phrase: "sum of" → +, "product of" → ×, "is" → =.',
@@ -1052,7 +1053,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.EE', unit: 10, title: 'Tables & relationships',
     objective: 'Use equations to fill tables and describe how two variables change.',
-    videos: [{ title: 'Worked examples', src: '6.EE-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-10-trap.mp4' }, { title: "Story: The chessboard rice puzzle", src: '6.EE-10-story.mp4' }],
+    videos: [{ title: 'The idea', src: '6.EE-10.mp4' }, { title: 'Worked examples', src: '6.EE-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.EE-10-trap.mp4' }, { title: "Story: The chessboard rice puzzle", src: '6.EE-10-story.mp4' }],
     concept: [
       'An equation like y = 4x gives one y for every x. Plug in to fill the table.',
       'Identify the RULE: how does y change when x grows by 1?',
@@ -1074,7 +1075,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 7, title: 'Composite figures (area)',
     objective: 'Find the area of shapes built from rectangles and triangles.',
-    videos: [{ title: 'Worked examples', src: '6.G-7-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-7-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.G-7.mp4' }, { title: 'Worked examples', src: '6.G-7-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-7-trap.mp4' }],
     concept: [
       'Break the shape into pieces whose area formulas you already know.',
       'Compute each piece, then ADD them. (For cutouts, SUBTRACT.)',
@@ -1094,7 +1095,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 8, title: 'Volume of right rectangular prisms',
     objective: 'Compute volume as length × width × height (including fractional edges).',
-    videos: [{ title: 'Worked examples', src: '6.G-8-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-8-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.G-8.mp4' }, { title: 'Worked examples', src: '6.G-8-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-8-trap.mp4' }],
     concept: [
       'Volume = l × w × h, measured in CUBIC units (in³, cm³, ft³).',
       'Multiplying fractions: numerator × numerator, denominator × denominator.',
@@ -1114,7 +1115,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 9, title: 'Polygons on the coordinate plane',
     objective: 'Find side lengths and areas of polygons whose vertices are on a grid.',
-    videos: [{ title: 'Worked examples', src: '6.G-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-9-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.G-9.mp4' }, { title: 'Worked examples', src: '6.G-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-9-trap.mp4' }],
     concept: [
       'For a horizontal segment (same y), length = |x₂ − x₁|.',
       'For a vertical segment (same x), length = |y₂ − y₁|.',
@@ -1134,7 +1135,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.G', unit: 10, title: 'Surface area & nets',
     objective: 'Compute surface area as the sum of all face areas.',
-    videos: [{ title: 'Worked examples', src: '6.G-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-10-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.G-10.mp4' }, { title: 'Worked examples', src: '6.G-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.G-10-trap.mp4' }],
     concept: [
       'A NET is the prism unfolded flat — each face becomes a rectangle on paper.',
       'Surface area = SUM of the face areas (measured in SQUARE units).',
@@ -1156,7 +1157,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.SP', unit: 7, title: 'Statistical questions',
     objective: 'Distinguish statistical questions (variability expected) from fact questions.',
-    videos: [{ title: 'Worked examples', src: '6.SP-7-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-7-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.SP-7.mp4' }, { title: 'Worked examples', src: '6.SP-7-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-7-trap.mp4' }],
     concept: [
       'A STATISTICAL question expects answers to VARY: "How tall are the kids in 6th grade?"',
       'A non-statistical question has ONE answer: "How tall am I?"',
@@ -1176,7 +1177,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.SP', unit: 8, title: 'Center: mean & median in depth',
     objective: 'Compute mean and median; pick the right center for the situation.',
-    videos: [{ title: 'Worked examples', src: '6.SP-8-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-8-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.SP-8.mp4' }, { title: 'Worked examples', src: '6.SP-8-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-8-trap.mp4' }],
     concept: [
       'MEAN = sum ÷ count. Best when data is symmetric (no outliers).',
       'MEDIAN = middle value of the SORTED data. Best when there are outliers.',
@@ -1196,7 +1197,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.SP', unit: 9, title: 'Displays: dot plots, histograms & box plots',
     objective: 'Read and interpret common 6th-grade statistical displays.',
-    videos: [{ title: 'Worked examples', src: '6.SP-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-9-trap.mp4' }, { title: "Story: Florence Nightingale", src: '6.SP-9-story.mp4' }],
+    videos: [{ title: 'The idea', src: '6.SP-9.mp4' }, { title: 'Worked examples', src: '6.SP-9-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-9-trap.mp4' }, { title: "Story: Florence Nightingale", src: '6.SP-9-story.mp4' }],
     concept: [
       'DOT PLOT: each dot is one data value. Tall stacks = common values.',
       'HISTOGRAM: bar HEIGHTS = how many values fall in each interval.',
@@ -1216,7 +1217,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.SP', unit: 10, title: 'Summarizing data sets',
     objective: 'Compute mean and median on a dataset and report a quick summary.',
-    videos: [{ title: 'Worked examples', src: '6.SP-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-10-trap.mp4' }],
+    videos: [{ title: 'The idea', src: '6.SP-10.mp4' }, { title: 'Worked examples', src: '6.SP-10-examples.mp4' }, { title: 'Avoid the trap', src: '6.SP-10-trap.mp4' }],
     concept: [
       'A summary describes the shape, center, and spread.',
       'Center: mean or median. Spread: range = max − min.',
