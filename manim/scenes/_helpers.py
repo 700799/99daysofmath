@@ -458,6 +458,127 @@ class IdeaDeck(LearningExperienceDeck):
         self.section_break()            # Pause B: mascot emphasis, then advance
 
 
+# ── TeachingDeck — substantial, smooth idea videos (~90–150s) ────────────
+
+class TeachingDeck(LearningExperienceDeck):
+    """The real lesson video: a full teaching arc, animated, never choppy.
+
+    Arc (4 sections, one Continue pause after each):
+      HOOK    — a relatable question kids can guess at before any math.
+      CONCEPT — the idea built VISUALLY, object by object (subclass draws).
+      EXAMPLE — one problem worked line by line, arithmetic appearing in order.
+      RECAP   — a big card restating the rule in 2–3 short lines.
+
+    Anti-choppy contract (enforced here, relied on by subclasses):
+      • `reveal(...)` never animates faster than 1.2s real time.
+      • `breathe()` guarantees ≥1.6s of stillness after every new idea.
+      • Each section fades out fully (slide left) before the next begins —
+        the stage is never cluttered with leftovers.
+      • Exactly 4 checkpoints (one per section) — no micro-pauses.
+
+    Subclasses set HOOK (question string) and RECAP (list of 2–3 short
+    lines), and override `concept(self)` and `example(self)`. Both draw on a
+    clear stage (title + mascot persist) and return the VGroup they built so
+    the base can clear it. Keep every drawn group inside x∈[-6.6, 5.2] and
+    y∈[-2.8, 2.9] so nothing collides with the title or mascot.
+    """
+    HOOK = ""
+    RECAP = []
+
+    def outro_pool(self):
+        return IDEA_OUTROS
+
+    # ── anti-choppy helpers (real seconds, not PACE-scaled) ──
+    def reveal(self, *anims, rt=1.3):
+        self.play(*anims, run_time=max(rt, 1.2))
+
+    def breathe(self, t=1.8):
+        self.wait(max(t, 1.6))
+
+    def clear_stage(self, group):
+        if group is not None and len(group) > 0:
+            self.play(FadeOut(group, shift=LEFT * 0.8), run_time=1.0)
+            self.wait(0.3)
+
+    def kicker(self, text, color=None):
+        """Small section label under the title so kids know where they are."""
+        k = Text(text, font_size=22, weight="BOLD",
+                 color=color or self.pal["accent"])
+        k.to_edge(UP, buff=1.05)
+        self.reveal(FadeIn(k, shift=DOWN * 0.2), rt=1.2)
+        return k
+
+    def step_lines(self, lines, anchor=DOWN * 1.6, size=30, gap=0.34):
+        """Worked-arithmetic lines revealed one at a time, each with a breath.
+        Returns the VGroup. `lines` may mix (text,) and (text, color) tuples."""
+        pal = self.pal
+        built = VGroup()
+        for item in lines:
+            txt, col = (item if isinstance(item, tuple) else (item, pal["step"]))
+            ln = Text(_wrap(txt, 44), font_size=size, color=col, weight="BOLD")
+            if len(built) == 0:
+                ln.move_to(anchor)
+            else:
+                ln.next_to(built[-1], DOWN, buff=gap)
+            self.reveal(FadeIn(ln, shift=UP * 0.15), rt=1.25)
+            self.breathe(1.6)
+            built.add(ln)
+        return built
+
+    def recap_card(self):
+        pal = self.pal
+        k = self.kicker("REMEMBER", color=pal["title"])
+        lines = VGroup(*[
+            Text(_wrap(s, 40), font_size=34, color=pal["step"], weight="BOLD")
+            for s in self.RECAP
+        ]).arrange(DOWN, buff=0.4)
+        box = RoundedRectangle(
+            width=min(12.6, lines.width + 1.2), height=lines.height + 1.0,
+            corner_radius=0.25, stroke_color=pal["answer"], stroke_width=5,
+            fill_color=pal["answer"], fill_opacity=0.08)
+        card = VGroup(box, lines.move_to(box)).move_to(DOWN * 0.2)
+        self.reveal(Create(box), rt=1.3)
+        self.reveal(FadeIn(lines, shift=UP * 0.2), rt=1.4)
+        M.cheer(self, self.mascot)
+        self.breathe(2.2)
+        return VGroup(k, card)
+
+    def lesson(self):
+        pal = self.pal
+        # 1 · HOOK — kids guess before any math appears.
+        hook = prediction_hook(self, _wrap(self.HOOK, 36), pal)
+        M.think(self, self.mascot)
+        self.breathe(2.0)
+        self.checkpoint()                       # pause 1: think about it
+        self.clear_stage(hook)
+
+        # 2 · CONCEPT — the idea, built visually.
+        k = self.kicker("THE BIG IDEA")
+        g = self.concept()
+        M.emphasis(self, self.mascot, self._beat_i); self._beat_i += 1
+        self.breathe(1.8)
+        self.checkpoint()                       # pause 2: idea sinks in
+        self.clear_stage(VGroup(k, g) if g is not None else VGroup(k))
+
+        # 3 · EXAMPLE — one problem, worked line by line.
+        k = self.kicker("WATCH IT WORK")
+        g = self.example()
+        M.cheer(self, self.mascot)
+        self.breathe(1.8)
+        self.checkpoint()                       # pause 3: study the steps
+        self.clear_stage(VGroup(k, g) if g is not None else VGroup(k))
+
+        # 4 · RECAP — the rule, big and unmissable.
+        self.recap_card()
+        self.checkpoint()                       # pause 4: before the outro
+
+    def concept(self):
+        raise NotImplementedError
+
+    def example(self):
+        raise NotImplementedError
+
+
 # ── StoryDeck — narrative "Math Stories" videos (2-3 min) ───────────────
 
 STORY_OUTROS = [
