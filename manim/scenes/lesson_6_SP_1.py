@@ -35,8 +35,8 @@ class Lesson6SP1(TeachingDeck):
         base_y = -1.9
 
         # ── MEAN: bars 4, 6, 8 level out to 6 ──
-        head_m = Text("MEAN: share it out evenly", font_size=26,
-                      color=YELLOW, weight="BOLD").move_to([-3.7, 1.5, 0])
+        head_m = Text("MEAN: level it out", font_size=26,
+                      color=YELLOW, weight="BOLD").move_to([-4.2, 1.5, 0])
         xs = [-5.0, -3.9, -2.8]
         heights = [4, 6, 8]
         bars = VGroup(*[bar_at(x, h, base_y, BLUE) for x, h in zip(xs, heights)])
@@ -59,7 +59,7 @@ class Lesson6SP1(TeachingDeck):
                                [-2.0, base_y + 6 * BAR_UNIT, 0],
                                color=GREEN, stroke_width=4)
         mean_tag = Text("mean = 6", font_size=26, color=GREEN, weight="BOLD")
-        mean_tag.next_to(mean_line, UP, buff=0.12).shift(RIGHT * 0.4)
+        mean_tag.next_to(mean_line, RIGHT, buff=0.25)
         self.reveal(Transform(bars, level_bars), Transform(labels, level_labels), rt=1.6)
         self.reveal(Create(mean_line), FadeIn(mean_tag), rt=1.3)
         arith = Text("4 + 6 + 8 = 18   →   18 ÷ 3 = 6", font_size=24,
@@ -68,8 +68,8 @@ class Lesson6SP1(TeachingDeck):
         self.breathe(2.0)
 
         # ── MEDIAN: 3, 7, 5 sort themselves, the middle wins ──
-        head_md = Text("MEDIAN: sort, take the middle", font_size=26,
-                       color=GREEN, weight="BOLD").move_to([2.0, 1.5, 0])
+        head_md = Text("MEDIAN: sort, take middle", font_size=26,
+                       color=GREEN, weight="BOLD").move_to([2.3, 1.5, 0])
         md_xs = [0.7, 2.0, 3.3]
         md_vals = [3, 7, 5]
         md = VGroup(*[

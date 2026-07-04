@@ -55,8 +55,9 @@ class Lesson5F1Idea(TeachingDeck):
                         rt=1.4)
         self.breathe(1.8)
 
-        rule = Text("Every step LEFT is ×10 bigger!", font_size=28,
-                    color=YELLOW, weight="BOLD").move_to(UP * 2.05 + LEFT * 1.4)
+        rule = Text("Every step LEFT\nis ×10 bigger!", font_size=26,
+                    color=YELLOW, weight="BOLD", line_spacing=0.9)
+        rule.move_to(RIGHT * 3.6 + UP * 1.35)
         self.reveal(FadeIn(rule, shift=DOWN * 0.2), rt=1.3)
         self.breathe(1.8)
 

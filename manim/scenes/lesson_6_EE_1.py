@@ -61,22 +61,28 @@ class Lesson6EE1(TeachingDeck):
         eq = Text("3² = 3 × 3 = 9", font_size=36, color=GREEN, weight="BOLD")
         eq.move_to(DOWN * 1.0 + LEFT * 0.7)
         self.reveal(FadeIn(eq, shift=UP * 0.2), rt=1.3)
-        self.breathe(1.6)
+        self.breathe(1.8)
+
+        more = Text("Bigger exponent, more copies:  2³ = 2 × 2 × 2 = 8",
+                    font_size=26, color=pal["accent"], weight="BOLD")
+        more.next_to(eq, DOWN, buff=0.32)
+        self.reveal(FadeIn(more, shift=UP * 0.15), rt=1.3)
+        self.breathe(1.8)
 
         # The trap, struck through on the spot.
         wrong = Text("3 × 2 = 6", font_size=30, color=RED, weight="BOLD")
-        wrong.move_to(DOWN * 2.1 + LEFT * 3.2)
+        wrong.move_to(DOWN * 2.4 + LEFT * 3.2)
         strike = Line(wrong.get_left() + LEFT * 0.1, wrong.get_right() + RIGHT * 0.1,
                       stroke_width=5, color=RED)
         warn = Text("Don't multiply base × exponent!", font_size=24,
                     color=YELLOW, weight="BOLD")
-        warn.move_to(DOWN * 2.1 + RIGHT * 1.7)
+        warn.move_to(DOWN * 2.4 + RIGHT * 1.7)
         self.reveal(FadeIn(wrong), rt=1.2)
         self.reveal(Create(strike), FadeIn(warn, shift=UP * 0.15), rt=1.3)
         self.breathe(2.0)
 
         return VGroup(base, expo, b_lbl, e_lbl, meaning, tiles, g_lbl, count,
-                      eq, wrong, strike, warn)
+                      eq, more, wrong, strike, warn)
 
     def example(self):
         pal = self.pal
