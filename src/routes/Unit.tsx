@@ -125,7 +125,7 @@ export function Unit() {
   const advance = () => {
     if (!problems) return;
     if (index + 1 >= problems.length) {
-      const outcome = record(d, u, finalStars, missedIds, xpEarned, mistakesTotal);
+      const outcome = record(d, u, finalStars, missedIds, xpEarned, mistakesTotal, total);
       const dailyStickers = touchDay();
       if (soundOn) playUnitComplete();
       const allNew = [...outcome.earned, ...dailyStickers];

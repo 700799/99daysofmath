@@ -159,7 +159,9 @@ interface ProgressState {
     missedIds: string[],
     xpEarned: number,
     mistakesTotal: number,
+    total?: number, // problems in the run — lets the run % land in unitRuns
   ) => UnitResultOutcome;
+  unitRuns: Record<string, number[]>; // `${domain}-${unit}` → last 6 run scores (%) for sparklines
   awardXP: (n: number) => string[];
   recordMockTestResult: (accuracy: number, rit?: number) => string[];
   recordAttempt: (problemId: string, correct: boolean) => void;
@@ -355,6 +357,7 @@ const v5Defaults = {
 
 const v6Defaults = {
   problemStats: {} as Record<string, ProblemStat>,
+  unitRuns: {} as Record<string, number[]>,
   ritHistory: [] as RitPoint[],
   lessonsViewed: [] as string[],
 };
@@ -754,9 +757,16 @@ export const useProgress = create<ProgressState>()(
       addArcadePoints: (n) => {
         if (n > 0) set((s) => ({ cumArcadePoints: s.cumArcadePoints + n }));
       },
-      recordUnitResult: (domain, unit, stars, missedIds, xpEarned, mistakesTotal) => {
+      recordUnitResult: (domain, unit, stars, missedIds, xpEarned, mistakesTotal, total) => {
         const stateBefore = get();
         const today = todayISO();
+        // Sparkline history: keep the last 6 run percentages per unit.
+        let nextUnitRuns = stateBefore.unitRuns ?? {};
+        if (total && total > 0) {
+          const key = `${domain}-${unit}`;
+          const pct = Math.max(0, Math.min(100, Math.round(((total - missedIds.length) / total) * 100)));
+          nextUnitRuns = { ...nextUnitRuns, [key]: [...(nextUnitRuns[key] ?? []), pct].slice(-6) };
+        }
         const d = stateBefore.byDomain[domain] ?? blankDomain();
         const prevStars = d.unitStars[unit] ?? 0;
         const nextStars: Stars = Math.max(prevStars, stars) as Stars;
@@ -806,6 +816,7 @@ export const useProgress = create<ProgressState>()(
         );
         set({
           byDomain: nextByDomain,
+          unitRuns: nextUnitRuns,
           xp: nextXp,
           totalPerfectUnits: nextTotalPerfect,
           dailyXp: daily.dailyXp,
