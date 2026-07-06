@@ -1,47 +1,105 @@
-"""6.G Unit 3 — Volume of rectangular prisms.
-Math (verified):  V = l × w × h = 2 × 3 × 5 = 30 cubic units.
+"""6.G Unit 3 — Volume of prisms  (TeachingDeck)
+
+Math (verified):
+  • Concept box: length 4, depth 2, height 3.
+      One layer (top view) = length × depth = 4 × 2 = 8 unit cubes.
+      Stack 3 layers: 8 × 3 = 24 unit cubes. V = l × w × h = 4 × 2 × 3 = 24.
+  • Example box: ½ × 3 × 4.
+      3 × 4 = 12 (the flat footprint).
+      ½ × 12 = 6.  So V = 6 cubic units.
 """
-from manim import *
+import numpy as np
+from manim import *  # noqa: F401,F403
+from _helpers import TeachingDeck, answer_card
+import _geo as G
 
 
-class Lesson6G3(Scene):
-    def construct(self):
-        title = Text("Volume of a rectangular prism", font_size=40, weight=BOLD)
-        title.to_edge(UP, buff=0.4)
-        self.play(Write(title), run_time=1.4)
+class Lesson6G3(TeachingDeck):
+    TITLE = "Volume of prisms"
+    DOMAIN = "6.G"
+    HOOK = "A toy chest is 4 cubes long, 2 cubes deep, 3 cubes tall. How many unit cubes fill it?"
+    RECAP = [
+        "V = length × width × height",
+        "One layer = l × w, then stack h layers",
+        "Answer is always in CUBIC units",
+    ]
 
-        # Pseudo-3D box drawn with two overlapping quadrilaterals (front + back) and 4 edges.
-        # Dimensions chosen for clarity, labeled 2 × 3 × 5.
-        # Front face
-        fl = LEFT * 2.5 + DOWN * 0.6
-        fr = LEFT * 0.5 + DOWN * 0.6
-        ftl = LEFT * 2.5 + UP * 0.8
-        ftr = LEFT * 0.5 + UP * 0.8
-        front = Polygon(fl, fr, ftr, ftl, color=BLUE, fill_color=BLUE, fill_opacity=0.15, stroke_width=3)
-        # Back face (shifted up-right for depth)
-        off = RIGHT * 0.9 + UP * 0.5
-        back = Polygon(fl + off, fr + off, ftr + off, ftl + off, color=BLUE, fill_opacity=0.07, stroke_width=2)
-        # Connecting edges
-        edges = VGroup(
-            Line(fl, fl + off, color=BLUE),
-            Line(fr, fr + off, color=BLUE),
-            Line(ftl, ftl + off, color=BLUE),
-            Line(ftr, ftr + off, color=BLUE),
-        )
-        self.play(Create(front), run_time=1.4)
-        self.play(Create(back), Create(edges), run_time=1.4)
+    def concept(self):
+        pal = self.pal
+        u = 0.55
+        l, w, h = 4, 2, 3
+        ov = np.array([-5.9, -1.55, 0.0])
+        box = G.cuboid(l, w, h, u=u, color=BLUE, grid=True).shift(ov)
+        W, H = l * u, h * u
+        Dx, Dy = w * 0.62 * u, w * 0.38 * u
 
-        # Dimension labels
-        l_lbl = Text("length = 2", font_size=24, color=BLUE).next_to(front, DOWN, buff=0.3)
-        h_lbl = Text("height = 3", font_size=24, color=BLUE).next_to(front, LEFT, buff=0.2)
-        w_lbl = Text("width = 5", font_size=24, color=BLUE).move_to(back.get_center() + RIGHT * 1.2 + UP * 0.6)
-        self.play(Write(l_lbl), Write(h_lbl), Write(w_lbl), run_time=1.4)
+        self.reveal(Create(box), rt=1.8)
+        self.breathe(1.6)
 
-        formula = Text("V = length × width × height", font_size=28).shift(RIGHT * 2.7 + UP * 0.8)
-        self.play(Write(formula), run_time=1.4)
-        calc = Text("V = 2 × 5 × 3", font_size=32).shift(RIGHT * 2.7 + DOWN * 0.2)
-        self.play(Write(calc), run_time=1.4)
-        ans = Text("V = 30 cubic units", font_size=34, color=GREEN, weight=BOLD).shift(RIGHT * 2.7 + DOWN * 1.3)
-        self.play(Write(ans), run_time=1.4)
-        self.wait(2.8)
-# slowed
+        len_lbl = Text("4", font_size=28, color=YELLOW, weight="BOLD")
+        len_lbl.move_to(G.P(W / 2, -0.35) + ov)
+        hgt_lbl = Text("3", font_size=28, color=YELLOW, weight="BOLD")
+        hgt_lbl.move_to(G.P(-0.35, H / 2) + ov)
+        dep_lbl = Text("2", font_size=28, color=YELLOW, weight="BOLD")
+        dep_lbl.move_to(G.P(W + Dx / 2 + 0.25, H + Dy / 2 + 0.15) + ov)
+        self.reveal(FadeIn(len_lbl), FadeIn(hgt_lbl), FadeIn(dep_lbl), rt=1.3)
+        self.breathe(1.6)
+
+        # Highlight the top face: it IS one layer, seen from above.
+        top_face = Polygon(G.P(0, H) + ov, G.P(W, H) + ov,
+                           G.P(W + Dx, H + Dy) + ov, G.P(Dx, H + Dy) + ov,
+                           stroke_color=YELLOW, stroke_width=4,
+                           fill_color=YELLOW, fill_opacity=0.35)
+        self.reveal(FadeIn(top_face), rt=1.3)
+        note1 = Text("One layer from above: 4 × 2 = 8 cubes", font_size=26,
+                     color=pal["step"], weight="BOLD").move_to(RIGHT * 1.5 + UP * 2.15)
+        self.reveal(FadeIn(note1, shift=UP * 0.15), rt=1.2)
+        self.breathe(1.8)
+
+        note2 = Text("Stack 3 layers: 8 × 3 = 24", font_size=26,
+                     color=YELLOW, weight="BOLD").next_to(note1, DOWN, buff=0.4)
+        self.reveal(FadeIn(note2, shift=UP * 0.15), rt=1.2)
+        self.breathe(1.8)
+
+        formula = Text("V = l × w × h", font_size=32, color=pal["answer"],
+                       weight="BOLD").next_to(note2, DOWN, buff=0.5)
+        self.reveal(FadeIn(formula, scale=1.15), rt=1.3)
+        self.breathe(2.0)
+
+        return VGroup(box, len_lbl, hgt_lbl, dep_lbl, top_face, note1, note2, formula)
+
+    def example(self):
+        pal = self.pal
+        q = Text("A box is ½ tall, 3 long, 4 deep. Volume?", font_size=28,
+                 color=pal["accent"], weight="BOLD").move_to(UP * 2.35)
+        self.reveal(FadeIn(q, shift=DOWN * 0.15), rt=1.2)
+        self.breathe(1.6)
+
+        u = 0.62
+        l, w, h = 3, 4, 0.5
+        ov = np.array([-5.9, -1.5, 0.0])
+        box = G.cuboid(l, w, h, u=u, color=ORANGE, grid=False).shift(ov)
+        W, H = l * u, h * u
+        Dx, Dy = w * 0.62 * u, w * 0.38 * u
+        len_lbl = Text("3", font_size=26, color=YELLOW, weight="BOLD")
+        len_lbl.move_to(G.P(W / 2, -0.35) + ov)
+        dep_lbl = Text("4", font_size=26, color=YELLOW, weight="BOLD")
+        dep_lbl.move_to(G.P(W + Dx / 2 + 0.25, H + Dy / 2 + 0.15) + ov)
+        hgt_lbl = Text("½", font_size=26, color=YELLOW, weight="BOLD")
+        hgt_lbl.move_to(G.P(-0.4, H / 2 + 0.1) + ov)
+
+        self.reveal(Create(box), FadeIn(len_lbl), FadeIn(dep_lbl), FadeIn(hgt_lbl), rt=1.6)
+        note = Text("Short box — only ½ a unit tall!", font_size=24,
+                    color=pal["step"], weight="BOLD").move_to(RIGHT * 1.9 + DOWN * 2.35)
+        self.reveal(FadeIn(note, shift=UP * 0.15), rt=1.2)
+        self.breathe(1.8)
+
+        steps = self.step_lines([
+            ("V = l × w × h", pal["step"]),
+            ("½ × 3 × 4 = ½ × 12", pal["step"]),
+        ], anchor=RIGHT * 1.9 + UP * 1.2, size=28, gap=0.4)
+
+        ans = answer_card(self, "V = 6 cubic units", pal["answer"],
+                          self.mascot, pos=RIGHT * 1.9 + DOWN * 0.9)
+        self.breathe(2.0)
+        return VGroup(q, box, len_lbl, dep_lbl, hgt_lbl, note, steps, ans)
