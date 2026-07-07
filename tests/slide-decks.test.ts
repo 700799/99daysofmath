@@ -3,18 +3,20 @@ import { LESSONS, lessonKey } from '../src/data/lessons';
 import { MATHEMATICIAN_DECKS } from '../src/data/mathematicianDecks';
 import stories from '../src/data/mathStories.json';
 
-// The story-style slide rewrite: every lesson carries a 12–20-slide deck,
+// The story-style slide rewrite: every lesson carries a 12–22-slide deck with
+// an example ladder (base case → harder → multi-step → "Another way" alternate
+// approach → visualize-first word problem) plus an "Extra credit" challenge,
 // every story is expanded (≥7 beats, meaty bodies), and every mathematician
 // has a 12–20-slide deck.
 
 describe('lesson slide decks', () => {
-  it('every lesson has 12–20 slides with non-empty head/body', () => {
+  it('every lesson has 12–22 slides with non-empty head/body', () => {
     for (const l of LESSONS) {
       const key = lessonKey(l.domain, l.unit);
       expect(l.slides, `${key} has no slide deck`).toBeDefined();
       const s = l.slides!;
       expect(s.length, `${key} has ${s.length} slides`).toBeGreaterThanOrEqual(12);
-      expect(s.length, `${key} has ${s.length} slides`).toBeLessThanOrEqual(20);
+      expect(s.length, `${key} has ${s.length} slides`).toBeLessThanOrEqual(22);
       for (const sl of s) {
         expect(sl.head.length, `${key} empty head`).toBeGreaterThan(0);
         expect(sl.body.length, `${key} "${sl.head}" body too short`).toBeGreaterThan(40);
@@ -22,22 +24,32 @@ describe('lesson slide decks', () => {
     }
   });
 
-  it('every deck covers the full arc: objective, concept, example, protip, trap, summary', () => {
+  it('every deck covers the full arc: objective, concept, example, protip, trap, challenge, summary', () => {
     for (const l of LESSONS) {
       const key = lessonKey(l.domain, l.unit);
       const kinds = new Set((l.slides ?? []).map((s) => s.kind));
-      for (const k of ['objective', 'concept', 'example', 'protip', 'trap', 'summary'] as const) {
+      for (const k of ['objective', 'concept', 'example', 'protip', 'trap', 'challenge', 'summary'] as const) {
         expect(kinds.has(k), `${key} missing a ${k} slide`).toBe(true);
       }
     }
   });
 
-  it('decks have enough teaching depth (3+ concepts, 5+ examples)', () => {
+  it('decks have enough teaching depth (3+ concepts, 6+ examples)', () => {
     for (const l of LESSONS) {
       const key = lessonKey(l.domain, l.unit);
       const by = (k: string) => (l.slides ?? []).filter((s) => s.kind === k).length;
       expect(by('concept'), `${key} concepts`).toBeGreaterThanOrEqual(3);
-      expect(by('example'), `${key} examples`).toBeGreaterThanOrEqual(5);
+      expect(by('example'), `${key} examples`).toBeGreaterThanOrEqual(6);
+    }
+  });
+
+  it('every deck shows an alternate problem-solving approach ("Another way…")', () => {
+    for (const l of LESSONS) {
+      const key = lessonKey(l.domain, l.unit);
+      const hasAlt = (l.slides ?? []).some(
+        (s) => s.kind === 'example' && s.head.toLowerCase().startsWith('another way'),
+      );
+      expect(hasAlt, `${key} has no "Another way" alternate-approach example`).toBe(true);
     }
   });
 });

@@ -45,7 +45,7 @@ function buildPages(lesson: Lesson): Page[] {
     const idxOf = (s: LessonSlide) => slides.indexOf(s);
     const objectives = slides.filter((s) => s.kind === 'objective');
     const middle = slides.filter((s) => s.kind === 'concept' || s.kind === 'example' || s.kind === 'protip');
-    const tail = slides.filter((s) => s.kind === 'trap' || s.kind === 'summary');
+    const tail = slides.filter((s) => s.kind === 'trap' || s.kind === 'challenge' || s.kind === 'summary');
     objectives.forEach((s) => pages.push({ kind: 'slide', idx: idxOf(s) }));
     if (vids.length > 0) pages.push({ kind: 'video', idx: 0 }); // the one lesson video
     middle.forEach((s) => pages.push({ kind: 'slide', idx: idxOf(s) }));
@@ -102,7 +102,7 @@ function makeSectionOf(lesson: Lesson): (page: Page) => SectionName {
 function baseSecsFor(page: Page, lesson: Lesson): number {
   if (page.kind === 'slide') {
     const k = (lesson.slides ?? [])[page.idx]?.kind;
-    if (k === 'example') return 8;
+    if (k === 'example' || k === 'challenge') return 8;
     if (k === 'concept') return 5;
     return 3; // objective | protip | trap | summary
   }
@@ -447,6 +447,7 @@ const SLIDE_STYLE: Record<LessonSlide['kind'], { badge: string; emoji: string; c
   example: { badge: 'Worked example', emoji: '✏️', card: 'bg-emerald-50 border-emerald-200', badgeCls: 'bg-emerald-200 text-emerald-900' },
   protip: { badge: 'Pro tip', emoji: '⭐', card: 'bg-violet-50 border-violet-200', badgeCls: 'bg-violet-200 text-violet-900' },
   trap: { badge: 'Trap to avoid', emoji: '⚠️', card: 'bg-amber-50 border-amber-200', badgeCls: 'bg-amber-200 text-amber-900' },
+  challenge: { badge: 'Extra credit', emoji: '🌟', card: 'bg-yellow-50 border-yellow-300', badgeCls: 'bg-yellow-300 text-yellow-950' },
   summary: { badge: 'Summary', emoji: '🏁', card: 'bg-green-50 border-green-200', badgeCls: 'bg-green-200 text-green-900' },
 };
 
