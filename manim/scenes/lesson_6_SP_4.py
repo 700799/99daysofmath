@@ -1,55 +1,61 @@
-"""6.SP Unit 4 — Displaying data: the box plot.
+"""6.SP Unit 4 — Displaying data  (TeachingDeck)
+
 Math (verified):
-  On a box plot the line inside the box is the MEDIAN. The box ends are the
-  lower (Q1) and upper (Q3) quartiles; the whiskers extend to the min/max.
+  • Box plot: line inside the box is the median.
+  • A dot plot with 3 dots above 5 means 3 values equal 5.
 """
-from manim import *
+from manim import *  # noqa: F401,F403
+from _helpers import TeachingDeck, answer_card
 
 
-class Lesson6SP4(Scene):
-    def construct(self):
-        title = Text("Reading a box plot", font_size=40, weight=BOLD)
-        title.to_edge(UP, buff=0.4)
-        self.play(Write(title), run_time=1.4)
+class Lesson6SP4(TeachingDeck):
+    TITLE = "Displaying data"
+    DOMAIN = "6.SP"
+    HOOK = "A box, a bar, or a dot — which picture tells you the middle of the data at a glance?"
+    RECAP = [
+        "Dot plot: one dot per value",
+        "Histogram: bars, equal intervals, no gaps",
+        "Box plot: shows the median and quartiles",
+    ]
 
-        # Number line
-        nl = NumberLine(
-            x_range=[0, 20, 2],
-            length=10,
-            include_numbers=True,
-            label_direction=DOWN,
-            font_size=22,
-            color=GREY,
-        ).shift(DOWN * 0.5)
-        self.play(Create(nl), run_time=1.4)
+    def concept(self):
+        pal = self.pal
+        nl = NumberLine(x_range=[0, 20, 2], length=9.5, color=GREY_B,
+                        include_numbers=True, font_size=20)
+        nl.move_to(DOWN * 0.6)
+        self.reveal(Create(nl), rt=1.4)
+        self.breathe(1.4)
 
-        # Box plot pieces
-        # Whisker lines from 2 to 18, box from 6 to 14, median line at 10
-        whisker_l = Line(nl.n2p(2), nl.n2p(6), color=BLUE, stroke_width=4).shift(UP * 1.2)
-        whisker_r = Line(nl.n2p(14), nl.n2p(18), color=BLUE, stroke_width=4).shift(UP * 1.2)
-        # Whisker caps
-        cap_l = Line(nl.n2p(2) + UP * 0.25, nl.n2p(2) + DOWN * 0.25, color=BLUE, stroke_width=3).shift(UP * 1.2)
-        cap_r = Line(nl.n2p(18) + UP * 0.25, nl.n2p(18) + DOWN * 0.25, color=BLUE, stroke_width=3).shift(UP * 1.2)
-        # Box
+        whisker_l = Line(nl.n2p(2), nl.n2p(6), color=BLUE, stroke_width=4).shift(UP * 1.3)
+        whisker_r = Line(nl.n2p(14), nl.n2p(18), color=BLUE, stroke_width=4).shift(UP * 1.3)
         box_w = nl.n2p(14)[0] - nl.n2p(6)[0]
-        box = Rectangle(width=box_w, height=1.0, color=BLUE,
-                        fill_color=BLUE, fill_opacity=0.2)
-        box.move_to((nl.n2p(6) + nl.n2p(14)) / 2 + UP * 1.2)
-        # Median line inside the box
-        median_line = Line(nl.n2p(10) + UP * 0.5, nl.n2p(10) + DOWN * 0.5,
-                           color=GREEN, stroke_width=6).shift(UP * 1.2)
-        self.play(Create(whisker_l), Create(whisker_r), Create(cap_l), Create(cap_r), run_time=1.4)
-        self.play(Create(box), run_time=1.4)
-        self.play(Create(median_line), run_time=1.4)
+        box = Rectangle(width=box_w, height=0.9, color=BLUE, fill_color=BLUE, fill_opacity=0.2)
+        box.move_to((nl.n2p(6) + nl.n2p(14)) / 2 + UP * 1.3)
+        median_line = Line(nl.n2p(10) + UP * 0.45, nl.n2p(10) + DOWN * 0.45, color=GREEN, stroke_width=6).shift(UP * 1.3)
+        self.reveal(Create(whisker_l), Create(whisker_r), Create(box), rt=1.6)
+        self.breathe(1.4)
+        self.reveal(Create(median_line), rt=1.3)
+        med_lbl = Text("median = 10", font_size=24, color=GREEN, weight="BOLD").next_to(median_line, UP, buff=0.2)
+        self.reveal(FadeIn(med_lbl), rt=1.2)
+        cap = Text("Line inside the box = MEDIAN", font_size=26, color=pal["accent"],
+                   weight="BOLD").move_to(UP * 2.1)
+        self.reveal(FadeIn(cap, shift=UP * 0.15), rt=1.3)
+        self.breathe(2.0)
 
-        # Labels
-        median_lbl = Text("Median = 10", font_size=26, color=GREEN, weight=BOLD).next_to(median_line, UP, buff=0.3)
-        q1_lbl = Text("Q1", font_size=22, color=BLUE).next_to(nl.n2p(6) + UP * 1.2, DOWN, buff=0.2)
-        q3_lbl = Text("Q3", font_size=22, color=BLUE).next_to(nl.n2p(14) + UP * 1.2, DOWN, buff=0.2)
-        self.play(Write(median_lbl), Write(q1_lbl), Write(q3_lbl), run_time=1.4)
+        return VGroup(nl, whisker_l, whisker_r, box, median_line, med_lbl, cap)
 
-        rule = Text("Line inside the box = the MEDIAN",
-                    font_size=28, color=GREEN, weight=BOLD).shift(DOWN * 2.2)
-        self.play(Write(rule), run_time=1.4)
-        self.wait(2.8)
-# slowed
+    def example(self):
+        pal = self.pal
+        q = Text("On a box plot, what does the line inside the box show?", font_size=26,
+                 color=pal["accent"], weight="BOLD").move_to(UP * 2.3)
+        self.reveal(FadeIn(q, shift=DOWN * 0.15), rt=1.3)
+        self.breathe(1.8)
+
+        steps = self.step_lines([
+            ("the box spans the middle half", pal["step"]),
+            ("the inside line is the middle", pal["step"]),
+        ], anchor=UP * 0.6, size=27, gap=0.4)
+
+        ans = answer_card(self, "the median", pal["answer"], self.mascot, pos=DOWN * 1.5)
+        self.breathe(2.0)
+        return VGroup(q, steps, ans)
