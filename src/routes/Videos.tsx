@@ -4,12 +4,19 @@ import { DOMAINS, DOMAIN_EMOJI, DOMAIN_LABELS } from '../types/problem';
 import { LESSONS, type Lesson } from '../data/lessons';
 import { LessonCard } from '../components/LessonCard';
 import { LessonVideo } from '../components/LessonVideo';
+import { useSeo } from '../lib/seo';
 
 // Learning library: every unit's Manim animations side-by-side with the
 // written lesson plan (concept bullets + the full step-by-step deck).
 // Videos live inside <details> so nothing downloads until a unit is opened.
 export function Videos() {
   const [openLesson, setOpenLesson] = useState<Lesson | null>(null);
+  useSeo({
+    title: 'Math Video Lessons — 5th & 6th Grade | Math10x',
+    description:
+      'Watch free animated math video lessons for 5th and 6th grade: ratios, fractions, decimals, geometry, expressions, and statistics — each with worked examples and practice.',
+    canonicalPath: '/videos',
+  });
 
   return (
     <div>

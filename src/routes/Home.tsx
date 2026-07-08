@@ -14,8 +14,34 @@ import { Mascot } from '../components/Mascot';
 import { DailyQuestRing } from '../components/DailyQuestRing';
 import { PracticeHeatmap } from '../components/PracticeHeatmap';
 import { Onboarding } from '../components/Onboarding';
+import { HowItWorks } from '../components/HowItWorks';
+import { useSeo, SITE_URL, SITE_NAME } from '../lib/seo';
+
+const HOME_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Math10x math trails',
+  itemListElement: DOMAINS.map((d, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Course',
+      name: `${DOMAIN_LABELS[d]} — ${d.startsWith('5.') ? '5th' : '6th'} Grade Math`,
+      description: DOMAIN_DESCRIPTIONS[d],
+      url: `${SITE_URL}/trail/${d}`,
+      provider: { '@type': 'EducationalOrganization', name: SITE_NAME, url: `${SITE_URL}/` },
+    },
+  })),
+};
 
 export function Home() {
+  useSeo({
+    title: 'Math10x — Free 5th & 6th Grade Math: Video Lessons, Practice & an Arcade',
+    description:
+      'Math10x makes 5th and 6th grade math click: clear animated video lessons, worked examples, and practice — plus an arcade of games kids unlock by learning.',
+    canonicalPath: '/',
+    jsonLd: HOME_JSON_LD,
+  });
   const { data: summary, loading, error } = useDomainSummary();
   const progress = useProgress((s) => s.byDomain);
   const dailyGoal = useProgress((s) => s.dailyGoal);
@@ -214,6 +240,8 @@ export function Home() {
 
 
       <PracticeHeatmap practiceDates={practiceDates} xpByDate={xpByDate} />
+
+      <HowItWorks />
     </div>
   );
 }

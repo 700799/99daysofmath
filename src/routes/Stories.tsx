@@ -5,6 +5,7 @@ import storiesData from '../data/mathStories.json';
 import { DOMAINS, DOMAIN_LABELS, type Domain } from '../types/problem';
 import { StorySlide } from '../components/StorySlide';
 import { useStoryPlayer } from '../state/storyPlayer';
+import { useSeo } from '../lib/seo';
 
 interface Beat {
   head: string;
@@ -41,6 +42,12 @@ export function Stories() {
   const [opened, setOpened] = useState<Story | null>(null);
   const setStory = useStoryPlayer((s) => s.setStory);
   const location = useLocation();
+  useSeo({
+    title: 'Math Stories — The History & Wonder of Math | Math10x',
+    description:
+      'Illustrated math stories that bring 5th & 6th grade concepts to life — the origins and real-world magic behind ratios, fractions, geometry, and more.',
+    canonicalPath: '/stories',
+  });
 
   const handleStoryClick = (story: Story) => {
     const totalSlides = getTotalSlides(story);

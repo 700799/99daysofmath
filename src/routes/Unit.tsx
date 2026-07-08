@@ -1,7 +1,8 @@
 import { useState, useMemo, useRef } from 'react';
 import { useNavigate, useParams, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { DOMAINS, type Domain, type HintLevel, type HintStep } from '../types/problem';
+import { DOMAINS, DOMAIN_LABELS, type Domain, type HintLevel, type HintStep } from '../types/problem';
+import { useSeo, courseJsonLd, breadcrumbJsonLd, SITE_URL } from '../lib/seo';
 import { useUnitProblems } from '../hooks/useProblems';
 import { useProgress } from '../state/progress';
 import { useMathClock } from '../hooks/useMathClock';
@@ -45,6 +46,32 @@ export function Unit() {
   }
   const d = domain as Domain;
   const u = parseInt(unit, 10);
+
+  const seoLesson = getLesson(d, u);
+  const seoGrade = d.startsWith('5.') ? '5th' : '6th';
+  useSeo({
+    title: seoLesson
+      ? `${seoLesson.title} — ${seoGrade} Grade Math (${DOMAIN_LABELS[d]}) | Math10x`
+      : `${DOMAIN_LABELS[d]} lesson | Math10x`,
+    description: seoLesson
+      ? `${seoLesson.objective ?? seoLesson.title}. A free ${seoGrade}-grade math lesson with an animated video, worked examples, and practice on Math10x.`
+      : `A free ${seoGrade}-grade math lesson on Math10x.`,
+    canonicalPath: `/unit/${d}/${u}`,
+    jsonLd: seoLesson
+      ? [
+          courseJsonLd(
+            `${seoLesson.title} — ${seoGrade} Grade Math`,
+            seoLesson.objective ?? seoLesson.title,
+            `${SITE_URL}/unit/${d}/${u}`,
+          ),
+          breadcrumbJsonLd([
+            { name: 'Home', path: '/' },
+            { name: DOMAIN_LABELS[d], path: `/trail/${d}` },
+            { name: seoLesson.title, path: `/unit/${d}/${u}` },
+          ]),
+        ]
+      : undefined,
+  });
 
   const { data: problems, loading, error } = useUnitProblems(d, u);
 

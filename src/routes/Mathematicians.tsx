@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MATHEMATICIAN_DECKS, type MathematicianDeck } from '../data/mathematicianDecks';
 import { MathematicianDeckPlayer } from '../components/MathematicianDeck';
+import { useSeo } from '../lib/seo';
 
 interface Mathematician {
   name: string;
@@ -70,6 +71,12 @@ const deckFor = (name: string): MathematicianDeck | undefined =>
 
 export function Mathematicians() {
   const [open, setOpen] = useState<MathematicianDeck | null>(null);
+  useSeo({
+    title: 'Famous Mathematicians for Kids — Euclid to Ramanujan | Math10x',
+    description:
+      'Meet the brilliant minds who shaped math: Euclid, Newton, Euler, Gauss, Ramanujan, Noether, Hilbert & Cantor — slide-by-slide stories of what they did and why it matters.',
+    canonicalPath: '/mathematicians',
+  });
 
   return (
     <div>
