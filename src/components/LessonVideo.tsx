@@ -1,10 +1,4 @@
-import {
-  useEffect,
-  useRef,
-  useState,
-  useCallback,
-  type ReactNode,
-} from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion';
 import { useProgress } from '../state/progress';
@@ -18,22 +12,11 @@ interface Props {
 }
 
 const RATE_KEY = 'lesson:video-rate';
-const PAUSE_KEY = 'lesson:auto-pause';
 
 function getInitialRate(): number {
   if (typeof window === 'undefined') return 1;
   const v = window.localStorage.getItem(RATE_KEY);
   return v === '0.75' ? 0.75 : 1;
-}
-
-function getInitialAutoPause(): boolean {
-  if (typeof window === 'undefined') return true;
-  return window.localStorage.getItem(PAUSE_KEY) !== 'off';
-}
-
-interface Chapters {
-  checkpoints: number[];
-  total: number;
 }
 
 /**
@@ -172,25 +155,17 @@ function VideoDrawer({ open, onClose, title, src }: DrawerProps) {
 
 /**
  * The actual playback surface. Lives only inside the drawer — there's no
- * inline use. Keeps the existing Continue checkpoints, 🐢 slow toggle, big
- * play / replay overlays, and tries to autoplay muted on open.
+ * inline use. The animations play STRAIGHT THROUGH (no chapter pauses); the
+ * kid gets native controls, a 🐢 slow toggle, and big play / replay overlays.
  */
 function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode {
   const url = `${import.meta.env.BASE_URL}videos/lessons/${src}`;
-  const chaptersUrl = `${import.meta.env.BASE_URL}videos/lessons/${src.replace(/\.mp4$/, '.chapters.json')}`;
   const ref = useRef<HTMLVideoElement | null>(null);
   const [playing, setPlaying] = useState(false);
   const [ended, setEnded] = useState(false);
   const [rate, setRate] = useState<number>(() => getInitialRate());
-  const [autoPause, setAutoPause] = useState<boolean>(() => getInitialAutoPause());
   const completeVideo = useProgress((s) => s.completeVideo);
   const [coinAward, setCoinAward] = useState(0); // >0 → show the "you earned coins" toast
-
-  const rawRef = useRef<Chapters | null>(null);
-  const marksRef = useRef<number[]>([]);
-  const nextIdxRef = useRef(0);
-  const computeMarksRef = useRef<() => void>(() => {});
-  const [atCheckpoint, setAtCheckpoint] = useState(false);
 
   useEffect(() => {
     const v = ref.current;
@@ -201,10 +176,6 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
   useEffect(() => {
     window.localStorage.setItem(RATE_KEY, String(rate));
   }, [rate]);
-
-  useEffect(() => {
-    window.localStorage.setItem(PAUSE_KEY, autoPause ? 'on' : 'off');
-  }, [autoPause]);
 
   // Pause + release on unmount (drawer close).
   useEffect(() => {
@@ -221,53 +192,12 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
   }, []);
 
   // No time-based autoplay: the animation waits on the big Play button so it
-  // only ever starts (and continues) on a button press.
-
-  useEffect(() => {
-    let cancelled = false;
-    fetch(chaptersUrl)
-      .then((r) => (r.ok ? r.json() : null))
-      .then((j: Chapters | null) => {
-        if (!cancelled && j && Array.isArray(j.checkpoints)) {
-          rawRef.current = j;
-          const v = ref.current;
-          if (v && isFinite(v.duration) && v.duration > 0) computeMarksRef.current();
-        }
-      })
-      .catch(() => {});
-    return () => {
-      cancelled = true;
-    };
-  }, [chaptersUrl]);
-
-  const computeMarks = useCallback(() => {
-    const v = ref.current;
-    if (!v || !isFinite(v.duration) || v.duration <= 0) {
-      marksRef.current = [];
-      return;
-    }
-    const raw = rawRef.current;
-    if (raw && raw.total && raw.checkpoints.length) {
-      const ratio = v.duration / raw.total;
-      marksRef.current = raw.checkpoints
-        .map((c) => c * ratio)
-        .filter((t) => t > 0.5 && t < v.duration - 0.4)
-        .sort((a, b) => a - b);
-    } else {
-      const PERIOD = 9;
-      const marks: number[] = [];
-      for (let t = PERIOD; t < v.duration - 1; t += PERIOD) marks.push(t);
-      marksRef.current = marks;
-    }
-    nextIdxRef.current = 0;
-  }, []);
-  computeMarksRef.current = computeMarks;
+  // only ever starts on a button press — then it plays straight through.
 
   const play = () => {
     const v = ref.current;
     if (!v) return;
     setEnded(false);
-    setAtCheckpoint(false);
     v.play().catch(() => {});
   };
 
@@ -277,29 +207,9 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
     const v = ref.current;
     if (!v) return;
     v.currentTime = 0;
-    nextIdxRef.current = 0;
     setEnded(false);
-    setAtCheckpoint(false);
     setCoinAward(0);
     v.play().catch(() => {});
-  };
-
-  const onTimeUpdate = () => {
-    if (!autoPause) return;
-    const v = ref.current;
-    const marks = marksRef.current;
-    if (!v || marks.length === 0) return;
-    const i = nextIdxRef.current;
-    if (i < marks.length && v.currentTime >= marks[i]) {
-      nextIdxRef.current = i + 1;
-      v.pause();
-      setAtCheckpoint(true);
-    }
-  };
-
-  const continuePlayback = () => {
-    setAtCheckpoint(false);
-    ref.current?.play().catch(() => {});
   };
 
   // On phone the parent gives us a flex-1 black stage; we fill it.
@@ -316,18 +226,8 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
         preload="metadata"
         className="absolute inset-0 w-full h-full bg-black object-contain"
         aria-label={title}
-        onLoadedMetadata={computeMarks}
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
-        onSeeked={() => {
-          const v = ref.current;
-          if (!v) return;
-          const marks = marksRef.current;
-          let i = 0;
-          while (i < marks.length && marks[i] <= v.currentTime + 0.05) i++;
-          nextIdxRef.current = i;
-        }}
-        onTimeUpdate={onTimeUpdate}
         onEnded={() => {
           setEnded(true);
           setPlaying(false);
@@ -347,7 +247,7 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
         </motion.div>
       )}
 
-      {!playing && !ended && !atCheckpoint && (
+      {!playing && !ended && (
         <button
           type="button"
           onClick={play}
@@ -360,32 +260,7 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
         </button>
       )}
 
-      {atCheckpoint && (
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-black/50 px-4 text-center">
-          <div className="font-display font-extrabold text-white text-lg sm:text-xl drop-shadow">
-            ⏸ Paused — ready for the next part?
-          </div>
-          <button
-            type="button"
-            onClick={continuePlayback}
-            className="rounded-full bg-duo-green hover:bg-green-600 text-white font-display font-extrabold text-lg sm:text-xl px-8 h-14 flex items-center gap-2 shadow-lg shadow-green-600/30 active:translate-y-0.5 transition"
-          >
-            Continue ▶
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              setAutoPause(false);
-              continuePlayback();
-            }}
-            className="text-white/80 text-xs font-display font-bold underline"
-          >
-            Play straight through (don't pause)
-          </button>
-        </div>
-      )}
-
-      {playing && !atCheckpoint && (
+      {playing && (
         <button
           type="button"
           onClick={pause}
