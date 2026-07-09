@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type RefObject } from 'react';
+import { useEffect, useState, type RefObject } from 'react';
 import { useProgress } from '../state/progress';
 
 /**
