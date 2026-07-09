@@ -100,7 +100,12 @@ export function Videos() {
                               <div className="text-sm font-display font-extrabold text-slate-900 mb-1.5">
                                 ▶ {v.title}
                               </div>
-                              <LessonVideo src={v.src} title={v.title} />
+                              <LessonVideo
+                                src={v.src}
+                                title={v.title}
+                                objective={l.objective}
+                                points={l.concept}
+                              />
                             </div>
                           ))}
                         </div>

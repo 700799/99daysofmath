@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { tapHaptic } from '../utils/haptics';
 import { useStoryPlayer } from '../state/storyPlayer';
+import { useVideoLoadGate } from '../lib/useVideoLoadGate';
 
 interface Beat {
   head: string;
@@ -213,6 +214,7 @@ export function StorySlide({ story, onClose }: Props) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+        if (lockedRef.current) return;
         nextSlide();
         tapHaptic();
       }
@@ -238,6 +240,7 @@ export function StorySlide({ story, onClose }: Props) {
       prevSlide();
       tapHaptic();
     } else if (delta < -60) {
+      if (lockedRef.current) return;
       nextSlide();
       tapHaptic();
     }
@@ -246,6 +249,13 @@ export function StorySlide({ story, onClose }: Props) {
 
   const slide = slides[idx];
   const isLast = idx >= slides.length - 1;
+
+  // Lock "Continue" until this slide's clip has loaded + 2s, so the reader
+  // can't blow past a beat before its animation has even appeared. A ref lets
+  // the stable keyboard/swipe handlers read the live value without re-binding.
+  const locked = useVideoLoadGate(videoRef, idx);
+  const lockedRef = useRef(locked);
+  lockedRef.current = locked;
 
   return (
     <div
@@ -376,14 +386,16 @@ export function StorySlide({ story, onClose }: Props) {
         <button
           type="button"
           onClick={() => {
+            if (locked) return;
             if (isLast) onClose?.();
             else nextSlide();
             tapHaptic();
           }}
-          className="rounded-full bg-emerald-500 hover:bg-emerald-600 active:translate-y-0.5 text-white font-display font-extrabold text-lg sm:text-xl px-8 sm:px-10 h-14 shadow-lg shadow-emerald-500/30 transition"
+          disabled={locked}
+          className="rounded-full bg-emerald-500 hover:bg-emerald-600 active:translate-y-0.5 text-white font-display font-extrabold text-lg sm:text-xl px-8 sm:px-10 h-14 shadow-lg shadow-emerald-500/30 transition disabled:bg-white/15 disabled:text-white/50 disabled:shadow-none disabled:active:translate-y-0 disabled:cursor-not-allowed"
           data-haptic="tap"
         >
-          {isLast ? '✓ Done' : 'Continue ▶'}
+          {locked ? 'Watch…' : isLast ? '✓ Done' : 'Continue ▶'}
         </button>
       </div>
     </div>

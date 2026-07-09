@@ -1,11 +1,16 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { motion, AnimatePresence, type PanInfo } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useProgress } from '../state/progress';
+import { useVideoLoadGate } from '../lib/useVideoLoadGate';
 
 interface Props {
   src: string;
   title?: string;
+  /** Lesson objective — shown as the lead line in the read panel. */
+  objective?: string;
+  /** The lesson's key-idea bullets — shown numbered in the read panel. */
+  points?: string[];
   /** Browser preload hint; default 'metadata'. Unused on the launcher (no
    *  <video> mounts until the drawer opens) — kept for API compatibility. */
   preload?: 'none' | 'metadata' | 'auto';
@@ -20,15 +25,16 @@ function getInitialRate(): number {
 }
 
 /**
- * Lesson-video launcher: a compact tappable tile that opens a big slide-out
- * drawer containing the actual <video> + the Continue overlay + the 🐢
- * slow-it-down toggle. The drawer fills most of the screen on phones and is a
- * centered modal on tablet/desktop, so the kid never needs native fullscreen.
+ * Lesson-video launcher: a compact tappable tile that opens a big full-screen
+ * player laid out like the Math Stories reader — a split panel with the
+ * lesson's key idea on one side and the animation on the other, plus a clean
+ * Continue bar. The player fills the screen (no letterboxed video floating in a
+ * black void) and drops the native control bar for a story-style look.
  *
- * No <video> mounts (or fetches metadata) until the drawer opens — important
- * for the library page which lists 100+ videos.
+ * No <video> mounts (or fetches) until the drawer opens — important for the
+ * library page which lists 100+ videos.
  */
-export function LessonVideo({ src, title }: Props) {
+export function LessonVideo({ src, title, objective, points }: Props) {
   const [open, setOpen] = useState(false);
   const label = title ?? 'Lesson animation';
 
@@ -63,89 +69,49 @@ export function LessonVideo({ src, title }: Props) {
         </div>
       </button>
 
-      <VideoDrawer
+      <VideoPlayerModal
         open={open}
         onClose={() => setOpen(false)}
         title={label}
         src={src}
+        objective={objective}
+        points={points}
       />
     </>
   );
 }
 
-interface DrawerProps {
+interface ModalProps {
   open: boolean;
   onClose: () => void;
   title: string;
   src: string;
+  objective?: string;
+  points?: string[];
 }
 
-function VideoDrawer({ open, onClose, title, src }: DrawerProps) {
+function VideoPlayerModal({ open, onClose, title, src, objective, points }: ModalProps) {
   if (typeof document === 'undefined') return null;
 
   return createPortal(
     <AnimatePresence>
       {open && (
         <motion.div
-          key="video-drawer"
+          key="video-player"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[60] bg-slate-900/70 backdrop-blur-[2px] flex items-end sm:items-center sm:justify-center"
-          onClick={onClose}
+          className="fixed inset-0 z-[60]"
           role="dialog"
           aria-label={`Video: ${title}`}
         >
-          <motion.div
-            // Phone: full-screen (uses 100dvh so Safari's URL bar doesn't
-            // overlap). Tablet/desktop: centered card capped at max-w-3xl.
-            initial={{ y: '100%', opacity: 1, scale: 1 }}
-            animate={{ y: 0, opacity: 1, scale: 1 }}
-            exit={{ y: '100%', opacity: 1, scale: 1 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 32 }}
-            drag="y"
-            dragConstraints={{ top: 0, bottom: 0 }}
-            dragElastic={{ top: 0, bottom: 0.6 }}
-            onDragEnd={(_: unknown, info: PanInfo) => {
-              if (info.offset.y > 90 || info.velocity.y > 600) onClose();
-            }}
-            onClick={(e) => e.stopPropagation()}
-            className={[
-              'relative w-full bg-black shadow-2xl flex flex-col',
-              'sm:max-h-[88vh] sm:max-w-3xl sm:w-[92vw] sm:rounded-3xl sm:m-auto sm:bg-white',
-            ].join(' ')}
-            style={{
-              height: '100dvh',
-              maxHeight: '100dvh',
-              paddingTop: 'env(safe-area-inset-top)',
-              paddingBottom: 'env(safe-area-inset-bottom)',
-            }}
-          >
-            {/* slim phone header — sits on the black stage with white text */}
-            <div className="px-3 sm:px-5 py-2 sm:py-4 flex items-center justify-between gap-3 shrink-0 sm:bg-white">
-              <div className="min-w-0">
-                <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-sky-300 sm:text-sky-600">
-                  Animation
-                </div>
-                <h2 className="text-sm sm:text-lg font-display font-extrabold text-white sm:text-slate-900 truncate">
-                  {title}
-                </h2>
-              </div>
-              <button
-                type="button"
-                onClick={onClose}
-                aria-label="Close"
-                className="shrink-0 w-10 h-10 rounded-full bg-white/15 sm:bg-slate-100 hover:bg-white/25 sm:hover:bg-slate-200 text-white sm:text-slate-600 font-display font-extrabold text-lg"
-              >
-                ✕
-              </button>
-            </div>
-
-            {/* video stage — flex-1 so the player stretches to fill the screen */}
-            <div className="flex-1 min-h-0 flex items-center justify-center sm:px-5 sm:pb-5 sm:bg-white">
-              <VideoPlayer src={src} title={title} />
-            </div>
-          </motion.div>
+          <StoryVideoPlayer
+            src={src}
+            title={title}
+            objective={objective}
+            points={points}
+            onClose={onClose}
+          />
         </motion.div>
       )}
     </AnimatePresence>,
@@ -154,54 +120,63 @@ function VideoDrawer({ open, onClose, title, src }: DrawerProps) {
 }
 
 /**
- * The actual playback surface. Lives only inside the drawer — there's no
- * inline use. The animations play STRAIGHT THROUGH (no chapter pauses); the
- * kid gets native controls, a 🐢 slow toggle, and big play / replay overlays.
+ * The full-screen playback surface, styled after the Math Stories reader
+ * (StorySlide): a header, a thin video-progress bar, a split stage (key-idea
+ * text | animation), and a bottom Continue bar. The animation plays STRAIGHT
+ * THROUGH (no chapter pauses); the kid gets a Replay button, a 🐢 slow toggle,
+ * and a Continue button that stays locked until the video has loaded + 2s.
  */
-function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode {
+function StoryVideoPlayer({
+  src,
+  title,
+  objective,
+  points,
+  onClose,
+}: {
+  src: string;
+  title: string;
+  objective?: string;
+  points?: string[];
+  onClose: () => void;
+}) {
   const url = `${import.meta.env.BASE_URL}videos/lessons/${src}`;
   const ref = useRef<HTMLVideoElement | null>(null);
-  const [playing, setPlaying] = useState(false);
   const [ended, setEnded] = useState(false);
+  const [progress, setProgress] = useState(0); // 0..1 for the top bar
   const [rate, setRate] = useState<number>(() => getInitialRate());
   const completeVideo = useProgress((s) => s.completeVideo);
   const [coinAward, setCoinAward] = useState(0); // >0 → show the "you earned coins" toast
 
+  // Lock Continue until the animation has loaded + 2s (admin "off" bypasses).
+  const locked = useVideoLoadGate(ref, src);
+
+  const hasText = !!objective || (points?.length ?? 0) > 0;
+
+  // Apply + persist the playback rate.
   useEffect(() => {
     const v = ref.current;
-    if (!v) return;
-    v.playbackRate = rate;
+    if (v) v.playbackRate = rate;
   }, [rate]);
-
   useEffect(() => {
     window.localStorage.setItem(RATE_KEY, String(rate));
   }, [rate]);
 
-  // Pause + release on unmount (drawer close).
+  // Autoplay on open; pause + release on unmount (drawer close).
   useEffect(() => {
+    const v = ref.current;
+    if (v) {
+      v.playbackRate = rate;
+      v.play().catch(() => {});
+    }
     return () => {
-      const v = ref.current;
-      if (v) {
-        try {
-          v.pause();
-        } catch {
-          /* ignore */
-        }
+      try {
+        v?.pause();
+      } catch {
+        /* ignore */
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // No time-based autoplay: the animation waits on the big Play button so it
-  // only ever starts on a button press — then it plays straight through.
-
-  const play = () => {
-    const v = ref.current;
-    if (!v) return;
-    setEnded(false);
-    v.play().catch(() => {});
-  };
-
-  const pause = () => ref.current?.pause();
 
   const replay = () => {
     const v = ref.current;
@@ -212,89 +187,163 @@ function VideoPlayer({ src, title }: { src: string; title: string }): ReactNode 
     v.play().catch(() => {});
   };
 
-  // On phone the parent gives us a flex-1 black stage; we fill it.
-  // On desktop (sm:) we use aspect-video so the video doesn't stretch the
-  // centered modal too tall.
   return (
-    <div className="relative w-full h-full sm:h-auto sm:aspect-video sm:rounded-2xl overflow-hidden bg-black sm:border sm:border-slate-200 flex items-center justify-center">
-      <video
-        ref={ref}
-        src={url}
-        controls
-        muted
-        playsInline
-        preload="metadata"
-        className="absolute inset-0 w-full h-full bg-black object-contain"
-        aria-label={title}
-        onPlay={() => setPlaying(true)}
-        onPause={() => setPlaying(false)}
-        onEnded={() => {
-          setEnded(true);
-          setPlaying(false);
-          // Reward coins the first time each math video is watched to the end.
-          const got = completeVideo(src);
-          if (got > 0) setCoinAward(got);
-        }}
-      />
-
-      {coinAward > 0 && (
-        <motion.div
-          initial={{ opacity: 0, y: 12, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          className="absolute top-3 left-1/2 -translate-x-1/2 z-20 rounded-full bg-yellow-300 text-yellow-900 font-display font-extrabold text-sm px-4 py-1.5 shadow-lg"
-        >
-          🪙 +{coinAward} coins!
-        </motion.div>
-      )}
-
-      {!playing && !ended && (
+    <div
+      className="relative w-full bg-slate-950 text-white flex flex-col"
+      style={{
+        height: '100dvh',
+        paddingTop: 'env(safe-area-inset-top)',
+        paddingBottom: 'env(safe-area-inset-bottom)',
+      }}
+    >
+      {/* ── Header ── */}
+      <div className="px-4 sm:px-6 py-3 flex items-center justify-between gap-4 shrink-0 bg-black/50 backdrop-blur border-b border-white/10">
+        <div className="min-w-0">
+          <div className="text-[10px] sm:text-xs font-display font-extrabold uppercase tracking-wider text-sky-300">
+            🎬 Animation
+          </div>
+          <h2 className="font-display font-extrabold text-white leading-tight text-lg sm:text-2xl truncate">
+            {title}
+          </h2>
+        </div>
         <button
           type="button"
-          onClick={play}
-          aria-label="Play"
-          className="absolute inset-0 flex items-center justify-center bg-black/30 active:bg-black/40 transition"
+          onClick={onClose}
+          aria-label="Close"
+          className="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white font-display font-extrabold text-lg shrink-0"
         >
-          <span className="rounded-full bg-white/95 shadow-lg w-20 h-20 flex items-center justify-center text-3xl">
-            ▶
-          </span>
+          ✕
         </button>
-      )}
+      </div>
 
-      {playing && (
+      {/* video-progress bar (fills as it plays) */}
+      <div className="h-1.5 bg-black/60 shrink-0">
+        <div
+          className="h-full bg-gradient-to-r from-sky-400 to-emerald-400 transition-[width] duration-200"
+          style={{ width: `${Math.round(progress * 100)}%` }}
+        />
+      </div>
+
+      {/* ── Stage — key idea (left/below) | animation (right/above). Stacks on
+          phones (video on top) via flex-col-reverse. ── */}
+      <div className="relative flex-1 min-h-0 w-full flex flex-col-reverse md:flex-row select-none">
+        {/* READ panel — the lesson's key idea. Hidden entirely when there's no
+            text so a text-less library video simply gives the animation more room. */}
+        {hasText && (
+          <div className="relative flex-1 min-h-0 overflow-y-auto px-6 sm:px-10 py-6 md:py-10">
+            <div className="flex min-h-full flex-col items-start justify-center text-left gap-4 max-w-2xl mx-auto md:mx-0">
+              <div className="text-sm sm:text-base font-display font-extrabold uppercase tracking-wide text-sky-300">
+                The key idea
+              </div>
+              {objective && (
+                <p className="font-display font-extrabold text-white leading-snug text-2xl sm:text-3xl md:text-[2.25rem] drop-shadow-lg">
+                  {objective}
+                </p>
+              )}
+              {(points?.length ?? 0) > 0 && (
+                <ol className="mt-1 space-y-3 w-full">
+                  {points!.map((p, i) => (
+                    <li key={i} className="flex gap-3 items-start">
+                      <span className="shrink-0 w-8 h-8 rounded-full bg-sky-500/25 text-sky-200 font-display font-extrabold text-base flex items-center justify-center">
+                        {i + 1}
+                      </span>
+                      <span className="text-lg sm:text-xl leading-snug text-white/90 font-display font-bold">
+                        {p}
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* VIDEO panel */}
+        <div
+          className={
+            'relative flex-1 min-h-0 flex items-center justify-center bg-black overflow-hidden ' +
+            (hasText ? 'md:border-l border-white/10' : '')
+          }
+        >
+          <video
+            ref={ref}
+            src={url}
+            muted
+            playsInline
+            preload="auto"
+            className="w-full h-full object-contain bg-black"
+            aria-label={title}
+            onTimeUpdate={(e) => {
+              const v = e.currentTarget;
+              if (v.duration > 0) setProgress(v.currentTime / v.duration);
+            }}
+            onEnded={() => {
+              setEnded(true);
+              // Reward coins the first time each math video is watched to the end.
+              const got = completeVideo(src);
+              if (got > 0) setCoinAward(got);
+            }}
+          />
+
+          {coinAward > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 12, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              className="absolute top-3 left-1/2 -translate-x-1/2 z-20 rounded-full bg-yellow-300 text-yellow-900 font-display font-extrabold text-sm px-4 py-1.5 shadow-lg"
+            >
+              🪙 +{coinAward} coins!
+            </motion.div>
+          )}
+
+          {/* Replay — always available; big when the video has ended. */}
+          {ended ? (
+            <button
+              type="button"
+              onClick={replay}
+              aria-label="Replay"
+              className="absolute inset-0 flex items-center justify-center bg-black/40"
+            >
+              <span className="rounded-full bg-white/95 shadow-lg px-5 h-14 flex items-center gap-2 font-display font-extrabold text-slate-900">
+                ↻ Replay
+              </span>
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={replay}
+              className="absolute bottom-3 right-3 rounded-full bg-white/90 hover:bg-white text-slate-900 font-display font-extrabold text-sm px-4 h-10 shadow-lg active:translate-y-0.5"
+            >
+              ↻ Replay
+            </button>
+          )}
+
+          {/* 🐢 slow-it-down toggle */}
+          <button
+            type="button"
+            onClick={() => setRate((r) => (r === 1 ? 0.75 : 1))}
+            aria-pressed={rate < 1}
+            className={
+              'absolute left-3 bottom-3 rounded-full px-3 py-1 text-xs font-display font-bold shadow ' +
+              (rate < 1 ? 'bg-amber-300 text-amber-900' : 'bg-white/90 text-slate-700')
+            }
+          >
+            🐢 {rate < 1 ? '0.75×' : 'Slow it down'}
+          </button>
+        </div>
+      </div>
+
+      {/* ── Bottom bar — one big Continue, locked until loaded + 2s. The ✕ in
+          the header is always an escape hatch, so a kid is never trapped. ── */}
+      <div className="px-4 sm:px-6 pb-4 pt-3 shrink-0 flex items-center justify-end gap-3 bg-black/60 border-t border-white/10">
         <button
           type="button"
-          onClick={pause}
-          aria-label="Pause"
-          className="absolute top-2 right-2 rounded-full bg-white/90 w-12 h-12 flex items-center justify-center text-xl shadow"
+          onClick={onClose}
+          disabled={locked}
+          className="rounded-full bg-emerald-500 hover:bg-emerald-600 active:translate-y-0.5 text-white font-display font-extrabold text-lg sm:text-xl px-8 sm:px-10 h-14 shadow-lg shadow-emerald-500/30 transition disabled:bg-white/15 disabled:text-white/50 disabled:shadow-none disabled:active:translate-y-0 disabled:cursor-not-allowed"
         >
-          ⏸
+          {locked ? 'Watch a moment…' : 'Got it ✓'}
         </button>
-      )}
-
-      {ended && (
-        <button
-          type="button"
-          onClick={replay}
-          aria-label="Replay"
-          className="absolute inset-0 flex items-center justify-center bg-black/40"
-        >
-          <span className="rounded-full bg-white/95 shadow-lg px-5 h-14 flex items-center gap-2 font-display font-extrabold text-slate-900">
-            ↻ Replay
-          </span>
-        </button>
-      )}
-
-      <button
-        type="button"
-        onClick={() => setRate((r) => (r === 1 ? 0.75 : 1))}
-        aria-pressed={rate < 1}
-        className={
-          'absolute left-2 bottom-2 rounded-full px-3 py-1 text-xs font-display font-bold shadow ' +
-          (rate < 1 ? 'bg-amber-300 text-amber-900' : 'bg-white/90 text-slate-700')
-        }
-      >
-        🐢 {rate < 1 ? '0.75×' : 'Slow it down'}
-      </button>
+      </div>
     </div>
   );
 }
