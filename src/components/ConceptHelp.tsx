@@ -207,11 +207,16 @@ function VideosTab({ lesson }: { lesson: Lesson }) {
           <div className="text-sm font-display font-extrabold text-slate-900 mb-1.5">
             ▶ {v.title}
           </div>
-          <LessonVideo src={v.src} title={v.title} />
+          <LessonVideo
+            src={v.src}
+            title={v.title}
+            objective={lesson.objective}
+            points={lesson.concept}
+          />
         </div>
       ))}
       <p className="text-xs text-slate-500 text-center">
-        Plays once and stops on the last frame — tap ↻ Replay to watch again.
+        Tap to watch full-screen — the key idea shows right beside the animation.
       </p>
     </div>
   );

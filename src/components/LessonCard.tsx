@@ -228,6 +228,8 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
                       <VideoPage
                         src={lesson.videos[current.idx].src}
                         title={lesson.videos[current.idx].title}
+                        objective={lesson.objective}
+                        points={lesson.concept}
                       />
                     )}
                     {current.kind === 'concept' && <ConceptPage lesson={lesson} />}
@@ -404,15 +406,25 @@ function IntroPage({ lesson }: { lesson: Lesson }) {
   );
 }
 
-function VideoPage({ src, title }: { src: string; title: string }) {
+function VideoPage({
+  src,
+  title,
+  objective,
+  points,
+}: {
+  src: string;
+  title: string;
+  objective?: string;
+  points?: string[];
+}) {
   return (
     <div>
       <PageTitle eyebrow="Animation" title={title} />
       <div className="mt-3">
-        <LessonVideo src={src} title={title} />
+        <LessonVideo src={src} title={title} objective={objective} points={points} />
       </div>
       <p className="text-xs text-slate-500 text-center mt-2">
-        Plays once and stops on the last frame — tap ↻ Replay to watch again.
+        Tap to watch the animation full-screen — with the key idea beside it.
       </p>
     </div>
   );

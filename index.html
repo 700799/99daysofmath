@@ -2,6 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Old-link shim: preserve previously shared HashRouter links
+         (math10x.com/#/trail/6.RP → /trail/6.RP) now that we use clean paths.
+         Runs before React mounts so the router sees the correct path. -->
+    <script>
+      (function () {
+        var h = window.location.hash;
+        if (h && h.indexOf('#/') === 0) {
+          var path = h.slice(1); // drop the leading '#'
+          window.history.replaceState(null, '', path + window.location.search);
+        }
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta
       name="viewport"
@@ -12,16 +24,82 @@
     <meta name="theme-color" content="#58CC02" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
+
+    <!-- ── Primary SEO ── -->
+    <title>Math10x — Free 5th &amp; 6th Grade Math: Video Lessons, Practice &amp; an Arcade</title>
+    <meta
+      name="description"
+      content="Math10x makes 5th and 6th grade math click: clear animated video lessons, worked examples, and practice — plus an arcade of games kids unlock by learning. Ratios, fractions, decimals, geometry, expressions & statistics."
     />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://math10x.com/" />
+    <meta name="author" content="Math10x" />
+    <meta
+      name="keywords"
+      content="6th grade math, 5th grade math, math practice, ratios, fractions, decimals, geometry, statistics, math games, free math lessons, math video lessons"
+    />
+
+    <!-- ── Open Graph ── -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Math10x" />
+    <meta property="og:title" content="Math10x — Free 5th & 6th Grade Math: Lessons, Practice & Arcade" />
+    <meta
+      property="og:description"
+      content="Animated video lessons, worked examples, and practice for 5th & 6th grade math — with an arcade kids unlock by learning."
+    />
+    <meta property="og:url" content="https://math10x.com/" />
+    <meta property="og:image" content="https://math10x.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- ── Twitter Card ── -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Math10x — Free 5th & 6th Grade Math" />
+    <meta
+      name="twitter:description"
+      content="Animated video lessons, worked examples, and practice for 5th & 6th grade math — with an arcade kids unlock by learning."
+    />
+    <meta name="twitter:image" content="https://math10x.com/og.png" />
+
+    <!-- ── Structured data ── -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://math10x.com/#website",
+            "url": "https://math10x.com/",
+            "name": "Math10x",
+            "description": "Free 5th & 6th grade math: animated video lessons, worked examples, practice, and a learning-gated arcade.",
+            "publisher": { "@id": "https://math10x.com/#org" },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://math10x.com/?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "EducationalOrganization",
+            "@id": "https://math10x.com/#org",
+            "name": "Math10x",
+            "url": "https://math10x.com/",
+            "logo": "https://math10x.com/og.png",
+            "description": "Math10x helps 5th and 6th graders master math through animated lessons, practice, and games."
+          }
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <title>99 Days of Math</title>
   </head>
   <body class="font-body">
     <div id="root"></div>

@@ -1,8 +1,9 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { DOMAINS, DOMAIN_LABELS, DOMAIN_COLORS, type Domain } from '../types/problem';
+import { DOMAINS, DOMAIN_LABELS, DOMAIN_DESCRIPTIONS, DOMAIN_COLORS, type Domain } from '../types/problem';
 import { useUnitsForDomain } from '../hooks/useProblems';
 import { useProgress } from '../state/progress';
 import { LESSONS, getLesson, lessonKey } from '../data/lessons';
+import { useSeo, courseJsonLd, breadcrumbJsonLd, SITE_URL } from '../lib/seo';
 
 // ── Sector Map — spacey mission-control replacement for the bubble trail. ──
 // Precise stats first (telemetry strip), then one compact angular row per
@@ -57,6 +58,23 @@ export function DomainTrail() {
     return <Navigate to="/" replace />;
   }
   const d = domain as Domain;
+  const grade = d.startsWith('5.') ? '5th' : '6th';
+  useSeo({
+    title: `${DOMAIN_LABELS[d]} — ${grade} Grade Math | Math10x`,
+    description: `Learn ${DOMAIN_LABELS[d]} (${d}) for ${grade} grade: ${DOMAIN_DESCRIPTIONS[d]}. Free animated video lessons, worked examples, and practice on Math10x.`,
+    canonicalPath: `/trail/${d}`,
+    jsonLd: [
+      courseJsonLd(
+        `${DOMAIN_LABELS[d]} — ${grade} Grade Math`,
+        DOMAIN_DESCRIPTIONS[d],
+        `${SITE_URL}/trail/${d}`,
+      ),
+      breadcrumbJsonLd([
+        { name: 'Home', path: '/' },
+        { name: DOMAIN_LABELS[d], path: `/trail/${d}` },
+      ]),
+    ],
+  });
   const { data: units, loading, error } = useUnitsForDomain(d);
   const dp = useProgress((s) => s.byDomain[d]);
   const xp = useProgress((s) => s.xp);
