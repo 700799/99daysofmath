@@ -182,7 +182,8 @@ function concatClips(clips, slow, out) {
     '-y', ...inputs,
     '-filter_complex', `${norm};${chain}`,
     '-map', '[out]', '-c:v', 'libx264', '-pix_fmt', 'yuv420p',
-    '-preset', 'veryslow', '-crf', '23', '-movflags', '+faststart', out,
+    '-preset', process.env.X264_PRESET || 'medium', '-crf', process.env.X264_CRF || '24',
+    '-movflags', '+faststart', out,
   ], { stdio: 'inherit' });
   if (r.status !== 0) throw new Error('concat failed: ' + out);
 }
