@@ -74,7 +74,7 @@ export const LESSONS: Lesson[] = [
   {
     domain: '6.RP', unit: 1, title: 'What is a ratio?',
     objective: 'Compare two quantities using a ratio.',
-    videos: [{ title: 'The idea', src: '6.RP-1.mp4' }, { title: 'Worked examples', src: '6.RP-1-examples.mp4' }, { title: 'Avoid the trap', src: '6.RP-1-trap.mp4' }],
+    videos: [{ title: 'Watch the lesson', src: '6.RP-1-lesson.mp4' }],
     concept: [
       "A ratio compares two amounts, like 3 red to 2 blue. Write it 3:2 or '3 to 2'.",
       'Order matters — 3:2 is not the same as 2:3.',

@@ -86,27 +86,49 @@ const CARD_CSS = `
   .divttl { font-size: 96px; font-weight: 900; z-index: 1; margin-top: 8px; }
   .divsub { font-size: 40px; font-weight: 800; color: #cbd5e1; margin-top: 16px; z-index: 1; }
   .center { align-items: center; text-align: center; }
+  .sumlist { list-style: none; margin-top: 30px; z-index: 1; display: flex; flex-direction: column; gap: 22px; max-width: 1040px; }
+  .sumlist li { display: flex; align-items: flex-start; gap: 18px; font-size: 34px; font-weight: 800; line-height: 1.25; }
+  .sumlist .tick { flex: 0 0 auto; width: 46px; height: 46px; border-radius: 50%; background: #58CC02; color: #06210a; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+  .problem { font-size: 44px; font-weight: 800; color: #fff; background: rgba(88,204,2,.12); border: 2px solid rgba(88,204,2,.42); border-radius: 26px; padding: 30px 36px; margin-top: 24px; line-height: 1.28; max-width: 1060px; z-index: 1; }
 `;
 
 const wrap = (inner, extraBodyClass = '') =>
   `<!doctype html><html><head><meta charset="utf-8"><style>${CARD_CSS}</style></head>` +
   `<body class="${extraBodyClass}"><div class="glow g1"></div><div class="glow g2"></div>${inner}</body></html>`;
 
-function introHTML(lesson, guide) {
+const CIRCLED = ['①', '②', '③', '④', '⑤', '⑥'];
+
+function introHTML(lesson, guide, labels) {
   const dom = DOMAIN_LABELS[lesson.domain] ?? lesson.domain;
+  const chips = labels.map((l, i) => `<div class="chip">${CIRCLED[i] ?? '•'} ${esc(l)}</div>`).join('');
   return wrap(`
     <div class="eyebrow">${esc(dom)} · Lesson</div>
     <h1>${esc(lesson.title)}</h1>
     <div class="obj">🎯 ${esc(lesson.objective)}</div>
     <div class="guide">${guide.svg}<div class="bubble">${esc(guide.line)}</div></div>
-    <div class="roadmap">
-      <div class="chip">① The idea</div>
-      <div class="chip">② Worked examples</div>
-      <div class="chip">③ Avoid the trap</div>
-    </div>`);
+    <div class="roadmap">${chips}</div>`);
 }
 function dividerHTML(n, title, sub) {
   return wrap(`<div class="diveye">Part ${n}</div><div class="divttl">${esc(title)}</div><div class="divsub">${esc(sub)}</div>`, 'center');
+}
+// A concrete problem posed at the idea stage, so kids know what they're
+// solving. Uses the lesson's first worked example (or practice) question.
+function problemHTML(lesson) {
+  const q = lesson.examples?.[0]?.q ?? lesson.practice?.[0]?.q ?? '';
+  return wrap(`
+    <div class="eyebrow">Our challenge</div>
+    <h1 style="font-size:56px">Can you solve this?</h1>
+    <div class="problem">🤔 ${esc(q)}</div>
+    <div class="divsub" style="margin-top:26px">Watch how the idea cracks it →</div>`);
+}
+// A real "summary clip": the key take-aways from the lesson's concept bullets.
+function summaryHTML(lesson) {
+  const bullets = (lesson.concept ?? []).slice(0, 4)
+    .map((c) => `<li><span class="tick">✓</span><span>${esc(c)}</span></li>`).join('');
+  return wrap(`
+    <div class="eyebrow">In a nutshell</div>
+    <h1 style="font-size:60px">Key take-aways</h1>
+    <ul class="sumlist">${bullets}</ul>`);
 }
 function recapHTML(lesson, guide) {
   return wrap(`
@@ -117,14 +139,15 @@ function recapHTML(lesson, guide) {
 }
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-// section metadata by segment title
-function sectionMeta(title) {
-  const t = title.toLowerCase();
-  if (t.includes('idea')) return { name: 'The Idea', sub: 'The big concept, built step by step' };
-  if (t.includes('example')) return { name: 'Worked Examples', sub: "Let's solve a few together" };
-  if (t.includes('trap')) return { name: 'Avoid the Trap', sub: 'The mistake to watch out for' };
-  return { name: title, sub: '' };
-}
+// The teaching segments, by filename convention (NOT the lesson.videos array —
+// that gets collapsed to the single combined file once a lesson is wired). Each
+// section's clip is the first candidate that exists on disk. `-story`/`-lesson`
+// are deliberately excluded.
+const SECTIONS = [
+  { name: 'The Idea', sub: 'The big concept, built step by step', suffixes: ['', '-idea'] },
+  { name: 'Worked Examples', sub: "Let's solve a few together", suffixes: ['-examples'] },
+  { name: 'Avoid the Trap', sub: 'The mistake to watch out for', suffixes: ['-trap'] },
+];
 
 async function shotPNG(page, html, file) {
   await page.setContent(html, { waitUntil: 'networkidle' });
@@ -141,13 +164,18 @@ function png2mp4(png, mp4, dur) {
   if (r.status !== 0) throw new Error('png2mp4 failed: ' + png);
 }
 
+// Slow the teaching segments to 80% speed (user: "20% slower") by stretching
+// their presentation timestamps. Cards keep their authored length.
+const SLOW = 1.25; // 1 / 0.8
+
 // Concatenate clips (cards + segments) with per-input normalization so the
-// 480p trap and the 720p clips join seamlessly.
-function concatClips(clips, out) {
+// 480p trap and the 720p clips join seamlessly. `slow[i]` stretches clip i.
+function concatClips(clips, slow, out) {
   const inputs = clips.flatMap((c) => ['-i', c]);
   const norm = clips.map((_, i) =>
     `[${i}:v]scale=${W}:${H}:force_original_aspect_ratio=decrease,` +
-    `pad=${W}:${H}:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1,fps=${FPS},format=yuv420p[v${i}]`
+    `pad=${W}:${H}:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1,fps=${FPS},format=yuv420p` +
+    (slow[i] ? `,setpts=${SLOW}*PTS` : '') + `[v${i}]`
   ).join(';');
   const chain = clips.map((_, i) => `[v${i}]`).join('') + `concat=n=${clips.length}:v=1:a=0[out]`;
   const r = spawnSync(FFMPEG, [
@@ -169,36 +197,64 @@ function keyToLesson(key) {
 async function buildOne(page, key, tmp) {
   const lesson = keyToLesson(key);
   if (!lesson || !lesson.videos?.length) { console.log(`skip ${key}: no lesson/videos`); return null; }
-  // Segments in teaching order, story excluded (Stories owns those).
-  const segs = lesson.videos.filter((v) => !/^story/i.test(v.title));
+  // Resolve teaching segments by filename convention (idea → examples → trap).
+  const segs = [];
+  for (const sec of SECTIONS) {
+    for (const suf of sec.suffixes) {
+      const src = path.join(OUT_DIR, `${key}${suf}.mp4`);
+      try { await fs.access(src); segs.push({ sec, src }); break; } catch { /* try next */ }
+    }
+  }
+  if (!segs.length) { console.log(`skip ${key}: no segment videos on disk`); return null; }
   const guide = GUIDES[seed(key) % GUIDES.length];
 
-  const clips = [];
-  // intro
-  const introPng = path.join(tmp, `${key}-intro.png`), introMp4 = path.join(tmp, `${key}-intro.mp4`);
-  await shotPNG(page, introHTML(lesson, guide), introPng);
-  png2mp4(introPng, introMp4, 4.5);
-  clips.push(introMp4);
-  // each section: divider + segment
+  const clips = [];  // clip file paths
+  const slow = [];   // parallel: stretch this clip 20% slower?
+  const add = (file, isSlow) => { clips.push(file); slow.push(isSlow); };
+
+  // intro card — dynamic roadmap listing each section + Summary
+  const labels = [...segs.map(({ sec }) => sec.name), 'Summary'];
+  const introMp4 = path.join(tmp, `${key}-intro.mp4`);
+  await shotPNG(page, introHTML(lesson, guide, labels), path.join(tmp, `${key}-intro.png`));
+  png2mp4(path.join(tmp, `${key}-intro.png`), introMp4, 4.5);
+  add(introMp4, false);
+
+  // each teaching section: a labeled divider, then the (20%-slower) segment
   let n = 1;
-  for (const v of segs) {
-    const src = path.join(OUT_DIR, v.src);
-    try { await fs.access(src); } catch { console.log(`  missing segment ${v.src}, skipping`); continue; }
-    const meta = sectionMeta(v.title);
-    const dPng = path.join(tmp, `${key}-d${n}.png`), dMp4 = path.join(tmp, `${key}-d${n}.mp4`);
-    await shotPNG(page, dividerHTML(n, meta.name, meta.sub), dPng);
-    png2mp4(dPng, dMp4, 2.2);
-    clips.push(dMp4, src);
+  for (const { sec, src } of segs) {
+    const dMp4 = path.join(tmp, `${key}-d${n}.mp4`);
+    await shotPNG(page, dividerHTML(n, sec.name, sec.sub), path.join(tmp, `${key}-d${n}.png`));
+    png2mp4(path.join(tmp, `${key}-d${n}.png`), dMp4, 2.2);
+    add(dMp4, false);
+    // At the idea stage, pose the concrete problem the idea will solve.
+    if (sec.name === 'The Idea' && (lesson.examples?.length || lesson.practice?.length)) {
+      const pMp4 = path.join(tmp, `${key}-prob.mp4`);
+      await shotPNG(page, problemHTML(lesson), path.join(tmp, `${key}-prob.png`));
+      png2mp4(path.join(tmp, `${key}-prob.png`), pMp4, 5.5);
+      add(pMp4, false);
+    }
+    add(src, true);
     n++;
   }
-  // recap
-  const rPng = path.join(tmp, `${key}-recap.png`), rMp4 = path.join(tmp, `${key}-recap.mp4`);
-  await shotPNG(page, recapHTML(lesson, guide), rPng);
-  png2mp4(rPng, rMp4, 3.6);
-  clips.push(rMp4);
+
+  // summary clip — a divider + the key take-aways
+  const sDivMp4 = path.join(tmp, `${key}-sdiv.mp4`);
+  await shotPNG(page, dividerHTML(n, 'Summary', 'The key things to remember'), path.join(tmp, `${key}-sdiv.png`));
+  png2mp4(path.join(tmp, `${key}-sdiv.png`), sDivMp4, 2.2);
+  add(sDivMp4, false);
+  const sumMp4 = path.join(tmp, `${key}-sum.mp4`);
+  await shotPNG(page, summaryHTML(lesson), path.join(tmp, `${key}-sum.png`));
+  png2mp4(path.join(tmp, `${key}-sum.png`), sumMp4, 8.0);
+  add(sumMp4, false);
+
+  // recap card
+  const rMp4 = path.join(tmp, `${key}-recap.mp4`);
+  await shotPNG(page, recapHTML(lesson, guide), path.join(tmp, `${key}-recap.png`));
+  png2mp4(path.join(tmp, `${key}-recap.png`), rMp4, 3.6);
+  add(rMp4, false);
 
   const out = path.join(OUT_DIR, `${key}-lesson.mp4`);
-  concatClips(clips, out);
+  concatClips(clips, slow, out);
   console.log(`✓ ${key} → ${path.basename(out)} (${clips.length} clips)`);
   return out;
 }
