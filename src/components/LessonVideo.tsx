@@ -141,6 +141,7 @@ function StoryVideoPlayer({
 }) {
   const url = `${import.meta.env.BASE_URL}videos/lessons/${src}`;
   const ref = useRef<HTMLVideoElement | null>(null);
+  const maxRef = useRef(0); // furthest point watched — kids can rewind, never skip ahead
   const [ended, setEnded] = useState(false);
   const [progress, setProgress] = useState(0); // 0..1 for the top bar
   const [rate, setRate] = useState<number>(() => getInitialRate());
@@ -185,6 +186,20 @@ function StoryVideoPlayer({
     setEnded(false);
     setCoinAward(0);
     v.play().catch(() => {});
+  };
+
+  // Kids may rewind, but never fast-forward past what they've watched.
+  const rewind10 = () => {
+    const v = ref.current;
+    if (!v) return;
+    v.currentTime = Math.max(0, v.currentTime - 10);
+    setEnded(false);
+  };
+  // Snap any forward jump back to the furthest-watched point (blocks skipping).
+  const guardForward = () => {
+    const v = ref.current;
+    if (!v) return;
+    if (v.currentTime > maxRef.current + 1) v.currentTime = maxRef.current;
   };
 
   return (
@@ -273,8 +288,14 @@ function StoryVideoPlayer({
             preload="auto"
             className="w-full h-full object-contain bg-black"
             aria-label={title}
+            onSeeking={guardForward}
             onTimeUpdate={(e) => {
               const v = e.currentTarget;
+              if (v.currentTime > maxRef.current + 1) {
+                v.currentTime = maxRef.current; // block a forward skip
+                return;
+              }
+              maxRef.current = Math.max(maxRef.current, v.currentTime);
               if (v.duration > 0) setProgress(v.currentTime / v.duration);
             }}
             onEnded={() => {
@@ -317,18 +338,30 @@ function StoryVideoPlayer({
             </button>
           )}
 
-          {/* 🐢 slow-it-down toggle */}
-          <button
-            type="button"
-            onClick={() => setRate((r) => (r === 1 ? 0.75 : 1))}
-            aria-pressed={rate < 1}
-            className={
-              'absolute left-3 bottom-3 rounded-full px-3 py-1 text-xs font-display font-bold shadow ' +
-              (rate < 1 ? 'bg-amber-300 text-amber-900' : 'bg-white/90 text-slate-700')
-            }
-          >
-            🐢 {rate < 1 ? '0.75×' : 'Slow it down'}
-          </button>
+          {/* left controls: rewind (never fast-forward) + 🐢 slow toggle */}
+          <div className="absolute left-3 bottom-3 flex items-center gap-2">
+            {!ended && (
+              <button
+                type="button"
+                onClick={rewind10}
+                aria-label="Rewind 10 seconds"
+                className="rounded-full bg-white/90 hover:bg-white text-slate-700 px-3 py-1 text-xs font-display font-bold shadow active:translate-y-0.5"
+              >
+                ⏪ 10s
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={() => setRate((r) => (r === 1 ? 0.75 : 1))}
+              aria-pressed={rate < 1}
+              className={
+                'rounded-full px-3 py-1 text-xs font-display font-bold shadow ' +
+                (rate < 1 ? 'bg-amber-300 text-amber-900' : 'bg-white/90 text-slate-700')
+              }
+            >
+              🐢 {rate < 1 ? '0.75×' : 'Slow it down'}
+            </button>
+          </div>
         </div>
       </div>
 

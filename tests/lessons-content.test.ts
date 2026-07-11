@@ -64,14 +64,18 @@ describe('lessons content', () => {
     }
   });
 
-  it('core units 1-10 have at least 2 videos referenced on disk (idea + examples + trap)', () => {
-    // Videos are optional in the Lesson type; supplementary lessons (unit 11+)
-    // may ship text-first until their Manim animations are produced.
+  it('core units 1-10 carry real video content (a combined lesson video, or idea+examples+trap)', () => {
+    // Lessons are being consolidated from separate idea/examples/trap clips into
+    // a single combined `<key>-lesson.mp4`. A core unit passes if it has that one
+    // combined video OR the older 2+ separate segment videos — either way it has
+    // real animated content. Supplementary lessons (unit 11+) may ship text-first.
     const missing: string[] = [];
     for (const l of LESSONS) {
       if (l.unit > 10) continue;
-      if (!Array.isArray(l.videos) || l.videos.length < 2) {
-        missing.push(`${l.domain}-${l.unit}: ${l.videos?.length ?? 0} video(s)`);
+      const vids = l.videos ?? [];
+      const hasCombined = vids.some((v) => v.src.endsWith('-lesson.mp4'));
+      if (!hasCombined && vids.length < 2) {
+        missing.push(`${l.domain}-${l.unit}: ${vids.length} video(s)`);
       }
     }
     expect(missing).toEqual([]);
