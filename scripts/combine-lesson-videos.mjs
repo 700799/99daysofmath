@@ -144,7 +144,9 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 // section's clip is the first candidate that exists on disk. `-story`/`-lesson`
 // are deliberately excluded.
 const SECTIONS = [
-  { name: 'The Idea', sub: 'The big concept, built step by step', suffixes: ['', '-idea'] },
+  // Prefer `<key>-idea.mp4` (the smooth TeachingDeck idea, used by 5.F) over the
+  // bare `<key>.mp4` — for 5.F the bare file is an old all-in-one CombinedDeck.
+  { name: 'The Idea', sub: 'The big concept, built step by step', suffixes: ['-idea', ''] },
   { name: 'Worked Examples', sub: "Let's solve a few together", suffixes: ['-examples'] },
   { name: 'Avoid the Trap', sub: 'The mistake to watch out for', suffixes: ['-trap'] },
 ];
