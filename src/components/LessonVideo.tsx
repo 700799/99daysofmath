@@ -2,14 +2,13 @@ import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useProgress } from '../state/progress';
-import { useVideoLoadGate } from '../lib/useVideoLoadGate';
 
 interface Props {
   src: string;
   title?: string;
-  /** Lesson objective — shown as the lead line in the read panel. */
+  /** Accepted for call-site compatibility but no longer shown — the player is
+   *  video-only now (the lesson's key idea is summarized inside the video). */
   objective?: string;
-  /** The lesson's key-idea bullets — shown numbered in the read panel. */
   points?: string[];
   /** Browser preload hint; default 'metadata'. Unused on the launcher (no
    *  <video> mounts until the drawer opens) — kept for API compatibility. */
@@ -34,7 +33,7 @@ function getInitialRate(): number {
  * No <video> mounts (or fetches) until the drawer opens — important for the
  * library page which lists 100+ videos.
  */
-export function LessonVideo({ src, title, objective, points }: Props) {
+export function LessonVideo({ src, title }: Props) {
   const [open, setOpen] = useState(false);
   const label = title ?? 'Lesson animation';
 
@@ -74,8 +73,6 @@ export function LessonVideo({ src, title, objective, points }: Props) {
         onClose={() => setOpen(false)}
         title={label}
         src={src}
-        objective={objective}
-        points={points}
       />
     </>
   );
@@ -86,11 +83,9 @@ interface ModalProps {
   onClose: () => void;
   title: string;
   src: string;
-  objective?: string;
-  points?: string[];
 }
 
-function VideoPlayerModal({ open, onClose, title, src, objective, points }: ModalProps) {
+function VideoPlayerModal({ open, onClose, title, src }: ModalProps) {
   if (typeof document === 'undefined') return null;
 
   return createPortal(
@@ -105,13 +100,7 @@ function VideoPlayerModal({ open, onClose, title, src, objective, points }: Moda
           role="dialog"
           aria-label={`Video: ${title}`}
         >
-          <StoryVideoPlayer
-            src={src}
-            title={title}
-            objective={objective}
-            points={points}
-            onClose={onClose}
-          />
+          <StoryVideoPlayer src={src} title={title} onClose={onClose} />
         </motion.div>
       )}
     </AnimatePresence>,
@@ -120,23 +109,20 @@ function VideoPlayerModal({ open, onClose, title, src, objective, points }: Moda
 }
 
 /**
- * The full-screen playback surface, styled after the Math Stories reader
- * (StorySlide): a header, a thin video-progress bar, a split stage (key-idea
- * text | animation), and a bottom Continue bar. The animation plays STRAIGHT
- * THROUGH (no chapter pauses); the kid gets a Replay button, a 🐢 slow toggle,
- * and a Continue button that stays locked until the video has loaded + 2s.
+ * The full-screen playback surface: a header, a thin progress bar, and the
+ * animation filling the rest — video only (the lesson recaps its key idea in a
+ * summary at the end, so no busy side panel). The kid gets a 🐢 slow toggle and
+ * a ⏪10s rewind but can never fast-forward, and there's NO "continue" button
+ * to bail out early — a big Done button only appears once the video has played
+ * all the way through (to its built-in summary).
  */
 function StoryVideoPlayer({
   src,
   title,
-  objective,
-  points,
   onClose,
 }: {
   src: string;
   title: string;
-  objective?: string;
-  points?: string[];
   onClose: () => void;
 }) {
   const url = `${import.meta.env.BASE_URL}videos/lessons/${src}`;
@@ -147,11 +133,6 @@ function StoryVideoPlayer({
   const [rate, setRate] = useState<number>(() => getInitialRate());
   const completeVideo = useProgress((s) => s.completeVideo);
   const [coinAward, setCoinAward] = useState(0); // >0 → show the "you earned coins" toast
-
-  // Lock Continue until the animation has loaded + 2s (admin "off" bypasses).
-  const locked = useVideoLoadGate(ref, src);
-
-  const hasText = !!objective || (points?.length ?? 0) > 0;
 
   // Apply + persist the playback rate.
   useEffect(() => {
@@ -239,47 +220,9 @@ function StoryVideoPlayer({
         />
       </div>
 
-      {/* ── Stage — key idea (left/below) | animation (right/above). Stacks on
-          phones (video on top) via flex-col-reverse. ── */}
-      <div className="relative flex-1 min-h-0 w-full flex flex-col-reverse md:flex-row select-none">
-        {/* READ panel — the lesson's key idea. Hidden entirely when there's no
-            text so a text-less library video simply gives the animation more room. */}
-        {hasText && (
-          <div className="relative flex-1 min-h-0 overflow-y-auto px-6 sm:px-10 py-6 md:py-10">
-            <div className="flex min-h-full flex-col items-start justify-center text-left gap-4 max-w-2xl mx-auto md:mx-0">
-              <div className="text-sm sm:text-base font-display font-extrabold uppercase tracking-wide text-sky-300">
-                The key idea
-              </div>
-              {objective && (
-                <p className="font-display font-extrabold text-white leading-snug text-2xl sm:text-3xl md:text-[2.25rem] drop-shadow-lg">
-                  {objective}
-                </p>
-              )}
-              {(points?.length ?? 0) > 0 && (
-                <ol className="mt-1 space-y-3 w-full">
-                  {points!.map((p, i) => (
-                    <li key={i} className="flex gap-3 items-start">
-                      <span className="shrink-0 w-8 h-8 rounded-full bg-sky-500/25 text-sky-200 font-display font-extrabold text-base flex items-center justify-center">
-                        {i + 1}
-                      </span>
-                      <span className="text-lg sm:text-xl leading-snug text-white/90 font-display font-bold">
-                        {p}
-                      </span>
-                    </li>
-                  ))}
-                </ol>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* VIDEO panel */}
-        <div
-          className={
-            'relative flex-1 min-h-0 flex items-center justify-center bg-black overflow-hidden ' +
-            (hasText ? 'md:border-l border-white/10' : '')
-          }
-        >
+      {/* ── Stage — the animation fills the whole screen (video only). ── */}
+      <div className="relative flex-1 min-h-0 w-full select-none">
+        <div className="relative w-full h-full flex items-center justify-center bg-black overflow-hidden">
           <video
             ref={ref}
             src={url}
@@ -316,25 +259,32 @@ function StoryVideoPlayer({
             </motion.div>
           )}
 
-          {/* Replay — always available; big when the video has ended. */}
+          {/* End screen — the ONLY way to finish: Done appears once the whole
+              video (incl. its summary) has played. Replay is offered too. */}
           {ended ? (
-            <button
-              type="button"
-              onClick={replay}
-              aria-label="Replay"
-              className="absolute inset-0 flex items-center justify-center bg-black/40"
-            >
-              <span className="rounded-full bg-white/95 shadow-lg px-5 h-14 flex items-center gap-2 font-display font-extrabold text-slate-900">
-                ↻ Replay
-              </span>
-            </button>
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-black/60">
+              <button
+                type="button"
+                onClick={onClose}
+                className="rounded-full bg-emerald-500 hover:bg-emerald-600 active:translate-y-0.5 text-white font-display font-extrabold text-xl px-10 h-16 shadow-lg shadow-emerald-500/30 transition"
+              >
+                Done ✓
+              </button>
+              <button
+                type="button"
+                onClick={replay}
+                className="rounded-full bg-white/95 hover:bg-white shadow px-5 h-12 flex items-center gap-2 font-display font-extrabold text-slate-900"
+              >
+                ↻ Watch again
+              </button>
+            </div>
           ) : (
             <button
               type="button"
               onClick={replay}
-              className="absolute bottom-3 right-3 rounded-full bg-white/90 hover:bg-white text-slate-900 font-display font-extrabold text-sm px-4 h-10 shadow-lg active:translate-y-0.5"
+              className="absolute bottom-3 right-3 rounded-full bg-white/90 hover:bg-white text-slate-700 font-display font-bold text-xs px-3 py-1 shadow active:translate-y-0.5"
             >
-              ↻ Replay
+              ↻ Restart
             </button>
           )}
 
@@ -363,19 +313,6 @@ function StoryVideoPlayer({
             </button>
           </div>
         </div>
-      </div>
-
-      {/* ── Bottom bar — one big Continue, locked until loaded + 2s. The ✕ in
-          the header is always an escape hatch, so a kid is never trapped. ── */}
-      <div className="px-4 sm:px-6 pb-4 pt-3 shrink-0 flex items-center justify-end gap-3 bg-black/60 border-t border-white/10">
-        <button
-          type="button"
-          onClick={onClose}
-          disabled={locked}
-          className="rounded-full bg-emerald-500 hover:bg-emerald-600 active:translate-y-0.5 text-white font-display font-extrabold text-lg sm:text-xl px-8 sm:px-10 h-14 shadow-lg shadow-emerald-500/30 transition disabled:bg-white/15 disabled:text-white/50 disabled:shadow-none disabled:active:translate-y-0 disabled:cursor-not-allowed"
-        >
-          {locked ? 'Watch a moment…' : 'Got it ✓'}
-        </button>
       </div>
     </div>
   );
