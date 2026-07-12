@@ -28,8 +28,8 @@ class Lesson6RP4Examples(ExamplesDeck):
         M.think(self, self.mascot)
 
         # Tape diagram: 3 boys + 2 girls
-        tape1 = V.ratio_tape_diagram(3, 2, label_a="Boys", label_b="Girls",
-                                    color_a=pal["accent"], color_b=pal["step"])
+        tape1 = V.tape_diagram(parts=(3, 2), colors=(pal["accent"], pal["step"]),
+                               labels=("Boys", "Girls"))
         tape1.scale(0.75).move_to(LEFT * 2.8 + DOWN * 1.0)
         self.play(FadeIn(tape1), run_time=_rt(0.6))
 
@@ -51,8 +51,8 @@ class Lesson6RP4Examples(ExamplesDeck):
         self.play(Write(q_text), run_time=_rt(0.85))
         M.think(self, self.mascot)
 
-        tape2 = V.ratio_tape_diagram(4, 6, label_a="Apples", label_b="Pears",
-                                    color_a=pal["accent"], color_b=pal["step"])
+        tape2 = V.tape_diagram(parts=(4, 6), colors=(pal["accent"], pal["step"]),
+                               labels=("Apples", "Pears"))
         tape2.scale(0.7).move_to(LEFT * 2.8 + DOWN * 1.0)
         self.play(FadeIn(tape2), run_time=_rt(0.6))
 
@@ -75,8 +75,8 @@ class Lesson6RP4Examples(ExamplesDeck):
         self.play(Write(q_text), run_time=_rt(0.85))
         M.think(self, self.mascot)
 
-        tape3 = V.ratio_tape_diagram(2, 3, label_a="Red", label_b="Blue",
-                                    color_a=pal["accent"], color_b=pal["step"])
+        tape3 = V.tape_diagram(parts=(2, 3), colors=(pal["accent"], pal["step"]),
+                               labels=("Red", "Blue"))
         tape3.scale(0.75).move_to(LEFT * 2.8 + DOWN * 1.0)
         self.play(FadeIn(tape3), run_time=_rt(0.6))
 

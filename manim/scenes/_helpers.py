@@ -15,6 +15,7 @@ import numpy as np
 from manim import (
     Scene, Text, VGroup, FadeIn, FadeOut, Write, Create, Transform, GrowFromCenter,
     SurroundingRectangle, Cross, Line, Dot, Circle, RoundedRectangle, Polygon,
+    LaggedStart,
     UP, DOWN, LEFT, RIGHT, ORIGIN, PI,
     WHITE, BLUE, GREEN, RED, ORANGE, YELLOW, GOLD,
 )
@@ -385,7 +386,13 @@ class ExamplesDeck(LearningExperienceDeck):
             if step_objs.width > 11.8:
                 step_objs.scale(11.8 / step_objs.width)
             step_objs.move_to(UP * 0.15)
-            self.play(FadeIn(step_objs), run_time=0.3)
+            # Reveal the steps one at a time (never all-at-once) so kids follow
+            # the reasoning in order — honors the anti-choppy contract.
+            self.play(
+                LaggedStart(*[FadeIn(s, shift=UP * 0.25) for s in step_objs], lag_ratio=0.7),
+                run_time=max(1.6, _rt(0.55 * len(step_objs))),
+            )
+            self.wait(0.7)
             M.think(self, self.mascot)
             self.checkpoint()           # Pause A: kids read question + steps
 
@@ -763,7 +770,13 @@ class CombinedDeck(LearningExperienceDeck):
             if step_objs.width > 11.8:
                 step_objs.scale(11.8 / step_objs.width)
             step_objs.move_to(UP * 0.15)
-            self.play(FadeIn(step_objs), run_time=0.3)
+            # Reveal the steps one at a time (never all-at-once) so kids follow
+            # the reasoning in order — honors the anti-choppy contract.
+            self.play(
+                LaggedStart(*[FadeIn(s, shift=UP * 0.25) for s in step_objs], lag_ratio=0.7),
+                run_time=max(1.6, _rt(0.55 * len(step_objs))),
+            )
+            self.wait(0.7)
             M.think(self, self.mascot)
             self.checkpoint()           # Pause A: kids read question + steps
 
