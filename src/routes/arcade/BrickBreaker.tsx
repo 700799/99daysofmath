@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
-import { GameStage } from './fx';
+import { GameStage, useBurst, BurstLayer } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // Brick Breaker — bounce the ball to clear numbered bricks. Break the brick
 // matching the target number for a bonus. Catch the green drop to widen the
@@ -49,6 +50,7 @@ export function BrickBreaker() {
 
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
+  const { burst, particles } = useBurst();
 
   const newTarget = () => {
     const alive = bricksRef.current.filter((b) => b.alive);
@@ -151,6 +153,8 @@ export function BrickBreaker() {
         b.x <= pad.x + pad.w
       ) {
         b.vy = -Math.abs(b.vy);
+        sfx.hit();
+        haptic(HAPTIC.tap);
         const hit = (b.x - (pad.x + pad.w / 2)) / (pad.w / 2); // -1..1
         const speed = Math.hypot(b.vx, b.vy);
         b.vx = hit * speed * 0.75;
@@ -173,9 +177,18 @@ export function BrickBreaker() {
         if (rectHit(b.x, b.y, BALL_R, br.x, br.y, br.w, br.h)) {
           br.alive = false;
           scoreRef.current += br.val;
+          const bx = br.x + br.w / 2;
+          const by = br.y + br.h / 2;
+          sfx.explode();
+          burst(bx, by, { color: '#a5b4fc', count: 10 });
           if (br.val === targetRef.current) {
             scoreRef.current += 25; // target bonus
+            sfx.coin();
+            haptic(HAPTIC.pickup);
+            burst(bx, by, { emoji: '⭐', count: 10 });
             newTarget();
+          } else {
+            haptic(HAPTIC.hit);
           }
           // bounce vertically (simple)
           b.vy = -b.vy;
@@ -199,6 +212,8 @@ export function BrickBreaker() {
       // ball lost
       if (b.y > H + BALL_R) {
         livesRef.current -= 1;
+        sfx.hurt();
+        haptic(HAPTIC.death);
         if (livesRef.current <= 0) {
           finish();
           return;
@@ -210,6 +225,9 @@ export function BrickBreaker() {
       if (bricksRef.current.every((br) => !br.alive)) {
         levelRef.current += 1;
         scoreRef.current += 50;
+        sfx.win();
+        haptic(HAPTIC.win);
+        burst(W / 2, H / 2, { emoji: '🎉', count: 18 });
         buildBricks();
         resetBall();
       }
@@ -292,6 +310,7 @@ export function BrickBreaker() {
         onPointerMove={(e) => movePaddleTo(e.clientX, e.currentTarget)}
         onPointerDown={(e) => movePaddleTo(e.clientX, e.currentTarget)}
       >
+        <BurstLayer api={{ burst, particles }} />
         <div className="absolute top-0 left-0" style={{ width: W, height: H }}>
           {bricksRef.current.map((br, i) =>
             br.alive ? (

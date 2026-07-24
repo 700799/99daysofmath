@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { GameStage, useBurst, BurstLayer, useScorePops, ScorePopLayer } from './fx';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // A 12-slice wheel whose prizes repeat so each prize has TIDY odds:
 //   5 XP ×4 = 4/12 = 1/3 · 10 XP ×3 = 3/12 = 1/4 · 20 XP ×2 = 1/6 ·
@@ -55,6 +57,12 @@ export function Wheel() {
   useArcadeClock(!!outcome);
   const doneRef = useRef(false);
 
+  // Juice layers.
+  const { burst, particles } = useBurst();
+  const { pops, pop } = useScorePops();
+
+  const size = 280;
+
   const spin = () => {
     if (spinning || alreadySpun || doneRef.current) return;
     const idx = Math.floor(Math.random() * SEGMENTS.length);
@@ -63,17 +71,31 @@ export function Wheel() {
     const target = 360 * 5 + (270 - (idx * seg + seg / 2));
     setSpinning(true);
     setRotation(target);
+    // Rising tension: a laser whoosh at launch, then quickening ticks.
+    sfx.laser();
+    haptic(HAPTIC.tap);
+    [700, 1500, 2300, 2900, 3300].forEach((t) =>
+      setTimeout(() => {
+        if (!doneRef.current) sfx.step();
+      }, t),
+    );
     setTimeout(() => {
       doneRef.current = true;
       const won = SEGMENTS[idx];
       setPrize(won);
       setOutcome(recordArcadePlay('wheel', won, { wheelSpin: true }));
       setSpinning(false);
+      // Landing payoff at the pointer.
+      if (won >= 20) sfx.win();
+      else sfx.coin();
+      haptic(HAPTIC.win);
+      burst(size / 2, 10, { emoji: '🎉', count: 16 });
+      burst(size / 2, 10, { color: VALUE_COLOR[won] ?? '#facc15', count: 16 });
+      pop(size / 2 - 26, 20, `+${won} XP`, VALUE_COLOR[won] ?? '#facc15');
       celebrate(); // champion cinematic for the reward
     }, 3600);
   };
 
-  const size = 280;
   const c = size / 2;
   const seg = (2 * Math.PI) / SEGMENTS.length;
 
@@ -104,7 +126,10 @@ export function Wheel() {
           : 'One spin per day. Tap SPIN and cross your fingers!'}
       </p>
 
+      <GameStage theme="wheel" className="w-fit mx-auto p-5">
       <div className="relative mx-auto" style={{ width: size, height: size }}>
+        <BurstLayer api={{ burst, particles }} />
+        <ScorePopLayer pops={pops} />
         {/* pointer */}
         <div className="absolute left-1/2 -top-1 -translate-x-1/2 z-10 text-3xl" aria-hidden="true">
           🔻
@@ -148,6 +173,7 @@ export function Wheel() {
           </text>
         </motion.svg>
       </div>
+      </GameStage>
 
       {/* exact odds for each prize, as reduced fractions */}
       <div className="mt-4 max-w-sm mx-auto rounded-2xl bg-white border-2 border-slate-200 p-3">

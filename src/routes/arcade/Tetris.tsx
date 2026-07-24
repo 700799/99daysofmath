@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
-import { GameStage } from './fx';
+import { GameStage, useBurst, BurstLayer } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // Alien Tetris — falling tetrominoes made of cute aliens. Clear full rows;
 // it speeds up every 10 lines. One game = one session.
@@ -56,6 +57,7 @@ export function Tetris() {
   const redraw = () => force((n) => n + 1);
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
+  const { burst, particles } = useBurst();
 
   const level = () => 1 + Math.floor(linesRef.current / 10);
   const dropInterval = () => (softRef.current ? 0.05 : Math.max(0.08, 0.6 - level() * 0.05));
@@ -99,6 +101,9 @@ export function Tetris() {
         }
         boardRef.current[gr][gc] = a.pi + 1;
       }
+    // a piece locked in place
+    sfx.step();
+    haptic(HAPTIC.light);
     // clear full lines
     const kept = boardRef.current.filter((row) => row.some((v) => v === 0));
     const cleared = ROWS - kept.length;
@@ -108,6 +113,17 @@ export function Tetris() {
       linesRef.current += cleared;
       while (kept.length < ROWS) kept.unshift(new Array(COLS).fill(0));
       boardRef.current = kept;
+      // celebrate a clear — bigger for multi-line clears
+      if (cleared >= 2) {
+        sfx.levelUp();
+        haptic(HAPTIC.levelUp);
+        burst(W / 2, H / 2, { emoji: '⭐', count: 14 + cleared * 6 });
+        burst(W / 2, H / 2, { color: '#a78bfa', count: 10 + cleared * 4 });
+      } else {
+        sfx.coin();
+        haptic(HAPTIC.pickup);
+        burst(W / 2, H / 2, { emoji: '✨', count: 12 });
+      }
     }
     if (!spawn()) finish();
   };
@@ -115,6 +131,8 @@ export function Tetris() {
   const finish = () => {
     if (doneRef.current) return;
     doneRef.current = true;
+    sfx.hurt();
+    haptic(HAPTIC.death);
     addArcadePoints(scoreRef.current);
     const xp = Math.max(1, Math.min(20, Math.floor(scoreRef.current / 200) + 1));
     setOutcome(recordArcadePlay('tetris', xp));
@@ -255,6 +273,7 @@ export function Tetris() {
       </div>
 
       <GameStage theme="tetris" className="mx-auto p-2" style={{ maxWidth: W + 16 }}>
+      <BurstLayer api={{ burst, particles }} />
       <div
         className="mx-auto bg-slate-900/90 grid"
         style={{

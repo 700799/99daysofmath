@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useProgress } from '../../state/progress';
 import { ArcadeHeader } from './shared';
+import { GameStage, useBurst, BurstLayer, useScorePops, ScorePopLayer, useShake } from './fx';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -222,6 +224,12 @@ export function TicTacToe() {
   const [celebrating, setCelebrating]   = useState(false);
   const [boardShake, setBoardShake]     = useState(false);
 
+  // Juice layers.
+  const { burst, particles } = useBurst();
+  const { pops, pop } = useScorePops();
+  const { style: shakeStyle, shake } = useShake();
+  const boardRef = useRef<HTMLDivElement>(null);
+
   const timerRef = useRef<ReturnType<typeof setTimeout>[]>([]);
   const clearTimers = () => { timerRef.current.forEach(clearTimeout); timerRef.current=[]; };
   const later = (fn: ()=>void, ms: number) => {
@@ -267,6 +275,26 @@ export function TicTacToe() {
   const endGame = useCallback((w: Player | 'draw', finalBoard: Board) => {
     setWinner(w);
     if (w !== 'draw') setWinCells(findWinLine(finalBoard, boardN(level), w));
+
+    // Juice: celebrate a player win, punish a loss.
+    const rect = boardRef.current?.getBoundingClientRect();
+    const cx = (rect?.width ?? 240) / 2;
+    const cy = (rect?.height ?? 240) / 2;
+    if (w === 'dog') {
+      sfx.win();
+      haptic(HAPTIC.win);
+      burst(cx, cy, { emoji: '🎉', count: 16 });
+      burst(cx, cy, { color: '#fbbf24', count: 16 });
+      pop(cx - 22, cy - 40, 'WIN!', '#f59e0b');
+    } else if (w === 'cat') {
+      sfx.hurt();
+      shake();
+      haptic(HAPTIC.hit);
+    } else {
+      sfx.coin();
+      pop(cx - 20, cy - 30, 'Draw', '#64748b');
+    }
+
     setPhase('dragon');
     setBoardShake(true);
 
@@ -286,12 +314,27 @@ export function TicTacToe() {
   // ── Dog move ─────────────────────────────────────────────────────────────
 
   const handleCell = (r: number, c: number) => {
-    if (phase !== 'playing' || current !== 'dog' || selSize === null) return;
-    if (!canPlace(board[r][c], selSize)) return;
+    if (phase !== 'playing' || current !== 'dog') return;
+    if (selSize === null) return;
+    if (!canPlace(board[r][c], selSize)) {
+      // Invalid drop (cell blocked by an equal/bigger piece).
+      sfx.hurt();
+      shake();
+      haptic(HAPTIC.hit);
+      return;
+    }
 
     const nb = board.map(row => row.map(cell => [...cell]));
     nb[r][c] = [...nb[r][c], { player: 'dog', size: selSize }];
     const ns: Supply = { ...dogSup, [SIZE_TO_KEY[selSize]]: dogSup[SIZE_TO_KEY[selSize]] - 1 };
+
+    // Placement feedback.
+    sfx.step();
+    haptic(HAPTIC.tap);
+    burst(c * (cellPx + 4) + cellPx / 2, r * (cellPx + 4) + cellPx / 2, {
+      color: '#f59e0b',
+      count: 6,
+    });
 
     setBoard(nb);
     setDogSup(ns);
@@ -428,6 +471,10 @@ export function TicTacToe() {
             </div>
 
             {/* board */}
+            <GameStage theme="tictactoe" className="p-4">
+            <div ref={boardRef} className="relative mx-auto" style={{ width: boardPx, ...shakeStyle }}>
+            <BurstLayer api={{ burst, particles }} />
+            <ScorePopLayer pops={pops} />
             <motion.div
               animate={boardShake ? {
                 x: [0, -10, 10, -8, 8, -5, 5, -3, 3, 0],
@@ -494,6 +541,8 @@ export function TicTacToe() {
                 })
               )}
             </motion.div>
+            </div>
+            </GameStage>
 
             {/* dog piece selector */}
             {phase === 'playing' && current === 'dog' && (

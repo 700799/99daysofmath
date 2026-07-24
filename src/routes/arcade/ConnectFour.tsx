@@ -4,6 +4,8 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { DivisibilityQuiz } from './DivisibilityQuiz';
+import { GameStage, useBurst, BurstLayer, useScorePops, ScorePopLayer, useShake } from './fx';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 const COLS = 7;
 const ROWS = 6;
@@ -53,6 +55,39 @@ function isFull(board: Board): boolean {
   return board[0].every((c) => c !== 0);
 }
 
+// The exact 4 (or more) cells forming the winning run, for highlighting.
+function winnerCells(board: Board): [number, number][] {
+  const dirs = [
+    [0, 1],
+    [1, 0],
+    [1, 1],
+    [1, -1],
+  ];
+  for (let r = 0; r < ROWS; r++) {
+    for (let c = 0; c < COLS; c++) {
+      const v = board[r][c];
+      if (v === 0) continue;
+      for (const [dr, dc] of dirs) {
+        const cells: [number, number][] = [[r, c]];
+        let n = 1;
+        while (
+          n < 4 &&
+          r + dr * n >= 0 &&
+          r + dr * n < ROWS &&
+          c + dc * n >= 0 &&
+          c + dc * n < COLS &&
+          board[r + dr * n][c + dc * n] === v
+        ) {
+          cells.push([r + dr * n, c + dc * n]);
+          n++;
+        }
+        if (n >= 4) return cells;
+      }
+    }
+  }
+  return [];
+}
+
 // Owl AI: win if possible → block the player's win → otherwise prefer columns
 // that don't gift the player a win, weighted toward the center.
 function owlMove(board: Board): number {
@@ -92,7 +127,7 @@ function owlMove(board: Board): number {
   return pool[pool.length - 1];
 }
 
-type Phase = 'playing' | 'owl-thinking' | 'done';
+type Phase = 'playing' | 'owl-thinking' | 'celebrate' | 'done';
 
 export function ConnectFour() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
@@ -101,11 +136,32 @@ export function ConnectFour() {
   const [result, setResult] = useState<'win' | 'lose' | 'draw' | null>(null);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   const [quizDiscs, setQuizDiscs] = useState<number | null>(null);
+  const [winCells, setWinCells] = useState<[number, number][]>([]);
   useArcadeClock(!!outcome);
   const recordedRef = useRef(false);
 
-  const finish = (res: 'win' | 'lose' | 'draw', finalBoard: Board) => {
-    setBoard(finalBoard);
+  // Juice layers.
+  const { burst, particles } = useBurst();
+  const { pops, pop } = useScorePops();
+  const { style: shakeStyle, shake } = useShake();
+  const boardRef = useRef<HTMLDivElement>(null);
+
+  const center = () => {
+    const rect = boardRef.current?.getBoundingClientRect();
+    return { x: (rect?.width ?? 320) / 2, y: (rect?.height ?? 280) / 2 };
+  };
+
+  // Confetti-feeling multi-burst at the board center on a win.
+  const fireConfetti = () => {
+    const { x, y } = center();
+    burst(x, y, { emoji: '🎉', count: 16 });
+    burst(x, y, { color: '#fcd34d', count: 18 });
+    setTimeout(() => burst(x - 50, y - 20, { emoji: '⭐', count: 10 }), 140);
+    setTimeout(() => burst(x + 50, y - 20, { emoji: '✨', count: 10 }), 260);
+    pop(x - 24, y - 40, 'YOU WIN!', '#f59e0b');
+  };
+
+  const commit = (res: 'win' | 'lose' | 'draw', finalBoard: Board) => {
     setResult(res);
     setPhase('done');
     // Teach divisibility on the number of discs the player placed this game.
@@ -118,10 +174,44 @@ export function ConnectFour() {
     }
   };
 
-  const play = (col: number) => {
+  // Show the finished board (with highlighted line + effects) briefly, then flip
+  // to the end card so the celebration is actually visible.
+  const finish = (res: 'win' | 'lose' | 'draw', finalBoard: Board) => {
+    setBoard(finalBoard);
+    setWinCells(winnerCells(finalBoard));
+    setPhase('celebrate');
+    if (res === 'win') {
+      sfx.win();
+      haptic(HAPTIC.win);
+      fireConfetti();
+    } else if (res === 'lose') {
+      sfx.hurt();
+      shake();
+      haptic(HAPTIC.hit);
+    } else {
+      sfx.coin();
+      const { x, y } = center();
+      pop(x - 18, y - 30, 'Draw!', '#64748b');
+    }
+    setTimeout(() => commit(res, finalBoard), res === 'draw' ? 500 : 1400);
+  };
+
+  const play = (col: number, e: React.MouseEvent) => {
     if (phase !== 'playing') return;
     const r = dropRow(board, col);
-    if (r < 0) return;
+    if (r < 0) {
+      // Full column — invalid tap.
+      sfx.hurt();
+      shake();
+      haptic(HAPTIC.hit);
+      return;
+    }
+    // Disc drop feedback.
+    sfx.pickup();
+    haptic(HAPTIC.tap);
+    const rect = boardRef.current?.getBoundingClientRect();
+    if (rect) burst(e.clientX - rect.left, e.clientY - rect.top, { emoji: '😆', count: 6 });
+
     const b1 = board.map((row) => [...row]) as Board;
     b1[r][col] = 1;
     if (winner(b1) === 1) return finish('win', b1);
@@ -133,6 +223,8 @@ export function ConnectFour() {
       const c2 = owlMove(b1);
       const b2 = b1.map((row) => [...row]) as Board;
       b2[dropRow(b2, c2)][c2] = 2;
+      sfx.step();
+      haptic(HAPTIC.light);
       if (winner(b2) === 2) return finish('lose', b2);
       if (isFull(b2)) return finish('draw', b2);
       setBoard(b2);
@@ -146,6 +238,7 @@ export function ConnectFour() {
     setResult(null);
     setOutcome(null);
     setQuizDiscs(null);
+    setWinCells([]);
     recordedRef.current = false;
   };
 
@@ -172,48 +265,71 @@ export function ConnectFour() {
       ) : (
         <>
           <p className="text-sm text-slate-600 mb-3">
-            {phase === 'owl-thinking' ? '🦉 The owl is thinking…' : 'Your move — tap a column. You are the 😆 pup!'}
+            {phase === 'owl-thinking'
+              ? '🦉 The owl is thinking…'
+              : phase === 'celebrate'
+                ? result === 'win'
+                  ? '🎉 Four in a row — you win!'
+                  : result === 'lose'
+                    ? '🦉 The owl got four in a row!'
+                    : "It's a draw!"
+                : 'Your move — tap a column. You are the 😆 pup!'}
           </p>
-          <div className="bg-blue-600 rounded-3xl p-2.5 max-w-sm mx-auto shadow-inner">
-            <div className="grid grid-cols-7 gap-1.5">
-              {Array.from({ length: COLS }).map((_, c) => (
-                <button
-                  key={c}
-                  type="button"
-                  aria-label={`Drop in column ${c + 1}`}
-                  onClick={() => play(c)}
-                  disabled={phase !== 'playing' || dropRow(board, c) < 0}
-                  className="flex flex-col gap-1.5 disabled:cursor-not-allowed group"
-                >
-                  {Array.from({ length: ROWS }).map((__, r) => {
-                    const v = board[r][c];
-                    return (
-                      <div
-                        key={r}
-                        className="aspect-square rounded-full bg-blue-800 group-enabled:group-hover:bg-blue-700 flex items-center justify-center"
-                      >
-                        <AnimatePresence>
-                          {v !== 0 && (
-                            <motion.div
-                              initial={{ y: -40 * (r + 1), opacity: 0.8 }}
-                              animate={{ y: 0, opacity: 1 }}
-                              transition={{ type: 'spring', stiffness: 380, damping: 26 }}
-                              className={`w-[86%] h-[86%] rounded-full shadow-inner flex items-center justify-center ${
-                                v === 1 ? 'bg-amber-300' : 'bg-lime-300'
-                              }`}
-                              style={{ fontSize: 'min(6vw, 26px)' }}
-                            >
-                              {v === 1 ? '😆' : '🐸'}
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    );
-                  })}
-                </button>
-              ))}
+          <GameStage theme="connect4" className="max-w-sm mx-auto p-3">
+            <div ref={boardRef} className="relative" style={shakeStyle}>
+              <BurstLayer api={{ burst, particles }} />
+              <ScorePopLayer pops={pops} />
+              <div className="bg-blue-600 rounded-3xl p-2.5 shadow-inner">
+                <div className="grid grid-cols-7 gap-1.5">
+                  {Array.from({ length: COLS }).map((_, c) => (
+                    <button
+                      key={c}
+                      type="button"
+                      aria-label={`Drop in column ${c + 1}`}
+                      onClick={(e) => play(c, e)}
+                      disabled={phase !== 'playing'}
+                      className="flex flex-col gap-1.5 disabled:cursor-not-allowed group"
+                    >
+                      {Array.from({ length: ROWS }).map((__, r) => {
+                        const v = board[r][c];
+                        const winning = winCells.some(([wr, wc]) => wr === r && wc === c);
+                        return (
+                          <div
+                            key={r}
+                            className="aspect-square rounded-full bg-blue-800 group-enabled:group-hover:bg-blue-700 flex items-center justify-center"
+                          >
+                            <AnimatePresence>
+                              {v !== 0 && (
+                                <motion.div
+                                  initial={{ y: -40 * (r + 1), opacity: 0.8 }}
+                                  animate={
+                                    winning
+                                      ? { y: 0, opacity: 1, scale: [1, 1.18, 1] }
+                                      : { y: 0, opacity: 1 }
+                                  }
+                                  transition={
+                                    winning
+                                      ? { scale: { repeat: Infinity, duration: 0.6 } }
+                                      : { type: 'spring', stiffness: 380, damping: 26 }
+                                  }
+                                  className={`w-[86%] h-[86%] rounded-full shadow-inner flex items-center justify-center ${
+                                    v === 1 ? 'bg-amber-300' : 'bg-lime-300'
+                                  } ${winning ? 'ring-4 ring-white' : ''}`}
+                                  style={{ fontSize: 'min(6vw, 26px)' }}
+                                >
+                                  {v === 1 ? '😆' : '🐸'}
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </div>
+                        );
+                      })}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
+          </GameStage>
           <p className="text-center text-xs text-slate-400 mt-3">
             Win: +5 XP · Draw: +3 · Loss: +2 — first win earns the 🔴 sticker!
           </p>

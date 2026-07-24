@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
-import { GameStage } from './fx';
+import { GameStage, useScorePops, ScorePopLayer } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // 2048 — slide and merge numbered tiles. Pure math (doubling/addition), and
 // famously addictive. Turn-based, so no RAF; one board = one session.
@@ -108,6 +109,7 @@ export function Twenty48() {
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
   const swipeRef = useRef<{ x: number; y: number } | null>(null);
+  const { pops, pop } = useScorePops();
 
   // The keydown effect re-registers every render and the D-pad calls this from
   // render, so `grid`/`score` here are always current.
@@ -115,12 +117,31 @@ export function Twenty48() {
     if (outcome || pausedRef.current) return;
     const { grid: ng, gained, moved } = move(grid, dir);
     if (!moved) return;
+    // a tile actually slid
+    sfx.step();
+    haptic(HAPTIC.light);
+    // a merge happened this move
+    if (gained > 0) {
+      sfx.coin();
+      haptic(gained >= 64 ? HAPTIC.heavy : HAPTIC.pickup);
+      pop(150, 130, `+${gained}`, '#f59563');
+    }
     const withSpawn = spawn(ng);
     const ns = score + gained;
     setGrid(withSpawn);
     setScore(ns);
     setBest((b) => Math.max(b, ns));
+    // reached 2048 for the first time this run
+    const hadWon = grid.some((r) => r.some((v) => v >= 2048));
+    const nowWon = ng.some((r) => r.some((v) => v >= 2048));
+    if (nowWon && !hadWon) {
+      sfx.win();
+      haptic(HAPTIC.win);
+      pop(150, 90, '🎉 2048!', '#16a34a');
+    }
     if (!anyMoves(withSpawn)) {
+      sfx.hurt();
+      haptic(HAPTIC.death);
       addArcadePoints(ns);
       const xp = Math.max(1, Math.min(20, Math.floor(ns / 100)));
       setOutcome(recordArcadePlay('tiles', xp));
@@ -177,6 +198,7 @@ export function Twenty48() {
       </div>
 
       <GameStage theme="tiles" className="max-w-[320px] mx-auto p-2">
+      <ScorePopLayer pops={pops} />
       <div
         className="mx-auto rounded-2xl bg-[#bbada0]/90 p-2 touch-none"
         style={{ width: '100%' }}
