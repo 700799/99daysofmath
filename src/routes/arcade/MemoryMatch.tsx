@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { Mascot as CharMascot, type MascotKind } from './Mascots';
+import { useBurst, BurstLayer, useScorePops, ScorePopLayer, useShake, useCombo, ComboChip } from './fx';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Cute mascot faces from the inventory — 8 distinct kinds make the 8 pairs.
@@ -93,14 +95,30 @@ export function MemoryMatch() {
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
   const doneRef = useRef(false);
+  const { burst, particles } = useBurst();
+  const { pops, pop } = useScorePops();
+  const { style: shakeStyle, shake } = useShake();
+  const combo = useCombo();
+  const boardRef = useRef<HTMLDivElement>(null);
 
   const allMatched = cards.every((c) => c.matched);
+
+  // px position of a card (relative to the board) from its % layout slot
+  const cardPx = (id: number) => {
+    const p = layout[id] ?? { x: 50, y: 50, rot: 0 };
+    const w = boardRef.current?.clientWidth ?? 380;
+    const h = boardRef.current?.clientHeight ?? 456;
+    return { x: (p.x / 100) * w, y: (p.y / 100) * h };
+  };
 
   const flip = (id: number) => {
     if (locked || outcome) return;
     const card = cards.find((c) => c.id === id)!;
     if (card.matched || faceUp.includes(id)) return;
 
+    // flip feedback
+    sfx.step();
+    haptic(HAPTIC.light);
     const next = [...faceUp, id];
     setFaceUp(next);
     if (next.length === 2) {
@@ -112,14 +130,37 @@ export function MemoryMatch() {
         );
         setCards(updated);
         setFaceUp([]);
+        // match! escalating burst driven by the streak
+        const streak = combo.hit();
+        sfx.coin();
+        haptic(HAPTIC.pickup);
+        const pa = cardPx(a.id);
+        const pb = cardPx(b.id);
+        const count = 12 + Math.min(4, streak) * 5;
+        burst(pa.x, pa.y, { emoji: '⭐', count });
+        burst(pb.x, pb.y, { color: '#f472b6', count });
+        pop((pa.x + pb.x) / 2 - 8, (pa.y + pb.y) / 2 - 8, '+1', '#16a34a');
         if (updated.every((c) => c.matched) && !doneRef.current) {
           doneRef.current = true;
+          // cleared the board — big celebration
+          sfx.win();
+          haptic(HAPTIC.win);
+          const w = boardRef.current?.clientWidth ?? 380;
+          const h = boardRef.current?.clientHeight ?? 456;
+          burst(w * 0.5, h * 0.4, { emoji: '🎉', count: 26 });
+          burst(w * 0.3, h * 0.5, { color: '#a855f7', count: 20 });
+          burst(w * 0.7, h * 0.55, { emoji: '✨', count: 20 });
           const totalFlips = flips + 1;
           // ≤10 pair-flips is sharp play → full 8 XP; ≤14 → 6; else 4.
           const baseXp = totalFlips <= 10 ? 8 : totalFlips <= 14 ? 6 : 4;
           setTimeout(() => setOutcome(recordArcadePlay('memory', baseXp)), 350);
         }
       } else {
+        // mismatch
+        sfx.hurt();
+        shake();
+        haptic(HAPTIC.hit);
+        combo.reset();
         setLocked(true);
         setTimeout(() => {
           setFaceUp([]);
@@ -137,6 +178,7 @@ export function MemoryMatch() {
     setLocked(false);
     setOutcome(null);
     doneRef.current = false;
+    combo.reset();
   };
 
   return (
@@ -156,8 +198,15 @@ export function MemoryMatch() {
             Flip two cards — find all 8 pairs hidden on the mountain. Fewer flips, more XP! Flips:{' '}
             <span className="font-display font-extrabold text-slate-900 tabular-nums">{flips}</span>
           </p>
-          <div className="relative mx-auto aspect-[5/6] w-full max-w-md overflow-hidden rounded-3xl border-2 border-blue-200 shadow-inner">
+          <div
+            ref={boardRef}
+            className="relative mx-auto aspect-[5/6] w-full max-w-md overflow-hidden rounded-3xl border-2 border-blue-200 shadow-inner"
+            style={shakeStyle}
+          >
             <MountainBg />
+            <BurstLayer api={{ burst, particles }} />
+            <ScorePopLayer pops={pops} />
+            <ComboChip combo={combo.combo} className="absolute left-1/2 top-2 -translate-x-1/2" />
             {cards.map((card) => {
               const up = card.matched || faceUp.includes(card.id);
               const p = layout[card.id] ?? { x: 50, y: 50, rot: 0 };

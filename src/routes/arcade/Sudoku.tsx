@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { GameStage, useBurst, BurstLayer, useScorePops, ScorePopLayer, useShake } from './fx';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Sudoku. One verified base puzzle is relabelled by a random digit permutation
@@ -77,6 +79,10 @@ export function Sudoku() {
   const [showHelp, setShowHelp] = useState(false);
   // transient per-entry feedback: which cell was just placed and whether it matched
   const [feedback, setFeedback] = useState<{ cell: number; ok: boolean } | null>(null);
+  const { burst, particles } = useBurst();
+  const { pops, pop } = useScorePops();
+  const { style: shakeStyle, shake } = useShake();
+  const boardRef = useRef<HTMLDivElement>(null);
   useArcadeClock(!!outcome);
 
   const bad = conflicts(cells);
@@ -93,12 +99,33 @@ export function Sudoku() {
       const ok = n === game.solution[sel];
       const cell = sel;
       setFeedback({ cell, ok });
+      // juice: cell-centered particles/pops relative to the grid container
+      const w = boardRef.current?.clientWidth ?? 360;
+      const cs = w / 9;
+      const cx = (cell % 9) * cs + cs / 2;
+      const cy = Math.floor(cell / 9) * cs + cs / 2;
+      if (ok) {
+        sfx.step();
+        haptic(HAPTIC.pickup);
+        pop(cx - 6, cy - 6, '✓', '#16a34a');
+      } else {
+        sfx.hurt();
+        shake();
+        haptic(HAPTIC.hit);
+      }
       window.setTimeout(
         () => setFeedback((f) => (f && f.cell === cell ? null : f)),
         900,
       );
     }
     if (next.every((v, i) => v === game.solution[i])) {
+      // solved! celebrate
+      sfx.win();
+      haptic(HAPTIC.win);
+      const w = boardRef.current?.clientWidth ?? 360;
+      burst(w * 0.25, w * 0.3, { emoji: '🎉', count: 22 });
+      burst(w * 0.75, w * 0.4, { color: '#a855f7', count: 18 });
+      burst(w * 0.5, w * 0.6, { emoji: '⭐', count: 16 });
       addArcadePoints(100);
       setOutcome(recordArcadePlay('sudoku', 15));
     }
@@ -158,17 +185,20 @@ export function Sudoku() {
         )}
       </div>
 
-      <div
-        className="mx-auto bg-slate-900 p-[2px] grid"
-        style={{
-          width: '100%',
-          maxWidth: 360,
-          aspectRatio: '1 / 1',
-          gridTemplateColumns: 'repeat(9, 1fr)',
-          gap: 1,
-        }}
-      >
-        {cells.map((v, i) => {
+      <GameStage theme="sudoku" className="max-w-[360px] mx-auto p-2">
+        <div ref={boardRef} className="relative" style={shakeStyle}>
+          <BurstLayer api={{ burst, particles }} />
+          <ScorePopLayer pops={pops} />
+          <div
+            className="mx-auto bg-slate-900 p-[2px] grid"
+            style={{
+              width: '100%',
+              aspectRatio: '1 / 1',
+              gridTemplateColumns: 'repeat(9, 1fr)',
+              gap: 1,
+            }}
+          >
+            {cells.map((v, i) => {
           const r = Math.floor(i / 9);
           const c = i % 9;
           const selected = sel === i;
@@ -203,7 +233,9 @@ export function Sudoku() {
             </button>
           );
         })}
-      </div>
+          </div>
+        </div>
+      </GameStage>
 
       <div className="mt-3 grid grid-cols-9 gap-1 max-w-sm mx-auto">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
