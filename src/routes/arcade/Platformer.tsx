@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
+import { makeAdaptive, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
@@ -77,6 +78,8 @@ function buildLevel(idx: number): { walls: { x: number; y: number; w: number; h:
 
 export function Platformer() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
+  const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
+  const arcadeUnit = useProgress((s) => s.arcadeUnit);
   const setPlatformerMaxLevel = useProgress((s) => s.setPlatformerMaxLevel);
   const platformerMaxLevel = useProgress((s) => s.platformerMaxLevel ?? 0);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -108,9 +111,13 @@ export function Platformer() {
   const reachedFlagRef = useRef(false);
   const fireCdRef = useRef(0);
   const rocketCdRef = useRef(0);
+  const gateRef = useRef(false);
   const rafRef = useRef(0);
   const lastTickRef = useRef(performance.now());
 
+  const [gate, setGate] = useState<{ kind: 'refuel' | 'complete'; c: Challenge } | null>(null);
+  const [input, setInput] = useState('');
+  const [wrong, setWrong] = useState(false);
   const [, force] = useState(0);
   const redraw = () => force((n) => n + 1);
 
@@ -129,16 +136,19 @@ export function Platformer() {
     reachedFlagRef.current = false;
     fireCdRef.current = 0;
     rocketCdRef.current = worldRef.current.rocketEvery;
+    gateRef.current = false;
+    setGate(null);
+    setInput(''); setWrong(false);
     setOutcome(null);
   };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => initWorld(), []);
 
   const shoot = () => {
-    if (pausedRef.current) return;
+    if (gateRef.current || pausedRef.current) return;
     if (fireCdRef.current > 0) return;
-    // out of ammo → auto-reload instantly and keep the action flowing (no math pause)
-    if (ammoRef.current <= 0) { ammoRef.current = AMMO_MAX; sfx.powerup(); haptic(HAPTIC.levelUp); }
+    // out of ammo → solve a word problem to reload (a gameplay milestone, not a timer)
+    if (ammoRef.current <= 0) { openGate('refuel'); return; }
     const p = playerRef.current;
     ammoRef.current -= 1;
     fireCdRef.current = 0.22;
@@ -171,7 +181,7 @@ export function Platformer() {
     const tick = (now: number) => {
       const dt = Math.min(0.04, (now - lastTickRef.current) / 1000);
       lastTickRef.current = now;
-      if (pausedRef.current) { rafRef.current = requestAnimationFrame(tick); return; }
+      if (gateRef.current || pausedRef.current) { rafRef.current = requestAnimationFrame(tick); return; }
 
       const p = playerRef.current;
       const inp = inputRef.current;
@@ -257,8 +267,8 @@ export function Platformer() {
       }
       rocketsRef.current = rocketsRef.current.filter((r) => r.alive && r.x > cameraRef.current - 40);
 
-      // flag → level complete, finish straight away (no math pause)
-      if (p.x >= level.current.flagX) { reachedFlagRef.current = true; finish(); return; }
+      // flag → level-complete word problem (reload), then finish
+      if (p.x >= level.current.flagX) { reachedFlagRef.current = true; openGate('complete'); return; }
 
       const target = p.x - VIEW_W * 0.35;
       cameraRef.current = Math.max(0, Math.min(target, level.current.levelW - VIEW_W));
@@ -270,6 +280,33 @@ export function Platformer() {
     return () => cancelAnimationFrame(rafRef.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [outcome]);
+
+  const openGate = (kind: 'refuel' | 'complete') => {
+    gateRef.current = true;
+    const lvl = useProgress.getState().arcadeLevels[arcadeUnit] ?? 1;
+    setGate({ kind, c: makeAdaptive(arcadeUnit, lvl, 'word') });
+    setInput(''); setWrong(false);
+    redraw();
+  };
+
+  const submitGate = () => {
+    if (!gate) return;
+    const n = Number(input.trim());
+    if (input.trim() === '' || Number.isNaN(n)) return;
+    const correct = n === gate.c.answer;
+    recordArcadeAnswer(arcadeUnit, correct);
+    if (correct) { correctRef.current += 1; sfx.powerup(); haptic(HAPTIC.levelUp); }
+    else { sfx.hurt(); haptic(HAPTIC.hit); }
+    if (gate.kind === 'refuel') {
+      ammoRef.current = correct ? AMMO_MAX : Math.floor(AMMO_MAX / 2);
+      gateRef.current = false;
+      setGate(null); setInput(''); setWrong(false);
+      lastTickRef.current = performance.now();
+    } else {
+      setGate(null);
+      finish();
+    }
+  };
 
   const finish = () => {
     const reach = reachedFlagRef.current ? 8 + levelIdx * 2 : 0;
@@ -358,7 +395,26 @@ export function Platformer() {
         <CtlBtn label="🔥" cls="bg-orange-500 text-white" onDown={shoot} onUp={() => {}} />
         <CtlBtn label="→" onDown={() => (inputRef.current.right = true)} onUp={() => (inputRef.current.right = false)} />
       </div>
-      <p className="text-center text-xs text-slate-500 mt-2">Move &amp; jump, tap 🔥 to blast baddies and rockets. Reach the 🚩! Out of ammo? It reloads automatically.</p>
+      <p className="text-center text-xs text-slate-500 mt-2">Move &amp; jump, tap 🔥 to blast baddies and rockets. Reach the 🚩! Out of ammo? Solve a word problem to reload 🔥.</p>
+
+      {gate && (
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 p-4">
+          <div className="bg-white rounded-3xl border-2 border-slate-200 p-5 max-w-sm w-full">
+            <div className="text-center text-3xl">{gate.kind === 'complete' ? '🚩' : '⛽'}</div>
+            <div className="mt-1 text-center font-display font-extrabold text-slate-900">{gate.kind === 'complete' ? 'Level clear — reload to finish!' : 'Refuel your blaster! Solve to reload 🔥'}</div>
+            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-lg font-display font-extrabold leading-snug break-words text-center">{gate.c.prompt}</div>
+            <div className={`mt-3 h-12 rounded-xl border-2 flex items-center justify-center text-2xl font-display font-extrabold tabular-nums ${wrong ? 'border-rose-300 bg-rose-50 text-rose-700' : 'border-slate-200 text-slate-900'}`}>{input || <span className="text-slate-300">?</span>}</div>
+            <div className="mt-3 grid grid-cols-3 gap-2">
+              {['1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '0', 'del'].map((k) => (
+                <button key={k} type="button" onClick={() => { setWrong(false); setInput((v) => (k === 'del' ? v.slice(0, -1) : k === '-' ? (v.startsWith('-') ? v.slice(1) : '-' + v) : v.length < 6 ? v + k : v)); }} className="min-h-11 rounded-xl bg-slate-100 hover:bg-slate-200 font-display font-extrabold text-lg text-slate-800 active:translate-y-0.5">
+                  {k === 'del' ? '⌫' : k}
+                </button>
+              ))}
+            </div>
+            <button type="button" onClick={submitGate} disabled={!input.trim()} className="mt-3 w-full min-h-12 rounded-2xl bg-emerald-500 disabled:bg-slate-300 text-white font-display font-extrabold text-lg">{gate.kind === 'complete' ? 'Finish ✓' : 'Reload 🔥'}</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

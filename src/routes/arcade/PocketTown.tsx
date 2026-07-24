@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
+import { makeAdaptive, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
@@ -82,6 +83,8 @@ export function PocketTown() {
   const addAchievement = useProgress((s) => s.addAchievement);
   const maxTier = useProgress((s) => s.townMaxTier);
   const setMaxTier = useProgress((s) => s.setTownMaxTier);
+  const arcadeUnit = useProgress((s) => s.arcadeUnit);
+  const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
@@ -93,6 +96,8 @@ export function PocketTown() {
   const [pop, setPop] = useState(0);
   const [happy, setHappy] = useState(70);
   const [tier, setTier] = useState(0);
+  const [tax, setTax] = useState<{ c: Challenge; reward: number } | null>(null);
+  const [taxInput, setTaxInput] = useState('');
   const [msg, setMsg] = useState('Build roads, then homes & shops. Use the arrows to visit other neighborhoods!');
   const [zoom, setZoom] = useState(1);
   const [report, setReport] = useState<Report | null>(null);
@@ -200,12 +205,29 @@ export function PocketTown() {
   const openReport = () => { setReport(buildReport()); sfx.powerup(); };
 
   const collectTaxes = () => {
+    if (tax) return;
     const c = allCounts();
     const reward = 30 + c.com * 5 + Math.floor(pop * 0.5);
-    setMoney((m) => m + reward * 2);
-    addAchievement(10);
-    sfx.coin(); haptic(HAPTIC.pickup);
-    setMsg(`💸 Taxes collected! +💰${reward * 2}`);
+    const lvl = useProgress.getState().arcadeLevels[arcadeUnit] ?? 1;
+    setTax({ c: makeAdaptive(arcadeUnit, lvl, 'medium'), reward });
+    setTaxInput('');
+  };
+  const submitTax = () => {
+    if (!tax) return;
+    const n = Number(taxInput.trim());
+    if (taxInput.trim() === '' || Number.isNaN(n)) return;
+    recordArcadeAnswer(arcadeUnit, n === tax.c.answer);
+    if (n === tax.c.answer) {
+      setMoney((m) => m + tax.reward * 2);
+      addAchievement(10);
+      sfx.coin(); haptic(HAPTIC.pickup);
+      setMsg(`💸 Taxes collected! +💰${tax.reward * 2}`);
+    } else {
+      setMoney((m) => m + Math.floor(tax.reward / 2));
+      sfx.hurt(); haptic(HAPTIC.hit);
+      setMsg('Hmm, the math was off — half taxes collected.');
+    }
+    setTax(null);
   };
 
   const endGame = () => {
@@ -217,7 +239,7 @@ export function PocketTown() {
   const reset = () => {
     setGrids(freshGrids());
     setCur('downtown'); setTool('road'); setMoney(340); setPop(0); setHappy(70); setTier(0);
-    setReport(null); setMapOpen(false);
+    setTax(null); setTaxInput(''); setReport(null); setMapOpen(false);
     spentRef.current = 0;
     setMsg('Build roads, then homes & shops. Use the arrows to visit other neighborhoods!');
     setOutcome(null);
@@ -356,6 +378,27 @@ export function PocketTown() {
               </div>
             </div>
             <button type="button" onClick={() => setReport(null)} className="mt-4 w-full min-h-11 rounded-2xl bg-emerald-500 text-white font-display font-extrabold">Keep building ▶</button>
+          </div>
+        </div>
+      )}
+
+      {/* tax math modal */}
+      {tax && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
+          <div className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl">
+            <div className="font-display font-extrabold text-slate-900">💸 Solve to collect double taxes!</div>
+            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-xl font-display font-extrabold leading-snug break-words">{tax.c.prompt}</div>
+            <div className="mt-2 h-11 rounded-xl border-2 border-slate-200 flex items-center justify-center text-xl font-display font-extrabold tabular-nums">{taxInput || <span className="text-slate-300">?</span>}</div>
+            <div className="mt-2 grid grid-cols-3 gap-1.5">
+              {['1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '0', 'del'].map((k) => (
+                <button key={k} type="button" onClick={() => setTaxInput((v) => (k === 'del' ? v.slice(0, -1) : k === '-' ? (v.startsWith('-') ? v.slice(1) : '-' + v) : v.length < 6 ? v + k : v))} className="min-h-10 rounded-lg bg-slate-100 hover:bg-slate-200 font-display font-extrabold text-slate-800 active:translate-y-0.5">
+                  {k === 'del' ? '⌫' : k}
+                </button>
+              ))}
+            </div>
+            <div className="mt-2">
+              <button type="button" onClick={submitTax} disabled={!taxInput.trim()} className="w-full min-h-11 rounded-2xl bg-emerald-500 disabled:bg-slate-300 text-white font-display font-extrabold">Collect ✓</button>
+            </div>
           </div>
         </div>
       )}
