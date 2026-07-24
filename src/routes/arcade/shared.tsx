@@ -83,6 +83,17 @@ export const ARCADE_GAMES: ArcadeGameDef[] = [
   { id: 'starhop', path: '/arcade/starhop', emoji: '🌟', name: 'Star Hop', blurb: 'Chinese Checkers — hop to the far star!', baseXp: 10, gradient: 'from-indigo-500 to-fuchsia-600' },
   { id: 'crawler', path: '/arcade/crawler', emoji: '🎲', name: 'Lucky Crawl', blurb: 'Push your luck for treasure — bank before the alarm!', baseXp: 12, gradient: 'from-amber-600 to-yellow-700' },
   { id: 'carpenter', path: '/arcade/carpenter', emoji: '🔨', name: 'Critter Cottage', blurb: 'Measure, saw & build a cottage — then critters move in!', baseXp: 12, gradient: 'from-amber-700 to-orange-800' },
+  { id: 'asteroids', path: '/arcade/asteroids', emoji: '🪨', name: 'Asteroids', blurb: 'Spin, thrust & blast the space rocks!', baseXp: 10, gradient: 'from-slate-700 to-indigo-800' },
+  { id: 'space', path: '/arcade/space', emoji: '🚀', name: 'Space Blaster', blurb: 'Shoot down the alien invaders!', baseXp: 10, gradient: 'from-indigo-600 to-purple-800' },
+  { id: 'zapper', path: '/arcade/zapper', emoji: '🧟', name: 'Zombie Zapper', blurb: 'Zap the zombie horde before it reaches you!', baseXp: 10, gradient: 'from-lime-600 to-green-800' },
+  { id: 'hippo', path: '/arcade/hippo', emoji: '🦛', name: 'Hungry Hippo', blurb: 'Chomp all the dots, dodge the ghosts!', baseXp: 10, gradient: 'from-pink-500 to-fuchsia-600' },
+  { id: 'blitz', path: '/arcade/blitz', emoji: '🌴', name: 'Jungle Blitz', blurb: 'Run & gun through the jungle!', baseXp: 12, gradient: 'from-green-600 to-emerald-800' },
+  { id: 'frogger', path: '/arcade/leapfrog', emoji: '🐸', name: 'Leap Frog', blurb: 'Hop across the road and river!', baseXp: 10, gradient: 'from-lime-500 to-green-600' },
+  { id: 'rogue', path: '/arcade/rogue', emoji: '⚔️', name: 'Rogue Delve', blurb: 'Delve the dungeon. Grab the loot!', baseXp: 14, gradient: 'from-stone-700 to-violet-800' },
+  { id: 'survivors', path: '/arcade/survivors', emoji: '🍡', name: 'Mochi Survivors', blurb: 'Survive the swarm as long as you can!', baseXp: 14, gradient: 'from-rose-500 to-indigo-800' },
+  { id: 'fishing', path: '/arcade/fishing', emoji: '🎣', name: 'Fishing', blurb: 'Cast, wait & reel in the big catch!', baseXp: 10, gradient: 'from-cyan-500 to-blue-700' },
+  { id: 'tangram', path: '/arcade/tangram', emoji: '🧩', name: 'Tangram', blurb: 'Fill the frame with the seven shapes!', baseXp: 10, gradient: 'from-amber-500 to-orange-600' },
+  { id: 'bubbles', path: '/arcade/bubbles', emoji: '🫧', name: 'Bubble Pop', blurb: 'Aim & pop groups of matching bubbles!', baseXp: 10, gradient: 'from-sky-400 to-cyan-600' },
 ];
 
 // Premium games: locked until bought with coins in the Shop (id → coin price).
