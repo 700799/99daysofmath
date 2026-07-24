@@ -3,7 +3,6 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { GameStage } from './fx';
 import { GameInstructions, type HowToSection } from './HowToPlay';
-import { makeAdaptive, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
@@ -151,9 +150,6 @@ function settle(fills: Record<string, Fill>, openPins: Pin[]): { fills: Record<s
 export function HeroRescue() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const addArcadePoints = useProgress((s) => s.addArcadePoints);
-  const addAchievement = useProgress((s) => s.addAchievement);
-  const arcadeUnit = useProgress((s) => s.arcadeUnit);
-  const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
 
@@ -162,10 +158,6 @@ export function HeroRescue() {
   const [open, setOpen] = useState<Set<string>>(() => new Set());
   const [collected, setCollected] = useState(0);
   const [status, setStatus] = useState<'playing' | 'won' | 'lost'>('playing');
-  const [pinId, setPinId] = useState<string | null>(null);
-  const [chal, setChal] = useState<Challenge | null>(null);
-  const [input, setInput] = useState('');
-  const [wrong, setWrong] = useState(false);
 
   const level = LEVELS[levelIdx];
   const required = countTreasure(level.fills);
@@ -177,9 +169,6 @@ export function HeroRescue() {
     setOpen(new Set());
     setCollected(0);
     setStatus('playing');
-    setPinId(null);
-    setChal(null);
-    setInput('');
   };
 
   const retry = () => loadLevel(levelIdx);
@@ -188,34 +177,15 @@ export function HeroRescue() {
   useEffect(() => { loadLevel(0); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const tapPin = (pin: Pin) => {
-    if (status !== 'playing' || open.has(pin.id) || pinId) return;
-    setPinId(pin.id);
-    setChal(makeAdaptive(arcadeUnit, useProgress.getState().arcadeLevels[arcadeUnit] ?? 1, 'short'));
-    setInput('');
-    setWrong(false);
-  };
-
-  const resolvePin = () => {
-    if (!chal || !pinId) return;
-    if (Number(input.trim()) !== chal.answer || input.trim() === '') {
-      recordArcadeAnswer(arcadeUnit, false);
-      setWrong(true);
-      sfx.hurt();
-      haptic(HAPTIC.hit);
-      return;
-    }
-    recordArcadeAnswer(arcadeUnit, true);
-    // correct → open the pin and run the flow
+    if (status !== 'playing' || open.has(pin.id)) return;
+    // pull the pin directly and run the flow
     const nextOpen = new Set(open);
-    nextOpen.add(pinId);
+    nextOpen.add(pin.id);
     const openPins = level.pins.filter((p) => nextOpen.has(p.id));
     const res = settle({ ...fills }, openPins);
     setOpen(nextOpen);
     setFills(res.fills);
-    setChal(null);
-    setPinId(null);
-    setInput('');
-    addAchievement(5);
+    sfx.step(); haptic(HAPTIC.pickup);
 
     const newCollected = collected + res.collected;
     setCollected(newCollected);
@@ -351,27 +321,6 @@ export function HeroRescue() {
             <div className="mt-4 grid grid-cols-2 gap-2">
               <button type="button" onClick={retry} className="min-h-12 rounded-2xl bg-amber-500 text-white font-display font-extrabold">↺ Retry</button>
               <button type="button" onClick={endNow} className="min-h-12 rounded-2xl bg-slate-200 text-slate-700 font-display font-extrabold">End run</button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* math gate to pull a pin */}
-      {chal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
-          <div className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl">
-            <div className="text-3xl">🔩</div>
-            <div className="mt-1 font-display font-extrabold text-slate-900">Solve to pull the pin:</div>
-            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-xl font-display font-extrabold leading-snug break-words">{chal.prompt}</div>
-            <input autoFocus inputMode="numeric" value={input}
-              onChange={(e) => { setInput(e.target.value); setWrong(false); }}
-              onKeyDown={(e) => e.key === 'Enter' && resolvePin()}
-              className={`mt-3 w-full rounded-xl border-2 px-3 py-2 text-center text-xl font-display font-extrabold focus:outline-none ${wrong ? 'border-rose-300 bg-rose-50 text-rose-700' : 'border-slate-200 focus:border-amber-500'}`}
-              placeholder="?" />
-            {wrong && <div className="mt-1 text-xs font-display font-bold text-rose-500">Try again!</div>}
-            <div className="mt-3 grid grid-cols-2 gap-2">
-              <button type="button" onClick={() => { setChal(null); setPinId(null); }} className="min-h-11 rounded-2xl bg-slate-200 text-slate-700 font-display font-extrabold">Cancel</button>
-              <button type="button" onClick={resolvePin} disabled={!input.trim()} className="min-h-11 rounded-2xl bg-amber-500 disabled:bg-slate-300 text-white font-display font-extrabold">Pull 🔧</button>
             </div>
           </div>
         </div>

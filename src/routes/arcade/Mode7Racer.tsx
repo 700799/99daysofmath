@@ -3,14 +3,13 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage } from './fx';
 import { GameInstructions, type HowToSection } from './HowToPlay';
-import { makeAdaptive, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // Turbo Dash — an original Mode-7 / OutRun-style pseudo-3D racer. The road is
 // drawn as stacked perspective bands that scroll and curve; steer the car with
 // finger-drag (or ◀▶ / arrows), dodge traffic, and reach each checkpoint before
-// the clock runs out. Solve a quick problem at checkpoints for a nitro boost.
+// the clock runs out. Each checkpoint banks time and gives an instant nitro boost.
 
 const BANDS = 28;
 const SCENERY = [
@@ -29,7 +28,7 @@ function racerSections(maxStage: number): HowToSection[] {
     { heading: 'Goal', body: 'Race as far as you can! Reach each checkpoint before the timer hits zero to keep going. New scenery every stage.' },
     { heading: 'Steering', body: 'Drag your finger left/right on the road to steer (or use ◀ ▶ / arrow keys). The road curves — lean into the bend or you’ll slide onto the grass and slow down.' },
     { heading: 'Watch out', body: 'Dodge traffic 🚗🚌🚜 — bumping one slows you and costs time!' },
-    { heading: 'Pit stops', body: 'At each checkpoint you pull into a pit stop — solve a quick math problem for a nitro speed boost, then keep racing.' },
+    { heading: 'Checkpoints', body: 'Cross a checkpoint to bank extra time and get an instant nitro speed boost — then keep racing to the next one.' },
     { heading: 'Best', body: 'Furthest stage so far: ' + maxStage + '.' },
   ];
 }
@@ -37,11 +36,8 @@ function racerSections(maxStage: number): HowToSection[] {
 export function Mode7Racer() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const addArcadePoints = useProgress((s) => s.addArcadePoints);
-  const addAchievement = useProgress((s) => s.addAchievement);
   const maxStage = useProgress((s) => s.racerMaxStage);
   const setMaxStage = useProgress((s) => s.setRacerMaxStage);
-  const arcadeUnit = useProgress((s) => s.arcadeUnit);
-  const recordArcadeAnswer = useProgress((s) => s.recordArcadeAnswer);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
   const pausedRef = useArcadePausedRef();
@@ -64,9 +60,6 @@ export function Mode7Racer() {
   const lastRef = useRef(0);
   const rafRef = useRef(0);
   const doneRef = useRef(false);
-  const [challenge, setChallenge] = useState<Challenge | null>(null);
-  const [cInput, setCInput] = useState('');
-  const challengeRef = useRef(false);
   const [, force] = useState(0);
   const redraw = () => force((n) => n + 1);
 
@@ -76,8 +69,8 @@ export function Mode7Racer() {
     carXRef.current = 0; steerRef.current = 0; speedRef.current = 0; zRef.current = 0;
     curveRef.current = 0; curveTargetRef.current = 0; segRef.current = 0;
     trafficRef.current = []; spawnRef.current = 1; stageRef.current = 1; timeRef.current = 30;
-    nextCpRef.current = 600; kmRef.current = 0; doneRef.current = false; challengeRef.current = false;
-    setChallenge(null); setOutcome(null); setPhase('race');
+    nextCpRef.current = 600; kmRef.current = 0; doneRef.current = false;
+    setOutcome(null); setPhase('race');
   };
 
   // Auto-start on mount — the arcade gate now shows the directions + countdown.
@@ -97,7 +90,7 @@ export function Mode7Racer() {
     if (outcome || phase !== 'race') return;
     lastRef.current = performance.now();
     const tick = (now: number) => {
-      if (pausedRef.current || challengeRef.current) { lastRef.current = now; rafRef.current = requestAnimationFrame(tick); return; }
+      if (pausedRef.current) { lastRef.current = now; rafRef.current = requestAnimationFrame(tick); return; }
       const dt = Math.min(0.05, (now - lastRef.current) / 1000);
       lastRef.current = now;
       const stage = stageRef.current;
@@ -139,10 +132,9 @@ export function Mode7Racer() {
         stageRef.current = stage + 1;
         setMaxStage(Math.max(maxStage, stageRef.current));
         timeRef.current += 12;
+        // auto-nitro boost at every checkpoint — the old "solve to go" pause is gone
+        speedRef.current = 1.4;
         sfx.levelUp(); haptic(HAPTIC.levelUp);
-        challengeRef.current = true;
-        setChallenge(makeAdaptive(arcadeUnit, useProgress.getState().arcadeLevels[arcadeUnit] ?? 1, 'medium'));
-        setCInput('');
       }
 
       // traffic
@@ -184,16 +176,6 @@ export function Mode7Racer() {
     window.addEventListener('keyup', up);
     return () => { window.removeEventListener('keydown', dn); window.removeEventListener('keyup', up); };
   }, []);
-
-  const resolveChallenge = () => {
-    if (!challenge) return;
-    const ok = Number(cInput.trim()) === challenge.answer && cInput.trim() !== '';
-    recordArcadeAnswer(arcadeUnit, ok);
-    setChallenge(null);
-    challengeRef.current = false;
-    lastRef.current = performance.now();
-    if (ok) { addAchievement(10); speedRef.current = 1.4; timeRef.current += 4; sfx.powerup(); haptic(HAPTIC.pickup); }
-  };
 
   const steerFrom = (clientX: number, el: HTMLElement) => {
     const r = el.getBoundingClientRect();
@@ -271,20 +253,6 @@ export function Mode7Racer() {
           className="flex-1 min-h-14 rounded-2xl bg-white border-2 border-slate-200 text-2xl font-display font-extrabold active:bg-slate-100">▶</button>
       </div>
       <p className="text-center text-[11px] text-slate-500 mt-2">Drag on the road to steer · dodge traffic · reach the checkpoint!</p>
-
-      {challenge && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
-          <div className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl">
-            <div className="text-3xl">🛠️</div>
-            <div className="mt-1 font-display font-extrabold text-slate-900">Pit stop! Solve for NITRO 🔥</div>
-            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-xl font-display font-extrabold leading-snug break-words">{challenge.prompt}</div>
-            <input autoFocus inputMode="numeric" value={cInput} onChange={(e) => setCInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && resolveChallenge()}
-              className="mt-3 w-full rounded-xl border-2 border-slate-200 px-3 py-2 text-center text-xl font-display font-extrabold focus:border-orange-500 focus:outline-none" placeholder="?" />
-            <button type="button" onClick={resolveChallenge} disabled={!cInput.trim()} className="mt-3 w-full min-h-11 rounded-2xl bg-orange-500 disabled:bg-slate-300 text-white font-display font-extrabold">Go! 🏁</button>
-          </div>
-        </div>
-      )}
 
       <GameInstructions emoji="🏎️" title="Turbo Dash" sections={racerSections(maxStage)} controls={RACER_CONTROLS} />
     </div>

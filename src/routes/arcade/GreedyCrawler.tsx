@@ -4,7 +4,6 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { Mascot as CharMascot, type MascotKind, type MascotExpr } from './Mascots';
-import { MilestoneQuiz } from './MilestoneQuiz';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // Lucky Crawl — a push-your-luck "Greedy Pig" crawler that teaches EXPECTED
@@ -38,7 +37,6 @@ export function GreedyCrawler() {
   const [rolling, setRolling] = useState(false);
   const [expr, setExpr] = useState<MascotExpr>('happy');
   const [flash, setFlash] = useState<'safe' | 'alarm' | null>(null);
-  const [quizOpen, setQuizOpen] = useState(false);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
 
@@ -57,7 +55,7 @@ export function GreedyCrawler() {
   };
 
   const push = () => {
-    if (rolling || outcome || quizOpen) return;
+    if (rolling || outcome) return;
     setRolling(true);
     const survived = Math.random() < p;
     // brief hop / suspense, then resolve
@@ -81,7 +79,7 @@ export function GreedyCrawler() {
   };
 
   const bank = () => {
-    if (rolling || outcome || quizOpen || pot <= 0) return;
+    if (rolling || outcome || pot <= 0) return;
     const total = banked + pot;
     setBanked(total);
     setPot(0);
@@ -90,9 +88,6 @@ export function GreedyCrawler() {
     sfx.levelUp(); buzz(HAPTIC.win);
     if (total >= TARGET) {
       finish(total);
-    } else {
-      // milestone math beat before the next run
-      window.setTimeout(() => setQuizOpen(true), 350);
     }
   };
 
@@ -103,7 +98,6 @@ export function GreedyCrawler() {
     setRolling(false);
     setExpr('happy');
     setFlash(null);
-    setQuizOpen(false);
     setOutcome(null);
   };
 
@@ -142,21 +136,6 @@ export function GreedyCrawler() {
               <CharMascot kind={k} size={56} expr="happy" />
             </button>
           ))}
-        </div>
-      </div>
-    );
-  }
-
-  // ── milestone word problem (after banking) ──
-  if (quizOpen) {
-    return (
-      <div>
-        <ArcadeHeader title="Lucky Crawl" emoji="🎲" gameId="crawler" />
-        <div className="mx-auto max-w-sm text-center">
-          <div className="mb-2 rounded-2xl bg-amber-50 border-2 border-amber-200 px-4 py-2 font-display font-extrabold text-amber-800">
-            💰 Banked {banked} / {TARGET} gold — solve for a bonus!
-          </div>
-          <MilestoneQuiz onDone={() => setQuizOpen(false)} len="word" label="🧮 Vault puzzle — solve for coins!" />
         </div>
       </div>
     );

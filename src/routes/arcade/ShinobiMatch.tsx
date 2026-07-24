@@ -3,7 +3,6 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
 import { GameStage } from './fx';
 import { GameInstructions, type HowToSection } from './HowToPlay';
-import { makeChallenge, type Challenge } from './MidGameChallenge';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
@@ -54,7 +53,6 @@ function shinobiSections(maxLevel: number): HowToSection[] {
 export function ShinobiMatch() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const addArcadePoints = useProgress((s) => s.addArcadePoints);
-  const addAchievement = useProgress((s) => s.addAchievement);
   const maxLevel = useProgress((s) => s.shinobiMaxLevel);
   const setMaxLevel = useProgress((s) => s.setShinobiMaxLevel);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
@@ -69,8 +67,6 @@ export function ShinobiMatch() {
   const [level, setLevel] = useState(1);
   const [cleared, setCleared] = useState(0);
   const [log, setLog] = useState('Match runes to fight!');
-  const [ult, setUlt] = useState<Challenge | null>(null);
-  const [ultInput, setUltInput] = useState('');
   const downRef = useState<{ i: number; x: number; y: number } | null>(null);
   const [down, setDown] = downRef;
 
@@ -168,7 +164,7 @@ export function ShinobiMatch() {
   };
 
   const turn = (i: number, j: number) => {
-    if (outcome || ult) return;
+    if (outcome) return;
     const g = [...grid];
     [g[i], g[j]] = [g[j], g[i]];
     const { grid: ng, counts } = resolveBoard(g);
@@ -221,25 +217,12 @@ export function ShinobiMatch() {
   };
 
   const unleash = () => {
-    if (chi < 100 || ult) return;
-    setUlt(makeChallenge(Math.min(5, 1 + Math.floor(level / 2))));
-    setUltInput('');
-  };
-  const resolveUlt = () => {
-    if (!ult) return;
-    const ok = Number(ultInput.trim()) === ult.answer && ultInput.trim() !== '';
-    setUlt(null);
+    if (chi < 100) return;
+    // clear the whole screen instantly — no math gate
+    setFoes([]);
     setChi(0);
-    if (ok) {
-      addAchievement(10);
-      setFoes([]);
-      setLog('🌟 NINJUTSU! The screen is cleared!');
-      sfx.powerup(); haptic(HAPTIC.win);
-    } else {
-      setFoes((fs) => fs.filter((_, idx) => idx % 2 === 0));
-      setLog('The jutsu half-fizzled…');
-      sfx.hurt();
-    }
+    setLog('🌟 NINJUTSU! The screen is cleared!');
+    sfx.powerup(); haptic(HAPTIC.win);
   };
 
   const endRun = () => {
@@ -316,20 +299,6 @@ export function ShinobiMatch() {
         🌟 Ninjutsu {chi < 100 ? `(${chi}%)` : 'READY!'}
       </button>
       <p className="text-center text-[11px] text-slate-500 mt-2">Tap a rune then a neighbour, or swipe to swap.</p>
-
-      {ult && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
-          <div className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl">
-            <div className="text-3xl">🌟</div>
-            <div className="mt-1 font-display font-extrabold text-slate-900">Ninjutsu! Solve to unleash:</div>
-            <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-xl font-display font-extrabold leading-snug break-words">{ult.prompt}</div>
-            <input autoFocus inputMode="numeric" value={ultInput} onChange={(e) => setUltInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && resolveUlt()}
-              className="mt-3 w-full rounded-xl border-2 border-slate-200 px-3 py-2 text-center text-xl font-display font-extrabold focus:border-violet-500 focus:outline-none" placeholder="?" />
-            <button type="button" onClick={resolveUlt} className="mt-3 w-full min-h-11 rounded-2xl bg-violet-500 text-white font-display font-extrabold">Unleash 🌟</button>
-          </div>
-        </div>
-      )}
 
       <GameInstructions emoji="🥷" title="Shinobi Match" sections={shinobiSections(maxLevel)} controls={SHINOBI_CONTROLS} />
     </div>
