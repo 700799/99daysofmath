@@ -19,9 +19,9 @@ const baseCtx = () => ({
 });
 
 describe('STICKER_DEFS', () => {
-  it('has 90 total stickers', () => {
-    // 56 unit (5×10 + 1×6) + 8 streak + 4 accuracy + 5 XP + 7 mastery + 10 challenge
-    expect(TOTAL_STICKERS).toBe(90);
+  it('has 105 total stickers', () => {
+    // 70 unit (5×10 + 1×6 + 1×14) + 8 streak + 4 accuracy + 5 XP + 8 mastery + 10 challenge
+    expect(TOTAL_STICKERS).toBe(105);
   });
 
   it('every sticker ID is unique', () => {

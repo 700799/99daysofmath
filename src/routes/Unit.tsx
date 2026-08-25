@@ -48,19 +48,20 @@ export function Unit() {
   const u = parseInt(unit, 10);
 
   const seoLesson = getLesson(d, u);
-  const seoGrade = d.startsWith('5.') ? '5th' : '6th';
+  const seoCourse = d === 'A1' ? 'Algebra 1' : `${d.startsWith('5.') ? '5th' : '6th'} Grade Math`;
+  const seoCourseProse = d === 'A1' ? 'Algebra 1' : `${d.startsWith('5.') ? '5th' : '6th'}-grade math`;
   useSeo({
     title: seoLesson
-      ? `${seoLesson.title} — ${seoGrade} Grade Math (${DOMAIN_LABELS[d]}) | Math10x`
+      ? `${seoLesson.title} — ${seoCourse}${d === 'A1' ? '' : ` (${DOMAIN_LABELS[d]})`} | Math10x`
       : `${DOMAIN_LABELS[d]} lesson | Math10x`,
     description: seoLesson
-      ? `${seoLesson.objective ?? seoLesson.title}. A free ${seoGrade}-grade math lesson with an animated video, worked examples, and practice on Math10x.`
-      : `A free ${seoGrade}-grade math lesson on Math10x.`,
+      ? `${seoLesson.objective ?? seoLesson.title}. A free ${seoCourseProse} lesson with ${d === 'A1' ? 'clear worked examples' : 'an animated video, worked examples,'} and practice on Math10x.`
+      : `A free ${seoCourseProse} lesson on Math10x.`,
     canonicalPath: `/unit/${d}/${u}`,
     jsonLd: seoLesson
       ? [
           courseJsonLd(
-            `${seoLesson.title} — ${seoGrade} Grade Math`,
+            `${seoLesson.title} — ${seoCourse}`,
             seoLesson.objective ?? seoLesson.title,
             `${SITE_URL}/unit/${d}/${u}`,
           ),

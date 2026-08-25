@@ -24,6 +24,16 @@ export const CLUSTER_LABELS: Record<string, string> = {
   '6.G.A': 'Area, surface area & volume',
   '6.SP.A': 'Understanding data & variability',
   '6.SP.B': 'Summarizing data sets',
+  'A1.EXP.A': 'The language of algebra (Alg 1)',
+  'A1.EQ.A': 'Solving equations (Alg 1)',
+  'A1.INEQ.A': 'Inequalities (Alg 1)',
+  'A1.FUN.A': 'Functions (Alg 1)',
+  'A1.LIN.A': 'Slope & graphing lines (Alg 1)',
+  'A1.LIN.B': 'Writing linear equations (Alg 1)',
+  'A1.SYS.A': 'Systems of equations (Alg 1)',
+  'A1.EXPO.A': 'Exponents & exponential growth (Alg 1)',
+  'A1.POLY.A': 'Polynomials & factoring (Alg 1)',
+  'A1.QUAD.A': 'Quadratics (Alg 1)',
 };
 
 export type MasteryLevel = 'strong' | 'on-track' | 'needs-work' | 'unassessed';
@@ -132,6 +142,8 @@ export function skillBreakdown(
 function domainOfCluster(cluster: string): Domain {
   // All grade-5 standards live in the single 5.F Foundations domain.
   if (cluster.startsWith('5.')) return '5.F';
+  // All Algebra 1 strands (A1.EQ.A, A1.LIN.B, …) live in the single A1 domain.
+  if (cluster.startsWith('A1.')) return 'A1';
   const parts = cluster.split('.');
   return `${parts[0]}.${parts[1]}` as Domain;
 }

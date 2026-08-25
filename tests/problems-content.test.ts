@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { isEquivalent } from '../src/data/normalize';
-import { DOMAINS, type Problem } from '../src/types/problem';
+import { type Problem } from '../src/types/problem';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROBLEMS_PATH = path.resolve(__dirname, '..', 'public', 'data', 'problems.json');
@@ -32,7 +32,9 @@ describe('problems bank — structure', () => {
   it('every domain has its expected problem count', () => {
     const counts = new Map<string, number>();
     for (const p of PROBLEMS) counts.set(p.domain, (counts.get(p.domain) ?? 0) + 1);
-    for (const d of DOMAINS) {
+    // Iterate the fixture (single source of truth): a domain earns a row here
+    // once its problem bank ships (A1 lands with its content batch).
+    for (const d of Object.keys(EXPECTED_BY_DOMAIN)) {
       expect(counts.get(d), d).toBe(EXPECTED_BY_DOMAIN[d].count);
     }
   });
@@ -45,7 +47,7 @@ describe('problems bank — structure', () => {
       arr.push(p);
       bucket.set(key, arr);
     }
-    for (const d of DOMAINS) {
+    for (const d of Object.keys(EXPECTED_BY_DOMAIN)) {
       for (let u = 1; u <= EXPECTED_BY_DOMAIN[d].units; u++) {
         const arr = bucket.get(`${d}:${u}`) ?? [];
         expect(arr, `${d}:${u}`).toHaveLength(10);

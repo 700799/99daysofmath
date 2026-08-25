@@ -23,7 +23,7 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^(6\\.(RP|NS|EE|G|SP)|5\\.F)\\.\\d{3}$"
+      "pattern": "^(6\\.(RP|NS|EE|G|SP)|5\\.F|A1)\\.\\d{3}$"
     },
     "domain": {
       "enum": [
@@ -32,7 +32,8 @@
         "6.EE",
         "6.G",
         "6.SP",
-        "5.F"
+        "5.F",
+        "A1"
       ]
     },
     "unit": {
@@ -46,7 +47,7 @@
     },
     "standard": {
       "type": "string",
-      "pattern": "^(6\\.(RP|NS|EE|G|SP)|5\\.(NBT|NF|MD|G|OA))\\."
+      "pattern": "^(6\\.(RP|NS|EE|G|SP)|5\\.(NBT|NF|MD|G|OA)|A1\\.(EXP|EQ|INEQ|FUN|LIN|SYS|EXPO|POLY|QUAD))\\."
     },
     "difficulty": {
       "type": "integer",

@@ -15,6 +15,7 @@ function freshState() {
       '6.EE': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
       '6.G': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
       '6.SP': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
+      A1: { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
     },
     xp: 0,
     streak: 0,

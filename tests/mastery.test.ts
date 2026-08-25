@@ -74,7 +74,7 @@ describe('skillBreakdown', () => {
 
   it('includes every known cluster even with no data', () => {
     const { byCluster } = skillBreakdown({}, problems);
-    expect(byCluster.length).toBe(20);
+    expect(byCluster.length).toBe(30);
     expect(byCluster.every((c) => c.level === 'unassessed')).toBe(true);
   });
 });

@@ -71,7 +71,7 @@ export function DailyMix() {
         const url = `${import.meta.env.BASE_URL}data/problems.json`;
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const all = (await res.json()) as Problem[];
+        const all = ((await res.json()) as Problem[]).filter((p) => p.domain !== 'A1');
         if (cancelled) return;
         const picks = shuffle(all).slice(0, Math.min(MIX_SIZE, all.length));
         setProblems(picks);

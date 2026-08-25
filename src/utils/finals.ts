@@ -1,4 +1,4 @@
-import { DOMAINS, type Problem } from '../types/problem';
+import { CORE_DOMAINS, type Problem } from '../types/problem';
 
 export const FINAL_QUIZ_COUNT = 5;
 export const FINAL_QUIZ_SIZE = 20;
@@ -24,10 +24,15 @@ function seededShuffle<T>(arr: T[], rand: () => number): T[] {
   return a;
 }
 
-// How many questions each domain contributes to quiz n (rotates so every
-// quiz totals 20 across 6 domains: 4+4+3+3+3+3).
+// How many questions each CORE domain contributes to quiz n. Derived from
+// FINAL_QUIZ_SIZE so the total always holds (6 domains → 4+4+3+3+3+3 = 20);
+// rotates per quiz so the "heavy" domains vary. Finals deliberately draw from
+// CORE_DOMAINS only — Algebra 1 has its own trail and stays out of MAP prep.
 function quotaFor(quizN: number): number[] {
-  const base = [4, 4, 3, 3, 3, 3];
+  const n = CORE_DOMAINS.length;
+  const floor = Math.floor(FINAL_QUIZ_SIZE / n);
+  const extra = FINAL_QUIZ_SIZE - floor * n;
+  const base = CORE_DOMAINS.map((_, i) => floor + (i < extra ? 1 : 0));
   const rot = (quizN - 1) % base.length;
   return base.map((_, i) => base[(i + rot) % base.length]);
 }
@@ -43,7 +48,7 @@ export function pickFinalQuiz(all: Problem[], quizN: number): Problem[] {
   const quota = quotaFor(n);
   const picked: Problem[] = [];
 
-  DOMAINS.forEach((domain, di) => {
+  CORE_DOMAINS.forEach((domain, di) => {
     const rand = mulberry32(987_001 + di * 101);
     const pool = seededShuffle(
       all.filter((p) => p.domain === domain),

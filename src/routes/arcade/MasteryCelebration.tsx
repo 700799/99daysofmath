@@ -18,6 +18,7 @@ const CHAMPIONS: Record<ArcadeUnit, { kind: MascotKind; name: string; word: stri
   '6.G': { kind: 'unicorn', name: 'Poly', word: 'unicorn' },
   '6.SP': { kind: 'penguin', name: 'Statz', word: 'penguin' },
   g5: { kind: 'bunny', name: 'Bouncy', word: 'bunny' },
+  a1: { kind: 'dragon', name: 'Axel', word: 'dragon' },
   mixed: { kind: 'pet', name: 'Pip', word: 'chick' },
 };
 // gear earned at levels 2, 3, 4, 5

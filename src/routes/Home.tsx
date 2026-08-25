@@ -6,6 +6,7 @@ import {
   DOMAIN_DESCRIPTIONS,
   DOMAIN_COLORS,
   DOMAIN_EMOJI,
+  domainCourseName,
 } from '../types/problem';
 import { useProgress } from '../state/progress';
 import { useDisplayName } from '../state/auth';
@@ -26,7 +27,7 @@ const HOME_JSON_LD = {
     position: i + 1,
     item: {
       '@type': 'Course',
-      name: `${DOMAIN_LABELS[d]} — ${d.startsWith('5.') ? '5th' : '6th'} Grade Math`,
+      name: domainCourseName(d),
       description: DOMAIN_DESCRIPTIONS[d],
       url: `${SITE_URL}/trail/${d}`,
       provider: { '@type': 'EducationalOrganization', name: SITE_NAME, url: `${SITE_URL}/` },

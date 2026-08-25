@@ -1,6 +1,26 @@
-export type Domain = '5.F' | '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP';
+export type Domain = '5.F' | '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'A1';
 
-export const DOMAINS: Domain[] = ['5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP'];
+export const DOMAINS: Domain[] = ['5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'A1'];
+
+/**
+ * The six grade-5/6 domains that feed the SHARED assessments (Finals, Mock
+ * Test, Daily Mix, adaptive Practice). Algebra 1 is deliberately excluded so
+ * MAP-prep surfaces stay grade-level; A1 is served by its own trail + Review.
+ */
+export const CORE_DOMAINS: Domain[] = ['5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP'];
+
+/** Human grade/course label for a domain (used in titles, SEO, headers). */
+export function gradeLabelFor(domain: Domain): string {
+  if (domain === 'A1') return 'Algebra 1';
+  return domain.startsWith('5.') ? '5th grade' : '6th grade';
+}
+
+/** Full course display name for SEO/titles, e.g. "Ratios & Proportions — 6th Grade Math" or "Algebra 1 for Middle School". */
+export function domainCourseName(domain: Domain): string {
+  if (domain === 'A1') return 'Algebra 1 for Middle School';
+  const grade = domain.startsWith('5.') ? '5th' : '6th';
+  return `${DOMAIN_LABELS[domain]} — ${grade} Grade Math`;
+}
 
 export const DOMAIN_LABELS: Record<Domain, string> = {
   '5.F': 'Gr-5 Foundations',
@@ -9,6 +29,7 @@ export const DOMAIN_LABELS: Record<Domain, string> = {
   '6.EE': 'Expressions & Equations',
   '6.G': 'Geometry',
   '6.SP': 'Statistics & Probability',
+  A1: 'Algebra 1',
 };
 
 export const DOMAIN_DESCRIPTIONS: Record<Domain, string> = {
@@ -18,6 +39,7 @@ export const DOMAIN_DESCRIPTIONS: Record<Domain, string> = {
   '6.EE': 'Variables, expressions, equations, and inequalities',
   '6.G': 'Area, surface area, volume, and polygons',
   '6.SP': 'Data displays, measures of center, and variability',
+  A1: 'Equations, inequalities, functions, lines, systems, exponents, and quadratics',
 };
 
 export const DOMAIN_COLORS: Record<Domain, string> = {
@@ -27,6 +49,7 @@ export const DOMAIN_COLORS: Record<Domain, string> = {
   '6.EE': '#CE82FF',
   '6.G': '#FF9600',
   '6.SP': '#FF4B4B',
+  A1: '#6366F1',
 };
 
 export const DOMAIN_EMOJI: Record<Domain, string> = {
@@ -36,6 +59,7 @@ export const DOMAIN_EMOJI: Record<Domain, string> = {
   '6.EE': '🧮',
   '6.G': '📐',
   '6.SP': '📊',
+  A1: '🚀',
 };
 
 export type AnswerType =

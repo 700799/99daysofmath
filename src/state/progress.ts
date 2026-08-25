@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { DOMAINS, type Domain } from '../types/problem';
+import { DOMAINS, CORE_DOMAINS, type Domain } from '../types/problem';
 import { flashXp } from './xpFlash';
 import { checkAllEarning, STICKER_DEFS, UNIT_COUNT_BY_DOMAIN, type EarningContext } from '../utils/encouragement';
 import { scheduleAfter } from '../utils/srs';
@@ -57,8 +57,8 @@ export interface RitPoint {
 }
 
 // Units the student can pick at the arcade entry. Drives every game's questions.
-export type ArcadeUnit = '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'g5' | 'mixed';
-export const ARCADE_UNITS: ArcadeUnit[] = ['6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'g5', 'mixed'];
+export type ArcadeUnit = '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'g5' | 'a1' | 'mixed';
+export const ARCADE_UNITS: ArcadeUnit[] = ['6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'g5', 'a1', 'mixed'];
 export const ARCADE_UNIT_LABELS: Record<ArcadeUnit, string> = {
   '6.RP': 'Ratios & Proportions',
   '6.NS': 'Number System',
@@ -66,11 +66,12 @@ export const ARCADE_UNIT_LABELS: Record<ArcadeUnit, string> = {
   '6.G': 'Geometry',
   '6.SP': 'Statistics',
   g5: 'Grade-5 Review',
+  a1: 'Algebra 1',
   mixed: 'Mixed (all units)',
 };
 // Per-unit mastery records, seeded for every unit.
 const unitMap = <T,>(v: T): Record<ArcadeUnit, T> =>
-  ({ '6.RP': v, '6.NS': v, '6.EE': v, '6.G': v, '6.SP': v, g5: v, mixed: v });
+  ({ '6.RP': v, '6.NS': v, '6.EE': v, '6.G': v, '6.SP': v, g5: v, a1: v, mixed: v });
 
 export interface ArcadeConfig {
   lessonsPerSession: number; // full lessons required to unlock one game session
@@ -646,6 +647,26 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       | undefined;
     if (cfg && cfg.answerRevealSeconds === undefined) cfg.answerRevealSeconds = 15;
   }
+  if (fromVersion < 22) {
+    // Algebra 1 arrives: seed its trail progress record and the arcade's new
+    // 'a1' unit in every per-unit mastery map (same pattern as v19).
+    const stateAny = state as Record<string, unknown>;
+    const byDomain = (stateAny.byDomain ?? {}) as Record<string, unknown>;
+    if (byDomain['A1'] === undefined) {
+      byDomain['A1'] = { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] };
+      stateAny.byDomain = byDomain;
+    }
+    const seed: Array<[string, number]> = [
+      ['arcadeLevels', 1],
+      ['arcadeStreak', 0],
+      ['arcadeMiss', 0],
+    ];
+    for (const [key, base] of seed) {
+      const rec = (stateAny[key] as Record<string, number>) ?? {};
+      for (const u of ARCADE_UNITS) if (rec[u] === undefined) rec[u] = base;
+      stateAny[key] = rec;
+    }
+  }
   return state;
 }
 
@@ -796,7 +817,9 @@ export const useProgress = create<ProgressState>()(
         };
         const trailBonus =
           trailDone(domain) && !stateBefore.trailBonusGranted[domain] ? 50 : 0;
-        const allDone = DOMAINS.every((dom) => trailDone(dom));
+        // The one-time +250 stays a 6th-grade milestone — Algebra 1 is a bonus
+        // course and shouldn't push the finish line away from existing kids.
+        const allDone = CORE_DOMAINS.every((dom) => trailDone(dom));
         const allTrailsBonus =
           allDone && !stateBefore.allTrailsBonusGranted ? 250 : 0;
         const totalXpAdd = xpEarned + unitBonus + trailBonus + allTrailsBonus;
@@ -1259,7 +1282,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 21,
+      version: 22,
       migrate: migrateProgress,
     },
   ),

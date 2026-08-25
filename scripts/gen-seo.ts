@@ -21,6 +21,8 @@ import {
   DOMAINS,
   DOMAIN_LABELS,
   DOMAIN_DESCRIPTIONS,
+  domainCourseName,
+  gradeLabelFor,
   type Domain,
 } from '../src/types/problem';
 
@@ -31,7 +33,12 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(ROOT, 'dist');
 const LASTMOD = new Date().toISOString().slice(0, 10);
 
-const grade = (d: Domain) => (d.startsWith('5.') ? '5th' : '6th');
+// Course phrasing per domain — Algebra 1 is a course, not a grade.
+const lessonCourse = (d: Domain) => (d === 'A1' ? 'Algebra 1' : `${d.startsWith('5.') ? '5th' : '6th'} Grade Math`);
+const lessonProse = (d: Domain) =>
+  d === 'A1'
+    ? 'A free Algebra 1 lesson with clear worked examples and practice on Math10x.'
+    : `A free ${d.startsWith('5.') ? '5th' : '6th'}-grade math lesson with an animated video, worked examples, and practice on Math10x.`;
 
 interface Route {
   path: string; // e.g. "/trail/6.RP" ("/" for home)
@@ -90,11 +97,7 @@ function buildRoutes(): Route[] {
       itemListElement: DOMAINS.map((d, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        item: courseLd(
-          `${DOMAIN_LABELS[d]} — ${grade(d)} Grade Math`,
-          DOMAIN_DESCRIPTIONS[d],
-          `${SITE_URL}/trail/${d}`,
-        ),
+        item: courseLd(domainCourseName(d), DOMAIN_DESCRIPTIONS[d], `${SITE_URL}/trail/${d}`),
       })),
     },
   });
@@ -103,11 +106,11 @@ function buildRoutes(): Route[] {
   for (const d of DOMAINS) {
     routes.push({
       path: `/trail/${d}`,
-      title: `${DOMAIN_LABELS[d]} — ${grade(d)} Grade Math | Math10x`,
-      description: `Learn ${DOMAIN_LABELS[d]} (${d}) for ${grade(d)} grade: ${DOMAIN_DESCRIPTIONS[d]}. Free animated video lessons, worked examples, and practice on Math10x.`,
+      title: `${domainCourseName(d)} | Math10x`,
+      description: `Learn ${DOMAIN_LABELS[d]} (${d}) for ${gradeLabelFor(d)}: ${DOMAIN_DESCRIPTIONS[d]}. Free lessons, worked examples, and practice on Math10x.`,
       priority: 0.9,
       jsonLd: [
-        courseLd(`${DOMAIN_LABELS[d]} — ${grade(d)} Grade Math`, DOMAIN_DESCRIPTIONS[d], `${SITE_URL}/trail/${d}`),
+        courseLd(domainCourseName(d), DOMAIN_DESCRIPTIONS[d], `${SITE_URL}/trail/${d}`),
         breadcrumbLd([
           { name: 'Home', path: '/' },
           { name: DOMAIN_LABELS[d], path: `/trail/${d}` },
@@ -122,11 +125,11 @@ function buildRoutes(): Route[] {
     const p = `/unit/${d}/${l.unit}`;
     routes.push({
       path: p,
-      title: `${l.title} — ${grade(d)} Grade Math (${DOMAIN_LABELS[d]}) | Math10x`,
-      description: `${l.objective ?? l.title}. A free ${grade(d)}-grade math lesson with an animated video, worked examples, and practice on Math10x.`,
+      title: `${l.title} — ${lessonCourse(d)}${d === 'A1' ? '' : ` (${DOMAIN_LABELS[d]})`} | Math10x`,
+      description: `${l.objective ?? l.title}. ${lessonProse(d)}`,
       priority: 0.8,
       jsonLd: [
-        courseLd(`${l.title} — ${grade(d)} Grade Math`, l.objective ?? l.title, `${SITE_URL}${p}`),
+        courseLd(`${l.title} — ${lessonCourse(d)}`, l.objective ?? l.title, `${SITE_URL}${p}`),
         breadcrumbLd([
           { name: 'Home', path: '/' },
           { name: DOMAIN_LABELS[d], path: `/trail/${d}` },

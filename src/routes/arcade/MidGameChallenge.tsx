@@ -176,6 +176,7 @@ const UNIT_KINDS: Record<ArcadeUnit, ChallengeKind[]> = {
   '6.G': ['geometry'],
   '6.SP': ['stats'],
   g5: ['word', 'fraction', 'factor'], // gentler Grade-5 review pool
+  a1: ['exponent', 'word'], // interim pool — dedicated algebra generators land next
   mixed: ['word', 'exponent', 'factor', 'ratio', 'fraction', 'geometry', 'stats'],
 };
 
