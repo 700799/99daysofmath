@@ -1,0 +1,62 @@
+{
+  "id": "PC.119",
+  "domain": "PC",
+  "unit": 12,
+  "orderInUnit": 9,
+  "standard": "PC.TRIG.C.1",
+  "difficulty": 3,
+  "prompt": "A triangle has sides $5$, $12$, and $13$. Use the Law of Cosines to find the angle across from the side of length $13$, in degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "90",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Three sides, no angles. Put the side you are asking about in the $c$ spot and solve for $\\cos C$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Three sides, no angles. Put the side you are asking about in the $c$ spot and solve for $\\cos C$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Same method on a $3$-$4$-$5$ triangle: $25 = 9 + 16 - 2(3)(4)\\cos C$, so $25 = 25 - 24\\cos C$ and $\\cos C = 0$. An angle with cosine $0$ is $90^\\circ$. Now run the identical steps on $5$-$12$-$13$."
+    },
+    {
+      "level": "guide",
+      "text": "$169 = 25 + 144 - 2 \\times 5 \\times 12 \\times \\cos C$, which is $169 = 169 - 120\\cos C$."
+    },
+    {
+      "level": "reveal",
+      "text": "That forces $120\\cos C = 0$, so $\\cos C = 0$ and $C = 90^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Set $c = 13$: $13^2 = 5^2 + 12^2 - 2(5)(12)\\cos C$.",
+    "$169 = 25 + 144 - 120\\cos C = 169 - 120\\cos C$.",
+    "Subtract $169$ from both sides: $0 = -120\\cos C$, so $\\cos C = 0$.",
+    "The angle with cosine $0$ is $90^\\circ$ — this triangle is a right triangle."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pythagoras was here all along",
+      "steps": [
+        "Check the two short sides: 5² + 12² = 25 + 144 = 169, and 13² = 169 too.",
+        "That is exactly the Pythagorean theorem, which only holds for right triangles.",
+        "So the corner is 90° — and the Law of Cosines agrees because its correction term shrinks to zero."
+      ]
+    },
+    {
+      "title": "What the correction term is telling you",
+      "steps": [
+        "The Law of Cosines is Pythagoras plus a correction: c² = a² + b² − 2ab·cos C.",
+        "When C is exactly 90°, cos 90° = 0, so the whole correction disappears.",
+        "Seeing the correction vanish is a signal: the corner is square. Pythagoras is just the Law of Cosines on its best day."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-cosines",
+    "pythagorean"
+  ],
+  "estimatedSeconds": 75
+}

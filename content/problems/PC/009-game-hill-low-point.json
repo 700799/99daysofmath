@@ -1,0 +1,54 @@
+{
+  "id": "PC.009",
+  "domain": "PC",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "PC.FUN.A.1",
+  "difficulty": 3,
+  "prompt": "In a video game, a hill is drawn with $y = x^2$. The designer changes it to $y = (x + 4)^2 - 6$. What is the $x$-coordinate of the new lowest point of the hill?",
+  "answerType": "numeric",
+  "primaryAnswer": "-4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The inside part $(x + 4)$ controls the left-right slide. A PLUS inside moves the graph LEFT.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The inside part $(x + 4)$ controls the left-right slide. A PLUS inside moves the graph LEFT."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $y = (x + 1)^2$. Set $x + 1 = 0$ to get $x = -1$ — one step LEFT. Same method with a bigger number here."
+    },
+    {
+      "level": "guide",
+      "text": "Set the inside equal to zero: $x + 4 = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x + 4 = 0$ gives $x = -4$. The lowest point is at $x = -4$."
+    }
+  ],
+  "explanation": [
+    "The lowest point happens where the squared part is zero.",
+    "Solve $x + 4 = 0$ to get $x = -4$.",
+    "The $-6$ drops the hill 6 units, but does not change the $x$-coordinate."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test two screen positions",
+      "steps": [
+        "Try $x = 0$: $y = (0 + 4)^2 - 6 = 16 - 6 = 10$. That is high up.",
+        "Try $x = -4$: $y = (0)^2 - 6 = -6$. That is much lower.",
+        "The dip in the hill is at $x = -4$ — the sprite path slid LEFT."
+      ]
+    }
+  ],
+  "tags": [
+    "transformations",
+    "horizontal-shift",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

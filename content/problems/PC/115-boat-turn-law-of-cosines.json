@@ -1,0 +1,57 @@
+{
+  "id": "PC.115",
+  "domain": "PC",
+  "unit": 12,
+  "orderInUnit": 5,
+  "standard": "PC.TRIG.C.1",
+  "difficulty": 2,
+  "prompt": "A boat sails $5$ km in a straight line, then turns and sails $16$ km more. The angle inside the triangle at the turning point is $120^\\circ$. How many kilometers is the boat from where it started?",
+  "answerType": "numeric",
+  "primaryAnswer": "19",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You know two sides and the angle squeezed between them. That is the Law of Cosines.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You know two sides and the angle squeezed between them. That is the Law of Cosines."
+    },
+    {
+      "level": "guide",
+      "text": "$c^2 = 5^2 + 16^2 - 2 \\times 5 \\times 16 \\times \\cos 120^\\circ$, and $\\cos 120^\\circ = -\\frac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Subtracting a negative ADDS: $c^2 = 281 + 80 = 361$, so $c = 19$ km."
+    }
+  ],
+  "explanation": [
+    "The two legs and the straight-home line form a triangle.",
+    "$5^2 + 16^2 = 25 + 256 = 281$.",
+    "The correction: $2 \\times 5 \\times 16 \\times (-\\frac{1}{2}) = -80$, and subtracting $-80$ adds $80$.",
+    "$c^2 = 281 + 80 = 361$, so $c = 19$ km."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why a wide angle stretches it",
+      "steps": [
+        "If the turn made a right angle, the distance home would be √281 ≈ 16.8 km.",
+        "A 120° corner is WIDER than a right angle, so the two ends swing farther apart.",
+        "That is why the answer 19 is bigger than 16.8 — a wide corner always stretches the far side."
+      ]
+    },
+    {
+      "title": "Check it against the limits",
+      "steps": [
+        "If the boat had turned all the way around (180°), it would sit 16 − 5 = 11 km away.",
+        "If it had never turned at all (0°), it would be 5 + 16 = 21 km away.",
+        "The real answer must land between 11 and 21, and 19 does — close to 21 because 120° is a gentle bend."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-cosines",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,54 @@
+{
+  "id": "PC.082",
+  "domain": "PC",
+  "unit": 9,
+  "orderInUnit": 2,
+  "standard": "PC.TRIG.A.2",
+  "difficulty": 1,
+  "prompt": "On the unit circle, the angle $90^\\circ$ lands on the point $(0, 1)$. Sine is the HEIGHT UP. What is $\\sin 90^\\circ$?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sine is the SECOND number in the point $(x, y)$ — how high up you are.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sine is the SECOND number in the point $(x, y)$ — how high up you are."
+    },
+    {
+      "level": "guide",
+      "text": "The point at $90^\\circ$ is $(0, 1)$, so the height is $1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin 90^\\circ = 1$."
+    }
+  ],
+  "explanation": [
+    "A quarter turn from the right edge takes you straight to the top of the circle.",
+    "The top point is $(0, 1)$: zero across, one unit up.",
+    "Sine reads the height, so $\\sin 90^\\circ = 1$. This is the biggest sine can ever be."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the clock hand",
+      "steps": [
+        "Aim a hand of length 1 straight UP, like a clock hand at 12. That is the 90° direction.",
+        "The tip is 0 units across and 1 unit up. The up number IS the sine, so sin 90° = 1."
+      ]
+    },
+    {
+      "title": "Sine can never beat 1",
+      "steps": [
+        "The circle has radius 1, so no point on it is more than 1 unit above the centre.",
+        "The very top is exactly 1 unit up, and you reach it at 90°. So sin 90° = 1 is the ceiling for sine."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "sine"
+  ],
+  "estimatedSeconds": 30
+}

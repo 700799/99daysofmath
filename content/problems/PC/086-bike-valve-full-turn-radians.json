@@ -1,0 +1,54 @@
+{
+  "id": "PC.086",
+  "domain": "PC",
+  "unit": 9,
+  "orderInUnit": 6,
+  "standard": "PC.TRIG.A.2",
+  "difficulty": 2,
+  "prompt": "The valve on your bike wheel rolls all the way around exactly once. In radians, one full turn is $n\\pi$ radians. What is $n$?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Half a turn is $\\pi$ radians. A full turn is two halves.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Half a turn is $\\pi$ radians. A full turn is two halves."
+    },
+    {
+      "level": "guide",
+      "text": "Two halves means $\\pi + \\pi = 2\\pi$ radians."
+    },
+    {
+      "level": "reveal",
+      "text": "A full turn is $2\\pi$ radians, so $n = 2$."
+    }
+  ],
+  "explanation": [
+    "Radians measure a turn by how far you walk around the rim of a circle of radius $1$.",
+    "The whole rim has length $2\\pi$ (that is what circumference $= 2\\pi r$ says when $r = 1$).",
+    "So one full turn is $2\\pi$ radians and $n = 2$. Check with degrees: $2 \\times 180 = 360^\\circ$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two half turns",
+      "steps": [
+        "The valve goes from the top, down to the bottom — that is half a turn, or π radians.",
+        "Then bottom back to top — another π. Together π + π = 2π radians."
+      ]
+    },
+    {
+      "title": "Use the circumference formula",
+      "steps": [
+        "Rolling once means the valve travels the whole rim: circumference = 2 × π × r.",
+        "On the unit circle r = 1, so the trip is 2π. Radians ARE that arc length, so one turn = 2π."
+      ]
+    }
+  ],
+  "tags": [
+    "radians",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

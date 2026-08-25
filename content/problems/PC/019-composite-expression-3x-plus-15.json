@@ -1,0 +1,59 @@
+{
+  "id": "PC.019",
+  "domain": "PC",
+  "unit": 2,
+  "orderInUnit": 9,
+  "standard": "PC.FUN.A.2",
+  "difficulty": 3,
+  "prompt": "Let $f(x) = 3x$ and $g(x) = x + 5$. Write $f(g(x))$ as a simplified expression.",
+  "answerType": "expression",
+  "primaryAnswer": "3x + 15",
+  "alternativeAnswers": [
+    "3x+15",
+    "15 + 3x",
+    "15+3x",
+    "3(x + 5)",
+    "3(x+5)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Instead of a number, the inside machine now hands over a whole expression: $g(x) = x + 5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Instead of a number, the inside machine now hands over a whole expression: $g(x) = x + 5$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $f(x) = 2x$ and $g(x) = x + 1$. Then $f(g(x)) = 2(x + 1) = 2x + 2$. Same method: drop the inside expression into $f$, then distribute."
+    },
+    {
+      "level": "guide",
+      "text": "Feed $x + 5$ into $f$: you get $3(x + 5)$. Now distribute the 3."
+    },
+    {
+      "level": "reveal",
+      "text": "$3(x + 5) = 3x + 15$."
+    }
+  ],
+  "explanation": [
+    "The inside machine gives $x + 5$.",
+    "The outside machine triples whatever it gets: $3(x + 5)$.",
+    "Distribute: $3x + 15$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with a number",
+      "steps": [
+        "Pick $x = 2$. Then $g(2) = 7$ and $f(7) = 21$.",
+        "Now test the expression: $3(2) + 15 = 21$. It matches.",
+        "Testing one number is a fast way to catch a mistake in the distributing."
+      ]
+    }
+  ],
+  "tags": [
+    "composite-function",
+    "expression"
+  ],
+  "estimatedSeconds": 70
+}

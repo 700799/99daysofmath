@@ -1,0 +1,48 @@
+{
+  "id": "PC.042",
+  "domain": "PC",
+  "unit": 5,
+  "orderInUnit": 2,
+  "standard": "PC.EXP.A.1",
+  "difficulty": 1,
+  "prompt": "In $y = 200 \\cdot 1.5^x$, what is the growth factor — the number you multiply by at each step?",
+  "answerType": "numeric",
+  "primaryAnswer": "1.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The growth factor is the base — the number being raised to the power $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The growth factor is the base — the number being raised to the power $x$."
+    },
+    {
+      "level": "guide",
+      "text": "In $y = a \\cdot b^x$, the factor is $b$. Which number is in the $b$ spot?"
+    },
+    {
+      "level": "reveal",
+      "text": "The base is $1.5$, so the growth factor is $1.5$."
+    }
+  ],
+  "explanation": [
+    "In $y = a \\cdot b^x$, the base $b$ is the GROWTH FACTOR.",
+    "It answers one question: what do I multiply by each step?",
+    "Here the base is $1.5$, so you multiply by $1.5$ every step."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Watch one step happen",
+      "steps": [
+        "At $x = 0$ you have $200$. At $x = 1$ you have $200 \\times 1.5 = 300$.",
+        "Compare: $300 \\div 200 = 1.5$.",
+        "The number you multiply by is $1.5$ — the growth factor."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "growth-factor"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,59 @@
+{
+  "id": "PC.109",
+  "domain": "PC",
+  "unit": 11,
+  "orderInUnit": 9,
+  "standard": "PC.TRIG.B.2",
+  "difficulty": 3,
+  "prompt": "A rotating platform is at the right height when $\\sin\\theta = 0.5$. One answer is $\\theta = 30^\\circ$. What is the OTHER answer between $0^\\circ$ and $360^\\circ$? Give it in degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "150",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sine is positive in Quadrant 1 AND Quadrant 2, so the partner answer is in Quadrant 2.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sine is positive in Quadrant 1 AND Quadrant 2, so the partner answer is in Quadrant 2."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Practise the rule with $\\sin\\theta = 0.7$, first answer about $44^\\circ$: the partner is $180 - 44 = 136^\\circ$. Now use $180 - 30$."
+    },
+    {
+      "level": "guide",
+      "text": "The partner in Quadrant 2 is $180^\\circ - \\theta$, so compute $180 - 30$."
+    },
+    {
+      "level": "reveal",
+      "text": "$180 - 30 = 150$, so the other answer is $150^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Two points on the unit circle sit at the same height: one in Quadrant 1 and its mirror in Quadrant 2.",
+    "The mirror of $\\theta$ across the top of the circle is $180^\\circ - \\theta$.",
+    "$180 - 30 = 150^\\circ$. Check: $\\sin 150^\\circ = 0.5$ too. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Mirror the picture",
+      "steps": [
+        "Fold the circle along the vertical line through the centre.",
+        "The point at 30° lands exactly on the point at 150°. Folding sideways keeps the HEIGHT the same, so both have sine 0.5."
+      ]
+    },
+    {
+      "title": "The platform rises, then falls",
+      "steps": [
+        "Turning from 0°, the platform rises and hits the target height at 30°.",
+        "It keeps rising to the top at 90°, then comes back DOWN and passes the same height again — the same 30° of turn past the top, at 90 + 60 = 150°."
+      ]
+    }
+  ],
+  "tags": [
+    "trig-equation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

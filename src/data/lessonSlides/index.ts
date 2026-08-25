@@ -9,6 +9,10 @@ import { A1_SLIDES_U01_04 } from './a1_u01_04';
 import { A1_SLIDES_U05_08 } from './a1_u05_08';
 import { A1_SLIDES_U09_11 } from './a1_u09_11';
 import { A1_SLIDES_U12_14 } from './a1_u12_14';
+import { PC_SLIDES_U01_04 } from './pc_u01_04';
+import { PC_SLIDES_U05_08 } from './pc_u05_08';
+import { PC_SLIDES_U09_11 } from './pc_u09_11';
+import { PC_SLIDES_U12_14 } from './pc_u12_14';
 
 export type { LessonSlide, SlideBank } from './types';
 
@@ -24,4 +28,8 @@ export const LESSON_SLIDES: SlideBank = {
   ...A1_SLIDES_U05_08,
   ...A1_SLIDES_U09_11,
   ...A1_SLIDES_U12_14,
+  ...PC_SLIDES_U01_04,
+  ...PC_SLIDES_U05_08,
+  ...PC_SLIDES_U09_11,
+  ...PC_SLIDES_U12_14,
 };

@@ -1,0 +1,60 @@
+{
+  "id": "PC.099",
+  "domain": "PC",
+  "unit": 10,
+  "orderInUnit": 9,
+  "standard": "PC.TRIG.B.1",
+  "difficulty": 3,
+  "prompt": "A Ferris wheel seat follows $h = 18\\sin(x) + 22$ metres. What is the HIGHEST height the seat reaches, in metres?",
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sine can never be bigger than $1$, so the biggest $18\\sin(x)$ can be is $18$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sine can never be bigger than $1$, so the biggest $18\\sin(x)$ can be is $18$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try $h = 2\\sin(x) + 5$. The biggest sine is $1$, so the top is $2 \\times 1 + 5 = 7$. Same two steps work for $18$ and $22$."
+    },
+    {
+      "level": "guide",
+      "text": "Highest $=$ midline $+$ amplitude $= 22 + 18$."
+    },
+    {
+      "level": "reveal",
+      "text": "$22 + 18 = 40$ metres."
+    }
+  ],
+  "explanation": [
+    "The wave climbs highest when $\\sin(x) = 1$, which happens at $x = 90^\\circ$.",
+    "Then $h = 18 \\times 1 + 22$.",
+    "$h = 40$ metres. That is the midline $22$ plus the amplitude $18$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the wheel",
+      "steps": [
+        "The centre of the wheel is 22 m above the ground and the radius is 18 m.",
+        "The very top of a wheel is one radius above its centre: 22 + 18 = 40 m."
+      ]
+    },
+    {
+      "title": "Make a small table",
+      "steps": [
+        "x = 0°: h = 0 + 22 = 22. x = 45°: h ≈ 12.7 + 22 ≈ 34.7. x = 90°: h = 18 + 22 = 40.",
+        "x = 135°: back down to about 34.7. The peak is at 90°, giving 40 m."
+      ]
+    }
+  ],
+  "tags": [
+    "amplitude",
+    "midline",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

@@ -1,0 +1,54 @@
+{
+  "id": "PC.097",
+  "domain": "PC",
+  "unit": 10,
+  "orderInUnit": 7,
+  "standard": "PC.TRIG.B.1",
+  "difficulty": 2,
+  "prompt": "At a harbour the water is $9$ m deep at high tide and $3$ m deep at low tide. The depth follows a sine wave. What is the MIDLINE depth, in metres?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The midline is the level the wave wiggles around — right between the highest and lowest.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The midline is the level the wave wiggles around — right between the highest and lowest."
+    },
+    {
+      "level": "guide",
+      "text": "Average them: $(9 + 3) \\div 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(9 + 3) \\div 2 = 6$ metres."
+    }
+  ],
+  "explanation": [
+    "A tide graph is a wave: high, low, high, low, forever.",
+    "The midline sits exactly halfway between the peak and the trough, so average them.",
+    "$(9 + 3) \\div 2 = 12 \\div 2 = 6$ m. (The amplitude would be the half-GAP: $(9 - 3) \\div 2 = 3$ m.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Climb up from the bottom",
+      "steps": [
+        "The gap from low to high is 9 − 3 = 6 m.",
+        "The middle is half that gap above the low point: 3 + 3 = 6 m."
+      ]
+    },
+    {
+      "title": "Write the equation",
+      "steps": [
+        "The model is depth = a·sin(x) + k, with k the midline and a the amplitude.",
+        "High = k + a = 9 and low = k − a = 3. Add the two lines: 2k = 12, so k = 6."
+      ]
+    }
+  ],
+  "tags": [
+    "midline",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

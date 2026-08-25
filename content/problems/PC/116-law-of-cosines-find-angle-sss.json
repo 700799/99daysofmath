@@ -1,0 +1,57 @@
+{
+  "id": "PC.116",
+  "domain": "PC",
+  "unit": 12,
+  "orderInUnit": 6,
+  "standard": "PC.TRIG.C.1",
+  "difficulty": 2,
+  "prompt": "A triangle has sides $3$, $5$, and $7$. Find the angle across from the side of length $7$, in degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "120",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Three sides and no angles (SSS) means the Law of Cosines, rearranged to hunt for the angle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Three sides and no angles (SSS) means the Law of Cosines, rearranged to hunt for the angle."
+    },
+    {
+      "level": "guide",
+      "text": "Put $7$ in the $c$ spot: $49 = 9 + 25 - 2 \\times 3 \\times 5 \\times \\cos C$, so $49 = 34 - 30\\cos C$."
+    },
+    {
+      "level": "reveal",
+      "text": "$30\\cos C = 34 - 49 = -15$, so $\\cos C = -\\frac{1}{2}$ and $C = 120^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The angle you want is across from the side $7$, so $7$ plays the role of $c$.",
+    "$49 = 9 + 25 - 30\\cos C$.",
+    "$49 = 34 - 30\\cos C$, so $30\\cos C = -15$.",
+    "$\\cos C = -\\frac{1}{2}$, which happens at $C = 120^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Predict before you compute",
+      "steps": [
+        "Test the corner against Pythagoras first: 3² + 5² = 34, but 7² = 49.",
+        "The far side came out LONGER than a right angle would allow, so the corner must be wider than 90°.",
+        "Only an obtuse answer makes sense, and 120° is obtuse — the computation just confirms your prediction."
+      ]
+    },
+    {
+      "title": "Read the cosine backwards",
+      "steps": [
+        "You end up needing the angle whose cosine is −1/2.",
+        "Cosine is positive for sharp angles and negative for wide ones, so the answer is past 90°.",
+        "From the special-angle list, cos 60° = 1/2 and cos 120° = −1/2. The answer is 120°."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-cosines",
+    "angle"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,54 @@
+{
+  "id": "PC.010",
+  "domain": "PC",
+  "unit": 1,
+  "orderInUnit": 10,
+  "standard": "PC.FUN.A.1",
+  "difficulty": 3,
+  "prompt": "The graph $y = -|x| + 7$ is a flipped, lifted V. What is the greatest $y$-value the graph ever reaches?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The minus sign in front FLIPS the V upside down, so its point becomes the HIGHEST spot.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The minus sign in front FLIPS the V upside down, so its point becomes the HIGHEST spot."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $y = -|x| + 1$. At $x = 0$ you get $y = 1$, and every other $x$ gives less. The top is 1. Same method here."
+    },
+    {
+      "level": "guide",
+      "text": "$|x|$ is never negative, so $-|x|$ is never above zero. The biggest it can be is $0$, when $x = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "At $x = 0$: $y = -0 + 7 = 7$. That is the highest point."
+    }
+  ],
+  "explanation": [
+    "$-f(x)$ flips the graph upside down over the $x$-axis, turning the V into an upside-down V.",
+    "The $+7$ lifts the whole flipped shape up 7.",
+    "The tip is now the top: at $x = 0$, $y = 7$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Try numbers on both sides",
+      "steps": [
+        "At $x = -2$: $y = -2 + 7 = 5$.",
+        "At $x = 0$: $y = 0 + 7 = 7$.",
+        "At $x = 3$: $y = -3 + 7 = 4$. The values climb to 7 and then fall — 7 is the peak."
+      ]
+    }
+  ],
+  "tags": [
+    "transformations",
+    "reflection",
+    "maximum"
+  ],
+  "estimatedSeconds": 55
+}

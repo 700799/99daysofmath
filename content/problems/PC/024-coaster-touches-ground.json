@@ -1,0 +1,49 @@
+{
+  "id": "PC.024",
+  "domain": "PC",
+  "unit": 3,
+  "orderInUnit": 4,
+  "standard": "PC.POLY.A.1",
+  "difficulty": 2,
+  "prompt": "A roller-coaster track profile is modeled by $h(x) = -(x - 2)(x - 8)$, where $h$ is height. The track touches the ground where $h = 0$. What is the LARGER $x$-value where it touches the ground?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Height is zero when the product is zero. The minus out front does not create new zeros.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Height is zero when the product is zero. The minus out front does not create new zeros."
+    },
+    {
+      "level": "guide",
+      "text": "Set each factor to zero: $x - 2 = 0$ and $x - 8 = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "The touch-down points are $x = 2$ and $x = 8$. The larger is $8$."
+    }
+  ],
+  "explanation": [
+    "A product equals zero only when a factor equals zero.",
+    "$x = 2$ and $x = 8$ are the ground points.",
+    "The larger is $x = 8$, where the ride comes back down."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Ride the track",
+      "steps": [
+        "At $x = 2$ the coaster leaves the ground.",
+        "Between 2 and 8 the height is positive — that is the hill.",
+        "At $x = 8$ it lands again, so the later ground point is 8."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomials",
+    "zeros",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

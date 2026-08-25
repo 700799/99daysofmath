@@ -1,0 +1,49 @@
+{
+  "id": "PC.027",
+  "domain": "PC",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "PC.POLY.A.1",
+  "difficulty": 2,
+  "prompt": "A company models profit in thousands of dollars over months by $P(m) = -(m - 2)(m - 11)$. Profit is exactly zero in two months. What is the LATER of those two months?",
+  "answerType": "numeric",
+  "primaryAnswer": "11",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Zero profit means $P(m) = 0$, so one of the factors must be zero.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Zero profit means $P(m) = 0$, so one of the factors must be zero."
+    },
+    {
+      "level": "guide",
+      "text": "$m - 2 = 0$ gives month 2, and $m - 11 = 0$ gives month 11."
+    },
+    {
+      "level": "reveal",
+      "text": "The later zero-profit month is month $11$."
+    }
+  ],
+  "explanation": [
+    "Set each factor to zero.",
+    "Month $2$ and month $11$ both give zero profit.",
+    "The later one is month $11$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sketch the profit story",
+      "steps": [
+        "Because of the minus sign out front, the curve is an upside-down U.",
+        "It starts at zero in month 2, rises to a peak, then falls.",
+        "It hits zero again in month 11 — that is when the good stretch ends."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomials",
+    "zeros",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

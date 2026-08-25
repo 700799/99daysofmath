@@ -1,0 +1,56 @@
+{
+  "id": "PC.072",
+  "domain": "PC",
+  "unit": 8,
+  "orderInUnit": 2,
+  "standard": "PC.TRIG.A.1",
+  "difficulty": 1,
+  "prompt": "In a right triangle, an angle has opposite side $3$, adjacent side $4$, and hypotenuse $5$. What is the sine of that angle, as a decimal?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "SOH: Sine is Opposite over Hypotenuse.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "SOH: Sine is Opposite over Hypotenuse."
+    },
+    {
+      "level": "guide",
+      "text": "Opposite is $3$ and hypotenuse is $5$, so sine $= \\frac{3}{5}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{3}{5} = 0.6$."
+    }
+  ],
+  "explanation": [
+    "SOH-CAH-TOA starts with SOH: Sine $=$ Opposite $\\div$ Hypotenuse.",
+    "Here that is $3 \\div 5$.",
+    "$3 \\div 5 = 0.6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Say the ritual out loud",
+      "steps": [
+        "Point at the angle. The side touching it (not the slant) is ADJACENT.",
+        "The side across the triangle from it is OPPOSITE, and the slant is the HYPOTENUSE.",
+        "Sine wants opposite over hypotenuse: $3$ over $5$, which is $0.6$."
+      ]
+    },
+    {
+      "title": "Think in fractions of the slant",
+      "steps": [
+        "Sine asks: how tall is the triangle compared with its slanted side?",
+        "The height is $3$ and the slant is $5$, so the height is $\\frac{3}{5}$ of the slant.",
+        "$\\frac{3}{5} = 0.6$."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "sine"
+  ],
+  "estimatedSeconds": 35
+}

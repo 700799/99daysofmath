@@ -1,0 +1,58 @@
+{
+  "id": "PC.029",
+  "domain": "PC",
+  "unit": 3,
+  "orderInUnit": 9,
+  "standard": "PC.POLY.A.1",
+  "difficulty": 3,
+  "prompt": "Write a polynomial in FACTORED form whose only zeros are $4$ and $-3$, with leading coefficient $1$.",
+  "answerType": "expression",
+  "primaryAnswer": "(x - 4)(x + 3)",
+  "alternativeAnswers": [
+    "(x-4)(x+3)",
+    "(x + 3)(x - 4)",
+    "(x+3)(x-4)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Every zero comes from a factor. A zero at $r$ comes from the factor $(x - r)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Every zero comes from a factor. A zero at $r$ comes from the factor $(x - r)$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: zeros at 2 and 5 give $(x - 2)(x - 5)$. Notice the sign flips from the zero to the factor. Same rule with a negative zero."
+    },
+    {
+      "level": "guide",
+      "text": "The zero $4$ gives $(x - 4)$. The zero $-3$ gives $(x - (-3))$, which is $(x + 3)$."
+    },
+    {
+      "level": "reveal",
+      "text": "The polynomial is $(x - 4)(x + 3)$."
+    }
+  ],
+  "explanation": [
+    "A zero at $r$ always comes from the factor $(x - r)$.",
+    "Zero $4$ gives $(x - 4)$; zero $-3$ gives $(x + 3)$.",
+    "Multiply them together: $(x - 4)(x + 3)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test your answer",
+      "steps": [
+        "Plug in $x = 4$: $(4 - 4)(4 + 3) = 0 \\times 7 = 0$. Good.",
+        "Plug in $x = -3$: $(-3 - 4)(-3 + 3) = -7 \\times 0 = 0$. Good.",
+        "Both zeros work, and no other $x$ makes it zero."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomials",
+    "zeros",
+    "factored-form"
+  ],
+  "estimatedSeconds": 70
+}

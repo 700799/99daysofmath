@@ -1,0 +1,54 @@
+{
+  "id": "PC.102",
+  "domain": "PC",
+  "unit": 11,
+  "orderInUnit": 2,
+  "standard": "PC.TRIG.B.2",
+  "difficulty": 1,
+  "prompt": "Simplify $1 - \\sin^2\\theta$. It equals $\\cos^n\\theta$. What is $n$?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Start from the identity $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Start from the identity $\\sin^2\\theta + \\cos^2\\theta = 1$."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract $\\sin^2\\theta$ from both sides: $\\cos^2\\theta = 1 - \\sin^2\\theta$."
+    },
+    {
+      "level": "reveal",
+      "text": "So $1 - \\sin^2\\theta = \\cos^2\\theta$ and $n = 2$."
+    }
+  ],
+  "explanation": [
+    "The Pythagorean identity says $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+    "Move $\\sin^2\\theta$ to the other side: $\\cos^2\\theta = 1 - \\sin^2\\theta$.",
+    "So the expression simplifies to $\\cos^2\\theta$, and the power is $n = 2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test it with real numbers",
+      "steps": [
+        "Take θ = 30°: sin 30° = 0.5, so 1 − 0.5² = 1 − 0.25 = 0.75.",
+        "And cos 30° ≈ 0.866, so cos² 30° ≈ 0.75. They match, so the power is 2, not 1."
+      ]
+    },
+    {
+      "title": "Think of a full pie",
+      "steps": [
+        "The identity says sin² and cos² are two slices that together make one whole pie.",
+        "Take the sin² slice away from the whole pie and what is left is exactly the cos² slice."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean-identity",
+    "simplify"
+  ],
+  "estimatedSeconds": 40
+}

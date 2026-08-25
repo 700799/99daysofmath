@@ -1,0 +1,53 @@
+{
+  "id": "PC.092",
+  "domain": "PC",
+  "unit": 10,
+  "orderInUnit": 2,
+  "standard": "PC.TRIG.B.1",
+  "difficulty": 1,
+  "prompt": "What is the MIDLINE of $y = \\sin(x) + 7$? Give the $y$-value.",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The midline is set by the number ADDED at the end.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The midline is set by the number ADDED at the end."
+    },
+    {
+      "level": "guide",
+      "text": "In $y = a\\sin(x) + k$, the midline is $y = k$."
+    },
+    {
+      "level": "reveal",
+      "text": "The midline is $y = 7$."
+    }
+  ],
+  "explanation": [
+    "Plain $\\sin(x)$ wiggles around $y = 0$.",
+    "Adding $7$ lifts every single point of the wave up by $7$, so the whole wave now wiggles around $y = 7$.",
+    "The midline is $y = 7$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Average the peak and the trough",
+      "steps": [
+        "sin(x) + 7 rises to 8 at its peak and falls to 6 at its trough.",
+        "The middle is the average: (8 + 6) ÷ 2 = 7."
+      ]
+    },
+    {
+      "title": "The heartbeat-monitor picture",
+      "steps": [
+        "On a heart monitor there is a flat resting line, and the trace bounces above and below it.",
+        "The + 7 tells you where that resting line sits: 7 units up."
+      ]
+    }
+  ],
+  "tags": [
+    "midline"
+  ],
+  "estimatedSeconds": 30
+}

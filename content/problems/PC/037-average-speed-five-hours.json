@@ -1,0 +1,49 @@
+{
+  "id": "PC.037",
+  "domain": "PC",
+  "unit": 4,
+  "orderInUnit": 7,
+  "standard": "PC.RAT.A.1",
+  "difficulty": 2,
+  "prompt": "A trip is $300$ miles long. Your average speed in miles per hour is $s(t) = \\frac{300}{t}$, where $t$ is the number of hours the trip takes. If the trip takes $5$ hours, what is your average speed?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $t = 5$ into the rule.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $t = 5$ into the rule."
+    },
+    {
+      "level": "guide",
+      "text": "Compute $300 \\div 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$300 \\div 5 = 60$ miles per hour."
+    }
+  ],
+  "explanation": [
+    "Speed is distance divided by time.",
+    "$s(5) = \\frac{300}{5}$.",
+    "$300 \\div 5 = 60$ miles per hour."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Split the trip into hours",
+      "steps": [
+        "Five equal hours must share the 300 miles.",
+        "Each hour carries the same chunk of road.",
+        "$300$ miles $\\div$ 5 chunks $= 60$ miles in each hour."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-functions",
+    "evaluate",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

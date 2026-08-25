@@ -1,0 +1,62 @@
+{
+  "id": "PC.058",
+  "domain": "PC",
+  "unit": 6,
+  "orderInUnit": 8,
+  "standard": "PC.LOG.A.1",
+  "difficulty": 3,
+  "prompt": "Loudness in decibels is $10 \\times \\log_{10}$ of the sound intensity. A concert is $1{,}000{,}000$ times as intense as a whisper. How many decibels louder is the concert?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find $\\log_{10}(1{,}000{,}000)$ first, then multiply by $10$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find $\\log_{10}(1{,}000{,}000)$ first, then multiply by $10$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if a sound were $100$ times as intense, then $\\log_{10}(100) = 2$ and $10 \\times 2 = 20$ decibels louder. Same two moves, bigger number."
+    },
+    {
+      "level": "guide",
+      "text": "$1{,}000{,}000$ has six zeros, so $\\log_{10}(1{,}000{,}000) = 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$10 \\times 6 = 60$ decibels louder."
+    }
+  ],
+  "explanation": [
+    "A million is $10^6$, so $\\log_{10}(1{,}000{,}000) = 6$.",
+    "Decibels multiply that log by $10$.",
+    "$10 \\times 6 = 60$ decibels louder."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the zeros",
+      "steps": [
+        "With base $10$, the log is just the number of zeros.",
+        "$1{,}000{,}000$ has six zeros, so the log is $6$.",
+        "Decibels are ten times that: $60$."
+      ]
+    },
+    {
+      "title": "Ten decibels at a time",
+      "steps": [
+        "Every $\\times 10$ in intensity adds exactly $10$ decibels.",
+        "A million is six tens multiplied together.",
+        "Six of those jumps add $6 \\times 10 = 60$ decibels."
+      ]
+    }
+  ],
+  "tags": [
+    "logarithm",
+    "log-scale",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

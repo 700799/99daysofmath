@@ -1,0 +1,55 @@
+{
+  "id": "PC.030",
+  "domain": "PC",
+  "unit": 3,
+  "orderInUnit": 10,
+  "standard": "PC.POLY.A.1",
+  "difficulty": 3,
+  "prompt": "A roller-coaster track is modeled by $h(x) = x(x - 4)^2(x - 9)$. At how many DIFFERENT $x$-values does the track touch or cross the ground?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find every $x$ that makes a factor zero — but count repeats only ONCE.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find every $x$ that makes a factor zero — but count repeats only ONCE."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $x(x - 1)^2$. The zeros are 0 and 1, and 1 shows up twice. That is still only 2 DIFFERENT places. Same counting rule here."
+    },
+    {
+      "level": "guide",
+      "text": "The factors give $x = 0$, $x = 4$ (twice), and $x = 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "The different ground points are $0$, $4$, and $9$ — that is $3$ places."
+    }
+  ],
+  "explanation": [
+    "Set each factor to zero: $x = 0$, $x = 4$, $x = 9$.",
+    "The factor $(x - 4)$ appears twice, but $4$ is still one single spot on the track.",
+    "So the track meets the ground at $3$ different $x$-values."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk the track",
+      "steps": [
+        "At $x = 0$ the ride starts on the ground and crosses.",
+        "At $x = 4$ it dips down, just kisses the ground, and bounces back up — one spot, not two.",
+        "At $x = 9$ it crosses again. Three spots total."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomials",
+    "zeros",
+    "multiplicity",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

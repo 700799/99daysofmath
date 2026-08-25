@@ -1,0 +1,62 @@
+{
+  "id": "PC.078",
+  "domain": "PC",
+  "unit": 8,
+  "orderInUnit": 8,
+  "standard": "PC.TRIG.A.1",
+  "difficulty": 3,
+  "prompt": "A tree casts a shadow $20$ ft long. From the tip of the shadow, the angle of elevation up to the top of the tree is $45^\\circ$. How tall is the tree, in feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Draw the right triangle: the shadow is the bottom, the tree is the upright side.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Draw the right triangle: the shadow is the bottom, the tree is the upright side."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: a $10$ ft shadow with a $45^\\circ$ elevation gives a $10$ ft pole, because $\\tan(45^\\circ) = 1$ makes height equal shadow. Same move, bigger number."
+    },
+    {
+      "level": "guide",
+      "text": "From the shadow tip, the tree is opposite and the shadow is adjacent: $\\tan(45^\\circ) = \\frac{h}{20}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\tan(45^\\circ) = 1$, so $\\frac{h}{20} = 1$ and $h = 20$ ft."
+    }
+  ],
+  "explanation": [
+    "Angle of elevation is measured UP from the flat ground.",
+    "The tree is opposite that angle and the shadow is adjacent, so use TOA: $\\tan(45^\\circ) = \\frac{h}{20}$.",
+    "$\\tan(45^\\circ) = 1$, so $h = 20$ ft."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "It is a 45-45-90 triangle",
+      "steps": [
+        "One angle is $90^\\circ$ and another is $45^\\circ$, so the last one is $45^\\circ$ too.",
+        "Two equal angles mean two equal legs.",
+        "The shadow leg is $20$ ft, so the tree leg is also $20$ ft."
+      ]
+    },
+    {
+      "title": "The shadow rule of thumb",
+      "steps": [
+        "When the sun sits at $45^\\circ$, every object casts a shadow exactly as long as it is tall.",
+        "The shadow measures $20$ ft.",
+        "So the tree stands $20$ ft tall."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "angle-of-elevation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

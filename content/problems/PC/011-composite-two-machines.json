@@ -1,0 +1,46 @@
+{
+  "id": "PC.011",
+  "domain": "PC",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "PC.FUN.A.2",
+  "difficulty": 1,
+  "prompt": "Let $f(x) = x + 4$ and $g(x) = 3x$. Find $f(g(2))$.",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Work INSIDE first: what does $g$ do to $2$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Work INSIDE first: what does $g$ do to $2$?"
+    },
+    {
+      "level": "guide",
+      "text": "$g(2) = 3 \\times 2 = 6$. Now feed that $6$ into $f$."
+    },
+    {
+      "level": "reveal",
+      "text": "$f(6) = 6 + 4 = 10$."
+    }
+  ],
+  "explanation": [
+    "Composition runs inside-out.",
+    "$g(2) = 6$.",
+    "$f(6) = 6 + 4 = 10$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As two machines in a row",
+      "steps": [
+        "Machine g triples what you feed it: 2 goes in, 6 comes out.",
+        "That 6 drops straight into machine f, which adds 4 — giving 10."
+      ]
+    }
+  ],
+  "tags": [
+    "composite-function"
+  ],
+  "estimatedSeconds": 40
+}

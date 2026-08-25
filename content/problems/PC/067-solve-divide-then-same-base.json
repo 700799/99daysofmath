@@ -1,0 +1,56 @@
+{
+  "id": "PC.067",
+  "domain": "PC",
+  "unit": 7,
+  "orderInUnit": 7,
+  "standard": "PC.LOG.A.2",
+  "difficulty": 2,
+  "prompt": "Solve for $x$: $3 \\cdot 2^x = 96$.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The power is not alone yet. Get $2^x$ by itself first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The power is not alone yet. Get $2^x$ by itself first."
+    },
+    {
+      "level": "guide",
+      "text": "Divide both sides by $3$: $2^x = 32$."
+    },
+    {
+      "level": "reveal",
+      "text": "$32 = 2^5$, so $x = 5$."
+    }
+  ],
+  "explanation": [
+    "Peel away the multiplier before touching the exponent.",
+    "Divide both sides by $3$: $2^x = 32$.",
+    "$32 = 2^5$, so $x = 5$. Check: $3 \\times 32 = 96$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Take the log of both sides",
+      "steps": [
+        "After dividing by $3$ you have $2^x = 32$.",
+        "Take $\\log_2$ of both sides — the exponent slides down: $x = \\log_2(32)$.",
+        "$\\log_2(32) = 5$, so $x = 5$."
+      ]
+    },
+    {
+      "title": "Guess and adjust",
+      "steps": [
+        "Try $x = 4$: $3 \\times 16 = 48$, too small.",
+        "Try $x = 5$: $3 \\times 32 = 96$ — exactly right.",
+        "So $x = 5$."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-equation",
+    "isolate"
+  ],
+  "estimatedSeconds": 55
+}

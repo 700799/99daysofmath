@@ -1,0 +1,57 @@
+{
+  "id": "PC.133",
+  "domain": "PC",
+  "unit": 14,
+  "orderInUnit": 3,
+  "standard": "PC.LIM.A.1",
+  "difficulty": 1,
+  "prompt": "A function $f$ has a hole at $x = 2$, but nearby it gives: $f(1.9) = 3.9$, $f(1.99) = 3.99$, $f(2.01) = 4.01$, $f(2.1) = 4.1$. What number is $f(x)$ heading toward as $x \\to 2$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A limit does not care whether the function LANDS there. It only asks where the values are heading.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A limit does not care whether the function LANDS there. It only asks where the values are heading."
+    },
+    {
+      "level": "guide",
+      "text": "From the left the outputs climb $3.9, 3.99, \\dots$ From the right they fall $4.1, 4.01, \\dots$"
+    },
+    {
+      "level": "reveal",
+      "text": "Both sides squeeze toward $4$, so the limit is $4$."
+    }
+  ],
+  "explanation": [
+    "Read the table from the left: $3.9$, then $3.99$ — creeping up.",
+    "Read it from the right: $4.1$, then $4.01$ — creeping down.",
+    "The two sides are closing in on the same number.",
+    "The limit is $4$, even though there is a hole exactly at $x = 2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A hole in the road",
+      "steps": [
+        "Picture a smooth road with one single missing brick at x = 2.",
+        "Drivers coming from each side can still see exactly where the brick SHOULD be.",
+        "That spot is 4 — the limit describes where the road is headed, not whether the brick is there."
+      ]
+    },
+    {
+      "title": "Measure the gap",
+      "steps": [
+        "At x = 1.99 the output misses 4 by 0.01. At x = 2.01 it misses by 0.01 the other way.",
+        "Get ten times closer in x and the miss shrinks ten times too.",
+        "A gap you can make as small as you like means the target is 4."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "table"
+  ],
+  "estimatedSeconds": 40
+}

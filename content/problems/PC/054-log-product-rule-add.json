@@ -1,0 +1,48 @@
+{
+  "id": "PC.054",
+  "domain": "PC",
+  "unit": 6,
+  "orderInUnit": 4,
+  "standard": "PC.LOG.A.1",
+  "difficulty": 2,
+  "prompt": "You are told $\\log(2) = 0.301$ and $\\log(5) = 0.699$. Use the rule $\\log(AB) = \\log A + \\log B$ to find $\\log(10)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Notice that $2 \\times 5 = 10$. Multiplying inside a log turns into ADDING outside.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Notice that $2 \\times 5 = 10$. Multiplying inside a log turns into ADDING outside."
+    },
+    {
+      "level": "guide",
+      "text": "$\\log(10) = \\log(2 \\times 5) = \\log(2) + \\log(5)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.301 + 0.699 = 1$, so $\\log(10) = 1$."
+    }
+  ],
+  "explanation": [
+    "The product rule says $\\log(AB) = \\log A + \\log B$: multiply inside, add outside.",
+    "Since $10 = 2 \\times 5$, write $\\log(10) = \\log(2) + \\log(5)$.",
+    "$0.301 + 0.699 = 1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check it the direct way",
+      "steps": [
+        "A log asks: $10$ to what power gives $10$?",
+        "$10^1 = 10$, so $\\log(10) = 1$.",
+        "The rule agrees, which is exactly why the rule is trustworthy."
+      ]
+    }
+  ],
+  "tags": [
+    "logarithm",
+    "product-rule"
+  ],
+  "estimatedSeconds": 45
+}

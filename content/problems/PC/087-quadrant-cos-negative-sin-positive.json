@@ -1,0 +1,54 @@
+{
+  "id": "PC.087",
+  "domain": "PC",
+  "unit": 9,
+  "orderInUnit": 7,
+  "standard": "PC.TRIG.A.2",
+  "difficulty": 2,
+  "prompt": "In which quadrant is the cosine (across) NEGATIVE while the sine (up) is POSITIVE? Answer with the quadrant number.",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Negative across means LEFT of centre. Positive up means ABOVE centre.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Negative across means LEFT of centre. Positive up means ABOVE centre."
+    },
+    {
+      "level": "guide",
+      "text": "Left and above is the top-left corner of the circle. Quadrants are numbered counter-clockwise starting from the top-right."
+    },
+    {
+      "level": "reveal",
+      "text": "Top-left is Quadrant $2$ (angles from $90^\\circ$ to $180^\\circ$)."
+    }
+  ],
+  "explanation": [
+    "Cosine is the across number, so cosine is negative when you are to the LEFT of the centre.",
+    "Sine is the up number, so sine is positive when you are ABOVE the centre.",
+    "Left and above is the top-left corner — Quadrant $2$, covering $90^\\circ$ to $180^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test one angle",
+      "steps": [
+        "Try 120°, which lands in the top-left. Its point is about (−0.5, 0.87).",
+        "The across number is negative and the up number is positive. That angle is in Quadrant 2."
+      ]
+    },
+    {
+      "title": "Map the four corners",
+      "steps": [
+        "Q1 top-right: across +, up +. Q2 top-left: across −, up +.",
+        "Q3 bottom-left: across −, up −. Q4 bottom-right: across +, up −. Only Q2 has minus-then-plus."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "quadrants"
+  ],
+  "estimatedSeconds": 50
+}

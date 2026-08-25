@@ -1,0 +1,56 @@
+{
+  "id": "PC.074",
+  "domain": "PC",
+  "unit": 8,
+  "orderInUnit": 4,
+  "standard": "PC.TRIG.A.1",
+  "difficulty": 2,
+  "prompt": "A right triangle has legs $6$ and $8$ and hypotenuse $10$. For the angle whose opposite side is $6$ and adjacent side is $8$, what is the tangent, as a decimal?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.75",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "TOA: Tangent is Opposite over Adjacent. The hypotenuse is not invited.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "TOA: Tangent is Opposite over Adjacent. The hypotenuse is not invited."
+    },
+    {
+      "level": "guide",
+      "text": "Opposite is $6$, adjacent is $8$, so tangent $= \\frac{6}{8}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{6}{8} = \\frac{3}{4} = 0.75$."
+    }
+  ],
+  "explanation": [
+    "TOA: Tangent $=$ Opposite $\\div$ Adjacent.",
+    "Here that is $6 \\div 8$.",
+    "Simplify: $\\frac{6}{8} = \\frac{3}{4} = 0.75$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Tangent is steepness",
+      "steps": [
+        "Tangent is just rise over run — the slope of the slanted side.",
+        "The triangle rises $6$ while running $8$ across.",
+        "$6 \\div 8 = 0.75$, so it climbs $0.75$ for every $1$ across."
+      ]
+    },
+    {
+      "title": "Shrink to the 3-4-5",
+      "steps": [
+        "The $6$-$8$-$10$ triangle is a $3$-$4$-$5$ triangle doubled.",
+        "Same shape means the same angles and the same ratios.",
+        "Tangent is $\\frac{3}{4} = 0.75$ either way."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "tangent"
+  ],
+  "estimatedSeconds": 45
+}

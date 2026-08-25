@@ -1,0 +1,56 @@
+{
+  "id": "PC.071",
+  "domain": "PC",
+  "unit": 8,
+  "orderInUnit": 1,
+  "standard": "PC.TRIG.A.1",
+  "difficulty": 1,
+  "prompt": "A right triangle has sides of length $3$, $4$, and $5$. The HYPOTENUSE is the side across from the right angle, and it is always the longest. How long is the hypotenuse?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The hypotenuse is always the longest side of a right triangle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The hypotenuse is always the longest side of a right triangle."
+    },
+    {
+      "level": "guide",
+      "text": "Compare $3$, $4$, and $5$. Which is biggest?"
+    },
+    {
+      "level": "reveal",
+      "text": "The hypotenuse is $5$."
+    }
+  ],
+  "explanation": [
+    "The hypotenuse sits directly across from the $90^\\circ$ corner.",
+    "It is always the longest side.",
+    "Of $3$, $4$, and $5$, the longest is $5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with Pythagoras",
+      "steps": [
+        "The two shorter sides are the legs: $3^2 + 4^2 = 9 + 16 = 25$.",
+        "The hypotenuse squared must be $25$, so the hypotenuse is $\\sqrt{25} = 5$.",
+        "The $3$-$4$-$5$ triangle is worth memorizing."
+      ]
+    },
+    {
+      "title": "Draw it and look",
+      "steps": [
+        "Sketch a right angle with legs $3$ across and $4$ up.",
+        "The slanted side connecting the ends is the hypotenuse.",
+        "That slant stretches farther than either leg, so it is the $5$."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "labeling"
+  ],
+  "estimatedSeconds": 30
+}

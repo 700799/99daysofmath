@@ -1,0 +1,54 @@
+{
+  "id": "PC.028",
+  "domain": "PC",
+  "unit": 3,
+  "orderInUnit": 8,
+  "standard": "PC.POLY.A.1",
+  "difficulty": 3,
+  "prompt": "You cut a square of side $x$ inches from each corner of a $12$-inch by $12$-inch piece of cardboard and fold up the sides. The volume is $V(x) = x(12 - 2x)^2$. What is the volume in cubic inches when $x = 2$?",
+  "answerType": "numeric",
+  "primaryAnswer": "128",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $x = 2$ everywhere, then follow the order of operations — the parentheses first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $x = 2$ everywhere, then follow the order of operations — the parentheses first."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $V(x) = x(6 - 2x)^2$ at $x = 1$: inside is $6 - 2 = 4$, squared is 16, times 1 is 16. Same three steps here."
+    },
+    {
+      "level": "guide",
+      "text": "Inside: $12 - 2(2) = 8$. Square it: $8^2 = 64$. Now multiply by $x = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2 \\times 64 = 128$ cubic inches."
+    }
+  ],
+  "explanation": [
+    "Substitute $x = 2$: $V = 2(12 - 4)^2$.",
+    "Inside the parentheses: $12 - 4 = 8$.",
+    "Square it: $64$. Then $2 \\times 64 = 128$ cubic inches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build the box in your head",
+      "steps": [
+        "Cutting 2 inches off BOTH ends of a 12-inch side leaves a base of $12 - 4 = 8$ inches.",
+        "The folded-up walls are 2 inches tall.",
+        "Volume = length × width × height = $8 \\times 8 \\times 2 = 128$ cubic inches."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomials",
+    "evaluate",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

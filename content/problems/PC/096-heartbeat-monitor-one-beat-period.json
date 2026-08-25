@@ -1,0 +1,54 @@
+{
+  "id": "PC.096",
+  "domain": "PC",
+  "unit": 10,
+  "orderInUnit": 6,
+  "standard": "PC.TRIG.B.1",
+  "difficulty": 2,
+  "prompt": "A heart monitor trace is modelled by $y = 3\\sin(6x)$, where $x$ is in degrees. How many degrees wide is ONE full beat?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "One full beat is one full wave — that is the PERIOD.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "One full beat is one full wave — that is the PERIOD."
+    },
+    {
+      "level": "guide",
+      "text": "Period $= 360^\\circ \\div b$, and here $b = 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$360 \\div 6 = 60$, so one beat is $60^\\circ$ wide."
+    }
+  ],
+  "explanation": [
+    "On a monitor, the trace repeats the same bump over and over. One repeat is one period.",
+    "The number in front of $x$ inside the sine is $6$, so the wave is squeezed six times tighter.",
+    "Period $= 360 \\div 6 = 60^\\circ$. The amplitude $3$ tells you how TALL the bump is, not how wide."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the beats in one turn",
+      "steps": [
+        "b = 6 means 6 whole waves fit into 360°.",
+        "Share 360° out among 6 beats: 360 ÷ 6 = 60° each."
+      ]
+    },
+    {
+      "title": "Follow the inside",
+      "steps": [
+        "A wave finishes when the inside of the sine has run from 0 all the way to 360.",
+        "The inside is 6x, so 6x = 360 gives x = 60. One beat spans 60° of x."
+      ]
+    }
+  ],
+  "tags": [
+    "period",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,54 @@
+{
+  "id": "PC.106",
+  "domain": "PC",
+  "unit": 11,
+  "orderInUnit": 6,
+  "standard": "PC.TRIG.B.2",
+  "difficulty": 2,
+  "prompt": "A rotating platform lifts a robot to height $h = 5\\sin\\theta + 5$ metres as it spins. For $0^\\circ \\le \\theta < 360^\\circ$, at what angle $\\theta$ is the robot HIGHEST? Give the angle in degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "90",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The height is biggest when $\\sin\\theta$ is biggest.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The height is biggest when $\\sin\\theta$ is biggest."
+    },
+    {
+      "level": "guide",
+      "text": "The largest value sine can ever take is $1$. Which angle in one turn gives $\\sin\\theta = 1$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin 90^\\circ = 1$, so the robot is highest at $\\theta = 90^\\circ$ (height $10$ m)."
+    }
+  ],
+  "explanation": [
+    "Only the $\\sin\\theta$ part changes; the $+5$ is fixed.",
+    "Sine tops out at $1$, and on the unit circle the height is $1$ only at the very top: $\\theta = 90^\\circ$.",
+    "There $h = 5 \\times 1 + 5 = 10$ m, the highest the platform reaches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Make a small table",
+      "steps": [
+        "θ = 0°: h = 5. θ = 45°: h ≈ 8.5. θ = 90°: h = 10. θ = 135°: h ≈ 8.5. θ = 180°: h = 5.",
+        "The numbers climb to 10 at 90° and then fall back, so 90° is the peak."
+      ]
+    },
+    {
+      "title": "Picture the unit circle",
+      "steps": [
+        "Sine is the HEIGHT UP of the point on the circle.",
+        "The highest point on any circle is straight up from the centre, and that direction is 90°."
+      ]
+    }
+  ],
+  "tags": [
+    "trig-equation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

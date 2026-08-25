@@ -1,0 +1,48 @@
+{
+  "id": "PC.001",
+  "domain": "PC",
+  "unit": 1,
+  "orderInUnit": 1,
+  "standard": "PC.FUN.A.1",
+  "difficulty": 1,
+  "prompt": "The parent parabola $y = x^2$ is changed to $y = x^2 + 5$. How many units UP does the graph slide?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $+5$ sits OUTSIDE the square, so it changes the $y$-value of every point.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $+5$ sits OUTSIDE the square, so it changes the $y$-value of every point."
+    },
+    {
+      "level": "guide",
+      "text": "Adding $5$ to every output lifts the whole sticker straight up the window."
+    },
+    {
+      "level": "reveal",
+      "text": "The graph slides UP $5$ units."
+    }
+  ],
+  "explanation": [
+    "In $f(x) + k$, the $k$ is added AFTER the function does its job.",
+    "Every $y$-value grows by $5$.",
+    "So the whole graph slides UP $5$ units."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Follow one point",
+      "steps": [
+        "On $y = x^2$ the bottom point is $(0, 0)$.",
+        "On $y = x^2 + 5$, plug in $x = 0$: $y = 0 + 5 = 5$.",
+        "That bottom point moved from $(0, 0)$ to $(0, 5)$ — up 5."
+      ]
+    }
+  ],
+  "tags": [
+    "transformations",
+    "vertical-shift"
+  ],
+  "estimatedSeconds": 30
+}

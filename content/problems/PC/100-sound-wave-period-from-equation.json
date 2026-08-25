@@ -1,0 +1,59 @@
+{
+  "id": "PC.100",
+  "domain": "PC",
+  "unit": 10,
+  "orderInUnit": 10,
+  "standard": "PC.TRIG.B.1",
+  "difficulty": 3,
+  "prompt": "A speaker makes a tone modelled by $y = 2\\sin(9x)$, where $x$ is in degrees. How many degrees long is ONE full wave?",
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "One full wave is the PERIOD, and period $= 360^\\circ \\div b$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "One full wave is the PERIOD, and period $= 360^\\circ \\div b$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $y = 2\\sin(3x)$: the period is $360 \\div 3 = 120^\\circ$. Now use the same division with $b = 9$."
+    },
+    {
+      "level": "guide",
+      "text": "Here $b = 9$, so compute $360 \\div 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$360 \\div 9 = 40$, so one wave is $40^\\circ$ long."
+    }
+  ],
+  "explanation": [
+    "For $y = a\\sin(bx)$, the period is $360^\\circ \\div b$.",
+    "The $2$ out front is the amplitude — how LOUD the tone is — and it does not change the length of a wave.",
+    "$360 \\div 9 = 40^\\circ$. A bigger $b$ packs the waves tighter, which is what a higher pitch sounds like."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the waves in one turn",
+      "steps": [
+        "b = 9 means 9 complete waves are squeezed into a 360° stretch.",
+        "Share the 360° among 9 waves: 360 ÷ 9 = 40° each."
+      ]
+    },
+    {
+      "title": "Follow the inside",
+      "steps": [
+        "A wave is finished when the inside of the sine has gone from 0 up to 360.",
+        "The inside is 9x, so set 9x = 360. Dividing gives x = 40, so the x-trip is 40°."
+      ]
+    }
+  ],
+  "tags": [
+    "period",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

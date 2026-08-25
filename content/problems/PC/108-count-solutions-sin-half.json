@@ -1,0 +1,58 @@
+{
+  "id": "PC.108",
+  "domain": "PC",
+  "unit": 11,
+  "orderInUnit": 8,
+  "standard": "PC.TRIG.B.2",
+  "difficulty": 3,
+  "prompt": "How many angles $\\theta$ between $0^\\circ$ and $360^\\circ$ make $\\sin\\theta = 0.5$ true?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$\\sin\\theta$ is the HEIGHT of the point. Draw a flat line at height $0.5$ across the unit circle and count the crossings.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$\\sin\\theta$ is the HEIGHT of the point. Draw a flat line at height $0.5$ across the unit circle and count the crossings."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try height $0$ first: the circle sits at height $0$ at $0^\\circ$ and again at $180^\\circ$ — two spots in one turn. A flat line usually cuts a circle in two places. Now do the same at height $0.5$."
+    },
+    {
+      "level": "guide",
+      "text": "The line at height $0.5$ cuts the circle once on the way up (Quadrant 1) and once on the way back down (Quadrant 2)."
+    },
+    {
+      "level": "reveal",
+      "text": "There are $2$ solutions: $30^\\circ$ and $150^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Picture the unit circle and a flat horizontal line drawn at height $0.5$.",
+    "Going once around, you pass through that height on the way UP at $30^\\circ$ and again on the way DOWN at $150^\\circ$.",
+    "So there are $2$ solutions in one full turn. Almost every basic trig equation has TWO answers per turn."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read it off the wave graph",
+      "steps": [
+        "Graph y = sin θ from 0° to 360° — it rises to 1, falls to −1, and comes back.",
+        "Draw the flat line y = 0.5 across it. The wave crosses that line twice: once climbing, once falling."
+      ]
+    },
+    {
+      "title": "Think of a rotating platform",
+      "steps": [
+        "A seat on a spinning platform passes each height twice per turn — once rising, once falling.",
+        "The only heights hit just once are the very top and the very bottom. 0.5 is neither, so it gets hit twice."
+      ]
+    }
+  ],
+  "tags": [
+    "trig-equation"
+  ],
+  "estimatedSeconds": 65
+}

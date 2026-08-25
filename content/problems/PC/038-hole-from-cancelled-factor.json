@@ -1,0 +1,53 @@
+{
+  "id": "PC.038",
+  "domain": "PC",
+  "unit": 4,
+  "orderInUnit": 8,
+  "standard": "PC.RAT.A.1",
+  "difficulty": 3,
+  "prompt": "In $f(x) = \\frac{(x - 3)(x + 1)}{(x - 3)(x - 6)}$, one factor cancels. At what $x$-value does the graph have a HOLE?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Look for the factor that appears on BOTH the top and the bottom.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Look for the factor that appears on BOTH the top and the bottom."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $\\frac{(x - 1)(x + 5)}{(x - 1)(x - 2)}$. The matching factor is $(x - 1)$, so the hole is at $x = 1$. Same method here."
+    },
+    {
+      "level": "guide",
+      "text": "$(x - 3)$ is on top and bottom, so it cancels. Set $x - 3 = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "The hole is at $x = 3$."
+    }
+  ],
+  "explanation": [
+    "A factor that cancels leaves a HOLE, not an asymptote.",
+    "$(x - 3)$ cancels, so the hole is where $x - 3 = 0$, giving $x = 3$.",
+    "The leftover factor $(x - 6)$ on the bottom still makes a vertical asymptote at $x = 6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A missing pixel in the curve",
+      "steps": [
+        "Everywhere except $x = 3$, the function simplifies to $\\frac{x + 1}{x - 6}$ — a normal smooth curve.",
+        "But at exactly $x = 3$ the original fraction is $\\frac{0}{0}$, which is not allowed.",
+        "So the curve is drawn perfectly except for one missing dot at $x = 3$."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-functions",
+    "holes"
+  ],
+  "estimatedSeconds": 70
+}

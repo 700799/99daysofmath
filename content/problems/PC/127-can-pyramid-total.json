@@ -1,0 +1,58 @@
+{
+  "id": "PC.127",
+  "domain": "PC",
+  "unit": 13,
+  "orderInUnit": 7,
+  "standard": "PC.SEQ.A.1",
+  "difficulty": 2,
+  "prompt": "Cans are stacked in a pyramid. The bottom row has $20$ cans, each row above has one fewer can, and the top row has $1$ can. How many cans are in the whole stack?",
+  "answerType": "numeric",
+  "primaryAnswer": "210",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The rows are $20, 19, 18, \\dots, 1$. That is an arithmetic list, so you can pair the ends.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The rows are $20, 19, 18, \\dots, 1$. That is an arithmetic list, so you can pair the ends."
+    },
+    {
+      "level": "guide",
+      "text": "There are $n = 20$ rows, the first is $20$ and the last is $1$. Sum $= 20 \\times \\frac{20 + 1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$20 \\times \\frac{21}{2} = 10 \\times 21 = 210$ cans."
+    }
+  ],
+  "explanation": [
+    "The rows form the arithmetic list $20, 19, \\dots, 2, 1$.",
+    "A series is the SUM of a sequence, and the shortcut is $n \\times \\frac{\\text{first} + \\text{last}}{2}$.",
+    "$20 \\times \\frac{20 + 1}{2} = 20 \\times 10.5$.",
+    "$= 210$ cans."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pair the ends by hand",
+      "steps": [
+        "Pair the bottom row with the top: 20 + 1 = 21. Next pair in: 19 + 2 = 21. Then 18 + 3 = 21.",
+        "Twenty rows make ten pairs, and every pair totals 21.",
+        "10 × 21 = 210 cans."
+      ]
+    },
+    {
+      "title": "Two pyramids make a rectangle",
+      "steps": [
+        "Build a second identical pyramid, flip it upside down, and push it against the first.",
+        "Every row now holds 20 + 1 = 21 cans, and there are 20 rows: 420 cans.",
+        "That is two pyramids, so one pyramid is 420 ÷ 2 = 210."
+      ]
+    }
+  ],
+  "tags": [
+    "series",
+    "arithmetic",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

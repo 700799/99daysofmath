@@ -1,0 +1,53 @@
+{
+  "id": "PC.101",
+  "domain": "PC",
+  "unit": 11,
+  "orderInUnit": 1,
+  "standard": "PC.TRIG.B.2",
+  "difficulty": 1,
+  "prompt": "For ANY angle $\\theta$, what does $\\sin^2\\theta + \\cos^2\\theta$ equal?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "On the unit circle the point is $(\\cos\\theta, \\sin\\theta)$ and the radius is $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "On the unit circle the point is $(\\cos\\theta, \\sin\\theta)$ and the radius is $1$."
+    },
+    {
+      "level": "guide",
+      "text": "The Pythagorean theorem on that little triangle says across$^2$ $+$ up$^2$ $=$ radius$^2$."
+    },
+    {
+      "level": "reveal",
+      "text": "Radius$^2 = 1^2 = 1$, so $\\sin^2\\theta + \\cos^2\\theta = 1$."
+    }
+  ],
+  "explanation": [
+    "Draw the point for angle $\\theta$ on the unit circle and drop a straight line down to the $x$-axis.",
+    "You get a right triangle: the across leg is $\\cos\\theta$, the up leg is $\\sin\\theta$, and the slanted side is the radius $1$.",
+    "Pythagoras says leg$^2$ + leg$^2$ = hypotenuse$^2$, so $\\cos^2\\theta + \\sin^2\\theta = 1^2 = 1$. This is TRUE for every angle."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test it with real numbers",
+      "steps": [
+        "Take θ = 30°: sin 30° = 0.5 and cos 30° ≈ 0.866.",
+        "0.5² + 0.866² = 0.25 + 0.75 = 1. Try θ = 0°: 0² + 1² = 1. It always lands on 1."
+      ]
+    },
+    {
+      "title": "It IS the Pythagorean theorem",
+      "steps": [
+        "You already know a² + b² = c² for right triangles.",
+        "On the unit circle the two legs are named cos θ and sin θ, and the hypotenuse is always 1. Same theorem, new names, and c² = 1."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean-identity"
+  ],
+  "estimatedSeconds": 35
+}

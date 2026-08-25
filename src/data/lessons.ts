@@ -5,6 +5,10 @@ import { A1_LESSONS_U01_04 } from './a1/lessons_u01_04';
 import { A1_LESSONS_U05_08 } from './a1/lessons_u05_08';
 import { A1_LESSONS_U09_11 } from './a1/lessons_u09_11';
 import { A1_LESSONS_U12_14 } from './a1/lessons_u12_14';
+import { PC_LESSONS_U01_04 } from './pc/lessons_u01_04';
+import { PC_LESSONS_U05_08 } from './pc/lessons_u05_08';
+import { PC_LESSONS_U09_11 } from './pc/lessons_u09_11';
+import { PC_LESSONS_U12_14 } from './pc/lessons_u12_14';
 
 export type { LessonSlide };
 
@@ -1243,6 +1247,11 @@ export const LESSONS: Lesson[] = [
   ...A1_LESSONS_U05_08,
   ...A1_LESSONS_U09_11,
   ...A1_LESSONS_U12_14,
+  // ---------------- PC — Precalculus (middle-school course) ----------------
+  ...PC_LESSONS_U01_04,
+  ...PC_LESSONS_U05_08,
+  ...PC_LESSONS_U09_11,
+  ...PC_LESSONS_U12_14,
 
 ];
 

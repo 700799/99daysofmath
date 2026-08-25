@@ -1,0 +1,57 @@
+{
+  "id": "PC.117",
+  "domain": "PC",
+  "unit": 12,
+  "orderInUnit": 7,
+  "standard": "PC.TRIG.C.1",
+  "difficulty": 2,
+  "prompt": "A pond sits in the middle of a park, so you cannot walk straight across it. From one corner, a path runs $30$ m to point $P$ and another path runs $80$ m to point $Q$. The angle between the two paths is $60^\\circ$. How many meters is it straight across from $P$ to $Q$?",
+  "answerType": "numeric",
+  "primaryAnswer": "70",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You cannot measure the distance you want, but you have two sides and the angle between them.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You cannot measure the distance you want, but you have two sides and the angle between them."
+    },
+    {
+      "level": "guide",
+      "text": "$c^2 = 30^2 + 80^2 - 2 \\times 30 \\times 80 \\times \\cos 60^\\circ = 900 + 6400 - 2400$."
+    },
+    {
+      "level": "reveal",
+      "text": "$c^2 = 4900$, so $c = 70$ meters."
+    }
+  ],
+  "explanation": [
+    "The corner, $P$, and $Q$ form a triangle with the pond inside it.",
+    "$30^2 + 80^2 = 900 + 6400 = 7300$.",
+    "Correction term: $2 \\times 30 \\times 80 \\times \\frac{1}{2} = 2400$.",
+    "$c^2 = 7300 - 2400 = 4900$, so $c = 70$ m."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Scale down, then scale up",
+      "steps": [
+        "Divide every length by 10: the paths become 3 m and 8 m at 60°.",
+        "That small triangle gives 9 + 64 − 24 = 49, so the small crossing is 7.",
+        "Now scale back up by 10: the real crossing is 70 m. Shrinking the numbers makes the arithmetic tiny."
+      ]
+    },
+    {
+      "title": "Does the answer make sense?",
+      "steps": [
+        "Walking the two paths takes 30 + 80 = 110 m, and the straight cut must be shorter than that.",
+        "It must also be longer than the difference, 80 − 30 = 50 m.",
+        "70 sits between 50 and 110, so it passes the sanity check — and it saves you 40 m of walking."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-cosines",
+    "word-problem"
+  ],
+  "estimatedSeconds": 65
+}

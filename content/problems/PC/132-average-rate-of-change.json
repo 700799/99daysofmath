@@ -1,0 +1,54 @@
+{
+  "id": "PC.132",
+  "domain": "PC",
+  "unit": 14,
+  "orderInUnit": 2,
+  "standard": "PC.LIM.A.1",
+  "difficulty": 1,
+  "prompt": "A car is $30$ km from home at $1$ hour and $150$ km from home at $3$ hours. What is its average speed in km per hour?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Average rate of change is just the SLOPE between two points.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Average rate of change is just the SLOPE between two points."
+    },
+    {
+      "level": "guide",
+      "text": "Distance changed by $150 - 30 = 120$ km; time changed by $3 - 1 = 2$ hours."
+    },
+    {
+      "level": "reveal",
+      "text": "$120 \\div 2 = 60$ km per hour."
+    }
+  ],
+  "explanation": [
+    "Average rate of change = change in distance ÷ change in time.",
+    "$(150 - 30) \\div (3 - 1) = 120 \\div 2$.",
+    "$= 60$ km per hour."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As rise over run",
+      "steps": [
+        "Plot (1, 30) and (3, 150). The rise is 120 and the run is 2.",
+        "Slope = 120/2 = 60 — the same slope formula from Algebra 1, wearing a new name."
+      ]
+    },
+    {
+      "title": "Average versus right now",
+      "steps": [
+        "This 60 km/h is the AVERAGE over the whole two hours, like a trip summary.",
+        "The speedometer at one instant could read 40 or 90 — a limit is what finds that instant value."
+      ]
+    }
+  ],
+  "tags": [
+    "rate-of-change",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

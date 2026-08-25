@@ -226,7 +226,7 @@ export const problemsPCu05: SeedProblem[] = [
   {
     domain: 'PC', num: 54, unit: 6, order: 4, slug: 'log-product-rule-add',
     standard: 'PC.LOG.A.1', difficulty: 2,
-    prompt: 'You are told $\\log(2) = 0.301$ and $\\log(5) = 0.699$. Use the rule $\\log(AB) = \\log A + \\log B$ to find $\\log(10)$.',
+    prompt: 'A calculator shows $\\log(2) \\approx 0.301$ and $\\log(5) \\approx 0.699$. Use the rule $\\log(AB) = \\log A + \\log B$ to find $\\log(10)$.',
     answerType: 'numeric', primaryAnswer: '1', acceptanceMode: 'normalized',
     hints: [
       { level: 'nudge', text: 'Notice that $2 \\times 5 = 10$. Multiplying inside a log turns into ADDING outside.' },

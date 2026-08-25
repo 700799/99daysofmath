@@ -1,0 +1,53 @@
+{
+  "id": "PC.103",
+  "domain": "PC",
+  "unit": 11,
+  "orderInUnit": 3,
+  "standard": "PC.TRIG.B.2",
+  "difficulty": 1,
+  "prompt": "Tangent is defined as $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$. At $45^\\circ$ the sine and the cosine are exactly equal. What is $\\tan 45^\\circ$?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You are dividing a number by ITSELF.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You are dividing a number by ITSELF."
+    },
+    {
+      "level": "guide",
+      "text": "Any number divided by itself (as long as it is not zero) equals $1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\tan 45^\\circ = 1$."
+    }
+  ],
+  "explanation": [
+    "$\\tan\\theta$ is just sine divided by cosine — height up divided by shadow across.",
+    "At $45^\\circ$ you are exactly on the diagonal, so you have gone as far up as you have gone across: $\\sin 45^\\circ = \\cos 45^\\circ$.",
+    "Dividing equal numbers gives $1$, so $\\tan 45^\\circ = 1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the actual values",
+      "steps": [
+        "sin 45° = √2/2 ≈ 0.707 and cos 45° = √2/2 ≈ 0.707.",
+        "0.707 ÷ 0.707 = 1. The messy square roots cancel each other out."
+      ]
+    },
+    {
+      "title": "Tangent is slope",
+      "steps": [
+        "tan θ is rise over run — the steepness of the line from the centre out to the point.",
+        "At 45° the line rises 1 for every 1 it runs, which is a slope of exactly 1."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent"
+  ],
+  "estimatedSeconds": 40
+}

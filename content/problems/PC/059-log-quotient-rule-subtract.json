@@ -1,0 +1,61 @@
+{
+  "id": "PC.059",
+  "domain": "PC",
+  "unit": 6,
+  "orderInUnit": 9,
+  "standard": "PC.LOG.A.1",
+  "difficulty": 3,
+  "prompt": "Evaluate $\\log_2(96) - \\log_2(3)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Subtracting logs means DIVIDING inside: $\\log A - \\log B = \\log\\left(\\frac{A}{B}\\right)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Subtracting logs means DIVIDING inside: $\\log A - \\log B = \\log\\left(\\frac{A}{B}\\right)$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $\\log_2(16) - \\log_2(2) = \\log_2(8) = 3$. Same move — divide inside first, then ask the log question once."
+    },
+    {
+      "level": "guide",
+      "text": "Combine into one log: $\\log_2\\left(\\frac{96}{3}\\right) = \\log_2(32)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2^5 = 32$, so the answer is $5$."
+    }
+  ],
+  "explanation": [
+    "The quotient rule: subtracting logs is dividing inside.",
+    "$\\log_2(96) - \\log_2(3) = \\log_2\\left(\\frac{96}{3}\\right) = \\log_2(32)$.",
+    "$2^5 = 32$, so the answer is $5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Break 96 into friendly pieces",
+      "steps": [
+        "$96 = 32 \\times 3$, so $\\log_2(96) = \\log_2(32) + \\log_2(3)$.",
+        "Now subtract $\\log_2(3)$ from both sides — it cancels out.",
+        "What is left is $\\log_2(32) = 5$."
+      ]
+    },
+    {
+      "title": "Undo twins",
+      "steps": [
+        "Logs turn multiplying into adding, and dividing into subtracting.",
+        "So a subtraction outside must be a division inside: $96 \\div 3 = 32$.",
+        "Count doublings to $32$: $2, 4, 8, 16, 32$ — five of them."
+      ]
+    }
+  ],
+  "tags": [
+    "logarithm",
+    "quotient-rule"
+  ],
+  "estimatedSeconds": 65
+}

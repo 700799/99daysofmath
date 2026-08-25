@@ -1,0 +1,48 @@
+{
+  "id": "PC.032",
+  "domain": "PC",
+  "unit": 4,
+  "orderInUnit": 2,
+  "standard": "PC.RAT.A.1",
+  "difficulty": 1,
+  "prompt": "For $f(x) = \\frac{x - 2}{x + 5}$, what value of $x$ makes $f(x) = 0$?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A fraction equals zero only when its TOP equals zero.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A fraction equals zero only when its TOP equals zero."
+    },
+    {
+      "level": "guide",
+      "text": "Set $x - 2 = 0$ and solve."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 2$ makes the top zero, so $f(2) = \\frac{0}{7} = 0$."
+    }
+  ],
+  "explanation": [
+    "Zeros come from the TOP of the fraction.",
+    "$x - 2 = 0$ gives $x = 2$.",
+    "Check: $f(2) = \\frac{0}{7} = 0$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think about sharing zero cookies",
+      "steps": [
+        "If you split 0 cookies among 7 friends, everyone gets 0.",
+        "A fraction with 0 on top is 0, no matter what the bottom is (as long as it is not 0).",
+        "So you only need the top to be zero: $x = 2$."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-functions",
+    "zeros"
+  ],
+  "estimatedSeconds": 35
+}

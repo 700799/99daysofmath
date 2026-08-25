@@ -1,0 +1,54 @@
+{
+  "id": "PC.040",
+  "domain": "PC",
+  "unit": 4,
+  "orderInUnit": 10,
+  "standard": "PC.RAT.A.1",
+  "difficulty": 3,
+  "prompt": "How many VERTICAL ASYMPTOTES does $f(x) = \\frac{x + 2}{(x - 1)(x + 2)(x - 7)}$ have?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Before counting the bottom factors, check whether any of them cancels with the top.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Before counting the bottom factors, check whether any of them cancels with the top."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $\\frac{x - 5}{(x - 5)(x - 8)}$. The $(x - 5)$ cancels into a hole, so only $x = 8$ is an asymptote — that is 1. Same check here."
+    },
+    {
+      "level": "guide",
+      "text": "$(x + 2)$ cancels, so $x = -2$ is a HOLE, not an asymptote. What bottom factors are left?"
+    },
+    {
+      "level": "reveal",
+      "text": "$(x - 1)$ and $(x - 7)$ remain, giving asymptotes at $x = 1$ and $x = 7$ — that is $2$."
+    }
+  ],
+  "explanation": [
+    "First cancel: $(x + 2)$ appears on top and bottom, so $x = -2$ is a hole.",
+    "What is left on the bottom is $(x - 1)(x - 7)$.",
+    "Those give vertical asymptotes at $x = 1$ and $x = 7$, so there are $2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sort the bad x-values into two piles",
+      "steps": [
+        "Bad $x$-values from the bottom: $1$, $-2$, and $7$.",
+        "Pile 1 — cancels with the top: $-2$. That is a hole.",
+        "Pile 2 — does not cancel: $1$ and $7$. Those are the runaway lines, so the count is 2."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-functions",
+    "vertical-asymptote",
+    "holes"
+  ],
+  "estimatedSeconds": 75
+}

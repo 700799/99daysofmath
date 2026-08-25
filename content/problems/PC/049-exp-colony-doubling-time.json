@@ -1,0 +1,62 @@
+{
+  "id": "PC.049",
+  "domain": "PC",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "PC.EXP.A.1",
+  "difficulty": 3,
+  "prompt": "A colony of $100$ cells doubles every $3$ hours. How many cells are there after $12$ hours?",
+  "answerType": "numeric",
+  "primaryAnswer": "1600",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The clock is in hours, but the growth happens in DOUBLINGS. Count the doublings first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The clock is in hours, but the growth happens in DOUBLINGS. Count the doublings first."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: something doubling every $2$ hours for $6$ hours doubles $6 \\div 2 = 3$ times. Same move — divide the total time by the doubling time."
+    },
+    {
+      "level": "guide",
+      "text": "$12 \\div 3 = 4$ doublings. Now compute $100 \\cdot 2^4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2^4 = 16$, so $100 \\times 16 = 1600$ cells."
+    }
+  ],
+  "explanation": [
+    "Doubling time is $3$ hours, so in $12$ hours there are $12 \\div 3 = 4$ doublings.",
+    "Each doubling multiplies by $2$, so multiply by $2^4 = 16$.",
+    "$100 \\times 16 = 1600$ cells."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk the clock",
+      "steps": [
+        "Hour 0: $100$. Hour 3: $200$. Hour 6: $400$.",
+        "Hour 9: $800$. Hour 12: $1600$.",
+        "Only the doubling moments matter, not every single hour."
+      ]
+    },
+    {
+      "title": "Write the formula first",
+      "steps": [
+        "With doubling time $3$, the rule is $y = 100 \\cdot 2^{t/3}$.",
+        "Put in $t = 12$: the exponent is $12/3 = 4$.",
+        "$100 \\cdot 2^4 = 100 \\times 16 = 1600$."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "doubling-time",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

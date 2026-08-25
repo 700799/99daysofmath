@@ -1,0 +1,57 @@
+{
+  "id": "PC.075",
+  "domain": "PC",
+  "unit": 8,
+  "orderInUnit": 5,
+  "standard": "PC.TRIG.A.1",
+  "difficulty": 2,
+  "prompt": "A ladder leans against a wall. It touches the wall $5$ m up, and its foot sits $5$ m out from the wall. What angle does the ladder make with the ground, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "45",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You know the opposite side ($5$ up) and the adjacent side ($5$ out), so use tangent.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You know the opposite side ($5$ up) and the adjacent side ($5$ out), so use tangent."
+    },
+    {
+      "level": "guide",
+      "text": "$\\tan(\\text{angle}) = \\frac{5}{5} = 1$. Which angle has a tangent of $1$?"
+    },
+    {
+      "level": "reveal",
+      "text": "The inverse tangent of $1$ is $45^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Opposite $= 5$ and adjacent $= 5$, so use TOA.",
+    "$\\tan(\\text{angle}) = \\frac{5}{5} = 1$.",
+    "Inverse tangent turns the ratio back into an angle: the angle is $45^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spot the 45-45-90 triangle",
+      "steps": [
+        "Both legs are $5$, so the triangle is isosceles.",
+        "The two non-right angles must be equal and add to $90^\\circ$.",
+        "$90 \\div 2 = 45$, so the ladder meets the ground at $45^\\circ$."
+      ]
+    },
+    {
+      "title": "Draw and sanity-check",
+      "steps": [
+        "Sketch it: the ladder goes up exactly as much as it goes out.",
+        "That slant is a perfect diagonal, halfway between flat and straight up.",
+        "Halfway between $0^\\circ$ and $90^\\circ$ is $45^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "inverse-trig",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,63 @@
+{
+  "id": "PC.130",
+  "domain": "PC",
+  "unit": 13,
+  "orderInUnit": 10,
+  "standard": "PC.SEQ.A.1",
+  "difficulty": 3,
+  "prompt": "A chain message spreads. On day $1$, $2$ messages are sent. Every day after that, the number of messages sent DOUBLES. How many messages are sent in total over the first $6$ days?",
+  "answerType": "numeric",
+  "primaryAnswer": "126",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The daily counts are $2, 4, 8, 16, \\dots$ — geometric with $r = 2$. You need their SUM.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The daily counts are $2, 4, 8, 16, \\dots$ — geometric with $r = 2$. You need their SUM."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Do just $3$ days first: $2 + 4 + 8 = 14$. Check it with the geometric sum rule $S_n = a_1 \\times \\frac{r^n - 1}{r - 1} = 2 \\times \\frac{8 - 1}{1} = 14$. It matches, so now run the rule with $n = 6$."
+    },
+    {
+      "level": "guide",
+      "text": "$S_6 = 2 \\times \\frac{2^6 - 1}{2 - 1} = 2 \\times (64 - 1)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2 \\times 63 = 126$ messages."
+    }
+  ],
+  "explanation": [
+    "The daily counts form a geometric sequence: $2, 4, 8, 16, 32, 64$.",
+    "A series is the sum, so use $S_n = a_1 \\times \\frac{r^n - 1}{r - 1}$.",
+    "$S_6 = 2 \\times \\frac{2^6 - 1}{2 - 1} = 2 \\times 63$.",
+    "$= 126$ messages."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Just add the six days",
+      "steps": [
+        "Write the days out: 2, 4, 8, 16, 32, 64.",
+        "Add them left to right: 6, 14, 30, 62, 126.",
+        "126 messages — and notice each running total is exactly one less than the next day's count."
+      ]
+    },
+    {
+      "title": "One less than the next term",
+      "steps": [
+        "Look at the running totals: 2, 6, 14, 30, 62, 126.",
+        "Compare each to the next day's count: 4, 8, 16, 32, 64, 128. Every total is one short.",
+        "So the six-day total is 128 − 2 = 126. That \"one short\" pattern IS the formula, in disguise."
+      ]
+    }
+  ],
+  "tags": [
+    "series",
+    "geometric",
+    "word-problem"
+  ],
+  "estimatedSeconds": 85
+}

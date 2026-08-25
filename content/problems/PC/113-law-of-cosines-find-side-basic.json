@@ -1,0 +1,57 @@
+{
+  "id": "PC.113",
+  "domain": "PC",
+  "unit": 12,
+  "orderInUnit": 3,
+  "standard": "PC.TRIG.C.1",
+  "difficulty": 1,
+  "prompt": "In triangle $ABC$, $a = 3$, $b = 8$, and the angle between those two sides is $C = 60^\\circ$. Find side $c$.",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two sides and the angle squeezed between them (SAS) is the Law of Cosines tool.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two sides and the angle squeezed between them (SAS) is the Law of Cosines tool."
+    },
+    {
+      "level": "guide",
+      "text": "$c^2 = a^2 + b^2 - 2ab\\cos C = 9 + 64 - 2 \\times 3 \\times 8 \\times \\cos 60^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\cos 60^\\circ = \\frac{1}{2}$, so $c^2 = 73 - 24 = 49$ and $c = 7$."
+    }
+  ],
+  "explanation": [
+    "Use $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+    "$3^2 + 8^2 = 9 + 64 = 73$.",
+    "The correction term: $2 \\times 3 \\times 8 \\times \\frac{1}{2} = 24$.",
+    "$c^2 = 73 - 24 = 49$, so $c = \\sqrt{49} = 7$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pythagoras plus a correction",
+      "steps": [
+        "Pretend for a second the corner is a right angle. Then c² would be 9 + 64 = 73.",
+        "But the corner is only 60°, which is narrower than 90°, so the far side is pulled in shorter.",
+        "The correction term −24 does exactly that pulling: 73 − 24 = 49, so c = 7."
+      ]
+    },
+    {
+      "title": "Three pieces in a table",
+      "steps": [
+        "Piece 1: a² = 9. Piece 2: b² = 64. Piece 3: 2ab·cos C = 24.",
+        "The formula is just piece 1 + piece 2 − piece 3.",
+        "9 + 64 − 24 = 49, and √49 = 7. Filling a tiny table keeps you from losing a piece."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-cosines",
+    "triangle"
+  ],
+  "estimatedSeconds": 45
+}

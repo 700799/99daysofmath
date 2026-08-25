@@ -1,0 +1,54 @@
+{
+  "id": "PC.020",
+  "domain": "PC",
+  "unit": 2,
+  "orderInUnit": 10,
+  "standard": "PC.FUN.A.2",
+  "difficulty": 3,
+  "prompt": "A store takes $20\\%$ off a price, then adds a flat $\\$5$ shipping charge. You paid $\\$45$ in the end. What was the original price in dollars?",
+  "answerType": "numeric",
+  "primaryAnswer": "50",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Undo the machines in REVERSE order. Shipping was added LAST, so take it off FIRST.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Undo the machines in REVERSE order. Shipping was added LAST, so take it off FIRST."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: a price is halved, then $\\$2$ is added, ending at $\\$7$. Undo backwards: $7 - 2 = 5$, then $5 \\times 2 = 10$. Same order of undoing here."
+    },
+    {
+      "level": "guide",
+      "text": "$45 - 5 = 40$. That $\\$40$ is the discounted price, which is $80\\%$ of the original."
+    },
+    {
+      "level": "reveal",
+      "text": "$40 \\div 0.8 = 50$, so the original price was $\\$50$."
+    }
+  ],
+  "explanation": [
+    "Take off the shipping first: $45 - 5 = 40$.",
+    "A $20\\%$ discount means you paid $80\\%$ of the original.",
+    "$40 \\div 0.8 = 50$. The original price was $\\$50$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Run it forward to check",
+      "steps": [
+        "Start at $\\$50$. Take $20\\%$ off: that is $\\$10$ off, leaving $\\$40$.",
+        "Add the $\\$5$ shipping: $\\$45$.",
+        "That matches what you paid, so $\\$50$ is right."
+      ]
+    }
+  ],
+  "tags": [
+    "inverse-function",
+    "percent",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

@@ -23,6 +23,10 @@ import { problemsA1u01 } from './seeds/A1_u01_04.js';
 import { problemsA1u05 } from './seeds/A1_u05_08.js';
 import { problemsA1u09 } from './seeds/A1_u09_11.js';
 import { problemsA1u12 } from './seeds/A1_u12_14.js';
+import { problemsPCu01 } from './seeds/PC_u01_04.js';
+import { problemsPCu05 } from './seeds/PC_u05_08.js';
+import { problemsPCu09 } from './seeds/PC_u09_11.js';
+import { problemsPCu12 } from './seeds/PC_u12_14.js';
 import type { SeedProblem } from './seeds/types.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -77,6 +81,10 @@ async function main() {
     ...problemsA1u05,
     ...problemsA1u09,
     ...problemsA1u12,
+    ...problemsPCu01,
+    ...problemsPCu05,
+    ...problemsPCu09,
+    ...problemsPCu12,
   ];
 
   let created = 0;

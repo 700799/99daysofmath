@@ -1,0 +1,57 @@
+{
+  "id": "PC.066",
+  "domain": "PC",
+  "unit": 7,
+  "orderInUnit": 6,
+  "standard": "PC.LOG.A.2",
+  "difficulty": 2,
+  "prompt": "A streaming service charges $\\$80$ a month for its top plan. A rival plan costs $\\$5$ in month $1$ and DOUBLES every month after that. In which month does the rival plan cost $\\$80$?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The rival plan in month $m$ costs $5 \\cdot 2^{m-1}$. Set that equal to $80$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The rival plan in month $m$ costs $5 \\cdot 2^{m-1}$. Set that equal to $80$."
+    },
+    {
+      "level": "guide",
+      "text": "Divide both sides by $5$: $2^{m-1} = 16$, so $m - 1 = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$m - 1 = 4$ gives $m = 5$, so the plans match in month $5$."
+    }
+  ],
+  "explanation": [
+    "The rival plan is exponential: $\\text{cost} = 5 \\cdot 2^{m-1}$.",
+    "Set it equal to $80$ and divide by $5$: $2^{m-1} = 16 = 2^4$.",
+    "So $m - 1 = 4$ and $m = 5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Just list the months",
+      "steps": [
+        "Month 1: $\\$5$. Month 2: $\\$10$. Month 3: $\\$20$.",
+        "Month 4: $\\$40$. Month 5: $\\$80$.",
+        "Month $5$ is the match."
+      ]
+    },
+    {
+      "title": "Count the doublings",
+      "steps": [
+        "Going from $\\$5$ to $\\$80$ means multiplying by $16$.",
+        "$16 = 2^4$, so that is $4$ doublings.",
+        "Four doublings after month $1$ lands on month $5$."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-equation",
+    "compare",
+    "word-problem"
+  ],
+  "estimatedSeconds": 65
+}

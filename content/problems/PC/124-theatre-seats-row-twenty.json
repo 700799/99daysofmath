@@ -1,0 +1,58 @@
+{
+  "id": "PC.124",
+  "domain": "PC",
+  "unit": 13,
+  "orderInUnit": 4,
+  "standard": "PC.SEQ.A.1",
+  "difficulty": 2,
+  "prompt": "In a theatre, row $1$ has $12$ seats. Every row after that has $3$ more seats than the row in front of it. How many seats are in row $20$?",
+  "answerType": "numeric",
+  "primaryAnswer": "69",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Same amount added each row means this is an ARITHMETIC sequence with $a_1 = 12$ and $d = 3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same amount added each row means this is an ARITHMETIC sequence with $a_1 = 12$ and $d = 3$."
+    },
+    {
+      "level": "guide",
+      "text": "Row $20$ is $19$ rows behind row $1$, so it has taken $19$ jumps of $3$ seats: $57$ extra seats."
+    },
+    {
+      "level": "reveal",
+      "text": "$12 + 57 = 69$ seats."
+    }
+  ],
+  "explanation": [
+    "$a_n = a_1 + (n - 1)d$ with $a_1 = 12$ and $d = 3$.",
+    "$a_{20} = 12 + (20 - 1) \\times 3$.",
+    "$= 12 + 19 \\times 3 = 12 + 57$.",
+    "$= 69$ seats."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A short table, then a leap",
+      "steps": [
+        "Row 1: 12. Row 2: 15. Row 3: 18. Row 4: 21.",
+        "Look at row 4: it is 12 + 3(3), and the 3 is one less than the row number.",
+        "So row 20 is 12 + 19(3) = 69. The table finds the pattern; the formula does the leap."
+      ]
+    },
+    {
+      "title": "Work backwards to check",
+      "steps": [
+        "If row 20 really holds 69 seats, walk backwards 19 rows of 3.",
+        "19 × 3 = 57, and 69 − 57 = 12.",
+        "That is exactly row 1, so the answer checks out."
+      ]
+    }
+  ],
+  "tags": [
+    "sequence",
+    "arithmetic",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

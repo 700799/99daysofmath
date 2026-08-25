@@ -1,0 +1,62 @@
+{
+  "id": "PC.080",
+  "domain": "PC",
+  "unit": 8,
+  "orderInUnit": 10,
+  "standard": "PC.TRIG.A.1",
+  "difficulty": 3,
+  "prompt": "You fly a kite on a straight string $40$ m long. The kite is $20$ m above your hands. What angle does the string make with the level ground, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The string is the hypotenuse and the height is opposite the angle, so sine is the tool.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The string is the hypotenuse and the height is opposite the angle, so sine is the tool."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: a $10$ m string with the kite $5$ m up gives $\\sin(\\text{angle}) = \\frac{5}{10} = \\frac{1}{2}$, so the angle is $30^\\circ$. Same move, bigger numbers."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sin(\\text{angle}) = \\frac{20}{40} = \\frac{1}{2}$. Now ask which angle has sine $\\frac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "The inverse sine of $\\frac{1}{2}$ is $30^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Label the triangle: string $= $ hypotenuse $= 40$, height $= $ opposite $= 20$.",
+    "SOH gives $\\sin(\\text{angle}) = \\frac{20}{40} = \\frac{1}{2}$.",
+    "Inverse sine turns the ratio back into an angle: $30^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Recognize the half-hypotenuse",
+      "steps": [
+        "The height is exactly half the string.",
+        "The only right triangle where a leg is half the hypotenuse is the $30$-$60$-$90$.",
+        "The angle across from that short leg is $30^\\circ$."
+      ]
+    },
+    {
+      "title": "Ratio to angle, in that order",
+      "steps": [
+        "Sine takes an angle and gives a ratio; inverse sine goes backward.",
+        "Here you already have the ratio $\\frac{1}{2}$, so you need the backward trip.",
+        "The angle whose sine is $\\frac{1}{2}$ is $30^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "inverse-trig",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

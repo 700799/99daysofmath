@@ -1,0 +1,56 @@
+{
+  "id": "PC.121",
+  "domain": "PC",
+  "unit": 13,
+  "orderInUnit": 1,
+  "standard": "PC.SEQ.A.1",
+  "difficulty": 1,
+  "prompt": "Look at the sequence $3,\\ 7,\\ 11,\\ 15,\\ \\dots$ What is the next term?",
+  "answerType": "numeric",
+  "primaryAnswer": "19",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Check what happens from one term to the next. Is it the same jump every time?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Check what happens from one term to the next. Is it the same jump every time?"
+    },
+    {
+      "level": "guide",
+      "text": "$7 - 3 = 4$, $11 - 7 = 4$, $15 - 11 = 4$. The rule adds $4$ each step."
+    },
+    {
+      "level": "reveal",
+      "text": "$15 + 4 = 19$."
+    }
+  ],
+  "explanation": [
+    "A sequence is an ordered list with a rule.",
+    "The gaps are $4, 4, 4$ — the same amount each time, so this is ARITHMETIC.",
+    "Keep the rule going: $15 + 4 = 19$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A gap table",
+      "steps": [
+        "Write the terms in one row: 3, 7, 11, 15.",
+        "Write the gaps underneath, between the terms: 4, 4, 4.",
+        "A row of identical gaps means \"add 4 forever\", so the next term is 15 + 4 = 19."
+      ]
+    },
+    {
+      "title": "Hops on a number line",
+      "steps": [
+        "Picture a number line and start at 3.",
+        "Each term is one hop of the same size to the right, landing on 7, 11, then 15.",
+        "One more hop of 4 lands you on 19."
+      ]
+    }
+  ],
+  "tags": [
+    "sequence",
+    "arithmetic"
+  ],
+  "estimatedSeconds": 25
+}

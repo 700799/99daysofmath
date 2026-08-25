@@ -1,0 +1,49 @@
+{
+  "id": "PC.007",
+  "domain": "PC",
+  "unit": 1,
+  "orderInUnit": 7,
+  "standard": "PC.FUN.A.1",
+  "difficulty": 2,
+  "prompt": "A photo app stretches a picture taller by TRIPLING every height above the middle line. One point on the picture was $5$ units above the middle line. How many units above the middle line is it now?",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Stretching taller is the same as $3 \\cdot f(x)$: every height gets multiplied.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Stretching taller is the same as $3 \\cdot f(x)$: every height gets multiplied."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply the old height $5$ by $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 5 = 15$ units above the middle line."
+    }
+  ],
+  "explanation": [
+    "A vertical stretch multiplies every $y$-value by the same number.",
+    "Tripling means multiply by $3$.",
+    "$3 \\times 5 = 15$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two points, one rule",
+      "steps": [
+        "A point 1 unit up moves to 3 units up.",
+        "A point 2 units up moves to 6 units up.",
+        "The pattern is \"times 3\" every time, so 5 units up becomes 15 units up."
+      ]
+    }
+  ],
+  "tags": [
+    "transformations",
+    "vertical-stretch",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

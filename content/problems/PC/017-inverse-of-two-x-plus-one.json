@@ -1,0 +1,48 @@
+{
+  "id": "PC.017",
+  "domain": "PC",
+  "unit": 2,
+  "orderInUnit": 7,
+  "standard": "PC.FUN.A.2",
+  "difficulty": 2,
+  "prompt": "Let $f(x) = 2x + 1$. What is $f^{-1}(9)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$f$ does two steps: double, then add 1. The undo machine reverses them in REVERSE order.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$f$ does two steps: double, then add 1. The undo machine reverses them in REVERSE order."
+    },
+    {
+      "level": "guide",
+      "text": "Undo the $+1$ first: $9 - 1 = 8$. Then undo the doubling."
+    },
+    {
+      "level": "reveal",
+      "text": "$8 \\div 2 = 4$, so $f^{-1}(9) = 4$."
+    }
+  ],
+  "explanation": [
+    "Forward: double, then add 1.",
+    "Backward: subtract 1, then halve.",
+    "$9 - 1 = 8$, and $8 \\div 2 = 4$. Check: $f(4) = 9$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Swap x and y",
+      "steps": [
+        "Write $y = 2x + 1$, then swap the letters: $x = 2y + 1$.",
+        "Solve for $y$: $y = \\frac{x - 1}{2}$.",
+        "Now plug in $x = 9$: $y = \\frac{8}{2} = 4$."
+      ]
+    }
+  ],
+  "tags": [
+    "inverse-function",
+    "two-step"
+  ],
+  "estimatedSeconds": 55
+}

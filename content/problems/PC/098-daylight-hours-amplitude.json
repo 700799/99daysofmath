@@ -1,0 +1,59 @@
+{
+  "id": "PC.098",
+  "domain": "PC",
+  "unit": 10,
+  "orderInUnit": 8,
+  "standard": "PC.TRIG.B.1",
+  "difficulty": 3,
+  "prompt": "In one town the longest day of the year has $16$ hours of daylight and the shortest has $8$ hours. Daylight through the year follows a sine wave. What is the AMPLITUDE, in hours?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Amplitude is HALF the distance from the highest point to the lowest point.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Amplitude is HALF the distance from the highest point to the lowest point."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Practise on an easier wave: it peaks at $10$ and dips to $2$. The gap is $8$, so the amplitude is $8 \\div 2 = 4$. Now use the same two steps on $16$ and $8$."
+    },
+    {
+      "level": "guide",
+      "text": "The gap is $16 - 8 = 8$ hours. Halve it."
+    },
+    {
+      "level": "reveal",
+      "text": "$8 \\div 2 = 4$ hours."
+    }
+  ],
+  "explanation": [
+    "Peak $= 16$ h, trough $= 8$ h.",
+    "Amplitude is the half-gap: $(16 - 8) \\div 2 = 8 \\div 2 = 4$ hours.",
+    "Check with the midline: the middle is $(16 + 8) \\div 2 = 12$ h, and $12 + 4 = 16$, $12 - 4 = 8$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Find the midline first",
+      "steps": [
+        "The midline is the average of the two extremes: (16 + 8) ÷ 2 = 12 hours.",
+        "The amplitude is how far the peak sits above that midline: 16 − 12 = 4 hours."
+      ]
+    },
+    {
+      "title": "Build the equation",
+      "steps": [
+        "Write daylight = a·sin(x) + k. Peak means k + a = 16; trough means k − a = 8.",
+        "Subtract the second from the first: 2a = 8, so a = 4 hours."
+      ]
+    }
+  ],
+  "tags": [
+    "amplitude",
+    "word-problem"
+  ],
+  "estimatedSeconds": 65
+}

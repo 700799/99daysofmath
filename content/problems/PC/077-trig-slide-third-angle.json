@@ -1,0 +1,57 @@
+{
+  "id": "PC.077",
+  "domain": "PC",
+  "unit": 8,
+  "orderInUnit": 7,
+  "standard": "PC.TRIG.A.1",
+  "difficulty": 2,
+  "prompt": "A slide at the park makes a right triangle with the ground and the ladder post. One angle is the right angle, and the slide meets the ground at $55^\\circ$. What is the third angle, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "35",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The three angles of ANY triangle add up to $180^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The three angles of ANY triangle add up to $180^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "The right angle already uses $90^\\circ$, so the other two must share $90^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "$90 - 55 = 35$, so the third angle is $35^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Every triangle's angles total $180^\\circ$.",
+    "The right angle takes $90^\\circ$, leaving $90^\\circ$ for the other two.",
+    "$90 - 55 = 35$, so the third angle is $35^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Subtract from 180 all at once",
+      "steps": [
+        "Add what you know: $90 + 55 = 145$.",
+        "Subtract from the total: $180 - 145 = 35$.",
+        "The third angle is $35^\\circ$."
+      ]
+    },
+    {
+      "title": "Picture the slide tipping",
+      "steps": [
+        "A very steep slide meets the ground near $90^\\circ$ and leaves almost nothing at the top.",
+        "A gentle slide meets the ground near $0^\\circ$ and leaves almost $90^\\circ$ at the top.",
+        "At $55^\\circ$ the leftover is $90 - 55 = 35^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "angles",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

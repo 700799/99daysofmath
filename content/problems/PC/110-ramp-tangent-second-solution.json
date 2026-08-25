@@ -1,0 +1,60 @@
+{
+  "id": "PC.110",
+  "domain": "PC",
+  "unit": 11,
+  "orderInUnit": 10,
+  "standard": "PC.TRIG.B.2",
+  "difficulty": 3,
+  "prompt": "A ramp-checking app solves $\\tan\\theta = 1$ for $0^\\circ \\le \\theta < 360^\\circ$. One answer is $45^\\circ$. What is the OTHER answer, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "225",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$. If sine and cosine BOTH flip sign, the fraction stays the same.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$. If sine and cosine BOTH flip sign, the fraction stays the same."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Test the idea with numbers: $\\frac{0.7}{0.7} = 1$ and $\\frac{-0.7}{-0.7} = 1$ too. So the opposite direction on the circle gives the same tangent. Opposite means add $180^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "Add half a turn to the first answer: $45 + 180$."
+    },
+    {
+      "level": "reveal",
+      "text": "$45 + 180 = 225$, so the other answer is $225^\\circ$."
+    }
+  ],
+  "explanation": [
+    "At $45^\\circ$ the point is $(0.707, 0.707)$, so $\\tan 45^\\circ = 1$.",
+    "Straight across the circle, at $225^\\circ$, the point is $(-0.707, -0.707)$. Both parts flipped sign, and two minus signs cancel when you divide.",
+    "$\\tan 225^\\circ = \\frac{-0.707}{-0.707} = 1$ as well, so the other answer is $225^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Tangent is slope",
+      "steps": [
+        "tan θ is the slope of the line from the centre through the point.",
+        "A single straight line through the centre passes through the circle at TWO opposite spots, and both share the same slope of 1. Those spots are 45° and 45 + 180 = 225°."
+      ]
+    },
+    {
+      "title": "Sort by quadrant signs",
+      "steps": [
+        "tan is positive when sin and cos share a sign: both plus (Quadrant 1) or both minus (Quadrant 3).",
+        "Quadrant 1 gives 45°. The matching Quadrant 3 angle is half a turn further on: 225°."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent",
+    "trig-equation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

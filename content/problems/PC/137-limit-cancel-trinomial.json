@@ -1,0 +1,57 @@
+{
+  "id": "PC.137",
+  "domain": "PC",
+  "unit": 14,
+  "orderInUnit": 7,
+  "standard": "PC.LIM.A.1",
+  "difficulty": 2,
+  "prompt": "Find the limit of $\\frac{x^2 - 7x + 10}{x - 2}$ as $x \\to 2$.",
+  "answerType": "numeric",
+  "primaryAnswer": "-3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substituting gives $\\frac{0}{0}$. Factor the top and look for a matching $(x - 2)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substituting gives $\\frac{0}{0}$. Factor the top and look for a matching $(x - 2)$."
+    },
+    {
+      "level": "guide",
+      "text": "Hunt two numbers that multiply to $10$ and add to $-7$: they are $-2$ and $-5$, so the top is $(x - 2)(x - 5)$."
+    },
+    {
+      "level": "reveal",
+      "text": "Cancel $(x - 2)$ to leave $x - 5$. At $x = 2$ that is $2 - 5 = -3$."
+    }
+  ],
+  "explanation": [
+    "At $x = 2$ both top and bottom are $0$, so there is a hole, not a wall.",
+    "Factor: $x^2 - 7x + 10 = (x - 2)(x - 5)$.",
+    "Cancel the shared $(x - 2)$: what is left is $x - 5$.",
+    "Substitute: $2 - 5 = -3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sneak up from both sides",
+      "steps": [
+        "At x = 1.9 the fraction gives (3.61 − 13.3 + 10)/(−0.1) = −3.1.",
+        "At x = 2.1 it gives (4.41 − 14.7 + 10)/(0.1) = −2.9.",
+        "The two sides squeeze toward −3 — the table confirms the cancelling."
+      ]
+    },
+    {
+      "title": "Why a factor must cancel",
+      "steps": [
+        "Plugging in x = 2 made the top zero, which means (x − 2) is one of its factors.",
+        "So the top and bottom share that factor, and sharing is exactly what makes a hole instead of a wall.",
+        "Peel the shared factor off and the leftover, x − 5, hands you the height of the hole: −3."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "factoring"
+  ],
+  "estimatedSeconds": 60
+}

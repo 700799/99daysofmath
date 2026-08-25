@@ -1,0 +1,49 @@
+{
+  "id": "PC.033",
+  "domain": "PC",
+  "unit": 4,
+  "orderInUnit": 3,
+  "standard": "PC.RAT.A.1",
+  "difficulty": 1,
+  "prompt": "You split a $\\$120$ pizza bill evenly among $n$ friends, so each person pays $c(n) = \\frac{120}{n}$ dollars. With $8$ friends, how many dollars does each person pay?",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Put $8$ in for $n$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Put $8$ in for $n$."
+    },
+    {
+      "level": "guide",
+      "text": "Compute $120 \\div 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$120 \\div 8 = 15$, so each person pays $\\$15$."
+    }
+  ],
+  "explanation": [
+    "Substitute $n = 8$ into $c(n) = \\frac{120}{n}$.",
+    "$c(8) = \\frac{120}{8}$.",
+    "$120 \\div 8 = 15$ dollars each."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Deal out the dollars",
+      "steps": [
+        "Give everyone $\\$10$ first: that uses $\\$80$ and leaves $\\$40$.",
+        "Give everyone $\\$5$ more: that uses the last $\\$40$.",
+        "Each friend paid $10 + 5 = \\$15$."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-functions",
+    "evaluate",
+    "word-problem"
+  ],
+  "estimatedSeconds": 35
+}

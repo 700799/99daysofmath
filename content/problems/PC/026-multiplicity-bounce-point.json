@@ -1,0 +1,48 @@
+{
+  "id": "PC.026",
+  "domain": "PC",
+  "unit": 3,
+  "orderInUnit": 6,
+  "standard": "PC.POLY.A.1",
+  "difficulty": 2,
+  "prompt": "For $p(x) = (x - 3)^2(x + 1)$, at which $x$-value does the graph BOUNCE off the $x$-axis instead of crossing it?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Look at the exponents on the factors. One of them is squared.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Look at the exponents on the factors. One of them is squared."
+    },
+    {
+      "level": "guide",
+      "text": "An EVEN exponent means the graph touches and bounces. An odd exponent means it crosses."
+    },
+    {
+      "level": "reveal",
+      "text": "$(x - 3)^2$ has exponent 2, so the graph bounces at $x = 3$."
+    }
+  ],
+  "explanation": [
+    "Multiplicity is how many times a factor appears.",
+    "$(x - 3)$ appears twice — even multiplicity — so the graph bounces at $x = 3$.",
+    "$(x + 1)$ appears once — odd — so the graph crosses at $x = -1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Watch the sign around the point",
+      "steps": [
+        "Just left of 3, $(x - 3)$ is negative; squaring it makes it positive.",
+        "Just right of 3, it is positive; squaring keeps it positive.",
+        "The sign never flips, so the graph cannot pass through — it kisses the axis and bounces."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomials",
+    "multiplicity"
+  ],
+  "estimatedSeconds": 55
+}

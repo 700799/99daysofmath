@@ -1,0 +1,53 @@
+{
+  "id": "PC.095",
+  "domain": "PC",
+  "unit": 10,
+  "orderInUnit": 5,
+  "standard": "PC.TRIG.B.1",
+  "difficulty": 2,
+  "prompt": "The graph of $y = \\sin(x - 30^\\circ)$ is the graph of $y = \\sin(x)$ slid sideways. How many degrees does it slide to the RIGHT?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A phase shift slides the whole wave sideways. Look at the number subtracted inside the brackets.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A phase shift slides the whole wave sideways. Look at the number subtracted inside the brackets."
+    },
+    {
+      "level": "guide",
+      "text": "In $y = \\sin(x - c)$, the wave slides $c$ degrees to the RIGHT. Here $c = 30$."
+    },
+    {
+      "level": "reveal",
+      "text": "It slides $30^\\circ$ to the right."
+    }
+  ],
+  "explanation": [
+    "Plain $\\sin(x)$ starts its climb at $x = 0$.",
+    "For $\\sin(x - 30^\\circ)$, the inside is zero when $x = 30^\\circ$, so the wave starts its climb $30^\\circ$ later.",
+    "Starting later means the whole wave has slid $30^\\circ$ to the RIGHT."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Ask when the inside is zero",
+      "steps": [
+        "Whatever plain sine did at 0, the shifted wave does when the inside equals 0.",
+        "x − 30 = 0 gives x = 30. Every feature arrives 30° later, which is a slide right."
+      ]
+    },
+    {
+      "title": "The late-running tide",
+      "steps": [
+        "Think of high tide arriving 30 minutes later than usual each day.",
+        "The tide pattern is exactly the same shape, just running late. Running late = sliding right on a time graph."
+      ]
+    }
+  ],
+  "tags": [
+    "phase-shift"
+  ],
+  "estimatedSeconds": 55
+}

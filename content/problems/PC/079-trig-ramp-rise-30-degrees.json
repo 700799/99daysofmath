@@ -1,0 +1,62 @@
+{
+  "id": "PC.079",
+  "domain": "PC",
+  "unit": 8,
+  "orderInUnit": 9,
+  "standard": "PC.TRIG.A.1",
+  "difficulty": 3,
+  "prompt": "A wheelchair ramp is $10$ ft long along the slope and rises at an angle of $30^\\circ$ to the ground. How high is the top of the ramp, in feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $10$ ft slope is the HYPOTENUSE, and the height is opposite the $30^\\circ$ angle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $10$ ft slope is the HYPOTENUSE, and the height is opposite the $30^\\circ$ angle."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: a $4$ ft slope at $30^\\circ$ rises $\\frac{1}{2} \\times 4 = 2$ ft, because $\\sin(30^\\circ) = \\frac{1}{2}$. Same move, bigger slope."
+    },
+    {
+      "level": "guide",
+      "text": "Opposite over hypotenuse means sine: $\\sin(30^\\circ) = \\frac{h}{10}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin(30^\\circ) = \\frac{1}{2}$, so $h = \\frac{1}{2} \\times 10 = 5$ ft."
+    }
+  ],
+  "explanation": [
+    "Label first: the ramp itself is the hypotenuse ($10$ ft), and the height is opposite the $30^\\circ$ angle.",
+    "Opposite and hypotenuse means SOH: $\\sin(30^\\circ) = \\frac{h}{10}$.",
+    "$\\sin(30^\\circ) = \\frac{1}{2}$, so $h = 5$ ft."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Half the hypotenuse",
+      "steps": [
+        "In every $30$-$60$-$90$ triangle, the side opposite $30^\\circ$ is exactly half the hypotenuse.",
+        "The hypotenuse is $10$ ft.",
+        "Half of $10$ is $5$ ft."
+      ]
+    },
+    {
+      "title": "Sanity-check the size",
+      "steps": [
+        "The height must be smaller than the ramp itself, so the answer has to be under $10$ ft.",
+        "A gentle $30^\\circ$ ramp should rise only a modest amount.",
+        "$5$ ft fits both checks, while an answer like $20$ ft would be impossible."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "sine",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

@@ -1,0 +1,49 @@
+{
+  "id": "PC.057",
+  "domain": "PC",
+  "unit": 6,
+  "orderInUnit": 7,
+  "standard": "PC.LOG.A.1",
+  "difficulty": 2,
+  "prompt": "On the Richter earthquake scale, each whole step up means $10$ times more shaking. How many times more shaking is a magnitude $7$ quake than a magnitude $4$ quake?",
+  "answerType": "numeric",
+  "primaryAnswer": "1000",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "First count the steps between $4$ and $7$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First count the steps between $4$ and $7$."
+    },
+    {
+      "level": "guide",
+      "text": "That is $7 - 4 = 3$ steps, and each step multiplies by $10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$10^3 = 1000$ times more shaking."
+    }
+  ],
+  "explanation": [
+    "The Richter scale is a log scale, so the NUMBER is really an exponent.",
+    "From $4$ to $7$ is $3$ steps, and each step means $\\times 10$.",
+    "$10 \\times 10 \\times 10 = 1000$ times more shaking."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Climb one step at a time",
+      "steps": [
+        "Magnitude $4$ to $5$: $10$ times more.",
+        "Magnitude $5$ to $6$: $10$ times more again, now $100$.",
+        "Magnitude $6$ to $7$: $10$ times again, now $1000$."
+      ]
+    }
+  ],
+  "tags": [
+    "logarithm",
+    "log-scale",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

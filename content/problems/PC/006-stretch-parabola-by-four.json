@@ -1,0 +1,48 @@
+{
+  "id": "PC.006",
+  "domain": "PC",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "PC.FUN.A.1",
+  "difficulty": 2,
+  "prompt": "The point $(1, 1)$ sits on $y = x^2$. The graph is stretched to $y = 4x^2$. On the new graph, what is the $y$-value when $x = 1$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A number multiplying the whole function stretches the graph taller.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A number multiplying the whole function stretches the graph taller."
+    },
+    {
+      "level": "guide",
+      "text": "Find $x^2$ first when $x = 1$, then multiply that answer by $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$1^2 = 1$, and $4 \\times 1 = 4$."
+    }
+  ],
+  "explanation": [
+    "In $a \\cdot f(x)$, every $y$-value is multiplied by $a$.",
+    "Here $a = 4$, so heights become $4$ times bigger.",
+    "The point $(1, 1)$ becomes $(1, 4)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A table of heights",
+      "steps": [
+        "On $y = x^2$: $x = 1 \\to y = 1$, $x = 2 \\to y = 4$.",
+        "On $y = 4x^2$: $x = 1 \\to y = 4$, $x = 2 \\to y = 16$.",
+        "Every height is exactly 4 times taller — the sticker got stretched, not slid."
+      ]
+    }
+  ],
+  "tags": [
+    "transformations",
+    "vertical-stretch"
+  ],
+  "estimatedSeconds": 40
+}

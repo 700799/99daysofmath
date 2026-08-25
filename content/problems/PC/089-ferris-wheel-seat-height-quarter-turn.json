@@ -1,0 +1,60 @@
+{
+  "id": "PC.089",
+  "domain": "PC",
+  "unit": 9,
+  "orderInUnit": 9,
+  "standard": "PC.TRIG.A.2",
+  "difficulty": 3,
+  "prompt": "A Ferris wheel has radius $15$ m and its centre sits $20$ m above the ground. A seat starts at the far right of the wheel and turns $90^\\circ$. How many metres above the ground is the seat now?",
+  "answerType": "numeric",
+  "primaryAnswer": "35",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Height above ground $=$ centre height $+$ radius $\\times \\sin\\theta$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Height above ground $=$ centre height $+$ radius $\\times \\sin\\theta$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try the same wheel at $\\theta = 0^\\circ$ first. $\\sin 0^\\circ = 0$, so the seat is $20 + 15 \\times 0 = 20$ m — level with the centre. Now redo it with $\\sin 90^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sin 90^\\circ = 1$, so the height is $20 + 15 \\times 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$20 + 15 = 35$ metres."
+    }
+  ],
+  "explanation": [
+    "Put the centre of the wheel at the middle of a unit-circle picture. The seat rides the rim.",
+    "Its height above the centre is radius $\\times \\sin\\theta = 15\\sin\\theta$, and the centre itself is $20$ m up.",
+    "At $\\theta = 90^\\circ$, $\\sin 90^\\circ = 1$, so the height is $20 + 15 \\times 1 = 35$ m."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "No formula — just picture it",
+      "steps": [
+        "A quarter turn from the far right puts the seat at the very TOP of the wheel.",
+        "The top is one radius above the centre: 20 + 15 = 35 m above the ground."
+      ]
+    },
+    {
+      "title": "Highest and lowest first",
+      "steps": [
+        "The seat can never go above 20 + 15 = 35 m or below 20 − 15 = 5 m.",
+        "A 90° turn from the side reaches the peak, and the peak is 35 m."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "sine",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

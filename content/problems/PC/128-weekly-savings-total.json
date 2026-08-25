@@ -1,0 +1,63 @@
+{
+  "id": "PC.128",
+  "domain": "PC",
+  "unit": 13,
+  "orderInUnit": 8,
+  "standard": "PC.SEQ.A.1",
+  "difficulty": 3,
+  "prompt": "In week $1$ you save $5$ dollars. Every week after that you save $5$ dollars more than the week before, so week $2$ is $10$ and week $3$ is $15$. How many dollars have you saved in total after $12$ weeks?",
+  "answerType": "numeric",
+  "primaryAnswer": "390",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You need a SERIES — the sum of the weekly amounts, not just week $12$ by itself.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You need a SERIES — the sum of the weekly amounts, not just week $12$ by itself."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Do the same job for just $4$ weeks: the savings are $5, 10, 15, 20$. Pair the ends: $5 + 20 = 25$ and $10 + 15 = 25$, giving $2 \\times 25 = 50$. The shortcut says $4 \\times \\frac{5 + 20}{2} = 50$ too. Now run those exact steps for $12$ weeks."
+    },
+    {
+      "level": "guide",
+      "text": "First find the last term: week $12$ saves $5 + 11 \\times 5 = 60$ dollars. Now you have first $= 5$, last $= 60$, $n = 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "Sum $= 12 \\times \\frac{5 + 60}{2} = 6 \\times 65 = 390$ dollars."
+    }
+  ],
+  "explanation": [
+    "Step 1 — find the last term with $a_n = a_1 + (n-1)d$: $a_{12} = 5 + 11 \\times 5 = 60$.",
+    "Step 2 — add the list with the pair-the-ends shortcut: sum $= n \\times \\frac{\\text{first} + \\text{last}}{2}$.",
+    "$12 \\times \\frac{5 + 60}{2} = 12 \\times 32.5$.",
+    "$= 390$ dollars."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pair the ends yourself",
+      "steps": [
+        "The weeks are 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60.",
+        "Pair first with last: 5 + 60 = 65. Next pair: 10 + 55 = 65. Every pair makes 65.",
+        "Twelve numbers make six pairs: 6 × 65 = 390 dollars."
+      ]
+    },
+    {
+      "title": "Factor out the 5",
+      "steps": [
+        "Every amount is a multiple of 5: the list is 5 × (1, 2, 3, …, 12).",
+        "Add 1 through 12 first using Gauss's trick: 12 × 13 ÷ 2 = 78.",
+        "Now multiply back: 5 × 78 = 390 dollars."
+      ]
+    }
+  ],
+  "tags": [
+    "series",
+    "arithmetic",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

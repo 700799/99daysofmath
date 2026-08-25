@@ -1,0 +1,57 @@
+{
+  "id": "PC.114",
+  "domain": "PC",
+  "unit": 12,
+  "orderInUnit": 4,
+  "standard": "PC.TRIG.C.1",
+  "difficulty": 2,
+  "prompt": "Two friends stand $100$ m apart on a flat field and both look up at a drone. From friend $A$ the angle to the drone is $30^\\circ$; from friend $B$ it is $60^\\circ$. That makes the angle at the drone $90^\\circ$. How many meters is the drone from friend $B$?",
+  "answerType": "numeric",
+  "primaryAnswer": "50",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $100$ m gap sits ACROSS from the drone's $90^\\circ$ angle — that is your matching pair.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $100$ m gap sits ACROSS from the drone's $90^\\circ$ angle — that is your matching pair."
+    },
+    {
+      "level": "guide",
+      "text": "The side from $B$ to the drone sits across from angle $A = 30^\\circ$. So $\\frac{a}{\\sin 30^\\circ} = \\frac{100}{\\sin 90^\\circ}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$a = 100 \\times \\frac{1}{2} = 50$ meters."
+    }
+  ],
+  "explanation": [
+    "Label the triangle: the two friends and the drone are the corners.",
+    "The $100$ m side is across from the $90^\\circ$ drone angle, so use that pair.",
+    "$\\frac{a}{\\sin 30^\\circ} = \\frac{100}{\\sin 90^\\circ} = 100$.",
+    "$a = 100 \\times \\frac{1}{2} = 50$ m."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw it in words first",
+      "steps": [
+        "Sketch a flat line with friend A on the left and friend B on the right, 100 m apart.",
+        "Draw both sight lines up to the drone. The steeper 60° line belongs to friend B, so friend B is CLOSER.",
+        "Closer means the answer must be less than 100 m, and 50 m passes that sanity check."
+      ]
+    },
+    {
+      "title": "Which side goes with which angle",
+      "steps": [
+        "Big angle, big side across from it. Order the angles: 30° < 60° < 90°.",
+        "So the shortest side is across from 30°, which is exactly the B-to-drone distance you want.",
+        "The 100 m side is across the biggest angle, and 50 is the smallest of the three — the sizes line up."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-sines",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,62 @@
+{
+  "id": "PC.048",
+  "domain": "PC",
+  "unit": 5,
+  "orderInUnit": 8,
+  "standard": "PC.EXP.A.1",
+  "difficulty": 3,
+  "prompt": "A phone costs $\\$600$ new. It loses $25\\%$ of its value every year. What is it worth after $2$ years, in dollars?",
+  "answerType": "numeric",
+  "primaryAnswer": "337.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Losing $25\\%$ means keeping $75\\%$. Turn that into a decay factor.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Losing $25\\%$ means keeping $75\\%$. Turn that into a decay factor."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: a $\\$100$ item that loses $50\\%$ a year is worth $\\$50$ after one year and $\\$25$ after two. Same move — multiply by the keep-factor once per year."
+    },
+    {
+      "level": "guide",
+      "text": "$100\\% - 25\\% = 75\\% = 0.75$. Year 1: $600 \\times 0.75 = 450$."
+    },
+    {
+      "level": "reveal",
+      "text": "Year 2: $450 \\times 0.75 = 337.5$, so the phone is worth $\\$337.50$."
+    }
+  ],
+  "explanation": [
+    "Losing $25\\%$ means $75\\%$ stays, so the decay factor is $0.75$.",
+    "After year 1: $600 \\times 0.75 = 450$.",
+    "After year 2: $450 \\times 0.75 = 337.5$ dollars."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Subtract a quarter each year",
+      "steps": [
+        "A quarter of $600$ is $150$, so year 1 ends at $600 - 150 = 450$.",
+        "A quarter of $450$ is $112.50$, so year 2 ends at $450 - 112.50 = 337.50$.",
+        "The drop gets smaller each year because it is a percent of a smaller number."
+      ]
+    },
+    {
+      "title": "One power instead of two steps",
+      "steps": [
+        "Two years of the same factor is $0.75^2$.",
+        "$0.75 \\times 0.75 = 0.5625$.",
+        "$600 \\times 0.5625 = 337.5$ dollars."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "decay",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

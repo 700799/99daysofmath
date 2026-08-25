@@ -1,0 +1,57 @@
+{
+  "id": "PC.136",
+  "domain": "PC",
+  "unit": 14,
+  "orderInUnit": 6,
+  "standard": "PC.LIM.A.1",
+  "difficulty": 2,
+  "prompt": "For $f(x) = x^2$, find the average rate of change from $x = 1$ to $x = 4$.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the two heights first, then take rise over run.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the two heights first, then take rise over run."
+    },
+    {
+      "level": "guide",
+      "text": "$f(1) = 1$ and $f(4) = 16$, so the rise is $16 - 1 = 15$ and the run is $4 - 1 = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$15 \\div 3 = 5$."
+    }
+  ],
+  "explanation": [
+    "Average rate of change $= \\frac{f(4) - f(1)}{4 - 1}$.",
+    "$f(4) = 16$ and $f(1) = 1$.",
+    "$\\frac{16 - 1}{4 - 1} = \\frac{15}{3}$.",
+    "$= 5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw the connecting line",
+      "steps": [
+        "Plot (1, 1) and (4, 16) on the U-shaped graph of y = x².",
+        "Lay a ruler across those two points — that straight line is called a secant line.",
+        "Its slope, 15 over 3, is 5. Average rate of change is always the slope of the connecting line."
+      ]
+    },
+    {
+      "title": "Steeper and steeper",
+      "steps": [
+        "From x = 1 to x = 2, the rise is 3 over a run of 1: rate 3.",
+        "From x = 2 to x = 3 the rate is 5, and from x = 3 to x = 4 it is 7.",
+        "The three rates average to (3 + 5 + 7) ÷ 3 = 5 — the same answer, and it shows the curve steepening as you go right."
+      ]
+    }
+  ],
+  "tags": [
+    "rate-of-change",
+    "function"
+  ],
+  "estimatedSeconds": 55
+}

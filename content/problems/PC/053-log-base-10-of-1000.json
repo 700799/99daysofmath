@@ -1,0 +1,48 @@
+{
+  "id": "PC.053",
+  "domain": "PC",
+  "unit": 6,
+  "orderInUnit": 3,
+  "standard": "PC.LOG.A.1",
+  "difficulty": 1,
+  "prompt": "Evaluate $\\log_{10}(1000)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Ask: $10$ to what power gives $1000$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Ask: $10$ to what power gives $1000$?"
+    },
+    {
+      "level": "guide",
+      "text": "$10 \\times 10 \\times 10 = 1000$. How many tens did you use?"
+    },
+    {
+      "level": "reveal",
+      "text": "$10^3 = 1000$, so $\\log_{10}(1000) = 3$."
+    }
+  ],
+  "explanation": [
+    "Base $10$ logs ask how many tens are multiplied together.",
+    "$10^3 = 1000$.",
+    "So $\\log_{10}(1000) = 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the zeros",
+      "steps": [
+        "With base $10$, the answer is simply the number of zeros.",
+        "$1000$ has three zeros.",
+        "So $\\log_{10}(1000) = 3$. Check: $100$ has two zeros and $\\log_{10}(100) = 2$."
+      ]
+    }
+  ],
+  "tags": [
+    "logarithm",
+    "base-ten"
+  ],
+  "estimatedSeconds": 30
+}

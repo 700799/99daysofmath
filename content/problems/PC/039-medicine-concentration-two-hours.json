@@ -1,0 +1,54 @@
+{
+  "id": "PC.039",
+  "domain": "PC",
+  "unit": 4,
+  "orderInUnit": 9,
+  "standard": "PC.RAT.A.1",
+  "difficulty": 3,
+  "prompt": "The amount of medicine in the blood is $C(t) = \\frac{20t}{t^2 + 4}$ milligrams per liter after $t$ hours. What is $C(2)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $t = 2$ into the top AND the bottom separately.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $t = 2$ into the top AND the bottom separately."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $\\frac{10t}{t^2 + 1}$ at $t = 3$: top is 30, bottom is $9 + 1 = 10$, so the answer is 3. Same three steps here."
+    },
+    {
+      "level": "guide",
+      "text": "Top: $20 \\times 2 = 40$. Bottom: $2^2 + 4 = 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{40}{8} = 5$ milligrams per liter."
+    }
+  ],
+  "explanation": [
+    "Top: $20t = 20 \\times 2 = 40$.",
+    "Bottom: $t^2 + 4 = 4 + 4 = 8$.",
+    "$\\frac{40}{8} = 5$ mg per liter."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Watch the medicine fade",
+      "steps": [
+        "At $t = 1$: $\\frac{20}{5} = 4$ mg/L, climbing.",
+        "At $t = 2$: $\\frac{40}{8} = 5$ mg/L — the peak.",
+        "At $t = 6$: $\\frac{120}{40} = 3$ mg/L, fading. The bottom eventually grows faster, so the level slides back toward 0."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-functions",
+    "evaluate",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

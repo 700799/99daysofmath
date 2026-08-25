@@ -1,0 +1,60 @@
+{
+  "id": "PC.088",
+  "domain": "PC",
+  "unit": 9,
+  "orderInUnit": 8,
+  "standard": "PC.TRIG.A.2",
+  "difficulty": 3,
+  "prompt": "One of the exact-value angles: $\\sin 30^\\circ = \\frac{1}{n}$. What is $n$?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$\\sin 30^\\circ$ is the HEIGHT of the point at $30^\\circ$ on the unit circle. It is exactly half of the radius.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$\\sin 30^\\circ$ is the HEIGHT of the point at $30^\\circ$ on the unit circle. It is exactly half of the radius."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $\\sin 90^\\circ$: the point is $(0, 1)$, so the height is $1$. Now ask the same question at $30^\\circ$ — is that height bigger or smaller than $1$? It turns out to be exactly half."
+    },
+    {
+      "level": "guide",
+      "text": "Half of $1$ is $\\frac{1}{2}$, so $\\sin 30^\\circ = \\frac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "The denominator is $2$, so $n = 2$."
+    }
+  ],
+  "explanation": [
+    "The point at $30^\\circ$ on the unit circle is $\\left(\\frac{\\sqrt{3}}{2}, \\frac{1}{2}\\right)$.",
+    "Sine reads the height, which is $\\frac{1}{2}$ — exactly half the radius.",
+    "Written as $\\frac{1}{n}$, that makes $n = 2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The half-equilateral triangle",
+      "steps": [
+        "Draw an equilateral triangle with sides of length 1. Every angle is 60°.",
+        "Slice it down the middle. The half is a right triangle with a 30° angle, a long side of 1, and a short side of exactly 1/2 — because the slice cut a side of length 1 in half.",
+        "That short side is the height at 30°, so sin 30° = 1/2."
+      ]
+    },
+    {
+      "title": "Sanity-check the size",
+      "steps": [
+        "Sine is a height on a circle of radius 1, so it always sits between 0 and 1 in the top half.",
+        "30° is only a third of the way to the top (90°), so the height should be small. 1/2 = 0.5 fits; 1/3 or 1/4 would be too low for 30°."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "exact-values"
+  ],
+  "estimatedSeconds": 60
+}

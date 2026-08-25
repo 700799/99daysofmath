@@ -1,0 +1,53 @@
+{
+  "id": "PC.091",
+  "domain": "PC",
+  "unit": 10,
+  "orderInUnit": 1,
+  "standard": "PC.TRIG.B.1",
+  "difficulty": 1,
+  "prompt": "What is the AMPLITUDE of $y = 4\\sin(x)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The amplitude is the number multiplying the sine.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The amplitude is the number multiplying the sine."
+    },
+    {
+      "level": "guide",
+      "text": "In $y = a\\sin(x)$, the amplitude is $a$ — how far the wave swings from the middle."
+    },
+    {
+      "level": "reveal",
+      "text": "The amplitude is $4$."
+    }
+  ],
+  "explanation": [
+    "A sine graph is a WAVE that rises and falls forever around a middle level.",
+    "Amplitude is how far it swings above and below that middle, and it is the number in front of $\\sin$.",
+    "In $y = 4\\sin(x)$ that number is $4$, so the amplitude is $4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "From the highest and lowest points",
+      "steps": [
+        "Plain sin(x) rides between −1 and 1. Multiplying by 4 stretches it to between −4 and 4.",
+        "Amplitude is HALF the gap: (4 − (−4)) ÷ 2 = 8 ÷ 2 = 4."
+      ]
+    },
+    {
+      "title": "The jump-rope picture",
+      "steps": [
+        "Imagine a jump rope shaken up and down. The middle of the rope is the midline.",
+        "The amplitude is how far your hand lifts the rope above that middle — here, 4 units."
+      ]
+    }
+  ],
+  "tags": [
+    "amplitude"
+  ],
+  "estimatedSeconds": 30
+}
