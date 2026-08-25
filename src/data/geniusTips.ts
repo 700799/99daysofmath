@@ -69,6 +69,15 @@ export const GENIUS_TIPS: GeniusTip[] = [
   { text: 'Always sort the data before finding the median — the middle of a mess is meaningless.', domain: '6.SP' },
   { text: 'Box plot speed-read: the line in the box is the median, the box holds the middle half.', domain: '6.SP' },
   { text: 'Range tells you spread, not center: max − min in one subtraction.', domain: '6.SP' },
+  // Algebra 1
+  { text: 'Always CHECK an equation: plug your x back in. Ten seconds now beats a wrong answer forever.', domain: 'A1' },
+  { text: 'An equation is a balance scale — any move you make must hit BOTH sides.', domain: 'A1' },
+  { text: 'In y = mx + b, b is where you START and m is how you MOVE. Read lines like a story.', domain: 'A1' },
+  { text: 'Slope shortcut: down-hill lines are negative before you compute anything. Eyeball first!', domain: 'A1' },
+  { text: 'Flip the inequality sign ONLY when you multiply or divide by a negative — adding never flips it.', domain: 'A1' },
+  { text: 'x³ · x⁴ = x⁷ — multiplying powers ADDS the exponents. Count the copies!', domain: 'A1' },
+  { text: 'Factoring check: multiply your factors back out. If it does not rebuild the original, hunt again.', domain: 'A1' },
+  { text: 'x² = 25 has TWO answers: 5 and −5. Squares hide a mirror twin.', domain: 'A1' },
 ];
 
 function hashStr(s: string): number {

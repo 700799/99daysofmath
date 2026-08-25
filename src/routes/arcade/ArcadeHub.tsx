@@ -4,7 +4,7 @@ import { useProgress, ARCADE_UNITS, ARCADE_UNIT_LABELS } from '../../state/progr
 import { ARCADE_GAMES, PREMIUM_GAMES } from './shared';
 import { Mascot, type MascotKind } from './Mascots';
 
-const UNIT_MASCOT: Record<string, MascotKind> = { '6.RP': 'frog', '6.NS': 'robot', '6.EE': 'dragon', '6.G': 'unicorn', '6.SP': 'penguin', g5: 'bunny', mixed: 'pet' };
+const UNIT_MASCOT: Record<string, MascotKind> = { '6.RP': 'frog', '6.NS': 'robot', '6.EE': 'dragon', '6.G': 'unicorn', '6.SP': 'penguin', g5: 'bunny', a1: 'dragon', mixed: 'pet' };
 
 function todayISO(): string {
   const d = new Date();

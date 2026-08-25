@@ -147,7 +147,46 @@ function gStats(hard: boolean): Challenge {
   return { prompt: `What is the TOTAL of: ${data.join(', ')}?`, answer: sum };
 }
 
-export type ChallengeKind = 'word' | 'exponent' | 'factor' | 'ratio' | 'fraction' | 'geometry' | 'stats';
+function gAlgebra(hard: boolean): Challenge {
+  const r = Math.random();
+  if (!hard) {
+    if (r < 0.35) { const x = ri(2, 12); const a = ri(3, 15); return { prompt: `Solve for x:  x + ${a} = ${x + a}`, answer: x }; }
+    if (r < 0.65) { const x = ri(2, 9); const a = ri(2, 9); return { prompt: `Solve for x:  ${a}x = ${a * x}`, answer: x }; }
+    const x = ri(2, 9); const a = ri(2, 6); const b = ri(1, 12);
+    return { prompt: `Solve for x:  ${a}x + ${b} = ${a * x + b}`, answer: x };
+  }
+  if (r < 0.35) { const x = ri(2, 9); const a = ri(2, 6); const b = ri(1, 12); return { prompt: `Solve for x:  ${a}x − ${b} = ${a * x - b}`, answer: x }; }
+  if (r < 0.65) {
+    // variables on both sides: ax + b = cx + d, with a > c so x = (d − b)/(a − c)
+    const x = ri(2, 8); const c = ri(1, 4); const a = c + ri(1, 4); const b = ri(1, 9);
+    const d = (a - c) * x + b;
+    return { prompt: `Solve for x:  ${a}x + ${b} = ${c}x + ${d}`, answer: x };
+  }
+  const x = ri(1, 8); const inner = ri(1, 6); const a = ri(2, 5);
+  return { prompt: `Solve for x:  ${a}(x + ${inner}) = ${a * (x + inner)}`, answer: x };
+}
+
+function gLinear(hard: boolean): Challenge {
+  const r = Math.random();
+  if (r < 0.3) {
+    const m = ri(2, hard ? 9 : 6); const b = ri(1, hard ? 15 : 9); const x = ri(2, hard ? 9 : 6);
+    return { prompt: `If y = ${m}x + ${b}, what is y when x = ${x}?`, answer: m * x + b };
+  }
+  if (r < 0.55) {
+    const m = ri(2, hard ? 8 : 5); const k = ri(2, hard ? 9 : 6); const c = ri(1, 9);
+    return { prompt: `f(x) = ${m}x − ${c}. Find f(${k}).`, answer: m * k - c };
+  }
+  if (r < 0.8) {
+    // integer slope from two points
+    const x1 = ri(0, 4); const run = ri(1, hard ? 5 : 3); const m = ri(1, hard ? 7 : 5) * (hard && Math.random() < 0.4 ? -1 : 1);
+    const y1 = ri(0, 9); const x2 = x1 + run; const y2 = y1 + m * run;
+    return { prompt: `Find the SLOPE through (${x1}, ${y1}) and (${x2}, ${y2}).`, answer: m };
+  }
+  const fee = ri(2, 6); const per = ri(2, hard ? 8 : 5); const h = ri(2, hard ? 8 : 5);
+  return { prompt: `A rental costs $${fee} to start plus $${per} per hour. How much for ${h} hours?`, answer: fee + per * h };
+}
+
+export type ChallengeKind = 'word' | 'exponent' | 'factor' | 'ratio' | 'fraction' | 'geometry' | 'stats' | 'algebra' | 'linear';
 const GENERATORS: Record<ChallengeKind, (hard: boolean) => Challenge> = {
   word: gWord,
   exponent: gExponent,
@@ -156,6 +195,8 @@ const GENERATORS: Record<ChallengeKind, (hard: boolean) => Challenge> = {
   fraction: gFraction,
   geometry: gGeometry,
   stats: gStats,
+  algebra: gAlgebra,
+  linear: gLinear,
 };
 
 /** Generate a challenge restricted to the given kinds, scaled by level (1–5).
@@ -176,7 +217,7 @@ const UNIT_KINDS: Record<ArcadeUnit, ChallengeKind[]> = {
   '6.G': ['geometry'],
   '6.SP': ['stats'],
   g5: ['word', 'fraction', 'factor'], // gentler Grade-5 review pool
-  a1: ['exponent', 'word'], // interim pool — dedicated algebra generators land next
+  a1: ['algebra', 'linear'], // solve-for-x, slope, y = mx + b, f(x)
   mixed: ['word', 'exponent', 'factor', 'ratio', 'fraction', 'geometry', 'stats'],
 };
 
