@@ -37,9 +37,9 @@ const HOME_JSON_LD = {
 
 export function Home() {
   useSeo({
-    title: 'Math10x — Free 5th & 6th Grade Math: Video Lessons, Practice & an Arcade',
+    title: 'Math10x — Free Math for Grades 5-6 Plus Algebra 1 & Precalculus',
     description:
-      'Math10x makes 5th and 6th grade math click: clear animated video lessons, worked examples, and practice — plus an arcade of games kids unlock by learning.',
+      'Math10x makes math click for grades 5-6 and beyond: clear lessons, worked examples, and practice across ratios, fractions, geometry, statistics, Algebra 1 and Precalculus — plus an arcade of games kids unlock by learning.',
     canonicalPath: '/',
     jsonLd: HOME_JSON_LD,
   });

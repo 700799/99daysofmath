@@ -47,7 +47,7 @@ export function Stories() {
   useSeo({
     title: 'Math Stories — The History & Wonder of Math | Math10x',
     description:
-      'Illustrated math stories that bring 5th & 6th grade concepts to life — the origins and real-world magic behind ratios, fractions, geometry, and more.',
+      'Illustrated math stories that bring math concepts to life — the origins and real-world magic behind ratios, fractions, geometry, and more.',
     canonicalPath: '/stories',
   });
 

@@ -48,14 +48,15 @@ export function Unit() {
   const u = parseInt(unit, 10);
 
   const seoLesson = getLesson(d, u);
-  const seoCourse = d === 'A1' ? 'Algebra 1' : `${d.startsWith('5.') ? '5th' : '6th'} Grade Math`;
-  const seoCourseProse = d === 'A1' ? 'Algebra 1' : `${d.startsWith('5.') ? '5th' : '6th'}-grade math`;
+  const courseName: Partial<Record<Domain, string>> = { A1: 'Algebra 1', PC: 'Precalculus' };
+  const seoCourse = courseName[d] ?? `${d.startsWith('5.') ? '5th' : '6th'} Grade Math`;
+  const seoCourseProse = courseName[d] ?? `${d.startsWith('5.') ? '5th' : '6th'}-grade math`;
   useSeo({
     title: seoLesson
-      ? `${seoLesson.title} — ${seoCourse}${d === 'A1' ? '' : ` (${DOMAIN_LABELS[d]})`} | Math10x`
+      ? `${seoLesson.title} — ${seoCourse}${courseName[d] ? '' : ` (${DOMAIN_LABELS[d]})`} | Math10x`
       : `${DOMAIN_LABELS[d]} lesson | Math10x`,
     description: seoLesson
-      ? `${seoLesson.objective ?? seoLesson.title}. A free ${seoCourseProse} lesson with ${d === 'A1' ? 'clear worked examples' : 'an animated video, worked examples,'} and practice on Math10x.`
+      ? `${seoLesson.objective ?? seoLesson.title}. A free ${seoCourseProse} lesson with ${courseName[d] ? 'clear worked examples' : 'an animated video, worked examples,'} and practice on Math10x.`
       : `A free ${seoCourseProse} lesson on Math10x.`,
     canonicalPath: `/unit/${d}/${u}`,
     jsonLd: seoLesson

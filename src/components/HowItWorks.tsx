@@ -43,7 +43,7 @@ export function HowItWorks() {
         How Math10x works
       </h2>
       <p className="mt-1.5 text-sm sm:text-base text-slate-600">
-        Math10x is a free way for 5th and 6th graders to learn math — animated video
+        Math10x is a free way for kids to learn math, from grade-5 foundations through Algebra 1 and Precalculus — animated video
         lessons, worked examples, and adaptive practice for ratios, fractions, decimals,
         geometry, expressions, and statistics — with an arcade kids unlock by learning.
       </p>

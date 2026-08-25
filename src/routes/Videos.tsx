@@ -12,9 +12,9 @@ import { useSeo } from '../lib/seo';
 export function Videos() {
   const [openLesson, setOpenLesson] = useState<Lesson | null>(null);
   useSeo({
-    title: 'Math Video Lessons — 5th & 6th Grade | Math10x',
+    title: 'Math Video Lessons — Grades 5-6 & Beyond | Math10x',
     description:
-      'Watch free animated math video lessons for 5th and 6th grade: ratios, fractions, decimals, geometry, expressions, and statistics — each with worked examples and practice.',
+      'Watch free animated math video lessons for grades 5-6: ratios, fractions, decimals, geometry, expressions, and statistics — each with worked examples and practice.',
     canonicalPath: '/videos',
   });
 
