@@ -1,0 +1,54 @@
+{
+  "id": "A1.103",
+  "domain": "A1",
+  "unit": 11,
+  "orderInUnit": 3,
+  "standard": "A1.EXPO.A.2",
+  "difficulty": 1,
+  "prompt": "A dish starts with 5 bacteria, and the count doubles every hour. How many bacteria after 3 hours?",
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Doubling is exponential: multiply by 2 each hour, three times.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Doubling is exponential: multiply by 2 each hour, three times."
+    },
+    {
+      "level": "guide",
+      "text": "Hour 1: $5 \\times 2 = 10$. Hour 2: $10 \\times 2 = 20$."
+    },
+    {
+      "level": "reveal",
+      "text": "Hour 3: $20 \\times 2 = 40$ bacteria."
+    }
+  ],
+  "explanation": [
+    "Exponential growth multiplies by the same factor each step: here, $\\times 2$ every hour.",
+    "Formula: $y = 5 \\cdot 2^x$. At $x = 3$: $5 \\cdot 2^3 = 5 \\cdot 8$.",
+    "That is 40 bacteria."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Hour-by-hour table",
+      "steps": [
+        "Hour 0: 5. Hour 1: 10. Hour 2: 20. Hour 3: 40.",
+        "Each row doubles the last — after 3 hours, 40 bacteria."
+      ]
+    },
+    {
+      "title": "Compare with adding",
+      "steps": [
+        "If the dish ADDED 5 each hour (linear), 3 hours would give 5 + 15 = 20.",
+        "Doubling is faster: 5 × 8 = 40 — exponential growth pulls ahead."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-growth",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

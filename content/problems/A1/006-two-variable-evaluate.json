@@ -1,0 +1,47 @@
+{
+  "id": "A1.006",
+  "domain": "A1",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "A1.EXP.A.1",
+  "difficulty": 2,
+  "prompt": "If $x = 3$ and $y = 4$, what is the value of $2x + y$?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two mystery boxes this time: put $3$ in for $x$ and $4$ in for $y$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two mystery boxes this time: put $3$ in for $x$ and $4$ in for $y$."
+    },
+    {
+      "level": "guide",
+      "text": "$2x = 2 \\times 3 = 6$. Now add $y$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 + 4 = 10$."
+    }
+  ],
+  "explanation": [
+    "Substitute both values: $2(3) + 4$.",
+    "Multiply first: $2 \\times 3 = 6$.",
+    "Add: $6 + 4 = 10$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As a shopping story",
+      "steps": [
+        "Buy 2 pencils at $\\$3$ each and 1 eraser at $\\$4$.",
+        "Pencils cost $2 \\times 3 = 6$ dollars, and the eraser adds 4 more: $\\$10$ total."
+      ]
+    }
+  ],
+  "tags": [
+    "evaluate",
+    "substitution"
+  ],
+  "estimatedSeconds": 35
+}

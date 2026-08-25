@@ -1,0 +1,58 @@
+{
+  "id": "A1.010",
+  "domain": "A1",
+  "unit": 1,
+  "orderInUnit": 10,
+  "standard": "A1.EXP.A.1",
+  "difficulty": 3,
+  "prompt": "In a video game you earn $50$ coins for every level you beat, plus a one-time $20$-coin welcome bonus. Write an expression for your total coins after beating $L$ levels.",
+  "answerType": "expression",
+  "primaryAnswer": "50L + 20",
+  "alternativeAnswers": [
+    "50L+20",
+    "20 + 50L",
+    "20+50L",
+    "50l + 20",
+    "50l+20"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "One part repeats every level; one part happens only once.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "One part repeats every level; one part happens only once."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Shrink the story: $2$ levels at $50$ coins is $100$, plus the one-time $20$ = $120$. The welcome bonus is added ONCE, never per level."
+    },
+    {
+      "level": "guide",
+      "text": "$50$ coins per level for $L$ levels is $50L$. What do you add for the one-time bonus?"
+    },
+    {
+      "level": "reveal",
+      "text": "Total coins: $50L + 20$."
+    }
+  ],
+  "explanation": [
+    "The repeating part: $50$ coins each level, $L$ times, gives $50L$.",
+    "The one-time part: the $20$-coin bonus is added once.",
+    "Total: $50L + 20$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check it with small numbers",
+      "steps": [
+        "Beat 1 level: $50 + 20 = 70$ coins. Beat 2 levels: $100 + 20 = 120$ coins.",
+        "The pattern is always (50 per level) plus (20 once): $50L + 20$ matches both checks."
+      ]
+    }
+  ],
+  "tags": [
+    "translate",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

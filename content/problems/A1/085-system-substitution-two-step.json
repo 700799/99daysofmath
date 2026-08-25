@@ -1,0 +1,54 @@
+{
+  "id": "A1.085",
+  "domain": "A1",
+  "unit": 9,
+  "orderInUnit": 5,
+  "standard": "A1.SYS.A.1",
+  "difficulty": 2,
+  "prompt": "Solve by substitution: $y = 2x - 1$ and $3x + y = 14$. What is $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Swap in what $y$ equals: replace $y$ in $3x + y = 14$ with $2x - 1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Swap in what $y$ equals: replace $y$ in $3x + y = 14$ with $2x - 1$."
+    },
+    {
+      "level": "guide",
+      "text": "$3x + 2x - 1 = 14$ becomes $5x - 1 = 14$, so $5x = 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 15 \\div 5 = 3$. (And $y = 2 \\times 3 - 1 = 5$.)"
+    }
+  ],
+  "explanation": [
+    "The first rule hands you $y$ on a plate: $y = 2x - 1$. Swap it into the second rule.",
+    "$3x + (2x - 1) = 14$ combines to $5x - 1 = 14$.",
+    "Add 1: $5x = 15$, so $x = 3$. Check: $9 + 5 = 14$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Guess and check with a table",
+      "steps": [
+        "Try x = 2: y = 3 and 3(2) + 3 = 9. Too small. Try x = 4: y = 7 and 12 + 7 = 19. Too big.",
+        "Try x = 3: y = 5 and 9 + 5 = 14. That is it — x = 3."
+      ]
+    },
+    {
+      "title": "Picture the swap",
+      "steps": [
+        "Think of y as a labeled box. The label says \"2x − 1 lives inside.\"",
+        "The second equation 3x + [box] = 14 becomes 3x + 2x − 1 = 14, which is 5 copies of x minus 1. Five copies make 15, so each copy is 3."
+      ]
+    }
+  ],
+  "tags": [
+    "system-of-equations",
+    "substitution"
+  ],
+  "estimatedSeconds": 70
+}

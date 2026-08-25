@@ -1,0 +1,54 @@
+{
+  "id": "A1.091",
+  "domain": "A1",
+  "unit": 10,
+  "orderInUnit": 1,
+  "standard": "A1.EXPO.A.1",
+  "difficulty": 1,
+  "prompt": "You fold a sheet of paper 5 times. Each fold doubles the layers, so you get $2^5$ layers. How many layers is that?",
+  "answerType": "numeric",
+  "primaryAnswer": "32",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$2^5$ means five copies of 2 multiplied: $2 \\times 2 \\times 2 \\times 2 \\times 2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$2^5$ means five copies of 2 multiplied: $2 \\times 2 \\times 2 \\times 2 \\times 2$."
+    },
+    {
+      "level": "guide",
+      "text": "Double step by step: 2, 4, 8, 16, ..."
+    },
+    {
+      "level": "reveal",
+      "text": "One more double: $16 \\times 2 = 32$ layers."
+    }
+  ],
+  "explanation": [
+    "An exponent counts the copies: $2^5 = 2 \\times 2 \\times 2 \\times 2 \\times 2$.",
+    "Double five times: 2, 4, 8, 16, 32.",
+    "After 5 folds you have 32 layers."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Fold-by-fold table",
+      "steps": [
+        "Fold 1: 2 layers. Fold 2: 4. Fold 3: 8. Fold 4: 16. Fold 5: 32.",
+        "Each row doubles the one before, so 5 folds give 32 layers."
+      ]
+    },
+    {
+      "title": "Pair the copies",
+      "steps": [
+        "Group 2⁵ as (2 × 2) × (2 × 2) × 2 = 4 × 4 × 2.",
+        "4 × 4 = 16, and 16 × 2 = 32."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

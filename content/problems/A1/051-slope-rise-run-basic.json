@@ -1,0 +1,47 @@
+{
+  "id": "A1.051",
+  "domain": "A1",
+  "unit": 6,
+  "orderInUnit": 1,
+  "standard": "A1.LIN.A.1",
+  "difficulty": 1,
+  "prompt": "A staircase rises $6$ units while running $2$ units across. What is the slope (rise over run)?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Slope = rise $\\div$ run.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Slope = rise $\\div$ run."
+    },
+    {
+      "level": "guide",
+      "text": "Rise is $6$, run is $2$: compute $6 \\div 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 \\div 2 = 3$."
+    }
+  ],
+  "explanation": [
+    "Slope is rise over run: $\\frac{6}{2}$.",
+    "$6 \\div 2 = 3$.",
+    "For every $1$ step across, the stairs climb $3$ up."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Shrink the staircase",
+      "steps": [
+        "$6$ up over $2$ across is the same steepness as $3$ up over $1$ across.",
+        "The \"up per one across\" number IS the slope: $3$."
+      ]
+    }
+  ],
+  "tags": [
+    "slope",
+    "rise-over-run"
+  ],
+  "estimatedSeconds": 25
+}

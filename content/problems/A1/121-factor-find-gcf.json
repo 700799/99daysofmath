@@ -1,0 +1,55 @@
+{
+  "id": "A1.121",
+  "domain": "A1",
+  "unit": 13,
+  "orderInUnit": 1,
+  "standard": "A1.POLY.A.2",
+  "difficulty": 1,
+  "prompt": "The two terms of $4x + 8$ share a greatest common factor. What is it?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "What is the biggest number that divides BOTH $4$ and $8$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "What is the biggest number that divides BOTH $4$ and $8$?"
+    },
+    {
+      "level": "guide",
+      "text": "$4 = 4 \\times 1$ and $8 = 4 \\times 2$ — both terms hold a $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "The GCF is $4$."
+    }
+  ],
+  "explanation": [
+    "List what each term shares.",
+    "$4x = 4 \\times x$ and $8 = 4 \\times 2$.",
+    "The biggest shared factor is $4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Equal gift bags",
+      "steps": [
+        "You have 4 pencils and 8 erasers to split into identical bags with nothing left over.",
+        "The most bags you can make is 4 — each bag gets 1 pencil (an x) and 2 erasers.",
+        "That bag count IS the GCF: 4."
+      ]
+    },
+    {
+      "title": "Factor lists",
+      "steps": [
+        "Factors of 4: 1, 2, 4. Factors of 8: 1, 2, 4, 8.",
+        "The largest number on both lists is 4."
+      ]
+    }
+  ],
+  "tags": [
+    "factoring",
+    "gcf"
+  ],
+  "estimatedSeconds": 25
+}

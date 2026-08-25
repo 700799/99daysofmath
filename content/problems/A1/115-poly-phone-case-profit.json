@@ -1,0 +1,61 @@
+{
+  "id": "A1.115",
+  "domain": "A1",
+  "unit": 12,
+  "orderInUnit": 5,
+  "standard": "A1.POLY.A.1",
+  "difficulty": 2,
+  "prompt": "Your phone case business brings in revenue of $3x^2 + 5x$ dollars and pays costs of $x^2 + 2x$ dollars. Write the profit: revenue minus cost.",
+  "answerType": "expression",
+  "primaryAnswer": "2x^2 + 3x",
+  "alternativeAnswers": [
+    "2x^2+3x",
+    "2x² + 3x",
+    "2x²+3x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Profit means money in minus money out: $(3x^2 + 5x) - (x^2 + 2x)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Profit means money in minus money out: $(3x^2 + 5x) - (x^2 + 2x)$."
+    },
+    {
+      "level": "guide",
+      "text": "The minus distributes: $3x^2 + 5x - x^2 - 2x$. Now match $x^2$ with $x^2$, and $x$ with $x$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3x^2 - x^2 = 2x^2$ and $5x - 2x = 3x$. Profit: $2x^2 + 3x$."
+    }
+  ],
+  "explanation": [
+    "Profit = revenue $-$ cost = $(3x^2 + 5x) - (x^2 + 2x)$.",
+    "Distribute the minus: $3x^2 + 5x - x^2 - 2x$.",
+    "Combine like terms: $3x^2 - x^2 = 2x^2$, $5x - 2x = 3x$.",
+    "Profit: $2x^2 + 3x$ dollars."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two sticker piles",
+      "steps": [
+        "x²-terms are one kind of sticker, x-terms are another — never mix the piles.",
+        "x² pile: 3 minus 1 leaves 2, so 2x². x pile: 5 minus 2 leaves 3, so 3x.",
+        "Profit: 2x² + 3x."
+      ]
+    },
+    {
+      "title": "Try a sales number",
+      "steps": [
+        "Say x = 10 cases. Revenue: 3(100) + 50 = 350 dollars. Cost: 100 + 20 = 120 dollars.",
+        "Profit: 350 − 120 = 230. Check the formula: 2(100) + 3(10) = 230. It works."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomial",
+    "subtraction",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,54 @@
+{
+  "id": "A1.039",
+  "domain": "A1",
+  "unit": 4,
+  "orderInUnit": 9,
+  "standard": "A1.INEQ.A.1",
+  "difficulty": 3,
+  "prompt": "A bus holds at most $40$ students. $12$ students are already aboard, and the rest arrive in groups of $4$. Using $12 + 4g \\le 40$, what is the greatest number of whole groups $g$ that can still board? Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Subtract the $12$ students already aboard from both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Subtract the $12$ students already aboard from both sides."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a smaller bus: if it holds $20$ and $12$ are aboard, only $8$ seats remain. Find the leftover seats first, then split them into groups."
+    },
+    {
+      "level": "guide",
+      "text": "$4g \\le 28$. Divide both sides by $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$g \\le 7$, so at most $7$ groups can board."
+    }
+  ],
+  "explanation": [
+    "Subtract 12 from both sides: $4g \\le 28$.",
+    "Divide by 4: $g \\le 7$.",
+    "The greatest whole number of groups is 7. Check: $12 + 4(7) = 40$ students — exactly full, and \"at most 40\" allows it. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the empty seats",
+      "steps": [
+        "The bus has $40 - 12 = 28$ empty seats.",
+        "Each group fills 4 seats, so $28 \\div 4 = 7$ groups fit exactly.",
+        "An 8th group would need 4 more seats than the bus has."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "two-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 65
+}

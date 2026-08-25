@@ -1,0 +1,56 @@
+{
+  "id": "A1.137",
+  "domain": "A1",
+  "unit": 14,
+  "orderInUnit": 7,
+  "standard": "A1.QUAD.A.1",
+  "difficulty": 2,
+  "prompt": "A water fountain jet follows $h = 20t - 5t^2$, where $h$ is the water's height in meters after $t$ seconds. For what positive $t$ does the water land back at $h = 0$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Set $h = 0$ and pull out the GCF: $20t - 5t^2 = 5t(4 - t)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Set $h = 0$ and pull out the GCF: $20t - 5t^2 = 5t(4 - t)$."
+    },
+    {
+      "level": "guide",
+      "text": "Zero-product rule on $5t(4 - t) = 0$: either $t = 0$ or $4 - t = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$t = 0$ is the launch; the landing is $t = 4$ seconds."
+    }
+  ],
+  "explanation": [
+    "Set the height to zero: $20t - 5t^2 = 0$.",
+    "Factor out the GCF: $5t(4 - t) = 0$.",
+    "Zero-product rule: $t = 0$ or $t = 4$.",
+    "$t = 0$ is when the water leaves the spout; it lands at $t = 4$ seconds."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Watch the arc in a table",
+      "steps": [
+        "t = 0: h = 0 (launch). t = 1: h = 15. t = 2: h = 20 (top). t = 3: h = 15. t = 4: h = 0.",
+        "The water rises, peaks, and mirrors back down — landing at t = 4."
+      ]
+    },
+    {
+      "title": "Symmetry of the arc",
+      "steps": [
+        "A parabola's arc is symmetric, like a rainbow: up-time equals down-time.",
+        "The peak is at t = 2, so the landing is the mirror of the launch: 2 + 2 = 4 seconds."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "zero-product",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

@@ -1,0 +1,54 @@
+{
+  "id": "A1.093",
+  "domain": "A1",
+  "unit": 10,
+  "orderInUnit": 3,
+  "standard": "A1.EXPO.A.1",
+  "difficulty": 1,
+  "prompt": "Evaluate: $5^3$.",
+  "answerType": "numeric",
+  "primaryAnswer": "125",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$5^3$ means three copies of 5 multiplied: $5 \\times 5 \\times 5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$5^3$ means three copies of 5 multiplied: $5 \\times 5 \\times 5$."
+    },
+    {
+      "level": "guide",
+      "text": "First pair: $5 \\times 5 = 25$. Now multiply by the last 5."
+    },
+    {
+      "level": "reveal",
+      "text": "$25 \\times 5 = 125$."
+    }
+  ],
+  "explanation": [
+    "The exponent counts copies: $5^3 = 5 \\times 5 \\times 5$.",
+    "Step by step: $5 \\times 5 = 25$, then $25 \\times 5 = 125$.",
+    "$5^3 = 125$ — not $5 \\times 3 = 15$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture a cube",
+      "steps": [
+        "5³ counts the little blocks in a 5-by-5-by-5 cube.",
+        "One layer holds 5 × 5 = 25 blocks, and there are 5 layers: 25 × 5 = 125."
+      ]
+    },
+    {
+      "title": "Break 25 apart",
+      "steps": [
+        "25 × 5 is the same as (20 + 5) × 5.",
+        "20 × 5 = 100 and 5 × 5 = 25, so the total is 100 + 25 = 125."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "evaluate"
+  ],
+  "estimatedSeconds": 30
+}

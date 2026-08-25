@@ -1,0 +1,56 @@
+{
+  "id": "A1.104",
+  "domain": "A1",
+  "unit": 11,
+  "orderInUnit": 4,
+  "standard": "A1.EXPO.A.2",
+  "difficulty": 2,
+  "prompt": "A quantity grows by $10\\%$ each year. What growth factor do you multiply by each year? (Write it as a decimal.)",
+  "answerType": "numeric",
+  "primaryAnswer": "1.10",
+  "alternativeAnswers": [
+    "1.1"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Growing 10% means you keep ALL of it (100%) plus 10% more.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Growing 10% means you keep ALL of it (100%) plus 10% more."
+    },
+    {
+      "level": "guide",
+      "text": "$100\\% + 10\\% = 110\\%$. Turn that percent into a decimal."
+    },
+    {
+      "level": "reveal",
+      "text": "$110\\% = 1.10$. Multiply by 1.10 each year."
+    }
+  ],
+  "explanation": [
+    "\"Up 10%\" means the new amount is 110% of the old one.",
+    "As a decimal, $110\\% = 1.10$.",
+    "So each year you multiply by the growth factor 1.10."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test it on $100",
+      "steps": [
+        "Start with $100. Growing 10% adds $10, giving $110.",
+        "What times 100 gives 110? 110 ÷ 100 = 1.10 — that is the factor."
+      ]
+    },
+    {
+      "title": "Keep-plus-gain picture",
+      "steps": [
+        "Picture the amount as a full bar (the 1) plus a small extra slice (the 0.10).",
+        "Keep + gain = 1 + 0.10 = 1.10 per year."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-growth",
+    "percent"
+  ],
+  "estimatedSeconds": 40
+}

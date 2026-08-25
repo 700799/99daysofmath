@@ -1,0 +1,48 @@
+{
+  "id": "A1.025",
+  "domain": "A1",
+  "unit": 3,
+  "orderInUnit": 5,
+  "standard": "A1.EQ.A.2",
+  "difficulty": 2,
+  "prompt": "You hand $3$ snacks to every person at a table of $g$ guests plus $4$ helpers, using $33$ snacks in all. Solve $3(g + 4) = 33$ to find the number of guests $g$. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Distribute: the $3$ snacks go to EVERYONE inside the parentheses — guests AND helpers.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Distribute: the $3$ snacks go to EVERYONE inside the parentheses — guests AND helpers."
+    },
+    {
+      "level": "guide",
+      "text": "$3g + 12 = 33$. Subtract $12$ from both sides."
+    },
+    {
+      "level": "reveal",
+      "text": "$3g = 21$, so $g = 7$ guests."
+    }
+  ],
+  "explanation": [
+    "Distribute the 3: $3g + 12 = 33$.",
+    "Subtract 12: $3g = 21$.",
+    "Divide by 3: $g = 7$. Check: $3(7 + 4) = 3(11) = 33$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count heads first",
+      "steps": [
+        "33 snacks at 3 per person means $33 \\div 3 = 11$ people got snacks.",
+        "4 of them are helpers, so $11 - 4 = 7$ are guests."
+      ]
+    }
+  ],
+  "tags": [
+    "distribute",
+    "multi-step-equation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

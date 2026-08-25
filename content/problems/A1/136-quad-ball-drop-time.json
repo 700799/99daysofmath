@@ -1,0 +1,58 @@
+{
+  "id": "A1.136",
+  "domain": "A1",
+  "unit": 14,
+  "orderInUnit": 6,
+  "standard": "A1.QUAD.A.1",
+  "difficulty": 2,
+  "prompt": "A ball is dropped from a balcony. Its height in meters after $t$ seconds is $h = 45 - 5t^2$. After how many seconds does it hit the ground ($h = 0$)?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Hitting the ground means $h = 0$: solve $45 - 5t^2 = 0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Hitting the ground means $h = 0$: solve $45 - 5t^2 = 0$."
+    },
+    {
+      "level": "guide",
+      "text": "Move and divide: $5t^2 = 45$, so $t^2 = 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$t^2 = 9$ gives $t = 3$ (time can't be negative). It lands after $3$ seconds."
+    }
+  ],
+  "explanation": [
+    "Set the height to zero: $45 - 5t^2 = 0$.",
+    "Add $5t^2$ to both sides: $45 = 5t^2$.",
+    "Divide by 5: $t^2 = 9$, so $t = 3$ or $t = -3$.",
+    "Time must be positive: the ball lands after $3$ seconds."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Second-by-second table",
+      "steps": [
+        "t = 0: h = 45. t = 1: h = 45 − 5 = 40. t = 2: h = 45 − 20 = 25.",
+        "t = 3: h = 45 − 45 = 0 — the ball reaches the ground at 3 seconds.",
+        "Notice it falls faster each second: that is the parabola at work."
+      ]
+    },
+    {
+      "title": "Two roots, one real landing",
+      "steps": [
+        "t² = 9 has two answers, 3 and −3 — every square does.",
+        "But t = −3 would mean 3 seconds BEFORE the drop, which makes no sense here.",
+        "Keep the positive root: 3 seconds."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "projectile",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

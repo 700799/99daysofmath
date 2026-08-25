@@ -1,0 +1,51 @@
+{
+  "id": "A1.034",
+  "domain": "A1",
+  "unit": 4,
+  "orderInUnit": 4,
+  "standard": "A1.INEQ.A.1",
+  "difficulty": 2,
+  "prompt": "Solve the inequality $2x + 1 < 9$. Write your answer like \"x < 4\".",
+  "answerType": "short-text",
+  "primaryAnswer": "x < 4",
+  "alternativeAnswers": [
+    "x<4",
+    "4 > x",
+    "4>x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Two steps, same as an equation: subtract $1$ from both sides first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two steps, same as an equation: subtract $1$ from both sides first."
+    },
+    {
+      "level": "guide",
+      "text": "$2x < 8$. Divide both sides by $2$ — dividing by a POSITIVE keeps the sign as is."
+    },
+    {
+      "level": "reveal",
+      "text": "$x < 4$."
+    }
+  ],
+  "explanation": [
+    "Subtract 1 from both sides: $2x < 8$.",
+    "Divide by 2 (positive, so no flip): $x < 4$.",
+    "Check: $x = 3$ gives $2(3) + 1 = 7 < 9$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test numbers like a detective",
+      "steps": [
+        "Try $x = 4$: $2(4) + 1 = 9$, and $9 < 9$ is FALSE — so 4 is out.",
+        "Try $x = 3$: $7 < 9$ is true. Everything below 4 works: $x < 4$."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "two-step"
+  ],
+  "estimatedSeconds": 45
+}

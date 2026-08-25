@@ -1,0 +1,54 @@
+{
+  "id": "A1.083",
+  "domain": "A1",
+  "unit": 9,
+  "orderInUnit": 3,
+  "standard": "A1.SYS.A.1",
+  "difficulty": 1,
+  "prompt": "A shelter has 12 pets total, all cats and dogs. There are 4 more cats than dogs. How many cats are there?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Write two rules: $c + d = 12$ and $c = d + 4$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Write two rules: $c + d = 12$ and $c = d + 4$."
+    },
+    {
+      "level": "guide",
+      "text": "Swap in what $c$ equals: $(d + 4) + d = 12$, so $2d + 4 = 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2d = 8$, so $d = 4$ dogs and $c = 4 + 4 = 8$ cats."
+    }
+  ],
+  "explanation": [
+    "Two rules must both be true: cats plus dogs is 12, and cats are 4 more than dogs.",
+    "Substitute $c = d + 4$ into $c + d = 12$: $2d + 4 = 12$, so $d = 4$.",
+    "Cats: $c = 4 + 4 = 8$. Check: $8 + 4 = 12$ pets. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Share it out evenly first",
+      "steps": [
+        "Split 12 pets evenly: 6 cats and 6 dogs. But cats need to be 4 MORE than dogs.",
+        "Move 2 pets from the dog pile to the cat pile: 8 cats and 4 dogs. Now the gap is 4. Cats = 8."
+      ]
+    },
+    {
+      "title": "Take away the extra",
+      "steps": [
+        "Set the 4 extra cats aside. The remaining 12 − 4 = 8 pets split evenly: 4 cats and 4 dogs.",
+        "Give the 4 extras back to the cats: 4 + 4 = 8 cats."
+      ]
+    }
+  ],
+  "tags": [
+    "system-of-equations",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

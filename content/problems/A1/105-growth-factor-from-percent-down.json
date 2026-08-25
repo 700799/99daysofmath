@@ -1,0 +1,57 @@
+{
+  "id": "A1.105",
+  "domain": "A1",
+  "unit": 11,
+  "orderInUnit": 5,
+  "standard": "A1.EXPO.A.2",
+  "difficulty": 2,
+  "prompt": "A quantity shrinks by $20\\%$ each year. What factor do you multiply by each year? (Write it as a decimal.)",
+  "answerType": "numeric",
+  "primaryAnswer": "0.80",
+  "alternativeAnswers": [
+    "0.8",
+    ".8"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Losing 20% means you KEEP the rest. What percent is left?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Losing 20% means you KEEP the rest. What percent is left?"
+    },
+    {
+      "level": "guide",
+      "text": "$100\\% - 20\\% = 80\\%$. Turn that into a decimal."
+    },
+    {
+      "level": "reveal",
+      "text": "$80\\% = 0.80$. Multiply by 0.80 each year."
+    }
+  ],
+  "explanation": [
+    "\"Down 20%\" means you keep $100\\% - 20\\% = 80\\%$ of the amount.",
+    "As a decimal, $80\\% = 0.80$.",
+    "So each year you multiply by 0.80. (Never multiply by 0.20 — that is what you LOSE.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test it on $100",
+      "steps": [
+        "Start with $100. Losing 20% takes away $20, leaving $80.",
+        "80 ÷ 100 = 0.80, so the yearly factor is 0.80."
+      ]
+    },
+    {
+      "title": "Pizza picture",
+      "steps": [
+        "Cut the amount into 5 equal slices. Losing 20% means one slice disappears.",
+        "Four of five slices remain: 4/5 = 0.80 of the amount each year."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-decay",
+    "percent"
+  ],
+  "estimatedSeconds": 45
+}

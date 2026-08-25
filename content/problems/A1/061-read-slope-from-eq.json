@@ -1,0 +1,47 @@
+{
+  "id": "A1.061",
+  "domain": "A1",
+  "unit": 7,
+  "orderInUnit": 1,
+  "standard": "A1.LIN.A.2",
+  "difficulty": 1,
+  "prompt": "In the equation $y = 5x + 2$, what is the slope?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "In $y = mx + b$, the slope $m$ is the number MULTIPLYING $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "In $y = mx + b$, the slope $m$ is the number MULTIPLYING $x$."
+    },
+    {
+      "level": "guide",
+      "text": "What number sits right in front of $x$ in $5x + 2$?"
+    },
+    {
+      "level": "reveal",
+      "text": "The slope is $5$."
+    }
+  ],
+  "explanation": [
+    "Match $y = 5x + 2$ to $y = mx + b$.",
+    "The number multiplying $x$ is $m = 5$ — how you MOVE.",
+    "The $+2$ is $b$, where you START — not the slope."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test two inputs",
+      "steps": [
+        "At $x = 0$, $y = 2$; at $x = 1$, $y = 7$.",
+        "One step across made $y$ jump by $5$ — that jump is the slope."
+      ]
+    }
+  ],
+  "tags": [
+    "slope-intercept",
+    "read-equation"
+  ],
+  "estimatedSeconds": 25
+}

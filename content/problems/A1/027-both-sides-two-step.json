@@ -1,0 +1,48 @@
+{
+  "id": "A1.027",
+  "domain": "A1",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "A1.EQ.A.2",
+  "difficulty": 2,
+  "prompt": "Solve for $x$: $7x - 4 = 3x + 16$. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Move all the $x$'s to one team first: subtract $3x$ from both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Move all the $x$'s to one team first: subtract $3x$ from both sides."
+    },
+    {
+      "level": "guide",
+      "text": "$4x - 4 = 16$. Now add $4$ to both sides."
+    },
+    {
+      "level": "reveal",
+      "text": "$4x = 20$, so $x = 5$."
+    }
+  ],
+  "explanation": [
+    "Subtract $3x$ from both sides: $4x - 4 = 16$.",
+    "Add 4 to both sides: $4x = 20$.",
+    "Divide by 4: $x = 5$. Check: $7(5) - 4 = 31$ and $3(5) + 16 = 31$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As a balance scale",
+      "steps": [
+        "Left pan: 7 boxes with 4 grams removed. Right pan: 3 boxes plus 16 grams.",
+        "Lift 3 boxes off each pan, then add 4 grams to each pan: 4 boxes balance 20 grams.",
+        "Each box is 5 grams."
+      ]
+    }
+  ],
+  "tags": [
+    "both-sides",
+    "multi-step-equation"
+  ],
+  "estimatedSeconds": 55
+}

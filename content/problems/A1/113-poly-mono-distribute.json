@@ -1,0 +1,59 @@
+{
+  "id": "A1.113",
+  "domain": "A1",
+  "unit": 12,
+  "orderInUnit": 3,
+  "standard": "A1.POLY.A.1",
+  "difficulty": 1,
+  "prompt": "Multiply: $x(x + 5)$.",
+  "answerType": "expression",
+  "primaryAnswer": "x^2 + 5x",
+  "alternativeAnswers": [
+    "x^2+5x",
+    "x² + 5x",
+    "x²+5x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The outside $x$ hands a snack to EVERYONE inside the parentheses.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The outside $x$ hands a snack to EVERYONE inside the parentheses."
+    },
+    {
+      "level": "guide",
+      "text": "$x \\times x = x^2$ and $x \\times 5 = 5x$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x(x + 5) = x^2 + 5x$."
+    }
+  ],
+  "explanation": [
+    "Distribute the outside $x$ to both terms inside.",
+    "$x \\times x = x^2$.",
+    "$x \\times 5 = 5x$.",
+    "Answer: $x^2 + 5x$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Area picture",
+      "steps": [
+        "Draw a rectangle x tall and (x + 5) wide, split into two patches: one x wide, one 5 wide.",
+        "The patches have areas x·x = x² and x·5 = 5x. Total area: x² + 5x."
+      ]
+    },
+    {
+      "title": "Test a value",
+      "steps": [
+        "Try x = 2: the original is 2(2 + 5) = 2 × 7 = 14.",
+        "The answer form gives 2² + 5·2 = 4 + 10 = 14. Same value — the multiplication is correct."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomial",
+    "distribute"
+  ],
+  "estimatedSeconds": 35
+}

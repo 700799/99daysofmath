@@ -1,0 +1,54 @@
+{
+  "id": "A1.068",
+  "domain": "A1",
+  "unit": 7,
+  "orderInUnit": 8,
+  "standard": "A1.LIN.A.2",
+  "difficulty": 3,
+  "prompt": "The scooter app charges $y = 2 + 0.15m$ dollars for $m$ minutes. How many dollars does a $20$-minute ride cost?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Plug in $m = 20$. Handle $0.15 \\times 20$ carefully.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Plug in $m = 20$. Handle $0.15 \\times 20$ carefully."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try $10$ minutes first: $2 + 0.15(10) = 2 + 1.50 = \\$3.50$. Now do the same with $20$ minutes."
+    },
+    {
+      "level": "guide",
+      "text": "$0.15 \\times 20 = 3$. Now add the unlock fee."
+    },
+    {
+      "level": "reveal",
+      "text": "$2 + 3 = 5$ dollars."
+    }
+  ],
+  "explanation": [
+    "Substitute $m = 20$: $y = 2 + 0.15 \\times 20$.",
+    "$0.15 \\times 20 = 3$ — fifteen cents, twenty times, is $\\$3$.",
+    "Total: $2 + 3 = \\$5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Money in pieces",
+      "steps": [
+        "Ten minutes of riding costs $10 \\times \\$0.15 = \\$1.50$, so twenty minutes costs $\\$3$.",
+        "Add the $\\$2$ unlock fee at the start: $\\$5$ total."
+      ]
+    }
+  ],
+  "tags": [
+    "slope-intercept",
+    "evaluate",
+    "decimals",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,52 @@
+{
+  "id": "A1.028",
+  "domain": "A1",
+  "unit": 3,
+  "orderInUnit": 8,
+  "standard": "A1.EQ.A.2",
+  "difficulty": 3,
+  "prompt": "Hall A charges $\\$40$ plus $\\$6$ per guest. Hall B charges $\\$10$ per guest with no rental fee. Solve $40 + 6g = 10g$ to find the number of guests $g$ where the two halls cost the same. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Put the $g$'s on one team: subtract $6g$ from both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Put the $g$'s on one team: subtract $6g$ from both sides."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Test one guest count: at $5$ guests, Hall A costs $40 + 30 = 70$ and Hall B costs $50$. Keep testing, or set the two costs equal."
+    },
+    {
+      "level": "guide",
+      "text": "$40 = 4g$. Divide both sides by $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$g = 40 \\div 4 = 10$ guests."
+    }
+  ],
+  "explanation": [
+    "Subtract $6g$ from both sides: $40 = 4g$.",
+    "Divide by 4: $g = 10$.",
+    "Check: hall A costs $40 + 6(10) = \\$100$; hall B costs $10(10) = \\$100$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Close the gap",
+      "steps": [
+        "Hall B costs $\\$4$ more per guest, but hall A starts with a $\\$40$ fee.",
+        "Every guest closes the gap by $\\$4$, so it takes $40 \\div 4 = 10$ guests to tie."
+      ]
+    }
+  ],
+  "tags": [
+    "both-sides",
+    "word-problem"
+  ],
+  "estimatedSeconds": 65
+}

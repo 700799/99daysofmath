@@ -1,0 +1,63 @@
+{
+  "id": "A1.076",
+  "domain": "A1",
+  "unit": 8,
+  "orderInUnit": 6,
+  "standard": "A1.LIN.B.1",
+  "difficulty": 2,
+  "prompt": "A candle starts $20$ cm tall and burns $2$ cm every hour. Write an equation for its height $h$ after $t$ hours.",
+  "answerType": "expression",
+  "primaryAnswer": "h = 20 - 2t",
+  "alternativeAnswers": [
+    "h=20-2t",
+    "20 - 2t",
+    "20-2t",
+    "h = -2t + 20",
+    "h=-2t+20",
+    "-2t + 20",
+    "-2t+20"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The height goes DOWN, so the rate is negative: $-2$ cm per hour.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The height goes DOWN, so the rate is negative: $-2$ cm per hour."
+    },
+    {
+      "level": "guide",
+      "text": "Start at $20$, subtract $2$ for each hour: $h = 20 - \\underline{\\ \\ }t$."
+    },
+    {
+      "level": "reveal",
+      "text": "$h = 20 - 2t$."
+    }
+  ],
+  "explanation": [
+    "Start: $b = 20$ cm at $t = 0$.",
+    "Move: the candle LOSES $2$ cm per hour, so $m = -2$.",
+    "Equation: $h = 20 - 2t$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check an hour",
+      "steps": [
+        "After $3$ hours the candle burned $3 \\times 2 = 6$ cm, leaving $20 - 6 = 14$ cm.",
+        "The equation gives $h = 20 - 2 \\times 3 = 14$ — it matches."
+      ]
+    },
+    {
+      "title": "Downhill stairs table",
+      "steps": [
+        "Hour $0 \\to 20$, hour $1 \\to 18$, hour $2 \\to 16$: a steady jump of $-2$.",
+        "Jump $-2$ is the slope, start $20$ is $b$: $h = -2t + 20$, the same as $20 - 2t$."
+      ]
+    }
+  ],
+  "tags": [
+    "write-equation",
+    "negative-slope",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

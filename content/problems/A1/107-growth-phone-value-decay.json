@@ -1,0 +1,55 @@
+{
+  "id": "A1.107",
+  "domain": "A1",
+  "unit": 11,
+  "orderInUnit": 7,
+  "standard": "A1.EXPO.A.2",
+  "difficulty": 2,
+  "prompt": "Your phone is worth $\\$500$ new and loses $20\\%$ of its value each year. How many dollars is it worth after 2 years?",
+  "answerType": "numeric",
+  "primaryAnswer": "320",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Losing 20% means keeping 80%: multiply by 0.80 each year.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Losing 20% means keeping 80%: multiply by 0.80 each year."
+    },
+    {
+      "level": "guide",
+      "text": "Year 1: $500 \\times 0.80 = 400$. Now do year 2."
+    },
+    {
+      "level": "reveal",
+      "text": "Year 2: $400 \\times 0.80 = 320$ dollars."
+    }
+  ],
+  "explanation": [
+    "Each year the phone keeps 80% of its value: factor 0.80.",
+    "Formula: $500 \\times 0.80^2 = 500 \\times 0.64$.",
+    "That is $\\$320$ after 2 years."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Year-by-year table",
+      "steps": [
+        "New: $500. After year 1: 500 × 0.8 = $400. After year 2: 400 × 0.8 = $320.",
+        "Notice it loses $100 the first year but only $80 the second — decay shrinks by a factor, not a fixed amount."
+      ]
+    },
+    {
+      "title": "Slice off a fifth twice",
+      "steps": [
+        "Losing 20% = losing one fifth. One fifth of 500 is 100, leaving 400.",
+        "One fifth of 400 is 80, leaving 320. Value: $320."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-decay",
+    "percent",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

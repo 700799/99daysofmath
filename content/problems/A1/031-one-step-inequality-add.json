@@ -1,0 +1,51 @@
+{
+  "id": "A1.031",
+  "domain": "A1",
+  "unit": 4,
+  "orderInUnit": 1,
+  "standard": "A1.INEQ.A.1",
+  "difficulty": 1,
+  "prompt": "Solve the inequality $x + 5 > 9$. Write your answer like \"x > 4\".",
+  "answerType": "short-text",
+  "primaryAnswer": "x > 4",
+  "alternativeAnswers": [
+    "x>4",
+    "4 < x",
+    "4<x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Solve it just like an equation: undo the $+5$ on both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Solve it just like an equation: undo the $+5$ on both sides."
+    },
+    {
+      "level": "guide",
+      "text": "$x + 5 - 5 > 9 - 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x > 4$."
+    }
+  ],
+  "explanation": [
+    "Subtract 5 from both sides, just like an equation.",
+    "$x > 4$.",
+    "Any number bigger than 4 works: try $x = 5$, since $5 + 5 = 10 > 9$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "On a number line",
+      "steps": [
+        "Picture a number line with an OPEN dot at 4 (4 itself is not included).",
+        "Shade everything to the right — those are all the numbers whose \"+5\" beats 9."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "one-step"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,61 @@
+{
+  "id": "A1.098",
+  "domain": "A1",
+  "unit": 10,
+  "orderInUnit": 8,
+  "standard": "A1.EXPO.A.1",
+  "difficulty": 3,
+  "prompt": "Evaluate: $2^{-3}$. Write your answer as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "1/8",
+  "alternativeAnswers": [
+    "0.125"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A negative exponent means \"flip it under 1\": $2^{-3} = \\frac{1}{2^3}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A negative exponent means \"flip it under 1\": $2^{-3} = \\frac{1}{2^3}$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $2^{-1}$, which is $\\frac{1}{2}$. A negative exponent flips the power under a $1$ — so $2^{-3}$ flips $2^3$."
+    },
+    {
+      "level": "guide",
+      "text": "Evaluate the bottom: $2^3 = 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2^{-3} = \\frac{1}{8}$."
+    }
+  ],
+  "explanation": [
+    "A negative exponent is not a negative number — it flips the power under 1.",
+    "$2^{-3} = \\frac{1}{2^3}$, and $2^3 = 8$.",
+    "So $2^{-3} = \\frac{1}{8}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk down the staircase",
+      "steps": [
+        "2² = 4, 2¹ = 2, 2⁰ = 1. Each step down divides by 2.",
+        "Keep going: 2⁻¹ = 1/2, 2⁻² = 1/4, 2⁻³ = 1/8."
+      ]
+    },
+    {
+      "title": "Use the quotient rule",
+      "steps": [
+        "2⁻³ is the same as 2¹ ÷ 2⁴, since 1 − 4 = −3.",
+        "That is 2/16 = 1/8."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "negative-exponent"
+  ],
+  "estimatedSeconds": 55
+}

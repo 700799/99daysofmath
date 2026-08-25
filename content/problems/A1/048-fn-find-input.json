@@ -1,0 +1,52 @@
+{
+  "id": "A1.048",
+  "domain": "A1",
+  "unit": 5,
+  "orderInUnit": 8,
+  "standard": "A1.FUN.A.1",
+  "difficulty": 3,
+  "prompt": "Let $f(x) = 5x$. If $f(x) = 35$, what input $x$ was fed into the machine?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "This time you know the OUTPUT ($35$) and need the input. Run the machine backward.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This time you know the OUTPUT ($35$) and need the input. Run the machine backward."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Easier machine: if $f(x) = 5x$ and the output is $10$, the input was $10 \\div 5 = 2$. Undo the machine by dividing."
+    },
+    {
+      "level": "guide",
+      "text": "The machine multiplies by $5$, so undo it: divide $35$ by $5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$35 \\div 5 = 7$."
+    }
+  ],
+  "explanation": [
+    "Set up the equation: $5x = 35$.",
+    "Undo \"times $5$\" with \"divide by $5$\": $x = 35 \\div 5$.",
+    "The input was $x = 7$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Guess and check",
+      "steps": [
+        "Try inputs: $f(6) = 30$ — too small. $f(8) = 40$ — too big.",
+        "$f(7) = 35$ — exactly right, so the input was $7$."
+      ]
+    }
+  ],
+  "tags": [
+    "functions",
+    "solve-for-input"
+  ],
+  "estimatedSeconds": 45
+}

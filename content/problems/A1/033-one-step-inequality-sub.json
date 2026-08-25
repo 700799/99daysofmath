@@ -1,0 +1,53 @@
+{
+  "id": "A1.033",
+  "domain": "A1",
+  "unit": 4,
+  "orderInUnit": 3,
+  "standard": "A1.INEQ.A.1",
+  "difficulty": 1,
+  "prompt": "Solve the inequality $x - 3 \\ge 2$. Write your answer like \"x >= 5\".",
+  "answerType": "short-text",
+  "primaryAnswer": "x >= 5",
+  "alternativeAnswers": [
+    "x>=5",
+    "x ≥ 5",
+    "x≥5",
+    "5 <= x",
+    "5<=x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Undo the $-3$: add $3$ to both sides. The $\\ge$ sign stays put.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Undo the $-3$: add $3$ to both sides. The $\\ge$ sign stays put."
+    },
+    {
+      "level": "guide",
+      "text": "$x \\ge 2 + 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x \\ge 5$."
+    }
+  ],
+  "explanation": [
+    "Add 3 to both sides: $x \\ge 5$.",
+    "Adding never flips the sign.",
+    "Check the boundary: $5 - 3 = 2$, and $2 \\ge 2$ is true, so 5 itself is included."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "On a number line",
+      "steps": [
+        "Draw a CLOSED (filled) dot at 5, because $x = 5$ works.",
+        "Shade to the right: every number from 5 and up passes the test."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "one-step"
+  ],
+  "estimatedSeconds": 35
+}

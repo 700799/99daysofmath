@@ -1,0 +1,60 @@
+{
+  "id": "A1.038",
+  "domain": "A1",
+  "unit": 4,
+  "orderInUnit": 8,
+  "standard": "A1.INEQ.A.1",
+  "difficulty": 3,
+  "prompt": "Solve the inequality $5 - 2x \\le 11$. Write your answer like \"x >= -3\".",
+  "answerType": "short-text",
+  "primaryAnswer": "x >= -3",
+  "alternativeAnswers": [
+    "x>=-3",
+    "x ≥ -3",
+    "x≥-3",
+    "-3 <= x",
+    "-3<=x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Subtract $5$ from both sides first — the sign does not flip for subtraction.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Subtract $5$ from both sides first — the sign does not flip for subtraction."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Practice the flip on a tiny one: $-2x \\le 6$ gives $x \\ge -3$ — dividing by a NEGATIVE flips the sign."
+    },
+    {
+      "level": "guide",
+      "text": "$-2x \\le 6$. Now divide by $-2$ and FLIP the sign."
+    },
+    {
+      "level": "reveal",
+      "text": "$x \\ge -3$."
+    }
+  ],
+  "explanation": [
+    "Subtract 5 from both sides: $-2x \\le 6$.",
+    "Divide both sides by $-2$ and flip $\\le$ to $\\ge$: $x \\ge -3$.",
+    "Check: $x = 0$ gives $5 - 0 = 5 \\le 11$ ✓, and $x = -4$ gives $5 + 8 = 13$, which fails — so the cut really is at $-3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Dodge the flip entirely",
+      "steps": [
+        "Add $2x$ to both sides instead: $5 \\le 11 + 2x$.",
+        "Subtract 11: $-6 \\le 2x$. Divide by positive 2: $-3 \\le x$.",
+        "Same answer, $x \\ge -3$, and you never divided by a negative."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "flip-rule",
+    "two-step"
+  ],
+  "estimatedSeconds": 65
+}

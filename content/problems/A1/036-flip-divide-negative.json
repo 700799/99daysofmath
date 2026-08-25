@@ -1,0 +1,53 @@
+{
+  "id": "A1.036",
+  "domain": "A1",
+  "unit": 4,
+  "orderInUnit": 6,
+  "standard": "A1.INEQ.A.1",
+  "difficulty": 2,
+  "prompt": "Solve the inequality $-3x > 12$. Write your answer like \"x < -4\".",
+  "answerType": "short-text",
+  "primaryAnswer": "x < -4",
+  "alternativeAnswers": [
+    "x<-4",
+    "-4 > x",
+    "-4>x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "To get $x$ alone, divide both sides by $-3$. Dividing by a NEGATIVE flips the sign.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "To get $x$ alone, divide both sides by $-3$. Dividing by a NEGATIVE flips the sign."
+    },
+    {
+      "level": "guide",
+      "text": "$x \\; ? \\; 12 \\div (-3)$ — the $>$ turns into $<$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x < -4$."
+    }
+  ],
+  "explanation": [
+    "Divide both sides by $-3$ and FLIP the inequality: $x < -4$.",
+    "Dividing by a negative is like walking backwards — it turns you around.",
+    "Check: $x = -5$ gives $-3(-5) = 15 > 12$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "See why the flip is real",
+      "steps": [
+        "Start with a true fact: $2 < 6$.",
+        "Multiply both sides by $-1$: you get $-2$ and $-6$, and now $-2 > -6$.",
+        "Negatives reverse the order on the number line, so the sign MUST flip."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "flip-rule",
+    "negatives"
+  ],
+  "estimatedSeconds": 50
+}

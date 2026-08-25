@@ -1,0 +1,48 @@
+{
+  "id": "A1.046",
+  "domain": "A1",
+  "unit": 5,
+  "orderInUnit": 6,
+  "standard": "A1.FUN.A.1",
+  "difficulty": 2,
+  "prompt": "A photo filter on your phone is a function: it adds $15$ to a photo's brightness, $f(p) = p + 15$. A photo has brightness $40$. What brightness comes out?",
+  "answerType": "numeric",
+  "primaryAnswer": "55",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The filter is a machine: one photo in, exactly one filtered photo out.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The filter is a machine: one photo in, exactly one filtered photo out."
+    },
+    {
+      "level": "guide",
+      "text": "Feed in $40$: $f(40) = 40 + 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "$40 + 15 = 55$."
+    }
+  ],
+  "explanation": [
+    "The filter's rule: add $15$ to the brightness.",
+    "$f(40) = 40 + 15 = 55$.",
+    "Every input photo gets exactly ONE output photo — that is why a filter is a function."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Table of photos",
+      "steps": [
+        "Try a few inputs: brightness $10 \\to 25$, $20 \\to 35$, $30 \\to 45$.",
+        "Every output is $15$ more, so $40 \\to 55$."
+      ]
+    }
+  ],
+  "tags": [
+    "functions",
+    "word-problem",
+    "evaluate"
+  ],
+  "estimatedSeconds": 40
+}

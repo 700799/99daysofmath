@@ -1,0 +1,55 @@
+{
+  "id": "A1.133",
+  "domain": "A1",
+  "unit": 14,
+  "orderInUnit": 3,
+  "standard": "A1.QUAD.A.1",
+  "difficulty": 1,
+  "prompt": "For the parabola $y = x^2$, what is $y$ when $x = -4$?",
+  "answerType": "numeric",
+  "primaryAnswer": "16",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Squaring means the number times ITSELF: $(-4) \\times (-4)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Squaring means the number times ITSELF: $(-4) \\times (-4)$."
+    },
+    {
+      "level": "guide",
+      "text": "A negative times a negative is positive."
+    },
+    {
+      "level": "reveal",
+      "text": "$(-4)^2 = 16$, so $y = 16$."
+    }
+  ],
+  "explanation": [
+    "Substitute: $y = (-4)^2 = (-4) \\times (-4)$.",
+    "Negative times negative is positive: $16$.",
+    "So $y = 16$ — same as $x = 4$. That is why the U is symmetric."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Mirror twins on the U",
+      "steps": [
+        "On the parabola, x = 4 and x = −4 sit at the same height, like mirror twins.",
+        "Since 4² = 16, the twin −4 also lands at y = 16."
+      ]
+    },
+    {
+      "title": "Table of values",
+      "steps": [
+        "Fill a table: x = −4, −2, 0, 2, 4 gives y = 16, 4, 0, 4, 16.",
+        "The left side copies the right side — read off y = 16 at x = −4."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "parabola",
+    "negatives"
+  ],
+  "estimatedSeconds": 30
+}

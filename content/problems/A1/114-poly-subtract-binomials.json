@@ -1,0 +1,59 @@
+{
+  "id": "A1.114",
+  "domain": "A1",
+  "unit": 12,
+  "orderInUnit": 4,
+  "standard": "A1.POLY.A.1",
+  "difficulty": 2,
+  "prompt": "Subtract: $(5x + 7) - (2x + 3)$.",
+  "answerType": "expression",
+  "primaryAnswer": "3x + 4",
+  "alternativeAnswers": [
+    "3x+4",
+    "4 + 3x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The minus sign hits EVERY term in the second parentheses.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The minus sign hits EVERY term in the second parentheses."
+    },
+    {
+      "level": "guide",
+      "text": "Rewrite it as $5x + 7 - 2x - 3$, then combine like terms."
+    },
+    {
+      "level": "reveal",
+      "text": "$5x - 2x = 3x$ and $7 - 3 = 4$, so the answer is $3x + 4$."
+    }
+  ],
+  "explanation": [
+    "Distribute the minus: $(5x + 7) - (2x + 3) = 5x + 7 - 2x - 3$.",
+    "$x$-terms: $5x - 2x = 3x$.",
+    "Numbers: $7 - 3 = 4$.",
+    "Answer: $3x + 4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Take away stickers",
+      "steps": [
+        "Start with 5 x-stickers and 7 dot-stickers.",
+        "Peel off 2 x-stickers and 3 dot-stickers — take BOTH kinds away.",
+        "You are left with 3 x-stickers and 4 dots: 3x + 4."
+      ]
+    },
+    {
+      "title": "Check with a value",
+      "steps": [
+        "Try x = 10: (50 + 7) − (20 + 3) = 57 − 23 = 34.",
+        "And 3x + 4 at x = 10 is 30 + 4 = 34. The forms match, so 3x + 4 is right."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomial",
+    "subtraction"
+  ],
+  "estimatedSeconds": 45
+}

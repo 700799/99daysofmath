@@ -1,0 +1,63 @@
+{
+  "id": "A1.099",
+  "domain": "A1",
+  "unit": 10,
+  "orderInUnit": 9,
+  "standard": "A1.EXPO.A.1",
+  "difficulty": 3,
+  "prompt": "Simplify: $(x^3)^2 \\cdot x^4 \\div x^5$. Write your answer as a power of $x$.",
+  "answerType": "expression",
+  "primaryAnswer": "x^5",
+  "alternativeAnswers": [
+    "x⁵"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Handle the power of a power first: $(x^3)^2 = x^{3 \\times 2} = x^6$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Handle the power of a power first: $(x^3)^2 = x^{3 \\times 2} = x^6$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Do one rule at a time. First $(x^3)^2 = x^6$ (multiply the exponents). Now it is just $x^6 \\cdot x^4 \\div x^5$."
+    },
+    {
+      "level": "guide",
+      "text": "Now multiply: $x^6 \\cdot x^4 = x^{6+4} = x^{10}$. Then divide."
+    },
+    {
+      "level": "reveal",
+      "text": "$x^{10} \\div x^5 = x^{10-5} = x^5$."
+    }
+  ],
+  "explanation": [
+    "Power rule first: $(x^3)^2 = x^6$ — 2 groups of 3 copies.",
+    "Product rule: $x^6 \\cdot x^4 = x^{10}$ — combine the copies.",
+    "Quotient rule: $x^{10} \\div x^5 = x^5$ — cancel 5 copies. Answer: $x^5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "One running count of copies",
+      "steps": [
+        "Count copies of x from left to right: the square of x³ gives 6 copies, then +4 more makes 10.",
+        "Dividing by x⁵ erases 5 copies: 10 − 5 = 5 copies left, so x⁵."
+      ]
+    },
+    {
+      "title": "Test with real numbers",
+      "steps": [
+        "Let x = 2. (2³)² = 64, times 2⁴ = 16 gives 1024. Divide by 2⁵ = 32: 1024 ÷ 32 = 32.",
+        "32 = 2⁵, so the simplified form is x⁵."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "product-rule",
+    "quotient-rule",
+    "power-rule"
+  ],
+  "estimatedSeconds": 80
+}

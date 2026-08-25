@@ -17,11 +17,12 @@ const EXPECTED_BY_DOMAIN: Record<string, { count: number; units: number }> = {
   '6.EE': { count: 100, units: 10 },
   '6.G': { count: 100, units: 10 },
   '6.SP': { count: 100, units: 10 },
+  A1: { count: 140, units: 14 },
 };
 
 describe('problems bank — structure', () => {
-  it('contains exactly 560 problems', () => {
-    expect(PROBLEMS).toHaveLength(560);
+  it('contains exactly 700 problems', () => {
+    expect(PROBLEMS).toHaveLength(700);
   });
 
   it('every id is globally unique', () => {
@@ -141,7 +142,9 @@ describe('problems bank — every answer self-accepts', () => {
 });
 
 describe('problems bank — units 7-10 quality bar', () => {
-  const advanced = PROBLEMS.filter((p) => p.unit >= 7);
+  // This bar describes the grade-5/6 content rounds, whose domains top out at
+  // unit 10. Algebra 1 runs to unit 14 and has its own (stricter) bar below.
+  const advanced = PROBLEMS.filter((p) => p.unit >= 7 && p.domain !== 'A1');
 
   it('there are 200 problems across units 7-10', () => {
     expect(advanced).toHaveLength(200);
@@ -185,6 +188,43 @@ describe('problems bank — units 7-10 quality bar', () => {
     );
     const ratio = withAlts.length / advanced.length;
     expect(ratio).toBeGreaterThanOrEqual(0.55);
+  });
+});
+
+describe('problems bank — Algebra 1 quality bar', () => {
+  const a1 = PROBLEMS.filter((p) => p.domain === 'A1');
+
+  it('is a 14-unit course of 140 problems, 10 per unit', () => {
+    expect(a1).toHaveLength(140);
+    const units = new Set(a1.map((p) => p.unit));
+    expect(units.size).toBe(14);
+    for (let u = 1; u <= 14; u++) {
+      expect(a1.filter((p) => p.unit === u), `A1 unit ${u}`).toHaveLength(10);
+    }
+  });
+
+  it('EVERY problem has an alternate explanation (the course promise)', () => {
+    const missing = a1
+      .filter((p) => !(p.alternativeExplanations ?? []).length)
+      .map((p) => p.id);
+    expect(missing).toEqual([]);
+  });
+
+  it('every problem has a full 3-tier hint ladder and a multi-step explanation', () => {
+    const failures: string[] = [];
+    for (const p of a1) {
+      const levels = new Set((p.hints ?? []).map((h) => h.level));
+      if (!levels.has('nudge') || !levels.has('guide') || !levels.has('reveal')) {
+        failures.push(`${p.id}: missing a hint tier`);
+      }
+      if ((p.explanation?.length ?? 0) < 2) failures.push(`${p.id}: explanation too short`);
+    }
+    expect(failures).toEqual([]);
+  });
+
+  it('is anchored in the real world (40%+ word problems)', () => {
+    const words = a1.filter((p) => (p.tags ?? []).includes('word-problem'));
+    expect(words.length / a1.length).toBeGreaterThanOrEqual(0.4);
   });
 });
 

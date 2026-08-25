@@ -1,0 +1,49 @@
+{
+  "id": "A1.005",
+  "domain": "A1",
+  "unit": 1,
+  "orderInUnit": 5,
+  "standard": "A1.EXP.A.1",
+  "difficulty": 2,
+  "prompt": "In a video game you earn $50$ coins per level plus a one-time $20$-coin bonus, so your coins are $50L + 20$ after $L$ levels. How many coins do you have after $4$ levels?",
+  "answerType": "numeric",
+  "primaryAnswer": "220",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $L = 4$ into $50L + 20$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $L = 4$ into $50L + 20$."
+    },
+    {
+      "level": "guide",
+      "text": "$50 \\times 4 = 200$. Now add the bonus."
+    },
+    {
+      "level": "reveal",
+      "text": "$200 + 20 = 220$ coins."
+    }
+  ],
+  "explanation": [
+    "Substitute $L = 4$: $50(4) + 20$.",
+    "Multiply first: $50 \\times 4 = 200$.",
+    "Add the bonus: $200 + 20 = 220$ coins."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Level-by-level table",
+      "steps": [
+        "Level 1: $50 + 20 = 70$. Level 2: $100 + 20 = 120$.",
+        "Level 3: $150 + 20 = 170$. Level 4: $200 + 20 = 220$.",
+        "Each level adds exactly 50 coins on top of the one-time bonus."
+      ]
+    }
+  ],
+  "tags": [
+    "evaluate",
+    "substitution",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

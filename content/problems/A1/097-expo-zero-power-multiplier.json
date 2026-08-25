@@ -1,0 +1,55 @@
+{
+  "id": "A1.097",
+  "domain": "A1",
+  "unit": 10,
+  "orderInUnit": 7,
+  "standard": "A1.EXPO.A.1",
+  "difficulty": 2,
+  "prompt": "A game power-up multiplies your score by $4^0$. What number does it multiply your score by?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The exponent counts copies of 4 to multiply. Here there are ZERO copies.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The exponent counts copies of 4 to multiply. Here there are ZERO copies."
+    },
+    {
+      "level": "guide",
+      "text": "Zero copies of multiplying leaves the do-nothing number for multiplication."
+    },
+    {
+      "level": "reveal",
+      "text": "$4^0 = 1$. Your score is multiplied by 1 — it stays the same."
+    }
+  ],
+  "explanation": [
+    "Anything (except 0) to the 0 power is 1.",
+    "Zero copies of multiplying means you do nothing, and the do-nothing number for multiplication is 1.",
+    "So $4^0 = 1$, and your score does not change."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk down the staircase",
+      "steps": [
+        "4³ = 64, 4² = 16, 4¹ = 4. Each step DOWN divides by 4.",
+        "One more step: 4⁰ = 4 ÷ 4 = 1."
+      ]
+    },
+    {
+      "title": "Use the quotient rule",
+      "steps": [
+        "4⁰ is the same as 4² ÷ 4², since 2 − 2 = 0.",
+        "But any number divided by itself is 1, so 4⁰ = 1."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "zero-exponent",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

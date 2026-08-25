@@ -1,0 +1,56 @@
+{
+  "id": "A1.111",
+  "domain": "A1",
+  "unit": 12,
+  "orderInUnit": 1,
+  "standard": "A1.POLY.A.1",
+  "difficulty": 1,
+  "prompt": "Simplify $4x + 3x$.",
+  "answerType": "expression",
+  "primaryAnswer": "7x",
+  "alternativeAnswers": [
+    "7 x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Both terms are $x$-terms — the same kind of sticker.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Both terms are $x$-terms — the same kind of sticker."
+    },
+    {
+      "level": "guide",
+      "text": "Four $x$ stickers plus three $x$ stickers. Add the front numbers: $4 + 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4x + 3x = 7x$."
+    }
+  ],
+  "explanation": [
+    "$4x$ and $3x$ are like terms — same variable part.",
+    "Add the coefficients: $4 + 3 = 7$.",
+    "Answer: $7x$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sticker sorting",
+      "steps": [
+        "Picture 4 apple stickers and 3 more apple stickers — all the same kind.",
+        "Same kind means you can count them together: 7 apple stickers, so 7x."
+      ]
+    },
+    {
+      "title": "Test a value",
+      "steps": [
+        "Try x = 2: then 4x + 3x = 8 + 6 = 14.",
+        "And 7x = 14 too — the shorter form gives the same value, so 7x is right."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomial",
+    "like-terms"
+  ],
+  "estimatedSeconds": 25
+}

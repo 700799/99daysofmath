@@ -1,0 +1,61 @@
+{
+  "id": "A1.130",
+  "domain": "A1",
+  "unit": 13,
+  "orderInUnit": 10,
+  "standard": "A1.POLY.A.2",
+  "difficulty": 3,
+  "prompt": "A square poster with side $x$ has a square photo of side $4$ cut out of it. The leftover area is $x^2 - 16$, which factors as $(x + a)(x - a)$. What is $a$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "This is a difference of squares: $x^2 - 16 = x^2 - (\\;?\\;)^2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This is a difference of squares: $x^2 - 16 = x^2 - (\\;?\\;)^2$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try numbers: $x = 10$ gives $100 - 16 = 84$, and $(10 + 4)(10 - 4) = 14 \\times 6 = 84$. Difference of squares always splits like this."
+    },
+    {
+      "level": "guide",
+      "text": "What number squared gives $16$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$4^2 = 16$, so $x^2 - 16 = (x + 4)(x - 4)$ and $a = 4$."
+    }
+  ],
+  "explanation": [
+    "Write $16$ as a square: $16 = 4^2$.",
+    "Difference of squares: $x^2 - 4^2 = (x + 4)(x - 4)$.",
+    "So $a = 4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Scissors-and-tape picture",
+      "steps": [
+        "Cut the 4-by-4 photo hole out of the x-by-x poster and snip the leftover L-shape into two pieces.",
+        "Slide the pieces into one rectangle: it measures (x + 4) by (x − 4).",
+        "The rectangle sides show a = 4."
+      ]
+    },
+    {
+      "title": "Check by expanding",
+      "steps": [
+        "Expand (x + 4)(x − 4): x² − 4x + 4x − 16 = x² − 16.",
+        "The middle terms cancel, and the match confirms a = 4."
+      ]
+    }
+  ],
+  "tags": [
+    "factoring",
+    "difference-of-squares",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

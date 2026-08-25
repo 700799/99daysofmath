@@ -1,0 +1,60 @@
+{
+  "id": "A1.109",
+  "domain": "A1",
+  "unit": 11,
+  "orderInUnit": 9,
+  "standard": "A1.EXPO.A.2",
+  "difficulty": 3,
+  "prompt": "Account A starts with 10 followers and DOUBLES every week. Account B starts with 10 and ADDS 100 every week. After how many weeks does A first have more followers than B?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Track both: A is $10 \\cdot 2^w$ and B is $10 + 100w$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Track both: A is $10 \\cdot 2^w$ and B is $10 + 100w$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Fill two weeks: A goes $10 \\to 20 \\to 40$ while B goes $10 \\to 20 \\to 30$. Doubling starts slow, then rockets past adding."
+    },
+    {
+      "level": "guide",
+      "text": "Week 5: A $= 320$, B $= 510$. B still leads. Try week 6."
+    },
+    {
+      "level": "reveal",
+      "text": "Week 6: A $= 640$, B $= 610$. A first passes B at week 6."
+    }
+  ],
+  "explanation": [
+    "Linear B adds 100 each week; exponential A multiplies by 2.",
+    "Table — week 4: A = 160, B = 410. Week 5: A = 320, B = 510. Week 6: A = 640, B = 610.",
+    "A first passes B after 6 weeks. Exponential always wins eventually."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Watch the weekly jumps",
+      "steps": [
+        "B always jumps by exactly 100. A jumps by its whole current size: +160 in week 5, +320 in week 6.",
+        "Once A jumps more than 100 per week AND closes the gap, it takes the lead — that happens in week 6 (640 vs 610)."
+      ]
+    },
+    {
+      "title": "Tortoise and rocket",
+      "steps": [
+        "B is a tortoise on a moving walkway: steady +100, a straight line on a graph. A is a rocket: slow at launch, then curving up faster and faster.",
+        "The rocket lags for 5 weeks, then blasts past in week 6 and never looks back."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-growth",
+    "linear-growth",
+    "word-problem"
+  ],
+  "estimatedSeconds": 90
+}

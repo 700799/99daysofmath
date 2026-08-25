@@ -1,0 +1,52 @@
+{
+  "id": "A1.018",
+  "domain": "A1",
+  "unit": 2,
+  "orderInUnit": 8,
+  "standard": "A1.EQ.A.1",
+  "difficulty": 3,
+  "prompt": "Solve for $x$: $\\frac{x}{3} - 2 = 4$. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "18",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $-2$ happened last, so undo it first: add $2$ to both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $-2$ happened last, so undo it first: add $2$ to both sides."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Simpler version: $\\frac{x}{3} = 4$ gives $x = 12$. Your problem just has a $-2$ to undo FIRST, before you multiply by $3$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{x}{3} = 6$. Now undo the \"divide by 3\" by multiplying both sides by $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 6 \\times 3 = 18$."
+    }
+  ],
+  "explanation": [
+    "Add 2 to both sides: $\\frac{x}{3} = 6$.",
+    "Multiply both sides by 3: $x = 18$.",
+    "Check: $18 \\div 3 - 2 = 6 - 2 = 4$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Unwrap the present",
+      "steps": [
+        "$x$ got wrapped twice: first \"divide by 3\", then \"minus 2\".",
+        "Unwrap in reverse: add 2 back (get 6), then multiply by 3 (get 18)."
+      ]
+    }
+  ],
+  "tags": [
+    "two-step-equation",
+    "fractions"
+  ],
+  "estimatedSeconds": 55
+}

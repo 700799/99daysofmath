@@ -1,0 +1,54 @@
+{
+  "id": "A1.082",
+  "domain": "A1",
+  "unit": 9,
+  "orderInUnit": 2,
+  "standard": "A1.SYS.A.1",
+  "difficulty": 1,
+  "prompt": "Solve the system by substitution: $y = x + 1$ and $x + y = 9$. What is $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitution means \"swap in what $y$ equals.\" Replace $y$ in the second equation with $x + 1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitution means \"swap in what $y$ equals.\" Replace $y$ in the second equation with $x + 1$."
+    },
+    {
+      "level": "guide",
+      "text": "That gives $x + (x + 1) = 9$, so $2x + 1 = 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2x = 8$, so $x = 4$. (And $y = 5$.)"
+    }
+  ],
+  "explanation": [
+    "The first rule tells you exactly what $y$ is: $x + 1$. Swap that in for $y$ in the second rule.",
+    "$x + (x + 1) = 9$ becomes $2x + 1 = 9$, so $2x = 8$.",
+    "$x = 4$. Check: $y = 5$ and $4 + 5 = 9$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in words",
+      "steps": [
+        "Two numbers add to 9, and one of them is exactly 1 bigger than the other.",
+        "Split 9 into two nearly-equal parts: 4 and 5. The smaller one is x, so x = 4."
+      ]
+    },
+    {
+      "title": "Guess and check with a table",
+      "steps": [
+        "Try x = 3: then y = 4 and x + y = 7. Too small. Try x = 5: then y = 6 and x + y = 11. Too big.",
+        "Try x = 4: then y = 5 and 4 + 5 = 9. Just right, so x = 4."
+      ]
+    }
+  ],
+  "tags": [
+    "system-of-equations",
+    "substitution"
+  ],
+  "estimatedSeconds": 50
+}

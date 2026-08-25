@@ -1,0 +1,53 @@
+{
+  "id": "A1.019",
+  "domain": "A1",
+  "unit": 2,
+  "orderInUnit": 9,
+  "standard": "A1.EQ.A.1",
+  "difficulty": 3,
+  "prompt": "You have $\\$9$ saved and add $\\$4.50$ to your jar every week. Solve $4.5w + 9 = 36$ to find how many weeks until you reach $\\$36$. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Subtract the $\\$9$ head start from both sides first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Subtract the $\\$9$ head start from both sides first."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try round numbers: if you added $\\$9$ a week you would need $27 \\div 9 = 3$ weeks. Same recipe here, just divide by $4.5$ instead."
+    },
+    {
+      "level": "guide",
+      "text": "$4.5w = 27$. Now divide both sides by $4.5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$w = 27 \\div 4.5 = 6$ weeks."
+    }
+  ],
+  "explanation": [
+    "Subtract 9 from both sides: $4.5w = 27$.",
+    "Divide by 4.5: $w = 6$.",
+    "Check: $4.5 \\times 6 + 9 = 27 + 9 = 36$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in half-dollars",
+      "steps": [
+        "$\\$4.50$ a week is 9 half-dollars a week, and you need $\\$27$ more, which is 54 half-dollars.",
+        "$54 \\div 9 = 6$ weeks — same answer, no decimals needed."
+      ]
+    }
+  ],
+  "tags": [
+    "two-step-equation",
+    "decimals",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

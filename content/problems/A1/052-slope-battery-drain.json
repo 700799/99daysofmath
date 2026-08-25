@@ -1,0 +1,48 @@
+{
+  "id": "A1.052",
+  "domain": "A1",
+  "unit": 6,
+  "orderInUnit": 2,
+  "standard": "A1.LIN.A.1",
+  "difficulty": 1,
+  "prompt": "Your phone battery drops from $80\\%$ to $56\\%$ in $2$ hours. How many percent does it drop per hour?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "First find the TOTAL drop: $80 - 56$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find the TOTAL drop: $80 - 56$."
+    },
+    {
+      "level": "guide",
+      "text": "It dropped $24\\%$ in $2$ hours. Divide by the hours."
+    },
+    {
+      "level": "reveal",
+      "text": "$24 \\div 2 = 12$ percent per hour."
+    }
+  ],
+  "explanation": [
+    "Total drop: $80 - 56 = 24$ percent.",
+    "Per hour: $24 \\div 2 = 12$.",
+    "The rate of change is $-12\\%$ per hour — battery is going DOWN."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As stairs going down",
+      "steps": [
+        "Picture a staircase: every 1 hour across (run), the battery steps 12 down (rise = −12).",
+        "Slope = rise over run = −24 over 2 = −12 per hour."
+      ]
+    }
+  ],
+  "tags": [
+    "slope",
+    "rate-of-change",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

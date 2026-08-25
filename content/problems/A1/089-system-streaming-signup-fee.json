@@ -1,0 +1,59 @@
+{
+  "id": "A1.089",
+  "domain": "A1",
+  "unit": 9,
+  "orderInUnit": 9,
+  "standard": "A1.SYS.A.1",
+  "difficulty": 3,
+  "prompt": "A streaming service charges a $\\$12$ sign-up fee plus $\\$8$ per month. A rival charges no fee but $\\$10$ per month. After how many months have you paid the same total on both?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Write both totals: $12 + 8m$ and $10m$. Set them equal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Write both totals: $12 + 8m$ and $10m$. Set them equal."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Test month $1$: $12 + 8 = \\$20$ versus the rival. Keep testing months, or set both cost expressions equal."
+    },
+    {
+      "level": "guide",
+      "text": "$12 + 8m = 10m$. Subtract $8m$ from both sides: $12 = 2m$."
+    },
+    {
+      "level": "reveal",
+      "text": "$m = 12 \\div 2 = 6$ months. Both totals are $\\$60$."
+    }
+  ],
+  "explanation": [
+    "Total cost is where the two rules cross: $12 + 8m = 10m$.",
+    "Subtract $8m$: $12 = 2m$, so $m = 6$.",
+    "Check: $12 + 48 = 60$ and $10 \\times 6 = 60$. Same total. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Gap-closing story",
+      "steps": [
+        "The fee puts you $12 behind on service one from day zero. But each month it charges $2 LESS than the rival.",
+        "Saving $2 a month erases a $12 head start in 12 ÷ 2 = 6 months."
+      ]
+    },
+    {
+      "title": "Build a table",
+      "steps": [
+        "Month 2: fee plan = 28, rival = 20. Month 4: 44 vs 40. Month 6: 60 vs 60.",
+        "The totals tie at month 6."
+      ]
+    }
+  ],
+  "tags": [
+    "system-of-equations",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

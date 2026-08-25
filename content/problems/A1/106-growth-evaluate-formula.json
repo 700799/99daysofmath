@@ -1,0 +1,54 @@
+{
+  "id": "A1.106",
+  "domain": "A1",
+  "unit": 11,
+  "orderInUnit": 6,
+  "standard": "A1.EXPO.A.2",
+  "difficulty": 2,
+  "prompt": "An exponential rule is $y = 3 \\cdot 2^x$ (start 3, factor 2). What is $y$ when $x = 4$?",
+  "answerType": "numeric",
+  "primaryAnswer": "48",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Exponent first: $2^4 = ?$",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Exponent first: $2^4 = ?$"
+    },
+    {
+      "level": "guide",
+      "text": "$2^4 = 16$. Now multiply by the start value 3."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 3 \\times 16 = 48$."
+    }
+  ],
+  "explanation": [
+    "$y = a \\cdot b^x$ means start $\\times$ factor, applied $x$ times.",
+    "Compute the power first: $2^4 = 16$.",
+    "Then $y = 3 \\times 16 = 48$. (Not $6^4$ — never multiply the start into the base!)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Double step by step",
+      "steps": [
+        "Start at 3 and double 4 times: 3 → 6 → 12 → 24 → 48.",
+        "After 4 doublings, y = 48."
+      ]
+    },
+    {
+      "title": "Table of x and y",
+      "steps": [
+        "x = 0: y = 3. x = 1: y = 6. x = 2: y = 12. x = 3: y = 24. x = 4: y = 48.",
+        "Each row doubles, landing on 48 at x = 4."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-growth",
+    "evaluate"
+  ],
+  "estimatedSeconds": 50
+}

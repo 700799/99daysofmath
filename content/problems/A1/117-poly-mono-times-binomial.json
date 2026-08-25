@@ -1,0 +1,60 @@
+{
+  "id": "A1.117",
+  "domain": "A1",
+  "unit": 12,
+  "orderInUnit": 7,
+  "standard": "A1.POLY.A.1",
+  "difficulty": 2,
+  "prompt": "Multiply: $2x(3x + 4)$.",
+  "answerType": "expression",
+  "primaryAnswer": "6x^2 + 8x",
+  "alternativeAnswers": [
+    "6x^2+8x",
+    "6x² + 8x",
+    "6x²+8x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The $2x$ outside hands a snack to BOTH terms inside.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $2x$ outside hands a snack to BOTH terms inside."
+    },
+    {
+      "level": "guide",
+      "text": "$2x \\times 3x = 6x^2$ (multiply numbers, multiply the $x$s)."
+    },
+    {
+      "level": "reveal",
+      "text": "$2x \\times 3x = 6x^2$ and $2x \\times 4 = 8x$, so the answer is $6x^2 + 8x$."
+    }
+  ],
+  "explanation": [
+    "Distribute $2x$ to each term.",
+    "$2x \\times 3x = 6x^2$ — the coefficients multiply and $x \\times x = x^2$.",
+    "$2x \\times 4 = 8x$.",
+    "Answer: $6x^2 + 8x$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Area picture",
+      "steps": [
+        "Draw a rectangle 2x tall and (3x + 4) wide, cut into two patches.",
+        "Left patch: 2x by 3x, area 6x². Right patch: 2x by 4, area 8x.",
+        "Total: 6x² + 8x."
+      ]
+    },
+    {
+      "title": "Test a value",
+      "steps": [
+        "Try x = 1: the original is 2(3 + 4) = 14.",
+        "The answer gives 6 + 8 = 14 — same number, so the distribution worked."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomial",
+    "distribute"
+  ],
+  "estimatedSeconds": 45
+}

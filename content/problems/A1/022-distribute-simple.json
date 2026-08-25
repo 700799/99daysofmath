@@ -1,0 +1,47 @@
+{
+  "id": "A1.022",
+  "domain": "A1",
+  "unit": 3,
+  "orderInUnit": 2,
+  "standard": "A1.EQ.A.2",
+  "difficulty": 1,
+  "prompt": "Solve for $x$: $3(x + 2) = 21$. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Distribute: the $3$ outside hands itself to EVERYONE inside the parentheses.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Distribute: the $3$ outside hands itself to EVERYONE inside the parentheses."
+    },
+    {
+      "level": "guide",
+      "text": "$3x + 6 = 21$. Subtract $6$, then divide by $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3x = 15$, so $x = 5$."
+    }
+  ],
+  "explanation": [
+    "Distribute the 3: $3(x + 2) = 3x + 6$.",
+    "Solve $3x + 6 = 21$: subtract 6 to get $3x = 15$.",
+    "Divide by 3: $x = 5$. Check: $3(5 + 2) = 21$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Divide first instead",
+      "steps": [
+        "Both sides can be divided by 3 right away: $x + 2 = 7$.",
+        "Subtract 2: $x = 5$. Two roads, same answer."
+      ]
+    }
+  ],
+  "tags": [
+    "multi-step-equation",
+    "distribute"
+  ],
+  "estimatedSeconds": 35
+}

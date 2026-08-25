@@ -1,0 +1,67 @@
+{
+  "id": "A1.079",
+  "domain": "A1",
+  "unit": 8,
+  "orderInUnit": 9,
+  "standard": "A1.LIN.B.1",
+  "difficulty": 3,
+  "prompt": "At sunrise the temperature is $55^\\circ$ and it rises $3^\\circ$ every hour. Write an equation for the temperature $y$ after $x$ hours.",
+  "answerType": "expression",
+  "primaryAnswer": "y = 3x + 55",
+  "alternativeAnswers": [
+    "y=3x+55",
+    "3x + 55",
+    "3x+55",
+    "y = 55 + 3x",
+    "y=55+3x",
+    "55 + 3x",
+    "55+3x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Sunrise is hour $0$ — that temperature is your START, $b$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sunrise is hour $0$ — that temperature is your START, $b$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Check hour $1$: $55 + 3 = 58$ degrees. The starting temperature is $b$ and the hourly rise is $m$."
+    },
+    {
+      "level": "guide",
+      "text": "$b = 55$ and the MOVE is $+3$ per hour, so $m = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 3x + 55$."
+    }
+  ],
+  "explanation": [
+    "At $x = 0$ hours the temperature is $55^\\circ$: $b = 55$.",
+    "It rises $3^\\circ$ per hour: $m = 3$.",
+    "Equation: $y = 3x + 55$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check at noon-ish",
+      "steps": [
+        "After $4$ hours it should be $55 + 3 \\times 4 = 67$ degrees.",
+        "Counting by threes from $55$: $58, 61, 64, 67$ — the equation agrees."
+      ]
+    },
+    {
+      "title": "Table of hours",
+      "steps": [
+        "Hour $0 \\to 55$, hour $1 \\to 58$, hour $2 \\to 61$: constant jump $+3$.",
+        "Jump $3$ is $m$, hour-zero value $55$ is $b$: $y = 3x + 55$."
+      ]
+    }
+  ],
+  "tags": [
+    "write-equation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

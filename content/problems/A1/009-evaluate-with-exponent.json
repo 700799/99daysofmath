@@ -1,0 +1,53 @@
+{
+  "id": "A1.009",
+  "domain": "A1",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "A1.EXP.A.1",
+  "difficulty": 3,
+  "prompt": "If $x = 3$, what is the value of $x^2 + 2x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $3$ for BOTH $x$'s: $3^2 + 2 \\times 3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $3$ for BOTH $x$'s: $3^2 + 2 \\times 3$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $x = 2$: $x^2 + 2x$ becomes $4 + 4 = 8$. Do the SAME two steps with $3$: square it, double it, then add."
+    },
+    {
+      "level": "guide",
+      "text": "$3^2 = 9$ and $2 \\times 3 = 6$. Now add them."
+    },
+    {
+      "level": "reveal",
+      "text": "$9 + 6 = 15$."
+    }
+  ],
+  "explanation": [
+    "Substitute $x = 3$: $3^2 + 2(3)$.",
+    "Exponent first: $3^2 = 3 \\times 3 = 9$.",
+    "Then $2 \\times 3 = 6$, and $9 + 6 = 15$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "One piece at a time",
+      "steps": [
+        "Break the expression into two pieces: $x^2$ and $2x$.",
+        "With $x = 3$: the first piece is 9, the second piece is 6.",
+        "Glue the pieces back with the plus sign: $9 + 6 = 15$."
+      ]
+    }
+  ],
+  "tags": [
+    "evaluate",
+    "exponent"
+  ],
+  "estimatedSeconds": 55
+}

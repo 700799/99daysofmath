@@ -1,0 +1,53 @@
+{
+  "id": "A1.059",
+  "domain": "A1",
+  "unit": 6,
+  "orderInUnit": 9,
+  "standard": "A1.LIN.A.1",
+  "difficulty": 3,
+  "prompt": "A battery log on your phone reads: hour $1 \\to 88\\%$, hour $3 \\to 64\\%$. What is the rate of change in percent per hour? (Include the sign.)",
+  "answerType": "numeric",
+  "primaryAnswer": "-12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The battery is DRAINING, so the rate should come out negative.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The battery is DRAINING, so the rate should come out negative."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Simpler log: $80\\%$ at hour $1$ and $70\\%$ at hour $2$ drops $10$ over $1$ hour = $-10$ per hour. Find the drop, then divide by the hours."
+    },
+    {
+      "level": "guide",
+      "text": "Change in percent: $64 - 88 = -24$. Change in hours: $3 - 1 = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-24 \\div 2 = -12$ percent per hour."
+    }
+  ],
+  "explanation": [
+    "Points: $(1, 88)$ and $(3, 64)$.",
+    "Rise: $64 - 88 = -24$. Run: $3 - 1 = 2$.",
+    "Slope $= \\frac{-24}{2} = -12$: the battery loses $12\\%$ each hour."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Fill the missing hour",
+      "steps": [
+        "From hour $1$ to hour $3$ the battery fell $24\\%$ over $2$ hours — split it evenly.",
+        "Hour $2$ must read $76\\%$: each hour drops $12$, so the rate is $-12$."
+      ]
+    }
+  ],
+  "tags": [
+    "slope",
+    "rate-of-change",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

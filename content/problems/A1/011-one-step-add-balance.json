@@ -1,0 +1,47 @@
+{
+  "id": "A1.011",
+  "domain": "A1",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "A1.EQ.A.1",
+  "difficulty": 1,
+  "prompt": "Solve for $x$: $x + 9 = 15$. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The equation is a balance scale. To undo $+9$, subtract $9$ — from BOTH sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The equation is a balance scale. To undo $+9$, subtract $9$ — from BOTH sides."
+    },
+    {
+      "level": "guide",
+      "text": "$x + 9 - 9 = 15 - 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 6$."
+    }
+  ],
+  "explanation": [
+    "Undo the $+9$ by subtracting 9 from both sides.",
+    "$x = 15 - 9 = 6$.",
+    "Check: $6 + 9 = 15$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As a balance scale",
+      "steps": [
+        "Left pan: a mystery box plus a 9-gram weight. Right pan: 15 grams. The scale balances.",
+        "Lift 9 grams off EACH pan — still balanced.",
+        "Now the box alone balances 6 grams, so $x = 6$."
+      ]
+    }
+  ],
+  "tags": [
+    "one-step-equation"
+  ],
+  "estimatedSeconds": 25
+}

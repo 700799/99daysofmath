@@ -1,0 +1,47 @@
+{
+  "id": "A1.065",
+  "domain": "A1",
+  "unit": 7,
+  "orderInUnit": 5,
+  "standard": "A1.LIN.A.2",
+  "difficulty": 2,
+  "prompt": "A line has equation $y = 2x + 1$. What is $y$ when $x = 4$?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Replace $x$ with $4$ in the equation.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Replace $x$ with $4$ in the equation."
+    },
+    {
+      "level": "guide",
+      "text": "$y = 2 \\times 4 + 1$. Multiply first."
+    },
+    {
+      "level": "reveal",
+      "text": "$8 + 1 = 9$."
+    }
+  ],
+  "explanation": [
+    "Substitute: $y = 2 \\times 4 + 1$.",
+    "$2 \\times 4 = 8$, then $8 + 1 = 9$.",
+    "So the point $(4, 9)$ sits on the line."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Start, then climb",
+      "steps": [
+        "Start at $b = 1$ on the $y$-axis.",
+        "Slope $2$ means climb $2$ per step across; four steps climb $8$: $1 + 8 = 9$."
+      ]
+    }
+  ],
+  "tags": [
+    "slope-intercept",
+    "evaluate"
+  ],
+  "estimatedSeconds": 35
+}

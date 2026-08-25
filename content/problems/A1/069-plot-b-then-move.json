@@ -1,0 +1,53 @@
+{
+  "id": "A1.069",
+  "domain": "A1",
+  "unit": 7,
+  "orderInUnit": 9,
+  "standard": "A1.LIN.A.2",
+  "difficulty": 3,
+  "prompt": "To graph $y = 3x + 2$, you plot the start $(0, 2)$, then move right $1$. What $y$-value do you land on?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The slope $3$ means: for every $1$ right, go UP $3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The slope $3$ means: for every $1$ right, go UP $3$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Start at the y-intercept $(0, 2)$. Moving right $1$ climbs by the slope $3$: $2 + 3 = 5$. The slope IS the step size."
+    },
+    {
+      "level": "guide",
+      "text": "Start at height $2$, rise $3$: $2 + 3 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "You land at $(1, 5)$, so $y = 5$."
+    }
+  ],
+  "explanation": [
+    "Graphing recipe: plot $b$, then use $m$ as rise over run.",
+    "Slope $3 = \\frac{3}{1}$: right $1$, up $3$.",
+    "From $(0, 2)$: right $1$, up $3$ lands on $(1, 5)$ — the $y$-value is $5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Just plug in",
+      "steps": [
+        "Moving right $1$ from $x = 0$ puts you at $x = 1$.",
+        "$y = 3 \\times 1 + 2 = 5$ — the graph move and the formula agree."
+      ]
+    }
+  ],
+  "tags": [
+    "slope-intercept",
+    "graphing",
+    "rise-over-run"
+  ],
+  "estimatedSeconds": 50
+}

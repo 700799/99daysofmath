@@ -1,6 +1,10 @@
 import type { Domain } from '../types/problem';
 import { LESSON_SLIDES } from './lessonSlides';
 import type { LessonSlide } from './lessonSlides';
+import { A1_LESSONS_U01_04 } from './a1/lessons_u01_04';
+import { A1_LESSONS_U05_08 } from './a1/lessons_u05_08';
+import { A1_LESSONS_U09_11 } from './a1/lessons_u09_11';
+import { A1_LESSONS_U12_14 } from './a1/lessons_u12_14';
 
 export type { LessonSlide };
 
@@ -1234,6 +1238,12 @@ export const LESSONS: Lesson[] = [
     ],
     watchOut: 'SORT data before finding median or range — unsorted data hides the extremes.',
   },
+  // ---------------- A1 — Algebra 1 (middle-school course) ----------------
+  ...A1_LESSONS_U01_04,
+  ...A1_LESSONS_U05_08,
+  ...A1_LESSONS_U09_11,
+  ...A1_LESSONS_U12_14,
+
 ];
 
 // Attach each lesson's story-style slide deck (authored per-domain in lessonSlides/).

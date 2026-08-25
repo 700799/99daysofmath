@@ -1,0 +1,48 @@
+{
+  "id": "A1.047",
+  "domain": "A1",
+  "unit": 5,
+  "orderInUnit": 7,
+  "standard": "A1.FUN.A.1",
+  "difficulty": 2,
+  "prompt": "A vending machine only has buttons numbered $1$ through $8$ — those are its allowed inputs (its DOMAIN). What is the largest number in the domain?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Domain = the set of inputs the machine ACCEPTS.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Domain = the set of inputs the machine ACCEPTS."
+    },
+    {
+      "level": "guide",
+      "text": "The buttons run from $1$ up to $8$. Which is the biggest allowed input?"
+    },
+    {
+      "level": "reveal",
+      "text": "The largest allowed input is $8$."
+    }
+  ],
+  "explanation": [
+    "The domain is the list of allowed inputs: the buttons $1, 2, 3, \\ldots, 8$.",
+    "Pressing $9$ does nothing — $9$ is not in the domain.",
+    "The largest number in the domain is $8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Domain vs range",
+      "steps": [
+        "Inputs (buttons) form the domain; outputs (snacks) form the range.",
+        "The question asks about buttons only, and they stop at $8$."
+      ]
+    }
+  ],
+  "tags": [
+    "functions",
+    "domain",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

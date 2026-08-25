@@ -1,0 +1,62 @@
+{
+  "id": "A1.072",
+  "domain": "A1",
+  "unit": 8,
+  "orderInUnit": 2,
+  "standard": "A1.LIN.B.1",
+  "difficulty": 1,
+  "prompt": "You start with $\\$15$ saved and add $\\$5$ every week. Write an equation for your savings $y$ after $x$ weeks.",
+  "answerType": "expression",
+  "primaryAnswer": "y = 5x + 15",
+  "alternativeAnswers": [
+    "y=5x+15",
+    "5x + 15",
+    "5x+15",
+    "y = 15 + 5x",
+    "y=15+5x",
+    "15 + 5x",
+    "15+5x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the START (money at week $0$) and the MOVE (money added per week).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the START (money at week $0$) and the MOVE (money added per week)."
+    },
+    {
+      "level": "guide",
+      "text": "Start $b = 15$, move $m = 5$ per week. Fill in $y = mx + b$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 5x + 15$."
+    }
+  ],
+  "explanation": [
+    "The start is $b = 15$ — the money before any weeks pass.",
+    "The move is $m = 5$ — dollars added each week.",
+    "Equation: $y = 5x + 15$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test it on a week",
+      "steps": [
+        "After $2$ weeks you should have $15 + 5 + 5 = 25$ dollars.",
+        "The equation says $y = 5 \\times 2 + 15 = 25$. It matches, so it is right."
+      ]
+    },
+    {
+      "title": "From a table",
+      "steps": [
+        "Week $0 \\to 15$, week $1 \\to 20$, week $2 \\to 25$: a steady jump of $+5$.",
+        "The jump is $m = 5$; the week-zero value $15$ is $b$: $y = 5x + 15$."
+      ]
+    }
+  ],
+  "tags": [
+    "write-equation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

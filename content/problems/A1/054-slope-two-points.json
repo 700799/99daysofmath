@@ -1,0 +1,47 @@
+{
+  "id": "A1.054",
+  "domain": "A1",
+  "unit": 6,
+  "orderInUnit": 4,
+  "standard": "A1.LIN.A.1",
+  "difficulty": 2,
+  "prompt": "Find the slope of the line through $(1, 2)$ and $(3, 8)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Slope $= \\frac{y_2 - y_1}{x_2 - x_1}$ — change in $y$ over change in $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Slope $= \\frac{y_2 - y_1}{x_2 - x_1}$ — change in $y$ over change in $x$."
+    },
+    {
+      "level": "guide",
+      "text": "Rise: $8 - 2 = 6$. Run: $3 - 1 = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 \\div 2 = 3$."
+    }
+  ],
+  "explanation": [
+    "Rise: $y_2 - y_1 = 8 - 2 = 6$.",
+    "Run: $x_2 - x_1 = 3 - 1 = 2$.",
+    "Slope $= \\frac{6}{2} = 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk the stairs",
+      "steps": [
+        "Start at $(1, 2)$. To reach $(3, 8)$ you walk $2$ across and $6$ up.",
+        "Per single step across that is $3$ up — slope $3$."
+      ]
+    }
+  ],
+  "tags": [
+    "slope",
+    "two-points"
+  ],
+  "estimatedSeconds": 40
+}

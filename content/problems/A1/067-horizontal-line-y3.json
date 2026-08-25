@@ -1,0 +1,47 @@
+{
+  "id": "A1.067",
+  "domain": "A1",
+  "unit": 7,
+  "orderInUnit": 7,
+  "standard": "A1.LIN.A.2",
+  "difficulty": 2,
+  "prompt": "A line has equation $y = 3$. What is $y$ on this line when $x = 100$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$y = 3$ has no $x$ in it at all. What does that tell you?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$y = 3$ has no $x$ in it at all. What does that tell you?"
+    },
+    {
+      "level": "guide",
+      "text": "Think of it as $y = 0x + 3$: slope $0$, start $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y$ is ALWAYS $3$, even at $x = 100$."
+    }
+  ],
+  "explanation": [
+    "$y = 3$ means $y = 0x + 3$: the slope is $0$.",
+    "With zero slope the line never climbs or falls — it is horizontal.",
+    "At $x = 100$ (or any $x$), $y = 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A flat hallway",
+      "steps": [
+        "Start at height $3$ and move with slope $0$: every step across stays at height $3$.",
+        "Walk $100$ steps and you are still at height $3$."
+      ]
+    }
+  ],
+  "tags": [
+    "slope-intercept",
+    "horizontal-line"
+  ],
+  "estimatedSeconds": 30
+}

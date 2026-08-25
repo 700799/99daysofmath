@@ -1,0 +1,62 @@
+{
+  "id": "A1.140",
+  "domain": "A1",
+  "unit": 14,
+  "orderInUnit": 10,
+  "standard": "A1.QUAD.A.1",
+  "difficulty": 3,
+  "prompt": "A trampoline bounce follows $h = 30t - 5t^2$, with $h$ in centimeters above the mat after $t$ seconds. Using the arc's symmetry, find the MAXIMUM height, in centimeters.",
+  "answerType": "numeric",
+  "primaryAnswer": "45",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "First find the landing: factor $5t(6 - t) = 0$, so $h = 0$ at $t = 0$ and $t = 6$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find the landing: factor $5t(6 - t) = 0$, so $h = 0$ at $t = 0$ and $t = 6$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Test a time: at $t = 2$, $h = 60 - 20 = 40$ cm. To find when it lands, ask when $h$ returns to $0$ and factor out the $t$."
+    },
+    {
+      "level": "guide",
+      "text": "The peak sits halfway between takeoff and landing: $t = 3$. Now compute $h$ there."
+    },
+    {
+      "level": "reveal",
+      "text": "$h = 30 \\times 3 - 5 \\times 9 = 90 - 45 = 45$ centimeters."
+    }
+  ],
+  "explanation": [
+    "Factor to find the ground times: $30t - 5t^2 = 5t(6 - t) = 0$, so $t = 0$ or $t = 6$.",
+    "A parabola is symmetric, so the vertex is halfway: $t = 3$.",
+    "Height there: $h = 30(3) - 5(3)^2 = 90 - 45 = 45$.",
+    "Maximum height: $45$ centimeters."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Table of the bounce",
+      "steps": [
+        "t = 0: h = 0. t = 1: h = 25. t = 2: h = 40. t = 3: h = 45. t = 4: h = 40.",
+        "The heights climb, peak at 45, then mirror back down — the max is 45 cm."
+      ]
+    },
+    {
+      "title": "Rainbow symmetry",
+      "steps": [
+        "The bounce arc is a rainbow: up-time equals down-time.",
+        "In the air from t = 0 to t = 6, so the top is at t = 3.",
+        "Plug in t = 3: 90 − 45 = 45 cm at the very top."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "vertex",
+    "word-problem"
+  ],
+  "estimatedSeconds": 90
+}

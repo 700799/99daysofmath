@@ -1,0 +1,47 @@
+{
+  "id": "A1.021",
+  "domain": "A1",
+  "unit": 3,
+  "orderInUnit": 1,
+  "standard": "A1.EQ.A.2",
+  "difficulty": 1,
+  "prompt": "Solve for $x$: $2x + 3x = 25$. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "First tidy up: $2x$ and $3x$ are like terms. Combine them.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First tidy up: $2x$ and $3x$ are like terms. Combine them."
+    },
+    {
+      "level": "guide",
+      "text": "$2x + 3x = 5x$, so $5x = 25$. Now divide both sides by $5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 25 \\div 5 = 5$."
+    }
+  ],
+  "explanation": [
+    "Combine like terms first: $2x + 3x = 5x$.",
+    "Now solve $5x = 25$: divide both sides by 5.",
+    "$x = 5$. Check: $2(5) + 3(5) = 10 + 15 = 25$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the boxes",
+      "steps": [
+        "2 mystery boxes plus 3 more mystery boxes is 5 identical boxes.",
+        "Five boxes together weigh 25, so each box weighs $25 \\div 5 = 5$."
+      ]
+    }
+  ],
+  "tags": [
+    "multi-step-equation",
+    "like-terms"
+  ],
+  "estimatedSeconds": 30
+}

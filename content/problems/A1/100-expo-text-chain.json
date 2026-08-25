@@ -1,0 +1,59 @@
+{
+  "id": "A1.100",
+  "domain": "A1",
+  "unit": 10,
+  "orderInUnit": 10,
+  "standard": "A1.EXPO.A.1",
+  "difficulty": 3,
+  "prompt": "You text a funny picture to 2 friends, and every person who gets it sends it to 2 new people. After 10 rounds, the round reaches $2^{10}$ people. How many people is that?",
+  "answerType": "numeric",
+  "primaryAnswer": "1024",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$2^{10}$ is ten copies of 2 multiplied. Use a landmark: $2^5 = 32$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$2^{10}$ is ten copies of 2 multiplied. Use a landmark: $2^5 = 32$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Count one round at a time: round $1$ reaches $2$ people, round $2$ reaches $4$, round $3$ reaches $8$. Each round DOUBLES."
+    },
+    {
+      "level": "guide",
+      "text": "Product rule with numbers: $2^{10} = 2^5 \\times 2^5 = 32 \\times 32$."
+    },
+    {
+      "level": "reveal",
+      "text": "$32 \\times 32 = 1024$ people."
+    }
+  ],
+  "explanation": [
+    "Each round doubles the reach, so round 10 is $2^{10}$.",
+    "Split it with the product rule: $2^{10} = 2^5 \\cdot 2^5$ because $5 + 5 = 10$.",
+    "$32 \\times 32 = 1024$ people."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Keep doubling a list",
+      "steps": [
+        "2, 4, 8, 16, 32, 64, 128, 256, 512, 1024.",
+        "The 10th number in the doubling list is 1024."
+      ]
+    },
+    {
+      "title": "Land on 1000 fast",
+      "steps": [
+        "2¹⁰ = 2⁴ × 2⁶ = 16 × 64.",
+        "16 × 64 = 16 × 60 + 16 × 4 = 960 + 64 = 1024."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

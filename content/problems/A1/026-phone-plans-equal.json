@@ -1,0 +1,48 @@
+{
+  "id": "A1.026",
+  "domain": "A1",
+  "unit": 3,
+  "orderInUnit": 6,
+  "standard": "A1.EQ.A.2",
+  "difficulty": 2,
+  "prompt": "Phone plan A costs $\\$12$ plus $\\$0.10$ per minute. Plan B costs $\\$0.30$ per minute with no base fee. Solve $12 + 0.10m = 0.30m$ to find the number of minutes $m$ where the plans cost the same. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Get the $m$'s on one team: subtract $0.10m$ from both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Get the $m$'s on one team: subtract $0.10m$ from both sides."
+    },
+    {
+      "level": "guide",
+      "text": "$12 = 0.20m$. Divide both sides by $0.20$."
+    },
+    {
+      "level": "reveal",
+      "text": "$m = 12 \\div 0.20 = 60$ minutes."
+    }
+  ],
+  "explanation": [
+    "Subtract $0.10m$ from both sides: $12 = 0.20m$.",
+    "Divide by 0.20: $m = 60$.",
+    "Check: plan A costs $12 + 0.10(60) = \\$18$; plan B costs $0.30(60) = \\$18$. ✓ Same price at 60 minutes."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Race with a head start",
+      "steps": [
+        "Plan B charges 20 cents more per minute, but plan A starts $\\$12$ ahead.",
+        "B catches up 20 cents each minute. To close a $\\$12$ gap takes $1200 \\div 20 = 60$ minutes."
+      ]
+    }
+  ],
+  "tags": [
+    "both-sides",
+    "decimals",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

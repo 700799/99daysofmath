@@ -1,0 +1,59 @@
+{
+  "id": "A1.108",
+  "domain": "A1",
+  "unit": 11,
+  "orderInUnit": 8,
+  "standard": "A1.EXPO.A.2",
+  "difficulty": 3,
+  "prompt": "A magic penny starts at 1 cent and doubles in value every day. After 10 doublings, how many cents is it worth?",
+  "answerType": "numeric",
+  "primaryAnswer": "1024",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Ten doublings means $1 \\times 2^{10}$ cents.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Ten doublings means $1 \\times 2^{10}$ cents."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Shrink it: after $3$ doublings a penny is $1 \\to 2 \\to 4 \\to 8$ cents, which is $2^3$. So $10$ doublings is $2^{10}$."
+    },
+    {
+      "level": "guide",
+      "text": "Use a landmark: $2^5 = 32$, and $2^{10} = 32 \\times 32$."
+    },
+    {
+      "level": "reveal",
+      "text": "$32 \\times 32 = 1024$ cents (over ten dollars!)."
+    }
+  ],
+  "explanation": [
+    "Doubling is exponential: $y = 1 \\cdot 2^x$ cents after $x$ doublings.",
+    "At $x = 10$: $2^{10} = 2^5 \\times 2^5 = 32 \\times 32$.",
+    "The penny is worth 1024 cents — more than $\\$10$ from one cent."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "List the doubles",
+      "steps": [
+        "1 → 2 → 4 → 8 → 16 → 32 → 64 → 128 → 256 → 512 → 1024.",
+        "Ten arrows, ten doublings: 1024 cents."
+      ]
+    },
+    {
+      "title": "Compare with $5 a day",
+      "steps": [
+        "Adding $5 a day for 10 days gives $50 — but that pace never speeds up.",
+        "The doubling penny hits $10.24 by day 10 and would pass $5,000,000 by day 30. Multiplying beats adding in the long run."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-growth",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

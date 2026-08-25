@@ -1,0 +1,54 @@
+{
+  "id": "A1.101",
+  "domain": "A1",
+  "unit": 11,
+  "orderInUnit": 1,
+  "standard": "A1.EXPO.A.2",
+  "difficulty": 1,
+  "prompt": "A pattern goes 3, 6, 12, 24, ... Each step multiplies by the same number. What is that growth factor?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Divide any term by the one before it: $6 \\div 3 = ?$",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Divide any term by the one before it: $6 \\div 3 = ?$"
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\div 3 = 2$, and $12 \\div 6 = 2$ too. The multiplier repeats."
+    },
+    {
+      "level": "reveal",
+      "text": "The growth factor is 2 — each step doubles."
+    }
+  ],
+  "explanation": [
+    "Exponential patterns MULTIPLY by the same factor each step.",
+    "Divide neighbors to find it: $6 \\div 3 = 2$, $12 \\div 6 = 2$, $24 \\div 12 = 2$.",
+    "The growth factor is 2."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Rule out adding",
+      "steps": [
+        "If the pattern ADDED the same amount, the jumps would match: but 3→6 adds 3 while 6→12 adds 6.",
+        "The jumps grow, so it multiplies. Each term is exactly double the last: factor 2."
+      ]
+    },
+    {
+      "title": "Photocopier picture",
+      "steps": [
+        "Imagine a copier set to \"enlarge ×2.\" Feed in 3, get 6. Feed in 6, get 12. Feed in 12, get 24.",
+        "One machine setting explains every step: the factor is 2."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-growth",
+    "patterns"
+  ],
+  "estimatedSeconds": 35
+}

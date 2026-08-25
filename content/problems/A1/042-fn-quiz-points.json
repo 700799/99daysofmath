@@ -1,0 +1,48 @@
+{
+  "id": "A1.042",
+  "domain": "A1",
+  "unit": 5,
+  "orderInUnit": 2,
+  "standard": "A1.FUN.A.1",
+  "difficulty": 1,
+  "prompt": "On a quiz, each question is worth $4$ points, so your score is $f(q) = 4q$. What is $f(3)$? Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$f(3)$ means \"feed the machine a $3$\" — replace $q$ with $3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$f(3)$ means \"feed the machine a $3$\" — replace $q$ with $3$."
+    },
+    {
+      "level": "guide",
+      "text": "$f(3) = 4 \\times 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 \\times 3 = 12$ points."
+    }
+  ],
+  "explanation": [
+    "$f(q) = 4q$ is a machine named $f$: input questions, output points.",
+    "$f(3)$ means put $3$ into the machine: $4 \\times 3 = 12$.",
+    "Three correct questions earn $12$ points."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count it out",
+      "steps": [
+        "Each question is worth $4$ points.",
+        "Three questions: $4 + 4 + 4 = 12$ points."
+      ]
+    }
+  ],
+  "tags": [
+    "functions",
+    "function-notation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

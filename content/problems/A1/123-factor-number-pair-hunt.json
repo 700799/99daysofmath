@@ -1,0 +1,54 @@
+{
+  "id": "A1.123",
+  "domain": "A1",
+  "unit": 13,
+  "orderInUnit": 3,
+  "standard": "A1.POLY.A.2",
+  "difficulty": 1,
+  "prompt": "Two numbers MULTIPLY to $12$ and ADD to $7$. What is the larger of the two numbers?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "List the pairs that multiply to $12$: $1 \\times 12$, $2 \\times 6$, $3 \\times 4$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "List the pairs that multiply to $12$: $1 \\times 12$, $2 \\times 6$, $3 \\times 4$."
+    },
+    {
+      "level": "guide",
+      "text": "Which pair adds to $7$? Check: $1 + 12 = 13$, $2 + 6 = 8$, $3 + 4 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$3 + 4 = 7$, so the pair is $3$ and $4$. The larger is $4$."
+    }
+  ],
+  "explanation": [
+    "List factor pairs of 12: (1, 12), (2, 6), (3, 4).",
+    "Only $3 + 4 = 7$.",
+    "The larger number is $4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why this hunt matters",
+      "steps": [
+        "This is the exact search you use to factor x² + 7x + 12.",
+        "The pair 3 and 4 becomes (x + 3)(x + 4) — the number hunt IS factoring practice."
+      ]
+    },
+    {
+      "title": "Split 7 and test",
+      "steps": [
+        "Break 7 into pairs: 1 + 6, 2 + 5, 3 + 4.",
+        "Multiply each: 6, 10, 12. Only 3 × 4 hits 12, so the numbers are 3 and 4."
+      ]
+    }
+  ],
+  "tags": [
+    "factoring",
+    "number-pairs"
+  ],
+  "estimatedSeconds": 35
+}

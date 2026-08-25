@@ -1,0 +1,48 @@
+{
+  "id": "A1.045",
+  "domain": "A1",
+  "unit": 5,
+  "orderInUnit": 5,
+  "standard": "A1.FUN.A.1",
+  "difficulty": 2,
+  "prompt": "Let $g(x) = 10 - 2x$. What is $g(3)$? Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$g$ is just another machine's name. Feed it a $3$: replace $x$ with $3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$g$ is just another machine's name. Feed it a $3$: replace $x$ with $3$."
+    },
+    {
+      "level": "guide",
+      "text": "Compute $2 \\times 3$ first, then subtract from $10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$10 - 2 \\times 3 = 10 - 6 = 4$."
+    }
+  ],
+  "explanation": [
+    "Replace $x$ with $3$: $g(3) = 10 - 2 \\times 3$.",
+    "Multiply first: $2 \\times 3 = 6$.",
+    "Subtract: $10 - 6 = 4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Countdown machine",
+      "steps": [
+        "The machine starts at $10$ and takes away $2$ for every $1$ of input.",
+        "Input $3$: take away $2$ three times — $10 \\to 8 \\to 6 \\to 4$."
+      ]
+    }
+  ],
+  "tags": [
+    "functions",
+    "function-notation",
+    "evaluate"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,47 @@
+{
+  "id": "A1.015",
+  "domain": "A1",
+  "unit": 2,
+  "orderInUnit": 5,
+  "standard": "A1.EQ.A.1",
+  "difficulty": 2,
+  "prompt": "Solve for $x$: $3x + 5 = 20$. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Undo in reverse order: the $+5$ was done last, so remove it first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Undo in reverse order: the $+5$ was done last, so remove it first."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract $5$ from both sides: $3x = 15$. Now divide by $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 15 \\div 3 = 5$."
+    }
+  ],
+  "explanation": [
+    "Subtract 5 from both sides: $3x = 15$.",
+    "Divide both sides by 3: $x = 5$.",
+    "Check: $3(5) + 5 = 20$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Unwrap the present",
+      "steps": [
+        "The equation wrapped $x$ in two layers: first \"times 3\", then \"plus 5\".",
+        "Unwrap backwards: peel off the \"+5\" (subtract 5), then peel off the \"times 3\" (divide by 3).",
+        "Inside the wrapping you find $x = 5$."
+      ]
+    }
+  ],
+  "tags": [
+    "two-step-equation"
+  ],
+  "estimatedSeconds": 40
+}

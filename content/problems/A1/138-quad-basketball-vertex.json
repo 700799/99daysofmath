@@ -1,0 +1,60 @@
+{
+  "id": "A1.138",
+  "domain": "A1",
+  "unit": 14,
+  "orderInUnit": 8,
+  "standard": "A1.QUAD.A.1",
+  "difficulty": 3,
+  "prompt": "A basketball's arc follows $h = 9 - (t - 2)^2$, with $h$ in feet and $t$ in seconds. The vertex is the arc's highest point. What is the MAXIMUM height, in feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A square like $(t - 2)^2$ is never negative — its smallest value is $0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A square like $(t - 2)^2$ is never negative — its smallest value is $0$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Read the vertex form: in $h = 9 - (t - 2)^2$, the squared part is never negative, so the biggest $h$ happens when it equals $0$."
+    },
+    {
+      "level": "guide",
+      "text": "$h$ is biggest when you subtract the LEAST. When does $(t - 2)^2 = 0$?"
+    },
+    {
+      "level": "reveal",
+      "text": "At $t = 2$ the square is $0$, so $h = 9 - 0 = 9$ feet — the maximum."
+    }
+  ],
+  "explanation": [
+    "$(t - 2)^2$ is a square, so it is always $0$ or more.",
+    "$h = 9$ minus that square, so $h$ peaks when the square is $0$.",
+    "That happens at $t = 2$: maximum height $= 9 - 0 = 9$ feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test times around the peak",
+      "steps": [
+        "t = 1: h = 9 − 1 = 8. t = 2: h = 9 − 0 = 9. t = 3: h = 9 − 1 = 8.",
+        "Heights rise to 9 and fall back — the vertex of the arc is 9 feet."
+      ]
+    },
+    {
+      "title": "Read the vertex form",
+      "steps": [
+        "h = 9 − (t − 2)² says: start at the peak height 9, then subtract a penalty for being away from t = 2.",
+        "Zero penalty at t = 2, so the highest point of the ball's flight is 9 feet."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "vertex",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

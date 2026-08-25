@@ -1,0 +1,54 @@
+{
+  "id": "A1.096",
+  "domain": "A1",
+  "unit": 10,
+  "orderInUnit": 6,
+  "standard": "A1.EXPO.A.1",
+  "difficulty": 2,
+  "prompt": "A rumor spreads in rounds: each person tells exactly 3 new people. In round 4, the number of new people who hear it is $3^4$. How many people is that?",
+  "answerType": "numeric",
+  "primaryAnswer": "81",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$3^4$ means four copies of 3 multiplied: $3 \\times 3 \\times 3 \\times 3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$3^4$ means four copies of 3 multiplied: $3 \\times 3 \\times 3 \\times 3$."
+    },
+    {
+      "level": "guide",
+      "text": "Triple step by step: 3, 9, 27, ..."
+    },
+    {
+      "level": "reveal",
+      "text": "One more triple: $27 \\times 3 = 81$ people."
+    }
+  ],
+  "explanation": [
+    "Each round multiplies by 3, so round 4 is $3^4 = 3 \\times 3 \\times 3 \\times 3$.",
+    "Step by step: $3 \\times 3 = 9$, $9 \\times 3 = 27$, $27 \\times 3 = 81$.",
+    "81 new people hear the rumor in round 4."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Round-by-round table",
+      "steps": [
+        "Round 1: 3 people. Round 2: 9. Round 3: 27. Round 4: 81.",
+        "Each row is triple the last, so round 4 reaches 81 people."
+      ]
+    },
+    {
+      "title": "Pair the copies",
+      "steps": [
+        "Group 3⁴ as (3 × 3) × (3 × 3) = 9 × 9.",
+        "9 × 9 = 81."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

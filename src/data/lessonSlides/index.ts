@@ -5,6 +5,10 @@ import { NS_SLIDES } from './ns';
 import { EE_SLIDES } from './ee';
 import { G_SLIDES } from './g';
 import { SP_SLIDES } from './sp';
+import { A1_SLIDES_U01_04 } from './a1_u01_04';
+import { A1_SLIDES_U05_08 } from './a1_u05_08';
+import { A1_SLIDES_U09_11 } from './a1_u09_11';
+import { A1_SLIDES_U12_14 } from './a1_u12_14';
 
 export type { LessonSlide, SlideBank } from './types';
 
@@ -16,4 +20,8 @@ export const LESSON_SLIDES: SlideBank = {
   ...EE_SLIDES,
   ...G_SLIDES,
   ...SP_SLIDES,
+  ...A1_SLIDES_U01_04,
+  ...A1_SLIDES_U05_08,
+  ...A1_SLIDES_U09_11,
+  ...A1_SLIDES_U12_14,
 };

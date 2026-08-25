@@ -1,0 +1,56 @@
+{
+  "id": "A1.095",
+  "domain": "A1",
+  "unit": 10,
+  "orderInUnit": 5,
+  "standard": "A1.EXPO.A.1",
+  "difficulty": 2,
+  "prompt": "Simplify: $(x^2)^4$. Write your answer as a power of $x$.",
+  "answerType": "expression",
+  "primaryAnswer": "x^8",
+  "alternativeAnswers": [
+    "x⁸"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$(x^2)^4$ means four copies of $x^2$ multiplied: $x^2 \\cdot x^2 \\cdot x^2 \\cdot x^2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$(x^2)^4$ means four copies of $x^2$ multiplied: $x^2 \\cdot x^2 \\cdot x^2 \\cdot x^2$."
+    },
+    {
+      "level": "guide",
+      "text": "Each $x^2$ carries 2 copies of $x$, and there are 4 groups: $2 \\times 4$ copies."
+    },
+    {
+      "level": "reveal",
+      "text": "$(x^2)^4 = x^{2 \\times 4} = x^8$."
+    }
+  ],
+  "explanation": [
+    "A power of a power is copies of copies: 4 groups, each holding 2 copies of $x$.",
+    "4 groups $\\times$ 2 copies each $= 8$ copies.",
+    "So $(x^2)^4 = x^8$. Power rule: multiply the exponents."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Add them up with the product rule",
+      "steps": [
+        "Unroll it: (x²)⁴ = x² · x² · x² · x².",
+        "Multiplying powers adds exponents: 2 + 2 + 2 + 2 = 8, so x⁸."
+      ]
+    },
+    {
+      "title": "Egg-carton picture",
+      "steps": [
+        "Picture 4 cartons, each holding 2 eggs. Every egg is one copy of x being multiplied.",
+        "Total eggs: 4 × 2 = 8, so the answer is x⁸."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "power-rule"
+  ],
+  "estimatedSeconds": 45
+}

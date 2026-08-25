@@ -1,0 +1,47 @@
+{
+  "id": "A1.013",
+  "domain": "A1",
+  "unit": 2,
+  "orderInUnit": 3,
+  "standard": "A1.EQ.A.1",
+  "difficulty": 1,
+  "prompt": "Solve for $x$: $x - 6 = 11$. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "17",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Something had $6$ taken away and left $11$. Undo subtraction with addition.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Something had $6$ taken away and left $11$. Undo subtraction with addition."
+    },
+    {
+      "level": "guide",
+      "text": "Add $6$ to BOTH sides: $x = 11 + 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 17$."
+    }
+  ],
+  "explanation": [
+    "Undo the $-6$ by adding 6 to both sides.",
+    "$x = 11 + 6 = 17$.",
+    "Check: $17 - 6 = 11$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Rewind the story",
+      "steps": [
+        "A number lost 6 and ended at 11.",
+        "Play the movie backwards: start at 11 and give the 6 back.",
+        "$11 + 6 = 17$, so the number began as 17."
+      ]
+    }
+  ],
+  "tags": [
+    "one-step-equation"
+  ],
+  "estimatedSeconds": 25
+}

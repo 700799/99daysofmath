@@ -1,0 +1,47 @@
+{
+  "id": "A1.016",
+  "domain": "A1",
+  "unit": 2,
+  "orderInUnit": 6,
+  "standard": "A1.EQ.A.1",
+  "difficulty": 2,
+  "prompt": "Four friends split a pizza bill equally, and each friend pays $\\$7$. Solve $\\frac{b}{4} = 7$ to find the whole bill $b$ in dollars. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "28",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The bill was DIVIDED by $4$. Undo division with multiplication.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The bill was DIVIDED by $4$. Undo division with multiplication."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply BOTH sides by $4$: $b = 7 \\times 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$b = 28$. The bill was $\\$28$."
+    }
+  ],
+  "explanation": [
+    "The bill split 4 ways gives $\\frac{b}{4} = 7$.",
+    "Multiply both sides by 4: $b = 28$.",
+    "Check: $28 \\div 4 = 7$ each. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Collect the shares",
+      "steps": [
+        "Each of the 4 friends puts $\\$7$ on the table.",
+        "The pile is the whole bill: $7 + 7 + 7 + 7 = 28$ dollars."
+      ]
+    }
+  ],
+  "tags": [
+    "one-step-equation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

@@ -19,6 +19,10 @@ import { problems6EE } from './seeds/6.EE.js';
 import { problems6G } from './seeds/6.G.js';
 import { problems6SP } from './seeds/6.SP.js';
 import { problems5F } from './seeds/5.F.js';
+import { problemsA1u01 } from './seeds/A1_u01_04.js';
+import { problemsA1u05 } from './seeds/A1_u05_08.js';
+import { problemsA1u09 } from './seeds/A1_u09_11.js';
+import { problemsA1u12 } from './seeds/A1_u12_14.js';
 import type { SeedProblem } from './seeds/types.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -69,6 +73,10 @@ async function main() {
     ...problems6G,
     ...problems6SP,
     ...problems5F,
+    ...problemsA1u01,
+    ...problemsA1u05,
+    ...problemsA1u09,
+    ...problemsA1u12,
   ];
 
   let created = 0;
