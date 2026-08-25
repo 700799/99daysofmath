@@ -65,7 +65,7 @@ export function Home() {
             Pick a trail, {displayName}!
           </h1>
           <p className="text-slate-600 mt-0.5 text-sm sm:text-base">
-            Gr-5 foundations, five 6th-grade trails — and all-new Algebra 1. Earn stars, stickers, and XP.
+            Gr-5 foundations, five 6th-grade trails, plus Algebra 1 and Precalculus. Earn stars, stickers, and XP.
           </p>
         </div>
       </div>

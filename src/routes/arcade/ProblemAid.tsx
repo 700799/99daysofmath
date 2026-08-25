@@ -19,6 +19,53 @@ export function buildSolveAid(prompt: string): Aid {
   const n = nums(prompt);
   const p = prompt.toLowerCase().replace(/−/g, '-'); // normalize unicode minus
 
+  // --- Precalculus shapes ---------------------------------------------------
+  if (/log base/.test(p)) {
+    return {
+      title: 'A log asks for the exponent',
+      steps: [
+        'Read it as a question: the base to WHAT power gives that number?',
+        'Multiply the base by itself, counting steps, until you hit the target.',
+        'The number of steps IS the logarithm.',
+      ],
+    };
+  }
+  if (/amplitude|maximum value/.test(p) && /sin|cos/.test(p)) {
+    return {
+      title: 'Amplitude, midline, maximum',
+      steps: [
+        'In y = a·sin(x) + k, the amplitude is a and the midline is k.',
+        'Maximum = midline + amplitude; minimum = midline − amplitude.',
+        'Amplitude is HALF the peak-to-trough distance.',
+      ],
+    };
+  }
+  if (/period/.test(p) && /sin|cos/.test(p)) {
+    return { title: 'Period = 360 ÷ b', steps: ['In sin(bx), b counts how many waves fit in one turn.', 'So one wave takes 360° ÷ b.'] };
+  }
+  if (/hypotenuse|right triangle/.test(p)) {
+    return {
+      title: 'Right triangle: a² + b² = c²',
+      steps: [
+        'The hypotenuse c is always across from the right angle (the longest side).',
+        'Missing hypotenuse: add the squares of the legs, then square-root.',
+        'Missing leg: subtract the known leg squared from c², then square-root.',
+      ],
+    };
+  }
+  if (/arithmetic sequence/.test(p)) {
+    return { title: 'Term n of an arithmetic list', steps: ['Term n = first + (n − 1) × d.', 'Careful: it is (n − 1) jumps, not n.'] };
+  }
+  if (/geometric sequence|doubles each time/.test(p)) {
+    return { title: 'Term n of a geometric list', steps: ['Term n = first × r^(n − 1).', 'Or just multiply step by step and count the jumps.'] };
+  }
+  if (/counting numbers/.test(p)) {
+    return { title: 'Pair the ends (Gauss)', steps: ['1 + 2 + … + n pairs up: first + last, second + second-last…', 'Sum = n × (n + 1) ÷ 2.'] };
+  }
+  if (/shifts? (right|left)|shift/.test(p) && /\(x/.test(p)) {
+    return { title: 'Inside moves sideways (and lies)', steps: ['A change INSIDE the parentheses moves the graph sideways.', 'Minus moves RIGHT, plus moves LEFT — the opposite of what it looks like.'] };
+  }
+
   // --- Algebra 1 shapes -----------------------------------------------------
   // distribute: "3(x + 2) = 21"
   let m = p.match(/(\d+)\(x \+ (\d+)\) = (\d+)/);
