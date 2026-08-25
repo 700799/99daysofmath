@@ -144,7 +144,7 @@ describe('problems bank — every answer self-accepts', () => {
 describe('problems bank — units 7-10 quality bar', () => {
   // This bar describes the grade-5/6 content rounds, whose domains top out at
   // unit 10. Algebra 1 runs to unit 14 and has its own (stricter) bar below.
-  const advanced = PROBLEMS.filter((p) => p.unit >= 7 && p.domain !== 'A1');
+  const advanced = PROBLEMS.filter((p) => p.unit >= 7 && p.domain !== 'A1' && p.domain !== 'PC');
 
   it('there are 200 problems across units 7-10', () => {
     expect(advanced).toHaveLength(200);

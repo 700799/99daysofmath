@@ -186,7 +186,92 @@ function gLinear(hard: boolean): Challenge {
   return { prompt: `A rental costs $${fee} to start plus $${per} per hour. How much for ${h} hours?`, answer: fee + per * h };
 }
 
-export type ChallengeKind = 'word' | 'exponent' | 'factor' | 'ratio' | 'fraction' | 'geometry' | 'stats' | 'algebra' | 'linear';
+
+// --- Precalculus generators ------------------------------------------------
+// Every answer stays a clean integer so the numeric keypad still works: we pick
+// from exact-value triangles, powers, and integer-friendly sequences.
+
+function gTrig(hard: boolean): Challenge {
+  const r = Math.random();
+  if (!hard) {
+    if (r < 0.4) {
+      // 3-4-5 / 6-8-10 style right triangle: find the missing leg or hypotenuse
+      const k = ri(1, 4); const [a, b, c] = [3 * k, 4 * k, 5 * k];
+      return Math.random() < 0.5
+        ? { prompt: `Right triangle: legs ${a} and ${b}. How long is the hypotenuse?`, answer: c }
+        : { prompt: `Right triangle: leg ${a}, hypotenuse ${c}. How long is the other leg?`, answer: b };
+    }
+    if (r < 0.7) {
+      const deg = [0, 30, 45, 60, 90][ri(0, 4)];
+      const sinPct: Record<number, number> = { 0: 0, 30: 50, 45: 71, 60: 87, 90: 100 };
+      return { prompt: `On the unit circle, sin(${deg}°) × 100, rounded to a whole number, is?`, answer: sinPct[deg] };
+    }
+    const deg = [180, 360, 90, 270][ri(0, 3)];
+    return { prompt: `How many degrees is ${deg / 90} right angle(s)?`, answer: deg };
+  }
+  if (r < 0.35) {
+    // degrees ↔ radians using multiples of π: answer is the numerator over 180
+    const deg = [30, 45, 60, 90, 120, 135, 150, 180][ri(0, 7)];
+    const g = gcf(deg, 180);
+    return { prompt: `${deg}° = (a/b)π radians in lowest terms. What is the DENOMINATOR b?`, answer: 180 / g };
+  }
+  if (r < 0.7) {
+    const amp = ri(2, 9); const shift = ri(1, 5);
+    return { prompt: `y = ${amp}sin(x) + ${shift}. What is the MAXIMUM value?`, answer: amp + shift };
+  }
+  const b = ri(2, 6);
+  return { prompt: `y = sin(${b}x) has period 360°/${b}. What is the period in degrees?`, answer: 360 / b };
+}
+
+function gLog(hard: boolean): Challenge {
+  const r = Math.random();
+  if (!hard) {
+    if (r < 0.5) { const b = ri(2, 5); const e = ri(2, 3); return { prompt: `log base ${b} of ${Math.pow(b, e)} = ?`, answer: e }; }
+    const e = ri(2, 4); return { prompt: `log base 10 of ${Math.pow(10, e)} = ?`, answer: e };
+  }
+  if (r < 0.35) { const b = ri(2, 5); const e = ri(3, 5); return { prompt: `log base ${b} of ${Math.pow(b, e)} = ?`, answer: e }; }
+  if (r < 0.7) {
+    const x = ri(2, 3); const y = ri(2, 3);
+    return { prompt: `log(A) = ${x} and log(B) = ${y}. What is log(A × B)?`, answer: x + y };
+  }
+  const b = ri(2, 5); const e = ri(2, 4);
+  return { prompt: `Solve for x:  ${b}^x = ${Math.pow(b, e)}`, answer: e };
+}
+
+function gSequence(hard: boolean): Challenge {
+  const r = Math.random();
+  if (r < 0.4) {
+    const a = ri(2, 9); const d = ri(2, hard ? 9 : 5); const n = ri(4, hard ? 12 : 7);
+    return { prompt: `Arithmetic sequence starts at ${a} and adds ${d} each time. What is term ${n}?`, answer: a + d * (n - 1) };
+  }
+  if (r < 0.7) {
+    const a = ri(1, 4); const rr = 2; const n = ri(4, hard ? 9 : 6);
+    return { prompt: `Geometric sequence starts at ${a} and DOUBLES each time. What is term ${n}?`, answer: a * Math.pow(rr, n - 1) };
+  }
+  const n = ri(4, hard ? 12 : 8);
+  return { prompt: `Sum of the first ${n} counting numbers (1 + 2 + … + ${n})?`, answer: (n * (n + 1)) / 2 };
+}
+
+function gFunction(hard: boolean): Challenge {
+  const r = Math.random();
+  if (r < 0.35) {
+    const a = ri(2, hard ? 6 : 4); const b = ri(1, 9); const x = ri(2, hard ? 8 : 5);
+    return { prompt: `f(x) = ${a}x + ${b}. Find f(${x}).`, answer: a * x + b };
+  }
+  if (r < 0.6) {
+    const shift = ri(1, 7);
+    return { prompt: `y = (x − ${shift})². The graph shifts RIGHT by how many units?`, answer: shift };
+  }
+  if (r < 0.85) {
+    // composition of two simple linear machines
+    const a = ri(2, 4); const b = ri(1, 6); const x = ri(1, 5);
+    return { prompt: `f(x) = x + ${b} and g(x) = ${a}x. Find f(g(${x})).`, answer: a * x + b };
+  }
+  const a = ri(2, 6); const y = a * ri(2, 6);
+  return { prompt: `f(x) = ${a}x. The inverse undoes it. Find the input that gives ${y}.`, answer: y / a };
+}
+
+export type ChallengeKind = 'word' | 'exponent' | 'factor' | 'ratio' | 'fraction' | 'geometry' | 'stats' | 'algebra' | 'linear' | 'trig' | 'log' | 'sequence' | 'function';
 const GENERATORS: Record<ChallengeKind, (hard: boolean) => Challenge> = {
   word: gWord,
   exponent: gExponent,
@@ -197,6 +282,10 @@ const GENERATORS: Record<ChallengeKind, (hard: boolean) => Challenge> = {
   stats: gStats,
   algebra: gAlgebra,
   linear: gLinear,
+  trig: gTrig,
+  log: gLog,
+  sequence: gSequence,
+  function: gFunction,
 };
 
 /** Generate a challenge restricted to the given kinds, scaled by level (1–5).
@@ -218,6 +307,7 @@ const UNIT_KINDS: Record<ArcadeUnit, ChallengeKind[]> = {
   '6.SP': ['stats'],
   g5: ['word', 'fraction', 'factor'], // gentler Grade-5 review pool
   a1: ['algebra', 'linear'], // solve-for-x, slope, y = mx + b, f(x)
+  pc: ['trig', 'log', 'sequence', 'function'], // triangles, unit circle, logs, sequences, transformations
   mixed: ['word', 'exponent', 'factor', 'ratio', 'fraction', 'geometry', 'stats'],
 };
 

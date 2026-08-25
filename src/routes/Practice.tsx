@@ -62,8 +62,9 @@ export function Practice() {
     (async () => {
       try {
         // Adaptive practice pools the grade-level (core) domains only — the
-        // Algebra 1 trail has its own practice so kids aren't ambushed here.
-        const all = (await getAllProblems()).filter((p) => p.domain !== 'A1');
+        // Algebra 1 and Precalculus trails have their own practice so kids
+        // aren't ambushed here.
+        const all = (await getAllProblems()).filter((p) => p.domain !== 'A1' && p.domain !== 'PC');
         if (cancelled) return;
         poolRef.current = all;
         const stats = useProgress.getState().problemStats;

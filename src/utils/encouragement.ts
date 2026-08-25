@@ -131,6 +131,7 @@ const MASTERY_STICKERS: StickerDef[] = [
   { id: 'mastery-6.SP', emoji: '📊', label: 'Stats Star', category: 'mastery', hint: 'Finish all 6.SP units' },
   { id: 'mastery-5.F', emoji: '🧱', label: 'Foundation Builder', category: 'mastery', hint: 'Finish all Gr-5 Foundations units' },
   { id: 'mastery-A1', emoji: '🚀', label: 'Algebra Ace', category: 'mastery', hint: 'Finish all Algebra 1 units' },
+  { id: 'mastery-PC', emoji: '🎢', label: 'Precalc Pioneer', category: 'mastery', hint: 'Finish all Precalculus units' },
   { id: 'mastery-grand', emoji: '🏅', label: '6th-Grade Champion', category: 'mastery', hint: 'Master every 6th-grade domain' },
 ];
 
@@ -155,6 +156,7 @@ export const UNIT_COUNT_BY_DOMAIN: Record<Domain, number> = {
   '6.G': 10,
   '6.SP': 10,
   A1: 14,
+  PC: 14,
 };
 
 const ALL_UNIT_STICKERS: StickerDef[] = (() => {

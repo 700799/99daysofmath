@@ -57,8 +57,8 @@ export interface RitPoint {
 }
 
 // Units the student can pick at the arcade entry. Drives every game's questions.
-export type ArcadeUnit = '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'g5' | 'a1' | 'mixed';
-export const ARCADE_UNITS: ArcadeUnit[] = ['6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'g5', 'a1', 'mixed'];
+export type ArcadeUnit = '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'g5' | 'a1' | 'pc' | 'mixed';
+export const ARCADE_UNITS: ArcadeUnit[] = ['6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'g5', 'a1', 'pc', 'mixed'];
 export const ARCADE_UNIT_LABELS: Record<ArcadeUnit, string> = {
   '6.RP': 'Ratios & Proportions',
   '6.NS': 'Number System',
@@ -67,11 +67,12 @@ export const ARCADE_UNIT_LABELS: Record<ArcadeUnit, string> = {
   '6.SP': 'Statistics',
   g5: 'Grade-5 Review',
   a1: 'Algebra 1',
+  pc: 'Precalculus',
   mixed: 'Mixed (all units)',
 };
 // Per-unit mastery records, seeded for every unit.
 const unitMap = <T,>(v: T): Record<ArcadeUnit, T> =>
-  ({ '6.RP': v, '6.NS': v, '6.EE': v, '6.G': v, '6.SP': v, g5: v, a1: v, mixed: v });
+  ({ '6.RP': v, '6.NS': v, '6.EE': v, '6.G': v, '6.SP': v, g5: v, a1: v, pc: v, mixed: v });
 
 export interface ArcadeConfig {
   lessonsPerSession: number; // full lessons required to unlock one game session
@@ -654,6 +655,25 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
     const byDomain = (stateAny.byDomain ?? {}) as Record<string, unknown>;
     if (byDomain['A1'] === undefined) {
       byDomain['A1'] = { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] };
+      stateAny.byDomain = byDomain;
+    }
+    const seed: Array<[string, number]> = [
+      ['arcadeLevels', 1],
+      ['arcadeStreak', 0],
+      ['arcadeMiss', 0],
+    ];
+    for (const [key, base] of seed) {
+      const rec = (stateAny[key] as Record<string, number>) ?? {};
+      for (const u of ARCADE_UNITS) if (rec[u] === undefined) rec[u] = base;
+      stateAny[key] = rec;
+    }
+  }
+  if (fromVersion < 23) {
+    // Precalculus arrives: seed its trail record and the arcade's 'pc' unit.
+    const stateAny = state as Record<string, unknown>;
+    const byDomain = (stateAny.byDomain ?? {}) as Record<string, unknown>;
+    if (byDomain['PC'] === undefined) {
+      byDomain['PC'] = { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] };
       stateAny.byDomain = byDomain;
     }
     const seed: Array<[string, number]> = [
@@ -1282,7 +1302,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 22,
+      version: 23,
       migrate: migrateProgress,
     },
   ),

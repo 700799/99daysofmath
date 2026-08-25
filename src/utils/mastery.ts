@@ -34,6 +34,16 @@ export const CLUSTER_LABELS: Record<string, string> = {
   'A1.EXPO.A': 'Exponents & exponential growth (Alg 1)',
   'A1.POLY.A': 'Polynomials & factoring (Alg 1)',
   'A1.QUAD.A': 'Quadratics (Alg 1)',
+  'PC.FUN.A': 'Functions & transformations (Precalc)',
+  'PC.POLY.A': 'Polynomial functions (Precalc)',
+  'PC.RAT.A': 'Rational functions (Precalc)',
+  'PC.EXP.A': 'Exponential functions (Precalc)',
+  'PC.LOG.A': 'Logarithms (Precalc)',
+  'PC.TRIG.A': 'Triangle trigonometry (Precalc)',
+  'PC.TRIG.B': 'Trig graphs & identities (Precalc)',
+  'PC.TRIG.C': 'Laws of Sines & Cosines (Precalc)',
+  'PC.SEQ.A': 'Sequences & series (Precalc)',
+  'PC.LIM.A': 'Limits & rates of change (Precalc)',
 };
 
 export type MasteryLevel = 'strong' | 'on-track' | 'needs-work' | 'unassessed';
@@ -144,6 +154,8 @@ function domainOfCluster(cluster: string): Domain {
   if (cluster.startsWith('5.')) return '5.F';
   // All Algebra 1 strands (A1.EQ.A, A1.LIN.B, …) live in the single A1 domain.
   if (cluster.startsWith('A1.')) return 'A1';
+  // All Precalculus strands (PC.TRIG.B, PC.LOG.A, …) live in the single PC domain.
+  if (cluster.startsWith('PC.')) return 'PC';
   const parts = cluster.split('.');
   return `${parts[0]}.${parts[1]}` as Domain;
 }

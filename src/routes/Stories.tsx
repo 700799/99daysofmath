@@ -37,6 +37,7 @@ const EMOJI_BY_DOMAIN: Record<string, string> = {
   '6.G': '📐',
   '6.SP': '📊',
   A1: '🚀',
+  PC: '🎢',
 };
 
 export function Stories() {

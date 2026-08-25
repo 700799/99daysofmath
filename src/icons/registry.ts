@@ -49,6 +49,7 @@ export const DOMAIN_ICONS: Record<Domain, IconName> = {
   '6.G': 'shapes',
   '6.SP': 'chart',
   A1: 'equation',
+  PC: 'chart',
 };
 
 /** Full standalone SVG document for an icon, rasterized at `px` square. */
