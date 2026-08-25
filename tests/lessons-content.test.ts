@@ -68,10 +68,11 @@ describe('lessons content', () => {
     // Lessons are being consolidated from separate idea/examples/trap clips into
     // a single combined `<key>-lesson.mp4`. A core unit passes if it has that one
     // combined video OR the older 2+ separate segment videos — either way it has
-    // real animated content. Supplementary lessons (unit 11+) may ship text-first.
+    // real animated content. Supplementary lessons (unit 11+) may ship text-first,
+    // and the Algebra 1 course ships text-first (videos are a planned follow-up).
     const missing: string[] = [];
     for (const l of LESSONS) {
-      if (l.unit > 10) continue;
+      if (l.unit > 10 || l.domain === 'A1') continue;
       const vids = l.videos ?? [];
       const hasCombined = vids.some((v) => v.src.endsWith('-lesson.mp4'));
       if (!hasCombined && vids.length < 2) {
