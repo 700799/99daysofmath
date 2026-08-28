@@ -179,7 +179,7 @@ function ConceptTab({ lesson, onOpenLesson }: { lesson: Lesson; onOpenLesson?: (
         <button
           type="button"
           onClick={onOpenLesson}
-          className="mt-4 w-full min-h-12 rounded-2xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+          className="mt-4 w-full min-h-12 rounded-2xl bg-duo-blue hover:bg-duo-green-dark text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
         >
           📘 Open the full lesson
         </button>

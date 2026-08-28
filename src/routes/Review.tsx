@@ -129,7 +129,7 @@ export function Review() {
         <div className="mt-6 flex flex-col gap-3 max-w-xs mx-auto">
           <Link
             to="/practice"
-            className="w-full min-h-12 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+            className="w-full min-h-12 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-duo-green-dark text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
           >
             Adaptive practice
           </Link>
@@ -292,7 +292,7 @@ export function Review() {
                 initial={{ scale: 0.85, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: 'spring', stiffness: 320, damping: 18 }}
-                className="mt-4 bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-ok/50 rounded-3xl p-5 text-center"
+                className="mt-4 bg-ok-soft border-2 border-ok/50 rounded-3xl p-5 text-center"
               >
                 <div className="text-4xl">✅</div>
                 <div className="font-display font-extrabold text-xl text-ok mt-1">
@@ -313,7 +313,7 @@ export function Review() {
             <motion.div
               initial={{ scale: 0.96, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="mt-4 bg-gradient-to-br from-red-50 to-orange-50 border-2 border-bad/50 rounded-3xl p-5"
+              className="mt-4 bg-bad-soft border-2 border-bad/50 rounded-3xl p-5"
             >
               <div className="flex items-start gap-3">
                 <div className="text-4xl shrink-0">🤔</div>
@@ -342,7 +342,7 @@ export function Review() {
               <button
                 type="button"
                 onClick={advance}
-                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
               >
                 {index + 1 >= total ? 'Finish' : 'Next'}
               </button>

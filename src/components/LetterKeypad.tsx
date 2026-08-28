@@ -15,9 +15,9 @@ const base =
   'flex-1 min-h-12 rounded-lg font-display font-extrabold text-sm uppercase shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all touch-none select-none';
 
 function tint(s?: KeyStatus): string {
-  if (s === 'correct') return 'bg-emerald-500 text-white border-emerald-600';
+  if (s === 'correct') return 'bg-duo-green text-white border-emerald-600';
   if (s === 'present') return 'bg-amber-400 text-white border-amber-500';
-  if (s === 'absent') return 'bg-slate-400 text-white border-slate-500';
+  if (s === 'absent') return 'bg-line-strong text-white border-slate-500';
   return 'bg-surface text-ink border-line hover:bg-surface-2';
 }
 

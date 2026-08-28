@@ -107,7 +107,7 @@ export function MathematicianDeckPlayer({ deck, onClose }: { deck: Deck; onClose
                     {deck.name}
                   </p>
                   <p className="font-display text-xl font-extrabold text-violet-200 sm:text-2xl">{deck.era}</p>
-                  <div className="inline-flex items-center gap-2 rounded-full border-2 border-emerald-400/60 bg-emerald-500/20 px-4 py-1.5 font-display text-sm font-extrabold uppercase tracking-wider text-emerald-200 sm:text-base">
+                  <div className="inline-flex items-center gap-2 rounded-full border-2 border-emerald-400/60 bg-duo-green/20 px-4 py-1.5 font-display text-sm font-extrabold uppercase tracking-wider text-emerald-200 sm:text-base">
                     📘 Connects to: {deck.tieIn}
                   </div>
                 </>
@@ -141,7 +141,7 @@ export function MathematicianDeckPlayer({ deck, onClose }: { deck: Deck; onClose
           {idx + 1} / {total}
         </div>
         <button type="button" onClick={next} disabled={remain > 0}
-          className="h-14 rounded-full bg-emerald-500 px-8 font-display text-lg font-extrabold text-white shadow-lg shadow-emerald-500/30 transition hover:bg-emerald-600 active:translate-y-0.5 disabled:cursor-not-allowed disabled:bg-white/15 disabled:text-white/50 disabled:shadow-none sm:px-10 sm:text-xl" data-haptic="tap">
+          className="h-14 rounded-full bg-duo-green px-8 font-display text-lg font-extrabold text-white shadow-lg shadow-black/30 transition hover:bg-duo-green-dark active:translate-y-0.5 disabled:cursor-not-allowed disabled:bg-white/15 disabled:text-white/50 disabled:shadow-none sm:px-10 sm:text-xl" data-haptic="tap">
           {remain > 0 ? `Read… ${remain}s` : isLast ? '✓ Done' : 'Continue ▶'}
         </button>
       </div>

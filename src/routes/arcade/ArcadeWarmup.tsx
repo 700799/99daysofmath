@@ -146,7 +146,7 @@ export function ArcadeGate({ title, children }: { title: string; children: React
         />
       )}
       {extending && (
-        <div className="fixed inset-0 z-[60] overflow-y-auto bg-white">
+        <div className="fixed inset-0 z-[60] overflow-y-auto bg-surface">
           <LessonGate
             key={`extend-${sessionKey}`}
             title={title}
@@ -193,10 +193,10 @@ export function ArcadeGate({ title, children }: { title: string; children: React
     return (
       <div>
         <ArcadeHeader title={title} emoji={game?.emoji ?? '🔒'} />
-        <div className="max-w-sm mx-auto mt-6 rounded-3xl border-2 border-slate-200 bg-white p-6 text-center shadow">
+        <div className="max-w-sm mx-auto mt-6 rounded-3xl border-2 border-line bg-surface p-6 text-center shadow">
           <div className="text-5xl">🔒</div>
-          <div className="mt-2 font-display font-extrabold text-xl text-slate-900">{title} is locked</div>
-          <div className="mt-1 text-sm text-slate-600">Unlock it in the Coin Shop for 🪙 {premiumPrice}. Earn coins by playing games!</div>
+          <div className="mt-2 font-display font-extrabold text-xl text-ink">{title} is locked</div>
+          <div className="mt-1 text-sm text-ink-muted">Unlock it in the Coin Shop for 🪙 {premiumPrice}. Earn coins by playing games!</div>
           <Link to="/shop" className="mt-4 inline-block min-h-11 leading-[2.75rem] px-6 rounded-2xl bg-fuchsia-500 text-white font-display font-extrabold">🛍️ Go to Shop</Link>
         </div>
       </div>
@@ -236,13 +236,13 @@ function TimeUpOverlay({
   const canAfford = coins >= cost;
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center bg-slate-900/70 backdrop-blur-sm p-4">
-      <div className="w-full max-w-xs rounded-3xl border-4 border-slate-900 bg-white p-5 text-center shadow-2xl">
+      <div className="w-full max-w-xs rounded-3xl border-4 border-line-strong bg-surface p-5 text-center shadow-2xl">
         <div className="text-5xl">⏰</div>
-        <div className="mt-1 font-display text-2xl font-black text-slate-900">Time&apos;s up!</div>
-        <p className="mt-1 text-sm font-display font-bold text-slate-600">
+        <div className="mt-1 font-display text-2xl font-black text-ink">Time&apos;s up!</div>
+        <p className="mt-1 text-sm font-display font-bold text-ink-muted">
           Great playing! Earn more time with math.
         </p>
-        <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1 font-display font-extrabold text-amber-800">
+        <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-warn-soft px-3 py-1 font-display font-extrabold text-warn">
           🪙 {coins} coins
         </div>
 
@@ -250,14 +250,14 @@ function TimeUpOverlay({
           type="button"
           onClick={onCoins}
           disabled={!canAfford}
-          className={`mt-4 w-full min-h-14 rounded-2xl border-4 border-slate-900 font-display text-lg font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.25)] active:translate-y-0.5 ${
-            canAfford ? 'bg-amber-400 text-slate-900' : 'bg-slate-100 text-slate-400 border-slate-300 cursor-not-allowed shadow-none'
+          className={`mt-4 w-full min-h-14 rounded-2xl border-4 border-line-strong font-display text-lg font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.25)] active:translate-y-0.5 ${
+            canAfford ? 'bg-amber-400 text-ink' : 'bg-surface-2 text-ink-dim border-line-strong cursor-not-allowed shadow-none'
           }`}
         >
           🪙 Spend {cost} → +{minutes} min
         </button>
         {!canAfford && (
-          <p className="mt-1 text-xs font-display font-bold text-slate-500">
+          <p className="mt-1 text-xs font-display font-bold text-ink-muted">
             Not enough coins — do a lesson to earn {LESSON_COINS}!
           </p>
         )}
@@ -265,14 +265,14 @@ function TimeUpOverlay({
         <button
           type="button"
           onClick={onLesson}
-          className="mt-3 w-full min-h-14 rounded-2xl border-4 border-slate-900 bg-indigo-500 font-display text-lg font-extrabold text-white shadow-[0_4px_0_0_rgba(0,0,0,0.25)] active:translate-y-0.5"
+          className="mt-3 w-full min-h-14 rounded-2xl border-4 border-line-strong bg-accent font-display text-lg font-extrabold text-white shadow-[0_4px_0_0_rgba(0,0,0,0.25)] active:translate-y-0.5"
         >
           📚 Do a lesson → +{minutes} min
         </button>
 
         <Link
           to="/arcade"
-          className="mt-3 inline-block text-sm font-display font-bold text-slate-500 underline underline-offset-2"
+          className="mt-3 inline-block text-sm font-display font-bold text-ink-muted underline underline-offset-2"
         >
           ← Back to the arcade
         </Link>
@@ -365,10 +365,10 @@ function LessonGate({
         <ArcadeHeader title={title} emoji={emoji} />
         <div className="max-w-md mx-auto text-center py-12">
           <div className="text-5xl">⏳</div>
-          <h2 className="mt-3 text-xl font-display font-extrabold text-slate-900">
+          <h2 className="mt-3 text-xl font-display font-extrabold text-ink">
             Keep learning!
           </h2>
-          <p className="mt-2 text-slate-600 font-display font-bold">
+          <p className="mt-2 text-ink-muted font-display font-bold">
             A little more practice time before you play — {left}s to go.
           </p>
         </div>
@@ -405,7 +405,7 @@ function HardCheck({
   const addAchievement = useProgress((s) => s.addAchievement);
 
   if (!problems) {
-    return <p className="text-center text-slate-500 font-display font-bold py-12">Loading check…</p>;
+    return <p className="text-center text-ink-muted font-display font-bold py-12">Loading check…</p>;
   }
   if (!problems.length) {
     // No hard problems available — don't trap the player.
@@ -447,7 +447,7 @@ function HardCheck({
   return (
     <div className="max-w-xl mx-auto">
       <div className="mb-3 flex items-center justify-between">
-        <span className="text-sm font-display font-extrabold text-slate-700">
+        <span className="text-sm font-display font-extrabold text-ink-muted">
           {lessonLabel}Check {idx + 1} of {problems.length}
         </span>
         <span className="text-[11px] font-display font-extrabold uppercase tracking-wider text-rose-500">
@@ -468,7 +468,7 @@ function HardCheck({
       {submitted && (
         <div
           className={`mt-4 rounded-2xl px-4 py-3 font-display font-bold ${
-            correct ? 'bg-emerald-50 text-emerald-800' : 'bg-rose-50 text-rose-800'
+            correct ? 'bg-ok-soft text-ok' : 'bg-bad-soft text-bad'
           }`}
         >
           {correct ? 'Correct! 🎉' : 'Not quite — check the steps, then try again.'}
@@ -478,7 +478,7 @@ function HardCheck({
       <button
         type="button"
         onClick={() => setShowHelp((s) => !s)}
-        className="mt-4 text-sm font-display font-bold text-blue-700 hover:text-blue-800"
+        className="mt-4 text-sm font-display font-bold text-accent hover:text-accent"
       >
         {showHelp ? '− Hide explanation' : '💡 Show explanation'}
       </button>
@@ -493,7 +493,7 @@ function HardCheck({
           <button
             type="button"
             onClick={next}
-            className="w-full min-h-14 rounded-2xl bg-emerald-500 px-6 font-display font-extrabold text-white shadow"
+            className="w-full min-h-14 rounded-2xl bg-duo-green px-6 font-display font-extrabold text-white shadow"
           >
             {isLast ? 'Start game →' : 'Next →'}
           </button>

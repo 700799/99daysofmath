@@ -160,7 +160,7 @@ export function Shop() {
 
       {/* earn coins (word problems) + always-available lessons */}
       <div className="mt-3 grid grid-cols-2 gap-2">
-        <button type="button" onClick={startEarn} className="min-h-12 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5">
+        <button type="button" onClick={startEarn} className="min-h-12 rounded-2xl bg-duo-green hover:bg-duo-green-dark text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5">
           💰 Earn coins
         </button>
         <button type="button" onClick={() => setHelp(true)} className="min-h-12 rounded-2xl bg-indigo-500 hover:bg-indigo-600 text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5">
@@ -200,7 +200,7 @@ export function Shop() {
                 <div className="font-display font-extrabold text-sm text-ink mt-1">{g.name}</div>
                 <div className="text-[11px] text-ink-muted line-clamp-2 min-h-8">{g.blurb}</div>
                 {own ? (
-                  <Link to={g.path} className="mt-2 block w-full min-h-10 leading-10 rounded-2xl bg-emerald-500 text-white font-display font-extrabold">Play ▶</Link>
+                  <Link to={g.path} className="mt-2 block w-full min-h-10 leading-10 rounded-2xl bg-duo-green text-white font-display font-extrabold">Play ▶</Link>
                 ) : (
                   <button type="button" onClick={() => buyGame(g.id, price)} disabled={coins < price} className="mt-2 w-full min-h-10 rounded-2xl bg-fuchsia-500 disabled:opacity-40 text-white font-display font-extrabold">🔓 Unlock · 🪙{price}</button>
                 )}
@@ -222,7 +222,7 @@ export function Shop() {
               >
                 <div className="text-3xl leading-none">{c.emoji}</div>
                 <div className="text-[10px] font-display font-bold text-ink-muted truncate mt-0.5">{c.name}</div>
-                <div className={`mt-1 text-[10px] font-display font-extrabold rounded-full py-0.5 ${on ? 'bg-emerald-500 text-white' : own ? 'bg-surface-2 text-ink-muted' : 'bg-warn-soft text-warn'}`}>
+                <div className={`mt-1 text-[10px] font-display font-extrabold rounded-full py-0.5 ${on ? 'bg-duo-green text-white' : own ? 'bg-surface-2 text-ink-muted' : 'bg-warn-soft text-warn'}`}>
                   {on ? 'Worn ✓' : own ? 'Wear' : `🪙 ${c.price}`}
                 </div>
               </button>
@@ -249,7 +249,7 @@ export function Shop() {
                 </button>
               ))}
             </div>
-            <button type="button" onClick={submitEarn} disabled={!earn.input.trim()} className="mt-3 w-full min-h-11 rounded-2xl bg-emerald-500 disabled:bg-line-strong text-white font-display font-extrabold">Answer (+🪙{EARN_PER})</button>
+            <button type="button" onClick={submitEarn} disabled={!earn.input.trim()} className="mt-3 w-full min-h-11 rounded-2xl bg-duo-green disabled:bg-line-strong text-white font-display font-extrabold">Answer (+🪙{EARN_PER})</button>
             <div className="mt-2 flex gap-2">
               <button type="button" onClick={() => { setEarn(null); setHelp(true); }} className="flex-1 min-h-10 rounded-2xl bg-accent-soft text-accent font-display font-extrabold text-sm">📚 Show me how</button>
               <button type="button" onClick={() => setEarn(null)} className="flex-1 min-h-10 rounded-2xl bg-surface-2 text-ink-muted font-display font-extrabold text-sm">Done</button>

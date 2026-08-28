@@ -178,7 +178,7 @@ export function Practice() {
             <button
               type="button"
               onClick={() => navigate('/report')}
-              className="w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+              className="w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
             >
               See my progress report
             </button>
@@ -289,7 +289,7 @@ export function Practice() {
                 initial={{ scale: 0.85, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: 'spring', stiffness: 320, damping: 18 }}
-                className="mt-4 bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-ok/50 rounded-3xl p-5 text-center relative overflow-hidden"
+                className="mt-4 bg-ok-soft border-2 border-ok/50 rounded-3xl p-5 text-center relative overflow-hidden"
               >
                 <div className="text-5xl">🎉</div>
                 <div className="font-display font-extrabold text-2xl text-ok mt-1">
@@ -325,7 +325,7 @@ export function Practice() {
             <motion.div
               initial={{ scale: 0.96, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="mt-4 bg-gradient-to-br from-red-50 to-orange-50 border-2 border-bad/50 rounded-3xl p-5"
+              className="mt-4 bg-bad-soft border-2 border-bad/50 rounded-3xl p-5"
             >
               <div className="flex items-start gap-3">
                 <div className="text-4xl shrink-0">🤔</div>
@@ -343,7 +343,7 @@ export function Practice() {
               <button
                 type="button"
                 onClick={advance}
-                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
               >
                 {served >= PRACTICE_SIZE ? 'Finish' : 'Got it'}
               </button>

@@ -136,10 +136,10 @@ export function MockTest() {
     const accuracy = correct / total;
     const zone = ritZone(accuracy);
     const toneStyles: Record<string, string> = {
-      green: 'from-green-50 to-emerald-100 border-ok/50 text-ok',
-      blue: 'from-sky-50 to-blue-100 border-accent/45 text-accent',
-      yellow: 'from-yellow-50 to-amber-100 border-warn/50 text-warn',
-      orange: 'from-orange-50 to-orange-100 border-warn/50 text-warn',
+      green: 'bg-ok-soft border-ok/50 text-ok',
+      blue: 'bg-accent-soft border-accent/45 text-accent',
+      yellow: 'bg-warn-soft border-warn/50 text-warn',
+      orange: 'bg-warn-soft border-warn/50 text-warn',
     };
     return (
       <div className="relative">
@@ -173,7 +173,7 @@ export function MockTest() {
             <button
               type="button"
               onClick={() => navigate('/review')}
-              className="w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+              className="w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
             >
               Review missed problems
             </button>
@@ -244,7 +244,7 @@ export function MockTest() {
                 initial={{ scale: 0.85, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: 'spring', stiffness: 320, damping: 18 }}
-                className="mt-4 bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-ok/50 rounded-3xl p-5 text-center"
+                className="mt-4 bg-ok-soft border-2 border-ok/50 rounded-3xl p-5 text-center"
               >
                 <div className="text-4xl">✅</div>
                 <div className="font-display font-extrabold text-xl text-ok mt-1">Correct!</div>
@@ -263,7 +263,7 @@ export function MockTest() {
             <motion.div
               initial={{ scale: 0.96, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="mt-4 bg-gradient-to-br from-red-50 to-orange-50 border-2 border-bad/50 rounded-3xl p-5"
+              className="mt-4 bg-bad-soft border-2 border-bad/50 rounded-3xl p-5"
             >
               <div className="flex items-start gap-3">
                 <div className="text-4xl shrink-0">🤔</div>
@@ -291,7 +291,7 @@ export function MockTest() {
               <button
                 type="button"
                 onClick={advance}
-                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
               >
                 {index + 1 >= total ? 'See results' : 'Next'}
               </button>

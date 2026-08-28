@@ -266,7 +266,7 @@ function StoryVideoPlayer({
               <button
                 type="button"
                 onClick={onClose}
-                className="rounded-full bg-emerald-500 hover:bg-emerald-600 active:translate-y-0.5 text-white font-display font-extrabold text-xl px-10 h-16 shadow-lg shadow-emerald-500/30 transition"
+                className="rounded-full bg-duo-green hover:bg-duo-green-dark active:translate-y-0.5 text-white font-display font-extrabold text-xl px-10 h-16 shadow-lg shadow-black/30 transition"
               >
                 Done ✓
               </button>

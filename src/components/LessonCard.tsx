@@ -585,7 +585,7 @@ function PracticePage({
             type="button"
             onClick={() => onChange({ ...state, checked: true })}
             disabled={!state.val.trim()}
-            className="shrink-0 px-4 rounded-xl bg-duo-blue hover:bg-blue-600 disabled:bg-surface-2 text-white font-display font-extrabold text-sm transition-colors disabled:cursor-not-allowed"
+            className="shrink-0 px-4 rounded-xl bg-duo-blue hover:bg-duo-green-dark disabled:bg-surface-2 text-white font-display font-extrabold text-sm transition-colors disabled:cursor-not-allowed"
           >
             Check
           </button>

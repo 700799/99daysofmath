@@ -45,55 +45,55 @@ export interface ArcadeGameDef {
 }
 
 export const ARCADE_GAMES: ArcadeGameDef[] = [
-  { id: 'connect4', path: '/arcade/connect4', emoji: '🔴', name: 'Connect 4', blurb: 'Beat the owl.', baseXp: 5, gradient: 'from-red-500 to-rose-600' },
-  { id: 'wheel', path: '/arcade/wheel', emoji: '🎡', name: 'Prize Wheel', blurb: 'One spin a day.', baseXp: 0, gradient: 'from-fuchsia-500 to-purple-600' },
-  { id: 'memory', path: '/arcade/memory', emoji: '🃏', name: 'Memory', blurb: 'Match all 8 pairs.', baseXp: 8, gradient: 'from-sky-500 to-blue-600' },
-  { id: 'shootout', path: '/arcade/shootout', emoji: '💥', name: 'Cannon Shot', blurb: 'Aim by angle. Launch a volley to knock the targets down!', baseXp: 5, gradient: 'from-orange-500 to-amber-600' },
-  { id: 'runner', path: '/arcade/runner', emoji: '🏃', name: 'Math Runner', blurb: 'Right lane, right answer.', baseXp: 8, gradient: 'from-emerald-500 to-teal-600' },
-  { id: 'platformer', path: '/arcade/platformer', emoji: '🍄', name: 'Platformer', blurb: '8 levels. Stomp to the flag.', baseXp: 10, gradient: 'from-pink-500 to-rose-600' },
-  { id: 'racer', path: '/arcade/racer', emoji: '🏎️', name: 'Race Car', blurb: 'First-person dash — dodge the hazards!', baseXp: 9, gradient: 'from-rose-500 to-orange-500' },
-  { id: 'digger', path: '/arcade/digger', emoji: '⛏️', name: 'Gem Digger', blurb: 'Dig for gems. Dodge monsters.', baseXp: 10, gradient: 'from-amber-600 to-yellow-700' },
-  { id: 'tiles', path: '/arcade/2048', emoji: '🔢', name: '2048', blurb: 'Merge tiles to 2048.', baseXp: 10, gradient: 'from-yellow-500 to-amber-600' },
-  { id: 'snake', path: '/arcade/snake', emoji: '🐍', name: 'Math Snake', blurb: 'Eat the right answer.', baseXp: 10, gradient: 'from-lime-500 to-green-700' },
-  { id: 'bricks', path: '/arcade/bricks', emoji: '🧱', name: 'Brick Breaker', blurb: 'Bounce and smash bricks.', baseXp: 10, gradient: 'from-violet-500 to-indigo-700' },
-  { id: 'sudoku', path: '/arcade/sudoku', emoji: '🧩', name: 'Sudoku', blurb: 'Fill the 9×9 grid.', baseXp: 10, gradient: 'from-slate-500 to-slate-700' },
-  { id: 'tetris', path: '/arcade/tetris', emoji: '👾', name: 'Alien Tetris', blurb: 'Stack & clear the aliens.', baseXp: 10, gradient: 'from-purple-500 to-fuchsia-700' },
-  { id: 'boba', path: '/arcade/boba', emoji: '🧋', name: 'Boba Shop', blurb: 'Mix drinks by ratio.', baseXp: 10, gradient: 'from-pink-500 to-rose-600' },
-  { id: 'sushi', path: '/arcade/sushi', emoji: '🍣', name: 'Sushi Match', blurb: 'Match 3 sushi.', baseXp: 10, gradient: 'from-red-500 to-pink-600' },
-  { id: 'tictactoe', path: '/arcade/tictactoe', emoji: '🐕', name: 'Tic Tac Toe', blurb: 'Dogs vs cats. Bigger beats smaller.', baseXp: 8, gradient: 'from-amber-400 to-orange-500' },
-  { id: 'kpop', path: '/arcade/kpop', emoji: '🎤', name: 'K-Pop Dress-Up', blurb: 'Memorize & match the look.', baseXp: 10, gradient: 'from-fuchsia-500 to-pink-600' },
-  { id: 'survival', path: '/arcade/survival', emoji: '🏕️', name: 'Forest Survival', blurb: 'Last as many days as you can.', baseXp: 12, gradient: 'from-green-700 to-emerald-900' },
-  { id: 'fruit', path: '/arcade/fruit', emoji: '🍉', name: 'Fruit Slice', blurb: 'Swipe to slice. Dodge bombs!', baseXp: 10, gradient: 'from-lime-500 to-red-500' },
-  { id: 'town', path: '/arcade/town', emoji: '🏙️', name: 'Pocket Town', blurb: 'Build a city. Grow the tiers.', baseXp: 12, gradient: 'from-sky-500 to-emerald-600' },
-  { id: 'sumo', path: '/arcade/sumo', emoji: '🤼', name: 'Sumo Math', blurb: 'Fast ×÷^ duel. Shove him out!', baseXp: 12, gradient: 'from-amber-500 to-rose-700' },
-  { id: 'monster', path: '/arcade/monster', emoji: '🐲', name: 'Monster Rogue', blurb: 'Catch critters. Climb the gauntlet.', baseXp: 14, gradient: 'from-violet-500 to-indigo-800' },
-  { id: 'turbo', path: '/arcade/racer2', emoji: '🏎️', name: 'Turbo Dash', blurb: 'Mode-7 racer. Beat the clock.', baseXp: 12, gradient: 'from-sky-500 to-indigo-700' },
-  { id: 'wordle', path: '/arcade/wordle', emoji: '🟩', name: 'Word Guess', blurb: 'Crack the 5-letter word in 6 tries.', baseXp: 10, gradient: 'from-green-500 to-emerald-700' },
-  { id: 'hero', path: '/arcade/hero', emoji: '🦸', name: 'Hero Rescue', blurb: 'Pull pins in the right order. Solve to act.', baseXp: 12, gradient: 'from-amber-500 to-rose-700' },
-  { id: 'escape', path: '/arcade/escape', emoji: '🔐', name: 'Logic Escape', blurb: 'Crack the logic puzzles. Escape before time runs out!', baseXp: 12, gradient: 'from-slate-700 to-amber-700' },
-  { id: 'tank', path: '/arcade/tank', emoji: '🎯', name: 'Tank Attack', blurb: 'Aim with angle + power. Blast the evil robots!', baseXp: 12, gradient: 'from-stone-600 to-emerald-800' },
-  { id: 'rig', path: '/arcade/rig', emoji: '🛻', name: 'Desert Rig', blurb: 'Defend the War Rig! Solve fast to fire.', baseXp: 12, gradient: 'from-amber-600 to-orange-800' },
-  { id: 'mathpop', path: '/arcade/mathpop', emoji: '🫧', name: 'Math Pop', blurb: 'Pop bubbles that add up to the target!', baseXp: 10, gradient: 'from-sky-500 to-cyan-600' },
-  { id: 'dress', path: '/arcade/dress', emoji: '👗', name: 'Cool vs Warm Dress Up', blurb: 'Style the theme. Match the palette ratio. Walk the runway!', baseXp: 12, gradient: 'from-fuchsia-500 to-violet-600' },
-  { id: 'taiko', path: '/arcade/taiko', emoji: '🥁', name: 'Taiko Tap', blurb: 'Tap the drum notes on the beat!', baseXp: 10, gradient: 'from-red-500 to-orange-600' },
-  { id: 'shinobi', path: '/arcade/shinobi', emoji: '🥷', name: 'Shinobi Match', blurb: 'Match runes to fend off the foes.', baseXp: 12, gradient: 'from-slate-700 to-rose-700' },
-  { id: 'speedlab', path: '/arcade/speedlab', emoji: '🚀', name: 'Speed Lab', blurb: 'Drive the d = r × t formula!', baseXp: 12, gradient: 'from-slate-800 to-cyan-700' },
-  { id: 'fraction', path: '/arcade/fraction', emoji: '🍕', name: 'Fraction Pizzeria', blurb: 'Serve each pizza fraction!', baseXp: 10, gradient: 'from-amber-500 to-orange-600' },
-  { id: 'chess', path: '/arcade/chess', emoji: '♟️', name: 'Checkmate Lab', blurb: 'One move wins — or the computer beats you!', baseXp: 12, gradient: 'from-slate-700 to-indigo-800' },
-  { id: 'starhop', path: '/arcade/starhop', emoji: '🌟', name: 'Star Hop', blurb: 'Chinese Checkers — hop to the far star!', baseXp: 10, gradient: 'from-indigo-500 to-fuchsia-600' },
-  { id: 'crawler', path: '/arcade/crawler', emoji: '🎲', name: 'Lucky Crawl', blurb: 'Push your luck for treasure — bank before the alarm!', baseXp: 12, gradient: 'from-amber-600 to-yellow-700' },
-  { id: 'carpenter', path: '/arcade/carpenter', emoji: '🔨', name: 'Critter Cottage', blurb: 'Measure, saw & build a cottage — then critters move in!', baseXp: 12, gradient: 'from-amber-700 to-orange-800' },
-  { id: 'asteroids', path: '/arcade/asteroids', emoji: '🪨', name: 'Asteroids', blurb: 'Spin, thrust & blast the space rocks!', baseXp: 10, gradient: 'from-slate-700 to-indigo-800' },
-  { id: 'space', path: '/arcade/space', emoji: '🚀', name: 'Space Blaster', blurb: 'Shoot down the alien invaders!', baseXp: 10, gradient: 'from-indigo-600 to-purple-800' },
-  { id: 'zapper', path: '/arcade/zapper', emoji: '🧟', name: 'Zombie Zapper', blurb: 'Zap the zombie horde before it reaches you!', baseXp: 10, gradient: 'from-lime-600 to-green-800' },
-  { id: 'hippo', path: '/arcade/hippo', emoji: '🦛', name: 'Hungry Hippo', blurb: 'Chomp all the dots, dodge the ghosts!', baseXp: 10, gradient: 'from-pink-500 to-fuchsia-600' },
-  { id: 'blitz', path: '/arcade/blitz', emoji: '🌴', name: 'Jungle Blitz', blurb: 'Run & gun through the jungle!', baseXp: 12, gradient: 'from-green-600 to-emerald-800' },
-  { id: 'frogger', path: '/arcade/leapfrog', emoji: '🐸', name: 'Leap Frog', blurb: 'Hop across the road and river!', baseXp: 10, gradient: 'from-lime-500 to-green-600' },
-  { id: 'rogue', path: '/arcade/rogue', emoji: '⚔️', name: 'Rogue Delve', blurb: 'Delve the dungeon. Grab the loot!', baseXp: 14, gradient: 'from-stone-700 to-violet-800' },
-  { id: 'survivors', path: '/arcade/survivors', emoji: '🍡', name: 'Mochi Survivors', blurb: 'Survive the swarm as long as you can!', baseXp: 14, gradient: 'from-rose-500 to-indigo-800' },
-  { id: 'fishing', path: '/arcade/fishing', emoji: '🎣', name: 'Fishing', blurb: 'Cast, wait & reel in the big catch!', baseXp: 10, gradient: 'from-cyan-500 to-blue-700' },
-  { id: 'tangram', path: '/arcade/tangram', emoji: '🧩', name: 'Tangram', blurb: 'Fill the frame with the seven shapes!', baseXp: 10, gradient: 'from-amber-500 to-orange-600' },
-  { id: 'bubbles', path: '/arcade/bubbles', emoji: '🫧', name: 'Bubble Pop', blurb: 'Aim & pop groups of matching bubbles!', baseXp: 10, gradient: 'from-sky-400 to-cyan-600' },
+  { id: 'connect4', path: '/arcade/connect4', emoji: '🔴', name: 'Connect 4', blurb: 'Beat the owl.', baseXp: 5, gradient: 'from-red-800 to-rose-900' },
+  { id: 'wheel', path: '/arcade/wheel', emoji: '🎡', name: 'Prize Wheel', blurb: 'One spin a day.', baseXp: 0, gradient: 'from-fuchsia-800 to-purple-900' },
+  { id: 'memory', path: '/arcade/memory', emoji: '🃏', name: 'Memory', blurb: 'Match all 8 pairs.', baseXp: 8, gradient: 'from-sky-800 to-blue-900' },
+  { id: 'shootout', path: '/arcade/shootout', emoji: '💥', name: 'Cannon Shot', blurb: 'Aim by angle. Launch a volley to knock the targets down!', baseXp: 5, gradient: 'from-orange-800 to-amber-900' },
+  { id: 'runner', path: '/arcade/runner', emoji: '🏃', name: 'Math Runner', blurb: 'Right lane, right answer.', baseXp: 8, gradient: 'from-emerald-800 to-teal-900' },
+  { id: 'platformer', path: '/arcade/platformer', emoji: '🍄', name: 'Platformer', blurb: '8 levels. Stomp to the flag.', baseXp: 10, gradient: 'from-pink-800 to-rose-900' },
+  { id: 'racer', path: '/arcade/racer', emoji: '🏎️', name: 'Race Car', blurb: 'First-person dash — dodge the hazards!', baseXp: 9, gradient: 'from-rose-800 to-orange-900' },
+  { id: 'digger', path: '/arcade/digger', emoji: '⛏️', name: 'Gem Digger', blurb: 'Dig for gems. Dodge monsters.', baseXp: 10, gradient: 'from-amber-800 to-yellow-900' },
+  { id: 'tiles', path: '/arcade/2048', emoji: '🔢', name: '2048', blurb: 'Merge tiles to 2048.', baseXp: 10, gradient: 'from-yellow-800 to-amber-900' },
+  { id: 'snake', path: '/arcade/snake', emoji: '🐍', name: 'Math Snake', blurb: 'Eat the right answer.', baseXp: 10, gradient: 'from-lime-800 to-green-900' },
+  { id: 'bricks', path: '/arcade/bricks', emoji: '🧱', name: 'Brick Breaker', blurb: 'Bounce and smash bricks.', baseXp: 10, gradient: 'from-violet-800 to-indigo-900' },
+  { id: 'sudoku', path: '/arcade/sudoku', emoji: '🧩', name: 'Sudoku', blurb: 'Fill the 9×9 grid.', baseXp: 10, gradient: 'from-slate-800 to-slate-900' },
+  { id: 'tetris', path: '/arcade/tetris', emoji: '👾', name: 'Alien Tetris', blurb: 'Stack & clear the aliens.', baseXp: 10, gradient: 'from-purple-800 to-fuchsia-900' },
+  { id: 'boba', path: '/arcade/boba', emoji: '🧋', name: 'Boba Shop', blurb: 'Mix drinks by ratio.', baseXp: 10, gradient: 'from-pink-800 to-rose-900' },
+  { id: 'sushi', path: '/arcade/sushi', emoji: '🍣', name: 'Sushi Match', blurb: 'Match 3 sushi.', baseXp: 10, gradient: 'from-red-800 to-pink-900' },
+  { id: 'tictactoe', path: '/arcade/tictactoe', emoji: '🐕', name: 'Tic Tac Toe', blurb: 'Dogs vs cats. Bigger beats smaller.', baseXp: 8, gradient: 'from-amber-800 to-orange-900' },
+  { id: 'kpop', path: '/arcade/kpop', emoji: '🎤', name: 'K-Pop Dress-Up', blurb: 'Memorize & match the look.', baseXp: 10, gradient: 'from-fuchsia-800 to-pink-900' },
+  { id: 'survival', path: '/arcade/survival', emoji: '🏕️', name: 'Forest Survival', blurb: 'Last as many days as you can.', baseXp: 12, gradient: 'from-green-800 to-emerald-900' },
+  { id: 'fruit', path: '/arcade/fruit', emoji: '🍉', name: 'Fruit Slice', blurb: 'Swipe to slice. Dodge bombs!', baseXp: 10, gradient: 'from-lime-800 to-red-900' },
+  { id: 'town', path: '/arcade/town', emoji: '🏙️', name: 'Pocket Town', blurb: 'Build a city. Grow the tiers.', baseXp: 12, gradient: 'from-sky-800 to-emerald-900' },
+  { id: 'sumo', path: '/arcade/sumo', emoji: '🤼', name: 'Sumo Math', blurb: 'Fast ×÷^ duel. Shove him out!', baseXp: 12, gradient: 'from-amber-800 to-rose-900' },
+  { id: 'monster', path: '/arcade/monster', emoji: '🐲', name: 'Monster Rogue', blurb: 'Catch critters. Climb the gauntlet.', baseXp: 14, gradient: 'from-violet-800 to-indigo-900' },
+  { id: 'turbo', path: '/arcade/racer2', emoji: '🏎️', name: 'Turbo Dash', blurb: 'Mode-7 racer. Beat the clock.', baseXp: 12, gradient: 'from-sky-800 to-indigo-900' },
+  { id: 'wordle', path: '/arcade/wordle', emoji: '🟩', name: 'Word Guess', blurb: 'Crack the 5-letter word in 6 tries.', baseXp: 10, gradient: 'from-green-800 to-emerald-900' },
+  { id: 'hero', path: '/arcade/hero', emoji: '🦸', name: 'Hero Rescue', blurb: 'Pull pins in the right order. Solve to act.', baseXp: 12, gradient: 'from-amber-800 to-rose-900' },
+  { id: 'escape', path: '/arcade/escape', emoji: '🔐', name: 'Logic Escape', blurb: 'Crack the logic puzzles. Escape before time runs out!', baseXp: 12, gradient: 'from-slate-800 to-amber-900' },
+  { id: 'tank', path: '/arcade/tank', emoji: '🎯', name: 'Tank Attack', blurb: 'Aim with angle + power. Blast the evil robots!', baseXp: 12, gradient: 'from-stone-800 to-emerald-900' },
+  { id: 'rig', path: '/arcade/rig', emoji: '🛻', name: 'Desert Rig', blurb: 'Defend the War Rig! Solve fast to fire.', baseXp: 12, gradient: 'from-amber-800 to-orange-900' },
+  { id: 'mathpop', path: '/arcade/mathpop', emoji: '🫧', name: 'Math Pop', blurb: 'Pop bubbles that add up to the target!', baseXp: 10, gradient: 'from-sky-800 to-cyan-900' },
+  { id: 'dress', path: '/arcade/dress', emoji: '👗', name: 'Cool vs Warm Dress Up', blurb: 'Style the theme. Match the palette ratio. Walk the runway!', baseXp: 12, gradient: 'from-fuchsia-800 to-violet-900' },
+  { id: 'taiko', path: '/arcade/taiko', emoji: '🥁', name: 'Taiko Tap', blurb: 'Tap the drum notes on the beat!', baseXp: 10, gradient: 'from-red-800 to-orange-900' },
+  { id: 'shinobi', path: '/arcade/shinobi', emoji: '🥷', name: 'Shinobi Match', blurb: 'Match runes to fend off the foes.', baseXp: 12, gradient: 'from-slate-800 to-rose-900' },
+  { id: 'speedlab', path: '/arcade/speedlab', emoji: '🚀', name: 'Speed Lab', blurb: 'Drive the d = r × t formula!', baseXp: 12, gradient: 'from-slate-800 to-cyan-900' },
+  { id: 'fraction', path: '/arcade/fraction', emoji: '🍕', name: 'Fraction Pizzeria', blurb: 'Serve each pizza fraction!', baseXp: 10, gradient: 'from-amber-800 to-orange-900' },
+  { id: 'chess', path: '/arcade/chess', emoji: '♟️', name: 'Checkmate Lab', blurb: 'One move wins — or the computer beats you!', baseXp: 12, gradient: 'from-slate-800 to-indigo-900' },
+  { id: 'starhop', path: '/arcade/starhop', emoji: '🌟', name: 'Star Hop', blurb: 'Chinese Checkers — hop to the far star!', baseXp: 10, gradient: 'from-indigo-800 to-fuchsia-900' },
+  { id: 'crawler', path: '/arcade/crawler', emoji: '🎲', name: 'Lucky Crawl', blurb: 'Push your luck for treasure — bank before the alarm!', baseXp: 12, gradient: 'from-amber-800 to-yellow-900' },
+  { id: 'carpenter', path: '/arcade/carpenter', emoji: '🔨', name: 'Critter Cottage', blurb: 'Measure, saw & build a cottage — then critters move in!', baseXp: 12, gradient: 'from-amber-800 to-orange-900' },
+  { id: 'asteroids', path: '/arcade/asteroids', emoji: '🪨', name: 'Asteroids', blurb: 'Spin, thrust & blast the space rocks!', baseXp: 10, gradient: 'from-slate-800 to-indigo-900' },
+  { id: 'space', path: '/arcade/space', emoji: '🚀', name: 'Space Blaster', blurb: 'Shoot down the alien invaders!', baseXp: 10, gradient: 'from-indigo-800 to-purple-900' },
+  { id: 'zapper', path: '/arcade/zapper', emoji: '🧟', name: 'Zombie Zapper', blurb: 'Zap the zombie horde before it reaches you!', baseXp: 10, gradient: 'from-lime-800 to-green-900' },
+  { id: 'hippo', path: '/arcade/hippo', emoji: '🦛', name: 'Hungry Hippo', blurb: 'Chomp all the dots, dodge the ghosts!', baseXp: 10, gradient: 'from-pink-800 to-fuchsia-900' },
+  { id: 'blitz', path: '/arcade/blitz', emoji: '🌴', name: 'Jungle Blitz', blurb: 'Run & gun through the jungle!', baseXp: 12, gradient: 'from-green-800 to-emerald-900' },
+  { id: 'frogger', path: '/arcade/leapfrog', emoji: '🐸', name: 'Leap Frog', blurb: 'Hop across the road and river!', baseXp: 10, gradient: 'from-lime-800 to-green-900' },
+  { id: 'rogue', path: '/arcade/rogue', emoji: '⚔️', name: 'Rogue Delve', blurb: 'Delve the dungeon. Grab the loot!', baseXp: 14, gradient: 'from-stone-800 to-violet-900' },
+  { id: 'survivors', path: '/arcade/survivors', emoji: '🍡', name: 'Mochi Survivors', blurb: 'Survive the swarm as long as you can!', baseXp: 14, gradient: 'from-rose-800 to-indigo-900' },
+  { id: 'fishing', path: '/arcade/fishing', emoji: '🎣', name: 'Fishing', blurb: 'Cast, wait & reel in the big catch!', baseXp: 10, gradient: 'from-cyan-800 to-blue-900' },
+  { id: 'tangram', path: '/arcade/tangram', emoji: '🧩', name: 'Tangram', blurb: 'Fill the frame with the seven shapes!', baseXp: 10, gradient: 'from-amber-800 to-orange-900' },
+  { id: 'bubbles', path: '/arcade/bubbles', emoji: '🫧', name: 'Bubble Pop', blurb: 'Aim & pop groups of matching bubbles!', baseXp: 10, gradient: 'from-sky-800 to-cyan-900' },
 ];
 
 // Premium games: locked until bought with coins in the Shop (id → coin price).
@@ -109,14 +109,14 @@ export function ArcadeHeader({ title, emoji, gameId, help = true }: { title: str
   return (
     <div className="mb-4">
       <div className="flex items-center justify-between gap-3">
-        <h1 className="text-xl font-display font-extrabold text-slate-900">
+        <h1 className="text-xl font-display font-extrabold text-ink">
           {emoji} {title}
         </h1>
         <div className="flex items-center gap-2">
           {help && def && <HelpDrawer def={def} />}
           <Link
             to="/arcade"
-            className="text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+            className="text-sm font-display font-bold text-ink-muted hover:text-ink-muted"
           >
             ← Arcade
           </Link>
@@ -148,7 +148,7 @@ export function HelpDrawer({ def }: { def: ArcadeGameDef }) {
       <button
         type="button"
         onClick={() => setOpenPaused(true)}
-        className="shrink-0 rounded-full border border-indigo-300 bg-white px-3 py-1 text-sm font-display font-bold text-indigo-600 shadow-sm active:translate-y-0.5"
+        className="shrink-0 rounded-full border border-accent/35 bg-surface px-3 py-1 text-sm font-display font-bold text-accent shadow-sm active:translate-y-0.5"
       >
         📖 Help
       </button>
@@ -163,7 +163,7 @@ export function HelpDrawer({ def }: { def: ArcadeGameDef }) {
               onClick={() => setOpenPaused(false)}
             />
             <motion.div
-              className="fixed inset-x-0 bottom-0 z-50 mx-auto max-h-[82vh] max-w-sm overflow-y-auto rounded-t-3xl border-2 border-b-0 border-indigo-200 bg-white p-5 pb-8 shadow-2xl"
+              className="fixed inset-x-0 bottom-0 z-50 mx-auto max-h-[82vh] max-w-sm overflow-y-auto rounded-t-3xl border-2 border-b-0 border-accent/35 bg-surface p-5 pb-8 shadow-2xl"
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
@@ -171,37 +171,37 @@ export function HelpDrawer({ def }: { def: ArcadeGameDef }) {
               role="dialog"
               aria-label={`${def.name} help`}
             >
-              <div className="mx-auto mb-3 h-1.5 w-12 rounded-full bg-slate-200" />
+              <div className="mx-auto mb-3 h-1.5 w-12 rounded-full bg-surface-2" />
               <div className="flex items-center justify-between">
-                <h2 className="font-display text-lg font-extrabold text-slate-900">{def.emoji} {def.name} — help</h2>
-                <button type="button" onClick={() => setOpenPaused(false)} className="rounded-lg px-2 py-1 text-xs font-display font-bold text-slate-400 hover:text-slate-700">
+                <h2 className="font-display text-lg font-extrabold text-ink">{def.emoji} {def.name} — help</h2>
+                <button type="button" onClick={() => setOpenPaused(false)} className="rounded-lg px-2 py-1 text-xs font-display font-bold text-ink-dim hover:text-ink-muted">
                   resume ✕
                 </button>
               </div>
-              <p className="mt-0.5 text-[11px] font-display font-bold uppercase tracking-widest text-emerald-600">⏸ game paused</p>
+              <p className="mt-0.5 text-[11px] font-display font-bold uppercase tracking-widest text-ok">⏸ game paused</p>
 
               <div className="mt-3 space-y-2">
                 {howto.sections.map((s, i) => (
-                  <div key={i} className="rounded-xl bg-slate-50 px-3 py-2">
-                    <div className="font-display text-sm font-extrabold text-slate-800">{s.heading}</div>
-                    <div className="text-sm leading-snug text-slate-600">{s.body}</div>
+                  <div key={i} className="rounded-xl bg-surface-2 px-3 py-2">
+                    <div className="font-display text-sm font-extrabold text-ink">{s.heading}</div>
+                    <div className="text-sm leading-snug text-ink-muted">{s.body}</div>
                   </div>
                 ))}
                 {howto.controls && (
-                  <div className="rounded-xl bg-indigo-50 px-3 py-2 text-sm text-indigo-700">
+                  <div className="rounded-xl bg-accent-soft px-3 py-2 text-sm text-accent">
                     <span className="font-display font-extrabold">Controls: </span>{howto.controls}
                   </div>
                 )}
               </div>
 
               <div className="mt-4">
-                <div className="mb-1 font-display text-sm font-extrabold text-slate-800">✏️ Scratchpad</div>
+                <div className="mb-1 font-display text-sm font-extrabold text-ink">✏️ Scratchpad</div>
                 <textarea
                   value={scratch}
                   onChange={(e) => setScratch(e.target.value)}
                   placeholder="Work it out here…"
                   rows={3}
-                  className="w-full rounded-xl border-2 border-slate-200 bg-white p-2 font-mono text-base text-slate-800 focus:border-indigo-400 focus:outline-none"
+                  className="w-full rounded-xl border-2 border-line bg-surface p-2 font-mono text-base text-ink focus:border-indigo-400 focus:outline-none"
                 />
               </div>
 
@@ -244,16 +244,16 @@ export function BalanceClock() {
   const remaining = earnRatio > 0 ? Math.max(0, lesson * earnRatio - play) : null;
   return (
     <div className="mt-2 space-y-1">
-      <div className="flex items-center gap-2 text-[11px] font-display font-bold text-slate-500">
-        <span className="text-indigo-600">📘 {fmtClock(lesson)}</span>
+      <div className="flex items-center gap-2 text-[11px] font-display font-bold text-ink-muted">
+        <span className="text-accent">📘 {fmtClock(lesson)}</span>
         <div className="flex-1 h-1.5 rounded-full bg-emerald-200 overflow-hidden" title="lessons vs games">
-          <div className="h-full bg-indigo-500" style={{ width: `${lessonPct}%` }} />
+          <div className="h-full bg-accent" style={{ width: `${lessonPct}%` }} />
         </div>
-        <span className="text-emerald-600">🎮 {fmtClock(play)}</span>
-        <span className="tabular-nums text-slate-400">L:G {ratioLabel}</span>
+        <span className="text-ok">🎮 {fmtClock(play)}</span>
+        <span className="tabular-nums text-ink-dim">L:G {ratioLabel}</span>
       </div>
       {remaining !== null && (
-        <div className="text-[11px] font-display font-extrabold tabular-nums text-emerald-700">
+        <div className="text-[11px] font-display font-extrabold tabular-nums text-ok">
           ⏳ Game time left: {fmtClock(remaining)}
         </div>
       )}
@@ -424,21 +424,21 @@ export function ArcadeEndCard({
           {win ? 'WINNER!' : 'Try again!'}
         </motion.span>
       </div>
-      <h2 className="text-2xl font-display font-extrabold text-slate-900 mt-2">
+      <h2 className="text-2xl font-display font-extrabold text-ink mt-2">
         {scoreLine}
       </h2>
       <div className="mt-3 flex flex-wrap justify-center gap-2">
-        <span className="inline-flex items-center gap-1 bg-yellow-100 text-yellow-900 font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
+        <span className="inline-flex items-center gap-1 bg-warn-soft text-warn font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
           ⚡ +{outcome.xpAwarded} XP{outcome.repeatToday ? ' (repeat — half)' : ''}
         </span>
         {outcome.varietyBonus > 0 && (
-          <span className="inline-flex items-center gap-1 bg-purple-100 text-purple-900 font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
+          <span className="inline-flex items-center gap-1 bg-accent-soft text-accent font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
             🎪 Variety bonus +{outcome.varietyBonus} XP
           </span>
         )}
       </div>
       {outcome.repeatToday && (
-        <p className="text-xs text-slate-500 mt-2">
+        <p className="text-xs text-ink-muted mt-2">
           Tip: a game you haven't played today pays full XP!
         </p>
       )}
@@ -451,7 +451,7 @@ export function ArcadeEndCard({
         {replayLabel}
       </button>
       <div className="mt-4">
-        <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-slate-400 mb-2">
+        <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-ink-dim mb-2">
           Or try a different game for full XP
         </div>
         <div className="flex justify-center gap-2">
@@ -459,7 +459,7 @@ export function ArcadeEndCard({
             <Link
               key={g.id}
               to={g.path}
-              className="min-h-11 inline-flex items-center gap-1.5 bg-white border-2 border-slate-200 hover:border-slate-300 rounded-full px-3 py-1.5 font-display font-bold text-sm text-slate-800"
+              className="min-h-11 inline-flex items-center gap-1.5 bg-surface border-2 border-line hover:border-line-strong rounded-full px-3 py-1.5 font-display font-bold text-sm text-ink"
             >
               {g.emoji} {g.name}
             </Link>

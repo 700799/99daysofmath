@@ -86,7 +86,7 @@ export function Videos() {
                         <button
                           type="button"
                           onClick={() => setOpenLesson(l)}
-                          className="mt-3 w-full min-h-11 rounded-xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold text-sm transition-colors"
+                          className="mt-3 w-full min-h-11 rounded-xl bg-duo-blue hover:bg-duo-green-dark text-white font-display font-extrabold text-sm transition-colors"
                         >
                           📘 Read the step-by-step lesson
                         </button>

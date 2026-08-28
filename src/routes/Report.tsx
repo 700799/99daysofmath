@@ -93,7 +93,7 @@ export function Report() {
           <RitTrend />
 
           {focus && (
-            <div className="rounded-3xl border-2 border-warn/40 bg-gradient-to-br from-orange-50 to-amber-50 p-5">
+            <div className="rounded-3xl border-2 border-warn/40 bg-gradient-to-br bg-warn-soft p-5">
               <div className="text-xs font-display font-extrabold uppercase tracking-wider text-warn">
                 Focus next
               </div>
