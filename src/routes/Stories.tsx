@@ -76,17 +76,17 @@ export function Stories() {
   return (
     <div>
       <div className="flex items-baseline justify-between gap-3 mb-3">
-        <h1 className="text-2xl font-display font-extrabold text-slate-900">
+        <h1 className="text-2xl font-display font-extrabold text-ink">
           🌟 Famous Math Stories
         </h1>
         <Link
           to="/videos"
-          className="text-sm font-display font-bold text-sky-700 hover:text-sky-900"
+          className="text-sm font-display font-bold text-accent hover:text-accent"
         >
           🎬 Video library →
         </Link>
       </div>
-      <p className="text-sm text-slate-600 mb-5">
+      <p className="text-sm text-ink-muted mb-5">
         Quick stories about famous math people and clever scenarios — animated,
         one whole idea at a time. They never move on their own: tap{' '}
         <b>Continue</b> when you're ready for the next slide.
@@ -98,7 +98,7 @@ export function Stories() {
           if (list.length === 0) return null;
           return (
             <section key={d}>
-              <h2 className="font-display font-extrabold text-slate-900 mb-2">
+              <h2 className="font-display font-extrabold text-ink mb-2">
                 {EMOJI_BY_DOMAIN[d]} {DOMAIN_LABELS[d]}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -135,7 +135,7 @@ export function Stories() {
 
       <Link
         to="/"
-        className="mt-8 inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+        className="mt-8 inline-block text-sm font-display font-bold text-ink-muted hover:text-ink-muted"
       >
         ← Back home
       </Link>

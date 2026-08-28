@@ -14,7 +14,7 @@ function isoDaysAgo(n: number): string {
 }
 
 function intensityClass(xp: number, practiced: boolean): string {
-  if (!practiced) return 'bg-slate-100';
+  if (!practiced) return 'bg-surface-2';
   if (xp >= 60) return 'bg-green-600';
   if (xp >= 30) return 'bg-green-500';
   if (xp >= 10) return 'bg-green-400';
@@ -32,14 +32,14 @@ export function PracticeHeatmap({ practiceDates, xpByDate, days = 99 }: Props) {
   const practicedCount = cells.filter((c) => c.practiced).length;
 
   return (
-    <div className="mt-8 bg-white rounded-3xl border-2 border-slate-200 p-4 sm:p-5">
+    <div className="mt-8 bg-surface rounded-3xl border-2 border-line p-4 sm:p-5">
       <div className="flex items-center gap-2 mb-3">
         <span className="text-2xl" aria-hidden="true">📅</span>
         <div>
-          <div className="font-display font-extrabold text-slate-900">
+          <div className="font-display font-extrabold text-ink">
             Practice calendar
           </div>
-          <div className="text-xs text-slate-500">
+          <div className="text-xs text-ink-muted">
             {practicedCount} of last {days} days
           </div>
         </div>
@@ -60,9 +60,9 @@ export function PracticeHeatmap({ practiceDates, xpByDate, days = 99 }: Props) {
           ))}
         </div>
       </div>
-      <div className="flex items-center gap-1 mt-3 justify-end text-xs text-slate-400">
+      <div className="flex items-center gap-1 mt-3 justify-end text-xs text-ink-dim">
         <span>Less</span>
-        <span className="w-3 h-3 rounded-[3px] bg-slate-100 inline-block" />
+        <span className="w-3 h-3 rounded-[3px] bg-surface-2 inline-block" />
         <span className="w-3 h-3 rounded-[3px] bg-green-300 inline-block" />
         <span className="w-3 h-3 rounded-[3px] bg-green-400 inline-block" />
         <span className="w-3 h-3 rounded-[3px] bg-green-500 inline-block" />

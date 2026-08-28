@@ -34,22 +34,22 @@ export function HowItWorks() {
   return (
     <section
       aria-labelledby="how-it-works-heading"
-      className="mt-8 rounded-3xl border-2 border-slate-200 bg-white p-5 sm:p-6"
+      className="mt-8 rounded-3xl border-2 border-line bg-surface p-5 sm:p-6"
     >
       <h2
         id="how-it-works-heading"
-        className="text-xl sm:text-2xl font-display font-extrabold text-slate-900"
+        className="text-xl sm:text-2xl font-display font-extrabold text-ink"
       >
         How Math10x works
       </h2>
-      <p className="mt-1.5 text-sm sm:text-base text-slate-600">
+      <p className="mt-1.5 text-sm sm:text-base text-ink-muted">
         Math10x is a free way for kids to learn math, from grade-5 foundations through Algebra 1 and Precalculus — animated video
         lessons, worked examples, and adaptive practice for ratios, fractions, decimals,
         geometry, expressions, and statistics — with an arcade kids unlock by learning.
       </p>
 
       {/* Short screen-recording walkthrough (tap to play). */}
-      <div className="mt-4 overflow-hidden rounded-2xl border-2 border-slate-200 bg-slate-900">
+      <div className="mt-4 overflow-hidden rounded-2xl border-2 border-line bg-slate-900">
         <video
           className="w-full h-auto block"
           controls
@@ -68,15 +68,15 @@ export function HowItWorks() {
           <li key={s.title} className="flex items-start gap-3">
             <span
               aria-hidden="true"
-              className="grid h-8 w-8 flex-none place-items-center rounded-full bg-emerald-100 text-lg"
+              className="grid h-8 w-8 flex-none place-items-center rounded-full bg-ok-soft text-lg"
             >
               {s.emoji}
             </span>
             <div className="min-w-0">
-              <h3 className="font-display font-extrabold text-slate-900 text-sm sm:text-base">
+              <h3 className="font-display font-extrabold text-ink text-sm sm:text-base">
                 {i + 1}. {s.title}
               </h3>
-              <p className="text-sm text-slate-600">{s.body}</p>
+              <p className="text-sm text-ink-muted">{s.body}</p>
             </div>
           </li>
         ))}

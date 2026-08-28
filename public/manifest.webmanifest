@@ -6,8 +6,8 @@
   "scope": "/99daysofmath/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#F8FAFC",
-  "theme_color": "#58CC02",
+  "background_color": "#F4F5F7",
+  "theme_color": "#F4F5F7",
   "icons": [
     {
       "src": "/99daysofmath/favicon.svg",

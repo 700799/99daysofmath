@@ -25,14 +25,14 @@ export function Explanation({ steps, alternatives }: Props) {
       transition={{ duration: 0.25 }}
       className="mt-4 space-y-3"
     >
-      <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-4">
+      <div className="bg-accent-soft border-2 border-accent/35 rounded-2xl p-4">
         <div className="flex items-center gap-2 mb-3">
           <span className="text-xl">📘</span>
-          <span className="font-display font-extrabold text-blue-900">
+          <span className="font-display font-extrabold text-accent">
             Step-by-step
           </span>
         </div>
-        <ol className="space-y-2 list-decimal list-inside text-slate-800">
+        <ol className="space-y-2 list-decimal list-inside text-ink">
           {steps.map((step, i) => (
             <li key={i}>
               <MathText text={step} />
@@ -43,7 +43,7 @@ export function Explanation({ steps, alternatives }: Props) {
 
       {alternatives && alternatives.length > 0 && (
         <div className="space-y-2">
-          <div className="text-xs font-display font-bold uppercase tracking-wider text-slate-500 pl-1">
+          <div className="text-xs font-display font-bold uppercase tracking-wider text-ink-muted pl-1">
             Another way to think about it
           </div>
           {alternatives.map((alt, i) => {
@@ -51,18 +51,18 @@ export function Explanation({ steps, alternatives }: Props) {
             return (
               <div
                 key={i}
-                className="bg-purple-50 border-2 border-purple-200 rounded-2xl overflow-hidden"
+                className="bg-accent-soft border-2 border-accent/35 rounded-2xl overflow-hidden"
               >
                 <button
                   type="button"
                   onClick={() => setOpenAlt(open ? null : i)}
-                  className="w-full flex items-center justify-between px-4 py-3 min-h-12 text-left hover:bg-purple-100 transition-colors"
+                  className="w-full flex items-center justify-between px-4 py-3 min-h-12 text-left hover:bg-accent-soft transition-colors"
                 >
-                  <span className="flex items-center gap-2 font-display font-bold text-purple-900">
+                  <span className="flex items-center gap-2 font-display font-bold text-accent">
                     <span>💡</span>
                     <span>{alt.title}</span>
                   </span>
-                  <span className="text-purple-700 font-display font-bold text-lg">
+                  <span className="text-accent font-display font-bold text-lg">
                     {open ? '−' : '+'}
                   </span>
                 </button>
@@ -76,7 +76,7 @@ export function Explanation({ steps, alternatives }: Props) {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <ol className="px-5 pb-4 space-y-2 list-decimal list-inside text-slate-800">
+                      <ol className="px-5 pb-4 space-y-2 list-decimal list-inside text-ink">
                         {alt.steps.map((step, j) => (
                           <li key={j}>
                             <MathText text={step} />

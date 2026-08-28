@@ -55,10 +55,10 @@ export function DailyQuestRing({ current, goal, size = 44, compact = false }: Pr
       </svg>
       {!compact && (
         <div className="leading-tight">
-          <div className="text-xs font-display font-bold text-slate-500 uppercase tracking-wider">
+          <div className="text-xs font-display font-bold text-ink-muted uppercase tracking-wider">
             Daily goal
           </div>
-          <div className="font-display font-extrabold text-slate-800 text-sm tabular-nums">
+          <div className="font-display font-extrabold text-ink text-sm tabular-nums">
             {current} / {goal} XP
           </div>
         </div>

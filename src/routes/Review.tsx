@@ -99,7 +99,7 @@ export function Review() {
 
   if (error) {
     return (
-      <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-4 text-red-800">
+      <div className="bg-bad-soft border-2 border-bad/40 rounded-2xl p-4 text-bad">
         Couldn't load review: {error.message}
       </div>
     );
@@ -109,7 +109,7 @@ export function Review() {
     return (
       <div className="text-center py-12">
         <Mascot mood="thinking" size={80} />
-        <div className="mt-3 text-slate-500 font-display font-bold">Loading review…</div>
+        <div className="mt-3 text-ink-muted font-display font-bold">Loading review…</div>
       </div>
     );
   }
@@ -119,10 +119,10 @@ export function Review() {
     return (
       <div className="text-center py-12">
         <Mascot mood="happy" size={120} />
-        <h1 className="text-2xl font-display font-extrabold text-slate-900 mt-3">
+        <h1 className="text-2xl font-display font-extrabold text-ink mt-3">
           All caught up!
         </h1>
-        <p className="text-slate-600 mt-1">
+        <p className="text-ink-muted mt-1">
           No reviews are due{filterDomain ? ` in ${filterDomain}` : ''} right now. Missed
           problems come back here on the best day to remember them.
         </p>
@@ -152,17 +152,17 @@ export function Review() {
         )}
         <Confetti count={24} />
         <Mascot mood="cheer" size={120} />
-        <h1 className="text-3xl font-display font-extrabold text-slate-900 mt-2">
+        <h1 className="text-3xl font-display font-extrabold text-ink mt-2">
           Review complete!
         </h1>
-        <p className="text-slate-600 mt-2">
+        <p className="text-ink-muted mt-2">
           You reviewed {problems.length}{' '}
           {problems.length === 1 ? 'problem' : 'problems'} —{' '}
-          <span className="font-display font-extrabold text-green-700">{advanced}</span> moved
+          <span className="font-display font-extrabold text-ok">{advanced}</span> moved
           forward.
         </p>
         {reviewXp > 0 && (
-          <div className="mt-3 inline-flex items-center gap-1 bg-yellow-100 text-yellow-900 font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
+          <div className="mt-3 inline-flex items-center gap-1 bg-warn-soft text-warn font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
             ⚡ +{reviewXp} XP for reviewing
           </div>
         )}
@@ -227,13 +227,13 @@ export function Review() {
       <div className="mb-4 flex items-center gap-3">
         <div className="flex-1">
           <ProgressBar current={index + (phase !== 'problem' ? 1 : 0)} total={total} />
-          <div className="text-xs font-display font-bold text-amber-700 mt-1">
+          <div className="text-xs font-display font-bold text-warn mt-1">
             🔁 Smart Review · {current.domain}
           </div>
           <button
             type="button"
             onClick={() => setShowHelp(true)}
-            className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-display font-extrabold text-violet-700 bg-violet-50 border border-violet-200 rounded-full px-2.5 py-1 hover:bg-violet-100 transition-colors"
+            className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-display font-extrabold text-accent bg-accent-soft border border-accent/35 rounded-full px-2.5 py-1 hover:bg-accent-soft transition-colors"
           >
             📖 Explain the concept
           </button>
@@ -278,7 +278,7 @@ export function Review() {
                 type="button"
                 onClick={submit}
                 disabled={!answer.trim()}
-                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark disabled:bg-slate-300 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 disabled:cursor-not-allowed disabled:shadow-none transition-all"
+                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark disabled:bg-line-strong text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 disabled:cursor-not-allowed disabled:shadow-none transition-all"
               >
                 Check
               </button>
@@ -292,10 +292,10 @@ export function Review() {
                 initial={{ scale: 0.85, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: 'spring', stiffness: 320, damping: 18 }}
-                className="mt-4 bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-green-300 rounded-3xl p-5 text-center"
+                className="mt-4 bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-ok/50 rounded-3xl p-5 text-center"
               >
                 <div className="text-4xl">✅</div>
-                <div className="font-display font-extrabold text-xl text-green-800 mt-1">
+                <div className="font-display font-extrabold text-xl text-ok mt-1">
                   {rescheduleMsg}
                 </div>
                 <button
@@ -313,17 +313,17 @@ export function Review() {
             <motion.div
               initial={{ scale: 0.96, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="mt-4 bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-300 rounded-3xl p-5"
+              className="mt-4 bg-gradient-to-br from-red-50 to-orange-50 border-2 border-bad/50 rounded-3xl p-5"
             >
               <div className="flex items-start gap-3">
                 <div className="text-4xl shrink-0">🤔</div>
                 <div className="flex-1">
-                  <div className="font-display font-extrabold text-red-800 text-lg">Keep practicing</div>
-                  <div className="mt-1 text-slate-800">
+                  <div className="font-display font-extrabold text-bad text-lg">Keep practicing</div>
+                  <div className="mt-1 text-ink">
                     <span className="font-display font-bold">Correct answer:</span>{' '}
                     <span className="font-mono font-extrabold">{current.primaryAnswer}</span>
                   </div>
-                  <div className="text-xs text-slate-500 mt-1">{rescheduleMsg}</div>
+                  <div className="text-xs text-ink-muted mt-1">{rescheduleMsg}</div>
                 </div>
               </div>
               {showExplain ? (
@@ -334,7 +334,7 @@ export function Review() {
                 <button
                   type="button"
                   onClick={() => setShowExplain(true)}
-                  className="mt-2 text-sm font-display font-bold text-red-800 underline underline-offset-2"
+                  className="mt-2 text-sm font-display font-bold text-bad underline underline-offset-2"
                 >
                   Explain step by step
                 </button>
@@ -354,7 +354,7 @@ export function Review() {
       <button
         type="button"
         onClick={() => navigate('/')}
-        className="mt-6 w-full text-sm font-display font-bold text-slate-500 hover:text-slate-700 py-2"
+        className="mt-6 w-full text-sm font-display font-bold text-ink-muted hover:text-ink-muted py-2"
       >
         Quit review
       </button>

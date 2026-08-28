@@ -15,15 +15,15 @@ export function AccountCard() {
   // Signed in
   if (user) {
     return (
-      <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
+      <div className="bg-surface border-2 border-line rounded-2xl p-5">
         <div className="flex items-center gap-4">
           <Avatar user={user} size={48} />
           <div className="min-w-0 flex-1">
-            <div className="font-display font-extrabold text-slate-900 truncate">
+            <div className="font-display font-extrabold text-ink truncate">
               {user.name || displayNameFor(user)}
             </div>
             {user.email && (
-              <div className="text-sm text-slate-500 truncate">{user.email}</div>
+              <div className="text-sm text-ink-muted truncate">{user.email}</div>
             )}
           </div>
           <span className="inline-flex items-center gap-1 text-xs font-display font-extrabold text-duo-green shrink-0">
@@ -33,7 +33,7 @@ export function AccountCard() {
         <button
           type="button"
           onClick={() => void signOut()}
-          className="mt-4 px-4 py-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-display font-bold min-h-11"
+          className="mt-4 px-4 py-2 rounded-full bg-surface-2 hover:bg-surface-2 text-ink-muted font-display font-bold min-h-11"
         >
           Sign out
         </button>
@@ -44,9 +44,9 @@ export function AccountCard() {
   // Signed out, Firebase not configured → fallback note, no button
   if (!available) {
     return (
-      <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
-        <div className="font-display font-extrabold text-slate-900">Your account</div>
-        <div className="text-sm text-slate-600 mt-1">
+      <div className="bg-surface border-2 border-line rounded-2xl p-5">
+        <div className="font-display font-extrabold text-ink">Your account</div>
+        <div className="text-sm text-ink-muted mt-1">
           Sign-in is unavailable right now — your progress is saved on this device.
         </div>
       </div>
@@ -56,23 +56,23 @@ export function AccountCard() {
   // Signed out, available → sign-in button
   const signingIn = status === 'signing-in';
   return (
-    <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
-      <div className="font-display font-extrabold text-slate-900">Save your progress</div>
-      <div className="text-sm text-slate-600 mt-1">
+    <div className="bg-surface border-2 border-line rounded-2xl p-5">
+      <div className="font-display font-extrabold text-ink">Save your progress</div>
+      <div className="text-sm text-ink-muted mt-1">
         Sign in to sync your stars, XP, and streaks across devices. Not now? Keep playing as Math-Friend.
       </div>
       <button
         type="button"
         onClick={() => void signIn()}
         disabled={signingIn}
-        className="mt-3 inline-flex items-center gap-3 pl-1.5 pr-5 py-1.5 rounded-full bg-white border-2 border-slate-200 hover:bg-slate-50 text-slate-700 font-display font-extrabold min-h-12 disabled:opacity-60"
+        className="mt-3 inline-flex items-center gap-3 pl-1.5 pr-5 py-1.5 rounded-full bg-surface border-2 border-line hover:bg-surface-2 text-ink-muted font-display font-extrabold min-h-12 disabled:opacity-60"
       >
-        <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white">
+        <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface">
           <GoogleG />
         </span>
         {signingIn ? 'Signing in…' : 'Sign in with Google'}
       </button>
-      {error && <div className="mt-2 text-sm text-slate-500">{error}</div>}
+      {error && <div className="mt-2 text-sm text-ink-muted">{error}</div>}
     </div>
   );
 }
@@ -93,7 +93,7 @@ export function Avatar({
         width={size}
         height={size}
         referrerPolicy="no-referrer"
-        className="rounded-full object-cover bg-slate-100 shrink-0"
+        className="rounded-full object-cover bg-surface-2 shrink-0"
         style={{ width: size, height: size }}
       />
     );

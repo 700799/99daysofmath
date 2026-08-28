@@ -87,7 +87,7 @@ export function DailyMix() {
 
   if (error) {
     return (
-      <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-4 text-red-800">
+      <div className="bg-bad-soft border-2 border-bad/40 rounded-2xl p-4 text-bad">
         Couldn't load problems: {error.message}
       </div>
     );
@@ -96,7 +96,7 @@ export function DailyMix() {
     return (
       <div className="text-center py-12">
         <Mascot mood="thinking" size={80} />
-        <div className="mt-3 text-slate-500 font-display font-bold">Picking today's mix…</div>
+        <div className="mt-3 text-ink-muted font-display font-bold">Picking today's mix…</div>
       </div>
     );
   }
@@ -169,7 +169,7 @@ export function DailyMix() {
           <div className="flex justify-center">
             <Mascot mood={stars === 3 ? 'cheer' : 'happy'} size={120} />
           </div>
-          <h1 className="text-3xl font-display font-extrabold text-slate-900 mt-2">
+          <h1 className="text-3xl font-display font-extrabold text-ink mt-2">
             Daily Mix done!
           </h1>
           <div className="mt-6 grid grid-cols-3 gap-3 max-w-md mx-auto">
@@ -197,13 +197,13 @@ export function DailyMix() {
             current={index + (phase !== 'problem' ? 1 : 0)}
             total={total}
           />
-          <div className="text-xs font-display font-bold text-slate-500 mt-1">
+          <div className="text-xs font-display font-bold text-ink-muted mt-1">
             🎲 Daily Mix · {current.domain}
           </div>
           <button
             type="button"
             onClick={() => setShowHelp(true)}
-            className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-display font-extrabold text-violet-700 bg-violet-50 border border-violet-200 rounded-full px-2.5 py-1 hover:bg-violet-100 transition-colors"
+            className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-display font-extrabold text-accent bg-accent-soft border border-accent/35 rounded-full px-2.5 py-1 hover:bg-accent-soft transition-colors"
           >
             📖 Explain the concept
           </button>
@@ -261,7 +261,7 @@ export function DailyMix() {
                 type="button"
                 onClick={submit}
                 disabled={!answer.trim()}
-                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark disabled:bg-slate-300 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 disabled:cursor-not-allowed disabled:shadow-none transition-all"
+                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark disabled:bg-line-strong text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 disabled:cursor-not-allowed disabled:shadow-none transition-all"
               >
                 Check
               </button>
@@ -275,10 +275,10 @@ export function DailyMix() {
                 initial={{ scale: 0.85, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: 'spring', stiffness: 320, damping: 18 }}
-                className="mt-4 bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-green-300 rounded-3xl p-5 text-center relative overflow-hidden"
+                className="mt-4 bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-ok/50 rounded-3xl p-5 text-center relative overflow-hidden"
               >
                 <div className="text-5xl">🎉</div>
-                <div className="font-display font-extrabold text-2xl text-green-800 mt-1">
+                <div className="font-display font-extrabold text-2xl text-ok mt-1">
                   {flashMessage.current}
                 </div>
                 <GeniusTipCard problemId={current.id} domain={current.domain} />
@@ -294,7 +294,7 @@ export function DailyMix() {
                   <button
                     type="button"
                     onClick={() => setShowExplainOnCorrect(true)}
-                    className="mt-3 text-sm font-display font-bold text-green-800 underline underline-offset-2 hover:text-green-900"
+                    className="mt-3 text-sm font-display font-bold text-ok underline underline-offset-2 hover:text-ok"
                   >
                     Explain step by step
                   </button>
@@ -314,15 +314,15 @@ export function DailyMix() {
             <motion.div
               initial={{ scale: 0.96, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="mt-4 bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-300 rounded-3xl p-5"
+              className="mt-4 bg-gradient-to-br from-red-50 to-orange-50 border-2 border-bad/50 rounded-3xl p-5"
             >
               <div className="flex items-start gap-3">
                 <div className="text-4xl shrink-0">🤔</div>
                 <div className="flex-1">
-                  <div className="font-display font-extrabold text-red-800 text-lg">
+                  <div className="font-display font-extrabold text-bad text-lg">
                     {flashMessage.current}
                   </div>
-                  <div className="mt-1 text-slate-800">
+                  <div className="mt-1 text-ink">
                     <span className="font-display font-bold">Correct answer:</span>{' '}
                     <span className="font-mono font-extrabold">
                       {current.primaryAnswer}
@@ -349,7 +349,7 @@ export function DailyMix() {
       <button
         type="button"
         onClick={() => navigate('/')}
-        className="mt-6 w-full text-sm font-display font-bold text-slate-500 hover:text-slate-700 py-2"
+        className="mt-6 w-full text-sm font-display font-bold text-ink-muted hover:text-ink-muted py-2"
       >
         Quit
       </button>
@@ -367,9 +367,9 @@ function Stat({
   tone: 'green' | 'red' | 'yellow';
 }) {
   const styles = {
-    green: 'bg-green-50 border-green-200 text-green-800',
-    red: 'bg-red-50 border-red-200 text-red-800',
-    yellow: 'bg-yellow-50 border-yellow-200 text-yellow-800',
+    green: 'bg-ok-soft border-ok/40 text-ok',
+    red: 'bg-bad-soft border-bad/40 text-bad',
+    yellow: 'bg-warn-soft border-warn/40 text-warn',
   }[tone];
   return (
     <div className={`border-2 rounded-2xl p-3 ${styles}`}>

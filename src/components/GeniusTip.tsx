@@ -17,12 +17,12 @@ export function GeniusTipCard({ problemId, domain }: Props) {
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.35 }}
-      className="mt-3 text-left rounded-2xl bg-gradient-to-br from-violet-50 to-fuchsia-50 border-2 border-violet-200 p-3"
+      className="mt-3 text-left rounded-2xl bg-gradient-to-br from-violet-50 to-fuchsia-50 border-2 border-accent/35 p-3"
     >
-      <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-violet-700">
+      <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-accent">
         🧠 Genius tip
       </div>
-      <p className="text-sm text-slate-800 mt-1">{tip.text}</p>
+      <p className="text-sm text-ink mt-1">{tip.text}</p>
     </motion.div>
   );
 }

@@ -46,21 +46,21 @@ export function ConceptHelp({ domain, unit, open, onClose, onOpenLesson }: Props
               if (info.offset.y > 90 || info.velocity.y > 600) onClose();
             }}
             onClick={(e) => e.stopPropagation()}
-            className="absolute bottom-0 left-0 right-0 max-h-[85vh] bg-white rounded-t-3xl shadow-2xl flex flex-col"
+            className="absolute bottom-0 left-0 right-0 max-h-[85vh] bg-surface rounded-t-3xl shadow-2xl flex flex-col"
             style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
           >
             {/* drag handle */}
             <div className="pt-2.5 pb-1 flex justify-center shrink-0 cursor-grab">
-              <div className="w-10 h-1.5 rounded-full bg-slate-300" />
+              <div className="w-10 h-1.5 rounded-full bg-line-strong" />
             </div>
 
             <div className="px-5 shrink-0">
               <div className="flex items-center justify-between gap-3">
                 <div className="min-w-0">
-                  <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-sky-600">
+                  <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-accent">
                     {DOMAIN_EMOJI[domain]} {DOMAIN_LABELS[domain]} · Unit {unit}
                   </div>
-                  <h2 className="text-lg font-display font-extrabold text-slate-900 truncate">
+                  <h2 className="text-lg font-display font-extrabold text-ink truncate">
                     {lesson ? lesson.title : 'Concept help'}
                   </h2>
                 </div>
@@ -68,14 +68,14 @@ export function ConceptHelp({ domain, unit, open, onClose, onOpenLesson }: Props
                   type="button"
                   onClick={onClose}
                   aria-label="Close"
-                  className="shrink-0 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 font-display font-extrabold"
+                  className="shrink-0 w-9 h-9 rounded-full bg-surface-2 hover:bg-surface-2 text-ink-muted font-display font-extrabold"
                 >
                   ✕
                 </button>
               </div>
 
               {/* tabs */}
-              <div className="mt-3 grid grid-cols-2 gap-1 rounded-2xl bg-slate-100 p-1">
+              <div className="mt-3 grid grid-cols-2 gap-1 rounded-2xl bg-surface-2 p-1">
                 {(
                   [
                     ['concept', '📖 Concept'],
@@ -89,7 +89,7 @@ export function ConceptHelp({ domain, unit, open, onClose, onOpenLesson }: Props
                     aria-pressed={tab === t}
                     className={[
                       'min-h-10 rounded-xl font-display font-extrabold text-sm transition-colors',
-                      tab === t ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500',
+                      tab === t ? 'bg-surface text-ink shadow-sm' : 'text-ink-muted',
                     ].join(' ')}
                   >
                     {label}
@@ -116,7 +116,7 @@ export function ConceptHelp({ domain, unit, open, onClose, onOpenLesson }: Props
 
 function EmptyHelp() {
   return (
-    <div className="text-center py-8 text-slate-500">
+    <div className="text-center py-8 text-ink-muted">
       <div className="text-4xl">📚</div>
       <p className="mt-2 text-sm font-display font-bold">
         No lesson is wired to this unit yet — check the Video library on Home.
@@ -128,9 +128,9 @@ function EmptyHelp() {
 function ConceptTab({ lesson, onOpenLesson }: { lesson: Lesson; onOpenLesson?: () => void }) {
   return (
     <div>
-      <p className="text-sm text-slate-600">{lesson.objective}</p>
+      <p className="text-sm text-ink-muted">{lesson.objective}</p>
       <div className="mt-3 flex items-center justify-between">
-        <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-slate-500">
+        <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-ink-muted">
           The key idea
         </div>
         <ReadAloud text={[lesson.objective, ...lesson.concept]} label="Read aloud" />
@@ -138,41 +138,41 @@ function ConceptTab({ lesson, onOpenLesson }: { lesson: Lesson; onOpenLesson?: (
       <ol className="mt-2 space-y-2.5">
         {lesson.concept.map((c, i) => (
           <li key={i} className="flex gap-3">
-            <span className="shrink-0 w-6 h-6 rounded-full bg-sky-100 text-sky-700 font-display font-extrabold text-sm flex items-center justify-center">
+            <span className="shrink-0 w-6 h-6 rounded-full bg-accent-soft text-accent font-display font-extrabold text-sm flex items-center justify-center">
               {i + 1}
             </span>
-            <span className="text-sm text-slate-800 leading-snug">{c}</span>
+            <span className="text-sm text-ink leading-snug">{c}</span>
           </li>
         ))}
       </ol>
 
-      <div className="mt-4 text-[10px] font-display font-extrabold uppercase tracking-wider text-slate-500">
+      <div className="mt-4 text-[10px] font-display font-extrabold uppercase tracking-wider text-ink-muted">
         Quick worked examples
       </div>
       <div className="mt-2 space-y-2">
         {lesson.examples.map((ex, i) => (
-          <details key={i} className="rounded-2xl bg-slate-50 border border-slate-200 p-3">
-            <summary className="text-sm font-display font-bold text-slate-900 cursor-pointer">
+          <details key={i} className="rounded-2xl bg-surface-2 border border-line p-3">
+            <summary className="text-sm font-display font-bold text-ink cursor-pointer">
               {ex.q}
             </summary>
             <ol className="mt-2 space-y-1">
               {ex.steps.map((s, j) => (
-                <li key={j} className="flex gap-2 text-sm text-slate-700">
-                  <span className="text-slate-400 font-display font-bold w-4 shrink-0">{j + 1}.</span>
+                <li key={j} className="flex gap-2 text-sm text-ink-muted">
+                  <span className="text-ink-dim font-display font-bold w-4 shrink-0">{j + 1}.</span>
                   <span>{s}</span>
                 </li>
               ))}
             </ol>
-            <div className="mt-2 inline-flex items-center gap-1.5 bg-green-100 text-green-800 font-display font-extrabold text-sm rounded-full px-3 py-1">
+            <div className="mt-2 inline-flex items-center gap-1.5 bg-ok-soft text-ok font-display font-extrabold text-sm rounded-full px-3 py-1">
               ✅ {ex.answer}
             </div>
           </details>
         ))}
       </div>
 
-      <div className="mt-4 rounded-2xl bg-amber-50 border border-amber-200 p-3 text-sm">
-        <span className="font-display font-bold text-amber-800">⚠️ Watch out: </span>
-        <span className="text-amber-900">{lesson.watchOut}</span>
+      <div className="mt-4 rounded-2xl bg-warn-soft border border-warn/40 p-3 text-sm">
+        <span className="font-display font-bold text-warn">⚠️ Watch out: </span>
+        <span className="text-warn">{lesson.watchOut}</span>
       </div>
 
       {onOpenLesson && (
@@ -192,7 +192,7 @@ function VideosTab({ lesson }: { lesson: Lesson }) {
   const videos = lesson.videos ?? [];
   if (videos.length === 0) {
     return (
-      <div className="text-center py-8 text-slate-500">
+      <div className="text-center py-8 text-ink-muted">
         <div className="text-4xl">🎬</div>
         <p className="mt-2 text-sm font-display font-bold">
           Videos for this unit are coming soon — read the Concept tab meanwhile.
@@ -204,7 +204,7 @@ function VideosTab({ lesson }: { lesson: Lesson }) {
     <div className="space-y-4">
       {videos.map((v) => (
         <div key={v.src}>
-          <div className="text-sm font-display font-extrabold text-slate-900 mb-1.5">
+          <div className="text-sm font-display font-extrabold text-ink mb-1.5">
             ▶ {v.title}
           </div>
           <LessonVideo
@@ -215,7 +215,7 @@ function VideosTab({ lesson }: { lesson: Lesson }) {
           />
         </div>
       ))}
-      <p className="text-xs text-slate-500 text-center">
+      <p className="text-xs text-ink-muted text-center">
         Tap to watch full-screen — the key idea shows right beside the animation.
       </p>
     </div>

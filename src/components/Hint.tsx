@@ -17,15 +17,15 @@ const TIER_BADGE: Record<HintLevel, string> = {
 };
 
 const TIER_STYLES: Record<HintLevel, string> = {
-  nudge: 'bg-amber-50 border-amber-200',
-  guide: 'bg-orange-50 border-orange-300',
-  reveal: 'bg-rose-50 border-rose-300',
+  nudge: 'bg-warn-soft border-warn/40',
+  guide: 'bg-warn-soft border-warn/50',
+  reveal: 'bg-bad-soft border-bad/50',
 };
 
 const TIER_BADGE_STYLES: Record<HintLevel, string> = {
-  nudge: 'bg-amber-200 text-amber-900',
-  guide: 'bg-orange-200 text-orange-900',
-  reveal: 'bg-rose-200 text-rose-900',
+  nudge: 'bg-amber-200 text-warn',
+  guide: 'bg-orange-200 text-warn',
+  reveal: 'bg-rose-200 text-bad',
 };
 
 export function Hint({ tiers, onReveal, onExplain }: Props) {
@@ -87,7 +87,7 @@ export function Hint({ tiers, onReveal, onExplain }: Props) {
         onClick={handleClick}
         disabled={locked}
         className={`min-h-11 inline-flex items-center gap-2 px-4 py-2 rounded-full font-display font-bold text-sm transition-colors ${
-          locked ? 'bg-slate-100 text-slate-400 cursor-not-allowed' : 'bg-amber-100 hover:bg-amber-200 text-amber-900'
+          locked ? 'bg-surface-2 text-ink-dim cursor-not-allowed' : 'bg-warn-soft hover:bg-amber-200 text-warn'
         }`}
       >
         <span>{locked ? '⏳' : '💡'}</span>
@@ -106,7 +106,7 @@ export function Hint({ tiers, onReveal, onExplain }: Props) {
             {tiers.slice(0, revealed).map((tier, i) => (
               <div
                 key={`tier-${i}`}
-                className={`border rounded-2xl p-4 text-slate-800 ${TIER_STYLES[tier.level]}`}
+                className={`border rounded-2xl p-4 text-ink ${TIER_STYLES[tier.level]}`}
               >
                 {tiers.length > 1 && (
                   <div className="flex items-center gap-1.5 mb-2 flex-wrap">
@@ -116,7 +116,7 @@ export function Hint({ tiers, onReveal, onExplain }: Props) {
                       {TIER_BADGE[tier.level]}
                     </span>
                     {tier.title && (
-                      <span className="inline-block text-xs font-display font-extrabold px-2 py-1 rounded-full bg-violet-100 text-violet-800">
+                      <span className="inline-block text-xs font-display font-extrabold px-2 py-1 rounded-full bg-accent-soft text-accent">
                         {tier.title}
                       </span>
                     )}
@@ -129,7 +129,7 @@ export function Hint({ tiers, onReveal, onExplain }: Props) {
               <button
                 type="button"
                 onClick={onExplain}
-                className="self-start min-h-11 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-100 hover:bg-sky-200 text-sky-800 font-display font-bold text-sm transition-colors"
+                className="self-start min-h-11 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-soft hover:bg-sky-200 text-accent font-display font-bold text-sm transition-colors"
               >
                 Still stuck? 📖 Explain the concept
               </button>

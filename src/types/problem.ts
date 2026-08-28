@@ -47,14 +47,16 @@ export const DOMAIN_DESCRIPTIONS: Record<Domain, string> = {
 };
 
 export const DOMAIN_COLORS: Record<Domain, string> = {
-  '5.F': '#14B8A6',
-  '6.RP': '#58CC02',
-  '6.NS': '#1CB0F6',
-  '6.EE': '#CE82FF',
-  '6.G': '#FF9600',
-  '6.SP': '#FF4B4B',
-  A1: '#6366F1',
-  PC: '#EC4899',
+  // A muted, evenly-weighted family: each subject stays distinguishable while
+  // sitting quietly against the graphite surfaces in both light and dark.
+  '5.F': '#4C8C8C',  // slate teal
+  '6.RP': '#5F8C5A', // sage
+  '6.NS': '#4E7BA6', // steel blue
+  '6.EE': '#7D6BA8', // muted violet
+  '6.G': '#B07C4F',  // clay
+  '6.SP': '#A85F5F', // brick
+  A1: '#5A6E9E',     // indigo slate
+  PC: '#8C5F7D',     // mauve
 };
 
 export const DOMAIN_EMOJI: Record<Domain, string> = {

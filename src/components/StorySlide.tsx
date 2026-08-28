@@ -358,7 +358,7 @@ export function StorySlide({ story, onClose }: Props) {
           <button
             type="button"
             onClick={replayClip}
-            className="absolute bottom-3 right-3 rounded-full bg-white/90 hover:bg-white text-slate-900 font-display font-extrabold text-sm px-4 h-10 shadow-lg active:translate-y-0.5"
+            className="absolute bottom-3 right-3 rounded-full bg-white/90 hover:bg-white text-ink font-display font-extrabold text-sm px-4 h-10 shadow-lg active:translate-y-0.5"
             data-haptic="tap"
           >
             ↻ Replay clip

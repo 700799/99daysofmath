@@ -9,7 +9,7 @@ interface Props {
 }
 
 const buttonClass =
-  'min-h-12 rounded-2xl bg-white hover:bg-slate-50 active:bg-slate-100 border-2 border-slate-200 shadow-[0_3px_0_0_rgba(0,0,0,0.08)] active:shadow-[0_1px_0_0_rgba(0,0,0,0.08)] active:translate-y-0.5 font-display font-extrabold text-xl text-slate-900 transition-all touch-none select-none';
+  'min-h-12 rounded-2xl bg-surface hover:bg-surface-2 active:bg-surface-2 border-2 border-line shadow-[0_3px_0_0_rgba(0,0,0,0.08)] active:shadow-[0_1px_0_0_rgba(0,0,0,0.08)] active:translate-y-0.5 font-display font-extrabold text-xl text-ink transition-all touch-none select-none';
 
 export function NumberKeypad({
   onKey,
@@ -33,7 +33,7 @@ export function NumberKeypad({
         type="button"
         onClick={onBackspace}
         aria-label="Backspace"
-        className={`${buttonClass} bg-amber-50 hover:bg-amber-100 border-amber-200 text-amber-900`}
+        className={`${buttonClass} bg-warn-soft hover:bg-warn-soft border-warn/40 text-warn`}
       >
         ⌫
       </button>
@@ -46,7 +46,7 @@ export function NumberKeypad({
       <button
         type="button"
         onClick={() => onKey('/')}
-        className={`${buttonClass} ${showFraction ? 'bg-blue-50 hover:bg-blue-100 border-blue-200 text-blue-900' : 'opacity-30 pointer-events-none'}`}
+        className={`${buttonClass} ${showFraction ? 'bg-accent-soft hover:bg-accent-soft border-accent/35 text-accent' : 'opacity-30 pointer-events-none'}`}
       >
         /
       </button>
@@ -60,7 +60,7 @@ export function NumberKeypad({
         type="button"
         onClick={onClear}
         aria-label="Clear all"
-        className={`${buttonClass} bg-red-50 hover:bg-red-100 border-red-200 text-red-900 text-sm`}
+        className={`${buttonClass} bg-bad-soft hover:bg-bad-soft border-bad/40 text-bad text-sm`}
       >
         Clear
       </button>

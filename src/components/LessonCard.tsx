@@ -192,17 +192,17 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
           initial={{ scale: 0.9, y: 16, opacity: 0 }}
           animate={{ scale: 1, y: 0, opacity: 1 }}
           transition={{ type: 'spring', stiffness: 240, damping: 20 }}
-          className="bg-white rounded-3xl px-5 sm:px-6 py-6 max-w-md w-full shadow-2xl max-h-[92vh] overflow-y-auto"
+          className="bg-surface rounded-3xl px-5 sm:px-6 py-6 max-w-md w-full shadow-2xl max-h-[92vh] overflow-y-auto"
         >
           {phase === 'reward' ? (
             <RewardView xp={LESSON_XP} earned={earned} onStart={onStart} onClose={onClose} />
           ) : (
             <>
               <div className="flex items-center justify-between gap-3">
-                <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-sky-600 truncate">
+                <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-accent truncate">
                   📘 {lesson.domain} · Unit {lesson.unit}
                 </div>
-                <div className="shrink-0 text-[10px] font-display font-bold text-slate-400 tabular-nums">
+                <div className="shrink-0 text-[10px] font-display font-bold text-ink-dim tabular-nums">
                   {pageIndex + 1} / {pages.length}
                 </div>
               </div>
@@ -270,7 +270,7 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
                   type="button"
                   onClick={goBack}
                   disabled={isFirst}
-                  className="flex-1 min-h-12 px-4 py-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 disabled:bg-slate-50 disabled:text-slate-300 text-slate-700 font-display font-extrabold transition-colors disabled:cursor-not-allowed"
+                  className="flex-1 min-h-12 px-4 py-2.5 rounded-2xl bg-surface-2 hover:bg-surface-2 disabled:bg-surface-2 disabled:text-ink-dim text-ink-muted font-display font-extrabold transition-colors disabled:cursor-not-allowed"
                 >
                   ← Back
                 </button>
@@ -278,7 +278,7 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
                   type="button"
                   onClick={goNext}
                   disabled={remain > 0}
-                  className="flex-1 min-h-12 px-4 py-2.5 rounded-2xl bg-duo-green hover:bg-duo-green-dark disabled:bg-slate-200 disabled:text-slate-400 disabled:shadow-none disabled:active:translate-y-0 text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all disabled:cursor-not-allowed"
+                  className="flex-1 min-h-12 px-4 py-2.5 rounded-2xl bg-duo-green hover:bg-duo-green-dark disabled:bg-surface-2 disabled:text-ink-dim disabled:shadow-none disabled:active:translate-y-0 text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all disabled:cursor-not-allowed"
                 >
                   {remain > 0 ? `Read… ${remain}s` : primaryLabel}
                 </button>
@@ -287,7 +287,7 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
               <button
                 type="button"
                 onClick={onClose}
-                className="mt-2 w-full text-sm font-display font-bold text-slate-400 hover:text-slate-600"
+                className="mt-2 w-full text-sm font-display font-bold text-ink-dim hover:text-ink-muted"
               >
                 Maybe later
               </button>
@@ -349,7 +349,7 @@ function Breadcrumbs({
             {sIdx > 0 && (
               <span
                 aria-hidden="true"
-                className={`text-xs ${sIdx <= activeSectionIdx ? 'text-slate-400' : 'text-slate-300'}`}
+                className={`text-xs ${sIdx <= activeSectionIdx ? 'text-ink-dim' : 'text-ink-dim'}`}
               >
                 ›
               </span>
@@ -364,8 +364,8 @@ function Breadcrumbs({
                 isActive
                   ? 'bg-duo-green text-white shadow-sm'
                   : isPast
-                    ? 'text-slate-700 bg-slate-100 hover:bg-slate-200'
-                    : 'text-slate-500 bg-slate-50 hover:bg-slate-100',
+                    ? 'text-ink-muted bg-surface-2 hover:bg-surface-2'
+                    : 'text-ink-muted bg-surface-2 hover:bg-surface-2',
               ].join(' ')}
             >
               {isPast && <span className="mr-0.5">✓</span>}
@@ -382,18 +382,18 @@ function IntroPage({ lesson }: { lesson: Lesson }) {
   return (
     <div className="text-center">
       <div className="text-5xl">{DOMAIN_EMOJI[lesson.domain]} 📘</div>
-      <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-sky-600 mt-2">
+      <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-accent mt-2">
         Learn first
       </div>
-      <h2 className="text-2xl font-display font-extrabold text-slate-900 mt-1 leading-tight">
+      <h2 className="text-2xl font-display font-extrabold text-ink mt-1 leading-tight">
         {lesson.title}
       </h2>
-      <p className="text-sm text-slate-600 mt-2">{lesson.objective}</p>
+      <p className="text-sm text-ink-muted mt-2">{lesson.objective}</p>
       <div className="mt-3 flex justify-center">
         <ReadAloud text={[lesson.title, lesson.objective]} />
       </div>
-      <div className="mt-5 rounded-2xl bg-sky-50 border border-sky-200 p-3 text-sm text-sky-900 text-left">
-        <div className="font-display font-extrabold text-sky-700 text-xs uppercase tracking-wider">
+      <div className="mt-5 rounded-2xl bg-accent-soft border border-accent/35 p-3 text-sm text-accent text-left">
+        <div className="font-display font-extrabold text-accent text-xs uppercase tracking-wider">
           What's in this lesson
         </div>
         <ul className="mt-1.5 space-y-1 text-sm">
@@ -423,7 +423,7 @@ function VideoPage({
       <div className="mt-3">
         <LessonVideo src={src} title={title} objective={objective} points={points} />
       </div>
-      <p className="text-xs text-slate-500 text-center mt-2">
+      <p className="text-xs text-ink-muted text-center mt-2">
         Tap to watch the animation full-screen — with the key idea beside it.
       </p>
     </div>
@@ -440,10 +440,10 @@ function ConceptPage({ lesson }: { lesson: Lesson }) {
       <ol className="mt-3 space-y-3">
         {lesson.concept.map((s, i) => (
           <li key={i} className="flex gap-3">
-            <span className="shrink-0 w-7 h-7 rounded-full bg-sky-100 text-sky-700 font-display font-extrabold text-sm flex items-center justify-center">
+            <span className="shrink-0 w-7 h-7 rounded-full bg-accent-soft text-accent font-display font-extrabold text-sm flex items-center justify-center">
               {i + 1}
             </span>
-            <span className="text-[15px] text-slate-800 leading-snug">{s}</span>
+            <span className="text-[15px] text-ink leading-snug">{s}</span>
           </li>
         ))}
       </ol>
@@ -454,13 +454,13 @@ function ConceptPage({ lesson }: { lesson: Lesson }) {
 // One story-style slide: a kind badge, a big headline, and ~3 readable
 // sentences. Renders lesson `slides` decks (the math-stories format).
 const SLIDE_STYLE: Record<LessonSlide['kind'], { badge: string; emoji: string; card: string; badgeCls: string }> = {
-  objective: { badge: "Today's goal", emoji: '🎯', card: 'bg-sky-50 border-sky-200', badgeCls: 'bg-sky-200 text-sky-900' },
-  concept: { badge: 'How it works', emoji: '💡', card: 'bg-blue-50 border-blue-200', badgeCls: 'bg-blue-200 text-blue-900' },
-  example: { badge: 'Worked example', emoji: '✏️', card: 'bg-emerald-50 border-emerald-200', badgeCls: 'bg-emerald-200 text-emerald-900' },
-  protip: { badge: 'Pro tip', emoji: '⭐', card: 'bg-violet-50 border-violet-200', badgeCls: 'bg-violet-200 text-violet-900' },
-  trap: { badge: 'Trap to avoid', emoji: '⚠️', card: 'bg-amber-50 border-amber-200', badgeCls: 'bg-amber-200 text-amber-900' },
-  challenge: { badge: 'Extra credit', emoji: '🌟', card: 'bg-yellow-50 border-yellow-300', badgeCls: 'bg-yellow-300 text-yellow-950' },
-  summary: { badge: 'Summary', emoji: '🏁', card: 'bg-green-50 border-green-200', badgeCls: 'bg-green-200 text-green-900' },
+  objective: { badge: "Today's goal", emoji: '🎯', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-sky-200 text-accent' },
+  concept: { badge: 'How it works', emoji: '💡', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-blue-200 text-accent' },
+  example: { badge: 'Worked example', emoji: '✏️', card: 'bg-ok-soft border-ok/40', badgeCls: 'bg-emerald-200 text-ok' },
+  protip: { badge: 'Pro tip', emoji: '⭐', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-violet-200 text-accent' },
+  trap: { badge: 'Trap to avoid', emoji: '⚠️', card: 'bg-warn-soft border-warn/40', badgeCls: 'bg-amber-200 text-warn' },
+  challenge: { badge: 'Extra credit', emoji: '🌟', card: 'bg-warn-soft border-warn/50', badgeCls: 'bg-yellow-300 text-yellow-950' },
+  summary: { badge: 'Summary', emoji: '🏁', card: 'bg-ok-soft border-ok/40', badgeCls: 'bg-green-200 text-ok' },
 };
 
 function SlidePage({ slide }: { slide: LessonSlide }) {
@@ -474,8 +474,8 @@ function SlidePage({ slide }: { slide: LessonSlide }) {
         <ReadAloud text={[slide.head, slide.body]} label="" />
       </div>
       <div className={`mt-3 rounded-2xl border-2 p-4 ${st.card}`}>
-        <h3 className="text-xl font-display font-extrabold leading-tight text-slate-900">{slide.head}</h3>
-        <p className="mt-2 whitespace-pre-line text-[15px] leading-relaxed text-slate-800">{slide.body}</p>
+        <h3 className="text-xl font-display font-extrabold leading-tight text-ink">{slide.head}</h3>
+        <p className="mt-2 whitespace-pre-line text-[15px] leading-relaxed text-ink">{slide.body}</p>
       </div>
     </div>
   );
@@ -499,9 +499,9 @@ function ExamplePage({
   return (
     <div>
       <PageTitle eyebrow={`Worked example ${index + 1} of ${total}`} title="Try in your head first" />
-      <div className="mt-3 rounded-2xl bg-slate-50 border-2 border-slate-200 p-4">
+      <div className="mt-3 rounded-2xl bg-surface-2 border-2 border-line p-4">
         <div className="flex items-start justify-between gap-3">
-          <div className="text-base font-display font-extrabold text-slate-900 flex-1">{ex.q}</div>
+          <div className="text-base font-display font-extrabold text-ink flex-1">{ex.q}</div>
           <ReadAloud
             text={open ? [ex.q, ...ex.steps, `Answer: ${ex.answer}`] : [ex.q]}
             label=""
@@ -509,13 +509,13 @@ function ExamplePage({
         </div>
         {open ? (
           <div className="mt-3">
-            <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">
+            <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-ink-muted mb-1.5">
               Step-by-step
             </div>
             <ol className="space-y-1.5">
               {ex.steps.map((s, i) => (
-                <li key={i} className="flex gap-2 text-sm text-slate-800">
-                  <span className="text-slate-400 font-display font-bold w-4 shrink-0">
+                <li key={i} className="flex gap-2 text-sm text-ink">
+                  <span className="text-ink-dim font-display font-bold w-4 shrink-0">
                     {i + 1}.
                   </span>
                   <span>{s}</span>
@@ -523,14 +523,14 @@ function ExamplePage({
               ))}
             </ol>
             {ansShown ? (
-              <div className="mt-3 inline-flex items-center gap-1.5 bg-green-100 text-green-800 font-display font-extrabold text-sm rounded-full px-3 py-1">
+              <div className="mt-3 inline-flex items-center gap-1.5 bg-ok-soft text-ok font-display font-extrabold text-sm rounded-full px-3 py-1">
                 ✅ Answer: {ex.answer}
               </div>
             ) : (
               <button
                 type="button"
                 onClick={() => setAnsShown(true)}
-                className="mt-3 w-full min-h-11 px-4 py-2 rounded-xl bg-white border-2 border-green-200 text-green-700 font-display font-extrabold text-sm hover:bg-green-50 transition-colors"
+                className="mt-3 w-full min-h-11 px-4 py-2 rounded-xl bg-surface border-2 border-ok/40 text-ok font-display font-extrabold text-sm hover:bg-ok-soft transition-colors"
               >
                 👁 Reveal the final answer
               </button>
@@ -540,7 +540,7 @@ function ExamplePage({
           <button
             type="button"
             onClick={onReveal}
-            className="mt-3 w-full min-h-11 px-4 py-2 rounded-xl bg-white border-2 border-sky-200 text-sky-700 font-display font-extrabold text-sm hover:bg-sky-50 transition-colors"
+            className="mt-3 w-full min-h-11 px-4 py-2 rounded-xl bg-surface border-2 border-accent/35 text-accent font-display font-extrabold text-sm hover:bg-accent-soft transition-colors"
           >
             Show step-by-step →
           </button>
@@ -567,8 +567,8 @@ function PracticePage({
   return (
     <div>
       <PageTitle eyebrow={`Try it · question ${index + 1} of ${total}`} title="Your turn" />
-      <div className="mt-3 rounded-2xl border-2 border-slate-200 p-4">
-        <div className="text-base font-display font-extrabold text-slate-900">{item.q}</div>
+      <div className="mt-3 rounded-2xl border-2 border-line p-4">
+        <div className="text-base font-display font-extrabold text-ink">{item.q}</div>
         <div className="mt-3 flex gap-2">
           <input
             type="text"
@@ -579,13 +579,13 @@ function PracticePage({
               if (e.key === 'Enter' && state.val.trim()) onChange({ ...state, checked: true });
             }}
             placeholder="Your answer"
-            className="flex-1 min-w-0 rounded-xl border-2 border-slate-200 px-3 py-2 text-sm font-display font-bold text-slate-900 focus:border-duo-blue focus:outline-none"
+            className="flex-1 min-w-0 rounded-xl border-2 border-line px-3 py-2 text-sm font-display font-bold text-ink focus:border-duo-blue focus:outline-none"
           />
           <button
             type="button"
             onClick={() => onChange({ ...state, checked: true })}
             disabled={!state.val.trim()}
-            className="shrink-0 px-4 rounded-xl bg-duo-blue hover:bg-blue-600 disabled:bg-slate-200 text-white font-display font-extrabold text-sm transition-colors disabled:cursor-not-allowed"
+            className="shrink-0 px-4 rounded-xl bg-duo-blue hover:bg-blue-600 disabled:bg-surface-2 text-white font-display font-extrabold text-sm transition-colors disabled:cursor-not-allowed"
           >
             Check
           </button>
@@ -593,21 +593,21 @@ function PracticePage({
         {state.checked && (
           <div className="mt-3">
             <div
-              className={`text-sm font-display font-extrabold ${correct ? 'text-green-700' : 'text-red-700'}`}
+              className={`text-sm font-display font-extrabold ${correct ? 'text-ok' : 'text-bad'}`}
             >
               {correct ? '✅ Correct!' : '🤔 Not quite — here is how:'}
             </div>
             <ol className="mt-2 space-y-1.5">
               {item.steps.map((s, i) => (
-                <li key={i} className="flex gap-2 text-sm text-slate-800">
-                  <span className="text-slate-400 font-display font-bold w-4 shrink-0">
+                <li key={i} className="flex gap-2 text-sm text-ink">
+                  <span className="text-ink-dim font-display font-bold w-4 shrink-0">
                     {i + 1}.
                   </span>
                   <span>{s}</span>
                 </li>
               ))}
             </ol>
-            <div className="mt-2 inline-flex items-center gap-1.5 bg-green-100 text-green-800 font-display font-extrabold text-sm rounded-full px-3 py-1">
+            <div className="mt-2 inline-flex items-center gap-1.5 bg-ok-soft text-ok font-display font-extrabold text-sm rounded-full px-3 py-1">
               Answer: {item.answers[0]}
             </div>
           </div>
@@ -621,14 +621,14 @@ function WatchOutPage({ lesson, hasPractice }: { lesson: Lesson; hasPractice: bo
   return (
     <div>
       <PageTitle eyebrow="Before you go" title="Watch out for this" />
-      <div className="mt-3 rounded-2xl bg-amber-50 border-2 border-amber-200 p-4">
+      <div className="mt-3 rounded-2xl bg-warn-soft border-2 border-warn/40 p-4">
         <div className="flex items-start justify-between gap-3">
           <div className="text-3xl">⚠️</div>
           <ReadAloud text={lesson.watchOut} label="" />
         </div>
-        <p className="text-sm text-amber-900 mt-1.5 leading-snug">{lesson.watchOut}</p>
+        <p className="text-sm text-warn mt-1.5 leading-snug">{lesson.watchOut}</p>
       </div>
-      <div className="mt-3 text-sm text-slate-600 text-center">
+      <div className="mt-3 text-sm text-ink-muted text-center">
         {hasPractice ? 'Ready? Finish to earn XP and start practice.' : 'Tap finish to earn your XP.'}
       </div>
     </div>
@@ -638,10 +638,10 @@ function WatchOutPage({ lesson, hasPractice }: { lesson: Lesson; hasPractice: bo
 function PageTitle({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
     <div>
-      <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-slate-500">
+      <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-ink-muted">
         {eyebrow}
       </div>
-      <h3 className="text-lg font-display font-extrabold text-slate-900 mt-0.5">{title}</h3>
+      <h3 className="text-lg font-display font-extrabold text-ink mt-0.5">{title}</h3>
     </div>
   );
 }
@@ -663,14 +663,14 @@ function RewardView({
       <div className="flex justify-center">
         <Mascot mood="proud" size={96} oneShot />
       </div>
-      <h2 className="text-2xl font-display font-extrabold text-slate-900 mt-2">
+      <h2 className="text-2xl font-display font-extrabold text-ink mt-2">
         Lesson complete!
       </h2>
       <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
-        <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-900 font-display font-extrabold px-4 py-2 rounded-full">
+        <div className="inline-flex items-center gap-2 bg-warn-soft text-warn font-display font-extrabold px-4 py-2 rounded-full">
           ⚡ +{xp} XP
         </div>
-        <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-900 font-display font-extrabold px-4 py-2 rounded-full">
+        <div className="inline-flex items-center gap-2 bg-warn-soft text-warn font-display font-extrabold px-4 py-2 rounded-full">
           🪙 +{LESSON_COINS} coins
         </div>
       </div>
@@ -683,7 +683,7 @@ function RewardView({
             {stickers.map((s) => (
               <span
                 key={s!.id}
-                className="inline-flex items-center gap-1 bg-gradient-to-br from-yellow-100 to-pink-100 border-2 border-pink-200 px-3 py-1.5 rounded-full font-display font-bold text-slate-800 text-sm"
+                className="inline-flex items-center gap-1 bg-gradient-to-br from-yellow-100 to-pink-100 border-2 border-pink-200 px-3 py-1.5 rounded-full font-display font-bold text-ink text-sm"
               >
                 <span aria-hidden="true">{s!.emoji}</span>
                 {s!.label}

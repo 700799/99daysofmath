@@ -56,6 +56,9 @@ export interface RitPoint {
   accuracy: number;
 }
 
+/** Visual theme. Light is the default; the choice is persisted. */
+export type ThemeMode = 'light' | 'dark';
+
 // Units the student can pick at the arcade entry. Drives every game's questions.
 export type ArcadeUnit = '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'g5' | 'a1' | 'pc' | 'mixed';
 export const ARCADE_UNITS: ArcadeUnit[] = ['6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'g5', 'a1', 'pc', 'mixed'];
@@ -147,9 +150,11 @@ interface ProgressState {
   cumAppSeconds: number;     // lifetime seconds the app has been open
   achievementPoints: number; // lifetime bonus for answering questions correctly
   hapticsEnabled: boolean;   // vibration feedback in games
+  theme: ThemeMode;          // 'light' (default) | 'dark'
   // ---- actions ----
   addAchievement: (n: number) => void;
   toggleHaptics: () => void;
+  setTheme: (t: ThemeMode) => void;
   setArcadeConfig: (partial: Partial<ArcadeConfig>) => void;
   tickLessonSeconds: (n: number) => void;
   tickAppSeconds: (n: number) => void;
@@ -424,6 +429,7 @@ const v15Defaults = {
   spaceMaxLevel: 0,
   achievementPoints: 0,
   hapticsEnabled: true,
+  theme: 'light' as ThemeMode,
 };
 
 const v16Defaults = {
@@ -687,6 +693,12 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       stateAny[key] = rec;
     }
   }
+  if (fromVersion < 24) {
+    // Light/dark theming arrives. Existing installs default to light, which is
+    // what they have always seen.
+    const stateAny = state as Record<string, unknown>;
+    if (stateAny.theme === undefined) stateAny.theme = 'light';
+  }
   return state;
 }
 
@@ -787,6 +799,7 @@ export const useProgress = create<ProgressState>()(
         if (n > 0) set((s) => ({ achievementPoints: s.achievementPoints + n }));
       },
       toggleHaptics: () => set((s) => ({ hapticsEnabled: !s.hapticsEnabled })),
+      setTheme: (t) => set(() => ({ theme: t })),
       setArcadeConfig: (partial) =>
         set((s) => ({ arcadeConfig: { ...s.arcadeConfig, ...partial } })),
       tickLessonSeconds: (n) => {
@@ -1302,7 +1315,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 23,
+      version: 24,
       migrate: migrateProgress,
     },
   ),

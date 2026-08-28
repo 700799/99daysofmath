@@ -60,7 +60,7 @@ export function FinalQuiz() {
   if (!valid) return <Navigate to="/finals" replace />;
   if (error) {
     return (
-      <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-4 text-red-800">
+      <div className="bg-bad-soft border-2 border-bad/40 rounded-2xl p-4 text-bad">
         Couldn't load the quiz: {error.message}
       </div>
     );
@@ -69,7 +69,7 @@ export function FinalQuiz() {
     return (
       <div className="text-center py-12">
         <Mascot mood="thinking" size={80} />
-        <div className="mt-3 text-slate-500 font-display font-bold">
+        <div className="mt-3 text-ink-muted font-display font-bold">
           Building Final Quiz {quizN}…
         </div>
       </div>
@@ -114,13 +114,13 @@ export function FinalQuiz() {
         {correct >= 14 && <Confetti count={28} />}
         <div className="text-center">
           <Mascot mood={correct >= 14 ? 'cheer' : 'happy'} size={110} />
-          <h1 className="text-3xl font-display font-extrabold text-slate-900 mt-2">
+          <h1 className="text-3xl font-display font-extrabold text-ink mt-2">
             {correct} / {problems.length}
           </h1>
-          <div className="mt-2 inline-flex items-center gap-1 bg-yellow-100 text-yellow-900 font-display font-extrabold px-4 py-2 rounded-full">
+          <div className="mt-2 inline-flex items-center gap-1 bg-warn-soft text-warn font-display font-extrabold px-4 py-2 rounded-full">
             🏆 Big bonus: +{outcome.bonus} XP
           </div>
-          <p className="text-xs text-slate-500 mt-2">
+          <p className="text-xs text-ink-muted mt-2">
             Best for this quiz: {outcome.best}/{FINAL_QUIZ_SIZE}. Now check every answer below.
           </p>
         </div>
@@ -132,32 +132,32 @@ export function FinalQuiz() {
               <div
                 key={p.id}
                 className={`rounded-2xl border-2 p-4 ${
-                  ok ? 'border-green-200 bg-green-50/50' : 'border-red-200 bg-red-50/50'
+                  ok ? 'border-ok/40 bg-ok-soft/50' : 'border-bad/40 bg-bad-soft/50'
                 }`}
               >
                 <div className="flex items-start gap-2">
                   <span className="text-lg shrink-0">{ok ? '✅' : '❌'}</span>
                   <div className="flex-1 min-w-0">
-                    <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-slate-400">
+                    <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-ink-dim">
                       Q{i + 1} · {p.domain}
                     </div>
-                    <div className="text-sm text-slate-900 mt-0.5">
+                    <div className="text-sm text-ink mt-0.5">
                       <MathText text={p.prompt} />
                     </div>
                     <div className="mt-2 text-sm">
-                      <span className="font-display font-bold text-slate-600">Your answer: </span>
-                      <span className={`font-mono font-extrabold ${ok ? 'text-green-700' : 'text-red-700'}`}>
+                      <span className="font-display font-bold text-ink-muted">Your answer: </span>
+                      <span className={`font-mono font-extrabold ${ok ? 'text-ok' : 'text-bad'}`}>
                         {given[i]}
                       </span>
                       {!ok && (
                         <>
-                          <span className="font-display font-bold text-slate-600"> · Correct: </span>
-                          <span className="font-mono font-extrabold text-green-700">{p.primaryAnswer}</span>
+                          <span className="font-display font-bold text-ink-muted"> · Correct: </span>
+                          <span className="font-mono font-extrabold text-ok">{p.primaryAnswer}</span>
                         </>
                       )}
                     </div>
                     <details className="mt-2">
-                      <summary className="text-xs font-display font-bold text-sky-700 cursor-pointer">
+                      <summary className="text-xs font-display font-bold text-accent cursor-pointer">
                         Explain step by step
                       </summary>
                       <Explanation steps={p.explanation} alternatives={p.alternativeExplanations} />
@@ -179,7 +179,7 @@ export function FinalQuiz() {
           <button
             type="button"
             onClick={() => navigate('/')}
-            className="text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+            className="text-sm font-display font-bold text-ink-muted hover:text-ink-muted"
           >
             Home
           </button>
@@ -193,8 +193,8 @@ export function FinalQuiz() {
       <div className="mb-4">
         <ProgressBar current={index} total={problems.length} />
         <div className="mt-1 flex items-center justify-between text-xs font-display font-bold">
-          <span className="text-amber-700">🏆 Final Quiz {quizN} · {current.domain}</span>
-          <span className="text-slate-400">Answers revealed at the end</span>
+          <span className="text-warn">🏆 Final Quiz {quizN} · {current.domain}</span>
+          <span className="text-ink-dim">Answers revealed at the end</span>
         </div>
       </div>
 
@@ -218,7 +218,7 @@ export function FinalQuiz() {
             type="button"
             onClick={next}
             disabled={!answer.trim()}
-            className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-amber-500 hover:bg-amber-600 disabled:bg-slate-300 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 disabled:cursor-not-allowed disabled:shadow-none transition-all"
+            className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-amber-500 hover:bg-amber-600 disabled:bg-line-strong text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 disabled:cursor-not-allowed disabled:shadow-none transition-all"
           >
             {index + 1 >= problems.length ? 'Finish & see answers' : `Lock it in → (${index + 1}/${FINAL_QUIZ_SIZE})`}
           </button>
@@ -228,7 +228,7 @@ export function FinalQuiz() {
       <button
         type="button"
         onClick={() => navigate('/finals')}
-        className="mt-6 w-full text-sm font-display font-bold text-slate-500 hover:text-slate-700 py-2"
+        className="mt-6 w-full text-sm font-display font-bold text-ink-muted hover:text-ink-muted py-2"
       >
         Quit quiz
       </button>

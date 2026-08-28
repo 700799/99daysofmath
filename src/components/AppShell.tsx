@@ -8,12 +8,14 @@ import { XpFlash } from './XpFlash';
 import { MasteryCelebration } from '../routes/arcade/MasteryCelebration';
 import { submitHaptic, tapHaptic, successHaptic } from '../utils/haptics';
 import { playClick, playAdvance } from '../utils/sound';
+import { useThemeSync } from '../hooks/useTheme';
 
 interface Props {
   children: React.ReactNode;
 }
 
 export function AppShell({ children }: Props) {
+  useThemeSync();
   const dailyStreak = useProgress((s) => s.dailyStreak);
   const usedFreezeRecently = useProgress((s) => {
     if (!s.lastFreezeDate) return false;
@@ -104,35 +106,34 @@ export function AppShell({ children }: Props) {
 
   return (
     <div
-      className="flex flex-col bg-gradient-to-b from-sky-50 via-amber-50 to-white"
+      className="flex flex-col bg-canvas"
       style={{ minHeight: '100dvh' }}
     >
       <header
-        className="sticky top-0 z-30 bg-white/90 backdrop-blur border-b-2 border-slate-200"
+        className="sticky top-0 z-30 bg-surface/85 backdrop-blur border-b border-line"
         style={{ paddingTop: 'env(safe-area-inset-top)' }}
       >
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
           {isHome ? (
             <div className="flex items-center gap-2 min-w-0">
-              <span className="text-2xl" aria-hidden="true">🦉</span>
-              <span className="font-display font-extrabold text-lg sm:text-xl text-slate-900 truncate">
+              <span className="font-display font-bold text-lg sm:text-xl tracking-tight text-ink truncate">
                 99 Days of Math
               </span>
             </div>
           ) : (
             <Link
               to="/"
-              className="flex items-center gap-1 text-slate-700 hover:text-slate-900 min-h-11"
+              className="flex items-center gap-1 text-ink-muted hover:text-ink min-h-11"
             >
               <span className="text-2xl">←</span>
-              <span className="font-display font-bold">Home</span>
+              <span className="font-display font-semibold">Home</span>
             </Link>
           )}
           <div className="flex items-center gap-1.5">
             <StatsBadge />
             {dailyStreak > 0 && (
               <span
-                className="inline-flex items-center gap-1 bg-orange-100 text-orange-900 px-2 py-1 rounded-full font-display font-extrabold text-xs tabular-nums"
+                className="inline-flex items-center gap-1 bg-warn-soft text-warn px-2 py-1 rounded-full font-display font-bold text-xs tabular-nums"
                 aria-label={`Streak: ${dailyStreak} day${dailyStreak === 1 ? '' : 's'}`}
               >
                 {usedFreezeRecently ? '🧊' : '🔥'} {dailyStreak}
@@ -175,13 +176,13 @@ function StatsBadge() {
   const ach = useProgress((s) => s.achievementPoints);
   return (
     <div
-      className="inline-flex items-center gap-1.5 bg-slate-100 rounded-full px-2 py-1 font-display font-extrabold text-[11px] tabular-nums"
+      className="inline-flex items-center gap-1.5 bg-surface-2 border border-line rounded-full px-2 py-1 font-mono font-medium text-[11px] tabular-nums"
       aria-label={`Study ${fmtDur(study)}, game ${fmtDur(game)}, achievement bonus ${ach}`}
       title="Study time · Game time · Achievement bonus"
     >
-      <span className="text-indigo-600">📚 {fmtDur(study)}</span>
-      <span className="text-emerald-600">🎮 {fmtDur(game)}</span>
-      <span className="text-amber-600">🏆 {ach}</span>
+      <span className="text-ink-muted">📚 {fmtDur(study)}</span>
+      <span className="text-ink-muted">🎮 {fmtDur(game)}</span>
+      <span className="text-warn">🏆 {ach}</span>
     </div>
   );
 }

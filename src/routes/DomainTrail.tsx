@@ -36,14 +36,14 @@ function Spark({ runs }: { runs: number[] }) {
         {bars.map((v, i) => {
           const last = i === bars.length - 1 && v >= 0;
           const h = v < 0 ? 3 : Math.max(4, Math.round((v / 100) * 26));
-          const col = v < 0 ? '#223052' : v >= 80 ? '#7CFF9B' : v >= 50 ? '#FFC94D' : '#FF7A6B';
+          const col = v < 0 ? 'rgb(var(--line))' : v >= 80 ? 'rgb(var(--ok))' : v >= 50 ? 'rgb(var(--warn))' : 'rgb(var(--bad))';
           return (
             <span key={i} className="block w-[4px]"
-              style={{ height: h, background: col, outline: last ? '1px solid #5EE7FF' : undefined, outlineOffset: 1 }} />
+              style={{ height: h, background: col, outline: last ? '1px solid rgb(var(--accent))' : undefined, outlineOffset: 1 }} />
           );
         })}
       </div>
-      <div className="mt-[3px] text-right font-mono text-[8px] tracking-wider text-[#8FA0C4]">
+      <div className="mt-[3px] text-right font-mono text-[8px] tracking-wider text-ink-muted">
         {runs.length ? 'LAST RUNS' : 'NO RUNS YET'}
       </div>
     </div>
@@ -99,64 +99,55 @@ export function DomainTrail() {
     : null;
 
   return (
-    <div className="mx-auto max-w-[480px] rounded-xl bg-[#0A0F1E] p-3 pb-6 text-[#E9EFFF]"
-      style={{
-        backgroundImage:
-          'radial-gradient(1px 1px at 12% 22%, #ffffffcc 50%, transparent 51%),' +
-          'radial-gradient(1px 1px at 78% 8%, #ffffff88 50%, transparent 51%),' +
-          'radial-gradient(1.5px 1.5px at 55% 45%, #9fd8ff99 50%, transparent 51%),' +
-          'radial-gradient(1px 1px at 30% 70%, #ffffff77 50%, transparent 51%),' +
-          'radial-gradient(1.5px 1.5px at 8% 88%, #ffd27f88 50%, transparent 51%),' +
-          'radial-gradient(1px 1px at 88% 60%, #ffffffaa 50%, transparent 51%)',
-      }}>
+    <div className="mx-auto max-w-[480px] rounded-xl bg-canvas p-3 pb-6 text-ink">
       {/* ── telemetry strip: exact numbers first ── */}
-      <div className="border border-[#223052] bg-gradient-to-b from-[#101A31] to-[#0D1527] px-3.5 py-3"
+      <div className="border border-line bg-gradient-to-b from-surface to-surface-2 px-3.5 py-3"
         style={{ clipPath: CUT }}>
         <div className="flex items-baseline justify-between gap-2">
-          <div className="text-[12px] font-display font-black uppercase tracking-[0.22em] text-[#5EE7FF]">
+          <div className="text-[12px] font-display font-black uppercase tracking-[0.22em] text-accent">
             ⟡ Mission Control
           </div>
-          <Link to="/" className="font-mono text-[10px] tracking-wider text-[#8FA0C4] hover:text-[#5EE7FF]">
+          <Link to="/" className="font-mono text-[10px] tracking-wider text-ink-muted hover:text-accent">
             ← ALL SECTORS
           </Link>
         </div>
         <div className="mt-2.5 grid grid-cols-4 gap-2">
           {[
-            { v: xp.toLocaleString(), l: 'Total XP', c: '#5EE7FF' },
-            { v: `${lessonsDone}/${lessonsTotal}`, l: 'Lessons', c: '#7CFF9B' },
-            { v: `${accuracy}%`, l: 'Accuracy', c: '#FFC94D' },
-            { v: `${dailyStreak}d`, l: 'Streak', c: '#E9EFFF' },
+            { v: xp.toLocaleString(), l: 'Total XP', c: 'rgb(var(--accent))' },
+            { v: `${lessonsDone}/${lessonsTotal}`, l: 'Lessons', c: 'rgb(var(--ok))' },
+            { v: `${accuracy}%`, l: 'Accuracy', c: 'rgb(var(--warn))' },
+            { v: `${dailyStreak}d`, l: 'Streak', c: 'rgb(var(--ink))' },
           ].map((s) => (
-            <div key={s.l} className="border-l-2 border-[#223052] pl-2">
+            <div key={s.l} className="border-l-2 border-line pl-2">
               <b className="block font-mono text-[18px] leading-tight tabular-nums" style={{ color: s.c }}>{s.v}</b>
-              <span className="text-[8.5px] font-bold uppercase tracking-[0.14em] text-[#8FA0C4]">{s.l}</span>
+              <span className="text-[8.5px] font-bold uppercase tracking-[0.14em] text-ink-muted">{s.l}</span>
             </div>
           ))}
         </div>
       </div>
 
       {/* ── the sector panel ── */}
-      <div className="relative mt-3 border border-[#223052] bg-gradient-to-b from-[#101A31] to-[#0D1527] px-3 py-3"
+      <div className="relative mt-3 border border-line bg-gradient-to-b from-surface to-surface-2 px-3 py-3"
         style={{ clipPath: CUT_BIG }}>
         <div className="mb-2.5 flex items-center gap-2.5">
-          <div className="grid h-8 w-8 flex-none place-items-center font-mono text-[11px] font-bold text-[#0A0F1E]"
+          <div className="grid h-8 w-8 flex-none place-items-center font-mono text-[11px] font-bold text-[color:rgb(var(--on-accent))]"
             style={{ clipPath: 'polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)', background: DOMAIN_COLORS[d] }}>
             {d.replace('6.', '').replace('5.', '')}
           </div>
           <div className="min-w-0">
             <div className="text-[13px] font-display font-black uppercase tracking-[0.16em]">Sector {d}</div>
-            <div className="truncate font-mono text-[10px] text-[#8FA0C4]">
+            <div className="truncate font-mono text-[10px] text-ink-muted">
               {DOMAIN_LABELS[d]} · {units?.length ?? 0} units
             </div>
           </div>
           <div className="ml-auto text-right">
-            <b className="font-mono text-[16px] tabular-nums text-[#FFC94D]">{sectorAvg == null ? '—' : `${sectorAvg}%`}</b>
-            <span className="block text-[8px] font-bold uppercase tracking-[0.14em] text-[#8FA0C4]">sector avg</span>
+            <b className="font-mono text-[16px] tabular-nums text-warn">{sectorAvg == null ? '—' : `${sectorAvg}%`}</b>
+            <span className="block text-[8px] font-bold uppercase tracking-[0.14em] text-ink-muted">sector avg</span>
           </div>
         </div>
 
-        {loading && <div className="py-10 text-center font-mono text-sm text-[#8FA0C4]">SCANNING SECTOR…</div>}
-        {error && <div className="py-6 text-center font-mono text-xs text-[#FF7A6B]">{error.message}</div>}
+        {loading && <div className="py-10 text-center font-mono text-sm text-ink-muted">SCANNING SECTOR…</div>}
+        {error && <div className="py-6 text-center font-mono text-xs text-bad">{error.message}</div>}
 
         {(units ?? []).map((u) => {
           const key = lessonKey(d, u);
@@ -168,27 +159,27 @@ export function DomainTrail() {
           const latest = runs.length ? runs[runs.length - 1] : null;
           const mastered = stars === 3;
           const started = lessonDone || stars > 0 || runs.length > 0;
-          const nodeBg = mastered ? '#7CFF9B' : started ? '#5EE7FF' : '#3A4763';
+          const nodeBg = mastered ? 'rgb(var(--ok))' : started ? 'rgb(var(--accent))' : 'rgb(var(--line-strong))';
 
           return (
             <Link key={u} to={`/unit/${d}/${u}`}
-              className="mt-1.5 grid grid-cols-[34px_1fr_auto] items-center gap-2.5 border border-[#223052] bg-[#0B1226]/80 px-2 py-2 no-underline transition-colors hover:border-[#5EE7FF]"
+              className="mt-1.5 grid grid-cols-[34px_1fr_auto] items-center gap-2.5 border border-line bg-surface px-2 py-2 no-underline transition-colors hover:border-accent"
               style={{ clipPath: CUT }} data-haptic="tap">
-              <div className="grid h-[30px] w-[30px] place-items-center font-mono text-[13px] font-bold text-[#0A0F1E]"
-                style={{ clipPath: NODE_CLIP, background: nodeBg, boxShadow: started && !mastered ? '0 0 12px #5ee7ff66' : undefined }}>
+              <div className="grid h-[30px] w-[30px] place-items-center font-mono text-[13px] font-bold text-[color:rgb(var(--on-accent))]"
+                style={{ clipPath: NODE_CLIP, background: nodeBg, boxShadow: undefined }}>
                 {u}
               </div>
               <div className="min-w-0">
-                <div className="truncate text-[12.5px] font-display font-extrabold text-[#E9EFFF]">
+                <div className="truncate text-[12.5px] font-display font-extrabold text-ink">
                   {lesson?.title ?? `Unit ${u}`}
                 </div>
                 <div className="mt-0.5 flex items-center gap-2">
                   <span className="font-mono text-[11px] font-bold tabular-nums"
-                    style={{ color: latest == null ? '#8FA0C4' : '#FFC94D' }}>
+                    style={{ color: latest == null ? 'rgb(var(--ink-muted))' : 'rgb(var(--warn))' }}>
                     {latest == null ? '—' : `${latest}%`}
                   </span>
-                  <span className="text-[10px] tracking-[0.1em] text-[#FFC94D]">
-                    {'★'.repeat(stars)}<span className="text-[#3A4763]">{'★'.repeat(3 - stars)}</span>
+                  <span className="text-[10px] tracking-[0.1em] text-warn">
+                    {'★'.repeat(stars)}<span className="text-ink-dim">{'★'.repeat(3 - stars)}</span>
                   </span>
                 </div>
                 {/* lesson-step sequence: strict order, locked greyed until reached */}
@@ -198,10 +189,10 @@ export function DomainTrail() {
                       className="grid h-[13px] w-[13px] place-items-center border text-[8px] font-black"
                       style={
                         st.state === 'done'
-                          ? { background: '#7CFF9B', borderColor: '#7CFF9B', color: '#0A0F1E' }
+                          ? { background: 'rgb(var(--ok))', borderColor: 'rgb(var(--ok))', color: 'rgb(var(--surface))' }
                           : st.state === 'cur'
-                            ? { borderColor: '#5EE7FF', color: '#5EE7FF', background: '#5ee7ff22' }
-                            : { borderColor: '#3A4763', color: '#3A4763', background: '#ffffff06' }
+                            ? { borderColor: 'rgb(var(--accent))', color: 'rgb(var(--accent))', background: 'rgb(var(--accent-soft))' }
+                            : { borderColor: 'rgb(var(--line-strong))', color: 'rgb(var(--ink-dim))', background: 'transparent' }
                       }>
                       {st.state === 'done' ? '✓' : st.state === 'cur' ? '▸' : '–'}
                     </span>
@@ -214,7 +205,7 @@ export function DomainTrail() {
         })}
       </div>
 
-      <div className="mt-3 text-center font-mono text-[10px] tracking-wider text-[#8FA0C4]">
+      <div className="mt-3 text-center font-mono text-[10px] tracking-wider text-ink-muted">
         UNITS: JUMP TO ANY · STEPS: L LESSON → P PRACTICE → Q QUIZ → M MASTERY
       </div>
     </div>

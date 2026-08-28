@@ -12,14 +12,14 @@ export function RitTrend({ className }: Props) {
     return (
       <div
         className={[
-          'rounded-2xl border-2 border-slate-200 bg-white p-4 text-center',
+          'rounded-2xl border-2 border-line bg-surface p-4 text-center',
           className ?? '',
         ].join(' ')}
       >
-        <div className="text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
+        <div className="text-xs font-display font-extrabold uppercase tracking-wider text-ink-muted">
           RIT growth
         </div>
-        <div className="text-sm text-slate-600 mt-1">
+        <div className="text-sm text-ink-muted mt-1">
           {history.length === 0
             ? 'Take a mock test to start tracking your growth.'
             : 'One test logged — take another to see your trend.'}
@@ -47,21 +47,21 @@ export function RitTrend({ className }: Props) {
   return (
     <div
       className={[
-        'rounded-2xl border-2 border-slate-200 bg-white p-4',
+        'rounded-2xl border-2 border-line bg-surface p-4',
         className ?? '',
       ].join(' ')}
     >
       <div className="flex items-baseline justify-between">
-        <div className="text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
+        <div className="text-xs font-display font-extrabold uppercase tracking-wider text-ink-muted">
           RIT growth
         </div>
         <div className="flex items-baseline gap-2">
-          <span className="text-2xl font-display font-extrabold text-slate-900 tabular-nums">
+          <span className="text-2xl font-display font-extrabold text-ink tabular-nums">
             ~{latest}
           </span>
           <span
             className={`text-xs font-display font-extrabold ${
-              delta > 0 ? 'text-green-600' : delta < 0 ? 'text-red-500' : 'text-slate-400'
+              delta > 0 ? 'text-ok' : delta < 0 ? 'text-red-500' : 'text-ink-dim'
             }`}
           >
             {delta > 0 ? `▲ +${delta}` : delta < 0 ? `▼ ${delta}` : '—'}
@@ -87,7 +87,7 @@ export function RitTrend({ className }: Props) {
           <circle key={i} cx={x(i)} cy={y(p.rit)} r={3.5} fill="#1CB0F6" />
         ))}
       </svg>
-      <div className="text-[10px] text-slate-400 mt-1">
+      <div className="text-[10px] text-ink-dim mt-1">
         Estimate across your last {pts.length} mock tests — not an official MAP score.
       </div>
     </div>

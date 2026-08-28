@@ -43,8 +43,8 @@ export function Rewards() {
   return (
     <div>
       <div className="flex items-center justify-between gap-3 mb-3">
-        <h1 className="text-2xl font-display font-extrabold text-slate-900">🏆 My Collection</h1>
-        <div className="rounded-full bg-amber-100 text-amber-800 px-3 py-1.5 font-display font-extrabold tabular-nums">🪙 {coins.toLocaleString()}</div>
+        <h1 className="text-2xl font-display font-extrabold text-ink">🏆 My Collection</h1>
+        <div className="rounded-full bg-warn-soft text-warn px-3 py-1.5 font-display font-extrabold tabular-nums">🪙 {coins.toLocaleString()}</div>
       </div>
 
       {/* zoomed-in kawaii avatar */}
@@ -73,7 +73,7 @@ export function Rewards() {
           return (
             <Tile key={p.name} locked={!earned} onClick={() => earned && open({ emoji: p.emoji, name: p.name, blurb: p.blurb })}>
               <div className="text-3xl">{earned ? p.emoji : '🔒'}</div>
-              <div className="text-[10px] font-display font-bold text-slate-600 truncate mt-0.5">{earned ? p.name : `Lv ${p.lvl}`}</div>
+              <div className="text-[10px] font-display font-bold text-ink-muted truncate mt-0.5">{earned ? p.name : `Lv ${p.lvl}`}</div>
             </Tile>
           );
         })}
@@ -85,7 +85,7 @@ export function Rewards() {
         {ownedCosmetics.map((c) => (
           <Tile key={c.id} onClick={() => open({ emoji: c.emoji, name: c.name })}>
             <div className="text-3xl">{c.emoji}</div>
-            <div className="text-[10px] font-display font-bold text-slate-600 truncate mt-0.5">{c.name}</div>
+            <div className="text-[10px] font-display font-bold text-ink-muted truncate mt-0.5">{c.name}</div>
           </Tile>
         ))}
       </Section>
@@ -96,7 +96,7 @@ export function Rewards() {
         {unlockedGameDefs.map((g) => (
           <Tile key={g.id} onClick={() => open({ emoji: g.emoji, name: g.name, blurb: g.blurb })}>
             <Mascot kind={gameMascot(g.id)} size={34} expr="cheer" />
-            <div className="text-[10px] font-display font-bold text-slate-600 truncate mt-0.5">{g.name}</div>
+            <div className="text-[10px] font-display font-bold text-ink-muted truncate mt-0.5">{g.name}</div>
           </Tile>
         ))}
       </Section>
@@ -107,12 +107,12 @@ export function Rewards() {
         {earnedStickers.map((s) => (
           <Tile key={s.id} onClick={() => open({ emoji: s.emoji, name: s.label })}>
             <div className="text-3xl">{s.emoji}</div>
-            <div className="text-[10px] font-display font-bold text-slate-600 truncate mt-0.5">{s.label}</div>
+            <div className="text-[10px] font-display font-bold text-ink-muted truncate mt-0.5">{s.label}</div>
           </Tile>
         ))}
       </Section>
 
-      <Link to="/" className="mt-6 inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700">← Back home</Link>
+      <Link to="/" className="mt-6 inline-block text-sm font-display font-bold text-ink-muted hover:text-ink-muted">← Back home</Link>
 
       {/* zoom modal */}
       <AnimatePresence>
@@ -142,8 +142,8 @@ function Section({ title, subtitle, children }: { title: string; subtitle?: stri
   return (
     <div className="mt-4">
       <div className="flex items-baseline justify-between">
-        <div className="font-display font-extrabold text-slate-900">{title}</div>
-        {subtitle && <div className="text-[11px] font-display font-bold text-slate-400">{subtitle}</div>}
+        <div className="font-display font-extrabold text-ink">{title}</div>
+        {subtitle && <div className="text-[11px] font-display font-bold text-ink-dim">{subtitle}</div>}
       </div>
       <div className="mt-2 grid grid-cols-4 sm:grid-cols-5 gap-2">{children}</div>
     </div>
@@ -155,7 +155,7 @@ function Tile({ children, onClick, locked }: { children: React.ReactNode; onClic
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-2xl border-2 p-2 text-center flex flex-col items-center justify-center min-h-16 ${locked ? 'border-slate-200 bg-slate-50 opacity-70' : 'border-slate-200 bg-white hover:border-fuchsia-300 active:translate-y-0.5'}`}
+      className={`rounded-2xl border-2 p-2 text-center flex flex-col items-center justify-center min-h-16 ${locked ? 'border-line bg-surface-2 opacity-70' : 'border-line bg-surface hover:border-accent/45 active:translate-y-0.5'}`}
     >
       {children}
     </button>
@@ -163,5 +163,5 @@ function Tile({ children, onClick, locked }: { children: React.ReactNode; onClic
 }
 
 function Empty({ children }: { children: React.ReactNode }) {
-  return <div className="col-span-4 sm:col-span-5 rounded-2xl bg-slate-50 border-2 border-dashed border-slate-200 p-4 text-center text-xs font-display font-bold text-slate-400">{children}</div>;
+  return <div className="col-span-4 sm:col-span-5 rounded-2xl bg-surface-2 border-2 border-dashed border-line p-4 text-center text-xs font-display font-bold text-ink-dim">{children}</div>;
 }

@@ -81,17 +81,17 @@ export function Mathematicians() {
   return (
     <div>
       <div className="flex items-baseline justify-between gap-3 mb-3">
-        <h1 className="text-2xl font-display font-extrabold text-slate-900">
+        <h1 className="text-2xl font-display font-extrabold text-ink">
           🧑‍🔬 Famous Mathematicians
         </h1>
         <Link
           to="/stories"
-          className="text-sm font-display font-bold text-violet-700 hover:text-violet-900"
+          className="text-sm font-display font-bold text-accent hover:text-accent"
         >
           🌟 Math Stories →
         </Link>
       </div>
-      <p className="text-sm text-slate-600 mb-5">
+      <p className="text-sm text-ink-muted mb-5">
         Learn about the brilliant minds who shaped mathematics throughout
         history — tap <b>📖 Their story</b> for a slide-by-slide tale of what
         they did, why it matters, and how it connects to what you're learning.
@@ -103,16 +103,16 @@ export function Mathematicians() {
           return (
             <div
               key={m.name}
-              className="rounded-2xl p-4 bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200"
+              className="rounded-2xl p-4 bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-accent/35"
             >
               <div className="flex items-start gap-3">
                 <div className="text-4xl shrink-0">{m.emoji}</div>
                 <div className="flex-1 min-w-0">
-                  <div className="font-display font-extrabold text-slate-900">{m.name}</div>
-                  <div className="text-xs font-display font-bold text-purple-700 uppercase tracking-wider mt-0.5">
+                  <div className="font-display font-extrabold text-ink">{m.name}</div>
+                  <div className="text-xs font-display font-bold text-accent uppercase tracking-wider mt-0.5">
                     {m.era}
                   </div>
-                  <div className="text-sm text-slate-700 mt-1.5">{m.contribution}</div>
+                  <div className="text-sm text-ink-muted mt-1.5">{m.contribution}</div>
                   <div className="mt-2.5 flex flex-wrap items-center gap-2">
                     {deck && (
                       <button
@@ -128,7 +128,7 @@ export function Mathematicians() {
                       <Link
                         to="/stories"
                         state={{ openStory: m.storySrc }}
-                        className="inline-flex items-center gap-1 rounded-full bg-white border-2 border-violet-300 text-violet-700 text-xs font-display font-extrabold px-3 py-1"
+                        className="inline-flex items-center gap-1 rounded-full bg-surface border-2 border-accent/45 text-accent text-xs font-display font-extrabold px-3 py-1"
                         data-haptic="tap"
                       >
                         🌟 Animated story
@@ -144,7 +144,7 @@ export function Mathematicians() {
 
       <Link
         to="/"
-        className="inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+        className="inline-block text-sm font-display font-bold text-ink-muted hover:text-ink-muted"
       >
         ← Back home
       </Link>
