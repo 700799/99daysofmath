@@ -1,0 +1,72 @@
+{
+  "id": "SAT.163",
+  "domain": "SAT",
+  "unit": 17,
+  "orderInUnit": 3,
+  "standard": "SAT.GEO.3",
+  "difficulty": 2,
+  "prompt": "A $45°$-$45°$-$90°$ triangle has legs of length $7$. What is the length of the hypotenuse?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$7$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$7\\sqrt{2}$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$7\\sqrt{3}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$14$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The sides of a $45$-$45$-$90$ triangle are in the ratio $1 : 1 : \\sqrt{2}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The sides of a $45$-$45$-$90$ triangle are in the ratio $1 : 1 : \\sqrt{2}$."
+    },
+    {
+      "level": "guide",
+      "text": "The hypotenuse is the leg times $\\sqrt{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$7\\sqrt{2}$."
+    }
+  ],
+  "learningObjective": "Apply the 45-45-90 side ratio.",
+  "topic": "Special right triangles",
+  "explanation": [
+    "In a $45$-$45$-$90$ triangle the two legs are equal and the hypotenuse is $\\sqrt{2}$ times a leg.",
+    "So the hypotenuse is $7\\sqrt{2}$.",
+    "Verify with Pythagoras: $7^2 + 7^2 = 98$, and $\\sqrt{98} = 7\\sqrt{2}$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The two special triangles",
+      "steps": [
+        "$45$-$45$-$90$: sides $1 : 1 : \\sqrt{2}$, an isosceles right triangle — half a square along its diagonal.",
+        "$30$-$60$-$90$: sides $1 : \\sqrt{3} : 2$, with the shortest side opposite the $30°$ — half an equilateral triangle.",
+        "Choice C uses the wrong triangle's radical, which is why both appear among the choices."
+      ]
+    }
+  ],
+  "tags": [
+    "special-triangle",
+    "45-45-90"
+  ],
+  "estimatedSeconds": 50
+}

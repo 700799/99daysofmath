@@ -1,0 +1,56 @@
+{
+  "id": "SAT.107",
+  "domain": "SAT",
+  "unit": 11,
+  "orderInUnit": 7,
+  "standard": "SAT.PSDA.1",
+  "difficulty": 3,
+  "prompt": "On a certain day, $1$ US dollar is worth $1.25$ Canadian dollars. How many US dollars are equivalent to $400$ Canadian dollars?",
+  "answerType": "numeric",
+  "primaryAnswer": "320",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Decide whether the answer should be larger or smaller than $400$ before computing.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Decide whether the answer should be larger or smaller than $400$ before computing."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an easy rate: if $1$ USD $= 2$ CAD, then $10$ CAD is clearly $5$ USD — you divide. Decide bigger-or-smaller first, and the operation follows."
+    },
+    {
+      "level": "guide",
+      "text": "A US dollar is worth more, so the US amount must be smaller — divide."
+    },
+    {
+      "level": "reveal",
+      "text": "$400 \\div 1.25 = 320$ US dollars."
+    }
+  ],
+  "learningObjective": "Convert between currencies, choosing the correct direction.",
+  "topic": "Unit conversion",
+  "explanation": [
+    "The relationship is $1 \\text{ USD} = 1.25 \\text{ CAD}$.",
+    "Set up so Canadian dollars cancel: $400 \\text{ CAD} \\times \\dfrac{1 \\text{ USD}}{1.25 \\text{ CAD}} = 320$ USD.",
+    "Multiplying instead would give $500$, which is the trap answer."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate the direction first",
+      "steps": [
+        "One US dollar buys more than one Canadian dollar, so any pile of money is a *smaller* number when counted in US dollars.",
+        "That single sentence tells you to divide, before you touch the arithmetic.",
+        "On every conversion question, predicting bigger-or-smaller first eliminates the multiply/divide coin flip."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-conversion",
+    "currency",
+    "direction"
+  ],
+  "estimatedSeconds": 70
+}

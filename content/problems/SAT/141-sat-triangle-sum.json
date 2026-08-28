@@ -1,0 +1,50 @@
+{
+  "id": "SAT.141",
+  "domain": "SAT",
+  "unit": 15,
+  "orderInUnit": 1,
+  "standard": "SAT.GEO.1",
+  "difficulty": 1,
+  "prompt": "Two angles of a triangle measure $40°$ and $65°$. What is the measure, in degrees, of the third angle?",
+  "answerType": "numeric",
+  "primaryAnswer": "75",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The three angles of any triangle add to $180°$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The three angles of any triangle add to $180°$."
+    },
+    {
+      "level": "guide",
+      "text": "$40 + 65 = 105$."
+    },
+    {
+      "level": "reveal",
+      "text": "$180 - 105 = 75$ degrees."
+    }
+  ],
+  "learningObjective": "Apply the triangle angle sum.",
+  "topic": "Triangle angles",
+  "explanation": [
+    "The interior angles of a triangle always sum to $180°$.",
+    "$40 + 65 = 105$.",
+    "$180 - 105 = 75°$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The sum never changes",
+      "steps": [
+        "It is $180°$ for every triangle — acute, right, obtuse, large or small.",
+        "This is the single most-used fact in SAT geometry, and it is not on the reference sheet.",
+        "Any question giving you two angles of a triangle is handing you the third for free."
+      ]
+    }
+  ],
+  "tags": [
+    "triangle",
+    "angle-sum"
+  ],
+  "estimatedSeconds": 35
+}

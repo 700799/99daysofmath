@@ -1,0 +1,50 @@
+{
+  "id": "SAT.002",
+  "domain": "SAT",
+  "unit": 1,
+  "orderInUnit": 2,
+  "standard": "SAT.ALG.1",
+  "difficulty": 1,
+  "prompt": "If $5(x - 2) = 35$, what is the value of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You can distribute the $5$ — or divide both sides by $5$ first. The second is faster.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You can distribute the $5$ — or divide both sides by $5$ first. The second is faster."
+    },
+    {
+      "level": "guide",
+      "text": "Dividing both sides by $5$ gives $x - 2 = 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x - 2 = 7$, so $x = 9$."
+    }
+  ],
+  "learningObjective": "Solve a linear equation with a factored side efficiently.",
+  "topic": "Equations with parentheses",
+  "explanation": [
+    "The left side is $5$ times the quantity $(x - 2)$, so divide both sides by $5$ first: $x - 2 = 7$.",
+    "Add $2$ to both sides: $x = 9$.",
+    "Check: $5(9 - 2) = 5(7) = 35$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Distribute first",
+      "steps": [
+        "$5(x - 2) = 5x - 10$, so the equation is $5x - 10 = 35$.",
+        "Add $10$: $5x = 45$. Divide by $5$: $x = 9$.",
+        "Same answer, one extra step — dividing by the outside factor first is the shortcut worth building as a habit."
+      ]
+    }
+  ],
+  "tags": [
+    "linear-equation",
+    "distribute"
+  ],
+  "estimatedSeconds": 40
+}

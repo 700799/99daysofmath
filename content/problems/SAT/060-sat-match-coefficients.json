@@ -1,0 +1,55 @@
+{
+  "id": "SAT.060",
+  "domain": "SAT",
+  "unit": 6,
+  "orderInUnit": 10,
+  "standard": "SAT.ADV.1",
+  "difficulty": 3,
+  "prompt": "The equation $(x + a)(x + 3) = x^2 + 11x + b$ is true for all values of $x$, where $a$ and $b$ are constants. What is the value of $b$?",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "\"True for all values of $x$\" means the two sides are the same polynomial — match them term by term.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"True for all values of $x$\" means the two sides are the same polynomial — match them term by term."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a smaller identity: $(x + a)(x + 1) = x^2 + 5x + b$. Expanding gives $x^2 + (a+1)x + a$, so $a = 4$ and $b = 4$. Match the like terms one at a time."
+    },
+    {
+      "level": "guide",
+      "text": "Expanding the left gives $x^2 + (a + 3)x + 3a$. So $a + 3 = 11$."
+    },
+    {
+      "level": "reveal",
+      "text": "$a = 8$, and then $b = 3a = 24$."
+    }
+  ],
+  "learningObjective": "Use coefficient matching to find unknown constants in an identity.",
+  "topic": "Polynomial identities",
+  "explanation": [
+    "Expand the left side: $(x + a)(x + 3) = x^2 + 3x + ax + 3a = x^2 + (a + 3)x + 3a$.",
+    "Since the equation holds for every $x$, matching coefficients gives $a + 3 = 11$ and $b = 3a$.",
+    "From the first, $a = 8$. Then $b = 3(8) = 24$. Check: $(x + 8)(x + 3) = x^2 + 11x + 24$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Substitute a convenient value",
+      "steps": [
+        "Since the identity holds for every $x$, pick one that simplifies things — say $x = 0$.",
+        "The left becomes $a \\cdot 3 = 3a$ and the right becomes $b$, so $b = 3a$ immediately.",
+        "Then use $x = 1$: $(1 + a)(4) = 1 + 11 + b$, so $4 + 4a = 12 + 3a$ and $a = 8$, giving $b = 24$."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomial-identity",
+    "coefficient-matching"
+  ],
+  "estimatedSeconds": 90
+}

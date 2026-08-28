@@ -1,0 +1,50 @@
+{
+  "id": "SAT.106",
+  "domain": "SAT",
+  "unit": 11,
+  "orderInUnit": 6,
+  "standard": "SAT.PSDA.1",
+  "difficulty": 2,
+  "prompt": "Three identical machines working together produce $120$ parts in $4$ hours. At the same rate, how many parts will five of these machines produce in $6$ hours?",
+  "answerType": "numeric",
+  "primaryAnswer": "300",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the output of one machine in one hour first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the output of one machine in one hour first."
+    },
+    {
+      "level": "guide",
+      "text": "$120$ parts came from $3 \\times 4 = 12$ machine-hours, so the rate is $10$ parts per machine-hour."
+    },
+    {
+      "level": "reveal",
+      "text": "$5$ machines for $6$ hours is $30$ machine-hours: $30 \\times 10 = 300$ parts."
+    }
+  ],
+  "learningObjective": "Solve a work-rate problem by reducing to a single-unit rate.",
+  "topic": "Rates",
+  "explanation": [
+    "Total effort is machines × hours: $3 \\times 4 = 12$ machine-hours produced $120$ parts.",
+    "So one machine-hour produces $120 \\div 12 = 10$ parts.",
+    "The new scenario is $5 \\times 6 = 30$ machine-hours, giving $30 \\times 10 = 300$ parts."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Scale the two factors separately",
+      "steps": [
+        "Going from $3$ machines to $5$ multiplies output by $\\tfrac{5}{3}$.",
+        "Going from $4$ hours to $6$ multiplies it by $\\tfrac{6}{4} = \\tfrac{3}{2}$.",
+        "$120 \\times \\tfrac{5}{3} \\times \\tfrac{3}{2} = 300$. Both routes work; the machine-hour route is harder to get backwards."
+      ]
+    }
+  ],
+  "tags": [
+    "rate",
+    "work-problem"
+  ],
+  "estimatedSeconds": 85
+}

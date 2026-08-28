@@ -1,0 +1,50 @@
+{
+  "id": "SAT.122",
+  "domain": "SAT",
+  "unit": 13,
+  "orderInUnit": 2,
+  "standard": "SAT.PSDA.3",
+  "difficulty": 1,
+  "prompt": "What is the median of the data set $3$, $7$, $1$, $9$, $5$?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sort the values before doing anything else.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sort the values before doing anything else."
+    },
+    {
+      "level": "guide",
+      "text": "Sorted: $1, 3, 5, 7, 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "The middle value is $5$."
+    }
+  ],
+  "learningObjective": "Find the median of an unsorted data set.",
+  "topic": "Measures of center",
+  "explanation": [
+    "Sort the values: $1, 3, 5, 7, 9$.",
+    "With five values, the median is the third one.",
+    "That is $5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sorting is not optional",
+      "steps": [
+        "Taking the middle of the unsorted list gives $1$ — the most common error on median questions.",
+        "The median is defined by *position after sorting*, not by position as listed.",
+        "Write the sorted list on scratch paper; do not try to sort in your head."
+      ]
+    }
+  ],
+  "tags": [
+    "median",
+    "measures-of-center"
+  ],
+  "estimatedSeconds": 40
+}

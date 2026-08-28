@@ -1,0 +1,51 @@
+{
+  "id": "SAT.074",
+  "domain": "SAT",
+  "unit": 8,
+  "orderInUnit": 4,
+  "standard": "SAT.ADV.3",
+  "difficulty": 2,
+  "prompt": "What is the maximum value of the function $f(x) = -2(x - 3)^2 + 7$?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The leading coefficient is negative, so the parabola opens downward and has a maximum.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The leading coefficient is negative, so the parabola opens downward and has a maximum."
+    },
+    {
+      "level": "guide",
+      "text": "The maximum occurs at the vertex. What is the $y$-coordinate of the vertex?"
+    },
+    {
+      "level": "reveal",
+      "text": "The vertex is $(3, 7)$, so the maximum value is $7$."
+    }
+  ],
+  "learningObjective": "Identify the maximum of a downward parabola from vertex form.",
+  "topic": "Maximum and minimum values",
+  "explanation": [
+    "The squared term $(x - 3)^2$ is never negative, and it is multiplied by $-2$, so $-2(x - 3)^2$ is never positive.",
+    "The largest that term can be is $0$, which happens at $x = 3$.",
+    "So the greatest value of $f$ is $0 + 7 = 7$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The value versus where it happens",
+      "steps": [
+        "The maximum *value* is $7$, the $y$-coordinate. It occurs *at* $x = 3$.",
+        "Both numbers appear in the vertex, and both will appear among the answer choices.",
+        "Read whether the question asks for the maximum value or for the input that produces it — they are different questions with different answers."
+      ]
+    }
+  ],
+  "tags": [
+    "vertex-form",
+    "maximum",
+    "parabola"
+  ],
+  "estimatedSeconds": 55
+}

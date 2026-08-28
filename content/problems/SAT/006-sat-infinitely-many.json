@@ -1,0 +1,50 @@
+{
+  "id": "SAT.006",
+  "domain": "SAT",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "SAT.ALG.1",
+  "difficulty": 2,
+  "prompt": "In the equation $3(2x + 1) = 6x + c$, $c$ is a constant. If the equation has infinitely many solutions, what is the value of $c$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Infinitely many solutions means the two sides are the *same* expression.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Infinitely many solutions means the two sides are the *same* expression."
+    },
+    {
+      "level": "guide",
+      "text": "Expand the left side: $6x + 3$. Compare it term by term with $6x + c$."
+    },
+    {
+      "level": "reveal",
+      "text": "The $x$ terms already match, so the constants must match too: $c = 3$."
+    }
+  ],
+  "learningObjective": "Recognize the condition for a linear equation to have infinitely many solutions.",
+  "topic": "Number of solutions",
+  "explanation": [
+    "Distribute on the left: $3(2x + 1) = 6x + 3$.",
+    "The equation becomes $6x + 3 = 6x + c$.",
+    "Infinitely many solutions means every $x$ works, which happens only when the two sides are identical. The $x$ terms already agree, so we need $c = 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The three-case rule",
+      "steps": [
+        "Write both sides as $ax + b$ and $cx + d$.",
+        "Different $x$-coefficients → exactly one solution. Same coefficient, different constants → no solution. Same coefficient AND same constant → infinitely many.",
+        "Here the coefficients already match at $6$, so it is the constant that decides — this single rule handles every question of this type."
+      ]
+    }
+  ],
+  "tags": [
+    "number-of-solutions",
+    "identity"
+  ],
+  "estimatedSeconds": 60
+}

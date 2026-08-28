@@ -1,0 +1,50 @@
+{
+  "id": "SAT.085",
+  "domain": "SAT",
+  "unit": 9,
+  "orderInUnit": 5,
+  "standard": "SAT.ADV.4",
+  "difficulty": 2,
+  "prompt": "If $\\dfrac{x}{x - 2} = 3$ and $x \\neq 2$, what is the value of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply both sides by the denominator.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply both sides by the denominator."
+    },
+    {
+      "level": "guide",
+      "text": "$x = 3(x - 2)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 3x - 6$, so $-2x = -6$ and $x = 3$."
+    }
+  ],
+  "learningObjective": "Solve a rational equation by clearing the denominator.",
+  "topic": "Rational equations",
+  "explanation": [
+    "Multiply both sides by $(x - 2)$: $x = 3(x - 2)$.",
+    "Distribute and collect: $x = 3x - 6$, so $2x = 6$ and $x = 3$.",
+    "Check that it does not break the denominator: $x = 3 \\neq 2$ ✓, and $\\dfrac{3}{1} = 3$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Always check the denominator",
+      "steps": [
+        "Multiplying by a variable expression can introduce a value that makes the original undefined.",
+        "Here the excluded value is $x = 2$; our answer of $3$ is safe.",
+        "Had the algebra produced $x = 2$, the correct response would be \"no solution\" — and that is a real SAT answer choice."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-equation",
+    "extraneous"
+  ],
+  "estimatedSeconds": 65
+}

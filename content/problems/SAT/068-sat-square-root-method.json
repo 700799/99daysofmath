@@ -1,0 +1,56 @@
+{
+  "id": "SAT.068",
+  "domain": "SAT",
+  "unit": 7,
+  "orderInUnit": 8,
+  "standard": "SAT.ADV.2",
+  "difficulty": 3,
+  "prompt": "What is the greater solution to $(x - 3)^2 = 16$?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Take the square root of both sides — and remember that it produces two cases.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Take the square root of both sides — and remember that it produces two cases."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try easier numbers: $(x - 1)^2 = 9$ gives $x - 1 = \\pm 3$, so $x = 4$ or $x = -2$. The $\\pm$ is not optional — a square has two square roots."
+    },
+    {
+      "level": "guide",
+      "text": "$x - 3 = 4$ or $x - 3 = -4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 7$ or $x = -1$; the greater is $7$."
+    }
+  ],
+  "learningObjective": "Solve a quadratic in squared form using the square-root method.",
+  "topic": "Square-root method",
+  "explanation": [
+    "Taking the square root of both sides gives $x - 3 = \\pm 4$.",
+    "The two cases: $x - 3 = 4$ gives $x = 7$; $x - 3 = -4$ gives $x = -1$.",
+    "The greater solution is $7$. Check: $(7 - 3)^2 = 16$ ✓ and $(-1 - 3)^2 = 16$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The forgotten negative root",
+      "steps": [
+        "Writing only $x - 3 = 4$ loses half the answer, and the missing root is always among the choices.",
+        "Every time you take a square root to undo a square, write the $\\pm$ before anything else.",
+        "Expanding to $x^2 - 6x - 7 = 0$ and factoring to $(x - 7)(x + 1)$ gives the same pair — but takes longer."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "square-root-method",
+    "plus-minus"
+  ],
+  "estimatedSeconds": 65
+}

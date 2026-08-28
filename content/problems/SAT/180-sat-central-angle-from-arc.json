@@ -1,0 +1,56 @@
+{
+  "id": "SAT.180",
+  "domain": "SAT",
+  "unit": 18,
+  "orderInUnit": 10,
+  "standard": "SAT.GEO.4",
+  "difficulty": 3,
+  "prompt": "In a circle of radius $9$, an arc has length $6\\pi$. What is the measure, in degrees, of the arc's central angle?",
+  "answerType": "numeric",
+  "primaryAnswer": "120",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "What fraction of the full circumference is this arc?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "What fraction of the full circumference is this arc?"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a half circle: radius $2$ gives circumference $4\\pi$, so an arc of $2\\pi$ is half the circle, or $180°$. Find the fraction, then take that fraction of $360°$."
+    },
+    {
+      "level": "guide",
+      "text": "The circumference is $18\\pi$, and $\\dfrac{6\\pi}{18\\pi} = \\dfrac{1}{3}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\tfrac{1}{3}$ of $360° = 120°$."
+    }
+  ],
+  "learningObjective": "Recover a central angle from an arc length.",
+  "topic": "Arcs and sectors",
+  "explanation": [
+    "The full circumference is $2\\pi(9) = 18\\pi$.",
+    "The arc is $\\dfrac{6\\pi}{18\\pi} = \\dfrac{1}{3}$ of the circle.",
+    "So the central angle is $\\dfrac{1}{3} \\times 360° = 120°$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Or use s = rθ and convert",
+      "steps": [
+        "$6\\pi = 9\\theta$ gives $\\theta = \\dfrac{2\\pi}{3}$ radians.",
+        "Convert: $\\dfrac{2\\pi}{3} \\times \\dfrac{180}{\\pi} = 120°$.",
+        "Both routes work. The fraction-of-the-circle method avoids the conversion, so it is usually faster when the answer is wanted in degrees."
+      ]
+    }
+  ],
+  "tags": [
+    "circle",
+    "central-angle",
+    "arc-length"
+  ],
+  "estimatedSeconds": 85
+}

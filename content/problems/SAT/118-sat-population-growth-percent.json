@@ -1,0 +1,55 @@
+{
+  "id": "SAT.118",
+  "domain": "SAT",
+  "unit": 12,
+  "orderInUnit": 8,
+  "standard": "SAT.PSDA.2",
+  "difficulty": 3,
+  "prompt": "A town's population of $12{,}500$ grows by $4\\%$ in one year. What is the population after that year?",
+  "answerType": "numeric",
+  "primaryAnswer": "13000",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply by $1.04$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply by $1.04$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a small town: $200$ growing $10\\%$ gains $20$, reaching $220$. Compute the increase, then decide whether the question wants the increase or the new total."
+    },
+    {
+      "level": "guide",
+      "text": "$4\\%$ of $12{,}500$ is $500$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12{,}500 + 500 = 13{,}000$."
+    }
+  ],
+  "learningObjective": "Apply a percent increase to a large quantity.",
+  "topic": "Percent change",
+  "explanation": [
+    "$4\\%$ of $12{,}500$ is $0.04 \\times 12500 = 500$.",
+    "The new population is $12500 + 500 = 13{,}000$.",
+    "Or in one step: $12500 \\times 1.04 = 13{,}000$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Answer the question that was asked",
+      "steps": [
+        "The increase is $500$; the new population is $13{,}000$. Both will appear as choices.",
+        "Read whether the question wants \"the increase\" or \"the population after\".",
+        "This is the single most common way to lose an otherwise trivial percent question."
+      ]
+    }
+  ],
+  "tags": [
+    "percent-increase",
+    "population"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,50 @@
+{
+  "id": "SAT.112",
+  "domain": "SAT",
+  "unit": 12,
+  "orderInUnit": 2,
+  "standard": "SAT.PSDA.2",
+  "difficulty": 1,
+  "prompt": "$18$ is what percent of $72$?",
+  "answerType": "numeric",
+  "primaryAnswer": "25",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Divide the part by the whole, then convert to a percent.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Divide the part by the whole, then convert to a percent."
+    },
+    {
+      "level": "guide",
+      "text": "$\\dfrac{18}{72} = 0.25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.25 = 25\\%$."
+    }
+  ],
+  "learningObjective": "Express one number as a percent of another.",
+  "topic": "Basic percentages",
+  "explanation": [
+    "The structure is part $=$ percent $\\times$ whole, so percent $= \\dfrac{\\text{part}}{\\text{whole}}$.",
+    "$\\dfrac{18}{72} = \\dfrac{1}{4} = 0.25$.",
+    "As a percent that is $25\\%$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Identify the whole before dividing",
+      "steps": [
+        "The number after \"of\" is always the whole; the other is the part.",
+        "Here the whole is $72$, so $72$ goes in the denominator.",
+        "Dividing the other way gives $4$, or $400\\%$ — a trap that appears whenever the part and whole could plausibly swap."
+      ]
+    }
+  ],
+  "tags": [
+    "percent",
+    "part-whole"
+  ],
+  "estimatedSeconds": 40
+}

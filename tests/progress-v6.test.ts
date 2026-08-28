@@ -16,6 +16,7 @@ function freshState() {
       '6.SP': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
       A1: { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
       PC: { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
+    SAT: { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
     },
     xp: 0,
     streak: 0,

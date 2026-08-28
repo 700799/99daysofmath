@@ -1,0 +1,50 @@
+{
+  "id": "SAT.015",
+  "domain": "SAT",
+  "unit": 2,
+  "orderInUnit": 5,
+  "standard": "SAT.ALG.2",
+  "difficulty": 2,
+  "prompt": "The function $f$ is defined by $f(x) = ax + b$, where $a$ and $b$ are constants. If $f(0) = -4$ and $f(5) = 11$, what is the value of $a$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$f(0)$ hands you $b$ immediately — the $ax$ term vanishes.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$f(0)$ hands you $b$ immediately — the $ax$ term vanishes."
+    },
+    {
+      "level": "guide",
+      "text": "With $b = -4$, the second condition says $5a - 4 = 11$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5a = 15$, so $a = 3$."
+    }
+  ],
+  "learningObjective": "Recover the parameters of a linear function from two function values.",
+  "topic": "Building a linear function",
+  "explanation": [
+    "$f(0) = a(0) + b = b$, so $b = -4$.",
+    "Then $f(5) = 5a + b = 5a - 4 = 11$.",
+    "Add $4$: $5a = 15$, so $a = 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read it as slope between two points",
+      "steps": [
+        "$f(0) = -4$ and $f(5) = 11$ are the points $(0, -4)$ and $(5, 11)$.",
+        "The constant $a$ in $ax + b$ *is* the slope: $\\dfrac{11 - (-4)}{5 - 0} = \\dfrac{15}{5} = 3$.",
+        "Seeing function values as coordinates turns most of these questions into a one-line slope computation."
+      ]
+    }
+  ],
+  "tags": [
+    "linear-function",
+    "parameters"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,50 @@
+{
+  "id": "SAT.091",
+  "domain": "SAT",
+  "unit": 10,
+  "orderInUnit": 1,
+  "standard": "SAT.ADV.5",
+  "difficulty": 1,
+  "prompt": "The function $f$ is defined by $f(x) = 3(2)^x$. What is the value of $f(0)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Any nonzero number raised to the power $0$ equals $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Any nonzero number raised to the power $0$ equals $1$."
+    },
+    {
+      "level": "guide",
+      "text": "$f(0) = 3 \\cdot 2^0 = 3 \\cdot 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$f(0) = 3$."
+    }
+  ],
+  "learningObjective": "Evaluate an exponential function at zero to find its initial value.",
+  "topic": "Exponential functions",
+  "explanation": [
+    "$2^0 = 1$, since anything nonzero to the zero power is $1$.",
+    "So $f(0) = 3 \\cdot 1 = 3$.",
+    "In the form $f(x) = ab^x$, the coefficient $a$ is always the initial value — the output at $x = 0$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read a and b as a story",
+      "steps": [
+        "In $ab^x$, $a$ is where you start and $b$ is what you multiply by each step.",
+        "Here you start at $3$ and double each step: $3, 6, 12, 24, \\ldots$",
+        "Naming the two constants this way answers most exponential questions before any computation."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "initial-value"
+  ],
+  "estimatedSeconds": 40
+}

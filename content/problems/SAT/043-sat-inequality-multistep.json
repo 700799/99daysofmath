@@ -1,0 +1,73 @@
+{
+  "id": "SAT.043",
+  "domain": "SAT",
+  "unit": 5,
+  "orderInUnit": 3,
+  "standard": "SAT.ALG.5",
+  "difficulty": 2,
+  "prompt": "Which of the following describes all solutions to $4 - 3x < 19$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$x < -5$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$x > -5$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$x < 5$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$x > 5$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Subtract $4$ from both sides first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Subtract $4$ from both sides first."
+    },
+    {
+      "level": "guide",
+      "text": "$-3x < 15$. Now divide by $-3$ — and remember what that does."
+    },
+    {
+      "level": "reveal",
+      "text": "Dividing by $-3$ flips the sign: $x > -5$."
+    }
+  ],
+  "learningObjective": "Solve a multi-step inequality requiring a sign flip.",
+  "topic": "Linear inequalities",
+  "explanation": [
+    "Subtract $4$ from both sides: $-3x < 15$.",
+    "Divide by $-3$ and reverse the inequality: $x > -5$.",
+    "Check with $x = 0$: $4 - 0 = 4 < 19$ ✓, and $0$ is indeed greater than $-5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use x = 0 as a free test",
+      "steps": [
+        "Whenever $0$ is not a boundary value, it is the cheapest possible test point.",
+        "Here $x = 0$ satisfies the original inequality, so the correct answer must include $0$.",
+        "That immediately kills A ($x < -5$) and C ($x < 5$ includes 0 — keep), then the boundary $-5$ vs $5$ separates B from C."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "sign-flip",
+    "test-point"
+  ],
+  "estimatedSeconds": 55
+}

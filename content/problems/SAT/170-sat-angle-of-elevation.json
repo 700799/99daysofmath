@@ -1,0 +1,56 @@
+{
+  "id": "SAT.170",
+  "domain": "SAT",
+  "unit": 17,
+  "orderInUnit": 10,
+  "standard": "SAT.GEO.3",
+  "difficulty": 3,
+  "prompt": "From a point on level ground $40$ feet from the base of a tree, the angle of elevation to the top of the tree is $\\theta$, where $\\tan\\theta = 1.5$. What is the height of the tree, in feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Tangent relates the opposite side (the height) to the adjacent side (the ground distance).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Tangent relates the opposite side (the height) to the adjacent side (the ground distance)."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try easy numbers: if $\\tan\\theta = 2$ and the ground distance is $10$ feet, the height is $2 \\times 10 = 20$ feet. Tangent times the adjacent side gives the opposite side."
+    },
+    {
+      "level": "guide",
+      "text": "$\\tan\\theta = \\dfrac{\\text{height}}{40} = 1.5$."
+    },
+    {
+      "level": "reveal",
+      "text": "Height $= 1.5 \\times 40 = 60$ feet."
+    }
+  ],
+  "learningObjective": "Use tangent to solve an angle-of-elevation problem.",
+  "topic": "Trigonometry in context",
+  "explanation": [
+    "The tree, the ground, and the line of sight form a right triangle. The height is opposite the angle; the $40$ feet is adjacent.",
+    "$\\tan\\theta = \\dfrac{\\text{opposite}}{\\text{adjacent}} = \\dfrac{h}{40} = 1.5$.",
+    "$h = 1.5 \\times 40 = 60$ feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Tangent is the elevation ratio",
+      "steps": [
+        "Angle-of-elevation and angle-of-depression problems almost always use tangent, because the two known quantities are height and horizontal distance — the two legs.",
+        "Sine and cosine appear only when the hypotenuse (the direct line of sight) is involved.",
+        "Identifying which two sides the problem hands you selects the ratio immediately."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "angle-of-elevation",
+    "tangent"
+  ],
+  "estimatedSeconds": 80
+}

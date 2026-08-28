@@ -1,0 +1,55 @@
+{
+  "id": "SAT.063",
+  "domain": "SAT",
+  "unit": 7,
+  "orderInUnit": 3,
+  "standard": "SAT.ADV.2",
+  "difficulty": 2,
+  "prompt": "What is the positive solution to $2x^2 + 5x - 3 = 0$?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.5",
+  "alternativeAnswers": [
+    "1/2",
+    ".5"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "With a leading coefficient of $2$, look for factors of the form $(2x + \\square)(x + \\square)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "With a leading coefficient of $2$, look for factors of the form $(2x + \\square)(x + \\square)$."
+    },
+    {
+      "level": "guide",
+      "text": "Try $(2x - 1)(x + 3)$ and expand to check the middle term."
+    },
+    {
+      "level": "reveal",
+      "text": "$(2x - 1)(x + 3) = 0$ gives $x = \\tfrac{1}{2}$ or $x = -3$; the positive one is $\\tfrac{1}{2}$."
+    }
+  ],
+  "learningObjective": "Solve a quadratic with a leading coefficient other than 1.",
+  "topic": "Factoring quadratics",
+  "explanation": [
+    "Factor: $2x^2 + 5x - 3 = (2x - 1)(x + 3)$. Verify the middle term: $6x - x = 5x$ ✓",
+    "Set each factor to zero: $2x - 1 = 0$ gives $x = \\tfrac{1}{2}$, and $x + 3 = 0$ gives $x = -3$.",
+    "The positive solution is $\\tfrac{1}{2}$, or $0.5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the quadratic formula, or Desmos",
+      "steps": [
+        "With $a = 2$, $b = 5$, $c = -3$: $x = \\dfrac{-5 \\pm \\sqrt{25 + 24}}{4} = \\dfrac{-5 \\pm 7}{4}$.",
+        "That gives $\\tfrac{2}{4} = \\tfrac{1}{2}$ and $\\tfrac{-12}{4} = -3$ — the same answers.",
+        "Faster still on test day: graph $y = 2x^2 + 5x - 3$ in Desmos and click the $x$-intercepts."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "factoring",
+    "quadratic-formula"
+  ],
+  "estimatedSeconds": 75
+}

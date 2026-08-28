@@ -1,0 +1,59 @@
+{
+  "id": "SAT.008",
+  "domain": "SAT",
+  "unit": 1,
+  "orderInUnit": 8,
+  "standard": "SAT.ALG.1",
+  "difficulty": 3,
+  "prompt": "A plumber charges a flat call-out fee of $\\$75$ plus $\\$45$ for each hour of work. A customer's total bill was $\\$322.50$. How many hours did the plumber work?",
+  "answerType": "numeric",
+  "primaryAnswer": "5.5",
+  "alternativeAnswers": [
+    "11/2",
+    "5.50"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "One number is charged once; the other is charged per hour. Build $75 + 45h = 322.50$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "One number is charged once; the other is charged per hour. Build $75 + 45h = 322.50$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try smaller numbers first: a $\\$10$ fee plus $\\$5$ per hour, with a $\\$35$ bill. Subtract the fee ($\\$25$ left) and divide by the rate: $5$ hours. The real problem is the same two steps."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract the flat fee: $45h = 247.50$."
+    },
+    {
+      "level": "reveal",
+      "text": "$h = \\dfrac{247.50}{45} = 5.5$ hours."
+    }
+  ],
+  "learningObjective": "Model a flat-fee-plus-rate situation and solve for the rate quantity.",
+  "topic": "Linear models in context",
+  "explanation": [
+    "The flat fee is paid once and the hourly rate is paid $h$ times, so the total is $75 + 45h$.",
+    "Set that equal to the bill: $75 + 45h = 322.50$.",
+    "Subtract $75$: $45h = 247.50$. Divide by $45$: $h = 5.5$ hours."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Reason without algebra",
+      "steps": [
+        "Of the $\\$322.50$ bill, $\\$75$ was not for labour, so $\\$247.50$ was.",
+        "At $\\$45$ per hour, $\\$225$ buys 5 hours and $\\$22.50$ buys half an hour.",
+        "That is $5.5$ hours — the same answer, reached by splitting the money rather than by solving."
+      ]
+    }
+  ],
+  "tags": [
+    "word-problem",
+    "flat-fee-plus-rate"
+  ],
+  "estimatedSeconds": 70
+}

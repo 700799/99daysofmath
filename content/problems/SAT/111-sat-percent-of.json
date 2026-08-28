@@ -1,0 +1,49 @@
+{
+  "id": "SAT.111",
+  "domain": "SAT",
+  "unit": 12,
+  "orderInUnit": 1,
+  "standard": "SAT.PSDA.2",
+  "difficulty": 1,
+  "prompt": "What is $30\\%$ of $250$?",
+  "answerType": "numeric",
+  "primaryAnswer": "75",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "\"Of\" means multiply. Convert the percent to a decimal first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Of\" means multiply. Convert the percent to a decimal first."
+    },
+    {
+      "level": "guide",
+      "text": "$0.30 \\times 250$."
+    },
+    {
+      "level": "reveal",
+      "text": "$75$."
+    }
+  ],
+  "learningObjective": "Compute a percent of a number.",
+  "topic": "Basic percentages",
+  "explanation": [
+    "$30\\% = 0.30$.",
+    "\"Percent of\" means multiply: $0.30 \\times 250 = 75$.",
+    "Mental check: $10\\%$ of $250$ is $25$, so $30\\%$ is $3 \\times 25 = 75$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build percents from 10%",
+      "steps": [
+        "Finding $10\\%$ is just moving the decimal one place: $250 \\to 25$.",
+        "From there, $30\\%$ is three of those, $5\\%$ is half of one, and $1\\%$ is a tenth.",
+        "This decomposition handles most percent arithmetic mentally, faster than reaching for the calculator."
+      ]
+    }
+  ],
+  "tags": [
+    "percent"
+  ],
+  "estimatedSeconds": 30
+}

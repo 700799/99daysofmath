@@ -1,0 +1,73 @@
+{
+  "id": "SAT.035",
+  "domain": "SAT",
+  "unit": 4,
+  "orderInUnit": 5,
+  "standard": "SAT.ALG.4",
+  "difficulty": 2,
+  "prompt": "How many solutions does the system $2x + 3y = 12$ and $4x + 6y = 18$ have?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Exactly one",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "No solutions",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Exactly two",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Infinitely many",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Double the first equation and compare it with the second.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Double the first equation and compare it with the second."
+    },
+    {
+      "level": "guide",
+      "text": "Doubling gives $4x + 6y = 24$, but the second equation says $18$."
+    },
+    {
+      "level": "reveal",
+      "text": "Same left side, different right side — parallel lines, so no solutions."
+    }
+  ],
+  "learningObjective": "Recognize an inconsistent system from proportional coefficients with a mismatched constant.",
+  "topic": "Number of solutions",
+  "explanation": [
+    "Multiply the first equation by $2$: $4x + 6y = 24$.",
+    "The second equation says the same expression equals $18$. It cannot be both $24$ and $18$.",
+    "The lines have the same slope but different intercepts — they are parallel and never meet, so there is no solution."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Contrast with the previous question",
+      "steps": [
+        "These two questions have identical left sides; only the constant differs.",
+        "Matching constants means one line drawn twice — infinitely many solutions. Mismatched constants mean two parallel lines — none.",
+        "The coefficients decide *whether* the lines are parallel; the constant decides whether they are the same line."
+      ]
+    }
+  ],
+  "tags": [
+    "system",
+    "number-of-solutions",
+    "inconsistent"
+  ],
+  "estimatedSeconds": 55
+}

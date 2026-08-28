@@ -1,0 +1,56 @@
+{
+  "id": "SAT.148",
+  "domain": "SAT",
+  "unit": 15,
+  "orderInUnit": 8,
+  "standard": "SAT.GEO.1",
+  "difficulty": 3,
+  "prompt": "Two parallel lines are cut by a transversal. One angle measures $(3x + 10)°$ and the corresponding angle measures $(5x - 30)°$. What is the value of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Corresponding angles formed by a transversal across parallel lines are equal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Corresponding angles formed by a transversal across parallel lines are equal."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try easier expressions: if corresponding angles are $(x + 20)°$ and $(2x)°$, then $x + 20 = 2x$ and $x = 20$. Congruent angles means set the expressions equal."
+    },
+    {
+      "level": "guide",
+      "text": "So $3x + 10 = 5x - 30$."
+    },
+    {
+      "level": "reveal",
+      "text": "$40 = 2x$, so $x = 20$."
+    }
+  ],
+  "learningObjective": "Set up an equation from an angle relationship in a parallel-line figure.",
+  "topic": "Parallel lines",
+  "explanation": [
+    "Corresponding angles are congruent when the lines are parallel, so set the expressions equal: $3x + 10 = 5x - 30$.",
+    "Subtract $3x$ and add $30$: $40 = 2x$.",
+    "$x = 20$. Check: both angles measure $70°$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Equal or supplementary decides the equation",
+      "steps": [
+        "If the angles are congruent (corresponding, alternate interior, alternate exterior, vertical), set the expressions equal.",
+        "If they are supplementary (co-interior, or a linear pair), set the sum to $180$.",
+        "Identifying which relationship applies is the whole question — the algebra afterwards is routine."
+      ]
+    }
+  ],
+  "tags": [
+    "parallel-lines",
+    "corresponding-angles",
+    "algebra"
+  ],
+  "estimatedSeconds": 75
+}

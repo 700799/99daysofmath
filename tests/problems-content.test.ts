@@ -19,11 +19,12 @@ const EXPECTED_BY_DOMAIN: Record<string, { count: number; units: number }> = {
   '6.SP': { count: 100, units: 10 },
   A1: { count: 140, units: 14 },
   PC: { count: 140, units: 14 },
+  SAT: { count: 180, units: 18 },
 };
 
 describe('problems bank — structure', () => {
-  it('contains exactly 840 problems', () => {
-    expect(PROBLEMS).toHaveLength(840);
+  it('contains exactly 1020 problems', () => {
+    expect(PROBLEMS).toHaveLength(1020);
   });
 
   it('every id is globally unique', () => {
@@ -144,8 +145,11 @@ describe('problems bank — every answer self-accepts', () => {
 
 describe('problems bank — units 7-10 quality bar', () => {
   // This bar describes the grade-5/6 content rounds, whose domains top out at
-  // unit 10. Algebra 1 runs to unit 14 and has its own (stricter) bar below.
-  const advanced = PROBLEMS.filter((p) => p.unit >= 7 && p.domain !== 'A1' && p.domain !== 'PC');
+  // unit 10. Algebra 1 and Precalculus run to unit 14 and SAT Math to unit 18;
+  // each has its own (stricter) bar below.
+  const advanced = PROBLEMS.filter(
+    (p) => p.unit >= 7 && p.domain !== 'A1' && p.domain !== 'PC' && p.domain !== 'SAT',
+  );
 
   it('there are 200 problems across units 7-10', () => {
     expect(advanced).toHaveLength(200);

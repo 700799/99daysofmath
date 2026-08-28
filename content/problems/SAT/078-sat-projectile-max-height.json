@@ -1,0 +1,56 @@
+{
+  "id": "SAT.078",
+  "domain": "SAT",
+  "unit": 8,
+  "orderInUnit": 8,
+  "standard": "SAT.ADV.3",
+  "difficulty": 3,
+  "prompt": "A ball is thrown upward, and its height in feet after $t$ seconds is $h(t) = -16t^2 + 64t$. What is the maximum height, in feet, that the ball reaches?",
+  "answerType": "numeric",
+  "primaryAnswer": "64",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Maximum height means the vertex of this downward parabola.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Maximum height means the vertex of this downward parabola."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try friendlier numbers: $h(t) = -t^2 + 4t$ peaks at $t = -\\tfrac{4}{2(-1)} = 2$, where $h = 4$. Find the vertex's $t$ first, then substitute to get the height."
+    },
+    {
+      "level": "guide",
+      "text": "The vertex is at $t = -\\dfrac{64}{2(-16)} = 2$ seconds."
+    },
+    {
+      "level": "reveal",
+      "text": "$h(2) = -16(4) + 64(2) = -64 + 128 = 64$ feet."
+    }
+  ],
+  "learningObjective": "Apply the vertex formula to a projectile-motion model.",
+  "topic": "Quadratic models in context",
+  "explanation": [
+    "The coefficient of $t^2$ is negative, so the parabola opens downward and its vertex is the maximum.",
+    "The vertex occurs at $t = -\\dfrac{b}{2a} = -\\dfrac{64}{-32} = 2$ seconds.",
+    "The maximum height is $h(2) = -16(2)^2 + 64(2) = -64 + 128 = 64$ feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use symmetry between the zeros",
+      "steps": [
+        "Factor: $h(t) = -16t(t - 4)$, so the ball is at height zero at $t = 0$ and $t = 4$.",
+        "By symmetry the peak is halfway between, at $t = 2$.",
+        "Then $h(2) = 64$ feet. Reading the launch and landing times off the factored form is often the fastest route on projectile questions."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic-model",
+    "projectile",
+    "maximum"
+  ],
+  "estimatedSeconds": 90
+}

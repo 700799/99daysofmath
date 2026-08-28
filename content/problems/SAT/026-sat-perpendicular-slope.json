@@ -1,0 +1,72 @@
+{
+  "id": "SAT.026",
+  "domain": "SAT",
+  "unit": 3,
+  "orderInUnit": 6,
+  "standard": "SAT.ALG.3",
+  "difficulty": 2,
+  "prompt": "What is the slope of a line perpendicular to the graph of $y = \\tfrac{3}{4}x - 2$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\tfrac{3}{4}$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$-\\tfrac{3}{4}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\tfrac{4}{3}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$-\\tfrac{4}{3}$",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "D",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Perpendicular slopes are negative reciprocals — you must both flip and negate.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Perpendicular slopes are negative reciprocals — you must both flip and negate."
+    },
+    {
+      "level": "guide",
+      "text": "Flip $\\tfrac{3}{4}$ to get $\\tfrac{4}{3}$, then attach the opposite sign."
+    },
+    {
+      "level": "reveal",
+      "text": "The perpendicular slope is $-\\tfrac{4}{3}$."
+    }
+  ],
+  "learningObjective": "Apply the negative-reciprocal condition for perpendicular lines.",
+  "topic": "Perpendicular lines",
+  "explanation": [
+    "Perpendicular slopes multiply to $-1$.",
+    "The given slope is $\\tfrac{3}{4}$, so the perpendicular slope $m$ satisfies $\\tfrac{3}{4}m = -1$.",
+    "$m = -\\tfrac{4}{3}$. Check: $\\tfrac{3}{4} \\times -\\tfrac{4}{3} = -1$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why both wrong answers exist",
+      "steps": [
+        "Choice B negated but forgot to flip; choice C flipped but forgot to negate.",
+        "The College Board builds one distractor for each half of the rule, every single time.",
+        "Say the rule as two separate actions — \"flip it, then negate it\" — and check that you performed both."
+      ]
+    }
+  ],
+  "tags": [
+    "perpendicular",
+    "negative-reciprocal"
+  ],
+  "estimatedSeconds": 50
+}

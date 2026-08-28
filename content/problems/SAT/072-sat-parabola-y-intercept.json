@@ -1,0 +1,51 @@
+{
+  "id": "SAT.072",
+  "domain": "SAT",
+  "unit": 8,
+  "orderInUnit": 2,
+  "standard": "SAT.ADV.3",
+  "difficulty": 1,
+  "prompt": "What is the $y$-intercept of the graph of $y = x^2 - 6x + 8$?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $y$-intercept is the value when $x = 0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $y$-intercept is the value when $x = 0$."
+    },
+    {
+      "level": "guide",
+      "text": "Substituting $x = 0$ kills both the $x^2$ and the $x$ term."
+    },
+    {
+      "level": "reveal",
+      "text": "Only the constant survives: $y = 8$."
+    }
+  ],
+  "learningObjective": "Identify the y-intercept of a quadratic in standard form.",
+  "topic": "Standard form",
+  "explanation": [
+    "Substitute $x = 0$: $y = 0 - 0 + 8 = 8$.",
+    "In standard form $y = ax^2 + bx + c$, the constant $c$ is always the $y$-intercept.",
+    "This is the one feature standard form displays for free — the zeros and vertex both require work."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "What each form gives you",
+      "steps": [
+        "Standard form $ax^2 + bx + c$ displays the $y$-intercept, $c$.",
+        "Factored form $a(x - p)(x - q)$ displays the zeros, $p$ and $q$.",
+        "Vertex form $a(x - h)^2 + k$ displays the vertex, $(h, k)$. Questions asking which form \"displays\" a feature are testing exactly this table."
+      ]
+    }
+  ],
+  "tags": [
+    "standard-form",
+    "y-intercept",
+    "parabola"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,51 @@
+{
+  "id": "SAT.096",
+  "domain": "SAT",
+  "unit": 10,
+  "orderInUnit": 6,
+  "standard": "SAT.ADV.5",
+  "difficulty": 2,
+  "prompt": "An exponential function $f$ satisfies $f(1) = 6$, $f(2) = 18$, and $f(3) = 54$. What is the value of $f(0)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the constant ratio between consecutive outputs.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the constant ratio between consecutive outputs."
+    },
+    {
+      "level": "guide",
+      "text": "$18 \\div 6 = 3$ and $54 \\div 18 = 3$, so the function triples each step."
+    },
+    {
+      "level": "reveal",
+      "text": "Going *backwards* one step divides by $3$: $f(0) = 6 \\div 3 = 2$."
+    }
+  ],
+  "learningObjective": "Extend an exponential pattern backwards to its initial value.",
+  "topic": "Exponential functions",
+  "explanation": [
+    "Consecutive outputs have a constant ratio: $\\dfrac{18}{6} = \\dfrac{54}{18} = 3$. That constant ratio is what makes the function exponential.",
+    "Stepping forward multiplies by $3$, so stepping backward divides by $3$.",
+    "$f(0) = \\dfrac{6}{3} = 2$. (The function is $f(x) = 2 \\cdot 3^x$.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Linear or exponential? Check differences and ratios",
+      "steps": [
+        "Differences here are $12$ and $36$ — not constant, so the function is not linear.",
+        "Ratios are $3$ and $3$ — constant, so it is exponential.",
+        "Running both checks takes ten seconds and settles every \"which model fits this table\" question on the test."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "table",
+    "ratio"
+  ],
+  "estimatedSeconds": 70
+}

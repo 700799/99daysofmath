@@ -1,0 +1,49 @@
+{
+  "id": "SAT.011",
+  "domain": "SAT",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "SAT.ALG.2",
+  "difficulty": 1,
+  "prompt": "The function $f$ is defined by $f(x) = 4x - 7$. What is the value of $f(3)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$f(3)$ means \"replace every $x$ with $3$\".",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$f(3)$ means \"replace every $x$ with $3$\"."
+    },
+    {
+      "level": "guide",
+      "text": "Compute $4(3) - 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12 - 7 = 5$."
+    }
+  ],
+  "learningObjective": "Evaluate a linear function at a given input.",
+  "topic": "Function notation",
+  "explanation": [
+    "Function notation $f(3)$ is an instruction: substitute $3$ for $x$.",
+    "$f(3) = 4(3) - 7 = 12 - 7 = 5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read it as a machine",
+      "steps": [
+        "The rule \"multiply by 4, then subtract 7\" is a machine you feed a number to.",
+        "Feed it $3$: it multiplies to get $12$, then subtracts to get $5$.",
+        "Function notation names the machine ($f$) and the input ($3$) in one compact symbol."
+      ]
+    }
+  ],
+  "tags": [
+    "function-notation",
+    "evaluate"
+  ],
+  "estimatedSeconds": 30
+}

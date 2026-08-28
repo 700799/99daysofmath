@@ -1,0 +1,72 @@
+{
+  "id": "SAT.071",
+  "domain": "SAT",
+  "unit": 8,
+  "orderInUnit": 1,
+  "standard": "SAT.ADV.3",
+  "difficulty": 1,
+  "prompt": "What is the vertex of the graph of $y = (x - 2)^2 + 5$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$(-2, 5)$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$(2, 5)$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$(2, -5)$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$(-2, -5)$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Vertex form is $y = a(x - h)^2 + k$ with vertex $(h, k)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Vertex form is $y = a(x - h)^2 + k$ with vertex $(h, k)$."
+    },
+    {
+      "level": "guide",
+      "text": "Match $(x - 2)$ against $(x - h)$: what is $h$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$h = 2$ and $k = 5$, so the vertex is $(2, 5)$."
+    }
+  ],
+  "learningObjective": "Read the vertex directly from vertex form.",
+  "topic": "Vertex form",
+  "explanation": [
+    "In $y = a(x - h)^2 + k$, the vertex is $(h, k)$.",
+    "Here the expression is $(x - 2)^2$, so $h = 2$ — the sign inside the parentheses is opposite the coordinate.",
+    "And $k = 5$ is added outside, so the vertex is $(2, 5)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the sign flips",
+      "steps": [
+        "The vertex is where the squared term is zero, so solve $x - 2 = 0$.",
+        "That gives $x = 2$ — the sign flips because you are *solving*, not reading.",
+        "For $(x + 3)^2$ the same logic gives $x = -3$. Solving the inside for zero never lets you down."
+      ]
+    }
+  ],
+  "tags": [
+    "vertex-form",
+    "parabola"
+  ],
+  "estimatedSeconds": 40
+}

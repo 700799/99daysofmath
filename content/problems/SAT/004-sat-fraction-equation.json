@@ -1,0 +1,50 @@
+{
+  "id": "SAT.004",
+  "domain": "SAT",
+  "unit": 1,
+  "orderInUnit": 4,
+  "standard": "SAT.ALG.1",
+  "difficulty": 2,
+  "prompt": "If $\\dfrac{x}{3} + 4 = 10$, what is the value of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "18",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Deal with the $+4$ before the division by $3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Deal with the $+4$ before the division by $3$."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract $4$: $\\dfrac{x}{3} = 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "Multiply both sides by $3$: $x = 18$."
+    }
+  ],
+  "learningObjective": "Solve a linear equation containing a fractional coefficient.",
+  "topic": "Equations with fractions",
+  "explanation": [
+    "Subtract $4$ from both sides: $\\dfrac{x}{3} = 6$.",
+    "Multiply both sides by $3$: $x = 18$.",
+    "Check: $\\dfrac{18}{3} + 4 = 6 + 4 = 10$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Clear the fraction first",
+      "steps": [
+        "Multiply every term by $3$ at the start: $x + 12 = 30$.",
+        "Subtract $12$: $x = 18$.",
+        "Multiplying through by the denominator is the general move — it works even when there are several different denominators."
+      ]
+    }
+  ],
+  "tags": [
+    "linear-equation",
+    "fractions"
+  ],
+  "estimatedSeconds": 45
+}

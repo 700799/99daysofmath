@@ -1,0 +1,51 @@
+{
+  "id": "SAT.084",
+  "domain": "SAT",
+  "unit": 9,
+  "orderInUnit": 4,
+  "standard": "SAT.ADV.4",
+  "difficulty": 2,
+  "prompt": "The system $y = x^2$ and $y = x + 6$ has two solutions. What is the greater of the two $x$-coordinates?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Set the two expressions for $y$ equal to each other.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Set the two expressions for $y$ equal to each other."
+    },
+    {
+      "level": "guide",
+      "text": "$x^2 = x + 6$, so $x^2 - x - 6 = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(x - 3)(x + 2) = 0$, so $x = 3$ or $x = -2$; the greater is $3$."
+    }
+  ],
+  "learningObjective": "Solve a nonlinear system by substitution.",
+  "topic": "Nonlinear systems",
+  "explanation": [
+    "Both equations give $y$, so set them equal: $x^2 = x + 6$.",
+    "Rearrange to a standard quadratic: $x^2 - x - 6 = 0$.",
+    "Factor: $(x - 3)(x + 2) = 0$, so $x = 3$ or $x = -2$. The greater is $3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Graph both and click",
+      "steps": [
+        "Enter $y = x^2$ and $y = x + 6$ in Desmos.",
+        "The curves cross at $(-2, 4)$ and $(3, 9)$, and Desmos labels both intersection points.",
+        "For any nonlinear system on the digital SAT this is the fastest reliable method, and it also tells you how many solutions exist at a glance."
+      ]
+    }
+  ],
+  "tags": [
+    "nonlinear-system",
+    "substitution",
+    "desmos"
+  ],
+  "estimatedSeconds": 70
+}

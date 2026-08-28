@@ -1,0 +1,56 @@
+{
+  "id": "SAT.029",
+  "domain": "SAT",
+  "unit": 3,
+  "orderInUnit": 9,
+  "standard": "SAT.ALG.3",
+  "difficulty": 3,
+  "prompt": "A vendor sells hot dogs for $\\$3$ each and drinks for $\\$2$ each. On one day the vendor collected $\\$180$ in total from these two items and sold $40$ hot dogs. How many drinks were sold?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Write the revenue equation: $3h + 2d = 180$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Write the revenue equation: $3h + 2d = 180$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try smaller quantities: pens cost $\\$2$ and pads $\\$5$, total $\\$21$, with $3$ pens sold. Pens gave $\\$6$, leaving $\\$15$, so $3$ pads. Subtract the known item's revenue, then divide."
+    },
+    {
+      "level": "guide",
+      "text": "Substitute $h = 40$: $120 + 2d = 180$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2d = 60$, so $d = 30$ drinks."
+    }
+  ],
+  "learningObjective": "Model a two-item revenue situation and solve for one quantity.",
+  "topic": "Two-variable models in context",
+  "explanation": [
+    "Total revenue is price times quantity, summed over both items: $3h + 2d = 180$.",
+    "The vendor sold $40$ hot dogs, so $3(40) = \\$120$ came from hot dogs.",
+    "That leaves $180 - 120 = \\$60$ from drinks at $\\$2$ each: $d = 30$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Track the money, not the equation",
+      "steps": [
+        "Hot dogs brought in $40 \\times \\$3 = \\$120$.",
+        "Drinks must account for the remaining $\\$180 - \\$120 = \\$60$.",
+        "At $\\$2$ apiece that is $30$ drinks. On a word problem this simple, arithmetic beats setting up algebra."
+      ]
+    }
+  ],
+  "tags": [
+    "word-problem",
+    "two-variable",
+    "revenue"
+  ],
+  "estimatedSeconds": 70
+}

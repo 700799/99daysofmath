@@ -1,0 +1,72 @@
+{
+  "id": "SAT.153",
+  "domain": "SAT",
+  "unit": 16,
+  "orderInUnit": 3,
+  "standard": "SAT.GEO.2",
+  "difficulty": 2,
+  "prompt": "What is the area of a circle with radius $6$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$12\\pi$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$36\\pi$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$6\\pi$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$144\\pi$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Area of a circle is $\\pi r^2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Area of a circle is $\\pi r^2$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\pi (6)^2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$36\\pi$."
+    }
+  ],
+  "learningObjective": "Compute the area of a circle from its radius.",
+  "topic": "Circles",
+  "explanation": [
+    "Area $= \\pi r^2 = \\pi(6)^2 = 36\\pi$.",
+    "Choice A, $12\\pi$, is the *circumference* ($2\\pi r$) — the classic mix-up.",
+    "Choice D squares the diameter instead of the radius."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Area squares, circumference does not",
+      "steps": [
+        "Area $= \\pi r^2$ has an exponent, so the answer grows with the square of the radius.",
+        "Circumference $= 2\\pi r$ is linear in $r$.",
+        "If a question mentions units, area is square units and circumference is plain units — another way to tell which formula is wanted."
+      ]
+    }
+  ],
+  "tags": [
+    "circle",
+    "area"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,51 @@
+{
+  "id": "SAT.103",
+  "domain": "SAT",
+  "unit": 11,
+  "orderInUnit": 3,
+  "standard": "SAT.PSDA.1",
+  "difficulty": 2,
+  "prompt": "A recipe uses $2$ cups of flour to make $24$ cookies. At the same rate, how many cups of flour are needed to make $60$ cookies?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Set up a proportion with cups on top and cookies on the bottom in both fractions.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Set up a proportion with cups on top and cookies on the bottom in both fractions."
+    },
+    {
+      "level": "guide",
+      "text": "$\\dfrac{2}{24} = \\dfrac{c}{60}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24c = 120$, so $c = 5$ cups."
+    }
+  ],
+  "learningObjective": "Set up and solve a proportion in context.",
+  "topic": "Proportions",
+  "explanation": [
+    "Keep the units consistent: $\\dfrac{2 \\text{ cups}}{24 \\text{ cookies}} = \\dfrac{c \\text{ cups}}{60 \\text{ cookies}}$.",
+    "Cross-multiply: $2(60) = 24c$, so $120 = 24c$.",
+    "$c = 5$ cups."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Find the rate per cookie first",
+      "steps": [
+        "$2$ cups makes $24$ cookies, so one cookie takes $\\dfrac{2}{24} = \\dfrac{1}{12}$ cup.",
+        "$60$ cookies then take $60 \\times \\dfrac{1}{12} = 5$ cups.",
+        "The unit-rate route takes one extra step but reads more naturally, and it makes the answer easy to sanity-check."
+      ]
+    }
+  ],
+  "tags": [
+    "proportion",
+    "word-problem",
+    "recipe"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,50 @@
+{
+  "id": "SAT.003",
+  "domain": "SAT",
+  "unit": 1,
+  "orderInUnit": 3,
+  "standard": "SAT.ALG.1",
+  "difficulty": 2,
+  "prompt": "If $4x + 9 = 7x - 12$, what is the value of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Collect the $x$ terms on one side and the constants on the other.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Collect the $x$ terms on one side and the constants on the other."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract $4x$ from both sides: $9 = 3x - 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "Add $12$: $21 = 3x$, so $x = 7$."
+    }
+  ],
+  "learningObjective": "Solve a linear equation with the variable on both sides.",
+  "topic": "Variables on both sides",
+  "explanation": [
+    "Subtract $4x$ from both sides: $9 = 3x - 12$.",
+    "Add $12$ to both sides: $21 = 3x$.",
+    "Divide by $3$: $x = 7$. Check: $4(7) + 9 = 37$ and $7(7) - 12 = 37$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Move terms toward the larger coefficient",
+      "steps": [
+        "Subtracting $4x$ (the smaller coefficient) keeps the $x$ term positive: $9 = 3x - 12$.",
+        "Had you subtracted $7x$ instead you would get $-3x + 9 = -12$ — correct, but with a negative coefficient to manage.",
+        "Choosing the direction that avoids a negative is a small habit that prevents a lot of sign errors."
+      ]
+    }
+  ],
+  "tags": [
+    "linear-equation",
+    "both-sides"
+  ],
+  "estimatedSeconds": 50
+}

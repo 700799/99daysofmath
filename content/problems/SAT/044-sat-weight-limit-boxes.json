@@ -1,0 +1,51 @@
+{
+  "id": "SAT.044",
+  "domain": "SAT",
+  "unit": 5,
+  "orderInUnit": 4,
+  "standard": "SAT.ALG.5",
+  "difficulty": 2,
+  "prompt": "A cart already holds $7$ pounds of equipment and can carry a total of no more than $40$ pounds. Each box loaded onto it weighs $3$ pounds. What is the greatest number of boxes that can be loaded onto the cart?",
+  "answerType": "numeric",
+  "primaryAnswer": "11",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "\"No more than\" means $\\le$. Build $3b + 7 \\le 40$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"No more than\" means $\\le$. Build $3b + 7 \\le 40$."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract $7$: $3b \\le 33$."
+    },
+    {
+      "level": "reveal",
+      "text": "$b \\le 11$, so the greatest whole number of boxes is $11$."
+    }
+  ],
+  "learningObjective": "Translate a capacity constraint into an inequality and interpret the result.",
+  "topic": "Inequalities in context",
+  "explanation": [
+    "\"No more than $40$\" translates to $\\le 40$. The total weight is $3b + 7$.",
+    "So $3b + 7 \\le 40$, giving $3b \\le 33$ and $b \\le 11$.",
+    "Boxes come in whole numbers, so the maximum is $11$. Check: $3(11) + 7 = 40$ ✓, exactly at the limit."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Reason with the remaining capacity",
+      "steps": [
+        "Of the $40$-pound limit, $7$ pounds is already used, leaving $33$ pounds.",
+        "$33 \\div 3 = 11$ boxes exactly.",
+        "When the division comes out even, the boundary value is achievable — \"no more than\" allows equality, so $11$ works rather than $10$."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "word-problem",
+    "capacity"
+  ],
+  "estimatedSeconds": 65
+}

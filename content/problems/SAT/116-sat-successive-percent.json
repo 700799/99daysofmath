@@ -1,0 +1,72 @@
+{
+  "id": "SAT.116",
+  "domain": "SAT",
+  "unit": 12,
+  "orderInUnit": 6,
+  "standard": "SAT.PSDA.2",
+  "difficulty": 2,
+  "prompt": "A price is increased by $20\\%$ and then the new price is decreased by $20\\%$. Compared with the original price, the final price is:",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "the same",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$4\\%$ lower",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$4\\%$ higher",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$40\\%$ lower",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Percent changes multiply — they do not add or cancel.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Percent changes multiply — they do not add or cancel."
+    },
+    {
+      "level": "guide",
+      "text": "The combined multiplier is $1.20 \\times 0.80$."
+    },
+    {
+      "level": "reveal",
+      "text": "$1.20 \\times 0.80 = 0.96$, which is $4\\%$ below the original."
+    }
+  ],
+  "learningObjective": "Chain successive percent changes with multipliers.",
+  "topic": "Successive percent change",
+  "explanation": [
+    "Apply the multipliers in order: $\\times 1.20$, then $\\times 0.80$.",
+    "$1.20 \\times 0.80 = 0.96$, so the final price is $96\\%$ of the original — a $4\\%$ decrease.",
+    "Concretely with $\\$100$: up $20\\%$ gives $\\$120$, then down $20\\%$ of $\\$120$ is $\\$24$ off, landing at $\\$96$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why it does not cancel",
+      "steps": [
+        "The $20\\%$ increase was taken on $\\$100$, but the $20\\%$ decrease was taken on the larger $\\$120$.",
+        "A bigger base makes the decrease bigger in absolute terms, so you end up below where you started.",
+        "The order does not matter — $0.80 \\times 1.20$ is the same $0.96$ — but the answer is never \"the same\"."
+      ]
+    }
+  ],
+  "tags": [
+    "successive-percent",
+    "multiplier"
+  ],
+  "estimatedSeconds": 75
+}

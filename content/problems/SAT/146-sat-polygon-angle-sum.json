@@ -1,0 +1,50 @@
+{
+  "id": "SAT.146",
+  "domain": "SAT",
+  "unit": 15,
+  "orderInUnit": 6,
+  "standard": "SAT.GEO.1",
+  "difficulty": 2,
+  "prompt": "What is the sum, in degrees, of the interior angles of a pentagon?",
+  "answerType": "numeric",
+  "primaryAnswer": "540",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The formula is $(n - 2) \\times 180°$ for an $n$-sided polygon.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The formula is $(n - 2) \\times 180°$ for an $n$-sided polygon."
+    },
+    {
+      "level": "guide",
+      "text": "A pentagon has $n = 5$, so $(5 - 2) \\times 180$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 180 = 540$ degrees."
+    }
+  ],
+  "learningObjective": "Apply the polygon interior-angle-sum formula.",
+  "topic": "Polygons",
+  "explanation": [
+    "An $n$-sided polygon splits into $n - 2$ triangles, each contributing $180°$.",
+    "For a pentagon: $(5 - 2) \\times 180 = 3 \\times 180 = 540°$.",
+    "If the pentagon is regular, each angle is $540 \\div 5 = 108°$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Derive it rather than memorize it",
+      "steps": [
+        "Pick one vertex and draw diagonals to every non-adjacent vertex.",
+        "A pentagon splits into exactly $3$ triangles this way, which is where the $n - 2$ comes from.",
+        "If you blank on the formula, drawing the triangles rebuilds it in ten seconds."
+      ]
+    }
+  ],
+  "tags": [
+    "polygon",
+    "angle-sum"
+  ],
+  "estimatedSeconds": 55
+}

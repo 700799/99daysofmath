@@ -1,0 +1,50 @@
+{
+  "id": "SAT.101",
+  "domain": "SAT",
+  "unit": 11,
+  "orderInUnit": 1,
+  "standard": "SAT.PSDA.1",
+  "difficulty": 1,
+  "prompt": "If $\\dfrac{3}{4} = \\dfrac{x}{20}$, what is the value of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Cross-multiply, or notice how the denominator changed.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Cross-multiply, or notice how the denominator changed."
+    },
+    {
+      "level": "guide",
+      "text": "$4 \\times 5 = 20$, so the numerator scales by $5$ too."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 5 = 15$."
+    }
+  ],
+  "learningObjective": "Solve a basic proportion.",
+  "topic": "Proportions",
+  "explanation": [
+    "Cross-multiply: $3 \\times 20 = 4x$, so $60 = 4x$ and $x = 15$.",
+    "Or scale directly: the denominator went from $4$ to $20$, a factor of $5$.",
+    "Applying the same factor to the numerator: $3 \\times 5 = 15$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Scaling beats cross-multiplying when it is clean",
+      "steps": [
+        "Whenever one denominator divides evenly into the other, scaling is faster and involves no division.",
+        "Here $20 \\div 4 = 5$, so multiply the top by $5$.",
+        "Save cross-multiplication for the cases where the numbers do not cooperate."
+      ]
+    }
+  ],
+  "tags": [
+    "proportion",
+    "scaling"
+  ],
+  "estimatedSeconds": 35
+}

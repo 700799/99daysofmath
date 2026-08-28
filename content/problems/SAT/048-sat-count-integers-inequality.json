@@ -1,0 +1,56 @@
+{
+  "id": "SAT.048",
+  "domain": "SAT",
+  "unit": 5,
+  "orderInUnit": 8,
+  "standard": "SAT.ALG.5",
+  "difficulty": 3,
+  "prompt": "How many integer values of $x$ satisfy $-3 < \\dfrac{x - 4}{2} \\le 1$?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Clear the denominator by multiplying all three parts by $2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Clear the denominator by multiplying all three parts by $2$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try counting on a small range: $0 < x \\le 3$ holds for $x = 1, 2, 3$ — three integers. The strict end excludes its boundary, the inclusive end keeps it."
+    },
+    {
+      "level": "guide",
+      "text": "$-6 < x - 4 \\le 2$, then add $4$ throughout."
+    },
+    {
+      "level": "reveal",
+      "text": "$-2 < x \\le 6$, so $x$ runs from $-1$ to $6$: that is $8$ integers."
+    }
+  ],
+  "learningObjective": "Solve a compound inequality and count the integers in the solution set.",
+  "topic": "Compound inequalities",
+  "explanation": [
+    "Multiply all three parts by $2$: $-6 < x - 4 \\le 2$.",
+    "Add $4$ to all three parts: $-2 < x \\le 6$.",
+    "The left bound is strict, so $-2$ is excluded and the smallest integer is $-1$. The right bound is inclusive, so $6$ counts. The integers $-1, 0, 1, 2, 3, 4, 5, 6$ number $8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Counting integers without slipping",
+      "steps": [
+        "From $a$ to $b$ inclusive there are $b - a + 1$ integers — the \"+1\" is what people forget.",
+        "Here the range is $-1$ to $6$, so $6 - (-1) + 1 = 8$.",
+        "Listing them out is also fine when the range is short; it is the safest check on a fencepost error."
+      ]
+    }
+  ],
+  "tags": [
+    "compound-inequality",
+    "counting",
+    "integers"
+  ],
+  "estimatedSeconds": 85
+}

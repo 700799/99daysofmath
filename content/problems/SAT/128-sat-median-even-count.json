@@ -1,0 +1,58 @@
+{
+  "id": "SAT.128",
+  "domain": "SAT",
+  "unit": 13,
+  "orderInUnit": 8,
+  "standard": "SAT.PSDA.3",
+  "difficulty": 3,
+  "prompt": "What is the median of the data set $4$, $7$, $9$, $12$, $15$, $20$?",
+  "answerType": "numeric",
+  "primaryAnswer": "10.5",
+  "alternativeAnswers": [
+    "21/2"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "With an even number of values there is no single middle value.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "With an even number of values there is no single middle value."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try four values: for $2, 4, 6, 8$ the middle two are $4$ and $6$, so the median is $5$. With an even count you average the middle pair."
+    },
+    {
+      "level": "guide",
+      "text": "The two middle values are $9$ and $12$."
+    },
+    {
+      "level": "reveal",
+      "text": "Average them: $\\dfrac{9 + 12}{2} = 10.5$."
+    }
+  ],
+  "learningObjective": "Find the median of an even-sized data set.",
+  "topic": "Measures of center",
+  "explanation": [
+    "The data is already sorted. With $6$ values, the middle two are the 3rd and 4th: $9$ and $12$.",
+    "The median is their average: $\\dfrac{9 + 12}{2} = 10.5$.",
+    "Note that the median need not be a value in the data set."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Locating the middle pair",
+      "steps": [
+        "For $n$ values with $n$ even, the middle two sit at positions $\\dfrac{n}{2}$ and $\\dfrac{n}{2} + 1$.",
+        "Here $n = 6$, so positions $3$ and $4$ — the values $9$ and $12$.",
+        "Counting inward from both ends simultaneously is the practical version of this, and it is harder to miscount."
+      ]
+    }
+  ],
+  "tags": [
+    "median",
+    "even-count"
+  ],
+  "estimatedSeconds": 60
+}

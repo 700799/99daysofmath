@@ -1,0 +1,51 @@
+{
+  "id": "SAT.132",
+  "domain": "SAT",
+  "unit": 14,
+  "orderInUnit": 2,
+  "standard": "SAT.PSDA.4",
+  "difficulty": 1,
+  "prompt": "A line of best fit for a scatterplot has the equation $y = 2.4x + 11$, where $x$ is hours studied and $y$ is the score. What score does the model predict for a student who studies $5$ hours?",
+  "answerType": "numeric",
+  "primaryAnswer": "23",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $x = 5$ into the equation.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $x = 5$ into the equation."
+    },
+    {
+      "level": "guide",
+      "text": "$y = 2.4(5) + 11$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 12 + 11 = 23$."
+    }
+  ],
+  "learningObjective": "Use a line of best fit to make a prediction.",
+  "topic": "Lines of best fit",
+  "explanation": [
+    "Substitute the given input: $y = 2.4(5) + 11$.",
+    "$2.4 \\times 5 = 12$, so $y = 12 + 11 = 23$.",
+    "This is a *predicted* value from the model, not an observed data point."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Predicted versus actual",
+      "steps": [
+        "A question asking for the predicted value wants you to read the line.",
+        "A question asking for the actual value wants you to read the data point.",
+        "The gap between them is the residual, and asking for that gap is a standard SAT question — so always note which one is being requested."
+      ]
+    }
+  ],
+  "tags": [
+    "best-fit",
+    "prediction",
+    "scatterplot"
+  ],
+  "estimatedSeconds": 45
+}

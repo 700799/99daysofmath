@@ -1,0 +1,56 @@
+{
+  "id": "SAT.169",
+  "domain": "SAT",
+  "unit": 17,
+  "orderInUnit": 9,
+  "standard": "SAT.GEO.3",
+  "difficulty": 3,
+  "prompt": "A $20$-foot ladder leans against a wall, making a $60°$ angle with the ground. How far up the wall, in feet, does the ladder reach? Give your answer in the form $a\\sqrt{3}$ by entering the value of $a$.",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The height up the wall is the side opposite the $60°$ angle, and the ladder is the hypotenuse.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The height up the wall is the side opposite the $60°$ angle, and the ladder is the hypotenuse."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a smaller ladder: a $10$-foot ladder at $60°$ is a $30$-$60$-$90$ triangle with hypotenuse $10$, so the short side is $5$ and the height is $5\\sqrt{3}$. Same triangle, half the size."
+    },
+    {
+      "level": "guide",
+      "text": "This is a $30$-$60$-$90$ triangle with hypotenuse $20$, so the short side is $10$."
+    },
+    {
+      "level": "reveal",
+      "text": "The side opposite the $60°$ is $10\\sqrt{3}$, so $a = 10$."
+    }
+  ],
+  "learningObjective": "Model a real-world situation with a special right triangle.",
+  "topic": "Trigonometry in context",
+  "explanation": [
+    "The ladder, the wall, and the ground form a right triangle with the ladder as the hypotenuse ($20$ feet).",
+    "The ladder makes a $60°$ angle with the ground, so this is a $30$-$60$-$90$ triangle. The hypotenuse is $2x$, so $x = 10$.",
+    "The height up the wall is opposite the $60°$ angle, which is $x\\sqrt{3} = 10\\sqrt{3}$ feet. So $a = 10$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Or go straight through sine",
+      "steps": [
+        "$\\sin 60° = \\dfrac{\\text{height}}{20}$, so height $= 20\\sin 60° = 20 \\cdot \\dfrac{\\sqrt{3}}{2} = 10\\sqrt{3}$.",
+        "Same answer, and it does not require noticing the special triangle.",
+        "Recognizing $30$-$60$-$90$ is faster; the sine route is the reliable fallback."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "special-triangle",
+    "word-problem"
+  ],
+  "estimatedSeconds": 95
+}

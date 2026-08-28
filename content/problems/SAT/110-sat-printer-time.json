@@ -1,0 +1,59 @@
+{
+  "id": "SAT.110",
+  "domain": "SAT",
+  "unit": 11,
+  "orderInUnit": 10,
+  "standard": "SAT.PSDA.1",
+  "difficulty": 3,
+  "prompt": "A printer produces pages at a constant rate of $18$ pages per minute. How many minutes does it take to print $693$ pages?",
+  "answerType": "numeric",
+  "primaryAnswer": "38.5",
+  "alternativeAnswers": [
+    "77/2"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "You want minutes, so divide pages by pages-per-minute.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You want minutes, so divide pages by pages-per-minute."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try easy numbers: at $10$ pages per minute, $50$ pages takes $50 \\div 10 = 5$ minutes. Pages divided by pages-per-minute leaves minutes."
+    },
+    {
+      "level": "guide",
+      "text": "$693 \\div 18$."
+    },
+    {
+      "level": "reveal",
+      "text": "$38.5$ minutes."
+    }
+  ],
+  "learningObjective": "Invert a rate to find elapsed time.",
+  "topic": "Rates",
+  "explanation": [
+    "Time $= \\dfrac{\\text{total pages}}{\\text{pages per minute}} = \\dfrac{693}{18}$.",
+    "$18 \\times 38 = 684$, leaving $9$ pages, which is half a minute more.",
+    "So the time is $38.5$ minutes."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Let the units place the division",
+      "steps": [
+        "Pages ÷ (pages/minute) = pages × (minutes/page) = minutes ✓",
+        "Multiplying instead would give pages², which is meaningless — and that is how you know it is wrong.",
+        "Dimensional analysis is not just for physics; it settles every rate question on the SAT."
+      ]
+    }
+  ],
+  "tags": [
+    "rate",
+    "time",
+    "division"
+  ],
+  "estimatedSeconds": 60
+}

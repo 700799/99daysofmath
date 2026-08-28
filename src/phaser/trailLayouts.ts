@@ -43,4 +43,5 @@ export const TRAIL_LAYOUTS: Record<Domain, TrailNode[]> = {
   '6.SP': buildTrail(2),
   A1: buildTrail(2),
   PC: buildTrail(2),
+  SAT: buildTrail(2),
 };

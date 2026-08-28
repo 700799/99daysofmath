@@ -1,0 +1,56 @@
+{
+  "id": "SAT.038",
+  "domain": "SAT",
+  "unit": 4,
+  "orderInUnit": 8,
+  "standard": "SAT.ALG.4",
+  "difficulty": 3,
+  "prompt": "If $x + 2y = 11$ and $3x - y = 5$, what is the value of $2x - y$?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Solve the system, then build the requested expression.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Solve the system, then build the requested expression."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a smaller system: $x + y = 5$ and $x - y = 1$ give $x = 3$, $y = 2$, so $2x - y = 4$. Solve completely first, then build whatever combination the question asks for."
+    },
+    {
+      "level": "guide",
+      "text": "From the second equation, $y = 3x - 5$. Substitute into the first."
+    },
+    {
+      "level": "reveal",
+      "text": "$x + 2(3x - 5) = 11$ gives $7x = 21$, so $x = 3$ and $y = 4$. Then $2(3) - 4 = 2$."
+    }
+  ],
+  "learningObjective": "Solve a system and evaluate a compound expression.",
+  "topic": "Systems and expressions",
+  "explanation": [
+    "Isolate $y$ in the second equation: $y = 3x - 5$.",
+    "Substitute into the first: $x + 2(3x - 5) = 11$, so $x + 6x - 10 = 11$ and $7x = 21$, giving $x = 3$.",
+    "Then $y = 3(3) - 5 = 4$, and $2x - y = 6 - 4 = 2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The trap answers",
+      "steps": [
+        "$x = 3$ and $y = 4$ will both appear among the choices, as will $x + y = 7$.",
+        "The question asks for $2x - y$ — a quantity you only reach by doing one more step after solving.",
+        "Writing the requested expression at the top of your scratch work keeps you from stopping one step early."
+      ]
+    }
+  ],
+  "tags": [
+    "system",
+    "substitution",
+    "expression"
+  ],
+  "estimatedSeconds": 80
+}

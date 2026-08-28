@@ -1,0 +1,77 @@
+{
+  "id": "SAT.058",
+  "domain": "SAT",
+  "unit": 6,
+  "orderInUnit": 8,
+  "standard": "SAT.ADV.1",
+  "difficulty": 3,
+  "prompt": "Which expression is equivalent to $\\sqrt{50}$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$25\\sqrt{2}$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$5\\sqrt{2}$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$2\\sqrt{5}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$10\\sqrt{5}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Look for the largest perfect square that divides $50$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Look for the largest perfect square that divides $50$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an easier radical: $\\sqrt{12} = \\sqrt{4}\\sqrt{3} = 2\\sqrt{3}$. Pull out the largest perfect square you can find; the rest stays under the root."
+    },
+    {
+      "level": "guide",
+      "text": "$50 = 25 \\times 2$, and $25$ is a perfect square."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sqrt{50} = \\sqrt{25}\\sqrt{2} = 5\\sqrt{2}$."
+    }
+  ],
+  "learningObjective": "Simplify a radical by extracting a perfect-square factor.",
+  "topic": "Radicals",
+  "explanation": [
+    "Split $50$ into a perfect square times the rest: $50 = 25 \\times 2$.",
+    "Radicals distribute over multiplication: $\\sqrt{50} = \\sqrt{25} \\cdot \\sqrt{2} = 5\\sqrt{2}$.",
+    "Choice A leaves the $25$ inside and outside at once — the square root of $25$ is $5$, not $25$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with a decimal",
+      "steps": [
+        "$\\sqrt{50} \\approx 7.07$.",
+        "Evaluate the choices: A is about $35.4$, B is about $7.07$ ✓, C is about $4.47$, D is about $22.4$.",
+        "A quick decimal estimate is a reliable check on any radical-simplification question, and it needs no rules at all."
+      ]
+    }
+  ],
+  "tags": [
+    "radicals",
+    "simplify"
+  ],
+  "estimatedSeconds": 55
+}

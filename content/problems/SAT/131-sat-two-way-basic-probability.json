@@ -1,0 +1,58 @@
+{
+  "id": "SAT.131",
+  "domain": "SAT",
+  "unit": 14,
+  "orderInUnit": 1,
+  "standard": "SAT.PSDA.4",
+  "difficulty": 1,
+  "prompt": "The table shows how $200$ students commute to school. If one student is selected at random, what is the probability that the student walks? Give your answer as a decimal.",
+  "diagram": {
+    "kind": "ascii",
+    "art": "           | Grade 9 | Grade 10 | Total\n-----------+---------+----------+------\n  Bus      |    45   |    35    |   80\n  Walk     |    30   |    20    |   50\n  Car      |    35   |    35    |   70\n-----------+---------+----------+------\n  Total    |   110   |    90    |  200"
+  },
+  "answerType": "numeric",
+  "primaryAnswer": "0.25",
+  "alternativeAnswers": [
+    "1/4",
+    ".25"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "Probability is the favorable count over the total count.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Probability is the favorable count over the total count."
+    },
+    {
+      "level": "guide",
+      "text": "$50$ students walk out of $200$ total."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\dfrac{50}{200} = 0.25$."
+    }
+  ],
+  "learningObjective": "Read a simple probability from a two-way table.",
+  "topic": "Two-way tables",
+  "explanation": [
+    "The question puts no condition on grade, so the denominator is every student: $200$.",
+    "The Walk row totals $50$.",
+    "$\\dfrac{50}{200} = 0.25$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Find the denominator before the numerator",
+      "steps": [
+        "\"Selected at random\" from all students means the grand total, $200$.",
+        "Had the question said \"selected from Grade 9\", the denominator would be $110$ instead.",
+        "Circling the denominator in the table first is the habit that makes every two-way-table question routine."
+      ]
+    }
+  ],
+  "tags": [
+    "two-way-table",
+    "probability"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,51 @@
+{
+  "id": "SAT.033",
+  "domain": "SAT",
+  "unit": 4,
+  "orderInUnit": 3,
+  "standard": "SAT.ALG.4",
+  "difficulty": 2,
+  "prompt": "If $3x + 2y = 16$ and $x - 2y = 0$, what is the value of $x + y$?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $2y$ terms are opposites — add the equations.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $2y$ terms are opposites — add the equations."
+    },
+    {
+      "level": "guide",
+      "text": "Adding gives $4x = 16$, so $x = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "Then $4 - 2y = 0$ gives $y = 2$, so $x + y = 6$."
+    }
+  ],
+  "learningObjective": "Solve a system and evaluate a requested combination of the variables.",
+  "topic": "Elimination",
+  "explanation": [
+    "Add the equations: $(3x + 2y) + (x - 2y) = 16 + 0$, so $4x = 16$ and $x = 4$.",
+    "Substitute into the second equation: $4 - 2y = 0$, so $y = 2$.",
+    "The question asks for $x + y = 4 + 2 = 6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check both equations before committing",
+      "steps": [
+        "With $x = 4$ and $y = 2$: $3(4) + 2(2) = 16$ ✓ and $4 - 2(2) = 0$ ✓.",
+        "A solution must satisfy *both* equations; verifying only one is how a substitution error survives.",
+        "The check costs about ten seconds and catches nearly every algebra slip."
+      ]
+    }
+  ],
+  "tags": [
+    "system",
+    "elimination",
+    "combination"
+  ],
+  "estimatedSeconds": 55
+}

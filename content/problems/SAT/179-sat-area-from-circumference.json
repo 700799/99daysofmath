@@ -1,0 +1,79 @@
+{
+  "id": "SAT.179",
+  "domain": "SAT",
+  "unit": 18,
+  "orderInUnit": 9,
+  "standard": "SAT.GEO.4",
+  "difficulty": 3,
+  "prompt": "A circle has a circumference of $20\\pi$. What is its area?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$20\\pi$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$100\\pi$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$400\\pi$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$40\\pi$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Work back to the radius first — it is the bridge between the two formulas.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Work back to the radius first — it is the bridge between the two formulas."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a small circle: circumference $4\\pi$ gives $2\\pi r = 4\\pi$, so $r = 2$ and the area is $4\\pi$. Route through the radius — it connects the two formulas."
+    },
+    {
+      "level": "guide",
+      "text": "$2\\pi r = 20\\pi$ gives $r = 10$."
+    },
+    {
+      "level": "reveal",
+      "text": "Area $= \\pi(10)^2 = 100\\pi$."
+    }
+  ],
+  "learningObjective": "Chain the circumference and area formulas through the radius.",
+  "topic": "Circles",
+  "explanation": [
+    "From the circumference: $2\\pi r = 20\\pi$, so $r = 10$.",
+    "Then the area is $\\pi r^2 = \\pi(10)^2 = 100\\pi$.",
+    "Choice C uses the diameter $20$ in place of the radius."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The radius is always the middle step",
+      "steps": [
+        "Any circle question that gives one measure and asks for another routes through the radius.",
+        "Circumference → radius → area, or area → radius → circumference.",
+        "Solving for $r$ first turns a two-formula question into two one-formula questions."
+      ]
+    }
+  ],
+  "tags": [
+    "circle",
+    "area",
+    "circumference",
+    "multi-step"
+  ],
+  "estimatedSeconds": 75
+}

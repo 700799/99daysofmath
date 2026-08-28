@@ -1,0 +1,72 @@
+{
+  "id": "SAT.064",
+  "domain": "SAT",
+  "unit": 7,
+  "orderInUnit": 4,
+  "standard": "SAT.ADV.2",
+  "difficulty": 2,
+  "prompt": "How many real solutions does the equation $x^2 + 4x + 5 = 0$ have?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Zero",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Exactly one",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Exactly two",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Infinitely many",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The discriminant $b^2 - 4ac$ counts real solutions.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The discriminant $b^2 - 4ac$ counts real solutions."
+    },
+    {
+      "level": "guide",
+      "text": "Compute $4^2 - 4(1)(5)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$16 - 20 = -4$, which is negative — so there are no real solutions."
+    }
+  ],
+  "learningObjective": "Use the discriminant to count real solutions.",
+  "topic": "The discriminant",
+  "explanation": [
+    "The discriminant is $b^2 - 4ac = 4^2 - 4(1)(5) = 16 - 20 = -4$.",
+    "A negative discriminant means the square root in the quadratic formula is imaginary, so there are no real solutions.",
+    "Graphically, the parabola $y = x^2 + 4x + 5$ sits entirely above the $x$-axis and never crosses it."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Complete the square to see it",
+      "steps": [
+        "$x^2 + 4x + 5 = (x^2 + 4x + 4) + 1 = (x + 2)^2 + 1$.",
+        "A squared quantity is never negative, so $(x + 2)^2 + 1$ is always at least $1$.",
+        "It can never equal zero — which is exactly what \"no real solutions\" means, made visible."
+      ]
+    }
+  ],
+  "tags": [
+    "discriminant",
+    "no-real-solutions"
+  ],
+  "estimatedSeconds": 60
+}

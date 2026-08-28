@@ -1,0 +1,50 @@
+{
+  "id": "SAT.115",
+  "domain": "SAT",
+  "unit": 12,
+  "orderInUnit": 5,
+  "standard": "SAT.PSDA.2",
+  "difficulty": 2,
+  "prompt": "A quantity increases from $40$ to $50$. What is the percent increase?",
+  "answerType": "numeric",
+  "primaryAnswer": "25",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Percent change is the change divided by the *original* value.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Percent change is the change divided by the *original* value."
+    },
+    {
+      "level": "guide",
+      "text": "The change is $10$, and the original is $40$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\dfrac{10}{40} = 0.25 = 25\\%$."
+    }
+  ],
+  "learningObjective": "Compute a percent increase from two values.",
+  "topic": "Percent change",
+  "explanation": [
+    "Percent change $= \\dfrac{\\text{new} - \\text{old}}{\\text{old}} = \\dfrac{50 - 40}{40}$.",
+    "$= \\dfrac{10}{40} = 0.25$, or $25\\%$.",
+    "Dividing by the new value instead gives $20\\%$ — the standard trap on this question type."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Percent change is not symmetric",
+      "steps": [
+        "Going $40 \\to 50$ is a $25\\%$ increase, but going $50 \\to 40$ is only a $20\\%$ decrease.",
+        "The same absolute change of $10$ gives different percentages because the base differs.",
+        "Whenever a question walks a value up and then back down, expect this asymmetry to be the point."
+      ]
+    }
+  ],
+  "tags": [
+    "percent-change",
+    "increase"
+  ],
+  "estimatedSeconds": 55
+}

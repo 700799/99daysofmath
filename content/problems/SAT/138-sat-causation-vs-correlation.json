@@ -1,0 +1,78 @@
+{
+  "id": "SAT.138",
+  "domain": "SAT",
+  "unit": 14,
+  "orderInUnit": 8,
+  "standard": "SAT.PSDA.4",
+  "difficulty": 3,
+  "prompt": "In a study, $300$ volunteers were randomly assigned to either a new exercise program or no program. Those in the program showed significantly lower resting heart rates. Which conclusion is best supported?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The exercise program likely caused the lower heart rates among these volunteers",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "The exercise program lowers heart rates for all adults",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Lower heart rates cause people to exercise more",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "No conclusion about cause can be drawn from this study",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The volunteers were *randomly assigned* to the groups. What does that permit?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The volunteers were *randomly assigned* to the groups. What does that permit?"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try the contrast: a survey asking who already exercises can only show an association, but randomly assigning people to exercise or not can show cause. The design decides what you may claim."
+    },
+    {
+      "level": "guide",
+      "text": "Random assignment to treatments allows a causal conclusion."
+    },
+    {
+      "level": "reveal",
+      "text": "But the volunteers were not randomly selected from all adults, so the conclusion stays with them."
+    }
+  ],
+  "learningObjective": "Distinguish what random assignment and random selection each justify.",
+  "topic": "Experimental design",
+  "explanation": [
+    "Random *assignment* to treatment groups controls for confounding variables, so a causal claim is justified — that is what makes this an experiment rather than an observational study.",
+    "But the participants were volunteers, not a random sample of all adults, so the result cannot be generalized beyond them. That rules out choice B.",
+    "Choice C reverses the direction the design established, and choice D wrongly denies that random assignment supports causation."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The two-by-two that answers every one of these",
+      "steps": [
+        "Random selection + random assignment: cause, generalizable to the whole population.",
+        "Random assignment only (volunteers): cause, but only for the participants — this study.",
+        "Random selection only (survey): generalizable, but association only, never cause. Neither: association among participants only."
+      ]
+    }
+  ],
+  "tags": [
+    "experiment",
+    "causation",
+    "random-assignment"
+  ],
+  "estimatedSeconds": 90
+}

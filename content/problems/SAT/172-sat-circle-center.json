@@ -1,0 +1,73 @@
+{
+  "id": "SAT.172",
+  "domain": "SAT",
+  "unit": 18,
+  "orderInUnit": 2,
+  "standard": "SAT.GEO.4",
+  "difficulty": 1,
+  "prompt": "What is the center of the circle $(x - 3)^2 + (y + 2)^2 = 25$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$(3, 2)$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$(3, -2)$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$(-3, 2)$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$(-3, -2)$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The form is $(x - h)^2 + (y - k)^2 = r^2$ with centre $(h, k)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The form is $(x - h)^2 + (y - k)^2 = r^2$ with centre $(h, k)$."
+    },
+    {
+      "level": "guide",
+      "text": "$(y + 2)$ is really $(y - (-2))$."
+    },
+    {
+      "level": "reveal",
+      "text": "The centre is $(3, -2)$."
+    }
+  ],
+  "learningObjective": "Read the center from the standard form of a circle equation.",
+  "topic": "Circle equations",
+  "explanation": [
+    "Match against $(x - h)^2 + (y - k)^2 = r^2$.",
+    "$(x - 3)$ gives $h = 3$. $(y + 2) = (y - (-2))$ gives $k = -2$.",
+    "The centre is $(3, -2)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Set each squared term to zero",
+      "steps": [
+        "The centre is where both squared terms vanish, so solve $x - 3 = 0$ and $y + 2 = 0$.",
+        "That gives $x = 3$ and $y = -2$ directly, with the sign flip handled by the algebra rather than by memory.",
+        "This is the same reliable trick that reads a parabola vertex out of vertex form."
+      ]
+    }
+  ],
+  "tags": [
+    "circle",
+    "center",
+    "standard-form"
+  ],
+  "estimatedSeconds": 45
+}

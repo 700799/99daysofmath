@@ -1,0 +1,50 @@
+{
+  "id": "SAT.164",
+  "domain": "SAT",
+  "unit": 17,
+  "orderInUnit": 4,
+  "standard": "SAT.GEO.3",
+  "difficulty": 2,
+  "prompt": "In a $30°$-$60°$-$90°$ triangle, the side opposite the $30°$ angle has length $5$. What is the length of the hypotenuse?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The sides are in the ratio $1 : \\sqrt{3} : 2$, shortest opposite the $30°$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The sides are in the ratio $1 : \\sqrt{3} : 2$, shortest opposite the $30°$."
+    },
+    {
+      "level": "guide",
+      "text": "The hypotenuse is twice the shortest side."
+    },
+    {
+      "level": "reveal",
+      "text": "$2 \\times 5 = 10$."
+    }
+  ],
+  "learningObjective": "Apply the 30-60-90 side ratio.",
+  "topic": "Special right triangles",
+  "explanation": [
+    "In a $30$-$60$-$90$ triangle the sides are $x$, $x\\sqrt{3}$, and $2x$, with $x$ opposite the $30°$ angle.",
+    "Here $x = 5$, so the hypotenuse is $2(5) = 10$.",
+    "The remaining side, opposite the $60°$, is $5\\sqrt{3}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Bigger angle, bigger opposite side",
+      "steps": [
+        "In any triangle the largest angle faces the longest side.",
+        "So the $30°$ faces the shortest side and the $90°$ faces the hypotenuse — this orders the sides without memorizing which is which.",
+        "If your answer puts a long side opposite a small angle, you have matched them backwards."
+      ]
+    }
+  ],
+  "tags": [
+    "special-triangle",
+    "30-60-90"
+  ],
+  "estimatedSeconds": 55
+}

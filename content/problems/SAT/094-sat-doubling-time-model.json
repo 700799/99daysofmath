@@ -1,0 +1,73 @@
+{
+  "id": "SAT.094",
+  "domain": "SAT",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "SAT.ADV.5",
+  "difficulty": 2,
+  "prompt": "A population of $2{,}000$ bacteria doubles every $5$ hours. Which function models the population $P$ after $t$ hours?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$P = 2000(2)^{5t}$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$P = 2000(2)^{t/5}$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$P = 2000(5)^{t/2}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$P = 2000 + 2t$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The base is the growth factor ($2$ for doubling). The exponent must count how many doublings have happened.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The base is the growth factor ($2$ for doubling). The exponent must count how many doublings have happened."
+    },
+    {
+      "level": "guide",
+      "text": "After $t$ hours, the number of $5$-hour periods that have elapsed is $t/5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$P = 2000(2)^{t/5}$."
+    }
+  ],
+  "learningObjective": "Build an exponential model when the period differs from the time unit.",
+  "topic": "Exponential models",
+  "explanation": [
+    "Doubling means the base is $2$.",
+    "The exponent must count doublings, not hours. In $t$ hours there are $\\dfrac{t}{5}$ five-hour periods.",
+    "So $P = 2000(2)^{t/5}$. Check at $t = 5$: $2000 \\cdot 2^1 = 4000$ ✓ — exactly one doubling."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Divide by the period, never multiply",
+      "steps": [
+        "Choice A gives $2000 \\cdot 2^{25}$ after 5 hours — astronomically wrong.",
+        "Whenever the growth period is longer than the time unit, the exponent divides.",
+        "The general form is $a \\cdot b^{t/p}$, where $p$ is how long one full growth period takes. Test at $t = p$ to confirm you get exactly one growth step."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "doubling-time",
+    "modeling"
+  ],
+  "estimatedSeconds": 75
+}

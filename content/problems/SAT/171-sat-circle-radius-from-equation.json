@@ -1,0 +1,51 @@
+{
+  "id": "SAT.171",
+  "domain": "SAT",
+  "unit": 18,
+  "orderInUnit": 1,
+  "standard": "SAT.GEO.4",
+  "difficulty": 1,
+  "prompt": "The equation of a circle is $(x - 3)^2 + (y + 2)^2 = 25$. What is the radius of the circle?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "In standard form the right side is $r^2$, not $r$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "In standard form the right side is $r^2$, not $r$."
+    },
+    {
+      "level": "guide",
+      "text": "So $r^2 = 25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$r = 5$."
+    }
+  ],
+  "learningObjective": "Read the radius from the standard form of a circle equation.",
+  "topic": "Circle equations",
+  "explanation": [
+    "Standard form is $(x - h)^2 + (y - k)^2 = r^2$.",
+    "Here $r^2 = 25$, so $r = \\sqrt{25} = 5$.",
+    "Answering $25$ is the trap — the right side is the radius *squared*."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two traps in one equation",
+      "steps": [
+        "First: the right side is $r^2$, so take a square root.",
+        "Second: the centre signs are opposite what they appear — $(x - 3)$ means $h = 3$, and $(y + 2)$ means $k = -2$.",
+        "Nearly every circle-equation question is built on one or both of these."
+      ]
+    }
+  ],
+  "tags": [
+    "circle",
+    "standard-form",
+    "radius"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,56 @@
+{
+  "id": "SAT.178",
+  "domain": "SAT",
+  "unit": 18,
+  "orderInUnit": 8,
+  "standard": "SAT.GEO.4",
+  "difficulty": 3,
+  "prompt": "A circle has radius $5$. What is the length of an arc that subtends a central angle of $1.2$ radians?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "When the angle is in radians, arc length has a very short formula.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "When the angle is in radians, arc length has a very short formula."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try radius $1$: an angle of $2$ radians subtends an arc of $2$, since $s = r\\theta = 1 \\times 2$. That is the definition of a radian, which is why the formula is so short."
+    },
+    {
+      "level": "guide",
+      "text": "$s = r\\theta$."
+    },
+    {
+      "level": "reveal",
+      "text": "$s = 5 \\times 1.2 = 6$."
+    }
+  ],
+  "learningObjective": "Use the radian arc-length formula.",
+  "topic": "Radians",
+  "explanation": [
+    "For an angle measured in radians, arc length is $s = r\\theta$ — no fractions of $360$ required.",
+    "$s = 5 \\times 1.2 = 6$.",
+    "This simplicity is the whole reason radians exist as a unit."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The formula only works in radians",
+      "steps": [
+        "With $\\theta$ in degrees you must use $s = \\dfrac{\\theta}{360} \\cdot 2\\pi r$ instead.",
+        "Plugging a degree measure into $s = r\\theta$ gives an answer far too large.",
+        "Check the units the question states before choosing the formula — the SAT mixes both deliberately."
+      ]
+    }
+  ],
+  "tags": [
+    "arc-length",
+    "radians",
+    "formula"
+  ],
+  "estimatedSeconds": 70
+}

@@ -1,0 +1,78 @@
+{
+  "id": "SAT.088",
+  "domain": "SAT",
+  "unit": 9,
+  "orderInUnit": 8,
+  "standard": "SAT.ADV.4",
+  "difficulty": 3,
+  "prompt": "How many solutions does the system $y = x^2 - 4x + 5$ and $y = 2x - 3$ have?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Zero",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Exactly one",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Exactly two",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "Infinitely many",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Set the two expressions equal and look at the resulting quadratic.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Set the two expressions equal and look at the resulting quadratic."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an obvious pair: $y = x^2$ and $y = 1$ meet where $x^2 - 1 = 0$, whose discriminant is $4 > 0$ — two crossings, at $x = \\pm 1$. The discriminant counts the intersections."
+    },
+    {
+      "level": "guide",
+      "text": "$x^2 - 4x + 5 = 2x - 3$ becomes $x^2 - 6x + 8 = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "Its discriminant is $36 - 32 = 4 > 0$, so there are two solutions."
+    }
+  ],
+  "learningObjective": "Count intersections of a parabola and a line using the discriminant.",
+  "topic": "Nonlinear systems",
+  "explanation": [
+    "Set the expressions equal: $x^2 - 4x + 5 = 2x - 3$.",
+    "Collect everything on one side: $x^2 - 6x + 8 = 0$.",
+    "The discriminant is $(-6)^2 - 4(1)(8) = 36 - 32 = 4$, which is positive — two distinct real solutions. (Factoring confirms: $(x - 2)(x - 4) = 0$.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "What the discriminant means geometrically",
+      "steps": [
+        "Positive discriminant: the line cuts the parabola at two points.",
+        "Zero: the line is tangent, touching at exactly one point.",
+        "Negative: the line misses the parabola entirely. Questions asking for the $k$ that makes a line tangent to a curve are discriminant-equals-zero questions."
+      ]
+    }
+  ],
+  "tags": [
+    "nonlinear-system",
+    "discriminant",
+    "intersections"
+  ],
+  "estimatedSeconds": 80
+}

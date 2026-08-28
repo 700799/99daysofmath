@@ -1,0 +1,50 @@
+{
+  "id": "SAT.032",
+  "domain": "SAT",
+  "unit": 4,
+  "orderInUnit": 2,
+  "standard": "SAT.ALG.4",
+  "difficulty": 1,
+  "prompt": "If $y = 2x$ and $3x + y = 20$, what is the value of $y$?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "One equation already gives $y$ in terms of $x$ — substitute it into the other.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "One equation already gives $y$ in terms of $x$ — substitute it into the other."
+    },
+    {
+      "level": "guide",
+      "text": "$3x + 2x = 20$, so $5x = 20$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 4$, so $y = 2(4) = 8$."
+    }
+  ],
+  "learningObjective": "Solve a system by substitution when one variable is isolated.",
+  "topic": "Substitution",
+  "explanation": [
+    "Replace $y$ with $2x$ in the second equation: $3x + 2x = 20$.",
+    "That gives $5x = 20$, so $x = 4$.",
+    "The question asks for $y$, so finish: $y = 2(4) = 8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Do not stop at x",
+      "steps": [
+        "Solving gives $x = 4$ first, and $4$ will be one of the answer choices.",
+        "The question asked for $y$, not $x$ — this is the single most common way to lose a system question.",
+        "Circle the requested variable before you start solving."
+      ]
+    }
+  ],
+  "tags": [
+    "system",
+    "substitution"
+  ],
+  "estimatedSeconds": 45
+}

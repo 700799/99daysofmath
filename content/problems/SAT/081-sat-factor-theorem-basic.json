@@ -1,0 +1,73 @@
+{
+  "id": "SAT.081",
+  "domain": "SAT",
+  "unit": 9,
+  "orderInUnit": 1,
+  "standard": "SAT.ADV.4",
+  "difficulty": 1,
+  "prompt": "The polynomial $p$ is defined by $p(x) = x^3 - 4x$. Which of the following is a factor of $p(x)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$x - 4$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$x - 2$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$x + 4$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$x^2 + 4$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Factor out the common $x$ first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Factor out the common $x$ first."
+    },
+    {
+      "level": "guide",
+      "text": "$x^3 - 4x = x(x^2 - 4)$, and $x^2 - 4$ is a difference of squares."
+    },
+    {
+      "level": "reveal",
+      "text": "$p(x) = x(x + 2)(x - 2)$, so $x - 2$ is a factor."
+    }
+  ],
+  "learningObjective": "Factor a cubic by extracting a common term and a difference of squares.",
+  "topic": "Polynomial factoring",
+  "explanation": [
+    "Factor out the common $x$: $x^3 - 4x = x(x^2 - 4)$.",
+    "The remaining factor is a difference of squares: $x^2 - 4 = (x + 2)(x - 2)$.",
+    "So $p(x) = x(x + 2)(x - 2)$, and $x - 2$ appears among the factors."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test each candidate with the Factor Theorem",
+      "steps": [
+        "$(x - a)$ is a factor exactly when $p(a) = 0$.",
+        "Test $a = 2$: $p(2) = 8 - 8 = 0$ ✓ — so $x - 2$ is a factor.",
+        "Test $a = 4$: $p(4) = 64 - 16 = 48 \\neq 0$ ✗. Substituting is often faster than factoring when the choices are handed to you."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomial",
+    "factoring",
+    "factor-theorem"
+  ],
+  "estimatedSeconds": 55
+}

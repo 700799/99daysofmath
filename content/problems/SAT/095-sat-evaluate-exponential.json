@@ -1,0 +1,51 @@
+{
+  "id": "SAT.095",
+  "domain": "SAT",
+  "unit": 10,
+  "orderInUnit": 5,
+  "standard": "SAT.ADV.5",
+  "difficulty": 2,
+  "prompt": "The function $f$ is defined by $f(x) = 5(3)^x$. What is the value of $f(2)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "45",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Apply the exponent before the multiplication.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Apply the exponent before the multiplication."
+    },
+    {
+      "level": "guide",
+      "text": "$3^2 = 9$, so $f(2) = 5 \\cdot 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$f(2) = 45$."
+    }
+  ],
+  "learningObjective": "Evaluate an exponential function, respecting order of operations.",
+  "topic": "Exponential functions",
+  "explanation": [
+    "The exponent applies only to the base $3$, not to the coefficient $5$.",
+    "$3^2 = 9$, then $5 \\times 9 = 45$.",
+    "Computing $(5 \\cdot 3)^2 = 225$ would be the order-of-operations error this question checks for."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Step it out",
+      "steps": [
+        "Start at $f(0) = 5$. Each step in $x$ multiplies by $3$.",
+        "$f(1) = 15$, then $f(2) = 45$.",
+        "Stepping is slower for large inputs but makes the structure obvious, and it never falls for the order-of-operations trap."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "evaluate",
+    "order-of-operations"
+  ],
+  "estimatedSeconds": 45
+}

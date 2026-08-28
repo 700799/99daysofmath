@@ -1,0 +1,77 @@
+{
+  "id": "SAT.057",
+  "domain": "SAT",
+  "unit": 6,
+  "orderInUnit": 7,
+  "standard": "SAT.ADV.1",
+  "difficulty": 3,
+  "prompt": "Which expression is equivalent to $(3x^2y^3)(4x^5y)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$12x^{7}y^{4}$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$12x^{10}y^{3}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$7x^{7}y^{4}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$12x^{7}y^{3}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Handle the coefficients, the $x$ powers, and the $y$ powers as three separate jobs.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Handle the coefficients, the $x$ powers, and the $y$ powers as three separate jobs."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try one variable first: $(2x^3)(5x^4) = 10x^7$ — coefficients multiply, exponents add. Two variables just means running that same rule twice, once per letter."
+    },
+    {
+      "level": "guide",
+      "text": "Coefficients multiply: $3 \\times 4 = 12$. Exponents on matching bases add."
+    },
+    {
+      "level": "reveal",
+      "text": "$x^{2+5} = x^7$ and $y^{3+1} = y^4$, giving $12x^7y^4$."
+    }
+  ],
+  "learningObjective": "Multiply monomials with multiple variables.",
+  "topic": "Exponent rules",
+  "explanation": [
+    "Multiply the coefficients: $3 \\times 4 = 12$.",
+    "Add the exponents on $x$: $x^2 \\cdot x^5 = x^7$.",
+    "Add the exponents on $y$, remembering that a bare $y$ has exponent $1$: $y^3 \\cdot y^1 = y^4$. The product is $12x^7y^4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The invisible exponent",
+      "steps": [
+        "Choice D is the trap: it forgets that the lone $y$ carries an exponent of $1$.",
+        "Any variable written without an exponent has an exponent of $1$, and any expression without a coefficient has a coefficient of $1$.",
+        "Writing those in explicitly before you start costs a second and prevents the most common slip in this question type."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "monomials"
+  ],
+  "estimatedSeconds": 55
+}

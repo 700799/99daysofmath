@@ -1,0 +1,73 @@
+{
+  "id": "SAT.174",
+  "domain": "SAT",
+  "unit": 18,
+  "orderInUnit": 4,
+  "standard": "SAT.GEO.4",
+  "difficulty": 2,
+  "prompt": "A circle has radius $8$. What is the length of an arc with a central angle of $90°$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$2\\pi$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$4\\pi$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$8\\pi$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$16\\pi$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The arc is a fraction of the whole circumference — which fraction?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The arc is a fraction of the whole circumference — which fraction?"
+    },
+    {
+      "level": "guide",
+      "text": "$\\dfrac{90}{360} = \\dfrac{1}{4}$, and the circumference is $16\\pi$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\tfrac{1}{4}(16\\pi) = 4\\pi$."
+    }
+  ],
+  "learningObjective": "Compute an arc length as a fraction of the circumference.",
+  "topic": "Arcs and sectors",
+  "explanation": [
+    "The central angle is $\\dfrac{90}{360} = \\dfrac{1}{4}$ of the full circle.",
+    "The full circumference is $2\\pi(8) = 16\\pi$.",
+    "The arc is one quarter of that: $4\\pi$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "One idea covers arcs and sectors both",
+      "steps": [
+        "Compute the fraction $\\dfrac{\\text{central angle}}{360}$ once.",
+        "Multiply it by the circumference for arc length, or by the area for sector area.",
+        "Do not memorize two formulas — memorize the fraction and then pick what to multiply it by."
+      ]
+    }
+  ],
+  "tags": [
+    "circle",
+    "arc-length",
+    "fraction"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,55 @@
+{
+  "id": "SAT.047",
+  "domain": "SAT",
+  "unit": 5,
+  "orderInUnit": 7,
+  "standard": "SAT.ALG.5",
+  "difficulty": 3,
+  "prompt": "If $5 \\le 2x + 1 \\le 13$, what is the greatest possible value of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Whatever you do, do it to all three parts at once.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Whatever you do, do it to all three parts at once."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a shorter one: $3 \\le x + 1 \\le 7$. Subtract $1$ from all three parts to get $2 \\le x \\le 6$. Whatever you do, do it to every part at once."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract $1$ throughout: $4 \\le 2x \\le 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "Divide by $2$ throughout: $2 \\le x \\le 6$, so the greatest value is $6$."
+    }
+  ],
+  "learningObjective": "Solve a compound inequality and read off an extreme value.",
+  "topic": "Compound inequalities",
+  "explanation": [
+    "Subtract $1$ from all three parts: $4 \\le 2x \\le 12$.",
+    "Divide all three parts by $2$: $2 \\le x \\le 6$.",
+    "The inequality is inclusive, so $x = 6$ is allowed and is the greatest possible value. Check: $2(6) + 1 = 13 \\le 13$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Work only the end you need",
+      "steps": [
+        "The question asks for the *greatest* $x$, which comes from the upper bound alone.",
+        "Solve just $2x + 1 \\le 13$: $2x \\le 12$, so $x \\le 6$.",
+        "Half the work when only one end is requested — but read carefully, because \"greatest\" and \"least\" look alike under time pressure."
+      ]
+    }
+  ],
+  "tags": [
+    "compound-inequality",
+    "bounds"
+  ],
+  "estimatedSeconds": 65
+}

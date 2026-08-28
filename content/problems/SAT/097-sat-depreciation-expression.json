@@ -1,0 +1,78 @@
+{
+  "id": "SAT.097",
+  "domain": "SAT",
+  "unit": 10,
+  "orderInUnit": 7,
+  "standard": "SAT.ADV.5",
+  "difficulty": 3,
+  "prompt": "A car purchased for $\\$24{,}000$ loses $12\\%$ of its value each year. Which expression represents the car's value, in dollars, after $t$ years?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$24000(0.12)^t$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$24000(1.12)^t$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$24000(0.88)^t$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$24000 - 0.12t$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Losing $12\\%$ means keeping the rest. What fraction remains?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Losing $12\\%$ means keeping the rest. What fraction remains?"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a round number: $\\$100$ losing $10\\%$ leaves $\\$90$, so the multiplier is $0.90 = 1 - 0.10$. Subtract the loss rate from $1$ to get the base of the decay model."
+    },
+    {
+      "level": "guide",
+      "text": "$100\\% - 12\\% = 88\\%$, so the multiplier is $0.88$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24000(0.88)^t$."
+    }
+  ],
+  "learningObjective": "Build an exponential decay model from a percent loss.",
+  "topic": "Exponential decay",
+  "explanation": [
+    "A $12\\%$ loss leaves $88\\%$ of the value, so the annual multiplier is $0.88$.",
+    "Applying it $t$ times gives $24000(0.88)^t$.",
+    "Choice A retains only $12\\%$ each year; choice B grows the value; choice D is linear and subtracts 12 cents a year."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the first year",
+      "steps": [
+        "After one year the car should be worth $24000 - 0.12(24000) = 24000 - 2880 = \\$21{,}120$.",
+        "Choice C at $t = 1$: $24000(0.88) = 21120$ ✓",
+        "Building the expected first-year value before you look at the choices is the fastest way to handle every model-selection question."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "decay",
+    "depreciation"
+  ],
+  "estimatedSeconds": 70
+}

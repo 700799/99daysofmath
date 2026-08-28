@@ -1,0 +1,77 @@
+{
+  "id": "SAT.077",
+  "domain": "SAT",
+  "unit": 8,
+  "orderInUnit": 7,
+  "standard": "SAT.ADV.3",
+  "difficulty": 3,
+  "prompt": "Which expression is equivalent to $x^2 + 6x + 1$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$(x + 3)^2 - 8$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$(x + 3)^2 + 1$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$(x + 6)^2 - 35$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$(x - 3)^2 - 8$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Complete the square: halve the coefficient of $x$, then square it.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Complete the square: halve the coefficient of $x$, then square it."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a smaller one: $x^2 + 2x + 5 = (x^2 + 2x + 1) - 1 + 5 = (x + 1)^2 + 4$. Halve the $x$-coefficient, square it, then add and subtract that number."
+    },
+    {
+      "level": "guide",
+      "text": "Half of $6$ is $3$, and $3^2 = 9$. Add and subtract $9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(x^2 + 6x + 9) - 9 + 1 = (x + 3)^2 - 8$."
+    }
+  ],
+  "learningObjective": "Rewrite a quadratic in vertex form by completing the square.",
+  "topic": "Completing the square",
+  "explanation": [
+    "Take half of the $x$-coefficient: $6 \\div 2 = 3$. Square it: $9$.",
+    "Add and subtract $9$ so the value is unchanged: $x^2 + 6x + 9 - 9 + 1$.",
+    "The first three terms are $(x + 3)^2$, leaving $(x + 3)^2 - 8$. The vertex is $(-3, -8)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Verify by testing x = 0",
+      "steps": [
+        "The original at $x = 0$ gives $1$.",
+        "Choice A: $(0 + 3)^2 - 8 = 9 - 8 = 1$ ✓. Choice B gives $10$, C gives $1$ ✓, D gives $1$ ✓.",
+        "Test a second value, $x = 1$: original gives $8$; A gives $16 - 8 = 8$ ✓, C gives $49 - 35 = 14$ ✗, D gives $4 - 8 = -4$ ✗. Two test values is almost always enough."
+      ]
+    }
+  ],
+  "tags": [
+    "completing-the-square",
+    "vertex-form"
+  ],
+  "estimatedSeconds": 85
+}

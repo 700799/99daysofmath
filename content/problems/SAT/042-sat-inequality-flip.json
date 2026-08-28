@@ -1,0 +1,72 @@
+{
+  "id": "SAT.042",
+  "domain": "SAT",
+  "unit": 5,
+  "orderInUnit": 2,
+  "standard": "SAT.ALG.5",
+  "difficulty": 1,
+  "prompt": "Which of the following describes all solutions to $-2x \\ge 8$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$x \\ge -4$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$x \\le -4$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$x \\ge 4$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$x \\le 4$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "You are about to divide by a negative number. That does something to the inequality sign.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You are about to divide by a negative number. That does something to the inequality sign."
+    },
+    {
+      "level": "guide",
+      "text": "Dividing both sides by $-2$ reverses the direction."
+    },
+    {
+      "level": "reveal",
+      "text": "$x \\le -4$."
+    }
+  ],
+  "learningObjective": "Apply the sign-flip rule when dividing an inequality by a negative.",
+  "topic": "Linear inequalities",
+  "explanation": [
+    "Divide both sides by $-2$. Dividing by a negative reverses the inequality: $x \\le -4$.",
+    "Check with $x = -5$: $-2(-5) = 10 \\ge 8$ ✓",
+    "Check with $x = 0$: $-2(0) = 0 \\ge 8$ ✗ — confirming that values above $-4$ fail."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Avoid the flip entirely",
+      "steps": [
+        "Add $2x$ to both sides instead: $0 \\ge 8 + 2x$.",
+        "Then subtract $8$: $-8 \\ge 2x$, and divide by the *positive* $2$: $-4 \\ge x$, which is $x \\le -4$.",
+        "Keeping the variable coefficient positive means you never have to remember the flip rule at all."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "sign-flip"
+  ],
+  "estimatedSeconds": 45
+}

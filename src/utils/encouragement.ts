@@ -157,6 +157,7 @@ export const UNIT_COUNT_BY_DOMAIN: Record<Domain, number> = {
   '6.SP': 10,
   A1: 14,
   PC: 14,
+  SAT: 18,
 };
 
 const ALL_UNIT_STICKERS: StickerDef[] = (() => {

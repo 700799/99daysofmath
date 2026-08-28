@@ -1,0 +1,56 @@
+{
+  "id": "SAT.090",
+  "domain": "SAT",
+  "unit": 9,
+  "orderInUnit": 10,
+  "standard": "SAT.ADV.4",
+  "difficulty": 3,
+  "prompt": "The line $y = k$ intersects the graph of $y = x^2 - 6x + 5$ at exactly one point. What is the value of $k$?",
+  "answerType": "numeric",
+  "primaryAnswer": "-4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A horizontal line meets a parabola once only when it passes through the vertex.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A horizontal line meets a parabola once only when it passes through the vertex."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an easy parabola: $y = x^2$ meets $y = k$ once only when $k = 0$, the vertex height. A horizontal line touches a parabola exactly once precisely at the vertex."
+    },
+    {
+      "level": "guide",
+      "text": "The vertex is at $x = -\\dfrac{-6}{2} = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "The vertex $y$-value is $9 - 18 + 5 = -4$, so $k = -4$."
+    }
+  ],
+  "learningObjective": "Connect a single intersection with a horizontal line to the vertex of a parabola.",
+  "topic": "Nonlinear systems",
+  "explanation": [
+    "A horizontal line either misses an upward parabola, cuts it twice, or touches it exactly once — and the last case happens only at the vertex.",
+    "The vertex is at $x = -\\dfrac{b}{2a} = 3$, where $y = 3^2 - 6(3) + 5 = 9 - 18 + 5 = -4$.",
+    "So $k = -4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Or force the discriminant to zero",
+      "steps": [
+        "Set $x^2 - 6x + 5 = k$, so $x^2 - 6x + (5 - k) = 0$.",
+        "One solution means $36 - 4(5 - k) = 0$, giving $36 - 20 + 4k = 0$ and $k = -4$.",
+        "Both routes work; recognizing the vertex is faster, but the discriminant route generalizes to non-horizontal lines."
+      ]
+    }
+  ],
+  "tags": [
+    "nonlinear-system",
+    "vertex",
+    "tangent"
+  ],
+  "estimatedSeconds": 90
+}

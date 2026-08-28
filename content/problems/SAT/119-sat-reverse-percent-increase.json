@@ -1,0 +1,55 @@
+{
+  "id": "SAT.119",
+  "domain": "SAT",
+  "unit": 12,
+  "orderInUnit": 9,
+  "standard": "SAT.PSDA.2",
+  "difficulty": 3,
+  "prompt": "A number increased by $30\\%$ is $156$. What was the original number?",
+  "answerType": "numeric",
+  "primaryAnswer": "120",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $156$ is $130\\%$ of the original.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $156$ is $130\\%$ of the original."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try clean numbers: a number increased by $50\\%$ is $30$. Then $1.5n = 30$, so $n = 20$ — you divide by $1.5$, not subtract $50\\%$ from $30$."
+    },
+    {
+      "level": "guide",
+      "text": "$1.30n = 156$."
+    },
+    {
+      "level": "reveal",
+      "text": "$n = \\dfrac{156}{1.30} = 120$."
+    }
+  ],
+  "learningObjective": "Reverse a percent increase to recover the original value.",
+  "topic": "Reverse percentages",
+  "explanation": [
+    "Increasing by $30\\%$ means multiplying by $1.30$, so $1.30n = 156$.",
+    "Divide: $n = \\dfrac{156}{1.3} = 120$.",
+    "Check: $30\\%$ of $120$ is $36$, and $120 + 36 = 156$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Subtracting 30% is not the inverse",
+      "steps": [
+        "Taking $30\\%$ off $156$ gives $109.2$ — and it is wrong, because the $30\\%$ was of the smaller original.",
+        "The inverse of \"multiply by $1.30$\" is \"divide by $1.30$\", never \"subtract $30\\%$\".",
+        "Whenever a question gives you the result and asks for the start, divide by the multiplier."
+      ]
+    }
+  ],
+  "tags": [
+    "reverse-percent",
+    "increase"
+  ],
+  "estimatedSeconds": 75
+}

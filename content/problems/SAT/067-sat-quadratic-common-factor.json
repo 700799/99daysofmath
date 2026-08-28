@@ -1,0 +1,56 @@
+{
+  "id": "SAT.067",
+  "domain": "SAT",
+  "unit": 7,
+  "orderInUnit": 7,
+  "standard": "SAT.ADV.2",
+  "difficulty": 3,
+  "prompt": "What is the greatest solution to $2x^2 - 8x = 0$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Factor out the greatest common factor first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Factor out the greatest common factor first."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a smaller one: $x^2 - 3x = 0$ factors to $x(x - 3) = 0$, so $x = 0$ or $x = 3$. Pull out the common factor and read both roots — never divide the $x$ away."
+    },
+    {
+      "level": "guide",
+      "text": "$2x(x - 4) = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "So $x = 0$ or $x = 4$; the greatest is $4$."
+    }
+  ],
+  "learningObjective": "Solve a quadratic by factoring out a common monomial.",
+  "topic": "Factoring quadratics",
+  "explanation": [
+    "Both terms share $2x$: $2x^2 - 8x = 2x(x - 4)$.",
+    "Set the product to zero: $2x = 0$ gives $x = 0$, and $x - 4 = 0$ gives $x = 4$.",
+    "The greatest solution is $4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pull out the constant first if it helps",
+      "steps": [
+        "You could also factor as $2(x^2 - 4x) = 2 \\cdot x(x - 4)$.",
+        "The constant $2$ can never be zero, so it contributes no solution — only the variable factors matter.",
+        "Recognizing that a numerical factor is irrelevant to the roots saves you from chasing it."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "gcf",
+    "factoring"
+  ],
+  "estimatedSeconds": 55
+}

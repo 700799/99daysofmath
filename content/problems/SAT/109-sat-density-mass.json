@@ -1,0 +1,56 @@
+{
+  "id": "SAT.109",
+  "domain": "SAT",
+  "unit": 11,
+  "orderInUnit": 9,
+  "standard": "SAT.PSDA.1",
+  "difficulty": 3,
+  "prompt": "A metal has a density of $7.8$ grams per cubic centimeter. What is the mass, in grams, of a $250$ cubic centimeter block of this metal?",
+  "answerType": "numeric",
+  "primaryAnswer": "1950",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Density is mass per unit volume, so mass is density times volume.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Density is mass per unit volume, so mass is density times volume."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try round numbers: at $2$ g per cm³, a $10$ cm³ block weighs $20$ g — you multiply. Density times volume gives mass, and the cm³ units cancel to confirm it."
+    },
+    {
+      "level": "guide",
+      "text": "$7.8 \\times 250$."
+    },
+    {
+      "level": "reveal",
+      "text": "$1{,}950$ grams."
+    }
+  ],
+  "learningObjective": "Apply a density rate to compute a total.",
+  "topic": "Rates",
+  "explanation": [
+    "Density $= \\dfrac{\\text{mass}}{\\text{volume}}$, so mass $=$ density $\\times$ volume.",
+    "$7.8 \\dfrac{\\text{g}}{\\text{cm}^3} \\times 250 \\text{ cm}^3 = 1950$ grams — the cubic centimeters cancel, leaving grams ✓",
+    "Dividing instead would give about $32$, which is not a plausible mass for a block of metal."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate to check the magnitude",
+      "steps": [
+        "$7.8$ is nearly $8$, and $8 \\times 250 = 2000$.",
+        "The exact answer of $1950$ sits just below that, exactly as expected.",
+        "A five-second estimate catches an order-of-magnitude error, which is the kind that costs a whole question."
+      ]
+    }
+  ],
+  "tags": [
+    "density",
+    "rate",
+    "estimation"
+  ],
+  "estimatedSeconds": 65
+}

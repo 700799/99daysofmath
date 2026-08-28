@@ -1,0 +1,56 @@
+{
+  "id": "SAT.158",
+  "domain": "SAT",
+  "unit": 16,
+  "orderInUnit": 8,
+  "standard": "SAT.GEO.2",
+  "difficulty": 3,
+  "prompt": "All three dimensions of a rectangular prism are doubled. The volume of the new prism is how many times the volume of the original?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Volume multiplies three lengths together, and each one doubled.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Volume multiplies three lengths together, and each one doubled."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a unit cube: a $1 \\times 1 \\times 1$ cube has volume $1$; doubled to $2 \\times 2 \\times 2$ it has volume $8$. Each of the three dimensions contributes one factor of $2$."
+    },
+    {
+      "level": "guide",
+      "text": "$2 \\times 2 \\times 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$8$ times."
+    }
+  ],
+  "learningObjective": "Apply the cube relationship between linear scale and volume.",
+  "topic": "Similarity",
+  "explanation": [
+    "Volume is $\\ell wh$. Doubling each of the three dimensions gives $(2\\ell)(2w)(2h) = 8\\ell wh$.",
+    "So the volume becomes $8$ times as large.",
+    "Concretely: a $2 \\times 3 \\times 4$ prism has volume $24$; doubled to $4 \\times 6 \\times 8$ it has volume $192 = 8 \\times 24$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The 1, 2, 3 rule",
+      "steps": [
+        "Scaling lengths by $k$ multiplies lengths by $k$, areas by $k^2$, and volumes by $k^3$.",
+        "The exponent is just the number of dimensions being measured.",
+        "Doubling gives $\\times 2$, $\\times 4$, $\\times 8$ — and the trap answer is always the one that scaled linearly."
+      ]
+    }
+  ],
+  "tags": [
+    "scaling",
+    "volume",
+    "similarity"
+  ],
+  "estimatedSeconds": 65
+}

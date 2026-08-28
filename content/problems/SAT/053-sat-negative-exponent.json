@@ -1,0 +1,72 @@
+{
+  "id": "SAT.053",
+  "domain": "SAT",
+  "unit": 6,
+  "orderInUnit": 3,
+  "standard": "SAT.ADV.1",
+  "difficulty": 2,
+  "prompt": "Which expression is equivalent to $3x^{-2}$, for $x \\neq 0$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$-3x^{2}$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$\\dfrac{3}{x^{2}}$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$\\dfrac{1}{3x^{2}}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\dfrac{-1}{3x^{2}}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "A negative exponent means reciprocal, not negative.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A negative exponent means reciprocal, not negative."
+    },
+    {
+      "level": "guide",
+      "text": "The exponent $-2$ belongs to $x$ only, not to the coefficient $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3x^{-2} = 3 \\cdot \\dfrac{1}{x^2} = \\dfrac{3}{x^2}$."
+    }
+  ],
+  "learningObjective": "Rewrite a negative exponent as a reciprocal.",
+  "topic": "Negative exponents",
+  "explanation": [
+    "A negative exponent flips its base into the denominator: $x^{-2} = \\dfrac{1}{x^2}$.",
+    "The coefficient $3$ has no negative exponent, so it stays in the numerator: $\\dfrac{3}{x^2}$.",
+    "Choice A treats the negative exponent as a negative sign. Choice C wrongly moves the $3$ down with the $x$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Only what carries the exponent moves",
+      "steps": [
+        "In $3x^{-2}$, the $-2$ sits on $x$ alone.",
+        "Had the expression been $(3x)^{-2}$, the whole product would move down, giving $\\dfrac{1}{9x^2}$.",
+        "Reading exactly what the exponent attaches to is the whole question here — and it is a standard SAT distinction."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "negative-exponent"
+  ],
+  "estimatedSeconds": 45
+}

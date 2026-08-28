@@ -1,0 +1,50 @@
+{
+  "id": "SAT.152",
+  "domain": "SAT",
+  "unit": 16,
+  "orderInUnit": 2,
+  "standard": "SAT.GEO.2",
+  "difficulty": 1,
+  "prompt": "A rectangular prism has dimensions $4$ by $5$ by $6$. What is its volume?",
+  "answerType": "numeric",
+  "primaryAnswer": "120",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Volume of a rectangular prism is length times width times height.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Volume of a rectangular prism is length times width times height."
+    },
+    {
+      "level": "guide",
+      "text": "$4 \\times 5 \\times 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$120$."
+    }
+  ],
+  "learningObjective": "Compute the volume of a rectangular prism.",
+  "topic": "Volume",
+  "explanation": [
+    "Volume $= \\ell wh = 4 \\times 5 \\times 6 = 120$.",
+    "Equivalently: one layer holds $4 \\times 5 = 20$ unit cubes, and there are $6$ layers.",
+    "The order of multiplication does not matter."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Volume versus surface area",
+      "steps": [
+        "Volume is what fits inside, measured in cubic units.",
+        "Surface area is the wrapping, measured in square units — here it would be $2(20 + 24 + 30) = 148$.",
+        "The units in the answer choices often tell you which one is wanted, so read them."
+      ]
+    }
+  ],
+  "tags": [
+    "volume",
+    "prism"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,57 @@
+{
+  "id": "SAT.134",
+  "domain": "SAT",
+  "unit": 14,
+  "orderInUnit": 4,
+  "standard": "SAT.PSDA.4",
+  "difficulty": 2,
+  "prompt": "Using the commuting table, a student is selected at random from Grade $10$. What is the probability that this student takes the bus? Give your answer as a decimal rounded to the nearest hundredth.",
+  "diagram": {
+    "kind": "ascii",
+    "art": "           | Grade 9 | Grade 10 | Total\n-----------+---------+----------+------\n  Bus      |    45   |    35    |   80\n  Walk     |    30   |    20    |   50\n  Car      |    35   |    35    |   70\n-----------+---------+----------+------\n  Total    |   110   |    90    |  200"
+  },
+  "answerType": "numeric",
+  "primaryAnswer": "0.39",
+  "alternativeAnswers": [
+    "7/18"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.005,
+  "hint": "\"Selected from Grade 10\" restricts the pool. What is the new denominator?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Selected from Grade 10\" restricts the pool. What is the new denominator?"
+    },
+    {
+      "level": "guide",
+      "text": "The Grade 10 column totals $90$, and $35$ of them take the bus."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\dfrac{35}{90} \\approx 0.39$."
+    }
+  ],
+  "learningObjective": "Compute a conditional probability from a two-way table.",
+  "topic": "Conditional probability",
+  "explanation": [
+    "The condition \"from Grade 10\" restricts attention to that column, whose total is $90$.",
+    "Within Grade 10, $35$ students take the bus.",
+    "$\\dfrac{35}{90} = 0.3888\\ldots \\approx 0.39$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Three denominators, three different answers",
+      "steps": [
+        "Out of all students: $\\dfrac{35}{200} = 0.175$.",
+        "Out of all bus riders: $\\dfrac{35}{80} = 0.4375$.",
+        "Out of Grade 10: $\\dfrac{35}{90} \\approx 0.39$ ✓ — same numerator every time. The phrase after \"from\" or \"of those who\" names the denominator."
+      ]
+    }
+  ],
+  "tags": [
+    "two-way-table",
+    "conditional-probability"
+  ],
+  "estimatedSeconds": 80
+}

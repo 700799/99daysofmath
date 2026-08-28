@@ -59,6 +59,20 @@ export interface RitPoint {
 /** Visual theme. Light is the default; the choice is persisted. */
 export type ThemeMode = 'light' | 'dark';
 
+/**
+ * One completed SAT Math mock test. `answers` is keyed by question id so the
+ * review screen can replay exactly what was entered, and `seconds` is summed
+ * module time rather than wall clock, so a paused test does not inflate it.
+ */
+export interface SatTestResult {
+  correct: number;
+  total: number;
+  scaled: number;                      // 200-800, from the raw->scaled table
+  seconds: number;
+  completedAt: string;                 // ISO timestamp
+  answers: Record<string, string>;     // questionId -> what the student entered
+}
+
 // Units the student can pick at the arcade entry. Drives every game's questions.
 export type ArcadeUnit = '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'g5' | 'a1' | 'pc' | 'mixed';
 export const ARCADE_UNITS: ArcadeUnit[] = ['6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'g5', 'a1', 'pc', 'mixed'];
@@ -151,7 +165,14 @@ interface ProgressState {
   achievementPoints: number; // lifetime bonus for answering questions correctly
   hapticsEnabled: boolean;   // vibration feedback in games
   theme: ThemeMode;          // 'light' (default) | 'dark'
+  // ---- v25 additions (SAT Math section) ----
+  satTests: Record<number, SatTestResult>; // keyed by mock-test number (1..5)
+  satBestScaled: number;                   // best 200-800 math score achieved
+  satTipsRead: string[];                   // strategy-tip ids marked as read
   // ---- actions ----
+  recordSatTest: (n: number, result: SatTestResult) => void;
+  toggleSatTipRead: (id: string) => void;
+  clearSatTest: (n: number) => void;
   addAchievement: (n: number) => void;
   toggleHaptics: () => void;
   setTheme: (t: ThemeMode) => void;
@@ -432,6 +453,12 @@ const v15Defaults = {
   theme: 'light' as ThemeMode,
 };
 
+const v25Defaults = {
+  satTests: {} as Record<number, SatTestResult>,
+  satBestScaled: 0,
+  satTipsRead: [] as string[],
+};
+
 const v16Defaults = {
   monsterMaxWave: 0,
   shinobiMaxLevel: 0,
@@ -693,6 +720,20 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       stateAny[key] = rec;
     }
   }
+  if (fromVersion < 25) {
+    // The SAT Math section arrives: seed its trail record (drills award stars
+    // through the same recordUnitResult path as every other domain) and the
+    // empty mock-test ledger.
+    const stateAny = state as Record<string, unknown>;
+    const byDomain = (stateAny.byDomain ?? {}) as Record<string, unknown>;
+    if (byDomain['SAT'] === undefined) {
+      byDomain['SAT'] = { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] };
+      stateAny.byDomain = byDomain;
+    }
+    if (stateAny.satTests === undefined) stateAny.satTests = {};
+    if (stateAny.satBestScaled === undefined) stateAny.satBestScaled = 0;
+    if (stateAny.satTipsRead === undefined) stateAny.satTipsRead = [];
+  }
   if (fromVersion < 24) {
     // Light/dark theming arrives. Existing installs default to light, which is
     // what they have always seen.
@@ -728,6 +769,7 @@ export const useProgress = create<ProgressState>()(
       ...v17Defaults,
       ...v18Defaults,
       ...v20Defaults,
+      ...v25Defaults,
       addCoins: (n) => set((s) => ({ coins: Math.max(0, (s.coins ?? 0) + n) })),
       spendCoins: (n) => {
         const s = get();
@@ -800,6 +842,27 @@ export const useProgress = create<ProgressState>()(
       },
       toggleHaptics: () => set((s) => ({ hapticsEnabled: !s.hapticsEnabled })),
       setTheme: (t) => set(() => ({ theme: t })),
+      recordSatTest: (n, result) =>
+        set((st) => ({
+          satTests: { ...(st.satTests ?? {}), [n]: result },
+          // Only ever climbs — a bad retake should not erase a good score.
+          satBestScaled: Math.max(st.satBestScaled ?? 0, result.scaled),
+        })),
+      toggleSatTipRead: (id) =>
+        set((st) => {
+          const read = st.satTipsRead ?? [];
+          return {
+            satTipsRead: read.includes(id) ? read.filter((t) => t !== id) : [...read, id],
+          };
+        }),
+      clearSatTest: (n) =>
+        set((st) => {
+          const next = { ...(st.satTests ?? {}) };
+          delete next[n];
+          // satBestScaled deliberately survives: it is a lifetime best, not a
+          // view over the current ledger.
+          return { satTests: next };
+        }),
       setArcadeConfig: (partial) =>
         set((s) => ({ arcadeConfig: { ...s.arcadeConfig, ...partial } })),
       tickLessonSeconds: (n) => {
@@ -1315,7 +1378,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 24,
+      version: 25,
       migrate: migrateProgress,
     },
   ),

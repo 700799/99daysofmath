@@ -1,0 +1,55 @@
+{
+  "id": "SAT.117",
+  "domain": "SAT",
+  "unit": 12,
+  "orderInUnit": 7,
+  "standard": "SAT.PSDA.2",
+  "difficulty": 3,
+  "prompt": "An item originally priced at $\\$200$ is discounted by $20\\%$, and then an additional $10\\%$ is taken off the sale price. What is the final price, in dollars?",
+  "answerType": "numeric",
+  "primaryAnswer": "144",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Apply the discounts one after the other, not added together.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Apply the discounts one after the other, not added together."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try it on $\\$100$: down $50\\%$ gives $\\$50$, then down $10\\%$ of *that* gives $\\$45$ — not $\\$40$. The second discount applies to the reduced price, never to the original."
+    },
+    {
+      "level": "guide",
+      "text": "$200 \\times 0.80 = 160$, then take $10\\%$ off that."
+    },
+    {
+      "level": "reveal",
+      "text": "$160 \\times 0.90 = \\$144$."
+    }
+  ],
+  "learningObjective": "Apply successive discounts correctly.",
+  "topic": "Successive percent change",
+  "explanation": [
+    "First discount: $200 \\times 0.80 = \\$160$.",
+    "Second discount, taken on the new price: $160 \\times 0.90 = \\$144$.",
+    "Or combine the multipliers: $200 \\times 0.80 \\times 0.90 = 200 \\times 0.72 = \\$144$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A 30% discount is not the same thing",
+      "steps": [
+        "Adding the discounts gives $30\\%$ off, or $\\$140$ — and that will be an answer choice.",
+        "The true combined multiplier is $0.80 \\times 0.90 = 0.72$, a $28\\%$ total discount, not $30\\%$.",
+        "Successive discounts always total *less* than their sum, because the second is taken on an already-reduced price."
+      ]
+    }
+  ],
+  "tags": [
+    "successive-discount",
+    "percent"
+  ],
+  "estimatedSeconds": 80
+}

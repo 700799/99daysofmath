@@ -1,6 +1,13 @@
-export type Domain = '5.F' | '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'A1' | 'PC';
+export type Domain = '5.F' | '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'A1' | 'PC' | 'SAT';
 
-export const DOMAINS: Domain[] = ['5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'A1', 'PC'];
+export const DOMAINS: Domain[] = ['5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'A1', 'PC', 'SAT'];
+
+/**
+ * Domains that appear as a bubble trail on Home. SAT Math is excluded because
+ * it has its own section at /sat — a test-prep surface with playbooks, drills,
+ * and full-length mock tests rather than a star trail.
+ */
+export const TRAIL_DOMAINS: Domain[] = ['5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'A1', 'PC'];
 
 /**
  * The six grade-5/6 domains that feed the SHARED assessments (Finals, Mock
@@ -13,6 +20,7 @@ export const CORE_DOMAINS: Domain[] = ['5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.
 export function gradeLabelFor(domain: Domain): string {
   if (domain === 'A1') return 'Algebra 1';
   if (domain === 'PC') return 'Precalculus';
+  if (domain === 'SAT') return 'SAT Math';
   return domain.startsWith('5.') ? '5th grade' : '6th grade';
 }
 
@@ -20,6 +28,7 @@ export function gradeLabelFor(domain: Domain): string {
 export function domainCourseName(domain: Domain): string {
   if (domain === 'A1') return 'Algebra 1 for Middle School';
   if (domain === 'PC') return 'Precalculus for Middle School';
+  if (domain === 'SAT') return 'Digital SAT Math Prep';
   const grade = domain.startsWith('5.') ? '5th' : '6th';
   return `${DOMAIN_LABELS[domain]} — ${grade} Grade Math`;
 }
@@ -33,6 +42,7 @@ export const DOMAIN_LABELS: Record<Domain, string> = {
   '6.SP': 'Statistics & Probability',
   A1: 'Algebra 1',
   PC: 'Precalculus',
+  SAT: 'SAT Math',
 };
 
 export const DOMAIN_DESCRIPTIONS: Record<Domain, string> = {
@@ -44,6 +54,7 @@ export const DOMAIN_DESCRIPTIONS: Record<Domain, string> = {
   '6.SP': 'Data displays, measures of center, and variability',
   A1: 'Equations, inequalities, functions, lines, systems, exponents, and quadratics',
   PC: 'Function transformations, polynomials, logarithms, trigonometry, sequences, and limits',
+  SAT: 'The full Digital SAT Math blueprint: algebra, advanced math, problem-solving and data analysis, and geometry and trigonometry',
 };
 
 export const DOMAIN_COLORS: Record<Domain, string> = {
@@ -57,6 +68,7 @@ export const DOMAIN_COLORS: Record<Domain, string> = {
   '6.SP': '#A85F5F', // brick
   A1: '#5A6E9E',     // indigo slate
   PC: '#8C5F7D',     // mauve
+  SAT: '#3E6B7A',    // petrol — the capstone section
 };
 
 export const DOMAIN_EMOJI: Record<Domain, string> = {
@@ -68,6 +80,7 @@ export const DOMAIN_EMOJI: Record<Domain, string> = {
   '6.SP': '📊',
   A1: '🚀',
   PC: '🎢',
+  SAT: '🎯',
 };
 
 export type AnswerType =

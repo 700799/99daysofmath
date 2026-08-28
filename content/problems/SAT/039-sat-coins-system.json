@@ -1,0 +1,56 @@
+{
+  "id": "SAT.039",
+  "domain": "SAT",
+  "unit": 4,
+  "orderInUnit": 9,
+  "standard": "SAT.ALG.4",
+  "difficulty": 3,
+  "prompt": "A jar contains only dimes and quarters. There are $30$ coins in all, worth $\\$5.70$ total. How many quarters are in the jar?",
+  "answerType": "numeric",
+  "primaryAnswer": "18",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Write one equation for the *count* of coins and one for their *value*.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Write one equation for the *count* of coins and one for their *value*."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try fewer coins: $4$ coins of nickels and dimes worth $\\$0.35$. All nickels would be $\\$0.20$; the $\\$0.15$ excess divided by the $\\$0.05$ swap value gives $3$ dimes. Same assume-then-adjust logic."
+    },
+    {
+      "level": "guide",
+      "text": "$d + q = 30$ and $0.10d + 0.25q = 5.70$. Substitute $d = 30 - q$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.10(30 - q) + 0.25q = 5.70$ gives $3 + 0.15q = 5.70$, so $q = 18$."
+    }
+  ],
+  "learningObjective": "Model a count-and-value situation as a system.",
+  "topic": "Systems in context",
+  "explanation": [
+    "Let $d$ = dimes and $q$ = quarters. Count: $d + q = 30$. Value: $0.10d + 0.25q = 5.70$.",
+    "Substitute $d = 30 - q$: $0.10(30 - q) + 0.25q = 5.70$, so $3 - 0.10q + 0.25q = 5.70$.",
+    "$0.15q = 2.70$, so $q = 18$ quarters (and $12$ dimes). Check: $12(0.10) + 18(0.25) = 1.20 + 4.50 = \\$5.70$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Start from an all-dimes jar",
+      "steps": [
+        "If all $30$ coins were dimes the jar would hold $\\$3.00$ — but it holds $\\$5.70$, an excess of $\\$2.70$.",
+        "Swapping one dime for one quarter adds $\\$0.15$ to the total.",
+        "$\\$2.70 \\div \\$0.15 = 18$ swaps, so there are $18$ quarters. This \"assume then adjust\" method skips the system entirely."
+      ]
+    }
+  ],
+  "tags": [
+    "system",
+    "word-problem",
+    "coins"
+  ],
+  "estimatedSeconds": 95
+}

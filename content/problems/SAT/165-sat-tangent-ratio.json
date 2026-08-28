@@ -1,0 +1,54 @@
+{
+  "id": "SAT.165",
+  "domain": "SAT",
+  "unit": 17,
+  "orderInUnit": 5,
+  "standard": "SAT.GEO.3",
+  "difficulty": 2,
+  "prompt": "In a right triangle, the side opposite angle $\\theta$ has length $12$ and the side adjacent to $\\theta$ has length $5$. What is the value of $\\tan\\theta$? Give your answer as a decimal.",
+  "answerType": "numeric",
+  "primaryAnswer": "2.4",
+  "alternativeAnswers": [
+    "12/5"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "TOA: tangent is opposite over adjacent.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "TOA: tangent is opposite over adjacent."
+    },
+    {
+      "level": "guide",
+      "text": "$\\tan\\theta = \\dfrac{12}{5}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2.4$."
+    }
+  ],
+  "learningObjective": "Compute a tangent ratio in a right triangle.",
+  "topic": "Right-triangle trigonometry",
+  "explanation": [
+    "$\\tan = \\dfrac{\\text{opposite}}{\\text{adjacent}} = \\dfrac{12}{5} = 2.4$.",
+    "The hypotenuse here would be $13$ — this is a $5$-$12$-$13$ triangle.",
+    "Note that tangent, unlike sine and cosine, can exceed $1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Range as a sanity check",
+      "steps": [
+        "Sine and cosine are always between $-1$ and $1$, because the hypotenuse is the longest side.",
+        "Tangent has no such bound — it can be any real number.",
+        "So a sine answer above $1$ is definitely wrong, but a tangent above $1$ is perfectly ordinary."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "tangent",
+    "sohcahtoa"
+  ],
+  "estimatedSeconds": 50
+}

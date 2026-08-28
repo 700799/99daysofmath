@@ -1,0 +1,73 @@
+{
+  "id": "SAT.001",
+  "domain": "SAT",
+  "unit": 1,
+  "orderInUnit": 1,
+  "standard": "SAT.ALG.1",
+  "difficulty": 1,
+  "prompt": "If $3x + 7 = 22$, what is the value of $x$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$3$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$5$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$7$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$29/3$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Undo the operations in reverse order: the $+7$ comes off before the $\\times 3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Undo the operations in reverse order: the $+7$ comes off before the $\\times 3$."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract $7$ from both sides to get $3x = 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3x = 15$, so $x = 5$."
+    }
+  ],
+  "learningObjective": "Solve a two-step linear equation in one variable.",
+  "topic": "Two-step equations",
+  "explanation": [
+    "Subtract $7$ from both sides: $3x = 15$.",
+    "Divide both sides by $3$: $x = 5$.",
+    "Check: $3(5) + 7 = 15 + 7 = 22$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Backsolve instead",
+      "steps": [
+        "The choices are plain numbers, so test one. Start with B, $x = 5$.",
+        "$3(5) + 7 = 22$ ✓ — done, with no algebra at all.",
+        "On a timed section this is often faster than solving forward, and it cannot be derailed by a sign error."
+      ]
+    }
+  ],
+  "tags": [
+    "linear-equation",
+    "one-variable",
+    "backsolve"
+  ],
+  "estimatedSeconds": 40
+}

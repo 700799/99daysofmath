@@ -1,0 +1,72 @@
+{
+  "id": "SAT.054",
+  "domain": "SAT",
+  "unit": 6,
+  "orderInUnit": 4,
+  "standard": "SAT.ADV.1",
+  "difficulty": 2,
+  "prompt": "Which expression is equivalent to $x^2 - 9$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$(x - 3)^2$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$(x + 3)(x - 3)$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$(x + 3)^2$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$(x - 9)(x + 1)$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Both terms are perfect squares, separated by a minus sign.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Both terms are perfect squares, separated by a minus sign."
+    },
+    {
+      "level": "guide",
+      "text": "The pattern $a^2 - b^2 = (a + b)(a - b)$ applies with $a = x$ and $b = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(x + 3)(x - 3)$."
+    }
+  ],
+  "learningObjective": "Factor a difference of two squares.",
+  "topic": "Factoring",
+  "explanation": [
+    "$x^2 - 9$ is $x^2 - 3^2$: a difference of squares.",
+    "The pattern is $a^2 - b^2 = (a + b)(a - b)$, giving $(x + 3)(x - 3)$.",
+    "Expanding confirms it: $x^2 - 3x + 3x - 9 = x^2 - 9$ ✓. Choice A expands to $x^2 - 6x + 9$, which has a middle term the original does not."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the middle term vanishes",
+      "steps": [
+        "Multiplying $(x + 3)(x - 3)$ produces $-3x$ and $+3x$, which cancel.",
+        "That cancellation is the whole reason the difference of squares factors so cleanly.",
+        "It is the single most frequently used factoring pattern on the SAT — recognizing \"square minus square\" on sight is worth real points."
+      ]
+    }
+  ],
+  "tags": [
+    "factoring",
+    "difference-of-squares"
+  ],
+  "estimatedSeconds": 45
+}

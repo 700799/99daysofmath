@@ -1,0 +1,56 @@
+{
+  "id": "SAT.020",
+  "domain": "SAT",
+  "unit": 2,
+  "orderInUnit": 10,
+  "standard": "SAT.ALG.2",
+  "difficulty": 3,
+  "prompt": "The function $f$ is linear, with $f(2) = 9$ and $f(6) = 1$. What is the value of $f(10)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "-7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The outputs are decreasing, so the slope is negative.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The outputs are decreasing, so the slope is negative."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try smaller steps: if $f(1) = 6$ and $f(2) = 4$, the slope is $-2$, so $f(3) = 2$. Each step of $+1$ in $x$ subtracts the same amount — that is all a negative slope means."
+    },
+    {
+      "level": "guide",
+      "text": "Slope $= \\dfrac{1 - 9}{6 - 2} = -2$."
+    },
+    {
+      "level": "reveal",
+      "text": "From $x = 6$ to $x = 10$ is $4$ more steps: $1 + (-2)(4) = -7$."
+    }
+  ],
+  "learningObjective": "Extend a decreasing linear function beyond the given values.",
+  "topic": "Linear growth",
+  "explanation": [
+    "Slope $= \\dfrac{1 - 9}{6 - 2} = \\dfrac{-8}{4} = -2$.",
+    "Each step of $+1$ in $x$ lowers the output by $2$.",
+    "From $x = 6$ to $x = 10$: $f(10) = 1 - 2(4) = -7$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spot the pattern",
+      "steps": [
+        "$x = 2, 6, 10$ are equally spaced — each gap is $4$.",
+        "Equal steps in $x$ produce equal steps in $y$ for a linear function, and the first step was $9 \\to 1$, a drop of $8$.",
+        "So the next step drops $8$ again: $1 - 8 = -7$. No slope formula needed."
+      ]
+    }
+  ],
+  "tags": [
+    "linear-function",
+    "negative-slope",
+    "pattern"
+  ],
+  "estimatedSeconds": 70
+}

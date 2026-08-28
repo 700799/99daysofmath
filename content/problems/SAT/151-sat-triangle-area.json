@@ -1,0 +1,50 @@
+{
+  "id": "SAT.151",
+  "domain": "SAT",
+  "unit": 16,
+  "orderInUnit": 1,
+  "standard": "SAT.GEO.2",
+  "difficulty": 1,
+  "prompt": "A triangle has a base of $12$ and a height of $5$. What is its area?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Area of a triangle is half the base times the height.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Area of a triangle is half the base times the height."
+    },
+    {
+      "level": "guide",
+      "text": "$\\tfrac{1}{2}(12)(5)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$30$."
+    }
+  ],
+  "learningObjective": "Compute the area of a triangle.",
+  "topic": "Area",
+  "explanation": [
+    "Area $= \\tfrac{1}{2}bh = \\tfrac{1}{2}(12)(5)$.",
+    "$= \\tfrac{1}{2}(60) = 30$.",
+    "Forgetting the $\\tfrac{1}{2}$ gives $60$, which is the area of the surrounding rectangle — and an answer choice."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the one-half is there",
+      "steps": [
+        "Any triangle is exactly half of a rectangle with the same base and height.",
+        "Draw the rectangle around it and the halving becomes obvious rather than memorized.",
+        "This also explains why the height must be perpendicular to the base — it is the side of that rectangle."
+      ]
+    }
+  ],
+  "tags": [
+    "area",
+    "triangle"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,72 @@
+{
+  "id": "SAT.051",
+  "domain": "SAT",
+  "unit": 6,
+  "orderInUnit": 1,
+  "standard": "SAT.ADV.1",
+  "difficulty": 1,
+  "prompt": "Which expression is equivalent to $x^5 \\cdot x^3$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$x^{8}$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$x^{15}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$2x^{8}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$x^{2}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Same base, multiplied together — the exponents combine by addition.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same base, multiplied together — the exponents combine by addition."
+    },
+    {
+      "level": "guide",
+      "text": "$x^5 \\cdot x^3 = x^{5+3}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x^8$."
+    }
+  ],
+  "learningObjective": "Apply the product rule for exponents.",
+  "topic": "Exponent rules",
+  "explanation": [
+    "When powers of the same base are multiplied, add the exponents: $x^5 \\cdot x^3 = x^{5+3} = x^8$.",
+    "Choice B multiplies the exponents, which is the rule for a power raised to a power, not for a product.",
+    "Choice C invents a coefficient of $2$ — the bases multiply, they do not add."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the factors",
+      "steps": [
+        "$x^5$ is five copies of $x$; $x^3$ is three copies.",
+        "Multiplied together that is eight copies of $x$ in a row, which is $x^8$.",
+        "Whenever an exponent rule feels uncertain, writing out the factors for small cases settles it in seconds."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "product-rule"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,55 @@
+{
+  "id": "SAT.167",
+  "domain": "SAT",
+  "unit": 17,
+  "orderInUnit": 7,
+  "standard": "SAT.GEO.3",
+  "difficulty": 3,
+  "prompt": "A right triangle has a hypotenuse of length $13$ and one leg of length $5$. What is the length of the other leg?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Rearrange $a^2 + b^2 = c^2$ to solve for the missing leg.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Rearrange $a^2 + b^2 = c^2$ to solve for the missing leg."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a known triple: hypotenuse $5$ with a leg of $3$ gives $\\sqrt{25 - 9} = 4$. Finding a leg means subtracting, and the answer must come out smaller than the hypotenuse."
+    },
+    {
+      "level": "guide",
+      "text": "$b^2 = 13^2 - 5^2 = 169 - 25 = 144$."
+    },
+    {
+      "level": "reveal",
+      "text": "$b = 12$."
+    }
+  ],
+  "learningObjective": "Apply the Pythagorean theorem to find a leg.",
+  "topic": "Pythagorean theorem",
+  "explanation": [
+    "The hypotenuse is $c = 13$, so $5^2 + b^2 = 13^2$.",
+    "$b^2 = 169 - 25 = 144$, giving $b = 12$.",
+    "This is the $5$-$12$-$13$ triple."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Subtract when finding a leg, add when finding the hypotenuse",
+      "steps": [
+        "Adding here would give $\\sqrt{169 + 25} \\approx 13.9$ — larger than the hypotenuse, which is impossible.",
+        "The hypotenuse is always the longest side, so a leg must come out smaller than it.",
+        "That plausibility check catches the add/subtract error immediately."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean",
+    "missing-leg"
+  ],
+  "estimatedSeconds": 60
+}

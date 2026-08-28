@@ -1,0 +1,56 @@
+{
+  "id": "SAT.150",
+  "domain": "SAT",
+  "unit": 15,
+  "orderInUnit": 10,
+  "standard": "SAT.GEO.1",
+  "difficulty": 3,
+  "prompt": "The angles of a triangle measure $(2x)°$, $(3x + 10)°$, and $(x - 10)°$. What is the value of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Set the sum of the three expressions equal to $180$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Set the sum of the three expressions equal to $180$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try simpler expressions: angles $x$, $x$, and $x$ give $3x = 180$, so $x = 60$. Sum all three expressions, set the total to $180$, and solve."
+    },
+    {
+      "level": "guide",
+      "text": "$2x + (3x + 10) + (x - 10) = 180$."
+    },
+    {
+      "level": "reveal",
+      "text": "The constants cancel: $6x = 180$, so $x = 30$."
+    }
+  ],
+  "learningObjective": "Solve for a variable using the triangle angle sum.",
+  "topic": "Triangle angles",
+  "explanation": [
+    "The three angles sum to $180°$: $2x + 3x + 10 + x - 10 = 180$.",
+    "Combine like terms — the $+10$ and $-10$ cancel: $6x = 180$.",
+    "$x = 30$. The angles are $60°$, $100°$, and $20°$, which do sum to $180$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Finish by checking, not by stopping",
+      "steps": [
+        "The question asked for $x$, which is $30$ — not for an angle measure.",
+        "But computing the three angles anyway is a fast, complete verification.",
+        "If they had not summed to $180$, you would know immediately that the algebra went wrong."
+      ]
+    }
+  ],
+  "tags": [
+    "triangle",
+    "angle-sum",
+    "algebra"
+  ],
+  "estimatedSeconds": 70
+}

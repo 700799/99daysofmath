@@ -1,0 +1,56 @@
+{
+  "id": "SAT.147",
+  "domain": "SAT",
+  "unit": 15,
+  "orderInUnit": 7,
+  "standard": "SAT.GEO.1",
+  "difficulty": 3,
+  "prompt": "The measures of the three angles of a triangle are in the ratio $1 : 2 : 3$. What is the measure, in degrees, of the largest angle?",
+  "answerType": "numeric",
+  "primaryAnswer": "90",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Call the angles $x$, $2x$, and $3x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Call the angles $x$, $2x$, and $3x$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an easier ratio: angles in the ratio $1 : 1 : 2$ give $4x = 180$, so $x = 45$ and the angles are $45$, $45$, $90$. Add the ratio parts, then divide $180$ among them."
+    },
+    {
+      "level": "guide",
+      "text": "Their sum is $6x = 180$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 30$, so the largest angle is $3(30) = 90$ degrees."
+    }
+  ],
+  "learningObjective": "Use a ratio together with the triangle angle sum.",
+  "topic": "Triangle angles",
+  "explanation": [
+    "Let the angles be $x$, $2x$, and $3x$.",
+    "Their sum is $180$: $x + 2x + 3x = 6x = 180$, so $x = 30$.",
+    "The angles are $30°$, $60°$, and $90°$ — the largest is $90°$, so this is a right triangle."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Ratio parts split the total",
+      "steps": [
+        "The ratio $1 : 2 : 3$ has $6$ parts in total, and those parts share $180°$.",
+        "Each part is $180 \\div 6 = 30°$, so the angles are $30$, $60$, and $90$.",
+        "This \"total parts\" method works for any ratio question — angles, money, or ingredients."
+      ]
+    }
+  ],
+  "tags": [
+    "ratio",
+    "triangle",
+    "angle-sum"
+  ],
+  "estimatedSeconds": 70
+}

@@ -1,0 +1,55 @@
+{
+  "id": "SAT.120",
+  "domain": "SAT",
+  "unit": 12,
+  "orderInUnit": 10,
+  "standard": "SAT.PSDA.2",
+  "difficulty": 3,
+  "prompt": "An account holds $\\$2{,}000$ and earns $5\\%$ interest compounded annually. What is the balance, in dollars, after $2$ years?",
+  "answerType": "numeric",
+  "primaryAnswer": "2205",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Compounded means the second year earns interest on the first year's interest too.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Compounded means the second year earns interest on the first year's interest too."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try two easy years: $\\$100$ at $10\\%$ becomes $\\$110$, then $\\$121$ — not $\\$120$. The second year earns interest on the first year's interest too."
+    },
+    {
+      "level": "guide",
+      "text": "$2000 \\times 1.05 = 2100$ after one year."
+    },
+    {
+      "level": "reveal",
+      "text": "$2100 \\times 1.05 = \\$2{,}205$."
+    }
+  ],
+  "learningObjective": "Compute a compound-interest balance.",
+  "topic": "Interest",
+  "explanation": [
+    "Compound interest applies the multiplier once per period: $A = 2000(1.05)^2$.",
+    "Year 1: $2000 \\times 1.05 = \\$2100$. Year 2: $2100 \\times 1.05 = \\$2205$.",
+    "The extra $\\$5$ over simple interest is the interest earned on the first year's $\\$100$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compound versus simple",
+      "steps": [
+        "Simple interest would pay $5\\%$ of the original $\\$2000$ each year: $\\$100 + \\$100 = \\$2200$.",
+        "Compound interest pays on the growing balance, so it reaches $\\$2205$.",
+        "The gap is small over two years and enormous over twenty — which is why the SAT tests that you know they are different."
+      ]
+    }
+  ],
+  "tags": [
+    "compound-interest",
+    "exponential"
+  ],
+  "estimatedSeconds": 85
+}

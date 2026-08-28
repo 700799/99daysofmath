@@ -1,0 +1,56 @@
+{
+  "id": "SAT.080",
+  "domain": "SAT",
+  "unit": 8,
+  "orderInUnit": 10,
+  "standard": "SAT.ADV.3",
+  "difficulty": 3,
+  "prompt": "The graph of $f(x) = x^2 + bx + 9$ touches the $x$-axis at exactly one point, and $b$ is positive. What is the value of $b$?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Touching the $x$-axis at exactly one point means exactly one real zero.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Touching the $x$-axis at exactly one point means exactly one real zero."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a known case: $x^2 + 4x + 4 = (x + 2)^2$ touches the axis once, and here $b = 4$ with $c = 4$ — note $b = 2\\sqrt{c}$. Tangency means the trinomial is a perfect square."
+    },
+    {
+      "level": "guide",
+      "text": "Set the discriminant to zero: $b^2 - 4(1)(9) = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$b^2 = 36$, so $b = \\pm 6$; since $b$ is positive, $b = 6$."
+    }
+  ],
+  "learningObjective": "Connect tangency to the x-axis with a zero discriminant.",
+  "topic": "The discriminant",
+  "explanation": [
+    "A parabola touching the $x$-axis at exactly one point has a repeated root, so its discriminant is zero.",
+    "$b^2 - 4(1)(9) = 0$ gives $b^2 = 36$ and $b = \\pm 6$.",
+    "The problem states $b$ is positive, so $b = 6$. Check: $x^2 + 6x + 9 = (x + 3)^2$, tangent at $x = -3$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read it as a perfect square",
+      "steps": [
+        "One repeated root means the quadratic is a perfect square: $(x + k)^2 = x^2 + 2kx + k^2$.",
+        "Matching the constant: $k^2 = 9$, so $k = \\pm 3$.",
+        "Then $b = 2k = \\pm 6$, and the positivity condition selects $6$. The condition on $b$ exists precisely because both signs are otherwise valid."
+      ]
+    }
+  ],
+  "tags": [
+    "discriminant",
+    "tangent",
+    "perfect-square"
+  ],
+  "estimatedSeconds": 85
+}

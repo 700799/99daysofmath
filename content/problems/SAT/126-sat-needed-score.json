@@ -1,0 +1,51 @@
+{
+  "id": "SAT.126",
+  "domain": "SAT",
+  "unit": 13,
+  "orderInUnit": 6,
+  "standard": "SAT.PSDA.3",
+  "difficulty": 2,
+  "prompt": "A student has taken $5$ tests with an average score of $82$. What score is needed on a sixth test to raise the average to exactly $84$?",
+  "answerType": "numeric",
+  "primaryAnswer": "94",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Work with totals, not averages.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Work with totals, not averages."
+    },
+    {
+      "level": "guide",
+      "text": "Current total: $5 \\times 82 = 410$. Needed total: $6 \\times 84 = 504$."
+    },
+    {
+      "level": "reveal",
+      "text": "$504 - 410 = 94$."
+    }
+  ],
+  "learningObjective": "Use the sum-equals-mean-times-count relationship.",
+  "topic": "Working with means",
+  "explanation": [
+    "The key identity is sum $=$ mean $\\times$ count.",
+    "Current sum: $5 \\times 82 = 410$. Required sum for six tests averaging $84$: $6 \\times 84 = 504$.",
+    "The sixth score must make up the difference: $504 - 410 = 94$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in terms of the deficit",
+      "steps": [
+        "To lift the average by $2$ points, all five existing tests need $2$ extra points each — a deficit of $10$.",
+        "The new test must also hit the target of $84$ itself, plus cover that $10$.",
+        "$84 + 10 = 94$. This \"cover the deficit\" view is fast and makes the answer feel inevitable."
+      ]
+    }
+  ],
+  "tags": [
+    "mean",
+    "sum",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}
