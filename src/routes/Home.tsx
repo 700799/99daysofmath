@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  DOMAINS,
+  TRAIL_DOMAINS,
   DOMAIN_LABELS,
   DOMAIN_DESCRIPTIONS,
   DOMAIN_COLORS,
@@ -22,7 +22,7 @@ const HOME_JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Math10x math trails',
-  itemListElement: DOMAINS.map((d, i) => ({
+  itemListElement: TRAIL_DOMAINS.map((d, i) => ({
     '@type': 'ListItem',
     position: i + 1,
     item: {
@@ -37,9 +37,9 @@ const HOME_JSON_LD = {
 
 export function Home() {
   useSeo({
-    title: 'Math10x — Free Math for Grades 5-6 Plus Algebra 1 & Precalculus',
+    title: 'Math10x — Free Math for Grades 5-6, Algebra 1, Precalculus & SAT Prep',
     description:
-      'Math10x makes math click for grades 5-6 and beyond: clear lessons, worked examples, and practice across ratios, fractions, geometry, statistics, Algebra 1 and Precalculus — plus an arcade of games kids unlock by learning.',
+      'Math10x makes math click for grades 5-6 and beyond: clear lessons, worked examples, and practice across ratios, fractions, geometry, statistics, Algebra 1, Precalculus, and full Digital SAT Math prep — plus an arcade of games kids unlock by learning.',
     canonicalPath: '/',
     jsonLd: HOME_JSON_LD,
   });
@@ -65,7 +65,7 @@ export function Home() {
             Pick a trail, {displayName}!
           </h1>
           <p className="text-ink-muted mt-0.5 text-sm sm:text-base">
-            Gr-5 foundations, five 6th-grade trails, plus Algebra 1 and Precalculus. Earn stars, stickers, and XP.
+            Gr-5 foundations, five 6th-grade trails, Algebra 1, Precalculus, and SAT Math prep. Earn stars, stickers, and XP.
           </p>
         </div>
       </div>
@@ -179,8 +179,30 @@ export function Home() {
         </Link>
       </div>
 
+      {/* SAT Math — its own section, not a trail */}
+      <Link
+        to="/sat"
+        className="mb-4 block rounded-3xl border-2 border-line bg-surface p-4 sm:p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
+        style={{ borderLeftWidth: 10, borderLeftColor: DOMAIN_COLORS.SAT }}
+      >
+        <div className="flex items-start gap-3 sm:gap-4">
+          <div className="text-4xl sm:text-5xl">🎯</div>
+          <div className="min-w-0 flex-1">
+            <div className="font-display text-base font-extrabold text-ink sm:text-lg">SAT Math</div>
+            <div className="mt-0.5 text-xs font-display font-bold uppercase tracking-wider text-ink-muted">
+              Digital SAT prep
+            </div>
+            <div className="mt-1 text-sm text-ink-muted">
+              The full blueprint: 18 unit playbooks, 180 practice questions with worked
+              explanations, 100+ strategy tips, and 5 full-length mock tests with scoring.
+            </div>
+            <div className="mt-2 text-xs text-ink-muted">180 problems · 18 units · 5 mock tests</div>
+          </div>
+        </div>
+      </Link>
+
       <div className="space-y-3">
-        {DOMAINS.map((d, i) => {
+        {TRAIL_DOMAINS.map((d, i) => {
           const dp = progress[d];
           const counts = summary?.find((s) => s.domain === d);
           const earned = dp

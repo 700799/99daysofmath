@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
 import { AuthBootstrap } from './components/AuthBootstrap';
 import { Home } from './routes/Home';
@@ -71,6 +71,10 @@ const MochiSurvivors = lazy(() => import('./routes/arcade/MochiSurvivors').then(
 const Fishing = lazy(() => import('./routes/arcade/Fishing').then((m) => ({ default: m.Fishing })));
 const Tangram = lazy(() => import('./routes/arcade/Tangram').then((m) => ({ default: m.Tangram })));
 const BubblePop = lazy(() => import('./routes/arcade/BubblePop').then((m) => ({ default: m.BubblePop })));
+const SatHub = lazy(() => import('./routes/sat/SatHub').then((m) => ({ default: m.SatHub })));
+const SatUnit = lazy(() => import('./routes/sat/SatUnit').then((m) => ({ default: m.SatUnit })));
+const SatTips = lazy(() => import('./routes/sat/SatTips').then((m) => ({ default: m.SatTips })));
+const SatTest = lazy(() => import('./routes/sat/SatTest').then((m) => ({ default: m.SatTest })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -92,6 +96,12 @@ export default function App() {
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* SAT Math is its own section rather than a star trail. */}
+          <Route path="/sat" element={<SatHub />} />
+          <Route path="/sat/tips" element={<SatTips />} />
+          <Route path="/sat/unit/:n" element={<SatUnit />} />
+          <Route path="/sat/test/:n" element={<SatTest />} />
+          <Route path="/trail/SAT" element={<Navigate to="/sat" replace />} />
           <Route path="/trail/:domain" element={<DomainTrail />} />
           <Route path="/unit/:domain/:unit" element={<Unit />} />
           <Route path="/unit/:domain/:unit/results" element={<UnitResults />} />
