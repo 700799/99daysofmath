@@ -1,0 +1,57 @@
+{
+  "id": "PC.131",
+  "domain": "PC",
+  "unit": 14,
+  "orderInUnit": 1,
+  "standard": "PC.LIM.A.1",
+  "difficulty": 1,
+  "prompt": "As $x \\to 2$, what value does $3x + 1$ approach?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A limit asks \"where is this heading?\" For a smooth, unbroken rule you can just walk right in and substitute.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A limit asks \"where is this heading?\" For a smooth, unbroken rule you can just walk right in and substitute."
+    },
+    {
+      "level": "guide",
+      "text": "Put $x = 2$ into $3x + 1$: that is $3(2) + 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 + 1 = 7$."
+    }
+  ],
+  "explanation": [
+    "This rule has no holes and no breaks near $x = 2$.",
+    "When nothing is broken, the limit is just the value: substitute.",
+    "$3(2) + 1 = 6 + 1$.",
+    "$= 7$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sneak up with a table",
+      "steps": [
+        "Try x = 1.9: 3(1.9) + 1 = 6.7. Try x = 1.99: 6.97. Try x = 1.999: 6.997.",
+        "Now from above: x = 2.1 gives 7.3, and x = 2.01 gives 7.03.",
+        "Both sides are squeezing toward the same number, 7. That is the limit."
+      ]
+    },
+    {
+      "title": "Read it off the line",
+      "steps": [
+        "y = 3x + 1 is a straight line with no gaps anywhere.",
+        "Walk your finger along the line toward x = 2 and watch the height.",
+        "The height arrives exactly at 7 — for an unbroken graph, \"heading toward\" and \"lands on\" are the same thing."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "substitution"
+  ],
+  "estimatedSeconds": 30
+}

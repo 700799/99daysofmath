@@ -1,0 +1,54 @@
+{
+  "id": "PC.008",
+  "domain": "PC",
+  "unit": 1,
+  "orderInUnit": 8,
+  "standard": "PC.FUN.A.1",
+  "difficulty": 3,
+  "prompt": "The graph of $y = 2(x - 3)^2 + 5$ is a moved and stretched parabola. What is the $x$-coordinate of its vertex?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Only the part INSIDE the parentheses decides the left-right position. Ignore the $2$ and the $+5$ for now.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Only the part INSIDE the parentheses decides the left-right position. Ignore the $2$ and the $+5$ for now."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $y = (x - 1)^2$. The vertex is where $x - 1 = 0$, so $x = 1$. Same method: set the inside equal to zero."
+    },
+    {
+      "level": "guide",
+      "text": "Set the inside to zero: $x - 3 = 0$. Solve for $x$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x - 3 = 0$ gives $x = 3$, so the vertex sits at $x = 3$."
+    }
+  ],
+  "explanation": [
+    "A parabola turns around where the squared part equals zero.",
+    "Set $x - 3 = 0$, so $x = 3$.",
+    "The $2$ stretches it and the $+5$ lifts it, but neither moves it left or right. The vertex is at $x = 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Three moves, in order",
+      "steps": [
+        "Start with the sticker $y = x^2$, vertex at $(0, 0)$.",
+        "Slide RIGHT 3 (minus moves right): vertex now at $(3, 0)$.",
+        "Stretch by 2 and lift 5: the vertex rises to $(3, 5)$, but its $x$-value stays 3."
+      ]
+    }
+  ],
+  "tags": [
+    "transformations",
+    "vertex",
+    "multi-step"
+  ],
+  "estimatedSeconds": 55
+}

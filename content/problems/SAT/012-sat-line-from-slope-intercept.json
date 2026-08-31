@@ -1,0 +1,72 @@
+{
+  "id": "SAT.012",
+  "domain": "SAT",
+  "unit": 2,
+  "orderInUnit": 2,
+  "standard": "SAT.ALG.2",
+  "difficulty": 1,
+  "prompt": "Which equation represents the line with slope $-2$ that passes through the point $(0, 5)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$y = 5x - 2$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$y = -2x + 5$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$y = -2x - 5$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$y = 2x + 5$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "A point with $x = 0$ is the $y$-intercept.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A point with $x = 0$ is the $y$-intercept."
+    },
+    {
+      "level": "guide",
+      "text": "In $y = mx + b$, $m$ is the slope and $b$ is the $y$-intercept."
+    },
+    {
+      "level": "reveal",
+      "text": "$m = -2$ and $b = 5$, so $y = -2x + 5$."
+    }
+  ],
+  "learningObjective": "Write a linear equation from a slope and the y-intercept.",
+  "topic": "Slope-intercept form",
+  "explanation": [
+    "The point $(0, 5)$ has $x = 0$, so it is the $y$-intercept: $b = 5$.",
+    "The slope is given as $m = -2$.",
+    "Substituting into $y = mx + b$ gives $y = -2x + 5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Eliminate by testing the point",
+      "steps": [
+        "Every correct choice must give $y = 5$ when $x = 0$.",
+        "A gives $-2$, C gives $-5$ — both out. B and D both give $5$.",
+        "Now use the slope to separate them: only B has $m = -2$."
+      ]
+    }
+  ],
+  "tags": [
+    "slope-intercept",
+    "linear-function"
+  ],
+  "estimatedSeconds": 40
+}

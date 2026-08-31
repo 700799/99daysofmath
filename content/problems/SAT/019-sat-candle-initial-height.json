@@ -1,0 +1,56 @@
+{
+  "id": "SAT.019",
+  "domain": "SAT",
+  "unit": 2,
+  "orderInUnit": 9,
+  "standard": "SAT.ALG.2",
+  "difficulty": 3,
+  "prompt": "A candle burns at a constant rate. After $2$ hours it is $18$ cm tall, and after $5$ hours it is $10.5$ cm tall. What was the height of the candle, in centimeters, before it was lit?",
+  "answerType": "numeric",
+  "primaryAnswer": "23",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Constant rate means a linear model. Find the rate first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Constant rate means a linear model. Find the rate first."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an easier pair: after $1$ hour a candle is $9$ cm and after $2$ hours it is $7$ cm, so it burns $2$ cm per hour. Running back one hour from the 9 cm mark gives $11$ cm at the start."
+    },
+    {
+      "level": "guide",
+      "text": "It lost $18 - 10.5 = 7.5$ cm over $3$ hours, so it burns $2.5$ cm per hour."
+    },
+    {
+      "level": "reveal",
+      "text": "Run back $2$ hours from the 18 cm mark: $18 + 2(2.5) = 23$ cm."
+    }
+  ],
+  "learningObjective": "Extrapolate a linear model backwards to its initial value.",
+  "topic": "Linear models in context",
+  "explanation": [
+    "The rate of change is $\\dfrac{10.5 - 18}{5 - 2} = \\dfrac{-7.5}{3} = -2.5$ cm per hour.",
+    "\"Before it was lit\" means $t = 0$, which is $2$ hours before the 18 cm reading.",
+    "Going backwards adds height: $18 + 2(2.5) = 23$ cm."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Write the equation",
+      "steps": [
+        "With slope $-2.5$ and point $(2, 18)$: $h = -2.5(t - 2) + 18 = -2.5t + 23$.",
+        "The initial height is the $y$-intercept, which the equation now displays directly: $23$ cm.",
+        "The trap is answering $-2.5$ or $18$ — both appear in the setup, neither is the initial height."
+      ]
+    }
+  ],
+  "tags": [
+    "word-problem",
+    "linear-model",
+    "initial-value"
+  ],
+  "estimatedSeconds": 80
+}

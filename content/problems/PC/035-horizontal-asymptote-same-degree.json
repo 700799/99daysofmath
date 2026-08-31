@@ -1,0 +1,48 @@
+{
+  "id": "PC.035",
+  "domain": "PC",
+  "unit": 4,
+  "orderInUnit": 5,
+  "standard": "PC.RAT.A.1",
+  "difficulty": 2,
+  "prompt": "What is the $y$-value of the horizontal asymptote of $f(x) = \\frac{3x^2 + 1}{x^2 - 4}$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Compare the DEGREES of the top and bottom. Both are $2$ here.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Compare the DEGREES of the top and bottom. Both are $2$ here."
+    },
+    {
+      "level": "guide",
+      "text": "When the degrees match, divide the leading coefficients: top $3$, bottom $1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{3}{1} = 3$, so the horizontal asymptote is $y = 3$."
+    }
+  ],
+  "explanation": [
+    "Top degree $2$, bottom degree $2$ — a tie.",
+    "On a tie, the asymptote is the leading coefficient of the top over that of the bottom.",
+    "$\\frac{3}{1} = 3$, so $y = 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Plug in a giant number",
+      "steps": [
+        "Try $x = 100$: top is $30001$, bottom is $9996$.",
+        "Divide: about $3.0$.",
+        "Try $x = 1000$ and it is even closer to 3. The graph flattens out toward the line $y = 3$."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-functions",
+    "horizontal-asymptote"
+  ],
+  "estimatedSeconds": 55
+}

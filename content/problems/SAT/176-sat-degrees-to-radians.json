@@ -1,0 +1,72 @@
+{
+  "id": "SAT.176",
+  "domain": "SAT",
+  "unit": 18,
+  "orderInUnit": 6,
+  "standard": "SAT.GEO.4",
+  "difficulty": 2,
+  "prompt": "What is the radian measure of an angle of $135°$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\dfrac{3\\pi}{4}$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\dfrac{4\\pi}{3}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\dfrac{2\\pi}{3}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\dfrac{3\\pi}{2}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Multiply by $\\dfrac{\\pi}{180}$ to convert degrees to radians.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply by $\\dfrac{\\pi}{180}$ to convert degrees to radians."
+    },
+    {
+      "level": "guide",
+      "text": "$135 \\times \\dfrac{\\pi}{180} = \\dfrac{135\\pi}{180}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Simplify by $45$: $\\dfrac{3\\pi}{4}$."
+    }
+  ],
+  "learningObjective": "Convert between degrees and radians.",
+  "topic": "Radians",
+  "explanation": [
+    "Since $180° = \\pi$ radians, multiply degrees by $\\dfrac{\\pi}{180}$.",
+    "$135 \\times \\dfrac{\\pi}{180} = \\dfrac{135\\pi}{180}$, and $\\gcd(135, 180) = 45$.",
+    "Simplifying gives $\\dfrac{3\\pi}{4}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Reason in quarter-turns",
+      "steps": [
+        "$180°$ is $\\pi$, so $90°$ is $\\dfrac{\\pi}{2}$ and $45°$ is $\\dfrac{\\pi}{4}$.",
+        "$135° = 3 \\times 45°$, so it is $3 \\times \\dfrac{\\pi}{4} = \\dfrac{3\\pi}{4}$.",
+        "Also a quick check: $135°$ is between $90°$ and $180°$, so the answer must be between $\\dfrac{\\pi}{2}$ and $\\pi$ — which eliminates B and D immediately."
+      ]
+    }
+  ],
+  "tags": [
+    "radians",
+    "conversion"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,54 @@
+{
+  "id": "PC.081",
+  "domain": "PC",
+  "unit": 9,
+  "orderInUnit": 1,
+  "standard": "PC.TRIG.A.2",
+  "difficulty": 1,
+  "prompt": "On the unit circle, the angle $0^\\circ$ lands on the point $(1, 0)$. Cosine is the SHADOW ACROSS. What is $\\cos 0^\\circ$?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Cosine is the FIRST number in the point $(x, y)$ — how far across you are.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Cosine is the FIRST number in the point $(x, y)$ — how far across you are."
+    },
+    {
+      "level": "guide",
+      "text": "The point at $0^\\circ$ is $(1, 0)$, so the across number is $1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\cos 0^\\circ = 1$."
+    }
+  ],
+  "explanation": [
+    "The unit circle is a circle of radius $1$ centred at the origin.",
+    "Every angle names one point on it, and that point is always $(\\cos\\theta, \\sin\\theta)$ — cosine is the shadow ACROSS, sine is the height UP.",
+    "At $0^\\circ$ you sit at the far right edge, the point $(1, 0)$, so $\\cos 0^\\circ = 1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the clock hand",
+      "steps": [
+        "Point a hand of length 1 straight to the right, like a clock hand aimed at 3 o'clock. That is the 0° direction.",
+        "Its tip is 1 unit across and 0 units up. The across number IS the cosine, so cos 0° = 1."
+      ]
+    },
+    {
+      "title": "The radius is the ruler",
+      "steps": [
+        "The circle has radius 1, so the tip of the hand is never more than 1 unit from the centre.",
+        "At 0° the hand lies flat along the across-direction, spending ALL of its length going across. Across = 1, up = 0."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "cosine"
+  ],
+  "estimatedSeconds": 30
+}

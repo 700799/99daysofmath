@@ -1,0 +1,78 @@
+{
+  "id": "SAT.010",
+  "domain": "SAT",
+  "unit": 1,
+  "orderInUnit": 10,
+  "standard": "SAT.ALG.1",
+  "difficulty": 3,
+  "prompt": "In the equation $kx + 8 = 3x - 5$, $k$ is a constant. For which value of $k$ does the equation have **no** solution?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$-5$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$0$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$3$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$8$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "No solution means the two sides never meet — parallel lines.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "No solution means the two sides never meet — parallel lines."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try the idea on plain numbers: $2x + 1 = 2x + 9$ has no solution, because subtracting $2x$ leaves $1 = 9$. Matching $x$-coefficients with different constants is exactly what makes an equation unsolvable."
+    },
+    {
+      "level": "guide",
+      "text": "Gather the $x$ terms: $(k - 3)x = -13$."
+    },
+    {
+      "level": "reveal",
+      "text": "If $k = 3$ the left side is $0$ and the equation reads $0 = -13$, which is impossible. So $k = 3$."
+    }
+  ],
+  "learningObjective": "Determine the constant that makes a linear equation unsolvable.",
+  "topic": "Number of solutions",
+  "explanation": [
+    "Move everything to one side: $kx - 3x = -5 - 8$, so $(k - 3)x = -13$.",
+    "If $k \\neq 3$ you can divide by $(k - 3)$ and get exactly one solution.",
+    "If $k = 3$, the equation becomes $0 \\cdot x = -13$, or $0 = -13$ — false for every $x$. So there is no solution when $k = 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Match the slopes",
+      "steps": [
+        "Read each side as a line: $y = kx + 8$ and $y = 3x - 5$.",
+        "Two lines fail to intersect exactly when they are parallel — same slope, different intercept.",
+        "Same slope means $k = 3$; the intercepts $8$ and $-5$ already differ, so there is genuinely no solution."
+      ]
+    }
+  ],
+  "tags": [
+    "number-of-solutions",
+    "no-solution",
+    "parallel"
+  ],
+  "estimatedSeconds": 80
+}

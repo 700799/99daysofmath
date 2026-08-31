@@ -1,0 +1,55 @@
+{
+  "id": "A1.030",
+  "domain": "A1",
+  "unit": 3,
+  "orderInUnit": 10,
+  "standard": "A1.EQ.A.2",
+  "difficulty": 3,
+  "prompt": "Solve for $x$: $5(x - 1) - 2x = 2x + 7$. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Do the full cleanup routine: distribute the $5$, then combine like terms on the left.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Do the full cleanup routine: distribute the $5$, then combine like terms on the left."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up by distributing only: $5(x - 1)$ is $5x - 5$. Now the left side is $5x - 5 - 2x = 3x - 5$. Much friendlier!"
+    },
+    {
+      "level": "guide",
+      "text": "$5x - 5 - 2x = 3x - 5$, so the equation is $3x - 5 = 2x + 7$. Subtract $2x$ from both sides."
+    },
+    {
+      "level": "reveal",
+      "text": "$x - 5 = 7$, so $x = 12$."
+    }
+  ],
+  "explanation": [
+    "Distribute: $5(x - 1) = 5x - 5$.",
+    "Combine like terms on the left: $5x - 5 - 2x = 3x - 5$.",
+    "Subtract $2x$ from both sides: $x - 5 = 7$, so $x = 12$.",
+    "Check: $5(11) - 24 = 31$ and $2(12) + 7 = 31$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Tidy each room first",
+      "steps": [
+        "Treat each side like a messy room: you cannot compare them until both are tidy.",
+        "Left room tidied: $3x - 5$. Right room is already tidy: $2x + 7$.",
+        "Now the equation $3x - 5 = 2x + 7$ is a simple both-sides problem: $x = 12$."
+      ]
+    }
+  ],
+  "tags": [
+    "distribute",
+    "like-terms",
+    "both-sides"
+  ],
+  "estimatedSeconds": 80
+}

@@ -1,0 +1,54 @@
+{
+  "id": "PC.018",
+  "domain": "PC",
+  "unit": 2,
+  "orderInUnit": 8,
+  "standard": "PC.FUN.A.2",
+  "difficulty": 3,
+  "prompt": "A money app turns dollars into euros with $e(d) = 0.8d$, then euros into yen with $y(e) = 150e$. Your friend ended up with $12000$ yen. How many dollars did you start with?",
+  "answerType": "numeric",
+  "primaryAnswer": "100",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You are running the chain BACKWARDS, so undo the LAST machine first — socks then shoes means shoes off first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You are running the chain BACKWARDS, so undo the LAST machine first — socks then shoes means shoes off first."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: a machine doubles, then adds 3, giving 11. Undo backwards: $11 - 3 = 8$, then $8 \\div 2 = 4$. Same idea — undo the last step first."
+    },
+    {
+      "level": "guide",
+      "text": "Undo the yen machine: $12000 \\div 150 = 80$ euros. Now undo the euro machine."
+    },
+    {
+      "level": "reveal",
+      "text": "$80 \\div 0.8 = 100$, so you started with $\\$100$."
+    }
+  ],
+  "explanation": [
+    "Forward the order is dollars $\\to$ euros $\\to$ yen.",
+    "Backward you undo in reverse: yen $\\to$ euros first.",
+    "$12000 \\div 150 = 80$ euros, then $80 \\div 0.8 = 100$ dollars."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Guess and check forward",
+      "steps": [
+        "Try $\\$100$: $0.8 \\times 100 = 80$ euros.",
+        "Then $150 \\times 80 = 12000$ yen — exactly the amount your friend has.",
+        "So the starting amount was $\\$100$."
+      ]
+    }
+  ],
+  "tags": [
+    "inverse-function",
+    "composite-function",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

@@ -1,0 +1,56 @@
+{
+  "id": "PC.073",
+  "domain": "PC",
+  "unit": 8,
+  "orderInUnit": 3,
+  "standard": "PC.TRIG.A.1",
+  "difficulty": 1,
+  "prompt": "For the same angle, the opposite side is $3$, the adjacent side is $4$, and the hypotenuse is $5$. What is the cosine of that angle, as a decimal?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "CAH: Cosine is Adjacent over Hypotenuse.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "CAH: Cosine is Adjacent over Hypotenuse."
+    },
+    {
+      "level": "guide",
+      "text": "Adjacent is $4$ and hypotenuse is $5$, so cosine $= \\frac{4}{5}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{4}{5} = 0.8$."
+    }
+  ],
+  "explanation": [
+    "CAH: Cosine $=$ Adjacent $\\div$ Hypotenuse.",
+    "Adjacent means the leg that touches the angle.",
+    "$4 \\div 5 = 0.8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Adjacent means next door",
+      "steps": [
+        "Two sides touch the angle: one leg and the hypotenuse.",
+        "The leg that touches is the ADJACENT side — the neighbour.",
+        "Cosine is that neighbour over the hypotenuse: $\\frac{4}{5} = 0.8$."
+      ]
+    },
+    {
+      "title": "Sine and cosine trade places",
+      "steps": [
+        "For this angle sine was $\\frac{3}{5}$, using the far side.",
+        "Cosine uses the other leg instead, so it is $\\frac{4}{5}$.",
+        "$\\frac{4}{5} = 0.8$."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "cosine"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,56 @@
+{
+  "id": "SAT.007",
+  "domain": "SAT",
+  "unit": 1,
+  "orderInUnit": 7,
+  "standard": "SAT.ALG.1",
+  "difficulty": 3,
+  "prompt": "If $0.25x + 1.5 = 0.4x - 0.6$, what is the value of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "14",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Decimals are not harder than integers — or multiply everything by $100$ to remove them.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Decimals are not harder than integers — or multiply everything by $100$ to remove them."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try it with friendlier numbers first: $0.5x = 2$. Multiply both sides by $10$ to get $5x = 20$, so $x = 4$. Scaling away the decimals works the same way no matter how many terms there are."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract $0.25x$ from both sides: $1.5 = 0.15x - 0.6$."
+    },
+    {
+      "level": "reveal",
+      "text": "Add $0.6$: $2.1 = 0.15x$, so $x = 14$."
+    }
+  ],
+  "learningObjective": "Solve a linear equation with decimal coefficients.",
+  "topic": "Decimal coefficients",
+  "explanation": [
+    "Subtract $0.25x$ from both sides: $1.5 = 0.15x - 0.6$.",
+    "Add $0.6$ to both sides: $2.1 = 0.15x$.",
+    "Divide: $x = \\dfrac{2.1}{0.15} = 14$. Check: $0.25(14) + 1.5 = 5$ and $0.4(14) - 0.6 = 5$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Clear decimals with Desmos, or by hand",
+      "steps": [
+        "Multiply every term by $100$: $25x + 150 = 40x - 60$.",
+        "Then $210 = 15x$, so $x = 14$ — integers throughout.",
+        "Faster still: graph $y_1 = 0.25x + 1.5$ and $y_2 = 0.4x - 0.6$ in Desmos and click the intersection."
+      ]
+    }
+  ],
+  "tags": [
+    "linear-equation",
+    "decimals",
+    "desmos"
+  ],
+  "estimatedSeconds": 65
+}

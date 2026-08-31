@@ -1,0 +1,66 @@
+{
+  "id": "A1.128",
+  "domain": "A1",
+  "unit": 13,
+  "orderInUnit": 8,
+  "standard": "A1.POLY.A.2",
+  "difficulty": 3,
+  "prompt": "Factor: $x^2 - x - 6$.",
+  "answerType": "expression",
+  "primaryAnswer": "(x - 3)(x + 2)",
+  "alternativeAnswers": [
+    "(x-3)(x+2)",
+    "(x + 2)(x - 3)",
+    "(x+2)(x-3)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Hunt for two numbers that multiply to $-6$ and add to $-1$. One must be negative!",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Hunt for two numbers that multiply to $-6$ and add to $-1$. One must be negative!"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Easier one: $x^2 + 5x + 6$ needs two numbers multiplying to $6$ and adding to $5$ — that is $2$ and $3$. Yours needs a NEGATIVE product."
+    },
+    {
+      "level": "guide",
+      "text": "Try the pairs: $-6$ and $1$ add to $-5$. What about $-3$ and $2$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$-3 \\times 2 = -6$ and $-3 + 2 = -1$, so $x^2 - x - 6 = (x - 3)(x + 2)$."
+    }
+  ],
+  "explanation": [
+    "Need two numbers with product $-6$ and sum $-1$.",
+    "A negative product means one number is negative.",
+    "The pair $-3$ and $+2$ works: product $-6$, sum $-1$.",
+    "So $x^2 - x - 6 = (x - 3)(x + 2)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sign detective",
+      "steps": [
+        "Product negative → the two numbers have DIFFERENT signs.",
+        "Sum negative → the bigger-sized number wears the minus.",
+        "Pairs for 6: (1, 6) and (2, 3). Only −3 and +2 sum to −1."
+      ]
+    },
+    {
+      "title": "Check by expanding",
+      "steps": [
+        "Expand (x − 3)(x + 2): x² + 2x − 3x − 6.",
+        "Combine: x² − x − 6. It matches the original, so the factoring is right."
+      ]
+    }
+  ],
+  "tags": [
+    "factoring",
+    "trinomial",
+    "signs"
+  ],
+  "estimatedSeconds": 70
+}

@@ -1,0 +1,48 @@
+{
+  "id": "PC.023",
+  "domain": "PC",
+  "unit": 3,
+  "orderInUnit": 3,
+  "standard": "PC.POLY.A.1",
+  "difficulty": 1,
+  "prompt": "How many real zeros does $p(x) = (x - 1)(x - 4)(x + 3)$ have?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Each factor hides one zero. Count the factors.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each factor hides one zero. Count the factors."
+    },
+    {
+      "level": "guide",
+      "text": "The zeros are $x = 1$, $x = 4$, and $x = -3$ — all different."
+    },
+    {
+      "level": "reveal",
+      "text": "There are $3$ real zeros."
+    }
+  ],
+  "explanation": [
+    "Set each factor equal to zero one at a time.",
+    "$x = 1$, $x = 4$, and $x = -3$.",
+    "That is $3$ different zeros, so the graph crosses the $x$-axis 3 times."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the crossings",
+      "steps": [
+        "Imagine a wiggly track drawn across a number line.",
+        "It dives through the axis at $-3$, then at 1, then at 4.",
+        "Three dives means three real zeros."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomials",
+    "zeros"
+  ],
+  "estimatedSeconds": 35
+}

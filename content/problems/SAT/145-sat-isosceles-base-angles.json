@@ -1,0 +1,51 @@
+{
+  "id": "SAT.145",
+  "domain": "SAT",
+  "unit": 15,
+  "orderInUnit": 5,
+  "standard": "SAT.GEO.1",
+  "difficulty": 2,
+  "prompt": "In an isosceles triangle, the angle between the two congruent sides measures $40°$. What is the measure, in degrees, of each base angle?",
+  "answerType": "numeric",
+  "primaryAnswer": "70",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The two base angles of an isosceles triangle are equal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The two base angles of an isosceles triangle are equal."
+    },
+    {
+      "level": "guide",
+      "text": "They share the remaining $180 - 40 = 140$ degrees."
+    },
+    {
+      "level": "reveal",
+      "text": "$140 \\div 2 = 70$ degrees each."
+    }
+  ],
+  "learningObjective": "Combine the isosceles base-angle property with the triangle sum.",
+  "topic": "Isosceles triangles",
+  "explanation": [
+    "In an isosceles triangle, the angles opposite the two congruent sides are equal — these are the base angles.",
+    "The vertex angle is $40°$, leaving $180 - 40 = 140°$ split evenly between them.",
+    "Each base angle is $140 \\div 2 = 70°$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Equal sides face equal angles",
+      "steps": [
+        "The rule runs both ways: equal sides mean equal opposite angles, and equal angles mean equal opposite sides.",
+        "Locate which sides are marked congruent, then look *across* from each to find the equal angles.",
+        "Getting the vertex and base angles backwards gives $(180 - 70)/2 = 55$, and that will be an answer choice."
+      ]
+    }
+  ],
+  "tags": [
+    "isosceles",
+    "triangle",
+    "angle-sum"
+  ],
+  "estimatedSeconds": 60
+}

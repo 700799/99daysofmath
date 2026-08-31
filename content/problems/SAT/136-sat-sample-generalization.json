@@ -1,0 +1,73 @@
+{
+  "id": "SAT.136",
+  "domain": "SAT",
+  "unit": 14,
+  "orderInUnit": 6,
+  "standard": "SAT.PSDA.4",
+  "difficulty": 2,
+  "prompt": "A researcher randomly selected $200$ students from Lincoln High School and found that $62\\%$ preferred a later start time. Which conclusion is best supported?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "About $62\\%$ of all high school students nationwide prefer a later start time",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "About $62\\%$ of students at Lincoln High School prefer a later start time",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "A later start time causes students to perform better",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Exactly $62\\%$ of students at Lincoln High School prefer a later start time",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "A sample can only speak for the population it was drawn from.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A sample can only speak for the population it was drawn from."
+    },
+    {
+      "level": "guide",
+      "text": "The sample came from one school, so the conclusion covers that school."
+    },
+    {
+      "level": "reveal",
+      "text": "About $62\\%$ of Lincoln High School students — an estimate, not an exact figure."
+    }
+  ],
+  "learningObjective": "Determine the population a random sample supports conclusions about.",
+  "topic": "Inference from samples",
+  "explanation": [
+    "The students were randomly selected from Lincoln High School, so that school is the population the sample represents.",
+    "Choice A over-generalizes to a population never sampled. Choice C claims causation, which requires a controlled experiment with random assignment.",
+    "Choice D says \"exactly\", but a sample gives an estimate with uncertainty, not an exact population value. Choice B — \"about\", and scoped to the right population — is correct."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two questions settle every inference item",
+      "steps": [
+        "First: who was sampled? The conclusion may not extend beyond that group.",
+        "Second: was there random *assignment* to treatments? Without it you cannot claim cause.",
+        "Random selection buys generalization; random assignment buys causation. They are different, and no study gets one for free from the other."
+      ]
+    }
+  ],
+  "tags": [
+    "inference",
+    "sampling",
+    "generalization"
+  ],
+  "estimatedSeconds": 80
+}

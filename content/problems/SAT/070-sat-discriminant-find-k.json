@@ -1,0 +1,56 @@
+{
+  "id": "SAT.070",
+  "domain": "SAT",
+  "unit": 7,
+  "orderInUnit": 10,
+  "standard": "SAT.ADV.2",
+  "difficulty": 3,
+  "prompt": "In the equation $kx^2 + 12x + 9 = 0$, $k$ is a nonzero constant. If the equation has exactly one real solution, what is the value of $k$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Exactly one real solution means the discriminant equals zero.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Exactly one real solution means the discriminant equals zero."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try it with a known perfect square: $x^2 + 4x + 4$ has discriminant $16 - 16 = 0$ and the single root $x = -2$. Setting $b^2 - 4ac = 0$ is what forces exactly one solution."
+    },
+    {
+      "level": "guide",
+      "text": "Set $12^2 - 4(k)(9) = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$144 = 36k$, so $k = 4$."
+    }
+  ],
+  "learningObjective": "Solve for a leading coefficient using the discriminant condition.",
+  "topic": "The discriminant",
+  "explanation": [
+    "The discriminant is $b^2 - 4ac = 144 - 36k$, and one real solution requires it to be zero.",
+    "$144 - 36k = 0$, so $k = 4$.",
+    "Check: $4x^2 + 12x + 9 = (2x + 3)^2$, which has the single solution $x = -\\tfrac{3}{2}$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Let a Desmos slider find it",
+      "steps": [
+        "Type $y = kx^2 + 12x + 9$ and add a slider for $k$.",
+        "Drag $k$ until the parabola just touches the $x$-axis at one point rather than crossing it twice.",
+        "The slider lands on $k = 4$. This is a genuinely fast route when the algebra is uncertain, and it makes the geometry of \"one solution\" visible."
+      ]
+    }
+  ],
+  "tags": [
+    "discriminant",
+    "parameter",
+    "desmos"
+  ],
+  "estimatedSeconds": 85
+}

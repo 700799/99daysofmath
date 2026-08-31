@@ -1,0 +1,50 @@
+{
+  "id": "SAT.156",
+  "domain": "SAT",
+  "unit": 16,
+  "orderInUnit": 6,
+  "standard": "SAT.GEO.2",
+  "difficulty": 2,
+  "prompt": "A rectangular garden measures $20$ feet by $15$ feet. A square patio measuring $5$ feet on each side is built inside it. What is the area, in square feet, of the remaining garden?",
+  "answerType": "numeric",
+  "primaryAnswer": "275",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the whole area, then subtract the part that is no longer garden.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the whole area, then subtract the part that is no longer garden."
+    },
+    {
+      "level": "guide",
+      "text": "Garden: $20 \\times 15 = 300$. Patio: $5 \\times 5 = 25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$300 - 25 = 275$ square feet."
+    }
+  ],
+  "learningObjective": "Compute a composite area by subtraction.",
+  "topic": "Composite area",
+  "explanation": [
+    "Total rectangle area: $20 \\times 15 = 300$ square feet.",
+    "Patio area: $5^2 = 25$ square feet.",
+    "Remaining garden: $300 - 25 = 275$ square feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Subtract the hole, do not rebuild the shape",
+      "steps": [
+        "Trying to carve the remaining region into rectangles works but takes four times as long.",
+        "Whole minus hole is the standard move for any shaded-region or leftover-area question.",
+        "It also works for circles inside squares, which is the most common version on the test."
+      ]
+    }
+  ],
+  "tags": [
+    "composite-area",
+    "subtraction"
+  ],
+  "estimatedSeconds": 65
+}

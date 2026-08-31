@@ -1,0 +1,51 @@
+{
+  "id": "SAT.073",
+  "domain": "SAT",
+  "unit": 8,
+  "orderInUnit": 3,
+  "standard": "SAT.ADV.3",
+  "difficulty": 2,
+  "prompt": "The function $f$ is defined by $f(x) = (x + 1)(x - 5)$. What is the $x$-coordinate of the vertex of the graph of $f$?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Factored form hands you the zeros. The vertex sits exactly between them.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Factored form hands you the zeros. The vertex sits exactly between them."
+    },
+    {
+      "level": "guide",
+      "text": "The zeros are $-1$ and $5$."
+    },
+    {
+      "level": "reveal",
+      "text": "Their average is $\\dfrac{-1 + 5}{2} = 2$."
+    }
+  ],
+  "learningObjective": "Locate the axis of symmetry as the midpoint of the zeros.",
+  "topic": "Factored form",
+  "explanation": [
+    "Setting each factor to zero gives the $x$-intercepts $x = -1$ and $x = 5$.",
+    "A parabola is symmetric, so its vertex lies halfway between the zeros.",
+    "The midpoint is $\\dfrac{-1 + 5}{2} = 2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Or expand and use −b/2a",
+      "steps": [
+        "$(x + 1)(x - 5) = x^2 - 4x - 5$, so $a = 1$ and $b = -4$.",
+        "$x = -\\dfrac{b}{2a} = -\\dfrac{-4}{2} = 2$ — the same answer.",
+        "Averaging the zeros is faster when the quadratic is already factored; $-b/2a$ is the general tool."
+      ]
+    }
+  ],
+  "tags": [
+    "factored-form",
+    "axis-of-symmetry",
+    "vertex"
+  ],
+  "estimatedSeconds": 55
+}

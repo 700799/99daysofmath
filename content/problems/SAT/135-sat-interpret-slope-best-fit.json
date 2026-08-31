@@ -1,0 +1,73 @@
+{
+  "id": "SAT.135",
+  "domain": "SAT",
+  "unit": 14,
+  "orderInUnit": 5,
+  "standard": "SAT.PSDA.4",
+  "difficulty": 2,
+  "prompt": "A scatterplot relates the number of years since a tree was planted, $x$, to its height in feet, $y$. The line of best fit is $y = 1.8x + 4$. What does $1.8$ represent in this model?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The height of the tree when it was planted",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "The predicted increase in height, in feet, per year",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "The total height of the tree after one year",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The number of years for the tree to reach $1.8$ feet",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The slope is a rate: output units per input unit.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The slope is a rate: output units per input unit."
+    },
+    {
+      "level": "guide",
+      "text": "Here that is feet per year."
+    },
+    {
+      "level": "reveal",
+      "text": "$1.8$ is the predicted growth in feet for each additional year."
+    }
+  ],
+  "learningObjective": "Interpret the slope of a line of best fit in context.",
+  "topic": "Interpreting models",
+  "explanation": [
+    "The slope of any linear model is the change in $y$ for a one-unit change in $x$.",
+    "With $y$ in feet and $x$ in years, the slope is measured in feet per year: the tree grows about $1.8$ feet each year.",
+    "Choice A describes the intercept ($4$ feet at planting). Choice C would be $1.8 + 4 = 5.8$ feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Say the units out loud",
+      "steps": [
+        "Slope units are always \"$y$-units per $x$-unit\" — here, feet per year.",
+        "Once you have said \"feet per year\", only one answer choice can match.",
+        "This works on every interpretation question in this area, and it takes about three seconds."
+      ]
+    }
+  ],
+  "tags": [
+    "best-fit",
+    "interpret-slope",
+    "units"
+  ],
+  "estimatedSeconds": 65
+}

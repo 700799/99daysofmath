@@ -1,0 +1,56 @@
+{
+  "id": "SAT.027",
+  "domain": "SAT",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "SAT.ALG.3",
+  "difficulty": 3,
+  "prompt": "In the equation $3x + ky = 12$, $k$ is a nonzero constant. If the graph has a slope of $\\tfrac{3}{2}$, what is the value of $k$?",
+  "answerType": "numeric",
+  "primaryAnswer": "-2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "For $Ax + By = C$, the slope is $-A/B$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "For $Ax + By = C$, the slope is $-A/B$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try it with a known line: in $2x + 4y = 8$, solving for $y$ gives $y = -\\tfrac{1}{2}x + 2$, and indeed $-A/B = -2/4 = -\\tfrac{1}{2}$. Once you trust the formula, the unknown $k$ is just algebra."
+    },
+    {
+      "level": "guide",
+      "text": "So $-\\dfrac{3}{k} = \\dfrac{3}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Cross-multiply: $3k = -6$, so $k = -2$."
+    }
+  ],
+  "learningObjective": "Solve for an unknown coefficient given a required slope.",
+  "topic": "Parameters in linear equations",
+  "explanation": [
+    "Solve for $y$: $ky = -3x + 12$, so $y = -\\dfrac{3}{k}x + \\dfrac{12}{k}$.",
+    "The slope is $-\\dfrac{3}{k}$, and this must equal $\\dfrac{3}{2}$.",
+    "Cross-multiplying gives $-6 = 3k$, so $k = -2$. Check: $3x - 2y = 12$ becomes $y = \\tfrac{3}{2}x - 6$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Reason about the sign first",
+      "steps": [
+        "The target slope is positive, but the slope formula is $-3/k$ with a positive $3$ on top.",
+        "A negative divided by $k$ can only be positive if $k$ itself is negative — so $k < 0$ before any computation.",
+        "That alone eliminates the positive choices, and the magnitude $|k| = 2$ finishes it."
+      ]
+    }
+  ],
+  "tags": [
+    "slope",
+    "parameter",
+    "standard-form"
+  ],
+  "estimatedSeconds": 75
+}

@@ -1,0 +1,62 @@
+{
+  "id": "PC.070",
+  "domain": "PC",
+  "unit": 7,
+  "orderInUnit": 10,
+  "standard": "PC.LOG.A.2",
+  "difficulty": 3,
+  "prompt": "A town has $1250$ people and its population DOUBLES every $10$ years. After how many years does the town reach $10000$ people?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Divide the target by the start to see how much growth is needed.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Divide the target by the start to see how much growth is needed."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: going from $100$ to $400$ is $\\times 4$, and $4 = 2^2$, so $2$ doublings. Same move — divide, then count doublings."
+    },
+    {
+      "level": "guide",
+      "text": "$10000 \\div 1250 = 8$, and $8 = 2^3$, so you need $3$ doublings."
+    },
+    {
+      "level": "reveal",
+      "text": "$3$ doublings $\\times 10$ years each $= 30$ years."
+    }
+  ],
+  "explanation": [
+    "Set up $1250 \\cdot 2^{t/10} = 10000$.",
+    "Divide by $1250$: $2^{t/10} = 8 = 2^3$, so $t/10 = 3$.",
+    "Multiply by $10$: $t = 30$ years."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count decade by decade",
+      "steps": [
+        "Year 0: $1250$. Year 10: $2500$.",
+        "Year 20: $5000$. Year 30: $10000$.",
+        "The town hits $10{,}000$ people at year $30$."
+      ]
+    },
+    {
+      "title": "Use a log to finish",
+      "steps": [
+        "After dividing you have $2^{t/10} = 8$.",
+        "Take $\\log_2$ of both sides: $t/10 = \\log_2(8) = 3$.",
+        "So $t = 30$ years."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-equation",
+    "population",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

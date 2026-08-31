@@ -1,0 +1,50 @@
+{
+  "id": "PC.005",
+  "domain": "PC",
+  "unit": 1,
+  "orderInUnit": 5,
+  "standard": "PC.FUN.A.1",
+  "difficulty": 2,
+  "prompt": "A skate ramp curves like $y = \\sqrt{x}$. Builders lift the WHOLE ramp $3$ feet higher, giving a new rule $y = \\sqrt{x} + k$. What is $k$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Lifting the whole shape is a vertical slide, and vertical slides happen OUTSIDE the function.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Lifting the whole shape is a vertical slide, and vertical slides happen OUTSIDE the function."
+    },
+    {
+      "level": "guide",
+      "text": "To move a graph up $3$, you add $3$ to every output."
+    },
+    {
+      "level": "reveal",
+      "text": "$k = 3$, so the new ramp is $y = \\sqrt{x} + 3$."
+    }
+  ],
+  "explanation": [
+    "Raising the ramp does not change how steep it is, only how high it sits.",
+    "That is $f(x) + k$ — a vertical slide.",
+    "Up $3$ feet means $k = 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the front edge",
+      "steps": [
+        "The old ramp starts on the ground at $(0, 0)$.",
+        "After the lift, that same front edge is 3 feet in the air: $(0, 3)$.",
+        "Plugging $x = 0$ into $y = \\sqrt{x} + k$ gives $y = k$, so $k$ must be 3."
+      ]
+    }
+  ],
+  "tags": [
+    "transformations",
+    "vertical-shift",
+    "square-root",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

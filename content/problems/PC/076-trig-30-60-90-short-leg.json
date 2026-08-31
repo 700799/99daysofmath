@@ -1,0 +1,56 @@
+{
+  "id": "PC.076",
+  "domain": "PC",
+  "unit": 8,
+  "orderInUnit": 6,
+  "standard": "PC.TRIG.A.1",
+  "difficulty": 2,
+  "prompt": "In a $30$-$60$-$90$ triangle the hypotenuse is $12$. How long is the short leg, the one opposite the $30^\\circ$ angle?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Use SOH with the $30^\\circ$ angle: $\\sin(30^\\circ) = \\frac{\\text{opposite}}{12}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use SOH with the $30^\\circ$ angle: $\\sin(30^\\circ) = \\frac{\\text{opposite}}{12}$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sin(30^\\circ) = \\frac{1}{2}$, so opposite $= \\frac{1}{2} \\times 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2} \\times 12 = 6$."
+    }
+  ],
+  "explanation": [
+    "In a $30$-$60$-$90$ triangle, the side opposite $30^\\circ$ is always HALF the hypotenuse.",
+    "That is the same as $\\sin(30^\\circ) = \\frac{1}{2}$.",
+    "$\\frac{1}{2} \\times 12 = 6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Cut a triangle in half",
+      "steps": [
+        "Take an equilateral triangle with all sides $12$ and slice it straight down the middle.",
+        "Each half is a $30$-$60$-$90$ triangle, and the bottom edge of $12$ got cut into two $6$s.",
+        "That $6$ is the short leg."
+      ]
+    },
+    {
+      "title": "Use the memorized ratio",
+      "steps": [
+        "A $30$-$60$-$90$ triangle has sides in the ratio $1 : \\sqrt{3} : 2$.",
+        "The hypotenuse matches the $2$, so $2$ parts $= 12$ and $1$ part $= 6$.",
+        "The short leg is $1$ part, so it is $6$."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "special-triangles"
+  ],
+  "estimatedSeconds": 55
+}

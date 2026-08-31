@@ -1,0 +1,55 @@
+{
+  "id": "SAT.162",
+  "domain": "SAT",
+  "unit": 17,
+  "orderInUnit": 2,
+  "standard": "SAT.GEO.3",
+  "difficulty": 1,
+  "prompt": "In a right triangle, the side opposite angle $\\theta$ has length $3$ and the hypotenuse has length $5$. What is the value of $\\sin\\theta$? Give your answer as a decimal.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.6",
+  "alternativeAnswers": [
+    "3/5",
+    ".6"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "SOH: sine is opposite over hypotenuse.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "SOH: sine is opposite over hypotenuse."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sin\\theta = \\dfrac{3}{5}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.6$."
+    }
+  ],
+  "learningObjective": "Compute a sine ratio in a right triangle.",
+  "topic": "Right-triangle trigonometry",
+  "explanation": [
+    "SOH-CAH-TOA: $\\sin = \\dfrac{\\text{opposite}}{\\text{hypotenuse}}$.",
+    "$\\sin\\theta = \\dfrac{3}{5} = 0.6$.",
+    "The third side would be $4$, making this a $3$-$4$-$5$ triangle."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The hypotenuse never changes; the others do",
+      "steps": [
+        "The hypotenuse is always the side across from the right angle, regardless of which acute angle you are working with.",
+        "But \"opposite\" and \"adjacent\" swap when you switch from one acute angle to the other.",
+        "Label the triangle relative to the named angle *before* choosing a ratio."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "sine",
+    "sohcahtoa"
+  ],
+  "estimatedSeconds": 40
+}

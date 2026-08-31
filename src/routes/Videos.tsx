@@ -12,9 +12,9 @@ import { useSeo } from '../lib/seo';
 export function Videos() {
   const [openLesson, setOpenLesson] = useState<Lesson | null>(null);
   useSeo({
-    title: 'Math Video Lessons — 5th & 6th Grade | Math10x',
+    title: 'Math Video Lessons — Grades 5-6 & Beyond | Math10x',
     description:
-      'Watch free animated math video lessons for 5th and 6th grade: ratios, fractions, decimals, geometry, expressions, and statistics — each with worked examples and practice.',
+      'Watch free animated math video lessons for grades 5-6: ratios, fractions, decimals, geometry, expressions, and statistics — each with worked examples and practice.',
     canonicalPath: '/videos',
   });
 
@@ -25,17 +25,17 @@ export function Videos() {
       )}
 
       <div className="flex items-baseline justify-between gap-3">
-        <h1 className="text-2xl font-display font-extrabold text-slate-900">
+        <h1 className="text-2xl font-display font-extrabold text-ink">
           🎬 Video library
         </h1>
         <Link
           to="/stories"
-          className="text-sm font-display font-bold text-violet-700 hover:text-violet-900"
+          className="text-sm font-display font-bold text-accent hover:text-accent"
         >
           🌟 Famous Math Stories →
         </Link>
       </div>
-      <p className="text-sm text-slate-600 mt-1 mb-5">
+      <p className="text-sm text-ink-muted mt-1 mb-5">
         Every unit has short animations <em>and</em> a written step-by-step
         lesson — watch, read, or both. Tap a unit to open it.
       </p>
@@ -48,7 +48,7 @@ export function Videos() {
           if (lessons.length === 0) return null;
           return (
             <section key={d}>
-              <h2 className="font-display font-extrabold text-slate-900 mb-2">
+              <h2 className="font-display font-extrabold text-ink mb-2">
                 {DOMAIN_EMOJI[d]} {DOMAIN_LABELS[d]}
               </h2>
               <div className="space-y-2">
@@ -57,11 +57,11 @@ export function Videos() {
                   return (
                     <details
                       key={`${l.domain}-${l.unit}`}
-                      className="bg-white border-2 border-slate-200 rounded-2xl px-4 py-3"
+                      className="bg-surface border-2 border-line rounded-2xl px-4 py-3"
                     >
-                      <summary className="cursor-pointer font-display font-bold text-slate-800 text-sm">
+                      <summary className="cursor-pointer font-display font-bold text-ink text-sm">
                         Unit {l.unit} · {l.title}
-                        <span className="ml-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-400">
+                        <span className="ml-2 text-[10px] font-extrabold uppercase tracking-wider text-ink-dim">
                           {vids.length > 0
                             ? `${vids.length} video${vids.length === 1 ? '' : 's'} + lesson`
                             : 'lesson'}
@@ -69,14 +69,14 @@ export function Videos() {
                       </summary>
 
                       {/* The written lesson plan, in brief */}
-                      <div className="mt-3 rounded-2xl bg-sky-50 border border-sky-200 p-3">
-                        <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-sky-700">
+                      <div className="mt-3 rounded-2xl bg-accent-soft border border-accent/35 p-3">
+                        <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-accent">
                           The key idea
                         </div>
                         <ul className="mt-1.5 space-y-1">
                           {l.concept.map((c, i) => (
-                            <li key={i} className="text-sm text-slate-800 flex gap-2">
-                              <span className="text-sky-600 font-display font-bold shrink-0">
+                            <li key={i} className="text-sm text-ink flex gap-2">
+                              <span className="text-accent font-display font-bold shrink-0">
                                 {i + 1}.
                               </span>
                               <span>{c}</span>
@@ -86,7 +86,7 @@ export function Videos() {
                         <button
                           type="button"
                           onClick={() => setOpenLesson(l)}
-                          className="mt-3 w-full min-h-11 rounded-xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold text-sm transition-colors"
+                          className="mt-3 w-full min-h-11 rounded-xl bg-duo-blue hover:bg-duo-green-dark text-white font-display font-extrabold text-sm transition-colors"
                         >
                           📘 Read the step-by-step lesson
                         </button>
@@ -97,7 +97,7 @@ export function Videos() {
                         <div className="mt-3 space-y-4">
                           {vids.map((v) => (
                             <div key={v.src}>
-                              <div className="text-sm font-display font-extrabold text-slate-900 mb-1.5">
+                              <div className="text-sm font-display font-extrabold text-ink mb-1.5">
                                 ▶ {v.title}
                               </div>
                               <LessonVideo
@@ -121,7 +121,7 @@ export function Videos() {
 
       <Link
         to="/"
-        className="mt-6 inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+        className="mt-6 inline-block text-sm font-display font-bold text-ink-muted hover:text-ink-muted"
       >
         ← Back home
       </Link>

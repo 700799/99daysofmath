@@ -1,0 +1,56 @@
+{
+  "id": "SAT.030",
+  "domain": "SAT",
+  "unit": 3,
+  "orderInUnit": 10,
+  "standard": "SAT.ALG.3",
+  "difficulty": 3,
+  "prompt": "Line $\\ell$ has equation $5x - 2y = 8$. Line $m$ is perpendicular to $\\ell$ and passes through the point $(5, 1)$. What is the $y$-intercept of line $m$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the slope of $\\ell$ first, then take the negative reciprocal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the slope of $\\ell$ first, then take the negative reciprocal."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an easier line: $\\ell$ is $y = 2x$, so $m$ has slope $-\\tfrac{1}{2}$. Through $(2, 3)$: $3 = -1 + b$, so $b = 4$. Same three moves — convert, flip-and-negate, substitute."
+    },
+    {
+      "level": "guide",
+      "text": "$\\ell$ has slope $\\tfrac{5}{2}$, so $m$ has slope $-\\tfrac{2}{5}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Substitute $(5, 1)$: $1 = -\\tfrac{2}{5}(5) + b = -2 + b$, so $b = 3$."
+    }
+  ],
+  "learningObjective": "Chain the perpendicular condition with point substitution.",
+  "topic": "Perpendicular lines",
+  "explanation": [
+    "Rewrite $\\ell$: $-2y = -5x + 8$, so $y = \\tfrac{5}{2}x - 4$ and its slope is $\\tfrac{5}{2}$.",
+    "Perpendicular slope is the negative reciprocal: $-\\tfrac{2}{5}$.",
+    "Substitute $(5, 1)$ into $y = -\\tfrac{2}{5}x + b$: $1 = -2 + b$, so $b = 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Three separate places to lose this question",
+      "steps": [
+        "First, dividing by $-2$ and forgetting to flip both signs — the slope of $\\ell$ is $+\\tfrac{5}{2}$, not $-\\tfrac{5}{2}$.",
+        "Second, flipping without negating for the perpendicular slope.",
+        "Third, stopping at the equation instead of reading off the intercept. Naming the three checkpoints as you go is how you keep a multi-step question clean."
+      ]
+    }
+  ],
+  "tags": [
+    "perpendicular",
+    "multi-step",
+    "y-intercept"
+  ],
+  "estimatedSeconds": 90
+}

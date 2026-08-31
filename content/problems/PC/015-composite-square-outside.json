@@ -1,0 +1,47 @@
+{
+  "id": "PC.015",
+  "domain": "PC",
+  "unit": 2,
+  "orderInUnit": 5,
+  "standard": "PC.FUN.A.2",
+  "difficulty": 2,
+  "prompt": "Let $f(x) = x^2$ and $g(x) = x - 1$. Find $f(g(5))$.",
+  "answerType": "numeric",
+  "primaryAnswer": "16",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Nested boxes: open the INSIDE box $g(5)$ first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Nested boxes: open the INSIDE box $g(5)$ first."
+    },
+    {
+      "level": "guide",
+      "text": "$g(5) = 5 - 1 = 4$. Now square that."
+    },
+    {
+      "level": "reveal",
+      "text": "$f(4) = 4^2 = 16$."
+    }
+  ],
+  "explanation": [
+    "Inside first: $g(5) = 4$.",
+    "Then the outside machine squares it: $4^2 = 16$.",
+    "Careful — squaring 5 first would give 25, which is the wrong order."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A quick table",
+      "steps": [
+        "Input 5 goes into machine g: output 4.",
+        "Output 4 becomes the input for machine f: output 16.",
+        "Written as a chain: $5 \\to 4 \\to 16$."
+      ]
+    }
+  ],
+  "tags": [
+    "composite-function"
+  ],
+  "estimatedSeconds": 45
+}

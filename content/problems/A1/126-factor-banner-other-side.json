@@ -1,0 +1,60 @@
+{
+  "id": "A1.126",
+  "domain": "A1",
+  "unit": 13,
+  "orderInUnit": 6,
+  "standard": "A1.POLY.A.2",
+  "difficulty": 2,
+  "prompt": "A rectangular banner has area $x^2 + 7x + 12$ square feet. One side measures $(x + 3)$ feet. What is the length of the other side?",
+  "answerType": "expression",
+  "primaryAnswer": "x + 4",
+  "alternativeAnswers": [
+    "x+4",
+    "(x + 4)",
+    "(x+4)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "You know the area and one side — run the area model backwards to find the other side.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You know the area and one side — run the area model backwards to find the other side."
+    },
+    {
+      "level": "guide",
+      "text": "Hunt for two numbers that multiply to $12$ and add to $7$. One of them is $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 4 = 12$ and $3 + 4 = 7$, so the area factors as $(x + 3)(x + 4)$. The other side is $x + 4$."
+    }
+  ],
+  "explanation": [
+    "Factor the area: find numbers multiplying to $12$, adding to $7$.",
+    "The pair is $3$ and $4$: $x^2 + 7x + 12 = (x + 3)(x + 4)$.",
+    "One side is $(x + 3)$, so the other side is $x + 4$ feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Un-multiply the area",
+      "steps": [
+        "Area = side × side, so ask: (x + 3) times WHAT equals x² + 7x + 12?",
+        "The mystery side must start with x (to make x²) and end with 4 (since 3 × 4 = 12).",
+        "Check: (x + 3)(x + 4) = x² + 7x + 12. The other side is x + 4."
+      ]
+    },
+    {
+      "title": "Try a real banner",
+      "steps": [
+        "Let x = 2: the area is 4 + 14 + 12 = 30 square feet, and the known side is 5 feet.",
+        "The other side must be 30 ÷ 5 = 6 feet — exactly x + 4 = 6. It fits."
+      ]
+    }
+  ],
+  "tags": [
+    "factoring",
+    "trinomial",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

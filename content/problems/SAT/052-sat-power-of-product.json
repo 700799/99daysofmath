@@ -1,0 +1,73 @@
+{
+  "id": "SAT.052",
+  "domain": "SAT",
+  "unit": 6,
+  "orderInUnit": 2,
+  "standard": "SAT.ADV.1",
+  "difficulty": 1,
+  "prompt": "Which expression is equivalent to $(2x^3)^2$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$2x^{6}$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$4x^{5}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$4x^{6}$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$2x^{5}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The outside exponent applies to *everything* inside the parentheses — the $2$ as well as the $x^3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The outside exponent applies to *everything* inside the parentheses — the $2$ as well as the $x^3$."
+    },
+    {
+      "level": "guide",
+      "text": "$2^2 = 4$, and $(x^3)^2 = x^{3 \\cdot 2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4x^6$."
+    }
+  ],
+  "learningObjective": "Apply the power-of-a-product and power-of-a-power rules together.",
+  "topic": "Exponent rules",
+  "explanation": [
+    "Distribute the outer exponent to each factor: $(2x^3)^2 = 2^2 \\cdot (x^3)^2$.",
+    "$2^2 = 4$, and for a power raised to a power the exponents multiply: $(x^3)^2 = x^6$.",
+    "The result is $4x^6$. Choices A and D forget to square the coefficient; choice B adds the exponents instead of multiplying."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test with a number",
+      "steps": [
+        "Let $x = 2$. Then $(2 \\cdot 2^3)^2 = (16)^2 = 256$.",
+        "Check the choices at $x = 2$: A gives $128$, B gives $128$, C gives $4 \\cdot 64 = 256$ ✓, D gives $64$.",
+        "Picking a single value eliminated three choices at once, with no rules needed."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "power-rule",
+    "plug-in"
+  ],
+  "estimatedSeconds": 40
+}

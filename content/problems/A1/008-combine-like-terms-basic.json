@@ -1,0 +1,57 @@
+{
+  "id": "A1.008",
+  "domain": "A1",
+  "unit": 1,
+  "orderInUnit": 8,
+  "standard": "A1.EXP.A.1",
+  "difficulty": 3,
+  "prompt": "Simplify by combining like terms: $4x + 3 + 2x$. Write the simplified expression.",
+  "answerType": "expression",
+  "primaryAnswer": "6x + 3",
+  "alternativeAnswers": [
+    "6x+3",
+    "3 + 6x",
+    "3+6x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Like terms match: $4x$ and $2x$ are both $x$-terms, but $3$ is a plain number.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Like terms match: $4x$ and $2x$ are both $x$-terms, but $3$ is a plain number."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try it with smaller numbers first: $2x + 1 + 3x$. The x-terms are $2x$ and $3x$, so they join to $5x$, and the lonely $1$ waits: $5x + 1$."
+    },
+    {
+      "level": "guide",
+      "text": "Add the $x$-terms together: $4x + 2x = ?$ The $3$ stays as it is."
+    },
+    {
+      "level": "reveal",
+      "text": "$4x + 2x = 6x$, so the expression simplifies to $6x + 3$."
+    }
+  ],
+  "explanation": [
+    "Like terms have the same variable part: $4x$ and $2x$ match.",
+    "Combine them: $4x + 2x = 6x$.",
+    "The plain number 3 has no partner, so the answer is $6x + 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sort the fruit",
+      "steps": [
+        "Think of $x$-terms as apples and plain numbers as oranges.",
+        "You have 4 apples + 3 oranges + 2 apples.",
+        "Sort them: 6 apples and 3 oranges — that is $6x + 3$. You never mash apples and oranges together."
+      ]
+    }
+  ],
+  "tags": [
+    "like-terms",
+    "simplify"
+  ],
+  "estimatedSeconds": 50
+}

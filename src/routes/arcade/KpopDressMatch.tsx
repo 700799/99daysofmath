@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
+import { GameStage, useBurst, BurstLayer, useScorePops, ScorePopLayer, useShake } from './fx';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // K-Pop Dress-Up — memorize the idol's outfit, then recreate it. Earn each
@@ -55,6 +57,10 @@ export function KpopDressMatch() {
   const addArcadePoints = useProgress((s) => s.addArcadePoints);
   const config = useProgress((s) => s.arcadeConfig);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
+  const { burst, particles } = useBurst();
+  const { pops, pop } = useScorePops();
+  const { style: shakeStyle, shake } = useShake();
+  const boardRef = useRef<HTMLDivElement>(null);
 
   const scoreRef = useRef(0);
   const livesRef = useRef(config.livesPerSession);
@@ -132,8 +138,14 @@ export function KpopDressMatch() {
 
   const answerMath = (choice: number) => {
     if (choice === problem.answer) {
+      // earned the item — positive feedback
+      sfx.step();
+      haptic(HAPTIC.tap);
       setMathDone(true);
     } else {
+      sfx.hurt();
+      shake();
+      haptic(HAPTIC.hit);
       loseLife();
       if (livesRef.current > 0) setProblem(makeMath(levelRef.current));
     }
@@ -143,13 +155,33 @@ export function KpopDressMatch() {
     const np = [...picks];
     np[slot] = emoji;
     setPicks(np);
-    if (emoji !== target[slot]) loseLife();
+    const correct = emoji === target[slot];
+    const w = boardRef.current?.clientWidth ?? 340;
+    if (correct) {
+      // placed the right item
+      sfx.pickup();
+      haptic(HAPTIC.pickup);
+      burst(w / 2, 70, { emoji: '✨', count: 12 });
+      pop(w / 2 - 6, 60, '✓', '#16a34a');
+    } else {
+      sfx.hurt();
+      shake();
+      haptic(HAPTIC.hit);
+      loseLife();
+    }
     if (livesRef.current <= 0) return;
     if (slot >= SLOTS.length - 1) {
       // round complete — score the outfit
       const matches = np.filter((p, i) => p === target[i]).length;
       scoreRef.current += matches * 10 + (matches === SLOTS.length ? 20 : 0);
       servedRef.current += 1;
+      if (matches === SLOTS.length) {
+        // perfect look — celebrate the round
+        sfx.win();
+        haptic(HAPTIC.win);
+        burst(w * 0.35, 90, { emoji: '🎉', count: 20 });
+        burst(w * 0.65, 90, { color: '#d946ef', count: 18 });
+      }
       setPhase('result');
     } else {
       setSlot(slot + 1);
@@ -203,6 +235,11 @@ export function KpopDressMatch() {
         <span className="text-slate-700 tabular-nums">⭐ {scoreRef.current}</span>
         <span className="text-fuchsia-600">Lvl {levelRef.current}</span>
       </div>
+
+      <GameStage theme="kpop" className="max-w-sm mx-auto p-4">
+        <div ref={boardRef} className="relative min-h-[280px]" style={shakeStyle}>
+          <BurstLayer api={{ burst, particles }} />
+          <ScorePopLayer pops={pops} />
 
       {phase === 'memorize' && (
         <div className="max-w-sm mx-auto text-center">
@@ -316,6 +353,8 @@ export function KpopDressMatch() {
           </button>
         </div>
       )}
+        </div>
+      </GameStage>
     </div>
   );
 }

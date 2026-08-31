@@ -1,0 +1,63 @@
+{
+  "id": "PC.139",
+  "domain": "PC",
+  "unit": 14,
+  "orderInUnit": 9,
+  "standard": "PC.LIM.A.1",
+  "difficulty": 3,
+  "prompt": "Overnight, a room's temperature after $t$ hours is $T = 18 + \\frac{6}{t}$ degrees. As $t$ gets larger and larger, what temperature is the room settling toward, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "18",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Watch the piece $\\frac{6}{t}$. What happens to it when $t$ becomes huge?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Watch the piece $\\frac{6}{t}$. What happens to it when $t$ becomes huge?"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Look at $\\frac{1}{t}$ alone: at $t = 10$ it is $0.1$, at $t = 100$ it is $0.01$, at $t = 1000$ it is $0.001$. Bigger bottom means a tinier fraction, heading to $0$. Now do the same with $\\frac{6}{t}$ and add the $18$ back on."
+    },
+    {
+      "level": "guide",
+      "text": "At $t = 6$, $\\frac{6}{t} = 1$; at $t = 60$ it is $0.1$; at $t = 600$ it is $0.01$. It is fading to $0$."
+    },
+    {
+      "level": "reveal",
+      "text": "The temperature heads to $18 + 0 = 18$ degrees."
+    }
+  ],
+  "explanation": [
+    "Split the rule into two pieces: a fixed $18$ and a fading $\\frac{6}{t}$.",
+    "A fixed top over a growing bottom shrinks toward $0$: $1$, then $0.1$, then $0.01$.",
+    "So the whole thing heads to $18 + 0$.",
+    "The room settles at $18$ degrees — it gets closer and closer without ever quite landing."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A table of the night",
+      "steps": [
+        "t = 1: 24 degrees. t = 2: 21. t = 3: 20. t = 6: 19.",
+        "t = 12: 18.5. t = 60: 18.1. t = 600: 18.01.",
+        "Every row is closer to 18 than the one before, and none ever dips below it. The limit is 18."
+      ]
+    },
+    {
+      "title": "Read it off the graph",
+      "steps": [
+        "Sketch the curve: it starts high and slides down, flattening out as it goes right.",
+        "Draw a horizontal line at 18 — the curve hugs it more and more tightly but never crosses.",
+        "That line is called an asymptote, and its height is the limit: 18 degrees."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "asymptote",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

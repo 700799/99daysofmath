@@ -1,0 +1,56 @@
+{
+  "id": "SAT.100",
+  "domain": "SAT",
+  "unit": 10,
+  "orderInUnit": 10,
+  "standard": "SAT.ADV.5",
+  "difficulty": 3,
+  "prompt": "The function $f$ is defined by $f(x) = ab^x$, where $a$ and $b$ are positive constants. If $f(1) = 12$ and $f(3) = 48$, what is the value of $a$?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Divide the two equations to eliminate $a$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Divide the two equations to eliminate $a$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try smaller values: if $f(1) = 6$ and $f(2) = 12$, dividing gives $b = 2$, and then $a(2) = 6$ so $a = 3$. Dividing the two equations always cancels $a$ and isolates $b$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\dfrac{ab^3}{ab^1} = b^2 = \\dfrac{48}{12} = 4$, so $b = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "Then $f(1) = a(2) = 12$, so $a = 6$."
+    }
+  ],
+  "learningObjective": "Recover both parameters of an exponential function from two values.",
+  "topic": "Exponential functions",
+  "explanation": [
+    "Divide the two given values: $\\dfrac{f(3)}{f(1)} = \\dfrac{ab^3}{ab} = b^2$, and $\\dfrac{48}{12} = 4$.",
+    "So $b^2 = 4$ and, since $b$ is positive, $b = 2$.",
+    "Substitute back: $f(1) = a \\cdot 2 = 12$, so $a = 6$. (The function is $f(x) = 6 \\cdot 2^x$.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Reason in steps",
+      "steps": [
+        "Going from $x = 1$ to $x = 3$ is two steps, and the output went from $12$ to $48$ — a factor of $4$.",
+        "Two equal steps multiplying to $4$ means each step multiplies by $2$, so $b = 2$.",
+        "Step back once from $f(1) = 12$ to get $f(0) = 6$, which is $a$ by definition. Dividing to cancel $a$ is the general technique whenever two function values are given."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "parameters",
+    "ratio"
+  ],
+  "estimatedSeconds": 95
+}

@@ -1,0 +1,56 @@
+{
+  "id": "SAT.049",
+  "domain": "SAT",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "SAT.ALG.5",
+  "difficulty": 3,
+  "prompt": "An empty delivery van weighs $3{,}200$ pounds. It is loaded with boxes weighing $45$ pounds each, and it must cross a bridge with a weight limit of $5{,}000$ pounds. What is the maximum number of boxes the van can carry across the bridge?",
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Total weight is the van plus the boxes, and it must stay at or below the limit.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Total weight is the van plus the boxes, and it must stay at or below the limit."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try smaller numbers: a $10$-pound cart with a $25$-pound limit, carrying $5$-pound boxes. That leaves $15$ pounds, so $3$ boxes. Subtract the fixed weight, then divide by the per-item weight."
+    },
+    {
+      "level": "guide",
+      "text": "$3200 + 45b \\le 5000$, so $45b \\le 1800$."
+    },
+    {
+      "level": "reveal",
+      "text": "$b \\le 40$, so $40$ boxes."
+    }
+  ],
+  "learningObjective": "Solve a real-world capacity inequality with a whole-number answer.",
+  "topic": "Inequalities in context",
+  "explanation": [
+    "The loaded weight is $3200 + 45b$, and it must satisfy $3200 + 45b \\le 5000$.",
+    "Subtract: $45b \\le 1800$.",
+    "Divide: $b \\le 40$. Since $1800 \\div 45 = 40$ exactly, the van can carry $40$ boxes and hit the limit precisely."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "When to round down, and when not to",
+      "steps": [
+        "If the division had come out to $40.7$, the answer would be $40$ — you cannot load a fraction of a box.",
+        "Here it divides evenly, and \"$\\le$\" permits equality, so $40$ is achievable rather than one too many.",
+        "The rule: for a maximum with $\\le$, take the floor of the quotient; an exact quotient is itself the answer."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "word-problem",
+    "maximum"
+  ],
+  "estimatedSeconds": 80
+}

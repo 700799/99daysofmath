@@ -78,7 +78,7 @@ export function MockTest() {
 
   if (error) {
     return (
-      <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-4 text-red-800">
+      <div className="bg-bad-soft border-2 border-bad/40 rounded-2xl p-4 text-bad">
         Couldn't load the test: {error.message}
       </div>
     );
@@ -87,7 +87,7 @@ export function MockTest() {
     return (
       <div className="text-center py-12">
         <Mascot mood="thinking" size={80} />
-        <div className="mt-3 text-slate-500 font-display font-bold">Building your mock test…</div>
+        <div className="mt-3 text-ink-muted font-display font-bold">Building your mock test…</div>
       </div>
     );
   }
@@ -136,10 +136,10 @@ export function MockTest() {
     const accuracy = correct / total;
     const zone = ritZone(accuracy);
     const toneStyles: Record<string, string> = {
-      green: 'from-green-50 to-emerald-100 border-green-300 text-green-800',
-      blue: 'from-sky-50 to-blue-100 border-blue-300 text-blue-800',
-      yellow: 'from-yellow-50 to-amber-100 border-amber-300 text-amber-800',
-      orange: 'from-orange-50 to-orange-100 border-orange-300 text-orange-800',
+      green: 'bg-ok-soft border-ok/50 text-ok',
+      blue: 'bg-accent-soft border-accent/45 text-accent',
+      yellow: 'bg-warn-soft border-warn/50 text-warn',
+      orange: 'bg-warn-soft border-warn/50 text-warn',
     };
     return (
       <div className="relative">
@@ -151,7 +151,7 @@ export function MockTest() {
           <div className="flex justify-center">
             <Mascot mood={accuracy >= 0.7 ? 'cheer' : 'happy'} size={120} />
           </div>
-          <h1 className="text-3xl font-display font-extrabold text-slate-900 mt-2">
+          <h1 className="text-3xl font-display font-extrabold text-ink mt-2">
             Mock test done!
           </h1>
           <div className={`mt-4 mx-auto max-w-md bg-gradient-to-br border-2 rounded-3xl p-5 ${toneStyles[zone.tone]}`}>
@@ -173,7 +173,7 @@ export function MockTest() {
             <button
               type="button"
               onClick={() => navigate('/review')}
-              className="w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+              className="w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
             >
               Review missed problems
             </button>
@@ -195,12 +195,12 @@ export function MockTest() {
       <div className="mb-4 flex items-center gap-3">
         <div className="flex-1">
           <ProgressBar current={index + (phase !== 'problem' ? 1 : 0)} total={total} />
-          <div className="text-xs font-display font-bold text-slate-500 mt-1">
+          <div className="text-xs font-display font-bold text-ink-muted mt-1">
             🎓 Mock MAP test · {current.domain}
           </div>
         </div>
         <div className="shrink-0 text-right">
-          <div className="font-display font-extrabold text-slate-700 tabular-nums">
+          <div className="font-display font-extrabold text-ink-muted tabular-nums">
             ⏱ {fmtTime(elapsed)}
           </div>
         </div>
@@ -230,7 +230,7 @@ export function MockTest() {
                 type="button"
                 onClick={submit}
                 disabled={!answer.trim()}
-                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark disabled:bg-slate-300 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 disabled:cursor-not-allowed disabled:shadow-none transition-all"
+                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark disabled:bg-line-strong text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 disabled:cursor-not-allowed disabled:shadow-none transition-all"
               >
                 Check
               </button>
@@ -244,10 +244,10 @@ export function MockTest() {
                 initial={{ scale: 0.85, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: 'spring', stiffness: 320, damping: 18 }}
-                className="mt-4 bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-green-300 rounded-3xl p-5 text-center"
+                className="mt-4 bg-ok-soft border-2 border-ok/50 rounded-3xl p-5 text-center"
               >
                 <div className="text-4xl">✅</div>
-                <div className="font-display font-extrabold text-xl text-green-800 mt-1">Correct!</div>
+                <div className="font-display font-extrabold text-xl text-ok mt-1">Correct!</div>
                 <button
                   type="button"
                   onClick={advance}
@@ -263,13 +263,13 @@ export function MockTest() {
             <motion.div
               initial={{ scale: 0.96, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="mt-4 bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-300 rounded-3xl p-5"
+              className="mt-4 bg-bad-soft border-2 border-bad/50 rounded-3xl p-5"
             >
               <div className="flex items-start gap-3">
                 <div className="text-4xl shrink-0">🤔</div>
                 <div className="flex-1">
-                  <div className="font-display font-extrabold text-red-800 text-lg">Not quite</div>
-                  <div className="mt-1 text-slate-800">
+                  <div className="font-display font-extrabold text-bad text-lg">Not quite</div>
+                  <div className="mt-1 text-ink">
                     <span className="font-display font-bold">Correct answer:</span>{' '}
                     <span className="font-mono font-extrabold">{current.primaryAnswer}</span>
                   </div>
@@ -283,7 +283,7 @@ export function MockTest() {
                 <button
                   type="button"
                   onClick={() => setShowExplain(true)}
-                  className="mt-2 text-sm font-display font-bold text-red-800 underline underline-offset-2"
+                  className="mt-2 text-sm font-display font-bold text-bad underline underline-offset-2"
                 >
                   Explain step by step
                 </button>
@@ -291,7 +291,7 @@ export function MockTest() {
               <button
                 type="button"
                 onClick={advance}
-                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+                className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
               >
                 {index + 1 >= total ? 'See results' : 'Next'}
               </button>
@@ -303,7 +303,7 @@ export function MockTest() {
       <button
         type="button"
         onClick={() => navigate('/')}
-        className="mt-6 w-full text-sm font-display font-bold text-slate-500 hover:text-slate-700 py-2"
+        className="mt-6 w-full text-sm font-display font-bold text-ink-muted hover:text-ink-muted py-2"
       >
         Quit test
       </button>
@@ -321,10 +321,10 @@ function StatBox({
   tone: 'green' | 'red' | 'yellow' | 'blue';
 }) {
   const styles = {
-    green: 'bg-green-50 border-green-200 text-green-800',
-    red: 'bg-red-50 border-red-200 text-red-800',
-    yellow: 'bg-yellow-50 border-yellow-200 text-yellow-800',
-    blue: 'bg-blue-50 border-blue-200 text-blue-800',
+    green: 'bg-ok-soft border-ok/40 text-ok',
+    red: 'bg-bad-soft border-bad/40 text-bad',
+    yellow: 'bg-warn-soft border-warn/40 text-warn',
+    blue: 'bg-accent-soft border-accent/35 text-accent',
   }[tone];
   return (
     <div className={`border-2 rounded-2xl p-3 ${styles}`}>

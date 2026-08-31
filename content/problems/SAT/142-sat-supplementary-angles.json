@@ -1,0 +1,50 @@
+{
+  "id": "SAT.142",
+  "domain": "SAT",
+  "unit": 15,
+  "orderInUnit": 2,
+  "standard": "SAT.GEO.1",
+  "difficulty": 1,
+  "prompt": "Two angles are supplementary. One measures $118°$. What is the measure, in degrees, of the other?",
+  "answerType": "numeric",
+  "primaryAnswer": "62",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Supplementary angles sum to $180°$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Supplementary angles sum to $180°$."
+    },
+    {
+      "level": "guide",
+      "text": "$180 - 118$."
+    },
+    {
+      "level": "reveal",
+      "text": "$62$ degrees."
+    }
+  ],
+  "learningObjective": "Apply the supplementary-angle relationship.",
+  "topic": "Angle pairs",
+  "explanation": [
+    "Supplementary angles add to $180°$ — they form a straight line.",
+    "$180 - 118 = 62°$.",
+    "Complementary angles, by contrast, add to $90°$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Keeping the two words apart",
+      "steps": [
+        "Complementary comes before supplementary alphabetically, and $90$ comes before $180$ numerically.",
+        "That ordering is enough to keep them straight under time pressure.",
+        "Choosing the wrong one here gives $-28$, which is obviously impossible — so a quick plausibility check catches the mix-up too."
+      ]
+    }
+  ],
+  "tags": [
+    "supplementary",
+    "angle-pairs"
+  ],
+  "estimatedSeconds": 30
+}

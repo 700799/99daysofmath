@@ -1,0 +1,56 @@
+{
+  "id": "PC.063",
+  "domain": "PC",
+  "unit": 7,
+  "orderInUnit": 3,
+  "standard": "PC.LOG.A.2",
+  "difficulty": 1,
+  "prompt": "Solve for $x$: $\\log_4(x) = 3$.",
+  "answerType": "numeric",
+  "primaryAnswer": "64",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Rewrite the log in exponential form. The base stays the base, and the answer becomes the exponent.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Rewrite the log in exponential form. The base stays the base, and the answer becomes the exponent."
+    },
+    {
+      "level": "guide",
+      "text": "$\\log_4(x) = 3$ means $4^3 = x$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4^3 = 64$, so $x = 64$."
+    }
+  ],
+  "explanation": [
+    "A log equation flips into an exponential one.",
+    "$\\log_4(x) = 3$ says: $4$ raised to the $3$ gives $x$.",
+    "$4 \\times 4 \\times 4 = 64$, so $x = 64$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read it as a sentence",
+      "steps": [
+        "Say it out loud: \"$4$ to WHAT power is $x$? The answer is $3$.\"",
+        "So $x$ must be $4$ multiplied by itself $3$ times.",
+        "$4 \\times 4 \\times 4 = 64$."
+      ]
+    },
+    {
+      "title": "Undo with a power",
+      "steps": [
+        "Logs and exponents are undo twins.",
+        "Raise $4$ to both sides: $4^{\\log_4(x)} = 4^3$.",
+        "The left side collapses to $x$, so $x = 64$."
+      ]
+    }
+  ],
+  "tags": [
+    "log-equation",
+    "exponential-form"
+  ],
+  "estimatedSeconds": 40
+}

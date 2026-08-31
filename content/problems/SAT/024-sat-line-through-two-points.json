@@ -1,0 +1,72 @@
+{
+  "id": "SAT.024",
+  "domain": "SAT",
+  "unit": 3,
+  "orderInUnit": 4,
+  "standard": "SAT.ALG.3",
+  "difficulty": 2,
+  "prompt": "Which equation describes the line passing through the points $(1, 2)$ and $(4, 11)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$y = 3x - 1$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$y = 3x + 1$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$y = \\tfrac{1}{3}x + \\tfrac{5}{3}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$y = 9x - 7$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Find the slope first, then use one point to pin down the intercept.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the slope first, then use one point to pin down the intercept."
+    },
+    {
+      "level": "guide",
+      "text": "Slope $= \\dfrac{11 - 2}{4 - 1} = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "With $m = 3$ and the point $(1, 2)$: $2 = 3(1) + b$, so $b = -1$ and $y = 3x - 1$."
+    }
+  ],
+  "learningObjective": "Build the equation of a line through two given points.",
+  "topic": "Writing linear equations",
+  "explanation": [
+    "Slope $= \\dfrac{11 - 2}{4 - 1} = \\dfrac{9}{3} = 3$.",
+    "Substitute a point into $y = 3x + b$. Using $(1, 2)$: $2 = 3 + b$, so $b = -1$.",
+    "The line is $y = 3x - 1$. Verify with the other point: $3(4) - 1 = 11$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test both points against the choices",
+      "steps": [
+        "Any correct line must contain *both* points, so test each choice twice.",
+        "At $(1, 2)$: A gives $2$ ✓, B gives $4$ ✗, C gives $2$ ✓, D gives $2$ ✓ — B is out.",
+        "At $(4, 11)$: A gives $11$ ✓, C gives $3$ ✗, D gives $29$ ✗. Only A survives, with no algebra required."
+      ]
+    }
+  ],
+  "tags": [
+    "writing-equations",
+    "two-points"
+  ],
+  "estimatedSeconds": 60
+}

@@ -3,6 +3,7 @@ import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard, useArcadePausedRef } from './shared';
 import { GameStage, useBurst, BurstLayer, useScorePops, ScorePopLayer } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // Boba Shop — the shop gives a small base recipe (in grams) and a required
 // multiplier; you must SCALE IT UP exactly. e.g. base 1:2:6 with ×5 means pour
@@ -112,6 +113,8 @@ export function BobaShop() {
         comboRef.current = 0;
         setFlash('bad');
         setReaction('😖');
+        sfx.hurt();
+        haptic(HAPTIC.hit);
         window.setTimeout(() => setReaction(null), 600);
         loseLife();
       }
@@ -123,6 +126,8 @@ export function BobaShop() {
 
   const add = (i: number, d: number) => {
     if (outcome) return;
+    sfx.build();
+    haptic(HAPTIC.light);
     setCup((c) => {
       const n: [number, number, number] = [...c] as [number, number, number];
       n[i] = Math.max(0, n[i] + d);
@@ -134,6 +139,7 @@ export function BobaShop() {
     if (outcome) return;
     const exact = cup.every((v, i) => v === order.target[i]);
     if (exact) {
+      const oldMult = comboRef.current >= 1 ? 1 + Math.floor((comboRef.current - 1) / 3) : 1;
       comboRef.current += 1;
       const mult = 1 + Math.floor((comboRef.current - 1) / 3); // x1, then x2 after 3 in a row, ...
       const speedBonus = Math.max(0, Math.ceil(timeRef.current)); // quick service tips!
@@ -144,11 +150,20 @@ export function BobaShop() {
       setReaction('😋');
       burst(150, 120, { emoji: '✨', count: 14 });
       pop(120, 90, `+${gained}${speedBonus ? ` (⚡${speedBonus})` : ''}`, '#16a34a');
+      sfx.coin();
+      sfx.pickup();
+      haptic(HAPTIC.pickup);
+      if (mult > oldMult) {
+        sfx.powerup();
+        haptic(HAPTIC.levelUp);
+      }
       nextOrder();
     } else {
       comboRef.current = 0;
       setFlash('bad');
       setReaction('😖');
+      sfx.hurt();
+      haptic(HAPTIC.hit);
       loseLife();
     }
     setTimeout(() => {

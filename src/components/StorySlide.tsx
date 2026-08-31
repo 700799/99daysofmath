@@ -320,7 +320,7 @@ export function StorySlide({ story, onClose }: Props) {
                 className="flex min-h-full flex-col items-start justify-center text-left gap-4 max-w-2xl mx-auto md:mx-0"
               >
                 {slide.kind === 'learned' && (
-                  <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 border-2 border-emerald-400/60 px-4 py-1.5 text-sm sm:text-base font-display font-extrabold uppercase tracking-wider text-emerald-200">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-duo-green/20 border-2 border-emerald-400/60 px-4 py-1.5 text-sm sm:text-base font-display font-extrabold uppercase tracking-wider text-emerald-200">
                     ✅ What you learned
                   </div>
                 )}
@@ -358,7 +358,7 @@ export function StorySlide({ story, onClose }: Props) {
           <button
             type="button"
             onClick={replayClip}
-            className="absolute bottom-3 right-3 rounded-full bg-white/90 hover:bg-white text-slate-900 font-display font-extrabold text-sm px-4 h-10 shadow-lg active:translate-y-0.5"
+            className="absolute bottom-3 right-3 rounded-full bg-white/90 hover:bg-white text-ink font-display font-extrabold text-sm px-4 h-10 shadow-lg active:translate-y-0.5"
             data-haptic="tap"
           >
             ↻ Replay clip
@@ -392,7 +392,7 @@ export function StorySlide({ story, onClose }: Props) {
             tapHaptic();
           }}
           disabled={locked}
-          className="rounded-full bg-emerald-500 hover:bg-emerald-600 active:translate-y-0.5 text-white font-display font-extrabold text-lg sm:text-xl px-8 sm:px-10 h-14 shadow-lg shadow-emerald-500/30 transition disabled:bg-white/15 disabled:text-white/50 disabled:shadow-none disabled:active:translate-y-0 disabled:cursor-not-allowed"
+          className="rounded-full bg-duo-green hover:bg-duo-green-dark active:translate-y-0.5 text-white font-display font-extrabold text-lg sm:text-xl px-8 sm:px-10 h-14 shadow-lg shadow-black/30 transition disabled:bg-white/15 disabled:text-white/50 disabled:shadow-none disabled:active:translate-y-0 disabled:cursor-not-allowed"
           data-haptic="tap"
         >
           {locked ? 'Watch…' : isLast ? '✓ Done' : 'Continue ▶'}

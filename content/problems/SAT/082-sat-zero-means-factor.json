@@ -1,0 +1,73 @@
+{
+  "id": "SAT.082",
+  "domain": "SAT",
+  "unit": 9,
+  "orderInUnit": 2,
+  "standard": "SAT.ADV.4",
+  "difficulty": 1,
+  "prompt": "For a polynomial $p$, the value of $p(3)$ is $0$. Which of the following must be true?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$x + 3$ is a factor of $p(x)$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$x - 3$ is a factor of $p(x)$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$p(0) = 3$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$p(x)$ has degree $3$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "This is the Factor Theorem: a zero of the polynomial corresponds to a factor.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This is the Factor Theorem: a zero of the polynomial corresponds to a factor."
+    },
+    {
+      "level": "guide",
+      "text": "If $p(a) = 0$, then $(x - a)$ divides $p(x)$."
+    },
+    {
+      "level": "reveal",
+      "text": "With $a = 3$, the factor is $x - 3$."
+    }
+  ],
+  "learningObjective": "State and apply the Factor Theorem.",
+  "topic": "The Factor Theorem",
+  "explanation": [
+    "The Factor Theorem says $p(a) = 0$ if and only if $(x - a)$ is a factor of $p(x)$.",
+    "Here $a = 3$, so the factor is $x - 3$ — note the sign is opposite the value.",
+    "Choices C and D describe unrelated properties; nothing about $p(3) = 0$ constrains the degree or the value at $0$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Three ways the SAT says the same thing",
+      "steps": [
+        "\"$p(3) = 0$\", \"$3$ is a zero of $p$\", \"the graph of $p$ passes through $(3, 0)$\", and \"$x - 3$ divides $p(x)$\" are four phrasings of one fact.",
+        "Questions often state it one way and ask for another.",
+        "Recognizing the equivalence instantly is most of what these questions are testing."
+      ]
+    }
+  ],
+  "tags": [
+    "factor-theorem",
+    "polynomial",
+    "conceptual"
+  ],
+  "estimatedSeconds": 50
+}

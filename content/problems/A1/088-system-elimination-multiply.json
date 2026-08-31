@@ -1,0 +1,59 @@
+{
+  "id": "A1.088",
+  "domain": "A1",
+  "unit": 9,
+  "orderInUnit": 8,
+  "standard": "A1.SYS.A.1",
+  "difficulty": 3,
+  "prompt": "Solve the system: $2x + 3y = 19$ and $x + y = 8$. What is $y$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $x$s do not match yet. Multiply the whole second equation by 2 to get $2x + 2y = 16$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $x$s do not match yet. Multiply the whole second equation by 2 to get $2x + 2y = 16$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Simpler system: $x + y = 5$ and $x = 3$ gives $y = 2$. Here, rewrite $x + y = 8$ as $x = 8 - y$ and swap it in."
+    },
+    {
+      "level": "guide",
+      "text": "Now stack and subtract: $(2x + 3y) - (2x + 2y) = 19 - 16$."
+    },
+    {
+      "level": "reveal",
+      "text": "The $x$s cancel: $y = 3$. (And $x = 5$.)"
+    }
+  ],
+  "explanation": [
+    "To cancel with elimination, the copies must match. Double the second equation: $2x + 2y = 16$.",
+    "Subtract it from the first: the $2x$s vanish and $3y - 2y = y$.",
+    "$y = 19 - 16 = 3$. Check: $x = 5$, and $10 + 9 = 19$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Substitution instead",
+      "steps": [
+        "From x + y = 8, we know x = 8 − y. Swap that into the first rule: 2(8 − y) + 3y = 19.",
+        "That is 16 − 2y + 3y = 19, so 16 + y = 19 and y = 3."
+      ]
+    },
+    {
+      "title": "Guess pairs from the easy rule",
+      "steps": [
+        "Pairs that add to 8: (5, 3), (4, 4), (6, 2). Test each in 2x + 3y = 19.",
+        "(5, 3) gives 10 + 9 = 19. It works, so y = 3."
+      ]
+    }
+  ],
+  "tags": [
+    "system-of-equations",
+    "elimination"
+  ],
+  "estimatedSeconds": 85
+}

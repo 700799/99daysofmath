@@ -1,0 +1,54 @@
+{
+  "id": "PC.107",
+  "domain": "PC",
+  "unit": 11,
+  "orderInUnit": 7,
+  "standard": "PC.TRIG.B.2",
+  "difficulty": 2,
+  "prompt": "A game stores a character's facing direction as $\\cos\\theta = 0.6$, with $\\theta$ in Quadrant 1. To move the character, the game needs $\\sin\\theta$. What is $\\sin\\theta$?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Use $\\sin^2\\theta + \\cos^2\\theta = 1$ to find $\\sin^2\\theta$ first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use $\\sin^2\\theta + \\cos^2\\theta = 1$ to find $\\sin^2\\theta$ first."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sin^2\\theta = 1 - 0.6^2 = 1 - 0.36 = 0.64$. Now take the square root."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sqrt{0.64} = 0.8$. In Quadrant 1 sine is positive, so $\\sin\\theta = 0.8$."
+    }
+  ],
+  "explanation": [
+    "The identity $\\sin^2\\theta + \\cos^2\\theta = 1$ links the two values, so knowing one gives the other.",
+    "$\\sin^2\\theta = 1 - 0.6^2 = 1 - 0.36 = 0.64$.",
+    "Take the square root: $\\sin\\theta = 0.8$. Quadrant 1 is up-and-right, where sine is positive, so keep the plus."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spot the 3-4-5 triangle",
+      "steps": [
+        "cos θ = 0.6 = 3/5 means the across leg is 3 and the slanted side is 5.",
+        "That is the famous 3-4-5 right triangle, so the up leg is 4. sin θ = 4/5 = 0.8."
+      ]
+    },
+    {
+      "title": "Check the game math",
+      "steps": [
+        "A facing direction must be a point on the unit circle, so across² + up² has to equal 1.",
+        "Test 0.8: 0.6² + 0.8² = 0.36 + 0.64 = 1. It checks out, so 0.8 is the value the game needs."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean-identity",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

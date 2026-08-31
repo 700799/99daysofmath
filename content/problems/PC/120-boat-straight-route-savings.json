@@ -1,0 +1,63 @@
+{
+  "id": "PC.120",
+  "domain": "PC",
+  "unit": 12,
+  "orderInUnit": 10,
+  "standard": "PC.TRIG.C.1",
+  "difficulty": 3,
+  "prompt": "A boat sails $5$ km, turns so the angle inside the triangle at the turn is $120^\\circ$, then sails $16$ km. A friend takes the straight route from the start point to the finish point. How many kilometers shorter is the straight route than the boat's path?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "This is two steps: first find the straight-line distance, then compare it with the sailed distance.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This is two steps: first find the straight-line distance, then compare it with the sailed distance."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Legs of $3$ km and $5$ km with a $120^\\circ$ turn: $c^2 = 9 + 25 + 15 = 49$, so straight $= 7$ km while the path is $3 + 5 = 8$ km. The saving is $8 - 7 = 1$ km. Now do the same two steps with $5$ and $16$."
+    },
+    {
+      "level": "guide",
+      "text": "Straight line: $c^2 = 25 + 256 - 2(5)(16)(-\\frac{1}{2}) = 281 + 80 = 361$, so $c = 19$ km. The boat sailed $5 + 16 = 21$ km."
+    },
+    {
+      "level": "reveal",
+      "text": "$21 - 19 = 2$ kilometers saved."
+    }
+  ],
+  "explanation": [
+    "Step 1 — the straight route uses the Law of Cosines: $c^2 = 5^2 + 16^2 - 2(5)(16)\\cos 120^\\circ$.",
+    "$\\cos 120^\\circ = -\\frac{1}{2}$, so $c^2 = 281 + 80 = 361$ and $c = 19$ km.",
+    "Step 2 — the boat actually sailed $5 + 16 = 21$ km.",
+    "The straight route is $21 - 19 = 2$ km shorter."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two numbers on a number line",
+      "steps": [
+        "Mark the sailed distance, 21 km, on a number line.",
+        "Mark the straight distance, 19 km, just to its left.",
+        "The gap between the marks IS the saving: 2 km. Drawing both numbers keeps you from answering with 19 by mistake."
+      ]
+    },
+    {
+      "title": "Why the saving is so small",
+      "steps": [
+        "A 120° turn is a gentle bend — the boat almost keeps going straight.",
+        "A nearly straight path is barely longer than the true straight line, so the shortcut saves very little.",
+        "If the turn had been 90°, the straight line would be about 16.8 km and the saving would jump to about 4.2 km."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-cosines",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 90
+}

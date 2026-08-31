@@ -53,10 +53,10 @@ export function LessonVideo({ src, title }: Props) {
         type="button"
         onClick={() => setOpen(true)}
         aria-label={`Open video: ${label}`}
-        className="group relative w-full block rounded-2xl overflow-hidden bg-slate-900 border-2 border-slate-200 text-left aspect-video active:scale-[0.99] transition-transform"
+        className="group relative w-full block rounded-2xl overflow-hidden bg-slate-900 border-2 border-line text-left aspect-video active:scale-[0.99] transition-transform"
       >
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-white">
-          <span className="rounded-full bg-white/95 shadow-lg w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center text-2xl sm:text-3xl text-slate-900">
+          <span className="rounded-full bg-white/95 shadow-lg w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center text-2xl sm:text-3xl text-zinc-900">
             ▶
           </span>
           <span className="px-3 text-center font-display font-extrabold text-sm sm:text-base text-white drop-shadow line-clamp-2">
@@ -253,7 +253,7 @@ function StoryVideoPlayer({
             <motion.div
               initial={{ opacity: 0, y: 12, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              className="absolute top-3 left-1/2 -translate-x-1/2 z-20 rounded-full bg-yellow-300 text-yellow-900 font-display font-extrabold text-sm px-4 py-1.5 shadow-lg"
+              className="absolute top-3 left-1/2 -translate-x-1/2 z-20 rounded-full bg-yellow-300 text-warn font-display font-extrabold text-sm px-4 py-1.5 shadow-lg"
             >
               🪙 +{coinAward} coins!
             </motion.div>
@@ -266,14 +266,14 @@ function StoryVideoPlayer({
               <button
                 type="button"
                 onClick={onClose}
-                className="rounded-full bg-emerald-500 hover:bg-emerald-600 active:translate-y-0.5 text-white font-display font-extrabold text-xl px-10 h-16 shadow-lg shadow-emerald-500/30 transition"
+                className="rounded-full bg-duo-green hover:bg-duo-green-dark active:translate-y-0.5 text-white font-display font-extrabold text-xl px-10 h-16 shadow-lg shadow-black/30 transition"
               >
                 Done ✓
               </button>
               <button
                 type="button"
                 onClick={replay}
-                className="rounded-full bg-white/95 hover:bg-white shadow px-5 h-12 flex items-center gap-2 font-display font-extrabold text-slate-900"
+                className="rounded-full bg-white/95 hover:bg-white shadow px-5 h-12 flex items-center gap-2 font-display font-extrabold text-zinc-900"
               >
                 ↻ Watch again
               </button>
@@ -282,7 +282,7 @@ function StoryVideoPlayer({
             <button
               type="button"
               onClick={replay}
-              className="absolute bottom-3 right-3 rounded-full bg-white/90 hover:bg-white text-slate-700 font-display font-bold text-xs px-3 py-1 shadow active:translate-y-0.5"
+              className="absolute bottom-3 right-3 rounded-full bg-white/90 hover:bg-white text-zinc-700 font-display font-bold text-xs px-3 py-1 shadow active:translate-y-0.5"
             >
               ↻ Restart
             </button>
@@ -295,7 +295,7 @@ function StoryVideoPlayer({
                 type="button"
                 onClick={rewind10}
                 aria-label="Rewind 10 seconds"
-                className="rounded-full bg-white/90 hover:bg-white text-slate-700 px-3 py-1 text-xs font-display font-bold shadow active:translate-y-0.5"
+                className="rounded-full bg-white/90 hover:bg-white text-zinc-700 px-3 py-1 text-xs font-display font-bold shadow active:translate-y-0.5"
               >
                 ⏪ 10s
               </button>
@@ -306,7 +306,7 @@ function StoryVideoPlayer({
               aria-pressed={rate < 1}
               className={
                 'rounded-full px-3 py-1 text-xs font-display font-bold shadow ' +
-                (rate < 1 ? 'bg-amber-300 text-amber-900' : 'bg-white/90 text-slate-700')
+                (rate < 1 ? 'bg-amber-300 text-amber-900' : 'bg-white/90 text-ink-muted')
               }
             >
               🐢 {rate < 1 ? '0.75×' : 'Slow it down'}

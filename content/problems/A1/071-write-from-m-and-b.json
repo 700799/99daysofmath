@@ -1,0 +1,59 @@
+{
+  "id": "A1.071",
+  "domain": "A1",
+  "unit": 8,
+  "orderInUnit": 1,
+  "standard": "A1.LIN.B.1",
+  "difficulty": 1,
+  "prompt": "A line has slope $5$ and $y$-intercept $1$. Write its equation in the form $y = mx + b$.",
+  "answerType": "expression",
+  "primaryAnswer": "y = 5x + 1",
+  "alternativeAnswers": [
+    "y=5x+1",
+    "5x + 1",
+    "5x+1"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "In $y = mx + b$, drop the slope into the $m$ spot and the intercept into the $b$ spot.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "In $y = mx + b$, drop the slope into the $m$ spot and the intercept into the $b$ spot."
+    },
+    {
+      "level": "guide",
+      "text": "$m = 5$ and $b = 1$: $y = 5x + \\underline{\\ \\ }$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 5x + 1$."
+    }
+  ],
+  "explanation": [
+    "The template is $y = mx + b$.",
+    "Slope $m = 5$ goes in front of $x$; intercept $b = 1$ is added at the end.",
+    "Equation: $y = 5x + 1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Start-then-move story",
+      "steps": [
+        "The intercept is where you START: height $1$ on the $y$-axis.",
+        "The slope is how you MOVE: up $5$ per step across.",
+        "Start $1$, move $5x$: $y = 5x + 1$."
+      ]
+    },
+    {
+      "title": "Build the table first",
+      "steps": [
+        "Start at $x = 0, y = 1$ and jump $5$ each step: $0 \\to 1$, $1 \\to 6$, $2 \\to 11$.",
+        "Jump $5$ means $5x$; the value at zero, $1$, is the $+b$: $y = 5x + 1$."
+      ]
+    }
+  ],
+  "tags": [
+    "write-equation",
+    "slope-intercept"
+  ],
+  "estimatedSeconds": 35
+}

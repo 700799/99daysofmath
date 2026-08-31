@@ -1,0 +1,49 @@
+{
+  "id": "PC.044",
+  "domain": "PC",
+  "unit": 5,
+  "orderInUnit": 4,
+  "standard": "PC.EXP.A.1",
+  "difficulty": 2,
+  "prompt": "A dish starts with $50$ bacteria. The number DOUBLES every hour. How many bacteria are there after $4$ hours?",
+  "answerType": "numeric",
+  "primaryAnswer": "800",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Doubling means the growth factor is $2$. The start is $50$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Doubling means the growth factor is $2$. The start is $50$."
+    },
+    {
+      "level": "guide",
+      "text": "Use $y = 50 \\cdot 2^x$ with $x = 4$. First find $2^4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2^4 = 16$, and $50 \\times 16 = 800$ bacteria."
+    }
+  ],
+  "explanation": [
+    "Start $a = 50$, growth factor $b = 2$, steps $x = 4$.",
+    "$y = 50 \\cdot 2^4$.",
+    "$2^4 = 16$, so $y = 50 \\times 16 = 800$ bacteria."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Make an hour-by-hour table",
+      "steps": [
+        "Hour 0: $50$. Hour 1: $100$. Hour 2: $200$.",
+        "Hour 3: $400$. Hour 4: $800$.",
+        "Doubling four times gets you to $800$."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "doubling",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

@@ -36,7 +36,7 @@ export function Report() {
 
   if (error) {
     return (
-      <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-4 text-red-800">
+      <div className="bg-bad-soft border-2 border-bad/40 rounded-2xl p-4 text-bad">
         Couldn't build report: {error.message}
       </div>
     );
@@ -45,7 +45,7 @@ export function Report() {
     return (
       <div className="text-center py-12">
         <Mascot mood="thinking" size={80} />
-        <div className="mt-3 text-slate-500 font-display font-bold">Building your report…</div>
+        <div className="mt-3 text-ink-muted font-display font-bold">Building your report…</div>
       </div>
     );
   }
@@ -57,28 +57,28 @@ export function Report() {
   return (
     <div className="space-y-5">
       <div className="flex items-center justify-between gap-3">
-        <h1 className="text-2xl font-display font-extrabold text-slate-900">
+        <h1 className="text-2xl font-display font-extrabold text-ink">
           Progress report
         </h1>
         <button
           type="button"
           onClick={() => window.print()}
-          className="no-print shrink-0 min-h-11 px-4 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-display font-extrabold text-sm transition-colors"
+          className="no-print shrink-0 min-h-11 px-4 rounded-full bg-surface-2 hover:bg-surface-2 text-ink-muted font-display font-extrabold text-sm transition-colors"
         >
           🖨 Print
         </button>
       </div>
-      <p className="text-sm text-slate-600 -mt-3">
+      <p className="text-sm text-ink-muted -mt-3">
         Strengths &amp; growth areas for 6th-grade math (NWEA MAP prep).
       </p>
 
       {totalAttempts === 0 ? (
-        <div className="bg-white border-2 border-slate-200 rounded-3xl p-8 text-center">
+        <div className="bg-surface border-2 border-line rounded-3xl p-8 text-center">
           <Mascot mood="happy" size={96} />
-          <div className="font-display font-extrabold text-slate-900 mt-3">
+          <div className="font-display font-extrabold text-ink mt-3">
             No practice logged yet
           </div>
-          <p className="text-sm text-slate-600 mt-1">
+          <p className="text-sm text-ink-muted mt-1">
             Answer some problems and your strengths &amp; growth areas will show up here.
           </p>
           <Link
@@ -93,14 +93,14 @@ export function Report() {
           <RitTrend />
 
           {focus && (
-            <div className="rounded-3xl border-2 border-orange-200 bg-gradient-to-br from-orange-50 to-amber-50 p-5">
-              <div className="text-xs font-display font-extrabold uppercase tracking-wider text-orange-700">
+            <div className="rounded-3xl border-2 border-warn/40 bg-gradient-to-br bg-warn-soft p-5">
+              <div className="text-xs font-display font-extrabold uppercase tracking-wider text-warn">
                 Focus next
               </div>
-              <div className="font-display font-extrabold text-lg text-slate-900 mt-0.5">
+              <div className="font-display font-extrabold text-lg text-ink mt-0.5">
                 {focus.label}
               </div>
-              <div className="text-sm text-slate-600 mt-0.5">
+              <div className="text-sm text-ink-muted mt-0.5">
                 {Math.round(focus.accuracy * 100)}% correct so far — the best place to grow.
               </div>
               <Link
@@ -112,8 +112,8 @@ export function Report() {
             </div>
           )}
 
-          <section className="bg-white border-2 border-slate-200 rounded-3xl p-5">
-            <h2 className="font-display font-extrabold text-slate-900 mb-3">By topic area</h2>
+          <section className="bg-surface border-2 border-line rounded-3xl p-5">
+            <h2 className="font-display font-extrabold text-ink mb-3">By topic area</h2>
             <div className="space-y-3">
               {byDomain.map((s) => (
                 <SkillBar key={s.key} stat={s} />
@@ -121,9 +121,9 @@ export function Report() {
             </div>
           </section>
 
-          <section className="bg-white border-2 border-slate-200 rounded-3xl p-5">
-            <h2 className="font-display font-extrabold text-slate-900 mb-1">Skill detail</h2>
-            <p className="text-xs text-slate-500 mb-3">
+          <section className="bg-surface border-2 border-line rounded-3xl p-5">
+            <h2 className="font-display font-extrabold text-ink mb-1">Skill detail</h2>
+            <p className="text-xs text-ink-muted mb-3">
               Each skill needs 3+ answers before it's scored.
             </p>
             <div className="space-y-3">
@@ -133,8 +133,8 @@ export function Report() {
             </div>
           </section>
 
-          <section className="bg-white border-2 border-slate-200 rounded-3xl p-5">
-            <h2 className="font-display font-extrabold text-slate-900 mb-3">Habits</h2>
+          <section className="bg-surface border-2 border-line rounded-3xl p-5">
+            <h2 className="font-display font-extrabold text-ink mb-3">Habits</h2>
             <dl className="grid grid-cols-2 gap-3 text-sm">
               <Stat label="Current daily streak" value={`${dailyStreak} 🔥`} />
               <Stat label="Best daily streak" value={`${bestDailyStreak}`} />
@@ -152,7 +152,7 @@ export function Report() {
 
       <Link
         to="/"
-        className="no-print inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+        className="no-print inline-block text-sm font-display font-bold text-ink-muted hover:text-ink-muted"
       >
         ← Back home
       </Link>
@@ -162,11 +162,11 @@ export function Report() {
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl bg-slate-50 px-3 py-2 border border-slate-200">
-      <div className="text-[10px] font-display font-bold uppercase tracking-wider text-slate-500">
+    <div className="rounded-xl bg-surface-2 px-3 py-2 border border-line">
+      <div className="text-[10px] font-display font-bold uppercase tracking-wider text-ink-muted">
         {label}
       </div>
-      <div className="font-display font-extrabold text-slate-900 text-base mt-0.5">
+      <div className="font-display font-extrabold text-ink text-base mt-0.5">
         {value}
       </div>
     </div>

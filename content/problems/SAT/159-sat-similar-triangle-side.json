@@ -1,0 +1,56 @@
+{
+  "id": "SAT.159",
+  "domain": "SAT",
+  "unit": 16,
+  "orderInUnit": 9,
+  "standard": "SAT.GEO.2",
+  "difficulty": 3,
+  "prompt": "Triangle $ABC$ is similar to triangle $DEF$. Side $AB = 6$ corresponds to side $DE = 15$, and side $BC = 8$. What is the length of side $EF$?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the scale factor from the pair of sides you know.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the scale factor from the pair of sides you know."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an easy scale: if $AB = 2$ matches $DE = 6$, the factor is $3$, so a side of $5$ becomes $15$. Find the factor from the known pair, then apply it."
+    },
+    {
+      "level": "guide",
+      "text": "$15 \\div 6 = 2.5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$8 \\times 2.5 = 20$."
+    }
+  ],
+  "learningObjective": "Use a similarity scale factor to find a missing side.",
+  "topic": "Similarity",
+  "explanation": [
+    "Corresponding sides of similar triangles are in a constant ratio: $\\dfrac{DE}{AB} = \\dfrac{15}{6} = 2.5$.",
+    "Every side of $DEF$ is $2.5$ times its partner in $ABC$.",
+    "$EF = 2.5 \\times BC = 2.5 \\times 8 = 20$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Set up a proportion instead",
+      "steps": [
+        "$\\dfrac{AB}{DE} = \\dfrac{BC}{EF}$, so $\\dfrac{6}{15} = \\dfrac{8}{EF}$.",
+        "Cross-multiply: $6 \\cdot EF = 120$, so $EF = 20$.",
+        "Whichever route you take, keep the two triangles in a consistent order on both sides of the equation — mixing them up is how this question is usually lost."
+      ]
+    }
+  ],
+  "tags": [
+    "similarity",
+    "proportion",
+    "triangle"
+  ],
+  "estimatedSeconds": 70
+}

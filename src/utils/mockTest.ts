@@ -1,7 +1,9 @@
-import { DOMAINS, type Problem } from '../types/problem';
+// Mock test draws from CORE_DOMAINS only — it estimates a 6th-grade MAP RIT
+// band, so Algebra 1 problems would skew the calibration.
+import { CORE_DOMAINS, type Problem } from '../types/problem';
 
 const PER_DOMAIN = 3;
-export const MOCK_TEST_SIZE = DOMAINS.length * PER_DOMAIN;
+export const MOCK_TEST_SIZE = CORE_DOMAINS.length * PER_DOMAIN;
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -16,7 +18,7 @@ function shuffle<T>(arr: T[]): T[] {
 // spread across difficulties where possible, then shuffled into one sequence.
 export function pickMockTestProblems(all: Problem[]): Problem[] {
   const picks: Problem[] = [];
-  for (const domain of DOMAINS) {
+  for (const domain of CORE_DOMAINS) {
     const inDomain = all.filter((p) => p.domain === domain);
     const byDifficulty = [1, 2, 3].map((d) =>
       shuffle(inDomain.filter((p) => p.difficulty === d)),

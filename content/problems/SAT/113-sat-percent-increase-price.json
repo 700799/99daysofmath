@@ -1,0 +1,50 @@
+{
+  "id": "SAT.113",
+  "domain": "SAT",
+  "unit": 12,
+  "orderInUnit": 3,
+  "standard": "SAT.PSDA.2",
+  "difficulty": 2,
+  "prompt": "A jacket priced at $\\$80$ is marked up by $15\\%$. What is the new price, in dollars?",
+  "answerType": "numeric",
+  "primaryAnswer": "92",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A $15\\%$ increase means the new price is $115\\%$ of the old.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A $15\\%$ increase means the new price is $115\\%$ of the old."
+    },
+    {
+      "level": "guide",
+      "text": "$80 \\times 1.15$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\$92$."
+    }
+  ],
+  "learningObjective": "Apply a percent increase using a single multiplier.",
+  "topic": "Percent change",
+  "explanation": [
+    "A $15\\%$ increase keeps the original $100\\%$ and adds $15\\%$, so multiply by $1.15$.",
+    "$80 \\times 1.15 = 92$.",
+    "Or compute the increase separately: $0.15 \\times 80 = 12$, then $80 + 12 = \\$92$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The multiplier method scales better",
+      "steps": [
+        "One multiplication ($\\times 1.15$) replaces two steps, and there is no risk of forgetting to add the increase back.",
+        "It also chains: two successive $15\\%$ increases are just $\\times 1.15$ twice.",
+        "Get comfortable converting a percent change to a multiplier — it is the backbone of this entire unit."
+      ]
+    }
+  ],
+  "tags": [
+    "percent-increase",
+    "multiplier"
+  ],
+  "estimatedSeconds": 50
+}

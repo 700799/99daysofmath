@@ -18,6 +18,8 @@ const CHAMPIONS: Record<ArcadeUnit, { kind: MascotKind; name: string; word: stri
   '6.G': { kind: 'unicorn', name: 'Poly', word: 'unicorn' },
   '6.SP': { kind: 'penguin', name: 'Statz', word: 'penguin' },
   g5: { kind: 'bunny', name: 'Bouncy', word: 'bunny' },
+  a1: { kind: 'dragon', name: 'Axel', word: 'dragon' },
+  pc: { kind: 'robot', name: 'Sigma', word: 'robot' },
   mixed: { kind: 'pet', name: 'Pip', word: 'chick' },
 };
 // gear earned at levels 2, 3, 4, 5
@@ -116,7 +118,7 @@ export function MasteryCelebration() {
             // brief screen-shake while missiles land
             animate={phase === 'barrage' ? { x: [0, -6, 6, -4, 4, 0], y: [0, 4, -4, 3, 0] } : { x: 0, y: 0 }}
             transition={{ duration: 0.5, repeat: phase === 'barrage' ? 2 : 0 }}
-            className="relative w-full max-w-xs rounded-3xl bg-white/95 p-6 text-center shadow-2xl"
+            className="relative w-full max-w-xs rounded-3xl bg-surface/95 p-6 text-center shadow-2xl"
           >
             <div className="text-xs font-display font-extrabold uppercase tracking-widest text-amber-500">
               {cur.kind === 'reward' ? '🎁 Reward!' : '⭐ Level Up! ⭐'}
@@ -188,17 +190,17 @@ export function MasteryCelebration() {
               )}
             </div>
 
-            <div className="mt-3 font-display font-extrabold text-xl text-slate-900">{ARCADE_UNIT_LABELS[cur.unit]}</div>
-            <div className="font-display font-extrabold text-3xl text-indigo-600 tabular-nums">
+            <div className="mt-3 font-display font-extrabold text-xl text-ink">{ARCADE_UNIT_LABELS[cur.unit]}</div>
+            <div className="font-display font-extrabold text-3xl text-accent tabular-nums">
               {phase === 'win' && strong ? 'CHAMPION! 🏆' : `Level ${cur.level}`}
             </div>
 
             {cur.kind === 'levelup' && newestIdx >= 0 && newestIdx < GEAR_NAME.length && (
-              <div className="mt-1 text-sm font-display font-bold text-slate-600">
+              <div className="mt-1 text-sm font-display font-bold text-ink-muted">
                 {champ.name} the {champ.word} earned {GEAR_NAME[newestIdx]}!
               </div>
             )}
-            <div className="mt-1 text-xs font-display font-bold text-slate-500">
+            <div className="mt-1 text-xs font-display font-bold text-ink-muted">
               {strong ? 'Armor held — withstood the whole barrage! 🛡️' : 'Barely survived — win more for stronger armor!'}
             </div>
 
@@ -217,7 +219,7 @@ export function MasteryCelebration() {
               ))}
             </div>
 
-            <button type="button" onClick={() => setCur(null)} className="mt-4 w-full min-h-11 rounded-2xl bg-emerald-500 text-white font-display font-extrabold">
+            <button type="button" onClick={() => setCur(null)} className="mt-4 w-full min-h-11 rounded-2xl bg-duo-green text-white font-display font-extrabold">
               Keep going ▶
             </button>
           </motion.div>

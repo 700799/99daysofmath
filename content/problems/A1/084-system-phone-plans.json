@@ -1,0 +1,54 @@
+{
+  "id": "A1.084",
+  "domain": "A1",
+  "unit": 9,
+  "orderInUnit": 4,
+  "standard": "A1.SYS.A.1",
+  "difficulty": 2,
+  "prompt": "Plan A costs $\\$20$ plus $\\$5$ per month. Plan B costs $\\$10$ plus $\\$7$ per month. After how many months do they cost the same?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Set the two costs equal: $20 + 5m = 10 + 7m$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Set the two costs equal: $20 + 5m = 10 + 7m$."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract $5m$ and $10$ from both sides: $10 = 2m$."
+    },
+    {
+      "level": "reveal",
+      "text": "$m = 10 \\div 2 = 5$ months."
+    }
+  ],
+  "explanation": [
+    "Same cost means $20 + 5m = 10 + 7m$.",
+    "Subtract $5m$: $20 = 10 + 2m$. Subtract $10$: $10 = 2m$.",
+    "$m = 5$. Check: both plans cost $\\$45$ at 5 months. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a table",
+      "steps": [
+        "Month 1: A = 25, B = 17. Month 3: A = 35, B = 31. B is catching up by $2 each month.",
+        "A starts $10 ahead and B gains $2 per month: 10 ÷ 2 = 5 months to tie."
+      ]
+    },
+    {
+      "title": "As two racers",
+      "steps": [
+        "Plan A starts 10 dollars ahead but walks 5 per month; B runs 7 per month.",
+        "B closes the 10-dollar gap at 2 per month → catches A after 5 months."
+      ]
+    }
+  ],
+  "tags": [
+    "system-of-equations",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

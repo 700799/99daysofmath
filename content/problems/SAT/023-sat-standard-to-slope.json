@@ -1,0 +1,51 @@
+{
+  "id": "SAT.023",
+  "domain": "SAT",
+  "unit": 3,
+  "orderInUnit": 3,
+  "standard": "SAT.ALG.3",
+  "difficulty": 2,
+  "prompt": "What is the slope of the line $4x - 2y = 10$?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Solve for $y$ to reveal the slope.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Solve for $y$ to reveal the slope."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract $4x$: $-2y = -4x + 10$. Now divide by $-2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 2x - 5$, so the slope is $2$."
+    }
+  ],
+  "learningObjective": "Convert standard form to slope-intercept form.",
+  "topic": "Form conversion",
+  "explanation": [
+    "Isolate the $y$ term: $-2y = -4x + 10$.",
+    "Divide every term by $-2$: $y = 2x - 5$.",
+    "The coefficient of $x$ is the slope: $2$. Both signs flipped when dividing by a negative — that is where this question is usually lost."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the standard-form slope formula",
+      "steps": [
+        "For $Ax + By = C$, the slope is $-A/B$.",
+        "Here $A = 4$ and $B = -2$, so the slope is $-\\dfrac{4}{-2} = 2$.",
+        "One step instead of three, and no chance of a sign slip during the division."
+      ]
+    }
+  ],
+  "tags": [
+    "slope",
+    "standard-form",
+    "conversion"
+  ],
+  "estimatedSeconds": 50
+}

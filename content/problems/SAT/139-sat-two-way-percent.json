@@ -1,0 +1,61 @@
+{
+  "id": "SAT.139",
+  "domain": "SAT",
+  "unit": 14,
+  "orderInUnit": 9,
+  "standard": "SAT.PSDA.4",
+  "difficulty": 3,
+  "prompt": "Using the commuting table, what percent of the students who take the bus are in Grade $9$? Round to the nearest whole percent.",
+  "diagram": {
+    "kind": "ascii",
+    "art": "           | Grade 9 | Grade 10 | Total\n-----------+---------+----------+------\n  Bus      |    45   |    35    |   80\n  Walk     |    30   |    20    |   50\n  Car      |    35   |    35    |   70\n-----------+---------+----------+------\n  Total    |   110   |    90    |  200"
+  },
+  "answerType": "numeric",
+  "primaryAnswer": "56",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.6,
+  "hint": "\"Of the students who take the bus\" names the denominator.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Of the students who take the bus\" names the denominator."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a two-by-two table: if $6$ of $10$ bus riders are in Grade 9, that is $60\\%$ — denominator $10$, the bus total. The phrase after 'of' names the denominator."
+    },
+    {
+      "level": "guide",
+      "text": "The Bus row totals $80$, and $45$ of those are in Grade 9."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\dfrac{45}{80} = 0.5625 \\approx 56\\%$."
+    }
+  ],
+  "learningObjective": "Compute a row-conditional percentage from a two-way table.",
+  "topic": "Two-way tables",
+  "explanation": [
+    "The phrase \"of the students who take the bus\" restricts the pool to the Bus row, total $80$.",
+    "Of those, $45$ are in Grade 9.",
+    "$\\dfrac{45}{80} = 0.5625$, which rounds to $56\\%$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Row condition versus column condition",
+      "steps": [
+        "This question conditions on a *row* (bus riders), so the row total is the denominator.",
+        "The earlier question conditioned on a *column* (Grade 10), so the column total was the denominator.",
+        "Same table, same numerator style, entirely different answers. Reading which way the condition runs is the whole skill."
+      ]
+    }
+  ],
+  "tags": [
+    "two-way-table",
+    "percent",
+    "conditional"
+  ],
+  "estimatedSeconds": 80
+}

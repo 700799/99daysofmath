@@ -1,0 +1,56 @@
+{
+  "id": "A1.125",
+  "domain": "A1",
+  "unit": 13,
+  "orderInUnit": 5,
+  "standard": "A1.POLY.A.2",
+  "difficulty": 2,
+  "prompt": "You have $6x + 12$ raffle tickets to split into identical gift bags with none left over. What is the GREATEST number of bags you can make?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The number of bags must divide BOTH terms: $6x$ and $12$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The number of bags must divide BOTH terms: $6x$ and $12$."
+    },
+    {
+      "level": "guide",
+      "text": "The greatest number that divides $6$ and $12$ is the GCF."
+    },
+    {
+      "level": "reveal",
+      "text": "GCF of $6x$ and $12$ is $6$: you can make $6$ bags, each holding $x + 2$ tickets."
+    }
+  ],
+  "explanation": [
+    "Identical bags with none left over means each term must split evenly.",
+    "The GCF of $6x$ and $12$ is $6$.",
+    "Factored: $6x + 12 = 6(x + 2)$ — that is $6$ bags of $(x + 2)$ tickets each."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test bag counts",
+      "steps": [
+        "Could you make 12 bags? 12 divides 12, but 12 does not divide 6x evenly. No.",
+        "Could you make 6 bags? 6x ÷ 6 = x and 12 ÷ 6 = 2 — yes, each bag gets x + 2 tickets.",
+        "Nothing bigger works, so 6 is the greatest."
+      ]
+    },
+    {
+      "title": "See it with a real x",
+      "steps": [
+        "Suppose x = 5, so you have 30 + 12 = 42 tickets.",
+        "With 6 bags, each holds 7 tickets — exactly x + 2 = 7. The GCF plan works for any x."
+      ]
+    }
+  ],
+  "tags": [
+    "factoring",
+    "gcf",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

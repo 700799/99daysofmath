@@ -1,0 +1,58 @@
+{
+  "id": "PC.126",
+  "domain": "PC",
+  "unit": 13,
+  "orderInUnit": 6,
+  "standard": "PC.SEQ.A.1",
+  "difficulty": 2,
+  "prompt": "Young Carl Gauss was told to add every whole number from $1$ to $100$. He finished in seconds by pairing the ends. What is the sum?",
+  "answerType": "numeric",
+  "primaryAnswer": "5050",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Pair the first with the last: $1 + 100$. Then $2 + 99$. Notice anything?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Pair the first with the last: $1 + 100$. Then $2 + 99$. Notice anything?"
+    },
+    {
+      "level": "guide",
+      "text": "Every pair adds to $101$, and $100$ numbers make $50$ pairs."
+    },
+    {
+      "level": "reveal",
+      "text": "$50 \\times 101 = 5050$."
+    }
+  ],
+  "explanation": [
+    "Use the shortcut: sum $= n \\times \\frac{\\text{first} + \\text{last}}{2}$.",
+    "Here $n = 100$, first $= 1$, last $= 100$.",
+    "$100 \\times \\frac{101}{2} = 50 \\times 101$.",
+    "$= 5050$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pair the ends, in pictures",
+      "steps": [
+        "Write 1 to 100 in a row, then write the same row backwards underneath it.",
+        "Every column now adds to 101, and there are 100 columns: 100 × 101 = 10100.",
+        "But you wrote the list twice, so halve it: 10100 ÷ 2 = 5050."
+      ]
+    },
+    {
+      "title": "Test the trick on a tiny list",
+      "steps": [
+        "Add 1 to 10 the slow way: 1 + 2 + … + 10 = 55.",
+        "Now the shortcut: 10 × (1 + 10) ÷ 2 = 10 × 11 ÷ 2 = 55. It matches.",
+        "A trick that works on a list you can check by hand is a trick you can trust on 100 numbers."
+      ]
+    }
+  ],
+  "tags": [
+    "series",
+    "arithmetic",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

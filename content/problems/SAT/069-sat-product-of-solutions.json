@@ -1,0 +1,55 @@
+{
+  "id": "SAT.069",
+  "domain": "SAT",
+  "unit": 7,
+  "orderInUnit": 9,
+  "standard": "SAT.ADV.2",
+  "difficulty": 3,
+  "prompt": "What is the product of the solutions to $x^2 - 4x - 12 = 0$?",
+  "answerType": "numeric",
+  "primaryAnswer": "-12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The solutions of $ax^2 + bx + c = 0$ multiply to $c/a$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The solutions of $ax^2 + bx + c = 0$ multiply to $c/a$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a factorable one: $x^2 - 5x + 6 = 0$ has roots $2$ and $3$, whose product is $6$ — exactly the constant term. That is the $c/a$ rule in miniature."
+    },
+    {
+      "level": "guide",
+      "text": "Here $a = 1$ and $c = -12$."
+    },
+    {
+      "level": "reveal",
+      "text": "The product is $-12$."
+    }
+  ],
+  "learningObjective": "Use the product-of-roots relationship for a quadratic.",
+  "topic": "Roots of quadratics",
+  "explanation": [
+    "For $ax^2 + bx + c = 0$, the product of the solutions is $\\dfrac{c}{a} = \\dfrac{-12}{1} = -12$.",
+    "Confirm by factoring: $(x - 6)(x + 2) = 0$ gives $6$ and $-2$.",
+    "$6 \\times (-2) = -12$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A negative product is information",
+      "steps": [
+        "If the product of the roots is negative, the two roots must have opposite signs.",
+        "If the product is positive, they share a sign — and then the sum tells you which.",
+        "Reading the signs off $b$ and $c$ before factoring often tells you what pair to look for."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "product-of-roots"
+  ],
+  "estimatedSeconds": 60
+}

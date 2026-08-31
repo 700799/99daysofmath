@@ -1,0 +1,53 @@
+{
+  "id": "A1.070",
+  "domain": "A1",
+  "unit": 7,
+  "orderInUnit": 10,
+  "standard": "A1.LIN.A.2",
+  "difficulty": 3,
+  "prompt": "The line $y = 4x - 8$ crosses the $x$-axis where $y = 0$. What is $x$ there?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Set $y = 0$: solve $0 = 4x - 8$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Set $y = 0$: solve $0 = 4x - 8$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Simpler: $y = 2x - 4$ hits zero when $2x = 4$, so $x = 2$. Set your $y$ to $0$ and solve the same way."
+    },
+    {
+      "level": "guide",
+      "text": "Add $8$ to both sides: $8 = 4x$. Then divide."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 8 \\div 4 = 2$."
+    }
+  ],
+  "explanation": [
+    "On the $x$-axis, $y = 0$: set $0 = 4x - 8$.",
+    "Add $8$: $8 = 4x$.",
+    "Divide by $4$: $x = 2$. The line crosses at $(2, 0)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Climb from the start",
+      "steps": [
+        "The line starts at $(0, -8)$, which is $8$ below the $x$-axis, and climbs $4$ per step.",
+        "It needs $8 \\div 4 = 2$ steps to reach height $0$ — so it crosses at $x = 2$."
+      ]
+    }
+  ],
+  "tags": [
+    "slope-intercept",
+    "x-intercept",
+    "solve"
+  ],
+  "estimatedSeconds": 60
+}

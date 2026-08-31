@@ -1,10 +1,10 @@
 import type { SkillStat } from '../utils/mastery';
 
 const LEVEL_META = {
-  strong: { label: 'Strong', bar: 'bg-green-500', chip: 'bg-green-100 text-green-800' },
-  'on-track': { label: 'On track', bar: 'bg-sky-500', chip: 'bg-sky-100 text-sky-800' },
-  'needs-work': { label: 'Needs work', bar: 'bg-orange-500', chip: 'bg-orange-100 text-orange-800' },
-  unassessed: { label: 'Not assessed', bar: 'bg-slate-300', chip: 'bg-slate-100 text-slate-500' },
+  strong: { label: 'Strong', bar: 'bg-green-500', chip: 'bg-ok-soft text-ok' },
+  'on-track': { label: 'On track', bar: 'bg-sky-500', chip: 'bg-accent-soft text-accent' },
+  'needs-work': { label: 'Needs work', bar: 'bg-orange-500', chip: 'bg-warn-soft text-warn' },
+  unassessed: { label: 'Not assessed', bar: 'bg-line-strong', chip: 'bg-surface-2 text-ink-muted' },
 } as const;
 
 export function SkillBar({ stat }: { stat: SkillStat }) {
@@ -14,7 +14,7 @@ export function SkillBar({ stat }: { stat: SkillStat }) {
   return (
     <div>
       <div className="flex items-center justify-between gap-2">
-        <div className="text-sm font-display font-bold text-slate-800 truncate">
+        <div className="text-sm font-display font-bold text-ink truncate">
           {stat.label}
         </div>
         <span
@@ -23,7 +23,7 @@ export function SkillBar({ stat }: { stat: SkillStat }) {
           {assessed ? `${pct}% · ${meta.label}` : meta.label}
         </span>
       </div>
-      <div className="mt-1 h-2.5 rounded-full bg-slate-100 overflow-hidden">
+      <div className="mt-1 h-2.5 rounded-full bg-surface-2 overflow-hidden">
         <div
           className={`h-full ${meta.bar} rounded-full transition-all`}
           style={{ width: assessed ? `${pct}%` : '0%' }}

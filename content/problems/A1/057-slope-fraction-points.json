@@ -1,0 +1,50 @@
+{
+  "id": "A1.057",
+  "domain": "A1",
+  "unit": 6,
+  "orderInUnit": 7,
+  "standard": "A1.LIN.A.1",
+  "difficulty": 2,
+  "prompt": "Find the slope of the line through $(2, 1)$ and $(6, 4)$. Write it as a fraction.",
+  "answerType": "numeric",
+  "primaryAnswer": "3/4",
+  "alternativeAnswers": [
+    "0.75"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Slope $= \\frac{y_2 - y_1}{x_2 - x_1}$. Keep the answer as a fraction.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Slope $= \\frac{y_2 - y_1}{x_2 - x_1}$. Keep the answer as a fraction."
+    },
+    {
+      "level": "guide",
+      "text": "Rise: $4 - 1 = 3$. Run: $6 - 2 = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "Slope $= \\frac{3}{4}$."
+    }
+  ],
+  "explanation": [
+    "Rise: $4 - 1 = 3$.",
+    "Run: $6 - 2 = 4$.",
+    "Slope $= \\frac{3}{4}$ — up $3$ for every $4$ across. A slope does not have to be a whole number!"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Gentle stairs",
+      "steps": [
+        "From $(2,1)$ walk $4$ tiles across and climb only $3$ up to land on $(6,4)$.",
+        "Less than $1$ up per tile across: exactly $\\frac{3}{4}$ up each tile."
+      ]
+    }
+  ],
+  "tags": [
+    "slope",
+    "two-points",
+    "fractions"
+  ],
+  "estimatedSeconds": 50
+}

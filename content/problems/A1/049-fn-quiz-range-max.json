@@ -1,0 +1,53 @@
+{
+  "id": "A1.049",
+  "domain": "A1",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "A1.FUN.A.1",
+  "difficulty": 3,
+  "prompt": "Your quiz score is $f(q) = 4q$ points, and the quiz has at most $10$ questions ($q$ can be $0$ to $10$). What is the LARGEST output in the range?",
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Range = the set of possible OUTPUTS. The biggest output comes from the biggest input.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Range = the set of possible OUTPUTS. The biggest output comes from the biggest input."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Check the ends: $q = 0$ gives $0$ points and $q = 10$ gives $40$ points. The range is everything the machine CAN output between those."
+    },
+    {
+      "level": "guide",
+      "text": "The biggest allowed input is $q = 10$. Compute $f(10)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$f(10) = 4 \\times 10 = 40$."
+    }
+  ],
+  "explanation": [
+    "The domain (allowed inputs) is $q = 0$ to $10$.",
+    "The rule multiplies by $4$, so bigger inputs give bigger outputs.",
+    "Largest output: $f(10) = 4 \\times 10 = 40$ points."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "List the outputs",
+      "steps": [
+        "The outputs are $0, 4, 8, 12, \\ldots$ climbing by $4$ each time.",
+        "They stop when the questions run out at $q = 10$: the last one is $40$."
+      ]
+    }
+  ],
+  "tags": [
+    "functions",
+    "range",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,50 @@
+{
+  "id": "SAT.061",
+  "domain": "SAT",
+  "unit": 7,
+  "orderInUnit": 1,
+  "standard": "SAT.ADV.2",
+  "difficulty": 1,
+  "prompt": "What is the greater solution to $x^2 - 7x + 12 = 0$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find two numbers that multiply to $12$ and add to $-7$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find two numbers that multiply to $12$ and add to $-7$."
+    },
+    {
+      "level": "guide",
+      "text": "Those numbers are $-3$ and $-4$, so the factored form is $(x - 3)(x - 4) = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "The solutions are $3$ and $4$; the greater one is $4$."
+    }
+  ],
+  "learningObjective": "Solve a monic quadratic by factoring.",
+  "topic": "Factoring quadratics",
+  "explanation": [
+    "Look for two numbers whose product is $+12$ and whose sum is $-7$: those are $-3$ and $-4$.",
+    "So $x^2 - 7x + 12 = (x - 3)(x - 4) = 0$.",
+    "A product is zero only when a factor is zero, so $x = 3$ or $x = 4$. The greater is $4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sum and product without factoring",
+      "steps": [
+        "For $x^2 + bx + c = 0$, the solutions sum to $-b$ and multiply to $c$.",
+        "Here they sum to $7$ and multiply to $12$ — that pair is $3$ and $4$ by inspection.",
+        "This shortcut is fast on monic quadratics and doubles as a check on your factoring."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "factoring"
+  ],
+  "estimatedSeconds": 50
+}

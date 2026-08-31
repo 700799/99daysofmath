@@ -1,0 +1,73 @@
+{
+  "id": "SAT.123",
+  "domain": "SAT",
+  "unit": 13,
+  "orderInUnit": 3,
+  "standard": "SAT.PSDA.3",
+  "difficulty": 2,
+  "prompt": "For the data set $2$, $4$, $4$, $5$, $10$, which statement is true?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The mean is greater than the median",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "The median is greater than the mean",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "The mean and median are equal",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The mean is less than the smallest value",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Compute both, or reason from the shape: is there a value pulling one of them?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Compute both, or reason from the shape: is there a value pulling one of them?"
+    },
+    {
+      "level": "guide",
+      "text": "Mean $= 25 \\div 5 = 5$; median is the middle value, $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5 > 4$, so the mean is greater."
+    }
+  ],
+  "learningObjective": "Compare mean and median for a skewed data set.",
+  "topic": "Center and shape",
+  "explanation": [
+    "The values are already sorted, so the median is the third: $4$.",
+    "The mean is $\\dfrac{2 + 4 + 4 + 5 + 10}{5} = \\dfrac{25}{5} = 5$.",
+    "The mean exceeds the median because the value $10$ sits far above the rest and drags the mean up."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read the skew instead of computing",
+      "steps": [
+        "The values cluster at $2$-$5$ with one straggler at $10$ — right-skewed.",
+        "The mean chases outliers; the median ignores them. So in a right-skewed set, mean > median.",
+        "Left-skewed reverses it. Knowing this rule answers most center-comparison questions without any arithmetic."
+      ]
+    }
+  ],
+  "tags": [
+    "mean",
+    "median",
+    "skew"
+  ],
+  "estimatedSeconds": 65
+}

@@ -46,7 +46,7 @@ export function AnswerInput({ problem, value, onChange, disabled, onSubmit }: Pr
                 'min-h-14 px-4 py-3 rounded-2xl border-2 text-left font-display font-bold transition-all',
                 selected
                   ? 'bg-duo-blue text-white border-duo-blue shadow-[0_3px_0_0_rgba(0,0,0,0.15)]'
-                  : 'bg-white border-slate-200 hover:border-duo-blue text-slate-800 shadow-[0_3px_0_0_rgba(0,0,0,0.08)]',
+                  : 'bg-surface border-line hover:border-duo-blue text-ink shadow-[0_3px_0_0_rgba(0,0,0,0.08)]',
                 disabled ? 'opacity-60 cursor-not-allowed' : '',
               ].join(' ')}
             >
@@ -117,7 +117,7 @@ export function AnswerInput({ problem, value, onChange, disabled, onSubmit }: Pr
         onChange={(e) => onChange(e.target.value)}
         onKeyDown={onKeyDown}
         placeholder={placeholder}
-        className="w-full min-h-14 px-4 py-3 rounded-2xl border-2 border-slate-200 focus:border-duo-blue focus:outline-none focus:ring-4 focus:ring-blue-100 text-xl font-display font-extrabold text-slate-900 placeholder:text-slate-400 placeholder:font-normal disabled:bg-slate-100 disabled:opacity-60 transition-all"
+        className="w-full min-h-14 px-4 py-3 rounded-2xl border-2 border-line focus:border-duo-blue focus:outline-none focus:ring-4 focus:ring-blue-100 text-xl font-display font-extrabold text-ink placeholder:text-ink-dim placeholder:font-normal disabled:bg-surface-2 disabled:opacity-60 transition-all"
       />
       {showKeypad && (
         <NumberKeypad

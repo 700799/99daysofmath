@@ -1,0 +1,55 @@
+{
+  "id": "SAT.028",
+  "domain": "SAT",
+  "unit": 3,
+  "orderInUnit": 8,
+  "standard": "SAT.ALG.3",
+  "difficulty": 3,
+  "prompt": "A line passes through $(0, -3)$ and $(5, 7)$. What is the value of $y$ when $x = 8$?",
+  "answerType": "numeric",
+  "primaryAnswer": "13",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "One of the given points is already the $y$-intercept.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "One of the given points is already the $y$-intercept."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try the same shape with easy numbers: through $(0, 1)$ and $(1, 3)$ the slope is $2$, so $y = 2x + 1$ and at $x = 4$, $y = 9$. Find the intercept, find the slope, then substitute."
+    },
+    {
+      "level": "guide",
+      "text": "Slope $= \\dfrac{7 - (-3)}{5 - 0} = 2$, and $b = -3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 2x - 3$, so at $x = 8$: $y = 13$."
+    }
+  ],
+  "learningObjective": "Build a line from two points and evaluate it at a new input.",
+  "topic": "Writing and using linear equations",
+  "explanation": [
+    "The point $(0, -3)$ has $x = 0$, so the $y$-intercept is $-3$.",
+    "Slope $= \\dfrac{7 - (-3)}{5 - 0} = \\dfrac{10}{5} = 2$.",
+    "So $y = 2x - 3$, and at $x = 8$: $y = 16 - 3 = 13$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Step along the slope",
+      "steps": [
+        "From $(5, 7)$ you need to reach $x = 8$ — three steps right.",
+        "Each step right raises $y$ by $2$, so $y$ rises by $6$.",
+        "$7 + 6 = 13$. When a question gives a point close to the target, stepping beats rebuilding the equation."
+      ]
+    }
+  ],
+  "tags": [
+    "linear-equation",
+    "evaluate"
+  ],
+  "estimatedSeconds": 65
+}

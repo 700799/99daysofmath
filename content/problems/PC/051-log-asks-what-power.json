@@ -1,0 +1,47 @@
+{
+  "id": "PC.051",
+  "domain": "PC",
+  "unit": 6,
+  "orderInUnit": 1,
+  "standard": "PC.LOG.A.1",
+  "difficulty": 1,
+  "prompt": "Evaluate $\\log_2(32)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The log is asking one question: $2$ to WHAT power gives $32$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The log is asking one question: $2$ to WHAT power gives $32$?"
+    },
+    {
+      "level": "guide",
+      "text": "Count the doublings: $2, 4, 8, 16, 32$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2^5 = 32$, so $\\log_2(32) = 5$."
+    }
+  ],
+  "explanation": [
+    "A log asks for the exponent, and the answer IS the exponent.",
+    "$2^5 = 32$.",
+    "So $\\log_2(32) = 5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the doublings",
+      "steps": [
+        "Start at $1$ and keep doubling: $1, 2, 4, 8, 16, 32$ — that is $5$ doublings.",
+        "The number of doublings IS the logarithm.",
+        "So $\\log_2(32) = 5$."
+      ]
+    }
+  ],
+  "tags": [
+    "logarithm"
+  ],
+  "estimatedSeconds": 35
+}

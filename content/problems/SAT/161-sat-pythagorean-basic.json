@@ -1,0 +1,50 @@
+{
+  "id": "SAT.161",
+  "domain": "SAT",
+  "unit": 17,
+  "orderInUnit": 1,
+  "standard": "SAT.GEO.3",
+  "difficulty": 1,
+  "prompt": "A right triangle has legs of length $6$ and $8$. What is the length of the hypotenuse?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Use $a^2 + b^2 = c^2$ — or recognize a familiar triple.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use $a^2 + b^2 = c^2$ — or recognize a familiar triple."
+    },
+    {
+      "level": "guide",
+      "text": "$36 + 64 = 100$."
+    },
+    {
+      "level": "reveal",
+      "text": "$c = \\sqrt{100} = 10$."
+    }
+  ],
+  "learningObjective": "Apply the Pythagorean theorem to find a hypotenuse.",
+  "topic": "Pythagorean theorem",
+  "explanation": [
+    "$a^2 + b^2 = c^2$, so $6^2 + 8^2 = c^2$.",
+    "$36 + 64 = 100$, so $c = 10$.",
+    "This is the $3$-$4$-$5$ triple doubled — recognizing it skips the arithmetic entirely."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The triples worth memorizing",
+      "steps": [
+        "$3$-$4$-$5$, $5$-$12$-$13$, $8$-$15$-$17$, $7$-$24$-$25$ — and every multiple of each.",
+        "$6$-$8$-$10$, $9$-$12$-$15$, and $10$-$24$-$26$ are all disguised versions of these.",
+        "Spotting one turns a square-root computation into instant recall, which matters most late in a module."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean",
+    "triple"
+  ],
+  "estimatedSeconds": 40
+}

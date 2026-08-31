@@ -1,0 +1,56 @@
+{
+  "id": "A1.092",
+  "domain": "A1",
+  "unit": 10,
+  "orderInUnit": 2,
+  "standard": "A1.EXPO.A.1",
+  "difficulty": 1,
+  "prompt": "Simplify: $x^3 \\cdot x^4$. Write your answer as a power of $x$.",
+  "answerType": "expression",
+  "primaryAnswer": "x^7",
+  "alternativeAnswers": [
+    "x⁷"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$x^3$ is 3 copies of $x$, and $x^4$ is 4 more copies. Count ALL the copies.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$x^3$ is 3 copies of $x$, and $x^4$ is 4 more copies. Count ALL the copies."
+    },
+    {
+      "level": "guide",
+      "text": "Multiplying powers with the same base ADDS the exponents: $x^{3+4}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x^3 \\cdot x^4 = x^7$."
+    }
+  ],
+  "explanation": [
+    "$x^3 \\cdot x^4$ means $(x \\cdot x \\cdot x)(x \\cdot x \\cdot x \\cdot x)$ — copies of $x$ lined up.",
+    "Count them: $3 + 4 = 7$ copies total.",
+    "So $x^3 \\cdot x^4 = x^7$. Product rule: add the exponents."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test with real numbers",
+      "steps": [
+        "Let x = 2. Then 2³ = 8 and 2⁴ = 16, and 8 × 16 = 128.",
+        "128 is 2⁷, not 2¹². So the exponents add: x⁷."
+      ]
+    },
+    {
+      "title": "Two boxes of copies",
+      "steps": [
+        "Picture a box holding 3 x-tiles and a box holding 4 x-tiles, all being multiplied together.",
+        "Dump both boxes into one: 3 + 4 = 7 tiles, which is x⁷."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "product-rule"
+  ],
+  "estimatedSeconds": 35
+}

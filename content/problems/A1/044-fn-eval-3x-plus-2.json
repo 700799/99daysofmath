@@ -1,0 +1,48 @@
+{
+  "id": "A1.044",
+  "domain": "A1",
+  "unit": 5,
+  "orderInUnit": 4,
+  "standard": "A1.FUN.A.1",
+  "difficulty": 2,
+  "prompt": "Let $f(x) = 3x + 2$. What is $f(4)$? Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "14",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$f(4)$ means feed the machine a $4$: replace every $x$ with $4$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$f(4)$ means feed the machine a $4$: replace every $x$ with $4$."
+    },
+    {
+      "level": "guide",
+      "text": "Compute $3 \\times 4$ first, then add $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 4 = 12$, then $12 + 2 = 14$."
+    }
+  ],
+  "explanation": [
+    "Replace $x$ with $4$: $f(4) = 3 \\times 4 + 2$.",
+    "Multiply first: $3 \\times 4 = 12$.",
+    "Add: $12 + 2 = 14$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two-step machine",
+      "steps": [
+        "Picture the machine doing two moves: first \"times 3\", then \"plus 2\".",
+        "Input $4$: times $3$ gives $12$; plus $2$ gives $14$."
+      ]
+    }
+  ],
+  "tags": [
+    "functions",
+    "function-notation",
+    "evaluate"
+  ],
+  "estimatedSeconds": 35
+}

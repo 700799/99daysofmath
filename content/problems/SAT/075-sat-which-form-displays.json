@@ -1,0 +1,73 @@
+{
+  "id": "SAT.075",
+  "domain": "SAT",
+  "unit": 8,
+  "orderInUnit": 5,
+  "standard": "SAT.ADV.3",
+  "difficulty": 2,
+  "prompt": "Which form of a quadratic function displays the coordinates of its vertex as constants in the expression?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$f(x) = ax^2 + bx + c$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$f(x) = a(x - p)(x - q)$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$f(x) = a(x - h)^2 + k$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$f(x) = ax^2 + c$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Which form is actually called \"vertex form\"?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Which form is actually called \"vertex form\"?"
+    },
+    {
+      "level": "guide",
+      "text": "Look for the form built around a single squared binomial plus a constant."
+    },
+    {
+      "level": "reveal",
+      "text": "$a(x - h)^2 + k$ shows the vertex $(h, k)$ directly."
+    }
+  ],
+  "learningObjective": "Match each quadratic form to the feature it reveals.",
+  "topic": "Forms of a quadratic",
+  "explanation": [
+    "Vertex form $a(x - h)^2 + k$ has the vertex coordinates $h$ and $k$ appearing literally in the expression.",
+    "Standard form displays the $y$-intercept $c$; factored form displays the zeros $p$ and $q$.",
+    "Choice D is a special case of standard form whose vertex happens to be on the $y$-axis, but it cannot display a general vertex."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "What \"displays\" means on the SAT",
+      "steps": [
+        "\"Displays as constants\" means the numbers are visible without any computation.",
+        "Standard form contains the vertex information, but you must compute $-b/2a$ to extract it — that is not displaying.",
+        "The distinction between containing and displaying is precisely what this question type tests."
+      ]
+    }
+  ],
+  "tags": [
+    "forms",
+    "vertex-form",
+    "conceptual"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,49 @@
+{
+  "id": "PC.047",
+  "domain": "PC",
+  "unit": 5,
+  "orderInUnit": 7,
+  "standard": "PC.EXP.A.1",
+  "difficulty": 2,
+  "prompt": "Each hour, $20\\%$ of a medicine leaves your bloodstream. What is the decay factor you multiply by each hour?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "If $20\\%$ leaves, ask what percent STAYS.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "If $20\\%$ leaves, ask what percent STAYS."
+    },
+    {
+      "level": "guide",
+      "text": "$100\\% - 20\\% = 80\\%$ stays. Turn $80\\%$ into a decimal."
+    },
+    {
+      "level": "reveal",
+      "text": "$80\\% = 0.8$, so the decay factor is $0.8$."
+    }
+  ],
+  "explanation": [
+    "A decay factor is about what is LEFT, not what left.",
+    "$100\\% - 20\\% = 80\\%$ stays each hour.",
+    "$80\\% = 0.8$, so multiply by $0.8$ every hour. Because $0.8$ is between $0$ and $1$, the amount shrinks."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Try it on 100 mg",
+      "steps": [
+        "Start with $100$ mg. Twenty percent of $100$ is $20$ mg, which leaves.",
+        "What remains is $80$ mg.",
+        "$80 \\div 100 = 0.8$ — that is the factor."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "decay",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

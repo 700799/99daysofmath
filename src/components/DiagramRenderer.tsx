@@ -34,7 +34,7 @@ export function DiagramRenderer({ diagram, className }: Props) {
     <pre
       className={
         className ??
-        'mx-auto my-4 font-mono text-sm bg-slate-100 p-3 rounded whitespace-pre'
+        'mx-auto my-4 font-mono text-sm bg-surface-2 p-3 rounded whitespace-pre'
       }
     >
       {diagram.art}

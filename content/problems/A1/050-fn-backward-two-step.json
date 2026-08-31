@@ -1,0 +1,53 @@
+{
+  "id": "A1.050",
+  "domain": "A1",
+  "unit": 5,
+  "orderInUnit": 10,
+  "standard": "A1.FUN.A.1",
+  "difficulty": 3,
+  "prompt": "Let $f(x) = 2x + 3$. The machine spits out $19$. What input went in?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The machine does \"times $2$, then plus $3$\". Undo the steps in REVERSE order.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The machine does \"times $2$, then plus $3$\". Undo the steps in REVERSE order."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Simpler: $2x + 3 = 9$ gives $2x = 6$, so $x = 3$. Undo in reverse — subtract the $3$, then divide by the $2$."
+    },
+    {
+      "level": "guide",
+      "text": "First undo \"plus $3$\": $19 - 3 = 16$. Then undo \"times $2$\"."
+    },
+    {
+      "level": "reveal",
+      "text": "$16 \\div 2 = 8$."
+    }
+  ],
+  "explanation": [
+    "Set up: $2x + 3 = 19$.",
+    "Undo \"plus $3$\": $2x = 19 - 3 = 16$.",
+    "Undo \"times $2$\": $x = 16 \\div 2 = 8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with the table",
+      "steps": [
+        "Try $f(7) = 17$ and $f(9) = 21$ — the output $19$ sits between them.",
+        "$f(8) = 2 \\times 8 + 3 = 19$. The input was $8$."
+      ]
+    }
+  ],
+  "tags": [
+    "functions",
+    "solve-for-input",
+    "two-step"
+  ],
+  "estimatedSeconds": 55
+}

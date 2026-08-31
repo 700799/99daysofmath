@@ -1,0 +1,49 @@
+{
+  "id": "PC.046",
+  "domain": "PC",
+  "unit": 5,
+  "orderInUnit": 6,
+  "standard": "PC.EXP.A.1",
+  "difficulty": 2,
+  "prompt": "You have $200$ followers and gain $10\\%$ more each week. How many followers do you have after $2$ weeks?",
+  "answerType": "numeric",
+  "primaryAnswer": "242",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Up $10\\%$ means the growth factor is $1.1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Up $10\\%$ means the growth factor is $1.1$."
+    },
+    {
+      "level": "guide",
+      "text": "Week 1: $200 \\times 1.1 = 220$. Now grow $220$ by another $10\\%$."
+    },
+    {
+      "level": "reveal",
+      "text": "$220 \\times 1.1 = 242$ followers."
+    }
+  ],
+  "explanation": [
+    "Up $10\\%$ gives a growth factor of $1.1$.",
+    "After week 1: $200 \\times 1.1 = 220$.",
+    "After week 2: $220 \\times 1.1 = 242$ followers."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Add the ten percent each time",
+      "steps": [
+        "Ten percent of $200$ is $20$, so week 1 ends at $200 + 20 = 220$.",
+        "Ten percent of $220$ is $22$, so week 2 ends at $220 + 22 = 242$.",
+        "The second week adds MORE than the first — that is what exponential means."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "percent-growth",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

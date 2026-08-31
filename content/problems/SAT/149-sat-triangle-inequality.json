@@ -1,0 +1,77 @@
+{
+  "id": "SAT.149",
+  "domain": "SAT",
+  "unit": 15,
+  "orderInUnit": 9,
+  "standard": "SAT.GEO.1",
+  "difficulty": 3,
+  "prompt": "Which set of side lengths could NOT form a triangle?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$5$, $7$, $10$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$3$, $4$, $8$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$6$, $6$, $6$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$8$, $15$, $17$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The two shorter sides must together exceed the longest side.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The two shorter sides must together exceed the longest side."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an obvious failure: $1$, $2$, and $9$ cannot close, since $1 + 2 = 3 < 9$. Compare the two shortest sides against the longest — that one check is enough."
+    },
+    {
+      "level": "guide",
+      "text": "For choice B: is $3 + 4$ greater than $8$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$3 + 4 = 7 < 8$, so those lengths cannot close into a triangle."
+    }
+  ],
+  "learningObjective": "Apply the triangle inequality.",
+  "topic": "Triangle inequality",
+  "explanation": [
+    "The Triangle Inequality: the sum of any two sides must exceed the third. In practice, just check the two shortest against the longest.",
+    "A: $5 + 7 = 12 > 10$ ✓. B: $3 + 4 = 7 < 8$ ✗. C: $6 + 6 = 12 > 6$ ✓. D: $8 + 15 = 23 > 17$ ✓",
+    "Only choice B fails."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the two short sides swinging shut",
+      "steps": [
+        "Imagine the two shorter sides as hinged arms attached to the ends of the longest side.",
+        "If they are too short to meet in the middle, no triangle exists — they cannot reach across.",
+        "Checking the two shortest against the longest is sufficient; the other two comparisons are then automatic."
+      ]
+    }
+  ],
+  "tags": [
+    "triangle-inequality",
+    "sides"
+  ],
+  "estimatedSeconds": 70
+}

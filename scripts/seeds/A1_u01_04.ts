@@ -1,0 +1,679 @@
+import type { SeedProblem } from './types';
+
+// A1 — Algebra 1, Units 1-4. 40 problems (10 per unit).
+// U1: The language of algebra · U2: One- & two-step equations
+// U3: Multi-step & variables on both sides · U4: Inequalities
+
+export const problemsA1u01: SeedProblem[] = [
+  // ---------------- UNIT 1 — The language of algebra ----------------
+  {
+    domain: 'A1', num: 1, unit: 1, order: 1, slug: 'mystery-box-marbles',
+    standard: 'A1.EXP.A.1', difficulty: 1,
+    prompt: 'A bag holds $b$ marbles — you cannot see inside, so $b$ is a mystery number. You drop in $3$ more marbles. Write an expression for the total number of marbles now.',
+    answerType: 'expression', primaryAnswer: 'b + 3', acceptanceMode: 'normalized',
+    alternativeAnswers: ['b+3', '3 + b', '3+b'],
+    hints: [
+      { level: 'nudge', text: 'A variable is a mystery box: $b$ stands for however many marbles are hiding in the bag.' },
+      { level: 'guide', text: 'You start with $b$ and ADD $3$. What operation joins them?' },
+      { level: 'reveal', text: 'The total is $b + 3$.' },
+    ],
+    explanation: ['The bag has some unknown number of marbles, so we call it $b$.', 'Adding 3 more means the total is $b + 3$.', 'If the bag secretly held 10, the expression would give $10 + 3 = 13$ — it works no matter what $b$ is.'],
+    alternativeExplanations: [
+      { title: 'Test it with a real number', steps: ['Pretend the bag holds 5 marbles. Add 3 and you have 8.', 'Which expression turns 5 into 8? Only $b + 3$ does: $5 + 3 = 8$.'] },
+    ],
+    tags: ['variables', 'translate', 'word-problem'], estimatedSeconds: 35,
+  },
+  {
+    domain: 'A1', num: 2, unit: 1, order: 2, slug: 'substitute-n-plus-5',
+    standard: 'A1.EXP.A.1', difficulty: 1,
+    prompt: 'If $n = 7$, what is the value of $n + 5$?',
+    answerType: 'numeric', primaryAnswer: '12', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Open the mystery box: replace $n$ with $7$.' },
+      { level: 'guide', text: 'Now compute $7 + 5$.' },
+      { level: 'reveal', text: '$7 + 5 = 12$.' },
+    ],
+    explanation: ['Substitute $n = 7$ into the expression.', '$n + 5$ becomes $7 + 5 = 12$.'],
+    alternativeExplanations: [
+      { title: 'As a story', steps: ['You have $n$ stickers and a friend gives you 5 more.', 'If $n$ turns out to be 7 stickers, you now hold $7 + 5 = 12$ stickers.'] },
+    ],
+    tags: ['evaluate', 'substitution'], estimatedSeconds: 25,
+  },
+  {
+    domain: 'A1', num: 3, unit: 1, order: 3, slug: 'translate-3-times-n',
+    standard: 'A1.EXP.A.1', difficulty: 1,
+    prompt: 'Write an expression for "$3$ times a number $n$".',
+    answerType: 'expression', primaryAnswer: '3n', acceptanceMode: 'normalized',
+    alternativeAnswers: ['3*n', '3 * n', 'n*3', '3 n'],
+    hints: [
+      { level: 'nudge', text: '"Times" means multiply.' },
+      { level: 'guide', text: 'In algebra we write a number glued to a letter to show multiplication: $3$ times $n$ is written without a symbol between them.' },
+      { level: 'reveal', text: 'The expression is $3n$.' },
+    ],
+    explanation: ['"3 times a number $n$" means $3 \\times n$.', 'In algebra we drop the times sign and write it as $3n$.'],
+    alternativeExplanations: [
+      { title: 'Picture 3 mystery boxes', steps: ['$n$ is one mystery box.', '"3 times $n$" is three identical boxes side by side: $n + n + n$, which is the same as $3n$.'] },
+    ],
+    tags: ['translate'], estimatedSeconds: 25,
+  },
+  {
+    domain: 'A1', num: 4, unit: 1, order: 4, slug: 'five-less-than-twice-n',
+    standard: 'A1.EXP.A.1', difficulty: 2,
+    prompt: 'Write an expression for "$5$ less than twice a number $n$".',
+    answerType: 'expression', primaryAnswer: '2n - 5', acceptanceMode: 'normalized',
+    alternativeAnswers: ['2n-5', '-5 + 2n', '-5+2n'],
+    hints: [
+      { level: 'nudge', text: '"Twice $n$" means $2n$. Build that part first.' },
+      { level: 'guide', text: '"$5$ less than" something means you SUBTRACT $5$ from it — the $5$ comes off the end, not the front.' },
+      { level: 'reveal', text: 'Take $2n$ and subtract $5$: the expression is $2n - 5$.' },
+    ],
+    explanation: ['"Twice a number $n$" is $2n$.', '"5 less than" that amount means subtract 5 FROM it: $2n - 5$.', 'Careful: it is not $5 - 2n$ — the phrase flips the order.'],
+    alternativeExplanations: [
+      { title: 'Test with a real number', steps: ['Let $n = 10$. Twice 10 is 20, and 5 less than 20 is 15.', 'Check the expressions: $2(10) - 5 = 15$ works, but $5 - 2(10) = -15$ does not.'] },
+    ],
+    tags: ['translate', 'less-than-trap'], estimatedSeconds: 45,
+  },
+  {
+    domain: 'A1', num: 5, unit: 1, order: 5, slug: 'game-coins-evaluate',
+    standard: 'A1.EXP.A.1', difficulty: 2,
+    prompt: 'In a video game you earn $50$ coins per level plus a one-time $20$-coin bonus, so your coins are $50L + 20$ after $L$ levels. How many coins do you have after $4$ levels?',
+    answerType: 'numeric', primaryAnswer: '220', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Substitute $L = 4$ into $50L + 20$.' },
+      { level: 'guide', text: '$50 \\times 4 = 200$. Now add the bonus.' },
+      { level: 'reveal', text: '$200 + 20 = 220$ coins.' },
+    ],
+    explanation: ['Substitute $L = 4$: $50(4) + 20$.', 'Multiply first: $50 \\times 4 = 200$.', 'Add the bonus: $200 + 20 = 220$ coins.'],
+    alternativeExplanations: [
+      { title: 'Level-by-level table', steps: ['Level 1: $50 + 20 = 70$. Level 2: $100 + 20 = 120$.', 'Level 3: $150 + 20 = 170$. Level 4: $200 + 20 = 220$.', 'Each level adds exactly 50 coins on top of the one-time bonus.'] },
+    ],
+    tags: ['evaluate', 'substitution', 'word-problem'], estimatedSeconds: 45,
+  },
+  {
+    domain: 'A1', num: 6, unit: 1, order: 6, slug: 'two-variable-evaluate',
+    standard: 'A1.EXP.A.1', difficulty: 2,
+    prompt: 'If $x = 3$ and $y = 4$, what is the value of $2x + y$?',
+    answerType: 'numeric', primaryAnswer: '10', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Two mystery boxes this time: put $3$ in for $x$ and $4$ in for $y$.' },
+      { level: 'guide', text: '$2x = 2 \\times 3 = 6$. Now add $y$.' },
+      { level: 'reveal', text: '$6 + 4 = 10$.' },
+    ],
+    explanation: ['Substitute both values: $2(3) + 4$.', 'Multiply first: $2 \\times 3 = 6$.', 'Add: $6 + 4 = 10$.'],
+    alternativeExplanations: [
+      { title: 'As a shopping story', steps: ['Buy 2 pencils at $\\$3$ each and 1 eraser at $\\$4$.', 'Pencils cost $2 \\times 3 = 6$ dollars, and the eraser adds 4 more: $\\$10$ total.'] },
+    ],
+    tags: ['evaluate', 'substitution'], estimatedSeconds: 35,
+  },
+  {
+    domain: 'A1', num: 7, unit: 1, order: 7, slug: 'allowance-evaluate',
+    standard: 'A1.EXP.A.1', difficulty: 2,
+    prompt: 'You already have $\\$15$ and get a $\\$10$ allowance each week, so your money is $10w + 15$ after $w$ weeks. How many dollars do you have after $6$ weeks? Give just the number.',
+    answerType: 'numeric', primaryAnswer: '75', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Replace $w$ with $6$ in $10w + 15$.' },
+      { level: 'guide', text: '$10 \\times 6 = 60$. Now add the $\\$15$ you started with.' },
+      { level: 'reveal', text: '$60 + 15 = 75$ dollars.' },
+    ],
+    explanation: ['Substitute $w = 6$: $10(6) + 15$.', 'Multiply: $10 \\times 6 = 60$.', 'Add the starting money: $60 + 15 = 75$. You have $\\$75$.'],
+    alternativeExplanations: [
+      { title: 'Count up week by week', steps: ['Start: $\\$15$. Each week adds $\\$10$.', 'After 6 weeks you have added $\\$60$ in allowance.', '$\\$15 + \\$60 = \\$75$.'] },
+    ],
+    tags: ['evaluate', 'word-problem'], estimatedSeconds: 45,
+  },
+  {
+    domain: 'A1', num: 8, unit: 1, order: 8, slug: 'combine-like-terms-basic',
+    standard: 'A1.EXP.A.1', difficulty: 3,
+    prompt: 'Simplify by combining like terms: $4x + 3 + 2x$. Write the simplified expression.',
+    answerType: 'expression', primaryAnswer: '6x + 3', acceptanceMode: 'normalized',
+    alternativeAnswers: ['6x+3', '3 + 6x', '3+6x'],
+    hints: [
+      { level: 'nudge', text: 'Like terms match: $4x$ and $2x$ are both $x$-terms, but $3$ is a plain number.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Try it with smaller numbers first: $2x + 1 + 3x$. The x-terms are $2x$ and $3x$, so they join to $5x$, and the lonely $1$ waits: $5x + 1$.' },
+      { level: 'guide', text: 'Add the $x$-terms together: $4x + 2x = ?$ The $3$ stays as it is.' },
+      { level: 'reveal', text: '$4x + 2x = 6x$, so the expression simplifies to $6x + 3$.' },
+    ],
+    explanation: ['Like terms have the same variable part: $4x$ and $2x$ match.', 'Combine them: $4x + 2x = 6x$.', 'The plain number 3 has no partner, so the answer is $6x + 3$.'],
+    alternativeExplanations: [
+      { title: 'Sort the fruit', steps: ['Think of $x$-terms as apples and plain numbers as oranges.', 'You have 4 apples + 3 oranges + 2 apples.', 'Sort them: 6 apples and 3 oranges — that is $6x + 3$. You never mash apples and oranges together.'] },
+    ],
+    tags: ['like-terms', 'simplify'], estimatedSeconds: 50,
+  },
+  {
+    domain: 'A1', num: 9, unit: 1, order: 9, slug: 'evaluate-with-exponent',
+    standard: 'A1.EXP.A.1', difficulty: 3,
+    prompt: 'If $x = 3$, what is the value of $x^2 + 2x$?',
+    answerType: 'numeric', primaryAnswer: '15', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Substitute $3$ for BOTH $x$\'s: $3^2 + 2 \\times 3$.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Warm up with $x = 2$: $x^2 + 2x$ becomes $4 + 4 = 8$. Do the SAME two steps with $3$: square it, double it, then add.' },
+      { level: 'guide', text: '$3^2 = 9$ and $2 \\times 3 = 6$. Now add them.' },
+      { level: 'reveal', text: '$9 + 6 = 15$.' },
+    ],
+    explanation: ['Substitute $x = 3$: $3^2 + 2(3)$.', 'Exponent first: $3^2 = 3 \\times 3 = 9$.', 'Then $2 \\times 3 = 6$, and $9 + 6 = 15$.'],
+    alternativeExplanations: [
+      { title: 'One piece at a time', steps: ['Break the expression into two pieces: $x^2$ and $2x$.', 'With $x = 3$: the first piece is 9, the second piece is 6.', 'Glue the pieces back with the plus sign: $9 + 6 = 15$.'] },
+    ],
+    tags: ['evaluate', 'exponent'], estimatedSeconds: 55,
+  },
+  {
+    domain: 'A1', num: 10, unit: 1, order: 10, slug: 'game-coins-write-expression',
+    standard: 'A1.EXP.A.1', difficulty: 3,
+    prompt: 'In a video game you earn $50$ coins for every level you beat, plus a one-time $20$-coin welcome bonus. Write an expression for your total coins after beating $L$ levels.',
+    answerType: 'expression', primaryAnswer: '50L + 20', acceptanceMode: 'normalized',
+    alternativeAnswers: ['50L+20', '20 + 50L', '20+50L', '50l + 20', '50l+20'],
+    hints: [
+      { level: 'nudge', text: 'One part repeats every level; one part happens only once.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Shrink the story: $2$ levels at $50$ coins is $100$, plus the one-time $20$ = $120$. The welcome bonus is added ONCE, never per level.' },
+      { level: 'guide', text: '$50$ coins per level for $L$ levels is $50L$. What do you add for the one-time bonus?' },
+      { level: 'reveal', text: 'Total coins: $50L + 20$.' },
+    ],
+    explanation: ['The repeating part: $50$ coins each level, $L$ times, gives $50L$.', 'The one-time part: the $20$-coin bonus is added once.', 'Total: $50L + 20$.'],
+    alternativeExplanations: [
+      { title: 'Check it with small numbers', steps: ['Beat 1 level: $50 + 20 = 70$ coins. Beat 2 levels: $100 + 20 = 120$ coins.', 'The pattern is always (50 per level) plus (20 once): $50L + 20$ matches both checks.'] },
+    ],
+    tags: ['translate', 'word-problem'], estimatedSeconds: 60,
+  },
+
+  // ---------------- UNIT 2 — Solving equations I: one- & two-step ----------------
+  {
+    domain: 'A1', num: 11, unit: 2, order: 1, slug: 'one-step-add-balance',
+    standard: 'A1.EQ.A.1', difficulty: 1,
+    prompt: 'Solve for $x$: $x + 9 = 15$. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '6', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'The equation is a balance scale. To undo $+9$, subtract $9$ — from BOTH sides.' },
+      { level: 'guide', text: '$x + 9 - 9 = 15 - 9$.' },
+      { level: 'reveal', text: '$x = 6$.' },
+    ],
+    explanation: ['Undo the $+9$ by subtracting 9 from both sides.', '$x = 15 - 9 = 6$.', 'Check: $6 + 9 = 15$. ✓'],
+    alternativeExplanations: [
+      { title: 'As a balance scale', steps: ['Left pan: a mystery box plus a 9-gram weight. Right pan: 15 grams. The scale balances.', 'Lift 9 grams off EACH pan — still balanced.', 'Now the box alone balances 6 grams, so $x = 6$.'] },
+    ],
+    tags: ['one-step-equation'], estimatedSeconds: 25,
+  },
+  {
+    domain: 'A1', num: 12, unit: 2, order: 2, slug: 'one-step-multiply',
+    standard: 'A1.EQ.A.1', difficulty: 1,
+    prompt: 'Solve for $x$: $4x = 28$. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '7', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: '$4x$ means $4$ times $x$. Undo multiplication with division.' },
+      { level: 'guide', text: 'Divide BOTH sides by $4$: $x = 28 \\div 4$.' },
+      { level: 'reveal', text: '$x = 7$.' },
+    ],
+    explanation: ['Undo "times 4" by dividing both sides by 4.', '$x = 28 \\div 4 = 7$.', 'Check: $4(7) = 28$. ✓'],
+    alternativeExplanations: [
+      { title: 'Share it out equally', steps: ['Four identical mystery boxes together weigh 28.', 'Split the 28 into 4 equal shares: each share is 7.', 'So one box weighs 7 — that is $x = 7$.'] },
+    ],
+    tags: ['one-step-equation'], estimatedSeconds: 25,
+  },
+  {
+    domain: 'A1', num: 13, unit: 2, order: 3, slug: 'one-step-subtract',
+    standard: 'A1.EQ.A.1', difficulty: 1,
+    prompt: 'Solve for $x$: $x - 6 = 11$. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '17', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Something had $6$ taken away and left $11$. Undo subtraction with addition.' },
+      { level: 'guide', text: 'Add $6$ to BOTH sides: $x = 11 + 6$.' },
+      { level: 'reveal', text: '$x = 17$.' },
+    ],
+    explanation: ['Undo the $-6$ by adding 6 to both sides.', '$x = 11 + 6 = 17$.', 'Check: $17 - 6 = 11$. ✓'],
+    alternativeExplanations: [
+      { title: 'Rewind the story', steps: ['A number lost 6 and ended at 11.', 'Play the movie backwards: start at 11 and give the 6 back.', '$11 + 6 = 17$, so the number began as 17.'] },
+    ],
+    tags: ['one-step-equation'], estimatedSeconds: 25,
+  },
+  {
+    domain: 'A1', num: 14, unit: 2, order: 4, slug: 'two-step-sneakers',
+    standard: 'A1.EQ.A.1', difficulty: 2,
+    prompt: 'You have $\\$20$ saved and earn $\\$8$ each week. Solve $8w + 20 = 68$ to find how many weeks until you can buy the $\\$68$ sneakers.',
+    answerType: 'numeric', primaryAnswer: '6', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Undo the $+20$ first: subtract $20$ from both sides.' },
+      { level: 'guide', text: '$8w = 48$. Now divide both sides by $8$.' },
+      { level: 'reveal', text: '$w = 48 \\div 8 = 6$ weeks.' },
+    ],
+    explanation: ['Subtract 20 from both sides: $8w = 48$.', 'Divide both sides by 8: $w = 6$.', 'Check: $8(6) + 20 = 68$. ✓ 6 weeks.'],
+    alternativeExplanations: [
+      { title: 'As a balance scale', steps: ['Both sides weigh the same. Take 20 off each pan: $8w$ balances $48$.', 'Split each pan into 8 equal groups: one $w$ balances $6$.'] },
+    ],
+    tags: ['two-step-equation', 'word-problem'], estimatedSeconds: 50,
+  },
+  {
+    domain: 'A1', num: 15, unit: 2, order: 5, slug: 'two-step-basic',
+    standard: 'A1.EQ.A.1', difficulty: 2,
+    prompt: 'Solve for $x$: $3x + 5 = 20$. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '5', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Undo in reverse order: the $+5$ was done last, so remove it first.' },
+      { level: 'guide', text: 'Subtract $5$ from both sides: $3x = 15$. Now divide by $3$.' },
+      { level: 'reveal', text: '$x = 15 \\div 3 = 5$.' },
+    ],
+    explanation: ['Subtract 5 from both sides: $3x = 15$.', 'Divide both sides by 3: $x = 5$.', 'Check: $3(5) + 5 = 20$. ✓'],
+    alternativeExplanations: [
+      { title: 'Unwrap the present', steps: ['The equation wrapped $x$ in two layers: first "times 3", then "plus 5".', 'Unwrap backwards: peel off the "+5" (subtract 5), then peel off the "times 3" (divide by 3).', 'Inside the wrapping you find $x = 5$.'] },
+    ],
+    tags: ['two-step-equation'], estimatedSeconds: 40,
+  },
+  {
+    domain: 'A1', num: 16, unit: 2, order: 6, slug: 'pizza-bill-split',
+    standard: 'A1.EQ.A.1', difficulty: 2,
+    prompt: 'Four friends split a pizza bill equally, and each friend pays $\\$7$. Solve $\\frac{b}{4} = 7$ to find the whole bill $b$ in dollars. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '28', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'The bill was DIVIDED by $4$. Undo division with multiplication.' },
+      { level: 'guide', text: 'Multiply BOTH sides by $4$: $b = 7 \\times 4$.' },
+      { level: 'reveal', text: '$b = 28$. The bill was $\\$28$.' },
+    ],
+    explanation: ['The bill split 4 ways gives $\\frac{b}{4} = 7$.', 'Multiply both sides by 4: $b = 28$.', 'Check: $28 \\div 4 = 7$ each. ✓'],
+    alternativeExplanations: [
+      { title: 'Collect the shares', steps: ['Each of the 4 friends puts $\\$7$ on the table.', 'The pile is the whole bill: $7 + 7 + 7 + 7 = 28$ dollars.'] },
+    ],
+    tags: ['one-step-equation', 'word-problem'], estimatedSeconds: 40,
+  },
+  {
+    domain: 'A1', num: 17, unit: 2, order: 7, slug: 'concert-ticket-fees',
+    standard: 'A1.EQ.A.1', difficulty: 2,
+    prompt: 'Two concert tickets plus a $\\$6$ service fee cost $\\$96$ in total. Solve $2t + 6 = 96$ to find the price $t$ of one ticket in dollars. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '45', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Take the fee off first: subtract $6$ from both sides.' },
+      { level: 'guide', text: '$2t = 90$. Now divide both sides by $2$.' },
+      { level: 'reveal', text: '$t = 90 \\div 2 = 45$ dollars.' },
+    ],
+    explanation: ['Subtract the fee: $2t = 96 - 6 = 90$.', 'Divide by 2: $t = 45$.', 'Check: $2(45) + 6 = 96$. ✓ Each ticket is $\\$45$.'],
+    alternativeExplanations: [
+      { title: 'As a balance scale', steps: ['Left pan: two ticket-boxes and a $\\$6$ weight. Right pan: $\\$96$.', 'Lift the $\\$6$ off each pan: two boxes balance $\\$90$.', 'Split each pan in half: one box balances $\\$45$.'] },
+    ],
+    tags: ['two-step-equation', 'word-problem'], estimatedSeconds: 50,
+  },
+  {
+    domain: 'A1', num: 18, unit: 2, order: 8, slug: 'divide-then-add',
+    standard: 'A1.EQ.A.1', difficulty: 3,
+    prompt: 'Solve for $x$: $\\frac{x}{3} - 2 = 4$. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '18', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'The $-2$ happened last, so undo it first: add $2$ to both sides.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Simpler version: $\\frac{x}{3} = 4$ gives $x = 12$. Your problem just has a $-2$ to undo FIRST, before you multiply by $3$.' },
+      { level: 'guide', text: '$\\frac{x}{3} = 6$. Now undo the "divide by 3" by multiplying both sides by $3$.' },
+      { level: 'reveal', text: '$x = 6 \\times 3 = 18$.' },
+    ],
+    explanation: ['Add 2 to both sides: $\\frac{x}{3} = 6$.', 'Multiply both sides by 3: $x = 18$.', 'Check: $18 \\div 3 - 2 = 6 - 2 = 4$. ✓'],
+    alternativeExplanations: [
+      { title: 'Unwrap the present', steps: ['$x$ got wrapped twice: first "divide by 3", then "minus 2".', 'Unwrap in reverse: add 2 back (get 6), then multiply by 3 (get 18).'] },
+    ],
+    tags: ['two-step-equation', 'fractions'], estimatedSeconds: 55,
+  },
+  {
+    domain: 'A1', num: 19, unit: 2, order: 9, slug: 'savings-decimal-weeks',
+    standard: 'A1.EQ.A.1', difficulty: 3,
+    prompt: 'You have $\\$9$ saved and add $\\$4.50$ to your jar every week. Solve $4.5w + 9 = 36$ to find how many weeks until you reach $\\$36$. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '6', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Subtract the $\\$9$ head start from both sides first.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Try round numbers: if you added $\\$9$ a week you would need $27 \\div 9 = 3$ weeks. Same recipe here, just divide by $4.5$ instead.' },
+      { level: 'guide', text: '$4.5w = 27$. Now divide both sides by $4.5$.' },
+      { level: 'reveal', text: '$w = 27 \\div 4.5 = 6$ weeks.' },
+    ],
+    explanation: ['Subtract 9 from both sides: $4.5w = 27$.', 'Divide by 4.5: $w = 6$.', 'Check: $4.5 \\times 6 + 9 = 27 + 9 = 36$. ✓'],
+    alternativeExplanations: [
+      { title: 'Think in half-dollars', steps: ['$\\$4.50$ a week is 9 half-dollars a week, and you need $\\$27$ more, which is 54 half-dollars.', '$54 \\div 9 = 6$ weeks — same answer, no decimals needed.'] },
+    ],
+    tags: ['two-step-equation', 'decimals', 'word-problem'], estimatedSeconds: 60,
+  },
+  {
+    domain: 'A1', num: 20, unit: 2, order: 10, slug: 'energy-points-rounds',
+    standard: 'A1.EQ.A.1', difficulty: 3,
+    prompt: 'You start a video game with $30$ energy points and use $2$ points every round. Solve $30 - 2r = 18$ to find how many rounds $r$ you have played. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '6', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Subtract $30$ from both sides first — watch the signs.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Simpler: $30 - 2r = 20$ means $2r = 10$, so $r = 5$. Yours works the same way — the energy SUBTRACTS each round.' },
+      { level: 'guide', text: '$-2r = -12$. Divide both sides by $-2$.' },
+      { level: 'reveal', text: '$r = -12 \\div -2 = 6$ rounds.' },
+    ],
+    explanation: ['Subtract 30 from both sides: $-2r = -12$.', 'Divide both sides by $-2$: $r = 6$.', 'Check: $30 - 2(6) = 30 - 12 = 18$. ✓'],
+    alternativeExplanations: [
+      { title: 'Count what you spent', steps: ['You started at 30 points and now sit at 18, so you spent $30 - 18 = 12$ points.', 'At 2 points a round, that is $12 \\div 2 = 6$ rounds.'] },
+    ],
+    tags: ['two-step-equation', 'negatives', 'word-problem'], estimatedSeconds: 60,
+  },
+
+  // ---------------- UNIT 3 — Solving equations II: multi-step & both sides ----------------
+  {
+    domain: 'A1', num: 21, unit: 3, order: 1, slug: 'combine-then-solve',
+    standard: 'A1.EQ.A.2', difficulty: 1,
+    prompt: 'Solve for $x$: $2x + 3x = 25$. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '5', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'First tidy up: $2x$ and $3x$ are like terms. Combine them.' },
+      { level: 'guide', text: '$2x + 3x = 5x$, so $5x = 25$. Now divide both sides by $5$.' },
+      { level: 'reveal', text: '$x = 25 \\div 5 = 5$.' },
+    ],
+    explanation: ['Combine like terms first: $2x + 3x = 5x$.', 'Now solve $5x = 25$: divide both sides by 5.', '$x = 5$. Check: $2(5) + 3(5) = 10 + 15 = 25$. ✓'],
+    alternativeExplanations: [
+      { title: 'Count the boxes', steps: ['2 mystery boxes plus 3 more mystery boxes is 5 identical boxes.', 'Five boxes together weigh 25, so each box weighs $25 \\div 5 = 5$.'] },
+    ],
+    tags: ['multi-step-equation', 'like-terms'], estimatedSeconds: 30,
+  },
+  {
+    domain: 'A1', num: 22, unit: 3, order: 2, slug: 'distribute-simple',
+    standard: 'A1.EQ.A.2', difficulty: 1,
+    prompt: 'Solve for $x$: $3(x + 2) = 21$. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '5', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Distribute: the $3$ outside hands itself to EVERYONE inside the parentheses.' },
+      { level: 'guide', text: '$3x + 6 = 21$. Subtract $6$, then divide by $3$.' },
+      { level: 'reveal', text: '$3x = 15$, so $x = 5$.' },
+    ],
+    explanation: ['Distribute the 3: $3(x + 2) = 3x + 6$.', 'Solve $3x + 6 = 21$: subtract 6 to get $3x = 15$.', 'Divide by 3: $x = 5$. Check: $3(5 + 2) = 21$. ✓'],
+    alternativeExplanations: [
+      { title: 'Divide first instead', steps: ['Both sides can be divided by 3 right away: $x + 2 = 7$.', 'Subtract 2: $x = 5$. Two roads, same answer.'] },
+    ],
+    tags: ['multi-step-equation', 'distribute'], estimatedSeconds: 35,
+  },
+  {
+    domain: 'A1', num: 23, unit: 3, order: 3, slug: 'both-sides-intro',
+    standard: 'A1.EQ.A.2', difficulty: 1,
+    prompt: 'Solve for $x$: $5x = 2x + 12$. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '4', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Get all the $x$\'s on one team: subtract $2x$ from both sides.' },
+      { level: 'guide', text: '$5x - 2x = 12$, so $3x = 12$.' },
+      { level: 'reveal', text: '$x = 12 \\div 3 = 4$.' },
+    ],
+    explanation: ['Subtract $2x$ from both sides: $3x = 12$.', 'Divide by 3: $x = 4$.', 'Check: $5(4) = 20$ and $2(4) + 12 = 20$. ✓ Both sides match.'],
+    alternativeExplanations: [
+      { title: 'As a balance scale', steps: ['Left pan: 5 boxes. Right pan: 2 boxes plus a 12-gram weight.', 'Lift 2 boxes off EACH pan: 3 boxes balance 12 grams.', 'Each box is $12 \\div 3 = 4$ grams.'] },
+    ],
+    tags: ['both-sides', 'multi-step-equation'], estimatedSeconds: 35,
+  },
+  {
+    domain: 'A1', num: 24, unit: 3, order: 4, slug: 'party-budget-guests',
+    standard: 'A1.EQ.A.2', difficulty: 2,
+    prompt: 'A party room costs $\\$40$ to rent plus $\\$6$ per guest, and your whole budget is $\\$100$. Solve $40 + 6g = 100$ to find how many guests $g$ you can invite. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '10', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'The room fee is one-time. Subtract $40$ from both sides first.' },
+      { level: 'guide', text: '$6g = 60$. Divide both sides by $6$.' },
+      { level: 'reveal', text: '$g = 60 \\div 6 = 10$ guests.' },
+    ],
+    explanation: ['Subtract the room fee: $6g = 100 - 40 = 60$.', 'Divide by 6: $g = 10$.', 'Check: $40 + 6(10) = 100$. ✓ You can invite 10 guests.'],
+    alternativeExplanations: [
+      { title: 'Budget leftovers', steps: ['Pay the room first: $\\$100 - \\$40$ leaves $\\$60$ for guests.', 'Each guest costs $\\$6$, so $60 \\div 6 = 10$ guests fit the budget.'] },
+    ],
+    tags: ['multi-step-equation', 'word-problem'], estimatedSeconds: 50,
+  },
+  {
+    domain: 'A1', num: 25, unit: 3, order: 5, slug: 'snack-bags-distribute',
+    standard: 'A1.EQ.A.2', difficulty: 2,
+    prompt: 'You hand $3$ snacks to every person at a table of $g$ guests plus $4$ helpers, using $33$ snacks in all. Solve $3(g + 4) = 33$ to find the number of guests $g$. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '7', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Distribute: the $3$ snacks go to EVERYONE inside the parentheses — guests AND helpers.' },
+      { level: 'guide', text: '$3g + 12 = 33$. Subtract $12$ from both sides.' },
+      { level: 'reveal', text: '$3g = 21$, so $g = 7$ guests.' },
+    ],
+    explanation: ['Distribute the 3: $3g + 12 = 33$.', 'Subtract 12: $3g = 21$.', 'Divide by 3: $g = 7$. Check: $3(7 + 4) = 3(11) = 33$. ✓'],
+    alternativeExplanations: [
+      { title: 'Count heads first', steps: ['33 snacks at 3 per person means $33 \\div 3 = 11$ people got snacks.', '4 of them are helpers, so $11 - 4 = 7$ are guests.'] },
+    ],
+    tags: ['distribute', 'multi-step-equation', 'word-problem'], estimatedSeconds: 55,
+  },
+  {
+    domain: 'A1', num: 26, unit: 3, order: 6, slug: 'phone-plans-equal',
+    standard: 'A1.EQ.A.2', difficulty: 2,
+    prompt: 'Phone plan A costs $\\$12$ plus $\\$0.10$ per minute. Plan B costs $\\$0.30$ per minute with no base fee. Solve $12 + 0.10m = 0.30m$ to find the number of minutes $m$ where the plans cost the same. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '60', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Get the $m$\'s on one team: subtract $0.10m$ from both sides.' },
+      { level: 'guide', text: '$12 = 0.20m$. Divide both sides by $0.20$.' },
+      { level: 'reveal', text: '$m = 12 \\div 0.20 = 60$ minutes.' },
+    ],
+    explanation: ['Subtract $0.10m$ from both sides: $12 = 0.20m$.', 'Divide by 0.20: $m = 60$.', 'Check: plan A costs $12 + 0.10(60) = \\$18$; plan B costs $0.30(60) = \\$18$. ✓ Same price at 60 minutes.'],
+    alternativeExplanations: [
+      { title: 'Race with a head start', steps: ['Plan B charges 20 cents more per minute, but plan A starts $\\$12$ ahead.', 'B catches up 20 cents each minute. To close a $\\$12$ gap takes $1200 \\div 20 = 60$ minutes.'] },
+    ],
+    tags: ['both-sides', 'decimals', 'word-problem'], estimatedSeconds: 70,
+  },
+  {
+    domain: 'A1', num: 27, unit: 3, order: 7, slug: 'both-sides-two-step',
+    standard: 'A1.EQ.A.2', difficulty: 2,
+    prompt: 'Solve for $x$: $7x - 4 = 3x + 16$. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '5', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Move all the $x$\'s to one team first: subtract $3x$ from both sides.' },
+      { level: 'guide', text: '$4x - 4 = 16$. Now add $4$ to both sides.' },
+      { level: 'reveal', text: '$4x = 20$, so $x = 5$.' },
+    ],
+    explanation: ['Subtract $3x$ from both sides: $4x - 4 = 16$.', 'Add 4 to both sides: $4x = 20$.', 'Divide by 4: $x = 5$. Check: $7(5) - 4 = 31$ and $3(5) + 16 = 31$. ✓'],
+    alternativeExplanations: [
+      { title: 'As a balance scale', steps: ['Left pan: 7 boxes with 4 grams removed. Right pan: 3 boxes plus 16 grams.', 'Lift 3 boxes off each pan, then add 4 grams to each pan: 4 boxes balance 20 grams.', 'Each box is 5 grams.'] },
+    ],
+    tags: ['both-sides', 'multi-step-equation'], estimatedSeconds: 55,
+  },
+  {
+    domain: 'A1', num: 28, unit: 3, order: 8, slug: 'hall-rental-compare',
+    standard: 'A1.EQ.A.2', difficulty: 3,
+    prompt: 'Hall A charges $\\$40$ plus $\\$6$ per guest. Hall B charges $\\$10$ per guest with no rental fee. Solve $40 + 6g = 10g$ to find the number of guests $g$ where the two halls cost the same. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '10', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Put the $g$\'s on one team: subtract $6g$ from both sides.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Test one guest count: at $5$ guests, Hall A costs $40 + 30 = 70$ and Hall B costs $50$. Keep testing, or set the two costs equal.' },
+      { level: 'guide', text: '$40 = 4g$. Divide both sides by $4$.' },
+      { level: 'reveal', text: '$g = 40 \\div 4 = 10$ guests.' },
+    ],
+    explanation: ['Subtract $6g$ from both sides: $40 = 4g$.', 'Divide by 4: $g = 10$.', 'Check: hall A costs $40 + 6(10) = \\$100$; hall B costs $10(10) = \\$100$. ✓'],
+    alternativeExplanations: [
+      { title: 'Close the gap', steps: ['Hall B costs $\\$4$ more per guest, but hall A starts with a $\\$40$ fee.', 'Every guest closes the gap by $\\$4$, so it takes $40 \\div 4 = 10$ guests to tie.'] },
+    ],
+    tags: ['both-sides', 'word-problem'], estimatedSeconds: 65,
+  },
+  {
+    domain: 'A1', num: 29, unit: 3, order: 9, slug: 'distribute-both-sides',
+    standard: 'A1.EQ.A.2', difficulty: 3,
+    prompt: 'Solve for $x$: $4(x - 2) = 2x + 6$. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '7', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Distribute first: hand the $4$ to both terms inside the parentheses.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Simpler: $4(x - 2) = 8$ gives $x - 2 = 2$, so $x = 4$. Yours adds x-terms on the right, so distribute first, then gather the x-terms.' },
+      { level: 'guide', text: '$4x - 8 = 2x + 6$. Subtract $2x$ from both sides, then add $8$.' },
+      { level: 'reveal', text: '$2x = 14$, so $x = 7$.' },
+    ],
+    explanation: ['Distribute: $4(x - 2) = 4x - 8$.', 'Subtract $2x$ from both sides: $2x - 8 = 6$.', 'Add 8: $2x = 14$, so $x = 7$. Check: $4(7 - 2) = 20$ and $2(7) + 6 = 20$. ✓'],
+    alternativeExplanations: [
+      { title: 'Guess-and-check table', steps: ['Try $x = 5$: left is $4(3) = 12$, right is $16$ — right side wins.', 'Try $x = 7$: left is $4(5) = 20$, right is $20$ — they tie!', 'The table shows the sides meet exactly at $x = 7$.'] },
+    ],
+    tags: ['distribute', 'both-sides'], estimatedSeconds: 65,
+  },
+  {
+    domain: 'A1', num: 30, unit: 3, order: 10, slug: 'multi-step-grand-finale',
+    standard: 'A1.EQ.A.2', difficulty: 3,
+    prompt: 'Solve for $x$: $5(x - 1) - 2x = 2x + 7$. Give just the number.',
+    answerType: 'numeric', primaryAnswer: '12', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Do the full cleanup routine: distribute the $5$, then combine like terms on the left.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Warm up by distributing only: $5(x - 1)$ is $5x - 5$. Now the left side is $5x - 5 - 2x = 3x - 5$. Much friendlier!' },
+      { level: 'guide', text: '$5x - 5 - 2x = 3x - 5$, so the equation is $3x - 5 = 2x + 7$. Subtract $2x$ from both sides.' },
+      { level: 'reveal', text: '$x - 5 = 7$, so $x = 12$.' },
+    ],
+    explanation: ['Distribute: $5(x - 1) = 5x - 5$.', 'Combine like terms on the left: $5x - 5 - 2x = 3x - 5$.', 'Subtract $2x$ from both sides: $x - 5 = 7$, so $x = 12$.', 'Check: $5(11) - 24 = 31$ and $2(12) + 7 = 31$. ✓'],
+    alternativeExplanations: [
+      { title: 'Tidy each room first', steps: ['Treat each side like a messy room: you cannot compare them until both are tidy.', 'Left room tidied: $3x - 5$. Right room is already tidy: $2x + 7$.', 'Now the equation $3x - 5 = 2x + 7$ is a simple both-sides problem: $x = 12$.'] },
+    ],
+    tags: ['distribute', 'like-terms', 'both-sides'], estimatedSeconds: 80,
+  },
+
+  // ---------------- UNIT 4 — Inequalities ----------------
+  {
+    domain: 'A1', num: 31, unit: 4, order: 1, slug: 'one-step-inequality-add',
+    standard: 'A1.INEQ.A.1', difficulty: 1,
+    prompt: 'Solve the inequality $x + 5 > 9$. Write your answer like "x > 4".',
+    answerType: 'short-text', primaryAnswer: 'x > 4', acceptanceMode: 'normalized',
+    alternativeAnswers: ['x>4', '4 < x', '4<x'],
+    hints: [
+      { level: 'nudge', text: 'Solve it just like an equation: undo the $+5$ on both sides.' },
+      { level: 'guide', text: '$x + 5 - 5 > 9 - 5$.' },
+      { level: 'reveal', text: '$x > 4$.' },
+    ],
+    explanation: ['Subtract 5 from both sides, just like an equation.', '$x > 4$.', 'Any number bigger than 4 works: try $x = 5$, since $5 + 5 = 10 > 9$. ✓'],
+    alternativeExplanations: [
+      { title: 'On a number line', steps: ['Picture a number line with an OPEN dot at 4 (4 itself is not included).', 'Shade everything to the right — those are all the numbers whose "+5" beats 9.'] },
+    ],
+    tags: ['inequality', 'one-step'], estimatedSeconds: 35,
+  },
+  {
+    domain: 'A1', num: 32, unit: 4, order: 2, slug: 'bus-at-most-40',
+    standard: 'A1.INEQ.A.1', difficulty: 1,
+    prompt: 'A school bus holds at most $40$ students. Write an inequality for the number of students $s$ that can ride. Write it like "s <= 40".',
+    answerType: 'short-text', primaryAnswer: 's <= 40', acceptanceMode: 'normalized',
+    alternativeAnswers: ['s<=40', 's ≤ 40', 's≤40', '40 >= s', '40>=s', '40 ≥ s'],
+    hints: [
+      { level: 'nudge', text: '"At most 40" means 40 is the ceiling: 40 is OK, 41 is not.' },
+      { level: 'guide', text: 'So $s$ can be less than 40 OR equal to 40. Which symbol says that?' },
+      { level: 'reveal', text: '$s \\le 40$ — written as "s <= 40".' },
+    ],
+    explanation: ['"At most 40" means the count can be 40 or anything smaller.', 'That is $s \\le 40$.', 'The "or equal" bar matters: exactly 40 students is still allowed.'],
+    alternativeExplanations: [
+      { title: 'Test the boundary', steps: ['Can 40 students ride? Yes — "at most 40" allows exactly 40.', 'Can 41 ride? No.', 'An inequality that says yes to 40 and no to 41 must be $s \\le 40$.'] },
+    ],
+    tags: ['inequality', 'translate', 'word-problem'], estimatedSeconds: 35,
+  },
+  {
+    domain: 'A1', num: 33, unit: 4, order: 3, slug: 'one-step-inequality-sub',
+    standard: 'A1.INEQ.A.1', difficulty: 1,
+    prompt: 'Solve the inequality $x - 3 \\ge 2$. Write your answer like "x >= 5".',
+    answerType: 'short-text', primaryAnswer: 'x >= 5', acceptanceMode: 'normalized',
+    alternativeAnswers: ['x>=5', 'x ≥ 5', 'x≥5', '5 <= x', '5<=x'],
+    hints: [
+      { level: 'nudge', text: 'Undo the $-3$: add $3$ to both sides. The $\\ge$ sign stays put.' },
+      { level: 'guide', text: '$x \\ge 2 + 3$.' },
+      { level: 'reveal', text: '$x \\ge 5$.' },
+    ],
+    explanation: ['Add 3 to both sides: $x \\ge 5$.', 'Adding never flips the sign.', 'Check the boundary: $5 - 3 = 2$, and $2 \\ge 2$ is true, so 5 itself is included.'],
+    alternativeExplanations: [
+      { title: 'On a number line', steps: ['Draw a CLOSED (filled) dot at 5, because $x = 5$ works.', 'Shade to the right: every number from 5 and up passes the test.'] },
+    ],
+    tags: ['inequality', 'one-step'], estimatedSeconds: 35,
+  },
+  {
+    domain: 'A1', num: 34, unit: 4, order: 4, slug: 'two-step-inequality',
+    standard: 'A1.INEQ.A.1', difficulty: 2,
+    prompt: 'Solve the inequality $2x + 1 < 9$. Write your answer like "x < 4".',
+    answerType: 'short-text', primaryAnswer: 'x < 4', acceptanceMode: 'normalized',
+    alternativeAnswers: ['x<4', '4 > x', '4>x'],
+    hints: [
+      { level: 'nudge', text: 'Two steps, same as an equation: subtract $1$ from both sides first.' },
+      { level: 'guide', text: '$2x < 8$. Divide both sides by $2$ — dividing by a POSITIVE keeps the sign as is.' },
+      { level: 'reveal', text: '$x < 4$.' },
+    ],
+    explanation: ['Subtract 1 from both sides: $2x < 8$.', 'Divide by 2 (positive, so no flip): $x < 4$.', 'Check: $x = 3$ gives $2(3) + 1 = 7 < 9$. ✓'],
+    alternativeExplanations: [
+      { title: 'Test numbers like a detective', steps: ['Try $x = 4$: $2(4) + 1 = 9$, and $9 < 9$ is FALSE — so 4 is out.', 'Try $x = 3$: $7 < 9$ is true. Everything below 4 works: $x < 4$.'] },
+    ],
+    tags: ['inequality', 'two-step'], estimatedSeconds: 45,
+  },
+  {
+    domain: 'A1', num: 35, unit: 4, order: 5, slug: 'game-credits-budget',
+    standard: 'A1.INEQ.A.1', difficulty: 2,
+    prompt: 'You have a $\\$25$ budget and each game credit costs $\\$4$. Using $4c \\le 25$, what is the greatest number of whole credits $c$ you can buy? Give just the number.',
+    answerType: 'numeric', primaryAnswer: '6', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Divide both sides by $4$: $c \\le 25 \\div 4$.' },
+      { level: 'guide', text: '$c \\le 6.25$. You cannot buy a quarter of a credit — round DOWN to a whole number.' },
+      { level: 'reveal', text: 'The greatest whole number of credits is $6$.' },
+    ],
+    explanation: ['Divide both sides by 4: $c \\le 6.25$.', 'Credits come in whole numbers, so take the biggest whole number that fits: 6.', 'Check: $4 \\times 6 = \\$24 \\le \\$25$ ✓, but $4 \\times 7 = \\$28$ busts the budget.'],
+    alternativeExplanations: [
+      { title: 'Spend it out loud', steps: ['Count by 4s until you would pass 25: 4, 8, 12, 16, 20, 24 — that is 6 credits for $\\$24$.', 'A 7th credit needs $\\$28$, which is more than $\\$25$. Stop at 6.'] },
+    ],
+    tags: ['inequality', 'word-problem'], estimatedSeconds: 50,
+  },
+  {
+    domain: 'A1', num: 36, unit: 4, order: 6, slug: 'flip-divide-negative',
+    standard: 'A1.INEQ.A.1', difficulty: 2,
+    prompt: 'Solve the inequality $-3x > 12$. Write your answer like "x < -4".',
+    answerType: 'short-text', primaryAnswer: 'x < -4', acceptanceMode: 'normalized',
+    alternativeAnswers: ['x<-4', '-4 > x', '-4>x'],
+    hints: [
+      { level: 'nudge', text: 'To get $x$ alone, divide both sides by $-3$. Dividing by a NEGATIVE flips the sign.' },
+      { level: 'guide', text: '$x \\; ? \\; 12 \\div (-3)$ — the $>$ turns into $<$.' },
+      { level: 'reveal', text: '$x < -4$.' },
+    ],
+    explanation: ['Divide both sides by $-3$ and FLIP the inequality: $x < -4$.', 'Dividing by a negative is like walking backwards — it turns you around.', 'Check: $x = -5$ gives $-3(-5) = 15 > 12$. ✓'],
+    alternativeExplanations: [
+      { title: 'See why the flip is real', steps: ['Start with a true fact: $2 < 6$.', 'Multiply both sides by $-1$: you get $-2$ and $-6$, and now $-2 > -6$.', 'Negatives reverse the order on the number line, so the sign MUST flip.'] },
+    ],
+    tags: ['inequality', 'flip-rule', 'negatives'], estimatedSeconds: 50,
+  },
+  {
+    domain: 'A1', num: 37, unit: 4, order: 7, slug: 'savings-at-least-50',
+    standard: 'A1.INEQ.A.1', difficulty: 2,
+    prompt: 'You need at least $\\$50$ for a class trip. You have $\\$18$ and save $\\$8$ each week. Using $8w + 18 \\ge 50$, what is the fewest number of whole weeks $w$ you must save? Give just the number.',
+    answerType: 'numeric', primaryAnswer: '4', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Subtract $18$ from both sides first.' },
+      { level: 'guide', text: '$8w \\ge 32$. Divide both sides by $8$.' },
+      { level: 'reveal', text: '$w \\ge 4$, so the fewest whole weeks is $4$.' },
+    ],
+    explanation: ['Subtract 18 from both sides: $8w \\ge 32$.', 'Divide by 8 (positive, no flip): $w \\ge 4$.', 'The fewest whole weeks is 4. Check: $8(4) + 18 = \\$50$, and "at least $\\$50$" includes exactly $\\$50$. ✓'],
+    alternativeExplanations: [
+      { title: 'Track the jar week by week', steps: ['Week 1: $\\$26$. Week 2: $\\$34$. Week 3: $\\$42$. Week 4: $\\$50$.', 'Week 4 is the first time the jar reaches $\\$50$, so 4 weeks is the fewest.'] },
+    ],
+    tags: ['inequality', 'two-step', 'word-problem'], estimatedSeconds: 55,
+  },
+  {
+    domain: 'A1', num: 38, unit: 4, order: 8, slug: 'flip-two-step',
+    standard: 'A1.INEQ.A.1', difficulty: 3,
+    prompt: 'Solve the inequality $5 - 2x \\le 11$. Write your answer like "x >= -3".',
+    answerType: 'short-text', primaryAnswer: 'x >= -3', acceptanceMode: 'normalized',
+    alternativeAnswers: ['x>=-3', 'x ≥ -3', 'x≥-3', '-3 <= x', '-3<=x'],
+    hints: [
+      { level: 'nudge', text: 'Subtract $5$ from both sides first — the sign does not flip for subtraction.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Practice the flip on a tiny one: $-2x \\le 6$ gives $x \\ge -3$ — dividing by a NEGATIVE flips the sign.' },
+      { level: 'guide', text: '$-2x \\le 6$. Now divide by $-2$ and FLIP the sign.' },
+      { level: 'reveal', text: '$x \\ge -3$.' },
+    ],
+    explanation: ['Subtract 5 from both sides: $-2x \\le 6$.', 'Divide both sides by $-2$ and flip $\\le$ to $\\ge$: $x \\ge -3$.', 'Check: $x = 0$ gives $5 - 0 = 5 \\le 11$ ✓, and $x = -4$ gives $5 + 8 = 13$, which fails — so the cut really is at $-3$.'],
+    alternativeExplanations: [
+      { title: 'Dodge the flip entirely', steps: ['Add $2x$ to both sides instead: $5 \\le 11 + 2x$.', 'Subtract 11: $-6 \\le 2x$. Divide by positive 2: $-3 \\le x$.', 'Same answer, $x \\ge -3$, and you never divided by a negative.'] },
+    ],
+    tags: ['inequality', 'flip-rule', 'two-step'], estimatedSeconds: 65,
+  },
+  {
+    domain: 'A1', num: 39, unit: 4, order: 9, slug: 'bus-groups-fit',
+    standard: 'A1.INEQ.A.1', difficulty: 3,
+    prompt: 'A bus holds at most $40$ students. $12$ students are already aboard, and the rest arrive in groups of $4$. Using $12 + 4g \\le 40$, what is the greatest number of whole groups $g$ that can still board? Give just the number.',
+    answerType: 'numeric', primaryAnswer: '7', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Subtract the $12$ students already aboard from both sides.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Try a smaller bus: if it holds $20$ and $12$ are aboard, only $8$ seats remain. Find the leftover seats first, then split them into groups.' },
+      { level: 'guide', text: '$4g \\le 28$. Divide both sides by $4$.' },
+      { level: 'reveal', text: '$g \\le 7$, so at most $7$ groups can board.' },
+    ],
+    explanation: ['Subtract 12 from both sides: $4g \\le 28$.', 'Divide by 4: $g \\le 7$.', 'The greatest whole number of groups is 7. Check: $12 + 4(7) = 40$ students — exactly full, and "at most 40" allows it. ✓'],
+    alternativeExplanations: [
+      { title: 'Count the empty seats', steps: ['The bus has $40 - 12 = 28$ empty seats.', 'Each group fills 4 seats, so $28 \\div 4 = 7$ groups fit exactly.', 'An 8th group would need 4 more seats than the bus has.'] },
+    ],
+    tags: ['inequality', 'two-step', 'word-problem'], estimatedSeconds: 65,
+  },
+  {
+    domain: 'A1', num: 40, unit: 4, order: 10, slug: 'flip-grand-finale',
+    standard: 'A1.INEQ.A.1', difficulty: 3,
+    prompt: 'Solve the inequality $-4x + 3 < 23$. Write your answer like "x > -5".',
+    answerType: 'short-text', primaryAnswer: 'x > -5', acceptanceMode: 'normalized',
+    alternativeAnswers: ['x>-5', '-5 < x', '-5<x'],
+    hints: [
+      { level: 'nudge', text: 'Subtract $3$ from both sides first: $-4x < 20$.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Simpler: $-4x < 8$ gives $x > -2$ (sign flips!). Yours just needs the $+3$ moved over first.' },
+      { level: 'guide', text: 'Now divide by $-4$. Dividing by a negative FLIPS the sign: $<$ becomes $>$.' },
+      { level: 'reveal', text: '$x > -5$.' },
+    ],
+    explanation: ['Subtract 3 from both sides: $-4x < 20$.', 'Divide both sides by $-4$ and flip $<$ to $>$: $x > -5$.', 'Check: $x = 0$ gives $3 < 23$ ✓, and $x = -6$ gives $24 + 3 = 27$, which is not $< 23$ — the boundary is $-5$.'],
+    alternativeExplanations: [
+      { title: 'On a number line', steps: ['Put an OPEN dot at $-5$, since $-5$ itself gives $23 < 23$, which is false.', 'Shade to the right: every number bigger than $-5$ makes the left side smaller than 23.'] },
+    ],
+    tags: ['inequality', 'flip-rule', 'two-step'], estimatedSeconds: 70,
+  },
+];

@@ -1,0 +1,54 @@
+{
+  "id": "PC.085",
+  "domain": "PC",
+  "unit": 9,
+  "orderInUnit": 5,
+  "standard": "PC.TRIG.A.2",
+  "difficulty": 2,
+  "prompt": "How many degrees is $\\frac{\\pi}{3}$ radians?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Start from the swap rule: $\\pi$ radians $= 180^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Start from the swap rule: $\\pi$ radians $= 180^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{\\pi}{3}$ is one third of $\\pi$, so take one third of $180^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "$180 \\div 3 = 60$, so $\\frac{\\pi}{3}$ radians $= 60^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The swap rule is $\\pi$ radians $= 180^\\circ$.",
+    "$\\frac{\\pi}{3}$ means $\\pi$ cut into 3 equal pieces, so cut $180^\\circ$ into 3 equal pieces too.",
+    "$180 \\div 3 = 60$. So $\\frac{\\pi}{3}$ radians $= 60^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Swap π for 180 and simplify",
+      "steps": [
+        "Wherever you see π, write 180° instead. So π/3 becomes 180°/3.",
+        "180 ÷ 3 = 60. The answer is 60°."
+      ]
+    },
+    {
+      "title": "Build a quick table",
+      "steps": [
+        "π = 180°, so π/2 = 90°, π/3 = 60°, π/4 = 45°, π/6 = 30°.",
+        "The bigger the number under π, the smaller the slice. π/3 sits at 60° — one of the exact-value angles."
+      ]
+    }
+  ],
+  "tags": [
+    "radians",
+    "degrees"
+  ],
+  "estimatedSeconds": 45
+}

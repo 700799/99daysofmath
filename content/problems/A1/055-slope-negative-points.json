@@ -1,0 +1,48 @@
+{
+  "id": "A1.055",
+  "domain": "A1",
+  "unit": 6,
+  "orderInUnit": 5,
+  "standard": "A1.LIN.A.1",
+  "difficulty": 2,
+  "prompt": "Find the slope of the line through $(0, 10)$ and $(5, 0)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "-2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The line goes DOWN from left to right, so expect a negative slope.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The line goes DOWN from left to right, so expect a negative slope."
+    },
+    {
+      "level": "guide",
+      "text": "Rise: $0 - 10 = -10$. Run: $5 - 0 = 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-10 \\div 5 = -2$."
+    }
+  ],
+  "explanation": [
+    "Rise: $0 - 10 = -10$ (the $y$-values FALL).",
+    "Run: $5 - 0 = 5$.",
+    "Slope $= \\frac{-10}{5} = -2$ — downhill."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Downhill stairs",
+      "steps": [
+        "From $(0,10)$ to $(5,0)$ you drop $10$ while walking $5$ across.",
+        "Each step across drops you $2$: the slope is $-2$."
+      ]
+    }
+  ],
+  "tags": [
+    "slope",
+    "two-points",
+    "negative-slope"
+  ],
+  "estimatedSeconds": 45
+}

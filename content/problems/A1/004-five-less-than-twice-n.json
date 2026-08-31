@@ -1,0 +1,51 @@
+{
+  "id": "A1.004",
+  "domain": "A1",
+  "unit": 1,
+  "orderInUnit": 4,
+  "standard": "A1.EXP.A.1",
+  "difficulty": 2,
+  "prompt": "Write an expression for \"$5$ less than twice a number $n$\".",
+  "answerType": "expression",
+  "primaryAnswer": "2n - 5",
+  "alternativeAnswers": [
+    "2n-5",
+    "-5 + 2n",
+    "-5+2n"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Twice $n$\" means $2n$. Build that part first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Twice $n$\" means $2n$. Build that part first."
+    },
+    {
+      "level": "guide",
+      "text": "\"$5$ less than\" something means you SUBTRACT $5$ from it — the $5$ comes off the end, not the front."
+    },
+    {
+      "level": "reveal",
+      "text": "Take $2n$ and subtract $5$: the expression is $2n - 5$."
+    }
+  ],
+  "explanation": [
+    "\"Twice a number $n$\" is $2n$.",
+    "\"5 less than\" that amount means subtract 5 FROM it: $2n - 5$.",
+    "Careful: it is not $5 - 2n$ — the phrase flips the order."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test with a real number",
+      "steps": [
+        "Let $n = 10$. Twice 10 is 20, and 5 less than 20 is 15.",
+        "Check the expressions: $2(10) - 5 = 15$ works, but $5 - 2(10) = -15$ does not."
+      ]
+    }
+  ],
+  "tags": [
+    "translate",
+    "less-than-trap"
+  ],
+  "estimatedSeconds": 45
+}

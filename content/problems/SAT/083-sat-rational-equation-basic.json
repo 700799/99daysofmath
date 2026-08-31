@@ -1,0 +1,50 @@
+{
+  "id": "SAT.083",
+  "domain": "SAT",
+  "unit": 9,
+  "orderInUnit": 3,
+  "standard": "SAT.ADV.4",
+  "difficulty": 2,
+  "prompt": "If $\\dfrac{1}{x} + \\dfrac{1}{2} = \\dfrac{3}{4}$, what is the value of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Isolate the term containing $x$ first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Isolate the term containing $x$ first."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract $\\tfrac{1}{2}$: $\\dfrac{1}{x} = \\dfrac{3}{4} - \\dfrac{2}{4} = \\dfrac{1}{4}$."
+    },
+    {
+      "level": "reveal",
+      "text": "If $\\dfrac{1}{x} = \\dfrac{1}{4}$, then $x = 4$."
+    }
+  ],
+  "learningObjective": "Solve a simple rational equation by isolating the reciprocal.",
+  "topic": "Rational equations",
+  "explanation": [
+    "Subtract $\\tfrac{1}{2}$ from both sides: $\\dfrac{1}{x} = \\dfrac{3}{4} - \\dfrac{1}{2} = \\dfrac{1}{4}$.",
+    "Two fractions with numerator $1$ are equal only when their denominators are equal.",
+    "So $x = 4$. Check: $\\tfrac{1}{4} + \\tfrac{1}{2} = \\tfrac{3}{4}$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Clear all denominators at once",
+      "steps": [
+        "Multiply every term by the common denominator $4x$: $4 + 2x = 3x$.",
+        "Then $4 = x$.",
+        "This route generalizes to any rational equation, including ones where the reciprocal cannot be isolated so neatly."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-equation",
+    "fractions"
+  ],
+  "estimatedSeconds": 60
+}

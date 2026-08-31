@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { pickFinalQuiz, FINAL_QUIZ_COUNT, FINAL_QUIZ_SIZE } from '../src/utils/finals';
-import { DOMAINS, type Problem } from '../src/types/problem';
+import { CORE_DOMAINS, type Problem } from '../src/types/problem';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ALL: Problem[] = JSON.parse(
@@ -35,10 +35,11 @@ describe('final quizzes', () => {
     expect(seen.size).toBe(FINAL_QUIZ_COUNT * FINAL_QUIZ_SIZE);
   });
 
-  it('every quiz draws from all six domains', () => {
+  it('every quiz draws from all six core (grade-level) domains — never Algebra 1', () => {
     for (const q of quizzes) {
       const domains = new Set(q.map((p) => p.domain));
-      for (const d of DOMAINS) expect(domains.has(d), d).toBe(true);
+      for (const d of CORE_DOMAINS) expect(domains.has(d), d).toBe(true);
+      expect(domains.has('A1')).toBe(false);
     }
   });
 

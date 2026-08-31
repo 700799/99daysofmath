@@ -352,6 +352,70 @@ export function useShake(): { style: CSSProperties; shake: () => void } {
   return { style, shake };
 }
 
+// --- combos / streaks -----------------------------------------------------
+
+export interface ComboApi {
+  combo: number; // current streak length
+  mult: number; // score multiplier derived from the streak
+  hit: () => number; // register a success; returns the new streak length
+  reset: () => void; // break the streak (call on a miss/mistake)
+}
+
+/**
+ * Shared streak/combo tracker so every action game gets consistent combos.
+ * Call `hit()` on each success (within `windowMs` of the previous hit to keep the
+ * streak alive), `reset()` on a miss. `mult` climbs by 1 every `step` hits up to
+ * `max`. Pair with <ComboChip combo={combo}/> for a 🔥 HUD badge.
+ */
+export function useCombo(opts?: { windowMs?: number; step?: number; max?: number }): ComboApi {
+  const windowMs = opts?.windowMs ?? 2500;
+  const step = opts?.step ?? 3;
+  const max = opts?.max ?? 5;
+  const [combo, setCombo] = useState(0);
+  const comboRef = useRef(0);
+  const lastRef = useRef(0);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const reset = useCallback(() => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    comboRef.current = 0;
+    setCombo(0);
+  }, []);
+  const hit = useCallback(() => {
+    const now = performance.now();
+    comboRef.current = now - lastRef.current <= windowMs ? comboRef.current + 1 : 1;
+    lastRef.current = now;
+    setCombo(comboRef.current);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => {
+      comboRef.current = 0;
+      setCombo(0);
+    }, windowMs);
+    return comboRef.current;
+  }, [windowMs]);
+  const mult = Math.min(max, 1 + Math.floor(Math.max(0, combo - 1) / step));
+  return { combo, mult, hit, reset };
+}
+
+/** Animated 🔥 combo badge; renders only once the streak is worth showing (≥2). */
+export function ComboChip({ combo, className = '' }: { combo: number; className?: string }) {
+  return (
+    <AnimatePresence>
+      {combo >= 2 && (
+        <motion.div
+          key="combo"
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.4, opacity: 0 }}
+          transition={{ type: 'spring', stiffness: 320, damping: 16 }}
+          className={`pointer-events-none z-30 select-none rounded-full bg-orange-500/90 px-3 py-1 font-display text-sm font-extrabold text-white shadow-lg ${className}`}
+        >
+          🔥 {combo}× combo
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
+
 // --- glossy tiles ---------------------------------------------------------
 
 /** Glossy gradient + glow tile style for grid games. */

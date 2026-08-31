@@ -1,0 +1,50 @@
+{
+  "id": "A1.003",
+  "domain": "A1",
+  "unit": 1,
+  "orderInUnit": 3,
+  "standard": "A1.EXP.A.1",
+  "difficulty": 1,
+  "prompt": "Write an expression for \"$3$ times a number $n$\".",
+  "answerType": "expression",
+  "primaryAnswer": "3n",
+  "alternativeAnswers": [
+    "3*n",
+    "3 * n",
+    "n*3",
+    "3 n"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Times\" means multiply.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Times\" means multiply."
+    },
+    {
+      "level": "guide",
+      "text": "In algebra we write a number glued to a letter to show multiplication: $3$ times $n$ is written without a symbol between them."
+    },
+    {
+      "level": "reveal",
+      "text": "The expression is $3n$."
+    }
+  ],
+  "explanation": [
+    "\"3 times a number $n$\" means $3 \\times n$.",
+    "In algebra we drop the times sign and write it as $3n$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture 3 mystery boxes",
+      "steps": [
+        "$n$ is one mystery box.",
+        "\"3 times $n$\" is three identical boxes side by side: $n + n + n$, which is the same as $3n$."
+      ]
+    }
+  ],
+  "tags": [
+    "translate"
+  ],
+  "estimatedSeconds": 25
+}

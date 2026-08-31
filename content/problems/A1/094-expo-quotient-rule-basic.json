@@ -1,0 +1,56 @@
+{
+  "id": "A1.094",
+  "domain": "A1",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "A1.EXPO.A.1",
+  "difficulty": 2,
+  "prompt": "Simplify: $x^8 \\div x^3$. Write your answer as a power of $x$.",
+  "answerType": "expression",
+  "primaryAnswer": "x^5",
+  "alternativeAnswers": [
+    "x⁵"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Write it as a fraction: 8 copies of $x$ on top, 3 copies on the bottom.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Write it as a fraction: 8 copies of $x$ on top, 3 copies on the bottom."
+    },
+    {
+      "level": "guide",
+      "text": "Each bottom copy cancels one top copy. How many top copies survive?"
+    },
+    {
+      "level": "reveal",
+      "text": "$8 - 3 = 5$ copies survive: $x^5$."
+    }
+  ],
+  "explanation": [
+    "$\\frac{x^8}{x^3}$ has 8 copies of $x$ upstairs and 3 downstairs.",
+    "Cancel the copies: each bottom $x$ wipes out one top $x$, three times.",
+    "That leaves $8 - 3 = 5$ copies: $x^5$. Quotient rule: subtract the exponents."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test with real numbers",
+      "steps": [
+        "Let x = 2. Then 2⁸ = 256 and 2³ = 8, and 256 ÷ 8 = 32.",
+        "32 = 2⁵, so the exponents subtract: x⁵."
+      ]
+    },
+    {
+      "title": "Undo a multiplication",
+      "steps": [
+        "Division undoes multiplication. Ask: x³ times WHAT gives x⁸?",
+        "Multiplying adds exponents, so you need 3 + ? = 8. The missing power is x⁵."
+      ]
+    }
+  ],
+  "tags": [
+    "exponents",
+    "quotient-rule"
+  ],
+  "estimatedSeconds": 45
+}

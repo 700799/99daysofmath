@@ -1,0 +1,50 @@
+{
+  "id": "SAT.014",
+  "domain": "SAT",
+  "unit": 2,
+  "orderInUnit": 4,
+  "standard": "SAT.ALG.2",
+  "difficulty": 2,
+  "prompt": "A line passes through the points $(2, 7)$ and $(6, 19)$. What is the slope of the line?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Slope is rise over run: the change in $y$ divided by the change in $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Slope is rise over run: the change in $y$ divided by the change in $x$."
+    },
+    {
+      "level": "guide",
+      "text": "The $y$ values change by $19 - 7 = 12$; the $x$ values change by $6 - 2 = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\dfrac{12}{4} = 3$."
+    }
+  ],
+  "learningObjective": "Compute the slope of a line through two given points.",
+  "topic": "Slope formula",
+  "explanation": [
+    "Slope $= \\dfrac{y_2 - y_1}{x_2 - x_1} = \\dfrac{19 - 7}{6 - 2}$.",
+    "$= \\dfrac{12}{4} = 3$.",
+    "The order of the points does not matter as long as it is consistent: $\\dfrac{7 - 19}{2 - 6} = \\dfrac{-12}{-4} = 3$ too."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Where the sign errors come from",
+      "steps": [
+        "The one dangerous mistake is subtracting the $y$ values in one order and the $x$ values in the other.",
+        "$\\dfrac{19 - 7}{2 - 6} = \\dfrac{12}{-4} = -3$ — right magnitude, wrong sign, and it will be one of the answer choices.",
+        "Write both differences top-to-bottom in the same order every time and this error disappears."
+      ]
+    }
+  ],
+  "tags": [
+    "slope",
+    "two-points"
+  ],
+  "estimatedSeconds": 45
+}

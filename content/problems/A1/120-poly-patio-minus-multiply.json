@@ -1,0 +1,66 @@
+{
+  "id": "A1.120",
+  "domain": "A1",
+  "unit": 12,
+  "orderInUnit": 10,
+  "standard": "A1.POLY.A.1",
+  "difficulty": 3,
+  "prompt": "A patio is $(x + 5)$ meters long and $(x - 2)$ meters wide. Multiply to write its area.",
+  "answerType": "expression",
+  "primaryAnswer": "x^2 + 3x - 10",
+  "alternativeAnswers": [
+    "x^2+3x-10",
+    "x² + 3x - 10",
+    "x²+3x-10"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Same area model as before, but one edge piece is $-2$. Keep its sign!",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same area model as before, but one edge piece is $-2$. Keep its sign!"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $(x + 2)(x - 1)$: that is $x^2 - x + 2x - 2 = x^2 + x - 2$. Multiply all four pairs, then combine."
+    },
+    {
+      "level": "guide",
+      "text": "The 4 patches: $x^2$, $-2x$, $5x$, and $5 \\times (-2) = -10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x^2 - 2x + 5x - 10 = x^2 + 3x - 10$."
+    }
+  ],
+  "explanation": [
+    "Distribute twice: $(x + 5)(x - 2) = x(x - 2) + 5(x - 2)$.",
+    "That gives $x^2 - 2x + 5x - 10$.",
+    "Combine the middle terms: $-2x + 5x = 3x$.",
+    "Area: $x^2 + 3x - 10$ square meters."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Area model with a sign",
+      "steps": [
+        "Split the rectangle into 4 patches, labeling the width pieces x and −2.",
+        "Patch areas: x², −2x, 5x, −10 — the negative pieces are area being trimmed off.",
+        "Add: x² + 3x − 10."
+      ]
+    },
+    {
+      "title": "Test with x = 4",
+      "steps": [
+        "At x = 4 the patio is 9 m by 2 m, so the area is 18 square meters.",
+        "The formula: 16 + 12 − 10 = 18. The expansion is correct."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomial",
+    "area-model",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

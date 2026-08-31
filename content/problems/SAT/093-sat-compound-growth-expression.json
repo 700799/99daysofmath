@@ -1,0 +1,73 @@
+{
+  "id": "SAT.093",
+  "domain": "SAT",
+  "unit": 10,
+  "orderInUnit": 3,
+  "standard": "SAT.ADV.5",
+  "difficulty": 2,
+  "prompt": "An investment of $\\$400$ grows by $6\\%$ each year. Which expression gives the value of the investment, in dollars, after $t$ years?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$400 + 0.06t$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$400(1.06)^t$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$400(0.06)^t$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$400(6)^t$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Growing by a *percent* each year is repeated multiplication, not repeated addition.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Growing by a *percent* each year is repeated multiplication, not repeated addition."
+    },
+    {
+      "level": "guide",
+      "text": "Each year the value is multiplied by $1 + 0.06 = 1.06$."
+    },
+    {
+      "level": "reveal",
+      "text": "After $t$ years: $400(1.06)^t$."
+    }
+  ],
+  "learningObjective": "Build an exponential growth model from a percent rate.",
+  "topic": "Exponential models",
+  "explanation": [
+    "A $6\\%$ increase means keeping the original $100\\%$ and adding $6\\%$ more, so multiply by $1.06$.",
+    "Repeating that for $t$ years gives $400(1.06)^t$.",
+    "Choice A models linear growth of $6$ cents per year. Choice C loses $94\\%$ per year. Choice D multiplies by $6$ each year."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity-check with one year",
+      "steps": [
+        "After one year, $\\$400$ growing $6\\%$ should be $\\$424$.",
+        "Test each choice at $t = 1$: A gives $400.06$, B gives $424$ ✓, C gives $24$, D gives $2400$.",
+        "A single well-chosen test value eliminates three choices instantly, and $t = 1$ is almost always the right one to pick."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "growth",
+    "modeling"
+  ],
+  "estimatedSeconds": 65
+}

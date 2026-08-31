@@ -1,0 +1,55 @@
+{
+  "id": "A1.073",
+  "domain": "A1",
+  "unit": 8,
+  "orderInUnit": 3,
+  "standard": "A1.LIN.B.1",
+  "difficulty": 1,
+  "prompt": "A table shows $x: 0, 1, 2$ and $y: 7, 10, 13$. What is $b$, the starting value of the line?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$b$ is the $y$-value when $x = 0$ — the START.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$b$ is the $y$-value when $x = 0$ — the START."
+    },
+    {
+      "level": "guide",
+      "text": "Look at the first column of the table: $x = 0$ pairs with which $y$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$b = 7$."
+    }
+  ],
+  "explanation": [
+    "The $y$-intercept $b$ is the output at $x = 0$.",
+    "The table says $x = 0 \\to y = 7$.",
+    "So $b = 7$. (The jump of $+3$ each step is $m$, but that is not what was asked.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "On the graph",
+      "steps": [
+        "Plot the pairs: $(0,7)$, $(1,10)$, $(2,13)$.",
+        "The point on the $y$-axis is $(0, 7)$ — the line starts at height $7$."
+      ]
+    },
+    {
+      "title": "Walk the pattern backward",
+      "steps": [
+        "The $y$-values climb by $3$: $7, 10, 13$.",
+        "Step back from $x = 1$: $10 - 3 = 7$ at $x = 0$ — the start is $7$."
+      ]
+    }
+  ],
+  "tags": [
+    "write-equation",
+    "tables",
+    "y-intercept"
+  ],
+  "estimatedSeconds": 30
+}

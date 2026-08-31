@@ -1,0 +1,48 @@
+{
+  "id": "PC.002",
+  "domain": "PC",
+  "unit": 1,
+  "orderInUnit": 2,
+  "standard": "PC.FUN.A.1",
+  "difficulty": 1,
+  "prompt": "The graph of $y = x^2$ is changed to $y = (x - 6)^2$. How many units RIGHT does the graph slide?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $-6$ is INSIDE the parentheses, next to the $x$. Inside changes move the graph sideways.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $-6$ is INSIDE the parentheses, next to the $x$. Inside changes move the graph sideways."
+    },
+    {
+      "level": "guide",
+      "text": "Minus moves RIGHT — the sneaky one. A $-6$ inside pushes the sticker to the right, not the left."
+    },
+    {
+      "level": "reveal",
+      "text": "The graph slides RIGHT $6$ units."
+    }
+  ],
+  "explanation": [
+    "In $f(x - h)$, the graph slides sideways by $h$.",
+    "Here $h = 6$, and a MINUS inside moves the graph RIGHT.",
+    "So the parabola slides RIGHT $6$ units."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Ask where the bottom lands",
+      "steps": [
+        "The bottom of a parabola happens where the squared part equals $0$.",
+        "For $y = (x - 6)^2$ that needs $x - 6 = 0$, so $x = 6$.",
+        "The bottom moved from $x = 0$ to $x = 6$ — that is 6 units to the RIGHT."
+      ]
+    }
+  ],
+  "tags": [
+    "transformations",
+    "horizontal-shift"
+  ],
+  "estimatedSeconds": 35
+}

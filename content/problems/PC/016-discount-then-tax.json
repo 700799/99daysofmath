@@ -1,0 +1,49 @@
+{
+  "id": "PC.016",
+  "domain": "PC",
+  "unit": 2,
+  "orderInUnit": 6,
+  "standard": "PC.FUN.A.2",
+  "difficulty": 2,
+  "prompt": "A jacket costs $\\$80$. First a coupon takes $25\\%$ off. Then $10\\%$ tax is added to the new price. What is the final price in dollars?",
+  "answerType": "numeric",
+  "primaryAnswer": "66",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two machines in a row: the discount machine runs FIRST, then the tax machine.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two machines in a row: the discount machine runs FIRST, then the tax machine."
+    },
+    {
+      "level": "guide",
+      "text": "$25\\%$ off means you pay $75\\%$: $0.75 \\times 80 = 60$. Now add $10\\%$ tax to $\\$60$."
+    },
+    {
+      "level": "reveal",
+      "text": "Tax: $1.1 \\times 60 = 66$, so the final price is $\\$66$."
+    }
+  ],
+  "explanation": [
+    "Discount machine: paying $75\\%$ of $\\$80$ gives $\\$60$.",
+    "Tax machine: $10\\%$ of $\\$60$ is $\\$6$.",
+    "$60 + 6 = \\$66$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "One receipt at a time",
+      "steps": [
+        "Sticker price: $\\$80$. The coupon takes off $\\$20$ (a quarter of 80).",
+        "New price on the register: $\\$60$.",
+        "The tax line adds $\\$6$, so the total you hand over is $\\$66$."
+      ]
+    }
+  ],
+  "tags": [
+    "composite-function",
+    "percent",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

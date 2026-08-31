@@ -1,0 +1,60 @@
+{
+  "id": "A1.077",
+  "domain": "A1",
+  "unit": 8,
+  "orderInUnit": 7,
+  "standard": "A1.LIN.B.1",
+  "difficulty": 2,
+  "prompt": "A table shows $x: 0, 1, 2$ and $y: 3, 8, 13$. Write the equation of the line in the form $y = mx + b$.",
+  "answerType": "expression",
+  "primaryAnswer": "y = 5x + 3",
+  "alternativeAnswers": [
+    "y=5x+3",
+    "5x + 3",
+    "5x+3",
+    "y = 3 + 5x",
+    "y=3+5x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Two jobs: find the constant JUMP (that is $m$), then the value at $x = 0$ (that is $b$).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two jobs: find the constant JUMP (that is $m$), then the value at $x = 0$ (that is $b$)."
+    },
+    {
+      "level": "guide",
+      "text": "Jump: $8 - 3 = 5$. Start: $y = 3$ when $x = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 5x + 3$."
+    }
+  ],
+  "explanation": [
+    "The jump: $3 \\to 8 \\to 13$ climbs by $5$ each step, so $m = 5$.",
+    "The start: at $x = 0$, $y = 3$, so $b = 3$.",
+    "Equation: $y = 5x + 3$. Check: $x = 2$ gives $5 \\times 2 + 3 = 13$. Correct!"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Machine story",
+      "steps": [
+        "Think of a machine: input $x$, and the output starts at $3$ then adds $5$ per input step.",
+        "\"Times 5, plus 3\" in machine language is $y = 5x + 3$."
+      ]
+    },
+    {
+      "title": "Slope formula on two rows",
+      "steps": [
+        "Points $(0, 3)$ and $(2, 13)$: $m = \\frac{13 - 3}{2 - 0} = 5$.",
+        "The row $(0, 3)$ hands you $b = 3$ directly: $y = 5x + 3$."
+      ]
+    }
+  ],
+  "tags": [
+    "write-equation",
+    "tables"
+  ],
+  "estimatedSeconds": 55
+}

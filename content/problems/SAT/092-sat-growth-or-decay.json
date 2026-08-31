@@ -1,0 +1,73 @@
+{
+  "id": "SAT.092",
+  "domain": "SAT",
+  "unit": 10,
+  "orderInUnit": 2,
+  "standard": "SAT.ADV.5",
+  "difficulty": 1,
+  "prompt": "The function $y = 500(0.85)^t$ models a quantity over time. Which statement best describes the model?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The quantity decreases by 15% each period",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "The quantity decreases by 85% each period",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "The quantity increases by 85% each period",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The quantity decreases by 500 each period",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The base $0.85$ is less than $1$, so this is decay. But by how much?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The base $0.85$ is less than $1$, so this is decay. But by how much?"
+    },
+    {
+      "level": "guide",
+      "text": "Keeping $85\\%$ of the amount means losing the other $15\\%$."
+    },
+    {
+      "level": "reveal",
+      "text": "The quantity decreases by $15\\%$ each period."
+    }
+  ],
+  "learningObjective": "Interpret the base of an exponential model as a percent rate.",
+  "topic": "Growth and decay rates",
+  "explanation": [
+    "A base between $0$ and $1$ means decay; a base greater than $1$ means growth.",
+    "The base $0.85$ means each period retains $85\\%$ of the previous amount, so it *loses* $15\\%$.",
+    "Choice B is the trap: $0.85$ is what remains, not what is lost."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The base-to-rate conversion",
+      "steps": [
+        "For growth, base $= 1 + r$: a base of $1.07$ means $+7\\%$.",
+        "For decay, base $= 1 - r$: a base of $0.85$ means $r = 0.15$, so $-15\\%$.",
+        "Subtract the base from $1$ for decay, or subtract $1$ from the base for growth. Getting this backwards is the most common exponential error on the test."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "decay",
+    "percent-rate"
+  ],
+  "estimatedSeconds": 55
+}

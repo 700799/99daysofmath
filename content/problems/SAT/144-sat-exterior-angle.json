@@ -1,0 +1,50 @@
+{
+  "id": "SAT.144",
+  "domain": "SAT",
+  "unit": 15,
+  "orderInUnit": 4,
+  "standard": "SAT.GEO.1",
+  "difficulty": 2,
+  "prompt": "In a triangle, the two angles not adjacent to a certain exterior angle measure $50°$ and $70°$. What is the measure, in degrees, of that exterior angle?",
+  "answerType": "numeric",
+  "primaryAnswer": "120",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "An exterior angle equals the sum of the two remote interior angles.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "An exterior angle equals the sum of the two remote interior angles."
+    },
+    {
+      "level": "guide",
+      "text": "$50 + 70$."
+    },
+    {
+      "level": "reveal",
+      "text": "$120$ degrees."
+    }
+  ],
+  "learningObjective": "Apply the exterior angle theorem.",
+  "topic": "Triangle angles",
+  "explanation": [
+    "The Exterior Angle Theorem: an exterior angle of a triangle equals the sum of the two non-adjacent (remote) interior angles.",
+    "$50 + 70 = 120°$.",
+    "Check the long way: the third interior angle is $180 - 120 = 60°$, and its exterior partner is $180 - 60 = 120°$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the shortcut works",
+      "steps": [
+        "The exterior angle is supplementary to its adjacent interior angle: exterior $= 180 - $ adjacent.",
+        "The three interior angles sum to $180$, so $180 - $ adjacent $=$ the other two added together.",
+        "The theorem is just those two facts combined — which is why you can always fall back on the long route if you forget it."
+      ]
+    }
+  ],
+  "tags": [
+    "exterior-angle",
+    "triangle"
+  ],
+  "estimatedSeconds": 55
+}

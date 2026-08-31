@@ -1,0 +1,72 @@
+{
+  "id": "SAT.173",
+  "domain": "SAT",
+  "unit": 18,
+  "orderInUnit": 3,
+  "standard": "SAT.GEO.4",
+  "difficulty": 2,
+  "prompt": "What is the circumference of a circle with radius $7$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$7\\pi$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$14\\pi$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$49\\pi$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$28\\pi$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Circumference is $2\\pi r$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Circumference is $2\\pi r$."
+    },
+    {
+      "level": "guide",
+      "text": "$2\\pi(7)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$14\\pi$."
+    }
+  ],
+  "learningObjective": "Compute a circumference from a radius.",
+  "topic": "Circles",
+  "explanation": [
+    "Circumference $= 2\\pi r = 2\\pi(7) = 14\\pi$.",
+    "Choice C, $49\\pi$, is the *area* — it squares the radius instead of doubling it.",
+    "Circumference is also $\\pi d$, and the diameter here is $14$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Which formula, at a glance",
+      "steps": [
+        "Circumference has no exponent: $2\\pi r$, or $\\pi d$.",
+        "Area has the square: $\\pi r^2$.",
+        "If the answer choices include both $14\\pi$ and $49\\pi$, the question is checking exactly this distinction."
+      ]
+    }
+  ],
+  "tags": [
+    "circle",
+    "circumference"
+  ],
+  "estimatedSeconds": 40
+}

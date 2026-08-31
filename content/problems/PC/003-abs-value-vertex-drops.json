@@ -1,0 +1,49 @@
+{
+  "id": "PC.003",
+  "domain": "PC",
+  "unit": 1,
+  "orderInUnit": 3,
+  "standard": "PC.FUN.A.1",
+  "difficulty": 1,
+  "prompt": "The V-shaped graph $y = |x|$ becomes $y = |x| - 4$. What is the $y$-coordinate of the point of the V?",
+  "answerType": "numeric",
+  "primaryAnswer": "-4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The point of the parent V sits at $(0, 0)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The point of the parent V sits at $(0, 0)$."
+    },
+    {
+      "level": "guide",
+      "text": "The $-4$ is outside the bars, so every point drops $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "The point of the V moves from $0$ down to $-4$."
+    }
+  ],
+  "explanation": [
+    "$|0| = 0$, so the parent V has its point at $(0, 0)$.",
+    "Subtracting $4$ outside lowers every $y$-value by $4$.",
+    "The new point of the V is at $(0, -4)$, so the $y$-coordinate is $-4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the sticker sliding",
+      "steps": [
+        "Imagine the V is a sticker on your window.",
+        "Subtracting 4 outside means you peel it off and press it back down 4 units lower.",
+        "The tip of the V lands at $-4$ on the $y$-axis."
+      ]
+    }
+  ],
+  "tags": [
+    "transformations",
+    "absolute-value",
+    "vertical-shift"
+  ],
+  "estimatedSeconds": 30
+}

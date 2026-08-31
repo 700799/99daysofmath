@@ -1,0 +1,57 @@
+{
+  "id": "A1.040",
+  "domain": "A1",
+  "unit": 4,
+  "orderInUnit": 10,
+  "standard": "A1.INEQ.A.1",
+  "difficulty": 3,
+  "prompt": "Solve the inequality $-4x + 3 < 23$. Write your answer like \"x > -5\".",
+  "answerType": "short-text",
+  "primaryAnswer": "x > -5",
+  "alternativeAnswers": [
+    "x>-5",
+    "-5 < x",
+    "-5<x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Subtract $3$ from both sides first: $-4x < 20$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Subtract $3$ from both sides first: $-4x < 20$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Simpler: $-4x < 8$ gives $x > -2$ (sign flips!). Yours just needs the $+3$ moved over first."
+    },
+    {
+      "level": "guide",
+      "text": "Now divide by $-4$. Dividing by a negative FLIPS the sign: $<$ becomes $>$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x > -5$."
+    }
+  ],
+  "explanation": [
+    "Subtract 3 from both sides: $-4x < 20$.",
+    "Divide both sides by $-4$ and flip $<$ to $>$: $x > -5$.",
+    "Check: $x = 0$ gives $3 < 23$ ✓, and $x = -6$ gives $24 + 3 = 27$, which is not $< 23$ — the boundary is $-5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "On a number line",
+      "steps": [
+        "Put an OPEN dot at $-5$, since $-5$ itself gives $23 < 23$, which is false.",
+        "Shade to the right: every number bigger than $-5$ makes the left side smaller than 23."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "flip-rule",
+    "two-step"
+  ],
+  "estimatedSeconds": 70
+}

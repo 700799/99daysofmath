@@ -1,0 +1,51 @@
+{
+  "id": "SAT.062",
+  "domain": "SAT",
+  "unit": 7,
+  "orderInUnit": 2,
+  "standard": "SAT.ADV.2",
+  "difficulty": 1,
+  "prompt": "What is the nonzero solution to $x^2 - 5x = 0$?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Both terms share a common factor of $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Both terms share a common factor of $x$."
+    },
+    {
+      "level": "guide",
+      "text": "Factor it out: $x(x - 5) = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "So $x = 0$ or $x = 5$; the nonzero solution is $5$."
+    }
+  ],
+  "learningObjective": "Solve a quadratic with no constant term by factoring out the variable.",
+  "topic": "Factoring quadratics",
+  "explanation": [
+    "Factor out the common $x$: $x(x - 5) = 0$.",
+    "Setting each factor to zero: $x = 0$ or $x - 5 = 0$, so $x = 5$.",
+    "The question asks for the nonzero one: $5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Never divide both sides by x",
+      "steps": [
+        "Dividing $x^2 = 5x$ by $x$ gives $x = 5$ — but it silently destroys the solution $x = 0$.",
+        "Dividing by a variable is only safe when you know it is not zero, and here it might be.",
+        "Move everything to one side and factor instead; you keep every solution that way."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "factoring",
+    "gcf"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,56 @@
+{
+  "id": "SAT.037",
+  "domain": "SAT",
+  "unit": 4,
+  "orderInUnit": 7,
+  "standard": "SAT.ALG.4",
+  "difficulty": 3,
+  "prompt": "The system $kx + 3y = 9$ and $2x + y = 5$ has no solution. What is the value of $k$?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "No solution means the lines are parallel — equal slopes.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "No solution means the lines are parallel — equal slopes."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try it on a known pair: $y = 3x + 1$ and $y = 3x + 7$ never meet, because the slopes match and the intercepts do not. Setting the two slopes equal is the whole technique."
+    },
+    {
+      "level": "guide",
+      "text": "The first line has slope $-\\dfrac{k}{3}$ and the second has slope $-2$."
+    },
+    {
+      "level": "reveal",
+      "text": "Set them equal: $-\\dfrac{k}{3} = -2$, so $k = 6$."
+    }
+  ],
+  "learningObjective": "Find the parameter that makes a system inconsistent.",
+  "topic": "Number of solutions",
+  "explanation": [
+    "For $Ax + By = C$ the slope is $-A/B$. The first line has slope $-k/3$; the second has slope $-2/1 = -2$.",
+    "Parallel lines have equal slopes: $-\\dfrac{k}{3} = -2$, so $k = 6$.",
+    "Check that they are genuinely parallel rather than identical: with $k = 6$ the first is $6x + 3y = 9$, or $2x + y = 3$ — same slope as $2x + y = 5$ but a different constant, so they never meet ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Scale to match, then compare",
+      "steps": [
+        "Multiply the second equation by $3$: $6x + 3y = 15$.",
+        "For no solution the $x$ and $y$ coefficients must match the first equation while the constants differ.",
+        "Matching $6x$ requires $k = 6$, and the constants $9$ and $15$ do differ — confirming no solution rather than infinitely many."
+      ]
+    }
+  ],
+  "tags": [
+    "system",
+    "parameter",
+    "parallel"
+  ],
+  "estimatedSeconds": 85
+}

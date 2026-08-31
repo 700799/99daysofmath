@@ -1,0 +1,50 @@
+{
+  "id": "SAT.086",
+  "domain": "SAT",
+  "unit": 9,
+  "orderInUnit": 6,
+  "standard": "SAT.ADV.4",
+  "difficulty": 2,
+  "prompt": "What is the degree of the polynomial $(x^2 + 1)(x^3 - 2)$ when it is fully expanded?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You do not need to expand — the degrees combine.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You do not need to expand — the degrees combine."
+    },
+    {
+      "level": "guide",
+      "text": "The highest-degree term comes from multiplying the two leading terms: $x^2 \\cdot x^3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x^5$, so the degree is $5$."
+    }
+  ],
+  "learningObjective": "Determine the degree of a product of polynomials.",
+  "topic": "Polynomial degree",
+  "explanation": [
+    "When polynomials are multiplied, their degrees add.",
+    "The first factor has degree $2$ and the second has degree $3$, so the product has degree $5$.",
+    "Confirming by expansion: $x^5 - 2x^2 + x^3 - 2$, whose highest power is indeed $x^5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Only the leading terms matter",
+      "steps": [
+        "Every other product produces a lower power, so it cannot affect the degree.",
+        "Multiply just the leading terms — $x^2 \\cdot x^3 = x^5$ — and stop there.",
+        "The same shortcut answers \"what is the leading coefficient\" questions: multiply just the leading coefficients."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomial",
+    "degree"
+  ],
+  "estimatedSeconds": 50
+}

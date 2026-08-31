@@ -1,0 +1,53 @@
+{
+  "id": "PC.094",
+  "domain": "PC",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "PC.TRIG.B.1",
+  "difficulty": 2,
+  "prompt": "What is the PERIOD of $y = \\sin(2x)$, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "180",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Period $= 360^\\circ \\div b$, where $b$ is the number in FRONT of $x$ inside the sine.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Period $= 360^\\circ \\div b$, where $b$ is the number in FRONT of $x$ inside the sine."
+    },
+    {
+      "level": "guide",
+      "text": "Here $b = 2$, so the period is $360 \\div 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$360 \\div 2 = 180$, so the period is $180^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The period is how far along $x$ you travel before one full wave finishes and starts over.",
+    "Plain $\\sin(x)$ takes $360^\\circ$. The $2$ inside makes $x$ count DOUBLE-time, so the wave finishes twice as fast.",
+    "Period $= 360 \\div 2 = 180^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Follow the inside",
+      "steps": [
+        "One full wave happens while the inside of the sine runs from 0 to 360.",
+        "The inside is 2x, so 2x = 360 means x = 180. The x-trip is only 180°."
+      ]
+    },
+    {
+      "title": "Squeeze the jump rope",
+      "steps": [
+        "A bigger number in front of x squeezes the wave sideways, packing more waves into the same space.",
+        "b = 2 packs 2 whole waves into 360°, so each one is 360 ÷ 2 = 180° wide."
+      ]
+    }
+  ],
+  "tags": [
+    "period"
+  ],
+  "estimatedSeconds": 50
+}

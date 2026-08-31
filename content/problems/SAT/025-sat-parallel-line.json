@@ -1,0 +1,50 @@
+{
+  "id": "SAT.025",
+  "domain": "SAT",
+  "unit": 3,
+  "orderInUnit": 5,
+  "standard": "SAT.ALG.3",
+  "difficulty": 2,
+  "prompt": "Line $\\ell$ is parallel to the graph of $y = -\\tfrac{1}{2}x + 7$ and passes through the point $(4, 1)$. What is the $y$-intercept of line $\\ell$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Parallel lines have identical slopes.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Parallel lines have identical slopes."
+    },
+    {
+      "level": "guide",
+      "text": "So $\\ell$ has slope $-\\tfrac{1}{2}$. Substitute $(4, 1)$ into $y = -\\tfrac{1}{2}x + b$."
+    },
+    {
+      "level": "reveal",
+      "text": "$1 = -2 + b$, so $b = 3$."
+    }
+  ],
+  "learningObjective": "Use the parallel-slope condition to build a new line.",
+  "topic": "Parallel lines",
+  "explanation": [
+    "Parallel means same slope, so $\\ell$ has slope $-\\tfrac{1}{2}$.",
+    "Substitute the point $(4, 1)$: $1 = -\\tfrac{1}{2}(4) + b = -2 + b$.",
+    "So $b = 3$, and $\\ell$ is $y = -\\tfrac{1}{2}x + 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk back along the slope",
+      "steps": [
+        "You are at $(4, 1)$ and want to reach $x = 0$ — a move of $4$ to the left.",
+        "A slope of $-\\tfrac{1}{2}$ means going left raises $y$ by $\\tfrac{1}{2}$ per step, so $4$ steps left adds $2$.",
+        "$1 + 2 = 3$, the $y$-intercept. Stepping along the slope is often faster than substituting."
+      ]
+    }
+  ],
+  "tags": [
+    "parallel",
+    "y-intercept"
+  ],
+  "estimatedSeconds": 60
+}

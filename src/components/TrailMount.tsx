@@ -68,7 +68,7 @@ export function TrailMount({ domain, units }: Props) {
     <div
       ref={containerRef}
       style={{ aspectRatio: `${canvasW} / ${canvasH}` }}
-      className="w-full max-w-sm mx-auto bg-gradient-to-b from-sky-100 to-emerald-50 rounded-3xl overflow-hidden border-2 border-slate-200 shadow-inner"
+      className="w-full max-w-sm mx-auto bg-gradient-to-b from-sky-100 to-emerald-50 rounded-3xl overflow-hidden border-2 border-line shadow-inner"
       role="img"
       aria-label={`${units.length}-unit trail for ${domain}. Use the unit list below to start a unit.`}
     />

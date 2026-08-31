@@ -1,0 +1,72 @@
+{
+  "id": "SAT.041",
+  "domain": "SAT",
+  "unit": 5,
+  "orderInUnit": 1,
+  "standard": "SAT.ALG.5",
+  "difficulty": 1,
+  "prompt": "Which of the following describes all solutions to $3x - 5 > 10$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$x > 5$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$x < 5$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$x > 15$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$x > \\tfrac{5}{3}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Solve it exactly as you would an equation — you are dividing by a positive number, so the sign will not flip.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Solve it exactly as you would an equation — you are dividing by a positive number, so the sign will not flip."
+    },
+    {
+      "level": "guide",
+      "text": "Add $5$: $3x > 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "Divide by $3$: $x > 5$."
+    }
+  ],
+  "learningObjective": "Solve a two-step linear inequality.",
+  "topic": "Linear inequalities",
+  "explanation": [
+    "Add $5$ to both sides: $3x > 15$.",
+    "Divide both sides by $3$. Since $3$ is positive, the direction of the inequality does not change: $x > 5$.",
+    "Check with $x = 6$: $3(6) - 5 = 13 > 10$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test a value to confirm the direction",
+      "steps": [
+        "If you are unsure whether the answer is $x > 5$ or $x < 5$, test one number from each side.",
+        "$x = 6$ gives $13 > 10$ ✓, and $x = 4$ gives $7 > 10$ ✗.",
+        "One test settles the direction, and it takes five seconds."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "solve"
+  ],
+  "estimatedSeconds": 40
+}

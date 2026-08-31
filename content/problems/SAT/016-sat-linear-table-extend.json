@@ -1,0 +1,50 @@
+{
+  "id": "SAT.016",
+  "domain": "SAT",
+  "unit": 2,
+  "orderInUnit": 6,
+  "standard": "SAT.ALG.2",
+  "difficulty": 2,
+  "prompt": "A linear function $g$ satisfies $g(1) = 8$ and $g(3) = 14$. What is the value of $g(7)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "26",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the constant rate of change first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the constant rate of change first."
+    },
+    {
+      "level": "guide",
+      "text": "From $x = 1$ to $x = 3$ the output rose $6$ over a run of $2$, so the slope is $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "From $x = 3$ to $x = 7$ is 4 more steps: $14 + 3(4) = 26$."
+    }
+  ],
+  "learningObjective": "Extend a linear pattern using a constant rate of change.",
+  "topic": "Linear growth",
+  "explanation": [
+    "Slope $= \\dfrac{14 - 8}{3 - 1} = \\dfrac{6}{2} = 3$: every increase of $1$ in $x$ raises $g$ by $3$.",
+    "From $x = 3$ to $x = 7$ is an increase of $4$, so $g$ rises by $3 \\times 4 = 12$.",
+    "$g(7) = 14 + 12 = 26$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build the whole equation",
+      "steps": [
+        "With slope $3$ and the point $(1, 8)$: $g(x) = 3(x - 1) + 8 = 3x + 5$.",
+        "Then $g(7) = 3(7) + 5 = 26$.",
+        "Building the equation costs one extra step but pays off if the question asks for several values."
+      ]
+    }
+  ],
+  "tags": [
+    "linear-function",
+    "rate-of-change"
+  ],
+  "estimatedSeconds": 60
+}

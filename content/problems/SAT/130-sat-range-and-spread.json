@@ -1,0 +1,55 @@
+{
+  "id": "SAT.130",
+  "domain": "SAT",
+  "unit": 13,
+  "orderInUnit": 10,
+  "standard": "SAT.PSDA.3",
+  "difficulty": 3,
+  "prompt": "A data set has a minimum of $12$ and a range of $37$. What is the maximum value in the data set?",
+  "answerType": "numeric",
+  "primaryAnswer": "49",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Range is the maximum minus the minimum.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Range is the maximum minus the minimum."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try small numbers: a set with minimum $5$ and range $10$ has maximum $15$, since $15 - 5 = 10$. Range is max minus min, so max is min plus range."
+    },
+    {
+      "level": "guide",
+      "text": "So maximum $=$ minimum $+$ range."
+    },
+    {
+      "level": "reveal",
+      "text": "$12 + 37 = 49$."
+    }
+  ],
+  "learningObjective": "Rearrange the definition of range to find a missing extreme.",
+  "topic": "Measures of spread",
+  "explanation": [
+    "Range $=$ maximum $-$ minimum, so maximum $=$ minimum $+$ range.",
+    "$12 + 37 = 49$.",
+    "Check: $49 - 12 = 37$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Range says nothing about the middle",
+      "steps": [
+        "Two data sets can share a range of $37$ and look nothing alike — one clustered, one evenly spread.",
+        "Range uses only the two extreme values, which also makes it very sensitive to outliers.",
+        "That is why the SAT pairs range questions with standard deviation questions: they measure spread in genuinely different ways."
+      ]
+    }
+  ],
+  "tags": [
+    "range",
+    "spread"
+  ],
+  "estimatedSeconds": 55
+}

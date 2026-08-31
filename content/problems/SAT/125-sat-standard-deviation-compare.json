@@ -1,0 +1,73 @@
+{
+  "id": "SAT.125",
+  "domain": "SAT",
+  "unit": 13,
+  "orderInUnit": 5,
+  "standard": "SAT.PSDA.3",
+  "difficulty": 2,
+  "prompt": "Data set P is $10$, $10$, $11$, $12$, $12$. Data set Q is $2$, $6$, $11$, $16$, $20$. Both have a mean of $11$. Which statement is true?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "P has the greater standard deviation",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Q has the greater standard deviation",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "They have equal standard deviations",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Standard deviation cannot be compared without more information",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Standard deviation measures how far the values sit from their mean.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Standard deviation measures how far the values sit from their mean."
+    },
+    {
+      "level": "guide",
+      "text": "P's values are all within $1$ of the mean; Q's stretch $9$ away on each side."
+    },
+    {
+      "level": "reveal",
+      "text": "Q is far more spread out, so Q has the greater standard deviation."
+    }
+  ],
+  "learningObjective": "Compare standard deviations by inspecting spread.",
+  "topic": "Measures of spread",
+  "explanation": [
+    "Standard deviation measures typical distance from the mean — it is a spread measure, not a center measure.",
+    "Set P is tightly clustered: every value is within $1$ of $11$.",
+    "Set Q ranges from $2$ to $20$, with values as far as $9$ from the mean. So Q has the larger standard deviation."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "You never actually compute it",
+      "steps": [
+        "The SAT never asks you to calculate a standard deviation by hand — only to compare two sets.",
+        "Look at how tightly the values cluster around their mean; tighter means smaller.",
+        "Equal means tell you nothing about spread, which is exactly why the question gives both sets the same mean."
+      ]
+    }
+  ],
+  "tags": [
+    "standard-deviation",
+    "spread",
+    "comparison"
+  ],
+  "estimatedSeconds": 70
+}

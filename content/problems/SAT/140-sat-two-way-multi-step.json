@@ -1,0 +1,60 @@
+{
+  "id": "SAT.140",
+  "domain": "SAT",
+  "unit": 14,
+  "orderInUnit": 10,
+  "standard": "SAT.PSDA.4",
+  "difficulty": 3,
+  "prompt": "Using the commuting table, how many more Grade $9$ students than Grade $10$ students do NOT take the bus?",
+  "diagram": {
+    "kind": "ascii",
+    "art": "           | Grade 9 | Grade 10 | Total\n-----------+---------+----------+------\n  Bus      |    45   |    35    |   80\n  Walk     |    30   |    20    |   50\n  Car      |    35   |    35    |   70\n-----------+---------+----------+------\n  Total    |   110   |    90    |  200"
+  },
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "\"Not the bus\" means walk plus car — or the column total minus the bus count.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Not the bus\" means walk plus car — or the column total minus the bus count."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try it small: if a column totals $20$ and $8$ of them ride the bus, then $12$ do not. Subtracting from the column total is faster than adding the other rows."
+    },
+    {
+      "level": "guide",
+      "text": "Grade 9: $110 - 45 = 65$. Grade 10: $90 - 35 = 55$."
+    },
+    {
+      "level": "reveal",
+      "text": "$65 - 55 = 10$."
+    }
+  ],
+  "learningObjective": "Combine complement and comparison steps on a two-way table.",
+  "topic": "Two-way tables",
+  "explanation": [
+    "Grade 9 students not taking the bus: $110 - 45 = 65$ (equivalently $30 + 35$).",
+    "Grade 10 students not taking the bus: $90 - 35 = 55$ (equivalently $20 + 35$).",
+    "The difference is $65 - 55 = 10$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Subtracting from the total beats adding rows",
+      "steps": [
+        "Adding $30 + 35$ works, but with four or five commute categories the complement is much faster.",
+        "Column total minus the excluded row gives the \"not\" count in one step.",
+        "The complement also generalizes: for probability, $P(\\text{not } A) = 1 - P(A)$ is the same idea."
+      ]
+    }
+  ],
+  "tags": [
+    "two-way-table",
+    "complement",
+    "multi-step"
+  ],
+  "estimatedSeconds": 85
+}

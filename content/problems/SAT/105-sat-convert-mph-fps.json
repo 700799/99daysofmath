@@ -1,0 +1,50 @@
+{
+  "id": "SAT.105",
+  "domain": "SAT",
+  "unit": 11,
+  "orderInUnit": 5,
+  "standard": "SAT.PSDA.1",
+  "difficulty": 2,
+  "prompt": "A car travels at $60$ miles per hour. There are $5{,}280$ feet in a mile and $3{,}600$ seconds in an hour. What is the car's speed, in feet per second?",
+  "answerType": "numeric",
+  "primaryAnswer": "88",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Chain the conversion factors so the unwanted units cancel.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Chain the conversion factors so the unwanted units cancel."
+    },
+    {
+      "level": "guide",
+      "text": "$\\dfrac{60 \\text{ mi}}{1 \\text{ hr}} \\times \\dfrac{5280 \\text{ ft}}{1 \\text{ mi}} \\times \\dfrac{1 \\text{ hr}}{3600 \\text{ s}}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\dfrac{60 \\times 5280}{3600} = 88$ feet per second."
+    }
+  ],
+  "learningObjective": "Chain unit conversions using dimensional analysis.",
+  "topic": "Unit conversion",
+  "explanation": [
+    "Write each conversion as a fraction arranged so the unwanted unit cancels diagonally.",
+    "$\\dfrac{60 \\text{ mi}}{\\text{hr}} \\times \\dfrac{5280 \\text{ ft}}{1 \\text{ mi}} \\times \\dfrac{1 \\text{ hr}}{3600 \\text{ s}}$: miles cancel, hours cancel, leaving feet per second.",
+    "$\\dfrac{60 \\times 5280}{3600} = \\dfrac{316800}{3600} = 88$ ft/s."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Units are a free error check",
+      "steps": [
+        "If the units left standing are not the ones the question asked for, you have flipped a factor.",
+        "That check catches the mistake *before* you do any arithmetic, which is when it is cheapest to fix.",
+        "Worth memorizing: $60$ mph is exactly $88$ ft/s. It shows up often enough to recognize."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-conversion",
+    "dimensional-analysis"
+  ],
+  "estimatedSeconds": 80
+}

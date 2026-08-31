@@ -1,0 +1,55 @@
+{
+  "id": "SAT.087",
+  "domain": "SAT",
+  "unit": 9,
+  "orderInUnit": 7,
+  "standard": "SAT.ADV.4",
+  "difficulty": 3,
+  "prompt": "What is the solution to $\\sqrt{x + 7} = x - 5$?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Square both sides — then check your answers in the original equation.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Square both sides — then check your answers in the original equation."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a small one: $\\sqrt{x} = x - 2$. Squaring gives $x^2 - 5x + 4 = 0$, so $x = 1$ or $x = 4$. But $x = 1$ fails the original ($1 \\neq -1$), leaving $x = 4$. Always check both."
+    },
+    {
+      "level": "guide",
+      "text": "$x + 7 = x^2 - 10x + 25$, so $x^2 - 11x + 18 = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(x - 9)(x - 2) = 0$ gives $x = 9$ or $x = 2$, but $x = 2$ fails the original. The solution is $9$."
+    }
+  ],
+  "learningObjective": "Solve a radical equation and reject extraneous solutions.",
+  "topic": "Radical equations",
+  "explanation": [
+    "Square both sides: $x + 7 = (x - 5)^2 = x^2 - 10x + 25$.",
+    "Rearrange: $x^2 - 11x + 18 = 0$, which factors as $(x - 9)(x - 2) = 0$, giving $x = 9$ or $x = 2$.",
+    "Check both. $x = 9$: $\\sqrt{16} = 4$ and $9 - 5 = 4$ ✓. $x = 2$: $\\sqrt{9} = 3$ but $2 - 5 = -3$ ✗. Only $x = 9$ works."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why squaring invents solutions",
+      "steps": [
+        "Squaring erases signs: $3$ and $-3$ both square to $9$.",
+        "So the squared equation accepts a case the original rejects — here, the one where the right side is negative.",
+        "A square root is never negative, so any candidate making $x - 5 < 0$ is doomed from the start. Checking is not optional on radical equations."
+      ]
+    }
+  ],
+  "tags": [
+    "radical-equation",
+    "extraneous-solution"
+  ],
+  "estimatedSeconds": 95
+}

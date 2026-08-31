@@ -1,0 +1,66 @@
+{
+  "id": "A1.119",
+  "domain": "A1",
+  "unit": 12,
+  "orderInUnit": 9,
+  "standard": "A1.POLY.A.1",
+  "difficulty": 3,
+  "prompt": "One bedroom has floor area $x^2 + 6x$ square feet, and a second bedroom has $2x^2 + 3x$ square feet. Write the total floor area of both bedrooms.",
+  "answerType": "expression",
+  "primaryAnswer": "3x^2 + 9x",
+  "alternativeAnswers": [
+    "3x^2+9x",
+    "3x² + 9x",
+    "3x²+9x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Total means ADD the two areas: $(x^2 + 6x) + (2x^2 + 3x)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Total means ADD the two areas: $(x^2 + 6x) + (2x^2 + 3x)$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Practice combining first: $x^2 + 2x^2 = 3x^2$. Only match x-squared with x-squared, and plain x with plain x."
+    },
+    {
+      "level": "guide",
+      "text": "Sort by kind: $x^2$-terms together, $x$-terms together."
+    },
+    {
+      "level": "reveal",
+      "text": "$x^2 + 2x^2 = 3x^2$ and $6x + 3x = 9x$. Total: $3x^2 + 9x$."
+    }
+  ],
+  "explanation": [
+    "Add the two polynomials: $(x^2 + 6x) + (2x^2 + 3x)$.",
+    "$x^2$-terms: $1x^2 + 2x^2 = 3x^2$.",
+    "$x$-terms: $6x + 3x = 9x$.",
+    "Total area: $3x^2 + 9x$ square feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two kinds of tiles",
+      "steps": [
+        "Think of x²-tiles (big squares) and x-tiles (long strips) covering each floor.",
+        "Room one uses 1 big square and 6 strips; room two uses 2 big squares and 3 strips.",
+        "Together: 3 big squares and 9 strips — 3x² + 9x."
+      ]
+    },
+    {
+      "title": "Check with x = 10",
+      "steps": [
+        "Room one: 100 + 60 = 160 sq ft. Room two: 200 + 30 = 230 sq ft. Total: 390.",
+        "Formula check: 3(100) + 9(10) = 300 + 90 = 390. It matches."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomial",
+    "addition",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

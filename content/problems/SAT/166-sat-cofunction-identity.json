@@ -1,0 +1,55 @@
+{
+  "id": "SAT.166",
+  "domain": "SAT",
+  "unit": 17,
+  "orderInUnit": 6,
+  "standard": "SAT.GEO.3",
+  "difficulty": 2,
+  "prompt": "In a right triangle, angles $A$ and $B$ are the two acute angles. If $\\sin A = 0.8$, what is the value of $\\cos B$?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.8",
+  "alternativeAnswers": [
+    "4/5",
+    ".8"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "The two acute angles of a right triangle are complementary.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The two acute angles of a right triangle are complementary."
+    },
+    {
+      "level": "guide",
+      "text": "And $\\sin x = \\cos(90° - x)$."
+    },
+    {
+      "level": "reveal",
+      "text": "So $\\cos B = \\sin A = 0.8$."
+    }
+  ],
+  "learningObjective": "Apply the complementary-angle (cofunction) identity.",
+  "topic": "Trigonometric identities",
+  "explanation": [
+    "The acute angles of a right triangle sum to $90°$, so $B = 90° - A$.",
+    "The cofunction identity says $\\cos(90° - A) = \\sin A$.",
+    "Therefore $\\cos B = \\sin A = 0.8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "See it in the triangle",
+      "steps": [
+        "The side opposite angle $A$ is the side *adjacent* to angle $B$ — it is the same physical side.",
+        "So $\\sin A$ and $\\cos B$ are literally the same ratio, over the shared hypotenuse.",
+        "That is the whole content of the cofunction identity, and it is a recurring SAT question."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "cofunction",
+    "complementary"
+  ],
+  "estimatedSeconds": 65
+}

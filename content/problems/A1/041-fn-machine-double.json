@@ -1,0 +1,47 @@
+{
+  "id": "A1.041",
+  "domain": "A1",
+  "unit": 5,
+  "orderInUnit": 1,
+  "standard": "A1.FUN.A.1",
+  "difficulty": 1,
+  "prompt": "A function machine DOUBLES every input. You feed it a $7$. What number comes out?",
+  "answerType": "numeric",
+  "primaryAnswer": "14",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A function is a machine: one input goes in, one output comes out.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A function is a machine: one input goes in, one output comes out."
+    },
+    {
+      "level": "guide",
+      "text": "The machine's rule is \"double\" — multiply the input by $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$7 \\times 2 = 14$."
+    }
+  ],
+  "explanation": [
+    "The machine's rule: multiply the input by $2$.",
+    "Input $7$: $7 \\times 2 = 14$.",
+    "One input in, exactly ONE output out — that is what makes it a function."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As a table",
+      "steps": [
+        "Build an input-output table: $1 \\to 2$, $2 \\to 4$, $3 \\to 6$.",
+        "Every output is twice its input, so $7 \\to 14$."
+      ]
+    }
+  ],
+  "tags": [
+    "functions",
+    "function-machine"
+  ],
+  "estimatedSeconds": 25
+}

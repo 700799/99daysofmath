@@ -1,0 +1,48 @@
+{
+  "id": "PC.012",
+  "domain": "PC",
+  "unit": 2,
+  "orderInUnit": 2,
+  "standard": "PC.FUN.A.2",
+  "difficulty": 1,
+  "prompt": "Using the same $f(x) = x + 4$ and $g(x) = 3x$, find $g(f(2))$.",
+  "answerType": "numeric",
+  "primaryAnswer": "18",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "This time $f$ is on the inside, so $f$ runs FIRST.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This time $f$ is on the inside, so $f$ runs FIRST."
+    },
+    {
+      "level": "guide",
+      "text": "$f(2) = 2 + 4 = 6$. Now put that $6$ into $g$."
+    },
+    {
+      "level": "reveal",
+      "text": "$g(6) = 3 \\times 6 = 18$."
+    }
+  ],
+  "explanation": [
+    "The inside machine always goes first. Here that is $f$.",
+    "$f(2) = 6$.",
+    "$g(6) = 18$. Notice this is NOT the same as $f(g(2)) = 10$ — order matters."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Swap the machines on the belt",
+      "steps": [
+        "Put the \"add 4\" machine first: 2 goes in, 6 comes out.",
+        "Then the \"triple it\" machine: 6 goes in, 18 comes out.",
+        "Same two machines, different order, different answer."
+      ]
+    }
+  ],
+  "tags": [
+    "composite-function",
+    "order-matters"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,57 @@
+{
+  "id": "PC.135",
+  "domain": "PC",
+  "unit": 14,
+  "orderInUnit": 5,
+  "standard": "PC.LIM.A.1",
+  "difficulty": 2,
+  "prompt": "A runner has covered $100$ m at $15$ seconds and $400$ m at $75$ seconds. What is her average speed between those two split times, in meters per second?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Average speed is the slope between the two split points: change in distance over change in time.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Average speed is the slope between the two split points: change in distance over change in time."
+    },
+    {
+      "level": "guide",
+      "text": "Distance change: $400 - 100 = 300$ m. Time change: $75 - 15 = 60$ s."
+    },
+    {
+      "level": "reveal",
+      "text": "$300 \\div 60 = 5$ meters per second."
+    }
+  ],
+  "explanation": [
+    "Use average rate of change = change in distance ÷ change in time.",
+    "$400 - 100 = 300$ meters.",
+    "$75 - 15 = 60$ seconds.",
+    "$300 \\div 60 = 5$ m/s."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Rise over run on a graph",
+      "steps": [
+        "Plot (15, 100) and (75, 400) with time across and distance up.",
+        "Draw the straight line joining them: the rise is 300 and the run is 60.",
+        "Slope = 300 ÷ 60 = 5. Average speed IS the slope of that connecting line."
+      ]
+    },
+    {
+      "title": "Only the gap matters",
+      "steps": [
+        "Do not divide 400 by 75 — that averages her whole race, starting gun included.",
+        "The question asks only about the stretch BETWEEN the two splits, so subtract both times and both distances first.",
+        "300 m in 60 s is 5 m/s. The whole-race average is about 5.3 m/s, so subtracting first really does change the answer."
+      ]
+    }
+  ],
+  "tags": [
+    "rate-of-change",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

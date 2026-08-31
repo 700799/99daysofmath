@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
 import { AuthBootstrap } from './components/AuthBootstrap';
 import { Home } from './routes/Home';
@@ -60,6 +60,21 @@ const ChessPuzzle = lazy(() => import('./routes/arcade/ChessPuzzle').then((m) =>
 const ChineseCheckers = lazy(() => import('./routes/arcade/ChineseCheckers').then((m) => ({ default: m.ChineseCheckers })));
 const GreedyCrawler = lazy(() => import('./routes/arcade/GreedyCrawler').then((m) => ({ default: m.GreedyCrawler })));
 const CritterCottage = lazy(() => import('./routes/arcade/CritterCottage').then((m) => ({ default: m.CritterCottage })));
+const Asteroids = lazy(() => import('./routes/arcade/Asteroids').then((m) => ({ default: m.Asteroids })));
+const SpaceBlaster = lazy(() => import('./routes/arcade/SpaceBlaster').then((m) => ({ default: m.SpaceBlaster })));
+const ZombieZapper = lazy(() => import('./routes/arcade/ZombieZapper').then((m) => ({ default: m.ZombieZapper })));
+const HungryHippo = lazy(() => import('./routes/arcade/HungryHippo').then((m) => ({ default: m.HungryHippo })));
+const JungleBlitz = lazy(() => import('./routes/arcade/JungleBlitz').then((m) => ({ default: m.JungleBlitz })));
+const LeapFrog = lazy(() => import('./routes/arcade/LeapFrog').then((m) => ({ default: m.LeapFrog })));
+const RogueDelve = lazy(() => import('./routes/arcade/RogueDelve').then((m) => ({ default: m.RogueDelve })));
+const MochiSurvivors = lazy(() => import('./routes/arcade/MochiSurvivors').then((m) => ({ default: m.MochiSurvivors })));
+const Fishing = lazy(() => import('./routes/arcade/Fishing').then((m) => ({ default: m.Fishing })));
+const Tangram = lazy(() => import('./routes/arcade/Tangram').then((m) => ({ default: m.Tangram })));
+const BubblePop = lazy(() => import('./routes/arcade/BubblePop').then((m) => ({ default: m.BubblePop })));
+const SatHub = lazy(() => import('./routes/sat/SatHub').then((m) => ({ default: m.SatHub })));
+const SatUnit = lazy(() => import('./routes/sat/SatUnit').then((m) => ({ default: m.SatUnit })));
+const SatTips = lazy(() => import('./routes/sat/SatTips').then((m) => ({ default: m.SatTips })));
+const SatTest = lazy(() => import('./routes/sat/SatTest').then((m) => ({ default: m.SatTest })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -81,6 +96,12 @@ export default function App() {
       <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* SAT Math is its own section rather than a star trail. */}
+          <Route path="/sat" element={<SatHub />} />
+          <Route path="/sat/tips" element={<SatTips />} />
+          <Route path="/sat/unit/:n" element={<SatUnit />} />
+          <Route path="/sat/test/:n" element={<SatTest />} />
+          <Route path="/trail/SAT" element={<Navigate to="/sat" replace />} />
           <Route path="/trail/:domain" element={<DomainTrail />} />
           <Route path="/unit/:domain/:unit" element={<Unit />} />
           <Route path="/unit/:domain/:unit/results" element={<UnitResults />} />
@@ -134,6 +155,17 @@ export default function App() {
           <Route path="/arcade/starhop" element={<ArcadeGate title="Star Hop"><ChineseCheckers /></ArcadeGate>} />
           <Route path="/arcade/crawler" element={<ArcadeGate title="Lucky Crawl"><GreedyCrawler /></ArcadeGate>} />
           <Route path="/arcade/carpenter" element={<ArcadeGate title="Critter Cottage"><CritterCottage /></ArcadeGate>} />
+          <Route path="/arcade/asteroids" element={<ArcadeGate title="Asteroids"><Asteroids /></ArcadeGate>} />
+          <Route path="/arcade/space" element={<ArcadeGate title="Space Blaster"><SpaceBlaster /></ArcadeGate>} />
+          <Route path="/arcade/zapper" element={<ArcadeGate title="Zombie Zapper"><ZombieZapper /></ArcadeGate>} />
+          <Route path="/arcade/hippo" element={<ArcadeGate title="Hungry Hippo"><HungryHippo /></ArcadeGate>} />
+          <Route path="/arcade/blitz" element={<ArcadeGate title="Jungle Blitz"><JungleBlitz /></ArcadeGate>} />
+          <Route path="/arcade/leapfrog" element={<ArcadeGate title="Leap Frog"><LeapFrog /></ArcadeGate>} />
+          <Route path="/arcade/rogue" element={<ArcadeGate title="Rogue Delve"><RogueDelve /></ArcadeGate>} />
+          <Route path="/arcade/survivors" element={<ArcadeGate title="Mochi Survivors"><MochiSurvivors /></ArcadeGate>} />
+          <Route path="/arcade/fishing" element={<ArcadeGate title="Fishing"><Fishing /></ArcadeGate>} />
+          <Route path="/arcade/tangram" element={<ArcadeGate title="Tangram"><Tangram /></ArcadeGate>} />
+          <Route path="/arcade/bubbles" element={<ArcadeGate title="Bubble Pop"><BubblePop /></ArcadeGate>} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/rewards" element={<Rewards />} />

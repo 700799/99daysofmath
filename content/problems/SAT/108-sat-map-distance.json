@@ -1,0 +1,57 @@
+{
+  "id": "SAT.108",
+  "domain": "SAT",
+  "unit": 11,
+  "orderInUnit": 8,
+  "standard": "SAT.PSDA.1",
+  "difficulty": 3,
+  "prompt": "On a map, $2$ inches represents $25$ miles. Two cities are $7.5$ inches apart on the map. What is the actual distance between the cities, in miles?",
+  "answerType": "numeric",
+  "primaryAnswer": "93.75",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "Set up a proportion: inches over miles equals inches over miles.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Set up a proportion: inches over miles equals inches over miles."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a cleaner scale: $1$ inch to $10$ miles means $3$ inches is $30$ miles. Find what one inch represents, then multiply by the number of inches."
+    },
+    {
+      "level": "guide",
+      "text": "$\\dfrac{2}{25} = \\dfrac{7.5}{d}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2d = 187.5$, so $d = 93.75$ miles."
+    }
+  ],
+  "learningObjective": "Apply a map scale that is not a unit rate.",
+  "topic": "Scale and proportions",
+  "explanation": [
+    "Write the proportion with matching units in matching positions: $\\dfrac{2 \\text{ in}}{25 \\text{ mi}} = \\dfrac{7.5 \\text{ in}}{d \\text{ mi}}$.",
+    "Cross-multiply: $2d = 25 \\times 7.5 = 187.5$.",
+    "$d = 93.75$ miles."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Convert to a per-inch rate",
+      "steps": [
+        "$2$ inches is $25$ miles, so $1$ inch is $12.5$ miles.",
+        "$7.5 \\times 12.5 = 93.75$ miles.",
+        "Finding the per-one rate first makes the final step a single multiplication, and the intermediate value is easy to sanity-check."
+      ]
+    }
+  ],
+  "tags": [
+    "scale",
+    "proportion",
+    "map"
+  ],
+  "estimatedSeconds": 75
+}

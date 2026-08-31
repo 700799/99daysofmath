@@ -1,0 +1,47 @@
+{
+  "id": "PC.013",
+  "domain": "PC",
+  "unit": 2,
+  "orderInUnit": 3,
+  "standard": "PC.FUN.A.2",
+  "difficulty": 1,
+  "prompt": "Let $f(x) = x + 9$. What is $f^{-1}(20)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "11",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$f^{-1}$ is the UNDO machine. If $f$ adds 9, what does the undo machine do?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$f^{-1}$ is the UNDO machine. If $f$ adds 9, what does the undo machine do?"
+    },
+    {
+      "level": "guide",
+      "text": "The undo machine subtracts 9. Apply it to 20."
+    },
+    {
+      "level": "reveal",
+      "text": "$20 - 9 = 11$."
+    }
+  ],
+  "explanation": [
+    "$f$ adds $9$, so $f^{-1}$ subtracts $9$.",
+    "$f^{-1}(20) = 20 - 9 = 11$.",
+    "Check: $f(11) = 11 + 9 = 20$. It really does undo."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Ask the backwards question",
+      "steps": [
+        "Instead of \"what comes out of 20?\", ask \"what number goes IN to get 20 out?\"",
+        "You need $x + 9 = 20$.",
+        "Solve: $x = 11$."
+      ]
+    }
+  ],
+  "tags": [
+    "inverse-function"
+  ],
+  "estimatedSeconds": 35
+}

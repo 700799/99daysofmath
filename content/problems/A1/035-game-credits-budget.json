@@ -1,0 +1,47 @@
+{
+  "id": "A1.035",
+  "domain": "A1",
+  "unit": 4,
+  "orderInUnit": 5,
+  "standard": "A1.INEQ.A.1",
+  "difficulty": 2,
+  "prompt": "You have a $\\$25$ budget and each game credit costs $\\$4$. Using $4c \\le 25$, what is the greatest number of whole credits $c$ you can buy? Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Divide both sides by $4$: $c \\le 25 \\div 4$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Divide both sides by $4$: $c \\le 25 \\div 4$."
+    },
+    {
+      "level": "guide",
+      "text": "$c \\le 6.25$. You cannot buy a quarter of a credit — round DOWN to a whole number."
+    },
+    {
+      "level": "reveal",
+      "text": "The greatest whole number of credits is $6$."
+    }
+  ],
+  "explanation": [
+    "Divide both sides by 4: $c \\le 6.25$.",
+    "Credits come in whole numbers, so take the biggest whole number that fits: 6.",
+    "Check: $4 \\times 6 = \\$24 \\le \\$25$ ✓, but $4 \\times 7 = \\$28$ busts the budget."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spend it out loud",
+      "steps": [
+        "Count by 4s until you would pass 25: 4, 8, 12, 16, 20, 24 — that is 6 credits for $\\$24$.",
+        "A 7th credit needs $\\$28$, which is more than $\\$25$. Stop at 6."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

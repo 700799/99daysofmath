@@ -4,6 +4,7 @@ import { useProgress } from '../state/progress';
 import { TOTAL_STICKERS } from '../utils/encouragement';
 import { AccountCard } from '../components/AccountCard';
 import { ARCADE_GAMES } from './arcade/shared';
+import { useTheme } from '../hooks/useTheme';
 
 const GOAL_OPTIONS = [10, 30, 50, 100];
 
@@ -13,6 +14,7 @@ export function Settings() {
   const toggleSound = useProgress((s) => s.toggleSound);
   const hapticsOn = useProgress((s) => s.hapticsEnabled);
   const toggleHaptics = useProgress((s) => s.toggleHaptics);
+  const { theme, setTheme } = useTheme();
   const dailyStreak = useProgress((s) => s.dailyStreak);
   const bestDailyStreak = useProgress((s) => s.bestDailyStreak);
   const bestStreak = useProgress((s) => s.bestStreak);
@@ -28,14 +30,14 @@ export function Settings() {
 
   return (
     <div className="space-y-4">
-      <h1 className="text-2xl font-display font-extrabold text-slate-900">
+      <h1 className="text-2xl font-display font-extrabold text-ink">
         Settings
       </h1>
 
       <AccountCard />
 
-      <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
-        <div className="font-display font-extrabold text-slate-900">Your stats</div>
+      <div className="bg-surface border-2 border-line rounded-2xl p-5">
+        <div className="font-display font-extrabold text-ink">Your stats</div>
         <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
           <Stat label="Daily streak" value={`${dailyStreak} 🔥`} />
           <Stat label="Best daily streak" value={`${bestDailyStreak}`} />
@@ -51,15 +53,15 @@ export function Settings() {
         </dl>
         <Link
           to="/report"
-          className="mt-4 inline-flex items-center gap-1.5 text-sm font-display font-extrabold text-duo-blue hover:text-blue-700"
+          className="mt-4 inline-flex items-center gap-1.5 text-sm font-display font-extrabold text-duo-blue hover:text-accent"
         >
           📊 View full progress report →
         </Link>
       </div>
 
-      <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
-        <div className="font-display font-extrabold text-slate-900">Daily XP goal</div>
-        <div className="text-sm text-slate-600 mt-1">
+      <div className="bg-surface border-2 border-line rounded-2xl p-5">
+        <div className="font-display font-extrabold text-ink">Daily XP goal</div>
+        <div className="text-sm text-ink-muted mt-1">
           How much XP to aim for each day.
         </div>
         <div className="mt-3 flex gap-2">
@@ -73,7 +75,7 @@ export function Settings() {
                 'min-h-11 flex-1 rounded-xl font-display font-extrabold text-sm transition-colors',
                 dailyGoal === g
                   ? 'bg-duo-green text-white'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200',
+                  : 'bg-surface-2 text-ink-muted hover:bg-surface-2',
               ].join(' ')}
             >
               {g}
@@ -82,11 +84,11 @@ export function Settings() {
         </div>
       </div>
 
-      <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
+      <div className="bg-surface border-2 border-line rounded-2xl p-5">
         <div className="flex items-center justify-between gap-4">
           <div>
-            <div className="font-display font-extrabold text-slate-900">Sound effects</div>
-            <div className="text-sm text-slate-600 mt-1">
+            <div className="font-display font-extrabold text-ink">Sound effects</div>
+            <div className="text-sm text-ink-muted mt-1">
               Gentle tones on correct, wrong, and unit complete.
             </div>
           </div>
@@ -98,7 +100,7 @@ export function Settings() {
               'min-h-11 px-4 rounded-full font-display font-extrabold text-sm transition-colors',
               soundOn
                 ? 'bg-duo-green text-white hover:bg-duo-green-dark'
-                : 'bg-slate-200 text-slate-700 hover:bg-slate-300',
+                : 'bg-surface-2 text-ink-muted hover:bg-line-strong',
             ].join(' ')}
           >
             {soundOn ? '🔊 On' : '🔇 Off'}
@@ -106,11 +108,11 @@ export function Settings() {
         </div>
       </div>
 
-      <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
+      <div className="bg-surface border-2 border-line rounded-2xl p-5">
         <div className="flex items-center justify-between gap-4">
           <div>
-            <div className="font-display font-extrabold text-slate-900">Vibration</div>
-            <div className="text-sm text-slate-600 mt-1">
+            <div className="font-display font-extrabold text-ink">Vibration</div>
+            <div className="text-sm text-ink-muted mt-1">
               Haptic buzzes in the arcade games (where supported).
             </div>
           </div>
@@ -122,26 +124,57 @@ export function Settings() {
               'min-h-11 px-4 rounded-full font-display font-extrabold text-sm transition-colors',
               hapticsOn
                 ? 'bg-duo-green text-white hover:bg-duo-green-dark'
-                : 'bg-slate-200 text-slate-700 hover:bg-slate-300',
+                : 'bg-surface-2 text-ink-muted hover:bg-line-strong',
             ].join(' ')}
           >
             {hapticsOn ? '📳 On' : 'Off'}
           </button>
         </div>
+
+        <div className="flex items-center justify-between gap-4 mt-4 pt-4 border-t border-line">
+          <div className="min-w-0">
+            <div className="font-display font-bold text-ink">Appearance</div>
+            <div className="text-sm text-ink-muted">
+              Light is the default. Dark uses the same graphite palette, dimmed for night.
+            </div>
+          </div>
+          <div
+            className="inline-flex rounded-full border border-line bg-surface-2 p-0.5"
+            role="group"
+            aria-label="Theme"
+          >
+            {(['light', 'dark'] as const).map((t) => (
+              <button
+                key={t}
+                type="button"
+                onClick={() => setTheme(t)}
+                aria-pressed={theme === t}
+                className={[
+                  'min-h-10 px-4 rounded-full font-display font-semibold text-sm transition-colors',
+                  theme === t
+                    ? 'bg-accent text-on-accent'
+                    : 'text-ink-muted hover:text-ink',
+                ].join(' ')}
+              >
+                {t === 'light' ? '☀ Light' : '☾ Dark'}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       <AdminPanel />
 
-      <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
-        <div className="font-display font-extrabold text-slate-900">Reset progress</div>
-        <div className="text-sm text-slate-600 mt-1">
+      <div className="bg-surface border-2 border-line rounded-2xl p-5">
+        <div className="font-display font-extrabold text-ink">Reset progress</div>
+        <div className="text-sm text-ink-muted mt-1">
           Clears all stars, XP, streaks, and stickers. The problem bank is unchanged.
         </div>
         {!confirming && !done && (
           <button
             type="button"
             onClick={() => setConfirming(true)}
-            className="mt-3 px-4 py-2 rounded-full bg-red-100 hover:bg-red-200 text-red-800 font-display font-bold min-h-11"
+            className="mt-3 px-4 py-2 rounded-full bg-bad-soft hover:bg-red-200 text-bad font-display font-bold min-h-11"
           >
             Reset progress
           </button>
@@ -162,14 +195,14 @@ export function Settings() {
             <button
               type="button"
               onClick={() => setConfirming(false)}
-              className="px-4 py-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-display font-bold min-h-11"
+              className="px-4 py-2 rounded-full bg-surface-2 hover:bg-surface-2 text-ink font-display font-bold min-h-11"
             >
               Cancel
             </button>
           </div>
         )}
         {done && (
-          <div className="mt-3 text-green-700 font-display font-bold">
+          <div className="mt-3 text-ok font-display font-bold">
             Progress reset.
           </div>
         )}
@@ -188,9 +221,9 @@ function AdminPanel() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white border-2 border-slate-200 rounded-2xl p-5">
-      <div className="font-display font-extrabold text-slate-900">Grown-ups 🔒</div>
-      <div className="text-sm text-slate-600 mt-1">
+    <div className="bg-surface border-2 border-line rounded-2xl p-5">
+      <div className="font-display font-extrabold text-ink">Grown-ups 🔒</div>
+      <div className="text-sm text-ink-muted mt-1">
         Enter the grown-ups passcode to tune the learn-to-play balance — including
         <b> Unlimited play</b>, which games show, the lesson-to-game time budget, and the
         in-game math challenges.
@@ -204,7 +237,7 @@ function AdminPanel() {
             value={pin}
             onChange={(e) => setPin(e.target.value)}
             placeholder="Enter PIN"
-            className="flex-1 min-w-0 rounded-xl border-2 border-slate-200 px-3 py-2 text-sm font-display font-bold text-slate-900 focus:border-duo-blue focus:outline-none"
+            className="flex-1 min-w-0 rounded-xl border-2 border-line px-3 py-2 text-sm font-display font-bold text-ink focus:border-duo-blue focus:outline-none"
           />
           <button
             type="button"
@@ -216,10 +249,10 @@ function AdminPanel() {
         </div>
       ) : (
         <div className="mt-4 space-y-4">
-          <div className="flex items-center justify-between gap-3 rounded-xl bg-slate-50 border border-slate-200 px-3 py-2">
+          <div className="flex items-center justify-between gap-3 rounded-xl bg-surface-2 border border-line px-3 py-2">
             <div>
-              <div className="font-display font-extrabold text-slate-900 text-sm">Unlimited play</div>
-              <div className="text-xs text-slate-600">Skip the lesson gate — play any game freely.</div>
+              <div className="font-display font-extrabold text-ink text-sm">Unlimited play</div>
+              <div className="text-xs text-ink-muted">Skip the lesson gate — play any game freely.</div>
             </div>
             <button
               type="button"
@@ -229,7 +262,7 @@ function AdminPanel() {
                 'min-h-11 px-4 rounded-full font-display font-extrabold text-sm transition-colors',
                 config.unlimited
                   ? 'bg-duo-green text-white hover:bg-duo-green-dark'
-                  : 'bg-slate-200 text-slate-700 hover:bg-slate-300',
+                  : 'bg-surface-2 text-ink-muted hover:bg-line-strong',
               ].join(' ')}
             >
               {config.unlimited ? '♾️ On' : 'Off'}
@@ -260,8 +293,8 @@ function AdminPanel() {
             onPick={(n) => setArcadeConfig({ checkProblems: n })}
           />
 
-          <div className="pt-2 border-t border-slate-100">
-            <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-2">
+          <div className="pt-2 border-t border-line">
+            <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-ink-muted mb-2">
               Time budget — lessons earn game time
             </div>
             <AdminPick
@@ -316,8 +349,8 @@ function AdminPanel() {
             />
           </div>
 
-          <div className="pt-2 border-t border-slate-100">
-            <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-2">
+          <div className="pt-2 border-t border-line">
+            <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-ink-muted mb-2">
               Play time
             </div>
             <AdminPick
@@ -350,32 +383,32 @@ function AdminPanel() {
               value={config.extendCoinCost ?? 10}
               onPick={(n) => setArcadeConfig({ extendCoinCost: n })}
             />
-            <p className="mt-2 text-xs text-slate-500">
+            <p className="mt-2 text-xs text-ink-muted">
               At the cap, kids spend coins (earned from lessons) or do a lesson to add more time.
             </p>
           </div>
 
-          <div className="pt-2 border-t border-slate-100">
-            <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-2">
+          <div className="pt-2 border-t border-line">
+            <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-ink-muted mb-2">
               Adaptive difficulty
             </div>
-            <p className="text-xs text-slate-500 mb-2">
+            <p className="text-xs text-ink-muted mb-2">
               Games are never interrupted mid-play — math happens between games, at big in-game
               milestones, and on each game’s end screen.
             </p>
             <div className="flex items-center justify-between gap-3">
-              <span className="text-sm font-display font-bold text-slate-700">Adaptive level &amp; mastery</span>
+              <span className="text-sm font-display font-bold text-ink-muted">Adaptive level &amp; mastery</span>
               <button
                 type="button"
                 onClick={() => { if (window.confirm('Reset every unit back to Level 1 and clear mastery progress?')) resetArcadeMastery(); }}
-                className="rounded-xl bg-rose-100 text-rose-700 font-display font-extrabold text-sm px-3 py-2"
+                className="rounded-xl bg-bad-soft text-bad font-display font-extrabold text-sm px-3 py-2"
               >
                 Reset mastery
               </button>
             </div>
           </div>
 
-          <div className="pt-2 border-t border-slate-100">
+          <div className="pt-2 border-t border-line">
             <GameVisibility
               hidden={config.hiddenGames ?? []}
               onToggle={(id) => {
@@ -406,7 +439,7 @@ function AdminPick({
 }) {
   return (
     <div>
-      <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">
+      <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-ink-muted mb-1.5">
         {label}
       </div>
       <div className="flex gap-2">
@@ -418,7 +451,7 @@ function AdminPick({
             aria-pressed={value === o.value}
             className={[
               'min-h-11 flex-1 rounded-xl font-display font-extrabold text-sm transition-colors',
-              value === o.value ? 'bg-duo-green text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200',
+              value === o.value ? 'bg-duo-green text-white' : 'bg-surface-2 text-ink-muted hover:bg-surface-2',
             ].join(' ')}
           >
             {o.label}
@@ -440,7 +473,7 @@ function GameVisibility({
   const hiddenSet = new Set(hidden);
   return (
     <div>
-      <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">
+      <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-ink-muted mb-1.5">
         Games shown in the arcade
       </div>
       <div className="flex flex-wrap gap-2">
@@ -454,7 +487,7 @@ function GameVisibility({
               aria-pressed={on}
               className={[
                 'min-h-9 px-3 rounded-full font-display font-extrabold text-xs transition-colors',
-                on ? 'bg-duo-green text-white' : 'bg-slate-200 text-slate-500 line-through',
+                on ? 'bg-duo-green text-white' : 'bg-surface-2 text-ink-muted line-through',
               ].join(' ')}
             >
               {g.emoji} {g.name}
@@ -462,7 +495,7 @@ function GameVisibility({
           );
         })}
       </div>
-      <div className="mt-1.5 text-[11px] text-slate-500">Tap to hide/show. Hidden games leave the kid's menu.</div>
+      <div className="mt-1.5 text-[11px] text-ink-muted">Tap to hide/show. Hidden games leave the kid's menu.</div>
     </div>
   );
 }
@@ -480,7 +513,7 @@ function AdminChoice({
 }) {
   return (
     <div>
-      <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">
+      <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-ink-muted mb-1.5">
         {label}
       </div>
       <div className="flex gap-2">
@@ -492,7 +525,7 @@ function AdminChoice({
             aria-pressed={value === o}
             className={[
               'min-h-11 flex-1 rounded-xl font-display font-extrabold text-sm transition-colors',
-              value === o ? 'bg-duo-green text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200',
+              value === o ? 'bg-duo-green text-white' : 'bg-surface-2 text-ink-muted hover:bg-surface-2',
             ].join(' ')}
           >
             {o}
@@ -505,11 +538,11 @@ function AdminChoice({
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl bg-slate-50 px-3 py-2 border border-slate-200">
-      <div className="text-[10px] font-display font-bold uppercase tracking-wider text-slate-500">
+    <div className="rounded-xl bg-surface-2 px-3 py-2 border border-line">
+      <div className="text-[10px] font-display font-bold uppercase tracking-wider text-ink-muted">
         {label}
       </div>
-      <div className="font-display font-extrabold text-slate-900 text-base mt-0.5">
+      <div className="font-display font-extrabold text-ink text-base mt-0.5">
         {value}
       </div>
     </div>

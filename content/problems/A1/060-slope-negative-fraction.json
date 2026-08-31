@@ -1,0 +1,56 @@
+{
+  "id": "A1.060",
+  "domain": "A1",
+  "unit": 6,
+  "orderInUnit": 10,
+  "standard": "A1.LIN.A.1",
+  "difficulty": 3,
+  "prompt": "Find the slope of the line through $(1, 5)$ and $(5, 2)$. Write it as a fraction.",
+  "answerType": "numeric",
+  "primaryAnswer": "-3/4",
+  "alternativeAnswers": [
+    "-0.75"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The $y$-values drop from $5$ to $2$, so the slope is negative.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $y$-values drop from $5$ to $2$, so the slope is negative."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $(1, 5)$ and $(3, 1)$: rise $= 1 - 5 = -4$, run $= 3 - 1 = 2$, slope $= -2$. Same subtraction order every time."
+    },
+    {
+      "level": "guide",
+      "text": "Rise: $2 - 5 = -3$. Run: $5 - 1 = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "Slope $= \\frac{-3}{4}$."
+    }
+  ],
+  "explanation": [
+    "Rise: $2 - 5 = -3$.",
+    "Run: $5 - 1 = 4$.",
+    "Slope $= -\\frac{3}{4}$ — a gentle downhill: down $3$ for every $4$ across."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Subtract the other way",
+      "steps": [
+        "Swap the order of BOTH subtractions: rise $5 - 2 = 3$, run $1 - 5 = -4$.",
+        "$\\frac{3}{-4}$ is still $-\\frac{3}{4}$ — same slope, as long as both are swapped together."
+      ]
+    }
+  ],
+  "tags": [
+    "slope",
+    "two-points",
+    "negative-slope",
+    "fractions"
+  ],
+  "estimatedSeconds": 55
+}

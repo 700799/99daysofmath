@@ -1,0 +1,61 @@
+{
+  "id": "PC.069",
+  "domain": "PC",
+  "unit": 7,
+  "orderInUnit": 9,
+  "standard": "PC.LOG.A.2",
+  "difficulty": 3,
+  "prompt": "Solve for $x$: $\\log_2(x) + \\log_2(x - 6) = 4$. Give the one answer that works.",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Adding logs means multiplying inside: combine them into one log first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Adding logs means multiplying inside: combine them into one log first."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $\\log_2(x) + \\log_2(2) = 3$ becomes $\\log_2(2x) = 3$, so $2x = 8$ and $x = 4$. Same move — combine, then rewrite as a power."
+    },
+    {
+      "level": "guide",
+      "text": "$\\log_2\\big(x(x-6)\\big) = 4$ means $x(x - 6) = 2^4 = 16$, so $x^2 - 6x - 16 = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "That factors as $(x - 8)(x + 2) = 0$, giving $x = 8$ or $x = -2$. But $\\log_2(-2)$ is impossible, so $x = 8$."
+    }
+  ],
+  "explanation": [
+    "Combine with the product rule: $\\log_2\\big(x(x-6)\\big) = 4$.",
+    "Rewrite as a power: $x(x - 6) = 2^4 = 16$, so $x^2 - 6x - 16 = 0$.",
+    "Factor: $(x - 8)(x + 2) = 0$. The value $x = -2$ BREAKS the log (you cannot log a negative), so the only answer is $x = 8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check both answers in the original",
+      "steps": [
+        "Try $x = 8$: $\\log_2(8) + \\log_2(2) = 3 + 1 = 4$. It works.",
+        "Try $x = -2$: the very first term is $\\log_2(-2)$, and no power of $2$ is negative.",
+        "So $x = -2$ is thrown out and $x = 8$ stands."
+      ]
+    },
+    {
+      "title": "Fence off the illegal values first",
+      "steps": [
+        "Before solving, note $x > 0$ AND $x - 6 > 0$, so $x$ must be bigger than $6$.",
+        "Now solve $x(x-6) = 16$ to get $x = 8$ or $x = -2$.",
+        "Only $x = 8$ is inside the fence."
+      ]
+    }
+  ],
+  "tags": [
+    "log-equation",
+    "extraneous"
+  ],
+  "estimatedSeconds": 90
+}

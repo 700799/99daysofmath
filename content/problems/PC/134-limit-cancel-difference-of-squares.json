@@ -1,0 +1,57 @@
+{
+  "id": "PC.134",
+  "domain": "PC",
+  "unit": 14,
+  "orderInUnit": 4,
+  "standard": "PC.LIM.A.1",
+  "difficulty": 2,
+  "prompt": "Find the limit of $\\frac{x^2 - 9}{x - 3}$ as $x \\to 3$.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substituting gives $\\frac{0}{0}$, which is a signal — not an answer. Factor the top.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substituting gives $\\frac{0}{0}$, which is a signal — not an answer. Factor the top."
+    },
+    {
+      "level": "guide",
+      "text": "$x^2 - 9 = (x - 3)(x + 3)$, so the $(x - 3)$ on top cancels the one on the bottom."
+    },
+    {
+      "level": "reveal",
+      "text": "What is left is $x + 3$, and at $x = 3$ that is $6$."
+    }
+  ],
+  "explanation": [
+    "Substituting $x = 3$ gives $\\frac{0}{0}$ — that means \"keep working\", not \"no answer\".",
+    "Factor the top as a difference of squares: $(x - 3)(x + 3)$.",
+    "Cancel the shared $(x - 3)$, leaving $x + 3$ everywhere except at the hole.",
+    "Now substitute: $3 + 3 = 6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sneak up with a table",
+      "steps": [
+        "x = 2.9: (8.41 − 9)/(−0.1) = 5.9. x = 2.99: 5.99.",
+        "x = 3.1: (9.61 − 9)/(0.1) = 6.1. x = 3.01: 6.01.",
+        "Both sides squeeze toward 6 — the table agrees with the cancelling."
+      ]
+    },
+    {
+      "title": "What the graph really looks like",
+      "steps": [
+        "After cancelling, the picture is just the straight line y = x + 3.",
+        "The only difference is a tiny open circle punched out at x = 3.",
+        "The line passes through height 6 there, so the limit is 6 — the hole changes nothing about where you are headed."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "factoring"
+  ],
+  "estimatedSeconds": 55
+}

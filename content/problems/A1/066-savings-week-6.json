@@ -1,0 +1,48 @@
+{
+  "id": "A1.066",
+  "domain": "A1",
+  "unit": 7,
+  "orderInUnit": 6,
+  "standard": "A1.LIN.A.2",
+  "difficulty": 2,
+  "prompt": "Your savings follow $s = 15 + 5w$: you start with $\\$15$ and add $\\$5$ each week. How many dollars do you have after $6$ weeks?",
+  "answerType": "numeric",
+  "primaryAnswer": "45",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "START at $15$, then MOVE up $5$ per week for $6$ weeks.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "START at $15$, then MOVE up $5$ per week for $6$ weeks."
+    },
+    {
+      "level": "guide",
+      "text": "Added money: $5 \\times 6 = 30$. Now add the start."
+    },
+    {
+      "level": "reveal",
+      "text": "$15 + 30 = 45$ dollars."
+    }
+  ],
+  "explanation": [
+    "Plug in $w = 6$: $s = 15 + 5 \\times 6$.",
+    "$5 \\times 6 = 30$.",
+    "$15 + 30 = 45$ — you have $\\$45$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "On the graph",
+      "steps": [
+        "The savings line starts at $(0, 15)$ and rises $5$ for every $1$ week across.",
+        "Six steps of rise $5$ lift you $30$ above the start: $15 + 30 = 45$."
+      ]
+    }
+  ],
+  "tags": [
+    "slope-intercept",
+    "evaluate",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

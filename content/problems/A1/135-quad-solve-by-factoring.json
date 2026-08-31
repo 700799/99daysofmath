@@ -1,0 +1,56 @@
+{
+  "id": "A1.135",
+  "domain": "A1",
+  "unit": 14,
+  "orderInUnit": 5,
+  "standard": "A1.QUAD.A.1",
+  "difficulty": 2,
+  "prompt": "Solve $x^2 - 5x + 6 = 0$ by factoring. Give the LARGER solution.",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "First factor: two numbers that multiply to $6$ and add to $-5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First factor: two numbers that multiply to $6$ and add to $-5$."
+    },
+    {
+      "level": "guide",
+      "text": "The pair is $-2$ and $-3$: so $(x - 2)(x - 3) = 0$. Now use the zero-product rule."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 2$ or $x = 3$. The larger solution is $3$."
+    }
+  ],
+  "explanation": [
+    "Factor: numbers with product $6$ and sum $-5$ are $-2$ and $-3$.",
+    "So $(x - 2)(x - 3) = 0$.",
+    "Zero-product rule: $x = 2$ or $x = 3$.",
+    "The larger solution is $3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Table of values",
+      "steps": [
+        "Compute x² − 5x + 6 for x = 1, 2, 3, 4: you get 2, 0, 0, 2.",
+        "It hits zero at x = 2 and x = 3 — those are the solutions, and 3 is larger."
+      ]
+    },
+    {
+      "title": "Where the U crosses the floor",
+      "steps": [
+        "The graph of y = x² − 5x + 6 is a U. Solving = 0 asks where the U touches the x-axis floor.",
+        "The U dips down and crosses at x = 2 and x = 3, so the larger crossing is 3."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "factoring",
+    "zero-product"
+  ],
+  "estimatedSeconds": 60
+}

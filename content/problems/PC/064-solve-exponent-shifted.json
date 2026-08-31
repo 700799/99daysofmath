@@ -1,0 +1,56 @@
+{
+  "id": "PC.064",
+  "domain": "PC",
+  "unit": 7,
+  "orderInUnit": 4,
+  "standard": "PC.LOG.A.2",
+  "difficulty": 2,
+  "prompt": "Solve for $x$: $2^{x+1} = 16$.",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Write $16$ as a power of $2$ so both sides match.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Write $16$ as a power of $2$ so both sides match."
+    },
+    {
+      "level": "guide",
+      "text": "$16 = 2^4$, so $2^{x+1} = 2^4$, which means $x + 1 = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x + 1 = 4$ gives $x = 3$."
+    }
+  ],
+  "explanation": [
+    "Make the bases match: $16 = 2^4$.",
+    "Now $2^{x+1} = 2^4$, so the exponents are equal: $x + 1 = 4$.",
+    "Subtract $1$: $x = 3$. Check: $2^{3+1} = 2^4 = 16$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test whole numbers",
+      "steps": [
+        "Try $x = 2$: $2^3 = 8$, too small.",
+        "Try $x = 3$: $2^4 = 16$ — exactly right.",
+        "So $x = 3$."
+      ]
+    },
+    {
+      "title": "Split the power first",
+      "steps": [
+        "$2^{x+1}$ is the same as $2^x \\times 2^1$, or $2 \\cdot 2^x$.",
+        "So $2 \\cdot 2^x = 16$, which gives $2^x = 8$.",
+        "$2^3 = 8$, so $x = 3$."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-equation",
+    "same-base"
+  ],
+  "estimatedSeconds": 55
+}

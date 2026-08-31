@@ -1,0 +1,51 @@
+{
+  "id": "SAT.143",
+  "domain": "SAT",
+  "unit": 15,
+  "orderInUnit": 3,
+  "standard": "SAT.GEO.1",
+  "difficulty": 2,
+  "prompt": "Two parallel lines are cut by a transversal. One of the eight angles formed measures $115°$. What is the measure, in degrees, of an angle that is supplementary to it?",
+  "answerType": "numeric",
+  "primaryAnswer": "65",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "When parallel lines are cut by a transversal, every angle is either equal to $115°$ or supplementary to it.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "When parallel lines are cut by a transversal, every angle is either equal to $115°$ or supplementary to it."
+    },
+    {
+      "level": "guide",
+      "text": "The supplementary partner satisfies $115 + x = 180$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 65$ degrees."
+    }
+  ],
+  "learningObjective": "Use the two-angle structure formed by a transversal across parallel lines.",
+  "topic": "Parallel lines",
+  "explanation": [
+    "A transversal crossing two parallel lines creates only two distinct angle measures, and they are supplementary.",
+    "One is $115°$, so the other is $180 - 115 = 65°$.",
+    "Four of the eight angles measure $115°$ and the other four measure $65°$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Only two numbers exist in the figure",
+      "steps": [
+        "Rather than memorizing \"corresponding\", \"alternate interior\", and \"co-interior\" separately, notice that every angle is one of just two values.",
+        "Angles that look equal are equal; angles that look different are supplementary.",
+        "With parallel lines, the picture is reliable in exactly this one respect — and it collapses eight angle names into one idea."
+      ]
+    }
+  ],
+  "tags": [
+    "parallel-lines",
+    "transversal",
+    "supplementary"
+  ],
+  "estimatedSeconds": 55
+}

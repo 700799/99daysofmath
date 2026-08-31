@@ -2,6 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─────────────────────────────────────────────────────────────────────────
+   Theme tokens. Light is the default; `.dark` on <html> swaps the values.
+   Every value is an "R G B" triple so Tailwind can apply opacity modifiers
+   (see tailwind.config.ts → rgb(var(--x) / <alpha-value>)).
+
+   The palette is neutral graphite — deliberately NOT blue-tinted navy — with
+   one restrained steel-blue accent. Feedback colors (ok / warn / bad) stay
+   desaturated so a correct answer reads clearly without shouting.
+   ───────────────────────────────────────────────────────────────────────── */
+:root {
+  --canvas: 244 245 247;
+  --surface: 255 255 255;
+  --surface-2: 237 238 241;
+  --line: 220 222 227;
+  --line-strong: 195 199 207;
+
+  --ink: 21 23 27;
+  --ink-muted: 87 92 100;
+  --ink-dim: 134 139 147;
+
+  --accent: 46 95 143;
+  --accent-hover: 36 80 122;
+  --accent-soft: 232 238 245;
+  --on-accent: 255 255 255;
+
+  --ok: 44 122 91;
+  --ok-soft: 230 241 236;
+  --warn: 154 107 27;
+  --warn-soft: 245 238 223;
+  --bad: 168 68 60;
+  --bad-soft: 246 233 231;
+
+  color-scheme: light;
+}
+
+.dark {
+  --canvas: 14 15 18;
+  --surface: 22 24 29;
+  --surface-2: 30 33 38;
+  --line: 42 46 53;
+  --line-strong: 59 64 72;
+
+  --ink: 231 233 236;
+  --ink-muted: 162 167 175;
+  --ink-dim: 117 122 131;
+
+  --accent: 122 169 214;
+  --accent-hover: 155 192 228;
+  --accent-soft: 26 36 48;
+  --on-accent: 14 15 18;
+
+  --ok: 92 178 135;
+  --ok-soft: 22 36 30;
+  --warn: 208 164 92;
+  --warn-soft: 38 32 23;
+  --bad: 219 122 111;
+  --bad-soft: 42 27 25;
+
+  color-scheme: dark;
+}
+
 html,
 body,
 #root {
@@ -14,8 +75,8 @@ body,
 }
 
 body {
-  background: #f8fafc;
-  color: #0f172a;
+  background: rgb(var(--canvas));
+  color: rgb(var(--ink));
   overscroll-behavior-y: contain;
   -webkit-tap-highlight-color: transparent;
 }
@@ -51,6 +112,7 @@ button {
   }
   body {
     background: #ffffff;
+    color: #15171b;
   }
   main {
     padding: 0 !important;

@@ -1,4 +1,4 @@
-import { DOMAINS, type Domain } from '../types/problem';
+import { DOMAINS, CORE_DOMAINS, type Domain } from '../types/problem';
 
 const CORRECT = [
   'Great job!',
@@ -130,7 +130,9 @@ const MASTERY_STICKERS: StickerDef[] = [
   { id: 'mastery-6.G', emoji: '📐', label: 'Geometry Guru', category: 'mastery', hint: 'Finish all 6.G units' },
   { id: 'mastery-6.SP', emoji: '📊', label: 'Stats Star', category: 'mastery', hint: 'Finish all 6.SP units' },
   { id: 'mastery-5.F', emoji: '🧱', label: 'Foundation Builder', category: 'mastery', hint: 'Finish all Gr-5 Foundations units' },
-  { id: 'mastery-grand', emoji: '🏅', label: '6th-Grade Champion', category: 'mastery', hint: 'Master every domain' },
+  { id: 'mastery-A1', emoji: '🚀', label: 'Algebra Ace', category: 'mastery', hint: 'Finish all Algebra 1 units' },
+  { id: 'mastery-PC', emoji: '🎢', label: 'Precalc Pioneer', category: 'mastery', hint: 'Finish all Precalculus units' },
+  { id: 'mastery-grand', emoji: '🏅', label: '6th-Grade Champion', category: 'mastery', hint: 'Master every 6th-grade domain' },
 ];
 
 const CHALLENGE_STICKERS: StickerDef[] = [
@@ -153,6 +155,9 @@ export const UNIT_COUNT_BY_DOMAIN: Record<Domain, number> = {
   '6.EE': 10,
   '6.G': 10,
   '6.SP': 10,
+  A1: 14,
+  PC: 14,
+  SAT: 18,
 };
 
 const ALL_UNIT_STICKERS: StickerDef[] = (() => {
@@ -274,7 +279,9 @@ export function checkAllEarning(
   }
 
   // Grand mastery: every domain mastered
-  const grandReady = DOMAINS.every(
+  // The grand badge stays a 6th-grade milestone — Algebra 1 has its own
+  // mastery-A1 badge and shouldn't gate the "6th-Grade Champion".
+  const grandReady = CORE_DOMAINS.every(
     (d) => (ctx.byDomainUnitsCompleted[d] ?? 0) >= UNIT_COUNT_BY_DOMAIN[d],
   );
   if (grandReady) add('mastery-grand');

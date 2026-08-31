@@ -1,0 +1,50 @@
+{
+  "id": "SAT.104",
+  "domain": "SAT",
+  "unit": 11,
+  "orderInUnit": 4,
+  "standard": "SAT.PSDA.1",
+  "difficulty": 2,
+  "prompt": "A scale drawing uses a scale of $1$ centimeter to $250$ centimeters. A wall measures $6$ centimeters on the drawing. What is the actual length of the wall, in meters?",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "First find the actual length in centimeters, then convert.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find the actual length in centimeters, then convert."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\times 250 = 1500$ centimeters."
+    },
+    {
+      "level": "reveal",
+      "text": "$1500$ cm $\\div 100 = 15$ meters."
+    }
+  ],
+  "learningObjective": "Apply a scale factor and convert the result to the requested unit.",
+  "topic": "Scale and units",
+  "explanation": [
+    "Each drawing centimeter represents $250$ actual centimeters, so $6$ cm represents $6 \\times 250 = 1500$ cm.",
+    "The question asks for meters: $1500 \\text{ cm} \\div 100 = 15$ meters.",
+    "Skipping the conversion gives $1500$, which will be one of the answer choices."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two-step questions hide the second step",
+      "steps": [
+        "The scale work and the unit conversion are separate tasks, and only the first one is obvious.",
+        "Underline the unit the question asks for — here, \"in meters\" — before computing anything.",
+        "On the SAT, a question that changes units mid-problem is doing so deliberately."
+      ]
+    }
+  ],
+  "tags": [
+    "scale",
+    "unit-conversion"
+  ],
+  "estimatedSeconds": 65
+}

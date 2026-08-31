@@ -1,0 +1,73 @@
+{
+  "id": "SAT.175",
+  "domain": "SAT",
+  "unit": 18,
+  "orderInUnit": 5,
+  "standard": "SAT.GEO.4",
+  "difficulty": 2,
+  "prompt": "A circle has radius $6$. What is the area of a sector with a central angle of $60°$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$2\\pi$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$6\\pi$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$12\\pi$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$36\\pi$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Find the fraction of the circle, then take that fraction of the area.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the fraction of the circle, then take that fraction of the area."
+    },
+    {
+      "level": "guide",
+      "text": "$\\dfrac{60}{360} = \\dfrac{1}{6}$, and the area is $36\\pi$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\tfrac{1}{6}(36\\pi) = 6\\pi$."
+    }
+  ],
+  "learningObjective": "Compute a sector area as a fraction of the circle area.",
+  "topic": "Arcs and sectors",
+  "explanation": [
+    "The fraction of the circle is $\\dfrac{60}{360} = \\dfrac{1}{6}$.",
+    "The full area is $\\pi r^2 = \\pi(6)^2 = 36\\pi$.",
+    "The sector area is $\\dfrac{1}{6} \\times 36\\pi = 6\\pi$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sector versus arc",
+      "steps": [
+        "A sector is a pie slice — a two-dimensional region measured in square units.",
+        "An arc is just the curved edge — a one-dimensional length.",
+        "Here the arc would be $\\tfrac{1}{6}(12\\pi) = 2\\pi$, which is choice A. Both appear among the choices deliberately."
+      ]
+    }
+  ],
+  "tags": [
+    "circle",
+    "sector-area",
+    "fraction"
+  ],
+  "estimatedSeconds": 65
+}

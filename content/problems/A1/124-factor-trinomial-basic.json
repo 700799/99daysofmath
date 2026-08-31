@@ -1,0 +1,60 @@
+{
+  "id": "A1.124",
+  "domain": "A1",
+  "unit": 13,
+  "orderInUnit": 4,
+  "standard": "A1.POLY.A.2",
+  "difficulty": 2,
+  "prompt": "Factor: $x^2 + 5x + 6$.",
+  "answerType": "expression",
+  "primaryAnswer": "(x + 2)(x + 3)",
+  "alternativeAnswers": [
+    "(x+2)(x+3)",
+    "(x + 3)(x + 2)",
+    "(x+3)(x+2)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Hunt for two numbers that MULTIPLY to $6$ and ADD to $5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Hunt for two numbers that MULTIPLY to $6$ and ADD to $5$."
+    },
+    {
+      "level": "guide",
+      "text": "Pairs for $6$: $1 \\times 6$ and $2 \\times 3$. Which pair adds to $5$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$2 + 3 = 5$ and $2 \\times 3 = 6$, so $x^2 + 5x + 6 = (x + 2)(x + 3)$."
+    }
+  ],
+  "explanation": [
+    "Find two numbers that multiply to $6$ and add to $5$.",
+    "The pair is $2$ and $3$.",
+    "So $x^2 + 5x + 6 = (x + 2)(x + 3)$.",
+    "Check by expanding: $x^2 + 3x + 2x + 6$. It matches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Run the area model backwards",
+      "steps": [
+        "You know the garden area is x² + 5x + 6 — find the sides.",
+        "The x² patch forces both sides to start with x. The 6 corner splits as 2 × 3.",
+        "Only 2 and 3 also make the strips add to 5x, so the sides are (x + 2) and (x + 3)."
+      ]
+    },
+    {
+      "title": "Guess and check",
+      "steps": [
+        "Try (x + 1)(x + 6): expands to x² + 7x + 6. Middle term too big.",
+        "Try (x + 2)(x + 3): expands to x² + 5x + 6. That is the one."
+      ]
+    }
+  ],
+  "tags": [
+    "factoring",
+    "trinomial"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,50 @@
+{
+  "id": "SAT.056",
+  "domain": "SAT",
+  "unit": 6,
+  "orderInUnit": 6,
+  "standard": "SAT.ADV.1",
+  "difficulty": 2,
+  "prompt": "What is the value of $27^{2/3}$?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The denominator of the exponent is a root; the numerator is a power.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The denominator of the exponent is a root; the numerator is a power."
+    },
+    {
+      "level": "guide",
+      "text": "Take the cube root first: $\\sqrt[3]{27} = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "Then square it: $3^2 = 9$."
+    }
+  ],
+  "learningObjective": "Evaluate a fractional exponent as a root and a power.",
+  "topic": "Rational exponents",
+  "explanation": [
+    "$a^{m/n}$ means the $n$th root of $a$, raised to the $m$th power.",
+    "Here $n = 3$ and $m = 2$: $\\sqrt[3]{27} = 3$, then $3^2 = 9$.",
+    "Rooting before powering keeps the numbers small — going the other way means computing $27^2 = 729$ and then taking its cube root."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Rewrite the base as a power",
+      "steps": [
+        "$27 = 3^3$, so $27^{2/3} = (3^3)^{2/3}$.",
+        "Powers of powers multiply: $3^{3 \\cdot 2/3} = 3^2 = 9$.",
+        "When the base is a perfect power, this route is the cleanest and involves no roots at all."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-exponents",
+    "radicals"
+  ],
+  "estimatedSeconds": 55
+}

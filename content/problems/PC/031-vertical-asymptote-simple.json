@@ -1,0 +1,48 @@
+{
+  "id": "PC.031",
+  "domain": "PC",
+  "unit": 4,
+  "orderInUnit": 1,
+  "standard": "PC.RAT.A.1",
+  "difficulty": 1,
+  "prompt": "The function $f(x) = \\frac{1}{x - 6}$ has one vertical asymptote. What is its $x$-value?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You can never divide by zero. Find the $x$ that makes the BOTTOM zero.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You can never divide by zero. Find the $x$ that makes the BOTTOM zero."
+    },
+    {
+      "level": "guide",
+      "text": "Set $x - 6 = 0$ and solve."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 6$ is the vertical asymptote."
+    }
+  ],
+  "explanation": [
+    "Vertical asymptotes come from the BOTTOM of the fraction.",
+    "The bottom is zero when $x = 6$.",
+    "The graph runs away from the line $x = 6$ and never touches it."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sneak up on 6",
+      "steps": [
+        "At $x = 7$: $\\frac{1}{1} = 1$.",
+        "At $x = 6.1$: $\\frac{1}{0.1} = 10$.",
+        "At $x = 6.01$: $\\frac{1}{0.01} = 100$. The values blast upward — the graph is fleeing the line $x = 6$."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-functions",
+    "vertical-asymptote"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,59 @@
+{
+  "id": "A1.122",
+  "domain": "A1",
+  "unit": 13,
+  "orderInUnit": 2,
+  "standard": "A1.POLY.A.2",
+  "difficulty": 1,
+  "prompt": "Factor: $5x + 10$.",
+  "answerType": "expression",
+  "primaryAnswer": "5(x + 2)",
+  "alternativeAnswers": [
+    "5(x+2)",
+    "5 (x + 2)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Pull out what every term shares. What divides both $5x$ and $10$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Pull out what every term shares. What divides both $5x$ and $10$?"
+    },
+    {
+      "level": "guide",
+      "text": "The GCF is $5$. Write $5x + 10 = 5(\\;? + ?\\;)$ and fill the blanks."
+    },
+    {
+      "level": "reveal",
+      "text": "$5x + 10 = 5(x + 2)$."
+    }
+  ],
+  "explanation": [
+    "Both terms share a factor of $5$.",
+    "Pull it out: $5x = 5 \\times x$ and $10 = 5 \\times 2$.",
+    "Factored form: $5(x + 2)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Un-multiply it",
+      "steps": [
+        "Factoring runs distribution backwards: you know the spread-out answer, find what was multiplied.",
+        "Ask: 5 times WHAT gives 5x + 10? Answer: (x + 2).",
+        "So 5x + 10 = 5(x + 2). Distribute to check!"
+      ]
+    },
+    {
+      "title": "Area model backwards",
+      "steps": [
+        "Picture a rectangle of area 5x + 10 with one side 5.",
+        "Split the area into 5x and 10; the other side must be x and 2.",
+        "The sides are 5 and (x + 2)."
+      ]
+    }
+  ],
+  "tags": [
+    "factoring",
+    "gcf"
+  ],
+  "estimatedSeconds": 35
+}

@@ -108,7 +108,7 @@ async function main() {
     unitCounts.set(key, (unitCounts.get(key) ?? 0) + 1);
   }
   const TARGET_BY_DOMAIN: Record<string, number> = {
-    '6.RP': 100, '6.NS': 100, '6.EE': 100, '6.G': 100, '6.SP': 100, '5.F': 60,
+    '6.RP': 100, '6.NS': 100, '6.EE': 100, '6.G': 100, '6.SP': 100, '5.F': 60, A1: 140, PC: 140, SAT: 180,
   };
   const TARGET_PER_UNIT = 10;
   for (const [domain, count] of domainCounts) {

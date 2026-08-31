@@ -1,0 +1,57 @@
+{
+  "id": "PC.065",
+  "domain": "PC",
+  "unit": 7,
+  "orderInUnit": 5,
+  "standard": "PC.LOG.A.2",
+  "difficulty": 2,
+  "prompt": "Your savings DOUBLE every $7$ years. You have $\\$2000$ today. In how many years will you have $\\$16000$?",
+  "answerType": "numeric",
+  "primaryAnswer": "21",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "First find how many times the money has to double.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find how many times the money has to double."
+    },
+    {
+      "level": "guide",
+      "text": "$16000 \\div 2000 = 8$, and $8 = 2^3$, so that is $3$ doublings."
+    },
+    {
+      "level": "reveal",
+      "text": "$3$ doublings $\\times 7$ years each $= 21$ years."
+    }
+  ],
+  "explanation": [
+    "Compare the amounts: $16000 \\div 2000 = 8$.",
+    "Solve $2^n = 8$, so $n = 3$ doublings.",
+    "Each doubling takes $7$ years: $3 \\times 7 = 21$ years."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk the years",
+      "steps": [
+        "Year 0: $\\$2000$. Year 7: $\\$4000$.",
+        "Year 14: $\\$8000$. Year 21: $\\$16000$.",
+        "You land on it at year $21$."
+      ]
+    },
+    {
+      "title": "Use the formula",
+      "steps": [
+        "With doubling time $7$, the rule is $A = 2000 \\cdot 2^{t/7}$.",
+        "Set $A = 16000$: $2^{t/7} = 8 = 2^3$, so $t/7 = 3$.",
+        "Multiply both sides by $7$: $t = 21$ years."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-equation",
+    "doubling-time",
+    "word-problem"
+  ],
+  "estimatedSeconds": 65
+}

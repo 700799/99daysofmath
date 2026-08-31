@@ -1,0 +1,49 @@
+{
+  "id": "PC.034",
+  "domain": "PC",
+  "unit": 4,
+  "orderInUnit": 4,
+  "standard": "PC.RAT.A.1",
+  "difficulty": 2,
+  "prompt": "For the pizza-splitting cost $c(n) = \\frac{120}{n}$, imagine more and more friends joining. As $n$ gets huge, the cost per person gets closer and closer to what number?",
+  "answerType": "numeric",
+  "primaryAnswer": "0",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Try some big numbers for $n$ and watch what happens to the cost.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Try some big numbers for $n$ and watch what happens to the cost."
+    },
+    {
+      "level": "guide",
+      "text": "$c(120) = 1$ dollar. $c(1200) = 0.1$ dollars. The costs keep shrinking."
+    },
+    {
+      "level": "reveal",
+      "text": "The cost heads toward $0$ — that is the horizontal asymptote $y = 0$."
+    }
+  ],
+  "explanation": [
+    "Splitting a fixed bill among more people means smaller shares.",
+    "As $n \\to \\infty$, $\\frac{120}{n}$ shrinks toward $0$.",
+    "The line $y = 0$ is a horizontal asymptote: the cost gets tiny but never actually reaches zero."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A shrinking table",
+      "steps": [
+        "12 friends: $\\$10$ each. 120 friends: $\\$1$ each.",
+        "1200 friends: 10 cents each. 12000 friends: 1 cent each.",
+        "The share keeps halving and halving toward 0, but someone always pays a little."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-functions",
+    "horizontal-asymptote",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

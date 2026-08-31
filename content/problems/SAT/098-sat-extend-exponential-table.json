@@ -1,0 +1,56 @@
+{
+  "id": "SAT.098",
+  "domain": "SAT",
+  "unit": 10,
+  "orderInUnit": 8,
+  "standard": "SAT.ADV.5",
+  "difficulty": 3,
+  "prompt": "A function $f$ has the values $f(0) = 5$, $f(1) = 10$, $f(2) = 20$, and $f(3) = 40$. What is the value of $f(5)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "160",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Are the outputs changing by a constant amount, or by a constant factor?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Are the outputs changing by a constant amount, or by a constant factor?"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a shorter table: $3, 6, 12$ doubles each step, so the next terms are $24$ and $48$. Confirm the constant ratio, then keep applying it — and count your steps on paper."
+    },
+    {
+      "level": "guide",
+      "text": "Each output is double the one before, so $f(x) = 5 \\cdot 2^x$."
+    },
+    {
+      "level": "reveal",
+      "text": "$f(5) = 5 \\cdot 32 = 160$."
+    }
+  ],
+  "learningObjective": "Identify an exponential pattern and extend it.",
+  "topic": "Exponential functions",
+  "explanation": [
+    "The ratios are all $2$ ($10/5 = 2$, $20/10 = 2$, $40/20 = 2$), so the function is exponential with base $2$.",
+    "The initial value is $f(0) = 5$, so $f(x) = 5 \\cdot 2^x$.",
+    "$f(5) = 5 \\cdot 2^5 = 5 \\cdot 32 = 160$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Just keep doubling",
+      "steps": [
+        "$f(3) = 40$, so $f(4) = 80$ and $f(5) = 160$.",
+        "For a small number of steps this beats building the formula.",
+        "The trap answer is $80$ — stopping one step short. Count your steps on scratch paper rather than in your head."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "table",
+    "extend"
+  ],
+  "estimatedSeconds": 70
+}

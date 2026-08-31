@@ -1,0 +1,48 @@
+{
+  "id": "A1.007",
+  "domain": "A1",
+  "unit": 1,
+  "orderInUnit": 7,
+  "standard": "A1.EXP.A.1",
+  "difficulty": 2,
+  "prompt": "You already have $\\$15$ and get a $\\$10$ allowance each week, so your money is $10w + 15$ after $w$ weeks. How many dollars do you have after $6$ weeks? Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "75",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Replace $w$ with $6$ in $10w + 15$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Replace $w$ with $6$ in $10w + 15$."
+    },
+    {
+      "level": "guide",
+      "text": "$10 \\times 6 = 60$. Now add the $\\$15$ you started with."
+    },
+    {
+      "level": "reveal",
+      "text": "$60 + 15 = 75$ dollars."
+    }
+  ],
+  "explanation": [
+    "Substitute $w = 6$: $10(6) + 15$.",
+    "Multiply: $10 \\times 6 = 60$.",
+    "Add the starting money: $60 + 15 = 75$. You have $\\$75$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count up week by week",
+      "steps": [
+        "Start: $\\$15$. Each week adds $\\$10$.",
+        "After 6 weeks you have added $\\$60$ in allowance.",
+        "$\\$15 + \\$60 = \\$75$."
+      ]
+    }
+  ],
+  "tags": [
+    "evaluate",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,62 @@
+{
+  "id": "A1.139",
+  "domain": "A1",
+  "unit": 14,
+  "orderInUnit": 9,
+  "standard": "A1.QUAD.A.1",
+  "difficulty": 3,
+  "prompt": "Solve $x^2 - 2x - 15 = 0$ by factoring. Give the POSITIVE solution.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two numbers that multiply to $-15$ and add to $-2$. Different signs!",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two numbers that multiply to $-15$ and add to $-2$. Different signs!"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Easier factor: $x^2 - x - 6 = (x - 3)(x + 2)$ gives $x = 3$ or $x = -2$. Find two numbers with the right product and sum."
+    },
+    {
+      "level": "guide",
+      "text": "The pair is $-5$ and $+3$: $(x - 5)(x + 3) = 0$. Now zero-product."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 5$ or $x = -3$. The positive solution is $5$."
+    }
+  ],
+  "explanation": [
+    "Hunt: product $-15$, sum $-2$. The pair is $-5$ and $3$.",
+    "Factor: $(x - 5)(x + 3) = 0$.",
+    "Zero-product rule: $x = 5$ or $x = -3$.",
+    "The positive solution is $5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sign detective",
+      "steps": [
+        "Product −15 is negative, so the two numbers have different signs.",
+        "Sum −2 is negative, so the bigger-sized number is negative: −5 with +3.",
+        "Factors (x − 5)(x + 3) give x = 5 as the positive root."
+      ]
+    },
+    {
+      "title": "Check both candidates",
+      "steps": [
+        "Plug in x = 5: 25 − 10 − 15 = 0. Yes.",
+        "Plug in x = −3: 9 + 6 − 15 = 0. Also yes — two roots, and the positive one is 5."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "factoring",
+    "zero-product"
+  ],
+  "estimatedSeconds": 75
+}

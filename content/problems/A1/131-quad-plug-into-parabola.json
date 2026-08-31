@@ -1,0 +1,54 @@
+{
+  "id": "A1.131",
+  "domain": "A1",
+  "unit": 14,
+  "orderInUnit": 1,
+  "standard": "A1.QUAD.A.1",
+  "difficulty": 1,
+  "prompt": "The parabola $y = x^2$ makes a U shape. What is $y$ when $x = 3$?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substitute $3$ for $x$ in $y = x^2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $3$ for $x$ in $y = x^2$."
+    },
+    {
+      "level": "guide",
+      "text": "$y = 3^2$ means $3 \\times 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 9$."
+    }
+  ],
+  "explanation": [
+    "Substitute: $y = 3^2$.",
+    "$3 \\times 3 = 9$.",
+    "So $y = 9$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read it off a table",
+      "steps": [
+        "Build a quick table for y = x²: x = 0, 1, 2, 3 gives y = 0, 1, 4, 9.",
+        "The y-values climb faster and faster — that is the U shape. At x = 3, y = 9."
+      ]
+    },
+    {
+      "title": "A square floor",
+      "steps": [
+        "y = x² is the area of a square floor with side x.",
+        "A 3-by-3 floor holds 9 tiles, so y = 9."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "parabola"
+  ],
+  "estimatedSeconds": 25
+}

@@ -1,0 +1,56 @@
+{
+  "id": "SAT.177",
+  "domain": "SAT",
+  "unit": 18,
+  "orderInUnit": 7,
+  "standard": "SAT.GEO.4",
+  "difficulty": 3,
+  "prompt": "The equation $x^2 + y^2 - 6x + 4y = 12$ describes a circle. What is the radius of the circle?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Complete the square in $x$ and again in $y$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Complete the square in $x$ and again in $y$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try one variable: $x^2 - 4x = 5$ becomes $(x^2 - 4x + 4) = 5 + 4$, so $(x - 2)^2 = 9$. Do exactly that twice — once for $x$, once for $y$ — adding to both sides each time."
+    },
+    {
+      "level": "guide",
+      "text": "$(x^2 - 6x + 9) + (y^2 + 4y + 4) = 12 + 9 + 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(x - 3)^2 + (y + 2)^2 = 25$, so $r = 5$."
+    }
+  ],
+  "learningObjective": "Convert an expanded circle equation to standard form.",
+  "topic": "Circle equations",
+  "explanation": [
+    "Group the terms: $(x^2 - 6x) + (y^2 + 4y) = 12$.",
+    "Complete each square. For $x$: half of $-6$ is $-3$, squared is $9$. For $y$: half of $4$ is $2$, squared is $4$. Add both to *each* side: $(x^2 - 6x + 9) + (y^2 + 4y + 4) = 12 + 9 + 4$.",
+    "That is $(x - 3)^2 + (y + 2)^2 = 25$, so the centre is $(3, -2)$ and the radius is $5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The step people forget",
+      "steps": [
+        "Whatever you add to complete a square must also be added to the right side — twice here, once for each variable.",
+        "Skipping that gives a right side of $12$ and a radius of $\\sqrt{12}$, which is wrong.",
+        "Write the additions on both sides in the same motion and the error cannot happen."
+      ]
+    }
+  ],
+  "tags": [
+    "circle",
+    "completing-the-square",
+    "radius"
+  ],
+  "estimatedSeconds": 100
+}

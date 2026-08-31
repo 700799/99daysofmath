@@ -1,0 +1,58 @@
+{
+  "id": "PC.125",
+  "domain": "PC",
+  "unit": 13,
+  "orderInUnit": 5,
+  "standard": "PC.SEQ.A.1",
+  "difficulty": 2,
+  "prompt": "A geometric sequence starts at $a_1 = 3$ and multiplies by $r = 2$ each step. Find $a_8$.",
+  "answerType": "numeric",
+  "primaryAnswer": "384",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Use $a_n = a_1 \\times r^{\\,n-1}$. Again the exponent is one LESS than the term number.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use $a_n = a_1 \\times r^{\\,n-1}$. Again the exponent is one LESS than the term number."
+    },
+    {
+      "level": "guide",
+      "text": "$a_8 = 3 \\times 2^{7}$, and $2^7 = 128$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 128 = 384$."
+    }
+  ],
+  "explanation": [
+    "$a_n = a_1 \\times r^{\\,n-1}$.",
+    "$a_8 = 3 \\times 2^{8-1} = 3 \\times 2^7$.",
+    "$2^7 = 128$.",
+    "$3 \\times 128 = 384$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Just keep doubling",
+      "steps": [
+        "3, 6, 12, 24, 48, 96, 192, 384.",
+        "Count them: that is eight terms, so the last one is a₈.",
+        "384 — doubling by hand is quick when n is small, and it double-checks the formula."
+      ]
+    },
+    {
+      "title": "Count the multiplications",
+      "steps": [
+        "Term 1 has been multiplied zero times. Term 2 once. Term 3 twice.",
+        "So term 8 has been multiplied 7 times — that is where the exponent 7 comes from.",
+        "3 × 2⁷ = 3 × 128 = 384."
+      ]
+    }
+  ],
+  "tags": [
+    "sequence",
+    "geometric",
+    "formula"
+  ],
+  "estimatedSeconds": 45
+}

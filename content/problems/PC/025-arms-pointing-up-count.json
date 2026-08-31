@@ -1,0 +1,48 @@
+{
+  "id": "PC.025",
+  "domain": "PC",
+  "unit": 3,
+  "orderInUnit": 5,
+  "standard": "PC.POLY.A.1",
+  "difficulty": 2,
+  "prompt": "A polynomial graph has two ends, called its ARMS. For $p(x) = -2x^4 + 3x$, how many of the two arms point UP?",
+  "answerType": "numeric",
+  "primaryAnswer": "0",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Only the leading term $-2x^4$ decides where the arms point.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Only the leading term $-2x^4$ decides where the arms point."
+    },
+    {
+      "level": "guide",
+      "text": "The degree $4$ is EVEN, so both arms point the same way. The leading coefficient $-2$ is negative."
+    },
+    {
+      "level": "reveal",
+      "text": "Even degree plus a negative leader means both arms point DOWN, so $0$ arms point up."
+    }
+  ],
+  "explanation": [
+    "Even degree: both arms go the same direction.",
+    "Negative leading coefficient: that direction is DOWN.",
+    "So neither arm points up — the answer is $0$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test giant numbers",
+      "steps": [
+        "At $x = 10$: $-2(10000) + 30 = -19970$. Way below zero.",
+        "At $x = -10$: $-2(10000) - 30 = -20030$. Also way below zero.",
+        "Both far ends dive down, so no arm points up."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomials",
+    "end-behavior"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,51 @@
+{
+  "id": "SAT.076",
+  "domain": "SAT",
+  "unit": 8,
+  "orderInUnit": 6,
+  "standard": "SAT.ADV.3",
+  "difficulty": 2,
+  "prompt": "What is the minimum value of the function $f(x) = x^2 - 8x + 12$?",
+  "answerType": "numeric",
+  "primaryAnswer": "-4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find where the vertex is first, using $x = -\\dfrac{b}{2a}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find where the vertex is first, using $x = -\\dfrac{b}{2a}$."
+    },
+    {
+      "level": "guide",
+      "text": "$x = -\\dfrac{-8}{2(1)} = 4$. Now evaluate $f(4)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$f(4) = 16 - 32 + 12 = -4$."
+    }
+  ],
+  "learningObjective": "Find the minimum of a quadratic given in standard form.",
+  "topic": "Maximum and minimum values",
+  "explanation": [
+    "The parabola opens upward ($a = 1 > 0$), so it has a minimum at its vertex.",
+    "The vertex is at $x = -\\dfrac{b}{2a} = \\dfrac{8}{2} = 4$.",
+    "The minimum value is $f(4) = 4^2 - 8(4) + 12 = 16 - 32 + 12 = -4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Complete the square instead",
+      "steps": [
+        "$x^2 - 8x + 12 = (x^2 - 8x + 16) - 16 + 12 = (x - 4)^2 - 4$.",
+        "Now it is in vertex form and the vertex $(4, -4)$ is visible without computing anything.",
+        "Completing the square costs a few more seconds but produces the whole vertex, not just half of it."
+      ]
+    }
+  ],
+  "tags": [
+    "standard-form",
+    "minimum",
+    "vertex"
+  ],
+  "estimatedSeconds": 70
+}

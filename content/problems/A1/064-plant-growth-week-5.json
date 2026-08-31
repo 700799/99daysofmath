@@ -1,0 +1,48 @@
+{
+  "id": "A1.064",
+  "domain": "A1",
+  "unit": 7,
+  "orderInUnit": 4,
+  "standard": "A1.LIN.A.2",
+  "difficulty": 2,
+  "prompt": "A plant is $4$ cm tall and grows $3$ cm each week: $h = 4 + 3w$. How tall is it after $5$ weeks?",
+  "answerType": "numeric",
+  "primaryAnswer": "19",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Start at $4$ (that is $b$), then MOVE up $3$ for each of the $5$ weeks.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Start at $4$ (that is $b$), then MOVE up $3$ for each of the $5$ weeks."
+    },
+    {
+      "level": "guide",
+      "text": "Growth: $3 \\times 5 = 15$. Add the starting height."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 + 15 = 19$ cm."
+    }
+  ],
+  "explanation": [
+    "Plug in $w = 5$: $h = 4 + 3 \\times 5$.",
+    "Multiply first: $3 \\times 5 = 15$.",
+    "Add the start: $4 + 15 = 19$ cm tall."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Week by week",
+      "steps": [
+        "Start $4$, then climb $3$ each week: $7, 10, 13, 16, 19$.",
+        "After week $5$ the plant is $19$ cm — same as $4 + 3 \\times 5$."
+      ]
+    }
+  ],
+  "tags": [
+    "slope-intercept",
+    "evaluate",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

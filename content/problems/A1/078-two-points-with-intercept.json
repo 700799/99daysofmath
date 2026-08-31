@@ -1,0 +1,65 @@
+{
+  "id": "A1.078",
+  "domain": "A1",
+  "unit": 8,
+  "orderInUnit": 8,
+  "standard": "A1.LIN.B.1",
+  "difficulty": 3,
+  "prompt": "A line passes through $(0, 6)$ and $(2, 12)$. Write its equation in the form $y = mx + b$.",
+  "answerType": "expression",
+  "primaryAnswer": "y = 3x + 6",
+  "alternativeAnswers": [
+    "y=3x+6",
+    "3x + 6",
+    "3x+6",
+    "y = 6 + 3x",
+    "y=6+3x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Slope first: $m = \\frac{y_2 - y_1}{x_2 - x_1}$. Then notice one point has $x = 0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Slope first: $m = \\frac{y_2 - y_1}{x_2 - x_1}$. Then notice one point has $x = 0$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Easier pair: $(0, 1)$ and $(2, 5)$ rise $4$ over run $2$, so $m = 2$ and $b = 1$: $y = 2x + 1$. The $b$ is free when one point has $x = 0$."
+    },
+    {
+      "level": "guide",
+      "text": "$m = \\frac{12 - 6}{2 - 0} = 3$. The point $(0, 6)$ IS the $y$-intercept."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 3x + 6$."
+    }
+  ],
+  "explanation": [
+    "Slope: $m = \\frac{12 - 6}{2 - 0} = \\frac{6}{2} = 3$.",
+    "A point with $x = 0$ gives $b$ for free: $b = 6$.",
+    "Equation: $y = 3x + 6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Growth story",
+      "steps": [
+        "Read the points as a plant: $6$ cm at week $0$, $12$ cm at week $2$.",
+        "It grew $6$ cm in $2$ weeks — $3$ cm per week from a $6$ cm start: $y = 3x + 6$."
+      ]
+    },
+    {
+      "title": "Fill in the table",
+      "steps": [
+        "Between $x = 0$ and $x = 2$, $y$ goes $6 \\to ? \\to 12$; the middle must be $9$.",
+        "Jump $+3$ per step and start $6$: $y = 3x + 6$."
+      ]
+    }
+  ],
+  "tags": [
+    "write-equation",
+    "two-points"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,56 @@
+{
+  "id": "PC.122",
+  "domain": "PC",
+  "unit": 13,
+  "orderInUnit": 2,
+  "standard": "PC.SEQ.A.1",
+  "difficulty": 1,
+  "prompt": "Look at the sequence $2,\\ 6,\\ 18,\\ 54,\\ \\dots$ What is the next term?",
+  "answerType": "numeric",
+  "primaryAnswer": "162",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The gaps keep growing, so try DIVIDING each term by the one before it instead.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The gaps keep growing, so try DIVIDING each term by the one before it instead."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\div 2 = 3$, $18 \\div 6 = 3$, $54 \\div 18 = 3$. The rule multiplies by $3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$54 \\times 3 = 162$."
+    }
+  ],
+  "explanation": [
+    "The jumps are $4, 12, 36$ — not the same, so it is not arithmetic.",
+    "Divide instead: each term is $3$ times the one before, so this is GEOMETRIC with $r = 3$.",
+    "$54 \\times 3 = 162$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Arithmetic or geometric? A quick test",
+      "steps": [
+        "Subtract first: 6 − 2 = 4 but 18 − 6 = 12. The gaps disagree, so it is NOT arithmetic.",
+        "Now divide: 6 ÷ 2 = 3 and 18 ÷ 6 = 3. The ratios agree, so it IS geometric.",
+        "Once the ratio is 3, the next term is 54 × 3 = 162."
+      ]
+    },
+    {
+      "title": "Write each term as powers of 3",
+      "steps": [
+        "2, then 2 × 3, then 2 × 3 × 3, then 2 × 3 × 3 × 3 — that is 2, 6, 18, 54.",
+        "Each new term just glues on one more factor of 3.",
+        "The fifth term glues on one more: 2 × 3⁴ = 2 × 81 = 162."
+      ]
+    }
+  ],
+  "tags": [
+    "sequence",
+    "geometric"
+  ],
+  "estimatedSeconds": 30
+}

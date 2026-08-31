@@ -1,0 +1,62 @@
+{
+  "id": "A1.075",
+  "domain": "A1",
+  "unit": 8,
+  "orderInUnit": 5,
+  "standard": "A1.LIN.B.1",
+  "difficulty": 2,
+  "prompt": "A gym charges a $\\$25$ sign-up fee plus $\\$10$ per month. Write an equation for the total cost $y$ after $x$ months.",
+  "answerType": "expression",
+  "primaryAnswer": "y = 10x + 25",
+  "alternativeAnswers": [
+    "y=10x+25",
+    "10x + 25",
+    "10x+25",
+    "y = 25 + 10x",
+    "y=25+10x",
+    "25 + 10x",
+    "25+10x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The one-time fee is the START ($b$); the monthly charge is the MOVE ($m$).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The one-time fee is the START ($b$); the monthly charge is the MOVE ($m$)."
+    },
+    {
+      "level": "guide",
+      "text": "$b = 25$, $m = 10$. Fill in $y = mx + b$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 10x + 25$."
+    }
+  ],
+  "explanation": [
+    "At $0$ months you already owe the sign-up fee: $b = 25$.",
+    "Each month adds $\\$10$: $m = 10$.",
+    "Equation: $y = 10x + 25$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with 3 months",
+      "steps": [
+        "Three months should cost $25 + 10 + 10 + 10 = \\$55$.",
+        "The equation gives $10 \\times 3 + 25 = 55$ — it checks out."
+      ]
+    },
+    {
+      "title": "Table of bills",
+      "steps": [
+        "Month $0 \\to 25$, month $1 \\to 35$, month $2 \\to 45$: constant jump $+10$.",
+        "Jump $10$ is $m$; month-zero bill $25$ is $b$: $y = 10x + 25$."
+      ]
+    }
+  ],
+  "tags": [
+    "write-equation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

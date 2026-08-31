@@ -1,0 +1,78 @@
+{
+  "id": "SAT.137",
+  "domain": "SAT",
+  "unit": 14,
+  "orderInUnit": 7,
+  "standard": "SAT.PSDA.4",
+  "difficulty": 3,
+  "prompt": "A poll estimates that $48\\%$ of voters support a measure, with a margin of error of $3$ percentage points. Which value of the true population percentage is NOT consistent with this result?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$45\\%$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$47\\%$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$51\\%$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$53\\%$",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "D",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The margin of error creates an interval around the estimate.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The margin of error creates an interval around the estimate."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an easy interval: an estimate of $50\\%$ with a margin of $2$ points spans $48\\%$ to $52\\%$. Build the interval first, then check which value sits outside it."
+    },
+    {
+      "level": "guide",
+      "text": "The interval is $48 \\pm 3$, so from $45\\%$ to $51\\%$."
+    },
+    {
+      "level": "reveal",
+      "text": "$53\\%$ falls outside that interval."
+    }
+  ],
+  "learningObjective": "Build and use a margin-of-error interval.",
+  "topic": "Margin of error",
+  "explanation": [
+    "The estimate plus or minus the margin gives the plausible interval: $48 - 3 = 45$ to $48 + 3 = 51$.",
+    "Choices A, B, and C all lie within $[45, 51]$ and are therefore consistent with the poll.",
+    "$53\\%$ lies outside, so it is not supported."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "What shrinks the margin",
+      "steps": [
+        "A larger sample narrows the margin of error; a smaller one widens it.",
+        "The margin reflects sampling variability only — it does not account for a biased sampling method.",
+        "A badly-drawn sample can have a tiny margin of error and still be completely wrong about the population."
+      ]
+    }
+  ],
+  "tags": [
+    "margin-of-error",
+    "inference",
+    "interval"
+  ],
+  "estimatedSeconds": 75
+}

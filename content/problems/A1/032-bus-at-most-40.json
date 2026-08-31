@@ -1,0 +1,56 @@
+{
+  "id": "A1.032",
+  "domain": "A1",
+  "unit": 4,
+  "orderInUnit": 2,
+  "standard": "A1.INEQ.A.1",
+  "difficulty": 1,
+  "prompt": "A school bus holds at most $40$ students. Write an inequality for the number of students $s$ that can ride. Write it like \"s <= 40\".",
+  "answerType": "short-text",
+  "primaryAnswer": "s <= 40",
+  "alternativeAnswers": [
+    "s<=40",
+    "s ≤ 40",
+    "s≤40",
+    "40 >= s",
+    "40>=s",
+    "40 ≥ s"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"At most 40\" means 40 is the ceiling: 40 is OK, 41 is not.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"At most 40\" means 40 is the ceiling: 40 is OK, 41 is not."
+    },
+    {
+      "level": "guide",
+      "text": "So $s$ can be less than 40 OR equal to 40. Which symbol says that?"
+    },
+    {
+      "level": "reveal",
+      "text": "$s \\le 40$ — written as \"s <= 40\"."
+    }
+  ],
+  "explanation": [
+    "\"At most 40\" means the count can be 40 or anything smaller.",
+    "That is $s \\le 40$.",
+    "The \"or equal\" bar matters: exactly 40 students is still allowed."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test the boundary",
+      "steps": [
+        "Can 40 students ride? Yes — \"at most 40\" allows exactly 40.",
+        "Can 41 ride? No.",
+        "An inequality that says yes to 40 and no to 41 must be $s \\le 40$."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "translate",
+    "word-problem"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,55 @@
+{
+  "id": "A1.087",
+  "domain": "A1",
+  "unit": 9,
+  "orderInUnit": 7,
+  "standard": "A1.SYS.A.1",
+  "difficulty": 2,
+  "prompt": "At a school play, 3 adult tickets and 2 kid tickets cost $\\$41$. One adult ticket and 2 kid tickets cost $\\$23$. How many dollars does one adult ticket cost?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Both orders have the SAME 2 kid tickets. Stack the equations and subtract to cancel the kids.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Both orders have the SAME 2 kid tickets. Stack the equations and subtract to cancel the kids."
+    },
+    {
+      "level": "guide",
+      "text": "$(3a + 2k) - (a + 2k) = 41 - 23$ gives $2a = 18$."
+    },
+    {
+      "level": "reveal",
+      "text": "$a = 18 \\div 2 = 9$ dollars per adult ticket."
+    }
+  ],
+  "explanation": [
+    "Write the rules: $3a + 2k = 41$ and $a + 2k = 23$.",
+    "Both have $2k$, so subtract the second from the first — the kid tickets cancel: $2a = 18$.",
+    "$a = 9$. Check: $2k = 23 - 9 = 14$, and $27 + 14 = 41$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare the two receipts",
+      "steps": [
+        "The big order is the small order plus 2 extra adult tickets. The price difference is 41 − 23 = 18 dollars.",
+        "So 2 adult tickets cost $18, and one costs 18 ÷ 2 = 9 dollars."
+      ]
+    },
+    {
+      "title": "Picture the ticket piles",
+      "steps": [
+        "Draw both orders: [A A A K K] = 41 and [A K K] = 23.",
+        "Cross off one A and two Ks from each pile. What is left is [A A] = 18, so each A is 9."
+      ]
+    }
+  ],
+  "tags": [
+    "system-of-equations",
+    "elimination",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

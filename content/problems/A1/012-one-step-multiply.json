@@ -1,0 +1,47 @@
+{
+  "id": "A1.012",
+  "domain": "A1",
+  "unit": 2,
+  "orderInUnit": 2,
+  "standard": "A1.EQ.A.1",
+  "difficulty": 1,
+  "prompt": "Solve for $x$: $4x = 28$. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$4x$ means $4$ times $x$. Undo multiplication with division.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$4x$ means $4$ times $x$. Undo multiplication with division."
+    },
+    {
+      "level": "guide",
+      "text": "Divide BOTH sides by $4$: $x = 28 \\div 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 7$."
+    }
+  ],
+  "explanation": [
+    "Undo \"times 4\" by dividing both sides by 4.",
+    "$x = 28 \\div 4 = 7$.",
+    "Check: $4(7) = 28$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Share it out equally",
+      "steps": [
+        "Four identical mystery boxes together weigh 28.",
+        "Split the 28 into 4 equal shares: each share is 7.",
+        "So one box weighs 7 — that is $x = 7$."
+      ]
+    }
+  ],
+  "tags": [
+    "one-step-equation"
+  ],
+  "estimatedSeconds": 25
+}

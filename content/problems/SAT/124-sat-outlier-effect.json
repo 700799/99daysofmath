@@ -1,0 +1,74 @@
+{
+  "id": "SAT.124",
+  "domain": "SAT",
+  "unit": 13,
+  "orderInUnit": 4,
+  "standard": "SAT.PSDA.3",
+  "difficulty": 2,
+  "prompt": "A data set of $20$ test scores has a mean of $75$ and a median of $76$. One additional score of $12$ is added to the set. Which best describes the effect on the mean and the median?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Both decrease substantially",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "The mean decreases substantially; the median changes little",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "The median decreases substantially; the mean changes little",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Neither changes",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Which measure uses every value, and which uses only position?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Which measure uses every value, and which uses only position?"
+    },
+    {
+      "level": "guide",
+      "text": "The mean sums all values, so an extreme value moves it. The median only shifts by one position."
+    },
+    {
+      "level": "reveal",
+      "text": "The mean drops noticeably; the median barely moves."
+    }
+  ],
+  "learningObjective": "Predict how an outlier affects the mean versus the median.",
+  "topic": "Outliers and resistance",
+  "explanation": [
+    "The mean is computed from the sum, so adding a value far below the others pulls it down: the new mean is $\\dfrac{20(75) + 12}{21} = \\dfrac{1512}{21} = 72$.",
+    "The median depends only on which value sits in the middle. Adding one low score shifts the middle position by half a slot, so the median moves at most a little.",
+    "This is what \"the median is resistant to outliers\" means."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the median resists",
+      "steps": [
+        "To move the median substantially, you would have to add many low values, not one.",
+        "The median does not care *how* low the new value is — only that it is below the middle.",
+        "Replacing that $12$ with a $0$ would change the mean again but leave the median exactly where it is."
+      ]
+    }
+  ],
+  "tags": [
+    "outlier",
+    "mean",
+    "median",
+    "resistance"
+  ],
+  "estimatedSeconds": 75
+}

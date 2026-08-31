@@ -1,0 +1,73 @@
+{
+  "id": "SAT.005",
+  "domain": "SAT",
+  "unit": 1,
+  "orderInUnit": 5,
+  "standard": "SAT.ALG.1",
+  "difficulty": 2,
+  "prompt": "The area of a triangle is given by $A = \\tfrac{1}{2}bh$. Which equation correctly gives $h$ in terms of $A$ and $b$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$h = \\dfrac{A}{2b}$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$h = \\dfrac{2A}{b}$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$h = 2Ab$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$h = \\dfrac{b}{2A}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Treat $A$ and $b$ as if they were ordinary numbers and isolate $h$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Treat $A$ and $b$ as if they were ordinary numbers and isolate $h$."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply both sides by $2$ to clear the fraction: $2A = bh$."
+    },
+    {
+      "level": "reveal",
+      "text": "Divide both sides by $b$: $h = \\dfrac{2A}{b}$."
+    }
+  ],
+  "learningObjective": "Rearrange a literal equation to isolate a chosen variable.",
+  "topic": "Literal equations",
+  "explanation": [
+    "Multiply both sides by $2$: $2A = bh$.",
+    "Divide both sides by $b$: $h = \\dfrac{2A}{b}$.",
+    "The steps are identical to solving a numeric equation — the other letters simply come along for the ride."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test with real numbers",
+      "steps": [
+        "Take a triangle with $b = 4$ and $h = 5$. Then $A = \\tfrac{1}{2}(4)(5) = 10$.",
+        "Now check each choice at $A = 10$, $b = 4$ and keep the one returning $h = 5$.",
+        "B gives $\\dfrac{2(10)}{4} = 5$ ✓. A gives $10/8$, C gives $80$, D gives $0.2$ — all eliminated in one pass."
+      ]
+    }
+  ],
+  "tags": [
+    "literal-equation",
+    "rearrange",
+    "plug-in"
+  ],
+  "estimatedSeconds": 55
+}

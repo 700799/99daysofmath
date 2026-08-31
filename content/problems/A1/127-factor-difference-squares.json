@@ -1,0 +1,59 @@
+{
+  "id": "A1.127",
+  "domain": "A1",
+  "unit": 13,
+  "orderInUnit": 7,
+  "standard": "A1.POLY.A.2",
+  "difficulty": 2,
+  "prompt": "Factor: $x^2 - 25$.",
+  "answerType": "expression",
+  "primaryAnswer": "(x + 5)(x - 5)",
+  "alternativeAnswers": [
+    "(x+5)(x-5)",
+    "(x - 5)(x + 5)",
+    "(x-5)(x+5)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "This is a DIFFERENCE of SQUARES: $x^2$ is a square, and $25 = 5^2$ is a square.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This is a DIFFERENCE of SQUARES: $x^2$ is a square, and $25 = 5^2$ is a square."
+    },
+    {
+      "level": "guide",
+      "text": "The pattern: $a^2 - b^2 = (a + b)(a - b)$. Here $a = x$ and $b = 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x^2 - 25 = (x + 5)(x - 5)$."
+    }
+  ],
+  "explanation": [
+    "Spot the pattern: both terms are perfect squares with a minus between them.",
+    "$a^2 - b^2 = (a + b)(a - b)$ with $a = x$, $b = 5$.",
+    "So $x^2 - 25 = (x + 5)(x - 5)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the middle vanishes",
+      "steps": [
+        "Expand (x + 5)(x − 5): the strips are +5x and −5x.",
+        "They are perfect opposites, so they cancel to zero.",
+        "Left over: x² − 25 — that is why the factored form has a plus AND a minus."
+      ]
+    },
+    {
+      "title": "Two-number hunt still works",
+      "steps": [
+        "Think of x² − 25 as x² + 0x − 25: numbers multiplying to −25 and adding to 0.",
+        "That pair is 5 and −5, giving (x + 5)(x − 5)."
+      ]
+    }
+  ],
+  "tags": [
+    "factoring",
+    "difference-of-squares"
+  ],
+  "estimatedSeconds": 50
+}

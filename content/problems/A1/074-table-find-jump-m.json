@@ -1,0 +1,55 @@
+{
+  "id": "A1.074",
+  "domain": "A1",
+  "unit": 8,
+  "orderInUnit": 4,
+  "standard": "A1.LIN.B.1",
+  "difficulty": 2,
+  "prompt": "A table shows $x: 1, 2, 3$ and $y: 9, 13, 17$. The $y$-values jump by the same amount each step. What is the slope $m$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The slope is the constant JUMP in $y$ each time $x$ grows by $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The slope is the constant JUMP in $y$ each time $x$ grows by $1$."
+    },
+    {
+      "level": "guide",
+      "text": "From $9$ to $13$ is a jump of how much? Check $13$ to $17$ too."
+    },
+    {
+      "level": "reveal",
+      "text": "Both jumps are $4$, so $m = 4$."
+    }
+  ],
+  "explanation": [
+    "$x$ climbs by $1$ each column, and $y$ climbs $9 \\to 13 \\to 17$.",
+    "Each jump: $13 - 9 = 4$ and $17 - 13 = 4$.",
+    "A constant jump of $4$ per step means slope $m = 4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Slope formula",
+      "steps": [
+        "Take two rows as points: $(1, 9)$ and $(3, 17)$.",
+        "$m = \\frac{17 - 9}{3 - 1} = \\frac{8}{2} = 4$ — same answer as the jump."
+      ]
+    },
+    {
+      "title": "Rate story",
+      "steps": [
+        "Read the table as pay: hour $1 \\to \\$9$, hour $2 \\to \\$13$, hour $3 \\to \\$17$.",
+        "You earn $\\$4$ more every hour — that per-hour rate is the slope, $4$."
+      ]
+    }
+  ],
+  "tags": [
+    "write-equation",
+    "tables",
+    "slope"
+  ],
+  "estimatedSeconds": 40
+}

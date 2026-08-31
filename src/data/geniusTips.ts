@@ -69,6 +69,28 @@ export const GENIUS_TIPS: GeniusTip[] = [
   { text: 'Always sort the data before finding the median — the middle of a mess is meaningless.', domain: '6.SP' },
   { text: 'Box plot speed-read: the line in the box is the median, the box holds the middle half.', domain: '6.SP' },
   { text: 'Range tells you spread, not center: max − min in one subtraction.', domain: '6.SP' },
+  // Algebra 1
+  { text: 'Always CHECK an equation: plug your x back in. Ten seconds now beats a wrong answer forever.', domain: 'A1' },
+  { text: 'An equation is a balance scale — any move you make must hit BOTH sides.', domain: 'A1' },
+  { text: 'In y = mx + b, b is where you START and m is how you MOVE. Read lines like a story.', domain: 'A1' },
+  { text: 'Slope shortcut: down-hill lines are negative before you compute anything. Eyeball first!', domain: 'A1' },
+  { text: 'Flip the inequality sign ONLY when you multiply or divide by a negative — adding never flips it.', domain: 'A1' },
+  { text: 'x³ · x⁴ = x⁷ — multiplying powers ADDS the exponents. Count the copies!', domain: 'A1' },
+  { text: 'Factoring check: multiply your factors back out. If it does not rebuild the original, hunt again.', domain: 'A1' },
+  { text: 'x² = 25 has TWO answers: 5 and −5. Squares hide a mirror twin.', domain: 'A1' },
+  // Precalculus
+  { text: 'In f(x − 3) the graph moves RIGHT 3. Minus moves right — the sneakiest rule in precalc.', domain: 'PC' },
+  { text: 'Composition runs inside-out: in f(g(x)), machine g goes first. Read it like nested parentheses.', domain: 'PC' },
+  { text: 'A log is a question: log base 2 of 32 asks "2 to what power is 32?" Count the doublings — 5.', domain: 'PC' },
+  { text: 'Multiplying inside a log becomes adding outside: log(AB) = log A + log B. Logs turn × into +.', domain: 'PC' },
+  { text: 'sin²θ + cos²θ = 1 is just the Pythagorean theorem wearing a circle costume.', domain: 'PC' },
+  { text: 'π radians = 180°. Every conversion is that one fact with a fraction attached.', domain: 'PC' },
+  { text: 'Amplitude is HALF the peak-to-trough distance; the midline is the level it wiggles around.', domain: 'PC' },
+  { text: 'Period of sin(bx) is 360° ÷ b — a bigger b squeezes the wave tighter.', domain: 'PC' },
+  { text: 'Vertical asymptotes come from the BOTTOM of a fraction; zeros come from the top.', domain: 'PC' },
+  { text: 'Term n of a sequence has taken (n − 1) jumps, not n. The first term has jumped zero times.', domain: 'PC' },
+  { text: 'Adding 1 + 2 + … + n? Pair the ends: n(n + 1)/2. Gauss did it in seconds as a kid.', domain: 'PC' },
+  { text: 'A limit asks where a function is HEADING, not where it lands — a hole cannot stop the journey.', domain: 'PC' },
 ];
 
 function hashStr(s: string): number {

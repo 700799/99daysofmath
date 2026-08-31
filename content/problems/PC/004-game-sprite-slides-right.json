@@ -1,0 +1,49 @@
+{
+  "id": "PC.004",
+  "domain": "PC",
+  "unit": 1,
+  "orderInUnit": 4,
+  "standard": "PC.FUN.A.1",
+  "difficulty": 2,
+  "prompt": "In a video game, a character sprite follows the path $y = x^2$. A coder changes the path to $y = (x - 7)^2$. How many units RIGHT does the sprite path move?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Look inside the parentheses. Changes glued to $x$ move the path sideways.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Look inside the parentheses. Changes glued to $x$ move the path sideways."
+    },
+    {
+      "level": "guide",
+      "text": "Remember the sneaky rule: a MINUS inside moves the graph RIGHT by that number."
+    },
+    {
+      "level": "reveal",
+      "text": "The sprite path slides RIGHT $7$ units."
+    }
+  ],
+  "explanation": [
+    "The change is inside the parentheses, so it is a sideways slide.",
+    "$f(x - h)$ moves the graph RIGHT by $h$.",
+    "Here $h = 7$, so the sprite path moves RIGHT $7$ units."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Track the lowest pixel",
+      "steps": [
+        "On $y = x^2$ the sprite dips lowest at $x = 0$.",
+        "On $y = (x - 7)^2$ it dips lowest when $x - 7 = 0$, so $x = 7$.",
+        "The dip moved 7 steps to the right across the screen."
+      ]
+    }
+  ],
+  "tags": [
+    "transformations",
+    "horizontal-shift",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

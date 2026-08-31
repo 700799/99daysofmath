@@ -1,0 +1,78 @@
+{
+  "id": "SAT.157",
+  "domain": "SAT",
+  "unit": 16,
+  "orderInUnit": 7,
+  "standard": "SAT.GEO.2",
+  "difficulty": 3,
+  "prompt": "What is the volume of a sphere with radius $3$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$12\\pi$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$36\\pi$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$27\\pi$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$108\\pi$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The sphere volume formula is on the reference sheet: $V = \\tfrac{4}{3}\\pi r^3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The sphere volume formula is on the reference sheet: $V = \\tfrac{4}{3}\\pi r^3$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try radius $1$: $V = \\tfrac{4}{3}\\pi(1)^3 = \\tfrac{4}{3}\\pi$. Cube the radius first, then multiply by $\\tfrac{4}{3}\\pi$ — the exponent applies to $r$ alone."
+    },
+    {
+      "level": "guide",
+      "text": "$\\tfrac{4}{3}\\pi (3)^3 = \\tfrac{4}{3}\\pi (27)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$36\\pi$."
+    }
+  ],
+  "learningObjective": "Apply the sphere volume formula.",
+  "topic": "Volume",
+  "explanation": [
+    "$V = \\tfrac{4}{3}\\pi r^3$ with $r = 3$.",
+    "$r^3 = 27$, so $V = \\tfrac{4}{3}\\pi(27) = 4\\pi \\times 9 = 36\\pi$.",
+    "Cube the radius before multiplying by the fraction — $\\left(\\tfrac{4}{3} \\times 3\\right)^3$ is a different and wrong quantity."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the reference sheet without losing time",
+      "steps": [
+        "The sphere, cone, and pyramid formulas are all provided — you do not need to memorize them.",
+        "But each lookup costs about fifteen seconds, and geometry questions cluster late in a module.",
+        "Knowing them cold converts that lookup time into checking time."
+      ]
+    }
+  ],
+  "tags": [
+    "volume",
+    "sphere",
+    "reference-sheet"
+  ],
+  "estimatedSeconds": 65
+}

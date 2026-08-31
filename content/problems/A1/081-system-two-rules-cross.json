@@ -1,0 +1,54 @@
+{
+  "id": "A1.081",
+  "domain": "A1",
+  "unit": 9,
+  "orderInUnit": 1,
+  "standard": "A1.SYS.A.1",
+  "difficulty": 1,
+  "prompt": "Two rules must BOTH be true: $y = x + 3$ and $y = 2x$. What is $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Both rules give the same $y$, so the right sides must match: set $x + 3 = 2x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Both rules give the same $y$, so the right sides must match: set $x + 3 = 2x$."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract $x$ from both sides of $x + 3 = 2x$ to get $3 = x$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 3$. Check: $y = 3 + 3 = 6$ and $y = 2 \\times 3 = 6$. Both rules agree."
+    }
+  ],
+  "explanation": [
+    "A system is two rules that must both be true at once — the point where two lines cross.",
+    "Since both equal $y$, set them equal: $x + 3 = 2x$.",
+    "Subtract $x$: $3 = x$. Check: both rules give $y = 6$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build a table",
+      "steps": [
+        "Try x-values in both rules. x = 1: rule one gives 4, rule two gives 2. x = 2: gives 5 and 4.",
+        "x = 3: gives 6 and 6 — a match! The rules agree at x = 3."
+      ]
+    },
+    {
+      "title": "As two racers",
+      "steps": [
+        "Racer one starts 3 steps ahead and moves 1 step per turn (y = x + 3). Racer two starts at 0 but moves 2 steps per turn (y = 2x).",
+        "Racer two closes the 3-step gap by 1 step each turn, so they meet after 3 turns: x = 3."
+      ]
+    }
+  ],
+  "tags": [
+    "system-of-equations",
+    "substitution"
+  ],
+  "estimatedSeconds": 45
+}

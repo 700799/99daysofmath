@@ -1,0 +1,47 @@
+{
+  "id": "A1.043",
+  "domain": "A1",
+  "unit": 5,
+  "orderInUnit": 3,
+  "standard": "A1.FUN.A.1",
+  "difficulty": 1,
+  "prompt": "A function's table shows: input $1 \\to$ output $5$, input $2 \\to$ output $10$, input $3 \\to$ output $15$. What is the output for input $2$?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the row of the table where the input is $2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the row of the table where the input is $2$."
+    },
+    {
+      "level": "guide",
+      "text": "The table pairs each input with exactly one output: $2 \\to ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "Input $2$ pairs with output $10$."
+    }
+  ],
+  "explanation": [
+    "A table is a list of the machine's input-output pairs.",
+    "The pair with input $2$ is $2 \\to 10$.",
+    "The output is $10$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spot the rule",
+      "steps": [
+        "Each output is $5$ times its input: $1 \\to 5$, $3 \\to 15$.",
+        "So input $2$ gives $2 \\times 5 = 10$."
+      ]
+    }
+  ],
+  "tags": [
+    "functions",
+    "tables"
+  ],
+  "estimatedSeconds": 25
+}

@@ -1,0 +1,53 @@
+{
+  "id": "PC.104",
+  "domain": "PC",
+  "unit": 11,
+  "orderInUnit": 4,
+  "standard": "PC.TRIG.B.2",
+  "difficulty": 2,
+  "prompt": "For some angle $\\theta$, $\\sin^2\\theta = 0.36$. What is $\\cos^2\\theta$?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.64",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The two squares always add to $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The two squares always add to $1$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\cos^2\\theta = 1 - \\sin^2\\theta = 1 - 0.36$."
+    },
+    {
+      "level": "reveal",
+      "text": "$1 - 0.36 = 0.64$."
+    }
+  ],
+  "explanation": [
+    "The Pythagorean identity: $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+    "Substitute the known piece: $0.36 + \\cos^2\\theta = 1$.",
+    "Subtract: $\\cos^2\\theta = 1 - 0.36 = 0.64$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two pieces of one whole",
+      "steps": [
+        "Picture a bar exactly 1 unit long, split into a sin² piece and a cos² piece.",
+        "The sin² piece takes 0.36 of the bar, so the cos² piece must fill the rest: 1 − 0.36 = 0.64."
+      ]
+    },
+    {
+      "title": "Check with the triangle",
+      "steps": [
+        "sin² θ = 0.36 means sin θ = 0.6, so the up leg is 0.6 and the slanted side is 1.",
+        "Pythagoras: 0.6² + b² = 1², so b² = 1 − 0.36 = 0.64 (and cos θ = 0.8)."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean-identity"
+  ],
+  "estimatedSeconds": 50
+}

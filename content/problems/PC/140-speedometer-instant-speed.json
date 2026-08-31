@@ -1,0 +1,63 @@
+{
+  "id": "PC.140",
+  "domain": "PC",
+  "unit": 14,
+  "orderInUnit": 10,
+  "standard": "PC.LIM.A.1",
+  "difficulty": 3,
+  "prompt": "A car's distance is $d = 5t^2$ meters after $t$ seconds. Its average speed from $t = 2$ to $t = 2.1$ is $20.5$ m/s, and from $t = 2$ to $t = 2.01$ it is $20.05$ m/s. What does the speedometer read at exactly $t = 2$, in meters per second?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The averages are being squeezed. Read $20.5$ and $20.05$ like a limit and see where they land.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The averages are being squeezed. Read $20.5$ and $20.05$ like a limit and see where they land."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Same idea on $d = t^2$ at $t = 2$: from $2$ to $2.1$ the average is $\\frac{4.41 - 4}{0.1} = 4.1$; from $2$ to $2.01$ it is $4.01$. Those head to $4$. Now read your own two averages the same way."
+    },
+    {
+      "level": "guide",
+      "text": "Each ten-times-smaller time window cuts the leftover by ten: $0.5$, then $0.05$, then $0.005$."
+    },
+    {
+      "level": "reveal",
+      "text": "The leftovers vanish, so the speedometer reads $20$ m/s."
+    }
+  ],
+  "explanation": [
+    "Average speed over a window is the trip summary; the speedometer is the instant value.",
+    "Shrink the window: $20.5$, then $20.05$, then $20.005$.",
+    "The extra bits $0.5, 0.05, 0.005$ are being squeezed to $0$.",
+    "The limit is $20$ meters per second."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Do the algebra with a step h",
+      "steps": [
+        "Over a step of size h the average is (5(2 + h)² − 20) ÷ h.",
+        "Expand: 5(4 + 4h + h²) − 20 = 20h + 5h². Divide by h to get 20 + 5h.",
+        "Let h shrink to 0 and only 20 survives — h = 0.1 gave 20.5 and h = 0.01 gave 20.05, exactly as predicted."
+      ]
+    },
+    {
+      "title": "Trip summary versus right now",
+      "steps": [
+        "A 2-hour road trip averaging 60 km/h says nothing about any single moment — you stopped, you sped up.",
+        "Shrink the trip to a minute, then a second, then a blink, and the average has no room left to hide anything.",
+        "The number those shrinking averages settle on is the speedometer reading: 20 m/s here."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "rate-of-change",
+    "word-problem"
+  ],
+  "estimatedSeconds": 90
+}

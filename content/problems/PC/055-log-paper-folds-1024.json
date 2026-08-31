@@ -1,0 +1,49 @@
+{
+  "id": "PC.055",
+  "domain": "PC",
+  "unit": 6,
+  "orderInUnit": 5,
+  "standard": "PC.LOG.A.1",
+  "difficulty": 2,
+  "prompt": "Every time you fold a sheet of paper, the number of layers DOUBLES. You start with $1$ layer. How many folds does it take to reach $1024$ layers?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The question is $\\log_2(1024)$: $2$ to what power gives $1024$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The question is $\\log_2(1024)$: $2$ to what power gives $1024$?"
+    },
+    {
+      "level": "guide",
+      "text": "Double from $1$: $2, 4, 8, 16, 32, 64, 128, 256, 512, 1024$."
+    },
+    {
+      "level": "reveal",
+      "text": "That is $10$ doublings, so $\\log_2(1024) = 10$ folds."
+    }
+  ],
+  "explanation": [
+    "Each fold multiplies the layers by $2$, so layers $= 2^{\\text{folds}}$.",
+    "You need $2^x = 1024$, which is the question $\\log_2(1024)$.",
+    "Counting doublings up to $1024$ gives $10$ folds."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use a power you already know",
+      "steps": [
+        "You may remember $2^{10} = 1024$ from computers — a kilobyte.",
+        "That instantly answers $2^x = 1024$.",
+        "So $x = 10$ folds."
+      ]
+    }
+  ],
+  "tags": [
+    "logarithm",
+    "doubling",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

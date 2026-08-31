@@ -1,0 +1,48 @@
+{
+  "id": "PC.021",
+  "domain": "PC",
+  "unit": 3,
+  "orderInUnit": 1,
+  "standard": "PC.POLY.A.1",
+  "difficulty": 1,
+  "prompt": "What is the degree of $p(x) = 4x^3 - 2x + 7$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The degree is the BIGGEST exponent on $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The degree is the BIGGEST exponent on $x$."
+    },
+    {
+      "level": "guide",
+      "text": "The exponents here are $3$, $1$, and $0$. Which is largest?"
+    },
+    {
+      "level": "reveal",
+      "text": "The degree is $3$."
+    }
+  ],
+  "explanation": [
+    "Look at every power of $x$: $x^3$, $x$, and the plain number $7$.",
+    "The highest power is $3$.",
+    "So the degree is $3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the biggest one wins",
+      "steps": [
+        "Plug in a huge number like $x = 100$.",
+        "$4x^3$ is 4 million, while $-2x$ is only $-200$.",
+        "The biggest exponent bosses the whole graph around, so it names the degree."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomials",
+    "degree"
+  ],
+  "estimatedSeconds": 30
+}

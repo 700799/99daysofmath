@@ -1,0 +1,51 @@
+{
+  "id": "SAT.036",
+  "domain": "SAT",
+  "unit": 4,
+  "orderInUnit": 6,
+  "standard": "SAT.ALG.4",
+  "difficulty": 2,
+  "prompt": "At a theater, $3$ adult tickets and $2$ child tickets cost $\\$34$, while $2$ adult tickets and $5$ child tickets cost $\\$41$. What is the price, in dollars, of one adult ticket?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Let $a$ be the adult price and $c$ the child price, then write both sentences as equations.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Let $a$ be the adult price and $c$ the child price, then write both sentences as equations."
+    },
+    {
+      "level": "guide",
+      "text": "$3a + 2c = 34$ and $2a + 5c = 41$. Scale them so one variable cancels."
+    },
+    {
+      "level": "reveal",
+      "text": "Multiply the first by $5$ and the second by $2$: $15a + 10c = 170$ and $4a + 10c = 82$. Subtracting gives $11a = 88$, so $a = 8$."
+    }
+  ],
+  "learningObjective": "Translate a two-item pricing situation into a system and solve it.",
+  "topic": "Systems in context",
+  "explanation": [
+    "Let $a$ = adult price and $c$ = child price. Then $3a + 2c = 34$ and $2a + 5c = 41$.",
+    "To eliminate $c$, scale to a common coefficient of $10$: multiply the first by $5$ ($15a + 10c = 170$) and the second by $2$ ($4a + 10c = 82$).",
+    "Subtract: $11a = 88$, so $a = \\$8$. (Then $c = \\$5$.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Backsolve from the choices",
+      "steps": [
+        "If the choices are prices, test one. Suppose $a = 8$: the first equation gives $24 + 2c = 34$, so $c = 5$.",
+        "Check that pair in the second equation: $2(8) + 5(5) = 16 + 25 = 41$ ✓",
+        "One substitution and one check — often faster than scaling two equations, and much harder to get wrong."
+      ]
+    }
+  ],
+  "tags": [
+    "system",
+    "word-problem",
+    "pricing"
+  ],
+  "estimatedSeconds": 90
+}

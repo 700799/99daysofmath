@@ -1,0 +1,54 @@
+{
+  "id": "A1.086",
+  "domain": "A1",
+  "unit": 9,
+  "orderInUnit": 6,
+  "standard": "A1.SYS.A.1",
+  "difficulty": 2,
+  "prompt": "Solve by elimination: $x + y = 10$ and $x - y = 4$. What is $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Stack the equations and add them. The $+y$ and $-y$ cancel out.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Stack the equations and add them. The $+y$ and $-y$ cancel out."
+    },
+    {
+      "level": "guide",
+      "text": "Adding gives $2x = 14$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 14 \\div 2 = 7$. (And $y = 3$.)"
+    }
+  ],
+  "explanation": [
+    "Elimination means \"stack and cancel.\" Stack the two equations and add straight down.",
+    "$x + x = 2x$, $y + (-y) = 0$, and $10 + 4 = 14$. The $y$s vanish: $2x = 14$.",
+    "$x = 7$. Check: $7 + 3 = 10$ and $7 - 3 = 4$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sum and difference story",
+      "steps": [
+        "Two numbers add to 10 and are 4 apart. The bigger one sits half the gap above the middle.",
+        "The middle of 10 is 5, and half of 4 is 2. Bigger number: 5 + 2 = 7. So x = 7."
+      ]
+    },
+    {
+      "title": "Build a table",
+      "steps": [
+        "List pairs that add to 10: (6, 4), (7, 3), (8, 2).",
+        "Which pair is 4 apart? 7 − 3 = 4. So x = 7 and y = 3."
+      ]
+    }
+  ],
+  "tags": [
+    "system-of-equations",
+    "elimination"
+  ],
+  "estimatedSeconds": 60
+}

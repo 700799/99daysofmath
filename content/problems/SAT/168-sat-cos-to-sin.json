@@ -1,0 +1,59 @@
+{
+  "id": "SAT.168",
+  "domain": "SAT",
+  "unit": 17,
+  "orderInUnit": 8,
+  "standard": "SAT.GEO.3",
+  "difficulty": 3,
+  "prompt": "In a right triangle, $\\cos\\theta = \\dfrac{5}{13}$ where $\\theta$ is an acute angle. What is the value of $\\sin\\theta$? Give your answer as a decimal rounded to the nearest hundredth.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.92",
+  "alternativeAnswers": [
+    "12/13"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.005,
+  "hint": "Cosine gives you the adjacent side and the hypotenuse. Find the third side.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Cosine gives you the adjacent side and the hypotenuse. Find the third side."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a $3$-$4$-$5$ triangle: if $\\cos\\theta = \\tfrac{3}{5}$, the third side is $4$, so $\\sin\\theta = \\tfrac{4}{5}$. Sketch the triangle from the ratio, then read the side you need."
+    },
+    {
+      "level": "guide",
+      "text": "Adjacent $= 5$, hypotenuse $= 13$, so the opposite side is $12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin\\theta = \\dfrac{12}{13} \\approx 0.92$."
+    }
+  ],
+  "learningObjective": "Find one trig ratio from another using the triangle sides.",
+  "topic": "Right-triangle trigonometry",
+  "explanation": [
+    "$\\cos\\theta = \\dfrac{\\text{adjacent}}{\\text{hypotenuse}} = \\dfrac{5}{13}$, so treat the adjacent side as $5$ and the hypotenuse as $13$.",
+    "By the Pythagorean theorem the opposite side is $\\sqrt{169 - 25} = 12$.",
+    "$\\sin\\theta = \\dfrac{\\text{opposite}}{\\text{hypotenuse}} = \\dfrac{12}{13} \\approx 0.92$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Or use the Pythagorean identity",
+      "steps": [
+        "$\\sin^2\\theta + \\cos^2\\theta = 1$, so $\\sin^2\\theta = 1 - \\left(\\tfrac{5}{13}\\right)^2 = 1 - \\tfrac{25}{169} = \\tfrac{144}{169}$.",
+        "$\\sin\\theta = \\tfrac{12}{13}$, taking the positive root since $\\theta$ is acute.",
+        "Sketching the triangle is usually faster and less error-prone, but the identity works when no triangle is described."
+      ]
+    }
+  ],
+  "tags": [
+    "trigonometry",
+    "pythagorean-identity",
+    "sine-cosine"
+  ],
+  "estimatedSeconds": 85
+}

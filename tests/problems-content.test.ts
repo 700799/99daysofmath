@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { isEquivalent } from '../src/data/normalize';
-import { DOMAINS, type Problem } from '../src/types/problem';
+import { type Problem } from '../src/types/problem';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROBLEMS_PATH = path.resolve(__dirname, '..', 'public', 'data', 'problems.json');
@@ -17,11 +17,14 @@ const EXPECTED_BY_DOMAIN: Record<string, { count: number; units: number }> = {
   '6.EE': { count: 100, units: 10 },
   '6.G': { count: 100, units: 10 },
   '6.SP': { count: 100, units: 10 },
+  A1: { count: 140, units: 14 },
+  PC: { count: 140, units: 14 },
+  SAT: { count: 180, units: 18 },
 };
 
 describe('problems bank — structure', () => {
-  it('contains exactly 560 problems', () => {
-    expect(PROBLEMS).toHaveLength(560);
+  it('contains exactly 1020 problems', () => {
+    expect(PROBLEMS).toHaveLength(1020);
   });
 
   it('every id is globally unique', () => {
@@ -32,7 +35,9 @@ describe('problems bank — structure', () => {
   it('every domain has its expected problem count', () => {
     const counts = new Map<string, number>();
     for (const p of PROBLEMS) counts.set(p.domain, (counts.get(p.domain) ?? 0) + 1);
-    for (const d of DOMAINS) {
+    // Iterate the fixture (single source of truth): a domain earns a row here
+    // once its problem bank ships (A1 lands with its content batch).
+    for (const d of Object.keys(EXPECTED_BY_DOMAIN)) {
       expect(counts.get(d), d).toBe(EXPECTED_BY_DOMAIN[d].count);
     }
   });
@@ -45,7 +50,7 @@ describe('problems bank — structure', () => {
       arr.push(p);
       bucket.set(key, arr);
     }
-    for (const d of DOMAINS) {
+    for (const d of Object.keys(EXPECTED_BY_DOMAIN)) {
       for (let u = 1; u <= EXPECTED_BY_DOMAIN[d].units; u++) {
         const arr = bucket.get(`${d}:${u}`) ?? [];
         expect(arr, `${d}:${u}`).toHaveLength(10);
@@ -139,7 +144,12 @@ describe('problems bank — every answer self-accepts', () => {
 });
 
 describe('problems bank — units 7-10 quality bar', () => {
-  const advanced = PROBLEMS.filter((p) => p.unit >= 7);
+  // This bar describes the grade-5/6 content rounds, whose domains top out at
+  // unit 10. Algebra 1 and Precalculus run to unit 14 and SAT Math to unit 18;
+  // each has its own (stricter) bar below.
+  const advanced = PROBLEMS.filter(
+    (p) => p.unit >= 7 && p.domain !== 'A1' && p.domain !== 'PC' && p.domain !== 'SAT',
+  );
 
   it('there are 200 problems across units 7-10', () => {
     expect(advanced).toHaveLength(200);
@@ -183,6 +193,43 @@ describe('problems bank — units 7-10 quality bar', () => {
     );
     const ratio = withAlts.length / advanced.length;
     expect(ratio).toBeGreaterThanOrEqual(0.55);
+  });
+});
+
+describe('problems bank — Algebra 1 quality bar', () => {
+  const a1 = PROBLEMS.filter((p) => p.domain === 'A1');
+
+  it('is a 14-unit course of 140 problems, 10 per unit', () => {
+    expect(a1).toHaveLength(140);
+    const units = new Set(a1.map((p) => p.unit));
+    expect(units.size).toBe(14);
+    for (let u = 1; u <= 14; u++) {
+      expect(a1.filter((p) => p.unit === u), `A1 unit ${u}`).toHaveLength(10);
+    }
+  });
+
+  it('EVERY problem has an alternate explanation (the course promise)', () => {
+    const missing = a1
+      .filter((p) => !(p.alternativeExplanations ?? []).length)
+      .map((p) => p.id);
+    expect(missing).toEqual([]);
+  });
+
+  it('every problem has a full 3-tier hint ladder and a multi-step explanation', () => {
+    const failures: string[] = [];
+    for (const p of a1) {
+      const levels = new Set((p.hints ?? []).map((h) => h.level));
+      if (!levels.has('nudge') || !levels.has('guide') || !levels.has('reveal')) {
+        failures.push(`${p.id}: missing a hint tier`);
+      }
+      if ((p.explanation?.length ?? 0) < 2) failures.push(`${p.id}: explanation too short`);
+    }
+    expect(failures).toEqual([]);
+  });
+
+  it('is anchored in the real world (40%+ word problems)', () => {
+    const words = a1.filter((p) => (p.tags ?? []).includes('word-problem'));
+    expect(words.length / a1.length).toBeGreaterThanOrEqual(0.4);
   });
 });
 
@@ -269,5 +316,45 @@ describe('problems bank — Round 6 hint enrichment invariants', () => {
       }
     }
     expect(failures).toEqual([]);
+  });
+});
+
+describe('problems bank — Precalculus quality bar', () => {
+  const pc = PROBLEMS.filter((p) => p.domain === 'PC');
+
+  it('is a 14-unit course of 140 problems, 10 per unit', () => {
+    expect(pc).toHaveLength(140);
+    for (let u = 1; u <= 14; u++) {
+      expect(pc.filter((p) => p.unit === u), `PC unit ${u}`).toHaveLength(10);
+    }
+  });
+
+  it('EVERY problem has an alternate explanation (the course promise)', () => {
+    const missing = pc.filter((p) => !(p.alternativeExplanations ?? []).length).map((p) => p.id);
+    expect(missing).toEqual([]);
+  });
+
+  it('every problem has a full hint ladder and a multi-step explanation', () => {
+    const failures: string[] = [];
+    for (const p of pc) {
+      const levels = new Set((p.hints ?? []).map((h) => h.level));
+      if (!levels.has('nudge') || !levels.has('guide') || !levels.has('reveal')) {
+        failures.push(`${p.id}: missing a hint tier`);
+      }
+      if ((p.explanation?.length ?? 0) < 2) failures.push(`${p.id}: explanation too short`);
+    }
+    expect(failures).toEqual([]);
+  });
+
+  it('covers the full precalc arc from functions through limits', () => {
+    const strands = new Set(pc.map((p) => p.standard.split('.')[1]));
+    for (const s of ['FUN', 'POLY', 'RAT', 'EXP', 'LOG', 'TRIG', 'SEQ', 'LIM']) {
+      expect(strands.has(s), s).toBe(true);
+    }
+  });
+
+  it('is anchored in the real world (40%+ word problems)', () => {
+    const words = pc.filter((p) => (p.tags ?? []).includes('word-problem'));
+    expect(words.length / pc.length).toBeGreaterThanOrEqual(0.4);
   });
 });

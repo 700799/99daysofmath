@@ -1,0 +1,73 @@
+{
+  "id": "SAT.055",
+  "domain": "SAT",
+  "unit": 6,
+  "orderInUnit": 5,
+  "standard": "SAT.ADV.1",
+  "difficulty": 2,
+  "prompt": "For $x \\neq -2$, which expression is equivalent to $\\dfrac{x^2 - 4}{x + 2}$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$x - 2$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$x + 2$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$x^2 - 2$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$x - 4$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Factor the numerator before trying to cancel anything.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Factor the numerator before trying to cancel anything."
+    },
+    {
+      "level": "guide",
+      "text": "$x^2 - 4 = (x + 2)(x - 2)$."
+    },
+    {
+      "level": "reveal",
+      "text": "The $(x + 2)$ factors cancel, leaving $x - 2$."
+    }
+  ],
+  "learningObjective": "Simplify a rational expression by factoring and cancelling.",
+  "topic": "Rational expressions",
+  "explanation": [
+    "Factor the numerator as a difference of squares: $x^2 - 4 = (x + 2)(x - 2)$.",
+    "The expression becomes $\\dfrac{(x + 2)(x - 2)}{x + 2}$.",
+    "Cancel the common factor $(x + 2)$, which is legal because $x \\neq -2$: the result is $x - 2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Cancel factors, never terms",
+      "steps": [
+        "You may only cancel something that multiplies the *entire* numerator and denominator.",
+        "Cancelling the $x$ from $\\dfrac{x^2 - 4}{x + 2}$ without factoring first is the classic error — it produces nonsense.",
+        "Factoring converts a sum into a product, which is exactly what makes cancelling legal."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-expression",
+    "factoring",
+    "simplify"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,78 @@
+{
+  "id": "SAT.050",
+  "domain": "SAT",
+  "unit": 5,
+  "orderInUnit": 10,
+  "standard": "SAT.ALG.5",
+  "difficulty": 3,
+  "prompt": "Which value of $x$ is **not** a solution to $7 - 2x \\ge 1$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$-2$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$0$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$3$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$4$",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "D",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Solve the inequality first, then see which choice falls outside the solution set.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Solve the inequality first, then see which choice falls outside the solution set."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a simpler one: which value fails $5 - x \\ge 2$? Solving gives $x \\le 3$, so $x = 4$ fails. Solve first, then test the choices against the solution set."
+    },
+    {
+      "level": "guide",
+      "text": "$-2x \\ge -6$; dividing by $-2$ flips it to $x \\le 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "Every choice at or below $3$ works, so the one that fails is $4$."
+    }
+  ],
+  "learningObjective": "Solve an inequality and identify a value outside the solution set.",
+  "topic": "Linear inequalities",
+  "explanation": [
+    "Subtract $7$: $-2x \\ge -6$.",
+    "Divide by $-2$ and flip the inequality: $x \\le 3$.",
+    "Choices A, B, and C are all at most $3$ and therefore work. Choice D, $x = 4$, is greater than $3$ and fails: $7 - 2(4) = -1$, which is not $\\ge 1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Skip solving and just substitute",
+      "steps": [
+        "With only four numbers to check, plugging in is often faster than solving.",
+        "$x = -2$ gives $11$ ✓; $x = 0$ gives $7$ ✓; $x = 3$ gives $1 \\ge 1$ ✓; $x = 4$ gives $-1$ ✗.",
+        "This also sidesteps the sign-flip rule entirely — the single most common error on inequality questions."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "not-a-solution",
+    "substitution"
+  ],
+  "estimatedSeconds": 70
+}

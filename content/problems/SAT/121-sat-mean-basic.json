@@ -1,0 +1,50 @@
+{
+  "id": "SAT.121",
+  "domain": "SAT",
+  "unit": 13,
+  "orderInUnit": 1,
+  "standard": "SAT.PSDA.3",
+  "difficulty": 1,
+  "prompt": "What is the mean of the data set $4$, $8$, $10$, $14$?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Add the values, then divide by how many there are.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add the values, then divide by how many there are."
+    },
+    {
+      "level": "guide",
+      "text": "The sum is $36$ and there are $4$ values."
+    },
+    {
+      "level": "reveal",
+      "text": "$36 \\div 4 = 9$."
+    }
+  ],
+  "learningObjective": "Compute the mean of a small data set.",
+  "topic": "Measures of center",
+  "explanation": [
+    "Sum the values: $4 + 8 + 10 + 14 = 36$.",
+    "Divide by the count: $36 \\div 4 = 9$.",
+    "Sanity check: the mean must lie between the smallest and largest values, and $9$ is between $4$ and $14$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The mean always lands inside the range",
+      "steps": [
+        "If your computed mean is below the minimum or above the maximum, you have made an arithmetic error.",
+        "This one-second check catches a mis-added sum or a wrong count.",
+        "It is worth running on every mean question, especially the ones with more values."
+      ]
+    }
+  ],
+  "tags": [
+    "mean",
+    "measures-of-center"
+  ],
+  "estimatedSeconds": 35
+}

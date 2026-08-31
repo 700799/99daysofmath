@@ -1,0 +1,48 @@
+{
+  "id": "PC.036",
+  "domain": "PC",
+  "unit": 4,
+  "orderInUnit": 6,
+  "standard": "PC.RAT.A.1",
+  "difficulty": 2,
+  "prompt": "What is the $y$-value of the horizontal asymptote of $f(x) = \\frac{2x + 1}{x^2 + 5}$?",
+  "answerType": "numeric",
+  "primaryAnswer": "0",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Compare degrees: the top is degree $1$ and the bottom is degree $2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Compare degrees: the top is degree $1$ and the bottom is degree $2$."
+    },
+    {
+      "level": "guide",
+      "text": "When the BOTTOM is bigger, the bottom grows faster and squashes the fraction."
+    },
+    {
+      "level": "reveal",
+      "text": "The horizontal asymptote is $y = 0$."
+    }
+  ],
+  "explanation": [
+    "Top degree $1$ is smaller than bottom degree $2$.",
+    "A fast-growing bottom makes the whole fraction tiny.",
+    "So the graph flattens toward $y = 0$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Race the top against the bottom",
+      "steps": [
+        "At $x = 100$: top is about 200, bottom is about 10005.",
+        "That fraction is about 0.02 — already close to zero.",
+        "The bottom is winning the race, so the value keeps sliding toward 0."
+      ]
+    }
+  ],
+  "tags": [
+    "rational-functions",
+    "horizontal-asymptote"
+  ],
+  "estimatedSeconds": 55
+}

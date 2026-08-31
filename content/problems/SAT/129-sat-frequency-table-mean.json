@@ -1,0 +1,62 @@
+{
+  "id": "SAT.129",
+  "domain": "SAT",
+  "unit": 13,
+  "orderInUnit": 9,
+  "standard": "SAT.PSDA.3",
+  "difficulty": 3,
+  "prompt": "The table shows the number of pets owned by each of $20$ students. What is the mean number of pets per student?",
+  "diagram": {
+    "kind": "ascii",
+    "art": " Pets  | Number of students\n-------+-------------------\n   1   |         2\n   2   |         5\n   3   |         8\n   4   |         5"
+  },
+  "answerType": "numeric",
+  "primaryAnswer": "2.8",
+  "alternativeAnswers": [
+    "14/5"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "Each row represents several students, so weight each value by its frequency.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each row represents several students, so weight each value by its frequency."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try two rows: if $1$ appears twice and $3$ appears twice, the total is $2 + 6 = 8$ across $4$ students, so the mean is $2$. Weight each value by its frequency."
+    },
+    {
+      "level": "guide",
+      "text": "Total pets $= 1(2) + 2(5) + 3(8) + 4(5) = 2 + 10 + 24 + 20 = 56$."
+    },
+    {
+      "level": "reveal",
+      "text": "$56 \\div 20 = 2.8$ pets per student."
+    }
+  ],
+  "learningObjective": "Compute a mean from a frequency table.",
+  "topic": "Frequency tables",
+  "explanation": [
+    "Multiply each value by how many students reported it: $1(2) + 2(5) + 3(8) + 4(5)$.",
+    "That is $2 + 10 + 24 + 20 = 56$ total pets.",
+    "Divide by the number of students: $56 \\div 20 = 2.8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Do not average the value column",
+      "steps": [
+        "Averaging $1, 2, 3, 4$ gives $2.5$ — wrong, because it treats each row as one student.",
+        "The frequency column says how many students each row stands for, and it must weight the calculation.",
+        "Divide by the total *frequency* ($20$), never by the number of rows ($4$)."
+      ]
+    }
+  ],
+  "tags": [
+    "frequency-table",
+    "weighted-mean"
+  ],
+  "estimatedSeconds": 90
+}

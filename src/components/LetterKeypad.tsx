@@ -15,10 +15,10 @@ const base =
   'flex-1 min-h-12 rounded-lg font-display font-extrabold text-sm uppercase shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all touch-none select-none';
 
 function tint(s?: KeyStatus): string {
-  if (s === 'correct') return 'bg-emerald-500 text-white border-emerald-600';
+  if (s === 'correct') return 'bg-duo-green text-white border-emerald-600';
   if (s === 'present') return 'bg-amber-400 text-white border-amber-500';
-  if (s === 'absent') return 'bg-slate-400 text-white border-slate-500';
-  return 'bg-white text-slate-900 border-slate-200 hover:bg-slate-50';
+  if (s === 'absent') return 'bg-line-strong text-white border-slate-500';
+  return 'bg-surface text-ink border-line hover:bg-surface-2';
 }
 
 // On-screen QWERTY keyboard for the Word Guess game. Keys tint by their best
@@ -39,7 +39,7 @@ export function LetterKeypad({ onKey, onEnter, onBackspace, statuses = {} }: Pro
             </button>
           ))}
           {ri === 2 && (
-            <button type="button" onClick={onBackspace} aria-label="Backspace" className={`${base} border-2 px-2 bg-amber-100 text-amber-900 border-amber-200 grow-[1.5]`}>
+            <button type="button" onClick={onBackspace} aria-label="Backspace" className={`${base} border-2 px-2 bg-warn-soft text-warn border-warn/40 grow-[1.5]`}>
               ⌫
             </button>
           )}

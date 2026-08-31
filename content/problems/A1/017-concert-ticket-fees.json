@@ -1,0 +1,48 @@
+{
+  "id": "A1.017",
+  "domain": "A1",
+  "unit": 2,
+  "orderInUnit": 7,
+  "standard": "A1.EQ.A.1",
+  "difficulty": 2,
+  "prompt": "Two concert tickets plus a $\\$6$ service fee cost $\\$96$ in total. Solve $2t + 6 = 96$ to find the price $t$ of one ticket in dollars. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "45",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Take the fee off first: subtract $6$ from both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Take the fee off first: subtract $6$ from both sides."
+    },
+    {
+      "level": "guide",
+      "text": "$2t = 90$. Now divide both sides by $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$t = 90 \\div 2 = 45$ dollars."
+    }
+  ],
+  "explanation": [
+    "Subtract the fee: $2t = 96 - 6 = 90$.",
+    "Divide by 2: $t = 45$.",
+    "Check: $2(45) + 6 = 96$. ✓ Each ticket is $\\$45$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As a balance scale",
+      "steps": [
+        "Left pan: two ticket-boxes and a $\\$6$ weight. Right pan: $\\$96$.",
+        "Lift the $\\$6$ off each pan: two boxes balance $\\$90$.",
+        "Split each pan in half: one box balances $\\$45$."
+      ]
+    }
+  ],
+  "tags": [
+    "two-step-equation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

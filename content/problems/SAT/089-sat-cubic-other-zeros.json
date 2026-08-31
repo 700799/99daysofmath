@@ -1,0 +1,56 @@
+{
+  "id": "SAT.089",
+  "domain": "SAT",
+  "unit": 9,
+  "orderInUnit": 9,
+  "standard": "SAT.ADV.4",
+  "difficulty": 3,
+  "prompt": "The polynomial $p$ is defined by $p(x) = x^3 - 2x^2 - 5x + 6$, and $p(1) = 0$. What is the greatest zero of $p$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Since $p(1) = 0$, the expression $(x - 1)$ divides $p(x)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Since $p(1) = 0$, the expression $(x - 1)$ divides $p(x)$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a smaller cubic: $x^3 - x = x(x-1)(x+1)$ has zeros $0$, $1$, and $-1$. One known zero lets you divide the cubic down to a quadratic you can factor by sight."
+    },
+    {
+      "level": "guide",
+      "text": "Dividing gives $x^2 - x - 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x^2 - x - 6 = (x - 3)(x + 2)$, so the zeros are $1$, $3$, and $-2$. The greatest is $3$."
+    }
+  ],
+  "learningObjective": "Use a known zero to factor a cubic and find the remaining zeros.",
+  "topic": "Polynomial zeros",
+  "explanation": [
+    "$p(1) = 1 - 2 - 5 + 6 = 0$, so by the Factor Theorem $(x - 1)$ is a factor.",
+    "Dividing $x^3 - 2x^2 - 5x + 6$ by $(x - 1)$ gives the quotient $x^2 - x - 6$.",
+    "That factors as $(x - 3)(x + 2)$, so the full factorization is $(x - 1)(x - 3)(x + 2)$ and the zeros are $1$, $3$, and $-2$. The greatest is $3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Graph it, or test small integers",
+      "steps": [
+        "Graphing $y = x^3 - 2x^2 - 5x + 6$ in Desmos shows three $x$-intercepts at $-2$, $1$, and $3$.",
+        "By hand, test the divisors of the constant term $6$: $\\pm 1, \\pm 2, \\pm 3, \\pm 6$.",
+        "$p(3) = 27 - 18 - 15 + 6 = 0$ ✓ — the Rational Root Theorem means integer zeros can only be divisors of the constant, which makes the search short."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomial",
+    "zeros",
+    "factor-theorem"
+  ],
+  "estimatedSeconds": 100
+}

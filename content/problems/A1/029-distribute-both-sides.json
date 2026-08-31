@@ -1,0 +1,53 @@
+{
+  "id": "A1.029",
+  "domain": "A1",
+  "unit": 3,
+  "orderInUnit": 9,
+  "standard": "A1.EQ.A.2",
+  "difficulty": 3,
+  "prompt": "Solve for $x$: $4(x - 2) = 2x + 6$. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Distribute first: hand the $4$ to both terms inside the parentheses.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Distribute first: hand the $4$ to both terms inside the parentheses."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Simpler: $4(x - 2) = 8$ gives $x - 2 = 2$, so $x = 4$. Yours adds x-terms on the right, so distribute first, then gather the x-terms."
+    },
+    {
+      "level": "guide",
+      "text": "$4x - 8 = 2x + 6$. Subtract $2x$ from both sides, then add $8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2x = 14$, so $x = 7$."
+    }
+  ],
+  "explanation": [
+    "Distribute: $4(x - 2) = 4x - 8$.",
+    "Subtract $2x$ from both sides: $2x - 8 = 6$.",
+    "Add 8: $2x = 14$, so $x = 7$. Check: $4(7 - 2) = 20$ and $2(7) + 6 = 20$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Guess-and-check table",
+      "steps": [
+        "Try $x = 5$: left is $4(3) = 12$, right is $16$ — right side wins.",
+        "Try $x = 7$: left is $4(5) = 20$, right is $20$ — they tie!",
+        "The table shows the sides meet exactly at $x = 7$."
+      ]
+    }
+  ],
+  "tags": [
+    "distribute",
+    "both-sides"
+  ],
+  "estimatedSeconds": 65
+}

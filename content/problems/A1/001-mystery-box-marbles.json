@@ -1,0 +1,52 @@
+{
+  "id": "A1.001",
+  "domain": "A1",
+  "unit": 1,
+  "orderInUnit": 1,
+  "standard": "A1.EXP.A.1",
+  "difficulty": 1,
+  "prompt": "A bag holds $b$ marbles — you cannot see inside, so $b$ is a mystery number. You drop in $3$ more marbles. Write an expression for the total number of marbles now.",
+  "answerType": "expression",
+  "primaryAnswer": "b + 3",
+  "alternativeAnswers": [
+    "b+3",
+    "3 + b",
+    "3+b"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A variable is a mystery box: $b$ stands for however many marbles are hiding in the bag.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A variable is a mystery box: $b$ stands for however many marbles are hiding in the bag."
+    },
+    {
+      "level": "guide",
+      "text": "You start with $b$ and ADD $3$. What operation joins them?"
+    },
+    {
+      "level": "reveal",
+      "text": "The total is $b + 3$."
+    }
+  ],
+  "explanation": [
+    "The bag has some unknown number of marbles, so we call it $b$.",
+    "Adding 3 more means the total is $b + 3$.",
+    "If the bag secretly held 10, the expression would give $10 + 3 = 13$ — it works no matter what $b$ is."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test it with a real number",
+      "steps": [
+        "Pretend the bag holds 5 marbles. Add 3 and you have 8.",
+        "Which expression turns 5 into 8? Only $b + 3$ does: $5 + 3 = 8$."
+      ]
+    }
+  ],
+  "tags": [
+    "variables",
+    "translate",
+    "word-problem"
+  ],
+  "estimatedSeconds": 35
+}

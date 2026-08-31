@@ -1,0 +1,62 @@
+{
+  "id": "PC.068",
+  "domain": "PC",
+  "unit": 7,
+  "orderInUnit": 8,
+  "standard": "PC.LOG.A.2",
+  "difficulty": 3,
+  "prompt": "A $400$ mg dose of medicine loses HALF its amount every $4$ hours. After how many hours is only $25$ mg left?",
+  "answerType": "numeric",
+  "primaryAnswer": "16",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Count how many halvings take $400$ down to $25$, then convert halvings into hours.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Count how many halvings take $400$ down to $25$, then convert halvings into hours."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $80$ mg down to $20$ mg is $2$ halvings ($80 \\to 40 \\to 20$). If each halving is $4$ hours, that is $8$ hours. Same move, more steps."
+    },
+    {
+      "level": "guide",
+      "text": "$400 \\to 200 \\to 100 \\to 50 \\to 25$ is $4$ halvings."
+    },
+    {
+      "level": "reveal",
+      "text": "$4$ halvings $\\times 4$ hours each $= 16$ hours."
+    }
+  ],
+  "explanation": [
+    "Halving means the decay factor is $\\frac{1}{2}$.",
+    "$400 \\to 200 \\to 100 \\to 50 \\to 25$ takes $4$ halvings.",
+    "Each halving takes $4$ hours, so $4 \\times 4 = 16$ hours."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Divide first, then log",
+      "steps": [
+        "$25 \\div 400 = \\frac{1}{16}$ of the dose is left.",
+        "$\\frac{1}{16} = \\left(\\frac{1}{2}\\right)^4$, so $4$ half-lives have passed.",
+        "$4 \\times 4 = 16$ hours."
+      ]
+    },
+    {
+      "title": "Fill in a clock table",
+      "steps": [
+        "Hour 0: $400$ mg. Hour 4: $200$ mg. Hour 8: $100$ mg.",
+        "Hour 12: $50$ mg. Hour 16: $25$ mg.",
+        "The table lands on $25$ mg at hour $16$."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-equation",
+    "half-life",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

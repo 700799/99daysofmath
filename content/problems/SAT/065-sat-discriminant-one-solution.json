@@ -1,0 +1,51 @@
+{
+  "id": "SAT.065",
+  "domain": "SAT",
+  "unit": 7,
+  "orderInUnit": 5,
+  "standard": "SAT.ADV.2",
+  "difficulty": 2,
+  "prompt": "In the equation $x^2 + 6x + c = 0$, $c$ is a constant. If the equation has exactly one real solution, what is the value of $c$?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Exactly one real solution means the discriminant is zero.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Exactly one real solution means the discriminant is zero."
+    },
+    {
+      "level": "guide",
+      "text": "Set $6^2 - 4(1)(c) = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$36 = 4c$, so $c = 9$."
+    }
+  ],
+  "learningObjective": "Solve for a parameter using the discriminant-equals-zero condition.",
+  "topic": "The discriminant",
+  "explanation": [
+    "Exactly one real solution occurs when $b^2 - 4ac = 0$.",
+    "Here $36 - 4c = 0$, so $c = 9$.",
+    "Check: $x^2 + 6x + 9 = (x + 3)^2 = 0$ has the single solution $x = -3$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Recognize the perfect square",
+      "steps": [
+        "One solution means the quadratic is a perfect square trinomial.",
+        "For $x^2 + 6x + c$ to be $(x + k)^2 = x^2 + 2kx + k^2$, we need $2k = 6$, so $k = 3$.",
+        "Then $c = k^2 = 9$ — the \"halve $b$ and square it\" rule, which is also the heart of completing the square."
+      ]
+    }
+  ],
+  "tags": [
+    "discriminant",
+    "perfect-square",
+    "parameter"
+  ],
+  "estimatedSeconds": 70
+}

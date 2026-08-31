@@ -1,0 +1,48 @@
+{
+  "id": "A1.037",
+  "domain": "A1",
+  "unit": 4,
+  "orderInUnit": 7,
+  "standard": "A1.INEQ.A.1",
+  "difficulty": 2,
+  "prompt": "You need at least $\\$50$ for a class trip. You have $\\$18$ and save $\\$8$ each week. Using $8w + 18 \\ge 50$, what is the fewest number of whole weeks $w$ you must save? Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Subtract $18$ from both sides first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Subtract $18$ from both sides first."
+    },
+    {
+      "level": "guide",
+      "text": "$8w \\ge 32$. Divide both sides by $8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$w \\ge 4$, so the fewest whole weeks is $4$."
+    }
+  ],
+  "explanation": [
+    "Subtract 18 from both sides: $8w \\ge 32$.",
+    "Divide by 8 (positive, no flip): $w \\ge 4$.",
+    "The fewest whole weeks is 4. Check: $8(4) + 18 = \\$50$, and \"at least $\\$50$\" includes exactly $\\$50$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Track the jar week by week",
+      "steps": [
+        "Week 1: $\\$26$. Week 2: $\\$34$. Week 3: $\\$42$. Week 4: $\\$50$.",
+        "Week 4 is the first time the jar reaches $\\$50$, so 4 weeks is the fewest."
+      ]
+    }
+  ],
+  "tags": [
+    "inequality",
+    "two-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

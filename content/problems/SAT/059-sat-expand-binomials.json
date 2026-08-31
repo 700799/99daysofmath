@@ -1,0 +1,56 @@
+{
+  "id": "SAT.059",
+  "domain": "SAT",
+  "unit": 6,
+  "orderInUnit": 9,
+  "standard": "SAT.ADV.1",
+  "difficulty": 3,
+  "prompt": "When $(2x - 3)(x + 5)$ is expanded and written in the form $ax^2 + bx + c$, what is the value of $b$?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You only need the $x$ terms, not the whole expansion.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You only need the $x$ terms, not the whole expansion."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try smaller binomials: $(x + 1)(x + 2) = x^2 + 3x + 2$, where the middle term $3x$ came from $2x + x$. Only the outer and inner products make an $x$ term."
+    },
+    {
+      "level": "guide",
+      "text": "The two products giving an $x$ term are $2x \\cdot 5$ and $-3 \\cdot x$."
+    },
+    {
+      "level": "reveal",
+      "text": "$10x - 3x = 7x$, so $b = 7$."
+    }
+  ],
+  "learningObjective": "Extract a single coefficient from a binomial product.",
+  "topic": "Expanding expressions",
+  "explanation": [
+    "Expanding fully: $(2x - 3)(x + 5) = 2x^2 + 10x - 3x - 15 = 2x^2 + 7x - 15$.",
+    "So $a = 2$, $b = 7$, and $c = -15$.",
+    "The question asks only for $b$, which is $7$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Target just the term you need",
+      "steps": [
+        "The $x$ term comes only from the outer and inner products of FOIL.",
+        "Outer: $2x \\cdot 5 = 10x$. Inner: $-3 \\cdot x = -3x$. Sum: $7x$.",
+        "Skipping the first and last products saves time and removes two chances to make a sign error."
+      ]
+    }
+  ],
+  "tags": [
+    "expanding",
+    "foil",
+    "coefficient"
+  ],
+  "estimatedSeconds": 60
+}

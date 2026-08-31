@@ -1,0 +1,55 @@
+{
+  "id": "SAT.017",
+  "domain": "SAT",
+  "unit": 2,
+  "orderInUnit": 7,
+  "standard": "SAT.ALG.2",
+  "difficulty": 3,
+  "prompt": "The function $h$ is defined by $h(x) = 5 - 2x$. If $h(a) = h(3) + 4$, what is the value of $a$?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Compute the right-hand side to a single number before touching $a$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Compute the right-hand side to a single number before touching $a$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a smaller version: if $g(x) = 10 - x$ and $g(a) = g(2) + 3$, first get $g(2) = 8$, so $g(a) = 11$, giving $a = -1$. Always collapse the known side to a single number before solving."
+    },
+    {
+      "level": "guide",
+      "text": "$h(3) = 5 - 6 = -1$, so the right side is $-1 + 4 = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "Solve $5 - 2a = 3$: $-2a = -2$, so $a = 1$."
+    }
+  ],
+  "learningObjective": "Solve an equation involving function notation on both sides.",
+  "topic": "Function notation",
+  "explanation": [
+    "First evaluate the known side: $h(3) = 5 - 2(3) = -1$.",
+    "So the equation reads $h(a) = -1 + 4 = 3$.",
+    "Now $5 - 2a = 3$, giving $-2a = -2$ and $a = 1$. Check: $h(1) = 3$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the slope directly",
+      "steps": [
+        "The slope is $-2$: every step of $+1$ in $x$ drops the output by $2$.",
+        "You need an output $4$ higher than $h(3)$, so you must move $x$ down by $2$ steps.",
+        "$a = 3 - 2 = 1$ — no equation solved at all."
+      ]
+    }
+  ],
+  "tags": [
+    "function-notation",
+    "slope-reasoning"
+  ],
+  "estimatedSeconds": 70
+}

@@ -1,0 +1,58 @@
+{
+  "id": "PC.123",
+  "domain": "PC",
+  "unit": 13,
+  "orderInUnit": 3,
+  "standard": "PC.SEQ.A.1",
+  "difficulty": 1,
+  "prompt": "An arithmetic sequence starts at $a_1 = 5$ and adds $d = 4$ each step. Find $a_{10}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "41",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Use $a_n = a_1 + (n - 1)d$. The first term has taken ZERO jumps, not one.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use $a_n = a_1 + (n - 1)d$. The first term has taken ZERO jumps, not one."
+    },
+    {
+      "level": "guide",
+      "text": "To reach term $10$ you take $10 - 1 = 9$ jumps of size $4$, which is $36$."
+    },
+    {
+      "level": "reveal",
+      "text": "$a_{10} = 5 + 36 = 41$."
+    }
+  ],
+  "explanation": [
+    "$a_n = a_1 + (n - 1)d$.",
+    "$a_{10} = 5 + (10 - 1) \\times 4$.",
+    "$= 5 + 9 \\times 4 = 5 + 36$.",
+    "$= 41$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the jumps on your fingers",
+      "steps": [
+        "Term 1 is 5 with no jumps yet. Term 2 is 9 after one jump. Term 3 is 13 after two jumps.",
+        "Notice the pattern: the jump count is always one less than the term number.",
+        "Term 10 means 9 jumps: 5 + 9(4) = 41."
+      ]
+    },
+    {
+      "title": "List it out to check",
+      "steps": [
+        "5, 9, 13, 17, 21, 25, 29, 33, 37, 41.",
+        "Count the numbers you wrote: exactly ten of them.",
+        "The tenth is 41 — the formula and the list agree, and the list is a great safety net for small n."
+      ]
+    }
+  ],
+  "tags": [
+    "sequence",
+    "arithmetic",
+    "formula"
+  ],
+  "estimatedSeconds": 35
+}

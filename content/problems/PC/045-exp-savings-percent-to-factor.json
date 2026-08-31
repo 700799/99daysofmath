@@ -1,0 +1,49 @@
+{
+  "id": "PC.045",
+  "domain": "PC",
+  "unit": 5,
+  "orderInUnit": 5,
+  "standard": "PC.EXP.A.1",
+  "difficulty": 2,
+  "prompt": "A savings account grows by $8\\%$ each year. What is the growth factor you multiply by each year? (For example, up $5\\%$ is $1.05$.)",
+  "answerType": "numeric",
+  "primaryAnswer": "1.08",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You keep everything you had — that is $100\\%$ — and then add more.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You keep everything you had — that is $100\\%$ — and then add more."
+    },
+    {
+      "level": "guide",
+      "text": "$100\\% + 8\\% = 108\\%$. Now turn $108\\%$ into a decimal."
+    },
+    {
+      "level": "reveal",
+      "text": "$108\\% = 1.08$, so the growth factor is $1.08$."
+    }
+  ],
+  "explanation": [
+    "Growing by $8\\%$ means you keep all $100\\%$ AND gain $8\\%$ more.",
+    "Together that is $108\\%$ of what you had.",
+    "$108\\% = 1.08$, so multiply by $1.08$ each year."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Try it on \\$100",
+      "steps": [
+        "Put $\\$100$ in. Eight percent of $\\$100$ is $\\$8$.",
+        "Now you have $\\$108$.",
+        "$108 \\div 100 = 1.08$ — that is the factor."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "percent-to-factor",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

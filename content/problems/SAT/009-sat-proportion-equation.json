@@ -1,0 +1,55 @@
+{
+  "id": "SAT.009",
+  "domain": "SAT",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "SAT.ALG.1",
+  "difficulty": 3,
+  "prompt": "If $\\dfrac{2x - 1}{5} = \\dfrac{x + 4}{3}$, what is the value of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "23",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two fractions set equal to each other — cross-multiply.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two fractions set equal to each other — cross-multiply."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a simpler proportion: $\\dfrac{x}{2} = \\dfrac{6}{3}$. Cross-multiply to get $3x = 12$, so $x = 4$. Cross-multiplying works identically when the numerators are expressions instead of single letters."
+    },
+    {
+      "level": "guide",
+      "text": "$3(2x - 1) = 5(x + 4)$. Distribute both sides carefully."
+    },
+    {
+      "level": "reveal",
+      "text": "$6x - 3 = 5x + 20$, so $x = 23$."
+    }
+  ],
+  "learningObjective": "Solve a proportion involving linear expressions.",
+  "topic": "Proportions with variables",
+  "explanation": [
+    "Cross-multiply: $3(2x - 1) = 5(x + 4)$.",
+    "Distribute: $6x - 3 = 5x + 20$.",
+    "Subtract $5x$ and add $3$: $x = 23$. Check: $\\dfrac{45}{5} = 9$ and $\\dfrac{27}{3} = 9$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Multiply by the common denominator",
+      "steps": [
+        "The denominators are $5$ and $3$, so multiply every term by $15$.",
+        "The left becomes $3(2x - 1)$ and the right becomes $5(x + 4)$ — exactly the cross-multiplied form.",
+        "Cross-multiplication is not a separate trick; it is this step with the arithmetic already done."
+      ]
+    }
+  ],
+  "tags": [
+    "proportion",
+    "cross-multiply"
+  ],
+  "estimatedSeconds": 75
+}

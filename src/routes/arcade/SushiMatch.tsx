@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useProgress, type ArcadePlayOutcome } from '../../state/progress';
 import { ArcadeHeader, ArcadeEndCard } from './shared';
-import { GameStage } from './fx';
+import { GameStage, useBurst, BurstLayer, useCombo, ComboChip } from './fx';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
+import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 
 // Sushi Match — a cute match-3. Swap adjacent sushi to line up 3+; cascades
 // score more. A fixed number of moves per game.
@@ -55,15 +56,17 @@ function collapseOnce(g: Grid): number {
   return cleared;
 }
 
-function resolveAll(g: Grid): number {
+function resolveAll(g: Grid): { cleared: number; cascades: number } {
   let total = 0;
+  let cascades = 0;
   let guard = 0;
   for (;;) {
     const c = collapseOnce(g);
     if (!c || guard++ > 50) break;
     total += c;
+    cascades += 1;
   }
-  return total;
+  return { cleared: total, cascades };
 }
 
 function initGrid(): Grid {
@@ -83,6 +86,8 @@ export function SushiMatch() {
   const [moves, setMoves] = useState(MOVES);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
   useArcadeClock(!!outcome);
+  const { burst, particles } = useBurst();
+  const { combo, hit, reset: resetCombo } = useCombo();
 
   const finish = (finalScore: number) => {
     addArcadePoints(finalScore);
@@ -103,17 +108,33 @@ export function SushiMatch() {
     }
     const g = grid.map((row) => [...row]);
     [g[sel.r][sel.c], g[r][c]] = [g[r][c], g[sel.r][sel.c]];
-    const cleared = resolveAll(g);
+    const { cleared, cascades } = resolveAll(g);
     setSel(null);
     if (cleared > 0) {
+      // valid swap that made a match
+      sfx.pickup();
+      haptic(HAPTIC.pickup);
       setGrid(g);
       const ns = score + cleared * 5;
       setScore(ns);
       const nm = moves - 1;
       setMoves(nm);
+      // reward the match + build a combo streak for each cascade
+      sfx.coin();
+      for (let i = 0; i < cascades; i++) hit();
+      burst(W / 2, H / 2, { emoji: '🍣', count: 8 + cascades * 4 });
+      if (cascades > 1) {
+        sfx.powerup();
+        haptic(HAPTIC.levelUp);
+        burst(W / 2, H / 2, { color: '#f59e0b', count: 6 + cascades * 3 });
+      }
       if (nm <= 0) finish(ns);
+    } else {
+      // invalid swap (no match) → leave board as-is
+      sfx.hurt();
+      haptic(HAPTIC.hit);
+      resetCombo();
     }
-    // invalid swap (no match) → leave board as-is
   };
 
   const reset = () => {
@@ -121,6 +142,7 @@ export function SushiMatch() {
     setSel(null);
     setScore(0);
     setMoves(MOVES);
+    resetCombo();
     setOutcome(null);
   };
 
@@ -144,10 +166,12 @@ export function SushiMatch() {
       <ArcadeHeader title="Sushi Match" emoji="🍣" />
       <div className="flex justify-between items-center mb-2 max-w-sm mx-auto px-1 text-sm font-display font-extrabold">
         <span className="text-slate-700 tabular-nums">⭐ {score}</span>
+        <ComboChip combo={combo} />
         <span className="text-indigo-600 tabular-nums">Moves {moves}</span>
       </div>
 
       <GameStage theme="counter" className="mx-auto p-2" style={{ maxWidth: W + 16 }}>
+      <BurstLayer api={{ burst, particles }} />
       <div
         className="mx-auto bg-amber-100/90 rounded-xl p-1 grid"
         style={{

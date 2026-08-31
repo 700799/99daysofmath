@@ -1,0 +1,48 @@
+{
+  "id": "PC.041",
+  "domain": "PC",
+  "unit": 5,
+  "orderInUnit": 1,
+  "standard": "PC.EXP.A.1",
+  "difficulty": 1,
+  "prompt": "Every exponential function looks like $y = a \\cdot b^x$. The number $a$ is the START. In $y = 5 \\cdot 3^x$, what is the start value?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The START is the number sitting out front, before the power.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The START is the number sitting out front, before the power."
+    },
+    {
+      "level": "guide",
+      "text": "Try $x = 0$. Since $3^0 = 1$, you get $y = 5 \\times 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "The start value is $5$."
+    }
+  ],
+  "explanation": [
+    "An exponential function has two jobs packed into $y = a \\cdot b^x$.",
+    "The front number $a$ is where you START, before any steps happen.",
+    "Here $a = 5$, so the start value is $5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Plug in zero",
+      "steps": [
+        "The start happens at $x = 0$ — zero steps taken.",
+        "$y = 5 \\cdot 3^0$, and anything to the zero power is $1$.",
+        "So $y = 5 \\times 1 = 5$."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "start-value"
+  ],
+  "estimatedSeconds": 25
+}

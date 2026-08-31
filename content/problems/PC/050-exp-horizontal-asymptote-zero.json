@@ -1,0 +1,61 @@
+{
+  "id": "PC.050",
+  "domain": "PC",
+  "unit": 5,
+  "orderInUnit": 10,
+  "standard": "PC.EXP.A.1",
+  "difficulty": 3,
+  "prompt": "The graph of $y = 12 \\cdot \\left(\\frac{1}{2}\\right)^x$ keeps dropping and hugs one horizontal line forever without ever touching it. What is the $y$-value of that line?",
+  "answerType": "numeric",
+  "primaryAnswer": "0",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Keep halving $12$ out loud and listen to where the numbers are heading.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Keep halving $12$ out loud and listen to where the numbers are heading."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: halve $8$ over and over: $4, 2, 1, 0.5, 0.25, 0.125$. The numbers shrink toward one value but never land on it. Same move here."
+    },
+    {
+      "level": "guide",
+      "text": "$12, 6, 3, 1.5, 0.75, 0.375, \\ldots$ — the values get tiny but stay above one number."
+    },
+    {
+      "level": "reveal",
+      "text": "They close in on $0$ without reaching it, so the horizontal asymptote is $y = 0$."
+    }
+  ],
+  "explanation": [
+    "Half of a positive number is still positive, so the values never hit zero.",
+    "But they shrink toward zero forever: $12, 6, 3, 1.5, 0.75, \\ldots$",
+    "That invisible floor is the HORIZONTAL ASYMPTOTE, $y = 0$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think about the pieces",
+      "steps": [
+        "Imagine cutting a rope in half, then halving the piece you keep, again and again.",
+        "There is always some rope left, but it becomes too small to see.",
+        "The amount heads toward $0$ and never gets there — that is the asymptote."
+      ]
+    },
+    {
+      "title": "Read the formula",
+      "steps": [
+        "$y = 12 \\cdot \\left(\\frac{1}{2}\\right)^x$ is a start times a positive factor.",
+        "A positive number times a positive number is always positive, so $y$ is never $0$ or negative.",
+        "Since nothing is added on the end, the values crowd down to $y = 0$."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "asymptote"
+  ],
+  "estimatedSeconds": 60
+}

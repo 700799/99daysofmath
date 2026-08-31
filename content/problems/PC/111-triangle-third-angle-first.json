@@ -1,0 +1,56 @@
+{
+  "id": "PC.111",
+  "domain": "PC",
+  "unit": 12,
+  "orderInUnit": 1,
+  "standard": "PC.TRIG.C.1",
+  "difficulty": 1,
+  "prompt": "Two angles of a triangle measure $40^\\circ$ and $75^\\circ$. What is the third angle, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "65",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The three angles of ANY triangle always add to $180^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The three angles of ANY triangle always add to $180^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "First add what you know: $40 + 75 = 115$. Then see what is missing from $180$."
+    },
+    {
+      "level": "reveal",
+      "text": "$180 - 115 = 65$, so the third angle is $65^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Every triangle's angles total $180^\\circ$.",
+    "The two known angles add to $40 + 75 = 115$.",
+    "$180 - 115 = 65^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Tear the corners off",
+      "steps": [
+        "Cut a paper triangle and tear off all three corners.",
+        "Slide the three torn corners together and they form a perfectly straight line — and a straight line is 180°.",
+        "So the missing corner is whatever is left over: 180 − 115 = 65°."
+      ]
+    },
+    {
+      "title": "Work backwards",
+      "steps": [
+        "Start at the full 180° and take away the pieces you already have.",
+        "180 − 40 = 140. Then 140 − 75 = 65.",
+        "Same answer, one subtraction at a time — handy when the numbers are messy."
+      ]
+    }
+  ],
+  "tags": [
+    "triangle",
+    "angle-sum"
+  ],
+  "estimatedSeconds": 25
+}

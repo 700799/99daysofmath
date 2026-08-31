@@ -1,0 +1,54 @@
+{
+  "id": "PC.084",
+  "domain": "PC",
+  "unit": 9,
+  "orderInUnit": 4,
+  "standard": "PC.TRIG.A.2",
+  "difficulty": 2,
+  "prompt": "Radians measure an angle by the ARC LENGTH you walk around the unit circle. Half a turn is $\\pi$ radians. How many degrees is $\\pi$ radians?",
+  "answerType": "numeric",
+  "primaryAnswer": "180",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Half of a full turn. A full turn is $360^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Half of a full turn. A full turn is $360^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "Half of $360^\\circ$ is $360 \\div 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\pi$ radians $= 180^\\circ$. This is the swap rule you will use again and again."
+    }
+  ],
+  "explanation": [
+    "Walking all the way around a circle of radius $1$ covers an arc of $2\\pi$, so a full turn is $2\\pi$ radians.",
+    "Half of that walk is $\\pi$ radians, and half of a full turn is $360 \\div 2 = 180^\\circ$.",
+    "So $\\pi$ radians $= 180^\\circ$. Radians and degrees are two rulers measuring the same turn."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two rulers, one turn",
+      "steps": [
+        "Think of measuring a table in inches or centimetres. Same table, two numbers.",
+        "Degrees chop a full turn into 360 pieces. Radians measure the same turn by arc length: 2π all the way round, so π is halfway = 180°."
+      ]
+    },
+    {
+      "title": "Walk it out",
+      "steps": [
+        "Start at the far right of the unit circle and walk counter-clockwise along the rim.",
+        "When you have walked an arc of length π you are at the far LEFT — directly opposite where you started. Opposite means half a turn, which is 180°."
+      ]
+    }
+  ],
+  "tags": [
+    "radians",
+    "degrees"
+  ],
+  "estimatedSeconds": 45
+}

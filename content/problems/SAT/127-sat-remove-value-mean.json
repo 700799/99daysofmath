@@ -1,0 +1,56 @@
+{
+  "id": "SAT.127",
+  "domain": "SAT",
+  "unit": 13,
+  "orderInUnit": 7,
+  "standard": "SAT.PSDA.3",
+  "difficulty": 3,
+  "prompt": "A set of $8$ numbers has a mean of $15$. If the number $22$ is removed from the set, what is the mean of the remaining numbers?",
+  "answerType": "numeric",
+  "primaryAnswer": "14",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Convert the mean into a total first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Convert the mean into a total first."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a tiny set: three numbers with mean $10$ total $30$. Remove a $12$ and $18$ is left across two numbers, so the new mean is $9$. Always convert the mean to a total first."
+    },
+    {
+      "level": "guide",
+      "text": "The total is $8 \\times 15 = 120$. Removing $22$ leaves $98$ across $7$ numbers."
+    },
+    {
+      "level": "reveal",
+      "text": "$98 \\div 7 = 14$."
+    }
+  ],
+  "learningObjective": "Recompute a mean after removing a value.",
+  "topic": "Working with means",
+  "explanation": [
+    "The original sum is $8 \\times 15 = 120$.",
+    "Removing $22$ leaves a sum of $120 - 22 = 98$ across $7$ numbers.",
+    "The new mean is $98 \\div 7 = 14$. It fell because the removed value was above the old mean."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Predict the direction first",
+      "steps": [
+        "Removing a value *above* the mean pulls the mean down; removing one below pushes it up.",
+        "Here $22 > 15$, so the new mean must be below $15$ — which rules out any choice at or above it.",
+        "Predicting the direction before computing turns a calculation into a check."
+      ]
+    }
+  ],
+  "tags": [
+    "mean",
+    "sum",
+    "removal"
+  ],
+  "estimatedSeconds": 80
+}

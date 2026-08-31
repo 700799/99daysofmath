@@ -1,0 +1,51 @@
+{
+  "id": "A1.053",
+  "domain": "A1",
+  "unit": 6,
+  "orderInUnit": 3,
+  "standard": "A1.LIN.A.1",
+  "difficulty": 1,
+  "prompt": "A wheelchair ramp rises $2$ ft over a run of $8$ ft. What is its slope? Write it as a fraction.",
+  "answerType": "numeric",
+  "primaryAnswer": "1/4",
+  "alternativeAnswers": [
+    "0.25",
+    "2/8"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Slope = rise over run: put $2$ over $8$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Slope = rise over run: put $2$ over $8$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{2}{8}$ can be simplified — divide top and bottom by $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{2}{8} = \\frac{1}{4}$."
+    }
+  ],
+  "explanation": [
+    "Slope = rise over run = $\\frac{2}{8}$.",
+    "Simplify: $\\frac{2}{8} = \\frac{1}{4}$.",
+    "The ramp climbs $1$ ft for every $4$ ft across — a gentle slope."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "One foot at a time",
+      "steps": [
+        "The ramp gains $2$ ft of height spread over $8$ ft of floor.",
+        "Per single foot across: $2 \\div 8 = 0.25$ ft up — that decimal equals $\\frac{1}{4}$."
+      ]
+    }
+  ],
+  "tags": [
+    "slope",
+    "rise-over-run",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

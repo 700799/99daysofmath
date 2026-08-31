@@ -1,0 +1,47 @@
+{
+  "id": "A1.024",
+  "domain": "A1",
+  "unit": 3,
+  "orderInUnit": 4,
+  "standard": "A1.EQ.A.2",
+  "difficulty": 2,
+  "prompt": "A party room costs $\\$40$ to rent plus $\\$6$ per guest, and your whole budget is $\\$100$. Solve $40 + 6g = 100$ to find how many guests $g$ you can invite. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The room fee is one-time. Subtract $40$ from both sides first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The room fee is one-time. Subtract $40$ from both sides first."
+    },
+    {
+      "level": "guide",
+      "text": "$6g = 60$. Divide both sides by $6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$g = 60 \\div 6 = 10$ guests."
+    }
+  ],
+  "explanation": [
+    "Subtract the room fee: $6g = 100 - 40 = 60$.",
+    "Divide by 6: $g = 10$.",
+    "Check: $40 + 6(10) = 100$. ✓ You can invite 10 guests."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Budget leftovers",
+      "steps": [
+        "Pay the room first: $\\$100 - \\$40$ leaves $\\$60$ for guests.",
+        "Each guest costs $\\$6$, so $60 \\div 6 = 10$ guests fit the budget."
+      ]
+    }
+  ],
+  "tags": [
+    "multi-step-equation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

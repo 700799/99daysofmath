@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { DOMAINS, type Domain } from '../types/problem';
+import { DOMAINS, CORE_DOMAINS, type Domain } from '../types/problem';
 import { flashXp } from './xpFlash';
 import { checkAllEarning, STICKER_DEFS, UNIT_COUNT_BY_DOMAIN, type EarningContext } from '../utils/encouragement';
 import { scheduleAfter } from '../utils/srs';
@@ -56,9 +56,26 @@ export interface RitPoint {
   accuracy: number;
 }
 
+/** Visual theme. Light is the default; the choice is persisted. */
+export type ThemeMode = 'light' | 'dark';
+
+/**
+ * One completed SAT Math mock test. `answers` is keyed by question id so the
+ * review screen can replay exactly what was entered, and `seconds` is summed
+ * module time rather than wall clock, so a paused test does not inflate it.
+ */
+export interface SatTestResult {
+  correct: number;
+  total: number;
+  scaled: number;                      // 200-800, from the raw->scaled table
+  seconds: number;
+  completedAt: string;                 // ISO timestamp
+  answers: Record<string, string>;     // questionId -> what the student entered
+}
+
 // Units the student can pick at the arcade entry. Drives every game's questions.
-export type ArcadeUnit = '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'g5' | 'mixed';
-export const ARCADE_UNITS: ArcadeUnit[] = ['6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'g5', 'mixed'];
+export type ArcadeUnit = '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'g5' | 'a1' | 'pc' | 'mixed';
+export const ARCADE_UNITS: ArcadeUnit[] = ['6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'g5', 'a1', 'pc', 'mixed'];
 export const ARCADE_UNIT_LABELS: Record<ArcadeUnit, string> = {
   '6.RP': 'Ratios & Proportions',
   '6.NS': 'Number System',
@@ -66,11 +83,13 @@ export const ARCADE_UNIT_LABELS: Record<ArcadeUnit, string> = {
   '6.G': 'Geometry',
   '6.SP': 'Statistics',
   g5: 'Grade-5 Review',
+  a1: 'Algebra 1',
+  pc: 'Precalculus',
   mixed: 'Mixed (all units)',
 };
 // Per-unit mastery records, seeded for every unit.
 const unitMap = <T,>(v: T): Record<ArcadeUnit, T> =>
-  ({ '6.RP': v, '6.NS': v, '6.EE': v, '6.G': v, '6.SP': v, g5: v, mixed: v });
+  ({ '6.RP': v, '6.NS': v, '6.EE': v, '6.G': v, '6.SP': v, g5: v, a1: v, pc: v, mixed: v });
 
 export interface ArcadeConfig {
   lessonsPerSession: number; // full lessons required to unlock one game session
@@ -145,9 +164,18 @@ interface ProgressState {
   cumAppSeconds: number;     // lifetime seconds the app has been open
   achievementPoints: number; // lifetime bonus for answering questions correctly
   hapticsEnabled: boolean;   // vibration feedback in games
+  theme: ThemeMode;          // 'light' (default) | 'dark'
+  // ---- v25 additions (SAT Math section) ----
+  satTests: Record<number, SatTestResult>; // keyed by mock-test number (1..5)
+  satBestScaled: number;                   // best 200-800 math score achieved
+  satTipsRead: string[];                   // strategy-tip ids marked as read
   // ---- actions ----
+  recordSatTest: (n: number, result: SatTestResult) => void;
+  toggleSatTipRead: (id: string) => void;
+  clearSatTest: (n: number) => void;
   addAchievement: (n: number) => void;
   toggleHaptics: () => void;
+  setTheme: (t: ThemeMode) => void;
   setArcadeConfig: (partial: Partial<ArcadeConfig>) => void;
   tickLessonSeconds: (n: number) => void;
   tickAppSeconds: (n: number) => void;
@@ -422,6 +450,13 @@ const v15Defaults = {
   spaceMaxLevel: 0,
   achievementPoints: 0,
   hapticsEnabled: true,
+  theme: 'light' as ThemeMode,
+};
+
+const v25Defaults = {
+  satTests: {} as Record<number, SatTestResult>,
+  satBestScaled: 0,
+  satTipsRead: [] as string[],
 };
 
 const v16Defaults = {
@@ -646,6 +681,65 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       | undefined;
     if (cfg && cfg.answerRevealSeconds === undefined) cfg.answerRevealSeconds = 15;
   }
+  if (fromVersion < 22) {
+    // Algebra 1 arrives: seed its trail progress record and the arcade's new
+    // 'a1' unit in every per-unit mastery map (same pattern as v19).
+    const stateAny = state as Record<string, unknown>;
+    const byDomain = (stateAny.byDomain ?? {}) as Record<string, unknown>;
+    if (byDomain['A1'] === undefined) {
+      byDomain['A1'] = { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] };
+      stateAny.byDomain = byDomain;
+    }
+    const seed: Array<[string, number]> = [
+      ['arcadeLevels', 1],
+      ['arcadeStreak', 0],
+      ['arcadeMiss', 0],
+    ];
+    for (const [key, base] of seed) {
+      const rec = (stateAny[key] as Record<string, number>) ?? {};
+      for (const u of ARCADE_UNITS) if (rec[u] === undefined) rec[u] = base;
+      stateAny[key] = rec;
+    }
+  }
+  if (fromVersion < 23) {
+    // Precalculus arrives: seed its trail record and the arcade's 'pc' unit.
+    const stateAny = state as Record<string, unknown>;
+    const byDomain = (stateAny.byDomain ?? {}) as Record<string, unknown>;
+    if (byDomain['PC'] === undefined) {
+      byDomain['PC'] = { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] };
+      stateAny.byDomain = byDomain;
+    }
+    const seed: Array<[string, number]> = [
+      ['arcadeLevels', 1],
+      ['arcadeStreak', 0],
+      ['arcadeMiss', 0],
+    ];
+    for (const [key, base] of seed) {
+      const rec = (stateAny[key] as Record<string, number>) ?? {};
+      for (const u of ARCADE_UNITS) if (rec[u] === undefined) rec[u] = base;
+      stateAny[key] = rec;
+    }
+  }
+  if (fromVersion < 25) {
+    // The SAT Math section arrives: seed its trail record (drills award stars
+    // through the same recordUnitResult path as every other domain) and the
+    // empty mock-test ledger.
+    const stateAny = state as Record<string, unknown>;
+    const byDomain = (stateAny.byDomain ?? {}) as Record<string, unknown>;
+    if (byDomain['SAT'] === undefined) {
+      byDomain['SAT'] = { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] };
+      stateAny.byDomain = byDomain;
+    }
+    if (stateAny.satTests === undefined) stateAny.satTests = {};
+    if (stateAny.satBestScaled === undefined) stateAny.satBestScaled = 0;
+    if (stateAny.satTipsRead === undefined) stateAny.satTipsRead = [];
+  }
+  if (fromVersion < 24) {
+    // Light/dark theming arrives. Existing installs default to light, which is
+    // what they have always seen.
+    const stateAny = state as Record<string, unknown>;
+    if (stateAny.theme === undefined) stateAny.theme = 'light';
+  }
   return state;
 }
 
@@ -675,6 +769,7 @@ export const useProgress = create<ProgressState>()(
       ...v17Defaults,
       ...v18Defaults,
       ...v20Defaults,
+      ...v25Defaults,
       addCoins: (n) => set((s) => ({ coins: Math.max(0, (s.coins ?? 0) + n) })),
       spendCoins: (n) => {
         const s = get();
@@ -746,6 +841,28 @@ export const useProgress = create<ProgressState>()(
         if (n > 0) set((s) => ({ achievementPoints: s.achievementPoints + n }));
       },
       toggleHaptics: () => set((s) => ({ hapticsEnabled: !s.hapticsEnabled })),
+      setTheme: (t) => set(() => ({ theme: t })),
+      recordSatTest: (n, result) =>
+        set((st) => ({
+          satTests: { ...(st.satTests ?? {}), [n]: result },
+          // Only ever climbs — a bad retake should not erase a good score.
+          satBestScaled: Math.max(st.satBestScaled ?? 0, result.scaled),
+        })),
+      toggleSatTipRead: (id) =>
+        set((st) => {
+          const read = st.satTipsRead ?? [];
+          return {
+            satTipsRead: read.includes(id) ? read.filter((t) => t !== id) : [...read, id],
+          };
+        }),
+      clearSatTest: (n) =>
+        set((st) => {
+          const next = { ...(st.satTests ?? {}) };
+          delete next[n];
+          // satBestScaled deliberately survives: it is a lifetime best, not a
+          // view over the current ledger.
+          return { satTests: next };
+        }),
       setArcadeConfig: (partial) =>
         set((s) => ({ arcadeConfig: { ...s.arcadeConfig, ...partial } })),
       tickLessonSeconds: (n) => {
@@ -796,7 +913,9 @@ export const useProgress = create<ProgressState>()(
         };
         const trailBonus =
           trailDone(domain) && !stateBefore.trailBonusGranted[domain] ? 50 : 0;
-        const allDone = DOMAINS.every((dom) => trailDone(dom));
+        // The one-time +250 stays a 6th-grade milestone — Algebra 1 is a bonus
+        // course and shouldn't push the finish line away from existing kids.
+        const allDone = CORE_DOMAINS.every((dom) => trailDone(dom));
         const allTrailsBonus =
           allDone && !stateBefore.allTrailsBonusGranted ? 250 : 0;
         const totalXpAdd = xpEarned + unitBonus + trailBonus + allTrailsBonus;
@@ -1259,7 +1378,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 21,
+      version: 25,
       migrate: migrateProgress,
     },
   ),

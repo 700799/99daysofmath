@@ -1,0 +1,63 @@
+{
+  "id": "PC.138",
+  "domain": "PC",
+  "unit": 14,
+  "orderInUnit": 8,
+  "standard": "PC.LIM.A.1",
+  "difficulty": 3,
+  "prompt": "On a graphing app you zoom in on $f(x) = x^2$ at the point $x = 3$ until the curve looks like a straight line. The average rates of change from $x = 3$ to $x = 3.1$, then to $3.01$, then to $3.001$ come out as $6.1$, $6.01$, and $6.001$. What number are those rates heading toward?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Read the list like a limit: where are $6.1, 6.01, 6.001$ going?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Read the list like a limit: where are $6.1, 6.01, 6.001$ going?"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Do the same squeeze at $x = 1$ on $f(x) = x^2$. From $1$ to $1.1$ the rate is $\\frac{1.21 - 1}{0.1} = 2.1$; from $1$ to $1.01$ it is $2.01$. Those head to $2$. Notice $2$ is double the $x$-value. Now read your own list the same way."
+    },
+    {
+      "level": "guide",
+      "text": "Each time the second point moves ten times closer, the rate gets ten times closer to a single number."
+    },
+    {
+      "level": "reveal",
+      "text": "The rates squeeze down to $6$ — the INSTANT rate of change at $x = 3$."
+    }
+  ],
+  "explanation": [
+    "The average rate between two points is the slope of the line joining them.",
+    "As the second point slides toward $x = 3$, the extra bit shrinks: $6.1 \\to 6.01 \\to 6.001$.",
+    "The leftovers $0.1, 0.01, 0.001$ are being squeezed to nothing.",
+    "The limit is $6$: the slope of the curve at that exact instant."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Do the algebra once",
+      "steps": [
+        "Take a step of size h: the rate is ((3 + h)² − 9) ÷ h.",
+        "Expand the top: 9 + 6h + h² − 9 = 6h + h². Divide by h to get 6 + h.",
+        "Now let h shrink to 0 and the answer is plainly 6 — the h was the whole \"extra bit\" in 6.1 and 6.01."
+      ]
+    },
+    {
+      "title": "Keep zooming on the map",
+      "steps": [
+        "Zooming into a curve is like zooming into a map of a curved coastline.",
+        "Zoom far enough and any smooth curve stops looking curved and looks like one straight street.",
+        "The slope of that street is the instant rate: 6. That is the exact idea calculus is built on."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "rate-of-change",
+    "word-problem"
+  ],
+  "estimatedSeconds": 85
+}

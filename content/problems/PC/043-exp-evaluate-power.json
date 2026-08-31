@@ -1,0 +1,48 @@
+{
+  "id": "PC.043",
+  "domain": "PC",
+  "unit": 5,
+  "orderInUnit": 3,
+  "standard": "PC.EXP.A.1",
+  "difficulty": 1,
+  "prompt": "Evaluate $y = 4 \\cdot 2^x$ when $x = 3$.",
+  "answerType": "numeric",
+  "primaryAnswer": "32",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Do the power FIRST, then multiply by the start.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Do the power FIRST, then multiply by the start."
+    },
+    {
+      "level": "guide",
+      "text": "$2^3 = 2 \\times 2 \\times 2 = 8$. Now multiply by $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 \\times 8 = 32$."
+    }
+  ],
+  "explanation": [
+    "Powers come before multiplying.",
+    "$2^3 = 8$.",
+    "$4 \\times 8 = 32$, so $y = 32$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Take the steps one at a time",
+      "steps": [
+        "Start at $4$.",
+        "Step 1: $4 \\times 2 = 8$. Step 2: $8 \\times 2 = 16$. Step 3: $16 \\times 2 = 32$.",
+        "Three steps of doubling land on $32$."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "evaluate"
+  ],
+  "estimatedSeconds": 30
+}

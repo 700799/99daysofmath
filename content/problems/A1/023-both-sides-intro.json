@@ -1,0 +1,48 @@
+{
+  "id": "A1.023",
+  "domain": "A1",
+  "unit": 3,
+  "orderInUnit": 3,
+  "standard": "A1.EQ.A.2",
+  "difficulty": 1,
+  "prompt": "Solve for $x$: $5x = 2x + 12$. Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Get all the $x$'s on one team: subtract $2x$ from both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Get all the $x$'s on one team: subtract $2x$ from both sides."
+    },
+    {
+      "level": "guide",
+      "text": "$5x - 2x = 12$, so $3x = 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 12 \\div 3 = 4$."
+    }
+  ],
+  "explanation": [
+    "Subtract $2x$ from both sides: $3x = 12$.",
+    "Divide by 3: $x = 4$.",
+    "Check: $5(4) = 20$ and $2(4) + 12 = 20$. ✓ Both sides match."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As a balance scale",
+      "steps": [
+        "Left pan: 5 boxes. Right pan: 2 boxes plus a 12-gram weight.",
+        "Lift 2 boxes off EACH pan: 3 boxes balance 12 grams.",
+        "Each box is $12 \\div 3 = 4$ grams."
+      ]
+    }
+  ],
+  "tags": [
+    "both-sides",
+    "multi-step-equation"
+  ],
+  "estimatedSeconds": 35
+}

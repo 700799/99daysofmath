@@ -1,0 +1,50 @@
+{
+  "id": "SAT.022",
+  "domain": "SAT",
+  "unit": 3,
+  "orderInUnit": 2,
+  "standard": "SAT.ALG.3",
+  "difficulty": 1,
+  "prompt": "What is the $x$-intercept of the graph of $2x + 3y = 12$?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "At an $x$-intercept, the graph is on the $x$-axis — so $y = 0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "At an $x$-intercept, the graph is on the $x$-axis — so $y = 0$."
+    },
+    {
+      "level": "guide",
+      "text": "Set $y = 0$: $2x + 3(0) = 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2x = 12$, so $x = 6$."
+    }
+  ],
+  "learningObjective": "Find an intercept from standard form by zeroing the other variable.",
+  "topic": "Intercepts from standard form",
+  "explanation": [
+    "An $x$-intercept has $y = 0$. Substitute: $2x + 3(0) = 12$.",
+    "That leaves $2x = 12$, so $x = 6$.",
+    "The intercept point is $(6, 0)$; the question asks only for the $x$-value."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The intercept shortcut for standard form",
+      "steps": [
+        "For $Ax + By = C$, the $x$-intercept is $C/A$ and the $y$-intercept is $C/B$.",
+        "Here $x$-intercept $= 12/2 = 6$ and $y$-intercept $= 12/3 = 4$ — both in one glance.",
+        "This is worth memorizing: standard-form intercept questions appear on nearly every test."
+      ]
+    }
+  ],
+  "tags": [
+    "x-intercept",
+    "standard-form"
+  ],
+  "estimatedSeconds": 40
+}

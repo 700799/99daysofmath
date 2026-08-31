@@ -1,0 +1,73 @@
+{
+  "id": "SAT.046",
+  "domain": "SAT",
+  "unit": 5,
+  "orderInUnit": 6,
+  "standard": "SAT.ALG.5",
+  "difficulty": 2,
+  "prompt": "A shopper buys $s$ shirts costing $\\$9$ each and $p$ pairs of pants costing $\\$15$ each. She spends no more than $\\$120$ and buys at least $4$ shirts. Which system represents this situation?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$9s + 15p \\le 120$ and $s \\ge 4$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$9s + 15p \\ge 120$ and $s \\le 4$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$9s + 15p < 120$ and $s > 4$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$15s + 9p \\le 120$ and $s \\ge 4$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Translate each phrase separately: \"no more than\" and \"at least\" are different symbols.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Translate each phrase separately: \"no more than\" and \"at least\" are different symbols."
+    },
+    {
+      "level": "guide",
+      "text": "\"No more than $\\$120$\" is $\\le 120$; \"at least $4$ shirts\" is $s \\ge 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "And the shirts cost $\\$9$ each, so the shirt term is $9s$: choice A."
+    }
+  ],
+  "learningObjective": "Translate constraint language into a system of inequalities.",
+  "topic": "Modeling with inequalities",
+  "explanation": [
+    "Total spending is $9s + 15p$, and \"no more than $\\$120$\" allows equality: $9s + 15p \\le 120$.",
+    "\"At least $4$ shirts\" also allows equality: $s \\ge 4$.",
+    "Choice D swaps the prices onto the wrong items; choice C uses strict inequalities, which would wrongly exclude spending exactly $\\$120$ or buying exactly $4$ shirts."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A translation table worth memorizing",
+      "steps": [
+        "\"At least\", \"no less than\", \"minimum of\" → $\\ge$. \"At most\", \"no more than\", \"maximum of\" → $\\le$.",
+        "\"More than\", \"exceeds\", \"over\" → $>$. \"Less than\", \"under\", \"below\" → $<$.",
+        "The words containing \"no\" or \"at\" almost always permit equality; the bare comparison words do not."
+      ]
+    }
+  ],
+  "tags": [
+    "system-of-inequalities",
+    "modeling",
+    "translate"
+  ],
+  "estimatedSeconds": 75
+}

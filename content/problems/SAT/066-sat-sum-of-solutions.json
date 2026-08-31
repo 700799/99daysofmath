@@ -1,0 +1,50 @@
+{
+  "id": "SAT.066",
+  "domain": "SAT",
+  "unit": 7,
+  "orderInUnit": 6,
+  "standard": "SAT.ADV.2",
+  "difficulty": 2,
+  "prompt": "What is the sum of the solutions to $x^2 - 8x + 7 = 0$?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You can factor — or use the fact that the solutions of $ax^2 + bx + c = 0$ sum to $-b/a$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You can factor — or use the fact that the solutions of $ax^2 + bx + c = 0$ sum to $-b/a$."
+    },
+    {
+      "level": "guide",
+      "text": "Here $a = 1$ and $b = -8$."
+    },
+    {
+      "level": "reveal",
+      "text": "The sum is $-(-8)/1 = 8$."
+    }
+  ],
+  "learningObjective": "Use the sum-of-roots relationship for a quadratic.",
+  "topic": "Roots of quadratics",
+  "explanation": [
+    "For $ax^2 + bx + c = 0$, the two solutions sum to $-\\dfrac{b}{a}$ and multiply to $\\dfrac{c}{a}$.",
+    "Here $-\\dfrac{-8}{1} = 8$.",
+    "Confirm by factoring: $(x - 1)(x - 7) = 0$ gives $1$ and $7$, which sum to $8$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the shortcut is worth knowing",
+      "steps": [
+        "Factoring works here, but the sum-of-roots rule works even when the quadratic does not factor nicely.",
+        "For $x^2 - 8x + 5 = 0$ the roots are irrational, yet they still sum to exactly $8$.",
+        "Any question asking for a sum or product of solutions can be answered without finding either one."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "sum-of-roots"
+  ],
+  "estimatedSeconds": 55
+}

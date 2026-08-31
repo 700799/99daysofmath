@@ -1,0 +1,56 @@
+{
+  "id": "SAT.040",
+  "domain": "SAT",
+  "unit": 4,
+  "orderInUnit": 10,
+  "standard": "SAT.ALG.4",
+  "difficulty": 3,
+  "prompt": "The system $ax + 6y = 18$ and $2x + 3y = 9$ has infinitely many solutions. What is the value of $a$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Infinitely many solutions means the two equations describe the same line.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Infinitely many solutions means the two equations describe the same line."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an obvious pair: $2x + 2y = 6$ and $x + y = 3$ are the same line, since doubling the second gives the first. Find the scale factor from a matching term, then apply it everywhere."
+    },
+    {
+      "level": "guide",
+      "text": "Double the second equation: $4x + 6y = 18$. Compare it with the first."
+    },
+    {
+      "level": "reveal",
+      "text": "The $y$ terms and constants already match, so $a = 4$."
+    }
+  ],
+  "learningObjective": "Find the parameter that makes a system dependent.",
+  "topic": "Number of solutions",
+  "explanation": [
+    "For infinitely many solutions the equations must be multiples of one another.",
+    "The first equation has $6y$ and the second has $3y$, so the scale factor is $2$. Multiply the second by $2$: $4x + 6y = 18$.",
+    "That matches the first equation exactly when $a = 4$ — and the constants already agree at $18$, confirming the same line rather than parallel ones."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Set all three ratios equal",
+      "steps": [
+        "The condition for one identical line is $\\dfrac{a}{2} = \\dfrac{6}{3} = \\dfrac{18}{9}$.",
+        "The last two ratios both equal $2$, so $\\dfrac{a}{2} = 2$ and $a = 4$.",
+        "If the constant ratio had *not* matched, the same $a$ would instead have produced no solution — always check all three."
+      ]
+    }
+  ],
+  "tags": [
+    "system",
+    "parameter",
+    "dependent"
+  ],
+  "estimatedSeconds": 85
+}

@@ -48,22 +48,22 @@ export function Onboarding({ onDone }: Props) {
           initial={{ scale: 0.85, y: 16, opacity: 0 }}
           animate={{ scale: 1, y: 0, opacity: 1 }}
           transition={{ type: 'spring', stiffness: 240, damping: 18 }}
-          className="bg-white rounded-3xl px-7 py-8 text-center max-w-sm w-full shadow-2xl"
+          className="bg-surface rounded-3xl px-7 py-8 text-center max-w-sm w-full shadow-2xl"
         >
           <div className="flex justify-center">
             <Mascot mood={card.mood} size={88} oneShot />
           </div>
           <div className="text-5xl mt-2">{card.emoji}</div>
-          <h2 className="text-xl font-display font-extrabold text-slate-900 mt-3">
+          <h2 className="text-xl font-display font-extrabold text-ink mt-3">
             {card.title}
           </h2>
-          <p className="text-slate-600 mt-2 text-sm">{card.body}</p>
+          <p className="text-ink-muted mt-2 text-sm">{card.body}</p>
 
           <div className="flex justify-center gap-2 mt-5">
             {CARDS.map((_, idx) => (
               <span
                 key={idx}
-                className={`w-2 h-2 rounded-full ${idx === i ? 'bg-duo-green' : 'bg-slate-300'}`}
+                className={`w-2 h-2 rounded-full ${idx === i ? 'bg-duo-green' : 'bg-line-strong'}`}
               />
             ))}
           </div>
@@ -80,7 +80,7 @@ export function Onboarding({ onDone }: Props) {
               <button
                 type="button"
                 onClick={onDone}
-                className="text-sm font-display font-bold text-slate-400 hover:text-slate-600"
+                className="text-sm font-display font-bold text-ink-dim hover:text-ink-muted"
               >
                 Skip
               </button>

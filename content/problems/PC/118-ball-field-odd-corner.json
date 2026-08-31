@@ -1,0 +1,62 @@
+{
+  "id": "PC.118",
+  "domain": "PC",
+  "unit": 12,
+  "orderInUnit": 8,
+  "standard": "PC.TRIG.C.1",
+  "difficulty": 3,
+  "prompt": "A ball field has an odd corner at home plate. One edge runs $90$ ft from home plate to a post, and another edge runs $150$ ft from home plate to a second post. The angle at home plate between the two edges is $120^\\circ$. How many feet apart are the two posts?",
+  "answerType": "numeric",
+  "primaryAnswer": "210",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two edges and the angle squeezed between them: pull the Law of Cosines out of the toolbox.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two edges and the angle squeezed between them: pull the Law of Cosines out of the toolbox."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Same method, tiny numbers: sides $3$ and $5$ with a $120^\\circ$ corner. $c^2 = 9 + 25 - 2(3)(5)(-\\frac{1}{2}) = 34 + 15 = 49$, so $c = 7$. Notice the minus and the negative cosine turned into a PLUS. Now redo it with $90$ and $150$."
+    },
+    {
+      "level": "guide",
+      "text": "$90^2 + 150^2 = 8100 + 22500 = 30600$, and the correction is $2 \\times 90 \\times 150 \\times (-\\frac{1}{2}) = -13500$."
+    },
+    {
+      "level": "reveal",
+      "text": "Subtracting $-13500$ adds it: $c^2 = 30600 + 13500 = 44100$, so $c = 210$ ft."
+    }
+  ],
+  "explanation": [
+    "Home plate and the two posts form a triangle with a $120^\\circ$ corner.",
+    "$c^2 = 90^2 + 150^2 - 2(90)(150)\\cos 120^\\circ$.",
+    "$\\cos 120^\\circ = -\\frac{1}{2}$, so the last term is $-13500$ and subtracting it ADDS $13500$.",
+    "$c^2 = 30600 + 13500 = 44100$, so $c = \\sqrt{44100} = 210$ ft."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Shrink the numbers first",
+      "steps": [
+        "Divide both edges by 30: they become 3 ft and 5 ft with the same 120° corner.",
+        "The small triangle gives 9 + 25 + 15 = 49, so the small answer is 7.",
+        "Scale back by 30: 7 × 30 = 210 ft. Same shape, easy arithmetic."
+      ]
+    },
+    {
+      "title": "Find the square root in pieces",
+      "steps": [
+        "√44100 looks scary, so split it: 44100 = 441 × 100.",
+        "√441 = 21 because 21 × 21 = 441, and √100 = 10.",
+        "Multiply the two roots: 21 × 10 = 210 ft."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-cosines",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

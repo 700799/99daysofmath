@@ -1,0 +1,57 @@
+{
+  "id": "PC.112",
+  "domain": "PC",
+  "unit": 12,
+  "orderInUnit": 2,
+  "standard": "PC.TRIG.C.1",
+  "difficulty": 1,
+  "prompt": "In triangle $ABC$, angle $A = 30^\\circ$ and angle $B = 90^\\circ$. Side $b$ (the side across from $B$) is $10$. Find side $a$, the side across from $A$.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You have a matching pair (side $b$ with angle $B$), so reach for the Law of Sines.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You have a matching pair (side $b$ with angle $B$), so reach for the Law of Sines."
+    },
+    {
+      "level": "guide",
+      "text": "Set up $\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$, which is $\\frac{a}{\\sin 30^\\circ} = \\frac{10}{\\sin 90^\\circ}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin 30^\\circ = \\frac{1}{2}$ and $\\sin 90^\\circ = 1$, so $a = 10 \\times \\frac{1}{2} = 5$."
+    }
+  ],
+  "explanation": [
+    "The Law of Sines pairs each side with the angle ACROSS from it.",
+    "$\\frac{a}{\\sin 30^\\circ} = \\frac{10}{\\sin 90^\\circ}$.",
+    "Since $\\sin 90^\\circ = 1$, the right side is just $10$.",
+    "$a = 10 \\times \\sin 30^\\circ = 10 \\times \\frac{1}{2} = 5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A table of the two pairs",
+      "steps": [
+        "Make two columns: ANGLE and SIDE ACROSS FROM IT.",
+        "Row 1: angle 30°, side a. Row 2: angle 90°, side 10.",
+        "The Law of Sines says both rows give the same ratio: a ÷ 0.5 must equal 10 ÷ 1 = 10, so a = 5."
+      ]
+    },
+    {
+      "title": "Picture the half-equilateral",
+      "steps": [
+        "A 30-60-90 triangle is an equilateral triangle sliced straight down the middle.",
+        "The side across the 90° corner is the long slanted side; the side across the 30° corner is the short one.",
+        "In that sliced triangle the short side is exactly half the long one: half of 10 is 5."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-sines",
+    "triangle"
+  ],
+  "estimatedSeconds": 40
+}

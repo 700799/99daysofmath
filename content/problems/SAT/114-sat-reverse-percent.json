@@ -1,0 +1,50 @@
+{
+  "id": "SAT.114",
+  "domain": "SAT",
+  "unit": 12,
+  "orderInUnit": 4,
+  "standard": "SAT.PSDA.2",
+  "difficulty": 2,
+  "prompt": "After a $25\\%$ discount, a pair of shoes costs $\\$60$. What was the original price, in dollars?",
+  "answerType": "numeric",
+  "primaryAnswer": "80",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $\\$60$ represents what fraction of the original price?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $\\$60$ represents what fraction of the original price?"
+    },
+    {
+      "level": "guide",
+      "text": "A $25\\%$ discount leaves $75\\%$, so $0.75p = 60$."
+    },
+    {
+      "level": "reveal",
+      "text": "$p = \\dfrac{60}{0.75} = 80$ dollars."
+    }
+  ],
+  "learningObjective": "Reverse a percent change to recover the original amount.",
+  "topic": "Reverse percentages",
+  "explanation": [
+    "A $25\\%$ discount means the customer pays $75\\%$ of the original price.",
+    "So $0.75p = 60$, giving $p = \\dfrac{60}{0.75} = \\$80$.",
+    "Check: $25\\%$ of $80$ is $20$, and $80 - 20 = \\$60$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why adding 25% back fails",
+      "steps": [
+        "Adding $25\\%$ to $\\$60$ gives $\\$75$, which is one of the answer choices — and it is wrong.",
+        "The discount was $25\\%$ of the *original*, not of the sale price, so the two percentages are taken from different bases.",
+        "Reverse percent questions are built entirely on this asymmetry. Always divide by the multiplier; never add the percent back."
+      ]
+    }
+  ],
+  "tags": [
+    "reverse-percent",
+    "discount"
+  ],
+  "estimatedSeconds": 70
+}

@@ -1,0 +1,50 @@
+{
+  "id": "SAT.021",
+  "domain": "SAT",
+  "unit": 3,
+  "orderInUnit": 1,
+  "standard": "SAT.ALG.3",
+  "difficulty": 1,
+  "prompt": "What is the $y$-intercept of the graph of $y = 3x - 4$?",
+  "answerType": "numeric",
+  "primaryAnswer": "-4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $y$-intercept is the output when $x = 0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $y$-intercept is the output when $x = 0$."
+    },
+    {
+      "level": "guide",
+      "text": "Substitute $x = 0$: $y = 3(0) - 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = -4$."
+    }
+  ],
+  "learningObjective": "Identify the y-intercept from slope-intercept form.",
+  "topic": "Slope-intercept form",
+  "explanation": [
+    "In $y = mx + b$, the constant $b$ is the $y$-intercept.",
+    "Here $b = -4$, so the graph crosses the $y$-axis at $-4$.",
+    "Confirm by substituting $x = 0$: $y = 3(0) - 4 = -4$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Watch the sign",
+      "steps": [
+        "The equation is $y = 3x + (-4)$, so $b = -4$, not $4$.",
+        "A positive $4$ will always be one of the answer choices on a question like this.",
+        "Rewriting a subtraction as \"plus a negative\" once, in your head, removes the ambiguity."
+      ]
+    }
+  ],
+  "tags": [
+    "y-intercept",
+    "slope-intercept"
+  ],
+  "estimatedSeconds": 30
+}

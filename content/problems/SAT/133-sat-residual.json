@@ -1,0 +1,50 @@
+{
+  "id": "SAT.133",
+  "domain": "SAT",
+  "unit": 14,
+  "orderInUnit": 3,
+  "standard": "SAT.PSDA.4",
+  "difficulty": 2,
+  "prompt": "A line of best fit is $y = 3x + 8$. One data point in the scatterplot is $(6, 30)$. What is the residual for that data point?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The residual is the actual value minus the predicted value.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The residual is the actual value minus the predicted value."
+    },
+    {
+      "level": "guide",
+      "text": "The model predicts $3(6) + 8 = 26$; the actual value is $30$."
+    },
+    {
+      "level": "reveal",
+      "text": "$30 - 26 = 4$."
+    }
+  ],
+  "learningObjective": "Compute a residual from a model and an observed point.",
+  "topic": "Residuals",
+  "explanation": [
+    "Predicted value: $y = 3(6) + 8 = 18 + 8 = 26$.",
+    "Actual value from the data point: $30$.",
+    "Residual $=$ actual $-$ predicted $= 30 - 26 = 4$. A positive residual means the point sits above the line."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The sign carries meaning",
+      "steps": [
+        "Positive residual: the actual value is above the line, so the model under-predicted.",
+        "Negative residual: the point is below the line, so the model over-predicted.",
+        "Computing predicted minus actual reverses the sign and gives $-4$ — which will be an answer choice."
+      ]
+    }
+  ],
+  "tags": [
+    "residual",
+    "best-fit"
+  ],
+  "estimatedSeconds": 65
+}

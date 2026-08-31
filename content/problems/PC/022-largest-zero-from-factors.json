@@ -1,0 +1,48 @@
+{
+  "id": "PC.022",
+  "domain": "PC",
+  "unit": 3,
+  "orderInUnit": 2,
+  "standard": "PC.POLY.A.1",
+  "difficulty": 1,
+  "prompt": "The polynomial $p(x) = (x - 5)(x + 2)$ crosses the $x$-axis twice. What is the LARGER of the two zeros?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A product is zero when one of its factors is zero.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A product is zero when one of its factors is zero."
+    },
+    {
+      "level": "guide",
+      "text": "Set each factor to zero: $x - 5 = 0$ gives $x = 5$, and $x + 2 = 0$ gives $x = -2$."
+    },
+    {
+      "level": "reveal",
+      "text": "The zeros are $5$ and $-2$, so the larger is $5$."
+    }
+  ],
+  "explanation": [
+    "Zeros are the $x$-values that make $p(x) = 0$.",
+    "$x - 5 = 0 \\to x = 5$ and $x + 2 = 0 \\to x = -2$.",
+    "The larger zero is $5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read the sign backwards",
+      "steps": [
+        "A factor $(x - 5)$ hides the zero $+5$ — the sign flips.",
+        "A factor $(x + 2)$ hides the zero $-2$.",
+        "On a number line those sit at $-2$ and $5$, and 5 is farther right."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomials",
+    "zeros"
+  ],
+  "estimatedSeconds": 35
+}

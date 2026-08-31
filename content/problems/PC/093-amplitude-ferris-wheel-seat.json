@@ -1,0 +1,54 @@
+{
+  "id": "PC.093",
+  "domain": "PC",
+  "unit": 10,
+  "orderInUnit": 3,
+  "standard": "PC.TRIG.B.1",
+  "difficulty": 1,
+  "prompt": "A Ferris wheel seat follows $h = 18\\sin(x) + 22$ metres. What is the AMPLITUDE?",
+  "answerType": "numeric",
+  "primaryAnswer": "18",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The amplitude is the number multiplying the sine.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The amplitude is the number multiplying the sine."
+    },
+    {
+      "level": "guide",
+      "text": "In $h = a\\sin(x) + k$, the amplitude is $a$ and the midline is $k$."
+    },
+    {
+      "level": "reveal",
+      "text": "The amplitude is $18$ metres."
+    }
+  ],
+  "explanation": [
+    "Compare to $h = a\\sin(x) + k$.",
+    "Here $a = 18$ and the midline $k = 22$.",
+    "The seat rises $18$ m above and falls $18$ m below the $22$ m midline, so the amplitude is $18$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "From the highest and lowest points",
+      "steps": [
+        "Highest is 22 + 18 = 40 m; lowest is 22 − 18 = 4 m.",
+        "Amplitude is HALF the gap: (40 − 4) ÷ 2 = 36 ÷ 2 = 18 m."
+      ]
+    },
+    {
+      "title": "Picture the wheel",
+      "steps": [
+        "The centre of the wheel sits 22 m up — that is the midline.",
+        "The wheel carries you 18 m above and 18 m below that centre, so the amplitude IS the radius: 18 m."
+      ]
+    }
+  ],
+  "tags": [
+    "amplitude",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

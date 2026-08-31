@@ -129,14 +129,14 @@ export function Shop() {
   return (
     <div>
       <div className="flex items-center justify-between gap-3 mb-3">
-        <h1 className="text-2xl font-display font-extrabold text-slate-900">🛍️ Coin Shop</h1>
-        <div className="rounded-full bg-amber-100 text-amber-800 px-3 py-1.5 font-display font-extrabold tabular-nums">🪙 {coins.toLocaleString()}</div>
+        <h1 className="text-2xl font-display font-extrabold text-ink">🛍️ Coin Shop</h1>
+        <div className="rounded-full bg-warn-soft text-warn px-3 py-1.5 font-display font-extrabold tabular-nums">🪙 {coins.toLocaleString()}</div>
       </div>
 
       {/* shopkeeper greeter */}
-      <div className="mb-3 flex items-center gap-2 rounded-3xl border-2 border-sky-200 bg-sky-50 px-3 py-2">
+      <div className="mb-3 flex items-center gap-2 rounded-3xl border-2 border-accent/35 bg-accent-soft px-3 py-2">
         <Mascot kind="clerk" size={56} expr="happy" />
-        <div className="relative rounded-2xl rounded-bl-sm bg-white px-3 py-1.5 font-display text-sm font-bold text-slate-700 shadow-sm">
+        <div className="relative rounded-2xl rounded-bl-sm bg-surface px-3 py-1.5 font-display text-sm font-bold text-ink-muted shadow-sm">
           Welcome to the shop! Spend your 🪙 here — play games to earn more.
         </div>
       </div>
@@ -160,7 +160,7 @@ export function Shop() {
 
       {/* earn coins (word problems) + always-available lessons */}
       <div className="mt-3 grid grid-cols-2 gap-2">
-        <button type="button" onClick={startEarn} className="min-h-12 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5">
+        <button type="button" onClick={startEarn} className="min-h-12 rounded-2xl bg-duo-green hover:bg-duo-green-dark text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5">
           💰 Earn coins
         </button>
         <button type="button" onClick={() => setHelp(true)} className="min-h-12 rounded-2xl bg-indigo-500 hover:bg-indigo-600 text-white font-display font-extrabold shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5">
@@ -181,7 +181,7 @@ export function Shop() {
             key={t.key}
             type="button"
             onClick={() => setTab(t.key)}
-            className={`shrink-0 rounded-full px-3 py-1.5 text-sm font-display font-extrabold border-2 ${tab === t.key ? 'bg-fuchsia-600 border-fuchsia-700 text-white' : 'bg-white border-slate-200 text-slate-600'}`}
+            className={`shrink-0 rounded-full px-3 py-1.5 text-sm font-display font-extrabold border-2 ${tab === t.key ? 'bg-fuchsia-600 border-fuchsia-700 text-white' : 'bg-surface border-line text-ink-muted'}`}
           >
             {t.emoji} {t.label}
           </button>
@@ -195,12 +195,12 @@ export function Shop() {
             const price = PREMIUM_GAMES[g.id];
             const own = unlocked.includes(g.id);
             return (
-              <div key={g.id} className="rounded-2xl border-2 border-slate-200 bg-white p-3 text-center">
+              <div key={g.id} className="rounded-2xl border-2 border-line bg-surface p-3 text-center">
                 <div className="flex justify-center"><Mascot kind={gameMascot(g.id)} size={46} expr="cheer" /></div>
-                <div className="font-display font-extrabold text-sm text-slate-800 mt-1">{g.name}</div>
-                <div className="text-[11px] text-slate-500 line-clamp-2 min-h-8">{g.blurb}</div>
+                <div className="font-display font-extrabold text-sm text-ink mt-1">{g.name}</div>
+                <div className="text-[11px] text-ink-muted line-clamp-2 min-h-8">{g.blurb}</div>
                 {own ? (
-                  <Link to={g.path} className="mt-2 block w-full min-h-10 leading-10 rounded-2xl bg-emerald-500 text-white font-display font-extrabold">Play ▶</Link>
+                  <Link to={g.path} className="mt-2 block w-full min-h-10 leading-10 rounded-2xl bg-duo-green text-white font-display font-extrabold">Play ▶</Link>
                 ) : (
                   <button type="button" onClick={() => buyGame(g.id, price)} disabled={coins < price} className="mt-2 w-full min-h-10 rounded-2xl bg-fuchsia-500 disabled:opacity-40 text-white font-display font-extrabold">🔓 Unlock · 🪙{price}</button>
                 )}
@@ -218,11 +218,11 @@ export function Shop() {
                 key={c.id}
                 type="button"
                 onClick={() => buy(c)}
-                className={`rounded-2xl border-2 p-2 text-center transition-colors ${on ? 'border-emerald-500 bg-emerald-50' : own ? 'border-slate-300 bg-white' : coins < c.price ? 'border-slate-200 bg-slate-50 opacity-70' : 'border-slate-200 bg-white hover:border-fuchsia-300'}`}
+                className={`rounded-2xl border-2 p-2 text-center transition-colors ${on ? 'border-emerald-500 bg-ok-soft' : own ? 'border-line-strong bg-surface' : coins < c.price ? 'border-line bg-surface-2 opacity-70' : 'border-line bg-surface hover:border-accent/45'}`}
               >
                 <div className="text-3xl leading-none">{c.emoji}</div>
-                <div className="text-[10px] font-display font-bold text-slate-600 truncate mt-0.5">{c.name}</div>
-                <div className={`mt-1 text-[10px] font-display font-extrabold rounded-full py-0.5 ${on ? 'bg-emerald-500 text-white' : own ? 'bg-slate-200 text-slate-700' : 'bg-amber-100 text-amber-800'}`}>
+                <div className="text-[10px] font-display font-bold text-ink-muted truncate mt-0.5">{c.name}</div>
+                <div className={`mt-1 text-[10px] font-display font-extrabold rounded-full py-0.5 ${on ? 'bg-duo-green text-white' : own ? 'bg-surface-2 text-ink-muted' : 'bg-warn-soft text-warn'}`}>
                   {on ? 'Worn ✓' : own ? 'Wear' : `🪙 ${c.price}`}
                 </div>
               </button>
@@ -231,28 +231,28 @@ export function Shop() {
         </div>
       )}
 
-      <Link to="/" className="mt-6 inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700">← Back home</Link>
+      <Link to="/" className="mt-6 inline-block text-sm font-display font-bold text-ink-muted hover:text-ink-muted">← Back home</Link>
 
       {/* earn-coins word-problem round */}
       {earn && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4">
-          <div className="w-full max-w-xs rounded-3xl bg-white p-5 text-center shadow-2xl">
-            <div className="text-xs font-display font-extrabold uppercase tracking-widest text-emerald-600">💰 Earn coins · {earn.done + 1}/{EARN_ROUND}</div>
-            <div className="mt-2 rounded-2xl bg-slate-50 border-2 border-slate-200 px-3 py-4 text-base font-display font-extrabold leading-snug break-words text-slate-800">{earn.c.prompt}</div>
-            <div className={`mt-3 h-11 rounded-xl border-2 flex items-center justify-center text-2xl font-display font-extrabold tabular-nums ${earn.wrong ? 'border-rose-300 bg-rose-50 text-rose-700' : 'border-slate-200 text-slate-900'}`}>
+          <div className="w-full max-w-xs rounded-3xl bg-surface p-5 text-center shadow-2xl">
+            <div className="text-xs font-display font-extrabold uppercase tracking-widest text-ok">💰 Earn coins · {earn.done + 1}/{EARN_ROUND}</div>
+            <div className="mt-2 rounded-2xl bg-surface-2 border-2 border-line px-3 py-4 text-base font-display font-extrabold leading-snug break-words text-ink">{earn.c.prompt}</div>
+            <div className={`mt-3 h-11 rounded-xl border-2 flex items-center justify-center text-2xl font-display font-extrabold tabular-nums ${earn.wrong ? 'border-bad/50 bg-bad-soft text-bad' : 'border-line text-ink'}`}>
               {earn.input || (earn.wrong ? 'Try again!' : '?')}
             </div>
             <div className="mt-3 grid grid-cols-3 gap-2">
               {['1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '0', 'del'].map((k) => (
-                <button key={k} type="button" onClick={() => setEarn((e) => (e ? { ...e, wrong: false, input: k === 'del' ? e.input.slice(0, -1) : k === '-' ? (e.input.startsWith('-') ? e.input.slice(1) : '-' + e.input) : e.input.length < 6 ? e.input + k : e.input } : e))} className="min-h-11 rounded-xl bg-slate-100 hover:bg-slate-200 font-display font-extrabold text-lg text-slate-800 active:translate-y-0.5">
+                <button key={k} type="button" onClick={() => setEarn((e) => (e ? { ...e, wrong: false, input: k === 'del' ? e.input.slice(0, -1) : k === '-' ? (e.input.startsWith('-') ? e.input.slice(1) : '-' + e.input) : e.input.length < 6 ? e.input + k : e.input } : e))} className="min-h-11 rounded-xl bg-surface-2 hover:bg-surface-2 font-display font-extrabold text-lg text-ink active:translate-y-0.5">
                   {k === 'del' ? '⌫' : k}
                 </button>
               ))}
             </div>
-            <button type="button" onClick={submitEarn} disabled={!earn.input.trim()} className="mt-3 w-full min-h-11 rounded-2xl bg-emerald-500 disabled:bg-slate-300 text-white font-display font-extrabold">Answer (+🪙{EARN_PER})</button>
+            <button type="button" onClick={submitEarn} disabled={!earn.input.trim()} className="mt-3 w-full min-h-11 rounded-2xl bg-duo-green disabled:bg-line-strong text-white font-display font-extrabold">Answer (+🪙{EARN_PER})</button>
             <div className="mt-2 flex gap-2">
-              <button type="button" onClick={() => { setEarn(null); setHelp(true); }} className="flex-1 min-h-10 rounded-2xl bg-indigo-100 text-indigo-800 font-display font-extrabold text-sm">📚 Show me how</button>
-              <button type="button" onClick={() => setEarn(null)} className="flex-1 min-h-10 rounded-2xl bg-slate-200 text-slate-700 font-display font-extrabold text-sm">Done</button>
+              <button type="button" onClick={() => { setEarn(null); setHelp(true); }} className="flex-1 min-h-10 rounded-2xl bg-accent-soft text-accent font-display font-extrabold text-sm">📚 Show me how</button>
+              <button type="button" onClick={() => setEarn(null)} className="flex-1 min-h-10 rounded-2xl bg-surface-2 text-ink-muted font-display font-extrabold text-sm">Done</button>
             </div>
           </div>
         </div>

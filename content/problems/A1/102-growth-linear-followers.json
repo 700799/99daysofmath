@@ -1,0 +1,54 @@
+{
+  "id": "A1.102",
+  "domain": "A1",
+  "unit": 11,
+  "orderInUnit": 2,
+  "standard": "A1.EXPO.A.2",
+  "difficulty": 1,
+  "prompt": "An account starts with 200 followers and gains 100 new followers every week — the same amount each time. How many followers after 3 weeks?",
+  "answerType": "numeric",
+  "primaryAnswer": "500",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Adding the same amount each step is LINEAR growth: start plus 100 per week.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Adding the same amount each step is LINEAR growth: start plus 100 per week."
+    },
+    {
+      "level": "guide",
+      "text": "Total added in 3 weeks: $3 \\times 100 = 300$."
+    },
+    {
+      "level": "reveal",
+      "text": "$200 + 300 = 500$ followers."
+    }
+  ],
+  "explanation": [
+    "Linear growth ADDS the same amount every step.",
+    "Rule: followers $= 200 + 100w$. At $w = 3$: $200 + 300$.",
+    "That is 500 followers."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Week-by-week table",
+      "steps": [
+        "Week 1: 300. Week 2: 400. Week 3: 500.",
+        "Each row climbs by exactly 100 — a straight staircase to 500."
+      ]
+    },
+    {
+      "title": "Picture a straight ramp",
+      "steps": [
+        "On a graph, linear growth is a straight line starting at 200 and rising 100 per week.",
+        "Three equal steps up from 200 lands at 500."
+      ]
+    }
+  ],
+  "tags": [
+    "linear-growth",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

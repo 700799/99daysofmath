@@ -1,0 +1,73 @@
+{
+  "id": "SAT.013",
+  "domain": "SAT",
+  "unit": 2,
+  "orderInUnit": 3,
+  "standard": "SAT.ALG.2",
+  "difficulty": 2,
+  "prompt": "A moving company charges according to $C(t) = 32t + 150$, where $C$ is the total cost in dollars and $t$ is the number of hours worked. What does the number $32$ represent?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The fixed cost before any work begins",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "The cost per hour of work",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "The total cost of a one-hour job",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The number of hours included in the base charge",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The number attached to $t$ is a *rate*. Ask what units it must carry.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The number attached to $t$ is a *rate*. Ask what units it must carry."
+    },
+    {
+      "level": "guide",
+      "text": "$C$ is in dollars and $t$ is in hours, so the coefficient of $t$ is in dollars per hour."
+    },
+    {
+      "level": "reveal",
+      "text": "$32$ is the cost per hour; $150$ is the fixed charge."
+    }
+  ],
+  "learningObjective": "Interpret the slope of a linear model in context, with units.",
+  "topic": "Interpreting slope",
+  "explanation": [
+    "In a linear model, the coefficient of the variable is the slope, and the slope is always a rate: output units per input unit.",
+    "Here the output is dollars and the input is hours, so $32$ is measured in dollars per hour — the cost of each additional hour.",
+    "The constant $150$ is what you pay when $t = 0$: the fixed charge. Choice C is the trap — a one-hour job costs $32 + 150 = \\$182$, not $\\$32$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare two inputs",
+      "steps": [
+        "At $t = 3$: $C = 32(3) + 150 = \\$246$. At $t = 4$: $C = 32(4) + 150 = \\$278$.",
+        "One extra hour of work added exactly $\\$32$ to the bill.",
+        "That is the definition of the slope in this context — what one more hour costs."
+      ]
+    }
+  ],
+  "tags": [
+    "interpret-slope",
+    "context",
+    "units"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,48 @@
+{
+  "id": "PC.052",
+  "domain": "PC",
+  "unit": 6,
+  "orderInUnit": 2,
+  "standard": "PC.LOG.A.1",
+  "difficulty": 1,
+  "prompt": "In a video game your coins TRIPLE at the end of every level. You start with $1$ coin. After how many levels do you have $81$ coins?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "This is really asking $\\log_3(81)$: $3$ to what power gives $81$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This is really asking $\\log_3(81)$: $3$ to what power gives $81$?"
+    },
+    {
+      "level": "guide",
+      "text": "Triple your way up: $1, 3, 9, 27, 81$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3^4 = 81$, so it takes $4$ levels."
+    }
+  ],
+  "explanation": [
+    "Tripling each level means the coins follow $3^x$.",
+    "You need $3^x = 81$, which is the question $\\log_3(81)$ asks.",
+    "$3 \\times 3 \\times 3 \\times 3 = 81$, so $x = 4$ levels."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Make a level list",
+      "steps": [
+        "Level 1: $3$ coins. Level 2: $9$ coins.",
+        "Level 3: $27$ coins. Level 4: $81$ coins.",
+        "Counting the rows gives $4$ — a log is just counting the steps."
+      ]
+    }
+  ],
+  "tags": [
+    "logarithm",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

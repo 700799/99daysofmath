@@ -17,7 +17,141 @@ const nums = (s: string): number[] => (s.match(/\d+/g) ?? []).map(Number);
 // Build a step-by-step solving aid from the problem text.
 export function buildSolveAid(prompt: string): Aid {
   const n = nums(prompt);
-  const p = prompt.toLowerCase();
+  const p = prompt.toLowerCase().replace(/−/g, '-'); // normalize unicode minus
+
+  // --- Precalculus shapes ---------------------------------------------------
+  if (/log base/.test(p)) {
+    return {
+      title: 'A log asks for the exponent',
+      steps: [
+        'Read it as a question: the base to WHAT power gives that number?',
+        'Multiply the base by itself, counting steps, until you hit the target.',
+        'The number of steps IS the logarithm.',
+      ],
+    };
+  }
+  if (/amplitude|maximum value/.test(p) && /sin|cos/.test(p)) {
+    return {
+      title: 'Amplitude, midline, maximum',
+      steps: [
+        'In y = a·sin(x) + k, the amplitude is a and the midline is k.',
+        'Maximum = midline + amplitude; minimum = midline − amplitude.',
+        'Amplitude is HALF the peak-to-trough distance.',
+      ],
+    };
+  }
+  if (/period/.test(p) && /sin|cos/.test(p)) {
+    return { title: 'Period = 360 ÷ b', steps: ['In sin(bx), b counts how many waves fit in one turn.', 'So one wave takes 360° ÷ b.'] };
+  }
+  if (/hypotenuse|right triangle/.test(p)) {
+    return {
+      title: 'Right triangle: a² + b² = c²',
+      steps: [
+        'The hypotenuse c is always across from the right angle (the longest side).',
+        'Missing hypotenuse: add the squares of the legs, then square-root.',
+        'Missing leg: subtract the known leg squared from c², then square-root.',
+      ],
+    };
+  }
+  if (/arithmetic sequence/.test(p)) {
+    return { title: 'Term n of an arithmetic list', steps: ['Term n = first + (n − 1) × d.', 'Careful: it is (n − 1) jumps, not n.'] };
+  }
+  if (/geometric sequence|doubles each time/.test(p)) {
+    return { title: 'Term n of a geometric list', steps: ['Term n = first × r^(n − 1).', 'Or just multiply step by step and count the jumps.'] };
+  }
+  if (/counting numbers/.test(p)) {
+    return { title: 'Pair the ends (Gauss)', steps: ['1 + 2 + … + n pairs up: first + last, second + second-last…', 'Sum = n × (n + 1) ÷ 2.'] };
+  }
+  if (/shifts? (right|left)|shift/.test(p) && /\(x/.test(p)) {
+    return { title: 'Inside moves sideways (and lies)', steps: ['A change INSIDE the parentheses moves the graph sideways.', 'Minus moves RIGHT, plus moves LEFT — the opposite of what it looks like.'] };
+  }
+
+  // --- Algebra 1 shapes -----------------------------------------------------
+  // distribute: "3(x + 2) = 21"
+  let m = p.match(/(\d+)\(x \+ (\d+)\) = (\d+)/);
+  if (m) {
+    const [a, b, c] = [Number(m[1]), Number(m[2]), Number(m[3])];
+    return {
+      title: 'Unwrap the parentheses',
+      steps: [
+        `Divide both sides by ${a} first: x + ${b} = ${c} ÷ ${a} = ${c / a}.`,
+        `Undo the + ${b}: subtract ${b} from both sides.`,
+        `x = ${c / a} − ${b} = ${c / a - b}.`,
+      ],
+    };
+  }
+  // variables both sides: "5x + 2 = 2x + 14"
+  m = p.match(/(\d+)x \+ (\d+) = (\d+)x \+ (\d+)/);
+  if (m) {
+    const [a, b, c, d] = [Number(m[1]), Number(m[2]), Number(m[3]), Number(m[4])];
+    return {
+      title: "Get the x's on one team",
+      steps: [
+        `Subtract ${c}x from both sides: ${a - c}x + ${b} = ${d}.`,
+        `Subtract ${b}: ${a - c}x = ${d - b}.`,
+        `Divide by ${a - c}: x = ${(d - b) / (a - c)}.`,
+      ],
+    };
+  }
+  // two-step: "3x + 4 = 19" or "3x - 4 = 11"
+  m = p.match(/(\d+)x ([+-]) (\d+) = (\d+)/);
+  if (m) {
+    const [a, op, b, c] = [Number(m[1]), m[2], Number(m[3]), Number(m[4])];
+    const afterUndo = op === '+' ? c - b : c + b;
+    return {
+      title: 'Undo in reverse: ± first, then ÷',
+      steps: [
+        `${op === '+' ? `Subtract ${b} from` : `Add ${b} to`} both sides: ${a}x = ${afterUndo}.`,
+        `Divide both sides by ${a}.`,
+        `x = ${afterUndo} ÷ ${a} = ${afterUndo / a}.`,
+      ],
+    };
+  }
+  // one-step: "3x = 21" / "x + 5 = 12"
+  m = p.match(/(\d+)x = (\d+)/);
+  if (m && /solve/.test(p)) {
+    const [a, c] = [Number(m[1]), Number(m[2])];
+    return { title: 'Divide both sides', steps: [`${a}x means ${a} × x.`, `Divide both sides by ${a}: x = ${c} ÷ ${a} = ${c / a}.`] };
+  }
+  m = p.match(/x \+ (\d+) = (\d+)/);
+  if (m) {
+    const [a, c] = [Number(m[1]), Number(m[2])];
+    return { title: 'Subtract from both sides', steps: [`Undo the + ${a}: subtract ${a} from both sides.`, `x = ${c} − ${a} = ${c - a}.`] };
+  }
+  // evaluate a line or function: "If y = 3x + 4 ... x = 5" / "f(x) = 4x - 3. Find f(6)."
+  if (/what is y when x|find f\(/.test(p)) {
+    return {
+      title: 'Substitute, then compute',
+      steps: [
+        'Swap the x for the given number (wrap it in parentheses).',
+        'Multiply first — a number next to x means TIMES.',
+        'Then add or subtract what is left.',
+      ],
+    };
+  }
+  // slope through two points
+  if (/slope through/.test(p)) {
+    return {
+      title: 'Slope = rise over run',
+      steps: [
+        'Rise: second y minus first y.',
+        'Run: second x minus first x (SAME order!).',
+        'Slope = rise ÷ run.',
+      ],
+    };
+  }
+  // start fee + rate: "costs $3 to start plus $2 per hour ... for 4 hours"
+  if (/to start plus/.test(p) && /per hour/.test(p)) {
+    const [fee, per, h] = n;
+    return {
+      title: 'Start amount + rate × time',
+      steps: [
+        `The start fee happens once: $${fee}.`,
+        `The hourly part grows: $${per} × ${h} = $${per * h}.`,
+        `Total: ${fee} + ${per * h} = $${fee + per * h}.`,
+      ],
+    };
+  }
 
   // unit rate: "3 pens cost $18. How much for 6 pens?"
   if (/cost \$\d+/.test(p) && /how much for/.test(p)) {

@@ -1,0 +1,58 @@
+{
+  "id": "A1.112",
+  "domain": "A1",
+  "unit": 12,
+  "orderInUnit": 2,
+  "standard": "A1.POLY.A.1",
+  "difficulty": 1,
+  "prompt": "Add: $(3x + 4) + (2x + 5)$.",
+  "answerType": "expression",
+  "primaryAnswer": "5x + 9",
+  "alternativeAnswers": [
+    "5x+9",
+    "9 + 5x"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Sort the stickers: $x$-terms in one pile, plain numbers in another.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sort the stickers: $x$-terms in one pile, plain numbers in another."
+    },
+    {
+      "level": "guide",
+      "text": "$3x + 2x$ makes one pile, $4 + 5$ makes the other."
+    },
+    {
+      "level": "reveal",
+      "text": "$3x + 2x = 5x$ and $4 + 5 = 9$, so the sum is $5x + 9$."
+    }
+  ],
+  "explanation": [
+    "Adding polynomials means combining like terms.",
+    "$x$-terms: $3x + 2x = 5x$.",
+    "Numbers: $4 + 5 = 9$.",
+    "Answer: $5x + 9$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two bags of blocks",
+      "steps": [
+        "Bag one holds 3 long x-blocks and 4 unit cubes. Bag two holds 2 long blocks and 5 cubes.",
+        "Pour both bags out: 5 long blocks and 9 cubes total — that is 5x + 9."
+      ]
+    },
+    {
+      "title": "Stack them vertically",
+      "steps": [
+        "Write 3x + 4 on top of 2x + 5, lining up x-terms over x-terms.",
+        "Add each column like column addition: 5x in the x column, 9 in the number column."
+      ]
+    }
+  ],
+  "tags": [
+    "polynomial",
+    "addition"
+  ],
+  "estimatedSeconds": 35
+}

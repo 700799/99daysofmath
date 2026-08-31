@@ -1,0 +1,48 @@
+{
+  "id": "A1.062",
+  "domain": "A1",
+  "unit": 7,
+  "orderInUnit": 2,
+  "standard": "A1.LIN.A.2",
+  "difficulty": 1,
+  "prompt": "In the equation $y = 3x - 4$, what is the $y$-intercept?",
+  "answerType": "numeric",
+  "primaryAnswer": "-4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "In $y = mx + b$, the $y$-intercept $b$ is the number ADDED at the end — where the line STARTS on the $y$-axis.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "In $y = mx + b$, the $y$-intercept $b$ is the number ADDED at the end — where the line STARTS on the $y$-axis."
+    },
+    {
+      "level": "guide",
+      "text": "$3x - 4$ is the same as $3x + (-4)$."
+    },
+    {
+      "level": "reveal",
+      "text": "The $y$-intercept is $-4$."
+    }
+  ],
+  "explanation": [
+    "Match $y = 3x - 4$ to $y = mx + b$: here $b = -4$.",
+    "The minus sign belongs to the $4$ — the start is BELOW zero.",
+    "The line crosses the $y$-axis at $(0, -4)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Plug in x = 0",
+      "steps": [
+        "The $y$-intercept is the $y$-value when $x = 0$.",
+        "$y = 3 \\times 0 - 4 = -4$."
+      ]
+    }
+  ],
+  "tags": [
+    "slope-intercept",
+    "y-intercept",
+    "read-equation"
+  ],
+  "estimatedSeconds": 30
+}

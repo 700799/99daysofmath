@@ -1,0 +1,73 @@
+{
+  "id": "SAT.034",
+  "domain": "SAT",
+  "unit": 4,
+  "orderInUnit": 4,
+  "standard": "SAT.ALG.4",
+  "difficulty": 2,
+  "prompt": "How many solutions does the system $2x + 3y = 12$ and $4x + 6y = 24$ have?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Exactly one",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Exactly two",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "No solutions",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Infinitely many",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "D",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Compare the two equations. Is one a multiple of the other?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Compare the two equations. Is one a multiple of the other?"
+    },
+    {
+      "level": "guide",
+      "text": "Multiplying the first equation by $2$ gives exactly the second."
+    },
+    {
+      "level": "reveal",
+      "text": "They are the same line, so every point on it is a solution: infinitely many."
+    }
+  ],
+  "learningObjective": "Recognize a dependent system from proportional coefficients.",
+  "topic": "Number of solutions",
+  "explanation": [
+    "Multiply the first equation by $2$: $4x + 6y = 24$ — identical to the second.",
+    "Two identical equations describe the same line, so every point on that line satisfies both.",
+    "The system has infinitely many solutions."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the ratios",
+      "steps": [
+        "Compare $\\dfrac{4}{2}$, $\\dfrac{6}{3}$, and $\\dfrac{24}{12}$ — all equal $2$.",
+        "All three ratios equal means the same line: infinitely many solutions. All three equal *except* the constant means parallel lines: no solutions.",
+        "This ratio check answers every \"how many solutions\" question in about ten seconds, without solving anything."
+      ]
+    }
+  ],
+  "tags": [
+    "system",
+    "number-of-solutions",
+    "dependent"
+  ],
+  "estimatedSeconds": 55
+}

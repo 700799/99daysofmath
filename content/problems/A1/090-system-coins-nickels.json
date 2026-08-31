@@ -1,0 +1,59 @@
+{
+  "id": "A1.090",
+  "domain": "A1",
+  "unit": 9,
+  "orderInUnit": 10,
+  "standard": "A1.SYS.A.1",
+  "difficulty": 3,
+  "prompt": "You have 15 coins, all nickels and dimes, worth $\\$1.10$ total. How many nickels do you have?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two rules in cents: $n + d = 15$ coins and $5n + 10d = 110$ cents.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two rules in cents: $n + d = 15$ coins and $5n + 10d = 110$ cents."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try all-nickels first: $15$ nickels is only $\\$0.75$ — too little by $\\$0.35$. Every dime swap adds $\\$0.05$, so count the swaps."
+    },
+    {
+      "level": "guide",
+      "text": "Swap in $d = 15 - n$: $5n + 10(15 - n) = 110$, so $150 - 5n = 110$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5n = 40$, so $n = 8$ nickels. (And 7 dimes.)"
+    }
+  ],
+  "explanation": [
+    "Count rule: $n + d = 15$. Money rule in cents: $5n + 10d = 110$.",
+    "Substitute $d = 15 - n$: $5n + 150 - 10n = 110$, so $-5n = -40$.",
+    "$n = 8$. Check: $8 \\times 5 + 7 \\times 10 = 40 + 70 = 110$ cents. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pretend they are all dimes",
+      "steps": [
+        "If all 15 coins were dimes, you would have 150 cents — that is 40 cents too much.",
+        "Swapping a dime for a nickel drops the total by 5 cents. You need 40 ÷ 5 = 8 swaps, so 8 nickels."
+      ]
+    },
+    {
+      "title": "Build a table",
+      "steps": [
+        "10 nickels, 5 dimes: 50 + 50 = 100 cents. Too low. 6 nickels, 9 dimes: 30 + 90 = 120. Too high.",
+        "8 nickels, 7 dimes: 40 + 70 = 110 cents. That is the match — 8 nickels."
+      ]
+    }
+  ],
+  "tags": [
+    "system-of-equations",
+    "word-problem"
+  ],
+  "estimatedSeconds": 90
+}

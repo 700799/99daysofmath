@@ -1,0 +1,47 @@
+{
+  "id": "A1.014",
+  "domain": "A1",
+  "unit": 2,
+  "orderInUnit": 4,
+  "standard": "A1.EQ.A.1",
+  "difficulty": 2,
+  "prompt": "You have $\\$20$ saved and earn $\\$8$ each week. Solve $8w + 20 = 68$ to find how many weeks until you can buy the $\\$68$ sneakers.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Undo the $+20$ first: subtract $20$ from both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Undo the $+20$ first: subtract $20$ from both sides."
+    },
+    {
+      "level": "guide",
+      "text": "$8w = 48$. Now divide both sides by $8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$w = 48 \\div 8 = 6$ weeks."
+    }
+  ],
+  "explanation": [
+    "Subtract 20 from both sides: $8w = 48$.",
+    "Divide both sides by 8: $w = 6$.",
+    "Check: $8(6) + 20 = 68$. ✓ 6 weeks."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As a balance scale",
+      "steps": [
+        "Both sides weigh the same. Take 20 off each pan: $8w$ balances $48$.",
+        "Split each pan into 8 equal groups: one $w$ balances $6$."
+      ]
+    }
+  ],
+  "tags": [
+    "two-step-equation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

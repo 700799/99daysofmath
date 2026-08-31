@@ -1,0 +1,55 @@
+{
+  "id": "A1.134",
+  "domain": "A1",
+  "unit": 14,
+  "orderInUnit": 4,
+  "standard": "A1.QUAD.A.1",
+  "difficulty": 2,
+  "prompt": "Solve $(x - 3)(x + 5) = 0$. Give the POSITIVE solution.",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Zero-product rule: if two things multiply to zero, one of them IS zero.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Zero-product rule: if two things multiply to zero, one of them IS zero."
+    },
+    {
+      "level": "guide",
+      "text": "Either $x - 3 = 0$ or $x + 5 = 0$. Solve each little equation."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 3$ or $x = -5$. The positive solution is $3$."
+    }
+  ],
+  "explanation": [
+    "If a product is zero, one factor must be zero.",
+    "Set each factor to zero: $x - 3 = 0$ gives $x = 3$; $x + 5 = 0$ gives $x = -5$.",
+    "The positive solution is $x = 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why zero is special",
+      "steps": [
+        "Multiply any two nonzero numbers — you never get zero. Try it: 2 × 3, 0.5 × (−8)...",
+        "So if the product IS zero, at least one factor must secretly be zero.",
+        "Here that means x = 3 or x = −5; the positive one is 3."
+      ]
+    },
+    {
+      "title": "Check by plugging in",
+      "steps": [
+        "Try x = 3: (3 − 3)(3 + 5) = 0 × 8 = 0. Works.",
+        "Try x = −5: (−8)(0) = 0. Also works — but the positive answer asked for is 3."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "zero-product"
+  ],
+  "estimatedSeconds": 45
+}

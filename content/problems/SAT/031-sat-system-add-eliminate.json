@@ -1,0 +1,50 @@
+{
+  "id": "SAT.031",
+  "domain": "SAT",
+  "unit": 4,
+  "orderInUnit": 1,
+  "standard": "SAT.ALG.4",
+  "difficulty": 1,
+  "prompt": "If $x + y = 10$ and $x - y = 4$, what is the value of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $y$ terms are already opposites. What happens if you add the equations?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $y$ terms are already opposites. What happens if you add the equations?"
+    },
+    {
+      "level": "guide",
+      "text": "Adding gives $2x = 14$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 7$."
+    }
+  ],
+  "learningObjective": "Solve a system by elimination when a variable already cancels.",
+  "topic": "Elimination",
+  "explanation": [
+    "Add the two equations term by term: $(x + y) + (x - y) = 10 + 4$.",
+    "The $y$ terms cancel: $2x = 14$.",
+    "$x = 7$ (and then $y = 3$)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Look for the cancellation before choosing a method",
+      "steps": [
+        "Whenever a variable appears with equal-and-opposite coefficients, adding is the fastest possible move.",
+        "Substitution would work here too, but it takes three steps instead of one.",
+        "Scanning for a ready-made cancellation is the first thing to do on any system question."
+      ]
+    }
+  ],
+  "tags": [
+    "system",
+    "elimination"
+  ],
+  "estimatedSeconds": 40
+}

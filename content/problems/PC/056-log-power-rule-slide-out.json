@@ -1,0 +1,48 @@
+{
+  "id": "PC.056",
+  "domain": "PC",
+  "unit": 6,
+  "orderInUnit": 6,
+  "standard": "PC.LOG.A.1",
+  "difficulty": 2,
+  "prompt": "Evaluate $\\log_2(8^3)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "An exponent inside a log SLIDES OUT to the front: $\\log(A^n) = n \\cdot \\log A$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "An exponent inside a log SLIDES OUT to the front: $\\log(A^n) = n \\cdot \\log A$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\log_2(8^3) = 3 \\cdot \\log_2(8)$, and $\\log_2(8) = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 3 = 9$."
+    }
+  ],
+  "explanation": [
+    "The power rule lets the exponent slide out front: $\\log_2(8^3) = 3 \\cdot \\log_2(8)$.",
+    "$\\log_2(8) = 3$ because $2^3 = 8$.",
+    "$3 \\times 3 = 9$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Just multiply it out",
+      "steps": [
+        "$8^3 = 8 \\times 8 \\times 8 = 512$.",
+        "Now ask: $2$ to what power gives $512$? Count doublings: $2, 4, 8, 16, 32, 64, 128, 256, 512$.",
+        "That is $9$ doublings, so the answer is $9$."
+      ]
+    }
+  ],
+  "tags": [
+    "logarithm",
+    "power-rule"
+  ],
+  "estimatedSeconds": 50
+}

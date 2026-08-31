@@ -1,0 +1,54 @@
+{
+  "id": "A1.132",
+  "domain": "A1",
+  "unit": 14,
+  "orderInUnit": 2,
+  "standard": "A1.QUAD.A.1",
+  "difficulty": 1,
+  "prompt": "Solve $x^2 = 25$. Give the POSITIVE solution.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "What number times itself gives $25$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "What number times itself gives $25$?"
+    },
+    {
+      "level": "guide",
+      "text": "Both $5 \\times 5$ and $(-5) \\times (-5)$ equal $25$."
+    },
+    {
+      "level": "reveal",
+      "text": "The positive solution is $x = 5$."
+    }
+  ],
+  "explanation": [
+    "Ask: what squared gives 25?",
+    "$5^2 = 25$ and $(-5)^2 = 25$ — squares have TWO roots.",
+    "The positive one is $x = 5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As a square garden",
+      "steps": [
+        "A square garden has area 25 square meters. Each side is the number that multiplies by itself to give 25.",
+        "Side length: 5 meters — lengths are positive, so the garden answer is the positive root."
+      ]
+    },
+    {
+      "title": "Undo the square",
+      "steps": [
+        "Squaring and square-rooting undo each other, like tying and untying a shoe.",
+        "√25 = 5, and its mirror twin −5 also works since a negative times a negative is positive."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic",
+    "square-root"
+  ],
+  "estimatedSeconds": 35
+}

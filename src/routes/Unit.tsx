@@ -48,19 +48,21 @@ export function Unit() {
   const u = parseInt(unit, 10);
 
   const seoLesson = getLesson(d, u);
-  const seoGrade = d.startsWith('5.') ? '5th' : '6th';
+  const courseName: Partial<Record<Domain, string>> = { A1: 'Algebra 1', PC: 'Precalculus' };
+  const seoCourse = courseName[d] ?? `${d.startsWith('5.') ? '5th' : '6th'} Grade Math`;
+  const seoCourseProse = courseName[d] ?? `${d.startsWith('5.') ? '5th' : '6th'}-grade math`;
   useSeo({
     title: seoLesson
-      ? `${seoLesson.title} — ${seoGrade} Grade Math (${DOMAIN_LABELS[d]}) | Math10x`
+      ? `${seoLesson.title} — ${seoCourse}${courseName[d] ? '' : ` (${DOMAIN_LABELS[d]})`} | Math10x`
       : `${DOMAIN_LABELS[d]} lesson | Math10x`,
     description: seoLesson
-      ? `${seoLesson.objective ?? seoLesson.title}. A free ${seoGrade}-grade math lesson with an animated video, worked examples, and practice on Math10x.`
-      : `A free ${seoGrade}-grade math lesson on Math10x.`,
+      ? `${seoLesson.objective ?? seoLesson.title}. A free ${seoCourseProse} lesson with ${courseName[d] ? 'clear worked examples' : 'an animated video, worked examples,'} and practice on Math10x.`
+      : `A free ${seoCourseProse} lesson on Math10x.`,
     canonicalPath: `/unit/${d}/${u}`,
     jsonLd: seoLesson
       ? [
           courseJsonLd(
-            `${seoLesson.title} — ${seoGrade} Grade Math`,
+            `${seoLesson.title} — ${seoCourse}`,
             seoLesson.objective ?? seoLesson.title,
             `${SITE_URL}/unit/${d}/${u}`,
           ),
@@ -106,20 +108,20 @@ export function Unit() {
     return (
       <div className="text-center py-12">
         <Mascot mood="thinking" size={80} />
-        <div className="mt-3 text-slate-500 font-display font-bold">Loading…</div>
+        <div className="mt-3 text-ink-muted font-display font-bold">Loading…</div>
       </div>
     );
   }
   if (error) {
     return (
-      <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-4 text-red-800">
+      <div className="bg-bad-soft border-2 border-bad/40 rounded-2xl p-4 text-bad">
         {error.message}
       </div>
     );
   }
   if (!problems || problems.length === 0) {
     return (
-      <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-6 text-center text-amber-900">
+      <div className="bg-warn-soft border-2 border-warn/40 rounded-2xl p-6 text-center text-warn">
         This unit has no problems yet.
       </div>
     );
@@ -236,7 +238,7 @@ export function Unit() {
           <button
             type="button"
             onClick={() => setShowLesson(true)}
-            className="inline-flex items-center gap-1.5 text-xs font-display font-extrabold text-sky-700 bg-sky-50 border border-sky-200 rounded-full px-3 py-1.5 hover:bg-sky-100 transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-display font-extrabold text-accent bg-accent-soft border border-accent/35 rounded-full px-3 py-1.5 hover:bg-accent-soft transition-colors"
           >
             📘 Review the lesson
           </button>
@@ -244,7 +246,7 @@ export function Unit() {
         <button
           type="button"
           onClick={() => setShowHelp(true)}
-          className="inline-flex items-center gap-1.5 text-xs font-display font-extrabold text-violet-700 bg-violet-50 border border-violet-200 rounded-full px-3 py-1.5 hover:bg-violet-100 transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-display font-extrabold text-accent bg-accent-soft border border-accent/35 rounded-full px-3 py-1.5 hover:bg-accent-soft transition-colors"
         >
           📖 Explain the concept
         </button>
@@ -284,7 +286,7 @@ export function Unit() {
                   type="button"
                   onClick={submit}
                   disabled={!answer.trim()}
-                  className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark disabled:bg-slate-300 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 disabled:cursor-not-allowed disabled:shadow-none disabled:active:translate-y-0 transition-all"
+                  className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark disabled:bg-line-strong text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 disabled:cursor-not-allowed disabled:shadow-none disabled:active:translate-y-0 transition-all"
                 >
                   Check
                 </button>
@@ -298,17 +300,17 @@ export function Unit() {
                   initial={{ scale: 0.85, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ type: 'spring', stiffness: 320, damping: 18 }}
-                  className="mt-4 bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-green-300 rounded-3xl p-5 text-center relative overflow-hidden"
+                  className="mt-4 bg-ok-soft border-2 border-ok/50 rounded-3xl p-5 text-center relative overflow-hidden"
                 >
                   <div className="text-5xl">🎉</div>
-                  <div className="font-display font-extrabold text-2xl text-green-800 mt-1">
+                  <div className="font-display font-extrabold text-2xl text-ok mt-1">
                     {flashMessage.current}
                   </div>
                   <GeniusTipCard problemId={current.id} domain={current.domain} />
                   {currentStreak >= 2 && (
-                    <div className="mt-2 inline-flex items-center gap-1 bg-orange-100 px-3 py-1 rounded-full">
+                    <div className="mt-2 inline-flex items-center gap-1 bg-warn-soft px-3 py-1 rounded-full">
                       <span>🔥</span>
-                      <span className="font-display font-extrabold text-orange-800 text-sm">
+                      <span className="font-display font-extrabold text-warn text-sm">
                         {currentStreak} in a row!
                       </span>
                     </div>
@@ -325,7 +327,7 @@ export function Unit() {
                     <button
                       type="button"
                       onClick={() => setShowExplainOnCorrect(true)}
-                      className="mt-3 text-sm font-display font-bold text-green-800 underline underline-offset-2 hover:text-green-900"
+                      className="mt-3 text-sm font-display font-bold text-ok underline underline-offset-2 hover:text-ok"
                     >
                       Explain step by step
                     </button>
@@ -345,15 +347,15 @@ export function Unit() {
               <motion.div
                 initial={{ scale: 0.96, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                className="mt-4 bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-300 rounded-3xl p-5"
+                className="mt-4 bg-bad-soft border-2 border-bad/50 rounded-3xl p-5"
               >
                 <div className="flex items-start gap-3">
                   <div className="text-4xl shrink-0">🤔</div>
                   <div className="flex-1">
-                    <div className="font-display font-extrabold text-red-800 text-lg">
+                    <div className="font-display font-extrabold text-bad text-lg">
                       {flashMessage.current}
                     </div>
-                    <div className="mt-1 text-slate-800">
+                    <div className="mt-1 text-ink">
                       <span className="font-display font-bold">Correct answer:</span>{' '}
                       <span className="font-mono font-extrabold">
                         {current.primaryAnswer}
@@ -368,7 +370,7 @@ export function Unit() {
                 <button
                   type="button"
                   onClick={advance}
-                  className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-blue-600 text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
+                  className="mt-4 w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-blue hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
                 >
                   Got it
                 </button>
@@ -381,7 +383,7 @@ export function Unit() {
       <button
         type="button"
         onClick={() => navigate(`/trail/${d}`)}
-        className="mt-6 w-full text-sm font-display font-bold text-slate-500 hover:text-slate-700 py-2"
+        className="mt-6 w-full text-sm font-display font-bold text-ink-muted hover:text-ink-muted py-2"
       >
         Quit to trail
       </button>

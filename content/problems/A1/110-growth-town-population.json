@@ -1,0 +1,60 @@
+{
+  "id": "A1.110",
+  "domain": "A1",
+  "unit": 11,
+  "orderInUnit": 10,
+  "standard": "A1.EXPO.A.2",
+  "difficulty": 3,
+  "prompt": "A town of 2000 people grows $10\\%$ per year. How many people after 2 years?",
+  "answerType": "numeric",
+  "primaryAnswer": "2420",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Up 10% means multiply by 1.10 each year — do NOT just add 200 twice.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Up 10% means multiply by 1.10 each year — do NOT just add 200 twice."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "One year first: $10\\%$ of $2000$ is $200$, so year one ends at $2200$. Now take $10\\%$ of the NEW total, not the old one."
+    },
+    {
+      "level": "guide",
+      "text": "Year 1: $2000 \\times 1.10 = 2200$. Now grow year 2 from 2200."
+    },
+    {
+      "level": "reveal",
+      "text": "Year 2: $2200 \\times 1.10 = 2420$ people."
+    }
+  ],
+  "explanation": [
+    "Growth factor: $100\\% + 10\\% = 1.10$ per year.",
+    "Two years: $2000 \\times 1.10^2 = 2000 \\times 1.21$.",
+    "That is 2420 people — more than $2000 + 200 + 200 = 2400$, because year 2 grows the NEW total."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Year-by-year table",
+      "steps": [
+        "Start: 2000. Year 1 adds 10% of 2000 = 200 → 2200.",
+        "Year 2 adds 10% of 2200 = 220 → 2420. The add-on grows each year."
+      ]
+    },
+    {
+      "title": "Interest on the interest",
+      "steps": [
+        "Plain adding would give 2000 + 200 + 200 = 2400.",
+        "But the 200 newcomers from year 1 also grow 10% in year 2 — that extra 10% of 200 is 20 more, so 2400 + 20 = 2420."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-growth",
+    "percent",
+    "word-problem"
+  ],
+  "estimatedSeconds": 85
+}

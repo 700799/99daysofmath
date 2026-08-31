@@ -44,7 +44,7 @@ export function StickerCelebration({ stickerIds, onDone }: Props) {
           initial={{ scale: 0.6, y: 20, opacity: 0 }}
           animate={{ scale: 1, y: 0, opacity: 1 }}
           transition={{ type: 'spring', stiffness: 240, damping: 16 }}
-          className="bg-white rounded-3xl px-8 py-8 text-center max-w-xs w-full shadow-2xl"
+          className="bg-surface rounded-3xl px-8 py-8 text-center max-w-xs w-full shadow-2xl"
         >
           <div className="flex justify-center">
             <Mascot mood="proud" size={96} oneShot />
@@ -53,12 +53,12 @@ export function StickerCelebration({ stickerIds, onDone }: Props) {
             New sticker!
           </div>
           <div className="text-6xl mt-3">{def.emoji}</div>
-          <div className="text-xl font-display font-extrabold text-slate-900 mt-2">
+          <div className="text-xl font-display font-extrabold text-ink mt-2">
             {def.label}
           </div>
-          {def.hint && <div className="text-sm text-slate-500 mt-1">{def.hint}</div>}
+          {def.hint && <div className="text-sm text-ink-muted mt-1">{def.hint}</div>}
           {defs.length > 1 && (
-            <div className="text-xs text-slate-400 mt-3 font-display font-bold">
+            <div className="text-xs text-ink-dim mt-3 font-display font-bold">
               {i + 1} / {defs.length}
             </div>
           )}

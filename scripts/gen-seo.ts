@@ -21,6 +21,8 @@ import {
   DOMAINS,
   DOMAIN_LABELS,
   DOMAIN_DESCRIPTIONS,
+  domainCourseName,
+  gradeLabelFor,
   type Domain,
 } from '../src/types/problem';
 
@@ -31,7 +33,14 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(ROOT, 'dist');
 const LASTMOD = new Date().toISOString().slice(0, 10);
 
-const grade = (d: Domain) => (d.startsWith('5.') ? '5th' : '6th');
+// Course phrasing per domain — Algebra 1 and Precalculus are courses, not grades.
+const COURSE_NAME: Partial<Record<Domain, string>> = { A1: 'Algebra 1', PC: 'Precalculus' };
+const lessonCourse = (d: Domain) =>
+  COURSE_NAME[d] ?? `${d.startsWith('5.') ? '5th' : '6th'} Grade Math`;
+const lessonProse = (d: Domain) =>
+  COURSE_NAME[d]
+    ? `A free ${COURSE_NAME[d]} lesson with clear worked examples and practice on Math10x.`
+    : `A free ${d.startsWith('5.') ? '5th' : '6th'}-grade math lesson with an animated video, worked examples, and practice on Math10x.`;
 
 interface Route {
   path: string; // e.g. "/trail/6.RP" ("/" for home)
@@ -79,9 +88,9 @@ function buildRoutes(): Route[] {
   // Home
   routes.push({
     path: '/',
-    title: 'Math10x — Free 5th & 6th Grade Math: Video Lessons, Practice & an Arcade',
+    title: 'Math10x — Free Math for Grades 5-6 Plus Algebra 1 & Precalculus',
     description:
-      'Math10x makes 5th and 6th grade math click: clear animated video lessons, worked examples, and practice — plus an arcade of games kids unlock by learning.',
+      'Math10x makes math click for grades 5-6 and beyond: clear lessons, worked examples, and practice across ratios, fractions, geometry, statistics, Algebra 1 and Precalculus — plus an arcade of games kids unlock by learning.',
     priority: 1.0,
     jsonLd: {
       '@context': 'https://schema.org',
@@ -90,11 +99,7 @@ function buildRoutes(): Route[] {
       itemListElement: DOMAINS.map((d, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        item: courseLd(
-          `${DOMAIN_LABELS[d]} — ${grade(d)} Grade Math`,
-          DOMAIN_DESCRIPTIONS[d],
-          `${SITE_URL}/trail/${d}`,
-        ),
+        item: courseLd(domainCourseName(d), DOMAIN_DESCRIPTIONS[d], `${SITE_URL}/trail/${d}`),
       })),
     },
   });
@@ -103,11 +108,11 @@ function buildRoutes(): Route[] {
   for (const d of DOMAINS) {
     routes.push({
       path: `/trail/${d}`,
-      title: `${DOMAIN_LABELS[d]} — ${grade(d)} Grade Math | Math10x`,
-      description: `Learn ${DOMAIN_LABELS[d]} (${d}) for ${grade(d)} grade: ${DOMAIN_DESCRIPTIONS[d]}. Free animated video lessons, worked examples, and practice on Math10x.`,
+      title: `${domainCourseName(d)} | Math10x`,
+      description: `Learn ${DOMAIN_LABELS[d]} (${d}) for ${gradeLabelFor(d)}: ${DOMAIN_DESCRIPTIONS[d]}. Free lessons, worked examples, and practice on Math10x.`,
       priority: 0.9,
       jsonLd: [
-        courseLd(`${DOMAIN_LABELS[d]} — ${grade(d)} Grade Math`, DOMAIN_DESCRIPTIONS[d], `${SITE_URL}/trail/${d}`),
+        courseLd(domainCourseName(d), DOMAIN_DESCRIPTIONS[d], `${SITE_URL}/trail/${d}`),
         breadcrumbLd([
           { name: 'Home', path: '/' },
           { name: DOMAIN_LABELS[d], path: `/trail/${d}` },
@@ -122,11 +127,11 @@ function buildRoutes(): Route[] {
     const p = `/unit/${d}/${l.unit}`;
     routes.push({
       path: p,
-      title: `${l.title} — ${grade(d)} Grade Math (${DOMAIN_LABELS[d]}) | Math10x`,
-      description: `${l.objective ?? l.title}. A free ${grade(d)}-grade math lesson with an animated video, worked examples, and practice on Math10x.`,
+      title: `${l.title} — ${lessonCourse(d)}${COURSE_NAME[d] ? '' : ` (${DOMAIN_LABELS[d]})`} | Math10x`,
+      description: `${l.objective ?? l.title}. ${lessonProse(d)}`,
       priority: 0.8,
       jsonLd: [
-        courseLd(`${l.title} — ${grade(d)} Grade Math`, l.objective ?? l.title, `${SITE_URL}${p}`),
+        courseLd(`${l.title} — ${lessonCourse(d)}`, l.objective ?? l.title, `${SITE_URL}${p}`),
         breadcrumbLd([
           { name: 'Home', path: '/' },
           { name: DOMAIN_LABELS[d], path: `/trail/${d}` },
@@ -139,16 +144,16 @@ function buildRoutes(): Route[] {
   // Library pages
   routes.push({
     path: '/videos',
-    title: 'Math Video Lessons — 5th & 6th Grade | Math10x',
+    title: 'Math Video Lessons — Grades 5-6 & Beyond | Math10x',
     description:
-      'Watch free animated math video lessons for 5th and 6th grade: ratios, fractions, decimals, geometry, expressions, and statistics — each with worked examples and practice.',
+      'Watch free animated math video lessons for grades 5-6: ratios, fractions, decimals, geometry, expressions, and statistics — each with worked examples and practice.',
     priority: 0.7,
   });
   routes.push({
     path: '/stories',
     title: 'Math Stories — The History & Wonder of Math | Math10x',
     description:
-      'Illustrated math stories that bring 5th & 6th grade concepts to life — the origins and real-world magic behind ratios, fractions, geometry, and more.',
+      'Illustrated math stories that bring math concepts to life — the origins and real-world magic behind ratios, fractions, geometry, and more.',
     priority: 0.6,
   });
   routes.push({

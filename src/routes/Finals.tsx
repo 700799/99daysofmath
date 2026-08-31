@@ -14,17 +14,17 @@ export function Finals() {
       <div className="flex items-center gap-3">
         <Mascot mood="proud" size={64} />
         <div>
-          <h1 className="text-2xl font-display font-extrabold text-slate-900">
+          <h1 className="text-2xl font-display font-extrabold text-ink">
             🏆 Final Challenge
           </h1>
-          <p className="text-sm text-slate-600">
+          <p className="text-sm text-ink-muted">
             Five big quizzes · {FINAL_QUIZ_SIZE} questions each · answers shown only at
             the end · <b>+40 XP bonus +2 per correct</b>.
           </p>
         </div>
       </div>
 
-      <div className="mt-3 text-xs font-display font-extrabold uppercase tracking-wider text-slate-500">
+      <div className="mt-3 text-xs font-display font-extrabold uppercase tracking-wider text-ink-muted">
         {doneCount} / {FINAL_QUIZ_COUNT} completed
         {doneCount === FINAL_QUIZ_COUNT ? ' — 👑 Champion!' : ''}
       </div>
@@ -36,21 +36,21 @@ export function Finals() {
             <Link
               key={n}
               to={`/finals/${n}`}
-              className="block rounded-3xl p-4 bg-white border-2 border-slate-200 hover:border-amber-300 hover:shadow-md transition-all"
+              className="block rounded-3xl p-4 bg-surface border-2 border-line hover:border-warn/50 hover:shadow-md transition-all"
             >
               <div className="flex items-center gap-3">
                 <div
                   className={`w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-display font-extrabold ${
-                    res ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'
+                    res ? 'bg-ok-soft text-ok' : 'bg-warn-soft text-warn'
                   }`}
                 >
                   {res ? '✓' : n}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="font-display font-extrabold text-slate-900">
+                  <div className="font-display font-extrabold text-ink">
                     Final Quiz {n}
                   </div>
-                  <div className="text-xs text-slate-500">
+                  <div className="text-xs text-ink-muted">
                     {res
                       ? `Best: ${res.best}/${FINAL_QUIZ_SIZE} · tap to beat it`
                       : `${FINAL_QUIZ_SIZE} mixed questions across all six topics`}
@@ -65,7 +65,7 @@ export function Finals() {
 
       <Link
         to="/"
-        className="mt-6 inline-block text-sm font-display font-bold text-slate-500 hover:text-slate-700"
+        className="mt-6 inline-block text-sm font-display font-bold text-ink-muted hover:text-ink-muted"
       >
         ← Back home
       </Link>

@@ -1,0 +1,56 @@
+{
+  "id": "PC.062",
+  "domain": "PC",
+  "unit": 7,
+  "orderInUnit": 2,
+  "standard": "PC.LOG.A.2",
+  "difficulty": 1,
+  "prompt": "Solve for $x$: $5^x = 625$.",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Keep multiplying by $5$ and see how many it takes to reach $625$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Keep multiplying by $5$ and see how many it takes to reach $625$."
+    },
+    {
+      "level": "guide",
+      "text": "$5, 25, 125, 625$ — count them."
+    },
+    {
+      "level": "reveal",
+      "text": "$5^4 = 625$, so $x = 4$."
+    }
+  ],
+  "explanation": [
+    "Write $625$ as a power of $5$.",
+    "$5 \\times 5 \\times 5 \\times 5 = 625$, so $625 = 5^4$.",
+    "Now $5^x = 5^4$, so $x = 4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build it in two chunks",
+      "steps": [
+        "$5^2 = 25$, and $25 \\times 25 = 625$.",
+        "So $625 = 5^2 \\times 5^2 = 5^4$.",
+        "Matching exponents gives $x = 4$."
+      ]
+    },
+    {
+      "title": "Ask the log question",
+      "steps": [
+        "The equation is the same as $x = \\log_5(625)$.",
+        "A log asks: $5$ to what power gives $625$?",
+        "The answer is $4$."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential-equation",
+    "same-base"
+  ],
+  "estimatedSeconds": 35
+}

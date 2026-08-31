@@ -1,0 +1,78 @@
+{
+  "id": "SAT.018",
+  "domain": "SAT",
+  "unit": 2,
+  "orderInUnit": 8,
+  "standard": "SAT.ALG.2",
+  "difficulty": 3,
+  "prompt": "A small business models its daily profit with $P(x) = 8.5x - 240$, where $x$ is the number of items sold and $P$ is profit in dollars. What does the $x$-intercept of this function represent?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The profit made when no items are sold",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "The number of items that must be sold to break even",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "The profit earned on each item sold",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The maximum number of items that can be sold",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The $x$-intercept is where the output is zero. What does zero profit mean here?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $x$-intercept is where the output is zero. What does zero profit mean here?"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try it with tiny numbers: $P(x) = 2x - 6$. The $x$-intercept is $x = 3$, and selling 3 items yields exactly $\\$0$ profit — costs covered, nothing more. That is break-even."
+    },
+    {
+      "level": "guide",
+      "text": "Zero profit means revenue exactly covers costs — that is the break-even point."
+    },
+    {
+      "level": "reveal",
+      "text": "It is the number of items sold at which profit is $\\$0$: break even."
+    }
+  ],
+  "learningObjective": "Interpret the x-intercept of a linear model in context.",
+  "topic": "Interpreting intercepts",
+  "explanation": [
+    "The $x$-intercept is the value of $x$ making $P(x) = 0$.",
+    "Zero profit means the business has covered its costs exactly and made nothing beyond them — the break-even point.",
+    "Choice A describes the $y$-intercept ($-\\$240$, a loss) and choice C describes the slope ($\\$8.50$ per item). Every one of the wrong answers is a correct statement about a *different* feature of the model."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compute it and read the number",
+      "steps": [
+        "Set $8.5x - 240 = 0$, so $x = \\dfrac{240}{8.5} \\approx 28.2$ items.",
+        "Selling 28 items still leaves a small loss; 29 turns the first profit.",
+        "A number like \"about 28 items\" only makes sense as a break-even count — the arithmetic itself rules the other choices out."
+      ]
+    }
+  ],
+  "tags": [
+    "interpret-intercept",
+    "context",
+    "break-even"
+  ],
+  "estimatedSeconds": 65
+}

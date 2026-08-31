@@ -1,0 +1,60 @@
+{
+  "id": "PC.090",
+  "domain": "PC",
+  "unit": 9,
+  "orderInUnit": 10,
+  "standard": "PC.TRIG.A.2",
+  "difficulty": 3,
+  "prompt": "A game character faces $300^\\circ$, measured counter-clockwise from due east. Which quadrant is that facing direction in? Answer with the quadrant number.",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The quadrant boundaries are $90^\\circ$, $180^\\circ$, $270^\\circ$ and $360^\\circ$. Which two does $300^\\circ$ sit between?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The quadrant boundaries are $90^\\circ$, $180^\\circ$, $270^\\circ$ and $360^\\circ$. Which two does $300^\\circ$ sit between?"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try $200^\\circ$ first: it sits between $180^\\circ$ and $270^\\circ$, so it is in Quadrant $3$. Now do the same sorting for $300^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "$300^\\circ$ is between $270^\\circ$ and $360^\\circ$ — the bottom-right slice."
+    },
+    {
+      "level": "reveal",
+      "text": "Bottom-right is Quadrant $4$, so the answer is $4$."
+    }
+  ],
+  "explanation": [
+    "Quadrants are counted counter-clockwise from due east: Q1 is $0^\\circ$–$90^\\circ$, Q2 is $90^\\circ$–$180^\\circ$, Q3 is $180^\\circ$–$270^\\circ$, Q4 is $270^\\circ$–$360^\\circ$.",
+    "$300^\\circ$ lands between $270^\\circ$ and $360^\\circ$.",
+    "So the character faces into Quadrant $4$ — down and to the right. There $\\cos$ is positive and $\\sin$ is negative."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Back up from a full turn",
+      "steps": [
+        "A full turn is 360°. Facing 300° is the same as being 60° short of all the way around.",
+        "Sixty degrees short of due east means aimed slightly downward and to the right — the bottom-right corner, Quadrant 4."
+      ]
+    },
+    {
+      "title": "Check the signs of the point",
+      "steps": [
+        "At 300° the character is right of centre and below it, so the point is (positive, negative).",
+        "Across positive with up negative only happens in Quadrant 4."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "quadrants",
+    "word-problem"
+  ],
+  "estimatedSeconds": 65
+}

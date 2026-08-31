@@ -1,0 +1,64 @@
+{
+  "id": "PC.129",
+  "domain": "PC",
+  "unit": 13,
+  "orderInUnit": 9,
+  "standard": "PC.SEQ.A.1",
+  "difficulty": 3,
+  "prompt": "A ball bounces back to half its height every time. It rises $16$ cm, then $8$ cm, then $4$ cm, and so on forever. What is the total rise distance, in centimeters?",
+  "answerType": "numeric",
+  "primaryAnswer": "32",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "This is a geometric series with $a_1 = 16$ and $r = \\frac{1}{2}$. Because the terms SHRINK, the running total creeps toward a limit.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This is a geometric series with $a_1 = 16$ and $r = \\frac{1}{2}$. Because the terms SHRINK, the running total creeps toward a limit."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try $a_1 = 1$ with $r = \\frac{1}{2}$: $1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\dots$ The running totals are $1, 1.5, 1.75, 1.875, \\dots$ creeping toward $2$. The rule $\\frac{a_1}{1 - r}$ gives $\\frac{1}{0.5} = 2$. Now use the same rule with $a_1 = 16$."
+    },
+    {
+      "level": "guide",
+      "text": "For a shrinking geometric series, the total is $\\frac{a_1}{1 - r} = \\frac{16}{1 - \\frac{1}{2}}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{16}{0.5} = 32$ cm."
+    }
+  ],
+  "explanation": [
+    "The rises are $16, 8, 4, 2, 1, \\dots$ — geometric with $r = \\frac{1}{2}$.",
+    "When $r$ is between $-1$ and $1$, the pieces shrink so fast that the sum settles on a limit.",
+    "Total $= \\frac{a_1}{1 - r} = \\frac{16}{1 - 0.5} = \\frac{16}{0.5}$.",
+    "$= 32$ cm."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Watch the running total",
+      "steps": [
+        "Add as you go: 16, then 24, then 28, then 30, then 31, then 31.5, then 31.75.",
+        "Each new bounce closes HALF the remaining gap to 32, so the total never passes 32.",
+        "The list is heading to 32 — that is exactly what a limit means."
+      ]
+    },
+    {
+      "title": "Walking halfway to the wall",
+      "steps": [
+        "Stand 32 cm from a wall and step half the remaining distance each time: 16, then 8, then 4.",
+        "You add up infinitely many steps but you only ever cover the original 32 cm.",
+        "Infinitely many pieces can still add to a plain, finite number — as long as they shrink fast enough."
+      ]
+    }
+  ],
+  "tags": [
+    "series",
+    "geometric",
+    "limit",
+    "word-problem"
+  ],
+  "estimatedSeconds": 85
+}

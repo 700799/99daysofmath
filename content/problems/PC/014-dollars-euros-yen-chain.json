@@ -1,0 +1,48 @@
+{
+  "id": "PC.014",
+  "domain": "PC",
+  "unit": 2,
+  "orderInUnit": 4,
+  "standard": "PC.FUN.A.2",
+  "difficulty": 2,
+  "prompt": "A money app turns dollars into euros with $e(d) = 0.9d$, then turns euros into yen with $y(e) = 160e$. You start with $\\$50$. How many yen do you end with?",
+  "answerType": "numeric",
+  "primaryAnswer": "7200",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two machines in a row. Dollars must become euros FIRST.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two machines in a row. Dollars must become euros FIRST."
+    },
+    {
+      "level": "guide",
+      "text": "$e(50) = 0.9 \\times 50 = 45$ euros. Now feed 45 into the yen machine."
+    },
+    {
+      "level": "reveal",
+      "text": "$y(45) = 160 \\times 45 = 7200$ yen."
+    }
+  ],
+  "explanation": [
+    "This is a composition: $y(e(50))$.",
+    "Inside first: $0.9 \\times 50 = 45$ euros.",
+    "Then $160 \\times 45 = 7200$ yen."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Follow the money on a trip",
+      "steps": [
+        "You hand over $\\$50$ at the first window and walk out with 45 euros.",
+        "You carry those 45 euros to the second window.",
+        "Each euro is swapped for 160 yen, so you leave with $45 \\times 160 = 7200$ yen."
+      ]
+    }
+  ],
+  "tags": [
+    "composite-function",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

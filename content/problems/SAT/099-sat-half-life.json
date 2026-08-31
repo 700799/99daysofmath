@@ -1,0 +1,56 @@
+{
+  "id": "SAT.099",
+  "domain": "SAT",
+  "unit": 10,
+  "orderInUnit": 9,
+  "standard": "SAT.ADV.5",
+  "difficulty": 3,
+  "prompt": "A medication has a half-life of $6$ hours: every $6$ hours, half of the remaining amount leaves the body. If a patient takes $80$ milligrams, how many milligrams remain after $24$ hours?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "How many $6$-hour periods fit into $24$ hours?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "How many $6$-hour periods fit into $24$ hours?"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try one halving at a time: $100$ mg with a $2$-hour half-life is $50$ mg at $2$ hours and $25$ mg at $4$ hours. The exponent counts halvings, not hours."
+    },
+    {
+      "level": "guide",
+      "text": "Four periods, so the amount halves four times."
+    },
+    {
+      "level": "reveal",
+      "text": "$80 \\to 40 \\to 20 \\to 10 \\to 5$ mg."
+    }
+  ],
+  "learningObjective": "Apply repeated halving over a fixed number of half-life periods.",
+  "topic": "Exponential decay",
+  "explanation": [
+    "$24 \\div 6 = 4$, so four half-lives elapse.",
+    "Halving four times: $80 \\to 40 \\to 20 \\to 10 \\to 5$.",
+    "Using the formula: $80\\left(\\tfrac{1}{2}\\right)^{24/6} = 80\\left(\\tfrac{1}{2}\\right)^{4} = \\dfrac{80}{16} = 5$ mg."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the halvings, not the hours",
+      "steps": [
+        "The most common error is using an exponent of $24$ instead of $4$.",
+        "The exponent counts *periods*, and the number of periods is elapsed time divided by the half-life.",
+        "Writing \"$24 \\div 6 = 4$ halvings\" as your first line makes the exponent impossible to get wrong."
+      ]
+    }
+  ],
+  "tags": [
+    "exponential",
+    "half-life",
+    "decay"
+  ],
+  "estimatedSeconds": 80
+}

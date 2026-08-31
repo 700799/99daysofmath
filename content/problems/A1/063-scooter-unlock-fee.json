@@ -1,0 +1,48 @@
+{
+  "id": "A1.063",
+  "domain": "A1",
+  "unit": 7,
+  "orderInUnit": 3,
+  "standard": "A1.LIN.A.2",
+  "difficulty": 1,
+  "prompt": "A scooter app charges $y = 2 + 0.15m$ dollars for a ride of $m$ minutes. How many dollars do you pay before riding a single minute ($m = 0$)?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Before riding, $m = 0$. That makes this a \"where do you START\" question.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Before riding, $m = 0$. That makes this a \"where do you START\" question."
+    },
+    {
+      "level": "guide",
+      "text": "Plug in $m = 0$: $y = 2 + 0.15 \\times 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 2 + 0 = 2$ dollars — the unlock fee."
+    }
+  ],
+  "explanation": [
+    "At $m = 0$: $y = 2 + 0.15 \\times 0 = 2$.",
+    "The $2$ is the $y$-intercept $b$ — the START, the unlock fee you pay no matter what.",
+    "The $0.15$ is the slope — how the cost MOVES per minute."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Start-then-move",
+      "steps": [
+        "Every $y = mx + b$ story splits into a start and a move.",
+        "Here the start is $\\$2$ (unlock) and the move is $\\$0.15$ each minute; at zero minutes only the start is charged."
+      ]
+    }
+  ],
+  "tags": [
+    "slope-intercept",
+    "y-intercept",
+    "word-problem"
+  ],
+  "estimatedSeconds": 35
+}

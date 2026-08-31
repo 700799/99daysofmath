@@ -1,0 +1,54 @@
+{
+  "id": "PC.083",
+  "domain": "PC",
+  "unit": 9,
+  "orderInUnit": 3,
+  "standard": "PC.TRIG.A.2",
+  "difficulty": 1,
+  "prompt": "A clock hand points at the 12. It sweeps around to the 3. That is a QUARTER of a full turn. How many degrees did it turn?",
+  "answerType": "numeric",
+  "primaryAnswer": "90",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A full turn all the way around is $360^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A full turn all the way around is $360^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "A quarter of a full turn is $360 \\div 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$360 \\div 4 = 90$, so the hand turned $90^\\circ$."
+    }
+  ],
+  "explanation": [
+    "One trip all the way around a circle is $360^\\circ$.",
+    "Twelve to three is one quarter of the way around the clock face.",
+    "$360 \\div 4 = 90$, so the hand swept $90^\\circ$ — a right angle."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the hour marks",
+      "steps": [
+        "The clock face has 12 hour marks, and the whole face is 360°.",
+        "So each hour mark is 360 ÷ 12 = 30°. From 12 to 3 is 3 marks: 3 × 30 = 90°."
+      ]
+    },
+    {
+      "title": "Fold the circle in half, then half again",
+      "steps": [
+        "Half a turn is 180° — that would land the hand on the 6.",
+        "Half of THAT is 90°, which lands on the 3. So a quarter turn is 90°."
+      ]
+    }
+  ],
+  "tags": [
+    "degrees",
+    "word-problem"
+  ],
+  "estimatedSeconds": 35
+}

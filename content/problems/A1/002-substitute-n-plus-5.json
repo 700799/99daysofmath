@@ -1,0 +1,46 @@
+{
+  "id": "A1.002",
+  "domain": "A1",
+  "unit": 1,
+  "orderInUnit": 2,
+  "standard": "A1.EXP.A.1",
+  "difficulty": 1,
+  "prompt": "If $n = 7$, what is the value of $n + 5$?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Open the mystery box: replace $n$ with $7$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Open the mystery box: replace $n$ with $7$."
+    },
+    {
+      "level": "guide",
+      "text": "Now compute $7 + 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$7 + 5 = 12$."
+    }
+  ],
+  "explanation": [
+    "Substitute $n = 7$ into the expression.",
+    "$n + 5$ becomes $7 + 5 = 12$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As a story",
+      "steps": [
+        "You have $n$ stickers and a friend gives you 5 more.",
+        "If $n$ turns out to be 7 stickers, you now hold $7 + 5 = 12$ stickers."
+      ]
+    }
+  ],
+  "tags": [
+    "evaluate",
+    "substitution"
+  ],
+  "estimatedSeconds": 25
+}

@@ -51,10 +51,10 @@ export function UnitResults() {
         <div className="flex justify-center">
           <Mascot mood={perfect ? 'cheer' : 'happy'} size={120} />
         </div>
-        <h1 className="text-3xl font-display font-extrabold text-slate-900 mt-2">
+        <h1 className="text-3xl font-display font-extrabold text-ink mt-2">
           {perfect ? 'Perfect unit!' : 'Unit complete!'}
         </h1>
-        <p className="text-slate-600 mt-1">
+        <p className="text-ink-muted mt-1">
           {domain} · Unit {unit}
         </p>
 
@@ -71,17 +71,17 @@ export function UnitResults() {
         {((state.unitBonus ?? 0) > 0 || (state.trailBonus ?? 0) > 0 || (state.allTrailsBonus ?? 0) > 0) && (
           <div className="mt-3 flex flex-wrap justify-center gap-2">
             {(state.unitBonus ?? 0) > 0 && (
-              <span className="inline-flex items-center gap-1 bg-yellow-100 text-yellow-900 font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
+              <span className="inline-flex items-center gap-1 bg-warn-soft text-warn font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
                 🎁 Unit bonus +{state.unitBonus} XP
               </span>
             )}
             {(state.trailBonus ?? 0) > 0 && (
-              <span className="inline-flex items-center gap-1 bg-green-100 text-green-900 font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
+              <span className="inline-flex items-center gap-1 bg-ok-soft text-ok font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
                 🏁 Trail complete +{state.trailBonus} XP
               </span>
             )}
             {(state.allTrailsBonus ?? 0) > 0 && (
-              <span className="inline-flex items-center gap-1 bg-purple-100 text-purple-900 font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
+              <span className="inline-flex items-center gap-1 bg-accent-soft text-accent font-display font-extrabold text-sm px-3 py-1.5 rounded-full">
                 👑 ALL trails done +{state.allTrailsBonus} XP
               </span>
             )}
@@ -111,7 +111,7 @@ export function UnitResults() {
                   >
                     <div className="bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 border-4 border-pink-300 rounded-3xl px-5 py-3 text-center">
                       <div className="text-3xl">{def.emoji}</div>
-                      <div className="text-sm font-display font-extrabold text-slate-900 mt-1">
+                      <div className="text-sm font-display font-extrabold text-ink mt-1">
                         {def.label}
                       </div>
                     </div>
@@ -143,9 +143,9 @@ function StatBox({
   tone: 'green' | 'red' | 'yellow';
 }) {
   const styles = {
-    green: 'bg-green-50 border-green-200 text-green-800',
-    red: 'bg-red-50 border-red-200 text-red-800',
-    yellow: 'bg-yellow-50 border-yellow-200 text-yellow-800',
+    green: 'bg-ok-soft border-ok/40 text-ok',
+    red: 'bg-bad-soft border-bad/40 text-bad',
+    yellow: 'bg-warn-soft border-warn/40 text-warn',
   }[tone];
   return (
     <div className={`border-2 rounded-2xl p-3 ${styles}`}>
