@@ -45,6 +45,13 @@
         "Plugging a degree measure into $s = r\\theta$ gives an answer far too large.",
         "Check the units the question states before choosing the formula — the SAT mixes both deliberately."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Reaching for angle/360 × 2πr — the degree recipe — mangles a radian problem and produces a π that should not be there.",
+        "Radians earn the short formula: s = rθ = 5 × 1.2 = 6, no π anywhere. Check the angle's unit before choosing the recipe."
+      ]
     }
   ],
   "tags": [

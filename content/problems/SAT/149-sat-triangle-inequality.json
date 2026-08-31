@@ -67,6 +67,13 @@
         "If they are too short to meet in the middle, no triangle exists — they cannot reach across.",
         "Checking the two shortest against the longest is sufficient; the other two comparisons are then automatic."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Testing the wrong pair — say 4 + 8 against 3 — passes everything and finds no failure.",
+        "The only test that matters: the two SHORTEST sides against the longest. If that pair fails, the triangle is impossible; if it passes, all pairs pass."
+      ]
     }
   ],
   "tags": [

@@ -45,6 +45,13 @@
         "The factor appears whenever a solid tapers to a single point instead of running straight up.",
         "Recognizing this lets you answer without computing $r$ or $h$ at all — which is exactly why the question withholds them."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Multiplying by 3 gives 180 — the relationship run backwards.",
+        "The cone is the SMALLER solid: same base and height, a third of the volume. Divide, and confirm the answer is less than 60."
+      ]
     }
   ],
   "tags": [

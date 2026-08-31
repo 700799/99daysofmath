@@ -45,6 +45,13 @@
         "The initial height is the $y$-intercept, which the equation now displays directly: $23$ cm.",
         "The trap is answering $-2.5$ or $18$ — both appear in the setup, neither is the initial height."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Subtracting the burn instead of adding it gives 18 − 5 = 13 cm, and 18 itself is also offered — both are one misread away.",
+        "Before it was lit, the candle was TALLER. Decide the direction of the answer before touching the arithmetic, and 13 becomes impossible."
+      ]
     }
   ],
   "tags": [

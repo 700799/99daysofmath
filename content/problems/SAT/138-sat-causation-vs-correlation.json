@@ -67,6 +67,13 @@
         "Random assignment only (volunteers): cause, but only for the participants — this study.",
         "Random selection only (survey): generalizable, but association only, never cause. Neither: association among participants only."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Choice B feels generous and reasonable — and it quietly extends the finding to millions of adults who were never sampled.",
+        "Volunteers were randomly ASSIGNED, not randomly SELECTED. Assignment buys the causal claim; only selection would buy the generalization."
+      ]
     }
   ],
   "tags": [

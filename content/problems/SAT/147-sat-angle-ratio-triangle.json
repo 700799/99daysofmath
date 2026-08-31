@@ -45,6 +45,13 @@
         "Each part is $180 \\div 6 = 30°$, so the angles are $30$, $60$, and $90$.",
         "This \"total parts\" method works for any ratio question — angles, money, or ingredients."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "x = 30 is the solved variable, offered as if it were an angle; the LARGEST angle is 3x.",
+        "Ratio problems end with a translation step: parts back into quantities. The answer is 3(30) = 90 degrees, and the check 30+60+90 = 180 seals it."
+      ]
     }
   ],
   "tags": [

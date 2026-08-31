@@ -43,6 +43,13 @@
         "Each group fills 4 seats, so $28 \\div 4 = 7$ groups fit exactly.",
         "An 8th group would need 4 more seats than the bus has."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "40 ÷ 4 = 10 groups forgets the 12 students already in their seats.",
+        "Seats left: 40 − 12 = 28. Then 28 ÷ 4 = 7 groups. Subtract what is used before dividing what is left."
+      ]
     }
   ],
   "tags": [

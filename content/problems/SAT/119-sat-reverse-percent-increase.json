@@ -45,6 +45,13 @@
         "The inverse of \"multiply by $1.30$\" is \"divide by $1.30$\", never \"subtract $30\\%$\".",
         "Whenever a question gives you the result and asks for the start, divide by the multiplier."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Taking 30% off 156 gives 109.2 — wrong base: the 30% belonged to the smaller original, not to 156.",
+        "Reverse a percent by DIVIDING by its multiplier: 156 ÷ 1.3 = 120. Then check forward: 120 + 36 = 156 ✓"
+      ]
     }
   ],
   "tags": [

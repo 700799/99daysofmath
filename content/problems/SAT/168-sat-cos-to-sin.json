@@ -48,6 +48,13 @@
         "$\\sin\\theta = \\tfrac{12}{13}$, taking the positive root since $\\theta$ is acute.",
         "Sketching the triangle is usually faster and less error-prone, but the identity works when no triangle is described."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Re-entering 5/13 — the cosine you were given — or forming 5/12 are the two designed misses.",
+        "Sketch the triangle: adjacent 5, hypotenuse 13, so the missing opposite is 12 and sine is 12/13. The drawing keeps the three sides in their lanes."
+      ]
     }
   ],
   "tags": [

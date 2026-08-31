@@ -42,6 +42,13 @@
         "Try $f(7) = 17$ and $f(9) = 21$ — the output $19$ sits between them.",
         "$f(8) = 2 \\times 8 + 3 = 19$. The input was $8$."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "Running 19 forward — 2(19) + 3 = 41 — uses the machine in the wrong direction.",
+        "Walk backwards through the machine, last step first: 19 − 3 = 16, then 16 ÷ 2 = 8."
+      ]
     }
   ],
   "tags": [

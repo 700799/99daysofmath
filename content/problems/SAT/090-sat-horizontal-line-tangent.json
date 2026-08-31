@@ -45,6 +45,13 @@
         "One solution means $36 - 4(5 - k) = 0$, giving $36 - 20 + 4k = 0$ and $k = -4$.",
         "Both routes work; recognizing the vertex is faster, but the discriminant route generalizes to non-horizontal lines."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "x = 3, the vertex's input, is the classic wrong entry — the line y = k is horizontal, so k is a HEIGHT.",
+        "k must equal the vertex's y-value: f(3) = −4. Say which coordinate the question's object carries before answering."
+      ]
     }
   ],
   "tags": [

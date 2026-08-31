@@ -46,6 +46,13 @@
         "Put an OPEN dot at $-5$, since $-5$ itself gives $23 < 23$, which is false.",
         "Shade to the right: every number bigger than $-5$ makes the left side smaller than 23."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "x < −5 keeps the sign pointing the old way after dividing by −4 — the classic missing flip.",
+        "Check with x = 0: −4(0) + 3 = 3 < 23 ✓, so 0 must be in the answer. Only x > −5 contains 0."
+      ]
     }
   ],
   "tags": [

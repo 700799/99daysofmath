@@ -42,6 +42,13 @@
         "Both points sit at height $7$, so walking between them is walking on flat ground.",
         "Flat means zero steepness — slope $0$ (not \"no slope\")."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "“Undefined” is the trap word here — that is the VERTICAL line's slope, not the flat line's.",
+        "Both points sit at height 7, so the rise is 0, and 0 ÷ 5 = 0. Flat road, zero steepness — a real number."
+      ]
     }
   ],
   "tags": [

@@ -12,6 +12,7 @@ export const A1_LESSONS_U09_11: Lesson[] = [
       'SUBSTITUTION means "swap in what y equals." If y = x + 1, then everywhere you see y, you may drop in x + 1 instead — same value, new outfit.',
       'ELIMINATION means "stack and cancel." Stack the equations and add or subtract so one letter vanishes: +y on top and −y below cancel like a matched pair.',
       'Word problems hide two rules: a TOTAL rule (cats + dogs = 12) and a COMPARE rule (4 more cats than dogs). Write both, then solve.',
+      'Your answer must work in BOTH equations — checking only one is how sneaky wrong answers survive to the next round.',
     ],
     examples: [
       {
@@ -54,6 +55,8 @@ export const A1_LESSONS_U09_11: Lesson[] = [
         ],
         answer: '8 cats',
       },
+      { q: 'Solve the system: y = x + 2 and x + y = 10.', steps: ['Substitute the first into the second: x + (x + 2) = 10.', '2x + 2 = 10, so x = 4.', 'y = 6. Check both: 6 = 4 + 2 ✓ and 4 + 6 = 10 ✓'], answer: 'x = 4, y = 6' },
+      { q: 'Solve the system: x + y = 9 and x − y = 3.', steps: ['Add the equations — the y’s cancel: 2x = 12.', 'x = 6, then y = 3.', 'Check: 6 + 3 = 9 ✓ and 6 − 3 = 3 ✓'], answer: 'x = 6, y = 3' },
     ],
     practice: [
       {
@@ -71,6 +74,8 @@ export const A1_LESSONS_U09_11: Lesson[] = [
         answers: ['9', '$9', '9 dollars'],
         steps: ['Both orders share the same 2 kid tickets, so subtract the receipts: 41 − 23 = 18.', 'That $18 pays for the 2 extra adult tickets: 18 ÷ 2 = 9.'],
       },
+      { q: 'If y = 2x and x + y = 12, what is x?', answers: ['4'], steps: ['x + 2x = 12.', '3x = 12, so x = 4.'] },
+      { q: 'If x + y = 8 and x − y = 2, what is x?', answers: ['5'], steps: ['Add the equations: 2x = 10.', 'x = 5.'] },
     ],
     watchOut: 'When you substitute y = 2x − 1 into 3x + y = 14, wrap in the WHOLE thing — writing 3x + 2x − 1 is right, but forgetting the −1 (or dropping a minus sign) is the mistake that wrecks most systems.',
   },
@@ -83,6 +88,7 @@ export const A1_LESSONS_U09_11: Lesson[] = [
       'QUOTIENT rule — dividing CANCELS copies: x⁵ ÷ x² wipes out 2 copies, leaving x³. Subtract the exponents.',
       'POWER rule — a power of a power MULTIPLIES exponents: (x²)³ is 3 groups of 2 copies = x⁶. And anything to the 0 power is 1 — zero copies of multiplying leaves the do-nothing number.',
       'A NEGATIVE exponent means "flip it under 1": 2⁻³ = 1 ÷ 2³ = 1/8. It is small, not negative.',
+      'Different bases NEVER merge: x³ · y² just stays x³y² — the exponent rules only fire when the bases match.',
     ],
     examples: [
       {
@@ -121,6 +127,8 @@ export const A1_LESSONS_U09_11: Lesson[] = [
         ],
         answer: '64 layers',
       },
+      { q: 'Simplify x⁵ · x².', steps: ['Same base multiplied: ADD the exponents.', 'x⁵⁺² = x⁷.'], answer: 'x⁷' },
+      { q: 'Simplify (x³)⁴.', steps: ['A power of a power: MULTIPLY the exponents.', 'x³ˣ⁴ = x¹² — three copies, taken four times.'], answer: 'x¹²' },
     ],
     practice: [
       {
@@ -138,6 +146,8 @@ export const A1_LESSONS_U09_11: Lesson[] = [
         answers: ['1/4', '0.25', '.25'],
         steps: ['A negative exponent flips the power under 1: 2⁻² = 1 ÷ 2².', '2² = 4, so 2⁻² = 1/4.'],
       },
+      { q: 'Simplify x⁶ · x³. Answer like “x^9”.', answers: ['x^9'], steps: ['Same base, multiplied → add exponents.', '6 + 3 = 9, so x^9.'] },
+      { q: 'Simplify x⁸ ÷ x². Answer like “x^6”.', answers: ['x^6'], steps: ['Division subtracts exponents.', '8 − 2 = 6, so x^6.'] },
     ],
     watchOut: 'x³ · x⁴ is x⁷, not x¹² — multiplying powers ADDS the exponents, it never multiplies them.',
   },
@@ -150,6 +160,7 @@ export const A1_LESSONS_U09_11: Lesson[] = [
       'The rule is y = a · bˣ: START times FACTOR, applied x times. a is where you begin; b is what you multiply by each step.',
       'Get the factor from a percent: up 10% means keep 100% and gain 10%, so ×1.10. Down 20% means keep 80%, so ×0.80.',
       'In any race, exponential EVENTUALLY beats linear — the adder takes the same step forever, but the multiplier takes bigger steps every single round.',
+      'Ask “what happens each step?” Same number ADDED every time = linear. Same number MULTIPLIED every time = exponential. One subtraction and one division settle it.',
     ],
     examples: [
       {
@@ -188,6 +199,8 @@ export const A1_LESSONS_U09_11: Lesson[] = [
         ],
         answer: 'The +$5 plan after 10 days; the penny soon after',
       },
+      { q: 'The pattern 3, 6, 12, 24, … — linear or exponential, and what comes next?', steps: ['Differences: +3, +6, +12 — not constant, so not linear.', 'Ratios: ×2, ×2, ×2 — constant! Exponential.', 'Next: 24 × 2 = 48.'], answer: 'Exponential; next is 48' },
+      { q: 'You start with $100 and it doubles every year. How much after 3 years?', steps: ['Three doublings: 100 → 200 → 400 → 800.', 'Or 100 × 2³ = 800.'], answer: '$800' },
     ],
     practice: [
       {
@@ -205,6 +218,8 @@ export const A1_LESSONS_U09_11: Lesson[] = [
         answers: ['3', 'x3', '×3'],
         steps: ['Divide neighbors: 12 ÷ 4 = 3 and 36 ÷ 12 = 3.', 'Each step multiplies by 3.'],
       },
+      { q: 'Pattern 5, 10, 20, 40, …: what is the next number?', answers: ['80'], steps: ['Each step multiplies by 2.', '40 × 2 = 80.'] },
+      { q: 'Start with 2 and triple each step: 2, 6, 18, … what comes next?', answers: ['54'], steps: ['Each step multiplies by 3.', '18 × 3 = 54.'] },
     ],
     watchOut: 'For "down 20% each year," multiply by 0.80 (what you KEEP) — multiplying $500 by 0.20 gives $100, the part you lost, not the phone\'s value.',
   },

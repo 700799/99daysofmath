@@ -45,6 +45,13 @@
         "So the squared equation accepts a case the original rejects — here, the one where the right side is negative.",
         "A square root is never negative, so any candidate making $x - 5 < 0$ is doomed from the start. Checking is not optional on radical equations."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "x = 2 comes out of the algebra looking exactly as legitimate as x = 9 — and it is the offered trap.",
+        "Squaring created it: at x = 2 the right side is negative and a square root never is. The substitution check is the answer, not an afterthought."
+      ]
     }
   ],
   "tags": [

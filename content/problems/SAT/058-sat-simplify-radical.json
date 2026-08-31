@@ -67,6 +67,13 @@
         "Evaluate the choices: A is about $35.4$, B is about $7.07$ ✓, C is about $4.47$, D is about $22.4$.",
         "A quick decimal estimate is a reliable check on any radical-simplification question, and it needs no rules at all."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Choice A, 25√2, pulls the 25 out of the radical without square-rooting it.",
+        "Whatever leaves the radical must exit as its square root: √25 becomes 5 outside. Check by squaring back: (5√2)² = 50 ✓"
+      ]
     }
   ],
   "tags": [

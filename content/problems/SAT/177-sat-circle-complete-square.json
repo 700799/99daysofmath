@@ -45,6 +45,13 @@
         "Skipping that gives a right side of $12$ and a radius of $\\sqrt{12}$, which is wrong.",
         "Write the additions on both sides in the same motion and the error cannot happen."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Forgetting to add the 9 and 4 to the right side leaves r² = 12 and a wrong radius of about 3.46.",
+        "Whatever completes a square on the left lands on the right in the same breath — twice here, once per variable. Then r² = 25 reads off r = 5."
+      ]
     }
   ],
   "tags": [

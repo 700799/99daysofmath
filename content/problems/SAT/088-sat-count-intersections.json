@@ -67,6 +67,13 @@
         "Zero: the line is tangent, touching at exactly one point.",
         "Negative: the line misses the parabola entirely. Questions asking for the $k$ that makes a line tangent to a curve are discriminant-equals-zero questions."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Sketching by feel suggests a tangent touch, and 'exactly one' is waiting for that guess.",
+        "Count with the discriminant, not the sketch: 36 − 32 = 4 > 0 means two genuine crossings. The algebra is the tiebreaker sketches cannot provide."
+      ]
     }
   ],
   "tags": [

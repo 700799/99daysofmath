@@ -45,6 +45,13 @@
         "A negative divided by $k$ can only be positive if $k$ itself is negative — so $k < 0$ before any computation.",
         "That alone eliminates the positive choices, and the magnitude $|k| = 2$ finishes it."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Dropping the negative in −A/B gives k = 2 instead of −2, and both signs sit among the choices.",
+        "Reason about sign before magnitude: a positive target slope from −3/k forces k negative. Then the size |k| = 2 is easy."
+      ]
     }
   ],
   "tags": [

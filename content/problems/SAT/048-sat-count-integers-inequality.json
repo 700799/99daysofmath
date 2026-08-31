@@ -45,6 +45,13 @@
         "Here the range is $-1$ to $6$, so $6 - (-1) + 1 = 8$.",
         "Listing them out is also fine when the range is short; it is the safest check on a fencepost error."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Forgetting the +1 gives 7; miscounting the strict end brings −2 into the list and gives 9.",
+        "Write the two boundary integers explicitly — smallest −1, largest 6 — then count with b − a + 1. The formula only works after the ends are settled."
+      ]
     }
   ],
   "tags": [

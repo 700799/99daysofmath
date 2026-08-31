@@ -162,6 +162,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Estimate the direction first', steps: ['One US dollar buys more than one Canadian dollar, so any pile of money is a *smaller* number when counted in US dollars.', 'That single sentence tells you to divide, before you touch the arithmetic.', 'On every conversion question, predicting bigger-or-smaller first eliminates the multiply/divide coin flip.'] },
+      { title: '⚠️ The trap here', steps: ['Multiplying gives 500 — more US dollars than Canadian, from the stronger currency. That direction is impossible.', 'Decide bigger-or-smaller before any arithmetic: the US amount must be the smaller number, so divide by 1.25.'] },
     ],
     tags: ['unit-conversion', 'currency', 'direction'], estimatedSeconds: 70,
   },
@@ -185,6 +186,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Convert to a per-inch rate', steps: ['$2$ inches is $25$ miles, so $1$ inch is $12.5$ miles.', '$7.5 \\times 12.5 = 93.75$ miles.', 'Finding the per-one rate first makes the final step a single multiplication, and the intermediate value is easy to sanity-check.'] },
+      { title: '⚠️ The trap here', steps: ['Multiplying 7.5 by 25 directly gives 187.5 — it forgets that 25 miles belongs to TWO inches, not one.', 'Reduce the scale to per-one-inch first (12.5 miles), or set the proportion with matching units stacked. Either habit blocks the doubling.'] },
     ],
     tags: ['scale', 'proportion', 'map'], estimatedSeconds: 75,
   },
@@ -208,6 +210,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Estimate to check the magnitude', steps: ['$7.8$ is nearly $8$, and $8 \\times 250 = 2000$.', 'The exact answer of $1950$ sits just below that, exactly as expected.', 'A five-second estimate catches an order-of-magnitude error, which is the kind that costs a whole question.'] },
+      { title: '⚠️ The trap here', steps: ['Dividing gives about 32 grams — a feather-weight answer for a quarter-liter block of metal.', 'Density × volume = mass, and the cm³ units cancel to confirm it. When the units work out, the operation was right.'] },
     ],
     tags: ['density', 'rate', 'estimation'], estimatedSeconds: 65,
   },
@@ -232,6 +235,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Let the units place the division', steps: ['Pages ÷ (pages/minute) = pages × (minutes/page) = minutes ✓', 'Multiplying instead would give pages², which is meaningless — and that is how you know it is wrong.', 'Dimensional analysis is not just for physics; it settles every rate question on the SAT.'] },
+      { title: '⚠️ The trap here', steps: ['Multiplying pages by rate gives 12,474 — units of pages² per minute, which is meaningless, and that is how you know.', 'Divide pages by pages-per-minute so the units collapse to minutes. Dimensional analysis is the five-second referee here.'] },
     ],
     tags: ['rate', 'time', 'division'], estimatedSeconds: 60,
   },
@@ -396,6 +400,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'A 30% discount is not the same thing', steps: ['Adding the discounts gives $30\\%$ off, or $\\$140$ — and that will be an answer choice.', 'The true combined multiplier is $0.80 \\times 0.90 = 0.72$, a $28\\%$ total discount, not $30\\%$.', 'Successive discounts always total *less* than their sum, because the second is taken on an already-reduced price.'] },
+      { title: '⚠️ The trap here', steps: ['Adding the discounts to 30% gives $140 — offered, and wrong because the 10% acted on an already-reduced price.', 'Chain multipliers instead: 0.80 × 0.90 = 0.72. Successive discounts always total LESS than their sum; expect 28%, not 30%.'] },
     ],
     tags: ['successive-discount', 'percent'], estimatedSeconds: 80,
   },
@@ -419,6 +424,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Answer the question that was asked', steps: ['The increase is $500$; the new population is $13{,}000$. Both will appear as choices.', 'Read whether the question wants "the increase" or "the population after".', 'This is the single most common way to lose an otherwise trivial percent question.'] },
+      { title: '⚠️ The trap here', steps: ['500 — the increase alone — is the classic near-miss, and it appears among the choices.', 'Re-read the final clause: it asks for the population AFTER the year, so the increase must be added back: 13,000.'] },
     ],
     tags: ['percent-increase', 'population'], estimatedSeconds: 55,
   },
@@ -442,6 +448,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Subtracting 30% is not the inverse', steps: ['Taking $30\\%$ off $156$ gives $109.2$ — and it is wrong, because the $30\\%$ was of the smaller original.', 'The inverse of "multiply by $1.30$" is "divide by $1.30$", never "subtract $30\\%$".', 'Whenever a question gives you the result and asks for the start, divide by the multiplier.'] },
+      { title: '⚠️ The trap here', steps: ['Taking 30% off 156 gives 109.2 — wrong base: the 30% belonged to the smaller original, not to 156.', 'Reverse a percent by DIVIDING by its multiplier: 156 ÷ 1.3 = 120. Then check forward: 120 + 36 = 156 ✓'] },
     ],
     tags: ['reverse-percent', 'increase'], estimatedSeconds: 75,
   },
@@ -465,6 +472,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Compound versus simple', steps: ['Simple interest would pay $5\\%$ of the original $\\$2000$ each year: $\\$100 + \\$100 = \\$2200$.', 'Compound interest pays on the growing balance, so it reaches $\\$2205$.', 'The gap is small over two years and enormous over twenty — which is why the SAT tests that you know they are different.'] },
+      { title: '⚠️ The trap here', steps: ['2,200 is simple interest — 5% of the original both years — and it sits one choice away from the right answer.', 'Compound means the second year\'s 5% acts on 2,100, not 2,000. The extra $5 IS the compounding; its absence flags the wrong model.'] },
     ],
     tags: ['compound-interest', 'exponential'], estimatedSeconds: 85,
   },
@@ -643,6 +651,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Predict the direction first', steps: ['Removing a value *above* the mean pulls the mean down; removing one below pushes it up.', 'Here $22 > 15$, so the new mean must be below $15$ — which rules out any choice at or above it.', 'Predicting the direction before computing turns a calculation into a check.'] },
+      { title: '⚠️ The trap here', steps: ['Dividing the new total by the OLD count — 98 ÷ 8 = 12.25 — is the engineered miss.', 'Removing a value changes both the sum and the count. Update the pair together: 98 across 7 values.'] },
     ],
     tags: ['mean', 'sum', 'removal'], estimatedSeconds: 80,
   },
@@ -667,6 +676,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Locating the middle pair', steps: ['For $n$ values with $n$ even, the middle two sit at positions $\\dfrac{n}{2}$ and $\\dfrac{n}{2} + 1$.', 'Here $n = 6$, so positions $3$ and $4$ — the values $9$ and $12$.', 'Counting inward from both ends simultaneously is the practical version of this, and it is harder to miscount.'] },
+      { title: '⚠️ The trap here', steps: ['Answering 9 or 12 — either middle value alone — is the designed error for even-sized sets.', 'An even count has no single middle: average the middle PAIR. The median of this set is 10.5, a number not even in the data.'] },
     ],
     tags: ['median', 'even-count'], estimatedSeconds: 60,
   },
@@ -702,6 +712,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Do not average the value column', steps: ['Averaging $1, 2, 3, 4$ gives $2.5$ — wrong, because it treats each row as one student.', 'The frequency column says how many students each row stands for, and it must weight the calculation.', 'Divide by the total *frequency* ($20$), never by the number of rows ($4$).'] },
+      { title: '⚠️ The trap here', steps: ['Averaging the values column — (1+2+3+4)/4 = 2.5 — pretends each row is one student.', 'The frequency column is the whole point: weight each value by its count and divide by 20 students, not 4 rows.'] },
     ],
     tags: ['frequency-table', 'weighted-mean'], estimatedSeconds: 90,
   },
@@ -725,6 +736,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Range says nothing about the middle', steps: ['Two data sets can share a range of $37$ and look nothing alike — one clustered, one evenly spread.', 'Range uses only the two extreme values, which also makes it very sensitive to outliers.', 'That is why the SAT pairs range questions with standard deviation questions: they measure spread in genuinely different ways.'] },
+      { title: '⚠️ The trap here', steps: ['Subtracting the given numbers — 37 − 12 = 25 — misreads which quantity is which.', 'Range = max − min, so max = min + range. Rearrange the definition BEFORE substituting and the two numbers cannot collide.'] },
     ],
     tags: ['range', 'spread'], estimatedSeconds: 55,
   },
@@ -929,6 +941,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'What shrinks the margin', steps: ['A larger sample narrows the margin of error; a smaller one widens it.', 'The margin reflects sampling variability only — it does not account for a biased sampling method.', 'A badly-drawn sample can have a tiny margin of error and still be completely wrong about the population.'] },
+      { title: '⚠️ The trap here', steps: ['45% looks suspicious because it sits exactly on the boundary — but the interval INCLUDES its endpoints.', 'Build the interval first: 45 to 51, endpoints in. Only then scan the choices for the value outside; 53% is the lone stranger.'] },
     ],
     tags: ['margin-of-error', 'inference', 'interval'], estimatedSeconds: 75,
   },
@@ -959,6 +972,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'The two-by-two that answers every one of these', steps: ['Random selection + random assignment: cause, generalizable to the whole population.', 'Random assignment only (volunteers): cause, but only for the participants — this study.', 'Random selection only (survey): generalizable, but association only, never cause. Neither: association among participants only.'] },
+      { title: '⚠️ The trap here', steps: ['Choice B feels generous and reasonable — and it quietly extends the finding to millions of adults who were never sampled.', 'Volunteers were randomly ASSIGNED, not randomly SELECTED. Assignment buys the causal claim; only selection would buy the generalization.'] },
     ],
     tags: ['experiment', 'causation', 'random-assignment'], estimatedSeconds: 90,
   },
@@ -994,6 +1008,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Row condition versus column condition', steps: ['This question conditions on a *row* (bus riders), so the row total is the denominator.', 'The earlier question conditioned on a *column* (Grade 10), so the column total was the denominator.', 'Same table, same numerator style, entirely different answers. Reading which way the condition runs is the whole skill.'] },
+      { title: '⚠️ The trap here', steps: ['45/110 ≈ 41% answers a different question — \'of Grade 9, what share ride the bus\' — by conditioning on the column.', 'The phrase \'of the students who take the bus\' names the ROW as the denominator: 45 of 80. Circle the denominator group before reading any number.'] },
     ],
     tags: ['two-way-table', 'percent', 'conditional'], estimatedSeconds: 80,
   },
@@ -1029,6 +1044,7 @@ export const problemsSATpsda: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Subtracting from the total beats adding rows', steps: ['Adding $30 + 35$ works, but with four or five commute categories the complement is much faster.', 'Column total minus the excluded row gives the "not" count in one step.', 'The complement also generalizes: for probability, $P(\\text{not } A) = 1 - P(A)$ is the same idea.'] },
+      { title: '⚠️ The trap here', steps: ['Adding rows you did not need, or answering 65 (one grade\'s count) instead of the difference, are the designed exits.', 'Complement per column first — 110 − 45 and 90 − 35 — then subtract. Two clean complements beat three additions.'] },
     ],
     tags: ['two-way-table', 'complement', 'multi-step'], estimatedSeconds: 85,
   },

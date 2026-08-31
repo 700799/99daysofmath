@@ -45,6 +45,13 @@
         "By symmetry the peak is halfway between, at $t = 2$.",
         "Then $h(2) = 64$ feet. Reading the launch and landing times off the factored form is often the fastest route on projectile questions."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "t = 2, the moment of the peak, is offered as if it were the height.",
+        "The question asks how HIGH, a value of h, so the vertex time must still be substituted: h(2) = 64 feet. When and how-high are different coordinates of the same point."
+      ]
     }
   ],
   "tags": [

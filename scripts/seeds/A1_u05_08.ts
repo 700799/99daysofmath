@@ -131,6 +131,7 @@ export const problemsA1u05: SeedProblem[] = [
     explanation: ['Set up the equation: $5x = 35$.', 'Undo "times $5$" with "divide by $5$": $x = 35 \\div 5$.', 'The input was $x = 7$.'],
     alternativeExplanations: [
       { title: 'Guess and check', steps: ['Try inputs: $f(6) = 30$ — too small. $f(8) = 40$ — too big.', '$f(7) = 35$ — exactly right, so the input was $7$.'] },
+      { title: '⚠️ Dodge the trap', steps: ['Feeding 35 INTO the machine — 5 × 35 = 175 — answers the reverse of what was asked.', '35 is what came OUT. To find what went in, undo the machine: 35 ÷ 5 = 7.'] },
     ],
     tags: ['functions', 'solve-for-input'], estimatedSeconds: 45,
   },
@@ -148,6 +149,7 @@ export const problemsA1u05: SeedProblem[] = [
     explanation: ['The domain (allowed inputs) is $q = 0$ to $10$.', 'The rule multiplies by $4$, so bigger inputs give bigger outputs.', 'Largest output: $f(10) = 4 \\times 10 = 40$ points.'],
     alternativeExplanations: [
       { title: 'List the outputs', steps: ['The outputs are $0, 4, 8, 12, \\ldots$ climbing by $4$ each time.', 'They stop when the questions run out at $q = 10$: the last one is $40$.'] },
+      { title: '⚠️ Dodge the trap', steps: ['Answering 10 hands back the number of questions — the input — when the question wants the best possible SCORE.', 'Push the biggest allowed input through the machine: f(10) = 4 × 10 = 40 points.'] },
     ],
     tags: ['functions', 'range', 'word-problem'], estimatedSeconds: 50,
   },
@@ -165,6 +167,7 @@ export const problemsA1u05: SeedProblem[] = [
     explanation: ['Set up: $2x + 3 = 19$.', 'Undo "plus $3$": $2x = 19 - 3 = 16$.', 'Undo "times $2$": $x = 16 \\div 2 = 8$.'],
     alternativeExplanations: [
       { title: 'Check with the table', steps: ['Try $f(7) = 17$ and $f(9) = 21$ — the output $19$ sits between them.', '$f(8) = 2 \\times 8 + 3 = 19$. The input was $8$.'] },
+      { title: '⚠️ Dodge the trap', steps: ['Running 19 forward — 2(19) + 3 = 41 — uses the machine in the wrong direction.', 'Walk backwards through the machine, last step first: 19 − 3 = 16, then 16 ÷ 2 = 8.'] },
     ],
     tags: ['functions', 'solve-for-input', 'two-step'], estimatedSeconds: 55,
   },
@@ -296,6 +299,7 @@ export const problemsA1u05: SeedProblem[] = [
     explanation: ['Rise: $7 - 7 = 0$ — the height never changes.', 'Run: $9 - 4 = 5$.', 'Slope $= \\frac{0}{5} = 0$: a perfectly FLAT line, like a hallway floor.'],
     alternativeExplanations: [
       { title: 'Flat floor, not no floor', steps: ['Both points sit at height $7$, so walking between them is walking on flat ground.', 'Flat means zero steepness — slope $0$ (not "no slope").'] },
+      { title: '⚠️ Dodge the trap', steps: ['“Undefined” is the trap word here — that is the VERTICAL line\'s slope, not the flat line\'s.', 'Both points sit at height 7, so the rise is 0, and 0 ÷ 5 = 0. Flat road, zero steepness — a real number.'] },
     ],
     tags: ['slope', 'zero-slope'], estimatedSeconds: 40,
   },
@@ -313,6 +317,7 @@ export const problemsA1u05: SeedProblem[] = [
     explanation: ['Points: $(1, 88)$ and $(3, 64)$.', 'Rise: $64 - 88 = -24$. Run: $3 - 1 = 2$.', 'Slope $= \\frac{-24}{2} = -12$: the battery loses $12\\%$ each hour.'],
     alternativeExplanations: [
       { title: 'Fill the missing hour', steps: ['From hour $1$ to hour $3$ the battery fell $24\\%$ over $2$ hours — split it evenly.', 'Hour $2$ must read $76\\%$: each hour drops $12$, so the rate is $-12$.'] },
+      { title: '⚠️ Dodge the trap', steps: ['Dividing by 3 — the hour on the clock — instead of the 2-hour GAP gives −8, a neat wrong answer.', 'Slope uses the change in time, not the time itself: from hour 1 to hour 3 is 2 hours. −24 ÷ 2 = −12% per hour.'] },
     ],
     tags: ['slope', 'rate-of-change', 'word-problem'], estimatedSeconds: 55,
   },
@@ -330,6 +335,7 @@ export const problemsA1u05: SeedProblem[] = [
     explanation: ['Rise: $2 - 5 = -3$.', 'Run: $5 - 1 = 4$.', 'Slope $= -\\frac{3}{4}$ — a gentle downhill: down $3$ for every $4$ across.'],
     alternativeExplanations: [
       { title: 'Subtract the other way', steps: ['Swap the order of BOTH subtractions: rise $5 - 2 = 3$, run $1 - 5 = -4$.', '$\\frac{3}{-4}$ is still $-\\frac{3}{4}$ — same slope, as long as both are swapped together.'] },
+      { title: '⚠️ Dodge the trap', steps: ['Flipping to run-over-rise gives −4/3 — right numbers, upside-down fraction.', 'Rise first, run second: (2 − 5) on top, (5 − 1) on the bottom → −3/4. Say “rise over run” as you write it.'] },
     ],
     tags: ['slope', 'two-points', 'negative-slope', 'fractions'], estimatedSeconds: 55,
   },
@@ -461,6 +467,7 @@ export const problemsA1u05: SeedProblem[] = [
     explanation: ['Substitute $m = 20$: $y = 2 + 0.15 \\times 20$.', '$0.15 \\times 20 = 3$ — fifteen cents, twenty times, is $\\$3$.', 'Total: $2 + 3 = \\$5$.'],
     alternativeExplanations: [
       { title: 'Money in pieces', steps: ['Ten minutes of riding costs $10 \\times \\$0.15 = \\$1.50$, so twenty minutes costs $\\$3$.', 'Add the $\\$2$ unlock fee at the start: $\\$5$ total.'] },
+      { title: '⚠️ Dodge the trap', steps: ['Stopping at 0.15 × 20 = 3 forgets the $2 unlock fee that every ride pays.', 'The rule has two parts: 2 + 0.15(20) = 2 + 3 = $5. Fixed fee plus the per-minute part, always both.'] },
     ],
     tags: ['slope-intercept', 'evaluate', 'decimals', 'word-problem'], estimatedSeconds: 55,
   },
@@ -478,6 +485,7 @@ export const problemsA1u05: SeedProblem[] = [
     explanation: ['Graphing recipe: plot $b$, then use $m$ as rise over run.', 'Slope $3 = \\frac{3}{1}$: right $1$, up $3$.', 'From $(0, 2)$: right $1$, up $3$ lands on $(1, 5)$ — the $y$-value is $5$.'],
     alternativeExplanations: [
       { title: 'Just plug in', steps: ['Moving right $1$ from $x = 0$ puts you at $x = 1$.', '$y = 3 \\times 1 + 2 = 5$ — the graph move and the formula agree.'] },
+      { title: '⚠️ Dodge the trap', steps: ['Moving up by 1 — copying the run instead of the slope — lands on 3 instead of 5.', 'The slope 3 is the STAIR HEIGHT: right 1, up 3. From (0, 2) that is (1, 5), so y = 5.'] },
     ],
     tags: ['slope-intercept', 'graphing', 'rise-over-run'], estimatedSeconds: 50,
   },
@@ -495,6 +503,7 @@ export const problemsA1u05: SeedProblem[] = [
     explanation: ['On the $x$-axis, $y = 0$: set $0 = 4x - 8$.', 'Add $8$: $8 = 4x$.', 'Divide by $4$: $x = 2$. The line crosses at $(2, 0)$.'],
     alternativeExplanations: [
       { title: 'Climb from the start', steps: ['The line starts at $(0, -8)$, which is $8$ below the $x$-axis, and climbs $4$ per step.', 'It needs $8 \\div 4 = 2$ steps to reach height $0$ — so it crosses at $x = 2$.'] },
+      { title: '⚠️ Dodge the trap', steps: ['−8 is the y-intercept — where the line crosses the OTHER axis — and it is the classic mix-up here.', 'Crossing the x-axis means y = 0: solve 4x − 8 = 0 to get x = 2. Which axis you cross decides which letter is zero.'] },
     ],
     tags: ['slope-intercept', 'x-intercept', 'solve'], estimatedSeconds: 60,
   },

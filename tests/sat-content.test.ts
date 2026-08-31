@@ -57,6 +57,19 @@ describe('SAT problem bank', () => {
     }
   });
 
+  it('every hardest problem carries a named pitfall walkthrough', () => {
+    // Difficulty-3 problems get a second alternate explanation that names the
+    // engineered wrong answer and walks the escape.
+    for (const p of SAT.filter((q) => q.difficulty === 3)) {
+      const alts = p.alternativeExplanations ?? [];
+      expect(alts.length, p.id).toBeGreaterThanOrEqual(2);
+      expect(
+        alts.some((a) => a.title.includes('trap')),
+        `${p.id} has no trap-titled walkthrough`,
+      ).toBe(true);
+    }
+  });
+
   it('every hardest problem adds the "Try a simpler one" scaffold', () => {
     for (const p of SAT.filter((q) => q.difficulty === 3)) {
       expect((p.hints ?? []).length, p.id).toBe(4);
@@ -144,9 +157,11 @@ describe('SAT unit playbooks', () => {
       expect(pb.overview.length, at).toBeGreaterThan(80);
       expect(pb.frequency.length, at).toBeGreaterThan(10);
       expect(pb.methods.length, at).toBeGreaterThanOrEqual(3);
-      expect(pb.examples.length, at).toBeGreaterThanOrEqual(2);
-      expect(pb.mustKnow.length, at).toBeGreaterThanOrEqual(3);
-      expect(pb.traps.length, at).toBeGreaterThanOrEqual(3);
+      expect(pb.examples.length, at).toBeGreaterThanOrEqual(4);
+      expect(pb.mustKnow.length, at).toBeGreaterThanOrEqual(4);
+      expect(pb.traps.length, at).toBeGreaterThanOrEqual(5);
+      expect(pb.mastery.length, at).toBeGreaterThanOrEqual(3);
+      for (const m of pb.mastery) expect(m.length, at).toBeGreaterThan(40);
       expect(pb.desmos.length, at).toBeGreaterThan(60);
       expect(pb.timing.length, at).toBeGreaterThan(40);
       for (const m of pb.methods) {
@@ -163,7 +178,7 @@ describe('SAT unit playbooks', () => {
 
 describe('SAT strategy tips', () => {
   it('has 100+ tips with unique ids', () => {
-    expect(SAT_TIPS.length).toBeGreaterThanOrEqual(100);
+    expect(SAT_TIPS.length).toBeGreaterThanOrEqual(128);
     expect(new Set(SAT_TIPS.map((t) => t.id)).size).toBe(SAT_TIPS.length);
   });
 
@@ -181,7 +196,7 @@ describe('SAT strategy tips', () => {
 
   it('every content area has tips tagged to it for its unit playbooks', () => {
     for (const a of SAT_AREAS) {
-      expect(SAT_TIPS.filter((t) => t.area === a).length, a).toBeGreaterThanOrEqual(4);
+      expect(SAT_TIPS.filter((t) => t.area === a).length, a).toBeGreaterThanOrEqual(12);
     }
   });
 });

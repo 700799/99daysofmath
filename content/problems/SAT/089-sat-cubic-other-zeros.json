@@ -45,6 +45,13 @@
         "By hand, test the divisors of the constant term $6$: $\\pm 1, \\pm 2, \\pm 3, \\pm 6$.",
         "$p(3) = 27 - 18 - 15 + 6 = 0$ ✓ — the Rational Root Theorem means integer zeros can only be divisors of the constant, which makes the search short."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Mis-factoring the quotient as (x + 3)(x − 2) yields zeros −3 and 2 and a wrong greatest.",
+        "Audit the middle term: (x − 3)(x + 2) expands to −x ✓. Or skip doubt entirely and verify p(3) = 27 − 18 − 15 + 6 = 0."
+      ]
     }
   ],
   "tags": [

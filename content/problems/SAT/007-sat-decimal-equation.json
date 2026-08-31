@@ -45,6 +45,13 @@
         "Then $210 = 15x$, so $x = 14$ — integers throughout.",
         "Faster still: graph $y_1 = 0.25x + 1.5$ and $y_2 = 0.4x - 0.6$ in Desmos and click the intersection."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Treat the −0.6 as +0.6 and you get 0.9 = 0.15x, so x = 6 — a clean-looking wrong answer built from one dropped sign.",
+        "Move both constants across in a single written step and then verify x = 14 in the original equation; the check costs ten seconds and catches exactly this slip."
+      ]
     }
   ],
   "tags": [

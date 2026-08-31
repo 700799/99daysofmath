@@ -201,6 +201,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'The invisible exponent', steps: ['Choice D is the trap: it forgets that the lone $y$ carries an exponent of $1$.', 'Any variable written without an exponent has an exponent of $1$, and any expression without a coefficient has a coefficient of $1$.', 'Writing those in explicitly before you start costs a second and prevents the most common slip in this question type.'] },
+      { title: '⚠️ The trap here', steps: ['Choice D forgets that the bare y carries an invisible exponent 1, so y³·y should become y⁴.', 'Rewrite y as y¹ before adding exponents. Making the invisible exponent visible costs one second and removes the trap entirely.'] },
     ],
     tags: ['exponents', 'monomials'], estimatedSeconds: 55,
   },
@@ -231,6 +232,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Check with a decimal', steps: ['$\\sqrt{50} \\approx 7.07$.', 'Evaluate the choices: A is about $35.4$, B is about $7.07$ ✓, C is about $4.47$, D is about $22.4$.', 'A quick decimal estimate is a reliable check on any radical-simplification question, and it needs no rules at all.'] },
+      { title: '⚠️ The trap here', steps: ['Choice A, 25√2, pulls the 25 out of the radical without square-rooting it.', 'Whatever leaves the radical must exit as its square root: √25 becomes 5 outside. Check by squaring back: (5√2)² = 50 ✓'] },
     ],
     tags: ['radicals', 'simplify'], estimatedSeconds: 55,
   },
@@ -254,6 +256,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Target just the term you need', steps: ['The $x$ term comes only from the outer and inner products of FOIL.', 'Outer: $2x \\cdot 5 = 10x$. Inner: $-3 \\cdot x = -3x$. Sum: $7x$.', 'Skipping the first and last products saves time and removes two chances to make a sign error.'] },
+      { title: '⚠️ The trap here', steps: ['Answering −15 gives c, and 10 gives only the outer product — b needs BOTH cross terms.', 'The x-coefficient is outer plus inner: 10x + (−3x) = 7x. Collect the pair before reporting.'] },
     ],
     tags: ['expanding', 'foil', 'coefficient'], estimatedSeconds: 60,
   },
@@ -277,6 +280,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Substitute a convenient value', steps: ['Since the identity holds for every $x$, pick one that simplifies things — say $x = 0$.', 'The left becomes $a \\cdot 3 = 3a$ and the right becomes $b$, so $b = 3a$ immediately.', 'Then use $x = 1$: $(1 + a)(4) = 1 + 11 + b$, so $4 + 4a = 12 + 3a$ and $a = 8$, giving $b = 24$.'] },
+      { title: '⚠️ The trap here', steps: ['a = 8 is the halfway answer — correct work, wrong quantity, and it is among the choices.', 'The question asks for b, which is 3a. Note the target before matching coefficients so the last step happens.'] },
     ],
     tags: ['polynomial-identity', 'coefficient-matching'], estimatedSeconds: 90,
   },
@@ -442,6 +446,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Pull out the constant first if it helps', steps: ['You could also factor as $2(x^2 - 4x) = 2 \\cdot x(x - 4)$.', 'The constant $2$ can never be zero, so it contributes no solution — only the variable factors matter.', 'Recognizing that a numerical factor is irrelevant to the roots saves you from chasing it.'] },
+      { title: '⚠️ The trap here', steps: ['Dividing both sides by x turns 2x² = 8x into 2x = 8 — the root x = 0 vanishes without a trace.', 'Factor a zero product instead of dividing: 2x(x − 4) = 0 keeps both roots, and then greatest-vs-least is a safe final read.'] },
     ],
     tags: ['quadratic', 'gcf', 'factoring'], estimatedSeconds: 55,
   },
@@ -465,6 +470,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'The forgotten negative root', steps: ['Writing only $x - 3 = 4$ loses half the answer, and the missing root is always among the choices.', 'Every time you take a square root to undo a square, write the $\\pm$ before anything else.', 'Expanding to $x^2 - 6x - 7 = 0$ and factoring to $(x - 7)(x + 1)$ gives the same pair — but takes longer.'] },
+      { title: '⚠️ The trap here', steps: ['Writing only x − 3 = 4 happens to survive here, but the twin question asking for the LESSER solution finds you with nothing.', 'Write ± in the same motion as the square root, every time. Both roots must exist on paper before you choose between them.'] },
     ],
     tags: ['quadratic', 'square-root-method', 'plus-minus'], estimatedSeconds: 65,
   },
@@ -488,6 +494,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'A negative product is information', steps: ['If the product of the roots is negative, the two roots must have opposite signs.', 'If the product is positive, they share a sign — and then the sum tells you which.', 'Reading the signs off $b$ and $c$ before factoring often tells you what pair to look for.'] },
+      { title: '⚠️ The trap here', steps: ['The sum, 4, is offered right beside the product; so is +12, the product with a dropped sign.', 'Product is c/a WITH ITS SIGN: −12/1. Check against the factored roots 6 and −2: their product is −12 ✓'] },
     ],
     tags: ['quadratic', 'product-of-roots'], estimatedSeconds: 60,
   },
@@ -511,6 +518,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Let a Desmos slider find it', steps: ['Type $y = kx^2 + 12x + 9$ and add a slider for $k$.', 'Drag $k$ until the parabola just touches the $x$-axis at one point rather than crossing it twice.', 'The slider lands on $k = 4$. This is a genuinely fast route when the algebra is uncertain, and it makes the geometry of "one solution" visible.'] },
+      { title: '⚠️ The trap here', steps: ['A sign slip in 144 − 36k = 0 gives k = −4, and treating exactly one as at least one turns the equation into an inequality.', 'Exactly one solution pins the discriminant to zero — an equation, not an inequality — and 144 = 36k keeps every term positive.'] },
     ],
     tags: ['discriminant', 'parameter', 'desmos'], estimatedSeconds: 85,
   },
@@ -689,6 +697,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Verify by testing x = 0', steps: ['The original at $x = 0$ gives $1$.', 'Choice A: $(0 + 3)^2 - 8 = 9 - 8 = 1$ ✓. Choice B gives $10$, C gives $1$ ✓, D gives $1$ ✓.', 'Test a second value, $x = 1$: original gives $8$; A gives $16 - 8 = 8$ ✓, C gives $49 - 35 = 14$ ✗, D gives $4 - 8 = -4$ ✗. Two test values is almost always enough.'] },
+      { title: '⚠️ The trap here', steps: ['Choice B adds the 9 to build the square but never subtracts it back — the expression silently grew by 9.', 'Add and subtract in the same written step: +9 − 9. Then test x = 0 against the original as a five-second audit.'] },
     ],
     tags: ['completing-the-square', 'vertex-form'], estimatedSeconds: 85,
   },
@@ -712,6 +721,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Use symmetry between the zeros', steps: ['Factor: $h(t) = -16t(t - 4)$, so the ball is at height zero at $t = 0$ and $t = 4$.', 'By symmetry the peak is halfway between, at $t = 2$.', 'Then $h(2) = 64$ feet. Reading the launch and landing times off the factored form is often the fastest route on projectile questions.'] },
+      { title: '⚠️ The trap here', steps: ['t = 2, the moment of the peak, is offered as if it were the height.', 'The question asks how HIGH, a value of h, so the vertex time must still be substituted: h(2) = 64 feet. When and how-high are different coordinates of the same point.'] },
     ],
     tags: ['quadratic-model', 'projectile', 'maximum'], estimatedSeconds: 90,
   },
@@ -735,6 +745,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Why a third point is needed', steps: ['Infinitely many parabolas share the same two $x$-intercepts — they differ only in how steeply they rise.', 'The value of $a$ is exactly that steepness, and one extra point pins it down.', 'This is why the SAT always supplies a third point when it asks you to build a parabola from its zeros.'] },
+      { title: '⚠️ The trap here', steps: ['Losing a sign in a(3)(−5) = −15 gives a = −1, flipping the parabola upside down.', 'Multiply the two factor values first, sign included: (3)(−5) = −15. Then −15a = −15 reads off a = 1 cleanly.'] },
     ],
     tags: ['factored-form', 'parameter', 'parabola'], estimatedSeconds: 80,
   },
@@ -758,6 +769,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Read it as a perfect square', steps: ['One repeated root means the quadratic is a perfect square: $(x + k)^2 = x^2 + 2kx + k^2$.', 'Matching the constant: $k^2 = 9$, so $k = \\pm 3$.', 'Then $b = 2k = \\pm 6$, and the positivity condition selects $6$. The condition on $b$ exists precisely because both signs are otherwise valid.'] },
+      { title: '⚠️ The trap here', steps: ['b² = 36 tempts two errors: answering 36 itself, or forgetting the condition that picks between ±6.', 'Finish the square root, then apply the stated sign condition. The problem says b is positive precisely because both roots survive the algebra.'] },
     ],
     tags: ['discriminant', 'tangent', 'perfect-square'], estimatedSeconds: 85,
   },
@@ -929,6 +941,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Why squaring invents solutions', steps: ['Squaring erases signs: $3$ and $-3$ both square to $9$.', 'So the squared equation accepts a case the original rejects — here, the one where the right side is negative.', 'A square root is never negative, so any candidate making $x - 5 < 0$ is doomed from the start. Checking is not optional on radical equations.'] },
+      { title: '⚠️ The trap here', steps: ['x = 2 comes out of the algebra looking exactly as legitimate as x = 9 — and it is the offered trap.', 'Squaring created it: at x = 2 the right side is negative and a square root never is. The substitution check is the answer, not an afterthought.'] },
     ],
     tags: ['radical-equation', 'extraneous-solution'], estimatedSeconds: 95,
   },
@@ -959,6 +972,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'What the discriminant means geometrically', steps: ['Positive discriminant: the line cuts the parabola at two points.', 'Zero: the line is tangent, touching at exactly one point.', 'Negative: the line misses the parabola entirely. Questions asking for the $k$ that makes a line tangent to a curve are discriminant-equals-zero questions.'] },
+      { title: '⚠️ The trap here', steps: ['Sketching by feel suggests a tangent touch, and \'exactly one\' is waiting for that guess.', 'Count with the discriminant, not the sketch: 36 − 32 = 4 > 0 means two genuine crossings. The algebra is the tiebreaker sketches cannot provide.'] },
     ],
     tags: ['nonlinear-system', 'discriminant', 'intersections'], estimatedSeconds: 80,
   },
@@ -982,6 +996,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Graph it, or test small integers', steps: ['Graphing $y = x^3 - 2x^2 - 5x + 6$ in Desmos shows three $x$-intercepts at $-2$, $1$, and $3$.', 'By hand, test the divisors of the constant term $6$: $\\pm 1, \\pm 2, \\pm 3, \\pm 6$.', '$p(3) = 27 - 18 - 15 + 6 = 0$ ✓ — the Rational Root Theorem means integer zeros can only be divisors of the constant, which makes the search short.'] },
+      { title: '⚠️ The trap here', steps: ['Mis-factoring the quotient as (x + 3)(x − 2) yields zeros −3 and 2 and a wrong greatest.', 'Audit the middle term: (x − 3)(x + 2) expands to −x ✓. Or skip doubt entirely and verify p(3) = 27 − 18 − 15 + 6 = 0.'] },
     ],
     tags: ['polynomial', 'zeros', 'factor-theorem'], estimatedSeconds: 100,
   },
@@ -1005,6 +1020,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Or force the discriminant to zero', steps: ['Set $x^2 - 6x + 5 = k$, so $x^2 - 6x + (5 - k) = 0$.', 'One solution means $36 - 4(5 - k) = 0$, giving $36 - 20 + 4k = 0$ and $k = -4$.', 'Both routes work; recognizing the vertex is faster, but the discriminant route generalizes to non-horizontal lines.'] },
+      { title: '⚠️ The trap here', steps: ['x = 3, the vertex\'s input, is the classic wrong entry — the line y = k is horizontal, so k is a HEIGHT.', 'k must equal the vertex\'s y-value: f(3) = −4. Say which coordinate the question\'s object carries before answering.'] },
     ],
     tags: ['nonlinear-system', 'vertex', 'tangent'], estimatedSeconds: 90,
   },
@@ -1190,6 +1206,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Check the first year', steps: ['After one year the car should be worth $24000 - 0.12(24000) = 24000 - 2880 = \\$21{,}120$.', 'Choice C at $t = 1$: $24000(0.88) = 21120$ ✓', 'Building the expected first-year value before you look at the choices is the fastest way to handle every model-selection question.'] },
+      { title: '⚠️ The trap here', steps: ['Choice A keeps 12% each year instead of losing it — a car worth $346 after two years should fail your sniff test.', 'Build the multiplier from what REMAINS: 1 − 0.12 = 0.88. Then sanity-check year one: 24,000 × 0.88 = 21,120, a plausible used-car value.'] },
     ],
     tags: ['exponential', 'decay', 'depreciation'], estimatedSeconds: 70,
   },
@@ -1213,6 +1230,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Just keep doubling', steps: ['$f(3) = 40$, so $f(4) = 80$ and $f(5) = 160$.', 'For a small number of steps this beats building the formula.', 'The trap answer is $80$ — stopping one step short. Count your steps on scratch paper rather than in your head.'] },
+      { title: '⚠️ The trap here', steps: ['80 — one doubling short — is the most-picked wrong answer on questions like this.', 'Count steps on paper: from f(3) to f(5) is TWO doublings, 40 → 80 → 160. The exponent gap, not the destination index, sets how many.'] },
     ],
     tags: ['exponential', 'table', 'extend'], estimatedSeconds: 70,
   },
@@ -1236,6 +1254,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Count the halvings, not the hours', steps: ['The most common error is using an exponent of $24$ instead of $4$.', 'The exponent counts *periods*, and the number of periods is elapsed time divided by the half-life.', 'Writing "$24 \\div 6 = 4$ halvings" as your first line makes the exponent impossible to get wrong.'] },
+      { title: '⚠️ The trap here', steps: ['Using 24 as the exponent gives an astronomically small number; using 6 gives another neat wrong answer.', 'The exponent counts halvings: 24 ÷ 6 = 4 of them. Write that division as your first line and the rest is four clean halvings.'] },
     ],
     tags: ['exponential', 'half-life', 'decay'], estimatedSeconds: 80,
   },
@@ -1259,6 +1278,7 @@ export const problemsSATadv: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Reason in steps', steps: ['Going from $x = 1$ to $x = 3$ is two steps, and the output went from $12$ to $48$ — a factor of $4$.', 'Two equal steps multiplying to $4$ means each step multiplies by $2$, so $b = 2$.', 'Step back once from $f(1) = 12$ to get $f(0) = 6$, which is $a$ by definition. Dividing to cancel $a$ is the general technique whenever two function values are given.'] },
+      { title: '⚠️ The trap here', steps: ['b = 2 is the halfway result, and it is offered as a choice.', 'The question wants a. After b emerges, one substitution remains: a·2 = 12, so a = 6. Halfway numbers are the most common wrong answers on two-parameter problems.'] },
     ],
     tags: ['exponential', 'parameters', 'ratio'], estimatedSeconds: 95,
   },

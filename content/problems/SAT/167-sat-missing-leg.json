@@ -45,6 +45,13 @@
         "The hypotenuse is always the longest side, so a leg must come out smaller than it.",
         "That plausibility check catches the add/subtract error immediately."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Adding gives √194 ≈ 13.9 — a 'leg' longer than the hypotenuse, which is geometrically impossible.",
+        "Finding a leg means SUBTRACTING squares. The built-in check: any leg must come out shorter than 13."
+      ]
     }
   ],
   "tags": [

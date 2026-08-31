@@ -42,6 +42,13 @@
         "You started at 30 points and now sit at 18, so you spent $30 - 18 = 12$ points.",
         "At 2 points a round, that is $12 \\div 2 = 6$ rounds."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "Stopping at 30 − 18 = 12 answers “how many points did I use?” — not “how many rounds?”",
+        "The 12 points still need to be turned into rounds: 12 ÷ 2 = 6. Word problems love to hide one last division."
+      ]
     }
   ],
   "tags": [

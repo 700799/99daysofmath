@@ -45,6 +45,13 @@
         "Range uses only the two extreme values, which also makes it very sensitive to outliers.",
         "That is why the SAT pairs range questions with standard deviation questions: they measure spread in genuinely different ways."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Subtracting the given numbers — 37 − 12 = 25 — misreads which quantity is which.",
+        "Range = max − min, so max = min + range. Rearrange the definition BEFORE substituting and the two numbers cannot collide."
+      ]
     }
   ],
   "tags": [

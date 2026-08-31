@@ -67,6 +67,13 @@
         "Two lines fail to intersect exactly when they are parallel — same slope, different intercept.",
         "Same slope means $k = 3$; the intercepts $8$ and $-5$ already differ, so there is genuinely no solution."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Choice D, k = 8, is bait for matching the constant 8 instead of the coefficient of x.",
+        "Only the x-coefficients decide whether the sides can ever balance; the constants just decide between no solution and infinitely many once the coefficients match."
+      ]
     }
   ],
   "tags": [

@@ -14,6 +14,7 @@ export const A1_LESSONS_U05_08: Lesson[] = [
       'To evaluate, REPLACE every x with the input number, then do the arithmetic.',
       'The DOMAIN is the set of allowed inputs; the RANGE is the set of possible outputs.',
       'If one input could give two different outputs, it is NOT a function — a vertical line through a graph must hit it only once.',
+      'f(3) is NOT “f times 3” — the parentheses are the machine’s mouth, and f(3) is what comes out when you feed it a 3.',
     ],
     examples: [
       {
@@ -36,6 +37,8 @@ export const A1_LESSONS_U05_08: Lesson[] = [
         steps: ['Replace x with 3: g(3) = 10 − 2 × 3.', 'Multiply first: 2 × 3 = 6.', 'Subtract: 10 − 6 = 4.'],
         answer: '4',
       },
+      { q: 'If f(x) = 4x + 1, find f(5).', steps: ['Feed 5 into the machine: replace x with 5.', '4 × 5 + 1 = 21.'], answer: 'f(5) = 21' },
+      { q: 'If g(x) = x² − 2, find g(3).', steps: ['Replace x with 3: 3² − 2.', '9 − 2 = 7.'], answer: 'g(3) = 7' },
     ],
     practice: [
       {
@@ -53,6 +56,8 @@ export const A1_LESSONS_U05_08: Lesson[] = [
         answers: ['8'],
         steps: ['Run the machine backward: undo "times 4".', '32 ÷ 4 = 8.'],
       },
+      { q: 'If f(x) = 3x − 4, what is f(6)?', answers: ['14'], steps: ['3 × 6 = 18.', '18 − 4 = 14.'] },
+      { q: 'If h(x) = 2x + 9, what is h(0)?', answers: ['9'], steps: ['2 × 0 = 0.', '0 + 9 = 9 — feeding a machine zero shows you its + part.'] },
     ],
     watchOut: 'f(3) does NOT mean f times 3 — it means "the output of machine f when the input is 3".',
   },
@@ -66,6 +71,7 @@ export const A1_LESSONS_U05_08: Lesson[] = [
       'From two points, slope = (y2 − y1) ÷ (x2 − x1) — change in y over change in x.',
       'Uphill lines have POSITIVE slope, downhill lines have NEGATIVE slope, and flat lines have slope 0.',
       'Slope is a real-life RATE: dollars per hour, percent per hour, centimeters per week.',
+      'Order matters exactly ONCE: subtract the two points in the same order on top and bottom, and the slope’s sign takes care of itself.',
     ],
     examples: [
       {
@@ -88,6 +94,8 @@ export const A1_LESSONS_U05_08: Lesson[] = [
         steps: ['Rise: 0 − 10 = −10 — the line falls.', 'Run: 5 − 0 = 5.', 'Slope = −10 ÷ 5 = −2. Downhill!'],
         answer: '-2',
       },
+      { q: 'Find the slope between (1, 3) and (4, 12).', steps: ['Rise: 12 − 3 = 9.', 'Run: 4 − 1 = 3.', 'Slope = 9 ÷ 3 = 3.'], answer: '3' },
+      { q: 'Find the slope between (2, 8) and (6, 0).', steps: ['Rise: 0 − 8 = −8 (it went DOWN).', 'Run: 6 − 2 = 4.', 'Slope = −8 ÷ 4 = −2.'], answer: '−2' },
     ],
     practice: [
       {
@@ -105,6 +113,8 @@ export const A1_LESSONS_U05_08: Lesson[] = [
         answers: ['6', '$6'],
         steps: ['18 ÷ 3 = 6 dollars per walk.'],
       },
+      { q: 'What is the slope between (0, 2) and (5, 12)?', answers: ['2'], steps: ['Rise 10, run 5.', '10 ÷ 5 = 2.'] },
+      { q: 'What is the slope between (1, 7) and (3, 1)?', answers: ['-3'], steps: ['Rise: 1 − 7 = −6. Run: 3 − 1 = 2.', '−6 ÷ 2 = −3.'] },
     ],
     watchOut: 'Subtract the coordinates in the SAME order — (y2 − y1) over (x2 − x1), never mixed.',
   },
@@ -118,6 +128,7 @@ export const A1_LESSONS_U05_08: Lesson[] = [
       'To graph: plot the START (0, b) on the y-axis, then use m as RISE over RUN to step to the next point.',
       'Read m and b straight off the equation: in y = 3x − 4, m = 3 and b = −4 (the minus belongs to the 4).',
       'No x in the equation? y = 3 is a HORIZONTAL line: slope 0, always at height 3.',
+      'Reading a graph? b is where the line CROSSES the y-axis, and m is the staircase — down-and-right stairs mean a negative m.',
     ],
     examples: [
       {
@@ -140,6 +151,8 @@ export const A1_LESSONS_U05_08: Lesson[] = [
         steps: ['Start at 4 cm, grow 3 cm per week.', 'Growth: 3 × 5 = 15 cm.', 'Height: 4 + 15 = 19 cm.'],
         answer: '19',
       },
+      { q: 'A line has slope 4 and y-intercept −2. Write its equation.', steps: ['m = 4 and b = −2 go straight into y = mx + b.', 'y = 4x − 2.'], answer: 'y = 4x − 2' },
+      { q: 'For y = −3x + 7, what is y when x = 2?', steps: ['Replace x with 2: −3 × 2 = −6.', '−6 + 7 = 1.'], answer: 'y = 1' },
     ],
     practice: [
       {
@@ -157,6 +170,8 @@ export const A1_LESSONS_U05_08: Lesson[] = [
         answers: ['45', '$45'],
         steps: ['5 × 6 = 30 dollars added.', '15 + 30 = 45.'],
       },
+      { q: 'What is the slope of y = 6x − 1?', answers: ['6'], steps: ['In y = mx + b, the slope is the number glued to x.', 'm = 6.'] },
+      { q: 'For y = 2x + 5, what is y when x = 4?', answers: ['13'], steps: ['2 × 4 = 8.', '8 + 5 = 13.'] },
     ],
     watchOut: 'Do not swap m and b — the slope is the number STUCK TO x, not the number standing alone.',
   },
@@ -171,6 +186,7 @@ export const A1_LESSONS_U05_08: Lesson[] = [
       'From TWO POINTS: find m = (y2 − y1) ÷ (x2 − x1) first, then plug one point in to find b.',
       'From a STORY: the one-time amount (fee, starting height) is b; the "per hour / per month" amount is m — negative if it shrinks.',
       'Always CHECK: plug a known point into your equation and see if it works.',
+      'Two points? Slope FIRST, then feed one point into y = mx + b to fish out b — and the second point becomes your free answer-check.',
     ],
     examples: [
       {
@@ -193,6 +209,8 @@ export const A1_LESSONS_U05_08: Lesson[] = [
         steps: ['Slope: (11 − 5) ÷ (3 − 1) = 6 ÷ 2 = 3.', 'Find b using (1, 5): 5 = 3 × 1 + b, so b = 2.', 'y = 3x + 2. Check (3, 11): 3 × 3 + 2 = 11. Correct.'],
         answer: 'y = 3x + 2',
       },
+      { q: 'Write the line with slope 2 through (3, 10).', steps: ['Start y = 2x + b and feed in the point: 10 = 2 × 3 + b.', '10 = 6 + b, so b = 4.', 'y = 2x + 4.'], answer: 'y = 2x + 4' },
+      { q: 'Write the line through (0, −3) and (2, 5).', steps: ['(0, −3) IS the y-intercept: b = −3.', 'Slope: (5 − (−3)) ÷ (2 − 0) = 8 ÷ 2 = 4.', 'y = 4x − 3. Check (2, 5): 8 − 3 = 5. ✓'], answer: 'y = 4x − 3' },
     ],
     practice: [
       {
@@ -210,6 +228,8 @@ export const A1_LESSONS_U05_08: Lesson[] = [
         answers: ['y = 3x + 7', 'y=3x+7', '3x + 7', '3x+7', 'y = 7 + 3x', 'y=7+3x'],
         steps: ['Jump: 10 − 7 = 3, so m = 3.', 'Start at x = 0: b = 7.', 'y = 3x + 7.'],
       },
+      { q: 'A line has slope 3 and passes through (2, 11). What is b?', answers: ['5', 'b = 5', 'b=5'], steps: ['11 = 3 × 2 + b.', '11 = 6 + b, so b = 5.'] },
+      { q: 'Write the equation of the line with slope 5 and y-intercept −2. Answer like “y = 5x - 2”.', answers: ['y = 5x - 2', 'y=5x-2', '5x - 2', '5x-2'], steps: ['m = 5, b = −2.', 'y = 5x − 2.'] },
     ],
     watchOut: 'In a story, do not swap the roles — the one-time fee is b (the start), and the per-month or per-hour amount is m (the move), not the other way around.',
   },

@@ -45,6 +45,13 @@
         "Equal steps in $x$ produce equal steps in $y$ for a linear function, and the first step was $9 \\to 1$, a drop of $8$.",
         "So the next step drops $8$ again: $1 - 8 = -7$. No slope formula needed."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Stepping the wrong way gives 1 + 8 = 9, the mirror image of the right answer.",
+        "The outputs fell from 9 to 1, so at a larger x they must be smaller still. Predict the sign of the answer first; −7 is the only choice below 1."
+      ]
     }
   ],
   "tags": [

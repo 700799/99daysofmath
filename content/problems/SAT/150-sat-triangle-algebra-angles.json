@@ -45,6 +45,13 @@
         "But computing the three angles anyway is a fast, complete verification.",
         "If they had not summed to $180$, you would know immediately that the algebra went wrong."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "60 — the first angle, 2x — is the offered near-miss for anyone who forgets what was asked.",
+        "The question wants x itself. Solve, then re-read the stem; computing all three angles as a check also reminds you which quantity to report."
+      ]
     }
   ],
   "tags": [

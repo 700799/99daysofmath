@@ -45,6 +45,13 @@
         "The last two ratios both equal $2$, so $\\dfrac{a}{2} = 2$ and $a = 4$.",
         "If the constant ratio had *not* matched, the same $a$ would instead have produced no solution — always check all three."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Copying the visible coefficient — a = 2 — skips the scaling the equations actually need.",
+        "Find the scale factor from the terms that already pair up (3y → 6y means ×2), then apply that factor to the x term."
+      ]
     }
   ],
   "tags": [

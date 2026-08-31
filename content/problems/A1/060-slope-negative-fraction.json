@@ -44,6 +44,13 @@
         "Swap the order of BOTH subtractions: rise $5 - 2 = 3$, run $1 - 5 = -4$.",
         "$\\frac{3}{-4}$ is still $-\\frac{3}{4}$ — same slope, as long as both are swapped together."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "Flipping to run-over-rise gives −4/3 — right numbers, upside-down fraction.",
+        "Rise first, run second: (2 − 5) on top, (5 − 1) on the bottom → −3/4. Say “rise over run” as you write it."
+      ]
     }
   ],
   "tags": [

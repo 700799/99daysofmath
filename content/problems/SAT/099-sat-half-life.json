@@ -45,6 +45,13 @@
         "The exponent counts *periods*, and the number of periods is elapsed time divided by the half-life.",
         "Writing \"$24 \\div 6 = 4$ halvings\" as your first line makes the exponent impossible to get wrong."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Using 24 as the exponent gives an astronomically small number; using 6 gives another neat wrong answer.",
+        "The exponent counts halvings: 24 ÷ 6 = 4 of them. Write that division as your first line and the rest is four clean halvings."
+      ]
     }
   ],
   "tags": [

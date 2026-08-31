@@ -45,6 +45,13 @@
         "Convert: $\\dfrac{2\\pi}{3} \\times \\dfrac{180}{\\pi} = 120°$.",
         "Both routes work. The fraction-of-the-circle method avoids the conversion, so it is usually faster when the answer is wanted in degrees."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Leaving the answer as 2π/3 ≈ 2.09 — radians in a degree box — is the final-step trap.",
+        "The stem says degrees, so the fraction-of-circle route is safest: (6π/18π) × 360 = 120. Match the unit of the answer field, not of your method."
+      ]
     }
   ],
   "tags": [

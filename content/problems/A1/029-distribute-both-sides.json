@@ -43,6 +43,13 @@
         "Try $x = 7$: left is $4(5) = 20$, right is $20$ — they tie!",
         "The table shows the sides meet exactly at $x = 7$."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "Writing 4(x − 2) as 4x − 2 forgets to hand the 4 to the second guest in the parentheses.",
+        "The outside number multiplies EVERYTHING inside: 4x − 8. Then 4x − 8 = 2x + 6 gives x = 7."
+      ]
     }
   ],
   "tags": [

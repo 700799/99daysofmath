@@ -50,6 +50,13 @@
         "The earlier question conditioned on a *column* (Grade 10), so the column total was the denominator.",
         "Same table, same numerator style, entirely different answers. Reading which way the condition runs is the whole skill."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "45/110 ≈ 41% answers a different question — 'of Grade 9, what share ride the bus' — by conditioning on the column.",
+        "The phrase 'of the students who take the bus' names the ROW as the denominator: 45 of 80. Circle the denominator group before reading any number."
+      ]
     }
   ],
   "tags": [

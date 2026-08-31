@@ -67,6 +67,13 @@
         "Circumference → radius → area, or area → radius → circumference.",
         "Solving for $r$ first turns a two-formula question into two one-formula questions."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Choice C, 400π, squares the diameter 20 — the number the problem dangles — instead of the radius.",
+        "Route through the radius explicitly: 2πr = 20π forces r = 10 on paper. Once r is written down, the area formula cannot grab the wrong number."
+      ]
     }
   ],
   "tags": [

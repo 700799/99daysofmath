@@ -45,6 +45,13 @@
         "Outer: $2x \\cdot 5 = 10x$. Inner: $-3 \\cdot x = -3x$. Sum: $7x$.",
         "Skipping the first and last products saves time and removes two chances to make a sign error."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Answering −15 gives c, and 10 gives only the outer product — b needs BOTH cross terms.",
+        "The x-coefficient is outer plus inner: 10x + (−3x) = 7x. Collect the pair before reporting."
+      ]
     }
   ],
   "tags": [

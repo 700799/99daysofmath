@@ -11,6 +11,7 @@ export const A1_LESSONS_U12_14: Lesson[] = [
       'To SUBTRACT, the minus sign DISTRIBUTES: it hits EVERY term in the second parentheses.',
       'To MULTIPLY, distribute — hand a snack to everyone inside: x(x + 5) = x² + 5x.',
       'For binomial × binomial, draw the AREA MODEL: a garden rectangle split into 4 patches, one little area per patch.',
+      'When SUBTRACTING polynomials, the minus sign visits every term of the second one — it knocks on every door, not just the first.',
     ],
     examples: [
       {
@@ -49,6 +50,8 @@ export const A1_LESSONS_U12_14: Lesson[] = [
         ],
         answer: '6x² + 8x',
       },
+      { q: 'Add (3x² + 2x) + (x² + 5x).', steps: ['Match the like terms: 3x² with x², and 2x with 5x.', '3x² + x² = 4x² and 2x + 5x = 7x.', 'Answer: 4x² + 7x.'], answer: '4x² + 7x' },
+      { q: 'Multiply (x + 2)(x + 5).', steps: ['Garden model: x·x = x², x·5 = 5x, 2·x = 2x, 2·5 = 10.', 'Middle terms join: 5x + 2x = 7x.', 'x² + 7x + 10.'], answer: 'x² + 7x + 10' },
     ],
     practice: [
       {
@@ -61,6 +64,8 @@ export const A1_LESSONS_U12_14: Lesson[] = [
         answers: ['x² + 5x + 4', 'x²+5x+4', 'x^2 + 5x + 4', 'x^2+5x+4'],
         steps: ['Area model: patches x², 1x, 4x, and 4.', 'Combine the strips: 1x + 4x = 5x.'],
       },
+      { q: 'Add (2x + 3) + (4x + 1). Answer like “6x + 4”.', answers: ['6x + 4', '6x+4', '4 + 6x'], steps: ['2x + 4x = 6x.', '3 + 1 = 4.'] },
+      { q: 'Multiply (x + 1)(x + 3). Answer like “x^2 + 4x + 3”.', answers: ['x^2 + 4x + 3', 'x^2+4x+3'], steps: ['x·x = x²; outer + inner = 3x + x = 4x; 1·3 = 3.', 'x² + 4x + 3.'] },
     ],
     watchOut: 'When you subtract, the minus must hit EVERY term: (5x + 7) − (2x + 3) is 5x + 7 − 2x − 3, not 5x + 7 − 2x + 3.',
   },
@@ -73,6 +78,7 @@ export const A1_LESSONS_U12_14: Lesson[] = [
       'For x² + bx + c: hunt for two numbers that MULTIPLY to c and ADD to b.',
       'DIFFERENCE OF SQUARES is a shortcut: a² − b² = (a + b)(a − b), because the middle strips cancel.',
       'Always CHECK by multiplying back out — if you don\'t land on the original, hunt again.',
+      'Factoring is un-multiplying, so the CHECK is multiplying back — expand your answer and it must match the original, term for term.',
     ],
     examples: [
       {
@@ -111,6 +117,8 @@ export const A1_LESSONS_U12_14: Lesson[] = [
         ],
         answer: '(x − 3)(x + 2)',
       },
+      { q: 'Factor x² + 7x + 10.', steps: ['Hunt two numbers: multiply to 10, add to 7.', '2 and 5 do both jobs.', '(x + 2)(x + 5). Check: expands back to x² + 7x + 10. ✓'], answer: '(x + 2)(x + 5)' },
+      { q: 'Factor x² − 9.', steps: ['A square minus a square — the special pattern.', 'x² − 3² = (x + 3)(x − 3).', 'The middle terms cancel on the way back: +3x − 3x = 0. ✓'], answer: '(x + 3)(x − 3)' },
     ],
     practice: [
       {
@@ -123,6 +131,8 @@ export const A1_LESSONS_U12_14: Lesson[] = [
         answers: ['(x + 2)(x + 4)', '(x+2)(x+4)', '(x + 4)(x + 2)', '(x+4)(x+2)'],
         steps: ['Two numbers that multiply to 8 and add to 6: that is 2 and 4.', 'Write the sides: (x + 2)(x + 4).'],
       },
+      { q: 'Factor x² + 5x + 6. Answer like “(x + 2)(x + 3)”.', answers: ['(x + 2)(x + 3)', '(x+2)(x+3)', '(x + 3)(x + 2)', '(x+3)(x+2)'], steps: ['Two numbers that multiply to 6 and add to 5: 2 and 3.', '(x + 2)(x + 3).'] },
+      { q: 'What two numbers multiply to 12 and add to 7? Answer like “3 and 4”.', answers: ['3 and 4', '34', '4 and 3', '43'], steps: ['Try the factor pairs of 12: 1&12, 2&6, 3&4.', '3 + 4 = 7 — that’s the pair.'] },
     ],
     watchOut: 'Check the signs: x² − x − 6 needs numbers that multiply to −6 and add to −1 (that is −3 and +2), not +3 and −2.',
   },
@@ -135,6 +145,7 @@ export const A1_LESSONS_U12_14: Lesson[] = [
       'The ZERO-PRODUCT rule: if two things multiply to zero, one of them IS zero.',
       'To solve by FACTORING: get 0 on one side, factor, then set each factor to zero.',
       'The VERTEX is the highest or lowest point of the U — the top of the ball\'s arc.',
+      'The parabola is symmetric: the vertex sits exactly halfway between the two x-intercepts, like the fold line of a folded paper.',
     ],
     examples: [
       {
@@ -173,6 +184,8 @@ export const A1_LESSONS_U12_14: Lesson[] = [
         ],
         answer: '3 seconds',
       },
+      { q: 'For y = (x − 2)(x − 6): where does it cross the x-axis, and where is the vertex?', steps: ['Crossings where a factor is zero: x = 2 and x = 6.', 'The vertex is halfway: x = 4.', 'y at x = 4: (2)(−2) = −4 → vertex (4, −4).'], answer: 'Crosses at 2 and 6; vertex (4, −4)' },
+      { q: 'A ball’s height is h = −(t − 3)² + 9. What is its highest point?', steps: ['The squared part is never negative, and the minus flips it downhill.', 'Its best moment is when the square is 0, at t = 3.', 'Highest point: h = 9.'], answer: 'Height 9, at t = 3' },
     ],
     practice: [
       {
@@ -185,6 +198,8 @@ export const A1_LESSONS_U12_14: Lesson[] = [
         answers: ['6', 'x = 6', 'x=6'],
         steps: ['Set each factor to zero: x = 6 or x = −2.', 'The positive one is 6.'],
       },
+      { q: 'For y = x² − 4: at which POSITIVE x does it cross the x-axis?', answers: ['2'], steps: ['Crossing means y = 0: x² = 4.', 'x = 2 or −2; the positive one is 2.'] },
+      { q: 'The zeros of a parabola are 1 and 7. What is the x-value of the vertex?', answers: ['4'], steps: ['The vertex is halfway between the zeros.', '(1 + 7) ÷ 2 = 4.'] },
     ],
     watchOut: 'x² = 25 has TWO solutions, 5 and −5 — writing only x = 5 misses half the answer unless the question asks for the positive one.',
   },

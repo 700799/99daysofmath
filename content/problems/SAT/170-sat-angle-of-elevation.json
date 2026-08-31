@@ -45,6 +45,13 @@
         "Sine and cosine appear only when the hypotenuse (the direct line of sight) is involved.",
         "Identifying which two sides the problem hands you selects the ratio immediately."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Dividing 40 by 1.5 ≈ 26.7 treats tangent as adjacent-over-opposite — the ratio upside down.",
+        "Tangent is opposite over adjacent, and the height is the OPPOSITE side here: h = 40 × 1.5. Label the triangle before computing."
+      ]
     }
   ],
   "tags": [

@@ -46,6 +46,13 @@
         "$7.5 \\times 12.5 = 93.75$ miles.",
         "Finding the per-one rate first makes the final step a single multiplication, and the intermediate value is easy to sanity-check."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Multiplying 7.5 by 25 directly gives 187.5 — it forgets that 25 miles belongs to TWO inches, not one.",
+        "Reduce the scale to per-one-inch first (12.5 miles), or set the proportion with matching units stacked. Either habit blocks the doubling."
+      ]
     }
   ],
   "tags": [

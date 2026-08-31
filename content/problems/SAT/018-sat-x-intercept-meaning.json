@@ -67,6 +67,13 @@
         "Selling 28 items still leaves a small loss; 29 turns the first profit.",
         "A number like \"about 28 items\" only makes sense as a break-even count — the arithmetic itself rules the other choices out."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Choice A is a correct sentence about the y-intercept — the −240 — dressed up to claim the x-intercept's meaning.",
+        "Anchor on the definition before reading choices: x-intercept means output zero, and zero profit can only mean break-even."
+      ]
     }
   ],
   "tags": [

@@ -48,6 +48,13 @@
         "Beat 1 level: $50 + 20 = 70$ coins. Beat 2 levels: $100 + 20 = 120$ coins.",
         "The pattern is always (50 per level) plus (20 once): $50L + 20$ matches both checks."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "70L is the trap — it pays the 20-coin bonus again on every level.",
+        "Ask each number: “do you happen once, or every time?” The 50 repeats (glue it to L); the 20 happens once (it stands alone)."
+      ]
     }
   ],
   "tags": [

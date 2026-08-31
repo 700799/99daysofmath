@@ -45,6 +45,13 @@
         "Swapping one dime for one quarter adds $\\$0.15$ to the total.",
         "$\\$2.70 \\div \\$0.15 = 18$ swaps, so there are $18$ quarters. This \"assume then adjust\" method skips the system entirely."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Answering 12 — the dimes — is the designed miss; both counts appear as choices.",
+        "Re-read the final question after solving. The system gives you the pair; the question wants exactly one of them."
+      ]
     }
   ],
   "tags": [

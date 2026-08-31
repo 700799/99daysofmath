@@ -48,6 +48,13 @@
         "Multiplying instead would give pages², which is meaningless — and that is how you know it is wrong.",
         "Dimensional analysis is not just for physics; it settles every rate question on the SAT."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Multiplying pages by rate gives 12,474 — units of pages² per minute, which is meaningless, and that is how you know.",
+        "Divide pages by pages-per-minute so the units collapse to minutes. Dimensional analysis is the five-second referee here."
+      ]
     }
   ],
   "tags": [

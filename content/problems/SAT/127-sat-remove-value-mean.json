@@ -45,6 +45,13 @@
         "Here $22 > 15$, so the new mean must be below $15$ — which rules out any choice at or above it.",
         "Predicting the direction before computing turns a calculation into a check."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Dividing the new total by the OLD count — 98 ÷ 8 = 12.25 — is the engineered miss.",
+        "Removing a value changes both the sum and the count. Update the pair together: 98 across 7 values."
+      ]
     }
   ],
   "tags": [

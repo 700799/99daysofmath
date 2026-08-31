@@ -42,6 +42,13 @@
         "From hour $1$ to hour $3$ the battery fell $24\\%$ over $2$ hours — split it evenly.",
         "Hour $2$ must read $76\\%$: each hour drops $12$, so the rate is $-12$."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "Dividing by 3 — the hour on the clock — instead of the 2-hour GAP gives −8, a neat wrong answer.",
+        "Slope uses the change in time, not the time itself: from hour 1 to hour 3 is 2 hours. −24 ÷ 2 = −12% per hour."
+      ]
     }
   ],
   "tags": [

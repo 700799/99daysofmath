@@ -47,6 +47,13 @@
         "You have 4 apples + 3 oranges + 2 apples.",
         "Sort them: 6 apples and 3 oranges — that is $6x + 3$. You never mash apples and oranges together."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "The tempting wrong answer is 9x — squishing the 3 into the x-team. But 9x means nine copies of x, and that 3 was never an x.",
+        "Only matching letters combine. Circle the x-terms first, add those, and let the plain number wait at the end: 6x + 3."
+      ]
     }
   ],
   "tags": [

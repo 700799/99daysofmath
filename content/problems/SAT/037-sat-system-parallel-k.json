@@ -45,6 +45,13 @@
         "For no solution the $x$ and $y$ coefficients must match the first equation while the constants differ.",
         "Matching $6x$ requires $k = 6$, and the constants $9$ and $15$ do differ — confirming no solution rather than infinitely many."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "A sign slip in the slope comparison hands you k = −6, and stopping early can hand you the infinitely-many case by accident.",
+        "After finding k, always compare the constants too: same slope with the SAME constant is one line, not parallel lines."
+      ]
     }
   ],
   "tags": [

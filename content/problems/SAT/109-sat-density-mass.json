@@ -45,6 +45,13 @@
         "The exact answer of $1950$ sits just below that, exactly as expected.",
         "A five-second estimate catches an order-of-magnitude error, which is the kind that costs a whole question."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Dividing gives about 32 grams — a feather-weight answer for a quarter-liter block of metal.",
+        "Density × volume = mass, and the cm³ units cancel to confirm it. When the units work out, the operation was right."
+      ]
     }
   ],
   "tags": [

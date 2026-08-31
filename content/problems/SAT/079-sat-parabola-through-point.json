@@ -45,6 +45,13 @@
         "The value of $a$ is exactly that steepness, and one extra point pins it down.",
         "This is why the SAT always supplies a third point when it asks you to build a parabola from its zeros."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Losing a sign in a(3)(−5) = −15 gives a = −1, flipping the parabola upside down.",
+        "Multiply the two factor values first, sign included: (3)(−5) = −15. Then −15a = −15 reads off a = 1 cleanly."
+      ]
     }
   ],
   "tags": [

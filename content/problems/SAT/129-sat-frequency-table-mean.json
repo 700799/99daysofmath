@@ -52,6 +52,13 @@
         "The frequency column says how many students each row stands for, and it must weight the calculation.",
         "Divide by the total *frequency* ($20$), never by the number of rows ($4$)."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Averaging the values column — (1+2+3+4)/4 = 2.5 — pretends each row is one student.",
+        "The frequency column is the whole point: weight each value by its count and divide by 20 students, not 4 rows."
+      ]
     }
   ],
   "tags": [

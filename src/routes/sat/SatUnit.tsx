@@ -156,11 +156,27 @@ export function SatUnit() {
         </div>
       </div>
 
+      {/* ── mastery checklist ── */}
+      <div className="mt-4 rounded-3xl border-2 border-ok/40 bg-ok-soft p-5">
+        <div className="font-display text-sm font-extrabold text-ok">🏁 You have mastered this unit when…</div>
+        <ul className="mt-2 space-y-1.5">
+          {pb.mastery.map((m, i) => (
+            <li key={i} className="flex gap-2 text-[13px] leading-relaxed text-ink">
+              <span className="shrink-0 text-ok">▸</span>
+              <span><MathText text={m} /></span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-2.5 text-[11px] text-ink-dim">
+          Not there yet? Re-run the drill until you hold three stars, then move on and let the mock tests re-test you.
+        </p>
+      </div>
+
       {/* ── area tips ── */}
       {areaTips.length > 0 && (
         <Section title={`More ${area.short} tips`} emoji="💡">
           <div className="space-y-2">
-            {areaTips.slice(0, 4).map((t) => (
+            {areaTips.slice(0, 6).map((t) => (
               <div key={t.id} className="rounded-2xl border border-line bg-surface-2 p-3">
                 <div className="font-display text-[12.5px] font-bold text-ink">{t.title}</div>
                 <p className="mt-1 text-[12.5px] leading-relaxed text-ink-muted">

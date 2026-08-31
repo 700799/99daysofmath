@@ -45,6 +45,13 @@
         "The true combined multiplier is $0.80 \\times 0.90 = 0.72$, a $28\\%$ total discount, not $30\\%$.",
         "Successive discounts always total *less* than their sum, because the second is taken on an already-reduced price."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Adding the discounts to 30% gives $140 — offered, and wrong because the 10% acted on an already-reduced price.",
+        "Chain multipliers instead: 0.80 × 0.90 = 0.72. Successive discounts always total LESS than their sum; expect 28%, not 30%."
+      ]
     }
   ],
   "tags": [

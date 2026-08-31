@@ -45,6 +45,13 @@
         "Drinks must account for the remaining $\\$180 - \\$120 = \\$60$.",
         "At $\\$2$ apiece that is $30$ drinks. On a word problem this simple, arithmetic beats setting up algebra."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Dividing 180 by the combined price 3 + 2 = 5 treats every sale as a hot-dog-plus-drink combo the problem never mentions.",
+        "Account for the known item's money first: hot dogs earned $120, so only $60 remains to explain with drinks."
+      ]
     }
   ],
   "tags": [

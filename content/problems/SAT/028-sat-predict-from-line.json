@@ -45,6 +45,13 @@
         "Each step right raises $y$ by $2$, so $y$ rises by $6$.",
         "$7 + 6 = 13$. When a question gives a point close to the target, stepping beats rebuilding the equation."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Building the slope as run-over-rise gives 1/2, and y = 8(1/2) − 3 = 1 — wrong but plausible.",
+        "Slope is RISE over run: 10 up over 5 across is 2. Say the units — y-change per x-change — and the fraction cannot flip."
+      ]
     }
   ],
   "tags": [

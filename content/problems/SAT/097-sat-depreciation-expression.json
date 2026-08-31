@@ -67,6 +67,13 @@
         "Choice C at $t = 1$: $24000(0.88) = 21120$ ✓",
         "Building the expected first-year value before you look at the choices is the fastest way to handle every model-selection question."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Choice A keeps 12% each year instead of losing it — a car worth $346 after two years should fail your sniff test.",
+        "Build the multiplier from what REMAINS: 1 − 0.12 = 0.88. Then sanity-check year one: 24,000 × 0.88 = 21,120, a plausible used-car value."
+      ]
     }
   ],
   "tags": [

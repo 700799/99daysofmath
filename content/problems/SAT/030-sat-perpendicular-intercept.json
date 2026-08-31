@@ -45,6 +45,13 @@
         "Second, flipping without negating for the perpendicular slope.",
         "Third, stopping at the equation instead of reading off the intercept. Naming the three checkpoints as you go is how you keep a multi-step question clean."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Flipping without negating gives slope +2/5 and b = −1; negating without flipping gives −5/2 and a different wrong b.",
+        "Run the two-part rule out loud — flip it, negate it — then confirm the product of the slopes is −1 before substituting the point."
+      ]
     }
   ],
   "tags": [

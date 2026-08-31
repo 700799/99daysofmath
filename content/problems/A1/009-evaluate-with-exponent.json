@@ -43,6 +43,13 @@
         "With $x = 3$: the first piece is 9, the second piece is 6.",
         "Glue the pieces back with the plus sign: $9 + 6 = 15$."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "Reading x² as “x times 2” gives 6 + 6 = 12 — close enough to feel right, and wrong.",
+        "x² means x · x: two copies multiplied. With x = 3 that is 9, and 9 + 6 = 15."
+      ]
     }
   ],
   "tags": [
