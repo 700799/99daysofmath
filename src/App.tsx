@@ -75,6 +75,8 @@ const SatHub = lazy(() => import('./routes/sat/SatHub').then((m) => ({ default: 
 const SatUnit = lazy(() => import('./routes/sat/SatUnit').then((m) => ({ default: m.SatUnit })));
 const SatTips = lazy(() => import('./routes/sat/SatTips').then((m) => ({ default: m.SatTips })));
 const SatTest = lazy(() => import('./routes/sat/SatTest').then((m) => ({ default: m.SatTest })));
+const SatAnalysis = lazy(() => import('./routes/sat/SatAnalysis').then((m) => ({ default: m.SatAnalysis })));
+const SatRecovery = lazy(() => import('./routes/sat/SatRecovery').then((m) => ({ default: m.SatRecovery })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -101,6 +103,8 @@ export default function App() {
           <Route path="/sat/tips" element={<SatTips />} />
           <Route path="/sat/unit/:n" element={<SatUnit />} />
           <Route path="/sat/test/:n" element={<SatTest />} />
+          <Route path="/sat/analysis/:n" element={<SatAnalysis />} />
+          <Route path="/sat/recovery/:n" element={<SatRecovery />} />
           <Route path="/trail/SAT" element={<Navigate to="/sat" replace />} />
           <Route path="/trail/:domain" element={<DomainTrail />} />
           <Route path="/unit/:domain/:unit" element={<Unit />} />

@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { useParams, useNavigate, Link, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { getMockTest, allQuestions, MODULE_MINUTES, type SatTestQuestion } from '../../data/sat/tests';
+import { getMockTest, allQuestions, MODULE_MINUTES } from '../../data/sat/tests';
 import { SAT_AREA_INFO } from '../../data/sat/blueprint';
 import { scaledScore, scoreBand, breakdownByArea, mmss } from '../../utils/satScore';
+import { isCorrect } from '../../utils/satAnalysis';
 import { MathText } from '../../components/MathText';
 import { DiagramRenderer } from '../../components/DiagramRenderer';
 import { useProgress } from '../../state/progress';
@@ -16,40 +17,6 @@ import { useSeo } from '../../lib/seo';
 // mock test. All the teaching lands on the review screen at the end.
 
 type Phase = 'intro' | 'module' | 'review-module' | 'done';
-
-/** Numeric answers accept fractions, decimals, and stray formatting. */
-function numericMatches(input: string, q: SatTestQuestion): boolean {
-  const clean = (s: string) => s.trim().toLowerCase().replace(/[$,%\s]/g, '');
-  const u = clean(input);
-  if (!u) return false;
-  const candidates = [q.answer, ...(q.alternativeAnswers ?? [])];
-  if (candidates.some((c) => clean(c) === u)) return true;
-
-  const value = (s: string): number | null => {
-    const t = clean(s);
-    const frac = t.match(/^(-?\d+)\/(\d+)$/);
-    if (frac) {
-      const d = Number(frac[2]);
-      return d === 0 ? null : Number(frac[1]) / d;
-    }
-    if (!/^-?(\d+\.?\d*|\.\d+)$/.test(t)) return null;
-    const n = Number(t);
-    return Number.isNaN(n) ? null : n;
-  };
-  const uv = value(input);
-  if (uv === null) return false;
-  const tol = q.tolerance ?? 1e-9;
-  return candidates.some((c) => {
-    const cv = value(c);
-    return cv !== null && Math.abs(cv - uv) <= tol;
-  });
-}
-
-export function isCorrect(q: SatTestQuestion, given: string | undefined): boolean {
-  if (!given) return false;
-  if (q.answerType === 'multiple-choice') return given.trim().toUpperCase() === q.answer.toUpperCase();
-  return numericMatches(given, q);
-}
 
 export function SatTest() {
   const { n } = useParams<{ n: string }>();
@@ -460,8 +427,15 @@ export function SatTest() {
           <div className="mt-6 flex flex-col gap-3">
             <button
               type="button"
+              onClick={() => navigate(`/sat/analysis/${testN}`)}
+              className="w-full rounded-2xl bg-accent px-6 py-3.5 font-display text-base font-extrabold text-on-accent transition-colors hover:bg-accent-hover"
+            >
+              📋 Full analysis and recovery plan ▶
+            </button>
+            <button
+              type="button"
               onClick={() => navigate('/sat')}
-              className="w-full rounded-2xl bg-accent px-6 py-3 font-display text-base font-extrabold text-on-accent transition-colors hover:bg-accent-hover"
+              className="w-full rounded-2xl border-2 border-line bg-surface px-6 py-3 font-display text-sm font-bold text-ink-muted transition-colors hover:border-line-strong hover:text-ink"
             >
               Back to SAT Math
             </button>

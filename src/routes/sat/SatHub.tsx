@@ -211,6 +211,15 @@ export function SatHub() {
                   </div>
                 </div>
               </Link>
+              {result && (
+                <Link
+                  to={`/sat/analysis/${t.n}`}
+                  className="mt-1 flex items-center justify-between rounded-xl border border-accent/35 bg-accent-soft px-3 py-2 font-display text-[12px] font-bold text-accent transition-colors hover:bg-accent-soft/70"
+                >
+                  <span>📋 Full analysis and recovery plan</span>
+                  <span>→</span>
+                </Link>
+              )}
             </motion.div>
           );
         })}
