@@ -48,6 +48,13 @@
         "Here $n = 6$, so positions $3$ and $4$ — the values $9$ and $12$.",
         "Counting inward from both ends simultaneously is the practical version of this, and it is harder to miscount."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Answering 9 or 12 — either middle value alone — is the designed error for even-sized sets.",
+        "An even count has no single middle: average the middle PAIR. The median of this set is 10.5, a number not even in the data."
+      ]
     }
   ],
   "tags": [

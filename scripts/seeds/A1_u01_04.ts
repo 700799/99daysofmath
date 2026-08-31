@@ -136,6 +136,7 @@ export const problemsA1u01: SeedProblem[] = [
     explanation: ['Like terms have the same variable part: $4x$ and $2x$ match.', 'Combine them: $4x + 2x = 6x$.', 'The plain number 3 has no partner, so the answer is $6x + 3$.'],
     alternativeExplanations: [
       { title: 'Sort the fruit', steps: ['Think of $x$-terms as apples and plain numbers as oranges.', 'You have 4 apples + 3 oranges + 2 apples.', 'Sort them: 6 apples and 3 oranges — that is $6x + 3$. You never mash apples and oranges together.'] },
+      { title: '⚠️ Dodge the trap', steps: ['The tempting wrong answer is 9x — squishing the 3 into the x-team. But 9x means nine copies of x, and that 3 was never an x.', 'Only matching letters combine. Circle the x-terms first, add those, and let the plain number wait at the end: 6x + 3.'] },
     ],
     tags: ['like-terms', 'simplify'], estimatedSeconds: 50,
   },
@@ -153,6 +154,7 @@ export const problemsA1u01: SeedProblem[] = [
     explanation: ['Substitute $x = 3$: $3^2 + 2(3)$.', 'Exponent first: $3^2 = 3 \\times 3 = 9$.', 'Then $2 \\times 3 = 6$, and $9 + 6 = 15$.'],
     alternativeExplanations: [
       { title: 'One piece at a time', steps: ['Break the expression into two pieces: $x^2$ and $2x$.', 'With $x = 3$: the first piece is 9, the second piece is 6.', 'Glue the pieces back with the plus sign: $9 + 6 = 15$.'] },
+      { title: '⚠️ Dodge the trap', steps: ['Reading x² as “x times 2” gives 6 + 6 = 12 — close enough to feel right, and wrong.', 'x² means x · x: two copies multiplied. With x = 3 that is 9, and 9 + 6 = 15.'] },
     ],
     tags: ['evaluate', 'exponent'], estimatedSeconds: 55,
   },
@@ -171,6 +173,7 @@ export const problemsA1u01: SeedProblem[] = [
     explanation: ['The repeating part: $50$ coins each level, $L$ times, gives $50L$.', 'The one-time part: the $20$-coin bonus is added once.', 'Total: $50L + 20$.'],
     alternativeExplanations: [
       { title: 'Check it with small numbers', steps: ['Beat 1 level: $50 + 20 = 70$ coins. Beat 2 levels: $100 + 20 = 120$ coins.', 'The pattern is always (50 per level) plus (20 once): $50L + 20$ matches both checks.'] },
+      { title: '⚠️ Dodge the trap', steps: ['70L is the trap — it pays the 20-coin bonus again on every level.', 'Ask each number: “do you happen once, or every time?” The 50 repeats (glue it to L); the 20 happens once (it stands alone).'] },
     ],
     tags: ['translate', 'word-problem'], estimatedSeconds: 60,
   },
@@ -302,6 +305,7 @@ export const problemsA1u01: SeedProblem[] = [
     explanation: ['Add 2 to both sides: $\\frac{x}{3} = 6$.', 'Multiply both sides by 3: $x = 18$.', 'Check: $18 \\div 3 - 2 = 6 - 2 = 4$. ✓'],
     alternativeExplanations: [
       { title: 'Unwrap the present', steps: ['$x$ got wrapped twice: first "divide by 3", then "minus 2".', 'Unwrap in reverse: add 2 back (get 6), then multiply by 3 (get 18).'] },
+      { title: '⚠️ Dodge the trap', steps: ['Multiplying by 3 first gives x − 2 = 12 — but the −2 was never divided by 3, so that move breaks the equation.', 'Unwrap backwards: the last thing done to x was −2, so undo it first (x/3 = 6), THEN multiply by 3 to get 18.'] },
     ],
     tags: ['two-step-equation', 'fractions'], estimatedSeconds: 55,
   },
@@ -319,6 +323,7 @@ export const problemsA1u01: SeedProblem[] = [
     explanation: ['Subtract 9 from both sides: $4.5w = 27$.', 'Divide by 4.5: $w = 6$.', 'Check: $4.5 \\times 6 + 9 = 27 + 9 = 36$. ✓'],
     alternativeExplanations: [
       { title: 'Think in half-dollars', steps: ['$\\$4.50$ a week is 9 half-dollars a week, and you need $\\$27$ more, which is 54 half-dollars.', '$54 \\div 9 = 6$ weeks — same answer, no decimals needed.'] },
+      { title: '⚠️ Dodge the trap', steps: ['Dividing 36 by 4.50 right away gives 8 weeks — it spends your $9 of savings twice.', 'The $9 was already in the jar, so subtract it first: 4.5w = 27, and w = 6. Fixed money first, weekly money second.'] },
     ],
     tags: ['two-step-equation', 'decimals', 'word-problem'], estimatedSeconds: 60,
   },
@@ -336,6 +341,7 @@ export const problemsA1u01: SeedProblem[] = [
     explanation: ['Subtract 30 from both sides: $-2r = -12$.', 'Divide both sides by $-2$: $r = 6$.', 'Check: $30 - 2(6) = 30 - 12 = 18$. ✓'],
     alternativeExplanations: [
       { title: 'Count what you spent', steps: ['You started at 30 points and now sit at 18, so you spent $30 - 18 = 12$ points.', 'At 2 points a round, that is $12 \\div 2 = 6$ rounds.'] },
+      { title: '⚠️ Dodge the trap', steps: ['Stopping at 30 − 18 = 12 answers “how many points did I use?” — not “how many rounds?”', 'The 12 points still need to be turned into rounds: 12 ÷ 2 = 6. Word problems love to hide one last division.'] },
     ],
     tags: ['two-step-equation', 'negatives', 'word-problem'], estimatedSeconds: 60,
   },
@@ -467,6 +473,7 @@ export const problemsA1u01: SeedProblem[] = [
     explanation: ['Subtract $6g$ from both sides: $40 = 4g$.', 'Divide by 4: $g = 10$.', 'Check: hall A costs $40 + 6(10) = \\$100$; hall B costs $10(10) = \\$100$. ✓'],
     alternativeExplanations: [
       { title: 'Close the gap', steps: ['Hall B costs $\\$4$ more per guest, but hall A starts with a $\\$40$ fee.', 'Every guest closes the gap by $\\$4$, so it takes $40 \\div 4 = 10$ guests to tie.'] },
+      { title: '⚠️ Dodge the trap', steps: ['Giving Hall B a $40 fee too — writing 40 + 6g = 40 + 10g — makes the halls tie forever.', 'Each hall keeps its own rule: A is 40 + 6g, B is just 10g. Set THOSE equal, and g = 10 falls out.'] },
     ],
     tags: ['both-sides', 'word-problem'], estimatedSeconds: 65,
   },
@@ -484,6 +491,7 @@ export const problemsA1u01: SeedProblem[] = [
     explanation: ['Distribute: $4(x - 2) = 4x - 8$.', 'Subtract $2x$ from both sides: $2x - 8 = 6$.', 'Add 8: $2x = 14$, so $x = 7$. Check: $4(7 - 2) = 20$ and $2(7) + 6 = 20$. ✓'],
     alternativeExplanations: [
       { title: 'Guess-and-check table', steps: ['Try $x = 5$: left is $4(3) = 12$, right is $16$ — right side wins.', 'Try $x = 7$: left is $4(5) = 20$, right is $20$ — they tie!', 'The table shows the sides meet exactly at $x = 7$.'] },
+      { title: '⚠️ Dodge the trap', steps: ['Writing 4(x − 2) as 4x − 2 forgets to hand the 4 to the second guest in the parentheses.', 'The outside number multiplies EVERYTHING inside: 4x − 8. Then 4x − 8 = 2x + 6 gives x = 7.'] },
     ],
     tags: ['distribute', 'both-sides'], estimatedSeconds: 65,
   },
@@ -501,6 +509,7 @@ export const problemsA1u01: SeedProblem[] = [
     explanation: ['Distribute: $5(x - 1) = 5x - 5$.', 'Combine like terms on the left: $5x - 5 - 2x = 3x - 5$.', 'Subtract $2x$ from both sides: $x - 5 = 7$, so $x = 12$.', 'Check: $5(11) - 24 = 31$ and $2(12) + 7 = 31$. ✓'],
     alternativeExplanations: [
       { title: 'Tidy each room first', steps: ['Treat each side like a messy room: you cannot compare them until both are tidy.', 'Left room tidied: $3x - 5$. Right room is already tidy: $2x + 7$.', 'Now the equation $3x - 5 = 2x + 7$ is a simple both-sides problem: $x = 12$.'] },
+      { title: '⚠️ Dodge the trap', steps: ['Rushing to move terms across before tidying loses the −5: mixing 5x − 1 − 2x is where this one goes wrong.', 'Clean your own side first: 5(x − 1) − 2x = 3x − 5. Only THEN cross the river: 3x − 5 = 2x + 7 gives x = 12.'] },
     ],
     tags: ['distribute', 'like-terms', 'both-sides'], estimatedSeconds: 80,
   },
@@ -638,6 +647,7 @@ export const problemsA1u01: SeedProblem[] = [
     explanation: ['Subtract 5 from both sides: $-2x \\le 6$.', 'Divide both sides by $-2$ and flip $\\le$ to $\\ge$: $x \\ge -3$.', 'Check: $x = 0$ gives $5 - 0 = 5 \\le 11$ ✓, and $x = -4$ gives $5 + 8 = 13$, which fails — so the cut really is at $-3$.'],
     alternativeExplanations: [
       { title: 'Dodge the flip entirely', steps: ['Add $2x$ to both sides instead: $5 \\le 11 + 2x$.', 'Subtract 11: $-6 \\le 2x$. Divide by positive 2: $-3 \\le x$.', 'Same answer, $x \\ge -3$, and you never divided by a negative.'] },
+      { title: '⚠️ Dodge the trap', steps: ['x ≤ −3 is the no-flip answer, and it fails the smell test: try x = −10 and 5 − 2(−10) = 25, which is NOT ≤ 11.', 'You divided by −2, so the sign flips: x ≥ −3. One test number always exposes a missing flip.'] },
     ],
     tags: ['inequality', 'flip-rule', 'two-step'], estimatedSeconds: 65,
   },
@@ -655,6 +665,7 @@ export const problemsA1u01: SeedProblem[] = [
     explanation: ['Subtract 12 from both sides: $4g \\le 28$.', 'Divide by 4: $g \\le 7$.', 'The greatest whole number of groups is 7. Check: $12 + 4(7) = 40$ students — exactly full, and "at most 40" allows it. ✓'],
     alternativeExplanations: [
       { title: 'Count the empty seats', steps: ['The bus has $40 - 12 = 28$ empty seats.', 'Each group fills 4 seats, so $28 \\div 4 = 7$ groups fit exactly.', 'An 8th group would need 4 more seats than the bus has.'] },
+      { title: '⚠️ Dodge the trap', steps: ['40 ÷ 4 = 10 groups forgets the 12 students already in their seats.', 'Seats left: 40 − 12 = 28. Then 28 ÷ 4 = 7 groups. Subtract what is used before dividing what is left.'] },
     ],
     tags: ['inequality', 'two-step', 'word-problem'], estimatedSeconds: 65,
   },
@@ -673,6 +684,7 @@ export const problemsA1u01: SeedProblem[] = [
     explanation: ['Subtract 3 from both sides: $-4x < 20$.', 'Divide both sides by $-4$ and flip $<$ to $>$: $x > -5$.', 'Check: $x = 0$ gives $3 < 23$ ✓, and $x = -6$ gives $24 + 3 = 27$, which is not $< 23$ — the boundary is $-5$.'],
     alternativeExplanations: [
       { title: 'On a number line', steps: ['Put an OPEN dot at $-5$, since $-5$ itself gives $23 < 23$, which is false.', 'Shade to the right: every number bigger than $-5$ makes the left side smaller than 23.'] },
+      { title: '⚠️ Dodge the trap', steps: ['x < −5 keeps the sign pointing the old way after dividing by −4 — the classic missing flip.', 'Check with x = 0: −4(0) + 3 = 3 < 23 ✓, so 0 must be in the answer. Only x > −5 contains 0.'] },
     ],
     tags: ['inequality', 'flip-rule', 'two-step'], estimatedSeconds: 70,
   },

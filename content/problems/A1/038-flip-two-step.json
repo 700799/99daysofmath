@@ -49,6 +49,13 @@
         "Subtract 11: $-6 \\le 2x$. Divide by positive 2: $-3 \\le x$.",
         "Same answer, $x \\ge -3$, and you never divided by a negative."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "x ≤ −3 is the no-flip answer, and it fails the smell test: try x = −10 and 5 − 2(−10) = 25, which is NOT ≤ 11.",
+        "You divided by −2, so the sign flips: x ≥ −3. One test number always exposes a missing flip."
+      ]
     }
   ],
   "tags": [

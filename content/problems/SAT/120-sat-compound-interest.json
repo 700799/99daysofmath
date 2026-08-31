@@ -45,6 +45,13 @@
         "Compound interest pays on the growing balance, so it reaches $\\$2205$.",
         "The gap is small over two years and enormous over twenty — which is why the SAT tests that you know they are different."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "2,200 is simple interest — 5% of the original both years — and it sits one choice away from the right answer.",
+        "Compound means the second year's 5% acts on 2,100, not 2,000. The extra $5 IS the compounding; its absence flags the wrong model."
+      ]
     }
   ],
   "tags": [

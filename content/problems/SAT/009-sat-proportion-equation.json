@@ -45,6 +45,13 @@
         "The left becomes $3(2x - 1)$ and the right becomes $5(x + 4)$ — exactly the cross-multiplied form.",
         "Cross-multiplication is not a separate trick; it is this step with the arithmetic already done."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Cross-multiplying only one way — writing 3(2x − 1) = x + 4 — forgets the 5 and lands on a tidy wrong x.",
+        "In a cross-multiplication BOTH numerators pick up the opposite denominator. Draw the two diagonal arrows before writing anything."
+      ]
     }
   ],
   "tags": [

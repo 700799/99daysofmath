@@ -67,6 +67,13 @@
         "But each lookup costs about fifteen seconds, and geometry questions cluster late in a module.",
         "Knowing them cold converts that lookup time into checking time."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "27π drops the 4/3 entirely; another classic slip cubes 4/3·r instead of r alone.",
+        "Cube the radius first — 27 — then apply 4/3 π. Order of operations is the entire difficulty of the sphere formula."
+      ]
     }
   ],
   "tags": [

@@ -45,6 +45,13 @@
         "That single sentence tells you to divide, before you touch the arithmetic.",
         "On every conversion question, predicting bigger-or-smaller first eliminates the multiply/divide coin flip."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Multiplying gives 500 — more US dollars than Canadian, from the stronger currency. That direction is impossible.",
+        "Decide bigger-or-smaller before any arithmetic: the US amount must be the smaller number, so divide by 1.25."
+      ]
     }
   ],
   "tags": [

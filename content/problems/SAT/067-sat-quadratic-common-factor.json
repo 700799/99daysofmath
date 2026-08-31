@@ -45,6 +45,13 @@
         "The constant $2$ can never be zero, so it contributes no solution — only the variable factors matter.",
         "Recognizing that a numerical factor is irrelevant to the roots saves you from chasing it."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Dividing both sides by x turns 2x² = 8x into 2x = 8 — the root x = 0 vanishes without a trace.",
+        "Factor a zero product instead of dividing: 2x(x − 4) = 0 keeps both roots, and then greatest-vs-least is a safe final read."
+      ]
     }
   ],
   "tags": [

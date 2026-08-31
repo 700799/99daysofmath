@@ -49,6 +49,13 @@
         "At $\\$45$ per hour, $\\$225$ buys 5 hours and $\\$22.50$ buys half an hour.",
         "That is $5.5$ hours — the same answer, reached by splitting the money rather than by solving."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Dividing the whole bill by the rate — 322.50 ÷ 45 ≈ 7.2 hours — silently bills the call-out fee as labour, and 7.2 will be a choice.",
+        "The fee is paid once, so it comes OFF the bill before any dividing. Fixed charge first, rate second, every time."
+      ]
     }
   ],
   "tags": [

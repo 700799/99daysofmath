@@ -67,6 +67,13 @@
         "Any variable written without an exponent has an exponent of $1$, and any expression without a coefficient has a coefficient of $1$.",
         "Writing those in explicitly before you start costs a second and prevents the most common slip in this question type."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Choice D forgets that the bare y carries an invisible exponent 1, so y³·y should become y⁴.",
+        "Rewrite y as y¹ before adding exponents. Making the invisible exponent visible costs one second and removes the trap entirely."
+      ]
     }
   ],
   "tags": [

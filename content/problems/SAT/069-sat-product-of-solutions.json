@@ -45,6 +45,13 @@
         "If the product is positive, they share a sign — and then the sum tells you which.",
         "Reading the signs off $b$ and $c$ before factoring often tells you what pair to look for."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The sum, 4, is offered right beside the product; so is +12, the product with a dropped sign.",
+        "Product is c/a WITH ITS SIGN: −12/1. Check against the factored roots 6 and −2: their product is −12 ✓"
+      ]
     }
   ],
   "tags": [

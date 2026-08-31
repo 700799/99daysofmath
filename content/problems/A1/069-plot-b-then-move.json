@@ -42,6 +42,13 @@
         "Moving right $1$ from $x = 0$ puts you at $x = 1$.",
         "$y = 3 \\times 1 + 2 = 5$ — the graph move and the formula agree."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "Moving up by 1 — copying the run instead of the slope — lands on 3 instead of 5.",
+        "The slope 3 is the STAIR HEIGHT: right 1, up 3. From (0, 2) that is (1, 5), so y = 5."
+      ]
     }
   ],
   "tags": [

@@ -19,6 +19,18 @@ describe('lessons content', () => {
     }
   });
 
+  it('Algebra 1 lessons meet the deepened mastery bar', () => {
+    // The A1 course promises full coverage: a pro-move concept line, six or
+    // more worked examples, and four or more try-it questions per unit.
+    const a1 = LESSONS.filter((l) => l.domain === 'A1');
+    expect(a1).toHaveLength(14);
+    for (const l of a1) {
+      expect(l.concept.length, `A1-${l.unit} concept`).toBeGreaterThanOrEqual(5);
+      expect(l.examples.length, `A1-${l.unit} examples`).toBeGreaterThanOrEqual(6);
+      expect(l.practice.length, `A1-${l.unit} practice`).toBeGreaterThanOrEqual(4);
+    }
+  });
+
   it('lesson keys are unique', () => {
     const keys = new Set(LESSONS.map((l) => `${l.domain}-${l.unit}`));
     expect(keys.size).toBe(LESSONS.length);

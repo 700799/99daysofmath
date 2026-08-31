@@ -45,6 +45,13 @@
         "The left becomes $a \\cdot 3 = 3a$ and the right becomes $b$, so $b = 3a$ immediately.",
         "Then use $x = 1$: $(1 + a)(4) = 1 + 11 + b$, so $4 + 4a = 12 + 3a$ and $a = 8$, giving $b = 24$."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "a = 8 is the halfway answer — correct work, wrong quantity, and it is among the choices.",
+        "The question asks for b, which is 3a. Note the target before matching coefficients so the last step happens."
+      ]
     }
   ],
   "tags": [

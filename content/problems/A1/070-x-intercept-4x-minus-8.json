@@ -42,6 +42,13 @@
         "The line starts at $(0, -8)$, which is $8$ below the $x$-axis, and climbs $4$ per step.",
         "It needs $8 \\div 4 = 2$ steps to reach height $0$ — so it crosses at $x = 2$."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "−8 is the y-intercept — where the line crosses the OTHER axis — and it is the classic mix-up here.",
+        "Crossing the x-axis means y = 0: solve 4x − 8 = 0 to get x = 2. Which axis you cross decides which letter is zero."
+      ]
     }
   ],
   "tags": [

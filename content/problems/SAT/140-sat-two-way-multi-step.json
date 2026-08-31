@@ -49,6 +49,13 @@
         "Column total minus the excluded row gives the \"not\" count in one step.",
         "The complement also generalizes: for probability, $P(\\text{not } A) = 1 - P(A)$ is the same idea."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Adding rows you did not need, or answering 65 (one grade's count) instead of the difference, are the designed exits.",
+        "Complement per column first — 110 − 45 and 90 − 35 — then subtract. Two clean complements beat three additions."
+      ]
     }
   ],
   "tags": [

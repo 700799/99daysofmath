@@ -42,6 +42,13 @@
         "The outputs are $0, 4, 8, 12, \\ldots$ climbing by $4$ each time.",
         "They stop when the questions run out at $q = 10$: the last one is $40$."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "Answering 10 hands back the number of questions — the input — when the question wants the best possible SCORE.",
+        "Push the biggest allowed input through the machine: f(10) = 4 × 10 = 40 points."
+      ]
     }
   ],
   "tags": [

@@ -45,6 +45,13 @@
         "Read whether the question wants \"the increase\" or \"the population after\".",
         "This is the single most common way to lose an otherwise trivial percent question."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "500 — the increase alone — is the classic near-miss, and it appears among the choices.",
+        "Re-read the final clause: it asks for the population AFTER the year, so the increase must be added back: 13,000."
+      ]
     }
   ],
   "tags": [

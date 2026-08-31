@@ -38,6 +38,8 @@ export interface SatPlaybook {
   desmos: string;
   /** What a question from this unit should cost you. */
   timing: string;
+  /** The self-check: "you have mastered this unit when…". */
+  mastery: string[];
 }
 
 export const SAT_PLAYBOOKS: SatPlaybook[] = [
@@ -94,21 +96,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: 'k = 3',
       },
+      {
+        q: 'Solve 6 − 2(x − 3) = 4x.',
+        steps: [
+          'Distribute the −2 into BOTH terms: 6 − 2x + 6 = 4x, so 12 − 2x = 4x.',
+          'Add 2x to both sides: 12 = 6x.',
+          'x = 2. Check: 6 − 2(−1) = 8 and 4(2) = 8 ✓',
+        ],
+        answer: 'x = 2',
+      },
+      {
+        q: 'For what value of c does 5x + c = 5(x − 2) have infinitely many solutions?',
+        steps: [
+          'Expand the right side: 5x − 10.',
+          'Infinitely many solutions means the sides are identical, and the 5x terms already match.',
+          'So the constants must match: c = −10.',
+        ],
+        answer: 'c = −10',
+      },
     ],
     mustKnow: [
       'No solution ⟺ same slope, different constant (parallel lines that never meet).',
       'Infinitely many ⟺ the two sides are literally the same expression.',
       'To solve a literal equation, treat every other letter as if it were a number. The steps do not change.',
+      'To clear fractions, multiply EVERY term by the least common denominator — including the terms that had no fraction.',
     ],
     traps: [
       'Distributing a negative and dropping the sign on the second term.',
       'Solving for x when the question asks for 3x − 1, or for a different variable entirely.',
       'Reading "no solution" as "x = 0". Those are completely different answers, and both appear as choices.',
+      'Distributing a factor into only the first term inside the parentheses.',
+      'Answering “x = 0” for an equation that has no solution — a value and no-value are different claims, and both appear as choices.',
     ],
     desmos:
       'Graph the left side as y₁ and the right side as y₂, then click the intersection. This solves any single-variable equation and doubles as a check when the algebra is uncertain. Parallel lines with no intersection is what "no solution" looks like.',
     timing:
       '30-45 seconds. If you are past a minute on a one-variable linear equation, you have made an arithmetic error — restart cleanly rather than hunting for it.',
+    mastery: [
+      'You can solve any linear equation — fractions, decimals, parentheses — in under 45 seconds, and your check costs under ten.',
+      'Shown ax + b = cx + d, you can say how many solutions it has without solving anything.',
+      'You reach for backsolving the moment the choices are plain numbers, and for algebra when they are not.',
+    ],
   },
   {
     unit: 2,
@@ -162,21 +190,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: '23 cm',
       },
+      {
+        q: 'A linear function f has slope 4, and f(2) = 5. What is f(0)?',
+        steps: [
+          'Moving from x = 2 back to x = 0 is two steps left.',
+          'Each step left subtracts the slope: 5 − 4 − 4 = −3.',
+          'So f(0) = −3 — which is also the y-intercept, so f(x) = 4x − 3.',
+        ],
+        answer: 'f(0) = −3',
+      },
+      {
+        q: 'A plant\'s height is modeled by P(t) = 12t + 80, in millimeters, t days after purchase. What does 80 represent?',
+        steps: [
+          'Set t = 0: P(0) = 80, before any days pass.',
+          'So 80 is the plant\'s height in millimeters at the moment of purchase.',
+          'The 12 is the growth rate — millimeters per day — and “height after one day” would be 92, not 12 or 80.',
+        ],
+        answer: 'The height at purchase: 80 mm',
+      },
     ],
     mustKnow: [
       'Slope = (y₂ − y₁)/(x₂ − x₁). Keep both subtractions in the same order.',
       'In y = mx + b, m is the rate and b is the starting value.',
       'A linear function has a constant rate of change — equal steps in x give equal steps in y.',
+      'f(0) is the y-intercept; the x solving f(x) = 0 is the x-intercept. One is an output, the other an input — questions deliberately swap them.',
     ],
     traps: [
       'Subtracting the y-values in one order and the x-values in the other, flipping the sign of the slope.',
       'Confusing "the cost of a one-hour job" (32 + 150) with "the cost per hour" (32).',
       'On interpretation questions, every wrong choice is a true statement about a different feature of the model.',
+      'Evaluating f(−3) when the question asks for the x that makes f(x) = −3 — input and output reversed.',
+      'Computing a slope from a table with the columns read in opposite orders, which gives the reciprocal or the wrong sign.',
     ],
     desmos:
       'Enter the function and use the table view to read several values at once. For "find x when f(x) = 17", graph y = f(x) and y = 17 and click the intersection.',
     timing:
       'Computation: 30 seconds. Interpretation: 45-60 seconds, most of it spent reading carefully rather than calculating.',
+    mastery: [
+      'You can produce slope, intercept, or any value of a linear function from two points, a table, or a sentence — whichever the question hands you.',
+      'You interpret slope and both intercepts in context by naming their units first.',
+      'You can step along a slope to any input without rebuilding the whole equation.',
+    ],
   },
   {
     unit: 3,
@@ -230,21 +284,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: 'k = −2',
       },
+      {
+        q: 'Find the equation of the line through (2, 5) parallel to 3x + y = 7.',
+        steps: [
+          'Rewrite the given line: y = −3x + 7, so its slope is −3, and parallel means the same slope.',
+          'Substitute (2, 5) into y = −3x + b: 5 = −6 + b, so b = 11.',
+          'The line is y = −3x + 11.',
+        ],
+        answer: 'y = −3x + 11',
+      },
+      {
+        q: 'The line y = mx + 4 passes through (6, 1). What is m?',
+        steps: [
+          'The point (0, 4) is on the line — the equation displays its intercept.',
+          'Slope between (0, 4) and (6, 1): (1 − 4) ÷ (6 − 0) = −3/6.',
+          'm = −1/2.',
+        ],
+        answer: 'm = −1/2',
+      },
     ],
     mustKnow: [
       'Slope-intercept y = mx + b, standard Ax + By = C, point-slope y − y₁ = m(x − x₁).',
       'Perpendicular slopes multiply to −1.',
       'A point with x = 0 IS the y-intercept — no work needed.',
+      'Point-slope form y − y₁ = m(x − x₁) writes the line in one move when you have a slope and a point — no solving for b.',
     ],
     traps: [
       'Doing only half the perpendicular rule. One distractor flips without negating; another negates without flipping.',
       'Sign errors when dividing a standard-form equation by a negative coefficient.',
       'Stopping at the equation when the question asked for one specific feature of it.',
+      'Swapping the intercept shortcuts: for Ax + By = C the x-intercept is C/A and the y-intercept is C/B — not the other way round.',
+      'Verifying a candidate line against only one of the two given points; one distractor always passes through exactly one.',
     ],
     desmos:
       'Type equations in any form — Desmos accepts 3x + 2y = 12 directly. To test a candidate equation against given points, graph it and see whether the points sit on the line.',
     timing:
       '45-60 seconds. Multi-step perpendicular questions can run to 90 seconds and are worth the time — they are very gettable.',
+    mastery: [
+      'You can move between slope-intercept, standard, and point-slope form in either direction without hesitation.',
+      'Parallel and perpendicular conversions are automatic: same slope; flip AND negate.',
+      'Given any two facts about a line — two points, a point and a slope, a description — you can produce its equation inside a minute.',
+    ],
   },
   {
     unit: 4,
@@ -298,21 +378,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: 'k = 6',
       },
+      {
+        q: 'The sum of two numbers is 30 and their difference is 6. What is the larger number?',
+        steps: [
+          'Write x + y = 30 and x − y = 6, with x the larger.',
+          'Add the equations: 2x = 36, so x = 18.',
+          'Check: 18 + 12 = 30 and 18 − 12 = 6 ✓',
+        ],
+        answer: '18',
+      },
+      {
+        q: 'For what value of k does the system kx + 2y = 10 and 3x + y = 5 have infinitely many solutions?',
+        steps: [
+          'Infinitely many means one equation is a multiple of the other.',
+          'Doubling the second gives 6x + 2y = 10 — the 2y and the 10 already match the first.',
+          'So k = 6. (Had the constants differed, the same k would give no solution instead.)',
+        ],
+        answer: 'k = 6',
+      },
     ],
     mustKnow: [
       'A solution must satisfy BOTH equations. Always check the second one.',
       'Parallel (same slope, different intercept) = no solution. Identical = infinitely many.',
       'The SAT often wants x + y or 2x − y rather than x alone — sometimes reachable by adding the equations directly.',
+      'Adding the two equations as written is always legal — and on SAT systems the requested combination often appears immediately when you do.',
     ],
     traps: [
       'Solving for x and stopping when the question asked for y.',
       'Confusing "no solution" with "infinitely many" — the coefficients decide whether the lines are parallel, and the constant decides whether they are the same line.',
       'Assigning variables to the wrong quantities in a word problem. Write "a = adult price" explicitly.',
+      'Adding the equations when subtracting is what cancels — check whether the matching coefficients are equal or opposite first.',
+      'Reporting the first variable you solve for when the question asks for the other one, or for a combination like x + y.',
     ],
     desmos:
       'Enter both equations exactly as written and click the intersection point — Desmos labels the coordinates. If the lines never cross, you can see the "no solution" case rather than deducing it.',
     timing:
       '60 seconds for a clean system, 90 for a word problem. The "how many solutions" type should take 15-20 seconds with the ratio test.',
+    mastery: [
+      'You pick substitution or elimination by looking, not by habit, and the choice saves you a step.',
+      'The ratio test answers “how many solutions” in fifteen seconds without solving.',
+      'You can turn a two-sentence word problem into a system, solve it, and answer the exact quantity asked.',
+    ],
   },
   {
     unit: 5,
@@ -366,21 +472,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: '11 boxes',
       },
+      {
+        q: 'Solve 5 − 3x > 2x − 10.',
+        steps: [
+          'Add 3x to both sides so the coefficient stays positive: 5 > 5x − 10.',
+          'Add 10: 15 > 5x, so 3 > x.',
+          'All x < 3 — and no flip was ever needed, because we never divided by a negative.',
+        ],
+        answer: 'x < 3',
+      },
+      {
+        q: 'What is the greatest integer x with 4(x − 2) ≤ 18?',
+        steps: [
+          'Divide by 4 first: x − 2 ≤ 4.5.',
+          'Add 2: x ≤ 6.5.',
+          'The greatest INTEGER at or below 6.5 is 6 — round a maximum down, never up.',
+        ],
+        answer: '6',
+      },
     ],
     mustKnow: [
       'Multiplying or dividing by a negative reverses the inequality. Nothing else does.',
       'For a compound inequality, operate on all three parts simultaneously.',
       'Counting integers from a to b inclusive gives b − a + 1 — the "+1" is what people forget.',
+      'For a maximum under ≤ take the floor of the bound; for a minimum under ≥ take the ceiling. The context (boxes, people, tickets) forces whole numbers.',
     ],
     traps: [
       'Forgetting the flip. This is the single most common algebra error on the test.',
       'Using a strict inequality where the wording permits equality, which changes whether a boundary value counts.',
       'Giving a fractional answer when the context (boxes, people, tickets) demands a whole number.',
+      'Rounding a fractional bound up for a maximum — whole items round DOWN under ≤, even from 6.9.',
+      'Translating “no more than” with a strict <, which wrongly throws away the boundary value.',
     ],
     desmos:
       'Desmos shades inequalities. Type the whole system and the solution region is where the shading overlaps; then plot candidate points and see which land inside. This turns an algebra check into a glance.',
     timing:
       '45 seconds to solve, 60-75 for a modeling or counting question. The counting questions deserve the extra time — fencepost errors are easy here.',
+    mastery: [
+      'You can solve any linear inequality and state which side of the boundary survives — and the flip rule never catches you, because you keep coefficients positive.',
+      'Constraint language translates itself: at least, at most, exceeds, no more than each map to one symbol instantly.',
+      'You test candidate points against a system in seconds, starting from x = 0 whenever it is legal.',
+    ],
   },
 
   // ──────────────────────── ADVANCED MATH ────────────────────────
@@ -436,21 +568,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: '9',
       },
+      {
+        q: 'Simplify (x⁴)³ ÷ x⁵.',
+        steps: [
+          'Power of a power multiplies: (x⁴)³ = x¹².',
+          'Division subtracts: x¹² ÷ x⁵ = x⁷.',
+          'Two rules, applied in the order the expression presents them.',
+        ],
+        answer: 'x⁷',
+      },
+      {
+        q: 'Write √(x⁹) as a single power of x.',
+        steps: [
+          'A square root is the exponent 1/2: √(x⁹) = (x⁹)^(1/2).',
+          'Multiply the exponents: x^(9/2).',
+          'The rule runs both ways — x^(9/2) unpacks to “the square root of x⁹” on sight.',
+        ],
+        answer: 'x^(9/2)',
+      },
     ],
     mustKnow: [
       'x⁻ⁿ = 1/xⁿ, and x^(m/n) is the nth root of x to the mth power.',
       'A variable with no written exponent has exponent 1.',
       'You may cancel factors, never terms — which is why factoring comes first.',
+      '√a · √b = √(ab): split a radical at its largest perfect-square factor to simplify it, and multiply radicals by merging them.',
     ],
     traps: [
       'Adding exponents when the rule calls for multiplying them, or vice versa.',
       'In (2x³)², forgetting to square the coefficient as well as the variable.',
       'Reading a negative exponent as a negative number.',
+      'Applying an outside exponent to only one factor of a product — (2x³)² must square the 2 as well.',
+      '“Cancelling” terms across a + sign; only factors multiplying the whole top and bottom may cancel.',
     ],
     desmos:
       'Less useful here than anywhere else on the test — the answers are expressions, not numbers. But you can verify an equivalence by graphing both expressions and confirming the curves coincide.',
     timing:
       '30-45 seconds. If picking numbers is faster than the algebra, pick numbers.',
+    mastery: [
+      'The three exponent rules are reflexes, including negative and fractional exponents in both directions.',
+      'You spot difference-of-squares and perfect-square patterns on sight and factor before you cancel, every time.',
+      'When the choices contain variables, you pick a number and test — and you know which numbers make bad test values.',
+    ],
   },
   {
     unit: 7,
@@ -504,21 +662,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: 'x = 7 or x = −1',
       },
+      {
+        q: 'Without solving, find the sum and product of the roots of x² − 10x + 21 = 0.',
+        steps: [
+          'For x² + bx + c, the roots sum to −b and multiply to c.',
+          'Sum = 10, product = 21.',
+          'That pair is 3 and 7 — the factoring found by arithmetic instead of trial.',
+        ],
+        answer: 'Sum 10, product 21 (roots 3 and 7)',
+      },
+      {
+        q: 'Solve 3x² = 27.',
+        steps: [
+          'Divide by 3: x² = 9.',
+          'Take the square root with BOTH signs: x = ±3.',
+          'Two solutions — an x² equation with a positive right side always has a pair.',
+        ],
+        answer: 'x = 3 or x = −3',
+      },
     ],
     mustKnow: [
       'The quadratic formula, exactly. It is not provided.',
       'Sum of roots = −b/a; product of roots = c/a. These answer sum-and-product questions without solving.',
       'Taking a square root introduces ±. Every time.',
+      'Every quadratic tool — factoring, the formula, the discriminant — requires the equation to equal zero first. Rearranging IS step one.',
     ],
     traps: [
       'Dividing both sides by x, which silently destroys the solution x = 0.',
       'Writing only the positive root after taking a square root.',
       'Misplacing 2a so that it divides only the radical instead of the whole numerator.',
+      'Setting each factor equal to the constant instead of zero — (x − 2)(x − 5) = 8 does NOT mean x − 2 = 8. Move everything to one side first.',
+      'Reading a, b, c off an equation that is not yet in “= 0” form and computing the wrong discriminant.',
     ],
     desmos:
       'Graph y = the quadratic and click the x-intercepts. For a parameter question, add a slider for k and drag until the parabola just touches the axis — this makes "exactly one solution" visible rather than abstract.',
     timing:
       '60-75 seconds. Discriminant questions are faster (45 seconds) once you recognize the pattern.',
+    mastery: [
+      'You factor what factors within fifteen seconds and switch to the formula or Desmos without regret when it does not.',
+      'The discriminant answers every “how many solutions” and “find k for exactly one” question in under a minute.',
+      'Sum-and-product lets you answer root questions without ever finding the roots.',
+    ],
   },
   {
     unit: 8,
@@ -572,21 +756,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: '(x + 3)² − 8',
       },
+      {
+        q: 'Describe the graph of y = 2(x − 3)² + 1.',
+        steps: [
+          'Vertex form: the vertex is (3, 1).',
+          'a = 2 is positive, so it opens upward and the vertex is a minimum.',
+          'Minimum value 1, at x = 3; no x-intercepts, since the whole graph sits above y = 1 > 0.',
+        ],
+        answer: 'Opens up, vertex (3, 1), minimum value 1',
+      },
+      {
+        q: 'Find the zeros and the maximum of f(x) = −x² + 6x − 5.',
+        steps: [
+          'Factor out the negative: f(x) = −(x² − 6x + 5) = −(x − 1)(x − 5), so the zeros are 1 and 5.',
+          'The vertex sits midway between them, at x = 3.',
+          'f(3) = −9 + 18 − 5 = 4 — a maximum, since the parabola opens down.',
+        ],
+        answer: 'Zeros 1 and 5; maximum 4 at x = 3',
+      },
     ],
     mustKnow: [
       'Vertex at x = −b/2a, which is also the midpoint of the zeros.',
       'a > 0 opens up (minimum); a < 0 opens down (maximum).',
       'In a(x − h)² + k the sign of h is opposite how it reads inside the parentheses.',
+      'In every form, the y-intercept is f(0) — for standard form that is c, with no work at all.',
     ],
     traps: [
       'Giving the vertex x-coordinate when the question asked for the maximum *value* (the y-coordinate), or the reverse.',
       'Sign errors on h — (x + 3)² has vertex x = −3.',
       'Forgetting that the zeros alone do not determine a parabola; a third point is needed to pin down a.',
+      'Reading a(x + h)² as having vertex +h; the vertex x is what zeroes the inside, so (x + 3)² means x = −3.',
+      'Assuming the y-intercept is the vertex; they coincide only when b = 0 and the axis is the y-axis itself.',
     ],
     desmos:
       'Graph the quadratic and click the turning point — Desmos labels the vertex exactly. Only fall back on completing the square when the question wants the rewritten *expression* rather than a number.',
     timing:
       '45-90 seconds. "Which form displays…" questions should take 20 seconds; projectile models take the longest.',
+    mastery: [
+      'You read the right feature straight out of the right form and convert between forms when the question demands a different one.',
+      'Vertex, axis, zeros, intercept, max or min: you can produce all five for any quadratic in about a minute.',
+      'Projectile questions are vertex questions to you now — you go straight to −b/2a or the midpoint of the zeros.',
+    ],
   },
   {
     unit: 9,
@@ -640,21 +850,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: 'k = −4',
       },
+      {
+        q: 'Solve 2/(x + 1) = 4/(x + 4).',
+        steps: [
+          'Cross-multiply: 2(x + 4) = 4(x + 1).',
+          '2x + 8 = 4x + 4, so x = 2.',
+          'Check the denominators at x = 2: 3 and 6, neither zero — the solution stands.',
+        ],
+        answer: 'x = 2',
+      },
+      {
+        q: 'A polynomial is written p(x) = (x − 2)(x + 5)q(x) for some polynomial q. What can you conclude?',
+        steps: [
+          'Each displayed factor forces a zero: p(2) = 0 and p(−5) = 0, whatever q is.',
+          'So the graph crosses or touches the x-axis at 2 and −5.',
+          'About other zeros you can conclude nothing — q may contribute more.',
+        ],
+        answer: 'p(2) = 0 and p(−5) = 0',
+      },
     ],
     mustKnow: [
       '"p(3) = 0", "3 is a zero", "the graph passes through (3, 0)", and "(x − 3) divides p(x)" all say the same thing.',
       'Squaring both sides can create solutions the original rejects — always substitute back.',
       'Degrees add when polynomials are multiplied.',
+      'Squaring both sides is safe only when both sides are known nonnegative — which is exactly why the check afterwards is mandatory, not optional.',
     ],
     traps: [
       'Skipping the extraneous check on a radical or rational equation. The invented solution is always an answer choice.',
       'Getting the sign backwards on the Factor Theorem: a zero of 3 means the factor (x − 3), not (x + 3).',
       'Forgetting that a value making a denominator zero is excluded no matter what the algebra says.',
+      'Multiplying only one side of an equation by the common denominator.',
+      'Reporting “two solutions” for a radical equation before substituting both back — squaring routinely invents one.',
     ],
     desmos:
       'The strongest use case on the whole test. Graph both curves and click the intersections — this answers "how many solutions" instantly and gives the coordinates. For polynomials, graph and read the x-intercepts rather than dividing by hand.',
     timing:
       '75-100 seconds. These are among the most expensive questions on the test; flag one rather than sinking two minutes into it.',
+    mastery: [
+      'You solve rational and radical equations with the extraneous check built into your hands, not bolted on.',
+      'The Factor Theorem\'s four phrasings — zero, root, factor, point on the graph — are one fact to you.',
+      'Curve-meets-line questions go straight to a quadratic and its discriminant, or straight to Desmos, whichever is faster today.',
+    ],
   },
   {
     unit: 10,
@@ -708,21 +944,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: 'a = 6',
       },
+      {
+        q: 'A machine\'s value drops 8% per year from $300. Model its value after t years.',
+        steps: [
+          'An 8% loss keeps 92%, so the yearly multiplier is 0.92.',
+          'V = 300(0.92)^t.',
+          'Check one year: 300 × 0.92 = 276, which is indeed 8% ($24) below 300 ✓',
+        ],
+        answer: 'V = 300(0.92)^t',
+      },
+      {
+        q: 'Compare f(x) = 5·2ˣ with g(x) = 5 + 2x at x = 4.',
+        steps: [
+          'f(4) = 5 · 16 = 80 — four doublings.',
+          'g(4) = 5 + 8 = 13 — four additions of 2.',
+          'Same start, same “2”, wildly different growth: multiplying compounds, adding does not.',
+        ],
+        answer: 'f(4) = 80 versus g(4) = 13',
+      },
     ],
     mustKnow: [
       'In a·bˣ, a is the initial value (the output at x = 0) and b is the per-period multiplier.',
       'Growth A = a(1 + r)^t; decay A = a(1 − r)^t; compounded n times a year, A = a(1 + r/n)^(nt).',
       'Anything nonzero to the power 0 equals 1.',
+      'After n periods the total multiplier is bⁿ, and stepping backwards one period divides by b — which is how you recover f(0) from a table that starts at f(1).',
     ],
     traps: [
       'Reading a base of 0.85 as "decreases by 85%" when it means "decreases by 15%".',
       'Multiplying the exponent by the period instead of dividing.',
       'Modelling a percent change as repeated addition — that is linear, and it will be a choice.',
+      'Reading “increases by a factor of 3” as +3 rather than ×3.',
+      'Applying the percent to the original amount every period — that is simple interest, and the model is then linear, not exponential.',
     ],
     desmos:
       'Graph a candidate model and check a known value from the problem. For fitting a model to a table, enter the data and use y₁ ~ ab^x₁ to get a and b directly.',
     timing:
       '60-75 seconds. Model-selection questions go faster if you compute the expected value after one period and test the choices against it.',
+    mastery: [
+      'You convert between a percent rate and a base multiplier in both directions without pausing.',
+      'The exponent always counts periods in your models, and you verify by substituting one full period.',
+      'Given any two values of an exponential function, you can recover both a and b inside ninety seconds.',
+    ],
   },
 
   // ───────── PROBLEM-SOLVING AND DATA ANALYSIS ─────────
@@ -778,21 +1040,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: '300 parts',
       },
+      {
+        q: '3 pounds of apples cost $7.50. What do 8 pounds cost at the same rate?',
+        steps: [
+          'Unit price first: 7.50 ÷ 3 = $2.50 per pound.',
+          '8 × 2.50 = $20.',
+          'Through the unit rate in two steps — and the intermediate $2.50/lb is easy to sanity-check.',
+        ],
+        answer: '$20',
+      },
+      {
+        q: 'A car uses 6 gallons over 180 miles. How many gallons for 300 miles at the same rate?',
+        steps: [
+          'Efficiency: 180 ÷ 6 = 30 miles per gallon.',
+          '300 ÷ 30 = 10 gallons.',
+          'Or scale directly: 300 miles is 180 × 5/3, so gas is 6 × 5/3 = 10 ✓',
+        ],
+        answer: '10 gallons',
+      },
     ],
     mustKnow: [
       'A unit rate is "per one" — divide the total by the number of units.',
       'Units cancel like algebraic factors. That is what makes them a free error check.',
       'Scale factors apply to lengths directly; watch for a unit change at the end of the question.',
+      'Unit price, speed, density, and efficiency are one structure: amount ÷ base. Find the per-one rate and most of these questions become one multiplication.',
     ],
     traps: [
       'Dividing when you should multiply. Predict whether the answer should be bigger or smaller first.',
       'Answering in the units the problem gave rather than the units it asked for.',
       'Two-step questions where the scale work is obvious and the unit conversion is not.',
+      'Averaging two rates when the question needs total ÷ total — a round trip at 30 and 60 mph does NOT average 45.',
+      'Building a proportion with mismatched positions: cups over cookies must equal cups over cookies, never its flip on one side only.',
     ],
     desmos:
       'Useful only as a calculator here. The work is in the setup, which Desmos cannot do for you.',
     timing:
       '45-75 seconds. Multi-factor conversions take longer and are worth writing out fully.',
+    mastery: [
+      'You default to the unit rate and know when direct scaling is faster.',
+      'Conversion chains come out with the right units because you cancel them like factors, every time.',
+      'Work problems reduce to machine-hours (or person-days) in your first line.',
+    ],
   },
   {
     unit: 12,
@@ -846,21 +1134,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: '120',
       },
+      {
+        q: 'A meal costs $60 plus 8% tax. What is the total?',
+        steps: [
+          'Adding 8% means multiplying by 1.08.',
+          '60 × 1.08 = $64.80.',
+          'Same machinery as a markup — tax, tip, markup, and interest are all “× (1 + r)”.',
+        ],
+        answer: '$64.80',
+      },
+      {
+        q: 'A reading drops from 250 to 190. What is the percent decrease?',
+        steps: [
+          'The change is 250 − 190 = 60.',
+          'Divide by the ORIGINAL: 60 ÷ 250 = 0.24.',
+          'A 24% decrease. (60 ÷ 190 ≈ 32% is the trap that divides by the new value.)',
+        ],
+        answer: '24% decrease',
+      },
     ],
     mustKnow: [
       'part = percent × whole. Every percent question is this with one unknown.',
       'Percent change = (new − old)/old. Always divide by the ORIGINAL.',
       'Compound interest: A = P(1 + r)^t, applying the multiplier once per period.',
+      '“100% more” doubles; “200% more” triples. “Of” multiplies; “more than” adds the original back on.',
     ],
     traps: [
       'Dividing by the new value instead of the original when computing percent change.',
       'Adding successive percentages together.',
       'Answering with the amount of the increase when the question wanted the new total.',
+      'Confusing percentage points with percent: 20% → 30% is a rise of 10 points but a 50 percent increase.',
+      'Taking a percent of the wrong base mid-problem — write down whose 15% it is before computing anything.',
     ],
     desmos:
       'A straightforward calculator here. The value is in setting up the right multiplier, not in the arithmetic.',
     timing:
       '45-80 seconds. Reverse-percent and successive-change questions are the slowest and the most commonly missed.',
+    mastery: [
+      'You move between a percent, its decimal, and its multiplier without friction, in both directions.',
+      'Reverse-percent questions trigger division by the multiplier — adding the percent back never tempts you.',
+      'You chain successive changes by multiplying and can say the net percent change of any two steps.',
+    ],
   },
   {
     unit: 13,
@@ -914,21 +1228,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: '14',
       },
+      {
+        q: 'Five values have a mean of 24. Four of them are 20, 22, 25, and 27. Find the fifth.',
+        steps: [
+          'Total needed: 5 × 24 = 120.',
+          'The four known values sum to 94.',
+          'The fifth is 120 − 94 = 26.',
+        ],
+        answer: '26',
+      },
+      {
+        q: 'Four values have a mean of 10. A fifth value of 10 is added. What is the new mean?',
+        steps: [
+          'Old sum 40; new sum 50 over 5 values.',
+          'New mean = 10 — unchanged.',
+          'Adding a value equal to the mean never moves it; above raises it, below lowers it.',
+        ],
+        answer: '10 — unchanged',
+      },
     ],
     mustKnow: [
       'Sort before finding a median. With an even count, average the middle two.',
       'The median is resistant to outliers; the mean is not.',
       'Range = maximum − minimum, and it uses only the two extremes.',
+      'Adding a value above the mean pulls it up, below pulls it down, equal leaves it fixed — direction first, arithmetic second.',
     ],
     traps: [
       'Taking the median of an unsorted list.',
       'Averaging the value column of a frequency table instead of weighting by frequency.',
       'Assuming equal means imply similar spread, or that a larger mean implies a larger standard deviation.',
+      'Finding a frequency table\'s median by eyeballing the value column instead of counting up to the middle person.',
+      'Concluding that a larger range implies a larger standard deviation — one outlier stretches the range while the rest of the data stays tight.',
     ],
     desmos:
       'Enter a list L = [4, 7, 7, 9] and use mean(L), median(L), stdev(L). Useful when a frequency table makes the arithmetic tedious.',
     timing:
       '45-90 seconds. Conceptual comparisons should take 30 seconds; frequency-table means take the longest.',
+    mastery: [
+      'Every average question becomes a totals question in your first line: sum = mean × count.',
+      'You predict what an added or removed value does to mean and median before computing anything.',
+      'You compare standard deviations by looking at clustering, and you can defend the comparison in one sentence.',
+    ],
   },
   {
     unit: 14,
@@ -982,21 +1322,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: '45% through 51%',
       },
+      {
+        q: 'The probability of rain is 0.3. What is the probability of no rain?',
+        steps: [
+          '“No rain” is the complement of “rain”.',
+          'P(not A) = 1 − P(A) = 1 − 0.3 = 0.7.',
+          'On tables, the same idea: the “not” count is the total minus the counted row.',
+        ],
+        answer: '0.7',
+      },
+      {
+        q: 'A best-fit line for library visits (y) against distance in km (x) has slope −0.8. Interpret it.',
+        steps: [
+          'Slope units: visits per kilometer.',
+          'Each additional kilometer of distance predicts about 0.8 FEWER visits.',
+          'The sign carries the direction; the number carries the size — an interpretation needs both.',
+        ],
+        answer: '≈0.8 fewer visits per extra km',
+      },
     ],
     mustKnow: [
       'Probability = favorable / total, where the total is whatever group the question restricts you to.',
       'A larger sample narrows the margin of error.',
       'Correlation is not causation — unless the study randomly assigned the treatment.',
+      'Residual = actual − predicted. Positive means the point sits above the line and the model under-predicted.',
     ],
     traps: [
       'Using the grand total when the question conditions on a row or column.',
       'Confusing the predicted value with the observed one.',
       'Over-generalizing from a sample drawn from one school or one group of volunteers.',
+      'Reading a strong correlation as proof of cause — without random assignment it is association, full stop.',
+      'Trusting a best-fit prediction far outside the data\'s x-range; the line is only evidence where the data lives.',
     ],
     desmos:
       'For a scatterplot question, enter the data in a table and type y₁ ~ mx₁ + b — Desmos returns the least-squares slope and intercept. This turns a line-of-best-fit question into a typing exercise.',
     timing:
       '55-90 seconds. Most of that is reading. Inference questions are pure reading and should take no calculation at all.',
+    mastery: [
+      'You name the denominator before touching a two-way table, and conditional phrasings cannot flip you.',
+      'Predicted, actual, and residual are three different numbers you never interchange.',
+      'You can say exactly what a study design entitles you to conclude — and no more.',
+    ],
   },
 
   // ───────── GEOMETRY AND TRIGONOMETRY ─────────
@@ -1052,21 +1418,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: '90°',
       },
+      {
+        q: 'Two lines cross. One of the four angles measures 38°. Find the other three.',
+        steps: [
+          'Vertical angles are equal: the angle opposite is also 38°.',
+          'Each adjacent angle is supplementary: 180 − 38 = 142°.',
+          'So the four angles are 38, 142, 38, 142 — two numbers, as always.',
+        ],
+        answer: '38°, 142°, 142°',
+      },
+      {
+        q: 'Three angles of a quadrilateral measure 85°, 95°, and 110°. Find the fourth.',
+        steps: [
+          'A quadrilateral\'s angles sum to (4 − 2) × 180 = 360°.',
+          '85 + 95 + 110 = 290.',
+          'The fourth is 360 − 290 = 70°.',
+        ],
+        answer: '70°',
+      },
     ],
     mustKnow: [
       'Triangle angles sum to 180°. An n-gon\'s interior angles sum to (n − 2) × 180°.',
       'Supplementary = 180°; complementary = 90°.',
       'Triangle inequality: the two shorter sides must together exceed the longest.',
+      'Vertical angles are equal, and a linear pair sums to 180° — the two facts that unlock every crossing-lines figure.',
     ],
     traps: [
       'Measuring the figure. Diagrams are not to scale unless stated.',
       'Assuming a right angle because it looks like one — it counts only if marked or stated.',
       'Mixing up the vertex angle and the base angles of an isosceles triangle.',
+      'Assuming lines are parallel because they look it — every parallel-angle rule requires the parallel marks or a statement.',
+      'Applying the 180° triangle sum to a quadrilateral; four sides means 360°.',
     ],
     desmos:
       'Rarely useful here. Redraw the figure on scratch paper and label every given directly onto your copy — that is the tool for this unit.',
     timing:
       '40-70 seconds. Algebraic angle questions take longest because of the setup, not the solving.',
+    mastery: [
+      'You chase angles through any parallel-line figure using just “equal or supplementary”.',
+      'Triangle sum, exterior angle, and isosceles base angles are one connected toolkit you apply without prompting.',
+      'You redraw and label every figure, and you never trust an unmarked right angle.',
+    ],
   },
   {
     unit: 16,
@@ -1120,21 +1512,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: '20 in³',
       },
+      {
+        q: 'A trapezoid has parallel sides 6 and 10 and height 4. Find its area.',
+        steps: [
+          'Trapezoid area = ½(b₁ + b₂)h — average the parallel sides, times the height.',
+          '½(6 + 10) = 8, and 8 × 4 = 32.',
+          'The trapezoid behaves like an 8-by-4 rectangle — that is what averaging the bases means.',
+        ],
+        answer: '32',
+      },
+      {
+        q: 'A 2 × 3 × 4 box: find its volume and its surface area.',
+        steps: [
+          'Volume: 2 × 3 × 4 = 24 cubic units.',
+          'Faces come in three pairs: 2·3, 2·4, 3·4 → 6 + 8 + 12 = 26, doubled = 52 square units.',
+          'Different questions, different units — cubic for filling, square for wrapping.',
+        ],
+        answer: 'V = 24, SA = 52',
+      },
     ],
     mustKnow: [
       'Triangle area = ½bh; circle area = πr²; circumference = 2πr.',
       'Cone, pyramid, and sphere formulas are on the reference sheet — but each lookup costs about 15 seconds.',
       'Doubling every dimension multiplies volume by 8, not by 2.',
+      'Trapezoid area = ½(b₁ + b₂)h. It is on the reference sheet, but recognizing “average the parallel sides” makes it unforgettable.',
     ],
     traps: [
       'Forgetting the ½ in the triangle area formula.',
       'Confusing area (πr²) with circumference (2πr) — both appear as choices.',
       'Applying a linear scale factor to an area or volume.',
+      'Using a slanted side as the height — height is always measured perpendicular to the base.',
+      'Quoting a volume in square units or an area in cubic units; the units name the dimension, and wrong-dimension values appear among the choices.',
     ],
     desmos:
       'A calculator only. Keeping answers in terms of π is usually faster and matches how the choices are written.',
     timing:
       '40-75 seconds. Composite-area questions take the longest and reward a quick sketch.',
+    mastery: [
+      'Whole-minus-hole is your first instinct on any shaded or leftover region.',
+      'The k, k², k³ scaling ladder is automatic, in both directions.',
+      'You can compute area, surface area, and volume for every solid the SAT uses — and you know which the question wants from its units.',
+    ],
   },
   {
     unit: 17,
@@ -1188,21 +1606,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: '10√3 ft',
       },
+      {
+        q: 'A ramp rises 3 feet over a 4-foot horizontal run. Find tan θ and the ramp\'s length.',
+        steps: [
+          'tan θ = opposite ÷ adjacent = 3/4.',
+          'The ramp is the hypotenuse of a 3-4-5 triangle: 5 feet.',
+          'One triple, two answers — no calculator touched.',
+        ],
+        answer: 'tan θ = 3/4; ramp = 5 ft',
+      },
+      {
+        q: 'Given cos 25° = k, express sin 65° in terms of k.',
+        steps: [
+          '25° and 65° are complementary: 25 + 65 = 90.',
+          'The cofunction identity: sin 65° = cos(90° − 65°) = cos 25°.',
+          'So sin 65° = k, with no computation at all.',
+        ],
+        answer: 'sin 65° = k',
+      },
     ],
     mustKnow: [
       'a² + b² = c², with c the hypotenuse.',
       '45-45-90 is 1 : 1 : √2; 30-60-90 is 1 : √3 : 2 with the short side opposite the 30°.',
       'sin(x) = cos(90° − x). The two acute angles of a right triangle are complementary.',
+      'The exact values: sin 30° = cos 60° = 1/2, sin 60° = cos 30° = √3/2, sin 45° = cos 45° = √2/2, tan 45° = 1.',
     ],
     traps: [
       'Adding when you should subtract to find a leg — the answer must come out smaller than the hypotenuse.',
       'Using the sides labelled for one acute angle while solving for the other.',
       'Mixing up the √2 and √3 of the two special triangles.',
+      'Evaluating trig in the wrong calculator mode — degrees in radian mode is a silent, plausible-looking error.',
+      'Applying SOH-CAH-TOA in a triangle with no right angle; the ratios are defined for right triangles only.',
     ],
     desmos:
       'Set it to degree mode before evaluating any trig function. Recognizing the special triangle is usually faster than typing.',
     timing:
       '50-95 seconds. Recognizing a triple or a special triangle can cut a 90-second question to 20.',
+    mastery: [
+      'Triples and special triangles surface on sight, before any theorem is written.',
+      'You label opposite and adjacent from the named angle, and switching angles switches your labels automatically.',
+      'From any one trig ratio you can produce the other two by sketching the triangle.',
+    ],
   },
   {
     unit: 18,
@@ -1256,21 +1700,47 @@ export const SAT_PLAYBOOKS: SatPlaybook[] = [
         ],
         answer: '120°',
       },
+      {
+        q: 'Is the point (4, 6) on the circle (x − 1)² + (y − 2)² = 25?',
+        steps: [
+          'Substitute the point: (4 − 1)² + (6 − 2)² = 9 + 16 = 25.',
+          'That equals the right side exactly, so the point is ON the circle.',
+          'Less than 25 would mean inside; more would mean outside — one substitution answers all three.',
+        ],
+        answer: 'Yes — on the circle',
+      },
+      {
+        q: 'A diameter has endpoints (−2, 3) and (6, 3). Find the circle\'s center and radius.',
+        steps: [
+          'The center is the midpoint: ((−2 + 6)/2, 3) = (2, 3).',
+          'The diameter\'s length is 8, so the radius is 4.',
+          'Equation, if wanted: (x − 2)² + (y − 3)² = 16.',
+        ],
+        answer: 'Center (2, 3), radius 4',
+      },
     ],
     mustKnow: [
       'π radians = 180°. Multiply by π/180 or 180/π, whichever cancels the unit you are leaving.',
       'Arc length s = rθ works only when θ is in radians.',
       'The centre signs flip; the right side is the radius squared.',
+      'The center is the midpoint of any diameter, and the radius is half the diameter\'s length — the distance and midpoint formulas in disguise.',
     ],
     traps: [
       'Answering 25 for the radius when the equation shows r² = 25.',
       'Getting the centre signs backwards.',
       'Completing the square without adding the same amount to the right side — twice, once per variable.',
+      'Substituting the diameter into r² — halve it first.',
+      'Reading the constant of an EXPANDED circle equation as r² before completing the square; the true r² appears only in standard form.',
     ],
     desmos:
       'Type the circle equation in either form and Desmos draws it, letting you read the centre and radius visually. A genuine shortcut on completing-the-square questions.',
     timing:
       '45-100 seconds. Reading standard form is 30 seconds; completing the square is the most expensive question in this unit.',
+    mastery: [
+      'You read center and radius from standard form instantly, sign flips and the square root included.',
+      'Completing the square twice is a clean routine, adding to both sides both times.',
+      'Arc and sector are one fraction to you — angle over 360 — times circumference or area as asked, and s = rθ when the angle is in radians.',
+    ],
   },
 ];
 

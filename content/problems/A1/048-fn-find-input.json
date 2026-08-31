@@ -42,6 +42,13 @@
         "Try inputs: $f(6) = 30$ — too small. $f(8) = 40$ — too big.",
         "$f(7) = 35$ — exactly right, so the input was $7$."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "Feeding 35 INTO the machine — 5 × 35 = 175 — answers the reverse of what was asked.",
+        "35 is what came OUT. To find what went in, undo the machine: 35 ÷ 5 = 7."
+      ]
     }
   ],
   "tags": [

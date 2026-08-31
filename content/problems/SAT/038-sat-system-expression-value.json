@@ -45,6 +45,13 @@
         "The question asks for $2x - y$ — a quantity you only reach by doing one more step after solving.",
         "Writing the requested expression at the top of your scratch work keeps you from stopping one step early."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "x = 3 and y = 4 are both among the choices, waiting for whoever stops one step early.",
+        "Write the target 2x − y at the top of your scratch work; the note is what forces the final substitution."
+      ]
     }
   ],
   "tags": [

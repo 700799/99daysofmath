@@ -45,6 +45,13 @@
         "Cross-multiply: $6 \\cdot EF = 120$, so $EF = 20$.",
         "Whichever route you take, keep the two triangles in a consistent order on both sides of the equation — mixing them up is how this question is usually lost."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Inverting the scale factor gives 8 × (6/15) = 3.2 — shrinking a triangle the problem says grew.",
+        "Decide direction first: DEF is the larger triangle, so its sides must come out LARGER. An answer smaller than 8 refutes itself."
+      ]
     }
   ],
   "tags": [

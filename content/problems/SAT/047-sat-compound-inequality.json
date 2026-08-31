@@ -45,6 +45,13 @@
         "Solve just $2x + 1 \\le 13$: $2x \\le 12$, so $x \\le 6$.",
         "Half the work when only one end is requested — but read carefully, because \"greatest\" and \"least\" look alike under time pressure."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The least value, 2, is offered for anyone who solves correctly and then reads the question's direction backwards.",
+        "Underline greatest or least before solving. The compound inequality hands you both ends; the question wants exactly one."
+      ]
     }
   ],
   "tags": [

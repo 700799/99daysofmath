@@ -42,6 +42,13 @@
         "Ten minutes of riding costs $10 \\times \\$0.15 = \\$1.50$, so twenty minutes costs $\\$3$.",
         "Add the $\\$2$ unlock fee at the start: $\\$5$ total."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "Stopping at 0.15 × 20 = 3 forgets the $2 unlock fee that every ride pays.",
+        "The rule has two parts: 2 + 0.15(20) = 2 + 3 = $5. Fixed fee plus the per-minute part, always both."
+      ]
     }
   ],
   "tags": [

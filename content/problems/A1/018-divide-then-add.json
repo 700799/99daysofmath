@@ -42,6 +42,13 @@
         "$x$ got wrapped twice: first \"divide by 3\", then \"minus 2\".",
         "Unwrap in reverse: add 2 back (get 6), then multiply by 3 (get 18)."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "Multiplying by 3 first gives x − 2 = 12 — but the −2 was never divided by 3, so that move breaks the equation.",
+        "Unwrap backwards: the last thing done to x was −2, so undo it first (x/3 = 6), THEN multiply by 3 to get 18."
+      ]
     }
   ],
   "tags": [

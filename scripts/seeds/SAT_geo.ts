@@ -161,6 +161,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Ratio parts split the total', steps: ['The ratio $1 : 2 : 3$ has $6$ parts in total, and those parts share $180°$.', 'Each part is $180 \\div 6 = 30°$, so the angles are $30$, $60$, and $90$.', 'This "total parts" method works for any ratio question — angles, money, or ingredients.'] },
+      { title: '⚠️ The trap here', steps: ['x = 30 is the solved variable, offered as if it were an angle; the LARGEST angle is 3x.', 'Ratio problems end with a translation step: parts back into quantities. The answer is 3(30) = 90 degrees, and the check 30+60+90 = 180 seals it.'] },
     ],
     tags: ['ratio', 'triangle', 'angle-sum'], estimatedSeconds: 70,
   },
@@ -184,6 +185,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Equal or supplementary decides the equation', steps: ['If the angles are congruent (corresponding, alternate interior, alternate exterior, vertical), set the expressions equal.', 'If they are supplementary (co-interior, or a linear pair), set the sum to $180$.', 'Identifying which relationship applies is the whole question — the algebra afterwards is routine.'] },
+      { title: '⚠️ The trap here', steps: ['Setting the sum to 180 — treating corresponding angles as supplementary — gives x = 25, a clean wrong answer.', 'Corresponding angles are CONGRUENT, so the expressions are set equal. Decide equal-or-supplementary from the angle relationship before writing the equation.'] },
     ],
     tags: ['parallel-lines', 'corresponding-angles', 'algebra'], estimatedSeconds: 75,
   },
@@ -214,6 +216,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Picture the two short sides swinging shut', steps: ['Imagine the two shorter sides as hinged arms attached to the ends of the longest side.', 'If they are too short to meet in the middle, no triangle exists — they cannot reach across.', 'Checking the two shortest against the longest is sufficient; the other two comparisons are then automatic.'] },
+      { title: '⚠️ The trap here', steps: ['Testing the wrong pair — say 4 + 8 against 3 — passes everything and finds no failure.', 'The only test that matters: the two SHORTEST sides against the longest. If that pair fails, the triangle is impossible; if it passes, all pairs pass.'] },
     ],
     tags: ['triangle-inequality', 'sides'], estimatedSeconds: 70,
   },
@@ -237,6 +240,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Finish by checking, not by stopping', steps: ['The question asked for $x$, which is $30$ — not for an angle measure.', 'But computing the three angles anyway is a fast, complete verification.', 'If they had not summed to $180$, you would know immediately that the algebra went wrong.'] },
+      { title: '⚠️ The trap here', steps: ['60 — the first angle, 2x — is the offered near-miss for anyone who forgets what was asked.', 'The question wants x itself. Solve, then re-read the stem; computing all three angles as a check also reminds you which quantity to report.'] },
     ],
     tags: ['triangle', 'angle-sum', 'algebra'], estimatedSeconds: 70,
   },
@@ -422,6 +426,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Use the reference sheet without losing time', steps: ['The sphere, cone, and pyramid formulas are all provided — you do not need to memorize them.', 'But each lookup costs about fifteen seconds, and geometry questions cluster late in a module.', 'Knowing them cold converts that lookup time into checking time.'] },
+      { title: '⚠️ The trap here', steps: ['27π drops the 4/3 entirely; another classic slip cubes 4/3·r instead of r alone.', 'Cube the radius first — 27 — then apply 4/3 π. Order of operations is the entire difficulty of the sphere formula.'] },
     ],
     tags: ['volume', 'sphere', 'reference-sheet'], estimatedSeconds: 65,
   },
@@ -445,6 +450,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'The 1, 2, 3 rule', steps: ['Scaling lengths by $k$ multiplies lengths by $k$, areas by $k^2$, and volumes by $k^3$.', 'The exponent is just the number of dimensions being measured.', 'Doubling gives $\\times 2$, $\\times 4$, $\\times 8$ — and the trap answer is always the one that scaled linearly.'] },
+      { title: '⚠️ The trap here', steps: ['2 and 4 — the length and area answers — flank the correct 8 in the choices.', 'Volume is three-dimensional, so the factor applies three times: 2³. Match the exponent to the dimension being measured, always.'] },
     ],
     tags: ['scaling', 'volume', 'similarity'], estimatedSeconds: 65,
   },
@@ -468,6 +474,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Set up a proportion instead', steps: ['$\\dfrac{AB}{DE} = \\dfrac{BC}{EF}$, so $\\dfrac{6}{15} = \\dfrac{8}{EF}$.', 'Cross-multiply: $6 \\cdot EF = 120$, so $EF = 20$.', 'Whichever route you take, keep the two triangles in a consistent order on both sides of the equation — mixing them up is how this question is usually lost.'] },
+      { title: '⚠️ The trap here', steps: ['Inverting the scale factor gives 8 × (6/15) = 3.2 — shrinking a triangle the problem says grew.', 'Decide direction first: DEF is the larger triangle, so its sides must come out LARGER. An answer smaller than 8 refutes itself.'] },
     ],
     tags: ['similarity', 'proportion', 'triangle'], estimatedSeconds: 70,
   },
@@ -491,6 +498,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Where every one-third comes from', steps: ['Cone-to-cylinder and pyramid-to-prism are both exactly $\\tfrac{1}{3}$, given the same base and height.', 'The factor appears whenever a solid tapers to a single point instead of running straight up.', 'Recognizing this lets you answer without computing $r$ or $h$ at all — which is exactly why the question withholds them.'] },
+      { title: '⚠️ The trap here', steps: ['Multiplying by 3 gives 180 — the relationship run backwards.', 'The cone is the SMALLER solid: same base and height, a third of the volume. Divide, and confirm the answer is less than 60.'] },
     ],
     tags: ['volume', 'cone', 'cylinder', 'ratio'], estimatedSeconds: 70,
   },
@@ -658,6 +666,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Subtract when finding a leg, add when finding the hypotenuse', steps: ['Adding here would give $\\sqrt{169 + 25} \\approx 13.9$ — larger than the hypotenuse, which is impossible.', 'The hypotenuse is always the longest side, so a leg must come out smaller than it.', 'That plausibility check catches the add/subtract error immediately.'] },
+      { title: '⚠️ The trap here', steps: ['Adding gives √194 ≈ 13.9 — a \'leg\' longer than the hypotenuse, which is geometrically impossible.', 'Finding a leg means SUBTRACTING squares. The built-in check: any leg must come out shorter than 13.'] },
     ],
     tags: ['pythagorean', 'missing-leg'], estimatedSeconds: 60,
   },
@@ -682,6 +691,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Or use the Pythagorean identity', steps: ['$\\sin^2\\theta + \\cos^2\\theta = 1$, so $\\sin^2\\theta = 1 - \\left(\\tfrac{5}{13}\\right)^2 = 1 - \\tfrac{25}{169} = \\tfrac{144}{169}$.', '$\\sin\\theta = \\tfrac{12}{13}$, taking the positive root since $\\theta$ is acute.', 'Sketching the triangle is usually faster and less error-prone, but the identity works when no triangle is described.'] },
+      { title: '⚠️ The trap here', steps: ['Re-entering 5/13 — the cosine you were given — or forming 5/12 are the two designed misses.', 'Sketch the triangle: adjacent 5, hypotenuse 13, so the missing opposite is 12 and sine is 12/13. The drawing keeps the three sides in their lanes.'] },
     ],
     tags: ['trigonometry', 'pythagorean-identity', 'sine-cosine'], estimatedSeconds: 85,
   },
@@ -705,6 +715,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Or go straight through sine', steps: ['$\\sin 60° = \\dfrac{\\text{height}}{20}$, so height $= 20\\sin 60° = 20 \\cdot \\dfrac{\\sqrt{3}}{2} = 10\\sqrt{3}$.', 'Same answer, and it does not require noticing the special triangle.', 'Recognizing $30$-$60$-$90$ is faster; the sine route is the reliable fallback.'] },
+      { title: '⚠️ The trap here', steps: ['Entering 17.32 — the full height 10√3 as a decimal — ignores the answer-format sentence and scores zero.', 'The stem asks for a where the height is a√3. Formatted answers are graded on the format: re-read the final sentence before touching the keypad.'] },
     ],
     tags: ['trigonometry', 'special-triangle', 'word-problem'], estimatedSeconds: 95,
   },
@@ -728,6 +739,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Tangent is the elevation ratio', steps: ['Angle-of-elevation and angle-of-depression problems almost always use tangent, because the two known quantities are height and horizontal distance — the two legs.', 'Sine and cosine appear only when the hypotenuse (the direct line of sight) is involved.', 'Identifying which two sides the problem hands you selects the ratio immediately.'] },
+      { title: '⚠️ The trap here', steps: ['Dividing 40 by 1.5 ≈ 26.7 treats tangent as adjacent-over-opposite — the ratio upside down.', 'Tangent is opposite over adjacent, and the height is the OPPOSITE side here: h = 40 × 1.5. Label the triangle before computing.'] },
     ],
     tags: ['trigonometry', 'angle-of-elevation', 'tangent'], estimatedSeconds: 80,
   },
@@ -920,6 +932,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'The step people forget', steps: ['Whatever you add to complete a square must also be added to the right side — twice here, once for each variable.', 'Skipping that gives a right side of $12$ and a radius of $\\sqrt{12}$, which is wrong.', 'Write the additions on both sides in the same motion and the error cannot happen.'] },
+      { title: '⚠️ The trap here', steps: ['Forgetting to add the 9 and 4 to the right side leaves r² = 12 and a wrong radius of about 3.46.', 'Whatever completes a square on the left lands on the right in the same breath — twice here, once per variable. Then r² = 25 reads off r = 5.'] },
     ],
     tags: ['circle', 'completing-the-square', 'radius'], estimatedSeconds: 100,
   },
@@ -943,6 +956,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'The formula only works in radians', steps: ['With $\\theta$ in degrees you must use $s = \\dfrac{\\theta}{360} \\cdot 2\\pi r$ instead.', 'Plugging a degree measure into $s = r\\theta$ gives an answer far too large.', 'Check the units the question states before choosing the formula — the SAT mixes both deliberately.'] },
+      { title: '⚠️ The trap here', steps: ['Reaching for angle/360 × 2πr — the degree recipe — mangles a radian problem and produces a π that should not be there.', 'Radians earn the short formula: s = rθ = 5 × 1.2 = 6, no π anywhere. Check the angle\'s unit before choosing the recipe.'] },
     ],
     tags: ['arc-length', 'radians', 'formula'], estimatedSeconds: 70,
   },
@@ -973,6 +987,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'The radius is always the middle step', steps: ['Any circle question that gives one measure and asks for another routes through the radius.', 'Circumference → radius → area, or area → radius → circumference.', 'Solving for $r$ first turns a two-formula question into two one-formula questions.'] },
+      { title: '⚠️ The trap here', steps: ['Choice C, 400π, squares the diameter 20 — the number the problem dangles — instead of the radius.', 'Route through the radius explicitly: 2πr = 20π forces r = 10 on paper. Once r is written down, the area formula cannot grab the wrong number.'] },
     ],
     tags: ['circle', 'area', 'circumference', 'multi-step'], estimatedSeconds: 75,
   },
@@ -996,6 +1011,7 @@ export const problemsSATgeo: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Or use s = rθ and convert', steps: ['$6\\pi = 9\\theta$ gives $\\theta = \\dfrac{2\\pi}{3}$ radians.', 'Convert: $\\dfrac{2\\pi}{3} \\times \\dfrac{180}{\\pi} = 120°$.', 'Both routes work. The fraction-of-the-circle method avoids the conversion, so it is usually faster when the answer is wanted in degrees.'] },
+      { title: '⚠️ The trap here', steps: ['Leaving the answer as 2π/3 ≈ 2.09 — radians in a degree box — is the final-step trap.', 'The stem says degrees, so the fraction-of-circle route is safest: (6π/18π) × 360 = 120. Match the unit of the answer field, not of your method.'] },
     ],
     tags: ['circle', 'central-angle', 'arc-length'], estimatedSeconds: 85,
   },

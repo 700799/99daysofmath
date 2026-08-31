@@ -45,6 +45,13 @@
         "Same answer, and it does not require noticing the special triangle.",
         "Recognizing $30$-$60$-$90$ is faster; the sine route is the reliable fallback."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Entering 17.32 — the full height 10√3 as a decimal — ignores the answer-format sentence and scores zero.",
+        "The stem asks for a where the height is a√3. Formatted answers are graded on the format: re-read the final sentence before touching the keypad."
+      ]
     }
   ],
   "tags": [

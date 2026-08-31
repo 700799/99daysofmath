@@ -215,6 +215,15 @@ describe('problems bank — Algebra 1 quality bar', () => {
     expect(missing).toEqual([]);
   });
 
+  it('every hardest problem carries two explanations, one a trap walkthrough', () => {
+    // The deepening pass: difficulty-3 problems teach the escape from the
+    // engineered wrong answer, not just a second route to the right one.
+    for (const p of a1.filter((q) => q.difficulty === 3)) {
+      const alts = p.alternativeExplanations ?? [];
+      expect(alts.length, p.id).toBeGreaterThanOrEqual(2);
+    }
+  });
+
   it('every problem has a full 3-tier hint ladder and a multi-step explanation', () => {
     const failures: string[] = [];
     for (const p of a1) {

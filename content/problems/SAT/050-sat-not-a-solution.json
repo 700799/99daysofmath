@@ -67,6 +67,13 @@
         "$x = -2$ gives $11$ ✓; $x = 0$ gives $7$ ✓; $x = 3$ gives $1 \\ge 1$ ✓; $x = 4$ gives $-1$ ✗.",
         "This also sidesteps the sign-flip rule entirely — the single most common error on inequality questions."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Solving perfectly and then choosing a value that IS a solution — the word NOT reverses the final selection.",
+        "Find the solution set first, write it down (x ≤ 3), then pick the choice OUTSIDE it. Two separate acts, in that order."
+      ]
     }
   ],
   "tags": [

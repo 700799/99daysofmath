@@ -45,6 +45,13 @@
         "Two equal steps multiplying to $4$ means each step multiplies by $2$, so $b = 2$.",
         "Step back once from $f(1) = 12$ to get $f(0) = 6$, which is $a$ by definition. Dividing to cancel $a$ is the general technique whenever two function values are given."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "b = 2 is the halfway result, and it is offered as a choice.",
+        "The question wants a. After b emerges, one substitution remains: a·2 = 12, so a = 6. Halfway numbers are the most common wrong answers on two-parameter problems."
+      ]
     }
   ],
   "tags": [

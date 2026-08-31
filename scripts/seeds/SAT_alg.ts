@@ -176,6 +176,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Clear decimals with Desmos, or by hand', steps: ['Multiply every term by $100$: $25x + 150 = 40x - 60$.', 'Then $210 = 15x$, so $x = 14$ — integers throughout.', 'Faster still: graph $y_1 = 0.25x + 1.5$ and $y_2 = 0.4x - 0.6$ in Desmos and click the intersection.'] },
+      { title: '⚠️ The trap here', steps: ['Treat the −0.6 as +0.6 and you get 0.9 = 0.15x, so x = 6 — a clean-looking wrong answer built from one dropped sign.', 'Move both constants across in a single written step and then verify x = 14 in the original equation; the check costs ten seconds and catches exactly this slip.'] },
     ],
     tags: ['linear-equation', 'decimals', 'desmos'], estimatedSeconds: 65,
   },
@@ -200,6 +201,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Reason without algebra', steps: ['Of the $\\$322.50$ bill, $\\$75$ was not for labour, so $\\$247.50$ was.', 'At $\\$45$ per hour, $\\$225$ buys 5 hours and $\\$22.50$ buys half an hour.', 'That is $5.5$ hours — the same answer, reached by splitting the money rather than by solving.'] },
+      { title: '⚠️ The trap here', steps: ['Dividing the whole bill by the rate — 322.50 ÷ 45 ≈ 7.2 hours — silently bills the call-out fee as labour, and 7.2 will be a choice.', 'The fee is paid once, so it comes OFF the bill before any dividing. Fixed charge first, rate second, every time.'] },
     ],
     tags: ['word-problem', 'flat-fee-plus-rate'], estimatedSeconds: 70,
   },
@@ -223,6 +225,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Multiply by the common denominator', steps: ['The denominators are $5$ and $3$, so multiply every term by $15$.', 'The left becomes $3(2x - 1)$ and the right becomes $5(x + 4)$ — exactly the cross-multiplied form.', 'Cross-multiplication is not a separate trick; it is this step with the arithmetic already done.'] },
+      { title: '⚠️ The trap here', steps: ['Cross-multiplying only one way — writing 3(2x − 1) = x + 4 — forgets the 5 and lands on a tidy wrong x.', 'In a cross-multiplication BOTH numerators pick up the opposite denominator. Draw the two diagonal arrows before writing anything.'] },
     ],
     tags: ['proportion', 'cross-multiply'], estimatedSeconds: 75,
   },
@@ -253,6 +256,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Match the slopes', steps: ['Read each side as a line: $y = kx + 8$ and $y = 3x - 5$.', 'Two lines fail to intersect exactly when they are parallel — same slope, different intercept.', 'Same slope means $k = 3$; the intercepts $8$ and $-5$ already differ, so there is genuinely no solution.'] },
+      { title: '⚠️ The trap here', steps: ['Choice D, k = 8, is bait for matching the constant 8 instead of the coefficient of x.', 'Only the x-coefficients decide whether the sides can ever balance; the constants just decide between no solution and infinitely many once the coefficients match.'] },
     ],
     tags: ['number-of-solutions', 'no-solution', 'parallel'], estimatedSeconds: 80,
   },
@@ -423,6 +427,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Use the slope directly', steps: ['The slope is $-2$: every step of $+1$ in $x$ drops the output by $2$.', 'You need an output $4$ higher than $h(3)$, so you must move $x$ down by $2$ steps.', '$a = 3 - 2 = 1$ — no equation solved at all.'] },
+      { title: '⚠️ The trap here', steps: ['Reading h(3) + 4 as h(3 + 4) = h(7) = −9 sends you solving the wrong equation entirely.', 'The +4 lives OUTSIDE the function: evaluate h(3) first, then add. Parentheses mark exactly what gets fed to the machine.'] },
     ],
     tags: ['function-notation', 'slope-reasoning'], estimatedSeconds: 70,
   },
@@ -453,6 +458,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Compute it and read the number', steps: ['Set $8.5x - 240 = 0$, so $x = \\dfrac{240}{8.5} \\approx 28.2$ items.', 'Selling 28 items still leaves a small loss; 29 turns the first profit.', 'A number like "about 28 items" only makes sense as a break-even count — the arithmetic itself rules the other choices out.'] },
+      { title: '⚠️ The trap here', steps: ['Choice A is a correct sentence about the y-intercept — the −240 — dressed up to claim the x-intercept\'s meaning.', 'Anchor on the definition before reading choices: x-intercept means output zero, and zero profit can only mean break-even.'] },
     ],
     tags: ['interpret-intercept', 'context', 'break-even'], estimatedSeconds: 65,
   },
@@ -476,6 +482,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Write the equation', steps: ['With slope $-2.5$ and point $(2, 18)$: $h = -2.5(t - 2) + 18 = -2.5t + 23$.', 'The initial height is the $y$-intercept, which the equation now displays directly: $23$ cm.', 'The trap is answering $-2.5$ or $18$ — both appear in the setup, neither is the initial height.'] },
+      { title: '⚠️ The trap here', steps: ['Subtracting the burn instead of adding it gives 18 − 5 = 13 cm, and 18 itself is also offered — both are one misread away.', 'Before it was lit, the candle was TALLER. Decide the direction of the answer before touching the arithmetic, and 13 becomes impossible.'] },
     ],
     tags: ['word-problem', 'linear-model', 'initial-value'], estimatedSeconds: 80,
   },
@@ -499,6 +506,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Spot the pattern', steps: ['$x = 2, 6, 10$ are equally spaced — each gap is $4$.', 'Equal steps in $x$ produce equal steps in $y$ for a linear function, and the first step was $9 \\to 1$, a drop of $8$.', 'So the next step drops $8$ again: $1 - 8 = -7$. No slope formula needed.'] },
+      { title: '⚠️ The trap here', steps: ['Stepping the wrong way gives 1 + 8 = 9, the mirror image of the right answer.', 'The outputs fell from 9 to 1, so at a larger x they must be smaller still. Predict the sign of the answer first; −7 is the only choice below 1.'] },
     ],
     tags: ['linear-function', 'negative-slope', 'pattern'], estimatedSeconds: 70,
   },
@@ -670,6 +678,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Reason about the sign first', steps: ['The target slope is positive, but the slope formula is $-3/k$ with a positive $3$ on top.', 'A negative divided by $k$ can only be positive if $k$ itself is negative — so $k < 0$ before any computation.', 'That alone eliminates the positive choices, and the magnitude $|k| = 2$ finishes it.'] },
+      { title: '⚠️ The trap here', steps: ['Dropping the negative in −A/B gives k = 2 instead of −2, and both signs sit among the choices.', 'Reason about sign before magnitude: a positive target slope from −3/k forces k negative. Then the size |k| = 2 is easy.'] },
     ],
     tags: ['slope', 'parameter', 'standard-form'], estimatedSeconds: 75,
   },
@@ -693,6 +702,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Step along the slope', steps: ['From $(5, 7)$ you need to reach $x = 8$ — three steps right.', 'Each step right raises $y$ by $2$, so $y$ rises by $6$.', '$7 + 6 = 13$. When a question gives a point close to the target, stepping beats rebuilding the equation.'] },
+      { title: '⚠️ The trap here', steps: ['Building the slope as run-over-rise gives 1/2, and y = 8(1/2) − 3 = 1 — wrong but plausible.', 'Slope is RISE over run: 10 up over 5 across is 2. Say the units — y-change per x-change — and the fraction cannot flip.'] },
     ],
     tags: ['linear-equation', 'evaluate'], estimatedSeconds: 65,
   },
@@ -716,6 +726,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Track the money, not the equation', steps: ['Hot dogs brought in $40 \\times \\$3 = \\$120$.', 'Drinks must account for the remaining $\\$180 - \\$120 = \\$60$.', 'At $\\$2$ apiece that is $30$ drinks. On a word problem this simple, arithmetic beats setting up algebra.'] },
+      { title: '⚠️ The trap here', steps: ['Dividing 180 by the combined price 3 + 2 = 5 treats every sale as a hot-dog-plus-drink combo the problem never mentions.', 'Account for the known item\'s money first: hot dogs earned $120, so only $60 remains to explain with drinks.'] },
     ],
     tags: ['word-problem', 'two-variable', 'revenue'], estimatedSeconds: 70,
   },
@@ -739,6 +750,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Three separate places to lose this question', steps: ['First, dividing by $-2$ and forgetting to flip both signs — the slope of $\\ell$ is $+\\tfrac{5}{2}$, not $-\\tfrac{5}{2}$.', 'Second, flipping without negating for the perpendicular slope.', 'Third, stopping at the equation instead of reading off the intercept. Naming the three checkpoints as you go is how you keep a multi-step question clean.'] },
+      { title: '⚠️ The trap here', steps: ['Flipping without negating gives slope +2/5 and b = −1; negating without flipping gives −5/2 and a different wrong b.', 'Run the two-part rule out loud — flip it, negate it — then confirm the product of the slopes is −1 before substituting the point.'] },
     ],
     tags: ['perpendicular', 'multi-step', 'y-intercept'], estimatedSeconds: 90,
   },
@@ -910,6 +922,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Scale to match, then compare', steps: ['Multiply the second equation by $3$: $6x + 3y = 15$.', 'For no solution the $x$ and $y$ coefficients must match the first equation while the constants differ.', 'Matching $6x$ requires $k = 6$, and the constants $9$ and $15$ do differ — confirming no solution rather than infinitely many.'] },
+      { title: '⚠️ The trap here', steps: ['A sign slip in the slope comparison hands you k = −6, and stopping early can hand you the infinitely-many case by accident.', 'After finding k, always compare the constants too: same slope with the SAME constant is one line, not parallel lines.'] },
     ],
     tags: ['system', 'parameter', 'parallel'], estimatedSeconds: 85,
   },
@@ -933,6 +946,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'The trap answers', steps: ['$x = 3$ and $y = 4$ will both appear among the choices, as will $x + y = 7$.', 'The question asks for $2x - y$ — a quantity you only reach by doing one more step after solving.', 'Writing the requested expression at the top of your scratch work keeps you from stopping one step early.'] },
+      { title: '⚠️ The trap here', steps: ['x = 3 and y = 4 are both among the choices, waiting for whoever stops one step early.', 'Write the target 2x − y at the top of your scratch work; the note is what forces the final substitution.'] },
     ],
     tags: ['system', 'substitution', 'expression'], estimatedSeconds: 80,
   },
@@ -956,6 +970,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Start from an all-dimes jar', steps: ['If all $30$ coins were dimes the jar would hold $\\$3.00$ — but it holds $\\$5.70$, an excess of $\\$2.70$.', 'Swapping one dime for one quarter adds $\\$0.15$ to the total.', '$\\$2.70 \\div \\$0.15 = 18$ swaps, so there are $18$ quarters. This "assume then adjust" method skips the system entirely.'] },
+      { title: '⚠️ The trap here', steps: ['Answering 12 — the dimes — is the designed miss; both counts appear as choices.', 'Re-read the final question after solving. The system gives you the pair; the question wants exactly one of them.'] },
     ],
     tags: ['system', 'word-problem', 'coins'], estimatedSeconds: 95,
   },
@@ -979,6 +994,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Set all three ratios equal', steps: ['The condition for one identical line is $\\dfrac{a}{2} = \\dfrac{6}{3} = \\dfrac{18}{9}$.', 'The last two ratios both equal $2$, so $\\dfrac{a}{2} = 2$ and $a = 4$.', 'If the constant ratio had *not* matched, the same $a$ would instead have produced no solution — always check all three.'] },
+      { title: '⚠️ The trap here', steps: ['Copying the visible coefficient — a = 2 — skips the scaling the equations actually need.', 'Find the scale factor from the terms that already pair up (3y → 6y means ×2), then apply that factor to the x term.'] },
     ],
     tags: ['system', 'parameter', 'dependent'], estimatedSeconds: 85,
   },
@@ -1171,6 +1187,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Work only the end you need', steps: ['The question asks for the *greatest* $x$, which comes from the upper bound alone.', 'Solve just $2x + 1 \\le 13$: $2x \\le 12$, so $x \\le 6$.', 'Half the work when only one end is requested — but read carefully, because "greatest" and "least" look alike under time pressure.'] },
+      { title: '⚠️ The trap here', steps: ['The least value, 2, is offered for anyone who solves correctly and then reads the question\'s direction backwards.', 'Underline greatest or least before solving. The compound inequality hands you both ends; the question wants exactly one.'] },
     ],
     tags: ['compound-inequality', 'bounds'], estimatedSeconds: 65,
   },
@@ -1194,6 +1211,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Counting integers without slipping', steps: ['From $a$ to $b$ inclusive there are $b - a + 1$ integers — the "+1" is what people forget.', 'Here the range is $-1$ to $6$, so $6 - (-1) + 1 = 8$.', 'Listing them out is also fine when the range is short; it is the safest check on a fencepost error.'] },
+      { title: '⚠️ The trap here', steps: ['Forgetting the +1 gives 7; miscounting the strict end brings −2 into the list and gives 9.', 'Write the two boundary integers explicitly — smallest −1, largest 6 — then count with b − a + 1. The formula only works after the ends are settled.'] },
     ],
     tags: ['compound-inequality', 'counting', 'integers'], estimatedSeconds: 85,
   },
@@ -1217,6 +1235,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'When to round down, and when not to', steps: ['If the division had come out to $40.7$, the answer would be $40$ — you cannot load a fraction of a box.', 'Here it divides evenly, and "$\\le$" permits equality, so $40$ is achievable rather than one too many.', 'The rule: for a maximum with $\\le$, take the floor of the quotient; an exact quotient is itself the answer.'] },
+      { title: '⚠️ The trap here', steps: ['5000 ÷ 45 ≈ 111 boxes ignores the truck itself — an answer both offered and absurd on reflection.', 'The van\'s 3,200 pounds use up capacity before the first box loads. Subtract the fixed weight, then divide.'] },
     ],
     tags: ['inequality', 'word-problem', 'maximum'], estimatedSeconds: 80,
   },
@@ -1247,6 +1266,7 @@ export const problemsSATalg: SeedProblem[] = [
     ],
     alternativeExplanations: [
       { title: 'Skip solving and just substitute', steps: ['With only four numbers to check, plugging in is often faster than solving.', '$x = -2$ gives $11$ ✓; $x = 0$ gives $7$ ✓; $x = 3$ gives $1 \\ge 1$ ✓; $x = 4$ gives $-1$ ✗.', 'This also sidesteps the sign-flip rule entirely — the single most common error on inequality questions.'] },
+      { title: '⚠️ The trap here', steps: ['Solving perfectly and then choosing a value that IS a solution — the word NOT reverses the final selection.', 'Find the solution set first, write it down (x ≤ 3), then pick the choice OUTSIDE it. Two separate acts, in that order.'] },
     ],
     tags: ['inequality', 'not-a-solution', 'substitution'], estimatedSeconds: 70,
   },

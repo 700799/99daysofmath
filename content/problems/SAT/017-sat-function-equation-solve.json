@@ -45,6 +45,13 @@
         "You need an output $4$ higher than $h(3)$, so you must move $x$ down by $2$ steps.",
         "$a = 3 - 2 = 1$ — no equation solved at all."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Reading h(3) + 4 as h(3 + 4) = h(7) = −9 sends you solving the wrong equation entirely.",
+        "The +4 lives OUTSIDE the function: evaluate h(3) first, then add. Parentheses mark exactly what gets fed to the machine."
+      ]
     }
   ],
   "tags": [

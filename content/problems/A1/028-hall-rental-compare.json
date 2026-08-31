@@ -42,6 +42,13 @@
         "Hall B costs $\\$4$ more per guest, but hall A starts with a $\\$40$ fee.",
         "Every guest closes the gap by $\\$4$, so it takes $40 \\div 4 = 10$ guests to tie."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "Giving Hall B a $40 fee too — writing 40 + 6g = 40 + 10g — makes the halls tie forever.",
+        "Each hall keeps its own rule: A is 40 + 6g, B is just 10g. Set THOSE equal, and g = 10 falls out."
+      ]
     }
   ],
   "tags": [

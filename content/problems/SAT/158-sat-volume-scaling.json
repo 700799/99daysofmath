@@ -45,6 +45,13 @@
         "The exponent is just the number of dimensions being measured.",
         "Doubling gives $\\times 2$, $\\times 4$, $\\times 8$ — and the trap answer is always the one that scaled linearly."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "2 and 4 — the length and area answers — flank the correct 8 in the choices.",
+        "Volume is three-dimensional, so the factor applies three times: 2³. Match the exponent to the dimension being measured, always."
+      ]
     }
   ],
   "tags": [

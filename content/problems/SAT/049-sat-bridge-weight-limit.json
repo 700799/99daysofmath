@@ -45,6 +45,13 @@
         "Here it divides evenly, and \"$\\le$\" permits equality, so $40$ is achievable rather than one too many.",
         "The rule: for a maximum with $\\le$, take the floor of the quotient; an exact quotient is itself the answer."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "5000 ÷ 45 ≈ 111 boxes ignores the truck itself — an answer both offered and absurd on reflection.",
+        "The van's 3,200 pounds use up capacity before the first box loads. Subtract the fixed weight, then divide."
+      ]
     }
   ],
   "tags": [

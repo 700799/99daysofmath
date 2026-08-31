@@ -45,6 +45,13 @@
         "Drag $k$ until the parabola just touches the $x$-axis at one point rather than crossing it twice.",
         "The slider lands on $k = 4$. This is a genuinely fast route when the algebra is uncertain, and it makes the geometry of \"one solution\" visible."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "A sign slip in 144 − 36k = 0 gives k = −4, and treating exactly one as at least one turns the equation into an inequality.",
+        "Exactly one solution pins the discriminant to zero — an equation, not an inequality — and 144 = 36k keeps every term positive."
+      ]
     }
   ],
   "tags": [

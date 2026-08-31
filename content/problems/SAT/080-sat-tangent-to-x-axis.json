@@ -45,6 +45,13 @@
         "Matching the constant: $k^2 = 9$, so $k = \\pm 3$.",
         "Then $b = 2k = \\pm 6$, and the positivity condition selects $6$. The condition on $b$ exists precisely because both signs are otherwise valid."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "b² = 36 tempts two errors: answering 36 itself, or forgetting the condition that picks between ±6.",
+        "Finish the square root, then apply the stated sign condition. The problem says b is positive precisely because both roots survive the algebra."
+      ]
     }
   ],
   "tags": [

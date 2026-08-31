@@ -45,6 +45,13 @@
         "Every time you take a square root to undo a square, write the $\\pm$ before anything else.",
         "Expanding to $x^2 - 6x - 7 = 0$ and factoring to $(x - 7)(x + 1)$ gives the same pair — but takes longer."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Writing only x − 3 = 4 happens to survive here, but the twin question asking for the LESSER solution finds you with nothing.",
+        "Write ± in the same motion as the square root, every time. Both roots must exist on paper before you choose between them."
+      ]
     }
   ],
   "tags": [

@@ -45,6 +45,13 @@
         "If they are supplementary (co-interior, or a linear pair), set the sum to $180$.",
         "Identifying which relationship applies is the whole question — the algebra afterwards is routine."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Setting the sum to 180 — treating corresponding angles as supplementary — gives x = 25, a clean wrong answer.",
+        "Corresponding angles are CONGRUENT, so the expressions are set equal. Decide equal-or-supplementary from the angle relationship before writing the equation."
+      ]
     }
   ],
   "tags": [

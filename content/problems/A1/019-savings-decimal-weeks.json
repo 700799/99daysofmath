@@ -42,6 +42,13 @@
         "$\\$4.50$ a week is 9 half-dollars a week, and you need $\\$27$ more, which is 54 half-dollars.",
         "$54 \\div 9 = 6$ weeks — same answer, no decimals needed."
       ]
+    },
+    {
+      "title": "⚠️ Dodge the trap",
+      "steps": [
+        "Dividing 36 by 4.50 right away gives 8 weeks — it spends your $9 of savings twice.",
+        "The $9 was already in the jar, so subtract it first: 4.5w = 27, and w = 6. Fixed money first, weekly money second."
+      ]
     }
   ],
   "tags": [

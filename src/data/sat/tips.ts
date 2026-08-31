@@ -860,6 +860,209 @@ export const SAT_TIPS: SatTip[] = [
     body:
       'Re-read your error log and the formula list, then stop. Sleep does more for a math score than a late session ever has, and fatigue shows up first in exactly the careless errors you have been working to eliminate.',
   },
+
+  // ───────────────────────── round 2: deeper coverage ─────────────────────────
+  {
+    id: 'alg-fraction-clear',
+    category: 'algebra',
+    area: 'ALG',
+    title: 'Clear all fractions in one multiplication',
+    body:
+      'Multiply every term by the least common denominator — including the terms that have no fraction. One deliberate multiplication converts the whole equation to integers, and integer algebra is where your error rate is lowest.',
+    example: 'x/3 + x/4 = 7\nMultiply through by 12: 4x + 3x = 84\n7x = 84, so x = 12',
+  },
+  {
+    id: 'alg-define-vars',
+    category: 'algebra',
+    area: 'ALG',
+    title: 'Write what each variable means before writing any equation',
+    body:
+      '"a = adult ticket price, in dollars" takes five seconds and prevents the classic word-problem failure: solving a correct system for the wrong quantity. When the answer comes out, the definition tells you instantly whether it is the thing that was asked.',
+  },
+  {
+    id: 'alg-zero-coefficient',
+    category: 'algebra',
+    area: 'ALG',
+    title: 'If x vanishes, read the statement that remains',
+    body:
+      'Collect terms and sometimes the variable disappears entirely. What is left is a claim about numbers: if it is true (0 = 0), every x works — infinitely many solutions. If it is false (0 = 7), nothing works — no solution. The equation answered the question by leaving.',
+  },
+  {
+    id: 'alg-table-slope',
+    category: 'algebra',
+    area: 'ALG',
+    title: 'Check a table\'s x-steps before reading its slope',
+    body:
+      'Consecutive rows only give the slope directly when the x-values step evenly by 1. If x jumps by 2 or 5, divide the y-change by that jump. Tables with uneven steps are a deliberate trap for row-to-row subtraction.',
+  },
+  {
+    id: 'adv-square-binomial',
+    category: 'advanced',
+    area: 'ADV',
+    title: '(a + b)² has three terms, not two',
+    body:
+      'The middle term 2ab is the one that vanishes from memory under time pressure. (x + 5)² is x² + 10x + 25, never x² + 25 — and the SAT builds whole questions on exactly that missing term.',
+    example: '(x + 5)² = x² + 2(5x) + 25 = x² + 10x + 25',
+  },
+  {
+    id: 'adv-vertex-speed',
+    category: 'advanced',
+    area: 'ADV',
+    title: 'Factored form? The vertex x is the average of the zeros',
+    body:
+      'For a(x − p)(x − q), the axis of symmetry sits at (p + q)/2 — no expansion, no −b/2a. Then one substitution gives the vertex y. This is the fastest vertex route whenever the quadratic arrives factored.',
+  },
+  {
+    id: 'adv-radical-isolate',
+    category: 'advanced',
+    area: 'ADV',
+    title: 'Isolate the radical before squaring',
+    body:
+      'Squaring √x + 2 = 5 as written squares a SUM and leaves the radical alive inside a cross term. Move everything else across first — √x = 3 — and squaring is clean. One rearrangement saves a mess that most students cannot recover from mid-test.',
+  },
+  {
+    id: 'adv-exponent-match',
+    category: 'advanced',
+    area: 'ADV',
+    title: 'Solve exponential equations by matching bases',
+    body:
+      'When both sides can be written over one base, set the exponents equal. It is the intended route on every "solve for x in the exponent" question that has clean numbers.',
+    example: '8^x = 2^{12}\n(2^3)^x = 2^{12}, so 3x = 12 and x = 4',
+  },
+  {
+    id: 'dat-weighted-average',
+    category: 'data',
+    area: 'PSDA',
+    title: 'A combined average leans toward the larger group',
+    body:
+      'Twenty students averaging 80 combined with ten averaging 90 gives (1600 + 900)/30 = 83.3 — not 85. Averaging the averages is only legal when the groups are the same size, and the midpoint answer is always among the choices.',
+  },
+  {
+    id: 'dat-percent-of-percent',
+    category: 'data',
+    area: 'PSDA',
+    title: 'A percent of a percent multiplies',
+    body:
+      '"40% of the 25% who agreed" is 0.40 × 0.25 = 0.10 — ten percent of everyone. Layered-percentage questions are testing whether you multiply the layers or wrongly add or substitute them.',
+  },
+  {
+    id: 'dat-median-position',
+    category: 'data',
+    area: 'PSDA',
+    title: 'The median sits at position (n + 1) / 2',
+    body:
+      'For 25 sorted values that is the 13th; for 40 it is halfway between the 20th and 21st. On a frequency table, count cumulatively down the rows until you pass that position — the row you land in holds the median.',
+  },
+  {
+    id: 'dat-and-cell',
+    category: 'data',
+    area: 'PSDA',
+    title: '"And" is one cell; "of those" is a margin',
+    body:
+      'P(senior AND voted yes) reads a single interior cell over the grand total. P(voted yes, of the seniors) reads the same cell over the senior row total. Same numerator, different denominator — the two phrasings are the entire question.',
+  },
+  {
+    id: 'geo-hidden-similar',
+    category: 'geometry',
+    area: 'GEO',
+    title: 'A parallel line inside a triangle cuts off a similar triangle',
+    body:
+      'When a segment runs parallel to one side, the small triangle it creates shares every angle with the big one — instant similarity, and the sides fall into proportion. Most "find the length" figures with a parallel segment are this one fact.',
+  },
+  {
+    id: 'geo-area-back-to-side',
+    category: 'geometry',
+    area: 'GEO',
+    title: 'From an area ratio back to a side ratio: square root',
+    body:
+      'Areas in the ratio 9 : 16 mean sides in the ratio 3 : 4. Going forward you square; coming back you take the root — and the reverse direction is asked precisely because the forward habit is strong.',
+  },
+  {
+    id: 'geo-tangent-radius',
+    category: 'geometry',
+    area: 'GEO',
+    title: 'A tangent line meets its radius at 90°',
+    body:
+      'The radius drawn to the point of tangency is perpendicular to the tangent. That right angle is the whole reason the figure exists: it hands you a right triangle, and Pythagoras or trig finishes from there.',
+  },
+  {
+    id: 'geo-grid-distance',
+    category: 'geometry',
+    area: 'GEO',
+    title: 'Distance on the grid is always Pythagoras',
+    body:
+      'Between two points, the horizontal and vertical changes are the legs and the distance is the hypotenuse. Counting squares along a diagonal undercounts — a diagonal step is √2, not 1.',
+  },
+  {
+    id: 'tec-eliminate-first',
+    category: 'technique',
+    title: 'Eliminate before you compute',
+    body:
+      'Sign, size, and units disqualify choices before any algebra: a length cannot be negative, a discount cannot raise the price, a probability cannot exceed 1. Thirty seconds of elimination often leaves two candidates — and then one test value decides.',
+  },
+  {
+    id: 'tec-target-on-top',
+    category: 'technique',
+    title: 'Write the requested quantity at the top of your scratch work',
+    body:
+      'Literally write "want: 2x − y" before solving. The single most common way to lose a multi-step question is to stop at x — which is always among the choices. The note at the top is what makes you take the last step.',
+  },
+  {
+    id: 'tec-restart-clean',
+    category: 'technique',
+    title: 'After 30 seconds of error-hunting, restart instead',
+    body:
+      'A second clean pass is usually faster than finding a buried sign slip, and it does not inherit the first pass\'s mistake. Cross out the old work so it cannot contaminate the new.',
+  },
+  {
+    id: 'des-degree-mode',
+    category: 'desmos',
+    title: 'Set the angle mode before any trig',
+    body:
+      'Degrees in radian mode produces confident, plausible, wrong numbers with no error message. The built-in calculator\'s mode toggle is in its settings — check it once at the start of the section, and again before any trig question.',
+  },
+  {
+    id: 'des-zoom-out',
+    category: 'desmos',
+    title: 'Zoom out before concluding "no intersection"',
+    body:
+      'Two lines that cross at x = 40 look parallel in the default window. When a graph seems to show no solution, widen the window first — the intersection may simply be off-screen.',
+  },
+  {
+    id: 'err-check-backwards',
+    category: 'errors',
+    title: 'Check backwards from the answer, not forwards from the start',
+    body:
+      'Substituting your answer into the ORIGINAL equation exercises a different mental path than the one that made the error, so it catches what a re-read of your own steps will not. Re-reading your work tends to re-approve it.',
+  },
+  {
+    id: 'err-neat-columns',
+    category: 'errors',
+    title: 'One equals sign per line, aligned',
+    body:
+      'Scratch work written as a single run-on string is where dropped negatives live. Stacking each step under the last, equals signs aligned, makes a sign flip visually loud — and makes the backwards check take seconds instead of a minute.',
+  },
+  {
+    id: 'tim-hard-early',
+    category: 'timing',
+    title: 'A hard question early means nothing',
+    body:
+      'The difficulty ramp is rough, not strict — question 5 can be the day\'s worst. Meeting one early is not evidence about you or about the rest of the module. Flag it, guess, and let the ramp resume.',
+  },
+  {
+    id: 'ent-percent-form',
+    category: 'entry',
+    title: 'A percent answer: enter 45 or 0.45? The question says',
+    body:
+      '"What percent" wants 45; "what fraction" or "what decimal" wants 0.45 or 9/20. The stem always names the form, and entering the right value in the wrong form is marked wrong — read the last sentence twice on percent grid-ins.',
+  },
+  {
+    id: 'fmt-reference-once',
+    category: 'format',
+    title: 'Tour the reference sheet before test week, not during the test',
+    body:
+      'It has: area and volume formulas, the two special right triangles, and the circle facts (360°, 2π). It does NOT have: the quadratic formula, the slope formula, midpoint, distance, or any trig identity. Knowing the boundary tells you exactly what to memorize.',
+  },
 ];
 
 export const TIPS_BY_CATEGORY: Record<TipCategory, SatTip[]> = TIP_CATEGORIES.reduce(

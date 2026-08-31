@@ -45,6 +45,13 @@
         "For a small number of steps this beats building the formula.",
         "The trap answer is $80$ — stopping one step short. Count your steps on scratch paper rather than in your head."
       ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "80 — one doubling short — is the most-picked wrong answer on questions like this.",
+        "Count steps on paper: from f(3) to f(5) is TWO doublings, 40 → 80 → 160. The exponent gap, not the destination index, sets how many."
+      ]
     }
   ],
   "tags": [
