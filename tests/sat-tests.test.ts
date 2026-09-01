@@ -72,6 +72,22 @@ describe('SAT mock tests — blueprint fidelity', () => {
     }
   });
 
+  it('every question is tagged to a unit that belongs to its area', () => {
+    // The post-test analysis diagnoses at unit level, so a missing or
+    // cross-area tag would silently corrupt every recovery plan.
+    for (const q of ALL) {
+      expect(Number.isInteger(q.unit), `${q.id} unit`).toBe(true);
+      expect(SAT_AREA_INFO[q.area].units, `${q.id}: unit ${q.unit} is not in area ${q.area}`).toContain(q.unit);
+    }
+  });
+
+  it('each test spreads across enough units for the analysis to mean something', () => {
+    for (const t of SAT_MOCK_TESTS) {
+      const units = new Set(allQuestions(t).map((q) => q.unit));
+      expect(units.size, `test ${t.n} covers ${units.size} units`).toBeGreaterThanOrEqual(14);
+    }
+  });
+
   it('difficulty escalates from module 1 to module 2, as the adaptive form does', () => {
     for (const t of SAT_MOCK_TESTS) {
       const avg = (qs: typeof t.module1) => qs.reduce((s, q) => s + q.difficulty, 0) / qs.length;

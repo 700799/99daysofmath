@@ -7,7 +7,7 @@ import type { SatMockTest, SatTestQuestion } from './types';
 
 const module1: SatTestQuestion[] = [
   {
-    id: 'T2.M1.01', area: 'ALG', module: 1, n: 1, difficulty: 1,
+    id: 'T2.M1.01', area: 'ALG', unit: 1, module: 1, n: 1, difficulty: 1,
     prompt: 'If $7x - 3 = 25$, what is the value of $x$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$3$' }, { id: 'B', label: '$4$' }, { id: 'C', label: '$\\tfrac{22}{7}$' }, { id: 'D', label: '$28$' }],
@@ -16,7 +16,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Choice C is what you get by dividing before adding. Undo operations in reverse order: addition first, then multiplication.',
   },
   {
-    id: 'T2.M1.02', area: 'ALG', module: 1, n: 2, difficulty: 1,
+    id: 'T2.M1.02', area: 'ALG', unit: 2, module: 1, n: 2, difficulty: 1,
     prompt: 'The function $g$ is defined by $g(x) = -2x + 9$. What is the value of $g(4)$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-1$' }, { id: 'B', label: '$1$' }, { id: 'C', label: '$17$' }, { id: 'D', label: '$18$' }],
@@ -25,7 +25,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Keep the negative attached to the coefficient. Writing $-2(4)$ rather than $2(4)$ prevents the sign slip.',
   },
   {
-    id: 'T2.M1.03', area: 'ALG', module: 1, n: 3, difficulty: 2,
+    id: 'T2.M1.03', area: 'ALG', unit: 3, module: 1, n: 3, difficulty: 2,
     prompt: 'A line passes through the points $(1, 4)$ and $(5, 16)$. What is the slope of the line?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$\\tfrac{1}{3}$' }, { id: 'B', label: '$3$' }, { id: 'C', label: '$4$' }, { id: 'D', label: '$12$' }],
@@ -34,7 +34,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Subtract the y-values and the x-values in the SAME order. Reversing one gives the right number with the wrong sign.',
   },
   {
-    id: 'T2.M1.04', area: 'ALG', module: 1, n: 4, difficulty: 2,
+    id: 'T2.M1.04', area: 'ALG', unit: 4, module: 1, n: 4, difficulty: 2,
     prompt: 'If $3x + y = 11$ and $y = 2x + 1$, what is the value of $x$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$2$' }, { id: 'B', label: '$5$' }, { id: 'C', label: '$10$' }, { id: 'D', label: '$11$' }],
@@ -43,7 +43,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'When one variable is already isolated, substitution is the fast route. Reach for elimination only when neither variable is free.',
   },
   {
-    id: 'T2.M1.05', area: 'ALG', module: 1, n: 5, difficulty: 1,
+    id: 'T2.M1.05', area: 'ALG', unit: 5, module: 1, n: 5, difficulty: 1,
     prompt: 'Which of the following describes all solutions to $2x + 1 \\ge 9$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$x \\ge 4$' }, { id: 'B', label: '$x \\le 4$' }, { id: 'C', label: '$x \\ge 5$' }, { id: 'D', label: '$x \\ge 8$' }],
@@ -52,7 +52,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'No flip here — you divided by a positive. The direction only reverses for a negative.',
   },
   {
-    id: 'T2.M1.06', area: 'ALG', module: 1, n: 6, difficulty: 2,
+    id: 'T2.M1.06', area: 'ALG', unit: 2, module: 1, n: 6, difficulty: 2,
     prompt: 'A tank is modeled by $W(t) = 180 - 2t$, where $W$ is the volume in liters and $t$ is the time in minutes. What does $-2$ represent?',
     answerType: 'multiple-choice',
     choices: [
@@ -66,7 +66,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'A negative slope means "per unit decrease". Name the units first and the sign second.',
   },
   {
-    id: 'T2.M1.07', area: 'ALG', module: 1, n: 7, difficulty: 2,
+    id: 'T2.M1.07', area: 'ALG', unit: 1, module: 1, n: 7, difficulty: 2,
     prompt: 'The circumference of a circle is given by $C = 2\\pi r$. Which equation gives $r$ in terms of $C$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$r = 2\\pi C$' }, { id: 'B', label: '$r = \\dfrac{C}{2\\pi}$' }, { id: 'C', label: '$r = \\dfrac{2\\pi}{C}$' }, { id: 'D', label: '$r = C - 2\\pi$' }],
@@ -75,14 +75,14 @@ const module1: SatTestQuestion[] = [
     proTip: 'Solving "in terms of" is the same algebra as solving for a number. Treat the other symbols as if they were constants.',
   },
   {
-    id: 'T2.M1.08', area: 'ADV', module: 1, n: 8, difficulty: 2,
+    id: 'T2.M1.08', area: 'ADV', unit: 7, module: 1, n: 8, difficulty: 2,
     prompt: 'What is the positive solution to $x^2 + 3x - 10 = 0$?',
     answerType: 'numeric', answer: '2',
     explanation: ['Two numbers multiplying to $-10$ and adding to $3$: those are $5$ and $-2$.', '$(x + 5)(x - 2) = 0$, so $x = -5$ or $x = 2$.', 'The positive one is $2$.'],
     proTip: 'A negative product means the roots have opposite signs. Reading that off $c$ before factoring narrows the search.',
   },
   {
-    id: 'T2.M1.09', area: 'ADV', module: 1, n: 9, difficulty: 1,
+    id: 'T2.M1.09', area: 'ADV', unit: 6, module: 1, n: 9, difficulty: 1,
     prompt: 'Which expression is equivalent to $\\dfrac{x^6}{x^2}$ for $x \\neq 0$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$x^{3}$' }, { id: 'B', label: '$x^{4}$' }, { id: 'C', label: '$x^{8}$' }, { id: 'D', label: '$x^{12}$' }],
@@ -91,7 +91,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Divide subtracts, multiply adds, power-of-a-power multiplies. Three rules cover nearly every exponent question on the test.',
   },
   {
-    id: 'T2.M1.10', area: 'ADV', module: 1, n: 10, difficulty: 2,
+    id: 'T2.M1.10', area: 'ADV', unit: 8, module: 1, n: 10, difficulty: 2,
     prompt: 'What is the minimum value of the function $f(x) = x^2 - 4x + 7$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$2$' }, { id: 'B', label: '$3$' }, { id: 'C', label: '$7$' }, { id: 'D', label: '$11$' }],
@@ -100,7 +100,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'The minimum VALUE is the y-coordinate. The x-coordinate (here 2) is where it happens, and it will be an answer choice.',
   },
   {
-    id: 'T2.M1.11', area: 'ADV', module: 1, n: 11, difficulty: 2,
+    id: 'T2.M1.11', area: 'ADV', unit: 10, module: 1, n: 11, difficulty: 2,
     prompt: 'An investment of $\\$5{,}000$ grows by $8\\%$ each year. Which expression gives its value, in dollars, after $t$ years?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$5000(0.08)^t$' }, { id: 'B', label: '$5000(1.08)^t$' }, { id: 'C', label: '$5000 + 0.08t$' }, { id: 'D', label: '$5000(8)^t$' }],
@@ -109,7 +109,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Test $t = 1$: the value should be $\\$5{,}400$. Only choice B gives that, and the check takes five seconds.',
   },
   {
-    id: 'T2.M1.12', area: 'ADV', module: 1, n: 12, difficulty: 1,
+    id: 'T2.M1.12', area: 'ADV', unit: 6, module: 1, n: 12, difficulty: 1,
     prompt: 'Which expression is equivalent to $x^2 + 6x + 9$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$(x + 3)^2$' }, { id: 'B', label: '$(x - 3)^2$' }, { id: 'C', label: '$(x + 9)(x + 1)$' }, { id: 'D', label: '$(x + 3)(x - 3)$' }],
@@ -118,7 +118,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Recognize a perfect square when the constant is a square and the middle coefficient is twice its root. Here $9 = 3^2$ and $6 = 2 \\times 3$.',
   },
   {
-    id: 'T2.M1.13', area: 'ADV', module: 1, n: 13, difficulty: 2,
+    id: 'T2.M1.13', area: 'ADV', unit: 7, module: 1, n: 13, difficulty: 2,
     prompt: 'How many real solutions does $x^2 - 6x + 9 = 0$ have?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: 'Zero' }, { id: 'B', label: 'Exactly one' }, { id: 'C', label: 'Exactly two' }, { id: 'D', label: 'Infinitely many' }],
@@ -127,7 +127,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Zero discriminant means the parabola is tangent to the x-axis: it touches once rather than crossing twice.',
   },
   {
-    id: 'T2.M1.14', area: 'ADV', module: 1, n: 14, difficulty: 2,
+    id: 'T2.M1.14', area: 'ADV', unit: 9, module: 1, n: 14, difficulty: 2,
     prompt: 'If $\\dfrac{1}{x} + \\dfrac{1}{3} = \\dfrac{5}{6}$, what is the value of $x$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$\\tfrac{1}{2}$' }, { id: 'B', label: '$2$' }, { id: 'C', label: '$3$' }, { id: 'D', label: '$6$' }],
@@ -136,14 +136,14 @@ const module1: SatTestQuestion[] = [
     proTip: 'Two fractions with numerator 1 are equal only when their denominators are. Isolate the reciprocal and read off the answer.',
   },
   {
-    id: 'T2.M1.15', area: 'PSDA', module: 1, n: 15, difficulty: 1,
+    id: 'T2.M1.15', area: 'PSDA', unit: 12, module: 1, n: 15, difficulty: 1,
     prompt: '$15$ is what percent of $60$?',
     answerType: 'numeric', answer: '25',
     explanation: ['Divide the part by the whole: $\\dfrac{15}{60} = 0.25$.', 'As a percent, $25\\%$.'],
     proTip: 'The number after "of" is the whole and goes in the denominator. Dividing the other way gives 400% — a trap answer.',
   },
   {
-    id: 'T2.M1.16', area: 'PSDA', module: 1, n: 16, difficulty: 2,
+    id: 'T2.M1.16', area: 'PSDA', unit: 11, module: 1, n: 16, difficulty: 2,
     prompt: 'A cyclist rides at a constant $45$ kilometers per hour for $2.5$ hours. How many kilometers does the cyclist travel?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$18$' }, { id: 'B', label: '$90$' }, { id: 'C', label: '$112.5$' }, { id: 'D', label: '$180$' }],
@@ -152,7 +152,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Check the units: km/hr × hr leaves km ✓. If the surviving units are wrong, you divided when you should have multiplied.',
   },
   {
-    id: 'T2.M1.17', area: 'PSDA', module: 1, n: 17, difficulty: 2,
+    id: 'T2.M1.17', area: 'PSDA', unit: 13, module: 1, n: 17, difficulty: 2,
     prompt: 'What is the median of the data set $8$, $3$, $11$, $6$, $15$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$6$' }, { id: 'B', label: '$8$' }, { id: 'C', label: '$8.6$' }, { id: 'D', label: '$11$' }],
@@ -161,7 +161,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Sorting is not optional. Taking the middle of the unsorted list gives 11 here — the most common median error.',
   },
   {
-    id: 'T2.M1.18', area: 'PSDA', module: 1, n: 18, difficulty: 2,
+    id: 'T2.M1.18', area: 'PSDA', unit: 14, module: 1, n: 18, difficulty: 2,
     prompt: 'A scatterplot relates years of experience, $x$, to salary in thousands of dollars, $y$. The line of best fit is $y = 3.2x + 41$. What does $3.2$ represent?',
     answerType: 'multiple-choice',
     choices: [
@@ -175,14 +175,14 @@ const module1: SatTestQuestion[] = [
     proTip: 'On every interpretation question, say the units of the slope out loud. Usually only one choice survives.',
   },
   {
-    id: 'T2.M1.19', area: 'GEO', module: 1, n: 19, difficulty: 1,
+    id: 'T2.M1.19', area: 'GEO', unit: 15, module: 1, n: 19, difficulty: 1,
     prompt: 'Two angles are supplementary. One measures $143°$. What is the measure, in degrees, of the other?',
     answerType: 'numeric', answer: '37',
     explanation: ['Supplementary angles sum to $180°$.', '$180 - 143 = 37°$.'],
     proTip: 'Complementary is 90°, supplementary is 180°. Alphabetical order matches numerical order, which is enough to keep them apart.',
   },
   {
-    id: 'T2.M1.20', area: 'GEO', module: 1, n: 20, difficulty: 1,
+    id: 'T2.M1.20', area: 'GEO', unit: 16, module: 1, n: 20, difficulty: 1,
     prompt: 'A triangle has a base of $14$ and a height of $9$. What is its area?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$26$' }, { id: 'B', label: '$63$' }, { id: 'C', label: '$126$' }, { id: 'D', label: '$252$' }],
@@ -191,7 +191,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Forgetting the ½ gives 126 — the area of the surrounding rectangle, and always an answer choice.',
   },
   {
-    id: 'T2.M1.21', area: 'GEO', module: 1, n: 21, difficulty: 1,
+    id: 'T2.M1.21', area: 'GEO', unit: 16, module: 1, n: 21, difficulty: 1,
     prompt: 'A rectangular prism has dimensions $3$ by $4$ by $7$. What is its volume?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$14$' }, { id: 'B', label: '$61$' }, { id: 'C', label: '$84$' }, { id: 'D', label: '$168$' }],
@@ -200,7 +200,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Volume is base area times height, for every prism and cylinder. Only the base shape changes.',
   },
   {
-    id: 'T2.M1.22', area: 'GEO', module: 1, n: 22, difficulty: 2,
+    id: 'T2.M1.22', area: 'GEO', unit: 18, module: 1, n: 22, difficulty: 2,
     prompt: 'What is the circumference of a circle with radius $5$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$5\\pi$' }, { id: 'B', label: '$10\\pi$' }, { id: 'C', label: '$25\\pi$' }, { id: 'D', label: '$20\\pi$' }],
@@ -212,7 +212,7 @@ const module1: SatTestQuestion[] = [
 
 const module2: SatTestQuestion[] = [
   {
-    id: 'T2.M2.01', area: 'ALG', module: 2, n: 1, difficulty: 2,
+    id: 'T2.M2.01', area: 'ALG', unit: 1, module: 2, n: 1, difficulty: 2,
     prompt: 'If $4(3x + 2) = 2(5x + 9)$, what is the value of $x$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$2$' }, { id: 'B', label: '$5$' }, { id: 'C', label: '$13$' }, { id: 'D', label: '$26$' }],
@@ -221,14 +221,14 @@ const module2: SatTestQuestion[] = [
     proTip: 'Distribute both sides fully before collecting anything. Half-distributing is where the sign errors start.',
   },
   {
-    id: 'T2.M2.02', area: 'ALG', module: 2, n: 2, difficulty: 3,
+    id: 'T2.M2.02', area: 'ALG', unit: 4, module: 2, n: 2, difficulty: 3,
     prompt: 'The system $ax + 5y = 30$ and $2x + y = 4$ has no solution. What is the value of $a$?',
     answerType: 'numeric', answer: '10',
     explanation: ['No solution means the lines are parallel: equal slopes, different intercepts.', 'The slopes are $-\\dfrac{a}{5}$ and $-2$, so $-\\dfrac{a}{5} = -2$ and $a = 10$.', 'Verify it is parallel and not identical: $10x + 5y = 30$ reduces to $2x + y = 6$, which has the same slope as $2x + y = 4$ but a different constant — so they never meet ✓'],
     proTip: 'Matching slopes is only half the check. If the constants ALSO match you have one line and infinitely many solutions, not none.',
   },
   {
-    id: 'T2.M2.03', area: 'ALG', module: 2, n: 3, difficulty: 2,
+    id: 'T2.M2.03', area: 'ALG', unit: 3, module: 2, n: 3, difficulty: 2,
     prompt: 'Line $m$ is parallel to the graph of $y = -3x + 2$ and passes through the point $(2, 1)$. What is the $y$-intercept of line $m$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-3$' }, { id: 'B', label: '$1$' }, { id: 'C', label: '$7$' }, { id: 'D', label: '$11$' }],
@@ -237,14 +237,14 @@ const module2: SatTestQuestion[] = [
     proTip: 'Or step along the slope: from $(2,1)$ move 2 left to reach $x = 0$, which raises $y$ by $3 \\times 2 = 6$, landing at 7.',
   },
   {
-    id: 'T2.M2.04', area: 'ALG', module: 2, n: 4, difficulty: 3,
+    id: 'T2.M2.04', area: 'ALG', unit: 4, module: 2, n: 4, difficulty: 3,
     prompt: 'If $4x - 3y = 5$ and $2x + y = 5$, what is the value of $xy$?',
     answerType: 'numeric', answer: '2',
     explanation: ['Multiply the second equation by $3$: $6x + 3y = 15$.', 'Add to the first: $10x = 20$, so $x = 2$.', 'Then $y = 5 - 4 = 1$, so $xy = 2$.'],
     proTip: 'Scale to create opposite coefficients, then add. Choosing which equation to scale is the only decision here.',
   },
   {
-    id: 'T2.M2.05', area: 'ALG', module: 2, n: 5, difficulty: 3,
+    id: 'T2.M2.05', area: 'ALG', unit: 5, module: 2, n: 5, difficulty: 3,
     prompt: 'How many integer values of $x$ satisfy $-1 \\le 3x + 2 \\le 14$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$5$' }, { id: 'B', label: '$6$' }, { id: 'C', label: '$7$' }, { id: 'D', label: '$13$' }],
@@ -253,7 +253,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Counting integers from a to b inclusive gives b − a + 1. The "+1" is what people forget.',
   },
   {
-    id: 'T2.M2.06', area: 'ALG', module: 2, n: 6, difficulty: 2,
+    id: 'T2.M2.06', area: 'ALG', unit: 3, module: 2, n: 6, difficulty: 2,
     prompt: 'What is the slope of the line $6x - 3y = 15$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$2$' }, { id: 'B', label: '$-2$' }, { id: 'C', label: '$6$' }, { id: 'D', label: '$-\\tfrac{1}{2}$' }],
@@ -262,14 +262,14 @@ const module2: SatTestQuestion[] = [
     proTip: 'Dividing by a negative flips BOTH signs. Getting only one is how choice B exists.',
   },
   {
-    id: 'T2.M2.07', area: 'ALG', module: 2, n: 7, difficulty: 3,
+    id: 'T2.M2.07', area: 'ALG', unit: 4, module: 2, n: 7, difficulty: 3,
     prompt: 'The system $6x + 2y = c$ and $3x + y = 5$ has infinitely many solutions, where $c$ is a constant. What is the value of $c$?',
     answerType: 'numeric', answer: '10',
     explanation: ['Infinitely many solutions means the equations describe the same line.', 'Doubling the second gives $6x + 2y = 10$.', 'So $c = 10$, making the two equations the same line.'],
     proTip: 'Find the scale factor from a matching term (here $3x \\to 6x$, a factor of 2), then apply it to the constant.',
   },
   {
-    id: 'T2.M2.08', area: 'ADV', module: 2, n: 8, difficulty: 2,
+    id: 'T2.M2.08', area: 'ADV', unit: 7, module: 2, n: 8, difficulty: 2,
     prompt: 'What is the greater solution to $3x^2 - 12x = 0$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-4$' }, { id: 'B', label: '$0$' }, { id: 'C', label: '$4$' }, { id: 'D', label: '$12$' }],
@@ -278,7 +278,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Never divide both sides by x — it silently destroys the root x = 0. Factor instead and keep both.',
   },
   {
-    id: 'T2.M2.09', area: 'ADV', module: 2, n: 9, difficulty: 3,
+    id: 'T2.M2.09', area: 'ADV', unit: 6, module: 2, n: 9, difficulty: 3,
     prompt: 'Which expression is equivalent to $x^2 + 8x + 3$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$(x + 4)^2 - 13$' }, { id: 'B', label: '$(x + 4)^2 + 3$' }, { id: 'C', label: '$(x + 8)^2 - 61$' }, { id: 'D', label: '$(x - 4)^2 - 13$' }],
@@ -287,7 +287,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Verify at $x = 0$: the original gives 3, and $(0+4)^2 - 13 = 3$ ✓. One substitution eliminates most wrong choices.',
   },
   {
-    id: 'T2.M2.10', area: 'ADV', module: 2, n: 10, difficulty: 2,
+    id: 'T2.M2.10', area: 'ADV', unit: 7, module: 2, n: 10, difficulty: 2,
     prompt: 'What is the sum of the solutions to $2x^2 - 10x + 3 = 0$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-5$' }, { id: 'B', label: '$\\tfrac{3}{2}$' }, { id: 'C', label: '$5$' }, { id: 'D', label: '$10$' }],
@@ -296,14 +296,14 @@ const module2: SatTestQuestion[] = [
     proTip: 'The sum-of-roots rule works even when the quadratic does not factor. You never have to find either root.',
   },
   {
-    id: 'T2.M2.11', area: 'ADV', module: 2, n: 11, difficulty: 3,
+    id: 'T2.M2.11', area: 'ADV', unit: 9, module: 2, n: 11, difficulty: 3,
     prompt: 'The polynomial $p$ is defined by $p(x) = x^3 - 7x + 6$, and $p(1) = 0$. What is the greatest zero of $p$?',
     answerType: 'numeric', answer: '2',
     explanation: ['Since $p(1) = 0$, $(x - 1)$ is a factor. Dividing gives $x^2 + x - 6$.', 'That factors as $(x + 3)(x - 2)$.', 'The zeros are $1$, $-3$, and $2$. The greatest is $2$.'],
     proTip: 'Integer zeros must divide the constant term (here 6), so the search list is short: ±1, ±2, ±3, ±6.',
   },
   {
-    id: 'T2.M2.12', area: 'ADV', module: 2, n: 12, difficulty: 2,
+    id: 'T2.M2.12', area: 'ADV', unit: 10, module: 2, n: 12, difficulty: 2,
     prompt: 'A population of $8{,}000$ declines by $5\\%$ each year. Which expression gives the population after $t$ years?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$8000(0.05)^t$' }, { id: 'B', label: '$8000(0.95)^t$' }, { id: 'C', label: '$8000(1.05)^t$' }, { id: 'D', label: '$8000 - 0.05t$' }],
@@ -312,7 +312,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'For decay, subtract the rate from 1 to get the base. Choice A keeps only 5% each year — a very different model.',
   },
   {
-    id: 'T2.M2.13', area: 'ADV', module: 2, n: 13, difficulty: 2,
+    id: 'T2.M2.13', area: 'ADV', unit: 9, module: 2, n: 13, difficulty: 2,
     prompt: 'If $\\dfrac{x}{x - 3} = 4$ and $x \\neq 3$, what is the value of $x$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-4$' }, { id: 'B', label: '$3$' }, { id: 'C', label: '$4$' }, { id: 'D', label: '$12$' }],
@@ -321,7 +321,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'After clearing a denominator, confirm your answer does not make that denominator zero. Here 4 ≠ 3, so it stands.',
   },
   {
-    id: 'T2.M2.14', area: 'ADV', module: 2, n: 14, difficulty: 3,
+    id: 'T2.M2.14', area: 'ADV', unit: 6, module: 2, n: 14, difficulty: 3,
     prompt: 'Which expression is equivalent to $\\sqrt{72}$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$6\\sqrt{2}$' }, { id: 'B', label: '$2\\sqrt{6}$' }, { id: 'C', label: '$36\\sqrt{2}$' }, { id: 'D', label: '$8\\sqrt{3}$' }],
@@ -330,14 +330,14 @@ const module2: SatTestQuestion[] = [
     proTip: 'Check with a decimal: $\\sqrt{72} \\approx 8.49$, and $6\\sqrt{2} \\approx 8.49$ ✓. Estimation verifies any radical simplification.',
   },
   {
-    id: 'T2.M2.15', area: 'ADV', module: 2, n: 15, difficulty: 3,
+    id: 'T2.M2.15', area: 'ADV', unit: 6, module: 2, n: 15, difficulty: 3,
     prompt: 'The equation $(x + a)(x - 2) = x^2 + 3x + b$ is true for all values of $x$, where $a$ and $b$ are constants. What is the value of $b$?',
     answerType: 'numeric', answer: '-10',
     explanation: ['Expand the left: $x^2 + (a - 2)x - 2a$.', 'Match the $x$ coefficients: $a - 2 = 3$, so $a = 5$.', 'Then $b = -2a = -10$.'],
     proTip: '"True for all values of x" means match coefficients term by term. Or substitute x = 0 to get b = −2a immediately.',
   },
   {
-    id: 'T2.M2.16', area: 'PSDA', module: 2, n: 16, difficulty: 3,
+    id: 'T2.M2.16', area: 'PSDA', unit: 12, module: 2, n: 16, difficulty: 3,
     prompt: 'A number increased by $20\\%$ is $96$. What was the original number?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$76.8$' }, { id: 'B', label: '$80$' }, { id: 'C', label: '$96$' }, { id: 'D', label: '$115.2$' }],
@@ -346,7 +346,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Reverse a percent by dividing. Taking 20% off 96 gives 76.8, which is wrong because the percent was of the smaller original.',
   },
   {
-    id: 'T2.M2.17', area: 'PSDA', module: 2, n: 17, difficulty: 3,
+    id: 'T2.M2.17', area: 'PSDA', unit: 11, module: 2, n: 17, difficulty: 3,
     prompt: 'A car travels at $90$ kilometers per hour. There are $1{,}000$ meters in a kilometer and $3{,}600$ seconds in an hour. What is the speed, in meters per second?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$15$' }, { id: 'B', label: '$25$' }, { id: 'C', label: '$32.4$' }, { id: 'D', label: '$90$' }],
@@ -355,7 +355,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Arrange each factor so the unwanted unit cancels diagonally. If the surviving units are wrong, a factor is upside down.',
   },
   {
-    id: 'T2.M2.18', area: 'PSDA', module: 2, n: 18, difficulty: 3,
+    id: 'T2.M2.18', area: 'PSDA', unit: 14, module: 2, n: 18, difficulty: 3,
     prompt: 'The table shows how members of a club voted. What percent of those who voted Yes are seniors? Round to the nearest whole percent.',
     diagram: {
       kind: 'ascii',
@@ -373,7 +373,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'The phrase after "of" names the denominator. "Of all members" would give 42/100 = 42% instead.',
   },
   {
-    id: 'T2.M2.19', area: 'PSDA', module: 2, n: 19, difficulty: 3,
+    id: 'T2.M2.19', area: 'PSDA', unit: 14, module: 2, n: 19, difficulty: 3,
     prompt: 'A researcher randomly surveyed $300$ residents of Ashford and found that $58\\%$ support a new park. Which conclusion is best supported?',
     answerType: 'multiple-choice',
     choices: [
@@ -387,7 +387,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Random SELECTION lets you generalize to the population sampled. Random ASSIGNMENT is what lets you claim cause.',
   },
   {
-    id: 'T2.M2.20', area: 'GEO', module: 2, n: 20, difficulty: 3,
+    id: 'T2.M2.20', area: 'GEO', unit: 17, module: 2, n: 20, difficulty: 3,
     prompt: 'A $45°$-$45°$-$90°$ triangle has a hypotenuse of length $10\\sqrt{2}$. What is the length of each leg?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$5$' }, { id: 'B', label: '$10$' }, { id: 'C', label: '$10\\sqrt{2}$' }, { id: 'D', label: '$20$' }],
@@ -396,7 +396,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'To go from hypotenuse to leg in a 45-45-90, DIVIDE by √2. Multiplying is the standard trap on this triangle.',
   },
   {
-    id: 'T2.M2.21', area: 'GEO', module: 2, n: 21, difficulty: 3,
+    id: 'T2.M2.21', area: 'GEO', unit: 16, module: 2, n: 21, difficulty: 3,
     prompt: 'Two similar polygons have areas in the ratio $4 : 25$. What is the ratio of their corresponding side lengths?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$2 : 5$' }, { id: 'B', label: '$4 : 25$' }, { id: 'C', label: '$16 : 625$' }, { id: 'D', label: '$8 : 125$' }],
@@ -405,7 +405,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Going from area back to length means taking a square root — the reverse of the usual direction, which is why it is asked.',
   },
   {
-    id: 'T2.M2.22', area: 'GEO', module: 2, n: 22, difficulty: 3,
+    id: 'T2.M2.22', area: 'GEO', unit: 17, module: 2, n: 22, difficulty: 3,
     prompt: 'In a right triangle, $\\tan\\theta = \\dfrac{3}{4}$ for an acute angle $\\theta$. What is the value of $\\sin\\theta$? Give your answer as a decimal.',
     answerType: 'numeric', answer: '0.6', alternativeAnswers: ['3/5', '.6'], tolerance: 0.001,
     explanation: ['Tangent gives opposite $= 3$ and adjacent $= 4$.', 'The hypotenuse is $\\sqrt{9 + 16} = 5$ — a $3$-$4$-$5$ triangle.', '$\\sin\\theta = \\dfrac{3}{5} = 0.6$.'],

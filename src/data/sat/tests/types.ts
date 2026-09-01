@@ -20,6 +20,8 @@ export interface SatTestQuestion {
   /** Stable id, e.g. "T1.M1.05". Answers are stored against this. */
   id: string;
   area: SatArea;
+  /** The section unit (1-18) whose skill is the crux of this question. Must belong to `area`. Drives the post-test analysis. */
+  unit: number;
   module: 1 | 2;
   /** Position within the module, 1-22. */
   n: number;

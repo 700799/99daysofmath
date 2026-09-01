@@ -8,7 +8,7 @@ import type { SatMockTest, SatTestQuestion } from './types';
 
 const module1: SatTestQuestion[] = [
   {
-    id: 'T4.M1.01', area: 'ALG', module: 1, n: 1, difficulty: 2,
+    id: 'T4.M1.01', area: 'ALG', unit: 1, module: 1, n: 1, difficulty: 2,
     prompt: 'If $\\dfrac{2x - 3}{5} = 3$, what is the value of $x$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$6$' }, { id: 'B', label: '$9$' }, { id: 'C', label: '$13.5$' }, { id: 'D', label: '$36$' }],
@@ -17,7 +17,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Clear the denominator before touching anything inside it. One multiplication removes the fraction entirely.',
   },
   {
-    id: 'T4.M1.02', area: 'ALG', module: 1, n: 2, difficulty: 2,
+    id: 'T4.M1.02', area: 'ALG', unit: 2, module: 1, n: 2, difficulty: 2,
     prompt: 'The function $f$ is defined by $f(x) = 5 - 3x$. For what value of $x$ does $f(x) = -7$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-4$' }, { id: 'B', label: '$\\tfrac{4}{3}$' }, { id: 'C', label: '$4$' }, { id: 'D', label: '$26$' }],
@@ -26,7 +26,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'f(x) = −7 asks for the INPUT. Evaluating f(−7) instead answers a different question, and its value will be a choice.',
   },
   {
-    id: 'T4.M1.03', area: 'ALG', module: 1, n: 3, difficulty: 3,
+    id: 'T4.M1.03', area: 'ALG', unit: 3, module: 1, n: 3, difficulty: 3,
     prompt: 'Line $\\ell$ passes through $(-2, 5)$ and $(4, -7)$. What is the $y$-intercept of line $\\ell$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-2$' }, { id: 'B', label: '$1$' }, { id: 'C', label: '$5$' }, { id: 'D', label: '$9$' }],
@@ -35,7 +35,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Watch the double negative in the denominator: 4 − (−2) is 6, not 2. That single slip changes the whole answer.',
   },
   {
-    id: 'T4.M1.04', area: 'ALG', module: 1, n: 4, difficulty: 3,
+    id: 'T4.M1.04', area: 'ALG', unit: 4, module: 1, n: 4, difficulty: 3,
     prompt: 'If $7x - 2y = 22$ and $3x + 2y = 18$, what is the value of $x - y$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$1$' }, { id: 'B', label: '$3$' }, { id: 'C', label: '$4$' }, { id: 'D', label: '$7$' }],
@@ -44,7 +44,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Both 4 and 3 will appear as choices. The question asked for the difference — finish the last step.',
   },
   {
-    id: 'T4.M1.05', area: 'ALG', module: 1, n: 5, difficulty: 3,
+    id: 'T4.M1.05', area: 'ALG', unit: 5, module: 1, n: 5, difficulty: 3,
     prompt: 'Which of the following describes all solutions to $\\dfrac{3 - x}{2} \\ge 4$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$x \\ge -5$' }, { id: 'B', label: '$x \\le -5$' }, { id: 'C', label: '$x \\ge 5$' }, { id: 'D', label: '$x \\le 11$' }],
@@ -53,14 +53,14 @@ const module1: SatTestQuestion[] = [
     proTip: 'Multiplying by a positive never flips; multiplying by −1 always does. Track which step is which.',
   },
   {
-    id: 'T4.M1.06', area: 'ALG', module: 1, n: 6, difficulty: 3,
+    id: 'T4.M1.06', area: 'ALG', unit: 1, module: 1, n: 6, difficulty: 3,
     prompt: 'A rideshare charges a $\\$3.50$ base fare plus $\\$1.25$ per mile. A rider is charged $\\$24.75$. How many miles was the trip?',
     answerType: 'numeric', answer: '17',
     explanation: ['Model it: $3.50 + 1.25m = 24.75$.', 'Subtract the base fare: $1.25m = 21.25$.', '$m = \\dfrac{21.25}{1.25} = 17$ miles.'],
     proTip: 'Subtract the one-time charge first, then divide by the rate. The same two steps run every fare, plan, and rental question.',
   },
   {
-    id: 'T4.M1.07', area: 'ALG', module: 1, n: 7, difficulty: 3,
+    id: 'T4.M1.07', area: 'ALG', unit: 1, module: 1, n: 7, difficulty: 3,
     prompt: 'In the equation $2(3x - c) = 6x + 10$, $c$ is a constant. If the equation has infinitely many solutions, what is the value of $c$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-10$' }, { id: 'B', label: '$-5$' }, { id: 'C', label: '$5$' }, { id: 'D', label: '$10$' }],
@@ -69,7 +69,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'The x-coefficients already match at 6, so only the constants can decide. Compare them term by term.',
   },
   {
-    id: 'T4.M1.08', area: 'ADV', module: 1, n: 8, difficulty: 3,
+    id: 'T4.M1.08', area: 'ADV', unit: 7, module: 1, n: 8, difficulty: 3,
     prompt: 'What is the greater solution to $2x^2 - 5x - 12 = 0$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-4$' }, { id: 'B', label: '$-\\tfrac{3}{2}$' }, { id: 'C', label: '$\\tfrac{3}{2}$' }, { id: 'D', label: '$4$' }],
@@ -78,7 +78,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'With a leading coefficient, look for factors of the form (2x + □)(x + □). Expand mentally to confirm the middle term.',
   },
   {
-    id: 'T4.M1.09', area: 'ADV', module: 1, n: 9, difficulty: 3,
+    id: 'T4.M1.09', area: 'ADV', unit: 6, module: 1, n: 9, difficulty: 3,
     prompt: 'Which expression is equivalent to $\\dfrac{x^2 - 25}{x - 5}$ for $x \\neq 5$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$x - 5$' }, { id: 'B', label: '$x + 5$' }, { id: 'C', label: '$x^2 - 5$' }, { id: 'D', label: '$x - 25$' }],
@@ -87,7 +87,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Cancel FACTORS, never terms. Factoring turns a sum into a product, which is what makes cancelling legal.',
   },
   {
-    id: 'T4.M1.10', area: 'ADV', module: 1, n: 10, difficulty: 3,
+    id: 'T4.M1.10', area: 'ADV', unit: 8, module: 1, n: 10, difficulty: 3,
     prompt: 'What is the minimum value of the function $f(x) = 2x^2 - 12x + 5$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-13$' }, { id: 'B', label: '$-4$' }, { id: 'C', label: '$3$' }, { id: 'D', label: '$5$' }],
@@ -96,7 +96,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Do not forget the leading coefficient in −b/2a. Using 2a = 2 instead of 4 gives x = 6 and the wrong minimum.',
   },
   {
-    id: 'T4.M1.11', area: 'ADV', module: 1, n: 11, difficulty: 3,
+    id: 'T4.M1.11', area: 'ADV', unit: 10, module: 1, n: 11, difficulty: 3,
     prompt: 'The value of a machine depreciates by $15\\%$ each year from an initial value of $\\$40{,}000$. What is its value, in dollars, after $2$ years?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$6000$' }, { id: 'B', label: '$28900$' }, { id: 'C', label: '$29000$' }, { id: 'D', label: '$34000$' }],
@@ -105,7 +105,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Subtract the loss rate from 1 to get the base. Using 0.15 as the base would leave only $900 after two years.',
   },
   {
-    id: 'T4.M1.12', area: 'ADV', module: 1, n: 12, difficulty: 3,
+    id: 'T4.M1.12', area: 'ADV', unit: 6, module: 1, n: 12, difficulty: 3,
     prompt: 'What is the value of $16^{3/4}$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$4$' }, { id: 'B', label: '$8$' }, { id: 'C', label: '$12$' }, { id: 'D', label: '$64$' }],
@@ -114,7 +114,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Take the root before the power to keep the numbers small. Going the other way means computing 16³ = 4096 first.',
   },
   {
-    id: 'T4.M1.13', area: 'ADV', module: 1, n: 13, difficulty: 3,
+    id: 'T4.M1.13', area: 'ADV', unit: 7, module: 1, n: 13, difficulty: 3,
     prompt: 'For what value of $c$ does $x^2 - 10x + c = 0$ have exactly one real solution?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$5$' }, { id: 'B', label: '$10$' }, { id: 'C', label: '$20$' }, { id: 'D', label: '$25$' }],
@@ -123,7 +123,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'One solution means a perfect square trinomial: halve b and square it. Here 10/2 = 5 and 5² = 25.',
   },
   {
-    id: 'T4.M1.14', area: 'ADV', module: 1, n: 14, difficulty: 3,
+    id: 'T4.M1.14', area: 'ADV', unit: 9, module: 1, n: 14, difficulty: 3,
     prompt: 'How many solutions does the system $y = x^2 + 2$ and $y = 2x + 1$ have?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: 'Zero' }, { id: 'B', label: 'Exactly one' }, { id: 'C', label: 'Exactly two' }, { id: 'D', label: 'Infinitely many' }],
@@ -132,7 +132,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'A zero discriminant here means tangency — the line grazes the curve at exactly one point rather than cutting through.',
   },
   {
-    id: 'T4.M1.15', area: 'PSDA', module: 1, n: 15, difficulty: 3,
+    id: 'T4.M1.15', area: 'PSDA', unit: 12, module: 1, n: 15, difficulty: 3,
     prompt: 'A shirt costs $\\$36$ after a $10\\%$ discount. What was the original price, in dollars?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$32.4$' }, { id: 'B', label: '$36$' }, { id: 'C', label: '$39.60$' }, { id: 'D', label: '$40$' }],
@@ -141,21 +141,21 @@ const module1: SatTestQuestion[] = [
     proTip: 'Divide by the multiplier. Adding 10% back to $36 gives $39.60, which is wrong and will be offered.',
   },
   {
-    id: 'T4.M1.16', area: 'PSDA', module: 1, n: 16, difficulty: 3,
+    id: 'T4.M1.16', area: 'PSDA', unit: 11, module: 1, n: 16, difficulty: 3,
     prompt: 'Four machines produce $600$ units in $5$ hours. At the same rate, how many units will $6$ machines produce in $8$ hours?',
     answerType: 'numeric', answer: '1440',
     explanation: ['Total effort: $4 \\times 5 = 20$ machine-hours for $600$ units, so $30$ units per machine-hour.', 'New effort: $6 \\times 8 = 48$ machine-hours.', '$48 \\times 30 = 1{,}440$ units.'],
     proTip: 'Reduce to a per-machine-hour rate first. Scaling the two factors separately works too but is easier to get backwards.',
   },
   {
-    id: 'T4.M1.17', area: 'PSDA', module: 1, n: 17, difficulty: 3,
+    id: 'T4.M1.17', area: 'PSDA', unit: 13, module: 1, n: 17, difficulty: 3,
     prompt: 'A set of $6$ numbers has a mean of $20$. If a seventh number is added and the new mean is $22$, what is the seventh number?',
     answerType: 'numeric', answer: '34',
     explanation: ['Current sum: $6 \\times 20 = 120$.', 'Required sum: $7 \\times 22 = 154$.', 'The new number is $154 - 120 = 34$.'],
     proTip: 'Or: lifting six values by 2 each needs 12 extra, so the new value is 22 + 12 = 34. Both routes are fast.',
   },
   {
-    id: 'T4.M1.18', area: 'PSDA', module: 1, n: 18, difficulty: 3,
+    id: 'T4.M1.18', area: 'PSDA', unit: 14, module: 1, n: 18, difficulty: 3,
     prompt: 'The table shows commute methods. Of the employees who drive, what percent work at Site B? Round to the nearest whole percent.',
     diagram: {
       kind: 'ascii',
@@ -173,7 +173,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'This conditions on a ROW. "Of Site B employees" would condition on a column and give 36/70 ≈ 51% instead.',
   },
   {
-    id: 'T4.M1.19', area: 'GEO', module: 1, n: 19, difficulty: 3,
+    id: 'T4.M1.19', area: 'GEO', unit: 15, module: 1, n: 19, difficulty: 3,
     prompt: 'In an isosceles triangle, each base angle measures $52°$. What is the measure, in degrees, of the vertex angle?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$52$' }, { id: 'B', label: '$64$' }, { id: 'C', label: '$76$' }, { id: 'D', label: '$128$' }],
@@ -182,7 +182,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Read carefully which angle is given. If 52° had been the vertex angle, each base angle would be 64° instead.',
   },
   {
-    id: 'T4.M1.20', area: 'GEO', module: 1, n: 20, difficulty: 3,
+    id: 'T4.M1.20', area: 'GEO', unit: 16, module: 1, n: 20, difficulty: 3,
     prompt: 'A rectangular garden measures $18$ feet by $12$ feet. A square patio of side $4$ feet is built inside it. What is the remaining garden area, in square feet?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$16$' }, { id: 'B', label: '$184$' }, { id: 'C', label: '$200$' }, { id: 'D', label: '$216$' }],
@@ -191,7 +191,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Whole minus hole. Trying to carve the leftover L-shape into rectangles takes four times as long.',
   },
   {
-    id: 'T4.M1.21', area: 'GEO', module: 1, n: 21, difficulty: 3,
+    id: 'T4.M1.21', area: 'GEO', unit: 16, module: 1, n: 21, difficulty: 3,
     prompt: 'All three dimensions of a cube are tripled. The volume of the new cube is how many times the volume of the original?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$3$' }, { id: 'B', label: '$9$' }, { id: 'C', label: '$18$' }, { id: 'D', label: '$27$' }],
@@ -200,7 +200,7 @@ const module1: SatTestQuestion[] = [
     proTip: 'Lengths scale by k, areas by k², volumes by k³. The exponent is the number of dimensions being measured.',
   },
   {
-    id: 'T4.M1.22', area: 'GEO', module: 1, n: 22, difficulty: 3,
+    id: 'T4.M1.22', area: 'GEO', unit: 18, module: 1, n: 22, difficulty: 3,
     prompt: 'What is the radian measure of an angle of $150°$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$\\dfrac{5\\pi}{6}$' }, { id: 'B', label: '$\\dfrac{6\\pi}{5}$' }, { id: 'C', label: '$\\dfrac{2\\pi}{3}$' }, { id: 'D', label: '$\\dfrac{3\\pi}{4}$' }],
@@ -212,7 +212,7 @@ const module1: SatTestQuestion[] = [
 
 const module2: SatTestQuestion[] = [
   {
-    id: 'T4.M2.01', area: 'ALG', module: 2, n: 1, difficulty: 3,
+    id: 'T4.M2.01', area: 'ALG', unit: 1, module: 2, n: 1, difficulty: 3,
     prompt: 'If $\\dfrac{3x + 1}{4} = \\dfrac{x + 5}{2}$, what is the value of $x$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-9$' }, { id: 'B', label: '$3$' }, { id: 'C', label: '$9$' }, { id: 'D', label: '$19$' }],
@@ -221,7 +221,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Cross-multiplication is just multiplying both sides by the common denominator, with the arithmetic already done.',
   },
   {
-    id: 'T4.M2.02', area: 'ALG', module: 2, n: 2, difficulty: 3,
+    id: 'T4.M2.02', area: 'ALG', unit: 3, module: 2, n: 2, difficulty: 3,
     prompt: 'Line $m$ is perpendicular to the line through $(1, 2)$ and $(5, 10)$, and passes through the origin. What is the equation of line $m$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$y = 2x$' }, { id: 'B', label: '$y = -2x$' }, { id: 'C', label: '$y = \\tfrac{1}{2}x$' }, { id: 'D', label: '$y = -\\tfrac{1}{2}x$' }],
@@ -230,7 +230,7 @@ const module2: SatTestQuestion[] = [
     proTip: '"Through the origin" means b = 0, which removes a whole step. Only the slope is in question.',
   },
   {
-    id: 'T4.M2.03', area: 'ALG', module: 2, n: 3, difficulty: 3,
+    id: 'T4.M2.03', area: 'ALG', unit: 4, module: 2, n: 3, difficulty: 3,
     prompt: 'The system $4x + ay = 12$ and $2x + 3y = 6$ has infinitely many solutions. What is the value of $a$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$2$' }, { id: 'B', label: '$3$' }, { id: 'C', label: '$6$' }, { id: 'D', label: '$12$' }],
@@ -239,7 +239,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Check ALL THREE ratios. If the constants had not matched, the same a would give no solution instead.',
   },
   {
-    id: 'T4.M2.04', area: 'ALG', module: 2, n: 4, difficulty: 3,
+    id: 'T4.M2.04', area: 'ALG', unit: 4, module: 2, n: 4, difficulty: 3,
     prompt: 'A theater sold $200$ tickets for a total of $\\$2{,}640$. Adult tickets cost $\\$16$ and student tickets cost $\\$9$. How many adult tickets were sold?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$80$' }, { id: 'B', label: '$114$' }, { id: 'C', label: '$120$' }, { id: 'D', label: '$160$' }],
@@ -248,7 +248,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Or assume all student: $200 \\times \\$9 = \\$1{,}800$. The $\\$840$ excess divided by the $\\$7$ swap value gives 120 adults.',
   },
   {
-    id: 'T4.M2.05', area: 'ALG', module: 2, n: 5, difficulty: 3,
+    id: 'T4.M2.05', area: 'ALG', unit: 5, module: 2, n: 5, difficulty: 3,
     prompt: 'How many integer values of $x$ satisfy $2 < \\dfrac{x + 1}{3} \\le 5$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$8$' }, { id: 'B', label: '$9$' }, { id: 'C', label: '$10$' }, { id: 'D', label: '$14$' }],
@@ -257,7 +257,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'The strict lower bound excludes 5, so counting starts at 6. Mixing up which end is inclusive is the whole difficulty.',
   },
   {
-    id: 'T4.M2.06', area: 'ALG', module: 2, n: 6, difficulty: 3,
+    id: 'T4.M2.06', area: 'ALG', unit: 1, module: 2, n: 6, difficulty: 3,
     prompt: 'Solve $P = \\dfrac{2A}{h} - w$ for $A$.',
     answerType: 'multiple-choice',
     choices: [
@@ -271,7 +271,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Test with numbers if the algebra is uncertain: pick A = 6, h = 3, w = 1, so P = 3. Only choice A returns 6.',
   },
   {
-    id: 'T4.M2.07', area: 'ALG', module: 2, n: 7, difficulty: 3,
+    id: 'T4.M2.07', area: 'ALG', unit: 2, module: 2, n: 7, difficulty: 3,
     prompt: 'The function $f$ is linear. If $f(3) = 11$ and $f(8) = 1$, what is the value of $f(0)$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$5$' }, { id: 'B', label: '$11$' }, { id: 'C', label: '$17$' }, { id: 'D', label: '$23$' }],
@@ -280,14 +280,14 @@ const module2: SatTestQuestion[] = [
     proTip: 'Going backwards along a negative slope INCREASES the output. Subtracting instead gives 5, a designed wrong answer.',
   },
   {
-    id: 'T4.M2.08', area: 'ADV', module: 2, n: 8, difficulty: 3,
+    id: 'T4.M2.08', area: 'ADV', unit: 7, module: 2, n: 8, difficulty: 3,
     prompt: 'What is the product of the solutions to $3x^2 - 7x - 6 = 0$?',
     answerType: 'numeric', answer: '-2',
     explanation: ['The product of the roots of $ax^2 + bx + c = 0$ is $\\dfrac{c}{a}$.', '$\\dfrac{-6}{3} = -2$.', 'Check by factoring: $(3x + 2)(x - 3) = 0$ gives $-\\tfrac{2}{3}$ and $3$, whose product is $-2$ ✓'],
     proTip: 'Do not forget to divide by a. Reading the product as just c gives −6, which is a choice.',
   },
   {
-    id: 'T4.M2.09', area: 'ADV', module: 2, n: 9, difficulty: 3,
+    id: 'T4.M2.09', area: 'ADV', unit: 8, module: 2, n: 9, difficulty: 3,
     prompt: 'A parabola has $x$-intercepts at $-1$ and $7$ and passes through $(0, -21)$. It can be written as $y = a(x + 1)(x - 7)$. What is the value of $a$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-3$' }, { id: 'B', label: '$\\tfrac{1}{3}$' }, { id: 'C', label: '$3$' }, { id: 'D', label: '$21$' }],
@@ -296,7 +296,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'The zeros give the factors but not the stretch. A third point is always needed to pin down a.',
   },
   {
-    id: 'T4.M2.10', area: 'ADV', module: 2, n: 10, difficulty: 3,
+    id: 'T4.M2.10', area: 'ADV', unit: 9, module: 2, n: 10, difficulty: 3,
     prompt: 'The line $y = k$ intersects the graph of $y = x^2 - 8x + 11$ at exactly one point. What is the value of $k$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-5$' }, { id: 'B', label: '$-3$' }, { id: 'C', label: '$4$' }, { id: 'D', label: '$11$' }],
@@ -305,14 +305,14 @@ const module2: SatTestQuestion[] = [
     proTip: 'Or set the discriminant of $x^2 - 8x + (11 - k) = 0$ to zero. The vertex route is faster for a horizontal line.',
   },
   {
-    id: 'T4.M2.11', area: 'ADV', module: 2, n: 11, difficulty: 3,
+    id: 'T4.M2.11', area: 'ADV', unit: 9, module: 2, n: 11, difficulty: 3,
     prompt: 'The polynomial $p$ is defined by $p(x) = x^3 + 2x^2 - 9x - 18$, and $p(3) = 0$. What is the least zero of $p$?',
     answerType: 'numeric', answer: '-3',
     explanation: ['Since $p(3) = 0$, $(x - 3)$ is a factor. Dividing gives $x^2 + 5x + 6$.', 'That factors as $(x + 2)(x + 3)$.', 'The zeros are $3$, $-2$, and $-3$. The least is $-3$.'],
     proTip: 'Integer zeros divide the constant term 18, so the candidates are ±1, ±2, ±3, ±6, ±9, ±18. A short list.',
   },
   {
-    id: 'T4.M2.12', area: 'ADV', module: 2, n: 12, difficulty: 3,
+    id: 'T4.M2.12', area: 'ADV', unit: 9, module: 2, n: 12, difficulty: 3,
     prompt: 'If $\\dfrac{2}{x - 1} = \\dfrac{3}{x + 4}$, what is the value of $x$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$-11$' }, { id: 'B', label: '$3$' }, { id: 'C', label: '$5$' }, { id: 'D', label: '$11$' }],
@@ -321,14 +321,14 @@ const module2: SatTestQuestion[] = [
     proTip: 'After solving a rational equation, confirm the answer does not zero either original denominator.',
   },
   {
-    id: 'T4.M2.13', area: 'ADV', module: 2, n: 13, difficulty: 3,
+    id: 'T4.M2.13', area: 'ADV', unit: 10, module: 2, n: 13, difficulty: 3,
     prompt: 'A quantity halves every $9$ years. If it starts at $640$ units, how many units remain after $36$ years?',
     answerType: 'numeric', answer: '40',
     explanation: ['$36 \\div 9 = 4$ halvings.', '$640 \\to 320 \\to 160 \\to 80 \\to 40$.', 'Or $640(\\tfrac{1}{2})^4 = \\dfrac{640}{16} = 40$ units.'],
     proTip: 'The exponent counts halvings, not years. Write the division as your first line and the exponent cannot go wrong.',
   },
   {
-    id: 'T4.M2.14', area: 'ADV', module: 2, n: 14, difficulty: 3,
+    id: 'T4.M2.14', area: 'ADV', unit: 6, module: 2, n: 14, difficulty: 3,
     prompt: 'The equation $(2x + a)(x + 4) = 2x^2 + 11x + b$ is true for all values of $x$. What is the value of $b$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$3$' }, { id: 'B', label: '$8$' }, { id: 'C', label: '$11$' }, { id: 'D', label: '$12$' }],
@@ -337,7 +337,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Or substitute x = 0 to get b = 4a immediately, then use a second value to find a. Two substitutions, no expansion.',
   },
   {
-    id: 'T4.M2.15', area: 'ADV', module: 2, n: 15, difficulty: 3,
+    id: 'T4.M2.15', area: 'ADV', unit: 10, module: 2, n: 15, difficulty: 3,
     prompt: 'The function $f$ is defined by $f(x) = 3(4)^{x/2}$. What is the value of $f(4)$?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$12$' }, { id: 'B', label: '$24$' }, { id: 'C', label: '$48$' }, { id: 'D', label: '$768$' }],
@@ -346,7 +346,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Simplify the exponent to a single number before evaluating the power. Using 4 as the exponent gives 768.',
   },
   {
-    id: 'T4.M2.16', area: 'PSDA', module: 2, n: 16, difficulty: 3,
+    id: 'T4.M2.16', area: 'PSDA', unit: 12, module: 2, n: 16, difficulty: 3,
     prompt: 'A price is decreased by $25\\%$ and then the new price is increased by $40\\%$. Compared with the original, the final price is:',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$5\\%$ higher' }, { id: 'B', label: '$15\\%$ higher' }, { id: 'C', label: '$5\\%$ lower' }, { id: 'D', label: 'unchanged' }],
@@ -355,7 +355,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Adding the percentages gives +15%, which is choice B. Percent changes multiply, and the second uses a different base.',
   },
   {
-    id: 'T4.M2.17', area: 'PSDA', module: 2, n: 17, difficulty: 3,
+    id: 'T4.M2.17', area: 'PSDA', unit: 13, module: 2, n: 17, difficulty: 3,
     prompt: 'The table shows how many books $25$ students read last month. What is the mean number of books per student?',
     diagram: {
       kind: 'ascii',
@@ -373,7 +373,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Divide by the total FREQUENCY (25), never by the number of rows (4). Averaging the value column gives 1.5 — wrong.',
   },
   {
-    id: 'T4.M2.18', area: 'PSDA', module: 2, n: 18, difficulty: 3,
+    id: 'T4.M2.18', area: 'PSDA', unit: 14, module: 2, n: 18, difficulty: 3,
     prompt: 'A study randomly assigned $400$ volunteers to a new tutoring program or no program. The tutored group scored significantly higher. Which conclusion is best supported?',
     answerType: 'multiple-choice',
     choices: [
@@ -387,14 +387,14 @@ const module2: SatTestQuestion[] = [
     proTip: 'Random assignment buys CAUSE. Random selection buys GENERALIZATION. Volunteers give you the first but not the second.',
   },
   {
-    id: 'T4.M2.19', area: 'PSDA', module: 2, n: 19, difficulty: 3,
+    id: 'T4.M2.19', area: 'PSDA', unit: 11, module: 2, n: 19, difficulty: 3,
     prompt: 'A recipe requires $3$ parts flour to $2$ parts sugar by weight. If a baker uses $840$ grams of the mixture in total, how many grams of flour are used?',
     answerType: 'numeric', answer: '504',
     explanation: ['The ratio has $3 + 2 = 5$ parts in total.', 'Each part is $840 \\div 5 = 168$ grams.', 'Flour is $3$ parts: $3 \\times 168 = 504$ grams.'],
     proTip: 'Add the ratio parts and divide the total by that sum. Dividing 840 by 3 instead is the standard trap.',
   },
   {
-    id: 'T4.M2.20', area: 'GEO', module: 2, n: 20, difficulty: 3,
+    id: 'T4.M2.20', area: 'GEO', unit: 18, module: 2, n: 20, difficulty: 3,
     prompt: 'The equation $x^2 + y^2 + 8x - 2y = 8$ describes a circle. What is the radius of the circle?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$5$' }, { id: 'B', label: '$8$' }, { id: 'C', label: '$17$' }, { id: 'D', label: '$25$' }],
@@ -403,7 +403,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Add to BOTH sides, twice — once per variable. Forgetting that gives r² = 8 and a wrong radius.',
   },
   {
-    id: 'T4.M2.21', area: 'GEO', module: 2, n: 21, difficulty: 3,
+    id: 'T4.M2.21', area: 'GEO', unit: 17, module: 2, n: 21, difficulty: 3,
     prompt: 'From a point on level ground $30$ feet from the base of a flagpole, the angle of elevation to the top is $\\theta$, where $\\tan\\theta = 1.4$. What is the height of the flagpole, in feet?',
     answerType: 'multiple-choice',
     choices: [{ id: 'A', label: '$21.4$' }, { id: 'B', label: '$30$' }, { id: 'C', label: '$42$' }, { id: 'D', label: '$58.8$' }],
@@ -412,7 +412,7 @@ const module2: SatTestQuestion[] = [
     proTip: 'Angle-of-elevation problems give you the two legs, so tangent is almost always the ratio you need.',
   },
   {
-    id: 'T4.M2.22', area: 'GEO', module: 2, n: 22, difficulty: 3,
+    id: 'T4.M2.22', area: 'GEO', unit: 17, module: 2, n: 22, difficulty: 3,
     prompt: 'In a right triangle, $\\sin\\theta = \\dfrac{8}{17}$ for an acute angle $\\theta$. What is the value of $\\cos\\theta$? Give your answer as a fraction or a decimal rounded to the nearest hundredth.',
     answerType: 'numeric', answer: '0.88', alternativeAnswers: ['15/17'], tolerance: 0.006,
     explanation: ['Sine gives opposite $= 8$ and hypotenuse $= 17$.', 'The adjacent side is $\\sqrt{289 - 64} = \\sqrt{225} = 15$ — an $8$-$15$-$17$ triple.', '$\\cos\\theta = \\dfrac{15}{17} \\approx 0.88$.'],
