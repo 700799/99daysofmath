@@ -9,6 +9,7 @@ import { MasteryCelebration } from '../routes/arcade/MasteryCelebration';
 import { submitHaptic, tapHaptic, successHaptic } from '../utils/haptics';
 import { playClick, playAdvance } from '../utils/sound';
 import { useThemeSync } from '../hooks/useTheme';
+import { parentOf } from '../utils/navHierarchy';
 
 interface Props {
   children: React.ReactNode;
@@ -26,7 +27,9 @@ export function AppShell({ children }: Props) {
   const user = useAuth((s) => s.user);
   const tickAppSeconds = useProgress((s) => s.tickAppSeconds);
   const location = useLocation();
-  const isHome = location.pathname === '/' || location.pathname === '';
+  // Back goes one level up the app's own hierarchy — a drill to its unit, a
+  // game to the arcade — rather than always dumping you on Home. Null on Home.
+  const parent = parentOf(location.pathname);
 
   // Track lifetime time-on-app (paused while the tab is hidden).
   useEffect(() => {
@@ -114,22 +117,39 @@ export function AppShell({ children }: Props) {
         style={{ paddingTop: 'env(safe-area-inset-top)' }}
       >
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
-          {isHome ? (
+          {!parent ? (
             <div className="flex items-center gap-2 min-w-0">
               <span className="font-display font-bold text-lg sm:text-xl tracking-tight text-ink truncate">
                 99 Days of Math
               </span>
             </div>
           ) : (
-            <Link
-              to="/"
-              className="flex items-center gap-1 text-ink-muted hover:text-ink min-h-11"
-            >
-              <span className="text-2xl">←</span>
-              <span className="font-display font-semibold">Home</span>
-            </Link>
+            // shrink-0: getting out of a screen matters more than the stats
+            // badge keeping its full width, so the badge absorbs the squeeze.
+            <div className="flex shrink-0 items-center gap-0.5">
+              <Link
+                to={parent.to}
+                aria-label={`Back to ${parent.label}`}
+                className="flex items-center gap-1 min-h-11 text-ink-muted hover:text-ink"
+              >
+                <span className="text-2xl shrink-0">←</span>
+                <span className="font-display font-semibold whitespace-nowrap">{parent.label}</span>
+              </Link>
+              {/* Retargeting back one level would otherwise put Home two or
+                  three taps away, so it keeps a shortcut of its own. */}
+              {parent.to !== '/' && (
+                <Link
+                  to="/"
+                  aria-label="Home"
+                  title="Home"
+                  className="shrink-0 inline-flex items-center justify-center min-h-11 px-1.5 text-base leading-none text-ink-dim hover:text-ink"
+                >
+                  🏠
+                </Link>
+              )}
+            </div>
           )}
-          <div className="flex items-center gap-1.5">
+          <div className="flex min-w-0 items-center gap-1.5">
             <StatsBadge />
             {dailyStreak > 0 && (
               <span
