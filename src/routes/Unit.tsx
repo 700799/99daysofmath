@@ -21,6 +21,7 @@ import { getLesson, lessonKey } from '../data/lessons';
 import { correctMessage, wrongMessage, stickerForUnit } from '../utils/encouragement';
 import { playCorrect, playWrong, playUnitComplete } from '../utils/sound';
 import { computeStars, computeXPGain } from '../utils/hintEconomics';
+import { parentOf } from '../utils/navHierarchy';
 
 function tiersFor(problem: { hint: string; hints?: HintStep[] }): HintStep[] {
   if (problem.hints && problem.hints.length > 0) return problem.hints;
@@ -76,6 +77,9 @@ export function Unit() {
   });
 
   const { data: problems, loading, error } = useUnitProblems(d, u);
+  // Where quitting lands: the trail for a grade-level unit, the SAT unit's own
+  // playbook for a SAT drill (its trail is a redirect to the section hub).
+  const quitTo = parentOf(`/unit/${d}/${u}`) ?? { to: '/', label: 'Home' };
 
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState('');
@@ -382,10 +386,10 @@ export function Unit() {
 
       <button
         type="button"
-        onClick={() => navigate(`/trail/${d}`)}
+        onClick={() => navigate(quitTo.to)}
         className="mt-6 w-full text-sm font-display font-bold text-ink-muted hover:text-ink-muted py-2"
       >
-        Quit to trail
+        Quit to {quitTo.label}
       </button>
     </div>
   );

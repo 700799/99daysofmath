@@ -7,6 +7,7 @@ import { Mascot } from '../components/Mascot';
 import { Confetti } from '../components/Celebration';
 import { StickerCelebration } from '../components/StickerCelebration';
 import { stickerById } from '../utils/encouragement';
+import { parentOf } from '../utils/navHierarchy';
 import type { Stars } from '../state/progress';
 
 interface ResultsState {
@@ -30,9 +31,11 @@ export function UnitResults() {
     return <Navigate to="/" replace />;
   }
   if (!state) {
-    return <Navigate to={`/trail/${domain}`} replace />;
+    // Opened directly, with no run behind it — send them up a level.
+    return <Navigate to={parentOf(`/unit/${domain}/${unit}`)?.to ?? '/'} replace />;
   }
 
+  const backTo = parentOf(`/unit/${domain}/${unit}`) ?? { to: '/', label: 'Home' };
   const correct = state.total - state.missedCount;
   const perfect = state.stars === 3;
   const newStickerIds = state.newStickerIds ?? [];
@@ -123,10 +126,10 @@ export function UnitResults() {
         )}
 
         <Link
-          to={`/trail/${domain}`}
+          to={backTo.to}
           className="mt-8 inline-block w-full min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:shadow-[0_2px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
         >
-          Back to trail
+          Back to {backTo.label}
         </Link>
       </motion.div>
     </div>
