@@ -1,0 +1,48 @@
+{
+  "id": "GEO.048",
+  "domain": "GEO",
+  "unit": 5,
+  "orderInUnit": 8,
+  "standard": "GEO.CONG.1",
+  "difficulty": 2,
+  "prompt": "Two identical sail panels satisfy $\\triangle ABC \\cong \\triangle DEF$. In the first panel, $\\angle A = 55^\\circ$ and $\\angle B = 65^\\circ$. Find $\\angle F$ in degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "First find the missing angle in the triangle you know about.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find the missing angle in the triangle you know about."
+    },
+    {
+      "level": "guide",
+      "text": "The angles of a triangle sum to $180^\\circ$, so $\\angle C = 180 - 55 - 65$. Then match $\\angle C$ with its partner."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\angle C = 60^\\circ$, and the congruence pairs $C$ with $F$, so $\\angle F = 60^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Angles in a triangle sum to $180^\\circ$: $\\angle C = 180 - 55 - 65 = 60^\\circ$.",
+    "The statement $\\triangle ABC \\cong \\triangle DEF$ lists corresponding vertices in order: $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$.",
+    "By CPCTC, $\\angle F \\cong \\angle C$, so $\\angle F = 60^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read the congruence statement like a dictionary",
+      "steps": [
+        "Line up the two names letter by letter: $ABC$ over $DEF$.",
+        "$F$ sits under $C$, so $\\angle F$ is a copy of $\\angle C$. Find $\\angle C = 60^\\circ$ and you are done."
+      ]
+    }
+  ],
+  "tags": [
+    "CPCTC",
+    "triangle-sum",
+    "congruence"
+  ],
+  "estimatedSeconds": 55
+}

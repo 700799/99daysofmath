@@ -1,0 +1,54 @@
+{
+  "id": "TRIG.107",
+  "domain": "TRIG",
+  "unit": 11,
+  "orderInUnit": 7,
+  "standard": "TRIG.IDENT.1",
+  "difficulty": 2,
+  "prompt": "Simplify $\\cos\\theta \\cdot \\tan\\theta$ to a single trig function. Write it like \"sin(theta)\".",
+  "answerType": "expression",
+  "primaryAnswer": "sin(theta)",
+  "alternativeAnswers": [
+    "sin theta",
+    "sintheta",
+    "sin(x)",
+    "sinθ",
+    "sin(θ)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Replace $\\tan\\theta$ with $\\frac{\\sin\\theta}{\\cos\\theta}$ and see what cancels.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Replace $\\tan\\theta$ with $\\frac{\\sin\\theta}{\\cos\\theta}$ and see what cancels."
+    },
+    {
+      "level": "guide",
+      "text": "$\\cos\\theta \\cdot \\frac{\\sin\\theta}{\\cos\\theta}$ — the cosines are on opposite sides of the fraction bar."
+    },
+    {
+      "level": "reveal",
+      "text": "They cancel, leaving $\\sin\\theta$."
+    }
+  ],
+  "explanation": [
+    "Rewrite the tangent using the quotient identity: $\\cos\\theta \\cdot \\frac{\\sin\\theta}{\\cos\\theta}$.",
+    "The $\\cos\\theta$ in front cancels with the $\\cos\\theta$ in the denominator.",
+    "What is left is $\\sin\\theta$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test it with $\\theta = 60^\\circ$",
+      "steps": [
+        "$\\cos 60^\\circ = 0.5$ and $\\tan 60^\\circ \\approx 1.732$.",
+        "Their product is $0.5 \\times 1.732 \\approx 0.866$.",
+        "And $\\sin 60^\\circ \\approx 0.866$ ✓ — the simplification checks out."
+      ]
+    }
+  ],
+  "tags": [
+    "quotient-identity",
+    "simplify"
+  ],
+  "estimatedSeconds": 50
+}

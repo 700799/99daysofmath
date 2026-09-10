@@ -1,0 +1,47 @@
+{
+  "id": "GEO.094",
+  "domain": "GEO",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "GEO.QUAD.1",
+  "difficulty": 1,
+  "prompt": "A clock face is designed as a regular $12$-sided polygon. What is the measure of each exterior angle, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The exterior angles of ANY convex polygon always add to $360^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The exterior angles of ANY convex polygon always add to $360^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "Regular means all $12$ exterior angles are equal, so divide $360$ by $12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$360 \\div 12 = 30^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Walking once around any convex polygon turns you through a full $360^\\circ$.",
+    "In a regular $12$-gon those turns are all equal: $360 \\div 12$.",
+    "Each exterior angle is $30^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk the perimeter",
+      "steps": [
+        "Imagine walking along each edge and turning the same amount at every corner.",
+        "After $12$ corners you are facing your original direction again, so the $12$ turns total $360^\\circ$ — each turn is $30^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "polygon",
+    "exterior-angles"
+  ],
+  "estimatedSeconds": 35
+}

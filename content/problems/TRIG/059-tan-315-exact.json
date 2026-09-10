@@ -1,0 +1,61 @@
+{
+  "id": "TRIG.059",
+  "domain": "TRIG",
+  "unit": 6,
+  "orderInUnit": 9,
+  "standard": "TRIG.CIRC.2",
+  "difficulty": 3,
+  "prompt": "Find the exact value of $\\tan 315^\\circ$.",
+  "answerType": "numeric",
+  "primaryAnswer": "-1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Reference angle first: $360 - 315 = 45^\\circ$, and $\\tan 45^\\circ = 1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Reference angle first: $360 - 315 = 45^\\circ$, and $\\tan 45^\\circ = 1$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $\\tan 135^\\circ$: the reference angle $45^\\circ$ sets the size at $1$, and Quadrant II makes tangent negative, so $-1$. Size first, then sign."
+    },
+    {
+      "level": "guide",
+      "text": "$315^\\circ$ is in Quadrant IV. Is tangent positive or negative there?"
+    },
+    {
+      "level": "reveal",
+      "text": "Only cosine is positive in Quadrant IV, so tangent is negative: $\\tan 315^\\circ = -1$."
+    }
+  ],
+  "explanation": [
+    "$315^\\circ$ lies in Quadrant IV with reference angle $360^\\circ - 315^\\circ = 45^\\circ$.",
+    "The magnitude comes from $\\tan 45^\\circ = 1$.",
+    "In Quadrant IV, $x > 0$ and $y < 0$, so $\\tan\\theta = \\frac{y}{x}$ is negative: $\\tan 315^\\circ = -1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Straight from the coordinates",
+      "steps": [
+        "The unit-circle point at $315^\\circ$ is $\\left(\\frac{\\sqrt{2}}{2},\\ -\\frac{\\sqrt{2}}{2}\\right)$.",
+        "Tangent is $\\frac{y}{x} = \\frac{-\\sqrt{2}/2}{\\sqrt{2}/2}$.",
+        "The identical magnitudes cancel and only the minus sign survives: $-1$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is $+1$ — you found the reference angle correctly, got $\\tan 45^\\circ = 1$, and then forgot the sign step.",
+        "Make it a two-part habit: reference angle gives the SIZE, quadrant gives the SIGN. Quadrant IV keeps only cosine positive (ASTC), so tangent there must be negative: $-1$."
+      ]
+    }
+  ],
+  "tags": [
+    "reference-angle",
+    "signs",
+    "tangent"
+  ],
+  "estimatedSeconds": 70
+}

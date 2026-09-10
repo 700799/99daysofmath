@@ -1,0 +1,47 @@
+{
+  "id": "GEO.071",
+  "domain": "GEO",
+  "unit": 8,
+  "orderInUnit": 1,
+  "standard": "GEO.RT.1",
+  "difficulty": 1,
+  "prompt": "A skate ramp is a right triangle: it rises $6$ ft straight up and runs $8$ ft along the ground. How long is the sloped riding surface, in feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The two sides that meet at the right angle are the legs; the slope is the hypotenuse. Use $a^2 + b^2 = c^2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The two sides that meet at the right angle are the legs; the slope is the hypotenuse. Use $a^2 + b^2 = c^2$."
+    },
+    {
+      "level": "guide",
+      "text": "$6^2 + 8^2 = 36 + 64 = 100$, and $100 = c^2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$c = \\sqrt{100} = 10$ ft."
+    }
+  ],
+  "explanation": [
+    "The rise and the run are the legs, so $a = 6$ and $b = 8$.",
+    "Square and add: $36 + 64 = 100$.",
+    "Take the square root: $c = 10$ ft of riding surface."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spot the family",
+      "steps": [
+        "$6$-$8$-$10$ is just the $3$-$4$-$5$ triple with every side doubled.",
+        "Since $3$-$4$-$5$ is a right triangle, so is $6$-$8$-$10$ — the hypotenuse is $10$ with no arithmetic at all."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean-theorem",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

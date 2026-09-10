@@ -1,0 +1,48 @@
+{
+  "id": "GEO.063",
+  "domain": "GEO",
+  "unit": 7,
+  "orderInUnit": 3,
+  "standard": "GEO.SIM.1",
+  "difficulty": 1,
+  "prompt": "Two triangular flags satisfy $\\triangle ABC \\sim \\triangle DEF$. If $AB = 4$, $DE = 10$, and $BC = 6$, find $EF$.",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Similar triangles have proportional corresponding sides. $AB$ pairs with $DE$, and $BC$ pairs with $EF$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Similar triangles have proportional corresponding sides. $AB$ pairs with $DE$, and $BC$ pairs with $EF$."
+    },
+    {
+      "level": "guide",
+      "text": "The scale factor is $\\frac{DE}{AB} = \\frac{10}{4} = 2.5$. Apply it to $BC$."
+    },
+    {
+      "level": "reveal",
+      "text": "$EF = 6 \\times 2.5 = 15$."
+    }
+  ],
+  "explanation": [
+    "The similarity statement pairs $A$ with $D$, $B$ with $E$, and $C$ with $F$, so $\\overline{AB}$ pairs with $\\overline{DE}$ and $\\overline{BC}$ with $\\overline{EF}$.",
+    "Find the scale factor: $\\frac{10}{4} = 2.5$.",
+    "Multiply the matching side: $EF = 6 \\times 2.5 = 15$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Set up a proportion",
+      "steps": [
+        "Write $\\frac{AB}{DE} = \\frac{BC}{EF}$, which is $\\frac{4}{10} = \\frac{6}{EF}$.",
+        "Cross-multiply: $4 \\cdot EF = 60$, so $EF = 15$."
+      ]
+    }
+  ],
+  "tags": [
+    "similarity",
+    "proportion",
+    "scale-factor"
+  ],
+  "estimatedSeconds": 45
+}

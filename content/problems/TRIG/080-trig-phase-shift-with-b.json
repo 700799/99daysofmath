@@ -1,0 +1,84 @@
+{
+  "id": "TRIG.080",
+  "domain": "TRIG",
+  "unit": 8,
+  "orderInUnit": 10,
+  "standard": "TRIG.GRAPH.2",
+  "difficulty": 3,
+  "prompt": "What is the phase shift of $y = \\sin\\left(2x - \\frac{\\pi}{2}\\right)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\frac{\\pi}{4}$ to the right",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\frac{\\pi}{2}$ to the right",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\frac{\\pi}{2}$ to the left",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\pi$ to the right",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "You cannot read the shift straight off until the $x$ inside has a coefficient of $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You cannot read the shift straight off until the $x$ inside has a coefficient of $1$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $y = \\sin\\left(x - \\frac{\\pi}{2}\\right)$: the $x$ already has coefficient $1$, so you read the shift straight off as $\\frac{\\pi}{2}$ right. A $2$ in front must be factored out first, which halves that shift."
+    },
+    {
+      "level": "guide",
+      "text": "Factor the $2$ out of the parentheses: $2x - \\frac{\\pi}{2} = 2\\left(x - \\frac{\\pi}{4}\\right)$."
+    },
+    {
+      "level": "reveal",
+      "text": "Now it reads as a shift right of $\\frac{\\pi}{4}$."
+    }
+  ],
+  "explanation": [
+    "Rewrite the inside in the form $B(x - C)$: $2x - \\frac{\\pi}{2} = 2\\left(x - \\frac{\\pi}{4}\\right)$.",
+    "In $y = \\sin(B(x - C))$ the phase shift is $C$, here $\\frac{\\pi}{4}$, and the minus sign sends it right.",
+    "So the graph of $\\sin(2x)$ slides $\\frac{\\pi}{4}$ to the right."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Find where the cycle starts",
+      "steps": [
+        "A sine cycle begins when its input is $0$: set $2x - \\frac{\\pi}{2} = 0$.",
+        "Solve: $2x = \\frac{\\pi}{2}$, so $x = \\frac{\\pi}{4}$.",
+        "The cycle that normally starts at $x = 0$ now starts at $x = \\frac{\\pi}{4}$ — a shift right of $\\frac{\\pi}{4}$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap is answering $\\frac{\\pi}{2}$ to the right (choice B) by reading the number off the end of the expression.",
+        "That only works when the coefficient of $x$ is $1$. Here the $2$ compresses everything, so the actual slide is half as big.",
+        "Rule: always factor out $B$ first, or solve \"inside $= 0$\". Both give $\\frac{\\pi}{4}$, never $\\frac{\\pi}{2}$."
+      ]
+    }
+  ],
+  "tags": [
+    "phase-shift",
+    "factoring",
+    "common-error"
+  ],
+  "estimatedSeconds": 75
+}

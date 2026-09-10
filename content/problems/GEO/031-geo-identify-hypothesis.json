@@ -1,0 +1,70 @@
+{
+  "id": "GEO.031",
+  "domain": "GEO",
+  "unit": 4,
+  "orderInUnit": 1,
+  "standard": "GEO.PROOF.1",
+  "difficulty": 1,
+  "prompt": "Consider the statement: \"If it rains on Saturday, then the bridge inspection is postponed.\" What is the hypothesis?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "It rains on Saturday",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "The bridge inspection is postponed",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "The bridge inspection is not postponed",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The entire sentence, from \"If\" to \"postponed\"",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A conditional has two halves. One follows \"if,\" the other follows \"then.\"",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A conditional has two halves. One follows \"if,\" the other follows \"then.\""
+    },
+    {
+      "level": "guide",
+      "text": "The hypothesis is the \"if\" part — the condition that gets things started."
+    },
+    {
+      "level": "reveal",
+      "text": "The hypothesis is \"it rains on Saturday.\""
+    }
+  ],
+  "explanation": [
+    "A conditional statement has the form \"if $p$, then $q$.\"",
+    "The hypothesis is $p$, the part right after \"if\"; the conclusion is $q$, the part after \"then.\"",
+    "Here the hypothesis is \"it rains on Saturday,\" and the conclusion is \"the bridge inspection is postponed.\""
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Cause and effect",
+      "steps": [
+        "The hypothesis is the setup, the thing that might happen: rain.",
+        "The conclusion is what follows from it: the postponed inspection. Setup first, result second."
+      ]
+    }
+  ],
+  "tags": [
+    "conditional",
+    "hypothesis",
+    "logic"
+  ],
+  "estimatedSeconds": 35
+}

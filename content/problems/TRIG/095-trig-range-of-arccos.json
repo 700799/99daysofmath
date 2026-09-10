@@ -1,0 +1,71 @@
+{
+  "id": "TRIG.095",
+  "domain": "TRIG",
+  "unit": 10,
+  "orderInUnit": 5,
+  "standard": "TRIG.INV.1",
+  "difficulty": 2,
+  "prompt": "What is the range of $y = \\arccos(x)$ — that is, which angles can it return?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$0^\\circ$ to $180^\\circ$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$-90^\\circ$ to $90^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$0^\\circ$ to $360^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$-180^\\circ$ to $180^\\circ$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "For an inverse to exist, we chop the original graph down to a stretch that passes the horizontal line test.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "For an inverse to exist, we chop the original graph down to a stretch that passes the horizontal line test."
+    },
+    {
+      "level": "guide",
+      "text": "For cosine, the chosen stretch runs from the very top of the wave to the very bottom, with no repeats."
+    },
+    {
+      "level": "reveal",
+      "text": "That stretch is $0^\\circ$ to $180^\\circ$, so those are the only angles $\\arccos$ ever returns."
+    }
+  ],
+  "explanation": [
+    "Cosine hits the same value many times, so we restrict it before inverting.",
+    "The agreed piece is $0^\\circ \\le x \\le 180^\\circ$: cosine slides steadily from $1$ down to $-1$ there, hitting each value exactly once.",
+    "So $\\arccos$ returns angles from $0^\\circ$ to $180^\\circ$ — its outputs cover quadrants I and II."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare the three inverses",
+      "steps": [
+        "$\\arcsin$ returns $-90^\\circ$ to $90^\\circ$ (quadrants IV and I).",
+        "$\\arccos$ returns $0^\\circ$ to $180^\\circ$ (quadrants I and II).",
+        "$\\arctan$ returns strictly between $-90^\\circ$ and $90^\\circ$ (quadrants IV and I). Only $\\arccos$ can hand back an obtuse angle."
+      ]
+    }
+  ],
+  "tags": [
+    "arccos",
+    "restricted-domain",
+    "range"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,53 @@
+{
+  "id": "GEO.042",
+  "domain": "GEO",
+  "unit": 5,
+  "orderInUnit": 2,
+  "standard": "GEO.CONG.1",
+  "difficulty": 1,
+  "prompt": "A builder cuts two triangular roof trusses. All three sides of the first truss are exactly as long as the three matching sides of the second. Which congruence criterion proves the trusses are congruent? Answer with three letters.",
+  "answerType": "short-text",
+  "primaryAnswer": "SSS",
+  "alternativeAnswers": [
+    "sss",
+    "S.S.S.",
+    "side side side",
+    "side-side-side"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Count what is known: how many sides, how many angles?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Count what is known: how many sides, how many angles?"
+    },
+    {
+      "level": "guide",
+      "text": "Three sides and no angles gives three S's."
+    },
+    {
+      "level": "reveal",
+      "text": "This is SSS — Side-Side-Side."
+    }
+  ],
+  "explanation": [
+    "All three pairs of corresponding sides are congruent, and no angle information is used.",
+    "That is the SSS criterion.",
+    "Triangles are rigid: fix the three side lengths and the angles have no freedom left, which is exactly why builders trust triangular trusses."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Try to build a different one",
+      "steps": [
+        "Cut three sticks of set lengths and join them end to end into a triangle.",
+        "No matter how you wiggle them, you always get the same shape — you can flip it or turn it, but you cannot change it. That rigidity is SSS."
+      ]
+    }
+  ],
+  "tags": [
+    "congruence",
+    "SSS",
+    "triangles"
+  ],
+  "estimatedSeconds": 30
+}

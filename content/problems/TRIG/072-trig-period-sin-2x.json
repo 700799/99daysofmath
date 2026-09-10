@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.072",
+  "domain": "TRIG",
+  "unit": 8,
+  "orderInUnit": 2,
+  "standard": "TRIG.GRAPH.2",
+  "difficulty": 1,
+  "prompt": "What is the period of $y = \\sin(2x)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\pi$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$2\\pi$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$4\\pi$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\frac{\\pi}{2}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The period of $y = \\sin(Bx)$ is $\\frac{2\\pi}{B}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The period of $y = \\sin(Bx)$ is $\\frac{2\\pi}{B}$."
+    },
+    {
+      "level": "guide",
+      "text": "Here $B = 2$, so compute $\\frac{2\\pi}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "The period is $\\pi$ — the wave finishes a full cycle twice as fast."
+    }
+  ],
+  "explanation": [
+    "For $y = \\sin(Bx)$ the period is $\\frac{2\\pi}{B}$.",
+    "With $B = 2$ the period is $\\frac{2\\pi}{2} = \\pi$.",
+    "A bigger $B$ squeezes the wave, so it repeats sooner, not later."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Chase the input",
+      "steps": [
+        "A sine curve completes one cycle when its input runs from $0$ to $2\\pi$.",
+        "The input here is $2x$, so we need $2x$ to travel from $0$ to $2\\pi$.",
+        "That means $x$ only travels from $0$ to $\\pi$ — the period is $\\pi$."
+      ]
+    }
+  ],
+  "tags": [
+    "period",
+    "horizontal-stretch"
+  ],
+  "estimatedSeconds": 35
+}

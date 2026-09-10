@@ -1,0 +1,47 @@
+{
+  "id": "GEO.108",
+  "domain": "GEO",
+  "unit": 11,
+  "orderInUnit": 8,
+  "standard": "GEO.CIRC.1",
+  "difficulty": 2,
+  "prompt": "A logo has quadrilateral $WXYZ$ with all four vertices on a circle. If $\\angle W = 95^\\circ$, what is the measure of the opposite angle $\\angle Y$, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "85",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "When all four vertices lie on a circle, opposite angles are supplementary.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "When all four vertices lie on a circle, opposite angles are supplementary."
+    },
+    {
+      "level": "guide",
+      "text": "So $95 + \\angle Y = 180$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\angle Y = 180 - 95 = 85^\\circ$."
+    }
+  ],
+  "explanation": [
+    "In a quadrilateral inscribed in a circle, each pair of opposite angles adds to $180^\\circ$.",
+    "Substitute the known angle: $95 + \\angle Y = 180$.",
+    "$\\angle Y = 85^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the rule works",
+      "steps": [
+        "$\\angle W$ and $\\angle Y$ are inscribed angles intercepting the two arcs that together make the whole circle, $360^\\circ$.",
+        "Each angle is half its arc, so together they are half of $360^\\circ$, which is $180^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "inscribed-angle",
+    "cyclic-quadrilateral"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,63 @@
+{
+  "id": "TRIG.140",
+  "domain": "TRIG",
+  "unit": 14,
+  "orderInUnit": 10,
+  "standard": "TRIG.LAW.1",
+  "difficulty": 3,
+  "prompt": "A triangular plot of land has sides $8$ m, $15$ m and $20$ m. Find its largest angle, in degrees, rounded to one decimal place.",
+  "answerType": "numeric",
+  "primaryAnswer": "117.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The largest angle always sits opposite the longest side, so aim at the side of length $20$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The largest angle always sits opposite the longest side, so aim at the side of length $20$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up on the friendly $3$-$4$-$5$ triangle: $\\cos C = \\frac{9 + 16 - 25}{2(3)(4)} = 0$, so $C = 90^\\circ$, exactly as it should be. Yours produces a NEGATIVE cosine instead, which is the signal for an obtuse angle."
+    },
+    {
+      "level": "guide",
+      "text": "$\\cos C = \\frac{8^2 + 15^2 - 20^2}{2(8)(15)} = \\frac{64 + 225 - 400}{240}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\cos C = \\frac{-111}{240} = -0.4625$, so $C = \\arccos(-0.4625) \\approx 117.5^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The largest angle faces the longest side, so let $c = 20$ and $a = 8$, $b = 15$.",
+    "Rearranged Law of Cosines: $\\cos C = \\frac{a^2 + b^2 - c^2}{2ab} = \\frac{64 + 225 - 400}{240} = \\frac{-111}{240} = -0.4625$.",
+    "A negative cosine means an obtuse angle: $C = \\arccos(-0.4625) \\approx 117.55^\\circ$, which rounds to $117.5^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "You could predict the sign first",
+      "steps": [
+        "Compare $c^2 = 400$ with $a^2 + b^2 = 64 + 225 = 289$.",
+        "Since $400 > 289$, the triangle is stretched past a right angle and the largest angle must be obtuse.",
+        "Knowing that in advance means you would immediately distrust any answer under $90^\\circ$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The common wrong answer is $62.5^\\circ$, from dropping the minus sign and computing $\\arccos(0.4625)$.",
+        "Notice that $62.5^\\circ$ and $117.5^\\circ$ add to $180^\\circ$ — losing the sign hands you the supplement, the angle on the wrong side.",
+        "Keep the negative all the way into the arccosine. Unlike $\\arcsin$, $\\arccos$ is perfectly happy to return an obtuse angle, and a negative input is your signal that it should."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-cosines",
+    "obtuse",
+    "sss",
+    "sign-error"
+  ],
+  "estimatedSeconds": 90
+}

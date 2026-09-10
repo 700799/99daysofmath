@@ -1,0 +1,67 @@
+{
+  "id": "TRIG.060",
+  "domain": "TRIG",
+  "unit": 6,
+  "orderInUnit": 10,
+  "standard": "TRIG.CIRC.2",
+  "difficulty": 3,
+  "prompt": "Find the exact value of $\\cos 315^\\circ$. Type it as an expression, for example \"-sqrt(3)/2\" for $-\\frac{\\sqrt{3}}{2}$.",
+  "answerType": "expression",
+  "primaryAnswer": "sqrt(2)/2",
+  "alternativeAnswers": [
+    "sqrt2/2",
+    "\\frac{\\sqrt{2}}{2}",
+    "1/sqrt(2)",
+    "√2/2",
+    "+sqrt(2)/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Reference angle: $360 - 315 = 45^\\circ$, and $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Reference angle: $360 - 315 = 45^\\circ$, and $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $\\cos 300^\\circ$: the reference angle $60^\\circ$ gives the size $\\frac{1}{2}$, and Quadrant IV lies right of the $y$-axis, so cosine stays positive: $\\frac{1}{2}$."
+    },
+    {
+      "level": "guide",
+      "text": "Now the sign. $315^\\circ$ is in Quadrant IV — is the $x$-coordinate there positive or negative?"
+    },
+    {
+      "level": "reveal",
+      "text": "Quadrant IV is to the RIGHT of the $y$-axis, so $x$ is positive: $\\cos 315^\\circ = \\frac{\\sqrt{2}}{2}$."
+    }
+  ],
+  "explanation": [
+    "$315^\\circ$ is in Quadrant IV, with reference angle $360^\\circ - 315^\\circ = 45^\\circ$.",
+    "The magnitude is $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$.",
+    "Cosine is the $x$-coordinate, and Quadrant IV lies to the right of the $y$-axis, so cosine stays POSITIVE: $\\cos 315^\\circ = \\frac{\\sqrt{2}}{2} \\approx 0.71$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the point",
+      "steps": [
+        "At $315^\\circ$ you are $45^\\circ$ below the positive $x$-axis, in the lower-right of the circle.",
+        "That point is $\\left(\\frac{\\sqrt{2}}{2},\\ -\\frac{\\sqrt{2}}{2}\\right)$: right of center (positive $x$) and below center (negative $y$).",
+        "Cosine reads the first coordinate, so it is positive."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is $-\\frac{\\sqrt{2}}{2}$ — sticking a minus sign on the answer just because $315^\\circ$ feels like a \"far around the circle\" angle.",
+        "Signs are not about how large the angle is; they are about direction. Ask the two questions separately: left or right of center (cosine), above or below center (sine). At $315^\\circ$ you are to the RIGHT, so cosine is positive; only the sine is negative there."
+      ]
+    }
+  ],
+  "tags": [
+    "reference-angle",
+    "signs",
+    "exact-values"
+  ],
+  "estimatedSeconds": 75
+}

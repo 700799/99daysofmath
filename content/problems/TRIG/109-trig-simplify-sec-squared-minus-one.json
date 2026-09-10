@@ -1,0 +1,84 @@
+{
+  "id": "TRIG.109",
+  "domain": "TRIG",
+  "unit": 11,
+  "orderInUnit": 9,
+  "standard": "TRIG.IDENT.1",
+  "difficulty": 3,
+  "prompt": "Simplify $\\frac{\\sec^2\\theta - 1}{\\sin^2\\theta}$.",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\sec^2\\theta$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\tan^2\\theta$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$1$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\csc^2\\theta$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The numerator is one of the Pythagorean identities rearranged.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The numerator is one of the Pythagorean identities rearranged."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up on $\\frac{\\sec^2\\theta - 1}{\\tan^2\\theta}$: the numerator IS $\\tan^2\\theta$, so the whole thing is $1$. Replacing $\\sec^2\\theta - 1$ first is the opening move in your problem too."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sec^2\\theta - 1 = \\tan^2\\theta$. Now the fraction is $\\frac{\\tan^2\\theta}{\\sin^2\\theta}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Write $\\tan^2\\theta = \\frac{\\sin^2\\theta}{\\cos^2\\theta}$; the $\\sin^2\\theta$ cancels and leaves $\\frac{1}{\\cos^2\\theta} = \\sec^2\\theta$."
+    }
+  ],
+  "explanation": [
+    "Since $1 + \\tan^2\\theta = \\sec^2\\theta$, the numerator $\\sec^2\\theta - 1$ equals $\\tan^2\\theta$.",
+    "The fraction becomes $\\frac{\\tan^2\\theta}{\\sin^2\\theta} = \\frac{\\sin^2\\theta / \\cos^2\\theta}{\\sin^2\\theta}$.",
+    "The $\\sin^2\\theta$ terms cancel, leaving $\\frac{1}{\\cos^2\\theta}$, which is $\\sec^2\\theta$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Numerical check at $\\theta = 60^\\circ$",
+      "steps": [
+        "$\\sec 60^\\circ = 2$, so the numerator is $4 - 1 = 3$. And $\\sin^2 60^\\circ = \\frac{3}{4}$.",
+        "The fraction is $3 \\div \\frac{3}{4} = 4$.",
+        "$\\sec^2 60^\\circ = 2^2 = 4$ ✓ — while $\\tan^2 60^\\circ = 3$, so choice B fails."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The tempting wrong answer is $\\tan^2\\theta$ (choice B): students correctly rewrite the numerator as $\\tan^2\\theta$ and then stop, forgetting the denominator is still sitting there.",
+        "Simplifying is not finished until every piece has been used — you still have to divide by $\\sin^2\\theta$.",
+        "The habit that saves you: convert everything to sines and cosines, then cancel. That never lets you leave a factor behind. The answer is $\\sec^2\\theta$."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean-identity",
+    "simplify",
+    "common-error"
+  ],
+  "estimatedSeconds": 80
+}

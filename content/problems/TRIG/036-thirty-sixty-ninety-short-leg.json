@@ -1,0 +1,69 @@
+{
+  "id": "TRIG.036",
+  "domain": "TRIG",
+  "unit": 4,
+  "orderInUnit": 6,
+  "standard": "TRIG.RT.2",
+  "difficulty": 2,
+  "prompt": "In a $30$-$60$-$90$ triangle the hypotenuse is $12$. How long is the side opposite the $30^\\circ$ angle?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$4$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$6$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$6\\sqrt{3}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$6\\sqrt{2}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The sides are in the ratio $1 : \\sqrt{3} : 2$, and the hypotenuse matches the $2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The sides are in the ratio $1 : \\sqrt{3} : 2$, and the hypotenuse matches the $2$."
+    },
+    {
+      "level": "guide",
+      "text": "If $2$ corresponds to $12$, the scale factor is $6$. Multiply the $1$ by that factor."
+    },
+    {
+      "level": "reveal",
+      "text": "The short side is $1 \\times 6 = 6$ — exactly half the hypotenuse."
+    }
+  ],
+  "explanation": [
+    "A $30$-$60$-$90$ triangle always has sides in the ratio $1 : \\sqrt{3} : 2$ (short leg : long leg : hypotenuse).",
+    "The hypotenuse $12$ corresponds to the $2$, so every side is scaled by $\\frac{12}{2} = 6$.",
+    "The short leg, opposite $30^\\circ$, is $1 \\times 6 = 6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The half-the-hypotenuse rule",
+      "steps": [
+        "The side opposite the $30^\\circ$ angle is always exactly half the hypotenuse.",
+        "Half of 12 is 6. The other leg, $6\\sqrt{3} \\approx 10.4$, is the one opposite $60^\\circ$ — the bigger angle always faces the bigger side."
+      ]
+    }
+  ],
+  "tags": [
+    "special-triangles",
+    "30-60-90"
+  ],
+  "estimatedSeconds": 50
+}

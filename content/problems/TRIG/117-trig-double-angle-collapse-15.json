@@ -1,0 +1,52 @@
+{
+  "id": "TRIG.117",
+  "domain": "TRIG",
+  "unit": 12,
+  "orderInUnit": 7,
+  "standard": "TRIG.IDENT.2",
+  "difficulty": 2,
+  "prompt": "Evaluate $2\\sin 15^\\circ\\cos 15^\\circ$ exactly. Give a fraction or a decimal.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.5",
+  "alternativeAnswers": [
+    "1/2",
+    ".5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "This is a double-angle formula read from right to left.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This is a double-angle formula read from right to left."
+    },
+    {
+      "level": "guide",
+      "text": "$2\\sin\\theta\\cos\\theta = \\sin(2\\theta)$, and here $\\theta = 15^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "So the expression is $\\sin 30^\\circ = \\frac{1}{2}$."
+    }
+  ],
+  "explanation": [
+    "Recognise the shape $2\\sin\\theta\\cos\\theta$, which is the double-angle formula for sine.",
+    "With $\\theta = 15^\\circ$ the expression collapses to $\\sin(2 \\cdot 15^\\circ) = \\sin 30^\\circ$.",
+    "$\\sin 30^\\circ = \\frac{1}{2} = 0.5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why identities are worth memorising both ways",
+      "steps": [
+        "You could compute $\\sin 15^\\circ \\approx 0.2588$ and $\\cos 15^\\circ \\approx 0.9659$ and multiply: $2(0.2588)(0.9659) \\approx 0.5$.",
+        "That works, but it is slow and only gives a decimal.",
+        "Reading the identity backwards turns an awkward angle into one you know by heart."
+      ]
+    }
+  ],
+  "tags": [
+    "double-angle",
+    "exact-value",
+    "simplify"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,54 @@
+{
+  "id": "GEO.037",
+  "domain": "GEO",
+  "unit": 4,
+  "orderInUnit": 7,
+  "standard": "GEO.PROOF.1",
+  "difficulty": 2,
+  "prompt": "A steel supplier records that $AB = CD$ and $CD = EF$, and a proof concludes $AB = EF$. Which property of equality justifies that conclusion? Answer with one word.",
+  "answerType": "short-text",
+  "primaryAnswer": "transitive",
+  "alternativeAnswers": [
+    "transitive property",
+    "the transitive property",
+    "Transitive",
+    "transitive property of equality",
+    "substitution"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A middle quantity, $CD$, links the first to the last.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A middle quantity, $CD$, links the first to the last."
+    },
+    {
+      "level": "guide",
+      "text": "Chaining $A = B$ and $B = C$ into $A = C$ has a name."
+    },
+    {
+      "level": "reveal",
+      "text": "It is the Transitive Property (of equality)."
+    }
+  ],
+  "explanation": [
+    "The Transitive Property says if $a = b$ and $b = c$, then $a = c$.",
+    "Here $CD$ is the middle link: $AB = CD$ and $CD = EF$ chain together to give $AB = EF$.",
+    "Many textbooks accept the Substitution Property as a reason here too, since you can substitute $EF$ for $CD$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think of matching beam lengths",
+      "steps": [
+        "Beam 1 matches beam 2, and beam 2 matches beam 3.",
+        "Without ever laying beam 1 next to beam 3, you know they match — that chain of reasoning is the transitive property."
+      ]
+    }
+  ],
+  "tags": [
+    "proof",
+    "transitive-property",
+    "two-column"
+  ],
+  "estimatedSeconds": 45
+}

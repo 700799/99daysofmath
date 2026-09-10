@@ -1,0 +1,70 @@
+{
+  "id": "GEO.053",
+  "domain": "GEO",
+  "unit": 6,
+  "orderInUnit": 3,
+  "standard": "GEO.CONG.2",
+  "difficulty": 1,
+  "prompt": "A quilt block is built from equilateral triangles — every side of each triangle is the same length. What is the measure of each angle in one of those triangles?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$60^\\circ$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$90^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$45^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$180^\\circ$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Equal sides force equal angles, so all three angles are the same size.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Equal sides force equal angles, so all three angles are the same size."
+    },
+    {
+      "level": "guide",
+      "text": "Three equal angles must share $180^\\circ$ evenly."
+    },
+    {
+      "level": "reveal",
+      "text": "$180 \\div 3 = 60^\\circ$."
+    }
+  ],
+  "explanation": [
+    "An equilateral triangle has three congruent sides, so it is also equiangular — all three angles are equal.",
+    "The three angles total $180^\\circ$.",
+    "Each one is $180 \\div 3 = 60^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why quilters love them",
+      "steps": [
+        "Six equilateral triangles fit around a single point with no gaps, because $6 \\times 60 = 360^\\circ$ — a full turn.",
+        "That is exactly why a $60^\\circ$ corner tiles so cleanly into hexagon quilt blocks."
+      ]
+    }
+  ],
+  "tags": [
+    "equilateral",
+    "angles",
+    "triangle-sum"
+  ],
+  "estimatedSeconds": 30
+}

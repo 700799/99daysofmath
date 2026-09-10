@@ -1,0 +1,63 @@
+{
+  "id": "TRIG.039",
+  "domain": "TRIG",
+  "unit": 4,
+  "orderInUnit": 9,
+  "standard": "TRIG.RT.2",
+  "difficulty": 3,
+  "prompt": "Find the exact value of $\\sin 60^\\circ \\times \\cos 30^\\circ$. Give your answer as a fraction.",
+  "answerType": "numeric",
+  "primaryAnswer": "3/4",
+  "alternativeAnswers": [
+    "0.75",
+    ".75"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Both of these exact values happen to be the same number.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Both of these exact values happen to be the same number."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $\\sin 45^\\circ \\times \\cos 45^\\circ = \\frac{\\sqrt{2}}{2} \\times \\frac{\\sqrt{2}}{2} = \\frac{2}{4} = \\frac{1}{2}$. The root times itself turned into a plain number, and $\\sqrt{3}$ does the same."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$ and $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$. Multiply the two fractions."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{\\sqrt{3}}{2} \\times \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{3}\\cdot\\sqrt{3}}{4} = \\frac{3}{4}$."
+    }
+  ],
+  "explanation": [
+    "Both values come from the $30$-$60$-$90$ triangle: $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$ and $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$.",
+    "Multiply straight across: $\\frac{\\sqrt{3} \\times \\sqrt{3}}{2 \\times 2} = \\frac{\\sqrt{3}\\cdot\\sqrt{3}}{4}$.",
+    "A square root times itself gives the number back, so $\\sqrt{3} \\times \\sqrt{3} = 3$ and the answer is $\\frac{3}{4}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Decimal check",
+      "steps": [
+        "$\\frac{\\sqrt{3}}{2} \\approx 0.866$, so the product is about $0.866 \\times 0.866 \\approx 0.75$.",
+        "$0.75 = \\frac{3}{4}$, which confirms the exact answer."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is $\\frac{\\sqrt{3}}{4}$ — multiplying the denominators but leaving one $\\sqrt{3}$ untouched in the numerator, as if $\\sqrt{3} \\times \\sqrt{3} = \\sqrt{3}$.",
+        "Remember what a square root is: $\\sqrt{3}$ is the number that gives 3 when multiplied by itself. So $\\sqrt{3} \\times \\sqrt{3} = 3$ every time, and the radical disappears: $\\frac{3}{4}$."
+      ]
+    }
+  ],
+  "tags": [
+    "exact-values",
+    "radicals",
+    "multi-step"
+  ],
+  "estimatedSeconds": 65
+}

@@ -1,0 +1,69 @@
+{
+  "id": "TRIG.038",
+  "domain": "TRIG",
+  "unit": 4,
+  "orderInUnit": 8,
+  "standard": "TRIG.RT.2",
+  "difficulty": 2,
+  "prompt": "What is the exact value of $\\tan 60^\\circ$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\frac{1}{2}$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$\\frac{\\sqrt{3}}{3}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\frac{\\sqrt{3}}{2}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\sqrt{3}$",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "D",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Tangent is opposite over adjacent — no hypotenuse involved at all.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Tangent is opposite over adjacent — no hypotenuse involved at all."
+    },
+    {
+      "level": "guide",
+      "text": "Opposite the $60^\\circ$ angle is $\\sqrt{3}$; adjacent to it is $1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\tan 60^\\circ = \\frac{\\sqrt{3}}{1} = \\sqrt{3} \\approx 1.73$."
+    }
+  ],
+  "explanation": [
+    "In the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$, the side opposite $60^\\circ$ is $\\sqrt{3}$ and the adjacent side is $1$.",
+    "Tangent is opposite over adjacent: $\\frac{\\sqrt{3}}{1}$.",
+    "So $\\tan 60^\\circ = \\sqrt{3} \\approx 1.73$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Tangent can be bigger than 1",
+      "steps": [
+        "Unlike sine and cosine, tangent has no ceiling — it is a slope, and slopes can be steep.",
+        "A $60^\\circ$ line is steeper than $45^\\circ$, so its slope must be more than 1. Only $\\sqrt{3} \\approx 1.73$ qualifies; $\\frac{\\sqrt{3}}{3} \\approx 0.58$ is $\\tan 30^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "exact-values",
+    "tangent"
+  ],
+  "estimatedSeconds": 50
+}

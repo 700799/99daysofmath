@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.133",
+  "domain": "TRIG",
+  "unit": 14,
+  "orderInUnit": 3,
+  "standard": "TRIG.LAW.1",
+  "difficulty": 1,
+  "prompt": "You know two sides of a triangle and the angle between them, and you want the third side. Which law should you use?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The Law of Cosines",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "The Law of Sines",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "The Pythagorean theorem",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Either law works equally well",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The Law of Sines needs a side and the angle OPPOSITE it, as a matched pair.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The Law of Sines needs a side and the angle OPPOSITE it, as a matched pair."
+    },
+    {
+      "level": "guide",
+      "text": "Here the angle you know sits between the two sides, so no matched pair exists yet."
+    },
+    {
+      "level": "reveal",
+      "text": "That is the side-angle-side case, and it is exactly what the Law of Cosines is built for."
+    }
+  ],
+  "explanation": [
+    "The Law of Sines needs a complete pair: a side together with the angle across from it. In the side-angle-side case you do not have one.",
+    "The Law of Cosines, $c^2 = a^2 + b^2 - 2ab\\cos C$, is designed for exactly this arrangement.",
+    "The Pythagorean theorem is out because the triangle need not have a right angle."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A quick decision rule",
+      "steps": [
+        "Use the Law of Cosines when you know all three sides (SSS) or two sides and the included angle (SAS).",
+        "Use the Law of Sines when you have a matched side-angle pair (AAS, ASA, or SSA).",
+        "Once the Law of Cosines has given you one more piece, the Law of Sines usually finishes the triangle faster."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-cosines",
+    "strategy"
+  ],
+  "estimatedSeconds": 45
+}

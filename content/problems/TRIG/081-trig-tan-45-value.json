@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.081",
+  "domain": "TRIG",
+  "unit": 9,
+  "orderInUnit": 1,
+  "standard": "TRIG.GRAPH.3",
+  "difficulty": 1,
+  "prompt": "What is the exact value of $\\tan 45^\\circ$?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$."
+    },
+    {
+      "level": "guide",
+      "text": "At $45^\\circ$ the sine and the cosine are the same number, $\\frac{\\sqrt{2}}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "A number divided by itself is $1$, so $\\tan 45^\\circ = 1$."
+    }
+  ],
+  "explanation": [
+    "$\\tan 45^\\circ = \\frac{\\sin 45^\\circ}{\\cos 45^\\circ} = \\frac{\\sqrt{2}/2}{\\sqrt{2}/2}$.",
+    "The top and bottom are identical, so the quotient is $1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "From a right triangle",
+      "steps": [
+        "A $45^\\circ$-$45^\\circ$-$90^\\circ$ triangle has two equal legs.",
+        "Tangent is opposite over adjacent, and here those two legs are equal, so the ratio is $1$.",
+        "This is why a $45^\\circ$ ramp rises exactly as much as it runs."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent",
+    "special-angles"
+  ],
+  "estimatedSeconds": 30
+}

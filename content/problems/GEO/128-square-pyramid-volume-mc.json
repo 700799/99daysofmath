@@ -1,0 +1,69 @@
+{
+  "id": "GEO.128",
+  "domain": "GEO",
+  "unit": 13,
+  "orderInUnit": 8,
+  "standard": "GEO.VOL.1",
+  "difficulty": 2,
+  "prompt": "A glass paperweight is a pyramid with a square base $6$ cm on each side and a height of $10$ cm. What is its volume?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$60$ cubic cm",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$120$ cubic cm",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$180$ cubic cm",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$360$ cubic cm",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Pyramid volume is $\\frac{1}{3} \\times \\text{base area} \\times \\text{height}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Pyramid volume is $\\frac{1}{3} \\times \\text{base area} \\times \\text{height}$."
+    },
+    {
+      "level": "guide",
+      "text": "Base area $= 6 \\times 6 = 36$ sq cm, and $36 \\times 10 = 360$."
+    },
+    {
+      "level": "reveal",
+      "text": "Take a third: $360 \\div 3 = 120$ cubic cm. Choice B."
+    }
+  ],
+  "explanation": [
+    "The base is a square: $6^2 = 36$ square centimeters.",
+    "A box with that base and height $10$ would hold $360$ cubic cm.",
+    "A pyramid holds one third of that: $V = 120$ cubic centimeters. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why choice D is so tempting",
+      "steps": [
+        "$360$ is the volume of the BOX around the pyramid — what you get by forgetting the $\\frac{1}{3}$.",
+        "A pyramid tapers to a point, so it obviously holds less than the box it fits inside. Any pointed solid (cone or pyramid) carries that $\\frac{1}{3}$."
+      ]
+    }
+  ],
+  "tags": [
+    "volume",
+    "pyramid"
+  ],
+  "estimatedSeconds": 60
+}

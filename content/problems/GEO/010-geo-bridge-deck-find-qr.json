@@ -1,0 +1,61 @@
+{
+  "id": "GEO.010",
+  "domain": "GEO",
+  "unit": 1,
+  "orderInUnit": 10,
+  "standard": "GEO.BASIC.1",
+  "difficulty": 3,
+  "prompt": "Expansion joints $P$, $Q$, and $R$ sit in that order along a straight bridge deck, so $Q$ is between $P$ and $R$. If $PQ = 2x + 1$, $QR = x - 3$, and $PR = 25$ m, find the length $QR$ in meters.",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The two pieces add to the whole: $PQ + QR = PR$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The two pieces add to the whole: $PQ + QR = PR$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Shrink the bridge: if $PQ = x$ and $QR = 2$ with $PR = 10$, then $x + 2 = 10$ gives $x = 8$. Yours is the same, just add the two piece expressions before setting the sum to $25$."
+    },
+    {
+      "level": "guide",
+      "text": "Solve $(2x + 1) + (x - 3) = 25$, which simplifies to $3x - 2 = 25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3x = 27$ gives $x = 9$, so $QR = 9 - 3 = 6$ m."
+    }
+  ],
+  "explanation": [
+    "Segment Addition: $PQ + QR = PR$, so $(2x + 1) + (x - 3) = 25$.",
+    "Combine like terms: $3x - 2 = 25$, so $3x = 27$ and $x = 9$.",
+    "Now substitute back into the piece the question asked for: $QR = x - 3 = 9 - 3 = 6$ m.",
+    "Check: $PQ = 2(9) + 1 = 19$, and $19 + 6 = 25$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the whole deck",
+      "steps": [
+        "With $x = 9$ the joints sit 19 m and 6 m apart.",
+        "$19 + 6 = 25$ m, exactly the span given, so the pieces are right."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is 9 — that is $x$, not a length. Solving for $x$ feels like finishing, so many students stop there.",
+        "Make a habit of circling what the question asks for before you start. Here it asks for $QR$, so take the final step: $QR = x - 3 = 6$."
+      ]
+    }
+  ],
+  "tags": [
+    "segment-addition",
+    "algebra",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

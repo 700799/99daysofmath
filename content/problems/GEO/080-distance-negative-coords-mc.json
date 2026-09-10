@@ -1,0 +1,81 @@
+{
+  "id": "GEO.080",
+  "domain": "GEO",
+  "unit": 8,
+  "orderInUnit": 10,
+  "standard": "GEO.RT.1",
+  "difficulty": 3,
+  "prompt": "On a coordinate grid a drone flies straight from $(-3, 2)$ to $(5, -4)$. How far does it fly, in units?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$10$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$14$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$100$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$2$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the horizontal gap and the vertical gap first — subtracting a negative is the same as adding.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the horizontal gap and the vertical gap first — subtracting a negative is the same as adding."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an easy pair first: from $(0, 0)$ to $(3, 4)$ the gaps are $3$ and $4$, so $d = \\sqrt{9 + 16} = 5$. Your points only need one subtraction each to find those gaps."
+    },
+    {
+      "level": "guide",
+      "text": "$\\Delta x = 5 - (-3) = 8$ and $\\Delta y = -4 - 2 = -6$. Squaring kills the minus sign."
+    },
+    {
+      "level": "reveal",
+      "text": "$d = \\sqrt{8^2 + (-6)^2} = \\sqrt{64 + 36} = \\sqrt{100} = 10$."
+    }
+  ],
+  "explanation": [
+    "Horizontal change: $5 - (-3) = 8$. Vertical change: $-4 - 2 = -6$.",
+    "The distance formula squares both, so the sign of $-6$ does not matter: $64 + 36 = 100$.",
+    "$d = \\sqrt{100} = 10$ units. Choice A."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count it on the grid",
+      "steps": [
+        "From $(-3, 2)$, walk $8$ units right and $6$ units down to land on $(5, -4)$.",
+        "Those legs make an $8$-$6$-$10$ right triangle (the $3$-$4$-$5$ triple doubled), so the straight flight is $10$ units."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Choice C, $100$, is the answer of someone who stopped one keystroke early — $8^2 + 6^2 = 100$ is $d^2$, not $d$. Choice B, $14$, comes from adding the legs $8 + 6$ instead of using the triangle.",
+        "Write the formula with the square root symbol already on the page, then fill it in. The last thing you do is take the root: $\\sqrt{100} = 10$."
+      ]
+    }
+  ],
+  "tags": [
+    "distance-formula",
+    "negative-coordinates"
+  ],
+  "estimatedSeconds": 70
+}

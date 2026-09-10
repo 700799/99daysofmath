@@ -1,0 +1,69 @@
+{
+  "id": "TRIG.041",
+  "domain": "TRIG",
+  "unit": 5,
+  "orderInUnit": 1,
+  "standard": "TRIG.CIRC.1",
+  "difficulty": 1,
+  "prompt": "A point sits on the unit circle (radius $1$, centered at the origin) at an angle $\\theta$ in standard position. What are its coordinates?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$(\\cos \\theta,\\ \\sin \\theta)$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$(\\sin \\theta,\\ \\cos \\theta)$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$(\\theta,\\ \\sin \\theta)$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$(\\tan \\theta,\\ \\sin \\theta)$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Drop a right triangle from the point to the $x$-axis: the hypotenuse is the radius, which is $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Drop a right triangle from the point to the $x$-axis: the hypotenuse is the radius, which is $1$."
+    },
+    {
+      "level": "guide",
+      "text": "With hypotenuse $1$, $\\cos \\theta = \\frac{x}{1} = x$ and $\\sin \\theta = \\frac{y}{1} = y$."
+    },
+    {
+      "level": "reveal",
+      "text": "So the point is $(\\cos \\theta,\\ \\sin \\theta)$ — cosine first, alphabetically."
+    }
+  ],
+  "explanation": [
+    "Draw the right triangle from the origin out to the point and down to the $x$-axis: the radius is the hypotenuse, and it has length 1.",
+    "Cosine is adjacent over hypotenuse, which is $\\frac{x}{1} = x$; sine is opposite over hypotenuse, which is $\\frac{y}{1} = y$.",
+    "So every point on the unit circle is $(\\cos \\theta,\\ \\sin \\theta)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A memory hook",
+      "steps": [
+        "Cosine and $x$ both come earlier in the alphabet; sine and $y$ both come later.",
+        "Cosine handles the horizontal, sine handles the vertical — and that stays true for the rest of trigonometry."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "definitions"
+  ],
+  "estimatedSeconds": 40
+}

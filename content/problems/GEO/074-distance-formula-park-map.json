@@ -1,0 +1,47 @@
+{
+  "id": "GEO.074",
+  "domain": "GEO",
+  "unit": 8,
+  "orderInUnit": 4,
+  "standard": "GEO.RT.1",
+  "difficulty": 1,
+  "prompt": "On a park map, the fountain sits at $(2, 3)$ and the oak tree at $(6, 6)$, where each unit is one meter. How many meters apart are they?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The distance formula is the Pythagorean theorem in disguise: the horizontal gap and vertical gap are the legs.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The distance formula is the Pythagorean theorem in disguise: the horizontal gap and vertical gap are the legs."
+    },
+    {
+      "level": "guide",
+      "text": "Horizontal gap: $6 - 2 = 4$. Vertical gap: $6 - 3 = 3$. Now find the hypotenuse."
+    },
+    {
+      "level": "reveal",
+      "text": "$d = \\sqrt{4^2 + 3^2} = \\sqrt{25} = 5$ meters."
+    }
+  ],
+  "explanation": [
+    "Subtract the coordinates to get the legs of a right triangle: $\\Delta x = 4$ and $\\Delta y = 3$.",
+    "Apply $d = \\sqrt{(\\Delta x)^2 + (\\Delta y)^2} = \\sqrt{16 + 9}$.",
+    "$\\sqrt{25} = 5$, so the fountain and oak are $5$ m apart."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw the staircase",
+      "steps": [
+        "From the fountain, walk $4$ m east and then $3$ m north to reach the oak — that path traces two legs of a right triangle.",
+        "The straight-line walk is the hypotenuse of that $3$-$4$-$5$ triangle: $5$ m."
+      ]
+    }
+  ],
+  "tags": [
+    "distance-formula",
+    "coordinate-geometry"
+  ],
+  "estimatedSeconds": 45
+}

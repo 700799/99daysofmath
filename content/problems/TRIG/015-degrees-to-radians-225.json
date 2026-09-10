@@ -1,0 +1,52 @@
+{
+  "id": "TRIG.015",
+  "domain": "TRIG",
+  "unit": 2,
+  "orderInUnit": 5,
+  "standard": "TRIG.ANG.2",
+  "difficulty": 2,
+  "prompt": "Convert $225^\\circ$ to radians. Give your answer in terms of $\\pi$ — for example, type \"5pi/6\" for $\\frac{5\\pi}{6}$.",
+  "answerType": "expression",
+  "primaryAnswer": "5pi/4",
+  "alternativeAnswers": [
+    "5\\pi/4",
+    "5π/4",
+    "(5/4)pi",
+    "5 pi / 4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Multiply by $\\frac{\\pi}{180}$ and then reduce the fraction all the way.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiply by $\\frac{\\pi}{180}$ and then reduce the fraction all the way."
+    },
+    {
+      "level": "guide",
+      "text": "$225 \\times \\frac{\\pi}{180} = \\frac{225\\pi}{180}$. Both numbers divide by 45."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{225}{180} = \\frac{5}{4}$, so the answer is $\\frac{5\\pi}{4}$."
+    }
+  ],
+  "explanation": [
+    "Convert with the factor $\\frac{\\pi}{180}$: $225 \\times \\frac{\\pi}{180} = \\frac{225\\pi}{180}$.",
+    "Divide numerator and denominator by 45: $\\frac{225}{180} = \\frac{5}{4}$.",
+    "So $225^\\circ = \\frac{5\\pi}{4}$ radians."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build from $45^\\circ$",
+      "steps": [
+        "$225^\\circ = 5 \\times 45^\\circ$, and $45^\\circ = \\frac{\\pi}{4}$.",
+        "So the angle is $5 \\times \\frac{\\pi}{4} = \\frac{5\\pi}{4}$ — a little past half a turn, which matches an angle in Quadrant III."
+      ]
+    }
+  ],
+  "tags": [
+    "radians",
+    "conversion"
+  ],
+  "estimatedSeconds": 45
+}

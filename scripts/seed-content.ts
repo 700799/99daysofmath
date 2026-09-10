@@ -27,6 +27,10 @@ import { problemsPCu01 } from './seeds/PC_u01_04.js';
 import { problemsPCu05 } from './seeds/PC_u05_08.js';
 import { problemsPCu09 } from './seeds/PC_u09_11.js';
 import { problemsPCu12 } from './seeds/PC_u12_14.js';
+import { problemsGEOu01 } from './seeds/GEO_u01_07.js';
+import { problemsGEOu08 } from './seeds/GEO_u08_14.js';
+import { problemsTRIGu01 } from './seeds/TRIG_u01_07.js';
+import { problemsTRIGu08 } from './seeds/TRIG_u08_14.js';
 import { problemsSATalg } from './seeds/SAT_alg.js';
 import { problemsSATadv } from './seeds/SAT_adv.js';
 import { problemsSATpsda } from './seeds/SAT_psda.js';
@@ -89,6 +93,10 @@ async function main() {
     ...problemsPCu05,
     ...problemsPCu09,
     ...problemsPCu12,
+    ...problemsGEOu01,
+    ...problemsGEOu08,
+    ...problemsTRIGu01,
+    ...problemsTRIGu08,
     ...problemsSATalg,
     ...problemsSATadv,
     ...problemsSATpsda,

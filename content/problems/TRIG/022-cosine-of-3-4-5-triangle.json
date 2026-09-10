@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.022",
+  "domain": "TRIG",
+  "unit": 3,
+  "orderInUnit": 2,
+  "standard": "TRIG.RT.1",
+  "difficulty": 1,
+  "prompt": "In the same right triangle with legs $3$ and $4$ and hypotenuse $5$, the angle $\\theta$ has opposite side $3$ and adjacent side $4$. What is $\\cos \\theta$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\frac{3}{5}$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$\\frac{4}{5}$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$\\frac{3}{4}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\frac{5}{4}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "CAH: Cosine is Adjacent over Hypotenuse.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "CAH: Cosine is Adjacent over Hypotenuse."
+    },
+    {
+      "level": "guide",
+      "text": "Which side is adjacent to $\\theta$ — that is, touching it but not the hypotenuse?"
+    },
+    {
+      "level": "reveal",
+      "text": "The adjacent side is $4$ and the hypotenuse is $5$, so $\\cos \\theta = \\frac{4}{5}$."
+    }
+  ],
+  "explanation": [
+    "Cosine compares the leg next to the angle to the hypotenuse: $\\cos \\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}$.",
+    "The leg touching $\\theta$ (other than the hypotenuse) is 4, and the hypotenuse is 5.",
+    "So $\\cos \\theta = \\frac{4}{5} = 0.8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sort the three sides first",
+      "steps": [
+        "Label before you compute: hypotenuse $= 5$ (across from the right angle), opposite $= 3$, adjacent $= 4$.",
+        "Then cosine simply reads off adjacent over hypotenuse: $\\frac{4}{5}$.",
+        "Choice $\\frac{3}{5}$ is sine, and $\\frac{3}{4}$ is tangent — labeling first keeps them apart."
+      ]
+    }
+  ],
+  "tags": [
+    "sohcahtoa",
+    "cosine"
+  ],
+  "estimatedSeconds": 35
+}

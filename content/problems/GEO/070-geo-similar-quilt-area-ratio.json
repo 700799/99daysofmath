@@ -1,0 +1,83 @@
+{
+  "id": "GEO.070",
+  "domain": "GEO",
+  "unit": 7,
+  "orderInUnit": 10,
+  "standard": "GEO.SIM.1",
+  "difficulty": 3,
+  "prompt": "Two similar quilt patches have corresponding sides in the ratio $2 : 3$. The smaller patch has an area of $20$ square inches. What is the area of the larger patch, in square inches?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$45$ square inches",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$30$ square inches",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$40$ square inches",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$90$ square inches",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Areas do not scale by the same ratio that sides do.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Areas do not scale by the same ratio that sides do."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "See it on real squares: a $2$ by $2$ square has area $4$ and a $3$ by $3$ square has area $9$ — sides in ratio $2 : 3$ but areas in ratio $4 : 9$. Apply that squared ratio to the $20$."
+    },
+    {
+      "level": "guide",
+      "text": "If sides scale by $\\frac{3}{2}$, areas scale by $\\left(\\frac{3}{2}\\right)^2 = \\frac{9}{4}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$20 \\times \\frac{9}{4} = 45$ square inches."
+    }
+  ],
+  "explanation": [
+    "For similar figures with side ratio $\\frac{a}{b}$, the area ratio is $\\frac{a^2}{b^2}$ — the scale factor gets squared.",
+    "Sides are in ratio $2 : 3$, so areas are in ratio $4 : 9$.",
+    "Set up $\\frac{20}{A} = \\frac{4}{9}$: cross-multiplying gives $4A = 180$, so $A = 45$ square inches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "See why it squares",
+      "steps": [
+        "Area involves two dimensions — roughly base times height — and BOTH get multiplied by $\\frac{3}{2}$.",
+        "So the area is multiplied by $\\frac{3}{2} \\times \\frac{3}{2} = \\frac{9}{4}$, and $20 \\times \\frac{9}{4} = 45$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is 30, from scaling the area by $\\frac{3}{2}$ as if area behaved like a length.",
+        "Say it out loud before you compute: \"sides scale by $k$, areas by $k^2$, volumes by $k^3$.\" With $k = \\frac{3}{2}$, the area factor is $\\frac{9}{4}$, giving 45 — not 30."
+      ]
+    }
+  ],
+  "tags": [
+    "similarity",
+    "area-ratio",
+    "scale-factor",
+    "misconception"
+  ],
+  "estimatedSeconds": 85
+}

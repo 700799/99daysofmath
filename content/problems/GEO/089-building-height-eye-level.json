@@ -1,0 +1,60 @@
+{
+  "id": "GEO.089",
+  "domain": "GEO",
+  "unit": 9,
+  "orderInUnit": 9,
+  "standard": "GEO.RT.2",
+  "difficulty": 3,
+  "prompt": "Standing $150$ ft from a building, a surveyor whose eyes are $5$ ft above the ground measures the angle of elevation to the roof as $32^\\circ$. How tall is the building, in feet, rounded to the nearest tenth?",
+  "answerType": "numeric",
+  "primaryAnswer": "98.7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The triangle starts at eye level, not at the ground — so trigonometry gives only the part of the building ABOVE the surveyor's eyes.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The triangle starts at eye level, not at the ground — so trigonometry gives only the part of the building ABOVE the surveyor's eyes."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up without the eye height: standing $100$ ft away at a $45^\\circ$ elevation gives $100 \\tan 45^\\circ = 100$ ft above eye level. Then remember the extra step this problem adds at the end."
+    },
+    {
+      "level": "guide",
+      "text": "Find that upper piece: $\\tan 32^\\circ = \\frac{x}{150}$, so $x = 150 \\tan 32^\\circ \\approx 93.7$ ft."
+    },
+    {
+      "level": "reveal",
+      "text": "Add the eye height back: $93.7 + 5 \\approx 98.7$ ft."
+    }
+  ],
+  "explanation": [
+    "The horizontal sight line sits $5$ ft up, so the right triangle has adjacent leg $150$ and opposite leg $x$ = the building above eye level.",
+    "$\\tan 32^\\circ = \\frac{x}{150}$ gives $x = 150 \\tan 32^\\circ \\approx 93.73$ ft.",
+    "The building also extends from the ground up to eye level, so add $5$: about $98.7$ ft tall."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw the horizontal line first",
+      "steps": [
+        "Sketch the ground, mark the surveyor, and draw a dashed horizontal line from their eyes to the building — that dashed line, not the ground, is the base of the triangle.",
+        "The building is then made of two stacked pieces: the $5$ ft below the dashed line and the $93.7$ ft above it."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is $93.7$ ft — a perfectly correct triangle calculation that answers the wrong question. It measures from the surveyor's eyes, not from the ground.",
+        "Whenever a problem tells you an eye height, instrument height, or cliff height, it is telling you because it must be added at the end. Circle it in the problem so you do not walk away one step early."
+      ]
+    }
+  ],
+  "tags": [
+    "angle-of-elevation",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 85
+}

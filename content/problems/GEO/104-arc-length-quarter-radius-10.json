@@ -1,0 +1,51 @@
+{
+  "id": "GEO.104",
+  "domain": "GEO",
+  "unit": 11,
+  "orderInUnit": 4,
+  "standard": "GEO.CIRC.1",
+  "difficulty": 1,
+  "prompt": "A circular garden path has radius $10$ ft. A gardener walks along the arc of a $90^\\circ$ section. Write the exact arc length in terms of $\\pi$ (for example, write $7\\pi$ as 7pi).",
+  "answerType": "expression",
+  "primaryAnswer": "5pi",
+  "alternativeAnswers": [
+    "5*pi",
+    "5 pi",
+    "5π"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Arc length is a fraction of the whole circumference: $\\frac{\\theta}{360} \\times 2\\pi r$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Arc length is a fraction of the whole circumference: $\\frac{\\theta}{360} \\times 2\\pi r$."
+    },
+    {
+      "level": "guide",
+      "text": "The whole circumference is $2\\pi(10) = 20\\pi$, and $90^\\circ$ is $\\frac{1}{4}$ of the circle."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{4} \\times 20\\pi = 5\\pi$ ft."
+    }
+  ],
+  "explanation": [
+    "Circumference of the whole circle: $C = 2\\pi r = 20\\pi$ ft.",
+    "A $90^\\circ$ arc is $\\frac{90}{360} = \\frac{1}{4}$ of the way around.",
+    "Arc length $= \\frac{1}{4}(20\\pi) = 5\\pi$ ft (about $15.7$ ft)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Fraction first, then multiply",
+      "steps": [
+        "Simplify the fraction before touching $\\pi$: $\\frac{90}{360} = \\frac{1}{4}$.",
+        "A quarter of $20\\pi$ is $5\\pi$ — much cleaner than multiplying $20\\pi$ by $90$ and dividing by $360$."
+      ]
+    }
+  ],
+  "tags": [
+    "arc-length",
+    "circle"
+  ],
+  "estimatedSeconds": 50
+}

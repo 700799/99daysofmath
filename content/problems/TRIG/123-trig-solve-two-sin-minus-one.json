@@ -1,0 +1,48 @@
+{
+  "id": "TRIG.123",
+  "domain": "TRIG",
+  "unit": 13,
+  "orderInUnit": 3,
+  "standard": "TRIG.EQ.1",
+  "difficulty": 1,
+  "prompt": "Solve $2\\sin\\theta - 1 = 0$ for $0^\\circ \\le \\theta < 360^\\circ$. What is the LARGER of the two solutions, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "150",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Isolate the sine first, exactly as you would isolate $x$ in a linear equation.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Isolate the sine first, exactly as you would isolate $x$ in a linear equation."
+    },
+    {
+      "level": "guide",
+      "text": "$2\\sin\\theta = 1$, so $\\sin\\theta = \\frac{1}{2}$. The reference angle is $30^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "Sine is positive in quadrants I and II: $30^\\circ$ and $180^\\circ - 30^\\circ = 150^\\circ$. The larger is $150^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Treat $\\sin\\theta$ as the unknown: add $1$ and divide by $2$ to get $\\sin\\theta = \\frac{1}{2}$.",
+    "The reference angle is $30^\\circ$, and sine is positive in quadrants I and II.",
+    "So $\\theta = 30^\\circ$ or $\\theta = 180^\\circ - 30^\\circ = 150^\\circ$, and the larger solution is $150^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Verify the answer",
+      "steps": [
+        "$\\sin 150^\\circ = \\frac{1}{2}$, so $2\\left(\\frac{1}{2}\\right) - 1 = 0$ ✓",
+        "Checking is cheap and catches sign slips instantly."
+      ]
+    }
+  ],
+  "tags": [
+    "solve",
+    "linear-form",
+    "quadrants"
+  ],
+  "estimatedSeconds": 50
+}

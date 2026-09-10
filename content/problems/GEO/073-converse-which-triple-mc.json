@@ -1,0 +1,69 @@
+{
+  "id": "GEO.073",
+  "domain": "GEO",
+  "unit": 8,
+  "orderInUnit": 3,
+  "standard": "GEO.RT.1",
+  "difficulty": 1,
+  "prompt": "A carpenter checks corners by measuring three sides. Which set of side lengths makes a **right** triangle?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$6$, $7$, $8$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$9$, $12$, $15$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$4$, $5$, $6$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$5$, $6$, $10$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The converse of the Pythagorean theorem: if $a^2 + b^2 = c^2$ then the triangle is right. Test the two short sides against the longest.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The converse of the Pythagorean theorem: if $a^2 + b^2 = c^2$ then the triangle is right. Test the two short sides against the longest."
+    },
+    {
+      "level": "guide",
+      "text": "Try $9$, $12$, $15$: is $9^2 + 12^2$ equal to $15^2$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$81 + 144 = 225 = 15^2$, so $9$-$12$-$15$ is right. It is the $3$-$4$-$5$ triple tripled."
+    }
+  ],
+  "explanation": [
+    "The converse says a triangle is right exactly when the squares of the two shorter sides add to the square of the longest.",
+    "Check B: $9^2 + 12^2 = 81 + 144 = 225$ and $15^2 = 225$. ✓",
+    "The others fail: $36 + 49 = 85 \\neq 64$, $16 + 25 = 41 \\neq 36$, and $25 + 36 = 61 \\neq 100$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Carpenters really do this",
+      "steps": [
+        "Builders square up a foundation by measuring $3$ ft along one edge, $4$ ft along the other, and checking that the diagonal is exactly $5$ ft.",
+        "Any multiple works, so $9$-$12$-$15$ is the same trick at triple size — handy when the corner is big."
+      ]
+    }
+  ],
+  "tags": [
+    "converse",
+    "pythagorean-triple"
+  ],
+  "estimatedSeconds": 45
+}

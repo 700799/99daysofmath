@@ -1,0 +1,61 @@
+{
+  "id": "GEO.019",
+  "domain": "GEO",
+  "unit": 2,
+  "orderInUnit": 9,
+  "standard": "GEO.ANG.1",
+  "difficulty": 3,
+  "prompt": "The supplement of an angle is $4$ times the angle's complement. Find the measure of the angle, in degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Call the angle $x$. Its supplement is $180 - x$ and its complement is $90 - x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Call the angle $x$. Its supplement is $180 - x$ and its complement is $90 - x$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up on a number: for a $30^\\circ$ angle the supplement is $150$ and the complement is $60$, so supplement $= 2.5 \\times$ complement — not $4$. Write that same relationship with $x$ instead of guessing."
+    },
+    {
+      "level": "guide",
+      "text": "Translate the sentence into $180 - x = 4(90 - x)$ and distribute the 4."
+    },
+    {
+      "level": "reveal",
+      "text": "$180 - x = 360 - 4x$, so $3x = 180$ and $x = 60$."
+    }
+  ],
+  "explanation": [
+    "Let the angle be $x$. Its supplement is $180 - x$; its complement is $90 - x$.",
+    "The sentence says supplement $= 4 \\times$ complement: $180 - x = 4(90 - x)$.",
+    "Distribute: $180 - x = 360 - 4x$. Add $4x$ to both sides and subtract 180: $3x = 180$.",
+    "So $x = 60^\\circ$. Check: supplement $= 120$, complement $= 30$, and $120 = 4(30)$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Guess and adjust",
+      "steps": [
+        "Try $x = 45$: supplement 135, complement 45, ratio $3$ — too small.",
+        "Try $x = 60$: supplement 120, complement 30, ratio exactly $4$. That is the angle."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The common wrong answer is 30 — the complement — because it is the number that shows up in the final check.",
+        "Label your variable in words before you solve: \"$x =$ THE ANGLE.\" Then $x = 60$ is the answer, and 30 and 120 are just its complement and supplement along for the ride."
+      ]
+    }
+  ],
+  "tags": [
+    "complementary",
+    "supplementary",
+    "algebra"
+  ],
+  "estimatedSeconds": 80
+}

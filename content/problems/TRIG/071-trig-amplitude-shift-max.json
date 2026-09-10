@@ -1,0 +1,49 @@
+{
+  "id": "TRIG.071",
+  "domain": "TRIG",
+  "unit": 8,
+  "orderInUnit": 1,
+  "standard": "TRIG.GRAPH.2",
+  "difficulty": 1,
+  "prompt": "A wave is described by $y = 3\\sin(x) + 2$. What is the largest value $y$ ever reaches?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$\\sin(x)$ never climbs above $1$, no matter what $x$ is.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$\\sin(x)$ never climbs above $1$, no matter what $x$ is."
+    },
+    {
+      "level": "guide",
+      "text": "Put the biggest possible value in: $3 \\times 1 + 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3(1) + 2 = 5$."
+    }
+  ],
+  "explanation": [
+    "The plain sine wave swings between $-1$ and $1$.",
+    "Multiplying by $3$ stretches that swing to between $-3$ and $3$ — that is the amplitude.",
+    "Adding $2$ lifts the whole wave up by $2$, so the top is $3 + 2 = 5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Midline plus amplitude",
+      "steps": [
+        "The $+2$ sets the midline at $y = 2$ — the level the wave rocks around.",
+        "The amplitude $3$ says it rises $3$ above that line and falls $3$ below.",
+        "Top $= 2 + 3 = 5$, bottom $= 2 - 3 = -1$."
+      ]
+    }
+  ],
+  "tags": [
+    "amplitude",
+    "vertical-shift",
+    "midline"
+  ],
+  "estimatedSeconds": 35
+}

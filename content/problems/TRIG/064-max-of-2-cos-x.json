@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.064",
+  "domain": "TRIG",
+  "unit": 7,
+  "orderInUnit": 4,
+  "standard": "TRIG.GRAPH.1",
+  "difficulty": 1,
+  "prompt": "What is the maximum value of $y = 2\\cos x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Cosine alone never gets bigger than 1.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Cosine alone never gets bigger than 1."
+    },
+    {
+      "level": "guide",
+      "text": "So the biggest $2\\cos x$ can be is $2$ times that largest cosine value."
+    },
+    {
+      "level": "reveal",
+      "text": "$2 \\times 1 = 2$, so the maximum is $2$."
+    }
+  ],
+  "explanation": [
+    "The cosine of any angle stays between $-1$ and $1$.",
+    "Multiplying by 2 stretches that range to between $-2$ and $2$.",
+    "The maximum value is $2$, reached whenever $\\cos x = 1$ (at $x = 0^\\circ$, $360^\\circ$, and so on)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Midline plus amplitude",
+      "steps": [
+        "There is no number added on, so the midline is $y = 0$ and the amplitude is 2.",
+        "Maximum = midline + amplitude = $0 + 2 = 2$ (and the minimum is $0 - 2 = -2$)."
+      ]
+    }
+  ],
+  "tags": [
+    "amplitude",
+    "graphing"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,46 @@
+{
+  "id": "TRIG.084",
+  "domain": "TRIG",
+  "unit": 9,
+  "orderInUnit": 4,
+  "standard": "TRIG.GRAPH.3",
+  "difficulty": 1,
+  "prompt": "If $\\sin\\theta = -\\frac{1}{3}$, what is $\\csc\\theta$?",
+  "answerType": "numeric",
+  "primaryAnswer": "-3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Cosecant is the reciprocal of sine — flip the fraction.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Cosecant is the reciprocal of sine — flip the fraction."
+    },
+    {
+      "level": "guide",
+      "text": "The reciprocal of $-\\frac{1}{3}$ keeps the negative sign."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\csc\\theta = \\frac{1}{-1/3} = -3$."
+    }
+  ],
+  "explanation": [
+    "$\\csc\\theta = \\frac{1}{\\sin\\theta} = \\frac{1}{-1/3}$.",
+    "Flipping $-\\frac{1}{3}$ gives $-3$; a reciprocal never changes the sign."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why cosecant is never small",
+      "steps": [
+        "Sine always sits between $-1$ and $1$, so its reciprocal is always at least $1$ away from zero.",
+        "Here sine is only $\\frac{1}{3}$ in size, so cosecant is $3$ in size — the smaller the sine, the more extreme the cosecant."
+      ]
+    }
+  ],
+  "tags": [
+    "cosecant",
+    "reciprocal-functions"
+  ],
+  "estimatedSeconds": 30
+}

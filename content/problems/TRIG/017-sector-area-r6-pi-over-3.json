@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.017",
+  "domain": "TRIG",
+  "unit": 2,
+  "orderInUnit": 7,
+  "standard": "TRIG.ANG.2",
+  "difficulty": 2,
+  "prompt": "A pizza has radius $6$ inches. One slice has a central angle of $\\frac{\\pi}{3}$ radians. What is the area of that slice?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$2\\pi$ square inches",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$6\\pi$ square inches",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$12\\pi$ square inches",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$36\\pi$ square inches",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sector area is $A = \\frac{1}{2}r^2\\theta$ — note the square and the one-half.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sector area is $A = \\frac{1}{2}r^2\\theta$ — note the square and the one-half."
+    },
+    {
+      "level": "guide",
+      "text": "Substitute: $A = \\frac{1}{2}(6)^2\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{2}(36)\\left(\\frac{\\pi}{3}\\right)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2}(36) = 18$, and $18 \\times \\frac{\\pi}{3} = 6\\pi$ square inches."
+    }
+  ],
+  "explanation": [
+    "The area of a sector with the angle in radians is $A = \\frac{1}{2}r^2\\theta$.",
+    "Substitute $r = 6$ and $\\theta = \\frac{\\pi}{3}$: $A = \\frac{1}{2}(36)\\left(\\frac{\\pi}{3}\\right)$.",
+    "That gives $18 \\times \\frac{\\pi}{3} = 6\\pi$ square inches, about 18.8 square inches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Fraction of the whole pizza",
+      "steps": [
+        "$\\frac{\\pi}{3}$ radians is $60^\\circ$, which is $\\frac{1}{6}$ of the pizza.",
+        "The whole pizza has area $\\pi r^2 = 36\\pi$.",
+        "One sixth of $36\\pi$ is $6\\pi$ square inches — the same answer."
+      ]
+    }
+  ],
+  "tags": [
+    "sector-area",
+    "radians"
+  ],
+  "estimatedSeconds": 55
+}

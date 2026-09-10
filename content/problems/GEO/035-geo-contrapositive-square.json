@@ -1,0 +1,71 @@
+{
+  "id": "GEO.035",
+  "domain": "GEO",
+  "unit": 4,
+  "orderInUnit": 5,
+  "standard": "GEO.PROOF.1",
+  "difficulty": 2,
+  "prompt": "Which statement is the CONTRAPOSITIVE of \"If a shape is a square, then it has four sides\"?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "If a shape does not have four sides, then it is not a square",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "If a shape has four sides, then it is a square",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "If a shape is not a square, then it does not have four sides",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "A shape is a square if and only if it has four sides",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The contrapositive does two things at once, not just one.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The contrapositive does two things at once, not just one."
+    },
+    {
+      "level": "guide",
+      "text": "Swap the two parts AND negate both: \"if not $q$, then not $p$.\""
+    },
+    {
+      "level": "reveal",
+      "text": "Not four sides ⇒ not a square. That is choice A."
+    }
+  ],
+  "explanation": [
+    "For \"if $p$, then $q$,\" the contrapositive is \"if not $q$, then not $p$\" — swapped and negated.",
+    "Here $p$ is \"is a square\" and $q$ is \"has four sides,\" so the contrapositive is \"if a shape does not have four sides, then it is not a square.\"",
+    "Choice B is the converse, choice C is the inverse, and choice D is a biconditional. Only the contrapositive is guaranteed to have the same truth value as the original — and this one is clearly true."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity-check the truth values",
+      "steps": [
+        "The original is true: every square really does have four sides.",
+        "A contrapositive must also be true. Choice A is true; choice B is false (a rectangle has four sides but is not a square); choice C is false for the same rectangle. That leaves A."
+      ]
+    }
+  ],
+  "tags": [
+    "contrapositive",
+    "converse",
+    "inverse",
+    "logic"
+  ],
+  "estimatedSeconds": 55
+}

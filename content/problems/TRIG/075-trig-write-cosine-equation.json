@@ -1,0 +1,55 @@
+{
+  "id": "TRIG.075",
+  "domain": "TRIG",
+  "unit": 8,
+  "orderInUnit": 5,
+  "standard": "TRIG.GRAPH.2",
+  "difficulty": 2,
+  "prompt": "A cosine curve has amplitude $4$, midline $y = 1$, period $2\\pi$, and reaches its maximum at $x = 0$. Write its equation, starting with $y =$ (you may leave off the \"$y =$\").",
+  "answerType": "expression",
+  "primaryAnswer": "4cos(x) + 1",
+  "alternativeAnswers": [
+    "4cos(x)+1",
+    "1 + 4cos(x)",
+    "1+4cos(x)",
+    "4cosx + 1",
+    "4*cos(x)+1"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Build it piece by piece: $y = A\\cos(Bx) + D$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Build it piece by piece: $y = A\\cos(Bx) + D$."
+    },
+    {
+      "level": "guide",
+      "text": "Amplitude gives $A = 4$; midline gives $D = 1$; a period of $2\\pi$ means $B = 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 4\\cos(x) + 1$."
+    }
+  ],
+  "explanation": [
+    "Amplitude $4$ means $A = 4$.",
+    "Midline $y = 1$ means the vertical shift is $D = 1$.",
+    "Period $2\\pi$ is the ordinary cosine period, so $B = 1$ and no horizontal squeeze is needed.",
+    "Cosine already peaks at $x = 0$, so no phase shift is needed either: $y = 4\\cos(x) + 1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check it against the description",
+      "steps": [
+        "At $x = 0$: $4\\cos(0) + 1 = 4(1) + 1 = 5$, the maximum — and $5$ is indeed $4$ above the midline $1$.",
+        "At $x = \\pi$: $4(-1) + 1 = -3$, the minimum, $4$ below the midline. Everything matches."
+      ]
+    }
+  ],
+  "tags": [
+    "write-equation",
+    "amplitude",
+    "midline"
+  ],
+  "estimatedSeconds": 55
+}

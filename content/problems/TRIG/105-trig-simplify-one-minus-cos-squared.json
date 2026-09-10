@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.105",
+  "domain": "TRIG",
+  "unit": 11,
+  "orderInUnit": 5,
+  "standard": "TRIG.IDENT.1",
+  "difficulty": 2,
+  "prompt": "Simplify $1 - \\cos^2\\theta$.",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\sin^2\\theta$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\sin\\theta$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$-\\sin^2\\theta$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\tan^2\\theta$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Start from $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Start from $\\sin^2\\theta + \\cos^2\\theta = 1$."
+    },
+    {
+      "level": "guide",
+      "text": "Move $\\cos^2\\theta$ to the other side of that identity."
+    },
+    {
+      "level": "reveal",
+      "text": "$1 - \\cos^2\\theta = \\sin^2\\theta$."
+    }
+  ],
+  "explanation": [
+    "The Pythagorean identity is $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+    "Subtracting $\\cos^2\\theta$ from both sides gives $\\sin^2\\theta = 1 - \\cos^2\\theta$.",
+    "So the expression simplifies to $\\sin^2\\theta$ — note that the square stays, so it is not just $\\sin\\theta$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with $\\theta = 60^\\circ$",
+      "steps": [
+        "$\\cos 60^\\circ = \\frac{1}{2}$, so $1 - \\cos^2 60^\\circ = 1 - \\frac{1}{4} = \\frac{3}{4}$.",
+        "$\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$, so $\\sin^2 60^\\circ = \\frac{3}{4}$ ✓",
+        "But $\\sin 60^\\circ$ itself is about $0.866$, not $0.75$ — which rules out choice B."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean-identity",
+    "simplify"
+  ],
+  "estimatedSeconds": 45
+}

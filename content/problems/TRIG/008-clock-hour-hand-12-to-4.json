@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.008",
+  "domain": "TRIG",
+  "unit": 1,
+  "orderInUnit": 8,
+  "standard": "TRIG.ANG.1",
+  "difficulty": 2,
+  "prompt": "The hour hand of a clock sweeps from the 12 to the 4. Through how many degrees has it turned? Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "120",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A clock face is a full circle cut into 12 equal hour marks.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A clock face is a full circle cut into 12 equal hour marks."
+    },
+    {
+      "level": "guide",
+      "text": "Each hour mark is $\\frac{360^\\circ}{12} = 30^\\circ$. How many hour marks from 12 to 4?"
+    },
+    {
+      "level": "reveal",
+      "text": "Four marks at $30^\\circ$ each: $4 \\times 30 = 120^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The 12 hour marks split $360^\\circ$ evenly, so each gap is $\\frac{360}{12} = 30^\\circ$.",
+    "Going from 12 to 4 crosses four of those gaps.",
+    "$4 \\times 30 = 120^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As a fraction of the circle",
+      "steps": [
+        "From 12 to 4 is $\\frac{4}{12} = \\frac{1}{3}$ of the way around the clock.",
+        "One third of $360^\\circ$ is $120^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "clock",
+    "angle-measure"
+  ],
+  "estimatedSeconds": 40
+}

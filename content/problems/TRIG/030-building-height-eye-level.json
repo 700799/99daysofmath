@@ -1,0 +1,62 @@
+{
+  "id": "TRIG.030",
+  "domain": "TRIG",
+  "unit": 3,
+  "orderInUnit": 10,
+  "standard": "TRIG.RT.1",
+  "difficulty": 3,
+  "prompt": "From a spot $200$ ft from the base of a building, a surveyor whose instrument sits $5$ ft above the ground measures the angle of elevation to the roof as $55^\\circ$. How tall is the building? Round to the nearest tenth of a foot.",
+  "answerType": "numeric",
+  "primaryAnswer": "290.6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The triangle starts at the instrument, not at the ground — so the trig gives you only part of the height.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The triangle starts at the instrument, not at the ground — so the trig gives you only part of the height."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: from $100$ ft away at $45^\\circ$ with the instrument $2$ ft up, the rise is $100\\tan 45^\\circ = 100$ ft and the building is $100 + 2 = 102$ ft. Trig gives the rise; the instrument height is added last."
+    },
+    {
+      "level": "guide",
+      "text": "First find the rise above eye level: $\\tan 55^\\circ = \\frac{x}{200}$, so $x = 200\\tan 55^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x \\approx 285.6$ ft above the instrument, then add the $5$ ft instrument height: $285.6 + 5 = 290.6$ ft."
+    }
+  ],
+  "explanation": [
+    "The right triangle has its horizontal leg $200$ ft and its vertical leg running from instrument height up to the roof.",
+    "Use tangent: $x = 200\\tan 55^\\circ \\approx 200(1.4281) \\approx 285.6$ ft.",
+    "That is the height ABOVE the instrument, so add the instrument height: $285.6 + 5 = 290.6$ ft."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw the picture in two pieces",
+      "steps": [
+        "Sketch the building and draw a horizontal line at the height of the instrument, 5 ft up.",
+        "Everything above that line is the triangle you can solve with tangent: about $285.6$ ft.",
+        "Everything below it is the 5 ft slab you must add back, giving $290.6$ ft total."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is $285.6$ ft — correct trigonometry, but it measures the building from the surveyor's eye rather than from the ground.",
+        "Whenever a problem bothers to tell you an eye height, instrument height, or cliff height, it is telling you there is a piece to add at the end. Finish by asking: \"height above what?\" and add whatever is underneath."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent",
+    "angle-of-elevation",
+    "multi-step",
+    "surveying"
+  ],
+  "estimatedSeconds": 85
+}

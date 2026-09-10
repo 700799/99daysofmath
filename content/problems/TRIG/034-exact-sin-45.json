@@ -1,0 +1,52 @@
+{
+  "id": "TRIG.034",
+  "domain": "TRIG",
+  "unit": 4,
+  "orderInUnit": 4,
+  "standard": "TRIG.RT.2",
+  "difficulty": 1,
+  "prompt": "What is the exact value of $\\sin 45^\\circ$? Type it as an expression, for example \"sqrt(3)/2\" for $\\frac{\\sqrt{3}}{2}$.",
+  "answerType": "expression",
+  "primaryAnswer": "sqrt(2)/2",
+  "alternativeAnswers": [
+    "sqrt2/2",
+    "\\frac{\\sqrt{2}}{2}",
+    "1/sqrt(2)",
+    "√2/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Use the $45$-$45$-$90$ triangle with sides $1$, $1$, $\\sqrt{2}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use the $45$-$45$-$90$ triangle with sides $1$, $1$, $\\sqrt{2}$."
+    },
+    {
+      "level": "guide",
+      "text": "The side opposite $45^\\circ$ is $1$ and the hypotenuse is $\\sqrt{2}$, so $\\sin 45^\\circ = \\frac{1}{\\sqrt{2}}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Rationalize: $\\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2} \\approx 0.707$."
+    }
+  ],
+  "explanation": [
+    "A $45$-$45$-$90$ triangle with legs of $1$ has hypotenuse $\\sqrt{2}$ by the Pythagorean theorem.",
+    "Sine is opposite over hypotenuse: $\\sin 45^\\circ = \\frac{1}{\\sqrt{2}}$.",
+    "Multiplying top and bottom by $\\sqrt{2}$ gives the standard form $\\frac{\\sqrt{2}}{2}$, about $0.707$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sine and cosine are twins here",
+      "steps": [
+        "At $45^\\circ$ the two legs are identical, so the opposite and adjacent sides are the same length.",
+        "That means $\\sin 45^\\circ = \\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$ — the only angle where they agree."
+      ]
+    }
+  ],
+  "tags": [
+    "exact-values",
+    "special-triangles"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,50 @@
+{
+  "id": "TRIG.127",
+  "domain": "TRIG",
+  "unit": 13,
+  "orderInUnit": 7,
+  "standard": "TRIG.EQ.1",
+  "difficulty": 2,
+  "prompt": "How many solutions does $2\\cos^2\\theta - \\cos\\theta - 1 = 0$ have on $0^\\circ \\le \\theta < 360^\\circ$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Let $u = \\cos\\theta$. The equation becomes the ordinary quadratic $2u^2 - u - 1 = 0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Let $u = \\cos\\theta$. The equation becomes the ordinary quadratic $2u^2 - u - 1 = 0$."
+    },
+    {
+      "level": "guide",
+      "text": "It factors as $(2u + 1)(u - 1) = 0$, so $\\cos\\theta = -\\frac{1}{2}$ or $\\cos\\theta = 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\cos\\theta = -\\frac{1}{2}$ gives $120^\\circ$ and $240^\\circ$; $\\cos\\theta = 1$ gives $0^\\circ$. That is $3$ solutions."
+    }
+  ],
+  "explanation": [
+    "Substitute $u = \\cos\\theta$ to see the quadratic: $2u^2 - u - 1 = 0$.",
+    "Factor it: $(2u + 1)(u - 1) = 0$, so $u = -\\frac{1}{2}$ or $u = 1$.",
+    "Now translate back. $\\cos\\theta = -\\frac{1}{2}$ has two solutions in the interval, $120^\\circ$ and $240^\\circ$; $\\cos\\theta = 1$ has just one, $0^\\circ$.",
+    "In total there are $3$ solutions."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why one branch gives only one answer",
+      "steps": [
+        "A value strictly between $-1$ and $1$ is hit twice per cycle, once above the axis and once below.",
+        "But $\\cos\\theta = 1$ is the very top of the cosine graph, touched only once per cycle.",
+        "Whenever a branch gives $\\pm 1$, expect one solution from it, not two."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic-form",
+    "factoring",
+    "solve"
+  ],
+  "estimatedSeconds": 75
+}

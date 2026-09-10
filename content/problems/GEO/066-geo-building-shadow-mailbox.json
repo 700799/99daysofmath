@@ -1,0 +1,48 @@
+{
+  "id": "GEO.066",
+  "domain": "GEO",
+  "unit": 7,
+  "orderInUnit": 6,
+  "standard": "GEO.SIM.1",
+  "difficulty": 2,
+  "prompt": "A $5$-foot mailbox casts a $3$-foot shadow at the same time that a nearby office building casts a $27$-foot shadow. How tall is the building, in feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "45",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Same sun, same moment: the two right triangles are similar.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same sun, same moment: the two right triangles are similar."
+    },
+    {
+      "level": "guide",
+      "text": "Write $\\frac{5}{3} = \\frac{h}{27}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3h = 135$, so $h = 45$ feet."
+    }
+  ],
+  "explanation": [
+    "The mailbox and the building both stand vertically under the same sun angle, forming similar right triangles.",
+    "Matching heights to shadows: $\\frac{5}{3} = \\frac{h}{27}$.",
+    "Cross-multiply: $3h = 5 \\times 27 = 135$, so $h = 45$ feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Scale up the shadow",
+      "steps": [
+        "The building's shadow is $27 \\div 3 = 9$ times the mailbox's shadow.",
+        "Similar figures scale everything by the same factor, so the building is $9 \\times 5 = 45$ feet tall."
+      ]
+    }
+  ],
+  "tags": [
+    "similarity",
+    "shadows",
+    "indirect-measurement"
+  ],
+  "estimatedSeconds": 60
+}

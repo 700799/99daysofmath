@@ -1,0 +1,52 @@
+{
+  "id": "TRIG.014",
+  "domain": "TRIG",
+  "unit": 2,
+  "orderInUnit": 4,
+  "standard": "TRIG.ANG.2",
+  "difficulty": 1,
+  "prompt": "Convert $45^\\circ$ to radians. Give your answer in terms of $\\pi$ — for example, type \"pi/6\" for $\\frac{\\pi}{6}$.",
+  "answerType": "expression",
+  "primaryAnswer": "pi/4",
+  "alternativeAnswers": [
+    "\\pi/4",
+    "π/4",
+    "(1/4)pi",
+    "pi / 4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Degrees to radians: multiply by $\\frac{\\pi}{180}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Degrees to radians: multiply by $\\frac{\\pi}{180}$."
+    },
+    {
+      "level": "guide",
+      "text": "$45 \\times \\frac{\\pi}{180} = \\frac{45\\pi}{180}$. Now reduce the fraction."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{45}{180} = \\frac{1}{4}$, so the answer is $\\frac{\\pi}{4}$."
+    }
+  ],
+  "explanation": [
+    "Multiply by $\\frac{\\pi}{180}$ to convert degrees into radians.",
+    "$45 \\times \\frac{\\pi}{180} = \\frac{45\\pi}{180}$.",
+    "Divide top and bottom by 45 to get $\\frac{\\pi}{4}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Halve a familiar angle",
+      "steps": [
+        "You already know $90^\\circ = \\frac{\\pi}{2}$.",
+        "$45^\\circ$ is half of that, and half of $\\frac{\\pi}{2}$ is $\\frac{\\pi}{4}$."
+      ]
+    }
+  ],
+  "tags": [
+    "radians",
+    "conversion"
+  ],
+  "estimatedSeconds": 35
+}

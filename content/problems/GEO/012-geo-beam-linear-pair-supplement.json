@@ -1,0 +1,47 @@
+{
+  "id": "GEO.012",
+  "domain": "GEO",
+  "unit": 2,
+  "orderInUnit": 2,
+  "standard": "GEO.ANG.1",
+  "difficulty": 1,
+  "prompt": "A support post meets a straight steel beam, forming a linear pair of angles on one side of the beam. If one of those angles is $110^\\circ$, what is the other, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "70",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A linear pair sits along a straight line, and a straight line measures $180^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A linear pair sits along a straight line, and a straight line measures $180^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "Compute $180 - 110$."
+    },
+    {
+      "level": "reveal",
+      "text": "$180 - 110 = 70^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Two angles that form a linear pair are supplementary: they add to $180^\\circ$.",
+    "$180 - 110 = 70$.",
+    "Check: $110 + 70 = 180$, a straight beam. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the straight beam",
+      "steps": [
+        "Lay a protractor along the beam: end to end is $180^\\circ$.",
+        "The post eats $110^\\circ$ of that, so $70^\\circ$ is left over on the other side."
+      ]
+    }
+  ],
+  "tags": [
+    "linear-pair",
+    "supplementary"
+  ],
+  "estimatedSeconds": 25
+}

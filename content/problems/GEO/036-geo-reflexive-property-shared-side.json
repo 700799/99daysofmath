@@ -1,0 +1,53 @@
+{
+  "id": "GEO.036",
+  "domain": "GEO",
+  "unit": 4,
+  "orderInUnit": 6,
+  "standard": "GEO.PROOF.1",
+  "difficulty": 2,
+  "prompt": "In a two-column proof about a bridge truss, two triangles share the side $\\overline{BD}$, and a step reads \"$\\overline{BD} \\cong \\overline{BD}$.\" Which property of congruence is the reason for that step? Answer with one word.",
+  "answerType": "short-text",
+  "primaryAnswer": "reflexive",
+  "alternativeAnswers": [
+    "reflexive property",
+    "the reflexive property",
+    "Reflexive",
+    "reflexive property of congruence"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The step says a segment is congruent to ITSELF.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The step says a segment is congruent to ITSELF."
+    },
+    {
+      "level": "guide",
+      "text": "The three properties are reflexive (itself), symmetric (flip sides), and transitive (chain through a middle)."
+    },
+    {
+      "level": "reveal",
+      "text": "A figure congruent to itself is the Reflexive Property."
+    }
+  ],
+  "explanation": [
+    "The Reflexive Property says any segment or angle is congruent to itself: $\\overline{BD} \\cong \\overline{BD}$.",
+    "It looks obvious, but in a two-column proof every statement needs a written reason — and this is the reason for a shared side.",
+    "This step is how a shared side earns its place as one of the three parts in an SSS or SAS argument."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Three properties, three pictures",
+      "steps": [
+        "Reflexive: a mirror — the figure and itself.",
+        "Symmetric: a flip — if $A \\cong B$ then $B \\cong A$. Transitive: a chain — if $A \\cong B$ and $B \\cong C$ then $A \\cong C$. A shared side is the mirror case."
+      ]
+    }
+  ],
+  "tags": [
+    "proof",
+    "reflexive-property",
+    "two-column"
+  ],
+  "estimatedSeconds": 45
+}

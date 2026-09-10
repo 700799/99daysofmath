@@ -1,0 +1,47 @@
+{
+  "id": "GEO.021",
+  "domain": "GEO",
+  "unit": 3,
+  "orderInUnit": 1,
+  "standard": "GEO.PAR.1",
+  "difficulty": 1,
+  "prompt": "Two parallel steel beams are crossed by a single diagonal brace, which acts as a transversal. One of the angles the brace makes with the upper beam measures $72^\\circ$. What is the measure, in degrees, of the corresponding angle at the lower beam?",
+  "answerType": "numeric",
+  "primaryAnswer": "72",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Corresponding angles sit in matching positions at the two crossings — same corner, one beam down.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Corresponding angles sit in matching positions at the two crossings — same corner, one beam down."
+    },
+    {
+      "level": "guide",
+      "text": "When the lines are parallel, corresponding angles are congruent."
+    },
+    {
+      "level": "reveal",
+      "text": "The corresponding angle is also $72^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Corresponding angles occupy the same relative position at each crossing (for example, upper-right at both).",
+    "When the two lines are parallel, corresponding angles are congruent.",
+    "So the matching angle at the lower beam is $72^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Slide the crossing down",
+      "steps": [
+        "Imagine sliding the upper crossing straight down the brace until it lands on the lower beam.",
+        "Because the beams are parallel, the picture lands on itself perfectly — so the matching angle has to be the same $72^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "parallel-lines",
+    "corresponding-angles"
+  ],
+  "estimatedSeconds": 30
+}

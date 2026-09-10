@@ -1,0 +1,47 @@
+{
+  "id": "GEO.005",
+  "domain": "GEO",
+  "unit": 1,
+  "orderInUnit": 5,
+  "standard": "GEO.BASIC.1",
+  "difficulty": 2,
+  "prompt": "Point $B$ lies between $A$ and $C$ on a straight steel beam. If $AB = 2x$, $BC = x + 5$, and the whole beam $AC = 20$, find $x$.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The two pieces have to add up to the whole beam: $AB + BC = AC$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The two pieces have to add up to the whole beam: $AB + BC = AC$."
+    },
+    {
+      "level": "guide",
+      "text": "Write the equation $2x + (x + 5) = 20$ and combine like terms."
+    },
+    {
+      "level": "reveal",
+      "text": "$3x + 5 = 20$, so $3x = 15$ and $x = 5$."
+    }
+  ],
+  "explanation": [
+    "Segment Addition gives $AB + BC = AC$, so $2x + x + 5 = 20$.",
+    "Combine like terms: $3x + 5 = 20$.",
+    "Subtract 5 and divide by 3: $3x = 15$, so $x = 5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the pieces",
+      "steps": [
+        "With $x = 5$: $AB = 2(5) = 10$ and $BC = 5 + 5 = 10$.",
+        "$10 + 10 = 20$, exactly the length of the beam. The value works."
+      ]
+    }
+  ],
+  "tags": [
+    "segment-addition",
+    "algebra"
+  ],
+  "estimatedSeconds": 50
+}

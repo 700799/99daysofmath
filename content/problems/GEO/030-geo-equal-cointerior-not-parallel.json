@@ -1,0 +1,83 @@
+{
+  "id": "GEO.030",
+  "domain": "GEO",
+  "unit": 3,
+  "orderInUnit": 10,
+  "standard": "GEO.PAR.1",
+  "difficulty": 3,
+  "prompt": "A tiler checks two grout lines cut by a third straight line. She finds a pair of co-interior (same-side interior) angles that BOTH measure $78^\\circ$. Are the two grout lines parallel?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "No — co-interior angles would have to add to $180^\\circ$, and $78 + 78 = 156$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Yes — the two angles are congruent, so the lines are parallel",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Yes — any two equal angles at a transversal prove lines are parallel",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "There is no way to decide without measuring a third angle",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Which parallel-line pairs are congruent, and which one is supplementary?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Which parallel-line pairs are congruent, and which one is supplementary?"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Check an easy pair: co-interior angles of $110^\\circ$ and $70^\\circ$ add to $180$, so those lines ARE parallel. Run that same addition test on $78$ and $78$."
+    },
+    {
+      "level": "guide",
+      "text": "Co-interior angles are the supplementary pair. Do these two add to $180^\\circ$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$78 + 78 = 156 \\ne 180$, so the lines are not parallel."
+    }
+  ],
+  "explanation": [
+    "On parallel lines, co-interior angles must be supplementary, summing to $180^\\circ$.",
+    "Here they sum to $78 + 78 = 156^\\circ$, which is not $180^\\circ$.",
+    "The condition fails, so the grout lines are not parallel — they tilt toward each other and would eventually meet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Where the missing degrees go",
+      "steps": [
+        "The two interior angles fall $180 - 156 = 24^\\circ$ short of a straight pairing.",
+        "Those missing $24^\\circ$ are exactly the angle at which the two grout lines would eventually meet — a real problem for a tile pattern that is supposed to stay square."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap is answering \"yes, they are congruent.\" Congruence proves parallel only for corresponding, alternate interior, or alternate exterior pairs — never for co-interior.",
+        "Before using an angle fact, name the pair first. Once you say \"co-interior,\" the test you owe is $= 180^\\circ$, and $156^\\circ$ fails it."
+      ]
+    }
+  ],
+  "tags": [
+    "parallel-lines",
+    "co-interior",
+    "proving-parallel",
+    "misconception"
+  ],
+  "estimatedSeconds": 75
+}

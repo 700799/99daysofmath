@@ -1,0 +1,52 @@
+{
+  "id": "TRIG.066",
+  "domain": "TRIG",
+  "unit": 7,
+  "orderInUnit": 6,
+  "standard": "TRIG.GRAPH.1",
+  "difficulty": 2,
+  "prompt": "What is the period of $y = \\sin(2x)$, in radians? Give your answer in terms of $\\pi$ — for example, type \"pi/3\" for $\\frac{\\pi}{3}$.",
+  "answerType": "expression",
+  "primaryAnswer": "pi",
+  "alternativeAnswers": [
+    "\\pi",
+    "π",
+    "1pi",
+    "2pi/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "For $y = \\sin(bx)$ the period is $\\frac{2\\pi}{b}$ — the $b$ squeezes the wave horizontally.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "For $y = \\sin(bx)$ the period is $\\frac{2\\pi}{b}$ — the $b$ squeezes the wave horizontally."
+    },
+    {
+      "level": "guide",
+      "text": "Here $b = 2$, so compute $\\frac{2\\pi}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{2\\pi}{2} = \\pi$."
+    }
+  ],
+  "explanation": [
+    "The basic sine wave has period $2\\pi$ radians.",
+    "Multiplying the input by $b$ compresses the graph, giving period $\\frac{2\\pi}{b}$.",
+    "With $b = 2$: period $= \\frac{2\\pi}{2} = \\pi$ — the wave completes two full cycles in the space where $y = \\sin x$ makes one."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think about how fast the input runs",
+      "steps": [
+        "Inside the sine, $2x$ reaches $2\\pi$ when $x$ is only $\\pi$.",
+        "The sine finishes its cycle as soon as its input completes $2\\pi$, so the cycle is done at $x = \\pi$."
+      ]
+    }
+  ],
+  "tags": [
+    "period",
+    "graphing"
+  ],
+  "estimatedSeconds": 55
+}

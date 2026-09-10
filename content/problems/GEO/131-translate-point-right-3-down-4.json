@@ -1,0 +1,51 @@
+{
+  "id": "GEO.131",
+  "domain": "GEO",
+  "unit": 14,
+  "orderInUnit": 1,
+  "standard": "GEO.TRANS.1",
+  "difficulty": 1,
+  "prompt": "A game piece sits at $(2, 5)$. It is translated $3$ units right and $4$ units down. Write its new coordinates in the form (x, y).",
+  "answerType": "short-text",
+  "primaryAnswer": "(5, 1)",
+  "alternativeAnswers": [
+    "(5,1)",
+    "5, 1",
+    "5,1"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Right changes only $x$; down changes only $y$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Right changes only $x$; down changes only $y$."
+    },
+    {
+      "level": "guide",
+      "text": "Right $3$: $2 + 3 = 5$. Down $4$: $5 - 4 = 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "The piece lands at $(5, 1)$."
+    }
+  ],
+  "explanation": [
+    "A translation slides a point without turning or resizing it.",
+    "Moving right adds to $x$: $2 + 3 = 5$. Moving down subtracts from $y$: $5 - 4 = 1$.",
+    "The image is $(5, 1)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk it on the grid",
+      "steps": [
+        "Start at $(2, 5)$ and take three steps right — you are at $(5, 5)$.",
+        "Now take four steps down to $(5, 1)$. Same answer, no formula needed."
+      ]
+    }
+  ],
+  "tags": [
+    "translation",
+    "coordinate-geometry"
+  ],
+  "estimatedSeconds": 35
+}

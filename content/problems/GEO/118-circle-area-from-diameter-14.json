@@ -1,0 +1,48 @@
+{
+  "id": "GEO.118",
+  "domain": "GEO",
+  "unit": 12,
+  "orderInUnit": 8,
+  "standard": "GEO.AREA.1",
+  "difficulty": 2,
+  "prompt": "A round pizza has a diameter of $14$ inches. Using $\\pi \\approx 3.14$, what is its area in square inches, rounded to the nearest whole number?",
+  "answerType": "numeric",
+  "primaryAnswer": "154",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The formula needs the radius, but you were handed the diameter.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The formula needs the radius, but you were handed the diameter."
+    },
+    {
+      "level": "guide",
+      "text": "Radius $= 14 \\div 2 = 7$ inches. Now use $A = \\pi r^2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$A \\approx 3.14 \\times 49 \\approx 153.86 \\approx 154$ square inches."
+    }
+  ],
+  "explanation": [
+    "Halve the diameter to get the radius: $r = 7$ inches.",
+    "Square it: $7^2 = 49$.",
+    "Multiply by $\\pi$: $3.14 \\times 49 = 153.86$, which rounds to $154$ square inches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the halving matters so much",
+      "steps": [
+        "Skipping the halving means using $r = 14$, giving $3.14 \\times 196 \\approx 615$ sq in — four times too big.",
+        "Squaring doubles every mistake: a radius that is twice too large makes an area four times too large. Circle the word \"diameter\" the moment you read it."
+      ]
+    }
+  ],
+  "tags": [
+    "area",
+    "circle",
+    "diameter-vs-radius"
+  ],
+  "estimatedSeconds": 55
+}

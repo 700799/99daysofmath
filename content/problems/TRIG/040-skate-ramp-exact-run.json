@@ -1,0 +1,65 @@
+{
+  "id": "TRIG.040",
+  "domain": "TRIG",
+  "unit": 4,
+  "orderInUnit": 10,
+  "standard": "TRIG.RT.2",
+  "difficulty": 3,
+  "prompt": "A skateboard ramp is a $30$-$60$-$90$ triangle. The sloped surface (the hypotenuse) is $16$ ft long and it meets the ground at $30^\\circ$. How long is the horizontal base of the ramp? Give the exact value, for example \"9sqrt(3)\" for $9\\sqrt{3}$.",
+  "answerType": "expression",
+  "primaryAnswer": "8sqrt(3)",
+  "alternativeAnswers": [
+    "8*sqrt(3)",
+    "8 sqrt(3)",
+    "8√3",
+    "8\\sqrt{3}"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the short leg first: it is opposite the $30^\\circ$ angle, so it is half the hypotenuse.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the short leg first: it is opposite the $30^\\circ$ angle, so it is half the hypotenuse."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with hypotenuse $4$: half of it is the short leg, $2$, and the longer leg is $2\\sqrt{3}$. Your ramp is that same triangle scaled up to hypotenuse $16$."
+    },
+    {
+      "level": "guide",
+      "text": "Half of $16$ is $8$ — that is the ramp's height. The base is the LONGER leg, which is the short leg times $\\sqrt{3}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Base $= 8\\sqrt{3} \\approx 13.9$ ft."
+    }
+  ],
+  "explanation": [
+    "The hypotenuse is $16$ ft, so the scale factor on the ratio $1 : \\sqrt{3} : 2$ is $\\frac{16}{2} = 8$.",
+    "The height (opposite the $30^\\circ$ angle) is $1 \\times 8 = 8$ ft.",
+    "The horizontal base is the longer leg: $\\sqrt{3} \\times 8 = 8\\sqrt{3} \\approx 13.9$ ft."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use cosine instead",
+      "steps": [
+        "The base is adjacent to the $30^\\circ$ angle, so base $= 16\\cos 30^\\circ$.",
+        "$16 \\times \\frac{\\sqrt{3}}{2} = 8\\sqrt{3}$ — the same answer through a different door."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is $8$ — the number you get first, but that is the ramp's HEIGHT, not its base. The short leg always sits opposite the small angle, and $30^\\circ$ is at the ground, so the short side is vertical.",
+        "Label the two legs before you answer: shorter leg faces the $30^\\circ$ angle, longer leg faces the $60^\\circ$ angle. The base of a gently sloped ramp should be much longer than its height, and $8\\sqrt{3} \\approx 13.9$ ft is."
+      ]
+    }
+  ],
+  "tags": [
+    "special-triangles",
+    "30-60-90",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.043",
+  "domain": "TRIG",
+  "unit": 5,
+  "orderInUnit": 3,
+  "standard": "TRIG.CIRC.1",
+  "difficulty": 1,
+  "prompt": "On the unit circle, what is the $y$-coordinate of the point at $90^\\circ$? (This value is $\\sin 90^\\circ$.)",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$90^\\circ$ is a quarter turn, which lands on the positive $y$-axis.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$90^\\circ$ is a quarter turn, which lands on the positive $y$-axis."
+    },
+    {
+      "level": "guide",
+      "text": "The circle has radius 1, so that top point is $(0, 1)$."
+    },
+    {
+      "level": "reveal",
+      "text": "The $y$-coordinate is $1$, so $\\sin 90^\\circ = 1$."
+    }
+  ],
+  "explanation": [
+    "A quarter turn from the positive $x$-axis lands straight up on the positive $y$-axis.",
+    "Since the radius is 1, that point is exactly $(0, 1)$.",
+    "Sine is the $y$-coordinate, so $\\sin 90^\\circ = 1$ — the largest value sine ever reaches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The ceiling of sine",
+      "steps": [
+        "Every point on the unit circle is 1 unit from the center, so no point can be higher than 1.",
+        "The top of the circle, at $90^\\circ$, is where sine hits that ceiling."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "exact-values"
+  ],
+  "estimatedSeconds": 25
+}

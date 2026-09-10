@@ -1,0 +1,47 @@
+{
+  "id": "GEO.051",
+  "domain": "GEO",
+  "unit": 6,
+  "orderInUnit": 1,
+  "standard": "GEO.CONG.2",
+  "difficulty": 1,
+  "prompt": "A triangular sail has two corner angles measuring $40^\\circ$ and $75^\\circ$. What is the measure of the third angle, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "65",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The three angles of any triangle add to the same total.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The three angles of any triangle add to the same total."
+    },
+    {
+      "level": "guide",
+      "text": "That total is $180^\\circ$, so compute $180 - 40 - 75$."
+    },
+    {
+      "level": "reveal",
+      "text": "$180 - 115 = 65^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The Triangle Sum Theorem says the three interior angles add to $180^\\circ$.",
+    "Add what you know: $40 + 75 = 115$.",
+    "Subtract from the total: $180 - 115 = 65^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Tear the corners off",
+      "steps": [
+        "Cut a paper triangle and tear off all three corners.",
+        "Slide them together point to point and they form a perfectly straight line — $180^\\circ$, every time."
+      ]
+    }
+  ],
+  "tags": [
+    "triangle-sum",
+    "angles"
+  ],
+  "estimatedSeconds": 25
+}

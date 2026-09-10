@@ -1,0 +1,70 @@
+{
+  "id": "GEO.064",
+  "domain": "GEO",
+  "unit": 7,
+  "orderInUnit": 4,
+  "standard": "GEO.SIM.1",
+  "difficulty": 1,
+  "prompt": "A blueprint shows a scaled-down version of a real bridge truss, so the two figures are similar. Which statement is true about similar figures?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Corresponding angles are congruent and corresponding sides are proportional",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Corresponding angles are proportional and corresponding sides are congruent",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Both corresponding angles and corresponding sides are congruent",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Corresponding sides are proportional, but the angles can be anything",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Scaling a drawing changes lengths but never tilts the corners.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Scaling a drawing changes lengths but never tilts the corners."
+    },
+    {
+      "level": "guide",
+      "text": "Angles stay exactly the same size; sides all shrink by the same ratio."
+    },
+    {
+      "level": "reveal",
+      "text": "Angles congruent, sides proportional — choice A."
+    }
+  ],
+  "explanation": [
+    "Similar figures have the same shape but not necessarily the same size.",
+    "Same shape means every pair of corresponding angles is congruent — angles do not scale.",
+    "Different size means every pair of corresponding sides is in the same ratio, the scale factor. Choice C describes congruent figures, a special case where the scale factor is 1."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think of a photocopier",
+      "steps": [
+        "Copy a drawing at 50% and every length halves.",
+        "But a right angle stays a right angle — no angle is ever \"halved\" by the copier. That is the whole idea of similarity."
+      ]
+    }
+  ],
+  "tags": [
+    "similarity",
+    "proportion",
+    "vocabulary"
+  ],
+  "estimatedSeconds": 45
+}

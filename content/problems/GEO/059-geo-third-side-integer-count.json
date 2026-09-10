@@ -1,0 +1,83 @@
+{
+  "id": "GEO.059",
+  "domain": "GEO",
+  "unit": 6,
+  "orderInUnit": 9,
+  "standard": "GEO.CONG.2",
+  "difficulty": 3,
+  "prompt": "Two sides of a triangular brace measure $7$ ft and $12$ ft. If the third side must be a whole number of feet, how many different lengths are possible?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$13$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$14$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$12$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$19$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The third side has both an upper and a lower limit.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The third side has both an upper and a lower limit."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try tiny numbers: with sides $2$ and $3$, the third side satisfies $1 < s < 5$, so $s$ is $2$, $3$ or $4$ — that is $4 - 2 + 1 = 3$ values. Build the range and count the same way with $7$ and $12$."
+    },
+    {
+      "level": "guide",
+      "text": "It must be less than $12 + 7 = 19$ and greater than $12 - 7 = 5$."
+    },
+    {
+      "level": "reveal",
+      "text": "Whole numbers strictly between 5 and 19 run from 6 to 18, which is $18 - 6 + 1 = 13$ values."
+    }
+  ],
+  "explanation": [
+    "The Triangle Inequality gives a range: the third side $s$ satisfies $12 - 7 < s < 12 + 7$, so $5 < s < 19$.",
+    "Both endpoints are excluded — at exactly 5 or exactly 19 the triangle flattens into a line.",
+    "The whole numbers that fit are $6, 7, 8, \\dots, 18$.",
+    "Count them: $18 - 6 + 1 = 13$ possible lengths."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the ends carefully",
+      "steps": [
+        "Counting a run of whole numbers means subtracting and then adding 1, because both ends are included in the run.",
+        "From 6 to 18: $18 - 6 = 12$ gaps, but $12 + 1 = 13$ numbers."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is 14, from forgetting the \"add 1 at the end\" rule or from sneaking 5 or 19 into the list.",
+        "Remember the inequality is strict: a side of exactly 19 ft would lie flat along the other two, and a side of exactly 5 ft would too. Neither makes a triangle, so the count runs 6 through 18: 13 lengths."
+      ]
+    }
+  ],
+  "tags": [
+    "triangle-inequality",
+    "counting",
+    "range"
+  ],
+  "estimatedSeconds": 80
+}

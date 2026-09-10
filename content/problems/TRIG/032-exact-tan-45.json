@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.032",
+  "domain": "TRIG",
+  "unit": 4,
+  "orderInUnit": 2,
+  "standard": "TRIG.RT.2",
+  "difficulty": 1,
+  "prompt": "What is the exact value of $\\tan 45^\\circ$?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A $45$-$45$-$90$ triangle has two legs of the SAME length.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A $45$-$45$-$90$ triangle has two legs of the SAME length."
+    },
+    {
+      "level": "guide",
+      "text": "Tangent is opposite over adjacent, and here those two legs are equal."
+    },
+    {
+      "level": "reveal",
+      "text": "Equal legs make the ratio $\\frac{1}{1} = 1$, so $\\tan 45^\\circ = 1$."
+    }
+  ],
+  "explanation": [
+    "A $45$-$45$-$90$ triangle is an isosceles right triangle, so its two legs are equal.",
+    "Tangent is $\\frac{\\text{opposite}}{\\text{adjacent}}$, and both of those are legs of the same length.",
+    "Any number divided by itself is 1, so $\\tan 45^\\circ = 1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As a slope",
+      "steps": [
+        "Tangent of an angle is the slope of a line making that angle with the horizontal.",
+        "A $45^\\circ$ line rises 1 for every 1 it runs, which is a slope of exactly 1."
+      ]
+    }
+  ],
+  "tags": [
+    "exact-values",
+    "tangent"
+  ],
+  "estimatedSeconds": 30
+}

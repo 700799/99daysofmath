@@ -1,0 +1,48 @@
+{
+  "id": "GEO.106",
+  "domain": "GEO",
+  "unit": 11,
+  "orderInUnit": 6,
+  "standard": "GEO.CIRC.1",
+  "difficulty": 2,
+  "prompt": "A circle has radius $13$ cm. A chord of the circle is $24$ cm long. How far is the chord from the center of the circle, in centimeters?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Draw the perpendicular from the center to the chord — it always cuts the chord exactly in half.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Draw the perpendicular from the center to the chord — it always cuts the chord exactly in half."
+    },
+    {
+      "level": "guide",
+      "text": "That makes a right triangle with hypotenuse $13$ (a radius) and one leg $24 \\div 2 = 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$d^2 = 13^2 - 12^2 = 169 - 144 = 25$, so $d = 5$ cm."
+    }
+  ],
+  "explanation": [
+    "A radius drawn perpendicular to a chord bisects that chord, so half the chord is $12$ cm.",
+    "Connect the center to an endpoint of the chord: that radius is $13$ cm and forms a right triangle with legs $12$ and $d$.",
+    "Solve $12^2 + d^2 = 13^2$: $d^2 = 25$, so the chord sits $5$ cm from the center."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The 5-12-13 family again",
+      "steps": [
+        "Half-chord $12$, radius $13$ — that is the $5$-$12$-$13$ triple you met in right triangles.",
+        "The missing leg is $5$ with no calculation. Circle problems lean on the Pythagorean theorem constantly, so those triples keep paying off."
+      ]
+    }
+  ],
+  "tags": [
+    "chord",
+    "pythagorean-theorem",
+    "circle"
+  ],
+  "estimatedSeconds": 65
+}

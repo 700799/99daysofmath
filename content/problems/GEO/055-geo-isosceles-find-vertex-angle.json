@@ -1,0 +1,48 @@
+{
+  "id": "GEO.055",
+  "domain": "GEO",
+  "unit": 6,
+  "orderInUnit": 5,
+  "standard": "GEO.CONG.2",
+  "difficulty": 2,
+  "prompt": "A tent forms an isosceles triangle with the ground. Each base angle — where a wall meets the ground — measures $52^\\circ$. What is the measure, in degrees, of the vertex angle at the peak?",
+  "answerType": "numeric",
+  "primaryAnswer": "76",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Both base angles are $52^\\circ$, so together they use up $104^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Both base angles are $52^\\circ$, so together they use up $104^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "Subtract that from the triangle total: $180 - 104$."
+    },
+    {
+      "level": "reveal",
+      "text": "$180 - 104 = 76^\\circ$."
+    }
+  ],
+  "explanation": [
+    "An isosceles triangle has two congruent base angles, both $52^\\circ$ here.",
+    "Together they measure $2 \\times 52 = 104^\\circ$.",
+    "The peak takes what remains of the $180^\\circ$ total: $180 - 104 = 76^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity-check the shape",
+      "steps": [
+        "A $76^\\circ$ peak is wider than each $52^\\circ$ base angle, so the tent is a bit squat — that matches a tent with a broad base.",
+        "Check the total: $52 + 52 + 76 = 180$. ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "isosceles",
+    "triangle-sum",
+    "vertex-angle"
+  ],
+  "estimatedSeconds": 45
+}

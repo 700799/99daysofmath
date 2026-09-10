@@ -1,0 +1,69 @@
+{
+  "id": "GEO.078",
+  "domain": "GEO",
+  "unit": 8,
+  "orderInUnit": 8,
+  "standard": "GEO.RT.1",
+  "difficulty": 2,
+  "prompt": "A wheelchair-ramp support is a $30^\\circ$-$60^\\circ$-$90^\\circ$ triangle whose hypotenuse is $20$ ft. How long is the side opposite the $30^\\circ$ angle?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$10$ ft",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$10\\sqrt{3}$ ft (about $17.3$ ft)",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$20\\sqrt{3}$ ft (about $34.6$ ft)",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$40$ ft",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The side opposite the smallest angle is the shortest side.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The side opposite the smallest angle is the shortest side."
+    },
+    {
+      "level": "guide",
+      "text": "In a $30$-$60$-$90$ triangle, the hypotenuse is exactly twice the side opposite $30^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "Half of $20$ is $10$ ft."
+    }
+  ],
+  "explanation": [
+    "Match each side to its opposite angle: the shortest side faces the $30^\\circ$ angle.",
+    "The ratio short leg : long leg : hypotenuse is $1 : \\sqrt{3} : 2$.",
+    "Since the hypotenuse is $20$, the short leg is $20 \\div 2 = 10$ ft. Choice A."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Reality check the size",
+      "steps": [
+        "Every leg must be shorter than the $20$-ft hypotenuse, which rules out C and D on sight.",
+        "Between $10$ and $17.3$, the one facing the *small* angle must be the *small* one: $10$ ft."
+      ]
+    }
+  ],
+  "tags": [
+    "special-right-triangle",
+    "30-60-90"
+  ],
+  "estimatedSeconds": 50
+}

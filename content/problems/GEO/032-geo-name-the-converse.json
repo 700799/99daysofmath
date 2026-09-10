@@ -1,0 +1,51 @@
+{
+  "id": "GEO.032",
+  "domain": "GEO",
+  "unit": 4,
+  "orderInUnit": 2,
+  "standard": "GEO.PROOF.1",
+  "difficulty": 1,
+  "prompt": "Start with \"If a figure is a square, then it is a rectangle.\" Now swap the hypothesis and the conclusion to get \"If a figure is a rectangle, then it is a square.\" What is this new statement called?",
+  "answerType": "short-text",
+  "primaryAnswer": "converse",
+  "alternativeAnswers": [
+    "the converse",
+    "Converse"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The three related statements are the converse, the inverse, and the contrapositive. Only one of them is a pure swap.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The three related statements are the converse, the inverse, and the contrapositive. Only one of them is a pure swap."
+    },
+    {
+      "level": "guide",
+      "text": "Swapping (with no negating) makes the converse; negating both parts makes the inverse."
+    },
+    {
+      "level": "reveal",
+      "text": "It is the converse."
+    }
+  ],
+  "explanation": [
+    "Given \"if $p$, then $q$,\" the converse is \"if $q$, then $p$\" — the two parts trade places.",
+    "Nothing is negated here, so it is not the inverse or the contrapositive.",
+    "Notice this converse is FALSE (a rectangle need not be a square), even though the original is true — a converse is a brand-new claim that has to be checked on its own."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Converse means \"reverse\"",
+      "steps": [
+        "Converse and reverse sound alike, and that is the memory hook: the converse reverses the order of the two parts.",
+        "Inverse \"inverts\" (negates) both parts; the contrapositive does both — swap AND negate."
+      ]
+    }
+  ],
+  "tags": [
+    "converse",
+    "conditional",
+    "logic"
+  ],
+  "estimatedSeconds": 35
+}

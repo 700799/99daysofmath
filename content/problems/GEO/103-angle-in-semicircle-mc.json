@@ -1,0 +1,70 @@
+{
+  "id": "GEO.103",
+  "domain": "GEO",
+  "unit": 11,
+  "orderInUnit": 3,
+  "standard": "GEO.CIRC.1",
+  "difficulty": 1,
+  "prompt": "Points $A$ and $B$ are the ends of a diameter of a circle, and $C$ is another point on the circle. What is the measure of $\\angle ACB$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$45^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$60^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$90^\\circ$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$180^\\circ$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$\\angle ACB$ is an inscribed angle — its vertex $C$ sits on the circle and it intercepts the arc from $A$ to $B$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$\\angle ACB$ is an inscribed angle — its vertex $C$ sits on the circle and it intercepts the arc from $A$ to $B$."
+    },
+    {
+      "level": "guide",
+      "text": "Since $\\overline{AB}$ is a diameter, the intercepted arc is a semicircle: $180^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "Half of $180^\\circ$ is $90^\\circ$ — a right angle, no matter where $C$ sits."
+    }
+  ],
+  "explanation": [
+    "A diameter splits the circle into two $180^\\circ$ arcs.",
+    "$\\angle ACB$ is inscribed and intercepts one of those semicircular arcs.",
+    "Inscribed angle $=$ half the arc $= \\frac{180}{2} = 90^\\circ$. Choice C."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Slide C around and watch",
+      "steps": [
+        "Move $C$ anywhere on the upper half of the circle — near $A$, near $B$, or right on top.",
+        "The triangle changes shape completely, but the angle at $C$ stays a perfect right angle every time. That is Thales' theorem."
+      ]
+    }
+  ],
+  "tags": [
+    "inscribed-angle",
+    "semicircle",
+    "thales"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,70 @@
+{
+  "id": "GEO.027",
+  "domain": "GEO",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "GEO.PAR.1",
+  "difficulty": 2,
+  "prompt": "A carpenter wants to prove that two rafters are parallel. She measures angles where a single straight strut crosses both rafters. Which measurement would PROVE the rafters are parallel?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "A pair of alternate interior angles each measure $63^\\circ$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "A pair of co-interior (same-side interior) angles each measure $63^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "A pair of alternate interior angles measure $63^\\circ$ and $117^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The two rafters are cut to the same length",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Each parallel-line theorem has a converse that works backwards: measure the angles, conclude the lines are parallel.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each parallel-line theorem has a converse that works backwards: measure the angles, conclude the lines are parallel."
+    },
+    {
+      "level": "guide",
+      "text": "Alternate interior angles must be CONGRUENT for parallel lines; co-interior angles must be SUPPLEMENTARY."
+    },
+    {
+      "level": "reveal",
+      "text": "Two congruent alternate interior angles ($63^\\circ$ each) prove the rafters are parallel."
+    }
+  ],
+  "explanation": [
+    "The Converse of the Alternate Interior Angles Theorem says: if alternate interior angles are congruent, the lines are parallel.",
+    "Choice A gives exactly that — two congruent alternate interior angles.",
+    "Choice B fails because co-interior angles would need to add to $180^\\circ$, and $63 + 63 = 126$. Choice C has alternate interior angles that are not equal, and choice D says nothing about direction — two boards of equal length can point any which way."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Flip the theorem around",
+      "steps": [
+        "Forward: parallel lines ⇒ congruent alternate interior angles.",
+        "Backward (the converse): congruent alternate interior angles ⇒ parallel lines. Carpenters use the backward version, because they can measure angles but cannot measure \"forever.\""
+      ]
+    }
+  ],
+  "tags": [
+    "parallel-lines",
+    "converse",
+    "proving-parallel"
+  ],
+  "estimatedSeconds": 55
+}

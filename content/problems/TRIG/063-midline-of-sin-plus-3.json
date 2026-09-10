@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.063",
+  "domain": "TRIG",
+  "unit": 7,
+  "orderInUnit": 3,
+  "standard": "TRIG.GRAPH.1",
+  "difficulty": 1,
+  "prompt": "What is the midline of $y = \\sin x + 3$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$y = 0$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$y = 1$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$y = 3$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$y = -3$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The midline is the horizontal line the wave oscillates around.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The midline is the horizontal line the wave oscillates around."
+    },
+    {
+      "level": "guide",
+      "text": "Adding 3 lifts the whole graph of $y = \\sin x$ upward by 3 units."
+    },
+    {
+      "level": "reveal",
+      "text": "The wave now oscillates around $y = 3$."
+    }
+  ],
+  "explanation": [
+    "$y = \\sin x$ oscillates around the line $y = 0$, the $x$-axis.",
+    "Adding 3 to every output shifts the entire curve up 3 units.",
+    "The new center line is $y = 3$, with the wave running from $2$ up to $4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Average the high and low",
+      "steps": [
+        "The highest point is $1 + 3 = 4$ and the lowest is $-1 + 3 = 2$.",
+        "The midline sits halfway between: $\\frac{4 + 2}{2} = 3$, so the midline is $y = 3$."
+      ]
+    }
+  ],
+  "tags": [
+    "midline",
+    "graphing",
+    "transformations"
+  ],
+  "estimatedSeconds": 35
+}

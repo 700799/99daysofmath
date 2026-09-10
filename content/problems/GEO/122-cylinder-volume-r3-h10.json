@@ -1,0 +1,51 @@
+{
+  "id": "GEO.122",
+  "domain": "GEO",
+  "unit": 13,
+  "orderInUnit": 2,
+  "standard": "GEO.VOL.1",
+  "difficulty": 1,
+  "prompt": "A cylindrical can has radius $3$ in and height $10$ in. Write its exact volume in terms of $\\pi$ (for example, write $7\\pi$ as 7pi).",
+  "answerType": "expression",
+  "primaryAnswer": "90pi",
+  "alternativeAnswers": [
+    "90*pi",
+    "90 pi",
+    "90π"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A cylinder is a stack of identical circles: $V = \\pi r^2 h$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A cylinder is a stack of identical circles: $V = \\pi r^2 h$."
+    },
+    {
+      "level": "guide",
+      "text": "The circular base has area $\\pi(3)^2 = 9\\pi$ square inches."
+    },
+    {
+      "level": "reveal",
+      "text": "Multiply by the height: $9\\pi \\times 10 = 90\\pi$ cubic inches."
+    }
+  ],
+  "explanation": [
+    "Base area: $\\pi r^2 = \\pi(3)^2 = 9\\pi$ sq in.",
+    "Volume is base area times height: $9\\pi \\times 10$.",
+    "$V = 90\\pi$ cubic inches (about $282.7$)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Base times height, always",
+      "steps": [
+        "Every prism and cylinder follows the same rule: area of the base, times how tall it is.",
+        "For a box the base is a rectangle; for a can it is a circle. Same idea, different base formula."
+      ]
+    }
+  ],
+  "tags": [
+    "volume",
+    "cylinder"
+  ],
+  "estimatedSeconds": 45
+}

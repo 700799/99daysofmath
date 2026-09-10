@@ -1,0 +1,54 @@
+{
+  "id": "GEO.076",
+  "domain": "GEO",
+  "unit": 8,
+  "orderInUnit": 6,
+  "standard": "GEO.RT.1",
+  "difficulty": 2,
+  "prompt": "A $30^\\circ$-$60^\\circ$-$90^\\circ$ triangle has hypotenuse $12$. Write the exact length of the longer leg (the side opposite the $60^\\circ$ angle) in simplest radical form.",
+  "answerType": "expression",
+  "primaryAnswer": "6sqrt(3)",
+  "alternativeAnswers": [
+    "6*sqrt(3)",
+    "6 sqrt(3)",
+    "6sqrt3",
+    "6√3",
+    "6 * sqrt(3)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "In a $30$-$60$-$90$ triangle the sides go short leg, short leg $\\times \\sqrt{3}$, short leg $\\times 2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "In a $30$-$60$-$90$ triangle the sides go short leg, short leg $\\times \\sqrt{3}$, short leg $\\times 2$."
+    },
+    {
+      "level": "guide",
+      "text": "The hypotenuse is twice the short leg, so the short leg is $12 \\div 2 = 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "The longer leg is $6\\sqrt{3}$."
+    }
+  ],
+  "explanation": [
+    "Find the short leg first: it is always half the hypotenuse, so $12 \\div 2 = 6$.",
+    "The longer leg is the short leg times $\\sqrt{3}$.",
+    "So the longer leg is $6\\sqrt{3}$ (about $10.4$)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Where the ratio comes from",
+      "steps": [
+        "Fold an equilateral triangle of side $12$ in half — the fold is the height and you get a $30$-$60$-$90$ triangle with hypotenuse $12$ and short leg $6$.",
+        "The fold line satisfies $6^2 + h^2 = 12^2$, so $h^2 = 108$ and $h = \\sqrt{108} = 6\\sqrt{3}$."
+      ]
+    }
+  ],
+  "tags": [
+    "special-right-triangle",
+    "30-60-90",
+    "radicals"
+  ],
+  "estimatedSeconds": 55
+}

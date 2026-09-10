@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.027",
+  "domain": "TRIG",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "TRIG.RT.1",
+  "difficulty": 2,
+  "prompt": "Standing $50$ ft from the base of a tree, you measure the angle of elevation to the top as $38^\\circ$. How tall is the tree? Round to the nearest tenth of a foot.",
+  "answerType": "numeric",
+  "primaryAnswer": "39.1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $50$ ft on the ground is adjacent to the angle, and the tree height is opposite it.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $50$ ft on the ground is adjacent to the angle, and the tree height is opposite it."
+    },
+    {
+      "level": "guide",
+      "text": "Opposite and adjacent means tangent: $\\tan 38^\\circ = \\frac{h}{50}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$h = 50\\tan 38^\\circ \\approx 50(0.7813) \\approx 39.1$ ft."
+    }
+  ],
+  "explanation": [
+    "Angle of elevation is measured up from horizontal, so the $50$ ft ground distance is the adjacent side.",
+    "The tree height is opposite, so use tangent: $\\tan 38^\\circ = \\frac{h}{50}$.",
+    "Multiply: $h = 50\\tan 38^\\circ \\approx 39.1$ ft."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read the angle as a slope",
+      "steps": [
+        "$\\tan 38^\\circ \\approx 0.78$ says the line of sight climbs about $0.78$ ft for every 1 ft you move toward the tree.",
+        "Over 50 ft of ground, that is $50 \\times 0.78 \\approx 39$ ft of climb — the height of the tree."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent",
+    "angle-of-elevation"
+  ],
+  "estimatedSeconds": 60
+}

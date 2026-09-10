@@ -1,0 +1,71 @@
+{
+  "id": "TRIG.085",
+  "domain": "TRIG",
+  "unit": 9,
+  "orderInUnit": 5,
+  "standard": "TRIG.GRAPH.3",
+  "difficulty": 2,
+  "prompt": "Where are the vertical asymptotes of $y = \\tan x$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "At $x = \\frac{\\pi}{2} + k\\pi$ for every integer $k$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "At $x = k\\pi$ for every integer $k$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "At $x = \\frac{\\pi}{4} + k\\pi$ for every integer $k$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "It has no vertical asymptotes",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "$\\tan x = \\frac{\\sin x}{\\cos x}$, and a fraction blows up when its DENOMINATOR is zero.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$\\tan x = \\frac{\\sin x}{\\cos x}$, and a fraction blows up when its DENOMINATOR is zero."
+    },
+    {
+      "level": "guide",
+      "text": "So ask: for which $x$ is $\\cos x = 0$?"
+    },
+    {
+      "level": "reveal",
+      "text": "Cosine is zero at $\\frac{\\pi}{2}$ and then every $\\pi$ after that: $x = \\frac{\\pi}{2} + k\\pi$."
+    }
+  ],
+  "explanation": [
+    "Write tangent as $\\frac{\\sin x}{\\cos x}$.",
+    "The function is undefined exactly where $\\cos x = 0$, which happens at $\\frac{\\pi}{2}$, $\\frac{3\\pi}{2}$, $-\\frac{\\pi}{2}$, and so on.",
+    "All of those are captured by $x = \\frac{\\pi}{2} + k\\pi$, and the graph shoots off to infinity at each one."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A vertical line has no slope",
+      "steps": [
+        "$\\tan x$ is the slope of the ray at angle $x$.",
+        "At $90^\\circ$ that ray is straight up, and a vertical line has no slope at all.",
+        "That undefined slope is exactly the asymptote — and it repeats every half-turn."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent",
+    "asymptotes",
+    "domain"
+  ],
+  "estimatedSeconds": 50
+}

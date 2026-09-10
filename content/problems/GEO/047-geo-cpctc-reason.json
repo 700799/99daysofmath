@@ -1,0 +1,52 @@
+{
+  "id": "GEO.047",
+  "domain": "GEO",
+  "unit": 5,
+  "orderInUnit": 7,
+  "standard": "GEO.CONG.1",
+  "difficulty": 2,
+  "prompt": "In a proof, a student first shows $\\triangle ABC \\cong \\triangle DEF$ by SAS, then writes \"therefore $\\overline{AC} \\cong \\overline{DF}$.\" What is the standard abbreviation for the reason on that second step?",
+  "answerType": "short-text",
+  "primaryAnswer": "CPCTC",
+  "alternativeAnswers": [
+    "cpctc",
+    "C.P.C.T.C.",
+    "corresponding parts of congruent triangles are congruent"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The reason is a five-letter abbreviation that starts with C.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The reason is a five-letter abbreviation that starts with C."
+    },
+    {
+      "level": "guide",
+      "text": "It stands for \"Corresponding Parts of Congruent Triangles are Congruent.\""
+    },
+    {
+      "level": "reveal",
+      "text": "The reason is CPCTC."
+    }
+  ],
+  "explanation": [
+    "CPCTC stands for \"Corresponding Parts of Congruent Triangles are Congruent.\"",
+    "It is the payoff step: once whole triangles are proven congruent, EVERY matching pair of sides and angles is congruent too.",
+    "Order matters — the congruence $\\triangle ABC \\cong \\triangle DEF$ pairs $A$ with $D$ and $C$ with $F$, which is what makes $\\overline{AC} \\cong \\overline{DF}$ the right conclusion."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Congruence first, parts second",
+      "steps": [
+        "You may only use CPCTC AFTER you have proven the triangles congruent — never as your reason for proving them congruent.",
+        "The order in a proof is always: three parts ⇒ congruent triangles (SSS/SAS/ASA/AAS/HL) ⇒ any other part you want (CPCTC)."
+      ]
+    }
+  ],
+  "tags": [
+    "CPCTC",
+    "proof",
+    "congruence"
+  ],
+  "estimatedSeconds": 50
+}

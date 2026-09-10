@@ -1,0 +1,53 @@
+{
+  "id": "TRIG.102",
+  "domain": "TRIG",
+  "unit": 11,
+  "orderInUnit": 2,
+  "standard": "TRIG.IDENT.1",
+  "difficulty": 1,
+  "prompt": "Simplify $\\frac{\\sin\\theta}{\\cos\\theta}$ to a single trig function. Write your answer like \"tan(theta)\".",
+  "answerType": "expression",
+  "primaryAnswer": "tan(theta)",
+  "alternativeAnswers": [
+    "tan theta",
+    "tantheta",
+    "tan(x)",
+    "tanθ",
+    "tan(θ)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "This exact fraction has its own name — it is one of the two quotient identities.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This exact fraction has its own name — it is one of the two quotient identities."
+    },
+    {
+      "level": "guide",
+      "text": "Sine over cosine is tangent; cosine over sine is cotangent."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta$."
+    }
+  ],
+  "explanation": [
+    "The quotient identity says $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$.",
+    "So the expression is already a single function in disguise: it is $\\tan\\theta$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check it with a triangle",
+      "steps": [
+        "With hypotenuse $h$, $\\sin\\theta = \\frac{\\text{opp}}{h}$ and $\\cos\\theta = \\frac{\\text{adj}}{h}$.",
+        "Dividing them, the $h$ cancels: $\\frac{\\text{opp}/h}{\\text{adj}/h} = \\frac{\\text{opp}}{\\text{adj}}$.",
+        "Opposite over adjacent is the definition of tangent."
+      ]
+    }
+  ],
+  "tags": [
+    "quotient-identity",
+    "simplify"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.106",
+  "domain": "TRIG",
+  "unit": 11,
+  "orderInUnit": 6,
+  "standard": "TRIG.IDENT.1",
+  "difficulty": 2,
+  "prompt": "Which expression is equal to $1 + \\tan^2\\theta$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\sec^2\\theta$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\csc^2\\theta$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\cot^2\\theta$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$1$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Rewrite $\\tan^2\\theta$ as $\\frac{\\sin^2\\theta}{\\cos^2\\theta}$ and put everything over $\\cos^2\\theta$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Rewrite $\\tan^2\\theta$ as $\\frac{\\sin^2\\theta}{\\cos^2\\theta}$ and put everything over $\\cos^2\\theta$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{\\cos^2\\theta}{\\cos^2\\theta} + \\frac{\\sin^2\\theta}{\\cos^2\\theta} = \\frac{\\cos^2\\theta + \\sin^2\\theta}{\\cos^2\\theta} = \\frac{1}{\\cos^2\\theta}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{\\cos^2\\theta} = \\sec^2\\theta$."
+    }
+  ],
+  "explanation": [
+    "Take the identity $\\sin^2\\theta + \\cos^2\\theta = 1$ and divide every term by $\\cos^2\\theta$.",
+    "That gives $\\tan^2\\theta + 1 = \\sec^2\\theta$.",
+    "So $1 + \\tan^2\\theta = \\sec^2\\theta$ — the second member of the Pythagorean family."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The third one comes the same way",
+      "steps": [
+        "Dividing $\\sin^2\\theta + \\cos^2\\theta = 1$ by $\\sin^2\\theta$ instead gives $1 + \\cot^2\\theta = \\csc^2\\theta$.",
+        "So there are three Pythagorean identities, and they are all the same statement divided by different things.",
+        "Tangent pairs with secant; cotangent pairs with cosecant — the \"co\" travels with the \"co\"."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean-identity",
+    "secant"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,47 @@
+{
+  "id": "GEO.111",
+  "domain": "GEO",
+  "unit": 12,
+  "orderInUnit": 1,
+  "standard": "GEO.AREA.1",
+  "difficulty": 1,
+  "prompt": "A triangular flag has a base of $14$ inches and a height of $9$ inches. What is its area, in square inches?",
+  "answerType": "numeric",
+  "primaryAnswer": "63",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Area of a triangle is $\\frac{1}{2}bh$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Area of a triangle is $\\frac{1}{2}bh$."
+    },
+    {
+      "level": "guide",
+      "text": "$14 \\times 9 = 126$. Now take half."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2}(126) = 63$ square inches."
+    }
+  ],
+  "explanation": [
+    "Use $A = \\frac{1}{2}bh$ with $b = 14$ and $h = 9$.",
+    "Multiply the base and height: $14 \\times 9 = 126$.",
+    "Halve it: the flag covers $63$ square inches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Half of a rectangle",
+      "steps": [
+        "A $14$-by-$9$ rectangle has area $126$ sq in.",
+        "Any triangle with that same base and height is exactly half of it — cut the rectangle along a diagonal and see. So $63$ sq in."
+      ]
+    }
+  ],
+  "tags": [
+    "area",
+    "triangle"
+  ],
+  "estimatedSeconds": 35
+}

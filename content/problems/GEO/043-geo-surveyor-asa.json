@@ -1,0 +1,70 @@
+{
+  "id": "GEO.043",
+  "domain": "GEO",
+  "unit": 5,
+  "orderInUnit": 3,
+  "standard": "GEO.CONG.1",
+  "difficulty": 1,
+  "prompt": "A surveyor knows two angles of a triangular plot and the length of the side BETWEEN those two angles, and the same three parts of a second plot match exactly. Which criterion proves the plots are congruent?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "ASA",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "AAS",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "SAS",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "AAA",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Record the known parts in the order you meet them walking around the triangle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Record the known parts in the order you meet them walking around the triangle."
+    },
+    {
+      "level": "guide",
+      "text": "Angle, then the side between them, then angle: A-S-A."
+    },
+    {
+      "level": "reveal",
+      "text": "This is ASA — Angle-Side-Angle."
+    }
+  ],
+  "explanation": [
+    "The known side lies between the two known angles, so reading around the triangle gives Angle-Side-Angle.",
+    "That is ASA, a valid congruence criterion.",
+    "AAS would apply if the known side were NOT between the two angles, and AAA is not a congruence criterion at all — it only gives similarity."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "ASA vs AAS in one question",
+      "steps": [
+        "Ask only this: is the known side sandwiched between the two known angles?",
+        "Yes → ASA. No → AAS. Here the surveyor measured the side between the angles, so it is ASA."
+      ]
+    }
+  ],
+  "tags": [
+    "congruence",
+    "ASA",
+    "triangles"
+  ],
+  "estimatedSeconds": 40
+}

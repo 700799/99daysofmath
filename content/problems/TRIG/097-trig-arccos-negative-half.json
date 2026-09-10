@@ -1,0 +1,49 @@
+{
+  "id": "TRIG.097",
+  "domain": "TRIG",
+  "unit": 10,
+  "orderInUnit": 7,
+  "standard": "TRIG.INV.1",
+  "difficulty": 2,
+  "prompt": "Evaluate $\\arccos\\left(-\\frac{1}{2}\\right)$ in degrees. Give a number only.",
+  "answerType": "numeric",
+  "primaryAnswer": "120",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The reference angle is $60^\\circ$, because $\\cos 60^\\circ = \\frac{1}{2}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The reference angle is $60^\\circ$, because $\\cos 60^\\circ = \\frac{1}{2}$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\arccos$ returns angles from $0^\\circ$ to $180^\\circ$, and cosine is negative in the second quadrant."
+    },
+    {
+      "level": "reveal",
+      "text": "The second-quadrant angle with reference $60^\\circ$ is $180^\\circ - 60^\\circ = 120^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Ignore the sign for a moment: $\\cos 60^\\circ = \\frac{1}{2}$, so the reference angle is $60^\\circ$.",
+    "A negative cosine within the range $[0^\\circ, 180^\\circ]$ must come from the second quadrant.",
+    "The second-quadrant angle with a $60^\\circ$ reference is $180^\\circ - 60^\\circ = 120^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Straight from the unit circle",
+      "steps": [
+        "Find the point on the unit circle whose $x$-coordinate is $-\\frac{1}{2}$ in the upper half.",
+        "That point is $\\left(-\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)$, which sits at $120^\\circ$.",
+        "Check: $\\cos 120^\\circ = -\\frac{1}{2}$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "arccos",
+    "reference-angle",
+    "quadrants"
+  ],
+  "estimatedSeconds": 55
+}

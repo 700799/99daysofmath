@@ -1,0 +1,69 @@
+{
+  "id": "TRIG.006",
+  "domain": "TRIG",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "TRIG.ANG.1",
+  "difficulty": 2,
+  "prompt": "An angle is drawn \"in standard position.\" Which description is correct?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The vertex is at the origin and the initial side lies along the positive $x$-axis.",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "The vertex is at the origin and the initial side lies along the positive $y$-axis.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "The vertex can be anywhere, as long as the angle opens counterclockwise.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The vertex is at the origin and the terminal side lies along the positive $x$-axis.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Standard position is a shared starting rule, so that everyone draws the same angle the same way.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Standard position is a shared starting rule, so that everyone draws the same angle the same way."
+    },
+    {
+      "level": "guide",
+      "text": "Two things get pinned down: where the corner sits, and which ray you start from."
+    },
+    {
+      "level": "reveal",
+      "text": "Corner at the origin, starting ray along the positive $x$-axis, then sweep counterclockwise for positive angles."
+    }
+  ],
+  "explanation": [
+    "Standard position pins the vertex to the origin so every angle shares a corner.",
+    "It also pins the initial side — the ray you start from — along the positive $x$-axis.",
+    "The terminal side is wherever you stop after sweeping, so it is the one thing that is free to move."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why bother with a rule",
+      "steps": [
+        "If everyone started their angles from a different ray, \"$120^\\circ$\" would point somewhere different for each person.",
+        "Fixing the corner and the starting ray makes an angle measure into an address on the plane."
+      ]
+    }
+  ],
+  "tags": [
+    "standard-position",
+    "vocabulary"
+  ],
+  "estimatedSeconds": 40
+}

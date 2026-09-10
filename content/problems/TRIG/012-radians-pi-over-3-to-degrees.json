@@ -1,0 +1,68 @@
+{
+  "id": "TRIG.012",
+  "domain": "TRIG",
+  "unit": 2,
+  "orderInUnit": 2,
+  "standard": "TRIG.ANG.2",
+  "difficulty": 1,
+  "prompt": "How many degrees is $\\frac{\\pi}{3}$ radians?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$30^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$60^\\circ$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$120^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$180^\\circ$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Replace $\\pi$ with $180^\\circ$, since $\\pi$ radians IS half a circle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Replace $\\pi$ with $180^\\circ$, since $\\pi$ radians IS half a circle."
+    },
+    {
+      "level": "guide",
+      "text": "That turns $\\frac{\\pi}{3}$ into $\\frac{180^\\circ}{3}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{180^\\circ}{3} = 60^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Because $\\pi$ radians equals $180^\\circ$, you can swap $\\pi$ for $180^\\circ$ anywhere.",
+    "$\\frac{\\pi}{3}$ becomes $\\frac{180^\\circ}{3} = 60^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A third of a half turn",
+      "steps": [
+        "$\\pi$ radians is a half turn, so $\\frac{\\pi}{3}$ is one third of a half turn.",
+        "One third of $180^\\circ$ is $60^\\circ$ — and $60^\\circ$ is a familiar angle from equilateral triangles."
+      ]
+    }
+  ],
+  "tags": [
+    "radians",
+    "conversion"
+  ],
+  "estimatedSeconds": 30
+}

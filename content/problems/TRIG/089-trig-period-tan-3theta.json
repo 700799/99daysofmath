@@ -1,0 +1,62 @@
+{
+  "id": "TRIG.089",
+  "domain": "TRIG",
+  "unit": 9,
+  "orderInUnit": 9,
+  "standard": "TRIG.GRAPH.3",
+  "difficulty": 3,
+  "prompt": "What is the period of $y = \\tan(3\\theta)$, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Start from the period of plain tangent — and it is NOT $360^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Start from the period of plain tangent — and it is NOT $360^\\circ$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $y = \\tan(2\\theta)$: start from the tangent period $180^\\circ$ and divide by $2$ to get $90^\\circ$. Same recipe, just with $3$ instead of $2$."
+    },
+    {
+      "level": "guide",
+      "text": "$y = \\tan\\theta$ has period $180^\\circ$; a coefficient $B$ inside divides that period by $B$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{180^\\circ}{3} = 60^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The period of $y = \\tan\\theta$ is $180^\\circ$, half that of sine and cosine.",
+    "For $y = \\tan(B\\theta)$ the period becomes $\\frac{180^\\circ}{B}$.",
+    "With $B = 3$ the period is $\\frac{180^\\circ}{3} = 60^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Track the asymptotes",
+      "steps": [
+        "$\\tan(3\\theta)$ is undefined when $3\\theta = 90^\\circ$, so $\\theta = 30^\\circ$.",
+        "The next one is at $3\\theta = 270^\\circ$, so $\\theta = 90^\\circ$.",
+        "Consecutive asymptotes are $60^\\circ$ apart, and one full branch fits between them — the period is $60^\\circ$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap is answering $120^\\circ$ by computing $\\frac{360^\\circ}{3}$ out of habit.",
+        "That formula belongs to sine and cosine. Tangent starts from $180^\\circ$, not $360^\\circ$.",
+        "Before dividing by $B$, always ask which function you are in: sine and cosine start at $360^\\circ$, tangent and cotangent start at $180^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent",
+    "period",
+    "common-error"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,65 @@
+{
+  "id": "TRIG.049",
+  "domain": "TRIG",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "TRIG.CIRC.1",
+  "difficulty": 3,
+  "prompt": "A Ferris wheel of radius $30$ m has its center at the origin. A rider has rotated $150^\\circ$ counterclockwise from the rightmost point. What is the rider's exact $x$-coordinate, in meters? For example, type \"-12sqrt(3)\" for $-12\\sqrt{3}$.",
+  "answerType": "expression",
+  "primaryAnswer": "-15sqrt(3)",
+  "alternativeAnswers": [
+    "-15*sqrt(3)",
+    "-15 sqrt(3)",
+    "-15√3",
+    "-15\\sqrt{3}"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "On a circle of radius $r$, the coordinates are $(r\\cos\\theta,\\ r\\sin\\theta)$ — the unit circle values scaled up by $r$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "On a circle of radius $r$, the coordinates are $(r\\cos\\theta,\\ r\\sin\\theta)$ — the unit circle values scaled up by $r$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with radius $4$ at $120^\\circ$: $\\cos 120^\\circ = -\\frac{1}{2}$, so $x = 4 \\times \\left(-\\frac{1}{2}\\right) = -2$. Two steps every time: unit-circle cosine, then multiply by the real radius."
+    },
+    {
+      "level": "guide",
+      "text": "$\\cos 150^\\circ = -\\frac{\\sqrt{3}}{2}$, so $x = 30 \\times \\left(-\\frac{\\sqrt{3}}{2}\\right)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$30 \\times \\left(-\\frac{\\sqrt{3}}{2}\\right) = -15\\sqrt{3} \\approx -26$ m."
+    }
+  ],
+  "explanation": [
+    "For a circle of radius $r$, the point at angle $\\theta$ is $(r\\cos\\theta,\\ r\\sin\\theta)$.",
+    "$150^\\circ$ is in Quadrant II with a $30^\\circ$ reference angle, so $\\cos 150^\\circ = -\\frac{\\sqrt{3}}{2}$.",
+    "Multiply by the radius: $x = 30 \\times \\left(-\\frac{\\sqrt{3}}{2}\\right) = -15\\sqrt{3}$, about $-26$ m."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Does the sign make sense?",
+      "steps": [
+        "After $150^\\circ$ the rider is past the top of the wheel and over on the left side.",
+        "Left of center means a negative $x$, and $-15\\sqrt{3} \\approx -26$ m is nearly the full 30 m radius to the left — right for an angle only $30^\\circ$ past horizontal."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is $-\\frac{\\sqrt{3}}{2}$: correct for a unit circle, but this wheel has radius 30, not 1.",
+        "Unit-circle values are per-unit-of-radius. Always finish by multiplying by the real radius: $30 \\times \\left(-\\frac{\\sqrt{3}}{2}\\right) = -15\\sqrt{3}$. A coordinate on a 30 m wheel should be tens of meters, not a fraction under 1."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "scaled-circle",
+    "ferris-wheel"
+  ],
+  "estimatedSeconds": 80
+}

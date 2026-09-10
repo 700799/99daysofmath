@@ -1,0 +1,52 @@
+{
+  "id": "GEO.135",
+  "domain": "GEO",
+  "unit": 14,
+  "orderInUnit": 5,
+  "standard": "GEO.TRANS.1",
+  "difficulty": 2,
+  "prompt": "A logo is shrunk by a dilation centered at the origin with scale factor $\\frac{1}{2}$. One corner of the logo is at $(6, -4)$. Write the coordinates of that corner after the dilation, in the form (x, y).",
+  "answerType": "short-text",
+  "primaryAnswer": "(3, -2)",
+  "alternativeAnswers": [
+    "(3,-2)",
+    "3, -2",
+    "3,-2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A dilation centered at the origin multiplies BOTH coordinates by the scale factor.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A dilation centered at the origin multiplies BOTH coordinates by the scale factor."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply each coordinate by $\\frac{1}{2}$: $6 \\times \\frac{1}{2}$ and $-4 \\times \\frac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "The corner moves to $(3, -2)$."
+    }
+  ],
+  "explanation": [
+    "For a dilation centered at the origin, $(x, y) \\to (kx, ky)$.",
+    "With $k = \\frac{1}{2}$: $6 \\times \\frac{1}{2} = 3$ and $-4 \\times \\frac{1}{2} = -2$.",
+    "The image corner is $(3, -2)$ — the same direction from the origin, half as far out."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Shape stays, size changes",
+      "steps": [
+        "A dilation is the only one of these four transformations that changes size; translations, reflections and rotations keep it.",
+        "Scale factor less than $1$ shrinks the logo toward the origin, so both coordinates get smaller in absolute value — but the negative stays negative."
+      ]
+    }
+  ],
+  "tags": [
+    "dilation",
+    "coordinate-geometry",
+    "similarity"
+  ],
+  "estimatedSeconds": 50
+}

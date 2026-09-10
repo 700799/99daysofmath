@@ -1,0 +1,63 @@
+{
+  "id": "TRIG.100",
+  "domain": "TRIG",
+  "unit": 10,
+  "orderInUnit": 10,
+  "standard": "TRIG.INV.1",
+  "difficulty": 3,
+  "prompt": "A surveyor stands $15$ m from the base of a tower and sights the top, which is $40$ m above eye level. What is the angle of elevation, in degrees, rounded to one decimal place?",
+  "answerType": "numeric",
+  "primaryAnswer": "69.4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $40$ m is opposite the angle of elevation and the $15$ m is adjacent to it.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $40$ m is opposite the angle of elevation and the $15$ m is adjacent to it."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $10$ m across and $10$ m up: $\\tan\\theta = \\frac{10}{10} = 1$, so $\\theta = 45^\\circ$. The opposite side goes on top every time, and here that is the $40$."
+    },
+    {
+      "level": "guide",
+      "text": "Opposite over adjacent is tangent: $\\tan\\theta = \\frac{40}{15}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\theta = \\arctan\\left(\\frac{40}{15}\\right) = \\arctan(2.6667) \\approx 69.4^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Sketch the right triangle: the horizontal leg is $15$ m and the vertical leg is $40$ m.",
+    "The angle of elevation sits at the surveyor, so the $40$ is opposite and the $15$ is adjacent: $\\tan\\theta = \\frac{40}{15} \\approx 2.667$.",
+    "Undo the tangent: $\\theta = \\arctan(2.667) \\approx 69.44^\\circ$, which rounds to $69.4^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check it against $45^\\circ$",
+      "steps": [
+        "If the tower were $15$ m tall, the rise would equal the run and the angle would be exactly $45^\\circ$.",
+        "The tower is much taller than that, so the sightline is much steeper than $45^\\circ$.",
+        "$69.4^\\circ$ is comfortably steeper — the answer is in the right neighbourhood."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The classic wrong answer is $20.6^\\circ$, from computing $\\arctan\\left(\\frac{15}{40}\\right)$ with the ratio upside down.",
+        "Notice that $20.6^\\circ$ and $69.4^\\circ$ add to $90^\\circ$ — flipping the ratio hands you the OTHER angle in the triangle, the one at the top of the tower.",
+        "Fix it by labelling the sketch before you touch the calculator: mark which leg is opposite the angle you actually want, and put that one on top."
+      ]
+    }
+  ],
+  "tags": [
+    "arctan",
+    "surveying",
+    "angle-of-elevation",
+    "common-error"
+  ],
+  "estimatedSeconds": 85
+}

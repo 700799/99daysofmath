@@ -1,0 +1,46 @@
+{
+  "id": "TRIG.052",
+  "domain": "TRIG",
+  "unit": 6,
+  "orderInUnit": 2,
+  "standard": "TRIG.CIRC.2",
+  "difficulty": 1,
+  "prompt": "What is the reference angle for $225^\\circ$? Give just the number of degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "45",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$225^\\circ$ is in Quadrant III, past the $180^\\circ$ mark.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$225^\\circ$ is in Quadrant III, past the $180^\\circ$ mark."
+    },
+    {
+      "level": "guide",
+      "text": "In Quadrant III the reference angle is the angle minus $180^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "$225 - 180 = 45^\\circ$."
+    }
+  ],
+  "explanation": [
+    "$225^\\circ$ lands in Quadrant III, between $180^\\circ$ and $270^\\circ$.",
+    "The nearest part of the $x$-axis is the $180^\\circ$ direction, so measure from there: $225^\\circ - 180^\\circ$.",
+    "The reference angle is $45^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Straight down the diagonal",
+      "steps": [
+        "$225^\\circ$ points exactly into the corner of Quadrant III, equally far left and down.",
+        "That diagonal makes a $45^\\circ$ angle with the horizontal axis, so the reference angle is $45^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "reference-angle"
+  ],
+  "estimatedSeconds": 35
+}

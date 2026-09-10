@@ -1,0 +1,60 @@
+{
+  "id": "GEO.119",
+  "domain": "GEO",
+  "unit": 12,
+  "orderInUnit": 9,
+  "standard": "GEO.AREA.1",
+  "difficulty": 3,
+  "prompt": "A stained-glass window is a $3$ ft wide by $4$ ft tall rectangle with a semicircle sitting on top of it, so the semicircle's diameter is the $3$ ft top edge. What is the total area of the window, in square feet, rounded to the nearest hundredth?",
+  "answerType": "numeric",
+  "primaryAnswer": "15.53",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Split the window into two shapes you already know: a rectangle plus a half circle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Split the window into two shapes you already know: a rectangle plus a half circle."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Start with just the rectangle: $3 \\times 4 = 12$ sq ft, which would be the whole answer if the top edge were flat. The semicircle only adds a piece, and its radius is half of that $3$ ft edge."
+    },
+    {
+      "level": "guide",
+      "text": "Rectangle: $3 \\times 4 = 12$ sq ft. The semicircle has DIAMETER $3$, so its radius is $1.5$."
+    },
+    {
+      "level": "reveal",
+      "text": "Semicircle $= \\frac{1}{2}\\pi(1.5)^2 \\approx 3.53$ sq ft, so the total is $12 + 3.53 = 15.53$ sq ft."
+    }
+  ],
+  "explanation": [
+    "Rectangle piece: $3 \\times 4 = 12$ square feet.",
+    "The semicircle spans the $3$ ft top edge, so that $3$ ft is the diameter and the radius is $1.5$ ft.",
+    "Semicircle piece: $\\frac{1}{2}\\pi(1.5)^2 = \\frac{1}{2}\\pi(2.25) \\approx 3.53$ sq ft. Total: $12 + 3.53 = 15.53$ square feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate the top piece",
+      "steps": [
+        "The arch is a half circle about $3$ ft across and $1.5$ ft tall, so it should cover a few square feet at most.",
+        "$3.53$ sq ft fits that picture, and adding it to the $12$ sq ft rectangle gives roughly $15.5$ sq ft of glass."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The classic wrong answer is $26.14$: using $r = 3$ for the semicircle because the number $3$ was printed on the drawing. But $3$ ft is the width the arch spans, which is a diameter, not a radius.",
+        "Say it out loud as you work: \"the arch sits ON the $3$ ft edge, so $3$ is the diameter, so $r = 1.5$.\" Then halve the circle area exactly once, at the end."
+      ]
+    }
+  ],
+  "tags": [
+    "composite-area",
+    "semicircle",
+    "multi-step"
+  ],
+  "estimatedSeconds": 85
+}

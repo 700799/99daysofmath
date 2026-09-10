@@ -1,0 +1,54 @@
+{
+  "id": "GEO.067",
+  "domain": "GEO",
+  "unit": 7,
+  "orderInUnit": 7,
+  "standard": "GEO.SIM.1",
+  "difficulty": 2,
+  "prompt": "Two triangular ramps have two pairs of proportional sides, and the angles BETWEEN those pairs of sides are congruent. Which similarity criterion applies? Answer with three letters.",
+  "answerType": "short-text",
+  "primaryAnswer": "SAS",
+  "alternativeAnswers": [
+    "sas",
+    "S.A.S.",
+    "SAS similarity",
+    "side angle side",
+    "side-angle-side"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Read the parts in order around the triangle: side, angle, side.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Read the parts in order around the triangle: side, angle, side."
+    },
+    {
+      "level": "guide",
+      "text": "The angle is included between the two proportional sides."
+    },
+    {
+      "level": "reveal",
+      "text": "This is SAS similarity."
+    }
+  ],
+  "explanation": [
+    "The three similarity criteria are AA, SSS (all three pairs of sides proportional), and SAS (two pairs proportional with the included angle congruent).",
+    "Here two pairs of sides are proportional and the included angles are congruent, so it is SAS similarity.",
+    "Note the difference from SAS congruence: sides here are PROPORTIONAL, not equal — only the angle must actually be congruent."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Congruence vs similarity, same letters",
+      "steps": [
+        "SSS and SAS appear on both lists, but with a swap: congruence demands equal sides, similarity only demands a constant ratio.",
+        "Angles never scale, so in both versions the angle must be congruent."
+      ]
+    }
+  ],
+  "tags": [
+    "similarity",
+    "SAS",
+    "criteria"
+  ],
+  "estimatedSeconds": 50
+}

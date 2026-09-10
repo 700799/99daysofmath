@@ -1,0 +1,48 @@
+{
+  "id": "GEO.126",
+  "domain": "GEO",
+  "unit": 13,
+  "orderInUnit": 6,
+  "standard": "GEO.VOL.1",
+  "difficulty": 2,
+  "prompt": "A cylindrical water tank has radius $4$ ft and height $10$ ft. What is its volume in cubic feet, rounded to the nearest whole number?",
+  "answerType": "numeric",
+  "primaryAnswer": "503",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Use $V = \\pi r^2 h$ and keep $\\pi$ until the end.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use $V = \\pi r^2 h$ and keep $\\pi$ until the end."
+    },
+    {
+      "level": "guide",
+      "text": "$\\pi(4)^2(10) = 160\\pi$ cubic feet."
+    },
+    {
+      "level": "reveal",
+      "text": "$160\\pi \\approx 502.65$, which rounds to $503$ cubic feet."
+    }
+  ],
+  "explanation": [
+    "Base area: $\\pi(4)^2 = 16\\pi$ square feet.",
+    "Times the height: $16\\pi \\times 10 = 160\\pi$ cubic feet.",
+    "$160 \\times 3.14159 \\approx 502.65$, so the tank holds about $503$ cubic feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Rough check in your head",
+      "steps": [
+        "$\\pi$ is a little more than $3$, so $160\\pi$ is a little more than $480$.",
+        "$503$ sits just above that estimate ✓ — a good sign you squared the radius and did not square the height."
+      ]
+    }
+  ],
+  "tags": [
+    "volume",
+    "cylinder",
+    "rounding"
+  ],
+  "estimatedSeconds": 60
+}

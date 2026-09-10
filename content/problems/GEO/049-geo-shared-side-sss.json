@@ -1,0 +1,66 @@
+{
+  "id": "GEO.049",
+  "domain": "GEO",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "GEO.CONG.1",
+  "difficulty": 3,
+  "prompt": "In a bridge truss, triangles $ABD$ and $CBD$ share the side $\\overline{BD}$. The builder knows $\\overline{AB} \\cong \\overline{CB}$ and $\\overline{AD} \\cong \\overline{CD}$, and nothing about the angles. Which criterion proves $\\triangle ABD \\cong \\triangle CBD$? Answer with three letters.",
+  "answerType": "short-text",
+  "primaryAnswer": "SSS",
+  "alternativeAnswers": [
+    "sss",
+    "S.S.S.",
+    "side side side",
+    "side-side-side"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "You are given two pairs of congruent sides. Is there a third pair hiding in the picture?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You are given two pairs of congruent sides. Is there a third pair hiding in the picture?"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Count the pairs on a smaller version: with only $\\overline{AB} \\cong \\overline{CB}$ plus the shared $\\overline{BD}$ you have just two side pairs — not enough. The second given pair makes three sides and zero angles."
+    },
+    {
+      "level": "guide",
+      "text": "The shared side $\\overline{BD}$ is congruent to itself by the Reflexive Property — that is your third pair."
+    },
+    {
+      "level": "reveal",
+      "text": "Three pairs of sides and no angles: SSS."
+    }
+  ],
+  "explanation": [
+    "Two pairs of congruent sides are given: $\\overline{AB} \\cong \\overline{CB}$ and $\\overline{AD} \\cong \\overline{CD}$.",
+    "The shared side supplies a third pair: $\\overline{BD} \\cong \\overline{BD}$ by the Reflexive Property.",
+    "That is three pairs of corresponding sides and no angle information, so the criterion is SSS."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Always hunt for the free part",
+      "steps": [
+        "Whenever two triangles share a side or an angle, that shared part is a free congruence, courtesy of the Reflexive Property.",
+        "Mark it in the figure before you count. Here it turns \"two sides\" into the three you need."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is SAS. Students see two sides and assume the angle at $B$ or $D$ is \"obviously\" congruent — but no angle was given or marked, and looking congruent proves nothing.",
+        "Only count parts you were GIVEN or can justify with a property. Given sides, given sides, reflexive side: that is SSS."
+      ]
+    }
+  ],
+  "tags": [
+    "congruence",
+    "SSS",
+    "reflexive-property",
+    "shared-side"
+  ],
+  "estimatedSeconds": 70
+}

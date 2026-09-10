@@ -1,0 +1,53 @@
+{
+  "id": "TRIG.115",
+  "domain": "TRIG",
+  "unit": 12,
+  "orderInUnit": 5,
+  "standard": "TRIG.IDENT.2",
+  "difficulty": 2,
+  "prompt": "Find the exact value of $\\sin 75^\\circ$ using $75^\\circ = 45^\\circ + 30^\\circ$. Write it with \"sqrt\", for example \"(sqrt(6)+sqrt(2))/4\".",
+  "answerType": "expression",
+  "primaryAnswer": "(sqrt(6)+sqrt(2))/4",
+  "alternativeAnswers": [
+    "(sqrt(2)+sqrt(6))/4",
+    "sqrt(6)/4 + sqrt(2)/4",
+    "(√6+√2)/4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Use $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$ with $A = 45^\\circ$, $B = 30^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$ with $A = 45^\\circ$, $B = 30^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "That is $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4} = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$."
+    }
+  ],
+  "explanation": [
+    "Split the angle: $\\sin 75^\\circ = \\sin(45^\\circ + 30^\\circ) = \\sin 45^\\circ\\cos 30^\\circ + \\cos 45^\\circ\\sin 30^\\circ$.",
+    "Substitute the special values: $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2} = \\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4}$.",
+    "Combine over the common denominator: $\\frac{\\sqrt{6} + \\sqrt{2}}{4}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check it numerically",
+      "steps": [
+        "$\\sqrt{6} \\approx 2.449$ and $\\sqrt{2} \\approx 1.414$, so the answer is about $\\frac{3.863}{4} \\approx 0.966$.",
+        "A calculator gives $\\sin 75^\\circ \\approx 0.966$ ✓",
+        "That is close to $1$, which fits: $75^\\circ$ is not far from $90^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "sum-formula",
+    "exact-value",
+    "special-angles"
+  ],
+  "estimatedSeconds": 70
+}

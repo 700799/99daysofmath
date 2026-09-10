@@ -1,0 +1,63 @@
+{
+  "id": "TRIG.130",
+  "domain": "TRIG",
+  "unit": 13,
+  "orderInUnit": 10,
+  "standard": "TRIG.EQ.1",
+  "difficulty": 3,
+  "prompt": "How many solutions does $\\sin(2\\theta) = \\cos\\theta$ have on $0^\\circ \\le \\theta < 360^\\circ$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Replace $\\sin(2\\theta)$ with $2\\sin\\theta\\cos\\theta$ so both sides use the same angle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Replace $\\sin(2\\theta)$ with $2\\sin\\theta\\cos\\theta$ so both sides use the same angle."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up by counting solutions of $\\sin\\theta\\cos\\theta = 0$: the $\\cos\\theta = 0$ branch gives $90^\\circ$ and $270^\\circ$, the $\\sin\\theta = 0$ branch gives $0^\\circ$ and $180^\\circ$, so four in all. Factor, then count every branch."
+    },
+    {
+      "level": "guide",
+      "text": "Move everything to one side and FACTOR: $2\\sin\\theta\\cos\\theta - \\cos\\theta = 0$, so $\\cos\\theta(2\\sin\\theta - 1) = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\cos\\theta = 0$ gives $90^\\circ$ and $270^\\circ$; $\\sin\\theta = \\frac{1}{2}$ gives $30^\\circ$ and $150^\\circ$. That is $4$ solutions."
+    }
+  ],
+  "explanation": [
+    "Use the double-angle formula to write the equation as $2\\sin\\theta\\cos\\theta = \\cos\\theta$.",
+    "Bring everything to one side and factor out the common $\\cos\\theta$: $\\cos\\theta(2\\sin\\theta - 1) = 0$.",
+    "Set each factor to zero. $\\cos\\theta = 0$ gives $\\theta = 90^\\circ, 270^\\circ$; $2\\sin\\theta - 1 = 0$ gives $\\theta = 30^\\circ, 150^\\circ$.",
+    "All four values lie in the interval, so there are $4$ solutions."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "See it as two graphs crossing",
+      "steps": [
+        "Sketch $y = \\sin(2\\theta)$, which completes two full cycles across $0^\\circ$ to $360^\\circ$, and $y = \\cos\\theta$, which completes one.",
+        "A faster wave crossing a slower one over the same window meets it several times.",
+        "Counting the crossings gives $4$, matching the algebra."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap is dividing both sides by $\\cos\\theta$ to get $2\\sin\\theta = 1$, which leaves only $30^\\circ$ and $150^\\circ$ — an answer of $2$.",
+        "Dividing by $\\cos\\theta$ silently assumes $\\cos\\theta \\ne 0$, and it throws away the two solutions where $\\cos\\theta$ IS zero, namely $90^\\circ$ and $270^\\circ$.",
+        "The rule: never divide an equation by an expression containing the variable. Factor instead, and set every factor to zero. The answer is $4$."
+      ]
+    }
+  ],
+  "tags": [
+    "double-angle",
+    "factoring",
+    "lost-solutions"
+  ],
+  "estimatedSeconds": 90
+}

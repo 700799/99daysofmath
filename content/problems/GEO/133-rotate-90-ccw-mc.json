@@ -1,0 +1,69 @@
+{
+  "id": "GEO.133",
+  "domain": "GEO",
+  "unit": 14,
+  "orderInUnit": 3,
+  "standard": "GEO.TRANS.1",
+  "difficulty": 1,
+  "prompt": "The point $(3, 1)$ is rotated $90^\\circ$ counterclockwise about the origin. Where does it land?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$(-1, 3)$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$(1, -3)$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$(-3, -1)$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$(3, -1)$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The rule for $90^\\circ$ counterclockwise is $(x, y) \\to (-y, x)$: swap, then negate the new first coordinate.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The rule for $90^\\circ$ counterclockwise is $(x, y) \\to (-y, x)$: swap, then negate the new first coordinate."
+    },
+    {
+      "level": "guide",
+      "text": "With $(3, 1)$: swap to get $(1, 3)$, then negate the first: $(-1, 3)$."
+    },
+    {
+      "level": "reveal",
+      "text": "The image is $(-1, 3)$. Choice A."
+    }
+  ],
+  "explanation": [
+    "A $90^\\circ$ counterclockwise turn about the origin follows $(x, y) \\to (-y, x)$.",
+    "Here $x = 3$ and $y = 1$, so the image is $(-1, 3)$.",
+    "Choice A. (Choice B is the clockwise rotation and choice C is a $180^\\circ$ turn.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Which quadrant should it land in?",
+      "steps": [
+        "$(3, 1)$ sits in Quadrant I, just above the positive $x$-axis.",
+        "Turning counterclockwise a quarter turn carries Quadrant I into Quadrant II, where $x$ is negative and $y$ is positive — only $(-1, 3)$ qualifies."
+      ]
+    }
+  ],
+  "tags": [
+    "rotation",
+    "coordinate-geometry"
+  ],
+  "estimatedSeconds": 45
+}

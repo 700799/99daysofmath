@@ -1,0 +1,49 @@
+{
+  "id": "TRIG.088",
+  "domain": "TRIG",
+  "unit": 9,
+  "orderInUnit": 8,
+  "standard": "TRIG.GRAPH.3",
+  "difficulty": 2,
+  "prompt": "A physics simulation plots $y = \\tan\\theta$ for $\\theta$ from $0^\\circ$ to $180^\\circ$ and crashes at the one angle where the value is undefined. At what angle, in degrees, does it crash?",
+  "answerType": "numeric",
+  "primaryAnswer": "90",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Tangent is undefined wherever the cosine underneath it is zero.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Tangent is undefined wherever the cosine underneath it is zero."
+    },
+    {
+      "level": "guide",
+      "text": "Between $0^\\circ$ and $180^\\circ$, where does cosine equal $0$?"
+    },
+    {
+      "level": "reveal",
+      "text": "At $90^\\circ$, so the simulation crashes at $\\theta = 90^\\circ$."
+    }
+  ],
+  "explanation": [
+    "$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$ is undefined when $\\cos\\theta = 0$.",
+    "On the interval from $0^\\circ$ to $180^\\circ$ the only such angle is $90^\\circ$.",
+    "The graph has a vertical asymptote there, so the value the program tries to compute does not exist."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Watch the values run away",
+      "steps": [
+        "$\\tan 89^\\circ \\approx 57.3$ and $\\tan 89.9^\\circ \\approx 573$.",
+        "The closer $\\theta$ creeps to $90^\\circ$, the larger the output, with no limit.",
+        "At exactly $90^\\circ$ there is no number left to report — the function is undefined."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent",
+    "asymptotes",
+    "domain"
+  ],
+  "estimatedSeconds": 45
+}

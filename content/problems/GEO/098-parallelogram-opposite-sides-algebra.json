@@ -1,0 +1,47 @@
+{
+  "id": "GEO.098",
+  "domain": "GEO",
+  "unit": 10,
+  "orderInUnit": 8,
+  "standard": "GEO.QUAD.1",
+  "difficulty": 2,
+  "prompt": "In parallelogram $ABCD$, side $\\overline{AB}$ has length $3x + 2$ and the opposite side $\\overline{CD}$ has length $17$. What is the value of $x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Opposite sides of a parallelogram are congruent, so those two expressions are equal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Opposite sides of a parallelogram are congruent, so those two expressions are equal."
+    },
+    {
+      "level": "guide",
+      "text": "Solve $3x + 2 = 17$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3x = 15$, so $x = 5$."
+    }
+  ],
+  "explanation": [
+    "Opposite sides of a parallelogram have equal length: $3x + 2 = 17$.",
+    "Subtract $2$ from both sides: $3x = 15$.",
+    "Divide by $3$: $x = 5$. Check: $3(5) + 2 = 17$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Geometry sets it up, algebra finishes it",
+      "steps": [
+        "The geometry fact does one job: it turns a picture into the equation $3x + 2 = 17$.",
+        "From there it is an ordinary two-step equation — peel off the $+2$, then undo the $\\times 3$."
+      ]
+    }
+  ],
+  "tags": [
+    "parallelogram",
+    "algebra-in-geometry"
+  ],
+  "estimatedSeconds": 45
+}

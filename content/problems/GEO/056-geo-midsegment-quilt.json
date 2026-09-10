@@ -1,0 +1,47 @@
+{
+  "id": "GEO.056",
+  "domain": "GEO",
+  "unit": 6,
+  "orderInUnit": 6,
+  "standard": "GEO.CONG.2",
+  "difficulty": 2,
+  "prompt": "A quilter sews a seam connecting the midpoints of two sides of a triangular patch. That seam measures $9$ inches. How many inches long is the third side of the patch — the one the seam does not touch?",
+  "answerType": "numeric",
+  "primaryAnswer": "18",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A segment joining two midpoints of a triangle is called a midsegment.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A segment joining two midpoints of a triangle is called a midsegment."
+    },
+    {
+      "level": "guide",
+      "text": "The Midsegment Theorem: the midsegment is parallel to the third side and exactly HALF its length."
+    },
+    {
+      "level": "reveal",
+      "text": "If half the third side is 9, the third side is $2 \\times 9 = 18$ inches."
+    }
+  ],
+  "explanation": [
+    "The seam joins the midpoints of two sides, so it is a midsegment.",
+    "By the Midsegment Theorem, a midsegment is half the length of the third side.",
+    "The seam is 9 in, so the third side is $2 \\times 9 = 18$ in."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Which direction to go",
+      "steps": [
+        "Ask which measurement you have: the short one (midsegment) or the long one (third side)?",
+        "You have the short one, so you MULTIPLY by 2 rather than divide: $9 \\times 2 = 18$ inches."
+      ]
+    }
+  ],
+  "tags": [
+    "midsegment",
+    "triangles"
+  ],
+  "estimatedSeconds": 45
+}

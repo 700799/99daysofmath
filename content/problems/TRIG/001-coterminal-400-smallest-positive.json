@@ -1,0 +1,48 @@
+{
+  "id": "TRIG.001",
+  "domain": "TRIG",
+  "unit": 1,
+  "orderInUnit": 1,
+  "standard": "TRIG.ANG.1",
+  "difficulty": 1,
+  "prompt": "A Ferris wheel car starts at the right side of the wheel and rotates $400^\\circ$. What is the smallest positive angle that would have left it in exactly the same spot? Give just the number of degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "One full trip around the wheel is $360^\\circ$ — that much rotation puts you right back where you started.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "One full trip around the wheel is $360^\\circ$ — that much rotation puts you right back where you started."
+    },
+    {
+      "level": "guide",
+      "text": "Peel off one full turn: compute $400^\\circ - 360^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "$400^\\circ - 360^\\circ = 40^\\circ$, so the car ends up $40^\\circ$ around the wheel."
+    }
+  ],
+  "explanation": [
+    "A full rotation is $360^\\circ$, and rotating a full turn changes nothing about where you end up.",
+    "So subtract one full turn from $400^\\circ$: $400^\\circ - 360^\\circ = 40^\\circ$.",
+    "Angles that land in the same place are called coterminal, so $400^\\circ$ and $40^\\circ$ are coterminal."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think of it as an odometer",
+      "steps": [
+        "Rotation is like a trip counter that resets every $360^\\circ$.",
+        "Going $400^\\circ$ is one complete lap plus $40^\\circ$ of a second lap.",
+        "The lap does not show, so all you see is the extra $40^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "coterminal",
+    "standard-position"
+  ],
+  "estimatedSeconds": 35
+}

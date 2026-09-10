@@ -1,0 +1,70 @@
+{
+  "id": "GEO.013",
+  "domain": "GEO",
+  "unit": 2,
+  "orderInUnit": 3,
+  "standard": "GEO.ANG.1",
+  "difficulty": 1,
+  "prompt": "An angle has its vertex at point $B$. One side passes through $A$ and the other side passes through $C$. Which three-letter name is correct for this angle?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\angle ABC$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\angle BAC$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\angle ACB$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\angle CAB$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "In a three-letter angle name, one specific position is reserved for the vertex.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "In a three-letter angle name, one specific position is reserved for the vertex."
+    },
+    {
+      "level": "guide",
+      "text": "The vertex letter always goes in the MIDDLE. The vertex here is $B$."
+    },
+    {
+      "level": "reveal",
+      "text": "With $B$ in the middle, the name is $\\angle ABC$ (or $\\angle CBA$)."
+    }
+  ],
+  "explanation": [
+    "A three-letter angle name lists a point on one side, then the vertex, then a point on the other side.",
+    "The vertex must sit in the middle, and the vertex here is $B$.",
+    "So the angle is $\\angle ABC$; reading the outer letters backwards, $\\angle CBA$, names the same angle."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The corner is the middle",
+      "steps": [
+        "Trace the angle with your finger: you come in along one side, TURN at the corner, and go out the other side.",
+        "The letter you turn at is the letter that goes in the middle — $B$."
+      ]
+    }
+  ],
+  "tags": [
+    "notation",
+    "angle-naming",
+    "vertex"
+  ],
+  "estimatedSeconds": 35
+}

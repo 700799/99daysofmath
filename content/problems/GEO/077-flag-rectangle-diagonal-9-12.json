@@ -1,0 +1,47 @@
+{
+  "id": "GEO.077",
+  "domain": "GEO",
+  "unit": 8,
+  "orderInUnit": 7,
+  "standard": "GEO.RT.1",
+  "difficulty": 2,
+  "prompt": "A rectangular flag measures $9$ inches by $12$ inches. A gold stripe runs corner to corner. How long is the stripe, in inches?",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A diagonal splits the rectangle into two right triangles whose legs are the sides of the rectangle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A diagonal splits the rectangle into two right triangles whose legs are the sides of the rectangle."
+    },
+    {
+      "level": "guide",
+      "text": "Compute $9^2 + 12^2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$81 + 144 = 225$ and $\\sqrt{225} = 15$ inches."
+    }
+  ],
+  "explanation": [
+    "The two sides, $9$ and $12$, are the legs of a right triangle; the stripe is the hypotenuse.",
+    "$9^2 + 12^2 = 81 + 144 = 225$.",
+    "$\\sqrt{225} = 15$, so the gold stripe is $15$ inches long."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Triple spotting saves time",
+      "steps": [
+        "$9$-$12$-$15$ is the $3$-$4$-$5$ triple scaled by $3$.",
+        "Once you recognize the family you can write $15$ immediately and use the squaring only as a check."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean-theorem",
+    "rectangle-diagonal"
+  ],
+  "estimatedSeconds": 40
+}

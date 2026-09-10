@@ -1,0 +1,49 @@
+{
+  "id": "GEO.065",
+  "domain": "GEO",
+  "unit": 7,
+  "orderInUnit": 5,
+  "standard": "GEO.SIM.1",
+  "difficulty": 2,
+  "prompt": "At the same moment on a sunny afternoon, a $6$-foot-tall student casts a $4$-foot shadow while a flagpole casts a $24$-foot shadow. How tall is the flagpole, in feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "36",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The sun hits both at the same angle, so the student and the flagpole form similar right triangles.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The sun hits both at the same angle, so the student and the flagpole form similar right triangles."
+    },
+    {
+      "level": "guide",
+      "text": "Set up $\\frac{\\text{height}}{\\text{shadow}}$ for each: $\\frac{6}{4} = \\frac{h}{24}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Cross-multiply: $4h = 144$, so $h = 36$ feet."
+    }
+  ],
+  "explanation": [
+    "Both objects stand vertically and the sun's rays arrive at the same angle, so the two right triangles are similar by AA.",
+    "Corresponding sides are proportional: $\\frac{6}{4} = \\frac{h}{24}$.",
+    "Cross-multiply: $4h = 6 \\times 24 = 144$, so $h = 36$ feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the shadow ratio directly",
+      "steps": [
+        "The student is $6 \\div 4 = 1.5$ times as tall as her shadow is long.",
+        "Everything standing up at that moment shares the same ratio, so the flagpole is $24 \\times 1.5 = 36$ feet tall."
+      ]
+    }
+  ],
+  "tags": [
+    "similarity",
+    "shadows",
+    "indirect-measurement",
+    "proportion"
+  ],
+  "estimatedSeconds": 60
+}

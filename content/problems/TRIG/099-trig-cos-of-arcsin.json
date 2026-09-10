@@ -1,0 +1,65 @@
+{
+  "id": "TRIG.099",
+  "domain": "TRIG",
+  "unit": 10,
+  "orderInUnit": 9,
+  "standard": "TRIG.INV.1",
+  "difficulty": 3,
+  "prompt": "Find the exact value of $\\cos\\left(\\arcsin\\frac{3}{5}\\right)$. Give it as a decimal or a fraction.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.8",
+  "alternativeAnswers": [
+    "4/5",
+    ".8"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Give the inner angle a name: let $\\theta = \\arcsin\\frac{3}{5}$, so $\\sin\\theta = \\frac{3}{5}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Give the inner angle a name: let $\\theta = \\arcsin\\frac{3}{5}$, so $\\sin\\theta = \\frac{3}{5}$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $\\cos\\left(\\arcsin\\frac{5}{13}\\right)$: name the angle, draw opposite $5$ and hypotenuse $13$, and the missing side is $12$, so the cosine is $\\frac{12}{13}$. Same three steps with $3$ and $5$."
+    },
+    {
+      "level": "guide",
+      "text": "Draw a right triangle with opposite $3$ and hypotenuse $5$. What is the third side?"
+    },
+    {
+      "level": "reveal",
+      "text": "The adjacent side is $4$, so $\\cos\\theta = \\frac{4}{5} = 0.8$."
+    }
+  ],
+  "explanation": [
+    "Let $\\theta = \\arcsin\\frac{3}{5}$, which means $\\sin\\theta = \\frac{3}{5}$ with $\\theta$ in $[-90^\\circ, 90^\\circ]$.",
+    "Sketch a right triangle with opposite side $3$ and hypotenuse $5$; the Pythagorean theorem gives the adjacent side $\\sqrt{25 - 9} = 4$.",
+    "So $\\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{4}{5} = 0.8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the Pythagorean identity instead",
+      "steps": [
+        "$\\sin^2\\theta + \\cos^2\\theta = 1$, so $\\cos^2\\theta = 1 - \\left(\\frac{3}{5}\\right)^2 = 1 - \\frac{9}{25} = \\frac{16}{25}$.",
+        "Taking the square root, $\\cos\\theta = \\pm\\frac{4}{5}$.",
+        "Since $\\arcsin$ only returns angles in $[-90^\\circ, 90^\\circ]$, where cosine is never negative, we keep $+\\frac{4}{5} = 0.8$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "A common wrong answer is $\\frac{3}{5} = 0.6$ — students see the $\\frac{3}{5}$ in the problem and hand it straight back.",
+        "But $\\frac{3}{5}$ is the SINE of the angle; the question asks for the COSINE of that same angle.",
+        "The cure is to name the angle $\\theta$ first and write down what you know ($\\sin\\theta = \\frac{3}{5}$) before you go hunting for what you want ($\\cos\\theta$). The two are different sides of the same triangle: $0.8$, not $0.6$."
+      ]
+    }
+  ],
+  "tags": [
+    "arcsin",
+    "composition",
+    "pythagorean-identity"
+  ],
+  "estimatedSeconds": 80
+}

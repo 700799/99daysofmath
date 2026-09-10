@@ -1,0 +1,48 @@
+{
+  "id": "GEO.038",
+  "domain": "GEO",
+  "unit": 4,
+  "orderInUnit": 8,
+  "standard": "GEO.PROOF.1",
+  "difficulty": 2,
+  "prompt": "A two-column proof begins with the given equation $3x - 7 = 20$. Step 2 adds $7$ to both sides (Addition Property of Equality). Step 3 divides both sides by $3$ (Division Property of Equality). What value of $x$ does the proof reach?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Follow the two steps exactly as the proof describes them.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Follow the two steps exactly as the proof describes them."
+    },
+    {
+      "level": "guide",
+      "text": "After adding 7: $3x = 27$. Now divide by 3."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 9$."
+    }
+  ],
+  "explanation": [
+    "Step 2 adds 7 to both sides: $3x - 7 + 7 = 20 + 7$, so $3x = 27$.",
+    "Step 3 divides both sides by 3: $x = 9$.",
+    "Check by substituting: $3(9) - 7 = 27 - 7 = 20$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why proofs name the properties",
+      "steps": [
+        "Solving an equation IS a proof — each move is legal because a property of equality says so.",
+        "Adding 7 to both sides is the Addition Property; dividing both sides by 3 is the Division Property. Naming them is what turns arithmetic into an argument."
+      ]
+    }
+  ],
+  "tags": [
+    "two-column",
+    "properties-of-equality",
+    "algebra"
+  ],
+  "estimatedSeconds": 45
+}

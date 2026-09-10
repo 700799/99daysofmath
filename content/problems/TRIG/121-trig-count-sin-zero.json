@@ -1,0 +1,49 @@
+{
+  "id": "TRIG.121",
+  "domain": "TRIG",
+  "unit": 13,
+  "orderInUnit": 1,
+  "standard": "TRIG.EQ.1",
+  "difficulty": 1,
+  "prompt": "How many solutions does $\\sin x = 0$ have on the interval $[0, 2\\pi)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sine is the height of the point on the unit circle. Where is that height zero?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sine is the height of the point on the unit circle. Where is that height zero?"
+    },
+    {
+      "level": "guide",
+      "text": "On the circle, height zero happens on the horizontal axis — twice per lap."
+    },
+    {
+      "level": "reveal",
+      "text": "At $x = 0$ and $x = \\pi$. The value $2\\pi$ is excluded because the bracket is open there."
+    }
+  ],
+  "explanation": [
+    "$\\sin x$ is the $y$-coordinate of the point on the unit circle at angle $x$.",
+    "That $y$-coordinate is $0$ at the right of the circle ($x = 0$) and at the left ($x = \\pi$).",
+    "The next one would be $2\\pi$, but $[0, 2\\pi)$ leaves that endpoint out, so there are $2$ solutions."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read it off the graph",
+      "steps": [
+        "Sketch one full cycle of $y = \\sin x$ from $0$ to $2\\pi$.",
+        "Count where the curve crosses the $x$-axis: at the start, in the middle, and at the very end.",
+        "The end point belongs to the next cycle, so inside $[0, 2\\pi)$ there are $2$ crossings."
+      ]
+    }
+  ],
+  "tags": [
+    "solve",
+    "unit-circle",
+    "interval"
+  ],
+  "estimatedSeconds": 40
+}

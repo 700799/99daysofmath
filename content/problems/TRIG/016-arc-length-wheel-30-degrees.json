@@ -1,0 +1,54 @@
+{
+  "id": "TRIG.016",
+  "domain": "TRIG",
+  "unit": 2,
+  "orderInUnit": 6,
+  "standard": "TRIG.ANG.2",
+  "difficulty": 2,
+  "prompt": "A bicycle wheel has radius $12$ inches. If it turns through $30^\\circ$, how far along the rim does a spot of gum travel? Give your answer in inches in terms of $\\pi$ — for example, type \"3pi\" for $3\\pi$.",
+  "answerType": "expression",
+  "primaryAnswer": "2pi",
+  "alternativeAnswers": [
+    "2\\pi",
+    "2π",
+    "2 pi",
+    "2*pi"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The formula $s = r\\theta$ only works when $\\theta$ is in radians, so convert first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The formula $s = r\\theta$ only works when $\\theta$ is in radians, so convert first."
+    },
+    {
+      "level": "guide",
+      "text": "$30^\\circ = 30 \\times \\frac{\\pi}{180} = \\frac{\\pi}{6}$ radians. Now use $s = r\\theta$."
+    },
+    {
+      "level": "reveal",
+      "text": "$s = 12 \\times \\frac{\\pi}{6} = 2\\pi$ inches."
+    }
+  ],
+  "explanation": [
+    "Convert the angle to radians: $30^\\circ = \\frac{\\pi}{6}$.",
+    "Apply $s = r\\theta$ with $r = 12$: $s = 12 \\times \\frac{\\pi}{6}$.",
+    "The 12 and the 6 reduce, leaving $s = 2\\pi$ inches (about 6.28 inches)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Slice of the whole rim",
+      "steps": [
+        "The full rim is a circumference of $2\\pi r = 24\\pi$ inches.",
+        "$30^\\circ$ is $\\frac{30}{360} = \\frac{1}{12}$ of the circle.",
+        "$\\frac{1}{12} \\times 24\\pi = 2\\pi$ inches."
+      ]
+    }
+  ],
+  "tags": [
+    "arc-length",
+    "conversion",
+    "wheel"
+  ],
+  "estimatedSeconds": 55
+}

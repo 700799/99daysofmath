@@ -1,0 +1,69 @@
+{
+  "id": "TRIG.023",
+  "domain": "TRIG",
+  "unit": 3,
+  "orderInUnit": 3,
+  "standard": "TRIG.RT.1",
+  "difficulty": 1,
+  "prompt": "In right triangle $ABC$ with the right angle at $C$, which ratio equals $\\sin A$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\frac{\\text{opposite}}{\\text{hypotenuse}}$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\frac{\\text{adjacent}}{\\text{hypotenuse}}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\frac{\\text{opposite}}{\\text{adjacent}}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\frac{\\text{hypotenuse}}{\\text{opposite}}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Say the whole mnemonic out loud: SOH-CAH-TOA.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Say the whole mnemonic out loud: SOH-CAH-TOA."
+    },
+    {
+      "level": "guide",
+      "text": "SOH is the first piece: Sine = Opposite / Hypotenuse."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin A = \\frac{\\text{opposite}}{\\text{hypotenuse}}$."
+    }
+  ],
+  "explanation": [
+    "SOH-CAH-TOA packs all three ratios into one word.",
+    "SOH says Sine is Opposite over Hypotenuse, CAH says Cosine is Adjacent over Hypotenuse, and TOA says Tangent is Opposite over Adjacent.",
+    "So $\\sin A$ is the opposite side divided by the hypotenuse."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spot the imposters",
+      "steps": [
+        "Adjacent over hypotenuse is cosine, and opposite over adjacent is tangent — both real ratios, just not sine.",
+        "Hypotenuse over opposite is sine turned upside down, which would give answers bigger than 1 and cannot be sine."
+      ]
+    }
+  ],
+  "tags": [
+    "sohcahtoa",
+    "vocabulary"
+  ],
+  "estimatedSeconds": 30
+}

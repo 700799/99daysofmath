@@ -1,0 +1,49 @@
+{
+  "id": "TRIG.134",
+  "domain": "TRIG",
+  "unit": 14,
+  "orderInUnit": 4,
+  "standard": "TRIG.LAW.1",
+  "difficulty": 1,
+  "prompt": "A triangular garden bed has sides of $8$ m and $10$ m meeting at an angle of $30^\\circ$. What is its area, in square metres?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Use the sine area formula: Area $= \\frac{1}{2}ab\\sin C$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use the sine area formula: Area $= \\frac{1}{2}ab\\sin C$."
+    },
+    {
+      "level": "guide",
+      "text": "Substitute: $\\frac{1}{2}(8)(10)\\sin 30^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2}(80)(0.5) = 20$ square metres."
+    }
+  ],
+  "explanation": [
+    "When you know two sides and the angle between them, Area $= \\frac{1}{2}ab\\sin C$.",
+    "Substitute: Area $= \\frac{1}{2}(8)(10)\\sin 30^\\circ = 40 \\times 0.5$.",
+    "The area is $20$ square metres."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Where the formula comes from",
+      "steps": [
+        "The usual area formula is $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$.",
+        "Take the $10$ m side as the base; the height is the $8$ m side leaning over, which is $8\\sin 30^\\circ = 4$ m tall.",
+        "$\\frac{1}{2}(10)(4) = 20$ — the sine is just the tool that turns a slanted side into a true height."
+      ]
+    }
+  ],
+  "tags": [
+    "area",
+    "sine-formula",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

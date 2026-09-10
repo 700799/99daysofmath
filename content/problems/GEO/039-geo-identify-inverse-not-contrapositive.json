@@ -1,0 +1,83 @@
+{
+  "id": "GEO.039",
+  "domain": "GEO",
+  "unit": 4,
+  "orderInUnit": 9,
+  "standard": "GEO.PROOF.1",
+  "difficulty": 3,
+  "prompt": "Which statement is the INVERSE of \"If a road is icy, then the bridge is closed\"?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "If a road is not icy, then the bridge is not closed",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "If the bridge is not closed, then the road is not icy",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "If the bridge is closed, then the road is icy",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "If a road is icy, then the bridge is not closed",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Three relatives to keep straight: converse (swap), inverse (negate), contrapositive (swap AND negate).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Three relatives to keep straight: converse (swap), inverse (negate), contrapositive (swap AND negate)."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Practice on a tiny sentence: for \"If it rains, then I carry an umbrella,\" the inverse is \"If it does NOT rain, then I do NOT carry an umbrella\" — both parts negated, order unchanged. Make the same edit here."
+    },
+    {
+      "level": "guide",
+      "text": "The inverse negates both parts but keeps them in the SAME order."
+    },
+    {
+      "level": "reveal",
+      "text": "Not icy ⇒ not closed, in the original order. That is choice A."
+    }
+  ],
+  "explanation": [
+    "For \"if $p$, then $q$,\" the inverse is \"if not $p$, then not $q$\" — both parts negated, order unchanged.",
+    "Negating \"a road is icy\" and \"the bridge is closed\" in place gives choice A.",
+    "Choice B is the contrapositive (swapped and negated), choice C is the converse (swapped only), and choice D negates just the conclusion, which is none of the three."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two questions, in order",
+      "steps": [
+        "Question 1: did the parts trade places? For the inverse, no.",
+        "Question 2: did both parts get negated? For the inverse, yes. Only choice A answers no-then-yes."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The classic trap is choice B, the contrapositive — it also has two \"nots,\" so it looks right at a glance.",
+        "Check the ORDER first, before you count the \"nots.\" The original starts with the road; the inverse must also start with the road. Choice B starts with the bridge, so it is the contrapositive, not the inverse."
+      ]
+    }
+  ],
+  "tags": [
+    "inverse",
+    "contrapositive",
+    "converse",
+    "logic"
+  ],
+  "estimatedSeconds": 70
+}

@@ -1,0 +1,82 @@
+{
+  "id": "GEO.140",
+  "domain": "GEO",
+  "unit": 14,
+  "orderInUnit": 10,
+  "standard": "GEO.TRANS.1",
+  "difficulty": 3,
+  "prompt": "A quilt patch has corners $A(1, 1)$, $B(5, 3)$, $C(4, 5)$ and $D(0, 3)$, joined in that order. Using slopes and lengths, what kind of quadrilateral is it?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Rectangle (but not a square)",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Rhombus (but not a square)",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Square",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Trapezoid with exactly one pair of parallel sides",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the slope of all four sides first — equal slopes mean parallel, opposite reciprocals mean a right angle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the slope of all four sides first — equal slopes mean parallel, opposite reciprocals mean a right angle."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up on an obvious square with corners $(0,0)$, $(2,0)$, $(2,2)$, $(0,2)$: slopes of $0$ and undefined show the right angles, and all four sides measure $2$. Run those same two checks on the quilt corners."
+    },
+    {
+      "level": "guide",
+      "text": "Slopes: $AB = \\frac{2}{4} = \\frac{1}{2}$, $BC = \\frac{2}{-1} = -2$, $CD = \\frac{-2}{-4} = \\frac{1}{2}$, $DA = \\frac{-2}{1} = -2$. Both pairs of opposite sides are parallel and adjacent sides are perpendicular."
+    },
+    {
+      "level": "reveal",
+      "text": "Now check lengths: $AB = \\sqrt{20}$ but $BC = \\sqrt{5}$. Four right angles with unequal adjacent sides is a rectangle, not a square. Choice A."
+    }
+  ],
+  "explanation": [
+    "Opposite sides have matching slopes ($\\frac{1}{2}$ and $\\frac{1}{2}$; $-2$ and $-2$), so it is a parallelogram.",
+    "Adjacent slopes multiply to $\\frac{1}{2} \\times (-2) = -1$, so every corner is a right angle — that makes it a rectangle.",
+    "Lengths: $AB = \\sqrt{4^2 + 2^2} = \\sqrt{20} \\approx 4.5$ while $BC = \\sqrt{1^2 + 2^2} = \\sqrt{5} \\approx 2.2$. The sides are unequal, so it is a rectangle and not a square. Choice A."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A checklist that always works",
+      "steps": [
+        "Slopes of opposite sides equal? Then parallelogram. Slopes of adjacent sides opposite reciprocals? Then it has right angles.",
+        "Lengths of adjacent sides equal? Then all four sides match. Two out of three here — right angles yes, equal adjacent sides no — lands exactly on rectangle."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap is choosing \"square\". The patch is tilted on the grid, and a tilted rectangle with right angles at every corner LOOKS square when you sketch it quickly.",
+        "Never decide from the picture — compute the two adjacent side lengths. $\\sqrt{20}$ and $\\sqrt{5}$ differ by a factor of $2$, so the patch is twice as long as it is wide: a rectangle."
+      ]
+    }
+  ],
+  "tags": [
+    "coordinate-proof",
+    "slope",
+    "classification"
+  ],
+  "estimatedSeconds": 90
+}

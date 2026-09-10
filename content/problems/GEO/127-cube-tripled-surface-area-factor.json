@@ -1,0 +1,48 @@
+{
+  "id": "GEO.127",
+  "domain": "GEO",
+  "unit": 13,
+  "orderInUnit": 7,
+  "standard": "GEO.VOL.1",
+  "difficulty": 2,
+  "prompt": "A model cube is rebuilt with every edge $3$ times as long. The surface area of the new cube is how many times the surface area of the original?",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Surface area is built from two dimensions, so scaling hits it twice.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Surface area is built from two dimensions, so scaling hits it twice."
+    },
+    {
+      "level": "guide",
+      "text": "Test it: a cube of edge $1$ has surface area $6$; a cube of edge $3$ has surface area $6(3^2) = 54$."
+    },
+    {
+      "level": "reveal",
+      "text": "$54 \\div 6 = 9$ times as much."
+    }
+  ],
+  "explanation": [
+    "If every length is multiplied by $k$, area is multiplied by $k^2$ and volume by $k^3$.",
+    "Here $k = 3$, so surface area grows by $3^2 = 9$.",
+    "The new cube has $9$ times the surface area (and $27$ times the volume)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Look at one face",
+      "steps": [
+        "One face goes from a $1$-by-$1$ square to a $3$-by-$3$ square — that is $9$ little squares instead of $1$.",
+        "All six faces grow the same way, so the whole surface is $9$ times bigger."
+      ]
+    }
+  ],
+  "tags": [
+    "scaling",
+    "surface-area",
+    "similarity"
+  ],
+  "estimatedSeconds": 55
+}

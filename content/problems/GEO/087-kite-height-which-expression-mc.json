@@ -1,0 +1,69 @@
+{
+  "id": "GEO.087",
+  "domain": "GEO",
+  "unit": 9,
+  "orderInUnit": 7,
+  "standard": "GEO.RT.2",
+  "difficulty": 2,
+  "prompt": "A kite is flying on $80$ ft of taut string that makes a $40^\\circ$ angle with the level ground. Which calculation gives the kite's height above the ground?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$80 \\sin 40^\\circ \\approx 51.4$ ft",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$80 \\cos 40^\\circ \\approx 61.3$ ft",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$80 \\tan 40^\\circ \\approx 67.1$ ft",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\frac{80}{\\sin 40^\\circ} \\approx 124.5$ ft",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The string is the hypotenuse; the height is the side opposite the $40^\\circ$ angle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The string is the hypotenuse; the height is the side opposite the $40^\\circ$ angle."
+    },
+    {
+      "level": "guide",
+      "text": "Opposite and hypotenuse means sine: $\\sin 40^\\circ = \\frac{h}{80}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Multiply: $h = 80 \\sin 40^\\circ \\approx 51.4$ ft. Choice A."
+    }
+  ],
+  "explanation": [
+    "The taut string is the longest side of the triangle, so it is the hypotenuse: $80$ ft.",
+    "Height is opposite the $40^\\circ$ angle, and opposite-over-hypotenuse is sine: $\\sin 40^\\circ = \\frac{h}{80}$.",
+    "So $h = 80 \\sin 40^\\circ \\approx 51.4$ ft. Choice A."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Eliminate the impossible",
+      "steps": [
+        "The height can never exceed the $80$ ft of string, so choice D is out before any arithmetic.",
+        "Choice B is the horizontal distance and C uses the wrong pair of sides entirely — only A pairs the height with the hypotenuse."
+      ]
+    }
+  ],
+  "tags": [
+    "soh-cah-toa",
+    "angle-of-elevation"
+  ],
+  "estimatedSeconds": 55
+}

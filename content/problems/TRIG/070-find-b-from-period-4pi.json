@@ -1,0 +1,64 @@
+{
+  "id": "TRIG.070",
+  "domain": "TRIG",
+  "unit": 7,
+  "orderInUnit": 10,
+  "standard": "TRIG.GRAPH.1",
+  "difficulty": 3,
+  "prompt": "The graph of $y = 3\\sin(bx)$ has a period of $4\\pi$ radians. What is the value of $b$? Give a fraction or a decimal.",
+  "answerType": "numeric",
+  "primaryAnswer": "1/2",
+  "alternativeAnswers": [
+    "0.5",
+    ".5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The period of $y = a\\sin(bx)$ is $\\frac{2\\pi}{b}$ — set that equal to what you are given.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The period of $y = a\\sin(bx)$ is $\\frac{2\\pi}{b}$ — set that equal to what you are given."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with a period of $\\pi$: solving $\\frac{2\\pi}{b} = \\pi$ gives $b = 2$. A shorter period needed a bigger $b$, so a longer period must need a smaller one."
+    },
+    {
+      "level": "guide",
+      "text": "Solve $\\frac{2\\pi}{b} = 4\\pi$ for $b$: multiply both sides by $b$, then divide."
+    },
+    {
+      "level": "reveal",
+      "text": "$2\\pi = 4\\pi b$, so $b = \\frac{2\\pi}{4\\pi} = \\frac{1}{2}$."
+    }
+  ],
+  "explanation": [
+    "Use the period formula: period $= \\frac{2\\pi}{b}$, so $\\frac{2\\pi}{b} = 4\\pi$.",
+    "Multiply both sides by $b$: $2\\pi = 4\\pi b$.",
+    "Divide both sides by $4\\pi$: $b = \\frac{2\\pi}{4\\pi} = \\frac{1}{2}$. The 3 out front is the amplitude and never affects the period."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Stretch or squeeze?",
+      "steps": [
+        "The normal period is $2\\pi$, and this wave takes $4\\pi$ — twice as long — so the graph is STRETCHED horizontally.",
+        "Stretching requires an inside factor smaller than 1, which rules out any answer bigger than 1.",
+        "Halving the speed means $b = \\frac{1}{2}$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is $b = 2$: the period doubled, so it feels like $b$ should double too. But $b$ sits in the DENOMINATOR of $\\frac{2\\pi}{b}$, so a bigger $b$ makes a shorter period, not a longer one.",
+        "Test the suspect answer before committing: $b = 2$ would give period $\\frac{2\\pi}{2} = \\pi$, far too short. $b = \\frac{1}{2}$ gives $\\frac{2\\pi}{1/2} = 4\\pi$. ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "period",
+    "solve-for-b",
+    "graphing"
+  ],
+  "estimatedSeconds": 80
+}

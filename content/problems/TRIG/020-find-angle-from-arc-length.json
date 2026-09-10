@@ -1,0 +1,62 @@
+{
+  "id": "TRIG.020",
+  "domain": "TRIG",
+  "unit": 2,
+  "orderInUnit": 10,
+  "standard": "TRIG.ANG.2",
+  "difficulty": 3,
+  "prompt": "A wire is bent along a circle of radius $6$ cm, forming an arc $15$ cm long. What is the central angle, in radians?",
+  "answerType": "numeric",
+  "primaryAnswer": "2.5",
+  "alternativeAnswers": [
+    "5/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "You know $s = r\\theta$, and this time $s$ and $r$ are given while $\\theta$ is the unknown.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You know $s = r\\theta$, and this time $s$ and $r$ are given while $\\theta$ is the unknown."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $r = 5$ and $s = 10$: the arc is two radius-lengths long, so $\\theta = \\frac{10}{5} = 2$ radians. Divide the same way here, arc on top."
+    },
+    {
+      "level": "guide",
+      "text": "Solve the formula for $\\theta$: $\\theta = \\frac{s}{r}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\theta = \\frac{15}{6} = 2.5$ radians."
+    }
+  ],
+  "explanation": [
+    "Start from $s = r\\theta$ and divide both sides by $r$ to get $\\theta = \\frac{s}{r}$.",
+    "Substitute the arc length and radius: $\\theta = \\frac{15}{6} = 2.5$.",
+    "The answer is $2.5$ radians — a little under $\\pi$, so a bit less than a half turn, which fits an arc two and a half radius-lengths long."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count radius-lengths",
+      "steps": [
+        "One radian of angle wraps exactly one radius-length of arc.",
+        "The radius is 6 cm, so ask how many 6 cm pieces fit into 15 cm.",
+        "Two and a half of them fit, so the angle is $2.5$ radians."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is $0.4$, from dividing the wrong way: $\\frac{6}{15}$ instead of $\\frac{15}{6}$.",
+        "Check it against the picture: an arc longer than the radius must be more than one radian, so any answer under 1 is automatically wrong here. Keep the formula $\\theta = \\frac{s}{r}$ — arc on top, radius on the bottom."
+      ]
+    }
+  ],
+  "tags": [
+    "arc-length",
+    "solve-for-angle"
+  ],
+  "estimatedSeconds": 70
+}

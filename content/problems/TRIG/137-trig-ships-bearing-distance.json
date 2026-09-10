@@ -1,0 +1,49 @@
+{
+  "id": "TRIG.137",
+  "domain": "TRIG",
+  "unit": 14,
+  "orderInUnit": 7,
+  "standard": "TRIG.LAW.1",
+  "difficulty": 2,
+  "prompt": "Two ships leave the same port at the same time on courses that differ by $70^\\circ$. After an hour one has travelled $30$ km and the other $42$ km. How far apart are they, in kilometres, rounded to one decimal place?",
+  "answerType": "numeric",
+  "primaryAnswer": "42.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sketch it: the two paths are sides of a triangle and the $70^\\circ$ sits between them.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sketch it: the two paths are sides of a triangle and the $70^\\circ$ sits between them."
+    },
+    {
+      "level": "guide",
+      "text": "Side-angle-side calls for the Law of Cosines: $d^2 = 30^2 + 42^2 - 2(30)(42)\\cos 70^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "$d^2 = 2664 - 2520(0.34202) \\approx 1802.1$, so $d \\approx 42.5$ km."
+    }
+  ],
+  "explanation": [
+    "The port and the two ships form a triangle with sides $30$ and $42$ and an included angle of $70^\\circ$.",
+    "Law of Cosines: $d^2 = 30^2 + 42^2 - 2(30)(42)\\cos 70^\\circ = 900 + 1764 - 2520(0.34202)$.",
+    "$d^2 \\approx 2664 - 861.9 = 1802.1$, so $d \\approx 42.45$ km, which rounds to $42.5$ km."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer against two extremes",
+      "steps": [
+        "If the ships sailed in exactly the same direction ($0^\\circ$ apart) the gap would be $42 - 30 = 12$ km.",
+        "If they sailed in opposite directions ($180^\\circ$ apart) the gap would be $42 + 30 = 72$ km.",
+        "A $70^\\circ$ spread should land somewhere in between, and $42.5$ km does."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-cosines",
+    "navigation",
+    "bearings"
+  ],
+  "estimatedSeconds": 80
+}

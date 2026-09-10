@@ -1,0 +1,53 @@
+{
+  "id": "GEO.041",
+  "domain": "GEO",
+  "unit": 5,
+  "orderInUnit": 1,
+  "standard": "GEO.CONG.1",
+  "difficulty": 1,
+  "prompt": "Two triangular quilt patches are compared. Two sides of the first match two sides of the second, and the angle BETWEEN those two sides matches as well. Which congruence criterion is this? Answer with three letters.",
+  "answerType": "short-text",
+  "primaryAnswer": "SAS",
+  "alternativeAnswers": [
+    "sas",
+    "S.A.S.",
+    "side angle side",
+    "side-angle-side"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Write the parts in the order you meet them going around the triangle: side, then angle, then side.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Write the parts in the order you meet them going around the triangle: side, then angle, then side."
+    },
+    {
+      "level": "guide",
+      "text": "The angle sits BETWEEN the two sides, so the letters read S, A, S."
+    },
+    {
+      "level": "reveal",
+      "text": "This is SAS — Side-Angle-Side."
+    }
+  ],
+  "explanation": [
+    "Name a criterion by walking around the triangle and recording each known part in order.",
+    "Here it is side, then the included angle, then the other side: S-A-S.",
+    "SAS guarantees congruence: with two sides fixed and the angle between them locked, the third side has nowhere else to land."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the \"included\" part matters",
+      "steps": [
+        "Think of two sticks hinged at a corner. Fix their lengths and fix the hinge angle, and the gap between the far ends is determined.",
+        "That gap is the third side, so the whole triangle is determined — which is exactly why SAS works."
+      ]
+    }
+  ],
+  "tags": [
+    "congruence",
+    "SAS",
+    "triangles"
+  ],
+  "estimatedSeconds": 35
+}

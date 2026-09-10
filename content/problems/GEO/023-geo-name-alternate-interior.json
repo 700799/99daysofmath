@@ -1,0 +1,70 @@
+{
+  "id": "GEO.023",
+  "domain": "GEO",
+  "unit": 3,
+  "orderInUnit": 3,
+  "standard": "GEO.PAR.1",
+  "difficulty": 1,
+  "prompt": "A transversal crosses two parallel lines. Two of the angles formed lie BETWEEN the parallel lines and on OPPOSITE sides of the transversal. What are this pair of angles called?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Alternate interior angles",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Corresponding angles",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Co-interior (same-side interior) angles",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Alternate exterior angles",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Read the description one word at a time: \"between the lines\" tells you interior or exterior.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Read the description one word at a time: \"between the lines\" tells you interior or exterior."
+    },
+    {
+      "level": "guide",
+      "text": "\"Opposite sides of the transversal\" is exactly what the word \"alternate\" means."
+    },
+    {
+      "level": "reveal",
+      "text": "Between the lines plus opposite sides means alternate interior angles."
+    }
+  ],
+  "explanation": [
+    "\"Interior\" means between the two parallel lines; \"exterior\" means outside them.",
+    "\"Alternate\" means the two angles are on opposite sides of the transversal; \"same-side\" (co-interior) means the same side.",
+    "Between the lines and on opposite sides is the definition of alternate interior angles, and when the lines are parallel they are congruent."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build the name from two questions",
+      "steps": [
+        "Question 1: inside or outside the parallel lines? Inside → \"interior.\"",
+        "Question 2: same side of the transversal, or opposite sides? Opposite → \"alternate.\" Put them together: alternate interior."
+      ]
+    }
+  ],
+  "tags": [
+    "parallel-lines",
+    "vocabulary",
+    "alternate-interior"
+  ],
+  "estimatedSeconds": 40
+}

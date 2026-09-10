@@ -1,0 +1,47 @@
+{
+  "id": "GEO.092",
+  "domain": "GEO",
+  "unit": 10,
+  "orderInUnit": 2,
+  "standard": "GEO.QUAD.1",
+  "difficulty": 1,
+  "prompt": "A hexagonal patio tile has $6$ sides. What is the sum of its interior angles, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "720",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The interior angle sum of an $n$-gon is $(n - 2) \\times 180^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The interior angle sum of an $n$-gon is $(n - 2) \\times 180^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "With $n = 6$: $(6 - 2) \\times 180$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 \\times 180 = 720^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Use the formula $(n - 2) \\times 180^\\circ$ with $n = 6$.",
+    "$(6 - 2) = 4$.",
+    "$4 \\times 180 = 720^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Slice it into triangles",
+      "steps": [
+        "Pick one corner of the hexagon and draw diagonals to every non-neighbor corner — you get exactly $4$ triangles.",
+        "Every triangle holds $180^\\circ$, and together they cover the whole hexagon: $4 \\times 180 = 720^\\circ$. That is where the $n - 2$ comes from."
+      ]
+    }
+  ],
+  "tags": [
+    "polygon",
+    "interior-angles"
+  ],
+  "estimatedSeconds": 35
+}

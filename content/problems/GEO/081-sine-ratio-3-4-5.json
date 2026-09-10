@@ -1,0 +1,50 @@
+{
+  "id": "GEO.081",
+  "domain": "GEO",
+  "unit": 9,
+  "orderInUnit": 1,
+  "standard": "GEO.RT.2",
+  "difficulty": 1,
+  "prompt": "In right triangle $ABC$ the right angle is at $C$. The side opposite $\\angle A$ is $3$ and the hypotenuse is $5$. What is $\\sin A$? Give a decimal.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.6",
+  "alternativeAnswers": [
+    "3/5",
+    ".6"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "SOH: **S**ine is **O**pposite over **H**ypotenuse.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "SOH: **S**ine is **O**pposite over **H**ypotenuse."
+    },
+    {
+      "level": "guide",
+      "text": "Opposite $\\angle A$ is $3$; the hypotenuse is $5$. Divide."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin A = \\frac{3}{5} = 0.6$."
+    }
+  ],
+  "explanation": [
+    "Sine of an angle is the opposite side divided by the hypotenuse.",
+    "Here that is $\\frac{3}{5}$.",
+    "$3 \\div 5 = 0.6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why it is always less than 1",
+      "steps": [
+        "The hypotenuse is the longest side of a right triangle, so the opposite side is always smaller.",
+        "A smaller number over a bigger one is less than $1$ — if your sine ever comes out above $1$, you flipped the fraction."
+      ]
+    }
+  ],
+  "tags": [
+    "soh-cah-toa",
+    "sine"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,47 @@
+{
+  "id": "GEO.091",
+  "domain": "GEO",
+  "unit": 10,
+  "orderInUnit": 1,
+  "standard": "GEO.QUAD.1",
+  "difficulty": 1,
+  "prompt": "In parallelogram $ABCD$, $\\angle A = 68^\\circ$. What is the measure of $\\angle B$, the angle next to it, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "112",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "In a parallelogram, angles that sit next to each other are supplementary — they add to $180^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "In a parallelogram, angles that sit next to each other are supplementary — they add to $180^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "So $68 + \\angle B = 180$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\angle B = 180 - 68 = 112^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Opposite sides of a parallelogram are parallel, so consecutive angles are same-side interior angles and add to $180^\\circ$.",
+    "Set up $68 + \\angle B = 180$.",
+    "Subtract: $\\angle B = 112^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check all four",
+      "steps": [
+        "Opposite angles are equal, so the four angles are $68^\\circ$, $112^\\circ$, $68^\\circ$, $112^\\circ$.",
+        "They total $68 + 112 + 68 + 112 = 360^\\circ$ ✓ — exactly what a quadrilateral should have."
+      ]
+    }
+  ],
+  "tags": [
+    "parallelogram",
+    "angles"
+  ],
+  "estimatedSeconds": 35
+}

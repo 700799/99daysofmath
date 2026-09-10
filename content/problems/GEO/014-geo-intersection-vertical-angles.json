@@ -1,0 +1,47 @@
+{
+  "id": "GEO.014",
+  "domain": "GEO",
+  "unit": 2,
+  "orderInUnit": 4,
+  "standard": "GEO.ANG.1",
+  "difficulty": 1,
+  "prompt": "Two straight streets cross, cutting the intersection into four angles. One of them measures $65^\\circ$. What is the measure, in degrees, of the angle directly across the intersection from it?",
+  "answerType": "numeric",
+  "primaryAnswer": "65",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Angles directly across from each other at a crossing are called vertical angles.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Angles directly across from each other at a crossing are called vertical angles."
+    },
+    {
+      "level": "guide",
+      "text": "Vertical angles are always congruent — equal in measure."
+    },
+    {
+      "level": "reveal",
+      "text": "The angle across is also $65^\\circ$."
+    }
+  ],
+  "explanation": [
+    "When two lines cross, the two angles directly opposite each other are vertical angles.",
+    "Vertical angles are congruent, so the opposite angle has the same measure.",
+    "The angle across the intersection is $65^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Prove it with linear pairs",
+      "steps": [
+        "The $65^\\circ$ angle and the angle beside it form a straight street: $180 - 65 = 115^\\circ$.",
+        "That $115^\\circ$ angle and the one across from $65^\\circ$ also form a straight street: $180 - 115 = 65^\\circ$. Same measure, every time."
+      ]
+    }
+  ],
+  "tags": [
+    "vertical-angles",
+    "intersection"
+  ],
+  "estimatedSeconds": 30
+}

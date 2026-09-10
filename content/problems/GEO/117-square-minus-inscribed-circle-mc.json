@@ -1,0 +1,70 @@
+{
+  "id": "GEO.117",
+  "domain": "GEO",
+  "unit": 12,
+  "orderInUnit": 7,
+  "standard": "GEO.AREA.1",
+  "difficulty": 2,
+  "prompt": "A square napkin measures $10$ cm on each side. A circle of diameter $10$ cm is printed on it, touching all four sides. How much of the napkin is left UNPRINTED, in square centimeters, rounded to the nearest tenth?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$21.5$ sq cm",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$68.6$ sq cm",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$78.5$ sq cm",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$75.0$ sq cm",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Unprinted area $=$ square area $-$ circle area.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Unprinted area $=$ square area $-$ circle area."
+    },
+    {
+      "level": "guide",
+      "text": "The square is $10 \\times 10 = 100$. The circle has diameter $10$, so its radius is $5$ and its area is $25\\pi$."
+    },
+    {
+      "level": "reveal",
+      "text": "$100 - 25\\pi \\approx 100 - 78.5 = 21.5$ sq cm."
+    }
+  ],
+  "explanation": [
+    "Square area: $10^2 = 100$ sq cm.",
+    "The circle touches all four sides, so its diameter is $10$ and its radius is $5$: area $= \\pi(5)^2 = 25\\pi \\approx 78.5$ sq cm.",
+    "Subtract: $100 - 78.5 = 21.5$ sq cm in the four corners. Choice A."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Eyeball the corners",
+      "steps": [
+        "The circle nearly fills the napkin, leaving only four small corner scraps.",
+        "Those scraps should be a small slice of the $100$ sq cm total — around a fifth — so $21.5$ fits and $78.5$ (choice C, the circle itself) clearly does not."
+      ]
+    }
+  ],
+  "tags": [
+    "shaded-region",
+    "composite-area",
+    "circle"
+  ],
+  "estimatedSeconds": 65
+}

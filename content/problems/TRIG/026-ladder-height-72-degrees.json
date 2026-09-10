@@ -1,0 +1,48 @@
+{
+  "id": "TRIG.026",
+  "domain": "TRIG",
+  "unit": 3,
+  "orderInUnit": 6,
+  "standard": "TRIG.RT.1",
+  "difficulty": 2,
+  "prompt": "An $18$ ft ladder leans against a wall, making a $72^\\circ$ angle with the ground. How far up the wall does the ladder reach? Round to the nearest tenth of a foot.",
+  "answerType": "numeric",
+  "primaryAnswer": "17.1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The ladder is the hypotenuse; the height on the wall is opposite the $72^\\circ$ angle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The ladder is the hypotenuse; the height on the wall is opposite the $72^\\circ$ angle."
+    },
+    {
+      "level": "guide",
+      "text": "Opposite and hypotenuse means sine: $\\sin 72^\\circ = \\frac{h}{18}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$h = 18 \\sin 72^\\circ \\approx 18(0.9511) \\approx 17.1$ ft."
+    }
+  ],
+  "explanation": [
+    "The ladder itself is the hypotenuse, $18$ ft, and the wall height is opposite the $72^\\circ$ angle.",
+    "So $\\sin 72^\\circ = \\frac{h}{18}$, which gives $h = 18\\sin 72^\\circ$.",
+    "Since $\\sin 72^\\circ \\approx 0.9511$, the height is about $17.1$ ft."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity-check the size",
+      "steps": [
+        "A steep $72^\\circ$ ladder is nearly upright, so the height should be close to but a little less than the full 18 ft.",
+        "$17.1$ ft fits perfectly; an answer like $5.6$ ft would mean the ladder was almost flat on the ground."
+      ]
+    }
+  ],
+  "tags": [
+    "sine",
+    "ladder",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

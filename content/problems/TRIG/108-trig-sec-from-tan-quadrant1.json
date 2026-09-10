@@ -1,0 +1,53 @@
+{
+  "id": "TRIG.108",
+  "domain": "TRIG",
+  "unit": 11,
+  "orderInUnit": 8,
+  "standard": "TRIG.IDENT.1",
+  "difficulty": 2,
+  "prompt": "If $\\tan\\theta = \\frac{4}{3}$ and $\\theta$ is in the first quadrant, find $\\sec\\theta$. Give a fraction or a decimal.",
+  "answerType": "numeric",
+  "primaryAnswer": "5/3",
+  "alternativeAnswers": [
+    "1.667",
+    "1.6667",
+    "1.67"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Use the identity $1 + \\tan^2\\theta = \\sec^2\\theta$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use the identity $1 + \\tan^2\\theta = \\sec^2\\theta$."
+    },
+    {
+      "level": "guide",
+      "text": "$1 + \\frac{16}{9} = \\frac{25}{9}$, so $\\sec^2\\theta = \\frac{25}{9}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sec\\theta = \\frac{5}{3}$, positive because $\\theta$ is in quadrant I."
+    }
+  ],
+  "explanation": [
+    "Apply $1 + \\tan^2\\theta = \\sec^2\\theta$ with $\\tan\\theta = \\frac{4}{3}$.",
+    "$1 + \\frac{16}{9} = \\frac{9}{9} + \\frac{16}{9} = \\frac{25}{9}$, so $\\sec^2\\theta = \\frac{25}{9}$.",
+    "Taking the positive root (quadrant I makes everything positive) gives $\\sec\\theta = \\frac{5}{3}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw the triangle",
+      "steps": [
+        "$\\tan\\theta = \\frac{4}{3}$ means opposite $4$, adjacent $3$, so the hypotenuse is $5$ — the $3$-$4$-$5$ triangle again.",
+        "$\\cos\\theta = \\frac{3}{5}$, and secant is its reciprocal.",
+        "$\\sec\\theta = \\frac{5}{3}$."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean-identity",
+    "secant",
+    "quadrants"
+  ],
+  "estimatedSeconds": 60
+}

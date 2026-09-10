@@ -1,0 +1,52 @@
+{
+  "id": "TRIG.037",
+  "domain": "TRIG",
+  "unit": 4,
+  "orderInUnit": 7,
+  "standard": "TRIG.RT.2",
+  "difficulty": 2,
+  "prompt": "A $30$-$60$-$90$ triangle has its shorter leg equal to $5$ cm. How long is the longer leg? Give the exact value, for example \"4sqrt(3)\" for $4\\sqrt{3}$.",
+  "answerType": "expression",
+  "primaryAnswer": "5sqrt(3)",
+  "alternativeAnswers": [
+    "5*sqrt(3)",
+    "5 sqrt(3)",
+    "5√3",
+    "5\\sqrt{3}"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The sides go $1 : \\sqrt{3} : 2$, and the shorter leg is the $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The sides go $1 : \\sqrt{3} : 2$, and the shorter leg is the $1$."
+    },
+    {
+      "level": "guide",
+      "text": "The longer leg is always the shorter leg times $\\sqrt{3}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5 \\times \\sqrt{3} = 5\\sqrt{3} \\approx 8.7$ cm."
+    }
+  ],
+  "explanation": [
+    "In a $30$-$60$-$90$ triangle, the shorter leg matches the $1$ in the ratio $1 : \\sqrt{3} : 2$.",
+    "The longer leg is $\\sqrt{3}$ times the shorter leg.",
+    "So the longer leg is $5\\sqrt{3} \\approx 8.66$ cm — longer than 5, as it should be."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with the theorem",
+      "steps": [
+        "The hypotenuse is twice the short leg: $10$ cm.",
+        "Then $b^2 = 10^2 - 5^2 = 100 - 25 = 75$, so $b = \\sqrt{75} = 5\\sqrt{3}$."
+      ]
+    }
+  ],
+  "tags": [
+    "special-triangles",
+    "30-60-90"
+  ],
+  "estimatedSeconds": 50
+}

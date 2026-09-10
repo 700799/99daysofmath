@@ -1,0 +1,49 @@
+{
+  "id": "TRIG.125",
+  "domain": "TRIG",
+  "unit": 13,
+  "orderInUnit": 5,
+  "standard": "TRIG.EQ.1",
+  "difficulty": 2,
+  "prompt": "Solve $\\sin\\theta = -\\frac{1}{2}$ for $0^\\circ \\le \\theta < 360^\\circ$. What is the SMALLER of the two solutions, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "210",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Ignore the sign to get the reference angle: $\\sin 30^\\circ = \\frac{1}{2}$, so it is $30^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Ignore the sign to get the reference angle: $\\sin 30^\\circ = \\frac{1}{2}$, so it is $30^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "Sine is negative in quadrants III and IV."
+    },
+    {
+      "level": "reveal",
+      "text": "Quadrant III: $180^\\circ + 30^\\circ = 210^\\circ$. Quadrant IV: $360^\\circ - 30^\\circ = 330^\\circ$. The smaller is $210^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The reference angle comes from $\\sin 30^\\circ = \\frac{1}{2}$, so it is $30^\\circ$.",
+    "A negative sine means the point on the unit circle is below the axis: quadrants III and IV.",
+    "Those angles are $180^\\circ + 30^\\circ = 210^\\circ$ and $360^\\circ - 30^\\circ = 330^\\circ$; the smaller is $210^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A note on the calculator answer",
+      "steps": [
+        "A calculator returns $\\arcsin(-0.5) = -30^\\circ$, which is not in the required interval.",
+        "Add $360^\\circ$ to it and you get $330^\\circ$, one of the answers.",
+        "The other, $210^\\circ$, never appears on the calculator screen — you must find it yourself from the reference angle. This is why the unit circle matters."
+      ]
+    }
+  ],
+  "tags": [
+    "solve",
+    "quadrants",
+    "negatives"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,71 @@
+{
+  "id": "GEO.045",
+  "domain": "GEO",
+  "unit": 5,
+  "orderInUnit": 5,
+  "standard": "GEO.CONG.1",
+  "difficulty": 2,
+  "prompt": "Which of these does NOT prove that two triangles are congruent?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "AAA — all three pairs of angles are congruent",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "ASA — two angles and the side between them",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "SSS — all three pairs of sides",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "AAS — two angles and a side not between them",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Congruence is about size AND shape. Which choice never mentions a single length?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Congruence is about size AND shape. Which choice never mentions a single length?"
+    },
+    {
+      "level": "guide",
+      "text": "Matching angles alone fix the shape but say nothing about how big the triangle is."
+    },
+    {
+      "level": "reveal",
+      "text": "AAA does not prove congruence — it only proves similarity."
+    }
+  ],
+  "explanation": [
+    "Every valid congruence criterion (SSS, SAS, ASA, AAS, HL) includes at least one side, because a side sets the size.",
+    "AAA includes no sides, so the triangles could be the same shape at wildly different scales.",
+    "AAA therefore proves similarity, not congruence."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A concrete counterexample",
+      "steps": [
+        "A triangle with angles $60^\\circ$-$60^\\circ$-$60^\\circ$ and sides of 2 cm matches all three angles of one with sides of 200 cm.",
+        "Same angles, wildly different triangles — so AAA cannot be a congruence criterion."
+      ]
+    }
+  ],
+  "tags": [
+    "congruence",
+    "AAA",
+    "similarity",
+    "misconception"
+  ],
+  "estimatedSeconds": 50
+}

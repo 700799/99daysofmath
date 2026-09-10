@@ -1,0 +1,71 @@
+{
+  "id": "TRIG.098",
+  "domain": "TRIG",
+  "unit": 10,
+  "orderInUnit": 8,
+  "standard": "TRIG.INV.1",
+  "difficulty": 2,
+  "prompt": "What is $\\arcsin\\left(\\sin 150^\\circ\\right)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$30^\\circ$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$150^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$-30^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$210^\\circ$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Work from the inside out: first find $\\sin 150^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Work from the inside out: first find $\\sin 150^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sin 150^\\circ = \\frac{1}{2}$. Now ask what $\\arcsin\\left(\\frac{1}{2}\\right)$ is, remembering the range is $[-90^\\circ, 90^\\circ]$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\arcsin\\left(\\frac{1}{2}\\right) = 30^\\circ$, and $150^\\circ$ is not allowed as an output."
+    }
+  ],
+  "explanation": [
+    "Inside first: $\\sin 150^\\circ = \\frac{1}{2}$, because $150^\\circ$ has reference angle $30^\\circ$ and sine is positive in quadrant II.",
+    "Now $\\arcsin\\left(\\frac{1}{2}\\right)$ must return an angle between $-90^\\circ$ and $90^\\circ$.",
+    "The only such angle is $30^\\circ$, so the answer is $30^\\circ$, not $150^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Inverses only undo on the restricted piece",
+      "steps": [
+        "It is tempting to say the functions cancel and leave $150^\\circ$.",
+        "They only cancel when the starting angle is already inside the restricted domain $[-90^\\circ, 90^\\circ]$.",
+        "$150^\\circ$ is outside it, so $\\arcsin$ sends you back to the partner angle that IS inside: $30^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "arcsin",
+    "restricted-domain",
+    "composition"
+  ],
+  "estimatedSeconds": 60
+}

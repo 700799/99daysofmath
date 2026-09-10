@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.033",
+  "domain": "TRIG",
+  "unit": 4,
+  "orderInUnit": 3,
+  "standard": "TRIG.RT.2",
+  "difficulty": 1,
+  "prompt": "What is the exact value of $\\cos 30^\\circ$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\frac{1}{2}$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$\\frac{\\sqrt{2}}{2}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\frac{\\sqrt{3}}{2}$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$\\sqrt{3}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Use the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$."
+    },
+    {
+      "level": "guide",
+      "text": "Next to the $30^\\circ$ angle sits the long leg $\\sqrt{3}$; the hypotenuse is $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, which is about $0.866$."
+    }
+  ],
+  "explanation": [
+    "In the $30$-$60$-$90$ triangle the sides are $1$ (opposite $30^\\circ$), $\\sqrt{3}$ (opposite $60^\\circ$), and $2$ (the hypotenuse).",
+    "Cosine is adjacent over hypotenuse, and the side adjacent to the $30^\\circ$ angle is $\\sqrt{3}$.",
+    "So $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2} \\approx 0.866$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate to rule out the others",
+      "steps": [
+        "$30^\\circ$ is a small angle, so the adjacent side is nearly as long as the hypotenuse and cosine should be close to 1.",
+        "$\\frac{\\sqrt{3}}{2} \\approx 0.87$ fits; $\\frac{1}{2}$ is too small (that is $\\sin 30^\\circ$), and $\\sqrt{3} \\approx 1.73$ is impossible since cosine never exceeds 1."
+      ]
+    }
+  ],
+  "tags": [
+    "exact-values",
+    "cosine",
+    "special-triangles"
+  ],
+  "estimatedSeconds": 35
+}

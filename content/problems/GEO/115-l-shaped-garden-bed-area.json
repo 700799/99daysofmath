@@ -1,0 +1,47 @@
+{
+  "id": "GEO.115",
+  "domain": "GEO",
+  "unit": 12,
+  "orderInUnit": 5,
+  "standard": "GEO.AREA.1",
+  "difficulty": 2,
+  "prompt": "A garden bed is L-shaped: start with a rectangle $10$ ft long and $6$ ft wide, then cut away a $4$ ft by $3$ ft rectangle from one corner. What is the area of the remaining L-shaped bed, in square feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "48",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the big rectangle's area, then subtract the piece that was removed.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the big rectangle's area, then subtract the piece that was removed."
+    },
+    {
+      "level": "guide",
+      "text": "Big rectangle: $10 \\times 6 = 60$ sq ft. Removed corner: $4 \\times 3 = 12$ sq ft."
+    },
+    {
+      "level": "reveal",
+      "text": "$60 - 12 = 48$ square feet."
+    }
+  ],
+  "explanation": [
+    "Treat the L as a full rectangle with a bite taken out.",
+    "Full rectangle: $10 \\times 6 = 60$ sq ft. Bite: $4 \\times 3 = 12$ sq ft.",
+    "Remaining area: $60 - 12 = 48$ square feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Add two pieces instead",
+      "steps": [
+        "You can also slice the L into two rectangles: one $10$ by $3$ ($30$ sq ft) and one $6$ by $3$ ($18$ sq ft).",
+        "$30 + 18 = 48$ sq ft ✓ — subtracting a piece and adding pieces always agree, so use whichever cut you see first."
+      ]
+    }
+  ],
+  "tags": [
+    "composite-area",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

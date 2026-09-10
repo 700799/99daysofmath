@@ -1,0 +1,71 @@
+{
+  "id": "TRIG.068",
+  "domain": "TRIG",
+  "unit": 7,
+  "orderInUnit": 8,
+  "standard": "TRIG.GRAPH.1",
+  "difficulty": 2,
+  "prompt": "A tide graph is a smooth wave. High tide reaches a depth of $8$ ft and low tide drops to $2$ ft. What is the amplitude of the wave?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$3$ ft",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$5$ ft",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$6$ ft",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$8$ ft",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Amplitude is the distance from the MIDLINE to a peak, not from the bottom to the top.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Amplitude is the distance from the MIDLINE to a peak, not from the bottom to the top."
+    },
+    {
+      "level": "guide",
+      "text": "Amplitude $= \\frac{\\text{max} - \\text{min}}{2} = \\frac{8 - 2}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{6}{2} = 3$ ft."
+    }
+  ],
+  "explanation": [
+    "The full swing from low tide to high tide is $8 - 2 = 6$ ft.",
+    "The amplitude is only HALF of that swing, since it measures from the midline up to the peak.",
+    "So the amplitude is $\\frac{6}{2} = 3$ ft (and the midline is at $5$ ft)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Find the midline first",
+      "steps": [
+        "The midline sits halfway between the extremes: $\\frac{8 + 2}{2} = 5$ ft.",
+        "From $5$ ft up to high tide at $8$ ft is 3 ft, and from $5$ ft down to low tide at $2$ ft is also 3 ft.",
+        "That matching distance is the amplitude: 3 ft. (Choice B, 5 ft, is the midline; choice C, 6 ft, is the full range.)"
+      ]
+    }
+  ],
+  "tags": [
+    "amplitude",
+    "read-a-graph",
+    "tides"
+  ],
+  "estimatedSeconds": 55
+}

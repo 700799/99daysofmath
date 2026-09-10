@@ -1,0 +1,52 @@
+{
+  "id": "TRIG.104",
+  "domain": "TRIG",
+  "unit": 11,
+  "orderInUnit": 4,
+  "standard": "TRIG.IDENT.1",
+  "difficulty": 1,
+  "prompt": "Simplify $\\frac{1}{\\csc\\theta}$ to a single trig function. Write it like \"sin(theta)\".",
+  "answerType": "expression",
+  "primaryAnswer": "sin(theta)",
+  "alternativeAnswers": [
+    "sin theta",
+    "sintheta",
+    "sin(x)",
+    "sinθ",
+    "sin(θ)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Cosecant is already a reciprocal — of which function?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Cosecant is already a reciprocal — of which function?"
+    },
+    {
+      "level": "guide",
+      "text": "$\\csc\\theta = \\frac{1}{\\sin\\theta}$, so $\\frac{1}{\\csc\\theta}$ is the reciprocal of a reciprocal."
+    },
+    {
+      "level": "reveal",
+      "text": "Flipping twice returns you to where you started: $\\sin\\theta$."
+    }
+  ],
+  "explanation": [
+    "By definition $\\csc\\theta = \\frac{1}{\\sin\\theta}$.",
+    "So $\\frac{1}{\\csc\\theta} = \\frac{1}{1/\\sin\\theta} = \\sin\\theta$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test a number",
+      "steps": [
+        "Take $\\theta = 30^\\circ$, so $\\sin\\theta = \\frac{1}{2}$ and $\\csc\\theta = 2$.",
+        "Then $\\frac{1}{\\csc\\theta} = \\frac{1}{2}$, which is $\\sin 30^\\circ$ again."
+      ]
+    }
+  ],
+  "tags": [
+    "reciprocal-identity",
+    "simplify"
+  ],
+  "estimatedSeconds": 35
+}

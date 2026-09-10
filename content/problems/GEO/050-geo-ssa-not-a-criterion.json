@@ -1,0 +1,84 @@
+{
+  "id": "GEO.050",
+  "domain": "GEO",
+  "unit": 5,
+  "orderInUnit": 10,
+  "standard": "GEO.CONG.1",
+  "difficulty": 3,
+  "prompt": "Two triangular sail panels have two pairs of congruent sides and one pair of congruent angles, but the congruent angle is NOT between the two congruent sides, and the triangles are not right triangles. Which congruence criterion proves them congruent?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "None of these — two sides and a non-included angle does not guarantee congruence",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "SAS",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "SSA, which works just like SAS",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "HL",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "For SAS, the angle must be BETWEEN the two sides. Here it is not.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "For SAS, the angle must be BETWEEN the two sides. Here it is not."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Test the rule on the easy case: two sides with the angle BETWEEN them is SAS, which does work. Slide that angle outside the two sides and the arrangement becomes SSA — check whether SSA is on the valid list."
+    },
+    {
+      "level": "guide",
+      "text": "The valid list is SSS, SAS, ASA, AAS, and HL for right triangles. Is SSA on it?"
+    },
+    {
+      "level": "reveal",
+      "text": "SSA is not a congruence criterion, so none of these applies."
+    }
+  ],
+  "explanation": [
+    "The criteria that work are SSS, SAS, ASA, AAS, and HL (right triangles only).",
+    "SAS requires the angle to be INCLUDED between the two sides; here it is not, so this arrangement is SSA.",
+    "SSA is famously unreliable: two different triangles can share the same two sides and non-included angle — the swinging side can land in two different spots.",
+    "HL does not apply either, because that shortcut is only for right triangles."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the swinging side",
+      "steps": [
+        "Draw the angle, mark one side along it, then swing the second side from the far end like a compass needle.",
+        "That arc can cross the other ray in TWO places, giving two different triangles from the same SSA data. Two possible triangles means no guarantee."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap is choosing SAS — the parts are a side, a side, and an angle, so the letters feel close enough.",
+        "Check the word \"included\" every time. If the angle is not sandwiched between the two sides, you have SSA, not SAS, and SSA proves nothing (unless the triangles are right, where it becomes HL)."
+      ]
+    }
+  ],
+  "tags": [
+    "congruence",
+    "SSA",
+    "SAS",
+    "misconception"
+  ],
+  "estimatedSeconds": 80
+}

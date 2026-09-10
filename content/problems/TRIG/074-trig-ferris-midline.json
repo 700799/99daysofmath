@@ -1,0 +1,48 @@
+{
+  "id": "TRIG.074",
+  "domain": "TRIG",
+  "unit": 8,
+  "orderInUnit": 4,
+  "standard": "TRIG.GRAPH.2",
+  "difficulty": 1,
+  "prompt": "A rider on a Ferris wheel is at height $h(t) = 20 + 18\\sin\\left(\\frac{\\pi t}{15}\\right)$ metres after $t$ seconds. At what height, in metres, is the centre of the wheel?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The rider circles evenly around the centre of the wheel, so the centre sits on the midline of the graph.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The rider circles evenly around the centre of the wheel, so the centre sits on the midline of the graph."
+    },
+    {
+      "level": "guide",
+      "text": "The midline of $y = D + A\\sin(\\ldots)$ is $y = D$."
+    },
+    {
+      "level": "reveal",
+      "text": "Here $D = 20$, so the centre is $20$ metres up."
+    }
+  ],
+  "explanation": [
+    "The sine part swings between $-18$ and $18$, averaging out to zero.",
+    "What is left is the constant $20$, which is the midline of the motion.",
+    "The rider is always $18$ m from that line, so the centre of the wheel is $20$ m above the ground."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Average the top and the bottom",
+      "steps": [
+        "Highest point: $20 + 18 = 38$ m. Lowest point: $20 - 18 = 2$ m.",
+        "The centre is halfway between: $\\frac{38 + 2}{2} = 20$ m."
+      ]
+    }
+  ],
+  "tags": [
+    "midline",
+    "ferris-wheel",
+    "modelling"
+  ],
+  "estimatedSeconds": 40
+}

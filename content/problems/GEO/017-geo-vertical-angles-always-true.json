@@ -1,0 +1,69 @@
+{
+  "id": "GEO.017",
+  "domain": "GEO",
+  "unit": 2,
+  "orderInUnit": 7,
+  "standard": "GEO.ANG.1",
+  "difficulty": 2,
+  "prompt": "Two straight bike paths cross. Which statement about the pair of vertical angles formed at the crossing is ALWAYS true, no matter how the paths are angled?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "They are congruent",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "They add to $180^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "They add to $90^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "They are adjacent — they share a side",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Vertical angles sit across the crossing from each other, not next to each other.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Vertical angles sit across the crossing from each other, not next to each other."
+    },
+    {
+      "level": "guide",
+      "text": "It is the angles NEXT to each other — linear pairs — that add to $180^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "Vertical angles are always congruent."
+    }
+  ],
+  "explanation": [
+    "Vertical angles are the pairs directly opposite each other where two lines cross.",
+    "Each of them forms a linear pair with the same neighbor angle, so each equals $180^\\circ$ minus that neighbor — which forces them to be equal.",
+    "They are therefore always congruent. (They only add to $180^\\circ$ in the special case where both are $90^\\circ$.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test an extreme case",
+      "steps": [
+        "Imagine the paths crossing at a very sharp angle, making a $20^\\circ$ vertical pair.",
+        "Those two add to $40^\\circ$, not $180^\\circ$ or $90^\\circ$ — but they are equal to each other, which is the part that never changes."
+      ]
+    }
+  ],
+  "tags": [
+    "vertical-angles",
+    "reasoning"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,61 @@
+{
+  "id": "GEO.040",
+  "domain": "GEO",
+  "unit": 4,
+  "orderInUnit": 10,
+  "standard": "GEO.PROOF.1",
+  "difficulty": 3,
+  "prompt": "Consider the claim: \"If $x^2 = 36$, then $x = 6$.\" Give a value of $x$ that is a counterexample.",
+  "answerType": "numeric",
+  "primaryAnswer": "-6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You need a number that makes the \"if\" part true while making the \"then\" part false.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You need a number that makes the \"if\" part true while making the \"then\" part false."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an easier claim: \"If $x^2 = 4$, then $x = 2$\" is broken by $x = -2$, since $(-2)^2 = 4$ but $-2 \\ne 2$. Pull the same trick on $36$."
+    },
+    {
+      "level": "guide",
+      "text": "What other number, besides 6, squares to 36?"
+    },
+    {
+      "level": "reveal",
+      "text": "$x = -6$: it satisfies $(-6)^2 = 36$, but it is not equal to 6."
+    }
+  ],
+  "explanation": [
+    "A counterexample must satisfy the hypothesis and break the conclusion.",
+    "Take $x = -6$. The hypothesis holds because $(-6)^2 = 36$.",
+    "The conclusion fails because $-6 \\ne 6$. So $-6$ is a counterexample and the claim is false.",
+    "The repaired statement would be \"if $x^2 = 36$, then $x = 6$ or $x = -6$.\""
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Squaring erases the sign",
+      "steps": [
+        "Multiplying two negatives gives a positive, so a negative number squares to the same value its positive twin does.",
+        "Every \"square equals\" claim therefore has two solutions — the positive one and the negative one you almost forgot."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The common wrong move is answering 6 — but 6 makes the statement TRUE, so it is an example, not a counterexample.",
+        "A counterexample has to obey the \"if\" and break the \"then.\" Ask both questions about your candidate: \"Does it square to 36?\" ($-6$: yes) and \"Does it dodge being 6?\" ($-6$: yes). That is what makes $-6$ the answer."
+      ]
+    }
+  ],
+  "tags": [
+    "counterexample",
+    "logic",
+    "algebra"
+  ],
+  "estimatedSeconds": 70
+}

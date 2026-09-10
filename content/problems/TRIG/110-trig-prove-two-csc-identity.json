@@ -1,0 +1,85 @@
+{
+  "id": "TRIG.110",
+  "domain": "TRIG",
+  "unit": 11,
+  "orderInUnit": 10,
+  "standard": "TRIG.IDENT.1",
+  "difficulty": 3,
+  "prompt": "Simplify $\\frac{\\sin\\theta}{1 + \\cos\\theta} + \\frac{1 + \\cos\\theta}{\\sin\\theta}$.",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$2\\csc\\theta$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$2$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\csc\\theta$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$2\\sec\\theta$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Add the two fractions over the common denominator $\\sin\\theta(1 + \\cos\\theta)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Add the two fractions over the common denominator $\\sin\\theta(1 + \\cos\\theta)$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up on $\\frac{\\sin\\theta}{\\cos\\theta} + \\frac{\\cos\\theta}{\\sin\\theta}$: over the common denominator $\\sin\\theta\\cos\\theta$ the numerator becomes $\\sin^2\\theta + \\cos^2\\theta = 1$. Combine first, then let the identity collapse the top."
+    },
+    {
+      "level": "guide",
+      "text": "The numerator becomes $\\sin^2\\theta + (1 + \\cos\\theta)^2 = \\sin^2\\theta + 1 + 2\\cos\\theta + \\cos^2\\theta$."
+    },
+    {
+      "level": "reveal",
+      "text": "That is $2 + 2\\cos\\theta = 2(1 + \\cos\\theta)$, so the fraction reduces to $\\frac{2}{\\sin\\theta} = 2\\csc\\theta$."
+    }
+  ],
+  "explanation": [
+    "Use the common denominator $\\sin\\theta(1 + \\cos\\theta)$; the numerator becomes $\\sin^2\\theta + (1 + \\cos\\theta)^2$.",
+    "Expand: $\\sin^2\\theta + 1 + 2\\cos\\theta + \\cos^2\\theta$, and since $\\sin^2\\theta + \\cos^2\\theta = 1$ this is $2 + 2\\cos\\theta = 2(1 + \\cos\\theta)$.",
+    "Now the $(1 + \\cos\\theta)$ cancels top and bottom, leaving $\\frac{2}{\\sin\\theta}$.",
+    "And $\\frac{2}{\\sin\\theta} = 2\\csc\\theta$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity-check at $\\theta = 90^\\circ$",
+      "steps": [
+        "$\\sin 90^\\circ = 1$ and $\\cos 90^\\circ = 0$, so the expression is $\\frac{1}{1} + \\frac{1}{1} = 2$.",
+        "$2\\csc 90^\\circ = \\frac{2}{1} = 2$ ✓",
+        "Now test $\\theta = 30^\\circ$: the expression gives about $4$, and $2\\csc 30^\\circ = 4$ ✓ — choice B would have been stuck at $2$ forever."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap is answering $2$ (choice B), by noticing the two fractions look like reciprocals of each other and assuming they add to $2$.",
+        "Reciprocals multiply to $1$; they do not add to $2$ unless each one happens to equal $1$.",
+        "One test angle exposes it instantly: at $\\theta = 30^\\circ$ the expression equals $4$, not $2$. When an identity \"feels\" true, plug in an angle other than $90^\\circ$ before you trust it. The answer is $2\\csc\\theta$."
+      ]
+    }
+  ],
+  "tags": [
+    "prove-identity",
+    "pythagorean-identity",
+    "common-error"
+  ],
+  "estimatedSeconds": 90
+}

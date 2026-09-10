@@ -1,0 +1,47 @@
+{
+  "id": "GEO.114",
+  "domain": "GEO",
+  "unit": 12,
+  "orderInUnit": 4,
+  "standard": "GEO.AREA.1",
+  "difficulty": 1,
+  "prompt": "A trapezoid-shaped flower bed has parallel sides of $6$ ft and $10$ ft, and the distance between those parallel sides is $5$ ft. What is its area, in square feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Trapezoid area is $\\frac{1}{2}(b_1 + b_2)h$ — average the two parallel sides, then multiply by the height.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Trapezoid area is $\\frac{1}{2}(b_1 + b_2)h$ — average the two parallel sides, then multiply by the height."
+    },
+    {
+      "level": "guide",
+      "text": "Average: $\\frac{6 + 10}{2} = 8$. Now multiply by the height $5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$8 \\times 5 = 40$ square feet."
+    }
+  ],
+  "explanation": [
+    "Add the parallel sides: $6 + 10 = 16$.",
+    "Half of that is the average width: $8$ ft.",
+    "Multiply by the height: $8 \\times 5 = 40$ square feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A rectangle in disguise",
+      "steps": [
+        "A trapezoid is a rectangle whose top has been widened at one end and narrowed at the other.",
+        "On average it is $8$ ft wide and it is $5$ ft deep, so it holds the same area as an $8$-by-$5$ rectangle: $40$ sq ft."
+      ]
+    }
+  ],
+  "tags": [
+    "area",
+    "trapezoid"
+  ],
+  "estimatedSeconds": 45
+}

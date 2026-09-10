@@ -1,0 +1,46 @@
+{
+  "id": "TRIG.051",
+  "domain": "TRIG",
+  "unit": 6,
+  "orderInUnit": 1,
+  "standard": "TRIG.CIRC.2",
+  "difficulty": 1,
+  "prompt": "What is the reference angle for $150^\\circ$? Give just the number of degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A reference angle is the acute angle between the terminal side and the $x$-axis — always measured to the nearest part of the $x$-axis.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A reference angle is the acute angle between the terminal side and the $x$-axis — always measured to the nearest part of the $x$-axis."
+    },
+    {
+      "level": "guide",
+      "text": "$150^\\circ$ is in Quadrant II, so measure back to the $180^\\circ$ mark: $180 - 150$."
+    },
+    {
+      "level": "reveal",
+      "text": "$180 - 150 = 30^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The terminal side of $150^\\circ$ is in Quadrant II, leaning up and to the left.",
+    "The reference angle is how far it sits from the horizontal axis, which here is the $180^\\circ$ direction.",
+    "$180^\\circ - 150^\\circ = 30^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Mirror it into Quadrant I",
+      "steps": [
+        "The reference angle is the Quadrant I twin of your angle — the same tilt, reflected.",
+        "$150^\\circ$ leans $30^\\circ$ above the leftward direction, which mirrors to $30^\\circ$ above the rightward direction."
+      ]
+    }
+  ],
+  "tags": [
+    "reference-angle"
+  ],
+  "estimatedSeconds": 35
+}
