@@ -1,0 +1,70 @@
+{
+  "id": "GEO.018",
+  "domain": "GEO",
+  "unit": 2,
+  "orderInUnit": 8,
+  "standard": "GEO.ANG.1",
+  "difficulty": 2,
+  "prompt": "Two angles in a bracket are complementary, and one of them measures $62^\\circ$. A classmate says the other one is $118^\\circ$. Which response is correct?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "It is $28^\\circ$ — the classmate subtracted from $180^\\circ$ instead of $90^\\circ$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "It is $118^\\circ$ — the classmate is right",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "It is $38^\\circ$ — complementary angles add to $100^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "It is $62^\\circ$ — complementary angles are always equal",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Which total belongs to complementary angles: $90^\\circ$ or $180^\\circ$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Which total belongs to complementary angles: $90^\\circ$ or $180^\\circ$?"
+    },
+    {
+      "level": "guide",
+      "text": "Complementary means the two add to $90^\\circ$, so compute $90 - 62$."
+    },
+    {
+      "level": "reveal",
+      "text": "$90 - 62 = 28^\\circ$. The classmate used $180^\\circ$ by mistake."
+    }
+  ],
+  "explanation": [
+    "Complementary angles add to $90^\\circ$; supplementary angles add to $180^\\circ$.",
+    "Subtracting from the right total: $90 - 62 = 28$.",
+    "The classmate computed $180 - 62 = 118$, which would be the SUPPLEMENT, not the complement."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity-check the size",
+      "steps": [
+        "A complement must be smaller than $90^\\circ$, since the pair only has $90^\\circ$ to share.",
+        "An answer of $118^\\circ$ is already bigger than the whole budget — that alone flags the mistake. The real answer, $28^\\circ$, fits."
+      ]
+    }
+  ],
+  "tags": [
+    "complementary",
+    "supplementary",
+    "misconception"
+  ],
+  "estimatedSeconds": 50
+}

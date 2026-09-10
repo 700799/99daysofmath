@@ -1,0 +1,47 @@
+{
+  "id": "GEO.054",
+  "domain": "GEO",
+  "unit": 6,
+  "orderInUnit": 4,
+  "standard": "GEO.CONG.2",
+  "difficulty": 1,
+  "prompt": "In a triangular garden bed, one side is extended past a corner to form an exterior angle. The two interior angles at the OTHER two corners measure $50^\\circ$ and $60^\\circ$. What is the measure of that exterior angle, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "110",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "An exterior angle is related to the two interior angles far away from it.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "An exterior angle is related to the two interior angles far away from it."
+    },
+    {
+      "level": "guide",
+      "text": "The Exterior Angle Theorem: the exterior angle equals the SUM of the two remote interior angles."
+    },
+    {
+      "level": "reveal",
+      "text": "$50 + 60 = 110^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The Exterior Angle Theorem says an exterior angle equals the sum of the two remote (non-adjacent) interior angles.",
+    "The remote interior angles here are $50^\\circ$ and $60^\\circ$.",
+    "So the exterior angle is $50 + 60 = 110^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The long way around",
+      "steps": [
+        "The third interior angle is $180 - 50 - 60 = 70^\\circ$.",
+        "The exterior angle forms a linear pair with it: $180 - 70 = 110^\\circ$. Same answer, one step longer — which is why the shortcut theorem exists."
+      ]
+    }
+  ],
+  "tags": [
+    "exterior-angle",
+    "triangle-sum"
+  ],
+  "estimatedSeconds": 40
+}

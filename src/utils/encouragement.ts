@@ -156,6 +156,8 @@ export const UNIT_COUNT_BY_DOMAIN: Record<Domain, number> = {
   '6.G': 10,
   '6.SP': 10,
   A1: 14,
+  GEO: 14,
+  TRIG: 14,
   PC: 14,
   SAT: 18,
 };

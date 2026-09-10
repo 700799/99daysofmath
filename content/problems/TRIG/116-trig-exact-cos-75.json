@@ -1,0 +1,52 @@
+{
+  "id": "TRIG.116",
+  "domain": "TRIG",
+  "unit": 12,
+  "orderInUnit": 6,
+  "standard": "TRIG.IDENT.2",
+  "difficulty": 2,
+  "prompt": "Find the exact value of $\\cos 75^\\circ$. Write it with \"sqrt\", for example \"(sqrt(6)-sqrt(2))/4\".",
+  "answerType": "expression",
+  "primaryAnswer": "(sqrt(6)-sqrt(2))/4",
+  "alternativeAnswers": [
+    "sqrt(6)/4 - sqrt(2)/4",
+    "(√6-√2)/4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Again split it as $45^\\circ + 30^\\circ$, but now use the COSINE sum formula.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Again split it as $45^\\circ + 30^\\circ$, but now use the COSINE sum formula."
+    },
+    {
+      "level": "guide",
+      "text": "$\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$, so you get $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{\\sqrt{6}}{4} - \\frac{\\sqrt{2}}{4} = \\frac{\\sqrt{6} - \\sqrt{2}}{4}$."
+    }
+  ],
+  "explanation": [
+    "Write $\\cos 75^\\circ = \\cos(45^\\circ + 30^\\circ) = \\cos 45^\\circ\\cos 30^\\circ - \\sin 45^\\circ\\sin 30^\\circ$.",
+    "Substitute: $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2} = \\frac{\\sqrt{6}}{4} - \\frac{\\sqrt{2}}{4}$.",
+    "So $\\cos 75^\\circ = \\frac{\\sqrt{6} - \\sqrt{2}}{4} \\approx 0.259$, a small number as expected for an angle close to $90^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The minus sign is doing real work",
+      "steps": [
+        "If you copied the sine formula and used a plus, you would get about $0.966$.",
+        "But $\\cos 75^\\circ$ must be SMALL, because cosine shrinks toward $0$ as the angle approaches $90^\\circ$.",
+        "The minus in the cosine formula is what makes the answer come out small and correct."
+      ]
+    }
+  ],
+  "tags": [
+    "sum-formula",
+    "exact-value",
+    "cosine"
+  ],
+  "estimatedSeconds": 70
+}

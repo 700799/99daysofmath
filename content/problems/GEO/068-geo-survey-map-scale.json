@@ -1,0 +1,48 @@
+{
+  "id": "GEO.068",
+  "domain": "GEO",
+  "unit": 7,
+  "orderInUnit": 8,
+  "standard": "GEO.SIM.1",
+  "difficulty": 2,
+  "prompt": "On a surveyor's map, $1$ inch represents $40$ feet of real ground. A property line measures $3.5$ inches on the map. How many feet long is the real property line?",
+  "answerType": "numeric",
+  "primaryAnswer": "140",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The map and the real lot are similar figures, with a fixed scale factor between them.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The map and the real lot are similar figures, with a fixed scale factor between them."
+    },
+    {
+      "level": "guide",
+      "text": "Each inch is worth 40 feet, so multiply: $3.5 \\times 40$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3.5 \\times 40 = 140$ feet."
+    }
+  ],
+  "explanation": [
+    "A map scale is a scale factor: $1$ inch on paper stands for $40$ feet on the ground.",
+    "Set up the proportion $\\frac{1 \\text{ in}}{40 \\text{ ft}} = \\frac{3.5 \\text{ in}}{x \\text{ ft}}$.",
+    "Cross-multiply: $x = 3.5 \\times 40 = 140$ feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Split the inches",
+      "steps": [
+        "3 inches represents $3 \\times 40 = 120$ feet.",
+        "The extra half inch is $0.5 \\times 40 = 20$ feet. Together: $120 + 20 = 140$ feet."
+      ]
+    }
+  ],
+  "tags": [
+    "scale",
+    "proportion",
+    "map"
+  ],
+  "estimatedSeconds": 50
+}

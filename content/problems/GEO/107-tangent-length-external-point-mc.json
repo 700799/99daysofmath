@@ -1,0 +1,70 @@
+{
+  "id": "GEO.107",
+  "domain": "GEO",
+  "unit": 11,
+  "orderInUnit": 7,
+  "standard": "GEO.CIRC.1",
+  "difficulty": 2,
+  "prompt": "A circle has radius $8$ and center $O$. From a point $P$ that is $17$ units from $O$, a tangent line touches the circle at point $T$. How long is $\\overline{PT}$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$9$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$15$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$18.8$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$25$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A radius drawn to the point of tangency is perpendicular to the tangent line — there is a right angle at $T$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A radius drawn to the point of tangency is perpendicular to the tangent line — there is a right angle at $T$."
+    },
+    {
+      "level": "guide",
+      "text": "So $\\triangle OTP$ is right-angled at $T$, with hypotenuse $OP = 17$ and leg $OT = 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$PT^2 = 17^2 - 8^2 = 289 - 64 = 225$, so $PT = 15$."
+    }
+  ],
+  "explanation": [
+    "The tangent meets the radius $\\overline{OT}$ at a right angle, so $\\triangle OTP$ is a right triangle.",
+    "The hypotenuse is $OP = 17$ (it faces the right angle) and one leg is the radius $8$.",
+    "$PT = \\sqrt{289 - 64} = \\sqrt{225} = 15$. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Which side is the hypotenuse?",
+      "steps": [
+        "The right angle is at $T$, so the side across from it — $\\overline{OP}$, the $17$ — is the hypotenuse.",
+        "Because the hypotenuse is known, you subtract: $17^2 - 8^2$, landing on the $8$-$15$-$17$ triple."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent",
+    "pythagorean-theorem",
+    "circle"
+  ],
+  "estimatedSeconds": 60
+}

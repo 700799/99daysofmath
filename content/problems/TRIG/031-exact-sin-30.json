@@ -1,0 +1,51 @@
+{
+  "id": "TRIG.031",
+  "domain": "TRIG",
+  "unit": 4,
+  "orderInUnit": 1,
+  "standard": "TRIG.RT.2",
+  "difficulty": 1,
+  "prompt": "What is the exact value of $\\sin 30^\\circ$? Give a fraction or decimal.",
+  "answerType": "numeric",
+  "primaryAnswer": "1/2",
+  "alternativeAnswers": [
+    "0.5",
+    ".5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Picture the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Picture the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$."
+    },
+    {
+      "level": "guide",
+      "text": "The side opposite $30^\\circ$ is $1$ and the hypotenuse is $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin 30^\\circ = \\frac{1}{2}$."
+    }
+  ],
+  "explanation": [
+    "The $30$-$60$-$90$ triangle has sides in the ratio $1 : \\sqrt{3} : 2$, with $1$ opposite the $30^\\circ$ angle.",
+    "Sine is opposite over hypotenuse: $\\frac{1}{2}$.",
+    "So $\\sin 30^\\circ = \\frac{1}{2}$ exactly — no rounding needed."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Fold an equilateral triangle",
+      "steps": [
+        "Take an equilateral triangle with sides of length 2 and cut it down the middle.",
+        "The cut makes two $30$-$60$-$90$ triangles whose short side is half of the original side, or 1.",
+        "That short side sits opposite the $30^\\circ$ angle, so $\\sin 30^\\circ = \\frac{1}{2}$ — literally \"half\"."
+      ]
+    }
+  ],
+  "tags": [
+    "exact-values",
+    "special-triangles"
+  ],
+  "estimatedSeconds": 30
+}

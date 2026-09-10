@@ -1,0 +1,51 @@
+{
+  "id": "TRIG.103",
+  "domain": "TRIG",
+  "unit": 11,
+  "orderInUnit": 3,
+  "standard": "TRIG.IDENT.1",
+  "difficulty": 1,
+  "prompt": "If $\\sin\\theta = \\frac{3}{5}$ and $\\theta$ is acute, find $\\cos\\theta$. Give a decimal or a fraction.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.8",
+  "alternativeAnswers": [
+    "4/5",
+    ".8"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Use $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use $\\sin^2\\theta + \\cos^2\\theta = 1$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\cos^2\\theta = 1 - \\frac{9}{25} = \\frac{16}{25}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\cos\\theta = \\frac{4}{5} = 0.8$, positive because $\\theta$ is acute."
+    }
+  ],
+  "explanation": [
+    "Start from $\\sin^2\\theta + \\cos^2\\theta = 1$ and substitute $\\sin\\theta = \\frac{3}{5}$.",
+    "$\\frac{9}{25} + \\cos^2\\theta = 1$, so $\\cos^2\\theta = \\frac{16}{25}$.",
+    "Taking the square root gives $\\pm\\frac{4}{5}$, and since $\\theta$ is acute the cosine is positive: $\\cos\\theta = \\frac{4}{5} = 0.8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spot the 3-4-5 triangle",
+      "steps": [
+        "$\\sin\\theta = \\frac{3}{5}$ means opposite $3$, hypotenuse $5$.",
+        "That is the famous $3$-$4$-$5$ right triangle, so the adjacent side is $4$ with no calculation at all.",
+        "$\\cos\\theta = \\frac{4}{5} = 0.8$."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean-identity",
+    "right-triangle"
+  ],
+  "estimatedSeconds": 45
+}

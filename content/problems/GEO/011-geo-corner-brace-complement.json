@@ -1,0 +1,47 @@
+{
+  "id": "GEO.011",
+  "domain": "GEO",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "GEO.ANG.1",
+  "difficulty": 1,
+  "prompt": "Two boards meet a square corner post so that their angles are complementary. If one board sits at $35^\\circ$, what is the measure of the other angle, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "55",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Complementary angles add to $90^\\circ$ — a square corner.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Complementary angles add to $90^\\circ$ — a square corner."
+    },
+    {
+      "level": "guide",
+      "text": "Compute $90 - 35$."
+    },
+    {
+      "level": "reveal",
+      "text": "$90 - 35 = 55^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Complementary angles are two angles whose measures add to $90^\\circ$.",
+    "Subtract the known angle: $90 - 35 = 55$.",
+    "Check: $35 + 55 = 90$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "C comes before S",
+      "steps": [
+        "Complementary comes first in the alphabet and pairs with the smaller total, $90^\\circ$ (a Corner).",
+        "Supplementary comes later and pairs with $180^\\circ$ (a Straight line). Here the corner post makes it $90 - 35 = 55$."
+      ]
+    }
+  ],
+  "tags": [
+    "complementary",
+    "angle-pairs"
+  ],
+  "estimatedSeconds": 25
+}

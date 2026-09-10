@@ -1,0 +1,48 @@
+{
+  "id": "GEO.052",
+  "domain": "GEO",
+  "unit": 6,
+  "orderInUnit": 2,
+  "standard": "GEO.CONG.2",
+  "difficulty": 1,
+  "prompt": "A step ladder forms an isosceles triangle with the ground: the two legs are equal in length, and the angle at the top (between the legs) is $40^\\circ$. What is the measure, in degrees, of each base angle where a leg meets the ground?",
+  "answerType": "numeric",
+  "primaryAnswer": "70",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "In an isosceles triangle, the two angles opposite the equal sides are equal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "In an isosceles triangle, the two angles opposite the equal sides are equal."
+    },
+    {
+      "level": "guide",
+      "text": "The two base angles share what is left of $180^\\circ$ after the $40^\\circ$ top: $180 - 40 = 140$."
+    },
+    {
+      "level": "reveal",
+      "text": "$140 \\div 2 = 70^\\circ$ each."
+    }
+  ],
+  "explanation": [
+    "The legs are congruent, so the Base Angles Theorem makes the two base angles congruent.",
+    "The three angles total $180^\\circ$, so the base angles share $180 - 40 = 140^\\circ$.",
+    "Split that evenly: each base angle is $140 \\div 2 = 70^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Symmetry does the work",
+      "steps": [
+        "A step ladder is symmetric — fold it down the middle and the two legs land on each other.",
+        "The two ground angles land on each other too, so they must be equal, and equal halves of $140^\\circ$ are $70^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "isosceles",
+    "base-angles",
+    "triangle-sum"
+  ],
+  "estimatedSeconds": 40
+}

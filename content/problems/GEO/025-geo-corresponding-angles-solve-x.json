@@ -1,0 +1,48 @@
+{
+  "id": "GEO.025",
+  "domain": "GEO",
+  "unit": 3,
+  "orderInUnit": 5,
+  "standard": "GEO.PAR.1",
+  "difficulty": 2,
+  "prompt": "A ladder leans across two parallel deck rails, acting as a transversal. A pair of corresponding angles measure $(5x - 20)^\\circ$ and $(3x + 10)^\\circ$. Find $x$.",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Corresponding angles on parallel lines are congruent — so set the expressions EQUAL, not summed.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Corresponding angles on parallel lines are congruent — so set the expressions EQUAL, not summed."
+    },
+    {
+      "level": "guide",
+      "text": "Solve $5x - 20 = 3x + 10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2x = 30$, so $x = 15$."
+    }
+  ],
+  "explanation": [
+    "Because the rails are parallel, the corresponding angles are congruent: $5x - 20 = 3x + 10$.",
+    "Subtract $3x$ from both sides and add 20: $2x = 30$.",
+    "Divide by 2: $x = 15$. Check: both angles come out to $55^\\circ$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check both angles",
+      "steps": [
+        "Plug $x = 15$ into each expression: $5(15) - 20 = 55$ and $3(15) + 10 = 55$.",
+        "They match, which is exactly what corresponding angles on parallel lines must do."
+      ]
+    }
+  ],
+  "tags": [
+    "parallel-lines",
+    "corresponding-angles",
+    "algebra"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TRIG.090",
+  "domain": "TRIG",
+  "unit": 9,
+  "orderInUnit": 10,
+  "standard": "TRIG.GRAPH.3",
+  "difficulty": 3,
+  "prompt": "If $\\sec\\theta = -2$ and $\\theta$ is in the third quadrant, find the exact value of $\\tan\\theta$. Write it using \"sqrt\".",
+  "answerType": "expression",
+  "primaryAnswer": "sqrt(3)",
+  "alternativeAnswers": [
+    "3^(1/2)",
+    "sqrt3",
+    "√3"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Flip the secant to get the cosine first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Flip the secant to get the cosine first."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up in Quadrant I with $\\sec\\theta = 2$: flipping gives $\\cos\\theta = \\frac{1}{2}$, so $\\sin\\theta = \\frac{\\sqrt{3}}{2}$ and $\\tan\\theta = \\sqrt{3}$. Yours is the same triangle with both signs negative."
+    },
+    {
+      "level": "guide",
+      "text": "$\\cos\\theta = -\\frac{1}{2}$. Now use $\\sin^2\\theta + \\cos^2\\theta = 1$, and remember that in the third quadrant sine is also negative."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin\\theta = -\\frac{\\sqrt{3}}{2}$, so $\\tan\\theta = \\frac{-\\sqrt{3}/2}{-1/2} = \\sqrt{3}$."
+    }
+  ],
+  "explanation": [
+    "From $\\sec\\theta = -2$ we get $\\cos\\theta = -\\frac{1}{2}$.",
+    "Then $\\sin^2\\theta = 1 - \\frac{1}{4} = \\frac{3}{4}$, so $\\sin\\theta = \\pm\\frac{\\sqrt{3}}{2}$; in the third quadrant sine is negative, so $\\sin\\theta = -\\frac{\\sqrt{3}}{2}$.",
+    "Therefore $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{-\\sqrt{3}/2}{-1/2} = \\sqrt{3}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the identity directly",
+      "steps": [
+        "$1 + \\tan^2\\theta = \\sec^2\\theta = (-2)^2 = 4$.",
+        "So $\\tan^2\\theta = 3$ and $\\tan\\theta = \\pm\\sqrt{3}$.",
+        "In the third quadrant tangent is POSITIVE (negative divided by negative), so $\\tan\\theta = \\sqrt{3}$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap is answering $-\\sqrt{3}$, reasoning that \"third quadrant means negative\".",
+        "But only sine and cosine are negative there. Tangent is a quotient of two negatives, which comes out positive.",
+        "Use the ASTC memory aid: in quadrant III it is Tangent (and its partner cotangent) that stay positive. The answer is $+\\sqrt{3}$."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent",
+    "secant",
+    "quadrants",
+    "sign-error"
+  ],
+  "estimatedSeconds": 80
+}

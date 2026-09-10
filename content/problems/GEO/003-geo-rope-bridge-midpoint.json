@@ -1,0 +1,47 @@
+{
+  "id": "GEO.003",
+  "domain": "GEO",
+  "unit": 1,
+  "orderInUnit": 3,
+  "standard": "GEO.BASIC.1",
+  "difficulty": 1,
+  "prompt": "A rope bridge is marked off like a number line. One anchor sits at $3$ and the other at $11$. What number marks the midpoint of the bridge?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The midpoint is the number sitting exactly halfway between the two anchors.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The midpoint is the number sitting exactly halfway between the two anchors."
+    },
+    {
+      "level": "guide",
+      "text": "On a number line, the midpoint is the average of the endpoints: $\\frac{3 + 11}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{3 + 11}{2} = \\frac{14}{2} = 7$."
+    }
+  ],
+  "explanation": [
+    "The midpoint of a segment on a number line is the average of its endpoints.",
+    "$\\frac{3 + 11}{2} = \\frac{14}{2} = 7$.",
+    "Check: from 3 to 7 is 4 units, and from 7 to 11 is also 4 units. Balanced."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk in from both ends",
+      "steps": [
+        "The bridge is $11 - 3 = 8$ units long, so half of it is 4 units.",
+        "Start at the anchor at 3 and walk 4 units in: $3 + 4 = 7$."
+      ]
+    }
+  ],
+  "tags": [
+    "midpoint",
+    "number-line"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,47 @@
+{
+  "id": "GEO.088",
+  "domain": "GEO",
+  "unit": 9,
+  "orderInUnit": 8,
+  "standard": "GEO.RT.2",
+  "difficulty": 2,
+  "prompt": "A ladder leans against a wall at a $65^\\circ$ angle with the ground and touches the wall $12$ ft above the ground. How long is the ladder, in feet, rounded to the nearest tenth?",
+  "answerType": "numeric",
+  "primaryAnswer": "13.2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "This time the unknown is the hypotenuse and the known side is opposite the $65^\\circ$ angle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This time the unknown is the hypotenuse and the known side is opposite the $65^\\circ$ angle."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sin 65^\\circ = \\frac{12}{L}$ — the unknown is downstairs, so multiply both sides by $L$ first."
+    },
+    {
+      "level": "reveal",
+      "text": "$L = \\frac{12}{\\sin 65^\\circ} \\approx \\frac{12}{0.9063} \\approx 13.2$ ft."
+    }
+  ],
+  "explanation": [
+    "The height $12$ ft is opposite the $65^\\circ$ angle and the ladder $L$ is the hypotenuse, so use sine.",
+    "Write $\\sin 65^\\circ = \\frac{12}{L}$; because $L$ is in the denominator, solve by $L = \\frac{12}{\\sin 65^\\circ}$.",
+    "That gives $L \\approx 13.2$ ft."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The hypotenuse is always biggest",
+      "steps": [
+        "Whatever you compute, the ladder must be longer than the $12$ ft it reaches up the wall.",
+        "$13.2 > 12$ ✓. If you had multiplied instead of divided you would have gotten $10.9$ ft — shorter than the wall height, which is impossible."
+      ]
+    }
+  ],
+  "tags": [
+    "soh-cah-toa",
+    "solve-for-hypotenuse"
+  ],
+  "estimatedSeconds": 65
+}

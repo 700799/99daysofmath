@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.047",
+  "domain": "TRIG",
+  "unit": 5,
+  "orderInUnit": 7,
+  "standard": "TRIG.CIRC.1",
+  "difficulty": 2,
+  "prompt": "The point $(\\cos 300^\\circ,\\ \\sin 300^\\circ)$ lies in which quadrant?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Quadrant I, where both coordinates are positive",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Quadrant II, where $x < 0$ and $y > 0$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Quadrant III, where both coordinates are negative",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Quadrant IV, where $x > 0$ and $y < 0$",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "D",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$300^\\circ$ is between $270^\\circ$ and $360^\\circ$ — almost all the way around.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$300^\\circ$ is between $270^\\circ$ and $360^\\circ$ — almost all the way around."
+    },
+    {
+      "level": "guide",
+      "text": "That last stretch of the circle is below the $x$-axis and to the right of the $y$-axis."
+    },
+    {
+      "level": "reveal",
+      "text": "It is Quadrant IV: $\\cos 300^\\circ = \\frac{1}{2}$ is positive and $\\sin 300^\\circ = -\\frac{\\sqrt{3}}{2}$ is negative."
+    }
+  ],
+  "explanation": [
+    "Angles from $270^\\circ$ to $360^\\circ$ sweep through the final quarter of the circle, which is Quadrant IV.",
+    "There the points are to the right of the $y$-axis (positive $x$) and below the $x$-axis (negative $y$).",
+    "Indeed $\\cos 300^\\circ = \\frac{1}{2}$ and $\\sin 300^\\circ = -\\frac{\\sqrt{3}}{2}$, matching a positive $x$ and negative $y$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count backwards from a full turn",
+      "steps": [
+        "$300^\\circ$ is $60^\\circ$ short of a full $360^\\circ$ turn.",
+        "So the point sits $60^\\circ$ below the starting ray — down and to the right, which is Quadrant IV."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "quadrants",
+    "signs"
+  ],
+  "estimatedSeconds": 45
+}

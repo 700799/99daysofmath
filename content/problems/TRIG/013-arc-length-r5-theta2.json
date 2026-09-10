@@ -1,0 +1,46 @@
+{
+  "id": "TRIG.013",
+  "domain": "TRIG",
+  "unit": 2,
+  "orderInUnit": 3,
+  "standard": "TRIG.ANG.2",
+  "difficulty": 1,
+  "prompt": "A rope is wrapped along the rim of a circular pool of radius $5$ ft, covering a central angle of $2$ radians. How long is that arc of rope, in feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Arc length has a beautifully short formula in radians: $s = r\\theta$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Arc length has a beautifully short formula in radians: $s = r\\theta$."
+    },
+    {
+      "level": "guide",
+      "text": "Substitute $r = 5$ and $\\theta = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$s = 5 \\times 2 = 10$ ft."
+    }
+  ],
+  "explanation": [
+    "When the angle is measured in radians, arc length is simply $s = r\\theta$.",
+    "Here $r = 5$ ft and $\\theta = 2$ radians, so $s = 5 \\times 2 = 10$ ft."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "What a radian really is",
+      "steps": [
+        "One radian is exactly the angle that wraps one radius-length of arc around the rim.",
+        "So 2 radians wraps 2 radius-lengths of arc: $2 \\times 5 = 10$ ft."
+      ]
+    }
+  ],
+  "tags": [
+    "arc-length",
+    "radians"
+  ],
+  "estimatedSeconds": 35
+}

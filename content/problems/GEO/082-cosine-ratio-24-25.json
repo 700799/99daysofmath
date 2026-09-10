@@ -1,0 +1,50 @@
+{
+  "id": "GEO.082",
+  "domain": "GEO",
+  "unit": 9,
+  "orderInUnit": 2,
+  "standard": "GEO.RT.2",
+  "difficulty": 1,
+  "prompt": "In a right triangle, the side adjacent to $\\angle P$ measures $24$ and the hypotenuse measures $25$. What is $\\cos P$? Give a decimal.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.96",
+  "alternativeAnswers": [
+    "24/25",
+    ".96"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "CAH: **C**osine is **A**djacent over **H**ypotenuse.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "CAH: **C**osine is **A**djacent over **H**ypotenuse."
+    },
+    {
+      "level": "guide",
+      "text": "Adjacent is $24$, hypotenuse is $25$, so $\\cos P = \\frac{24}{25}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24 \\div 25 = 0.96$."
+    }
+  ],
+  "explanation": [
+    "Cosine is the adjacent leg over the hypotenuse.",
+    "Substitute: $\\cos P = \\frac{24}{25}$.",
+    "As a decimal that is $0.96$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "What 0.96 tells you",
+      "steps": [
+        "A cosine that close to $1$ means the adjacent leg is nearly as long as the hypotenuse.",
+        "That happens when the angle is small and skinny — this angle is only about $16^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "soh-cah-toa",
+    "cosine"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,71 @@
+{
+  "id": "TRIG.086",
+  "domain": "TRIG",
+  "unit": 9,
+  "orderInUnit": 6,
+  "standard": "TRIG.GRAPH.3",
+  "difficulty": 2,
+  "prompt": "What is the range of $y = \\sec x$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$y \\le -1$ or $y \\ge 1$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$-1 \\le y \\le 1$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "All real numbers",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$y \\ge 0$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Secant is $\\frac{1}{\\cos x}$, and $\\cos x$ lives between $-1$ and $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Secant is $\\frac{1}{\\cos x}$, and $\\cos x$ lives between $-1$ and $1$."
+    },
+    {
+      "level": "guide",
+      "text": "Dividing $1$ by something small makes something BIG. What is the smallest that $|\\sec x|$ can be?"
+    },
+    {
+      "level": "reveal",
+      "text": "The best case is $\\cos x = \\pm 1$, giving $\\sec x = \\pm 1$; every other value is further from zero."
+    }
+  ],
+  "explanation": [
+    "Since $|\\cos x| \\le 1$, taking the reciprocal gives $|\\sec x| \\ge 1$.",
+    "So secant can equal $1$ or $-1$ but nothing in between.",
+    "The range is $y \\le -1$ or $y \\ge 1$ — the graph is made of U-shaped branches that never enter the strip between the lines $y = 1$ and $y = -1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Try a few numbers",
+      "steps": [
+        "$\\cos x = 1 \\Rightarrow \\sec x = 1$. $\\cos x = 0.5 \\Rightarrow \\sec x = 2$. $\\cos x = 0.1 \\Rightarrow \\sec x = 10$.",
+        "As cosine shrinks toward $0$, secant races off to infinity.",
+        "There is no value of $x$ that makes $\\sec x$ equal, say, $0.4$ — nothing lands inside the gap."
+      ]
+    }
+  ],
+  "tags": [
+    "secant",
+    "range",
+    "reciprocal-functions"
+  ],
+  "estimatedSeconds": 55
+}

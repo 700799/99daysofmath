@@ -1,0 +1,56 @@
+{
+  "id": "GEO.028",
+  "domain": "GEO",
+  "unit": 3,
+  "orderInUnit": 8,
+  "standard": "GEO.PAR.1",
+  "difficulty": 2,
+  "prompt": "A transversal crosses two parallel lines. Two angles sit between the lines on the SAME side of the transversal, and they add to $180^\\circ$. What are these angles called? (Any standard name for the pair is fine.)",
+  "answerType": "short-text",
+  "primaryAnswer": "co-interior angles",
+  "alternativeAnswers": [
+    "co-interior",
+    "cointerior",
+    "same-side interior",
+    "same side interior",
+    "same-side interior angles",
+    "consecutive interior",
+    "consecutive interior angles"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Between the lines\" gives you the word interior. Now describe where they sit relative to the transversal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Between the lines\" gives you the word interior. Now describe where they sit relative to the transversal."
+    },
+    {
+      "level": "guide",
+      "text": "They are on the same side, so the name starts with \"same-side\" (or the prefix \"co-\", or \"consecutive\")."
+    },
+    {
+      "level": "reveal",
+      "text": "They are co-interior angles, also called same-side interior or consecutive interior angles."
+    }
+  ],
+  "explanation": [
+    "Both angles are between the parallel lines, so they are interior angles.",
+    "They are on the same side of the transversal, which is what \"co-\", \"same-side,\" and \"consecutive\" all signal.",
+    "These are the one interior pair that is supplementary rather than congruent: they add to $180^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Three names, one idea",
+      "steps": [
+        "Textbooks call this pair co-interior, same-side interior, or consecutive interior angles — all the same angles.",
+        "What matters is the behavior: on parallel lines they always sum to $180^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "parallel-lines",
+    "vocabulary",
+    "co-interior"
+  ],
+  "estimatedSeconds": 45
+}

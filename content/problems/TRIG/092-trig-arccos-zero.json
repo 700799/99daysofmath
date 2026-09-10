@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.092",
+  "domain": "TRIG",
+  "unit": 10,
+  "orderInUnit": 2,
+  "standard": "TRIG.INV.1",
+  "difficulty": 1,
+  "prompt": "What is $\\arccos(0)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$90^\\circ$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$0^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$180^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Undefined",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The question is \"which angle has cosine equal to $0$?\", not \"what is the cosine of $0$?\"",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The question is \"which angle has cosine equal to $0$?\", not \"what is the cosine of $0$?\""
+    },
+    {
+      "level": "guide",
+      "text": "On the unit circle, cosine is the $x$-coordinate. Where is $x = 0$?"
+    },
+    {
+      "level": "reveal",
+      "text": "Straight up, at $90^\\circ$. So $\\arccos(0) = 90^\\circ$."
+    }
+  ],
+  "explanation": [
+    "$\\arccos$ asks for the angle whose cosine is the given number.",
+    "Cosine is the $x$-coordinate on the unit circle, and $x = 0$ at the top of the circle, at $90^\\circ$.",
+    "So $\\arccos(0) = 90^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Do not confuse it with $\\cos(0)$",
+      "steps": [
+        "$\\cos(0^\\circ) = 1$ — that is a cosine of an angle, and the answer is a ratio.",
+        "$\\arccos(0) = 90^\\circ$ — that is an inverse cosine of a ratio, and the answer is an angle.",
+        "Always check what kind of thing goes in and what kind of thing comes out."
+      ]
+    }
+  ],
+  "tags": [
+    "arccos",
+    "unit-circle"
+  ],
+  "estimatedSeconds": 40
+}

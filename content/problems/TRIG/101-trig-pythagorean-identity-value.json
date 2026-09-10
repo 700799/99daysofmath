@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.101",
+  "domain": "TRIG",
+  "unit": 11,
+  "orderInUnit": 1,
+  "standard": "TRIG.IDENT.1",
+  "difficulty": 1,
+  "prompt": "For any angle $\\theta$, what does $\\sin^2\\theta + \\cos^2\\theta$ equal?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Try it with $\\theta = 30^\\circ$: $\\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}\\right)^2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Try it with $\\theta = 30^\\circ$: $\\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}\\right)^2$."
+    },
+    {
+      "level": "guide",
+      "text": "That is $\\frac{1}{4} + \\frac{3}{4}$. Now try $\\theta = 0^\\circ$ and see whether you get the same total."
+    },
+    {
+      "level": "reveal",
+      "text": "Every angle gives the same answer: $1$."
+    }
+  ],
+  "explanation": [
+    "On the unit circle a point at angle $\\theta$ has coordinates $(\\cos\\theta, \\sin\\theta)$.",
+    "That point is exactly $1$ unit from the origin, so by the Pythagorean theorem $\\cos^2\\theta + \\sin^2\\theta = 1^2$.",
+    "This is the Pythagorean identity, and it holds for every angle without exception."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "It is just $a^2 + b^2 = c^2$ in disguise",
+      "steps": [
+        "In a right triangle with hypotenuse $1$, the legs are $\\sin\\theta$ and $\\cos\\theta$.",
+        "The Pythagorean theorem says leg squared plus leg squared equals hypotenuse squared.",
+        "With hypotenuse $1$, that reads $\\sin^2\\theta + \\cos^2\\theta = 1$."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean-identity"
+  ],
+  "estimatedSeconds": 30
+}

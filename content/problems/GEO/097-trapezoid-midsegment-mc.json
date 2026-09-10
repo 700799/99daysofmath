@@ -1,0 +1,69 @@
+{
+  "id": "GEO.097",
+  "domain": "GEO",
+  "unit": 10,
+  "orderInUnit": 7,
+  "standard": "GEO.QUAD.1",
+  "difficulty": 2,
+  "prompt": "A garden bed is shaped like a trapezoid with parallel sides of $14$ ft and $22$ ft. A hose is laid across the midsegment — the segment joining the midpoints of the two slanted sides. How long is that segment?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$8$ ft",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$18$ ft",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$36$ ft",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$11$ ft",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The midsegment of a trapezoid is the AVERAGE of the two parallel sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The midsegment of a trapezoid is the AVERAGE of the two parallel sides."
+    },
+    {
+      "level": "guide",
+      "text": "Average $14$ and $22$: add them, then halve."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{14 + 22}{2} = \\frac{36}{2} = 18$ ft."
+    }
+  ],
+  "explanation": [
+    "The midsegment length is $\\frac{b_1 + b_2}{2}$.",
+    "Substitute: $\\frac{14 + 22}{2} = \\frac{36}{2}$.",
+    "The hose is $18$ ft long. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "It has to land in between",
+      "steps": [
+        "Halfway up the trapezoid, the width must be between $14$ and $22$ — and dead center between them, since it is halfway.",
+        "That instantly rules out $8$, $36$, and $11$; only $18$ sits midway."
+      ]
+    }
+  ],
+  "tags": [
+    "trapezoid",
+    "midsegment"
+  ],
+  "estimatedSeconds": 50
+}

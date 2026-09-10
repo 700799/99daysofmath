@@ -1,0 +1,48 @@
+{
+  "id": "GEO.062",
+  "domain": "GEO",
+  "unit": 7,
+  "orderInUnit": 2,
+  "standard": "GEO.SIM.1",
+  "difficulty": 1,
+  "prompt": "A triangular sail with sides $3$, $4$, and $5$ meters is scaled up for a larger boat to sides $9$, $12$, and $15$ meters. What is the scale factor from the small sail to the large one?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The scale factor tells you what to multiply each small side by.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The scale factor tells you what to multiply each small side by."
+    },
+    {
+      "level": "guide",
+      "text": "Divide a large side by its matching small side: $\\frac{9}{3}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{9}{3} = 3$, and the other pairs agree."
+    }
+  ],
+  "explanation": [
+    "The scale factor is the ratio of a new side to its corresponding original side.",
+    "$\\frac{9}{3} = 3$, $\\frac{12}{4} = 3$, and $\\frac{15}{5} = 3$.",
+    "Every pair gives the same ratio, so the scale factor is 3 and the sails are similar."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check all three, not just one",
+      "steps": [
+        "A single matching ratio is a hint; three matching ratios is proof of similarity.",
+        "Here all three come out to 3, so the big sail is an honest enlargement rather than a stretched-out distortion."
+      ]
+    }
+  ],
+  "tags": [
+    "similarity",
+    "scale-factor",
+    "ratio"
+  ],
+  "estimatedSeconds": 35
+}

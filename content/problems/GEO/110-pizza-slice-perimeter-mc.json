@@ -1,0 +1,82 @@
+{
+  "id": "GEO.110",
+  "domain": "GEO",
+  "unit": 11,
+  "orderInUnit": 10,
+  "standard": "GEO.CIRC.1",
+  "difficulty": 3,
+  "prompt": "A pizza has radius $9$ inches. One slice is cut with a central angle of $40^\\circ$. What is the perimeter all the way around that slice — the two straight cuts plus the curved crust — in inches, rounded to the nearest tenth?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$6.3$ in",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$18.0$ in",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$24.3$ in",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$30.6$ in",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Walk around the slice: out along one cut, along the crust, back along the other cut. That is three pieces.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Walk around the slice: out along one cut, along the crust, back along the other cut. That is three pieces."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a half pizza of radius $2$: the two straight cuts total $4$, and the crust is $\\frac{180}{360} \\times 2\\pi(2) = 2\\pi \\approx 6.3$, for about $10.3$ in. Two radii plus the arc, every time."
+    },
+    {
+      "level": "guide",
+      "text": "The two straight cuts are radii: $9 + 9 = 18$ in. The crust is an arc: $\\frac{40}{360} \\times 2\\pi(9)$."
+    },
+    {
+      "level": "reveal",
+      "text": "Arc $= \\frac{1}{9} \\times 18\\pi = 2\\pi \\approx 6.3$ in, so the perimeter is $18 + 6.3 = 24.3$ in."
+    }
+  ],
+  "explanation": [
+    "The two straight edges of the slice are radii, contributing $9 + 9 = 18$ inches.",
+    "The crust is a $40^\\circ$ arc: $\\frac{40}{360} \\times 2\\pi(9) = \\frac{1}{9}(18\\pi) = 2\\pi \\approx 6.28$ inches.",
+    "Total perimeter $\\approx 18 + 6.28 = 24.3$ inches. Choice C."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Trace it with your finger",
+      "steps": [
+        "Start at the pizza's center, slide out $9$ in to the crust, curve $6.3$ in along the edge, then slide $9$ in back to the center.",
+        "Add the three legs of that trip: $9 + 6.3 + 9 = 24.3$ inches."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Choice A, $6.3$, is the arc alone — the answer of someone who read \"perimeter\" but computed only the crust. Choice B, $18.0$, is the opposite mistake: the straight cuts with no crust.",
+        "Perimeter means the ENTIRE boundary. Before computing, trace the outline with your finger and count how many separate pieces you crossed; here there are three, so your sum needs three terms."
+      ]
+    }
+  ],
+  "tags": [
+    "arc-length",
+    "perimeter",
+    "composite"
+  ],
+  "estimatedSeconds": 85
+}

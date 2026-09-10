@@ -1,0 +1,48 @@
+{
+  "id": "TRIG.003",
+  "domain": "TRIG",
+  "unit": 1,
+  "orderInUnit": 3,
+  "standard": "TRIG.ANG.1",
+  "difficulty": 1,
+  "prompt": "A surveyor records a bearing as $42^\\circ 30'$ — that is 42 degrees and 30 minutes. Write this angle as a decimal number of degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "42.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A minute of angle is $\\frac{1}{60}$ of a degree, exactly like a minute is $\\frac{1}{60}$ of an hour.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A minute of angle is $\\frac{1}{60}$ of a degree, exactly like a minute is $\\frac{1}{60}$ of an hour."
+    },
+    {
+      "level": "guide",
+      "text": "Convert the 30 minutes: $\\frac{30}{60}$ of a degree."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{30}{60} = 0.5$, so the angle is $42.5^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Minutes work like clock minutes: 60 of them make one degree.",
+    "So 30 minutes is $\\frac{30}{60} = 0.5$ of a degree.",
+    "Add that to the whole degrees: $42^\\circ 30' = 42.5^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Half past 42",
+      "steps": [
+        "If someone says \"half past four,\" you know 30 minutes is half an hour.",
+        "Angle minutes behave the same way — 30 minutes is half a degree.",
+        "Half past $42^\\circ$ is $42.5^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "degrees-minutes",
+    "surveying"
+  ],
+  "estimatedSeconds": 35
+}

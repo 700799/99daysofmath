@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.004",
+  "domain": "TRIG",
+  "unit": 1,
+  "orderInUnit": 4,
+  "standard": "TRIG.ANG.1",
+  "difficulty": 1,
+  "prompt": "An angle of $-50^\\circ$ is drawn in standard position (a $50^\\circ$ turn clockwise). What is the smallest positive angle coterminal with it? Give just the number of degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "310",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A negative angle turns clockwise, but it still stops somewhere a counterclockwise angle could reach.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A negative angle turns clockwise, but it still stops somewhere a counterclockwise angle could reach."
+    },
+    {
+      "level": "guide",
+      "text": "Add one full turn: $-50^\\circ + 360^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-50^\\circ + 360^\\circ = 310^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Turning $50^\\circ$ clockwise lands just below the positive $x$-axis, in Quadrant IV.",
+    "To name that same spot with a positive angle, add a full turn: $-50^\\circ + 360^\\circ = 310^\\circ$.",
+    "Both angles finish on the same ray, so they are coterminal."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Going the long way around",
+      "steps": [
+        "Backing up $50^\\circ$ from the start gets you to the same ray as going forward all the way around minus that $50^\\circ$.",
+        "Forward all the way around is $360^\\circ$, so the long way is $360^\\circ - 50^\\circ = 310^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "coterminal",
+    "negative-angles"
+  ],
+  "estimatedSeconds": 40
+}

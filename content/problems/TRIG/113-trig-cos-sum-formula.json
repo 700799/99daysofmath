@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.113",
+  "domain": "TRIG",
+  "unit": 12,
+  "orderInUnit": 3,
+  "standard": "TRIG.IDENT.2",
+  "difficulty": 1,
+  "prompt": "Which expression equals $\\cos(A + B)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\cos A\\cos B - \\sin A\\sin B$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\cos A\\cos B + \\sin A\\sin B$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\cos A + \\cos B$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\sin A\\cos B + \\cos A\\sin B$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The cosine formula keeps the function names matched — cosine with cosine, sine with sine.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The cosine formula keeps the function names matched — cosine with cosine, sine with sine."
+    },
+    {
+      "level": "guide",
+      "text": "The sign in the cosine formula is the OPPOSITE of the sign between $A$ and $B$."
+    },
+    {
+      "level": "reveal",
+      "text": "For $\\cos(A + B)$ you use a minus: $\\cos A\\cos B - \\sin A\\sin B$."
+    }
+  ],
+  "explanation": [
+    "The cosine sum formula is $\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$.",
+    "Notice two things: the names stay matched, and the sign flips from the plus in $(A + B)$ to a minus.",
+    "Choice D is the SINE sum formula, and choice C is the classic false move of distributing cosine over addition."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test with numbers you already know",
+      "steps": [
+        "Take $A = B = 45^\\circ$, so $\\cos(90^\\circ) = 0$.",
+        "Choice A gives $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{2}}{2} - \\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{2}}{2} = \\frac{1}{2} - \\frac{1}{2} = 0$ ✓",
+        "Choice B would give $1$, and choice C would give $\\sqrt{2}$ — both wrong."
+      ]
+    }
+  ],
+  "tags": [
+    "sum-formula",
+    "cosine"
+  ],
+  "estimatedSeconds": 45
+}

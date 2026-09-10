@@ -1,0 +1,53 @@
+{
+  "id": "GEO.033",
+  "domain": "GEO",
+  "unit": 4,
+  "orderInUnit": 3,
+  "standard": "GEO.PROOF.1",
+  "difficulty": 1,
+  "prompt": "A classmate claims \"every quadrilateral with four equal sides is a square.\" You draw a rhombus that is squished flat and show it to her. What is the name for a single example that proves a general statement false?",
+  "answerType": "short-text",
+  "primaryAnswer": "counterexample",
+  "alternativeAnswers": [
+    "a counterexample",
+    "counter-example",
+    "counter example",
+    "Counterexample"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The word starts with \"counter,\" as in something that counters a claim.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The word starts with \"counter,\" as in something that counters a claim."
+    },
+    {
+      "level": "guide",
+      "text": "It is one example that runs counter to the statement."
+    },
+    {
+      "level": "reveal",
+      "text": "It is called a counterexample."
+    }
+  ],
+  "explanation": [
+    "A counterexample is a single case that satisfies the hypothesis but not the conclusion.",
+    "The squished rhombus has four equal sides (hypothesis ✓) but is not a square (conclusion ✗).",
+    "One counterexample is enough to prove a general statement false — while no number of examples can prove one true."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why one is enough",
+      "steps": [
+        "A statement that says \"every\" is making a promise about all cases.",
+        "Break the promise once and the statement is dead. That single broken case is the counterexample."
+      ]
+    }
+  ],
+  "tags": [
+    "counterexample",
+    "logic",
+    "vocabulary"
+  ],
+  "estimatedSeconds": 35
+}

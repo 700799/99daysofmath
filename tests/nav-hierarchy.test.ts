@@ -55,9 +55,33 @@ describe('parentOf — the SAT section', () => {
 });
 
 describe('parentOf — trails and drills', () => {
-  it('a trail steps back to Home', () => {
-    for (const d of TRAIL_DOMAINS) {
+  it('a strand of a multi-strand course steps back to that course', () => {
+    for (const d of ['6.RP', '6.NS', '6.EE', '6.SP'] as const) {
+      expect(parentOf(`/trail/${d}`), d).toEqual({ to: '/course/grade6', label: '6th Grade' });
+    }
+    expect(parentOf('/trail/GEO')).toEqual({ to: '/course/geometry', label: 'Geometry' });
+  });
+
+  it('a borrowed strand answers to the course that owns it', () => {
+    // 6.G opens the Geometry course but belongs to 6th Grade Common Core, so
+    // back must not quietly move it out of the Common Core standards.
+    expect(parentOf('/trail/6.G')).toEqual({ to: '/course/grade6', label: '6th Grade' });
+  });
+
+  it('a course that is its own single strand steps back to Home', () => {
+    for (const d of ['5.F', 'A1', 'PC', 'TRIG'] as const) {
       expect(parentOf(`/trail/${d}`), d).toEqual({ to: '/', label: 'Home' });
+    }
+  });
+
+  it('a course page steps back to Home', () => {
+    expect(parentOf('/course/grade6')).toEqual({ to: '/', label: 'Home' });
+    expect(parentOf('/course/geometry')).toEqual({ to: '/', label: 'Home' });
+  });
+
+  it('every trail resolves to some parent', () => {
+    for (const d of TRAIL_DOMAINS) {
+      expect(parentOf(`/trail/${d}`), d).not.toBeNull();
     }
   });
 

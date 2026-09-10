@@ -1,0 +1,51 @@
+{
+  "id": "GEO.132",
+  "domain": "GEO",
+  "unit": 14,
+  "orderInUnit": 2,
+  "standard": "GEO.TRANS.1",
+  "difficulty": 1,
+  "prompt": "The point $(4, -3)$ is reflected across the $x$-axis. Write the coordinates of the image in the form (x, y).",
+  "answerType": "short-text",
+  "primaryAnswer": "(4, 3)",
+  "alternativeAnswers": [
+    "(4,3)",
+    "4, 3",
+    "4,3"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The $x$-axis is a horizontal mirror, so the point flips up or down but never sideways.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $x$-axis is a horizontal mirror, so the point flips up or down but never sideways."
+    },
+    {
+      "level": "guide",
+      "text": "Keep $x$ the same and change the sign of $y$: $(x, y) \\to (x, -y)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(4, -3)$ becomes $(4, 3)$."
+    }
+  ],
+  "explanation": [
+    "Reflecting across the $x$-axis leaves the horizontal position alone and flips the vertical one.",
+    "The rule is $(x, y) \\to (x, -y)$.",
+    "So $(4, -3) \\to (4, 3)$ — it was $3$ below the axis, now it is $3$ above."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Mirror distance check",
+      "steps": [
+        "The point was $3$ units below the $x$-axis.",
+        "A mirror image sits the same distance on the other side, so it must be $3$ units above, still in the same column $x = 4$: $(4, 3)$."
+      ]
+    }
+  ],
+  "tags": [
+    "reflection",
+    "coordinate-geometry"
+  ],
+  "estimatedSeconds": 35
+}

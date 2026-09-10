@@ -1,0 +1,82 @@
+{
+  "id": "GEO.120",
+  "domain": "GEO",
+  "unit": 12,
+  "orderInUnit": 10,
+  "standard": "GEO.AREA.1",
+  "difficulty": 3,
+  "prompt": "A square patio tile is $12$ in on each side. A quarter circle with radius $12$ in is drawn with its center at one corner of the tile, and that quarter circle is painted blue. How many square inches of the tile stay unpainted? Round to the nearest tenth.",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$30.9$ sq in",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$106.3$ sq in",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$113.1$ sq in",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$36.0$ sq in",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Unpainted $=$ square $-$ quarter circle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Unpainted $=$ square $-$ quarter circle."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try smaller: a $2$ by $2$ square with a quarter circle of radius $2$ leaves $4 - \\frac{1}{4}\\pi(2)^2 = 4 - \\pi \\approx 0.9$ sq in unpainted. Same subtraction, bigger numbers."
+    },
+    {
+      "level": "guide",
+      "text": "Square: $12^2 = 144$ sq in. Quarter circle: $\\frac{1}{4}\\pi(12)^2 = 36\\pi$."
+    },
+    {
+      "level": "reveal",
+      "text": "$144 - 36\\pi \\approx 144 - 113.1 = 30.9$ sq in."
+    }
+  ],
+  "explanation": [
+    "The whole tile is $12 \\times 12 = 144$ square inches.",
+    "The blue region is one quarter of a circle of radius $12$: $\\frac{1}{4}\\pi(12)^2 = \\frac{1}{4}(144\\pi) = 36\\pi \\approx 113.1$ sq in.",
+    "Unpainted: $144 - 113.1 = 30.9$ square inches. Choice A."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sensible-size check",
+      "steps": [
+        "A quarter circle of radius $12$ drawn from a corner of a $12$-inch square fills most of the tile, leaving only the far corner region.",
+        "So the leftover must be well under half of $144$ — about $31$ sq in, roughly a fifth of the tile."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Choice C, $113.1$, is the painted quarter circle itself — a correct calculation of the wrong region, since the question asks for what is left UNPAINTED. Choice B comes from taking a quarter of the radius instead of a quarter of the area.",
+        "Underline what the question asks for before computing, and finish by asking \"did I subtract?\" Here the last move must be $144 - 113.1$."
+      ]
+    }
+  ],
+  "tags": [
+    "shaded-region",
+    "composite-area",
+    "quarter-circle"
+  ],
+  "estimatedSeconds": 85
+}

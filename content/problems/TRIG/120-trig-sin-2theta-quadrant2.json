@@ -1,0 +1,65 @@
+{
+  "id": "TRIG.120",
+  "domain": "TRIG",
+  "unit": 12,
+  "orderInUnit": 10,
+  "standard": "TRIG.IDENT.2",
+  "difficulty": 3,
+  "prompt": "If $\\sin\\theta = \\frac{5}{13}$ and $\\theta$ is in the second quadrant, find $\\sin(2\\theta)$. Give your answer as a fraction.",
+  "answerType": "numeric",
+  "primaryAnswer": "-120/169",
+  "alternativeAnswers": [
+    "-0.7101",
+    "-0.71"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "You need $\\cos\\theta$ before you can use $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You need $\\cos\\theta$ before you can use $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $\\sin\\theta = \\frac{3}{5}$ in Quadrant II: then $\\cos\\theta = -\\frac{4}{5}$, so $\\sin(2\\theta) = 2\\cdot\\frac{3}{5}\\cdot\\left(-\\frac{4}{5}\\right) = -\\frac{24}{25}$. Same three steps on the $5$-$12$-$13$ triangle."
+    },
+    {
+      "level": "guide",
+      "text": "$\\cos^2\\theta = 1 - \\frac{25}{169} = \\frac{144}{169}$, so $\\cos\\theta = \\pm\\frac{12}{13}$ — and in quadrant II cosine is negative."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin(2\\theta) = 2 \\cdot \\frac{5}{13} \\cdot \\left(-\\frac{12}{13}\\right) = -\\frac{120}{169}$."
+    }
+  ],
+  "explanation": [
+    "From the Pythagorean identity, $\\cos^2\\theta = 1 - \\left(\\frac{5}{13}\\right)^2 = \\frac{144}{169}$, so $\\cos\\theta = \\pm\\frac{12}{13}$.",
+    "In the second quadrant cosine is negative, so $\\cos\\theta = -\\frac{12}{13}$.",
+    "Now $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta = 2 \\cdot \\frac{5}{13} \\cdot \\left(-\\frac{12}{13}\\right) = -\\frac{120}{169}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with the actual angle",
+      "steps": [
+        "$\\arcsin\\left(\\frac{5}{13}\\right) \\approx 22.6^\\circ$, so the quadrant-II angle is $\\theta \\approx 157.4^\\circ$.",
+        "Then $2\\theta \\approx 314.8^\\circ$, which lands in quadrant IV where sine is negative.",
+        "$\\sin 314.8^\\circ \\approx -0.710$, matching $-\\frac{120}{169} \\approx -0.710$ ✓"
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap is answering $+\\frac{120}{169}$ by taking $\\cos\\theta = \\frac{12}{13}$ from the $5$-$12$-$13$ triangle and ignoring the quadrant.",
+        "Side lengths in a triangle are always positive, but trig VALUES carry signs that depend on the quadrant. In quadrant II only sine stays positive.",
+        "The habit that protects you: the moment you take a square root, stop and write down which quadrant you are in and what sign that forces. The answer is $-\\frac{120}{169}$."
+      ]
+    }
+  ],
+  "tags": [
+    "double-angle",
+    "quadrants",
+    "sign-error"
+  ],
+  "estimatedSeconds": 90
+}

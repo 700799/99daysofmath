@@ -1,0 +1,54 @@
+{
+  "id": "GEO.061",
+  "domain": "GEO",
+  "unit": 7,
+  "orderInUnit": 1,
+  "standard": "GEO.SIM.1",
+  "difficulty": 1,
+  "prompt": "Two triangular street signs have two pairs of congruent angles. Which criterion proves the signs are SIMILAR? Answer with two letters.",
+  "answerType": "short-text",
+  "primaryAnswer": "AA",
+  "alternativeAnswers": [
+    "aa",
+    "A.A.",
+    "angle angle",
+    "angle-angle",
+    "AA similarity"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Count what is known: two angles and no sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Count what is known: two angles and no sides."
+    },
+    {
+      "level": "guide",
+      "text": "Two angles is enough for similarity, because the third angle comes free from the $180^\\circ$ total."
+    },
+    {
+      "level": "reveal",
+      "text": "This is AA — Angle-Angle similarity."
+    }
+  ],
+  "explanation": [
+    "If two angles of one triangle are congruent to two angles of another, the third pair must match too, since all three sum to $180^\\circ$.",
+    "Matching angles means the same shape, though possibly a different size — that is similarity.",
+    "The criterion is AA."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Similar vs congruent",
+      "steps": [
+        "Congruence needs at least one side, because sides set the size.",
+        "Similarity only cares about shape, so angles alone are enough — which is why AA works for similar but AAA fails for congruent."
+      ]
+    }
+  ],
+  "tags": [
+    "similarity",
+    "AA",
+    "triangles"
+  ],
+  "estimatedSeconds": 35
+}

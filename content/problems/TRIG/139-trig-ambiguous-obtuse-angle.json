@@ -1,0 +1,64 @@
+{
+  "id": "TRIG.139",
+  "domain": "TRIG",
+  "unit": 14,
+  "orderInUnit": 9,
+  "standard": "TRIG.LAW.1",
+  "difficulty": 3,
+  "prompt": "In a triangle $A = 35^\\circ$, $a = 7$ and $b = 9$. Two triangles are possible. Find the OBTUSE value of angle $B$, in degrees, rounded to one decimal place.",
+  "answerType": "numeric",
+  "primaryAnswer": "132.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Start with the Law of Sines: $\\frac{\\sin B}{9} = \\frac{\\sin 35^\\circ}{7}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Start with the Law of Sines: $\\frac{\\sin B}{9} = \\frac{\\sin 35^\\circ}{7}$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up on the last step alone: if the calculator had returned $B = 30^\\circ$, the obtuse angle with the very same sine is $180^\\circ - 30^\\circ = 150^\\circ$. Your problem is the Law of Sines followed by exactly that subtraction."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sin B = \\frac{9\\sin 35^\\circ}{7} \\approx 0.7375$, and your calculator returns $B \\approx 47.5^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "The obtuse partner has the same sine: $180^\\circ - 47.5^\\circ = 132.5^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Law of Sines: $\\frac{\\sin B}{b} = \\frac{\\sin A}{a}$, so $\\sin B = \\frac{9\\sin 35^\\circ}{7} \\approx 0.73745$.",
+    "The calculator gives the acute answer, $B \\approx 47.5^\\circ$.",
+    "Sine is also positive in the second quadrant, so $B = 180^\\circ - 47.5^\\circ = 132.5^\\circ$ has the very same sine.",
+    "Check it is legal: $35^\\circ + 132.5^\\circ = 167.5^\\circ < 180^\\circ$, so the obtuse triangle really exists."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Both triangles, side by side",
+      "steps": [
+        "Triangle 1: $B \\approx 47.5^\\circ$, so $C \\approx 97.5^\\circ$ — a tall, open triangle.",
+        "Triangle 2: $B \\approx 132.5^\\circ$, so $C \\approx 12.5^\\circ$ — a long, flat sliver.",
+        "Both have $A = 35^\\circ$, $a = 7$ and $b = 9$, which is exactly why the SSA case is called ambiguous."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap is reporting $47.5^\\circ$ and stopping, because that is the number the calculator displayed.",
+        "$\\arcsin$ only ever returns angles from $-90^\\circ$ to $90^\\circ$, so it is structurally incapable of showing you an obtuse answer — it is not wrong, just incomplete.",
+        "Whenever you find an angle with the Law of Sines in an SSA problem, compute $180^\\circ$ minus your answer and test whether it still fits under $180^\\circ$ with the given angle. Here it does, giving $132.5^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "ambiguous-case",
+    "law-of-sines",
+    "ssa",
+    "common-error"
+  ],
+  "estimatedSeconds": 90
+}

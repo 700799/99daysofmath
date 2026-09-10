@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.042",
+  "domain": "TRIG",
+  "unit": 5,
+  "orderInUnit": 2,
+  "standard": "TRIG.CIRC.1",
+  "difficulty": 1,
+  "prompt": "On the unit circle, the angle $0^\\circ$ lands at the point $(1, 0)$. What is $\\sin 0^\\circ$?",
+  "answerType": "numeric",
+  "primaryAnswer": "0",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sine reads off the $y$-coordinate.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sine reads off the $y$-coordinate."
+    },
+    {
+      "level": "guide",
+      "text": "The point is $(1, 0)$, so what is its $y$-coordinate?"
+    },
+    {
+      "level": "reveal",
+      "text": "The $y$-coordinate is $0$, so $\\sin 0^\\circ = 0$."
+    }
+  ],
+  "explanation": [
+    "On the unit circle, the point at angle $\\theta$ is $(\\cos \\theta,\\ \\sin \\theta)$, so sine is just the height.",
+    "At $0^\\circ$ the point is $(1, 0)$, sitting right on the $x$-axis with no height at all.",
+    "Therefore $\\sin 0^\\circ = 0$ (and $\\cos 0^\\circ = 1$)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Height above the axis",
+      "steps": [
+        "Think of sine as \"how high up am I?\"",
+        "At $0^\\circ$ you have not started climbing yet, so the height is 0."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "exact-values"
+  ],
+  "estimatedSeconds": 25
+}

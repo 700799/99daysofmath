@@ -1,0 +1,47 @@
+{
+  "id": "GEO.136",
+  "domain": "GEO",
+  "unit": 14,
+  "orderInUnit": 6,
+  "standard": "GEO.TRANS.1",
+  "difficulty": 2,
+  "prompt": "On a city map, the library is at $(1, 2)$ and the pool is at $(7, 10)$, with each unit representing one block. How many blocks apart are they in a straight line?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Use the distance formula: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use the distance formula: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\Delta x = 7 - 1 = 6$ and $\\Delta y = 10 - 2 = 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$d = \\sqrt{36 + 64} = \\sqrt{100} = 10$ blocks."
+    }
+  ],
+  "explanation": [
+    "Find the horizontal and vertical gaps: $6$ blocks across and $8$ blocks up.",
+    "The straight-line path is the hypotenuse: $d = \\sqrt{6^2 + 8^2} = \\sqrt{100}$.",
+    "The library and pool are $10$ blocks apart as the crow flies."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walking versus flying",
+      "steps": [
+        "Walking the streets means $6 + 8 = 14$ blocks, because you must follow the grid.",
+        "Flying straight across cuts the corner: the $6$-$8$-$10$ right triangle gives just $10$ blocks. That gap between $14$ and $10$ is the whole point of the distance formula."
+      ]
+    }
+  ],
+  "tags": [
+    "distance-formula",
+    "coordinate-geometry"
+  ],
+  "estimatedSeconds": 55
+}

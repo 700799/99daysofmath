@@ -1,0 +1,60 @@
+{
+  "id": "GEO.079",
+  "domain": "GEO",
+  "unit": 8,
+  "orderInUnit": 9,
+  "standard": "GEO.RT.1",
+  "difficulty": 3,
+  "prompt": "The front of a tent is an isosceles triangle: the two slanted edges are each $13$ ft and the floor is $10$ ft wide. How tall is the tent at its peak, in feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Drop the height from the peak straight down to the floor — it splits the isosceles triangle into two identical right triangles.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Drop the height from the peak straight down to the floor — it splits the isosceles triangle into two identical right triangles."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up on a $5$-$5$-$6$ triangle: half the base is $3$, so $3^2 + h^2 = 5^2$ gives $h = 4$. Same two moves here — halve the floor width, then use the Pythagorean theorem."
+    },
+    {
+      "level": "guide",
+      "text": "That height hits the middle of the floor, so each small triangle has a leg of $10 \\div 2 = 5$ and hypotenuse $13$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5^2 + h^2 = 13^2$, so $h^2 = 169 - 25 = 144$ and $h = 12$ ft."
+    }
+  ],
+  "explanation": [
+    "The height of an isosceles triangle drawn to the base cuts the base exactly in half.",
+    "That creates a right triangle with hypotenuse $13$ (the slanted edge) and one leg $5$ (half of $10$).",
+    "Solve: $h^2 = 13^2 - 5^2 = 169 - 25 = 144$, so the peak is $h = 12$ ft high."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two triangles, one answer",
+      "steps": [
+        "Both halves are congruent right triangles, so you only need to solve one of them.",
+        "Each is a $5$-$12$-$13$ triple — a family worth memorizing alongside $3$-$4$-$5$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The tempting wrong answer is $\\sqrt{169 - 100} = \\sqrt{69} \\approx 8.3$: using the WHOLE $10$-ft floor as a leg. But the full floor is not a leg of either right triangle — the height lands in the middle of it.",
+        "Before squaring anything, redraw the picture with the height in place and label the halved base. Half of $10$ is $5$, and $13^2 - 5^2$ gives the clean $12$."
+      ]
+    }
+  ],
+  "tags": [
+    "pythagorean-theorem",
+    "isosceles",
+    "multi-step"
+  ],
+  "estimatedSeconds": 75
+}

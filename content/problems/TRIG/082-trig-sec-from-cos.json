@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.082",
+  "domain": "TRIG",
+  "unit": 9,
+  "orderInUnit": 2,
+  "standard": "TRIG.GRAPH.3",
+  "difficulty": 1,
+  "prompt": "If $\\cos\\theta = \\frac{1}{2}$, what is $\\sec\\theta$?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Secant is the reciprocal of cosine.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Secant is the reciprocal of cosine."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sec\\theta = \\frac{1}{\\cos\\theta}$, so flip $\\frac{1}{2}$ over."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sec\\theta = \\frac{1}{1/2} = 2$."
+    }
+  ],
+  "explanation": [
+    "By definition $\\sec\\theta = \\frac{1}{\\cos\\theta}$.",
+    "Substituting, $\\sec\\theta = \\frac{1}{1/2} = 2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Remember which pairs with which",
+      "steps": [
+        "The pairings are easy to mix up because the names do not match the letters.",
+        "Secant goes with cosine, cosecant goes with sine, and cotangent goes with tangent.",
+        "A trick: look at the THIRD letter — se-C-ant pairs with cosine, co-S-ecant pairs with sine."
+      ]
+    }
+  ],
+  "tags": [
+    "secant",
+    "reciprocal-functions"
+  ],
+  "estimatedSeconds": 30
+}

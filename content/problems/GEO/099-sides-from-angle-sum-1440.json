@@ -1,0 +1,60 @@
+{
+  "id": "GEO.099",
+  "domain": "GEO",
+  "unit": 10,
+  "orderInUnit": 9,
+  "standard": "GEO.QUAD.1",
+  "difficulty": 3,
+  "prompt": "The interior angles of a polygon add up to $1440^\\circ$. How many sides does the polygon have?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Start from $(n - 2) \\times 180 = 1440$ and work backwards.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Start from $(n - 2) \\times 180 = 1440$ and work backwards."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Check the formula on a shape you know: a quadrilateral has $n = 4$, and $(4 - 2) \\times 180 = 360^\\circ$. ✓ Now run that same equation backwards, starting from $1440$."
+    },
+    {
+      "level": "guide",
+      "text": "Divide both sides by $180$: $n - 2 = 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "Add $2$: $n = 10$ sides."
+    }
+  ],
+  "explanation": [
+    "Set up the interior-angle-sum formula as an equation: $(n - 2) \\times 180 = 1440$.",
+    "Divide both sides by $180$: $n - 2 = 8$.",
+    "Add $2$ to both sides: $n = 10$. The polygon is a decagon."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the triangles",
+      "steps": [
+        "$1440 \\div 180 = 8$, so the polygon slices into $8$ triangles from one corner.",
+        "A polygon always makes two fewer triangles than it has sides, so $8$ triangles means $10$ sides."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is $8$ — you divide $1440 \\div 180 = 8$, see a whole number, and stop. But $8$ is the number of TRIANGLES ($n - 2$), not the number of sides.",
+        "Write the formula with its parentheses before dividing: $(n - 2) \\times 180 = 1440$ makes it obvious that dividing leaves $n - 2$ sitting there, still owed a $+2$."
+      ]
+    }
+  ],
+  "tags": [
+    "polygon",
+    "interior-angles",
+    "reverse"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.124",
+  "domain": "TRIG",
+  "unit": 13,
+  "orderInUnit": 4,
+  "standard": "TRIG.EQ.1",
+  "difficulty": 1,
+  "prompt": "What is the general solution of $\\tan\\theta = 1$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\theta = 45^\\circ + 180^\\circ k$ for every integer $k$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\theta = 45^\\circ + 360^\\circ k$ for every integer $k$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\theta = 45^\\circ$ only",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\theta = 45^\\circ + 90^\\circ k$ for every integer $k$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "A general solution adds one full PERIOD of the function each time.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A general solution adds one full PERIOD of the function each time."
+    },
+    {
+      "level": "guide",
+      "text": "The period of tangent is $180^\\circ$, not $360^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "So the answers are $45^\\circ$, $225^\\circ$, $405^\\circ$, ... that is, $45^\\circ + 180^\\circ k$."
+    }
+  ],
+  "explanation": [
+    "One solution is $\\theta = 45^\\circ$, since $\\tan 45^\\circ = 1$.",
+    "Tangent repeats every $180^\\circ$, so every angle $180^\\circ$ away from a solution is also a solution.",
+    "The general solution is $\\theta = 45^\\circ + 180^\\circ k$ for any integer $k$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spot-check the runner-up",
+      "steps": [
+        "Choice B would miss $225^\\circ$. But $\\tan 225^\\circ = 1$ too, because that ray has the same slope as the $45^\\circ$ ray.",
+        "Since $225^\\circ$ really is a solution, the step must be $180^\\circ$, not $360^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "general-solution",
+    "tangent",
+    "period"
+  ],
+  "estimatedSeconds": 50
+}

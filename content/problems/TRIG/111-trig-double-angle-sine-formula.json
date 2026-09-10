@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.111",
+  "domain": "TRIG",
+  "unit": 12,
+  "orderInUnit": 1,
+  "standard": "TRIG.IDENT.2",
+  "difficulty": 1,
+  "prompt": "Which expression equals $\\sin(2\\theta)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$2\\sin\\theta\\cos\\theta$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$2\\sin\\theta$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\sin^2\\theta$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\sin\\theta + \\sin\\theta$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Write $2\\theta$ as $\\theta + \\theta$ and use the sum formula.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Write $2\\theta$ as $\\theta + \\theta$ and use the sum formula."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$. Put $A = B = \\theta$."
+    },
+    {
+      "level": "reveal",
+      "text": "You get $\\sin\\theta\\cos\\theta + \\cos\\theta\\sin\\theta = 2\\sin\\theta\\cos\\theta$."
+    }
+  ],
+  "explanation": [
+    "Treat $2\\theta$ as $\\theta + \\theta$ and apply $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$.",
+    "With $A = B = \\theta$ this gives $\\sin\\theta\\cos\\theta + \\cos\\theta\\sin\\theta$.",
+    "The two terms are identical, so they combine to $2\\sin\\theta\\cos\\theta$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the tempting answers fail",
+      "steps": [
+        "Try $\\theta = 30^\\circ$: $\\sin 60^\\circ \\approx 0.866$.",
+        "Choice B gives $2\\sin 30^\\circ = 1$, and choice D gives the same thing — both wrong.",
+        "Choice A gives $2(0.5)(0.866) = 0.866$ ✓. Trig functions do not distribute over multiplication: $\\sin(2\\theta)$ is never just $2\\sin\\theta$."
+      ]
+    }
+  ],
+  "tags": [
+    "double-angle",
+    "sine"
+  ],
+  "estimatedSeconds": 40
+}

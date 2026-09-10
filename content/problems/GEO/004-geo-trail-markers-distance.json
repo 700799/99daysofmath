@@ -1,0 +1,48 @@
+{
+  "id": "GEO.004",
+  "domain": "GEO",
+  "unit": 1,
+  "orderInUnit": 4,
+  "standard": "GEO.BASIC.1",
+  "difficulty": 1,
+  "prompt": "A hiking trail is marked like a number line. One trail marker sits at $-4$ and another sits at $6$. How many units apart are they?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Distance is never negative — it is just how far you walk.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Distance is never negative — it is just how far you walk."
+    },
+    {
+      "level": "guide",
+      "text": "On a number line, distance is $|$larger $-$ smaller$|$: $|6 - (-4)|$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 - (-4) = 6 + 4 = 10$ units."
+    }
+  ],
+  "explanation": [
+    "The distance between two points on a number line is the absolute value of their difference.",
+    "$|6 - (-4)| = |6 + 4| = 10$.",
+    "Walking from $-4$ up to $0$ is 4 units, then $0$ up to $6$ is 6 more: $4 + 6 = 10$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count through zero",
+      "steps": [
+        "From $-4$ to $0$ you cover 4 units.",
+        "From $0$ to $6$ you cover 6 more. Total: $4 + 6 = 10$ units."
+      ]
+    }
+  ],
+  "tags": [
+    "distance",
+    "number-line",
+    "absolute-value"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,53 @@
+{
+  "id": "TRIG.035",
+  "domain": "TRIG",
+  "unit": 4,
+  "orderInUnit": 5,
+  "standard": "TRIG.RT.2",
+  "difficulty": 2,
+  "prompt": "A square floor tile has sides of $7$ inches. How long is its diagonal? Give the exact value as an expression, for example \"5sqrt(2)\" for $5\\sqrt{2}$.",
+  "answerType": "expression",
+  "primaryAnswer": "7sqrt(2)",
+  "alternativeAnswers": [
+    "7*sqrt(2)",
+    "7 sqrt(2)",
+    "7√2",
+    "7\\sqrt{2}"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A diagonal cuts the square into two $45$-$45$-$90$ triangles.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A diagonal cuts the square into two $45$-$45$-$90$ triangles."
+    },
+    {
+      "level": "guide",
+      "text": "In a $45$-$45$-$90$ triangle the hypotenuse is the leg times $\\sqrt{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "The diagonal is $7\\sqrt{2}$ inches, about $9.9$ inches."
+    }
+  ],
+  "explanation": [
+    "Cutting a square along its diagonal makes a right triangle with two equal legs of $7$ inches.",
+    "That is a $45$-$45$-$90$ triangle, where the hypotenuse always equals a leg times $\\sqrt{2}$.",
+    "So the diagonal is $7\\sqrt{2} \\approx 9.9$ inches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pythagoras the long way",
+      "steps": [
+        "$d^2 = 7^2 + 7^2 = 49 + 49 = 98$.",
+        "$d = \\sqrt{98} = \\sqrt{49 \\times 2} = 7\\sqrt{2}$.",
+        "The shortcut and the theorem agree, as they must."
+      ]
+    }
+  ],
+  "tags": [
+    "special-triangles",
+    "45-45-90"
+  ],
+  "estimatedSeconds": 50
+}

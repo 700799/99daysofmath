@@ -1,0 +1,48 @@
+{
+  "id": "GEO.058",
+  "domain": "GEO",
+  "unit": 6,
+  "orderInUnit": 8,
+  "standard": "GEO.CONG.2",
+  "difficulty": 2,
+  "prompt": "A survey stake extends one side of a triangular lot, forming an exterior angle of $(5x)^\\circ$. The two remote interior angles measure $(2x + 10)^\\circ$ and $(x + 30)^\\circ$. Find $x$.",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The exterior angle equals the sum of the two remote interior angles.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The exterior angle equals the sum of the two remote interior angles."
+    },
+    {
+      "level": "guide",
+      "text": "Write $5x = (2x + 10) + (x + 30)$ and combine like terms on the right."
+    },
+    {
+      "level": "reveal",
+      "text": "$5x = 3x + 40$, so $2x = 40$ and $x = 20$."
+    }
+  ],
+  "explanation": [
+    "By the Exterior Angle Theorem, $5x = (2x + 10) + (x + 30)$.",
+    "Combine the right side: $5x = 3x + 40$.",
+    "Subtract $3x$: $2x = 40$, so $x = 20$.",
+    "Check: the exterior angle is $100^\\circ$ and the remote interiors are $50^\\circ$ and $50^\\circ$, which do add to $100$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Verify the whole triangle",
+      "steps": [
+        "With $x = 20$, the two remote interior angles are $50^\\circ$ each, and the third angle is the linear-pair partner of the $100^\\circ$ exterior angle: $180 - 100 = 80^\\circ$.",
+        "$50 + 50 + 80 = 180^\\circ$, so the lot closes up correctly."
+      ]
+    }
+  ],
+  "tags": [
+    "exterior-angle",
+    "algebra"
+  ],
+  "estimatedSeconds": 60
+}

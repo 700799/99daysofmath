@@ -1,0 +1,48 @@
+{
+  "id": "TRIG.131",
+  "domain": "TRIG",
+  "unit": 14,
+  "orderInUnit": 1,
+  "standard": "TRIG.LAW.1",
+  "difficulty": 1,
+  "prompt": "In triangle $ABC$, $A = 30^\\circ$, $B = 45^\\circ$, and side $a = 10$. Find side $b$, rounded to two decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "14.14",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You have a matched pair — angle $A$ with side $a$ — so the Law of Sines applies.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You have a matched pair — angle $A$ with side $a$ — so the Law of Sines applies."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$, so $b = \\frac{10\\sin 45^\\circ}{\\sin 30^\\circ}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$b = \\frac{10(0.7071)}{0.5} \\approx 14.14$."
+    }
+  ],
+  "explanation": [
+    "The Law of Sines says $\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$.",
+    "Substitute the known values: $\\frac{10}{\\sin 30^\\circ} = \\frac{b}{\\sin 45^\\circ}$.",
+    "Solve for $b$: $b = \\frac{10 \\times 0.70711}{0.5} \\approx 14.14$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity-check with the angles",
+      "steps": [
+        "Angle $B = 45^\\circ$ is bigger than angle $A = 30^\\circ$.",
+        "In any triangle, the bigger angle sits opposite the longer side.",
+        "So $b$ must be longer than $a = 10$, and $14.14$ is — the answer is believable."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-sines",
+    "solve-triangle"
+  ],
+  "estimatedSeconds": 60
+}

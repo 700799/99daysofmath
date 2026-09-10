@@ -1,0 +1,62 @@
+{
+  "id": "GEO.069",
+  "domain": "GEO",
+  "unit": 7,
+  "orderInUnit": 9,
+  "standard": "GEO.SIM.1",
+  "difficulty": 3,
+  "prompt": "In triangular frame $ABC$, a brace $\\overline{DE}$ runs parallel to the base $\\overline{BC}$, with $D$ on $\\overline{AB}$ and $E$ on $\\overline{AC}$. If $AD = 4$, $DB = 6$, and $AE = 6$, find $EC$.",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A line parallel to one side of a triangle cuts the other two sides proportionally.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A line parallel to one side of a triangle cuts the other two sides proportionally."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try friendly numbers: if $AD = 2$, $DB = 4$ and $AE = 3$, then $\\frac{2}{4} = \\frac{3}{EC}$ cross-multiplies to $EC = 6$. Build your proportion the same way, top piece over bottom piece on each side."
+    },
+    {
+      "level": "guide",
+      "text": "Set up $\\frac{AD}{DB} = \\frac{AE}{EC}$, that is $\\frac{4}{6} = \\frac{6}{EC}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Cross-multiply: $4 \\cdot EC = 36$, so $EC = 9$."
+    }
+  ],
+  "explanation": [
+    "Because $\\overline{DE} \\parallel \\overline{BC}$, the corresponding angles make $\\triangle ADE \\sim \\triangle ABC$, and the brace splits the two sides proportionally.",
+    "That gives $\\frac{AD}{DB} = \\frac{AE}{EC}$, so $\\frac{4}{6} = \\frac{6}{EC}$.",
+    "Cross-multiply: $4 \\cdot EC = 6 \\times 6 = 36$, so $EC = 9$.",
+    "Check the whole sides too: $\\frac{AD}{AB} = \\frac{4}{10}$ and $\\frac{AE}{AC} = \\frac{6}{15}$, and both equal $0.4$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Work with the whole triangles",
+      "steps": [
+        "$\\triangle ADE \\sim \\triangle ABC$, so $\\frac{AD}{AB} = \\frac{AE}{AC}$, that is $\\frac{4}{10} = \\frac{6}{AC}$.",
+        "Cross-multiply: $4 \\cdot AC = 60$, so $AC = 15$. Then $EC = AC - AE = 15 - 6 = 9$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is 15 — writing $\\frac{AD}{DB} = \\frac{AE}{AC}$ mixes a PART-to-PART ratio on the left with a PART-to-WHOLE ratio on the right, and lands you on $AC$ instead of $EC$.",
+        "Keep both sides of a proportion the same kind: piece-to-piece with piece-to-piece ($\\frac{4}{6} = \\frac{6}{EC}$), or piece-to-whole with piece-to-whole. Match the types and $EC = 9$ falls out."
+      ]
+    }
+  ],
+  "tags": [
+    "similarity",
+    "side-splitter",
+    "parallel-lines",
+    "proportion"
+  ],
+  "estimatedSeconds": 85
+}

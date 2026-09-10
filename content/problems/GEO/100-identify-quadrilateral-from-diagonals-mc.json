@@ -1,0 +1,82 @@
+{
+  "id": "GEO.100",
+  "domain": "GEO",
+  "unit": 10,
+  "orderInUnit": 10,
+  "standard": "GEO.QUAD.1",
+  "difficulty": 3,
+  "prompt": "A quilt patch is a quadrilateral whose diagonals bisect each other and meet at right angles, but the two diagonals are **not** the same length. What kind of quadrilateral must it be?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Rectangle",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Rhombus",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Square",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Isosceles trapezoid",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Take the clues one at a time. \"Diagonals bisect each other\" already means the shape is a parallelogram.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Take the clues one at a time. \"Diagonals bisect each other\" already means the shape is a parallelogram."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sort out an easier case first: a square has diagonals that bisect each other, are perpendicular, AND are equal in length. Your patch matches all of that except equal, so drop whatever the equal length would have added."
+    },
+    {
+      "level": "guide",
+      "text": "Among parallelograms, perpendicular diagonals is the signature of a rhombus; congruent diagonals is the signature of a rectangle."
+    },
+    {
+      "level": "reveal",
+      "text": "Perpendicular but NOT congruent means rhombus, and not a square. Choice B."
+    }
+  ],
+  "explanation": [
+    "Diagonals that bisect each other force a parallelogram, so D is out (a trapezoid is not one).",
+    "Perpendicular diagonals make it a rhombus; congruent diagonals would make it a rectangle.",
+    "Since the diagonals are perpendicular but unequal, it is a rhombus that is not a square. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build one and look",
+      "steps": [
+        "Cross a $10$-inch stick and a $6$-inch stick at their midpoints at right angles, then connect the four tips.",
+        "All four sides come out equal (each is the hypotenuse of a $5$-$3$ right triangle) but the patch is a stretched diamond, not a square — a rhombus."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap is choosing \"square\". Perpendicular bisecting diagonals feel square-ish, and a square does fit every clue except the last one — the problem said the diagonals are NOT congruent, and a square's diagonals always are.",
+        "When a problem hands you a \"not\", treat it as an eliminator: read the list of shapes and cross off every one whose diagonals must match. That kills both square and rectangle and leaves rhombus standing."
+      ]
+    }
+  ],
+  "tags": [
+    "quadrilateral-properties",
+    "classification",
+    "rhombus"
+  ],
+  "estimatedSeconds": 75
+}

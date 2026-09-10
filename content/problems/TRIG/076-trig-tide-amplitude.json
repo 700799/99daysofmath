@@ -1,0 +1,49 @@
+{
+  "id": "TRIG.076",
+  "domain": "TRIG",
+  "unit": 8,
+  "orderInUnit": 6,
+  "standard": "TRIG.GRAPH.2",
+  "difficulty": 2,
+  "prompt": "At a harbour the water is $12$ feet deep at high tide and $2$ feet deep at low tide. If the depth is modelled by a sine wave, what is the amplitude, in feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Amplitude is the distance from the midline to a peak — not the full swing from bottom to top.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Amplitude is the distance from the midline to a peak — not the full swing from bottom to top."
+    },
+    {
+      "level": "guide",
+      "text": "Amplitude $= \\frac{\\text{max} - \\text{min}}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{12 - 2}{2} = 5$ feet."
+    }
+  ],
+  "explanation": [
+    "The tide swings through a total range of $12 - 2 = 10$ feet.",
+    "Amplitude measures only half of that swing: $\\frac{10}{2} = 5$ feet.",
+    "The midline sits at $\\frac{12 + 2}{2} = 7$ feet, and the water rises $5$ feet above it and falls $5$ feet below."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the midline first",
+      "steps": [
+        "Draw a horizontal line at $7$ feet, halfway between high and low tide.",
+        "High tide is $12 - 7 = 5$ feet above that line, and low tide is $7 - 2 = 5$ feet below it.",
+        "That common distance, $5$ feet, is the amplitude."
+      ]
+    }
+  ],
+  "tags": [
+    "amplitude",
+    "tides",
+    "modelling"
+  ],
+  "estimatedSeconds": 45
+}

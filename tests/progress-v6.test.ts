@@ -1,5 +1,19 @@
 import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest';
 import { useProgress, migrateProgress } from '../src/state/progress';
+import { DOMAINS, type Domain } from '../src/types/problem';
+
+
+// Built from DOMAINS rather than listed by hand, so adding a course does not
+// silently leave this fixture a domain short.
+function blankByDomain(): Record<Domain, { unitsUnlocked: number; unitStars: Record<number, never>; missedProblemIds: string[] }> {
+  return DOMAINS.reduce(
+    (acc, d) => {
+      acc[d] = { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] };
+      return acc;
+    },
+    {} as Record<Domain, { unitsUnlocked: number; unitStars: Record<number, never>; missedProblemIds: string[] }>,
+  );
+}
 
 function setToday(iso: string) {
   vi.setSystemTime(new Date(`${iso}T12:00:00`));
@@ -7,17 +21,7 @@ function setToday(iso: string) {
 
 function freshState() {
   useProgress.setState({
-    byDomain: {
-      '5.F': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
-      '6.RP': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
-      '6.NS': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
-      '6.EE': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
-      '6.G': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
-      '6.SP': { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
-      A1: { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
-      PC: { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
-    SAT: { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] },
-    },
+    byDomain: blankByDomain(),
     xp: 0,
     streak: 0,
     bestStreak: 0,

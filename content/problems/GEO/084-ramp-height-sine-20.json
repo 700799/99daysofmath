@@ -1,0 +1,48 @@
+{
+  "id": "GEO.084",
+  "domain": "GEO",
+  "unit": 9,
+  "orderInUnit": 4,
+  "standard": "GEO.RT.2",
+  "difficulty": 1,
+  "prompt": "A loading ramp is $15$ ft long and rises at an angle of $20^\\circ$ to the ground. How high is the top of the ramp above the ground, in feet, rounded to the nearest tenth?",
+  "answerType": "numeric",
+  "primaryAnswer": "5.1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The ramp itself is the hypotenuse; the height is opposite the $20^\\circ$ angle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The ramp itself is the hypotenuse; the height is opposite the $20^\\circ$ angle."
+    },
+    {
+      "level": "guide",
+      "text": "Opposite and hypotenuse means sine: $\\sin 20^\\circ = \\frac{h}{15}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$h = 15 \\sin 20^\\circ \\approx 15(0.342) \\approx 5.1$ ft."
+    }
+  ],
+  "explanation": [
+    "Label the triangle: hypotenuse $= 15$ (the ramp), unknown height opposite the $20^\\circ$ angle.",
+    "Opposite over hypotenuse is sine, so $\\sin 20^\\circ = \\frac{h}{15}$.",
+    "Multiply both sides by $15$: $h = 15 \\sin 20^\\circ \\approx 5.1$ ft."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Does the size make sense?",
+      "steps": [
+        "A shallow $20^\\circ$ climb should gain only a little height over $15$ ft of travel.",
+        "About $5$ ft of rise for $15$ ft of ramp feels right; an answer like $14$ ft would mean a nearly vertical ramp."
+      ]
+    }
+  ],
+  "tags": [
+    "soh-cah-toa",
+    "sine",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

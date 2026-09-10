@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.067",
+  "domain": "TRIG",
+  "unit": 7,
+  "orderInUnit": 7,
+  "standard": "TRIG.GRAPH.1",
+  "difficulty": 2,
+  "prompt": "Measuring in degrees, what is the period of $y = \\cos(4x)$? Give just the number of degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "90",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "In degrees, the period of $y = \\cos(bx)$ is $\\frac{360^\\circ}{b}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "In degrees, the period of $y = \\cos(bx)$ is $\\frac{360^\\circ}{b}$."
+    },
+    {
+      "level": "guide",
+      "text": "Here $b = 4$, so compute $\\frac{360}{4}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{360}{4} = 90$, so the period is $90^\\circ$."
+    }
+  ],
+  "explanation": [
+    "A basic cosine wave repeats every $360^\\circ$.",
+    "The factor of 4 inside makes the input run four times as fast, packing four cycles into that same space.",
+    "Each cycle is therefore $\\frac{360^\\circ}{4} = 90^\\circ$ wide."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the cycles",
+      "steps": [
+        "If four complete waves fit between $0^\\circ$ and $360^\\circ$, each one takes a quarter of that stretch.",
+        "A quarter of $360^\\circ$ is $90^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "period",
+    "graphing"
+  ],
+  "estimatedSeconds": 50
+}

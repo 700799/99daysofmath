@@ -1,0 +1,49 @@
+{
+  "id": "TRIG.065",
+  "domain": "TRIG",
+  "unit": 7,
+  "orderInUnit": 5,
+  "standard": "TRIG.GRAPH.1",
+  "difficulty": 2,
+  "prompt": "What is the amplitude of $y = -5\\sin(3x)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Amplitude is a distance, and distances are never negative.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Amplitude is a distance, and distances are never negative."
+    },
+    {
+      "level": "guide",
+      "text": "For $y = a\\sin(bx)$ the amplitude is $|a|$ — the $b$ inside changes the period, not the height."
+    },
+    {
+      "level": "reveal",
+      "text": "$|-5| = 5$, so the amplitude is $5$."
+    }
+  ],
+  "explanation": [
+    "In $y = a\\sin(bx)$, the outside factor $a$ controls height and the inside factor $b$ controls the period.",
+    "Amplitude is the distance from midline to peak, so it is $|a| = |-5| = 5$.",
+    "The minus sign does matter — it flips the wave upside down — but it does not change how tall the wave is."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "What the minus sign actually does",
+      "steps": [
+        "The graph of $y = -5\\sin(3x)$ still runs from $-5$ up to $5$, exactly like $y = 5\\sin(3x)$.",
+        "The difference is direction: it starts by going DOWN instead of up, a reflection across the midline.",
+        "Reflecting does not shrink or stretch, so the amplitude is still 5."
+      ]
+    }
+  ],
+  "tags": [
+    "amplitude",
+    "reflection",
+    "graphing"
+  ],
+  "estimatedSeconds": 45
+}

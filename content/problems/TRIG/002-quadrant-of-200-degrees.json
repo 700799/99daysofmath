@@ -1,0 +1,69 @@
+{
+  "id": "TRIG.002",
+  "domain": "TRIG",
+  "unit": 1,
+  "orderInUnit": 2,
+  "standard": "TRIG.ANG.1",
+  "difficulty": 1,
+  "prompt": "An angle of $200^\\circ$ is drawn in standard position. In which quadrant does its terminal side land?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Quadrant I",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Quadrant II",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Quadrant III",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "Quadrant IV",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The quadrants are marked off every $90^\\circ$: I ends at $90^\\circ$, II at $180^\\circ$, III at $270^\\circ$, IV at $360^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The quadrants are marked off every $90^\\circ$: I ends at $90^\\circ$, II at $180^\\circ$, III at $270^\\circ$, IV at $360^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "Is $200^\\circ$ between $180^\\circ$ and $270^\\circ$?"
+    },
+    {
+      "level": "reveal",
+      "text": "Yes — $180^\\circ < 200^\\circ < 270^\\circ$, so the terminal side is in Quadrant III."
+    }
+  ],
+  "explanation": [
+    "Starting from the positive $x$-axis and sweeping counterclockwise, you pass $90^\\circ$, $180^\\circ$, and $270^\\circ$ as you cross into each new quadrant.",
+    "Since $200^\\circ$ sits between $180^\\circ$ and $270^\\circ$, the terminal side is in the third quadrant."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk it around",
+      "steps": [
+        "Sweep $180^\\circ$ first — that takes you to the negative $x$-axis, pointing left.",
+        "You still have $20^\\circ$ to go, which tips the ray slightly downward from that leftward direction.",
+        "Left and down together is Quadrant III."
+      ]
+    }
+  ],
+  "tags": [
+    "quadrants",
+    "standard-position"
+  ],
+  "estimatedSeconds": 30
+}

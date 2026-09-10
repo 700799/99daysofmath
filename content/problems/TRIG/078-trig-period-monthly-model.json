@@ -1,0 +1,49 @@
+{
+  "id": "TRIG.078",
+  "domain": "TRIG",
+  "unit": 8,
+  "orderInUnit": 8,
+  "standard": "TRIG.GRAPH.2",
+  "difficulty": 2,
+  "prompt": "Average monthly temperature in a city is modelled by $T(x) = 4\\cos\\left(\\frac{\\pi x}{6}\\right) + 7$, where $x$ is the number of months since January. What is the period of this model, in months?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Period $= \\frac{2\\pi}{B}$, where $B$ is whatever multiplies $x$ inside the cosine.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Period $= \\frac{2\\pi}{B}$, where $B$ is whatever multiplies $x$ inside the cosine."
+    },
+    {
+      "level": "guide",
+      "text": "Here $B = \\frac{\\pi}{6}$, so compute $2\\pi \\div \\frac{\\pi}{6}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2\\pi \\times \\frac{6}{\\pi} = 12$ months."
+    }
+  ],
+  "explanation": [
+    "The coefficient of $x$ inside the cosine is $B = \\frac{\\pi}{6}$.",
+    "Period $= \\frac{2\\pi}{B} = \\frac{2\\pi}{\\pi/6} = 2\\pi \\times \\frac{6}{\\pi} = 12$.",
+    "A period of $12$ months is exactly what you want for a model of the seasons — it repeats once a year."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity-check with the calendar",
+      "steps": [
+        "At $x = 0$ (January) the model gives $4\\cos(0) + 7 = 11$ degrees.",
+        "At $x = 12$ (the next January) it gives $4\\cos(2\\pi) + 7 = 11$ degrees again.",
+        "The model has come full circle after $12$ months, so the period is $12$."
+      ]
+    }
+  ],
+  "tags": [
+    "period",
+    "modelling",
+    "temperature"
+  ],
+  "estimatedSeconds": 50
+}

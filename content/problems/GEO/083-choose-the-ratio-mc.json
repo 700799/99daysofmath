@@ -1,0 +1,69 @@
+{
+  "id": "GEO.083",
+  "domain": "GEO",
+  "unit": 9,
+  "orderInUnit": 3,
+  "standard": "GEO.RT.2",
+  "difficulty": 1,
+  "prompt": "You know one acute angle of a right triangle and the length of the hypotenuse, and you want the leg **adjacent** to that angle. Which ratio should you use?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Sine, because $\\sin = \\frac{\\text{opposite}}{\\text{hypotenuse}}$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Cosine, because $\\cos = \\frac{\\text{adjacent}}{\\text{hypotenuse}}$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Tangent, because $\\tan = \\frac{\\text{opposite}}{\\text{adjacent}}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The Pythagorean theorem — trigonometry cannot help here",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "List the two sides in play: the one you want (adjacent) and the one you know (hypotenuse).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "List the two sides in play: the one you want (adjacent) and the one you know (hypotenuse)."
+    },
+    {
+      "level": "guide",
+      "text": "Which of the three ratios connects exactly adjacent and hypotenuse?"
+    },
+    {
+      "level": "reveal",
+      "text": "Cosine — CAH. Choice B."
+    }
+  ],
+  "explanation": [
+    "Pick the ratio by which two sides are involved, never by habit.",
+    "Adjacent plus hypotenuse is the cosine pair (CAH).",
+    "Tangent needs the opposite side, which you do not know, and the Pythagorean theorem needs two sides, not an angle. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A two-second routine",
+      "steps": [
+        "Mark the angle, then label the three sides: opposite, adjacent, hypotenuse.",
+        "Circle the side you know and the side you want; the two circles pick the ratio for you every single time."
+      ]
+    }
+  ],
+  "tags": [
+    "soh-cah-toa",
+    "strategy"
+  ],
+  "estimatedSeconds": 40
+}

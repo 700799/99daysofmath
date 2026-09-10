@@ -1,0 +1,59 @@
+{
+  "id": "TRIG.009",
+  "domain": "TRIG",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "TRIG.ANG.1",
+  "difficulty": 3,
+  "prompt": "Find the smallest positive angle coterminal with $1000^\\circ$. Give just the number of degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "280",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Keep subtracting $360^\\circ$ until what is left is between $0^\\circ$ and $360^\\circ$ — one subtraction may not be enough.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Keep subtracting $360^\\circ$ until what is left is between $0^\\circ$ and $360^\\circ$ — one subtraction may not be enough."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $800^\\circ$: $800 - 360 = 440$, still over a full lap, so subtract again: $440 - 360 = 80^\\circ$. That one needed two subtractions, and so does yours."
+    },
+    {
+      "level": "guide",
+      "text": "$1000 - 360 = 640$, which is still bigger than $360$. Subtract again."
+    },
+    {
+      "level": "reveal",
+      "text": "$640 - 360 = 280$, and $280^\\circ$ is between $0^\\circ$ and $360^\\circ$, so that is the answer."
+    }
+  ],
+  "explanation": [
+    "Coterminal angles differ by whole turns of $360^\\circ$, so subtract full turns until you land inside one lap.",
+    "$1000 - 360 = 640$; that is still more than a full turn, so subtract again: $640 - 360 = 280$.",
+    "Since $0^\\circ \\le 280^\\circ < 360^\\circ$, the answer is $280^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Divide instead of subtracting twice",
+      "steps": [
+        "$1000 \\div 360 = 2$ full turns with something left over.",
+        "Two full turns are $720^\\circ$, so the leftover is $1000 - 720 = 280^\\circ$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The tempting answer is $640^\\circ$ — you subtracted $360^\\circ$ once and stopped. But $640^\\circ$ is still almost two full laps, so it is not the smallest.",
+        "Make the check part of the routine: after every subtraction, ask \"is this now under $360$?\" If not, subtract again. Only $280^\\circ$ passes that test."
+      ]
+    }
+  ],
+  "tags": [
+    "coterminal",
+    "multi-step"
+  ],
+  "estimatedSeconds": 55
+}

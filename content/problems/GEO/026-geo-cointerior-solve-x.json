@@ -1,0 +1,49 @@
+{
+  "id": "GEO.026",
+  "domain": "GEO",
+  "unit": 3,
+  "orderInUnit": 6,
+  "standard": "GEO.PAR.1",
+  "difficulty": 2,
+  "prompt": "Two parallel roof rafters are crossed by a diagonal strut. A pair of co-interior (same-side interior) angles measure $(2x + 10)^\\circ$ and $(3x + 20)^\\circ$. Find $x$.",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Same-side interior angles are supplementary, not congruent.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same-side interior angles are supplementary, not congruent."
+    },
+    {
+      "level": "guide",
+      "text": "Write $(2x + 10) + (3x + 20) = 180$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5x + 30 = 180$, so $5x = 150$ and $x = 30$."
+    }
+  ],
+  "explanation": [
+    "On parallel lines, co-interior angles add to $180^\\circ$.",
+    "$(2x + 10) + (3x + 20) = 180$ becomes $5x + 30 = 180$.",
+    "Subtract 30 and divide by 5: $5x = 150$, so $x = 30$.",
+    "Check: the angles are $70^\\circ$ and $110^\\circ$, and $70 + 110 = 180$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Congruent or supplementary?",
+      "steps": [
+        "Sort every parallel-line pair into one of two buckets: congruent (corresponding, alternate interior, alternate exterior) or supplementary (co-interior).",
+        "Co-interior is the supplementary bucket, so you add to 180 instead of setting equal — that choice is what makes $x = 30$ instead of something else."
+      ]
+    }
+  ],
+  "tags": [
+    "parallel-lines",
+    "co-interior",
+    "algebra"
+  ],
+  "estimatedSeconds": 55
+}

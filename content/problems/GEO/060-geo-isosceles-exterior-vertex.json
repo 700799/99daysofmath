@@ -1,0 +1,60 @@
+{
+  "id": "GEO.060",
+  "domain": "GEO",
+  "unit": 6,
+  "orderInUnit": 10,
+  "standard": "GEO.CONG.2",
+  "difficulty": 3,
+  "prompt": "A roof truss is the isosceles triangle $ABC$ with $\\overline{AB} \\cong \\overline{AC}$, so $B$ and $C$ are the base corners. The rafter is extended past $B$, forming an exterior angle at $B$ of $125^\\circ$. Find the measure, in degrees, of the vertex angle $\\angle A$.",
+  "answerType": "numeric",
+  "primaryAnswer": "70",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The exterior angle at $B$ and the interior angle $\\angle B$ form a linear pair.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The exterior angle at $B$ and the interior angle $\\angle B$ form a linear pair."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with a friendlier exterior angle: if it were $130^\\circ$, then $\\angle B = 50^\\circ$, $\\angle C = 50^\\circ$, and $\\angle A = 180 - 100 = 80^\\circ$. Run those same three steps on $125$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\angle B = 180 - 125 = 55^\\circ$, and $\\angle C$ equals $\\angle B$ because the truss is isosceles."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\angle A = 180 - 55 - 55 = 70^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The exterior angle at $B$ and the interior $\\angle B$ sit along a straight rafter: $\\angle B = 180 - 125 = 55^\\circ$.",
+    "Because $\\overline{AB} \\cong \\overline{AC}$, the base angles are congruent, so $\\angle C = 55^\\circ$ too.",
+    "Triangle Sum finishes it: $\\angle A = 180 - 55 - 55 = 70^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the Exterior Angle Theorem instead",
+      "steps": [
+        "The exterior angle at $B$ equals the sum of the two remote interior angles, $\\angle A + \\angle C$, so $\\angle A + \\angle C = 125^\\circ$.",
+        "Since $\\angle C = 55^\\circ$ from the linear pair and the isosceles property, $\\angle A = 125 - 55 = 70^\\circ$. Same answer, different route."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap is using $125^\\circ$ as if it were an interior angle of the truss — that immediately blows the $180^\\circ$ budget once you add two base angles.",
+        "An exterior angle is always OUTSIDE the triangle. Convert it first with a linear pair ($180 - 125 = 55$), and only then do triangle work. The second trap is stopping at 55, which is a base angle, not the vertex angle asked for."
+      ]
+    }
+  ],
+  "tags": [
+    "isosceles",
+    "exterior-angle",
+    "triangle-sum"
+  ],
+  "estimatedSeconds": 85
+}

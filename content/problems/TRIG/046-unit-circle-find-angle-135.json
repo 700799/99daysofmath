@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.046",
+  "domain": "TRIG",
+  "unit": 5,
+  "orderInUnit": 6,
+  "standard": "TRIG.CIRC.1",
+  "difficulty": 2,
+  "prompt": "A point on the unit circle has coordinates $\\left(-\\frac{\\sqrt{2}}{2},\\ \\frac{\\sqrt{2}}{2}\\right)$. What angle in standard position, between $0^\\circ$ and $360^\\circ$, lands there? Give just the number of degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "135",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Check the signs first: $x$ is negative and $y$ is positive, so which quadrant is this?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Check the signs first: $x$ is negative and $y$ is positive, so which quadrant is this?"
+    },
+    {
+      "level": "guide",
+      "text": "It is Quadrant II. The value $\\frac{\\sqrt{2}}{2}$ belongs to $45^\\circ$, so the reference angle is $45^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "In Quadrant II the angle is $180^\\circ - 45^\\circ = 135^\\circ$."
+    }
+  ],
+  "explanation": [
+    "A negative $x$ with a positive $y$ puts the point in Quadrant II (up and to the left).",
+    "Both coordinates have size $\\frac{\\sqrt{2}}{2}$, which is the signature of a $45^\\circ$ reference angle.",
+    "The Quadrant II angle with a $45^\\circ$ reference angle is $180^\\circ - 45^\\circ = 135^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Equal parts left and up",
+      "steps": [
+        "Since $|x| = |y|$, the point is exactly as far left as it is up, so it sits on the diagonal of Quadrant II.",
+        "That diagonal is halfway between $90^\\circ$ and $180^\\circ$, which is $135^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "reverse"
+  ],
+  "estimatedSeconds": 60
+}

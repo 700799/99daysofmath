@@ -1,0 +1,52 @@
+{
+  "id": "TRIG.011",
+  "domain": "TRIG",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "TRIG.ANG.2",
+  "difficulty": 1,
+  "prompt": "Convert $90^\\circ$ to radians. Give your answer in terms of $\\pi$ — for example, type \"pi/4\" for $\\frac{\\pi}{4}$.",
+  "answerType": "expression",
+  "primaryAnswer": "pi/2",
+  "alternativeAnswers": [
+    "\\pi/2",
+    "π/2",
+    "(1/2)pi",
+    "pi / 2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Half a circle is $180^\\circ$, and in radians that same half circle is $\\pi$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Half a circle is $180^\\circ$, and in radians that same half circle is $\\pi$."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply by the conversion factor $\\frac{\\pi}{180}$: $90 \\times \\frac{\\pi}{180}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$90 \\times \\frac{\\pi}{180} = \\frac{\\pi}{2}$."
+    }
+  ],
+  "explanation": [
+    "Radians and degrees measure the same turn, and $180^\\circ = \\pi$ radians is the bridge between them.",
+    "To go from degrees to radians, multiply by $\\frac{\\pi}{180}$: $90 \\times \\frac{\\pi}{180} = \\frac{90\\pi}{180}$.",
+    "That simplifies to $\\frac{\\pi}{2}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Reason from the quarter turn",
+      "steps": [
+        "A whole circle is $2\\pi$ radians.",
+        "$90^\\circ$ is a quarter of a circle, so it is a quarter of $2\\pi$, which is $\\frac{\\pi}{2}$."
+      ]
+    }
+  ],
+  "tags": [
+    "radians",
+    "conversion"
+  ],
+  "estimatedSeconds": 35
+}

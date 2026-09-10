@@ -1,0 +1,83 @@
+{
+  "id": "TRIG.010",
+  "domain": "TRIG",
+  "unit": 1,
+  "orderInUnit": 10,
+  "standard": "TRIG.ANG.1",
+  "difficulty": 3,
+  "prompt": "In which quadrant does an angle of $-400^\\circ$ in standard position terminate?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Quadrant I",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Quadrant II",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Quadrant III",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Quadrant IV",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "D",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "First find a positive coterminal angle by adding full turns of $360^\\circ$ — the minus sign matters the whole way.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find a positive coterminal angle by adding full turns of $360^\\circ$ — the minus sign matters the whole way."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $-30^\\circ$: adding one turn gives $-30 + 360 = 330^\\circ$, just below the positive $x$-axis in Quadrant IV. Add turns the same way here, but you will need two of them."
+    },
+    {
+      "level": "guide",
+      "text": "$-400 + 360 = -40$, still negative. Add another $360$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-40 + 360 = 320^\\circ$, and $270^\\circ < 320^\\circ < 360^\\circ$, so it lands in Quadrant IV."
+    }
+  ],
+  "explanation": [
+    "Add full turns until the angle is positive: $-400 + 360 = -40$, then $-40 + 360 = 320$.",
+    "So $-400^\\circ$ is coterminal with $320^\\circ$.",
+    "Since $320^\\circ$ falls between $270^\\circ$ and $360^\\circ$, the terminal side is in Quadrant IV."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spin it clockwise",
+      "steps": [
+        "Turning $-360^\\circ$ is one full clockwise lap that puts you back at the start.",
+        "That leaves $40^\\circ$ more of clockwise turn, which dips just below the positive $x$-axis.",
+        "Just below the positive $x$-axis is Quadrant IV."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is Quadrant I — dropping the minus sign, reducing $400^\\circ$ to $40^\\circ$, and stopping there. But $-400^\\circ$ turns the other way, so it cannot land where $+40^\\circ$ does.",
+        "Handle the sign first: for a negative angle, ADD $360^\\circ$ (as many times as needed) instead of subtracting. That gives $320^\\circ$, and Quadrant IV."
+      ]
+    }
+  ],
+  "tags": [
+    "coterminal",
+    "quadrants",
+    "negative-angles"
+  ],
+  "estimatedSeconds": 60
+}

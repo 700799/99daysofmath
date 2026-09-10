@@ -1,0 +1,60 @@
+{
+  "id": "TRIG.029",
+  "domain": "TRIG",
+  "unit": 3,
+  "orderInUnit": 9,
+  "standard": "TRIG.RT.1",
+  "difficulty": 3,
+  "prompt": "A kite is flying at the end of $80$ m of taut string, and the kite is $65$ m above the ground (the string runs straight from your hand at ground level to the kite). What angle does the string make with the ground? Round to the nearest tenth of a degree.",
+  "answerType": "numeric",
+  "primaryAnswer": "54.3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The taut string is the hypotenuse — it is the slanted side, not a leg.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The taut string is the hypotenuse — it is the slanted side, not a leg."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with a $10$ m string reaching $5$ m high: $\\sin\\theta = \\frac{5}{10} = 0.5$, so $\\theta = 30^\\circ$. Height over string is sine no matter what the numbers are."
+    },
+    {
+      "level": "guide",
+      "text": "Height is opposite the angle and the string is the hypotenuse, so $\\sin \\theta = \\frac{65}{80}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\theta = \\sin^{-1}(0.8125) \\approx 54.3^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The string is the hypotenuse ($80$ m) and the kite height is the side opposite the angle ($65$ m).",
+    "Opposite over hypotenuse is sine: $\\sin \\theta = \\frac{65}{80} = 0.8125$.",
+    "Apply the inverse sine: $\\theta = \\sin^{-1}(0.8125) \\approx 54.3^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate before you compute",
+      "steps": [
+        "The kite height is most of the string length, so the string is fairly steep — steeper than $45^\\circ$ but not near vertical.",
+        "That predicts an answer somewhere in the 50s, and $54.3^\\circ$ lands exactly there."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is $39.1^\\circ$, which comes from typing $\\tan^{-1}\\left(\\frac{65}{80}\\right)$ — treating the 80 m string as the horizontal leg instead of the hypotenuse.",
+        "Before choosing a ratio, label the sides: the hypotenuse is always the slanted side across from the right angle, and here that is the string. Height and hypotenuse together always mean sine, so use $\\sin^{-1}$."
+      ]
+    }
+  ],
+  "tags": [
+    "inverse-trig",
+    "sine",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

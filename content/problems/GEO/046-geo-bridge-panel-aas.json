@@ -1,0 +1,55 @@
+{
+  "id": "GEO.046",
+  "domain": "GEO",
+  "unit": 5,
+  "orderInUnit": 6,
+  "standard": "GEO.CONG.1",
+  "difficulty": 2,
+  "prompt": "Two triangular bridge panels have two pairs of congruent angles, plus a pair of congruent sides that are NOT between those angles. Which congruence criterion applies? Answer with three letters.",
+  "answerType": "short-text",
+  "primaryAnswer": "AAS",
+  "alternativeAnswers": [
+    "aas",
+    "A.A.S.",
+    "angle angle side",
+    "angle-angle-side",
+    "SAA",
+    "saa"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Two angles are known, and the known side is off to the side rather than between them.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two angles are known, and the known side is off to the side rather than between them."
+    },
+    {
+      "level": "guide",
+      "text": "Walk around the triangle: angle, angle, then side. What three letters is that?"
+    },
+    {
+      "level": "reveal",
+      "text": "This is AAS — Angle-Angle-Side."
+    }
+  ],
+  "explanation": [
+    "Two angles are congruent and the congruent side is not the included one, which reads as A-A-S.",
+    "AAS is a valid criterion because two angles determine the third (the angles of a triangle sum to $180^\\circ$), which turns AAS into ASA.",
+    "If the side had been between the two angles, it would be ASA instead."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "AAS quietly becomes ASA",
+      "steps": [
+        "Know two angles and you automatically know the third: $180^\\circ$ minus the other two.",
+        "Once you know all three angles, the side you were given IS between some pair of them — so AAS collapses into ASA, which is why it works."
+      ]
+    }
+  ],
+  "tags": [
+    "congruence",
+    "AAS",
+    "triangles"
+  ],
+  "estimatedSeconds": 45
+}

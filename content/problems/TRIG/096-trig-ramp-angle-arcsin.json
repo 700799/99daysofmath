@@ -1,0 +1,50 @@
+{
+  "id": "TRIG.096",
+  "domain": "TRIG",
+  "unit": 10,
+  "orderInUnit": 6,
+  "standard": "TRIG.INV.1",
+  "difficulty": 2,
+  "prompt": "A loading ramp is $20$ feet long and rises $3$ feet from the ground to the truck bed. What angle does it make with the ground? Give your answer in degrees, rounded to one decimal place.",
+  "answerType": "numeric",
+  "primaryAnswer": "8.6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $20$ feet is the hypotenuse (the ramp itself) and the $3$ feet is the side opposite the angle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $20$ feet is the hypotenuse (the ramp itself) and the $3$ feet is the side opposite the angle."
+    },
+    {
+      "level": "guide",
+      "text": "Opposite over hypotenuse is sine: $\\sin\\theta = \\frac{3}{20} = 0.15$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\theta = \\arcsin(0.15) \\approx 8.6^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The ramp is the hypotenuse and the rise is the opposite side, so $\\sin\\theta = \\frac{3}{20} = 0.15$.",
+    "Undo the sine with its inverse: $\\theta = \\arcsin(0.15)$.",
+    "A calculator gives $8.627^\\circ$, which rounds to $8.6^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Does the answer feel right?",
+      "steps": [
+        "A $30^\\circ$ ramp would rise $10$ feet over a $20$-foot length, which is far more than $3$ feet.",
+        "Our rise is only about a third of that, so an angle well under $10^\\circ$ is exactly what we should expect.",
+        "$8.6^\\circ$ passes the smell test."
+      ]
+    }
+  ],
+  "tags": [
+    "arcsin",
+    "ramp",
+    "word-problem",
+    "rounding"
+  ],
+  "estimatedSeconds": 60
+}

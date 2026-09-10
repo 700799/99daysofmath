@@ -1,0 +1,82 @@
+{
+  "id": "GEO.130",
+  "domain": "GEO",
+  "unit": 13,
+  "orderInUnit": 10,
+  "standard": "GEO.VOL.1",
+  "difficulty": 3,
+  "prompt": "Two cylindrical soup cans are similar (the same shape, different sizes). The small can is $3$ in tall and the large can is $5$ in tall. What is the ratio of the small can's volume to the large can's volume?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$3 : 5$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$9 : 25$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$27 : 125$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$6 : 10$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "For similar solids: lengths scale by $k$, surface areas by $k^2$, volumes by $k^3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "For similar solids: lengths scale by $k$, surface areas by $k^2$, volumes by $k^3$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "See it on cubes: a $1$ by $1$ by $1$ cube holds $1$ and a $2$ by $2$ by $2$ cube holds $8$ — lengths $1 : 2$ but volumes $1 : 8$, the ratio cubed. Do the same cubing to $3 : 5$."
+    },
+    {
+      "level": "guide",
+      "text": "Here $k = \\frac{3}{5}$, and volume needs the cube."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\left(\\frac{3}{5}\\right)^3 = \\frac{27}{125}$, so the ratio is $27 : 125$. Choice C."
+    }
+  ],
+  "explanation": [
+    "Similar solids have all matching lengths in the same ratio, here $3 : 5$.",
+    "Volume is a three-dimensional measure, so it scales by the cube of that ratio.",
+    "$3^3 : 5^3 = 27 : 125$. Choice C."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check it with real numbers",
+      "steps": [
+        "Say the small can has radius $3$ and height $3$: $V = \\pi(9)(3) = 27\\pi$.",
+        "The similar large can has radius $5$ and height $5$: $V = \\pi(25)(5) = 125\\pi$. The ratio is $27\\pi : 125\\pi = 27 : 125$ ✓"
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Choice A, $3 : 5$, is the trap: assuming volume scales the same way length does. It does not — the large can is not merely $\\frac{5}{3}$ as roomy, it is more than four times as roomy.",
+        "Ask what KIND of measure the question wants: a length uses $k$, an area (paint, labels, wrapping) uses $k^2$, a volume (soup, water, sand) uses $k^3$. Soup fills space, so cube it."
+      ]
+    }
+  ],
+  "tags": [
+    "similarity",
+    "volume-scaling",
+    "ratio"
+  ],
+  "estimatedSeconds": 85
+}

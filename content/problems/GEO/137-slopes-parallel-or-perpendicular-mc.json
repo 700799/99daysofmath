@@ -1,0 +1,70 @@
+{
+  "id": "GEO.137",
+  "domain": "GEO",
+  "unit": 14,
+  "orderInUnit": 7,
+  "standard": "GEO.TRANS.1",
+  "difficulty": 2,
+  "prompt": "Line $j$ passes through $(0, 1)$ and $(4, 3)$. Line $k$ passes through $(1, 5)$ and $(2, 3)$. How are the two lines related?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Parallel",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Perpendicular",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Neither parallel nor perpendicular",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "They are the same line",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find both slopes with $m = \\frac{y_2 - y_1}{x_2 - x_1}$, then compare.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find both slopes with $m = \\frac{y_2 - y_1}{x_2 - x_1}$, then compare."
+    },
+    {
+      "level": "guide",
+      "text": "Line $j$: $\\frac{3 - 1}{4 - 0} = \\frac{2}{4} = \\frac{1}{2}$. Line $k$: $\\frac{3 - 5}{2 - 1} = \\frac{-2}{1} = -2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2} \\times (-2) = -1$, so the lines are perpendicular. Choice B."
+    }
+  ],
+  "explanation": [
+    "Slope of $j$: $\\frac{3 - 1}{4 - 0} = \\frac{1}{2}$.",
+    "Slope of $k$: $\\frac{3 - 5}{2 - 1} = -2$.",
+    "The slopes are opposite reciprocals and multiply to $-1$, so the lines meet at a right angle. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare the step patterns",
+      "steps": [
+        "Line $j$ steps \"right $2$, up $1$\" — a gentle rise. Line $k$ steps \"right $1$, down $2$\" — a steep fall.",
+        "Those two step patterns are the same move rotated a quarter turn, which is exactly what perpendicular looks like on a grid."
+      ]
+    }
+  ],
+  "tags": [
+    "slope",
+    "parallel-perpendicular",
+    "coordinate-geometry"
+  ],
+  "estimatedSeconds": 65
+}

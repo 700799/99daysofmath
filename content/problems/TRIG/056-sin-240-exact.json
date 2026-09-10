@@ -1,0 +1,52 @@
+{
+  "id": "TRIG.056",
+  "domain": "TRIG",
+  "unit": 6,
+  "orderInUnit": 6,
+  "standard": "TRIG.CIRC.2",
+  "difficulty": 2,
+  "prompt": "Find the exact value of $\\sin 240^\\circ$. Type it as an expression, for example \"-sqrt(2)/2\" for $-\\frac{\\sqrt{2}}{2}$.",
+  "answerType": "expression",
+  "primaryAnswer": "-sqrt(3)/2",
+  "alternativeAnswers": [
+    "-sqrt3/2",
+    "-\\frac{\\sqrt{3}}{2}",
+    "-√3/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the reference angle first: $240^\\circ$ is in Quadrant III.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the reference angle first: $240^\\circ$ is in Quadrant III."
+    },
+    {
+      "level": "guide",
+      "text": "Reference angle: $240 - 180 = 60^\\circ$, and $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$. Now the sign."
+    },
+    {
+      "level": "reveal",
+      "text": "Quadrant III is below the $x$-axis, so sine is negative: $-\\frac{\\sqrt{3}}{2}$."
+    }
+  ],
+  "explanation": [
+    "$240^\\circ$ is in Quadrant III, and its reference angle is $240^\\circ - 180^\\circ = 60^\\circ$.",
+    "The magnitude is $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.",
+    "Sine is the $y$-coordinate, and Quadrant III lies below the $x$-axis, so $\\sin 240^\\circ = -\\frac{\\sqrt{3}}{2} \\approx -0.87$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "ASTC check",
+      "steps": [
+        "In Quadrant III only Tangent is positive, so sine and cosine are both negative there.",
+        "That confirms the minus sign in front of $\\frac{\\sqrt{3}}{2}$."
+      ]
+    }
+  ],
+  "tags": [
+    "reference-angle",
+    "signs",
+    "exact-values"
+  ],
+  "estimatedSeconds": 55
+}

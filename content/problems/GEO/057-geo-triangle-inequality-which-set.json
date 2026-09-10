@@ -1,0 +1,69 @@
+{
+  "id": "GEO.057",
+  "domain": "GEO",
+  "unit": 6,
+  "orderInUnit": 7,
+  "standard": "GEO.CONG.2",
+  "difficulty": 2,
+  "prompt": "A carpenter has bundles of pre-cut boards. Which set of three lengths (in feet) could NOT be joined end to end to form a triangle?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$4$, $5$, $9$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$6$, $8$, $10$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$7$, $7$, $7$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$5$, $9$, $12$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The two shorter boards have to reach across the longest one.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The two shorter boards have to reach across the longest one."
+    },
+    {
+      "level": "guide",
+      "text": "Triangle Inequality: the two shorter lengths must add to MORE than the longest."
+    },
+    {
+      "level": "reveal",
+      "text": "For choice A, $4 + 5 = 9$, which only equals the longest board — the triangle flattens instead of closing."
+    }
+  ],
+  "explanation": [
+    "The Triangle Inequality says the sum of any two sides must be GREATER than the third.",
+    "Check each set with its two shortest boards: $6 + 8 = 14 > 10$ ✓, $7 + 7 = 14 > 7$ ✓, $5 + 9 = 14 > 12$ ✓.",
+    "But $4 + 5 = 9$, which is exactly equal to the longest board, not greater. The two short boards lie flat along the long one and enclose no area, so choice A cannot form a triangle."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Try to build it",
+      "steps": [
+        "Lay the 9-ft board down. Hinge the 4-ft and 5-ft boards at each end and swing them up to meet.",
+        "They only just touch when both are lying flat on the 9-footer. Lift them at all and they come up short — no triangle."
+      ]
+    }
+  ],
+  "tags": [
+    "triangle-inequality",
+    "sides"
+  ],
+  "estimatedSeconds": 55
+}

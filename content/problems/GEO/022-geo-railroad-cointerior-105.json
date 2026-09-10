@@ -1,0 +1,48 @@
+{
+  "id": "GEO.022",
+  "domain": "GEO",
+  "unit": 3,
+  "orderInUnit": 2,
+  "standard": "GEO.PAR.1",
+  "difficulty": 1,
+  "prompt": "Two parallel railroad rails are crossed by a straight service road (a transversal). One interior angle measures $105^\\circ$. What is the measure, in degrees, of the co-interior angle — the one between the rails, on the same side of the road?",
+  "answerType": "numeric",
+  "primaryAnswer": "75",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Co-interior (same-side interior) angles are not equal — they are supplementary.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Co-interior (same-side interior) angles are not equal — they are supplementary."
+    },
+    {
+      "level": "guide",
+      "text": "They add to $180^\\circ$, so compute $180 - 105$."
+    },
+    {
+      "level": "reveal",
+      "text": "$180 - 105 = 75^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Co-interior angles (also called same-side interior or consecutive interior angles) lie between the parallel lines on the same side of the transversal.",
+    "When the lines are parallel, those two angles are supplementary: they add to $180^\\circ$.",
+    "$180 - 105 = 75$, so the co-interior angle is $75^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two steps you already know",
+      "steps": [
+        "The $105^\\circ$ angle has an alternate interior partner across the road, also $105^\\circ$.",
+        "That partner and the angle you want form a linear pair along the rail: $180 - 105 = 75^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "parallel-lines",
+    "co-interior",
+    "supplementary"
+  ],
+  "estimatedSeconds": 35
+}

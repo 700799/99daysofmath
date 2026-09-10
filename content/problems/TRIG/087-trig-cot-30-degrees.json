@@ -1,0 +1,53 @@
+{
+  "id": "TRIG.087",
+  "domain": "TRIG",
+  "unit": 9,
+  "orderInUnit": 7,
+  "standard": "TRIG.GRAPH.3",
+  "difficulty": 2,
+  "prompt": "Find the exact value of $\\cot 30^\\circ$. Write it using \"sqrt\", for example \"sqrt(2)/2\".",
+  "answerType": "expression",
+  "primaryAnswer": "sqrt(3)",
+  "alternativeAnswers": [
+    "3^(1/2)",
+    "sqrt3",
+    "√3",
+    "sqrt(3)/1"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$ — cosine on top this time.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$ — cosine on top this time."
+    },
+    {
+      "level": "guide",
+      "text": "$\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$ and $\\sin 30^\\circ = \\frac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{\\sqrt{3}/2}{1/2} = \\sqrt{3}$."
+    }
+  ],
+  "explanation": [
+    "Cotangent is cosine over sine: $\\cot 30^\\circ = \\frac{\\cos 30^\\circ}{\\sin 30^\\circ}$.",
+    "Substitute the special values: $\\frac{\\sqrt{3}/2}{1/2}$.",
+    "The halves cancel, leaving $\\sqrt{3}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Flip the tangent",
+      "steps": [
+        "$\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}$, and cotangent is its reciprocal.",
+        "Flipping gives $\\cot 30^\\circ = \\sqrt{3} \\approx 1.732$.",
+        "That is bigger than $1$, which makes sense: a shallow $30^\\circ$ ramp runs much further than it rises."
+      ]
+    }
+  ],
+  "tags": [
+    "cotangent",
+    "special-angles"
+  ],
+  "estimatedSeconds": 45
+}

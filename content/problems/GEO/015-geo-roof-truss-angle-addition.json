@@ -1,0 +1,47 @@
+{
+  "id": "GEO.015",
+  "domain": "GEO",
+  "unit": 2,
+  "orderInUnit": 5,
+  "standard": "GEO.ANG.1",
+  "difficulty": 2,
+  "prompt": "In a roof truss, brace $\\overrightarrow{BD}$ runs from the joint at $B$ into the interior of $\\angle ABC$, splitting it into two smaller angles. If $\\angle ABD = 32^\\circ$ and $\\angle DBC = 41^\\circ$, what is $\\angle ABC$ in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "73",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The brace splits the big angle into two pieces that stack back together.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The brace splits the big angle into two pieces that stack back together."
+    },
+    {
+      "level": "guide",
+      "text": "Angle Addition Postulate: $\\angle ABD + \\angle DBC = \\angle ABC$."
+    },
+    {
+      "level": "reveal",
+      "text": "$32 + 41 = 73^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Because $\\overrightarrow{BD}$ lies inside $\\angle ABC$, the two small angles add to the big one.",
+    "Angle Addition: $\\angle ABC = \\angle ABD + \\angle DBC$.",
+    "$32 + 41 = 73$, so $\\angle ABC = 73^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Same idea as segments",
+      "steps": [
+        "Segment Addition stacks lengths; Angle Addition stacks turns.",
+        "Turn $32^\\circ$, then turn $41^\\circ$ more from the same joint — you have turned $73^\\circ$ in all."
+      ]
+    }
+  ],
+  "tags": [
+    "angle-addition",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

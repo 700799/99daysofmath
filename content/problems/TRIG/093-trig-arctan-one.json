@@ -1,0 +1,48 @@
+{
+  "id": "TRIG.093",
+  "domain": "TRIG",
+  "unit": 10,
+  "orderInUnit": 3,
+  "standard": "TRIG.INV.1",
+  "difficulty": 1,
+  "prompt": "A wheelchair ramp rises $1$ foot for every $1$ foot it runs forward. Its angle is $\\arctan(1)$. What is that angle, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "45",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$\\arctan(1)$ asks: which angle has a tangent of $1$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$\\arctan(1)$ asks: which angle has a tangent of $1$?"
+    },
+    {
+      "level": "guide",
+      "text": "Tangent is rise over run, so you need the angle where rise and run are equal."
+    },
+    {
+      "level": "reveal",
+      "text": "That is $45^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Tangent of the ramp angle is $\\frac{\\text{rise}}{\\text{run}} = \\frac{1}{1} = 1$.",
+    "The angle whose tangent is $1$ is $45^\\circ$.",
+    "So this ramp is at $45^\\circ$ — far too steep for a real wheelchair ramp, which is why building codes cap ramps near $4.8^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The isosceles right triangle",
+      "steps": [
+        "Equal rise and run makes an isosceles right triangle.",
+        "Its two non-right angles must be equal and add to $90^\\circ$, so each is $45^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "arctan",
+    "ramp",
+    "special-angles"
+  ],
+  "estimatedSeconds": 40
+}

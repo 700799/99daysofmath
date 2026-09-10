@@ -1,0 +1,52 @@
+{
+  "id": "GEO.007",
+  "domain": "GEO",
+  "unit": 1,
+  "orderInUnit": 7,
+  "standard": "GEO.BASIC.1",
+  "difficulty": 2,
+  "prompt": "A surveyor pounds three stakes into a field and sights through them: all three land on one perfectly straight line. What single word describes points that lie on the same line?",
+  "answerType": "short-text",
+  "primaryAnswer": "collinear",
+  "alternativeAnswers": [
+    "Collinear",
+    "co-linear",
+    "colinear"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The prefix \"co-\" means \"together,\" and the rest of the word names the figure they share.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The prefix \"co-\" means \"together,\" and the rest of the word names the figure they share."
+    },
+    {
+      "level": "guide",
+      "text": "Points on the same LINE are co-... something. Points on the same plane are coplanar."
+    },
+    {
+      "level": "reveal",
+      "text": "They are collinear."
+    }
+  ],
+  "explanation": [
+    "Points that all lie on one line are called collinear.",
+    "The word breaks apart as \"co-\" (together) plus \"linear\" (line).",
+    "If the stakes had NOT lined up, they would be noncollinear — and any three noncollinear points determine exactly one plane."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sort the vocabulary",
+      "steps": [
+        "Collinear = same line. Coplanar = same flat surface.",
+        "A surveyor sighting through stakes is checking the line, so the word is collinear."
+      ]
+    }
+  ],
+  "tags": [
+    "vocabulary",
+    "collinear",
+    "points"
+  ],
+  "estimatedSeconds": 35
+}

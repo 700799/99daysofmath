@@ -1,0 +1,71 @@
+{
+  "id": "GEO.002",
+  "domain": "GEO",
+  "unit": 1,
+  "orderInUnit": 2,
+  "standard": "GEO.BASIC.1",
+  "difficulty": 1,
+  "prompt": "On a street map, $A$ and $B$ are two intersections. Which notation names the stretch of street that starts at $A$, ends at $B$, and includes both intersections?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\overline{AB}$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\overleftrightarrow{AB}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\overrightarrow{AB}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$AB$, with no bar on top",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The street stretch has two ends. Which symbol shows a piece with two endpoints?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The street stretch has two ends. Which symbol shows a piece with two endpoints?"
+    },
+    {
+      "level": "guide",
+      "text": "Arrows mean \"keeps going forever.\" A plain bar means \"stops at both ends.\""
+    },
+    {
+      "level": "reveal",
+      "text": "A segment with endpoints $A$ and $B$ is written $\\overline{AB}$."
+    }
+  ],
+  "explanation": [
+    "A segment is a piece of a line with two endpoints, written with a plain bar: $\\overline{AB}$.",
+    "$\\overleftrightarrow{AB}$ has arrows on both ends, so it runs forever in both directions — a line.",
+    "$\\overrightarrow{AB}$ starts at $A$ and runs forever past $B$ — a ray. And $AB$ with no bar means the length, a number."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read the arrows literally",
+      "steps": [
+        "Every arrowhead is a promise that the figure keeps going that way forever.",
+        "Your stretch of street stops at two intersections, so it needs zero arrowheads: $\\overline{AB}$."
+      ]
+    }
+  ],
+  "tags": [
+    "notation",
+    "segment",
+    "line",
+    "ray"
+  ],
+  "estimatedSeconds": 35
+}

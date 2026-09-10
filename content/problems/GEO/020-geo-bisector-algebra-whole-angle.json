@@ -1,0 +1,61 @@
+{
+  "id": "GEO.020",
+  "domain": "GEO",
+  "unit": 2,
+  "orderInUnit": 10,
+  "standard": "GEO.ANG.1",
+  "difficulty": 3,
+  "prompt": "A surveyor's transit sits at point $B$. The ray $\\overrightarrow{BD}$ bisects $\\angle ABC$, with $\\angle ABD = (4x + 2)^\\circ$ and $\\angle DBC = (6x - 8)^\\circ$. Find the measure of the whole angle $\\angle ABC$, in degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "44",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "\"Bisects\" means it cuts the angle into two EQUAL halves.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Bisects\" means it cuts the angle into two EQUAL halves."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Simpler bisector: if the two halves were $x$ and $12$, then $x = 12$, each half is $12^\\circ$, and the whole angle is $24^\\circ$. Watch that last step — the question wants BOTH halves."
+    },
+    {
+      "level": "guide",
+      "text": "Set the halves equal: $4x + 2 = 6x - 8$, solve for $x$, then find one half."
+    },
+    {
+      "level": "reveal",
+      "text": "$10 = 2x$ gives $x = 5$, so each half is $22^\\circ$ and the whole angle is $44^\\circ$."
+    }
+  ],
+  "explanation": [
+    "A bisector makes the two halves congruent, so $4x + 2 = 6x - 8$.",
+    "Subtract $4x$ and add 8 to both sides: $10 = 2x$, so $x = 5$.",
+    "One half measures $4(5) + 2 = 22^\\circ$, and the other gives $6(5) - 8 = 22^\\circ$ too. ✓",
+    "The whole angle is both halves: $\\angle ABC = 22 + 22 = 44^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Double one half",
+      "steps": [
+        "Once the halves are known to be $22^\\circ$ each, the bisected angle is simply twice that.",
+        "$2 \\times 22 = 44^\\circ$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is 22 — one half — and the runner-up is 5, which is only $x$.",
+        "A bisector question almost always ends with a decision: half or whole? This one says \"the whole angle $\\angle ABC$,\" so double the half: 44."
+      ]
+    }
+  ],
+  "tags": [
+    "angle-bisector",
+    "algebra",
+    "angle-addition"
+  ],
+  "estimatedSeconds": 80
+}

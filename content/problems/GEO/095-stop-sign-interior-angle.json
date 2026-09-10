@@ -1,0 +1,48 @@
+{
+  "id": "GEO.095",
+  "domain": "GEO",
+  "unit": 10,
+  "orderInUnit": 5,
+  "standard": "GEO.QUAD.1",
+  "difficulty": 2,
+  "prompt": "A stop sign is a regular octagon ($8$ equal sides and angles). What is the measure of each interior angle, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "135",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "First find the total: $(8 - 2) \\times 180$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find the total: $(8 - 2) \\times 180$."
+    },
+    {
+      "level": "guide",
+      "text": "That total is $1080^\\circ$, shared equally by $8$ angles."
+    },
+    {
+      "level": "reveal",
+      "text": "$1080 \\div 8 = 135^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Interior angle sum: $(8 - 2) \\times 180 = 6 \\times 180 = 1080^\\circ$.",
+    "Regular means all $8$ angles are equal, so divide by $8$.",
+    "Each interior angle of a stop sign is $135^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Through the exterior angle",
+      "steps": [
+        "Each exterior angle is $360 \\div 8 = 45^\\circ$.",
+        "Interior and exterior angles at a corner form a straight line, so the interior angle is $180 - 45 = 135^\\circ$ — same answer, fewer steps."
+      ]
+    }
+  ],
+  "tags": [
+    "polygon",
+    "interior-angles",
+    "regular-polygon"
+  ],
+  "estimatedSeconds": 50
+}

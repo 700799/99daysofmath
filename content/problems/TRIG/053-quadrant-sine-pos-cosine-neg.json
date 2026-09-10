@@ -1,0 +1,69 @@
+{
+  "id": "TRIG.053",
+  "domain": "TRIG",
+  "unit": 6,
+  "orderInUnit": 3,
+  "standard": "TRIG.CIRC.2",
+  "difficulty": 1,
+  "prompt": "In which quadrant is sine positive while cosine is negative?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Quadrant I",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Quadrant II",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Quadrant III",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Quadrant IV",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sine is the $y$-coordinate and cosine is the $x$-coordinate.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sine is the $y$-coordinate and cosine is the $x$-coordinate."
+    },
+    {
+      "level": "guide",
+      "text": "You want a place where $y > 0$ (above the $x$-axis) and $x < 0$ (left of the $y$-axis)."
+    },
+    {
+      "level": "reveal",
+      "text": "Up and to the left is Quadrant II."
+    }
+  ],
+  "explanation": [
+    "On the unit circle, $\\cos\\theta$ is the $x$-coordinate and $\\sin\\theta$ is the $y$-coordinate.",
+    "Sine positive means the point is above the $x$-axis; cosine negative means it is left of the $y$-axis.",
+    "Up and to the left is Quadrant II."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "ASTC — All Students Take Calculus",
+      "steps": [
+        "Going counterclockwise from Quadrant I, the mnemonic names what is positive: All, Sine, Tangent, Cosine.",
+        "The S sits in Quadrant II, meaning only Sine is positive there — so cosine (and tangent) are negative."
+      ]
+    }
+  ],
+  "tags": [
+    "astc",
+    "signs"
+  ],
+  "estimatedSeconds": 35
+}

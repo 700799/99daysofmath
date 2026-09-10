@@ -1,0 +1,49 @@
+{
+  "id": "TRIG.136",
+  "domain": "TRIG",
+  "unit": 14,
+  "orderInUnit": 6,
+  "standard": "TRIG.LAW.1",
+  "difficulty": 2,
+  "prompt": "A triangle has sides $5$, $6$ and $7$. Find the angle opposite the side of length $7$, in degrees, rounded to one decimal place.",
+  "answerType": "numeric",
+  "primaryAnswer": "78.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Three sides and no angles is the SSS case — rearrange the Law of Cosines to solve for the angle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Three sides and no angles is the SSS case — rearrange the Law of Cosines to solve for the angle."
+    },
+    {
+      "level": "guide",
+      "text": "$\\cos C = \\frac{a^2 + b^2 - c^2}{2ab} = \\frac{25 + 36 - 49}{2(5)(6)}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\cos C = \\frac{12}{60} = 0.2$, so $C = \\arccos(0.2) \\approx 78.5^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Put the side you want to face, $7$, in the role of $c$: $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+    "Rearranged, $\\cos C = \\frac{a^2 + b^2 - c^2}{2ab} = \\frac{25 + 36 - 49}{60} = \\frac{12}{60} = 0.2$.",
+    "Then $C = \\arccos(0.2) \\approx 78.46^\\circ$, which rounds to $78.5^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Is the triangle acute or obtuse?",
+      "steps": [
+        "Compare $c^2 = 49$ with $a^2 + b^2 = 61$.",
+        "Since $49 < 61$, the angle is smaller than $90^\\circ$ — the triangle is acute.",
+        "That matches $78.5^\\circ$, and it is a quick check you can do before touching a calculator."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-cosines",
+    "find-angle",
+    "sss"
+  ],
+  "estimatedSeconds": 75
+}

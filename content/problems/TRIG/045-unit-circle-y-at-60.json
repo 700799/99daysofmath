@@ -1,0 +1,51 @@
+{
+  "id": "TRIG.045",
+  "domain": "TRIG",
+  "unit": 5,
+  "orderInUnit": 5,
+  "standard": "TRIG.CIRC.1",
+  "difficulty": 2,
+  "prompt": "On the unit circle, what is the $y$-coordinate of the point at $60^\\circ$? Give the exact value, for example \"sqrt(2)/2\" for $\\frac{\\sqrt{2}}{2}$.",
+  "answerType": "expression",
+  "primaryAnswer": "sqrt(3)/2",
+  "alternativeAnswers": [
+    "sqrt3/2",
+    "\\frac{\\sqrt{3}}{2}",
+    "√3/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The $y$-coordinate is $\\sin 60^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $y$-coordinate is $\\sin 60^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "Use the $30$-$60$-$90$ triangle: the side opposite $60^\\circ$ is $\\sqrt{3}$ out of a hypotenuse of $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin 60^\\circ = \\frac{\\sqrt{3}}{2} \\approx 0.866$."
+    }
+  ],
+  "explanation": [
+    "On the unit circle, the $y$-coordinate of the point at angle $\\theta$ is $\\sin \\theta$.",
+    "From the $30$-$60$-$90$ triangle, $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.",
+    "So the point at $60^\\circ$ is $\\left(\\frac{1}{2},\\ \\frac{\\sqrt{3}}{2}\\right)$, and the $y$-coordinate is $\\frac{\\sqrt{3}}{2} \\approx 0.87$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Does it look right on the circle?",
+      "steps": [
+        "$60^\\circ$ is closer to straight up ($90^\\circ$) than to the right ($0^\\circ$), so the point should be high and not very far right.",
+        "$y \\approx 0.87$ (high) with $x = 0.5$ (not far right) matches the picture exactly."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "exact-values"
+  ],
+  "estimatedSeconds": 50
+}

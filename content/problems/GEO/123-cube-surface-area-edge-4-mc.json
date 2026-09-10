@@ -1,0 +1,69 @@
+{
+  "id": "GEO.123",
+  "domain": "GEO",
+  "unit": 13,
+  "orderInUnit": 3,
+  "standard": "GEO.VOL.1",
+  "difficulty": 1,
+  "prompt": "A gift box is a cube with edges of $4$ inches. How much wrapping paper covers its outside exactly, with no overlap?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$16$ square inches",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$24$ square inches",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$64$ square inches",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$96$ square inches",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "D",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A cube has $6$ identical square faces.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A cube has $6$ identical square faces."
+    },
+    {
+      "level": "guide",
+      "text": "Each face is $4 \\times 4 = 16$ sq in."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 \\times 16 = 96$ square inches. Choice D."
+    }
+  ],
+  "explanation": [
+    "Surface area counts every face: a cube has $6$ of them.",
+    "One face is $4^2 = 16$ square inches.",
+    "Total: $6 \\times 16 = 96$ square inches. Choice D."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sort out the near misses",
+      "steps": [
+        "$16$ is one face only; $24$ comes from $6 \\times 4$, multiplying the six faces by the EDGE instead of by the face area; and $64$ is the VOLUME, $4^3$ — what fits inside, not what covers it.",
+        "Wrapping paper is a covering, so it is measured in square inches and needs all six faces: $96$."
+      ]
+    }
+  ],
+  "tags": [
+    "surface-area",
+    "cube"
+  ],
+  "estimatedSeconds": 45
+}

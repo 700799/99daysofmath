@@ -1,0 +1,50 @@
+{
+  "id": "TRIG.077",
+  "domain": "TRIG",
+  "unit": 8,
+  "orderInUnit": 7,
+  "standard": "TRIG.GRAPH.2",
+  "difficulty": 2,
+  "prompt": "The daylight in a northern town is modelled by $L(t) = 12 + 3\\sin\\left(\\frac{2\\pi (t - 80)}{365}\\right)$ hours, where $t$ is the day of the year. How many hours of daylight does the longest day of the year have?",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The longest day happens when the sine part is as large as it can be.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The longest day happens when the sine part is as large as it can be."
+    },
+    {
+      "level": "guide",
+      "text": "The largest value of any sine is $1$, so the most daylight is $12 + 3(1)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12 + 3 = 15$ hours."
+    }
+  ],
+  "explanation": [
+    "No matter what is inside it, a sine never exceeds $1$.",
+    "So the biggest $L(t)$ can be is $12 + 3(1) = 15$ hours.",
+    "The $-80$ inside only decides which day that happens on, not how big the maximum is."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read the parts of the model",
+      "steps": [
+        "The $12$ is the midline: the yearly average is $12$ hours of daylight.",
+        "The $3$ is the amplitude: the town gains up to $3$ hours in summer and loses up to $3$ in winter.",
+        "Longest day $= 12 + 3 = 15$ hours; shortest day $= 12 - 3 = 9$ hours."
+      ]
+    }
+  ],
+  "tags": [
+    "modelling",
+    "daylight",
+    "amplitude",
+    "midline"
+  ],
+  "estimatedSeconds": 50
+}

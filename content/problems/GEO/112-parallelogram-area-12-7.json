@@ -1,0 +1,47 @@
+{
+  "id": "GEO.112",
+  "domain": "GEO",
+  "unit": 12,
+  "orderInUnit": 2,
+  "standard": "GEO.AREA.1",
+  "difficulty": 1,
+  "prompt": "A parallelogram-shaped tile has a base of $12$ cm and a height of $7$ cm. What is its area, in square centimeters?",
+  "answerType": "numeric",
+  "primaryAnswer": "84",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Area of a parallelogram is base times height — no halving.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Area of a parallelogram is base times height — no halving."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply $12 \\times 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12 \\times 7 = 84$ square centimeters."
+    }
+  ],
+  "explanation": [
+    "For a parallelogram, $A = bh$.",
+    "Substitute: $A = 12 \\times 7$.",
+    "The tile covers $84$ square centimeters."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Slide the triangle over",
+      "steps": [
+        "Cut the slanted triangle off one end of the parallelogram and slide it to the other end.",
+        "You now have a $12$-by-$7$ rectangle with the same area: $84$ sq cm. That is why the formula matches a rectangle's."
+      ]
+    }
+  ],
+  "tags": [
+    "area",
+    "parallelogram"
+  ],
+  "estimatedSeconds": 30
+}

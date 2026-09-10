@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.057",
+  "domain": "TRIG",
+  "unit": 6,
+  "orderInUnit": 7,
+  "standard": "TRIG.CIRC.2",
+  "difficulty": 2,
+  "prompt": "Which of sine, cosine, and tangent is POSITIVE for an angle in Quadrant III?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Sine",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Cosine",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Tangent",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "None of them",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "In Quadrant III both coordinates are negative: $x < 0$ and $y < 0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "In Quadrant III both coordinates are negative: $x < 0$ and $y < 0$."
+    },
+    {
+      "level": "guide",
+      "text": "Sine is $y$ and cosine is $x$, so both are negative. But tangent is $\\frac{y}{x}$ — what happens when you divide a negative by a negative?"
+    },
+    {
+      "level": "reveal",
+      "text": "Negative divided by negative is positive, so tangent is positive in Quadrant III."
+    }
+  ],
+  "explanation": [
+    "Quadrant III is down and to the left, so both $x$ and $y$ are negative there.",
+    "That makes $\\cos\\theta = x$ negative and $\\sin\\theta = y$ negative.",
+    "Tangent is $\\frac{\\sin\\theta}{\\cos\\theta} = \\frac{y}{x}$, and a negative divided by a negative is positive."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "ASTC in one line",
+      "steps": [
+        "All Students Take Calculus labels the quadrants I to IV with what is positive: All, Sine, Tangent, Cosine.",
+        "The T lands on Quadrant III, so Tangent is the positive one there."
+      ]
+    }
+  ],
+  "tags": [
+    "astc",
+    "signs",
+    "tangent"
+  ],
+  "estimatedSeconds": 50
+}

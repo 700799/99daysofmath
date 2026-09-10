@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.061",
+  "domain": "TRIG",
+  "unit": 7,
+  "orderInUnit": 1,
+  "standard": "TRIG.GRAPH.1",
+  "difficulty": 1,
+  "prompt": "What is the amplitude of $y = 4\\sin x$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Amplitude is how far the wave rises above its midline, and the number in front of the sine controls it.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Amplitude is how far the wave rises above its midline, and the number in front of the sine controls it."
+    },
+    {
+      "level": "guide",
+      "text": "In $y = a\\sin x$, the amplitude is $|a|$."
+    },
+    {
+      "level": "reveal",
+      "text": "Here $a = 4$, so the amplitude is $4$."
+    }
+  ],
+  "explanation": [
+    "Plain $y = \\sin x$ swings between $-1$ and $1$, an amplitude of 1.",
+    "Multiplying by 4 stretches every value four times as far, so the wave swings between $-4$ and $4$.",
+    "The amplitude is $4$ — the distance from the midline to a peak."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "As a sound wave",
+      "steps": [
+        "Amplitude is loudness: a bigger number in front means a taller wave and a louder sound.",
+        "$y = 4\\sin x$ is four times as tall as $y = \\sin x$, so it peaks at 4 and dips to $-4$."
+      ]
+    }
+  ],
+  "tags": [
+    "amplitude",
+    "graphing"
+  ],
+  "estimatedSeconds": 30
+}

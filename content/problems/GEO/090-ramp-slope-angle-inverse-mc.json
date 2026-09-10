@@ -1,0 +1,82 @@
+{
+  "id": "GEO.090",
+  "domain": "GEO",
+  "unit": 9,
+  "orderInUnit": 10,
+  "standard": "GEO.RT.2",
+  "difficulty": 3,
+  "prompt": "An accessibility ramp rises $2$ ft over a horizontal run of $24$ ft. Building codes cap the ramp angle at $4.8^\\circ$. What angle does this ramp make with the ground, rounded to the nearest tenth of a degree?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$0.1^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$4.8^\\circ$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$85.2^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$12.0^\\circ$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Rise is opposite the ramp angle and run is adjacent — that is tangent.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Rise is opposite the ramp angle and run is adjacent — that is tangent."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a friendly ratio: a rise of $1$ over a run of $1$ gives $\\tan \\theta = 1$, so $\\theta = \\tan^{-1}(1) = 45^\\circ$. Notice the final move is the inverse tangent, not the ratio itself."
+    },
+    {
+      "level": "guide",
+      "text": "$\\tan \\theta = \\frac{2}{24} \\approx 0.0833$. That decimal is the ratio, not the angle."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\theta = \\tan^{-1}(0.0833) \\approx 4.8^\\circ$, exactly at the legal limit."
+    }
+  ],
+  "explanation": [
+    "Set up the ratio with the angle at the bottom of the ramp: opposite $= 2$ (rise), adjacent $= 24$ (run).",
+    "$\\tan \\theta = \\frac{2}{24} \\approx 0.0833$.",
+    "Undo the tangent: $\\theta = \\tan^{-1}(0.0833) \\approx 4.8^\\circ$ — the ramp just barely passes code. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity check with a picture",
+      "steps": [
+        "A ramp that creeps up $2$ ft while stretching $24$ ft forward is nearly flat.",
+        "Nearly flat means a tiny angle — a handful of degrees, which points straight at $4.8^\\circ$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "Choice A, $0.1^\\circ$, is what you get by reporting $\\tan \\theta \\approx 0.083$ as if it were the angle and rounding — the calculator gave you the RATIO, and you still owe it a $\\tan^{-1}$. Choice C, $85.2^\\circ$, comes from flipping the fraction to $\\frac{24}{2}$, which finds the angle at the TOP of the ramp instead.",
+        "Fix both by naming the angle before you compute: stand at the bottom corner, check that the rise is across from you and the run runs away from you, then finish with $\\tan^{-1}$."
+      ]
+    }
+  ],
+  "tags": [
+    "inverse-trig",
+    "real-world",
+    "ramp"
+  ],
+  "estimatedSeconds": 80
+}

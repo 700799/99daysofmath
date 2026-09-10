@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.005",
+  "domain": "TRIG",
+  "unit": 1,
+  "orderInUnit": 5,
+  "standard": "TRIG.ANG.1",
+  "difficulty": 2,
+  "prompt": "A navigator needs to report a heading of $18.25^\\circ$ in degrees and minutes. How many minutes should be reported along with the $18^\\circ$?",
+  "answerType": "numeric",
+  "primaryAnswer": "15",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The whole-degree part is $18^\\circ$. The leftover to convert is $0.25^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The whole-degree part is $18^\\circ$. The leftover to convert is $0.25^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "Each degree holds 60 minutes, so multiply: $0.25 \\times 60$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.25 \\times 60 = 15$, so the heading is $18^\\circ 15'$."
+    }
+  ],
+  "explanation": [
+    "Split the angle into whole degrees and a leftover: $18.25^\\circ = 18^\\circ + 0.25^\\circ$.",
+    "Since one degree is 60 minutes, multiply the leftover by 60: $0.25 \\times 60 = 15$.",
+    "The heading is $18^\\circ 15'$, so 15 minutes get reported."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Quarter of an hour",
+      "steps": [
+        "$0.25$ of anything is a quarter of it.",
+        "A quarter of an hour is 15 minutes, and a quarter of a degree is 15 minutes for exactly the same reason: $\\frac{60}{4} = 15$."
+      ]
+    }
+  ],
+  "tags": [
+    "degrees-minutes",
+    "navigation"
+  ],
+  "estimatedSeconds": 45
+}

@@ -77,6 +77,7 @@ const SatTips = lazy(() => import('./routes/sat/SatTips').then((m) => ({ default
 const SatTest = lazy(() => import('./routes/sat/SatTest').then((m) => ({ default: m.SatTest })));
 const SatAnalysis = lazy(() => import('./routes/sat/SatAnalysis').then((m) => ({ default: m.SatAnalysis })));
 const SatRecovery = lazy(() => import('./routes/sat/SatRecovery').then((m) => ({ default: m.SatRecovery })));
+const Course = lazy(() => import('./routes/Course').then((m) => ({ default: m.Course })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Warm-up gate wraps every arcade game with a short adaptive quiz.
@@ -106,6 +107,7 @@ export default function App() {
           <Route path="/sat/analysis/:n" element={<SatAnalysis />} />
           <Route path="/sat/recovery/:n" element={<SatRecovery />} />
           <Route path="/trail/SAT" element={<Navigate to="/sat" replace />} />
+          <Route path="/course/:id" element={<Course />} />
           <Route path="/trail/:domain" element={<DomainTrail />} />
           <Route path="/unit/:domain/:unit" element={<Unit />} />
           <Route path="/unit/:domain/:unit/results" element={<UnitResults />} />

@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.058",
+  "domain": "TRIG",
+  "unit": 6,
+  "orderInUnit": 8,
+  "standard": "TRIG.CIRC.2",
+  "difficulty": 2,
+  "prompt": "What is the reference angle for $-120^\\circ$? Give just the number of degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Turn it into a positive coterminal angle first: $-120 + 360$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Turn it into a positive coterminal angle first: $-120 + 360$."
+    },
+    {
+      "level": "guide",
+      "text": "That gives $240^\\circ$, which is in Quadrant III."
+    },
+    {
+      "level": "reveal",
+      "text": "Reference angle: $240 - 180 = 60^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Add a full turn to get a positive angle in the same place: $-120^\\circ + 360^\\circ = 240^\\circ$.",
+    "$240^\\circ$ lies in Quadrant III, between $180^\\circ$ and $270^\\circ$.",
+    "Its reference angle is $240^\\circ - 180^\\circ = 60^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Rotate clockwise and look",
+      "steps": [
+        "Turning $120^\\circ$ clockwise from the positive $x$-axis takes you past straight down ($-90^\\circ$) and $30^\\circ$ further.",
+        "That lands down and to the left, in Quadrant III, tilted $60^\\circ$ from the horizontal axis."
+      ]
+    }
+  ],
+  "tags": [
+    "reference-angle",
+    "negative-angles"
+  ],
+  "estimatedSeconds": 55
+}

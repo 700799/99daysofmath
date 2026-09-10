@@ -1,0 +1,50 @@
+{
+  "id": "TRIG.128",
+  "domain": "TRIG",
+  "unit": 13,
+  "orderInUnit": 8,
+  "standard": "TRIG.EQ.1",
+  "difficulty": 2,
+  "prompt": "The depth of water at a pier is $d(t) = 8 + 4\\sin\\left(\\frac{\\pi t}{6}\\right)$ feet, $t$ hours after midnight. At what time, in hours after midnight, does the depth FIRST reach $10$ feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Set $d(t) = 10$ and isolate the sine.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Set $d(t) = 10$ and isolate the sine."
+    },
+    {
+      "level": "guide",
+      "text": "$4\\sin\\left(\\frac{\\pi t}{6}\\right) = 2$, so $\\sin\\left(\\frac{\\pi t}{6}\\right) = \\frac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "The first time that happens is $\\frac{\\pi t}{6} = \\frac{\\pi}{6}$, giving $t = 1$ hour."
+    }
+  ],
+  "explanation": [
+    "Set the model equal to the target depth: $8 + 4\\sin\\left(\\frac{\\pi t}{6}\\right) = 10$.",
+    "Subtract $8$ and divide by $4$: $\\sin\\left(\\frac{\\pi t}{6}\\right) = \\frac{1}{2}$.",
+    "The smallest positive angle with sine $\\frac{1}{2}$ is $\\frac{\\pi}{6}$, so $\\frac{\\pi t}{6} = \\frac{\\pi}{6}$ and $t = 1$.",
+    "The water first reaches $10$ feet at 1:00 a.m."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "What the second solution means",
+      "steps": [
+        "The other angle with sine $\\frac{1}{2}$ is $\\frac{5\\pi}{6}$, which gives $t = 5$ hours.",
+        "That is the tide passing $10$ feet again on its way back DOWN, at 5:00 a.m.",
+        "The question asked for the first time, so $t = 1$ — but noticing the second one tells you high tide sits halfway between, at $t = 3$."
+      ]
+    }
+  ],
+  "tags": [
+    "solve",
+    "tides",
+    "modelling"
+  ],
+  "estimatedSeconds": 75
+}

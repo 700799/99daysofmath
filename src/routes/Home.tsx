@@ -1,13 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import {
-  TRAIL_DOMAINS,
-  DOMAIN_LABELS,
-  DOMAIN_DESCRIPTIONS,
-  DOMAIN_COLORS,
-  DOMAIN_EMOJI,
-  domainCourseName,
-} from '../types/problem';
+import { domainCourseName } from '../types/problem';
+import { COURSES, courseDomains, courseHref } from '../data/courses';
 import { useProgress } from '../state/progress';
 import { useDisplayName } from '../state/auth';
 import { useDomainSummary } from '../hooks/useProblems';
@@ -21,15 +15,15 @@ import { useSeo, SITE_URL, SITE_NAME } from '../lib/seo';
 const HOME_JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Math10x math trails',
-  itemListElement: TRAIL_DOMAINS.map((d, i) => ({
+  name: 'Math10x courses',
+  itemListElement: COURSES.map((c, i) => ({
     '@type': 'ListItem',
     position: i + 1,
     item: {
       '@type': 'Course',
-      name: domainCourseName(d),
-      description: DOMAIN_DESCRIPTIONS[d],
-      url: `${SITE_URL}/trail/${d}`,
+      name: c.strands.length === 1 ? domainCourseName(c.strands[0].domain) : c.name,
+      description: c.blurb,
+      url: `${SITE_URL}${courseHref(c)}`,
       provider: { '@type': 'EducationalOrganization', name: SITE_NAME, url: `${SITE_URL}/` },
     },
   })),
@@ -37,9 +31,9 @@ const HOME_JSON_LD = {
 
 export function Home() {
   useSeo({
-    title: 'Math10x — Free Math for Grades 5-6, Algebra 1, Precalculus & SAT Prep',
+    title: 'Math10x — Free Math: Grades 5-6, Algebra 1, Geometry, Trig, Precalculus & SAT Prep',
     description:
-      'Math10x makes math click for grades 5-6 and beyond: clear lessons, worked examples, and practice across ratios, fractions, geometry, statistics, Algebra 1, Precalculus, and full Digital SAT Math prep — plus an arcade of games kids unlock by learning.',
+      'Math10x makes math click, from 5th and 6th grade Common Core through Algebra 1, Geometry, Trigonometry and Precalculus, plus full Digital SAT Math prep: clear lessons, worked examples, and practice — with an arcade of games kids unlock by learning.',
     canonicalPath: '/',
     jsonLd: HOME_JSON_LD,
   });
@@ -62,10 +56,10 @@ export function Home() {
         <Mascot mood="happy" size={72} />
         <div>
           <h1 className="text-2xl sm:text-3xl font-display font-extrabold text-ink">
-            Pick a trail, {displayName}!
+            Pick a course, {displayName}!
           </h1>
           <p className="text-ink-muted mt-0.5 text-sm sm:text-base">
-            Gr-5 foundations, five 6th-grade trails, Algebra 1, Precalculus, and SAT Math prep. Earn stars, stickers, and XP.
+            Seven courses, from 5th-grade Common Core up to SAT Math prep. Earn stars, stickers, and XP.
           </p>
         </div>
       </div>
@@ -179,70 +173,54 @@ export function Home() {
         </Link>
       </div>
 
-      {/* SAT Math — its own section, not a trail */}
-      <Link
-        to="/sat"
-        className="mb-4 block rounded-3xl border-2 border-line bg-surface p-4 sm:p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
-        style={{ borderLeftWidth: 10, borderLeftColor: DOMAIN_COLORS.SAT }}
-      >
-        <div className="flex items-start gap-3 sm:gap-4">
-          <div className="text-4xl sm:text-5xl">🎯</div>
-          <div className="min-w-0 flex-1">
-            <div className="font-display text-base font-extrabold text-ink sm:text-lg">SAT Math</div>
-            <div className="mt-0.5 text-xs font-display font-bold uppercase tracking-wider text-ink-muted">
-              Digital SAT prep
-            </div>
-            <div className="mt-1 text-sm text-ink-muted">
-              The full blueprint: 18 unit playbooks, 180 practice questions with worked
-              explanations, 100+ strategy tips, and 5 full-length mock tests with scoring.
-            </div>
-            <div className="mt-2 text-xs text-ink-muted">180 problems · 18 units · 5 mock tests</div>
-          </div>
-        </div>
-      </Link>
-
+      {/* One card per course. A course may gather several domains — the five
+          6th-grade strands are one course, Geometry runs from its 6th-grade
+          foundations into the high-school material — so the shelf reads as
+          seven subjects rather than eleven content tags. */}
       <div className="space-y-3">
-        {TRAIL_DOMAINS.map((d, i) => {
-          const dp = progress[d];
-          const counts = summary?.find((s) => s.domain === d);
-          const earned = dp
-            ? Object.values(dp.unitStars).reduce<number>(
-                (a, b) => a + (b as number),
-                0,
+        {COURSES.map((c, i) => {
+          const domains = courseDomains(c);
+          const earned = domains.reduce((sum, d) => {
+            const dp = progress[d];
+            return sum + (dp ? Object.values(dp.unitStars).reduce<number>((a, b) => a + (b as number), 0) : 0);
+          }, 0);
+          const counts = summary
+            ? domains.reduce(
+                (acc, d) => {
+                  const s2 = summary.find((x) => x.domain === d);
+                  return s2 ? { count: acc.count + s2.count, units: acc.units + s2.units } : acc;
+                },
+                { count: 0, units: 0 },
               )
-            : 0;
+            : null;
           return (
             <motion.div
-              key={d}
+              key={c.id}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05 }}
             >
               <Link
-                to={`/trail/${d}`}
+                to={courseHref(c)}
                 className="block rounded-3xl p-4 sm:p-5 shadow-sm border-2 border-line bg-surface hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all"
-                style={{
-                  borderLeftWidth: 10,
-                  borderLeftColor: DOMAIN_COLORS[d],
-                }}
+                style={{ borderLeftWidth: 10, borderLeftColor: c.color }}
               >
                 <div className="flex items-start gap-3 sm:gap-4">
-                  <div className="text-4xl sm:text-5xl">{DOMAIN_EMOJI[d]}</div>
+                  <div className="text-4xl sm:text-5xl">{c.emoji}</div>
                   <div className="flex-1 min-w-0">
                     <div className="font-display font-extrabold text-base sm:text-lg text-ink">
-                      {DOMAIN_LABELS[d]}
+                      {c.name}
                     </div>
                     <div className="text-xs font-display font-bold text-ink-muted uppercase tracking-wider mt-0.5">
-                      {d}
+                      {c.kicker}
                     </div>
-                    <div className="text-sm text-ink-muted mt-1">
-                      {DOMAIN_DESCRIPTIONS[d]}
-                    </div>
+                    <div className="text-sm text-ink-muted mt-1">{c.blurb}</div>
                     <div className="text-xs text-ink-muted mt-2">
                       {loading
                         ? 'Loading…'
-                        : counts
-                          ? `${counts.count} problems · ${counts.units} unit${counts.units === 1 ? '' : 's'}`
+                        : counts && counts.count > 0
+                          ? `${counts.count} problems · ${counts.units} unit${counts.units === 1 ? '' : 's'}` +
+                            (c.id === 'sat' ? ' · 5 mock tests' : '')
                           : 'Coming soon'}
                     </div>
                   </div>
@@ -260,7 +238,6 @@ export function Home() {
           );
         })}
       </div>
-
 
       <PracticeHeatmap practiceDates={practiceDates} xpByDate={xpByDate} />
 

@@ -1,0 +1,48 @@
+{
+  "id": "GEO.086",
+  "domain": "GEO",
+  "unit": 9,
+  "orderInUnit": 6,
+  "standard": "GEO.RT.2",
+  "difficulty": 2,
+  "prompt": "From the top of a $120$-ft lighthouse, the angle of depression to a sailboat is $25^\\circ$. How far is the boat from the base of the lighthouse, in feet, rounded to the nearest tenth?",
+  "answerType": "numeric",
+  "primaryAnswer": "257.3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The angle of depression from the top equals the angle of elevation from the boat — they are alternate interior angles across the horizontal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The angle of depression from the top equals the angle of elevation from the boat — they are alternate interior angles across the horizontal."
+    },
+    {
+      "level": "guide",
+      "text": "From the boat's corner, the lighthouse ($120$) is opposite and the water distance $d$ is adjacent: $\\tan 25^\\circ = \\frac{120}{d}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$d = \\frac{120}{\\tan 25^\\circ} \\approx \\frac{120}{0.4663} \\approx 257.3$ ft."
+    }
+  ],
+  "explanation": [
+    "Slide the $25^\\circ$ angle of depression down to the boat — it becomes a $25^\\circ$ angle of elevation inside the triangle.",
+    "With that angle, the height $120$ is opposite and the distance $d$ is adjacent, so $\\tan 25^\\circ = \\frac{120}{d}$.",
+    "Solve for $d$: $d = \\frac{120}{\\tan 25^\\circ} \\approx 257.3$ ft."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A shallow angle means a far boat",
+      "steps": [
+        "Looking down only $25^\\circ$ from a $120$-ft tower means the boat is well out to sea.",
+        "The answer, over $250$ ft, is more than twice the tower height — exactly what a shallow sight line should give."
+      ]
+    }
+  ],
+  "tags": [
+    "angle-of-depression",
+    "tangent",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

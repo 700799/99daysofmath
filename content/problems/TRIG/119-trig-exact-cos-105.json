@@ -1,0 +1,68 @@
+{
+  "id": "TRIG.119",
+  "domain": "TRIG",
+  "unit": 12,
+  "orderInUnit": 9,
+  "standard": "TRIG.IDENT.2",
+  "difficulty": 3,
+  "prompt": "Find the exact value of $\\cos 105^\\circ$ using $105^\\circ = 60^\\circ + 45^\\circ$. Write it with \"sqrt\", for example \"(sqrt(2)-sqrt(6))/4\".",
+  "answerType": "expression",
+  "primaryAnswer": "(sqrt(2)-sqrt(6))/4",
+  "alternativeAnswers": [
+    "sqrt(2)/4 - sqrt(6)/4",
+    "-(sqrt(6)-sqrt(2))/4",
+    "(√2-√6)/4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Use $\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$ with $A = 60^\\circ$ and $B = 45^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use $\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$ with $A = 60^\\circ$ and $B = 45^\\circ$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up where you already know the answer: $\\cos(45^\\circ + 45^\\circ) = \\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{2}}{2} - \\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{2}}{2} = 0$, matching $\\cos 90^\\circ = 0$. The formula runs the same way with $60^\\circ$ and $45^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "That gives $\\frac{1}{2}\\cdot\\frac{\\sqrt{2}}{2} - \\frac{\\sqrt{3}}{2}\\cdot\\frac{\\sqrt{2}}{2} = \\frac{\\sqrt{2}}{4} - \\frac{\\sqrt{6}}{4}$."
+    },
+    {
+      "level": "reveal",
+      "text": "So $\\cos 105^\\circ = \\frac{\\sqrt{2} - \\sqrt{6}}{4}$, a negative number."
+    }
+  ],
+  "explanation": [
+    "Apply the cosine sum formula: $\\cos 105^\\circ = \\cos 60^\\circ\\cos 45^\\circ - \\sin 60^\\circ\\sin 45^\\circ$.",
+    "Substitute the special values: $\\frac{1}{2}\\cdot\\frac{\\sqrt{2}}{2} - \\frac{\\sqrt{3}}{2}\\cdot\\frac{\\sqrt{2}}{2}$.",
+    "That is $\\frac{\\sqrt{2}}{4} - \\frac{\\sqrt{6}}{4} = \\frac{\\sqrt{2} - \\sqrt{6}}{4}$.",
+    "Numerically this is about $\\frac{1.414 - 2.449}{4} \\approx -0.259$, and a calculator confirms $\\cos 105^\\circ \\approx -0.259$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A shortcut through the reference angle",
+      "steps": [
+        "$105^\\circ$ is in quadrant II, where cosine is negative, and its reference angle is $180^\\circ - 105^\\circ = 75^\\circ$.",
+        "So $\\cos 105^\\circ = -\\cos 75^\\circ$.",
+        "Since $\\cos 75^\\circ = \\frac{\\sqrt{6} - \\sqrt{2}}{4}$, we get $\\cos 105^\\circ = \\frac{\\sqrt{2} - \\sqrt{6}}{4}$ — the same answer."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The most common wrong answer is the positive $\\frac{\\sqrt{6} - \\sqrt{2}}{4}$, obtained by subtracting the smaller root from the larger one out of habit.",
+        "But $105^\\circ$ is obtuse, and cosine is NEGATIVE for every obtuse angle — a positive answer cannot possibly be right.",
+        "Before writing your final line, ask which quadrant the angle is in and check the sign matches. Here it must be negative, so $\\frac{\\sqrt{2} - \\sqrt{6}}{4}$."
+      ]
+    }
+  ],
+  "tags": [
+    "sum-formula",
+    "exact-value",
+    "quadrants",
+    "sign-error"
+  ],
+  "estimatedSeconds": 90
+}

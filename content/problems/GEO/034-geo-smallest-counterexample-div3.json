@@ -1,0 +1,47 @@
+{
+  "id": "GEO.034",
+  "domain": "GEO",
+  "unit": 4,
+  "orderInUnit": 4,
+  "standard": "GEO.PROOF.1",
+  "difficulty": 1,
+  "prompt": "Consider the claim: \"If a positive whole number is divisible by $3$, then it is divisible by $6$.\" Give the SMALLEST positive whole number that is a counterexample.",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You need a number that passes the \"if\" part but fails the \"then\" part.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You need a number that passes the \"if\" part but fails the \"then\" part."
+    },
+    {
+      "level": "guide",
+      "text": "List multiples of 3: $3, 6, 9, 12, \\dots$ Which is the first one that is NOT a multiple of 6?"
+    },
+    {
+      "level": "reveal",
+      "text": "$3$ itself: it is divisible by 3 but not by 6."
+    }
+  ],
+  "explanation": [
+    "A counterexample must satisfy the hypothesis (divisible by 3) and break the conclusion (divisible by 6).",
+    "The multiples of 3 are $3, 6, 9, 12, 15, \\dots$; the very first one, 3, is not divisible by 6.",
+    "So $3$ is the smallest counterexample, and the claim is false."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Odd multiples give it away",
+      "steps": [
+        "Every multiple of 6 is even, but multiples of 3 alternate odd and even: 3, 6, 9, 12.",
+        "Any ODD multiple of 3 breaks the claim — 3, 9, 15 all work — and the smallest of those is 3."
+      ]
+    }
+  ],
+  "tags": [
+    "counterexample",
+    "logic"
+  ],
+  "estimatedSeconds": 40
+}

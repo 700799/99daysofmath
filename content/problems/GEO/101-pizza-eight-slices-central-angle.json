@@ -1,0 +1,47 @@
+{
+  "id": "GEO.101",
+  "domain": "GEO",
+  "unit": 11,
+  "orderInUnit": 1,
+  "standard": "GEO.CIRC.1",
+  "difficulty": 1,
+  "prompt": "A pizza is cut into $8$ equal slices from the center. What is the central angle of one slice, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "45",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "All the way around the center is $360^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "All the way around the center is $360^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "Eight equal slices share that $360^\\circ$ evenly."
+    },
+    {
+      "level": "reveal",
+      "text": "$360 \\div 8 = 45^\\circ$."
+    }
+  ],
+  "explanation": [
+    "A full circle around the center measures $360^\\circ$.",
+    "Equal slices means equal central angles: $360 \\div 8$.",
+    "Each slice has a $45^\\circ$ central angle — and its crust is a $45^\\circ$ arc."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Halve, halve, halve",
+      "steps": [
+        "Cut the pizza in half: $180^\\circ$ each. Cut again: $90^\\circ$ each.",
+        "Cut once more for $8$ slices: $45^\\circ$ each."
+      ]
+    }
+  ],
+  "tags": [
+    "central-angle",
+    "circle"
+  ],
+  "estimatedSeconds": 30
+}

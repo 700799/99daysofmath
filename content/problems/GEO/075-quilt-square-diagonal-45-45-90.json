@@ -1,0 +1,47 @@
+{
+  "id": "GEO.075",
+  "domain": "GEO",
+  "unit": 8,
+  "orderInUnit": 5,
+  "standard": "GEO.RT.1",
+  "difficulty": 2,
+  "prompt": "A quilt block is a square $8$ inches on each side. A ribbon is sewn along one diagonal. How long is the ribbon, in inches, rounded to the nearest tenth?",
+  "answerType": "numeric",
+  "primaryAnswer": "11.3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A diagonal cuts the square into two $45^\\circ$-$45^\\circ$-$90^\\circ$ triangles.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A diagonal cuts the square into two $45^\\circ$-$45^\\circ$-$90^\\circ$ triangles."
+    },
+    {
+      "level": "guide",
+      "text": "In a $45$-$45$-$90$ triangle the hypotenuse is leg $\\times \\sqrt{2}$, so the diagonal is $8\\sqrt{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$8\\sqrt{2} \\approx 8(1.41421) \\approx 11.3$ inches."
+    }
+  ],
+  "explanation": [
+    "The diagonal of a square makes two isosceles right triangles with legs $8$ and $8$.",
+    "The $45$-$45$-$90$ shortcut gives hypotenuse $= 8\\sqrt{2}$ (the Pythagorean theorem agrees: $\\sqrt{64 + 64} = \\sqrt{128}$).",
+    "$8\\sqrt{2} \\approx 11.3$ inches of ribbon."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate first, then trust it",
+      "steps": [
+        "The diagonal must be longer than $8$ but shorter than $8 + 8 = 16$, so somewhere in the low teens.",
+        "$\\sqrt{2} \\approx 1.4$, so about $8(1.4) = 11.2$ — right in that window, which confirms $11.3$ is sensible."
+      ]
+    }
+  ],
+  "tags": [
+    "special-right-triangle",
+    "45-45-90"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,71 @@
+{
+  "id": "TRIG.126",
+  "domain": "TRIG",
+  "unit": 13,
+  "orderInUnit": 6,
+  "standard": "TRIG.EQ.1",
+  "difficulty": 2,
+  "prompt": "A pendulum returns to its starting position whenever $\\cos\\theta = 1$. What is the general solution of $\\cos\\theta = 1$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\theta = 360^\\circ k$ for every integer $k$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\theta = 180^\\circ k$ for every integer $k$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\theta = 0^\\circ$ and $\\theta = 360^\\circ$ only",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\theta = 90^\\circ + 360^\\circ k$ for every integer $k$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Cosine reaches its maximum of $1$ only at the very right of the unit circle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Cosine reaches its maximum of $1$ only at the very right of the unit circle."
+    },
+    {
+      "level": "guide",
+      "text": "That happens once per full turn, so the solutions are spaced $360^\\circ$ apart."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\theta = 0^\\circ, \\pm 360^\\circ, \\pm 720^\\circ, \\ldots$, which is $\\theta = 360^\\circ k$."
+    }
+  ],
+  "explanation": [
+    "$\\cos\\theta = 1$ only at the point $(1, 0)$ on the unit circle, which is angle $0^\\circ$.",
+    "Every full revolution returns to that same point, and a full revolution is $360^\\circ$.",
+    "So the general solution is $\\theta = 360^\\circ k$ for any integer $k$ — the pendulum comes home once per complete swing cycle."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why $180^\\circ k$ is wrong",
+      "steps": [
+        "Choice B would include $\\theta = 180^\\circ$, but $\\cos 180^\\circ = -1$, not $1$.",
+        "That is the pendulum at the far end of its swing, the opposite of where it started.",
+        "Maximum values repeat once per period, so the spacing is a full $360^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "general-solution",
+    "cosine",
+    "pendulum"
+  ],
+  "estimatedSeconds": 55
+}

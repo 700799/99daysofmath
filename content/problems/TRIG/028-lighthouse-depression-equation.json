@@ -1,0 +1,69 @@
+{
+  "id": "TRIG.028",
+  "domain": "TRIG",
+  "unit": 3,
+  "orderInUnit": 8,
+  "standard": "TRIG.RT.1",
+  "difficulty": 2,
+  "prompt": "From the top of a lighthouse $120$ ft above the water, the angle of depression to a boat is $25^\\circ$. Which equation finds the horizontal distance $d$ from the base of the lighthouse to the boat?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\tan 25^\\circ = \\frac{120}{d}$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\tan 25^\\circ = \\frac{d}{120}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\sin 25^\\circ = \\frac{120}{d}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\cos 25^\\circ = \\frac{120}{d}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The angle of depression from the top equals the angle of elevation from the boat — they are alternate interior angles across the horizontal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The angle of depression from the top equals the angle of elevation from the boat — they are alternate interior angles across the horizontal."
+    },
+    {
+      "level": "guide",
+      "text": "From the boat, the $120$ ft height is opposite the $25^\\circ$ angle and the distance $d$ is adjacent. Which ratio uses opposite and adjacent?"
+    },
+    {
+      "level": "reveal",
+      "text": "Tangent: $\\tan 25^\\circ = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{120}{d}$."
+    }
+  ],
+  "explanation": [
+    "Slide the angle of depression down to the boat: it becomes a $25^\\circ$ angle of elevation, since the horizontal lines are parallel.",
+    "Relative to that angle, the $120$ ft height is the opposite side and $d$ is the adjacent side.",
+    "Opposite over adjacent is tangent, so $\\tan 25^\\circ = \\frac{120}{d}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the answer it produces",
+      "steps": [
+        "Solving option A gives $d = \\frac{120}{\\tan 25^\\circ} \\approx 257$ ft — a shallow $25^\\circ$ sightline should indeed reach far out to sea.",
+        "Option B would give $d \\approx 56$ ft, closer to the lighthouse than it is tall, which would require looking steeply down, not at $25^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "angle-of-depression",
+    "set-up-equation"
+  ],
+  "estimatedSeconds": 60
+}

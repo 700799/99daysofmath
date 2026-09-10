@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.007",
+  "domain": "TRIG",
+  "unit": 1,
+  "orderInUnit": 7,
+  "standard": "TRIG.ANG.1",
+  "difficulty": 2,
+  "prompt": "A Ferris wheel makes $3.5$ complete rotations during one ride. Through how many degrees does a car turn? Give just the number.",
+  "answerType": "numeric",
+  "primaryAnswer": "1260",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Each complete rotation is $360^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each complete rotation is $360^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply: $3.5 \\times 360$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3.5 \\times 360 = 1260$, so the car turns through $1260^\\circ$."
+    }
+  ],
+  "explanation": [
+    "One rotation is $360^\\circ$, so 3 rotations are $1080^\\circ$.",
+    "The half rotation adds another $180^\\circ$.",
+    "$1080 + 180 = 1260$, so the car turns $1260^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Multiply straight through",
+      "steps": [
+        "Rotations times degrees-per-rotation gives total degrees.",
+        "$3.5 \\times 360 = 1260^\\circ$ — and notice the car ends up half a turn from where it started, since $1260 - 1080 = 180$."
+      ]
+    }
+  ],
+  "tags": [
+    "rotations",
+    "ferris-wheel"
+  ],
+  "estimatedSeconds": 40
+}

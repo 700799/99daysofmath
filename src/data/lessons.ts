@@ -1,6 +1,8 @@
 import type { Domain } from '../types/problem';
 import { LESSON_SLIDES } from './lessonSlides';
 import type { LessonSlide } from './lessonSlides';
+import { GEO_LESSONS } from './geo/lessons_u01_14';
+import { TRIG_LESSONS } from './trig/lessons_u01_14';
 import { A1_LESSONS_U01_04 } from './a1/lessons_u01_04';
 import { A1_LESSONS_U05_08 } from './a1/lessons_u05_08';
 import { A1_LESSONS_U09_11 } from './a1/lessons_u09_11';
@@ -1247,6 +1249,8 @@ export const LESSONS: Lesson[] = [
   ...A1_LESSONS_U05_08,
   ...A1_LESSONS_U09_11,
   ...A1_LESSONS_U12_14,
+  ...GEO_LESSONS,
+  ...TRIG_LESSONS,
   // ---------------- PC — Precalculus (middle-school course) ----------------
   ...PC_LESSONS_U01_04,
   ...PC_LESSONS_U05_08,

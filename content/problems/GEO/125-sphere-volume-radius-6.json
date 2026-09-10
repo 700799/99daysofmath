@@ -1,0 +1,51 @@
+{
+  "id": "GEO.125",
+  "domain": "GEO",
+  "unit": 13,
+  "orderInUnit": 5,
+  "standard": "GEO.VOL.1",
+  "difficulty": 2,
+  "prompt": "A spherical exercise ball has radius $6$ inches. Write its exact volume in terms of $\\pi$ (for example, write $7\\pi$ as 7pi).",
+  "answerType": "expression",
+  "primaryAnswer": "288pi",
+  "alternativeAnswers": [
+    "288*pi",
+    "288 pi",
+    "288π"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Sphere volume is $V = \\frac{4}{3}\\pi r^3$ — the radius is CUBED.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sphere volume is $V = \\frac{4}{3}\\pi r^3$ — the radius is CUBED."
+    },
+    {
+      "level": "guide",
+      "text": "$6^3 = 216$, so $V = \\frac{4}{3}\\pi(216)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{4}{3}(216) = 288$, so $V = 288\\pi$ cubic inches."
+    }
+  ],
+  "explanation": [
+    "Start with $V = \\frac{4}{3}\\pi r^3$ and $r = 6$.",
+    "Cube the radius: $6^3 = 216$.",
+    "Multiply: $\\frac{4}{3} \\times 216 = 288$, so $V = 288\\pi$ cubic inches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Divide before you multiply",
+      "steps": [
+        "$\\frac{4}{3} \\times 216$ is easiest as $216 \\div 3 = 72$, then $72 \\times 4 = 288$.",
+        "Dividing first keeps the numbers small and avoids a messy $864 \\div 3$."
+      ]
+    }
+  ],
+  "tags": [
+    "volume",
+    "sphere"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,47 @@
+{
+  "id": "TRIG.091",
+  "domain": "TRIG",
+  "unit": 10,
+  "orderInUnit": 1,
+  "standard": "TRIG.INV.1",
+  "difficulty": 1,
+  "prompt": "Evaluate $\\arcsin\\left(\\frac{1}{2}\\right)$. Give your answer in degrees, as a number only.",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Read it as a question: \"which angle has a sine of $\\frac{1}{2}$?\"",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Read it as a question: \"which angle has a sine of $\\frac{1}{2}$?\""
+    },
+    {
+      "level": "guide",
+      "text": "Think of your special triangles — one of the famous angles has sine exactly $\\frac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin 30^\\circ = \\frac{1}{2}$, so $\\arcsin\\left(\\frac{1}{2}\\right) = 30^\\circ$."
+    }
+  ],
+  "explanation": [
+    "$\\arcsin$ undoes $\\sin$: it takes a ratio and hands back the angle.",
+    "We need the angle whose sine is $\\frac{1}{2}$, and $\\sin 30^\\circ = \\frac{1}{2}$.",
+    "So $\\arcsin\\left(\\frac{1}{2}\\right) = 30^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "From the 30-60-90 triangle",
+      "steps": [
+        "In a $30$-$60$-$90$ triangle the side opposite the $30^\\circ$ angle is exactly half the hypotenuse.",
+        "That is precisely the statement $\\sin 30^\\circ = \\frac{1}{2}$, read backwards."
+      ]
+    }
+  ],
+  "tags": [
+    "arcsin",
+    "special-angles"
+  ],
+  "estimatedSeconds": 35
+}

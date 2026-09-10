@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.083",
+  "domain": "TRIG",
+  "unit": 9,
+  "orderInUnit": 3,
+  "standard": "TRIG.GRAPH.3",
+  "difficulty": 1,
+  "prompt": "What is the period of $y = \\tan x$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\pi$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$2\\pi$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\frac{\\pi}{2}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$4\\pi$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Tangent is not like sine and cosine — it repeats twice as often.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Tangent is not like sine and cosine — it repeats twice as often."
+    },
+    {
+      "level": "guide",
+      "text": "Compare $\\tan 30^\\circ$ with $\\tan 210^\\circ$. Both equal $\\frac{\\sqrt{3}}{3}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Tangent repeats every $180^\\circ$, that is, every $\\pi$ radians."
+    }
+  ],
+  "explanation": [
+    "Tangent is $\\frac{\\sin\\theta}{\\cos\\theta}$, and adding $\\pi$ flips the sign of BOTH the sine and the cosine.",
+    "Two sign flips cancel in a quotient, so $\\tan(\\theta + \\pi) = \\tan\\theta$.",
+    "The period is therefore $\\pi$, not $2\\pi$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think about slope",
+      "steps": [
+        "$\\tan\\theta$ is the slope of the line through the origin at angle $\\theta$.",
+        "Turn that line a half-turn and you get the very same line, with the very same slope.",
+        "A half-turn is $\\pi$, so tangent repeats every $\\pi$."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent",
+    "period"
+  ],
+  "estimatedSeconds": 40
+}

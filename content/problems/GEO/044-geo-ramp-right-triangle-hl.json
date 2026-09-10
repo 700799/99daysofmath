@@ -1,0 +1,53 @@
+{
+  "id": "GEO.044",
+  "domain": "GEO",
+  "unit": 5,
+  "orderInUnit": 4,
+  "standard": "GEO.CONG.1",
+  "difficulty": 1,
+  "prompt": "Two wheelchair ramps form right triangles. The sloped top surfaces (the hypotenuses) are equal in length, and one pair of legs is equal too. Which congruence criterion applies to these right triangles? Answer with two letters.",
+  "answerType": "short-text",
+  "primaryAnswer": "HL",
+  "alternativeAnswers": [
+    "hl",
+    "H.L.",
+    "hypotenuse leg",
+    "hypotenuse-leg"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "This shortcut only exists for RIGHT triangles.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This shortcut only exists for RIGHT triangles."
+    },
+    {
+      "level": "guide",
+      "text": "The two parts named are the hypotenuse and a leg."
+    },
+    {
+      "level": "reveal",
+      "text": "This is HL — Hypotenuse-Leg."
+    }
+  ],
+  "explanation": [
+    "HL applies only to right triangles: congruent hypotenuses plus one pair of congruent legs.",
+    "Both ramps are right triangles with matching hypotenuses and matching legs, so HL proves them congruent.",
+    "The Pythagorean Theorem explains why: once the hypotenuse and one leg are fixed, the remaining leg is forced, so all three sides match."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "HL is secretly SSS",
+      "steps": [
+        "With hypotenuse $c$ and leg $a$ known, the other leg is $b = \\sqrt{c^2 - a^2}$ — no choice about it.",
+        "So both right triangles end up with the same three sides. HL is a shortcut that saves you the arithmetic."
+      ]
+    }
+  ],
+  "tags": [
+    "congruence",
+    "HL",
+    "right-triangle"
+  ],
+  "estimatedSeconds": 40
+}

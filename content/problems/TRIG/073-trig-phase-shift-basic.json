@@ -1,0 +1,69 @@
+{
+  "id": "TRIG.073",
+  "domain": "TRIG",
+  "unit": 8,
+  "orderInUnit": 3,
+  "standard": "TRIG.GRAPH.2",
+  "difficulty": 1,
+  "prompt": "How does the graph of $y = \\sin\\left(x - \\frac{\\pi}{3}\\right)$ compare with the graph of $y = \\sin(x)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Shifted right by $\\frac{\\pi}{3}$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Shifted left by $\\frac{\\pi}{3}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Shifted down by $\\frac{\\pi}{3}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Stretched horizontally by $\\frac{\\pi}{3}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "A change inside the parentheses moves the graph sideways, not up and down.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A change inside the parentheses moves the graph sideways, not up and down."
+    },
+    {
+      "level": "guide",
+      "text": "Ask where the curve now starts its cycle: you need $x - \\frac{\\pi}{3} = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = \\frac{\\pi}{3}$, so the cycle begins $\\frac{\\pi}{3}$ later — a shift to the right."
+    }
+  ],
+  "explanation": [
+    "Subtracting inside the function moves the graph horizontally.",
+    "The cycle used to start where the input was $0$, which was $x = 0$; now the input is $0$ when $x = \\frac{\\pi}{3}$.",
+    "So every feature of the wave happens $\\frac{\\pi}{3}$ later: the graph slides right by $\\frac{\\pi}{3}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The minus sign feels backwards on purpose",
+      "steps": [
+        "A minus inside always shifts right, and a plus inside always shifts left.",
+        "Think of it as the graph running late: it has to wait until $x$ reaches $\\frac{\\pi}{3}$ before it can do what it used to do at $0$."
+      ]
+    }
+  ],
+  "tags": [
+    "phase-shift",
+    "horizontal-translation"
+  ],
+  "estimatedSeconds": 40
+}

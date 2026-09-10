@@ -1,0 +1,69 @@
+{
+  "id": "GEO.113",
+  "domain": "GEO",
+  "unit": 12,
+  "orderInUnit": 3,
+  "standard": "GEO.AREA.1",
+  "difficulty": 1,
+  "prompt": "A round mirror has a radius of $5$ inches. What is its exact area?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$10\\pi$ square inches",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$25\\pi$ square inches",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$50\\pi$ square inches",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$100\\pi$ square inches",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Area of a circle is $\\pi r^2$ — the radius gets squared, not doubled.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Area of a circle is $\\pi r^2$ — the radius gets squared, not doubled."
+    },
+    {
+      "level": "guide",
+      "text": "With $r = 5$: $\\pi(5)^2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5^2 = 25$, so the area is $25\\pi$ square inches. Choice B."
+    }
+  ],
+  "explanation": [
+    "Use $A = \\pi r^2$ with $r = 5$.",
+    "Square the radius first: $5^2 = 25$.",
+    "Area $= 25\\pi$ square inches. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sort the two formulas",
+      "steps": [
+        "$2\\pi r$ is CIRCUMFERENCE — a distance around, measured in inches. With $r = 5$ that is the $10\\pi$ in choice A.",
+        "$\\pi r^2$ is AREA — a covering, measured in square inches. The question asks for area, so square the radius: $25\\pi$."
+      ]
+    }
+  ],
+  "tags": [
+    "area",
+    "circle"
+  ],
+  "estimatedSeconds": 40
+}

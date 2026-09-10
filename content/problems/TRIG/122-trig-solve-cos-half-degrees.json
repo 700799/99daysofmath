@@ -1,0 +1,71 @@
+{
+  "id": "TRIG.122",
+  "domain": "TRIG",
+  "unit": 13,
+  "orderInUnit": 2,
+  "standard": "TRIG.EQ.1",
+  "difficulty": 1,
+  "prompt": "Solve $\\cos\\theta = \\frac{1}{2}$ for $0^\\circ \\le \\theta < 360^\\circ$. Which set of angles is correct?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$60^\\circ$ and $300^\\circ$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$60^\\circ$ and $120^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$60^\\circ$ only",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$30^\\circ$ and $330^\\circ$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The reference angle is $60^\\circ$, since $\\cos 60^\\circ = \\frac{1}{2}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The reference angle is $60^\\circ$, since $\\cos 60^\\circ = \\frac{1}{2}$."
+    },
+    {
+      "level": "guide",
+      "text": "Cosine is POSITIVE in quadrants I and IV, so look for one answer in each."
+    },
+    {
+      "level": "reveal",
+      "text": "Quadrant I gives $60^\\circ$; quadrant IV gives $360^\\circ - 60^\\circ = 300^\\circ$."
+    }
+  ],
+  "explanation": [
+    "First find the reference angle: $\\cos 60^\\circ = \\frac{1}{2}$, so it is $60^\\circ$.",
+    "Cosine is the $x$-coordinate on the unit circle, and $x$ is positive in quadrants I and IV.",
+    "The quadrant-I answer is $60^\\circ$ and the quadrant-IV answer is $360^\\circ - 60^\\circ = 300^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the other sets fail",
+      "steps": [
+        "Choice B puts the second answer in quadrant II, where cosine is negative — that is the pattern for SINE, not cosine.",
+        "Choice D uses a reference angle of $30^\\circ$, but $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, not $\\frac{1}{2}$.",
+        "Choice C forgets that a horizontal line crosses one full cosine cycle twice."
+      ]
+    }
+  ],
+  "tags": [
+    "solve",
+    "reference-angle",
+    "quadrants"
+  ],
+  "estimatedSeconds": 50
+}

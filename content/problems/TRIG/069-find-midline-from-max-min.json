@@ -1,0 +1,61 @@
+{
+  "id": "TRIG.069",
+  "domain": "TRIG",
+  "unit": 7,
+  "orderInUnit": 9,
+  "standard": "TRIG.GRAPH.1",
+  "difficulty": 3,
+  "prompt": "A sound wave is modeled by $y = a\\sin(bx) + k$. Its maximum value is $12$ and its minimum value is $-4$. What is $k$, the midline value?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The midline runs exactly halfway between the top and the bottom of the wave.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The midline runs exactly halfway between the top and the bottom of the wave."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up on a wave running from $2$ up to $10$: the centre is $\\frac{10 + 2}{2} = 6$. Average the top and bottom the same way even when the bottom is negative."
+    },
+    {
+      "level": "guide",
+      "text": "Average the two extremes: $k = \\frac{\\text{max} + \\text{min}}{2} = \\frac{12 + (-4)}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{12 - 4}{2} = \\frac{8}{2} = 4$, so $k = 4$."
+    }
+  ],
+  "explanation": [
+    "The wave rises the same distance above the midline as it falls below it, so the midline is the average of the max and the min.",
+    "$k = \\frac{12 + (-4)}{2} = \\frac{8}{2} = 4$.",
+    "Check: with midline 4 and amplitude $a = \\frac{12 - (-4)}{2} = 8$, the wave runs from $4 - 8 = -4$ to $4 + 8 = 12$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk it on a number line",
+      "steps": [
+        "Mark $-4$ and $12$ on a number line; they are 16 apart.",
+        "Halfway is 8 units in from either end: $-4 + 8 = 4$, and $12 - 8 = 4$.",
+        "Both routes land on 4, so the midline is $y = 4$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is $8$ — that is the AMPLITUDE (half the range), not the midline. It is easy to compute $\\frac{12 - (-4)}{2}$ out of habit and stop there.",
+        "Keep the two formulas apart by what they mean: amplitude SUBTRACTS then halves (how tall is the swing), midline ADDS then halves (where is the center). The question asked where the center sits, so add: $\\frac{12 + (-4)}{2} = 4$."
+      ]
+    }
+  ],
+  "tags": [
+    "midline",
+    "amplitude",
+    "sound-wave"
+  ],
+  "estimatedSeconds": 70
+}

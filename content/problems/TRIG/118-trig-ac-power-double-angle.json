@@ -1,0 +1,71 @@
+{
+  "id": "TRIG.118",
+  "domain": "TRIG",
+  "unit": 12,
+  "orderInUnit": 8,
+  "standard": "TRIG.IDENT.2",
+  "difficulty": 2,
+  "prompt": "An engineer studying an AC circuit meets the expression $1 - 2\\sin^2(\\omega t)$. Which single trig function is it equal to?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\cos(2\\omega t)$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\sin(2\\omega t)$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\cos^2(\\omega t)$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$-\\cos(2\\omega t)$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The cosine double-angle formula comes in three equivalent versions.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The cosine double-angle formula comes in three equivalent versions."
+    },
+    {
+      "level": "guide",
+      "text": "One of them is $\\cos(2\\theta) = 1 - 2\\sin^2\\theta$. Compare it with what you have."
+    },
+    {
+      "level": "reveal",
+      "text": "With $\\theta = \\omega t$ the expression is exactly $\\cos(2\\omega t)$."
+    }
+  ],
+  "explanation": [
+    "The three forms of the cosine double-angle identity are $\\cos^2\\theta - \\sin^2\\theta$, $2\\cos^2\\theta - 1$, and $1 - 2\\sin^2\\theta$.",
+    "The expression matches the third form with $\\theta = \\omega t$.",
+    "So $1 - 2\\sin^2(\\omega t) = \\cos(2\\omega t)$ — this is exactly how engineers show that the power in an AC circuit oscillates at twice the supply frequency."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Derive it if you forget it",
+      "steps": [
+        "Start from $\\cos(2\\theta) = \\cos^2\\theta - \\sin^2\\theta$.",
+        "Replace $\\cos^2\\theta$ with $1 - \\sin^2\\theta$: $\\cos(2\\theta) = (1 - \\sin^2\\theta) - \\sin^2\\theta$.",
+        "That simplifies to $1 - 2\\sin^2\\theta$ — you never have to memorise all three separately."
+      ]
+    }
+  ],
+  "tags": [
+    "double-angle",
+    "ac-circuit",
+    "modelling"
+  ],
+  "estimatedSeconds": 60
+}

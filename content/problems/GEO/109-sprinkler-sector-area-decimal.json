@@ -1,0 +1,60 @@
+{
+  "id": "GEO.109",
+  "domain": "GEO",
+  "unit": 11,
+  "orderInUnit": 9,
+  "standard": "GEO.CIRC.1",
+  "difficulty": 3,
+  "prompt": "A lawn sprinkler sprays water $15$ ft in every direction across a $140^\\circ$ arc. How many square feet of lawn does it water? Round to the nearest tenth.",
+  "answerType": "numeric",
+  "primaryAnswer": "274.9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The watered patch is a sector: a slice of a circle with radius $15$ ft.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The watered patch is a sector: a slice of a circle with radius $15$ ft."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with half a circle: a $180^\\circ$ spray of radius $10$ ft covers $\\frac{180}{360} \\times \\pi(10)^2 = 50\\pi \\approx 157.1$ sq ft. Same fraction-of-a-circle recipe, just with $\\frac{140}{360}$ and radius $15$."
+    },
+    {
+      "level": "guide",
+      "text": "Sector area $= \\frac{140}{360} \\times \\pi (15)^2$. Note that $15$ is the radius, since the spray reaches $15$ ft out from the sprinkler."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{140}{360} \\times 225\\pi \\approx 0.3889 \\times 706.86 \\approx 274.9$ sq ft."
+    }
+  ],
+  "explanation": [
+    "The spray distance $15$ ft is the radius, so the full circle would cover $\\pi(15)^2 = 225\\pi \\approx 706.86$ sq ft.",
+    "The sprinkler only sweeps $140^\\circ$ of that, a fraction of $\\frac{140}{360} \\approx 0.3889$.",
+    "Area $\\approx 0.3889 \\times 706.86 \\approx 274.9$ square feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate to check",
+      "steps": [
+        "$140^\\circ$ is a bit more than a third of a full turn.",
+        "A third of $707$ is about $236$, so an answer a little above that — $274.9$ — is believable."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "A common wrong answer is $68.7$ sq ft, from treating $15$ ft as the DIAMETER and using $r = 7.5$. The problem says the water travels $15$ ft outward from the sprinkler, and a distance measured from the center is a radius.",
+        "Also watch the other trap: $706.9$, the whole circle, forgetting to take the $\\frac{140}{360}$ share. Write the fraction down first, before you ever square the radius."
+      ]
+    }
+  ],
+  "tags": [
+    "sector-area",
+    "word-problem",
+    "rounding"
+  ],
+  "estimatedSeconds": 85
+}

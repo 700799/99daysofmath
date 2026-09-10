@@ -1,0 +1,48 @@
+{
+  "id": "TRIG.048",
+  "domain": "TRIG",
+  "unit": 5,
+  "orderInUnit": 8,
+  "standard": "TRIG.CIRC.1",
+  "difficulty": 2,
+  "prompt": "What is $\\sin 270^\\circ$?",
+  "answerType": "numeric",
+  "primaryAnswer": "-1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$270^\\circ$ is three quarter-turns, landing at the bottom of the circle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$270^\\circ$ is three quarter-turns, landing at the bottom of the circle."
+    },
+    {
+      "level": "guide",
+      "text": "The bottom point of the unit circle is $(0, -1)$, and sine reads the $y$-coordinate."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin 270^\\circ = -1$."
+    }
+  ],
+  "explanation": [
+    "Three quarter-turns counterclockwise put you on the negative $y$-axis, at the very bottom of the circle.",
+    "On the unit circle that point is $(0, -1)$.",
+    "Sine is the $y$-coordinate, so $\\sin 270^\\circ = -1$ — the lowest value sine ever takes."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A Ferris wheel picture",
+      "steps": [
+        "Imagine riding a Ferris wheel of radius 1 centered on the origin, starting at the right side.",
+        "After three quarters of a turn you are at the very bottom, one unit BELOW center.",
+        "Below center means a height of $-1$, so $\\sin 270^\\circ = -1$."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "quadrantal-angles"
+  ],
+  "estimatedSeconds": 40
+}

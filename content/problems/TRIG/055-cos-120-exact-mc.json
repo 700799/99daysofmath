@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.055",
+  "domain": "TRIG",
+  "unit": 6,
+  "orderInUnit": 5,
+  "standard": "TRIG.CIRC.2",
+  "difficulty": 2,
+  "prompt": "What is the exact value of $\\cos 120^\\circ$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$-\\frac{1}{2}$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\frac{1}{2}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$-\\frac{\\sqrt{3}}{2}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\frac{\\sqrt{3}}{2}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two steps: find the reference angle, then decide the sign from the quadrant.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two steps: find the reference angle, then decide the sign from the quadrant."
+    },
+    {
+      "level": "guide",
+      "text": "The reference angle is $180 - 120 = 60^\\circ$, and $\\cos 60^\\circ = \\frac{1}{2}$. Quadrant II makes cosine which sign?"
+    },
+    {
+      "level": "reveal",
+      "text": "Cosine is negative in Quadrant II, so $\\cos 120^\\circ = -\\frac{1}{2}$."
+    }
+  ],
+  "explanation": [
+    "$120^\\circ$ sits in Quadrant II, with reference angle $180^\\circ - 120^\\circ = 60^\\circ$.",
+    "The size of the answer comes from the reference angle: $\\cos 60^\\circ = \\frac{1}{2}$.",
+    "Cosine is the $x$-coordinate and Quadrant II is left of the $y$-axis, so the sign is negative: $\\cos 120^\\circ = -\\frac{1}{2}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read it off the circle",
+      "steps": [
+        "The unit-circle point at $120^\\circ$ is $\\left(-\\frac{1}{2},\\ \\frac{\\sqrt{3}}{2}\\right)$.",
+        "Cosine is the first coordinate, which is $-\\frac{1}{2}$. (The $\\frac{\\sqrt{3}}{2}$ is the sine.)"
+      ]
+    }
+  ],
+  "tags": [
+    "reference-angle",
+    "signs",
+    "exact-values"
+  ],
+  "estimatedSeconds": 55
+}

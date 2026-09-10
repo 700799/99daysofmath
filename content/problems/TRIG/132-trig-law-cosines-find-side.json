@@ -1,0 +1,48 @@
+{
+  "id": "TRIG.132",
+  "domain": "TRIG",
+  "unit": 14,
+  "orderInUnit": 2,
+  "standard": "TRIG.LAW.1",
+  "difficulty": 1,
+  "prompt": "A triangle has sides $a = 5$ and $b = 7$ with the included angle $C = 60^\\circ$. Find side $c$, rounded to two decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "6.24",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two sides and the angle BETWEEN them means the Law of Cosines.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two sides and the angle BETWEEN them means the Law of Cosines."
+    },
+    {
+      "level": "guide",
+      "text": "$c^2 = a^2 + b^2 - 2ab\\cos C = 25 + 49 - 2(5)(7)\\cos 60^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "$c^2 = 74 - 70(0.5) = 39$, so $c = \\sqrt{39} \\approx 6.24$."
+    }
+  ],
+  "explanation": [
+    "With two sides and the included angle, use $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+    "Substitute: $c^2 = 25 + 49 - 2(5)(7)(0.5) = 74 - 35 = 39$.",
+    "Take the square root: $c = \\sqrt{39} \\approx 6.24$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "It is the Pythagorean theorem with a correction",
+      "steps": [
+        "If $C$ were $90^\\circ$ then $\\cos C = 0$ and the formula would be $c^2 = 25 + 49 = 74$, giving $c \\approx 8.6$.",
+        "Because $C$ is only $60^\\circ$, the triangle is pinched narrower and $c$ comes out shorter, at $6.24$.",
+        "The $-2ab\\cos C$ term is exactly the correction for the angle not being right."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-cosines",
+    "solve-triangle"
+  ],
+  "estimatedSeconds": 60
+}

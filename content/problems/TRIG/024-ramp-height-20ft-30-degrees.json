@@ -1,0 +1,48 @@
+{
+  "id": "TRIG.024",
+  "domain": "TRIG",
+  "unit": 3,
+  "orderInUnit": 4,
+  "standard": "TRIG.RT.1",
+  "difficulty": 1,
+  "prompt": "A loading ramp is $20$ ft long (that is the slanted surface) and rises at an angle of $30^\\circ$ to the ground. How high above the ground is the top end of the ramp, in feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The ramp is the hypotenuse and the height is opposite the $30^\\circ$ angle. Opposite and hypotenuse means sine.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The ramp is the hypotenuse and the height is opposite the $30^\\circ$ angle. Opposite and hypotenuse means sine."
+    },
+    {
+      "level": "guide",
+      "text": "Write $\\sin 30^\\circ = \\frac{h}{20}$, then multiply both sides by 20."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin 30^\\circ = 0.5$, so $h = 20 \\times 0.5 = 10$ ft."
+    }
+  ],
+  "explanation": [
+    "The slanted ramp is the hypotenuse ($20$ ft) and the height $h$ sits opposite the $30^\\circ$ angle.",
+    "Opposite over hypotenuse is sine: $\\sin 30^\\circ = \\frac{h}{20}$.",
+    "Since $\\sin 30^\\circ = \\frac{1}{2}$, we get $h = 20 \\times \\frac{1}{2} = 10$ ft."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The half-the-hypotenuse shortcut",
+      "steps": [
+        "In any right triangle with a $30^\\circ$ angle, the side opposite that angle is exactly half the hypotenuse.",
+        "Half of $20$ ft is $10$ ft, no calculator needed."
+      ]
+    }
+  ],
+  "tags": [
+    "sohcahtoa",
+    "ramp",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

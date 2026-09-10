@@ -1,0 +1,69 @@
+{
+  "id": "GEO.006",
+  "domain": "GEO",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "GEO.BASIC.1",
+  "difficulty": 2,
+  "prompt": "A bridge cable is laid out along a number line. One end is anchored at $2$, and the cable's midpoint is at $9$. Where is the other end anchored?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$5.5$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$16$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$11$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$7$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The midpoint sits the same distance from each end.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The midpoint sits the same distance from each end."
+    },
+    {
+      "level": "guide",
+      "text": "From $2$ to the midpoint $9$ is 7 units, so the far end is 7 units past $9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$9 + 7 = 16$."
+    }
+  ],
+  "explanation": [
+    "The midpoint is equally far from both ends, so measure the half you know: $9 - 2 = 7$ units.",
+    "The other half must also be 7 units, starting at the midpoint: $9 + 7 = 16$.",
+    "Check: the midpoint of 2 and 16 is $\\frac{2 + 16}{2} = 9$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why not average them?",
+      "steps": [
+        "Averaging 2 and 9 gives 5.5 — but that is the midpoint of the FIRST HALF, not the far anchor.",
+        "You are given a midpoint, not a second endpoint, so you extend past it instead of averaging: $9 + 7 = 16$."
+      ]
+    }
+  ],
+  "tags": [
+    "midpoint",
+    "number-line"
+  ],
+  "estimatedSeconds": 50
+}

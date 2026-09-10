@@ -1,0 +1,47 @@
+{
+  "id": "GEO.102",
+  "domain": "GEO",
+  "unit": 11,
+  "orderInUnit": 2,
+  "standard": "GEO.CIRC.1",
+  "difficulty": 1,
+  "prompt": "A central angle in a circle intercepts an arc of $80^\\circ$. An inscribed angle intercepts that same arc. What is the measure of the inscribed angle, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "An inscribed angle is always half of the arc it intercepts.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "An inscribed angle is always half of the arc it intercepts."
+    },
+    {
+      "level": "guide",
+      "text": "The arc is $80^\\circ$, so take half of it."
+    },
+    {
+      "level": "reveal",
+      "text": "$80 \\div 2 = 40^\\circ$."
+    }
+  ],
+  "explanation": [
+    "A central angle equals its intercepted arc, so the arc here is $80^\\circ$.",
+    "An inscribed angle (vertex on the circle) is half its intercepted arc.",
+    "So the inscribed angle is $\\frac{80}{2} = 40^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Center beats edge",
+      "steps": [
+        "Standing at the center, the arc fills your whole field of view: $80^\\circ$.",
+        "Standing out on the rim, you are farther away and the same arc looks half as wide: $40^\\circ$. Vertex at center = full arc, vertex on the circle = half."
+      ]
+    }
+  ],
+  "tags": [
+    "inscribed-angle",
+    "arcs"
+  ],
+  "estimatedSeconds": 40
+}

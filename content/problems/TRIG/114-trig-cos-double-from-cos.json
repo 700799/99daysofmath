@@ -1,0 +1,52 @@
+{
+  "id": "TRIG.114",
+  "domain": "TRIG",
+  "unit": 12,
+  "orderInUnit": 4,
+  "standard": "TRIG.IDENT.2",
+  "difficulty": 1,
+  "prompt": "If $\\cos\\theta = \\frac{1}{2}$, use $\\cos(2\\theta) = 2\\cos^2\\theta - 1$ to find $\\cos(2\\theta)$. Give a fraction or a decimal.",
+  "answerType": "numeric",
+  "primaryAnswer": "-1/2",
+  "alternativeAnswers": [
+    "-0.5",
+    "-.5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Square the cosine first, then double it, then subtract $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Square the cosine first, then double it, then subtract $1$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$, and $2 \\times \\frac{1}{4} = \\frac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2} - 1 = -\\frac{1}{2}$."
+    }
+  ],
+  "explanation": [
+    "Substitute into $\\cos(2\\theta) = 2\\cos^2\\theta - 1$: $2\\left(\\frac{1}{2}\\right)^2 - 1$.",
+    "Square first: $\\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$, then double it to get $\\frac{1}{2}$.",
+    "Finally subtract: $\\frac{1}{2} - 1 = -\\frac{1}{2}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Verify with a real angle",
+      "steps": [
+        "$\\cos\\theta = \\frac{1}{2}$ happens at $\\theta = 60^\\circ$.",
+        "Then $2\\theta = 120^\\circ$, and $\\cos 120^\\circ = -\\frac{1}{2}$ ✓",
+        "The formula and the unit circle agree."
+      ]
+    }
+  ],
+  "tags": [
+    "double-angle",
+    "cosine",
+    "evaluate"
+  ],
+  "estimatedSeconds": 45
+}

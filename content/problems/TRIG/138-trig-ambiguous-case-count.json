@@ -1,0 +1,72 @@
+{
+  "id": "TRIG.138",
+  "domain": "TRIG",
+  "unit": 14,
+  "orderInUnit": 8,
+  "standard": "TRIG.LAW.1",
+  "difficulty": 2,
+  "prompt": "You are given $A = 40^\\circ$, $a = 8$ and $b = 10$. How many triangles fit this description?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Two",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Exactly one",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "None",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Infinitely many",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "This is the SSA arrangement — the famous ambiguous case.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This is the SSA arrangement — the famous ambiguous case."
+    },
+    {
+      "level": "guide",
+      "text": "Compute the height $h = b\\sin A = 10\\sin 40^\\circ \\approx 6.43$ and compare it with $a$ and $b$."
+    },
+    {
+      "level": "reveal",
+      "text": "Since $6.43 < 8 < 10$, the side $a$ can swing to meet the base in two different places: two triangles."
+    }
+  ],
+  "explanation": [
+    "With two sides and a non-included angle (SSA), the given side can sometimes reach the base in two ways.",
+    "The critical height is $h = b\\sin A = 10\\sin 40^\\circ \\approx 6.43$.",
+    "Because $h < a < b$, that is $6.43 < 8 < 10$, side $a$ is long enough to reach but short enough to reach twice.",
+    "So there are two possible triangles, one with an acute angle $B$ and one with an obtuse angle $B$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the swinging side",
+      "steps": [
+        "Draw angle $A$ and lay side $b = 10$ along one arm.",
+        "Now put a compass at the far end of $b$ and swing an arc of radius $a = 8$ toward the other arm.",
+        "If the arc falls short there is no triangle; if it just touches there is one; if it cuts across there are two. Here it cuts across."
+      ]
+    }
+  ],
+  "tags": [
+    "ambiguous-case",
+    "ssa",
+    "law-of-sines"
+  ],
+  "estimatedSeconds": 75
+}

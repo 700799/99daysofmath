@@ -1,0 +1,64 @@
+{
+  "id": "GEO.139",
+  "domain": "GEO",
+  "unit": 14,
+  "orderInUnit": 9,
+  "standard": "GEO.TRANS.1",
+  "difficulty": 3,
+  "prompt": "The point $(3, -2)$ is first reflected across the $y$-axis, and then the image is translated $4$ units up. Write the final coordinates in the form (x, y).",
+  "answerType": "short-text",
+  "primaryAnswer": "(-3, 2)",
+  "alternativeAnswers": [
+    "(-3,2)",
+    "-3, 2",
+    "-3,2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Do the two moves in order, one at a time, and write down the point in between.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Do the two moves in order, one at a time, and write down the point in between."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Practice on a friendlier point: reflect $(1, 0)$ across the $y$-axis to get $(-1, 0)$, then translate up $4$ to get $(-1, 4)$. Same two rules, applied in that order."
+    },
+    {
+      "level": "guide",
+      "text": "Reflecting across the $y$-axis (a vertical mirror) negates $x$: $(3, -2) \\to (-3, -2)$."
+    },
+    {
+      "level": "reveal",
+      "text": "Now translate up $4$: $(-3, -2 + 4) = (-3, 2)$."
+    }
+  ],
+  "explanation": [
+    "Step 1 — reflect across the $y$-axis: the rule is $(x, y) \\to (-x, y)$, so $(3, -2) \\to (-3, -2)$.",
+    "Step 2 — translate $4$ units up: add $4$ to the $y$-coordinate, giving $(-3, -2 + 4)$.",
+    "The final image is $(-3, 2)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Track each coordinate separately",
+      "steps": [
+        "The $x$-coordinate is touched only by the reflection: $3 \\to -3$.",
+        "The $y$-coordinate is touched only by the translation: $-2 \\to 2$. Splitting the work this way keeps compositions from tangling."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The most common wrong answer is $(3, 2)$, from reflecting across the $x$-axis instead of the $y$-axis. The names feel backwards: reflecting across the $y$-AXIS changes the $x$-COORDINATE.",
+        "Anchor it with a picture: the $y$-axis is a vertical mirror, so the point hops left-right — and left-right is the $x$-coordinate's job."
+      ]
+    }
+  ],
+  "tags": [
+    "composition",
+    "reflection",
+    "translation"
+  ],
+  "estimatedSeconds": 75
+}

@@ -1,0 +1,69 @@
+{
+  "id": "TRIG.044",
+  "domain": "TRIG",
+  "unit": 5,
+  "orderInUnit": 4,
+  "standard": "TRIG.CIRC.1",
+  "difficulty": 1,
+  "prompt": "What are the coordinates of the point on the unit circle at $180^\\circ$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$(1, 0)$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$(0, 1)$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$(-1, 0)$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$(0, -1)$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$180^\\circ$ is a half turn — you end up pointing in the exact opposite direction from where you started.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$180^\\circ$ is a half turn — you end up pointing in the exact opposite direction from where you started."
+    },
+    {
+      "level": "guide",
+      "text": "Starting at $(1, 0)$ and turning halfway around puts you on the negative $x$-axis."
+    },
+    {
+      "level": "reveal",
+      "text": "That point is $(-1, 0)$, so $\\cos 180^\\circ = -1$ and $\\sin 180^\\circ = 0$."
+    }
+  ],
+  "explanation": [
+    "Half a turn from the positive $x$-axis lands on the negative $x$-axis.",
+    "On a circle of radius 1, that point is $(-1, 0)$.",
+    "Reading off the coordinates: $\\cos 180^\\circ = -1$ and $\\sin 180^\\circ = 0$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The four quarter-turn points",
+      "steps": [
+        "Going counterclockwise, the axis points are $(1,0)$ at $0^\\circ$, $(0,1)$ at $90^\\circ$, $(-1,0)$ at $180^\\circ$, and $(0,-1)$ at $270^\\circ$.",
+        "They cycle: right, up, left, down. $180^\\circ$ is the \"left\" one."
+      ]
+    }
+  ],
+  "tags": [
+    "unit-circle",
+    "quadrantal-angles"
+  ],
+  "estimatedSeconds": 35
+}

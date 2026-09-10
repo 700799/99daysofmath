@@ -1,0 +1,47 @@
+{
+  "id": "GEO.024",
+  "domain": "GEO",
+  "unit": 3,
+  "orderInUnit": 4,
+  "standard": "GEO.PAR.1",
+  "difficulty": 1,
+  "prompt": "Two parallel crosswalk stripes are cut by a straight curb line acting as a transversal. One angle OUTSIDE the stripes measures $118^\\circ$. What is the measure, in degrees, of its alternate exterior angle?",
+  "answerType": "numeric",
+  "primaryAnswer": "118",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Alternate exterior angles sit outside the parallel lines, on opposite sides of the transversal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Alternate exterior angles sit outside the parallel lines, on opposite sides of the transversal."
+    },
+    {
+      "level": "guide",
+      "text": "With parallel lines, alternate exterior angles are congruent."
+    },
+    {
+      "level": "reveal",
+      "text": "The alternate exterior angle is also $118^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Alternate exterior angles lie outside the two parallel lines and on opposite sides of the transversal.",
+    "When the lines are parallel, they are congruent.",
+    "So the matching angle also measures $118^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Chain it through a vertical angle",
+      "steps": [
+        "The $118^\\circ$ angle has a vertical angle of $118^\\circ$ at the same crossing, sitting inside the stripes.",
+        "That interior angle has an alternate interior partner of $118^\\circ$ at the other crossing, whose vertical angle is the exterior angle you want: $118^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "parallel-lines",
+    "alternate-exterior"
+  ],
+  "estimatedSeconds": 35
+}

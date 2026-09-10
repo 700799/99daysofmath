@@ -1,0 +1,51 @@
+{
+  "id": "GEO.134",
+  "domain": "GEO",
+  "unit": 14,
+  "orderInUnit": 4,
+  "standard": "GEO.TRANS.1",
+  "difficulty": 1,
+  "prompt": "A roof beam lies along a line with slope $\\frac{2}{3}$. A support brace must be perpendicular to it. What is the slope of the brace? Write it as a fraction.",
+  "answerType": "numeric",
+  "primaryAnswer": "-3/2",
+  "alternativeAnswers": [
+    "-1.5",
+    "-3/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Perpendicular slopes are opposite reciprocals: flip the fraction and change the sign.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Perpendicular slopes are opposite reciprocals: flip the fraction and change the sign."
+    },
+    {
+      "level": "guide",
+      "text": "Flip $\\frac{2}{3}$ to get $\\frac{3}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Now change the sign: the brace has slope $-\\frac{3}{2}$."
+    }
+  ],
+  "explanation": [
+    "Two lines are perpendicular exactly when their slopes multiply to $-1$.",
+    "Flip $\\frac{2}{3}$ upside down to get $\\frac{3}{2}$, then negate it: $-\\frac{3}{2}$.",
+    "Check: $\\frac{2}{3} \\times \\left(-\\frac{3}{2}\\right) = -1$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "See it as a turn",
+      "steps": [
+        "Slope $\\frac{2}{3}$ means \"over $3$, up $2$\" — a gentle uphill.",
+        "Rotate that step a quarter turn and it becomes \"over $2$, down $3$\", which is slope $-\\frac{3}{2}$: steeper, and heading downhill."
+      ]
+    }
+  ],
+  "tags": [
+    "slope",
+    "perpendicular",
+    "coordinate-geometry"
+  ],
+  "estimatedSeconds": 45
+}

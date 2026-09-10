@@ -1,0 +1,46 @@
+{
+  "id": "TRIG.054",
+  "domain": "TRIG",
+  "unit": 6,
+  "orderInUnit": 4,
+  "standard": "TRIG.CIRC.2",
+  "difficulty": 1,
+  "prompt": "What is the reference angle for $300^\\circ$? Give just the number of degrees.",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$300^\\circ$ is in Quadrant IV, closing in on a full turn.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$300^\\circ$ is in Quadrant IV, closing in on a full turn."
+    },
+    {
+      "level": "guide",
+      "text": "In Quadrant IV the reference angle is $360^\\circ$ minus the angle."
+    },
+    {
+      "level": "reveal",
+      "text": "$360 - 300 = 60^\\circ$."
+    }
+  ],
+  "explanation": [
+    "$300^\\circ$ falls between $270^\\circ$ and $360^\\circ$, so it is in Quadrant IV.",
+    "The nearest part of the $x$-axis is the $360^\\circ$ (same as $0^\\circ$) direction.",
+    "So the reference angle is $360^\\circ - 300^\\circ = 60^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "How far from home",
+      "steps": [
+        "Ask how much more rotation would bring you back to the starting ray.",
+        "From $300^\\circ$ you need another $60^\\circ$, so the terminal side sits $60^\\circ$ below the positive $x$-axis."
+      ]
+    }
+  ],
+  "tags": [
+    "reference-angle"
+  ],
+  "estimatedSeconds": 35
+}

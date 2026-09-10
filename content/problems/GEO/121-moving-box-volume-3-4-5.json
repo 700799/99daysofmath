@@ -1,0 +1,47 @@
+{
+  "id": "GEO.121",
+  "domain": "GEO",
+  "unit": 13,
+  "orderInUnit": 1,
+  "standard": "GEO.VOL.1",
+  "difficulty": 1,
+  "prompt": "A moving box is a rectangular prism measuring $3$ ft by $4$ ft by $5$ ft. What is its volume, in cubic feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Volume of a rectangular prism is length $\\times$ width $\\times$ height.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Volume of a rectangular prism is length $\\times$ width $\\times$ height."
+    },
+    {
+      "level": "guide",
+      "text": "$3 \\times 4 = 12$. Now multiply by $5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12 \\times 5 = 60$ cubic feet."
+    }
+  ],
+  "explanation": [
+    "Multiply the three dimensions: $V = 3 \\times 4 \\times 5$.",
+    "$3 \\times 4 = 12$, then $12 \\times 5 = 60$.",
+    "The box holds $60$ cubic feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Layers of cubes",
+      "steps": [
+        "The bottom layer is a $3$-by-$4$ grid: $12$ one-foot cubes.",
+        "The box is $5$ ft tall, so it holds $5$ of those layers: $5 \\times 12 = 60$ cubes."
+      ]
+    }
+  ],
+  "tags": [
+    "volume",
+    "prism"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,70 @@
+{
+  "id": "GEO.008",
+  "domain": "GEO",
+  "unit": 1,
+  "orderInUnit": 8,
+  "standard": "GEO.BASIC.1",
+  "difficulty": 2,
+  "prompt": "On one straight stretch of highway, mile marker $B$ sits between markers $A$ and $C$. Which pair below are opposite rays?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\overrightarrow{BA}$ and $\\overrightarrow{BC}$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\overrightarrow{AB}$ and $\\overrightarrow{AC}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\overrightarrow{AB}$ and $\\overrightarrow{BC}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\overrightarrow{BA}$ and $\\overrightarrow{CB}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Opposite rays must start at the SAME point and head in exactly opposite directions.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Opposite rays must start at the SAME point and head in exactly opposite directions."
+    },
+    {
+      "level": "guide",
+      "text": "In ray notation the first letter is the starting point. Which choice has both rays starting at $B$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$\\overrightarrow{BA}$ and $\\overrightarrow{BC}$ both start at $B$ and point opposite ways along the highway."
+    }
+  ],
+  "explanation": [
+    "Opposite rays share an endpoint and together form a straight line.",
+    "The first letter of a ray names its endpoint, so both rays must begin with $B$.",
+    "$\\overrightarrow{BA}$ heads one way down the highway and $\\overrightarrow{BC}$ heads the other: they are opposite rays."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Stand at the marker",
+      "steps": [
+        "Stand on marker $B$ and face $A$ — that is $\\overrightarrow{BA}$.",
+        "Now turn all the way around and face $C$ — that is $\\overrightarrow{BC}$. Same feet, opposite directions."
+      ]
+    }
+  ],
+  "tags": [
+    "rays",
+    "opposite-rays",
+    "notation"
+  ],
+  "estimatedSeconds": 45
+}

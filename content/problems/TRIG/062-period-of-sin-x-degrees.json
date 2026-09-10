@@ -1,0 +1,70 @@
+{
+  "id": "TRIG.062",
+  "domain": "TRIG",
+  "unit": 7,
+  "orderInUnit": 2,
+  "standard": "TRIG.GRAPH.1",
+  "difficulty": 1,
+  "prompt": "Measuring in degrees, what is the period of $y = \\sin x$ — the horizontal distance before the wave repeats itself?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$90^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$180^\\circ$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$360^\\circ$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$720^\\circ$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Sine values come from going around the unit circle. When does the trip start over?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sine values come from going around the unit circle. When does the trip start over?"
+    },
+    {
+      "level": "guide",
+      "text": "You return to the same point after one full lap."
+    },
+    {
+      "level": "reveal",
+      "text": "One full lap is $360^\\circ$, so the period of $y = \\sin x$ is $360^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Each value of $\\sin x$ is the height of a point traveling around the unit circle.",
+    "After one complete lap you are back at the same point with the same height, so the graph repeats.",
+    "A lap is $360^\\circ$ (or $2\\pi$ radians), so that is the period."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Trace the graph",
+      "steps": [
+        "From $0^\\circ$ the sine curve rises to 1 at $90^\\circ$, falls to 0 at $180^\\circ$, drops to $-1$ at $270^\\circ$, and returns to 0 at $360^\\circ$.",
+        "Only at $360^\\circ$ is it both back at zero AND heading upward again — a full cycle.",
+        "Careful: $180^\\circ$ returns to zero but is heading DOWN, so it is only half a cycle."
+      ]
+    }
+  ],
+  "tags": [
+    "period",
+    "graphing"
+  ],
+  "estimatedSeconds": 35
+}

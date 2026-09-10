@@ -1,0 +1,49 @@
+{
+  "id": "TRIG.135",
+  "domain": "TRIG",
+  "unit": 14,
+  "orderInUnit": 5,
+  "standard": "TRIG.LAW.1",
+  "difficulty": 2,
+  "prompt": "To measure across a lake, a surveyor marks points $A$, $B$ and $C$ with $B$ on the far shore. She measures $AC = 210$ m, angle $A = 62^\\circ$ and angle $C = 48^\\circ$. How long is $AB$, in metres, rounded to one decimal place?",
+  "answerType": "numeric",
+  "primaryAnswer": "166.1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the third angle first: the angles of a triangle add to $180^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the third angle first: the angles of a triangle add to $180^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "$B = 180^\\circ - 62^\\circ - 48^\\circ = 70^\\circ$. Side $AB$ is opposite angle $C$, and side $AC$ is opposite angle $B$."
+    },
+    {
+      "level": "reveal",
+      "text": "$AB = \\frac{210\\sin 48^\\circ}{\\sin 70^\\circ} \\approx 166.1$ m."
+    }
+  ],
+  "explanation": [
+    "The three angles must total $180^\\circ$, so $B = 180^\\circ - 62^\\circ - 48^\\circ = 70^\\circ$.",
+    "Match each side with the angle across from it: $AB$ faces angle $C$, and the known side $AC$ faces angle $B$.",
+    "Law of Sines: $\\frac{AB}{\\sin C} = \\frac{AC}{\\sin B}$, so $AB = \\frac{210 \\times 0.74314}{0.93969} \\approx 166.1$ m."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why surveyors love this",
+      "steps": [
+        "Nobody can stretch a tape measure across open water.",
+        "But angles can be measured from dry land with a theodolite, and one accessible baseline ($AC$) is enough.",
+        "The Law of Sines converts two angles and one reachable distance into the unreachable one — this is the heart of triangulation."
+      ]
+    }
+  ],
+  "tags": [
+    "law-of-sines",
+    "surveying",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

@@ -1,0 +1,48 @@
+{
+  "id": "GEO.096",
+  "domain": "GEO",
+  "unit": 10,
+  "orderInUnit": 6,
+  "standard": "GEO.QUAD.1",
+  "difficulty": 2,
+  "prompt": "Each interior angle of a regular polygon measures $150^\\circ$. How many sides does the polygon have?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Going through the exterior angle is far easier than the interior-sum formula.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Going through the exterior angle is far easier than the interior-sum formula."
+    },
+    {
+      "level": "guide",
+      "text": "Each exterior angle is $180 - 150 = 30^\\circ$, and all the exterior angles add to $360^\\circ$."
+    },
+    {
+      "level": "reveal",
+      "text": "$360 \\div 30 = 12$ sides."
+    }
+  ],
+  "explanation": [
+    "At each corner, interior + exterior $= 180^\\circ$, so each exterior angle is $180 - 150 = 30^\\circ$.",
+    "The exterior angles of any convex polygon total $360^\\circ$.",
+    "Number of sides $= 360 \\div 30 = 12$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The long way, as a check",
+      "steps": [
+        "If there are $n$ sides, then $\\frac{(n - 2) \\times 180}{n} = 150$.",
+        "Multiply out: $180n - 360 = 150n$, so $30n = 360$ and $n = 12$ ✓ — the same answer the exterior-angle shortcut gave."
+      ]
+    }
+  ],
+  "tags": [
+    "polygon",
+    "exterior-angles",
+    "reverse"
+  ],
+  "estimatedSeconds": 60
+}

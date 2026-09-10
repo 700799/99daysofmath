@@ -1,0 +1,51 @@
+{
+  "id": "TRIG.021",
+  "domain": "TRIG",
+  "unit": 3,
+  "orderInUnit": 1,
+  "standard": "TRIG.RT.1",
+  "difficulty": 1,
+  "prompt": "A right triangle has legs $3$ and $4$ and hypotenuse $5$. For the angle $\\theta$ whose opposite side is $3$, what is $\\sin \\theta$? Give a fraction or a decimal.",
+  "answerType": "numeric",
+  "primaryAnswer": "3/5",
+  "alternativeAnswers": [
+    "0.6",
+    ".6"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "SOH: Sine is Opposite over Hypotenuse.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "SOH: Sine is Opposite over Hypotenuse."
+    },
+    {
+      "level": "guide",
+      "text": "The side opposite $\\theta$ is $3$ and the hypotenuse is $5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin \\theta = \\frac{3}{5} = 0.6$."
+    }
+  ],
+  "explanation": [
+    "Sine compares the side across from the angle to the hypotenuse: $\\sin \\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}$.",
+    "Here the opposite side is 3 and the hypotenuse is 5.",
+    "So $\\sin \\theta = \\frac{3}{5} = 0.6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why sine is never bigger than 1",
+      "steps": [
+        "The hypotenuse is always the longest side of a right triangle.",
+        "So the opposite side divided by the hypotenuse is always a number less than 1 — here, $0.6$.",
+        "If you ever get a sine bigger than 1, you have flipped the fraction."
+      ]
+    }
+  ],
+  "tags": [
+    "sohcahtoa",
+    "sine"
+  ],
+  "estimatedSeconds": 35
+}

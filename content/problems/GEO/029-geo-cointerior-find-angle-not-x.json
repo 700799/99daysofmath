@@ -1,0 +1,61 @@
+{
+  "id": "GEO.029",
+  "domain": "GEO",
+  "unit": 3,
+  "orderInUnit": 9,
+  "standard": "GEO.PAR.1",
+  "difficulty": 3,
+  "prompt": "Two parallel curbs are crossed by a straight sewer line. One interior angle measures $(3x + 15)^\\circ$, and the co-interior angle beside it (same side of the sewer line) measures $(2x + 25)^\\circ$. Find the measure, in degrees, of the FIRST angle.",
+  "answerType": "numeric",
+  "primaryAnswer": "99",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Co-interior angles on parallel lines are supplementary — set the sum to $180^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Co-interior angles on parallel lines are supplementary — set the sum to $180^\\circ$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try plain numbers first: co-interior angles of $x$ and $50^\\circ$ on parallel lines give $x + 50 = 180$, so $x = 130$. Your version just adds two expressions before setting the sum to $180$."
+    },
+    {
+      "level": "guide",
+      "text": "Solve $(3x + 15) + (2x + 25) = 180$, then substitute back into $3x + 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5x + 40 = 180$ gives $x = 28$, so the first angle is $3(28) + 15 = 99^\\circ$."
+    }
+  ],
+  "explanation": [
+    "Because the curbs are parallel, the co-interior angles add to $180^\\circ$: $(3x + 15) + (2x + 25) = 180$.",
+    "Combine like terms: $5x + 40 = 180$, so $5x = 140$ and $x = 28$.",
+    "Substitute into the expression the question asked about: $3(28) + 15 = 84 + 15 = 99^\\circ$.",
+    "Check: the other angle is $2(28) + 25 = 81^\\circ$, and $99 + 81 = 180$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Finish with the partner angle",
+      "steps": [
+        "If you find the second angle first, $2(28) + 25 = 81^\\circ$, you are one subtraction from done.",
+        "The pair is supplementary, so the first angle is $180 - 81 = 99^\\circ$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap answer is 28. That is $x$ — a helper number — and the question asked for a MEASURE in degrees.",
+        "A second trap is setting the expressions equal ($3x + 15 = 2x + 25$, giving $x = 10$), which treats co-interior angles as congruent. They are supplementary. Sum to 180, solve, then substitute back: 99."
+      ]
+    }
+  ],
+  "tags": [
+    "parallel-lines",
+    "co-interior",
+    "algebra"
+  ],
+  "estimatedSeconds": 80
+}

@@ -1,0 +1,47 @@
+{
+  "id": "GEO.001",
+  "domain": "GEO",
+  "unit": 1,
+  "orderInUnit": 1,
+  "standard": "GEO.BASIC.1",
+  "difficulty": 1,
+  "prompt": "Three fire hydrants sit along one straight sidewalk: first $A$, then $B$, then $C$. If $AB = 7$ m and $BC = 5$ m, how many meters is $AC$?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Walking from $A$ to $C$ means walking $A$ to $B$ and then $B$ to $C$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Walking from $A$ to $C$ means walking $A$ to $B$ and then $B$ to $C$."
+    },
+    {
+      "level": "guide",
+      "text": "The Segment Addition Postulate says $AB + BC = AC$ when $B$ is between $A$ and $C$."
+    },
+    {
+      "level": "reveal",
+      "text": "$7 + 5 = 12$ m."
+    }
+  ],
+  "explanation": [
+    "Because $B$ sits between $A$ and $C$, the two short walks stack end to end.",
+    "Segment Addition: $AB + BC = AC$.",
+    "$7 + 5 = 12$, so $AC = 12$ m."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pace it out",
+      "steps": [
+        "Take 7 steps from $A$ and you are standing at $B$.",
+        "Take 5 more and you are at $C$. Nobody undid any steps, so the whole trip is $7 + 5 = 12$ m."
+      ]
+    }
+  ],
+  "tags": [
+    "segment-addition",
+    "betweenness"
+  ],
+  "estimatedSeconds": 30
+}

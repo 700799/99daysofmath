@@ -1,0 +1,49 @@
+{
+  "id": "TRIG.094",
+  "domain": "TRIG",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "TRIG.INV.1",
+  "difficulty": 1,
+  "prompt": "Evaluate $\\arcsin\\left(-\\frac{1}{2}\\right)$ in degrees. Give a number only (it may be negative).",
+  "answerType": "numeric",
+  "primaryAnswer": "-30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The output of $\\arcsin$ is always between $-90^\\circ$ and $90^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The output of $\\arcsin$ is always between $-90^\\circ$ and $90^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "You already know $\\sin 30^\\circ = \\frac{1}{2}$. A negative sine in that range means a negative angle."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin(-30^\\circ) = -\\frac{1}{2}$, so the answer is $-30^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The reference angle is $30^\\circ$, since $\\sin 30^\\circ = \\frac{1}{2}$.",
+    "The range of $\\arcsin$ is $[-90^\\circ, 90^\\circ]$, and within that range negative sines come from negative angles.",
+    "So $\\arcsin\\left(-\\frac{1}{2}\\right) = -30^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why not $210^\\circ$?",
+      "steps": [
+        "It is true that $\\sin 210^\\circ = -\\frac{1}{2}$ as well.",
+        "But $\\arcsin$ must return exactly one answer to be a function, so mathematicians restricted it to $[-90^\\circ, 90^\\circ]$.",
+        "$210^\\circ$ is outside that window; $-30^\\circ$ is the official answer."
+      ]
+    }
+  ],
+  "tags": [
+    "arcsin",
+    "restricted-domain",
+    "negatives"
+  ],
+  "estimatedSeconds": 45
+}

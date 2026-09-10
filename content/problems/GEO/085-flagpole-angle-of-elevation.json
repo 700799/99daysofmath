@@ -1,0 +1,47 @@
+{
+  "id": "GEO.085",
+  "domain": "GEO",
+  "unit": 9,
+  "orderInUnit": 5,
+  "standard": "GEO.RT.2",
+  "difficulty": 2,
+  "prompt": "A flagpole is $30$ ft tall and casts a shadow $40$ ft long on level ground. What is the angle of elevation of the sun, in degrees, rounded to the nearest tenth?",
+  "answerType": "numeric",
+  "primaryAnswer": "36.9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You know both legs — the pole (opposite) and the shadow (adjacent) — so use tangent.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You know both legs — the pole (opposite) and the shadow (adjacent) — so use tangent."
+    },
+    {
+      "level": "guide",
+      "text": "$\\tan \\theta = \\frac{30}{40} = 0.75$. To undo tangent, use $\\tan^{-1}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\theta = \\tan^{-1}(0.75) \\approx 36.9^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The sun's angle of elevation sits at the tip of the shadow, between the ground and the ray to the top of the pole.",
+    "Opposite $= 30$, adjacent $= 40$, so $\\tan \\theta = \\frac{30}{40} = 0.75$.",
+    "Take the inverse tangent: $\\theta = \\tan^{-1}(0.75) \\approx 36.9^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate before you press buttons",
+      "steps": [
+        "The shadow is longer than the pole, so the angle must be less than $45^\\circ$ (at exactly $45^\\circ$ they would be equal).",
+        "$36.9^\\circ$ passes that check; anything above $45^\\circ$ would mean you flipped the fraction."
+      ]
+    }
+  ],
+  "tags": [
+    "angle-of-elevation",
+    "inverse-trig"
+  ],
+  "estimatedSeconds": 60
+}

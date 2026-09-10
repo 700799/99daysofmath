@@ -1,0 +1,61 @@
+{
+  "id": "GEO.009",
+  "domain": "GEO",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "GEO.BASIC.1",
+  "difficulty": 3,
+  "prompt": "A machinist marks point $M$ at the midpoint of a steel rod $\\overline{AB}$. She measures $AM = 3x - 1$ and $MB = x + 9$. How long is the whole rod $AB$?",
+  "answerType": "numeric",
+  "primaryAnswer": "28",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A midpoint splits the rod into two EQUAL halves, so set the two expressions equal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A midpoint splits the rod into two EQUAL halves, so set the two expressions equal."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try easier halves: if $AM = x + 2$ and $MB = 6$, then $x + 2 = 6$ gives $x = 4$, each half is $6$, so $AB = 12$. Same recipe here: solve, find ONE half, then double it."
+    },
+    {
+      "level": "guide",
+      "text": "Solve $3x - 1 = x + 9$ for $x$, then use it to find one half."
+    },
+    {
+      "level": "reveal",
+      "text": "$2x = 10$ gives $x = 5$, so $AM = 14$ and $AB = 2(14) = 28$."
+    }
+  ],
+  "explanation": [
+    "Midpoint means $AM = MB$, so $3x - 1 = x + 9$.",
+    "Subtract $x$ from both sides and add 1: $2x = 10$, so $x = 5$.",
+    "One half is $AM = 3(5) - 1 = 14$, and $MB = 5 + 9 = 14$ agrees.",
+    "The whole rod is both halves: $AB = 14 + 14 = 28$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Double the half",
+      "steps": [
+        "Once you know a half is 14, the rod is just two of those halves.",
+        "$AB = 2 \\times AM = 2 \\times 14 = 28$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The tempting wrong answers are 5 and 14. The 5 is only $x$, a bookkeeping number, and 14 is only HALF the rod.",
+        "Re-read the last line of the question before you answer: it asks for $AB$, the whole rod. Solve for $x$, plug in to get a half, then double it: 28."
+      ]
+    }
+  ],
+  "tags": [
+    "midpoint",
+    "algebra",
+    "segment-addition"
+  ],
+  "estimatedSeconds": 70
+}

@@ -1,0 +1,47 @@
+{
+  "id": "GEO.138",
+  "domain": "GEO",
+  "unit": 14,
+  "orderInUnit": 8,
+  "standard": "GEO.TRANS.1",
+  "difficulty": 2,
+  "prompt": "A company logo is a regular octagon. How many lines of symmetry does it have?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A line of symmetry is a fold line: the two halves must match exactly.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A line of symmetry is a fold line: the two halves must match exactly."
+    },
+    {
+      "level": "guide",
+      "text": "There are two kinds of folds here — through opposite vertices, and through the midpoints of opposite sides. Count each kind."
+    },
+    {
+      "level": "reveal",
+      "text": "$4$ vertex-to-vertex lines plus $4$ side-to-side lines gives $8$ lines of symmetry."
+    }
+  ],
+  "explanation": [
+    "A regular $n$-gon has exactly $n$ lines of symmetry, so a regular octagon has $8$.",
+    "Four of them connect opposite vertices; the other four connect the midpoints of opposite sides.",
+    "It also has $8$-fold rotational symmetry, turning onto itself every $45^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Fold a stop sign",
+      "steps": [
+        "Imagine folding a stop sign corner-to-corner: it matches, and there are $4$ pairs of opposite corners.",
+        "Now fold it edge-midpoint to edge-midpoint: it matches again, and there are $4$ pairs of opposite edges. Total $8$."
+      ]
+    }
+  ],
+  "tags": [
+    "symmetry",
+    "regular-polygon"
+  ],
+  "estimatedSeconds": 50
+}

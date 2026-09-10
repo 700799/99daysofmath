@@ -1,0 +1,51 @@
+{
+  "id": "GEO.105",
+  "domain": "GEO",
+  "unit": 11,
+  "orderInUnit": 5,
+  "standard": "GEO.CIRC.1",
+  "difficulty": 2,
+  "prompt": "A circular stained-glass window has radius $6$ inches. One colored wedge has a central angle of $120^\\circ$. Write the exact area of that wedge in terms of $\\pi$ (for example, write $7\\pi$ as 7pi).",
+  "answerType": "expression",
+  "primaryAnswer": "12pi",
+  "alternativeAnswers": [
+    "12*pi",
+    "12 pi",
+    "12π"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Sector area is a fraction of the whole circle's area: $\\frac{\\theta}{360} \\times \\pi r^2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sector area is a fraction of the whole circle's area: $\\frac{\\theta}{360} \\times \\pi r^2$."
+    },
+    {
+      "level": "guide",
+      "text": "Whole circle: $\\pi(6)^2 = 36\\pi$. And $120^\\circ$ is $\\frac{1}{3}$ of a full turn."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{3} \\times 36\\pi = 12\\pi$ square inches."
+    }
+  ],
+  "explanation": [
+    "Area of the full circle: $\\pi r^2 = \\pi(6)^2 = 36\\pi$ sq in.",
+    "$\\frac{120}{360} = \\frac{1}{3}$, so the wedge is a third of the window.",
+    "Sector area $= \\frac{1}{3}(36\\pi) = 12\\pi$ sq in (about $37.7$)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Three wedges make a window",
+      "steps": [
+        "Three $120^\\circ$ wedges fit around the center with nothing left over.",
+        "So each must be exactly one third of $36\\pi$, and $3 \\times 12\\pi = 36\\pi$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "sector-area",
+    "circle"
+  ],
+  "estimatedSeconds": 55
+}

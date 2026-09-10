@@ -1,0 +1,48 @@
+{
+  "id": "TRIG.025",
+  "domain": "TRIG",
+  "unit": 3,
+  "orderInUnit": 5,
+  "standard": "TRIG.RT.1",
+  "difficulty": 2,
+  "prompt": "A wheelchair ramp rises $2$ ft over a horizontal run of $24$ ft. What angle does the ramp make with the ground? Round to the nearest tenth of a degree.",
+  "answerType": "numeric",
+  "primaryAnswer": "4.8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You know the opposite side ($2$) and the adjacent side ($24$) — that pair points to tangent.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You know the opposite side ($2$) and the adjacent side ($24$) — that pair points to tangent."
+    },
+    {
+      "level": "guide",
+      "text": "$\\tan \\theta = \\frac{2}{24}$. To get $\\theta$ itself, use the inverse tangent, $\\tan^{-1}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\theta = \\tan^{-1}\\left(\\frac{2}{24}\\right) = \\tan^{-1}(0.08333) \\approx 4.8^\\circ$."
+    }
+  ],
+  "explanation": [
+    "The rise is opposite the angle and the run is adjacent, so use tangent: $\\tan \\theta = \\frac{2}{24}$.",
+    "Simplify: $\\frac{2}{24} = 0.08333$.",
+    "Undo the tangent with $\\tan^{-1}$: $\\theta = \\tan^{-1}(0.08333) \\approx 4.76^\\circ$, which rounds to $4.8^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the answer should be small",
+      "steps": [
+        "A ramp that climbs only 2 ft while stretching 24 ft is very gradual.",
+        "A gentle slope means a small angle, so an answer near $5^\\circ$ makes sense — the ADA slope limit is right about here."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent",
+    "inverse-trig",
+    "ramp"
+  ],
+  "estimatedSeconds": 60
+}

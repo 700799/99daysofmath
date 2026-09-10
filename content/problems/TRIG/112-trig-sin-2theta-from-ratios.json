@@ -1,0 +1,51 @@
+{
+  "id": "TRIG.112",
+  "domain": "TRIG",
+  "unit": 12,
+  "orderInUnit": 2,
+  "standard": "TRIG.IDENT.2",
+  "difficulty": 1,
+  "prompt": "If $\\sin\\theta = \\frac{3}{5}$ and $\\cos\\theta = \\frac{4}{5}$, find $\\sin(2\\theta)$. Give a fraction or a decimal.",
+  "answerType": "numeric",
+  "primaryAnswer": "24/25",
+  "alternativeAnswers": [
+    "0.96",
+    ".96"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Use $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$."
+    },
+    {
+      "level": "guide",
+      "text": "Substitute: $2 \\times \\frac{3}{5} \\times \\frac{4}{5}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2 \\times \\frac{12}{25} = \\frac{24}{25} = 0.96$."
+    }
+  ],
+  "explanation": [
+    "The double-angle formula is $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$.",
+    "Substituting, $\\sin(2\\theta) = 2 \\cdot \\frac{3}{5} \\cdot \\frac{4}{5} = \\frac{24}{25}$.",
+    "As a decimal that is $0.96$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Does the size make sense?",
+      "steps": [
+        "$\\sin\\theta = 0.6$ puts $\\theta$ near $37^\\circ$, so $2\\theta$ is near $74^\\circ$.",
+        "$\\sin 74^\\circ$ should be large, close to but under $1$.",
+        "$0.96$ fits perfectly."
+      ]
+    }
+  ],
+  "tags": [
+    "double-angle",
+    "evaluate"
+  ],
+  "estimatedSeconds": 40
+}

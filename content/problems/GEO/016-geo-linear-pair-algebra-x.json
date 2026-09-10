@@ -1,0 +1,48 @@
+{
+  "id": "GEO.016",
+  "domain": "GEO",
+  "unit": 2,
+  "orderInUnit": 6,
+  "standard": "GEO.ANG.1",
+  "difficulty": 2,
+  "prompt": "A skate ramp leans against a straight rail, forming a linear pair of angles measuring $(2x + 10)^\\circ$ and $(3x)^\\circ$. Find $x$.",
+  "answerType": "numeric",
+  "primaryAnswer": "34",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A linear pair always adds to $180^\\circ$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A linear pair always adds to $180^\\circ$."
+    },
+    {
+      "level": "guide",
+      "text": "Write $(2x + 10) + 3x = 180$ and combine like terms."
+    },
+    {
+      "level": "reveal",
+      "text": "$5x + 10 = 180$, so $5x = 170$ and $x = 34$."
+    }
+  ],
+  "explanation": [
+    "The two angles form a linear pair, so their measures sum to $180^\\circ$.",
+    "$(2x + 10) + 3x = 180$ becomes $5x + 10 = 180$.",
+    "Subtract 10 and divide by 5: $5x = 170$, so $x = 34$.",
+    "Check: the angles are $78^\\circ$ and $102^\\circ$, and $78 + 102 = 180$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check by measuring",
+      "steps": [
+        "Plug $x = 34$ back in: $2(34) + 10 = 78$ and $3(34) = 102$.",
+        "Those two angles do lie along a straight rail, since $78 + 102 = 180$."
+      ]
+    }
+  ],
+  "tags": [
+    "linear-pair",
+    "algebra"
+  ],
+  "estimatedSeconds": 50
+}

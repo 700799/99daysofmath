@@ -1,0 +1,70 @@
+{
+  "id": "GEO.093",
+  "domain": "GEO",
+  "unit": 10,
+  "orderInUnit": 3,
+  "standard": "GEO.QUAD.1",
+  "difficulty": 1,
+  "prompt": "Which statement is true for **every** rectangle but **not** for every rhombus?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Opposite sides are parallel",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "The diagonals are congruent (equal in length)",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "The diagonals bisect each other",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "All four sides are congruent",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Both shapes are parallelograms, so anything true of all parallelograms will be true of both — those cannot be the answer.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Both shapes are parallelograms, so anything true of all parallelograms will be true of both — those cannot be the answer."
+    },
+    {
+      "level": "guide",
+      "text": "Picture a long skinny rhombus (a squashed diamond). Are its two diagonals the same length?"
+    },
+    {
+      "level": "reveal",
+      "text": "No — one is long and one is short. But a rectangle's diagonals are always equal. Choice B."
+    }
+  ],
+  "explanation": [
+    "A and C are true of every parallelogram, so they do not separate the two shapes.",
+    "D is true of every rhombus but false for a non-square rectangle — that is backwards from what the question asks.",
+    "B is the winner: rectangles always have congruent diagonals, while a squashed rhombus has one long and one short diagonal."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test with extreme shapes",
+      "steps": [
+        "Imagine a rhombus flattened almost to a line: the diagonals are wildly different lengths.",
+        "Now imagine any rectangle: both diagonals stretch corner to corner across the same rectangle, so they must match."
+      ]
+    }
+  ],
+  "tags": [
+    "quadrilateral-properties",
+    "rectangle",
+    "rhombus"
+  ],
+  "estimatedSeconds": 50
+}

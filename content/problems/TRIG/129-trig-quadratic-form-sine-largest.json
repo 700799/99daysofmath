@@ -1,0 +1,63 @@
+{
+  "id": "TRIG.129",
+  "domain": "TRIG",
+  "unit": 13,
+  "orderInUnit": 9,
+  "standard": "TRIG.EQ.1",
+  "difficulty": 3,
+  "prompt": "Solve $2\\sin^2 x + \\sin x - 1 = 0$ for $0^\\circ \\le x < 360^\\circ$. What is the LARGEST solution, in degrees?",
+  "answerType": "numeric",
+  "primaryAnswer": "270",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Let $u = \\sin x$ and factor the quadratic $2u^2 + u - 1 = 0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Let $u = \\sin x$ and factor the quadratic $2u^2 + u - 1 = 0$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up on $\\sin^2 x - \\sin x = 0$: it factors as $\\sin x(\\sin x - 1) = 0$, giving $0^\\circ$ and $180^\\circ$ from one branch and $90^\\circ$ from the other, so the largest is $180^\\circ$. Solve every branch before comparing."
+    },
+    {
+      "level": "guide",
+      "text": "It factors as $(2u - 1)(u + 1) = 0$, so $\\sin x = \\frac{1}{2}$ or $\\sin x = -1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin x = \\frac{1}{2}$ gives $30^\\circ$ and $150^\\circ$; $\\sin x = -1$ gives $270^\\circ$, the largest."
+    }
+  ],
+  "explanation": [
+    "Substituting $u = \\sin x$ turns the equation into $2u^2 + u - 1 = 0$.",
+    "Factoring gives $(2u - 1)(u + 1) = 0$, so $\\sin x = \\frac{1}{2}$ or $\\sin x = -1$.",
+    "From $\\sin x = \\frac{1}{2}$: $x = 30^\\circ$ and $x = 150^\\circ$. From $\\sin x = -1$: $x = 270^\\circ$, the bottom of the unit circle.",
+    "The three solutions are $30^\\circ$, $150^\\circ$ and $270^\\circ$, so the largest is $270^\\circ$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check each answer",
+      "steps": [
+        "At $x = 270^\\circ$: $2(-1)^2 + (-1) - 1 = 2 - 1 - 1 = 0$ ✓",
+        "At $x = 150^\\circ$: $2\\left(\\frac{1}{4}\\right) + \\frac{1}{2} - 1 = \\frac{1}{2} + \\frac{1}{2} - 1 = 0$ ✓",
+        "Both branches genuinely solve the equation, so neither can be thrown away."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The trap is answering $150^\\circ$, because students solve $\\sin x = \\frac{1}{2}$, find two nice angles, and quietly drop the $\\sin x = -1$ branch as \"the ugly one\".",
+        "But $\\sin x = -1$ is perfectly legal — sine really does reach $-1$, at $270^\\circ$ — and it produces the largest solution of all.",
+        "The habit: after factoring, write BOTH branches on separate lines and solve each fully before comparing. The answer is $270^\\circ$."
+      ]
+    }
+  ],
+  "tags": [
+    "quadratic-form",
+    "factoring",
+    "lost-solutions"
+  ],
+  "estimatedSeconds": 90
+}

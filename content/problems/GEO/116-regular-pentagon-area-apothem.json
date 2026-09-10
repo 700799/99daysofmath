@@ -1,0 +1,48 @@
+{
+  "id": "GEO.116",
+  "domain": "GEO",
+  "unit": 12,
+  "orderInUnit": 6,
+  "standard": "GEO.AREA.1",
+  "difficulty": 2,
+  "prompt": "A regular pentagon tabletop has sides of $8$ inches and an apothem (the distance from the center to the middle of a side) of $5.5$ inches. What is its area, in square inches?",
+  "answerType": "numeric",
+  "primaryAnswer": "110",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "For a regular polygon, $A = \\frac{1}{2} \\times \\text{perimeter} \\times \\text{apothem}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "For a regular polygon, $A = \\frac{1}{2} \\times \\text{perimeter} \\times \\text{apothem}$."
+    },
+    {
+      "level": "guide",
+      "text": "Perimeter $= 5 \\times 8 = 40$ inches."
+    },
+    {
+      "level": "reveal",
+      "text": "$A = \\frac{1}{2}(40)(5.5) = 20 \\times 5.5 = 110$ square inches."
+    }
+  ],
+  "explanation": [
+    "Find the perimeter first: five sides of $8$ in give $P = 40$ in.",
+    "Apply $A = \\frac{1}{2}Pa = \\frac{1}{2}(40)(5.5)$.",
+    "$20 \\times 5.5 = 110$ square inches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Five triangles from the center",
+      "steps": [
+        "Draw segments from the center to each corner: the pentagon becomes $5$ identical triangles, each with base $8$ and height $5.5$ (the apothem).",
+        "One triangle is $\\frac{1}{2}(8)(5.5) = 22$ sq in, and $5 \\times 22 = 110$ sq in. That is exactly what the $\\frac{1}{2}Pa$ formula packages up."
+      ]
+    }
+  ],
+  "tags": [
+    "area",
+    "regular-polygon",
+    "apothem"
+  ],
+  "estimatedSeconds": 65
+}

@@ -9,9 +9,23 @@ import stories from '../src/data/mathStories.json';
 // every story is expanded (≥7 beats, meaty bodies), and every mathematician
 // has a 12–20-slide deck.
 
+// Geometry and Trigonometry ship text-first: their problem banks and lessons
+// are complete, but their slide decks are a later phase — the same way Algebra
+// 1 and Precalculus shipped before theirs were authored. Every lesson that DOES
+// carry a deck still has to meet the full bar below, and the list is asserted
+// exactly, so a deck cannot go missing anywhere else without this failing.
+const TEXT_FIRST_DOMAINS: string[] = ['GEO', 'TRIG'];
+const DECKED = LESSONS.filter((l) => !TEXT_FIRST_DOMAINS.includes(l.domain));
+
 describe('lesson slide decks', () => {
+  it('only the text-first courses are without a deck', () => {
+    const without = LESSONS.filter((l) => !(l.slides?.length ?? 0)).map((l) => l.domain);
+    expect([...new Set(without)].sort()).toEqual([...TEXT_FIRST_DOMAINS].sort());
+    expect(DECKED.length).toBeGreaterThan(60);
+  });
+
   it('every lesson has 12–22 slides with non-empty head/body', () => {
-    for (const l of LESSONS) {
+    for (const l of DECKED) {
       const key = lessonKey(l.domain, l.unit);
       expect(l.slides, `${key} has no slide deck`).toBeDefined();
       const s = l.slides!;
@@ -25,7 +39,7 @@ describe('lesson slide decks', () => {
   });
 
   it('every deck covers the full arc: objective, concept, example, protip, trap, challenge, summary', () => {
-    for (const l of LESSONS) {
+    for (const l of DECKED) {
       const key = lessonKey(l.domain, l.unit);
       const kinds = new Set((l.slides ?? []).map((s) => s.kind));
       for (const k of ['objective', 'concept', 'example', 'protip', 'trap', 'challenge', 'summary'] as const) {
@@ -35,7 +49,7 @@ describe('lesson slide decks', () => {
   });
 
   it('decks have enough teaching depth (3+ concepts, 6+ examples)', () => {
-    for (const l of LESSONS) {
+    for (const l of DECKED) {
       const key = lessonKey(l.domain, l.unit);
       const by = (k: string) => (l.slides ?? []).filter((s) => s.kind === k).length;
       expect(by('concept'), `${key} concepts`).toBeGreaterThanOrEqual(3);
@@ -44,7 +58,7 @@ describe('lesson slide decks', () => {
   });
 
   it('every deck shows an alternate problem-solving approach ("Another way…")', () => {
-    for (const l of LESSONS) {
+    for (const l of DECKED) {
       const key = lessonKey(l.domain, l.unit);
       const hasAlt = (l.slides ?? []).some(
         (s) => s.kind === 'example' && s.head.toLowerCase().startsWith('another way'),

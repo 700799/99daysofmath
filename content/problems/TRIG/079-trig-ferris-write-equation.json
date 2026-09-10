@@ -1,0 +1,85 @@
+{
+  "id": "TRIG.079",
+  "domain": "TRIG",
+  "unit": 8,
+  "orderInUnit": 9,
+  "standard": "TRIG.GRAPH.2",
+  "difficulty": 3,
+  "prompt": "A Ferris wheel has diameter $40$ m, its lowest seat is $2$ m above the ground, and it takes $60$ seconds per turn. You board at the lowest point at $t = 0$. Which equation gives your height $h$, in metres, after $t$ seconds?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$h = 22 - 20\\cos\\left(\\frac{\\pi t}{30}\\right)$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$h = 22 + 20\\cos\\left(\\frac{\\pi t}{30}\\right)$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$h = 20 - 40\\cos\\left(\\frac{\\pi t}{30}\\right)$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$h = 22 - 20\\cos(60t)$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Radius is half the diameter, and the centre sits one radius above the lowest seat.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Radius is half the diameter, and the centre sits one radius above the lowest seat."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up on a smaller wheel: diameter $10$, lowest seat $1$ m, one turn in $20$ s gives radius $5$, midline $1 + 5 = 6$, and $B = \\frac{2\\pi}{20} = \\frac{\\pi}{10}$, so $h = 6 - 5\\cos\\left(\\frac{\\pi t}{10}\\right)$. Build yours from the same four pieces."
+    },
+    {
+      "level": "guide",
+      "text": "Amplitude $= 20$, midline $= 2 + 20 = 22$, and period $60$ forces $B = \\frac{2\\pi}{60} = \\frac{\\pi}{30}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Starting at the BOTTOM needs a flipped cosine: $h = 22 - 20\\cos\\left(\\frac{\\pi t}{30}\\right)$."
+    }
+  ],
+  "explanation": [
+    "The radius is $\\frac{40}{2} = 20$ m, so the amplitude is $20$.",
+    "The centre of the wheel is one radius above the lowest seat: $2 + 20 = 22$ m, which is the midline.",
+    "One turn takes $60$ s, so $\\frac{2\\pi}{B} = 60$ and $B = \\frac{\\pi}{30}$.",
+    "At $t = 0$ you are at the minimum, and a negative cosine starts at its minimum: $h = 22 - 20\\cos\\left(\\frac{\\pi t}{30}\\right)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test $t = 0$ and $t = 30$",
+      "steps": [
+        "At $t = 0$ choice A gives $22 - 20(1) = 2$ m — the boarding platform. Correct.",
+        "At $t = 30$ (half a turn) it gives $22 - 20(-1) = 42$ m, which is $2 + 40$, the very top. Correct."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The tempting wrong answer is B, $h = 22 + 20\\cos\\left(\\frac{\\pi t}{30}\\right)$, because $+\\cos$ looks like the \"normal\" choice.",
+        "But test it: at $t = 0$ it gives $22 + 20 = 42$ m, which would mean you boarded at the top of the wheel, forty metres up.",
+        "Always plug in $t = 0$ and check it against where the story says you start. A plain cosine starts at the MAXIMUM; if the story starts you at the minimum, you need the minus sign."
+      ]
+    }
+  ],
+  "tags": [
+    "write-equation",
+    "ferris-wheel",
+    "modelling",
+    "reflection"
+  ],
+  "estimatedSeconds": 90
+}
