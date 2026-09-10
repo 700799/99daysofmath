@@ -1,13 +1,22 @@
-export type Domain = '5.F' | '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'A1' | 'PC' | 'SAT';
+export type Domain =
+  | '5.F' | '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP'
+  | 'A1' | 'GEO' | 'TRIG' | 'PC' | 'SAT';
 
-export const DOMAINS: Domain[] = ['5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'A1', 'PC', 'SAT'];
+export const DOMAINS: Domain[] = [
+  '5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'A1', 'GEO', 'TRIG', 'PC', 'SAT',
+];
 
 /**
- * Domains that appear as a bubble trail on Home. SAT Math is excluded because
- * it has its own section at /sat — a test-prep surface with playbooks, drills,
- * and full-length mock tests rather than a star trail.
+ * Domains that have a bubble trail of units at /trail/:domain. SAT Math is
+ * excluded because it has its own section at /sat — a test-prep surface with
+ * playbooks, drills, and full-length mock tests rather than a star trail.
+ *
+ * A domain is a body of content; what a student picks on Home is a *course*
+ * (see src/data/courses.ts), which may gather more than one domain.
  */
-export const TRAIL_DOMAINS: Domain[] = ['5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'A1', 'PC'];
+export const TRAIL_DOMAINS: Domain[] = [
+  '5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'A1', 'GEO', 'TRIG', 'PC',
+];
 
 /**
  * The six grade-5/6 domains that feed the SHARED assessments (Finals, Mock
@@ -19,6 +28,8 @@ export const CORE_DOMAINS: Domain[] = ['5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.
 /** Human grade/course label for a domain (used in titles, SEO, headers). */
 export function gradeLabelFor(domain: Domain): string {
   if (domain === 'A1') return 'Algebra 1';
+  if (domain === 'GEO') return 'Geometry';
+  if (domain === 'TRIG') return 'Trigonometry';
   if (domain === 'PC') return 'Precalculus';
   if (domain === 'SAT') return 'SAT Math';
   return domain.startsWith('5.') ? '5th grade' : '6th grade';
@@ -27,6 +38,8 @@ export function gradeLabelFor(domain: Domain): string {
 /** Full course display name for SEO/titles, e.g. "Ratios & Proportions — 6th Grade Math" or "Algebra 1 for Middle School". */
 export function domainCourseName(domain: Domain): string {
   if (domain === 'A1') return 'Algebra 1 for Middle School';
+  if (domain === 'GEO') return 'High School Geometry';
+  if (domain === 'TRIG') return 'Trigonometry';
   if (domain === 'PC') return 'Precalculus for Middle School';
   if (domain === 'SAT') return 'Digital SAT Math Prep';
   const grade = domain.startsWith('5.') ? '5th' : '6th';
@@ -41,6 +54,10 @@ export const DOMAIN_LABELS: Record<Domain, string> = {
   '6.G': 'Geometry',
   '6.SP': 'Statistics & Probability',
   A1: 'Algebra 1',
+  // The course is called "Geometry"; this domain is its high-school half, and
+  // 6.G above is the 6th-grade foundations half, so the labels stay distinct.
+  GEO: 'High School Geometry',
+  TRIG: 'Trigonometry',
   PC: 'Precalculus',
   SAT: 'SAT Math',
 };
@@ -53,6 +70,8 @@ export const DOMAIN_DESCRIPTIONS: Record<Domain, string> = {
   '6.G': 'Area, surface area, volume, and polygons',
   '6.SP': 'Data displays, measures of center, and variability',
   A1: 'Equations, inequalities, functions, lines, systems, exponents, and quadratics',
+  GEO: 'Proof, congruence, similarity, right triangles, circles, solids, and transformations',
+  TRIG: 'Angles and radians, the unit circle, graphs of the trig functions, identities, equations, and the triangle laws',
   PC: 'Function transformations, polynomials, logarithms, trigonometry, sequences, and limits',
   SAT: 'The full Digital SAT Math blueprint: algebra, advanced math, problem-solving and data analysis, and geometry and trigonometry',
 };
@@ -67,6 +86,8 @@ export const DOMAIN_COLORS: Record<Domain, string> = {
   '6.G': '#B07C4F',  // clay
   '6.SP': '#A85F5F', // brick
   A1: '#5A6E9E',     // indigo slate
+  GEO: '#A8763F',    // ochre — a warmer sibling of 6.G's clay, its foundation
+  TRIG: '#4C8C6E',   // pine
   PC: '#8C5F7D',     // mauve
   SAT: '#3E6B7A',    // petrol — the capstone section
 };
@@ -79,6 +100,8 @@ export const DOMAIN_EMOJI: Record<Domain, string> = {
   '6.G': '📐',
   '6.SP': '📊',
   A1: '🚀',
+  GEO: '📏',
+  TRIG: '🌊',
   PC: '🎢',
   SAT: '🎯',
 };

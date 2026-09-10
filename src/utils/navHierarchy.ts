@@ -1,4 +1,5 @@
 import { DOMAINS, type Domain } from '../types/problem';
+import { courseOfDomain } from '../data/courses';
 
 // ── Where "back" goes ──────────────────────────────────────────────────────
 // Every screen below Home has a parent in the hierarchy the app presents: a
@@ -30,6 +31,8 @@ const DOMAIN_BACK_LABEL: Record<Domain, string> = {
   '6.G': 'Geometry',
   '6.SP': 'Statistics',
   A1: 'Algebra 1',
+  GEO: 'Geometry',
+  TRIG: 'Trig',
   PC: 'Precalculus',
   SAT: 'SAT Math',
 };
@@ -82,7 +85,22 @@ export function parentOf(pathname: string): ParentLink | null {
     case 'arcade':
       return seg.length > 1 ? { to: '/arcade', label: 'Arcade' } : HOME;
 
-    // Trails and every other top-level page answer to Home.
+    // A trail steps up to its course when that course gathers more than one
+    // strand — a 6th-grade trail back to 6th Grade Common Core, say — and
+    // otherwise straight to Home, since a one-strand course page is itself
+    // just a redirect to the trail.
+    case 'trail': {
+      const domain = seg[1];
+      if (!isDomain(domain)) return HOME;
+      const course = courseOfDomain(domain);
+      if (!course || course.strands.length < 2) return HOME;
+      return { to: `/course/${course.id}`, label: course.short };
+    }
+
+    case 'course':
+      return HOME;
+
+    // Every other top-level page answers to Home.
     default:
       return HOME;
   }

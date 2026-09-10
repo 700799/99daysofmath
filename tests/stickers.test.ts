@@ -19,9 +19,11 @@ const baseCtx = () => ({
 });
 
 describe('STICKER_DEFS', () => {
-  it('has 120 total stickers', () => {
-    // 84 unit (5×10 + 1×6 + 2×14) + 8 streak + 4 accuracy + 5 XP + 9 mastery + 10 challenge
-    expect(TOTAL_STICKERS).toBe(138);
+  it('has one sticker per unit, plus the achievement sets', () => {
+    // 112 unit (5×10 six-grade strands + 1×6 grade-5 + 4×14 for Algebra 1,
+    // Geometry, Trigonometry and Precalculus) + 8 streak + 4 accuracy
+    // + 5 XP + 9 mastery + 10 challenge + 18 SAT.
+    expect(TOTAL_STICKERS).toBe(166);
   });
 
   it('every sticker ID is unique', () => {

@@ -720,6 +720,20 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       stateAny[key] = rec;
     }
   }
+  if (fromVersion < 26) {
+    // Home is reorganised into seven courses, and Geometry and Trigonometry
+    // arrive as courses of their own. Both are new domains, so seed their
+    // trail records; every existing domain — 6.G included, which the Geometry
+    // course now also draws on — keeps the stars it already has.
+    const stateAny = state as Record<string, unknown>;
+    const byDomain = (stateAny.byDomain ?? {}) as Record<string, unknown>;
+    for (const d of ['GEO', 'TRIG']) {
+      if (byDomain[d] === undefined) {
+        byDomain[d] = { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] };
+      }
+    }
+    stateAny.byDomain = byDomain;
+  }
   if (fromVersion < 25) {
     // The SAT Math section arrives: seed its trail record (drills award stars
     // through the same recordUnitResult path as every other domain) and the
@@ -1378,7 +1392,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 25,
+      version: 26,
       migrate: migrateProgress,
     },
   ),
