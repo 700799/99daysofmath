@@ -1,0 +1,71 @@
+{
+  "id": "5.F.084",
+  "domain": "5.F",
+  "unit": 9,
+  "orderInUnit": 4,
+  "standard": "5.NBT.B.7",
+  "difficulty": 1,
+  "prompt": "What is $7 - 0.4$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "6.6",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "3",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "6.96",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "7.4",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Rewrite $7$ as $7.0$ so both numbers have a tenths place.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Rewrite $7$ as $7.0$ so both numbers have a tenths place."
+    },
+    {
+      "level": "guide",
+      "text": "You cannot take $4$ tenths from $0$ tenths, so borrow: $7.0$ becomes $6$ wholes and $10$ tenths."
+    },
+    {
+      "level": "reveal",
+      "text": "$10 - 4 = 6$ tenths, and $6$ wholes are left, giving $6.6$ — choose A."
+    }
+  ],
+  "explanation": [
+    "Write $7$ as $7.0$ so the tenths line up.",
+    "There are $0$ tenths on top, so regroup one whole into $10$ tenths: $7.0$ becomes $6$ and $10$ tenths.",
+    "$10 - 4 = 6$ tenths, and the whole-number part is $6$.",
+    "So $7 - 0.4 = 6.6$, which is choice A."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the others are wrong",
+      "steps": [
+        "$3$ comes from ignoring the decimal and doing $7 - 4$.",
+        "$6.96$ comes from treating $0.4$ as $0.04$.",
+        "$7.4$ comes from adding instead of subtracting."
+      ]
+    }
+  ],
+  "tags": [
+    "decimals",
+    "subtraction"
+  ],
+  "estimatedSeconds": 40
+}

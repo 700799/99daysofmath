@@ -1,0 +1,65 @@
+{
+  "id": "5.F.080",
+  "domain": "5.F",
+  "unit": 8,
+  "orderInUnit": 10,
+  "standard": "5.NBT.A.2",
+  "difficulty": 3,
+  "prompt": "How many times greater is $6.4 \\times 10^5$ than $6.4 \\times 10^2$?",
+  "answerType": "numeric",
+  "primaryAnswer": "1000",
+  "alternativeAnswers": [
+    "1,000"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Try it small: $5 \\times 10^2 = 500$ and $5 \\times 10^1 = 50$. Since $500 \\div 50 = 10$, the bigger one is $10$ times greater — and the exponents differ by $1$. The gap in the exponents is what counts.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try it small: $5 \\times 10^2 = 500$ and $5 \\times 10^1 = 50$. Since $500 \\div 50 = 10$, the bigger one is $10$ times greater — and the exponents differ by $1$. The gap in the exponents is what counts."
+    },
+    {
+      "level": "nudge",
+      "text": "Write both numbers out as regular numbers and compare them."
+    },
+    {
+      "level": "guide",
+      "text": "$6.4 \\times 10^5 = 640{,}000$ and $6.4 \\times 10^2 = 640$. Now divide the big one by the small one."
+    },
+    {
+      "level": "reveal",
+      "text": "$640{,}000 \\div 640 = 1{,}000$."
+    }
+  ],
+  "explanation": [
+    "Write both out: $6.4 \\times 10^5 = 640{,}000$ and $6.4 \\times 10^2 = 640$.",
+    "To compare sizes, divide: $640{,}000 \\div 640 = 1{,}000$.",
+    "That matches the exponents: the exponent goes up by $5 - 2 = 3$, and three extra factors of ten is $10^3 = 1{,}000$.",
+    "So the first number is $1{,}000$ times greater."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the shifts",
+      "steps": [
+        "Going from $640$ to $6{,}400$ to $64{,}000$ to $640{,}000$ takes three shifts.",
+        "Three shifts means $\\times 10 \\times 10 \\times 10 = 1{,}000$ ✓"
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The tempting wrong answer is $3$, because $5 - 2 = 3$.",
+        "But the $3$ counts how many **extra tens** there are, not how many times greater the number is.",
+        "Three extra tens multiply together: $10 \\times 10 \\times 10 = 1{,}000$, so the answer is $1{,}000$, not $3$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "powers-of-ten",
+    "exponents",
+    "comparison"
+  ],
+  "estimatedSeconds": 70
+}

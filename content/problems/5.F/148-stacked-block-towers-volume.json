@@ -1,0 +1,49 @@
+{
+  "id": "5.F.148",
+  "domain": "5.F",
+  "unit": 15,
+  "orderInUnit": 8,
+  "standard": "5.MD.C.5",
+  "difficulty": 2,
+  "prompt": "A play structure is built from two rectangular block towers stacked together. The bottom part is $6$ cm long, $2$ cm wide, and $3$ cm tall. The top part sits on it and is $2$ cm long, $2$ cm wide, and $3$ cm tall. What is the total volume, in cubic centimeters?",
+  "answerType": "numeric",
+  "primaryAnswer": "48",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the volume of each box on its own, then put the two volumes together.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the volume of each box on its own, then put the two volumes together."
+    },
+    {
+      "level": "guide",
+      "text": "Bottom: $6 \\times 2 \\times 3$. Top: $2 \\times 2 \\times 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$36 + 12 = 48$ cubic centimeters."
+    }
+  ],
+  "explanation": [
+    "Bottom part: $6 \\times 2 \\times 3 = 36$ cubic centimeters.",
+    "Top part: $2 \\times 2 \\times 3 = 12$ cubic centimeters.",
+    "Because the two parts do not overlap, add them: $36 + 12 = 48$ cubic centimeters."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count layers",
+      "steps": [
+        "The bottom has $3$ layers of $12$ cubes: $36$.",
+        "The top has $3$ layers of $4$ cubes: $12$.",
+        "$36 + 12 = 48$ cubes in all."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "volume",
+    "composite-solids"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,49 @@
+{
+  "id": "5.F.071",
+  "domain": "5.F",
+  "unit": 8,
+  "orderInUnit": 1,
+  "standard": "5.NBT.A.2",
+  "difficulty": 1,
+  "prompt": "What is $10^5$ written as a regular number?",
+  "answerType": "numeric",
+  "primaryAnswer": "100000",
+  "alternativeAnswers": [
+    "100,000"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The little raised number tells you how many $10$s get multiplied together.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The little raised number tells you how many $10$s get multiplied together."
+    },
+    {
+      "level": "guide",
+      "text": "$10^5 = 10 \\times 10 \\times 10 \\times 10 \\times 10$ — that is five zeros after the $1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$10^5 = 100{,}000$."
+    }
+  ],
+  "explanation": [
+    "The exponent $5$ means five factors of $10$: $10 \\times 10 \\times 10 \\times 10 \\times 10$.",
+    "Each $\\times 10$ tacks on one zero, starting from $1$.",
+    "Five zeros gives $100{,}000$, which we read as one hundred thousand."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build it up",
+      "steps": [
+        "$10^1 = 10$, $10^2 = 100$, $10^3 = 1{,}000$.",
+        "Each step multiplies by $10$ again: $10^4 = 10{,}000$ and $10^5 = 100{,}000$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "powers-of-ten",
+    "exponents"
+  ],
+  "estimatedSeconds": 30
+}

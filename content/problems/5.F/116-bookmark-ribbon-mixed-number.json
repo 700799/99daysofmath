@@ -1,0 +1,52 @@
+{
+  "id": "5.F.116",
+  "domain": "5.F",
+  "unit": 12,
+  "orderInUnit": 6,
+  "standard": "5.NF.B.6",
+  "difficulty": 2,
+  "prompt": "Each bookmark uses $1\\frac{1}{4}$ feet of ribbon. How much ribbon do $6$ bookmarks use? (Answer as a mixed number.)",
+  "answerType": "fraction",
+  "primaryAnswer": "7 1/2",
+  "alternativeAnswers": [
+    "15/2",
+    "7.5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Turn the mixed number into an improper fraction first: $1\\frac{1}{4} = \\frac{5}{4}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Turn the mixed number into an improper fraction first: $1\\frac{1}{4} = \\frac{5}{4}$."
+    },
+    {
+      "level": "guide",
+      "text": "Now find $6 \\times \\frac{5}{4} = \\frac{30}{4}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{30}{4} = 7\\frac{2}{4} = 7\\frac{1}{2}$ feet."
+    }
+  ],
+  "explanation": [
+    "Rewrite the mixed number: $1\\frac{1}{4} = \\frac{4}{4} + \\frac{1}{4} = \\frac{5}{4}$.",
+    "Six bookmarks need $6 \\times \\frac{5}{4} = \\frac{30}{4}$ feet.",
+    "$30 \\div 4 = 7$ with $2$ left over, so $\\frac{30}{4} = 7\\frac{2}{4} = 7\\frac{1}{2}$.",
+    "The six bookmarks use $7\\frac{1}{2}$ feet of ribbon."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Split the mixed number",
+      "steps": [
+        "$6 \\times 1 = 6$ feet from the whole parts.",
+        "$6 \\times \\frac{1}{4} = \\frac{6}{4} = 1\\frac{1}{2}$ feet from the quarter parts.",
+        "$6 + 1\\frac{1}{2} = 7\\frac{1}{2}$ feet."
+      ]
+    }
+  ],
+  "tags": [
+    "fractions",
+    "mixed-numbers"
+  ],
+  "estimatedSeconds": 60
+}

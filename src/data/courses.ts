@@ -131,9 +131,9 @@ export const COURSES: Course[] = [
     short: '5th Grade',
     emoji: '🧱',
     color: DOMAIN_COLORS['5.F'],
-    kicker: 'The year before',
+    kicker: 'Standards and MAP prep',
     blurb:
-      'Fractions and decimals, place value, multi-digit arithmetic, measurement and volume, and the coordinate plane — the ground everything above stands on.',
+      'Fractions and decimals, place value, multi-digit arithmetic, measurement and volume, and the coordinate plane — plus NWEA MAP Growth prep organised by instructional area, with an adaptive practice test.',
     strands: [{ domain: '5.F', label: '5th Grade Foundations' }],
   },
 ];

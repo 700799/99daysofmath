@@ -1,0 +1,64 @@
+{
+  "id": "5.F.130",
+  "domain": "5.F",
+  "unit": 13,
+  "orderInUnit": 10,
+  "standard": "5.OA.A.1",
+  "difficulty": 3,
+  "prompt": "Evaluate: $[(18 + 6) \\div 3] \\times [15 - (2 \\times 4)]$",
+  "answerType": "numeric",
+  "primaryAnswer": "56",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Warm up on $[(4 + 2) \\div 3] \\times [10 - (2 \\times 3)]$. Left bracket: $6 \\div 3 = 2$. Right bracket: $10 - 6 = 4$. Then $2 \\times 4 = 8$. Same two-bracket plan below.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up on $[(4 + 2) \\div 3] \\times [10 - (2 \\times 3)]$. Left bracket: $6 \\div 3 = 2$. Right bracket: $10 - 6 = 4$. Then $2 \\times 4 = 8$. Same two-bracket plan below."
+    },
+    {
+      "level": "nudge",
+      "text": "Treat the two brackets as two separate mini-problems, then multiply your two results."
+    },
+    {
+      "level": "guide",
+      "text": "Left bracket: $18 + 6 = 24$, then $24 \\div 3$. Right bracket: $2 \\times 4 = 8$, then $15 - 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "Left is $8$, right is $7$, and $8 \\times 7 = 56$."
+    }
+  ],
+  "explanation": [
+    "Left bracket: the parentheses go first, $18 + 6 = 24$, then $24 \\div 3 = 8$.",
+    "Right bracket: the parentheses go first, $2 \\times 4 = 8$, then $15 - 8 = 7$.",
+    "Now multiply the two finished brackets: $8 \\times 7 = 56$.",
+    "The expression equals $56$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Write it as a shrinking line",
+      "steps": [
+        "$[(18 + 6) \\div 3] \\times [15 - (2 \\times 4)]$",
+        "$= [24 \\div 3] \\times [15 - 8]$",
+        "$= 8 \\times 7 = 56$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "A very common wrong answer is $140$: that comes from reading the left bracket as $18 + 6 \\div 3 = 18 + 2 = 20$, then $20 \\times 7$.",
+        "The inner parentheses around $18 + 6$ are exactly what stops that — they say add first, divide second.",
+        "Escape it by copying the expression and physically crossing out each pair of parentheses as you finish it, so you never skip one."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "order-of-operations",
+    "brackets",
+    "multi-step"
+  ],
+  "estimatedSeconds": 75
+}

@@ -3,6 +3,7 @@ import {
   checkAllEarning,
   STICKER_DEFS,
   TOTAL_STICKERS,
+  UNIT_COUNT_BY_DOMAIN,
 } from '../src/utils/encouragement';
 import { DOMAINS, type Domain } from '../src/types/problem';
 
@@ -20,10 +21,24 @@ const baseCtx = () => ({
 
 describe('STICKER_DEFS', () => {
   it('has one sticker per unit, plus the achievement sets', () => {
-    // 112 unit (5×10 six-grade strands + 1×6 grade-5 + 4×14 for Algebra 1,
-    // Geometry, Trigonometry and Precalculus) + 8 streak + 4 accuracy
-    // + 5 XP + 9 mastery + 10 challenge + 18 SAT.
-    expect(TOTAL_STICKERS).toBe(166);
+    // Derived rather than written down: every domain that gains or loses units
+    // used to silently break this count. SAT drills award SAT-specific
+    // stickers instead of unit ones, so its units are excluded.
+    const unitStickers = Object.entries(UNIT_COUNT_BY_DOMAIN)
+      .filter(([d]) => d !== 'SAT')
+      .reduce((sum, [, units]) => sum + units, 0);
+    const FIXED = 8 + 4 + 5 + 11 + 10 + 18; // streak, accuracy, XP, mastery, challenge, SAT
+    expect(TOTAL_STICKERS).toBe(unitStickers + FIXED);
+  });
+
+  it('every mastery sticker the rules can award actually exists', () => {
+    // checkAllEarning adds `mastery-<domain>` for every domain, so a new course
+    // without a definition would award a sticker that renders as nothing.
+    const ids = new Set(STICKER_DEFS.map((s) => s.id));
+    for (const d of DOMAINS) {
+      if (d === 'SAT') continue;
+      expect(ids.has(`mastery-${d}`), `no sticker defined for mastery-${d}`).toBe(true);
+    }
   });
 
   it('every sticker ID is unique', () => {
@@ -125,9 +140,11 @@ describe('checkAllEarning — mastery family', () => {
     expect(earned).not.toContain('mastery-6.RP');
   });
 
-  it('awards mastery-grand when all 5 domains completed', () => {
+  it('awards mastery-grand when every core domain is completed', () => {
     const counts = blankDomainCounts();
-    for (const d of DOMAINS) counts[d] = 10;
+    // Each domain's OWN unit count — 5.F runs to 16 now, so a flat 10 would
+    // no longer mean "completed".
+    for (const d of DOMAINS) counts[d] = UNIT_COUNT_BY_DOMAIN[d];
     const earned = checkAllEarning({
       ...baseCtx(),
       byDomainUnitsCompleted: counts,

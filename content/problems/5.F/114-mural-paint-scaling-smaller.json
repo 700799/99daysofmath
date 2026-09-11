@@ -1,0 +1,72 @@
+{
+  "id": "5.F.114",
+  "domain": "5.F",
+  "unit": 12,
+  "orderInUnit": 4,
+  "standard": "5.NF.B.6",
+  "difficulty": 1,
+  "prompt": "Painting the WHOLE mural wall takes $6$ quarts of blue paint. Rosa only paints $\\frac{3}{4}$ of the wall. Without multiplying, decide how much paint she uses.",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "more than 6 quarts",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "exactly 6 quarts",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "less than 6 quarts",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "there is no way to tell",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Is $\\frac{3}{4}$ bigger or smaller than one whole?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Is $\\frac{3}{4}$ bigger or smaller than one whole?"
+    },
+    {
+      "level": "guide",
+      "text": "Multiplying by a number less than $1$ always shrinks the amount you started with."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{3}{4}$ is less than $1$, so the paint needed is less than $6$ quarts."
+    }
+  ],
+  "explanation": [
+    "Rosa paints only part of the wall, so she cannot need as much paint as the whole wall takes.",
+    "In math language: $\\frac{3}{4} \\times 6$ scales $6$ DOWN because $\\frac{3}{4} < 1$.",
+    "So the answer must be less than $6$ quarts.",
+    "Checking it: $\\frac{3}{4} \\times 6 = \\frac{18}{4} = 4\\frac{1}{2}$ quarts — less than $6$, just as predicted."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The size-of-the-answer rule",
+      "steps": [
+        "Multiplying by a fraction less than $1$ makes the answer smaller.",
+        "Multiplying by exactly $1$ keeps it the same.",
+        "Multiplying by a number greater than $1$ makes it bigger."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "scaling",
+    "reasoning"
+  ],
+  "estimatedSeconds": 40
+}

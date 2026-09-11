@@ -1,0 +1,49 @@
+{
+  "id": "5.F.126",
+  "domain": "5.F",
+  "unit": 13,
+  "orderInUnit": 6,
+  "standard": "5.OA.A.1",
+  "difficulty": 2,
+  "prompt": "A teacher buys $4$ supply packs. Each pack holds $6$ markers and $3$ pencils. The expression $4 \\times (6 + 3)$ gives the total number of items. What is its value?",
+  "answerType": "numeric",
+  "primaryAnswer": "36",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "How many items are in ONE pack? That is the parentheses part.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "How many items are in ONE pack? That is the parentheses part."
+    },
+    {
+      "level": "guide",
+      "text": "$6 + 3 = 9$ items per pack, and there are $4$ packs."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 \\times 9 = 36$ items."
+    }
+  ],
+  "explanation": [
+    "The parentheses count one pack: $6 + 3 = 9$ items.",
+    "There are $4$ identical packs, so the total is $4 \\times 9 = 36$ items.",
+    "The parentheses are what make the $3$ pencils get counted in every pack, not just once."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count each kind separately",
+      "steps": [
+        "Markers: $4 \\times 6 = 24$.",
+        "Pencils: $4 \\times 3 = 12$.",
+        "$24 + 12 = 36$ items — the same total."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "order-of-operations",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

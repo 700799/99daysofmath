@@ -1,0 +1,50 @@
+{
+  "id": "5.F.092",
+  "domain": "5.F",
+  "unit": 10,
+  "orderInUnit": 2,
+  "standard": "5.NBT.B.7",
+  "difficulty": 1,
+  "prompt": "Multiply: $0.3 \\times 0.4$",
+  "answerType": "numeric",
+  "primaryAnswer": "0.12",
+  "alternativeAnswers": [
+    ".12"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Start with the whole numbers: $3 \\times 4 = 12$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Start with the whole numbers: $3 \\times 4 = 12$."
+    },
+    {
+      "level": "guide",
+      "text": "Each factor has one decimal place, so the answer needs $1 + 1 = 2$ decimal places."
+    },
+    {
+      "level": "reveal",
+      "text": "Two places in $12$ means $0.12$."
+    }
+  ],
+  "explanation": [
+    "Multiply as whole numbers: $3 \\times 4 = 12$.",
+    "Count decimal places: one in $0.3$ plus one in $0.4$ makes two.",
+    "Move in two places from the right of $12$, writing a zero in front: $0.12$.",
+    "So $0.3 \\times 0.4 = 0.12$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Fraction view",
+      "steps": [
+        "$0.3 = \\frac{3}{10}$ and $0.4 = \\frac{4}{10}$.",
+        "$\\frac{3}{10} \\times \\frac{4}{10} = \\frac{12}{100} = 0.12$ ✓ — the hundredths explain the two decimal places."
+      ]
+    }
+  ],
+  "tags": [
+    "decimals",
+    "multiplication"
+  ],
+  "estimatedSeconds": 40
+}

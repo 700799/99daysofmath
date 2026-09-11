@@ -1,0 +1,66 @@
+{
+  "id": "5.F.099",
+  "domain": "5.F",
+  "unit": 10,
+  "orderInUnit": 9,
+  "standard": "5.NBT.B.7",
+  "difficulty": 3,
+  "prompt": "One batch of cookies needs $0.75$ cup of sugar. You measure out enough sugar for $4$ batches, then split it evenly into $6$ small jars. How many cups of sugar go in each jar?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.5",
+  "alternativeAnswers": [
+    ".5",
+    "1/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Try friendlier numbers: $0.5$ cup per batch for $2$ batches is $1$ cup, and splitting $1$ cup into $4$ jars gives $0.25$ cup each. Multiply to find the total, then divide the total by the number of jars — same two steps.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try friendlier numbers: $0.5$ cup per batch for $2$ batches is $1$ cup, and splitting $1$ cup into $4$ jars gives $0.25$ cup each. Multiply to find the total, then divide the total by the number of jars — same two steps."
+    },
+    {
+      "level": "nudge",
+      "text": "Two steps: find the total sugar for $4$ batches, then share that total among $6$ jars."
+    },
+    {
+      "level": "guide",
+      "text": "Total sugar $= 0.75 \\times 4$. Then divide that total by $6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.75 \\times 4 = 3$ cups, and $3 \\div 6 = 0.5$ cup per jar."
+    }
+  ],
+  "explanation": [
+    "Step 1 — total sugar: $0.75 \\times 4$. Since $75 \\times 4 = 300$ and $0.75$ has two decimal places, the product is $3.00 = 3$ cups.",
+    "Step 2 — share it out: $3 \\div 6$.",
+    "Six jars from $3$ cups means each jar gets half a cup: $3 \\div 6 = 0.5$.",
+    "So each jar holds $0.5$ cup of sugar."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Fraction view",
+      "steps": [
+        "$0.75 = \\frac{3}{4}$, so $4$ batches need $4 \\times \\frac{3}{4} = 3$ cups.",
+        "$3 \\div 6 = \\frac{3}{6} = \\frac{1}{2} = 0.5$ cup ✓"
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "A common wrong answer is $3$ — the total sugar — because the sharing step gets skipped.",
+        "Another is dividing first, $0.75 \\div 6 = 0.125$, which answers a different question (one batch split six ways).",
+        "Follow the story in order: all $4$ batches are measured out **before** the jars are filled, so multiply first ($3$ cups) and divide second ($3 \\div 6 = 0.5$)."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimals",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

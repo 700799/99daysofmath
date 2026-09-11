@@ -19,6 +19,8 @@ import { problems6EE } from './seeds/6.EE.js';
 import { problems6G } from './seeds/6.G.js';
 import { problems6SP } from './seeds/6.SP.js';
 import { problems5F } from './seeds/5.F.js';
+import { problems5Fu07 } from './seeds/5.F_u07_11.js';
+import { problems5Fu12 } from './seeds/5.F_u12_16.js';
 import { problemsA1u01 } from './seeds/A1_u01_04.js';
 import { problemsA1u05 } from './seeds/A1_u05_08.js';
 import { problemsA1u09 } from './seeds/A1_u09_11.js';
@@ -85,6 +87,8 @@ async function main() {
     ...problems6G,
     ...problems6SP,
     ...problems5F,
+    ...problems5Fu07,
+    ...problems5Fu12,
     ...problemsA1u01,
     ...problemsA1u05,
     ...problemsA1u09,

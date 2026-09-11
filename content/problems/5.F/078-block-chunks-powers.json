@@ -1,0 +1,51 @@
+{
+  "id": "5.F.078",
+  "domain": "5.F",
+  "unit": 8,
+  "orderInUnit": 8,
+  "standard": "5.NBT.A.2",
+  "difficulty": 2,
+  "prompt": "A game world is made of $10^2$ chunks, and every chunk holds $10^3$ blocks. How many blocks are in the whole world?",
+  "answerType": "numeric",
+  "primaryAnswer": "100000",
+  "alternativeAnswers": [
+    "100,000"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Turn each power of ten into a regular number first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Turn each power of ten into a regular number first."
+    },
+    {
+      "level": "guide",
+      "text": "$10^2 = 100$ chunks and $10^3 = 1{,}000$ blocks each. Now multiply."
+    },
+    {
+      "level": "reveal",
+      "text": "$100 \\times 1{,}000 = 100{,}000$ blocks."
+    }
+  ],
+  "explanation": [
+    "$10^2 = 100$ and $10^3 = 1{,}000$.",
+    "Total blocks $= 100 \\times 1{,}000$. Multiplying by $1{,}000$ adds three zeros to $100$.",
+    "$100 \\times 1{,}000 = 100{,}000$ blocks in the world.",
+    "Notice the shortcut: two zeros plus three zeros gives five zeros, which is $10^5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Add the exponents",
+      "steps": [
+        "$10^2 \\times 10^3$ means $(10 \\times 10) \\times (10 \\times 10 \\times 10)$.",
+        "That is five tens multiplied together, so $10^5 = 100{,}000$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "powers-of-ten",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,63 @@
+{
+  "id": "5.F.129",
+  "domain": "5.F",
+  "unit": 13,
+  "orderInUnit": 9,
+  "standard": "5.OA.A.1",
+  "difficulty": 3,
+  "prompt": "Evaluate: $3 \\times [20 - (4 + 2 \\times 3)]$",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Warm up on $2 \\times [10 - (1 + 2 \\times 2)]$. Inside: $2 \\times 2 = 4$, then $1 + 4 = 5$, then $10 - 5 = 5$, then $2 \\times 5 = 10$. The big problem uses exactly that order.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up on $2 \\times [10 - (1 + 2 \\times 2)]$. Inside: $2 \\times 2 = 4$, then $1 + 4 = 5$, then $10 - 5 = 5$, then $2 \\times 5 = 10$. The big problem uses exactly that order."
+    },
+    {
+      "level": "nudge",
+      "text": "Go from the innermost parentheses outward, and inside them, multiply before you add."
+    },
+    {
+      "level": "guide",
+      "text": "Inside the parentheses: $2 \\times 3 = 6$, then $4 + 6 = 10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$20 - 10 = 10$, and $3 \\times 10 = 30$."
+    }
+  ],
+  "explanation": [
+    "Innermost first: inside $(4 + 2 \\times 3)$, multiplication beats addition, so $2 \\times 3 = 6$ and then $4 + 6 = 10$.",
+    "Now the brackets read $[20 - 10] = 10$.",
+    "Finally, $3 \\times 10 = 30$.",
+    "The expression equals $30$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Rewrite at every step",
+      "steps": [
+        "$3 \\times [20 - (4 + 2 \\times 3)]$",
+        "$= 3 \\times [20 - (4 + 6)]$",
+        "$= 3 \\times [20 - 10] = 3 \\times 10 = 30$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The classic wrong answer is $6$: it comes from adding $4 + 2 = 6$ first, then $6 \\times 3 = 18$, then $20 - 18 = 2$ and $3 \\times 2 = 6$.",
+        "The problem is that left-to-right does not win inside parentheses — multiplication still goes before addition.",
+        "Escape it by circling $2 \\times 3$ before you touch the $4$, so the multiplication is finished first every time."
+      ]
+    }
+  ],
+  "tags": [
+    "order-of-operations",
+    "brackets",
+    "multi-step"
+  ],
+  "estimatedSeconds": 70
+}

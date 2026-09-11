@@ -100,6 +100,10 @@ export function parentOf(pathname: string): ParentLink | null {
     case 'course':
       return HOME;
 
+    // The practice test steps back to the prep hub that launched it.
+    case 'map5':
+      return seg.length > 1 ? { to: '/map5', label: 'MAP prep' } : HOME;
+
     // Every other top-level page answers to Home.
     default:
       return HOME;

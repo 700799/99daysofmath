@@ -1,0 +1,53 @@
+{
+  "id": "5.F.103",
+  "domain": "5.F",
+  "unit": 11,
+  "orderInUnit": 3,
+  "standard": "5.NF.B.3",
+  "difficulty": 1,
+  "prompt": "Two pizzas are shared equally among $5$ kids at a sleepover. How much pizza does each kid get?",
+  "answerType": "fraction",
+  "primaryAnswer": "2/5",
+  "alternativeAnswers": [
+    "0.4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Sharing equally is division: $2$ pizzas $\\div$ $5$ kids.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Sharing equally is division: $2$ pizzas $\\div$ $5$ kids."
+    },
+    {
+      "level": "guide",
+      "text": "Write that division as a fraction — the pizzas go on top."
+    },
+    {
+      "level": "reveal",
+      "text": "$2 \\div 5 = \\frac{2}{5}$ of a pizza each."
+    }
+  ],
+  "explanation": [
+    "Sharing $2$ pizzas equally among $5$ kids means $2 \\div 5$.",
+    "A division written as a fraction puts the dividend on top: $2 \\div 5 = \\frac{2}{5}$.",
+    "Each kid gets $\\frac{2}{5}$ of a pizza.",
+    "Check: $5$ kids $\\times$ $\\frac{2}{5}$ each $= \\frac{10}{5} = 2$ whole pizzas ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Cut it up",
+      "steps": [
+        "Slice each pizza into $5$ equal slices — that is $10$ slices in all.",
+        "$10$ slices shared by $5$ kids is $2$ slices each.",
+        "Two slices out of the five that make a pizza is $\\frac{2}{5}$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "fractions",
+    "division",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

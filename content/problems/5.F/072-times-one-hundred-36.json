@@ -1,0 +1,47 @@
+{
+  "id": "5.F.072",
+  "domain": "5.F",
+  "unit": 8,
+  "orderInUnit": 2,
+  "standard": "5.NBT.A.2",
+  "difficulty": 1,
+  "prompt": "What is $3.6 \\times 100$?",
+  "answerType": "numeric",
+  "primaryAnswer": "360",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Multiplying by $100$ makes a number $100$ times bigger, so the decimal point moves to the right.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Multiplying by $100$ makes a number $100$ times bigger, so the decimal point moves to the right."
+    },
+    {
+      "level": "guide",
+      "text": "$100$ has two zeros, so slide the point two places right: $3.6 \\to 36. \\to 360.$"
+    },
+    {
+      "level": "reveal",
+      "text": "$3.6 \\times 100 = 360$."
+    }
+  ],
+  "explanation": [
+    "$100 = 10^2$, so multiplying by it shifts the decimal point two places to the right.",
+    "Starting at $3.6$, one shift gives $36$ and a second shift gives $360$ — you fill the empty spot with a zero.",
+    "So $3.6 \\times 100 = 360$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity check",
+      "steps": [
+        "$3 \\times 100 = 300$ and $4 \\times 100 = 400$.",
+        "$3.6$ is between $3$ and $4$, so its answer should be between $300$ and $400$ — and $360$ is ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "powers-of-ten",
+    "decimals"
+  ],
+  "estimatedSeconds": 30
+}

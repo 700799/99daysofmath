@@ -1,0 +1,71 @@
+{
+  "id": "5.F.074",
+  "domain": "5.F",
+  "unit": 8,
+  "orderInUnit": 4,
+  "standard": "5.NBT.A.2",
+  "difficulty": 1,
+  "prompt": "What is $62 \\times 10^4$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "6,200",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "62,000",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "620,000",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "6,200,000",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "First figure out what $10^4$ is on its own.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First figure out what $10^4$ is on its own."
+    },
+    {
+      "level": "guide",
+      "text": "$10^4 = 10{,}000$, which has four zeros. Multiplying $62$ by it tacks four zeros onto $62$."
+    },
+    {
+      "level": "reveal",
+      "text": "$62$ with four zeros is $620{,}000$ — choose C."
+    }
+  ],
+  "explanation": [
+    "$10^4 = 10 \\times 10 \\times 10 \\times 10 = 10{,}000$.",
+    "Multiplying by $10{,}000$ adds four zeros to the end of $62$.",
+    "$62 \\to 620 \\to 6{,}200 \\to 62{,}000 \\to 620{,}000$, so the answer is $620{,}000$ (C)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the other choices are off",
+      "steps": [
+        "$6{,}200$ came from only two shifts, and $62{,}000$ from three.",
+        "$6{,}200{,}000$ came from five.",
+        "The exponent $4$ tells you exactly four shifts."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "powers-of-ten",
+    "exponents"
+  ],
+  "estimatedSeconds": 40
+}

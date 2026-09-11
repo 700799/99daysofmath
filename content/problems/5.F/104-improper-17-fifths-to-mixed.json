@@ -1,0 +1,51 @@
+{
+  "id": "5.F.104",
+  "domain": "5.F",
+  "unit": 11,
+  "orderInUnit": 4,
+  "standard": "5.NF.B.3",
+  "difficulty": 1,
+  "prompt": "Write $\\frac{17}{5}$ as a mixed number.",
+  "answerType": "fraction",
+  "primaryAnswer": "17/5",
+  "alternativeAnswers": [
+    "3 2/5",
+    "3.4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The fraction bar means divide: how many whole $5$s fit inside $17$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The fraction bar means divide: how many whole $5$s fit inside $17$?"
+    },
+    {
+      "level": "guide",
+      "text": "$5 \\times 3 = 15$, so $3$ wholes fit and something is left over."
+    },
+    {
+      "level": "reveal",
+      "text": "$17 - 15 = 2$ fifths are left, so $\\frac{17}{5} = 3\\frac{2}{5}$."
+    }
+  ],
+  "explanation": [
+    "$\\frac{17}{5}$ means $17 \\div 5$.",
+    "$5 \\times 3 = 15$, so three whole groups of five fit inside $17$.",
+    "What is left is $17 - 15 = 2$, and those $2$ pieces are still fifths.",
+    "So $\\frac{17}{5} = 3\\frac{2}{5}$, which as a decimal is $3.4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count up by wholes",
+      "steps": [
+        "$\\frac{5}{5} = 1$, $\\frac{10}{5} = 2$, $\\frac{15}{5} = 3$.",
+        "From $\\frac{15}{5}$ to $\\frac{17}{5}$ is $2$ more fifths, giving $3\\frac{2}{5}$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "fractions",
+    "mixed-numbers"
+  ],
+  "estimatedSeconds": 40
+}

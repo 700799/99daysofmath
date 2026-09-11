@@ -1,0 +1,51 @@
+{
+  "id": "5.F.135",
+  "domain": "5.F",
+  "unit": 14,
+  "orderInUnit": 5,
+  "standard": "5.OA.B.3",
+  "difficulty": 2,
+  "prompt": "Ana saves $\\$4$ every week and Ben saves $\\$6$ every week. Both start at $\\$0$. After $5$ weeks, how many more dollars does Ben have than Ana?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [
+    "\\$10",
+    "$10"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Build both money patterns week by week, then compare week $5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Build both money patterns week by week, then compare week $5$."
+    },
+    {
+      "level": "guide",
+      "text": "Ana: $4, 8, 12, 16, 20$. Ben: $6, 12, 18, 24, 30$."
+    },
+    {
+      "level": "reveal",
+      "text": "$30 - 20 = 10$ dollars more for Ben."
+    }
+  ],
+  "explanation": [
+    "Ana's pattern is $4, 8, 12, 16, 20$, so after $5$ weeks she has $5 \\times 4 = \\$20$.",
+    "Ben's pattern is $6, 12, 18, 24, 30$, so after $5$ weeks he has $5 \\times 6 = \\$30$.",
+    "$30 - 20 = 10$, so Ben has $\\$10$ more than Ana."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Track the gap instead",
+      "steps": [
+        "Ben pulls ahead by $\\$2$ every single week.",
+        "After $5$ weeks the gap is $5 \\times 2 = \\$10$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "patterns",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

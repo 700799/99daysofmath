@@ -1,0 +1,48 @@
+{
+  "id": "5.F.066",
+  "domain": "5.F",
+  "unit": 7,
+  "orderInUnit": 6,
+  "standard": "5.NBT.B.6",
+  "difficulty": 2,
+  "prompt": "Divide: $4{,}368 \\div 24$",
+  "answerType": "numeric",
+  "primaryAnswer": "182",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Build the answer in chunks. How many hundreds of $24$s fit inside $4{,}368$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Build the answer in chunks. How many hundreds of $24$s fit inside $4{,}368$?"
+    },
+    {
+      "level": "guide",
+      "text": "$24 \\times 100 = 2400$, so at least $100$ fit. Try $24 \\times 180$ next."
+    },
+    {
+      "level": "reveal",
+      "text": "$24 \\times 180 = 4320$, leaving $48$, and $48 \\div 24 = 2$. So $180 + 2 = 182$."
+    }
+  ],
+  "explanation": [
+    "Take a big bite first: $24 \\times 180 = 4{,}320$.",
+    "Subtract: $4{,}368 - 4{,}320 = 48$.",
+    "$48 \\div 24 = 2$, with nothing left over.",
+    "So $4{,}368 \\div 24 = 180 + 2 = 182$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check by multiplying back",
+      "steps": [
+        "$182 \\times 24 = 182 \\times 20 + 182 \\times 4$.",
+        "$3{,}640 + 728 = 4{,}368$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "division",
+    "standard-algorithm"
+  ],
+  "estimatedSeconds": 75
+}

@@ -1,0 +1,71 @@
+{
+  "id": "5.F.153",
+  "domain": "5.F",
+  "unit": 16,
+  "orderInUnit": 3,
+  "standard": "5.G.B.3",
+  "difficulty": 1,
+  "prompt": "Which sentence is true about every square?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Every square is also a rectangle.",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Every rectangle is also a square.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "A square is not a quadrilateral.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Squares have no right angles.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A rectangle is a four-sided shape with four right angles. Does a square have those?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A rectangle is a four-sided shape with four right angles. Does a square have those?"
+    },
+    {
+      "level": "guide",
+      "text": "A square has four right angles AND four equal sides — it meets the rectangle rules and then some."
+    },
+    {
+      "level": "reveal",
+      "text": "Every square is a rectangle, but a long skinny rectangle is not a square."
+    }
+  ],
+  "explanation": [
+    "A rectangle is any quadrilateral with four right angles.",
+    "A square has four right angles, so it passes that test — every square is a rectangle.",
+    "It does not work backwards: a $3$ by $8$ rectangle has four right angles but its sides are not all equal, so it is not a square.",
+    "Choices C and D are simply false: squares are four-sided and full of right angles."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think of nested boxes",
+      "steps": [
+        "Quadrilaterals is the biggest box; rectangles sit inside it; squares sit inside rectangles.",
+        "Being in a smaller box means you are also in every bigger one."
+      ]
+    }
+  ],
+  "tags": [
+    "geometry",
+    "quadrilaterals",
+    "hierarchy"
+  ],
+  "estimatedSeconds": 40
+}

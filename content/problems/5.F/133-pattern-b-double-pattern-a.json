@@ -1,0 +1,70 @@
+{
+  "id": "5.F.133",
+  "domain": "5.F",
+  "unit": 14,
+  "orderInUnit": 3,
+  "standard": "5.OA.B.3",
+  "difficulty": 1,
+  "prompt": "Pattern A starts at $0$ and adds $2$ each time: $0, 2, 4, 6, \\dots$ Pattern B starts at $0$ and adds $4$ each time: $0, 4, 8, 12, \\dots$ Each number in Pattern B is ___ the matching number in Pattern A.",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "2 more than",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "2 times",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "4 times",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "half of",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Line the patterns up in pairs: $2$ with $4$, $4$ with $8$, $6$ with $12$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Line the patterns up in pairs: $2$ with $4$, $4$ with $8$, $6$ with $12$."
+    },
+    {
+      "level": "guide",
+      "text": "Ask \"what do I multiply $2$ by to get $4$?\" and check that the same thing works for $4$ and $8$."
+    },
+    {
+      "level": "reveal",
+      "text": "Every B number is $2$ times the matching A number."
+    }
+  ],
+  "explanation": [
+    "Match the numbers by position: $(0,0)$, $(2,4)$, $(4,8)$, $(6,12)$.",
+    "$2 \\times 2 = 4$, $2 \\times 4 = 8$, and $2 \\times 6 = 12$ — doubling works every single time.",
+    "\"$2$ more than\" only works for the first pair or two, so it is not the real relationship.",
+    "Pattern B is always $2$ times Pattern A."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Look at the rules",
+      "steps": [
+        "B adds $4$ each step while A adds $2$ each step.",
+        "B is growing twice as fast from the same start, so it stays exactly double."
+      ]
+    }
+  ],
+  "tags": [
+    "patterns",
+    "relationships"
+  ],
+  "estimatedSeconds": 45
+}

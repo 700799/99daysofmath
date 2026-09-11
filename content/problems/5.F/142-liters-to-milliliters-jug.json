@@ -1,0 +1,50 @@
+{
+  "id": "5.F.142",
+  "domain": "5.F",
+  "unit": 15,
+  "orderInUnit": 2,
+  "standard": "5.MD.A.1",
+  "difficulty": 1,
+  "prompt": "A water jug holds $2.5$ liters. How many milliliters is that?",
+  "answerType": "numeric",
+  "primaryAnswer": "2500",
+  "alternativeAnswers": [
+    "2,500"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Milli\" means one thousandth — there are $1000$ mL in $1$ L.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Milli\" means one thousandth — there are $1000$ mL in $1$ L."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply: $2.5 \\times 1000$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2.5 \\times 1000 = 2500$ mL."
+    }
+  ],
+  "explanation": [
+    "One liter is $1000$ milliliters, and milliliters are smaller units, so the number gets bigger.",
+    "$2.5 \\times 1000 = 2500$.",
+    "The jug holds $2500$ milliliters."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Split the 2.5",
+      "steps": [
+        "$2$ L is $2000$ mL.",
+        "$0.5$ L is half of $1000$, which is $500$ mL.",
+        "$2000 + 500 = 2500$ mL."
+      ]
+    }
+  ],
+  "tags": [
+    "measurement",
+    "conversion"
+  ],
+  "estimatedSeconds": 35
+}

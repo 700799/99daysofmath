@@ -1,0 +1,49 @@
+{
+  "id": "5.F.075",
+  "domain": "5.F",
+  "unit": 8,
+  "orderInUnit": 5,
+  "standard": "5.NBT.A.2",
+  "difficulty": 2,
+  "prompt": "Write $100{,}000$ using exponent notation with a base of $10$.",
+  "answerType": "expression",
+  "primaryAnswer": "10^5",
+  "alternativeAnswers": [
+    "10^{5}"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Count the zeros in $100{,}000$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Count the zeros in $100{,}000$."
+    },
+    {
+      "level": "guide",
+      "text": "The number of zeros becomes the exponent on the $10$."
+    },
+    {
+      "level": "reveal",
+      "text": "There are five zeros, so $100{,}000 = 10^5$."
+    }
+  ],
+  "explanation": [
+    "$100{,}000$ is $1$ followed by five zeros.",
+    "Each zero comes from one factor of $10$: $10 \\times 10 \\times 10 \\times 10 \\times 10$.",
+    "Five factors of $10$ is written $10^5$, so $100{,}000 = 10^5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Say it out loud",
+      "steps": [
+        "$100{,}000$ is \"one hundred thousand.\"",
+        "Hundred is $10^2$ and thousand is $10^3$, and $2 + 3 = 5$ factors of ten in all ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "powers-of-ten",
+    "exponents"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,65 @@
+{
+  "id": "5.F.159",
+  "domain": "5.F",
+  "unit": 16,
+  "orderInUnit": 9,
+  "standard": "5.G.A.2",
+  "difficulty": 3,
+  "prompt": "A rectangular garden has corners at $(2, 1)$, $(8, 1)$, $(8, 5)$, and $(2, 5)$ on a grid where each unit is $1$ meter. How many meters of fence are needed to go all the way around it?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [
+    "20 m"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Try a tiny garden at $(0,0)$, $(3,0)$, $(3,2)$, $(0,2)$. Width $= 3 - 0 = 3$, height $= 2 - 0 = 2$, so the fence is $3 + 2 + 3 + 2 = 10$. Same steps, bigger numbers below.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a tiny garden at $(0,0)$, $(3,0)$, $(3,2)$, $(0,2)$. Width $= 3 - 0 = 3$, height $= 2 - 0 = 2$, so the fence is $3 + 2 + 3 + 2 = 10$. Same steps, bigger numbers below."
+    },
+    {
+      "level": "nudge",
+      "text": "Find the width and the height first by subtracting matching coordinates."
+    },
+    {
+      "level": "guide",
+      "text": "Width: $8 - 2 = 6$ meters. Height: $5 - 1 = 4$ meters."
+    },
+    {
+      "level": "reveal",
+      "text": "Fence $= 6 + 4 + 6 + 4 = 20$ meters."
+    }
+  ],
+  "explanation": [
+    "The bottom edge runs from $(2,1)$ to $(8,1)$, so the width is $8 - 2 = 6$ meters.",
+    "The right edge runs from $(8,1)$ to $(8,5)$, so the height is $5 - 1 = 4$ meters.",
+    "A rectangle has two widths and two heights, so the fence is $6 + 6 + 4 + 4 = 20$ meters.",
+    "Dani would need $20$ meters of fencing."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the perimeter formula",
+      "steps": [
+        "$P = 2 \\times (\\text{width} + \\text{height})$.",
+        "$2 \\times (6 + 4) = 2 \\times 10 = 20$ meters."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "A common wrong answer is $24$: it comes from counting grid LINES instead of gaps — thinking the side from $x = 2$ to $x = 8$ is $7$ units because you count $2,3,4,5,6,7,8$.",
+        "Fence length measures the spaces between the lines, not the lines themselves, so you subtract: $8 - 2 = 6$.",
+        "Escape it by drawing the two end points and counting the hops from one to the other, the way you would count steps on a sidewalk."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "coordinate-plane",
+    "perimeter",
+    "multi-step"
+  ],
+  "estimatedSeconds": 70
+}

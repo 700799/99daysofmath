@@ -1,0 +1,47 @@
+{
+  "id": "5.F.144",
+  "domain": "5.F",
+  "unit": 15,
+  "orderInUnit": 4,
+  "standard": "5.MD.B.2",
+  "difficulty": 1,
+  "prompt": "A class measured how much water was left in each bottle and made a line plot. The line plot shows: $\\frac{1}{4}$ cup appears $3$ times, $\\frac{1}{2}$ cup appears $4$ times, $\\frac{3}{4}$ cup appears $2$ times, and $1$ cup appears $1$ time. How many bottles were measured in all?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Each X on a line plot stands for one bottle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each X on a line plot stands for one bottle."
+    },
+    {
+      "level": "guide",
+      "text": "Add up how many times each amount appears: $3 + 4 + 2 + 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 + 4 + 2 + 1 = 10$ bottles."
+    }
+  ],
+  "explanation": [
+    "On a line plot, every mark is one measurement — here, one bottle.",
+    "Add the counts, not the fractions: $3 + 4 + 2 + 1 = 10$.",
+    "So $10$ bottles were measured."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why not add the fractions?",
+      "steps": [
+        "Adding the fractions would tell you the total amount of WATER.",
+        "Counting the marks tells you the number of BOTTLES, which is what the question asked for."
+      ]
+    }
+  ],
+  "tags": [
+    "line-plot",
+    "data"
+  ],
+  "estimatedSeconds": 35
+}

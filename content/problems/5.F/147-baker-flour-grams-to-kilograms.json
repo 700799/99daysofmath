@@ -1,0 +1,53 @@
+{
+  "id": "5.F.147",
+  "domain": "5.F",
+  "unit": 15,
+  "orderInUnit": 7,
+  "standard": "5.MD.A.1",
+  "difficulty": 2,
+  "prompt": "A baker uses $250$ grams of flour for each loaf of bread and bakes $6$ loaves. How many kilograms of flour is that in all?",
+  "answerType": "numeric",
+  "primaryAnswer": "1.5",
+  "alternativeAnswers": [
+    "1 1/2",
+    "3/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Two steps: find the total grams first, then trade grams for kilograms.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two steps: find the total grams first, then trade grams for kilograms."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\times 250 = 1500$ grams. There are $1000$ grams in a kilogram."
+    },
+    {
+      "level": "reveal",
+      "text": "$1500 \\div 1000 = 1.5$ kilograms."
+    }
+  ],
+  "explanation": [
+    "Step 1 — total grams: $6 \\times 250 = 1500$ grams.",
+    "Step 2 — convert: $1$ kilogram is $1000$ grams, and kilograms are the bigger unit, so divide.",
+    "$1500 \\div 1000 = 1.5$ kilograms of flour."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in quarter-kilos",
+      "steps": [
+        "$250$ g is $\\frac{1}{4}$ kg.",
+        "Six quarter-kilos is $\\frac{6}{4} = 1\\frac{1}{2}$ kg.",
+        "Same answer: $1.5$ kilograms."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "measurement",
+    "conversion",
+    "multi-step"
+  ],
+  "estimatedSeconds": 60
+}

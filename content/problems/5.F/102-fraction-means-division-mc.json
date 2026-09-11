@@ -1,0 +1,69 @@
+{
+  "id": "5.F.102",
+  "domain": "5.F",
+  "unit": 11,
+  "orderInUnit": 2,
+  "standard": "5.NF.B.3",
+  "difficulty": 1,
+  "prompt": "The fraction $\\frac{7}{8}$ means the same as which division?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "8 ÷ 7",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "7 ÷ 8",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "7 × 8",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "8 − 7",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Read the fraction bar out loud as \"divided by.\"",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Read the fraction bar out loud as \"divided by.\""
+    },
+    {
+      "level": "guide",
+      "text": "The top number is the one being divided up."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{7}{8}$ means $7 \\div 8$ — choose B."
+    }
+  ],
+  "explanation": [
+    "The fraction bar is a division sign: numerator on top gets divided by denominator on the bottom.",
+    "So $\\frac{7}{8}$ means $7 \\div 8$, which is choice B.",
+    "Check the size: $7 \\div 8$ should be a little less than $1$, and $\\frac{7}{8}$ is indeed just under $1$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why not 8 ÷ 7?",
+      "steps": [
+        "$8 \\div 7$ is bigger than $1$, but $\\frac{7}{8}$ is smaller than $1$.",
+        "Flipping the order changes the answer, so the top number always goes first."
+      ]
+    }
+  ],
+  "tags": [
+    "fractions",
+    "division"
+  ],
+  "estimatedSeconds": 35
+}

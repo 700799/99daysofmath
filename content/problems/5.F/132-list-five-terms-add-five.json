@@ -1,0 +1,49 @@
+{
+  "id": "5.F.132",
+  "domain": "5.F",
+  "unit": 14,
+  "orderInUnit": 2,
+  "standard": "5.OA.B.3",
+  "difficulty": 1,
+  "prompt": "Follow the rule \"add $5$\" starting at $0$. Write the first FIVE numbers in order, separated by commas.",
+  "answerType": "short-text",
+  "primaryAnswer": "0, 5, 10, 15, 20",
+  "alternativeAnswers": [
+    "0,5,10,15,20",
+    "0 5 10 15 20"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The first number is the starting number itself — you do not add yet.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The first number is the starting number itself — you do not add yet."
+    },
+    {
+      "level": "guide",
+      "text": "After $0$ comes $0 + 5 = 5$, then $5 + 5 = 10$…"
+    },
+    {
+      "level": "reveal",
+      "text": "$0, 5, 10, 15, 20$."
+    }
+  ],
+  "explanation": [
+    "Start with $0$ — that is the first number in the pattern.",
+    "Apply the rule again and again: $0 + 5 = 5$, $5 + 5 = 10$, $10 + 5 = 15$, $15 + 5 = 20$.",
+    "The first five numbers are $0, 5, 10, 15, 20$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "It is your nickel count",
+      "steps": [
+        "Counting nickels gives $5, 10, 15, 20$ cents.",
+        "Starting from an empty hand adds the $0$ at the front."
+      ]
+    }
+  ],
+  "tags": [
+    "patterns"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,48 @@
+{
+  "id": "5.F.136",
+  "domain": "5.F",
+  "unit": 14,
+  "orderInUnit": 6,
+  "standard": "5.OA.B.3",
+  "difficulty": 2,
+  "prompt": "Pattern X: $3, 6, 9, 12$. Pattern Y: $9, 18, 27, 36$. Each number in Pattern Y is how many times the matching number in Pattern X?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Pair them up: $3$ with $9$, $6$ with $18$, $9$ with $27$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Pair them up: $3$ with $9$, $6$ with $18$, $9$ with $27$."
+    },
+    {
+      "level": "guide",
+      "text": "Divide a Y number by its X partner: $9 \\div 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "Every pair gives $3$, so Y is always $3$ times X."
+    }
+  ],
+  "explanation": [
+    "Match the terms by position and divide: $9 \\div 3 = 3$, $18 \\div 6 = 3$, $27 \\div 9 = 3$, $36 \\div 12 = 3$.",
+    "The same number, $3$, comes out every time, which means the relationship holds for the whole pattern.",
+    "Each number in Pattern Y is $3$ times the matching number in Pattern X."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare the step sizes",
+      "steps": [
+        "X grows by $3$ each step; Y grows by $9$ each step.",
+        "$9$ is $3$ times $3$, and both start in step, so Y stays $3$ times X."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "patterns",
+    "relationships"
+  ],
+  "estimatedSeconds": 50
+}

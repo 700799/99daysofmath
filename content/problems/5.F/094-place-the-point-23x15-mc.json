@@ -1,0 +1,72 @@
+{
+  "id": "5.F.094",
+  "domain": "5.F",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "5.NBT.B.7",
+  "difficulty": 1,
+  "prompt": "You already know that $23 \\times 15 = 345$. Using that, what is $2.3 \\times 1.5$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "345",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "34.5",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "3.45",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "0.345",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The digits stay the same — only the decimal point moves. Count the decimal places in the factors.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The digits stay the same — only the decimal point moves. Count the decimal places in the factors."
+    },
+    {
+      "level": "guide",
+      "text": "$2.3$ has one decimal place and $1.5$ has one, so the product needs two."
+    },
+    {
+      "level": "reveal",
+      "text": "Two places in $345$ gives $3.45$ — choose C."
+    }
+  ],
+  "explanation": [
+    "The digits of the product come straight from $23 \\times 15 = 345$.",
+    "Count the decimal places in the factors: $1$ in $2.3$ plus $1$ in $1.5$ equals $2$.",
+    "Place the point two spots from the right of $345$: $3.45$ (choice C).",
+    "It passes the common-sense test too: about $2$ times about $1.5$ should be around $3$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the others are wrong",
+      "steps": [
+        "$34.5$ uses only one decimal place, and $0.345$ uses three.",
+        "$345$ uses none at all, which would mean multiplying two numbers near $2$ and getting three hundred."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimals",
+    "multiplication",
+    "estimation"
+  ],
+  "estimatedSeconds": 45
+}

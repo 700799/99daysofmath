@@ -1,0 +1,50 @@
+{
+  "id": "5.F.156",
+  "domain": "5.F",
+  "unit": 16,
+  "orderInUnit": 6,
+  "standard": "5.G.A.2",
+  "difficulty": 2,
+  "prompt": "Two tent stakes on a park grid are at $(2, 3)$ and $(2, 9)$. Each unit is $1$ meter. How many meters apart are the stakes?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [
+    "6 m"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Both points have the same $x$-value, so they sit straight up and down from each other.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Both points have the same $x$-value, so they sit straight up and down from each other."
+    },
+    {
+      "level": "guide",
+      "text": "Only the $y$-values differ: $3$ and $9$. Subtract them."
+    },
+    {
+      "level": "reveal",
+      "text": "$9 - 3 = 6$ meters apart."
+    }
+  ],
+  "explanation": [
+    "Both stakes have $x = 2$, so they are on the same vertical line — no sideways distance at all.",
+    "The distance is the gap between the $y$-values: $9 - 3 = 6$.",
+    "Each unit is a meter, so the stakes are $6$ meters apart."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the hops",
+      "steps": [
+        "Start at $(2,3)$ and hop up one unit at a time: $4, 5, 6, 7, 8, 9$.",
+        "That is $6$ hops, which is $6$ meters."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "coordinate-plane",
+    "distance"
+  ],
+  "estimatedSeconds": 50
+}

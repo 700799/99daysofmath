@@ -1,0 +1,69 @@
+{
+  "id": "5.F.157",
+  "domain": "5.F",
+  "unit": 16,
+  "orderInUnit": 7,
+  "standard": "5.G.B.4",
+  "difficulty": 2,
+  "prompt": "A quadrilateral has exactly ONE pair of parallel sides. What is the shape called?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "trapezoid",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "parallelogram",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "rhombus",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "rectangle",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The word \"exactly one\" is doing a lot of work here — some shapes have two pairs.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The word \"exactly one\" is doing a lot of work here — some shapes have two pairs."
+    },
+    {
+      "level": "guide",
+      "text": "Parallelograms, rhombuses, and rectangles all have TWO pairs of parallel sides."
+    },
+    {
+      "level": "reveal",
+      "text": "With exactly one pair, the shape is a trapezoid."
+    }
+  ],
+  "explanation": [
+    "Parallelograms, rhombuses, and rectangles all require two pairs of parallel sides, so none of them can have exactly one.",
+    "A trapezoid is the quadrilateral defined by having a pair of parallel sides while the other two sides are not parallel.",
+    "So the shape is a trapezoid."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture a lampshade",
+      "steps": [
+        "A lampshade outline has a short flat top and a longer flat bottom that are parallel.",
+        "Its slanted sides lean toward each other, so they are not parallel — a trapezoid."
+      ]
+    }
+  ],
+  "tags": [
+    "geometry",
+    "quadrilaterals"
+  ],
+  "estimatedSeconds": 45
+}

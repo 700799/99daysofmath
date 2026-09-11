@@ -1,0 +1,72 @@
+{
+  "id": "5.F.155",
+  "domain": "5.F",
+  "unit": 16,
+  "orderInUnit": 5,
+  "standard": "5.G.B.3",
+  "difficulty": 2,
+  "prompt": "Which statement is TRUE?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "All parallelograms are rhombuses.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "All rhombuses are parallelograms.",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "All trapezoids are rectangles.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "All quadrilaterals are parallelograms.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A parallelogram just needs both pairs of opposite sides parallel. A rhombus needs that PLUS four equal sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A parallelogram just needs both pairs of opposite sides parallel. A rhombus needs that PLUS four equal sides."
+    },
+    {
+      "level": "guide",
+      "text": "The shape with the extra rule always belongs to the bigger group, not the other way around."
+    },
+    {
+      "level": "reveal",
+      "text": "Rhombuses have the extra rule, so all rhombuses are parallelograms."
+    }
+  ],
+  "explanation": [
+    "A rhombus has both pairs of opposite sides parallel AND four equal sides, so it satisfies every parallelogram rule — statement B is true.",
+    "Statement A fails because a long parallelogram can have unequal sides, so it is not a rhombus.",
+    "Statement C fails because a trapezoid needs only one pair of parallel sides and need not have right angles.",
+    "Statement D fails because a kite is a quadrilateral with no parallel sides at all."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "One counterexample is enough",
+      "steps": [
+        "To knock out \"all parallelograms are rhombuses,\" just picture a slanted $2$-by-$5$ parallelogram.",
+        "Its sides are not equal, so it is not a rhombus — statement A is dead."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "geometry",
+    "quadrilaterals",
+    "hierarchy"
+  ],
+  "estimatedSeconds": 55
+}

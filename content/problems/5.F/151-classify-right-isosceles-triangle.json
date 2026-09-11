@@ -1,0 +1,70 @@
+{
+  "id": "5.F.151",
+  "domain": "5.F",
+  "unit": 16,
+  "orderInUnit": 1,
+  "standard": "5.G.B.4",
+  "difficulty": 1,
+  "prompt": "A triangle has angles measuring $90^\\circ$, $45^\\circ$, and $45^\\circ$. Which name fits it BEST?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "right scalene triangle",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "right isosceles triangle",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "equilateral triangle",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "obtuse triangle",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "One angle is exactly $90^\\circ$ — what do we call a triangle with a square corner?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "One angle is exactly $90^\\circ$ — what do we call a triangle with a square corner?"
+    },
+    {
+      "level": "guide",
+      "text": "Two of the angles are equal ($45^\\circ$ and $45^\\circ$), which means two sides are equal too."
+    },
+    {
+      "level": "reveal",
+      "text": "Right corner plus two equal angles makes it a right isosceles triangle."
+    }
+  ],
+  "explanation": [
+    "A $90^\\circ$ angle is a right angle, so this is a right triangle.",
+    "Two angles are the same size ($45^\\circ$ and $45^\\circ$), and equal angles sit across from equal sides, so two sides match — that is isosceles.",
+    "Scalene would mean no equal sides, and equilateral would need three $60^\\circ$ angles, so neither fits.",
+    "The best name is a right isosceles triangle."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the angle sum",
+      "steps": [
+        "$90 + 45 + 45 = 180^\\circ$, so these angles really can form a triangle.",
+        "Nothing is over $90^\\circ$, so it is not obtuse."
+      ]
+    }
+  ],
+  "tags": [
+    "geometry",
+    "triangles"
+  ],
+  "estimatedSeconds": 40
+}

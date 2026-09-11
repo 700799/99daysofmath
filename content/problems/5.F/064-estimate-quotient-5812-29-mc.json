@@ -1,0 +1,71 @@
+{
+  "id": "5.F.064",
+  "domain": "5.F",
+  "unit": 7,
+  "orderInUnit": 4,
+  "standard": "5.NBT.B.6",
+  "difficulty": 1,
+  "prompt": "Without dividing exactly, which is the **best estimate** for $5{,}812 \\div 29$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "20",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "200",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "2,000",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "20,000",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Round $29$ to a friendlier number first. What is it closest to?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Round $29$ to a friendlier number first. What is it closest to?"
+    },
+    {
+      "level": "guide",
+      "text": "$29$ is about $30$, and $5{,}812$ is about $6{,}000$. So think $6{,}000 \\div 30$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6{,}000 \\div 30 = 200$, so choose B."
+    }
+  ],
+  "explanation": [
+    "Round both numbers to something easy: $5{,}812 \\approx 6{,}000$ and $29 \\approx 30$.",
+    "$6{,}000 \\div 30 = 200$, because $30 \\times 200 = 6{,}000$.",
+    "So the quotient is close to $200$ — answer B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Size-check the other options",
+      "steps": [
+        "$29 \\times 20 = 580$ — way too small.",
+        "$29 \\times 2{,}000 = 58{,}000$ — way too big.",
+        "Only $200$ lands near $5{,}812$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "estimation",
+    "division"
+  ],
+  "estimatedSeconds": 45
+}

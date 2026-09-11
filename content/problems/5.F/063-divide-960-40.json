@@ -1,0 +1,48 @@
+{
+  "id": "5.F.063",
+  "domain": "5.F",
+  "unit": 7,
+  "orderInUnit": 3,
+  "standard": "5.NBT.B.6",
+  "difficulty": 1,
+  "prompt": "Divide: $960 \\div 40$",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Both numbers end in a zero — you can cross one zero off each.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Both numbers end in a zero — you can cross one zero off each."
+    },
+    {
+      "level": "guide",
+      "text": "$960 \\div 40$ is the same as $96 \\div 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$96 \\div 4 = 24$."
+    }
+  ],
+  "explanation": [
+    "Dividing both numbers by $10$ does not change the answer, so $960 \\div 40 = 96 \\div 4$.",
+    "$96 \\div 4 = 24$ because $4 \\times 24 = 96$.",
+    "Check the original: $40 \\times 24 = 960$ ✓, so the quotient is $24$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count up in groups",
+      "steps": [
+        "$40 \\times 20 = 800$, leaving $960 - 800 = 160$.",
+        "$40 \\times 4 = 160$, leaving $0$.",
+        "So the answer is $20 + 4 = 24$."
+      ]
+    }
+  ],
+  "tags": [
+    "division",
+    "multi-digit"
+  ],
+  "estimatedSeconds": 40
+}

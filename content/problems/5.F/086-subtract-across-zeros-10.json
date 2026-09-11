@@ -1,0 +1,49 @@
+{
+  "id": "5.F.086",
+  "domain": "5.F",
+  "unit": 9,
+  "orderInUnit": 6,
+  "standard": "5.NBT.B.7",
+  "difficulty": 2,
+  "prompt": "Subtract: $10 - 4.37$",
+  "answerType": "numeric",
+  "primaryAnswer": "5.63",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Rewrite $10$ as $10.00$ so there are hundredths to subtract from.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Rewrite $10$ as $10.00$ so there are hundredths to subtract from."
+    },
+    {
+      "level": "guide",
+      "text": "Try counting up instead of borrowing: from $4.37$, how far to $5$? Then from $5$ to $10$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$4.37 + 0.63 = 5$ and $5 + 5 = 10$, so the difference is $0.63 + 5 = 5.63$."
+    }
+  ],
+  "explanation": [
+    "Write the problem as $10.00 - 4.37$ so both numbers have hundredths.",
+    "Counting up is easier than borrowing across two zeros: from $4.37$ up to $5.00$ is $0.63$.",
+    "From $5.00$ up to $10.00$ is $5$ more.",
+    "Total distance: $0.63 + 5 = 5.63$, so $10 - 4.37 = 5.63$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check by adding back",
+      "steps": [
+        "$5.63 + 4.37$: hundredths $3 + 7 = 10$, tenths $6 + 3 + 1 = 10$, ones $5 + 4 + 1 = 10$.",
+        "That rebuilds $10.00$ exactly ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimals",
+    "subtraction"
+  ],
+  "estimatedSeconds": 60
+}

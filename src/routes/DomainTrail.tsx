@@ -100,6 +100,28 @@ export function DomainTrail() {
 
   return (
     <div className="mx-auto max-w-[480px] rounded-xl bg-canvas p-3 pb-6 text-ink">
+      {/* The 5th-grade course doubles as MAP Growth prep, so it advertises
+          that surface here rather than costing Home an eighth card. */}
+      {d === '5.F' && (
+        <Link
+          to="/map5"
+          className="mb-3 flex items-center gap-3 border border-line bg-gradient-to-b from-surface to-surface-2 px-3.5 py-3 transition-colors hover:border-accent"
+          style={{ clipPath: CUT }}
+        >
+          <div className="text-3xl">🎓</div>
+          <div className="min-w-0 flex-1">
+            <div className="font-display text-[13px] font-black uppercase tracking-[0.14em] text-accent">
+              MAP Growth prep
+            </div>
+            <div className="mt-0.5 text-[11.5px] leading-relaxed text-ink-muted">
+              This course by NWEA instructional area, plus an adaptive practice test and strategy
+              for a test with no timer and no going back.
+            </div>
+          </div>
+          <div className="shrink-0 font-mono text-ink-dim">→</div>
+        </Link>
+      )}
+
       {/* ── telemetry strip: exact numbers first ── */}
       <div className="border border-line bg-gradient-to-b from-surface to-surface-2 px-3.5 py-3"
         style={{ clipPath: CUT }}>

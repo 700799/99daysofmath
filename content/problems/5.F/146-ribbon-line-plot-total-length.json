@@ -1,0 +1,54 @@
+{
+  "id": "5.F.146",
+  "domain": "5.F",
+  "unit": 15,
+  "orderInUnit": 6,
+  "standard": "5.MD.B.2",
+  "difficulty": 2,
+  "prompt": "Ms. Ruiz measured her leftover ribbon pieces and made a line plot. The line plot shows: $\\frac{1}{4}$ ft appears $2$ times, $\\frac{1}{2}$ ft appears $3$ times, and $\\frac{3}{4}$ ft appears $1$ time. What is the total length of ribbon, in feet? (Answer as a mixed number.)",
+  "answerType": "fraction",
+  "primaryAnswer": "2 3/4",
+  "alternativeAnswers": [
+    "11/4",
+    "2.75"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Handle one column at a time: how much ribbon do the two $\\frac{1}{4}$-ft pieces make together?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Handle one column at a time: how much ribbon do the two $\\frac{1}{4}$-ft pieces make together?"
+    },
+    {
+      "level": "guide",
+      "text": "Quarters: $2 \\times \\frac{1}{4} = \\frac{1}{2}$. Halves: $3 \\times \\frac{1}{2} = 1\\frac{1}{2}$. Plus one $\\frac{3}{4}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2} + 1\\frac{1}{2} + \\frac{3}{4} = 2\\frac{3}{4}$ feet."
+    }
+  ],
+  "explanation": [
+    "The $\\frac{1}{4}$-ft column: $2 \\times \\frac{1}{4} = \\frac{2}{4} = \\frac{1}{2}$ ft.",
+    "The $\\frac{1}{2}$-ft column: $3 \\times \\frac{1}{2} = \\frac{3}{2} = 1\\frac{1}{2}$ ft.",
+    "The $\\frac{3}{4}$-ft column: just $\\frac{3}{4}$ ft.",
+    "Add them in fourths: $\\frac{2}{4} + \\frac{6}{4} + \\frac{3}{4} = \\frac{11}{4} = 2\\frac{3}{4}$ feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count everything in fourths",
+      "steps": [
+        "$\\frac{1}{4}$ twice is $\\frac{2}{4}$; $\\frac{1}{2}$ is $\\frac{2}{4}$, so three of them is $\\frac{6}{4}$; and $\\frac{3}{4}$ is $\\frac{3}{4}$.",
+        "$\\frac{2 + 6 + 3}{4} = \\frac{11}{4}$.",
+        "$11 \\div 4 = 2$ remainder $3$, so $2\\frac{3}{4}$ feet."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "line-plot",
+    "fractions",
+    "data"
+  ],
+  "estimatedSeconds": 70
+}

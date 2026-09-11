@@ -1,0 +1,85 @@
+{
+  "id": "5.F.160",
+  "domain": "5.F",
+  "unit": 16,
+  "orderInUnit": 10,
+  "standard": "5.G.B.3",
+  "difficulty": 3,
+  "prompt": "Which statement is ALWAYS true?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Every rectangle is a square.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Every square is a rhombus.",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Every parallelogram is a rectangle.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Every trapezoid is a parallelogram.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Warm up with a smaller version: is every square a rectangle? A rectangle needs four right angles; a square has them, so yes. Use that same \"does it meet the rules?\" test on each choice below.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with a smaller version: is every square a rectangle? A rectangle needs four right angles; a square has them, so yes. Use that same \"does it meet the rules?\" test on each choice below."
+    },
+    {
+      "level": "nudge",
+      "text": "For each statement, try to invent ONE shape that breaks it. If you can, the statement is not always true."
+    },
+    {
+      "level": "guide",
+      "text": "A rhombus is a quadrilateral with four equal sides. Does a square have four equal sides?"
+    },
+    {
+      "level": "reveal",
+      "text": "Yes — a square has four equal sides, so every square is a rhombus. Statement B is always true."
+    }
+  ],
+  "explanation": [
+    "A rhombus is defined as a quadrilateral with four equal sides. A square has four equal sides, so every square qualifies — B is always true.",
+    "Statement A breaks with a $3$-by-$8$ rectangle: four right angles, but the sides are not all equal, so it is not a square.",
+    "Statement C breaks with a slanted parallelogram, which has no right angles at all.",
+    "Statement D breaks because a trapezoid has only one pair of parallel sides, while a parallelogram needs two."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Squares are the overachievers",
+      "steps": [
+        "A square has four right angles (rectangle rule) and four equal sides (rhombus rule).",
+        "Meeting extra rules means a square belongs to several families at once — rectangle, rhombus, parallelogram, quadrilateral."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The most-chosen wrong answer is A, \"every rectangle is a square,\" because squares and rectangles feel like the same thing.",
+        "The direction matters: the shape with MORE rules (square) lives inside the group with fewer rules (rectangle), never the other way around.",
+        "Escape it by testing with a real object — a door is a rectangle but definitely not a square, which kills statement A instantly."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "geometry",
+    "quadrilaterals",
+    "hierarchy"
+  ],
+  "estimatedSeconds": 70
+}

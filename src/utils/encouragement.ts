@@ -131,6 +131,8 @@ const MASTERY_STICKERS: StickerDef[] = [
   { id: 'mastery-6.SP', emoji: '📊', label: 'Stats Star', category: 'mastery', hint: 'Finish all 6.SP units' },
   { id: 'mastery-5.F', emoji: '🧱', label: 'Foundation Builder', category: 'mastery', hint: 'Finish all Gr-5 Foundations units' },
   { id: 'mastery-A1', emoji: '🚀', label: 'Algebra Ace', category: 'mastery', hint: 'Finish all Algebra 1 units' },
+  { id: 'mastery-GEO', emoji: '📏', label: 'Proof Master', category: 'mastery', hint: 'Finish all High School Geometry units' },
+  { id: 'mastery-TRIG', emoji: '🌊', label: 'Wave Rider', category: 'mastery', hint: 'Finish all Trigonometry units' },
   { id: 'mastery-PC', emoji: '🎢', label: 'Precalc Pioneer', category: 'mastery', hint: 'Finish all Precalculus units' },
   { id: 'mastery-grand', emoji: '🏅', label: '6th-Grade Champion', category: 'mastery', hint: 'Master every 6th-grade domain' },
 ];
@@ -149,7 +151,7 @@ const CHALLENGE_STICKERS: StickerDef[] = [
 ];
 
 export const UNIT_COUNT_BY_DOMAIN: Record<Domain, number> = {
-  '5.F': 6,
+  '5.F': 16,
   '6.RP': 10,
   '6.NS': 10,
   '6.EE': 10,

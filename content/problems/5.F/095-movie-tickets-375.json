@@ -1,0 +1,54 @@
+{
+  "id": "5.F.095",
+  "domain": "5.F",
+  "unit": 10,
+  "orderInUnit": 5,
+  "standard": "5.NBT.B.7",
+  "difficulty": 2,
+  "prompt": "Six friends each pay $\\$3.75$ for a movie ticket. How much do they pay altogether?",
+  "answerType": "numeric",
+  "primaryAnswer": "22.5",
+  "alternativeAnswers": [
+    "22.50",
+    "$22.50"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Six equal payments means $3.75 \\times 6$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Six equal payments means $3.75 \\times 6$."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply the digits first: $375 \\times 6 = 2250$. Now place the decimal point."
+    },
+    {
+      "level": "reveal",
+      "text": "$3.75$ has two decimal places, so the answer does too: $\\$22.50$."
+    }
+  ],
+  "explanation": [
+    "Six equal prices means multiply: $\\$3.75 \\times 6$.",
+    "Multiply without the point: $375 \\times 6 = 2{,}250$.",
+    "$3.75$ has two decimal places, so the product needs two: $22.50$.",
+    "Altogether they pay $\\$22.50$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Friendly-number shortcut",
+      "steps": [
+        "$\\$3.75$ is $\\$4$ minus $25¢$.",
+        "$6 \\times \\$4 = \\$24$, and $6 \\times 25¢ = \\$1.50$.",
+        "$\\$24 - \\$1.50 = \\$22.50$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimals",
+    "money",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

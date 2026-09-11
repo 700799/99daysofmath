@@ -1,0 +1,51 @@
+{
+  "id": "5.F.061",
+  "domain": "5.F",
+  "unit": 7,
+  "orderInUnit": 1,
+  "standard": "5.NBT.B.5",
+  "difficulty": 1,
+  "prompt": "Multiply: $142 \\times 20$",
+  "answerType": "numeric",
+  "primaryAnswer": "2840",
+  "alternativeAnswers": [
+    "2,840"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A $20$ is just $2 \\times 10$, so multiply by $2$ first and then tack on a zero.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A $20$ is just $2 \\times 10$, so multiply by $2$ first and then tack on a zero."
+    },
+    {
+      "level": "guide",
+      "text": "$142 \\times 2 = 284$. Now multiply that by $10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$284 \\times 10 = 2840$."
+    }
+  ],
+  "explanation": [
+    "Break the $20$ apart: $20 = 2 \\times 10$.",
+    "First multiply by $2$: $142 \\times 2 = 284$.",
+    "Then multiply by $10$, which shifts every digit one place left: $284 \\times 10 = 2840$.",
+    "So $142 \\times 20 = 2840$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Place-value split",
+      "steps": [
+        "$142 = 100 + 40 + 2$.",
+        "$100 \\times 20 = 2000$, $40 \\times 20 = 800$, $2 \\times 20 = 40$.",
+        "$2000 + 800 + 40 = 2840$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "multiplication",
+    "multi-digit"
+  ],
+  "estimatedSeconds": 40
+}

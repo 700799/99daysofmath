@@ -1,0 +1,55 @@
+{
+  "id": "5.F.123",
+  "domain": "5.F",
+  "unit": 13,
+  "orderInUnit": 3,
+  "standard": "5.OA.A.2",
+  "difficulty": 1,
+  "prompt": "Write an expression for \"three times the sum of $8$ and $5$.\" Do NOT work out the answer — just write the expression.",
+  "answerType": "expression",
+  "primaryAnswer": "3 × (8 + 5)",
+  "alternativeAnswers": [
+    "3*(8+5)",
+    "3 * (8 + 5)",
+    "3(8+5)",
+    "(8+5)*3",
+    "(8 + 5) × 3",
+    "3 x (8 + 5)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The word \"sum\" means addition, so $8$ and $5$ get added.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The word \"sum\" means addition, so $8$ and $5$ get added."
+    },
+    {
+      "level": "guide",
+      "text": "The whole sum gets tripled, so wrap the addition in parentheses before multiplying."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times (8 + 5)$."
+    }
+  ],
+  "explanation": [
+    "\"The sum of $8$ and $5$\" is the piece $8 + 5$.",
+    "\"Three times\" that whole sum means the addition must happen first, so it needs parentheses: $3 \\times (8 + 5)$.",
+    "Without the parentheses, $3 \\times 8 + 5$ would only triple the $8$ — a different expression.",
+    "The question asked only for the expression, so $3 \\times (8 + 5)$ is the finished answer."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the meaning",
+      "steps": [
+        "$8 + 5 = 13$, and three times $13$ is $39$.",
+        "$3 \\times 8 + 5 = 29$, which is not \"three times the sum\" — proof that the parentheses matter."
+      ]
+    }
+  ],
+  "tags": [
+    "expressions",
+    "writing-expressions"
+  ],
+  "estimatedSeconds": 45
+}

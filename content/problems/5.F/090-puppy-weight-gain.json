@@ -1,0 +1,63 @@
+{
+  "id": "5.F.090",
+  "domain": "5.F",
+  "unit": 9,
+  "orderInUnit": 10,
+  "standard": "5.NBT.B.7",
+  "difficulty": 3,
+  "prompt": "A puppy weighed $8.4$ kg at the vet. It gained $1.35$ kg the next month and $0.9$ kg the month after that. What does the puppy weigh now, in kilograms?",
+  "answerType": "numeric",
+  "primaryAnswer": "10.65",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Try an easier version: $2.5$ kg that gains $0.25$ kg and then $0.1$ kg. Write them all with two decimal places — $2.50 + 0.25 + 0.10 = 2.85$. Giving every number the same number of decimal places is the whole trick.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an easier version: $2.5$ kg that gains $0.25$ kg and then $0.1$ kg. Write them all with two decimal places — $2.50 + 0.25 + 0.10 = 2.85$. Giving every number the same number of decimal places is the whole trick."
+    },
+    {
+      "level": "nudge",
+      "text": "Gaining weight means adding. Add all three numbers, keeping the decimal points stacked."
+    },
+    {
+      "level": "guide",
+      "text": "Write them all with two decimal places: $8.40 + 1.35 + 0.90$."
+    },
+    {
+      "level": "reveal",
+      "text": "$8.40 + 1.35 = 9.75$, and $9.75 + 0.90 = 10.65$ kg."
+    }
+  ],
+  "explanation": [
+    "Rewrite every number with two decimal places so the columns match: $8.40$, $1.35$, $0.90$.",
+    "Add the first two: $8.40 + 1.35 = 9.75$.",
+    "Add the third: $9.75 + 0.90 = 10.65$.",
+    "The puppy now weighs $10.65$ kg."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Add the gains first",
+      "steps": [
+        "Total gain: $1.35 + 0.90 = 2.25$ kg.",
+        "Starting weight plus total gain: $8.40 + 2.25 = 10.65$ kg ✓"
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The classic wrong answer is $9.84$, which happens when $0.9$ gets stacked under the hundredths column as if it were $0.09$.",
+        "$0.9$ is nine **tenths**, not nine hundredths — it belongs in the same column as the $4$ in $8.4$.",
+        "Writing it as $0.90$ before you add keeps the columns honest and gives $10.65$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimals",
+    "measurement",
+    "multi-step"
+  ],
+  "estimatedSeconds": 70
+}

@@ -69,7 +69,7 @@ export function Report() {
         </button>
       </div>
       <p className="text-sm text-ink-muted -mt-3">
-        Strengths &amp; growth areas for 6th-grade math (NWEA MAP prep).
+        Strengths &amp; growth areas across the grade-level standards (NWEA MAP prep).
       </p>
 
       {totalAttempts === 0 ? (

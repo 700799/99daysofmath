@@ -1,0 +1,48 @@
+{
+  "id": "5.F.093",
+  "domain": "5.F",
+  "unit": 10,
+  "orderInUnit": 3,
+  "standard": "5.NBT.B.7",
+  "difficulty": 1,
+  "prompt": "Divide: $4.8 \\div 6$",
+  "answerType": "numeric",
+  "primaryAnswer": "0.8",
+  "alternativeAnswers": [
+    ".8"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Think in tenths: $4.8$ is $48$ tenths.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Think in tenths: $4.8$ is $48$ tenths."
+    },
+    {
+      "level": "guide",
+      "text": "$48$ tenths shared into $6$ equal groups: $48 \\div 6 = 8$ tenths."
+    },
+    {
+      "level": "reveal",
+      "text": "$8$ tenths is $0.8$."
+    }
+  ],
+  "explanation": [
+    "Rename the dividend in tenths: $4.8 = 48$ tenths.",
+    "Split those tenths into $6$ equal groups: $48 \\div 6 = 8$, so each group has $8$ tenths.",
+    "$8$ tenths written as a decimal is $0.8$, so $4.8 \\div 6 = 0.8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check by multiplying back",
+      "steps": [
+        "$0.8 \\times 6$: $8 \\times 6 = 48$, and one decimal place gives $4.8$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "decimals",
+    "division"
+  ],
+  "estimatedSeconds": 40
+}

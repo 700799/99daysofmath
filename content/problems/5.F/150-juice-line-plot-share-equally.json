@@ -1,0 +1,66 @@
+{
+  "id": "5.F.150",
+  "domain": "5.F",
+  "unit": 15,
+  "orderInUnit": 10,
+  "standard": "5.MD.B.2",
+  "difficulty": 3,
+  "prompt": "Six friends each measured the juice in their cup and made a line plot. The line plot shows: $\\frac{1}{8}$ cup appears $2$ times, $\\frac{1}{4}$ cup appears $3$ times, and $\\frac{1}{2}$ cup appears $1$ time. If all the juice were poured together and then shared equally among the $6$ cups, how much juice would be in each cup?",
+  "answerType": "fraction",
+  "primaryAnswer": "1/4",
+  "alternativeAnswers": [
+    "0.25",
+    "2/8"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Say just $2$ cups held $\\frac{1}{4}$ and $\\frac{3}{4}$. Together that is $1$ cup, and $1 \\div 2 = \\frac{1}{2}$ cup each. Total first, then share — same plan below.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Say just $2$ cups held $\\frac{1}{4}$ and $\\frac{3}{4}$. Together that is $1$ cup, and $1 \\div 2 = \\frac{1}{2}$ cup each. Total first, then share — same plan below."
+    },
+    {
+      "level": "nudge",
+      "text": "Step 1 is the TOTAL juice; step 2 is splitting that total among $6$ cups."
+    },
+    {
+      "level": "guide",
+      "text": "In eighths: $2 \\times \\frac{1}{8} = \\frac{2}{8}$, $3 \\times \\frac{1}{4} = \\frac{6}{8}$, and $\\frac{1}{2} = \\frac{4}{8}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{2 + 6 + 4}{8} = \\frac{12}{8} = 1\\frac{1}{2}$ cups total, and $1\\frac{1}{2} \\div 6 = \\frac{1}{4}$ cup each."
+    }
+  ],
+  "explanation": [
+    "Rewrite everything in eighths: the two $\\frac{1}{8}$ cups give $\\frac{2}{8}$, the three $\\frac{1}{4}$ cups give $\\frac{6}{8}$, and the single $\\frac{1}{2}$ cup gives $\\frac{4}{8}$.",
+    "Total juice: $\\frac{2}{8} + \\frac{6}{8} + \\frac{4}{8} = \\frac{12}{8} = 1\\frac{1}{2}$ cups.",
+    "Share it among the $6$ cups: $1\\frac{1}{2} \\div 6 = \\frac{3}{2} \\div 6 = \\frac{3}{12} = \\frac{1}{4}$.",
+    "Each cup would hold $\\frac{1}{4}$ cup of juice."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use twelfths of a cup… or just check it",
+      "steps": [
+        "If every cup ends with $\\frac{1}{4}$, then $6 \\times \\frac{1}{4} = \\frac{6}{4} = 1\\frac{1}{2}$ cups.",
+        "That matches the total we found, so $\\frac{1}{4}$ cup each is right."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "A very common wrong answer is $\\frac{1}{2}$ cup, from dividing the total by $3$ — the number of different labels on the line plot — instead of by $6$.",
+        "The line plot has $3$ labels but $2 + 3 + 1 = 6$ marks, and it is the MARKS that count the cups.",
+        "Escape it by counting the X marks first and writing that number down before you divide."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "line-plot",
+    "fractions",
+    "multi-step"
+  ],
+  "estimatedSeconds": 75
+}

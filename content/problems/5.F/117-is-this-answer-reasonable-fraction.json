@@ -1,0 +1,71 @@
+{
+  "id": "5.F.117",
+  "domain": "5.F",
+  "unit": 12,
+  "orderInUnit": 7,
+  "standard": "5.NF.A.2",
+  "difficulty": 2,
+  "prompt": "Ben says that $\\frac{7}{8} \\times 24 = 27$. Without multiplying it out, what do you know about his answer?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "It is reasonable.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "It is too big — the answer must be less than 24.",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "It is too small — the answer must be more than 24.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "You cannot tell without multiplying.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Is $\\frac{7}{8}$ less than $1$ or more than $1$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Is $\\frac{7}{8}$ less than $1$ or more than $1$?"
+    },
+    {
+      "level": "guide",
+      "text": "Taking $\\frac{7}{8}$ of something means taking almost all of it — but never more than all of it."
+    },
+    {
+      "level": "reveal",
+      "text": "The answer has to be under $24$, so $27$ is too big. (It is really $21$.)"
+    }
+  ],
+  "explanation": [
+    "$\\frac{7}{8}$ is less than $1$, so $\\frac{7}{8} \\times 24$ must be less than $24$.",
+    "Ben's answer of $27$ is bigger than $24$, so it cannot be right.",
+    "The true value: one eighth of $24$ is $24 \\div 8 = 3$, and $7 \\times 3 = 21$.",
+    "$21$ is just under $24$, which fits the estimate perfectly."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate with a benchmark",
+      "steps": [
+        "$\\frac{7}{8}$ is close to $1$, so the answer should be close to but below $24$.",
+        "Something like $21$ fits; $27$ does not."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "estimation",
+    "reasoning"
+  ],
+  "estimatedSeconds": 45
+}

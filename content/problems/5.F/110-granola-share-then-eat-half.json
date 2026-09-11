@@ -1,0 +1,66 @@
+{
+  "id": "5.F.110",
+  "domain": "5.F",
+  "unit": 11,
+  "orderInUnit": 10,
+  "standard": "5.NF.A.2",
+  "difficulty": 3,
+  "prompt": "Seven granola bars are shared equally among $4$ friends. Each friend immediately eats $\\frac{1}{2}$ of a bar. How much of a friend's share is left?",
+  "answerType": "fraction",
+  "primaryAnswer": "5/4",
+  "alternativeAnswers": [
+    "1 1/4",
+    "1.25"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Try smaller numbers: $3$ bars among $2$ friends is $\\frac{3}{2}$ each, and eating $\\frac{1}{2}$ leaves $\\frac{3}{2} - \\frac{1}{2} = \\frac{2}{2} = 1$ bar. Share first as a fraction, then subtract what gets eaten — same two steps.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try smaller numbers: $3$ bars among $2$ friends is $\\frac{3}{2}$ each, and eating $\\frac{1}{2}$ leaves $\\frac{3}{2} - \\frac{1}{2} = \\frac{2}{2} = 1$ bar. Share first as a fraction, then subtract what gets eaten — same two steps."
+    },
+    {
+      "level": "nudge",
+      "text": "Step one is a sharing problem; step two is a subtraction."
+    },
+    {
+      "level": "guide",
+      "text": "Each share is $7 \\div 4 = \\frac{7}{4}$. Now subtract $\\frac{1}{2}$, rewritten in fourths."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2} = \\frac{2}{4}$, so $\\frac{7}{4} - \\frac{2}{4} = \\frac{5}{4} = 1\\frac{1}{4}$ bars."
+    }
+  ],
+  "explanation": [
+    "Step 1 — the share: $7$ bars split among $4$ friends is $7 \\div 4 = \\frac{7}{4}$ of a bar each, which is $1\\frac{3}{4}$.",
+    "Step 2 — subtract what is eaten. Rewrite $\\frac{1}{2}$ as $\\frac{2}{4}$ so the pieces match.",
+    "$\\frac{7}{4} - \\frac{2}{4} = \\frac{5}{4}$.",
+    "So $\\frac{5}{4}$ of a bar, or $1\\frac{1}{4}$ bars, is left of each friend's share."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Decimal check",
+      "steps": [
+        "$\\frac{7}{4} = 1.75$ bars each.",
+        "$1.75 - 0.5 = 1.25$, and $1.25 = \\frac{5}{4}$ ✓"
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "A frequent wrong answer is $\\frac{6}{4}$, from subtracting $\\frac{1}{2}$ as if it were $\\frac{1}{4}$ — the denominators get copied instead of converted.",
+        "Another is $\\frac{7}{4} - \\frac{1}{2} = \\frac{6}{2}$, mixing the pieces up completely.",
+        "Halves are twice as big as fourths, so $\\frac{1}{2} = \\frac{2}{4}$; subtracting that leaves $\\frac{5}{4}$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "fractions",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}
