@@ -161,7 +161,7 @@ export function Home() {
           <div className="text-xs text-ink-muted">Dress up your avatar &amp; unlock games!</div>
         </div>
         <div className="rounded-full bg-warn-soft text-warn px-3 py-1.5 font-mono font-semibold tabular-nums whitespace-nowrap">
-          🪙 {coins.toLocaleString()}
+          π {coins.toLocaleString()}
         </div>
       </Link>
       <Link

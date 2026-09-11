@@ -46,7 +46,7 @@ export function MilestoneQuiz({ onDone, len = 'short', label = '🎁 Milestone b
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-4 mx-auto max-w-xs rounded-3xl border-2 border-indigo-200 bg-indigo-50 p-4 text-center">
       <div className="text-[11px] font-display font-extrabold uppercase tracking-widest text-indigo-500">{label}</div>
       {state === 'right' ? (
-        <div className="mt-2 font-display font-extrabold text-emerald-700">Correct! +🪙 {COIN_REWARD}</div>
+        <div className="mt-2 font-display font-extrabold text-emerald-700">Correct! +π {COIN_REWARD}</div>
       ) : (
         <>
           <div className="mt-2 rounded-2xl bg-white border-2 border-slate-200 px-3 py-3 text-lg font-display font-extrabold leading-snug break-words text-slate-800">{chal.prompt}</div>

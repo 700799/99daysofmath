@@ -255,7 +255,7 @@ function StoryVideoPlayer({
               animate={{ opacity: 1, y: 0, scale: 1 }}
               className="absolute top-3 left-1/2 -translate-x-1/2 z-20 rounded-full bg-yellow-300 text-warn font-display font-extrabold text-sm px-4 py-1.5 shadow-lg"
             >
-              🪙 +{coinAward} coins!
+              +{coinAward} π coins!
             </motion.div>
           )}
 

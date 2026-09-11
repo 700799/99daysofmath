@@ -497,7 +497,7 @@ function FruitStatsLab({ hits, misses, apples, bananas, onDone }: { hits: number
         })}
       </div>
       <div className="mt-3 h-6 text-sm font-display font-bold">
-        {right ? <span className="text-emerald-700">✓ {q.explain} · +🪙 8</span>
+        {right ? <span className="text-emerald-700">✓ {q.explain} · +π 8</span>
           : picked ? <span className="text-rose-600">Not quite — try again!</span>
             : <span className="text-slate-400">Tap the right answer</span>}
       </div>

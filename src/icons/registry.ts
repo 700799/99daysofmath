@@ -16,7 +16,7 @@ export const ICONS = {
   'medal-bronze': s.medalBronze,
   dice: s.dice,
   kart: s.kart,
-  owl: s.owl,
+  astro: s.astro,
   fox: s.fox,
   turtle: s.turtle,
   rabbit: s.rabbit,

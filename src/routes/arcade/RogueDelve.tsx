@@ -186,7 +186,7 @@ export function RogueDelve() {
   const collect = (it: Item, h: Hero, f: Floor) => {
     f.items = f.items.filter((x) => x !== it);
     if (it.kind === 'potion') { h.potions += 1; setLog('Found a potion 🧪'); }
-    else if (it.kind === 'gold') { const g = it.amt + (cls === 'rogue' ? Math.floor(it.amt * 0.5) : 0); h.gold += g; setLog(`+💰${g} gold`); }
+    else if (it.kind === 'gold') { const g = it.amt + (cls === 'rogue' ? Math.floor(it.amt * 0.5) : 0); h.gold += g; setLog(`+💎${g} gold`); }
     else if (it.kind === 'sword') { h.atk += 2; setLog('A sharper sword! ⚔️ +2 ATK'); }
     else if (it.kind === 'shield') { h.def += 1; setLog('A sturdier shield! 🛡️ +1 DEF'); }
     sfx.coin(); haptic(HAPTIC.pickup);
@@ -205,7 +205,7 @@ export function RogueDelve() {
       const roll = Math.random();
       if (roll < 0.4) { h2.atk += 3; setLog('🎁 The chest holds a mighty blade! ⚔️ +3 ATK'); }
       else if (roll < 0.7) { h2.def += 2; setLog('🎁 Enchanted armor! 🛡️ +2 DEF'); }
-      else { const g = 25 + depth * 8; h2.gold += g; setLog(`🎁 Treasure! +💰${g}`); }
+      else { const g = 25 + depth * 8; h2.gold += g; setLog(`🎁 Treasure! +💎${g}`); }
       sfx.powerup(); haptic(HAPTIC.levelUp);
     } else {
       setLog('🔒 The lock holds firm — the chest crumbles to dust.');
@@ -301,7 +301,7 @@ export function RogueDelve() {
           gameId="rogue"
           outcome={outcome}
           win={depth >= 5}
-          scoreLine={`Fell on depth ${depth} · 💰 ${hero.gold}`}
+          scoreLine={`Fell on depth ${depth} · 💎 ${hero.gold}`}
           onReplay={() => { setCls(null); setFloor(null); setHero(null); }}
         />
       </div>
@@ -315,7 +315,7 @@ export function RogueDelve() {
         <span className="text-rose-600">❤️ {Math.max(0, hero.hp)}/{hero.max}</span>
         <span className="text-orange-600">⚔️ {hero.atk}</span>
         <span className="text-sky-600">🛡️ {hero.def}</span>
-        <span className="text-amber-600">💰 {hero.gold}</span>
+        <span className="text-amber-600">💎 {hero.gold}</span>
         <span className="text-indigo-600">⬇️ {depth}</span>
       </div>
 
@@ -335,7 +335,7 @@ export function RogueDelve() {
             if (isHero) content = hero.cls;
             else if (m) content = m.emoji;
             else if (t === 'stairs') content = '⬇️';
-            else if (it) content = it.kind === 'potion' ? '🧪' : it.kind === 'gold' ? '💰' : it.kind === 'chest' ? '🎁' : it.kind === 'sword' ? '⚔️' : '🛡️';
+            else if (it) content = it.kind === 'potion' ? '🧪' : it.kind === 'gold' ? '💎' : it.kind === 'chest' ? '🎁' : it.kind === 'sword' ? '⚔️' : '🛡️';
             const bg = !isSeen ? '#0b0a09' : t === 'wall' ? '#3a2a1a' : inFov ? '#6b5135' : '#4a3a26';
             return (
               <div key={i} className="aspect-square flex items-center justify-center" style={{ background: bg, fontSize: 'min(4.5vw, 20px)' }}>

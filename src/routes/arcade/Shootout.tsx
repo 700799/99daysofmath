@@ -457,7 +457,7 @@ export function Shootout() {
                 animate={zoom.made ? { scale: [1, 1.25, 1] } : { rotate: [0, -10, 10, -8, 0] }}
                 transition={{ duration: 0.6, repeat: Infinity }}
               >
-                <CharMascot kind={zoom.made ? 'panda' : 'monkey'} size={64} expr={zoom.made ? 'surprised' : 'cheer'} />
+                <CharMascot kind={zoom.made ? 'captain' : 'rookie'} size={64} expr={zoom.made ? 'surprised' : 'cheer'} />
               </motion.div>
               <div>
                 <div className={`text-2xl font-display font-extrabold ${zoom.made ? 'text-green-600' : 'text-rose-600'}`}>

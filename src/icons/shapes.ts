@@ -4,7 +4,7 @@
 // elements (so icons rasterize identically everywhere, fonts or not).
 //
 // These strings are shared by the React <Icon> component and the Phaser
-// texture loader, so every star/coin/character looks the same in both worlds.
+// texture loader, so every star, π token and character looks the same in both worlds.
 
 const GREEN = '#58CC02';
 const GREEN_D = '#46A302';
@@ -54,7 +54,9 @@ ${plumpStar(32, 33, 24, CLOUD)}
 export const coin = `
 <circle cx="32" cy="32" r="27.5" fill="${YELLOW}"/>
 <circle cx="32" cy="32" r="20.5" fill="${YELLOW_L}"/>
-${plumpStar(32, 32.5, 11, YELLOW_D, 4)}
+<rect x="19" y="22" width="26" height="5" rx="2.5" fill="${YELLOW_D}"/>
+<rect x="24" y="24" width="5" height="19" rx="2.5" fill="${YELLOW_D}"/>
+<rect x="35" y="24" width="5" height="19" rx="2.5" fill="${YELLOW_D}"/>
 <ellipse cx="22" cy="18" rx="6" ry="3.6" fill="${WHITE}" opacity="0.55" transform="rotate(-35 22 18)"/>`;
 
 export const trophy = `
@@ -104,22 +106,21 @@ export const kart = `
 <circle cx="47" cy="46" r="8.5" fill="${INK}"/>
 <circle cx="47" cy="46" r="3.6" fill="${SLATE_L}"/>`;
 
-export const owl = `
-<path d="M15 17 L21 4 L28 12 Z" fill="${GREEN_D}"/>
-<path d="M49 17 L43 4 L36 12 Z" fill="${GREEN_D}"/>
-<ellipse cx="32" cy="36" rx="22" ry="24" fill="${GREEN}"/>
-<ellipse cx="12.5" cy="38" rx="6.5" ry="13" fill="${GREEN_D}"/>
-<ellipse cx="51.5" cy="38" rx="6.5" ry="13" fill="${GREEN_D}"/>
-<ellipse cx="32" cy="46" rx="12.5" ry="11" fill="#D7FFB8"/>
-<circle cx="24" cy="26" r="9" fill="${WHITE}"/>
-<circle cx="40" cy="26" r="9" fill="${WHITE}"/>
-<circle cx="25.5" cy="27" r="4" fill="${INK}"/>
-<circle cx="38.5" cy="27" r="4" fill="${INK}"/>
-<circle cx="26.8" cy="25.5" r="1.4" fill="${WHITE}"/>
-<circle cx="39.8" cy="25.5" r="1.4" fill="${WHITE}"/>
-<path d="M32 33 L26.5 37.5 Q32 43 37.5 37.5 Z" fill="${ORANGE}"/>
-<ellipse cx="25" cy="59.5" rx="4" ry="2.8" fill="${ORANGE}"/>
-<ellipse cx="39" cy="59.5" rx="4" ry="2.8" fill="${ORANGE}"/>`;
+export const astro = `
+<circle cx="32" cy="27" r="21" fill="${WHITE}"/>
+<circle cx="32" cy="27" r="21" fill="none" stroke="${INK}" stroke-width="2.2"/>
+<circle cx="32" cy="27" r="15.5" fill="#17335F"/>
+<path d="M21 22 q4 -8 12 -8" fill="none" stroke="${WHITE}" stroke-width="2.4" stroke-linecap="round" opacity="0.55"/>
+<ellipse cx="27" cy="26" rx="2.3" ry="2.9" fill="#F3F7FF"/>
+<ellipse cx="37" cy="26" rx="2.3" ry="2.9" fill="#F3F7FF"/>
+<circle cx="27.5" cy="26.5" r="1.1" fill="#0C1E3C"/>
+<circle cx="37.5" cy="26.5" r="1.1" fill="#0C1E3C"/>
+<path d="M28.5 32.5 q3.5 3.5 7 0" fill="none" stroke="#F3F7FF" stroke-width="1.7" stroke-linecap="round"/>
+<path d="M15 34 q17 11 34 0" fill="none" stroke="${GREEN}" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M18 62 v-8 q0 -6 6 -6 h16 q6 0 6 6 v8 z" fill="${WHITE}" stroke="${INK}" stroke-width="2.2"/>
+<rect x="26" y="52" width="12" height="6" rx="2" fill="${CLOUD}"/>
+<circle cx="29.5" cy="55" r="1.3" fill="${GREEN}"/>
+<circle cx="34.5" cy="55" r="1.3" fill="#17335F"/>`;
 
 export const fox = `
 <path d="M8 24 L13 3 L29 13 Z" fill="${ORANGE}"/>

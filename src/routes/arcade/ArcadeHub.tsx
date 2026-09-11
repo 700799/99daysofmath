@@ -4,7 +4,7 @@ import { useProgress, ARCADE_UNITS, ARCADE_UNIT_LABELS } from '../../state/progr
 import { ARCADE_GAMES, PREMIUM_GAMES } from './shared';
 import { Mascot, type MascotKind } from './Mascots';
 
-const UNIT_MASCOT: Record<string, MascotKind> = { '6.RP': 'frog', '6.NS': 'robot', '6.EE': 'dragon', '6.G': 'unicorn', '6.SP': 'penguin', g5: 'bunny', a1: 'dragon', pc: 'robot', mixed: 'pet' };
+const UNIT_MASCOT: Record<string, MascotKind> = { '6.RP': 'scout', '6.NS': 'analyst', '6.EE': 'engineer', '6.G': 'navigator', '6.SP': 'pilot', g5: 'rookie', a1: 'engineer', pc: 'captain', mixed: 'medic' };
 
 function todayISO(): string {
   const d = new Date();
@@ -184,7 +184,7 @@ export function ArcadeHub() {
               {locked && (
                 <div className="absolute inset-0 grid place-items-center rounded-xl bg-slate-900/60">
                   <div className="text-2xl">🔒</div>
-                  <div className="rounded-full border-2 border-line-strong bg-amber-400 px-2 py-0.5 text-[10px] font-display font-black text-zinc-900">🪙{price}</div>
+                  <div className="rounded-full border-2 border-line-strong bg-amber-400 px-2 py-0.5 text-[10px] font-display font-black text-zinc-900">π{price}</div>
                 </div>
               )}
             </Link>

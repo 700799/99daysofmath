@@ -468,7 +468,7 @@ function AdminPanel() {
             />
             <div className="mt-3" />
             <AdminChoice
-              label="Extension costs (🪙 coins)"
+              label="Extension costs (π coins)"
               options={[5, 10, 15, 20]}
               value={config.extendCoinCost ?? 10}
               onPick={(n) => setArcadeConfig({ extendCoinCost: n })}

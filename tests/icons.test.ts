@@ -37,7 +37,7 @@ describe('icon registry', () => {
   });
 
   it('builds an encoded data URI', () => {
-    const uri = iconDataUri('owl', 64);
+    const uri = iconDataUri('astro', 64);
     expect(uri.startsWith('data:image/svg+xml,')).toBe(true);
     expect(decodeURIComponent(uri)).toContain('<svg');
   });

@@ -17,7 +17,7 @@ import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 // dramatic capture (Level 8) — and cute raccoons move in. Relates to the 6.G Geometry
 // unit (answers recorded under '6.G').
 
-const BUILDERS: MascotKind[] = ['raccoon', 'fox', 'bull', 'panda', 'turtle', 'cow'];
+const BUILDERS: MascotKind[] = ['engineer', 'scout', 'captain', 'navigator', 'analyst', 'medic'];
 const STROKES_NEEDED = 3;
 // Circle answers use a kid-friendly π ≈ 3 (real π ≈ 3.14, noted in the help drawer).
 
@@ -189,7 +189,7 @@ function House({ built, wolf, trap, caged, movedIn, hero }: { built: number; wol
       {/* raccoons moved in — peeking from the door/window */}
       {movedIn && (
         <>
-          <g transform="translate(98,120)"><CharMascot kind="raccoon" size={26} expr="cheer" /></g>
+          <g transform="translate(98,120)"><CharMascot kind="engineer" size={26} expr="cheer" /></g>
           <g transform="translate(120,84)"><CharMascot kind={hero} size={22} expr="cheer" /></g>
           <text x="150" y="150" fontSize="16" textAnchor="middle">❤️</text>
         </>
@@ -451,7 +451,7 @@ function InspectorReport({ built, total, first, miss, onCollect }: { built: numb
       <div className="flex items-center justify-between">
         <h3 className="font-display text-lg font-extrabold text-slate-900">🏅 Building Inspection</h3>
         <div className="flex items-center gap-2">
-          <CharMascot kind="clerk" size={34} expr="happy" />
+          <CharMascot kind="analyst" size={34} expr="happy" />
           <span className="rounded-xl border-4 border-slate-900 bg-emerald-300 px-3 py-1 font-display text-2xl font-black tabular-nums text-slate-900">{grade}</span>
         </div>
       </div>

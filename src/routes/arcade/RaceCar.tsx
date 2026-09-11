@@ -257,7 +257,7 @@ export function RaceCar() {
           className="absolute transition-[left] duration-150 ease-out"
           style={{ left: LANES[laneRef.current], top: CAR_Y, transform: 'translate(-50%,-50%)' }}
         >
-          <CharMascot kind="crewmate" size={92} expr={exprRef.current} />
+          <CharMascot kind="pilot" size={92} expr={exprRef.current} />
         </div>
       </div>
 

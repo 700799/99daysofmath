@@ -12,15 +12,15 @@ import { Mascot, type MascotKind } from './Mascots';
 // Characters are original (generic emoji, not trademarked mascots).
 
 const CHAMPIONS: Record<ArcadeUnit, { kind: MascotKind; name: string; word: string }> = {
-  '6.RP': { kind: 'frog', name: 'Hopper', word: 'frog' },
-  '6.NS': { kind: 'robot', name: 'Mech', word: 'robot' },
-  '6.EE': { kind: 'dragon', name: 'Drake', word: 'dragon' },
-  '6.G': { kind: 'unicorn', name: 'Poly', word: 'unicorn' },
-  '6.SP': { kind: 'penguin', name: 'Statz', word: 'penguin' },
-  g5: { kind: 'bunny', name: 'Bouncy', word: 'bunny' },
-  a1: { kind: 'dragon', name: 'Axel', word: 'dragon' },
-  pc: { kind: 'robot', name: 'Sigma', word: 'robot' },
-  mixed: { kind: 'pet', name: 'Pip', word: 'chick' },
+  '6.RP': { kind: 'scout', name: 'Scout', word: 'astronaut' },
+  '6.NS': { kind: 'analyst', name: 'Analyst', word: 'astronaut' },
+  '6.EE': { kind: 'engineer', name: 'Engineer', word: 'astronaut' },
+  '6.G': { kind: 'navigator', name: 'Navigator', word: 'astronaut' },
+  '6.SP': { kind: 'pilot', name: 'Pilot', word: 'astronaut' },
+  g5: { kind: 'rookie', name: 'Rookie', word: 'astronaut' },
+  a1: { kind: 'engineer', name: 'Engineer', word: 'astronaut' },
+  pc: { kind: 'captain', name: 'Captain', word: 'astronaut' },
+  mixed: { kind: 'medic', name: 'Medic', word: 'astronaut' },
 };
 // gear earned at levels 2, 3, 4, 5
 const GEAR = ['🎀', '🛡️', '⚔️', '👑'];

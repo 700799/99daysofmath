@@ -20,7 +20,7 @@ const SESSION_SECONDS = 60;
 const FRUITS = ['🍎', '🍓', '🍌', '🍉', '🍇', '🍊', '🍑', '🥝', '🍒', '🥭'] as const;
 
 // Players pick which runner they want — all the new bold mascots.
-const RUNNERS: MascotKind[] = ['ninja', 'panda', 'redpanda', 'raccoon', 'turtle', 'shark', 'capsuleR', 'capsuleB', 'capsuleP', 'capsuleM', 'cow', 'bull', 'fox', 'cat', 'gizmoTeal', 'gizmoCoral', 'gizmoViolet', 'gizmoLime', 'gizmoCyan', 'gizmoSun', 'gizmoRose', 'gizmoSlate', 'racerRed', 'racerGreen', 'racerViolet'];
+const RUNNERS: MascotKind[] = ['scout', 'pilot', 'engineer', 'navigator', 'captain', 'rookie', 'medic', 'analyst'];
 
 type Scene = 'mountain' | 'city' | 'parking';
 const SCENES: Scene[] = ['mountain', 'city', 'parking'];
@@ -176,7 +176,7 @@ export function MathRunner() {
   const recordArcadePlay = useProgress((s) => s.recordArcadePlay);
   const hapticsOn = useProgress((s) => s.hapticsEnabled);
   const [outcome, setOutcome] = useState<ArcadePlayOutcome | null>(null);
-  const [character, setCharacter] = useState<MascotKind>('ninja');
+  const [character, setCharacter] = useState<MascotKind>('scout');
   const [started, setStarted] = useState(false);
   const [scene, setScene] = useState<Scene>('mountain');
   useArcadeClock(!!outcome);

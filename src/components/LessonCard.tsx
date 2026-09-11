@@ -671,7 +671,7 @@ function RewardView({
           ⚡ +{xp} XP
         </div>
         <div className="inline-flex items-center gap-2 bg-warn-soft text-warn font-display font-extrabold px-4 py-2 rounded-full">
-          🪙 +{LESSON_COINS} coins
+          +{LESSON_COINS} π coins
         </div>
       </div>
       {stickers.length > 0 && (

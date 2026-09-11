@@ -192,7 +192,7 @@ export class TrailScene extends Phaser.Scene {
   }
 
   private placeCharacter() {
-    // Place a little owl character on the highest unlocked but not-completed node
+    // Place the little astronaut character on the highest unlocked but not-completed node
     let targetNode: TrailNode | null = null;
     for (const node of this.layout) {
       const stars = this.state.unitStars[node.unit] ?? 0;

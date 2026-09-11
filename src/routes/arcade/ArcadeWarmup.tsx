@@ -196,7 +196,7 @@ export function ArcadeGate({ title, children }: { title: string; children: React
         <div className="max-w-sm mx-auto mt-6 rounded-3xl border-2 border-line bg-surface p-6 text-center shadow">
           <div className="text-5xl">🔒</div>
           <div className="mt-2 font-display font-extrabold text-xl text-ink">{title} is locked</div>
-          <div className="mt-1 text-sm text-ink-muted">Unlock it in the Coin Shop for 🪙 {premiumPrice}. Earn coins by playing games!</div>
+          <div className="mt-1 text-sm text-ink-muted">Unlock it in the Coin Shop for π {premiumPrice}. Earn coins by playing games!</div>
           <Link to="/shop" className="mt-4 inline-block min-h-11 leading-[2.75rem] px-6 rounded-2xl bg-fuchsia-500 text-white font-display font-extrabold">🛍️ Go to Shop</Link>
         </div>
       </div>
@@ -243,7 +243,7 @@ function TimeUpOverlay({
           Great playing! Earn more time with math.
         </p>
         <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-warn-soft px-3 py-1 font-display font-extrabold text-warn">
-          🪙 {coins} coins
+          π {coins} coins
         </div>
 
         <button
@@ -254,7 +254,7 @@ function TimeUpOverlay({
             canAfford ? 'bg-amber-400 text-ink' : 'bg-surface-2 text-ink-dim border-line-strong cursor-not-allowed shadow-none'
           }`}
         >
-          🪙 Spend {cost} → +{minutes} min
+          π Spend {cost} → +{minutes} min
         </button>
         {!canAfford && (
           <p className="mt-1 text-xs font-display font-bold text-ink-muted">

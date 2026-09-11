@@ -1,19 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<rect width="64" height="64" rx="14" fill="#D7FFB8"/>
-<g transform="translate(6.4 6.4) scale(0.8)">
-<path d="M15 17 L21 4 L28 12 Z" fill="#46A302"/>
-<path d="M49 17 L43 4 L36 12 Z" fill="#46A302"/>
-<ellipse cx="32" cy="36" rx="22" ry="24" fill="#58CC02"/>
-<ellipse cx="12.5" cy="38" rx="6.5" ry="13" fill="#46A302"/>
-<ellipse cx="51.5" cy="38" rx="6.5" ry="13" fill="#46A302"/>
-<ellipse cx="32" cy="46" rx="12.5" ry="11" fill="#D7FFB8"/>
-<circle cx="24" cy="26" r="9" fill="#FFFFFF"/>
-<circle cx="40" cy="26" r="9" fill="#FFFFFF"/>
-<circle cx="25.5" cy="27" r="4" fill="#0F172A"/>
-<circle cx="38.5" cy="27" r="4" fill="#0F172A"/>
-<circle cx="26.8" cy="25.5" r="1.4" fill="#FFFFFF"/>
-<circle cx="39.8" cy="25.5" r="1.4" fill="#FFFFFF"/>
-<path d="M32 33 L26.5 37.5 Q32 43 37.5 37.5 Z" fill="#FF9600"/>
-<ellipse cx="25" cy="59.5" rx="4" ry="2.8" fill="#FF9600"/>
-<ellipse cx="39" cy="59.5" rx="4" ry="2.8" fill="#FF9600"/></g>
+<rect width="64" height="64" rx="14" fill="#E6F4EA"/>
+<!-- helmet -->
+<circle cx="32" cy="31" r="22" fill="#FFFFFF" stroke="#2B3340" stroke-width="2.4"/>
+<!-- visor -->
+<circle cx="32" cy="31" r="16.5" fill="#17335F" stroke="#2B3340" stroke-width="1.8"/>
+<path d="M20 26 q4 -9 13 -9" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" opacity="0.55"/>
+<!-- face -->
+<ellipse cx="26.5" cy="30" rx="2.4" ry="3" fill="#F3F7FF"/>
+<ellipse cx="37.5" cy="30" rx="2.4" ry="3" fill="#F3F7FF"/>
+<circle cx="27" cy="30.5" r="1.2" fill="#0C1E3C"/>
+<circle cx="38" cy="30.5" r="1.2" fill="#0C1E3C"/>
+<path d="M28 36.5 q4 4 8 0" fill="none" stroke="#F3F7FF" stroke-width="1.8" stroke-linecap="round"/>
+<!-- helmet trim + collar -->
+<path d="M14 38 q18 12 36 0" fill="none" stroke="#2E9E5B" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M18 62 v-6 q0 -6 6 -6 h16 q6 0 6 6 v6 z" fill="#FFFFFF" stroke="#2B3340" stroke-width="2.4"/>
+<rect x="26" y="52" width="12" height="6" rx="2" fill="#DDE1E8" stroke="#2B3340" stroke-width="1.4"/>
+<circle cx="29.5" cy="55" r="1.3" fill="#2E9E5B"/>
+<circle cx="34.5" cy="55" r="1.3" fill="#17335F"/>
 </svg>

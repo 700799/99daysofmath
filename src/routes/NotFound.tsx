@@ -5,7 +5,7 @@ export function NotFound() {
   return (
     <div className="text-center py-12">
       <div className="mb-3 flex justify-center">
-        <Icon name="owl" size={72} />
+        <Icon name="astro" size={72} />
       </div>
       <h1 className="text-2xl font-display font-extrabold text-ink">
         Lost on the trail

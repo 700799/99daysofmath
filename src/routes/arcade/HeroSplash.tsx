@@ -111,7 +111,7 @@ export function Countdown({ onDone }: { onDone: () => void }) {
         transition={{ duration: 0.6, repeat: Infinity, ease: 'easeInOut' }}
         className="drop-shadow-lg"
       >
-        <Mascot kind="monkey" size={84} expr="cheer" />
+        <Mascot kind="captain" size={84} expr="cheer" />
       </motion.div>
       <div className="mt-1 font-display font-extrabold text-white drop-shadow">{cheer}</div>
       {/* Single keyed digit (no AnimatePresence mode="wait", which was dropping

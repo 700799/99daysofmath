@@ -22,7 +22,7 @@ type Mob = { c: number; r: number; tc: number; tr: number; prog: number; dir: Di
 type Monster = Mob & { home: { c: number; r: number }; canDig: boolean };
 type Rock = { c: number; y: number; stop: number; falling: boolean; dead: boolean };
 
-const GEM_EMOJI = ['💎', '💍', '👑', '🔶', '🔷', '🟣', '🔴', '🟢', '🟡', '🪙', '💠', '🟠'];
+const GEM_EMOJI = ['💎', '💍', '👑', '🔶', '🔷', '🟣', '🔴', '🟢', '🟡', '⭐', '💠', '🟠'];
 const GEM_CELLS = [
   [1, 1], [4, 1], [2, 2], [5, 2], [3, 4], [5, 4], [2, 6], [4, 6],
 ];
