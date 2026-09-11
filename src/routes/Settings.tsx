@@ -5,7 +5,7 @@ import { TOTAL_STICKERS } from '../utils/encouragement';
 import { AccountCard } from '../components/AccountCard';
 import { ARCADE_GAMES } from './arcade/shared';
 import { useTheme } from '../hooks/useTheme';
-import { AGE_RANGE, GRADE_LEVELS, COURSES, courseForGrade, recommendationReason } from '../data/courses';
+import { AGE_RANGE, GRADE_LEVELS, COURSES, COURSE_FIT } from '../data/courses';
 
 const GOAL_OPTIONS = [10, 30, 50, 100];
 
@@ -25,6 +25,8 @@ export function Settings() {
   const age = useProgress((s) => s.age);
   const gradeLevel = useProgress((s) => s.gradeLevel);
   const setLearnerProfile = useProgress((s) => s.setLearnerProfile);
+  const startingCourse = useProgress((s) => s.startingCourse);
+  const setStartingCourse = useProgress((s) => s.setStartingCourse);
   const setDailyGoal = useProgress((s) => s.setDailyGoal);
   const mockTestsCompleted = useProgress((s) => s.mockTestsCompleted);
   const bestMockAccuracy = useProgress((s) => s.bestMockAccuracy);
@@ -66,7 +68,7 @@ export function Settings() {
       <div className="bg-surface border-2 border-line rounded-2xl p-5">
         <div className="font-display font-extrabold text-ink">Age &amp; grade</div>
         <div className="mt-1 text-sm text-ink-muted">
-          Decides which course we suggest on the home screen. Change it whenever you move up a year.
+          Just context — it does not decide your course. Change it whenever you move up a year.
         </div>
         <div className="mt-3">
           <div className="font-display text-[11px] font-extrabold uppercase tracking-wider text-ink-muted">
@@ -112,12 +114,39 @@ export function Settings() {
             ))}
           </div>
         </div>
-        {gradeLevel !== null && (
-          <div className="mt-3 rounded-xl border border-line bg-surface-2 p-3 text-[12.5px] leading-relaxed text-ink-muted">
-            Suggesting <b className="text-ink">{COURSES.find((c) => c.id === courseForGrade(gradeLevel))?.name}</b> —{' '}
-            {recommendationReason(gradeLevel)}
-          </div>
-        )}
+      </div>
+
+      <div className="bg-surface border-2 border-line rounded-2xl p-5">
+        <div className="font-display font-extrabold text-ink">Your course</div>
+        <div className="mt-1 text-sm text-ink-muted">
+          Which course sits first on the home screen. Pick what matches what you can already do —
+          not your school year. Every other course stays open.
+        </div>
+        <div className="mt-3 space-y-2">
+          {COURSES.map((c) => {
+            const on = startingCourse === c.id;
+            return (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => setStartingCourse(c.id)}
+                aria-pressed={on}
+                className={`flex w-full items-start gap-3 rounded-2xl border-2 p-3 text-left transition-colors ${
+                  on ? 'border-accent bg-accent-soft' : 'border-line bg-surface-2 hover:border-accent/50'
+                }`}
+              >
+                <span className="text-2xl leading-none">{c.emoji}</span>
+                <span className="min-w-0 flex-1">
+                  <span className="block font-display text-[13.5px] font-extrabold text-ink">{c.name}</span>
+                  <span className="mt-0.5 block text-[12px] leading-relaxed text-ink-muted">
+                    {COURSE_FIT[c.id]}
+                  </span>
+                </span>
+                {on && <span className="shrink-0 text-accent">✓</span>}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       <div className="bg-surface border-2 border-line rounded-2xl p-5">

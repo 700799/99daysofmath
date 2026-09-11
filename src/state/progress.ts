@@ -153,6 +153,11 @@ interface ProgressState {
   age: number | null;
   /** School year, 4 meaning "4th grade or below" and 12 the last. */
   gradeLevel: number | null;
+  /**
+   * The course the student picked to start in. Chosen, never inferred from
+   * age or grade — level and school year are not the same thing.
+   */
+  startingCourse: string | null;
   // ---- v6 additions ----
   problemStats: Record<string, ProblemStat>; // keyed by problem id
   ritHistory: RitPoint[];                     // appended per mock test
@@ -270,6 +275,7 @@ interface ProgressState {
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
   setLearnerProfile: (age: number | null, gradeLevel: number | null) => void;
+  setStartingCourse: (id: string | null) => void;
   incrementStreak: () => string[];
   resetStreak: () => void;
   touchDay: () => string[];
@@ -404,6 +410,7 @@ const v5Defaults = {
   onboardingComplete: false,
   age: null as number | null,
   gradeLevel: null as number | null,
+  startingCourse: null as string | null,
 };
 
 const v6Defaults = {
@@ -752,6 +759,7 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
     const stateAny = state as Record<string, unknown>;
     if (stateAny.age === undefined) stateAny.age = null;
     if (stateAny.gradeLevel === undefined) stateAny.gradeLevel = null;
+    if (stateAny.startingCourse === undefined) stateAny.startingCourse = null;
   }
   if (fromVersion < 27) {
     // 5th-grade MAP Growth prep arrives: an empty practice-test history.
@@ -1244,6 +1252,7 @@ export const useProgress = create<ProgressState>()(
       setDailyGoal: (n) => set({ dailyGoal: n }),
       markOnboardingDone: () => set({ onboardingComplete: true }),
       setLearnerProfile: (age, gradeLevel) => set({ age, gradeLevel }),
+      setStartingCourse: (id) => set({ startingCourse: id }),
       incrementStreak: () => {
         const before = get();
         const next = before.streak + 1;

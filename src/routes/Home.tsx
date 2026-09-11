@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { domainCourseName } from '../types/problem';
-import { COURSES, courseDomains, courseHref, courseForGrade, GRADE_LEVELS } from '../data/courses';
+import { COURSES, courseDomains, courseHref, GRADE_LEVELS, type CourseId } from '../data/courses';
 import { useProgress } from '../state/progress';
 import { useDisplayName } from '../state/auth';
 import { useDomainSummary } from '../hooks/useProblems';
@@ -47,13 +47,17 @@ export function Home() {
   const age = useProgress((s) => s.age);
   const gradeLevel = useProgress((s) => s.gradeLevel);
   const setLearnerProfile = useProgress((s) => s.setLearnerProfile);
+  const startingCourse = useProgress((s) => s.startingCourse);
+  const setStartingCourse = useProgress((s) => s.setStartingCourse);
   const coins = useProgress((s) => s.coins);
   const markOnboardingDone = useProgress((s) => s.markOnboardingDone);
   // The gate keys off the answers, not off the tour: an install from before
   // this existed has onboardingComplete set but no age or grade, and should be
   // asked once rather than never.
-  const needsProfile = age === null || gradeLevel === null;
-  const recommended = gradeLevel !== null ? courseForGrade(gradeLevel) : null;
+  const needsProfile = age === null || gradeLevel === null || startingCourse === null;
+  // The course the student PICKED. Never derived from their grade — a 5th
+  // grader may be doing Algebra 1 and a 9th grader may need fractions.
+  const chosen = startingCourse;
   const gradeLabel = GRADE_LEVELS.find((g) => g.value === gradeLevel)?.label ?? null;
   const displayName = useDisplayName();
 
@@ -63,8 +67,10 @@ export function Home() {
         <Onboarding
           initialAge={age}
           initialGrade={gradeLevel}
-          onDone={(a, g) => {
+          initialCourse={(startingCourse as CourseId | null) ?? null}
+          onDone={(a, g, c) => {
             setLearnerProfile(a, g);
+            setStartingCourse(c);
             markOnboardingDone();
           }}
         />
@@ -78,7 +84,7 @@ export function Home() {
           </h1>
           <p className="text-ink-muted mt-0.5 text-sm sm:text-base">
             {gradeLabel
-              ? `${gradeLabel} grade — your course is marked below. Earn stars, stickers, and XP.`
+              ? `${gradeLabel} grade — your course is first below, and every other one is open. Earn stars, stickers, and XP.`
               : 'Seven courses, from 5th-grade Common Core up to SAT Math prep. Earn stars, stickers, and XP.'}
           </p>
         </div>
@@ -199,9 +205,9 @@ export function Home() {
           seven subjects rather than eleven content tags. */}
       <div className="space-y-3">
         {[...COURSES]
-          .sort((a, b) => Number(b.id === recommended) - Number(a.id === recommended))
+          .sort((a, b) => Number(b.id === chosen) - Number(a.id === chosen))
           .map((c, i) => {
-          const isRecommended = c.id === recommended;
+          const isChosen = c.id === chosen;
           const domains = courseDomains(c);
           const earned = domains.reduce((sum, d) => {
             const dp = progress[d];
@@ -226,7 +232,7 @@ export function Home() {
               <Link
                 to={courseHref(c)}
                 className={`block rounded-3xl p-4 sm:p-5 shadow-sm border-2 bg-surface hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all ${
-                  isRecommended ? 'border-accent' : 'border-line'
+                  isChosen ? 'border-accent' : 'border-line'
                 }`}
                 style={{ borderLeftWidth: 10, borderLeftColor: c.color }}
               >
@@ -237,9 +243,9 @@ export function Home() {
                       <div className="font-display font-extrabold text-base sm:text-lg text-ink">
                         {c.name}
                       </div>
-                      {isRecommended && (
+                      {isChosen && (
                         <span className="rounded-full bg-accent px-2 py-0.5 font-display text-[10px] font-extrabold uppercase tracking-wider text-on-accent">
-                          Your grade
+                          Your course
                         </span>
                       )}
                     </div>

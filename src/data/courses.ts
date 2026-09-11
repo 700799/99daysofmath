@@ -170,10 +170,11 @@ export function courseOfDomain(d: Domain): Course | null {
   return owner ?? COURSES.find((c) => c.strands.some((s) => s.domain === d)) ?? null;
 }
 
-// ── Where a grade should start ─────────────────────────────────────────────
-// Asked at the door so the shelf can point somewhere instead of leaving a
-// 10-year-old to guess between SAT prep and 5th-grade fractions. It is a
-// suggestion and nothing is locked: a student can open any course.
+// ── Starting point ─────────────────────────────────────────────────────────
+// Deliberately NOT inferred from the school year. A 5th grader may be doing
+// Algebra 1 and a 9th grader may need 6th-grade fractions; picking a course
+// from a grade would be wrong for both of them and would start the app by
+// telling a kid what level they are. The student chooses, and can change it.
 
 export const GRADE_LEVELS: { value: number; label: string }[] = [
   { value: 4, label: '4th or below' },
@@ -189,20 +190,17 @@ export const GRADE_LEVELS: { value: number; label: string }[] = [
 
 export const AGE_RANGE = { min: 7, max: 18 };
 
-/** The course to suggest for a school year, following the usual US sequence. */
-export function courseForGrade(grade: number): CourseId {
-  if (grade <= 5) return 'grade5';
-  if (grade <= 7) return 'grade6';
-  if (grade <= 9) return 'algebra1';
-  if (grade === 10) return 'geometry';
-  return 'sat';
-}
-
-/** One line saying why that course was suggested. */
-export function recommendationReason(grade: number): string {
-  if (grade <= 5) return 'Your grade-level standards, and MAP Growth prep built on them.';
-  if (grade <= 7) return 'The full 6th-grade Common Core standards, all five strands.';
-  if (grade <= 9) return 'The first algebra course — where the next few years are decided.';
-  if (grade === 10) return 'Geometry, from the foundations through the full high-school course.';
-  return 'SAT Math prep: the blueprint, 5 full mock tests, and a recovery plan.';
-}
+/**
+ * One line per course describing who it suits, in terms of what a student can
+ * already do rather than what year they are in — that is the thing they can
+ * actually judge about themselves.
+ */
+export const COURSE_FIT: Record<CourseId, string> = {
+  grade5: 'Still building multiplication, fractions and decimals.',
+  grade6: 'Comfortable with fractions and decimals; ready for ratios, negatives and variables.',
+  algebra1: 'Can solve with variables and want equations, lines and quadratics.',
+  geometry: 'Ready for shapes, proof, and reasoning about why things are true.',
+  trig: 'Know right triangles and want angles, the unit circle and waves.',
+  precalc: 'Finished Algebra 2 and heading toward calculus.',
+  sat: 'Preparing for the Digital SAT, whatever year you are in.',
+};

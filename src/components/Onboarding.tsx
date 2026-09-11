@@ -1,20 +1,15 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mascot, type MascotMood } from './Mascot';
-import {
-  AGE_RANGE,
-  GRADE_LEVELS,
-  COURSES,
-  courseForGrade,
-  recommendationReason,
-} from '../data/courses';
+import { AGE_RANGE, GRADE_LEVELS, COURSES, COURSE_FIT, type CourseId } from '../data/courses';
 
 interface Props {
-  /** Called with the answers; both are required before this can fire. */
-  onDone: (age: number, gradeLevel: number) => void;
+  /** Called with the answers; all three are required before this can fire. */
+  onDone: (age: number, gradeLevel: number, course: CourseId) => void;
   /** Prefilled when someone is editing rather than starting out. */
   initialAge?: number | null;
   initialGrade?: number | null;
+  initialCourse?: CourseId | null;
 }
 
 const CARDS: { emoji: string; mood: MascotMood; title: string; body: string }[] = [
@@ -62,23 +57,28 @@ function Chip({
   );
 }
 
-export function Onboarding({ onDone, initialAge = null, initialGrade = null }: Props) {
-  // Step 0 is the age/grade question and cannot be skipped — everything after
-  // it is the usual tour.
+export function Onboarding({
+  onDone,
+  initialAge = null,
+  initialGrade = null,
+  initialCourse = null,
+}: Props) {
+  // Step 0 asks age and grade, step 1 asks where to start. Neither can be
+  // skipped; the tour after them can.
   const [step, setStep] = useState(0);
   const [age, setAge] = useState<number | null>(initialAge);
   const [grade, setGrade] = useState<number | null>(initialGrade);
+  const [course, setCourse] = useState<CourseId | null>(initialCourse);
 
   const answered = age !== null && grade !== null;
-  const suggested = grade !== null ? COURSES.find((c) => c.id === courseForGrade(grade)) : null;
 
   const finish = () => {
-    if (age === null || grade === null) return;
-    onDone(age, grade);
+    if (age === null || grade === null || course === null) return;
+    onDone(age, grade, course);
   };
 
-  const card = step > 0 ? CARDS[step - 1] : null;
-  const lastCard = step - 1 === CARDS.length - 1;
+  const card = step > 1 ? CARDS[step - 2] : null;
+  const lastCard = step - 2 === CARDS.length - 1;
 
   return (
     <AnimatePresence>
@@ -90,7 +90,7 @@ export function Onboarding({ onDone, initialAge = null, initialGrade = null }: P
         className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 p-4 backdrop-blur-sm sm:p-6"
         role="dialog"
         aria-modal="true"
-        aria-label={step === 0 ? 'Tell us about you' : 'Welcome tour'}
+        aria-label={step === 0 ? 'Tell us about you' : step === 1 ? 'Choose a starting course' : 'Welcome tour'}
       >
         <motion.div
           key={step}
@@ -108,7 +108,7 @@ export function Onboarding({ onDone, initialAge = null, initialGrade = null }: P
                 First — who&apos;s learning?
               </h2>
               <p className="mt-1.5 text-center text-sm text-ink-muted">
-                Two taps, and we&apos;ll point you at the right course.
+                Just so we know who we&apos;re teaching. You&apos;ll pick your course next.
               </p>
 
               <div className="mt-5">
@@ -143,22 +143,6 @@ export function Onboarding({ onDone, initialAge = null, initialGrade = null }: P
                 </div>
               </div>
 
-              {suggested && grade !== null && (
-                <motion.div
-                  initial={{ opacity: 0, y: 6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="mt-4 rounded-2xl border-2 p-3"
-                  style={{ borderColor: `${suggested.color}66`, background: `${suggested.color}14` }}
-                >
-                  <div className="font-display text-[12px] font-extrabold text-ink">
-                    {suggested.emoji} We&apos;ll start you in {suggested.name}
-                  </div>
-                  <p className="mt-0.5 text-[12px] leading-relaxed text-ink-muted">
-                    {recommendationReason(grade)} You can still open any course you like.
-                  </p>
-                </motion.div>
-              )}
-
               <button
                 type="button"
                 onClick={() => setStep(1)}
@@ -168,8 +152,62 @@ export function Onboarding({ onDone, initialAge = null, initialGrade = null }: P
                 {answered ? 'Next' : 'Pick an age and a grade'}
               </button>
               <p className="mt-2 text-center text-[11px] leading-relaxed text-ink-dim">
-                This stays on your device — it only decides which course we suggest.
+                This stays on your device.
               </p>
+            </>
+          ) : step === 1 ? (
+            <>
+              <h2 className="text-center font-display text-xl font-extrabold text-ink">
+                Where do you want to start?
+              </h2>
+              <p className="mx-auto mt-1.5 max-w-[19rem] text-center text-sm text-ink-muted">
+                Pick what fits what you can already do — not your school year. You can switch
+                course any time, and nothing is locked.
+              </p>
+
+              <div className="mt-4 space-y-2">
+                {COURSES.map((c) => {
+                  const on = course === c.id;
+                  return (
+                    <button
+                      key={c.id}
+                      type="button"
+                      onClick={() => setCourse(c.id)}
+                      aria-pressed={on}
+                      className={`flex w-full items-start gap-3 rounded-2xl border-2 p-3 text-left transition-colors ${
+                        on ? 'border-accent bg-accent-soft' : 'border-line bg-surface-2 hover:border-accent/50'
+                      }`}
+                    >
+                      <span className="text-2xl leading-none">{c.emoji}</span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block font-display text-[13.5px] font-extrabold text-ink">
+                          {c.name}
+                        </span>
+                        <span className="mt-0.5 block text-[12px] leading-relaxed text-ink-muted">
+                          {COURSE_FIT[c.id]}
+                        </span>
+                      </span>
+                      {on && <span className="shrink-0 text-accent">✓</span>}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setStep(2)}
+                disabled={course === null}
+                className="mt-5 min-h-12 w-full rounded-2xl bg-duo-green px-6 py-2.5 font-display font-extrabold text-white shadow-[0_4px_0_0_rgba(0,0,0,0.15)] transition-all hover:bg-duo-green-dark active:translate-y-0.5 disabled:cursor-not-allowed disabled:bg-line-strong disabled:shadow-none disabled:active:translate-y-0"
+              >
+                {course === null ? 'Pick a starting course' : 'Next'}
+              </button>
+              <button
+                type="button"
+                onClick={() => setStep(0)}
+                className="mt-2 w-full font-display text-sm font-bold text-ink-dim hover:text-ink-muted"
+              >
+                ← Back
+              </button>
             </>
           ) : (
             card && (
@@ -185,7 +223,7 @@ export function Onboarding({ onDone, initialAge = null, initialGrade = null }: P
                   {CARDS.map((_, idx) => (
                     <span
                       key={idx}
-                      className={`h-2 w-2 rounded-full ${idx === step - 1 ? 'bg-duo-green' : 'bg-line-strong'}`}
+                      className={`h-2 w-2 rounded-full ${idx === step - 2 ? 'bg-duo-green' : 'bg-line-strong'}`}
                     />
                   ))}
                 </div>
