@@ -44,5 +44,10 @@
     "law-of-cosines",
     "solve-triangle"
   ],
-  "estimatedSeconds": 60
+  "estimatedSeconds": 60,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"83.5,200 276.5,200 239.4,50\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"71.5\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">A</text><text x=\"288.5\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">B</text><text x=\"239.4\" y=\"40\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">C</text><text x=\"274.5\" y=\"122.9\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">5</text><text x=\"146.4\" y=\"120.2\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">7</text><text x=\"171.2\" y=\"227.3\" font-size=\"14\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">c = ?</text><path d=\"M 223.5 65.3 A 22 22 0 0 0 244.7 71.4\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"227.7\" y=\"95.4\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">60°</text></svg>",
+    "alt": "Triangle ABC with a = 5, b = 7, C = 60°, c = c = ?"
+  }
 }

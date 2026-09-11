@@ -43,5 +43,10 @@
     "central-angle",
     "circle"
   ],
-  "estimatedSeconds": 30
+  "estimatedSeconds": 30,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 300\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"160\" cy=\"150\" r=\"105\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><line x1=\"160\" y1=\"150\" x2=\"265\" y2=\"150\" stroke=\"currentColor\" stroke-width=\"2\" opacity=\"0.7\"/><line x1=\"160\" y1=\"150\" x2=\"234.2\" y2=\"75.8\" stroke=\"currentColor\" stroke-width=\"2\" opacity=\"0.7\"/><line x1=\"160\" y1=\"150\" x2=\"160\" y2=\"45\" stroke=\"currentColor\" stroke-width=\"2\" opacity=\"0.7\"/><line x1=\"160\" y1=\"150\" x2=\"85.8\" y2=\"75.8\" stroke=\"currentColor\" stroke-width=\"2\" opacity=\"0.7\"/><line x1=\"160\" y1=\"150\" x2=\"55\" y2=\"150\" stroke=\"currentColor\" stroke-width=\"2\" opacity=\"0.7\"/><line x1=\"160\" y1=\"150\" x2=\"85.8\" y2=\"224.2\" stroke=\"currentColor\" stroke-width=\"2\" opacity=\"0.7\"/><line x1=\"160\" y1=\"150\" x2=\"160\" y2=\"255\" stroke=\"currentColor\" stroke-width=\"2\" opacity=\"0.7\"/><line x1=\"160\" y1=\"150\" x2=\"234.2\" y2=\"224.2\" stroke=\"currentColor\" stroke-width=\"2\" opacity=\"0.7\"/><path d=\"M 160 150 L 265 150 A 105 105 0 0 0 234.2 75.8 Z\" fill=\"#F59E0B55\" stroke=\"none\" stroke-width=\"0\"/><path d=\"M 194 150 A 34 34 0 0 0 184 126\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"2.4\"/><text x=\"208\" y=\"135.1\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text></svg>",
+    "alt": "A circle cut into 8 equal slices from the centre, one slice shaded"
+  }
 }

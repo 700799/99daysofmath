@@ -56,5 +56,10 @@
     "sine",
     "word-problem"
   ],
-  "estimatedSeconds": 75
+  "estimatedSeconds": 75,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"30\" y1=\"201\" x2=\"330\" y2=\"201\" stroke=\"currentColor\" stroke-width=\"2.5\" opacity=\"0.5\"/><polygon points=\"133.7,195 241.3,45 241.3,195\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M 227.3 195 L 227.3 181 L 241.3 181\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"M 163.7 195 A 30 30 0 0 0 151.2 170.6\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.5\"/><text x=\"167.8\" y=\"183.6\" font-size=\"14\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"start\">?</text><text x=\"251.3\" y=\"125\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">65 m</text><text x=\"174.5\" y=\"115.7\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">80 m</text></svg>",
+    "alt": "A right triangle with opposite 65 m, hypotenuse 80 m"
+  }
 }

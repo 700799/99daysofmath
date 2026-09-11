@@ -44,5 +44,10 @@
     "exterior-angle",
     "algebra"
   ],
-  "estimatedSeconds": 60
+  "estimatedSeconds": 60,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"103.8,200 256.2,200 229.7,50\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"91.8\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">A</text><text x=\"268.2\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">B</text><text x=\"229.7\" y=\"40\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">C</text><path d=\"M 125.8 200 A 22 22 0 0 0 118 183.1\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"141.9\" y=\"187.3\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">A</text><path d=\"M 215.6 66.9 A 22 22 0 0 0 233.5 71.7\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"218.8\" y=\"95.6\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">C</text><line x1=\"256.2\" y1=\"200\" x2=\"326.2\" y2=\"200\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><path d=\"M 282.2 200 A 26 26 0 0 0 251.6 174.4\" fill=\"none\" stroke=\"#10B981\" stroke-width=\"2.4\"/><text x=\"288.3\" y=\"166.7\" font-size=\"13\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"middle\">(5x)°</text><text x=\"180\" y=\"242\" font-size=\"11\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">∠A = (2x + 10)° · ∠C = (x + 30)°</text></svg>",
+    "alt": "Triangle ABC with A = (2x + 10)°, C = (x + 30)°"
+  }
 }

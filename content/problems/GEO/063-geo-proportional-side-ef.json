@@ -44,5 +44,10 @@
     "proportion",
     "scale-factor"
   ],
-  "estimatedSeconds": 45
+  "estimatedSeconds": 45,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"30,190 130,190 95,120\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/><polygon points=\"170,190 330,190 274,78\" fill=\"#0EA5E918\" stroke=\"#0EA5E9\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/><text x=\"80\" y=\"208\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">AB = 4</text><text x=\"142.9\" y=\"155\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">BC = 6</text><text x=\"250\" y=\"208\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">DE = 10</text><text x=\"336.2\" y=\"134\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">EF = ?</text><text x=\"80\" y=\"60\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">ABC</text><text x=\"260\" y=\"60\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">DEF</text></svg>",
+    "alt": "Two similar triangles, ABC and DEF"
+  }
 }

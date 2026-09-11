@@ -45,5 +45,10 @@
     "navigation",
     "bearings"
   ],
-  "estimatedSeconds": 80
+  "estimatedSeconds": 80,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"65.8,200 294.2,200 234.7,50\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"53.8\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">ship 1</text><text x=\"306.2\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">ship 2</text><text x=\"234.7\" y=\"40\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">port</text><text x=\"286.9\" y=\"121.5\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">30 km</text><text x=\"129\" y=\"118.9\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">42 km</text><text x=\"173.8\" y=\"221.9\" font-size=\"14\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text><path d=\"M 218.3 64.6 A 22 22 0 0 0 242.8 70.5\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"225\" y=\"95.9\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">70°</text></svg>",
+    "alt": "Triangle ship 1, ship 2, port with a = 30 km, b = 42 km, C = 70°, c = ?"
+  }
 }

@@ -43,5 +43,10 @@
     "pythagorean-theorem",
     "word-problem"
   ],
-  "estimatedSeconds": 40
+  "estimatedSeconds": 40,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"30\" y1=\"201\" x2=\"330\" y2=\"201\" stroke=\"currentColor\" stroke-width=\"2.5\" opacity=\"0.5\"/><polygon points=\"87.5,195 287.5,45 287.5,195\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M 273.5 195 L 273.5 181 L 287.5 181\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><text x=\"187.5\" y=\"217\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">8 ft</text><text x=\"297.5\" y=\"125\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">6 ft</text><text x=\"177.9\" y=\"112.2\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">?</text></svg>",
+    "alt": "A right triangle with opposite 6 ft, adjacent 8 ft, hypotenuse ?"
+  }
 }

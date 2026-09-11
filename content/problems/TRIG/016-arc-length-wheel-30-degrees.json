@@ -50,5 +50,10 @@
     "conversion",
     "wheel"
   ],
-  "estimatedSeconds": 55
+  "estimatedSeconds": 55,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 300\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"170\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" opacity=\"0.5\"/><line x1=\"170\" y1=\"150\" x2=\"270\" y2=\"150\" stroke=\"currentColor\" stroke-width=\"2.5\"/><line x1=\"170\" y1=\"150\" x2=\"256.6\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2.5\"/><path d=\"M 270 150 A 100 100 0 0 0 256.6 100\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"5\"/><path d=\"M 200 150 A 30 30 0 0 0 196 135\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"208.7\" y=\"145.2\" font-size=\"14\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"start\">30°</text><text x=\"220\" y=\"168\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">12 in</text><text x=\"280.2\" y=\"126\" font-size=\"14\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"start\">?</text><circle cx=\"170\" cy=\"150\" r=\"4\" fill=\"currentColor\"/></svg>",
+    "alt": "A circle of radius 12 in with a central angle of 30°"
+  }
 }

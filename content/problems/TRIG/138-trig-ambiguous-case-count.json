@@ -68,5 +68,10 @@
     "ssa",
     "law-of-sines"
   ],
-  "estimatedSeconds": 75
+  "estimatedSeconds": 75,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"60\" y1=\"200\" x2=\"330\" y2=\"200\" stroke=\"currentColor\" stroke-width=\"2\" opacity=\"0.6\"/><line x1=\"60\" y1=\"200\" x2=\"190.2\" y2=\"90.7\" stroke=\"#F59E0B\" stroke-width=\"3\"/><path d=\"M 62.4 137.2 A 136 136 0 0 0 318 137.2\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\"/><line x1=\"190.2\" y1=\"90.7\" x2=\"109.3\" y2=\"200\" stroke=\"#0EA5E9\" stroke-width=\"2.5\"/><line x1=\"190.2\" y1=\"90.7\" x2=\"271.2\" y2=\"200\" stroke=\"#0EA5E9\" stroke-width=\"2.5\"/><circle cx=\"109.3\" cy=\"200\" r=\"5\" fill=\"#F43F5E\"/><circle cx=\"271.2\" cy=\"200\" r=\"5\" fill=\"#F43F5E\"/><circle cx=\"190.2\" cy=\"90.7\" r=\"4.5\" fill=\"currentColor\"/><circle cx=\"60\" cy=\"200\" r=\"4.5\" fill=\"currentColor\"/><path d=\"M 84 200 A 24 24 0 0 0 78.4 184.6\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"101.3\" y=\"190\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">40°</text><text x=\"113.1\" y=\"139.4\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"end\">b = 10</text><text x=\"244.7\" y=\"145.4\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"start\">a = 8</text><text x=\"109.3\" y=\"220\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">B₁</text><text x=\"271.2\" y=\"220\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">B₂</text><text x=\"190.2\" y=\"80.7\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">C</text><text x=\"48\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">A</text></svg>",
+    "alt": "Angle A with side b fixed and side a swinging to two possible positions for B"
+  }
 }

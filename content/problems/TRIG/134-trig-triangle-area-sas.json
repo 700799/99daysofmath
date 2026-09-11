@@ -45,5 +45,10 @@
     "sine-formula",
     "word-problem"
   ],
-  "estimatedSeconds": 55
+  "estimatedSeconds": 55,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"122.4,200 217.8,200 237.6,50\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"110.4\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">A</text><text x=\"229.8\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">B</text><text x=\"237.6\" y=\"40\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">C</text><text x=\"242.4\" y=\"119.6\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">8 m</text><text x=\"169.2\" y=\"108.6\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">10 m</text><path d=\"M 224.2 67.4 A 22 22 0 0 0 234.7 71.8\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"221.5\" y=\"93.8\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">30°</text><line x1=\"237.6\" y1=\"50\" x2=\"237.6\" y2=\"200\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><text x=\"253.6\" y=\"129\" font-size=\"13\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"start\">h</text></svg>",
+    "alt": "Triangle ABC with a = 8 m, b = 10 m, C = 30°"
+  }
 }

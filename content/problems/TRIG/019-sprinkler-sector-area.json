@@ -57,5 +57,10 @@
     "word-problem",
     "sprinkler"
   ],
-  "estimatedSeconds": 75
+  "estimatedSeconds": 75,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 300\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"170\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" opacity=\"0.5\"/><path d=\"M 170 150 L 270 150 A 100 100 0 0 0 120 63.4 Z\" fill=\"#F59E0B33\" stroke=\"none\" stroke-width=\"0\"/><line x1=\"170\" y1=\"150\" x2=\"270\" y2=\"150\" stroke=\"currentColor\" stroke-width=\"2.5\"/><line x1=\"170\" y1=\"150\" x2=\"120\" y2=\"63.4\" stroke=\"currentColor\" stroke-width=\"2.5\"/><path d=\"M 270 150 A 100 100 0 0 0 120 63.4\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"5\"/><path d=\"M 200 150 A 30 30 0 0 0 155 124\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"195\" y=\"111.7\" font-size=\"14\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">120°</text><text x=\"220\" y=\"168\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">25 ft</text><text x=\"201\" y=\"101.3\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">?</text><circle cx=\"170\" cy=\"150\" r=\"4\" fill=\"currentColor\"/></svg>",
+    "alt": "A circle of radius 25 ft with a central angle of 120°"
+  }
 }

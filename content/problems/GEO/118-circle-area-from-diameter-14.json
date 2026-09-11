@@ -44,5 +44,10 @@
     "circle",
     "diameter-vs-radius"
   ],
-  "estimatedSeconds": 55
+  "estimatedSeconds": 55,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"180\" cy=\"118\" r=\"90\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"3\"/><circle cx=\"180\" cy=\"118\" r=\"4\" fill=\"currentColor\"/><line x1=\"90\" y1=\"118\" x2=\"270\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2.2\"/><text x=\"180\" y=\"110\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">14 in</text><text x=\"180\" y=\"228\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">area = ?</text></svg>",
+    "alt": "A circle with diameter 14 in"
+  }
 }

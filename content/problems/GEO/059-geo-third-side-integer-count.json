@@ -79,5 +79,10 @@
     "counting",
     "range"
   ],
-  "estimatedSeconds": 80
+  "estimatedSeconds": 80,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"55,200 305,200 252.5,73.8\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"43\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">A</text><text x=\"317\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">B</text><text x=\"252.5\" y=\"63.8\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">C</text><text x=\"301.8\" y=\"135.4\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">7 ft</text><text x=\"131.6\" y=\"132.6\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">12 ft</text><text x=\"171\" y=\"220.6\" font-size=\"14\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text></svg>",
+    "alt": "Triangle ABC with a = 7 ft, b = 12 ft, c = ?"
+  }
 }

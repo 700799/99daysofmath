@@ -43,5 +43,10 @@
     "area",
     "trapezoid"
   ],
-  "estimatedSeconds": 45
+  "estimatedSeconds": 45,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"60,200 300,200 252,80 108,80\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"108\" y1=\"80\" x2=\"108\" y2=\"200\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><path d=\"M 117 200 L 117 191 L 108 191\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><text x=\"180\" y=\"222\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">10 ft</text><text x=\"180\" y=\"70\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">6 ft</text><text x=\"118\" y=\"144\" font-size=\"13\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"start\">5 ft</text><text x=\"180\" y=\"150\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">area = ?</text></svg>",
+    "alt": "A trapezoid with parallel sides 6 ft and 10 ft and height 5 ft"
+  }
 }

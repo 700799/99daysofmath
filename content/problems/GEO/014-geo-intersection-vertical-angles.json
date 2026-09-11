@@ -43,5 +43,10 @@
     "vertical-angles",
     "intersection"
   ],
-  "estimatedSeconds": 30
+  "estimatedSeconds": 30,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"330\" y1=\"125\" x2=\"30\" y2=\"125\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"243.4\" y1=\"-10.9\" x2=\"116.6\" y2=\"260.9\" stroke=\"currentColor\" stroke-width=\"3\"/><path d=\"M 214 125 A 34 34 0 0 0 194.4 94.2\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.4\"/><text x=\"223.9\" y=\"102.1\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">65°</text><path d=\"M 146 125 A 34 34 0 0 0 165.6 155.8\" fill=\"none\" stroke=\"#10B981\" stroke-width=\"2.4\"/><text x=\"136.1\" y=\"157.9\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text></svg>",
+    "alt": "Two lines crossing, with the angles opposite each other marked: 65° and ?"
+  }
 }

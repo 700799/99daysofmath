@@ -66,5 +66,10 @@
     "angle-naming",
     "vertex"
   ],
-  "estimatedSeconds": 35
+  "estimatedSeconds": 35,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"150\" y1=\"180\" x2=\"300\" y2=\"180\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"150\" y1=\"180\" x2=\"246.4\" y2=\"65.1\" stroke=\"currentColor\" stroke-width=\"3\"/><circle cx=\"260\" cy=\"180\" r=\"4.5\" fill=\"currentColor\"/><circle cx=\"220.7\" cy=\"95.7\" r=\"4.5\" fill=\"currentColor\"/><circle cx=\"150\" cy=\"180\" r=\"4.5\" fill=\"#F59E0B\"/><text x=\"260\" y=\"200\" font-size=\"15\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">A</text><text x=\"234.7\" y=\"95.7\" font-size=\"15\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">C</text><text x=\"138\" y=\"196\" font-size=\"15\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">B</text><path d=\"M 180 180 A 30 30 0 0 0 169.3 157\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.4\"/><text x=\"193.5\" y=\"164.7\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text></svg>",
+    "alt": "An angle with vertex B whose sides pass through A and C"
+  }
 }

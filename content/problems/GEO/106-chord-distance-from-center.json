@@ -44,5 +44,10 @@
     "pythagorean-theorem",
     "circle"
   ],
-  "estimatedSeconds": 65
+  "estimatedSeconds": 65,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 300\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"160\" cy=\"150\" r=\"105\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><line x1=\"63.1\" y1=\"109.6\" x2=\"256.9\" y2=\"109.6\" stroke=\"#F59E0B\" stroke-width=\"3\"/><line x1=\"160\" y1=\"150\" x2=\"160\" y2=\"109.6\" stroke=\"#F43F5E\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><path d=\"M 169 109.6 L 169 118.6 L 160 118.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><line x1=\"160\" y1=\"150\" x2=\"256.9\" y2=\"109.6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"4 4\" opacity=\"0.7\"/><circle cx=\"160\" cy=\"150\" r=\"4\" fill=\"currentColor\"/><text x=\"220.5\" y=\"141.8\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">13 cm</text><text x=\"160\" y=\"99.6\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">24 cm</text><text x=\"150\" y=\"134.8\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"end\">?</text><text x=\"160\" y=\"168\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.8\">O</text></svg>",
+    "alt": "A chord of 24 cm in a circle of radius 13 cm, with its distance from the centre marked"
+  }
 }

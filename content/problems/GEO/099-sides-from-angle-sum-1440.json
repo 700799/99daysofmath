@@ -56,5 +56,10 @@
     "interior-angles",
     "reverse"
   ],
-  "estimatedSeconds": 60
+  "estimatedSeconds": 60,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 280\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M 179.4 230.4 L 226.9 195.8 L 245 140 L 226.9 84.2\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"3\"/><line x1=\"179.4\" y1=\"230.4\" x2=\"150.9\" y2=\"251.1\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-dasharray=\"4 6\"/><line x1=\"226.9\" y1=\"84.2\" x2=\"216\" y2=\"50.7\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-dasharray=\"4 6\"/><text x=\"150\" y=\"272\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">angles add to 1440° · sides = ?</text></svg>",
+    "alt": "A regular polygon with some of its sides"
+  }
 }

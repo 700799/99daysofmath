@@ -21,11 +21,14 @@ export function DiagramRenderer({ diagram, className }: Props) {
     );
   }
   if (diagram.kind === 'inline-svg') {
+    // Generated figures draw in `currentColor`, so the wrapper's ink colour is
+    // what makes them follow the theme; the width cap keeps a square figure
+    // from towering over the prompt on a wide card.
     return (
       <div
         role="img"
         aria-label={diagram.alt}
-        className={className ?? 'mx-auto my-4'}
+        className={className ?? 'mx-auto my-4 w-full max-w-[22rem] text-ink [&>svg]:h-auto [&>svg]:w-full'}
         dangerouslySetInnerHTML={{ __html: diagram.svg }}
       />
     );

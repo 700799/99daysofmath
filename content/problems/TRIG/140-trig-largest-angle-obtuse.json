@@ -59,5 +59,10 @@
     "sss",
     "sign-error"
   ],
-  "estimatedSeconds": 90
+  "estimatedSeconds": 90,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"55,200 305,200 230.3,133.5\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"43\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">A</text><text x=\"317\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">B</text><text x=\"230.3\" y=\"123.5\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">C</text><text x=\"285.4\" y=\"169\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">8 m</text><text x=\"119.1\" y=\"166.9\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">15 m</text><text x=\"165.5\" y=\"224.1\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">20 m</text><path d=\"M 209.7 141.3 A 22 22 0 0 0 246.7 148.1\" fill=\"none\" stroke=\"#F43F5E\" stroke-width=\"2.2\"/><text x=\"222.7\" y=\"179.8\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text></svg>",
+    "alt": "Triangle ABC with a = 8 m, b = 15 m, c = 20 m, C = ?"
+  }
 }

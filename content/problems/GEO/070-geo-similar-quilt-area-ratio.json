@@ -79,5 +79,10 @@
     "scale-factor",
     "misconception"
   ],
-  "estimatedSeconds": 85
+  "estimatedSeconds": 85,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"30,190 130,190 95,120\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/><polygon points=\"170,190 330,190 274,78\" fill=\"#0EA5E918\" stroke=\"#0EA5E9\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/><text x=\"80\" y=\"208\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">2</text><text x=\"250\" y=\"208\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">3</text><text x=\"90\" y=\"172\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">20 in²</text><text x=\"270\" y=\"160\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text><text x=\"180\" y=\"230\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.8\">sides in the ratio 2 : 3</text></svg>",
+    "alt": "Two similar triangles, small and large"
+  }
 }

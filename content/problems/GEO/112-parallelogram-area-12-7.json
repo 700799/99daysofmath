@@ -43,5 +43,10 @@
     "area",
     "parallelogram"
   ],
-  "estimatedSeconds": 30
+  "estimatedSeconds": 30,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"50,200 270,200 320,71.7 100,71.7\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"100\" y1=\"71.7\" x2=\"100\" y2=\"200\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><path d=\"M 109 200 L 109 191 L 100 191\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><text x=\"160\" y=\"222\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">12 cm</text><text x=\"110\" y=\"139.8\" font-size=\"13\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"start\">7 cm</text><text x=\"205\" y=\"139.8\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">area = ?</text></svg>",
+    "alt": "A parallelogram with base 12 cm and height 7 cm"
+  }
 }

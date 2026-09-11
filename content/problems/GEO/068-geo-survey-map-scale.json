@@ -44,5 +44,10 @@
     "proportion",
     "map"
   ],
-  "estimatedSeconds": 50
+  "estimatedSeconds": 50,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"40\" y1=\"120\" x2=\"250\" y2=\"120\" stroke=\"#F59E0B\" stroke-width=\"4\"/><circle cx=\"40\" cy=\"120\" r=\"5\" fill=\"currentColor\"/><circle cx=\"250\" cy=\"120\" r=\"5\" fill=\"currentColor\"/><text x=\"145\" y=\"108\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">3.5 in on the map</text><line x1=\"40\" y1=\"190\" x2=\"100\" y2=\"190\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"40\" y1=\"184\" x2=\"40\" y2=\"196\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"100\" y1=\"184\" x2=\"100\" y2=\"196\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"70\" y=\"178\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">1 in = 40 ft</text><text x=\"145\" y=\"150\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">real length = ?</text></svg>",
+    "alt": "A map line of 3.5 in on the map beside a scale bar of 1 in = 40 ft"
+  }
 }

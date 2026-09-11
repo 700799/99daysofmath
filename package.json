@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run build:content && tsc -b && vite build && npm run gen:seo",
+    "figures:angles": "tsx scripts/gen-angle-figures.ts",
     "build:content": "tsx scripts/build-json.ts",
     "gen:seo": "tsx scripts/gen-seo.ts",
     "seed:content": "tsx scripts/seed-content.ts",

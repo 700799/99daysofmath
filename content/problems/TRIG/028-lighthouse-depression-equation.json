@@ -65,5 +65,10 @@
     "angle-of-depression",
     "set-up-equation"
   ],
-  "estimatedSeconds": 60
+  "estimatedSeconds": 60,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"30\" y1=\"201\" x2=\"330\" y2=\"201\" stroke=\"currentColor\" stroke-width=\"2.5\" opacity=\"0.5\"/><polygon points=\"80,195 295,94.6 295,195\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M 281 195 L 281 181 L 295 181\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><line x1=\"295\" y1=\"94.6\" x2=\"70\" y2=\"94.6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"6 4\" opacity=\"0.7\"/><path d=\"M 261 94.6 A 34 34 0 0 0 264.2 109\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.5\"/><text x=\"240.3\" y=\"111.7\" font-size=\"14\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">25°</text><text x=\"187.5\" y=\"217\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">d</text><text x=\"305\" y=\"149.8\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">120 ft</text></svg>",
+    "alt": "A right triangle with opposite 120 ft, adjacent d"
+  }
 }
