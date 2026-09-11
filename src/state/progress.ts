@@ -4,6 +4,8 @@ import { DOMAINS, CORE_DOMAINS, type Domain } from '../types/problem';
 import { flashXp } from './xpFlash';
 import { checkAllEarning, STICKER_DEFS, UNIT_COUNT_BY_DOMAIN, type EarningContext } from '../utils/encouragement';
 import { scheduleAfter } from '../utils/srs';
+import { finalKey, LEGACY_FINALS_COURSE } from '../utils/finals';
+import type { CourseId } from '../data/courses';
 
 export type Stars = 0 | 1 | 2 | 3;
 
@@ -149,6 +151,15 @@ interface ProgressState {
   xpByDate: Record<string, number>;  // XP earned per ISO date (heatmap intensity)
   lastFreezeDate: string | null;     // last day a streak freeze was used
   onboardingComplete: boolean;
+  /** Asked once before a student starts, so the shelf can point them somewhere. */
+  age: number | null;
+  /** School year, 4 meaning "4th grade or below" and 12 the last. */
+  gradeLevel: number | null;
+  /**
+   * The course the student picked to start in. Chosen, never inferred from
+   * age or grade — level and school year are not the same thing.
+   */
+  startingCourse: string | null;
   // ---- v6 additions ----
   problemStats: Record<string, ProblemStat>; // keyed by problem id
   ritHistory: RitPoint[];                     // appended per mock test
@@ -161,7 +172,12 @@ interface ProgressState {
   arcadeTotals: Record<string, number>; // lifetime plays per game id
   lastWheelSpinDate: string | null;     // prize wheel is once per day
   c4Wins: number;
-  finalsResults: Record<number, { best: number; completedAt: string }>;
+  /**
+   * Final Challenge results, keyed `courseId:quizN` — every course has its own
+   * five finals. Installs from before that keyed on the quiz number alone;
+   * v29 files those under the course they were, 6th-grade Common Core.
+   */
+  finalsResults: Record<string, { best: number; completedAt: string }>;
   // ---- v9 additions (daily cap + math-unlock) ----
   arcadeBudget: {
     date: string | null;
@@ -216,7 +232,12 @@ interface ProgressState {
     baseXp: number,
     opts?: { c4Win?: boolean; wheelSpin?: boolean },
   ) => ArcadePlayOutcome;
-  recordFinalResult: (quizN: number, correct: number, total: number) => FinalOutcome;
+  recordFinalResult: (
+    courseId: CourseId,
+    quizN: number,
+    correct: number,
+    total: number,
+  ) => FinalOutcome;
   tickArcadeSeconds: (n: number) => void;
   tickMathSeconds: (n: number) => void;
   isArcadeLocked: () => boolean;
@@ -265,6 +286,8 @@ interface ProgressState {
   completeLesson: (key: string) => string[];
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
+  setLearnerProfile: (age: number | null, gradeLevel: number | null) => void;
+  setStartingCourse: (id: string | null) => void;
   incrementStreak: () => string[];
   resetStreak: () => void;
   touchDay: () => string[];
@@ -397,6 +420,9 @@ const v5Defaults = {
   xpByDate: {} as Record<string, number>,
   lastFreezeDate: null as string | null,
   onboardingComplete: false,
+  age: null as number | null,
+  gradeLevel: null as number | null,
+  startingCourse: null as string | null,
 };
 
 const v6Defaults = {
@@ -416,7 +442,7 @@ const v8Defaults = {
   arcadeTotals: {} as Record<string, number>,
   lastWheelSpinDate: null as string | null,
   c4Wins: 0,
-  finalsResults: {} as Record<number, { best: number; completedAt: string }>,
+  finalsResults: {} as Record<string, { best: number; completedAt: string }>,
 };
 
 const v9Defaults = {
@@ -737,6 +763,27 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       for (const u of ARCADE_UNITS) if (rec[u] === undefined) rec[u] = base;
       stateAny[key] = rec;
     }
+  }
+  if (fromVersion < 29) {
+    // Every course gets its own Final Challenge, so results are keyed
+    // `courseId:quizN`. Old results were 6th-grade Common Core finals under a
+    // bare quiz number — file them there rather than dropping the scores.
+    const stateAny = state as Record<string, unknown>;
+    const old = (stateAny.finalsResults ?? {}) as Record<string, unknown>;
+    const next: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(old)) {
+      next[/^\d+$/.test(k) ? finalKey(LEGACY_FINALS_COURSE, Number(k)) : k] = v;
+    }
+    stateAny.finalsResults = next;
+  }
+  if (fromVersion < 28) {
+    // Age and grade are asked before a student starts. Existing installs have
+    // neither, and the gate keys off that rather than off onboardingComplete,
+    // so they are asked once on their next visit instead of never.
+    const stateAny = state as Record<string, unknown>;
+    if (stateAny.age === undefined) stateAny.age = null;
+    if (stateAny.gradeLevel === undefined) stateAny.gradeLevel = null;
+    if (stateAny.startingCourse === undefined) stateAny.startingCourse = null;
   }
   if (fromVersion < 27) {
     // 5th-grade MAP Growth prep arrives: an empty practice-test history.
@@ -1137,14 +1184,15 @@ export const useProgress = create<ProgressState>()(
         });
         return { xpAwarded, varietyBonus, repeatToday, distinctToday, earned };
       },
-      recordFinalResult: (quizN, correct, total) => {
+      recordFinalResult: (courseId, quizN, correct, total) => {
+        const key = finalKey(courseId, quizN);
         const before = get();
         const today = todayISO();
         const bonus = 40 + 2 * correct;
-        const prevBest = before.finalsResults[quizN]?.best ?? -1;
+        const prevBest = before.finalsResults[key]?.best ?? -1;
         const finalsResults = {
           ...before.finalsResults,
-          [quizN]: {
+          [key]: {
             best: Math.max(prevBest, correct),
             completedAt: today,
           },
@@ -1171,7 +1219,7 @@ export const useProgress = create<ProgressState>()(
             earned.length > 0 ? [...before.stickers, ...earned] : before.stickers,
         });
         void total;
-        return { bonus, earned, best: finalsResults[quizN].best };
+        return { bonus, earned, best: finalsResults[key].best };
       },
       completeVideo: (src) => {
         const before = get();
@@ -1228,6 +1276,8 @@ export const useProgress = create<ProgressState>()(
         }),
       setDailyGoal: (n) => set({ dailyGoal: n }),
       markOnboardingDone: () => set({ onboardingComplete: true }),
+      setLearnerProfile: (age, gradeLevel) => set({ age, gradeLevel }),
+      setStartingCourse: (id) => set({ startingCourse: id }),
       incrementStreak: () => {
         const before = get();
         const next = before.streak + 1;
@@ -1422,7 +1472,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 27,
+      version: 29,
       migrate: migrateProgress,
     },
   ),

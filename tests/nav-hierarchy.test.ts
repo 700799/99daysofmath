@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { parentOf } from '../src/utils/navHierarchy';
 import { DOMAINS, TRAIL_DOMAINS } from '../src/types/problem';
+import { COURSES } from '../src/data/courses';
 
 // The header's back link is the only way out of a nested screen that doesn't
 // throw away where you were, so every route has to resolve to a real parent —
@@ -113,9 +114,15 @@ describe('parentOf — the other sections', () => {
     expect(parentOf('/arcade')).toEqual({ to: '/', label: 'Home' });
   });
 
-  it('a final quiz steps back to the finals list', () => {
-    expect(parentOf('/finals/2')).toEqual({ to: '/finals', label: 'Finals' });
+  it('a final quiz steps back to its own course\'s finals, not the shelf', () => {
+    expect(parentOf('/finals/trig/2')).toEqual({ to: '/finals/trig', label: 'Trigonometry' });
+    expect(parentOf('/finals/grade6/5')).toEqual({ to: '/finals/grade6', label: '6th Grade' });
+    expect(parentOf('/finals/trig')).toEqual({ to: '/finals', label: 'Finals' });
     expect(parentOf('/finals')).toEqual({ to: '/', label: 'Home' });
+  });
+
+  it('a pre-course finals link still steps somewhere real', () => {
+    expect(parentOf('/finals/2')).toEqual({ to: '/finals', label: 'Finals' });
   });
 
   it('a scoped review steps back to the review picker', () => {
@@ -150,6 +157,8 @@ describe('parentOf — robustness', () => {
     const samples = [
       '/sat', '/sat/tips', '/sat/unit/7', '/sat/test/3', '/sat/analysis/3', '/sat/recovery/4',
       '/unit/SAT/12', '/unit/SAT/12/results', '/arcade/snake', '/finals/2', '/review/6.RP',
+      ...COURSES.map((c) => `/finals/${c.id}`),
+      ...COURSES.map((c) => `/finals/${c.id}/3`),
       ...DOMAINS.map((d) => `/trail/${d}`),
       ...DOMAINS.map((d) => `/unit/${d}/3`),
     ];

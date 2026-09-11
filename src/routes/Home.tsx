@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { domainCourseName } from '../types/problem';
-import { COURSES, courseDomains, courseHref } from '../data/courses';
+import { COURSES, courseDomains, courseHref, GRADE_LEVELS, type CourseId } from '../data/courses';
 import { useProgress } from '../state/progress';
 import { useDisplayName } from '../state/auth';
 import { useDomainSummary } from '../hooks/useProblems';
@@ -44,13 +44,37 @@ export function Home() {
   const practiceDates = useProgress((s) => s.practiceDates);
   const xpByDate = useProgress((s) => s.xpByDate);
   const onboardingComplete = useProgress((s) => s.onboardingComplete);
+  const age = useProgress((s) => s.age);
+  const gradeLevel = useProgress((s) => s.gradeLevel);
+  const setLearnerProfile = useProgress((s) => s.setLearnerProfile);
+  const startingCourse = useProgress((s) => s.startingCourse);
+  const setStartingCourse = useProgress((s) => s.setStartingCourse);
   const coins = useProgress((s) => s.coins);
   const markOnboardingDone = useProgress((s) => s.markOnboardingDone);
+  // The gate keys off the answers, not off the tour: an install from before
+  // this existed has onboardingComplete set but no age or grade, and should be
+  // asked once rather than never.
+  const needsProfile = age === null || gradeLevel === null || startingCourse === null;
+  // The course the student PICKED. Never derived from their grade — a 5th
+  // grader may be doing Algebra 1 and a 9th grader may need fractions.
+  const chosen = startingCourse;
+  const gradeLabel = GRADE_LEVELS.find((g) => g.value === gradeLevel)?.label ?? null;
   const displayName = useDisplayName();
 
   return (
     <div>
-      {!onboardingComplete && <Onboarding onDone={markOnboardingDone} />}
+      {(!onboardingComplete || needsProfile) && (
+        <Onboarding
+          initialAge={age}
+          initialGrade={gradeLevel}
+          initialCourse={(startingCourse as CourseId | null) ?? null}
+          onDone={(a, g, c) => {
+            setLearnerProfile(a, g);
+            setStartingCourse(c);
+            markOnboardingDone();
+          }}
+        />
+      )}
 
       <div className="mb-6 flex items-center gap-3">
         <Mascot mood="happy" size={72} />
@@ -59,7 +83,9 @@ export function Home() {
             Pick a course, {displayName}!
           </h1>
           <p className="text-ink-muted mt-0.5 text-sm sm:text-base">
-            Seven courses, from 5th-grade Common Core up to SAT Math prep. Earn stars, stickers, and XP.
+            {gradeLabel
+              ? `${gradeLabel} grade — your course is first below, and every other one is open. Earn stars, stickers, and XP.`
+              : 'Seven courses, from 5th-grade Common Core up to SAT Math prep. Earn stars, stickers, and XP.'}
           </p>
         </div>
       </div>
@@ -169,7 +195,7 @@ export function Home() {
         >
           <div className="text-2xl">🏆</div>
           <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Finals</div>
-          <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Quizzes</div>
+          <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Every course</div>
         </Link>
       </div>
 
@@ -178,7 +204,10 @@ export function Home() {
           foundations into the high-school material — so the shelf reads as
           seven subjects rather than eleven content tags. */}
       <div className="space-y-3">
-        {COURSES.map((c, i) => {
+        {[...COURSES]
+          .sort((a, b) => Number(b.id === chosen) - Number(a.id === chosen))
+          .map((c, i) => {
+          const isChosen = c.id === chosen;
           const domains = courseDomains(c);
           const earned = domains.reduce((sum, d) => {
             const dp = progress[d];
@@ -202,14 +231,23 @@ export function Home() {
             >
               <Link
                 to={courseHref(c)}
-                className="block rounded-3xl p-4 sm:p-5 shadow-sm border-2 border-line bg-surface hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all"
+                className={`block rounded-3xl p-4 sm:p-5 shadow-sm border-2 bg-surface hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all ${
+                  isChosen ? 'border-accent' : 'border-line'
+                }`}
                 style={{ borderLeftWidth: 10, borderLeftColor: c.color }}
               >
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="text-4xl sm:text-5xl">{c.emoji}</div>
                   <div className="flex-1 min-w-0">
-                    <div className="font-display font-extrabold text-base sm:text-lg text-ink">
-                      {c.name}
+                    <div className="flex flex-wrap items-baseline gap-2">
+                      <div className="font-display font-extrabold text-base sm:text-lg text-ink">
+                        {c.name}
+                      </div>
+                      {isChosen && (
+                        <span className="rounded-full bg-accent px-2 py-0.5 font-display text-[10px] font-extrabold uppercase tracking-wider text-on-accent">
+                          Your course
+                        </span>
+                      )}
                     </div>
                     <div className="text-xs font-display font-bold text-ink-muted uppercase tracking-wider mt-0.5">
                       {c.kicker}

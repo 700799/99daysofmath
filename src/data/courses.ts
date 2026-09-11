@@ -169,3 +169,38 @@ export function courseOfDomain(d: Domain): Course | null {
   const owner = COURSES.find((c) => c.strands.some((s) => s.domain === d && !s.borrowed));
   return owner ?? COURSES.find((c) => c.strands.some((s) => s.domain === d)) ?? null;
 }
+
+// ── Starting point ─────────────────────────────────────────────────────────
+// Deliberately NOT inferred from the school year. A 5th grader may be doing
+// Algebra 1 and a 9th grader may need 6th-grade fractions; picking a course
+// from a grade would be wrong for both of them and would start the app by
+// telling a kid what level they are. The student chooses, and can change it.
+
+export const GRADE_LEVELS: { value: number; label: string }[] = [
+  { value: 4, label: '4th or below' },
+  { value: 5, label: '5th' },
+  { value: 6, label: '6th' },
+  { value: 7, label: '7th' },
+  { value: 8, label: '8th' },
+  { value: 9, label: '9th' },
+  { value: 10, label: '10th' },
+  { value: 11, label: '11th' },
+  { value: 12, label: '12th' },
+];
+
+export const AGE_RANGE = { min: 7, max: 18 };
+
+/**
+ * One line per course describing who it suits, in terms of what a student can
+ * already do rather than what year they are in — that is the thing they can
+ * actually judge about themselves.
+ */
+export const COURSE_FIT: Record<CourseId, string> = {
+  grade5: 'Still building multiplication, fractions and decimals.',
+  grade6: 'Comfortable with fractions and decimals; ready for ratios, negatives and variables.',
+  algebra1: 'Can solve with variables and want equations, lines and quadratics.',
+  geometry: 'Ready for shapes, proof, and reasoning about why things are true.',
+  trig: 'Know right triangles and want angles, the unit circle and waves.',
+  precalc: 'Finished Algebra 2 and heading toward calculus.',
+  sat: 'Preparing for the Digital SAT, whatever year you are in.',
+};

@@ -5,6 +5,7 @@ import { useProgress, type FinalOutcome } from '../state/progress';
 import { isEquivalent } from '../data/normalize';
 import { getAllProblems } from '../data/problems';
 import { pickFinalQuiz, FINAL_QUIZ_COUNT, FINAL_QUIZ_SIZE } from '../utils/finals';
+import { getCourse } from '../data/courses';
 import { ProblemCard } from '../components/ProblemCard';
 import { AnswerInput } from '../components/AnswerInput';
 import { ProgressBar } from '../components/ProgressBar';
@@ -21,9 +22,10 @@ type Phase = 'loading' | 'quiz' | 'review';
 // Test-style runner: NO feedback while answering — every answer is collected,
 // then graded together on the review screen, with a big completion bonus.
 export function FinalQuiz() {
-  const { n } = useParams<{ n: string }>();
+  const { courseId, n } = useParams<{ courseId: string; n: string }>();
   const navigate = useNavigate();
   const quizN = parseInt(n ?? '0', 10);
+  const course = getCourse(courseId ?? '');
   const recordFinal = useProgress((s) => s.recordFinalResult);
   const soundOn = useProgress((s) => s.soundEnabled);
 
@@ -37,16 +39,18 @@ export function FinalQuiz() {
   const [stickerIds, setStickerIds] = useState<string[]>([]);
   const recordedRef = useRef(false);
 
-  const valid = Number.isInteger(quizN) && quizN >= 1 && quizN <= FINAL_QUIZ_COUNT;
+  const valid =
+    !!course && Number.isInteger(quizN) && quizN >= 1 && quizN <= FINAL_QUIZ_COUNT;
+  const hub = course ? `/finals/${course.id}` : '/finals';
 
   useEffect(() => {
-    if (!valid) return;
+    if (!valid || !course) return;
     let cancelled = false;
     (async () => {
       try {
         const all = await getAllProblems();
         if (cancelled) return;
-        setProblems(pickFinalQuiz(all, quizN));
+        setProblems(pickFinalQuiz(all, course.id, quizN));
         setPhase('quiz');
       } catch (e) {
         if (!cancelled) setError(e instanceof Error ? e : new Error(String(e)));
@@ -55,7 +59,7 @@ export function FinalQuiz() {
     return () => {
       cancelled = true;
     };
-  }, [quizN, valid]);
+  }, [course, quizN, valid]);
 
   if (!valid) return <Navigate to="/finals" replace />;
   if (error) {
@@ -70,7 +74,7 @@ export function FinalQuiz() {
       <div className="text-center py-12">
         <Mascot mood="thinking" size={80} />
         <div className="mt-3 text-ink-muted font-display font-bold">
-          Building Final Quiz {quizN}…
+          Building {course?.short} Final Quiz {quizN}…
         </div>
       </div>
     );
@@ -90,7 +94,7 @@ export function FinalQuiz() {
       );
       if (!recordedRef.current) {
         recordedRef.current = true;
-        const res = recordFinal(quizN, correct, problems.length);
+        const res = recordFinal(course!.id, quizN, correct, problems.length);
         setOutcome(res);
         setStickerIds(res.earned);
         if (soundOn) playUnitComplete();
@@ -171,10 +175,10 @@ export function FinalQuiz() {
 
         <div className="mt-6 flex flex-col gap-3">
           <Link
-            to="/finals"
+            to={hub}
             className="w-full text-center min-h-14 px-6 py-3 rounded-2xl bg-duo-green hover:bg-duo-green-dark text-white font-display font-extrabold text-lg shadow-[0_4px_0_0_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
           >
-            Back to Final Challenge
+            Back to {course!.short} Finals
           </Link>
           <button
             type="button"
@@ -193,7 +197,9 @@ export function FinalQuiz() {
       <div className="mb-4">
         <ProgressBar current={index} total={problems.length} />
         <div className="mt-1 flex items-center justify-between text-xs font-display font-bold">
-          <span className="text-warn">🏆 Final Quiz {quizN} · {current.domain}</span>
+          <span className="text-warn">
+            🏆 {course!.short} · Final Quiz {quizN} · {current.domain}
+          </span>
           <span className="text-ink-dim">Answers revealed at the end</span>
         </div>
       </div>
@@ -227,7 +233,7 @@ export function FinalQuiz() {
 
       <button
         type="button"
-        onClick={() => navigate('/finals')}
+        onClick={() => navigate(hub)}
         className="mt-6 w-full text-sm font-display font-bold text-ink-muted hover:text-ink-muted py-2"
       >
         Quit quiz

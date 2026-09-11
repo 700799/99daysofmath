@@ -83,19 +83,29 @@ describe('recordFinalResult', () => {
   afterEach(() => vi.useRealTimers());
 
   it('pays 40 + 2×correct and records the best score', () => {
-    const out = useProgress.getState().recordFinalResult(1, 15, 20);
+    const out = useProgress.getState().recordFinalResult('grade6', 1, 15, 20);
     expect(out.bonus).toBe(70);
     expect(out.best).toBe(15);
     expect(out.earned).toContain('finals-first');
     // lower retake keeps the best
-    const retake = useProgress.getState().recordFinalResult(1, 10, 20);
+    const retake = useProgress.getState().recordFinalResult('grade6', 1, 10, 20);
     expect(retake.best).toBe(15);
   });
 
   it('finishing all 5 quizzes earns the crown', () => {
-    for (let n = 1; n <= 4; n++) useProgress.getState().recordFinalResult(n, 12, 20);
-    const last = useProgress.getState().recordFinalResult(5, 12, 20);
+    for (let n = 1; n <= 4; n++) useProgress.getState().recordFinalResult('grade6', n, 12, 20);
+    const last = useProgress.getState().recordFinalResult('grade6', 5, 12, 20);
     expect(last.earned).toContain('finals-all');
+  });
+
+  it('keeps each course\'s finals separate', () => {
+    useProgress.getState().recordFinalResult('grade6', 1, 15, 20);
+    const trig = useProgress.getState().recordFinalResult('trig', 1, 8, 20);
+    // Quiz 1 of Trigonometry is its own quiz, not a retake of 6th grade's.
+    expect(trig.best).toBe(8);
+    const results = useProgress.getState().finalsResults;
+    expect(results['grade6:1'].best).toBe(15);
+    expect(results['trig:1'].best).toBe(8);
   });
 });
 
