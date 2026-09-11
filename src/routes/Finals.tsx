@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom';
 import { useProgress } from '../state/progress';
-import { FINAL_QUIZ_COUNT, FINAL_QUIZ_SIZE } from '../utils/finals';
+import { FINAL_QUIZ_COUNT, FINAL_QUIZ_SIZE, finalKey } from '../utils/finals';
+import { COURSES } from '../data/courses';
 import { Mascot } from '../components/Mascot';
 
-// Hub for the five Final Challenge quizzes: 20 questions each, answers only
-// revealed at the very end, with a big XP bonus.
+// Every course has its own Final Challenge — five quizzes of 20 questions
+// drawn from that course's own strands. This picks the course; the quizzes
+// themselves live at /finals/:courseId.
 export function Finals() {
   const finalsResults = useProgress((s) => s.finalsResults);
-  const doneCount = Object.keys(finalsResults).length;
+  const doneTotal = Object.keys(finalsResults).length;
+  const grandTotal = COURSES.length * FINAL_QUIZ_COUNT;
 
   return (
     <div>
@@ -18,42 +21,57 @@ export function Finals() {
             🏆 Final Challenge
           </h1>
           <p className="text-sm text-ink-muted">
-            Five big quizzes · {FINAL_QUIZ_SIZE} questions each · answers shown only at
-            the end · <b>+40 XP bonus +2 per correct</b>.
+            Every course has {FINAL_QUIZ_COUNT} big quizzes · {FINAL_QUIZ_SIZE} questions
+            each · answers shown only at the end · <b>+40 XP bonus +2 per correct</b>.
           </p>
         </div>
       </div>
 
       <div className="mt-3 text-xs font-display font-extrabold uppercase tracking-wider text-ink-muted">
-        {doneCount} / {FINAL_QUIZ_COUNT} completed
-        {doneCount === FINAL_QUIZ_COUNT ? ' — 👑 Champion!' : ''}
+        {doneTotal} / {grandTotal} quizzes completed
+        {doneTotal === grandTotal ? ' — 👑 Grand Champion!' : ''}
       </div>
 
       <div className="mt-3 space-y-3">
-        {Array.from({ length: FINAL_QUIZ_COUNT }, (_, i) => i + 1).map((n) => {
-          const res = finalsResults[n];
+        {COURSES.map((c) => {
+          const done = Array.from({ length: FINAL_QUIZ_COUNT }, (_, i) =>
+            finalsResults[finalKey(c.id, i + 1)],
+          );
+          const doneCount = done.filter(Boolean).length;
+          const complete = doneCount === FINAL_QUIZ_COUNT;
           return (
             <Link
-              key={n}
-              to={`/finals/${n}`}
+              key={c.id}
+              to={`/finals/${c.id}`}
               className="block rounded-3xl p-4 bg-surface border-2 border-line hover:border-warn/50 hover:shadow-md transition-all"
             >
               <div className="flex items-center gap-3">
                 <div
-                  className={`w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-display font-extrabold ${
-                    res ? 'bg-ok-soft text-ok' : 'bg-warn-soft text-warn'
-                  }`}
+                  className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl shrink-0"
+                  style={{ background: `${c.color}22` }}
                 >
-                  {res ? '✓' : n}
+                  {c.emoji}
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="font-display font-extrabold text-ink">
-                    Final Quiz {n}
+                    {c.name} {complete ? '👑' : ''}
                   </div>
                   <div className="text-xs text-ink-muted">
-                    {res
-                      ? `Best: ${res.best}/${FINAL_QUIZ_SIZE} · tap to beat it`
-                      : `${FINAL_QUIZ_SIZE} mixed questions across all six topics`}
+                    {doneCount === 0
+                      ? `${FINAL_QUIZ_COUNT} quizzes · ${FINAL_QUIZ_SIZE} questions from ${
+                          c.strands.length > 1 ? `all ${c.strands.length} strands` : 'the whole course'
+                        }`
+                      : `${doneCount} / ${FINAL_QUIZ_COUNT} done`}
+                  </div>
+                  <div className="mt-2 flex gap-1">
+                    {done.map((res, i) => (
+                      <span
+                        key={i}
+                        className={`h-1.5 flex-1 rounded-full ${
+                          res ? 'bg-ok' : 'bg-line-strong'
+                        }`}
+                      />
+                    ))}
                   </div>
                 </div>
                 <div className="text-xl shrink-0">→</div>

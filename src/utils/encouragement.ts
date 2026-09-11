@@ -147,7 +147,7 @@ const CHALLENGE_STICKERS: StickerDef[] = [
   { id: 'arcade-wheel', emoji: '🎡', label: 'Wheel of Fortune', category: 'challenge', hint: 'Spin the prize wheel' },
   { id: 'arcade-variety', emoji: '🎪', label: 'Game Hopper', category: 'challenge', hint: 'Play 5 different arcade games in one day' },
   { id: 'finals-first', emoji: '🎯', label: 'Final Boss I', category: 'challenge', hint: 'Finish a Final Challenge quiz' },
-  { id: 'finals-all', emoji: '👑', label: 'Champion of Finals', category: 'challenge', hint: 'Finish all 5 Final Challenge quizzes' },
+  { id: 'finals-all', emoji: '👑', label: 'Champion of Finals', category: 'challenge', hint: 'Finish 5 Final Challenge quizzes' },
 ];
 
 export const UNIT_COUNT_BY_DOMAIN: Record<Domain, number> = {
@@ -300,6 +300,7 @@ export function checkAllEarning(
   if (ctx.wheelSpunEver) add('arcade-wheel');
   if ((ctx.arcadeDistinctToday ?? 0) >= 5) add('arcade-variety');
   if ((ctx.finalsCompletedCount ?? 0) >= 1) add('finals-first');
+  // Five finals, from any mix of courses — every course has its own five.
   if ((ctx.finalsCompletedCount ?? 0) >= 5) add('finals-all');
 
   return earned;

@@ -195,7 +195,7 @@ export function Home() {
         >
           <div className="text-2xl">🏆</div>
           <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Finals</div>
-          <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Quizzes</div>
+          <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Every course</div>
         </Link>
       </div>
 

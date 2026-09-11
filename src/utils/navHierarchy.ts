@@ -1,5 +1,5 @@
 import { DOMAINS, type Domain } from '../types/problem';
-import { courseOfDomain } from '../data/courses';
+import { courseOfDomain, getCourse } from '../data/courses';
 
 // ── Where "back" goes ──────────────────────────────────────────────────────
 // Every screen below Home has a parent in the hierarchy the app presents: a
@@ -76,8 +76,15 @@ export function parentOf(pathname: string): ParentLink | null {
       return { to: `/trail/${domain}`, label: DOMAIN_BACK_LABEL[domain] };
     }
 
-    case 'finals':
-      return seg.length > 1 ? { to: '/finals', label: 'Finals' } : HOME;
+    // ── /finals[/:courseId[/:n]] — each course has its own five finals ──
+    case 'finals': {
+      if (seg.length === 1) return HOME;
+      if (seg.length === 2) return { to: '/finals', label: 'Finals' };
+      const course = getCourse(seg[1]);
+      return course
+        ? { to: `/finals/${course.id}`, label: course.short }
+        : { to: '/finals', label: 'Finals' };
+    }
 
     case 'review':
       return seg.length > 1 ? { to: '/review', label: 'Review' } : HOME;
