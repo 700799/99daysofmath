@@ -111,45 +111,6 @@ export function Home() {
         </div>
       </div>
 
-      {/* Video Library */}
-      <div className="mt-6 mb-4 text-xs font-display font-extrabold uppercase tracking-wider text-ink-muted">
-        🎬 Video
-      </div>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-        <Link
-          to="/videos"
-          className="block rounded-2xl p-3 bg-surface border border-line text-ink shadow-sm hover:shadow-md hover:border-line-strong hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">📘</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Lessons</div>
-          <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Step-by-step</div>
-        </Link>
-        <Link
-          to="/mathematicians"
-          className="block rounded-2xl p-3 bg-surface border border-line text-ink shadow-sm hover:shadow-md hover:border-line-strong hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">🧑‍🔬</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Mathematicians</div>
-          <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Famous minds</div>
-        </Link>
-        <Link
-          to="/stories"
-          className="block rounded-2xl p-3 bg-surface border border-line text-ink shadow-sm hover:shadow-md hover:border-line-strong hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">🌟</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Math Stories</div>
-          <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">History</div>
-        </Link>
-        <Link
-          to="/settings"
-          className="block rounded-2xl p-3 bg-surface border border-line text-ink shadow-sm hover:shadow-md hover:border-line-strong hover:-translate-y-0.5 active:translate-y-0 transition-all"
-        >
-          <div className="text-2xl">⚙️</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Settings</div>
-          <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Preferences</div>
-        </Link>
-      </div>
-
       {/* Shop banner */}
       <Link
         to="/shop"
@@ -280,6 +241,37 @@ export function Home() {
       <PracticeHeatmap practiceDates={practiceDates} xpByDate={xpByDate} />
 
       <HowItWorks />
+
+      {/* Video library, last: the videos are a supplement, not the way in. */}
+      <div className="mt-8 mb-4 text-xs font-display font-extrabold uppercase tracking-wider text-ink-muted">
+        🎬 Video
+      </div>
+      <div className="grid grid-cols-3 gap-3 mb-6">
+        <Link
+          to="/videos"
+          className="block rounded-2xl p-3 bg-surface border border-line text-ink shadow-sm hover:shadow-md hover:border-line-strong hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-2xl">📘</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Lessons</div>
+          <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Step-by-step</div>
+        </Link>
+        <Link
+          to="/mathematicians"
+          className="block rounded-2xl p-3 bg-surface border border-line text-ink shadow-sm hover:shadow-md hover:border-line-strong hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-2xl">🧑‍🔬</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Mathematicians</div>
+          <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Famous minds</div>
+        </Link>
+        <Link
+          to="/stories"
+          className="block rounded-2xl p-3 bg-surface border border-line text-ink shadow-sm hover:shadow-md hover:border-line-strong hover:-translate-y-0.5 active:translate-y-0 transition-all"
+        >
+          <div className="text-2xl">🌟</div>
+          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Math Stories</div>
+          <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">History</div>
+        </Link>
+      </div>
     </div>
   );
 }

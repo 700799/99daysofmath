@@ -161,11 +161,21 @@ export function AppShell({ children }: Props) {
               </span>
             )}
             <LevelBadge variant="header" />
+            {/* Settings lives up here on every page, not in a tile at the
+                bottom of Home. */}
+            <Link
+              to="/settings"
+              aria-label="Settings"
+              title="Settings"
+              className="ml-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-lg leading-none text-ink-muted hover:bg-surface-2 hover:text-ink"
+            >
+              ⚙️
+            </Link>
             {user && (
               <Link
                 to="/settings"
                 aria-label="Account"
-                className="ml-0.5 inline-flex items-center min-h-11"
+                className="inline-flex items-center min-h-11"
               >
                 <Avatar user={user} size={32} />
               </Link>
