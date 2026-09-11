@@ -1,0 +1,46 @@
+{
+  "id": "5.F.141",
+  "domain": "5.F",
+  "unit": 15,
+  "orderInUnit": 1,
+  "standard": "5.MD.C.5",
+  "difficulty": 1,
+  "prompt": "A box of building blocks is $6$ inches long, $3$ inches wide, and $2$ inches tall. What is its volume, in cubic inches?",
+  "answerType": "numeric",
+  "primaryAnswer": "36",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Volume of a box is length $\\times$ width $\\times$ height.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Volume of a box is length $\\times$ width $\\times$ height."
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\times 3 = 18$ cubes cover the bottom layer."
+    },
+    {
+      "level": "reveal",
+      "text": "There are $2$ layers, so $18 \\times 2 = 36$ cubic inches."
+    }
+  ],
+  "explanation": [
+    "Use $V = l \\times w \\times h$ with $l = 6$, $w = 3$, and $h = 2$.",
+    "The bottom layer holds $6 \\times 3 = 18$ unit cubes.",
+    "The box is $2$ layers tall, so $18 \\times 2 = 36$ cubic inches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Multiply in any order",
+      "steps": [
+        "$3 \\times 2 = 6$, then $6 \\times 6 = 36$.",
+        "Volume comes out the same no matter which two sides you multiply first."
+      ]
+    }
+  ],
+  "tags": [
+    "volume"
+  ],
+  "estimatedSeconds": 35
+}

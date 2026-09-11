@@ -1,0 +1,52 @@
+{
+  "id": "5.F.065",
+  "domain": "5.F",
+  "unit": 7,
+  "orderInUnit": 5,
+  "standard": "5.NBT.B.5",
+  "difficulty": 2,
+  "prompt": "Multiply: $367 \\times 24$",
+  "answerType": "numeric",
+  "primaryAnswer": "8808",
+  "alternativeAnswers": [
+    "8,808"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The standard algorithm does this in two rows: one for the ones digit, one for the tens digit.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The standard algorithm does this in two rows: one for the ones digit, one for the tens digit."
+    },
+    {
+      "level": "guide",
+      "text": "Row 1: $367 \\times 4$. Row 2: $367 \\times 20$. Then add the rows."
+    },
+    {
+      "level": "reveal",
+      "text": "$367 \\times 4 = 1468$ and $367 \\times 20 = 7340$, so $1468 + 7340 = 8808$."
+    }
+  ],
+  "explanation": [
+    "Split $24$ into $20 + 4$ — that is exactly what the two rows of the standard algorithm are doing.",
+    "$367 \\times 4 = 1468$.",
+    "$367 \\times 20 = 7340$.",
+    "Add the partial products: $1468 + 7340 = 8808$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate to check",
+      "steps": [
+        "$367$ is close to $370$ and $24$ is close to $25$.",
+        "$370 \\times 25 = 9{,}250$.",
+        "$8{,}808$ sits just under that, so the answer is reasonable ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "multiplication",
+    "standard-algorithm"
+  ],
+  "estimatedSeconds": 70
+}

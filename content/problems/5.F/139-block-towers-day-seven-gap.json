@@ -1,0 +1,63 @@
+{
+  "id": "5.F.139",
+  "domain": "5.F",
+  "unit": 14,
+  "orderInUnit": 9,
+  "standard": "5.OA.B.3",
+  "difficulty": 3,
+  "prompt": "Tower A has $2$ blocks on day $1$ and grows by $3$ blocks each day. Tower B has $4$ blocks on day $1$ and grows by $6$ blocks each day. On day $7$, how many MORE blocks does Tower B have than Tower A?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find day $3$ first. Tower A: $2, 5, 8$. Tower B: $4, 10, 16$. The gap is $16 - 8 = 8$. Day $7$ works exactly the same way, just with more steps.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Find day $3$ first. Tower A: $2, 5, 8$. Tower B: $4, 10, 16$. The gap is $16 - 8 = 8$. Day $7$ works exactly the same way, just with more steps."
+    },
+    {
+      "level": "nudge",
+      "text": "Day $1$ is the starting day, so getting to day $7$ takes $6$ days of growing."
+    },
+    {
+      "level": "guide",
+      "text": "Tower A: $2 + 6 \\times 3$. Tower B: $4 + 6 \\times 6$."
+    },
+    {
+      "level": "reveal",
+      "text": "Tower A has $2 + 18 = 20$; Tower B has $4 + 36 = 40$; the gap is $40 - 20 = 20$ blocks."
+    }
+  ],
+  "explanation": [
+    "Day $1$ is the start, so reaching day $7$ means the towers grow $6$ times, not $7$.",
+    "Tower A on day $7$: $2 + 6 \\times 3 = 2 + 18 = 20$ blocks.",
+    "Tower B on day $7$: $4 + 6 \\times 6 = 4 + 36 = 40$ blocks.",
+    "$40 - 20 = 20$, so Tower B has $20$ more blocks."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Write both patterns out",
+      "steps": [
+        "Tower A: $2, 5, 8, 11, 14, 17, 20$.",
+        "Tower B: $4, 10, 16, 22, 28, 34, 40$.",
+        "On the seventh entry, $40 - 20 = 20$ blocks apart."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The most common wrong answer is $23$: it comes from adding the daily growth $7$ times ($2 + 7 \\times 3 = 23$ and $4 + 7 \\times 6 = 46$, gap $23$).",
+        "But day $1$ is the starting pile — no blocks have been added yet on day $1$.",
+        "Escape it by writing the first three days out by hand before you multiply; you will see the number of ADDITIONS is always one less than the day number."
+      ]
+    }
+  ],
+  "tags": [
+    "patterns",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

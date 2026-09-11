@@ -1,0 +1,48 @@
+{
+  "id": "5.F.143",
+  "domain": "5.F",
+  "unit": 15,
+  "orderInUnit": 3,
+  "standard": "5.MD.A.1",
+  "difficulty": 1,
+  "prompt": "A bookshelf is $7$ feet tall. How many inches tall is it?",
+  "answerType": "numeric",
+  "primaryAnswer": "84",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Each foot is $12$ inches long.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each foot is $12$ inches long."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply: $7 \\times 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$7 \\times 12 = 84$ inches."
+    }
+  ],
+  "explanation": [
+    "There are $12$ inches in every foot, and you are trading feet for smaller units, so multiply.",
+    "$7 \\times 12 = 84$.",
+    "The bookshelf is $84$ inches tall."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Break the 12 apart",
+      "steps": [
+        "$7 \\times 10 = 70$.",
+        "$7 \\times 2 = 14$.",
+        "$70 + 14 = 84$ inches."
+      ]
+    }
+  ],
+  "tags": [
+    "measurement",
+    "conversion"
+  ],
+  "estimatedSeconds": 30
+}

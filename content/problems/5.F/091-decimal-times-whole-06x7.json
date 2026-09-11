@@ -1,0 +1,48 @@
+{
+  "id": "5.F.091",
+  "domain": "5.F",
+  "unit": 10,
+  "orderInUnit": 1,
+  "standard": "5.NBT.B.7",
+  "difficulty": 1,
+  "prompt": "Multiply: $0.6 \\times 7$",
+  "answerType": "numeric",
+  "primaryAnswer": "4.2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Ignore the decimal point for a second: what is $6 \\times 7$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Ignore the decimal point for a second: what is $6 \\times 7$?"
+    },
+    {
+      "level": "guide",
+      "text": "$6 \\times 7 = 42$. The factor $0.6$ has one decimal place, so the answer needs one too."
+    },
+    {
+      "level": "reveal",
+      "text": "Put the point one place from the right: $4.2$."
+    }
+  ],
+  "explanation": [
+    "First multiply as if there were no decimal point: $6 \\times 7 = 42$.",
+    "Count the decimal places in the factors: $0.6$ has one, $7$ has none, so the product needs one.",
+    "Place the point one spot from the right of $42$: $4.2$.",
+    "So $0.6 \\times 7 = 4.2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Does it make sense?",
+      "steps": [
+        "$0.6$ is a bit more than half.",
+        "A bit more than half of $7$ should be a bit more than $3.5$ — and $4.2$ is ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "decimals",
+    "multiplication"
+  ],
+  "estimatedSeconds": 35
+}

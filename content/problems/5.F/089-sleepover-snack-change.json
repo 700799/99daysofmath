@@ -1,0 +1,66 @@
+{
+  "id": "5.F.089",
+  "domain": "5.F",
+  "unit": 9,
+  "orderInUnit": 9,
+  "standard": "5.NBT.B.7",
+  "difficulty": 3,
+  "prompt": "You bring $\\$20$ to the store for a sleepover. You buy popcorn for $\\$4.79$, soda for $\\$3.25$, and candy for $\\$6.50$. How much change do you get back?",
+  "answerType": "numeric",
+  "primaryAnswer": "5.46",
+  "alternativeAnswers": [
+    "$5.46"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Try a two-item version: with $\\$10$, buying a $\\$2.50$ snack and a $\\$1.25$ drink costs $\\$3.75$, so the change is $10 - 3.75 = \\$6.25$. Add up all the prices first, then subtract from what you brought — same plan with three items.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a two-item version: with $\\$10$, buying a $\\$2.50$ snack and a $\\$1.25$ drink costs $\\$3.75$, so the change is $10 - 3.75 = \\$6.25$. Add up all the prices first, then subtract from what you brought — same plan with three items."
+    },
+    {
+      "level": "nudge",
+      "text": "Two steps: total what you spent, then subtract that total from $\\$20$."
+    },
+    {
+      "level": "guide",
+      "text": "$4.79 + 3.25 = 8.04$. Now add the candy: $8.04 + 6.50 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "The total is $\\$14.54$, and $\\$20.00 - \\$14.54 = \\$5.46$."
+    }
+  ],
+  "explanation": [
+    "Step 1 — add the prices, keeping the decimal points lined up: $4.79 + 3.25 = 8.04$.",
+    "Add the candy: $8.04 + 6.50 = 14.54$, so you spent $\\$14.54$.",
+    "Step 2 — subtract from what you brought. Write $\\$20$ as $\\$20.00$ and count up from $14.54$: $+0.46$ reaches $15.00$, then $+5$ reaches $20.00$.",
+    "$0.46 + 5 = 5.46$, so your change is $\\$5.46$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate to check",
+      "steps": [
+        "The prices are roughly $\\$5 + \\$3 + \\$6.50 = \\$14.50$.",
+        "$\\$20 - \\$14.50 = \\$5.50$, so a change near $\\$5.46$ is right ✓"
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The usual wrong answer is $\\$14.54$ — the amount spent, handed in as if it were the change.",
+        "A second slip is subtracting only one item, like $20 - 6.50 = 13.50$.",
+        "Underline the question: it asks what comes **back** to you, so every price has to be added first and then subtracted from $\\$20.00$: $20.00 - 14.54 = \\$5.46$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimals",
+    "money",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

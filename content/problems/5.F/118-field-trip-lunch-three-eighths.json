@@ -1,0 +1,49 @@
+{
+  "id": "5.F.118",
+  "domain": "5.F",
+  "unit": 12,
+  "orderInUnit": 8,
+  "standard": "5.NF.B.6",
+  "difficulty": 2,
+  "prompt": "There are $40$ students on the field trip. $\\frac{3}{8}$ of them brought lunch from home. How many students did NOT bring lunch from home?",
+  "answerType": "numeric",
+  "primaryAnswer": "25",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two steps: first find how many DID bring lunch, then subtract from $40$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two steps: first find how many DID bring lunch, then subtract from $40$."
+    },
+    {
+      "level": "guide",
+      "text": "One eighth of $40$ is $40 \\div 8 = 5$, so $\\frac{3}{8}$ of $40$ is $3 \\times 5 = 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "$40 - 15 = 25$ students did not bring lunch."
+    }
+  ],
+  "explanation": [
+    "Step 1 — how many brought lunch: $\\frac{3}{8} \\times 40$. One eighth of $40$ is $40 \\div 8 = 5$, so three eighths is $3 \\times 5 = 15$ students.",
+    "Step 2 — the rest: $40 - 15 = 25$ students did not bring lunch from home.",
+    "So $25$ students will need a school lunch."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the other fraction",
+      "steps": [
+        "If $\\frac{3}{8}$ brought lunch, then $\\frac{5}{8}$ did not.",
+        "$\\frac{5}{8} \\times 40 = 5 \\times 5 = 25$ — the same $25$ students."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "fractions",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

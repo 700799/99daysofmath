@@ -1,0 +1,54 @@
+{
+  "id": "5.F.106",
+  "domain": "5.F",
+  "unit": 11,
+  "orderInUnit": 6,
+  "standard": "5.NF.B.3",
+  "difficulty": 2,
+  "prompt": "Nine brownies are shared equally among $4$ friends. How many brownies does each friend get?",
+  "answerType": "fraction",
+  "primaryAnswer": "9/4",
+  "alternativeAnswers": [
+    "2 1/4",
+    "2.25"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Equal sharing means division: $9 \\div 4$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Equal sharing means division: $9 \\div 4$."
+    },
+    {
+      "level": "guide",
+      "text": "Write it as a fraction: $\\frac{9}{4}$. Now see how many wholes that is."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 \\times 2 = 8$, leaving $1$ quarter, so each friend gets $\\frac{9}{4} = 2\\frac{1}{4}$ brownies."
+    }
+  ],
+  "explanation": [
+    "Sharing $9$ brownies among $4$ friends is $9 \\div 4 = \\frac{9}{4}$.",
+    "To read that as a mixed number, divide: $4$ goes into $9$ twice with $1$ left over.",
+    "The leftover $1$ is still one fourth of a brownie, so each friend gets $2\\frac{1}{4}$ brownies.",
+    "Check: $4 \\times 2\\frac{1}{4} = 8 + 1 = 9$ brownies ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Hand them out",
+      "steps": [
+        "Give everyone $2$ whole brownies first — that uses $8$.",
+        "One brownie is left, cut into $4$ equal pieces, one piece each.",
+        "So each friend has $2$ brownies and $\\frac{1}{4}$ more: $2\\frac{1}{4}$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "fractions",
+    "division",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

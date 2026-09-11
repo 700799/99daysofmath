@@ -1,0 +1,47 @@
+{
+  "id": "5.F.154",
+  "domain": "5.F",
+  "unit": 16,
+  "orderInUnit": 4,
+  "standard": "5.G.A.2",
+  "difficulty": 1,
+  "prompt": "On a graph, the $x$-axis shows hours walked and the $y$-axis shows miles walked. One plotted point is $(3, 12)$. How many miles had been walked after $3$ hours?",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Which number in the pair matches the $y$-axis?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Which number in the pair matches the $y$-axis?"
+    },
+    {
+      "level": "guide",
+      "text": "In $(3, 12)$, the $3$ is hours and the $12$ is miles."
+    },
+    {
+      "level": "reveal",
+      "text": "$12$ miles."
+    }
+  ],
+  "explanation": [
+    "An ordered pair is always $(x, y)$, so in $(3, 12)$ the $x$-value is $3$ and the $y$-value is $12$.",
+    "The $x$-axis is labeled hours, so $3$ means $3$ hours.",
+    "The $y$-axis is labeled miles, so $12$ means $12$ miles had been walked."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read it like a sentence",
+      "steps": [
+        "The point says: \"at $3$ hours, the distance was $12$ miles.\"",
+        "The axis labels tell you which number means what."
+      ]
+    }
+  ],
+  "tags": [
+    "coordinate-plane",
+    "graph-reading"
+  ],
+  "estimatedSeconds": 35
+}

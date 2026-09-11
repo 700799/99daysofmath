@@ -1,0 +1,49 @@
+{
+  "id": "5.F.138",
+  "domain": "5.F",
+  "unit": 14,
+  "orderInUnit": 8,
+  "standard": "5.OA.B.3",
+  "difficulty": 2,
+  "prompt": "A sticker chart has $5$ stickers in week $1$ and gains $7$ more stickers every week: $5, 12, 19, \\dots$ How many stickers are on the chart in week $10$?",
+  "answerType": "numeric",
+  "primaryAnswer": "68",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "From week $1$ to week $10$ is $9$ weeks of adding, not $10$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "From week $1$ to week $10$ is $9$ weeks of adding, not $10$."
+    },
+    {
+      "level": "guide",
+      "text": "$9$ weeks of growth is $9 \\times 7 = 63$ stickers added."
+    },
+    {
+      "level": "reveal",
+      "text": "$5 + 63 = 68$ stickers."
+    }
+  ],
+  "explanation": [
+    "Week $1$ already has $5$ stickers, so the adding starts after that.",
+    "Getting from week $1$ to week $10$ takes $9$ steps: $9 \\times 7 = 63$ stickers added.",
+    "$5 + 63 = 68$ stickers in week $10$.",
+    "Spot-check with the list: $5, 12, 19, 26, 33, 40, 47, 54, 61, 68$ — the 10th entry is indeed $68$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Just keep counting",
+      "steps": [
+        "Write the weeks out: $5, 12, 19, 26, 33, 40, 47, 54, 61, 68$.",
+        "Count the entries — the tenth one is $68$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "patterns",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

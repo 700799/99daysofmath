@@ -1,0 +1,48 @@
+{
+  "id": "5.F.082",
+  "domain": "5.F",
+  "unit": 9,
+  "orderInUnit": 2,
+  "standard": "5.NBT.B.7",
+  "difficulty": 1,
+  "prompt": "Subtract: $8.6 - 3.2$",
+  "answerType": "numeric",
+  "primaryAnswer": "5.4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Line up the decimal points, then subtract column by column.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Line up the decimal points, then subtract column by column."
+    },
+    {
+      "level": "guide",
+      "text": "Tenths: $6 - 2 = 4$. Ones: $8 - 3 = ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "$8 - 3 = 5$, so the answer is $5.4$."
+    }
+  ],
+  "explanation": [
+    "Stack the numbers with the decimal points lined up.",
+    "Subtract the tenths: $6 - 2 = 4$ tenths. No regrouping needed.",
+    "Subtract the ones: $8 - 3 = 5$.",
+    "So $8.6 - 3.2 = 5.4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check by adding back",
+      "steps": [
+        "$5.4 + 3.2$ should return the starting number.",
+        "$4 + 2 = 6$ tenths and $5 + 3 = 8$ ones, giving $8.6$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "decimals",
+    "subtraction"
+  ],
+  "estimatedSeconds": 30
+}

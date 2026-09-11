@@ -1,0 +1,71 @@
+{
+  "id": "5.F.128",
+  "domain": "5.F",
+  "unit": 13,
+  "orderInUnit": 8,
+  "standard": "5.OA.A.1",
+  "difficulty": 2,
+  "prompt": "Where should parentheses go so that $24 - 6 \\times 3 + 2$ equals $56$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "(24 − 6) × 3 + 2",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "24 − (6 × 3) + 2",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "24 − 6 × (3 + 2)",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "(24 − 6) × (3 + 2)",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$56$ is much bigger than $24$, so the multiplying must act on a big chunk.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$56$ is much bigger than $24$, so the multiplying must act on a big chunk."
+    },
+    {
+      "level": "guide",
+      "text": "Try making $24 - 6$ happen first: that gives $18$, and $18 \\times 3$ is already close to $56$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(24 - 6) \\times 3 + 2 = 18 \\times 3 + 2 = 54 + 2 = 56$."
+    }
+  ],
+  "explanation": [
+    "Test choice A: $(24 - 6) = 18$, then $18 \\times 3 = 54$, then $54 + 2 = 56$. That works.",
+    "Choice B gives $24 - 18 + 2 = 8$, and choice D gives $18 \\times 5 = 90$ — both miss.",
+    "Choice C would need $6 \\times 5 = 30$ subtracted from $24$, which goes below zero.",
+    "So the parentheses belong around $24 - 6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate before testing",
+      "steps": [
+        "To reach $56$ you need roughly $18 \\times 3$.",
+        "The only way to get $18$ out of these numbers is $24 - 6$, so start there."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "order-of-operations",
+    "reasoning"
+  ],
+  "estimatedSeconds": 60
+}

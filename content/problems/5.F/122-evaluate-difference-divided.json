@@ -1,0 +1,46 @@
+{
+  "id": "5.F.122",
+  "domain": "5.F",
+  "unit": 13,
+  "orderInUnit": 2,
+  "standard": "5.OA.A.1",
+  "difficulty": 1,
+  "prompt": "Evaluate: $(36 - 12) \\div 4$",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Handle what is inside the parentheses before you divide.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Handle what is inside the parentheses before you divide."
+    },
+    {
+      "level": "guide",
+      "text": "$36 - 12 = 24$, so now you need $24 \\div 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24 \\div 4 = 6$."
+    }
+  ],
+  "explanation": [
+    "Do the parentheses first: $36 - 12 = 24$.",
+    "That leaves $24 \\div 4$.",
+    "$24 \\div 4 = 6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A picture for it",
+      "steps": [
+        "Imagine $36$ trading cards, $12$ given away, and the rest split among $4$ friends.",
+        "$24$ cards split $4$ ways gives each friend $6$ cards."
+      ]
+    }
+  ],
+  "tags": [
+    "order-of-operations"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,56 @@
+{
+  "id": "5.F.127",
+  "domain": "5.F",
+  "unit": 13,
+  "orderInUnit": 7,
+  "standard": "5.OA.A.2",
+  "difficulty": 2,
+  "prompt": "Write an expression for: \"subtract $9$ from $40$, then multiply the result by $5$.\" Do not evaluate it.",
+  "answerType": "expression",
+  "primaryAnswer": "(40 - 9) × 5",
+  "alternativeAnswers": [
+    "(40-9)*5",
+    "(40 - 9) * 5",
+    "5*(40-9)",
+    "5 × (40 - 9)",
+    "(40 - 9) x 5",
+    "5(40-9)"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Subtract $9$ from $40$\" means $40$ comes first: $40 - 9$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Subtract $9$ from $40$\" means $40$ comes first: $40 - 9$."
+    },
+    {
+      "level": "guide",
+      "text": "That subtraction has to happen before the multiplying, so it needs parentheses."
+    },
+    {
+      "level": "reveal",
+      "text": "$(40 - 9) \\times 5$."
+    }
+  ],
+  "explanation": [
+    "\"Subtract $9$ from $40$\" is $40 - 9$ — the number you subtract FROM is written first.",
+    "\"Then multiply the result by $5$\" means the whole subtraction gets multiplied, so wrap it: $(40 - 9) \\times 5$.",
+    "Without parentheses, $40 - 9 \\times 5$ would multiply only the $9$, which is a different instruction.",
+    "The answer is the expression $(40 - 9) \\times 5$ — no need to compute it."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why order matters",
+      "steps": [
+        "$(40 - 9) \\times 5 = 31 \\times 5 = 155$.",
+        "$40 - 9 \\times 5 = 40 - 45$, which is not even a whole-number answer a 5th grader would want.",
+        "The parentheses protect the step you meant to do first."
+      ]
+    }
+  ],
+  "tags": [
+    "expressions",
+    "writing-expressions"
+  ],
+  "estimatedSeconds": 50
+}

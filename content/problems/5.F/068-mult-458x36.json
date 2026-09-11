@@ -1,0 +1,51 @@
+{
+  "id": "5.F.068",
+  "domain": "5.F",
+  "unit": 7,
+  "orderInUnit": 8,
+  "standard": "5.NBT.B.5",
+  "difficulty": 2,
+  "prompt": "Multiply: $458 \\times 36$",
+  "answerType": "numeric",
+  "primaryAnswer": "16488",
+  "alternativeAnswers": [
+    "16,488"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Two partial products again: one for the $6$ ones, one for the $3$ tens.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two partial products again: one for the $6$ ones, one for the $3$ tens."
+    },
+    {
+      "level": "guide",
+      "text": "$458 \\times 6 = 2748$. Now find $458 \\times 30$."
+    },
+    {
+      "level": "reveal",
+      "text": "$458 \\times 30 = 13{,}740$, and $13{,}740 + 2{,}748 = 16{,}488$."
+    }
+  ],
+  "explanation": [
+    "Split $36$ into $30 + 6$.",
+    "$458 \\times 6 = 2{,}748$.",
+    "$458 \\times 30 = 13{,}740$.",
+    "Add them: $13{,}740 + 2{,}748 = 16{,}488$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate to check",
+      "steps": [
+        "$458 \\approx 450$ and $36 \\approx 40$.",
+        "$450 \\times 40 = 18{,}000$.",
+        "$16{,}488$ is close to that, so the answer is in the right neighborhood ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "multiplication",
+    "standard-algorithm"
+  ],
+  "estimatedSeconds": 75
+}

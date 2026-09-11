@@ -1,0 +1,66 @@
+{
+  "id": "5.F.140",
+  "domain": "5.F",
+  "unit": 14,
+  "orderInUnit": 10,
+  "standard": "5.OA.B.3",
+  "difficulty": 3,
+  "prompt": "Pattern A (add $2$ from $0$): $0, 2, 4, 6, 8, 10$. Pattern B (add $6$ from $0$): $0, 6, 12, 18, 24, 30$. Matching terms are written as ordered pairs $(A, B)$ and plotted. Which ordered pair has an $x$-coordinate of $8$? Write it like $(x, y)$.",
+  "answerType": "short-text",
+  "primaryAnswer": "(8, 24)",
+  "alternativeAnswers": [
+    "(8,24)",
+    "8,24"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Find the pair with $x = 4$ first. In Pattern A, $4$ is the 3rd number; the 3rd number of Pattern B is $12$, so that pair is $(4, 12)$. Do the same hunt for $x = 8$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Find the pair with $x = 4$ first. In Pattern A, $4$ is the 3rd number; the 3rd number of Pattern B is $12$, so that pair is $(4, 12)$. Do the same hunt for $x = 8$."
+    },
+    {
+      "level": "nudge",
+      "text": "The $x$-coordinates come from Pattern A, so find where $8$ sits in Pattern A."
+    },
+    {
+      "level": "guide",
+      "text": "$8$ is the 5th number in Pattern A. What is the 5th number in Pattern B?"
+    },
+    {
+      "level": "reveal",
+      "text": "The 5th number of Pattern B is $24$, so the pair is $(8, 24)$."
+    }
+  ],
+  "explanation": [
+    "The first coordinate comes from Pattern A, so locate $8$ there: $0, 2, 4, 6, 8$ — it is the 5th number.",
+    "Take the 5th number of Pattern B: $0, 6, 12, 18, 24$ — that is $24$.",
+    "Matching terms pair up, so the ordered pair is $(8, 24)$.",
+    "It also fits the relationship: every B term is $3$ times its A term, and $3 \\times 8 = 24$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the times-3 rule",
+      "steps": [
+        "Pattern B adds $6$ for every $2$ Pattern A adds, so B is always $3$ times A.",
+        "$3 \\times 8 = 24$, giving the pair $(8, 24)$."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "A frequent wrong answer is $(24, 8)$ — the right two numbers written backwards.",
+        "The $x$-coordinate always comes first, and the problem said the pairs are written as $(A, B)$, so the Pattern A number leads.",
+        "Escape it by saying it out loud as you write: \"over first, then up\" — over $8$, up $24$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "patterns",
+    "ordered-pairs",
+    "multi-step"
+  ],
+  "estimatedSeconds": 70
+}

@@ -1,0 +1,71 @@
+{
+  "id": "5.F.113",
+  "domain": "5.F",
+  "unit": 12,
+  "orderInUnit": 3,
+  "standard": "5.NF.A.2",
+  "difficulty": 1,
+  "prompt": "Ella ate $\\frac{5}{8}$ of a granola bar in the morning and $\\frac{1}{3}$ of another one at lunch. Without adding exactly, about how much granola bar did she eat in all?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "about 0 bars",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "about 1/2 of a bar",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "about 1 whole bar",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "about 2 bars",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Round each fraction to the nearest friendly number: $0$, $\\frac{1}{2}$, or $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Round each fraction to the nearest friendly number: $0$, $\\frac{1}{2}$, or $1$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{5}{8}$ is a little more than $\\frac{1}{2}$, and $\\frac{1}{3}$ is a little less than $\\frac{1}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "About $\\frac{1}{2} + \\frac{1}{2} = 1$ whole bar."
+    }
+  ],
+  "explanation": [
+    "Compare each fraction to the benchmarks $0$, $\\frac{1}{2}$, and $1$.",
+    "$\\frac{5}{8}$ is just past half (half of $8$ is $4$, and $5 > 4$), and $\\frac{1}{3}$ is just under half.",
+    "So the sum is about $\\frac{1}{2} + \\frac{1}{2} = 1$ whole granola bar.",
+    "The exact answer, $\\frac{23}{24}$, really is just under $1$ — the estimate was right."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why not 2?",
+      "steps": [
+        "Each piece is less than one whole bar, so the total has to be less than $2$.",
+        "And both pieces are around half, so $\\frac{1}{2}$ alone is too small — $1$ is the best fit."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "estimation",
+    "benchmarks"
+  ],
+  "estimatedSeconds": 45
+}

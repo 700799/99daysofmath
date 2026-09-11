@@ -1,0 +1,51 @@
+{
+  "id": "5.F.111",
+  "domain": "5.F",
+  "unit": 12,
+  "orderInUnit": 1,
+  "standard": "5.NF.B.6",
+  "difficulty": 1,
+  "prompt": "Maya makes granola. One batch uses $\\frac{2}{3}$ cup of oats. How many cups of oats does she need for $3$ batches?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [
+    "2 cups",
+    "6/3"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Three batches means $\\frac{2}{3}$ added three times — or $3 \\times \\frac{2}{3}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Three batches means $\\frac{2}{3}$ added three times — or $3 \\times \\frac{2}{3}$."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply the top number by $3$ and leave the bottom alone: $3 \\times \\frac{2}{3} = \\frac{6}{3}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{6}{3} = 2$, so Maya needs $2$ cups."
+    }
+  ],
+  "explanation": [
+    "Three batches each use $\\frac{2}{3}$ cup, so the total is $3 \\times \\frac{2}{3}$.",
+    "When you multiply a fraction by a whole number, the whole number multiplies the numerator: $3 \\times \\frac{2}{3} = \\frac{6}{3}$.",
+    "$\\frac{6}{3}$ means $6 \\div 3$, which is $2$.",
+    "Maya needs $2$ cups of oats."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Just add them up",
+      "steps": [
+        "$\\frac{2}{3} + \\frac{2}{3} + \\frac{2}{3} = \\frac{6}{3}$.",
+        "Three thirds make one whole, so six thirds make $2$ wholes."
+      ]
+    }
+  ],
+  "tags": [
+    "fractions",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

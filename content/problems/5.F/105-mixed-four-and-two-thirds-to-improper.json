@@ -1,0 +1,49 @@
+{
+  "id": "5.F.105",
+  "domain": "5.F",
+  "unit": 11,
+  "orderInUnit": 5,
+  "standard": "5.NF.B.3",
+  "difficulty": 2,
+  "prompt": "Write $4\\frac{2}{3}$ as an improper fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "14/3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "How many thirds are hiding in each whole?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "How many thirds are hiding in each whole?"
+    },
+    {
+      "level": "guide",
+      "text": "Each whole is $\\frac{3}{3}$, so $4$ wholes are $4 \\times 3 = 12$ thirds."
+    },
+    {
+      "level": "reveal",
+      "text": "$12$ thirds plus the extra $2$ thirds is $\\frac{14}{3}$."
+    }
+  ],
+  "explanation": [
+    "One whole equals $\\frac{3}{3}$, so four wholes equal $4 \\times 3 = 12$ thirds.",
+    "The mixed number also carries $\\frac{2}{3}$ extra.",
+    "Altogether: $12 + 2 = 14$ thirds, so $4\\frac{2}{3} = \\frac{14}{3}$.",
+    "Check: $14 \\div 3 = 4$ remainder $2$, which is $4\\frac{2}{3}$ again ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The shortcut, and why it works",
+      "steps": [
+        "Multiply the whole number by the denominator, then add the numerator: $4 \\times 3 + 2 = 14$.",
+        "Keep the same denominator: $\\frac{14}{3}$.",
+        "That is exactly the counting-thirds argument, done in one line ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "fractions",
+    "mixed-numbers"
+  ],
+  "estimatedSeconds": 45
+}

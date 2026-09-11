@@ -1,0 +1,46 @@
+{
+  "id": "5.F.121",
+  "domain": "5.F",
+  "unit": 13,
+  "orderInUnit": 1,
+  "standard": "5.OA.A.1",
+  "difficulty": 1,
+  "prompt": "Evaluate: $5 \\times (7 + 3)$",
+  "answerType": "numeric",
+  "primaryAnswer": "50",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Parentheses go first, always.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Parentheses go first, always."
+    },
+    {
+      "level": "guide",
+      "text": "$7 + 3 = 10$, so the expression becomes $5 \\times 10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$5 \\times 10 = 50$."
+    }
+  ],
+  "explanation": [
+    "Parentheses tell you which part to do first: $7 + 3 = 10$.",
+    "Now the expression is $5 \\times 10$.",
+    "$5 \\times 10 = 50$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spread the 5 out",
+      "steps": [
+        "$5 \\times (7 + 3) = 5 \\times 7 + 5 \\times 3$.",
+        "$35 + 15 = 50$ — same answer."
+      ]
+    }
+  ],
+  "tags": [
+    "order-of-operations"
+  ],
+  "estimatedSeconds": 30
+}

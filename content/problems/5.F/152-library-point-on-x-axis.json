@@ -1,0 +1,50 @@
+{
+  "id": "5.F.152",
+  "domain": "5.F",
+  "unit": 16,
+  "orderInUnit": 2,
+  "standard": "5.G.A.1",
+  "difficulty": 1,
+  "prompt": "On a map grid, you start at the origin $(0,0)$, walk $6$ units right, and do not go up at all. That is where the library is. What are the library's coordinates? Write it like $(x, y)$.",
+  "answerType": "short-text",
+  "primaryAnswer": "(6, 0)",
+  "alternativeAnswers": [
+    "(6,0)",
+    "6,0"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The first number is the sideways move; the second is the up move.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The first number is the sideways move; the second is the up move."
+    },
+    {
+      "level": "guide",
+      "text": "You moved $6$ right, so $x = 6$. You never moved up, so $y = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "The library is at $(6, 0)$."
+    }
+  ],
+  "explanation": [
+    "Coordinates are written $(x, y)$: over first, then up.",
+    "Walking $6$ units right makes $x = 6$.",
+    "Not going up at all makes $y = 0$.",
+    "So the library sits at $(6, 0)$ — right on the $x$-axis."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Zero is a real coordinate",
+      "steps": [
+        "A $y$-coordinate of $0$ does not mean the point is missing.",
+        "It means the point is sitting right on the horizontal axis."
+      ]
+    }
+  ],
+  "tags": [
+    "coordinate-plane"
+  ],
+  "estimatedSeconds": 35
+}

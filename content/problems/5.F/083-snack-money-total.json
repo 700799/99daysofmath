@@ -1,0 +1,53 @@
+{
+  "id": "5.F.083",
+  "domain": "5.F",
+  "unit": 9,
+  "orderInUnit": 3,
+  "standard": "5.NBT.B.7",
+  "difficulty": 1,
+  "prompt": "At the snack bar you buy a pretzel for $\\$2.75$ and a juice for $\\$1.40$. How much do you spend in all?",
+  "answerType": "numeric",
+  "primaryAnswer": "4.15",
+  "alternativeAnswers": [
+    "$4.15"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"In all\" means add. Line up the decimal points like the price tags in a column.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"In all\" means add. Line up the decimal points like the price tags in a column."
+    },
+    {
+      "level": "guide",
+      "text": "Hundredths: $5 + 0 = 5$. Tenths: $7 + 4 = 11$ tenths, so carry."
+    },
+    {
+      "level": "reveal",
+      "text": "$2.75 + 1.40 = 4.15$."
+    }
+  ],
+  "explanation": [
+    "Stack the prices with the decimal points lined up: $2.75$ over $1.40$.",
+    "Hundredths: $5 + 0 = 5$. Tenths: $7 + 4 = 11$, so write $1$ and carry $1$ whole dollar.",
+    "Dollars: $2 + 1 + 1 = 4$.",
+    "The total is $\\$4.15$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Dollars and cents separately",
+      "steps": [
+        "Dollars: $\\$2 + \\$1 = \\$3$.",
+        "Cents: $75¢ + 40¢ = 115¢ = \\$1.15$.",
+        "$\\$3 + \\$1.15 = \\$4.15$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimals",
+    "money",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

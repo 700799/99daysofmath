@@ -1,0 +1,72 @@
+{
+  "id": "5.F.108",
+  "domain": "5.F",
+  "unit": 11,
+  "orderInUnit": 8,
+  "standard": "5.NF.A.2",
+  "difficulty": 2,
+  "prompt": "Without adding exactly, $2\\frac{7}{8} + 1\\frac{1}{12}$ is **closest** to which whole number?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "3",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "4",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "5",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "6",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Round each mixed number to the nearest whole number first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Round each mixed number to the nearest whole number first."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{7}{8}$ is nearly a whole, so $2\\frac{7}{8} \\approx 3$. And $\\frac{1}{12}$ is tiny, so $1\\frac{1}{12} \\approx 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 + 1 = 4$, so choose B."
+    }
+  ],
+  "explanation": [
+    "$\\frac{7}{8}$ is much closer to $1$ than to $0$, so $2\\frac{7}{8}$ rounds up to $3$.",
+    "$\\frac{1}{12}$ is much closer to $0$ than to $1$, so $1\\frac{1}{12}$ rounds down to $1$.",
+    "$3 + 1 = 4$, so the sum is closest to $4$ (choice B).",
+    "The exact sum is about $3.96$, which really is nearest to $4$ ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why not 3?",
+      "steps": [
+        "Dropping both fractions gives $2 + 1 = 3$, but that throws away almost a whole from the $\\frac{7}{8}$.",
+        "Rounding each piece to its nearest whole is the fairer estimate, and it gives $4$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "estimation",
+    "fractions",
+    "mixed-numbers"
+  ],
+  "estimatedSeconds": 50
+}

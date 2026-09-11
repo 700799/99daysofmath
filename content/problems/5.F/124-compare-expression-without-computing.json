@@ -1,0 +1,71 @@
+{
+  "id": "5.F.124",
+  "domain": "5.F",
+  "unit": 13,
+  "orderInUnit": 4,
+  "standard": "5.OA.A.2",
+  "difficulty": 1,
+  "prompt": "Without doing any arithmetic, how does $3 \\times (245 + 17)$ compare with $245 + 17$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "It is 3 more.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "It is 3 times as big.",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "It is exactly the same.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "It is 3 less.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Both expressions contain the same piece, $245 + 17$. What is being done to that piece?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Both expressions contain the same piece, $245 + 17$. What is being done to that piece?"
+    },
+    {
+      "level": "guide",
+      "text": "The parentheses keep $245 + 17$ together as one chunk, and the $3$ multiplies that whole chunk."
+    },
+    {
+      "level": "reveal",
+      "text": "Multiplying by $3$ makes it $3$ times as big."
+    }
+  ],
+  "explanation": [
+    "Think of $245 + 17$ as one bundle, kept together by the parentheses.",
+    "The $3$ outside multiplies that entire bundle, so you have three copies of it.",
+    "That makes the first expression $3$ times as big as the second.",
+    "You never needed the actual total to see it — but if you check, $245 + 17 = 262$ and $3 \\times 262 = 786$, which is indeed $3$ times $262$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in snack packs",
+      "steps": [
+        "If one lunch bag holds $245$ crackers and $17$ grapes, that is one bundle.",
+        "Three bundles is $3 \\times$ one bundle — three times as much, not three more items."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "expressions",
+    "reasoning"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,52 @@
+{
+  "id": "5.F.087",
+  "domain": "5.F",
+  "unit": 9,
+  "orderInUnit": 7,
+  "standard": "5.NBT.B.7",
+  "difficulty": 2,
+  "prompt": "In a $100$-meter race, Mia finished in $12.45$ seconds and Leo finished in $13.2$ seconds. How many seconds faster was Mia?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.75",
+  "alternativeAnswers": [
+    ".75"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"How much faster\" means find the difference between the two times.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"How much faster\" means find the difference between the two times."
+    },
+    {
+      "level": "guide",
+      "text": "Write $13.2$ as $13.20$ so it has hundredths, then subtract $12.45$."
+    },
+    {
+      "level": "reveal",
+      "text": "$13.20 - 12.45 = 0.75$ seconds."
+    }
+  ],
+  "explanation": [
+    "The faster runner has the **smaller** time, so subtract: $13.2 - 12.45$.",
+    "Write $13.2$ as $13.20$ so both times show hundredths.",
+    "Count up from $12.45$: $+0.55$ reaches $13.00$, then $+0.20$ reaches $13.20$, and $0.55 + 0.20 = 0.75$.",
+    "Mia was $0.75$ seconds faster."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate to check",
+      "steps": [
+        "The times are about $12.5$ and $13.2$, a gap of roughly $0.7$ seconds.",
+        "$0.75$ fits that, so the answer makes sense ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimals",
+    "measurement",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

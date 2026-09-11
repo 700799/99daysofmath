@@ -1,0 +1,50 @@
+{
+  "id": "5.F.077",
+  "domain": "5.F",
+  "unit": 8,
+  "orderInUnit": 7,
+  "standard": "5.NBT.A.2",
+  "difficulty": 2,
+  "prompt": "What is $85 \\div 10^2$?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.85",
+  "alternativeAnswers": [
+    ".85"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$10^2 = 100$, and dividing shrinks the number.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$10^2 = 100$, and dividing shrinks the number."
+    },
+    {
+      "level": "guide",
+      "text": "Move the decimal point two places left. Remember $85$ is really $85.$"
+    },
+    {
+      "level": "reveal",
+      "text": "$85. \\to 8.5 \\to 0.85$."
+    }
+  ],
+  "explanation": [
+    "$10^2 = 100$, so dividing by it shifts the decimal point two places to the left.",
+    "Write $85$ as $85.0$ so you can see the point, then shift: $8.5$, then $0.85$.",
+    "So $85 \\div 10^2 = 0.85$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Money check",
+      "steps": [
+        "Think of $85$ pennies.",
+        "A penny is $\\frac{1}{100}$ of a dollar, so $85$ pennies is $\\$0.85$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "powers-of-ten",
+    "decimals"
+  ],
+  "estimatedSeconds": 45
+}

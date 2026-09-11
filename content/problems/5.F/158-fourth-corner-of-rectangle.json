@@ -1,0 +1,52 @@
+{
+  "id": "5.F.158",
+  "domain": "5.F",
+  "unit": 16,
+  "orderInUnit": 8,
+  "standard": "5.G.A.2",
+  "difficulty": 2,
+  "prompt": "Three corners of a rectangle are at $(1, 2)$, $(7, 2)$, and $(7, 6)$. Where is the fourth corner? Write it like $(x, y)$.",
+  "answerType": "short-text",
+  "primaryAnswer": "(1, 6)",
+  "alternativeAnswers": [
+    "(1,6)",
+    "1,6"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "In a rectangle, corners come in matching pairs: two share an $x$-value, two share a $y$-value.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "In a rectangle, corners come in matching pairs: two share an $x$-value, two share a $y$-value."
+    },
+    {
+      "level": "guide",
+      "text": "$(1,2)$ and $(7,2)$ form the bottom edge. The missing corner sits directly above $(1,2)$."
+    },
+    {
+      "level": "reveal",
+      "text": "It has the same $x$ as $(1,2)$ and the same $y$ as $(7,6)$: $(1, 6)$."
+    }
+  ],
+  "explanation": [
+    "The points $(1,2)$ and $(7,2)$ share $y = 2$, so they are the two bottom corners.",
+    "$(7,6)$ is directly above $(7,2)$, so it is the top-right corner and the rectangle is $4$ units tall.",
+    "The missing top-left corner must line up above $(1,2)$ and across from $(7,6)$: $x = 1$ and $y = 6$.",
+    "The fourth corner is $(1, 6)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Match the side lengths",
+      "steps": [
+        "The bottom edge runs from $x = 1$ to $x = 7$, a width of $6$.",
+        "The top edge must have the same width and sit at $y = 6$, so it runs from $(1,6)$ to $(7,6)$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "coordinate-plane",
+    "geometry"
+  ],
+  "estimatedSeconds": 60
+}

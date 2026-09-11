@@ -1,0 +1,50 @@
+{
+  "id": "5.F.101",
+  "domain": "5.F",
+  "unit": 11,
+  "orderInUnit": 1,
+  "standard": "5.NF.B.3",
+  "difficulty": 1,
+  "prompt": "Write $3 \\div 4$ as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "3/4",
+  "alternativeAnswers": [
+    "0.75"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A fraction bar is just another way to write a division sign.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A fraction bar is just another way to write a division sign."
+    },
+    {
+      "level": "guide",
+      "text": "The number being shared goes on top; the number of shares goes on the bottom."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\div 4 = \\frac{3}{4}$."
+    }
+  ],
+  "explanation": [
+    "A fraction means \"top divided by bottom,\" so any division can be written as a fraction.",
+    "Here $3$ is being split into $4$ equal parts, so $3$ is the numerator and $4$ is the denominator.",
+    "$3 \\div 4 = \\frac{3}{4}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture it",
+      "steps": [
+        "Imagine $3$ granola bars shared by $4$ friends.",
+        "Cut each bar into $4$ pieces — that is $12$ pieces, and each friend takes $3$ of them.",
+        "$3$ pieces out of the $4$ that make one bar is $\\frac{3}{4}$ of a bar ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "fractions",
+    "division"
+  ],
+  "estimatedSeconds": 30
+}

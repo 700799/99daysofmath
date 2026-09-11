@@ -1,0 +1,66 @@
+{
+  "id": "5.F.079",
+  "domain": "5.F",
+  "unit": 8,
+  "orderInUnit": 9,
+  "standard": "5.NBT.A.2",
+  "difficulty": 3,
+  "prompt": "A school play sold $10^3$ tickets at $\\$8$ each. Putting on the play cost the school $\\$1{,}500$. How many dollars does the school have left after paying the costs?",
+  "answerType": "numeric",
+  "primaryAnswer": "6500",
+  "alternativeAnswers": [
+    "6,500",
+    "$6,500"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Try smaller numbers first: $10^1 = 10$ tickets at $\\$8$ is $\\$80$, and if costs were $\\$30$ you would have $80 - 30 = \\$50$ left. Turn the power of ten into a plain number, multiply, then subtract — exactly the same three moves.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try smaller numbers first: $10^1 = 10$ tickets at $\\$8$ is $\\$80$, and if costs were $\\$30$ you would have $80 - 30 = \\$50$ left. Turn the power of ten into a plain number, multiply, then subtract — exactly the same three moves."
+    },
+    {
+      "level": "nudge",
+      "text": "First rewrite $10^3$ as a regular number, then find the money taken in, then subtract the costs."
+    },
+    {
+      "level": "guide",
+      "text": "$10^3 = 1{,}000$ tickets. Money taken in is $1{,}000 \\times 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$1{,}000 \\times 8 = 8{,}000$, and $8{,}000 - 1{,}500 = 6{,}500$ dollars left."
+    }
+  ],
+  "explanation": [
+    "Step 1 — how many tickets: $10^3 = 1{,}000$.",
+    "Step 2 — money taken in: $1{,}000 \\times \\$8 = \\$8{,}000$, because multiplying by $1{,}000$ adds three zeros to the $8$.",
+    "Step 3 — pay the costs: $\\$8{,}000 - \\$1{,}500 = \\$6{,}500$.",
+    "The school keeps $\\$6{,}500$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Subtract in friendly pieces",
+      "steps": [
+        "$\\$8{,}000 - \\$1{,}000 = \\$7{,}000$.",
+        "Then take off the last $\\$500$: $\\$7{,}000 - \\$500 = \\$6{,}500$ ✓"
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "A very common wrong answer is $\\$8{,}000$ — the money taken in, with the costs never subtracted.",
+        "Another is treating $10^3$ as $30$ (multiplying the base by the exponent), which gives $30 \\times 8 = 240$ and a nonsense total.",
+        "$10^3$ means $10 \\times 10 \\times 10 = 1{,}000$, and the word \"left\" tells you a subtraction still has to happen: $8{,}000 - 1{,}500 = 6{,}500$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "powers-of-ten",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

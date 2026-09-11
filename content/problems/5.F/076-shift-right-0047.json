@@ -1,0 +1,48 @@
+{
+  "id": "5.F.076",
+  "domain": "5.F",
+  "unit": 8,
+  "orderInUnit": 6,
+  "standard": "5.NBT.A.2",
+  "difficulty": 2,
+  "prompt": "What is $0.047 \\times 10^3$?",
+  "answerType": "numeric",
+  "primaryAnswer": "47",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$10^3$ is $1{,}000$, so the number gets a thousand times bigger.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$10^3$ is $1{,}000$, so the number gets a thousand times bigger."
+    },
+    {
+      "level": "guide",
+      "text": "Slide the decimal point three places to the right: $0.047 \\to 0.47 \\to 4.7 \\to ?$"
+    },
+    {
+      "level": "reveal",
+      "text": "The third shift gives $47$."
+    }
+  ],
+  "explanation": [
+    "$10^3 = 1{,}000$, and multiplying by it moves the decimal point three places right.",
+    "Shift one: $0.047 \\to 0.47$. Shift two: $0.47 \\to 4.7$. Shift three: $4.7 \\to 47$.",
+    "So $0.047 \\times 10^3 = 47$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Fraction view",
+      "steps": [
+        "$0.047 = \\frac{47}{1000}$.",
+        "Multiplying by $1{,}000$ cancels the denominator: $\\frac{47}{1000} \\times 1000 = 47$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "powers-of-ten",
+    "decimals"
+  ],
+  "estimatedSeconds": 45
+}

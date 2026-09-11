@@ -1,0 +1,51 @@
+{
+  "id": "5.F.098",
+  "domain": "5.F",
+  "unit": 10,
+  "orderInUnit": 8,
+  "standard": "5.NBT.B.7",
+  "difficulty": 2,
+  "prompt": "Granola bars cost $\\$0.65$ each. With $\\$5.20$ of allowance money, how many granola bars can you buy?",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You are asking how many $\\$0.65$ groups fit inside $\\$5.20$ — that is division.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You are asking how many $\\$0.65$ groups fit inside $\\$5.20$ — that is division."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply both numbers by $100$ to work in cents: $520 \\div 65$."
+    },
+    {
+      "level": "reveal",
+      "text": "$65 \\times 8 = 520$, so you can buy $8$ bars."
+    }
+  ],
+  "explanation": [
+    "Set it up as division: $\\$5.20 \\div \\$0.65$.",
+    "Working in cents keeps it whole: $520$ cents $\\div$ $65$ cents.",
+    "$65 \\times 8 = 520$, so exactly $8$ bars fit with nothing left over.",
+    "You can buy $8$ granola bars."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate first",
+      "steps": [
+        "$\\$0.65$ is close to $\\$0.50$, and $\\$5.20 \\div \\$0.50$ would be about $10$.",
+        "Since the real bars cost a bit more, the real answer is a bit less than $10$ — and $8$ fits ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimals",
+    "division",
+    "money",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

@@ -1,0 +1,64 @@
+{
+  "id": "5.F.120",
+  "domain": "5.F",
+  "unit": 12,
+  "orderInUnit": 10,
+  "standard": "5.NF.B.6",
+  "difficulty": 3,
+  "prompt": "Leo scored $240$ points in a video game. Mia scored $\\frac{3}{4}$ as many points as Leo, and then earned $35$ bonus points. How many points does Mia have in all?",
+  "answerType": "numeric",
+  "primaryAnswer": "215",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Pretend Leo scored $40$. Then $\\frac{3}{4}$ of $40$ is $40 \\div 4 = 10$, and $3 \\times 10 = 30$; add a $5$-point bonus and Mia has $35$. Use those same two steps with the real numbers.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Pretend Leo scored $40$. Then $\\frac{3}{4}$ of $40$ is $40 \\div 4 = 10$, and $3 \\times 10 = 30$; add a $5$-point bonus and Mia has $35$. Use those same two steps with the real numbers."
+    },
+    {
+      "level": "nudge",
+      "text": "Do the fraction first, then add the bonus — the bonus is NOT part of the $\\frac{3}{4}$."
+    },
+    {
+      "level": "guide",
+      "text": "$240 \\div 4 = 60$, so $\\frac{3}{4}$ of $240$ is $3 \\times 60$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 60 = 180$, and $180 + 35 = 215$ points."
+    }
+  ],
+  "explanation": [
+    "Step 1 — Mia's game points: $\\frac{3}{4} \\times 240$. One fourth of $240$ is $240 \\div 4 = 60$, so three fourths is $3 \\times 60 = 180$.",
+    "Step 2 — add the bonus, which she earns on top: $180 + 35 = 215$.",
+    "Mia finishes with $215$ points.",
+    "That is sensible: $215$ is less than Leo's $240$, which it should be, since her game score was only three fourths of his."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Take away the missing fourth",
+      "steps": [
+        "$\\frac{3}{4}$ of $240$ is all of $240$ minus one fourth of it.",
+        "$240 \\div 4 = 60$, so $240 - 60 = 180$.",
+        "$180 + 35 = 215$ points."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The usual wrong answer is $180$ — the right fraction work, but the $35$ bonus points never get added.",
+        "Another trap is adding first: $240 + 35 = 275$, then $\\frac{3}{4}$ of that, which wrongly shrinks the bonus too.",
+        "Escape both by underlining the two steps in the question before you compute: \"scored $\\frac{3}{4}$ as many\" happens first, \"and then earned $35$ bonus\" happens second."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "fractions",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

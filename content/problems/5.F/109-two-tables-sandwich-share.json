@@ -1,0 +1,64 @@
+{
+  "id": "5.F.109",
+  "domain": "5.F",
+  "unit": 11,
+  "orderInUnit": 9,
+  "standard": "5.NF.B.3",
+  "difficulty": 3,
+  "prompt": "At a field-trip lunch, Table A shares $3$ sandwiches equally among $4$ kids. Table B shares $5$ sandwiches equally among $6$ kids. How much **more** sandwich does each kid at Table B get than each kid at Table A?",
+  "answerType": "fraction",
+  "primaryAnswer": "1/12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Try an easier pair: $1$ sandwich among $2$ kids is $\\frac{1}{2}$ each, and $1$ sandwich among $4$ kids is $\\frac{1}{4}$ each. The difference is $\\frac{1}{2} - \\frac{1}{4} = \\frac{1}{4}$. Turn each sharing into a fraction, then subtract — same plan here.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try an easier pair: $1$ sandwich among $2$ kids is $\\frac{1}{2}$ each, and $1$ sandwich among $4$ kids is $\\frac{1}{4}$ each. The difference is $\\frac{1}{2} - \\frac{1}{4} = \\frac{1}{4}$. Turn each sharing into a fraction, then subtract — same plan here."
+    },
+    {
+      "level": "nudge",
+      "text": "Find each kid's share as a fraction first, then subtract the smaller share from the larger one."
+    },
+    {
+      "level": "guide",
+      "text": "Table A: $3 \\div 4 = \\frac{3}{4}$. Table B: $5 \\div 6 = \\frac{5}{6}$. Now find a common denominator for $4$ and $6$."
+    },
+    {
+      "level": "reveal",
+      "text": "Twelfths work: $\\frac{5}{6} = \\frac{10}{12}$ and $\\frac{3}{4} = \\frac{9}{12}$, so the difference is $\\frac{1}{12}$."
+    }
+  ],
+  "explanation": [
+    "Each sharing is a division written as a fraction: Table A gets $3 \\div 4 = \\frac{3}{4}$ per kid, and Table B gets $5 \\div 6 = \\frac{5}{6}$ per kid.",
+    "To compare and subtract, rewrite both in twelfths: $\\frac{3}{4} = \\frac{9}{12}$ and $\\frac{5}{6} = \\frac{10}{12}$.",
+    "Subtract: $\\frac{10}{12} - \\frac{9}{12} = \\frac{1}{12}$.",
+    "Each kid at Table B gets $\\frac{1}{12}$ of a sandwich more."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Decimal check",
+      "steps": [
+        "$\\frac{3}{4} = 0.75$ and $\\frac{5}{6} \\approx 0.833$.",
+        "The gap is about $0.083$, and $\\frac{1}{12} \\approx 0.083$ ✓"
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The most common wrong answer is $\\frac{2}{2} = 1$ or $\\frac{2}{12}$, from subtracting the sandwiches and the kids separately: $5 - 3 = 2$ and $6 - 4 = 2$.",
+        "You cannot subtract numerators and denominators like that — $\\frac{5}{6}$ and $\\frac{3}{4}$ are counting different-sized pieces.",
+        "Make the pieces the same size first ($\\frac{10}{12}$ and $\\frac{9}{12}$), then subtract only the numerators: $\\frac{1}{12}$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "fractions",
+    "division",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

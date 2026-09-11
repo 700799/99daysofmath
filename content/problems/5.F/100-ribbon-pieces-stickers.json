@@ -1,0 +1,66 @@
+{
+  "id": "5.F.100",
+  "domain": "5.F",
+  "unit": 10,
+  "orderInUnit": 10,
+  "standard": "5.NBT.B.7",
+  "difficulty": 3,
+  "prompt": "A roll of ribbon is $2.4$ meters long. It is cut into pieces that are each $0.3$ meter long, and every piece gets one sticker costing $\\$0.25$. How many dollars do the stickers cost in all?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [
+    "2.00",
+    "$2.00"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Try smaller numbers: a $1.0$ m ribbon cut into $0.5$ m pieces gives $1.0 \\div 0.5 = 2$ pieces, and at $\\$0.10$ a sticker that is $2 \\times 0.10 = \\$0.20$. Divide to count the pieces, then multiply by the price — same two steps.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try smaller numbers: a $1.0$ m ribbon cut into $0.5$ m pieces gives $1.0 \\div 0.5 = 2$ pieces, and at $\\$0.10$ a sticker that is $2 \\times 0.10 = \\$0.20$. Divide to count the pieces, then multiply by the price — same two steps."
+    },
+    {
+      "level": "nudge",
+      "text": "First find how many pieces there are, then pay for one sticker per piece."
+    },
+    {
+      "level": "guide",
+      "text": "Pieces $= 2.4 \\div 0.3$. Multiply both by $10$ to get $24 \\div 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$24 \\div 3 = 8$ pieces, and $8 \\times \\$0.25 = \\$2.00$."
+    }
+  ],
+  "explanation": [
+    "Step 1 — count the pieces: $2.4 \\div 0.3$. Multiply both numbers by $10$ to clear the decimal, giving $24 \\div 3 = 8$ pieces.",
+    "Step 2 — pay for the stickers: $8 \\times \\$0.25$.",
+    "Four quarters make a dollar, so $8$ quarters make $\\$2.00$.",
+    "The stickers cost $\\$2$ in all."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the pieces",
+      "steps": [
+        "$8$ pieces $\\times$ $0.3$ m each $= 2.4$ m, which uses the whole roll exactly ✓"
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The most common wrong answer is $0.8$ pieces, from doing $2.4 \\div 3$ and forgetting to shift the divisor, or from dividing $0.3$ into $2.4$ the wrong way round.",
+        "Sanity-check the size: pieces smaller than the whole roll must mean **more** than one piece, so the count has to be bigger than $1$.",
+        "Clear the decimal first — $24 \\div 3 = 8$ pieces — then $8 \\times \\$0.25 = \\$2$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "decimals",
+    "division",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

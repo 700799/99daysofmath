@@ -1,0 +1,65 @@
+{
+  "id": "5.F.069",
+  "domain": "5.F",
+  "unit": 7,
+  "orderInUnit": 9,
+  "standard": "5.NBT.B.5",
+  "difficulty": 3,
+  "prompt": "You are building a block wall in a game. Each layer takes $128$ blocks, and the wall is $24$ layers tall. You have already placed $500$ blocks. How many more blocks do you still need?",
+  "answerType": "numeric",
+  "primaryAnswer": "2572",
+  "alternativeAnswers": [
+    "2,572"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Suppose each layer took $10$ blocks and the wall were $3$ layers tall: that is $10 \\times 3 = 30$ blocks total. If you had already placed $12$, you would still need $30 - 12 = 18$. Multiply first, then subtract — same two steps here.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Suppose each layer took $10$ blocks and the wall were $3$ layers tall: that is $10 \\times 3 = 30$ blocks total. If you had already placed $12$, you would still need $30 - 12 = 18$. Multiply first, then subtract — same two steps here."
+    },
+    {
+      "level": "nudge",
+      "text": "Two steps: find the blocks the whole wall needs, then take away the ones already placed."
+    },
+    {
+      "level": "guide",
+      "text": "Total blocks $= 128 \\times 24$. Try $128 \\times 20$ plus $128 \\times 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2560 + 512 = 3072$ blocks total, and $3072 - 500 = 2572$ blocks still needed."
+    }
+  ],
+  "explanation": [
+    "Step 1 — the whole wall: $128 \\times 24$. Split it as $128 \\times 20 = 2{,}560$ and $128 \\times 4 = 512$.",
+    "Add the partial products: $2{,}560 + 512 = 3{,}072$ blocks for the finished wall.",
+    "Step 2 — subtract what is already up: $3{,}072 - 500 = 2{,}572$.",
+    "So you still need $2{,}572$ blocks."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate first",
+      "steps": [
+        "$128 \\times 24$ is roughly $130 \\times 25 = 3{,}250$.",
+        "$3{,}250 - 500 = 2{,}750$, so an answer near $2{,}572$ makes sense ✓"
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The classic slip is answering $3{,}072$ — the total for the wall — and forgetting the $500$ blocks already placed.",
+        "Another slip is subtracting first: $128 - 500$ does not even make sense here.",
+        "Reread the last sentence: it asks how many **more** you need, so the subtraction has to come after the multiplication: $3{,}072 - 500 = 2{,}572$."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "multi-step",
+    "word-problem",
+    "multiplication"
+  ],
+  "estimatedSeconds": 75
+}

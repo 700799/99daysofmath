@@ -1,0 +1,51 @@
+{
+  "id": "5.F.137",
+  "domain": "5.F",
+  "unit": 14,
+  "orderInUnit": 7,
+  "standard": "5.OA.B.3",
+  "difficulty": 2,
+  "prompt": "Rule 1: start at $0$, add $1$ each time ($0, 1, 2, 3, \\dots$). Rule 2: start at $0$, add $3$ each time ($0, 3, 6, 9, \\dots$). The numbers are paired up in order and plotted as $(x, y)$. What is the 6th ordered pair? Write it like $(x, y)$.",
+  "answerType": "short-text",
+  "primaryAnswer": "(5, 15)",
+  "alternativeAnswers": [
+    "(5,15)",
+    "5,15"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Write both lists out to six numbers, starting the count at $0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Write both lists out to six numbers, starting the count at $0$."
+    },
+    {
+      "level": "guide",
+      "text": "Rule 1: $0, 1, 2, 3, 4, 5$. Rule 2: $0, 3, 6, 9, 12, 15$."
+    },
+    {
+      "level": "reveal",
+      "text": "The 6th pair is $(5, 15)$."
+    }
+  ],
+  "explanation": [
+    "Rule 1 gives $0, 1, 2, 3, 4, 5$ — the 6th number is $5$.",
+    "Rule 2 gives $0, 3, 6, 9, 12, 15$ — the 6th number is $15$.",
+    "Pairing the 6th numbers together gives $(5, 15)$.",
+    "That fits the pattern: every $y$-value is $3$ times its $x$-value, and $3 \\times 5 = 15$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the relationship",
+      "steps": [
+        "Each $y$ is $3$ times its $x$ because Rule 2 adds $3$ for every $1$ Rule 1 adds.",
+        "The 6th $x$ is $5$, so $y = 3 \\times 5 = 15$, giving $(5, 15)$."
+      ]
+    }
+  ],
+  "tags": [
+    "patterns",
+    "ordered-pairs"
+  ],
+  "estimatedSeconds": 55
+}

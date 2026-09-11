@@ -73,6 +73,19 @@ export interface SatTestResult {
   answers: Record<string, string>;     // questionId -> what the student entered
 }
 
+/**
+ * One completed 5th-grade MAP Growth practice test. `rit` is the directional
+ * estimate from src/data/map5.ts, not an official score; `byStrand` is what
+ * makes the result actionable, since NWEA reports by instructional area.
+ */
+export interface Map5TestResult {
+  correct: number;
+  total: number;
+  rit: number;
+  completedAt: string;                 // ISO timestamp
+  byStrand: Record<string, { correct: number; total: number }>;
+}
+
 // Units the student can pick at the arcade entry. Drives every game's questions.
 export type ArcadeUnit = '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP' | 'g5' | 'a1' | 'pc' | 'mixed';
 export const ARCADE_UNITS: ArcadeUnit[] = ['6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'g5', 'a1', 'pc', 'mixed'];
@@ -168,9 +181,12 @@ interface ProgressState {
   // ---- v25 additions (SAT Math section) ----
   satTests: Record<number, SatTestResult>; // keyed by mock-test number (1..5)
   satBestScaled: number;                   // best 200-800 math score achieved
+  map5Tests: Map5TestResult[];             // 5th-grade MAP practice history, oldest first
+  map5BestRit: number;                     // best RIT-style estimate achieved
   satTipsRead: string[];                   // strategy-tip ids marked as read
   // ---- actions ----
   recordSatTest: (n: number, result: SatTestResult) => void;
+  recordMap5Test: (result: Map5TestResult) => void;
   toggleSatTipRead: (id: string) => void;
   clearSatTest: (n: number) => void;
   addAchievement: (n: number) => void;
@@ -456,6 +472,8 @@ const v15Defaults = {
 const v25Defaults = {
   satTests: {} as Record<number, SatTestResult>,
   satBestScaled: 0,
+  map5Tests: [] as Map5TestResult[],
+  map5BestRit: 0,
   satTipsRead: [] as string[],
 };
 
@@ -720,6 +738,12 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       stateAny[key] = rec;
     }
   }
+  if (fromVersion < 27) {
+    // 5th-grade MAP Growth prep arrives: an empty practice-test history.
+    const stateAny = state as Record<string, unknown>;
+    if (stateAny.map5Tests === undefined) stateAny.map5Tests = [];
+    if (stateAny.map5BestRit === undefined) stateAny.map5BestRit = 0;
+  }
   if (fromVersion < 26) {
     // Home is reorganised into seven courses, and Geometry and Trigonometry
     // arrive as courses of their own. Both are new domains, so seed their
@@ -861,6 +885,12 @@ export const useProgress = create<ProgressState>()(
           satTests: { ...(st.satTests ?? {}), [n]: result },
           // Only ever climbs — a bad retake should not erase a good score.
           satBestScaled: Math.max(st.satBestScaled ?? 0, result.scaled),
+        })),
+      recordMap5Test: (result) =>
+        set((st) => ({
+          // Keep the last 20 so the trend has history without growing forever.
+          map5Tests: [...(st.map5Tests ?? []), result].slice(-20),
+          map5BestRit: Math.max(st.map5BestRit ?? 0, result.rit),
         })),
       toggleSatTipRead: (id) =>
         set((st) => {
@@ -1392,7 +1422,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 26,
+      version: 27,
       migrate: migrateProgress,
     },
   ),

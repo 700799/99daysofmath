@@ -1,0 +1,47 @@
+{
+  "id": "5.F.073",
+  "domain": "5.F",
+  "unit": 8,
+  "orderInUnit": 3,
+  "standard": "5.NBT.A.2",
+  "difficulty": 1,
+  "prompt": "What is $4{,}500 \\div 1{,}000$?",
+  "answerType": "numeric",
+  "primaryAnswer": "4.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Dividing makes the number smaller, so the decimal point slides to the **left**.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Dividing makes the number smaller, so the decimal point slides to the **left**."
+    },
+    {
+      "level": "guide",
+      "text": "$1{,}000$ has three zeros, so move the point three places left from $4500.$"
+    },
+    {
+      "level": "reveal",
+      "text": "$4500. \\to 450. \\to 45. \\to 4.5$, so the answer is $4.5$."
+    }
+  ],
+  "explanation": [
+    "$1{,}000 = 10^3$, so dividing by it shifts the decimal point three places to the left.",
+    "Start at $4500.$ — one shift gives $450$, two gives $45$, three gives $4.5$.",
+    "So $4{,}500 \\div 1{,}000 = 4.5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check by multiplying back",
+      "steps": [
+        "$4.5 \\times 1{,}000$ shifts the point three places right.",
+        "$4.5 \\to 45 \\to 450 \\to 4{,}500$ ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "powers-of-ten",
+    "decimals"
+  ],
+  "estimatedSeconds": 35
+}

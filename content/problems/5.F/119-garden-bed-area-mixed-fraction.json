@@ -1,0 +1,67 @@
+{
+  "id": "5.F.119",
+  "domain": "5.F",
+  "unit": 12,
+  "orderInUnit": 9,
+  "standard": "5.NF.B.6",
+  "difficulty": 3,
+  "prompt": "A rectangular garden bed is $4\\frac{1}{2}$ feet long and $\\frac{2}{3}$ foot wide. What is its area, in square feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [
+    "3 sq ft",
+    "18/6"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Try a bed $3$ ft by $\\frac{2}{3}$ ft first. Area $= 3 \\times \\frac{2}{3} = \\frac{6}{3} = 2$ square feet. Same moves work with a mixed number — you just have to change it to an improper fraction first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Try a bed $3$ ft by $\\frac{2}{3}$ ft first. Area $= 3 \\times \\frac{2}{3} = \\frac{6}{3} = 2$ square feet. Same moves work with a mixed number — you just have to change it to an improper fraction first."
+    },
+    {
+      "level": "nudge",
+      "text": "Area of a rectangle is length $\\times$ width, even when both are fractions."
+    },
+    {
+      "level": "guide",
+      "text": "Rewrite $4\\frac{1}{2}$ as $\\frac{9}{2}$, then multiply $\\frac{9}{2} \\times \\frac{2}{3}$ straight across."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{9 \\times 2}{2 \\times 3} = \\frac{18}{6} = 3$ square feet."
+    }
+  ],
+  "explanation": [
+    "Area $=$ length $\\times$ width, so this is $4\\frac{1}{2} \\times \\frac{2}{3}$.",
+    "Change the mixed number to an improper fraction: $4\\frac{1}{2} = \\frac{8}{2} + \\frac{1}{2} = \\frac{9}{2}$.",
+    "Multiply straight across: $\\frac{9}{2} \\times \\frac{2}{3} = \\frac{18}{6}$.",
+    "$18 \\div 6 = 3$, so the garden bed covers $3$ square feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Break the length apart",
+      "steps": [
+        "$4 \\times \\frac{2}{3} = \\frac{8}{3} = 2\\frac{2}{3}$.",
+        "$\\frac{1}{2} \\times \\frac{2}{3} = \\frac{2}{6} = \\frac{1}{3}$.",
+        "$2\\frac{2}{3} + \\frac{1}{3} = 3$ square feet."
+      ]
+    },
+    {
+      "title": "⚠️ The trap here",
+      "steps": [
+        "The most common wrong answer is $2\\frac{2}{3}$ — that comes from multiplying only the whole number, $4 \\times \\frac{2}{3}$, and forgetting the extra $\\frac{1}{2}$ foot of length.",
+        "Escape it by turning the mixed number into ONE improper fraction, $\\frac{9}{2}$, before you multiply — then there is no leftover piece to forget.",
+        "Quick sanity check: $\\frac{2}{3}$ of about $4\\frac{1}{2}$ should be about $3$, and $3$ is what you get."
+      ]
+    }
+  ],
+  "tags": [
+    "MAP-practice",
+    "fractions",
+    "area",
+    "multi-step"
+  ],
+  "estimatedSeconds": 75
+}

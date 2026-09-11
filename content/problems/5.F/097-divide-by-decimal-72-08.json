@@ -1,0 +1,47 @@
+{
+  "id": "5.F.097",
+  "domain": "5.F",
+  "unit": 10,
+  "orderInUnit": 7,
+  "standard": "5.NBT.B.7",
+  "difficulty": 2,
+  "prompt": "Divide: $7.2 \\div 0.8$",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Dividing by a decimal is easier if you first make the divisor a whole number.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Dividing by a decimal is easier if you first make the divisor a whole number."
+    },
+    {
+      "level": "guide",
+      "text": "Multiply both numbers by $10$: $7.2 \\div 0.8$ becomes $72 \\div 8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$72 \\div 8 = 9$."
+    }
+  ],
+  "explanation": [
+    "Scaling both numbers by the same amount does not change a quotient, so multiply each by $10$.",
+    "$7.2 \\times 10 = 72$ and $0.8 \\times 10 = 8$, turning the problem into $72 \\div 8$.",
+    "$72 \\div 8 = 9$, so $7.2 \\div 0.8 = 9$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Ask \"how many fit?\"",
+      "steps": [
+        "The question is really: how many $0.8$s fit inside $7.2$?",
+        "$0.8 \\times 9 = 7.2$ exactly, so nine of them fit ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "decimals",
+    "division"
+  ],
+  "estimatedSeconds": 55
+}

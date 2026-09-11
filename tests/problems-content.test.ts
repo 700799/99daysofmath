@@ -4,6 +4,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { isEquivalent } from '../src/data/normalize';
 import { type Problem } from '../src/types/problem';
+import { MAP5_STRANDS } from '../src/data/map5';
+import { UNIT_COUNT_BY_DOMAIN } from '../src/utils/encouragement';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROBLEMS_PATH = path.resolve(__dirname, '..', 'public', 'data', 'problems.json');
@@ -11,7 +13,7 @@ const PROBLEMS_PATH = path.resolve(__dirname, '..', 'public', 'data', 'problems.
 const PROBLEMS: Problem[] = JSON.parse(fs.readFileSync(PROBLEMS_PATH, 'utf-8'));
 
 const EXPECTED_BY_DOMAIN: Record<string, { count: number; units: number }> = {
-  '5.F': { count: 60, units: 6 },
+  '5.F': { count: 160, units: 16 },
   '6.RP': { count: 100, units: 10 },
   '6.NS': { count: 100, units: 10 },
   '6.EE': { count: 100, units: 10 },
@@ -25,8 +27,8 @@ const EXPECTED_BY_DOMAIN: Record<string, { count: number; units: number }> = {
 };
 
 describe('problems bank — structure', () => {
-  it('contains exactly 1300 problems', () => {
-    expect(PROBLEMS).toHaveLength(1300);
+  it('contains exactly 1400 problems', () => {
+    expect(PROBLEMS).toHaveLength(1400);
   });
 
   it('every id is globally unique', () => {
@@ -66,11 +68,21 @@ describe('problems bank — structure', () => {
 describe('problems bank — 5.F Foundations quality bar', () => {
   const foundations = PROBLEMS.filter((p) => p.domain === '5.F');
 
-  it('covers the six Gr-5 MAP gap areas with 60 problems', () => {
-    expect(foundations).toHaveLength(60);
+  it('covers every Gr-5 MAP cluster with 160 problems', () => {
+    expect(foundations).toHaveLength(160);
     const clusters = new Set(foundations.map((p) => p.standard.split('.').slice(0, 3).join('.')));
-    for (const c of ['5.NBT.A', '5.NBT.B', '5.NF.A', '5.NF.B', '5.MD.A', '5.MD.C', '5.G.A', '5.OA.B', '5.MD.B']) {
+    for (const c of ['5.NBT.A', '5.NBT.B', '5.NF.A', '5.NF.B', '5.MD.A', '5.MD.B', '5.MD.C',
+      '5.G.A', '5.G.B', '5.OA.A', '5.OA.B']) {
       expect(clusters.has(c), c).toBe(true);
+    }
+  });
+
+  it('every MAP instructional area has real depth behind it', () => {
+    // The score report breaks down by strand, so a strand with three problems
+    // in it would give a breakdown nobody can act on.
+    for (const s of MAP5_STRANDS) {
+      const inStrand = foundations.filter((p) => s.units.includes(p.unit));
+      expect(inStrand.length, `${s.name} has ${inStrand.length} problems`).toBeGreaterThanOrEqual(20);
     }
   });
 
@@ -153,8 +165,13 @@ describe('problems bank — units 7-10 quality bar', () => {
   const COURSE_LENGTH: string[] = ['A1', 'GEO', 'TRIG', 'PC', 'SAT'];
   const advanced = PROBLEMS.filter((p) => p.unit >= 7 && !COURSE_LENGTH.includes(p.domain));
 
-  it('there are 200 problems across units 7-10', () => {
-    expect(advanced).toHaveLength(200);
+  it('covers every unit past 6 in the grade-level domains', () => {
+    // Derived, not hardcoded: 5.F grew from 6 units to 16 for MAP prep, and a
+    // literal here would simply have gone stale.
+    const expected = Object.entries(UNIT_COUNT_BY_DOMAIN)
+      .filter(([d]) => !COURSE_LENGTH.includes(d))
+      .reduce((sum, [, units]) => sum + Math.max(0, units - 6) * 10, 0);
+    expect(advanced).toHaveLength(expected);
   });
 
   it('every unit-7-10 problem has 3 or 4 non-descending hint tiers', () => {
