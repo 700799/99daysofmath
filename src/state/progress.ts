@@ -149,6 +149,10 @@ interface ProgressState {
   xpByDate: Record<string, number>;  // XP earned per ISO date (heatmap intensity)
   lastFreezeDate: string | null;     // last day a streak freeze was used
   onboardingComplete: boolean;
+  /** Asked once before a student starts, so the shelf can point them somewhere. */
+  age: number | null;
+  /** School year, 4 meaning "4th grade or below" and 12 the last. */
+  gradeLevel: number | null;
   // ---- v6 additions ----
   problemStats: Record<string, ProblemStat>; // keyed by problem id
   ritHistory: RitPoint[];                     // appended per mock test
@@ -265,6 +269,7 @@ interface ProgressState {
   completeLesson: (key: string) => string[];
   setDailyGoal: (n: number) => void;
   markOnboardingDone: () => void;
+  setLearnerProfile: (age: number | null, gradeLevel: number | null) => void;
   incrementStreak: () => string[];
   resetStreak: () => void;
   touchDay: () => string[];
@@ -397,6 +402,8 @@ const v5Defaults = {
   xpByDate: {} as Record<string, number>,
   lastFreezeDate: null as string | null,
   onboardingComplete: false,
+  age: null as number | null,
+  gradeLevel: null as number | null,
 };
 
 const v6Defaults = {
@@ -737,6 +744,14 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       for (const u of ARCADE_UNITS) if (rec[u] === undefined) rec[u] = base;
       stateAny[key] = rec;
     }
+  }
+  if (fromVersion < 28) {
+    // Age and grade are asked before a student starts. Existing installs have
+    // neither, and the gate keys off that rather than off onboardingComplete,
+    // so they are asked once on their next visit instead of never.
+    const stateAny = state as Record<string, unknown>;
+    if (stateAny.age === undefined) stateAny.age = null;
+    if (stateAny.gradeLevel === undefined) stateAny.gradeLevel = null;
   }
   if (fromVersion < 27) {
     // 5th-grade MAP Growth prep arrives: an empty practice-test history.
@@ -1228,6 +1243,7 @@ export const useProgress = create<ProgressState>()(
         }),
       setDailyGoal: (n) => set({ dailyGoal: n }),
       markOnboardingDone: () => set({ onboardingComplete: true }),
+      setLearnerProfile: (age, gradeLevel) => set({ age, gradeLevel }),
       incrementStreak: () => {
         const before = get();
         const next = before.streak + 1;
@@ -1422,7 +1438,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 27,
+      version: 28,
       migrate: migrateProgress,
     },
   ),

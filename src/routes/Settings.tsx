@@ -5,6 +5,7 @@ import { TOTAL_STICKERS } from '../utils/encouragement';
 import { AccountCard } from '../components/AccountCard';
 import { ARCADE_GAMES } from './arcade/shared';
 import { useTheme } from '../hooks/useTheme';
+import { AGE_RANGE, GRADE_LEVELS, COURSES, courseForGrade, recommendationReason } from '../data/courses';
 
 const GOAL_OPTIONS = [10, 30, 50, 100];
 
@@ -21,6 +22,9 @@ export function Settings() {
   const xp = useProgress((s) => s.xp);
   const stickers = useProgress((s) => s.stickers);
   const dailyGoal = useProgress((s) => s.dailyGoal);
+  const age = useProgress((s) => s.age);
+  const gradeLevel = useProgress((s) => s.gradeLevel);
+  const setLearnerProfile = useProgress((s) => s.setLearnerProfile);
   const setDailyGoal = useProgress((s) => s.setDailyGoal);
   const mockTestsCompleted = useProgress((s) => s.mockTestsCompleted);
   const bestMockAccuracy = useProgress((s) => s.bestMockAccuracy);
@@ -57,6 +61,63 @@ export function Settings() {
         >
           📊 View full progress report →
         </Link>
+      </div>
+
+      <div className="bg-surface border-2 border-line rounded-2xl p-5">
+        <div className="font-display font-extrabold text-ink">Age &amp; grade</div>
+        <div className="mt-1 text-sm text-ink-muted">
+          Decides which course we suggest on the home screen. Change it whenever you move up a year.
+        </div>
+        <div className="mt-3">
+          <div className="font-display text-[11px] font-extrabold uppercase tracking-wider text-ink-muted">
+            Age
+          </div>
+          <div className="mt-1.5 grid grid-cols-6 gap-1.5">
+            {Array.from({ length: AGE_RANGE.max - AGE_RANGE.min + 1 }, (_, i) => AGE_RANGE.min + i).map((a) => (
+              <button
+                key={a}
+                type="button"
+                onClick={() => setLearnerProfile(a, gradeLevel)}
+                aria-pressed={age === a}
+                className={`min-h-11 rounded-xl border-2 px-2 font-display text-sm font-bold transition-colors ${
+                  age === a
+                    ? 'border-accent bg-accent text-on-accent'
+                    : 'border-line bg-surface-2 text-ink-muted hover:border-accent/50 hover:text-ink'
+                }`}
+              >
+                {a === AGE_RANGE.max ? `${a}+` : a}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="mt-3">
+          <div className="font-display text-[11px] font-extrabold uppercase tracking-wider text-ink-muted">
+            Grade
+          </div>
+          <div className="mt-1.5 grid grid-cols-3 gap-1.5">
+            {GRADE_LEVELS.map((g) => (
+              <button
+                key={g.value}
+                type="button"
+                onClick={() => setLearnerProfile(age, g.value)}
+                aria-pressed={gradeLevel === g.value}
+                className={`min-h-11 rounded-xl border-2 px-2 font-display text-sm font-bold transition-colors ${
+                  gradeLevel === g.value
+                    ? 'border-accent bg-accent text-on-accent'
+                    : 'border-line bg-surface-2 text-ink-muted hover:border-accent/50 hover:text-ink'
+                }`}
+              >
+                {g.label}
+              </button>
+            ))}
+          </div>
+        </div>
+        {gradeLevel !== null && (
+          <div className="mt-3 rounded-xl border border-line bg-surface-2 p-3 text-[12.5px] leading-relaxed text-ink-muted">
+            Suggesting <b className="text-ink">{COURSES.find((c) => c.id === courseForGrade(gradeLevel))?.name}</b> —{' '}
+            {recommendationReason(gradeLevel)}
+          </div>
+        )}
       </div>
 
       <div className="bg-surface border-2 border-line rounded-2xl p-5">
