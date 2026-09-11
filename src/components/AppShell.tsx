@@ -10,6 +10,7 @@ import { submitHaptic, tapHaptic, successHaptic } from '../utils/haptics';
 import { playClick, playAdvance } from '../utils/sound';
 import { useThemeSync } from '../hooks/useTheme';
 import { parentOf } from '../utils/navHierarchy';
+import { Breadcrumbs } from './Breadcrumbs';
 
 interface Props {
   children: React.ReactNode;
@@ -171,6 +172,9 @@ export function AppShell({ children }: Props) {
             )}
           </div>
         </div>
+        {/* The full trail under the bar: the back link steps up one level,
+            this shows every level and links each one. */}
+        <Breadcrumbs />
       </header>
       <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-6">{children}</main>
       <XpFlash />

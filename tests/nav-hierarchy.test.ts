@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
-import { parentOf } from '../src/utils/navHierarchy';
+import { parentOf, trailOf, titleOf } from '../src/utils/navHierarchy';
 import { DOMAINS, TRAIL_DOMAINS } from '../src/types/problem';
 import { COURSES } from '../src/data/courses';
 
@@ -166,6 +166,88 @@ describe('parentOf — robustness', () => {
       const parent = parentOf(path);
       expect(parent, path).not.toBeNull();
       expect(isServedRoute(parent!.to), `${path} -> ${parent!.to} is not a declared route`).toBe(true);
+    }
+  });
+});
+
+// ── The breadcrumb ─────────────────────────────────────────────────────────
+// "It's hard to go back to the menus": the back link only steps up one
+// level, so a student in a drill was three taps from Home and could not see
+// the way. The trail shows every level and links each one.
+
+describe('trailOf — the whole way up', () => {
+  it('is empty on Home', () => {
+    expect(trailOf('/')).toEqual([]);
+  });
+
+  it('a drill in a multi-strand course: Home › course › strand', () => {
+    expect(trailOf('/unit/6.RP/3').map((c) => c.label)).toEqual(['Home', '6th Grade', 'Ratios']);
+    expect(trailOf('/unit/6.RP/3').map((c) => c.to)).toEqual(['/', '/course/grade6', '/trail/6.RP']);
+  });
+
+  it('a drill in a one-strand course: Home › trail', () => {
+    expect(trailOf('/unit/TRIG/3').map((c) => c.to)).toEqual(['/', '/trail/TRIG']);
+  });
+
+  it('a final quiz: Home › Finals › course', () => {
+    expect(trailOf('/finals/trig/2').map((c) => c.to)).toEqual(['/', '/finals', '/finals/trig']);
+  });
+
+  it('a SAT drill: Home › SAT Math › its unit playbook', () => {
+    expect(trailOf('/unit/SAT/12').map((c) => c.to)).toEqual(['/', '/sat', '/sat/unit/12']);
+  });
+
+  it('a recovery set: Home › SAT Math › the analysis that built it', () => {
+    expect(trailOf('/sat/recovery/4').map((c) => c.to)).toEqual(['/', '/sat', '/sat/analysis/4']);
+  });
+
+  it('always starts at Home and ends at the parent', () => {
+    for (const path of ['/arcade/snake', '/review/6.RP', '/map5/test', '/course/geometry', '/finals/grade6/5']) {
+      const trail = trailOf(path);
+      expect(trail[0], path).toEqual({ to: '/', label: 'Home' });
+      expect(trail[trail.length - 1], path).toEqual(parentOf(path));
+    }
+  });
+
+  it('every crumb links to a route the app serves', () => {
+    const samples = [
+      '/unit/6.RP/3', '/unit/TRIG/3/results', '/unit/SAT/12', '/sat/recovery/4', '/finals/trig/2',
+      '/arcade/snake', '/review/6.RP', '/map5/test', '/trail/6.G',
+      ...COURSES.map((c) => `/finals/${c.id}/1`),
+    ];
+    for (const path of samples) {
+      for (const c of trailOf(path)) {
+        expect(isServedRoute(c.to), `${path}: crumb ${c.to} is not a declared route`).toBe(true);
+      }
+    }
+  });
+});
+
+describe('titleOf — the current page, as the last crumb', () => {
+  it('names the page a student is on', () => {
+    expect(titleOf('/unit/TRIG/3')).toBe('Unit 3');
+    expect(titleOf('/unit/6.RP/3/results')).toBe('Results');
+    expect(titleOf('/trail/TRIG')).toBe('Trigonometry');
+    expect(titleOf('/trail/6.RP')).toBe('Ratios');
+    expect(titleOf('/course/grade6')).toBe('6th Grade');
+    expect(titleOf('/finals/trig/2')).toBe('Quiz 2');
+    expect(titleOf('/finals/trig')).toBe('Trigonometry');
+    expect(titleOf('/sat/unit/7')).toBe('Unit 7');
+    // the drill under that playbook must not read "Unit 7 › Unit 7"
+    expect(titleOf('/unit/SAT/7')).toBe('Drill');
+    expect(titleOf('/sat/recovery/4')).toBe('Recovery');
+    expect(titleOf('/arcade/connect4')).toBe('Connect 4');
+    expect(titleOf('/map5/test')).toBe('Practice test');
+  });
+
+  it('never leaves a page nameless', () => {
+    const src = readFileSync(new URL('../src/App.tsx', import.meta.url), 'utf8');
+    const routes = [...src.matchAll(/<Route\s+path="([^"]+)"/g)].map((m) => m[1]).filter((r) => r !== '*');
+    for (const r of routes) {
+      const concrete = r.replace(':domain', '6.RP').replace(':unit', '3').replace(':n', '2').replace(':courseId', 'trig').replace(':id', 'grade6');
+      const title = titleOf(concrete);
+      expect(title.length, `${r} -> "${title}"`).toBeGreaterThan(1);
+      expect(title, `${r} -> "${title}"`).not.toMatch(/^[a-z]/);
     }
   });
 });
