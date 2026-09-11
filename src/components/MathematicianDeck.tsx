@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useProgress } from '../state/progress';
 import type { MathematicianDeck as Deck } from '../data/mathematicianDecks';
+import { MathFigureView } from './MathFigure';
 
 // Full-screen slide player for a mathematician's story — the same look and
 // controls as the Math Stories player (StorySlide): big readable narration on
-// the left, a LARGE emoji-scene illustration on the right, Continue ▶ / Back
-// pills, keyboard arrows, and swipe. Advances ONLY on a button press; each
+// the left, the slide's mathematical figure drawn large on the right, Continue
+// ▶ / Back pills, keyboard arrows, and swipe. Advances ONLY on a button press; each
 // slide has a short minimum-read gate (scaled by the admin's
 // lessonScreenSeconds; 0 disables) so kids actually read before continuing.
 export function MathematicianDeckPlayer({ deck, onClose }: { deck: Deck; onClose: () => void }) {
@@ -52,7 +53,6 @@ export function MathematicianDeckPlayer({ deck, onClose }: { deck: Deck; onClose
   };
 
   const slide = idx === 0 ? null : deck.slides[idx - 1];
-  const visual = slide?.visual ?? deck.emoji;
 
   return (
     <div
@@ -83,7 +83,7 @@ export function MathematicianDeckPlayer({ deck, onClose }: { deck: Deck; onClose
           style={{ width: `${((idx + 1) / total) * 100}%` }} />
       </div>
 
-      {/* stage: narration left, big emoji-scene illustration right (stacks on phones) */}
+      {/* stage: narration left, the slide's figure right (stacks on phones) */}
       <div onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}
         className="relative flex min-h-0 w-full flex-1 select-none flex-col-reverse md:flex-row">
         <div className="relative min-h-0 flex-1 overflow-y-auto px-6 py-6 sm:px-10 md:py-10">
@@ -116,16 +116,20 @@ export function MathematicianDeckPlayer({ deck, onClose }: { deck: Deck; onClose
           </AnimatePresence>
         </div>
 
-        {/* illustration pane — the emoji scene, drawn HUGE */}
+        {/* illustration pane — the mathematics itself, drawn large */}
         <div className="relative flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-950 to-violet-900 md:border-l md:border-white/10">
           <AnimatePresence mode="wait">
             <motion.div key={idx}
-              initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.1 }}
-              transition={{ type: 'spring', stiffness: 200, damping: 18 }}
-              className="select-none text-center leading-none tracking-tight"
-              style={{ fontSize: 'min(22vw, 11rem)' }}
-              aria-hidden="true">
-              {visual}
+              initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.03 }}
+              transition={{ duration: 0.25 }}
+              className="flex h-full w-full select-none items-center justify-center">
+              {slide ? (
+                <MathFigureView figure={slide.figure} />
+              ) : (
+                <span className="leading-none" style={{ fontSize: 'min(22vw, 11rem)' }} aria-hidden="true">
+                  {deck.emoji}
+                </span>
+              )}
             </motion.div>
           </AnimatePresence>
         </div>
