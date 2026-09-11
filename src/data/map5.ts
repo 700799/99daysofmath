@@ -1,9 +1,17 @@
+import type { Domain } from '../types/problem';
+
 // ── 5th-grade MAP Growth prep ──────────────────────────────────────────────
 // NWEA's MAP Growth Math 2-5 test reports four instructional areas ("goal
 // strands"), which at grade 5 line up with the Common Core domains. The 5.F
 // course already teaches all four; this maps its units onto the strands so a
 // student can practise, and be scored, in the vocabulary their score report
 // actually uses.
+//
+// The test is adaptive and its bank runs above the tested grade, so the prep
+// spans BOTH the 5th-grade course and the 6th-grade Common Core strands that
+// continue it — a 5th grader who is doing well meets 6th-grade material on the
+// real test, and prep that stops at grade level would cap the ceiling exactly
+// where the interesting part starts.
 //
 // A caution that belongs in the code rather than only in the UI: the RIT
 // figures below are a DIRECTIONAL estimate. NWEA's published norm tables are
@@ -13,6 +21,21 @@
 
 export type Map5Strand = 'OA' | 'NO' | 'MD' | 'GEO';
 
+/**
+ * Where a strand draws its questions from. MAP Growth is adaptive and its item
+ * bank runs well above the tested grade, so a 5th grader who is doing well is
+ * pulled into 6th-grade material — that reach is what a high RIT actually
+ * measures. Each strand therefore names its grade-level units AND the
+ * 6th-grade Common Core domain that continues it.
+ */
+export interface Map5Source {
+  domain: Domain;
+  /** Units to draw from; empty means every unit in the domain. */
+  units: number[];
+  /** True for content above the tested grade, served only once earned. */
+  above?: boolean;
+}
+
 export interface Map5StrandInfo {
   key: Map5Strand;
   /** The name NWEA prints on the score report. */
@@ -21,8 +44,8 @@ export interface Map5StrandInfo {
   emoji: string;
   color: string;
   blurb: string;
-  /** 5.F units that teach this strand. */
-  units: number[];
+  /** Grade-level and above-grade sources, in that order. */
+  sources: Map5Source[];
   /** Roughly how much of the grade-5 test this strand accounts for. */
   weight: number;
 }
@@ -35,8 +58,12 @@ export const MAP5_STRANDS: Map5StrandInfo[] = [
     emoji: '🔢',
     color: '#4E7BA6',
     blurb:
-      'Place value, multi-digit multiplication and division, powers of ten, decimals, and fractions — the biggest strand on the grade-5 test by some distance.',
-    units: [1, 2, 3, 4, 7, 8, 9, 10, 11, 12],
+      'Place value, multi-digit multiplication and division, powers of ten, decimals, and fractions — the biggest strand by some distance. Stretches into 6th-grade ratios and the number system.',
+    sources: [
+      { domain: '5.F', units: [1, 2, 3, 4, 7, 8, 9, 10, 11, 12] },
+      { domain: '6.NS', units: [], above: true },
+      { domain: '6.RP', units: [], above: true },
+    ],
     weight: 0.45,
   },
   {
@@ -46,8 +73,11 @@ export const MAP5_STRANDS: Map5StrandInfo[] = [
     emoji: '🧮',
     color: '#7D6BA8',
     blurb:
-      'Writing and evaluating numerical expressions, order of operations with brackets, and generating and comparing number patterns.',
-    units: [13, 14],
+      'Writing and evaluating numerical expressions, order of operations with brackets, and generating and comparing number patterns. Stretches into 6th-grade expressions, equations and inequalities.',
+    sources: [
+      { domain: '5.F', units: [13, 14] },
+      { domain: '6.EE', units: [], above: true },
+    ],
     weight: 0.15,
   },
   {
@@ -57,8 +87,11 @@ export const MAP5_STRANDS: Map5StrandInfo[] = [
     emoji: '📏',
     color: '#5F8C5A',
     blurb:
-      'Volume of rectangular prisms and composite solids, converting units inside one system, and reading line plots with fractional marks.',
-    units: [5, 15],
+      'Volume of rectangular prisms and composite solids, converting units inside one system, and reading line plots with fractional marks. Stretches into 6th-grade statistics and data displays.',
+    sources: [
+      { domain: '5.F', units: [5, 15] },
+      { domain: '6.SP', units: [], above: true },
+    ],
     weight: 0.22,
   },
   {
@@ -68,18 +101,57 @@ export const MAP5_STRANDS: Map5StrandInfo[] = [
     emoji: '📐',
     color: '#B07C4F',
     blurb:
-      'Plotting and reading points in the first quadrant, and classifying triangles and quadrilaterals by their properties.',
-    units: [6, 16],
+      'Plotting and reading points in the first quadrant, and classifying triangles and quadrilaterals by their properties. Stretches into 6th-grade area, surface area and volume.',
+    sources: [
+      { domain: '5.F', units: [6, 16] },
+      { domain: '6.G', units: [], above: true },
+    ],
     weight: 0.18,
   },
 ];
 
 export const MAP5_UNIT_COUNT = 16;
 
-/** Which strand a 5.F unit belongs to. */
-export function strandOfUnit(unit: number): Map5StrandInfo | null {
-  return MAP5_STRANDS.find((s) => s.units.includes(unit)) ?? null;
+function matches(src: Map5Source, domain: Domain, unit: number): boolean {
+  if (src.domain !== domain) return false;
+  return src.units.length === 0 || src.units.includes(unit);
 }
+
+/** Which strand a problem belongs to, across both grades. */
+export function strandOf(domain: Domain, unit: number): Map5StrandInfo | null {
+  return MAP5_STRANDS.find((s) => s.sources.some((src) => matches(src, domain, unit))) ?? null;
+}
+
+/** Which strand a grade-level (5.F) unit belongs to. */
+export function strandOfUnit(unit: number): Map5StrandInfo | null {
+  return strandOf('5.F', unit);
+}
+
+/** True for content above the tested grade — served only once it is earned. */
+export function isAboveGrade(domain: Domain, unit: number): boolean {
+  for (const s of MAP5_STRANDS) {
+    for (const src of s.sources) {
+      if (matches(src, domain, unit)) return !!src.above;
+    }
+  }
+  return false;
+}
+
+/** Every domain the prep draws on, grade level first. */
+export function map5Domains(): Domain[] {
+  const out: Domain[] = [];
+  for (const s of MAP5_STRANDS) {
+    for (const src of s.sources) if (!out.includes(src.domain)) out.push(src.domain);
+  }
+  return out;
+}
+
+/**
+ * The running difficulty target at which above-grade questions unlock. Below
+ * it the test stays on grade-level material, the way the real one does until a
+ * student earns the harder items.
+ */
+export const MAP5_ABOVE_GRADE_TARGET = 2.4;
 
 export function getStrand(key: Map5Strand): Map5StrandInfo {
   return MAP5_STRANDS.find((s) => s.key === key)!;
@@ -91,18 +163,32 @@ export function getStrand(key: Map5Strand): Map5StrandInfo {
 // part meant to be read; see the caution at the top of this file.
 
 export const MAP5_RIT_MIN = 180;
-export const MAP5_RIT_MAX = 235;
+// The ceiling allows for a 5th grader working accurately in 6th-grade
+// material, which is what the top of the grade-5 range actually looks like.
+export const MAP5_RIT_MAX = 250;
 /** Roughly the middle of the grade-5 year, used as the estimate's centre. */
 export const MAP5_RIT_TYPICAL = 210;
 
 /**
- * A directional RIT-style estimate from accuracy and how hard the served set
- * was. Monotonic in both, clamped to a grade-5 band. NOT an official score.
+ * A directional RIT-style estimate. Rises with accuracy, with how hard the
+ * served set was, and with how much ABOVE-GRADE material the student answered
+ * correctly — the last of these is the point: on an adaptive test, reaching
+ * 6th-grade questions and getting them right is what separates the top of the
+ * grade-5 range from the middle. Clamped to a grade-5 band, and NOT an
+ * official score.
+ *
+ * `aboveGradeCorrectShare` is the fraction of the whole test that was both
+ * above grade level and answered correctly, so it can only ever help.
  */
-export function estimateMap5Rit(accuracy: number, avgDifficulty: number): number {
+export function estimateMap5Rit(
+  accuracy: number,
+  avgDifficulty: number,
+  aboveGradeCorrectShare = 0,
+): number {
   const a = Math.max(0, Math.min(1, accuracy));
+  const above = Math.max(0, Math.min(1, aboveGradeCorrectShare));
   const diffAdj = (avgDifficulty - 2) * 5;
-  const rit = 190 + a * 32 + diffAdj;
+  const rit = 190 + a * 30 + diffAdj + above * 16;
   return Math.round(Math.max(MAP5_RIT_MIN, Math.min(MAP5_RIT_MAX, rit)));
 }
 
@@ -114,12 +200,19 @@ export interface Map5Band {
 
 /** A plain-language read on where an estimate sits for a 5th grader. */
 export function map5Band(rit: number): Map5Band {
+  if (rit >= 235)
+    return {
+      label: 'Working a year ahead',
+      tone: 'ok',
+      blurb:
+        'You are answering 6th-grade questions correctly, which is what the top of the 5th-grade range looks like. Grade-5 review has little left to give you — the 6th Grade Common Core course, and then Algebra 1, is the honest next step.',
+    };
   if (rit >= 222)
     return {
       label: 'Stretching past grade level',
       tone: 'ok',
       blurb:
-        'Comfortably above where a typical 5th grader lands. On a real adaptive test this is where the questions start pulling from 6th-grade material — so the next step is Algebra 1 readiness, not more grade-5 review.',
+        'Comfortably above where a typical 5th grader lands, and starting to reach 6th-grade material. Keep going up rather than sideways: the 6th-grade strands behind your strongest areas are where the next growth is.',
     };
   if (rit >= 210)
     return {

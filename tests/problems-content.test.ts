@@ -81,7 +81,8 @@ describe('problems bank — 5.F Foundations quality bar', () => {
     // The score report breaks down by strand, so a strand with three problems
     // in it would give a breakdown nobody can act on.
     for (const s of MAP5_STRANDS) {
-      const inStrand = foundations.filter((p) => s.units.includes(p.unit));
+      const gradeUnits = s.sources.filter((src) => !src.above).flatMap((src) => src.units);
+      const inStrand = foundations.filter((p) => gradeUnits.includes(p.unit));
       expect(inStrand.length, `${s.name} has ${inStrand.length} problems`).toBeGreaterThanOrEqual(20);
     }
   });

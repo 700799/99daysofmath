@@ -4,9 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   MAP5_STRANDS,
   MAP5_TEST_SIZE,
+  MAP5_ABOVE_GRADE_TARGET,
   estimateMap5Rit,
   map5Band,
-  strandOfUnit,
+  strandOf,
+  isAboveGrade,
+  map5Domains,
 } from '../../data/map5';
 import { getAllProblems } from '../../data/problems';
 import { pickAdaptiveProblem, nextTarget } from '../../utils/adaptive';
@@ -69,7 +72,10 @@ export function Map5Test() {
     let cancelled = false;
     (async () => {
       try {
-        const all = (await getAllProblems()).filter((p) => p.domain === '5.F');
+        // Both grades: the adaptive test reaches above grade level, so the
+        // 6th-grade Common Core strands are part of the bank.
+        const domains = map5Domains();
+        const all = (await getAllProblems()).filter((p) => domains.includes(p.domain));
         if (cancelled) return;
         poolRef.current = all;
         setPhase('intro');
@@ -92,7 +98,14 @@ export function Map5Test() {
 
   const serveNext = (fromAnswered: Answered[]) => {
     const stats = useProgress.getState().problemStats;
-    const next = pickAdaptiveProblem(poolRef.current, seenRef.current, targetRef.current, stats);
+    // Above-grade questions unlock only once the running target has climbed,
+    // so the test reaches up the way the real one does rather than ambushing a
+    // 5th grader with 6th-grade material on question two.
+    const unlocked = targetRef.current >= MAP5_ABOVE_GRADE_TARGET;
+    const pool = unlocked
+      ? poolRef.current
+      : poolRef.current.filter((p) => !isAboveGrade(p.domain, p.unit));
+    const next = pickAdaptiveProblem(pool, seenRef.current, targetRef.current, stats);
     if (!next || fromAnswered.length >= MAP5_TEST_SIZE) {
       finish(fromAnswered);
       return;
@@ -115,11 +128,16 @@ export function Map5Test() {
     const correct = all.filter((a) => a.correct).length;
     const avgDifficulty =
       all.length > 0 ? all.reduce((s, a) => s + a.problem.difficulty, 0) / all.length : 2;
-    const rit = estimateMap5Rit(all.length > 0 ? correct / all.length : 0, avgDifficulty);
+    const aboveCorrect = all.filter((a) => a.correct && isAboveGrade(a.problem.domain, a.problem.unit)).length;
+    const rit = estimateMap5Rit(
+      all.length > 0 ? correct / all.length : 0,
+      avgDifficulty,
+      all.length > 0 ? aboveCorrect / all.length : 0,
+    );
 
     const byStrand: Record<string, { correct: number; total: number }> = {};
     for (const a of all) {
-      const st = strandOfUnit(a.problem.unit);
+      const st = strandOf(a.problem.domain, a.problem.unit);
       if (!st) continue;
       const row = byStrand[st.key] ?? { correct: 0, total: 0 };
       row.total += 1;
@@ -182,6 +200,7 @@ export function Map5Test() {
               <li>· <b className="text-ink">There is no timer.</b> Take as long as you need — rushing is the most common way to lose points.</li>
               <li>· <b className="text-ink">You cannot go back.</b> Check your answer before you submit it.</li>
               <li>· Expect it to feel hard. The test keeps adjusting until the questions are a stretch — that means it is working.</li>
+              <li>· <b className="text-ink">Do well and it reaches into 6th grade.</b> Those questions are not a mistake — getting them right is what the top of the 5th-grade range is made of.</li>
               <li>· Never leave one blank. There is no penalty for a wrong answer.</li>
               <li>· Keep scratch paper next to you.</li>
             </ul>
@@ -208,7 +227,9 @@ export function Map5Test() {
     const total = Math.max(1, answered.length);
     const accuracy = correct / total;
     const avgDifficulty = answered.reduce((s, a) => s + a.problem.difficulty, 0) / total;
-    const rit = estimateMap5Rit(accuracy, avgDifficulty);
+    const aboveCorrect = answered.filter((a) => a.correct && isAboveGrade(a.problem.domain, a.problem.unit)).length;
+    const aboveSeen = answered.filter((a) => isAboveGrade(a.problem.domain, a.problem.unit)).length;
+    const rit = estimateMap5Rit(accuracy, avgDifficulty, aboveCorrect / total);
     const band = map5Band(rit);
     const tone = {
       ok: 'bg-ok-soft border-ok/50 text-ok',
@@ -218,7 +239,7 @@ export function Map5Test() {
     }[band.tone];
 
     const rows = MAP5_STRANDS.map((s) => {
-      const inStrand = answered.filter((a) => strandOfUnit(a.problem.unit)?.key === s.key);
+      const inStrand = answered.filter((a) => strandOf(a.problem.domain, a.problem.unit)?.key === s.key);
       const got = inStrand.filter((a) => a.correct).length;
       return { s, got, total: inStrand.length, pct: inStrand.length ? got / inStrand.length : 0 };
     }).filter((r) => r.total > 0);
@@ -238,7 +259,7 @@ export function Map5Test() {
             <p className="mx-auto mt-2 max-w-md text-[13px] leading-relaxed opacity-90">{band.blurb}</p>
           </div>
 
-          <div className="mt-3 grid grid-cols-2 gap-3">
+          <div className="mt-3 grid grid-cols-3 gap-3">
             <div className="rounded-2xl border-2 border-line bg-surface p-3 text-center">
               <div className="font-mono text-xl font-bold tabular-nums text-ink">{correct}/{answered.length}</div>
               <div className="text-[10px] font-bold uppercase tracking-wider text-ink-muted">Correct</div>
@@ -247,7 +268,19 @@ export function Map5Test() {
               <div className="font-mono text-xl font-bold tabular-nums text-ink">{Math.round(accuracy * 100)}%</div>
               <div className="text-[10px] font-bold uppercase tracking-wider text-ink-muted">Accuracy</div>
             </div>
+            <div className="rounded-2xl border-2 border-line bg-surface p-3 text-center">
+              <div className="font-mono text-xl font-bold tabular-nums text-ink">{aboveCorrect}/{aboveSeen}</div>
+              <div className="text-[10px] font-bold uppercase tracking-wider text-ink-muted">6th-grade</div>
+            </div>
           </div>
+
+          {aboveSeen > 0 && (
+            <div className="mt-3 rounded-2xl border border-ok/40 bg-ok-soft p-3 text-[12.5px] leading-relaxed text-ink">
+              <b className="text-ok">You reached above grade level.</b> {aboveSeen} of your questions
+              came from 6th-grade Common Core, because you earned them — that reach is exactly what a
+              high RIT measures on the real adaptive test.
+            </div>
+          )}
 
           {/* per-strand breakdown — the part that tells you what to do next */}
           <div className="mt-4 rounded-3xl border-2 border-line bg-surface p-5">
@@ -285,7 +318,7 @@ export function Map5Test() {
                 points are cheapest.
               </p>
               <div className="mt-2 flex flex-wrap gap-1.5">
-                {weakest.s.units.map((u) => (
+                {weakest.s.sources.filter((src) => !src.above).flatMap((src) => src.units).map((u: number) => (
                   <Link
                     key={u}
                     to={`/unit/5.F/${u}`}
@@ -325,7 +358,7 @@ export function Map5Test() {
               </div>
             )}
             {shown.map((a) => {
-              const st = strandOfUnit(a.problem.unit);
+              const st = strandOf(a.problem.domain, a.problem.unit);
               return (
                 <div key={a.problem.id} className="rounded-3xl border-2 border-line bg-surface p-4">
                   <div className="flex items-center gap-2">

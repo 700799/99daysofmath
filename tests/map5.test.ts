@@ -9,6 +9,9 @@ import {
   estimateMap5Rit,
   map5Band,
   strandOfUnit,
+  strandOf,
+  isAboveGrade,
+  map5Domains,
   getStrand,
 } from '../src/data/map5';
 import { UNIT_COUNT_BY_DOMAIN } from '../src/utils/encouragement';
@@ -29,7 +32,10 @@ describe('the four instructional areas', () => {
   });
 
   it('cover every 5.F unit exactly once', () => {
-    const seen = MAP5_STRANDS.flatMap((s) => s.units).sort((a, b) => a - b);
+    const seen = MAP5_STRANDS
+      .flatMap((s) => s.sources.filter((src) => src.domain === '5.F'))
+      .flatMap((src) => src.units)
+      .sort((a, b) => a - b);
     expect(seen).toEqual(Array.from({ length: MAP5_UNIT_COUNT }, (_, i) => i + 1));
     expect(new Set(seen).size, 'a unit is claimed by two strands').toBe(seen.length);
   });
@@ -49,7 +55,7 @@ describe('the four instructional areas', () => {
   it('carry the copy the hub needs, and weights that sum to one', () => {
     for (const s of MAP5_STRANDS) {
       expect(s.blurb.length, s.key).toBeGreaterThan(60);
-      expect(s.units.length, s.key).toBeGreaterThan(0);
+      expect(s.sources.length, s.key).toBeGreaterThan(0);
       expect(s.color, s.key).toMatch(/^#[0-9A-Fa-f]{6}$/);
       expect(getStrand(s.key)).toBe(s);
     }
@@ -60,6 +66,63 @@ describe('the four instructional areas', () => {
   it('weights Number and Operations heaviest, as the grade-5 test does', () => {
     const heaviest = [...MAP5_STRANDS].sort((a, b) => b.weight - a.weight)[0];
     expect(heaviest.key).toBe('NO');
+  });
+});
+
+describe('reaching above grade level', () => {
+  // MAP Growth is adaptive over a bank that runs past the tested grade, so
+  // prep that stopped at 5th grade would cap the ceiling exactly where the
+  // interesting part starts. Every strand continues into 6th-grade Common Core.
+  it('every strand continues into a 6th-grade Common Core domain', () => {
+    for (const s of MAP5_STRANDS) {
+      const above = s.sources.filter((src) => src.above);
+      expect(above.length, `${s.name} has no stretch content`).toBeGreaterThan(0);
+      for (const src of above) expect(src.domain).toMatch(/^6\./);
+    }
+  });
+
+  it('draws on the 5th-grade course and all five 6th-grade strands', () => {
+    expect([...map5Domains()].sort()).toEqual(
+      ['5.F', '6.EE', '6.G', '6.NS', '6.RP', '6.SP'],
+    );
+  });
+
+  it('knows which content is above grade level', () => {
+    expect(isAboveGrade('5.F', 1)).toBe(false);
+    expect(isAboveGrade('5.F', 16)).toBe(false);
+    for (const d of ['6.RP', '6.NS', '6.EE', '6.G', '6.SP'] as const) {
+      expect(isAboveGrade(d, 1), d).toBe(true);
+      expect(isAboveGrade(d, 10), d).toBe(true);
+    }
+    // Content the prep does not draw on is not "above grade" — it is absent.
+    expect(isAboveGrade('A1', 1)).toBe(false);
+  });
+
+  it('files 6th-grade content under the strand that continues it', () => {
+    expect(strandOf('6.NS', 3)?.key).toBe('NO');
+    expect(strandOf('6.RP', 3)?.key).toBe('NO');
+    expect(strandOf('6.EE', 3)?.key).toBe('OA');
+    expect(strandOf('6.SP', 3)?.key).toBe('MD');
+    expect(strandOf('6.G', 3)?.key).toBe('GEO');
+  });
+
+  it('answering above-grade questions correctly raises the estimate', () => {
+    const grounded = estimateMap5Rit(0.8, 2, 0);
+    const reaching = estimateMap5Rit(0.8, 2, 0.4);
+    expect(reaching).toBeGreaterThan(grounded);
+  });
+
+  it('never lets reaching up lower a score', () => {
+    for (const a of [0.2, 0.5, 0.9]) {
+      expect(estimateMap5Rit(a, 2, 0.5)).toBeGreaterThanOrEqual(estimateMap5Rit(a, 2, 0));
+    }
+  });
+
+  it('tops out only for a student working accurately a year ahead', () => {
+    // Perfect on grade-level alone should NOT reach the top band; that band is
+    // reserved for actually answering 6th-grade questions right.
+    expect(map5Band(estimateMap5Rit(1, 2, 0)).label).not.toBe('Working a year ahead');
+    expect(map5Band(estimateMap5Rit(1, 3, 0.6)).label).toBe('Working a year ahead');
   });
 });
 
@@ -99,7 +162,7 @@ describe('the RIT estimate', () => {
   });
 
   it('bands climb monotonically with the estimate', () => {
-    const order = ['Getting started', 'Building', 'On track', 'On track, upper half', 'Stretching past grade level'];
+    const order = ['Getting started', 'Building', 'On track', 'On track, upper half', 'Stretching past grade level', 'Working a year ahead'];
     let lastIdx = -1;
     for (let rit = MAP5_RIT_MIN; rit <= MAP5_RIT_MAX; rit++) {
       const idx = order.indexOf(map5Band(rit).label);

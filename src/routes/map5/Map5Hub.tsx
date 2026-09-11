@@ -12,12 +12,16 @@ import { useSeo, courseJsonLd, breadcrumbJsonLd, SITE_URL } from '../../lib/seo'
 // specific to an adaptive, untimed test.
 
 function StrandRow({ strand, index }: { strand: Map5StrandInfo; index: number }) {
+  // Grade-level units are what a 5th grader is expected to hold; the
+  // above-grade sources are the stretch, so progress is measured on the former.
+  const gradeUnits = strand.sources.filter((src) => !src.above).flatMap((src) => src.units);
+  const stretch = strand.sources.filter((src) => src.above);
   const stars = useProgress((s) => {
     const dp = s.byDomain['5.F'];
     if (!dp) return 0;
-    return strand.units.reduce<number>((sum, u) => sum + (dp.unitStars[u] ?? 0), 0);
+    return gradeUnits.reduce<number>((sum, u) => sum + (dp.unitStars[u] ?? 0), 0);
   });
-  const possible = strand.units.length * 3;
+  const possible = gradeUnits.length * 3;
   const pct = possible > 0 ? stars / possible : 0;
 
   return (
@@ -46,11 +50,11 @@ function StrandRow({ strand, index }: { strand: Map5StrandInfo; index: number })
             />
           </div>
           <div className="mt-1 font-mono text-[10.5px] text-ink-dim">
-            {stars}/{possible} stars · {strand.units.length} unit{strand.units.length === 1 ? '' : 's'}
+            {stars}/{possible} stars · {gradeUnits.length} grade-level unit{gradeUnits.length === 1 ? '' : 's'}
           </div>
 
           <div className="mt-2.5 flex flex-wrap gap-1.5">
-            {strand.units.map((u) => (
+            {gradeUnits.map((u) => (
               <Link
                 key={u}
                 to={`/unit/5.F/${u}`}
@@ -60,6 +64,23 @@ function StrandRow({ strand, index }: { strand: Map5StrandInfo; index: number })
               </Link>
             ))}
           </div>
+
+          {stretch.length > 0 && (
+            <div className="mt-2 flex flex-wrap items-center gap-1.5">
+              <span className="font-mono text-[10px] uppercase tracking-wider text-ink-dim">
+                ↑ stretch
+              </span>
+              {stretch.map((src) => (
+                <Link
+                  key={src.domain}
+                  to={`/trail/${src.domain}`}
+                  className="rounded-lg border border-dashed border-line bg-surface px-2.5 py-1 font-mono text-[11px] font-bold text-ink-dim transition-colors hover:border-accent hover:text-accent"
+                >
+                  {src.domain}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </motion.div>
@@ -102,13 +123,13 @@ export function Map5Hub() {
               NWEA MAP Growth · Math 2-5
             </div>
             <p className="mt-2 text-sm leading-relaxed text-ink-muted">
-              The same 5th-grade course, re-shelved into the four instructional areas your score
-              report actually names — so you can see which one is costing you points and work it
-              directly.
+              The 5th-grade course re-shelved into the four instructional areas your score report
+              actually names — and, because the real test is adaptive and reaches above grade level,
+              each one continues into the 6th-grade Common Core strand behind it.
             </p>
             {counts && (
               <div className="mt-2 font-mono text-[11px] text-ink-dim">
-                {counts.count} problems · {counts.units} units · 4 strands
+                {counts.count} grade-level problems · {counts.units} units · 4 strands · 500 above-grade
               </div>
             )}
           </div>
@@ -145,7 +166,8 @@ export function Map5Hub() {
           Take a {MAP5_TEST_SIZE}-question practice test ▶
         </Link>
         <p className="mt-2 text-center text-[11px] text-ink-dim">
-          Adaptive and untimed, like the real thing.
+          Adaptive and untimed, like the real thing — keep getting them right and it reaches into
+          6th grade.
         </p>
       </div>
 
@@ -153,6 +175,10 @@ export function Map5Hub() {
       <div className="mb-2 mt-6 text-xs font-display font-extrabold uppercase tracking-wider text-ink-muted">
         📚 The four instructional areas
       </div>
+      <p className="mb-3 text-[12px] leading-relaxed text-ink-muted">
+        Each shows its grade-level units, then the 6th-grade strand it stretches into. Hold the
+        grade-level units first; the stretch is where a strong 5th grader earns the top of the range.
+      </p>
       <div className="space-y-3">
         {MAP5_STRANDS.map((s, i) => (
           <StrandRow key={s.key} strand={s} index={i} />
