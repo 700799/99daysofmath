@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useProgress } from '../state/progress';
 import type { MathematicianDeck as Deck } from '../data/mathematicianDecks';
@@ -107,9 +108,20 @@ export function MathematicianDeckPlayer({ deck, onClose }: { deck: Deck; onClose
                     {deck.name}
                   </p>
                   <p className="font-display text-xl font-extrabold text-violet-200 sm:text-2xl">{deck.era}</p>
-                  <div className="inline-flex items-center gap-2 rounded-full border-2 border-emerald-400/60 bg-duo-green/20 px-4 py-1.5 font-display text-sm font-extrabold uppercase tracking-wider text-emerald-200 sm:text-base">
-                    📘 Connects to: {deck.tieIn}
-                  </div>
+                  {deck.tieInTo ? (
+                    <Link
+                      to={deck.tieInTo}
+                      onClick={onClose}
+                      className="inline-flex items-center gap-2 rounded-full border-2 border-emerald-400/60 bg-duo-green/20 px-4 py-1.5 font-display text-sm font-extrabold uppercase tracking-wider text-emerald-200 hover:bg-duo-green/35 sm:text-base"
+                      data-haptic="tap"
+                    >
+                      📘 Connects to: {deck.tieIn} →
+                    </Link>
+                  ) : (
+                    <div className="inline-flex items-center gap-2 rounded-full border-2 border-emerald-400/60 bg-duo-green/20 px-4 py-1.5 font-display text-sm font-extrabold uppercase tracking-wider text-emerald-200 sm:text-base">
+                      📘 Connects to: {deck.tieIn}
+                    </div>
+                  )}
                 </>
               )}
             </motion.div>

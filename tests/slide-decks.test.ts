@@ -84,8 +84,8 @@ describe('expanded math stories', () => {
 });
 
 describe('mathematician decks', () => {
-  it('all 8 mathematicians have a 12–20-slide deck', () => {
-    expect(MATHEMATICIAN_DECKS.length).toBe(8);
+  it('all 13 mathematicians have a 12–20-slide deck', () => {
+    expect(MATHEMATICIAN_DECKS.length).toBe(13);
     for (const d of MATHEMATICIAN_DECKS) {
       expect(d.slides.length, `${d.name} slides`).toBeGreaterThanOrEqual(12);
       expect(d.slides.length, `${d.name} slides`).toBeLessThanOrEqual(20);
@@ -98,7 +98,7 @@ describe('mathematician decks', () => {
   });
 
   it('deck ids match the names on the Mathematicians page', () => {
-    const expected = ['Euclid', 'Isaac Newton', 'Leonhard Euler', 'Carl Friedrich Gauss', 'Srinivasa Ramanujan', 'Emmy Noether', 'David Hilbert', 'Georg Cantor'];
+    const expected = ['Euclid', 'Isaac Newton', 'Leonhard Euler', 'Carl Friedrich Gauss', 'Srinivasa Ramanujan', 'Emmy Noether', 'David Hilbert', 'Georg Cantor', 'Al-Khwarizmi', 'Thales of Miletus', 'Hipparchus', 'John Napier', 'George Pólya'];
     const ids = MATHEMATICIAN_DECKS.map((d) => d.id);
     for (const name of expected) expect(ids, `missing deck for ${name}`).toContain(name);
   });
