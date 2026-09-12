@@ -14,8 +14,12 @@ export interface AuthUser {
 
 type Status = 'anonymous' | 'signing-in' | 'signed-in' | 'error';
 
+/** The two ways in. Google is a redirect, email is Clerk's dialog. */
+export type SignInMethod = 'google' | 'email';
+
 /** What the provider wires in once it has loaded. */
 export interface AuthActions {
+  signInWithGoogle: () => Promise<void>;
   openSignIn: () => void;
   signOut: () => Promise<void>;
 }
@@ -26,7 +30,7 @@ interface AuthState {
   /** Whether sign-in is even offered (Clerk key present). */
   available: boolean;
   error: string | null;
-  signIn: () => void;
+  signIn: (method: SignInMethod) => void;
   signOutUser: () => Promise<void>;
   /** Internal: AuthBootstrap hands over the provider's actions. */
   _bind: (actions: AuthActions | null) => void;
@@ -44,19 +48,24 @@ export const useAuth = create<AuthState>((set, get) => ({
   available: clerkConfigured,
   error: null,
 
-  signIn: () => {
+  signIn: (method) => {
     if (!get().available || !bound) {
       set({ status: get().user ? 'signed-in' : 'error', error: UNAVAILABLE });
       return;
     }
     set({ status: 'signing-in', error: null });
-    try {
-      bound.openSignIn();
-      // AuthBootstrap sets the user once the session exists. If the dialog is
-      // simply closed, the mirror leaves us anonymous and we settle below.
-    } catch (err) {
+    const failed = (err: unknown) => {
       console.warn('[auth] sign-in failed', err);
       set({ status: get().user ? 'signed-in' : 'error', error: "Couldn't sign in — you can keep playing as Math-Friend." });
+    };
+    try {
+      // Google leaves the page for Google and comes back to /sso-callback;
+      // email opens Clerk's dialog in place. Either way AuthBootstrap sets the
+      // user once a session exists. A closed dialog leaves us anonymous.
+      if (method === 'google') void bound.signInWithGoogle().catch(failed);
+      else bound.openSignIn();
+    } catch (err) {
+      failed(err);
     }
   },
 

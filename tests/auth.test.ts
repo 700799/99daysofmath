@@ -42,16 +42,16 @@ describe('the auth store', () => {
   });
 
   it('signing in without a provider explains, rather than throwing', () => {
-    useAuth.getState().signIn();
+    useAuth.getState().signIn('email');
     expect(useAuth.getState().status).toBe('error');
     expect(useAuth.getState().error).toMatch(/saved on this device/);
   });
 
-  it('signing in opens the provider dialog once it is bound', () => {
+  it('email opens the provider dialog once it is bound', () => {
     let opened = 0;
     useAuth.setState({ available: true });
-    useAuth.getState()._bind({ openSignIn: () => void opened++, signOut: async () => undefined });
-    useAuth.getState().signIn();
+    useAuth.getState()._bind({ signInWithGoogle: async () => undefined, openSignIn: () => void opened++, signOut: async () => undefined });
+    useAuth.getState().signIn('email');
     expect(opened).toBe(1);
     expect(useAuth.getState().status).toBe('signing-in');
     // The dialog closed without a session → back to anonymous, no error.
@@ -60,10 +60,25 @@ describe('the auth store', () => {
     expect(useAuth.getState().error).toBeNull();
   });
 
+  it('Google starts the redirect, and a failed start is explained', async () => {
+    let started = 0;
+    useAuth.setState({ available: true });
+    useAuth.getState()._bind({ signInWithGoogle: async () => void started++, openSignIn: () => undefined, signOut: async () => undefined });
+    useAuth.getState().signIn('google');
+    expect(started).toBe(1);
+    expect(useAuth.getState().status).toBe('signing-in');
+    // e.g. Clerk not loaded yet, or the network is down
+    useAuth.getState()._bind({ signInWithGoogle: async () => { throw new Error('offline'); }, openSignIn: () => undefined, signOut: async () => undefined });
+    useAuth.getState().signIn('google');
+    await new Promise((r) => setTimeout(r, 0));
+    expect(useAuth.getState().status).toBe('error');
+    expect(useAuth.getState().error).toMatch(/keep playing as Math-Friend/);
+  });
+
   it('mirrors the provider user and signs out through it', async () => {
     let signedOut = 0;
     useAuth.setState({ available: true });
-    useAuth.getState()._bind({ openSignIn: () => undefined, signOut: async () => void signedOut++ });
+    useAuth.getState()._bind({ signInWithGoogle: async () => undefined, openSignIn: () => undefined, signOut: async () => void signedOut++ });
     useAuth.getState()._setUser(jo);
     expect(useAuth.getState().status).toBe('signed-in');
     expect(displayNameFor(useAuth.getState().user)).toBe('Jo');
@@ -86,12 +101,14 @@ describe('the account card', () => {
     expect(html).not.toContain('<button');
   });
 
-  it('offers one sign-in button when Clerk is present', () => {
+  it('offers Google and email, and nothing else, when Clerk is present', () => {
     useAuth.setState({ available: true });
     const html = renderCard();
-    expect(html).toContain('Sign in');
-    expect(html.match(/<button/g)).toHaveLength(1);
-    expect(html).not.toMatch(/google/i);
+    expect(html).toContain('Continue with Google');
+    expect(html).toContain('Continue with email');
+    expect(html.match(/<button/g)).toHaveLength(2);
+    // creating an account is not a third path
+    expect(html).toContain('Either one creates your account');
   });
 
   it('shows the person and a sign-out when signed in', () => {

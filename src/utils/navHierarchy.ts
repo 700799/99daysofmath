@@ -149,6 +149,9 @@ export function titleOf(pathname: string): string {
   if (seg.length === 0) return 'Home';
   const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
   switch (seg[0]) {
+    // Google sign-in lands here for a moment on its way to Settings.
+    case 'sso-callback':
+      return 'Signing in';
     case 'sat':
       if (seg.length === 1) return 'SAT Math';
       if (seg[1] === 'tips') return 'Tips';

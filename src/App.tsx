@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
-import { AuthProvider } from './components/AuthProvider';
+import { AuthProvider, SsoCallback } from './components/AuthProvider';
 import { Home } from './routes/Home';
 import { Mascot } from './components/Mascot';
 
@@ -183,6 +183,8 @@ export default function App() {
             <Route path="/arcade/bubbles" element={<ArcadeGate title="Bubble Pop"><BubblePop /></ArcadeGate>} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/shop" element={<Shop />} />
+            {/* Google sign-in returns here; Clerk finishes it and moves on. */}
+            <Route path="/sso-callback" element={<SsoCallback />} />
             <Route path="/rewards" element={<Rewards />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

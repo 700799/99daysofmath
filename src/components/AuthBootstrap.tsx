@@ -3,7 +3,7 @@
 // when Clerk isn't configured it is never mounted, so the app simply runs
 // anonymously as "Math-Friend".
 import { useEffect } from 'react';
-import { useAuth as useClerkAuth, useClerk, useUser } from '@clerk/clerk-react';
+import { useAuth as useClerkAuth, useClerk, useSignIn, useUser } from '@clerk/clerk-react';
 import { useAuth } from '../state/auth';
 import { startSync, stopSync } from '../state/sync';
 
@@ -15,19 +15,34 @@ import { startSync, stopSync } from '../state/sync';
  */
 const FIREBASE_TEMPLATE = 'integration_firebase';
 
+/** Where Google sends the browser back; the route finishes the sign-in. */
+export const SSO_CALLBACK_PATH = '/sso-callback';
+
 export function AuthBootstrap() {
   const clerk = useClerk();
   const { getToken } = useClerkAuth();
+  const { signIn } = useSignIn();
   const { isLoaded, isSignedIn, user } = useUser();
 
   // Hand the store the provider's actions for as long as we are mounted.
   useEffect(() => {
     useAuth.getState()._bind({
+      // A redirect, not a popup: popups never come back to a home-screen app.
+      // A Google account with no user yet is carried over to sign-up by the
+      // callback route.
+      signInWithGoogle: async () => {
+        if (!signIn) throw new Error('Clerk has not loaded yet');
+        await signIn.authenticateWithRedirect({
+          strategy: 'oauth_google',
+          redirectUrl: SSO_CALLBACK_PATH,
+          redirectUrlComplete: '/settings',
+        });
+      },
       openSignIn: () => clerk.openSignIn({}),
       signOut: () => clerk.signOut(),
     });
     return () => useAuth.getState()._bind(null);
-  }, [clerk]);
+  }, [clerk, signIn]);
 
   // Mirror the session. Only identity fields are read; keyed on the user id so
   // a profile edit doesn't restart sync.
