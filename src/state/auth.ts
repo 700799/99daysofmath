@@ -1,10 +1,9 @@
 // Auth store. Holds the signed-in user (or null for anonymous "Math-Friend").
-// Firebase persists the session itself; we mirror it here via onAuthStateChanged
-// (wired in AuthBootstrap). Every Firebase call is guarded so failures degrade to
-// anonymous mode rather than breaking the app.
+// Clerk owns the session; AuthBootstrap mirrors it into this store and binds
+// the sign-in / sign-out actions, so the rest of the app never imports Clerk
+// and keeps working — anonymously — when it is not configured.
 import { create } from 'zustand';
-import { firebaseConfigured, getFirebase } from '../lib/firebase';
-import { stopSync } from './sync';
+import { clerkConfigured } from '../lib/clerk';
 
 export interface AuthUser {
   uid: string;
@@ -15,68 +14,72 @@ export interface AuthUser {
 
 type Status = 'anonymous' | 'signing-in' | 'signed-in' | 'error';
 
+/** What the provider wires in once it has loaded. */
+export interface AuthActions {
+  openSignIn: () => void;
+  signOut: () => Promise<void>;
+}
+
 interface AuthState {
   user: AuthUser | null;
   status: Status;
-  /** Whether sign-in is even offered (Firebase config present). */
+  /** Whether sign-in is even offered (Clerk key present). */
   available: boolean;
   error: string | null;
-  signInWithGoogle: () => Promise<void>;
+  signIn: () => void;
   signOutUser: () => Promise<void>;
-  /** Internal: called by AuthBootstrap's onAuthStateChanged listener. */
+  /** Internal: AuthBootstrap hands over the provider's actions. */
+  _bind: (actions: AuthActions | null) => void;
+  /** Internal: AuthBootstrap mirrors the provider's user here. */
   _setUser: (user: AuthUser | null) => void;
 }
+
+const UNAVAILABLE = 'Sign-in is unavailable right now — your progress is saved on this device.';
+
+let bound: AuthActions | null = null;
 
 export const useAuth = create<AuthState>((set, get) => ({
   user: null,
   status: 'anonymous',
-  available: firebaseConfigured,
+  available: clerkConfigured,
   error: null,
 
-  signInWithGoogle: async () => {
-    if (!firebaseConfigured) {
-      set({ error: 'Sign-in is unavailable right now.' });
+  signIn: () => {
+    if (!get().available || !bound) {
+      set({ status: get().user ? 'signed-in' : 'error', error: UNAVAILABLE });
       return;
     }
     set({ status: 'signing-in', error: null });
     try {
-      const fb = await getFirebase();
-      if (!fb) {
-        set({ status: 'error', error: 'Sign-in is unavailable right now — your progress is saved on this device.' });
-        return;
-      }
-      const { GoogleAuthProvider, signInWithPopup } = await import('firebase/auth');
-      await signInWithPopup(fb.auth, new GoogleAuthProvider());
-      // onAuthStateChanged (AuthBootstrap) sets the user and kicks off sync.
-    } catch (err: unknown) {
-      const code = (err as { code?: string })?.code ?? '';
-      const canceled = code === 'auth/popup-closed-by-user' || code === 'auth/cancelled-popup-request';
+      bound.openSignIn();
+      // AuthBootstrap sets the user once the session exists. If the dialog is
+      // simply closed, the mirror leaves us anonymous and we settle below.
+    } catch (err) {
       console.warn('[auth] sign-in failed', err);
-      set({
-        status: get().user ? 'signed-in' : 'error',
-        error: canceled
-          ? 'Sign-in canceled — you can keep playing as Math-Friend.'
-          : "Couldn't sign in — you can keep playing as Math-Friend.",
-      });
+      set({ status: get().user ? 'signed-in' : 'error', error: "Couldn't sign in — you can keep playing as Math-Friend." });
     }
   },
 
   signOutUser: async () => {
     try {
-      const fb = await getFirebase();
-      if (fb) {
-        const { signOut } = await import('firebase/auth');
-        await signOut(fb.auth);
-      }
+      await bound?.signOut();
     } catch (err) {
       console.warn('[auth] sign-out failed', err);
     }
-    stopSync();
+    // The provider's user mirror clears the store; this makes it immediate.
     set({ user: null, status: 'anonymous', error: null });
   },
 
+  _bind: (actions) => {
+    bound = actions;
+  },
+
   _setUser: (user) =>
-    set((s) => ({ user, status: user ? 'signed-in' : 'anonymous', error: user ? null : s.error })),
+    set((s) => ({
+      user,
+      status: user ? 'signed-in' : 'anonymous',
+      error: user ? null : s.error,
+    })),
 }));
 
 /** First name when signed in, else the default "Math-Friend". */

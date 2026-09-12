@@ -3,7 +3,7 @@
 // keeps working even when every call here fails. Strategy: pull + lossless merge
 // on sign-in, then debounced push on change.
 import { useProgress } from './progress';
-import { getFirebase } from '../lib/firebase';
+import { getFirebase, peekFirebase, type FirebaseHandles } from '../lib/firebase';
 
 // Matches the persisted store version in progress.ts.
 const SCHEMA_VERSION = 10;
@@ -69,6 +69,36 @@ export function mergeProgress(local: Dict, remote: Dict | null | undefined): Dic
 let unsubscribePush: (() => void) | null = null;
 let pushTimer: ReturnType<typeof setTimeout> | null = null;
 
+/** Returns a Firebase custom token for the signed-in user, or null if none. */
+export type CloudTokenGetter = () => Promise<string | null>;
+
+/**
+ * Open a Firestore session for `uid`. Clerk signs the user in; Firebase only
+ * learns about it through a custom token Clerk mints for its Firebase
+ * integration, which makes the Firebase uid equal the Clerk user id. Any
+ * failure — no Firebase config, no token, network — leaves progress on the
+ * device and never touches the Clerk session.
+ */
+async function openCloud(uid: string, getToken: CloudTokenGetter): Promise<FirebaseHandles | null> {
+  const fb = await getFirebase();
+  if (!fb) return null;
+  try {
+    if (fb.auth.currentUser?.uid === uid) return fb;
+    const token = await getToken();
+    if (!token) return null;
+    const { signInWithCustomToken } = await import('firebase/auth');
+    const cred = await signInWithCustomToken(fb.auth, token);
+    if (cred.user.uid !== uid) {
+      console.warn('[sync] cloud uid does not match the signed-in user; not syncing');
+      return null;
+    }
+    return fb;
+  } catch (err) {
+    console.warn('[sync] cloud session unavailable; progress stays on this device', err);
+    return null;
+  }
+}
+
 async function writeRemote(uid: string): Promise<void> {
   const fb = await getFirebase();
   if (!fb) return;
@@ -87,9 +117,9 @@ async function writeRemote(uid: string): Promise<void> {
 }
 
 /** Pull + merge remote progress for this user, then start pushing local changes. */
-export async function startSync(uid: string): Promise<void> {
+export async function startSync(uid: string, getToken: CloudTokenGetter): Promise<void> {
   stopSync();
-  const fb = await getFirebase();
+  const fb = await openCloud(uid, getToken);
   if (!fb) return;
   try {
     const { doc, getDoc } = await import('firebase/firestore');
@@ -110,7 +140,7 @@ export async function startSync(uid: string): Promise<void> {
   });
 }
 
-/** Stop pushing. Local progress is left untouched on the device. */
+/** Stop pushing and close the cloud session. Local progress is left untouched. */
 export function stopSync(): void {
   if (unsubscribePush) {
     unsubscribePush();
@@ -120,4 +150,10 @@ export function stopSync(): void {
     clearTimeout(pushTimer);
     pushTimer = null;
   }
+  // Only if Firebase was ever loaded — never initialize it just to sign out.
+  void peekFirebase()?.then(async (fb) => {
+    if (!fb?.auth.currentUser) return;
+    const { signOut } = await import('firebase/auth');
+    await signOut(fb.auth).catch(() => undefined);
+  });
 }

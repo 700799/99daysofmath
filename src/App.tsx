@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
-import { AuthBootstrap } from './components/AuthBootstrap';
+import { AuthProvider } from './components/AuthProvider';
 import { Home } from './routes/Home';
 import { Mascot } from './components/Mascot';
 
@@ -99,94 +99,95 @@ function RouteFallback() {
 
 export default function App() {
   return (
-    <AppShell>
-      <AuthBootstrap />
-      <Suspense fallback={<RouteFallback />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* SAT Math is its own section rather than a star trail. */}
-          <Route path="/sat" element={<SatHub />} />
-          <Route path="/sat/tips" element={<SatTips />} />
-          <Route path="/sat/unit/:n" element={<SatUnit />} />
-          <Route path="/sat/test/:n" element={<SatTest />} />
-          <Route path="/sat/analysis/:n" element={<SatAnalysis />} />
-          <Route path="/sat/recovery/:n" element={<SatRecovery />} />
-          <Route path="/trail/SAT" element={<Navigate to="/sat" replace />} />
-          <Route path="/map5" element={<Map5Hub />} />
-          <Route path="/map5/test" element={<Map5Test />} />
-          <Route path="/course/:id" element={<Course />} />
-          <Route path="/trail/:domain" element={<DomainTrail />} />
-          <Route path="/unit/:domain/:unit" element={<Unit />} />
-          <Route path="/unit/:domain/:unit/results" element={<UnitResults />} />
-          <Route path="/mix" element={<DailyMix />} />
-          <Route path="/test" element={<MockTest />} />
-          <Route path="/review" element={<Review />} />
-          <Route path="/review/:domain" element={<Review />} />
-          <Route path="/practice" element={<Practice />} />
-          <Route path="/report" element={<Report />} />
-          <Route path="/videos" element={<Videos />} />
-          <Route path="/stories" element={<Stories />} />
-          <Route path="/mathematicians" element={<Mathematicians />} />
-          <Route path="/finals" element={<Finals />} />
-          {/* A bare number is a pre-course finals link; FinalsCourse redirects it. */}
-          <Route path="/finals/:courseId" element={<FinalsCourse />} />
-          <Route path="/finals/:courseId/:n" element={<FinalQuiz />} />
-          <Route path="/arcade" element={<ArcadeHub />} />
-          <Route path="/arcade/connect4" element={<ArcadeGate title="Connect 4"><ConnectFour /></ArcadeGate>} />
-          <Route path="/arcade/wheel" element={<ArcadeGate title="Prize Wheel"><Wheel /></ArcadeGate>} />
-          <Route path="/arcade/memory" element={<ArcadeGate title="Memory Match"><MemoryMatch /></ArcadeGate>} />
-          <Route path="/arcade/shootout" element={<ArcadeGate title="Cannon Shot"><Shootout /></ArcadeGate>} />
-          <Route path="/arcade/runner" element={<ArcadeGate title="Math Runner"><MathRunner /></ArcadeGate>} />
-          <Route path="/arcade/platformer" element={<ArcadeGate title="Platformer"><Platformer /></ArcadeGate>} />
-          <Route path="/arcade/racer" element={<ArcadeGate title="Race Car"><RaceCar /></ArcadeGate>} />
-          <Route path="/arcade/digger" element={<ArcadeGate title="Gem Digger"><GemDigger /></ArcadeGate>} />
-          <Route path="/arcade/2048" element={<ArcadeGate title="2048"><Twenty48 /></ArcadeGate>} />
-          <Route path="/arcade/snake" element={<ArcadeGate title="Math Snake"><Snake /></ArcadeGate>} />
-          <Route path="/arcade/bricks" element={<ArcadeGate title="Brick Breaker"><BrickBreaker /></ArcadeGate>} />
-          <Route path="/arcade/sudoku" element={<ArcadeGate title="Sudoku"><Sudoku /></ArcadeGate>} />
-          <Route path="/arcade/tetris" element={<ArcadeGate title="Alien Tetris"><Tetris /></ArcadeGate>} />
-          <Route path="/arcade/boba" element={<ArcadeGate title="Boba Shop"><BobaShop /></ArcadeGate>} />
-          <Route path="/arcade/sushi" element={<ArcadeGate title="Sushi Match"><SushiMatch /></ArcadeGate>} />
-          <Route path="/arcade/tictactoe" element={<ArcadeGate title="Tic Tac Toe"><TicTacToe /></ArcadeGate>} />
-          <Route path="/arcade/kpop" element={<ArcadeGate title="K-Pop Dress-Up"><KpopDressMatch /></ArcadeGate>} />
-          <Route path="/arcade/survival" element={<ArcadeGate title="Forest Survival"><ForestSurvival /></ArcadeGate>} />
-          <Route path="/arcade/fruit" element={<ArcadeGate title="Fruit Slice"><FruitSlice /></ArcadeGate>} />
-          <Route path="/arcade/sumo" element={<ArcadeGate title="Sumo Math"><SumoMath /></ArcadeGate>} />
-          <Route path="/arcade/monster" element={<ArcadeGate title="Monster Rogue"><MonsterRogue /></ArcadeGate>} />
-          <Route path="/arcade/racer2" element={<ArcadeGate title="Turbo Dash"><Mode7Racer /></ArcadeGate>} />
-          <Route path="/arcade/wordle" element={<ArcadeGate title="Word Guess"><Wordle /></ArcadeGate>} />
-          <Route path="/arcade/hero" element={<ArcadeGate title="Hero Rescue"><HeroRescue /></ArcadeGate>} />
-          <Route path="/arcade/escape" element={<ArcadeGate title="Logic Escape"><EscapeRoom /></ArcadeGate>} />
-          <Route path="/arcade/town" element={<ArcadeGate title="Pocket Town"><PocketTown /></ArcadeGate>} />
-          <Route path="/arcade/tank" element={<ArcadeGate title="Tank Attack"><TankAttack /></ArcadeGate>} />
-          <Route path="/arcade/dress" element={<ArcadeGate title="Cool vs Warm Dress Up"><DressToImpress /></ArcadeGate>} />
-          <Route path="/arcade/rig" element={<ArcadeGate title="Desert Rig"><DesertRig /></ArcadeGate>} />
-          <Route path="/arcade/mathpop" element={<ArcadeGate title="Math Pop"><MathPop /></ArcadeGate>} />
-          <Route path="/arcade/taiko" element={<ArcadeGate title="Taiko Tap"><TaikoTap /></ArcadeGate>} />
-          <Route path="/arcade/shinobi" element={<ArcadeGate title="Shinobi Match"><ShinobiMatch /></ArcadeGate>} />
-          <Route path="/arcade/speedlab" element={<ArcadeGate title="Speed Lab"><SpeedLab /></ArcadeGate>} />
-          <Route path="/arcade/fraction" element={<ArcadeGate title="Fraction Pizzeria"><FractionPizza /></ArcadeGate>} />
-          <Route path="/arcade/chess" element={<ArcadeGate title="Checkmate Lab"><ChessPuzzle /></ArcadeGate>} />
-          <Route path="/arcade/starhop" element={<ArcadeGate title="Star Hop"><ChineseCheckers /></ArcadeGate>} />
-          <Route path="/arcade/crawler" element={<ArcadeGate title="Lucky Crawl"><GreedyCrawler /></ArcadeGate>} />
-          <Route path="/arcade/carpenter" element={<ArcadeGate title="Critter Cottage"><CritterCottage /></ArcadeGate>} />
-          <Route path="/arcade/asteroids" element={<ArcadeGate title="Asteroids"><Asteroids /></ArcadeGate>} />
-          <Route path="/arcade/space" element={<ArcadeGate title="Space Blaster"><SpaceBlaster /></ArcadeGate>} />
-          <Route path="/arcade/zapper" element={<ArcadeGate title="Zombie Zapper"><ZombieZapper /></ArcadeGate>} />
-          <Route path="/arcade/hippo" element={<ArcadeGate title="Hungry Hippo"><HungryHippo /></ArcadeGate>} />
-          <Route path="/arcade/blitz" element={<ArcadeGate title="Jungle Blitz"><JungleBlitz /></ArcadeGate>} />
-          <Route path="/arcade/leapfrog" element={<ArcadeGate title="Leap Frog"><LeapFrog /></ArcadeGate>} />
-          <Route path="/arcade/rogue" element={<ArcadeGate title="Rogue Delve"><RogueDelve /></ArcadeGate>} />
-          <Route path="/arcade/survivors" element={<ArcadeGate title="Mochi Survivors"><MochiSurvivors /></ArcadeGate>} />
-          <Route path="/arcade/fishing" element={<ArcadeGate title="Fishing"><Fishing /></ArcadeGate>} />
-          <Route path="/arcade/tangram" element={<ArcadeGate title="Tangram"><Tangram /></ArcadeGate>} />
-          <Route path="/arcade/bubbles" element={<ArcadeGate title="Bubble Pop"><BubblePop /></ArcadeGate>} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/rewards" element={<Rewards />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
-    </AppShell>
+    <AuthProvider>
+      <AppShell>
+        <Suspense fallback={<RouteFallback />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* SAT Math is its own section rather than a star trail. */}
+            <Route path="/sat" element={<SatHub />} />
+            <Route path="/sat/tips" element={<SatTips />} />
+            <Route path="/sat/unit/:n" element={<SatUnit />} />
+            <Route path="/sat/test/:n" element={<SatTest />} />
+            <Route path="/sat/analysis/:n" element={<SatAnalysis />} />
+            <Route path="/sat/recovery/:n" element={<SatRecovery />} />
+            <Route path="/trail/SAT" element={<Navigate to="/sat" replace />} />
+            <Route path="/map5" element={<Map5Hub />} />
+            <Route path="/map5/test" element={<Map5Test />} />
+            <Route path="/course/:id" element={<Course />} />
+            <Route path="/trail/:domain" element={<DomainTrail />} />
+            <Route path="/unit/:domain/:unit" element={<Unit />} />
+            <Route path="/unit/:domain/:unit/results" element={<UnitResults />} />
+            <Route path="/mix" element={<DailyMix />} />
+            <Route path="/test" element={<MockTest />} />
+            <Route path="/review" element={<Review />} />
+            <Route path="/review/:domain" element={<Review />} />
+            <Route path="/practice" element={<Practice />} />
+            <Route path="/report" element={<Report />} />
+            <Route path="/videos" element={<Videos />} />
+            <Route path="/stories" element={<Stories />} />
+            <Route path="/mathematicians" element={<Mathematicians />} />
+            <Route path="/finals" element={<Finals />} />
+            {/* A bare number is a pre-course finals link; FinalsCourse redirects it. */}
+            <Route path="/finals/:courseId" element={<FinalsCourse />} />
+            <Route path="/finals/:courseId/:n" element={<FinalQuiz />} />
+            <Route path="/arcade" element={<ArcadeHub />} />
+            <Route path="/arcade/connect4" element={<ArcadeGate title="Connect 4"><ConnectFour /></ArcadeGate>} />
+            <Route path="/arcade/wheel" element={<ArcadeGate title="Prize Wheel"><Wheel /></ArcadeGate>} />
+            <Route path="/arcade/memory" element={<ArcadeGate title="Memory Match"><MemoryMatch /></ArcadeGate>} />
+            <Route path="/arcade/shootout" element={<ArcadeGate title="Cannon Shot"><Shootout /></ArcadeGate>} />
+            <Route path="/arcade/runner" element={<ArcadeGate title="Math Runner"><MathRunner /></ArcadeGate>} />
+            <Route path="/arcade/platformer" element={<ArcadeGate title="Platformer"><Platformer /></ArcadeGate>} />
+            <Route path="/arcade/racer" element={<ArcadeGate title="Race Car"><RaceCar /></ArcadeGate>} />
+            <Route path="/arcade/digger" element={<ArcadeGate title="Gem Digger"><GemDigger /></ArcadeGate>} />
+            <Route path="/arcade/2048" element={<ArcadeGate title="2048"><Twenty48 /></ArcadeGate>} />
+            <Route path="/arcade/snake" element={<ArcadeGate title="Math Snake"><Snake /></ArcadeGate>} />
+            <Route path="/arcade/bricks" element={<ArcadeGate title="Brick Breaker"><BrickBreaker /></ArcadeGate>} />
+            <Route path="/arcade/sudoku" element={<ArcadeGate title="Sudoku"><Sudoku /></ArcadeGate>} />
+            <Route path="/arcade/tetris" element={<ArcadeGate title="Alien Tetris"><Tetris /></ArcadeGate>} />
+            <Route path="/arcade/boba" element={<ArcadeGate title="Boba Shop"><BobaShop /></ArcadeGate>} />
+            <Route path="/arcade/sushi" element={<ArcadeGate title="Sushi Match"><SushiMatch /></ArcadeGate>} />
+            <Route path="/arcade/tictactoe" element={<ArcadeGate title="Tic Tac Toe"><TicTacToe /></ArcadeGate>} />
+            <Route path="/arcade/kpop" element={<ArcadeGate title="K-Pop Dress-Up"><KpopDressMatch /></ArcadeGate>} />
+            <Route path="/arcade/survival" element={<ArcadeGate title="Forest Survival"><ForestSurvival /></ArcadeGate>} />
+            <Route path="/arcade/fruit" element={<ArcadeGate title="Fruit Slice"><FruitSlice /></ArcadeGate>} />
+            <Route path="/arcade/sumo" element={<ArcadeGate title="Sumo Math"><SumoMath /></ArcadeGate>} />
+            <Route path="/arcade/monster" element={<ArcadeGate title="Monster Rogue"><MonsterRogue /></ArcadeGate>} />
+            <Route path="/arcade/racer2" element={<ArcadeGate title="Turbo Dash"><Mode7Racer /></ArcadeGate>} />
+            <Route path="/arcade/wordle" element={<ArcadeGate title="Word Guess"><Wordle /></ArcadeGate>} />
+            <Route path="/arcade/hero" element={<ArcadeGate title="Hero Rescue"><HeroRescue /></ArcadeGate>} />
+            <Route path="/arcade/escape" element={<ArcadeGate title="Logic Escape"><EscapeRoom /></ArcadeGate>} />
+            <Route path="/arcade/town" element={<ArcadeGate title="Pocket Town"><PocketTown /></ArcadeGate>} />
+            <Route path="/arcade/tank" element={<ArcadeGate title="Tank Attack"><TankAttack /></ArcadeGate>} />
+            <Route path="/arcade/dress" element={<ArcadeGate title="Cool vs Warm Dress Up"><DressToImpress /></ArcadeGate>} />
+            <Route path="/arcade/rig" element={<ArcadeGate title="Desert Rig"><DesertRig /></ArcadeGate>} />
+            <Route path="/arcade/mathpop" element={<ArcadeGate title="Math Pop"><MathPop /></ArcadeGate>} />
+            <Route path="/arcade/taiko" element={<ArcadeGate title="Taiko Tap"><TaikoTap /></ArcadeGate>} />
+            <Route path="/arcade/shinobi" element={<ArcadeGate title="Shinobi Match"><ShinobiMatch /></ArcadeGate>} />
+            <Route path="/arcade/speedlab" element={<ArcadeGate title="Speed Lab"><SpeedLab /></ArcadeGate>} />
+            <Route path="/arcade/fraction" element={<ArcadeGate title="Fraction Pizzeria"><FractionPizza /></ArcadeGate>} />
+            <Route path="/arcade/chess" element={<ArcadeGate title="Checkmate Lab"><ChessPuzzle /></ArcadeGate>} />
+            <Route path="/arcade/starhop" element={<ArcadeGate title="Star Hop"><ChineseCheckers /></ArcadeGate>} />
+            <Route path="/arcade/crawler" element={<ArcadeGate title="Lucky Crawl"><GreedyCrawler /></ArcadeGate>} />
+            <Route path="/arcade/carpenter" element={<ArcadeGate title="Critter Cottage"><CritterCottage /></ArcadeGate>} />
+            <Route path="/arcade/asteroids" element={<ArcadeGate title="Asteroids"><Asteroids /></ArcadeGate>} />
+            <Route path="/arcade/space" element={<ArcadeGate title="Space Blaster"><SpaceBlaster /></ArcadeGate>} />
+            <Route path="/arcade/zapper" element={<ArcadeGate title="Zombie Zapper"><ZombieZapper /></ArcadeGate>} />
+            <Route path="/arcade/hippo" element={<ArcadeGate title="Hungry Hippo"><HungryHippo /></ArcadeGate>} />
+            <Route path="/arcade/blitz" element={<ArcadeGate title="Jungle Blitz"><JungleBlitz /></ArcadeGate>} />
+            <Route path="/arcade/leapfrog" element={<ArcadeGate title="Leap Frog"><LeapFrog /></ArcadeGate>} />
+            <Route path="/arcade/rogue" element={<ArcadeGate title="Rogue Delve"><RogueDelve /></ArcadeGate>} />
+            <Route path="/arcade/survivors" element={<ArcadeGate title="Mochi Survivors"><MochiSurvivors /></ArcadeGate>} />
+            <Route path="/arcade/fishing" element={<ArcadeGate title="Fishing"><Fishing /></ArcadeGate>} />
+            <Route path="/arcade/tangram" element={<ArcadeGate title="Tangram"><Tangram /></ArcadeGate>} />
+            <Route path="/arcade/bubbles" element={<ArcadeGate title="Bubble Pop"><BubblePop /></ArcadeGate>} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/rewards" element={<Rewards />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </AppShell>
+    </AuthProvider>
   );
 }

@@ -1,12 +1,14 @@
-// Lazy, fail-safe Firebase initializer.
+// Lazy, fail-safe Firebase initializer — Firestore is the cloud-sync store.
 //
-// The app works fully anonymously ("Math-Friend") without Firebase. Sign-in and
-// cloud sync are *additive*: everything here degrades silently when Firebase is
-// not configured, the SDK fails to load, or the network is blocked.
+// Sign-in is Clerk's job (see lib/clerk.ts); Firebase only holds the progress
+// document, and gets its session from a custom token Clerk mints. Everything
+// here is *additive*: it degrades silently when Firebase is not configured,
+// the SDK fails to load, or the network is blocked, and the app keeps working
+// from the local store.
 //
-// `firebaseConfigured` is a synchronous flag (used by the UI to decide whether to
-// even offer sign-in). `getFirebase()` lazily code-splits the SDK and returns
-// null on any failure — callers must handle null and carry on anonymously.
+// `firebaseConfigured` is a synchronous flag. `getFirebase()` lazily
+// code-splits the SDK and returns null on any failure — callers must handle
+// null and carry on without sync.
 import type { Auth } from 'firebase/auth';
 import type { Firestore } from 'firebase/firestore';
 
@@ -51,5 +53,10 @@ export function getFirebase(): Promise<FirebaseHandles | null> {
       }
     })();
   }
+  return cached;
+}
+
+/** The initialized handles if Firebase was ever loaded, without loading it. */
+export function peekFirebase(): Promise<FirebaseHandles | null> | null {
   return cached;
 }
