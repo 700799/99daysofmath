@@ -10,6 +10,7 @@ import { submitHaptic, tapHaptic, successHaptic } from '../utils/haptics';
 import { playClick, playAdvance } from '../utils/sound';
 import { useThemeSync } from '../hooks/useTheme';
 import { parentOf } from '../utils/navHierarchy';
+import { Breadcrumbs } from './Breadcrumbs';
 
 interface Props {
   children: React.ReactNode;
@@ -160,17 +161,30 @@ export function AppShell({ children }: Props) {
               </span>
             )}
             <LevelBadge variant="header" />
+            {/* Settings lives up here on every page, not in a tile at the
+                bottom of Home. */}
+            <Link
+              to="/settings"
+              aria-label="Settings"
+              title="Settings"
+              className="ml-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-lg leading-none text-ink-muted hover:bg-surface-2 hover:text-ink"
+            >
+              ⚙️
+            </Link>
             {user && (
               <Link
                 to="/settings"
                 aria-label="Account"
-                className="ml-0.5 inline-flex items-center min-h-11"
+                className="inline-flex items-center min-h-11"
               >
                 <Avatar user={user} size={32} />
               </Link>
             )}
           </div>
         </div>
+        {/* The full trail under the bar: the back link steps up one level,
+            this shows every level and links each one. */}
+        <Breadcrumbs />
       </header>
       <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-6">{children}</main>
       <XpFlash />

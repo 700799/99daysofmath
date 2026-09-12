@@ -65,5 +65,10 @@
     "triangle-inequality",
     "sides"
   ],
-  "estimatedSeconds": 55
+  "estimatedSeconds": 55,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"60\" y1=\"190\" x2=\"300\" y2=\"190\" stroke=\"#F59E0B\" stroke-width=\"3\"/><text x=\"180\" y=\"212\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">9</text><path d=\"M 165 171.5 A 106.7 106.7 0 0 0 6.7 97.6\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><path d=\"M 366.7 74.5 A 133.3 133.3 0 0 0 168.7 166.8\" fill=\"none\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><line x1=\"60\" y1=\"190\" x2=\"96.5\" y2=\"89.8\" stroke=\"#0EA5E9\" stroke-width=\"3\"/><line x1=\"300\" y1=\"190\" x2=\"254.4\" y2=\"64.7\" stroke=\"#10B981\" stroke-width=\"3\"/><text x=\"86.5\" y=\"83.8\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"end\">4</text><text x=\"264.4\" y=\"58.7\" font-size=\"13\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"start\">5</text><text x=\"180\" y=\"40\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">the two short sides cannot reach each other</text></svg>",
+    "alt": "Sides 4 and 5 swung from the ends of a side 9, failing to meet"
+  }
 }

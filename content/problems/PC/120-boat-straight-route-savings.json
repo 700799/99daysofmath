@@ -59,5 +59,10 @@
     "word-problem",
     "multi-step"
   ],
-  "estimatedSeconds": 90
+  "estimatedSeconds": 90,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"55,200 305,200 260,152\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"43\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">start</text><text x=\"317\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">finish</text><text x=\"260\" y=\"142\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">turn</text><text x=\"306.4\" y=\"178.5\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">5 km</text><text x=\"133.8\" y=\"177.2\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">16 km</text><text x=\"159.4\" y=\"217.3\" font-size=\"14\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">straight route = ?</text><path d=\"M 238.6 157 A 22 22 0 0 0 275 168.1\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"247.8\" y=\"197.2\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">120°</text></svg>",
+    "alt": "Triangle start, finish, turn with a = 5 km, b = 16 km, C = 120°, c = straight route = ?"
+  }
 }

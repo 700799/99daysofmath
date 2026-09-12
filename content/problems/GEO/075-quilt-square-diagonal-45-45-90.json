@@ -43,5 +43,10 @@
     "special-right-triangle",
     "45-45-90"
   ],
-  "estimatedSeconds": 55
+  "estimatedSeconds": 55,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"105,200 255,200 255,50 105,50\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"105\" y1=\"200\" x2=\"255\" y2=\"50\" stroke=\"#0EA5E9\" stroke-width=\"2.5\"/><text x=\"196\" y=\"117\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"start\">?</text><text x=\"180\" y=\"220\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">8 in</text><text x=\"95\" y=\"129\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"end\">8 in</text></svg>",
+    "alt": "A square 8 in by 8 in with its diagonal"
+  }
 }

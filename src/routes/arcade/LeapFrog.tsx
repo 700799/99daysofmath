@@ -362,7 +362,7 @@ export function LeapFrog() {
             className="absolute flex items-center justify-center"
             style={{ left: f.x * TILE, top: f.r * TILE, width: TILE, height: TILE }}
           >
-            <CharMascot kind="frog" size={TILE - 2} expr="happy" />
+            <CharMascot kind="scout" size={TILE - 2} expr="happy" />
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@ export function Rewards() {
     <div>
       <div className="flex items-center justify-between gap-3 mb-3">
         <h1 className="text-2xl font-display font-extrabold text-ink">🏆 My Collection</h1>
-        <div className="rounded-full bg-warn-soft text-warn px-3 py-1.5 font-display font-extrabold tabular-nums">🪙 {coins.toLocaleString()}</div>
+        <div className="rounded-full bg-warn-soft text-warn px-3 py-1.5 font-display font-extrabold tabular-nums">π {coins.toLocaleString()}</div>
       </div>
 
       {/* zoomed-in kawaii avatar */}
@@ -59,7 +59,7 @@ export function Rewards() {
           transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
         >
           {emojiOf(equipped.hat) && <span className="absolute left-1/2 -translate-x-1/2 text-5xl" style={{ top: -6 }}>{emojiOf(equipped.hat)}</span>}
-          <Mascot kind="pet" size={140} expr="cheer" />
+          <Mascot kind="captain" size={140} expr="cheer" />
           {emojiOf(equipped.outfit) && <span className="absolute left-1/2 -translate-x-1/2 text-4xl" style={{ bottom: 8 }}>{emojiOf(equipped.outfit)}</span>}
           {emojiOf(equipped.pet) && <span className="absolute text-5xl" style={{ right: -8, bottom: 0 }}>{emojiOf(equipped.pet)}</span>}
         </motion.div>
@@ -126,7 +126,7 @@ export function Rewards() {
             style={{ background: 'radial-gradient(circle at 50% 45%, rgba(217,70,239,0.55), rgba(15,23,42,0.92))' }}
           >
             <motion.div initial={{ scale: 0.4, rotate: -8 }} animate={{ scale: 1, rotate: 0 }} transition={{ type: 'spring', stiffness: 240, damping: 14 }} className="drop-shadow-[0_6px_10px_rgba(0,0,0,0.4)]">
-              {zoom.mascot ? <Mascot kind="pet" size={220} expr="cheer" /> : <div style={{ fontSize: 150 }}>{zoom.emoji}</div>}
+              {zoom.mascot ? <Mascot kind="captain" size={220} expr="cheer" /> : <div style={{ fontSize: 150 }}>{zoom.emoji}</div>}
             </motion.div>
             <div className="mt-4 font-display font-extrabold text-3xl text-white drop-shadow text-center">{zoom.name}</div>
             {zoom.blurb && <div className="mt-1 font-display font-bold text-white/85 text-center">{zoom.blurb}</div>}

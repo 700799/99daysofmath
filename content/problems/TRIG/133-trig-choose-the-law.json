@@ -66,5 +66,10 @@
     "law-of-cosines",
     "strategy"
   ],
-  "estimatedSeconds": 45
+  "estimatedSeconds": 45,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"101.9,200 258.1,200 237.1,50\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"89.9\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">A</text><text x=\"270.1\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">B</text><text x=\"237.1\" y=\"40\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">C</text><text x=\"263.6\" y=\"121.8\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">a</text><text x=\"155.8\" y=\"118.4\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">b</text><text x=\"173.6\" y=\"221.8\" font-size=\"14\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text><path d=\"M 222.4 66.3 A 22 22 0 0 0 240.2 71.8\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"224.8\" y=\"95.2\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">C</text></svg>",
+    "alt": "Triangle ABC with a = a, b = b, C = C, c = ?"
+  }
 }

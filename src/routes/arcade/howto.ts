@@ -147,7 +147,7 @@ export const GAME_HOWTO: Record<string, GameHowTo> = {
 
   hero: {
     sections: [
-      { heading: 'Goal', body: 'Get all the treasure 💰 to your hero 🦸. Pull the pins to let things drop — but in the right ORDER!' },
+      { heading: 'Goal', body: 'Get all the treasure 💎 to your hero 🦸. Pull the pins to let things drop — but in the right ORDER!' },
       { heading: 'Danger', body: 'If lava 🌋 or a monster 👹 reaches the hero, it’s game over. Plan before you pull!' },
       { heading: 'Tricks', body: 'Water 💧 + lava 🌋 cancel each other out (quench the lava first). Drop a monster 👹 into an empty pit to clear its chamber.' },
       { heading: 'Solve to pull', body: 'Each pin is locked with a math problem — solve it to pull that pin.' },

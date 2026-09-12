@@ -43,5 +43,10 @@
     "composite-area",
     "word-problem"
   ],
-  "estimatedSeconds": 60
+  "estimatedSeconds": 60,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"70,200 270,200 270,140 190,140 190,80 70,80\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"170\" y=\"220\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">10 ft</text><text x=\"60\" y=\"144\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"end\">6 ft</text><text x=\"230\" y=\"70\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">4 ft</text><text x=\"280\" y=\"114\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">3 ft</text><path d=\"M 190 80 L 270 80 L 270 140\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/></svg>",
+    "alt": "An L-shaped region: a 10 ft by 6 ft rectangle with a 4 ft by 3 ft corner removed"
+  }
 }

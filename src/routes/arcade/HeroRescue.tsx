@@ -18,7 +18,7 @@ type Chamber = { id: string; x: number; y: number };
 type Pin = { id: string; from: string; to: string };
 type Level = { name: string; chambers: Chamber[]; fills: Record<string, Fill>; pins: Pin[] };
 
-const EMOJI: Record<Fill, string> = { hero: '🦸', lava: '🌋', water: '💧', treasure: '💰', monster: '👹', empty: '' };
+const EMOJI: Record<Fill, string> = { hero: '🦸', lava: '🌋', water: '💧', treasure: '💎', monster: '👹', empty: '' };
 const BG: Record<Fill, string> = {
   hero: 'bg-amber-100 border-amber-400',
   lava: 'bg-red-100 border-red-400',
@@ -97,7 +97,7 @@ const LEVELS: Level[] = [
 ];
 
 const HOWTO: HowToSection[] = [
-  { heading: 'Goal', body: 'Get all the treasure 💰 to your hero 🦸. Pull the pins to let things drop — but in the right ORDER!' },
+  { heading: 'Goal', body: 'Get all the treasure 💎 to your hero 🦸. Pull the pins to let things drop — but in the right ORDER!' },
   { heading: 'Danger', body: 'If lava 🌋 or a monster 👹 reaches the hero, it’s game over. Plan before you pull!' },
   { heading: 'Tricks', body: 'Water 💧 + lava 🌋 cancel each other out (quench the lava first). Drop a monster 👹 into an empty pit to clear its chamber.' },
   { heading: 'Solve to pull', body: 'Each pin is locked with a math problem — solve it to pull that pin.' },
@@ -276,7 +276,7 @@ export function HeroRescue() {
       <ArcadeHeader title="Hero Rescue" emoji="🦸" />
       <div className="flex justify-between items-center mb-1 max-w-sm mx-auto px-1 text-xs font-display font-extrabold">
         <span className="text-slate-700">Level {levelIdx + 1}/{LEVELS.length}</span>
-        <span className="text-amber-600">💰 {collected}/{required}</span>
+        <span className="text-amber-600">💎 {collected}/{required}</span>
         <button type="button" onClick={retry} className="rounded-lg bg-slate-200 px-2 py-1 text-slate-700">↺ Retry</button>
       </div>
       <p className="text-center text-[11px] font-display font-bold text-slate-500 mb-1">{level.name}</p>
@@ -326,7 +326,7 @@ export function HeroRescue() {
       </GameStage>
 
       <p className="text-center text-[11px] text-slate-500 mt-2">
-        💰→🦸 to win · 🌋/👹→🦸 = game over · 💧 quenches 🌋 · drop 👹 into an empty pit.
+        💎→🦸 to win · 🌋/👹→🦸 = game over · 💧 quenches 🌋 · drop 👹 into an empty pit.
       </p>
 
       {/* level cleared */}

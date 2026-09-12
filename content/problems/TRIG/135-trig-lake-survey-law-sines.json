@@ -45,5 +45,10 @@
     "surveying",
     "word-problem"
   ],
-  "estimatedSeconds": 80
+  "estimatedSeconds": 80,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"112.8,200 247.2,200 192.6,50\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"100.8\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">A</text><text x=\"259.2\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">B</text><text x=\"192.6\" y=\"40\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">C</text><text x=\"133.9\" y=\"115.1\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">210 m</text><text x=\"178\" y=\"228.9\" font-size=\"14\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">AB = ?</text><path d=\"M 134.8 200 A 22 22 0 0 0 123.2 180.6\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"148.8\" y=\"183.4\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">62°</text><path d=\"M 182.3 69.4 A 22 22 0 0 0 200.1 70.7\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"189.7\" y=\"96.9\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">48°</text></svg>",
+    "alt": "Triangle ABC with A = 62°, C = 48°, b = 210 m, c = AB = ?"
+  }
 }

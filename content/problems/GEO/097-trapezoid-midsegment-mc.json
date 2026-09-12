@@ -65,5 +65,10 @@
     "trapezoid",
     "midsegment"
   ],
-  "estimatedSeconds": 50
+  "estimatedSeconds": 50,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"50,190 310,190 250,70 110,70\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"80\" y1=\"130\" x2=\"280\" y2=\"130\" stroke=\"#0EA5E9\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><circle cx=\"80\" cy=\"130\" r=\"4\" fill=\"#0EA5E9\"/><circle cx=\"280\" cy=\"130\" r=\"4\" fill=\"#0EA5E9\"/><text x=\"180\" y=\"124\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text><text x=\"180\" y=\"60\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">14 ft</text><text x=\"180\" y=\"212\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">22 ft</text></svg>",
+    "alt": "A trapezoid with parallel sides 14 ft and 22 ft"
+  }
 }

@@ -140,7 +140,7 @@ export function FractionPizza() {
 
       {/* the order ticket */}
       <div className="mx-auto mb-3 flex max-w-md items-center justify-center gap-3 rounded-2xl border-2 border-amber-300 bg-amber-50 px-4 py-2">
-        <CharMascot kind="clerk" size={48} expr={flash === 'good' ? 'cheer' : flash === 'bad' ? 'dizzy' : 'happy'} />
+        <CharMascot kind="analyst" size={48} expr={flash === 'good' ? 'cheer' : flash === 'bad' ? 'dizzy' : 'happy'} />
         <div className="text-slate-700">
           <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-amber-600">Order {order.topping}</div>
           <div className="flex items-center gap-2">

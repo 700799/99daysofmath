@@ -56,5 +56,10 @@
     "semicircle",
     "multi-step"
   ],
-  "estimatedSeconds": 85
+  "estimatedSeconds": 85,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"120,220 240,220 240,60 120,60\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M 240 60 A 60 60 0 0 0 120 60 Z\" fill=\"#0EA5E922\" stroke=\"#0EA5E9\" stroke-width=\"2.5\"/><text x=\"180\" y=\"240\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">3 ft</text><text x=\"110\" y=\"144\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"end\">4 ft</text></svg>",
+    "alt": "A 3 ft wide by 4 ft tall rectangle with a semicircle on top"
+  }
 }

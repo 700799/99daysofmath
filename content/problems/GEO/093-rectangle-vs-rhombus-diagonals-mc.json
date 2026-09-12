@@ -66,5 +66,10 @@
     "rectangle",
     "rhombus"
   ],
-  "estimatedSeconds": 50
+  "estimatedSeconds": 50,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"30,170 170,170 170,80 30,80\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"200,125 265,185 330,125 265,65\" fill=\"#0EA5E918\" stroke=\"#0EA5E9\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"30\" y1=\"170\" x2=\"170\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\"/><line x1=\"30\" y1=\"80\" x2=\"170\" y2=\"170\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\"/><line x1=\"200\" y1=\"125\" x2=\"330\" y2=\"125\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\"/><line x1=\"265\" y1=\"185\" x2=\"265\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\"/><text x=\"100\" y=\"200\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">rectangle</text><text x=\"265\" y=\"210\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">rhombus</text></svg>",
+    "alt": "A rectangle and a rhombus, each with both diagonals drawn"
+  }
 }

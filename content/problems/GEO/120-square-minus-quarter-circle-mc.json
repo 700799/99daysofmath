@@ -78,5 +78,10 @@
     "composite-area",
     "quarter-circle"
   ],
-  "estimatedSeconds": 85
+  "estimatedSeconds": 85,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"95,215 265,215 265,45 95,45\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M 95 215 L 265 215 A 170 170 0 0 0 95 45 Z\" fill=\"#0EA5E933\" stroke=\"#0EA5E9\" stroke-width=\"2.5\"/><text x=\"180\" y=\"235\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">12 in</text><text x=\"155\" y=\"175\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">painted</text></svg>",
+    "alt": "A square of side 12 in with a quarter circle drawn from one corner"
+  }
 }

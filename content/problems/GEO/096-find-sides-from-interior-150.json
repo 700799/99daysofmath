@@ -44,5 +44,10 @@
     "exterior-angles",
     "reverse"
   ],
-  "estimatedSeconds": 60
+  "estimatedSeconds": 60,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 280\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M 174.6 231.8 L 217.2 207.2 L 241.8 164.6 L 241.8 115.4\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"3\"/><line x1=\"174.6\" y1=\"231.8\" x2=\"149\" y2=\"246.5\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-dasharray=\"4 6\"/><line x1=\"241.8\" y1=\"115.4\" x2=\"241.8\" y2=\"85.9\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-dasharray=\"4 6\"/><path d=\"M 229.2 186.4 A 24 24 0 0 0 196.4 219.2\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.4\"/><text x=\"187.5\" y=\"182.5\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">150°</text><text x=\"150\" y=\"272\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">how many sides?</text></svg>",
+    "alt": "A regular polygon with some of its sides, interior angle 150°"
+  }
 }

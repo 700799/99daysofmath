@@ -58,5 +58,10 @@
     "parallel-lines",
     "proportion"
   ],
-  "estimatedSeconds": 85
+  "estimatedSeconds": 85,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"180,40 60,210 320,210\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/><line x1=\"132\" y1=\"108\" x2=\"236\" y2=\"108\" stroke=\"#0EA5E9\" stroke-width=\"2.5\"/><line x1=\"212.1\" y1=\"214.3\" x2=\"220\" y2=\"210\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"212.1\" y1=\"205.7\" x2=\"220\" y2=\"210\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"186.1\" y1=\"112.3\" x2=\"194\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"186.1\" y1=\"103.7\" x2=\"194\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"180\" y=\"32\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">A</text><text x=\"48\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">B</text><text x=\"332\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">C</text><text x=\"120\" y=\"112\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">D</text><text x=\"248\" y=\"112\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">E</text><text x=\"142\" y=\"74\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"end\">4</text><text x=\"82\" y=\"159\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"end\">6</text><text x=\"222\" y=\"74\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">6</text><text x=\"292\" y=\"159\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"start\">?</text></svg>",
+    "alt": "Triangle ABC with DE parallel to BC; AD 4, DB 6, AE 6, EC ?"
+  }
 }

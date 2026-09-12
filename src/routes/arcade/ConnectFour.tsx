@@ -255,10 +255,10 @@ export function ConnectFour() {
           win={result === 'win'}
           scoreLine={
             result === 'win'
-              ? 'You beat the owl! 🎉'
+              ? 'You beat the Captain! 🎉'
               : result === 'draw'
                 ? 'A draw — nice defense!'
-                : 'The owl got you this time!'
+                : 'The Captain got you this time!'
           }
           onReplay={reset}
         />
@@ -266,12 +266,12 @@ export function ConnectFour() {
         <>
           <p className="text-sm text-slate-600 mb-3">
             {phase === 'owl-thinking'
-              ? '🦉 The owl is thinking…'
+              ? '🧑‍🚀 The Captain is thinking…'
               : phase === 'celebrate'
                 ? result === 'win'
                   ? '🎉 Four in a row — you win!'
                   : result === 'lose'
-                    ? '🦉 The owl got four in a row!'
+                    ? '🧑‍🚀 The Captain got four in a row!'
                     : "It's a draw!"
                 : 'Your move — tap a column. You are the 😆 pup!'}
           </p>

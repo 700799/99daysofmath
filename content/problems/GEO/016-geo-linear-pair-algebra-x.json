@@ -44,5 +44,10 @@
     "linear-pair",
     "algebra"
   ],
-  "estimatedSeconds": 50
+  "estimatedSeconds": 50,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"20\" y1=\"180\" x2=\"340\" y2=\"180\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"150\" y1=\"180\" x2=\"123\" y2=\"52.8\" stroke=\"#F59E0B\" stroke-width=\"3\"/><path d=\"M 186 180 A 36 36 0 0 0 142.5 144.8\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.4\"/><text x=\"184\" y=\"143\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">1</text><path d=\"M 139.2 129.1 A 52 52 0 0 0 98 180\" fill=\"none\" stroke=\"#10B981\" stroke-width=\"2.4\"/><text x=\"95.6\" y=\"140.9\" font-size=\"13\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"middle\">2</text><text x=\"180\" y=\"232\" font-size=\"11\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">∠1 = (3x)° · ∠2 = (2x + 10)°</text></svg>",
+    "alt": "Two angles on a straight line: (3x)° and (2x + 10)°"
+  }
 }

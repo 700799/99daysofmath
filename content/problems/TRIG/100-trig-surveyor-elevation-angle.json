@@ -59,5 +59,10 @@
     "angle-of-elevation",
     "common-error"
   ],
-  "estimatedSeconds": 85
+  "estimatedSeconds": 85,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"30\" y1=\"201\" x2=\"330\" y2=\"201\" stroke=\"currentColor\" stroke-width=\"2.5\" opacity=\"0.5\"/><polygon points=\"159.4,195 215.6,45 215.6,195\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M 201.6 195 L 201.6 181 L 215.6 181\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"M 189.4 195 A 30 30 0 0 0 169.9 166.9\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.5\"/><text x=\"198.8\" y=\"172.7\" font-size=\"14\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">?</text><text x=\"187.5\" y=\"217\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">15 m</text><text x=\"225.6\" y=\"125\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">40 m</text></svg>",
+    "alt": "A right triangle with opposite 40 m, adjacent 15 m"
+  }
 }

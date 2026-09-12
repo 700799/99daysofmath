@@ -43,5 +43,10 @@
     "complementary",
     "angle-pairs"
   ],
-  "estimatedSeconds": 25
+  "estimatedSeconds": 25,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"150\" y1=\"180\" x2=\"300\" y2=\"180\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"150\" y1=\"180\" x2=\"150\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"150\" y1=\"180\" x2=\"264.7\" y2=\"99.7\" stroke=\"#F59E0B\" stroke-width=\"3\"/><path d=\"M 162 180 L 162 168 L 150 168\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"M 190 180 A 40 40 0 0 0 182.8 157.1\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.4\"/><text x=\"205.3\" y=\"167.6\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">35°</text><path d=\"M 197.5 146.7 A 58 58 0 0 0 150 122\" fill=\"none\" stroke=\"#10B981\" stroke-width=\"2.4\"/><text x=\"185.1\" y=\"117.6\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text></svg>",
+    "alt": "Two angles sharing a ray inside a right angle: 35° and ?"
+  }
 }

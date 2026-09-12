@@ -56,5 +56,10 @@
     "multi-step",
     "word-problem"
   ],
-  "estimatedSeconds": 85
+  "estimatedSeconds": 85,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"30\" y1=\"201\" x2=\"330\" y2=\"201\" stroke=\"currentColor\" stroke-width=\"2.5\" opacity=\"0.5\"/><line x1=\"80\" y1=\"195\" x2=\"80\" y2=\"221\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"4 3\"/><line x1=\"30\" y1=\"221\" x2=\"330\" y2=\"221\" stroke=\"currentColor\" stroke-width=\"2.5\" opacity=\"0.5\"/><line x1=\"295\" y1=\"195\" x2=\"295\" y2=\"221\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"4 3\"/><text x=\"72\" y=\"215\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"end\" opacity=\"0.8\">5 ft</text><polygon points=\"80,195 295,60.6 295,195\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M 281 195 L 281 181 L 295 181\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"M 110 195 A 30 30 0 0 0 105.4 179.1\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.5\"/><text x=\"116.6\" y=\"190.1\" font-size=\"14\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"start\">32°</text><text x=\"187.5\" y=\"235\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">150 ft</text><text x=\"305\" y=\"132.8\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">?</text></svg>",
+    "alt": "A right triangle with opposite ?, adjacent 150 ft"
+  }
 }

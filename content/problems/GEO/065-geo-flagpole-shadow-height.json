@@ -45,5 +45,10 @@
     "indirect-measurement",
     "proportion"
   ],
-  "estimatedSeconds": 60
+  "estimatedSeconds": 60,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"20\" y1=\"200\" x2=\"340\" y2=\"200\" stroke=\"currentColor\" stroke-width=\"2.5\" opacity=\"0.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"150\" stroke=\"#F59E0B\" stroke-width=\"4\"/><line x1=\"60\" y1=\"200\" x2=\"94\" y2=\"200\" stroke=\"#10B981\" stroke-width=\"4\"/><line x1=\"60\" y1=\"150\" x2=\"94\" y2=\"200\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\" opacity=\"0.6\"/><text x=\"52\" y=\"179\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"end\">6 ft</text><text x=\"77\" y=\"218\" font-size=\"12\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"middle\">4 ft</text><line x1=\"190\" y1=\"200\" x2=\"190\" y2=\"60\" stroke=\"#0EA5E9\" stroke-width=\"4\"/><line x1=\"190\" y1=\"200\" x2=\"285\" y2=\"200\" stroke=\"#10B981\" stroke-width=\"4\"/><line x1=\"190\" y1=\"60\" x2=\"285\" y2=\"200\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\" opacity=\"0.6\"/><text x=\"182\" y=\"134\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"end\">?</text><text x=\"237.5\" y=\"218\" font-size=\"12\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"middle\">24 ft</text><text x=\"300\" y=\"40\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.75\">same sun,</text><text x=\"300\" y=\"56\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.75\">same moment</text></svg>",
+    "alt": "Two objects and their shadows at the same moment: 6 ft with shadow 4 ft, ? with shadow 24 ft"
+  }
 }

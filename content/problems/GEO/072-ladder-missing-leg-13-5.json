@@ -43,5 +43,10 @@
     "pythagorean-theorem",
     "missing-leg"
   ],
-  "estimatedSeconds": 45
+  "estimatedSeconds": 45,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"30\" y1=\"201\" x2=\"330\" y2=\"201\" stroke=\"currentColor\" stroke-width=\"2.5\" opacity=\"0.5\"/><polygon points=\"156.3,195 218.8,45 218.8,195\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M 204.8 195 L 204.8 181 L 218.8 181\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><text x=\"187.5\" y=\"217\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">5 ft</text><text x=\"228.8\" y=\"125\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">?</text><text x=\"172.7\" y=\"118.8\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">13 ft</text></svg>",
+    "alt": "A right triangle with opposite ?, adjacent 5 ft, hypotenuse 13 ft"
+  }
 }

@@ -43,5 +43,10 @@
     "midsegment",
     "triangles"
   ],
-  "estimatedSeconds": 45
+  "estimatedSeconds": 45,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"55,200 305,200 159.9,70.5\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"43\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">A</text><text x=\"317\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">B</text><text x=\"159.9\" y=\"60.5\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">C</text><text x=\"182.8\" y=\"222.8\" font-size=\"14\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text><line x1=\"107.5\" y1=\"135.3\" x2=\"232.5\" y2=\"135.3\" stroke=\"#0EA5E9\" stroke-width=\"2.5\"/><circle cx=\"107.5\" cy=\"135.3\" r=\"4\" fill=\"#0EA5E9\"/><circle cx=\"232.5\" cy=\"135.3\" r=\"4\" fill=\"#0EA5E9\"/><text x=\"170\" y=\"127.3\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">9 in</text></svg>",
+    "alt": "Triangle ABC with c = ?"
+  }
 }

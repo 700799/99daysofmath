@@ -116,3 +116,75 @@ export function parentOf(pathname: string): ParentLink | null {
       return HOME;
   }
 }
+
+// ── The whole trail ────────────────────────────────────────────────────────
+// The back link steps up one level; the breadcrumb shows every level, so a
+// student three screens deep can see where they are and jump straight to
+// any point above — a drill's unit, its course, or Home — without stepping.
+
+/**
+ * Every ancestor of `pathname`, Home first, ending at its parent. Empty on
+ * Home. Built by walking `parentOf` upwards, so it can never disagree with
+ * the back link.
+ */
+export function trailOf(pathname: string): ParentLink[] {
+  const out: ParentLink[] = [];
+  let p = parentOf(pathname);
+  // A hierarchy is finite; the bound is only insurance against a cycle.
+  for (let i = 0; p && i < 8; i++) {
+    out.unshift(p);
+    p = parentOf(p.to);
+  }
+  return out;
+}
+
+const ARCADE_NAMES: Record<string, string> = {
+  connect4: 'Connect 4', tictactoe: 'Tic-Tac-Toe', mathpop: 'Math Pop', speedlab: 'Speed Lab',
+  starhop: 'Star Hop', leapfrog: 'Leap Frog', racer2: 'Racer 2', kpop: 'K-Pop', wheel: 'Prize Wheel',
+};
+
+/** The current page's own name — the last, unlinked crumb. */
+export function titleOf(pathname: string): string {
+  const seg = pathname.split('/').filter(Boolean);
+  if (seg.length === 0) return 'Home';
+  const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+  switch (seg[0]) {
+    case 'sat':
+      if (seg.length === 1) return 'SAT Math';
+      if (seg[1] === 'tips') return 'Tips';
+      if (seg[1] === 'unit') return `Unit ${seg[2]}`;
+      if (seg[1] === 'test') return `Test ${seg[2]}`;
+      if (seg[1] === 'analysis') return 'Analysis';
+      if (seg[1] === 'recovery') return 'Recovery';
+      return cap(seg[1]);
+    case 'unit':
+      if (seg[3] === 'results') return 'Results';
+      // a SAT drill sits under its unit playbook, which already says "Unit n"
+      return seg[1] === 'SAT' ? 'Drill' : `Unit ${seg[2]}`;
+    case 'trail': {
+      const d = seg[1];
+      if (!isDomain(d)) return 'Trail';
+      const course = courseOfDomain(d);
+      // a one-strand course is its trail; a strand of a bigger course keeps
+      // its own name
+      return course && course.strands.length === 1 ? course.short : DOMAIN_BACK_LABEL[d];
+    }
+    case 'course':
+      return getCourse(seg[1] ?? '')?.short ?? 'Course';
+    case 'finals':
+      if (seg.length === 1) return 'Finals';
+      if (seg.length === 2) return getCourse(seg[1])?.short ?? 'Finals';
+      return `Quiz ${seg[2]}`;
+    case 'review':
+      return seg.length > 1 && isDomain(seg[1]) ? DOMAIN_BACK_LABEL[seg[1]] : 'Review';
+    case 'arcade':
+      return seg.length > 1 ? (ARCADE_NAMES[seg[1]] ?? cap(seg[1])) : 'Arcade';
+    case 'map5':
+      return seg.length > 1 ? 'Practice test' : 'MAP prep';
+    case 'mix': return 'Daily Mix';
+    case 'test': return 'Mock Test';
+    case 'mathematicians': return 'Mathematicians';
+    default:
+      return cap(seg[0]);
+  }
+}

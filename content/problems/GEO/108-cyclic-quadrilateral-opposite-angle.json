@@ -43,5 +43,10 @@
     "inscribed-angle",
     "cyclic-quadrilateral"
   ],
-  "estimatedSeconds": 50
+  "estimatedSeconds": 50,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 300\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"160\" cy=\"150\" r=\"105\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><polygon points=\"61.3,114.1 212.5,59.1 258.7,185.9 124.1,248.7\" fill=\"#F59E0B15\" stroke=\"#F59E0B\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/><circle cx=\"61.3\" cy=\"114.1\" r=\"4.5\" fill=\"currentColor\"/><text x=\"46.3\" y=\"113.6\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">W</text><circle cx=\"212.5\" cy=\"59.1\" r=\"4.5\" fill=\"currentColor\"/><text x=\"220.5\" y=\"50.2\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">X</text><circle cx=\"258.7\" cy=\"185.9\" r=\"4.5\" fill=\"currentColor\"/><text x=\"273.7\" y=\"196.4\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">Y</text><circle cx=\"124.1\" cy=\"248.7\" r=\"4.5\" fill=\"currentColor\"/><text x=\"118.6\" y=\"268.7\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">Z</text><path d=\"M 69.8 132.2 A 20 20 0 0 0 80.1 107.2\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.4\"/><text x=\"96.4\" y=\"133.6\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">95°</text><path d=\"M 251.8 167.1 A 20 20 0 0 0 240.5 194.4\" fill=\"none\" stroke=\"#10B981\" stroke-width=\"2.4\"/><text x=\"223.6\" y=\"176.4\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text></svg>",
+    "alt": "A quadrilateral with all four corners on a circle"
+  }
 }

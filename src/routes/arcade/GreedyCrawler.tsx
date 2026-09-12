@@ -15,7 +15,7 @@ import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 // gamble stops being worth it. Trip the alarm and you lose the un-banked loot.
 
 const TARGET = 50; // gold you must BANK to win
-const HEROES: MascotKind[] = ['racerRed', 'racerGreen', 'racerViolet', 'gizmoTeal', 'gizmoCoral', 'gizmoViolet', 'gizmoLime', 'gizmoCyan', 'gizmoSun', 'gizmoRose', 'gizmoSlate', 'fox'];
+const HEROES: MascotKind[] = ['scout', 'pilot', 'engineer', 'navigator', 'captain', 'rookie', 'medic', 'analyst'];
 
 // reward for entering the n-th room of a run (1-based) — deeper = richer
 const rewardForRoom = (n: number) => 2 + 2 * n;
@@ -116,7 +116,7 @@ export function GreedyCrawler() {
           gameId="crawler"
           outcome={outcome}
           win={banked >= TARGET}
-          scoreLine={`You banked ${banked} gold! 💰`}
+          scoreLine={`You banked ${banked} gold! 💎`}
           onReplay={() => { reset(); setHero(null); }}
         />
       </div>
@@ -154,7 +154,7 @@ export function GreedyCrawler() {
         <ArcadeHeader title="Lucky Crawl" emoji="🎲" gameId="crawler" />
         <div className="mx-auto max-w-sm text-center">
           <div className="mb-2 rounded-2xl bg-amber-50 border-2 border-amber-200 px-4 py-2 font-display font-extrabold text-amber-800">
-            💰 Banked {banked} / {TARGET} gold — solve for a bonus!
+            💎 Banked {banked} / {TARGET} gold — solve for a bonus!
           </div>
           <MilestoneQuiz onDone={() => setQuizOpen(false)} len="word" label="🧮 Vault puzzle — solve for coins!" />
         </div>
@@ -174,7 +174,7 @@ export function GreedyCrawler() {
       {/* totals */}
       <div className="mx-auto mb-2 flex max-w-sm items-center justify-between px-1 font-display font-extrabold">
         <span className="text-amber-600">🏦 Banked {banked}/{TARGET}</span>
-        <span className="text-emerald-600">💰 Pot {pot}</span>
+        <span className="text-emerald-600">💎 Pot {pot}</span>
       </div>
       {/* progress to target */}
       <div className="mx-auto mb-3 h-2 max-w-sm overflow-hidden rounded-full bg-slate-200">
@@ -208,7 +208,7 @@ export function GreedyCrawler() {
                     </>
                   ) : (
                     <>
-                      <div className="text-2xl">💰</div>
+                      <div className="text-2xl">💎</div>
                       <div className="text-[10px] font-mono font-bold text-amber-200">+{rewardForRoom(i)}</div>
                     </>
                   )}

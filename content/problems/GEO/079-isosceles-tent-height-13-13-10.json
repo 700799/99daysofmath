@@ -56,5 +56,10 @@
     "isosceles",
     "multi-step"
   ],
-  "estimatedSeconds": 75
+  "estimatedSeconds": 75,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"117.5,200 242.5,200 180,50\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"105.5\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">A</text><text x=\"254.5\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">B</text><text x=\"180\" y=\"40\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">C</text><text x=\"230\" y=\"115\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">13 ft</text><text x=\"130\" y=\"115\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">13 ft</text><text x=\"180\" y=\"229\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">10 ft</text><line x1=\"180\" y1=\"50\" x2=\"180\" y2=\"200\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><text x=\"196\" y=\"129\" font-size=\"13\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"start\">?</text></svg>",
+    "alt": "Triangle ABC with a = 13 ft, b = 13 ft, c = 10 ft"
+  }
 }

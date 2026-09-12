@@ -50,5 +50,10 @@
     "AA",
     "triangles"
   ],
-  "estimatedSeconds": 35
+  "estimatedSeconds": 35,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"30,190 130,190 95,120\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/><path d=\"M 44 190 A 14 14 0 0 0 39.5 179.7\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2\"/><path d=\"M 123.7 177.5 A 14 14 0 0 0 116 190\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2\"/><path d=\"M 121.5 173 A 19 19 0 0 0 111 190\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2\"/><polygon points=\"170,190 330,190 274,78\" fill=\"#0EA5E918\" stroke=\"#0EA5E9\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/><path d=\"M 184 190 A 14 14 0 0 0 179.5 179.7\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2\"/><path d=\"M 323.7 177.5 A 14 14 0 0 0 316 190\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2\"/><path d=\"M 321.5 173 A 19 19 0 0 0 311 190\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2\"/><text x=\"180\" y=\"230\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.8\">two pairs of matching angles</text></svg>",
+    "alt": "Two similar triangles, small and large"
+  }
 }

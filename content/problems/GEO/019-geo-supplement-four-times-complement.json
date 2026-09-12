@@ -57,5 +57,10 @@
     "supplementary",
     "algebra"
   ],
-  "estimatedSeconds": 80
+  "estimatedSeconds": 80,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"80\" y1=\"170\" x2=\"170\" y2=\"170\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"80\" y1=\"170\" x2=\"80\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"80\" y1=\"170\" x2=\"145.1\" y2=\"115.4\" stroke=\"#F59E0B\" stroke-width=\"3\"/><path d=\"M 92 170 L 92 158 L 80 158\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"M 110 170 A 30 30 0 0 0 103 150.7\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"2.4\"/><text x=\"125.1\" y=\"158.6\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">θ</text><path d=\"M 116.8 139.1 A 48 48 0 0 0 80 122\" fill=\"none\" stroke=\"#10B981\" stroke-width=\"2.4\"/><text x=\"110.4\" y=\"109.7\" font-size=\"13\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"middle\">complement</text><line x1=\"220\" y1=\"170\" x2=\"350\" y2=\"170\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"230\" y1=\"170\" x2=\"295.1\" y2=\"115.4\" stroke=\"#F59E0B\" stroke-width=\"3\"/><path d=\"M 260 170 A 30 30 0 0 0 253 150.7\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"2.4\"/><text x=\"275.1\" y=\"158.6\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">θ</text><path d=\"M 266.8 139.1 A 48 48 0 0 0 182 170\" fill=\"none\" stroke=\"#F43F5E\" stroke-width=\"2.4\"/><text x=\"205.4\" y=\"107.3\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">supplement</text><text x=\"120\" y=\"218\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.75\">adds to 90°</text><text x=\"280\" y=\"218\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.75\">adds to 180°</text></svg>",
+    "alt": "The same angle with its complement (to 90°) and its supplement (to 180°)"
+  }
 }

@@ -43,5 +43,10 @@
     "symmetry",
     "regular-polygon"
   ],
-  "estimatedSeconds": 50
+  "estimatedSeconds": 50,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 280\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"186.4,227.8 237.8,176.4 237.8,103.6 186.4,52.2 113.6,52.2 62.2,103.6 62.2,176.4 113.6,227.8\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"150\" y=\"272\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">how many lines of symmetry?</text></svg>",
+    "alt": "A regular polygon with 8 sides"
+  }
 }

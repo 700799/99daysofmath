@@ -8,7 +8,7 @@ import { sfx, haptic, HAPTIC } from '../../utils/arcadeAV';
 import { useArcadeClock } from '../../hooks/useArcadeClock';
 
 // Cute mascot faces from the inventory — 8 distinct kinds make the 8 pairs.
-const FACES: MascotKind[] = ['panda', 'ninja', 'fox', 'cat', 'bunny', 'redpanda', 'capsuleR', 'cow'];
+const FACES: MascotKind[] = ['scout', 'pilot', 'engineer', 'navigator', 'captain', 'rookie', 'medic', 'analyst'];
 
 interface Card {
   id: number;

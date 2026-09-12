@@ -326,7 +326,7 @@ export function DressToImpress() {
             </>
           ) : (
             <div className={`mt-2 text-center font-display font-extrabold ${checkout.correct ? 'text-emerald-700' : 'text-rose-600'}`}>
-              {checkout.correct ? `Correct! Change = ${money(remaining)} 🪙 +bonus` : `Change = ${money(remaining)}. Keep practicing!`}
+              {checkout.correct ? `Correct! Change = ${money(remaining)} π +bonus` : `Change = ${money(remaining)}. Keep practicing!`}
             </div>
           )}
         </div>
@@ -357,7 +357,7 @@ export function DressToImpress() {
               ) : (
                 <>
                   <div className={`mt-3 font-display font-extrabold ${bonus.correct ? 'text-violet-700' : 'text-rose-600'}`}>
-                    {bonus.correct ? 'Correct! 🪙 +style coins' : `It’s ${slotCount('top') * slotCount('bottom') * slotCount('shoes')} outfits!`}
+                    {bonus.correct ? 'Correct! π +style coins' : `It’s ${slotCount('top') * slotCount('bottom') * slotCount('shoes')} outfits!`}
                   </div>
                   <button type="button" onClick={() => loadRound(roundIdx + 1)} className="mt-3 w-full min-h-11 rounded-2xl bg-fuchsia-500 hover:bg-fuchsia-600 text-white font-display font-extrabold">
                     Next theme ▶
@@ -386,7 +386,7 @@ export function DressToImpress() {
       </div>
 
       <div className="max-w-md mx-auto mb-2 flex items-center justify-between gap-2 text-[11px] font-display font-extrabold">
-        <span className={`rounded-full px-2.5 py-1 ${remaining >= 0 ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-700'}`}>💰 {money(remaining)} left</span>
+        <span className={`rounded-full px-2.5 py-1 ${remaining >= 0 ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-700'}`}>🧾 {money(remaining)} left</span>
         <span className="rounded-full bg-amber-100 text-amber-800 px-2.5 py-1">☀ {warmCount} : {coolCount} ❄</span>
         <span className="rounded-full bg-slate-800 text-white px-2.5 py-1">🎯 {theme.ratio.w}:{theme.ratio.c}</span>
         <span className="rounded-full bg-fuchsia-100 text-fuchsia-800 px-2.5 py-1">👗 {REQUIRED.filter((s) => equipped[s]).length}/{REQUIRED.length}</span>
