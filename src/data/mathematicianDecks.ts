@@ -9,42 +9,11 @@
 // for "a teacher in Alexandria"), which set a mood and taught nothing; a kid
 // looking at the picture learned no more than a kid looking at a blank wall.
 
-/** What gets drawn in the illustration pane. */
-export type MathFigure =
-  /** Typeset mathematics: the identity, sum, or worked line being told. */
-  | { kind: 'math'; tex: string[]; caption?: string }
-  /** A drawn figure on a fixed 400×320 canvas, in the player's palette. */
-  | { kind: 'svg'; svg: string; alt: string; caption?: string };
+import { tex, draw, INK, DIM, HI, OK, NO, SKY } from './mathFigure';
+import type { MathFigure } from './mathFigure';
+import { HS_MATHEMATICIAN_DECKS } from './mathematiciansHS';
 
-// The palette the figures are drawn in, against the player's indigo pane.
-const INK = '#ece9ff'; // lines and labels
-const DIM = '#a5b4fc'; // secondary lines, axes, grids
-const HI = '#fbbf24';  // the thing to look at
-const OK = '#34d399';  // a result, a match, a yes
-const NO = '#f472b6';  // a contrast, a failure, a no
-const SKY = '#60a5fa'; // a second series
-
-/** Typeset mathematics. */
-function tex(lines: string[], caption?: string): MathFigure {
-  return { kind: 'math', tex: lines, caption };
-}
-
-/**
- * A drawn figure. The viewBox is fixed here so every figure scales the same
- * way, and text defaults to readable ink on the dark pane.
- */
-function draw(alt: string, body: string, caption?: string): MathFigure {
-  return {
-    kind: 'svg',
-    alt,
-    caption,
-    svg:
-      `<svg viewBox="0 0 400 320" width="100%" height="100%" ` +
-      `font-family="ui-rounded, system-ui, -apple-system, sans-serif" ` +
-      `font-weight="700" font-size="15" fill="${INK}" stroke-linecap="round" ` +
-      `stroke-linejoin="round">${body}</svg>`,
-  };
-}
+export type { MathFigure } from './mathFigure';
 
 export interface MathSlide {
   head: string;
@@ -59,16 +28,19 @@ export interface MathematicianDeck {
   era: string;
   emoji: string;
   tieIn: string; // which app unit(s) this connects to, shown on the title slide
+  /** Route of that unit or course, so the title slide's tie-in can be a link. */
+  tieInTo?: string;
   slides: MathSlide[];
 }
 
-export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [
+const CORE_DECKS: MathematicianDeck[] = [
   {
     id: 'Euclid',
     name: 'Euclid',
     era: '300 BC',
     emoji: '📐',
     tieIn: '6.G · Geometry',
+    tieInTo: '/trail/6.G',
     slides: [
       {
         head: 'A teacher in Alexandria',
@@ -143,6 +115,7 @@ export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [
     era: '1642–1727',
     emoji: '🍎',
     tieIn: '6.RP · Rates of change',
+    tieInTo: '/trail/6.RP',
     slides: [
       {
         head: 'A tiny baby on a farm',
@@ -212,6 +185,7 @@ export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [
     era: '1707–1783',
     emoji: '📊',
     tieIn: '6.EE · Exponents & graphs',
+    tieInTo: '/trail/6.EE',
     slides: [
       {
         head: 'A boy from Basel',
@@ -281,6 +255,7 @@ export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [
     era: '1777–1855',
     emoji: '👑',
     tieIn: '6.EE · Clever sums',
+    tieInTo: '/trail/6.EE',
     slides: [
       {
         head: 'A spark in Brunswick',
@@ -350,6 +325,7 @@ export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [
     era: '1887–1920',
     emoji: '✨',
     tieIn: '6.NS · The number system',
+    tieInTo: '/trail/6.NS',
     slides: [
       {
         head: 'A boy in South India',
@@ -419,6 +395,7 @@ export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [
     era: '1882–1935',
     emoji: '⭐',
     tieIn: '6.EE · Structure & symmetry',
+    tieInTo: '/trail/6.EE',
     slides: [
       {
         head: 'A girl who loved puzzles',
@@ -488,6 +465,7 @@ export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [
     era: '1862–1943',
     emoji: '🧩',
     tieIn: 'Problem solving',
+    tieInTo: '/practice',
     slides: [
       {
         head: 'The boy from Königsberg',
@@ -557,6 +535,7 @@ export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [
     era: '1845–1918',
     emoji: '♾️',
     tieIn: '6.NS · Number sets & infinity',
+    tieInTo: '/trail/6.NS',
     slides: [
       {
         head: 'A musical mathematician',
@@ -626,3 +605,10 @@ export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [
     ],
   },
 ];
+
+/**
+ * Every deck: the eight from the 6th-grade course, then one per high-school
+ * course — Al-Khwarizmi for Algebra 1, Thales for Geometry, Hipparchus for
+ * Trigonometry, Napier for Precalculus, Pólya for SAT Math.
+ */
+export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [...CORE_DECKS, ...HS_MATHEMATICIAN_DECKS];

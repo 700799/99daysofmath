@@ -1,33 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { createPortal } from 'react-dom';
-import storiesData from '../data/mathStories.json';
+import { STORIES, totalSlides, type Story } from '../data/stories';
 import { DOMAINS, DOMAIN_LABELS, type Domain } from '../types/problem';
 import { StorySlide } from '../components/StorySlide';
 import { useStoryPlayer } from '../state/storyPlayer';
 import { useSeo } from '../lib/seo';
-
-interface Beat {
-  head: string;
-  body: string;
-  visual?: string;
-}
-interface Story {
-  domain: string;
-  unit: number;
-  title: string;
-  subtitle?: string;
-  beats: Beat[];
-  learned?: string;
-  videoSrc: string;
-}
-
-const STORIES = storiesData as Story[];
-
-/** Total slides for a story: title + one slide per beat + the learned slide. */
-function getTotalSlides(story: Story): number {
-  return 1 + story.beats.length + (story.learned ? 1 : 0);
-}
 
 const EMOJI_BY_DOMAIN: Record<string, string> = {
   '5.F': '🧱',
@@ -37,7 +15,10 @@ const EMOJI_BY_DOMAIN: Record<string, string> = {
   '6.G': '📐',
   '6.SP': '📊',
   A1: '🚀',
+  GEO: '📏',
+  TRIG: '📡',
   PC: '🎢',
+  SAT: '🎯',
 };
 
 export function Stories() {
@@ -47,13 +28,12 @@ export function Stories() {
   useSeo({
     title: 'Math Stories — The History & Wonder of Math | Math10x',
     description:
-      'Illustrated math stories that bring math concepts to life — the origins and real-world magic behind ratios, fractions, geometry, and more.',
+      'Illustrated math stories that bring math concepts to life — from Gauss and Galileo to Eratosthenes, Everest and Zeno: the origins and real-world magic behind ratios, geometry, algebra, trigonometry and calculus.',
     canonicalPath: '/stories',
   });
 
   const handleStoryClick = (story: Story) => {
-    const totalSlides = getTotalSlides(story);
-    setStory(story.videoSrc, totalSlides);
+    setStory(story.id, totalSlides(story));
     setOpened(story);
   };
 
@@ -63,7 +43,7 @@ export function Stories() {
     const openStory = (location.state as { openStory?: string } | null)
       ?.openStory;
     if (!openStory) return;
-    const story = STORIES.find((s) => s.videoSrc === openStory);
+    const story = STORIES.find((s) => s.id === openStory);
     if (story) handleStoryClick(story);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.state]);
@@ -104,7 +84,7 @@ export function Stories() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {list.map((s) => (
                   <button
-                    key={s.videoSrc}
+                    key={s.id}
                     type="button"
                     onClick={() => handleStoryClick(s)}
                     className="text-left rounded-3xl p-4 bg-gradient-to-br from-violet-500 to-fuchsia-600 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all"
@@ -120,7 +100,7 @@ export function Stories() {
                           {s.subtitle}
                         </div>
                         <div className="text-[10px] opacity-80 mt-1 font-display font-bold uppercase tracking-wider">
-                          {s.domain} · Unit {s.unit} · {s.beats.length} beats
+                          {s.domain} · Unit {s.unit} · {s.beats.length} beats{s.videoSrc ? '' : ' · illustrated'}
                         </div>
                       </div>
                       <div className="text-2xl shrink-0">→</div>

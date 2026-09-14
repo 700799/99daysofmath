@@ -9,8 +9,8 @@ interface Mathematician {
   era: string;
   contribution: string;
   emoji: string;
-  /** videoSrc of a matching Math Story, if one exists. Adds a story link. */
-  storySrc?: string;
+  /** id of a matching Math Story, if one exists. Adds a story link. */
+  storyId?: string;
 }
 
 const MATHEMATICIANS: Mathematician[] = [
@@ -37,14 +37,14 @@ const MATHEMATICIANS: Mathematician[] = [
     era: '1777–1855',
     contribution: 'Prince of mathematicians, advanced many fields',
     emoji: '👑',
-    storySrc: '6.NS-7-story.mp4',
+    storyId: '6.NS-7-story.mp4',
   },
   {
     name: 'Srinivasa Ramanujan',
     era: '1887–1920',
     contribution: 'Extraordinary intuition in number theory',
     emoji: '✨',
-    storySrc: '6.NS-3-story.mp4',
+    storyId: '6.NS-3-story.mp4',
   },
   {
     name: 'Emmy Noether',
@@ -64,6 +64,40 @@ const MATHEMATICIANS: Mathematician[] = [
     contribution: 'Created set theory and infinity concepts',
     emoji: '♾️',
   },
+  // One for each high-school course.
+  {
+    name: 'Al-Khwarizmi',
+    era: 'c. 780–850',
+    contribution: 'Wrote the book that named algebra, and the word algorithm',
+    emoji: '⚖️',
+  },
+  {
+    name: 'Thales of Miletus',
+    era: 'c. 624–546 BC',
+    contribution: 'The first proofs: similar triangles and the angle in a semicircle',
+    emoji: '🔺',
+    storyId: 'GEO-3-eratosthenes',
+  },
+  {
+    name: 'Hipparchus',
+    era: 'c. 190–120 BC',
+    contribution: 'Father of trigonometry: the first table of chords',
+    emoji: '🔭',
+    storyId: 'TRIG-14-everest',
+  },
+  {
+    name: 'John Napier',
+    era: '1550–1617',
+    contribution: 'Invented logarithms, turning multiplication into addition',
+    emoji: '🧮',
+  },
+  {
+    name: 'George Pólya',
+    era: '1887–1985',
+    contribution: 'How to Solve It: understand, plan, carry out, look back',
+    emoji: '🧭',
+    storyId: 'SAT-11-fermi',
+  },
 ];
 
 const deckFor = (name: string): MathematicianDeck | undefined =>
@@ -72,9 +106,9 @@ const deckFor = (name: string): MathematicianDeck | undefined =>
 export function Mathematicians() {
   const [open, setOpen] = useState<MathematicianDeck | null>(null);
   useSeo({
-    title: 'Famous Mathematicians for Kids — Euclid to Ramanujan | Math10x',
+    title: 'Famous Mathematicians for Kids — Thales to Pólya | Math10x',
     description:
-      'Meet the brilliant minds who shaped math: Euclid, Newton, Euler, Gauss, Ramanujan, Noether, Hilbert & Cantor — slide-by-slide stories of what they did and why it matters.',
+      'Meet the minds who shaped math: Euclid, Newton, Euler, Gauss, Ramanujan, Noether, Hilbert, Cantor, Al-Khwarizmi, Thales, Hipparchus, Napier & Pólya — slide-by-slide stories of what they did and why it matters.',
     canonicalPath: '/mathematicians',
   });
 
@@ -124,14 +158,14 @@ export function Mathematicians() {
                         📖 Their story ({deck.slides.length + 1} slides) →
                       </button>
                     )}
-                    {m.storySrc && (
+                    {m.storyId && (
                       <Link
                         to="/stories"
-                        state={{ openStory: m.storySrc }}
+                        state={{ openStory: m.storyId }}
                         className="inline-flex items-center gap-1 rounded-full bg-surface border-2 border-accent/45 text-accent text-xs font-display font-extrabold px-3 py-1"
                         data-haptic="tap"
                       >
-                        🌟 Animated story
+                        🌟 Math story
                       </Link>
                     )}
                   </div>

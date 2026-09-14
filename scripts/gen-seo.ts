@@ -153,14 +153,14 @@ function buildRoutes(): Route[] {
     path: '/stories',
     title: 'Math Stories — The History & Wonder of Math | Math10x',
     description:
-      'Illustrated math stories that bring math concepts to life — the origins and real-world magic behind ratios, fractions, geometry, and more.',
+      'Illustrated math stories that bring math concepts to life — from Gauss and Galileo to Eratosthenes, Everest and Zeno: the origins and real-world magic behind ratios, geometry, algebra, trigonometry and calculus.',
     priority: 0.6,
   });
   routes.push({
     path: '/mathematicians',
     title: 'Famous Mathematicians for Kids — Euclid to Ramanujan | Math10x',
     description:
-      'Meet the brilliant minds who shaped math: Euclid, Newton, Euler, Gauss, Ramanujan, Noether, Hilbert & Cantor — slide-by-slide stories of what they did and why it matters.',
+      'Meet the minds who shaped math: Euclid, Newton, Euler, Gauss, Ramanujan, Noether, Hilbert, Cantor, Al-Khwarizmi, Thales, Hipparchus, Napier & Pólya — slide-by-slide stories of what they did and why it matters.',
     priority: 0.6,
   });
 

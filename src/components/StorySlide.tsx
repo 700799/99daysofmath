@@ -3,22 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { tapHaptic } from '../utils/haptics';
 import { useStoryPlayer } from '../state/storyPlayer';
 import { useVideoLoadGate } from '../lib/useVideoLoadGate';
-
-interface Beat {
-  head: string;
-  body: string;
-  visual?: string;
-}
-
-interface Story {
-  title: string;
-  subtitle?: string;
-  beats: Beat[];
-  learned?: string;
-  domain: string;
-  unit: number;
-  videoSrc: string;
-}
+import type { Story } from '../data/stories';
+import type { MathFigure } from '../data/mathFigure';
+import { MathFigureView } from './MathFigure';
 
 interface Chapters {
   checkpoints: number[];
@@ -38,6 +25,8 @@ interface Slide {
   body: string;
   /** Beat index — controls which video segment plays. */
   beatIdx: number;
+  /** The drawn figure for this slide, when the story has no animation. */
+  figure?: MathFigure;
   /** Slide kind for styling. */
   kind: 'title' | 'beat' | 'learned';
 }
@@ -46,11 +35,12 @@ interface Slide {
 // screen, big and complete. No sentence-splitting, no auto-advance — the reader
 // moves only when they press a button.
 function buildSlides(story: Story): Slide[] {
+  // The title and learned slides borrow the first and last beat's figure.
   const slides: Slide[] = [
-    { head: story.title.replace(/^Story[:\s]+/i, ''), body: story.subtitle ?? '', beatIdx: -1, kind: 'title' },
+    { head: story.title.replace(/^Story[:\s]+/i, ''), body: story.subtitle ?? '', beatIdx: -1, kind: 'title', figure: story.beats[0]?.figure },
   ];
   story.beats.forEach((b, bi) => {
-    slides.push({ head: b.head, body: b.body, beatIdx: bi, kind: 'beat' });
+    slides.push({ head: b.head, body: b.body, beatIdx: bi, kind: 'beat', figure: b.figure });
   });
   if (story.learned) {
     slides.push({
@@ -58,6 +48,7 @@ function buildSlides(story: Story): Slide[] {
       body: story.learned,
       beatIdx: story.beats.length - 1,
       kind: 'learned',
+      figure: story.beats[story.beats.length - 1]?.figure,
     });
   }
   return slides;
@@ -84,9 +75,13 @@ export function StorySlide({ story, onClose }: Props) {
 
   // Initialize story session on mount or when story changes
   useEffect(() => {
-    setStory(story.videoSrc, slides.length);
+    setStory(story.id, slides.length);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [story.videoSrc]);
+  }, [story.id]);
+
+  // A story without an animation shows each beat's figure instead, and there
+  // is no clip to wait for.
+  const hasVideo = Boolean(story.videoSrc);
 
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [chaptersLoaded, setChaptersLoaded] = useState(false);
@@ -96,13 +91,17 @@ export function StorySlide({ story, onClose }: Props) {
   const segmentEndRef = useRef<number>(Infinity);
   const lastSegRef = useRef<{ start: number; end: number } | null>(null);
 
-  const url = `${import.meta.env.BASE_URL}videos/lessons/${story.videoSrc}`;
+  const url = `${import.meta.env.BASE_URL}videos/lessons/${story.videoSrc ?? ''}`;
   const chaptersUrl = url.replace(/\.mp4$/, '.chapters.json');
 
   // Load chapters once.
   useEffect(() => {
     let cancelled = false;
     setChaptersLoaded(false);
+    if (!hasVideo) {
+      setChaptersLoaded(true);
+      return;
+    }
     fetch(chaptersUrl)
       .then((r) => (r.ok ? r.json() : null))
       .then((j: Chapters | null) => {
@@ -138,7 +137,11 @@ export function StorySlide({ story, onClose }: Props) {
   // When the slide changes, seek + play the matching segment.
   useEffect(() => {
     const v = videoRef.current;
-    if (!v) return;
+    if (!v) {
+      // No clip to wait for: the words show at once.
+      setAnimationDone(true);
+      return;
+    }
 
     const seg = segmentFor(idx);
     segmentEndRef.current = seg.end;
@@ -344,26 +347,44 @@ export function StorySlide({ story, onClose }: Props) {
           </AnimatePresence>
         </div>
 
-        {/* RIGHT half — the video illustration with a Replay-clip button. */}
-        <div className="relative flex-1 min-h-0 flex items-center justify-center bg-black md:border-l border-white/10 overflow-hidden">
-          <video
-            ref={videoRef}
-            src={url}
-            muted
-            playsInline
-            preload="metadata"
-            className="w-full h-full object-contain bg-black"
-            onTimeUpdate={onTimeUpdate}
-          />
-          <button
-            type="button"
-            onClick={replayClip}
-            className="absolute bottom-3 right-3 rounded-full bg-white/90 hover:bg-white text-ink font-display font-extrabold text-sm px-4 h-10 shadow-lg active:translate-y-0.5"
-            data-haptic="tap"
-          >
-            ↻ Replay clip
-          </button>
-        </div>
+        {/* RIGHT half — the animation with a Replay-clip button, or, for a
+            story with no animation, the beat's figure drawn large. */}
+        {hasVideo ? (
+          <div className="relative flex-1 min-h-0 flex items-center justify-center bg-black md:border-l border-white/10 overflow-hidden">
+            <video
+              ref={videoRef}
+              src={url}
+              muted
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-contain bg-black"
+              onTimeUpdate={onTimeUpdate}
+            />
+            <button
+              type="button"
+              onClick={replayClip}
+              className="absolute bottom-3 right-3 rounded-full bg-white/90 hover:bg-white text-ink font-display font-extrabold text-sm px-4 h-10 shadow-lg active:translate-y-0.5"
+              data-haptic="tap"
+            >
+              ↻ Replay clip
+            </button>
+          </div>
+        ) : (
+          <div className="relative flex-1 min-h-0 flex items-center justify-center bg-gradient-to-br from-indigo-950 to-violet-900 md:border-l border-white/10 overflow-hidden">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.94 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.03 }}
+                transition={{ duration: 0.25 }}
+                className="flex h-full w-full select-none items-center justify-center"
+              >
+                {slide.figure && <MathFigureView figure={slide.figure} />}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        )}
       </div>
 
       {/* ── Nav bar — big pill buttons; the only way to turn the page. ── */}
