@@ -11,6 +11,11 @@
  * and dark. Accents are fixed hues that read on both.
  */
 
+import {
+  INK, AMB, SKY, EMR, ROSE, VIO, rad, f, text, line, circle, dot, path, polygon,
+  head, arrow, pt, arcPath, svg, TICK, rightMark,
+} from './draw.js';
+
 export type AngleFigure =
   | GeoFigure
   | StandardAngle
@@ -185,87 +190,6 @@ export interface Ferris {
 
 // ── drawing helpers ────────────────────────────────────────────────────────
 
-const INK = 'currentColor';
-const AMB = '#F59E0B';
-const SKY = '#0EA5E9';
-const EMR = '#10B981';
-const ROSE = '#F43F5E';
-const VIO = '#8B5CF6';
-const FONT = 'Nunito, ui-rounded, system-ui, sans-serif';
-
-const rad = (d: number) => (d * Math.PI) / 180;
-const f = (n: number) => (Math.round(n * 10) / 10).toString();
-
-function esc(s: string): string {
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
-
-function text(
-  x: number,
-  y: number,
-  s: string,
-  opts: { size?: number; fill?: string; anchor?: 'start' | 'middle' | 'end'; weight?: number; op?: number } = {},
-): string {
-  const { size = 14, fill = INK, anchor = 'middle', weight = 700, op } = opts;
-  const o = op !== undefined ? ` opacity="${op}"` : '';
-  return `<text x="${f(x)}" y="${f(y)}" font-size="${size}" font-weight="${weight}" fill="${fill}" text-anchor="${anchor}"${o}>${esc(s)}</text>`;
-}
-
-function line(x1: number, y1: number, x2: number, y2: number, stroke = INK, w = 2, dash?: string, op?: number): string {
-  const d = dash ? ` stroke-dasharray="${dash}"` : '';
-  const o = op !== undefined ? ` opacity="${op}"` : '';
-  return `<line x1="${f(x1)}" y1="${f(y1)}" x2="${f(x2)}" y2="${f(y2)}" stroke="${stroke}" stroke-width="${w}"${d}${o}/>`;
-}
-
-function circle(cx: number, cy: number, r: number, stroke = INK, fill = 'none', w = 2, dash?: string, op?: number): string {
-  const d = dash ? ` stroke-dasharray="${dash}"` : '';
-  const o = op !== undefined ? ` opacity="${op}"` : '';
-  return `<circle cx="${f(cx)}" cy="${f(cy)}" r="${f(r)}" fill="${fill}" stroke="${stroke}" stroke-width="${w}"${d}${o}/>`;
-}
-
-function dot(cx: number, cy: number, r = 4.5, fill = INK): string {
-  return `<circle cx="${f(cx)}" cy="${f(cy)}" r="${r}" fill="${fill}"/>`;
-}
-
-function path(d: string, stroke = INK, w = 2, fill = 'none', dash?: string, op?: number): string {
-  const da = dash ? ` stroke-dasharray="${dash}"` : '';
-  const o = op !== undefined ? ` opacity="${op}"` : '';
-  return `<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}"${da}${o}/>`;
-}
-
-function polygon(pts: [number, number][], stroke = INK, fill = 'none', w = 2.5): string {
-  return `<polygon points="${pts.map(([x, y]) => `${f(x)},${f(y)}`).join(' ')}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linejoin="round"/>`;
-}
-
-/** Arrowhead at (x2,y2) pointing along (x1,y1)→(x2,y2). */
-function head(x1: number, y1: number, x2: number, y2: number, stroke = INK, w = 2, L = 9): string {
-  const ang = Math.atan2(y2 - y1, x2 - x1);
-  const s = 0.5;
-  const a = [x2 - L * Math.cos(ang - s), y2 - L * Math.sin(ang - s)];
-  const b = [x2 - L * Math.cos(ang + s), y2 - L * Math.sin(ang + s)];
-  return line(a[0], a[1], x2, y2, stroke, w) + line(b[0], b[1], x2, y2, stroke, w);
-}
-
-function arrow(x1: number, y1: number, x2: number, y2: number, stroke = INK, w = 2): string {
-  return line(x1, y1, x2, y2, stroke, w) + head(x1, y1, x2, y2, stroke, w);
-}
-
-/** Point at mathematical angle `deg` (counterclockwise, y up) on a circle. */
-function pt(cx: number, cy: number, r: number, deg: number): [number, number] {
-  return [cx + r * Math.cos(rad(deg)), cy - r * Math.sin(rad(deg))];
-}
-
-/** Arc of a circle from angle a1 to a2 (degrees, counterclockwise if a2 > a1). */
-function arcPath(cx: number, cy: number, r: number, a1: number, a2: number): string {
-  const [x1, y1] = pt(cx, cy, r, a1);
-  const [x2, y2] = pt(cx, cy, r, a2);
-  const sweepDeg = a2 - a1;
-  const large = Math.abs(sweepDeg) > 180 ? 1 : 0;
-  // SVG sweep-flag 1 is clockwise on screen, which is a decreasing math angle.
-  const sweep = sweepDeg > 0 ? 0 : 1;
-  return `M ${f(x1)} ${f(y1)} A ${f(r)} ${f(r)} 0 ${large} ${sweep} ${f(x2)} ${f(y2)}`;
-}
-
 /** A spiral arc for angles past a full turn, ending with an arrowhead. */
 function spiral(cx: number, cy: number, r0: number, deg: number, stroke: string): string {
   const n = Math.max(24, Math.ceil(Math.abs(deg) / 5));
@@ -279,15 +203,6 @@ function spiral(cx: number, cy: number, r0: number, deg: number, stroke: string)
   const [ax, ay] = pts[pts.length - 2];
   const [bx, by] = pts[pts.length - 1];
   return path(d, stroke, 2.5) + head(ax, ay, bx, by, stroke, 2.5);
-}
-
-function svg(w: number, h: number, alt: string, body: string): { svg: string; alt: string } {
-  return {
-    alt,
-    svg:
-      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" role="img" ` +
-      `font-family="${FONT}" stroke-linecap="round" stroke-linejoin="round">${body}</svg>`,
-  };
 }
 
 function axes(cx: number, cy: number, R: number, op = 0.45): string {
@@ -426,15 +341,23 @@ function drawUnit(s: UnitCircle): { svg: string; alt: string } {
       b += line(cx, cy, px, cy, EMR, 3);
       if (s.legs.y) {
         const w = s.legs.y.length * 7.5;
-        const outside = px >= cx ? px + 10 + w <= W - 2 : px - 10 - w >= 2;
-        // straight up the axis, the arc label sits to the right: go left
-        const right = Math.abs(px - cx) < 12 ? false : outside ? px >= cx : px < cx;
-        b += text(px + (right ? 10 : -10), (py + cy) / 2 + 5, s.legs.y, { size: 13, fill: SKY, anchor: right ? 'start' : 'end' });
+        if (Math.abs(py - cy) < 40) {
+          // a shallow angle leaves no room beside the leg, and the label
+          // would land on the arc: put it clear of the axis instead
+          const x = Math.min(W - w / 2 - 2, Math.max(w / 2 + 2, px));
+          b += text(x, cy + (py > cy ? 46 : -34), s.legs.y, { size: 13, fill: SKY });
+        } else {
+          const outside = px >= cx ? px + 10 + w <= W - 2 : px - 10 - w >= 2;
+          // straight up the axis, the arc label sits to the right: go left
+          const right = Math.abs(px - cx) < 12 ? false : outside ? px >= cx : px < cx;
+          b += text(px + (right ? 10 : -10), (py + cy) / 2 + 5, s.legs.y, { size: 13, fill: SKY, anchor: right ? 'start' : 'end' });
+        }
       }
       if (s.legs.x) b += text((cx + px) / 2, cy + (py <= cy ? 18 : -8), s.legs.x, { size: 13, fill: EMR });
       if (s.legs.r) {
+        // far enough off the radius to clear the leg label beside it
         const [mx, my] = pt(cx, cy, R / 2, a.deg);
-        const nx = -Math.sin(rad(a.deg)) * 12, ny = -Math.cos(rad(a.deg)) * 12;
+        const nx = -Math.sin(rad(a.deg)) * 22, ny = -Math.cos(rad(a.deg)) * 22;
         b += text(mx + nx, my + ny + 4, s.legs.r, { size: 13, fill: col });
       }
     }
@@ -539,7 +462,7 @@ function drawSector(s: Sector): { svg: string; alt: string } {
     b += text(ax + (right ? 2 : -2), ay + 5, s.arc, { size: 14, fill: AMB, anchor: right ? 'start' : 'end' });
   }
   if (s.area) {
-    const [ax, ay] = pt(cx, cy, R * 0.62, s.deg / 2);
+    const [ax, ay] = pt(cx, cy, R * 0.8, s.deg / 2);
     b += text(ax, ay + 5, s.area, { size: 13, fill: AMB });
   }
   b += dot(cx, cy, 4);
@@ -1031,16 +954,7 @@ export interface Similar {
 
 export type GeoFigure = AnglePair | Transversal | Polygon | Quad | CircleFig | Grid | Shape | Similar;
 
-const TICK = (x: number, y: number, ang: number, col = INK): string => {
-  const [dx, dy] = [Math.cos(rad(ang + 90)) * 5, -Math.sin(rad(ang + 90)) * 5];
-  return line(x - dx, y - dy, x + dx, y + dy, col, 2.2);
-};
 
-function rightMark(x: number, y: number, dirA: number, dirB: number, s = 12): string {
-  const [ax, ay] = [Math.cos(rad(dirA)) * s, -Math.sin(rad(dirA)) * s];
-  const [bx, by] = [Math.cos(rad(dirB)) * s, -Math.sin(rad(dirB)) * s];
-  return path(`M ${f(x + ax)} ${f(y + ay)} L ${f(x + ax + bx)} ${f(y + ay + by)} L ${f(x + bx)} ${f(y + by)}`, INK, 1.8);
-}
 
 function angleArc(x: number, y: number, from: number, to: number, label: string | undefined, r = 26, col = SKY): string {
   let out = path(arcPath(x, y, r, from, to), col, 2.4);
@@ -1226,7 +1140,7 @@ function drawQuad(s: Quad): { svg: string; alt: string } {
       b += rightMark(180, 130, 0, 90, 10);
       for (const [P, Q] of [[pts[0], [180, 130]], [[180, 130], pts[2]]] as [[number, number], [number, number]][]) b += TICK((P[0] + Q[0]) / 2, (P[1] + Q[1]) / 2, 0, SKY);
       for (const [P, Q] of [[pts[1], [180, 130]], [[180, 130], pts[3]]] as [[number, number], [number, number]][]) { b += TICK((P[0] + Q[0]) / 2, (P[1] + Q[1]) / 2, 90, SKY); b += TICK((P[0] + Q[0]) / 2 + 3, (P[1] + Q[1]) / 2, 90, SKY); }
-      b += text(180, 226, 'diagonals bisect each other at 90°, but are not equal', { size: 11, op: 0.8 });
+      b += text(180, 30, 'diagonals bisect each other at 90°, but are not equal', { size: 11, op: 0.8 });
     }
     b += nameAt(pts[0], names[0], -14, 6) + nameAt(pts[1], names[1], rh ? 0 : 14, rh ? 18 : 6) + nameAt(pts[2], names[2], 14, rh ? 6 : -4) + nameAt(pts[3], names[3], rh ? 0 : -14, rh ? -10 : -4);
     if (!rh) {
@@ -1468,7 +1382,7 @@ function drawShape(s: Shape): { svg: string; alt: string } {
       return svg(W, H, `A square of side ${L.side} with a circle inside touching all four sides`, b);
     }
     case 'rect-semicircle': {
-      const w = 120, h = 160, x0 = 120, y0 = 220;
+      const w = 120, h = 140, x0 = 120, y0 = 210;
       b += polygon([[x0, y0], [x0 + w, y0], [x0 + w, y0 - h], [x0, y0 - h]], AMB, `${AMB}18`, 3);
       b += path(`${arcPath(x0 + w / 2, y0 - h, w / 2, 0, 180)} Z`, SKY, 2.5, `${SKY}22`);
       b += lab(x0 + w / 2, y0 + 20, L.w) + lab(x0 - 10, y0 - h / 2 + 4, L.h, INK, 'end');
@@ -1488,6 +1402,7 @@ function drawShape(s: Shape): { svg: string; alt: string } {
       b += polygon([[x0, y0], [x0 + w, y0], [x0 + w, y0 - h], [x0, y0 - h]], AMB, `${AMB}18`, 3);
       if (L.diag) { b += line(x0, y0, x0 + w, y0 - h, SKY, 2.5); b += lab(x0 + w / 2 + 16, y0 - h / 2 - 8, L.diag, SKY, 'start'); }
       b += lab(x0 + w / 2, y0 + 20, L.w ?? L.side) + lab(x0 - 10, y0 - h / 2 + 4, L.h ?? L.side, INK, 'end');
+      b += lab(W / 2, 36, L.area, AMB);
       return svg(W, H, `A ${s.variant} ${L.w ?? L.side} by ${L.h ?? L.side}${L.diag ? ' with its diagonal' : ''}`, b);
     }
     case 'no-triangle': {

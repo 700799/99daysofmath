@@ -49,5 +49,10 @@
     "MAP-practice",
     "composite"
   ],
-  "estimatedSeconds": 75
+  "estimatedSeconds": 75,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"90,190 270,190 270,130 210,130 210,70 90,70\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><path d=\"M 210 70 L 270 70 L 270 130\" fill=\"none\" stroke=\"#F43F5E\" stroke-width=\"1.6\" stroke-dasharray=\"5 4\" opacity=\"0.7\"/><text x=\"180\" y=\"210\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">12</text><text x=\"80\" y=\"134\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"end\">8</text><text x=\"240\" y=\"62\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">4</text><text x=\"278\" y=\"104\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"start\">4</text><text x=\"180\" y=\"34\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">area left = ?</text></svg>",
+    "alt": "An L-shape: a 12 by 8 rectangle with a 4 by 4 corner removed"
+  }
 }

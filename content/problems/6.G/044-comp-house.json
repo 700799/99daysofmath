@@ -38,5 +38,10 @@
     "composite",
     "word"
   ],
-  "estimatedSeconds": 80
+  "estimatedSeconds": 80,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"131.1\" y=\"138.9\" width=\"97.8\" height=\"61.1\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.6\"/><polygon points=\"131.1,138.9 228.9,138.9 180,90\" fill=\"#0EA5E91e\" stroke=\"#0EA5E9\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><line x1=\"180\" y1=\"138.9\" x2=\"180\" y2=\"90\" stroke=\"#10B981\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\"/><text x=\"180\" y=\"220\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">8</text><text x=\"121.1\" y=\"173.4\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"end\">5</text><text x=\"192\" y=\"118.4\" font-size=\"12\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"start\">4</text><text x=\"180\" y=\"34\" font-size=\"14\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">total area = ?</text></svg>",
+    "alt": "A rectangle 8 by 5 with a triangular roof of height 4"
+  }
 }

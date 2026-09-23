@@ -59,5 +59,10 @@
     "triangle",
     "angle-sum"
   ],
-  "estimatedSeconds": 70
+  "estimatedSeconds": 70,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"55,200 305,200 242.5,91.7\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"43\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">A</text><text x=\"317\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">B</text><text x=\"242.5\" y=\"81.7\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">C</text><path d=\"M 77 200 A 22 22 0 0 0 74.1 189\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"95.6\" y=\"194.1\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">x°</text><path d=\"M 294 180.9 A 22 22 0 0 0 283 200\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"268.6\" y=\"184\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">2x°</text><path d=\"M 223.4 102.7 A 22 22 0 0 0 253.5 110.8\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"231.6\" y=\"137.3\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">3x°</text></svg>",
+    "alt": "Triangle ABC with A = x°, B = 2x°, C = 3x°"
+  }
 }

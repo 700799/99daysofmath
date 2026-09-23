@@ -48,5 +48,10 @@
     "collinear",
     "points"
   ],
-  "estimatedSeconds": 35
+  "estimatedSeconds": 35,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 200\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"30\" y1=\"96\" x2=\"330\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-dasharray=\"5 5\" opacity=\"0.35\"/><line x1=\"46\" y1=\"96\" x2=\"314\" y2=\"96\" stroke=\"#F59E0B\" stroke-width=\"3.4\"/><circle cx=\"46\" cy=\"96\" r=\"5.5\" fill=\"currentColor\"/><text x=\"46\" y=\"80\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">P</text><circle cx=\"180\" cy=\"96\" r=\"5.5\" fill=\"#0EA5E9\"/><text x=\"180\" y=\"80\" font-size=\"14\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">Q</text><circle cx=\"314\" cy=\"96\" r=\"5.5\" fill=\"currentColor\"/><text x=\"314\" y=\"80\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">R</text><text x=\"180\" y=\"176\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">three stakes on one straight line</text></svg>",
+    "alt": "Points P, Q, R in order on one straight line"
+  }
 }

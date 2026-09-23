@@ -48,5 +48,10 @@
     "proof",
     "congruence"
   ],
-  "estimatedSeconds": 50
+  "estimatedSeconds": 50,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 230\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"42,176 165.9,176 79.8,84\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.8\" stroke-linejoin=\"round\"/><line x1=\"104\" y1=\"181\" x2=\"104\" y2=\"171\" stroke=\"#10B981\" stroke-width=\"2.2\"/><line x1=\"128.5\" y1=\"128.8\" x2=\"121.2\" y2=\"135.6\" stroke=\"#10B981\" stroke-width=\"2.2\"/><line x1=\"124.4\" y1=\"124.4\" x2=\"117.1\" y2=\"131.2\" stroke=\"#10B981\" stroke-width=\"2.2\"/><path d=\"M 152.2 161.4 A 20 20 0 0 0 145.9 176\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2\"/><text x=\"142.8\" y=\"128\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">AC</text><polygon points=\"212,176 335.9,176 249.8,84\" fill=\"#0EA5E91e\" stroke=\"#0EA5E9\" stroke-width=\"2.8\" stroke-linejoin=\"round\"/><line x1=\"274\" y1=\"181\" x2=\"274\" y2=\"171\" stroke=\"#10B981\" stroke-width=\"2.2\"/><line x1=\"298.5\" y1=\"128.8\" x2=\"291.2\" y2=\"135.6\" stroke=\"#10B981\" stroke-width=\"2.2\"/><line x1=\"294.4\" y1=\"124.4\" x2=\"287.1\" y2=\"131.2\" stroke=\"#10B981\" stroke-width=\"2.2\"/><path d=\"M 322.2 161.4 A 20 20 0 0 0 315.9 176\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2\"/><text x=\"312.8\" y=\"128\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">DF</text><text x=\"100\" y=\"206\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">△ABC</text><text x=\"270\" y=\"206\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">△DEF</text><text x=\"180\" y=\"30\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">congruent by SAS — so what about AC and DF?</text></svg>",
+    "alt": "Two triangles with the matching parts marked (CPCTC)"
+  }
 }

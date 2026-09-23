@@ -47,5 +47,10 @@
     "volume",
     "cone"
   ],
-  "estimatedSeconds": 50
+  "estimatedSeconds": 50,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"118,196 176,54 234,196\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/><path d=\"M 118 196 A 58 18 0 0 1 234 196\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"1.6\" stroke-dasharray=\"5 4\" opacity=\"0.55\"/><path d=\"M 118 196 A 58 18 0 0 0 234 196\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"2.4\"/><line x1=\"176\" y1=\"54\" x2=\"176\" y2=\"196\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><path d=\"M 186 196 L 186 186 L 176 186\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><line x1=\"176\" y1=\"196\" x2=\"234\" y2=\"196\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"205\" y=\"186\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">3 in</text><text x=\"166\" y=\"125\" font-size=\"13\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"end\">8 in</text><text x=\"180\" y=\"34\" font-size=\"15\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">V = ?</text></svg>",
+    "alt": "A cone of radius 3 in and height 8 in"
+  }
 }

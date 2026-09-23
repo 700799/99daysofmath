@@ -2,16 +2,20 @@ import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { renderAngleFigure, type AngleFigure } from '../scripts/figures/angleFigures';
+import { renderFigure, type Figure } from '../scripts/figures';
 import TRIG from '../scripts/figures/specs/TRIG';
 import GEO from '../scripts/figures/specs/GEO';
 import PC from '../scripts/figures/specs/PC';
+import SAT from '../scripts/figures/specs/SAT';
+import G6 from '../scripts/figures/specs/6.G';
+import F5 from '../scripts/figures/specs/5.F';
 import type { Problem } from '../src/types/problem';
 
-// Every problem about an angle gets a picture of the situation it describes.
-// Trigonometry, Geometry and Precalculus shipped with none at all — 420
-// problems about triangles, circles and waves, and not one drawing — so this
-// is the bar that keeps the pictures there, and keeps them honest.
+// Every problem that describes a picture gets one. Trigonometry, Geometry and
+// Precalculus shipped with none at all — 420 problems about triangles, circles
+// and waves, and not one drawing — and the geometry that is not about angles
+// went the same way: the beam with three marks on it, the box, the net, the
+// L-shaped patio. This is the bar that keeps the pictures there, and honest.
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ALL: Problem[] = JSON.parse(
@@ -19,22 +23,43 @@ const ALL: Problem[] = JSON.parse(
 );
 const byId = new Map(ALL.map((p) => [p.id, p]));
 
-const SPECS: Record<string, Record<string, AngleFigure>> = { TRIG, GEO, PC };
+const SPECS: Record<string, Record<string, Figure>> = { TRIG, GEO, PC, SAT, '6.G': G6, '5.F': F5 };
 
 /** Which units of each course describe a picture, and so must all carry one. */
 const PICTURED_UNITS: Record<string, number[]> = {
   TRIG: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
-  GEO: [2, 3, 6, 7, 8, 9, 10, 11, 12, 14],
+  GEO: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
   PC: [8, 9, 10, 11, 12],
+  SAT: [15, 16, 17, 18],
+};
+
+/**
+ * The two courses whose pictures are part hand-drawn and part generated: what
+ * matters there is that no problem in a pictured unit is left bare, whichever
+ * way its drawing was made.
+ */
+const DRAWN_UNITS: Record<string, number[]> = {
+  '6.G': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  '5.F': [5, 6, 15, 16],
 };
 
 describe('coverage', () => {
+  for (const [domain, units] of Object.entries(DRAWN_UNITS)) {
+    it(`${domain}: every problem in a pictured unit carries a diagram`, () => {
+      const bare = ALL.filter((p) => p.domain === domain && units.includes(p.unit) && !p.diagram).map((p) => p.id);
+      expect(bare, `nothing to look at on ${bare.join(', ')}`).toEqual([]);
+    });
+  }
+
   for (const [domain, units] of Object.entries(PICTURED_UNITS)) {
-    it(`${domain}: every problem in an angle unit has a figure spec`, () => {
+    it(`${domain}: every problem in a pictured unit has a figure spec`, () => {
       const missing = ALL.filter((p) => p.domain === domain && units.includes(p.unit) && !SPECS[domain][p.id]).map((p) => p.id);
       expect(missing, `no figure for ${missing.join(', ')}`).toEqual([]);
     });
 
+  }
+
+  for (const domain of Object.keys(SPECS)) {
     it(`${domain}: every spec names a real problem`, () => {
       for (const id of Object.keys(SPECS[domain])) expect(byId.has(id), id).toBe(true);
     });
@@ -66,13 +91,13 @@ describe('every figure', () => {
 
   it('renders without throwing', () => {
     for (const [, id, spec] of ALL_SPECS) {
-      expect(() => renderAngleFigure(spec), id).not.toThrow();
+      expect(() => renderFigure(spec), id).not.toThrow();
     }
   });
 
   it('is a self-contained, well-formed SVG that draws in the theme colour', () => {
     for (const [, id, spec] of ALL_SPECS) {
-      const { svg, alt } = renderAngleFigure(spec);
+      const { svg, alt } = renderFigure(spec);
       expect(svg.startsWith('<svg '), id).toBe(true);
       expect(svg.trimEnd().endsWith('</svg>'), id).toBe(true);
       expect(svg, id).toMatch(/viewBox="0 0 \d+ \d+"/);
@@ -89,21 +114,57 @@ describe('every figure', () => {
     }
   });
 
-  it('never runs a label off the canvas', () => {
-    for (const [, id, spec] of ALL_SPECS) {
-      const { svg } = renderAngleFigure(spec);
-      const [, w] = /viewBox="0 0 (\d+) (\d+)"/.exec(svg)!.map(Number);
-      for (const m of svg.matchAll(/<text ([^>]*)>([^<]*)<\/text>/g)) {
-        const [, a, txt] = m;
+  /**
+   * Where each label sits, at a generous width estimate: one that fits here
+   * has room to spare in the real font.
+   */
+  const boxesOf = (svg: string) =>
+    [...svg.matchAll(/<text ([^>]*)>([^<]*)<\/text>/g)]
+      .map(([, a, txt]) => {
         const at = (n: string, d: string) => new RegExp(`${n}="([^"]*)"`).exec(a)?.[1] ?? d;
         const x = Number(at('x', '0'));
+        const y = Number(at('y', '0'));
         const size = Number(at('font-size', '14'));
         const anchor = at('text-anchor', 'middle');
-        const width = txt.length * size * 0.6;
-        const left = anchor === 'middle' ? x - width / 2 : anchor === 'end' ? x - width : x;
-        expect(left, `${id}: "${txt}" starts off the left edge`).toBeGreaterThanOrEqual(-2);
-        expect(left + width, `${id}: "${txt}" runs past the right edge`).toBeLessThanOrEqual(w + 2);
+        const w = txt.length * size * 0.6;
+        const left = anchor === 'middle' ? x - w / 2 : anchor === 'end' ? x - w : x;
+        return { txt, x1: left, x2: left + w, y1: y - size * 0.78, y2: y + size * 0.22 };
+      })
+      .filter((b) => b.txt.trim().length > 0);
+
+  it('never runs a label off the canvas', () => {
+    for (const [, id, spec] of ALL_SPECS) {
+      const { svg } = renderFigure(spec);
+      const [, w, h] = /viewBox="0 0 (\d+) (\d+)"/.exec(svg)!.map(Number);
+      for (const b of boxesOf(svg)) {
+        expect(b.x1, `${id}: "${b.txt}" starts off the left edge`).toBeGreaterThanOrEqual(-2);
+        expect(b.x2, `${id}: "${b.txt}" runs past the right edge`).toBeLessThanOrEqual(w + 2);
+        expect(b.y1, `${id}: "${b.txt}" sits above the top edge`).toBeGreaterThanOrEqual(0);
+        expect(b.y2, `${id}: "${b.txt}" hangs off the bottom edge`).toBeLessThanOrEqual(h);
       }
+    }
+  });
+
+  it('never stacks two labels on top of each other', () => {
+    for (const [, id, spec] of ALL_SPECS) {
+      const boxes = boxesOf(renderFigure(spec).svg);
+      for (let i = 0; i < boxes.length; i++) {
+        for (let j = i + 1; j < boxes.length; j++) {
+          const a = boxes[i];
+          const c = boxes[j];
+          const over = Math.min(a.x2, c.x2) - Math.max(a.x1, c.x1) > 2 && Math.min(a.y2, c.y2) - Math.max(a.y1, c.y1) > 2;
+          expect(over, `${id}: "${a.txt}" sits on top of "${c.txt}"`).toBe(false);
+        }
+      }
+    }
+  });
+
+  // A glyph the card's font may not have renders as a blank box, and the
+  // check and the cross are drawn for exactly that reason.
+  it('draws its marks rather than typing them', () => {
+    for (const [, id, spec] of ALL_SPECS) {
+      expect(renderFigure(spec).svg, `${id} types a glyph it should draw`)
+        .not.toMatch(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/u);
     }
   });
 
@@ -113,7 +174,7 @@ describe('every figure', () => {
     // unknown already filled in: a label that says "c = 7" when c is asked.
     for (const [, id, spec] of ALL_SPECS) {
       const p = byId.get(id)!;
-      const { svg } = renderAngleFigure(spec);
+      const { svg } = renderFigure(spec);
       const labels = [...svg.matchAll(/<text [^>]*>([^<]*)<\/text>/g)].map((m) => m[1].trim());
       const answer = p.primaryAnswer.trim();
       if (!/^-?\d+(\.\d+)?$/.test(answer)) continue;
@@ -126,7 +187,7 @@ describe('every figure', () => {
 describe('the unknown is visible', () => {
   it('most figures carry a "?" where the question points', () => {
     const all = Object.values(SPECS).flatMap((m) => Object.entries(m));
-    const withQ = all.filter(([, spec]) => renderAngleFigure(spec).svg.includes('?')).length;
+    const withQ = all.filter(([, spec]) => renderFigure(spec).svg.includes('?')).length;
     expect(withQ / all.length).toBeGreaterThan(0.6);
   });
 });

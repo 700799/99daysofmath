@@ -44,5 +44,10 @@
     "triangle-sum",
     "congruence"
   ],
-  "estimatedSeconds": 55
+  "estimatedSeconds": 55,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 230\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"42,176 165.9,176 79.8,84\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.8\" stroke-linejoin=\"round\"/><polygon points=\"212,176 335.9,176 249.8,84\" fill=\"#0EA5E91e\" stroke=\"#0EA5E9\" stroke-width=\"2.8\" stroke-linejoin=\"round\"/><text x=\"30\" y=\"188\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">55°</text><text x=\"178\" y=\"188\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">65°</text><text x=\"250\" y=\"74\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text><text x=\"100\" y=\"206\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">△ABC</text><text x=\"270\" y=\"206\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">△DEF</text></svg>",
+    "alt": "Two triangles with the matching parts marked (ANGLES)"
+  }
 }

@@ -46,5 +46,10 @@
     "polygon",
     "angle-sum"
   ],
-  "estimatedSeconds": 55
+  "estimatedSeconds": 55,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 280\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"205.8,216.9 240.4,110.6 150,45 59.6,110.6 94.2,216.9\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"205.8\" y1=\"216.9\" x2=\"150\" y2=\"45\" stroke=\"#0EA5E9\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\"/><line x1=\"205.8\" y1=\"216.9\" x2=\"59.6\" y2=\"110.6\" stroke=\"#0EA5E9\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\"/><text x=\"150\" y=\"272\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">the interior angles add to ?</text></svg>",
+    "alt": "A regular polygon with 5 sides"
+  }
 }

@@ -36,5 +36,10 @@
     "area",
     "T-shape"
   ],
-  "estimatedSeconds": 55
+  "estimatedSeconds": 55,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"114\" y=\"86\" width=\"132\" height=\"44\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.6\"/><rect x=\"136\" y=\"130\" width=\"88\" height=\"66\" fill=\"#0EA5E91e\" stroke=\"#0EA5E9\" stroke-width=\"2.6\"/><text x=\"180\" y=\"76\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">6</text><text x=\"104\" y=\"112\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"end\">2</text><text x=\"180\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">4</text><text x=\"234\" y=\"167\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"start\">3</text><text x=\"180\" y=\"34\" font-size=\"14\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">total area = ?</text></svg>",
+    "alt": "A T-shape: a 6 by 2 bar over a 4 by 3 stem"
+  }
 }

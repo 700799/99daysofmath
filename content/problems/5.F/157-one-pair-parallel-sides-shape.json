@@ -65,5 +65,10 @@
     "geometry",
     "quadrilaterals"
   ],
-  "estimatedSeconds": 45
+  "estimatedSeconds": 45,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 220\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"128,126.4 232,126.4 206.4,73.6 153.6,73.6\" fill=\"#8B5CF61e\" stroke=\"#8B5CF6\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><line x1=\"180\" y1=\"78.6\" x2=\"180\" y2=\"68.6\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><line x1=\"180\" y1=\"131.4\" x2=\"180\" y2=\"121.4\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"180\" y=\"158\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text><text x=\"180\" y=\"204\" font-size=\"17\" font-weight=\"700\" fill=\"#8B5CF6\" text-anchor=\"middle\">?</text><text x=\"180\" y=\"36\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">exactly one pair of parallel sides</text></svg>",
+    "alt": "A row of shapes: ?"
+  }
 }

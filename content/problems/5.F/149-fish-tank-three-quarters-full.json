@@ -61,5 +61,10 @@
     "fractions",
     "multi-step"
   ],
-  "estimatedSeconds": 75
+  "estimatedSeconds": 75,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"84.4,100 125.6,70 275.6,70 234.4,100\" fill=\"#F59E0B10\" stroke=\"#F59E0B\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"234.4,100 275.6,70 275.6,160 234.4,190\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"84.4,190 234.4,190 234.4,100 84.4,100\" fill=\"#F59E0B26\" stroke=\"#F59E0B\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><line x1=\"125.6\" y1=\"160\" x2=\"125.6\" y2=\"70\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><line x1=\"125.6\" y1=\"160\" x2=\"275.6\" y2=\"160\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><line x1=\"84.4\" y1=\"190\" x2=\"125.6\" y2=\"160\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><text x=\"159.4\" y=\"214\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">20 cm</text><text x=\"72.4\" y=\"149\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"end\">12 cm</text><text x=\"272.9\" y=\"187\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">10 cm</text><text x=\"180\" y=\"40\" font-size=\"15\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">filled ¾ of the way — how much water?</text></svg>",
+    "alt": "A rectangular prism 20 cm by 10 cm by 12 cm"
+  }
 }

@@ -55,5 +55,10 @@
     "measurement",
     "units"
   ],
-  "estimatedSeconds": 30
+  "estimatedSeconds": 30,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 210\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><text x=\"180\" y=\"40\" font-size=\"15\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">the mass of one apple</text><rect x=\"29\" y=\"74\" width=\"94\" height=\"46\" rx=\"9\" fill=\"#0EA5E914\" stroke=\"#0EA5E9\" stroke-width=\"2\"/><text x=\"76\" y=\"101.7\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">grams</text><rect x=\"133\" y=\"74\" width=\"94\" height=\"46\" rx=\"9\" fill=\"#0EA5E914\" stroke=\"#0EA5E9\" stroke-width=\"2\"/><text x=\"180\" y=\"101.7\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">kilograms</text><rect x=\"237\" y=\"74\" width=\"94\" height=\"46\" rx=\"9\" fill=\"#0EA5E914\" stroke=\"#0EA5E9\" stroke-width=\"2\"/><text x=\"284\" y=\"101.7\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">tonnes</text><text x=\"180\" y=\"148\" font-size=\"24\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text><text x=\"180\" y=\"182\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">which unit is the right size for it?</text></svg>",
+    "alt": "The choice of unit for measuring the mass of one apple"
+  }
 }

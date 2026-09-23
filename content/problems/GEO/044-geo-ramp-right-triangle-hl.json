@@ -49,5 +49,10 @@
     "HL",
     "right-triangle"
   ],
-  "estimatedSeconds": 40
+  "estimatedSeconds": 40,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 230\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"42,176 160,176 42,91\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.8\" stroke-linejoin=\"round\"/><path d=\"M 53 176 L 53 165 L 42 165\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><line x1=\"101\" y1=\"181\" x2=\"101\" y2=\"171\" stroke=\"#10B981\" stroke-width=\"2.2\"/><line x1=\"106.4\" y1=\"131.2\" x2=\"100.5\" y2=\"139.3\" stroke=\"#10B981\" stroke-width=\"2.2\"/><line x1=\"101.5\" y1=\"127.7\" x2=\"95.6\" y2=\"135.8\" stroke=\"#10B981\" stroke-width=\"2.2\"/><polygon points=\"212,176 330,176 212,91\" fill=\"#0EA5E91e\" stroke=\"#0EA5E9\" stroke-width=\"2.8\" stroke-linejoin=\"round\"/><path d=\"M 223 176 L 223 165 L 212 165\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><line x1=\"271\" y1=\"181\" x2=\"271\" y2=\"171\" stroke=\"#10B981\" stroke-width=\"2.2\"/><line x1=\"276.4\" y1=\"131.2\" x2=\"270.5\" y2=\"139.3\" stroke=\"#10B981\" stroke-width=\"2.2\"/><line x1=\"271.5\" y1=\"127.7\" x2=\"265.6\" y2=\"135.8\" stroke=\"#10B981\" stroke-width=\"2.2\"/><text x=\"100\" y=\"206\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">ramp 1</text><text x=\"270\" y=\"206\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">ramp 2</text><text x=\"180\" y=\"30\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">right angle, hypotenuse, one leg</text></svg>",
+    "alt": "Two triangles with the matching parts marked (HL)"
+  }
 }
