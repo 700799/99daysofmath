@@ -1,5 +1,5 @@
 import type { SlideBank } from './types';
-import { AMB, EMR, ROSE, SKY, VIO, W, arrow, art, axes, dot, line, machine, text } from '../slideArt';
+import { AMB, EMR, ROSE, SKY, VIO, W, arrow, art, axes, dot, flow, funcGraph, line, machine, text } from '../slideArt';
 
 // Precalculus slide decks, units 1-4.
 
@@ -365,7 +365,12 @@ export const PC_SLIDES_U01_04: SlideBank = {
 
   // ---------------- PC-3 — Polynomial functions ----------------
   'PC-3': [
-    { kind: 'objective', head: 'Read a polynomial like a map', body: 'Today you look at a polynomial and predict its graph without plotting a single point. Two things tell the story: the degree and the factors. One decides where the arms point, the other decides where the graph meets the x-axis.' },
+    {
+      kind: 'objective',
+      head: 'Read a polynomial like a map',
+      body: 'Today you look at a polynomial and predict its graph without plotting a single point. Two things tell the story: the degree and the factors. One decides where the arms point, the other decides where the graph meets the x-axis.',
+      art: flow([{ label: 'Degree sets the end behaviour', color: SKY }, { label: 'Factors give the zeros', color: AMB }, { label: 'Multiplicity says bounce or cross', color: EMR }], { title: 'What a polynomial graph tells you' }),
+    },
     {
       kind: 'concept',
       head: 'Degree and leading coefficient',
@@ -407,6 +412,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Zeros hide inside the factors',
       body: 'A product is zero only when one of its pieces is zero. So set each factor equal to zero to find the x-intercepts. Watch the sign flip: the factor (x − 5) hides the zero +5, and (x + 2) hides the zero −2.',
+      art: funcGraph([{ f: (x) => (x + 2) * (x - 1) }], { range: { x: [-4, 3], y: [-5, 6] }, zeros: [{ at: -2, label: 'x = −2' }, { at: 1, label: 'x = 1' }], title: '(x + 2)(x − 1) crosses twice', caption: 'Each factor set to zero gives one crossing. The factors ARE the zeros.' }),
       formula: {
         tex: 'p(x) = (x - 2)(x + 3)',
         note: 'A product is zero only when one of its factors is zero — so set each bracket to 0.',
@@ -531,7 +537,12 @@ export const PC_SLIDES_U01_04: SlideBank = {
 
   // ---------------- PC-4 — Rational functions ----------------
   'PC-4': [
-    { kind: 'objective', head: 'Fractions of polynomials', body: 'Today you graph functions that are one polynomial divided by another. These graphs have invisible lines they run away from and single missing dots. You will learn to spot both by looking at the top and the bottom separately.' },
+    {
+      kind: 'objective',
+      head: 'Fractions of polynomials',
+      body: 'Today you graph functions that are one polynomial divided by another. These graphs have invisible lines they run away from and single missing dots. You will learn to spot both by looking at the top and the bottom separately.',
+      art: flow([{ label: 'Cancel shared factors first', color: SKY }, { label: 'Bottom zero: asymptote or hole', color: AMB }, { label: 'Compare degrees for the level', color: EMR }], { title: 'Reading a rational function' }),
+    },
     {
       kind: 'concept',
       head: 'Top and bottom do different jobs',
@@ -588,6 +599,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'A hole is one missing dot',
       body: 'If the SAME factor appears on top and bottom, it cancels. That x-value is still forbidden, but the graph does not run away there — it is a normal curve with one dot lifted out. That is a HOLE, and it is easy to miss.',
+      art: funcGraph([{ f: (x) => x + 3 }], { range: { x: [-5, 4], y: [-3, 7] }, points: [{ x: 2, y: 5, label: 'hole at x = 2', hollow: true, color: ROSE }], title: 'A cancelled factor leaves a gap', caption: 'The curve is a perfectly ordinary line with exactly one point missing.' }),
       compare: {
         cols: [
           { title: 'Hole', tex: '\\dfrac{(x-2)(x+1)}{x-2}', lines: ['Factor cancels', 'One dot missing'], tone: 'warn' },

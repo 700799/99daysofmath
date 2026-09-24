@@ -1,5 +1,5 @@
 import type { SlideBank } from './types';
-import { AMB, EMR, ROSE, SKY, W, art, axes, bars, dot, line, numberLine, rightTriangle, text } from '../slideArt';
+import { AMB, EMR, ROSE, SKY, VIO, W, art, axes, bars, dot, flow, funcGraph, line, numberLine, rightTriangle, text } from '../slideArt';
 
 // PC Units 5-8 — Exponential functions, Logarithms, Solving exponential & log
 // equations, Right-triangle trigonometry. 17 slides per deck, ~3 short
@@ -270,11 +270,17 @@ export const PC_SLIDES_U05_08: SlideBank = {
   ],
 
   'PC-6': [
-    { kind: 'objective', head: 'Logarithms: the question machine', body: 'Today you will read a logarithm as a QUESTION: what power do I raise the base to? You will evaluate logs by counting, use the three log rules, and decode real scales like Richter and decibels. Logs stop being scary once you hear the question.' },
+    {
+      kind: 'objective',
+      head: 'Logarithms: the question machine',
+      body: 'Today you will read a logarithm as a QUESTION: what power do I raise the base to? You will evaluate logs by counting, use the three log rules, and decode real scales like Richter and decibels. Logs stop being scary once you hear the question.',
+      art: flow([{ label: 'A log asks for the exponent', color: SKY }, { label: 'Multiply inside, add outside', color: AMB }, { label: 'Powers slide out front', color: EMR }], { title: 'What a logarithm is for' }),
+    },
     {
       kind: 'concept',
       head: 'A log asks for the exponent',
       body: 'Read log base 2 of 8 out loud as "2 to WHAT power gives 8?" The answer is 3, because 2³ = 8. The answer to a log is always an exponent — nothing more mysterious than that.',
+      art: funcGraph([{ f: (x) => Math.log2(x) }], { range: { x: [-1, 9], y: [-4, 4] }, vAsymptotes: [{ at: 0, label: 'never reaches 0' }], points: [{ x: 8, y: 3, label: 'log₂ 8 = 3' }], title: 'The output IS the exponent', caption: 'Ask "2 to what power gives 8?" The graph answers 3.' }),
       formula: {
         tex: '\\log_{b} N = x \\iff b^{x} = N',
         note: 'Read the left side as a question: "b to WHAT power gives N?"',
@@ -311,6 +317,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
       kind: 'concept',
       head: 'Multiply inside becomes add outside',
       body: 'The product rule says log(A × B) = log A + log B. A hard multiplication inside the log turns into an easy addition outside it. The division version subtracts instead: log(A ÷ B) = log A − log B.',
+      art: funcGraph([{ f: (x) => Math.log2(x), label: 'y = log₂ x' }], { range: { x: [-1, 9], y: [-3, 4] }, points: [{ x: 2, y: 1, label: 'log 2 = 1' }, { x: 4, y: 2, label: 'log 4 = 2', color: SKY }, { x: 8, y: 3, label: 'log 8 = 3', color: VIO }], title: 'Doubling inside adds one outside', caption: 'Every time the input doubles, the log climbs by exactly one. Multiplication becomes addition.' }),
       formula: {
         tex: '\\log(AB) = \\log A + \\log B',
         note: 'A hard multiplication inside turns into an easy addition outside. Division subtracts instead.',
@@ -413,7 +420,12 @@ export const PC_SLIDES_U05_08: SlideBank = {
   ],
 
   'PC-7': [
-    { kind: 'objective', head: 'Solve for the hidden exponent', body: 'Today you will solve equations where the unknown is stuck up in an exponent or trapped inside a log. You will use the same-base trick, take logs of both sides, and rewrite logs as powers. You will also learn to throw out answers that break the log.' },
+    {
+      kind: 'objective',
+      head: 'Solve for the hidden exponent',
+      body: 'Today you will solve equations where the unknown is stuck up in an exponent or trapped inside a log. You will use the same-base trick, take logs of both sides, and rewrite logs as powers. You will also learn to throw out answers that break the log.',
+      art: flow([{ label: 'Free the power', color: SKY }, { label: 'Match bases or take a log', color: AMB }, { label: 'Check the answer is legal', color: EMR }], { title: 'Exponential equations' }),
+    },
     {
       kind: 'concept',
       head: 'Same base, matching exponents',
@@ -451,6 +463,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
       kind: 'concept',
       head: 'Take the log to pull the exponent down',
       body: 'When the bases refuse to match, take the log of both sides. The power rule lets the exponent slide down in front, where it becomes an ordinary number you can divide by. That is the log\'s superpower: it reaches up and grabs the exponent.',
+      art: flow([{ label: 'Free the power first', color: SKY }, { label: 'Take the log of both sides', color: AMB }, { label: 'The exponent slides out front', color: EMR }, { label: 'Divide to finish', color: VIO }], { title: 'Four moves for any exponent' }),
       formula: {
         tex: 'b^{x} = N \\ \\Rightarrow\\ x = \\dfrac{\\log N}{\\log b}',
         note: 'When the bases refuse to match, a log reaches up and grabs the exponent.',
@@ -495,7 +508,12 @@ export const PC_SLIDES_U05_08: SlideBank = {
       },
     },
     { kind: 'example', head: 'Free the power: 3 · 2^x = 96', body: 'The power is not alone, so fix that first.\nDivide both sides by 3: 2^x = 32. Then 32 = 2⁵, so x = 5. Check it: 3 × 32 = 96. ✓' },
-    { kind: 'example', head: 'When will savings double?', body: 'Your savings double every 7 years and you have $2000. When do you reach $16,000?\nDivide first: 16,000 ÷ 2000 = 8, and 8 = 2³, so three doublings are needed. Three doublings × 7 years each = 21 years.' },
+    {
+      kind: 'example',
+      head: 'When will savings double?',
+      body: 'Your savings double every 7 years and you have $2000. When do you reach $16,000?\nDivide first: 16,000 ÷ 2000 = 8, and 8 = 2³, so three doublings are needed. Three doublings × 7 years each = 21 years.',
+      art: funcGraph([{ f: (x) => 100 * Math.pow(1.07, x), label: 'balance' }], { range: { x: [0, 14], y: [0, 260] }, hAsymptote: { at: 200, label: 'double' }, points: [{ x: 10, y: 197, label: '10 years' }], xLabel: 'years', yLabel: '$', title: '7% growth doubles in about 10 years', caption: 'Curved, not straight — each year earns interest on the interest before it.' }),
+    },
     {
       kind: 'example',
       head: 'Another way: list it out',
@@ -584,6 +602,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
       kind: 'concept',
       head: 'Triangles worth memorizing',
       body: 'The 3-4-5 triangle and its double, the 6-8-10, show up everywhere. The 45-45-90 has two equal legs, so its tangent is exactly 1. The 30-60-90 has its short leg exactly HALF the hypotenuse, so sin 30° = 1/2.',
+      art: rightTriangle({ opp: '1', adj: '√3', hyp: '2', angle: '30°', names: false, title: 'The 30-60-90 triangle', caption: 'Sides in the ratio 1 : √3 : 2. Recognise it and the ratios need no calculator.' }),
       compare: {
         cols: [
           { title: '45-45-90', tex: '1 : 1 : \\sqrt{2}', lines: ['Two equal legs', 'Half a square'], tone: 'accent' },
@@ -596,6 +615,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
       kind: 'concept',
       head: 'Inverse trig finds the angle',
       body: 'Sine takes an angle and gives you a ratio; INVERSE sine goes backward, taking a ratio and giving you the angle. If tan = 1, the angle is 45°. If sin = 1/2, the angle is 30°.',
+      art: rightTriangle({ opp: '3', adj: '4', hyp: '5', angle: '?', names: false, title: 'Sides known, angle wanted', caption: 'When you have the sides and want the angle, inverse trig runs the ratio backwards.' }),
       formula: {
         tex: '\\sin\\theta = 0.6 \\ \\Rightarrow\\ \\theta = \\sin^{-1}(0.6)',
         note: 'Plain trig turns an angle into a ratio; inverse trig turns a ratio back into an angle.',
@@ -629,7 +649,12 @@ export const PC_SLIDES_U05_08: SlideBank = {
         answer: 'h \\approx 17.3 \\text{ ft}',
       },
     },
-    { kind: 'example', head: 'A wheelchair ramp', body: 'A ramp is 10 ft along the slope and rises at 30°. How high is the top?\nThe ramp itself is the hypotenuse, and the height is opposite the 30° angle. SOH: sin 30° = height ÷ 10, and sin 30° = 1/2, so the height is 5 ft.' },
+    {
+      kind: 'example',
+      head: 'A wheelchair ramp',
+      body: 'A ramp is 10 ft along the slope and rises at 30°. How high is the top?\nThe ramp itself is the hypotenuse, and the height is opposite the 30° angle. SOH: sin 30° = height ÷ 10, and sin 30° = 1/2, so the height is 5 ft.',
+      art: rightTriangle({ opp: '2 ft rise', adj: '24 ft run', hyp: 'the ramp', angle: 'about 5°', names: false, title: 'A gentle, legal slope', caption: 'A long run against a small rise gives a shallow angle — which is exactly the point.' }),
+    },
     {
       kind: 'example',
       head: 'Another way: draw the picture first',

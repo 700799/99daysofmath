@@ -1,5 +1,5 @@
 import type { SlideBank } from './types';
-import { AMB, EMR, ROSE, SKY, W, art, axes, line, text, unitCircle } from '../slideArt';
+import { AMB, EMR, ROSE, SKY, W, art, axes, flow, funcGraph, line, rightTriangle, text, unitCircle } from '../slideArt';
 
 // Precalculus Units 9–11 — the unit circle & radians, graphing sine and
 // cosine, and trig identities & equations. 17 slides per deck: objective →
@@ -123,7 +123,12 @@ export const PC_SLIDES_U09_11: SlideBank = {
     },
   ],
   'PC-10': [
-    { kind: 'objective', head: 'Waves you can read', body: 'Today you turn sine and cosine into GRAPHS. You will find the amplitude, the midline, the period and the phase shift of any wave, straight from its equation. Then you will use them on Ferris wheels, heartbeats, tides and daylight.' },
+    {
+      kind: 'objective',
+      head: 'Waves you can read',
+      body: 'Today you turn sine and cosine into GRAPHS. You will find the amplitude, the midline, the period and the phase shift of any wave, straight from its equation. Then you will use them on Ferris wheels, heartbeats, tides and daylight.',
+      art: flow([{ label: 'Midline: the calm level', color: SKY }, { label: 'Amplitude: half the swing', color: AMB }, { label: 'Period: how long one wave takes', color: EMR }], { title: 'The four numbers of a wave' }),
+    },
     {
       kind: 'concept',
       head: 'A sine graph is a wave',
@@ -207,6 +212,7 @@ export const PC_SLIDES_U09_11: SlideBank = {
       kind: 'example',
       head: 'Period: squeeze the wave',
       body: 'Find the period of y = sin(2x), in degrees.\nPeriod = 360 ÷ b, and here b = 2, so 360 ÷ 2 = 180°.\nThe 2 makes x count double-time, packing two whole waves into one 360° stretch.',
+      art: funcGraph([{ f: (x) => Math.sin(2 * x), label: 'sin 2x: two waves' }, { f: (x) => Math.sin(x), label: 'sin x: one wave', color: SKY }], { range: { x: [0, 6.5], y: [-2, 2] }, xTickText: (v) => (v === 0 ? '0' : v === 3 ? 'π' : v === 6 ? '2π' : ''), title: 'The inside number squeezes it', caption: 'Doubling the input fits two complete waves where one used to go.' }),
       formula: {
         tex: '\\text{period} = \\dfrac{2\\pi}{B}',
         note: 'A bigger B squeezes more waves into the same space, so each one is shorter.',
@@ -248,6 +254,7 @@ export const PC_SLIDES_U09_11: SlideBank = {
       kind: 'trap',
       head: 'Trap: amplitude is not the full height',
       body: 'Daylight runs from 16 hours down to 8 hours, so the amplitude is NOT 8. Amplitude is half the peak-to-trough gap: (16 − 8) ÷ 2 = 4 hours, around a midline of 12. Take the gap, then halve it — always.',
+      art: funcGraph([{ f: (x) => 2 * Math.sin(x), label: 'amplitude 2, height 4' }], { range: { x: [0, 6.5], y: [-3, 3] }, xTickText: (v) => (v === 0 ? '0' : v === 3 ? 'π' : v === 6 ? '2π' : ''), points: [{ x: 1.57, y: 2, label: 'top: 2' }, { x: 4.71, y: -2, label: 'bottom: −2', color: SKY }], title: 'Top to bottom is DOUBLE the amplitude', caption: 'The full swing here is 4, so the amplitude is 2. Halve the height to get it.' }),
       compare: {
         cols: [
           { title: 'Wrong', tex: 'A = \\text{max} - \\text{min}', lines: ['Counts the whole swing', 'Twice too big'], tone: 'bad' },
@@ -282,7 +289,12 @@ export const PC_SLIDES_U09_11: SlideBank = {
     },
   ],
   'PC-11': [
-    { kind: 'objective', head: 'One identity, endless shortcuts', body: 'Today you meet sin²θ + cos²θ = 1 — the Pythagorean theorem wearing a trig costume. You will use it to find missing values and to simplify messy expressions. Then you will solve trig equations and learn why they usually have TWO answers.' },
+    {
+      kind: 'objective',
+      head: 'One identity, endless shortcuts',
+      body: 'Today you meet sin²θ + cos²θ = 1 — the Pythagorean theorem wearing a trig costume. You will use it to find missing values and to simplify messy expressions. Then you will solve trig equations and learn why they usually have TWO answers.',
+      art: flow([{ label: 'sin² + cos² = 1 always', color: SKY }, { label: 'Rearrange it into a tool', color: AMB }, { label: 'One turn holds two answers', color: EMR }], { title: 'The Pythagorean identity' }),
+    },
     {
       kind: 'concept',
       head: 'It IS the Pythagorean theorem',
@@ -358,7 +370,12 @@ export const PC_SLIDES_U09_11: SlideBank = {
     },
     { kind: 'example', head: 'The game motion check', body: 'A game stores a facing direction as cos θ = 0.6, with θ in Quadrant 1. It needs sin θ to move the sprite.\nsin²θ = 1 − 0.6² = 1 − 0.36 = 0.64, so sin θ = 0.8 or −0.8.\nQuadrant 1 is up and to the right, where sine is positive, so sin θ = 0.8. Check: 0.36 + 0.64 = 1.' },
     { kind: 'example', head: 'Simplify with the identity', body: 'Simplify (1 − sin²θ) ÷ cos θ, with cos θ not zero.\nThe top is 1 minus a square, so swap it: 1 − sin²θ = cos²θ.\nNow it is cos²θ ÷ cos θ. Two copies on top, one on the bottom, so one cancels: the answer is cos θ.' },
-    { kind: 'example', head: 'Why tan 45° equals 1', body: 'Use tan θ = sin θ ÷ cos θ at 45°.\nAt 45° you have gone as far up as you have gone across, so sin 45° = cos 45° = √2/2 ≈ 0.707.\nDividing a number by itself gives 1, so tan 45° = 1. The ugly square roots cancel each other out.' },
+    {
+      kind: 'example',
+      head: 'Why tan 45° equals 1',
+      body: 'Use tan θ = sin θ ÷ cos θ at 45°.\nAt 45° you have gone as far up as you have gone across, so sin 45° = cos 45° = √2/2 ≈ 0.707.\nDividing a number by itself gives 1, so tan 45° = 1. The ugly square roots cancel each other out.',
+      art: rightTriangle({ opp: '1', adj: '1', hyp: '√2', angle: '45°', shape: { opp: 3, adj: 3 }, title: 'Equal legs, so the ratio is 1', caption: 'Tangent is opposite over adjacent. When the legs match, that ratio can only be 1.' }),
+    },
     {
       kind: 'example',
       head: 'Solve sin θ = 0.5',
@@ -371,7 +388,12 @@ export const PC_SLIDES_U09_11: SlideBank = {
         answer: '30^{\\circ} \\text{ and } 150^{\\circ}',
       },
     },
-    { kind: 'example', head: 'Another way: read it off the wave', body: 'Same equation, different picture. Graph y = sin θ from 0° to 360°: it climbs to 1, drops to −1, and returns.\nNow draw the flat line y = 0.5 straight across the graph.\nThe wave crosses that line twice — once climbing at 30°, once falling at 150°. Counting crossings counts solutions.' },
+    {
+      kind: 'example',
+      head: 'Another way: read it off the wave',
+      body: 'Same equation, different picture. Graph y = sin θ from 0° to 360°: it climbs to 1, drops to −1, and returns.\nNow draw the flat line y = 0.5 straight across the graph.\nThe wave crosses that line twice — once climbing at 30°, once falling at 150°. Counting crossings counts solutions.',
+      art: funcGraph([{ f: (x) => Math.sin(x), label: 'sin' }, { f: (x) => Math.cos(x), label: 'cos', color: SKY }], { range: { x: [0, 6.5], y: [-2, 2] }, xTickText: (v) => (v === 0 ? '0' : v === 3 ? 'π' : v === 6 ? '2π' : ''), title: 'Sine and cosine, a quarter turn apart', caption: 'Cosine is sine that started early. Their squares still add to 1 at every single point.' }),
+    },
     { kind: 'example', head: 'Another way: ride the rotating platform', body: 'A platform lifts a robot as it spins. It reaches your target height while rising, keeps going to the very top, then comes back down past that same height.\nThat second pass is the same distance past the top as the first was before it.\nThe only heights hit just once are the very top and the very bottom. Everything else gets hit twice.' },
     { kind: 'protip', head: 'Verify by plugging in a friendly angle', body: 'Not sure whether your simplifying step is legal? Test it at 30° or 45°, where you know the exact values. If both sides of your work give the same number, you are almost certainly right. If they disagree, you just caught your own mistake for free.' },
     {

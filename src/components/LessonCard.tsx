@@ -473,8 +473,19 @@ const SLIDE_STYLE: Record<LessonSlide['kind'], { badge: string; emoji: string; c
   summary: { badge: 'Summary', emoji: '🏁', card: 'bg-ok-soft border-ok/40', badgeCls: 'bg-green-200 text-ok' },
 };
 
+/**
+ * One slide, read like a flash card: the headline, then the PICTURE, then the
+ * words that explain what you just looked at.
+ *
+ * The figure used to sit under the paragraph, so on a phone you read six lines
+ * of prose before you saw anything — and most readers never scrolled. A slide
+ * that has something to show now leads with it, and the prose becomes the
+ * caption underneath rather than the main event.
+ */
 function SlidePage({ slide }: { slide: LessonSlide }) {
   const st = SLIDE_STYLE[slide.kind];
+  const lead = slide.art ? <ArtView art={slide.art} /> : slide.formula ? <FormulaView block={slide.formula} /> : null;
+  const showsFormulaBelow = !!slide.formula && !!slide.art;
   return (
     <div>
       <div className="flex items-center justify-between gap-2">
@@ -483,13 +494,16 @@ function SlidePage({ slide }: { slide: LessonSlide }) {
         </span>
         <ReadAloud text={[slide.head, slide.body]} label="" />
       </div>
-      <div className={`mt-3 rounded-2xl border-2 p-4 ${st.card}`}>
-        <h3 className="text-xl font-display font-extrabold leading-tight text-ink">{slide.head}</h3>
-        <p className="mt-2 whitespace-pre-line text-[15px] leading-relaxed text-ink">{slide.body}</p>
-      </div>
-      {/* The mathematics, lifted out of the paragraph and framed. */}
-      {slide.formula && <FormulaView block={slide.formula} />}
-      {slide.art && <ArtView art={slide.art} />}
+
+      <h3 className="mt-3 text-[22px] font-display font-extrabold leading-tight text-ink">{slide.head}</h3>
+
+      {/* The picture first — it is the point of the card. */}
+      {lead && <div className={`mt-3 rounded-2xl border-2 px-2 py-3 ${st.card}`}>{lead}</div>}
+
+      <p className="mt-3 whitespace-pre-line text-[15px] leading-relaxed text-ink-muted">{slide.body}</p>
+
+      {/* Then the rest of the mathematics, lifted out of the paragraph and framed. */}
+      {showsFormulaBelow && <FormulaView block={slide.formula!} />}
       {slide.compare && <CompareView block={slide.compare} />}
       {slide.steps && <StepsView block={slide.steps} />}
       {slide.table && <TableView block={slide.table} />}

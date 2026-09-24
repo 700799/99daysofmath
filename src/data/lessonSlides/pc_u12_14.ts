@@ -1,5 +1,5 @@
 import type { SlideBank } from './types';
-import { AMB, EMR, SKY, art, axes, dot, line, numberLine, text, triangle } from '../slideArt';
+import { AMB, EMR, ROSE, SKY, areaModel, art, axes, dot, flow, funcGraph, line, numberLine, tape, text, triangle } from '../slideArt';
 
 // PC Units 12-14 — Law of Sines & Law of Cosines, Sequences & series, and the
 // doorway to calculus. 16-17 slides per deck, ~3 short sentences each, written
@@ -32,6 +32,7 @@ export const PC_SLIDES_U12_14: SlideBank = {
       kind: 'concept',
       head: 'Law of Cosines: Pythagoras plus a fix',
       body: 'The rule is c² = a² + b² − 2ab × cos C. The first part is plain old Pythagoras. The last part is a CORRECTION, and it fixes the answer when the corner is not square.',
+      art: triangle({ A: 'θ', B: 'B', C: 'C', a: 'a', b: 'b', c: 'c', shape: [[70, 200], [330, 200], [210, 80]], title: 'Two sides and the angle BETWEEN them', caption: 'It is a² + b² with a correction term for the angle. When that angle is 90° the correction vanishes.' }),
       formula: {
         tex: 'c^{2} = a^{2} + b^{2} - 2ab\\cos C',
         note: 'Pythagoras with a correction term. If C is 90°, cos C is 0 and the fix vanishes.',
@@ -45,6 +46,7 @@ export const PC_SLIDES_U12_14: SlideBank = {
       kind: 'concept',
       head: 'Pick the tool that fits',
       body: 'You would not use a hammer on a screw. If you have a matching side-angle pair, use the Law of Sines. If you have two sides and the angle between (SAS), or all three sides (SSS), use the Law of Cosines.',
+      art: flow([{ label: 'Angle with its opposite side? → Sines', color: SKY }, { label: 'Two sides and the angle between? → Cosines', color: AMB }, { label: 'All three sides? → Cosines', color: EMR }], { title: 'Match the tool to what you have' }),
       compare: {
         cols: [
           { title: 'Law of Sines', tex: 'ASA \\cdot AAS \\cdot SSA', lines: ['You have a side AND', 'the angle facing it'], tone: 'ok' },
@@ -112,6 +114,7 @@ export const PC_SLIDES_U12_14: SlideBank = {
       kind: 'trap',
       head: 'Trap: the angle must be BETWEEN',
       body: 'In c² = a² + b² − 2ab cos C, the angle C has to sit between the two sides you squared. Grab a different corner and every number after that is wrong. Check the picture: does that angle really touch both a and b?',
+      art: triangle({ A: 'θ', B: 'B', C: 'C', a: 'side 2', c: 'side 1', title: 'The angle sits where the two sides meet', caption: 'Law of Cosines only works when the known angle is the corner the two known sides form.' }),
       compare: {
         cols: [
           { title: 'Wrong', tex: '\\cos(\\text{any angle})', lines: ['Grabs a corner at random', 'Answer is nonsense'], tone: 'bad' },
@@ -134,7 +137,12 @@ export const PC_SLIDES_U12_14: SlideBank = {
     },
   ],
   'PC-13': [
-    { kind: 'objective', head: 'Sequences & series', body: 'Today you will find any term of a pattern without listing them all. Then you will ADD a whole list in one line. One trick from a nine-year-old does most of the work.' },
+    {
+      kind: 'objective',
+      head: 'Sequences & series',
+      body: 'Today you will find any term of a pattern without listing them all. Then you will ADD a whole list in one line. One trick from a nine-year-old does most of the work.',
+      art: flow([{ label: 'Same jump: arithmetic', color: SKY }, { label: 'Same multiplier: geometric', color: AMB }, { label: 'A series adds them up', color: EMR }], { title: 'Two patterns, one sum' }),
+    },
     { kind: 'concept', head: 'A list with a rule', body: 'A SEQUENCE is an ordered list where a rule makes the next item. 3, 7, 11, 15 is a sequence. Order matters — the third term is the third one, always.' },
     {
       kind: 'concept',
@@ -161,6 +169,7 @@ export const PC_SLIDES_U12_14: SlideBank = {
       kind: 'concept',
       head: 'Geometric: same multiplier every time',
       body: 'GEOMETRIC sequences MULTIPLY by the same factor r each step. The formula is term n = first × r^(n−1). If the gaps keep growing, stop subtracting and start dividing to find r.',
+      art: funcGraph([{ f: (x) => 2 * Math.pow(3, x - 1), label: '2, 6, 18, 54' }], { range: { x: [0, 5], y: [0, 60] }, points: [{ x: 1, y: 2 }, { x: 2, y: 6 }, { x: 3, y: 18 }, { x: 4, y: 54 }], xLabel: 'term', yLabel: 'value', title: 'Tripling curves upward fast', caption: 'A constant multiplier bends the dots into a curve that keeps getting steeper.' }),
       formula: {
         tex: 'a_n = a_1 \\cdot r^{\\,n-1}',
         note: 'Same shape as the arithmetic rule, but the jumps are multiplications.',
@@ -174,6 +183,7 @@ export const PC_SLIDES_U12_14: SlideBank = {
       kind: 'concept',
       head: 'A series is the SUM',
       body: 'A sequence is the list; a SERIES is the total when you add the list up. Adding one at a time works but is slow. For arithmetic lists you can PAIR THE ENDS and finish in one line.',
+      art: tape([{ label: 'terms', boxes: 5, each: '+', color: SKY }, { label: 'the sum', boxes: 1, each: 'S', color: EMR }], { total: 'a series is one number, not a list', title: 'Sequence lists, series totals', caption: 'The sequence is the row of terms. The series is what you get when you add them all up.' }),
       compare: {
         cols: [
           { title: 'Sequence', tex: '3,\\ 7,\\ 11,\\ 15', lines: ['A list', 'Commas between'], tone: 'accent' },
@@ -246,7 +256,12 @@ export const PC_SLIDES_U12_14: SlideBank = {
         note: 'The middle column is n − 1 every time. That is where the formula comes from.',
       },
     },
-    { kind: 'example', head: 'Another way: two pyramids make a rectangle', body: 'Build a second can pyramid, flip it upside down, and push it against the first.\nEvery row now holds 20 + 1 = 21 cans, and there are 20 rows: 420 cans.\nThat is two pyramids, so one is 420 ÷ 2 = 210. This picture IS the pairing shortcut.' },
+    {
+      kind: 'example',
+      head: 'Another way: two pyramids make a rectangle',
+      body: 'Build a second can pyramid, flip it upside down, and push it against the first.\nEvery row now holds 20 + 1 = 21 cans, and there are 20 rows: 420 cans.\nThat is two pyramids, so one is 420 ÷ 2 = 210. This picture IS the pairing shortcut.',
+      art: areaModel([{ label: 'n terms', w: 3 }], [{ label: 'two copies', h: 1 }], [['n(n + 1)']], { title: 'Two triangles form a rectangle', total: 'so one triangle is n(n + 1) ÷ 2', caption: 'Stack the pyramid beside an upside-down copy and you get a clean rectangle you can just multiply.' }),
+    },
     {
       kind: 'protip',
       head: 'Subtract first, then divide',
@@ -287,7 +302,12 @@ export const PC_SLIDES_U12_14: SlideBank = {
     },
   ],
   'PC-14': [
-    { kind: 'objective', head: 'Limits & rate of change', body: 'Today you will ask a brand-new kind of question: where is this heading? Then you will squeeze two points together until they point at one instant. This is the last stop before calculus.' },
+    {
+      kind: 'objective',
+      head: 'Limits & rate of change',
+      body: 'Today you will ask a brand-new kind of question: where is this heading? Then you will squeeze two points together until they point at one instant. This is the last stop before calculus.',
+      art: flow([{ label: 'Where is the curve heading?', color: SKY }, { label: 'Smooth means substitute', color: AMB }, { label: '0 ÷ 0 means cancel first', color: EMR }], { title: 'What a limit asks' }),
+    },
     {
       kind: 'concept',
       head: 'A limit asks "where is this heading?"',
@@ -316,6 +336,7 @@ export const PC_SLIDES_U12_14: SlideBank = {
       kind: 'concept',
       head: 'Smooth means just substitute',
       body: 'If the rule has no holes and no jumps nearby, walk right in and plug the number in. For 3x + 1 as x → 2, the answer is simply 3(2) + 1 = 7. Most limits really are that easy.',
+      art: funcGraph([{ f: (x) => x * x, label: 'y = x²' }], { range: { x: [-3, 4], y: [-2, 10] }, points: [{ x: 2, y: 4, label: 'just plug in 2' }], title: 'No holes, no jumps, no drama', caption: 'When the curve is unbroken at that x, the limit is simply the value there.' }),
       compare: {
         cols: [
           { title: 'No break there', tex: '\\lim_{x \\to 2}(3x + 1)', lines: ['Just put 2 in', 'Answer is 7'], tone: 'ok' },
@@ -327,6 +348,7 @@ export const PC_SLIDES_U12_14: SlideBank = {
       kind: 'concept',
       head: '0 ÷ 0 is a signal, not an answer',
       body: 'When substituting gives 0 ÷ 0, the problem is not broken — it is telling you a factor cancels. Factor the top, cancel the shared piece, and substitute again. What you found is a HOLE in the graph.',
+      art: funcGraph([{ f: (x) => x + 3, label: '(x² − 9) ÷ (x − 3)' }], { range: { x: [-1, 6], y: [0, 10] }, points: [{ x: 3, y: 6, label: 'limit is 6', hollow: true, color: ROSE }], title: 'Cancel the factor and the answer appears', caption: 'The point at x = 3 is missing, but the curve either side heads straight for 6.' }),
       steps: {
         steps: [
           { tex: '\\dfrac{0}{0}', text: 'This is not a number — it is the problem telling you to do more work.' },

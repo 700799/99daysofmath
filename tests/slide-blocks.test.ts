@@ -108,14 +108,52 @@ describe('the mathematics on a slide typesets', () => {
 // Precalculus is the course that asked for this: every rule in it is a formula
 // and every idea has a picture, so a deck of paragraphs was the wrong shape for
 // it. These are the bars that keep the visuals there.
-describe('the Precalculus decks are visual', () => {
-  const PC = LESSONS.filter((l) => l.domain === 'PC');
+describe('every decked course is visual, not just prose', () => {
+  const DECKED = LESSONS.filter((l) => (l.slides ?? []).length > 0);
 
-  it('covers all fourteen units', () => {
-    expect(PC.length).toBe(14);
+  it('covers every course, Precalculus included', () => {
+    const units = new Map<string, number>();
+    for (const l of DECKED) units.set(l.domain, (units.get(l.domain) ?? 0) + 1);
+    expect(Object.fromEntries(units)).toEqual({
+      '5.F': 6,
+      '6.RP': 11,
+      '6.NS': 10,
+      '6.EE': 10,
+      '6.G': 10,
+      '6.SP': 10,
+      A1: 14,
+      PC: 14,
+    });
   });
 
-  it('most of every deck carries a block, not just prose', () => {
+  it('every unit has something drawn, at least three times', () => {
+    for (const l of DECKED) {
+      const n = (l.slides ?? []).filter((s) => s.art).length;
+      expect(n, `${lessonKey(l.domain, l.unit)} has ${n} drawings`).toBeGreaterThanOrEqual(3);
+    }
+  });
+
+  it('a quarter of every deck carries a block, not just prose', () => {
+    for (const l of DECKED) {
+      const s = l.slides ?? [];
+      const withBlock = s.filter((x) => x.formula || x.compare || x.steps || x.table || x.art).length;
+      expect(withBlock / s.length, `${lessonKey(l.domain, l.unit)}: ${withBlock}/${s.length} slides`).toBeGreaterThanOrEqual(0.25);
+    }
+  });
+
+  it('the opening slide of every unit leads with a picture', () => {
+    for (const l of DECKED) {
+      const opener = (l.slides ?? [])[0];
+      const lead = !!(opener.art || opener.formula);
+      expect(lead, `${lessonKey(l.domain, l.unit)} opens on "${opener.head}" with nothing to look at`).toBe(true);
+    }
+  });
+});
+
+describe('the Precalculus decks go further', () => {
+  const PC = LESSONS.filter((l) => l.domain === 'PC');
+
+  it('most of every deck carries a block', () => {
     for (const l of PC) {
       const s = l.slides ?? [];
       const withBlock = s.filter((x) => x.formula || x.compare || x.steps || x.table || x.art).length;
@@ -127,13 +165,6 @@ describe('the Precalculus decks are visual', () => {
     for (const l of PC) {
       const n = (l.slides ?? []).filter((s) => s.formula).length;
       expect(n, `${lessonKey(l.domain, l.unit)} has ${n} formula blocks`).toBeGreaterThanOrEqual(3);
-    }
-  });
-
-  it('every unit has something drawn, at least twice', () => {
-    for (const l of PC) {
-      const n = (l.slides ?? []).filter((s) => s.art).length;
-      expect(n, `${lessonKey(l.domain, l.unit)} has ${n} drawings`).toBeGreaterThanOrEqual(2);
     }
   });
 
@@ -196,10 +227,18 @@ describe('the drawing on a slide', () => {
     }
   });
 
-  it('follows the card into dark mode — ink is currentColor, never hard-coded', () => {
+  // A figure survives dark mode two ways: ink that is `currentColor` and so
+  // follows the card, or one of the six fixed accents, each chosen to read
+  // against a light and a dark background. Any OTHER colour is a hue someone
+  // picked for one theme and will disappear in the other.
+  const PALETTE = ['currentColor', '#F59E0B', '#0EA5E9', '#10B981', '#F43F5E', '#8B5CF6', '#fff'];
+
+  it('is drawn only in colours that survive both themes', () => {
     for (const { where, art } of DRAWN) {
-      expect(art.svg, `${where} hard-codes its ink`).not.toMatch(/#0f172a|#000\b|#111|black|white/i);
-      expect(art.svg, `${where} never uses the card's own ink`).toContain('currentColor');
+      let rest = art.svg;
+      for (const c of PALETTE) rest = rest.split(c).join('·');
+      const strays = [...rest.matchAll(/#[0-9a-fA-F]{3,8}\b|\b(?:black|white|gray|grey|navy|slate)\b/g)].map((m) => m[0]);
+      expect(strays, `${where} uses ${strays.join(', ')}, which is outside the palette`).toEqual([]);
     }
   });
 
