@@ -14,6 +14,7 @@ import { ReadAloud } from './ReadAloud';
 import { DOMAIN_EMOJI } from '../types/problem';
 import { stickerById } from '../utils/encouragement';
 import { Mascot } from './Mascot';
+import { ArtView, CompareView, FormulaView, StepsView, TableView } from './SlideBlocks';
 
 interface Props {
   lesson: Lesson;
@@ -184,21 +185,30 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 backdrop-blur-sm p-4 sm:p-6"
+        className="fixed inset-0 z-50 flex items-stretch justify-center bg-slate-900/70 backdrop-blur-sm sm:items-center sm:p-6"
         role="dialog"
         aria-label={`Lesson: ${lesson.title}`}
       >
         <motion.div
-          initial={{ scale: 0.9, y: 16, opacity: 0 }}
+          initial={{ scale: 0.96, y: 16, opacity: 0 }}
           animate={{ scale: 1, y: 0, opacity: 1 }}
           transition={{ type: 'spring', stiffness: 240, damping: 20 }}
-          className="bg-surface rounded-3xl px-5 sm:px-6 py-6 max-w-md w-full shadow-2xl max-h-[92vh] overflow-y-auto"
+          // A phone gets the whole screen — the deck is the task, not a
+          // peek at it — with the buttons pinned and only the slide
+          // scrolling. From sm up it goes back to a centred card.
+          className="flex h-[100dvh] w-full flex-col bg-surface px-4 shadow-2xl sm:h-auto sm:max-h-[92vh] sm:max-w-xl sm:rounded-3xl sm:px-7"
+          style={{
+            paddingTop: 'max(1rem, env(safe-area-inset-top))',
+            paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))',
+          }}
         >
           {phase === 'reward' ? (
-            <RewardView xp={LESSON_XP} earned={earned} onStart={onStart} onClose={onClose} />
+            <div className="min-h-0 flex-1 overflow-y-auto">
+              <RewardView xp={LESSON_XP} earned={earned} onStart={onStart} onClose={onClose} />
+            </div>
           ) : (
             <>
-              <div className="flex items-center justify-between gap-3">
+              <div className="flex shrink-0 items-center justify-between gap-3">
                 <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-accent truncate">
                   📘 {lesson.domain} · Unit {lesson.unit}
                 </div>
@@ -214,7 +224,7 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
                 onJump={(idx) => setPageIndex(idx)}
               />
 
-              <div className="mt-3 min-h-[280px]">
+              <div className="-mx-4 mt-3 min-h-0 flex-1 overflow-y-auto px-4 pb-2 sm:mx-0 sm:px-0">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={pageIndex}
@@ -265,7 +275,7 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
                 </AnimatePresence>
               </div>
 
-              <div className="mt-4 flex gap-2">
+              <div className="mt-3 flex shrink-0 gap-2 pt-1">
                 <button
                   type="button"
                   onClick={goBack}
@@ -287,7 +297,7 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
               <button
                 type="button"
                 onClick={onClose}
-                className="mt-2 w-full text-sm font-display font-bold text-ink-dim hover:text-ink-muted"
+                className="mt-2 w-full shrink-0 text-sm font-display font-bold text-ink-dim hover:text-ink-muted"
               >
                 Maybe later
               </button>
@@ -477,6 +487,12 @@ function SlidePage({ slide }: { slide: LessonSlide }) {
         <h3 className="text-xl font-display font-extrabold leading-tight text-ink">{slide.head}</h3>
         <p className="mt-2 whitespace-pre-line text-[15px] leading-relaxed text-ink">{slide.body}</p>
       </div>
+      {/* The mathematics, lifted out of the paragraph and framed. */}
+      {slide.formula && <FormulaView block={slide.formula} />}
+      {slide.art && <ArtView art={slide.art} />}
+      {slide.compare && <CompareView block={slide.compare} />}
+      {slide.steps && <StepsView block={slide.steps} />}
+      {slide.table && <TableView block={slide.table} />}
     </div>
   );
 }
