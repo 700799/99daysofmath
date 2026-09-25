@@ -20,6 +20,8 @@ export const W = 400;
 export const H = 260;
 
 const f = (n: number) => (Math.round(n * 10) / 10).toString();
+/** A number with a typographic minus, not a hyphen — these figures teach signs. */
+const sgn = (n: number) => f(n).replace('-', '−');
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 export const rad = (d: number) => (d * Math.PI) / 180;
 
@@ -984,6 +986,8 @@ export function lineGraph(
   let b = (o.title ? text(W / 2, 18, o.title, { size: 12, fill: VIO }) : '') + ax.body;
   const PAL = [AMB, SKY, EMR, VIO];
   const taken: number[] = [];
+  // the y-axis carries its own column of tick numbers; no label may sit in it
+  const axisPx = ax.X(Math.min(Math.max(0, r.x[0]), r.x[1]));
   // the y-intercept gets its label first, so a line label never lands on it
   const L0 = lines[0];
   if (L0 && o.showIntercept !== false && L0.b >= r.y[0] && L0.b <= r.y[1] && r.x[0] <= 0 && r.x[1] >= 0) {
@@ -1007,7 +1011,9 @@ export function lineGraph(
     // two lines that clamp to the same edge would otherwise share one label slot
     while (taken.some((t) => Math.abs(t - ly) < 17)) ly += 18;
     taken.push(ly);
-    if (L.label) b += text(ax.X(xe), ly, L.label, { size: 12, fill: col, anchor });
+    // a left-anchored label would otherwise start inside the y-tick column
+    const lx = anchor === 'start' ? Math.max(ax.X(xe), axisPx + 10) : ax.X(xe);
+    if (L.label) b += text(lx, ly, L.label, { size: 12, fill: col, anchor });
   });
   if (lines.length && o.slopeFrom !== undefined) {
     const L = lines[0];
@@ -1021,21 +1027,34 @@ export function lineGraph(
     b += text((ax.X(x1) + ax.X(x2)) / 2, ry, `run ${run}`, { size: 11, fill: ROSE });
     b += text(ax.X(x2) + 8, (ax.Y(y1) + ax.Y(y2)) / 2 + 4, `rise ${f(y2 - y1)}`, { size: 11, fill: ROSE, anchor: 'start' });
   }
+  // the row of x-axis tick numbers, which no label may land on
+  const tickY = ax.Y(Math.min(Math.max(0, r.y[0]), r.y[1])) + 18;
+  const clearOfTicks = (yy: number) =>
+    [yy - 12, yy + 22, yy + 38].find((c) => Math.abs(c - tickY) > 13) ?? yy - 12;
   if (lines.length && o.showIntercept !== false) {
     const L = lines[0];
     if (L.b >= r.y[0] && L.b <= r.y[1] && r.x[0] <= 0 && r.x[1] >= 0) {
       b += beats(dot(ax.X(0), ax.Y(L.b), 5.5, VIO));
-      b += text(ax.X(0) + 10, ax.Y(L.b) - 10, `(0, ${f(L.b)})`, { size: 11, fill: VIO, anchor: 'start' });
+      b += text(ax.X(0) + 10, clearOfTicks(ax.Y(L.b)) + 2, `(0, ${sgn(L.b)})`, { size: 11, fill: VIO, anchor: 'start' });
     }
   }
   (o.points ?? []).forEach((p, i) => {
     const col = p.color ?? EMR;
     const px = ax.X(p.x);
     b += fades(dot(px, ax.Y(p.y), 5.5, col), 0.3 + i * 0.1);
-    // a label centred on a point near an edge would hang off the canvas
-    const anchor = px > W - 74 ? 'end' : px < 74 ? 'start' : 'middle';
-    const lx = anchor === 'end' ? px + 8 : anchor === 'start' ? px - 8 : px;
-    if (p.label) b += text(lx, ax.Y(p.y) - 12, p.label, { size: 11, fill: col, anchor });
+    // a label centred on a point near an edge would hang off the canvas, and one
+    // sitting on the y-axis would land among that axis's own tick numbers
+    const onAxis = Math.abs(px - axisPx) < 20;
+    const anchor: 'start' | 'middle' | 'end' = px > W - 74 ? 'end' : px < 74 || onAxis ? 'start' : 'middle';
+    const lx = anchor === 'end' ? px + 8 : anchor === 'start' ? px - 8 + (onAxis ? 18 : 0) : px;
+    // above the point by default, but dropped below when that lands on the ticks
+    // clear of the tick row AND of the slots the line labels already took
+    const ly =
+      [ax.Y(p.y) - 12, ax.Y(p.y) + 22, ax.Y(p.y) + 38, ax.Y(p.y) - 30].find(
+        (c) => Math.abs(c - tickY) > 13 && !taken.some((t) => Math.abs(t - c) < 14),
+      ) ?? clearOfTicks(ax.Y(p.y));
+    taken.push(ly);
+    if (p.label) b += text(lx, ly, p.label, { size: 11, fill: col, anchor });
   });
   return art(o.alt ?? `A graph of the line ${lines.map((L) => `y = ${L.m}x + ${L.b}`).join(' and ')}`, b, o.caption);
 }
@@ -1085,7 +1104,21 @@ export function parabola(
     const vy = q.a * vx * vx + q.b * vx + q.c;
     if (vx >= r.x[0] && vx <= r.x[1] && vy >= r.y[0] && vy <= r.y[1]) {
       b += beats(dot(ax.X(vx), ax.Y(vy), 6, EMR));
-      b += text(ax.X(vx), ax.Y(vy) + (q.a > 0 ? 22 : -14), `vertex (${f(vx)}, ${f(vy)})`, { size: 11, fill: EMR });
+      // a vertex near the x-axis would land its label on the tick numbers, and a
+      // vertex between two roots would land it on theirs
+      const axisY = ax.Y(Math.min(Math.max(0, r.y[0]), r.y[1]));
+      const busy = [axisY + 18, ...(roots.length ? [axisY + 40] : [])];
+      const vly =
+        [ax.Y(vy) + (q.a > 0 ? 22 : -14), ax.Y(vy) + 38, ax.Y(vy) - 30, ax.Y(vy) + 56].find((c) =>
+          busy.every((t) => Math.abs(c - t) > 13),
+        ) ?? ax.Y(vy) - 30;
+      // a vertex near the y-axis would reach into that axis's column of tick numbers
+      const nearAxis = Math.abs(ax.X(vx) - axisX) < 56;
+      b += text(ax.X(vx) + (nearAxis ? 10 : 0), vly, `vertex (${sgn(vx)}, ${sgn(vy)})`, {
+        size: 11,
+        fill: EMR,
+        anchor: nearAxis ? 'start' : 'middle',
+      });
     }
   }
   if (o.label) b += text(W - 24, 42, o.label, { size: 12, fill: AMB, anchor: 'end' });
@@ -1156,4 +1189,120 @@ export function funcGraph(
     if (p.label) b += text(lx, ax.Y(p.y) - 12, p.label, { size: 11, fill: col, anchor });
   });
   return art(o.alt ?? 'A curve drawn on a coordinate grid with its key features marked', b, o.caption);
+}
+
+// ── the pictures that make negative numbers make sense ─────────────────────
+
+/**
+ * Integer chips. A positive chip and a negative chip make zero and cancel, so
+ * "add a negative" and "subtract a negative" stop being rules to memorise and
+ * become something you can count. `pairs` rings the ones that annihilate.
+ */
+export function chips(
+  pos: number,
+  neg: number,
+  o: { pairs?: number; result?: string; title?: string; caption?: string; alt?: string; note?: string } = {},
+): SlideArt {
+  const cancel = o.pairs ?? Math.min(pos, neg);
+  const r = 15, gap = 8;
+  let b = o.title ? text(W / 2, 28, o.title, { size: 13, fill: VIO }) : '';
+  const row = (n: number, y: number, col: string, sign: string, label: string, cancels: number) => {
+    let s = '';
+    const per = Math.min(n, 9);
+    const wide = per * (r * 2 + gap) - gap;
+    const x0 = Math.max(76, (W - wide) / 2);
+    s += text(x0 - 14, y + 5, label, { size: 12, fill: col, anchor: 'end' });
+    for (let i = 0; i < n; i++) {
+      const cx = x0 + (i % 9) * (r * 2 + gap) + r;
+      const cy = y + Math.floor(i / 9) * (r * 2 + gap);
+      const dead = i < cancels;
+      s += fades(circle(cx, cy, r, col, `${col}${dead ? '14' : '33'}`, 2.4), 0.08 * i);
+      s += text(cx, cy + 6, sign, { size: 17, fill: col, op: dead ? 0.4 : undefined });
+      if (dead) s += line(cx - r + 3, cy + r - 3, cx + r - 3, cy - r + 3, INK, 2, undefined, 0.55);
+    }
+    return s;
+  };
+  b += row(pos, 80, EMR, '+', `+${pos}`, cancel);
+  b += row(neg, 146, ROSE, '−', `−${neg}`, cancel);
+  if (cancel) b += text(W / 2, 206, `${cancel} zero pair${cancel > 1 ? 's' : ''} cancel`, { size: 12, op: 0.7 });
+  if (o.result) b += beats(text(W / 2, o.note ? 230 : 236, o.result, { size: 16, fill: VIO }));
+  if (o.note) b += text(W / 2, 250, o.note, { size: 11, op: 0.7 });
+  return art(o.alt ?? `${pos} positive chips and ${neg} negative chips, with ${cancel} pairs cancelling`, b, o.caption);
+}
+
+/**
+ * A walk along the number line. Each signed move is an arrow — right for a
+ * positive, left for a negative — so a chain like 3 + (-7) is a journey with
+ * a landing place rather than a rule about signs.
+ */
+export function walk(
+  lo: number,
+  hi: number,
+  start: number,
+  moves: { by: number; label?: string }[],
+  o: { title?: string; caption?: string; alt?: string; answerLabel?: string } = {},
+): SlideArt {
+  const y = 150, x0 = 46, x1 = W - 34;
+  const X = (v: number) => x0 + ((v - lo) / (hi - lo)) * (x1 - x0);
+  let b = o.title ? text(W / 2, 30, o.title, { size: 13, fill: VIO }) : '';
+  b += arrow(x0 - 14, y, x1 + 14, y, INK, 2) + arrow(x1 + 14, y, x0 - 14, y, INK, 2);
+  const step = Math.max(1, Math.ceil((hi - lo) / 12));
+  for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
+    b += line(X(v), y - 5, X(v), y + 5, INK, 1.5, undefined, 0.55);
+    b += text(X(v), y + 22, sgn(v), { size: 11, op: 0.65 });
+  }
+  let at = start;
+  b += fades(dot(X(start), y, 6, SKY), 0.15);
+  b += text(X(start), y + 42, `start ${sgn(start)}`, { size: 11, fill: SKY });
+  moves.forEach((m, i) => {
+    const to = at + m.by;
+    const hop = y - 26 - i * 24;
+    const col = m.by < 0 ? ROSE : EMR;
+    b += draws(line(X(at), hop, X(to), hop, col, 2.6), Math.abs(X(to) - X(at)), 0.3 + i * 0.25);
+    b += line(X(at), y - 6, X(at), hop, col, 1.4, '3 3', 0.5);
+    b += arrow(X(to) - (m.by < 0 ? -1 : 1) * 10, hop, X(to), hop, col, 2.6);
+    b += line(X(to), hop, X(to), y - 6, col, 1.4, '3 3', 0.5);
+    const mid = (X(at) + X(to)) / 2;
+    b += text(mid, hop - 8, m.label ?? `${m.by > 0 ? '+' : '−'}${Math.abs(m.by)}`, { size: 12, fill: col });
+    at = to;
+  });
+  b += beats(dot(X(at), y, 6, VIO));
+  // a short walk would stack the landing label straight onto the start label
+  const landY = Math.abs(X(at) - X(start)) < 96 ? y + 60 : y + 42;
+  b += text(X(at), landY, o.answerLabel ?? `land on ${sgn(at)}`, { size: 12, fill: VIO });
+  return art(o.alt ?? `A number line walk starting at ${start} and landing on ${at}`, b, o.caption);
+}
+
+/** The four sign rules for multiplying and dividing, as one grid you can read. */
+export function signGrid(
+  o: { op?: string; title?: string; caption?: string; alt?: string; mark?: string } = {},
+): SlideArt {
+  const op = o.op ?? '×';
+  const X0 = 88, BW = 224, RH = 36, GAP = 7, y0 = 62;
+  // one x per column, so the headers sit over what they actually name
+  const cx = { a: X0 + 38, op: X0 + 78, c: X0 + 118, eq: X0 + 156, res: X0 + 192 };
+  let b = o.title ? text(W / 2, 28, o.title, { size: 13, fill: VIO }) : '';
+  const cells: [string, string, string][] = [
+    ['+', '+', '+'],
+    ['+', '−', '−'],
+    ['−', '+', '−'],
+    ['−', '−', '+'],
+  ];
+  b += text(cx.a, y0 - 10, 'first', { size: 11, op: 0.65 });
+  b += text(cx.c, y0 - 10, 'second', { size: 11, op: 0.65 });
+  b += text(cx.res, y0 - 10, 'answer', { size: 11, op: 0.65 });
+  cells.forEach(([a, c, res], i) => {
+    const y = y0 + i * (RH + GAP);
+    const col = res === '+' ? EMR : ROSE;
+    const hot = o.mark === `${a}${c}`;
+    b += fades(rect(X0, y, BW, RH, hot ? VIO : col, `${hot ? VIO : col}1e`, hot ? 2.8 : 2, 8), 0.1 * i);
+    const yc = y + RH / 2 + 6;
+    b += text(cx.a, yc, a, { size: 16, fill: a === '+' ? EMR : ROSE });
+    b += text(cx.op, yc, op, { size: 13, op: 0.6 });
+    b += text(cx.c, yc, c, { size: 16, fill: c === '+' ? EMR : ROSE });
+    b += text(cx.eq, yc, '=', { size: 13, op: 0.6 });
+    b += text(cx.res, yc, res, { size: 18, fill: col });
+  });
+  b += text(W / 2, y0 + 4 * (RH + GAP) + 14, 'same signs give +, different signs give −', { size: 12, op: 0.75 });
+  return art(o.alt ?? `A grid of the four sign rules for ${op === '×' ? 'multiplying' : 'dividing'}`, b, o.caption);
 }

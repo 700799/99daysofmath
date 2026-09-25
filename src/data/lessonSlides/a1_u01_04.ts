@@ -1,5 +1,5 @@
 import type { SlideBank } from './types';
-import { AMB, EMR, ROSE, SKY, VIO, areaModel, balance, flow, machine, numberLine, plotGrid, tape } from '../slideArt';
+import { lineGraph, chips, signGrid, walk, AMB, EMR, ROSE, SKY, VIO, areaModel, balance, flow, machine, numberLine, plotGrid, tape } from '../slideArt';
 
 // Algebra 1 slide decks, units 1-4.
 
@@ -34,12 +34,45 @@ export const A1_SLIDES_U01_04: SlideBank = {
     },
     {
       kind: 'concept',
+      head: 'Negative numbers are values too',
+      body: 'A variable can hold a negative just as easily as a positive. Owing $5 is −5, four degrees below freezing is −4, and a submarine 30 feet down is at −30. When you substitute, the sign comes along with the number.',
+      art: chips(5, 3, { pairs: 3, result: '5 + (−3) = 2', title: 'A positive and a negative make zero', caption: 'Pair each positive with a negative and both vanish. Whatever is left over is the answer.' }),
+      formula: { tex: 'a + (-b) = a - b', note: 'Adding a negative and subtracting are the same move.', parts: [{ sym: '+(-b)', means: 'add a negative: step to the LEFT', tone: 'accent' }, { sym: '-b', means: 'subtract: the very same step', tone: 'ok' }] },
+    },
+    {
+      kind: 'example',
+      head: 'Substitute a negative: 3n + 2 at n = −4',
+      body: 'Wrap the value in parentheses so the sign cannot get lost: 3(−4) + 2.\nA positive times a negative is negative, so 3(−4) = −12.\nThen −12 + 2 = −10.',
+      art: walk(-14, 4, -12, [{ by: 2 }], { title: 'From −12, step 2 to the right', caption: 'Adding a positive always walks right, even when you start below zero.' }),
+      steps: { steps: [{ tex: '3(-4) + 2', text: 'Substitute, keeping the minus inside parentheses.' }, { tex: '3(-4) = -12', text: 'Different signs multiply to a negative.' }, { tex: '-12 + 2 = -10', text: 'Walk two steps right from twelve below.' }], answer: '-10' },
+    },
+    {
+      kind: 'example',
+      head: 'A negative coefficient: −5x + 8x',
+      body: 'These are both x-blocks, so they combine. You have 8 positive blocks and 5 negative ones.\nFive pairs cancel, leaving 3 positive blocks.\nSo −5x + 8x = 3x.',
+      art: chips(8, 5, { pairs: 5, result: '8x − 5x = 3x', title: 'Count the blocks, cancel the pairs', caption: 'Negative blocks cancel positive ones one for one. Three positives survive.' }),
+      steps: { steps: [{ tex: '-5x + 8x', text: 'Both terms are x-blocks, so they combine.' }, { tex: '(-5 + 8)x = 3x', text: 'Add the counts, keeping the block.' }], answer: '3x' },
+    },
+    {
+      kind: 'example',
+      head: 'Two negatives: −2x when x = −6',
+      body: 'Substitute carefully: −2(−6).\nBoth factors are negative, and two negatives multiply to a positive.\nSo −2(−6) = 12.',
+      art: signGrid({ mark: '−−', title: 'Two negatives make a positive', caption: 'Same signs give a positive answer. That is the only rule you need here.' }),
+      steps: { steps: [{ tex: '-2(-6)', text: 'Substitute, wrapping the value in parentheses.' }, { tex: '\\text{same signs} \\to +', text: 'Negative times negative is positive.' }, { tex: '2 \\times 6 = 12', text: 'Multiply the sizes to finish.' }], answer: '12' },
+    },
+    {
+      kind: 'concept',
       head: 'Evaluate = open the box',
       body: 'To EVALUATE an expression, replace the letter with its number and compute. If n = 7, then n + 5 becomes 7 + 5 = 12. Substitute first, then follow order of operations like always.',
       formula: { tex: 'f(4) : 3n + 2 \\to 3(4) + 2 = 14', note: 'Substitute the value, then do the arithmetic in the usual order.', parts: [{ sym: '\\text{substitute}', means: 'put the number wherever the letter stood', tone: 'accent' }, { sym: '\\text{then compute}', means: 'multiply before you add, as always', tone: 'ok' }] },
       art: machine('n = 4', '3n + 2', '14', { title: 'Evaluating is just substituting', caption: 'Put 4 where n stands, then do the arithmetic: 3 × 4 + 2 = 14.' }),
     },
-    { kind: 'example', head: 'The marble bag', body: 'A bag holds b marbles and you drop in 3 more.\nStart with the mystery box: b.\nAdd 3: the total is b + 3 — an expression that works no matter what b turns out to be.' },
+    {
+      kind: 'example',
+      head: 'The marble bag',
+      body: 'A bag holds b marbles and you drop in 3 more.\nStart with the mystery box: b.\nAdd 3: the total is b + 3 — an expression that works no matter what b turns out to be.',
+      art: tape([{ label: 'red', boxes: 3, each: 'r', color: ROSE }, { label: 'blue', boxes: 5, each: 'b', color: SKY }], { total: 'total = 3r + 5b', title: 'Two kinds of block, counted apart', caption: 'Red and blue marbles are different blocks, so the expression keeps them separate.' }),
+    },
     {
       kind: 'example',
       head: 'Game coins: 50 per level',
@@ -58,7 +91,12 @@ export const A1_SLIDES_U01_04: SlideBank = {
       body: 'Not sure an expression is right? Make a table.\nLevel 1 → 70 coins. Level 2 → 120. Level 3 → 170.\nEach row jumps by exactly 50, and every row matches 50L + 20 — the expression checks out.',
       art: plotGrid([{ x: 0, y: 2 }, { x: 1, y: 5 }, { x: 2, y: 8 }], { join: true, range: { x: [0, 5], y: [0, 12] }, title: 'Every n gives one point', caption: 'A table of n and 3n + 2 becomes a line the moment you plot it.' }),
     },
-    { kind: 'example', head: 'Your allowance, as algebra', body: 'You have $15 and get $10 allowance each week: that is 10w + 15.\nAfter 6 weeks, substitute w = 6.\n10 × 6 = 60, then 60 + 15 = $75.' },
+    {
+      kind: 'example',
+      head: 'Your allowance, as algebra',
+      body: 'You have $15 and get $10 allowance each week: that is 10w + 15.\nAfter 6 weeks, substitute w = 6.\n10 × 6 = 60, then 60 + 15 = $75.',
+      art: machine('w weeks', '× 12, then + 5', '12w + 5', { title: 'The rule behind the savings', caption: 'Twelve dollars each week plus a five-dollar head start.' }),
+    },
     {
       kind: 'example',
       head: 'Combine like terms',
@@ -66,7 +104,12 @@ export const A1_SLIDES_U01_04: SlideBank = {
       steps: { steps: [{ tex: '4x + 3x', text: 'Both terms are x-blocks, so they combine.' }, { tex: '(4 + 3)x = 7x', text: 'Add the counts and keep the block.' }], answer: '7x' },
       art: tape([{ label: 'x', boxes: 4, color: SKY }, { label: 'x', boxes: 3, color: SKY }], { total: '7 x-blocks in all', title: 'Same block, so they add', caption: 'Four x-blocks and three x-blocks make seven x-blocks. You never touch what x is worth.' }),
     },
-    { kind: 'example', head: 'Another way: sort the fruit', body: 'Think of 4x + 3 + 2x as 4 apples, 3 oranges, and 2 apples.\nSort them into baskets: 6 apples and 3 oranges.\nThat is 6x + 3 — you combine matching things, never apples with oranges.' },
+    {
+      kind: 'example',
+      head: 'Another way: sort the fruit',
+      body: 'Think of 4x + 3 + 2x as 4 apples, 3 oranges, and 2 apples.\nSort them into baskets: 6 apples and 3 oranges.\nThat is 6x + 3 — you combine matching things, never apples with oranges.',
+      art: tape([{ label: 'apples', boxes: 4, each: 'a', color: EMR }, { label: 'pears', boxes: 3, each: 'p', color: AMB }], { total: '4a + 3p, and no further', title: 'Sort before you count', caption: 'You can count apples and count pears, but you cannot add them into one number.' }),
+    },
     {
       kind: 'protip',
       head: 'Test expressions with easy numbers',
@@ -80,8 +123,18 @@ export const A1_SLIDES_U01_04: SlideBank = {
       compare: { cols: [{ title: '2n - 5', tex: '\\text{at } n = 4 : 3', lines: ['Take 5 off double n', 'The usual reading'], tone: 'ok' }, { title: '5 - 2n', tex: '\\text{at } n = 4 : -3', lines: ['Take double n off 5', 'A different rule'], tone: 'bad' }], note: 'Subtraction is not reversible. Test with a number and the two split apart.' },
       art: numberLine(-6, 10, [{ at: 3, label: '2n − 5 at n = 4', color: EMR }, { at: -3, label: '5 − 2n at n = 4', color: ROSE }], { title: 'Test it with n = 4', caption: 'One gives 3, the other gives −3. Order of subtraction changes everything.' }),
     },
-    { kind: 'challenge', head: 'Extra credit: two mystery boxes', body: 'If x = 3 and y = 4, evaluate x² + 2y.\nSubstitute both: 3² + 2 × 4.\nExponent first: 9. Then 2 × 4 = 8. Total: 9 + 8 = 17.' },
-    { kind: 'summary', head: 'You speak algebra now', body: 'A variable is a mystery box for an unknown number. Words translate to symbols — and "less than" flips the order. To evaluate, substitute the number and compute; to simplify, combine only matching terms.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: two mystery boxes',
+      body: 'If x = 3 and y = 4, evaluate x² + 2y.\nSubstitute both: 3² + 2 × 4.\nExponent first: 9. Then 2 × 4 = 8. Total: 9 + 8 = 17.',
+      art: machine('a and b', '2a + 3b', 'one number', { title: 'Two letters, one rule', caption: 'Substitute both values and the expression collapses to a single number.' }),
+    },
+    {
+      kind: 'summary',
+      head: 'You speak algebra now',
+      body: 'A variable is a mystery box for an unknown number. Words translate to symbols — and "less than" flips the order. To evaluate, substitute the number and compute; to simplify, combine only matching terms.',
+      art: flow([{ label: 'Translate the words' }, { label: 'Substitute the value' }, { label: 'Compute in order' }], { title: 'Three moves, every expression' }),
+    },
   ],
 
   // ---------------- A1-2 — Solving equations I: one- & two-step ----------------
@@ -133,6 +186,27 @@ export const A1_SLIDES_U01_04: SlideBank = {
     },
     {
       kind: 'example',
+      head: 'A negative answer: x + 9 = 4',
+      body: 'Subtract 9 from both sides: x = 4 − 9.\nFour is smaller than nine, so the answer drops below zero.\nx = −5.',
+      art: walk(-8, 6, 4, [{ by: -9 }], { title: '4 − 9 walks past zero', caption: 'Taking away more than you started with lands you on the left of zero.' }),
+      steps: { steps: [{ tex: 'x + 9 - 9 = 4 - 9', text: 'Subtract nine from both sides.' }, { tex: 'x = -5', text: 'Four minus nine crosses zero.' }], answer: '-5' },
+    },
+    {
+      kind: 'example',
+      head: 'A negative coefficient: −4x = 20',
+      body: 'x is multiplied by −4, so divide both sides by −4.\n20 ÷ (−4) has different signs, so the answer is negative.\nx = −5.',
+      art: signGrid({ op: '÷', mark: '+−', title: 'Positive ÷ negative = negative', caption: 'The signs differ, so the answer comes out below zero.' }),
+      steps: { steps: [{ tex: '\\tfrac{-4x}{-4} = \\tfrac{20}{-4}', text: 'Divide both sides by negative four.' }, { tex: 'x = -5', text: 'Different signs give a negative answer.' }], answer: '-5' },
+    },
+    {
+      kind: 'example',
+      head: 'Subtracting a negative: x − (−3) = 10',
+      body: 'Subtracting a negative is the same as adding: x + 3 = 10.\nNow take 3 off both sides.\nx = 7.',
+      art: walk(-2, 12, 7, [{ by: 3, label: '−(−3) means +3' }], { title: 'Two minuses turn into a plus', caption: 'Take away a debt and you are better off. Subtracting a negative walks right.' }),
+      steps: { steps: [{ tex: 'x - (-3) = x + 3', text: 'Two minus signs together make a plus.' }, { tex: 'x + 3 = 10', text: 'Rewrite the equation.' }, { tex: 'x = 7', text: 'Subtract three from both sides.' }], answer: '7' },
+    },
+    {
+      kind: 'example',
       head: 'The sneaker fund',
       body: 'You have $20 saved and earn $8 a week; the sneakers cost $68: 8w + 20 = 68.\nSubtract 20 from both sides: 8w = 48.\nDivide by 8: w = 6 weeks. Check: 8 × 6 + 20 = 68. ✓',
       steps: { steps: [{ tex: '\\text{let } w = \\text{weeks}', text: 'Name the unknown first.' }, { tex: '15w = 90', text: 'Fifteen dollars a week reaching ninety.' }, { tex: 'w = 90 \\div 15 = 6', text: 'Divide both sides by fifteen.' }], answer: '6' },
@@ -155,8 +229,18 @@ export const A1_SLIDES_U01_04: SlideBank = {
       body: 'Two tickets plus a $6 fee cost $96: 2t + 6 = 96.\nSubtract the fee: 2t = 90.\nDivide by 2: t = $45 per ticket. Check: 2 × 45 + 6 = 96. ✓',
       steps: { steps: [{ tex: '5t + 8 = 43', text: 'Five dollars a ticket plus an eight dollar fee.' }, { tex: '5t = 35', text: 'Take the fee off both sides first.' }, { tex: 't = 7', text: 'Then divide by the price per ticket.' }], answer: '7' },
     },
-    { kind: 'example', head: 'Another way: rewind the story', body: 'Solve 2t + 6 = 96 by playing the movie backwards.\nThe story went: double the ticket, then add $6, and land on $96.\nRewind it: take away 6 (get 90), then un-double (get 45). Same moves, told as a story.' },
-    { kind: 'protip', head: 'Write both sides every line', body: 'Do one move per line and write BOTH sides each time: 8w + 20 = 68, then 8w = 48, then w = 6. Neat lines make mistakes easy to spot — and easy to fix before they snowball.' },
+    {
+      kind: 'example',
+      head: 'Another way: rewind the story',
+      body: 'Solve 2t + 6 = 96 by playing the movie backwards.\nThe story went: double the ticket, then add $6, and land on $96.\nRewind it: take away 6 (get 90), then un-double (get 45). Same moves, told as a story.',
+      art: flow([{ label: 'Start from the answer', color: EMR }, { label: 'Undo each step backwards', color: AMB }, { label: 'Land on the unknown', color: SKY }], { title: 'Run the story in reverse', caption: 'Solving is the story told backwards, undoing one move at a time.' }),
+    },
+    {
+      kind: 'protip',
+      head: 'Write both sides every line',
+      body: 'Do one move per line and write BOTH sides each time: 8w + 20 = 68, then 8w = 48, then w = 6. Neat lines make mistakes easy to spot — and easy to fix before they snowball.',
+      art: balance('x + 7', '12', { title: 'Write the whole scale, every line', note: 'Both pans, or the record is wrong', caption: 'Writing only one side is how a step goes missing and the answer drifts.' }),
+    },
     {
       kind: 'trap',
       head: 'Trap: undoing in the wrong order',
@@ -164,8 +248,18 @@ export const A1_SLIDES_U01_04: SlideBank = {
       compare: { cols: [{ title: 'Subtract first', tex: '3x + 2 = 14', lines: ['3x = 12, then x = 4', 'Correct'], tone: 'ok' }, { title: 'Divide first', tex: '3x + 2 = 14', lines: ['x + 2 is not 14/3', 'Breaks the equation'], tone: 'bad' }], note: 'Undo the outermost operation first, working inwards.' },
       art: flow([{ label: 'From 3x + 2 = 14', color: SKY }, { label: 'Divide by 3 first → wrong', color: ROSE }, { label: 'Subtract 2 first → right', color: EMR }], { title: 'Order matters when undoing' }),
     },
-    { kind: 'challenge', head: 'Extra credit: a backwards two-step', body: 'Solve x ÷ 3 − 2 = 4.\nAdd 2 to both sides first: x ÷ 3 = 6.\nThen multiply by 3: x = 18. Check: 18 ÷ 3 − 2 = 4. ✓' },
-    { kind: 'summary', head: 'Balance, undo, check', body: 'An equation is a balance scale, so every move hits both sides. Undo operations in reverse order: plus and minus first, then times and divide. Finish by checking your answer in the original equation.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: a backwards two-step',
+      body: 'Solve x ÷ 3 − 2 = 4.\nAdd 2 to both sides first: x ÷ 3 = 6.\nThen multiply by 3: x = 18. Check: 18 ÷ 3 − 2 = 4. ✓',
+      art: flow([{ label: 'Undo the last operation first' }, { label: 'Then the one before it' }, { label: 'Check by plugging back' }], { title: 'Unwrap in reverse order' }),
+    },
+    {
+      kind: 'summary',
+      head: 'Balance, undo, check',
+      body: 'An equation is a balance scale, so every move hits both sides. Undo operations in reverse order: plus and minus first, then times and divide. Finish by checking your answer in the original equation.',
+      art: balance('x', '5', { title: 'What winning looks like', note: 'x alone, its value opposite' }),
+    },
   ],
 
   // ---------------- A1-3 — Solving equations II: multi-step & both sides ----------------
@@ -197,7 +291,33 @@ export const A1_SLIDES_U01_04: SlideBank = {
       formula: { tex: '7x - 4 = 3x + 16 \\implies 4x - 4 = 16', note: 'Subtract the smaller x-term from both sides to gather them.', parts: [{ sym: '3x', means: 'the smaller x-term, easiest to move across', tone: 'accent' }, { sym: '\\text{both sides}', means: 'keeps the equation true while you gather', tone: 'ok' }] },
       art: balance('7x − 4', '3x + 16', { title: 'Move the smaller x across', note: 'Subtract 3x from both sides → 4x − 4 = 16', caption: 'Taking 3x from both sides keeps the balance and leaves x on one pan only.' }),
     },
-    { kind: 'concept', head: 'Then finish like before', body: 'After distributing, tidying, and teaming up the x-terms, you are left with a plain two-step equation. Undo the plus or minus, then the times or divide. Same balance scale, same moves.' },
+    {
+      kind: 'concept',
+      head: 'Then finish like before',
+      body: 'After distributing, tidying, and teaming up the x-terms, you are left with a plain two-step equation. Undo the plus or minus, then the times or divide. Same balance scale, same moves.',
+      art: flow([{ label: 'Distribute the brackets' }, { label: 'Combine on each side' }, { label: 'Gather the x terms' }, { label: 'Undo with opposites' }], { title: 'The full routine' }),
+    },
+    {
+      kind: 'concept',
+      head: 'A minus out front flips EVERY sign',
+      body: 'When the number outside the bracket is negative, it visits every term inside and flips each one. −2(x − 5) becomes −2x + 10. The second sign flips too, which is the piece people drop.',
+      art: areaModel([{ label: 'x', w: 2 }, { label: '−5', w: 1 }], [{ label: '−2', h: 1 }], [['−2x', '+10']], { title: '−2(x − 5) = −2x + 10', total: 'Both pieces change sign', caption: 'Negative times negative gives the +10. Every piece inside gets visited.' }),
+      formula: { tex: '-a(b - c) = -ab + ac', note: 'The minus reaches both terms, and the second one flips to a plus.', parts: [{ sym: '-ab', means: 'negative times positive stays negative', tone: 'accent' }, { sym: '+ac', means: 'negative times negative turns positive', tone: 'ok' }] },
+    },
+    {
+      kind: 'example',
+      head: 'Distribute the minus: −2(x − 5) = 4',
+      body: 'First distribute: −2x + 10 = 4.\nSubtract 10 from both sides: −2x = −6.\nDivide by −2. Two negatives give a positive, so x = 3.',
+      art: signGrid({ op: '÷', mark: '−−', title: '−6 ÷ (−2) = 3', caption: 'Both are negative, so the answer comes out positive.' }),
+      steps: { steps: [{ tex: '-2x + 10 = 4', text: 'Distribute the negative two.' }, { tex: '-2x = -6', text: 'Take ten off both sides.' }, { tex: 'x = 3', text: 'Divide by negative two: same signs give a positive.' }], answer: '3' },
+    },
+    {
+      kind: 'example',
+      head: 'A negative solution: 3x + 14 = 2',
+      body: 'Take 14 off both sides: 3x = −12.\nDivide both sides by 3.\nThe signs differ, so x = −4.',
+      art: walk(-16, 4, 2, [{ by: -14 }], { title: '2 − 14 lands well below zero', caption: 'The right side goes negative first, and the answer follows it down.' }),
+      steps: { steps: [{ tex: '3x = 2 - 14', text: 'Subtract fourteen from both sides.' }, { tex: '3x = -12', text: 'The right side drops below zero.' }, { tex: 'x = -4', text: 'Divide by three: different signs give a negative.' }], answer: '-4' },
+    },
     {
       kind: 'example',
       head: 'Distribute first: 3(x + 2) = 21',
@@ -222,15 +342,30 @@ export const A1_SLIDES_U01_04: SlideBank = {
       body: 'Plan A: $12 plus $0.10 a minute. Plan B: $0.30 a minute. When do they cost the same?\n12 + 0.10m = 0.30m. Subtract 0.10m: 12 = 0.20m.\nDivide by 0.20: m = 60 minutes — both plans cost $18 there.',
       steps: { steps: [{ tex: '30 + 5m = 10 + 10m', text: 'Write both plans as expressions.' }, { tex: '20 = 5m', text: 'Gather the m-terms and the numbers.' }, { tex: 'm = 4', text: 'Divide to find the break-even month.' }], answer: '4' },
     },
-    { kind: 'example', head: 'Another way: race with a head start', body: 'See the phone plans as a race. Plan B charges 20 cents more each minute, but plan A starts $12 ahead.\nEach minute closes the gap by 20 cents.\nA $12 gap is 1200 cents: 1200 ÷ 20 = 60 minutes to catch up.' },
-    { kind: 'example', head: 'Party planning on a budget', body: 'A party room costs $40 plus $6 per guest, and your budget is $100: 40 + 6g = 100.\nSubtract the room fee: 6g = 60.\nDivide by 6: g = 10 guests. Check: 40 + 60 = 100. ✓' },
+    {
+      kind: 'example',
+      head: 'Another way: race with a head start',
+      body: 'See the phone plans as a race. Plan B charges 20 cents more each minute, but plan A starts $12 ahead.\nEach minute closes the gap by 20 cents.\nA $12 gap is 1200 cents: 1200 ÷ 20 = 60 minutes to catch up.',
+      art: lineGraph([{ m: 5, b: 30, label: 'plan A' }, { m: 10, b: 10, label: 'plan B' }], { range: { x: [0, 6], y: [0, 80] }, showIntercept: false, xLabel: 'months', yLabel: '$', points: [{ x: 4, y: 50, label: 'they tie here' }], title: 'A head start versus a faster rate', caption: 'The one that starts ahead leads until the faster one catches up at the crossing.' }),
+    },
+    {
+      kind: 'example',
+      head: 'Party planning on a budget',
+      body: 'A party room costs $40 plus $6 per guest, and your budget is $100: 40 + 6g = 100.\nSubtract the room fee: 6g = 60.\nDivide by 6: g = 10 guests. Check: 40 + 60 = 100. ✓',
+      art: balance('8g + 20', '100', { title: 'Guests at $8, plus a $20 room', note: '8g = 80, so g = 10' }),
+    },
     {
       kind: 'example',
       head: 'The full cleanup: 5(x − 1) − 2x = 2x + 7',
       body: 'Distribute: 5x − 5 − 2x = 2x + 7.\nCombine like terms on the left: 3x − 5 = 2x + 7.\nSubtract 2x from both sides: x − 5 = 7, so x = 12.',
       steps: { steps: [{ tex: '5x - 5 - 2x = 2x + 7', text: 'Distribute the five first.' }, { tex: '3x - 5 = 2x + 7', text: 'Combine like terms on the left.' }, { tex: 'x = 12', text: 'Move 2x across, then add five.' }], answer: '12' },
     },
-    { kind: 'protip', head: 'Move the smaller x-term', body: 'With x on both sides, subtract the SMALLER x-term — in 7x − 4 = 3x + 16, subtract 3x, not 7x. Your x-team stays positive, and positive coefficients mean fewer sign slips.' },
+    {
+      kind: 'protip',
+      head: 'Move the smaller x-term',
+      body: 'With x on both sides, subtract the SMALLER x-term — in 7x − 4 = 3x + 16, subtract 3x, not 7x. Your x-team stays positive, and positive coefficients mean fewer sign slips.',
+      art: flow([{ label: 'Compare the two x terms', color: SKY }, { label: 'Move the SMALLER one', color: EMR }, { label: 'Keeps the leading x positive', color: VIO }], { title: 'Move the smaller one across', caption: 'Moving the smaller x-term leaves you a positive coefficient and fewer sign slips.' }),
+    },
     {
       kind: 'trap',
       head: 'Trap: the forgotten snack',
@@ -238,8 +373,18 @@ export const A1_SLIDES_U01_04: SlideBank = {
       compare: { cols: [{ title: '2(x + 4)', tex: '= 2x + 8', lines: ['Both terms get a 2', 'Correct'], tone: 'ok' }, { title: '2(x + 4)', tex: '= 2x + 4', lines: ['The 4 was skipped', 'Wrong'], tone: 'bad' }], note: 'If your answer has only one term carrying the 2, you missed a piece.' },
       art: areaModel([{ label: 'x', w: 2 }, { label: '4', w: 1 }], [{ label: '2', h: 1 }], [['2x', '8']], { title: '2(x + 4) is 2x + 8, never 2x + 4', total: 'The 8 is the piece people drop', caption: 'The box has two pieces, so the answer has two terms. A missing piece is a missing term.' }),
     },
-    { kind: 'challenge', head: 'Extra credit: parentheses on both sides', body: 'Solve 4(x − 2) = 2(x + 3).\nDistribute both: 4x − 8 = 2x + 6.\nSubtract 2x: 2x − 8 = 6. Add 8: 2x = 14, so x = 7.' },
-    { kind: 'summary', head: 'Tidy, team up, solve', body: 'Distribute so everyone inside the parentheses gets their share, and combine like terms on each side. Move all the x-terms to one team. What remains is a two-step equation you already know how to crack.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: parentheses on both sides',
+      body: 'Solve 4(x − 2) = 2(x + 3).\nDistribute both: 4x − 8 = 2x + 6.\nSubtract 2x: 2x − 8 = 6. Add 8: 2x = 14, so x = 7.',
+      art: areaModel([{ label: 'x', w: 2 }, { label: '3', w: 1 }], [{ label: '4', h: 1 }], [['4x', '12']], { title: 'Distribute each side separately', total: 'then gather the x terms' }),
+    },
+    {
+      kind: 'summary',
+      head: 'Tidy, team up, solve',
+      body: 'Distribute so everyone inside the parentheses gets their share, and combine like terms on each side. Move all the x-terms to one team. What remains is a two-step equation you already know how to crack.',
+      art: flow([{ label: 'Tidy each side' }, { label: 'Team the x terms up' }, { label: 'Solve as a two-step' }], { title: 'Three moves, every time' }),
+    },
   ],
 
   // ---------------- A1-4 — Inequalities ----------------
@@ -296,21 +441,50 @@ export const A1_SLIDES_U01_04: SlideBank = {
       steps: { steps: [{ tex: '-3x > 12', text: 'x is multiplied by a negative.' }, { tex: 'x < -4', text: 'Divide by minus three and FLIP the sign.' }], answer: 'x < -4' },
       art: numberLine(-12, 4, [{ at: -4, label: 'x < −4', color: ROSE }], { span: { from: -12, to: -4, label: 'everything below −4' }, title: 'Divide by −3, flip to <' }),
     },
-    { kind: 'example', head: 'Another way: dodge the flip', body: 'Hate flipping? Solve 5 − 2x ≤ 11 without it.\nAdd 2x to BOTH sides: 5 ≤ 11 + 2x. Subtract 11: −6 ≤ 2x.\nDivide by positive 2: −3 ≤ x. Same answer, x ≥ −3, and no negative division anywhere.' },
+    {
+      kind: 'example',
+      head: 'Another way: dodge the flip',
+      body: 'Hate flipping? Solve 5 − 2x ≤ 11 without it.\nAdd 2x to BOTH sides: 5 ≤ 11 + 2x. Subtract 11: −6 ≤ 2x.\nDivide by positive 2: −3 ≤ x. Same answer, x ≥ −3, and no negative division anywhere.',
+      art: flow([{ label: 'Move the x to the OTHER side', color: SKY }, { label: 'It arrives positive', color: EMR }, { label: 'No flip ever needed', color: VIO }], { title: 'Avoid the negative coefficient', caption: 'Move the x term across instead of dividing by a negative, and the flip never comes up.' }),
+    },
+    {
+      kind: 'example',
+      head: 'Negative on both sides: −2x + 3 ≥ 11',
+      body: 'Subtract 3 from both sides: −2x ≥ 8. No flip yet — subtracting never flips.\nNow divide by −2, and THAT flips the sign.\nx ≤ −4.',
+      art: numberLine(-10, 4, [{ at: -4, label: 'x ≤ −4', color: ROSE }], { span: { from: -10, to: -4, label: 'shade everything below −4' }, title: 'Divide by −2 and flip to ≤', caption: 'Only the division by a negative flipped it. The subtraction left it alone.' }),
+      steps: { steps: [{ tex: '-2x \\ge 8', text: 'Subtract three from both sides — no flip.' }, { tex: 'x \\le -4', text: 'Divide by negative two and FLIP the sign.' }], answer: 'x \\le -4' },
+    },
+    {
+      kind: 'example',
+      head: 'The hidden negative: 5 − x < 9',
+      body: 'Subtract 5 from both sides: −x < 4.\nThe x carries an invisible −1, so divide by −1 and flip.\nx > −4.',
+      art: numberLine(-10, 6, [{ at: -4, label: 'x > −4', color: EMR }], { span: { from: -4, to: 6, label: 'everything above −4' }, title: '−x means −1 times x', caption: 'A lone minus in front of x is still a negative coefficient, so the sign flips.' }),
+      steps: { steps: [{ tex: '-x < 4', text: 'Subtract five from both sides.' }, { tex: 'x > -4', text: 'Divide by negative one and flip the sign.' }], answer: 'x > -4' },
+    },
     {
       kind: 'example',
       head: 'Game credits on a budget',
       body: 'You have $25 and game credits cost $4 each: 4c ≤ 25.\nDivide by 4: c ≤ 6.25.\nCredits come whole, so round DOWN: at most 6 credits — $24 fits, $28 busts the budget.',
       steps: { steps: [{ tex: '\\text{let } g = \\text{games}', text: 'Name the unknown first.' }, { tex: '3g \\le 24', text: 'Three credits each, twenty-four available.' }, { tex: 'g \\le 8', text: 'Divide by three — positive, so no flip.' }], answer: 'g \\le 8' },
     },
-    { kind: 'example', head: 'Saving for the class trip', body: 'You need at least $50, have $18, and save $8 a week: 8w + 18 ≥ 50.\nSubtract 18: 8w ≥ 32. Divide by 8: w ≥ 4.\nThe fewest whole weeks is 4 — week 4 lands you exactly on $50, and "at least" allows it.' },
+    {
+      kind: 'example',
+      head: 'Saving for the class trip',
+      body: 'You need at least $50, have $18, and save $8 a week: 8w + 18 ≥ 50.\nSubtract 18: 8w ≥ 32. Divide by 8: w ≥ 4.\nThe fewest whole weeks is 4 — week 4 lands you exactly on $50, and "at least" allows it.',
+      art: numberLine(0, 20, [{ at: 15, label: 'w ≥ 15', color: EMR }], { span: { from: 15, to: 20, label: '15 weeks or more' }, title: 'Saving until you reach the goal', caption: 'At least means the boundary counts, so fifteen weeks is enough.' }),
+    },
     {
       kind: 'example',
       head: 'Another way: check the boundary number',
       body: 'To graph x > 2 versus x ≥ 2, test the boundary itself.\nDoes 2 satisfy x > 2? No — 2 > 2 is false, so draw an OPEN dot at 2.\nDoes 2 satisfy x ≥ 2? Yes — so that one gets a CLOSED, filled dot. Then shade toward the numbers that work.',
       steps: { steps: [{ tex: 'x > 4', text: 'Take the answer you found.' }, { tex: '\\text{test } x = 5', text: 'Pick a number inside the range.' }, { tex: '5 + 5 > 9 \\checkmark', text: 'It works, so the range is right.' }] },
     },
-    { kind: 'protip', head: 'Test one number at the end', body: 'After solving, pick an easy number from your shaded side and try it in the ORIGINAL inequality. If it works, your answer and your flip decision are both confirmed. One test, total confidence.' },
+    {
+      kind: 'protip',
+      head: 'Test one number at the end',
+      body: 'After solving, pick an easy number from your shaded side and try it in the ORIGINAL inequality. If it works, your answer and your flip decision are both confirmed. One test, total confidence.',
+      art: flow([{ label: 'Pick a number inside your range' }, { label: 'Put it in the original' }, { label: 'True? Your range is right' }], { title: 'One test catches a wrong flip' }),
+    },
     {
       kind: 'trap',
       head: 'Trap: flipping at the wrong time',
@@ -318,7 +492,17 @@ export const A1_SLIDES_U01_04: SlideBank = {
       compare: { cols: [{ title: 'Flip', tex: '\\times \\text{ or } \\div \\text{ by negative}', lines: ['−3x > 12 becomes x < −4', 'Sign reverses'], tone: 'bad' }, { title: 'No flip', tex: '+ \\text{ or } - \\text{ a negative}', lines: ['x − 3 > 5 becomes x > 8', 'Sign stays'], tone: 'ok' }], note: 'Only multiplying or dividing by a negative ever flips it.' },
       art: flow([{ label: 'Subtracting a negative? No flip', color: EMR }, { label: 'Adding a negative? No flip', color: EMR }, { label: 'Times or divide by a negative? FLIP', color: ROSE }], { title: 'Only two moves ever flip it' }),
     },
-    { kind: 'challenge', head: 'Extra credit: two-step with a flip', body: 'Solve −4x + 3 < 23.\nSubtract 3: −4x < 20. Divide by −4 and FLIP: x > −5.\nCheck: x = 0 gives 3 < 23 ✓, and the boundary −5 gives exactly 23, which is not < 23 — open dot at −5.' },
-    { kind: 'summary', head: 'You rule the number line', body: 'Inequalities keep a whole range of answers: "at least" is ≥ and "at most" is ≤. Solve with the same balance moves, flipping the sign only when you multiply or divide by a negative. Closed dot when the boundary counts, open when it does not.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: two-step with a flip',
+      body: 'Solve −4x + 3 < 23.\nSubtract 3: −4x < 20. Divide by −4 and FLIP: x > −5.\nCheck: x = 0 gives 3 < 23 ✓, and the boundary −5 gives exactly 23, which is not < 23 — open dot at −5.',
+      art: numberLine(-8, 6, [{ at: -3, label: 'x < −3', color: ROSE }], { span: { from: -8, to: -3, label: 'everything below −3' }, title: 'Subtract first, then divide and flip' }),
+    },
+    {
+      kind: 'summary',
+      head: 'You rule the number line',
+      body: 'Inequalities keep a whole range of answers: "at least" is ≥ and "at most" is ≤. Solve with the same balance moves, flipping the sign only when you multiply or divide by a negative. Closed dot when the boundary counts, open when it does not.',
+      art: flow([{ label: 'Translate the words' }, { label: 'Solve with opposites' }, { label: 'Flip only for a negative' }, { label: 'Shade the range' }], { title: 'Inequalities, start to finish' }),
+    },
   ],
 };

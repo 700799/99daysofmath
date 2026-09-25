@@ -174,6 +174,49 @@ describe('every course is taught with pictures, not just prose', () => {
   });
 });
 
+describe('Algebra 1 teaches negative numbers, not just minus signs', () => {
+  const A1 = LESSONS.filter((l) => l.domain === 'A1');
+  // A genuine negative value, not the minus inside "7x − 4": a sign that opens a
+  // term, or the word itself.
+  const NEGATIVE = /(?:^|[\s(=,{])[\u2212-]\d|negative/i;
+  const textOf = (s: (typeof A1)[number]['slides'] extends (infer T)[] | undefined ? T : never) =>
+    [s.head, s.body, JSON.stringify(s.steps ?? ''), JSON.stringify(s.formula ?? '')].join(' ');
+
+  it('covers all fourteen units', () => {
+    expect(A1.length).toBe(14);
+  });
+
+  it('every unit works at least two examples that involve a negative value', () => {
+    for (const l of A1) {
+      const n = (l.slides ?? []).filter((s) => s.kind === 'example' && NEGATIVE.test(textOf(s))).length;
+      expect(n, `${lessonKey(l.domain, l.unit)} has ${n} negative-number examples`).toBeGreaterThanOrEqual(2);
+    }
+  });
+
+  it('the course as a whole leans on them heavily', () => {
+    const n = A1.flatMap((l) => l.slides ?? []).filter((s) => s.kind === 'example' && NEGATIVE.test(textOf(s))).length;
+    expect(n, `only ${n} negative-number examples across Algebra 1`).toBeGreaterThanOrEqual(30);
+  });
+
+  it('three quarters of every algebra deck is illustrated', () => {
+    for (const l of A1) {
+      const s = l.slides ?? [];
+      const drawn = s.filter((x) => x.art).length;
+      expect(drawn / s.length, `${lessonKey(l.domain, l.unit)}: ${drawn}/${s.length} drawn`).toBeGreaterThanOrEqual(0.75);
+    }
+  });
+
+  it('the pictures that explain signs are actually used', () => {
+    const svg = A1.flatMap((l) => l.slides ?? [])
+      .map((s) => s.art?.svg ?? '')
+      .join('');
+    // zero-pair chips, a signed walk along the line, and the sign-rule grid
+    expect(svg, 'no chip figure shows a zero pair cancelling').toMatch(/chips? cancel|zero pair/);
+    expect(svg, 'no figure walks the number line').toMatch(/start \u2212?\d/);
+    expect(svg, 'no figure states the sign rules').toMatch(/same signs give/);
+  });
+});
+
 /** Tags must nest properly, or the browser renders something else entirely. */
 function wellFormed(svg: string): true | string {
   const stack: string[] = [];

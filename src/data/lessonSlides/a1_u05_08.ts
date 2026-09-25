@@ -1,5 +1,5 @@
 import type { SlideBank } from './types';
-import { AMB, EMR, ROSE, SKY, VIO, flow, lineGraph, machine, plotGrid } from '../slideArt';
+import { signGrid, AMB, EMR, ROSE, SKY, VIO, flow, lineGraph, machine, plotGrid } from '../slideArt';
 
 // A1 Units 5-8 — Functions, Slope, Graphing y = mx + b, Writing equations.
 // 16 slides per deck, ~3 short sentences each, written for an 11–14-year-old:
@@ -20,7 +20,12 @@ export const A1_SLIDES_U05_08: SlideBank = {
       formula: { tex: 'f : x \\longmapsto f(x)', note: 'One input goes in, exactly one output comes back. Every time.', parts: [{ sym: 'x', means: 'the input you choose to feed the machine', tone: 'accent' }, { sym: 'f(x)', means: 'the one output the rule hands back', tone: 'ok' }] },
       art: machine('5', '× 2', '10', { title: 'The doubling machine', caption: 'Feed in 5, get 10. Feed in 5 again, get 10 again — every time.' }),
     },
-    { kind: 'concept', head: 'f(x) is just the machine\'s name', body: 'f(x) looks scary but it is only a name tag. The letter f names the machine, and the x in parentheses is the input slot. So f(3) simply means "feed the machine a 3" — it is NOT f times 3.' },
+    {
+      kind: 'concept',
+      head: 'f(x) is just the machine\'s name',
+      body: 'f(x) looks scary but it is only a name tag. The letter f names the machine, and the x in parentheses is the input slot. So f(3) simply means "feed the machine a 3" — it is NOT f times 3.',
+      art: machine('x', 'f', 'f(x)', { title: 'f is the machine label', caption: 'The letter names the machine; the parentheses hold whatever you feed it.' }),
+    },
     {
       kind: 'concept',
       head: 'Domain and range: in and out',
@@ -35,7 +40,33 @@ export const A1_SLIDES_U05_08: SlideBank = {
       formula: { tex: 'x_1 = x_2 \\implies f(x_1) = f(x_2)', note: 'The same input can never give two different answers.', parts: [{ sym: '\\text{one output}', means: 'is what makes a rule a function at all', tone: 'accent' }, { sym: '\\text{two outputs}', means: 'for one input means it is not a function', tone: 'bad' }] },
       art: plotGrid([{ x: 1, y: 3 }, { x: 2, y: 5 }, { x: 3, y: 7 }, { x: 4, y: 9 }], { join: true, range: { x: [0, 6], y: [0, 10] }, title: 'Each x is used exactly once', caption: 'No x may appear twice with different answers — that is what makes it a function.' }),
     },
-    { kind: 'example', head: 'Start simple: the doubling machine', body: 'A machine doubles every input. What comes out when you feed it a 7?\nThe rule is "times 2", so 7 × 2 = 14. One input (7), one output (14) — that is a function doing its job.' },
+    {
+      kind: 'concept',
+      head: 'Negative inputs are perfectly legal',
+      body: 'The domain of most rules includes the negatives. Feeding −4 into a machine is no different from feeding 4 — you substitute, then follow the sign rules. The output may land below zero, and that is a real answer.',
+      art: machine('x = −4', 'f(x) = 3x + 2', 'f(−4) = −10', { title: 'A negative goes in, a negative comes out', caption: 'The machine does not care about the sign. It just applies its rule.' }),
+      formula: { tex: 'f(-a) \\ne -f(a) \\ \\text{in general}', note: 'Feeding in a negative is not the same as negating the answer.', parts: [{ sym: 'f(-a)', means: 'substitute the negative, then compute', tone: 'accent' }, { sym: '-f(a)', means: 'compute first, then flip — a different thing', tone: 'bad' }] },
+    },
+    {
+      kind: 'example',
+      head: 'Negative input: f(x) = 3x + 2 at x = −4',
+      body: 'Substitute inside parentheses: f(−4) = 3(−4) + 2.\nDifferent signs multiply to a negative: 3(−4) = −12.\nThen −12 + 2 = −10.',
+      art: lineGraph([{ m: 3, b: 2, label: 'f(x) = 3x + 2' }], { range: { x: [-6, 3], y: [-14, 8] }, points: [{ x: -4, y: -10, label: 'f(−4) = −10' }], title: 'The line reaches below the axis', caption: 'Negative inputs live on the left of the grid, and this line is well below zero there.' }),
+      steps: { steps: [{ tex: '3(-4) + 2', text: 'Substitute with parentheses.' }, { tex: '-12 + 2', text: 'Different signs give a negative product.' }, { tex: '= -10', text: 'Add two, walking right from twelve below.' }], answer: '-10' },
+    },
+    {
+      kind: 'example',
+      head: 'Negative rule: f(x) = −2x + 1 at x = 4',
+      body: 'Here the machine itself is negative: f(4) = −2(4) + 1.\n−2(4) = −8 because the signs differ.\nThen −8 + 1 = −7.',
+      art: signGrid({ mark: '−+', title: '−2 × 4 = −8', caption: 'One negative and one positive. Different signs, so the product is negative.' }),
+      steps: { steps: [{ tex: '-2(4) + 1', text: 'Substitute four for x.' }, { tex: '-8 + 1', text: 'Different signs give a negative product.' }, { tex: '= -7', text: 'One step right from eight below.' }], answer: '-7' },
+    },
+    {
+      kind: 'example',
+      head: 'Start simple: the doubling machine',
+      body: 'A machine doubles every input. What comes out when you feed it a 7?\nThe rule is "times 2", so 7 × 2 = 14. One input (7), one output (14) — that is a function doing its job.',
+      art: machine('5', '× 2', '10', { title: 'Feed it 5, get 10' }),
+    },
     {
       kind: 'example',
       head: 'Read the notation: f(x) = 5x',
@@ -54,7 +85,12 @@ export const A1_SLIDES_U05_08: SlideBank = {
       body: 'Each quiz question is worth 4 points. How many points for 8 correct questions?\nThe machine turns questions into points: f(8) = 4 × 8 = 32. Notice the input letter can be anything — q works just like x.',
       steps: { steps: [{ tex: 'f(q) = 4q', text: 'Four points for every question right.' }, { tex: 'f(7) = 4(7) = 28', text: 'Substitute seven questions.' }], answer: '28' },
     },
-    { kind: 'example', head: 'Your phone\'s photo filter', body: 'A filter adds 15 brightness to any photo: f(p) = p + 15. A photo has brightness 40 — what comes out?\nf(40) = 40 + 15 = 55. Each photo in, exactly one filtered photo out: a filter is a function.' },
+    {
+      kind: 'example',
+      head: 'Your phone\'s photo filter',
+      body: 'A filter adds 15 brightness to any photo: f(p) = p + 15. A photo has brightness 40 — what comes out?\nf(40) = 40 + 15 = 55. Each photo in, exactly one filtered photo out: a filter is a function.',
+      art: machine('a photo', 'the filter rule', 'one result', { title: 'A filter is a function', caption: 'Same photo in, same result out — every single time. That is what makes it a function.' }),
+    },
     {
       kind: 'example',
       head: 'Another way: read it from a table',
@@ -67,7 +103,12 @@ export const A1_SLIDES_U05_08: SlideBank = {
       body: 'f(x) = 2x + 3 spits out 19. What went in?\nUndo the steps in reverse: first undo "+3" (19 − 3 = 16), then undo "×2" (16 ÷ 2 = 8). The input was 8. Check forward: 2 × 8 + 3 = 19.',
       steps: { steps: [{ tex: 'f(x) = 3x + 2 = 17', text: 'Set the output to the value you want.' }, { tex: '3x = 15', text: 'Undo the addition first.' }, { tex: 'x = 5', text: 'Then undo the multiplication.' }], answer: '5' },
     },
-    { kind: 'protip', head: 'Say it out loud: "feed the machine"', body: 'Whenever you see f(3), whisper "feed the machine a 3". That one habit stops the classic mix-up of multiplying f by 3. Then replace EVERY x in the rule with the input before doing any arithmetic.' },
+    {
+      kind: 'protip',
+      head: 'Say it out loud: "feed the machine"',
+      body: 'Whenever you see f(3), whisper "feed the machine a 3". That one habit stops the classic mix-up of multiplying f by 3. Then replace EVERY x in the rule with the input before doing any arithmetic.',
+      art: flow([{ label: 'Say: feed x into f' }, { label: 'Not: f times x' }, { label: 'The words fix the mistake' }], { title: 'Read the notation aloud' }),
+    },
     {
       kind: 'trap',
       head: 'Trap: f(3) is not f × 3',
@@ -75,7 +116,12 @@ export const A1_SLIDES_U05_08: SlideBank = {
       compare: { cols: [{ title: 'f(3)', tex: '\\text{run } 3 \\text{ through } f', lines: ['A substitution', 'Correct'], tone: 'ok' }, { title: 'f \\times 3', tex: '\\text{triple the machine}', lines: ['Not what it means', 'Wrong'], tone: 'bad' }], note: 'The parentheses are a slot to drop the input into, not multiplication.' },
       art: machine('3', 'f(x) = 5x', '15', { title: 'f(3) means "run 3 through f"', caption: 'The parentheses are not multiplication. They are the slot you drop the input into.' }),
     },
-    { kind: 'challenge', head: 'Extra credit: biggest output', body: 'Your score machine is f(q) = 4q and a quiz has at most 10 questions, so the domain is 0 to 10. What is the biggest output in the range?\nBigger inputs give bigger outputs here, so use the biggest input: f(10) = 4 × 10 = 40 points.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: biggest output',
+      body: 'Your score machine is f(q) = 4q and a quiz has at most 10 questions, so the domain is 0 to 10. What is the biggest output in the range?\nBigger inputs give bigger outputs here, so use the biggest input: f(10) = 4 × 10 = 40 points.',
+      art: lineGraph([{ m: 3, b: 2, label: 'f(x) = 3x + 2' }], { range: { x: [-2, 5], y: [-6, 18] }, points: [{ x: 4, y: 14, label: 'largest input wins' }], title: 'A climbing rule peaks at the largest input', caption: 'When the rule climbs, the biggest legal input gives the biggest output.' }),
+    },
     {
       kind: 'summary',
       head: 'Machines in three moves',
@@ -119,12 +165,38 @@ export const A1_SLIDES_U05_08: SlideBank = {
       formula: { tex: 'm = \\dfrac{\\Delta \\text{output}}{\\Delta \\text{input}}', note: 'Miles per hour, dollars per month, percent per hour — all slopes.', parts: [{ sym: '\\Delta', means: 'the change in a quantity, its "how much more"', tone: 'accent' }, { sym: '\\text{per}', means: 'the word that always signals a slope', tone: 'ok' }] },
     },
     {
+      kind: 'concept',
+      head: 'A negative over a negative climbs',
+      body: 'Slope is a fraction, so the sign rules apply. If both the rise and the run come out negative, the slope is POSITIVE — the line still climbs. Only one negative among the two makes it fall.',
+      art: signGrid({ op: '÷', mark: '−−', title: 'rise ÷ run follows the sign rules', caption: 'Two negatives give a positive slope. The line climbs even though both changes were negative.' }),
+      formula: { tex: 'm = \\dfrac{y_2 - y_1}{x_2 - x_1}', note: 'Subtracting in the other order flips BOTH signs, so m is unchanged.', parts: [{ sym: '\\text{both negative}', means: 'the two minuses cancel: m is positive', tone: 'ok' }, { sym: '\\text{one negative}', means: 'only then does the line actually fall', tone: 'bad' }] },
+    },
+    {
+      kind: 'example',
+      head: 'Both points negative: (−4, −1) and (−1, 5)',
+      body: 'Rise = 5 − (−1) = 6, because subtracting a negative adds.\nRun = −1 − (−4) = 3, for the same reason.\nm = 6 ÷ 3 = 2, so the line climbs.',
+      art: lineGraph([{ m: 2, b: 7 }], { range: { x: [-6, 2], y: [-4, 9] }, showIntercept: false, points: [{ x: -4, y: -1, label: '(−4, −1)' }, { x: -1, y: 5, label: '(−1, 5)' }], title: 'Down in quadrant III, still climbing', caption: 'Both points sit left of zero, yet the line rises as you read to the right.' }),
+      steps: { steps: [{ tex: '5 - (-1) = 6', text: 'Subtracting a negative adds, so the rise is six.' }, { tex: '-1 - (-4) = 3', text: 'Same move on the bottom gives a run of three.' }, { tex: 'm = \\tfrac{6}{3} = 2', text: 'Both minuses cancelled, so the slope is positive.' }], answer: '2' },
+    },
+    {
+      kind: 'example',
+      head: 'A falling line: (−2, 6) and (2, −2)',
+      body: 'Rise = −2 − 6 = −8, a genuine drop.\nRun = 2 − (−2) = 4.\nm = −8 ÷ 4 = −2, so the line falls two for every step across.',
+      art: lineGraph([{ m: -2, b: 2, label: 'm = −2' }], { range: { x: [-4, 4], y: [-4, 8] }, points: [{ x: -2, y: 6, label: '(−2, 6)' }, { x: 2, y: -2, label: '(2, −2)' }], title: 'Falling from quadrant II into IV' }),
+      steps: { steps: [{ tex: '-2 - 6 = -8', text: 'The height drops by eight.' }, { tex: '2 - (-2) = 4', text: 'The run is four, subtracting a negative.' }, { tex: 'm = \\tfrac{-8}{4} = -2', text: 'Different signs give a negative slope.' }], answer: '-2' },
+    },
+    {
       kind: 'example',
       head: 'Start simple: rise 6, run 2',
       body: 'A staircase rises 6 while running 2 across. Slope?\nSlope = rise ÷ run = 6 ÷ 2 = 3. Every single step across lifts you 3 up.',
       steps: { steps: [{ tex: 'm = \\tfrac{6}{2}', text: 'Put the rise over the run.' }, { tex: '= 3', text: 'Three up for every one across.' }], answer: '3' },
     },
-    { kind: 'example', head: 'A ramp you have seen', body: 'A wheelchair ramp rises 2 ft over a run of 8 ft. Slope?\nSlope = 2/8, and both parts divide by 2: slope = 1/4. Only a quarter foot of climb per foot across — gentle on purpose.' },
+    {
+      kind: 'example',
+      head: 'A ramp you have seen',
+      body: 'A wheelchair ramp rises 2 ft over a run of 8 ft. Slope?\nSlope = 2/8, and both parts divide by 2: slope = 1/4. Only a quarter foot of climb per foot across — gentle on purpose.',
+      art: lineGraph([{ m: 0.25, b: 0, label: 'a 1-in-4 ramp' }], { range: { x: [0, 8], y: [0, 4] }, showIntercept: false, xLabel: 'run', yLabel: 'rise', title: 'Gentle slope, small number', caption: 'A shallow ramp has a slope well under 1 — one up for every four across.' }),
+    },
     {
       kind: 'example',
       head: 'Two points: (1, 2) and (3, 8)',
@@ -149,8 +221,18 @@ export const A1_SLIDES_U05_08: SlideBank = {
       body: 'Dog walking pays $18 for 3 walks. Find dollars per walk without a formula.\nShrink to a single step: 18 ÷ 3 = 6, so one walk pays $6. "Per one" IS the slope — rise 6 for every run of 1.',
       steps: { steps: [{ tex: '\\text{rise } 6 \\text{ over run } 2', text: 'Start from the staircase you can see.' }, { tex: '\\tfrac{6}{2} = \\tfrac{3}{1}', text: 'Shrink the run down to a single step.' }], answer: '3' },
     },
-    { kind: 'example', head: 'Another way: count squares on the grid', body: 'Find the slope through (2, 1) and (6, 4) by walking the grid.\nFrom (2, 1), count across to x = 6: that is 4 squares. Count up to y = 4: that is 3 squares. Slope = 3/4 — and no, it does not have to be whole.' },
-    { kind: 'protip', head: 'Predict the sign before you compute', body: 'Glance at the two points first: if y goes UP as x goes right, the slope must be positive; if y falls, negative. Then compute rise over run. If your sign disagrees with your glance, hunt down the subtraction error.' },
+    {
+      kind: 'example',
+      head: 'Another way: count squares on the grid',
+      body: 'Find the slope through (2, 1) and (6, 4) by walking the grid.\nFrom (2, 1), count across to x = 6: that is 4 squares. Count up to y = 4: that is 3 squares. Slope = 3/4 — and no, it does not have to be whole.',
+      art: lineGraph([{ m: 2, b: 1 }], { range: { x: [-1, 5], y: [-1, 10] }, showIntercept: false, slopeFrom: 1, slopeRun: 2, points: [{ x: 1, y: 3, label: 'count from here' }], title: 'Count the squares up and across', caption: 'The grid does the subtraction for you: count the squares of the staircase.' }),
+    },
+    {
+      kind: 'protip',
+      head: 'Predict the sign before you compute',
+      body: 'Glance at the two points first: if y goes UP as x goes right, the slope must be positive; if y falls, negative. Then compute rise over run. If your sign disagrees with your glance, hunt down the subtraction error.',
+      art: flow([{ label: 'Climbing left to right?', color: SKY }, { label: 'Then m is positive', color: EMR }, { label: 'Falling? Then m is negative', color: ROSE }], { title: 'Guess the sign, then check it', caption: 'Predicting the sign first catches a subtraction done in the wrong order.' }),
+    },
     {
       kind: 'trap',
       head: 'Trap: mixing the subtraction order',
@@ -158,8 +240,18 @@ export const A1_SLIDES_U05_08: SlideBank = {
       compare: { cols: [{ title: 'Consistent', tex: '\\tfrac{y_2 - y_1}{x_2 - x_1}', lines: ['Same point first', 'Correct sign'], tone: 'ok' }, { title: 'Mixed up', tex: '\\tfrac{y_2 - y_1}{x_1 - x_2}', lines: ['Order flipped below', 'Sign reversed'], tone: 'bad' }], note: 'Flip one row and not the other and the slope comes out backwards.' },
       art: flow([{ label: 'Top: y₂ − y₁', color: SKY }, { label: 'Bottom: x₂ − x₁', color: SKY }, { label: 'Same point first, both times', color: ROSE }], { title: 'Keep the order consistent', caption: 'Flipping one row and not the other flips the sign of the slope.' }),
     },
-    { kind: 'challenge', head: 'Extra credit: the missing hour', body: 'A battery log reads hour 1 → 88% and hour 3 → 64%. What did hour 2 read, and what is the rate?\nRate: (64 − 88) ÷ (3 − 1) = −24 ÷ 2 = −12% per hour. So hour 2 read 88 − 12 = 76%.' },
-    { kind: 'summary', head: 'One number says it all', body: 'Slope = rise over run: the up you get per step across. From two points, subtract in the same order: (y2 − y1) ÷ (x2 − x1). Positive climbs, negative falls, zero is flat — and every real rate is a slope.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: the missing hour',
+      body: 'A battery log reads hour 1 → 88% and hour 3 → 64%. What did hour 2 read, and what is the rate?\nRate: (64 − 88) ÷ (3 − 1) = −24 ÷ 2 = −12% per hour. So hour 2 read 88 − 12 = 76%.',
+      art: lineGraph([{ m: -12, b: 100, label: 'battery %' }], { range: { x: [0, 9], y: [0, 112] }, showIntercept: false, xLabel: 'hours', yLabel: '%', points: [{ x: 6, y: 28, label: '28% at 6 h' }], title: 'Work backwards from the rate' }),
+    },
+    {
+      kind: 'summary',
+      head: 'One number says it all',
+      body: 'Slope = rise over run: the up you get per step across. From two points, subtract in the same order: (y2 − y1) ÷ (x2 − x1). Positive climbs, negative falls, zero is flat — and every real rate is a slope.',
+      art: lineGraph([{ m: 3, b: 1, label: 'steep' }, { m: 1, b: 1, label: 'gentle' }, { m: -1, b: 9, label: 'falling' }], { range: { x: [0, 6], y: [0, 12] }, showIntercept: false, title: 'Three lines, three slopes', caption: 'One number tells you both how steep a line is and which way it leans.' }),
+    },
   ],
 
   'A1-7': [
@@ -198,6 +290,27 @@ export const A1_SLIDES_U05_08: SlideBank = {
       art: lineGraph([{ m: 0, b: 5, label: 'y = 5' }], { range: { x: [-1, 6], y: [-1, 9] }, title: 'No x means no climbing', caption: 'With m = 0 there is nothing to rise, so y stays at 5 for every x.' }),
     },
     {
+      kind: 'concept',
+      head: 'A negative m tips the line downhill',
+      body: 'Every step across still moves you m up — but when m is negative, "up" means down. From the starting dot, go across 1 and DOWN 2 for a slope of −2. The line falls as you read left to right.',
+      art: lineGraph([{ m: -2, b: 6, label: 'y = −2x + 6' }], { range: { x: [-1, 5], y: [-4, 8] }, slopeFrom: 1, slopeRun: 1, title: 'Across 1, down 2', caption: 'The staircase goes downward, so the rise is negative and the line falls.' }),
+      formula: { tex: 'y = mx + b,\\quad m < 0', note: 'A negative slope is a staircase you walk DOWN.', parts: [{ sym: 'm < 0', means: 'each step across drops you by |m|', tone: 'bad' }, { sym: 'b', means: 'still just the starting dot on the y-axis', tone: 'ok' }] },
+    },
+    {
+      kind: 'example',
+      head: 'Negative slope: y = −2x + 3',
+      body: 'b = 3, so start the dot at (0, 3).\nm = −2, so from there go across 1 and down 2, landing on (1, 1).\nKeep stepping and the line falls through the axis.',
+      art: lineGraph([{ m: -2, b: 3, label: 'y = −2x + 3' }], { range: { x: [-2, 5], y: [-5, 7] }, points: [{ x: 1, y: 1, label: '(1, 1)' }, { x: 3, y: -3, label: '(3, −3)' }], title: 'Starts at 3, then falls' }),
+      steps: { steps: [{ tex: 'b = 3', text: 'Dot the start on the y-axis.' }, { tex: 'm = -2', text: 'Across one, down two.' }, { tex: '(1,\\ 1) \\to (2,\\ -1)', text: 'Two steps and it is already below the axis.' }] },
+    },
+    {
+      kind: 'example',
+      head: 'Both negative: y = −x − 4',
+      body: 'The lone minus in front of x means m = −1.\nb = −4, so the starting dot sits BELOW the axis at (0, −4).\nFrom there, across 1 and down 1.',
+      art: lineGraph([{ m: -1, b: -4, label: 'y = −x − 4' }], { range: { x: [-6, 3], y: [-8, 3] }, title: 'Starts below zero and keeps falling', caption: 'A negative b puts the starting dot under the x-axis before the slope even acts.' }),
+      steps: { steps: [{ tex: 'm = -1', text: 'A lone minus means a coefficient of negative one.' }, { tex: 'b = -4', text: 'The start sits four below the axis.' }, { tex: '\\text{across 1, down 1}', text: 'Step the slope from that starting dot.' }] },
+    },
+    {
       kind: 'example',
       head: 'Start simple: read y = 5x + 2',
       body: 'Name the slope and y-intercept.\nThe number multiplying x is the slope: m = 5. The number standing alone is the start: b = 2. The line starts at (0, 2) and climbs 5 per step.',
@@ -227,9 +340,24 @@ export const A1_SLIDES_U05_08: SlideBank = {
       body: 'A plant starts 4 cm tall and grows 3 cm each week. Height at week 5?\nStart at 4, then climb 3 five times: 3 × 5 = 15. Height: 4 + 15 = 19 cm. On the graph: dot at (0, 4), rising 3 per week.',
       steps: { steps: [{ tex: 'b = 4', text: 'It started four centimetres tall.' }, { tex: 'm = 3', text: 'It gains three centimetres a week.' }, { tex: '\\text{at } w = 5 : 4 + 15 = 19', text: 'Substitute five weeks.' }], answer: '19' },
     },
-    { kind: 'example', head: 'Another way: make a quick table', body: 'Not sure of your graph of y = 2x + 1? Plug in easy inputs.\nx = 0 gives 1, x = 1 gives 3, x = 2 gives 5. Plot (0, 1), (1, 3), (2, 5) — if they line up, your line is right. Tables never lie.' },
-    { kind: 'example', head: 'Another way: walk the savings line', body: 'Savings follow s = 15 + 5w. Find week 6 by walking, not plugging.\nStand at the start, $15. Each week is one step across and $5 up: 20, 25, 30, 35, 40, 45. Six steps land on $45 — same as 15 + 5 × 6.' },
-    { kind: 'protip', head: 'Dot the start BEFORE you think about slope', body: 'Always plot (0, b) first — it anchors the whole line. Then apply rise over run from that dot, and again from the new dot. Start, move, move: three dots make a line you can trust.' },
+    {
+      kind: 'example',
+      head: 'Another way: make a quick table',
+      body: 'Not sure of your graph of y = 2x + 1? Plug in easy inputs.\nx = 0 gives 1, x = 1 gives 3, x = 2 gives 5. Plot (0, 1), (1, 3), (2, 5) — if they line up, your line is right. Tables never lie.',
+      art: plotGrid([{ x: 0, y: 2 }, { x: 1, y: 5 }, { x: 2, y: 8 }, { x: 3, y: 11 }], { join: true, range: { x: [0, 5], y: [0, 13] }, title: 'Three rows and the line appears', caption: 'You never need more than two points, but a third confirms you did it right.' }),
+    },
+    {
+      kind: 'example',
+      head: 'Another way: walk the savings line',
+      body: 'Savings follow s = 15 + 5w. Find week 6 by walking, not plugging.\nStand at the start, $15. Each week is one step across and $5 up: 20, 25, 30, 35, 40, 45. Six steps land on $45 — same as 15 + 5 × 6.',
+      art: lineGraph([{ m: 15, b: 20, label: 'savings' }], { range: { x: [0, 8], y: [0, 150] }, xLabel: 'weeks', yLabel: '$', points: [{ x: 6, y: 110, label: '$110 by week 6' }], title: 'Start at 20, add 15 a week' }),
+    },
+    {
+      kind: 'protip',
+      head: 'Dot the start BEFORE you think about slope',
+      body: 'Always plot (0, b) first — it anchors the whole line. Then apply rise over run from that dot, and again from the new dot. Start, move, move: three dots make a line you can trust.',
+      art: flow([{ label: 'Find b and dot it', color: SKY }, { label: 'Only then read m', color: AMB }, { label: 'Step the slope from that dot', color: EMR }], { title: 'Start first, slope second' }),
+    },
     {
       kind: 'trap',
       head: 'Trap: swapping m and b',
@@ -237,8 +365,18 @@ export const A1_SLIDES_U05_08: SlideBank = {
       compare: { cols: [{ title: 'y = 2x + 5', tex: 'm = 2,\\ b = 5', lines: ['Starts at 5', 'Climbs by 2'], tone: 'ok' }, { title: 'y = 5x + 2', tex: 'm = 5,\\ b = 2', lines: ['Starts at 2', 'Climbs by 5'], tone: 'bad' }], note: 'Swap them and you change both where it starts and how fast it climbs.' },
       art: lineGraph([{ m: 2, b: 5, label: 'y = 2x + 5' }, { m: 5, b: 2, label: 'y = 5x + 2' }], { range: { x: [-1, 5], y: [-1, 18] }, showIntercept: false, title: 'These are two different lines', caption: 'Swapping m and b changes both where the line starts and how fast it climbs.' }),
     },
-    { kind: 'challenge', head: 'Extra credit: where it crosses the floor', body: 'The line y = 4x − 8 starts below zero. Where does it cross the x-axis?\nCrossing the x-axis means y = 0: solve 0 = 4x − 8. Add 8, then divide: x = 8 ÷ 4 = 2. It crosses at (2, 0) — eight below, climbing 4 per step, needs 2 steps.' },
-    { kind: 'summary', head: 'Two numbers, one line', body: 'y = mx + b is a recipe: START at (0, b), then MOVE right 1, up m — down if m is negative. Read m as the number attached to x and b as the number alone. Flat lines like y = 3 just have m = 0.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: where it crosses the floor',
+      body: 'The line y = 4x − 8 starts below zero. Where does it cross the x-axis?\nCrossing the x-axis means y = 0: solve 0 = 4x − 8. Add 8, then divide: x = 8 ÷ 4 = 2. It crosses at (2, 0) — eight below, climbing 4 per step, needs 2 steps.',
+      art: lineGraph([{ m: -2, b: 8, label: 'y = 8 − 2x' }], { range: { x: [-1, 6], y: [-4, 10] }, points: [{ x: 4, y: 0, label: 'crosses at x = 4' }], title: 'Set y to zero and solve', caption: 'The line meets the x-axis exactly where its height reaches zero.' }),
+    },
+    {
+      kind: 'summary',
+      head: 'Two numbers, one line',
+      body: 'y = mx + b is a recipe: START at (0, b), then MOVE right 1, up m — down if m is negative. Read m as the number attached to x and b as the number alone. Flat lines like y = 3 just have m = 0.',
+      art: lineGraph([{ m: 2, b: 3, label: 'y = 2x + 3' }], { range: { x: [-2, 5], y: [-2, 13] }, slopeFrom: 0, slopeRun: 1, title: 'b puts it there, m tilts it' }),
+    },
   ],
 
   'A1-8': [
@@ -276,7 +414,33 @@ export const A1_SLIDES_U05_08: SlideBank = {
       formula: { tex: '\\text{cost} = (\\text{rate})x + \\text{fee}', note: 'A one-off fee is b. A repeating charge is m.', parts: [{ sym: '\\text{fee}', means: 'paid once, so it belongs with b', tone: 'accent' }, { sym: '\\text{rate}', means: 'paid every time, so it multiplies x', tone: 'ok' }] },
       art: lineGraph([{ m: 10, b: 25, label: 'cost' }], { range: { x: [0, 6], y: [0, 90] }, xLabel: 'months', yLabel: '$', title: '$25 to join, $10 a month', caption: 'The one-off fee is b. The repeating charge is m. The story writes the equation for you.' }),
     },
-    { kind: 'example', head: 'Start simple: m = 5, b = 1', body: 'A line has slope 5 and y-intercept 1. Write its equation.\nTake the template y = mx + b. Slope in the m spot, intercept in the b spot: y = 5x + 1. That is the entire job.' },
+    {
+      kind: 'example',
+      head: 'A falling line: (0, 5) and (4, −3)',
+      body: 'm = (−3 − 5) ÷ (4 − 0) = −8 ÷ 4 = −2.\nThe first point already sits on the y-axis, so b = 5.\nThe equation is y = −2x + 5.',
+      art: lineGraph([{ m: -2, b: 5 }], { range: { x: [-1, 6], y: [-5, 7] }, showIntercept: false, points: [{ x: 0, y: 5, label: '(0, 5)' }, { x: 4, y: -3, label: '(4, −3)' }], slopeFrom: 0, slopeRun: 2, title: 'Drops 8 over a run of 4' }),
+      steps: { steps: [{ tex: 'm = \\tfrac{-3 - 5}{4 - 0}', text: 'Change in y over change in x.' }, { tex: '= \\tfrac{-8}{4} = -2', text: 'Different signs give a negative slope.' }, { tex: 'b = 5', text: 'One point already sits on the y-axis.' }], answer: 'y = -2x + 5' },
+    },
+    {
+      kind: 'example',
+      head: 'A negative start: (0, −2) and (3, 7)',
+      body: 'm = (7 − (−2)) ÷ (3 − 0) = 9 ÷ 3 = 3, because subtracting a negative adds.\nb = −2, since that point sits on the y-axis.\nSo y = 3x − 2.',
+      art: lineGraph([{ m: 3, b: -2, label: 'y = 3x − 2' }], { range: { x: [-2, 5], y: [-6, 10] }, points: [{ x: 3, y: 7, label: '(3, 7)' }], title: 'Starts below zero, climbs fast', caption: 'A negative b and a positive m: the line starts under the axis and crosses it on the way up.' }),
+      steps: { steps: [{ tex: '7 - (-2) = 9', text: 'Subtracting a negative adds, so the rise is nine.' }, { tex: 'm = \\tfrac{9}{3} = 3', text: 'Divide by the run of three.' }, { tex: 'b = -2', text: 'The point on the y-axis gives b directly.' }], answer: 'y = 3x - 2' },
+    },
+    {
+      kind: 'example',
+      head: 'The draining tank: 40 litres, −6 an hour',
+      body: 'It starts at 40, so b = 40.\nIt LOSES 6 litres an hour, so the rate is negative: m = −6.\nThe equation is y = −6x + 40, and it hits empty at x ≈ 6.7 hours.',
+      art: lineGraph([{ m: -6, b: 40, label: 'litres left' }], { range: { x: [0, 8], y: [0, 56] }, xLabel: 'hours', yLabel: 'L', points: [{ x: 5, y: 10, label: '10 L at 5 h' }], title: 'Shrinking means a negative rate', caption: 'Anything that drains, cools or burns down has a negative slope.' }),
+      steps: { steps: [{ tex: 'b = 40', text: 'The tank starts full.' }, { tex: 'm = -6', text: 'Losing means the rate is negative.' }, { tex: 'y = -6x + 40', text: 'Assemble the equation.' }], answer: 'y = -6x + 40' },
+    },
+    {
+      kind: 'example',
+      head: 'Start simple: m = 5, b = 1',
+      body: 'A line has slope 5 and y-intercept 1. Write its equation.\nTake the template y = mx + b. Slope in the m spot, intercept in the b spot: y = 5x + 1. That is the entire job.',
+      art: lineGraph([{ m: 5, b: 1, label: 'y = 5x + 1' }], { range: { x: [-1, 4], y: [-3, 20] }, slopeFrom: 1, slopeRun: 1, title: 'Read the two numbers straight in' }),
+    },
     {
       kind: 'example',
       head: 'From a table: 0 → 3, 1 → 8, 2 → 13',
@@ -301,9 +465,24 @@ export const A1_SLIDES_U05_08: SlideBank = {
       body: 'Slope: (12 − 6) ÷ (2 − 0) = 6 ÷ 2 = 3.\nNow spot the gift: (0, 6) has x = 0, so it IS the start — b = 6. Equation: y = 3x + 6. A point on the y-axis hands you b for free.',
       steps: { steps: [{ tex: 'm = \\tfrac{12 - 6}{2 - 0} = 3', text: 'Slope from the two points.' }, { tex: 'b = 6', text: 'One point already sits on the y-axis.' }, { tex: 'y = 3x + 6', text: 'Assemble the equation.' }], answer: 'y = 3x + 6' },
     },
-    { kind: 'example', head: 'Another way: walk back to x = 0', body: 'A line passes through (1, 5) with slope 3, but where is b?\nStep LEFT one unit: going backward, y drops by the slope. From (1, 5), back to x = 0 gives y = 5 − 3 = 2. So b = 2 and y = 3x + 2 — no algebra required.' },
-    { kind: 'example', head: 'Another way: turn the story into a table', body: 'Temperature starts at 55° and rises 3° per hour. Write the equation by tabling it.\nHour 0 → 55, hour 1 → 58, hour 2 → 61. The jump is +3 (that is m) and the hour-zero value is 55 (that is b). Equation: y = 3x + 55.' },
-    { kind: 'protip', head: 'Always test-drive your equation', body: 'Before you circle an answer, plug a known point into your equation. Wrote y = 3x + 2 from (1, 5) and (3, 11)? Check: 3 × 3 + 2 = 11. Ten seconds of checking catches almost every slip.' },
+    {
+      kind: 'example',
+      head: 'Another way: walk back to x = 0',
+      body: 'A line passes through (1, 5) with slope 3, but where is b?\nStep LEFT one unit: going backward, y drops by the slope. From (1, 5), back to x = 0 gives y = 5 − 3 = 2. So b = 2 and y = 3x + 2 — no algebra required.',
+      art: lineGraph([{ m: 3, b: 6 }], { range: { x: [-1, 5], y: [-1, 20] }, showIntercept: false, points: [{ x: 2, y: 12, label: 'given point' }, { x: 0, y: 6, label: 'walk back to here', color: VIO }], title: 'Step backwards to reach the y-axis', caption: 'No point at x = 0? Step backwards down the slope until you reach the axis.' }),
+    },
+    {
+      kind: 'example',
+      head: 'Another way: turn the story into a table',
+      body: 'Temperature starts at 55° and rises 3° per hour. Write the equation by tabling it.\nHour 0 → 55, hour 1 → 58, hour 2 → 61. The jump is +3 (that is m) and the hour-zero value is 55 (that is b). Equation: y = 3x + 55.',
+      art: plotGrid([{ x: 0, y: 25 }, { x: 1, y: 35 }, { x: 2, y: 45 }], { join: true, range: { x: [0, 4], y: [0, 60] }, xLabel: 'months', yLabel: '$', title: 'A story becomes rows, then a line' }),
+    },
+    {
+      kind: 'protip',
+      head: 'Always test-drive your equation',
+      body: 'Before you circle an answer, plug a known point into your equation. Wrote y = 3x + 2 from (1, 5) and (3, 11)? Check: 3 × 3 + 2 = 11. Ten seconds of checking catches almost every slip.',
+      art: flow([{ label: 'Pick a row you already know' }, { label: 'Put its x into your equation' }, { label: 'Does the y match?' }], { title: 'Test-drive before you trust it' }),
+    },
     {
       kind: 'trap',
       head: 'Trap: swapping the fee and the rate',
@@ -311,8 +490,23 @@ export const A1_SLIDES_U05_08: SlideBank = {
       compare: { cols: [{ title: 'Fee once', tex: 'y = 10x + 25', lines: ['$25 joining', '$10 a month'], tone: 'ok' }, { title: 'Fee per month', tex: 'y = 25x + 10', lines: ['A different deal', 'Costs far more'], tone: 'bad' }], note: 'Ask whether you pay it once or every time. That decides where it goes.' },
       art: lineGraph([{ m: 10, b: 25, label: 'y = 10x + 25' }, { m: 25, b: 10, label: 'y = 25x + 10' }], { range: { x: [0, 6], y: [0, 160] }, showIntercept: false, title: 'Same numbers, very different bills', caption: 'The one-time fee belongs with b. Put it on the x and the cost runs away with you.' }),
     },
-    { kind: 'trap', head: 'Trap: forgetting the minus on shrinking things', body: 'A candle burning 2 cm per hour has slope −2, not 2. If your equation is h = 20 + 2t, the candle GROWS — clearly wrong. When a story shrinks, drains, or drops, the move is negative.' },
-    { kind: 'challenge', head: 'Extra credit: no freebie point', body: 'Write the equation through (1, 5) and (3, 11) — neither point is on the y-axis.\nSlope: (11 − 5) ÷ (3 − 1) = 3. Plug (1, 5) into y = 3x + b: 5 = 3 + b, so b = 2. Equation: y = 3x + 2. Check (3, 11): 9 + 2 = 11.' },
-    { kind: 'summary', head: 'Find the start, find the move', body: 'Writing a line\'s equation always comes down to two hunts: b, the value at x = 0, and m, the change per step. Tables give m as the jump; two points give m by formula; stories give b as the one-time amount and m as the "per". Then check with a known point.' },
+    {
+      kind: 'trap',
+      head: 'Trap: forgetting the minus on shrinking things',
+      body: 'A candle burning 2 cm per hour has slope −2, not 2. If your equation is h = 20 + 2t, the candle GROWS — clearly wrong. When a story shrinks, drains, or drops, the move is negative.',
+      art: lineGraph([{ m: -5, b: 50, label: 'shrinking: m = −5' }, { m: 5, b: 50, label: 'growing: m = +5' }], { range: { x: [0, 8], y: [0, 100] }, showIntercept: false, title: 'A missing minus reverses the story', caption: 'Draining, cooling and burning down all need a negative rate. Drop the minus and the tank fills up.' }),
+    },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: no freebie point',
+      body: 'Write the equation through (1, 5) and (3, 11) — neither point is on the y-axis.\nSlope: (11 − 5) ÷ (3 − 1) = 3. Plug (1, 5) into y = 3x + b: 5 = 3 + b, so b = 2. Equation: y = 3x + 2. Check (3, 11): 9 + 2 = 11.',
+      art: lineGraph([{ m: 4, b: -3 }], { range: { x: [-1, 5], y: [-6, 14] }, showIntercept: false, points: [{ x: 1, y: 1, label: '(1, 1)' }, { x: 3, y: 9, label: '(3, 9)' }], slopeFrom: 1, slopeRun: 2, title: 'Neither point sits on the axis', caption: 'Find m from the pair, then rearrange to recover b.' }),
+    },
+    {
+      kind: 'summary',
+      head: 'Find the start, find the move',
+      body: 'Writing a line\'s equation always comes down to two hunts: b, the value at x = 0, and m, the change per step. Tables give m as the jump; two points give m by formula; stories give b as the one-time amount and m as the "per". Then check with a known point.',
+      art: flow([{ label: 'Find b: the value at x = 0' }, { label: 'Find m: the jump per step' }, { label: 'Write y = mx + b' }], { title: 'Three moves, any line' }),
+    },
   ],
 };

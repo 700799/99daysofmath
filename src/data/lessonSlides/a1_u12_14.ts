@@ -1,5 +1,5 @@
 import type { SlideBank } from './types';
-import { AMB, EMR, ROSE, SKY, areaModel, flow, parabola, tape } from '../slideArt';
+import { doubleLine, lineGraph, plotGrid, chips, signGrid, AMB, EMR, ROSE, SKY, areaModel, flow, parabola, tape } from '../slideArt';
 
 // A1 Units 12-14 — Polynomials, Factoring, Quadratics. 16-17 slides per deck,
 // ~3 short sentences each, written for an 11-14-year-old: objective → concepts
@@ -40,7 +40,33 @@ export const A1_SLIDES_U12_14: SlideBank = {
       formula: { tex: '(x + a)(x + b) = x^2 + (a+b)x + ab', note: 'Four pieces in the box, so four terms — two of which combine.', parts: [{ sym: 'x^2', means: 'the big corner: x times x', tone: 'accent' }, { sym: '(a+b)x', means: 'the two middle pieces, added together', tone: 'ok' }, { sym: 'ab', means: 'the small corner: the two numbers multiplied', tone: 'warn' }] },
       art: areaModel([{ label: '3x', w: 2 }, { label: '4', w: 1 }], [{ label: '2x', h: 1 }], [['6x²', '8x']], { title: '2x(3x + 4) = 6x² + 8x', total: 'The 2x visits both terms', caption: 'One row, two columns, two pieces. The box never lets you forget a term.' }),
     },
-    { kind: 'example', head: 'Combine: 4x + 3x + 2', body: 'Sort the stickers: 4x and 3x are the same kind.\n4x + 3x = 7x. The 2 has no partner, so it stays.\nAnswer: 7x + 2.' },
+    {
+      kind: 'example',
+      head: 'Subtracting into a negative: (4x − 5) − (7x − 2)',
+      body: 'The minus visits both terms: 4x − 5 − 7x + 2. The −2 became +2.\n4x − 7x = −3x, because you take away more x-blocks than you had.\n−5 + 2 = −3, so the answer is −3x − 3.',
+      art: chips(4, 7, { pairs: 4, result: '4x − 7x = −3x', title: 'Taking away more than you have', caption: 'Four positive blocks meet seven negative ones. Four pairs cancel and three negatives are left.' }),
+      steps: { steps: [{ tex: '4x - 5 - 7x + 2', text: 'Distribute the minus; the −2 flips to +2.' }, { tex: '4x - 7x = -3x', text: 'More taken away than you started with.' }, { tex: '-5 + 2 = -3', text: 'Walk two right from five below.' }], answer: '-3x - 3' },
+    },
+    {
+      kind: 'example',
+      head: 'Two negative brackets: (x − 3)(x − 5)',
+      body: 'Four pieces: x², −5x, −3x, and (−3)(−5) = +15.\nThe last corner is POSITIVE because two negatives multiply to a positive.\nThe middle pieces add: −5x − 3x = −8x, giving x² − 8x + 15.',
+      art: areaModel([{ label: 'x', w: 2 }, { label: '−5', w: 1 }], [{ label: 'x', h: 2 }, { label: '−3', h: 1 }], [['x²', '−5x'], ['−3x', '+15']], { title: '(x − 3)(x − 5) = x² − 8x + 15', total: 'The corner turns positive', caption: 'Three of the four pieces are negative, but the last corner is a negative times a negative.' }),
+      steps: { steps: [{ tex: 'x \\cdot x = x^2', text: 'The big corner.' }, { tex: '-5x - 3x = -8x', text: 'The two middle pieces, both negative.' }, { tex: '(-3)(-5) = +15', text: 'Same signs, so the last corner is positive.' }], answer: 'x^2 - 8x + 15' },
+    },
+    {
+      kind: 'example',
+      head: 'Distribute a negative: −3x(2x − 4)',
+      body: 'The −3x visits both terms inside.\n−3x · 2x = −6x², because the signs differ.\n−3x · (−4) = +12x, because the signs match.',
+      art: areaModel([{ label: '2x', w: 2 }, { label: '−4', w: 1 }], [{ label: '−3x', h: 1 }], [['−6x²', '+12x']], { title: '−3x(2x − 4) = −6x² + 12x', total: 'One piece flips, one does not', caption: 'The sign of each piece comes from multiplying the signs of its two edges.' }),
+      steps: { steps: [{ tex: '-3x \\cdot 2x = -6x^2', text: 'Different signs give a negative piece.' }, { tex: '-3x \\cdot (-4) = +12x', text: 'Same signs give a positive piece.' }], answer: '-6x^2 + 12x' },
+    },
+    {
+      kind: 'example',
+      head: 'Combine: 4x + 3x + 2',
+      body: 'Sort the stickers: 4x and 3x are the same kind.\n4x + 3x = 7x. The 2 has no partner, so it stays.\nAnswer: 7x + 2.',
+      art: tape([{ label: 'x blocks', boxes: 7, each: 'x', color: SKY }, { label: 'ones', boxes: 2, each: '1', color: EMR }], { total: '7x + 2, and no further', title: 'Two piles that never merge' }),
+    },
     {
       kind: 'example',
       head: 'Add: (3x + 4) + (2x + 5)',
@@ -53,7 +79,12 @@ export const A1_SLIDES_U12_14: SlideBank = {
       body: 'The minus hits both terms: 5x + 7 − 2x − 3.\nx pile: 5x − 2x = 3x. Numbers: 7 − 3 = 4.\nAnswer: 3x + 4.',
       steps: { steps: [{ tex: '5x + 7 - 2x - 3', text: 'Distribute the minus across both terms.' }, { tex: '3x + 4', text: 'Then combine the like terms.' }], answer: '3x + 4' },
     },
-    { kind: 'example', head: 'Profit at the phone case stand', body: 'Your phone case business earns 3x² + 5x dollars and spends x² + 2x. Profit is revenue minus cost.\n3x² + 5x − x² − 2x. Sort: 3x² − x² = 2x², and 5x − 2x = 3x.\nProfit: 2x² + 3x.' },
+    {
+      kind: 'example',
+      head: 'Profit at the phone case stand',
+      body: 'Your phone case business earns 3x² + 5x dollars and spends x² + 2x. Profit is revenue minus cost.\n3x² + 5x − x² − 2x. Sort: 3x² − x² = 2x², and 5x − 2x = 3x.\nProfit: 2x² + 3x.',
+      art: lineGraph([{ m: 8, b: -40, label: 'profit' }], { range: { x: [0, 12], y: [-50, 60] }, xLabel: 'cases sold', yLabel: '$', points: [{ x: 5, y: 0, label: 'break even at 5' }], title: 'Profit starts negative', caption: 'The setup cost puts you below zero until enough cases are sold to cover it.' }),
+    },
     {
       kind: 'example',
       head: 'The garden: (x + 3)(x + 2)',
@@ -72,8 +103,18 @@ export const A1_SLIDES_U12_14: SlideBank = {
       body: 'For (x + 3)(x + 2), multiply the four pairs: Firsts, Outers, Inners, Lasts.\nx·x = x², x·2 = 2x, 3·x = 3x, 3·2 = 6.\nSame four patches as the garden — FOIL is just the area model in a list.',
       steps: { steps: [{ tex: 'x \\cdot x = x^2', text: 'First terms multiplied.' }, { tex: '2x + 3x = 5x', text: 'The two middle pieces, combined.' }, { tex: '3 \\cdot 2 = 6', text: 'Last terms multiplied.' }], answer: 'x^2 + 5x + 6' },
     },
-    { kind: 'example', head: 'Another way: check with a number', body: 'Is (x + 3)(x + 2) really x² + 5x + 6? Test x = 5.\nLeft side: 8 × 7 = 56. Right side: 25 + 25 + 6 = 56.\nThey match — a one-number check catches most multiplication slips.' },
-    { kind: 'protip', head: 'Draw the box before you multiply', body: 'For binomial times binomial, sketch a quick 2-by-2 box and label the sides. Fill each cell with one little product, then combine. The box makes it impossible to skip a patch.' },
+    {
+      kind: 'example',
+      head: 'Another way: check with a number',
+      body: 'Is (x + 3)(x + 2) really x² + 5x + 6? Test x = 5.\nLeft side: 8 × 7 = 56. Right side: 25 + 25 + 6 = 56.\nThey match — a one-number check catches most multiplication slips.',
+      art: flow([{ label: 'Pick x = 2' }, { label: 'Compute both forms' }, { label: 'They must agree' }], { title: 'A number settles a doubt' }),
+    },
+    {
+      kind: 'protip',
+      head: 'Draw the box before you multiply',
+      body: 'For binomial times binomial, sketch a quick 2-by-2 box and label the sides. Fill each cell with one little product, then combine. The box makes it impossible to skip a patch.',
+      art: areaModel([{ label: 'x', w: 2 }, { label: '4', w: 1 }], [{ label: 'x', h: 2 }, { label: '2', h: 1 }], [['x²', '4x'], ['2x', '8']], { title: 'Four cells, four pieces', total: 'x² + 6x + 8', caption: 'The box will not let you forget a term — every cell has to be filled.' }),
+    },
     {
       kind: 'trap',
       head: 'Trap: (x + 3)² is NOT x² + 9',
@@ -81,8 +122,18 @@ export const A1_SLIDES_U12_14: SlideBank = {
       compare: { cols: [{ title: 'Correct', tex: '(x+3)^2 = x^2 + 6x + 9', lines: ['Four pieces in the box', 'A middle term'], tone: 'ok' }, { title: 'Wrong', tex: '(x+3)^2 = x^2 + 9', lines: ['Only the corners', 'Middle pieces dropped'], tone: 'bad' }], note: 'Squaring a bracket gives four pieces; two of them make the middle term.' },
       art: areaModel([{ label: 'x', w: 2 }, { label: '3', w: 1 }], [{ label: 'x', h: 2 }, { label: '3', h: 1 }], [['x²', '3x'], ['3x', '9']], { title: 'The two middle pieces are real', total: 'x² + 6x + 9, not x² + 9', caption: 'Squaring a bracket gives four pieces. Skipping the two 3x corners loses the middle term.' }),
     },
-    { kind: 'challenge', head: 'Extra credit: a wider garden', body: 'Multiply (2x + 1)(x + 3).\nFour patches: 2x·x = 2x², 2x·3 = 6x, 1·x = x, 1·3 = 3.\nCombine the strips: 6x + x = 7x. Answer: 2x² + 7x + 3.' },
-    { kind: 'summary', head: 'Sort, distribute, draw the box', body: 'Like terms are the same kind of sticker — only they combine. A minus in front of parentheses flips EVERY term inside. To multiply binomials, draw the garden box: four patches, then combine the middle strips.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: a wider garden',
+      body: 'Multiply (2x + 1)(x + 3).\nFour patches: 2x·x = 2x², 2x·3 = 6x, 1·x = x, 1·3 = 3.\nCombine the strips: 6x + x = 7x. Answer: 2x² + 7x + 3.',
+      art: areaModel([{ label: 'x', w: 2 }, { label: '5', w: 1 }], [{ label: 'x', h: 2 }, { label: '1', h: 1 }], [['x²', '5x'], ['x', '5']], { title: '(x + 1)(x + 5)', total: 'x² + 6x + 5' }),
+    },
+    {
+      kind: 'summary',
+      head: 'Sort, distribute, draw the box',
+      body: 'Like terms are the same kind of sticker — only they combine. A minus in front of parentheses flips EVERY term inside. To multiply binomials, draw the garden box: four patches, then combine the middle strips.',
+      art: flow([{ label: 'Adding? Sort into piles', color: SKY }, { label: 'Subtracting? Distribute the minus', color: ROSE }, { label: 'Multiplying? Draw the box', color: EMR }], { title: 'Three jobs, three moves' }),
+    },
   ],
   'A1-13': [
     {
@@ -119,9 +170,31 @@ export const A1_SLIDES_U12_14: SlideBank = {
       art: areaModel([{ label: 'x', w: 2 }, { label: '5', w: 1 }], [{ label: 'x', h: 2 }, { label: '−5', h: 1 }], [['x²', '5x'], ['−5x', '−25']], { title: 'x² − 25 = (x + 5)(x − 5)', total: 'The +5x and −5x cancel', caption: 'The middle pieces are equal and opposite, so they vanish and only the two squares remain.' }),
     },
     {
+      kind: 'concept',
+      head: 'The signs tell you what pair to hunt',
+      body: 'In x² + bx + c, the sign of c says whether the pair matches. A positive c means both have the SAME sign, and then b says which. A negative c means the pair has DIFFERENT signs.',
+      art: signGrid({ title: 'The last sign decides the pair', mark: '−−', caption: 'A positive c came from two same-signed numbers; a negative c came from two different ones.' }),
+      compare: { cols: [{ title: 'c positive', tex: 'pq > 0', lines: ['Both same sign', 'b says which'], tone: 'accent' }, { title: 'c negative', tex: 'pq < 0', lines: ['One of each sign', 'b says which is bigger'], tone: 'warn' }], note: 'Read the last sign first and you halve the number of pairs to try.' },
+    },
+    {
+      kind: 'example',
+      head: 'Both negative: x² − 7x + 12',
+      body: 'c = +12 is positive, so the pair shares a sign. b = −7 is negative, so both are negative.\nHunt: −3 × −4 = 12 and −3 + (−4) = −7.\nSo it factors to (x − 3)(x − 4).',
+      art: areaModel([{ label: 'x', w: 2 }, { label: '−4', w: 1 }], [{ label: 'x', h: 2 }, { label: '−3', h: 1 }], [['x²', '−4x'], ['−3x', '+12']], { title: 'x² − 7x + 12 = (x − 3)(x − 4)', total: 'Both edges negative' }),
+      steps: { steps: [{ tex: 'pq = 12,\\ p + q = -7', text: 'Positive product, negative sum.' }, { tex: '\\text{both must be negative}', text: 'Only two negatives give both of those.' }, { tex: '-3 \\text{ and } -4', text: 'They multiply to 12 and add to −7.' }], answer: '(x-3)(x-4)' },
+    },
+    {
+      kind: 'example',
+      head: 'Mixed signs: x² + 2x − 15',
+      body: 'c = −15 is negative, so the pair has different signs.\nb = +2 is positive, so the bigger number is the positive one.\nHunt: +5 × −3 = −15 and 5 + (−3) = 2, giving (x + 5)(x − 3).',
+      art: areaModel([{ label: 'x', w: 2 }, { label: '−3', w: 1 }], [{ label: 'x', h: 2 }, { label: '+5', h: 1 }], [['x²', '−3x'], ['+5x', '−15']], { title: 'x² + 2x − 15 = (x + 5)(x − 3)', total: 'One edge each way', caption: 'A negative last corner means the two edges disagree in sign.' }),
+      steps: { steps: [{ tex: 'pq = -15', text: 'Negative product means different signs.' }, { tex: 'p + q = 2', text: 'The positive one must be the larger.' }, { tex: '5 \\text{ and } -3', text: 'Check: 5 × (−3) = −15 and 5 + (−3) = 2.' }], answer: '(x+5)(x-3)' },
+    },
+    {
       kind: 'example',
       head: 'Gift bags: factor 6x + 12',
       body: 'You have 6x + 12 tickets to split into identical gift bags.\nBoth terms share a 6 — that is the GCF, and the most bags you can make.\n6x + 12 = 6(x + 2): six bags, each with x + 2 tickets.',
+      art: areaModel([{ label: 'x', w: 2 }, { label: '2', w: 1 }], [{ label: '6', h: 1 }], [['6x', '12']], { title: '6x + 12 = 6(x + 2)', total: 'The 6 becomes the height' }),
       steps: { steps: [{ tex: '6 \\text{ divides both}', text: 'Find the greatest common factor.' }, { tex: '6x \\div 6 = x,\\ 12 \\div 6 = 2', text: 'Divide each term by it.' }], answer: '6(x + 2)' },
     },
     {
@@ -149,8 +222,18 @@ export const A1_SLIDES_U12_14: SlideBank = {
       steps: { steps: [{ tex: 'pq = -6,\\ p + q = -1', text: 'The product is negative, so the signs differ.' }, { tex: '-3 \\times 2 = -6,\\ -3 + 2 = -1', text: 'Minus three and two work.' }], answer: '(x - 3)(x + 2)' },
     },
     { kind: 'example', head: 'Another way: run the area model backwards', body: 'Factor x² + 5x + 6 with an empty 2-by-2 box.\nPut x² in one corner and 6 in the opposite corner. The 6 must split so the strips total 5x.\n2 and 3 do it: sides (x + 2) and (x + 3).' },
-    { kind: 'example', head: 'Another way: guess and check the pair', body: 'Factor x² + 7x + 12 by testing guesses.\nTry (x + 2)(x + 6): expands to x² + 8x + 12 — middle too big.\nTry (x + 3)(x + 4): x² + 7x + 12. Match! Expanding to check costs ten seconds and catches everything.' },
-    { kind: 'protip', head: 'List the pairs, then scan the sums', body: 'Write every factor pair of c in a tiny table, then scan for the one that adds to b. For 12: 1·12, 2·6, 3·4 — sums 13, 8, 7. The table turns a guessing game into a checklist.' },
+    {
+      kind: 'example',
+      head: 'Another way: guess and check the pair',
+      body: 'Factor x² + 7x + 12 by testing guesses.\nTry (x + 2)(x + 6): expands to x² + 8x + 12 — middle too big.\nTry (x + 3)(x + 4): x² + 7x + 12. Match! Expanding to check costs ten seconds and catches everything.',
+      art: flow([{ label: 'List the factor pairs of c' }, { label: 'Add each pair' }, { label: 'Stop when a sum equals b' }], { title: 'A short list, checked in order' }),
+    },
+    {
+      kind: 'protip',
+      head: 'List the pairs, then scan the sums',
+      body: 'Write every factor pair of c in a tiny table, then scan for the one that adds to b. For 12: 1·12, 2·6, 3·4 — sums 13, 8, 7. The table turns a guessing game into a checklist.',
+      art: doubleLine({ label: 'pairs of 12', vals: [1, 2, 3, 4] }, { label: 'their partners', vals: [12, 6, 4, 3] }, { title: 'Every pair that multiplies to 12', caption: 'Write the pairs out, then scan their sums for the middle number.' }),
+    },
     {
       kind: 'trap',
       head: 'Trap: x² − 9 is NOT (x − 3)²',
@@ -158,8 +241,18 @@ export const A1_SLIDES_U12_14: SlideBank = {
       compare: { cols: [{ title: 'x^2 - 9', tex: '(x+3)(x-3)', lines: ['No middle term', 'Signs differ'], tone: 'ok' }, { title: '(x-3)^2', tex: 'x^2 - 6x + 9', lines: ['Has a middle term', 'Both signs the same'], tone: 'bad' }], note: 'Only opposite signs make the middle pieces cancel.' },
       art: areaModel([{ label: 'x', w: 2 }, { label: '−3', w: 1 }], [{ label: 'x', h: 2 }, { label: '−3', h: 1 }], [['x²', '−3x'], ['−3x', '9']], { title: '(x − 3)² is really x² − 6x + 9', total: 'Two middle pieces, both −3x', caption: 'Squaring leaves a middle term behind. Only opposite signs make the middle cancel.' }),
     },
-    { kind: 'challenge', head: 'Extra credit: GCF then hunt', body: 'Factor 2x² + 14x + 24 completely.\nGCF first: 2(x² + 7x + 12).\nNow the hunt: 3 and 4. Fully factored: 2(x + 3)(x + 4).' },
-    { kind: 'summary', head: 'GCF, hunt, check', body: 'Factoring is un-multiplying: from the area back to the sides. Pull the GCF first, every time. For x² + bx + c, hunt two numbers that multiply to c and add to b — then expand to check your answer.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: GCF then hunt',
+      body: 'Factor 2x² + 14x + 24 completely.\nGCF first: 2(x² + 7x + 12).\nNow the hunt: 3 and 4. Fully factored: 2(x + 3)(x + 4).',
+      art: flow([{ label: 'Pull the GCF out first', color: SKY }, { label: 'Now the numbers are smaller', color: AMB }, { label: 'Then hunt the pair', color: EMR }], { title: 'GCF first, always' }),
+    },
+    {
+      kind: 'summary',
+      head: 'GCF, hunt, check',
+      body: 'Factoring is un-multiplying: from the area back to the sides. Pull the GCF first, every time. For x² + bx + c, hunt two numbers that multiply to c and add to b — then expand to check your answer.',
+      art: flow([{ label: 'Pull out any shared factor' }, { label: 'Hunt the pair for the rest' }, { label: 'Multiply back to check' }], { title: 'Three moves, every factoring' }),
+    },
   ],
   'A1-14': [
     {
@@ -197,6 +290,27 @@ export const A1_SLIDES_U12_14: SlideBank = {
     },
     {
       kind: 'example',
+      head: 'A negative root: x² + 3x − 10 = 0',
+      body: 'Factor: the pair multiplies to −10 and adds to +3, so it is +5 and −2.\n(x + 5)(x − 2) = 0.\nSetting each bracket to zero gives x = −5 and x = 2 — one root on each side of the origin.',
+      art: parabola({ a: 1, b: 3, c: -10 }, { range: { x: [-7, 4], y: [-14, 8] }, roots: [-5, 2], title: 'It crosses at −5 and at 2', caption: 'A root can sit left of zero. The curve cuts the axis on both sides here.' }),
+      steps: { steps: [{ tex: 'pq = -10,\\ p + q = 3', text: 'Different signs, positive sum.' }, { tex: '(x + 5)(x - 2) = 0', text: 'Factor with 5 and −2.' }, { tex: 'x = -5 \\ \\text{or} \\ x = 2', text: 'Set each bracket to zero.' }], answer: '-5 \\text{ and } 2' },
+    },
+    {
+      kind: 'example',
+      head: 'Both roots negative: x² + 7x + 12 = 0',
+      body: 'c = +12 and b = +7, so the pair is +3 and +4.\n(x + 3)(x + 4) = 0.\nEach bracket gives a NEGATIVE root: x = −3 and x = −4. The whole parabola crosses left of zero.',
+      art: parabola({ a: 1, b: 7, c: 12 }, { range: { x: [-7, 2], y: [-3, 10] }, roots: [-4, -3], title: 'Both crossings sit left of the origin', caption: 'Positive numbers inside the brackets give negative roots — set x + 3 to zero and x must be −3.' }),
+      steps: { steps: [{ tex: '(x + 3)(x + 4) = 0', text: 'Factor the quadratic.' }, { tex: 'x + 3 = 0 \\to x = -3', text: 'A plus inside gives a minus outside.' }, { tex: 'x + 4 = 0 \\to x = -4', text: 'Same for the second bracket.' }], answer: '-3 \\text{ and } -4' },
+    },
+    {
+      kind: 'concept',
+      head: 'A negative a turns the U upside down',
+      body: 'The sign of a decides which way the parabola opens. Positive a gives a U with a lowest point; negative a gives an arch with a highest point. Anything thrown into the air has a negative a.',
+      art: parabola({ a: -1, b: 2, c: 3 }, { range: { x: [-3, 5], y: [-6, 6] }, roots: [-1, 3], title: 'a = −1, so it opens downward', caption: 'The vertex is now the top of the arc rather than the bottom of a bowl.' }),
+      formula: { tex: 'y = ax^2 + bx + c', note: 'The sign of a alone decides whether the vertex is a peak or a floor.', parts: [{ sym: 'a > 0', means: 'opens upward, and the vertex is the minimum', tone: 'ok' }, { sym: 'a < 0', means: 'opens downward, and the vertex is the maximum', tone: 'bad' }] },
+    },
+    {
+      kind: 'example',
       head: 'Solve x² = 25',
       body: 'What number times itself gives 25?\n5 works, and so does −5, since a negative times a negative is positive.\nSolutions: x = 5 or x = −5.',
       steps: { steps: [{ tex: 'x^2 = 25', text: 'Only a square and a number.' }, { tex: 'x = \\pm 5', text: 'Square-root both sides, keeping both signs.' }], answer: 'x = 5 \\text{ or } -5' },
@@ -221,10 +335,25 @@ export const A1_SLIDES_U12_14: SlideBank = {
       body: 'A ball drops from a balcony; its height is h = 45 − 5t². When does it land?\nSet h = 0: 45 − 5t² = 0, so t² = 9.\nt = 3 or t = −3, but time can\'t run backwards. It lands at t = 3 seconds.',
       steps: { steps: [{ tex: '0 = 45 - 5t^2', text: 'It lands when the height is zero.' }, { tex: '5t^2 = 45 \\to t^2 = 9', text: 'Gather and divide.' }, { tex: 't = 3', text: 'Time cannot be negative, so take the positive root.' }], answer: '3 \\text{ seconds}' },
     },
-    { kind: 'example', head: 'The fountain jet: h = 20t − 5t²', body: 'Water leaves the spout and lands when h = 0.\nFactor: 5t(4 − t) = 0, so t = 0 or t = 4.\nt = 0 is the launch; the splash-down is t = 4 seconds.' },
-    { kind: 'example', head: 'Another way: a table of values', body: 'Solve x² − 5x + 6 = 0 without factoring — just try inputs.\nx = 1 gives 2. x = 2 gives 0. x = 3 gives 0. x = 4 gives 2.\nThe zeros show themselves: x = 2 and x = 3, the same answers factoring found.' },
+    {
+      kind: 'example',
+      head: 'The fountain jet: h = 20t − 5t²',
+      body: 'Water leaves the spout and lands when h = 0.\nFactor: 5t(4 − t) = 0, so t = 0 or t = 4.\nt = 0 is the launch; the splash-down is t = 4 seconds.',
+      art: parabola({ a: -5, b: 20, c: 0 }, { range: { x: [-1, 5], y: [-6, 26] }, roots: [0, 4], xLabel: 'seconds', yLabel: 'metres', title: 'Up, over, and back down', caption: 'It leaves the ground at t = 0 and returns at t = 4, peaking exactly halfway between.' }),
+    },
+    {
+      kind: 'example',
+      head: 'Another way: a table of values',
+      body: 'Solve x² − 5x + 6 = 0 without factoring — just try inputs.\nx = 1 gives 2. x = 2 gives 0. x = 3 gives 0. x = 4 gives 2.\nThe zeros show themselves: x = 2 and x = 3, the same answers factoring found.',
+      art: plotGrid([{ x: 0, y: 6 }, { x: 1, y: 2 }, { x: 2, y: 0 }, { x: 3, y: 0 }, { x: 4, y: 2 }], { join: true, range: { x: [0, 5], y: [0, 7] }, title: 'The table traces the U', caption: 'Plot a few rows and the curve shows you where it touches zero.' }),
+    },
     { kind: 'example', head: 'Another way: use the arc\'s symmetry', body: 'For the fountain h = 20t − 5t², find the peak without new tools.\nThe water is airborne from t = 0 to t = 4, so the top is halfway: t = 2.\nHeight there: 40 − 20 = 20 meters. Up-time equals down-time, like every rainbow.' },
-    { kind: 'protip', head: 'Get zero on one side first', body: 'The zero-product rule ONLY works when the product equals zero. Before factoring, move everything to one side so the equation reads ... = 0. Then factor, split, and solve each piece.' },
+    {
+      kind: 'protip',
+      head: 'Get zero on one side first',
+      body: 'The zero-product rule ONLY works when the product equals zero. Before factoring, move everything to one side so the equation reads ... = 0. Then factor, split, and solve each piece.',
+      art: flow([{ label: 'Move everything to one side', color: SKY }, { label: 'Now it equals zero', color: AMB }, { label: 'Only then can you factor', color: EMR }], { title: 'Zero first, factor second', caption: 'The zero-product rule only works when the other side really is zero.' }),
+    },
     {
       kind: 'trap',
       head: 'Trap: x² = 25 is not just x = 5',
@@ -233,7 +362,17 @@ export const A1_SLIDES_U12_14: SlideBank = {
       art: parabola({ a: 1, b: 0, c: -25 }, { range: { x: [-7, 7], y: [-28, 12] }, roots: [-5, 5], title: 'Missing a root means missing half the answer', caption: 'Both −5 and 5 square to 25, so both are crossings and both count.' }),
     },
     { kind: 'trap', head: 'Trap: from x² = 36, x is 6, NOT 18', body: 'Do not divide by 2 — squaring is not doubling. x² means x times x, so undo it with a square root: x = 6 (or −6). Dividing 36 by 2 to get 18 answers a completely different question.' },
-    { kind: 'challenge', head: 'Extra credit: the trampoline peak', body: 'A bounce follows h = 30t − 5t². Find the maximum height.\nLandings: 5t(6 − t) = 0, so t = 0 and t = 6. The peak is halfway, at t = 3.\nHeight: 90 − 45 = 45 centimeters at the top.' },
-    { kind: 'summary', head: 'Two roots, one rule, one peak', body: 'A parabola is the path of every thrown ball, and x² = 25 lands two ways: 5 and −5. To solve by factoring, get zero on one side, factor, then use the zero-product rule. The vertex sits halfway between the landing spots.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: the trampoline peak',
+      body: 'A bounce follows h = 30t − 5t². Find the maximum height.\nLandings: 5t(6 − t) = 0, so t = 0 and t = 6. The peak is halfway, at t = 3.\nHeight: 90 − 45 = 45 centimeters at the top.',
+      art: parabola({ a: -1, b: 6, c: 0 }, { range: { x: [-1, 7], y: [-4, 12] }, roots: [0, 6], xLabel: 'seconds', yLabel: 'height', title: 'The peak sits halfway between the roots' }),
+    },
+    {
+      kind: 'summary',
+      head: 'Two roots, one rule, one peak',
+      body: 'A parabola is the path of every thrown ball, and x² = 25 lands two ways: 5 and −5. To solve by factoring, get zero on one side, factor, then use the zero-product rule. The vertex sits halfway between the landing spots.',
+      art: parabola({ a: 1, b: -2, c: -3 }, { range: { x: [-4, 6], y: [-6, 8] }, roots: [-1, 3], title: 'Two crossings and one vertex' }),
+    },
   ],
 };

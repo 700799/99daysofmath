@@ -1,5 +1,5 @@
 import type { SlideBank } from './types';
-import { AMB, EMR, ROSE, SKY, VIO, areaModel, bars, flow, fractionBar, lineGraph, machine, numberLine, tape } from '../slideArt';
+import { doubleLine, signGrid, AMB, EMR, ROSE, SKY, VIO, areaModel, bars, flow, fractionBar, lineGraph, machine, numberLine, tape } from '../slideArt';
 
 // A1 Units 9–11 — systems of equations, exponent rules, exponential vs.
 // linear growth. 14–18 slides per deck: objective → concepts → examples
@@ -43,11 +43,30 @@ export const A1_SLIDES_U09_11: SlideBank = {
     },
     {
       kind: 'example',
+      head: 'A negative answer: x + y = 1 and x − y = 7',
+      body: 'Add the two equations. The +y and −y cancel: 2x = 8, so x = 4.\nPut x = 4 back into the first: 4 + y = 1.\nSo y = −3, and the crossing point is (4, −3).',
+      art: lineGraph([{ m: -1, b: 1, label: 'x + y = 1' }, { m: 1, b: -7, label: 'x − y = 7' }], { range: { x: [-2, 7], y: [-8, 4] }, showIntercept: false, points: [{ x: 4, y: -3, label: '(4, −3)' }], title: 'They cross below the axis', caption: 'A solution can sit in any quadrant. Here y comes out negative.' }),
+      steps: { steps: [{ tex: '2x = 8', text: 'Add the equations; the y-terms cancel.' }, { tex: 'x = 4', text: 'Divide both sides by two.' }, { tex: '4 + y = 1 \\to y = -3', text: 'Substitute back and the y drops below zero.' }], answer: '(4,\\ -3)' },
+    },
+    {
+      kind: 'example',
+      head: 'Negative coefficients cancel too',
+      body: 'Take 3x − 2y = 12 and 3x + 2y = 6. The −2y and +2y are opposites.\nAdd them: 6x = 18, so x = 3.\nSubstitute back: 9 − 2y = 12, so −2y = 3 and y = −1.5.',
+      art: signGrid({ title: 'Opposites cancel on adding', mark: '−+', caption: 'A negative term and its positive twin add to zero. That is what elimination is hunting for.' }),
+      steps: { steps: [{ tex: '(3x - 2y) + (3x + 2y)', text: 'Stack the two equations and add.' }, { tex: '6x = 18 \\to x = 3', text: 'The y-terms vanished.' }, { tex: '9 - 2y = 12 \\to y = -1.5', text: 'Back-substitute for the second letter.' }], answer: '(3,\\ -1.5)' },
+    },
+    {
+      kind: 'example',
       head: 'Substitution, step one',
       body: 'Solve y = x + 1 and x + y = 9.\nSwap in: x + (x + 1) = 9, so 2x + 1 = 9.\n2x = 8, so x = 4 and y = 5. Check: 4 + 5 = 9.',
       steps: { steps: [{ tex: 'y = 2x', text: 'One rule already gives y.' }, { tex: '2x = 6 - x', text: 'Swap it into the other equation.' }, { tex: '3x = 6 \\to x = 2', text: 'Gather and solve for x.' }], answer: 'x = 2' },
     },
-    { kind: 'example', head: 'Substitution with two steps', body: 'Solve y = 2x − 1 and 3x + y = 14.\nSwap the whole thing in: 3x + 2x − 1 = 14, so 5x − 1 = 14.\n5x = 15, so x = 3 and y = 5. Check: 9 + 5 = 14.' },
+    {
+      kind: 'example',
+      head: 'Substitution with two steps',
+      body: 'Solve y = 2x − 1 and 3x + y = 14.\nSwap the whole thing in: 3x + 2x − 1 = 14, so 5x − 1 = 14.\n5x = 15, so x = 3 and y = 5. Check: 9 + 5 = 14.',
+      art: flow([{ label: 'Rearrange one rule to y = …' }, { label: 'Swap it into the other' }, { label: 'Solve, then back-substitute' }], { title: 'Two steps, then substitute' }),
+    },
     {
       kind: 'example',
       head: 'Elimination by adding',
@@ -66,10 +85,30 @@ export const A1_SLIDES_U09_11: SlideBank = {
       body: 'Plan A: $20 plus $5 a month. Plan B: $10 plus $7 a month. When do they cost the same?\nSet the costs equal: 20 + 5m = 10 + 7m, so 10 = 2m.\nm = 5 months — both plans hit $45.',
       art: lineGraph([{ m: 5, b: 30, label: '$30 + $5' }, { m: 10, b: 10, label: '$10 + $10' }], { range: { x: [0, 8], y: [0, 90] }, showIntercept: false, xLabel: 'months', yLabel: '$', points: [{ x: 4, y: 50, label: 'tie at 4 months' }], title: 'Cheaper now vs. cheaper later', caption: 'Before month 4 the low fee wins. After it, the low rate does.' }),
     },
-    { kind: 'example', head: 'Another way: race the gap', body: 'Same phone plans, no algebra. Plan A starts $10 ahead; Plan B charges $2 more each month, so it closes the gap by 2.\nA $10 gap closed at $2 per month takes 10 ÷ 2 = 5 months.\nSame answer, zero equations.' },
-    { kind: 'example', head: 'Another way: table the tickets', body: '3 adult + 2 kid tickets cost $41; 1 adult + 2 kid cost $23.\nBoth receipts share the same 2 kid tickets, so the $18 difference buys the 2 extra adults.\nOne adult ticket: 18 ÷ 2 = $9.' },
-    { kind: 'protip', head: 'Pick the easier weapon', body: 'If a rule already starts "y =", substitution is fastest — the swap is sitting right there. If the letters line up with matching or opposite copies, stack and cancel. Lazy in a smart way beats brave in a slow way.' },
-    { kind: 'trap', head: 'Trap: swapping in half the expression', body: 'Substituting y = 2x − 1 into 3x + y = 14 gives 3x + 2x − 1 = 14. Dropping the −1 gives 3x + 2x = 14 and x = 2.8 — wrong! Swap in the WHOLE expression, minus signs and all.' },
+    {
+      kind: 'example',
+      head: 'Another way: race the gap',
+      body: 'Same phone plans, no algebra. Plan A starts $10 ahead; Plan B charges $2 more each month, so it closes the gap by 2.\nA $10 gap closed at $2 per month takes 10 ÷ 2 = 5 months.\nSame answer, zero equations.',
+      art: lineGraph([{ m: 2, b: 0, label: 'runner A' }, { m: -1, b: 6, label: 'runner B' }], { range: { x: [0, 6], y: [0, 9] }, showIntercept: false, points: [{ x: 2, y: 4, label: 'they meet' }], title: 'The gap closes to zero', caption: 'Two rules approaching each other meet exactly where the gap runs out.' }),
+    },
+    {
+      kind: 'example',
+      head: 'Another way: table the tickets',
+      body: '3 adult + 2 kid tickets cost $41; 1 adult + 2 kid cost $23.\nBoth receipts share the same 2 kid tickets, so the $18 difference buys the 2 extra adults.\nOne adult ticket: 18 ÷ 2 = $9.',
+      art: doubleLine({ label: 'adult tix', vals: [0, 2, 4, 6] }, { label: 'child tix', vals: [10, 8, 6, 4] }, { title: 'Every pair that totals ten', caption: 'List the pairs that fit one rule, then find the one that also fits the other.' }),
+    },
+    {
+      kind: 'protip',
+      head: 'Pick the easier weapon',
+      body: 'If a rule already starts "y =", substitution is fastest — the swap is sitting right there. If the letters line up with matching or opposite copies, stack and cancel. Lazy in a smart way beats brave in a slow way.',
+      art: flow([{ label: 'A rule already says y = …', color: SKY }, { label: 'Then substitute', color: EMR }, { label: 'Matching terms stacked?', color: AMB }, { label: 'Then eliminate', color: VIO }], { title: 'Let the equations choose' }),
+    },
+    {
+      kind: 'trap',
+      head: 'Trap: swapping in half the expression',
+      body: 'Substituting y = 2x − 1 into 3x + y = 14 gives 3x + 2x − 1 = 14. Dropping the −1 gives 3x + 2x = 14 and x = 2.8 — wrong! Swap in the WHOLE expression, minus signs and all.',
+      art: flow([{ label: 'y = 2x + 3', color: SKY }, { label: 'Swap the WHOLE thing in', color: EMR }, { label: 'Leaving off the +3 breaks it', color: ROSE }], { title: 'Substitute all of it, brackets and all' }),
+    },
     {
       kind: 'trap',
       head: 'Trap: solving for x and stopping',
@@ -77,8 +116,18 @@ export const A1_SLIDES_U09_11: SlideBank = {
       compare: { cols: [{ title: 'Half done', tex: 'x = 2', lines: ['Found one letter', 'Not an answer yet'], tone: 'bad' }, { title: 'Finished', tex: '(2,\\ 4)', lines: ['Both letters found', 'A crossing point'], tone: 'ok' }], note: 'A system asks where two lines meet, so the answer is a point.' },
       art: flow([{ label: 'You found x', color: SKY }, { label: 'A system wants a POINT', color: ROSE }, { label: 'Go back and find y too', color: EMR }], { title: 'Half an answer is no answer' }),
     },
-    { kind: 'challenge', head: 'Extra credit: the coin jar', body: '15 coins, all nickels and dimes, worth 110 cents. Rules: n + d = 15 and 5n + 10d = 110.\nSwap d = 15 − n into the money rule: 5n + 150 − 10n = 110, so 5n = 40.\nn = 8 nickels and d = 7 dimes. Check: 40 + 70 = 110.' },
-    { kind: 'summary', head: 'You crack double codes now', body: 'A system is two rules that must both be true — the crossing point of two lines. Substitution swaps in what y equals; elimination stacks and cancels a letter. Write the two hidden rules in word problems, solve, then answer the question actually asked.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: the coin jar',
+      body: '15 coins, all nickels and dimes, worth 110 cents. Rules: n + d = 15 and 5n + 10d = 110.\nSwap d = 15 − n into the money rule: 5n + 150 − 10n = 110, so 5n = 40.\nn = 8 nickels and d = 7 dimes. Check: 40 + 70 = 110.',
+      art: tape([{ label: 'dimes', boxes: 6, each: '10c', color: SKY }, { label: 'quarters', boxes: 4, each: '25c', color: AMB }], { total: 'two rules: how many, and how much', title: 'Count and value are two equations' }),
+    },
+    {
+      kind: 'summary',
+      head: 'You crack double codes now',
+      body: 'A system is two rules that must both be true — the crossing point of two lines. Substitution swaps in what y equals; elimination stacks and cancels a letter. Write the two hidden rules in word problems, solve, then answer the question actually asked.',
+      art: lineGraph([{ m: 1, b: 1, label: 'rule one' }, { m: -1, b: 7, label: 'rule two' }], { range: { x: [0, 8], y: [0, 9] }, showIntercept: false, points: [{ x: 3, y: 4, label: '(3, 4)' }], title: 'One point satisfies both' }),
+    },
   ],
   'A1-10': [
     {
@@ -116,6 +165,27 @@ export const A1_SLIDES_U09_11: SlideBank = {
       art: numberLine(-3, 3, [{ at: 3, label: '8', color: EMR }, { at: 2, label: '4', color: EMR }, { at: 1, label: '2', color: EMR }, { at: 0, label: '1', color: VIO }, { at: -1, label: '½', color: SKY }, { at: -2, label: '¼', color: SKY }], { title: 'Powers of 2, walking down', caption: 'Each step left halves the value. That is why 2⁰ = 1 and 2⁻¹ = ½.' }),
     },
     {
+      kind: 'trap',
+      head: 'Trap: (−2)³ is not the same as −2³',
+      body: 'Parentheses decide what gets raised. (−2)³ means (−2)(−2)(−2) = −8, because three negatives multiply to a negative.\nBut −2³ means −(2 × 2 × 2) = −8 too — while (−2)² = 4 and −2² = −4 genuinely differ.',
+      art: signGrid({ mark: '−−', title: 'An even count of negatives gives +', caption: 'Pair the negatives off. An even number cancels to positive; an odd one leaves a minus behind.' }),
+      compare: { cols: [{ title: '(−2)²', tex: '(-2)(-2) = 4', lines: ['The minus IS the base', 'Two negatives cancel'], tone: 'ok' }, { title: '−2²', tex: '-(2 \\cdot 2) = -4', lines: ['The minus sits outside', 'It survives to the end'], tone: 'bad' }], note: 'Parentheses are what decide whether the minus is part of the base.' },
+    },
+    {
+      kind: 'example',
+      head: 'Negative base: (−3)² and (−3)³',
+      body: '(−3)² = (−3)(−3) = 9, because two negatives cancel.\n(−3)³ = (−3)(−3)(−3) = −27, because the third negative has no partner.\nEven powers come out positive; odd powers keep the minus.',
+      art: flow([{ label: '(−3)(−3) = +9', color: EMR }, { label: 'now × (−3) again', color: AMB }, { label: '= −27', color: ROSE }], { title: 'Each extra negative flips the sign', caption: 'Two negatives cancel to a plus. A third has no partner, so the answer flips back to negative.' }),
+      steps: { steps: [{ tex: '(-3)^2 = (-3)(-3) = 9', text: 'Two negatives cancel to a positive.' }, { tex: '(-3)^3 = 9 \\times (-3) = -27', text: 'The third negative flips it back.' }], answer: '9 \\text{ and } -27' },
+    },
+    {
+      kind: 'example',
+      head: 'Negative exponent: 2⁻³',
+      body: 'A minus in the exponent means "one over", not "negative".\n2⁻³ = 1 ÷ 2³ = 1 ÷ 8.\nThe answer is ⅛ — small and positive, never −8.',
+      art: bars([{ name: 'value of 2ˣ', vals: [8, 4, 2, 1, 0.5, 0.25], color: AMB }], { labels: ['x=3', '2', '1', '0', '−1', '−2'], title: 'Each step left halves it', caption: 'Walk down the exponent and the value halves every time. It shrinks toward zero and never turns negative.' }),
+      steps: { steps: [{ tex: '2^{-3} = 1 \\div 2^{3}', text: 'A negative exponent flips it into a fraction.' }, { tex: '= \\tfrac{1}{8}', text: 'Small and positive, not negative.' }], answer: '\\tfrac{1}{8}' },
+    },
+    {
       kind: 'example',
       head: 'Product rule in action',
       body: 'Simplify x³ · x⁴.\nThree copies plus four copies is seven copies of x.\nAnswer: x⁷ — add 3 + 4, never multiply.',
@@ -133,11 +203,36 @@ export const A1_SLIDES_U09_11: SlideBank = {
       body: 'Simplify (x²)⁴.\nFour groups of two copies each: 2 × 4 = 8 copies.\nAnswer: x⁸.',
       steps: { steps: [{ tex: '(x^2)^3', text: 'Three groups of two copies.' }, { tex: 'x^{2 \\times 3} = x^6', text: 'Multiply the exponents.' }], answer: 'x^6' },
     },
-    { kind: 'example', head: 'Fold a paper into a power', body: 'Fold a sheet of paper and the layers double. Fold again — double again.\nAfter 5 folds you have 2⁵ = 2 × 2 × 2 × 2 × 2 layers.\nThat is 32 layers from five folds; ten folds would give 2¹⁰ = 1024.' },
-    { kind: 'example', head: 'The rumor machine', body: 'A rumor spreads in rounds: each person tells 3 new people.\nRound 4 reaches 3⁴ new listeners: 3 × 3 × 3 × 3.\nStep it out: 9, 27, 81 — the rumor hits 81 people in round 4.' },
-    { kind: 'example', head: 'Another way: test with real numbers', body: 'Not sure if x³ · x⁴ is x⁷ or x¹²? Try x = 2.\n2³ · 2⁴ = 8 × 16 = 128, and 128 = 2⁷, not 2¹².\nA quick number test settles any exponent-rule doubt.' },
-    { kind: 'example', head: 'Another way: walk down the staircase', body: 'Why is 4⁰ = 1? Walk the powers downstairs.\n4³ = 64, 4² = 16, 4¹ = 4 — each step down divides by 4.\nOne more step: 4⁰ = 4 ÷ 4 = 1. Keep walking and 4⁻¹ = 1/4.' },
-    { kind: 'protip', head: 'When stuck, unroll the copies', body: 'Every exponent rule can be rebuilt on the spot: write out the copies and count. x² · x³ becomes (x·x)(x·x·x) — five copies, x⁵. Thirty seconds of unrolling beats guessing which rule to trust.' },
+    {
+      kind: 'example',
+      head: 'Fold a paper into a power',
+      body: 'Fold a sheet of paper and the layers double. Fold again — double again.\nAfter 5 folds you have 2⁵ = 2 × 2 × 2 × 2 × 2 layers.\nThat is 32 layers from five folds; ten folds would give 2¹⁰ = 1024.',
+      art: bars([{ name: 'layers', vals: [2, 4, 8, 16, 32], color: AMB }], { labels: ['1', '2', '3', '4', '5'], title: 'Each fold doubles the layers', caption: 'Five folds give 2⁵ = 32 layers. The exponent is just how many times you folded.' }),
+    },
+    {
+      kind: 'example',
+      head: 'The rumor machine',
+      body: 'A rumor spreads in rounds: each person tells 3 new people.\nRound 4 reaches 3⁴ new listeners: 3 × 3 × 3 × 3.\nStep it out: 9, 27, 81 — the rumor hits 81 people in round 4.',
+      art: bars([{ name: 'people told', vals: [3, 9, 27, 81], color: ROSE }], { labels: ['round 1', '2', '3', '4'], title: 'Each round triples it', caption: 'Three people each tell three more. Four rounds reaches 3⁴ = 81.' }),
+    },
+    {
+      kind: 'example',
+      head: 'Another way: test with real numbers',
+      body: 'Not sure if x³ · x⁴ is x⁷ or x¹²? Try x = 2.\n2³ · 2⁴ = 8 × 16 = 128, and 128 = 2⁷, not 2¹².\nA quick number test settles any exponent-rule doubt.',
+      art: flow([{ label: 'Unsure of a rule?' }, { label: 'Try it with x = 2' }, { label: 'The numbers settle it' }], { title: 'Test, do not guess' }),
+    },
+    {
+      kind: 'example',
+      head: 'Another way: walk down the staircase',
+      body: 'Why is 4⁰ = 1? Walk the powers downstairs.\n4³ = 64, 4² = 16, 4¹ = 4 — each step down divides by 4.\nOne more step: 4⁰ = 4 ÷ 4 = 1. Keep walking and 4⁻¹ = 1/4.',
+      art: numberLine(-2, 4, [{ at: 3, label: '8', color: EMR }, { at: 2, label: '4', color: EMR }, { at: 1, label: '2', color: EMR }, { at: 0, label: '1', color: VIO }, { at: -1, label: '½', color: SKY }], { title: 'Powers of 2, one step at a time', caption: 'Each step left halves the value, which is why the staircase reaches 1 and then fractions.' }),
+    },
+    {
+      kind: 'protip',
+      head: 'When stuck, unroll the copies',
+      body: 'Every exponent rule can be rebuilt on the spot: write out the copies and count. x² · x³ becomes (x·x)(x·x·x) — five copies, x⁵. Thirty seconds of unrolling beats guessing which rule to trust.',
+      art: tape([{ label: 'x⁵', boxes: 5, each: 'x', color: SKY }], { total: 'five copies, laid out', title: 'Unroll it and the rule is obvious', caption: 'Every exponent rule is visible once the copies are written in a row.' }),
+    },
     {
       kind: 'trap',
       head: 'Trap: x³ · x⁴ is NOT x¹²',
@@ -151,8 +246,18 @@ export const A1_SLIDES_U09_11: SlideBank = {
       body: 'A negative exponent never makes the answer negative. 2⁻³ means flip it under 1: 1 ÷ 2³ = 1/8, a small positive fraction. −8 would be −(2³) — a completely different creature.',
       art: numberLine(-1, 9, [{ at: 0.125, label: '2⁻³ = ⅛', color: EMR }, { at: -8, color: ROSE }], { title: 'A negative exponent flips, it does not negate', caption: 'A minus in the exponent means one over — the answer stays positive and simply gets small.' }),
     },
-    { kind: 'challenge', head: 'Extra credit: triple combo', body: 'Simplify (x³)² · x⁴ ÷ x⁵.\nPower rule: (x³)² = x⁶. Product rule: x⁶ · x⁴ = x¹⁰.\nQuotient rule: x¹⁰ ÷ x⁵ = x⁵. Three rules, one clean answer.' },
-    { kind: 'summary', head: 'You count copies like a pro', body: 'Multiply powers: add exponents. Divide: subtract. Power of a power: multiply. Anything to the 0 is 1, and a negative exponent flips the power under 1. When in doubt, unroll the copies and count them.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: triple combo',
+      body: 'Simplify (x³)² · x⁴ ÷ x⁵.\nPower rule: (x³)² = x⁶. Product rule: x⁶ · x⁴ = x¹⁰.\nQuotient rule: x¹⁰ ÷ x⁵ = x⁵. Three rules, one clean answer.',
+      art: flow([{ label: 'Power of a power: multiply' }, { label: 'Then multiply: add' }, { label: 'Then divide: subtract' }], { title: 'Apply the rules in order' }),
+    },
+    {
+      kind: 'summary',
+      head: 'You count copies like a pro',
+      body: 'Multiply powers: add exponents. Divide: subtract. Power of a power: multiply. Anything to the 0 is 1, and a negative exponent flips the power under 1. When in doubt, unroll the copies and count them.',
+      art: flow([{ label: 'Multiply → add exponents', color: SKY }, { label: 'Divide → subtract', color: AMB }, { label: 'Power of a power → multiply', color: EMR }, { label: 'Negative → flip it over', color: VIO }], { title: 'Four rules, all from counting' }),
+    },
   ],
   'A1-11': [
     {
@@ -183,6 +288,20 @@ export const A1_SLIDES_U09_11: SlideBank = {
       art: flow([{ label: 'Up 20% → × 1.20', color: EMR }, { label: 'Down 20% → × 0.80', color: SKY }, { label: 'Never × 0.20 for a 20% drop', color: ROSE }], { title: 'Percent to multiplier', caption: 'Down 20% keeps 80%, so the factor is 0.80 — what remains, not what was lost.' }),
     },
     {
+      kind: 'example',
+      head: 'Decay: a phone worth $600 losing 20% a year',
+      body: 'Losing 20% means keeping 80%, so the factor is 0.80 — not −0.20.\nAfter one year: 600 × 0.80 = 480.\nAfter two: 480 × 0.80 = 384. The value falls but never goes negative.',
+      art: bars([{ name: 'value in $', vals: [600, 480, 384, 307], color: ROSE }], { labels: ['now', '1 yr', '2 yr', '3 yr'], title: 'Each year keeps 80% of the last', caption: 'Decay shrinks toward zero without ever crossing it — the factor is between 0 and 1.' }),
+      steps: { steps: [{ tex: '\\text{down } 20\\% \\to \\times 0.80', text: 'Keep eighty percent, not minus twenty.' }, { tex: '600 \\times 0.80 = 480', text: 'One year of decay.' }, { tex: '480 \\times 0.80 = 384', text: 'Apply the same factor again.' }], answer: '\\$384' },
+    },
+    {
+      kind: 'concept',
+      head: 'A negative exponent runs the clock backwards',
+      body: 'In y = a · bˣ, a negative x asks what the value was BEFORE you started counting. With b = 2, x = −3 means divide by 2 three times. The result is smaller than the start, but still positive.',
+      art: bars([{ name: 'value', vals: [1, 2, 4, 8, 16], color: AMB }], { labels: ['x=−2', 'x=−1', 'x=0', 'x=1', 'x=2'], title: 'Negative x sits left of the start', caption: 'Going left divides instead of multiplying, so the bars shrink but never flip below the axis.' }),
+      formula: { tex: 'b^{-n} = \\dfrac{1}{b^n}', note: 'A negative exponent divides; it never makes the value negative.', parts: [{ sym: '-n', means: 'how many times to divide rather than multiply', tone: 'accent' }, { sym: '> 0', means: 'the result stays positive, just smaller', tone: 'ok' }] },
+    },
+    {
       kind: 'concept',
       head: 'The multiplier always wins eventually',
       body: 'A linear pattern takes the same step forever. An exponential pattern takes a bigger step every round, because it grows a piece of everything it already has. Early on the adder may lead — but the multiplier always blasts past.',
@@ -201,7 +320,12 @@ export const A1_SLIDES_U09_11: SlideBank = {
       body: 'A dish starts with 5 bacteria and doubles every hour: y = 5 · 2ˣ.\nAfter 3 hours: 5 → 10 → 20 → 40.\nThat is 5 × 2³ = 5 × 8 = 40 bacteria.',
       steps: { steps: [{ tex: 'y = 100 \\cdot 2^x', text: 'Start at 100, doubling each hour.' }, { tex: 'x = 4 : 2^4 = 16', text: 'Four hours means four doublings.' }, { tex: '100 \\times 16 = 1600', text: 'Multiply the start by the growth.' }], answer: '1600' },
     },
-    { kind: 'example', head: 'Your phone loses value', body: 'A $500 phone loses 20% of its value each year, so it keeps 80%: factor 0.80.\nYear 1: 500 × 0.80 = 400. Year 2: 400 × 0.80 = 320.\nIt is worth $320 — it lost $100, then only $80, because 20% of less is less.' },
+    {
+      kind: 'example',
+      head: 'Your phone loses value',
+      body: 'A $500 phone loses 20% of its value each year, so it keeps 80%: factor 0.80.\nYear 1: 500 × 0.80 = 400. Year 2: 400 × 0.80 = 320.\nIt is worth $320 — it lost $100, then only $80, because 20% of less is less.',
+      art: bars([{ name: 'value in $', vals: [800, 640, 512, 410], color: ROSE }], { labels: ['new', '1 yr', '2 yr', '3 yr'], title: 'Keeping 80% each year', caption: 'Decay shrinks by a factor, so the drops get smaller every year rather than staying equal.' }),
+    },
     {
       kind: 'example',
       head: 'Plug into y = a · bˣ',
@@ -210,13 +334,35 @@ export const A1_SLIDES_U09_11: SlideBank = {
     },
     {
       kind: 'example',
+      head: 'A negative exponent: y = 80 · 2ˣ at x = −2',
+      body: 'A negative x means go BACKWARDS from the start, dividing instead of multiplying.\n2⁻² = 1 ÷ 4, so y = 80 ÷ 4.\ny = 20 — smaller than the start, but still a positive amount.',
+      art: bars([{ name: 'value', vals: [20, 40, 80, 160], color: AMB }], { labels: ['x=−2', 'x=−1', 'x=0', 'x=1'], title: 'Negative x sits left of the start', caption: 'Each step left halves it. The bars shrink toward zero and never dip below the axis.' }),
+      steps: { steps: [{ tex: '2^{-2} = \\tfrac{1}{4}', text: 'A negative exponent divides rather than negating.' }, { tex: '80 \\times \\tfrac{1}{4} = 20', text: 'Two steps backwards from eighty.' }], answer: '20' },
+    },
+    {
+      kind: 'example',
       head: 'Follower race: double vs. +100',
       body: 'Account A: 10 followers, doubling weekly. Account B: 10 followers, +100 weekly.\nWeek 5: A has 320, B has 510 — B leads. Week 6: A has 640, B has 610.\nThe doubler takes the lead in week 6 and never gives it back.',
       art: bars([{ name: '+100', vals: [100, 200, 300, 400], color: SKY }, { name: 'double', vals: [100, 200, 400, 800], color: AMB }], { labels: ['week 0', 'week 1', 'week 2', 'week 3'], title: 'Tied at week 1, gone by week 3' }),
     },
-    { kind: 'example', head: 'Another way: watch the jumps', body: 'Same race, but only track each week\'s JUMP. B always jumps exactly +100.\nA\'s jumps grow: +80, +160, +320 — it adds its whole current size each week.\nOnce A\'s jump beats +100 and the gap closes, the lead flips for good.' },
-    { kind: 'example', head: 'Another way: test $100', body: 'Confused about factors? Send $100 through the machine.\nUp 10%: $100 becomes $110, and 110 ÷ 100 = 1.10 — there is your factor.\nDown 20%: $100 becomes $80, so the factor is 0.80.' },
-    { kind: 'protip', head: 'Divide neighbors to unmask growth', body: 'Given a table, divide each value by the one before it. If you get the same number every time, that number is the growth factor b — the pattern is exponential. If dividing gives different answers but the differences match, it is linear.' },
+    {
+      kind: 'example',
+      head: 'Another way: watch the jumps',
+      body: 'Same race, but only track each week\'s JUMP. B always jumps exactly +100.\nA\'s jumps grow: +80, +160, +320 — it adds its whole current size each week.\nOnce A\'s jump beats +100 and the gap closes, the lead flips for good.',
+      art: doubleLine({ label: 'linear: +4', vals: [2, 6, 10, 14] }, { label: 'exponential: ×2', vals: [2, 4, 8, 16] }, { title: 'Equal jumps vs equal ratios', caption: 'Subtract neighbours for linear; divide neighbours for exponential. One of them comes out constant.' }),
+    },
+    {
+      kind: 'example',
+      head: 'Another way: test $100',
+      body: 'Confused about factors? Send $100 through the machine.\nUp 10%: $100 becomes $110, and 110 ÷ 100 = 1.10 — there is your factor.\nDown 20%: $100 becomes $80, so the factor is 0.80.',
+      art: flow([{ label: 'Try the rule on $100' }, { label: 'Up 8% → ×1.08 → $108' }, { label: 'The number checks the factor' }], { title: 'A friendly number tests a factor' }),
+    },
+    {
+      kind: 'protip',
+      head: 'Divide neighbors to unmask growth',
+      body: 'Given a table, divide each value by the one before it. If you get the same number every time, that number is the growth factor b — the pattern is exponential. If dividing gives different answers but the differences match, it is linear.',
+      art: doubleLine({ label: 'the terms', vals: [3, 6, 12, 24] }, { label: 'each ÷ the last', vals: [1, 2, 2, 2] }, { title: 'A constant ratio means exponential', caption: 'Divide each term by the one before it. A repeating answer is the growth factor.' }),
+    },
     {
       kind: 'trap',
       head: 'Trap: down 20% is NOT ×0.20',
@@ -224,8 +370,23 @@ export const A1_SLIDES_U09_11: SlideBank = {
       compare: { cols: [{ title: 'Correct', tex: '\\times 0.80', lines: ['Keeps 80%', 'A 20% drop'], tone: 'ok' }, { title: 'Wrong', tex: '\\times 0.20', lines: ['Keeps only 20%', 'An 80% drop'], tone: 'bad' }], note: 'The factor is what survives, not what was taken away.' },
       art: fractionBar(10, 8, { label: 'down 20% keeps 8 of 10', second: { parts: 10, shaded: 2, label: '×0.20 would keep only 2 of 10' }, title: 'Keeping 80% vs. keeping 20%', caption: 'A 20% drop leaves most of it behind. Multiplying by 0.20 throws away four-fifths.' }),
     },
-    { kind: 'trap', head: 'Trap: 3 · 2⁴ is NOT 6⁴', body: 'In y = 3 · 2⁴, the exponent belongs to the 2 alone. Compute 2⁴ = 16 first, then 3 × 16 = 48. Merging into 6⁴ = 1296 multiplies the start four times instead of once.' },
-    { kind: 'challenge', head: 'Extra credit: two years of growth', body: 'A town of 2000 grows 10% per year. After 2 years?\n2000 × 1.10 = 2200, then 2200 × 1.10 = 2420.\nThat beats 2000 + 200 + 200 = 2400, because year two grows the newcomers too.' },
-    { kind: 'summary', head: 'You see growth in two speeds', body: 'Linear adds the same amount; exponential multiplies by the same factor. The rule is y = a · bˣ — start times factor — and a percent change hides the factor: up 10% is ×1.10, down 20% is ×0.80. Adders move steadily; multipliers take over the world.' },
+    {
+      kind: 'trap',
+      head: 'Trap: 3 · 2⁴ is NOT 6⁴',
+      body: 'In y = 3 · 2⁴, the exponent belongs to the 2 alone. Compute 2⁴ = 16 first, then 3 × 16 = 48. Merging into 6⁴ = 1296 multiplies the start four times instead of once.',
+      art: tape([{ label: '2⁴ = 16', boxes: 4, each: '2', color: SKY }, { label: 'then × 3', boxes: 3, each: '16', color: AMB }], { total: '3 × 16 = 48, not 1296', title: 'The 3 is not part of the base', caption: 'Only the 2 is raised to the fourth. The 3 multiplies afterwards.' }),
+    },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: two years of growth',
+      body: 'A town of 2000 grows 10% per year. After 2 years?\n2000 × 1.10 = 2200, then 2200 × 1.10 = 2420.\nThat beats 2000 + 200 + 200 = 2400, because year two grows the newcomers too.',
+      art: bars([{ name: 'balance', vals: [500, 550, 605], color: EMR }], { labels: ['start', 'yr 1', 'yr 2'], title: 'Interest on the interest', caption: 'Year two grows by more than year one, because it grows on a bigger balance.' }),
+    },
+    {
+      kind: 'summary',
+      head: 'You see growth in two speeds',
+      body: 'Linear adds the same amount; exponential multiplies by the same factor. The rule is y = a · bˣ — start times factor — and a percent change hides the factor: up 10% is ×1.10, down 20% is ×0.80. Adders move steadily; multipliers take over the world.',
+      art: bars([{ name: 'adds', vals: [10, 20, 30, 40], color: SKY }, { name: 'doubles', vals: [10, 20, 40, 80], color: AMB }], { labels: ['0', '1', '2', '3'], title: 'Straight line vs runaway curve' }),
+    },
   ],
 };
