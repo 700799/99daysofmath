@@ -26,6 +26,7 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Order matters — a lot',
       body: '3:2 and 2:3 are NOT the same ratio. The first number always matches the first thing named. If a question asks for "apples to oranges", the apple count goes first, no matter which number is bigger.',
+      formula: { tex: 'a : b \\ne b : a', note: 'A ratio reads left to right, exactly as the sentence names them.', parts: [{ sym: 'a', means: 'whatever the sentence mentions first', tone: 'accent' }, { sym: 'b', means: 'whatever it mentions second', tone: 'ok' }] },
       compare: {
         cols: [
           { title: '3 : 4 cats to dogs', tex: '3 : 4', lines: ['Cats named first', 'Fewer cats'], tone: 'accent' },
@@ -49,6 +50,7 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Simplest form = smallest whole numbers',
       body: 'A ratio is in simplest form when no number divides evenly into both parts anymore. 4:6 simplifies to 2:3 because both divide by 2. 2:3 is done — nothing bigger than 1 goes into both 2 and 3.',
+      formula: { tex: '\\dfrac{a}{\\gcd} : \\dfrac{b}{\\gcd}', note: 'Divide both sides by the largest factor they share.', parts: [{ sym: '\\gcd', means: 'the biggest number dividing both amounts', tone: 'accent' }, { sym: '\\text{both sides}', means: 'must be divided, or the ratio changes', tone: 'bad' }] },
       steps: {
         steps: [
           { tex: '4 : 6', text: 'What divides into both?' },
@@ -57,7 +59,12 @@ export const RP_SLIDES: SlideBank = {
         answer: '2 : 3',
       },
     },
-    { kind: 'example', head: 'Write a ratio: 3 cats, 4 dogs', body: 'What is the ratio of cats to dogs?\nCats are named first, so their number goes first: 3. Dogs come second: 4. The ratio is 3:4 — no simplifying needed, since nothing divides both.' },
+    {
+      kind: 'example',
+      head: 'Write a ratio: 3 cats, 4 dogs',
+      body: 'What is the ratio of cats to dogs?\nCats are named first, so their number goes first: 3. Dogs come second: 4. The ratio is 3:4 — no simplifying needed, since nothing divides both.',
+      steps: { steps: [{ tex: '\\text{cats first}', text: 'The sentence names cats before dogs.' }, { tex: '3 : 4', text: 'Write them in that order.' }], answer: '3 : 4' },
+    },
     {
       kind: 'example',
       head: 'Simplify: 4 apples to 6 oranges',
@@ -67,11 +74,26 @@ export const RP_SLIDES: SlideBank = {
           { label: 'oranges', boxes: 3, color: EMR },
         ], { title: '4 : 6 is really 2 : 3', caption: 'Group them in twos and the same comparison needs fewer boxes.' }),
     },
-    { kind: 'example', head: 'Simplify: 5 cats to 10 dogs', body: 'Cats to dogs = 5:10.\nBoth divide by 5: 5 ÷ 5 = 1 and 10 ÷ 5 = 2. Simplest form: 1:2 — one cat for every two dogs.' },
+    {
+      kind: 'example',
+      head: 'Simplify: 5 cats to 10 dogs',
+      body: 'Cats to dogs = 5:10.\nBoth divide by 5: 5 ÷ 5 = 1 and 10 ÷ 5 = 2. Simplest form: 1:2 — one cat for every two dogs.',
+      steps: { steps: [{ tex: '\\gcd(5, 10) = 5', text: 'Find the biggest shared factor.' }, { tex: '\\tfrac{5}{5} : \\tfrac{10}{5}', text: 'Divide both sides by it.' }], answer: '1 : 2' },
+    },
     { kind: 'example', head: 'Watch the order: milk to flour', body: 'A recipe uses 2 cups flour and 3 cups milk. Ratio of MILK to flour?\nMilk is asked first, so milk\'s number leads: 3. Flour follows: 2. Answer: 3:2 — not 2:3!' },
     { kind: 'example', head: 'Simplify: 6 blue to 9 red', body: 'Blue to red = 6:9.\nFind the common factor: both divide by 3. 6 ÷ 3 = 2 and 9 ÷ 3 = 3. Simplest form: 2:3.' },
-    { kind: 'example', head: 'Bigger numbers: 8 boys to 12 girls', body: 'Boys to girls = 8:12.\nBoth divide by 4: 8 ÷ 4 = 2 and 12 ÷ 4 = 3. Simplest form: 2:3 — for every 2 boys there are 3 girls.' },
-    { kind: 'example', head: 'Another way: divide by the biggest factor', body: 'Simplify 8:12 in ONE step.\nInstead of halving twice (8:12 → 4:6 → 2:3), find the biggest number that divides both — 4. Then 8 ÷ 4 = 2 and 12 ÷ 4 = 3, giving 2:3 right away.' },
+    {
+      kind: 'example',
+      head: 'Bigger numbers: 8 boys to 12 girls',
+      body: 'Boys to girls = 8:12.\nBoth divide by 4: 8 ÷ 4 = 2 and 12 ÷ 4 = 3. Simplest form: 2:3 — for every 2 boys there are 3 girls.',
+      steps: { steps: [{ tex: '\\gcd(8, 12) = 4', text: 'Four divides both numbers.' }, { tex: '\\tfrac{8}{4} : \\tfrac{12}{4}', text: 'Divide each side by four.' }], answer: '2 : 3' },
+    },
+    {
+      kind: 'example',
+      head: 'Another way: divide by the biggest factor',
+      body: 'Simplify 8:12 in ONE step.\nInstead of halving twice (8:12 → 4:6 → 2:3), find the biggest number that divides both — 4. Then 8 ÷ 4 = 2 and 12 ÷ 4 = 3, giving 2:3 right away.',
+      steps: { steps: [{ tex: '6 : 9', text: 'Start with the raw ratio.' }, { tex: '\\gcd = 3', text: 'Three is the largest shared factor.' }, { tex: '2 : 3', text: 'One division reaches simplest form.' }], answer: '2 : 3' },
+    },
     {
       kind: 'protip',
       head: 'Hunt for the BIGGEST common factor',
@@ -117,6 +139,7 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'A rate compares different units',
       body: 'A rate is a ratio between two DIFFERENT kinds of things, like miles and hours, or dollars and muffins. "150 miles in 3 hours" is a rate. Rates describe how one thing changes with another.',
+      formula: { tex: '\\text{rate} = \\dfrac{\\text{amount}}{\\text{other amount}}', note: 'A rate joins two different kinds of thing — miles and hours, dollars and muffins.', parts: [{ sym: '\\text{amount}', means: 'the quantity you are measuring', tone: 'accent' }, { sym: '\\text{other}', means: 'the quantity you are measuring it against', tone: 'ok' }] },
       art: doubleLine(
         { label: 'stickers', vals: [0, 2, 4, 6, 8, 10] },
         { label: 'packs', vals: [0, 1, 2, 3, 4, 5] },
@@ -150,8 +173,18 @@ export const RP_SLIDES: SlideBank = {
         answer: '50 \\text{ miles per hour}',
       },
     },
-    { kind: 'example', head: 'Warm-up: 10 stickers, 5 packs', body: 'How many stickers per pack?\nPer pack means divide by packs: 10 ÷ 5 = 2. Each pack holds 2 stickers.' },
-    { kind: 'example', head: 'Speed: 150 miles in 3 hours', body: 'Miles per hour means miles ÷ hours.\n150 ÷ 3 = 50. The car travels 50 miles each hour — that\'s 50 mph.' },
+    {
+      kind: 'example',
+      head: 'Warm-up: 10 stickers, 5 packs',
+      body: 'How many stickers per pack?\nPer pack means divide by packs: 10 ÷ 5 = 2. Each pack holds 2 stickers.',
+      steps: { steps: [{ tex: '10 \\div 5', text: 'Stickers divided by packs.' }, { tex: '= 2', text: 'Two stickers in every pack.' }], answer: '2 \\text{ per pack}' },
+    },
+    {
+      kind: 'example',
+      head: 'Speed: 150 miles in 3 hours',
+      body: 'Miles per hour means miles ÷ hours.\n150 ÷ 3 = 50. The car travels 50 miles each hour — that\'s 50 mph.',
+      steps: { steps: [{ tex: '150 \\div 3', text: 'Miles divided by hours.' }, { tex: '= 50', text: 'Fifty miles in a single hour.' }], answer: '50 \\text{ mph}' },
+    },
     {
       kind: 'example',
       head: 'Price: 6 muffins cost $9',
@@ -166,7 +199,12 @@ export const RP_SLIDES: SlideBank = {
     },
     { kind: 'example', head: 'Price: 4 notebooks cost $10', body: 'Divide cost by notebooks: $10 ÷ 4.\n4 × 2 = 8, leaving $2. Then $2 ÷ 4 = $0.50. Each notebook costs $2.50.' },
     { kind: 'example', head: 'Small answer: 8 apples cost $4', body: 'Cost per apple = $4 ÷ 8.\nFour split among eight is less than a dollar each: 4 ÷ 8 = 0.50. Each apple costs $0.50 — fifty cents.' },
-    { kind: 'example', head: 'Running rate: 100 m in 20 s', body: 'Meters per second means meters ÷ seconds.\n100 ÷ 20 = 5. The runner covers 5 meters every second.' },
+    {
+      kind: 'example',
+      head: 'Running rate: 100 m in 20 s',
+      body: 'Meters per second means meters ÷ seconds.\n100 ÷ 20 = 5. The runner covers 5 meters every second.',
+      steps: { steps: [{ tex: '100 \\div 20', text: 'Metres divided by seconds.' }, { tex: '= 5', text: 'Five metres every second.' }], answer: '5 \\text{ m/s}' },
+    },
     {
       kind: 'example',
       head: 'Another way: scale the table down to 1',
@@ -204,7 +242,12 @@ export const RP_SLIDES: SlideBank = {
       },
     },
     { kind: 'challenge', head: 'Extra credit: how far in 5 hours', body: 'A car goes 150 miles in 3 hours. How far in 5 hours at the same speed?\nUnit rate: 150 ÷ 3 = 50 mph. Then 50 × 5 = 250 miles.' },
-    { kind: 'summary', head: 'One division does it', body: 'A rate compares two different units; a unit rate is the amount for exactly 1. Divide the total by the number of units — "per" tells you what to divide by. Then sanity-check that the size of your answer makes sense.' },
+    {
+      kind: 'summary',
+      head: 'One division does it',
+      body: 'A rate compares two different units; a unit rate is the amount for exactly 1. Divide the total by the number of units — "per" tells you what to divide by. Then sanity-check that the size of your answer makes sense.',
+      formula: { tex: '\\text{unit rate} = \\dfrac{\\text{total}}{\\text{how many}}', note: 'The word "per" points straight at the divider.', parts: [{ sym: '\\text{total}', means: 'the whole amount before splitting', tone: 'accent' }, { sym: '\\text{how many}', means: 'the count you divide by, named after "per"', tone: 'ok' }] },
+    },
   ],
   '6.RP-3': [
     {
@@ -213,7 +256,12 @@ export const RP_SLIDES: SlideBank = {
       body: 'Today you will use ratio tables to find equivalent ratios fast. Spot the pattern in a table, and you can predict any missing value. It is like having a machine that scales recipes, prices, and more.',
       art: flow([{ label: 'Write the pair in a table', color: SKY }, { label: 'Multiply both rows alike', color: AMB }, { label: 'Read off any row you need', color: EMR }], { title: 'How a ratio table works' }),
     },
-    { kind: 'concept', head: 'Equivalent ratios, same comparison', body: 'Equivalent ratios make the exact same comparison with different numbers: 1:3, 2:6, and 3:9 all say "three times as much". You build them by multiplying or dividing both parts by the same number.' },
+    {
+      kind: 'concept',
+      head: 'Equivalent ratios, same comparison',
+      body: 'Equivalent ratios make the exact same comparison with different numbers: 1:3, 2:6, and 3:9 all say "three times as much". You build them by multiplying or dividing both parts by the same number.',
+      formula: { tex: 'a : b = ka : kb', note: 'Scale both sides by the same k and the comparison is unchanged.', parts: [{ sym: 'k', means: 'the multiplier applied to BOTH sides', tone: 'accent' }, { sym: '\\text{both}', means: 'scale one side only and the ratio breaks', tone: 'bad' }] },
+    },
     {
       kind: 'concept',
       head: 'A table keeps the pairs organized',
@@ -247,10 +295,30 @@ export const RP_SLIDES: SlideBank = {
         parts: [{ sym: 'k', means: 'divide any pair to find it — it is the same for every row', tone: 'accent' }],
       },
     },
-    { kind: 'example', head: 'Find the rule: 2 → 6, 3 → 9', body: 'What does 5 map to?\nCheck the rule: 2 × 3 = 6 and 3 × 3 = 9, so output = input × 3. Then 5 × 3 = 15. Answer: 15.' },
-    { kind: 'example', head: 'Another rule: 1 → 4, 2 → 8', body: 'What is the output for 6?\nThe rule: 1 × 4 = 4 and 2 × 4 = 8, so output = input × 4. Then 6 × 4 = 24. Answer: 24.' },
-    { kind: 'example', head: 'Doubling: 4 pens cost $3', body: 'What do 8 pens cost?\n8 is exactly 4 × 2, so the price doubles too. $3 × 2 = $6. Eight pens cost $6.' },
-    { kind: 'example', head: 'Tripling: 2 cups make 10 cookies', body: 'How many cookies from 6 cups?\n6 is 2 × 3, so triple the cookies. 10 × 3 = 30. Six cups make 30 cookies.' },
+    {
+      kind: 'example',
+      head: 'Find the rule: 2 → 6, 3 → 9',
+      body: 'What does 5 map to?\nCheck the rule: 2 × 3 = 6 and 3 × 3 = 9, so output = input × 3. Then 5 × 3 = 15. Answer: 15.',
+      steps: { steps: [{ tex: '6 \\div 2 = 3', text: 'Divide output by input on the first row.' }, { tex: '9 \\div 3 = 3', text: 'Check the rule on a second row.' }], answer: '\\times 3' },
+    },
+    {
+      kind: 'example',
+      head: 'Another rule: 1 → 4, 2 → 8',
+      body: 'What is the output for 6?\nThe rule: 1 × 4 = 4 and 2 × 4 = 8, so output = input × 4. Then 6 × 4 = 24. Answer: 24.',
+      steps: { steps: [{ tex: '4 \\div 1 = 4', text: 'Divide output by input.' }, { tex: '8 \\div 2 = 4', text: 'Confirm on a second row.' }], answer: '\\times 4' },
+    },
+    {
+      kind: 'example',
+      head: 'Doubling: 4 pens cost $3',
+      body: 'What do 8 pens cost?\n8 is exactly 4 × 2, so the price doubles too. $3 × 2 = $6. Eight pens cost $6.',
+      steps: { steps: [{ tex: '4 \\to 8 \\text{ is } \\times 2', text: 'Find the multiplier on the pens row.' }, { tex: '3 \\times 2 = 6', text: 'Apply the same multiplier to the price.' }], answer: '\\$6' },
+    },
+    {
+      kind: 'example',
+      head: 'Tripling: 2 cups make 10 cookies',
+      body: 'How many cookies from 6 cups?\n6 is 2 × 3, so triple the cookies. 10 × 3 = 30. Six cups make 30 cookies.',
+      steps: { steps: [{ tex: '2 \\to 6 \\text{ is } \\times 3', text: 'Find the multiplier on the cups row.' }, { tex: '10 \\times 3 = 30', text: 'Apply it to the cookies row too.' }], answer: '30' },
+    },
     {
       kind: 'example',
       head: 'Rule first: 3 → 12, 5 → 20, 7 → ?',
@@ -264,8 +332,18 @@ export const RP_SLIDES: SlideBank = {
         answer: '28',
       },
     },
-    { kind: 'example', head: 'Scaling down: 10 → 40, so 5 → ?', body: 'You can divide too! 5 is 10 ÷ 2, so divide the output by 2 as well.\n40 ÷ 2 = 20. The row reads 5 → 20.' },
-    { kind: 'example', head: 'Another way: find the per-one amount', body: '2 cups make 10 cookies. How many cookies from 6 cups, using a unit rate?\nPer 1 cup: 10 ÷ 2 = 5 cookies. Then 6 × 5 = 30 cookies — same as tripling the row.' },
+    {
+      kind: 'example',
+      head: 'Scaling down: 10 → 40, so 5 → ?',
+      body: 'You can divide too! 5 is 10 ÷ 2, so divide the output by 2 as well.\n40 ÷ 2 = 20. The row reads 5 → 20.',
+      steps: { steps: [{ tex: '40 \\div 10 = 4', text: 'Work out the rule from the full row.' }, { tex: '5 \\times 4 = 20', text: 'Apply it to the smaller input.' }], answer: '20' },
+    },
+    {
+      kind: 'example',
+      head: 'Another way: find the per-one amount',
+      body: '2 cups make 10 cookies. How many cookies from 6 cups, using a unit rate?\nPer 1 cup: 10 ÷ 2 = 5 cookies. Then 6 × 5 = 30 cookies — same as tripling the row.',
+      steps: { steps: [{ tex: '10 \\div 2 = 5', text: 'Work out the amount for one cup.' }, { tex: '5 \\times 6 = 30', text: 'Then scale up to six cups.' }], answer: '30' },
+    },
     {
       kind: 'protip',
       head: 'Check the rule on TWO rows',
@@ -289,11 +367,17 @@ export const RP_SLIDES: SlideBank = {
         ],
       },
     },
-    { kind: 'challenge', head: 'Extra credit: work backward', body: '4 cups make 20 cookies. How many cups make 50 cookies?\nEach cup makes 20 ÷ 4 = 5 cookies. So 50 ÷ 5 = 10 cups.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: work backward',
+      body: '4 cups make 20 cookies. How many cups make 50 cookies?\nEach cup makes 20 ÷ 4 = 5 cookies. So 50 ÷ 5 = 10 cups.',
+      steps: { steps: [{ tex: '\\text{output} = k \\times \\text{input}', text: 'Write the rule out.' }, { tex: '\\text{input} = \\text{output} \\div k', text: 'Divide to run it backwards.' }] },
+    },
     {
       kind: 'summary',
       head: 'Tables tame ratios',
       body: 'Equivalent ratios multiply BOTH parts by the same number. In a table, move between rows with one multiplier, or find the input → output rule and test it twice. Both columns always move together!',
+      formula: { tex: '\\text{output} = k \\times \\text{input}', note: 'One multiplier runs the whole table, row after row.', parts: [{ sym: 'k', means: 'the rule, found by dividing one full row', tone: 'accent' }, { sym: '\\text{check twice}', means: 'test k on a second row before trusting it', tone: 'ok' }] },
       art: flow([
           { label: 'write the pairs in two columns' },
           { label: 'find out ÷ in on one row' },
@@ -313,6 +397,7 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Part-to-part: group vs group',
       body: 'A part-to-part ratio compares two groups directly, like boys to girls or red paint to blue paint. Neither number is the total. "3 boys to 2 girls" is part-to-part: 3:2.',
+      formula: { tex: '\\text{part} : \\text{part}', note: 'One group compared with another, never with the total.', parts: [{ sym: '\\text{first part}', means: 'one of the groups in the story', tone: 'accent' }, { sym: '\\text{second part}', means: 'the other group, not the whole', tone: 'ok' }] },
       art: tape([
           { label: 'boys', boxes: 3, color: SKY },
           { label: 'girls', boxes: 2, color: ROSE },
@@ -322,6 +407,7 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Part-to-whole: group vs everything',
       body: 'A part-to-whole ratio compares one group to the TOTAL, like boys to all students. Words like "whole", "all", "total", or "out of" are your signal. This kind can also be written as a fraction of the whole.',
+      formula: { tex: '\\text{part} : (\\text{part} + \\text{part})', note: 'Add every part first — the whole never appears in the story directly.', parts: [{ sym: '\\text{part}', means: 'the group you are asking about', tone: 'accent' }, { sym: '\\text{sum}', means: 'every part added, which IS the whole', tone: 'ok' }] },
       art: tape([
           { label: 'boys', boxes: 3, color: SKY },
           { label: 'everyone', boxes: 5, color: VIO },
@@ -336,7 +422,12 @@ export const RP_SLIDES: SlideBank = {
         note: '3 boys and 2 girls means 5 children — you must add before you can compare to the whole.',
       },
     },
-    { kind: 'example', head: 'Warm-up: 3 boys, 2 girls', body: 'Ratio of boys to the whole class?\nBuild the whole: 3 + 2 = 5. Boys to whole = 3 to 5. Answer: 3:5.' },
+    {
+      kind: 'example',
+      head: 'Warm-up: 3 boys, 2 girls',
+      body: 'Ratio of boys to the whole class?\nBuild the whole: 3 + 2 = 5. Boys to whole = 3 to 5. Answer: 3:5.',
+      steps: { steps: [{ tex: '\\text{part to part} = 3 : 2', text: 'Boys compared with girls.' }, { tex: '\\text{whole} = 3 + 2 = 5', text: 'Add the parts for the total.' }], answer: '3 : 5 \\text{ to whole}' },
+    },
     {
       kind: 'example',
       head: 'Fruit bowl: 4 apples, 6 pears',
@@ -350,10 +441,20 @@ export const RP_SLIDES: SlideBank = {
         answer: '2 : 3 \\text{ and } 2 : 5',
       },
     },
-    { kind: 'example', head: 'Paint mix: 2 red to 3 blue', body: 'What FRACTION of the mix is red?\nWhole = 2 + 3 = 5 parts. Red is 2 of those 5 parts. Answer: 2/5 of the paint is red.' },
+    {
+      kind: 'example',
+      head: 'Paint mix: 2 red to 3 blue',
+      body: 'What FRACTION of the mix is red?\nWhole = 2 + 3 = 5 parts. Red is 2 of those 5 parts. Answer: 2/5 of the paint is red.',
+      steps: { steps: [{ tex: '2 : 3', text: 'Red compared with blue is part to part.' }, { tex: '2 + 3 = 5', text: 'Five parts of paint in total.' }], answer: '2 : 5 \\text{ red to all}' },
+    },
     { kind: 'example', head: 'Team: 7 forwards, 3 defenders', body: 'Ratio of defenders to the whole team?\nWhole team = 7 + 3 = 10 players. Defenders to whole = 3 to 10. Answer: 3:10.' },
     { kind: 'example', head: 'Chips: 5 red, 5 blue', body: 'What fraction of the chips are red?\nWhole = 5 + 5 = 10 chips. Red = 5 out of 10 = 5/10. Simplify: 1/2 — half the chips are red.' },
-    { kind: 'example', head: 'Both flavors, same story', body: 'A garden has 6 roses and 9 tulips.\nPart-to-part, roses to tulips: 6:9 = 2:3. Part-to-whole, roses to all flowers: whole = 6 + 9 = 15, so 6:15 = 2:5. Same garden, two different ratios!' },
+    {
+      kind: 'example',
+      head: 'Both flavors, same story',
+      body: 'A garden has 6 roses and 9 tulips.\nPart-to-part, roses to tulips: 6:9 = 2:3. Part-to-whole, roses to all flowers: whole = 6 + 9 = 15, so 6:15 = 2:5. Same garden, two different ratios!',
+      steps: { steps: [{ tex: '7 : 3', text: 'Forwards compared with defenders.' }, { tex: '7 + 3 = 10', text: 'Ten players altogether.' }, { tex: '7 : 10', text: 'Forwards compared with the whole team.' }] },
+    },
     { kind: 'example', head: 'Another way: simplify the parts first', body: 'A bowl has 4 apples and 6 pears. Apples to all fruit?\nSimplify the groups first: 4:6 = 2:3, so 2 + 3 = 5 parts. Apples to whole = 2:5 — same as 4:10.' },
     {
       kind: 'protip',
@@ -408,11 +509,17 @@ export const RP_SLIDES: SlideBank = {
       }),
       formula: { tex: '25\\% = \\frac{25}{100} = 0.25', note: 'Three ways to write the same amount. Use whichever is easiest to compute with.' },
     },
-    { kind: 'concept', head: '"Of" means multiply', body: 'To find a percent OF a number, turn the percent into a decimal and multiply. Move the decimal point two places LEFT: 20% becomes 0.20. Then 20% of 45 is just 0.20 × 45.' },
+    {
+      kind: 'concept',
+      head: '"Of" means multiply',
+      body: 'To find a percent OF a number, turn the percent into a decimal and multiply. Move the decimal point two places LEFT: 20% becomes 0.20. Then 20% of 45 is just 0.20 × 45.',
+      formula: { tex: 'p\\% \\text{ of } n = \\dfrac{p}{100} \\times n', note: 'Turn the percent into a decimal first, then multiply.', parts: [{ sym: '\\tfrac{p}{100}', means: 'the percent written as a decimal', tone: 'accent' }, { sym: '\\text{of}', means: 'in a percent question always means multiply', tone: 'ok' }] },
+    },
     {
       kind: 'concept',
       head: 'Know the friendly benchmarks',
       body: 'Some percents are instant: 100% is the whole thing, 50% is half, 25% is a quarter, and 10% moves the decimal one place left. Memorize these four and tons of problems become mental math.',
+      formula: { tex: '50\\% = \\tfrac{1}{2} \\quad 25\\% = \\tfrac{1}{4} \\quad 10\\% = \\tfrac{1}{10}', note: 'A few benchmarks let you estimate almost anything in your head.', parts: [{ sym: '\\tfrac{1}{2}', means: 'half, so just halve the number', tone: 'accent' }, { sym: '\\tfrac{1}{10}', means: 'slide the decimal point one place left', tone: 'ok' }] },
       art: pie([{ label: 'quarter', part: 25 }, { label: 'half', part: 50 }, { label: 'the rest', part: 25 }], { title: '25%, 50%, 75% at a glance', caption: 'A few benchmarks let you estimate almost any percent in your head.' }),
       table: {
         head: ['percent', 'fraction', 'shortcut'],
@@ -420,7 +527,12 @@ export const RP_SLIDES: SlideBank = {
         note: 'Almost every percent question can be built out of these four.',
       },
     },
-    { kind: 'example', head: 'Easiest: 50% of 80', body: '50% means one half.\nHalf of 80 = 80 ÷ 2 = 40. Answer: 40.' },
+    {
+      kind: 'example',
+      head: 'Easiest: 50% of 80',
+      body: '50% means one half.\nHalf of 80 = 80 ÷ 2 = 40. Answer: 40.',
+      steps: { steps: [{ tex: '50\\% = \\tfrac{1}{2}', text: 'Half is the friendliest benchmark.' }, { tex: '80 \\div 2 = 40', text: 'Halve the number.' }], answer: '40' },
+    },
     {
       kind: 'example',
       head: 'Quick trick: 10% of 250',
@@ -434,8 +546,18 @@ export const RP_SLIDES: SlideBank = {
       },
     },
     { kind: 'example', head: 'Quarter power: 25% of 40', body: '25% means one quarter, so divide by 4.\n40 ÷ 4 = 10. Answer: 25% of 40 = 10.' },
-    { kind: 'example', head: 'Decimal method: 20% of 45', body: 'Turn 20% into a decimal: 0.20.\nMultiply: 0.20 × 45. Since 0.2 × 45 = 45 ÷ 5 = 9, the answer is 9.' },
-    { kind: 'example', head: 'Fraction to percent: 3/4', body: 'Write 3/4 as a percent.\n3 ÷ 4 = 0.75, and 0.75 means 75 per hundred. Answer: 75%.' },
+    {
+      kind: 'example',
+      head: 'Decimal method: 20% of 45',
+      body: 'Turn 20% into a decimal: 0.20.\nMultiply: 0.20 × 45. Since 0.2 × 45 = 45 ÷ 5 = 9, the answer is 9.',
+      steps: { steps: [{ tex: '20\\% = 0.20', text: 'Turn the percent into a decimal.' }, { tex: '0.20 \\times 45 = 9', text: 'Multiply through.' }], answer: '9' },
+    },
+    {
+      kind: 'example',
+      head: 'Fraction to percent: 3/4',
+      body: 'Write 3/4 as a percent.\n3 ÷ 4 = 0.75, and 0.75 means 75 per hundred. Answer: 75%.',
+      steps: { steps: [{ tex: '\\tfrac{3}{4} = 0.75', text: 'Divide three by four.' }, { tex: '0.75 \\times 100 = 75', text: 'Multiply by a hundred for the percent.' }], answer: '75\\%' },
+    },
     {
       kind: 'example',
       head: 'Build from 10%: 30% of 60',
@@ -487,6 +609,7 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'A conversion IS a rate',
       body: 'Conversion facts are rates in disguise: 12 inches per 1 foot, 100 cm per 1 meter, 4 cups per 1 quart. Each one says how many small units fit inside one big unit. Treat them exactly like the unit rates you already know.',
+      formula: { tex: '1 \\text{ ft} = 12 \\text{ in}', note: 'Every conversion is a unit rate you happen to have memorised.', parts: [{ sym: '12', means: 'the number of inches in a single foot', tone: 'accent' }, { sym: '\\text{direction}', means: 'decides whether you multiply or divide by it', tone: 'ok' }] },
       art: doubleLine(
         { label: 'feet', vals: [0, 1, 2, 3] },
         { label: 'inches', vals: [0, 12, 24, 36] },
@@ -506,11 +629,17 @@ export const RP_SLIDES: SlideBank = {
         note: 'Smaller unit means a BIGGER number. Picture the answer before you compute it.',
       },
     },
-    { kind: 'concept', head: 'Small unit → big unit: divide', body: 'Going from a smaller unit to a bigger one means FEWER of them, so divide. 48 inches becomes 48 ÷ 12 = 4 feet. Many small pieces bundle up into a few big ones.' },
+    {
+      kind: 'concept',
+      head: 'Small unit → big unit: divide',
+      body: 'Going from a smaller unit to a bigger one means FEWER of them, so divide. 48 inches becomes 48 ÷ 12 = 4 feet. Many small pieces bundle up into a few big ones.',
+      formula: { tex: '\\text{big} = \\dfrac{\\text{small}}{\\text{rate}}', note: 'Bigger units need fewer of them, so the number must shrink.', parts: [{ sym: '\\text{rate}', means: 'how many small units make one big one', tone: 'accent' }, { sym: '\\div', means: 'because the answer should come out smaller', tone: 'ok' }] },
+    },
     {
       kind: 'concept',
       head: 'Always sense-check the size',
       body: 'After converting, ask: should my number be bigger or smaller than what I started with? Inches are tiny, so 3 feet should give a BIGGER number of inches. If the direction feels backwards, you picked the wrong operation.',
+      formula: { tex: '\\text{smaller units} \\implies \\text{bigger number}', note: 'Check the direction before you trust the arithmetic.', parts: [{ sym: '\\text{smaller unit}', means: 'takes more of them, so the count grows', tone: 'accent' }, { sym: '\\text{bigger unit}', means: 'takes fewer, so the count shrinks', tone: 'ok' }] },
       art: flow([{ label: 'Moving to smaller units?', color: SKY }, { label: 'The number must GROW', color: EMR }, { label: 'If it shrank, you divided by mistake', color: ROSE }], { title: 'Check the direction before the arithmetic' }),
     },
     {
@@ -537,10 +666,25 @@ export const RP_SLIDES: SlideBank = {
         answer: '4 \\text{ feet}',
       },
     },
-    { kind: 'example', head: 'Quarts to cups: 2 quarts', body: 'Rate: 1 quart = 4 cups. Quarts are bigger, so multiply.\n2 × 4 = 8. Answer: 8 cups.' },
+    {
+      kind: 'example',
+      head: 'Quarts to cups: 2 quarts',
+      body: 'Rate: 1 quart = 4 cups. Quarts are bigger, so multiply.\n2 × 4 = 8. Answer: 8 cups.',
+      steps: { steps: [{ tex: '1 \\text{ qt} = 4 \\text{ cups}', text: 'Recall the conversion rate.' }, { tex: '2 \\times 4 = 8', text: 'Smaller unit, so multiply.' }], answer: '8 \\text{ cups}' },
+    },
     { kind: 'example', head: 'Feet to inches: 5 feet', body: 'Rate: 1 foot = 12 inches. Multiply: 5 × 12.\n5 × 10 = 50 and 5 × 2 = 10, so 50 + 10 = 60. Answer: 60 inches.' },
-    { kind: 'example', head: 'Meters to cm: 3.5 meters', body: 'Rate: 1 m = 100 cm. Meters are bigger, so multiply.\n3.5 × 100 = 350 — the decimal point slides two places right. Answer: 350 cm.' },
-    { kind: 'example', head: 'Cups to quarts: 12 cups', body: 'Rate: 4 cups = 1 quart. Cups are smaller, so divide.\n12 ÷ 4 = 3. Answer: 3 quarts.' },
+    {
+      kind: 'example',
+      head: 'Meters to cm: 3.5 meters',
+      body: 'Rate: 1 m = 100 cm. Meters are bigger, so multiply.\n3.5 × 100 = 350 — the decimal point slides two places right. Answer: 350 cm.',
+      steps: { steps: [{ tex: '1 \\text{ m} = 100 \\text{ cm}', text: 'Metric conversions are powers of ten.' }, { tex: '3.5 \\times 100 = 350', text: 'Smaller unit, so multiply.' }], answer: '350 \\text{ cm}' },
+    },
+    {
+      kind: 'example',
+      head: 'Cups to quarts: 12 cups',
+      body: 'Rate: 4 cups = 1 quart. Cups are smaller, so divide.\n12 ÷ 4 = 3. Answer: 3 quarts.',
+      steps: { steps: [{ tex: '4 \\text{ cups} = 1 \\text{ qt}', text: 'Recall the rate.' }, { tex: '12 \\div 4 = 3', text: 'Bigger unit, so divide.' }], answer: '3 \\text{ quarts}' },
+    },
     { kind: 'example', head: 'Another way: split the number', body: 'Change 3.5 m to centimeters (1 m = 100 cm).\nSplit it: 3 m = 300 cm and 0.5 m = 50 cm. Add: 300 + 50 = 350 cm.' },
     { kind: 'protip', head: 'Say the rate out loud first', body: 'Before touching numbers, say the conversion as a sentence: "12 inches PER foot." Then ask which unit you are heading toward — smaller means multiply, bigger means divide. Two seconds of talking saves the whole problem.' },
     {
@@ -579,12 +723,14 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Percent of a number, refreshed',
       body: 'A percent is a fraction out of 100, so 25% = 25/100 = 1/4. To find X% of Y, slide the decimal point two places LEFT to get a decimal, then multiply. 25% of 80 is 0.25 × 80.',
+      formula: { tex: 'p\\% \\text{ of } n = \\dfrac{p}{100} \\times n', note: 'The same rule as always: decimal first, then multiply.', parts: [{ sym: '\\tfrac{p}{100}', means: 'the percent written as a decimal', tone: 'accent' }, { sym: 'n', means: 'the amount you are taking a share of', tone: 'ok' }] },
       art: pie([{ label: 'the 25%', part: 25 }, { label: 'the other 75%', part: 75 }], { title: '25% of 80 is 20', caption: 'A percent is a slice of the whole. A quarter of 80 is 20.' }),
     },
     {
       kind: 'concept',
       head: 'Build percents from 10% and 5%',
       body: 'For odd percents like 15%, use chunks. 10% of 60 is 6 (move the point). 5% is half of that: 3. So 15% of 60 = 6 + 3 = 9. Chunks turn scary percents into easy addition.',
+      formula: { tex: '15\\% = 10\\% + 5\\%', note: 'Ten percent is free; five percent is half of it; everything else is addition.', parts: [{ sym: '10\\%', means: 'slide the decimal point one place left', tone: 'accent' }, { sym: '5\\%', means: 'half of the ten percent you just found', tone: 'ok' }] },
       art: flow([{ label: '10% = slide the point once', color: SKY }, { label: '5% = half of the 10%', color: AMB }, { label: '15% = add the two', color: EMR }], { title: 'Build any percent from pieces', caption: 'Ten percent is free, five percent is half of that, and everything else is addition.' }),
       table: {
         head: ['want', 'built from', 'of 60'],
@@ -597,6 +743,7 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Discount subtracts, tax and tip add',
       body: 'A discount ("30% off") comes OFF the price — subtract it. Tax and tips go ON TOP — add them. Same percent math either way; the story tells you whether the final price goes down or up.',
+      formula: { tex: '\\text{final} = n \\pm (\\text{percent of } n)', note: 'Find the percent amount, then decide which way it goes.', parts: [{ sym: '-', means: 'a discount comes off the original price', tone: 'accent' }, { sym: '+', means: 'tax and tips go on top of it', tone: 'ok' }] },
       art: doubleLine({ label: 'price', vals: [0, 10, 20, 30, 40] }, { label: '30% off', vals: [0, 7, 14, 21, 28] }, { title: 'A 30% discount keeps 70%', caption: 'Line the two up and the sale price is always seventy cents on the dollar.' }),
       compare: {
         cols: [
@@ -606,9 +753,19 @@ export const RP_SLIDES: SlideBank = {
         note: 'Both start from the 100% you already have — one takes away, one adds on.',
       },
     },
-    { kind: 'example', head: 'Straight percent: 25% of 80', body: '25% = 0.25, or just "one quarter".\n80 ÷ 4 = 20, or 0.25 × 80 = 20. Answer: 20.' },
+    {
+      kind: 'example',
+      head: 'Straight percent: 25% of 80',
+      body: '25% = 0.25, or just "one quarter".\n80 ÷ 4 = 20, or 0.25 × 80 = 20. Answer: 20.',
+      steps: { steps: [{ tex: '25\\% = \\tfrac{1}{4}', text: 'A quarter is a friendly benchmark.' }, { tex: '80 \\div 4 = 20', text: 'Divide by four.' }], answer: '20' },
+    },
     { kind: 'example', head: 'Point slide: 10% of 250', body: '10% moves the decimal point one place left.\n250 → 25. Answer: 25.' },
-    { kind: 'example', head: 'Chunks: 15% of 60', body: '10% of 60 = 6. 5% is half of 10%, so 5% of 60 = 3.\nAdd the chunks: 6 + 3 = 9. Answer: 15% of 60 = 9.' },
+    {
+      kind: 'example',
+      head: 'Chunks: 15% of 60',
+      body: '10% of 60 = 6. 5% is half of 10%, so 5% of 60 = 3.\nAdd the chunks: 6 + 3 = 9. Answer: 15% of 60 = 9.',
+      steps: { steps: [{ tex: '10\\% \\text{ of } 60 = 6', text: 'Slide the point one place.' }, { tex: '5\\% = 3', text: 'Half of the ten percent.' }, { tex: '6 + 3 = 9', text: 'Add the two chunks.' }], answer: '9' },
+    },
     { kind: 'example', head: 'Half off-ish: 50% of 86', body: '50% is exactly half.\n86 ÷ 2 = 43. Answer: 43.' },
     {
       kind: 'example',
@@ -664,7 +821,12 @@ export const RP_SLIDES: SlideBank = {
       },
     },
     { kind: 'trap', head: 'Trap: subtracting when you should add', body: '"% off" means subtract, but "% tax" and "% tip" mean ADD. Kids who subtract tax get a store that pays THEM — nice try! Match the operation to the story before you finish.' },
-    { kind: 'challenge', head: 'Extra credit: sale then tax', body: 'A $50 game is 20% off, then 10% tax is added. Final price?\nSale: 50 × 0.80 = $40. Tax: 40 × 1.10 = $44 total.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: sale then tax',
+      body: 'A $50 game is 20% off, then 10% tax is added. Final price?\nSale: 50 × 0.80 = $40. Tax: 40 × 1.10 = $44 total.',
+      steps: { steps: [{ tex: '40 - 30\\% = 28', text: 'Apply the discount first.' }, { tex: '28 + 8\\% \\text{ of } 28', text: 'Tax goes on the discounted price.' }, { tex: '28 + 2.24 = 30.24', text: 'Add the tax.' }], answer: '\\$30.24' },
+    },
     { kind: 'summary', head: 'Percent power, applied', body: 'Convert the percent to a decimal (point two places left) and multiply — or build it from 10% chunks. Discounts subtract from the price; tax and tips add on. And always finish the problem: give the final price, not just the percent amount.' },
   ],
   '6.RP-8': [
@@ -678,6 +840,7 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Unit rate = amount per 1',
       body: 'A unit rate is "per one": miles per 1 hour, dollars per 1 pound, cost per 1 cookie. It squishes any rate down to a single, comparable number. That\'s what "mph" and "price per lb" tags really are.',
+      formula: { tex: '\\text{unit rate} = \\dfrac{\\text{total}}{\\text{how many units}}', note: 'Divide, then label — an unlabelled rate answers nothing.', parts: [{ sym: '\\text{total}', means: 'the whole amount before splitting', tone: 'accent' }, { sym: '\\text{units}', means: 'the count named after the word "per"', tone: 'ok' }] },
       art: doubleLine(
         { label: 'cookies', vals: [0, 4, 8, 12] },
         { label: 'dollars', vals: [0, 2, 4, 6] },
@@ -688,12 +851,14 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Divide total by units',
       body: 'To find a unit rate, divide the total by the number of units. 180 miles in 3 hours → 180 ÷ 3 = 60 mph. The unit named ON TOP (miles) gets divided by the unit on the bottom (hours).',
+      formula: { tex: '\\text{speed} = \\dfrac{\\text{distance}}{\\text{time}}', note: 'Speed is the most familiar unit rate there is.', parts: [{ sym: '\\text{distance}', means: 'how far you travelled altogether', tone: 'accent' }, { sym: '\\text{time}', means: 'how long it took, giving distance per hour', tone: 'ok' }] },
       art: flow([{ label: 'Total ÷ how many units', color: SKY }, { label: 'The answer is "per one"', color: AMB }, { label: 'Always write the unit down', color: EMR }], { title: 'One division, one label' }),
     },
     {
       kind: 'concept',
       head: 'Compare deals with unit prices',
       body: 'To pick the better deal, find the unit price of EACH option, then choose the smaller one. You cannot compare "4 lbs for $10" and "6 lbs for $12" directly — but $2.50/lb vs $2.00/lb is instant.',
+      formula: { tex: '\\text{price per one} = \\dfrac{\\text{cost}}{\\text{count}}', note: 'Totals cannot be compared when the sizes differ. Price per one always can.', parts: [{ sym: '\\text{cost}', means: 'what you pay for the whole pack', tone: 'accent' }, { sym: '\\text{count}', means: 'how many items are in it', tone: 'ok' }] },
       art: bars([{ name: 'deal A: 50c each', vals: [50], color: SKY }, { name: 'deal B: 55c each', vals: [55], color: AMB }], { labels: ['cents per cookie'], title: 'Same units, easy comparison', caption: 'Totals cannot be compared when the sizes differ. Price per one always can.' }),
       table: {
         head: ['deal', 'maths', 'per item'],
@@ -714,14 +879,24 @@ export const RP_SLIDES: SlideBank = {
         answer: '60 \\text{ mph}',
       },
     },
-    { kind: 'example', head: 'Speed: 240 miles in 4 hours', body: 'Miles ÷ hours: 240 ÷ 4.\n24 ÷ 4 = 6, so 240 ÷ 4 = 60. Speed: 60 mph.' },
+    {
+      kind: 'example',
+      head: 'Speed: 240 miles in 4 hours',
+      body: 'Miles ÷ hours: 240 ÷ 4.\n24 ÷ 4 = 6, so 240 ÷ 4 = 60. Speed: 60 mph.',
+      steps: { steps: [{ tex: '240 \\div 4', text: 'Distance divided by time.' }, { tex: '= 60', text: 'Sixty miles in one hour.' }], answer: '60 \\text{ mph}' },
+    },
     {
       kind: 'example',
       head: 'Unit price: 12 cookies for $6',
       body: 'Cost per cookie = $6 ÷ 12.\nSix split among twelve is half a dollar each: 6 ÷ 12 = 0.50. Each cookie costs $0.50.',
       art: doubleLine({ label: 'cookies', vals: [0, 4, 8, 12] }, { label: 'dollars', vals: [0, 2, 4, 6] }, { title: '50 cents per cookie', caption: 'Twelve cookies for six dollars comes down to one cookie for fifty cents.' }),
     },
-    { kind: 'example', head: 'Unit price: 8 oranges for $4', body: 'Cost per orange = $4 ÷ 8.\n4 ÷ 8 = 0.50. Each orange costs $0.50 — fifty cents.' },
+    {
+      kind: 'example',
+      head: 'Unit price: 8 oranges for $4',
+      body: 'Cost per orange = $4 ÷ 8.\n4 ÷ 8 = 0.50. Each orange costs $0.50 — fifty cents.',
+      steps: { steps: [{ tex: '4 \\div 8', text: 'Cost divided by count.' }, { tex: '= 0.50', text: 'Fifty cents per orange.' }], answer: '\\$0.50' },
+    },
     { kind: 'example', head: 'Better deal: apples by the pound', body: 'Deal A: 4 lbs for $10. Deal B: 6 lbs for $12. Which is cheaper per pound?\nA: $10 ÷ 4 = $2.50 per lb. B: $12 ÷ 6 = $2.00 per lb.\nSmaller wins: Deal B, 6 lbs for $12.' },
     {
       kind: 'example',
@@ -785,18 +960,21 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'To a smaller unit: multiply',
       body: 'Converting to a SMALLER unit means you\'ll count MORE of them, so multiply by the anchor. 2 feet becomes 2 × 12 = 24 inches. Small pieces are plentiful.',
+      formula: { tex: '\\text{small} = \\text{big} \\times \\text{rate}', note: 'Smaller units take more of them, so the number grows.', parts: [{ sym: '\\text{rate}', means: 'how many small units fit in one big one', tone: 'accent' }, { sym: '\\times', means: 'because the count has to get bigger', tone: 'ok' }] },
       art: doubleLine({ label: 'feet', vals: [0, 1, 2, 3] }, { label: 'inches', vals: [0, 12, 24, 36] }, { title: 'Smaller units, bigger count', caption: 'Inches are smaller than feet, so it takes more of them — multiply.' }),
     },
     {
       kind: 'concept',
       head: 'To a bigger unit: divide',
       body: 'Converting to a BIGGER unit means FEWER of them, so divide by the anchor. 36 inches becomes 36 ÷ 12 = 3 feet. Big units gobble up many small ones.',
+      formula: { tex: '\\text{big} = \\dfrac{\\text{small}}{\\text{rate}}', note: 'Bigger units take fewer of them, so the number shrinks.', parts: [{ sym: '\\text{rate}', means: 'the same anchor, used the other way round', tone: 'accent' }, { sym: '\\div', means: 'because the count has to get smaller', tone: 'ok' }] },
       art: doubleLine({ label: 'inches', vals: [0, 12, 24, 36] }, { label: 'feet', vals: [0, 1, 2, 3] }, { title: 'Bigger units, smaller count', caption: 'Feet are bigger than inches, so you need fewer of them — divide.' }),
     },
     {
       kind: 'concept',
       head: 'Metric moves the decimal point',
       body: 'Metric anchors are powers of ten, so converting is just sliding the decimal point. Meters to centimeters: slide 2 places right (× 100). Meters to kilometers: slide 3 places left (÷ 1000). No long math needed!',
+      formula: { tex: '1 \\text{ m} = 100 \\text{ cm} = 1000 \\text{ mm}', note: 'No awkward twelves or sixteens — metric is all powers of ten.', parts: [{ sym: '100', means: 'two decimal places between metres and centimetres', tone: 'accent' }, { sym: '1000', means: 'three places between metres and millimetres', tone: 'ok' }] },
       art: numberLine(0, 5, [
           { at: 0, label: '0 m', color: SKY },
           { at: 1, label: '100 cm', color: AMB },
@@ -804,7 +982,12 @@ export const RP_SLIDES: SlideBank = {
           { at: 5, label: '500 cm', color: EMR },
         ], { step: 1, title: 'metres along the top, centimetres below', caption: 'Metric anchors are all powers of ten, so the digits never change — only the point moves.' }),
     },
-    { kind: 'example', head: 'Feet to inches: 2 feet', body: 'Anchor: 1 ft = 12 in. Inches are smaller, so multiply.\n2 × 12 = 24. Answer: 24 inches.' },
+    {
+      kind: 'example',
+      head: 'Feet to inches: 2 feet',
+      body: 'Anchor: 1 ft = 12 in. Inches are smaller, so multiply.\n2 × 12 = 24. Answer: 24 inches.',
+      steps: { steps: [{ tex: '1 \\text{ ft} = 12 \\text{ in}', text: 'Recall the anchor.' }, { tex: '2 \\times 12 = 24', text: 'Smaller unit, so multiply.' }], answer: '24 \\text{ in}' },
+    },
     { kind: 'example', head: 'Yards to feet: 4 yards', body: 'Anchor: 1 yd = 3 ft. Feet are smaller, so multiply.\n4 × 3 = 12. Answer: 12 feet.' },
     {
       kind: 'example',
@@ -830,8 +1013,18 @@ export const RP_SLIDES: SlideBank = {
         answer: '2.5 \\text{ m}',
       },
     },
-    { kind: 'example', head: 'Km to meters: 5 km', body: 'Anchor: 1 km = 1000 m. Meters are smaller, so multiply.\n5 × 1000 = 5000 — three zeros hop on. Answer: 5000 meters.' },
-    { kind: 'example', head: 'Ounces to pounds: 48 oz', body: 'Anchor: 16 oz = 1 lb. Pounds are bigger, so divide.\n48 ÷ 16 = 3, since 16 × 3 = 48. Answer: 3 pounds.' },
+    {
+      kind: 'example',
+      head: 'Km to meters: 5 km',
+      body: 'Anchor: 1 km = 1000 m. Meters are smaller, so multiply.\n5 × 1000 = 5000 — three zeros hop on. Answer: 5000 meters.',
+      steps: { steps: [{ tex: '1 \\text{ km} = 1000 \\text{ m}', text: 'Recall the metric anchor.' }, { tex: '5 \\times 1000 = 5000', text: 'Smaller unit, so multiply.' }], answer: '5000 \\text{ m}' },
+    },
+    {
+      kind: 'example',
+      head: 'Ounces to pounds: 48 oz',
+      body: 'Anchor: 16 oz = 1 lb. Pounds are bigger, so divide.\n48 ÷ 16 = 3, since 16 × 3 = 48. Answer: 3 pounds.',
+      steps: { steps: [{ tex: '16 \\text{ oz} = 1 \\text{ lb}', text: 'Recall the anchor.' }, { tex: '48 \\div 16 = 3', text: 'Bigger unit, so divide.' }], answer: '3 \\text{ lb}' },
+    },
     { kind: 'example', head: 'Another way: count up in 16s', body: 'Change 48 ounces to pounds (1 lb = 16 oz).\nCount up: 16, 32, 48 — that is three 16s. So 48 oz = 3 pounds.' },
     { kind: 'protip', head: 'Guess the size before you compute', body: 'Before converting, estimate: 250 cm is about the height of a door, so it should be "2-and-a-bit" meters — and 2.5 fits! If your computed answer is 25,000 meters, the estimate catches it instantly. Estimate first, compute second.' },
     {
@@ -869,6 +1062,7 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Equivalent ratios share a multiplier',
       body: 'Two ratios are equivalent when one is the other with BOTH parts multiplied by the same number. 2:3 × 4 gives 8:12, so 2:3 and 8:12 are equivalent. That shared multiplier is called the scale factor.',
+      formula: { tex: 'a : b = ka : kb', note: 'The same k on both sides leaves the comparison untouched.', parts: [{ sym: 'k', means: 'the scale factor, applied to both sides', tone: 'accent' }, { sym: '\\text{one side only}', means: 'changes the ratio into a different one', tone: 'bad' }] },
       art: doubleLine({ label: '2 : 3 →', vals: [2, 4, 6, 8] }, { label: 'pairs with', vals: [3, 6, 9, 12] }, { title: '2:3, 4:6, 6:9, 8:12', caption: 'Every column is the same ratio wearing bigger numbers.' }),
       table: {
         head: ['ratio', '× what', 'equivalent?'],
@@ -887,14 +1081,24 @@ export const RP_SLIDES: SlideBank = {
         note: 'Divide a new number by its old partner and you have the factor for everything else.',
       },
     },
-    { kind: 'concept', head: 'From ratio to real counts', body: 'A ratio like dogs:cats = 3:5 shows the pattern, not the real numbers. If there are actually 20 cats, find the multiplier: 20 ÷ 5 = 4. Then every ratio number gets × 4 — so dogs = 3 × 4 = 12.' },
+    {
+      kind: 'concept',
+      head: 'From ratio to real counts',
+      body: 'A ratio like dogs:cats = 3:5 shows the pattern, not the real numbers. If there are actually 20 cats, find the multiplier: 20 ÷ 5 = 4. Then every ratio number gets × 4 — so dogs = 3 × 4 = 12.',
+      formula: { tex: '\\text{one part} = \\dfrac{\\text{total}}{\\text{parts}}', note: 'Add the parts, divide the total, then scale each side.', parts: [{ sym: '\\text{parts}', means: 'the ratio numbers added together', tone: 'accent' }, { sym: '\\text{one part}', means: 'what a single share is actually worth', tone: 'ok' }] },
+    },
     {
       kind: 'concept',
       head: 'Ratio tables organize the scaling',
       body: 'Write the known pair as a row — 4 servings | 6 cups — then scale to a new row. Multiply both entries by the same factor and the table stays truthful. It\'s the same golden rule: both sides move together.',
       art: doubleLine({ label: 'servings', vals: [2, 4, 6, 8] }, { label: 'cups', vals: [3, 6, 9, 12] }, { title: 'A ratio table, drawn out', caption: 'Each step right multiplies both rows by the same thing, so the ratio never changes.' }),
     },
-    { kind: 'example', head: 'Check equivalence: 2:3 and 8:12', body: 'Is 2:3 equivalent to 8:12?\nTry a multiplier: 2 × 4 = 8 and 3 × 4 = 12. Both parts use × 4, so YES — they are equivalent.' },
+    {
+      kind: 'example',
+      head: 'Check equivalence: 2:3 and 8:12',
+      body: 'Is 2:3 equivalent to 8:12?\nTry a multiplier: 2 × 4 = 8 and 3 × 4 = 12. Both parts use × 4, so YES — they are equivalent.',
+      steps: { steps: [{ tex: '8 \\div 2 = 4', text: 'Find the multiplier on the first side.' }, { tex: '12 \\div 3 = 4', text: 'Check it on the second side too.' }], answer: '\\text{equivalent}' },
+    },
     {
       kind: 'example',
       head: 'Scale a recipe: 4 servings → 6',
@@ -907,13 +1111,29 @@ export const RP_SLIDES: SlideBank = {
         answer: 'k = 1.5',
       },
     },
-    { kind: 'example', head: 'Triple batch: 3 eggs per 12 cookies', body: 'How many eggs for 36 cookies?\n36 ÷ 12 = 3, so you\'re making 3 times the cookies. Eggs = 3 × 3 = 9. Answer: 9 eggs.' },
-    { kind: 'example', head: 'Real counts: dogs to cats 3:5', body: 'A shelter\'s dogs:cats ratio is 3:5, and there are 20 cats. How many dogs?\nMultiplier = 20 ÷ 5 = 4. Dogs = 3 × 4 = 12. Answer: 12 dogs.' },
-    { kind: 'example', head: 'Unit-rate route: 5 packs cost $20', body: 'What do 8 packs cost?\nFirst find the price per pack: $20 ÷ 5 = $4. Then scale up: $4 × 8 = $32. Answer: $32.' },
+    {
+      kind: 'example',
+      head: 'Triple batch: 3 eggs per 12 cookies',
+      body: 'How many eggs for 36 cookies?\n36 ÷ 12 = 3, so you\'re making 3 times the cookies. Eggs = 3 × 3 = 9. Answer: 9 eggs.',
+      steps: { steps: [{ tex: '12 \\to 36 \\text{ is } \\times 3', text: 'Find the scale factor.' }, { tex: '3 \\times 3 = 9', text: 'Scale the eggs by the same factor.' }], answer: '9 \\text{ eggs}' },
+    },
+    {
+      kind: 'example',
+      head: 'Real counts: dogs to cats 3:5',
+      body: 'A shelter\'s dogs:cats ratio is 3:5, and there are 20 cats. How many dogs?\nMultiplier = 20 ÷ 5 = 4. Dogs = 3 × 4 = 12. Answer: 12 dogs.',
+      steps: { steps: [{ tex: '3 + 5 = 8 \\text{ parts}', text: 'Add the parts for the whole.' }, { tex: '24 \\div 8 = 3', text: 'Find what one part is worth.' }, { tex: '3 \\times 3 = 9 \\text{ dogs}', text: 'Scale the dog side up.' }], answer: '9' },
+    },
+    {
+      kind: 'example',
+      head: 'Unit-rate route: 5 packs cost $20',
+      body: 'What do 8 packs cost?\nFirst find the price per pack: $20 ÷ 5 = $4. Then scale up: $4 × 8 = $32. Answer: $32.',
+      steps: { steps: [{ tex: '20 \\div 5 = 4', text: 'Find the cost of one pack.' }, { tex: '4 \\times 8 = 32', text: 'Scale up to eight packs.' }], answer: '\\$32' },
+    },
     {
       kind: 'example',
       head: 'Mix it: juice 2:5 with 10 cups juice',
       body: 'A punch uses juice:soda = 2:5. With 10 cups of juice, how much soda?\nMultiplier = 10 ÷ 2 = 5. Soda = 5 × 5 = 25. Answer: 25 cups of soda.',
+      steps: { steps: [{ tex: '10 \\div 2 = 5', text: 'Find the scale factor from the juice side.' }, { tex: '5 \\times 5 = 25', text: 'Apply it to the water side.' }], answer: '25 \\text{ cups}' },
       art: tape([
           { label: 'juice', boxes: 2, each: '5', color: AMB },
           { label: 'water', boxes: 5, each: '5', color: SKY },
@@ -958,6 +1178,7 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Speed is a rate',
       body: 'Speed tells you distance per unit of time: miles per hour, kilometers per hour, meters per second. A car at 60 mph covers 60 miles EACH hour. Speed is just a unit rate wearing a racing helmet.',
+      formula: { tex: 'r = \\dfrac{d}{t}', note: 'How much distance one unit of time buys you.', parts: [{ sym: 'd', means: 'the distance travelled altogether', tone: 'accent' }, { sym: 't', means: 'the time it took to travel it', tone: 'ok' }] },
       art: doubleLine(
         { label: 'hours', vals: [0, 1, 2, 3] },
         { label: 'miles', vals: [0, 12, 24, 36] },
@@ -983,6 +1204,7 @@ export const RP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Units must match FIRST',
       body: '"Miles per HOUR" only works with time in HOURS. If the time is in minutes, convert before computing: minutes ÷ 60 = hours, so 30 minutes = 0.5 hour. Mismatched units give confident wrong answers.',
+      formula: { tex: '60 \\text{ mph} \\times 30 \\text{ min} \\to t = 0.5 \\text{ h}', note: 'A speed in miles per HOUR needs a time in hours.', parts: [{ sym: '30 \\text{ min}', means: 'must be converted before it is used', tone: 'bad' }, { sym: '0.5 \\text{ h}', means: 'the same time in the units the rate wants', tone: 'ok' }] },
       art: flow([{ label: 'Speed in miles per HOUR?', color: SKY }, { label: 'Then time must be in hours', color: AMB }, { label: '30 minutes = 0.5 hours', color: EMR }], { title: 'Convert before you multiply' }),
       compare: {
         cols: [
@@ -998,7 +1220,12 @@ export const RP_SLIDES: SlideBank = {
       body: 'A cyclist rides at 12 mph for 3 hours. How far?\nWant distance: d = r × t = 12 × 3.\n12 × 3 = 36. Answer: 36 miles.',
       art: doubleLine({ label: 'hours', vals: [0, 1, 2, 3] }, { label: 'miles', vals: [0, 12, 24, 36] }, { title: 'Three hours reaches 36 miles' }),
     },
-    { kind: 'example', head: 'Find speed: 240 km in 4 hours', body: 'A train covers 240 km in 4 hours. What is its speed?\nWant rate: r = d ÷ t = 240 ÷ 4.\n24 ÷ 4 = 6, so 240 ÷ 4 = 60. Answer: 60 km/h.' },
+    {
+      kind: 'example',
+      head: 'Find speed: 240 km in 4 hours',
+      body: 'A train covers 240 km in 4 hours. What is its speed?\nWant rate: r = d ÷ t = 240 ÷ 4.\n24 ÷ 4 = 6, so 240 ÷ 4 = 60. Answer: 60 km/h.',
+      steps: { steps: [{ tex: 'r = \\tfrac{d}{t}', text: 'Cover r in the triangle.' }, { tex: '240 \\div 4 = 60', text: 'Divide distance by time.' }], answer: '60 \\text{ km/h}' },
+    },
     {
       kind: 'example',
       head: 'Find time: 150 miles at 50 mph',
@@ -1011,7 +1238,12 @@ export const RP_SLIDES: SlideBank = {
         answer: '3 \\text{ hours}',
       },
     },
-    { kind: 'example', head: 'Convert first: 60 mph for 30 min', body: 'A car drives 60 mph. How far in 30 minutes?\nUnits clash — convert: 30 ÷ 60 = 0.5 hour.\nd = r × t = 60 × 0.5 = 30. Answer: 30 miles.' },
+    {
+      kind: 'example',
+      head: 'Convert first: 60 mph for 30 min',
+      body: 'A car drives 60 mph. How far in 30 minutes?\nUnits clash — convert: 30 ÷ 60 = 0.5 hour.\nd = r × t = 60 × 0.5 = 30. Answer: 30 miles.',
+      steps: { steps: [{ tex: '30 \\text{ min} = 0.5 \\text{ h}', text: 'Match the units to the rate.' }, { tex: '60 \\times 0.5 = 30', text: 'Then multiply.' }], answer: '30 \\text{ miles}' },
+    },
     { kind: 'example', head: 'Sailing: 20 km/h for 2 hours', body: 'A boat sails at 20 km/h for 2 hours. How far?\nd = r × t = 20 × 2 = 40. Answer: 40 km.' },
     {
       kind: 'example',

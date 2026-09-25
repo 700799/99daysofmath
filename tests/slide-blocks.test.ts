@@ -108,7 +108,7 @@ describe('the mathematics on a slide typesets', () => {
 // Precalculus is the course that asked for this: every rule in it is a formula
 // and every idea has a picture, so a deck of paragraphs was the wrong shape for
 // it. These are the bars that keep the visuals there.
-describe('every decked course is visual, not just prose', () => {
+describe('every course is taught with pictures, not just prose', () => {
   const DECKED = LESSONS.filter((l) => (l.slides ?? []).length > 0);
 
   it('covers every course, Precalculus included', () => {
@@ -133,11 +133,25 @@ describe('every decked course is visual, not just prose', () => {
     }
   });
 
-  it('a quarter of every deck carries a block, not just prose', () => {
+  it('half of every deck carries a block, not just prose', () => {
     for (const l of DECKED) {
       const s = l.slides ?? [];
       const withBlock = s.filter((x) => x.formula || x.compare || x.steps || x.table || x.art).length;
-      expect(withBlock / s.length, `${lessonKey(l.domain, l.unit)}: ${withBlock}/${s.length} slides`).toBeGreaterThanOrEqual(0.25);
+      expect(withBlock / s.length, `${lessonKey(l.domain, l.unit)}: ${withBlock}/${s.length} slides`).toBeGreaterThanOrEqual(0.5);
+    }
+  });
+
+  it('every unit states its rules in a framed formula, at least three times', () => {
+    for (const l of DECKED) {
+      const n = (l.slides ?? []).filter((s) => s.formula).length;
+      expect(n, `${lessonKey(l.domain, l.unit)} has ${n} formula blocks`).toBeGreaterThanOrEqual(3);
+    }
+  });
+
+  it('every unit walks at least two examples step by step', () => {
+    for (const l of DECKED) {
+      const n = (l.slides ?? []).filter((s) => s.steps).length;
+      expect(n, `${lessonKey(l.domain, l.unit)} has ${n} worked step blocks`).toBeGreaterThanOrEqual(2);
     }
   });
 
@@ -148,30 +162,14 @@ describe('every decked course is visual, not just prose', () => {
       expect(lead, `${lessonKey(l.domain, l.unit)} opens on "${opener.head}" with nothing to look at`).toBe(true);
     }
   });
-});
 
-describe('the Precalculus decks go further', () => {
-  const PC = LESSONS.filter((l) => l.domain === 'PC');
-
-  it('most of every deck carries a block', () => {
-    for (const l of PC) {
-      const s = l.slides ?? [];
-      const withBlock = s.filter((x) => x.formula || x.compare || x.steps || x.table || x.art).length;
-      expect(withBlock / s.length, `${lessonKey(l.domain, l.unit)}: ${withBlock}/${s.length} slides`).toBeGreaterThanOrEqual(0.5);
-    }
-  });
-
-  it('every unit states its rules in a framed formula, at least three times', () => {
-    for (const l of PC) {
-      const n = (l.slides ?? []).filter((s) => s.formula).length;
-      expect(n, `${lessonKey(l.domain, l.unit)} has ${n} formula blocks`).toBeGreaterThanOrEqual(3);
-    }
-  });
-
-  it('every unit walks at least two examples step by step', () => {
-    for (const l of PC) {
-      const n = (l.slides ?? []).filter((s) => s.steps).length;
-      expect(n, `${lessonKey(l.domain, l.unit)} has ${n} worked step blocks`).toBeGreaterThanOrEqual(2);
+  it('a symbol that gets its own box gets its own explanation', () => {
+    for (const l of DECKED) {
+      for (const s of l.slides ?? []) {
+        for (const p of s.formula?.parts ?? []) {
+          expect(p.sym.length, `${lessonKey(l.domain, l.unit)} · "${s.head}": an empty symbol box`).toBeGreaterThan(0);
+        }
+      }
     }
   });
 });

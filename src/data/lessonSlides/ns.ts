@@ -16,6 +16,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Line up the points, always',
       body: 'Before you add or subtract, stack the numbers so the decimal points sit in one straight column. That keeps tenths with tenths and hundredths with hundredths. Lining up the LAST digits instead is how answers go wrong.',
+      formula: { tex: '\\text{align the decimal points, not the digits}', note: 'Almost every decimal mistake is a lining-up mistake.', parts: [{ sym: '\\text{point}', means: 'the anchor everything else lines up against', tone: 'accent' }, { sym: '\\text{last digit}', means: 'lining these up instead is the classic slip', tone: 'bad' }] },
       art: flow([{ label: 'Stack the decimal points' }, { label: 'Pad the short one with zeros' }, { label: 'Bring the point straight down' }], { title: 'Three moves, zero mistakes', caption: 'Almost every decimal mistake is a lining-up mistake, not an arithmetic one.' }),
       compare: {
         cols: [
@@ -29,6 +30,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Zeros on the right are free',
       body: 'You can add zeros to the right end of a decimal without changing it: 3.4 is exactly the same as 3.40. Pad both numbers to the same number of places. Now every column has a digit and nothing gets skipped.',
+      formula: { tex: '0.4 = 0.40 = 0.400', note: 'Cutting the same amount into finer parts does not change how much there is.', parts: [{ sym: '0.4', means: 'four tenths of the whole', tone: 'accent' }, { sym: '0.40', means: 'forty hundredths, which is the same amount', tone: 'ok' }] },
       art: fractionBar(10, 4, { label: '0.4', second: { parts: 100, shaded: 40, label: '0.40 — the same shading' }, title: '0.4 and 0.40 are the same amount', caption: 'Cutting the same shaded piece into finer parts does not change how much there is.' }),
       table: {
         head: ['number', 'padded', 'same value?'],
@@ -41,6 +43,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Bring the point straight down',
       body: 'Once the points are lined up, add or subtract like normal whole numbers. Carry and borrow the usual way. Then drop the decimal point STRAIGHT down into your answer — it never wanders.',
+      formula: { tex: '\\text{point in} \\to \\text{point out, same column}', note: 'Once the points are stacked, the answer point sits right below them.', parts: [{ sym: '\\text{same column}', means: 'the point never moves left or right', tone: 'accent' }, { sym: '\\text{straight down}', means: 'is the whole rule for adding decimals', tone: 'ok' }] },
       art: flow([
           { label: 'stack with points aligned' },
           { label: 'pad with zeros' },
@@ -49,11 +52,26 @@ export const NS_SLIDES: SlideBank = {
         ], { title: 'the decimal column routine', caption: 'The point never moves sideways — it falls straight into the answer.' }),
     },
     { kind: 'example', head: 'Warm-up: 0.3 + 0.4', body: 'Both numbers already have one place, and the points line up. Add the tenths: 3 + 4 = 7 tenths. Answer: 0.7.' },
-    { kind: 'example', head: 'Pad a zero: 3.4 + 1.25', body: 'Write 3.4 as 3.40 so both have two places.\n3.40 + 1.25: hundredths 0 + 5 = 5, tenths 4 + 2 = 6, ones 3 + 1 = 4.\nAnswer: 4.65.' },
+    {
+      kind: 'example',
+      head: 'Pad a zero: 3.4 + 1.25',
+      body: 'Write 3.4 as 3.40 so both have two places.\n3.40 + 1.25: hundredths 0 + 5 = 5, tenths 4 + 2 = 6, ones 3 + 1 = 4.\nAnswer: 4.65.',
+      steps: { steps: [{ tex: '3.40 + 1.25', text: 'Pad the short one so both have two places.' }, { tex: '= 4.65', text: 'Add column by column, point straight down.' }], answer: '4.65' },
+    },
     { kind: 'example', head: 'Add with a carry: 0.75 + 0.5', body: 'Write 0.5 as 0.50.\n0.75 + 0.50: hundredths 5 + 0 = 5, tenths 7 + 5 = 12 — write 2, carry 1 to the ones.\nAnswer: 1.25.' },
-    { kind: 'example', head: 'A hidden point: 5 − 2.3', body: 'A whole number has a secret decimal point: 5 is 5.0.\n5.0 − 2.3: borrow to make 10 − 3 = 7 tenths, then 4 − 2 = 2 ones.\nAnswer: 2.7.' },
+    {
+      kind: 'example',
+      head: 'A hidden point: 5 − 2.3',
+      body: 'A whole number has a secret decimal point: 5 is 5.0.\n5.0 − 2.3: borrow to make 10 − 3 = 7 tenths, then 4 − 2 = 2 ones.\nAnswer: 2.7.',
+      steps: { steps: [{ tex: '5.0 - 2.3', text: 'A whole number has a point after it.' }, { tex: '= 2.7', text: 'Now the columns line up properly.' }], answer: '2.7' },
+    },
     { kind: 'example', head: 'Two carries: 2.6 + 3.45', body: 'Pad: 2.60 + 3.45.\nHundredths 0 + 5 = 5. Tenths 6 + 4 = 10 — write 0, carry 1. Ones 2 + 3 + 1 = 6.\nAnswer: 6.05.' },
-    { kind: 'example', head: 'Borrow twice: 4.2 − 1.75', body: 'Pad: 4.20 − 1.75.\nHundredths: borrow, 10 − 5 = 5. Tenths: 2 became 1, borrow again, 11 − 7 = 4. Ones: 3 − 1 = 2.\nAnswer: 2.45.' },
+    {
+      kind: 'example',
+      head: 'Borrow twice: 4.2 − 1.75',
+      body: 'Pad: 4.20 − 1.75.\nHundredths: borrow, 10 − 5 = 5. Tenths: 2 became 1, borrow again, 11 − 7 = 4. Ones: 3 − 1 = 2.\nAnswer: 2.45.',
+      steps: { steps: [{ tex: '4.20 - 1.75', text: 'Pad the top so both have two places.' }, { tex: '\\text{borrow across}', text: 'Trade down twice to subtract.' }, { tex: '= 2.45', text: 'Bring the point straight down.' }], answer: '2.45' },
+    },
     { kind: 'example', head: 'Another way: think in cents', body: 'Compute $5.00 − $2.30 by switching to cents.\n500 cents − 230 cents = 270 cents. Change back: $2.70.' },
     { kind: 'protip', head: 'Estimate before you compute', body: 'Round first: 3.4 + 1.25 is about 3 + 1 = 4, so the answer should be a little over 4. If you get 45.65 or 0.465, the decimal point slipped. A ten-second estimate catches almost every point mistake.' },
     {
@@ -68,7 +86,12 @@ export const NS_SLIDES: SlideBank = {
         ],
       },
     },
-    { kind: 'trap', head: 'Trap: forgetting the hidden point', body: 'In 5 − 2.3, the 5 is really 5.0 — the point hides after the ones digit. If you skip that, you might write 5 − 2.3 = 2.3 or worse. Give whole numbers their decimal point and a zero before you subtract.' },
+    {
+      kind: 'trap',
+      head: 'Trap: forgetting the hidden point',
+      body: 'In 5 − 2.3, the 5 is really 5.0 — the point hides after the ones digit. If you skip that, you might write 5 − 2.3 = 2.3 or worse. Give whole numbers their decimal point and a zero before you subtract.',
+      compare: { cols: [{ title: 'Written 5', tex: '5.0', lines: ['Point after the 5', 'Columns line up'], tone: 'ok' }, { title: 'Treated as 5', tex: '5\\ \\ \\ ', lines: ['No point to anchor', 'Columns drift'], tone: 'bad' }], note: 'Every whole number has a decimal point; it is just not written.' },
+    },
     { kind: 'challenge', head: 'Extra credit: drink and refill', body: 'A bottle holds 2.0 L. You pour out 0.75 L, then add back 0.3 L. How much now?\n2.0 − 0.75 = 1.25, then 1.25 + 0.3 = 1.55 L.' },
     { kind: 'summary', head: 'Three moves, zero mistakes', body: 'Line up the decimal points in a straight column. Pad with zeros so both numbers have the same places. Compute like whole numbers and bring the point straight down. Estimate first to catch any slip!' },
   ],
@@ -97,6 +120,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Why counting places works',
       body: 'A number like 0.6 is really 6 tenths, and 0.4 is 4 tenths. Tenths times tenths makes hundredths — that\'s two places. Every decimal place in a factor shifts the answer one more place.',
+      formula: { tex: '0.6 \\times 0.4 = 0.24', note: 'Tenths times tenths gives hundredths. That is the whole rule.', parts: [{ sym: '\\text{one place}', means: 'each factor contributes its own places', tone: 'accent' }, { sym: '\\text{two places}', means: 'the answer carries the total of both', tone: 'ok' }] },
       art: areaModel(
         [{ label: '0.4', w: 4 }, { label: '', w: 6 }],
         [{ label: '0.3', h: 3 }, { label: '', h: 7 }],
@@ -118,13 +142,38 @@ export const NS_SLIDES: SlideBank = {
         answer: '3.6',
       },
     },
-    { kind: 'concept', head: 'Estimate to place the point', body: 'Before computing, round and guess: 1.2 × 3 is about 1 × 3 = 3, so expect an answer near 3. Estimates tell you whether the answer should be 0.36, 3.6, or 36. The digits come from multiplying; the point comes from thinking.' },
-    { kind: 'example', head: 'Warm-up: 0.3 × 0.7', body: 'Ignore the points: 3 × 7 = 21.\nCount places: one in 0.3, one in 0.7 — two total.\nPlace the point two spots in: 0.21.' },
+    {
+      kind: 'concept',
+      head: 'Estimate to place the point',
+      body: 'Before computing, round and guess: 1.2 × 3 is about 1 × 3 = 3, so expect an answer near 3. Estimates tell you whether the answer should be 0.36, 3.6, or 36. The digits come from multiplying; the point comes from thinking.',
+      formula: { tex: '0.6 \\times 0.4 \\approx \\text{less than } 0.6', note: 'Multiplying by less than one always makes the answer smaller.', parts: [{ sym: '< 1', means: 'a factor below one shrinks the other number', tone: 'accent' }, { sym: '\\text{estimate}', means: 'tells you roughly where the point belongs', tone: 'ok' }] },
+    },
+    {
+      kind: 'example',
+      head: 'Warm-up: 0.3 × 0.7',
+      body: 'Ignore the points: 3 × 7 = 21.\nCount places: one in 0.3, one in 0.7 — two total.\nPlace the point two spots in: 0.21.',
+      steps: { steps: [{ tex: '3 \\times 7 = 21', text: 'Ignore the points and multiply.' }, { tex: '\\text{two places} \\to 0.21', text: 'One place each, so two in the answer.' }], answer: '0.21' },
+    },
     { kind: 'example', head: 'Multiply: 0.6 × 0.4', body: 'Whole numbers first: 6 × 4 = 24.\nDecimal places: 0.6 has one, 0.4 has one — two total.\nAnswer: 0.24.' },
-    { kind: 'example', head: 'One decimal factor: 1.2 × 3', body: 'Ignore the point: 12 × 3 = 36.\nCount places: 1.2 has one, 3 has none — one total.\nAnswer: 3.6. Check: about 1 × 3 = 3. Fits!' },
+    {
+      kind: 'example',
+      head: 'One decimal factor: 1.2 × 3',
+      body: 'Ignore the point: 12 × 3 = 36.\nCount places: 1.2 has one, 3 has none — one total.\nAnswer: 3.6. Check: about 1 × 3 = 3. Fits!',
+      steps: { steps: [{ tex: '12 \\times 3 = 36', text: 'Multiply as whole numbers.' }, { tex: '\\text{one place} \\to 3.6', text: 'Only one factor had a decimal place.' }], answer: '3.6' },
+    },
     { kind: 'example', head: 'Divide: 2.5 ÷ 0.5', body: 'Slide both points one spot right: 2.5 ÷ 0.5 becomes 25 ÷ 5.\n25 ÷ 5 = 5.\nAnswer: 5 — how many halves fit in two and a half? Five!' },
-    { kind: 'example', head: 'Divide: 4.8 ÷ 0.6', body: 'Make the divisor whole: move both points one spot → 48 ÷ 6.\n48 ÷ 6 = 8.\nAnswer: 8. Sliding both points is fair because you scaled both numbers by 10.' },
-    { kind: 'example', head: 'Trailing zero: 0.5 × 0.8', body: '5 × 8 = 40.\nTwo decimal places total, so count two spots in: 0.40.\nAnswer: 0.40, which is the same as 0.4 — count places BEFORE you drop the zero.' },
+    {
+      kind: 'example',
+      head: 'Divide: 4.8 ÷ 0.6',
+      body: 'Make the divisor whole: move both points one spot → 48 ÷ 6.\n48 ÷ 6 = 8.\nAnswer: 8. Sliding both points is fair because you scaled both numbers by 10.',
+      steps: { steps: [{ tex: '48 \\div 6', text: 'Slide both points one place right.' }, { tex: '= 8', text: 'Now it is ordinary whole-number division.' }], answer: '8' },
+    },
+    {
+      kind: 'example',
+      head: 'Trailing zero: 0.5 × 0.8',
+      body: '5 × 8 = 40.\nTwo decimal places total, so count two spots in: 0.40.\nAnswer: 0.40, which is the same as 0.4 — count places BEFORE you drop the zero.',
+      steps: { steps: [{ tex: '5 \\times 8 = 40', text: 'Multiply the digits.' }, { tex: '\\text{two places} \\to 0.40', text: 'Place the point, then drop the trailing zero.' }], answer: '0.4' },
+    },
     { kind: 'example', head: 'Another way: use fractions', body: 'Multiply 0.6 × 0.4 using fractions.\n6/10 × 4/10 = 24/100 = 0.24.' },
     { kind: 'protip', head: 'The answer can shrink', body: 'Multiplying by a number smaller than 1 makes things SMALLER: 0.6 × 0.4 = 0.24, less than both factors. That\'s not a mistake — you\'re taking a fraction of a fraction. Use it as a check: decimal × decimal under 1 should shrink.' },
     {
@@ -140,7 +189,12 @@ export const NS_SLIDES: SlideBank = {
         note: 'Two numbers under 1 must make something smaller than either. That is your check.',
       },
     },
-    { kind: 'trap', head: 'Trap: moving only one point', body: 'When dividing, if you shift the divisor\'s point you MUST shift the dividend\'s point the same amount. Turning 4.8 ÷ 0.6 into 4.8 ÷ 6 changes the problem completely. Both points slide together, always.' },
+    {
+      kind: 'trap',
+      head: 'Trap: moving only one point',
+      body: 'When dividing, if you shift the divisor\'s point you MUST shift the dividend\'s point the same amount. Turning 4.8 ÷ 0.6 into 4.8 ÷ 6 changes the problem completely. Both points slide together, always.',
+      compare: { cols: [{ title: 'Both points', tex: '4.8 \\div 0.6 \\to 48 \\div 6', lines: ['Same ratio', 'Answer is 8'], tone: 'ok' }, { title: 'One point', tex: '4.8 \\div 6', lines: ['Ratio changed', 'Answer is 0.8'], tone: 'bad' }], note: 'Sliding both points keeps the division exactly the same.' },
+    },
     { kind: 'challenge', head: 'Extra credit: bag the rice', body: 'A 12 kg sack of rice fills bags of 0.8 kg each. How many bags?\n12 ÷ 0.8: multiply both by 10 to get 120 ÷ 8 = 15 bags.' },
     {
       kind: 'summary',
@@ -165,6 +219,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'GCF: the biggest shared divider',
       body: 'The Greatest Common Factor is the LARGEST number that divides evenly into both numbers. Factors of 12: 1, 2, 3, 4, 6, 12. Factors of 18: 1, 2, 3, 6, 9, 18 — the biggest one on both lists is 6.',
+      formula: { tex: '\\gcd(a, b) = \\text{largest number dividing both}', note: 'The biggest block size that fits into both numbers exactly.', parts: [{ sym: '\\text{largest}', means: 'not just any common factor, the biggest one', tone: 'accent' }, { sym: '\\text{both}', means: 'it has to divide each number with no remainder', tone: 'ok' }] },
       art: tape([{ label: '12', boxes: 3, each: '4', color: SKY }, { label: '18', boxes: 3, each: '6', color: EMR }], { total: 'both split into 6s: GCF is 6', title: 'The largest piece that fits both', caption: 'A GCF is the biggest block size that divides both numbers with nothing left over.' }),
       table: {
         head: ['', 'factors', 'shared'],
@@ -177,6 +232,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'LCM: the smallest shared target',
       body: 'The Least Common Multiple is the SMALLEST number that both numbers divide into. List multiples of the bigger number and stop at the first one the smaller number also hits. For 4 and 6: multiples of 6 are 6, 12 … and 12 works for 4 too.',
+      formula: { tex: '\\text{lcm}(a, b) = \\text{first number both reach}', note: 'Skip-count by each and the first place they meet is the LCM.', parts: [{ sym: '\\text{first}', means: 'the smallest number both counts land on', tone: 'accent' }, { sym: '\\text{both reach}', means: 'it must be a multiple of each number', tone: 'ok' }] },
       art: numberLine(0, 24, [{ at: 4, label: '4s', color: SKY }, { at: 8, color: SKY }, { at: 12, label: 'both!', color: VIO }, { at: 6, label: '6s', color: EMR }, { at: 18, color: EMR }], { title: 'The first place two skip-counts meet', caption: 'Count by fours and by sixes. Twelve is the first number both land on.' }),
       table: {
         head: ['', 'multiples', 'first match'],
@@ -202,6 +258,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Distribute with the GCF',
       body: 'You can pull the GCF out of a sum like a common ingredient. Since 18 = 6 × 3 and 24 = 6 × 4, you can write 18 + 24 = 6(3 + 4). That\'s the distributive property running in reverse — factoring!',
+      formula: { tex: '18 + 24 = 6(3 + 4)', note: 'Pull the shared factor out front and the sum becomes a product.', parts: [{ sym: '6', means: 'the greatest common factor of both numbers', tone: 'accent' }, { sym: '(3 + 4)', means: 'what is left when each is divided by six', tone: 'ok' }] },
       art: areaModel([{ label: '3', w: 2 }, { label: '4', w: 2 }], [{ label: '6', h: 1 }], [['18', '24']], { title: '18 + 24 = 6(3 + 4)', total: 'Pull the shared 6 out front', caption: 'Both numbers are built from sixes, so the six becomes the height of one wide box.' }),
       steps: {
         steps: [
@@ -213,13 +270,33 @@ export const NS_SLIDES: SlideBank = {
         answer: '6(2 + 3)',
       },
     },
-    { kind: 'example', head: 'Warm-up: GCF of 8 and 12', body: 'Factors of 8: 1, 2, 4, 8. Factors of 12: 1, 2, 3, 4, 6, 12.\nShared factors: 1, 2, 4.\nThe greatest is 4, so GCF = 4.' },
+    {
+      kind: 'example',
+      head: 'Warm-up: GCF of 8 and 12',
+      body: 'Factors of 8: 1, 2, 4, 8. Factors of 12: 1, 2, 3, 4, 6, 12.\nShared factors: 1, 2, 4.\nThe greatest is 4, so GCF = 4.',
+      steps: { steps: [{ tex: '8 : 1, 2, 4, 8', text: 'List the factors of the first number.' }, { tex: '12 : 1, 2, 3, 4, 6, 12', text: 'List the factors of the second.' }, { tex: '\\text{largest shared} = 4', text: 'Take the biggest one they share.' }], answer: '4' },
+    },
     { kind: 'example', head: 'GCF of 12 and 18', body: 'Break into primes: 12 = 2 × 2 × 3 and 18 = 2 × 3 × 3.\nThey share one 2 and one 3.\nMultiply the shared primes: 2 × 3 = 6. GCF = 6.' },
-    { kind: 'example', head: 'LCM of 4 and 6', body: 'List multiples of 6: 6, 12, 18 …\nIs 6 a multiple of 4? No. Is 12? Yes — 4 × 3 = 12.\nLCM = 12.' },
+    {
+      kind: 'example',
+      head: 'LCM of 4 and 6',
+      body: 'List multiples of 6: 6, 12, 18 …\nIs 6 a multiple of 4? No. Is 12? Yes — 4 × 3 = 12.\nLCM = 12.',
+      steps: { steps: [{ tex: '4, 8, 12, 16', text: 'Skip-count by four.' }, { tex: '6, 12, 18', text: 'Skip-count by six.' }, { tex: '\\text{first match} = 12', text: 'Twelve is where they first meet.' }], answer: '12' },
+    },
     { kind: 'example', head: 'LCM of 3 and 5', body: 'The numbers 3 and 5 share no factors except 1.\nWhen that happens, just multiply them: 3 × 5 = 15.\nLCM = 15.' },
-    { kind: 'example', head: 'GCF of 16 and 24', body: 'Primes: 16 = 2 × 2 × 2 × 2 and 24 = 2 × 2 × 2 × 3.\nThey share three 2s.\n2 × 2 × 2 = 8, so GCF = 8.' },
+    {
+      kind: 'example',
+      head: 'GCF of 16 and 24',
+      body: 'Primes: 16 = 2 × 2 × 2 × 2 and 24 = 2 × 2 × 2 × 3.\nThey share three 2s.\n2 × 2 × 2 = 8, so GCF = 8.',
+      steps: { steps: [{ tex: '16 = 8 \\times 2', text: 'Look for a large shared factor.' }, { tex: '24 = 8 \\times 3', text: 'Eight divides both exactly.' }], answer: '8' },
+    },
     { kind: 'example', head: 'Rewrite 18 + 24 with the GCF', body: 'GCF of 18 and 24 is 6.\nWrite each as 6 times something: 18 = 6 × 3 and 24 = 6 × 4.\nSo 18 + 24 = 6(3 + 4). Check: 6 × 7 = 42, and 18 + 24 = 42. Match!' },
-    { kind: 'example', head: 'Another way: use prime factors', body: 'Find the LCM of 4 and 6 with primes.\n4 = 2 × 2, 6 = 2 × 3. Take each prime the most it appears: 2 × 2 × 3 = 12.' },
+    {
+      kind: 'example',
+      head: 'Another way: use prime factors',
+      body: 'Find the LCM of 4 and 6 with primes.\n4 = 2 × 2, 6 = 2 × 3. Take each prime the most it appears: 2 × 2 × 3 = 12.',
+      steps: { steps: [{ tex: '12 = 2^2 \\times 3', text: 'Break the first into primes.' }, { tex: '18 = 2 \\times 3^2', text: 'Break the second into primes.' }, { tex: '\\gcd = 2 \\times 3 = 6', text: 'Take the lowest power of each shared prime.' }], answer: '6' },
+    },
     { kind: 'protip', head: 'Primes make it automatic', body: 'Break both numbers into prime factors. GCF = multiply the primes they SHARE. LCM = multiply the shared primes once, plus every leftover prime. One factor tree answers both questions.' },
     {
       kind: 'trap',
@@ -247,6 +324,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Negatives live below zero',
       body: 'Negative numbers describe things below a starting point: owing $5 is −5 dollars, a submarine 30 feet down is at −30 feet, and 4 degrees below freezing is −4°C. The minus sign means "on the other side of zero". Zero itself is neither positive nor negative.',
+      formula: { tex: '-n < 0 < n \\ \\text{for } n > 0', note: 'Zero is the middle of the line, not the end of it.', parts: [{ sym: '-n', means: 'the mirror of n, sitting left of zero', tone: 'accent' }, { sym: '0', means: 'neither positive nor negative, the dividing point', tone: 'ok' }] },
       art: numberLine(-5, 5, [
           { at: -3, label: '−3', color: ROSE },
           { at: 0, label: '0', color: VIO },
@@ -257,6 +335,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Right is always bigger',
       body: 'On a number line, numbers grow as you move right and shrink as you move left. So 2 > −5 because 2 sits to the right. This rule never breaks — even deep in negative territory, −2 beats −7 because it\'s further right.',
+      formula: { tex: 'a < b \\iff a \\text{ lies left of } b', note: 'One rule covers the whole line, signs included.', parts: [{ sym: '\\text{left}', means: 'means smaller, whatever the digits look like', tone: 'accent' }, { sym: '\\text{right}', means: 'means bigger, all the way along', tone: 'ok' }] },
       art: numberLine(-8, 4, [{ at: -5, label: '−5 is left', color: SKY }, { at: -2, label: '−2 is right', color: EMR }], { title: 'Further right always wins', caption: 'On a number line, bigger means further right — and −2 sits to the right of −5.' }),
       compare: {
         cols: [
@@ -280,17 +359,43 @@ export const NS_SLIDES: SlideBank = {
         ],
       },
     },
-    { kind: 'example', head: 'Warm-up: |−7|', body: 'How far is −7 from 0? Count the steps: seven.\nDistance is always positive.\n|−7| = 7.' },
-    { kind: 'example', head: 'Compare: −5 or −2?', body: 'Picture the number line: −5 sits five steps left of zero, −2 only two steps left.\n−2 is to the RIGHT of −5.\nSo −2 is greater: −2 > −5.' },
-    { kind: 'example', head: 'Compute: |−15|', body: 'The bars ask for distance from zero.\n−15 is fifteen steps from 0.\n|−15| = 15.' },
+    {
+      kind: 'example',
+      head: 'Warm-up: |−7|',
+      body: 'How far is −7 from 0? Count the steps: seven.\nDistance is always positive.\n|−7| = 7.',
+      steps: { steps: [{ tex: '-7 \\text{ is 7 steps from 0}', text: 'Count the steps back to zero.' }, { tex: '|-7| = 7', text: 'Distance is always positive.' }], answer: '7' },
+    },
+    {
+      kind: 'example',
+      head: 'Compare: −5 or −2?',
+      body: 'Picture the number line: −5 sits five steps left of zero, −2 only two steps left.\n−2 is to the RIGHT of −5.\nSo −2 is greater: −2 > −5.',
+      steps: { steps: [{ tex: '-5 \\text{ lies left of } -2', text: 'Picture both on the number line.' }, { tex: '-2 > -5', text: 'Further right wins.' }], answer: '-2' },
+    },
+    {
+      kind: 'example',
+      head: 'Compute: |−15|',
+      body: 'The bars ask for distance from zero.\n−15 is fifteen steps from 0.\n|−15| = 15.',
+      steps: { steps: [{ tex: '-15 \\text{ is 15 steps from } 0', text: 'Count the distance back to zero.' }, { tex: '|-15| = 15', text: 'Distance never comes out negative.' }], answer: '15' },
+    },
     {
       kind: 'example',
       head: 'Order −3, 2, −8',
       body: 'Place each on the number line: −8 is furthest left, then −3, then 2 on the positive side.\nLeast to greatest reads left to right.\nAnswer: −8, −3, 2.',
+      steps: { steps: [{ tex: '-8,\\ -3,\\ 2', text: 'Place all three on the number line.' }, { tex: '\\text{read left to right}', text: 'That reading gives the order.' }], answer: '-8 < -3 < 2' },
       art: numberLine(-10, 4, [{ at: -8, label: '−8', color: SKY }, { at: -3, label: '−3', color: AMB }, { at: 2, label: '2', color: EMR }], { title: 'Read them left to right', caption: 'Plot all three, then read off the order: −8, then −3, then 2.' }),
     },
-    { kind: 'example', head: 'Diver vs kite', body: 'A diver is at −30 ft and a kite at 12 ft. Who is farther from sea level (0)?\nCompare distances: |−30| = 30 and |12| = 12.\n30 > 12, so the diver is farther — even though −30 is the SMALLER number.' },
-    { kind: 'example', head: 'Another way: compare by distance', body: 'Which is greater, −5 or −2?\nOn the number line −2 is closer to 0, and for negatives, closer to 0 means greater. So −2 > −5.' },
+    {
+      kind: 'example',
+      head: 'Diver vs kite',
+      body: 'A diver is at −30 ft and a kite at 12 ft. Who is farther from sea level (0)?\nCompare distances: |−30| = 30 and |12| = 12.\n30 > 12, so the diver is farther — even though −30 is the SMALLER number.',
+      steps: { steps: [{ tex: '\\text{diver} = -30', text: 'Below sea level is negative.' }, { tex: '\\text{kite} = 20', text: 'Above ground is positive.' }, { tex: '20 > -30', text: 'The kite is higher up.' }], answer: '\\text{the kite}' },
+    },
+    {
+      kind: 'example',
+      head: 'Another way: compare by distance',
+      body: 'Which is greater, −5 or −2?\nOn the number line −2 is closer to 0, and for negatives, closer to 0 means greater. So −2 > −5.',
+      steps: { steps: [{ tex: '|-8| = 8,\\ |-3| = 3', text: 'Measure each from zero.' }, { tex: '\\text{further out} \\to \\text{smaller}', text: 'Among negatives, further from zero is smaller.' }] },
+    },
     { kind: 'protip', head: 'Tell a story with the sign', body: 'Stuck comparing negatives? Turn them into money: −5 means owing $5, −2 means owing $2. Owing less means you\'re better off, so −2 > −5. Real-life stories make signed numbers obvious.' },
     {
       kind: 'trap',
@@ -304,8 +409,18 @@ export const NS_SLIDES: SlideBank = {
         ],
       },
     },
-    { kind: 'trap', head: 'Trap: bars that flip signs', body: 'Absolute value bars are not sign-flippers or parentheses. |−7| = 7 because distance is positive — but |7| is still 7, not −7. The bars never make a number negative.' },
-    { kind: 'challenge', head: 'Extra credit: temperature swing', body: 'It is −3°C, drops 4°, then rises 5°. Final temperature?\n−3 − 4 = −7, then −7 + 5 = −2°C.' },
+    {
+      kind: 'trap',
+      head: 'Trap: bars that flip signs',
+      body: 'Absolute value bars are not sign-flippers or parentheses. |−7| = 7 because distance is positive — but |7| is still 7, not −7. The bars never make a number negative.',
+      compare: { cols: [{ title: '|-8|', tex: '= 8', lines: ['A distance', 'Always positive'], tone: 'ok' }, { title: '-|8|', tex: '= -8', lines: ['Minus outside the bars', 'Stays negative'], tone: 'bad' }], note: 'The bars measure; a minus outside them still applies afterwards.' },
+    },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: temperature swing',
+      body: 'It is −3°C, drops 4°, then rises 5°. Final temperature?\n−3 − 4 = −7, then −7 + 5 = −2°C.',
+      steps: { steps: [{ tex: '-6 \\text{ up to } 9', text: 'Write the two temperatures.' }, { tex: '6 + 9 = 15', text: 'Count in to zero, then out again.' }], answer: '15^\\circ' },
+    },
     {
       kind: 'summary',
       head: 'Position and distance',
@@ -329,6 +444,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: '(x, y): across, then up or down',
       body: 'An ordered pair (x, y) is a set of directions from the origin (0, 0). The first number x says how far to go ACROSS — right if positive, left if negative. The second number y says how far up (positive) or down (negative).',
+      formula: { tex: '(x,\\ y) = (\\text{across},\\ \\text{up})', note: 'Across first, always. Swap them and you land somewhere else.', parts: [{ sym: 'x', means: 'how far left or right of the origin', tone: 'accent' }, { sym: 'y', means: 'how far up or down from the origin', tone: 'ok' }] },
       art: plotGrid([
           { x: 3, y: 2, label: '(3, 2)', color: EMR },
           { x: -3, y: 2, label: '(−3, 2)', color: SKY },
@@ -340,6 +456,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Four quadrants, four sign combos',
       body: 'The axes slice the plane into four quadrants, numbered I, II, III, IV counterclockwise from the top-right. Quadrant I is (+, +), II is (−, +), III is (−, −), and IV is (+, −). Read a point\'s two signs and you instantly know its quadrant.',
+      formula: { tex: '(+,+)\\ (-,+)\\ (-,-)\\ (+,-)', note: 'The pair of signs tells you which quadrant without plotting anything.', parts: [{ sym: '(+,+)', means: 'quadrant I, up and to the right', tone: 'accent' }, { sym: '(-,+)', means: 'quadrant II, up and to the left', tone: 'ok' }] },
       table: {
         head: ['quadrant', 'x', 'y'],
         rows: [['I (top right)', '+', '+'], ['II (top left)', '−', '+'], ['III (bottom left)', '−', '−'], ['IV (bottom right)', '+', '−']],
@@ -363,6 +480,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Reflections flip one sign',
       body: 'Reflecting across the y-axis flips the point left-right, so the x-coordinate changes sign: (4, 3) → (−4, 3). Reflecting across the x-axis flips up-down, so y changes sign: (4, 3) → (4, −3). One mirror, one sign flip.',
+      formula: { tex: '(a,\\ b) \\to (-a,\\ b) \\ \\text{across the } y\\text{-axis}', note: 'Mirror across an axis and exactly one coordinate changes sign.', parts: [{ sym: '-a', means: 'the x-sign flips when mirroring across y', tone: 'accent' }, { sym: 'b', means: 'the y-value is untouched by that mirror', tone: 'ok' }] },
       art: plotGrid([{ x: 4, y: 3, label: '(4, 3)', color: SKY }, { x: -4, y: 3, label: '(−4, 3)', color: EMR }], { range: { x: [-6, 6], y: [-2, 6] }, title: 'Mirror across the y-axis', caption: 'Reflecting across the y-axis flips the x-sign and leaves y exactly where it was.' }),
       compare: {
         cols: [
@@ -373,11 +491,26 @@ export const NS_SLIDES: SlideBank = {
       },
     },
     { kind: 'example', head: 'Warm-up: plot (−2, 3)', body: 'Start at the origin (0, 0).\nx = −2: go LEFT 2. y = 3: go UP 3.\nThe point lands in the top-left region — Quadrant II.' },
-    { kind: 'example', head: 'Name the quadrant: (−3, 5)', body: 'Check the signs: x is negative, y is positive.\nNegative x means left of the y-axis; positive y means above the x-axis.\nTop-left is Quadrant II.' },
+    {
+      kind: 'example',
+      head: 'Name the quadrant: (−3, 5)',
+      body: 'Check the signs: x is negative, y is positive.\nNegative x means left of the y-axis; positive y means above the x-axis.\nTop-left is Quadrant II.',
+      steps: { steps: [{ tex: 'x < 0,\\ y > 0', text: 'Read the two signs.' }, { tex: '\\text{left and up}', text: 'That places it in quadrant II.' }], answer: '\\text{II}' },
+    },
     { kind: 'example', head: 'Name the quadrant: (6, −2)', body: 'Signs: x positive (right), y negative (down).\nRight and down is the bottom-right region.\nThat\'s Quadrant IV.' },
     { kind: 'example', head: 'Vertical distance: (2, 1) to (2, 6)', body: 'Both points have x = 2, so they line up vertically.\nSubtract the y-values: 6 − 1 = 5.\nDistance: 5 units.' },
-    { kind: 'example', head: 'Across the axis: (−3, 4) to (5, 4)', body: 'Both have y = 4, so the path is horizontal.\nSubtract x-values: 5 − (−3) = 5 + 3 = 8.\nDistance: 8 units — count the 3 steps to zero plus 5 more.' },
-    { kind: 'example', head: 'Reflect (4, 3) across the y-axis', body: 'The y-axis is a left-right mirror, so only x changes sign.\nx: 4 → −4. y stays 3.\nAnswer: (−4, 3).' },
+    {
+      kind: 'example',
+      head: 'Across the axis: (−3, 4) to (5, 4)',
+      body: 'Both have y = 4, so the path is horizontal.\nSubtract x-values: 5 − (−3) = 5 + 3 = 8.\nDistance: 8 units — count the 3 steps to zero plus 5 more.',
+      steps: { steps: [{ tex: 'y: 4 = 4', text: 'Matching y means a horizontal gap.' }, { tex: '|5 - (-3)| = 8', text: 'Subtracting a negative adds.' }], answer: '8' },
+    },
+    {
+      kind: 'example',
+      head: 'Reflect (4, 3) across the y-axis',
+      body: 'The y-axis is a left-right mirror, so only x changes sign.\nx: 4 → −4. y stays 3.\nAnswer: (−4, 3).',
+      steps: { steps: [{ tex: '\\text{mirror in } y', text: 'The y-axis is the mirror line.' }, { tex: '(4, 3) \\to (-4, 3)', text: 'Only the x-sign flips.' }], answer: '(-4, 3)' },
+    },
     { kind: 'example', head: 'Another way: count to the mirror line', body: 'Reflect (3, 2) across the y-axis by counting.\nThe point is 3 right of the axis; its mirror image is 3 left at the same height: (−3, 2).' },
     { kind: 'protip', head: 'Signs are a GPS', body: 'Before plotting, read the signs like directions: (+, +) means right-up, (−, +) left-up, (−, −) left-down, (+, −) right-down. You\'ll know the quadrant before your pencil moves. It also catches plotting mistakes instantly.' },
     {
@@ -406,6 +539,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Division asks "how many fit?"',
       body: 'The problem 1/2 ÷ 1/4 asks: how many quarter-pieces fit inside one half? Picture a half sandwich cut into quarters — two of them fit. That\'s why dividing by a small fraction gives a BIG answer.',
+      formula: { tex: 'a \\div \\tfrac{1}{n} = a \\times n', note: 'Dividing by a small piece gives a big answer — how many fit inside.', parts: [{ sym: '\\tfrac{1}{n}', means: 'the small piece you are fitting in', tone: 'accent' }, { sym: '\\times n', means: 'flipping it is what makes the answer grow', tone: 'ok' }] },
       art: fractionBar(8, 8, { label: '8 quarters fit in 2 wholes', title: '2 ÷ ¼ — how many quarters?', caption: 'Dividing by a small piece gives a BIG answer, because many of them fit.' }),
     },
     {
@@ -436,14 +570,54 @@ export const NS_SLIDES: SlideBank = {
         ],
       },
     },
-    { kind: 'concept', head: 'Then multiply straight across', body: 'After the flip, it\'s a multiplication you already know: tops times tops, bottoms times bottoms. Finish by simplifying — divide top and bottom by their GCF. An answer like 6/4 should leave home as 3/2.' },
-    { kind: 'example', head: 'Warm-up: 1/2 ÷ 1/4', body: 'Keep 1/2, change ÷ to ×, flip 1/4 to 4/1.\n1/2 × 4/1: tops 1 × 4 = 4, bottoms 2 × 1 = 2. That\'s 4/2.\nSimplify: 4/2 = 2. Two quarters fit in a half!' },
-    { kind: 'example', head: 'Check it with a picture', body: '1/3 ÷ 1/6 = ? Think: how many sixths fit inside one third?\nA third equals two sixths — picture a pizza slice cut in half.\nKeep-change-flip agrees: 1/3 × 6/1 = 6/3 = 2.' },
-    { kind: 'example', head: 'Bigger than 1: 3/4 ÷ 1/2', body: 'Keep-change-flip: 3/4 × 2/1.\nTops: 3 × 2 = 6. Bottoms: 4 × 1 = 4. That\'s 6/4.\nSimplify by dividing top and bottom by 2: 3/2, which is 1 1/2.' },
-    { kind: 'example', head: 'Divide BY a whole number: 2/3 ÷ 4', body: 'Write 4 as a fraction: 4/1. Flip it to 1/4.\n2/3 × 1/4: tops 2 × 1 = 2, bottoms 3 × 4 = 12. That\'s 2/12.\nSimplify: 2/12 = 1/6. Sharing 2/3 among 4 people gives each 1/6.' },
-    { kind: 'example', head: 'Full workout: 5/6 ÷ 1/2', body: 'Keep 5/6, change to ×, flip 1/2 to 2/1.\nTops: 5 × 2 = 10. Bottoms: 6 × 1 = 6. That\'s 10/6.\nSimplify by 2: 5/3, or 1 2/3.' },
-    { kind: 'example', head: 'Another way: use common denominators', body: 'Divide 3/4 ÷ 2/4 by comparing top numbers.\nWith the same bottom, just divide the tops: 3 ÷ 2 = 3/2 = 1 1/2.' },
-    { kind: 'protip', head: 'Predict big or small first', body: 'Before computing, ask: is the divisor smaller than 1? Then lots of pieces fit, so expect an answer BIGGER than the first fraction. Dividing by a number bigger than 1 shrinks things. This one prediction catches flipped-the-wrong-fraction errors instantly.' },
+    {
+      kind: 'concept',
+      head: 'Then multiply straight across',
+      body: 'After the flip, it\'s a multiplication you already know: tops times tops, bottoms times bottoms. Finish by simplifying — divide top and bottom by their GCF. An answer like 6/4 should leave home as 3/2.',
+      formula: { tex: '\\dfrac{a}{b} \\times \\dfrac{d}{c} = \\dfrac{ad}{bc}', note: 'Tops multiply with tops, bottoms with bottoms.', parts: [{ sym: 'ad', means: 'the two numerators multiplied', tone: 'accent' }, { sym: 'bc', means: 'the two denominators multiplied', tone: 'ok' }] },
+    },
+    {
+      kind: 'example',
+      head: 'Warm-up: 1/2 ÷ 1/4',
+      body: 'Keep 1/2, change ÷ to ×, flip 1/4 to 4/1.\n1/2 × 4/1: tops 1 × 4 = 4, bottoms 2 × 1 = 2. That\'s 4/2.\nSimplify: 4/2 = 2. Two quarters fit in a half!',
+      steps: { steps: [{ tex: '\\tfrac{1}{2} \\times \\tfrac{4}{1}', text: 'Keep, change, flip.' }, { tex: '= \\tfrac{4}{2} = 2', text: 'Multiply across and simplify.' }], answer: '2' },
+    },
+    {
+      kind: 'example',
+      head: 'Check it with a picture',
+      body: '1/3 ÷ 1/6 = ? Think: how many sixths fit inside one third?\nA third equals two sixths — picture a pizza slice cut in half.\nKeep-change-flip agrees: 1/3 × 6/1 = 6/3 = 2.',
+      steps: { steps: [{ tex: '\\tfrac{1}{2} \\div \\tfrac{1}{4}', text: 'How many quarters fit inside a half?' }, { tex: '\\text{two quarters fit}', text: 'The picture agrees with the arithmetic.' }], answer: '2' },
+    },
+    {
+      kind: 'example',
+      head: 'Bigger than 1: 3/4 ÷ 1/2',
+      body: 'Keep-change-flip: 3/4 × 2/1.\nTops: 3 × 2 = 6. Bottoms: 4 × 1 = 4. That\'s 6/4.\nSimplify by dividing top and bottom by 2: 3/2, which is 1 1/2.',
+      steps: { steps: [{ tex: '\\tfrac{3}{4} \\times \\tfrac{2}{1}', text: 'Flip the second fraction.' }, { tex: '= \\tfrac{6}{4} = \\tfrac{3}{2}', text: 'Multiply across, then simplify.' }], answer: '\\tfrac{3}{2}' },
+    },
+    {
+      kind: 'example',
+      head: 'Divide BY a whole number: 2/3 ÷ 4',
+      body: 'Write 4 as a fraction: 4/1. Flip it to 1/4.\n2/3 × 1/4: tops 2 × 1 = 2, bottoms 3 × 4 = 12. That\'s 2/12.\nSimplify: 2/12 = 1/6. Sharing 2/3 among 4 people gives each 1/6.',
+      steps: { steps: [{ tex: '4 = \\tfrac{4}{1}', text: 'A whole number is a fraction over one.' }, { tex: '\\tfrac{2}{3} \\times \\tfrac{1}{4} = \\tfrac{2}{12}', text: 'Flip it and multiply.' }, { tex: '= \\tfrac{1}{6}', text: 'Simplify the result.' }], answer: '\\tfrac{1}{6}' },
+    },
+    {
+      kind: 'example',
+      head: 'Full workout: 5/6 ÷ 1/2',
+      body: 'Keep 5/6, change to ×, flip 1/2 to 2/1.\nTops: 5 × 2 = 10. Bottoms: 6 × 1 = 6. That\'s 10/6.\nSimplify by 2: 5/3, or 1 2/3.',
+      steps: { steps: [{ tex: '\\tfrac{5}{6} \\times \\tfrac{2}{1}', text: 'Keep, change, flip.' }, { tex: '= \\tfrac{10}{6} = \\tfrac{5}{3}', text: 'Multiply across, then simplify.' }], answer: '\\tfrac{5}{3}' },
+    },
+    {
+      kind: 'example',
+      head: 'Another way: use common denominators',
+      body: 'Divide 3/4 ÷ 2/4 by comparing top numbers.\nWith the same bottom, just divide the tops: 3 ÷ 2 = 3/2 = 1 1/2.',
+      steps: { steps: [{ tex: '\\tfrac{3}{4} \\div \\tfrac{1}{2} = \\tfrac{3}{4} \\div \\tfrac{2}{4}', text: 'Rename both with the same bottom.' }, { tex: '3 \\div 2 = \\tfrac{3}{2}', text: 'Then just divide the tops.' }], answer: '\\tfrac{3}{2}' },
+    },
+    {
+      kind: 'protip',
+      head: 'Predict big or small first',
+      body: 'Before computing, ask: is the divisor smaller than 1? Then lots of pieces fit, so expect an answer BIGGER than the first fraction. Dividing by a number bigger than 1 shrinks things. This one prediction catches flipped-the-wrong-fraction errors instantly.',
+      steps: { steps: [{ tex: '\\text{dividing by} < 1', text: 'Ask whether the divisor is under one.' }, { tex: '\\text{answer grows}', text: 'If so, expect a bigger answer.' }] },
+    },
     {
       kind: 'trap',
       head: 'Trap: flipping both fractions',
@@ -457,7 +631,12 @@ export const NS_SLIDES: SlideBank = {
       },
     },
     { kind: 'trap', head: 'Trap: flipping before changing the sign', body: 'Some kids flip the second fraction but keep the ÷ sign — then divide again and tie themselves in knots. The three moves come as a set: keep, CHANGE ÷ to ×, flip. Say all three out loud every time.' },
-    { kind: 'challenge', head: 'Extra credit: how many batches', body: 'You have 3 cups of flour and each batch needs 3/4 cup. How many batches?\n3 ÷ 3/4 = 3 × 4/3 = 12/3 = 4 batches.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: how many batches',
+      body: 'You have 3 cups of flour and each batch needs 3/4 cup. How many batches?\n3 ÷ 3/4 = 3 × 4/3 = 12/3 = 4 batches.',
+      steps: { steps: [{ tex: '\\text{let } b = \\text{batches}', text: 'Name what you are counting.' }, { tex: '\\tfrac{5}{6} \\div \\tfrac{1}{6} = 5', text: 'Flip and multiply.' }], answer: '5' },
+    },
     {
       kind: 'summary',
       head: 'Keep-Change-Flip forever',
@@ -481,6 +660,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Stack by place value',
       body: 'Write the numbers on top of each other with ones under ones, tens under tens, hundreds under hundreds. Straight columns are half the battle. Then work column by column, starting from the ones on the right.',
+      formula: { tex: '\\text{ones under ones, tens under tens}', note: 'Line up by place value, then work right to left.', parts: [{ sym: '\\text{place value}', means: 'what makes the columns line up correctly', tone: 'accent' }, { sym: '\\text{right to left}', means: 'so carries and borrows flow the right way', tone: 'ok' }] },
       art: flow([{ label: 'Line up ones under ones' }, { label: 'Tens under tens' }, { label: 'Then work right to left' }], { title: 'Columns before arithmetic', caption: 'Almost every stacking mistake is really a lining-up mistake.' }),
       compare: {
         cols: [
@@ -493,6 +673,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Carrying: ten spills over',
       body: 'When a column adds to 10 or more, it overflows. Write the ones digit of the sum and carry the 1 into the NEXT column to the left. That carry is a real ten (or hundred) changing places — don\'t drop it.',
+      formula: { tex: '10 \\text{ ones} = 1 \\text{ ten}', note: 'A column can only hold nine. The tenth moves next door.', parts: [{ sym: '10', means: 'the moment a column overflows', tone: 'accent' }, { sym: '1 \\text{ ten}', means: 'what carries into the next column left', tone: 'ok' }] },
       art: tape([{ label: 'ones', boxes: 10, each: '1', color: SKY }, { label: 'becomes', boxes: 1, each: '10', color: EMR }], { total: 'ten ones trade for one ten', title: 'Ten of anything trades up', caption: 'A column can only hold nine. The tenth one moves next door as a single carry.' }),
       steps: {
         steps: [
@@ -506,6 +687,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Borrowing: trade from a neighbor',
       body: 'When the top digit is too small to subtract from, borrow from the column to its left. The neighbor gives up 1 (worth ten of yours), so 2 − 7 becomes 12 − 7. The neighbor\'s digit drops by 1 — write it down so you don\'t forget.',
+      formula: { tex: '1 \\text{ ten} = 10 \\text{ ones}', note: 'Break a ten into ten ones so the column has enough to subtract from.', parts: [{ sym: '1 \\text{ ten}', means: 'taken from the neighbour on the left', tone: 'accent' }, { sym: '10 \\text{ ones}', means: 'added to the column that ran short', tone: 'ok' }] },
       art: tape([{ label: 'one ten', boxes: 1, each: '10', color: EMR }, { label: 'becomes', boxes: 10, each: '1', color: SKY }], { total: 'borrow once, gain ten ones', title: 'Borrowing is trading down', caption: 'You break a ten into ten ones so the column above has enough to subtract from.' }),
       steps: {
         steps: [
@@ -516,10 +698,20 @@ export const NS_SLIDES: SlideBank = {
       },
     },
     { kind: 'example', head: 'Warm-up: 34 + 25', body: 'Stack: ones 4 + 5 = 9, no carry.\nTens: 3 + 2 = 5.\nAnswer: 59.' },
-    { kind: 'example', head: 'One carry: 618 + 274', body: 'Ones: 8 + 4 = 12 — write 2, carry 1.\nTens: 1 + 7 + the carry 1 = 9.\nHundreds: 6 + 2 = 8. Answer: 892.' },
+    {
+      kind: 'example',
+      head: 'One carry: 618 + 274',
+      body: 'Ones: 8 + 4 = 12 — write 2, carry 1.\nTens: 1 + 7 + the carry 1 = 9.\nHundreds: 6 + 2 = 8. Answer: 892.',
+      steps: { steps: [{ tex: '8 + 4 = 12', text: 'The ones column overflows.' }, { tex: '\\text{write } 2,\\ \\text{carry } 1', text: 'Keep two, carry one left.' }, { tex: '= 892', text: 'Finish the remaining columns.' }], answer: '892' },
+    },
     { kind: 'example', head: 'Carry twice: 425 + 376', body: 'Ones: 5 + 6 = 11 — write 1, carry 1.\nTens: 2 + 7 + 1 = 10 — write 0, carry 1.\nHundreds: 4 + 3 + 1 = 8. Answer: 801.' },
     { kind: 'example', head: 'Borrow twice: 952 − 387', body: 'Ones: 2 − 7 won\'t go. Borrow: 12 − 7 = 5, and the 5 tens become 4.\nTens: 4 − 8 won\'t go. Borrow: 14 − 8 = 6, and the 9 hundreds become 8.\nHundreds: 8 − 3 = 5. Answer: 565.' },
-    { kind: 'example', head: 'Across the zeros: 500 − 173', body: 'Ones: 0 − 3 won\'t go, and the tens are 0 too — borrow from the hundreds. 500 becomes 4 hundreds, 9 tens, 10 ones.\nOnes: 10 − 3 = 7. Tens: 9 − 7 = 2. Hundreds: 4 − 1 = 3.\nAnswer: 327.' },
+    {
+      kind: 'example',
+      head: 'Across the zeros: 500 − 173',
+      body: 'Ones: 0 − 3 won\'t go, and the tens are 0 too — borrow from the hundreds. 500 becomes 4 hundreds, 9 tens, 10 ones.\nOnes: 10 − 3 = 7. Tens: 9 − 7 = 2. Hundreds: 4 − 1 = 3.\nAnswer: 327.',
+      steps: { steps: [{ tex: '\\text{ones: } 0 - 3', text: 'Nothing to subtract from.' }, { tex: '\\text{borrow across the zeros}', text: 'Trade down twice to reach a ten.' }, { tex: '= 327', text: 'Then subtract each column.' }], answer: '327' },
+    },
     { kind: 'example', head: 'Boss level: 1003 − 247', body: 'Borrow travels across two zeros: 1003 becomes 0 thousands, 9 hundreds, 9 tens, 13 ones.\nOnes: 13 − 7 = 6. Tens: 9 − 4 = 5. Hundreds: 9 − 2 = 7.\nAnswer: 756. Check: 756 + 247 = 1003. It works!' },
     {
       kind: 'example',
@@ -531,6 +723,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'protip',
       head: 'Check subtraction by adding back',
       body: 'Subtraction and addition undo each other. After computing 952 − 387 = 565, add back: 565 + 387 should return 952 — and it does. This check catches borrowing slips in seconds.',
+      steps: { steps: [{ tex: '952 - 387 = 565', text: 'Do the subtraction.' }, { tex: '565 + 387 = 952', text: 'Add the answer back to check.' }] },
       formula: {
         tex: 'a - b = c \\ \\Longrightarrow\\ c + b = a',
         note: 'Add your answer to what you took away. If you do not land back on the start, try again.',
@@ -552,6 +745,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Right is bigger. Always.',
       body: 'On the number line, values grow as you travel right and shrink as you travel left. This works everywhere on the line — positive side, negative side, and across zero. To compare two numbers, just ask which one sits further right.',
+      formula: { tex: 'a < b \\iff a \\text{ is further left}', note: 'One rule for the whole line, no special cases for signs.', parts: [{ sym: '\\text{further left}', means: 'is always the smaller number', tone: 'accent' }, { sym: '\\text{digits}', means: 'never decide it — only position does', tone: 'bad' }] },
       art: numberLine(-9, 3, [
           { at: -9, label: '−9', color: ROSE },
           { at: -4, label: '−4', color: AMB },
@@ -563,12 +757,14 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Every negative loses to every positive',
       body: 'All negatives live left of zero and all positives live right of it. So ANY positive beats ANY negative: even tiny 1 is greater than mighty-looking −100. Zero sits in the middle — bigger than every negative, smaller than every positive.',
+      formula: { tex: 'a < 0 < b \\implies a < b', note: 'Zero is the dividing line, and it settles every mixed comparison.', parts: [{ sym: 'a < 0', means: 'anything left of zero', tone: 'accent' }, { sym: '0 < b', means: 'anything right of zero, which always wins', tone: 'ok' }] },
       art: numberLine(-8, 8, [{ at: -4, label: 'negatives', color: ROSE }, { at: 0, label: '0', color: VIO }, { at: 4, label: 'positives', color: EMR }], { title: 'Zero is the dividing line', caption: 'Everything left of zero is smaller than everything right of it, no matter the digits.' }),
     },
     {
       kind: 'concept',
       head: 'Among negatives, closer to zero wins',
       body: 'Between two negatives, the one CLOSER to zero is greater, because it\'s further right. So −4 > −9, even though 9 is a bigger digit than 4. Think temperature: −4° is warmer than −9°.',
+      formula: { tex: '-1 > -9', note: 'Among negatives, the smaller distance from zero is the bigger number.', parts: [{ sym: '-1', means: 'only one step from zero, so further right', tone: 'accent' }, { sym: '-9', means: 'nine steps out, so further left and smaller', tone: 'ok' }] },
       art: numberLine(-10, 2, [{ at: -9, label: '−9 loses', color: ROSE }, { at: -1, label: '−1 wins', color: EMR }], { span: { from: -9, to: -1, label: '−1 is 8 steps further right' }, title: 'Closer to zero is bigger' }),
       compare: {
         cols: [
@@ -579,7 +775,12 @@ export const NS_SLIDES: SlideBank = {
       },
     },
     { kind: 'example', head: 'Warm-up: −3 or 1?', body: '1 is positive, so it sits right of zero. −3 sits left of zero.\nRight beats left.\n1 > −3.' },
-    { kind: 'example', head: 'Two negatives: −4 or −9?', body: 'Both are left of zero. −4 is only 4 steps out; −9 is 9 steps out.\n−4 sits closer to zero, so it\'s further right.\n−4 > −9.' },
+    {
+      kind: 'example',
+      head: 'Two negatives: −4 or −9?',
+      body: 'Both are left of zero. −4 is only 4 steps out; −9 is 9 steps out.\n−4 sits closer to zero, so it\'s further right.\n−4 > −9.',
+      steps: { steps: [{ tex: '-9 \\text{ lies left of } -4', text: 'Picture both on the line.' }, { tex: '-4 > -9', text: 'Further right is bigger.' }], answer: '-4' },
+    },
     { kind: 'example', head: 'And again: −1 or −7?', body: 'Distance from zero: −1 is 1 step, −7 is 7 steps.\nCloser to zero wins among negatives.\n−1 > −7.' },
     {
       kind: 'example',
@@ -594,7 +795,12 @@ export const NS_SLIDES: SlideBank = {
         answer: '-5,\\ -2,\\ 0',
       },
     },
-    { kind: 'example', head: 'Order −3, 2, −5', body: 'Sort by position: −5 is leftmost, −3 comes next, and 2 sits on the positive side.\nSo −5 < −3 < 2.\nLeast to greatest: −5, −3, 2.' },
+    {
+      kind: 'example',
+      head: 'Order −3, 2, −5',
+      body: 'Sort by position: −5 is leftmost, −3 comes next, and 2 sits on the positive side.\nSo −5 < −3 < 2.\nLeast to greatest: −5, −3, 2.',
+      steps: { steps: [{ tex: '-5,\\ -3,\\ 2', text: 'Place all three on the line.' }, { tex: '\\text{read left to right}', text: 'That reading is the order.' }], answer: '-5 < -3 < 2' },
+    },
     {
       kind: 'example',
       head: 'Real life: coldest city',
@@ -629,6 +835,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Opposites: the mirror across zero',
       body: 'The opposite of a number is its mirror image on the other side of 0, the same distance away. The opposite of 5 is −5; the opposite of −5 is 5. Zero is its own opposite — it\'s standing on the mirror.',
+      formula: { tex: '\\text{opposite of } a = -a', note: 'Same distance from zero, other side. A mirror, not a minus button.', parts: [{ sym: '-a', means: 'the reflection of a across zero', tone: 'accent' }, { sym: '\\text{same distance}', means: 'the mirror never changes how far out it is', tone: 'ok' }] },
       art: numberLine(-8, 8, [
           { at: -7, label: '−7', color: ROSE },
           { at: 0, label: '0', color: VIO },
@@ -648,6 +855,7 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Absolute value: the distance ruler',
       body: 'The bars |n| measure how far n is from zero — nothing more. Distance can\'t be negative, so |n| is always 0 or positive. Opposites like 6 and −6 have the SAME absolute value, because they\'re the same distance out.',
+      formula: { tex: '|a| \\ge 0 \\ \\text{always}', note: 'A ruler reports how far, never which way.', parts: [{ sym: '|\\ |', means: 'measures distance from zero', tone: 'accent' }, { sym: '\\ge 0', means: 'you cannot walk a negative number of steps', tone: 'ok' }] },
       art: numberLine(-14, 14, [{ at: -12, label: '−12', color: SKY }], { span: { from: -12, to: 0, label: '|−12| = 12' }, title: 'Measure, do not judge', caption: 'Absolute value only measures how far from zero you are. It never reports which way.' }),
       compare: {
         cols: [
@@ -658,16 +866,27 @@ export const NS_SLIDES: SlideBank = {
       },
     },
     { kind: 'example', head: 'Warm-up: opposite of 7', body: '7 sits seven steps right of zero.\nIts mirror image is seven steps LEFT.\nThe opposite of 7 is −7.' },
-    { kind: 'example', head: 'Opposite of −15', body: '−15 is fifteen steps left of zero.\nFlip across the mirror: fifteen steps right.\nThe opposite of −15 is 15.' },
+    {
+      kind: 'example',
+      head: 'Opposite of −15',
+      body: '−15 is fifteen steps left of zero.\nFlip across the mirror: fifteen steps right.\nThe opposite of −15 is 15.',
+      steps: { steps: [{ tex: '-15 \\text{ is 15 left of zero}', text: 'Find where it sits.' }, { tex: '-(-15) = 15', text: 'Mirror it to the other side.' }], answer: '15' },
+    },
     { kind: 'example', head: 'Absolute value: |−12|', body: 'Ask the ruler: how far is −12 from 0?\nTwelve steps.\n|−12| = 12.' },
     { kind: 'example', head: 'Careful now: |9|', body: 'The bars don\'t flip anything — they just measure.\n9 is nine steps from zero.\n|9| = 9. Still positive, no change.' },
     {
       kind: 'example',
       head: 'Double flip: −(−3)',
       body: 'What is the opposite of (the opposite of −3)?\nFirst flip: opposite of −3 is 3. Second flip: opposite of 3 is −3.\nAnswer: −3 — two flips bring you home.',
+      steps: { steps: [{ tex: '-3 \\to 3', text: 'The inner minus already flipped it once.' }, { tex: '\\text{flip again} \\to 3', text: 'The outer minus flips it back.' }], answer: '3' },
       art: numberLine(-6, 6, [{ at: -3, label: 'start at −3', color: SKY }, { at: 3, label: 'flip to 3', color: EMR }], { title: 'Flip twice and you are home', caption: 'Take the opposite of −3 and you land on 3 — one mirror across zero.' }),
     },
-    { kind: 'example', head: 'Mix them: |−8| vs the opposite of 8', body: '|−8| measures distance: 8. The opposite of 8 flips it: −8.\nSame starting digit, totally different answers!\n|−8| = 8, but the opposite of 8 is −8. Bars measure; the minus sign flips.' },
+    {
+      kind: 'example',
+      head: 'Mix them: |−8| vs the opposite of 8',
+      body: '|−8| measures distance: 8. The opposite of 8 flips it: −8.\nSame starting digit, totally different answers!\n|−8| = 8, but the opposite of 8 is −8. Bars measure; the minus sign flips.',
+      steps: { steps: [{ tex: '|-8| = 8', text: 'Absolute value reports the distance.' }, { tex: '\\text{opposite of } 8 = -8', text: 'The opposite mirrors it.' }, { tex: '8 > -8', text: 'So they are not the same thing.' }] },
+    },
     { kind: 'example', head: 'Another way: find the positive twin', body: 'What is |−6|?\nAbsolute value is distance from 0, always positive. The positive twin of −6 is 6, so |−6| = 6.' },
     {
       kind: 'protip',
@@ -701,18 +920,21 @@ export const NS_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Same x? Measure vertically',
       body: 'If two points share an x-coordinate, they sit on the same vertical line — one directly above the other. The distance is just how far apart the y-values are: |y₁ − y₂|. The absolute value keeps distance positive no matter which point you name first.',
+      formula: { tex: 'x_1 = x_2 \\implies d = |y_2 - y_1|', note: 'Matching x means the whole distance lives in the y-values.', parts: [{ sym: 'x_1 = x_2', means: 'both points sit on the same vertical line', tone: 'accent' }, { sym: '|y_2 - y_1|', means: 'subtract the y-values for the length', tone: 'ok' }] },
       art: plotGrid([{ x: 3, y: 2, label: '(3, 2)', color: SKY }, { x: 3, y: 7, label: '(3, 7)', color: EMR }], { join: true, range: { x: [0, 8], y: [0, 8] }, title: 'Length = 7 − 2 = 5', caption: 'The x-values match, so all the distance lives in the y-values.' }),
     },
     {
       kind: 'concept',
       head: 'Same y? Measure horizontally',
       body: 'If two points share a y-coordinate, they line up side by side on a horizontal line. Distance = |x₁ − x₂|. Spot which coordinate MATCHES, then subtract the pair that differs.',
+      formula: { tex: 'y_1 = y_2 \\implies d = |x_2 - x_1|', note: 'Matching y means the whole distance lives in the x-values.', parts: [{ sym: 'y_1 = y_2', means: 'both points sit on the same horizontal line', tone: 'accent' }, { sym: '|x_2 - x_1|', means: 'subtract the x-values for the length', tone: 'ok' }] },
       art: plotGrid([{ x: 1, y: 4, label: '(1, 4)', color: SKY }, { x: 6, y: 4, label: '(6, 4)', color: EMR }], { join: true, range: { x: [0, 8], y: [0, 7] }, title: 'Length = 6 − 1 = 5', caption: 'The y-values match, so all the distance lives in the x-values.' }),
     },
     {
       kind: 'concept',
       head: 'Crossing zero adds distances',
       body: 'When one coordinate is negative and the other positive, the path crosses zero. From −2 to 5 is 2 steps to reach zero plus 5 more: 7 total. The subtraction agrees: 5 − (−2) = 5 + 2 = 7 — subtracting a negative adds.',
+      formula: { tex: '|a| + |b| \\ \\text{when the signs differ}', note: 'Count in to zero, then out again. The two legs add.', parts: [{ sym: '|a|', means: 'how far the first point is from zero', tone: 'accent' }, { sym: '|b|', means: 'how far the second is, on the other side', tone: 'ok' }] },
       art: numberLine(-5, 7, [{ at: -2, label: '−2', color: SKY }, { at: 5, label: '5', color: EMR }], { span: { from: -2, to: 5, label: '2 + 5 = 7' }, title: 'Count to zero, then onward', caption: 'Two steps to reach zero, then five more. The total distance is seven.' }),
     },
     {
@@ -722,11 +944,26 @@ export const NS_SLIDES: SlideBank = {
       art: plotGrid([{ x: 0, y: 0 }, { x: 5, y: 0 }, { x: 5, y: 3 }, { x: 0, y: 3 }], { shape: true, range: { x: [0, 7], y: [0, 5] }, title: 'Sides 5 and 3 → area 15', caption: 'Read one horizontal side and one vertical side, then multiply.' }),
     },
     { kind: 'example', head: 'Warm-up: (0, 0) to (0, 6)', body: 'Both points have x = 0, so the path is vertical.\nSubtract y-values: |6 − 0| = 6.\nDistance: 6 units.' },
-    { kind: 'example', head: 'Vertical: (3, 2) to (3, 7)', body: 'The x-coordinates match (both 3), so measure up-down.\n|7 − 2| = 5.\nDistance: 5 units.' },
+    {
+      kind: 'example',
+      head: 'Vertical: (3, 2) to (3, 7)',
+      body: 'The x-coordinates match (both 3), so measure up-down.\n|7 − 2| = 5.\nDistance: 5 units.',
+      steps: { steps: [{ tex: 'x: 3 = 3', text: 'The x-values match.' }, { tex: '|7 - 2| = 5', text: 'Subtract the y-values.' }], answer: '5' },
+    },
     { kind: 'example', head: 'Horizontal: (1, 4) to (6, 4)', body: 'The y-coordinates match (both 4), so measure left-right.\n|6 − 1| = 5.\nDistance: 5 units.' },
-    { kind: 'example', head: 'Across zero: (−2, 4) to (5, 4)', body: 'Same y, so subtract the x-values: 5 − (−2).\nSubtracting a negative adds: 5 + 2 = 7.\nDistance: 7 units — 2 steps to the y-axis, then 5 more.' },
+    {
+      kind: 'example',
+      head: 'Across zero: (−2, 4) to (5, 4)',
+      body: 'Same y, so subtract the x-values: 5 − (−2).\nSubtracting a negative adds: 5 + 2 = 7.\nDistance: 7 units — 2 steps to the y-axis, then 5 more.',
+      steps: { steps: [{ tex: 'y: 4 = 4', text: 'The y-values match.' }, { tex: '|5 - (-2)| = 7', text: 'Subtracting a negative adds.' }], answer: '7' },
+    },
     { kind: 'example', head: 'Another crossing: (−3, 1) to (4, 1)', body: 'Same y = 1, so it\'s horizontal.\n|4 − (−3)| = |4 + 3| = 7.\nDistance: 7 units. Check by counting: 3 steps from −3 to 0, then 4 steps to 4.' },
-    { kind: 'example', head: 'Rectangle sides from corners', body: 'Corners: (1, 1), (5, 1), (5, 4), (1, 4).\nWidth: x goes from 1 to 5, so |5 − 1| = 4. Height: y goes from 1 to 4, so |4 − 1| = 3.\nThe sides are 4 and 3 — and the perimeter would be 4 + 3 + 4 + 3 = 14.' },
+    {
+      kind: 'example',
+      head: 'Rectangle sides from corners',
+      body: 'Corners: (1, 1), (5, 1), (5, 4), (1, 4).\nWidth: x goes from 1 to 5, so |5 − 1| = 4. Height: y goes from 1 to 4, so |4 − 1| = 3.\nThe sides are 4 and 3 — and the perimeter would be 4 + 3 + 4 + 3 = 14.',
+      steps: { steps: [{ tex: '\\text{width} = |x_2 - x_1|', text: 'Find one horizontal side.' }, { tex: '\\text{height} = |y_2 - y_1|', text: 'Find one vertical side.' }, { tex: 'A = w \\times h', text: 'Multiply for the area.' }] },
+    },
     { kind: 'example', head: 'Another way: count the steps', body: 'Find the distance from (1, 2) to (1, 7).\nSame x, so count straight up: 7 − 2 = 5 units.' },
     { kind: 'protip', head: 'Match first, subtract second', body: 'Start every problem by asking: which coordinate is the SAME in both points? That tells you the direction (same x → vertical, same y → horizontal). Then subtract the coordinates that differ and take the absolute value. Match, subtract, done.' },
     {

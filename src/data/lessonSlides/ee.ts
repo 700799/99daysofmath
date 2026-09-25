@@ -30,6 +30,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Multiply the base — never add',
       body: 'The base gets MULTIPLIED by itself, not added to the exponent. 2³ means 2 × 2 × 2 = 8, not 2 × 3 = 6. Write out the copies if you\'re ever unsure.',
+      formula: { tex: 'b^n = \\underbrace{b \\times b \\times \\cdots \\times b}_{n \\text{ copies}}', note: 'The little number counts copies. It is never a factor itself.', parts: [{ sym: 'b', means: 'the base: the number being multiplied', tone: 'accent' }, { sym: 'n', means: 'the exponent: how many copies to use', tone: 'ok' }] },
       art: bars([{ name: '2ˣ doubles', vals: [2, 4, 8, 16, 32], color: AMB }, { name: '2 × x adds', vals: [2, 4, 6, 8, 10], color: SKY }], { labels: ['1', '2', '3', '4', '5'], title: 'Powers climb, multiples crawl', caption: 'At x = 5, doubling has reached 32 while adding twos has only reached 10.' }),
       compare: {
         cols: [
@@ -42,6 +43,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Special powers to know',
       body: 'Any number to the 1st power is just itself: 7¹ = 7. "Squared" means the power 2, like 5² = 5 × 5. "Cubed" means the power 3, like 4³ = 4 × 4 × 4.',
+      formula: { tex: '10^n = 1 \\text{ followed by } n \\text{ zeros}', note: 'Powers of ten are free — the exponent counts the zeros.', parts: [{ sym: '10^3', means: 'a one with three zeros, so 1000', tone: 'accent' }, { sym: 'n', means: 'exactly how many zeros to write down', tone: 'ok' }] },
       art: tape([{ label: '10²', boxes: 2, each: '10', color: EMR }, { label: '10³', boxes: 3, each: '10', color: AMB }], { total: 'one zero per copy: 100, then 1000', title: 'Powers of ten are free', caption: 'The exponent tells you exactly how many zeros to write.' }),
       table: {
         head: ['power', 'means', 'value'],
@@ -50,11 +52,31 @@ export const EE_SLIDES: SlideBank = {
         note: 'Powers of ten are the friendliest — the exponent counts the zeros.',
       },
     },
-    { kind: 'example', head: 'Start simple: 5²', body: '5² means two copies of 5 multiplied.\n5 × 5 = 25.\nAnswer: 25 — that\'s why we say "5 squared".' },
-    { kind: 'example', head: 'Three copies: 3³', body: '3³ means 3 × 3 × 3.\nFirst pair: 3 × 3 = 9. Then 9 × 3 = 27.\nAnswer: 27.' },
-    { kind: 'example', head: 'Four copies: 2⁴', body: '2⁴ means 2 × 2 × 2 × 2.\nGo step by step: 2 × 2 = 4, then 4 × 2 = 8, then 8 × 2 = 16.\nAnswer: 16.' },
+    {
+      kind: 'example',
+      head: 'Start simple: 5²',
+      body: '5² means two copies of 5 multiplied.\n5 × 5 = 25.\nAnswer: 25 — that\'s why we say "5 squared".',
+      steps: { steps: [{ tex: '5^2 = 5 \\times 5', text: 'Unroll into two copies of five.' }, { tex: '= 25', text: 'Multiply them together.' }], answer: '25' },
+    },
+    {
+      kind: 'example',
+      head: 'Three copies: 3³',
+      body: '3³ means 3 × 3 × 3.\nFirst pair: 3 × 3 = 9. Then 9 × 3 = 27.\nAnswer: 27.',
+      steps: { steps: [{ tex: '3^3 = 3 \\times 3 \\times 3', text: 'Unroll into three copies.' }, { tex: '3 \\times 3 = 9', text: 'Multiply the first two.' }, { tex: '9 \\times 3 = 27', text: 'Then bring in the third.' }], answer: '27' },
+    },
+    {
+      kind: 'example',
+      head: 'Four copies: 2⁴',
+      body: '2⁴ means 2 × 2 × 2 × 2.\nGo step by step: 2 × 2 = 4, then 4 × 2 = 8, then 8 × 2 = 16.\nAnswer: 16.',
+      steps: { steps: [{ tex: '2^4 = 2 \\times 2 \\times 2 \\times 2', text: 'Unroll into four copies.' }, { tex: '4 \\times 2 = 8,\\ 8 \\times 2 = 16', text: 'Multiply in steps.' }], answer: '16' },
+    },
     { kind: 'example', head: 'Tens are the friendliest: 10³', body: '10³ means 10 × 10 × 10.\n10 × 10 = 100, then 100 × 10 = 1,000.\nAnswer: 1,000 — with base 10, the exponent counts the zeros!' },
-    { kind: 'example', head: 'A bigger one: 4³', body: '4³ means 4 × 4 × 4.\nFirst: 4 × 4 = 16. Then: 16 × 4 = 64 (because 16 × 4 = 10 × 4 + 6 × 4 = 40 + 24).\nAnswer: 64.' },
+    {
+      kind: 'example',
+      head: 'A bigger one: 4³',
+      body: '4³ means 4 × 4 × 4.\nFirst: 4 × 4 = 16. Then: 16 × 4 = 64 (because 16 × 4 = 10 × 4 + 6 × 4 = 40 + 24).\nAnswer: 64.',
+      steps: { steps: [{ tex: '4^3 = 4 \\times 4 \\times 4', text: 'Unroll into three copies.' }, { tex: '16 \\times 4 = 64', text: 'Multiply two at a time.' }], answer: '64' },
+    },
     { kind: 'example', head: 'Another way: pair the copies', body: 'Find 2⁴ by grouping.\n2⁴ = (2 × 2) × (2 × 2) = 4 × 4 = 16.' },
     { kind: 'protip', head: 'Unroll it, then multiply in steps', body: 'When a power looks scary, unroll it into a multiplication chain first: 2⁴ → 2 × 2 × 2 × 2. Then multiply two numbers at a time, left to right. Small steps beat one big leap every time.' },
     {
@@ -76,7 +98,12 @@ export const EE_SLIDES: SlideBank = {
       },
     },
     { kind: 'challenge', head: 'Extra credit: which is bigger', body: 'Compare 3³ and 5².\n3³ = 27 and 5² = 25. So 3³ is bigger, by 27 − 25 = 2.' },
-    { kind: 'summary', head: 'You speak exponent now', body: 'An exponent counts how many copies of the base to multiply: 2³ = 2 × 2 × 2 = 8. Unroll the power, then multiply step by step. Never multiply the base by the exponent — that\'s the classic trap!' },
+    {
+      kind: 'summary',
+      head: 'You speak exponent now',
+      body: 'An exponent counts how many copies of the base to multiply: 2³ = 2 × 2 × 2 = 8. Unroll the power, then multiply step by step. Never multiply the base by the exponent — that\'s the classic trap!',
+      table: { head: ['power', 'unrolled', 'value'], rows: [['2³', '2 × 2 × 2', '8'], ['3²', '3 × 3', '9'], ['10³', '10 × 10 × 10', '1000']], mark: 1, note: 'Unroll the copies and every exponent question becomes plain multiplication.' },
+    },
   ],
   '6.EE-2': [
     {
@@ -89,6 +116,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'A variable is a mystery box',
       body: 'A variable is a letter that stands for a number we don\'t know yet — or one that can change. In n + 6, the n could be 1, 10, or 100. The expression works for ALL of them.',
+      formula: { tex: 'x = \\text{any number you like}', note: 'The letter holds a place. Drop any number in and the rule still works.', parts: [{ sym: 'x', means: 'a placeholder for a number not yet chosen', tone: 'accent' }, { sym: '2x + 5', means: 'a rule that works for every value of x', tone: 'ok' }] },
       art: machine('x', '2x + 3', 'output', { title: 'a letter is a box waiting for a number', caption: 'Put 5 in the box and the rule tells you what comes out.' }),
     },
     {
@@ -116,6 +144,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Evaluate = substitute, then compute',
       body: 'To evaluate an expression, swap the variable for its value. Then follow the order of operations: parentheses first, then multiply and divide, then add and subtract. Multiplication ALWAYS beats addition.',
+      formula: { tex: '2x + 5 \\ \\text{at } x = 4 \\ \\to\\ 2(4) + 5', note: 'Wrap the value in parentheses so the operations stay in order.', parts: [{ sym: '(4)', means: 'parentheses keep the substitution unambiguous', tone: 'accent' }, { sym: '\\times \\text{ before } +', means: 'order of operations still applies', tone: 'ok' }] },
       steps: {
         steps: [
           { tex: '2x + 3,\\ x = 5', text: 'You are told what the box holds.' },
@@ -125,17 +154,37 @@ export const EE_SLIDES: SlideBank = {
         answer: '13',
       },
     },
-    { kind: 'example', head: 'Write it: six more than n', body: '"More than" means add.\nSix more than a number n is n + 6.\nAnswer: n + 6.' },
+    {
+      kind: 'example',
+      head: 'Write it: six more than n',
+      body: '"More than" means add.\nSix more than a number n is n + 6.\nAnswer: n + 6.',
+      steps: { steps: [{ tex: '\\text{"more than"} \\to +', text: 'Translate the phrase to a symbol.' }, { tex: 'n + 6', text: 'Addition can be written either way round.' }], answer: 'n + 6' },
+    },
     { kind: 'example', head: 'Write it: the product of 4 and x', body: '"Product" means multiply.\n4 times x is written by putting them side by side.\nAnswer: 4x.' },
-    { kind: 'example', head: 'Evaluate: x + 9 when x = 6', body: 'Swap x for 6: 6 + 9.\nAdd: 6 + 9 = 15.\nAnswer: 15.' },
+    {
+      kind: 'example',
+      head: 'Evaluate: x + 9 when x = 6',
+      body: 'Swap x for 6: 6 + 9.\nAdd: 6 + 9 = 15.\nAnswer: 15.',
+      steps: { steps: [{ tex: '(6) + 9', text: 'Substitute six wherever x stood.' }, { tex: '= 15', text: 'Finish the arithmetic.' }], answer: '15' },
+    },
     {
       kind: 'example',
       head: 'Evaluate: 2x + 5 when x = 4',
       body: 'Substitute: 2 × 4 + 5.\nMultiply FIRST: 2 × 4 = 8.\nThen add: 8 + 5 = 13. Answer: 13.',
       art: machine('x = 4', '2x + 5', '13', { title: 'Substitute, then compute', caption: 'Put 4 in place of x: 2 × 4 = 8, then 8 + 5 = 13.' }),
     },
-    { kind: 'example', head: 'Evaluate: 3(a − 2) when a = 5', body: 'Substitute: 3(5 − 2).\nParentheses first: 5 − 2 = 3.\nThen multiply: 3 × 3 = 9. Answer: 9.' },
-    { kind: 'example', head: 'Evaluate: 5y − 3 when y = 2', body: 'Substitute: 5 × 2 − 3.\nMultiply first: 5 × 2 = 10.\nThen subtract: 10 − 3 = 7. Answer: 7.' },
+    {
+      kind: 'example',
+      head: 'Evaluate: 3(a − 2) when a = 5',
+      body: 'Substitute: 3(5 − 2).\nParentheses first: 5 − 2 = 3.\nThen multiply: 3 × 3 = 9. Answer: 9.',
+      steps: { steps: [{ tex: '3((5) - 2)', text: 'Substitute five for a.' }, { tex: '3(3) = 9', text: 'Do the bracket first, then multiply.' }], answer: '9' },
+    },
+    {
+      kind: 'example',
+      head: 'Evaluate: 5y − 3 when y = 2',
+      body: 'Substitute: 5 × 2 − 3.\nMultiply first: 5 × 2 = 10.\nThen subtract: 10 − 3 = 7. Answer: 7.',
+      steps: { steps: [{ tex: '5(2) - 3', text: 'Substitute two for y.' }, { tex: '10 - 3 = 7', text: 'Multiply before you subtract.' }], answer: '7' },
+    },
     { kind: 'example', head: 'Another way: distribute first', body: 'Evaluate 3(a − 2) when a = 5, without plugging in first.\nDistribute: 3a − 6. Then 3 × 5 − 6 = 15 − 6 = 9.' },
     { kind: 'protip', head: 'Wrap the value in parentheses', body: 'When you substitute, write the value inside parentheses: 2x becomes 2(4). It reminds you that the number and variable are MULTIPLIED, and it keeps your work tidy. This tiny habit prevents tons of mistakes.' },
     {
@@ -176,6 +225,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Like terms stick together',
       body: 'Like terms have the exact same variable part: 3x and 2x are like terms. To combine them, add the coefficients (the front numbers): 3x + 2x = 5x. Three x\'s plus two x\'s really is five x\'s!',
+      formula: { tex: 'ax + bx = (a + b)x', note: 'Same letter, same power, so the counts add and the block stays.', parts: [{ sym: 'a, b', means: 'how many of that block you have', tone: 'accent' }, { sym: 'x', means: 'the block itself, which never changes', tone: 'ok' }] },
       art: tape([{ label: 'x terms', boxes: 5, each: 'x', color: SKY }, { label: 'numbers', boxes: 3, each: '1', color: EMR }], { total: '5x + 3, and that is as far as it goes', title: 'Two piles that never merge', caption: 'You can stack x-blocks with x-blocks and ones with ones, but never mix the piles.' }),
       compare: {
         cols: [
@@ -189,6 +239,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Equivalent = equal for EVERY x',
       body: 'Two expressions are equivalent when they give the same answer no matter what x is. 3(x + 2) and 3x + 6 match at x = 1, x = 5, x = 100 — every value. Rewriting never changes the value, only the look.',
+      formula: { tex: '3(x + 2) = 3x + 6 \\ \\text{for all } x', note: 'Two spellings of the same rule. Any input gives matching outputs.', parts: [{ sym: '\\text{for all } x', means: 'it must hold for every value, not just one', tone: 'accent' }, { sym: '\\text{one match}', means: 'proves nothing — try a second value', tone: 'warn' }] },
       art: machine('any x', '3(x + 2) or 3x + 6', 'one answer', { title: 'Two forms, one machine', caption: 'Equivalent expressions are two spellings of the same rule. Feed either one any number and the outputs match.' }),
       table: {
         head: ['x', '3(x + 4)', '3x + 12'],
@@ -196,12 +247,32 @@ export const EE_SLIDES: SlideBank = {
         note: 'Matching on one value could be luck. Matching on every value is equivalence.',
       },
     },
-    { kind: 'example', head: 'Combine: 4x + 5x', body: 'Same variable part, so add the front numbers.\n4 + 5 = 9.\nAnswer: 9x.' },
+    {
+      kind: 'example',
+      head: 'Combine: 4x + 5x',
+      body: 'Same variable part, so add the front numbers.\n4 + 5 = 9.\nAnswer: 9x.',
+      steps: { steps: [{ tex: '4x + 5x', text: 'Both terms are x-blocks.' }, { tex: '(4 + 5)x = 9x', text: 'Add the counts, keep the block.' }], answer: '9x' },
+    },
     { kind: 'example', head: 'Combine: 7a − 2a', body: 'Like terms again — subtract the coefficients.\n7 − 2 = 5.\nAnswer: 5a.' },
-    { kind: 'example', head: 'Expand: 3(x + 2)', body: 'The 3 multiplies BOTH terms inside.\n3 × x = 3x, and 3 × 2 = 6.\nAnswer: 3x + 6.' },
+    {
+      kind: 'example',
+      head: 'Expand: 3(x + 2)',
+      body: 'The 3 multiplies BOTH terms inside.\n3 × x = 3x, and 3 × 2 = 6.\nAnswer: 3x + 6.',
+      steps: { steps: [{ tex: '3 \\cdot x = 3x', text: 'The 3 visits the first term.' }, { tex: '3 \\cdot 2 = 6', text: 'And the second term too.' }], answer: '3x + 6' },
+    },
     { kind: 'example', head: 'Expand: 5(y + 3)', body: 'Share the 5 with each term.\n5 × y = 5y, and 5 × 3 = 15.\nAnswer: 5y + 15.' },
-    { kind: 'example', head: 'Simplify: 2x + 3 + x', body: 'Find the like terms: 2x and x (which is 1x).\n2x + 1x = 3x. The 3 has no partner, so it stays.\nAnswer: 3x + 3.' },
-    { kind: 'example', head: 'Both moves: 2(x + 4) + 3x', body: 'Distribute first: 2 × x = 2x and 2 × 4 = 8, giving 2x + 8 + 3x.\nCombine like terms: 2x + 3x = 5x.\nAnswer: 5x + 8.' },
+    {
+      kind: 'example',
+      head: 'Simplify: 2x + 3 + x',
+      body: 'Find the like terms: 2x and x (which is 1x).\n2x + 1x = 3x. The 3 has no partner, so it stays.\nAnswer: 3x + 3.',
+      steps: { steps: [{ tex: '2x + x = 3x', text: 'Gather the x-terms.' }, { tex: '+ 3', text: 'The plain number stays on its own.' }], answer: '3x + 3' },
+    },
+    {
+      kind: 'example',
+      head: 'Both moves: 2(x + 4) + 3x',
+      body: 'Distribute first: 2 × x = 2x and 2 × 4 = 8, giving 2x + 8 + 3x.\nCombine like terms: 2x + 3x = 5x.\nAnswer: 5x + 8.',
+      steps: { steps: [{ tex: '2x + 8 + 3x', text: 'Distribute the two first.' }, { tex: '5x + 8', text: 'Then combine the like terms.' }], answer: '5x + 8' },
+    },
     { kind: 'example', head: 'Another way: repeated addition', body: 'Show 3(x + 2) equals 3x + 6.\n3(x + 2) means (x + 2) + (x + 2) + (x + 2) = 3x + 6.' },
     { kind: 'protip', head: 'Draw arrows when you distribute', body: 'Draw an arrow from the outside number to EACH term inside the parentheses. Two terms inside means two arrows and two little multiplications. The arrows make it impossible to forget anyone.' },
     {
@@ -217,7 +288,12 @@ export const EE_SLIDES: SlideBank = {
       },
     },
     { kind: 'challenge', head: 'Extra credit: combine two groups', body: 'Simplify 4(x + 2) + 2(x + 1).\nDistribute: 4x + 8 + 2x + 2. Combine like terms: 6x + 10.' },
-    { kind: 'summary', head: 'Two moves, endless rewrites', body: 'Distribute: the outside number multiplies every term inside, so a(b + c) = ab + ac. Combine like terms by adding their coefficients: 3x + 2x = 5x. Equivalent expressions look different but give the same value for every x.' },
+    {
+      kind: 'summary',
+      head: 'Two moves, endless rewrites',
+      body: 'Distribute: the outside number multiplies every term inside, so a(b + c) = ab + ac. Combine like terms by adding their coefficients: 3x + 2x = 5x. Equivalent expressions look different but give the same value for every x.',
+      compare: { cols: [{ title: 'Distribute', tex: 'a(b+c) = ab + ac', lines: ['Clears brackets', 'Every term gets a'], tone: 'accent' }, { title: 'Combine', tex: 'ax + bx = (a+b)x', lines: ['Gathers matching blocks', 'Counts add'], tone: 'ok' }], note: 'Two moves are all you ever need to rewrite an expression.' },
+    },
   ],
   '6.EE-4': [
     {
@@ -230,12 +306,14 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'An equation is a balanced scale',
       body: 'The = sign says both sides weigh exactly the same. If you take 7 off one side, you MUST take 7 off the other, or the scale tips. Every solving move happens to both sides.',
+      formula: { tex: '\\text{left} = \\text{right}', note: 'The equals sign promises both sides weigh the same.', parts: [{ sym: '=', means: 'a promise of equal weight, not an instruction', tone: 'accent' }, { sym: '\\text{both sides}', means: 'whatever you do to one, do to the other', tone: 'ok' }] },
       art: balance('x + 3', '8', { title: 'both sides weigh the same', note: 'take 3 off BOTH sides', caption: 'Whatever you do to one pan you must do to the other, or it tips.' }),
     },
     {
       kind: 'concept',
       head: 'Undo with the opposite',
       body: 'Ask: what is being done to x? Then do the opposite. Adding 7? Subtract 7. Multiplied by 3? Divide by 3. Opposites cancel out and leave x standing alone.',
+      formula: { tex: 'x + a = b \\implies x = b - a', note: 'Every operation has an undo. Apply it to both sides.', parts: [{ sym: '+ a', means: 'was done to x, so subtract a to undo it', tone: 'accent' }, { sym: '\\text{both sides}', means: 'keeps the scale level as you undo', tone: 'ok' }] },
       art: flow([{ label: 'Added? Subtract', color: SKY }, { label: 'Subtracted? Add', color: AMB }, { label: 'Multiplied? Divide', color: EMR }, { label: 'Divided? Multiply', color: VIO }], { title: 'Every move has an undo' }),
       table: {
         head: ['the equation does', 'you undo with'],
@@ -247,6 +325,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'The goal: x alone on one side',
       body: 'You win when the equation reads x = some number. Everything you do is aimed at getting x by itself. Once x is alone, the other side IS your answer.',
+      formula: { tex: 'x = \\text{a number}', note: 'You are finished the moment x stands alone.', parts: [{ sym: 'x', means: 'by itself, with nothing attached', tone: 'accent' }, { sym: '\\text{a number}', means: 'staring back at it from the other side', tone: 'ok' }] },
       art: balance('x', '8', { title: 'This is what winning looks like', note: 'x by itself, its value opposite', caption: 'You are finished the moment x stands alone with a number staring back at it.' }),
       steps: {
         steps: [
@@ -257,16 +336,36 @@ export const EE_SLIDES: SlideBank = {
         answer: 'x = 5',
       },
     },
-    { kind: 'example', head: 'Undo adding: x + 7 = 12', body: 'x has 7 added to it, so subtract 7 from BOTH sides.\nx + 7 − 7 = 12 − 7.\nx = 5. Check: 5 + 7 = 12. ✓' },
-    { kind: 'example', head: 'Undo subtracting: x − 4 = 10', body: 'x has 4 taken away, so add 4 to both sides.\nx = 10 + 4.\nx = 14. Check: 14 − 4 = 10. ✓' },
-    { kind: 'example', head: 'Undo multiplying: 3x = 15', body: '3x means 3 times x, so divide both sides by 3.\nx = 15 ÷ 3.\nx = 5. Check: 3 × 5 = 15. ✓' },
+    {
+      kind: 'example',
+      head: 'Undo adding: x + 7 = 12',
+      body: 'x has 7 added to it, so subtract 7 from BOTH sides.\nx + 7 − 7 = 12 − 7.\nx = 5. Check: 5 + 7 = 12. ✓',
+      steps: { steps: [{ tex: 'x + 7 - 7 = 12 - 7', text: 'Subtract seven from both sides.' }, { tex: 'x = 5', text: 'The sevens cancel on the left.' }], answer: '5' },
+    },
+    {
+      kind: 'example',
+      head: 'Undo subtracting: x − 4 = 10',
+      body: 'x has 4 taken away, so add 4 to both sides.\nx = 10 + 4.\nx = 14. Check: 14 − 4 = 10. ✓',
+      steps: { steps: [{ tex: 'x - 4 + 4 = 10 + 4', text: 'Add four to both sides.' }, { tex: 'x = 14', text: 'The fours cancel on the left.' }], answer: '14' },
+    },
+    {
+      kind: 'example',
+      head: 'Undo multiplying: 3x = 15',
+      body: '3x means 3 times x, so divide both sides by 3.\nx = 15 ÷ 3.\nx = 5. Check: 3 × 5 = 15. ✓',
+      steps: { steps: [{ tex: '\\tfrac{3x}{3} = \\tfrac{15}{3}', text: 'Divide both sides by three.' }, { tex: 'x = 5', text: 'The threes cancel on the left.' }], answer: '5' },
+    },
     {
       kind: 'example',
       head: 'Undo dividing: x ÷ 2 = 8',
       body: 'x is being divided by 2, so multiply both sides by 2.\nx = 8 × 2.\nx = 16. Check: 16 ÷ 2 = 8. ✓',
       art: balance('x ÷ 2', '8', { title: 'Multiply both sides by 2', note: 'x = 16' }),
     },
-    { kind: 'example', head: 'Bigger numbers: x + 9 = 20', body: 'Subtract 9 from both sides.\nx = 20 − 9.\nx = 11. Check: 11 + 9 = 20. ✓' },
+    {
+      kind: 'example',
+      head: 'Bigger numbers: x + 9 = 20',
+      body: 'Subtract 9 from both sides.\nx = 20 − 9.\nx = 11. Check: 11 + 9 = 20. ✓',
+      steps: { steps: [{ tex: 'x = 20 - 9', text: 'Subtract nine from both sides.' }, { tex: 'x = 11', text: 'Finish the subtraction.' }], answer: '11' },
+    },
     { kind: 'example', head: 'One more: 4x = 28', body: 'Divide both sides by 4.\nx = 28 ÷ 4. Since 4 × 7 = 28, that\'s 7.\nx = 7. Check: 4 × 7 = 28. ✓' },
     { kind: 'example', head: 'Another way: ask the question', body: 'Solve x + 7 = 12 by thinking aloud.\n"What plus 7 makes 12?" 5 does. So x = 5, the same as 12 − 7.' },
     { kind: 'protip', head: 'Always check by plugging back in', body: 'After solving, put your answer back into the ORIGINAL equation. Solved x + 7 = 12 and got x = 5? Check: 5 + 7 = 12. ✓ Ten seconds of checking catches almost every mistake.' },
@@ -305,6 +404,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Four symbols to know',
       body: '< means less than, and > means greater than. ≤ means "at most" (less than OR equal), and ≥ means "at least" (greater than OR equal). The little line underneath means the number itself is included.',
+      formula: { tex: '>\\ \\ <\\ \\ \\ge\\ \\ \\le', note: 'Two are strict; two include the boundary number itself.', parts: [{ sym: '>,\\ <', means: 'strict: the boundary is NOT a solution', tone: 'warn' }, { sym: '\\ge,\\ \\le', means: 'inclusive: the boundary counts as a solution', tone: 'ok' }] },
       art: flow([{ label: '>  greater than', color: AMB }, { label: '<  less than', color: SKY }, { label: '≥  at least', color: EMR }, { label: '≤  at most', color: VIO }], { title: 'Four symbols, four phrases' }),
       table: {
         head: ['symbol', 'means', 'circle'],
@@ -317,6 +417,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'One inequality, infinitely many answers',
       body: 'x > 3 doesn\'t have one answer — it means EVERY number bigger than 3. So 4, 5, 3.1, and 100 all work. But 3 itself does not, because 3 is not bigger than 3.',
+      formula: { tex: 'x > 7 \\implies 8,\\ 9,\\ 10,\\ \\ldots', note: 'An equation points at one number; an inequality claims a whole stretch.', parts: [{ sym: 'x > 7', means: 'everything to the right of seven', tone: 'accent' }, { sym: '\\ldots', means: 'the list never ends, so you shade instead', tone: 'ok' }] },
       art: numberLine(-2, 8, [
           { at: 3, label: 'x > 3', color: ROSE },
           { at: 5, label: '', color: EMR },
@@ -327,6 +428,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Open circle or closed circle?',
       body: 'On a number line, use an OPEN circle for < or > — the number is the boundary but not included. Use a CLOSED (filled) circle for ≤ or ≥ — the number counts too. Then shade the arrow toward all the solutions.',
+      formula: { tex: '\\circ \\ \\text{for} > < \\qquad \\bullet \\ \\text{for} \\ge \\le', note: 'A filled circle means the boundary itself is a solution.', parts: [{ sym: '\\circ', means: 'hollow: the boundary is excluded', tone: 'warn' }, { sym: '\\bullet', means: 'filled: the boundary is included', tone: 'ok' }] },
       art: numberLine(-1, 9, [{ at: 2, label: 'x ≥ 2 includes 2', color: EMR }], { span: { from: 2, to: 9, label: 'shade to the right' }, title: 'Closed means the boundary counts', caption: 'With ≥ or ≤ the boundary itself is a solution, so the circle is filled in.' }),
       compare: {
         cols: [
@@ -344,16 +446,36 @@ export const EE_SLIDES: SlideBank = {
         note: 'The wide mouth always opens toward the bigger number; the point aims at the smaller one.',
       },
     },
-    { kind: 'example', head: 'Write it: n is greater than 7', body: '"Greater than" is the symbol >.\nThe mouth opens toward n, the bigger side.\nAnswer: n > 7.' },
+    {
+      kind: 'example',
+      head: 'Write it: n is greater than 7',
+      body: '"Greater than" is the symbol >.\nThe mouth opens toward n, the bigger side.\nAnswer: n > 7.',
+      steps: { steps: [{ tex: '\\text{"greater than"} \\to >', text: 'Translate the phrase.' }, { tex: 'n > 7', text: 'Seven itself does not count.' }], answer: 'n > 7' },
+    },
     {
       kind: 'example',
       head: 'Write it: at most 10',
       body: '"At most 10" means 10 is the ceiling — you can hit it but not pass it.\nThat\'s less than or equal to.\nAnswer: x ≤ 10.',
       art: numberLine(0, 14, [{ at: 10, label: 'n ≤ 10', color: SKY }], { span: { from: 0, to: 10, label: '10 is still allowed' }, title: '"At most" includes the number' }),
     },
-    { kind: 'example', head: 'Graph x ≥ 2: which circle?', body: '≥ includes the number itself, since 2 IS "at least 2".\nSo draw a CLOSED (filled) circle at 2.\nThen shade to the right, toward bigger numbers.' },
-    { kind: 'example', head: 'Is x = 5 a solution to x < 5?', body: 'Test it: is 5 less than 5?\nNo — 5 equals 5, and < does not allow equal.\nAnswer: no, 5 is not a solution.' },
-    { kind: 'example', head: 'Is x = 4 included in x ≤ 4?', body: '≤ means "at most," and equal is allowed.\n4 ≤ 4 is true because 4 equals 4.\nAnswer: yes, 4 is included — closed circle at 4.' },
+    {
+      kind: 'example',
+      head: 'Graph x ≥ 2: which circle?',
+      body: '≥ includes the number itself, since 2 IS "at least 2".\nSo draw a CLOSED (filled) circle at 2.\nThen shade to the right, toward bigger numbers.',
+      steps: { steps: [{ tex: '\\ge \\text{ includes } 2', text: 'The symbol includes the boundary.' }, { tex: '\\bullet \\text{ at } 2', text: 'So the circle is filled in.' }], answer: '\\text{closed}' },
+    },
+    {
+      kind: 'example',
+      head: 'Is x = 5 a solution to x < 5?',
+      body: 'Test it: is 5 less than 5?\nNo — 5 equals 5, and < does not allow equal.\nAnswer: no, 5 is not a solution.',
+      steps: { steps: [{ tex: '5 < 5 ?', text: 'Substitute and check.' }, { tex: '\\text{false}', text: 'Five is not less than itself.' }], answer: '\\text{no}' },
+    },
+    {
+      kind: 'example',
+      head: 'Is x = 4 included in x ≤ 4?',
+      body: '≤ means "at most," and equal is allowed.\n4 ≤ 4 is true because 4 equals 4.\nAnswer: yes, 4 is included — closed circle at 4.',
+      steps: { steps: [{ tex: '4 \\le 4 ?', text: 'Substitute and check.' }, { tex: '\\text{true}', text: 'The symbol allows equality.' }], answer: '\\text{yes}' },
+    },
     { kind: 'example', head: 'Another way: test the boundary', body: 'For x ≥ 2, is the circle open or closed?\nTest the boundary: 2 ≥ 2 is true, so 2 is included — a closed (filled) circle.' },
     { kind: 'protip', head: 'Test a number to check your graph', body: 'After graphing, pick an easy number from your shaded side and test it. Graphed x > 3 and shaded right? Test 5: is 5 > 3? Yes — shading is correct. If the test fails, you shaded the wrong way.' },
     {
@@ -376,12 +498,14 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'The independent variable drives',
       body: 'The INDEPENDENT variable is the one you choose or control — like how many hours you drive. It goes first and doesn\'t depend on anything. Time is the classic example.',
+      formula: { tex: 'd = 60t', note: 'You choose t. The rule hands back d. That is what makes t independent.', parts: [{ sym: 't', means: 'the input you get to choose', tone: 'accent' }, { sym: 'd', means: 'the output, decided by the rule', tone: 'ok' }] },
       art: machine('hours', '× 12', 'dollars', { title: 'hours drive, dollars respond', caption: 'You choose the hours. The pay is decided for you.' }),
     },
     {
       kind: 'concept',
       head: 'The dependent variable responds',
       body: 'The DEPENDENT variable is the result — it depends on the other one. Drive longer, travel farther: distance depends on time. In an equation it usually sits alone on one side, like d = 50t.',
+      formula: { tex: '\\text{dependent sits alone on one side}', note: 'The letter standing by itself is the one being worked out.', parts: [{ sym: 'd =', means: 'alone on the left, so it is dependent', tone: 'accent' }, { sym: '60t', means: 'on the right, built from the input you chose', tone: 'ok' }] },
       art: plotGrid([{ x: 1, y: 60 }, { x: 2, y: 120 }, { x: 3, y: 180 }], { join: true, range: { x: [0, 4], y: [0, 200] }, xLabel: 'hours', yLabel: 'miles', title: 'Distance follows time', caption: 'Each hour you choose lands you on exactly one distance — the dependent value.' }),
     },
     {
@@ -402,10 +526,25 @@ export const EE_SLIDES: SlideBank = {
         note: 'Read across: pick an x, the rule hands you the y.',
       },
     },
-    { kind: 'example', head: 'Plug in: y = 3x when x = 5', body: 'Substitute x = 5 into the rule.\ny = 3 × 5 = 15.\nAnswer: y = 15.' },
+    {
+      kind: 'example',
+      head: 'Plug in: y = 3x when x = 5',
+      body: 'Substitute x = 5 into the rule.\ny = 3 × 5 = 15.\nAnswer: y = 15.',
+      steps: { steps: [{ tex: 'y = 3(5)', text: 'Substitute five for x.' }, { tex: '= 15', text: 'Finish the multiplication.' }], answer: '15' },
+    },
     { kind: 'example', head: 'Adding rule: y = x + 4 when x = 10', body: 'Substitute x = 10.\ny = 10 + 4 = 14.\nAnswer: y = 14.' },
-    { kind: 'example', head: 'Road trip: d = 60t for 2 hours', body: 'The car goes 60 miles each hour, and t = 2.\nd = 60 × 2 = 120.\nAnswer: 120 miles in 2 hours.' },
-    { kind: 'example', head: 'Ticket cost: c = 5n for 4 tickets', body: 'Each ticket costs $5, and n = 4 tickets.\nc = 5 × 4 = 20.\nAnswer: $20. The cost depends on the number of tickets.' },
+    {
+      kind: 'example',
+      head: 'Road trip: d = 60t for 2 hours',
+      body: 'The car goes 60 miles each hour, and t = 2.\nd = 60 × 2 = 120.\nAnswer: 120 miles in 2 hours.',
+      steps: { steps: [{ tex: 'd = 60(2)', text: 'Substitute two hours.' }, { tex: '= 120', text: 'Sixty miles an hour for two hours.' }], answer: '120 \\text{ miles}' },
+    },
+    {
+      kind: 'example',
+      head: 'Ticket cost: c = 5n for 4 tickets',
+      body: 'Each ticket costs $5, and n = 4 tickets.\nc = 5 × 4 = 20.\nAnswer: $20. The cost depends on the number of tickets.',
+      steps: { steps: [{ tex: 'c = 5(4)', text: 'Substitute four tickets.' }, { tex: '= 20', text: 'Five dollars each.' }], answer: '\\$20' },
+    },
     {
       kind: 'example',
       head: 'Build a table: y = 2x',
@@ -426,7 +565,12 @@ export const EE_SLIDES: SlideBank = {
         note: 'Time is almost always the driver — you never get to choose how much you are paid first.',
       },
     },
-    { kind: 'challenge', head: 'Extra credit: solve for the input', body: 'Tickets cost c = 5n. If c = 35, how many tickets n?\n35 = 5n, so n = 35 ÷ 5 = 7 tickets.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: solve for the input',
+      body: 'Tickets cost c = 5n. If c = 35, how many tickets n?\n35 = 5n, so n = 35 ÷ 5 = 7 tickets.',
+      steps: { steps: [{ tex: 'y = 3x = 21', text: 'Set the output to the value given.' }, { tex: 'x = 21 \\div 3 = 7', text: 'Divide to recover the input.' }], answer: '7' },
+    },
     { kind: 'summary', head: 'Driver, responder, rule', body: 'The independent variable is the one you choose (like time); the dependent variable responds (like distance). The equation is the rule: plug in the independent value to get the dependent one. The lonely variable on one side is the dependent one.' },
   ],
   '6.EE-7': [
@@ -455,6 +599,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'The coefficient rides in front',
       body: 'A COEFFICIENT is the number multiplied by a variable — the number stuck to its front. In 4x, the coefficient is 4. If a variable stands alone, like x, its coefficient is a hidden 1.',
+      formula: { tex: '4y \\implies \\text{coefficient } 4', note: 'A coefficient is a count: 4y means four copies of y.', parts: [{ sym: '4', means: 'how many copies of the letter you have', tone: 'accent' }, { sym: 'y', means: 'the letter being counted', tone: 'ok' }] },
       art: tape([{ label: '4y', boxes: 4, each: 'y', color: AMB }], { total: 'the coefficient is 4', title: 'The number says how many', caption: 'A coefficient is a count: 4y means four copies of y.' }),
       table: {
         head: ['term', 'coefficient', 'variable'],
@@ -463,7 +608,12 @@ export const EE_SLIDES: SlideBank = {
         note: 'A lone x has an invisible 1 in front of it. Remembering that saves a lot of mistakes.',
       },
     },
-    { kind: 'concept', head: 'The constant stands alone', body: 'A CONSTANT is a term with no variable attached — just a plain number. In 7 + 3x, the constant is 7. It never changes, no matter what x is — that\'s why it\'s called constant.' },
+    {
+      kind: 'concept',
+      head: 'The constant stands alone',
+      body: 'A CONSTANT is a term with no variable attached — just a plain number. In 7 + 3x, the constant is 7. It never changes, no matter what x is — that\'s why it\'s called constant.',
+      formula: { tex: '7 + 3x \\implies \\text{constant } 7', note: 'The number with no letter attached never changes.', parts: [{ sym: '7', means: 'no letter, so its value is fixed', tone: 'accent' }, { sym: '3x', means: 'has a letter, so it varies with x', tone: 'ok' }] },
+    },
     {
       kind: 'concept',
       head: 'Simplify BEFORE you count',
@@ -476,16 +626,27 @@ export const EE_SLIDES: SlideBank = {
         answer: '2 \\text{ terms}',
       },
     },
-    { kind: 'example', head: 'Coefficient of y in 4y', body: 'The coefficient is the number stuck to the variable.\nIn 4y, that number is 4.\nAnswer: 4.' },
+    {
+      kind: 'example',
+      head: 'Coefficient of y in 4y',
+      body: 'The coefficient is the number stuck to the variable.\nIn 4y, that number is 4.\nAnswer: 4.',
+      steps: { steps: [{ tex: '4y', text: 'Look at the number in front.' }, { tex: '\\text{coefficient} = 4', text: 'It counts the copies of y.' }], answer: '4' },
+    },
     { kind: 'example', head: 'Constant in 7 + 3x', body: 'Look for the term with NO variable.\n3x has a variable, but 7 stands alone.\nAnswer: the constant is 7.' },
     { kind: 'example', head: 'Name every part of 5x + 8', body: 'Terms: 5x and 8 — two chunks split by the + sign.\nCoefficient: 5, the number in front of x.\nConstant: 8, the term with no variable.' },
     {
       kind: 'example',
       head: 'Hidden coefficient: x + 9',
       body: 'The x looks like it has no number — but x means 1x.\nSo the coefficient is 1, and the constant is 9.\nAnswer: coefficient 1, constant 9.',
+      steps: { steps: [{ tex: 'x = 1x', text: 'A lone x still has a count.' }, { tex: '\\text{coefficient} = 1', text: 'The one is simply not written.' }], answer: '1' },
       art: tape([{ label: 'x means 1x', boxes: 1, each: 'x', color: SKY }, { label: 'plus 9', boxes: 9, each: '1', color: EMR }], { total: 'coefficient 1, constant 9', title: 'A lonely x still has a 1' }),
     },
-    { kind: 'example', head: 'Count the terms in 5x − 2 + 3', body: 'Simplify first! The constants −2 and 3 combine: −2 + 3 = 1.\nThat leaves 5x + 1.\nAnswer: 2 terms, not 3.' },
+    {
+      kind: 'example',
+      head: 'Count the terms in 5x − 2 + 3',
+      body: 'Simplify first! The constants −2 and 3 combine: −2 + 3 = 1.\nThat leaves 5x + 1.\nAnswer: 2 terms, not 3.',
+      steps: { steps: [{ tex: '5x,\\ -2,\\ +3', text: 'Cut at each sign first.' }, { tex: '-2 + 3 = 1', text: 'Simplify before you count.' }, { tex: '5x + 1', text: 'Two terms remain.' }], answer: '2 \\text{ terms}' },
+    },
     { kind: 'example', head: 'Another way: show the hidden 1', body: 'What is the coefficient of x in x + 9?\nRewrite x as 1x, so x + 9 = 1x + 9. The coefficient is 1.' },
     { kind: 'protip', head: 'Underline each term first', body: 'Before answering any "parts" question, underline each chunk between the + and − signs. Then label each one: coefficient, variable, or constant. Labeling first makes every question about parts a quick read-off.' },
     {
@@ -500,7 +661,12 @@ export const EE_SLIDES: SlideBank = {
       },
     },
     { kind: 'challenge', head: 'Extra credit: combine like terms', body: 'Simplify 3x + 2 + 5x − 1.\nAdd the x-terms: 3x + 5x = 8x. Add the numbers: 2 − 1 = 1. Result: 8x + 1.' },
-    { kind: 'summary', head: 'Terms, coefficients, constants', body: 'Terms are the chunks split by + and −. The coefficient is the number in front of a variable (a lone x means 1x). The constant is the plain number with no variable. Simplify first, then name the parts!' },
+    {
+      kind: 'summary',
+      head: 'Terms, coefficients, constants',
+      body: 'Terms are the chunks split by + and −. The coefficient is the number in front of a variable (a lone x means 1x). The constant is the plain number with no variable. Simplify first, then name the parts!',
+      table: { head: ['expression', 'terms', 'coefficient', 'constant'], rows: [['5x + 8', '2', '5', '8'], ['x + 9', '2', '1', '9'], ['3x', '1', '3', 'none']], mark: 1, note: 'Every expression can be read the same three ways.' },
+    },
   ],
   '6.EE-8': [
     {
@@ -513,6 +679,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Equivalent means ALWAYS equal',
       body: 'Two expressions are EQUIVALENT if they give the same value for EVERY choice of the variable — not just one lucky match. 2(x + 3) and 2x + 6 agree at x = 1, 5, 100 … every value. That\'s true equivalence.',
+      formula: { tex: '2(x + 3) = 2x + 6 \\ \\text{for all } x', note: 'One matching value proves nothing. It must hold for every input.', parts: [{ sym: '\\text{for all}', means: 'every value of x, without exception', tone: 'accent' }, { sym: '\\text{one match}', means: 'can happen by luck, so test a second', tone: 'warn' }] },
       table: {
         head: ['x', '2(x + 3)', '2x + 6', 'match?'],
         rows: [['0', '6', '6', 'yes'], ['1', '8', '8', 'yes'], ['4', '14', '14', 'yes'], ['10', '26', '26', 'yes']],
@@ -523,6 +690,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'The quick substitution test',
       body: 'Pick an easy value like x = 2 or x = 10 and evaluate both expressions. Different answers? Definitely NOT equivalent — case closed. Same answers? Good sign, but use algebra (like distributing) to be sure.',
+      formula: { tex: '\\text{pick } x,\\ \\text{compute both},\\ \\text{compare}', note: 'Substitute the same value into both and see whether they agree.', parts: [{ sym: '\\text{same } x', means: 'both expressions must get the same input', tone: 'accent' }, { sym: '\\text{mismatch}', means: 'a single mismatch settles it forever', tone: 'bad' }] },
       art: machine('x = 4', 'x + 5 = 9?', '9 = 9', { title: 'Plug it in and see', caption: 'A solution is not something you argue about. Substitute it and check whether the two sides match.' }),
       steps: {
         steps: [
@@ -537,9 +705,15 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'A solution makes both sides equal',
       body: 'A value is a SOLUTION to an equation if plugging it in makes both sides match. For x + 5 = 9, try x = 4: does 4 + 5 equal 9? Yes — so 4 is a solution.',
+      formula: { tex: 'x = 4 \\ \\text{solves} \\ x + 5 = 9', note: 'Substitute the candidate and check the two sides match.', parts: [{ sym: '\\text{substitute}', means: 'put the candidate in place of x', tone: 'accent' }, { sym: '9 = 9', means: 'both sides agree, so it is a solution', tone: 'ok' }] },
       art: balance('3x', '12', { title: 'x = 4 balances it', note: 'try x = 4: 3(4) = 12', caption: 'A solution is the number that makes the scale sit level.' }),
     },
-    { kind: 'example', head: 'Check a solution: x + 5 = 9, x = 4', body: 'Substitute: 4 + 5 = 9?\nCompute the left side: 4 + 5 = 9. Both sides say 9. ✓\nAnswer: yes, x = 4 is a solution.' },
+    {
+      kind: 'example',
+      head: 'Check a solution: x + 5 = 9, x = 4',
+      body: 'Substitute: 4 + 5 = 9?\nCompute the left side: 4 + 5 = 9. Both sides say 9. ✓\nAnswer: yes, x = 4 is a solution.',
+      steps: { steps: [{ tex: '(4) + 5 = 9', text: 'Substitute four.' }, { tex: '9 = 9 \\ \\text{true}', text: 'Both sides match.' }], answer: '\\text{yes}' },
+    },
     {
       kind: 'example',
       head: 'Catch a fake: 2x = 8, x = 3',
@@ -553,8 +727,18 @@ export const EE_SLIDES: SlideBank = {
       body: 'Distribute the 2: 2 × x = 2x, and 2 × 3 = 6.\nSo 2(x + 3) = 2x + 6 — the exact same expression.\nAnswer: yes, equivalent for every x.',
       art: areaModel([{ label: 'x', w: 2 }, { label: '3', w: 1 }], [{ label: '2', h: 1 }], [['2x', '6']], { title: '2(x + 3) unpacks to 2x + 6', total: 'Same pieces, so equivalent' }),
     },
-    { kind: 'example', head: 'Equivalent? 3(x + 2) vs 3x + 6', body: 'Distribute: 3 × x = 3x, and 3 × 2 = 6, giving 3x + 6.\nQuick test at x = 2: 3(2 + 2) = 3 × 4 = 12, and 3(2) + 6 = 6 + 6 = 12. Match!\nAnswer: yes, equivalent.' },
-    { kind: 'example', head: 'NOT equivalent: 2x vs x + 2', body: 'Test x = 2: 2 × 2 = 4, and 2 + 2 = 4 — they match! But test x = 5: 2 × 5 = 10, and 5 + 2 = 7.\n10 ≠ 7, so they disagree.\nAnswer: not equivalent — one match was just luck.' },
+    {
+      kind: 'example',
+      head: 'Equivalent? 3(x + 2) vs 3x + 6',
+      body: 'Distribute: 3 × x = 3x, and 3 × 2 = 6, giving 3x + 6.\nQuick test at x = 2: 3(2 + 2) = 3 × 4 = 12, and 3(2) + 6 = 6 + 6 = 12. Match!\nAnswer: yes, equivalent.',
+      steps: { steps: [{ tex: '3(x+2) \\to 3x + 6', text: 'Distribute the three.' }, { tex: '\\text{identical}', text: 'The two expressions match exactly.' }], answer: '\\text{yes}' },
+    },
+    {
+      kind: 'example',
+      head: 'NOT equivalent: 2x vs x + 2',
+      body: 'Test x = 2: 2 × 2 = 4, and 2 + 2 = 4 — they match! But test x = 5: 2 × 5 = 10, and 5 + 2 = 7.\n10 ≠ 7, so they disagree.\nAnswer: not equivalent — one match was just luck.',
+      steps: { steps: [{ tex: 'x = 2 : 4 \\text{ and } 4', text: 'They happen to agree here.' }, { tex: 'x = 3 : 6 \\text{ and } 5', text: 'A second value splits them apart.' }], answer: '\\text{no}' },
+    },
     { kind: 'example', head: 'Another way: test a second value', body: 'Confirm 3(x + 2) = 3x + 6 is always true.\nTry x = 5: left 3 × 7 = 21, right 15 + 6 = 21. Both match, so they are equivalent.' },
     { kind: 'protip', head: 'One mismatch settles it forever', body: 'To PROVE two expressions are not equivalent, you only need ONE value where they differ. But matching once proves nothing — 2x and x + 2 agree at x = 2 and nowhere else. Match once, then confirm with algebra.' },
     {
@@ -582,6 +766,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Step 1: name the mystery',
       body: 'Find what the problem is asking for and give it a letter. "Let w = the number of weeks" or "let x = the number." Writing the "let" statement down keeps you from losing track of what x even means.',
+      formula: { tex: '\\text{let } x = \\text{the unknown thing}', note: 'Name it before you translate anything. It anchors the whole problem.', parts: [{ sym: '\\text{let}', means: 'the word that declares what x stands for', tone: 'accent' }, { sym: 'x', means: 'the one quantity the story is asking about', tone: 'ok' }] },
       art: flow([{ label: 'Let x = the unknown thing', color: SKY }, { label: 'Translate the sentence', color: AMB }, { label: 'Solve with opposites', color: EMR }, { label: 'Reread with your answer in', color: VIO }], { title: 'Four moves from story to answer' }),
     },
     {
@@ -600,6 +785,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Watch out for "less than"',
       body: '"Less than" flips the order of what you hear. "n less than 12" means start with 12 and take n away: 12 − n. The thing being subtracted comes FIRST in the words but SECOND in the math.',
+      formula: { tex: '\\text{"} n \\text{ less than } 12 \\text{"} = 12 - n', note: 'The amount removed is named first but written second.', parts: [{ sym: '12', means: 'the amount being taken from', tone: 'accent' }, { sym: 'n', means: 'the amount removed, which lands second', tone: 'warn' }] },
       art: flow([{ label: '"n less than 12" → 12 − n', color: EMR }, { label: 'NOT n − 12', color: ROSE }], { title: 'The one phrase that reverses', caption: '"Less than" names the amount removed first, so it lands second in the expression.' }),
       compare: {
         cols: [
@@ -613,6 +799,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Step 3: solve with opposites',
       body: 'Once you have the equation, solve it like any one-step equation. Undo adding with subtracting, undo multiplying with dividing — always to BOTH sides. Then reread the story to make sure your answer makes sense.',
+      formula: { tex: 'x + a = b \\implies x = b - a', note: 'The same undoing as always, once the equation is written.', parts: [{ sym: '\\text{opposite}', means: 'undo whatever was done to x', tone: 'accent' }, { sym: '\\text{both sides}', means: 'keeps the equation true', tone: 'ok' }] },
       steps: {
         steps: [
           { tex: 'x + 6 = 14', text: 'Six is stuck to the x.' },
@@ -621,9 +808,19 @@ export const EE_SLIDES: SlideBank = {
         answer: 'x = 8',
       },
     },
-    { kind: 'example', head: 'Write it: saving $25 a week', body: 'Marcos saves $25 per week for w weeks. Total saved?\nTotal = amount per week × number of weeks = 25 × w.\nAnswer: 25w dollars.' },
+    {
+      kind: 'example',
+      head: 'Write it: saving $25 a week',
+      body: 'Marcos saves $25 per week for w weeks. Total saved?\nTotal = amount per week × number of weeks = 25 × w.\nAnswer: 25w dollars.',
+      steps: { steps: [{ tex: '\\text{let } w = \\text{weeks}', text: 'Name the unknown.' }, { tex: '\\text{total} = 25w', text: 'Twenty-five dollars each week.' }], answer: '25w' },
+    },
     { kind: 'example', head: 'Write it: n less than 12', body: '"Less than" flips the order — start with 12.\nTake n away from it.\nAnswer: 12 − n (NOT n − 12).' },
-    { kind: 'example', head: 'Translate: a number plus 6 equals 14', body: 'Let the number be x.\n"Plus 6" → x + 6, and "equals 14" → = 14.\nAnswer: x + 6 = 14.' },
+    {
+      kind: 'example',
+      head: 'Translate: a number plus 6 equals 14',
+      body: 'Let the number be x.\n"Plus 6" → x + 6, and "equals 14" → = 14.\nAnswer: x + 6 = 14.',
+      steps: { steps: [{ tex: '\\text{let } x = \\text{the number}', text: 'Name the mystery.' }, { tex: 'x + 6 = 14', text: 'Translate phrase by phrase.' }], answer: 'x + 6 = 14' },
+    },
     {
       kind: 'example',
       head: 'Now solve it: x + 6 = 14',
@@ -634,6 +831,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'example',
       head: 'Full story: 3 packs, 21 cards',
       body: 'Three equal packs hold 21 cards total. Cards per pack?\nLet x = cards per pack, so 3x = 21. Divide both sides by 3: x = 21 ÷ 3 = 7.\nAnswer: 7 cards per pack. Check: 3 × 7 = 21. ✓',
+      steps: { steps: [{ tex: '\\text{let } p = \\text{cards per pack}', text: 'Name the unknown.' }, { tex: '3p = 21', text: 'Three packs holding 21 cards.' }, { tex: 'p = 7', text: 'Divide both sides by three.' }], answer: '7' },
       art: balance('3p', '21', { title: 'Three packs hold 21 cards', note: 'Divide both sides by 3 → p = 7' }),
     },
     { kind: 'example', head: 'Another way: ask the question', body: 'Solve 3x = 21 in your head.\n"What times 3 is 21?" 7. So x = 7, the same as 21 ÷ 3.' },
@@ -664,12 +862,14 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'One x in, one y out',
       body: 'An equation like y = 4x is a machine: feed in an x, get out exactly one y. Plug in x = 1, 2, 3 and the machine prints a table row for each. Every x has one matching y.',
+      formula: { tex: 'y = 4x', note: 'Each row of a table is one run of the rule: an input and its output.', parts: [{ sym: 'x', means: 'the input, chosen for that row', tone: 'accent' }, { sym: 'y', means: 'the one output the rule produces', tone: 'ok' }] },
       art: machine('x', 'the rule', 'y', { title: 'a table is a machine, written down', caption: 'Each row is one trip through the machine.' }),
     },
     {
       kind: 'concept',
       head: 'The rule shows in the steps',
       body: 'Read down a table and watch how y changes when x grows by 1. In y = 4x, every step adds 4 to y: 4, 8, 12, 16. A steady step size is the rule waving at you.',
+      formula: { tex: '\\Delta y \\ \\text{constant} \\implies \\text{multiply or add}', note: 'Even steps in the table mean an even climb on the graph.', parts: [{ sym: '\\Delta y', means: 'the jump from one row to the next', tone: 'accent' }, { sym: '\\text{constant}', means: 'the same jump every time means a simple rule', tone: 'ok' }] },
       art: plotGrid([{ x: 1, y: 3 }, { x: 2, y: 6 }, { x: 3, y: 9 }, { x: 4, y: 12 }], { join: true, range: { x: [0, 6], y: [0, 14] }, title: 'Steps of 3 → the rule is y = 3x', caption: 'Even steps in the table become an even climb on the graph.' }),
       table: {
         head: ['x', 'y', 'y ÷ x'],
@@ -682,6 +882,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Finding the rule from pairs',
       body: 'Given pairs like (1, 5), (2, 10), (3, 15), ask: "What do I do to x to get y?" Here each y is exactly 5 times its x. Test your guess on EVERY pair before writing y = 5x.',
+      formula: { tex: 'y = mx + b', note: 'Try multiply first; if it does not fit, add an adjustment.', parts: [{ sym: 'm', means: 'the multiplier, found from the jump', tone: 'accent' }, { sym: 'b', means: 'the adjustment, if multiplying alone misses', tone: 'ok' }] },
       art: flow([{ label: 'Try multiply: does x × k fit?', color: SKY }, { label: 'If not, try multiply then add', color: AMB }, { label: 'Test your rule on every row', color: EMR }], { title: 'Multiply first, then adjust' }),
       compare: {
         cols: [
@@ -691,9 +892,19 @@ export const EE_SLIDES: SlideBank = {
         note: 'If neither is constant on its own, the rule is a two-stepper like y = 2x + 1.',
       },
     },
-    { kind: 'example', head: 'Plug in: y = 4x when x = 6', body: 'Substitute x = 6 into the machine.\ny = 4 × 6 = 24.\nAnswer: y = 24.' },
+    {
+      kind: 'example',
+      head: 'Plug in: y = 4x when x = 6',
+      body: 'Substitute x = 6 into the machine.\ny = 4 × 6 = 24.\nAnswer: y = 24.',
+      steps: { steps: [{ tex: 'y = 4(6)', text: 'Substitute six for x.' }, { tex: '= 24', text: 'Finish the multiplication.' }], answer: '24' },
+    },
     { kind: 'example', head: 'Fill a table: y = x + 3', body: 'Plug in x = 1, 2, 3 one at a time.\nx = 1 → 1 + 3 = 4. x = 2 → 2 + 3 = 5. x = 3 → 3 + 3 = 6.\nAnswer: y = 4, 5, 6 — each row is just x plus 3.' },
-    { kind: 'example', head: 'Find the rule: (1, 3), (2, 6), (3, 9)', body: 'Compare each y to its x: 3 = 3 × 1, 6 = 3 × 2, 9 = 3 × 3.\nEvery y is 3 times its x — the rule holds for all three pairs.\nAnswer: y = 3x.' },
+    {
+      kind: 'example',
+      head: 'Find the rule: (1, 3), (2, 6), (3, 9)',
+      body: 'Compare each y to its x: 3 = 3 × 1, 6 = 3 × 2, 9 = 3 × 3.\nEvery y is 3 times its x — the rule holds for all three pairs.\nAnswer: y = 3x.',
+      steps: { steps: [{ tex: '3 \\div 1 = 3', text: 'Test multiplying on the first row.' }, { tex: '6 \\div 2 = 3', text: 'Check it on a second row.' }], answer: 'y = 3x' },
+    },
     { kind: 'example', head: 'Find the rule: (1, 5), (2, 10), (3, 15)', body: 'Test "multiply by 5": 5 × 1 = 5 ✓, 5 × 2 = 10 ✓, 5 × 3 = 15 ✓.\nThe guess works on every pair.\nAnswer: y = 5x.' },
     {
       kind: 'example',
@@ -717,6 +928,7 @@ export const EE_SLIDES: SlideBank = {
       kind: 'summary',
       head: 'Machines, tables, rules',
       body: 'An equation is a machine: plug in each x to fill the table with matching y values. Spot the rule by checking how y changes as x grows by 1, and test your rule on EVERY pair. Read straight across each row — x and y are partners.',
+      table: { head: ['x', 'y = 3x', 'y = 3x + 1'], rows: [['1', '3', '4'], ['2', '6', '7'], ['3', '9', '10']], mark: 2, note: 'The jump is the multiplier; the shift is the number added on.' },
       compare: {
         cols: [
           { title: 'Machine', tex: 'x \\to y', lines: ['The picture'], tone: 'accent' },
