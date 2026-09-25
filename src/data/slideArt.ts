@@ -237,7 +237,7 @@ export function axes(
   const x0 = Math.min(Math.max(0, r.x[0]), r.x[1]);
   b += arrow(X(r.x[0]), Y(y0), X(r.x[1]) + 8, Y(y0), INK, 1.8);
   b += arrow(X(x0), Y(r.y[0]), X(x0), Y(r.y[1]) - 8, INK, 1.8);
-  const tt = o.tickText ?? ((v: number) => String(v));
+  const tt = o.tickText ?? ((v: number) => sgn(v));
   for (const v of o.ticks?.x ?? []) {
     if (v === x0) continue;
     b += line(X(v), Y(y0) - 4, X(v), Y(y0) + 4, INK, 1.6, undefined, 0.6);
@@ -367,7 +367,7 @@ export function numberLine(
   const step = o.step ?? Math.max(1, Math.round((hi - lo) / 10));
   for (let v = Math.ceil(lo); v <= hi; v += step) {
     b += line(X(v), y - 5, X(v), y + 5, INK, 1.5, undefined, 0.55);
-    b += text(X(v), y + 22, String(v), { size: 11, op: 0.65 });
+    b += text(X(v), y + 22, sgn(v), { size: 11, op: 0.65 });
   }
   if (o.span) {
     const a = Math.min(o.span.from, o.span.to);
@@ -505,7 +505,7 @@ export function boxPlot(
   const step = o.step ?? Math.max(1, Math.round((hi - lo) / 8));
   for (let v = Math.ceil(lo); v <= hi; v += step) {
     b += line(X(v), yy - 4, X(v), yy + 4, INK, 1.4, undefined, 0.55);
-    b += text(X(v), yy + 18, String(v), { size: 10, op: 0.65 });
+    b += text(X(v), yy + 18, sgn(v), { size: 10, op: 0.65 });
   }
   if (o.labels !== false) {
     b += text(X(min), y - 34, 'min', { size: 10, op: 0.7 });
@@ -936,7 +936,7 @@ export function balancePoint(
   for (let v = Math.ceil(lo); v <= hi; v += step) {
     b += line(X(v), y, X(v), y + 6, INK, 1.4, undefined, 0.5);
     // the fulcrum stands where the mean is, so that tick keeps its number to itself
-    if (Math.abs(X(v) - X(mean)) > 15) b += text(X(v), y + 22, String(v), { size: 10, op: 0.6 });
+    if (Math.abs(X(v) - X(mean)) > 15) b += text(X(v), y + 22, sgn(v), { size: 10, op: 0.6 });
   }
   const stack: Record<number, number> = {};
   values.forEach((v, i) => {

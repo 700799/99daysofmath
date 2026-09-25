@@ -322,3 +322,29 @@ describe('the drawing on a slide', () => {
     }
   });
 });
+
+describe('a drawing agrees with the slide it sits on', () => {
+  const DECKED = LESSONS.filter((l) => (l.slides ?? []).length > 0);
+  const norm = (s: string) => s.replace(/−/g, '-').replace(/\s+/g, '');
+  /** Every "x > -5" style claim in a piece of text. */
+  const claims = (s: string) =>
+    [...norm(s).matchAll(/\b([a-z])(>=|<=|≥|≤|>|<|=)(-?\d+(?:\.\d+)?)/g)].map((m) => m[1] + m[2] + m[3]);
+
+  it('never states one answer in the prose and a different one in the picture', () => {
+    for (const l of DECKED) {
+      for (const s of l.slides ?? []) {
+        if (!s.art) continue;
+        const inBody = claims(`${s.head} ${s.body}`);
+        const inArt = claims(s.art.svg.replace(/<[^>]+>/g, ' '));
+        for (const a of inArt) {
+          const sameVar = inBody.filter((b) => b[0] === a[0]);
+          if (!sameVar.length) continue;
+          expect(
+            sameVar,
+            `${lessonKey(l.domain, l.unit)} · "${s.head}": the figure says ${a}, the words say ${sameVar.join(', ')}`,
+          ).toContain(a);
+        }
+      }
+    }
+  });
+});

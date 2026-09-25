@@ -186,3 +186,87 @@ export function ArtView({ art }: { art: SlideArt }) {
     </figure>
   );
 }
+
+// ── the slide's prose, given some typography ───────────────────────────────
+
+/** A run of 2+ capitals is the decks' own emphasis convention (NOT, BOTH, ALL). */
+const SHOUT = /\b[A-Z][A-Z-]{1,}\b/g;
+/** `**like this**` for emphasis that is not a single shouted word. */
+const STARS = /\*\*([^*]+)\*\*/g;
+
+/**
+ * A line that is really just a worked step — "3(−4) = −12." — rather than a
+ * sentence about one. It gets set apart instead of running on as prose.
+ */
+function isMathLine(line: string): boolean {
+  if (!line.includes('=')) return false;
+  // "Is this really that? Test x = 5." is a question about a step, not a step
+  if (line.includes('?') && !/=\s*\?\s*$/.test(line)) return false;
+  const words = line.match(/\b[A-Za-z]{3,}\b/g) ?? [];
+  return words.length <= 2 && line.length <= 64;
+}
+
+/** Style the emphasis the decks already use, rather than leaving it shouting. */
+function emphasise(line: string, key: string) {
+  const out: React.ReactNode[] = [];
+  let rest = line;
+  let n = 0;
+  // **stars** first, so a shouted word inside them still gets picked up after
+  rest = rest.replace(STARS, (_m, inner) => `\u0001${inner}\u0001`);
+  for (const piece of rest.split('\u0001')) {
+    const starred = n % 2 === 1;
+    let last = 0;
+    let m: RegExpExecArray | null;
+    SHOUT.lastIndex = 0;
+    const kids: React.ReactNode[] = [];
+    while ((m = SHOUT.exec(piece))) {
+      if (m.index > last) kids.push(piece.slice(last, m.index));
+      kids.push(
+        <b key={`${key}-${n}-${m.index}`} className="font-display font-extrabold text-accent">
+          {m[0]}
+        </b>,
+      );
+      last = m.index + m[0].length;
+    }
+    if (last < piece.length) kids.push(piece.slice(last));
+    out.push(
+      starred ? (
+        <b key={`${key}-s${n}`} className="font-bold text-ink">
+          {kids}
+        </b>
+      ) : (
+        <span key={`${key}-p${n}`}>{kids}</span>
+      ),
+    );
+    n += 1;
+  }
+  return out;
+}
+
+/**
+ * A slide body, set as typography rather than one grey block. Each authored
+ * line becomes its own paragraph, the emphasis the decks already write in
+ * capitals is rendered as emphasis, and a line that is purely a worked step is
+ * lifted into its own bounded chip.
+ */
+export function RichText({ text, className = '' }: { text: string; className?: string }) {
+  const lines = text.split('\n').map((l) => l.trim()).filter(Boolean);
+  return (
+    <div className={`space-y-1.5 ${className}`}>
+      {lines.map((line, i) =>
+        isMathLine(line) ? (
+          <div
+            key={i}
+            className="rounded-xl border-2 border-line bg-surface px-3 py-1.5 text-center font-display text-[15px] font-extrabold tracking-tight text-ink"
+          >
+            {line.replace(/\.$/, '')}
+          </div>
+        ) : (
+          <p key={i} className="text-[15px] leading-relaxed text-ink-muted">
+            {emphasise(line, String(i))}
+          </p>
+        ),
+      )}
+    </div>
+  );
+}

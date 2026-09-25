@@ -496,7 +496,7 @@ export const A1_SLIDES_U01_04: SlideBank = {
       kind: 'challenge',
       head: 'Extra credit: two-step with a flip',
       body: 'Solve −4x + 3 < 23.\nSubtract 3: −4x < 20. Divide by −4 and FLIP: x > −5.\nCheck: x = 0 gives 3 < 23 ✓, and the boundary −5 gives exactly 23, which is not < 23 — open dot at −5.',
-      art: numberLine(-8, 6, [{ at: -3, label: 'x < −3', color: ROSE }], { span: { from: -8, to: -3, label: 'everything below −3' }, title: 'Subtract first, then divide and flip' }),
+      art: numberLine(-9, 5, [{ at: -5, label: 'x > −5', color: EMR }], { span: { from: -5, to: 5, label: 'everything above −5' }, title: 'Subtract first, then divide and flip', caption: 'Dividing by −4 flipped < into >, so the shading runs to the RIGHT of −5.' }),
     },
     {
       kind: 'summary',

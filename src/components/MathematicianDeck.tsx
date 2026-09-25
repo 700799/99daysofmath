@@ -17,7 +17,7 @@ export function MathematicianDeckPlayer({ deck, onClose }: { deck: Deck; onClose
   const isLast = idx >= total - 1;
 
   // min-read gate: 4s per slide at the default setting (6 = 1×; 0 = off)
-  const screenSecs = useProgress((s) => s.arcadeConfig.lessonScreenSeconds ?? 6);
+  const screenSecs = useProgress((s) => s.arcadeConfig.lessonScreenSeconds ?? 0);
   const [remain, setRemain] = useState(0);
   useEffect(() => {
     if (screenSecs <= 0) { setRemain(0); return; }

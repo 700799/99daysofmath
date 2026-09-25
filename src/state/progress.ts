@@ -120,7 +120,7 @@ export interface ArcadeConfig {
   earnRatio: number; // game seconds earned per lesson second; play capped at lessonTime*ratio (0 = off)
   hiddenGames: string[]; // arcade game ids the parent has turned off (hidden from the hub)
   storyInterval: number; // minutes of play between forced math-story / mathematician breaks (0 = off)
-  lessonScreenSeconds: number; // min seconds to read each lesson screen before Next (0 = off)
+  lessonScreenSeconds: number; // min seconds to read each lesson screen before Next (0 = off, the default)
   answerRevealSeconds: number; // think-time before the worked solution un-hides in explanations (0 = instant)
   gameMaxSeconds: number; // hard cap on a single game session in seconds (0 = no cap); default 180 (3 min)
   extendMinutes: number; // minutes added when you extend play (lesson or coins)
@@ -473,7 +473,7 @@ const v11Defaults = {
     earnRatio: 1,
     hiddenGames: [],
     storyInterval: 5,
-    lessonScreenSeconds: 6,
+    lessonScreenSeconds: 0,
     answerRevealSeconds: 15,
     gameMaxSeconds: 180, // 3-minute cap per game by default (parent-adjustable)
     extendMinutes: 3,
@@ -762,6 +762,19 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       const rec = (stateAny[key] as Record<string, number>) ?? {};
       for (const u of ARCADE_UNITS) if (rec[u] === undefined) rec[u] = base;
       stateAny[key] = rec;
+    }
+  }
+  if (fromVersion < 30) {
+    // The per-screen read gate now ships OFF: a forced pause before Next was
+    // friction on every slide of every lesson, and the app already lets a
+    // parent or admin switch it back on in Settings. Only the old default (6)
+    // is cleared — an install where someone deliberately picked 4, 8 or 10
+    // keeps that choice.
+    const cfg = (state as Record<string, unknown>).arcadeConfig as
+      | (ArcadeConfig & Record<string, unknown>)
+      | undefined;
+    if (cfg && (cfg.lessonScreenSeconds === undefined || cfg.lessonScreenSeconds === 6)) {
+      cfg.lessonScreenSeconds = 0;
     }
   }
   if (fromVersion < 29) {
@@ -1472,7 +1485,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 29,
+      version: 30,
       migrate: migrateProgress,
     },
   ),

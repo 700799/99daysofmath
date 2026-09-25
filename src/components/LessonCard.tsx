@@ -14,7 +14,7 @@ import { ReadAloud } from './ReadAloud';
 import { DOMAIN_EMOJI } from '../types/problem';
 import { stickerById } from '../utils/encouragement';
 import { Mascot } from './Mascot';
-import { ArtView, CompareView, FormulaView, StepsView, TableView } from './SlideBlocks';
+import { ArtView, CompareView, FormulaView, RichText, StepsView, TableView } from './SlideBlocks';
 
 interface Props {
   lesson: Lesson;
@@ -131,10 +131,11 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
   const [exampleOpen, setExampleOpen] = useState<Record<number, boolean>>({});
   const [practiceState, setPracticeState] = useState<Record<number, PracticeState>>({});
 
-  // Per-slide minimum read time (anti-click-through): 8s example slides, 5s
-  // concept/explanation slides, 3s short slides. The admin's lessonScreenSeconds
-  // scales the pacing (6 = 1×; 0 = off). The deck still advances only on press.
-  const screenSecs = useProgress((s) => s.arcadeConfig.lessonScreenSeconds ?? 6);
+  // Per-slide minimum read time (anti-click-through). OFF by default: a forced
+  // pause on every slide was friction, not learning. A parent or admin turns it
+  // on in Settings, and then 8s example slides, 5s concept slides, 3s short ones,
+  // scaled by lessonScreenSeconds (6 = 1×). The deck still advances only on press.
+  const screenSecs = useProgress((s) => s.arcadeConfig.lessonScreenSeconds ?? 0);
   const [remain, setRemain] = useState(0);
   useEffect(() => {
     if (phase !== 'learn' || screenSecs <= 0) {
@@ -463,14 +464,17 @@ function ConceptPage({ lesson }: { lesson: Lesson }) {
 
 // One story-style slide: a kind badge, a big headline, and ~3 readable
 // sentences. Renders lesson `slides` decks (the math-stories format).
-const SLIDE_STYLE: Record<LessonSlide['kind'], { badge: string; emoji: string; card: string; badgeCls: string }> = {
-  objective: { badge: "Today's goal", emoji: '🎯', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-sky-200 text-accent' },
-  concept: { badge: 'How it works', emoji: '💡', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-blue-200 text-accent' },
-  example: { badge: 'Worked example', emoji: '✏️', card: 'bg-ok-soft border-ok/40', badgeCls: 'bg-emerald-200 text-ok' },
-  protip: { badge: 'Pro tip', emoji: '⭐', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-violet-200 text-accent' },
-  trap: { badge: 'Trap to avoid', emoji: '⚠️', card: 'bg-warn-soft border-warn/40', badgeCls: 'bg-amber-200 text-warn' },
-  challenge: { badge: 'Extra credit', emoji: '🌟', card: 'bg-warn-soft border-warn/50', badgeCls: 'bg-yellow-300 text-yellow-950' },
-  summary: { badge: 'Summary', emoji: '🏁', card: 'bg-ok-soft border-ok/40', badgeCls: 'bg-green-200 text-ok' },
+const SLIDE_STYLE: Record<
+  LessonSlide['kind'],
+  { badge: string; emoji: string; card: string; badgeCls: string; rule: string; callout: boolean }
+> = {
+  objective: { badge: "Today's goal", emoji: '🎯', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-sky-200 text-accent', rule: 'border-accent/60', callout: false },
+  concept: { badge: 'How it works', emoji: '💡', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-blue-200 text-accent', rule: 'border-accent/60', callout: false },
+  example: { badge: 'Worked example', emoji: '✏️', card: 'bg-ok-soft border-ok/40', badgeCls: 'bg-emerald-200 text-ok', rule: 'border-ok/60', callout: false },
+  protip: { badge: 'Pro tip', emoji: '⭐', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-violet-200 text-accent', rule: 'border-accent/60', callout: true },
+  trap: { badge: 'Trap to avoid', emoji: '⚠️', card: 'bg-warn-soft border-warn/40', badgeCls: 'bg-amber-200 text-warn', rule: 'border-warn/60', callout: true },
+  challenge: { badge: 'Extra credit', emoji: '🌟', card: 'bg-warn-soft border-warn/50', badgeCls: 'bg-yellow-300 text-yellow-950', rule: 'border-warn/60', callout: true },
+  summary: { badge: 'Summary', emoji: '🏁', card: 'bg-ok-soft border-ok/40', badgeCls: 'bg-green-200 text-ok', rule: 'border-ok/60', callout: true },
 };
 
 /**
@@ -500,7 +504,17 @@ function SlidePage({ slide }: { slide: LessonSlide }) {
       {/* The picture first — it is the point of the card. */}
       {lead && <div className={`mt-3 rounded-2xl border-2 px-2 py-3 ${st.card}`}>{lead}</div>}
 
-      <p className="mt-3 whitespace-pre-line text-[15px] leading-relaxed text-ink-muted">{slide.body}</p>
+      {/* The prose, given some typography: the capitals the decks already write
+          for emphasis are set as emphasis, a line that is purely a worked step
+          becomes its own chip, and the four callout kinds get a tinted box
+          rather than another paragraph of grey. */}
+      {st.callout ? (
+        <div className={`mt-3 rounded-2xl border-2 px-3 py-2.5 ${st.card}`}>
+          <RichText text={slide.body} />
+        </div>
+      ) : (
+        <RichText text={slide.body} className={`mt-3 border-l-4 pl-3 ${st.rule}`} />
+      )}
 
       {/* Then the rest of the mathematics, lifted out of the paragraph and framed. */}
       {showsFormulaBelow && <FormulaView block={slide.formula!} />}

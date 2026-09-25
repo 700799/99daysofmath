@@ -9,8 +9,9 @@ import { useProgress } from '../state/progress';
  * appeared.
  *
  * - `dep` re-arms the gate whenever it changes (a new slide / a fresh open).
- * - The admin's `lessonScreenSeconds <= 0` "off" switch (unlimited / passcode
- *   mode) bypasses the gate entirely, matching the rest of the app's gates.
+ * - The admin's `lessonScreenSeconds <= 0` "off" switch bypasses the gate
+ *   entirely, matching the rest of the app's gates. That is the DEFAULT, so
+ *   this gate is off until a parent or admin turns the read time on.
  * - Fail-open: if the video never reports it can play within `maxWaitMs`
  *   (a stall or a failed download), we unlock anyway so a child is never
  *   permanently trapped.
@@ -22,8 +23,8 @@ export function useVideoLoadGate(
   dep: unknown,
   { ms = 2000, maxWaitMs = 8000 }: { ms?: number; maxWaitMs?: number } = {},
 ): boolean {
-  // 0 (or less) disables every read/watch gate in the app — honor it here too.
-  const gatesOff = useProgress((s) => (s.arcadeConfig.lessonScreenSeconds ?? 6) <= 0);
+  // 0 (or less) disables every read/watch gate in the app — and 0 is the default.
+  const gatesOff = useProgress((s) => (s.arcadeConfig.lessonScreenSeconds ?? 0) <= 0);
   const [locked, setLocked] = useState(!gatesOff);
 
   useEffect(() => {
