@@ -48,6 +48,15 @@ const config: Config = {
           gray: '#8A8F97',
         },
       },
+      fontSize: {
+        // Tailwind's scale bottoms out at xs (12px), but badges, chips, axis
+        // labels and captions genuinely need the steps below it — 320 call
+        // sites reach for an arbitrary `text-[11px]` and friends. Name them,
+        // with the line-height and the looser tracking small type wants.
+        '2xs': ['0.6875rem', { lineHeight: '1rem', letterSpacing: '0.006em' }], // 11px
+        '3xs': ['0.625rem', { lineHeight: '0.875rem', letterSpacing: '0.012em' }], // 10px
+        '4xs': ['0.5625rem', { lineHeight: '0.8125rem', letterSpacing: '0.018em' }], // 9px
+      },
       fontFamily: {
         // A modern grotesk system: Space Grotesk for headings/numerals,
         // Inter for running text, JetBrains Mono for telemetry readouts.

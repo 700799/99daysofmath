@@ -143,7 +143,11 @@ export function art(alt: string, body: string, caption?: string): SlideArt {
     caption,
     svg:
       `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" ` +
-      `font-family="Nunito, ui-rounded, system-ui, sans-serif" stroke-linecap="round" ` +
+      // The app's own display face. This used to name Nunito, which the app
+      // never loads, so every figure fell back to a system font and read as a
+      // different typeface from the card around it.
+      `font-family="'Space Grotesk', Inter, system-ui, sans-serif" ` +
+      `font-variant-numeric="tabular-nums" stroke-linecap="round" ` +
       `stroke-linejoin="round">${styled}${body}</svg>`,
   };
 }

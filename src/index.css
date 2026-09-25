@@ -90,6 +90,53 @@ button {
   font-size: 1.05em;
 }
 
+/* ─────────────────────────────────────────────────────────────────────────
+   Typography.
+
+   Space Grotesk's heaviest real cut is 700, but ~718 call sites ask the
+   display face for 800 (and a few for 900). Without this the browser
+   *synthesises* those weights — it smears the 700 outlines sideways, which
+   is what made headings, badges and buttons look soft. Turning synthesis
+   off makes the browser pick the nearest real weight instead.
+   ───────────────────────────────────────────────────────────────────────── */
+.font-display,
+.font-mono {
+  font-synthesis-weight: none;
+}
+
+/* Space Grotesk sets loose by default; display sizes want the tracking
+   pulled in, and a headline should not leave one word stranded on its own
+   line when the browser can balance it instead. */
+h1,
+h2,
+h3,
+.font-display {
+  letter-spacing: -0.011em;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+/* Running text: no orphans, and a long expression like `x² + 10x + 25`
+   breaks rather than forcing the card to scroll sideways. */
+p {
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
+/* Digits that sit in a column — a table of values, a worked run, a score,
+   a countdown — have to line up. Inter and Space Grotesk both ship tabular
+   figures; proportional ones are still right for running prose. */
+.nums-tabular,
+table,
+ol.steps,
+[data-nums='tabular'] {
+  font-variant-numeric: tabular-nums;
+}
+
 /* Brief screen-shake used by the arcade FX kit on damaging hits. */
 @keyframes arcade-shake {
   0%, 100% { transform: translate(0, 0); }

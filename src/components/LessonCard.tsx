@@ -556,13 +556,15 @@ function ExamplePage({
             <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-ink-muted mb-1.5">
               Step-by-step
             </div>
-            <ol className="space-y-1.5">
+            {/* Same boxed run as a slide's `steps` block, so a worked example
+                reads the same way wherever the reader meets one. */}
+            <ol className="space-y-1.5 nums-tabular">
               {ex.steps.map((s, i) => (
-                <li key={i} className="flex gap-2 text-sm text-ink">
-                  <span className="text-ink-dim font-display font-bold w-4 shrink-0">
-                    {i + 1}.
+                <li key={i} className="flex gap-2.5 rounded-xl border-2 border-line bg-surface px-2.5 py-2">
+                  <span className="mt-px flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent font-display text-2xs font-extrabold text-on-accent">
+                    {i + 1}
                   </span>
-                  <span>{s}</span>
+                  <span className="min-w-0 flex-1 text-[15px] leading-snug text-ink">{s}</span>
                 </li>
               ))}
             </ol>

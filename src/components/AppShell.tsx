@@ -125,16 +125,19 @@ export function AppShell({ children }: Props) {
               </span>
             </div>
           ) : (
-            // shrink-0: getting out of a screen matters more than the stats
-            // badge keeping its full width, so the badge absorbs the squeeze.
-            <div className="flex shrink-0 items-center gap-0.5">
+            // Getting out of a screen matters more than the stats badge keeping
+            // its full width, so the badge absorbs most of the squeeze — but the
+            // row may not push the page sideways either. A long course name
+            // ("Precalculus") used to do exactly that, so the label truncates
+            // once there is genuinely no room.
+            <div className="flex min-w-0 shrink items-center gap-0.5">
               <Link
                 to={parent.to}
                 aria-label={`Back to ${parent.label}`}
-                className="flex items-center gap-1 min-h-11 text-ink-muted hover:text-ink"
+                className="flex min-w-0 items-center gap-1 min-h-11 text-ink-muted hover:text-ink"
               >
                 <span className="text-2xl shrink-0">←</span>
-                <span className="font-display font-semibold whitespace-nowrap">{parent.label}</span>
+                <span className="truncate font-display font-semibold">{parent.label}</span>
               </Link>
               {/* Retargeting back one level would otherwise put Home two or
                   three taps away, so it keeps a shortcut of its own. */}
