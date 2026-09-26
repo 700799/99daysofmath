@@ -39,12 +39,21 @@ function Tex({ tex, display = false, className = '' }: { tex: string; display?: 
 export function FormulaView({ block }: { block: FormulaBlock }) {
   return (
     <div className="mt-3">
-      <div className="rounded-2xl border-2 border-accent/45 bg-surface px-3 py-3 shadow-sm">
-        <div className="overflow-x-auto text-center text-ink [&_.katex-display]:my-0" style={{ fontSize: 'clamp(1rem, 5.2vw, 1.4rem)' }}>
+      {/* The rule is the point of the slide, so its frame says so: an accent
+          wash with a little depth, an eyebrow, and the mathematics set large.
+          The wash is the same one every inline equation sits on, just bigger. */}
+      <div className="relative overflow-hidden rounded-2xl border-2 border-accent/50 bg-gradient-to-b from-accent-soft to-surface px-3 pb-3 pt-6 shadow-[0_8px_20px_-12px_rgb(var(--accent)/0.55)]">
+        <span className="absolute left-3 top-1.5 font-display text-3xs font-extrabold uppercase tracking-[0.14em] text-accent/80">
+          Formula
+        </span>
+        <div
+          className="overflow-x-auto text-center text-ink [&_.katex-display]:my-0"
+          style={{ fontSize: 'clamp(1.1rem, 5.6vw, 1.55rem)' }}
+        >
           <Tex tex={block.tex} display />
         </div>
         {block.note && (
-          <p className="mt-2 border-t border-line pt-2 text-center text-[13px] font-display font-bold leading-snug text-ink-muted">
+          <p className="mt-2 border-t border-accent/20 pt-2 text-center text-[13px] font-display font-bold leading-snug text-ink-muted">
             {block.note}
           </p>
         )}
@@ -55,7 +64,7 @@ export function FormulaView({ block }: { block: FormulaBlock }) {
             const t = TONE[p.tone ?? 'plain'];
             return (
               <div key={i} className={`flex items-center gap-2.5 rounded-xl border-2 px-2.5 py-1.5 ${t.box}`}>
-                <span className={`shrink-0 rounded-lg px-2 py-1 font-display text-[15px] font-extrabold leading-none ${t.chip}`}>
+                <span data-plain-math className={`shrink-0 rounded-lg px-2 py-1 font-display text-[15px] font-extrabold leading-none ${t.chip}`}>
                   <Tex tex={p.sym} />
                 </span>
                 <span className="text-[13px] font-semibold leading-snug text-ink">{p.means}</span>
@@ -121,7 +130,7 @@ export function StepsView({ block }: { block: StepsBlock }) {
       {block.answer && (
         <div className="flex items-center gap-2 rounded-xl border-2 border-ok/50 bg-ok-soft px-3 py-2">
           <span className="font-display text-[11px] font-extrabold uppercase tracking-wider text-ok">Answer</span>
-          <span className="overflow-x-auto font-display text-[17px] font-extrabold text-ink">
+          <span data-plain-math className="overflow-x-auto font-display text-[17px] font-extrabold text-ink">
             <Tex tex={block.answer} />
           </span>
         </div>
@@ -206,6 +215,91 @@ function isMathLine(line: string): boolean {
   return words.length <= 2 && line.length <= 64;
 }
 
+/**
+ * An expression inside a sentence — "x + 5 = 9", "3(−4) + 2", "½ × ½" — set
+ * apart as an equation chip. It has to contain an operator: "3 and 4" is not
+ * mathematics. ASCII hyphen is deliberately not an operator, or step-by-step
+ * would be one; the decks write subtraction with a real minus sign.
+ */
+const TOKEN = '[A-Za-z0-9()\\u00bc-\\u00be\\u00b2\\u00b3\\u00b9\\u2070-\\u209f.,/]+';
+const OPER = '\\s*[+\\u2212\\u00d7\\u00f7=<>\\u2264\\u2265\\u2260\\u00b1\\u00b7]\\s*';
+const INLINE_MATH = new RegExp(`(?<![\\w])${TOKEN}(?:${OPER}${TOKEN})+(?![\\w])`, 'g');
+
+/** Names that may appear as a bare word inside an expression. */
+const FUNCTIONS = new Set(['sin', 'cos', 'tan', 'log', 'ln', 'exp', 'sqrt', 'abs', 'max', 'min', 'mod']);
+/** Short English words that would otherwise pass as variables: "of −15", "at −2". */
+const STOPWORDS = new Set(['of', 'at', 'to', 'in', 'on', 'is', 'as', 'by', 'or', 'an', 'so', 'if', 'up', 'no', 'be', 'do', 'it', 'we', 'he', 'me', 'my', 'us', 'am', 'go']);
+
+/**
+ * The pattern is loose on purpose, so the judgement lives here: an operand
+ * is a number, a short variable like x or 2x, or a function name. "muffin =
+ * total" and "but −2" have operators but are still prose.
+ */
+function isExpression(raw: string): boolean {
+  const tokens = raw.split(new RegExp(OPER)).map((t) => t.replace(/[().,]/g, ''));
+  let anchored = false;
+  for (const t of tokens) {
+    if (!t) continue;
+    if (/\d/.test(t)) {
+      anchored = true;
+      continue;
+    }
+    if (/^[A-Za-z]+$/.test(t)) {
+      const w = t.toLowerCase();
+      if (STOPWORDS.has(w)) return false;
+      if (t.length <= 2) anchored = true;
+      else if (!FUNCTIONS.has(w)) return false;
+      continue;
+    }
+  }
+  return anchored;
+}
+
+/** Punctuation the loose pattern swallows at an edge — "= 3." or "(both". */
+function trimEdges(raw: string): [string, string, string] {
+  let head = '';
+  let tail = '';
+  let body = raw;
+  const m = body.match(/[.,]+$/);
+  if (m) {
+    tail = m[0];
+    body = body.slice(0, -tail.length);
+  }
+  const opens = (body.match(/\(/g) ?? []).length;
+  const closes = (body.match(/\)/g) ?? []).length;
+  if (body.startsWith('(') && opens > closes) {
+    head = '(';
+    body = body.slice(1);
+  } else if (body.endsWith(')') && closes > opens) {
+    tail = ')' + tail;
+    body = body.slice(0, -1);
+  }
+  return [head, body, tail];
+}
+
+/** Wrap each inline expression in a piece of prose as an equation chip. */
+function withInlineMath(piece: string, key: string): React.ReactNode[] {
+  const out: React.ReactNode[] = [];
+  let last = 0;
+  let m: RegExpExecArray | null;
+  INLINE_MATH.lastIndex = 0;
+  while ((m = INLINE_MATH.exec(piece))) {
+    const [head, body, tail] = trimEdges(m[0]);
+    if (!isExpression(body)) continue;
+    if (m.index > last) out.push(piece.slice(last, m.index));
+    if (head) out.push(head);
+    out.push(
+      <span key={`${key}-m${m.index}`} className="eq">
+        {body}
+      </span>,
+    );
+    if (tail) out.push(tail);
+    last = m.index + m[0].length;
+  }
+  if (last < piece.length) out.push(piece.slice(last));
+  return out;
+}
+
 /** Style the emphasis the decks already use, rather than leaving it shouting. */
 function emphasise(line: string, key: string) {
   const out: React.ReactNode[] = [];
@@ -220,7 +314,7 @@ function emphasise(line: string, key: string) {
     SHOUT.lastIndex = 0;
     const kids: React.ReactNode[] = [];
     while ((m = SHOUT.exec(piece))) {
-      if (m.index > last) kids.push(piece.slice(last, m.index));
+      if (m.index > last) kids.push(...withInlineMath(piece.slice(last, m.index), `${key}-${n}-${last}`));
       kids.push(
         <b key={`${key}-${n}-${m.index}`} className="font-display font-extrabold text-accent">
           {m[0]}
@@ -228,7 +322,7 @@ function emphasise(line: string, key: string) {
       );
       last = m.index + m[0].length;
     }
-    if (last < piece.length) kids.push(piece.slice(last));
+    if (last < piece.length) kids.push(...withInlineMath(piece.slice(last), `${key}-${n}-${last}`));
     out.push(
       starred ? (
         <b key={`${key}-s${n}`} className="font-bold text-ink">
@@ -257,7 +351,7 @@ export function RichText({ text, className = '' }: { text: string; className?: s
         isMathLine(line) ? (
           <div
             key={i}
-            className="rounded-xl border-2 border-line bg-surface px-3 py-1.5 text-center font-display text-[15px] font-extrabold tracking-tight text-ink"
+            className="rounded-xl border-2 border-accent/35 bg-accent-soft px-3 py-2 text-center font-display text-[16px] font-extrabold tracking-tight text-ink nums-tabular"
           >
             {line.replace(/\.$/, '')}
           </div>

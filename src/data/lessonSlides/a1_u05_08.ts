@@ -148,7 +148,7 @@ export const A1_SLIDES_U05_08: SlideBank = {
       kind: 'concept',
       head: 'Uphill, downhill, or flat',
       body: 'Read a line left to right, like a sentence. Climbing? The slope is POSITIVE. Falling? NEGATIVE. Perfectly flat, like a hallway floor? The slope is exactly 0 — zero steepness, not "no slope".',
-      formula: { tex: 'm > 0 \\ \\text{up} \\quad m < 0 \\ \\text{down} \\quad m = 0 \\ \\text{flat}', note: 'The sign of m alone tells you which way the line leans.', parts: [{ sym: 'm > 0', means: 'climbs as you read left to right', tone: 'ok' }, { sym: 'm < 0', means: 'falls as you read left to right', tone: 'bad' }, { sym: 'm = 0', means: 'no climb at all, so the line runs level', tone: 'accent' }] },
+      formula: { tex: '\\begin{gathered} m > 0 \\ \\text{up} \\\\ m < 0 \\ \\text{down} \\\\ m = 0 \\ \\text{flat} \\end{gathered}', note: 'The sign of m alone tells you which way the line leans.', parts: [{ sym: 'm > 0', means: 'climbs as you read left to right', tone: 'ok' }, { sym: 'm < 0', means: 'falls as you read left to right', tone: 'bad' }, { sym: 'm = 0', means: 'no climb at all, so the line runs level', tone: 'accent' }] },
       art: lineGraph([{ m: 2, b: 2, label: 'uphill: m > 0' }, { m: -2, b: 10, label: 'downhill: m < 0' }, { m: 0, b: 5, label: 'flat: m = 0' }], { range: { x: [0, 6], y: [-1, 13] }, showIntercept: false, title: 'The sign of m tells the direction', caption: 'Positive climbs left to right, negative falls, and zero just runs level.' }),
     },
     {
