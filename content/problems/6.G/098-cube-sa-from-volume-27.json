@@ -50,5 +50,10 @@
     "cube",
     "volume-to-sa"
   ],
-  "estimatedSeconds": 95
+  "estimatedSeconds": 95,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"94.8,80 155.3,36 265.3,36 204.8,80\" fill=\"#F59E0B10\" stroke=\"#F59E0B\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"204.8,80 265.3,36 265.3,146 204.8,190\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"94.8,190 204.8,190 204.8,80 94.8,80\" fill=\"#F59E0B26\" stroke=\"#F59E0B\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><line x1=\"155.3\" y1=\"146\" x2=\"155.3\" y2=\"36\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><line x1=\"155.3\" y1=\"146\" x2=\"265.3\" y2=\"146\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><line x1=\"94.8\" y1=\"190\" x2=\"155.3\" y2=\"146\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><text x=\"149.8\" y=\"214\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text><text x=\"180\" y=\"40\" font-size=\"15\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">the cube holds 27</text><text x=\"180\" y=\"232\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">find the edge, then the surface area</text></svg>",
+    "alt": "A cube with edge ?"
+  }
 }

@@ -413,6 +413,7 @@ function AdminPanel() {
             <div className="mt-3" />
             <AdminPick
               label="Read time per lesson screen"
+              hint="Off by default. Turn it on to make each slide sit for a moment before Next unlocks."
               options={[
                 { value: 0, label: 'Off' },
                 { value: 4, label: '4s' },
@@ -518,11 +519,14 @@ function AdminPanel() {
 // Numbered chooser variant that shows custom labels (for non-integer / unit values).
 function AdminPick({
   label,
+  hint,
   options,
   value,
   onPick,
 }: {
   label: string;
+  /** One line under the label, for a setting whose default needs explaining. */
+  hint?: string;
   options: { value: number; label: string }[];
   value: number;
   onPick: (n: number) => void;
@@ -532,6 +536,7 @@ function AdminPick({
       <div className="text-[11px] font-display font-extrabold uppercase tracking-wider text-ink-muted mb-1.5">
         {label}
       </div>
+      {hint && <p className="mb-2 text-[12px] leading-snug text-ink-dim">{hint}</p>}
       <div className="flex gap-2">
         {options.map((o) => (
           <button

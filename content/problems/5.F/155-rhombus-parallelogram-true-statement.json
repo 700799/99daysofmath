@@ -68,5 +68,10 @@
     "quadrilaterals",
     "hierarchy"
   ],
-  "estimatedSeconds": 55
+  "estimatedSeconds": 55,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 220\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"14.7,124.8 94.7,124.8 118.7,75.2 38.7,75.2\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><text x=\"66.7\" y=\"158\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">parallelogram</text><polygon points=\"130,124 202,124 230,76 158,76\" fill=\"#8B5CF61e\" stroke=\"#8B5CF6\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><line x1=\"166\" y1=\"129\" x2=\"166\" y2=\"119\" stroke=\"#10B981\" stroke-width=\"2.2\"/><line x1=\"220.3\" y1=\"102.5\" x2=\"211.7\" y2=\"97.5\" stroke=\"#10B981\" stroke-width=\"2.2\"/><line x1=\"194\" y1=\"71\" x2=\"194\" y2=\"81\" stroke=\"#10B981\" stroke-width=\"2.2\"/><line x1=\"139.7\" y1=\"97.5\" x2=\"148.3\" y2=\"102.5\" stroke=\"#10B981\" stroke-width=\"2.2\"/><text x=\"180\" y=\"158\" font-size=\"13\" font-weight=\"700\" fill=\"#8B5CF6\" text-anchor=\"middle\">rhombus</text><text x=\"180\" y=\"204\" font-size=\"17\" font-weight=\"700\" fill=\"#8B5CF6\" text-anchor=\"middle\">?</text><polygon points=\"241.3,126.4 345.3,126.4 319.7,73.6 266.9,73.6\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><line x1=\"293.3\" y1=\"78.6\" x2=\"293.3\" y2=\"68.6\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><line x1=\"293.3\" y1=\"131.4\" x2=\"293.3\" y2=\"121.4\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"293.3\" y=\"158\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">trapezoid</text><text x=\"180\" y=\"36\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">which one is always one of the others?</text></svg>",
+    "alt": "A row of shapes: parallelogram, rhombus, trapezoid"
+  }
 }

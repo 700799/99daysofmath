@@ -46,5 +46,10 @@
     "supplementary",
     "angle-pairs"
   ],
-  "estimatedSeconds": 30
+  "estimatedSeconds": 30,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"20\" y1=\"180\" x2=\"340\" y2=\"180\" stroke=\"currentColor\" stroke-width=\"3\"/><line x1=\"150\" y1=\"180\" x2=\"89\" y2=\"65.2\" stroke=\"#F59E0B\" stroke-width=\"3\"/><path d=\"M 186 180 A 36 36 0 0 0 133.1 148.2\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.4\"/><text x=\"177.8\" y=\"138.7\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">118°</text><path d=\"M 125.6 134.1 A 52 52 0 0 0 98 180\" fill=\"none\" stroke=\"#10B981\" stroke-width=\"2.4\"/><text x=\"90\" y=\"148.9\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">?</text></svg>",
+    "alt": "Two angles on a straight line: 118° and ?"
+  }
 }

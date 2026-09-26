@@ -66,5 +66,10 @@
     "opposite-rays",
     "notation"
   ],
-  "estimatedSeconds": 45
+  "estimatedSeconds": 45,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 200\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"180\" y1=\"100\" x2=\"40\" y2=\"100\" stroke=\"#F59E0B\" stroke-width=\"3.4\"/><line x1=\"47.9\" y1=\"95.7\" x2=\"40\" y2=\"100\" stroke=\"#F59E0B\" stroke-width=\"3.4\"/><line x1=\"47.9\" y1=\"104.3\" x2=\"40\" y2=\"100\" stroke=\"#F59E0B\" stroke-width=\"3.4\"/><line x1=\"180\" y1=\"100\" x2=\"320\" y2=\"100\" stroke=\"#0EA5E9\" stroke-width=\"3.4\"/><line x1=\"312.1\" y1=\"104.3\" x2=\"320\" y2=\"100\" stroke=\"#0EA5E9\" stroke-width=\"3.4\"/><line x1=\"312.1\" y1=\"95.7\" x2=\"320\" y2=\"100\" stroke=\"#0EA5E9\" stroke-width=\"3.4\"/><circle cx=\"180\" cy=\"100\" r=\"6.5\" fill=\"currentColor\"/><circle cx=\"96\" cy=\"100\" r=\"5\" fill=\"#F59E0B\"/><circle cx=\"264\" cy=\"100\" r=\"5\" fill=\"#0EA5E9\"/><text x=\"180\" y=\"82\" font-size=\"15\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">B</text><text x=\"96\" y=\"84\" font-size=\"14\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">A</text><text x=\"264\" y=\"84\" font-size=\"14\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">C</text><text x=\"110\" y=\"130\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">ray BA</text><text x=\"250\" y=\"130\" font-size=\"12\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">ray BC</text><text x=\"180\" y=\"168\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">same endpoint, opposite directions</text></svg>",
+    "alt": "Two rays from the same point B going in opposite directions"
+  }
 }

@@ -139,7 +139,7 @@ export function Home() {
           className="block rounded-2xl p-3 bg-surface border border-line text-ink shadow-sm hover:shadow-md hover:border-line-strong hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">🧠</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Practice</div>
+          <div className="mt-1 hyphens-auto break-words font-display text-xs font-extrabold sm:text-sm">Practice</div>
           <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Adaptive</div>
         </Link>
         <Link
@@ -147,7 +147,7 @@ export function Home() {
           className="block rounded-2xl p-3 bg-surface border border-line text-ink shadow-sm hover:shadow-md hover:border-line-strong hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">🕹️</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Arcade</div>
+          <div className="mt-1 hyphens-auto break-words font-display text-xs font-extrabold sm:text-sm">Arcade</div>
           <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Games</div>
         </Link>
         <Link
@@ -155,7 +155,7 @@ export function Home() {
           className="block rounded-2xl p-3 bg-surface border border-line text-ink shadow-sm hover:shadow-md hover:border-line-strong hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">🏆</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Finals</div>
+          <div className="mt-1 hyphens-auto break-words font-display text-xs font-extrabold sm:text-sm">Finals</div>
           <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Every course</div>
         </Link>
       </div>
@@ -252,7 +252,7 @@ export function Home() {
           className="block rounded-2xl p-3 bg-surface border border-line text-ink shadow-sm hover:shadow-md hover:border-line-strong hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">📘</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Lessons</div>
+          <div className="mt-1 hyphens-auto break-words font-display text-xs font-extrabold sm:text-sm">Lessons</div>
           <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Step-by-step</div>
         </Link>
         <Link
@@ -260,7 +260,7 @@ export function Home() {
           className="block rounded-2xl p-3 bg-surface border border-line text-ink shadow-sm hover:shadow-md hover:border-line-strong hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">🧑‍🔬</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Mathematicians</div>
+          <div className="mt-1 hyphens-auto break-words font-display text-xs font-extrabold sm:text-sm">Mathematicians</div>
           <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">Famous minds</div>
         </Link>
         <Link
@@ -268,7 +268,7 @@ export function Home() {
           className="block rounded-2xl p-3 bg-surface border border-line text-ink shadow-sm hover:shadow-md hover:border-line-strong hover:-translate-y-0.5 active:translate-y-0 transition-all"
         >
           <div className="text-2xl">🌟</div>
-          <div className="font-display font-extrabold text-xs sm:text-sm mt-1">Math Stories</div>
+          <div className="mt-1 hyphens-auto break-words font-display text-xs font-extrabold sm:text-sm">Math Stories</div>
           <div className="text-[10px] text-ink-muted mt-0.5 line-clamp-1">History</div>
         </Link>
       </div>

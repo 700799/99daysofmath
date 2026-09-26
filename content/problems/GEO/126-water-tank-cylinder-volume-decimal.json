@@ -44,5 +44,10 @@
     "cylinder",
     "rounding"
   ],
-  "estimatedSeconds": 60
+  "estimatedSeconds": 60,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"118\" y1=\"62\" x2=\"118\" y2=\"196\" stroke=\"#F59E0B\" stroke-width=\"2.4\"/><line x1=\"242\" y1=\"62\" x2=\"242\" y2=\"196\" stroke=\"#F59E0B\" stroke-width=\"2.4\"/><rect x=\"118\" y=\"62\" width=\"124\" height=\"134\" fill=\"#F59E0B18\" stroke=\"none\"/><path d=\"M 118 196 A 62 20 0 0 1 242 196\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"1.6\" stroke-dasharray=\"5 4\" opacity=\"0.55\"/><path d=\"M 118 196 A 62 20 0 0 0 242 196\" fill=\"none\" stroke=\"#F59E0B\" stroke-width=\"2.4\"/><ellipse cx=\"180\" cy=\"62\" rx=\"62\" ry=\"20\" fill=\"#F59E0B10\" stroke=\"#F59E0B\" stroke-width=\"2.4\"/><line x1=\"180\" y1=\"62\" x2=\"242\" y2=\"62\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><circle cx=\"180\" cy=\"62\" r=\"3.5\" fill=\"#0EA5E9\"/><text x=\"211\" y=\"54\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">4 ft</text><line x1=\"262\" y1=\"62\" x2=\"262\" y2=\"196\" stroke=\"#10B981\" stroke-width=\"2\"/><line x1=\"257\" y1=\"62\" x2=\"267\" y2=\"62\" stroke=\"#10B981\" stroke-width=\"2\"/><line x1=\"257\" y1=\"196\" x2=\"267\" y2=\"196\" stroke=\"#10B981\" stroke-width=\"2\"/><text x=\"272\" y=\"133\" font-size=\"13\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"start\">10 ft</text><text x=\"180\" y=\"34\" font-size=\"15\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">V = ?</text></svg>",
+    "alt": "A cylinder of radius 4 ft and height 10 ft"
+  }
 }

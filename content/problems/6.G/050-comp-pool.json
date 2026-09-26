@@ -40,5 +40,10 @@
     "composite",
     "word"
   ],
-  "estimatedSeconds": 75
+  "estimatedSeconds": 75,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"82.5\" y=\"60\" width=\"195\" height=\"130\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.6\"/><rect x=\"82.5\" y=\"157.5\" width=\"65\" height=\"32.5\" fill=\"#F43F5E22\" stroke=\"#F43F5E\" stroke-width=\"2.6\"/><text x=\"180\" y=\"210\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">30 ft</text><text x=\"72.5\" y=\"129\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"end\">20 ft</text><text x=\"115\" y=\"149.5\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">10 ft</text><text x=\"155.5\" y=\"177.8\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"start\">5 ft</text><text x=\"180\" y=\"34\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">yard outside the pool = ?</text></svg>",
+    "alt": "A 30 ft by 20 ft rectangle with a 10 ft by 5 ft piece inside it"
+  }
 }

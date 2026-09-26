@@ -32,10 +32,17 @@ export function Explanation({ steps, alternatives }: Props) {
             Step-by-step
           </span>
         </div>
-        <ol className="space-y-2 list-decimal list-inside text-ink">
+        {/* One bounded box per step, with the number in its own chip. A flat
+            list-decimal run made every step look like the same sentence. */}
+        <ol className="space-y-1.5 nums-tabular">
           {steps.map((step, i) => (
-            <li key={i}>
-              <MathText text={step} />
+            <li key={i} className="flex gap-2.5 rounded-xl border-2 border-line bg-surface px-2.5 py-2">
+              <span className="mt-px flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent font-display text-2xs font-extrabold text-on-accent">
+                {i + 1}
+              </span>
+              <span className="min-w-0 flex-1 text-[15px] leading-snug text-ink">
+                <MathText text={step} />
+              </span>
             </li>
           ))}
         </ol>

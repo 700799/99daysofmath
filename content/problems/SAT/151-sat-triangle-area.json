@@ -46,5 +46,10 @@
     "area",
     "triangle"
   ],
-  "estimatedSeconds": 30
+  "estimatedSeconds": 30,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"60,200 300,200 160.8,100\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"160.8\" y1=\"100\" x2=\"160.8\" y2=\"200\" stroke=\"#10B981\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/><path d=\"M 169.8 200 L 169.8 191 L 160.8 191\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><text x=\"180\" y=\"222\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">12</text><text x=\"170.8\" y=\"154\" font-size=\"13\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"start\">5</text><text x=\"180\" y=\"88\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">area = ?</text></svg>",
+    "alt": "A triangle with base 12 and height 5"
+  }
 }

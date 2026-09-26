@@ -134,7 +134,7 @@ export class TrailScene extends Phaser.Scene {
       const labelText = completed ? '★' : String(node.unit);
       const label = this.add
         .text(0, 0, labelText, {
-          fontFamily: 'Nunito, system-ui, sans-serif',
+          fontFamily: '"Space Grotesk", Inter, system-ui, sans-serif',
           fontSize: completed ? '34px' : '24px',
           fontStyle: '900',
           color: unlocked ? '#0F172A' : '#6B7280',
@@ -179,7 +179,7 @@ export class TrailScene extends Phaser.Scene {
         const badgeBg = this.add.circle(0, 0, 14, 0xfbbf24, 1);
         const badgeText = this.add
           .text(0, 0, `${stars}`, {
-            fontFamily: 'Nunito, system-ui, sans-serif',
+            fontFamily: '"Space Grotesk", Inter, system-ui, sans-serif',
             fontSize: '14px',
             fontStyle: '900',
             color: '#0F172A',

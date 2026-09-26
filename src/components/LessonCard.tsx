@@ -14,6 +14,7 @@ import { ReadAloud } from './ReadAloud';
 import { DOMAIN_EMOJI } from '../types/problem';
 import { stickerById } from '../utils/encouragement';
 import { Mascot } from './Mascot';
+import { ArtView, CompareView, FormulaView, RichText, StepsView, TableView } from './SlideBlocks';
 
 interface Props {
   lesson: Lesson;
@@ -130,10 +131,11 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
   const [exampleOpen, setExampleOpen] = useState<Record<number, boolean>>({});
   const [practiceState, setPracticeState] = useState<Record<number, PracticeState>>({});
 
-  // Per-slide minimum read time (anti-click-through): 8s example slides, 5s
-  // concept/explanation slides, 3s short slides. The admin's lessonScreenSeconds
-  // scales the pacing (6 = 1×; 0 = off). The deck still advances only on press.
-  const screenSecs = useProgress((s) => s.arcadeConfig.lessonScreenSeconds ?? 6);
+  // Per-slide minimum read time (anti-click-through). OFF by default: a forced
+  // pause on every slide was friction, not learning. A parent or admin turns it
+  // on in Settings, and then 8s example slides, 5s concept slides, 3s short ones,
+  // scaled by lessonScreenSeconds (6 = 1×). The deck still advances only on press.
+  const screenSecs = useProgress((s) => s.arcadeConfig.lessonScreenSeconds ?? 0);
   const [remain, setRemain] = useState(0);
   useEffect(() => {
     if (phase !== 'learn' || screenSecs <= 0) {
@@ -184,21 +186,30 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 backdrop-blur-sm p-4 sm:p-6"
+        className="fixed inset-0 z-50 flex items-stretch justify-center bg-slate-900/70 backdrop-blur-sm sm:items-center sm:p-6"
         role="dialog"
         aria-label={`Lesson: ${lesson.title}`}
       >
         <motion.div
-          initial={{ scale: 0.9, y: 16, opacity: 0 }}
+          initial={{ scale: 0.96, y: 16, opacity: 0 }}
           animate={{ scale: 1, y: 0, opacity: 1 }}
           transition={{ type: 'spring', stiffness: 240, damping: 20 }}
-          className="bg-surface rounded-3xl px-5 sm:px-6 py-6 max-w-md w-full shadow-2xl max-h-[92vh] overflow-y-auto"
+          // A phone gets the whole screen — the deck is the task, not a
+          // peek at it — with the buttons pinned and only the slide
+          // scrolling. From sm up it goes back to a centred card.
+          className="flex h-[100dvh] w-full flex-col bg-surface px-4 shadow-2xl sm:h-auto sm:max-h-[92vh] sm:max-w-xl sm:rounded-3xl sm:px-7"
+          style={{
+            paddingTop: 'max(1rem, env(safe-area-inset-top))',
+            paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))',
+          }}
         >
           {phase === 'reward' ? (
-            <RewardView xp={LESSON_XP} earned={earned} onStart={onStart} onClose={onClose} />
+            <div className="min-h-0 flex-1 overflow-y-auto">
+              <RewardView xp={LESSON_XP} earned={earned} onStart={onStart} onClose={onClose} />
+            </div>
           ) : (
             <>
-              <div className="flex items-center justify-between gap-3">
+              <div className="flex shrink-0 items-center justify-between gap-3">
                 <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-accent truncate">
                   📘 {lesson.domain} · Unit {lesson.unit}
                 </div>
@@ -214,7 +225,7 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
                 onJump={(idx) => setPageIndex(idx)}
               />
 
-              <div className="mt-3 min-h-[280px]">
+              <div className="-mx-4 mt-3 min-h-0 flex-1 overflow-y-auto px-4 pb-2 sm:mx-0 sm:px-0">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={pageIndex}
@@ -265,7 +276,7 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
                 </AnimatePresence>
               </div>
 
-              <div className="mt-4 flex gap-2">
+              <div className="mt-3 flex shrink-0 gap-2 pt-1">
                 <button
                   type="button"
                   onClick={goBack}
@@ -287,7 +298,7 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
               <button
                 type="button"
                 onClick={onClose}
-                className="mt-2 w-full text-sm font-display font-bold text-ink-dim hover:text-ink-muted"
+                className="mt-2 w-full shrink-0 text-sm font-display font-bold text-ink-dim hover:text-ink-muted"
               >
                 Maybe later
               </button>
@@ -453,18 +464,32 @@ function ConceptPage({ lesson }: { lesson: Lesson }) {
 
 // One story-style slide: a kind badge, a big headline, and ~3 readable
 // sentences. Renders lesson `slides` decks (the math-stories format).
-const SLIDE_STYLE: Record<LessonSlide['kind'], { badge: string; emoji: string; card: string; badgeCls: string }> = {
-  objective: { badge: "Today's goal", emoji: '🎯', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-sky-200 text-accent' },
-  concept: { badge: 'How it works', emoji: '💡', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-blue-200 text-accent' },
-  example: { badge: 'Worked example', emoji: '✏️', card: 'bg-ok-soft border-ok/40', badgeCls: 'bg-emerald-200 text-ok' },
-  protip: { badge: 'Pro tip', emoji: '⭐', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-violet-200 text-accent' },
-  trap: { badge: 'Trap to avoid', emoji: '⚠️', card: 'bg-warn-soft border-warn/40', badgeCls: 'bg-amber-200 text-warn' },
-  challenge: { badge: 'Extra credit', emoji: '🌟', card: 'bg-warn-soft border-warn/50', badgeCls: 'bg-yellow-300 text-yellow-950' },
-  summary: { badge: 'Summary', emoji: '🏁', card: 'bg-ok-soft border-ok/40', badgeCls: 'bg-green-200 text-ok' },
+const SLIDE_STYLE: Record<
+  LessonSlide['kind'],
+  { badge: string; emoji: string; card: string; badgeCls: string; rule: string; callout: boolean }
+> = {
+  objective: { badge: "Today's goal", emoji: '🎯', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-sky-200 text-accent', rule: 'border-accent/60', callout: false },
+  concept: { badge: 'How it works', emoji: '💡', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-blue-200 text-accent', rule: 'border-accent/60', callout: false },
+  example: { badge: 'Worked example', emoji: '✏️', card: 'bg-ok-soft border-ok/40', badgeCls: 'bg-emerald-200 text-ok', rule: 'border-ok/60', callout: false },
+  protip: { badge: 'Pro tip', emoji: '⭐', card: 'bg-accent-soft border-accent/35', badgeCls: 'bg-violet-200 text-accent', rule: 'border-accent/60', callout: true },
+  trap: { badge: 'Trap to avoid', emoji: '⚠️', card: 'bg-warn-soft border-warn/40', badgeCls: 'bg-amber-200 text-warn', rule: 'border-warn/60', callout: true },
+  challenge: { badge: 'Extra credit', emoji: '🌟', card: 'bg-warn-soft border-warn/50', badgeCls: 'bg-yellow-300 text-yellow-950', rule: 'border-warn/60', callout: true },
+  summary: { badge: 'Summary', emoji: '🏁', card: 'bg-ok-soft border-ok/40', badgeCls: 'bg-green-200 text-ok', rule: 'border-ok/60', callout: true },
 };
 
+/**
+ * One slide, read like a flash card: the headline, then the PICTURE, then the
+ * words that explain what you just looked at.
+ *
+ * The figure used to sit under the paragraph, so on a phone you read six lines
+ * of prose before you saw anything — and most readers never scrolled. A slide
+ * that has something to show now leads with it, and the prose becomes the
+ * caption underneath rather than the main event.
+ */
 function SlidePage({ slide }: { slide: LessonSlide }) {
   const st = SLIDE_STYLE[slide.kind];
+  const lead = slide.art ? <ArtView art={slide.art} /> : slide.formula ? <FormulaView block={slide.formula} /> : null;
+  const showsFormulaBelow = !!slide.formula && !!slide.art;
   return (
     <div>
       <div className="flex items-center justify-between gap-2">
@@ -473,10 +498,29 @@ function SlidePage({ slide }: { slide: LessonSlide }) {
         </span>
         <ReadAloud text={[slide.head, slide.body]} label="" />
       </div>
-      <div className={`mt-3 rounded-2xl border-2 p-4 ${st.card}`}>
-        <h3 className="text-xl font-display font-extrabold leading-tight text-ink">{slide.head}</h3>
-        <p className="mt-2 whitespace-pre-line text-[15px] leading-relaxed text-ink">{slide.body}</p>
-      </div>
+
+      <h3 className="mt-3 text-[22px] font-display font-extrabold leading-tight text-ink">{slide.head}</h3>
+
+      {/* The picture first — it is the point of the card. */}
+      {lead && <div className={`mt-3 rounded-2xl border-2 px-2 py-3 ${st.card}`}>{lead}</div>}
+
+      {/* The prose, given some typography: the capitals the decks already write
+          for emphasis are set as emphasis, a line that is purely a worked step
+          becomes its own chip, and the four callout kinds get a tinted box
+          rather than another paragraph of grey. */}
+      {st.callout ? (
+        <div className={`mt-3 rounded-2xl border-2 px-3 py-2.5 ${st.card}`}>
+          <RichText text={slide.body} />
+        </div>
+      ) : (
+        <RichText text={slide.body} className={`mt-3 border-l-4 pl-3 ${st.rule}`} />
+      )}
+
+      {/* Then the rest of the mathematics, lifted out of the paragraph and framed. */}
+      {showsFormulaBelow && <FormulaView block={slide.formula!} />}
+      {slide.compare && <CompareView block={slide.compare} />}
+      {slide.steps && <StepsView block={slide.steps} />}
+      {slide.table && <TableView block={slide.table} />}
     </div>
   );
 }
@@ -512,13 +556,15 @@ function ExamplePage({
             <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-ink-muted mb-1.5">
               Step-by-step
             </div>
-            <ol className="space-y-1.5">
+            {/* Same boxed run as a slide's `steps` block, so a worked example
+                reads the same way wherever the reader meets one. */}
+            <ol className="space-y-1.5 nums-tabular">
               {ex.steps.map((s, i) => (
-                <li key={i} className="flex gap-2 text-sm text-ink">
-                  <span className="text-ink-dim font-display font-bold w-4 shrink-0">
-                    {i + 1}.
+                <li key={i} className="flex gap-2.5 rounded-xl border-2 border-line bg-surface px-2.5 py-2">
+                  <span className="mt-px flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent font-display text-2xs font-extrabold text-on-accent">
+                    {i + 1}
                   </span>
-                  <span>{s}</span>
+                  <span className="min-w-0 flex-1 text-[15px] leading-snug text-ink">{s}</span>
                 </li>
               ))}
             </ol>

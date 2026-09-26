@@ -45,5 +45,10 @@
     "volume",
     "multi-step"
   ],
-  "estimatedSeconds": 55
+  "estimatedSeconds": 55,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"70.6,90 139.4,40 289.4,40 220.6,90\" fill=\"#F59E0B10\" stroke=\"#F59E0B\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"220.6,90 289.4,40 289.4,140 220.6,190\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"70.6,190 220.6,190 220.6,90 70.6,90\" fill=\"#F59E0B26\" stroke=\"#F59E0B\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><line x1=\"139.4\" y1=\"140\" x2=\"139.4\" y2=\"40\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><line x1=\"139.4\" y1=\"140\" x2=\"289.4\" y2=\"140\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><line x1=\"70.6\" y1=\"190\" x2=\"139.4\" y2=\"140\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><text x=\"145.6\" y=\"214\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">6 in</text><text x=\"58.6\" y=\"144\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"end\">?</text><text x=\"274.1\" y=\"177\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">5 in</text><text x=\"180\" y=\"40\" font-size=\"15\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">the box holds 120</text></svg>",
+    "alt": "A rectangular prism 6 in by 5 in by ?"
+  }
 }

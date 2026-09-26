@@ -44,5 +44,10 @@
     "properties-of-equality",
     "algebra"
   ],
-  "estimatedSeconds": 45
+  "estimatedSeconds": 45,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 230\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"24\" y=\"40\" width=\"312\" height=\"36\" rx=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" opacity=\"0.6\"/><text x=\"180\" y=\"63\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">given: 3x − 7 = 20</text><line x1=\"180\" y1=\"78\" x2=\"180\" y2=\"82\" stroke=\"currentColor\" stroke-width=\"1.6\"/><line x1=\"175.7\" y1=\"74.1\" x2=\"180\" y2=\"82\" stroke=\"currentColor\" stroke-width=\"1.6\"/><line x1=\"184.3\" y1=\"74.1\" x2=\"180\" y2=\"82\" stroke=\"currentColor\" stroke-width=\"1.6\"/><rect x=\"24\" y=\"84\" width=\"312\" height=\"36\" rx=\"8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" opacity=\"0.6\"/><text x=\"180\" y=\"107\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">add 7 to both sides: 3x = 27</text><line x1=\"180\" y1=\"122\" x2=\"180\" y2=\"126\" stroke=\"currentColor\" stroke-width=\"1.6\"/><line x1=\"175.7\" y1=\"118.1\" x2=\"180\" y2=\"126\" stroke=\"currentColor\" stroke-width=\"1.6\"/><line x1=\"184.3\" y1=\"118.1\" x2=\"180\" y2=\"126\" stroke=\"currentColor\" stroke-width=\"1.6\"/><rect x=\"24\" y=\"128\" width=\"312\" height=\"36\" rx=\"8\" fill=\"#10B98114\" stroke=\"#10B981\" stroke-width=\"2.2\" opacity=\"1\"/><text x=\"180\" y=\"151\" font-size=\"13\" font-weight=\"700\" fill=\"#10B981\" text-anchor=\"middle\">divide both sides by 3: x = ?</text></svg>",
+    "alt": "The steps of a short two-column proof, in order"
+  }
 }

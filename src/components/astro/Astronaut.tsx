@@ -193,7 +193,7 @@ function Prop({ prop, accent }: { prop: AstroProp; accent: string }) {
       return (
         <g transform="translate(84 62) rotate(6)">
           <rect x="0" y="0" width="26" height="28" rx="5" fill="#fff" {...OUT} />
-          <text x="13" y="21" textAnchor="middle" fontSize="20" fontWeight="800" fontFamily="Nunito, ui-rounded, system-ui, sans-serif" fill={accent}>
+          <text x="13" y="21" textAnchor="middle" fontSize="20" fontWeight="800" fontFamily="'Space Grotesk', Inter, system-ui, sans-serif" fill={accent}>
             {glyph}
           </text>
         </g>
@@ -337,12 +337,12 @@ export function Astronaut({
         <path d="M96 40 q4 6 0 9 q-4 -3 0 -9 z" fill={VISOR_LIGHT} stroke={INK} strokeWidth={1.5} />
       )}
       {expr === 'sleep' && (
-        <text x="92" y="30" fontSize="12" fontWeight="800" fontFamily="Nunito, system-ui, sans-serif" fill={INK} opacity="0.7">
+        <text x="92" y="30" fontSize="12" fontWeight="800" fontFamily="'Space Grotesk', Inter, system-ui, sans-serif" fill={INK} opacity="0.7">
           z z
         </text>
       )}
       {expr === 'wow' && (
-        <g fill={INK} fontSize="14" fontWeight="900" fontFamily="Nunito, system-ui, sans-serif">
+        <g fill={INK} fontSize="14" fontWeight="900" fontFamily="'Space Grotesk', Inter, system-ui, sans-serif">
           <text x="18" y="24">!</text>
           <text x="98" y="24">!</text>
         </g>

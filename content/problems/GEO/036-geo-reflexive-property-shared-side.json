@@ -49,5 +49,10 @@
     "reflexive-property",
     "two-column"
   ],
-  "estimatedSeconds": 45
+  "estimatedSeconds": 45,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 230\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"60,180 180,60 180,180\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.8\" stroke-linejoin=\"round\"/><polygon points=\"300,180 180,60 180,180\" fill=\"#0EA5E91e\" stroke=\"#0EA5E9\" stroke-width=\"2.8\" stroke-linejoin=\"round\"/><line x1=\"180\" y1=\"60\" x2=\"180\" y2=\"180\" stroke=\"#8B5CF6\" stroke-width=\"3.4\"/><text x=\"194\" y=\"124\" font-size=\"13\" font-weight=\"700\" fill=\"#8B5CF6\" text-anchor=\"start\">BD</text><text x=\"54\" y=\"198\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">A</text><text x=\"306\" y=\"198\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">C</text><text x=\"180\" y=\"46\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">B</text><text x=\"180\" y=\"200\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">D</text><line x1=\"123.5\" y1=\"123.5\" x2=\"116.5\" y2=\"116.5\" stroke=\"#10B981\" stroke-width=\"2.2\"/><line x1=\"243.5\" y1=\"116.5\" x2=\"236.5\" y2=\"123.5\" stroke=\"#10B981\" stroke-width=\"2.2\"/><line x1=\"120\" y1=\"185\" x2=\"120\" y2=\"175\" stroke=\"#F43F5E\" stroke-width=\"2.2\"/><line x1=\"240\" y1=\"185\" x2=\"240\" y2=\"175\" stroke=\"#F43F5E\" stroke-width=\"2.2\"/><line x1=\"126\" y1=\"185\" x2=\"126\" y2=\"175\" stroke=\"#F43F5E\" stroke-width=\"2.2\"/><line x1=\"246\" y1=\"185\" x2=\"246\" y2=\"175\" stroke=\"#F43F5E\" stroke-width=\"2.2\"/><text x=\"180\" y=\"30\" font-size=\"12\" font-weight=\"700\" fill=\"#8B5CF6\" text-anchor=\"middle\">the two triangles share side BD</text></svg>",
+    "alt": "Two triangles meeting along a shared side BD, with matching sides tick-marked"
+  }
 }

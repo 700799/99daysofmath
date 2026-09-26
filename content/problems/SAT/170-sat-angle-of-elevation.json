@@ -59,5 +59,10 @@
     "angle-of-elevation",
     "tangent"
   ],
-  "estimatedSeconds": 80
+  "estimatedSeconds": 80,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"30\" y1=\"201\" x2=\"330\" y2=\"201\" stroke=\"currentColor\" stroke-width=\"2.5\" opacity=\"0.5\"/><polygon points=\"137.5,195 237.5,45 237.5,195\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M 223.5 195 L 223.5 181 L 237.5 181\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><path d=\"M 167.5 195 A 30 30 0 0 0 154.1 170\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.5\"/><text x=\"171.2\" y=\"183\" font-size=\"14\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"start\">θ</text><text x=\"187.5\" y=\"217\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">40 ft</text><text x=\"247.5\" y=\"125\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">?</text></svg>",
+    "alt": "A right triangle with opposite ?, adjacent 40 ft"
+  }
 }

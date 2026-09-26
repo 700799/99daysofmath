@@ -57,5 +57,10 @@
     "logic",
     "algebra"
   ],
-  "estimatedSeconds": 70
+  "estimatedSeconds": 70,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 230\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"20\" y=\"28\" width=\"320\" height=\"37\" rx=\"10\" fill=\"#0EA5E910\" stroke=\"#0EA5E9\" stroke-width=\"2\"/><text x=\"180\" y=\"50\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">if x² = 36, then x = 6</text><text x=\"180\" y=\"73\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">one example that breaks it:</text><rect x=\"126\" y=\"87\" width=\"108\" height=\"52\" rx=\"10\" fill=\"#F43F5E12\" stroke=\"#F43F5E\" stroke-width=\"2.4\"/><text x=\"180\" y=\"121\" font-size=\"18\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">x = ?</text><line x1=\"99\" y1=\"154\" x2=\"113\" y2=\"168\" stroke=\"#F43F5E\" stroke-width=\"2.6\"/><line x1=\"113\" y1=\"154\" x2=\"99\" y2=\"168\" stroke=\"#F43F5E\" stroke-width=\"2.6\"/><text x=\"188\" y=\"165\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">so the claim is false</text></svg>",
+    "alt": "A claim with a counterexample that makes it false"
+  }
 }

@@ -59,5 +59,10 @@
     "angle-sum",
     "algebra"
   ],
-  "estimatedSeconds": 70
+  "estimatedSeconds": 70,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"136.7,200 196.9,200 223.3,50\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"124.7\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">A</text><text x=\"208.9\" y=\"216\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">B</text><text x=\"223.3\" y=\"40\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">C</text><path d=\"M 158.7 200 A 22 22 0 0 0 147.7 180.9\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"173.1\" y=\"184\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">(2x)°</text><path d=\"M 200.7 178.3 A 22 22 0 0 0 174.9 200\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"169.9\" y=\"172.8\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">B</text><path d=\"M 212.3 69.1 A 22 22 0 0 0 219.5 71.7\" fill=\"none\" stroke=\"#0EA5E9\" stroke-width=\"2.2\"/><text x=\"208.9\" y=\"94.5\" font-size=\"13\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">C</text><text x=\"180\" y=\"242\" font-size=\"11\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">∠B = (3x + 10)° · ∠C = (x − 10)°</text></svg>",
+    "alt": "Triangle ABC with A = (2x)°, B = (3x + 10)°, C = (x − 10)°"
+  }
 }

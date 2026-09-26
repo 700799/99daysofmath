@@ -43,5 +43,10 @@
         "Answer: 15 — verified."
       ]
     }
-  ]
+  ],
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"80.3,160 129.8,124 279.8,124 230.3,160\" fill=\"#F59E0B10\" stroke=\"#F59E0B\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"230.3,160 279.8,124 279.8,154 230.3,190\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"2\" stroke-linejoin=\"round\"/><polygon points=\"80.3,190 230.3,190 230.3,160 80.3,160\" fill=\"#F59E0B26\" stroke=\"#F59E0B\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><line x1=\"129.8\" y1=\"154\" x2=\"129.8\" y2=\"124\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><line x1=\"129.8\" y1=\"154\" x2=\"279.8\" y2=\"154\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><line x1=\"80.3\" y1=\"190\" x2=\"129.8\" y2=\"154\" stroke=\"#F59E0B\" stroke-width=\"1.4\" stroke-dasharray=\"4 4\" opacity=\"0.5\"/><text x=\"155.3\" y=\"214\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">5</text><text x=\"68.3\" y=\"179\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"end\">1</text><text x=\"273.3\" y=\"184\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">3</text><text x=\"180\" y=\"40\" font-size=\"15\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">V = ?</text></svg>",
+    "alt": "A rectangular prism 5 by 3 by 1"
+  }
 }

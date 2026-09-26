@@ -52,5 +52,10 @@
         "Answer: 275 — verified."
       ]
     }
-  ]
+  ],
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"93.3\" y=\"60\" width=\"173.3\" height=\"130\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.6\"/><rect x=\"93.3\" y=\"146.7\" width=\"43.3\" height=\"43.3\" fill=\"#F43F5E22\" stroke=\"#F43F5E\" stroke-width=\"2.6\"/><text x=\"180\" y=\"210\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">20</text><text x=\"83.3\" y=\"129\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"end\">15</text><text x=\"115\" y=\"138.7\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">5</text><text x=\"144.7\" y=\"172.3\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"start\">5</text><text x=\"180\" y=\"34\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">garden outside the pond = ?</text></svg>",
+    "alt": "A 20 by 15 rectangle with a 5 by 5 piece inside it"
+  }
 }

@@ -46,5 +46,10 @@
         "Answer: 26 — verified."
       ]
     }
-  ]
+  ],
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"102\" y=\"60\" width=\"156\" height=\"130\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.6\"/><rect x=\"133.2\" y=\"109.4\" width=\"52\" height=\"52\" fill=\"#F43F5E22\" stroke=\"#F43F5E\" stroke-width=\"2.6\" stroke-dasharray=\"6 4\"/><text x=\"180\" y=\"210\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">6</text><text x=\"92\" y=\"129\" font-size=\"13\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"end\">5</text><text x=\"159.2\" y=\"101.4\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">2</text><text x=\"193.2\" y=\"139.4\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"start\">2</text><text x=\"180\" y=\"34\" font-size=\"13\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">area left = ?</text></svg>",
+    "alt": "A 6 by 5 rectangle with a 2 by 2 piece cut out"
+  }
 }

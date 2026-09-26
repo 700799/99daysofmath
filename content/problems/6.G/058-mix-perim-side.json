@@ -33,5 +33,10 @@
   "tags": [
     "perimeter"
   ],
-  "estimatedSeconds": 40
+  "estimatedSeconds": 40,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 280\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"197.5,222.3 245,140 197.5,57.7 102.5,57.7 55,140 102.5,222.3\" fill=\"#F59E0B18\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"150\" y=\"272\" font-size=\"12\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.85\">each side 4 cm — distance round = ?</text></svg>",
+    "alt": "A regular polygon with 6 sides"
+  }
 }

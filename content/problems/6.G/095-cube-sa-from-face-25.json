@@ -35,5 +35,10 @@
     "surface-area",
     "cube"
   ],
-  "estimatedSeconds": 35
+  "estimatedSeconds": 35,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"126\" y=\"44\" width=\"48\" height=\"48\" rx=\"3\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.2\"/><text x=\"150\" y=\"73\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">1</text><rect x=\"126\" y=\"92\" width=\"48\" height=\"48\" rx=\"3\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.2\"/><text x=\"150\" y=\"121\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">2</text><rect x=\"126\" y=\"140\" width=\"48\" height=\"48\" rx=\"3\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.2\"/><text x=\"150\" y=\"169\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">3</text><rect x=\"126\" y=\"188\" width=\"48\" height=\"48\" rx=\"3\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.2\"/><text x=\"150\" y=\"217\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">4</text><rect x=\"78\" y=\"92\" width=\"48\" height=\"48\" rx=\"3\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.2\"/><text x=\"102\" y=\"121\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">5</text><rect x=\"174\" y=\"92\" width=\"48\" height=\"48\" rx=\"3\" fill=\"#F59E0B1e\" stroke=\"#F59E0B\" stroke-width=\"2.2\"/><text x=\"198\" y=\"121\" font-size=\"12\" font-weight=\"700\" fill=\"#F59E0B\" text-anchor=\"middle\">6</text><text x=\"150\" y=\"30\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">the cube, unfolded</text><text x=\"292\" y=\"128\" font-size=\"12\" font-weight=\"700\" fill=\"#0EA5E9\" text-anchor=\"middle\">each face 25</text><text x=\"180\" y=\"246\" font-size=\"12\" font-weight=\"700\" fill=\"#F43F5E\" text-anchor=\"middle\">total surface area = ?</text></svg>",
+    "alt": "A net of a cube: six squares in a cross"
+  }
 }

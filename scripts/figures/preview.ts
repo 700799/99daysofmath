@@ -3,11 +3,11 @@
  * so a whole course's figures can be eyeballed at once.
  *
  * Run: `npx tsx scripts/figures/preview.ts <specs-module> <out.html>`
- * The specs module must export `default: Record<string, AngleFigure>`.
+ * The specs module must export `default: Record<string, Figure>`.
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { renderAngleFigure, type AngleFigure } from './angleFigures.js';
+import { renderFigure, type Figure } from './index.js';
 
 const [, , specPath, outPath] = process.argv;
 if (!specPath || !outPath) {
@@ -16,13 +16,13 @@ if (!specPath || !outPath) {
 }
 
 const mod = await import(path.resolve(specPath));
-const specs = (mod.default ?? mod.SPECS) as Record<string, AngleFigure>;
+const specs = (mod.default ?? mod.SPECS) as Record<string, Figure>;
 
 const cards = Object.entries(specs)
   .map(([id, spec]) => {
     let r: { svg: string; alt: string };
     try {
-      r = renderAngleFigure(spec);
+      r = renderFigure(spec);
     } catch (e) {
       return `<div class="card bad"><b>${id}</b><pre>${String(e)}</pre></div>`;
     }

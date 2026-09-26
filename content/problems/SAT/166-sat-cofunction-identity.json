@@ -51,5 +51,10 @@
     "cofunction",
     "complementary"
   ],
-  "estimatedSeconds": 65
+  "estimatedSeconds": 65,
+  "diagram": {
+    "kind": "inline-svg",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 250\" role=\"img\" font-family=\"Nunito, ui-rounded, system-ui, sans-serif\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"131.3,195 243.8,45 243.8,195\" fill=\"#F59E0B22\" stroke=\"#F59E0B\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M 229.8 195 L 229.8 181 L 243.8 181\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"/><text x=\"187.5\" y=\"215\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">3</text><text x=\"253.8\" y=\"125\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"start\">4</text><text x=\"174.7\" y=\"115.4\" font-size=\"14\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\">5</text><text x=\"119.3\" y=\"200\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.8\">A</text><text x=\"245.8\" y=\"35\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.8\">B</text><text x=\"255.8\" y=\"211\" font-size=\"13\" font-weight=\"700\" fill=\"currentColor\" text-anchor=\"middle\" opacity=\"0.8\">C</text></svg>",
+    "alt": "A right triangle with opposite 4, adjacent 3, hypotenuse 5"
+  }
 }
