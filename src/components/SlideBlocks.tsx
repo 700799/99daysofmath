@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useLayoutEffect, useMemo, useRef } from 'react';
 import katex from 'katex';
 import type {
   CompareBlock,
@@ -35,8 +35,43 @@ function Tex({ tex, display = false, className = '' }: { tex: string; display?: 
   return <span className={className} dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
+const FORMULA_SIZE = 'clamp(1.1rem, 5.6vw, 1.55rem)';
+/** The smallest a formula may shrink to fit a narrow screen before it scrolls instead. */
+const MIN_FIT = 0.78;
+
+/** Shrink a display formula just enough to fit its frame, never below MIN_FIT. */
+function useFitWidth(dep: string) {
+  const ref = useRef<HTMLDivElement>(null);
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const fit = () => {
+      el.style.fontSize = FORMULA_SIZE;
+      const over = el.scrollWidth / Math.max(1, el.clientWidth);
+      if (over > 1.01) el.style.fontSize = `calc(${FORMULA_SIZE} * ${Math.max(MIN_FIT, 1 / over).toFixed(3)})`;
+    };
+    fit();
+    // KaTeX's fonts can land after the first measure and widen the formula
+    // without resizing its frame, so measure again when they do.
+    let live = true;
+    const fonts = typeof document !== 'undefined' ? document.fonts : undefined;
+    const refit = () => live && fit();
+    fonts?.ready.then(refit);
+    fonts?.addEventListener?.('loadingdone', refit);
+    const ro = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(fit);
+    ro?.observe(el);
+    return () => {
+      live = false;
+      fonts?.removeEventListener?.('loadingdone', refit);
+      ro?.disconnect();
+    };
+  }, [dep]);
+  return ref;
+}
+
 /** The rule, typeset big in a frame, with each symbol given a job. */
 export function FormulaView({ block }: { block: FormulaBlock }) {
+  const fitRef = useFitWidth(block.tex);
   return (
     <div className="mt-3">
       {/* The rule is the point of the slide, so its frame says so: an accent
@@ -47,8 +82,9 @@ export function FormulaView({ block }: { block: FormulaBlock }) {
           Formula
         </span>
         <div
+          ref={fitRef}
           className="overflow-x-auto text-center text-ink [&_.katex-display]:my-0"
-          style={{ fontSize: 'clamp(1.1rem, 5.6vw, 1.55rem)' }}
+          style={{ fontSize: FORMULA_SIZE }}
         >
           <Tex tex={block.tex} display />
         </div>

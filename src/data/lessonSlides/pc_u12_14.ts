@@ -128,7 +128,7 @@ export const PC_SLIDES_U12_14: SlideBank = {
       head: 'Two tools, one toolbox',
       body: 'Law of Sines needs a matching pair: a ÷ sin A = b ÷ sin B. Law of Cosines handles SAS and SSS: c² = a² + b² − 2ab cos C. When the corner is 90°, the correction vanishes and Pythagoras walks back in.',
       formula: {
-        tex: '\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} \\qquad c^{2} = a^{2} + b^{2} - 2ab\\cos C',
+        tex: '\\begin{gathered} \\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} \\\\ c^{2} = a^{2} + b^{2} - 2ab\\cos C \\end{gathered}',
         parts: [
           { sym: '\\sin', means: 'a side paired with the angle facing it', tone: 'ok' },
           { sym: '\\cos', means: 'two sides and the corner between them', tone: 'accent' },
@@ -292,7 +292,7 @@ export const PC_SLIDES_U12_14: SlideBank = {
       head: 'List it, jump to it, add it',
       body: 'Arithmetic adds d: term n = first + (n − 1)d. Geometric multiplies by r: term n = first × r^(n−1). To add an arithmetic list, pair the ends: n × (first + last) ÷ 2. And a shrinking list can add up to a finite number — which is a limit in disguise.',
       formula: {
-        tex: 'a_n = a_1 + (n-1)d \\qquad a_n = a_1 r^{\\,n-1} \\qquad S_n = \\tfrac{n(a_1 + a_n)}{2}',
+        tex: '\\begin{gathered} a_n = a_1 + (n-1)d \\\\ a_n = a_1 r^{\\,n-1} \\\\ S_n = \\tfrac{n(a_1 + a_n)}{2} \\end{gathered}',
         parts: [
           { sym: 'd', means: 'a common difference means arithmetic', tone: 'accent' },
           { sym: 'r', means: 'a common ratio means geometric', tone: 'ok' },
