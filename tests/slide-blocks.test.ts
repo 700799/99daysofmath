@@ -123,6 +123,7 @@ describe('every course is taught with pictures, not just prose', () => {
       '6.SP': 10,
       A1: 14,
       PC: 14,
+      SAT: 18,
     });
   });
 

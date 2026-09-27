@@ -102,7 +102,7 @@ button {
    accent fill would fight it, so those opt out.
    ───────────────────────────────────────────────────────────────────────── */
 .eq,
-.katex:not(.katex-display .katex) {
+.katex:not(:where(.katex-display .katex)) {
   display: inline-block;
   padding: 0.05em 0.4em;
   margin: 0 0.06em;
@@ -114,7 +114,7 @@ button {
   line-height: 1.35;
 }
 .dark .eq,
-.dark .katex:not(.katex-display .katex) {
+.dark .katex:not(:where(.katex-display .katex)) {
   background: rgb(var(--accent) / 0.16);
   box-shadow: inset 0 0 0 1px rgb(var(--accent) / 0.32);
 }
@@ -130,7 +130,15 @@ button {
   padding: 0.12em 0.4em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  white-space: nowrap;
+}
+/* A short expression moves to the next line whole rather than splitting; a long
+   one may wrap, sliced so the padding cannot push past the line at the break. */
+.eq-wrap {
+  white-space: normal;
   overflow-wrap: anywhere;
+  -webkit-box-decoration-break: slice;
+  box-decoration-break: slice;
 }
 [data-plain-math] .katex,
 [data-plain-math].katex {
