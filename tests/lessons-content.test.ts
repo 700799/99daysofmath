@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
 import { LESSONS, lessonAnswerMatches, getLesson } from '../src/data/lessons';
+import { SAT_UNITS } from '../src/data/sat/blueprint';
 
 const VIDEOS_DIR = path.resolve(__dirname, '..', 'public', 'videos', 'lessons');
 
@@ -29,6 +30,22 @@ describe('lessons content', () => {
       expect(l.examples.length, `A1-${l.unit} examples`).toBeGreaterThanOrEqual(6);
       expect(l.practice.length, `A1-${l.unit} practice`).toBeGreaterThanOrEqual(4);
     }
+  });
+
+  it('every SAT unit teaches before it drills, at the Algebra 1 depth', () => {
+    // An SAT drill used to open on "No lesson is wired to this unit yet".
+    // Every unit on the blueprint now carries a lesson and a deck, held to the
+    // same bar as the deepest course.
+    for (const u of SAT_UNITS) {
+      const l = getLesson('SAT', u.unit);
+      expect(l, `SAT-${u.unit} lesson missing`).not.toBeNull();
+      expect(l!.title.length, `SAT-${u.unit} title`).toBeGreaterThan(0);
+      expect(l!.concept.length, `SAT-${u.unit} concept`).toBeGreaterThanOrEqual(5);
+      expect(l!.examples.length, `SAT-${u.unit} examples`).toBeGreaterThanOrEqual(6);
+      expect(l!.practice.length, `SAT-${u.unit} practice`).toBeGreaterThanOrEqual(4);
+      expect(l!.slides?.length ?? 0, `SAT-${u.unit} deck`).toBeGreaterThanOrEqual(12);
+    }
+    expect(LESSONS.filter((l) => l.domain === 'SAT')).toHaveLength(SAT_UNITS.length);
   });
 
   it('lesson keys are unique', () => {
@@ -81,11 +98,11 @@ describe('lessons content', () => {
     // a single combined `<key>-lesson.mp4`. A core unit passes if it has that one
     // combined video OR the older 2+ separate segment videos — either way it has
     // real animated content. Supplementary lessons (unit 11+) may ship text-first,
-    // as do the course-length domains — Algebra 1, Geometry, Trigonometry and
-    // Precalculus (videos for those are a planned follow-up).
+    // as do the course-length domains — Algebra 1, Geometry, Trigonometry,
+    // Precalculus and SAT Math (videos for those are a planned follow-up).
     const missing: string[] = [];
     for (const l of LESSONS) {
-      const TEXT_FIRST = ['A1', 'GEO', 'TRIG', 'PC'];
+      const TEXT_FIRST = ['A1', 'GEO', 'TRIG', 'PC', 'SAT'];
       if (l.unit > 10 || TEXT_FIRST.includes(l.domain)) continue;
       const vids = l.videos ?? [];
       const hasCombined = vids.some((v) => v.src.endsWith('-lesson.mp4'));

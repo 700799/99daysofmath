@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef } from 'react';
-import { useNavigate, useParams, Navigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { DOMAINS, DOMAIN_LABELS, type Domain, type HintLevel, type HintStep } from '../types/problem';
 import { useSeo, courseJsonLd, breadcrumbJsonLd, SITE_URL } from '../lib/seo';
@@ -95,9 +95,14 @@ export function Unit() {
   const flashMessage = useRef<string>('');
 
   const lesson = getLesson(d, u);
+  const location = useLocation();
   const [showHelp, setShowHelp] = useState(false);
+  // A link can ask for the lesson up front (state { lesson: true }), even once it has been seen.
   const [showLesson, setShowLesson] = useState<boolean>(
-    () => !!lesson && !useProgress.getState().lessonsViewed.includes(lessonKey(d, u)),
+    () =>
+      !!lesson &&
+      (!!(location.state as { lesson?: boolean } | null)?.lesson ||
+        !useProgress.getState().lessonsViewed.includes(lessonKey(d, u))),
   );
 
   const current = problems?.[index];

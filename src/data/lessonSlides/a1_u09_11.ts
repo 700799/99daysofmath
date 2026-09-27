@@ -284,7 +284,7 @@ export const A1_SLIDES_U09_11: SlideBank = {
       kind: 'concept',
       head: 'Turn a percent into a factor',
       body: 'Up 10% means keep 100% and gain 10%: multiply by 1.10. Down 20% means keep only 80%: multiply by 0.80. The factor is always what you KEEP, written as a decimal.',
-      formula: { tex: '\\text{up } p\\% \\to 1 + \\tfrac{p}{100} \\qquad \\text{down } p\\% \\to 1 - \\tfrac{p}{100}', note: 'A drop of 20% keeps 80%, so the factor is what REMAINS.', parts: [{ sym: '1 + \\tfrac{p}{100}', means: 'growth: you keep everything and add more', tone: 'ok' }, { sym: '1 - \\tfrac{p}{100}', means: 'decay: the share that survives the drop', tone: 'accent' }] },
+      formula: { tex: '\\begin{gathered} \\text{up } p\\% \\to 1 + \\tfrac{p}{100} \\\\ \\text{down } p\\% \\to 1 - \\tfrac{p}{100} \\end{gathered}', note: 'A drop of 20% keeps 80%, so the factor is what REMAINS.', parts: [{ sym: '1 + \\tfrac{p}{100}', means: 'growth: you keep everything and add more', tone: 'ok' }, { sym: '1 - \\tfrac{p}{100}', means: 'decay: the share that survives the drop', tone: 'accent' }] },
       art: flow([{ label: 'Up 20% → × 1.20', color: EMR }, { label: 'Down 20% → × 0.80', color: SKY }, { label: 'Never × 0.20 for a 20% drop', color: ROSE }], { title: 'Percent to multiplier', caption: 'Down 20% keeps 80%, so the factor is 0.80 — what remains, not what was lost.' }),
     },
     {

@@ -223,7 +223,8 @@ function isMathLine(line: string): boolean {
  */
 const TOKEN = '[A-Za-z0-9()\\u00bc-\\u00be\\u00b2\\u00b3\\u00b9\\u2070-\\u209f.,/]+';
 const OPER = '\\s*[+\\u2212\\u00d7\\u00f7=<>\\u2264\\u2265\\u2260\\u00b1\\u00b7]\\s*';
-const INLINE_MATH = new RegExp(`(?<![\\w])${TOKEN}(?:${OPER}${TOKEN})+(?![\\w])`, 'g');
+// A unary minus belongs to its number: "−3x = 15" and "x = −5", not "−" + "3x = 15".
+const INLINE_MATH = new RegExp(`(?<![\\w\\u2212])\\u2212?${TOKEN}(?:${OPER}\\u2212?${TOKEN})+(?![\\w])`, 'g');
 
 /** Names that may appear as a bare word inside an expression. */
 const FUNCTIONS = new Set(['sin', 'cos', 'tan', 'log', 'ln', 'exp', 'sqrt', 'abs', 'max', 'min', 'mod']);
@@ -289,7 +290,7 @@ function withInlineMath(piece: string, key: string): React.ReactNode[] {
     if (m.index > last) out.push(piece.slice(last, m.index));
     if (head) out.push(head);
     out.push(
-      <span key={`${key}-m${m.index}`} className="eq">
+      <span key={`${key}-m${m.index}`} className={body.length > 26 ? 'eq eq-wrap' : 'eq'}>
         {body}
       </span>,
     );
