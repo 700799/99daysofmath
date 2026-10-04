@@ -257,25 +257,34 @@ function isMathLine(line: string): boolean {
  * mathematics. ASCII hyphen is deliberately not an operator, or step-by-step
  * would be one; the decks write subtraction with a real minus sign.
  */
-const TOKEN = '[A-Za-z0-9()\\u00bc-\\u00be\\u00b2\\u00b3\\u00b9\\u2070-\\u209f.,/]+';
-const OPER = '\\s*[+\\u2212\\u00d7\\u00f7=<>\\u2264\\u2265\\u2260\\u00b1\\u00b7]\\s*';
+const TOKEN = '[A-Za-z0-9()\\u00b0\\u03b8\\u03c0\\u221a\\u00bc-\\u00be\\u00b2\\u00b3\\u00b9\\u2070-\\u209f.,/]+';
+const OPER = '\\s*(?:[+\\u2212\\u00d7\\u00f7=<>\\u2264\\u2265\\u2260\\u00b1\\u00b7\\u2248]|\\s/\\s)\\s*';
+/** A function name joins the pieces around it: "2 sin A cos A", "A sin(Bx) + D". */
+const FN_WORD = '(?:sin|cos|tan|sec|csc|cot|log|ln)';
+// Not after a full stop or comma: "opposite 10. cos C = ..." is two sentences.
+const JOIN = `(?:${OPER}(?:${FN_WORD}\\s+)?|(?<![.,])\\s+${FN_WORD}\\s+|(?<![.,])\\s+(?=${FN_WORD}\\()|(?<=${FN_WORD})\\s+(?=[\\w\\u2212(\\u221a\\u03b8\\u03c0]))`;
 // A unary minus belongs to its number: "−3x = 15" and "x = −5", not "−" + "3x = 15".
-const INLINE_MATH = new RegExp(`(?<![\\w\\u2212])\\u2212?${TOKEN}(?:${OPER}\\u2212?${TOKEN})+(?![\\w])`, 'g');
+const INLINE_MATH = new RegExp(`(?<![\\w\\u2212])(?:${FN_WORD}\\s+)?\\u2212?${TOKEN}(?:${JOIN}\\u2212?${TOKEN})+(?![\\w])`, 'g');
 
 /** Names that may appear as a bare word inside an expression. */
-const FUNCTIONS = new Set(['sin', 'cos', 'tan', 'log', 'ln', 'exp', 'sqrt', 'abs', 'max', 'min', 'mod']);
+const FUNCTIONS = new Set(['sin', 'cos', 'tan', 'sec', 'csc', 'cot', 'arcsin', 'arccos', 'arctan', 'log', 'ln', 'exp', 'sqrt', 'abs', 'max', 'min', 'mod']);
 /** Short English words that would otherwise pass as variables: "of −15", "at −2". */
 const STOPWORDS = new Set(['of', 'at', 'to', 'in', 'on', 'is', 'as', 'by', 'or', 'an', 'so', 'if', 'up', 'no', 'be', 'do', 'it', 'we', 'he', 'me', 'my', 'us', 'am', 'go']);
+/** "sin(", "tan⁻¹(", "arccos(": a function applied to brackets, not a word. */
+const APPLIED = /^(?:arc)?(?:sin|cos|tan|sec|csc|cot|log|ln)(?:⁻¹)?\(/;
 
 /**
- * The pattern is loose on purpose, so the judgement lives here: an operand
- * is a number, a short variable like x or 2x, or a function name. "muffin =
- * total" and "but −2" have operators but are still prose.
+ * The pattern is loose on purpose, so the judgement lives here: every word in
+ * it is a number, a short variable like x or 2x, or a function name. "muffin =
+ * total", "but −2" and "and sin x" have operators but still start in prose.
  */
 function isExpression(raw: string): boolean {
-  const tokens = raw.split(new RegExp(OPER)).map((t) => t.replace(/[().,]/g, ''));
+  const words = raw
+    .split(new RegExp(OPER))
+    .flatMap((t) => t.split(/\s+/))
+    .map((t) => t.replace(APPLIED, '(').replace(/[().,°]/g, ''));
   let anchored = false;
-  for (const t of tokens) {
+  for (const t of words) {
     if (!t) continue;
     if (/\d/.test(t)) {
       anchored = true;
@@ -310,6 +319,9 @@ function trimEdges(raw: string): [string, string, string] {
   } else if (body.endsWith(')') && closes > opens) {
     tail = ')' + tail;
     body = body.slice(0, -1);
+  } else if (body.endsWith('(')) {
+    tail = '(' + tail;
+    body = body.slice(0, -1);
   }
   return [head, body, tail];
 }
@@ -322,7 +334,12 @@ function withInlineMath(piece: string, key: string): React.ReactNode[] {
   INLINE_MATH.lastIndex = 0;
   while ((m = INLINE_MATH.exec(piece))) {
     const [head, body, tail] = trimEdges(m[0]);
-    if (!isExpression(body)) continue;
+    if (!isExpression(body)) {
+      // A prose word may have led the match ("and sin x = 1/2"): rescan from the next word.
+      const gap = m[0].search(/\s/);
+      if (gap > 0) INLINE_MATH.lastIndex = m.index + gap + 1;
+      continue;
+    }
     if (m.index > last) out.push(piece.slice(last, m.index));
     if (head) out.push(head);
     out.push(

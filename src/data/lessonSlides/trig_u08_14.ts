@@ -68,7 +68,7 @@ export const TRIG_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Picture it first: tides',
-      body: 'High tide is 9 m at 3 a.m. and low tide is 1 m six hours later. Sketch it: midline 5, amplitude 4, period 12 hours, peak at t = 3. So h = 4 cos(π/6 (t − 3)) + 5.',
+      body: 'High tide is 9 m at 3 a.m. and low tide is 1 m six hours later. Sketch it: midline 5, amplitude 4, period 12 hours, peak at t = 3. So h = 4 cos(π(t − 3)/6) + 5.',
       formula: { tex: 'h = 4\\cos\\!\\big(\\tfrac{\\pi}{6}(t - 3)\\big) + 5', note: 'Cosine starts at a peak, so shift to the first high tide.', parts: [{ sym: '\\tfrac{\\pi}{6}', means: 'B = 2π ÷ 12 hours', tone: 'accent' }, { sym: 't - 3', means: 'the peak is at 3 a.m.', tone: 'ok' }] },
     },
     {
@@ -196,7 +196,7 @@ export const TRIG_SLIDES_U08_14: SlideBank = {
     {
       kind: 'concept',
       head: 'Why the range is restricted',
-      body: 'Sine repeats, so many angles share each value. To make arcsin a function, we keep only the piece from −π/2 to π/2, where sine takes each value exactly once.',
+      body: 'Sine repeats, so many angles share each value. To turn arcsin into a function, we keep only the piece from −π/2 to π/2, where sine takes each value exactly once.',
       art: funcGraph([{ f: qsin, color: AMB, dash: '6 4' }, { f: (u) => (u >= -1 && u <= 1 ? qsin(u) : NaN), label: 'kept: −π/2 to π/2', color: ROSE }], { range: { x: [-2, 4], y: [-1.5, 1.5] }, xTickText: quarterTicks, title: 'One piece of sine, used once', caption: 'On this piece every value appears exactly once.' }),
     },
     {
@@ -208,7 +208,7 @@ export const TRIG_SLIDES_U08_14: SlideBank = {
     {
       kind: 'concept',
       head: 'Inverse undoes, inside the range',
-      body: 'arcsin(sin x) = x only when x is already in arcsin\'s range. Outside it, the answer is the matching angle inside the range.',
+      body: 'arcsin(sin(x)) = x only when x is already in arcsin\'s range. Outside it, the answer is the matching angle inside the range.',
       formula: { tex: '\\sin^{-1}(\\sin x) = x \\quad \\text{for } -\\tfrac{\\pi}{2} \\le x \\le \\tfrac{\\pi}{2}', note: 'Check the range before cancelling.', parts: [{ sym: '\\sin^{-1}', means: 'arcsin: returns an angle', tone: 'accent' }, { sym: '-\\tfrac{\\pi}{2} \\le x \\le \\tfrac{\\pi}{2}', means: 'where the cancelling is allowed', tone: 'ok' }] },
     },
     {

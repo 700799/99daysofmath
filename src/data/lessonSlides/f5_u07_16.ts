@@ -355,7 +355,7 @@ export const F5_SLIDES_U07_16: SlideBank = {
       kind: 'protip',
       head: 'Count places at the end',
       body: 'Do all the multiplying first, with whole numbers. Only at the very end count the decimal places and put in the point. That keeps the work simple.',
-      formula: { tex: '\\text{places in answer} = \\text{places in first} + \\text{places in second}', note: 'Add up the decimal places.', parts: [{ sym: '\\text{places in first}', means: 'digits after the point in the first number', tone: 'accent' }, { sym: '\\text{places in answer}', means: 'how many digits go after the point', tone: 'ok' }] },
+      formula: { tex: '\\begin{gathered} \\text{places in answer} = \\\\ \\text{places in first} + \\text{places in second} \\end{gathered}', note: 'Add up the decimal places.', parts: [{ sym: '\\text{places in first}', means: 'digits after the point in the first number', tone: 'accent' }, { sym: '\\text{places in answer}', means: 'how many digits go after the point', tone: 'ok' }] },
     },
     {
       kind: 'trap',
