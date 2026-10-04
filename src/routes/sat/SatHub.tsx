@@ -30,7 +30,7 @@ export function SatHub() {
   useSeo({
     title: 'Digital SAT Math Prep — Practice, Playbooks, and 5 Full Mock Tests | Math10x',
     description:
-      'Free Digital SAT Math prep: 180 practice questions with worked explanations, 18 unit playbooks, 100+ strategy tips, and five full-length mock tests with scoring.',
+      'Free Digital SAT Math prep: 18 illustrated lessons, 180 practice questions with worked explanations, 18 unit playbooks, 100+ strategy tips, and five full-length mock tests with scoring.',
     canonicalPath: '/sat',
     jsonLd: [
       courseJsonLd(
@@ -62,8 +62,8 @@ export function SatHub() {
           <div className="min-w-0 flex-1">
             <h1 className="font-display text-2xl font-extrabold text-ink">SAT Math</h1>
             <p className="mt-1 text-sm text-ink-muted">
-              The full Digital SAT Math blueprint — 18 unit playbooks, 180 practice questions,
-              5 full-length mock tests, and {TOTAL_SAT_TIPS} strategy tips.
+              The full Digital SAT Math blueprint — 18 illustrated lessons, 18 unit playbooks,
+              180 practice questions, 5 full-length mock tests, and {TOTAL_SAT_TIPS} strategy tips.
             </p>
           </div>
         </div>

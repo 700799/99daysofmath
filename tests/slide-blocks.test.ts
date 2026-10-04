@@ -115,7 +115,7 @@ describe('every course is taught with pictures, not just prose', () => {
     const units = new Map<string, number>();
     for (const l of DECKED) units.set(l.domain, (units.get(l.domain) ?? 0) + 1);
     expect(Object.fromEntries(units)).toEqual({
-      '5.F': 6,
+      '5.F': 16,
       '6.RP': 11,
       '6.NS': 10,
       '6.EE': 10,
@@ -123,6 +123,9 @@ describe('every course is taught with pictures, not just prose', () => {
       '6.SP': 10,
       A1: 14,
       PC: 14,
+      SAT: 18,
+      GEO: 14,
+      TRIG: 14,
     });
   });
 
