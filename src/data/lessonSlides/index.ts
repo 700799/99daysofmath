@@ -16,6 +16,7 @@ import { PC_SLIDES_U12_14 } from './pc_u12_14';
 import { SAT_SLIDES_U01_06 } from './sat_u01_06';
 import { SAT_SLIDES_U07_12 } from './sat_u07_12';
 import { SAT_SLIDES_U13_18 } from './sat_u13_18';
+import { F5_SLIDES_U07_16 } from './f5_u07_16';
 
 export type { LessonSlide, SlideBank } from './types';
 
@@ -38,4 +39,5 @@ export const LESSON_SLIDES: SlideBank = {
   ...SAT_SLIDES_U01_06,
   ...SAT_SLIDES_U07_12,
   ...SAT_SLIDES_U13_18,
+  ...F5_SLIDES_U07_16,
 };

@@ -12,6 +12,7 @@ import { PC_LESSONS_U05_08 } from './pc/lessons_u05_08';
 import { PC_LESSONS_U09_11 } from './pc/lessons_u09_11';
 import { PC_LESSONS_U12_14 } from './pc/lessons_u12_14';
 import { SAT_LESSONS } from './sat/lessons';
+import { F5_LESSONS_U07_16 } from './f5/lessons_u07_16';
 
 export type { LessonSlide };
 
@@ -1259,6 +1260,8 @@ export const LESSONS: Lesson[] = [
   ...PC_LESSONS_U12_14,
   // ---------------- SAT — Digital SAT Math ----------------
   ...SAT_LESSONS,
+  // ---------------- 5.F — Grade-5 Foundations, units 7-16 ----------------
+  ...F5_LESSONS_U07_16,
 ];
 
 // Attach each lesson's story-style slide deck (authored per-domain in lessonSlides/).
