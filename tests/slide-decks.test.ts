@@ -11,12 +11,10 @@ import stories from '../src/data/mathStories.json';
 // every story is expanded (≥7 beats, meaty bodies), and every mathematician
 // has a 12–20-slide deck.
 
-// Geometry and Trigonometry ship text-first: their problem banks and lessons
-// are complete, but their slide decks are a later phase — the same way Algebra
-// 1 and Precalculus shipped before theirs were authored. Every lesson that DOES
-// carry a deck still has to meet the full bar below, and the list is asserted
-// exactly, so a deck cannot go missing anywhere else without this failing.
-const TEXT_FIRST_DOMAINS: string[] = ['TRIG'];
+// Every course now carries a deck on every lesson. The list of courses
+// allowed to go without one is asserted exactly, so a deck cannot go missing
+// anywhere without this failing.
+const TEXT_FIRST_DOMAINS: string[] = [];
 const DECKED = LESSONS.filter((l) => !TEXT_FIRST_DOMAINS.includes(l.domain));
 
 describe('lesson slide decks', () => {
