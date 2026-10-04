@@ -124,6 +124,7 @@ describe('every course is taught with pictures, not just prose', () => {
       A1: 14,
       PC: 14,
       SAT: 18,
+      GEO: 14,
     });
   });
 

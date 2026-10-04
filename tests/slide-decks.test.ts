@@ -16,7 +16,7 @@ import stories from '../src/data/mathStories.json';
 // 1 and Precalculus shipped before theirs were authored. Every lesson that DOES
 // carry a deck still has to meet the full bar below, and the list is asserted
 // exactly, so a deck cannot go missing anywhere else without this failing.
-const TEXT_FIRST_DOMAINS: string[] = ['GEO', 'TRIG'];
+const TEXT_FIRST_DOMAINS: string[] = ['TRIG'];
 const DECKED = LESSONS.filter((l) => !TEXT_FIRST_DOMAINS.includes(l.domain));
 
 describe('lesson slide decks', () => {
