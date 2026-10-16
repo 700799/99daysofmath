@@ -608,7 +608,7 @@ const PENALTY: MathFigure[] = [
       line(153, 110, 153, 220, DIM, 1.5, '5 5') + line(247, 110, 247, 220, DIM, 1.5, '5 5') +
       label(107, 100, 'left', { size: 13, fill: DIM }) + label(200, 100, 'middle', { size: 13, fill: DIM }) + label(293, 100, 'right', { size: 13, fill: DIM }) +
       soldier(200, 200, SKY) + arrow(185, 190, 95, 190, NO, 3) + label(125, 212, 'dive', { size: 13, fill: NO }) +
-      dot(200, 290, 9, INK) + arrow(206, 282, 300, 150, OK, 3) + label(310, 145, 'goal', { size: 13, fill: OK, anchor: 'start' }) +
+      dot(200, 290, 9, INK) + arrow(206, 282, 300, 150, OK, 3) + label(348, 154, 'goal', { size: 13, fill: OK, anchor: 'start' }) +
       label(300, 300, 'wrong guess', { size: 13, fill: NO }),
   ),
   draw(
@@ -658,7 +658,7 @@ const PENALTY: MathFigure[] = [
           label(60 + k * 93.3 + 46.7, 85 + r * 75 + 44, `${pct}%`, { size: 17, fill: pct >= 25 ? DARK : INK });
       }).join('')).join('') +
       `<rect x="60" y="85" width="280" height="150" fill="none" stroke="${INK}" stroke-width="4"/>` +
-      label(200, 270, 'keeper’s best guess: low left', { size: 14, fill: OK }) +
+      label(200, 270, 'most often: low left', { size: 15, fill: OK }) +
       label(200, 300, '9 of 20 = 45%', { size: 14, fill: DIM }),
   ),
   draw(
@@ -848,7 +848,7 @@ const BIRTHDAY: MathFigure[] = [
       out += polyline(Array.from({ length: 31 }, (_, i) => [X(i * 10), Y(1 - Math.pow(364 / 365, i * 10))]), NO, 3.5);
       out += dot(X(23), Y(0.5), 7, SKY) + label(X(23), 290, '23', { size: 13, fill: SKY });
       out += dot(X(253), Y(0.5), 7, NO) + label(X(253), 290, '253', { size: 13, fill: NO });
-      return out + label(110, 60, 'any two match', { size: 14, fill: SKY, anchor: 'start' }) + label(330, 205, 'matches MY day', { size: 14, fill: NO, anchor: 'end' }) + label(170, 290, 'people', { size: 12, fill: DIM });
+      return out + label(110, 60, 'any two match', { size: 14, fill: SKY, anchor: 'start' }) + label(360, 245, 'matches MY day', { size: 14, fill: NO, anchor: 'end' }) + label(170, 290, 'people', { size: 12, fill: DIM });
     })(),
   ),
   draw(
@@ -869,7 +869,7 @@ const BIRTHDAY: MathFigure[] = [
       out += polyline(Array.from({ length: 41 }, (_, p) => [X(p), Y((p * (p - 1)) / 2)]), HI, 4);
       out += polyline([[X(0), Y(0)], [X(40), Y(40)]], SKY, 4);
       out += line(X(23), 270, X(23), Y(253), DIM, 1.5, '3 4') + dot(X(23), Y(253), 7, HI) + dot(X(23), Y(23), 6, SKY);
-      out += label(X(23) - 10, Y(253) - 6, '253 pairs', { size: 14, fill: HI, anchor: 'end' }) + label(X(23) - 6, Y(23) - 12, '23', { size: 13, fill: SKY, anchor: 'end' });
+      out += label(X(23) + 12, Y(253) + 14, '253 pairs', { size: 14, fill: HI, anchor: 'start' }) + label(X(23) - 6, Y(23) - 12, '23', { size: 13, fill: SKY, anchor: 'end' });
       out += label(X(40), 50, '780', { size: 14, fill: HI, anchor: 'end' }) + label(X(40), 246, '40 people', { size: 13, fill: SKY, anchor: 'end' });
       out += label(X(0), 290, '0', { size: 12, fill: DIM }) + label(X(23), 290, '23', { size: 12, fill: DIM }) + label(X(40), 290, '40', { size: 12, fill: DIM });
       return out + label(200, 30, 'pairs outrun people', { size: 15, fill: HI });
@@ -905,12 +905,11 @@ const roseLabel = (m: number, rr: number, text: string, fill: string, cx = 200, 
 
 const NIGHTINGALE: MathFigure[] = [
   draw(
-    'A timeline from 1800 to 1920: born 1820, Crimean War 1854, Royal Statistical Society 1859, died 1910',
+    'A timeline from 1800 to 1920: born 1820, Crimean War 1854, died 1910',
     label(200, 40, 'Florence Nightingale', { size: 16, fill: HI }) +
       timeline(1800, 1920, [
         { at: 1820, text: 'born 1820', hi: true },
         { at: 1854, text: 'war 1854' },
-        { at: 1859, text: 'RSS 1859' },
         { at: 1910, text: 'dies 1910' },
       ], String),
   ),
@@ -954,9 +953,9 @@ const NIGHTINGALE: MathFigure[] = [
       Array.from({ length: 20 }, (_, i) => {
         const g = Math.floor(i / 4);
         const k = i % 4;
-        return soldier(48 + g * 76 + k * 16, 130 + (g % 2) * 0, k === 3 ? RED : SKY);
+        return soldier(18 + g * 74 + 11 + k * 14, 130, k === 3 ? RED : SKY);
       }).join('') +
-      Array.from({ length: 5 }, (_, g) => `<rect x="${32 + g * 76}" y="100" width="64" height="56" rx="8" fill="none" stroke="${DIM}" stroke-width="1.5"/>`).join('') +
+      Array.from({ length: 5 }, (_, g) => `<rect x="${18 + g * 74}" y="100" width="64" height="56" rx="8" fill="none" stroke="${DIM}" stroke-width="1.5"/>`).join('') +
       label(200, 210, '1 in 4 = 25% dying', { size: 18, fill: RED }) +
       label(200, 260, 'from disease, not bullets', { size: 14, fill: INK }),
   ),
@@ -970,7 +969,7 @@ const NIGHTINGALE: MathFigure[] = [
   draw(
     'A rose diagram: twelve wedges, one per month from April 1854 to March 1855, each wedge bigger when more soldiers died',
     rose([{ data: MONTHS.map((_, i) => DISEASE[i] + WOUNDS[i] + OTHER[i]), fill: SKY, opacity: 0.6 }]) +
-      roseLabel(9, 134, 'Jan', HI) + roseLabel(0, 30, 'Apr', DIM) + roseLabel(3, 78, 'Jul', DIM) + roseLabel(6, 95, 'Oct', DIM) +
+      roseLabel(9, 134, 'Jan', HI) + roseLabel(3, 78, 'Jul', DIM) + roseLabel(6, 95, 'Oct', DIM) +
       label(200, 302, '1 wedge = 1 month; bigger = more deaths', { size: 13, fill: HI }),
   ),
   draw(
@@ -1010,14 +1009,14 @@ const NIGHTINGALE: MathFigure[] = [
       label(40, 110, 'disease', { size: 13, anchor: 'start' }) + label(160, 110, '2,761', { size: 13, anchor: 'end' }) +
       label(40, 145, 'wounds', { size: 13, anchor: 'start' }) + label(160, 145, '83', { size: 13, anchor: 'end' }) +
       label(40, 180, 'other', { size: 13, anchor: 'start' }) + label(160, 180, '324', { size: 13, anchor: 'end' }) +
-      arrow(170, 150, 210, 150, HI, 2.5) +
+      arrow(168, 150, 198, 150, HI, 2.5) +
       bars(
         [
           { v: 2761, name: 'disease', fill: RED, val: '' },
           { v: 83, name: 'wounds', fill: SKY, val: '' },
           { v: 324, name: 'other', fill: DIM, val: '' },
         ],
-        { x0: 215, x1: 375, top: 75, base: 245, nameSize: 12 },
+        { x0: 200, x1: 385, top: 75, base: 245, nameSize: 12 },
       ) +
       label(200, 300, 'Jan 1855: the truth jumps out', { size: 14, fill: OK }),
   ),
