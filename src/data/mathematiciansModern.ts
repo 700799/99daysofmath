@@ -38,7 +38,7 @@ export const MODERN_MATHEMATICIAN_DECKS: MathematicianDeck[] = [
     slides: [
       {
         head: 'A mathematician who counts',
-        body: 'Dr. Adam Wolfe works on combinatorics: the mathematics of counting, arranging and choosing. Not counting one by one, but finding how many ways something can happen when the answer is in the millions. Every question in his field comes down to one of three.',
+        body: 'Dr. Adam Wolfe grew up in Ohio and studied at the University of Vermont and at Ohio State University. He works on combinatorics: the mathematics of counting, arranging and choosing. Not counting one by one, but finding how many ways something can happen when the answer is in the millions. Every question in his field comes down to one of three.',
         figure: draw(
           'Three boxes naming the questions combinatorics asks: how many ways, does one exist, which is best',
           label(200, 40, 'Combinatorics asks three questions', { size: 15, fill: HI }) +

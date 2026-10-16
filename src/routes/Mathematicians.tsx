@@ -102,7 +102,7 @@ const MATHEMATICIANS: Mathematician[] = [
   {
     name: 'Dr. Adam Wolfe',
     era: 'Today',
-    contribution: 'Combinatorics: the mathematics of counting, arranging and choosing',
+    contribution: 'Ohio-born combinatorialist: the mathematics of counting, arranging and choosing',
     emoji: '🎲',
   },
 ];
