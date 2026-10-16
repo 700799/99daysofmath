@@ -928,8 +928,8 @@ const NIGHTINGALE: MathFigure[] = [
     label(200, 34, 'deaths, Apr 1854 to Mar 1855', { size: 14, fill: HI }) +
       bars(
         [
-          { v: sum(DISEASE), name: 'disease', fill: RED, val: commas(sum(DISEASE)) },
-          { v: sum(WOUNDS), name: 'wounds', fill: SKY, val: commas(sum(WOUNDS)) },
+          { v: sum(DISEASE), name: 'disease', fill: SKY, val: commas(sum(DISEASE)) },
+          { v: sum(WOUNDS), name: 'wounds', fill: RED, val: commas(sum(WOUNDS)) },
           { v: sum(OTHER), name: 'other', fill: DIM, val: commas(sum(OTHER)) },
         ],
         { x0: 40, x1: 360, top: 70, base: 255 },
@@ -942,8 +942,8 @@ const NIGHTINGALE: MathFigure[] = [
       label(200, 40, 'write down EVERY death', { size: 15, fill: HI }) +
       label(60, 85, 'cause', { size: 12, fill: DIM, anchor: 'start' }) + label(340, 85, 'count', { size: 12, fill: DIM, anchor: 'end' }) +
       line(50, 95, 350, 95, DIM, 1.5) +
-      label(60, 135, 'disease', { size: 14, fill: RED, anchor: 'start' }) + tally(140, 130, 17, RED) + label(340, 135, '17', { size: 15, fill: RED, anchor: 'end' }) +
-      label(60, 185, 'wounds', { size: 14, fill: SKY, anchor: 'start' }) + tally(140, 180, 2, SKY) + label(340, 185, '2', { size: 15, fill: SKY, anchor: 'end' }) +
+      label(60, 135, 'disease', { size: 14, fill: SKY, anchor: 'start' }) + tally(140, 130, 17, SKY) + label(340, 135, '17', { size: 15, fill: SKY, anchor: 'end' }) +
+      label(60, 185, 'wounds', { size: 14, fill: RED, anchor: 'start' }) + tally(140, 180, 2, RED) + label(340, 185, '2', { size: 15, fill: RED, anchor: 'end' }) +
       label(60, 235, 'other', { size: 14, fill: INK, anchor: 'start' }) + tally(140, 230, 3, INK) + label(340, 235, '3', { size: 15, anchor: 'end' }) +
       label(200, 300, 'a sample page', { size: 12, fill: DIM }),
   ),
@@ -973,13 +973,13 @@ const NIGHTINGALE: MathFigure[] = [
       label(200, 302, '1 wedge = 1 month; bigger = more deaths', { size: 13, fill: HI }),
   ),
   draw(
-    'The rose diagram split by cause: huge red disease wedges with thin blue wound slivers inside',
+    'The rose diagram split by cause: huge blue disease wedges with thin red wound slivers inside',
     rose([
-      { data: DISEASE, fill: RED, opacity: 0.75 },
-      { data: WOUNDS, fill: SKY, opacity: 0.95 },
+      { data: DISEASE, fill: SKY, opacity: 0.75 },
+      { data: WOUNDS, fill: RED, opacity: 0.95 },
     ]) +
-      rect(100, 290, 14, 14, RED) + label(122, 302, 'disease', { size: 14, fill: RED, anchor: 'start' }) +
-      rect(230, 290, 14, 14, SKY) + label(252, 302, 'wounds', { size: 14, fill: SKY, anchor: 'start' }),
+      rect(100, 290, 14, 14, SKY) + label(122, 302, 'disease', { size: 14, fill: SKY, anchor: 'start' }) +
+      rect(230, 290, 14, 14, RED) + label(252, 302, 'wounds', { size: 14, fill: RED, anchor: 'start' }),
   ),
   draw(
     'Bar chart of the hospital death rate: 42 percent before the reforms, 2 percent after',
@@ -1012,8 +1012,8 @@ const NIGHTINGALE: MathFigure[] = [
       arrow(168, 150, 198, 150, HI, 2.5) +
       bars(
         [
-          { v: 2761, name: 'disease', fill: RED, val: '' },
-          { v: 83, name: 'wounds', fill: SKY, val: '' },
+          { v: 2761, name: 'disease', fill: SKY, val: '' },
+          { v: 83, name: 'wounds', fill: RED, val: '' },
           { v: 324, name: 'other', fill: DIM, val: '' },
         ],
         { x0: 200, x1: 385, top: 75, base: 245, nameSize: 12 },
@@ -1021,10 +1021,10 @@ const NIGHTINGALE: MathFigure[] = [
       label(200, 300, 'Jan 1855: the truth jumps out', { size: 14, fill: OK }),
   ),
   draw(
-    'Thirty-four squares, 33 red for disease and 1 blue for wounds: in January 1855, 2,761 disease deaths to 83 wound deaths is about 33 to 1',
-    Array.from({ length: 34 }, (_, i) => rect(40 + (i % 7) * 26, 80 + Math.floor(i / 7) * 26, 22, 22, i < 33 ? RED : SKY, 'rx="3"')).join('') +
+    'Thirty-four squares, 33 blue for disease and 1 red for wounds: in January 1855, 2,761 disease deaths to 83 wound deaths is about 33 to 1',
+    Array.from({ length: 34 }, (_, i) => rect(40 + (i % 7) * 26, 80 + Math.floor(i / 7) * 26, 22, 22, i < 33 ? SKY : RED, 'rx="3"')).join('') +
       label(131, 50, 'January 1855', { size: 15, fill: DIM }) +
-      label(305, 110, 'disease 2,761', { size: 14, fill: RED }) + label(305, 140, 'wounds 83', { size: 14, fill: SKY }) +
+      label(305, 110, 'disease 2,761', { size: 14, fill: SKY }) + label(305, 140, 'wounds 83', { size: 14, fill: RED }) +
       label(305, 180, '2,761 ÷ 83 ≈ 33', { size: 13 }) +
       label(305, 225, '33 : 1', { size: 24, fill: HI }) +
       label(131, 245, '1 square ≈ 83 deaths', { size: 12, fill: DIM }),
@@ -1070,18 +1070,18 @@ const NIGHTINGALE: MathFigure[] = [
     })(),
   ),
   draw(
-    'Monthly bars from April 1854 to March 1855: disease deaths in red tower over wound deaths in blue, peaking at 2,761 in January',
+    'Monthly bars from April 1854 to March 1855: disease deaths in blue tower over wound deaths in red, peaking at 2,761 in January',
     (() => {
       const X = (i: number) => 52 + i * 26;
       const H = (v: number) => (v / 2761) * 190;
       let out = line(40, 260, 370, 260, DIM, 2);
       MONTHS.forEach((m, i) => {
-        out += rect(X(i), 260 - H(DISEASE[i]), 11, Math.max(1.5, H(DISEASE[i])), RED) + rect(X(i) + 12, 260 - Math.max(1.5, H(WOUNDS[i])), 9, Math.max(1.5, H(WOUNDS[i])), SKY);
+        out += rect(X(i), 260 - H(DISEASE[i]), 11, Math.max(1.5, H(DISEASE[i])), SKY) + rect(X(i) + 12, 260 - Math.max(1.5, H(WOUNDS[i])), 9, Math.max(1.5, H(WOUNDS[i])), RED);
         out += label(X(i) + 10, 278, m[0], { size: 11, fill: DIM });
       });
-      return out + label(X(9) - 6, 62, 'Jan: 2,761', { size: 14, fill: RED, anchor: 'end' }) +
-        rect(70, 290, 14, 14, RED) + label(90, 302, 'disease', { size: 13, fill: RED, anchor: 'start' }) +
-        rect(200, 290, 14, 14, SKY) + label(220, 302, 'wounds', { size: 13, fill: SKY, anchor: 'start' }) +
+      return out + label(X(9) - 6, 62, 'Jan: 2,761', { size: 14, fill: SKY, anchor: 'end' }) +
+        rect(70, 290, 14, 14, SKY) + label(90, 302, 'disease', { size: 13, fill: SKY, anchor: 'start' }) +
+        rect(200, 290, 14, 14, RED) + label(220, 302, 'wounds', { size: 13, fill: RED, anchor: 'start' }) +
         label(200, 34, 'a picture tells the story', { size: 15, fill: HI });
     })(),
   ),
