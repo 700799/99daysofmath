@@ -31,6 +31,8 @@ export interface MathematicianDeck {
   tieIn: string; // which app unit(s) this connects to, shown on the title slide
   /** Route of that unit or course, so the title slide's tie-in can be a link. */
   tieInTo?: string;
+  /** A drawn portrait (self-contained SVG), shown on the card and title slide in place of the emoji. */
+  portrait?: string;
   slides: MathSlide[];
 }
 

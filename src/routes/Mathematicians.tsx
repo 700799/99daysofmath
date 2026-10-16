@@ -147,7 +147,14 @@ export function Mathematicians() {
               className="rounded-2xl p-4 bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-accent/35"
             >
               <div className="flex items-start gap-3">
-                <div className="text-4xl shrink-0">{m.emoji}</div>
+                {deck?.portrait ? (
+                  <div
+                    className="h-16 w-16 shrink-0 overflow-hidden rounded-2xl border-2 border-accent/30 [&>svg]:h-full [&>svg]:w-full"
+                    dangerouslySetInnerHTML={{ __html: deck.portrait }}
+                  />
+                ) : (
+                  <div className="text-4xl shrink-0">{m.emoji}</div>
+                )}
                 <div className="flex-1 min-w-0">
                   <div className="font-display font-extrabold text-ink">{m.name}</div>
                   <div className="text-xs font-display font-bold text-accent uppercase tracking-wider mt-0.5">

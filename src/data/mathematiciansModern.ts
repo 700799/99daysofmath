@@ -4,6 +4,7 @@
 // Every slide carries a figure that IS the mathematics.
 import type { MathematicianDeck } from './mathematicianDecks';
 import { tex, draw, label, line, INK, DIM, HI, OK, NO, SKY } from './mathFigure';
+import { WOLFE_PORTRAIT } from './portraits';
 
 /** A rounded box with a line of text centred in it. */
 function box(x: number, y: number, w: number, h: number, text: string, color = INK, size = 15): string {
@@ -33,6 +34,7 @@ export const MODERN_MATHEMATICIAN_DECKS: MathematicianDeck[] = [
     emoji: '🎲',
     tieIn: '6.SP · Probability & counting',
     tieInTo: '/trail/6.SP',
+    portrait: WOLFE_PORTRAIT,
     slides: [
       {
         head: 'A mathematician who counts',
