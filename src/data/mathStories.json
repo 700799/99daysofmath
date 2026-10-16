@@ -225,7 +225,7 @@
       },
       {
         "head": "Filling the table",
-        "body": "Filling the board starts calmly, then explodes: square 10 holds 512 grains, square 20 over a million, square 32 about 2.1 billion. Doubling multiplies everything that came before, so the numbers EXPLODE."
+        "body": "Filling the board starts calmly, then explodes: square 10 holds 512 grains, by square 20 the board holds over a million, and square 32 alone holds about 2.1 billion. Doubling multiplies everything that came before, so the numbers EXPLODE."
       },
       {
         "head": "Bankrupt",
@@ -241,7 +241,7 @@
       },
       {
         "head": "Trap: doubling ≠ adding 2",
-        "body": "Trap: treating doubling like adding. 2, 4, 6, 8 is an ADDING pattern that reaches only 128 by square 64. True doubling — 2, 4, 8, 16 — reaches 9,223,372,036,854,775,808. Exponents are a different universe."
+        "body": "Trap: treating doubling like adding. 2, 4, 6, 8 is an ADDING pattern that reaches only 128 by square 64. True doubling — 1, 2, 4, 8, 16 — reaches 9,223,372,036,854,775,808. Exponents are a different universe."
       },
       {
         "head": "Same math, new places",
@@ -1062,8 +1062,8 @@
         "body": "So Florence invents a brand-new kind of chart: the ROSE DIAGRAM (also called a coxcomb). Each wedge is one month of the war, and the BIGGER the wedge, the MORE soldiers died that month."
       },
       {
-        "head": "RED for the truth",
-        "body": "She colors deaths from disease RED and battle deaths a thin blue sliver. One glance tells the whole story: the red utterly DWARFS the blue. Filth — not fighting — was the real killer."
+        "head": "BLUE for the truth",
+        "body": "She colors deaths from preventable disease BLUE and deaths from wounds a thin red sliver. One glance tells the whole story: the blue utterly DWARFS the red. Filth — not fighting — was the real killer."
       },
       {
         "head": "Hospitals get fixed",
@@ -1079,7 +1079,7 @@
       },
       {
         "head": "Read her numbers",
-        "body": "Feel her data: in January 1855 alone, about 2,761 soldiers died of disease versus 83 of wounds — a ratio of roughly 33 to 1. No wonder her red wedges swallowed the blue slivers."
+        "body": "Feel her data: in January 1855 alone, about 2,761 soldiers died of disease versus 83 of wounds — a ratio of roughly 33 to 1. No wonder her blue wedges swallowed the red slivers."
       },
       {
         "head": "Pro tip: match chart to question",

@@ -44,17 +44,14 @@ export function Home() {
   const practiceDates = useProgress((s) => s.practiceDates);
   const xpByDate = useProgress((s) => s.xpByDate);
   const onboardingComplete = useProgress((s) => s.onboardingComplete);
-  const age = useProgress((s) => s.age);
   const gradeLevel = useProgress((s) => s.gradeLevel);
-  const setLearnerProfile = useProgress((s) => s.setLearnerProfile);
   const startingCourse = useProgress((s) => s.startingCourse);
   const setStartingCourse = useProgress((s) => s.setStartingCourse);
   const coins = useProgress((s) => s.coins);
   const markOnboardingDone = useProgress((s) => s.markOnboardingDone);
-  // The gate keys off the answers, not off the tour: an install from before
-  // this existed has onboardingComplete set but no age or grade, and should be
-  // asked once rather than never.
-  const needsProfile = age === null || gradeLevel === null || startingCourse === null;
+  // The only thing asked up front is which course to start. Age and grade are
+  // optional and live in Settings.
+  const needsProfile = startingCourse === null;
   // The course the student PICKED. Never derived from their grade — a 5th
   // grader may be doing Algebra 1 and a 9th grader may need fractions.
   const chosen = startingCourse;
@@ -65,11 +62,8 @@ export function Home() {
     <div>
       {(!onboardingComplete || needsProfile) && (
         <Onboarding
-          initialAge={age}
-          initialGrade={gradeLevel}
           initialCourse={(startingCourse as CourseId | null) ?? null}
-          onDone={(a, g, c) => {
-            setLearnerProfile(a, g);
+          onDone={(c) => {
             setStartingCourse(c);
             markOnboardingDone();
           }}

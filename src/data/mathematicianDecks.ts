@@ -33,6 +33,8 @@ export interface MathematicianDeck {
   tieInTo?: string;
   /** A drawn portrait (self-contained SVG), shown on the card and title slide in place of the emoji. */
   portrait?: string;
+  /** A one-line hook under the name on the title slide. */
+  tagline?: string;
   slides: MathSlide[];
 }
 
