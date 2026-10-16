@@ -30,7 +30,7 @@ export const MODERN_MATHEMATICIAN_DECKS: MathematicianDeck[] = [
   {
     id: 'Dr. Adam Wolfe',
     name: 'Dr. Adam Wolfe',
-    era: 'Ohio · Combinatorics',
+    era: 'Born 1975 · New Jersey',
     emoji: '🎲',
     tieIn: '6.SP · Probability & counting',
     tieInTo: '/trail/6.SP',
@@ -38,7 +38,7 @@ export const MODERN_MATHEMATICIAN_DECKS: MathematicianDeck[] = [
     slides: [
       {
         head: 'A mathematician who counts',
-        body: 'Dr. Adam Wolfe grew up in Ohio and studied at the University of Vermont and at Ohio State University. He works on combinatorics: the mathematics of counting, arranging and choosing. Not counting one by one, but finding how many ways something can happen when the answer is in the millions. Every question in his field comes down to one of three.',
+        body: 'Dr. Adam Wolfe was born in New Jersey in 1975 and studied at the University of Vermont and at Ohio State University. He works on combinatorics: the mathematics of counting, arranging and choosing. Not counting one by one, but finding how many ways something can happen when the answer is in the millions. Every question in his field comes down to one of three.',
         figure: draw(
           'Three boxes naming the questions combinatorics asks: how many ways, does one exist, which is best',
           label(200, 40, 'Combinatorics asks three questions', { size: 15, fill: HI }) +
@@ -79,6 +79,32 @@ export const MODERN_MATHEMATICIAN_DECKS: MathematicianDeck[] = [
         head: 'When order does not matter',
         body: 'Pick 2 toppings from 5 for a pizza. Cheese-then-olives is the same pizza as olives-then-cheese, so order does not count. Start with the ordered ways, 5 × 4 = 20, then divide by the 2 orders each pair can come in. There are 10 pizzas. This is a combination.',
         figure: tex(['\\binom{5}{2} = \\frac{5 \\times 4}{2 \\times 1} = 10', '\\binom{n}{k} = \\frac{n!}{k!\\,(n-k)!}'], 'Choose k from n: order thrown away'),
+      },
+      {
+        head: 'Karaoke night',
+        body: 'Karaoke is one of Dr. Wolfe’s favorite things, and it is full of counting. Say the songbook has 10 songs and you will sing 3 tonight. Your first song can be any of 10, the second any of the 9 left, the third any of 8: 10 × 9 × 8 = 720 different playlists. If you only care which 3 songs you sing, not their order, each set of 3 shows up 3! = 6 times, so divide: 720 ÷ 6 = 120 song sets.',
+        figure: draw(
+          'Three microphone slots with 10, 9 and 8 song choices, giving 720 playlists, then divided by 6 orders to give 120 song sets',
+          label(200, 36, '3 songs from a book of 10', { size: 16, fill: HI }) +
+            [['1st', '10'], ['2nd', '9'], ['3rd', '8']]
+              .map(([slot, n], i) => {
+                const x = 40 + i * 116;
+                return (
+                  `<rect x="${x}" y="60" width="96" height="78" rx="12" fill="none" stroke="${SKY}" stroke-width="2.5"/>` +
+                  label(x + 48, 84, slot, { size: 13, fill: DIM }) +
+                  label(x + 48, 120, n, { size: 26, fill: INK })
+                );
+              })
+              .join('') +
+            label(146, 106, '×', { size: 18, fill: HI }) +
+            label(262, 106, '×', { size: 18, fill: HI }) +
+            label(200, 172, '= 720 playlists (order counts)', { size: 15, fill: INK }) +
+            line(120, 192, 280, 192, DIM, 2) +
+            label(200, 222, 'same 3 songs in any order: 3! = 6', { size: 13, fill: DIM }) +
+            label(200, 262, '720 ÷ 6 = 120 song sets', { size: 18, fill: OK }) +
+            label(200, 298, 'arrange, then forget the order', { size: 13, fill: DIM }),
+          'Permutations, then combinations',
+        ),
       },
       {
         head: 'Pascal\'s triangle',

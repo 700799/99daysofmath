@@ -101,8 +101,8 @@ const MATHEMATICIANS: Mathematician[] = [
   // Working today.
   {
     name: 'Dr. Adam Wolfe',
-    era: 'Ohio · Combinatorics',
-    contribution: 'Ohio-born combinatorialist: the mathematics of counting, arranging and choosing',
+    era: 'Born 1975 · New Jersey',
+    contribution: 'New Jersey-born combinatorialist: the mathematics of counting, arranging and choosing',
     emoji: '🎲',
   },
 ];
