@@ -3,49 +3,56 @@
 // photograph. Each is a self-contained SVG string on a 200 × 200 canvas.
 
 /**
- * Dr. Adam Wolfe: close-cropped grey hair receding to a bald crown, light
- * stubble, a dark green zip jacket, standing by the water on a bright day
- * with mountains across the bay.
+ * Dr. Adam Wolfe, drawn as a Sunday-cartoon character after his photo: big
+ * round eyes under heavy lids, a long straight nose, dark brows, clean-shaven,
+ * close-cropped salt-and-pepper hair with the temples just starting to recede,
+ * in a scarlet Ohio State sweater, with the Man burning on the playa behind him.
  */
-export const WOLFE_PORTRAIT = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Portrait of Dr. Adam Wolfe">
+export const WOLFE_PORTRAIT = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Cartoon portrait of Dr. Adam Wolfe in an Ohio State sweater at Burning Man">
 <defs>
-<linearGradient id="wp-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f0f5"/><stop offset="1" stop-color="#c3d2de"/></linearGradient>
-<linearGradient id="wp-sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8aa3b8"/><stop offset="1" stop-color="#5f7d96"/></linearGradient>
-<linearGradient id="wp-coat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f4b38"/><stop offset="1" stop-color="#28311f"/></linearGradient>
-<radialGradient id="wp-sun" cx="0.8" cy="0.1" r="0.5"><stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+<linearGradient id="wp-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd48a"/><stop offset="0.6" stop-color="#f08a63"/><stop offset="1" stop-color="#b85f84"/></linearGradient>
+<linearGradient id="wp-playa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ead8b1"/><stop offset="1" stop-color="#cdb388"/></linearGradient>
+<radialGradient id="wp-glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ffb347" stop-opacity="0.75"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
 <clipPath id="wp-clip"><rect width="200" height="200"/></clipPath>
 </defs>
 <g clip-path="url(#wp-clip)">
 <rect width="200" height="200" fill="url(#wp-sky)"/>
-<rect width="200" height="200" fill="url(#wp-sun)"/>
-<path d="M-5 84 L24 66 L52 78 L84 60 L118 76 L150 62 L182 74 L210 64 L210 92 L-5 92 Z" fill="#9aacba"/>
-<path d="M-5 88 L30 80 L70 86 L110 82 L150 86 L210 80 L210 96 L-5 96 Z" fill="#7d93a6"/>
-<rect x="-5" y="92" width="215" height="110" fill="url(#wp-sea)"/>
-<g stroke="#f4f8fb" stroke-width="1.6" stroke-linecap="round" opacity="0.8">
-<path d="M130 102 L138 102 M150 100 L162 100 M172 104 L180 104 M142 110 L150 110 M164 112 L176 112 M186 108 L196 108 M136 120 L146 120 M158 122 L170 122 M184 118 L194 118 M148 132 L158 132 M172 134 L184 134 M20 108 L28 108 M8 120 L16 120 M30 126 L40 126 M14 138 L24 138"/>
+<path d="M-5 112 L30 98 L62 108 L96 94 L128 106 L160 92 L196 104 L210 98 L210 122 L-5 122 Z" fill="#8c6a8f"/>
+<rect x="-5" y="118" width="215" height="90" fill="url(#wp-playa)"/>
+<path d="M-5 150 L210 146 L210 152 L-5 156 Z" fill="#c4aa80" opacity="0.6"/>
+<path d="M22 122 L30 110 L38 122 Z M44 122 L50 113 L56 122 Z" fill="#d9a06b"/>
+<circle cx="165" cy="96" r="42" fill="url(#wp-glow)"/>
+<path d="M141 122 C146 104 150 100 152 86 C156 100 160 94 160 106 C164 92 170 98 170 84 C176 102 182 108 189 122 Z" fill="#ff7a1a"/>
+<path d="M150 122 C152 110 155 106 157 98 C159 108 162 104 162 112 C164 104 168 108 169 100 C172 110 176 114 180 122 Z" fill="#ffd23f"/>
+<path d="M139 124 L147 102 L183 102 L191 124 Z" fill="#6b4a2a"/>
+<g stroke="#ff9a3c" stroke-width="2.6" fill="none">
+<path d="M165 60 L165 82 M165 66 L152 48 M165 66 L178 48 M165 82 L158 102 M165 82 L172 102"/>
 </g>
-<path d="M22 200 C26 170 46 152 74 146 L126 146 C154 152 174 170 178 200 Z" fill="url(#wp-coat)"/>
-<path d="M74 146 C66 150 60 160 60 170 L74 168 C76 158 84 150 100 148 C116 150 124 158 126 168 L140 170 C140 160 134 150 126 146 Z" fill="#4a5742"/>
-<path d="M100 150 L100 200" stroke="#1c2316" stroke-width="2.4"/>
-<path d="M96 150 L104 150 L104 160 L96 160 Z" fill="#8b9484"/>
-<rect x="88" y="118" width="24" height="34" rx="8" fill="#d8ab8e"/>
-<ellipse cx="65" cy="94" rx="6" ry="9" fill="#e3b797"/>
-<ellipse cx="135" cy="94" rx="6" ry="9" fill="#e3b797"/>
-<path d="M66 64 C66 36 134 36 134 64 L134 100 C134 126 118 138 100 138 C82 138 66 126 66 100 Z" fill="#ecc3a6"/>
-<path d="M66 64 C66 44 76 38 84 38 C78 48 76 60 76 72 L68 80 C66 76 66 70 66 64 Z" fill="#a8a39c"/>
-<path d="M134 64 C134 44 124 38 116 38 C122 48 124 60 124 72 L132 80 C134 76 134 70 134 64 Z" fill="#a8a39c"/>
-<path d="M84 38 C90 36 110 36 116 38 C112 42 106 43 100 43 C94 43 88 42 84 38 Z" fill="#b4afa8" opacity="0.55"/>
-<path d="M68 80 C66 92 68 104 72 112 C72 102 70 92 72 84 Z M132 80 C134 92 132 104 128 112 C128 102 130 92 128 84 Z" fill="#a8a39c"/>
-<path d="M78 112 C84 126 94 132 100 132 C106 132 116 126 122 112 C116 124 108 128 100 128 C92 128 84 124 78 112 Z" fill="#8c7c70" opacity="0.35"/>
-<path d="M77 82 C84 78 92 79 96 83" stroke="#4a4038" stroke-width="3.2" fill="none"/>
-<path d="M104 83 C108 79 116 78 123 82" stroke="#4a4038" stroke-width="3.2" fill="none"/>
-<path d="M80 92 C84 90 90 90 94 92 C90 95 84 95 80 92 Z" fill="#f6f1ec"/>
-<path d="M106 92 C110 90 116 90 120 92 C116 95 110 95 106 92 Z" fill="#f6f1ec"/>
-<circle cx="87" cy="92.4" r="2.2" fill="#3d3128"/>
-<circle cx="113" cy="92.4" r="2.2" fill="#3d3128"/>
-<path d="M79 91 C84 89 90 89 95 91 M105 91 C110 89 116 89 121 91" stroke="#4a4038" stroke-width="1.6" fill="none"/>
-<path d="M100 94 C97 102 95 108 96 113 C98 115 102 115 104 113" stroke="#c48f6e" stroke-width="2" fill="none"/>
-<path d="M90 121 C95 120 105 120 110 121" stroke="#9c5f4e" stroke-width="2.2" fill="none"/>
-<path d="M92 104 C96 108 104 108 108 104" stroke="#d9a284" stroke-width="1.2" fill="none" opacity="0.6"/>
+<circle cx="165" cy="54" r="5.5" fill="none" stroke="#ff9a3c" stroke-width="2.6"/>
+<path d="M24 200 C28 168 50 150 76 146 L124 146 C150 150 172 168 176 200 Z" fill="#bb0000"/>
+<path d="M76 146 C84 158 116 158 124 146 L119 151 C112 161 88 161 81 151 Z" fill="#c9c9c9"/>
+<path d="M36 200 C38 182 44 170 52 160 L60 166 C52 176 48 188 46 200 Z M164 200 C162 182 156 170 148 160 L140 166 C148 176 152 188 154 200 Z" fill="#a30000" opacity="0.6"/>
+<text x="100" y="188" font-family="ui-rounded, system-ui, -apple-system, sans-serif" font-weight="800" font-size="11.5" fill="#e8e8e8" text-anchor="middle" letter-spacing="0.5">OHIO STATE</text>
+<rect x="88" y="124" width="24" height="30" rx="8" fill="#d9a77f"/>
+<ellipse cx="65" cy="92" rx="6.5" ry="9" fill="#e4b78f"/>
+<ellipse cx="135" cy="92" rx="6.5" ry="9" fill="#e4b78f"/>
+<path d="M66 72 C66 42 134 42 134 72 L134 108 C134 130 118 142 100 142 C82 142 66 130 66 108 Z" fill="#ecc39c"/>
+<path d="M67 68 C68 46 84 36 100 36 C116 36 132 46 133 68 C128 58 118 54 100 54 C82 54 72 58 67 68 Z" fill="#3a3a3c"/>
+<path d="M67 68 L66 98 C68 92 70 80 71 72 Z M133 68 L134 98 C132 92 130 80 129 72 Z" fill="#3a3a3c"/>
+<path d="M73 56 C77 49 84 46 90 45 C84 50 80 56 78 63 Z M127 56 C123 49 116 46 110 45 C116 50 120 56 122 63 Z" fill="#ecc39c"/>
+<g stroke="#b9b9bb" stroke-width="1.6" stroke-linecap="round" fill="none">
+<path d="M80 50 L83 49 M92 44 L95 44 M104 43 L107 43 M114 47 L117 48 M86 46 L88 46 M110 45 L112 45 M74 60 L75 63 M125 60 L124 63 M68 80 L68 84 M132 80 L132 84"/>
+</g>
+<circle cx="88" cy="88" r="11" fill="#ffffff" stroke="#3a3a3c" stroke-width="1.4"/>
+<circle cx="112" cy="88" r="11" fill="#ffffff" stroke="#3a3a3c" stroke-width="1.4"/>
+<circle cx="90.5" cy="90" r="2.4" fill="#2a2420"/>
+<circle cx="109.5" cy="90" r="2.4" fill="#2a2420"/>
+<path d="M77.4 84 A11 11 0 0 1 98.6 84 Z" fill="#ecc39c"/>
+<path d="M101.4 84 A11 11 0 0 1 122.6 84 Z" fill="#ecc39c"/>
+<path d="M77.4 84 L98.6 84 M101.4 84 L122.6 84" stroke="#3a3a3c" stroke-width="1.6"/>
+<path d="M77 73 C83 69 91 70 97 75" stroke="#2a2420" stroke-width="3.4" fill="none"/>
+<path d="M103 75 C109 70 117 69 123 73" stroke="#2a2420" stroke-width="3.4" fill="none"/>
+<path d="M100 82 C104 92 109 100 108 108 C107 112 101 113 98 110" stroke="#b9805c" stroke-width="2" fill="none"/>
+<path d="M90 124 C95 122 105 122 110 124" stroke="#9c5f4e" stroke-width="2.2" fill="none"/>
 </g>
 </svg>`;
