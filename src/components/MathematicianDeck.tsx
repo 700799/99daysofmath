@@ -5,13 +5,22 @@ import { useProgress } from '../state/progress';
 import type { MathematicianDeck as Deck } from '../data/mathematicianDecks';
 import { MathFigureView } from './MathFigure';
 
-// Full-screen slide player for a mathematician's story — the same look and
-// controls as the Math Stories player (StorySlide): big readable narration on
-// the left, the slide's mathematical figure drawn large on the right, Continue
+// Full-screen slide player for a mathematician's story and for every Math
+// Story: big readable narration on one half, the slide's mathematical figure
+// drawn large on the other, Continue
 // ▶ / Back pills, keyboard arrows, and swipe. Advances ONLY on a button press; each
 // slide has a short minimum-read gate (scaled by the admin's
 // lessonScreenSeconds; 0 disables) so kids actually read before continuing.
-export function MathematicianDeckPlayer({ deck, onClose }: { deck: Deck; onClose: () => void }) {
+export function MathematicianDeckPlayer({
+  deck,
+  onClose,
+  kicker = '🧑‍🔬 Famous Mathematician',
+}: {
+  deck: Deck;
+  onClose: () => void;
+  /** The small line above the title in the header. */
+  kicker?: string;
+}) {
   const [idx, setIdx] = useState(0); // 0 = title slide; 1..n = deck.slides
   const total = deck.slides.length + 1;
   const isLast = idx >= total - 1;
@@ -66,7 +75,7 @@ export function MathematicianDeckPlayer({ deck, onClose }: { deck: Deck; onClose
       <div className="flex shrink-0 items-center justify-between gap-4 border-b border-white/10 bg-black/50 px-4 py-3 backdrop-blur sm:px-6">
         <div className="min-w-0">
           <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-violet-300 sm:text-xs">
-            🧑‍🔬 Famous Mathematician · {deck.era}
+            {kicker} · {deck.era}
           </div>
           <h1 className="font-display text-lg font-extrabold leading-tight text-white sm:text-2xl">
             {deck.emoji} {deck.name}
@@ -107,7 +116,7 @@ export function MathematicianDeckPlayer({ deck, onClose }: { deck: Deck; onClose
                   <p className="font-display text-3xl font-extrabold leading-snug text-white drop-shadow-lg sm:text-4xl md:text-5xl">
                     {deck.name}
                   </p>
-                  <p className="font-display text-xl font-extrabold text-violet-200 sm:text-2xl">{deck.era}</p>
+                  <p className="font-display text-xl font-extrabold text-violet-200 sm:text-2xl">{deck.tagline ?? deck.era}</p>
                   {deck.tieInTo ? (
                     <Link
                       to={deck.tieInTo}
