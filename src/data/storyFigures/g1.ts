@@ -197,7 +197,7 @@ const PIZZA: MathFigure[] = [
       `<circle cx="145" cy="165" r="55" fill="${SKY}" fill-opacity="0.55" stroke="${INK}" stroke-width="2"/>` +
       `<circle cx="255" cy="165" r="55" fill="${SKY}" fill-opacity="0.55" stroke="${INK}" stroke-width="2"/>` +
       label(145, 171, '38', { size: 17 }) + label(255, 171, '38', { size: 17 }) +
-      label(200, 88, '78 more', { size: 14, fill: HI }) + label(200, 250, '78 more', { size: 14, fill: HI }) +
+      label(200, 88, 'gold = 78 extra', { size: 14, fill: HI }) +
       label(200, 304, '154 = 76 + 78 in²', { size: 15 }),
   ),
   tex(
@@ -252,7 +252,7 @@ const PIZZA: MathFigure[] = [
       polyline(Array.from({ length: 31 }, (_, i) => { const k = 1 + i * 0.1; return [60 + k * 75, 270 - k * k * 12.5]; }), HI, 4) +
       [1, 2, 3, 4].map((k) => dot(60 + k * 75, 270 - k * k * 12.5, 6, HI) + dot(60 + k * 75, 270 - k * 12.5, 5, SKY) + label(60 + k * 75, 292, `×${k}`, { size: 13, fill: DIM })).join('') +
       label(285, 145, '9', { size: 14, fill: HI, anchor: 'end' }) + label(210, 210, '4', { size: 14, fill: HI, anchor: 'end' }) + label(345, 66, '16', { size: 14, fill: HI, anchor: 'end' }) +
-      label(372, 232, '×4', { size: 13, fill: SKY, anchor: 'end' }) +
+      label(360, 208, '4', { size: 13, fill: SKY }) +
       label(80, 90, 'area', { size: 14, fill: HI, anchor: 'start' }) + label(80, 115, 'length', { size: 14, fill: SKY, anchor: 'start' }) +
       label(20, 300, 'size', { size: 12, fill: DIM, anchor: 'start' }),
   ),
@@ -360,7 +360,7 @@ const SHORTCUT: MathFigure[] = [
   ),
   draw(
     'Paired bars: legs 3 and 4 give an L of 7 but a diagonal of 5; legs 6 and 8 give 14 versus 10; legs 5 and 12 give 17 versus 13',
-    label(120, 36, 'L path', { size: 14, fill: NO }) + label(260, 36, 'diagonal', { size: 14, fill: OK }) +
+    label(102, 38, 'L path', { size: 14, fill: NO, anchor: 'start' }) + label(227, 38, 'diagonal', { size: 14, fill: OK, anchor: 'start' }) +
       rect(80, 26, 14, 14, NO, 'rx="2"') + rect(205, 26, 14, 14, OK, 'rx="2"') +
       line(30, 260, 370, 260, DIM, 2) +
       [[3, 4], [6, 8], [5, 12]].map(([a, b], i) => {
@@ -565,7 +565,7 @@ const TURING: MathFigure[] = [
     'A monitoring chart: a ratio stays inside the expected band for nine days, then jumps far above it and is flagged',
     label(200, 36, 'expected ratio vs what we see', { size: 14, fill: HI }) +
       rect(60, 260 - 7 * 9, 300, 4 * 9, OK, 'opacity="0.18"') +
-      label(66, 210, 'expected', { size: 12, fill: OK, anchor: 'start' }) +
+      label(70, 188, 'expected band', { size: 12, fill: OK, anchor: 'start' }) +
       line(60, 260, 360, 260, DIM, 2) + line(60, 260, 60, 60, DIM, 2) +
       polyline([5, 6, 5, 4, 6, 5, 5, 6, 5, 17, 19, 6].map((v, i) => [75 + i * 25, 260 - v * 9]), SKY, 3) +
       [5, 6, 5, 4, 6, 5, 5, 6, 5, 17, 19, 6].map((v, i) => dot(75 + i * 25, 260 - v * 9, v > 7 ? 7 : 4, v > 7 ? NO : SKY)).join('') +
