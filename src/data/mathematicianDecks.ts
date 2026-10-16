@@ -12,6 +12,7 @@
 import { tex, draw, INK, DIM, HI, OK, NO, SKY } from './mathFigure';
 import type { MathFigure } from './mathFigure';
 import { HS_MATHEMATICIAN_DECKS } from './mathematiciansHS';
+import { MODERN_MATHEMATICIAN_DECKS } from './mathematiciansModern';
 
 export type { MathFigure } from './mathFigure';
 
@@ -609,6 +610,7 @@ const CORE_DECKS: MathematicianDeck[] = [
 /**
  * Every deck: the eight from the 6th-grade course, then one per high-school
  * course — Al-Khwarizmi for Algebra 1, Thales for Geometry, Hipparchus for
- * Trigonometry, Napier for Precalculus, Pólya for SAT Math.
+ * Trigonometry, Napier for Precalculus, Pólya for SAT Math — then the
+ * mathematicians working today.
  */
-export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [...CORE_DECKS, ...HS_MATHEMATICIAN_DECKS];
+export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [...CORE_DECKS, ...HS_MATHEMATICIAN_DECKS, ...MODERN_MATHEMATICIAN_DECKS];

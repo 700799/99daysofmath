@@ -98,6 +98,13 @@ const MATHEMATICIANS: Mathematician[] = [
     emoji: '🧭',
     storyId: 'SAT-11-fermi',
   },
+  // Working today.
+  {
+    name: 'Dr. Adam Wolfe',
+    era: 'Today',
+    contribution: 'Combinatorics: the mathematics of counting, arranging and choosing',
+    emoji: '🎲',
+  },
 ];
 
 const deckFor = (name: string): MathematicianDeck | undefined =>
@@ -106,9 +113,9 @@ const deckFor = (name: string): MathematicianDeck | undefined =>
 export function Mathematicians() {
   const [open, setOpen] = useState<MathematicianDeck | null>(null);
   useSeo({
-    title: 'Famous Mathematicians for Kids — Thales to Pólya | Math10x',
+    title: 'Famous Mathematicians for Kids — Thales to Today | Math10x',
     description:
-      'Meet the minds who shaped math: Euclid, Newton, Euler, Gauss, Ramanujan, Noether, Hilbert, Cantor, Al-Khwarizmi, Thales, Hipparchus, Napier & Pólya — slide-by-slide stories of what they did and why it matters.',
+      'Meet the minds who shaped math: Euclid, Newton, Euler, Gauss, Ramanujan, Noether, Hilbert, Cantor, Al-Khwarizmi, Thales, Hipparchus, Napier, Pólya & today’s combinatorialist Dr. Adam Wolfe — slide-by-slide stories of what they did and why it matters.',
     canonicalPath: '/mathematicians',
   });
 
