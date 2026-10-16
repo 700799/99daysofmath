@@ -71,18 +71,8 @@ export const MODERN_MATHEMATICIAN_DECKS: MathematicianDeck[] = [
         ),
       },
       {
-        head: 'When order matters',
-        body: 'Four runners finish a race. How many finishing orders are possible? Any of 4 can be first, then 3 are left for second, then 2, then 1. Multiply: 4 × 3 × 2 × 1 = 24. That product has a name, four factorial, written 4!, and it counts every way to line things up.',
-        figure: tex(['4! = 4 \\times 3 \\times 2 \\times 1 = 24', '5! = 120', '10! = 3{,}628{,}800'], 'Factorials count orderings'),
-      },
-      {
-        head: 'When order does not matter',
-        body: 'Pick 2 toppings from 5 for a pizza. Cheese-then-olives is the same pizza as olives-then-cheese, so order does not count. Start with the ordered ways, 5 × 4 = 20, then divide by the 2 orders each pair can come in. There are 10 pizzas. This is a combination.',
-        figure: tex(['\\binom{5}{2} = \\frac{5 \\times 4}{2 \\times 1} = 10', '\\binom{n}{k} = \\frac{n!}{k!\\,(n-k)!}'], 'Choose k from n: order thrown away'),
-      },
-      {
         head: 'Karaoke night',
-        body: 'Karaoke is one of Dr. Wolfe’s favorite things, and it is full of counting. Say the songbook has 10 songs and you will sing 3 tonight. Your first song can be any of 10, the second any of the 9 left, the third any of 8: 10 × 9 × 8 = 720 different playlists. If you only care which 3 songs you sing, not their order, each set of 3 shows up 3! = 6 times, so divide: 720 ÷ 6 = 120 song sets.',
+        body: 'Karaoke is one of Dr. Wolfe’s favorite things, and it is full of counting. Say the songbook has 10 songs and you will sing 3 tonight. Your first song can be any of 10, the second any of the 9 left, the third any of 8: 10 × 9 × 8 = 720 different playlists. If you only care which 3 songs you sing, not their order, each set of 3 can be sung in 3 × 2 × 1 = 6 orders, so divide: 720 ÷ 6 = 120 song sets.',
         figure: draw(
           'Three microphone slots with 10, 9 and 8 song choices, giving 720 playlists, then divided by 6 orders to give 120 song sets',
           label(200, 36, '3 songs from a book of 10', { size: 16, fill: HI }) +
@@ -100,11 +90,21 @@ export const MODERN_MATHEMATICIAN_DECKS: MathematicianDeck[] = [
             label(262, 106, '×', { size: 18, fill: HI }) +
             label(200, 172, '= 720 playlists (order counts)', { size: 15, fill: INK }) +
             line(120, 192, 280, 192, DIM, 2) +
-            label(200, 222, 'same 3 songs in any order: 3! = 6', { size: 13, fill: DIM }) +
+            label(200, 222, 'same 3 songs in any order: 3 × 2 × 1 = 6', { size: 13, fill: DIM }) +
             label(200, 262, '720 ÷ 6 = 120 song sets', { size: 18, fill: OK }) +
             label(200, 298, 'arrange, then forget the order', { size: 13, fill: DIM }),
           'Permutations, then combinations',
         ),
+      },
+      {
+        head: 'When order matters',
+        body: 'Four runners finish a race. How many finishing orders are possible? Any of 4 can be first, then 3 are left for second, then 2, then 1. Multiply: 4 × 3 × 2 × 1 = 24. That product has a name, four factorial, written 4!, and it counts every way to line things up.',
+        figure: tex(['4! = 4 \\times 3 \\times 2 \\times 1 = 24', '5! = 120', '10! = 3{,}628{,}800'], 'Factorials count orderings'),
+      },
+      {
+        head: 'When order does not matter',
+        body: 'Pick 2 toppings from 5 for a pizza. Cheese-then-olives is the same pizza as olives-then-cheese, so order does not count. Start with the ordered ways, 5 × 4 = 20, then divide by the 2 orders each pair can come in. There are 10 pizzas. This is a combination.',
+        figure: tex(['\\binom{5}{2} = \\frac{5 \\times 4}{2 \\times 1} = 10', '\\binom{n}{k} = \\frac{n!}{k!\\,(n-k)!}'], 'Choose k from n: order thrown away'),
       },
       {
         head: 'Pascal\'s triangle',
