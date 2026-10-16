@@ -225,7 +225,7 @@
       },
       {
         "head": "Filling the table",
-        "body": "Filling the board starts calmly, then explodes: square 10 holds 512 grains, square 20 over a million, square 32 about 2.1 billion. Doubling multiplies everything that came before, so the numbers EXPLODE."
+        "body": "Filling the board starts calmly, then explodes: square 10 holds 512 grains, by square 20 the board holds over a million, and square 32 alone holds about 2.1 billion. Doubling multiplies everything that came before, so the numbers EXPLODE."
       },
       {
         "head": "Bankrupt",
@@ -241,7 +241,7 @@
       },
       {
         "head": "Trap: doubling ≠ adding 2",
-        "body": "Trap: treating doubling like adding. 2, 4, 6, 8 is an ADDING pattern that reaches only 128 by square 64. True doubling — 2, 4, 8, 16 — reaches 9,223,372,036,854,775,808. Exponents are a different universe."
+        "body": "Trap: treating doubling like adding. 2, 4, 6, 8 is an ADDING pattern that reaches only 128 by square 64. True doubling — 1, 2, 4, 8, 16 — reaches 9,223,372,036,854,775,808. Exponents are a different universe."
       },
       {
         "head": "Same math, new places",
