@@ -3,46 +3,49 @@
 // photograph. Each is a self-contained SVG string on a 200 × 200 canvas.
 
 /**
- * Dr. Adam Wolfe: dark wavy hair receding at the temples and thinning on top,
- * a goatee, a grey jacket over a black tee, in front of a mountain sunset.
+ * Dr. Adam Wolfe: close-cropped grey hair receding to a bald crown, light
+ * stubble, a dark green zip jacket, standing by the water on a bright day
+ * with mountains across the bay.
  */
 export const WOLFE_PORTRAIT = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Portrait of Dr. Adam Wolfe">
 <defs>
-<linearGradient id="wp-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3b07a"/><stop offset="0.55" stop-color="#e9c9b0"/><stop offset="1" stop-color="#c9b8a6"/></linearGradient>
-<linearGradient id="wp-coat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7d7e86"/><stop offset="1" stop-color="#55565e"/></linearGradient>
-<clipPath id="wp-clip"><rect width="200" height="200" rx="0"/></clipPath>
+<linearGradient id="wp-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f0f5"/><stop offset="1" stop-color="#c3d2de"/></linearGradient>
+<linearGradient id="wp-sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8aa3b8"/><stop offset="1" stop-color="#5f7d96"/></linearGradient>
+<linearGradient id="wp-coat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f4b38"/><stop offset="1" stop-color="#28311f"/></linearGradient>
+<radialGradient id="wp-sun" cx="0.8" cy="0.1" r="0.5"><stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+<clipPath id="wp-clip"><rect width="200" height="200"/></clipPath>
 </defs>
 <g clip-path="url(#wp-clip)">
 <rect width="200" height="200" fill="url(#wp-sky)"/>
-<path d="M-5 120 L30 70 L52 96 L80 60 L104 92 L130 66 L160 98 L185 72 L210 112 L210 200 L-5 200 Z" fill="#6e5236"/>
-<path d="M-5 150 L24 118 L58 140 L96 112 L140 138 L176 116 L210 146 L210 200 L-5 200 Z" fill="#4c3827"/>
-<path d="M-5 172 L210 166 L210 200 L-5 200 Z" fill="#7b5d3a"/>
-<path d="M18 200 L28 150 L40 200 Z M156 200 L170 158 L186 200 Z" fill="#3d5a2e"/>
-<path d="M22 200 C28 168 50 150 76 146 L124 146 C150 150 172 168 178 200 Z" fill="url(#wp-coat)"/>
-<path d="M76 146 L100 200 L124 146 L112 148 L100 182 L88 148 Z" fill="#17171c"/>
-<circle cx="100" cy="176" r="12" fill="none" stroke="#c0262a" stroke-width="2.2"/>
-<path d="M100 164 L100 188 M88 176 L112 176" stroke="#c0262a" stroke-width="2.2"/>
-<path d="M76 146 C70 158 66 176 64 200 L80 200 C80 178 86 160 100 146 Z" fill="#8f9098"/>
-<path d="M124 146 C130 158 134 176 136 200 L120 200 C120 178 114 160 100 146 Z" fill="#8f9098"/>
-<rect x="88" y="118" width="24" height="34" rx="8" fill="#d9a07f"/>
-<ellipse cx="66" cy="92" rx="6" ry="9" fill="#e5b092"/>
-<ellipse cx="134" cy="92" rx="6" ry="9" fill="#e5b092"/>
-<path d="M66 60 C66 38 134 38 134 60 L134 100 C134 124 118 136 100 136 C82 136 66 124 66 100 Z" fill="#edbd9f"/>
-<path d="M60 70 C54 56 60 44 76 42 C70 52 66 64 68 82 C66 92 70 102 68 112 C62 104 58 86 60 70 Z" fill="#2b1a12"/>
-<path d="M140 70 C146 56 140 44 124 42 C130 52 134 64 132 82 C134 92 130 102 132 112 C138 104 142 86 140 70 Z" fill="#2b1a12"/>
-<path d="M80 42 C88 36 96 36 100 38 C104 36 112 36 120 42 C114 41 109 43 106 46 C103 44 97 44 94 46 C91 43 86 41 80 42 Z" fill="#2b1a12" opacity="0.72"/>
-<path d="M84 50 C88 46 92 46 95 49 M105 49 C108 46 112 46 116 50 M98 44 C100 42 102 42 103 44" stroke="#2b1a12" stroke-width="1.6" fill="none" opacity="0.5"/>
-<path d="M66 84 C64 92 66 102 70 110 C70 102 68 92 70 86 Z M134 84 C136 92 134 102 130 110 C130 102 132 92 130 86 Z" fill="#2b1a12"/>
-<path d="M78 80 C84 76 92 77 96 80" stroke="#2b1a12" stroke-width="3.5" fill="none"/>
-<path d="M104 80 C108 77 116 76 122 80" stroke="#2b1a12" stroke-width="3.5" fill="none"/>
-<ellipse cx="87" cy="90" rx="6" ry="3.6" fill="#fbf4ee"/>
-<ellipse cx="113" cy="90" rx="6" ry="3.6" fill="#fbf4ee"/>
-<circle cx="87" cy="90" r="2.6" fill="#3b2a1f"/>
-<circle cx="113" cy="90" r="2.6" fill="#3b2a1f"/>
-<path d="M81 88 C85 86 90 86 93 88 M107 88 C110 86 115 86 119 88" stroke="#2b1a12" stroke-width="1.4" fill="none"/>
-<path d="M100 92 C98 100 96 106 97 110 C99 112 103 112 104 110" stroke="#c88a68" stroke-width="2" fill="none"/>
-<path d="M92 118 C97 116 103 116 108 118" stroke="#9c5a48" stroke-width="2.2" fill="none"/>
-<path d="M88 114 C92 111 108 111 112 114 C108 116 92 116 88 114 Z" fill="#2b1a12" opacity="0.85"/>
-<path d="M90 122 C94 130 106 130 110 122 C110 136 100 142 100 142 C100 142 90 136 90 122 Z" fill="#2b1a12"/>
+<rect width="200" height="200" fill="url(#wp-sun)"/>
+<path d="M-5 84 L24 66 L52 78 L84 60 L118 76 L150 62 L182 74 L210 64 L210 92 L-5 92 Z" fill="#9aacba"/>
+<path d="M-5 88 L30 80 L70 86 L110 82 L150 86 L210 80 L210 96 L-5 96 Z" fill="#7d93a6"/>
+<rect x="-5" y="92" width="215" height="110" fill="url(#wp-sea)"/>
+<g stroke="#f4f8fb" stroke-width="1.6" stroke-linecap="round" opacity="0.8">
+<path d="M130 102 L138 102 M150 100 L162 100 M172 104 L180 104 M142 110 L150 110 M164 112 L176 112 M186 108 L196 108 M136 120 L146 120 M158 122 L170 122 M184 118 L194 118 M148 132 L158 132 M172 134 L184 134 M20 108 L28 108 M8 120 L16 120 M30 126 L40 126 M14 138 L24 138"/>
+</g>
+<path d="M22 200 C26 170 46 152 74 146 L126 146 C154 152 174 170 178 200 Z" fill="url(#wp-coat)"/>
+<path d="M74 146 C66 150 60 160 60 170 L74 168 C76 158 84 150 100 148 C116 150 124 158 126 168 L140 170 C140 160 134 150 126 146 Z" fill="#4a5742"/>
+<path d="M100 150 L100 200" stroke="#1c2316" stroke-width="2.4"/>
+<path d="M96 150 L104 150 L104 160 L96 160 Z" fill="#8b9484"/>
+<rect x="88" y="118" width="24" height="34" rx="8" fill="#d8ab8e"/>
+<ellipse cx="65" cy="94" rx="6" ry="9" fill="#e3b797"/>
+<ellipse cx="135" cy="94" rx="6" ry="9" fill="#e3b797"/>
+<path d="M66 64 C66 36 134 36 134 64 L134 100 C134 126 118 138 100 138 C82 138 66 126 66 100 Z" fill="#ecc3a6"/>
+<path d="M66 64 C66 44 76 38 84 38 C78 48 76 60 76 72 L68 80 C66 76 66 70 66 64 Z" fill="#a8a39c"/>
+<path d="M134 64 C134 44 124 38 116 38 C122 48 124 60 124 72 L132 80 C134 76 134 70 134 64 Z" fill="#a8a39c"/>
+<path d="M84 38 C90 36 110 36 116 38 C112 42 106 43 100 43 C94 43 88 42 84 38 Z" fill="#b4afa8" opacity="0.55"/>
+<path d="M68 80 C66 92 68 104 72 112 C72 102 70 92 72 84 Z M132 80 C134 92 132 104 128 112 C128 102 130 92 128 84 Z" fill="#a8a39c"/>
+<path d="M78 112 C84 126 94 132 100 132 C106 132 116 126 122 112 C116 124 108 128 100 128 C92 128 84 124 78 112 Z" fill="#8c7c70" opacity="0.35"/>
+<path d="M77 82 C84 78 92 79 96 83" stroke="#4a4038" stroke-width="3.2" fill="none"/>
+<path d="M104 83 C108 79 116 78 123 82" stroke="#4a4038" stroke-width="3.2" fill="none"/>
+<path d="M80 92 C84 90 90 90 94 92 C90 95 84 95 80 92 Z" fill="#f6f1ec"/>
+<path d="M106 92 C110 90 116 90 120 92 C116 95 110 95 106 92 Z" fill="#f6f1ec"/>
+<circle cx="87" cy="92.4" r="2.2" fill="#3d3128"/>
+<circle cx="113" cy="92.4" r="2.2" fill="#3d3128"/>
+<path d="M79 91 C84 89 90 89 95 91 M105 91 C110 89 116 89 121 91" stroke="#4a4038" stroke-width="1.6" fill="none"/>
+<path d="M100 94 C97 102 95 108 96 113 C98 115 102 115 104 113" stroke="#c48f6e" stroke-width="2" fill="none"/>
+<path d="M90 121 C95 120 105 120 110 121" stroke="#9c5f4e" stroke-width="2.2" fill="none"/>
+<path d="M92 104 C96 108 104 108 108 104" stroke="#d9a284" stroke-width="1.2" fill="none" opacity="0.6"/>
 </g>
 </svg>`;
