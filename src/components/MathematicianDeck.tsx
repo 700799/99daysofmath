@@ -137,6 +137,12 @@ export function MathematicianDeckPlayer({ deck, onClose }: { deck: Deck; onClose
               className="flex h-full w-full select-none items-center justify-center">
               {slide ? (
                 <MathFigureView figure={slide.figure} />
+              ) : deck.portrait ? (
+                <div
+                  className="overflow-hidden rounded-[2rem] border-4 border-white/20 shadow-2xl [&>svg]:h-full [&>svg]:w-full"
+                  style={{ width: 'min(60vw, 18rem)', height: 'min(60vw, 18rem)' }}
+                  dangerouslySetInnerHTML={{ __html: deck.portrait }}
+                />
               ) : (
                 <span className="leading-none" style={{ fontSize: 'min(22vw, 11rem)' }} aria-hidden="true">
                   {deck.emoji}

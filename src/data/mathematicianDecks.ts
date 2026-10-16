@@ -12,6 +12,7 @@
 import { tex, draw, INK, DIM, HI, OK, NO, SKY } from './mathFigure';
 import type { MathFigure } from './mathFigure';
 import { HS_MATHEMATICIAN_DECKS } from './mathematiciansHS';
+import { MODERN_MATHEMATICIAN_DECKS } from './mathematiciansModern';
 
 export type { MathFigure } from './mathFigure';
 
@@ -30,6 +31,8 @@ export interface MathematicianDeck {
   tieIn: string; // which app unit(s) this connects to, shown on the title slide
   /** Route of that unit or course, so the title slide's tie-in can be a link. */
   tieInTo?: string;
+  /** A drawn portrait (self-contained SVG), shown on the card and title slide in place of the emoji. */
+  portrait?: string;
   slides: MathSlide[];
 }
 
@@ -609,6 +612,7 @@ const CORE_DECKS: MathematicianDeck[] = [
 /**
  * Every deck: the eight from the 6th-grade course, then one per high-school
  * course — Al-Khwarizmi for Algebra 1, Thales for Geometry, Hipparchus for
- * Trigonometry, Napier for Precalculus, Pólya for SAT Math.
+ * Trigonometry, Napier for Precalculus, Pólya for SAT Math — then the
+ * mathematicians working today.
  */
-export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [...CORE_DECKS, ...HS_MATHEMATICIAN_DECKS];
+export const MATHEMATICIAN_DECKS: MathematicianDeck[] = [...CORE_DECKS, ...HS_MATHEMATICIAN_DECKS, ...MODERN_MATHEMATICIAN_DECKS];

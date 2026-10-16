@@ -17,7 +17,7 @@ export const A1_SLIDES_U12_14: SlideBank = {
       kind: 'concept',
       head: 'Like terms: same kind of sticker',
       body: 'You can only count apples with apples. 4x and 3x are the same kind, so 4x + 3x = 7x. But x² and x are DIFFERENT kinds — they never merge into one pile.',
-      formula: { tex: '4x + 3x = 7x \\qquad 4x + 3x^2 \\ \\text{stays put}', note: 'Only matching blocks combine. x and x² are different-sized blocks.', parts: [{ sym: '4x,\\ 3x', means: 'same letter, same power, so they add', tone: 'ok' }, { sym: '3x^2', means: 'a different power, so it never joins them', tone: 'bad' }] },
+      formula: { tex: '\\begin{gathered} 4x + 3x = 7x \\\\ 4x + 3x^2 \\ \\text{stays put} \\end{gathered}', note: 'Only matching blocks combine. x and x² are different-sized blocks.', parts: [{ sym: '4x,\\ 3x', means: 'same letter, same power, so they add', tone: 'ok' }, { sym: '3x^2', means: 'a different power, so it never joins them', tone: 'bad' }] },
       art: tape([{ label: 'x terms', boxes: 4, each: 'x', color: SKY }, { label: 'x² terms', boxes: 2, each: 'x²', color: EMR }], { total: '4x and 2x² stay apart', title: 'Only matching blocks combine', caption: 'x and x² are different-sized blocks. You can count each kind, but never merge them.' }),
     },
     {

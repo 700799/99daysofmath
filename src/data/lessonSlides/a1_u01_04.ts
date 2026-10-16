@@ -163,7 +163,7 @@ export const A1_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Two steps? Unwrap backwards',
       body: 'In 8w + 20 = 68, the w got wrapped twice: first times 8, then plus 20. Unwrap like a present, backwards: peel off the +20 first, then the ×8. Last operation on gets undone first.',
-      formula: { tex: '3x + 2 = 14 \\implies 3x = 12 \\implies x = 4', note: 'Last wrapped, first unwrapped — like shoes before socks.', parts: [{ sym: '-2 \\text{ first}', means: 'the addition was done last, so undo it first', tone: 'accent' }, { sym: '\\div 3 \\text{ second}', means: 'then undo the multiplication', tone: 'ok' }] },
+      formula: { tex: '\\begin{gathered} 3x + 2 = 14 \\\\ \\implies 3x = 12 \\implies x = 4 \\end{gathered}', note: 'Last wrapped, first unwrapped — like shoes before socks.', parts: [{ sym: '-2 \\text{ first}', means: 'the addition was done last, so undo it first', tone: 'accent' }, { sym: '\\div 3 \\text{ second}', means: 'then undo the multiplication', tone: 'ok' }] },
       art: flow([{ label: 'Rule: × 3, then + 2' }, { label: 'Undo the + 2 first' }, { label: 'Then undo the × 3' }], { title: 'Last wrapped, first unwrapped', caption: 'Like taking off shoes before socks — you reverse the order you put them on.' }),
     },
     {
@@ -288,7 +288,7 @@ export const A1_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Get the x terms on one team',
       body: 'When x appears on both sides, like 5x = 2x + 12, move all the x-terms to one side. Subtract 2x from both sides: 3x = 12. One team of x on the left, plain numbers on the right.',
-      formula: { tex: '7x - 4 = 3x + 16 \\implies 4x - 4 = 16', note: 'Subtract the smaller x-term from both sides to gather them.', parts: [{ sym: '3x', means: 'the smaller x-term, easiest to move across', tone: 'accent' }, { sym: '\\text{both sides}', means: 'keeps the equation true while you gather', tone: 'ok' }] },
+      formula: { tex: '\\begin{gathered} 7x - 4 = 3x + 16 \\\\ \\implies 4x - 4 = 16 \\end{gathered}', note: 'Subtract the smaller x-term from both sides to gather them.', parts: [{ sym: '3x', means: 'the smaller x-term, easiest to move across', tone: 'accent' }, { sym: '\\text{both sides}', means: 'keeps the equation true while you gather', tone: 'ok' }] },
       art: balance('7x − 4', '3x + 16', { title: 'Move the smaller x across', note: 'Subtract 3x from both sides → 4x − 4 = 16', caption: 'Taking 3x from both sides keeps the balance and leaves x on one pan only.' }),
     },
     {

@@ -72,6 +72,13 @@ export function SatUnit() {
         >
           Practice this unit — 10 questions ▶
         </Link>
+        <Link
+          to={`/unit/SAT/${pb.unit}`}
+          state={{ lesson: true }}
+          className="mt-2 block w-full rounded-2xl border-2 border-line bg-surface-2 px-6 py-2.5 text-center font-display text-sm font-extrabold text-ink transition-colors hover:border-accent/50"
+        >
+          📘 Read the illustrated lesson first
+        </Link>
       </div>
 
       {/* ── methods ── */}

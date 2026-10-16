@@ -98,6 +98,13 @@ const MATHEMATICIANS: Mathematician[] = [
     emoji: '🧭',
     storyId: 'SAT-11-fermi',
   },
+  // Working today.
+  {
+    name: 'Dr. Adam Wolfe',
+    era: 'Born 1977',
+    contribution: 'Ohio-born combinatorialist: the mathematics of counting, arranging and choosing',
+    emoji: '🎲',
+  },
 ];
 
 const deckFor = (name: string): MathematicianDeck | undefined =>
@@ -106,9 +113,9 @@ const deckFor = (name: string): MathematicianDeck | undefined =>
 export function Mathematicians() {
   const [open, setOpen] = useState<MathematicianDeck | null>(null);
   useSeo({
-    title: 'Famous Mathematicians for Kids — Thales to Pólya | Math10x',
+    title: 'Famous Mathematicians for Kids — Thales to Today | Math10x',
     description:
-      'Meet the minds who shaped math: Euclid, Newton, Euler, Gauss, Ramanujan, Noether, Hilbert, Cantor, Al-Khwarizmi, Thales, Hipparchus, Napier & Pólya — slide-by-slide stories of what they did and why it matters.',
+      'Meet the minds who shaped math: Euclid, Newton, Euler, Gauss, Ramanujan, Noether, Hilbert, Cantor, Al-Khwarizmi, Thales, Hipparchus, Napier, Pólya & today’s combinatorialist Dr. Adam Wolfe — slide-by-slide stories of what they did and why it matters.',
     canonicalPath: '/mathematicians',
   });
 
@@ -140,7 +147,14 @@ export function Mathematicians() {
               className="rounded-2xl p-4 bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-accent/35"
             >
               <div className="flex items-start gap-3">
-                <div className="text-4xl shrink-0">{m.emoji}</div>
+                {deck?.portrait ? (
+                  <div
+                    className="h-16 w-16 shrink-0 overflow-hidden rounded-2xl border-2 border-accent/30 [&>svg]:h-full [&>svg]:w-full"
+                    dangerouslySetInnerHTML={{ __html: deck.portrait }}
+                  />
+                ) : (
+                  <div className="text-4xl shrink-0">{m.emoji}</div>
+                )}
                 <div className="flex-1 min-w-0">
                   <div className="font-display font-extrabold text-ink">{m.name}</div>
                   <div className="text-xs font-display font-bold text-accent uppercase tracking-wider mt-0.5">

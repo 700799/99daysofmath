@@ -409,7 +409,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
       head: 'One question, three rules',
       body: 'A log asks "the base to what power?" and hands you the exponent. Multiply inside becomes add outside, divide becomes subtract, and an exponent slides out front. Richter, decibels, and pH are all logs wearing everyday clothes.',
       formula: {
-        tex: '\\log(AB) = \\log A + \\log B \\quad \\log\\tfrac{A}{B} = \\log A - \\log B \\quad \\log A^{n} = n\\log A',
+        tex: '\\begin{gathered} \\log(AB) = \\log A + \\log B \\\\ \\log\\tfrac{A}{B} = \\log A - \\log B \\\\ \\log A^{n} = n\\log A \\end{gathered}',
         parts: [
           { sym: '\\times', means: 'multiply inside becomes add outside', tone: 'ok' },
           { sym: '\\div', means: 'divide inside becomes subtract outside', tone: 'accent' },
@@ -588,7 +588,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
       head: 'Label first, always',
       body: 'Before any formula, pick your angle and name the sides from ITS point of view. The HYPOTENUSE is the slant across from the right angle. The OPPOSITE side is across from your angle, and the ADJACENT side is the leg that touches it.',
       formula: {
-        tex: '\\sin\\theta = \\dfrac{\\text{opp}}{\\text{hyp}} \\quad \\cos\\theta = \\dfrac{\\text{adj}}{\\text{hyp}} \\quad \\tan\\theta = \\dfrac{\\text{opp}}{\\text{adj}}',
+        tex: '\\begin{gathered} \\sin\\theta = \\dfrac{\\text{opp}}{\\text{hyp}} \\quad \\cos\\theta = \\dfrac{\\text{adj}}{\\text{hyp}} \\\\ \\tan\\theta = \\dfrac{\\text{opp}}{\\text{adj}} \\end{gathered}',
         note: 'The hypotenuse never changes, but opposite and adjacent swap if you switch angles.',
         parts: [
           { sym: '\\text{hyp}', means: 'always the long side, across from the right angle', tone: 'accent' },

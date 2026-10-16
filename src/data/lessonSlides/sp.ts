@@ -594,7 +594,7 @@ export const SP_SLIDES: SlideBank = {
       kind: 'concept',
       head: 'Dot plots: dots are data',
       body: 'On a DOT PLOT, each dot is exactly one data value sitting above its number on the line. Tall stacks mean common values; empty spots mean nobody got that value. To count anything, count dots.',
-      formula: { tex: '\\text{height of a stack} = \\text{how many times it occurred}', note: 'Count dots, never pixels. Each dot is exactly one value.', parts: [{ sym: '\\text{one dot}', means: 'a single value from the data set', tone: 'accent' }, { sym: '\\text{stack}', means: 'all the times that same value came up', tone: 'ok' }] },
+      formula: { tex: '\\begin{gathered} \\text{height of a stack} \\\\ = \\text{how many times it occurred} \\end{gathered}', note: 'Count dots, never pixels. Each dot is exactly one value.', parts: [{ sym: '\\text{one dot}', means: 'a single value from the data set', tone: 'accent' }, { sym: '\\text{stack}', means: 'all the times that same value came up', tone: 'ok' }] },
       art: dotPlot([1, 2, 3, 4, 5], [2, 1, 4, 2, 1], { mark: 2, unit: 'four dots above the 3', title: 'Each dot is one data point', caption: 'The stack above 3 is four dots tall, so the value 3 occurred four times.' }),
     },
     {

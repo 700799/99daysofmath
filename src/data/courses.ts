@@ -57,7 +57,7 @@ export const COURSES: Course[] = [
     color: DOMAIN_COLORS.SAT,
     kicker: 'Digital SAT prep',
     blurb:
-      'The full blueprint: 18 unit playbooks, 180 practice questions with worked explanations, 130 strategy tips, and 5 full-length mock tests with scoring and a recovery plan.',
+      'The full blueprint: 18 illustrated lessons, 18 unit playbooks, 180 practice questions with worked explanations, 130 strategy tips, and 5 full-length mock tests with scoring and a recovery plan.',
     strands: [{ domain: 'SAT', label: 'SAT Math' }],
     customPath: '/sat',
   },
