@@ -4,7 +4,7 @@
 
 /**
  * Dr. Adam Wolfe, drawn as a Sunday-cartoon character after his photo: a
- * narrow face, a tall swept-back salt-and-pepper hairdo, big round eyes looking
+ * narrow face under a high, mostly bare crown with thin, wispy salt-and-pepper hair, big round eyes looking
  * straight ahead, a long nose and a wide smile, clean-shaven, in a scarlet Ohio
  * State sweater, with the Man burning on the playa behind him.
  */
@@ -36,14 +36,15 @@ export const WOLFE_PORTRAIT = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="
 <rect x="89" y="126" width="22" height="28" rx="8" fill="#d9a77f"/>
 <ellipse cx="70" cy="94" rx="5.5" ry="8.5" fill="#e4b78f"/>
 <ellipse cx="130" cy="94" rx="5.5" ry="8.5" fill="#e4b78f"/>
-<path d="M72 74 C72 52 128 52 128 74 L128 112 C128 134 115 146 100 146 C85 146 72 134 72 112 Z" fill="#ecc39c"/>
+<path d="M72 78 C71 30 129 30 128 78 L128 112 C128 134 115 146 100 146 C85 146 72 134 72 112 Z" fill="#ecc39c"/>
 <path d="M74 112 C75 133 87 145 100 145 C113 145 125 133 126 112 C120 121 110 119 100 121 C90 119 80 121 74 112 Z" fill="#8f9096" opacity="0.14"/>
-<path d="M72 82 L71 62 C70 44 80 30 98 26 C116 23 130 32 131 50 L128 82 L126 70 C121 58 110 54 100 55 C88 55 79 60 75 70 Z" fill="#76767a"/>
+<ellipse cx="94" cy="50" rx="12" ry="5" fill="#ffffff" opacity="0.28"/>
+<path d="M72 84 C71 64 76 50 86 44 C80 54 77 66 77 80 Z M128 84 C129 64 124 50 114 44 C120 54 123 66 123 80 Z" fill="#8a8a8e" opacity="0.55"/>
+<path d="M78 58 C86 44 106 38 122 50 C108 44 90 46 78 58 Z" fill="#9a9a9e" opacity="0.3"/>
 <g stroke-linecap="round" fill="none">
-<path d="M76 66 C78 46 92 32 112 30 M84 58 C88 44 101 35 120 35 M93 55 C99 45 111 40 126 43 M74 74 C73 58 78 44 90 34 M104 55 C111 47 120 45 128 52 M80 63 C83 50 92 40 104 34 M98 54 C104 44 114 39 124 40" stroke="#4a4a4e" stroke-width="1.5"/>
-<path d="M79 62 C83 46 96 35 115 32 M88 56 C94 44 106 37 123 38 M100 54 C106 46 116 43 128 48 M73 70 C73 56 79 44 92 31 M77 70 C79 54 88 42 100 36 M108 54 C114 48 122 47 129 55" stroke="#d6d6d9" stroke-width="1.2"/>
-<path d="M82 52 l2 -1 M95 40 l2 -1 M110 36 l2 0 M120 44 l2 1 M88 47 l1.5 -1.5 M103 46 l2 -1 M116 52 l2 0 M76 58 l1 -2" stroke="#ececee" stroke-width="1.4"/>
-<path d="M128 56 L128 78 M72 64 L72 80" stroke="#bdbdc0" stroke-width="1.6"/>
+<path d="M80 54 C88 44 102 40 116 44 M86 48 C94 42 108 40 120 47 M76 64 C77 56 80 50 85 46" stroke="#55555a" stroke-width="0.9" opacity="0.8"/>
+<path d="M83 51 C91 43 104 41 118 45 M92 45 C100 41 110 41 121 49 M124 64 C123 56 120 50 115 46" stroke="#d8d8db" stroke-width="0.9" opacity="0.9"/>
+<path d="M73 70 L74 82 M127 70 L126 82 M75 66 L76 78 M125 66 L124 78" stroke="#bdbdc0" stroke-width="1"/>
 </g>
 <path d="M78 76 C83 70 91 70 97 74" stroke="#4a4a4d" stroke-width="3.2" stroke-linecap="round" fill="none"/>
 <path d="M103 74 C109 70 117 70 122 76" stroke="#4a4a4d" stroke-width="3.2" stroke-linecap="round" fill="none"/>

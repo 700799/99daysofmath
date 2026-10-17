@@ -113,7 +113,7 @@ export function Stories() {
       </Link>
 
       {opened && (
-        <MathematicianDeckPlayer deck={storyToDeck(opened)} kicker="🌟 Math Story" onClose={() => setOpened(null)} />
+        <MathematicianDeckPlayer deck={storyToDeck(opened)} kicker="🌟 Math Story" theme="light" onClose={() => setOpened(null)} />
       )}
     </div>
   );
