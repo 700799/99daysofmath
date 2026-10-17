@@ -18,6 +18,8 @@ const EMOJI_BY_DOMAIN: Record<string, string> = {
   TRIG: '📡',
   PC: '🎢',
   SAT: '🎯',
+  CALC: '📈',
+  STAT: '🧪',
 };
 
 export function Stories() {

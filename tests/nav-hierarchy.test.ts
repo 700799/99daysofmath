@@ -132,7 +132,7 @@ describe('parentOf — the other sections', () => {
 
   it('every remaining top-level page steps back to Home', () => {
     for (const path of ['/mix', '/test', '/practice', '/report', '/videos', '/stories',
-      '/mathematicians', '/settings', '/shop', '/rewards']) {
+      '/mathematicians', '/settings', '/shop', '/rewards', '/privacy']) {
       expect(parentOf(path), path).toEqual({ to: '/', label: 'Home' });
     }
   });

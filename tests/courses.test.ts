@@ -13,9 +13,9 @@ import { DOMAINS, TRAIL_DOMAINS, CORE_DOMAINS, type Domain } from '../src/types/
 // every domain, name each one once, and point somewhere real.
 
 describe('the course shelf', () => {
-  it('is the seven courses, in the order Home shows them', () => {
+  it('is the nine courses, in the order Home shows them', () => {
     expect(COURSES.map((c) => c.id)).toEqual([
-      'sat', 'precalc', 'trig', 'algebra1', 'geometry', 'grade6', 'grade5',
+      'sat', 'calcab', 'apstats', 'precalc', 'trig', 'algebra1', 'geometry', 'grade6', 'grade5',
     ] satisfies CourseId[]);
   });
 

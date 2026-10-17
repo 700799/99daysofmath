@@ -6,6 +6,7 @@ import { AccountCard } from '../components/AccountCard';
 import { ARCADE_GAMES } from './arcade/shared';
 import { useTheme } from '../hooks/useTheme';
 import { AGE_RANGE, GRADE_LEVELS, COURSES, COURSE_FIT } from '../data/courses';
+import { useConsent } from '../state/consent';
 
 const GOAL_OPTIONS = [10, 30, 50, 100];
 
@@ -31,6 +32,8 @@ export function Settings() {
   const mockTestsCompleted = useProgress((s) => s.mockTestsCompleted);
   const bestMockAccuracy = useProgress((s) => s.bestMockAccuracy);
   const dailyQuestStreak = useProgress((s) => s.dailyQuestStreak);
+  const consent = useConsent((s) => s.choice);
+  const resetConsent = useConsent((s) => s.reset);
   const [confirming, setConfirming] = useState(false);
   const [done, setDone] = useState(false);
 
@@ -63,6 +66,30 @@ export function Settings() {
         >
           📊 View full progress report →
         </Link>
+      </div>
+
+      <div className="bg-surface border-2 border-line rounded-2xl p-5">
+        <div className="font-display font-extrabold text-ink">Privacy &amp; cookies</div>
+        <div className="mt-1 text-sm text-ink-muted">
+          Cookie choice:{' '}
+          <b>{consent === 'all' ? 'ads allowed' : consent === 'essential' ? 'essential only' : 'not answered yet'}</b>.
+          Ads appear only on the Trigonometry, Precalculus and SAT Math pages, and only if allowed.
+        </div>
+        <div className="mt-3 flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={resetConsent}
+            className="min-h-11 rounded-xl border-2 border-line bg-surface-2 px-4 font-display text-sm font-extrabold text-ink hover:border-accent/50"
+          >
+            Change cookie choice
+          </button>
+          <Link
+            to="/privacy"
+            className="inline-flex min-h-11 items-center rounded-xl border-2 border-line bg-surface-2 px-4 font-display text-sm font-extrabold text-ink hover:border-accent/50"
+          >
+            Read the privacy notice
+          </Link>
+        </div>
       </div>
 
       <div className="bg-surface border-2 border-line rounded-2xl p-5">

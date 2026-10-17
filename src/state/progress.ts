@@ -764,6 +764,15 @@ export function migrateProgress(persisted: unknown, fromVersion: number): unknow
       stateAny[key] = rec;
     }
   }
+  if (fromVersion < 31) {
+    // AP Calculus AB and AP Statistics arrive: seed their trail records.
+    const stateAny = state as Record<string, unknown>;
+    const byDomain = (stateAny.byDomain ?? {}) as Record<string, unknown>;
+    for (const d of ['CALC', 'STAT']) {
+      if (byDomain[d] === undefined) byDomain[d] = { unitsUnlocked: 1, unitStars: {}, missedProblemIds: [] };
+    }
+    stateAny.byDomain = byDomain;
+  }
   if (fromVersion < 30) {
     // The per-screen read gate now ships OFF: a forced pause before Next was
     // friction on every slide of every lesson, and the app already lets a
@@ -1485,7 +1494,7 @@ export const useProgress = create<ProgressState>()(
     }),
     {
       name: '99daysofmath:progress',
-      version: 30,
+      version: 31,
       migrate: migrateProgress,
     },
   ),

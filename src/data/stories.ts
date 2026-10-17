@@ -5,6 +5,7 @@
 import storiesJson from './mathStories.json';
 import type { MathFigure } from './mathFigure';
 import { HS_STORIES } from './mathStoriesHS';
+import { AP_STORIES } from './mathStoriesAP';
 import { STORY_FIGURES } from './storyFigures';
 
 export interface Beat {
@@ -60,6 +61,8 @@ const STORY_EMOJI: Record<string, string> = {
   'TRIG-14-everest': '🏔️',
   'PC-14-zeno': '🐢',
   'SAT-11-fermi': '💥',
+  'CALC-11-archimedes': '🏺',
+  'STAT-6-lady-tasting-tea': '🫖',
 };
 
 const ANIMATED: Story[] = (storiesJson as Omit<Story, 'id'>[]).map((s) => {
@@ -73,7 +76,7 @@ const ANIMATED: Story[] = (storiesJson as Omit<Story, 'id'>[]).map((s) => {
   };
 });
 
-export const STORIES: Story[] = [...ANIMATED, ...HS_STORIES].map((s) => ({
+export const STORIES: Story[] = [...ANIMATED, ...HS_STORIES, ...AP_STORIES].map((s) => ({
   ...s,
   emoji: STORY_EMOJI[s.id] ?? '🌟',
   learnedFigure: s.learnedFigure ?? s.beats[s.beats.length - 1]?.figure,

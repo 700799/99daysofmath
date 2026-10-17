@@ -24,11 +24,13 @@ const EXPECTED_BY_DOMAIN: Record<string, { count: number; units: number }> = {
   TRIG: { count: 140, units: 14 },
   PC: { count: 140, units: 14 },
   SAT: { count: 180, units: 18 },
+  CALC: { count: 140, units: 14 },
+  STAT: { count: 140, units: 14 },
 };
 
 describe('problems bank — structure', () => {
-  it('contains exactly 1400 problems', () => {
-    expect(PROBLEMS).toHaveLength(1400);
+  it('contains exactly 1680 problems', () => {
+    expect(PROBLEMS).toHaveLength(1680);
   });
 
   it('every id is globally unique', () => {
@@ -163,7 +165,7 @@ describe('problems bank — units 7-10 quality bar', () => {
   // unit 10. The course-length domains — Algebra 1, Geometry, Trigonometry and
   // Precalculus run to unit 14, SAT Math to unit 18 — each have their own
   // (stricter) bar below.
-  const COURSE_LENGTH: string[] = ['A1', 'GEO', 'TRIG', 'PC', 'SAT'];
+  const COURSE_LENGTH: string[] = ['A1', 'GEO', 'TRIG', 'PC', 'SAT', 'CALC', 'STAT'];
   const advanced = PROBLEMS.filter((p) => p.unit >= 7 && !COURSE_LENGTH.includes(p.domain));
 
   it('covers every unit past 6 in the grade-level domains', () => {
@@ -385,5 +387,52 @@ describe('problems bank — Precalculus quality bar', () => {
   it('is anchored in the real world (40%+ word problems)', () => {
     const words = pc.filter((p) => (p.tags ?? []).includes('word-problem'));
     expect(words.length / pc.length).toBeGreaterThanOrEqual(0.4);
+  });
+});
+
+// The two AP courses hold the Precalculus bar and add their own: every
+// problem has a full hint ladder, a multi-step explanation and an alternate
+// explanation; the standards cover the whole course arc; and the problems are
+// anchored in context, since both exams are built on applied questions.
+describe.each([
+  ['CALC', ['LIM', 'DER', 'APP', 'INT'], 0.3],
+  ['STAT', ['DATA', 'COLL', 'PROB', 'INF'], 0.5],
+] as const)('problems bank — %s quality bar', (domain, strands, wordShare) => {
+  const bank = PROBLEMS.filter((p) => p.domain === domain);
+
+  it('is a 14-unit course of 140 problems, 10 per unit', () => {
+    expect(bank).toHaveLength(140);
+    for (let u = 1; u <= 14; u++) {
+      expect(bank.filter((p) => p.unit === u), `${domain} unit ${u}`).toHaveLength(10);
+    }
+  });
+
+  it('every problem has an alternate explanation, a full hint ladder and a multi-step explanation', () => {
+    const failures: string[] = [];
+    for (const p of bank) {
+      if (!(p.alternativeExplanations ?? []).length) failures.push(`${p.id}: no alternate explanation`);
+      const levels = new Set((p.hints ?? []).map((h) => h.level));
+      if (!levels.has('nudge') || !levels.has('guide') || !levels.has('reveal')) failures.push(`${p.id}: missing a hint tier`);
+      if ((p.explanation?.length ?? 0) < 2) failures.push(`${p.id}: explanation too short`);
+    }
+    expect(failures).toEqual([]);
+  });
+
+  it('covers the whole course arc', () => {
+    const seen = new Set(bank.map((p) => p.standard.split('.')[1]));
+    for (const s of strands) expect(seen.has(s), s).toBe(true);
+  });
+
+  it('climbs in difficulty inside every unit', () => {
+    for (let u = 1; u <= 14; u++) {
+      const d = bank.filter((p) => p.unit === u).map((p) => p.difficulty);
+      expect(d.filter((x) => x === 1).length, `${domain} unit ${u} easy`).toBeGreaterThanOrEqual(2);
+      expect(d.filter((x) => x === 3).length, `${domain} unit ${u} hard`).toBeGreaterThanOrEqual(2);
+    }
+  });
+
+  it(`is anchored in context (${Math.round(wordShare * 100)}%+ word problems)`, () => {
+    const words = bank.filter((p) => (p.tags ?? []).includes('word-problem'));
+    expect(words.length / Math.max(1, bank.length)).toBeGreaterThanOrEqual(wordShare);
   });
 });

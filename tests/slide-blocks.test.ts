@@ -126,6 +126,8 @@ describe('every course is taught with pictures, not just prose', () => {
       SAT: 18,
       GEO: 14,
       TRIG: 14,
+      CALC: 14,
+      STAT: 14,
     });
   });
 
