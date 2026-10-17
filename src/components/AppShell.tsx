@@ -11,6 +11,10 @@ import { playClick, playAdvance } from '../utils/sound';
 import { useThemeSync } from '../hooks/useTheme';
 import { parentOf } from '../utils/navHierarchy';
 import { Breadcrumbs } from './Breadcrumbs';
+import { AdSlot } from './AdSlot';
+import { CookieNotice } from './CookieNotice';
+import { adsAllowedOn } from '../lib/ads';
+import { useConsent } from '../state/consent';
 
 interface Props {
   children: React.ReactNode;
@@ -31,6 +35,8 @@ export function AppShell({ children }: Props) {
   // Back goes one level up the app's own hierarchy — a drill to its unit, a
   // game to the arcade — rather than always dumping you on Home. Null on Home.
   const parent = parentOf(location.pathname);
+  const showAd = adsAllowedOn(location.pathname);
+  const resetConsent = useConsent((s) => s.reset);
 
   // Track lifetime time-on-app (paused while the tab is hidden).
   useEffect(() => {
@@ -189,7 +195,20 @@ export function AppShell({ children }: Props) {
             this shows every level and links each one. */}
         <Breadcrumbs />
       </header>
-      <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-6">{children}</main>
+      <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-6">
+        {children}
+        {/* Ads live only on the high-school course pages, below the content. */}
+        {showAd && <AdSlot />}
+      </main>
+      <footer className="max-w-3xl w-full mx-auto px-4 pb-6 pt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-ink-dim">
+        <Link to="/privacy" className="font-display font-bold hover:text-ink">
+          Privacy &amp; cookies
+        </Link>
+        <button type="button" onClick={resetConsent} className="font-display font-bold hover:text-ink">
+          Cookie settings
+        </button>
+      </footer>
+      <CookieNotice />
       <XpFlash />
       <MasteryCelebration />
     </div>
