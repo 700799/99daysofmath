@@ -35,6 +35,8 @@ const DOMAIN_BACK_LABEL: Record<Domain, string> = {
   TRIG: 'Trig',
   PC: 'Precalculus',
   SAT: 'SAT Math',
+  CALC: 'Calc AB',
+  STAT: 'AP Stats',
 };
 
 const HOME: ParentLink = { to: '/', label: 'Home' };

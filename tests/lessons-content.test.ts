@@ -102,7 +102,7 @@ describe('lessons content', () => {
     // Precalculus and SAT Math (videos for those are a planned follow-up).
     const missing: string[] = [];
     for (const l of LESSONS) {
-      const TEXT_FIRST = ['A1', 'GEO', 'TRIG', 'PC', 'SAT'];
+      const TEXT_FIRST = ['A1', 'GEO', 'TRIG', 'PC', 'SAT', 'CALC', 'STAT'];
       // 5th grade's units 7-16 were added after its six video lessons, text-first.
       if (l.unit > 10 || TEXT_FIRST.includes(l.domain) || (l.domain === '5.F' && l.unit > 6)) continue;
       const vids = l.videos ?? [];

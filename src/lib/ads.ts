@@ -1,8 +1,8 @@
 // Where ads may appear, and how they are configured.
 //
 // The app is used by children from 5th grade up, so ads are confined to the
-// courses whose students are in high school: Trigonometry, Precalculus and
-// SAT Math. Nothing in the 5th-grade, 6th-grade, Algebra 1 or Geometry
+// courses whose students are in high school: Trigonometry, Precalculus,
+// SAT Math, AP Calculus AB and AP Statistics. Nothing in the 5th-grade, 6th-grade, Algebra 1 or Geometry
 // sections, nothing on shared pages (Home, Stories, Arcade, Settings), and
 // nothing on a timed test. Ads also load only after the visitor allows
 // advertising cookies (see state/consent.ts).
@@ -10,7 +10,7 @@ import { courseOfDomain } from '../data/courses';
 import { DOMAINS, type Domain } from '../types/problem';
 
 /** The strands whose pages may carry an ad. */
-export const AD_DOMAINS: readonly Domain[] = ['TRIG', 'PC', 'SAT'];
+export const AD_DOMAINS: readonly Domain[] = ['TRIG', 'PC', 'SAT', 'CALC', 'STAT'];
 
 /** The course ids those strands belong to, for /course and /finals routes. */
 export const AD_COURSES: readonly string[] = AD_DOMAINS.flatMap((d) => {

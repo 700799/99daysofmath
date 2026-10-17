@@ -7,8 +7,8 @@ import { useConsent, adsConsented } from '../src/state/consent';
 
 describe('where ads may appear', () => {
   it('only the trig, precalculus and SAT courses', () => {
-    expect([...AD_DOMAINS].sort()).toEqual(['PC', 'SAT', 'TRIG']);
-    expect([...AD_COURSES].sort()).toEqual(['precalc', 'sat', 'trig']);
+    expect([...AD_DOMAINS].sort()).toEqual(['CALC', 'PC', 'SAT', 'STAT', 'TRIG']);
+    expect([...AD_COURSES].sort()).toEqual(['apstats', 'calcab', 'precalc', 'sat', 'trig']);
   });
 
   it('hubs, trails, units, results, reviews and finals lists of those courses', () => {
@@ -17,11 +17,12 @@ describe('where ads may appear', () => {
       '/trail/TRIG', '/trail/PC', '/unit/TRIG/2', '/unit/PC/14/results', '/unit/SAT/5',
       '/review/TRIG', '/review/PC', '/review/SAT', '/course/trig', '/course/precalc', '/course/sat',
       '/finals/trig', '/finals/precalc', '/finals/sat',
+      '/trail/CALC', '/trail/STAT', '/unit/CALC/5', '/unit/STAT/12', '/finals/calcab', '/finals/apstats',
     ]) expect(adsAllowedOn(p), p).toBe(true);
   });
 
   it('never on a timed test', () => {
-    for (const p of ['/sat/test/1', '/finals/trig/2', '/finals/sat/1', '/test']) {
+    for (const p of ['/sat/test/1', '/finals/trig/2', '/finals/sat/1', '/finals/calcab/3', '/test']) {
       expect(adsAllowedOn(p), p).toBe(false);
     }
   });

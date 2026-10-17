@@ -12,6 +12,8 @@ import { DOMAIN_COLORS, type Domain } from '../types/problem';
 
 export type CourseId =
   | 'sat'
+  | 'calcab'
+  | 'apstats'
   | 'precalc'
   | 'trig'
   | 'algebra1'
@@ -60,6 +62,28 @@ export const COURSES: Course[] = [
       'The full blueprint: 18 illustrated lessons, 18 unit playbooks, 180 practice questions with worked explanations, 130 strategy tips, and 5 full-length mock tests with scoring and a recovery plan.',
     strands: [{ domain: 'SAT', label: 'SAT Math' }],
     customPath: '/sat',
+  },
+  {
+    id: 'calcab',
+    name: 'AP Calculus AB',
+    short: 'Calc AB',
+    emoji: '📈',
+    color: DOMAIN_COLORS.CALC,
+    kicker: 'After Precalculus',
+    blurb:
+      'The full AB course: limits and continuity, the derivative and every rule for taking it, related rates and optimization, Riemann sums, the Fundamental Theorem of Calculus, and integrals for area and volume.',
+    strands: [{ domain: 'CALC', label: 'AP Calculus AB' }],
+  },
+  {
+    id: 'apstats',
+    name: 'AP Statistics',
+    short: 'AP Stats',
+    emoji: '🧪',
+    color: DOMAIN_COLORS.STAT,
+    kicker: 'After Algebra 2',
+    blurb:
+      'The full AP course: describing and collecting data, probability and random variables, sampling distributions, confidence intervals, significance tests, chi-square and inference for regression.',
+    strands: [{ domain: 'STAT', label: 'AP Statistics' }],
   },
   {
     id: 'precalc',
@@ -203,4 +227,6 @@ export const COURSE_FIT: Record<CourseId, string> = {
   trig: 'Know right triangles and want angles, the unit circle and waves.',
   precalc: 'Finished Algebra 2 and heading toward calculus.',
   sat: 'Preparing for the Digital SAT, whatever year you are in.',
+  calcab: 'Done with precalculus and ready for limits, derivatives and integrals.',
+  apstats: 'Comfortable with algebra and curious how data and chance really work.',
 };
