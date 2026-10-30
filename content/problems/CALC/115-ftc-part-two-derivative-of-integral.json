@@ -1,0 +1,48 @@
+{
+  "id": "CALC.115",
+  "domain": "CALC",
+  "unit": 12,
+  "orderInUnit": 5,
+  "standard": "CALC.INT.A.2",
+  "difficulty": 2,
+  "prompt": "Let $g(x) = \\int_1^x (t^2 + 1) \\, dt$. Find $g'(2)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The FTC says: the derivative of $\\int_a^x f(t) \\, dt$ with respect to $x$ is just $f(x)$. No integrating needed.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The FTC says: the derivative of $\\int_a^x f(t) \\, dt$ with respect to $x$ is just $f(x)$. No integrating needed."
+    },
+    {
+      "level": "guide",
+      "text": "So $g'(x) = x^2 + 1$. Substitute $x = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$g'(2) = 4 + 1 = 5$."
+    }
+  ],
+  "explanation": [
+    "Fundamental Theorem of Calculus (Part 1): if $g(x) = \\int_a^x f(t) \\, dt$, then $g'(x) = f(x)$.",
+    "Here $f(t) = t^2 + 1$, so $g'(x) = x^2 + 1$. The lower limit $1$ plays no role in the derivative.",
+    "$g'(2) = 2^2 + 1 = 5$. Meaning: as $x$ passes $2$, the accumulated area grows at $5$ units of area per unit of $x$ — the height of the curve there."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The long way, to see why it works",
+      "steps": [
+        "Actually integrate: $g(x) = \\left[\\frac{t^3}{3} + t\\right]_1^x = \\frac{x^3}{3} + x - \\frac{4}{3}$.",
+        "Differentiate: $g'(x) = x^2 + 1$. The constant $-\\frac{4}{3}$ from the lower limit vanishes.",
+        "$g'(2) = 5$. The FTC lets you skip straight to this."
+      ]
+    }
+  ],
+  "tags": [
+    "fundamental-theorem",
+    "accumulation-function"
+  ],
+  "estimatedSeconds": 45
+}

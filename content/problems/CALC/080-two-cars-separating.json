@@ -1,0 +1,56 @@
+{
+  "id": "CALC.080",
+  "domain": "CALC",
+  "unit": 8,
+  "orderInUnit": 10,
+  "standard": "CALC.DER.B.2",
+  "difficulty": 3,
+  "prompt": "Two cars leave the same intersection. Car A drives north at $60$ mph and car B drives east at $80$ mph. At the moment A is $3$ miles north and B is $4$ miles east of the intersection, how fast is the distance between the cars increasing, in mph?",
+  "answerType": "numeric",
+  "primaryAnswer": "100",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Let $y$ be A's distance north, $x$ B's distance east, and $z$ the distance between them. Then $z^2 = x^2 + y^2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Let $y$ be A's distance north, $x$ B's distance east, and $z$ the distance between them. Then $z^2 = x^2 + y^2$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: when $x = 4$ and $y = 3$, $z = 5$ (a 3-4-5 triangle). You will need that value after differentiating."
+    },
+    {
+      "level": "guide",
+      "text": "Differentiate: $2z z' = 2x x' + 2y y'$, so $z' = \\frac{x x' + y y'}{z}$. Use $x' = 80$ and $y' = 60$."
+    },
+    {
+      "level": "reveal",
+      "text": "$z' = \\frac{4(80) + 3(60)}{5} = \\frac{320 + 180}{5} = 100$ mph."
+    }
+  ],
+  "explanation": [
+    "Set up: $z^2 = x^2 + y^2$ with $x = 4$, $x' = 80$, $y = 3$, $y' = 60$, and $z = \\sqrt{16 + 9} = 5$.",
+    "Differentiate with respect to time: $2z z' = 2x x' + 2y y'$, so $z' = \\frac{x x' + y y'}{z}$.",
+    "$z' = \\frac{4 \\cdot 80 + 3 \\cdot 60}{5} = \\frac{500}{5} = 100$ mph."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why exactly 100?",
+      "steps": [
+        "The positions are proportional to the speeds: $(4, 3)$ is $\\frac{1}{20}$ of $(80, 60)$. So both cars left at the same time, $3$ minutes ago.",
+        "When that happens the two cars move along a fixed straight line from each other's point of view, and the separation speed is simply $\\sqrt{60^2 + 80^2} = 100$ mph.",
+        "The related-rates formula gives the same $100$ — a nice confirmation. If the cars had left at different times, only the formula would work."
+      ]
+    }
+  ],
+  "tags": [
+    "related-rates",
+    "pythagorean",
+    "distance",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 90
+}

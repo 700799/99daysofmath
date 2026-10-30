@@ -1,0 +1,49 @@
+{
+  "id": "CALC.085",
+  "domain": "CALC",
+  "unit": 9,
+  "orderInUnit": 5,
+  "standard": "CALC.APP.A.1",
+  "difficulty": 2,
+  "prompt": "Find the absolute minimum value of $f(x) = x^3 - 12x$ on the interval $[0, 3]$.",
+  "answerType": "numeric",
+  "primaryAnswer": "-16",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "On a closed interval the extreme values happen at critical numbers inside or at the endpoints. Find the candidates, then compare.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "On a closed interval the extreme values happen at critical numbers inside or at the endpoints. Find the candidates, then compare."
+    },
+    {
+      "level": "guide",
+      "text": "$f'(x) = 3x^2 - 12 = 0$ gives $x = \\pm 2$; only $x = 2$ is in $[0, 3]$. Evaluate $f(0)$, $f(2)$, $f(3)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$f(0) = 0$, $f(2) = 8 - 24 = -16$, $f(3) = 27 - 36 = -9$. The smallest is $-16$."
+    }
+  ],
+  "explanation": [
+    "Critical numbers: $3x^2 - 12 = 0 \\Rightarrow x^2 = 4 \\Rightarrow x = 2$ (we drop $-2$, outside the interval).",
+    "Candidates: $f(0) = 0$, $f(2) = -16$, $f(3) = -9$.",
+    "The absolute minimum VALUE is $-16$, reached at $x = 2$. Note the question asks for the value, not the location."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sign-chart confirmation",
+      "steps": [
+        "$f'(x) = 3(x - 2)(x + 2)$ is negative on $(0, 2)$ and positive on $(2, 3)$.",
+        "So $f$ falls from $x = 0$ to $x = 2$, then rises. The lowest point on the interval must be at $x = 2$.",
+        "$f(2) = -16$. No need to check endpoints for the minimum once the shape is clear — but they are where the maximum ($0$) lives."
+      ]
+    }
+  ],
+  "tags": [
+    "absolute-extrema",
+    "closed-interval",
+    "candidates-test"
+  ],
+  "estimatedSeconds": 60
+}

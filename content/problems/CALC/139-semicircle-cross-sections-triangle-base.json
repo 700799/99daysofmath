@@ -1,0 +1,57 @@
+{
+  "id": "CALC.139",
+  "domain": "CALC",
+  "unit": 14,
+  "orderInUnit": 9,
+  "standard": "CALC.INT.B.2",
+  "difficulty": 3,
+  "prompt": "A solid has as its base the triangle bounded by $y = 2x$, the $x$-axis and $x = 3$. Cross-sections perpendicular to the $x$-axis are semicircles whose diameters lie in the base. The volume is $k\\pi$ cubic units. Find $k$.",
+  "answerType": "numeric",
+  "primaryAnswer": "4.5",
+  "alternativeAnswers": [
+    "9/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "At position $x$ the base region has height $2x$. That is the DIAMETER of the semicircle, so the radius is $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "At position $x$ the base region has height $2x$. That is the DIAMETER of the semicircle, so the radius is $x$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: a semicircle of radius $r$ has area $\\frac{1}{2}\\pi r^2$. With $r = x$, the slice area is $A(x) = \\frac{\\pi x^2}{2}$."
+    },
+    {
+      "level": "guide",
+      "text": "$V = \\int_0^3 \\frac{\\pi x^2}{2} \\, dx = \\frac{\\pi}{2}\\left[\\frac{x^3}{3}\\right]_0^3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{\\pi}{2} \\cdot 9 = \\frac{9\\pi}{2}$, so $k = 4.5$."
+    }
+  ],
+  "explanation": [
+    "Diameter of the slice at $x$: $2x - 0 = 2x$. Radius: $x$. Area: $A(x) = \\frac{1}{2}\\pi x^2$.",
+    "$V = \\int_0^3 A(x) \\, dx = \\frac{\\pi}{2}\\int_0^3 x^2 \\, dx = \\frac{\\pi}{2} \\cdot \\frac{27}{3} = \\frac{9\\pi}{2}$.",
+    "$k = \\frac{9}{2} = 4.5$. The trap is using $2x$ as the radius, which quadruples the answer to $18\\pi$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Half a cone",
+      "steps": [
+        "If the cross-sections were full circles of radius $x$, the solid would be a cone of radius $3$ and height $3$: $V = \\frac{1}{3}\\pi(3)^2(3) = 9\\pi$.",
+        "Semicircles give exactly half of that: $\\frac{9\\pi}{2}$.",
+        "Seeing the shape as half a cone lying on its side confirms $k = 4.5$."
+      ]
+    }
+  ],
+  "tags": [
+    "volume",
+    "cross-sections",
+    "semicircle",
+    "multi-step"
+  ],
+  "estimatedSeconds": 85
+}

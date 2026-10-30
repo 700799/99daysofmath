@@ -1,0 +1,49 @@
+{
+  "id": "CALC.106",
+  "domain": "CALC",
+  "unit": 11,
+  "orderInUnit": 6,
+  "standard": "CALC.INT.A.1",
+  "difficulty": 2,
+  "prompt": "Suppose $\\int_1^5 f(x) \\, dx = 8$ and $\\int_1^3 f(x) \\, dx = 3$. Find $\\int_3^5 \\left(2f(x) + 1\\right) dx$.",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "First find $\\int_3^5 f(x) \\, dx$ by subtracting: the piece from $1$ to $5$ minus the piece from $1$ to $3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find $\\int_3^5 f(x) \\, dx$ by subtracting: the piece from $1$ to $5$ minus the piece from $1$ to $3$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\int_3^5 f = 8 - 3 = 5$. Then $\\int_3^5 (2f + 1) \\, dx = 2 \\int_3^5 f \\, dx + \\int_3^5 1 \\, dx$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2(5) + (5 - 3) = 10 + 2 = 12$."
+    }
+  ],
+  "explanation": [
+    "Additivity: $\\int_1^5 f = \\int_1^3 f + \\int_3^5 f$, so $\\int_3^5 f = 8 - 3 = 5$.",
+    "Linearity: $\\int_3^5 (2f + 1) \\, dx = 2\\int_3^5 f \\, dx + \\int_3^5 1 \\, dx = 2(5) + 2$.",
+    "$= 12$. The $\\int_3^5 1 \\, dx = 2$ term is the width of the interval — easy to forget."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in areas",
+      "steps": [
+        "Doubling $f$ doubles the area over $[3, 5]$: $10$.",
+        "Adding $1$ lifts the graph by $1$ over an interval of width $2$, adding a $2 \\times 1$ rectangle of area $2$.",
+        "$10 + 2 = 12$."
+      ]
+    }
+  ],
+  "tags": [
+    "definite-integral",
+    "properties",
+    "linearity"
+  ],
+  "estimatedSeconds": 55
+}

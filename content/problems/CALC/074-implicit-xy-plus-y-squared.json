@@ -1,0 +1,50 @@
+{
+  "id": "CALC.074",
+  "domain": "CALC",
+  "unit": 8,
+  "orderInUnit": 4,
+  "standard": "CALC.DER.B.2",
+  "difficulty": 2,
+  "prompt": "The curve $xy + y^2 = 6$ passes through $(1, 2)$. Find $\\frac{dy}{dx}$ at $(1, 2)$. Give your answer as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "-2/5",
+  "alternativeAnswers": [
+    "-0.4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The term $xy$ is a product of two changing things, so it needs the product rule: $y + x y'$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The term $xy$ is a product of two changing things, so it needs the product rule: $y + x y'$."
+    },
+    {
+      "level": "guide",
+      "text": "Differentiating gives $y + x y' + 2y y' = 0$. Collect the $y'$ terms: $y'(x + 2y) = -y$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y' = \\frac{-y}{x + 2y} = \\frac{-2}{1 + 4} = -\\frac{2}{5}$."
+    }
+  ],
+  "explanation": [
+    "Differentiate each term: $\\frac{d}{dx}(xy) = y + x y'$ (product rule), $\\frac{d}{dx}(y^2) = 2y y'$, $\\frac{d}{dx}(6) = 0$.",
+    "So $y + x y' + 2y y' = 0$. Factor: $y'(x + 2y) = -y$, giving $y' = -\\frac{y}{x + 2y}$.",
+    "At $(1, 2)$: $y' = -\\frac{2}{1 + 4} = -\\frac{2}{5}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Plug in the point first",
+      "steps": [
+        "After differentiating you have $y + x y' + 2y y' = 0$. Substitute $x = 1$, $y = 2$ right away: $2 + y' + 4y' = 0$.",
+        "That is $2 + 5y' = 0$, so $y' = -\\frac{2}{5}$.",
+        "Substituting early avoids algebra with letters — a good habit when you only need one point."
+      ]
+    }
+  ],
+  "tags": [
+    "implicit-differentiation",
+    "product-rule"
+  ],
+  "estimatedSeconds": 60
+}

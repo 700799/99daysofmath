@@ -1,0 +1,56 @@
+{
+  "id": "CALC.090",
+  "domain": "CALC",
+  "unit": 9,
+  "orderInUnit": 10,
+  "standard": "CALC.APP.A.1",
+  "difficulty": 3,
+  "prompt": "A creator's follower count is modeled by $N(t) = t^3 - 6t^2 + 15t + 100$ (in thousands), where $t$ is months since launch, $0 \\le t \\le 6$. The count is always increasing. At what time $t$ is it increasing most SLOWLY?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "\"Increasing most slowly\" means the growth rate $N'(t)$ is at its minimum. So you need to minimize $N'$ — which means looking at $N''$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Increasing most slowly\" means the growth rate $N'(t)$ is at its minimum. So you need to minimize $N'$ — which means looking at $N''$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: to find where $g(t) = 3t^2 - 12t + 15$ is smallest, set $g'(t) = 6t - 12 = 0$. Here $g$ happens to be $N'$."
+    },
+    {
+      "level": "guide",
+      "text": "$N'(t) = 3t^2 - 12t + 15$ and $N''(t) = 6t - 12$. Set $N'' = 0$ and check it is a minimum of $N'$."
+    },
+    {
+      "level": "reveal",
+      "text": "$t = 2$. $N''$ goes from negative to positive there, so the rate $N'$ bottoms out at $t = 2$ (where $N'(2) = 3$ thousand per month)."
+    }
+  ],
+  "explanation": [
+    "Growth rate: $N'(t) = 3t^2 - 12t + 15$. Its discriminant $144 - 180 < 0$, so $N' > 0$ always — the count really is always rising.",
+    "To find where the rate is smallest, differentiate again: $N''(t) = 6t - 12 = 0$ at $t = 2$. $N''$ changes from $-$ to $+$, so $N'$ has a minimum there.",
+    "Check the endpoints of the rate too: $N'(0) = 15$, $N'(2) = 3$, $N'(6) = 51$. The slowest growth is at $t = 2$ months. That point is the inflection point of $N$: growth slows down until month $2$, then speeds back up."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Vertex of the rate parabola",
+      "steps": [
+        "$N'(t) = 3t^2 - 12t + 15$ is an upward-opening parabola in $t$.",
+        "Its vertex is at $t = -\\frac{b}{2a} = \\frac{12}{6} = 2$.",
+        "An upward parabola is lowest at its vertex, so the growth rate is smallest at $t = 2$. Same answer without a second derivative."
+      ]
+    }
+  ],
+  "tags": [
+    "inflection-point",
+    "rate-of-change",
+    "second-derivative",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 90
+}

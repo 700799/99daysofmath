@@ -1,0 +1,51 @@
+{
+  "id": "CALC.075",
+  "domain": "CALC",
+  "unit": 8,
+  "orderInUnit": 5,
+  "standard": "CALC.DER.B.2",
+  "difficulty": 2,
+  "prompt": "Find the slope of the tangent line to the curve $x^2 - xy + y^2 = 7$ at the point $(2, 3)$. Give your answer as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "-1/4",
+  "alternativeAnswers": [
+    "-0.25"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Check the point is on the curve: $4 - 6 + 9 = 7$. Then differentiate implicitly; the $-xy$ term needs the product rule.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Check the point is on the curve: $4 - 6 + 9 = 7$. Then differentiate implicitly; the $-xy$ term needs the product rule."
+    },
+    {
+      "level": "guide",
+      "text": "$2x - (y + x y') + 2y y' = 0$. Substitute $x = 2$, $y = 3$: $4 - 3 - 2y' + 6y' = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$1 + 4y' = 0$, so $y' = -\\frac{1}{4}$."
+    }
+  ],
+  "explanation": [
+    "Differentiate: $2x - (y + x y') + 2y y' = 0$.",
+    "Solve for $y'$: $y'(2y - x) = y - 2x$, so $y' = \\frac{y - 2x}{2y - x}$.",
+    "At $(2, 3)$: $y' = \\frac{3 - 4}{6 - 2} = -\\frac{1}{4}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Watch the minus sign",
+      "steps": [
+        "The most common slip is differentiating $-xy$ as $-y'x$ only, forgetting the $-y$.",
+        "Product rule on $-xy$: $-(1 \\cdot y + x \\cdot y') = -y - x y'$. Both pieces matter.",
+        "With both pieces, substituting $(2, 3)$ gives $4 - 3 - 2y' + 6y' = 0$ and $y' = -\\frac{1}{4}$."
+      ]
+    }
+  ],
+  "tags": [
+    "implicit-differentiation",
+    "tangent-slope",
+    "product-rule"
+  ],
+  "estimatedSeconds": 65
+}

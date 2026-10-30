@@ -1,0 +1,49 @@
+{
+  "id": "CALC.091",
+  "domain": "CALC",
+  "unit": 10,
+  "orderInUnit": 1,
+  "standard": "CALC.APP.A.2",
+  "difficulty": 1,
+  "prompt": "A particle moves along a line with position $s(t) = t^2 - 6t + 8$ meters at time $t$ seconds. Find its velocity at $t = 1$ second, in meters per second.",
+  "answerType": "numeric",
+  "primaryAnswer": "-4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Velocity is the derivative of position: $v(t) = s'(t)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Velocity is the derivative of position: $v(t) = s'(t)$."
+    },
+    {
+      "level": "guide",
+      "text": "$v(t) = 2t - 6$. Substitute $t = 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$v(1) = 2 - 6 = -4$ m/s. The particle is moving in the negative direction."
+    }
+  ],
+  "explanation": [
+    "$v(t) = s'(t) = 2t - 6$.",
+    "$v(1) = 2(1) - 6 = -4$.",
+    "The velocity is $-4$ m/s: at that instant the particle moves left (toward smaller $s$) at $4$ m/s."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Where is it headed?",
+      "steps": [
+        "$s(0) = 8$, $s(1) = 3$, $s(2) = 0$: the position is dropping, so the velocity should be negative. ✓",
+        "The average velocity from $t = 0$ to $t = 2$ is $\\frac{0 - 8}{2} = -4$ m/s.",
+        "For a quadratic, the average velocity over an interval equals the instantaneous velocity at its midpoint, $t = 1$. So $v(1) = -4$."
+      ]
+    }
+  ],
+  "tags": [
+    "motion",
+    "velocity",
+    "word-problem"
+  ],
+  "estimatedSeconds": 35
+}

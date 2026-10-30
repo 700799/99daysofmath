@@ -1,0 +1,56 @@
+{
+  "id": "CALC.088",
+  "domain": "CALC",
+  "unit": 9,
+  "orderInUnit": 8,
+  "standard": "CALC.APP.A.1",
+  "difficulty": 3,
+  "prompt": "The concentration of a drug in a patient's bloodstream $t$ hours after a dose is $C(t) = 5t e^{-0.5t}$ mg/L, for $t \\ge 0$. At what time $t$, in hours, is the concentration highest?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$C(t)$ is a product, $5t$ times $e^{-0.5t}$. Use the product rule, and the chain rule on the exponential.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$C(t)$ is a product, $5t$ times $e^{-0.5t}$. Use the product rule, and the chain rule on the exponential."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: the derivative of $e^{-0.5t}$ is $-0.5 e^{-0.5t}$. Now the product rule: $C'(t) = 5 e^{-0.5t} + 5t(-0.5 e^{-0.5t})$."
+    },
+    {
+      "level": "guide",
+      "text": "Factor: $C'(t) = 5e^{-0.5t}(1 - 0.5t)$. The exponential is never zero, so set $1 - 0.5t = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$t = 2$ hours. $C'$ is positive before $2$ and negative after, so it is a maximum."
+    }
+  ],
+  "explanation": [
+    "$C'(t) = 5e^{-0.5t} + 5t \\cdot (-0.5)e^{-0.5t} = 5e^{-0.5t}(1 - 0.5t)$.",
+    "Since $e^{-0.5t} > 0$ always, $C'(t) = 0$ only when $1 - 0.5t = 0$, i.e. $t = 2$.",
+    "For $t < 2$, $C' > 0$ (rising); for $t > 2$, $C' < 0$ (falling). The peak concentration is at $t = 2$ hours, where $C(2) = \\frac{10}{e} \\approx 3.68$ mg/L."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Numerical sanity check",
+      "steps": [
+        "$C(1) = 5e^{-0.5} \\approx 3.03$, $C(2) = 10e^{-1} \\approx 3.68$, $C(3) = 15e^{-1.5} \\approx 3.35$.",
+        "The values rise to $t = 2$ and fall after it.",
+        "The calculus located the peak exactly; the numbers confirm it is a peak and not a dip."
+      ]
+    }
+  ],
+  "tags": [
+    "local-extrema",
+    "product-rule",
+    "exponential",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 85
+}

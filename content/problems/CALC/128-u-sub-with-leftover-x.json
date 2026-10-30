@@ -1,0 +1,58 @@
+{
+  "id": "CALC.128",
+  "domain": "CALC",
+  "unit": 13,
+  "orderInUnit": 8,
+  "standard": "CALC.INT.B.1",
+  "difficulty": 3,
+  "prompt": "Evaluate $\\int_0^3 x\\sqrt{x + 1} \\, dx$. Give your answer as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "116/15",
+  "alternativeAnswers": [
+    "7.733"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "Let $u = x + 1$. Then $du = dx$, but there is a stray $x$ in front. Express it in terms of $u$: $x = u - 1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Let $u = x + 1$. Then $du = dx$, but there is a stray $x$ in front. Express it in terms of $u$: $x = u - 1$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $(u - 1)\\sqrt{u} = u^{3/2} - u^{1/2}$. Two power-rule terms — no roots of sums left."
+    },
+    {
+      "level": "guide",
+      "text": "Limits: $x = 0 \\to u = 1$, $x = 3 \\to u = 4$. Compute $\\int_1^4 (u^{3/2} - u^{1/2}) \\, du = \\left[\\frac{2}{5}u^{5/2} - \\frac{2}{3}u^{3/2}\\right]_1^4$."
+    },
+    {
+      "level": "reveal",
+      "text": "At $u = 4$: $\\frac{64}{5} - \\frac{16}{3} = \\frac{112}{15}$. At $u = 1$: $\\frac{2}{5} - \\frac{2}{3} = -\\frac{4}{15}$. Difference: $\\frac{116}{15}$."
+    }
+  ],
+  "explanation": [
+    "Substitute $u = x + 1$, $x = u - 1$, $dx = du$, limits $1$ to $4$: $\\int_1^4 (u - 1)u^{1/2} \\, du = \\int_1^4 (u^{3/2} - u^{1/2}) \\, du$.",
+    "Antiderivative: $\\frac{2}{5}u^{5/2} - \\frac{2}{3}u^{3/2}$. At $u = 4$ ($u^{5/2} = 32$, $u^{3/2} = 8$): $\\frac{64}{5} - \\frac{16}{3} = \\frac{192 - 80}{15} = \\frac{112}{15}$. At $u = 1$: $\\frac{2}{5} - \\frac{2}{3} = -\\frac{4}{15}$.",
+    "Result: $\\frac{112}{15} + \\frac{4}{15} = \\frac{116}{15} \\approx 7.73$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity check with a trapezoid",
+      "steps": [
+        "The integrand $x\\sqrt{x + 1}$ is $0$ at $x = 0$ and $6$ at $x = 3$; at $x = 1.5$ it is $1.5\\sqrt{2.5} \\approx 2.37$.",
+        "Two trapezoids of width $1.5$: $1.5 \\cdot \\frac{0 + 2.37}{2} + 1.5 \\cdot \\frac{2.37 + 6}{2} \\approx 1.78 + 6.28 = 8.06$.",
+        "The curve is concave up, so trapezoids overestimate; the exact $7.73$ sitting just below $8.06$ is right where it should be."
+      ]
+    }
+  ],
+  "tags": [
+    "u-substitution",
+    "definite-integral",
+    "square-root",
+    "multi-step"
+  ],
+  "estimatedSeconds": 100
+}

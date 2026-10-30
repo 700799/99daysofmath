@@ -1,0 +1,50 @@
+{
+  "id": "CALC.127",
+  "domain": "CALC",
+  "unit": 13,
+  "orderInUnit": 7,
+  "standard": "CALC.INT.B.1",
+  "difficulty": 2,
+  "prompt": "A tank drains at a rate of $r(t) = \\frac{60}{(t + 1)^2}$ liters per minute, where $t$ is in minutes. How many liters drain out during the first $5$ minutes?",
+  "answerType": "numeric",
+  "primaryAnswer": "50",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Total drained $= \\int_0^5 \\frac{60}{(t + 1)^2} \\, dt$. Let $u = t + 1$, so $du = dt$ and the limits become $1$ and $6$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Total drained $= \\int_0^5 \\frac{60}{(t + 1)^2} \\, dt$. Let $u = t + 1$, so $du = dt$ and the limits become $1$ and $6$."
+    },
+    {
+      "level": "guide",
+      "text": "$60\\int_1^6 u^{-2} \\, du = 60\\left[-\\frac{1}{u}\\right]_1^6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$60\\left(-\\frac{1}{6} + 1\\right) = 60 \\cdot \\frac{5}{6} = 50$ liters."
+    }
+  ],
+  "explanation": [
+    "Amount $= \\int_0^5 60(t + 1)^{-2} \\, dt$. Substitute $u = t + 1$: $60\\int_1^6 u^{-2} \\, du$.",
+    "Antiderivative of $u^{-2}$ is $-u^{-1}$: $60\\left[-\\frac{1}{u}\\right]_1^6 = 60\\left(-\\frac{1}{6} - (-1)\\right) = 60 \\cdot \\frac{5}{6}$.",
+    "$= 50$ liters. The rate starts at $60$ L/min and falls fast, to $\\frac{60}{36} \\approx 1.7$ L/min by $t = 5$, so most of the $50$ liters leave early."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Reasonableness bounds",
+      "steps": [
+        "The rate is at most $60$ L/min (at $t = 0$), so in $5$ minutes at most $300$ L drain — and far less, since the rate collapses.",
+        "A midpoint estimate with one rectangle: $r(2.5) = \\frac{60}{12.25} \\approx 4.9$, times $5$ gives about $24$ L — an underestimate because the curve is concave up.",
+        "The exact $50$ L sits comfortably between these bounds."
+      ]
+    }
+  ],
+  "tags": [
+    "u-substitution",
+    "net-change",
+    "rate",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

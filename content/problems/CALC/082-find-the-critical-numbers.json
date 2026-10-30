@@ -1,0 +1,70 @@
+{
+  "id": "CALC.082",
+  "domain": "CALC",
+  "unit": 9,
+  "orderInUnit": 2,
+  "standard": "CALC.APP.A.1",
+  "difficulty": 1,
+  "prompt": "Let $f(x) = 2x^3 - 3x^2 - 12x + 1$. What are the critical numbers of $f$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$x = -1$ and $x = 2$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$x = 1$ and $x = -2$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$x = 0$ only",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$x = \\frac{1}{2}$ only",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Critical numbers are where $f'(x) = 0$ (or undefined). Differentiate first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Critical numbers are where $f'(x) = 0$ (or undefined). Differentiate first."
+    },
+    {
+      "level": "guide",
+      "text": "$f'(x) = 6x^2 - 6x - 12 = 6(x^2 - x - 2)$. Factor the quadratic."
+    },
+    {
+      "level": "reveal",
+      "text": "$6(x - 2)(x + 1) = 0$ gives $x = 2$ and $x = -1$: choice A."
+    }
+  ],
+  "explanation": [
+    "$f'(x) = 6x^2 - 6x - 12$.",
+    "Factor: $6(x^2 - x - 2) = 6(x - 2)(x + 1)$.",
+    "Zeros at $x = 2$ and $x = -1$. (Choice D is where $f'' = 0$, the inflection point — a different thing.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check by substituting",
+      "steps": [
+        "$f'(-1) = 6 + 6 - 12 = 0$ ✓ and $f'(2) = 24 - 12 - 12 = 0$ ✓.",
+        "$f'(1) = 6 - 6 - 12 = -12 \\neq 0$, so choice B fails.",
+        "Only choice A lists exactly the zeros of $f'$."
+      ]
+    }
+  ],
+  "tags": [
+    "critical-numbers",
+    "polynomial"
+  ],
+  "estimatedSeconds": 40
+}

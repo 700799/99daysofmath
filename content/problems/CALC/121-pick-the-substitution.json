@@ -1,0 +1,71 @@
+{
+  "id": "CALC.121",
+  "domain": "CALC",
+  "unit": 13,
+  "orderInUnit": 1,
+  "standard": "CALC.INT.B.1",
+  "difficulty": 1,
+  "prompt": "To evaluate $\\int 2x \\cos(x^2) \\, dx$, which substitution turns it into a basic integral?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$u = x^2$, so $du = 2x \\, dx$ and the integral becomes $\\int \\cos u \\, du$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$u = 2x$, so $du = 2 \\, dx$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$u = \\cos x$, so $du = -\\sin x \\, dx$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$u = \\cos(x^2)$, so $du = -2x\\sin(x^2) \\, dx$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Look for an \"inside\" function whose derivative also appears in the integrand (up to a constant).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Look for an \"inside\" function whose derivative also appears in the integrand (up to a constant)."
+    },
+    {
+      "level": "guide",
+      "text": "The inside of $\\cos(x^2)$ is $x^2$. Its derivative is $2x$ — and $2x$ is sitting right there."
+    },
+    {
+      "level": "reveal",
+      "text": "$u = x^2$, $du = 2x \\, dx$, giving $\\int \\cos u \\, du = \\sin u + C = \\sin(x^2) + C$. Choice A."
+    }
+  ],
+  "explanation": [
+    "u-substitution undoes the chain rule. Choose $u$ = the inner function: $u = x^2$.",
+    "Then $du = 2x \\, dx$, which absorbs the $2x \\, dx$ in the integrand exactly: $\\int \\cos u \\, du$.",
+    "Result: $\\sin u + C = \\sin(x^2) + C$. Choice A. The other substitutions leave leftover $x$'s that cannot be converted to $u$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check by differentiating",
+      "steps": [
+        "Claim: $\\frac{d}{dx} \\sin(x^2) = \\cos(x^2) \\cdot 2x$ by the chain rule.",
+        "That is exactly the integrand, so $\\sin(x^2) + C$ is right.",
+        "The substitution $u = x^2$ is the chain rule read backwards."
+      ]
+    }
+  ],
+  "tags": [
+    "u-substitution",
+    "chain-rule",
+    "trig"
+  ],
+  "estimatedSeconds": 40
+}

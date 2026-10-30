@@ -1,0 +1,56 @@
+{
+  "id": "CALC.098",
+  "domain": "CALC",
+  "unit": 10,
+  "orderInUnit": 8,
+  "standard": "CALC.APP.A.2",
+  "difficulty": 3,
+  "prompt": "An open-top box has a square base of side $x$ and must hold $32$ cubic feet. What value of $x$, in feet, minimizes the amount of material (the surface area of the base plus four sides)?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two formulas: volume $x^2 h = 32$ and surface area $S = x^2 + 4xh$. Use the first to eliminate $h$ from the second.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two formulas: volume $x^2 h = 32$ and surface area $S = x^2 + 4xh$. Use the first to eliminate $h$ from the second."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: from $x^2 h = 32$, $h = \\frac{32}{x^2}$. Then $4xh = 4x \\cdot \\frac{32}{x^2} = \\frac{128}{x}$."
+    },
+    {
+      "level": "guide",
+      "text": "$S(x) = x^2 + \\frac{128}{x}$. Differentiate: $S'(x) = 2x - \\frac{128}{x^2}$. Set it to zero and solve for $x^3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2x = \\frac{128}{x^2}$ gives $x^3 = 64$, so $x = 4$ feet (and $h = 2$ feet)."
+    }
+  ],
+  "explanation": [
+    "Constraint: $x^2 h = 32 \\Rightarrow h = \\frac{32}{x^2}$. Material: $S = x^2 + 4xh = x^2 + \\frac{128}{x}$.",
+    "$S'(x) = 2x - \\frac{128}{x^2} = 0 \\Rightarrow 2x^3 = 128 \\Rightarrow x^3 = 64 \\Rightarrow x = 4$.",
+    "Check: $S''(x) = 2 + \\frac{256}{x^3} > 0$, so this is a minimum. The best box is $4 \\times 4$ with height $2$, using $S = 16 + 32 = 48$ ft$^2$ of material."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare nearby boxes",
+      "steps": [
+        "$x = 3$: $h = \\frac{32}{9} \\approx 3.56$, $S = 9 + \\frac{128}{3} \\approx 51.7$.",
+        "$x = 4$: $S = 16 + 32 = 48$. $x = 5$: $S = 25 + 25.6 = 50.6$.",
+        "Both neighbors use more material than $x = 4$, confirming the minimum. Notice the optimal box is exactly twice as wide as it is tall."
+      ]
+    }
+  ],
+  "tags": [
+    "optimization",
+    "surface-area",
+    "volume",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 95
+}

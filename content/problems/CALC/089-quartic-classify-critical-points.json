@@ -1,0 +1,77 @@
+{
+  "id": "CALC.089",
+  "domain": "CALC",
+  "unit": 9,
+  "orderInUnit": 9,
+  "standard": "CALC.APP.A.1",
+  "difficulty": 3,
+  "prompt": "Let $f(x) = x^4 - 4x^3$. Which statement about its critical points is true?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$f$ has a local minimum at $x = 3$ and no local extremum at $x = 0$.",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$f$ has a local maximum at $x = 0$ and a local minimum at $x = 3$.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$f$ has local minima at both $x = 0$ and $x = 3$.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$f$ has a local maximum at $x = 3$.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the critical numbers from $f'(x) = 4x^3 - 12x^2 = 4x^2(x - 3)$. Then check whether $f'$ actually changes sign at each one.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the critical numbers from $f'(x) = 4x^3 - 12x^2 = 4x^2(x - 3)$. Then check whether $f'$ actually changes sign at each one."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $y = x^3$: its derivative $3x^2$ is zero at $x = 0$ but positive on both sides, so $x = 0$ is NOT an extremum. A squared factor in $f'$ is the warning sign."
+    },
+    {
+      "level": "guide",
+      "text": "Here $4x^2 \\ge 0$ always, so the sign of $f'$ is the sign of $(x - 3)$: negative for $x < 3$ (including both sides of $0$), positive for $x > 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "No sign change at $0$ (no extremum); $-$ to $+$ at $3$ (local min). Choice A."
+    }
+  ],
+  "explanation": [
+    "$f'(x) = 4x^3 - 12x^2 = 4x^2(x - 3)$, so the critical numbers are $x = 0$ and $x = 3$.",
+    "Sign of $f'$: the factor $4x^2$ is never negative, so $f'$ has the sign of $x - 3$. That is negative on $(-\\infty, 0)$ and on $(0, 3)$, positive on $(3, \\infty)$.",
+    "At $x = 0$ there is no sign change, so no extremum — the graph just flattens momentarily (it is an inflection point). At $x = 3$ the sign goes $-$ to $+$: a local minimum, $f(3) = -27$. Choice A."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Second Derivative Test, and where it fails",
+      "steps": [
+        "$f''(x) = 12x^2 - 24x = 12x(x - 2)$. At $x = 3$: $f''(3) = 36 > 0$, so a local minimum. ✓",
+        "At $x = 0$: $f''(0) = 0$, so the test is INCONCLUSIVE — it does not say \"no extremum,\" it says \"look harder.\"",
+        "Looking harder (the sign chart of $f'$) shows no sign change at $0$. Always fall back to the first-derivative sign chart when $f'' = 0$."
+      ]
+    }
+  ],
+  "tags": [
+    "first-derivative-test",
+    "second-derivative-test",
+    "critical-numbers",
+    "multi-step"
+  ],
+  "estimatedSeconds": 90
+}

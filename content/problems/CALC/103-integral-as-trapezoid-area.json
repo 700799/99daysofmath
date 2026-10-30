@@ -1,0 +1,49 @@
+{
+  "id": "CALC.103",
+  "domain": "CALC",
+  "unit": 11,
+  "orderInUnit": 3,
+  "standard": "CALC.INT.A.1",
+  "difficulty": 1,
+  "prompt": "Use geometry to evaluate $\\int_0^6 (x + 2) \\, dx$.",
+  "answerType": "numeric",
+  "primaryAnswer": "30",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The graph of $y = x + 2$ is a straight line. The region under it from $0$ to $6$ is a trapezoid.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The graph of $y = x + 2$ is a straight line. The region under it from $0$ to $6$ is a trapezoid."
+    },
+    {
+      "level": "guide",
+      "text": "The two parallel sides are the heights at $x = 0$ and $x = 6$: $2$ and $8$. The width is $6$."
+    },
+    {
+      "level": "reveal",
+      "text": "Trapezoid area $= \\frac{2 + 8}{2} \\cdot 6 = 30$."
+    }
+  ],
+  "explanation": [
+    "A definite integral of a nonnegative function is the area under its graph.",
+    "Here the region is a trapezoid with parallel sides $f(0) = 2$ and $f(6) = 8$ and width $6$.",
+    "Area $= \\frac{(2 + 8)}{2} \\cdot 6 = 5 \\cdot 6 = 30$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Rectangle plus triangle",
+      "steps": [
+        "Split the region: a rectangle $6$ wide and $2$ tall (area $12$) under a triangle with base $6$ and height $6$ (area $18$).",
+        "$12 + 18 = 30$.",
+        "Any honest decomposition of the same region gives the same integral."
+      ]
+    }
+  ],
+  "tags": [
+    "definite-integral",
+    "geometry",
+    "area"
+  ],
+  "estimatedSeconds": 40
+}

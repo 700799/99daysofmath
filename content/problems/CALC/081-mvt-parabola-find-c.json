@@ -1,0 +1,48 @@
+{
+  "id": "CALC.081",
+  "domain": "CALC",
+  "unit": 9,
+  "orderInUnit": 1,
+  "standard": "CALC.APP.A.1",
+  "difficulty": 1,
+  "prompt": "Let $f(x) = x^2 - 4x + 1$ on $[0, 4]$. Find the value $c$ in $(0, 4)$ guaranteed by the Mean Value Theorem, where $f'(c)$ equals the average rate of change of $f$ over the interval.",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "First compute the average rate of change $\\frac{f(4) - f(0)}{4 - 0}$. Then find where the derivative equals that number.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First compute the average rate of change $\\frac{f(4) - f(0)}{4 - 0}$. Then find where the derivative equals that number."
+    },
+    {
+      "level": "guide",
+      "text": "$f(4) = 1$ and $f(0) = 1$, so the average rate is $0$. Solve $f'(c) = 2c - 4 = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2c - 4 = 0$ gives $c = 2$."
+    }
+  ],
+  "explanation": [
+    "Average rate of change: $\\frac{f(4) - f(0)}{4} = \\frac{1 - 1}{4} = 0$.",
+    "The MVT promises a $c$ with $f'(c) = 0$. Since $f'(x) = 2x - 4$, set $2c - 4 = 0$.",
+    "$c = 2$. The tangent there is horizontal, parallel to the (flat) secant line joining the endpoints."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Symmetry of the parabola",
+      "steps": [
+        "$f(0) = f(4)$, so the secant line through the endpoints is horizontal.",
+        "A parabola is symmetric about its vertex, which sits halfway between two equal-height points: $x = \\frac{0 + 4}{2} = 2$.",
+        "At the vertex the tangent is horizontal, matching the secant. So $c = 2$. (This special case of the MVT is Rolle's Theorem.)"
+      ]
+    }
+  ],
+  "tags": [
+    "mean-value-theorem",
+    "parabola"
+  ],
+  "estimatedSeconds": 45
+}

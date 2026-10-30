@@ -1,0 +1,49 @@
+{
+  "id": "CALC.111",
+  "domain": "CALC",
+  "unit": 12,
+  "orderInUnit": 1,
+  "standard": "CALC.INT.A.2",
+  "difficulty": 1,
+  "prompt": "Evaluate $\\int_0^2 3x^2 \\, dx$.",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find an antiderivative of $3x^2$ — a function whose derivative is $3x^2$ — then evaluate it at $2$ and at $0$ and subtract.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find an antiderivative of $3x^2$ — a function whose derivative is $3x^2$ — then evaluate it at $2$ and at $0$ and subtract."
+    },
+    {
+      "level": "guide",
+      "text": "The derivative of $x^3$ is $3x^2$, so $F(x) = x^3$. Compute $F(2) - F(0)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2^3 - 0^3 = 8$."
+    }
+  ],
+  "explanation": [
+    "Antiderivative: $\\int 3x^2 \\, dx = x^3 + C$. For a definite integral the $C$ cancels, so use $F(x) = x^3$.",
+    "Fundamental Theorem of Calculus: $\\int_0^2 3x^2 \\, dx = F(2) - F(0) = 8 - 0$.",
+    "$= 8$. This is the exact area under $y = 3x^2$ from $0$ to $2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare with a Riemann sum",
+      "steps": [
+        "A midpoint sum with $2$ rectangles of width $1$: heights $3(0.5)^2 = 0.75$ and $3(1.5)^2 = 6.75$, total $7.5$.",
+        "Close to $8$ but not exact — rectangles always leave a gap.",
+        "The FTC skips the approximation entirely and delivers $8$."
+      ]
+    }
+  ],
+  "tags": [
+    "fundamental-theorem",
+    "definite-integral",
+    "power-rule"
+  ],
+  "estimatedSeconds": 35
+}

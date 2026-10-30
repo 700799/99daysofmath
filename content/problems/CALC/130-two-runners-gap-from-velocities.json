@@ -1,0 +1,56 @@
+{
+  "id": "CALC.130",
+  "domain": "CALC",
+  "unit": 13,
+  "orderInUnit": 10,
+  "standard": "CALC.INT.B.1",
+  "difficulty": 3,
+  "prompt": "Two runners start side by side at $t = 0$ and run along the same straight track. Their velocities, in meters per second, are $v_A(t) = 2t + 1$ and $v_B(t) = t^2$ for $0 \\le t \\le 3$. How far ahead of runner B is runner A at $t = 3$ seconds, in meters?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Each runner's distance is the integral of their velocity. The gap between them is the integral of the DIFFERENCE of velocities — the area between the two velocity curves.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each runner's distance is the integral of their velocity. The gap between them is the integral of the DIFFERENCE of velocities — the area between the two velocity curves."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: runner A covers $\\int_0^3 (2t + 1) \\, dt = [t^2 + t]_0^3 = 12$ m. Runner B covers $\\int_0^3 t^2 \\, dt = 9$ m."
+    },
+    {
+      "level": "guide",
+      "text": "Gap $= 12 - 9$, or directly $\\int_0^3 (2t + 1 - t^2) \\, dt = \\left[t^2 + t - \\frac{t^3}{3}\\right]_0^3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$9 + 3 - 9 = 3$ meters."
+    }
+  ],
+  "explanation": [
+    "Position of each runner at $t = 3$: $s_A = \\int_0^3 (2t + 1) \\, dt = 9 + 3 = 12$ m and $s_B = \\int_0^3 t^2 \\, dt = 9$ m.",
+    "Equivalently, the gap is $\\int_0^3 (v_A - v_B) \\, dt = \\int_0^3 (2t + 1 - t^2) \\, dt = \\left[t^2 + t - \\frac{t^3}{3}\\right]_0^3 = 9 + 3 - 9$.",
+    "$= 3$ m: A leads by $3$ meters. Note that $v_B > v_A$ once $t > 1 + \\sqrt{2} \\approx 2.41$, so B is already closing the gap by $t = 3$ — the signed area handles that automatically."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Reading the graph",
+      "steps": [
+        "Plot both velocity curves. From $t = 0$ to about $2.41$, the line $2t + 1$ is above the parabola $t^2$: A pulls ahead by that area.",
+        "From $2.41$ to $3$ the parabola is on top: B gains back that (smaller) area.",
+        "Net area $= 3$: A is still $3$ m ahead at $t = 3$, but B will catch up soon after."
+      ]
+    }
+  ],
+  "tags": [
+    "area-between-curves",
+    "motion",
+    "net-change",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 90
+}

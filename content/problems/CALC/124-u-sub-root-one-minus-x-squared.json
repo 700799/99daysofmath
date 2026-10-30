@@ -1,0 +1,53 @@
+{
+  "id": "CALC.124",
+  "domain": "CALC",
+  "unit": 13,
+  "orderInUnit": 4,
+  "standard": "CALC.INT.B.1",
+  "difficulty": 2,
+  "prompt": "Evaluate $\\int_0^1 x\\sqrt{1 - x^2} \\, dx$. Give your answer as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "1/3",
+  "alternativeAnswers": [
+    "0.3333",
+    "0.333"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "Let $u = 1 - x^2$. Then $du = -2x \\, dx$, so $x \\, dx = -\\frac{1}{2} du$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Let $u = 1 - x^2$. Then $du = -2x \\, dx$, so $x \\, dx = -\\frac{1}{2} du$."
+    },
+    {
+      "level": "guide",
+      "text": "Limits: $x = 0 \\to u = 1$, $x = 1 \\to u = 0$. The integral is $-\\frac{1}{2}\\int_1^0 \\sqrt{u} \\, du = \\frac{1}{2}\\int_0^1 u^{1/2} \\, du$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2} \\cdot \\frac{2}{3} u^{3/2}\\Big|_0^1 = \\frac{1}{3}$."
+    }
+  ],
+  "explanation": [
+    "Substitute $u = 1 - x^2$, $du = -2x \\, dx$. The $x \\, dx$ in the integrand becomes $-\\frac{1}{2} du$.",
+    "Limits flip: $u$ runs from $1$ to $0$. Flipping them back removes the minus sign: $\\frac{1}{2}\\int_0^1 u^{1/2} \\, du$.",
+    "$= \\frac{1}{2} \\cdot \\frac{2}{3} = \\frac{1}{3}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Keep $x$ and back-substitute",
+      "steps": [
+        "Antiderivative in $u$: $\\frac{1}{2} \\cdot \\frac{2}{3} u^{3/2} \\cdot (-1) = -\\frac{1}{3}(1 - x^2)^{3/2}$.",
+        "Evaluate from $0$ to $1$: $-\\frac{1}{3}(0) - \\left(-\\frac{1}{3}(1)\\right) = \\frac{1}{3}$.",
+        "Either route works; changing the limits avoids the back-substitution."
+      ]
+    }
+  ],
+  "tags": [
+    "u-substitution",
+    "definite-integral",
+    "square-root"
+  ],
+  "estimatedSeconds": 65
+}

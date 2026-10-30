@@ -1,0 +1,71 @@
+{
+  "id": "CALC.107",
+  "domain": "CALC",
+  "unit": 11,
+  "orderInUnit": 7,
+  "standard": "CALC.INT.A.1",
+  "difficulty": 2,
+  "prompt": "What is the exact value of $\\int_{-3}^{3} \\sqrt{9 - x^2} \\, dx$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\frac{9\\pi}{2}$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$9\\pi$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\frac{9}{2}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$3\\pi$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Square both sides of $y = \\sqrt{9 - x^2}$: $x^2 + y^2 = 9$. What shape is that, and which part does the square root pick out?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Square both sides of $y = \\sqrt{9 - x^2}$: $x^2 + y^2 = 9$. What shape is that, and which part does the square root pick out?"
+    },
+    {
+      "level": "guide",
+      "text": "It is the UPPER half of a circle of radius $3$. The integral is the area of that semicircle."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2}\\pi(3)^2 = \\frac{9\\pi}{2}$: choice A."
+    }
+  ],
+  "explanation": [
+    "$y = \\sqrt{9 - x^2}$ means $y \\ge 0$ and $x^2 + y^2 = 9$: the top half of a circle with radius $3$ centered at the origin.",
+    "From $x = -3$ to $x = 3$ that is the whole semicircle, with area $\\frac{1}{2}\\pi r^2 = \\frac{9\\pi}{2}$.",
+    "Choice A. Choice B is the full circle; D would be the semicircle's arc length, not its area."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Estimate to rule out impostors",
+      "steps": [
+        "The region fits inside a $6 \\times 3$ rectangle (area $18$) and contains the triangle with vertices $(-3, 0)$, $(3, 0)$, $(0, 3)$ (area $9$).",
+        "So the answer is between $9$ and $18$. $\\frac{9\\pi}{2} \\approx 14.1$ fits; $9\\pi \\approx 28.3$ and $\\frac{9}{2}$ do not; $3\\pi \\approx 9.4$ is barely above the triangle, too small for a bulging semicircle.",
+        "Only A survives."
+      ]
+    }
+  ],
+  "tags": [
+    "definite-integral",
+    "geometry",
+    "semicircle"
+  ],
+  "estimatedSeconds": 50
+}

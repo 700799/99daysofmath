@@ -1,0 +1,49 @@
+{
+  "id": "CALC.122",
+  "domain": "CALC",
+  "unit": 13,
+  "orderInUnit": 2,
+  "standard": "CALC.INT.B.1",
+  "difficulty": 1,
+  "prompt": "Evaluate $\\int_0^1 (2x + 1)^3 \\, dx$.",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Let $u = 2x + 1$. Then $du = 2 \\, dx$, so $dx = \\frac{du}{2}$. Change the limits too: $x = 0 \\to u = 1$, $x = 1 \\to u = 3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Let $u = 2x + 1$. Then $du = 2 \\, dx$, so $dx = \\frac{du}{2}$. Change the limits too: $x = 0 \\to u = 1$, $x = 1 \\to u = 3$."
+    },
+    {
+      "level": "guide",
+      "text": "The integral becomes $\\frac{1}{2}\\int_1^3 u^3 \\, du = \\frac{1}{2}\\left[\\frac{u^4}{4}\\right]_1^3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2} \\cdot \\frac{81 - 1}{4} = \\frac{1}{2} \\cdot 20 = 10$."
+    }
+  ],
+  "explanation": [
+    "Substitute $u = 2x + 1$, $du = 2 \\, dx$. New limits: $u(0) = 1$, $u(1) = 3$.",
+    "$\\int_0^1 (2x + 1)^3 \\, dx = \\frac{1}{2}\\int_1^3 u^3 \\, du = \\frac{1}{2} \\cdot \\frac{u^4}{4}\\Big|_1^3 = \\frac{81 - 1}{8}$.",
+    "$= \\frac{80}{8} = 10$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Expand instead",
+      "steps": [
+        "$(2x + 1)^3 = 8x^3 + 12x^2 + 6x + 1$.",
+        "Integrate from $0$ to $1$: $2 + 4 + 3 + 1 = 10$.",
+        "Same answer, more arithmetic. Substitution shines when the power is higher or the inside is not linear."
+      ]
+    }
+  ],
+  "tags": [
+    "u-substitution",
+    "definite-integral",
+    "power-rule"
+  ],
+  "estimatedSeconds": 50
+}

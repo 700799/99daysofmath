@@ -1,0 +1,71 @@
+{
+  "id": "CALC.083",
+  "domain": "CALC",
+  "unit": 9,
+  "orderInUnit": 3,
+  "standard": "CALC.APP.A.1",
+  "difficulty": 1,
+  "prompt": "A function $f$ is differentiable everywhere, with $f'(x) > 0$ for $x < 1$, $f'(x) < 0$ for $1 < x < 5$, and $f'(x) > 0$ for $x > 5$. Which statement is true?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$f$ has a local maximum at $x = 1$ and a local minimum at $x = 5$.",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$f$ has a local minimum at $x = 1$ and a local maximum at $x = 5$.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$f$ has local maxima at both $x = 1$ and $x = 5$.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$f$ has no local extrema.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Positive $f'$ means $f$ is climbing; negative means falling. Picture the graph.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Positive $f'$ means $f$ is climbing; negative means falling. Picture the graph."
+    },
+    {
+      "level": "guide",
+      "text": "Up to $x = 1$ the graph rises, then falls until $x = 5$, then rises again. What shape is at $x = 1$? At $x = 5$?"
+    },
+    {
+      "level": "reveal",
+      "text": "Rising then falling is a peak (local max at $1$); falling then rising is a valley (local min at $5$). Choice A."
+    }
+  ],
+  "explanation": [
+    "First Derivative Test: where $f'$ changes from $+$ to $-$, $f$ has a local maximum. That happens at $x = 1$.",
+    "Where $f'$ changes from $-$ to $+$, $f$ has a local minimum. That happens at $x = 5$.",
+    "Choice A. The derivative being zero at a point is not enough — it is the sign CHANGE that creates an extremum."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Hike the graph",
+      "steps": [
+        "Walk left to right. For $x < 1$ you are going uphill.",
+        "At $x = 1$ the trail turns downhill: you were on a summit. You descend until $x = 5$.",
+        "At $x = 5$ it turns uphill again: you were in a valley. Summit at $1$, valley at $5$."
+      ]
+    }
+  ],
+  "tags": [
+    "first-derivative-test",
+    "local-extrema",
+    "sign-chart"
+  ],
+  "estimatedSeconds": 40
+}

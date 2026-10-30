@@ -1,0 +1,77 @@
+{
+  "id": "CALC.118",
+  "domain": "CALC",
+  "unit": 12,
+  "orderInUnit": 8,
+  "standard": "CALC.INT.A.2",
+  "difficulty": 3,
+  "prompt": "Let $h(x) = \\int_0^{x^2} \\cos t \\, dt$. Which expression equals $h'(x)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$2x \\cos(x^2)$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\cos(x^2)$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\sin(x^2)$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$2x \\sin(x^2)$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The upper limit is $x^2$, not $x$. That makes $h$ a composition: $h(x) = G(x^2)$ where $G(u) = \\int_0^u \\cos t \\, dt$. Chain rule!",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The upper limit is $x^2$, not $x$. That makes $h$ a composition: $h(x) = G(x^2)$ where $G(u) = \\int_0^u \\cos t \\, dt$. Chain rule!"
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if $G(u) = \\int_0^u \\cos t \\, dt$, then by the FTC $G'(u) = \\cos u$. Now $h(x) = G(x^2)$, so $h'(x) = G'(x^2) \\cdot (x^2)'$."
+    },
+    {
+      "level": "guide",
+      "text": "$G'(x^2) = \\cos(x^2)$ and $(x^2)' = 2x$. Multiply."
+    },
+    {
+      "level": "reveal",
+      "text": "$h'(x) = 2x \\cos(x^2)$: choice A."
+    }
+  ],
+  "explanation": [
+    "Write $h(x) = G(u)$ with $u = x^2$ and $G(u) = \\int_0^u \\cos t \\, dt$. By the FTC, $G'(u) = \\cos u$.",
+    "Chain rule: $h'(x) = G'(u) \\cdot \\frac{du}{dx} = \\cos(x^2) \\cdot 2x$.",
+    "Choice A. Choice B forgets the chain rule factor; C and D confuse \"derivative of the integral\" with actually integrating $\\cos$ to get $\\sin$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Integrate first, then differentiate",
+      "steps": [
+        "$h(x) = [\\sin t]_0^{x^2} = \\sin(x^2) - \\sin 0 = \\sin(x^2)$.",
+        "Differentiate with the chain rule: $h'(x) = \\cos(x^2) \\cdot 2x$.",
+        "Same answer. This route works here because $\\cos$ has a simple antiderivative; the FTC-plus-chain-rule route works even when it does not."
+      ]
+    }
+  ],
+  "tags": [
+    "fundamental-theorem",
+    "chain-rule",
+    "accumulation-function",
+    "multi-step"
+  ],
+  "estimatedSeconds": 70
+}

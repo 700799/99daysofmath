@@ -1,0 +1,51 @@
+{
+  "id": "CALC.076",
+  "domain": "CALC",
+  "unit": 8,
+  "orderInUnit": 6,
+  "standard": "CALC.DER.B.2",
+  "difficulty": 2,
+  "prompt": "A $10$-foot ladder leans against a wall. Its bottom slides away from the wall at $2$ feet per second. When the bottom is $6$ feet from the wall, how fast is the top of the ladder sliding DOWN the wall, in feet per second?",
+  "answerType": "numeric",
+  "primaryAnswer": "1.5",
+  "alternativeAnswers": [
+    "3/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Let $x$ be the distance from the wall to the bottom and $y$ the height of the top. The ladder is the hypotenuse: $x^2 + y^2 = 100$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Let $x$ be the distance from the wall to the bottom and $y$ the height of the top. The ladder is the hypotenuse: $x^2 + y^2 = 100$."
+    },
+    {
+      "level": "guide",
+      "text": "Differentiate: $2x \\frac{dx}{dt} + 2y \\frac{dy}{dt} = 0$. When $x = 6$, $y = 8$ (a 6-8-10 triangle), and $\\frac{dx}{dt} = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2(6)(2) + 2(8)\\frac{dy}{dt} = 0$ gives $\\frac{dy}{dt} = -1.5$. The top slides down at $1.5$ ft/s."
+    }
+  ],
+  "explanation": [
+    "Equation: $x^2 + y^2 = 100$. Differentiate with respect to $t$: $2x x' + 2y y' = 0$, so $y' = -\\frac{x x'}{y}$.",
+    "When $x = 6$: $y = \\sqrt{100 - 36} = 8$.",
+    "$y' = -\\frac{6 \\cdot 2}{8} = -1.5$ ft/s. The negative sign means the height is decreasing: the top slides down at $1.5$ ft/s."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why slower than the bottom?",
+      "steps": [
+        "The bottom moves $2$ ft/s but the top only $1.5$ ft/s. Is that reasonable?",
+        "From $y' = -\\frac{x}{y} x'$, the top moves slower whenever $x < y$, i.e. while the ladder is steeper than $45°$.",
+        "At $x = 6$, $y = 8$, the ladder is still steep, so $1.5 < 2$ makes sense. Once $x > y$ the top would outrun the bottom."
+      ]
+    }
+  ],
+  "tags": [
+    "related-rates",
+    "pythagorean",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

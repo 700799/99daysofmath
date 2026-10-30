@@ -1,0 +1,70 @@
+{
+  "id": "CALC.072",
+  "domain": "CALC",
+  "unit": 8,
+  "orderInUnit": 2,
+  "standard": "CALC.DER.B.2",
+  "difficulty": 1,
+  "prompt": "If $x^3 + y^3 = 9$, which expression equals $\\frac{dy}{dx}$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$-\\frac{x^2}{y^2}$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$-3x^2$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\frac{x^2}{y^2}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$-\\frac{y^2}{x^2}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Differentiate each side. The derivative of $y^3$ is not just $3y^2$ — it is $3y^2 \\frac{dy}{dx}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Differentiate each side. The derivative of $y^3$ is not just $3y^2$ — it is $3y^2 \\frac{dy}{dx}$."
+    },
+    {
+      "level": "guide",
+      "text": "$3x^2 + 3y^2 \\frac{dy}{dx} = 0$. Move $3x^2$ across and divide by $3y^2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{dy}{dx} = -\\frac{3x^2}{3y^2} = -\\frac{x^2}{y^2}$: choice A."
+    }
+  ],
+  "explanation": [
+    "Differentiate: $\\frac{d}{dx}(x^3) = 3x^2$ and $\\frac{d}{dx}(y^3) = 3y^2 \\, y'$ by the chain rule. The constant $9$ gives $0$.",
+    "So $3x^2 + 3y^2 y' = 0$, hence $y' = -\\frac{x^2}{y^2}$.",
+    "Choice B forgot that $y^3$ has a derivative at all; C dropped the sign; D flipped the fraction."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test it at a real point",
+      "steps": [
+        "The point $(1, 2)$ is on the curve: $1 + 8 = 9$.",
+        "Choice A gives slope $-\\frac{1}{4}$ there. Nudge $x$ to $1.01$: then $y^3 = 9 - 1.030301 = 7.969699$, so $y \\approx 1.99749$, a drop of about $0.0025$ over $0.01$: slope about $-0.25$.",
+        "Only choice A matches the real slope."
+      ]
+    }
+  ],
+  "tags": [
+    "implicit-differentiation",
+    "chain-rule"
+  ],
+  "estimatedSeconds": 40
+}

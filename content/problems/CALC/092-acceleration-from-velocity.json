@@ -1,0 +1,49 @@
+{
+  "id": "CALC.092",
+  "domain": "CALC",
+  "unit": 10,
+  "orderInUnit": 2,
+  "standard": "CALC.APP.A.2",
+  "difficulty": 1,
+  "prompt": "A particle's velocity is $v(t) = 3t^2 - 12$ meters per second. Find its acceleration at $t = 2$ seconds, in meters per second squared.",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Acceleration is the derivative of velocity: $a(t) = v'(t)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Acceleration is the derivative of velocity: $a(t) = v'(t)$."
+    },
+    {
+      "level": "guide",
+      "text": "$a(t) = 6t$. Substitute $t = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$a(2) = 12$ m/s$^2$."
+    }
+  ],
+  "explanation": [
+    "$a(t) = v'(t) = 6t$.",
+    "$a(2) = 6(2) = 12$ m/s$^2$.",
+    "Note $v(2) = 12 - 12 = 0$: the particle is momentarily stopped at $t = 2$ but accelerating hard, so it immediately starts moving in the positive direction."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Rate of change of velocity",
+      "steps": [
+        "$v(2) = 0$ and $v(2.1) = 3(4.41) - 12 = 1.23$.",
+        "Average acceleration over that tenth of a second: $\\frac{1.23}{0.1} = 12.3$ m/s$^2$.",
+        "Close to the instantaneous $12$ m/s$^2$; shrinking the window would bring it closer still."
+      ]
+    }
+  ],
+  "tags": [
+    "motion",
+    "acceleration",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}
