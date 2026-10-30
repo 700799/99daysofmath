@@ -1,0 +1,54 @@
+{
+  "id": "CALC.066",
+  "domain": "CALC",
+  "unit": 7,
+  "orderInUnit": 6,
+  "standard": "CALC.DER.A.3",
+  "difficulty": 2,
+  "prompt": "The water depth at a harbor is $H(t) = 5 + 2\\sin\\left(\\frac{\\pi}{6} t\\right)$ meters, where $t$ is hours after midnight. How fast is the depth changing at $t = 2$ hours? Round to two decimal places (meters per hour).",
+  "answerType": "numeric",
+  "primaryAnswer": "0.52",
+  "alternativeAnswers": [
+    "pi/6",
+    "0.5236"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "The rate of change is $H'(t)$. The $5$ is a constant, and $\\sin$ of an inside function $\\frac{\\pi}{6}t$ needs the chain rule.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The rate of change is $H'(t)$. The $5$ is a constant, and $\\sin$ of an inside function $\\frac{\\pi}{6}t$ needs the chain rule."
+    },
+    {
+      "level": "guide",
+      "text": "$H'(t) = 2\\cos\\left(\\frac{\\pi}{6}t\\right) \\cdot \\frac{\\pi}{6} = \\frac{\\pi}{3}\\cos\\left(\\frac{\\pi}{6}t\\right)$. Substitute $t = 2$, so the angle is $\\frac{\\pi}{3}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\cos\\frac{\\pi}{3} = \\frac{1}{2}$, so $H'(2) = \\frac{\\pi}{3} \\cdot \\frac{1}{2} = \\frac{\\pi}{6} \\approx 0.52$ m per hour."
+    }
+  ],
+  "explanation": [
+    "The constant $5$ differentiates to $0$. For $2\\sin\\left(\\frac{\\pi}{6}t\\right)$, the outside gives $2\\cos\\left(\\frac{\\pi}{6}t\\right)$ and the inside derivative is $\\frac{\\pi}{6}$.",
+    "So $H'(t) = \\frac{\\pi}{3}\\cos\\left(\\frac{\\pi}{6}t\\right)$.",
+    "At $t = 2$: $\\frac{\\pi}{3}\\cos\\frac{\\pi}{3} = \\frac{\\pi}{3} \\cdot \\frac{1}{2} = \\frac{\\pi}{6} \\approx 0.52$. The tide is still rising at 2 a.m., about half a meter per hour."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Does the size make sense?",
+      "steps": [
+        "The sine completes one cycle every $\\frac{2\\pi}{\\pi/6} = 12$ hours, so the tide goes from low to high in 6 hours, rising $4$ meters: an average of about $0.67$ m/h.",
+        "The fastest rise is at mid-tide ($t = 0$), where $H'(0) = \\frac{\\pi}{3} \\approx 1.05$ m/h; by $t = 3$ the tide peaks and the rate is $0$.",
+        "At $t = 2$ we are two-thirds of the way to high tide, slowing down: $0.52$ m/h sits sensibly between $1.05$ and $0$."
+      ]
+    }
+  ],
+  "tags": [
+    "chain-rule",
+    "trig-derivative",
+    "rate-of-change",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

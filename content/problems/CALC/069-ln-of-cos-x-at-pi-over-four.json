@@ -1,0 +1,55 @@
+{
+  "id": "CALC.069",
+  "domain": "CALC",
+  "unit": 7,
+  "orderInUnit": 9,
+  "standard": "CALC.DER.A.3",
+  "difficulty": 3,
+  "prompt": "Let $f(x) = \\ln(\\cos x)$. Find $f'\\left(\\frac{\\pi}{4}\\right)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "-1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Outside function $\\ln u$ has derivative $\\frac{1}{u} \\cdot u'$. Here the inside is $u = \\cos x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Outside function $\\ln u$ has derivative $\\frac{1}{u} \\cdot u'$. Here the inside is $u = \\cos x$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $\\ln(x^2)$: $\\frac{1}{x^2} \\cdot 2x = \\frac{2}{x}$. Same shape here: one over the inside, times the inside's derivative."
+    },
+    {
+      "level": "guide",
+      "text": "$f'(x) = \\frac{1}{\\cos x} \\cdot (-\\sin x) = -\\frac{\\sin x}{\\cos x} = -\\tan x$. Substitute $x = \\frac{\\pi}{4}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$-\\tan\\frac{\\pi}{4} = -1$."
+    }
+  ],
+  "explanation": [
+    "Chain rule: $\\frac{d}{dx}\\ln(\\cos x) = \\frac{1}{\\cos x} \\cdot \\frac{d}{dx}\\cos x$.",
+    "The inside derivative is $-\\sin x$, so $f'(x) = -\\frac{\\sin x}{\\cos x} = -\\tan x$.",
+    "At $x = \\frac{\\pi}{4}$, $\\sin$ and $\\cos$ are equal, so $\\tan\\frac{\\pi}{4} = 1$ and $f'\\left(\\frac{\\pi}{4}\\right) = -1$. The function is falling, since $\\cos x$ shrinks toward $0$ as $x$ heads to $\\frac{\\pi}{2}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Common trap",
+      "steps": [
+        "Forgetting the inside gives $\\frac{1}{\\cos x}$, which at $\\frac{\\pi}{4}$ is $\\sqrt{2} \\approx 1.41$: positive, yet $\\ln(\\cos x)$ is clearly decreasing there.",
+        "Check with values: $\\ln(\\cos 0.78) \\approx \\ln(0.7109) \\approx -0.3412$ and $\\ln(\\cos 0.79) \\approx \\ln(0.7038) \\approx -0.3512$.",
+        "Secant slope $\\frac{-0.3512 - (-0.3412)}{0.01} \\approx -1.0$. The chain-rule answer $-1$ is the one the numbers support."
+      ]
+    }
+  ],
+  "tags": [
+    "chain-rule",
+    "logarithm",
+    "trig-derivative",
+    "multi-step"
+  ],
+  "estimatedSeconds": 65
+}

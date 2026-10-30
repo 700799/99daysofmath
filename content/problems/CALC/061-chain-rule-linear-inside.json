@@ -1,0 +1,48 @@
+{
+  "id": "CALC.061",
+  "domain": "CALC",
+  "unit": 7,
+  "orderInUnit": 1,
+  "standard": "CALC.DER.A.3",
+  "difficulty": 1,
+  "prompt": "Let $f(x) = (3x + 1)^4$. Find $f'(1)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "768",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "This is a power of an INSIDE function $3x + 1$. Chain rule: differentiate the outside power, keep the inside, then multiply by the derivative of the inside.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This is a power of an INSIDE function $3x + 1$. Chain rule: differentiate the outside power, keep the inside, then multiply by the derivative of the inside."
+    },
+    {
+      "level": "guide",
+      "text": "Outside: $4(3x + 1)^3$. Inside derivative: $3$. So $f'(x) = 4(3x + 1)^3 \\cdot 3 = 12(3x + 1)^3$."
+    },
+    {
+      "level": "reveal",
+      "text": "At $x = 1$ the inside is $4$: $f'(1) = 12 \\cdot 4^3 = 12 \\cdot 64 = 768$."
+    }
+  ],
+  "explanation": [
+    "Think of $f$ as $u^4$ with $u = 3x + 1$. The chain rule says $f'(x) = 4u^3 \\cdot u'$.",
+    "$u' = 3$, so $f'(x) = 12(3x + 1)^3$.",
+    "At $x = 1$: $12 \\cdot 4^3 = 768$. Forgetting the inside factor $3$ gives $256$, three times too small."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the extra factor of $3$?",
+      "steps": [
+        "The inside $3x + 1$ moves three times as fast as $x$ does.",
+        "So any change in $x$ hits the outside function three times harder: slopes get multiplied by $3$.",
+        "A secant check: $\\frac{f(1.001) - f(1)}{0.001} = \\frac{4.003^4 - 256}{0.001} \\approx 768.9$, which matches $768$, not $256$."
+      ]
+    }
+  ],
+  "tags": [
+    "chain-rule",
+    "power-rule"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,51 @@
+{
+  "id": "CALC.064",
+  "domain": "CALC",
+  "unit": 7,
+  "orderInUnit": 4,
+  "standard": "CALC.DER.A.3",
+  "difficulty": 2,
+  "prompt": "Let $h(x) = \\sqrt{x^2 + 9}$. Find $h'(4)$. Give your answer as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "4/5",
+  "alternativeAnswers": [
+    "0.8"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "Write the root as a power of the inside: $h(x) = (x^2 + 9)^{1/2}$. Then chain rule.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Write the root as a power of the inside: $h(x) = (x^2 + 9)^{1/2}$. Then chain rule."
+    },
+    {
+      "level": "guide",
+      "text": "Outside: $\\frac{1}{2}(x^2 + 9)^{-1/2}$. Inside derivative: $2x$. Multiply: $h'(x) = \\frac{2x}{2\\sqrt{x^2 + 9}} = \\frac{x}{\\sqrt{x^2 + 9}}$."
+    },
+    {
+      "level": "reveal",
+      "text": "At $x = 4$: $\\frac{4}{\\sqrt{16 + 9}} = \\frac{4}{5}$."
+    }
+  ],
+  "explanation": [
+    "Let $u = x^2 + 9$ so $h = u^{1/2}$. Then $h'(x) = \\frac{1}{2}u^{-1/2} \\cdot u'$.",
+    "$u' = 2x$, and the $2$s cancel: $h'(x) = \\frac{x}{\\sqrt{x^2 + 9}}$.",
+    "At $x = 4$ the root is $\\sqrt{25} = 5$, so $h'(4) = \\frac{4}{5}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A right-triangle check",
+      "steps": [
+        "$\\sqrt{x^2 + 9}$ is the hypotenuse of a right triangle with legs $x$ and $3$.",
+        "When $x = 4$ the hypotenuse is $5$. Stretch the leg $x$ by a tiny amount and the hypotenuse grows by about $\\frac{x}{\\text{hyp}} = \\frac{4}{5}$ of that amount — the cosine of the angle at the $3$-leg.",
+        "Numerically: $\\sqrt{4.01^2 + 9} \\approx 5.0080$, a rise of $0.0080$ for a step of $0.01$: slope $0.80 = \\frac{4}{5}$."
+      ]
+    }
+  ],
+  "tags": [
+    "chain-rule",
+    "square-root"
+  ],
+  "estimatedSeconds": 55
+}

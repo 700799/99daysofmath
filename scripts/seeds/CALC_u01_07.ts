@@ -1079,4 +1079,183 @@ export const problemsCALCu01_07: SeedProblem[] = [
     ],
     tags: ['power-rule', 'square-root', 'rate-of-change', 'word-problem', 'multi-step'], estimatedSeconds: 65,
   },
+
+  // ---------------- UNIT 7 — The chain rule and trig derivatives ----------------
+  {
+    domain: 'CALC', num: 61, unit: 7, order: 1, slug: 'chain-rule-linear-inside',
+    standard: 'CALC.DER.A.3', difficulty: 1,
+    prompt: 'Let $f(x) = (3x + 1)^4$. Find $f\'(1)$.',
+    answerType: 'numeric', primaryAnswer: '768', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'This is a power of an INSIDE function $3x + 1$. Chain rule: differentiate the outside power, keep the inside, then multiply by the derivative of the inside.' },
+      { level: 'guide', text: 'Outside: $4(3x + 1)^3$. Inside derivative: $3$. So $f\'(x) = 4(3x + 1)^3 \\cdot 3 = 12(3x + 1)^3$.' },
+      { level: 'reveal', text: 'At $x = 1$ the inside is $4$: $f\'(1) = 12 \\cdot 4^3 = 12 \\cdot 64 = 768$.' },
+    ],
+    explanation: ['Think of $f$ as $u^4$ with $u = 3x + 1$. The chain rule says $f\'(x) = 4u^3 \\cdot u\'$.', '$u\' = 3$, so $f\'(x) = 12(3x + 1)^3$.', 'At $x = 1$: $12 \\cdot 4^3 = 768$. Forgetting the inside factor $3$ gives $256$, three times too small.'],
+    alternativeExplanations: [
+      { title: 'Why the extra factor of $3$?', steps: ['The inside $3x + 1$ moves three times as fast as $x$ does.', 'So any change in $x$ hits the outside function three times harder: slopes get multiplied by $3$.', 'A secant check: $\\frac{f(1.001) - f(1)}{0.001} = \\frac{4.003^4 - 256}{0.001} \\approx 768.9$, which matches $768$, not $256$.'] },
+    ],
+    tags: ['chain-rule', 'power-rule'], estimatedSeconds: 40,
+  },
+  {
+    domain: 'CALC', num: 62, unit: 7, order: 2, slug: 'derivative-of-sin-5x',
+    standard: 'CALC.DER.A.3', difficulty: 1,
+    prompt: 'Which expression is the derivative of $y = \\sin(5x)$?',
+    answerType: 'multiple-choice',
+    choices: [
+      { id: 'A', label: '$5\\cos(5x)$', correct: true },
+      { id: 'B', label: '$\\cos(5x)$', correct: false },
+      { id: 'C', label: '$-5\\cos(5x)$', correct: false },
+      { id: 'D', label: '$5\\cos(x)$', correct: false },
+    ],
+    primaryAnswer: 'A', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'The derivative of $\\sin u$ is $\\cos u$ times $u\'$. Here the inside is $u = 5x$.' },
+      { level: 'guide', text: 'Keep the inside unchanged in the cosine, then multiply by the inside\'s derivative, which is $5$.' },
+      { level: 'reveal', text: '$y\' = \\cos(5x) \\cdot 5 = 5\\cos(5x)$: choice A.' },
+    ],
+    explanation: ['Chain rule with outside $\\sin$ and inside $u = 5x$: $\\frac{dy}{dx} = \\cos(u) \\cdot \\frac{du}{dx}$.', '$\\frac{du}{dx} = 5$, so $y\' = 5\\cos(5x)$.', 'Choice B forgets the inside derivative; C has the sign of the derivative of cosine, not sine; D changes the inside, which the chain rule never does.'],
+    alternativeExplanations: [
+      { title: 'A speed picture', steps: ['$\\sin(5x)$ completes a full wave every $\\frac{2\\pi}{5}$ units — five times as often as $\\sin x$.', 'Same height, five times as squeezed, so every slope is five times as steep.', 'That is exactly the factor $5$ in $5\\cos(5x)$. Check at $x = 0$: slope should be $5$, and $5\\cos 0 = 5$.'] },
+    ],
+    tags: ['chain-rule', 'trig-derivative', 'sine'], estimatedSeconds: 35,
+  },
+  {
+    domain: 'CALC', num: 63, unit: 7, order: 3, slug: 'sin-plus-cos-slope-at-zero',
+    standard: 'CALC.DER.A.3', difficulty: 1,
+    prompt: 'Let $g(x) = 2\\sin x + \\cos x$. Find $g\'(0)$.',
+    answerType: 'numeric', primaryAnswer: '2', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Two facts to memorize: $\\frac{d}{dx}\\sin x = \\cos x$ and $\\frac{d}{dx}\\cos x = -\\sin x$. Watch the minus sign on the second one.' },
+      { level: 'guide', text: '$g\'(x) = 2\\cos x - \\sin x$. Now substitute $x = 0$, using $\\cos 0 = 1$ and $\\sin 0 = 0$.' },
+      { level: 'reveal', text: '$g\'(0) = 2(1) - 0 = 2$.' },
+    ],
+    explanation: ['Differentiate term by term: $\\frac{d}{dx}(2\\sin x) = 2\\cos x$ and $\\frac{d}{dx}(\\cos x) = -\\sin x$.', 'So $g\'(x) = 2\\cos x - \\sin x$.', 'At $x = 0$: $2 \\cdot 1 - 0 = 2$.'],
+    alternativeExplanations: [
+      { title: 'Read it off the graphs', steps: ['Near $x = 0$, $\\sin x$ looks like the line $y = x$ (slope $1$), so $2\\sin x$ has slope $2$ there.', 'Near $x = 0$, $\\cos x$ is at the top of its hill: flat, slope $0$.', 'Add the slopes: $2 + 0 = 2$. Same answer, no formula needed.'] },
+    ],
+    tags: ['trig-derivative', 'sine', 'cosine'], estimatedSeconds: 35,
+  },
+  {
+    domain: 'CALC', num: 64, unit: 7, order: 4, slug: 'sqrt-of-x-squared-plus-nine',
+    standard: 'CALC.DER.A.3', difficulty: 2,
+    prompt: 'Let $h(x) = \\sqrt{x^2 + 9}$. Find $h\'(4)$. Give your answer as a fraction.',
+    answerType: 'fraction', primaryAnswer: '4/5', alternativeAnswers: ['0.8'], acceptanceMode: 'numeric-tolerance', numericTolerance: 0.001,
+    hints: [
+      { level: 'nudge', text: 'Write the root as a power of the inside: $h(x) = (x^2 + 9)^{1/2}$. Then chain rule.' },
+      { level: 'guide', text: 'Outside: $\\frac{1}{2}(x^2 + 9)^{-1/2}$. Inside derivative: $2x$. Multiply: $h\'(x) = \\frac{2x}{2\\sqrt{x^2 + 9}} = \\frac{x}{\\sqrt{x^2 + 9}}$.' },
+      { level: 'reveal', text: 'At $x = 4$: $\\frac{4}{\\sqrt{16 + 9}} = \\frac{4}{5}$.' },
+    ],
+    explanation: ['Let $u = x^2 + 9$ so $h = u^{1/2}$. Then $h\'(x) = \\frac{1}{2}u^{-1/2} \\cdot u\'$.', '$u\' = 2x$, and the $2$s cancel: $h\'(x) = \\frac{x}{\\sqrt{x^2 + 9}}$.', 'At $x = 4$ the root is $\\sqrt{25} = 5$, so $h\'(4) = \\frac{4}{5}$.'],
+    alternativeExplanations: [
+      { title: 'A right-triangle check', steps: ['$\\sqrt{x^2 + 9}$ is the hypotenuse of a right triangle with legs $x$ and $3$.', 'When $x = 4$ the hypotenuse is $5$. Stretch the leg $x$ by a tiny amount and the hypotenuse grows by about $\\frac{x}{\\text{hyp}} = \\frac{4}{5}$ of that amount — the cosine of the angle at the $3$-leg.', 'Numerically: $\\sqrt{4.01^2 + 9} \\approx 5.0080$, a rise of $0.0080$ for a step of $0.01$: slope $0.80 = \\frac{4}{5}$.'] },
+    ],
+    tags: ['chain-rule', 'square-root'], estimatedSeconds: 55,
+  },
+  {
+    domain: 'CALC', num: 65, unit: 7, order: 5, slug: 'derivative-of-e-x-squared',
+    standard: 'CALC.DER.A.3', difficulty: 2,
+    prompt: 'Which expression is the derivative of $y = e^{x^2}$?',
+    answerType: 'multiple-choice',
+    choices: [
+      { id: 'A', label: '$2x\\, e^{x^2}$', correct: true },
+      { id: 'B', label: '$e^{x^2}$', correct: false },
+      { id: 'C', label: '$x^2 e^{x^2 - 1}$', correct: false },
+      { id: 'D', label: '$e^{2x}$', correct: false },
+    ],
+    primaryAnswer: 'A', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: '$e^x$ is its own derivative, but here the exponent is $x^2$, not $x$. That inside function needs the chain rule.' },
+      { level: 'guide', text: 'Derivative of $e^u$ is $e^u \\cdot u\'$. With $u = x^2$, $u\' = 2x$.' },
+      { level: 'reveal', text: '$y\' = e^{x^2} \\cdot 2x = 2x\\, e^{x^2}$: choice A.' },
+    ],
+    explanation: ['Outside function: $e^u$, whose derivative is $e^u$ (unchanged). Inside: $u = x^2$.', 'Chain rule: $y\' = e^{x^2} \\cdot \\frac{d}{dx}(x^2) = 2x\\, e^{x^2}$.', 'Choice B drops the inside derivative; C misuses the power rule on an exponential; D confuses $e^{x^2}$ with $(e^x)^2 = e^{2x}$.'],
+    alternativeExplanations: [
+      { title: 'Numerical check at $x = 1$', steps: ['Choice A at $x = 1$ gives $2e \\approx 5.44$; choice B gives $e \\approx 2.72$.', 'Secant slope: $\\frac{e^{1.001^2} - e^{1}}{0.001} = \\frac{e^{1.002001} - e}{0.001} \\approx \\frac{2.72372 - 2.71828}{0.001} \\approx 5.44$.', 'Only choice A matches. Where the exponent is not plain $x$, the inside derivative is not optional.'] },
+    ],
+    tags: ['chain-rule', 'exponential'], estimatedSeconds: 45,
+  },
+  {
+    domain: 'CALC', num: 66, unit: 7, order: 6, slug: 'tide-height-rate',
+    standard: 'CALC.DER.A.3', difficulty: 2,
+    prompt: 'The water depth at a harbor is $H(t) = 5 + 2\\sin\\left(\\frac{\\pi}{6} t\\right)$ meters, where $t$ is hours after midnight. How fast is the depth changing at $t = 2$ hours? Round to two decimal places (meters per hour).',
+    answerType: 'numeric', primaryAnswer: '0.52', alternativeAnswers: ['pi/6', '0.5236'], acceptanceMode: 'numeric-tolerance', numericTolerance: 0.01,
+    hints: [
+      { level: 'nudge', text: 'The rate of change is $H\'(t)$. The $5$ is a constant, and $\\sin$ of an inside function $\\frac{\\pi}{6}t$ needs the chain rule.' },
+      { level: 'guide', text: '$H\'(t) = 2\\cos\\left(\\frac{\\pi}{6}t\\right) \\cdot \\frac{\\pi}{6} = \\frac{\\pi}{3}\\cos\\left(\\frac{\\pi}{6}t\\right)$. Substitute $t = 2$, so the angle is $\\frac{\\pi}{3}$.' },
+      { level: 'reveal', text: '$\\cos\\frac{\\pi}{3} = \\frac{1}{2}$, so $H\'(2) = \\frac{\\pi}{3} \\cdot \\frac{1}{2} = \\frac{\\pi}{6} \\approx 0.52$ m per hour.' },
+    ],
+    explanation: ['The constant $5$ differentiates to $0$. For $2\\sin\\left(\\frac{\\pi}{6}t\\right)$, the outside gives $2\\cos\\left(\\frac{\\pi}{6}t\\right)$ and the inside derivative is $\\frac{\\pi}{6}$.', 'So $H\'(t) = \\frac{\\pi}{3}\\cos\\left(\\frac{\\pi}{6}t\\right)$.', 'At $t = 2$: $\\frac{\\pi}{3}\\cos\\frac{\\pi}{3} = \\frac{\\pi}{3} \\cdot \\frac{1}{2} = \\frac{\\pi}{6} \\approx 0.52$. The tide is still rising at 2 a.m., about half a meter per hour.'],
+    alternativeExplanations: [
+      { title: 'Does the size make sense?', steps: ['The sine completes one cycle every $\\frac{2\\pi}{\\pi/6} = 12$ hours, so the tide goes from low to high in 6 hours, rising $4$ meters: an average of about $0.67$ m/h.', 'The fastest rise is at mid-tide ($t = 0$), where $H\'(0) = \\frac{\\pi}{3} \\approx 1.05$ m/h; by $t = 3$ the tide peaks and the rate is $0$.', 'At $t = 2$ we are two-thirds of the way to high tide, slowing down: $0.52$ m/h sits sensibly between $1.05$ and $0$.'] },
+    ],
+    tags: ['chain-rule', 'trig-derivative', 'rate-of-change', 'word-problem'], estimatedSeconds: 70,
+  },
+  {
+    domain: 'CALC', num: 67, unit: 7, order: 7, slug: 'spring-velocity-cosine',
+    standard: 'CALC.DER.A.3', difficulty: 2,
+    prompt: 'A mass on a spring has position $x(t) = 4\\cos(3t)$ centimeters at time $t$ seconds. Find its velocity at $t = \\frac{\\pi}{2}$ seconds, in centimeters per second.',
+    answerType: 'numeric', primaryAnswer: '12', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Velocity is $x\'(t)$. The derivative of $\\cos u$ is $-\\sin u \\cdot u\'$, and here $u = 3t$.' },
+      { level: 'guide', text: '$x\'(t) = 4 \\cdot (-\\sin(3t)) \\cdot 3 = -12\\sin(3t)$. At $t = \\frac{\\pi}{2}$ the angle is $\\frac{3\\pi}{2}$.' },
+      { level: 'reveal', text: '$\\sin\\frac{3\\pi}{2} = -1$, so $v = -12(-1) = 12$ cm/s.' },
+    ],
+    explanation: ['Chain rule on $4\\cos(3t)$: outside gives $-4\\sin(3t)$, inside derivative is $3$, so $v(t) = -12\\sin(3t)$.', 'At $t = \\frac{\\pi}{2}$: $3t = \\frac{3\\pi}{2}$, and $\\sin\\frac{3\\pi}{2} = -1$.', '$v = -12 \\cdot (-1) = 12$ cm/s: the mass is passing through the center, moving in the positive direction at top speed.'],
+    alternativeExplanations: [
+      { title: 'Where is the mass?', steps: ['Position at $t = \\frac{\\pi}{2}$: $4\\cos\\frac{3\\pi}{2} = 0$. The mass is at the equilibrium point.', 'A spring moves fastest at equilibrium, and the maximum of $|{-12\\sin(3t)}|$ is $12$. So the speed must be $12$.', 'Direction: a moment earlier, at $t = \\frac{\\pi}{2} - 0.01$, the position is $4\\cos(1.5\\pi - 0.03) \\approx -0.12$, negative. Moving from negative toward zero means velocity is positive: $+12$ cm/s.'] },
+    ],
+    tags: ['chain-rule', 'trig-derivative', 'cosine', 'velocity', 'word-problem'], estimatedSeconds: 60,
+  },
+  {
+    domain: 'CALC', num: 68, unit: 7, order: 8, slug: 'tan-2x-at-pi-over-eight',
+    standard: 'CALC.DER.A.3', difficulty: 3,
+    prompt: 'Let $f(x) = \\tan(2x)$. Find $f\'\\left(\\frac{\\pi}{8}\\right)$.',
+    answerType: 'numeric', primaryAnswer: '4', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'The derivative of $\\tan x$ is $\\sec^2 x$. With an inside function, multiply by the inside\'s derivative as well.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Warm up: $\\frac{d}{dx}\\tan x$ at $x = \\frac{\\pi}{4}$ is $\\sec^2\\frac{\\pi}{4} = \\frac{1}{\\cos^2(\\pi/4)} = \\frac{1}{1/2} = 2$. Now the inside is $2x$, so expect one more factor.' },
+      { level: 'guide', text: '$f\'(x) = \\sec^2(2x) \\cdot 2 = 2\\sec^2(2x)$. At $x = \\frac{\\pi}{8}$ the inside is $\\frac{\\pi}{4}$.' },
+      { level: 'reveal', text: '$2\\sec^2\\frac{\\pi}{4} = 2 \\cdot 2 = 4$.' },
+    ],
+    explanation: ['Outside $\\tan u$ has derivative $\\sec^2 u$; inside $u = 2x$ has derivative $2$. So $f\'(x) = 2\\sec^2(2x)$.', 'At $x = \\frac{\\pi}{8}$: $2x = \\frac{\\pi}{4}$ and $\\cos\\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}$, so $\\sec^2\\frac{\\pi}{4} = \\frac{1}{1/2} = 2$.', '$f\'\\left(\\frac{\\pi}{8}\\right) = 2 \\cdot 2 = 4$. Dropping the chain factor gives $2$, half the true slope.'],
+    alternativeExplanations: [
+      { title: 'Derive $\\sec^2$ with the quotient rule', steps: ['$\\tan u = \\frac{\\sin u}{\\cos u}$, so $\\frac{d}{du}\\tan u = \\frac{\\cos u \\cdot \\cos u - \\sin u \\cdot (-\\sin u)}{\\cos^2 u} = \\frac{\\cos^2 u + \\sin^2 u}{\\cos^2 u} = \\frac{1}{\\cos^2 u}$.', 'With $u = 2x$ the chain rule adds a factor $2$: $f\'(x) = \\frac{2}{\\cos^2(2x)}$.', 'At $x = \\frac{\\pi}{8}$: $\\frac{2}{\\cos^2(\\pi/4)} = \\frac{2}{1/2} = 4$. Check: $\\frac{f(\\pi/8 + 0.001) - f(\\pi/8)}{0.001} = \\frac{\\tan(\\pi/4 + 0.002) - 1}{0.001} \\approx 4.01$.'] },
+    ],
+    tags: ['chain-rule', 'trig-derivative', 'tangent', 'multi-step'], estimatedSeconds: 65,
+  },
+  {
+    domain: 'CALC', num: 69, unit: 7, order: 9, slug: 'ln-of-cos-x-at-pi-over-four',
+    standard: 'CALC.DER.A.3', difficulty: 3,
+    prompt: 'Let $f(x) = \\ln(\\cos x)$. Find $f\'\\left(\\frac{\\pi}{4}\\right)$.',
+    answerType: 'numeric', primaryAnswer: '-1', acceptanceMode: 'normalized',
+    hints: [
+      { level: 'nudge', text: 'Outside function $\\ln u$ has derivative $\\frac{1}{u} \\cdot u\'$. Here the inside is $u = \\cos x$.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Warm up with $\\ln(x^2)$: $\\frac{1}{x^2} \\cdot 2x = \\frac{2}{x}$. Same shape here: one over the inside, times the inside\'s derivative.' },
+      { level: 'guide', text: '$f\'(x) = \\frac{1}{\\cos x} \\cdot (-\\sin x) = -\\frac{\\sin x}{\\cos x} = -\\tan x$. Substitute $x = \\frac{\\pi}{4}$.' },
+      { level: 'reveal', text: '$-\\tan\\frac{\\pi}{4} = -1$.' },
+    ],
+    explanation: ['Chain rule: $\\frac{d}{dx}\\ln(\\cos x) = \\frac{1}{\\cos x} \\cdot \\frac{d}{dx}\\cos x$.', 'The inside derivative is $-\\sin x$, so $f\'(x) = -\\frac{\\sin x}{\\cos x} = -\\tan x$.', 'At $x = \\frac{\\pi}{4}$, $\\sin$ and $\\cos$ are equal, so $\\tan\\frac{\\pi}{4} = 1$ and $f\'\\left(\\frac{\\pi}{4}\\right) = -1$. The function is falling, since $\\cos x$ shrinks toward $0$ as $x$ heads to $\\frac{\\pi}{2}$.'],
+    alternativeExplanations: [
+      { title: 'Common trap', steps: ['Forgetting the inside gives $\\frac{1}{\\cos x}$, which at $\\frac{\\pi}{4}$ is $\\sqrt{2} \\approx 1.41$: positive, yet $\\ln(\\cos x)$ is clearly decreasing there.', 'Check with values: $\\ln(\\cos 0.78) \\approx \\ln(0.7109) \\approx -0.3412$ and $\\ln(\\cos 0.79) \\approx \\ln(0.7038) \\approx -0.3512$.', 'Secant slope $\\frac{-0.3512 - (-0.3412)}{0.01} \\approx -1.0$. The chain-rule answer $-1$ is the one the numbers support.'] },
+    ],
+    tags: ['chain-rule', 'logarithm', 'trig-derivative', 'multi-step'], estimatedSeconds: 65,
+  },
+  {
+    domain: 'CALC', num: 70, unit: 7, order: 10, slug: 'ferris-wheel-rising-speed',
+    standard: 'CALC.DER.A.3', difficulty: 3,
+    prompt: 'A rider\'s height on a Ferris wheel is $h(t) = 20 - 18\\cos\\left(\\frac{\\pi}{15} t\\right)$ meters, $t$ seconds after boarding at the bottom. How fast is the rider rising at $t = 7.5$ seconds? Round to two decimal places (meters per second).',
+    answerType: 'numeric', primaryAnswer: '3.77', alternativeAnswers: ['6pi/5', '3.7699'], acceptanceMode: 'numeric-tolerance', numericTolerance: 0.01,
+    hints: [
+      { level: 'nudge', text: 'The rising speed is $h\'(t)$. The $20$ vanishes; $-18\\cos(\\text{inside})$ needs the chain rule with inside $\\frac{\\pi}{15}t$.' },
+      { level: 'nudge', title: '🪜 Try a simpler one', text: 'Warm up: $\\frac{d}{dt}\\left[-\\cos(2t)\\right] = -(-\\sin(2t)) \\cdot 2 = 2\\sin(2t)$. Two minus signs cancel and the inside rate comes along. Same thing here with $18$ and $\\frac{\\pi}{15}$.' },
+      { level: 'guide', text: '$h\'(t) = -18 \\cdot (-\\sin(\\tfrac{\\pi}{15}t)) \\cdot \\frac{\\pi}{15} = \\frac{6\\pi}{5}\\sin\\left(\\frac{\\pi}{15}t\\right)$. At $t = 7.5$ the angle is $\\frac{\\pi}{2}$.' },
+      { level: 'reveal', text: '$\\sin\\frac{\\pi}{2} = 1$, so $h\'(7.5) = \\frac{6\\pi}{5} \\approx 3.77$ m/s.' },
+    ],
+    explanation: ['Chain rule on $-18\\cos\\left(\\frac{\\pi}{15}t\\right)$: the outside gives $+18\\sin\\left(\\frac{\\pi}{15}t\\right)$ (two minus signs cancel), and the inside derivative is $\\frac{\\pi}{15}$.', 'So $h\'(t) = 18 \\cdot \\frac{\\pi}{15}\\sin\\left(\\frac{\\pi}{15}t\\right) = \\frac{6\\pi}{5}\\sin\\left(\\frac{\\pi}{15}t\\right)$.', 'At $t = 7.5$: $\\frac{\\pi}{15} \\cdot 7.5 = \\frac{\\pi}{2}$ and $\\sin\\frac{\\pi}{2} = 1$, so $h\'(7.5) = \\frac{6\\pi}{5} \\approx 3.77$ m/s. That is the rider\'s fastest climb, exactly level with the hub at height $20$ m.'],
+    alternativeExplanations: [
+      { title: 'Check with circular motion', steps: ['The wheel has radius $18$ m (the amplitude) and period $\\frac{2\\pi}{\\pi/15} = 30$ s, so the rim moves at $\\frac{2\\pi \\cdot 18}{30} = \\frac{6\\pi}{5} \\approx 3.77$ m/s.', 'At $t = 7.5$ s, a quarter turn in, the rider is level with the center and moving straight up, so all of that rim speed is vertical.', 'At the top or bottom the vertical speed is $0$ (the sine factor is $0$), and $h\'(t)$ reaches its maximum $3.77$ m/s only at the sides, confirming the formula.'] },
+    ],
+    tags: ['chain-rule', 'trig-derivative', 'rate-of-change', 'word-problem', 'multi-step'], estimatedSeconds: 75,
+  },
 ];

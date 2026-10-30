@@ -1,0 +1,60 @@
+{
+  "id": "CALC.070",
+  "domain": "CALC",
+  "unit": 7,
+  "orderInUnit": 10,
+  "standard": "CALC.DER.A.3",
+  "difficulty": 3,
+  "prompt": "A rider's height on a Ferris wheel is $h(t) = 20 - 18\\cos\\left(\\frac{\\pi}{15} t\\right)$ meters, $t$ seconds after boarding at the bottom. How fast is the rider rising at $t = 7.5$ seconds? Round to two decimal places (meters per second).",
+  "answerType": "numeric",
+  "primaryAnswer": "3.77",
+  "alternativeAnswers": [
+    "6pi/5",
+    "3.7699"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "The rising speed is $h'(t)$. The $20$ vanishes; $-18\\cos(\\text{inside})$ needs the chain rule with inside $\\frac{\\pi}{15}t$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The rising speed is $h'(t)$. The $20$ vanishes; $-18\\cos(\\text{inside})$ needs the chain rule with inside $\\frac{\\pi}{15}t$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $\\frac{d}{dt}\\left[-\\cos(2t)\\right] = -(-\\sin(2t)) \\cdot 2 = 2\\sin(2t)$. Two minus signs cancel and the inside rate comes along. Same thing here with $18$ and $\\frac{\\pi}{15}$."
+    },
+    {
+      "level": "guide",
+      "text": "$h'(t) = -18 \\cdot (-\\sin(\\tfrac{\\pi}{15}t)) \\cdot \\frac{\\pi}{15} = \\frac{6\\pi}{5}\\sin\\left(\\frac{\\pi}{15}t\\right)$. At $t = 7.5$ the angle is $\\frac{\\pi}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin\\frac{\\pi}{2} = 1$, so $h'(7.5) = \\frac{6\\pi}{5} \\approx 3.77$ m/s."
+    }
+  ],
+  "explanation": [
+    "Chain rule on $-18\\cos\\left(\\frac{\\pi}{15}t\\right)$: the outside gives $+18\\sin\\left(\\frac{\\pi}{15}t\\right)$ (two minus signs cancel), and the inside derivative is $\\frac{\\pi}{15}$.",
+    "So $h'(t) = 18 \\cdot \\frac{\\pi}{15}\\sin\\left(\\frac{\\pi}{15}t\\right) = \\frac{6\\pi}{5}\\sin\\left(\\frac{\\pi}{15}t\\right)$.",
+    "At $t = 7.5$: $\\frac{\\pi}{15} \\cdot 7.5 = \\frac{\\pi}{2}$ and $\\sin\\frac{\\pi}{2} = 1$, so $h'(7.5) = \\frac{6\\pi}{5} \\approx 3.77$ m/s. That is the rider's fastest climb, exactly level with the hub at height $20$ m."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with circular motion",
+      "steps": [
+        "The wheel has radius $18$ m (the amplitude) and period $\\frac{2\\pi}{\\pi/15} = 30$ s, so the rim moves at $\\frac{2\\pi \\cdot 18}{30} = \\frac{6\\pi}{5} \\approx 3.77$ m/s.",
+        "At $t = 7.5$ s, a quarter turn in, the rider is level with the center and moving straight up, so all of that rim speed is vertical.",
+        "At the top or bottom the vertical speed is $0$ (the sine factor is $0$), and $h'(t)$ reaches its maximum $3.77$ m/s only at the sides, confirming the formula."
+      ]
+    }
+  ],
+  "tags": [
+    "chain-rule",
+    "trig-derivative",
+    "rate-of-change",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 75
+}
