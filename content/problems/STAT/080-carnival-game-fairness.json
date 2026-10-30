@@ -1,0 +1,77 @@
+{
+  "id": "STAT.080",
+  "domain": "STAT",
+  "unit": 8,
+  "orderInUnit": 10,
+  "standard": "STAT.PROB.B.1",
+  "difficulty": 3,
+  "prompt": "A carnival game costs $\\$2$ to play. With probability $\\frac{1}{4}$ you win $\\$5$, with probability $\\frac{1}{4}$ you win $\\$1$, and otherwise you win nothing. Which statement correctly describes the game from the player's point of view?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The game is fair: the player breaks even on average.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "The player loses $\\$0.50$ per play on average.",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "The player gains $\\$0.50$ per play on average.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The player loses $\\$2$ per play on average.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "First find the expected WINNINGS, ignoring the cost. Then subtract the $\\$2$ to play.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find the expected WINNINGS, ignoring the cost. Then subtract the $\\$2$ to play."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: a $\\$1$ game pays $\\$4$ with probability $\\frac{1}{2}$. Expected winnings $= 2$, minus cost $1$, so the player gains $\\$1$ per play on average. Same steps here."
+    },
+    {
+      "level": "guide",
+      "text": "Expected winnings $= 5 \\cdot \\frac{1}{4} + 1 \\cdot \\frac{1}{4} + 0 \\cdot \\frac{1}{2}$. Compare that to $\\$2$."
+    },
+    {
+      "level": "reveal",
+      "text": "Expected winnings $= 1.25 + 0.25 = 1.50$. Net: $1.50 - 2 = -0.50$, a loss of $\\$0.50$ per play."
+    }
+  ],
+  "explanation": [
+    "Expected winnings: $5(0.25) + 1(0.25) + 0(0.5) = 1.25 + 0.25 + 0 = \\$1.50$.",
+    "Each play costs $\\$2$, so the expected net is $1.50 - 2.00 = -\\$0.50$.",
+    "A negative expected net means the player loses $\\$0.50$ per play on average — choice B. A fair game would have expected net $\\$0$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Play 4 times",
+      "steps": [
+        "In 4 typical plays you win $\\$5$ once, $\\$1$ once, and nothing twice: $\\$6$ total.",
+        "You paid $4 \\times 2 = \\$8$.",
+        "Down $\\$2$ over 4 plays is $\\$0.50$ per play — choice B."
+      ]
+    }
+  ],
+  "tags": [
+    "random-variable",
+    "expected-value",
+    "fair-game",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

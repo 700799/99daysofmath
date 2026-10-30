@@ -1,0 +1,66 @@
+{
+  "id": "STAT.068",
+  "domain": "STAT",
+  "unit": 7,
+  "orderInUnit": 8,
+  "standard": "STAT.PROB.A.2",
+  "difficulty": 3,
+  "prompt": "At a company, $60$ percent of incoming emails are spam. The spam filter flags $95$ percent of spam emails and also mistakenly flags $2$ percent of legitimate emails. What is the probability that a randomly chosen incoming email gets flagged?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.578",
+  "alternativeAnswers": [
+    "57.8%"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "An email can be flagged in two ways: it is spam AND flagged, or it is legitimate AND flagged. Add those two branches.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "An email can be flagged in two ways: it is spam AND flagged, or it is legitimate AND flagged. Add those two branches."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if half of emails were spam and the filter flagged all spam and no legitimate mail, $P(\\text{flagged}) = 0.5(1) + 0.5(0) = 0.5$. Same tree, different numbers."
+    },
+    {
+      "level": "guide",
+      "text": "Spam branch: $0.60 \\times 0.95$. Legitimate branch: $0.40 \\times 0.02$. Add."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.57 + 0.008 = 0.578$."
+    }
+  ],
+  "explanation": [
+    "Draw a tree. First split: spam ($0.60$) or legitimate ($0.40$). Second split: flagged or not.",
+    "$P(\\text{spam and flagged}) = 0.60 \\times 0.95 = 0.570$. $P(\\text{legit and flagged}) = 0.40 \\times 0.02 = 0.008$.",
+    "Flagged emails come from either branch, so $P(\\text{flagged}) = 0.570 + 0.008 = 0.578$, about $58$ percent."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count 1,000 emails",
+      "steps": [
+        "600 are spam; the filter flags $0.95 \\times 600 = 570$ of them.",
+        "400 are legitimate; the filter wrongly flags $0.02 \\times 400 = 8$ of them.",
+        "Flagged in total: $570 + 8 = 578$ of 1,000, so $0.578$."
+      ]
+    },
+    {
+      "title": "The trap: adding the percents",
+      "steps": [
+        "$0.95 + 0.02 = 0.97$ is tempting, but those are conditional rates for DIFFERENT groups of emails.",
+        "Each rate must be weighted by how big its group is: 60 percent spam, 40 percent legitimate.",
+        "That weighting is what the tree does: $0.6(0.95) + 0.4(0.02) = 0.578$."
+      ]
+    }
+  ],
+  "tags": [
+    "tree-diagram",
+    "total-probability",
+    "conditional-probability",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

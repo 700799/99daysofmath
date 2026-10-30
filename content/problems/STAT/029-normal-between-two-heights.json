@@ -1,0 +1,68 @@
+{
+  "id": "STAT.029",
+  "domain": "STAT",
+  "unit": 3,
+  "orderInUnit": 9,
+  "standard": "STAT.DATA.C.2",
+  "difficulty": 3,
+  "prompt": "Men's heights are approximately normal with mean $68$ inches and SD $3$ inches. What proportion of men are between $65$ and $74$ inches tall? Give a decimal to three places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.819",
+  "alternativeAnswers": [
+    "0.8185",
+    "0.815",
+    "81.9%"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.005,
+  "hint": "Standardize BOTH ends: $65$ is one SD below the mean, $74$ is two SDs above.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Standardize BOTH ends: $65$ is one SD below the mean, $74$ is two SDs above."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: between $z = -1$ and $z = 1$ the area is $0.8413 - 0.1587 = 0.6826$. Area between two $z$-values is always \"left area of the big one minus left area of the small one.\""
+    },
+    {
+      "level": "guide",
+      "text": "Table values: $P(Z < 2) = 0.9772$ and $P(Z < -1) = 0.1587$. Subtract."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.9772 - 0.1587 = 0.8185 \\approx 0.819$."
+    }
+  ],
+  "explanation": [
+    "$z_1 = \\frac{65 - 68}{3} = -1$ and $z_2 = \\frac{74 - 68}{3} = 2$.",
+    "Area to the left of $z = 2$ is $0.9772$; area to the left of $z = -1$ is $0.1587$.",
+    "The area between is $0.9772 - 0.1587 = 0.8185$, so about $0.819$, or $82$ percent of men."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Empirical rule shortcut",
+      "steps": [
+        "From $z = -1$ to $0$ is half of 68 percent: 34 percent.",
+        "From $z = 0$ to $2$ is half of 95 percent: 47.5 percent.",
+        "Total $34 + 47.5 = 81.5$ percent, close to the table's 81.9 percent (the rule rounds)."
+      ]
+    },
+    {
+      "title": "The trap: adding instead of subtracting",
+      "steps": [
+        "Adding $0.9772 + 0.1587 = 1.136$ is impossible — a proportion cannot exceed 1.",
+        "The region between two $z$-values is the big left area with the small left area cut away.",
+        "Subtract: $0.9772 - 0.1587 = 0.8185$."
+      ]
+    }
+  ],
+  "tags": [
+    "normal-distribution",
+    "z-table",
+    "between",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

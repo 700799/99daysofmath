@@ -1,0 +1,50 @@
+{
+  "id": "STAT.107",
+  "domain": "STAT",
+  "unit": 11,
+  "orderInUnit": 7,
+  "standard": "STAT.INF.A.1",
+  "difficulty": 2,
+  "prompt": "A polling firm wants a $95\\%$ confidence interval for a proportion with margin of error at most $0.03$. Using $z^* = 1.96$ and the conservative guess $p^* = 0.5$, what is the smallest sample size that works?",
+  "answerType": "numeric",
+  "primaryAnswer": "1068",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Set $z^* \\sqrt{\\frac{p^*(1-p^*)}{n}} \\le 0.03$ and solve for $n$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Set $z^* \\sqrt{\\frac{p^*(1-p^*)}{n}} \\le 0.03$ and solve for $n$."
+    },
+    {
+      "level": "guide",
+      "text": "$n \\ge \\left(\\frac{1.96}{0.03}\\right)^2 (0.5)(0.5)$. Compute, then round UP."
+    },
+    {
+      "level": "reveal",
+      "text": "$(65.33)^2 \\times 0.25 \\approx 1067.1$, so $n = 1068$."
+    }
+  ],
+  "explanation": [
+    "The margin of error is $z^* \\sqrt{p^*(1-p^*)/n}$. Requiring it to be at most $0.03$ gives $n \\ge p^*(1-p^*) (z^*/0.03)^2$.",
+    "$(1.96/0.03)^2 = (65.33)^2 \\approx 4268.4$; times $0.25$ gives $\\approx 1067.1$.",
+    "Sample sizes are whole numbers and we need AT LEAST this much, so round up: $n = 1068$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why round up and why 0.5?",
+      "steps": [
+        "$n = 1067$ gives ME slightly more than $0.03$ — fails. $1068$ is the first that works.",
+        "$p^* = 0.5$ makes $p^*(1-p^*)$ as large as possible ($0.25$), so the sample is big enough no matter what the true $p$ turns out to be.",
+        "That is why national polls so often use \"about 1,000 people\": it buys a $\\pm 3\\%$ margin at $95\\%$."
+      ]
+    }
+  ],
+  "tags": [
+    "confidence-interval",
+    "sample-size",
+    "proportion",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

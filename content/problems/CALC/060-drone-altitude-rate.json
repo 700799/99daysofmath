@@ -1,0 +1,57 @@
+{
+  "id": "CALC.060",
+  "domain": "CALC",
+  "unit": 6,
+  "orderInUnit": 10,
+  "standard": "CALC.DER.A.2",
+  "difficulty": 3,
+  "prompt": "A drone's altitude after $t$ seconds is $A(t) = 3t^2 + 2\\sqrt{t}$ meters. How fast is it climbing at $t = 4$ seconds, in meters per second?",
+  "answerType": "numeric",
+  "primaryAnswer": "24.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "The climb rate is $A'(t)$. Rewrite $\\sqrt{t}$ as $t^{1/2}$ so the power rule covers both terms.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The climb rate is $A'(t)$. Rewrite $\\sqrt{t}$ as $t^{1/2}$ so the power rule covers both terms."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: the derivative of $2\\sqrt{t} = 2t^{1/2}$ is $2 \\cdot \\frac{1}{2} t^{-1/2} = \\frac{1}{\\sqrt{t}}$. At $t = 4$ that is $\\frac{1}{2}$."
+    },
+    {
+      "level": "guide",
+      "text": "$A'(t) = 6t + \\frac{1}{\\sqrt{t}}$. Substitute $t = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6(4) + \\frac{1}{2} = 24.5$ meters per second."
+    }
+  ],
+  "explanation": [
+    "$\\frac{d}{dt}(3t^2) = 6t$ and $\\frac{d}{dt}(2t^{1/2}) = t^{-1/2} = \\frac{1}{\\sqrt{t}}$.",
+    "So $A'(t) = 6t + \\frac{1}{\\sqrt{t}}$.",
+    "$A'(4) = 24 + \\frac{1}{2} = 24.5$ m/s."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check against a short time window",
+      "steps": [
+        "$A(4) = 48 + 4 = 52$ m. $A(4.01) = 3(16.0801) + 2\\sqrt{4.01} \\approx 48.2403 + 4.0050 = 52.2453$ m.",
+        "Average rate over that hundredth of a second: $\\frac{0.2453}{0.01} \\approx 24.5$ m/s.",
+        "The derivative and the measured rate agree."
+      ]
+    }
+  ],
+  "tags": [
+    "power-rule",
+    "square-root",
+    "rate-of-change",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 65
+}

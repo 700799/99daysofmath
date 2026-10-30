@@ -1,0 +1,64 @@
+{
+  "id": "STAT.028",
+  "domain": "STAT",
+  "unit": 3,
+  "orderInUnit": 8,
+  "standard": "STAT.DATA.C.2",
+  "difficulty": 3,
+  "prompt": "A scholarship goes to the top $10$ percent of scorers on an exam whose scores are approximately normal with mean $500$ and SD $100$. What is the minimum qualifying score? Round to the nearest whole number.",
+  "answerType": "numeric",
+  "primaryAnswer": "628",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 1,
+  "hint": "This is a backward normal problem: you know the AREA (90 percent below the cutoff) and need the value.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This is a backward normal problem: you know the AREA (90 percent below the cutoff) and need the value."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: the top $16$ percent starts at $z = 1$, so the cutoff would be $500 + 1(100) = 600$. Same move here, with the $z$ for the 90th percentile instead."
+    },
+    {
+      "level": "guide",
+      "text": "Find the $z$ with $0.90$ of the area to its left: $z \\approx 1.28$ (invNorm$(0.90)$). Then unstandardize: $x = 500 + 1.28(100)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x \\approx 500 + 128 = 628$. A score of about $628$ is needed."
+    }
+  ],
+  "explanation": [
+    "Top $10$ percent means $90$ percent of scores lie below the cutoff. In the standard normal table, an area of $0.90$ corresponds to $z \\approx 1.28$.",
+    "Unstandardize: $x = \\mu + z\\sigma = 500 + 1.28(100) = 628$.",
+    "A student needs about $628$ to qualify. (A calculator gives $z = 1.2816$, so $628.2$, the same to the nearest point.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Reason from landmarks",
+      "steps": [
+        "$z = 1$ is the 84th percentile (score 600) and $z = 2$ is the 97.7th percentile (score 700).",
+        "The 90th percentile must be between 600 and 700, and closer to 600.",
+        "628 fits that picture, so the table lookup is in the right place."
+      ]
+    },
+    {
+      "title": "The trap: looking up 0.10",
+      "steps": [
+        "Searching the table for an area of $0.10$ gives $z = -1.28$, which is the BOTTOM 10 percent: a score of 372.",
+        "The scholarship wants the TOP 10 percent, which is the 90th percentile, $z = +1.28$.",
+        "Always sketch the curve and shade the region first: here the shaded tail is on the right."
+      ]
+    }
+  ],
+  "tags": [
+    "normal-distribution",
+    "percentile",
+    "inverse-normal",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

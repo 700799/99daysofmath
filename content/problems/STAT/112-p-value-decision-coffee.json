@@ -1,0 +1,72 @@
+{
+  "id": "STAT.112",
+  "domain": "STAT",
+  "unit": 12,
+  "orderInUnit": 2,
+  "standard": "STAT.INF.B.1",
+  "difficulty": 1,
+  "prompt": "A coffee shop tests whether its new machine changes the mean fill of a \"12 oz\" cup. The test gives a $p$-value of $0.03$. Using a significance level of $\\alpha = 0.05$, what is the correct decision?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Reject $H_0$; there is convincing evidence the mean fill is not 12 oz.",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Fail to reject $H_0$; there is not convincing evidence of a change.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Accept $H_0$; the mean fill is exactly 12 oz.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The test proves the mean fill is 12.03 oz.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Compare the $p$-value to $\\alpha$. Small $p$-value means the data would be unlikely if $H_0$ were true.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Compare the $p$-value to $\\alpha$. Small $p$-value means the data would be unlikely if $H_0$ were true."
+    },
+    {
+      "level": "guide",
+      "text": "$0.03 < 0.05$. When $p \\le \\alpha$, we reject $H_0$."
+    },
+    {
+      "level": "reveal",
+      "text": "Reject $H_0$: there is convincing evidence the mean fill differs from 12 oz. Choice A."
+    }
+  ],
+  "explanation": [
+    "The $p$-value $0.03$ is the probability of a sample at least this extreme if the mean really were 12 oz.",
+    "Since $0.03 < \\alpha = 0.05$, such a result is rare under $H_0$, so we reject $H_0$.",
+    "We never \"accept\" $H_0$ (C), and a test never proves a specific value (D). A is correct."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The courtroom picture",
+      "steps": [
+        "$H_0$ is \"innocent\": the machine fills 12 oz on average.",
+        "A $p$-value of $0.03$ means only a $3\\%$ chance of evidence this strong against an innocent machine.",
+        "That is below our $5\\%$ standard of doubt, so we convict: reject $H_0$."
+      ]
+    }
+  ],
+  "tags": [
+    "significance-test",
+    "p-value",
+    "decision",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

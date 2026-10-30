@@ -1,0 +1,71 @@
+{
+  "id": "STAT.106",
+  "domain": "STAT",
+  "unit": 11,
+  "orderInUnit": 6,
+  "standard": "STAT.INF.A.2",
+  "difficulty": 2,
+  "prompt": "A $95\\%$ confidence interval for the mean weight of apples from an orchard is $(150, 162)$ grams. Which statement correctly interprets the confidence LEVEL of $95\\%$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$95\\%$ of the apples in the orchard weigh between 150 and 162 grams.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "There is a $95\\%$ probability that the true mean weight is between 150 and 162 grams.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "If we took many random samples and built an interval from each, about $95\\%$ of those intervals would capture the true mean weight.",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$95\\%$ of sample means would fall between 150 and 162 grams.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The confidence level describes the METHOD over many repetitions, not this one interval or individual apples.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The confidence level describes the METHOD over many repetitions, not this one interval or individual apples."
+    },
+    {
+      "level": "guide",
+      "text": "The true mean is a fixed number: it is either in $(150, 162)$ or it is not, so \"95% probability\" does not apply to this specific interval. And intervals are about the mean, not single apples."
+    },
+    {
+      "level": "reveal",
+      "text": "C: in the long run, $95\\%$ of intervals made this way capture the true mean."
+    }
+  ],
+  "explanation": [
+    "A is about individual apples; a confidence interval says nothing about the spread of individuals.",
+    "B treats the true mean as random. It is fixed; the interval is what varies from sample to sample. D confuses the interval with the sampling distribution.",
+    "C is the textbook meaning: the method succeeds (captures $\\mu$) in about $95\\%$ of all possible samples."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Level vs. interval",
+      "steps": [
+        "Interpreting the INTERVAL: \"We are 95% confident the true mean apple weight is between 150 and 162 g.\"",
+        "Interpreting the LEVEL: \"The method captures the true mean in 95% of samples.\"",
+        "The question asks about the level, so C."
+      ]
+    }
+  ],
+  "tags": [
+    "confidence-interval",
+    "interpretation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,71 @@
+{
+  "id": "STAT.081",
+  "domain": "STAT",
+  "unit": 9,
+  "orderInUnit": 1,
+  "standard": "STAT.PROB.C.1",
+  "difficulty": 1,
+  "prompt": "Which random variable has a binomial distribution?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The number of rolls of a fair die until the first 6 appears.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "The number of 6s in 10 rolls of a fair die.",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "The number of hearts in 5 cards dealt without replacement from one deck.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The height, in cm, of a randomly chosen student.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Binomial needs BINS: Binary outcomes, Independent trials, a fixed Number of trials, and the Same probability each trial.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Binomial needs BINS: Binary outcomes, Independent trials, a fixed Number of trials, and the Same probability each trial."
+    },
+    {
+      "level": "guide",
+      "text": "Counting trials until the first success is geometric, not binomial. Dealing without replacement breaks independence. A height is not a count at all."
+    },
+    {
+      "level": "reveal",
+      "text": "Only B has a fixed number of trials ($n = 10$), each independent with the same $p = \\frac{1}{6}$, and counts successes."
+    }
+  ],
+  "explanation": [
+    "A binomial variable counts successes in a FIXED number of independent trials with the same success probability.",
+    "A has no fixed $n$ (you roll until a 6) — that is geometric. C changes the probability after each card, so trials are not independent. D is a measurement, not a count.",
+    "B: 10 trials, each a 6 or not, independent, $p = \\frac{1}{6}$ every time. That is binomial."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Ask \"what am I counting?\"",
+      "steps": [
+        "Binomial counts HOW MANY successes in $n$ tries. Geometric counts HOW LONG until the first success.",
+        "B counts how many 6s in 10 tries — binomial. A counts how long until a 6 — geometric.",
+        "C and D fail for other reasons (no independence; not a count)."
+      ]
+    }
+  ],
+  "tags": [
+    "binomial",
+    "geometric",
+    "conditions"
+  ],
+  "estimatedSeconds": 45
+}

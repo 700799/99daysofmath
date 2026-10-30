@@ -1,0 +1,51 @@
+{
+  "id": "STAT.002",
+  "domain": "STAT",
+  "unit": 1,
+  "orderInUnit": 2,
+  "standard": "STAT.DATA.A.1",
+  "difficulty": 1,
+  "prompt": "A bar graph shows the pets of $40$ students: dogs $16$, cats $12$, fish $7$, no pet $5$. What percent of the students have a dog?",
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": [
+    "40%",
+    "0.4"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A percent is a part out of a whole, times $100$. The whole here is all $40$ students.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A percent is a part out of a whole, times $100$. The whole here is all $40$ students."
+    },
+    {
+      "level": "guide",
+      "text": "Divide the dog count by the total: $\\frac{16}{40}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{16}{40} = 0.40$, so $40$ percent of the students have a dog."
+    }
+  ],
+  "explanation": [
+    "The bar for dogs is $16$ students tall, and the whole class is $40$ students.",
+    "Relative frequency $= \\frac{16}{40} = 0.40$.",
+    "That is $40$ percent."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Simplify the fraction first",
+      "steps": [
+        "$\\frac{16}{40}$ divides top and bottom by $8$ to give $\\frac{2}{5}$.",
+        "$\\frac{2}{5}$ of anything is $40$ percent — two of every five students."
+      ]
+    }
+  ],
+  "tags": [
+    "bar-graph",
+    "relative-frequency",
+    "word-problem"
+  ],
+  "estimatedSeconds": 35
+}

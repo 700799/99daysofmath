@@ -1,0 +1,57 @@
+{
+  "id": "STAT.130",
+  "domain": "STAT",
+  "unit": 13,
+  "orderInUnit": 10,
+  "standard": "STAT.INF.C.1",
+  "difficulty": 3,
+  "prompt": "A city tests two voter-outreach methods. Of $120$ residents who got a door knock, $48$ voted; of $80$ who got a mailer, $28$ voted. Test $H_0: p_1 = p_2$ with the pooled two-proportion $z$-test. What is $z$? Round to two decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.71",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.02,
+  "hint": "Three ingredients: $\\hat{p}_1$, $\\hat{p}_2$, and the pooled $\\hat{p}_c = \\frac{48 + 28}{120 + 80}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Three ingredients: $\\hat{p}_1$, $\\hat{p}_2$, and the pooled $\\hat{p}_c = \\frac{48 + 28}{120 + 80}$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: samples of 50 and 50 with 20 and 15 successes: $\\hat{p}_c = 35/100 = 0.35$, SE $= \\sqrt{0.35 \\times 0.65 \\times (1/50 + 1/50)} \\approx 0.0954$, $z = 0.10/0.0954 \\approx 1.05$. Same recipe with unequal sizes."
+    },
+    {
+      "level": "guide",
+      "text": "$\\hat{p}_1 = 0.40$, $\\hat{p}_2 = 0.35$, $\\hat{p}_c = 76/200 = 0.38$. SE $= \\sqrt{0.38 \\times 0.62 \\times (1/120 + 1/80)}$."
+    },
+    {
+      "level": "reveal",
+      "text": "SE $= \\sqrt{0.2356 \\times 0.02083} = \\sqrt{0.004908} \\approx 0.0701$, so $z = 0.05/0.0701 \\approx 0.71$."
+    }
+  ],
+  "explanation": [
+    "$\\hat{p}_1 = 48/120 = 0.40$, $\\hat{p}_2 = 28/80 = 0.35$; difference $0.05$.",
+    "Pooled: $\\hat{p}_c = 76/200 = 0.38$. $\\frac{1}{120} + \\frac{1}{80} = 0.00833 + 0.0125 = 0.02083$. SE $= \\sqrt{0.38 \\times 0.62 \\times 0.02083} = \\sqrt{0.004908} \\approx 0.0701$.",
+    "$z = 0.05/0.0701 \\approx 0.71$. The two-sided $p$-value is about $0.48$ — no evidence the methods differ."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity-check the size of z",
+      "steps": [
+        "A 5-point gap between $40\\%$ and $35\\%$ sounds real, but each proportion comes from a smallish sample.",
+        "The SE of $0.07$ means gaps of 7 points happen routinely by chance; our gap is smaller than that.",
+        "So $z$ must be less than 1 — and $0.71$ fits. Always compare the gap to its typical chance size."
+      ]
+    }
+  ],
+  "tags": [
+    "two-sample",
+    "proportions",
+    "z-test",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 100
+}

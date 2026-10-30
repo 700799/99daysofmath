@@ -1,0 +1,56 @@
+{
+  "id": "STAT.079",
+  "domain": "STAT",
+  "unit": 8,
+  "orderInUnit": 9,
+  "standard": "STAT.PROB.B.2",
+  "difficulty": 3,
+  "prompt": "Nia's morning commute $M$ has mean $30$ minutes and standard deviation $4$ minutes; her evening commute $E$ has mean $34$ minutes and standard deviation $3$ minutes. The two are independent. Let $D = E - M$ be how much longer the evening trip takes. What is the standard deviation of $D$, in minutes?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "Subtracting random variables still ADDS their variances. Uncertainty piles up whether you add or subtract.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Subtracting random variables still ADDS their variances. Uncertainty piles up whether you add or subtract."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if $X$ and $Y$ are independent with SDs $6$ and $8$, then $\\sigma_{X-Y} = \\sqrt{36 + 64} = 10$, not $2$. Same idea here."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sigma_D^2 = \\sigma_E^2 + \\sigma_M^2 = 3^2 + 4^2$. Then square-root."
+    },
+    {
+      "level": "reveal",
+      "text": "$9 + 16 = 25$, so $\\sigma_D = 5$ minutes."
+    }
+  ],
+  "explanation": [
+    "For independent $E$ and $M$, $\\text{Var}(E - M) = \\text{Var}(E) + \\text{Var}(M)$. The minus sign does not turn into a minus for variances.",
+    "$3^2 + 4^2 = 9 + 16 = 25$.",
+    "$\\sigma_D = \\sqrt{25} = 5$ minutes. (The mean of $D$ is $34 - 30 = 4$ minutes — that one does subtract.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the trap answer fails",
+      "steps": [
+        "A tempting answer is $\\sqrt{9 - 16}$, which is not even a real number — a sign the method is wrong.",
+        "Another trap is $4 - 3 = 1$, but a difference of two uncertain things is MORE uncertain, not less.",
+        "Treat $E - M$ as $E + (-M)$. Flipping the sign of $M$ leaves its variance at $16$, so the total is $25$ and the SD is $5$."
+      ]
+    }
+  ],
+  "tags": [
+    "random-variable",
+    "combining-variables",
+    "standard-deviation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

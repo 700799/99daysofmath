@@ -1,0 +1,55 @@
+{
+  "id": "CALC.028",
+  "domain": "CALC",
+  "unit": 3,
+  "orderInUnit": 8,
+  "standard": "CALC.LIM.B.1",
+  "difficulty": 3,
+  "prompt": "Let $f(x) = x^2 + a$ for $x < 1$, $f(1) = 5$, and $f(x) = bx + 2$ for $x > 1$. If $f$ is continuous at $x = 1$, what is $a + b$?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Continuity at $1$ means BOTH one-sided limits must equal $f(1) = 5$. That gives you two separate equations.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Continuity at $1$ means BOTH one-sided limits must equal $f(1) = 5$. That gives you two separate equations."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if $f(x) = x + a$ for $x < 1$ and $f(1) = 5$, the left limit $1 + a$ must be $5$, so $a = 4$. Now do the same for each side of this problem."
+    },
+    {
+      "level": "guide",
+      "text": "Left: $1^2 + a = 5$. Right: $b(1) + 2 = 5$. Solve each."
+    },
+    {
+      "level": "reveal",
+      "text": "$a = 4$ and $b = 3$, so $a + b = 7$."
+    }
+  ],
+  "explanation": [
+    "Left-hand limit: $\\lim_{x \\to 1^-} (x^2 + a) = 1 + a$. Set equal to $f(1) = 5$: $a = 4$.",
+    "Right-hand limit: $\\lim_{x \\to 1^+} (bx + 2) = b + 2$. Set equal to $5$: $b = 3$.",
+    "So $a + b = 4 + 3 = 7$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Verify the stitched graph",
+      "steps": [
+        "With $a = 4$: the parabola $x^2 + 4$ arrives at height $5$ as $x \\to 1$.",
+        "With $b = 3$: the line $3x + 2$ leaves from height $5$ as $x \\to 1$.",
+        "The dot $f(1) = 5$ sits exactly where both pieces meet — three conditions, all satisfied."
+      ]
+    }
+  ],
+  "tags": [
+    "continuity",
+    "piecewise",
+    "parameter",
+    "multi-step"
+  ],
+  "estimatedSeconds": 70
+}

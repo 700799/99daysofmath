@@ -1,0 +1,56 @@
+{
+  "id": "STAT.007",
+  "domain": "STAT",
+  "unit": 1,
+  "orderInUnit": 7,
+  "standard": "STAT.DATA.A.1",
+  "difficulty": 2,
+  "prompt": "A two-way table sorts $120$ students by grade and whether they play a school sport. What percent of the JUNIORS play a sport?",
+  "diagram": {
+    "kind": "ascii",
+    "art": "         | Sport | No sport | Total\n---------+-------+----------+------\n Junior  |   30  |    20    |   50\n Senior  |   35  |    35    |   70\n Total   |   65  |    55    |  120"
+  },
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [
+    "60%",
+    "0.6"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Of the juniors\" tells you the whole is the junior ROW, not all $120$ students.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Of the juniors\" tells you the whole is the junior ROW, not all $120$ students."
+    },
+    {
+      "level": "guide",
+      "text": "Divide the juniors who play a sport by the total number of juniors: $\\frac{30}{50}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{30}{50} = 0.60$, so $60$ percent of the juniors play a sport."
+    }
+  ],
+  "explanation": [
+    "This is a conditional relative frequency: the condition is \"junior\", so use only the junior row.",
+    "Juniors who play a sport: $30$. All juniors: $50$.",
+    "$\\frac{30}{50} = 0.60 = 60$ percent."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Watch the wrong denominator",
+      "steps": [
+        "$\\frac{30}{120} = 25$ percent answers a different question: what percent of ALL students are sporty juniors.",
+        "$\\frac{30}{65} \\approx 46$ percent answers: what percent of athletes are juniors.",
+        "The question conditions on juniors, so the denominator must be 50, giving 60 percent."
+      ]
+    }
+  ],
+  "tags": [
+    "two-way-table",
+    "conditional-relative-frequency",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,49 @@
+{
+  "id": "STAT.075",
+  "domain": "STAT",
+  "unit": 8,
+  "orderInUnit": 5,
+  "standard": "STAT.PROB.B.2",
+  "difficulty": 2,
+  "prompt": "A car wash serves $X$ cars per hour, where $X$ has mean $12$ and standard deviation $3$. Each car brings in $\\$8$, and the hourly cost of running the wash is $\\$20$, so hourly profit is $Y = 8X - 20$. What is the mean of $Y$, in dollars?",
+  "answerType": "numeric",
+  "primaryAnswer": "76",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "For $Y = aX + b$, the mean transforms the same way: $\\mu_Y = a\\mu_X + b$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "For $Y = aX + b$, the mean transforms the same way: $\\mu_Y = a\\mu_X + b$."
+    },
+    {
+      "level": "guide",
+      "text": "Here $a = 8$ and $b = -20$. Plug in $\\mu_X = 12$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\mu_Y = 8(12) - 20 = 96 - 20 = 76$ dollars."
+    }
+  ],
+  "explanation": [
+    "Multiplying every value of $X$ by $8$ multiplies the mean by $8$: $8 \\times 12 = 96$.",
+    "Subtracting $20$ from every value lowers the mean by $20$: $96 - 20 = 76$.",
+    "So the mean hourly profit is $\\$76$. (The standard deviation $3$ was not needed for the mean.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A typical hour",
+      "steps": [
+        "In a typical hour, 12 cars come through.",
+        "Revenue: $12 \\times 8 = \\$96$. Subtract the $\\$20$ cost: $\\$76$.",
+        "Because the rule $8X - 20$ is linear, the \"typical hour\" calculation gives exactly the mean of $Y$."
+      ]
+    }
+  ],
+  "tags": [
+    "random-variable",
+    "linear-transformation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

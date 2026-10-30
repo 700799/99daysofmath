@@ -1,0 +1,56 @@
+{
+  "id": "STAT.098",
+  "domain": "STAT",
+  "unit": 10,
+  "orderInUnit": 8,
+  "standard": "STAT.PROB.C.3",
+  "difficulty": 3,
+  "prompt": "A cereal filling machine produces boxes whose weights are normally distributed with mean $16.1$ oz and standard deviation $0.3$ oz. A random sample of $9$ boxes is weighed. What is the probability that the sample mean is less than $16.0$ oz? Use $P(Z < -0.33) = 0.3707$, $P(Z < -1) = 0.1587$, $P(Z < -3) = 0.0013$. Round to four decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.1587",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "Standardize the SAMPLE MEAN. Its SD is $\\sigma/\\sqrt{n}$, which is smaller than $0.3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Standardize the SAMPLE MEAN. Its SD is $\\sigma/\\sqrt{n}$, which is smaller than $0.3$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if $\\sigma = 2$ and $n = 4$, then $\\sigma_{\\bar{x}} = 2/\\sqrt{4} = 1$. Here do the same with $0.3$ and $9$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sigma_{\\bar{x}} = 0.3/\\sqrt{9} = 0.1$. Compute $z = \\frac{16.0 - 16.1}{0.1}$ and pick the matching table value."
+    },
+    {
+      "level": "reveal",
+      "text": "$z = -0.1/0.1 = -1$, so $P(\\bar{x} < 16.0) = P(Z < -1) = 0.1587$."
+    }
+  ],
+  "explanation": [
+    "Because the population is normal, $\\bar{x}$ is normal for any $n$, with mean $16.1$ and SD $0.3/\\sqrt{9} = 0.1$ oz.",
+    "$z = \\frac{16.0 - 16.1}{0.1} = -1$.",
+    "$P(Z < -1) = 0.1587$. About a $16\\%$ chance the 9-box average comes in under 16 oz."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spot the decoys",
+      "steps": [
+        "Using $\\sigma = 0.3$ (one box) gives $z = -0.33$ and $0.3707$ — that answers a different question: ONE box under 16 oz.",
+        "Dividing by $n = 9$ instead of $\\sqrt{9}$ gives SD $0.033$, $z = -3$ and $0.0013$ — too small.",
+        "The sample mean uses $\\sigma/\\sqrt{n} = 0.1$, giving $z = -1$ and $0.1587$."
+      ]
+    }
+  ],
+  "tags": [
+    "sampling-distribution",
+    "sample-mean",
+    "normal-probability",
+    "word-problem"
+  ],
+  "estimatedSeconds": 90
+}

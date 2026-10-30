@@ -1,0 +1,48 @@
+{
+  "id": "STAT.034",
+  "domain": "STAT",
+  "unit": 4,
+  "orderInUnit": 4,
+  "standard": "STAT.DATA.C.4",
+  "difficulty": 2,
+  "prompt": "The regression line for exam score versus minutes of review is $\\hat{y} = 20 + 0.8x$. A student who reviewed for $50$ minutes actually scored $55$. What is the residual for this student?",
+  "answerType": "numeric",
+  "primaryAnswer": "-5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Residual $=$ actual $-$ predicted. Find the predicted score first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Residual $=$ actual $-$ predicted. Find the predicted score first."
+    },
+    {
+      "level": "guide",
+      "text": "Predicted: $\\hat{y} = 20 + 0.8(50) = 60$. Now subtract: $55 - 60$."
+    },
+    {
+      "level": "reveal",
+      "text": "Residual $= 55 - 60 = -5$. The student scored $5$ points below the prediction."
+    }
+  ],
+  "explanation": [
+    "Predicted score for $x = 50$: $\\hat{y} = 20 + 0.8(50) = 20 + 40 = 60$.",
+    "Residual $= y - \\hat{y} = 55 - 60 = -5$.",
+    "A negative residual means the point sits BELOW the line: the student did worse than the line predicted."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Order matters",
+      "steps": [
+        "It is \"actual minus predicted,\" always. Flipping it gives $+5$, which would wrongly say the student beat the prediction.",
+        "A quick check: the student's 55 is less than the predicted 60, so the residual must be negative."
+      ]
+    }
+  ],
+  "tags": [
+    "residual",
+    "regression",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

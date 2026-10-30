@@ -1,0 +1,56 @@
+{
+  "id": "STAT.090",
+  "domain": "STAT",
+  "unit": 9,
+  "orderInUnit": 10,
+  "standard": "STAT.PROB.C.2",
+  "difficulty": 3,
+  "prompt": "A damaged barcode scans successfully on each attempt with probability $0.3$, independently. What is the probability that it takes MORE than $3$ attempts to get the first successful scan? Round to three decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.343",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "\"More than 3 attempts\" means the first 3 attempts all failed. Nothing else needs to happen.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"More than 3 attempts\" means the first 3 attempts all failed. Nothing else needs to happen."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: \"more than 1 attempt\" just means the first attempt failed: probability $0.7$. \"More than 2\" means the first two failed: $0.7^2 = 0.49$. Keep going."
+    },
+    {
+      "level": "guide",
+      "text": "For a geometric variable, $P(Y > k) = (1 - p)^k$. Use $k = 3$, $p = 0.3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(0.7)^3 = 0.343$."
+    }
+  ],
+  "explanation": [
+    "Let $Y$ be the attempt number of the first success; $Y$ is geometric with $p = 0.3$.",
+    "$Y > 3$ happens exactly when attempts 1, 2 and 3 all fail: $P(Y > 3) = 0.7 \\times 0.7 \\times 0.7$.",
+    "$0.7^3 = 0.343$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Add up the first three and subtract",
+      "steps": [
+        "$P(Y = 1) = 0.3$, $P(Y = 2) = 0.7(0.3) = 0.21$, $P(Y = 3) = 0.7^2(0.3) = 0.147$.",
+        "So $P(Y \\le 3) = 0.3 + 0.21 + 0.147 = 0.657$.",
+        "$P(Y > 3) = 1 - 0.657 = 0.343$. Same answer, more work — the \"all failures\" shortcut is faster."
+      ]
+    }
+  ],
+  "tags": [
+    "geometric",
+    "probability",
+    "complement",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

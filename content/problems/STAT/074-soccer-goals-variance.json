@@ -1,0 +1,50 @@
+{
+  "id": "STAT.074",
+  "domain": "STAT",
+  "unit": 8,
+  "orderInUnit": 4,
+  "standard": "STAT.PROB.B.1",
+  "difficulty": 2,
+  "prompt": "The number of goals $X$ a soccer team scores in a match has distribution $P(0) = 0.3$, $P(1) = 0.4$, $P(2) = 0.3$. Find the variance $\\sigma_X^2$. Round to the nearest tenth.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "First find the mean. Then variance is $\\sum (x - \\mu)^2 \\cdot P(x)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find the mean. Then variance is $\\sum (x - \\mu)^2 \\cdot P(x)$."
+    },
+    {
+      "level": "guide",
+      "text": "The mean is $0(0.3) + 1(0.4) + 2(0.3) = 1$. Now square each distance from $1$ and weight by probability."
+    },
+    {
+      "level": "reveal",
+      "text": "$(0-1)^2(0.3) + (1-1)^2(0.4) + (2-1)^2(0.3) = 0.3 + 0 + 0.3 = 0.6$."
+    }
+  ],
+  "explanation": [
+    "Mean: $\\mu = 0(0.3) + 1(0.4) + 2(0.3) = 0 + 0.4 + 0.6 = 1$ goal.",
+    "Variance weights each squared distance from the mean by its probability: $(0-1)^2(0.3) = 0.3$, $(1-1)^2(0.4) = 0$, $(2-1)^2(0.3) = 0.3$.",
+    "Sum: $\\sigma_X^2 = 0.6$. (The standard deviation would be $\\sqrt{0.6} \\approx 0.77$ goals.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use symmetry",
+      "steps": [
+        "The distribution is symmetric around $1$ (0.3 on each side), so the mean is exactly $1$ with no arithmetic.",
+        "Only $X = 0$ and $X = 2$ are away from the mean, each 1 unit away, each with probability $0.3$.",
+        "Variance $= 1^2(0.3) + 1^2(0.3) = 0.6$."
+      ]
+    }
+  ],
+  "tags": [
+    "random-variable",
+    "variance",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

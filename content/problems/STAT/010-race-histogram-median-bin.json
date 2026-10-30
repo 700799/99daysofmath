@@ -1,0 +1,85 @@
+{
+  "id": "STAT.010",
+  "domain": "STAT",
+  "unit": 1,
+  "orderInUnit": 10,
+  "standard": "STAT.DATA.A.2",
+  "difficulty": 3,
+  "prompt": "A histogram of $50$ runners' 5K times has these bars: $15$ to $<20$ min: $3$; $20$ to $<25$: $12$; $25$ to $<30$: $20$; $30$ to $<35$: $10$; $35$ to $<40$: $5$. Which interval must contain the median time?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$20$ to $<25$ minutes",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$25$ to $<30$ minutes",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$30$ to $<35$ minutes",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "It cannot be determined from a histogram",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "With $50$ values, the median is the average of the 25th and 26th times in order. Count up the bars from the left until you pass 25.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "With $50$ values, the median is the average of the 25th and 26th times in order. Count up the bars from the left until you pass 25."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with bars of $2, 3, 5$ for $10$ values. The median is between the 5th and 6th values. The first two bars hold $2 + 3 = 5$ values, so the 6th is in the third bar. Same counting here."
+    },
+    {
+      "level": "guide",
+      "text": "Running totals: $3$, then $3 + 12 = 15$, then $15 + 20 = 35$. Which bar contains the 25th and 26th values?"
+    },
+    {
+      "level": "reveal",
+      "text": "Values 16 through 35 are in the $25$ to $<30$ bar, so the 25th and 26th are both there: choice B."
+    }
+  ],
+  "explanation": [
+    "Order the $50$ times from fastest to slowest. The median sits between the 25th and 26th times.",
+    "Cumulative counts: $3$ after the first bar, $15$ after the second, $35$ after the third.",
+    "The 25th and 26th times fall in the third bar, $25$ to $<30$ minutes. Choice B. The exact median is unknown, but its bar is certain."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use percents",
+      "steps": [
+        "The median is the 50th percentile, so look for where the cumulative percent crosses 50.",
+        "After two bars: $\\frac{15}{50} = 30$ percent. After three bars: $\\frac{35}{50} = 70$ percent.",
+        "Fifty percent is crossed inside the third bar, $25$ to $<30$."
+      ]
+    },
+    {
+      "title": "Why choice D is wrong",
+      "steps": [
+        "A histogram hides the individual times, so you cannot find the exact median.",
+        "But it does show how many values are in each bin, and that is enough to locate which bin holds the middle.",
+        "So the interval can be determined even though the exact number cannot."
+      ]
+    }
+  ],
+  "tags": [
+    "histogram",
+    "median",
+    "cumulative-frequency",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

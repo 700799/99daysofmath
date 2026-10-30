@@ -1,0 +1,55 @@
+{
+  "id": "STAT.089",
+  "domain": "STAT",
+  "unit": 9,
+  "orderInUnit": 9,
+  "standard": "STAT.PROB.C.1",
+  "difficulty": 3,
+  "prompt": "At a restaurant, $30\\%$ of customers order dessert, independently. Of the next $5$ customers, what is the probability that at most $1$ orders dessert? Round to three decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.528",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "\"At most 1\" means $X = 0$ or $X = 1$. Find both binomial probabilities and add.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"At most 1\" means $X = 0$ or $X = 1$. Find both binomial probabilities and add."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with 2 customers: $P(0) = 0.7^2 = 0.49$ and $P(1) = 2(0.3)(0.7) = 0.42$, so $P(X \\le 1) = 0.91$. Same method with $n = 5$."
+    },
+    {
+      "level": "guide",
+      "text": "$P(X = 0) = (0.7)^5$ and $P(X = 1) = \\binom{5}{1}(0.3)(0.7)^4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.7^5 \\approx 0.168$ and $5(0.3)(0.7^4) = 5(0.3)(0.2401) \\approx 0.360$. Sum $\\approx 0.528$."
+    }
+  ],
+  "explanation": [
+    "$X$ is binomial with $n = 5$, $p = 0.3$. \"At most 1\" is $P(X = 0) + P(X = 1)$.",
+    "$P(X = 0) = 0.7^5 = 0.16807$. $P(X = 1) = 5 \\times 0.3 \\times 0.7^4 = 5 \\times 0.3 \\times 0.2401 = 0.36015$.",
+    "Total: $0.16807 + 0.36015 = 0.52822 \\approx 0.528$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the arrangements",
+      "steps": [
+        "Zero desserts: one arrangement (N N N N N), probability $0.7^5 = 0.16807$.",
+        "Exactly one dessert: the dessert customer could be any of 5 positions, each arrangement with probability $0.3 \\times 0.7^4 = 0.07203$; total $5 \\times 0.07203 = 0.36015$.",
+        "Add: $0.52822 \\approx 0.528$."
+      ]
+    }
+  ],
+  "tags": [
+    "binomial",
+    "cumulative-probability",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

@@ -1,0 +1,51 @@
+{
+  "id": "STAT.135",
+  "domain": "STAT",
+  "unit": 14,
+  "orderInUnit": 5,
+  "standard": "STAT.INF.C.3",
+  "difficulty": 2,
+  "prompt": "The slope of the study-hours regression is $b = 3.2$ with $SE_b = 0.8$, from $n = 20$ students. Construct a $95\\%$ confidence interval for the true slope $\\beta$ using $t^* = 2.101$ (df $= 18$). What is the LOWER endpoint? Round to two decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "1.52",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "Interval $= b \\pm t^* \\cdot SE_b$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Interval $= b \\pm t^* \\cdot SE_b$."
+    },
+    {
+      "level": "guide",
+      "text": "Margin of error $= 2.101 \\times 0.8 \\approx 1.68$. Subtract from $3.2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3.2 - 1.68 = 1.52$."
+    }
+  ],
+  "explanation": [
+    "Margin of error: $t^* \\times SE_b = 2.101 \\times 0.8 = 1.6808$.",
+    "Interval: $3.2 \\pm 1.68$, or $(1.52, 4.88)$.",
+    "Lower endpoint $\\approx 1.52$. We are $95\\%$ confident each extra hour of study is associated with between $1.52$ and $4.88$ more points, on average."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Does it contain zero?",
+      "steps": [
+        "The interval $(1.52, 4.88)$ lies entirely above 0.",
+        "That agrees with the $t$-test ($t = 4$, tiny $p$-value): zero is not a plausible slope.",
+        "A confidence interval and a two-sided test at matching levels always tell the same story."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "slope",
+    "confidence-interval",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

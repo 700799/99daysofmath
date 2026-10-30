@@ -1,0 +1,49 @@
+{
+  "id": "CALC.023",
+  "domain": "CALC",
+  "unit": 3,
+  "orderInUnit": 3,
+  "standard": "CALC.LIM.B.1",
+  "difficulty": 1,
+  "prompt": "Let $f(x) = 2x + k$ for $x < 3$ and $f(x) = x^2$ for $x \\ge 3$. Find the value of $k$ that makes $f$ continuous at $x = 3$.",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Continuous at $3$ means the two pieces meet: the left piece must arrive at the same height the right piece starts at.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Continuous at $3$ means the two pieces meet: the left piece must arrive at the same height the right piece starts at."
+    },
+    {
+      "level": "guide",
+      "text": "Right piece at $x = 3$: $3^2 = 9$. Left piece heads to $2(3) + k = 6 + k$. Set them equal."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 + k = 9$, so $k = 3$."
+    }
+  ],
+  "explanation": [
+    "The right piece gives $f(3) = 9$ and a right-hand limit of $9$.",
+    "The left-hand limit is $2(3) + k = 6 + k$.",
+    "For continuity, $6 + k = 9$, so $k = 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the seam",
+      "steps": [
+        "With $k = 3$, the left piece is $2x + 3$, which equals $9$ at $x = 3$.",
+        "The parabola also equals $9$ at $x = 3$.",
+        "The line and the parabola meet exactly at $(3, 9)$ — no gap, so $f$ is continuous there."
+      ]
+    }
+  ],
+  "tags": [
+    "continuity",
+    "piecewise",
+    "parameter"
+  ],
+  "estimatedSeconds": 40
+}

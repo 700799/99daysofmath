@@ -1,0 +1,71 @@
+{
+  "id": "STAT.067",
+  "domain": "STAT",
+  "unit": 7,
+  "orderInUnit": 7,
+  "standard": "STAT.PROB.A.2",
+  "difficulty": 2,
+  "prompt": "In a café survey, $P(\\text{orders coffee}) = 0.4$, $P(\\text{orders a pastry}) = 0.5$, and $P(\\text{orders both}) = 0.2$. Are ordering coffee and ordering a pastry independent events?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Yes, because $P(\\text{both}) = 0.2$ equals $P(\\text{coffee}) \\cdot P(\\text{pastry}) = 0.4 \\times 0.5$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "No, because a customer can order both",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "No, because $0.4 + 0.5 - 0.2$ is not equal to $1$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Yes, because the two probabilities are different",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Independence is a calculation, not a feeling. Test: does $P(A \\cap B) = P(A) \\cdot P(B)$?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Independence is a calculation, not a feeling. Test: does $P(A \\cap B) = P(A) \\cdot P(B)$?"
+    },
+    {
+      "level": "guide",
+      "text": "Compute $0.4 \\times 0.5$ and compare it with $0.2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.4 \\times 0.5 = 0.2 = P(\\text{both})$, so the events are independent: choice A."
+    }
+  ],
+  "explanation": [
+    "Two events are independent when $P(A \\cap B) = P(A) \\cdot P(B)$.",
+    "$P(\\text{coffee}) \\cdot P(\\text{pastry}) = 0.4 \\times 0.5 = 0.20$, and $P(\\text{both}) = 0.20$. They match.",
+    "So coffee and pastry orders are independent. Choice A. (Being able to order both is about overlap, not independence, so B is wrong.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with conditional probability",
+      "steps": [
+        "$P(\\text{pastry} \\mid \\text{coffee}) = \\frac{0.2}{0.4} = 0.5$.",
+        "That equals $P(\\text{pastry}) = 0.5$: knowing someone ordered coffee does not change the pastry chance.",
+        "Unchanged conditional probability is exactly what independence means."
+      ]
+    }
+  ],
+  "tags": [
+    "independence",
+    "multiplication-rule",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

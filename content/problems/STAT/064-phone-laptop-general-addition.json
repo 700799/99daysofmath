@@ -1,0 +1,53 @@
+{
+  "id": "STAT.064",
+  "domain": "STAT",
+  "unit": 7,
+  "orderInUnit": 4,
+  "standard": "STAT.PROB.A.1",
+  "difficulty": 2,
+  "prompt": "At a college, $60$ percent of students own a tablet, $50$ percent own a gaming console, and $30$ percent own both. What is the probability that a randomly chosen student owns a tablet OR a console?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.8",
+  "alternativeAnswers": [
+    "80%",
+    "4/5",
+    "0.80"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "These events overlap (some students own both), so you cannot just add.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "These events overlap (some students own both), so you cannot just add."
+    },
+    {
+      "level": "guide",
+      "text": "General addition rule: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$. The subtraction removes the double-counted overlap."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.6 + 0.5 - 0.3 = 0.8$."
+    }
+  ],
+  "explanation": [
+    "Adding $0.6 + 0.5 = 1.1$ counts the $30$ percent who own both devices twice, which is why it exceeds $1$.",
+    "Subtract the overlap once: $1.1 - 0.3 = 0.8$.",
+    "$P(\\text{tablet or console}) = 0.8$, so $80$ percent own at least one."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Venn diagram with 100 students",
+      "steps": [
+        "Both: 30. Tablet only: $60 - 30 = 30$. Console only: $50 - 30 = 20$.",
+        "At least one: $30 + 30 + 20 = 80$ students, so $0.8$.",
+        "Neither: $100 - 80 = 20$ students, a handy check."
+      ]
+    }
+  ],
+  "tags": [
+    "general-addition-rule",
+    "venn-diagram",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

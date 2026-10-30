@@ -1,0 +1,70 @@
+{
+  "id": "STAT.052",
+  "domain": "STAT",
+  "unit": 6,
+  "orderInUnit": 2,
+  "standard": "STAT.COLL.B.1",
+  "difficulty": 1,
+  "prompt": "A gardener tests whether the amount of fertilizer affects tomato yield by giving plots different amounts and weighing the tomatoes. Which is the explanatory variable and which is the response variable?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Explanatory: tomato yield; response: amount of fertilizer",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Explanatory: amount of fertilizer; response: tomato yield",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Both are explanatory variables",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Explanatory: the plots; response: the gardener",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The explanatory variable is the one you change on purpose. The response is what you measure afterward.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The explanatory variable is the one you change on purpose. The response is what you measure afterward."
+    },
+    {
+      "level": "guide",
+      "text": "The gardener CHANGES the fertilizer and MEASURES the tomatoes."
+    },
+    {
+      "level": "reveal",
+      "text": "Fertilizer is explanatory; yield is the response. Choice B."
+    }
+  ],
+  "explanation": [
+    "The gardener controls the amount of fertilizer, so that is the explanatory variable (the treatment).",
+    "The weight of tomatoes is the outcome that may depend on the fertilizer, so that is the response variable.",
+    "Choice B. The plots are the experimental units, not a variable."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Cause and effect order",
+      "steps": [
+        "Ask: which might cause the other? More fertilizer could change the yield; a heavier tomato cannot change how much fertilizer was applied.",
+        "The possible cause is explanatory; the possible effect is the response."
+      ]
+    }
+  ],
+  "tags": [
+    "explanatory-variable",
+    "response-variable",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

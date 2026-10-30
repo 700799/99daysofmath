@@ -1,0 +1,49 @@
+{
+  "id": "STAT.014",
+  "domain": "STAT",
+  "unit": 2,
+  "orderInUnit": 4,
+  "standard": "STAT.DATA.B.1",
+  "difficulty": 2,
+  "prompt": "Eight students reported how many hours they worked last week: $3, 5, 7, 8, 10, 12, 14, 18$. What is the interquartile range (IQR)?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Split the ordered list into a lower half and an upper half. $Q_1$ is the median of the lower half, $Q_3$ the median of the upper half.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Split the ordered list into a lower half and an upper half. $Q_1$ is the median of the lower half, $Q_3$ the median of the upper half."
+    },
+    {
+      "level": "guide",
+      "text": "Lower half $3, 5, 7, 8$ has median $\\frac{5 + 7}{2} = 6$. Upper half $10, 12, 14, 18$ has median $\\frac{12 + 14}{2} = 13$."
+    },
+    {
+      "level": "reveal",
+      "text": "IQR $= Q_3 - Q_1 = 13 - 6 = 7$ hours."
+    }
+  ],
+  "explanation": [
+    "With eight values, the lower half is $3, 5, 7, 8$ and the upper half is $10, 12, 14, 18$.",
+    "$Q_1 = \\frac{5 + 7}{2} = 6$ and $Q_3 = \\frac{12 + 14}{2} = 13$.",
+    "IQR $= 13 - 6 = 7$: the middle half of the students span $7$ hours."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Quartiles as 25th and 75th percentiles",
+      "steps": [
+        "A quarter of the data (2 values) sits below $Q_1$, so $Q_1$ is between the 2nd and 3rd values: between 5 and 7, which is 6.",
+        "A quarter sits above $Q_3$, so $Q_3$ is between the 6th and 7th values: between 12 and 14, which is 13.",
+        "IQR $= 13 - 6 = 7$."
+      ]
+    }
+  ],
+  "tags": [
+    "iqr",
+    "quartiles",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

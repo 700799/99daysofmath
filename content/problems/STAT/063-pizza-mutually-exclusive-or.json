@@ -1,0 +1,51 @@
+{
+  "id": "STAT.063",
+  "domain": "STAT",
+  "unit": 7,
+  "orderInUnit": 3,
+  "standard": "STAT.PROB.A.1",
+  "difficulty": 1,
+  "prompt": "At a pizzeria, $20$ percent of orders are for a plain cheese pizza and $35$ percent are for pepperoni. An order cannot be both. What is the probability that a randomly chosen order is cheese OR pepperoni?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.55",
+  "alternativeAnswers": [
+    "55%",
+    "11/20"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Cannot be both\" means the events are mutually exclusive (disjoint).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Cannot be both\" means the events are mutually exclusive (disjoint)."
+    },
+    {
+      "level": "guide",
+      "text": "For disjoint events, $P(A \\text{ or } B) = P(A) + P(B)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.20 + 0.35 = 0.55$."
+    }
+  ],
+  "explanation": [
+    "Cheese and pepperoni orders do not overlap, so they are mutually exclusive.",
+    "The addition rule for disjoint events: $P(A \\cup B) = P(A) + P(B)$.",
+    "$0.20 + 0.35 = 0.55$, or $55$ percent of orders."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Out of 100 orders",
+      "steps": [
+        "Picture 100 orders: 20 are cheese, 35 are pepperoni, and no order is on both lists.",
+        "That is 55 orders that are one or the other: $\\frac{55}{100} = 0.55$."
+      ]
+    }
+  ],
+  "tags": [
+    "addition-rule",
+    "mutually-exclusive",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

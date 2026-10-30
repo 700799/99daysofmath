@@ -1,0 +1,49 @@
+{
+  "id": "STAT.043",
+  "domain": "STAT",
+  "unit": 5,
+  "orderInUnit": 3,
+  "standard": "STAT.COLL.A.1",
+  "difficulty": 1,
+  "prompt": "A school has $300$ freshmen, $250$ sophomores, $200$ juniors and $150$ seniors. A stratified random sample takes $10$ percent of each grade. How many juniors are in the sample?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Each grade is a stratum. Sample from the junior stratum only for this question.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each grade is a stratum. Sample from the junior stratum only for this question."
+    },
+    {
+      "level": "guide",
+      "text": "Take $10$ percent of $200$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.10 \\times 200 = 20$ juniors."
+    }
+  ],
+  "explanation": [
+    "In a stratified sample, a separate SRS is taken from each group (stratum).",
+    "The junior stratum has $200$ students, and $10$ percent of $200$ is $20$.",
+    "So $20$ juniors are selected. (The whole sample would be $30 + 25 + 20 + 15 = 90$ students.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why stratify at all",
+      "steps": [
+        "Juniors are $\\frac{200}{900}$ of the school, about 22 percent.",
+        "Sampling 10 percent from each grade guarantees the sample is also about 22 percent juniors, matching the school.",
+        "An SRS of 90 would only match that proportion on average, with chance variation."
+      ]
+    }
+  ],
+  "tags": [
+    "stratified",
+    "sampling-methods",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,77 @@
+{
+  "id": "CALC.040",
+  "domain": "CALC",
+  "unit": 4,
+  "orderInUnit": 10,
+  "standard": "CALC.LIM.B.2",
+  "difficulty": 3,
+  "prompt": "Let $f(x) = \\frac{x^2 - 4}{x^2 - x - 2}$. Which statement correctly describes the graph of $f$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Vertical asymptotes at $x = 2$ and $x = -1$.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "A vertical asymptote at $x = -1$ and a hole at $x = 2$.",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "A vertical asymptote at $x = 2$ and a hole at $x = -1$.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Holes at both $x = 2$ and $x = -1$.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Factor both top and bottom completely before deciding anything. A factor that cancels makes a hole; one that survives on the bottom makes an asymptote.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Factor both top and bottom completely before deciding anything. A factor that cancels makes a hole; one that survives on the bottom makes an asymptote."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $\\frac{x - 1}{(x - 1)(x + 3)}$. The $(x - 1)$ cancels, so $x = 1$ is a hole; $(x + 3)$ stays, so $x = -3$ is an asymptote."
+    },
+    {
+      "level": "guide",
+      "text": "Top: $(x - 2)(x + 2)$. Bottom: $(x - 2)(x + 1)$. Which factor appears in both?"
+    },
+    {
+      "level": "reveal",
+      "text": "$(x - 2)$ cancels: hole at $x = 2$. $(x + 1)$ remains: vertical asymptote at $x = -1$."
+    }
+  ],
+  "explanation": [
+    "Factor: $f(x) = \\frac{(x - 2)(x + 2)}{(x - 2)(x + 1)}$.",
+    "Cancel $(x - 2)$: for $x \\ne 2$, $f(x) = \\frac{x + 2}{x + 1}$. At $x = 2$ the limit is $\\frac{4}{3}$ but $f(2)$ is undefined — a hole.",
+    "The remaining factor $(x + 1)$ is zero at $x = -1$ while the top is $1 \\ne 0$ there, so $|f(x)| \\to \\infty$: a vertical asymptote at $x = -1$. (Also $y = 1$ is the horizontal asymptote.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test both suspects numerically",
+      "steps": [
+        "Near $x = 2$: $f(2.01) = \\frac{4.01}{3.01} \\approx 1.332$, $f(1.99) \\approx 1.334$. Calm values near $\\frac{4}{3}$ — a hole.",
+        "Near $x = -1$: $f(-0.99) = \\frac{1.01}{0.01} = 101$, $f(-1.01) = \\frac{0.99}{-0.01} = -99$. Exploding — an asymptote.",
+        "Only the uncancelled factor produces the explosion."
+      ]
+    }
+  ],
+  "tags": [
+    "vertical-asymptote",
+    "removable",
+    "rational-function",
+    "multi-step"
+  ],
+  "estimatedSeconds": 70
+}

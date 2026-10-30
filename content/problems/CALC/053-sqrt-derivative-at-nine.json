@@ -1,0 +1,52 @@
+{
+  "id": "CALC.053",
+  "domain": "CALC",
+  "unit": 6,
+  "orderInUnit": 3,
+  "standard": "CALC.DER.A.2",
+  "difficulty": 1,
+  "prompt": "Let $f(x) = \\sqrt{x}$. Find $f'(9)$. Give your answer as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "1/6",
+  "alternativeAnswers": [
+    "0.1667",
+    "0.167"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "Rewrite the root as a power: $\\sqrt{x} = x^{1/2}$. Then the power rule works.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Rewrite the root as a power: $\\sqrt{x} = x^{1/2}$. Then the power rule works."
+    },
+    {
+      "level": "guide",
+      "text": "$f'(x) = \\frac{1}{2} x^{-1/2} = \\frac{1}{2\\sqrt{x}}$. Substitute $x = 9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2 \\cdot 3} = \\frac{1}{6}$."
+    }
+  ],
+  "explanation": [
+    "$\\sqrt{x} = x^{1/2}$, so by the power rule $f'(x) = \\frac{1}{2} x^{-1/2}$.",
+    "A negative exponent means \"in the denominator\": $f'(x) = \\frac{1}{2\\sqrt{x}}$.",
+    "At $x = 9$: $\\frac{1}{2 \\cdot 3} = \\frac{1}{6}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Does the size make sense?",
+      "steps": [
+        "Near $x = 9$, going from $9$ to $10$ changes $\\sqrt{x}$ from $3$ to about $3.162$: a rise of about $0.162$ per unit.",
+        "That is close to $\\frac{1}{6} \\approx 0.167$, slightly less because the curve is flattening.",
+        "The square-root graph gets flatter as $x$ grows, and $\\frac{1}{2\\sqrt{x}}$ shrinking agrees."
+      ]
+    }
+  ],
+  "tags": [
+    "power-rule",
+    "square-root"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,51 @@
+{
+  "id": "STAT.073",
+  "domain": "STAT",
+  "unit": 8,
+  "orderInUnit": 3,
+  "standard": "STAT.PROB.B.1",
+  "difficulty": 1,
+  "prompt": "A discrete random variable $X$ takes the values $0, 1, 2, 3$ with $P(0) = 0.15$, $P(1) = 0.35$, $P(2) = \\,?$, and $P(3) = 0.10$. What is $P(X = 2)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.4",
+  "alternativeAnswers": [
+    "2/5",
+    "40%"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The probabilities in a valid distribution must add up to exactly $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The probabilities in a valid distribution must add up to exactly $1$."
+    },
+    {
+      "level": "guide",
+      "text": "Add the three known probabilities and subtract from $1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.15 + 0.35 + 0.10 = 0.60$, so $P(X = 2) = 1 - 0.60 = 0.40$."
+    }
+  ],
+  "explanation": [
+    "A probability distribution lists every possible outcome, so its probabilities sum to $1$.",
+    "The known ones total $0.15 + 0.35 + 0.10 = 0.60$.",
+    "The missing one fills the gap: $1 - 0.60 = 0.40$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in percents",
+      "steps": [
+        "The known outcomes cover $15\\% + 35\\% + 10\\% = 60\\%$ of all cases.",
+        "The other $40\\%$ of cases must be $X = 2$.",
+        "So $P(X = 2) = 0.40$."
+      ]
+    }
+  ],
+  "tags": [
+    "random-variable",
+    "probability-distribution"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,66 @@
+{
+  "id": "STAT.030",
+  "domain": "STAT",
+  "unit": 3,
+  "orderInUnit": 10,
+  "standard": "STAT.DATA.C.2",
+  "difficulty": 3,
+  "prompt": "Bags of trail mix have weights that are approximately normal with mean $250$ grams. About $16$ percent of the bags weigh LESS than $244$ grams. What is the standard deviation, in grams?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [
+    "6.03"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.1,
+  "hint": "You know the mean, a value and the area below it. The unknown is the SD. Start from the $z$-score that matches the area.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You know the mean, a value and the area below it. The unknown is the SD. Start from the $z$-score that matches the area."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if $2.5$ percent of bags were below $240$ grams, that is $z = -2$, so two SDs $= 10$ grams and the SD is $5$. Same move with 16 percent."
+    },
+    {
+      "level": "guide",
+      "text": "An area of $0.16$ to the left matches $z \\approx -1$ (the empirical rule, or invNorm$(0.16) = -0.99$). Set $\\frac{244 - 250}{\\sigma} = -1$ and solve."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{-6}{\\sigma} = -1$ gives $\\sigma = 6$ grams."
+    }
+  ],
+  "explanation": [
+    "By the empirical rule, about $16$ percent of a normal distribution lies more than one SD below the mean, so $244$ grams is at $z \\approx -1$.",
+    "Set up the $z$-score: $-1 = \\frac{244 - 250}{\\sigma} = \\frac{-6}{\\sigma}$.",
+    "Solve: $\\sigma = 6$ grams. (Using invNorm$(0.16) = -0.994$ gives $\\sigma = 6.03$, the same to the nearest gram.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in distances",
+      "steps": [
+        "The gap between the mean and 244 grams is 6 grams.",
+        "That gap is one SD wide, because 16 percent sits below it.",
+        "So one SD is 6 grams."
+      ]
+    },
+    {
+      "title": "The trap: using 34 percent",
+      "steps": [
+        "The 34 percent in the empirical rule is the area between the mean and one SD below, not the tail.",
+        "The TAIL below $z = -1$ is $50 - 34 = 16$ percent, and the problem gave 16 percent, so $z = -1$ is right.",
+        "Match the given area to the right picture before reading off $z$."
+      ]
+    }
+  ],
+  "tags": [
+    "normal-distribution",
+    "empirical-rule",
+    "standard-deviation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

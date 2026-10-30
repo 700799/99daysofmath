@@ -1,0 +1,70 @@
+{
+  "id": "CALC.054",
+  "domain": "CALC",
+  "unit": 6,
+  "orderInUnit": 4,
+  "standard": "CALC.DER.A.2",
+  "difficulty": 2,
+  "prompt": "Which expression is the derivative of $f(x) = x^2 e^x$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$(x^2 + 2x) e^x$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$2x e^x$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$x^2 e^x$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$(x^2 - 2x) e^x$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "This is a PRODUCT of two functions, so you cannot just multiply the two derivatives. Use the product rule: first times derivative of second, plus second times derivative of first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This is a PRODUCT of two functions, so you cannot just multiply the two derivatives. Use the product rule: first times derivative of second, plus second times derivative of first."
+    },
+    {
+      "level": "guide",
+      "text": "First $= x^2$ (derivative $2x$). Second $= e^x$ (derivative $e^x$). So $f'(x) = x^2 \\cdot e^x + e^x \\cdot 2x$."
+    },
+    {
+      "level": "reveal",
+      "text": "Factor out $e^x$: $f'(x) = (x^2 + 2x) e^x$. Choice A."
+    }
+  ],
+  "explanation": [
+    "Product rule: $(uv)' = u'v + uv'$ with $u = x^2$ and $v = e^x$.",
+    "$u' = 2x$ and $v' = e^x$, so $f'(x) = 2x e^x + x^2 e^x$.",
+    "Factor: $(x^2 + 2x) e^x$. Choice B is the trap of multiplying the derivatives; C forgot to differentiate at all."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A quick numerical check at $x = 1$",
+      "steps": [
+        "Choice A at $x = 1$ gives $3e \\approx 8.15$. Choice B gives $2e \\approx 5.44$.",
+        "Secant slope of $x^2 e^x$ from $1$ to $1.001$: $\\frac{(1.001)^2 e^{1.001} - e}{0.001} \\approx 8.16$.",
+        "Only A matches — the product rule, not the product of derivatives."
+      ]
+    }
+  ],
+  "tags": [
+    "product-rule",
+    "exponential"
+  ],
+  "estimatedSeconds": 50
+}

@@ -1,0 +1,70 @@
+{
+  "id": "CALC.047",
+  "domain": "CALC",
+  "unit": 5,
+  "orderInUnit": 7,
+  "standard": "CALC.DER.A.1",
+  "difficulty": 2,
+  "prompt": "The limit $\\lim_{h \\to 0} \\frac{(5 + h)^3 - 125}{h}$ equals $f'(a)$ for which function $f$ and which point $a$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$f(x) = x^3$, $a = 5$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$f(x) = x^3$, $a = 0$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$f(x) = 5^x$, $a = 3$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$f(x) = x^5$, $a = 3$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Match the pattern $\\frac{f(a + h) - f(a)}{h}$. The piece $(5 + h)^3$ must be $f(a + h)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Match the pattern $\\frac{f(a + h) - f(a)}{h}$. The piece $(5 + h)^3$ must be $f(a + h)$."
+    },
+    {
+      "level": "guide",
+      "text": "If $f(a + h) = (5 + h)^3$, then $a = 5$ and $f$ cubes its input. Check: is $f(5) = 125$?"
+    },
+    {
+      "level": "reveal",
+      "text": "$5^3 = 125$, yes. So the limit is $f'(5)$ for $f(x) = x^3$: choice A. (Its value is $75$.)"
+    }
+  ],
+  "explanation": [
+    "Compare with $f'(a) = \\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h}$.",
+    "Here $f(a + h) = (5 + h)^3$, so $a = 5$ and $f(x) = x^3$; then $f(a) = 125$ matches the $125$ being subtracted.",
+    "Choice A. If you expand, $\\frac{75h + 15h^2 + h^3}{h} \\to 75$, the slope of $y = x^3$ at $x = 5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Rule out the impostors",
+      "steps": [
+        "B: $a = 0$ would give $\\frac{h^3 - 0}{h}$, no $5$ anywhere.",
+        "C: $5^x$ at $a = 3$ would give $\\frac{5^{3 + h} - 125}{h}$ — the $125$ matches but the $h$ sits in the exponent, not the base.",
+        "D: $x^5$ at $3$ would give $(3 + h)^5 - 243$. Only A reproduces the limit exactly."
+      ]
+    }
+  ],
+  "tags": [
+    "derivative-definition",
+    "pattern-recognition"
+  ],
+  "estimatedSeconds": 55
+}

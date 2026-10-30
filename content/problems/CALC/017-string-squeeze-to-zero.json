@@ -1,0 +1,48 @@
+{
+  "id": "CALC.017",
+  "domain": "CALC",
+  "unit": 2,
+  "orderInUnit": 7,
+  "standard": "CALC.LIM.A.2",
+  "difficulty": 2,
+  "prompt": "A guitar string's displacement $d(t)$, in millimeters, is messy to write down, but a sound engineer knows that $-t^2 \\le d(t) \\le t^2$ for all $t$ near $0$. What is $\\lim_{t \\to 0} d(t)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "0",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "You do not need the formula for $d(t)$. The two outside functions trap it — this is the Squeeze Theorem.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You do not need the formula for $d(t)$. The two outside functions trap it — this is the Squeeze Theorem."
+    },
+    {
+      "level": "guide",
+      "text": "Find the limits of the two fences: $\\lim_{t \\to 0} (-t^2)$ and $\\lim_{t \\to 0} t^2$."
+    },
+    {
+      "level": "reveal",
+      "text": "Both fences head to $0$, so the trapped function must too: $\\lim_{t \\to 0} d(t) = 0$."
+    }
+  ],
+  "explanation": [
+    "The lower fence $-t^2$ heads to $0$ as $t \\to 0$.",
+    "The upper fence $t^2$ also heads to $0$.",
+    "Since $d(t)$ is squeezed between them, the Squeeze Theorem forces $\\lim_{t \\to 0} d(t) = 0$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Shrinking box",
+      "steps": [
+        "At $t = 0.1$ the displacement is somewhere in $[-0.01, 0.01]$.",
+        "At $t = 0.01$ it is somewhere in $[-0.0001, 0.0001]$.",
+        "The box around $d(t)$ shrinks to the single point $0$, so that is the limit — no formula required."
+      ]
+    }
+  ],
+  "tags": [
+    "squeeze-theorem",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

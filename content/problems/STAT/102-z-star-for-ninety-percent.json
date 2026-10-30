@@ -1,0 +1,70 @@
+{
+  "id": "STAT.102",
+  "domain": "STAT",
+  "unit": 11,
+  "orderInUnit": 2,
+  "standard": "STAT.INF.A.1",
+  "difficulty": 1,
+  "prompt": "Which critical value $z^*$ is used for a $90\\%$ confidence interval?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$1.282$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$1.645$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$1.960$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$2.576$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "A $90\\%$ interval leaves $10\\%$ outside, split as $5\\%$ in each tail.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A $90\\%$ interval leaves $10\\%$ outside, split as $5\\%$ in each tail."
+    },
+    {
+      "level": "guide",
+      "text": "$z^*$ is the value with $5\\%$ of the standard normal curve above it. Recall: $1.96$ cuts off $2.5\\%$, $2.576$ cuts off $0.5\\%$."
+    },
+    {
+      "level": "reveal",
+      "text": "$z^* = 1.645$ for $90\\%$ confidence."
+    }
+  ],
+  "explanation": [
+    "For confidence level $C$, $z^*$ is the value such that the middle $C$ of the standard normal curve lies between $-z^*$ and $z^*$.",
+    "For $90\\%$, each tail has $5\\%$, and $P(Z > 1.645) = 0.05$.",
+    "So $z^* = 1.645$. The other values belong to $80\\%$ ($1.282$), $95\\%$ ($1.960$), and $99\\%$ ($2.576$)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Order them by confidence",
+      "steps": [
+        "More confidence needs a wider interval, so a bigger $z^*$.",
+        "$80\\% \\to 1.282$, $90\\% \\to 1.645$, $95\\% \\to 1.960$, $99\\% \\to 2.576$.",
+        "$90\\%$ sits second: $1.645$."
+      ]
+    }
+  ],
+  "tags": [
+    "confidence-interval",
+    "critical-value"
+  ],
+  "estimatedSeconds": 30
+}

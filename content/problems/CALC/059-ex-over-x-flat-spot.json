@@ -1,0 +1,54 @@
+{
+  "id": "CALC.059",
+  "domain": "CALC",
+  "unit": 6,
+  "orderInUnit": 9,
+  "standard": "CALC.DER.A.2",
+  "difficulty": 3,
+  "prompt": "Let $h(x) = \\frac{e^x}{x}$. Find $h'(1)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "0",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Quotient rule: $\\frac{u'v - uv'}{v^2}$ with $u = e^x$ and $v = x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Quotient rule: $\\frac{u'v - uv'}{v^2}$ with $u = e^x$ and $v = x$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $\\frac{x^2}{x}$: quotient rule gives $\\frac{2x \\cdot x - x^2 \\cdot 1}{x^2} = \\frac{x^2}{x^2} = 1$, which is right since $\\frac{x^2}{x} = x$. Same recipe with $e^x$ on top."
+    },
+    {
+      "level": "guide",
+      "text": "$h'(x) = \\frac{e^x \\cdot x - e^x \\cdot 1}{x^2} = \\frac{e^x (x - 1)}{x^2}$. Substitute $x = 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{e(1 - 1)}{1} = 0$. The tangent at $x = 1$ is horizontal."
+    }
+  ],
+  "explanation": [
+    "$u = e^x$, $u' = e^x$; $v = x$, $v' = 1$.",
+    "$h'(x) = \\frac{e^x x - e^x}{x^2} = \\frac{e^x(x - 1)}{x^2}$.",
+    "At $x = 1$ the factor $(x - 1)$ is $0$, so $h'(1) = 0$. In fact $x = 1$ is where $\\frac{e^x}{x}$ bottoms out, at height $e$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "See the minimum",
+      "steps": [
+        "$h(0.5) = \\frac{e^{0.5}}{0.5} \\approx 3.30$, $h(1) = e \\approx 2.72$, $h(2) = \\frac{e^2}{2} \\approx 3.69$.",
+        "The value dips at $x = 1$ and rises on both sides: a valley.",
+        "At the bottom of a valley the tangent is flat, so $h'(1) = 0$ is exactly what the picture predicts."
+      ]
+    }
+  ],
+  "tags": [
+    "quotient-rule",
+    "exponential",
+    "multi-step"
+  ],
+  "estimatedSeconds": 65
+}

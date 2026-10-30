@@ -1,0 +1,78 @@
+{
+  "id": "STAT.129",
+  "domain": "STAT",
+  "unit": 13,
+  "orderInUnit": 9,
+  "standard": "STAT.INF.C.2",
+  "difficulty": 3,
+  "prompt": "A researcher tests whether favorite music genre is associated with age group using a chi-square test of independence on a $3 \\times 3$ table. The statistic is $\\chi^2 = 11.3$ with df $= 4$. The critical value for $\\alpha = 0.05$ with df $= 4$ is $9.488$ (so the $p$-value is less than $0.05$). What is the correct conclusion?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Reject $H_0$; there is convincing evidence of an association between genre and age group.",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Fail to reject $H_0$; there is not convincing evidence of an association.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Accept $H_0$; genre and age group are independent.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Reject $H_0$; age causes people to prefer certain genres.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Chi-square tests reject when the statistic is LARGER than the critical value (big disagreement with $H_0$).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Chi-square tests reject when the statistic is LARGER than the critical value (big disagreement with $H_0$)."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: with df $= 1$ the critical value is $3.841$; a statistic of $5.0$ exceeds it, so you reject. Same comparison here: is $11.3$ above $9.488$?"
+    },
+    {
+      "level": "guide",
+      "text": "$11.3 > 9.488$, so $p < 0.05$: reject $H_0$. Then word the conclusion carefully — association, not cause."
+    },
+    {
+      "level": "reveal",
+      "text": "A: reject $H_0$; convincing evidence of an association. (D overreaches: an observational survey cannot show causation.)"
+    }
+  ],
+  "explanation": [
+    "$H_0$: genre and age group are independent. $H_a$: they are associated.",
+    "Since $\\chi^2 = 11.3$ exceeds the critical value $9.488$, the $p$-value is below $0.05$, so we reject $H_0$.",
+    "The correct wording is \"convincing evidence of an association\" (A). C uses \"accept\", which tests never do, and D claims causation from survey data."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the df",
+      "steps": [
+        "For a $3 \\times 3$ table, df $= (3-1)(3-1) = 4$, matching the problem.",
+        "A chi-square with df $= 4$ has mean 4, so $11.3$ is nearly three times what chance alone would typically produce.",
+        "That is why it clears $9.488$ and we reject $H_0$: choice A."
+      ]
+    }
+  ],
+  "tags": [
+    "chi-square",
+    "independence",
+    "conclusion",
+    "interpretation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

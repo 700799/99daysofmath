@@ -1,0 +1,49 @@
+{
+  "id": "CALC.056",
+  "domain": "CALC",
+  "unit": 6,
+  "orderInUnit": 6,
+  "standard": "CALC.DER.A.2",
+  "difficulty": 2,
+  "prompt": "A company's revenue from selling $x$ jackets is $R(x) = 50x - 0.2x^2$ dollars. Find the marginal revenue $R'(100)$, the approximate extra revenue from selling the 101st jacket, in dollars.",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "\"Marginal\" is economics-speak for \"derivative.\" Differentiate $R(x)$ with the power rule.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Marginal\" is economics-speak for \"derivative.\" Differentiate $R(x)$ with the power rule."
+    },
+    {
+      "level": "guide",
+      "text": "$R'(x) = 50 - 0.4x$. Substitute $x = 100$."
+    },
+    {
+      "level": "reveal",
+      "text": "$50 - 0.4(100) = 50 - 40 = 10$ dollars."
+    }
+  ],
+  "explanation": [
+    "$R'(x) = 50 - 0.4x$.",
+    "$R'(100) = 50 - 40 = 10$.",
+    "Selling the 101st jacket adds only about $10$ dollars of revenue, because the model assumes prices must drop to sell more."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with actual revenue",
+      "steps": [
+        "$R(100) = 5000 - 2000 = 3000$ dollars.",
+        "$R(101) = 5050 - 0.2(10201) = 5050 - 2040.2 = 3009.8$ dollars.",
+        "The 101st jacket really adds $9.80$ dollars — the derivative $10$ is a very good approximation of that step."
+      ]
+    }
+  ],
+  "tags": [
+    "power-rule",
+    "marginal",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

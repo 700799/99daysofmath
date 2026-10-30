@@ -1,0 +1,55 @@
+{
+  "id": "CALC.038",
+  "domain": "CALC",
+  "unit": 4,
+  "orderInUnit": 8,
+  "standard": "CALC.LIM.B.2",
+  "difficulty": 3,
+  "prompt": "Find $\\lim_{x \\to -\\infty} \\frac{2x - 5}{\\sqrt{x^2 + 1}}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "-2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "For huge $|x|$, $\\sqrt{x^2 + 1}$ behaves like $\\sqrt{x^2} = |x|$. Since $x$ is NEGATIVE here, $|x| = -x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "For huge $|x|$, $\\sqrt{x^2 + 1}$ behaves like $\\sqrt{x^2} = |x|$. Since $x$ is NEGATIVE here, $|x| = -x$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $\\lim_{x \\to -\\infty} \\frac{x}{\\sqrt{x^2}}$. At $x = -10$ that is $\\frac{-10}{10} = -1$. The square root is always positive, so the answer is $-1$, not $1$."
+    },
+    {
+      "level": "guide",
+      "text": "Top behaves like $2x$. Bottom behaves like $-x$. Simplify $\\frac{2x}{-x}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{2x}{-x} = -2$, so the limit is $-2$."
+    }
+  ],
+  "explanation": [
+    "For $x < 0$, $\\sqrt{x^2 + 1} = |x|\\sqrt{1 + \\frac{1}{x^2}} = -x\\sqrt{1 + \\frac{1}{x^2}}$.",
+    "Divide top and bottom by $x$ (negative): $\\frac{2 - \\frac{5}{x}}{-\\sqrt{1 + \\frac{1}{x^2}}}$.",
+    "As $x \\to -\\infty$ the small terms vanish, leaving $\\frac{2}{-1} = -2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Plug in a big negative number",
+      "steps": [
+        "At $x = -1000$: top is $-2005$, bottom is $\\sqrt{1{,}000{,}001} \\approx 1000.0005$.",
+        "Ratio $\\approx -2.005$: negative, and near $2$ in size.",
+        "The sign comes from the top; the bottom is a square root and can never be negative. Answer $-2$."
+      ]
+    }
+  ],
+  "tags": [
+    "limit-at-infinity",
+    "horizontal-asymptote",
+    "absolute-value",
+    "trap"
+  ],
+  "estimatedSeconds": 75
+}

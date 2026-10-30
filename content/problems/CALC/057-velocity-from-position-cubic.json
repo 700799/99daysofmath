@@ -1,0 +1,49 @@
+{
+  "id": "CALC.057",
+  "domain": "CALC",
+  "unit": 6,
+  "orderInUnit": 7,
+  "standard": "CALC.DER.A.2",
+  "difficulty": 2,
+  "prompt": "A particle moves along a line with position $s(t) = t^3 - 6t^2 + 9t$ meters at time $t$ seconds. Find its velocity at $t = 4$ seconds, in meters per second.",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Velocity is the derivative of position. Differentiate term by term.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Velocity is the derivative of position. Differentiate term by term."
+    },
+    {
+      "level": "guide",
+      "text": "$v(t) = s'(t) = 3t^2 - 12t + 9$. Substitute $t = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$3(16) - 48 + 9 = 48 - 48 + 9 = 9$ m/s."
+    }
+  ],
+  "explanation": [
+    "$v(t) = s'(t) = 3t^2 - 12t + 9$.",
+    "$v(4) = 3(16) - 12(4) + 9 = 48 - 48 + 9$.",
+    "$= 9$ m/s. Positive, so the particle is moving in the positive direction at $t = 4$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Where was it stopped?",
+      "steps": [
+        "Factor the velocity: $3t^2 - 12t + 9 = 3(t - 1)(t - 3)$, which is zero at $t = 1$ and $t = 3$.",
+        "Between $1$ and $3$ the velocity is negative (the particle backs up); after $t = 3$ it is positive again.",
+        "At $t = 4$: $3(3)(1) = 9$ m/s, heading forward."
+      ]
+    }
+  ],
+  "tags": [
+    "power-rule",
+    "velocity",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,78 @@
+{
+  "id": "STAT.140",
+  "domain": "STAT",
+  "unit": 14,
+  "orderInUnit": 10,
+  "standard": "STAT.INF.C.4",
+  "difficulty": 3,
+  "prompt": "On a free-response question, a student tests whether there is a linear relationship between the number of hours a city's pools are open and daily attendance, using a random sample of $25$ days. The output gives slope $b = 41.3$, $t = 3.62$, and $p$-value $= 0.0014$. Which conclusion earns full credit at $\\alpha = 0.05$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Because the $p$-value $0.0014 < 0.05$, we reject $H_0: \\beta = 0$. There is convincing evidence of a linear relationship between hours open and attendance for this city's pools.",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Because the $p$-value is small, we accept $H_a$ and conclude that keeping pools open longer causes attendance to rise by $41.3$ people per hour.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Because $t = 3.62 > 2$, the slope is significant, so the correlation is $3.62$.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Because the $p$-value is less than $0.05$, we fail to reject $H_0$ and conclude there is no linear relationship.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "A full-credit conclusion has three parts: compare $p$ to $\\alpha$, state the decision about $H_0$, and interpret in context without overclaiming.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A full-credit conclusion has three parts: compare $p$ to $\\alpha$, state the decision about $H_0$, and interpret in context without overclaiming."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $p = 0.30$ at $\\alpha = 0.05$ would read \"fail to reject $H_0$; not convincing evidence of a linear relationship.\" Here $p$ is tiny, so flip the decision — but keep the careful wording."
+    },
+    {
+      "level": "guide",
+      "text": "D gets the decision backwards. B says \"accept\" and \"causes\" — two forbidden words. C turns a $t$ value into a correlation, which is impossible ($|r| \\le 1$)."
+    },
+    {
+      "level": "reveal",
+      "text": "A: $p < \\alpha$, reject $H_0$, convincing evidence of a linear relationship, in context."
+    }
+  ],
+  "explanation": [
+    "Compare: $0.0014 < 0.05$, so the result is significant and we reject $H_0: \\beta = 0$. D has this backwards.",
+    "Interpret in context, carefully: \"convincing evidence of a linear relationship between hours open and attendance.\" We never \"accept\" a hypothesis, and observational data cannot show that hours CAUSE attendance, so B loses credit. C misuses $t$ as if it were $r$.",
+    "A has all three parts — comparison, decision, context — with no overclaiming. That is the full-credit answer."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The graders' checklist",
+      "steps": [
+        "(1) Hypotheses in terms of $\\beta$, (2) conditions checked, (3) correct statistic and $p$-value, (4) decision linked to $\\alpha$, (5) conclusion in context with \"convincing evidence\" language.",
+        "Choice A nails steps 4 and 5, which is what this question tests.",
+        "Each wrong choice breaks step 4 or step 5 in a classic way: wrong direction (D), \"accept\"/causation (B), or garbled statistic (C)."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "free-response",
+    "conclusion",
+    "interpretation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

@@ -1,0 +1,86 @@
+{
+  "id": "STAT.008",
+  "domain": "STAT",
+  "unit": 1,
+  "orderInUnit": 8,
+  "standard": "STAT.DATA.A.2",
+  "difficulty": 3,
+  "prompt": "At a small company, nine employees each earn about $\\$40{,}000$ and the owner earns $\\$400{,}000$. Which statement about the ten salaries is true?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The mean is greater than the median",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "The mean is less than the median",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "The mean and the median are equal",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The median is about $\\$76{,}000$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The median only cares about the MIDDLE value. The mean adds up every dollar, including the owner's.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The median only cares about the MIDDLE value. The mean adds up every dollar, including the owner's."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $1, 1, 1, 100$. Median $= 1$. Mean $= \\frac{103}{4} = 25.75$. One huge value drags the mean up but leaves the median alone. Same idea here."
+    },
+    {
+      "level": "guide",
+      "text": "The median of ten salaries is the average of the 5th and 6th values, both about $\\$40{,}000$. Now compute the mean: $\\frac{9(40{,}000) + 400{,}000}{10}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Mean $= \\frac{760{,}000}{10} = \\$76{,}000$, median $\\approx \\$40{,}000$. The mean is greater: choice A."
+    }
+  ],
+  "explanation": [
+    "Sorted, the salaries are nine values near $\\$40{,}000$ and one at $\\$400{,}000$. The 5th and 6th values are both about $\\$40{,}000$, so the median is about $\\$40{,}000$.",
+    "Mean $= \\frac{9 \\times 40{,}000 + 400{,}000}{10} = \\frac{760{,}000}{10} = \\$76{,}000$.",
+    "The one huge salary pulls the mean far above the median. Choice A. (Choice D mixes up the two: $\\$76{,}000$ is the mean.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Shape tells the story",
+      "steps": [
+        "Nine salaries pile up on the left and one sits far to the right: skewed right.",
+        "In a right-skewed distribution the mean is pulled toward the tail, so mean $>$ median.",
+        "That matches choice A without computing a thing."
+      ]
+    },
+    {
+      "title": "The trap in choice D",
+      "steps": [
+        "$\\$76{,}000$ is a real number from this problem, which makes D tempting.",
+        "But it is the MEAN. Nobody at the company earns anywhere near $\\$76{,}000$, which is exactly why the median is the better \"typical salary\" here.",
+        "The median stays at about $\\$40{,}000$, so D is false and A is true."
+      ]
+    }
+  ],
+  "tags": [
+    "mean",
+    "median",
+    "skew",
+    "resistance",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

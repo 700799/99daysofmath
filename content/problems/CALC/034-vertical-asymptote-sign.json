@@ -1,0 +1,71 @@
+{
+  "id": "CALC.034",
+  "domain": "CALC",
+  "unit": 4,
+  "orderInUnit": 4,
+  "standard": "CALC.LIM.B.2",
+  "difficulty": 2,
+  "prompt": "Let $f(x) = \\frac{x + 1}{x - 3}$. What is $\\lim_{x \\to 3^+} f(x)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$+\\infty$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$-\\infty$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$0$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$4$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "As $x \\to 3$ the bottom goes to $0$ but the top goes to $4$. That is $\\frac{4}{\\text{tiny}}$ — enormous. The only question is the SIGN.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "As $x \\to 3$ the bottom goes to $0$ but the top goes to $4$. That is $\\frac{4}{\\text{tiny}}$ — enormous. The only question is the SIGN."
+    },
+    {
+      "level": "guide",
+      "text": "From the right, $x$ is a bit more than $3$, so $x - 3$ is a tiny POSITIVE number. Positive top over tiny positive bottom gives what?"
+    },
+    {
+      "level": "reveal",
+      "text": "Positive and huge: $\\lim_{x \\to 3^+} f(x) = +\\infty$."
+    }
+  ],
+  "explanation": [
+    "At $x = 3.01$: $\\frac{4.01}{0.01} = 401$. At $x = 3.001$: $\\frac{4.001}{0.001} = 4001$.",
+    "The top stays near $4$ (positive) while the bottom is a positive number shrinking to $0$.",
+    "The quotient grows without bound in the positive direction: $+\\infty$. (From the left it would be $-\\infty$.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sign chart in one line",
+      "steps": [
+        "Write the sign of each factor just to the right of $3$: top $(x + 1)$ is $+$, bottom $(x - 3)$ is $+$.",
+        "$\\frac{+}{+} = +$, and the bottom is heading to $0$, so the size is infinite.",
+        "Infinite plus sign: $+\\infty$. Do the same just left of $3$ and the bottom flips to $-$, giving $-\\infty$."
+      ]
+    }
+  ],
+  "tags": [
+    "infinite-limit",
+    "vertical-asymptote",
+    "one-sided-limit"
+  ],
+  "estimatedSeconds": 50
+}

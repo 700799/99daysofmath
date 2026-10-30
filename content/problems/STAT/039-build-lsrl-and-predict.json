@@ -1,0 +1,63 @@
+{
+  "id": "STAT.039",
+  "domain": "STAT",
+  "unit": 4,
+  "orderInUnit": 9,
+  "standard": "STAT.DATA.C.4",
+  "difficulty": 3,
+  "prompt": "For a sample of cafés, daily foot traffic (hundreds of people) has $\\bar{x} = 10$, $s_x = 2$; daily sales (hundreds of dollars) has $\\bar{y} = 50$, $s_y = 8$; and $r = 0.75$. Use the least-squares line to predict sales (in hundreds of dollars) for a café with foot traffic $x = 12$.",
+  "answerType": "numeric",
+  "primaryAnswer": "56",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Build the line first: slope $b = r \\frac{s_y}{s_x}$, and the line always passes through $(\\bar{x}, \\bar{y})$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Build the line first: slope $b = r \\frac{s_y}{s_x}$, and the line always passes through $(\\bar{x}, \\bar{y})$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if $b = 1$ and the line passes through $(10, 50)$, then $a = 50 - 1(10) = 40$ and at $x = 12$ you get $52$. Same two steps with $b = 3$ here."
+    },
+    {
+      "level": "guide",
+      "text": "$b = 0.75 \\times \\frac{8}{2} = 3$. Intercept $a = \\bar{y} - b\\bar{x} = 50 - 3(10) = 20$. Now plug $x = 12$ into $\\hat{y} = 20 + 3x$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\hat{y} = 20 + 3(12) = 56$, so about $\\$5{,}600$ in sales."
+    }
+  ],
+  "explanation": [
+    "Slope: $b = r \\dfrac{s_y}{s_x} = 0.75 \\times \\dfrac{8}{2} = 3$.",
+    "Intercept: the line passes through $(\\bar{x}, \\bar{y}) = (10, 50)$, so $a = 50 - 3(10) = 20$ and $\\hat{y} = 20 + 3x$.",
+    "At $x = 12$: $\\hat{y} = 20 + 36 = 56$ hundred dollars."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Move from the mean point",
+      "steps": [
+        "$x = 12$ is 2 units above $\\bar{x} = 10$.",
+        "Each unit of $x$ adds 3 to the prediction, so 2 units add 6.",
+        "Start at $\\bar{y} = 50$ and add 6: 56. No intercept needed."
+      ]
+    },
+    {
+      "title": "The trap: forgetting $r$ in the slope",
+      "steps": [
+        "Using $\\frac{s_y}{s_x} = 4$ as the slope gives $\\hat{y} = 10 + 4x$ and a prediction of 58.",
+        "But the slope must be scaled by $r = 0.75$: $b = 3$, not 4.",
+        "With the correct slope the prediction is 56."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "prediction",
+    "summary-statistics",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

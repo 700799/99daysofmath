@@ -1,0 +1,49 @@
+{
+  "id": "CALC.011",
+  "domain": "CALC",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "CALC.LIM.A.2",
+  "difficulty": 1,
+  "prompt": "Find $\\lim_{x \\to 2} (x^2 + 3x - 1)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "9",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A polynomial has no holes, no jumps and no breaks. For a limit like that you can just substitute.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A polynomial has no holes, no jumps and no breaks. For a limit like that you can just substitute."
+    },
+    {
+      "level": "guide",
+      "text": "Put $x = 2$ into $x^2 + 3x - 1$: that is $4 + 6 - 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 + 6 - 1 = 9$."
+    }
+  ],
+  "explanation": [
+    "Polynomials are continuous everywhere, so the limit equals the value.",
+    "Substitute $x = 2$: $2^2 + 3(2) - 1 = 4 + 6 - 1$.",
+    "$= 9$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the limit laws one at a time",
+      "steps": [
+        "The limit of a sum is the sum of the limits: $\\lim x^2 + \\lim 3x - \\lim 1$.",
+        "Each piece: $\\lim_{x \\to 2} x^2 = 4$, $\\lim_{x \\to 2} 3x = 6$, $\\lim_{x \\to 2} 1 = 1$.",
+        "$4 + 6 - 1 = 9$. The laws are exactly why substitution is allowed."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "substitution",
+    "limit-laws"
+  ],
+  "estimatedSeconds": 30
+}

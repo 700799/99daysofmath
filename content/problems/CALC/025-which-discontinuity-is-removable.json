@@ -1,0 +1,49 @@
+{
+  "id": "CALC.025",
+  "domain": "CALC",
+  "unit": 3,
+  "orderInUnit": 5,
+  "standard": "CALC.LIM.B.1",
+  "difficulty": 2,
+  "prompt": "Let $f(x) = \\frac{x + 2}{x^2 - 4}$. The function is discontinuous at two $x$-values. At which one is the discontinuity REMOVABLE (a hole)?",
+  "answerType": "numeric",
+  "primaryAnswer": "-2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Factor the bottom. A factor that cancels with the top makes a hole; one that does not cancel makes a vertical asymptote.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Factor the bottom. A factor that cancels with the top makes a hole; one that does not cancel makes a vertical asymptote."
+    },
+    {
+      "level": "guide",
+      "text": "$x^2 - 4 = (x - 2)(x + 2)$. Which of those factors also appears on top?"
+    },
+    {
+      "level": "reveal",
+      "text": "$(x + 2)$ cancels, leaving $\\frac{1}{x - 2}$. The hole is at $x = -2$; the asymptote is at $x = 2$."
+    }
+  ],
+  "explanation": [
+    "Factor: $f(x) = \\frac{x + 2}{(x - 2)(x + 2)}$.",
+    "The $(x + 2)$ cancels, so near $x = -2$ the function looks like $\\frac{1}{x - 2}$, which heads to $-\\frac{1}{4}$. A finite limit with no value is a hole — removable.",
+    "The $(x - 2)$ does not cancel, so $x = 2$ is a vertical asymptote — not removable."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test with nearby numbers",
+      "steps": [
+        "Near $x = -2$: $f(-2.01) \\approx \\frac{1}{-4.01} \\approx -0.249$ and $f(-1.99) \\approx -0.251$. Tame — a hole.",
+        "Near $x = 2$: $f(1.99) = \\frac{3.99}{-0.0399} = -100$ and $f(2.01) = \\frac{4.01}{0.0401} = 100$. Wild — an asymptote.",
+        "Only the tame one can be patched by filling in a single point."
+      ]
+    }
+  ],
+  "tags": [
+    "continuity",
+    "removable",
+    "asymptote"
+  ],
+  "estimatedSeconds": 55
+}

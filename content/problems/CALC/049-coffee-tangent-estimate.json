@@ -1,0 +1,55 @@
+{
+  "id": "CALC.049",
+  "domain": "CALC",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "CALC.DER.A.1",
+  "difficulty": 3,
+  "prompt": "The temperature of a cup of coffee $t$ minutes after it is poured is $T(t)$ degrees Celsius. You know $T(5) = 70$ and $T'(5) = -3$. Use the tangent line at $t = 5$ to estimate the temperature at $t = 7$ minutes.",
+  "answerType": "numeric",
+  "primaryAnswer": "64",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$T'(5) = -3$ means: at the $5$-minute mark, the coffee is cooling at about $3$ degrees per minute.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$T'(5) = -3$ means: at the $5$-minute mark, the coffee is cooling at about $3$ degrees per minute."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if something is at $100$ and dropping $2$ per minute, then $1$ minute later it is about $98$. Here the drop is $3$ per minute and the gap is $2$ minutes."
+    },
+    {
+      "level": "guide",
+      "text": "Tangent line: $T(t) \\approx T(5) + T'(5)(t - 5) = 70 - 3(t - 5)$. Put in $t = 7$."
+    },
+    {
+      "level": "reveal",
+      "text": "$70 - 3(2) = 64$ degrees."
+    }
+  ],
+  "explanation": [
+    "The tangent line at $t = 5$ is $L(t) = T(5) + T'(5)(t - 5) = 70 - 3(t - 5)$.",
+    "At $t = 7$: $L(7) = 70 - 3 \\cdot 2 = 64$.",
+    "So the coffee is about $64$ degrees at $7$ minutes. It is an estimate: the real cooling rate slows as the coffee nears room temperature, so the true value is a little above $64$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Units tell the story",
+      "steps": [
+        "$T'(5)$ has units of degrees per minute, so multiplying by $2$ minutes gives degrees: $-3 \\times 2 = -6$ degrees.",
+        "Start at $70$ and apply the change: $70 - 6 = 64$.",
+        "A derivative is a rate, and rate times time is change — that is all a tangent-line estimate is."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent-line",
+    "local-linearity",
+    "rate-of-change",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

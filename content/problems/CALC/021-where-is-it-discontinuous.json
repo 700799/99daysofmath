@@ -1,0 +1,48 @@
+{
+  "id": "CALC.021",
+  "domain": "CALC",
+  "unit": 3,
+  "orderInUnit": 1,
+  "standard": "CALC.LIM.B.1",
+  "difficulty": 1,
+  "prompt": "Let $f(x) = \\frac{x^2 - 1}{x - 1}$. At which $x$-value is $f$ NOT continuous?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A function cannot be continuous at a point where it is not even defined. Where is the bottom zero?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A function cannot be continuous at a point where it is not even defined. Where is the bottom zero?"
+    },
+    {
+      "level": "guide",
+      "text": "Set $x - 1 = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 1$. The function is undefined there, so it is not continuous at $x = 1$ (it has a hole)."
+    }
+  ],
+  "explanation": [
+    "Continuity at $a$ requires, first of all, that $f(a)$ exists.",
+    "The denominator $x - 1$ is zero at $x = 1$, so $f(1)$ does not exist.",
+    "Everywhere else $f(x) = x + 1$, a smooth line. The only break is at $x = 1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "See the hole",
+      "steps": [
+        "Factor: $\\frac{(x - 1)(x + 1)}{x - 1} = x + 1$ for $x \\ne 1$.",
+        "So the graph is the line $y = x + 1$ with one point punched out, at $(1, 2)$.",
+        "The limit at $1$ is $2$, but the value is missing — a removable discontinuity."
+      ]
+    }
+  ],
+  "tags": [
+    "continuity",
+    "removable"
+  ],
+  "estimatedSeconds": 30
+}

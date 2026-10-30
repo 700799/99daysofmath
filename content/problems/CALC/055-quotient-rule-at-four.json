@@ -1,0 +1,48 @@
+{
+  "id": "CALC.055",
+  "domain": "CALC",
+  "unit": 6,
+  "orderInUnit": 5,
+  "standard": "CALC.DER.A.2",
+  "difficulty": 2,
+  "prompt": "Let $g(x) = \\frac{2x + 1}{x - 3}$. Find $g'(4)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "-7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Quotient rule: $\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$. The order on top matters.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Quotient rule: $\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$. The order on top matters."
+    },
+    {
+      "level": "guide",
+      "text": "$u = 2x + 1$, $u' = 2$; $v = x - 3$, $v' = 1$. So $g'(x) = \\frac{2(x - 3) - (2x + 1)(1)}{(x - 3)^2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "The top simplifies to $-7$, so $g'(x) = \\frac{-7}{(x - 3)^2}$ and $g'(4) = \\frac{-7}{1} = -7$."
+    }
+  ],
+  "explanation": [
+    "Top of the quotient rule: $u'v - uv' = 2(x - 3) - (2x + 1) = 2x - 6 - 2x - 1 = -7$.",
+    "So $g'(x) = \\frac{-7}{(x - 3)^2}$.",
+    "At $x = 4$: $\\frac{-7}{(1)^2} = -7$. The graph is falling steeply just right of its asymptote at $x = 3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Rewrite, then differentiate",
+      "steps": [
+        "Long-divide: $\\frac{2x + 1}{x - 3} = 2 + \\frac{7}{x - 3}$.",
+        "The constant $2$ has derivative $0$, and $\\frac{7}{x - 3} = 7(x - 3)^{-1}$ has derivative $-7(x - 3)^{-2}$.",
+        "At $x = 4$: $-7 \\cdot 1 = -7$. Same answer, no quotient rule needed."
+      ]
+    }
+  ],
+  "tags": [
+    "quotient-rule",
+    "rational-function"
+  ],
+  "estimatedSeconds": 60
+}

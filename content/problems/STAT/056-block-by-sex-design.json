@@ -1,0 +1,71 @@
+{
+  "id": "STAT.056",
+  "domain": "STAT",
+  "unit": 6,
+  "orderInUnit": 6,
+  "standard": "STAT.COLL.B.1",
+  "difficulty": 2,
+  "prompt": "Researchers testing a weight-loss program expect men and women to respond differently. They first split the $80$ volunteers into a men's group and a women's group, then randomly assign the program or a control within each group. What is this design called?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Completely randomized design",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Randomized block design",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Stratified random sample",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Matched pairs design",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Grouping subjects by something you expect to matter, BEFORE randomizing, has a specific name in experiments.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Grouping subjects by something you expect to matter, BEFORE randomizing, has a specific name in experiments."
+    },
+    {
+      "level": "guide",
+      "text": "The groups (men, women) are blocks. Random assignment happens separately inside each block."
+    },
+    {
+      "level": "reveal",
+      "text": "That is a randomized block design: choice B."
+    }
+  ],
+  "explanation": [
+    "Sex is expected to affect weight loss, so the researchers block on it: men form one block, women another.",
+    "Inside each block, subjects are randomly assigned to the program or the control.",
+    "Blocking removes the sex-to-sex variation from the comparison, making the treatment effect easier to see. Choice B. (Stratifying is the sampling cousin of blocking, but this is an experiment.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why not completely randomized",
+      "steps": [
+        "A completely randomized design would mix everyone together and randomize once.",
+        "By chance it might put more women in the program group, muddying the comparison.",
+        "Blocking guarantees a fair men-vs-men and women-vs-women comparison."
+      ]
+    }
+  ],
+  "tags": [
+    "blocking",
+    "experimental-design",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

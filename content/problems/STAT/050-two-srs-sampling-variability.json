@@ -1,0 +1,85 @@
+{
+  "id": "STAT.050",
+  "domain": "STAT",
+  "unit": 5,
+  "orderInUnit": 10,
+  "standard": "STAT.COLL.A.2",
+  "difficulty": 3,
+  "prompt": "Two students each take a separate SRS of $100$ students from the same school and ask whether they bring lunch from home. One gets $58$ percent \"yes\"; the other gets $64$ percent. What best explains the difference?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "At least one of the samples must have been biased",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Sampling variability: different random samples naturally give different statistics",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "The population proportion changed between the two samples",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "A sample of $100$ is too small to produce a meaningful percent",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A sample statistic is NOT the population parameter. Each new random sample gives a slightly different number.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A sample statistic is NOT the population parameter. Each new random sample gives a slightly different number."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: flip a fair coin 10 times twice. You might get 4 heads, then 6 heads. Neither coin is unfair; that is just chance. Same thing with samples of students."
+    },
+    {
+      "level": "guide",
+      "text": "Both samples were random, so bias is not the natural explanation. What word describes chance differences from sample to sample?"
+    },
+    {
+      "level": "reveal",
+      "text": "The difference is ordinary sampling variability: choice B."
+    }
+  ],
+  "explanation": [
+    "Both are proper SRSs from the same population, so both are unbiased. Unbiased does not mean exact.",
+    "Each sample of $100$ catches a different mix of students by chance, so the sample percent bounces around the true value. A gap of $6$ points between two samples of $100$ is very ordinary.",
+    "This chance-to-chance variation is sampling variability. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "How much bounce to expect",
+      "steps": [
+        "For a proportion near 0.6 with $n = 100$, the typical sample-to-sample spread is about $\\sqrt{\\frac{0.6 \\cdot 0.4}{100}} \\approx 0.05$, or 5 points.",
+        "So 58 and 64 are each about one of those steps from a true value near 61 percent.",
+        "Later units turn this into a standard error and a margin of error."
+      ]
+    },
+    {
+      "title": "Bias vs variability",
+      "steps": [
+        "Bias is a consistent lean in one direction caused by the method; random sampling removes it.",
+        "Variability is scatter from sample to sample; larger samples shrink it but never erase it.",
+        "Here the method is fine, so what remains is variability, not bias."
+      ]
+    }
+  ],
+  "tags": [
+    "sampling-variability",
+    "statistic",
+    "parameter",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

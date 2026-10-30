@@ -1,0 +1,50 @@
+{
+  "id": "STAT.072",
+  "domain": "STAT",
+  "unit": 8,
+  "orderInUnit": 2,
+  "standard": "STAT.PROB.B.1",
+  "difficulty": 1,
+  "prompt": "At a pizza shop, the number of toppings $X$ a customer orders has this distribution: $P(X = 1) = 0.2$, $P(X = 2) = 0.5$, $P(X = 3) = 0.3$. Find the mean $\\mu_X$. Round to the nearest tenth.",
+  "answerType": "numeric",
+  "primaryAnswer": "2.1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "The mean of a discrete random variable is $\\sum x \\cdot P(x)$ — value times probability, summed.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The mean of a discrete random variable is $\\sum x \\cdot P(x)$ — value times probability, summed."
+    },
+    {
+      "level": "guide",
+      "text": "Compute $1(0.2) + 2(0.5) + 3(0.3)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.2 + 1.0 + 0.9 = 2.1$ toppings."
+    }
+  ],
+  "explanation": [
+    "Multiply each value by its probability: $1(0.2) = 0.2$, $2(0.5) = 1.0$, $3(0.3) = 0.9$.",
+    "Add: $0.2 + 1.0 + 0.9 = 2.1$.",
+    "So $\\mu_X = 2.1$ toppings. It need not be a whole number — it is a long-run average."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture 10 customers",
+      "steps": [
+        "Among 10 typical customers, 2 order one topping, 5 order two, 3 order three.",
+        "Total toppings: $2 + 10 + 9 = 21$.",
+        "Average: $21 \\div 10 = 2.1$ toppings per customer."
+      ]
+    }
+  ],
+  "tags": [
+    "random-variable",
+    "expected-value",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

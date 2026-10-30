@@ -1,0 +1,51 @@
+{
+  "id": "STAT.115",
+  "domain": "STAT",
+  "unit": 12,
+  "orderInUnit": 5,
+  "standard": "STAT.INF.B.1",
+  "difficulty": 2,
+  "prompt": "A two-sided test of $H_0: p = 0.4$ versus $H_a: p \\ne 0.4$ produces a test statistic of $z = 2.0$. Given that $P(Z > 2.0) = 0.0228$, what is the $p$-value? Round to four decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.0456",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "A two-sided alternative counts BOTH tails: results as extreme as $2.0$ in either direction.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A two-sided alternative counts BOTH tails: results as extreme as $2.0$ in either direction."
+    },
+    {
+      "level": "guide",
+      "text": "$p\\text{-value} = P(Z > 2.0) + P(Z < -2.0)$, and the normal curve is symmetric."
+    },
+    {
+      "level": "reveal",
+      "text": "$2 \\times 0.0228 = 0.0456$."
+    }
+  ],
+  "explanation": [
+    "The $p$-value is the probability, assuming $H_0$, of a statistic at least as extreme as the one observed.",
+    "For $H_a: p \\ne 0.4$, \"as extreme\" means $|z| \\ge 2.0$ — the upper tail AND the lower tail.",
+    "By symmetry each tail is $0.0228$, so the $p$-value is $0.0456$. At $\\alpha = 0.05$ this would lead to rejecting $H_0$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "One-sided vs two-sided",
+      "steps": [
+        "If the alternative had been $p > 0.4$, the $p$-value would be just the upper tail: $0.0228$.",
+        "The $\\ne$ alternative was chosen BEFORE seeing the data, so it must pay for both directions.",
+        "Doubling gives $0.0456$ — twice as hard to reach significance."
+      ]
+    }
+  ],
+  "tags": [
+    "significance-test",
+    "p-value",
+    "two-sided",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

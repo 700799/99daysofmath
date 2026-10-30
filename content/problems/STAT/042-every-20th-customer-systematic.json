@@ -1,0 +1,71 @@
+{
+  "id": "STAT.042",
+  "domain": "STAT",
+  "unit": 5,
+  "orderInUnit": 2,
+  "standard": "STAT.COLL.A.1",
+  "difficulty": 1,
+  "prompt": "A store manager picks a random starting customer, then surveys every $20$th customer who walks in after that. What sampling method is this?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Simple random sample",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Stratified random sample",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Systematic random sample",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "Convenience sample",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Look for the pattern: a random start, then a fixed SKIP.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Look for the pattern: a random start, then a fixed SKIP."
+    },
+    {
+      "level": "guide",
+      "text": "A fixed interval, like every 20th, is the signature of one specific method."
+    },
+    {
+      "level": "reveal",
+      "text": "Random start plus a fixed interval is a systematic random sample: choice C."
+    }
+  ],
+  "explanation": [
+    "The manager chooses a random starting point and then follows a fixed rule: every 20th customer.",
+    "That \"every $k$th\" pattern is a systematic sample.",
+    "It is not an SRS, because two customers who arrive back to back can never both be chosen. Choice C."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Rule out the others",
+      "steps": [
+        "Stratified would split customers into groups (like morning vs evening shoppers) and sample from each.",
+        "Convenience would just grab whoever is nearest the door.",
+        "A simple random sample gives EVERY set of customers the same chance, which a fixed skip does not."
+      ]
+    }
+  ],
+  "tags": [
+    "sampling-methods",
+    "systematic",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

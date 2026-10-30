@@ -1,0 +1,85 @@
+{
+  "id": "STAT.058",
+  "domain": "STAT",
+  "unit": 6,
+  "orderInUnit": 8,
+  "standard": "STAT.COLL.B.2",
+  "difficulty": 3,
+  "prompt": "A sleep app company recruits $300$ VOLUNTEERS and randomly assigns half to use the app and half to a placebo app. App users fall asleep significantly faster. What conclusion is justified?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The app causes faster sleep for all adults, since the result was significant",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "The app caused faster sleep for these volunteers, but the result cannot be generalized to all adults",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "There is only an association, because volunteers were used",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "No conclusion is possible without a random sample",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two separate questions: Can we claim CAUSE? Can we GENERALIZE? Each depends on a different kind of randomness.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two separate questions: Can we claim CAUSE? Can we GENERALIZE? Each depends on a different kind of randomness."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: random ASSIGNMENT lets you say \"the treatment caused it.\" Random SELECTION lets you say \"and that holds for the whole population.\" Check which one this study has."
+    },
+    {
+      "level": "guide",
+      "text": "Treatments were randomly assigned (yes to cause). Subjects were volunteers, not a random sample of adults (no to generalizing)."
+    },
+    {
+      "level": "reveal",
+      "text": "Cause for these volunteers, but no generalization: choice B."
+    }
+  ],
+  "explanation": [
+    "Random assignment balances everything else between the two groups, so a significant difference can be attributed to the app: a causal claim is justified for the subjects studied.",
+    "The subjects were volunteers, not randomly selected from all adults. Volunteers for a sleep study may differ from everyone else, so the result should not be extended to all adults.",
+    "Choice B captures both halves. Choice C ignores the random assignment; choice D ignores that experiments can still show cause without a random sample."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The two-by-two scope table",
+      "steps": [
+        "Random assignment + random selection: cause, and generalize.",
+        "Random assignment only (this study): cause, for these subjects.",
+        "Random selection only: association, generalizable. Neither: association, for these subjects."
+      ]
+    },
+    {
+      "title": "The trap in choice A",
+      "steps": [
+        "\"Significant\" means the difference is unlikely to be due to chance in the random assignment.",
+        "It says nothing about who the subjects represent.",
+        "Statistical significance never substitutes for random selection."
+      ]
+    }
+  ],
+  "tags": [
+    "scope-of-inference",
+    "random-assignment",
+    "random-selection",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

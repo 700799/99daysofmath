@@ -1,0 +1,51 @@
+{
+  "id": "STAT.076",
+  "domain": "STAT",
+  "unit": 8,
+  "orderInUnit": 6,
+  "standard": "STAT.PROB.B.2",
+  "difficulty": 2,
+  "prompt": "Daily high temperatures in a city, measured in Celsius, have standard deviation $2.5^\\circ$C. Converted to Fahrenheit with $F = 1.8C + 32$, what is the standard deviation of the Fahrenheit temperatures?",
+  "answerType": "numeric",
+  "primaryAnswer": "4.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "Adding a constant shifts every value but does not change spread. Multiplying by a constant DOES scale the spread.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Adding a constant shifts every value but does not change spread. Multiplying by a constant DOES scale the spread."
+    },
+    {
+      "level": "guide",
+      "text": "For $Y = aX + b$, $\\sigma_Y = |a| \\cdot \\sigma_X$. The $+32$ does nothing to the SD."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sigma_F = 1.8 \\times 2.5 = 4.5^\\circ$F."
+    }
+  ],
+  "explanation": [
+    "Standard deviation measures how spread out values are. Adding $32$ slides all values together and leaves the spread alone.",
+    "Multiplying by $1.8$ stretches every gap between values by $1.8$.",
+    "So $\\sigma_F = 1.8(2.5) = 4.5$ degrees Fahrenheit."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Follow two days",
+      "steps": [
+        "Suppose two days are $20^\\circ$C and $22.5^\\circ$C — one SD apart.",
+        "In Fahrenheit: $1.8(20) + 32 = 68$ and $1.8(22.5) + 32 = 72.5$.",
+        "The gap went from $2.5$ to $4.5$, so the SD did too."
+      ]
+    }
+  ],
+  "tags": [
+    "random-variable",
+    "linear-transformation",
+    "standard-deviation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

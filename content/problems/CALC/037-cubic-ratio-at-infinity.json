@@ -1,0 +1,48 @@
+{
+  "id": "CALC.037",
+  "domain": "CALC",
+  "unit": 4,
+  "orderInUnit": 7,
+  "standard": "CALC.LIM.B.2",
+  "difficulty": 2,
+  "prompt": "Find $\\lim_{x \\to \\infty} \\frac{6x^3 + x}{2x^3 - 5x^2}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Find the highest power on top and on the bottom. They match, so the answer is a ratio of leading coefficients.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the highest power on top and on the bottom. They match, so the answer is a ratio of leading coefficients."
+    },
+    {
+      "level": "guide",
+      "text": "Divide every term by $x^3$: $\\frac{6 + \\frac{1}{x^2}}{2 - \\frac{5}{x}}$."
+    },
+    {
+      "level": "reveal",
+      "text": "The small pieces vanish: $\\frac{6}{2} = 3$."
+    }
+  ],
+  "explanation": [
+    "Both top and bottom have degree $3$.",
+    "Dividing by $x^3$ leaves $\\frac{6 + 1/x^2}{2 - 5/x} \\to \\frac{6 + 0}{2 - 0}$.",
+    "The limit is $3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the $-5x^2$ does not matter",
+      "steps": [
+        "At $x = 1000$, the bottom is $2{,}000{,}000{,}000 - 5{,}000{,}000$: the $x^3$ term is $400$ times bigger than the $x^2$ term.",
+        "At $x = 1{,}000{,}000$ it is $400{,}000$ times bigger. Lower powers lose the race by a growing margin.",
+        "So only $\\frac{6x^3}{2x^3} = 3$ survives."
+      ]
+    }
+  ],
+  "tags": [
+    "limit-at-infinity",
+    "horizontal-asymptote"
+  ],
+  "estimatedSeconds": 45
+}

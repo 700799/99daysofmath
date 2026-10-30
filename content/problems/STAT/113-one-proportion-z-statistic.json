@@ -1,0 +1,51 @@
+{
+  "id": "STAT.113",
+  "domain": "STAT",
+  "unit": 12,
+  "orderInUnit": 3,
+  "standard": "STAT.INF.B.1",
+  "difficulty": 1,
+  "prompt": "A company claims half of its customers are repeat buyers. In a random sample of $100$ customers, $56$ are repeat buyers. For the test of $H_0: p = 0.5$, what is the value of the test statistic $z = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)/n}}$?",
+  "answerType": "numeric",
+  "primaryAnswer": "1.2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "Use $p_0 = 0.5$ (the null value) in the standard deviation, not $\\hat{p}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use $p_0 = 0.5$ (the null value) in the standard deviation, not $\\hat{p}$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sqrt{0.5 \\times 0.5 / 100} = 0.05$. Then $z = \\frac{0.56 - 0.50}{0.05}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$z = 0.06 / 0.05 = 1.2$."
+    }
+  ],
+  "explanation": [
+    "$\\hat{p} = 56/100 = 0.56$ and $p_0 = 0.5$.",
+    "Under $H_0$, the SD of $\\hat{p}$ is $\\sqrt{(0.5)(0.5)/100} = 0.05$.",
+    "$z = (0.56 - 0.50)/0.05 = 1.2$: the sample proportion is 1.2 standard deviations above the claimed value."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "In counts",
+      "steps": [
+        "Under $H_0$, you expect 50 repeat buyers with SD $\\sqrt{100(0.5)(0.5)} = 5$.",
+        "You observed 56, which is 6 above 50.",
+        "$6/5 = 1.2$ standard deviations — the same $z$."
+      ]
+    }
+  ],
+  "tags": [
+    "significance-test",
+    "z-test",
+    "proportion",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

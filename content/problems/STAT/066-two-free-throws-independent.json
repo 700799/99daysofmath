@@ -1,0 +1,52 @@
+{
+  "id": "STAT.066",
+  "domain": "STAT",
+  "unit": 7,
+  "orderInUnit": 6,
+  "standard": "STAT.PROB.A.2",
+  "difficulty": 2,
+  "prompt": "A basketball player makes $80$ percent of her free throws, and each shot is independent of the others. She shoots two free throws. What is the probability she makes BOTH?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.64",
+  "alternativeAnswers": [
+    "64%",
+    "16/25"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Independent events: the probability of both is the product of the probabilities.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Independent events: the probability of both is the product of the probabilities."
+    },
+    {
+      "level": "guide",
+      "text": "$P(\\text{make and make}) = 0.8 \\times 0.8$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.8 \\times 0.8 = 0.64$."
+    }
+  ],
+  "explanation": [
+    "Because the shots are independent, $P(A \\cap B) = P(A) \\cdot P(B)$.",
+    "$0.8 \\times 0.8 = 0.64$.",
+    "There is a $64$ percent chance she makes both."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Out of 100 trips to the line",
+      "steps": [
+        "In about 80 of 100 trips she makes the first shot.",
+        "Of those 80 trips, she makes the second in about 80 percent, which is 64 trips.",
+        "64 out of 100 is $0.64$."
+      ]
+    }
+  ],
+  "tags": [
+    "multiplication-rule",
+    "independence",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

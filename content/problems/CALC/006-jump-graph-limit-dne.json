@@ -1,0 +1,71 @@
+{
+  "id": "CALC.006",
+  "domain": "CALC",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "CALC.LIM.A.1",
+  "difficulty": 2,
+  "prompt": "On the graph of $h$, the curve to the LEFT of $x = 4$ rises toward a height of $2$, the curve to the RIGHT of $x = 4$ comes down toward a height of $5$, and there is a solid dot at $(4, 5)$. Which statement about $\\lim_{x \\to 4} h(x)$ is true?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The limit is $2$.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "The limit is $5$, because $h(4) = 5$.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "The limit does not exist, because the left-hand limit $2$ and the right-hand limit $5$ disagree.",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "The limit is $3.5$, the average of the two sides.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A two-sided limit exists only when the left side and the right side are heading to the SAME height.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A two-sided limit exists only when the left side and the right side are heading to the SAME height."
+    },
+    {
+      "level": "guide",
+      "text": "Left side heads to $2$. Right side heads to $5$. Are those the same?"
+    },
+    {
+      "level": "reveal",
+      "text": "They differ, so the limit does not exist. The solid dot at $5$ is $h(4)$, which has no vote."
+    }
+  ],
+  "explanation": [
+    "From the left, $h(x) \\to 2$. From the right, $h(x) \\to 5$.",
+    "A limit needs both sides to agree. $2 \\ne 5$, so $\\lim_{x \\to 4} h(x)$ does not exist.",
+    "The value $h(4) = 5$ is a separate fact. Limits never average the two sides, and they never defer to the dot."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two hikers on a cliff",
+      "steps": [
+        "Picture one hiker walking in from the left: she ends up at height $2$.",
+        "Another walks in from the right and ends up at height $5$.",
+        "They never meet — that is a jump, and a jump means no two-sided limit."
+      ]
+    }
+  ],
+  "tags": [
+    "one-sided-limit",
+    "jump",
+    "graph"
+  ],
+  "estimatedSeconds": 50
+}

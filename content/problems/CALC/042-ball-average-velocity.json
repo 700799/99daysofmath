@@ -1,0 +1,49 @@
+{
+  "id": "CALC.042",
+  "domain": "CALC",
+  "unit": 5,
+  "orderInUnit": 2,
+  "standard": "CALC.DER.A.1",
+  "difficulty": 1,
+  "prompt": "A ball is tossed upward and its height after $t$ seconds is $h(t) = 40t - 16t^2$ feet. What is the ball's average velocity, in feet per second, over the first second (from $t = 0$ to $t = 1$)?",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Average velocity is change in height divided by change in time.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Average velocity is change in height divided by change in time."
+    },
+    {
+      "level": "guide",
+      "text": "$h(0) = 0$ and $h(1) = 40 - 16 = 24$. Divide the change in height by $1$ second."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{24 - 0}{1 - 0} = 24$ feet per second."
+    }
+  ],
+  "explanation": [
+    "$h(1) = 40(1) - 16(1)^2 = 24$ feet, and $h(0) = 0$.",
+    "Average velocity $= \\frac{h(1) - h(0)}{1 - 0} = \\frac{24}{1}$.",
+    "$= 24$ ft/s. The ball started faster than that and slowed down; $24$ is the average over the whole second."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Average versus instant",
+      "steps": [
+        "At $t = 0$ the ball leaves the hand at $40$ ft/s (the coefficient of $t$).",
+        "By $t = 1$ gravity has cut its speed to $8$ ft/s.",
+        "The average of a steadily changing speed is halfway: $\\frac{40 + 8}{2} = 24$ ft/s. That matches because $h$ is quadratic, so the velocity changes at a constant rate."
+      ]
+    }
+  ],
+  "tags": [
+    "average-rate-of-change",
+    "velocity",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

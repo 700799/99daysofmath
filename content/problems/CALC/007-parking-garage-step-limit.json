@@ -1,0 +1,49 @@
+{
+  "id": "CALC.007",
+  "domain": "CALC",
+  "unit": 1,
+  "orderInUnit": 7,
+  "standard": "CALC.LIM.A.1",
+  "difficulty": 2,
+  "prompt": "A parking garage charges 4 dollars for any part of the first hour, 8 dollars for any part of the second hour, and 12 dollars for any part of the third hour. So the cost $C(t)$, in dollars, is $4$ for $0 < t \\le 1$, $8$ for $1 < t \\le 2$ and $12$ for $2 < t \\le 3$. Find $\\lim_{t \\to 2^+} C(t)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The $2^+$ means \"a little MORE than 2 hours\" — think $2.01$ hours, $2.001$ hours.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The $2^+$ means \"a little MORE than 2 hours\" — think $2.01$ hours, $2.001$ hours."
+    },
+    {
+      "level": "guide",
+      "text": "A stay of $2.01$ hours falls in which price band? Check $2 < 2.01 \\le 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "Any stay just over $2$ hours costs $12$ dollars, so $\\lim_{t \\to 2^+} C(t) = 12$."
+    }
+  ],
+  "explanation": [
+    "Coming from the right means times slightly bigger than $2$, such as $2.01$ or $2.0001$.",
+    "Those all land in the band $2 < t \\le 3$, where the cost is $12$.",
+    "So the right-hand limit is $12$. Notice $C(2) = 8$: staying exactly two hours is cheaper than staying one second longer."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Stand on the step",
+      "steps": [
+        "Draw the graph: flat steps at heights $4$, $8$ and $12$, each step a solid dot on its right end and an open circle on its left end.",
+        "Approaching $t = 2$ from the right, you are on the $12$ step. Approaching from the left, you are on the $8$ step.",
+        "Right-hand limit $12$, left-hand limit $8$, two-sided limit: none. Step functions jump."
+      ]
+    }
+  ],
+  "tags": [
+    "one-sided-limit",
+    "step-function",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

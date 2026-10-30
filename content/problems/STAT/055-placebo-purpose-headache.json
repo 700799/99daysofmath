@@ -1,0 +1,72 @@
+{
+  "id": "STAT.055",
+  "domain": "STAT",
+  "unit": 6,
+  "orderInUnit": 5,
+  "standard": "STAT.COLL.B.1",
+  "difficulty": 2,
+  "prompt": "In a trial of a new headache pill, half the subjects receive the pill and half receive an identical-looking sugar pill, and no subject knows which they got. What is the main purpose of the sugar pill?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "To cure headaches more cheaply",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "So that both groups experience the same expectation of relief, letting the pill's real effect be separated from the placebo effect",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "To make the experiment take less time",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "To increase the sample size",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "People often feel better just because they believe they were treated. That is the placebo effect.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "People often feel better just because they believe they were treated. That is the placebo effect."
+    },
+    {
+      "level": "guide",
+      "text": "If only one group took a pill, feeling better could come from belief alone. Give everyone a pill so belief is equal in both groups."
+    },
+    {
+      "level": "reveal",
+      "text": "The sugar pill equalizes expectations so any difference is due to the medicine: choice B."
+    }
+  ],
+  "explanation": [
+    "Subjects who think they are being treated often report improvement even from a fake treatment: the placebo effect.",
+    "By giving the control group an identical placebo, both groups get the same expectation. Any extra improvement in the pill group must come from the pill itself.",
+    "This is a control with blinding. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Blinding, too",
+      "steps": [
+        "Because the pills look identical and subjects do not know their group, the study is blind.",
+        "If the doctors evaluating headaches also do not know, it is double-blind, removing their expectations as well.",
+        "Placebo plus blinding is standard in good medical experiments."
+      ]
+    }
+  ],
+  "tags": [
+    "placebo",
+    "control-group",
+    "blinding",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

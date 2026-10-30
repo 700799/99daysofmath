@@ -1,0 +1,50 @@
+{
+  "id": "CALC.046",
+  "domain": "CALC",
+  "unit": 5,
+  "orderInUnit": 6,
+  "standard": "CALC.DER.A.1",
+  "difficulty": 2,
+  "prompt": "A dropped object has fallen $s(t) = 5t^2$ meters after $t$ seconds. Use the limit $\\lim_{h \\to 0} \\frac{s(2 + h) - s(2)}{h}$ to find its instantaneous velocity at $t = 2$ seconds, in meters per second.",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Instantaneous velocity is the limit of average velocities over shorter and shorter time windows starting at $t = 2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Instantaneous velocity is the limit of average velocities over shorter and shorter time windows starting at $t = 2$."
+    },
+    {
+      "level": "guide",
+      "text": "$s(2 + h) = 5(4 + 4h + h^2) = 20 + 20h + 5h^2$ and $s(2) = 20$. Subtract, then divide by $h$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{20h + 5h^2}{h} = 20 + 5h \\to 20$ m/s."
+    }
+  ],
+  "explanation": [
+    "$s(2 + h) - s(2) = 5(2 + h)^2 - 20 = 20h + 5h^2$.",
+    "Divide by $h$: $20 + 5h$.",
+    "As $h \\to 0$ the velocity is $20$ m/s."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Shrinking stopwatch windows",
+      "steps": [
+        "From $t = 2$ to $3$: $\\frac{45 - 20}{1} = 25$ m/s.",
+        "From $2$ to $2.1$: $\\frac{22.05 - 20}{0.1} = 20.5$ m/s. From $2$ to $2.01$: $20.05$ m/s.",
+        "The averages settle at $20$ m/s — the speedometer reading at the instant $t = 2$."
+      ]
+    }
+  ],
+  "tags": [
+    "instantaneous-rate",
+    "velocity",
+    "derivative-definition",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

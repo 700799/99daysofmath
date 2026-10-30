@@ -1,0 +1,49 @@
+{
+  "id": "STAT.082",
+  "domain": "STAT",
+  "unit": 9,
+  "orderInUnit": 2,
+  "standard": "STAT.PROB.C.1",
+  "difficulty": 1,
+  "prompt": "A basketball player makes $80\\%$ of her free throws, independently. In a practice session she takes $25$ free throws. What is the expected number of makes?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "For a binomial variable, the mean is simply $np$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "For a binomial variable, the mean is simply $np$."
+    },
+    {
+      "level": "guide",
+      "text": "$n = 25$ shots, $p = 0.8$. Multiply."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\mu_X = 25 \\times 0.8 = 20$ makes."
+    }
+  ],
+  "explanation": [
+    "The number of makes $X$ is binomial with $n = 25$ and $p = 0.8$.",
+    "The mean of a binomial distribution is $\\mu_X = np$.",
+    "$25 \\times 0.8 = 20$ expected makes."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Percent of the shots",
+      "steps": [
+        "She makes $80\\%$ of her shots in the long run.",
+        "$80\\%$ of 25 shots is $0.8 \\times 25 = 20$.",
+        "Some sessions she makes more, some fewer, but 20 is the long-run average."
+      ]
+    }
+  ],
+  "tags": [
+    "binomial",
+    "expected-value",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

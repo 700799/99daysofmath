@@ -1,0 +1,52 @@
+{
+  "id": "STAT.016",
+  "domain": "STAT",
+  "unit": 2,
+  "orderInUnit": 6,
+  "standard": "STAT.DATA.B.1",
+  "difficulty": 2,
+  "prompt": "Five plants in a science class are $1, 3, 5, 7$ and $9$ cm tall. What is the sample standard deviation of the heights? Round to two decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "3.16",
+  "alternativeAnswers": [
+    "3.162"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "The mean is $5$. Standard deviation measures the typical distance of a value from the mean.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The mean is $5$. Standard deviation measures the typical distance of a value from the mean."
+    },
+    {
+      "level": "guide",
+      "text": "Square each deviation: $(-4)^2, (-2)^2, 0^2, 2^2, 4^2 = 16, 4, 0, 4, 16$. Add them, divide by $n - 1 = 4$, then take the square root."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{40}{4} = 10$, and $\\sqrt{10} \\approx 3.16$ cm."
+    }
+  ],
+  "explanation": [
+    "Mean $= \\frac{1 + 3 + 5 + 7 + 9}{5} = 5$.",
+    "Deviations $-4, -2, 0, 2, 4$ square to $16, 4, 0, 4, 16$, which sum to $40$.",
+    "Sample variance $= \\frac{40}{5 - 1} = 10$, so $s = \\sqrt{10} \\approx 3.16$ cm."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why divide by 4 and not 5",
+      "steps": [
+        "These five plants are a sample, and dividing by $n - 1$ makes the sample variance an unbiased estimate of the population variance.",
+        "Dividing by 5 would give $\\sqrt{8} \\approx 2.83$, the population SD — a different (and here, wrong) answer.",
+        "AP Statistics uses $s = \\sqrt{\\frac{\\sum (x - \\bar{x})^2}{n - 1}}$ for sample data: 3.16."
+      ]
+    }
+  ],
+  "tags": [
+    "standard-deviation",
+    "variance",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

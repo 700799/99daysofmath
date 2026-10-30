@@ -1,0 +1,53 @@
+{
+  "id": "STAT.017",
+  "domain": "STAT",
+  "unit": 2,
+  "orderInUnit": 7,
+  "standard": "STAT.DATA.B.2",
+  "difficulty": 2,
+  "prompt": "A boxplot of the pages read by a book club last month has five-number summary $12, 18, 24, 31, 40$ (min, $Q_1$, median, $Q_3$, max). What percent of the members read between $18$ and $31$ pages?",
+  "answerType": "numeric",
+  "primaryAnswer": "50",
+  "alternativeAnswers": [
+    "50%",
+    "0.5"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$18$ is $Q_1$ and $31$ is $Q_3$. Those are the edges of the BOX.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$18$ is $Q_1$ and $31$ is $Q_3$. Those are the edges of the BOX."
+    },
+    {
+      "level": "guide",
+      "text": "The box always holds the middle half of the data, no matter how wide or narrow it looks."
+    },
+    {
+      "level": "reveal",
+      "text": "From $Q_1$ to $Q_3$ is $50$ percent of the members."
+    }
+  ],
+  "explanation": [
+    "$Q_1 = 18$ has about $25$ percent of the data below it; $Q_3 = 31$ has about $75$ percent below it.",
+    "Between them lies $75 - 25 = 50$ percent of the data.",
+    "So about $50$ percent of the members read between $18$ and $31$ pages."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Four equal pieces",
+      "steps": [
+        "The five-number summary cuts the data into four quarters: 12 to 18, 18 to 24, 24 to 31 and 31 to 40.",
+        "Each piece holds 25 percent of the members, even though the pieces are different widths.",
+        "18 to 31 covers two pieces: $25 + 25 = 50$ percent."
+      ]
+    }
+  ],
+  "tags": [
+    "boxplot",
+    "five-number-summary",
+    "quartiles",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,49 @@
+{
+  "id": "STAT.047",
+  "domain": "STAT",
+  "unit": 5,
+  "orderInUnit": 7,
+  "standard": "STAT.COLL.A.1",
+  "difficulty": 2,
+  "prompt": "A company has $1{,}500$ employees, $900$ of them full-time and $600$ part-time. HR takes a stratified sample of $60$ employees, with the strata represented in proportion to their sizes. How many full-time employees are in the sample?",
+  "answerType": "numeric",
+  "primaryAnswer": "36",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "\"In proportion to their sizes\" means the sample has the same full-time fraction as the company.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"In proportion to their sizes\" means the sample has the same full-time fraction as the company."
+    },
+    {
+      "level": "guide",
+      "text": "Full-time fraction: $\\frac{900}{1500} = 0.6$. Apply that to the sample of $60$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.6 \\times 60 = 36$ full-time employees (and $24$ part-time)."
+    }
+  ],
+  "explanation": [
+    "Full-time employees make up $\\frac{900}{1500} = 60$ percent of the company.",
+    "A proportional stratified sample keeps that share: $60$ percent of $60$ is $36$.",
+    "So $36$ full-time and $24$ part-time employees are sampled."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use a sampling rate",
+      "steps": [
+        "The overall rate is $\\frac{60}{1500} = \\frac{1}{25}$: one employee in every 25.",
+        "Apply it to the full-time stratum: $\\frac{900}{25} = 36$.",
+        "Check the part-timers: $\\frac{600}{25} = 24$, and $36 + 24 = 60$."
+      ]
+    }
+  ],
+  "tags": [
+    "stratified",
+    "proportional-allocation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

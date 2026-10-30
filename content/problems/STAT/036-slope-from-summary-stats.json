@@ -1,0 +1,50 @@
+{
+  "id": "STAT.036",
+  "domain": "STAT",
+  "unit": 4,
+  "orderInUnit": 6,
+  "standard": "STAT.DATA.C.4",
+  "difficulty": 2,
+  "prompt": "For a set of houses, square footage (in hundreds of square feet) has standard deviation $s_x = 4$ and price (in thousands of dollars) has $s_y = 10$. The correlation is $r = 0.8$. What is the slope of the least-squares regression line for predicting price from size?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The slope formula uses the correlation and the two standard deviations: $b = r \\cdot \\frac{s_y}{s_x}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The slope formula uses the correlation and the two standard deviations: $b = r \\cdot \\frac{s_y}{s_x}$."
+    },
+    {
+      "level": "guide",
+      "text": "$b = 0.8 \\times \\frac{10}{4}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$b = 0.8 \\times 2.5 = 2$: each extra $100$ square feet adds about $\\$2{,}000$ to the predicted price."
+    }
+  ],
+  "explanation": [
+    "The least-squares slope is $b = r \\dfrac{s_y}{s_x}$.",
+    "$\\dfrac{s_y}{s_x} = \\dfrac{10}{4} = 2.5$, and $0.8 \\times 2.5 = 2$.",
+    "Slope $= 2$: each additional hundred square feet raises the predicted price by $2$ thousand dollars."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why $r$ shrinks the slope",
+      "steps": [
+        "If the points lay perfectly on a line ($r = 1$), moving one SD in $x$ would move a full SD in $y$: slope $\\frac{10}{4} = 2.5$.",
+        "With $r = 0.8$, moving one SD in $x$ only moves $0.8$ SD in $y$ on average.",
+        "So the slope is $0.8 \\times 2.5 = 2$. This \"regression toward the mean\" is where the name comes from."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "slope",
+    "correlation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

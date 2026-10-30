@@ -1,0 +1,72 @@
+{
+  "id": "STAT.116",
+  "domain": "STAT",
+  "unit": 12,
+  "orderInUnit": 6,
+  "standard": "STAT.INF.B.2",
+  "difficulty": 2,
+  "prompt": "A farmer tests $H_0$: the new fertilizer does not change mean yield, against $H_a$: the new fertilizer increases mean yield. Which describes a Type I error in this context?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Concluding the fertilizer increases yield when it really does not.",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Concluding the fertilizer does not increase yield when it really does.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Using a sample that is too small to detect any change.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Correctly concluding the fertilizer increases yield.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Type I error: rejecting $H_0$ when $H_0$ is actually true — a \"false alarm\".",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Type I error: rejecting $H_0$ when $H_0$ is actually true — a \"false alarm\"."
+    },
+    {
+      "level": "guide",
+      "text": "Rejecting $H_0$ here means declaring the fertilizer works. A Type I error is doing that when it does not."
+    },
+    {
+      "level": "reveal",
+      "text": "A: the farmer concludes the fertilizer increases yield, but in reality it does not."
+    }
+  ],
+  "explanation": [
+    "A Type I error happens when $H_0$ is true but we reject it. Here $H_0$ true means the fertilizer does nothing.",
+    "Rejecting $H_0$ means concluding the fertilizer increases yield. Doing so when it does not is the Type I error: choice A.",
+    "B is a Type II error (missing a real effect). C is a design weakness, not an error type. D is a correct decision."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "False alarm vs. missed alarm",
+      "steps": [
+        "Type I = false alarm: we shout \"it works!\" and it does not. The farmer buys useless fertilizer.",
+        "Type II = missed alarm: it works, but we say \"no evidence.\" The farmer misses a real gain.",
+        "The question asks for the false alarm: A."
+      ]
+    }
+  ],
+  "tags": [
+    "significance-test",
+    "type-i-error",
+    "interpretation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

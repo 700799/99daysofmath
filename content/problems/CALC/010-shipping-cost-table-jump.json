@@ -1,0 +1,77 @@
+{
+  "id": "CALC.010",
+  "domain": "CALC",
+  "unit": 1,
+  "orderInUnit": 10,
+  "standard": "CALC.LIM.A.1",
+  "difficulty": 3,
+  "prompt": "An online store computes the shipping cost $S(w)$, in dollars, from a package weight $w$ in kilograms. A table shows $S(1.9) = 5.95$, $S(1.99) = 5.995$, $S(2.01) = 9.005$, $S(2.1) = 9.05$. Which statement about $\\lim_{w \\to 2} S(w)$ is true?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The limit is $6$.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "The limit is $9$.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "The limit does not exist: from the left the cost heads to $6$, from the right to $9$.",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "The limit is $7.5$, halfway between the two sides.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Read the two sides of the table separately: weights just under $2$ kg, and weights just over.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Read the two sides of the table separately: weights just under $2$ kg, and weights just over."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if a table showed $2.9 \\to 3.9$, $2.99 \\to 3.99$ on one side and $3.01 \\to 4.01$, $3.1 \\to 4.1$ on the other, both sides head to $4$ and the limit is $4$. Now check whether THIS table's sides agree."
+    },
+    {
+      "level": "guide",
+      "text": "From the left: $5.95$, then $5.995$ — heading to $6$. From the right: $9.05$, then $9.005$ — heading to $9$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 \\ne 9$, so the limit does not exist. The store has a price jump at exactly $2$ kg."
+    }
+  ],
+  "explanation": [
+    "Left-hand limit: the costs $5.95$ and $5.995$ are closing in on $6$.",
+    "Right-hand limit: the costs $9.05$ and $9.005$ are closing in on $9$.",
+    "The two sides disagree, so $\\lim_{w \\to 2} S(w)$ does not exist. In business terms: a package a hair over $2$ kg costs about $3$ dollars more to ship."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the average is wrong",
+      "steps": [
+        "Choice D is tempting: $7.5$ is between $6$ and $9$. But no package ever costs anywhere near $7.5$ dollars.",
+        "A limit must be a height the outputs actually approach. Nothing approaches $7.5$.",
+        "When the sides disagree, the honest answer is \"no limit,\" not a compromise."
+      ]
+    }
+  ],
+  "tags": [
+    "one-sided-limit",
+    "table",
+    "jump",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

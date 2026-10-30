@@ -1,0 +1,51 @@
+{
+  "id": "STAT.104",
+  "domain": "STAT",
+  "unit": 11,
+  "orderInUnit": 4,
+  "standard": "STAT.INF.A.1",
+  "difficulty": 2,
+  "prompt": "In a random sample of $400$ commuters, $160$ say they bike to work at least once a week. For a $95\\%$ confidence interval for the true proportion, using $z^* = 1.96$, what is the margin of error? Round to three decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.048",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.002,
+  "hint": "Margin of error $= z^* \\times SE$, where $SE = \\sqrt{\\hat{p}(1-\\hat{p})/n}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Margin of error $= z^* \\times SE$, where $SE = \\sqrt{\\hat{p}(1-\\hat{p})/n}$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\hat{p} = 160/400 = 0.40$. $SE = \\sqrt{(0.4)(0.6)/400} = \\sqrt{0.0006} \\approx 0.0245$."
+    },
+    {
+      "level": "reveal",
+      "text": "ME $= 1.96 \\times 0.0245 \\approx 0.048$."
+    }
+  ],
+  "explanation": [
+    "Sample proportion: $\\hat{p} = 160/400 = 0.40$.",
+    "Standard error: $\\sqrt{(0.4)(0.6)/400} = \\sqrt{0.0006} \\approx 0.0245$.",
+    "Margin of error: $1.96 \\times 0.0245 \\approx 0.048$. The interval is about $0.40 \\pm 0.048$, or $(0.352, 0.448)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check the conditions first",
+      "steps": [
+        "Random sample ✓. Successes $160 \\ge 10$ and failures $240 \\ge 10$ ✓. 400 is surely less than $10\\%$ of all commuters ✓.",
+        "With conditions met, the one-proportion $z$-interval applies: $\\hat{p} \\pm z^* \\sqrt{\\hat{p}(1-\\hat{p})/n}$.",
+        "The $\\pm$ part is $1.96 \\times 0.0245 \\approx 0.048$."
+      ]
+    }
+  ],
+  "tags": [
+    "confidence-interval",
+    "margin-of-error",
+    "proportion",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

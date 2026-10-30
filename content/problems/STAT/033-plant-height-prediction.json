@@ -1,0 +1,49 @@
+{
+  "id": "STAT.033",
+  "domain": "STAT",
+  "unit": 4,
+  "orderInUnit": 3,
+  "standard": "STAT.DATA.C.4",
+  "difficulty": 1,
+  "prompt": "A least-squares line for a plant's growth is $\\hat{y} = 12 + 3.5x$, where $x$ is weeks since planting and $\\hat{y}$ is predicted height in cm. What height does the line predict at $8$ weeks?",
+  "answerType": "numeric",
+  "primaryAnswer": "40",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Plug $x = 8$ into the equation.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Plug $x = 8$ into the equation."
+    },
+    {
+      "level": "guide",
+      "text": "$\\hat{y} = 12 + 3.5(8)$. Multiply first, then add."
+    },
+    {
+      "level": "reveal",
+      "text": "$12 + 28 = 40$ cm."
+    }
+  ],
+  "explanation": [
+    "Substitute $x = 8$: $\\hat{y} = 12 + 3.5(8)$.",
+    "$3.5 \\times 8 = 28$.",
+    "$\\hat{y} = 12 + 28 = 40$ cm. The hat on $\\hat{y}$ reminds you this is a prediction, not a measurement."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Grow it week by week",
+      "steps": [
+        "The plant starts at 12 cm and the slope says it gains 3.5 cm per week.",
+        "Eight weeks of growth: $8 \\times 3.5 = 28$ cm.",
+        "$12 + 28 = 40$ cm."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "prediction",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

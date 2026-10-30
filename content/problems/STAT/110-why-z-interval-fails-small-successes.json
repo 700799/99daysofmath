@@ -1,0 +1,77 @@
+{
+  "id": "STAT.110",
+  "domain": "STAT",
+  "unit": 11,
+  "orderInUnit": 10,
+  "standard": "STAT.INF.A.1",
+  "difficulty": 3,
+  "prompt": "A student surveys a random sample of $20$ classmates and finds that $6$ own a car. She wants a one-proportion $z$-interval for the proportion of all 2,000 students at the school who own a car. Which condition for the interval is NOT met?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The sample was not selected at random.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "The number of successes, $6$, is less than $10$ (Large Counts).",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "The sample is more than $10\\%$ of the population.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The sample proportion $0.30$ is too far from $0.50$.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The three conditions: Random, $10\\%$ (sample $< 10\\%$ of population), and Large Counts ($n\\hat{p} \\ge 10$ and $n(1-\\hat{p}) \\ge 10$).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The three conditions: Random, $10\\%$ (sample $< 10\\%$ of population), and Large Counts ($n\\hat{p} \\ge 10$ and $n(1-\\hat{p}) \\ge 10$)."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: a random sample of 50 with 25 successes passes everything: random ✓, $50 < 200$ ✓, $25 \\ge 10$ and $25 \\ge 10$ ✓. Now test each condition with 20 and 6."
+    },
+    {
+      "level": "guide",
+      "text": "Random ✓. $20 < 10\\%$ of 2,000 $= 200$ ✓. Successes: $6$. Failures: $14$. Are both at least 10?"
+    },
+    {
+      "level": "reveal",
+      "text": "Only $6$ successes — fewer than 10 — so Large Counts fails. Choice B."
+    }
+  ],
+  "explanation": [
+    "Random condition: the prompt says the sample is random, so A is not the problem.",
+    "$10\\%$ condition: $20 \\le 0.10 \\times 2000 = 200$, fine, so C is not it. D is not a real condition — $\\hat{p}$ can be anything.",
+    "Large Counts: $n\\hat{p} = 6 < 10$. With so few successes the sampling distribution of $\\hat{p}$ is not close to normal, so the $z$-interval is not appropriate. B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why it matters",
+      "steps": [
+        "The $z$-interval borrows the normal curve to set its margin of error.",
+        "With only 6 successes, the possible values of $\\hat{p}$ are lumpy and skewed, so the normal curve gives a misleading margin.",
+        "She needs a bigger sample — at least 34 students at this rate — before the normal-based interval is trustworthy."
+      ]
+    }
+  ],
+  "tags": [
+    "confidence-interval",
+    "conditions",
+    "proportion",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

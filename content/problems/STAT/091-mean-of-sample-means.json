@@ -1,0 +1,49 @@
+{
+  "id": "STAT.091",
+  "domain": "STAT",
+  "unit": 10,
+  "orderInUnit": 1,
+  "standard": "STAT.PROB.C.3",
+  "difficulty": 1,
+  "prompt": "Adult men in a city have a mean height of $68$ inches. A researcher plans to take a random sample of $50$ men and compute the sample mean $\\bar{x}$. What is the mean of the sampling distribution of $\\bar{x}$, in inches?",
+  "answerType": "numeric",
+  "primaryAnswer": "68",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The sample mean is an unbiased estimator: on average it hits the population mean.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The sample mean is an unbiased estimator: on average it hits the population mean."
+    },
+    {
+      "level": "guide",
+      "text": "$\\mu_{\\bar{x}} = \\mu$, no matter the sample size."
+    },
+    {
+      "level": "reveal",
+      "text": "The mean of the sampling distribution is $68$ inches."
+    }
+  ],
+  "explanation": [
+    "The sampling distribution of $\\bar{x}$ is the distribution of sample means over all possible samples of size 50.",
+    "Its center is the population mean: $\\mu_{\\bar{x}} = \\mu = 68$.",
+    "Sample size changes the SPREAD of sample means, not their center."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why it is unbiased",
+      "steps": [
+        "Some samples will have a mean above 68, some below, just by chance.",
+        "There is no reason for the sample means to lean one way, so they balance out at 68.",
+        "That balance point is the mean of the sampling distribution: 68 inches."
+      ]
+    }
+  ],
+  "tags": [
+    "sampling-distribution",
+    "sample-mean",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

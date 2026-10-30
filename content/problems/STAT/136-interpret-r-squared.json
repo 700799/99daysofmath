@@ -1,0 +1,72 @@
+{
+  "id": "STAT.136",
+  "domain": "STAT",
+  "unit": 14,
+  "orderInUnit": 6,
+  "standard": "STAT.INF.C.4",
+  "difficulty": 2,
+  "prompt": "The study-hours regression output reports R-Sq $= 64.0\\%$. Which statement correctly interprets this value?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "About $64\\%$ of the variation in exam scores is explained by the linear relationship with hours studied.",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$64\\%$ of students' scores are predicted exactly by the line.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "The correlation between hours and score is $0.64$.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Studying causes $64\\%$ of a student's score.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "$r^2$ is about explained VARIATION, not about individual predictions or causation.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$r^2$ is about explained VARIATION, not about individual predictions or causation."
+    },
+    {
+      "level": "guide",
+      "text": "The correlation is $r = \\sqrt{0.64} = 0.8$, not $0.64$ — so C is a trap. The line never predicts \"exactly\"."
+    },
+    {
+      "level": "reveal",
+      "text": "A: $64\\%$ of the variation in scores is accounted for by the linear relationship with hours."
+    }
+  ],
+  "explanation": [
+    "$r^2$ measures the fraction of the variation in the response ($y$) that the least-squares line accounts for.",
+    "B misreads it as a success rate for individuals; C confuses $r^2$ with $r$ (here $r = 0.8$); D asserts causation, which a regression cannot establish.",
+    "A is the standard interpretation."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The template sentence",
+      "steps": [
+        "\"About ___% of the variation in [response] is explained by the linear relationship with [explanatory].\"",
+        "Fill in: 64, exam score, hours studied.",
+        "That is choice A, word for word."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "r-squared",
+    "interpretation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

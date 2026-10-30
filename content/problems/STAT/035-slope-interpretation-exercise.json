@@ -1,0 +1,72 @@
+{
+  "id": "STAT.035",
+  "domain": "STAT",
+  "unit": 4,
+  "orderInUnit": 5,
+  "standard": "STAT.DATA.C.4",
+  "difficulty": 2,
+  "prompt": "For a group of adults, resting heart rate (beats per minute) is regressed on weekly minutes of exercise: $\\hat{y} = 78 - 0.05x$. Which is the correct interpretation of the slope?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "An adult who does no exercise is predicted to have a resting heart rate of $78$ bpm",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "For each additional minute of weekly exercise, the predicted resting heart rate DROPS by $0.05$ bpm",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "For each additional beat per minute, weekly exercise drops by $0.05$ minutes",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "About $5$ percent of the variation in heart rate is explained by exercise",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The slope is the number multiplying $x$: $-0.05$. It says how the PREDICTED $y$ changes per one-unit change in $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The slope is the number multiplying $x$: $-0.05$. It says how the PREDICTED $y$ changes per one-unit change in $x$."
+    },
+    {
+      "level": "guide",
+      "text": "Here $x$ is minutes of exercise and $y$ is heart rate. Negative slope means $y$ goes down as $x$ goes up."
+    },
+    {
+      "level": "reveal",
+      "text": "Each extra minute of exercise per week lowers the predicted resting heart rate by $0.05$ bpm: choice B."
+    }
+  ],
+  "explanation": [
+    "The slope $-0.05$ describes the change in predicted heart rate for each one-minute increase in weekly exercise.",
+    "It is negative, so the prediction goes DOWN by $0.05$ bpm per minute.",
+    "Choice B states exactly that. Choice A describes the $y$-intercept, choice C swaps the variables, and choice D confuses the slope with $r^2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Make it concrete",
+      "steps": [
+        "An adult exercising 100 minutes a week is predicted at $78 - 0.05(100) = 73$ bpm.",
+        "Another at 200 minutes: $78 - 10 = 68$ bpm.",
+        "100 more minutes dropped the prediction by 5 bpm, so each minute is worth $0.05$ bpm."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "slope",
+    "interpretation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

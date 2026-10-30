@@ -1,0 +1,50 @@
+{
+  "id": "STAT.084",
+  "domain": "STAT",
+  "unit": 9,
+  "orderInUnit": 4,
+  "standard": "STAT.PROB.C.1",
+  "difficulty": 2,
+  "prompt": "Each seed of a certain tomato variety germinates with probability $0.6$, independently. A gardener plants $5$ seeds. What is the probability that exactly $3$ germinate? Round to four decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.3456",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "This is binomial: $n = 5$, $p = 0.6$, and you want $P(X = 3)$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This is binomial: $n = 5$, $p = 0.6$, and you want $P(X = 3)$."
+    },
+    {
+      "level": "guide",
+      "text": "$P(X = 3) = \\binom{5}{3}(0.6)^3(0.4)^2$. Note $\\binom{5}{3} = 10$."
+    },
+    {
+      "level": "reveal",
+      "text": "$10 \\times 0.216 \\times 0.16 = 0.3456$."
+    }
+  ],
+  "explanation": [
+    "Binomial setting: 5 independent seeds, each germinates ($p = 0.6$) or not ($0.4$).",
+    "$P(X = 3) = \\binom{5}{3}(0.6)^3(0.4)^2 = 10 \\times 0.216 \\times 0.16$.",
+    "$0.216 \\times 0.16 = 0.03456$, times $10$ gives $0.3456$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "One sequence, then count the arrangements",
+      "steps": [
+        "One specific way: seeds 1, 2, 3 germinate and 4, 5 do not. Probability: $0.6 \\cdot 0.6 \\cdot 0.6 \\cdot 0.4 \\cdot 0.4 = 0.03456$.",
+        "But WHICH 3 germinate can happen in $\\binom{5}{3} = 10$ ways, each with that same probability.",
+        "Total: $10 \\times 0.03456 = 0.3456$."
+      ]
+    }
+  ],
+  "tags": [
+    "binomial",
+    "probability",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

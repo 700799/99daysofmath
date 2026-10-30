@@ -1,0 +1,78 @@
+{
+  "id": "STAT.119",
+  "domain": "STAT",
+  "unit": 12,
+  "orderInUnit": 9,
+  "standard": "STAT.INF.B.2",
+  "difficulty": 3,
+  "prompt": "A two-sided one-sample $t$-test of a battery company's claimed mean lifetime gives $t = 2.45$ with df $= 24$. A $t$-table row for df $= 24$ shows that $t = 2.064$ has upper-tail area $0.025$ and $t = 2.492$ has upper-tail area $0.01$. Which range contains the $p$-value?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Between $0.01$ and $0.025$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Between $0.02$ and $0.05$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Between $0.05$ and $0.10$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Less than $0.01$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Place $2.45$ between the two table values to trap the ONE-tail area. Then remember the test is two-sided.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Place $2.45$ between the two table values to trap the ONE-tail area. Then remember the test is two-sided."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if a one-sided test had $t = 2.45$, the upper-tail area would be between $0.01$ and $0.025$, since $2.064 < 2.45 < 2.492$. Now double it."
+    },
+    {
+      "level": "guide",
+      "text": "One tail: between $0.01$ and $0.025$. Two-sided $p$-value doubles both ends."
+    },
+    {
+      "level": "reveal",
+      "text": "$2(0.01) = 0.02$ and $2(0.025) = 0.05$: the $p$-value is between $0.02$ and $0.05$. Choice B."
+    }
+  ],
+  "explanation": [
+    "Since $2.064 < 2.45 < 2.492$, the area above $t = 2.45$ is between $0.01$ and $0.025$.",
+    "A two-sided alternative counts both tails, so double: between $0.02$ and $0.05$.",
+    "A gives the one-sided range — the classic slip. The answer is B. At $\\alpha = 0.05$, reject $H_0$; at $\\alpha = 0.01$, do not."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read the table as brackets",
+      "steps": [
+        "Tables give a few landmark $t$ values per row; your statistic lands between two of them.",
+        "Bigger $t$ means smaller tail area, so $2.45$ (between the landmarks) has tail area between their areas: $0.01$ to $0.025$.",
+        "Two-sided: $0.02$ to $0.05$. A calculator would give $p \\approx 0.022$, inside that range."
+      ]
+    }
+  ],
+  "tags": [
+    "significance-test",
+    "t-test",
+    "p-value",
+    "two-sided",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

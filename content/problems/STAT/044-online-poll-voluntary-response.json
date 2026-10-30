@@ -1,0 +1,71 @@
+{
+  "id": "STAT.044",
+  "domain": "STAT",
+  "unit": 5,
+  "orderInUnit": 4,
+  "standard": "STAT.COLL.A.2",
+  "difficulty": 2,
+  "prompt": "A news website posts a poll asking, \"Should the city build a new stadium?\" Anyone visiting the site can click to vote. Of the $5{,}000$ votes, $78$ percent say no. What is the main problem with this poll?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Voluntary response bias: people with strong opinions choose to vote",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "The sample is too small to be useful",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Nonresponse bias: people who were chosen refused to answer",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The question is worded to push people toward \"no\"",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Who decides whether a person ends up in this sample: the pollster, or the person?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Who decides whether a person ends up in this sample: the pollster, or the person?"
+    },
+    {
+      "level": "guide",
+      "text": "When people select THEMSELVES, the ones who bother are usually the ones who feel strongly, often negatively."
+    },
+    {
+      "level": "reveal",
+      "text": "That is voluntary response bias: choice A."
+    }
+  ],
+  "explanation": [
+    "Nobody was randomly chosen; visitors chose for themselves whether to vote.",
+    "People who feel strongly, especially those who are upset, are far more likely to click. The $78$ percent \"no\" likely overstates opposition.",
+    "This is voluntary response bias. Choice A. (A big sample does not fix a biased method, so B is wrong, and the question wording here is neutral.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Nonresponse vs voluntary response",
+      "steps": [
+        "Nonresponse bias happens when the pollster picks people and some of them refuse.",
+        "Voluntary response bias happens when nobody is picked and people volunteer.",
+        "Here no one was picked, so it is voluntary response."
+      ]
+    }
+  ],
+  "tags": [
+    "bias",
+    "voluntary-response",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

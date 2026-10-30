@@ -1,0 +1,50 @@
+{
+  "id": "STAT.095",
+  "domain": "STAT",
+  "unit": 10,
+  "orderInUnit": 5,
+  "standard": "STAT.PROB.C.4",
+  "difficulty": 2,
+  "prompt": "A factory's defect rate is $p = 0.10$. An inspector wants the sampling distribution of $\\hat{p}$ to be approximately normal, which requires the Large Counts condition: $np \\ge 10$ and $n(1-p) \\ge 10$. What is the smallest sample size $n$ that satisfies both?",
+  "answerType": "numeric",
+  "primaryAnswer": "100",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "With a small $p$, the harder condition to meet is $np \\ge 10$ — you need enough expected defects.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "With a small $p$, the harder condition to meet is $np \\ge 10$ — you need enough expected defects."
+    },
+    {
+      "level": "guide",
+      "text": "Solve $0.10n \\ge 10$. Then check $n(0.90) \\ge 10$ too."
+    },
+    {
+      "level": "reveal",
+      "text": "$n \\ge 100$. At $n = 100$: $np = 10$ ✓ and $n(1-p) = 90$ ✓."
+    }
+  ],
+  "explanation": [
+    "Normal approximation for $\\hat{p}$ needs at least 10 expected successes and 10 expected failures.",
+    "$np \\ge 10$ gives $0.1n \\ge 10$, so $n \\ge 100$. $n(1-p) \\ge 10$ gives $0.9n \\ge 10$, so $n \\ge 11.1$.",
+    "Both must hold, so the binding one is $n \\ge 100$. The smallest sample size is $100$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the condition exists",
+      "steps": [
+        "With $n = 50$, you expect only 5 defects; the count is piled up near 0 and skewed right, not bell-shaped.",
+        "With 10 or more expected defects, the distribution has room to spread out symmetrically.",
+        "Ten expected defects at a $10\\%$ rate means 100 items."
+      ]
+    }
+  ],
+  "tags": [
+    "sampling-distribution",
+    "sample-proportion",
+    "conditions",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

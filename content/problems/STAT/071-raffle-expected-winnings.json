@@ -1,0 +1,49 @@
+{
+  "id": "STAT.071",
+  "domain": "STAT",
+  "unit": 8,
+  "orderInUnit": 1,
+  "standard": "STAT.PROB.B.1",
+  "difficulty": 1,
+  "prompt": "A school raffle ticket pays $\\$10$ with probability $0.1$ and $\\$0$ with probability $0.9$. Let $X$ be the amount one ticket pays. What is the expected value $E(X)$, in dollars?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Expected value is a weighted average: each outcome times its probability, then add.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Expected value is a weighted average: each outcome times its probability, then add."
+    },
+    {
+      "level": "guide",
+      "text": "$E(X) = 10(0.1) + 0(0.9)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$10(0.1) + 0(0.9) = 1 + 0 = 1$. The ticket is worth $\\$1$ on average."
+    }
+  ],
+  "explanation": [
+    "$E(X) = \\sum x \\cdot P(x)$, so multiply each payout by its probability.",
+    "$10 \\times 0.1 = 1$ and $0 \\times 0.9 = 0$.",
+    "Add them: $E(X) = 1$. Over many tickets, the average payout is $\\$1$ per ticket."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Imagine 100 tickets",
+      "steps": [
+        "Out of 100 tickets, about 10 pay $\\$10$ and 90 pay nothing.",
+        "Total paid out: $10 \\times 10 = \\$100$.",
+        "Spread over 100 tickets that is $\\$1$ per ticket — the expected value."
+      ]
+    }
+  ],
+  "tags": [
+    "random-variable",
+    "expected-value",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1079,3 +1079,4 @@ export const problemsCALCu01_07: SeedProblem[] = [
     ],
     tags: ['power-rule', 'square-root', 'rate-of-change', 'word-problem', 'multi-step'], estimatedSeconds: 65,
   },
+];

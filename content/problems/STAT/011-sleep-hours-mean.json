@@ -1,0 +1,49 @@
+{
+  "id": "STAT.011",
+  "domain": "STAT",
+  "unit": 2,
+  "orderInUnit": 1,
+  "standard": "STAT.DATA.B.1",
+  "difficulty": 1,
+  "prompt": "Priya logged her sleep for five nights: $7, 8, 6, 9$ and $7.5$ hours. What is her mean number of hours of sleep?",
+  "answerType": "numeric",
+  "primaryAnswer": "7.5",
+  "alternativeAnswers": [
+    "15/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The mean is the total divided by how many values there are.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The mean is the total divided by how many values there are."
+    },
+    {
+      "level": "guide",
+      "text": "Add: $7 + 8 + 6 + 9 + 7.5 = 37.5$. Then divide by $5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{37.5}{5} = 7.5$ hours."
+    }
+  ],
+  "explanation": [
+    "Total sleep: $7 + 8 + 6 + 9 + 7.5 = 37.5$ hours.",
+    "Five nights, so divide by $5$.",
+    "Mean $= \\frac{37.5}{5} = 7.5$ hours."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Balance the deviations",
+      "steps": [
+        "Guess 7.5 and look at the deviations: $-0.5, +0.5, -1.5, +1.5, 0$.",
+        "They add to exactly 0, so 7.5 is the balance point — the mean."
+      ]
+    }
+  ],
+  "tags": [
+    "mean",
+    "word-problem"
+  ],
+  "estimatedSeconds": 35
+}

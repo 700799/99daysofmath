@@ -1,0 +1,54 @@
+{
+  "id": "STAT.027",
+  "domain": "STAT",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "STAT.DATA.C.2",
+  "difficulty": 2,
+  "prompt": "A phone battery's screen-on time is approximately normal with mean $10$ hours and SD $2$ hours. What proportion of charges last LESS than $12.5$ hours? Give a decimal to three places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.894",
+  "alternativeAnswers": [
+    "0.8944",
+    "89.4%"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.003,
+  "hint": "Standardize first: $z = \\frac{12.5 - 10}{2}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Standardize first: $z = \\frac{12.5 - 10}{2}$."
+    },
+    {
+      "level": "guide",
+      "text": "$z = 1.25$. Look up $P(Z < 1.25)$ in the standard normal table, or use normalcdf$(-\\infty, 1.25)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$P(Z < 1.25) \\approx 0.894$, so about $89.4$ percent of charges last under $12.5$ hours."
+    }
+  ],
+  "explanation": [
+    "$z = \\frac{12.5 - 10}{2} = 1.25$.",
+    "The standard normal table gives the area to the LEFT of $z = 1.25$ as $0.8944$.",
+    "So about $0.894$ of charges, roughly $89$ percent, last less than $12.5$ hours."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity check with the empirical rule",
+      "steps": [
+        "At $z = 1$ (11 hours), about $84$ percent lies below. At $z = 2$ (14 hours), about $97.5$ percent lies below.",
+        "$12.5$ hours is between those, so the answer must be between 0.84 and 0.975.",
+        "0.894 fits, and it is closer to the $z = 1$ end, as expected for $z = 1.25$."
+      ]
+    }
+  ],
+  "tags": [
+    "normal-distribution",
+    "z-table",
+    "proportion",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

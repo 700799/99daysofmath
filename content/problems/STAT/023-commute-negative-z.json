@@ -1,0 +1,50 @@
+{
+  "id": "STAT.023",
+  "domain": "STAT",
+  "unit": 3,
+  "orderInUnit": 3,
+  "standard": "STAT.DATA.C.1",
+  "difficulty": 1,
+  "prompt": "Lena's morning bus ride averages $15$ minutes with a standard deviation of $2$ minutes. Today it took only $12$ minutes. What is the $z$-score of today's ride?",
+  "answerType": "numeric",
+  "primaryAnswer": "-1.5",
+  "alternativeAnswers": [
+    "-3/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Today was FASTER than average, so expect a negative $z$-score.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Today was FASTER than average, so expect a negative $z$-score."
+    },
+    {
+      "level": "guide",
+      "text": "$z = \\frac{12 - 15}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$z = \\frac{-3}{2} = -1.5$."
+    }
+  ],
+  "explanation": [
+    "Today's ride is $12 - 15 = -3$ minutes compared with the mean, so $3$ minutes short.",
+    "Each SD is $2$ minutes, so $3$ minutes is $1.5$ SDs.",
+    "Below the mean means negative: $z = -1.5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Walk down from the mean",
+      "steps": [
+        "One SD below 15 is 13; two SDs below is 11.",
+        "12 is halfway between 13 and 11, so it is 1.5 SDs below the mean: $z = -1.5$."
+      ]
+    }
+  ],
+  "tags": [
+    "z-score",
+    "standardizing",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

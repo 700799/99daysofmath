@@ -1,0 +1,49 @@
+{
+  "id": "CALC.014",
+  "domain": "CALC",
+  "unit": 2,
+  "orderInUnit": 4,
+  "standard": "CALC.LIM.A.2",
+  "difficulty": 2,
+  "prompt": "Find $\\lim_{x \\to -2} \\frac{x^2 + 5x + 6}{x + 2}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Check substitution first: $4 - 10 + 6 = 0$ on top and $0$ on the bottom. So factor the trinomial.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Check substitution first: $4 - 10 + 6 = 0$ on top and $0$ on the bottom. So factor the trinomial."
+    },
+    {
+      "level": "guide",
+      "text": "Two numbers that multiply to $6$ and add to $5$: $2$ and $3$. So $x^2 + 5x + 6 = (x + 2)(x + 3)$."
+    },
+    {
+      "level": "reveal",
+      "text": "Cancel $(x + 2)$ to get $x + 3$, and at $x = -2$ that is $1$."
+    }
+  ],
+  "explanation": [
+    "Substituting $x = -2$ gives $\\frac{0}{0}$, so there is a hole to remove.",
+    "Factor the top: $(x + 2)(x + 3)$. Cancel the shared $(x + 2)$.",
+    "The limit of $x + 3$ as $x \\to -2$ is $-2 + 3 = 1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sneak up with a table",
+      "steps": [
+        "$x = -2.1$: top is $4.41 - 10.5 + 6 = -0.09$, bottom is $-0.1$, ratio $0.9$.",
+        "$x = -1.9$: top is $3.61 - 9.5 + 6 = 0.11$, bottom is $0.1$, ratio $1.1$.",
+        "Closer in, the ratios tighten around $1$."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "factoring",
+    "indeterminate"
+  ],
+  "estimatedSeconds": 50
+}

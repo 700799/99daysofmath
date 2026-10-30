@@ -1,0 +1,50 @@
+{
+  "id": "STAT.103",
+  "domain": "STAT",
+  "unit": 11,
+  "orderInUnit": 3,
+  "standard": "STAT.INF.A.1",
+  "difficulty": 1,
+  "prompt": "In a random sample of $100$ shoppers, $50$ say they prefer paper bags, so $\\hat{p} = 0.50$. What is the standard error of $\\hat{p}$, $\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.05",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "Plug $\\hat{p} = 0.5$ and $n = 100$ into the formula.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Plug $\\hat{p} = 0.5$ and $n = 100$ into the formula."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{0.5 \\times 0.5}{100} = 0.0025$. Now square-root."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sqrt{0.0025} = 0.05$."
+    }
+  ],
+  "explanation": [
+    "The standard error estimates how much $\\hat{p}$ varies from sample to sample, using $\\hat{p}$ in place of the unknown $p$.",
+    "$\\hat{p}(1-\\hat{p})/n = (0.5)(0.5)/100 = 0.0025$.",
+    "$SE = \\sqrt{0.0025} = 0.05$, or 5 percentage points."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A handy benchmark",
+      "steps": [
+        "With $\\hat{p} = 0.5$, the SE is $0.5/\\sqrt{n}$.",
+        "$\\sqrt{100} = 10$, so $SE = 0.5/10 = 0.05$.",
+        "This is the largest SE possible for a given $n$; any other $\\hat{p}$ gives a smaller one."
+      ]
+    }
+  ],
+  "tags": [
+    "confidence-interval",
+    "standard-error",
+    "word-problem"
+  ],
+  "estimatedSeconds": 35
+}

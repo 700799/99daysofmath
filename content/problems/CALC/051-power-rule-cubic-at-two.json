@@ -1,0 +1,48 @@
+{
+  "id": "CALC.051",
+  "domain": "CALC",
+  "unit": 6,
+  "orderInUnit": 1,
+  "standard": "CALC.DER.A.2",
+  "difficulty": 1,
+  "prompt": "Let $f(x) = 4x^3 - 2x + 7$. Find $f'(2)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "46",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Power rule: bring the exponent down front and lower it by one. Constants vanish.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Power rule: bring the exponent down front and lower it by one. Constants vanish."
+    },
+    {
+      "level": "guide",
+      "text": "$f'(x) = 12x^2 - 2$. Now substitute $x = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$12(4) - 2 = 46$."
+    }
+  ],
+  "explanation": [
+    "Term by term: $\\frac{d}{dx}(4x^3) = 12x^2$, $\\frac{d}{dx}(-2x) = -2$, $\\frac{d}{dx}(7) = 0$.",
+    "So $f'(x) = 12x^2 - 2$.",
+    "$f'(2) = 12(4) - 2 = 46$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the $7$ disappears",
+      "steps": [
+        "Adding $7$ slides the whole graph up without changing any slope.",
+        "The derivative measures slope, so a constant contributes $0$.",
+        "Only the $4x^3$ and $-2x$ terms carry slope: $12x^2 - 2$, which is $46$ at $x = 2$."
+      ]
+    }
+  ],
+  "tags": [
+    "power-rule",
+    "polynomial"
+  ],
+  "estimatedSeconds": 35
+}

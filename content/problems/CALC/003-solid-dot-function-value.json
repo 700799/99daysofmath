@@ -1,0 +1,49 @@
+{
+  "id": "CALC.003",
+  "domain": "CALC",
+  "unit": 1,
+  "orderInUnit": 3,
+  "standard": "CALC.LIM.A.1",
+  "difficulty": 1,
+  "prompt": "Same graph: $g$ is the line $y = 2x + 1$, except that at $x = 2$ there is an open circle on the line and a solid dot at $(2, 7)$. What is $g(2)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$g(2)$ asks for the actual output at $x = 2$ — look for the SOLID dot, not the open circle.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$g(2)$ asks for the actual output at $x = 2$ — look for the SOLID dot, not the open circle."
+    },
+    {
+      "level": "guide",
+      "text": "An open circle means \"the graph is not here.\" A solid dot means \"the graph IS here.\""
+    },
+    {
+      "level": "reveal",
+      "text": "The solid dot sits at $(2, 7)$, so $g(2) = 7$."
+    }
+  ],
+  "explanation": [
+    "The value of a function at a point is read off the solid dot.",
+    "At $x = 2$ the solid dot is at height $7$, so $g(2) = 7$.",
+    "Compare: the limit there is $5$. Limit and value can disagree — that is exactly what a hole with a dot looks like."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two different questions",
+      "steps": [
+        "\"What is $g(2)$?\" means: stand exactly at $x = 2$ and look up. You see the dot at $7$.",
+        "\"What is the limit?\" means: walk toward $x = 2$ and watch the height. You see the line heading to $5$.",
+        "A function is only continuous when both answers match. Here they do not."
+      ]
+    }
+  ],
+  "tags": [
+    "function-value",
+    "graph",
+    "removable"
+  ],
+  "estimatedSeconds": 30
+}

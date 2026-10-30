@@ -1,0 +1,50 @@
+{
+  "id": "STAT.026",
+  "domain": "STAT",
+  "unit": 3,
+  "orderInUnit": 6,
+  "standard": "STAT.DATA.C.1",
+  "difficulty": 2,
+  "prompt": "Women's heights in a region are approximately normal with mean $64.5$ inches and SD $2.5$ inches. A basketball recruit has a $z$-score of $2$. How tall is she, in inches?",
+  "answerType": "numeric",
+  "primaryAnswer": "69.5",
+  "alternativeAnswers": [
+    "139/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A $z$-score of $2$ means two standard deviations ABOVE the mean.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A $z$-score of $2$ means two standard deviations ABOVE the mean."
+    },
+    {
+      "level": "guide",
+      "text": "Unstandardize: $x = \\text{mean} + z \\cdot \\text{SD} = 64.5 + 2(2.5)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$64.5 + 5 = 69.5$ inches."
+    }
+  ],
+  "explanation": [
+    "Solve $z = \\frac{x - \\mu}{\\sigma}$ for $x$: $x = \\mu + z\\sigma$.",
+    "Two SDs is $2 \\times 2.5 = 5$ inches.",
+    "$x = 64.5 + 5 = 69.5$ inches, about 5 feet 9.5 inches."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Step up twice",
+      "steps": [
+        "One SD above the mean: $64.5 + 2.5 = 67$ inches.",
+        "Two SDs above the mean: $67 + 2.5 = 69.5$ inches."
+      ]
+    }
+  ],
+  "tags": [
+    "z-score",
+    "unstandardizing",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

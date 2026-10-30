@@ -1,0 +1,77 @@
+{
+  "id": "CALC.029",
+  "domain": "CALC",
+  "unit": 3,
+  "orderInUnit": 9,
+  "standard": "CALC.LIM.B.1",
+  "difficulty": 3,
+  "prompt": "Let $f(x) = \\frac{1}{x}$. Note that $f(-1) = -1$ and $f(1) = 1$. Does the Intermediate Value Theorem guarantee a value $c$ in $[-1, 1]$ with $f(c) = 0$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Yes, because $-1 < 0 < 1$.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "No. $f$ is not continuous on $[-1, 1]$ (it is undefined at $x = 0$), so the IVT does not apply — and in fact $\\frac{1}{x}$ is never $0$.",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Yes, and the value is $c = 0$.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "No, because $f(-1)$ and $f(1)$ are not equal.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The IVT has a requirement before it hands out any guarantee: the function must be continuous on the WHOLE closed interval.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The IVT has a requirement before it hands out any guarantee: the function must be continuous on the WHOLE closed interval."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: a step function that is $-1$ for $x < 0$ and $1$ for $x \\ge 0$ goes from $-1$ to $1$ but is never $0$. It jumps. Does $\\frac{1}{x}$ have a break inside $[-1, 1]$ too?"
+    },
+    {
+      "level": "guide",
+      "text": "Is $\\frac{1}{x}$ defined at $x = 0$? If not, it is not continuous on $[-1, 1]$."
+    },
+    {
+      "level": "reveal",
+      "text": "It is undefined at $0$, so the hypothesis fails and the IVT says nothing. Indeed $\\frac{1}{x} = 0$ has no solution at all."
+    }
+  ],
+  "explanation": [
+    "The IVT requires continuity on the entire closed interval. $\\frac{1}{x}$ blows up at $x = 0$, which is inside $[-1, 1]$.",
+    "With the hypothesis broken, the theorem makes no promise — and here the conclusion actually fails: $\\frac{1}{x} = 0$ would need $1 = 0$.",
+    "Choice D is wrong for a different reason: the IVT never needs equal endpoint values; it needs the target to lie between them."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the graph",
+      "steps": [
+        "The graph of $\\frac{1}{x}$ has two branches: one far below the axis as $x \\to 0^-$, one far above as $x \\to 0^+$.",
+        "It never crosses the $x$-axis — it leaps over it through the vertical asymptote.",
+        "Continuity is what rules out leaping. Without it, no crossing is guaranteed."
+      ]
+    }
+  ],
+  "tags": [
+    "ivt",
+    "continuity",
+    "hypotheses",
+    "trap"
+  ],
+  "estimatedSeconds": 65
+}

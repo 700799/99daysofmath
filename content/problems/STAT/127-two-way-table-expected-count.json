@@ -1,0 +1,51 @@
+{
+  "id": "STAT.127",
+  "domain": "STAT",
+  "unit": 13,
+  "orderInUnit": 7,
+  "standard": "STAT.INF.C.2",
+  "difficulty": 2,
+  "prompt": "A survey of $200$ students records grade level (9th, 10th, 11th, 12th) and favorite lunch option. In the two-way table, the row for 10th graders has a total of $50$ students and the column for \"pizza\" has a total of $80$ students. For a chi-square test of independence, what is the expected count in the (10th grade, pizza) cell?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Expected count $= \\frac{\\text{row total} \\times \\text{column total}}{\\text{grand total}}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Expected count $= \\frac{\\text{row total} \\times \\text{column total}}{\\text{grand total}}$."
+    },
+    {
+      "level": "guide",
+      "text": "Plug in: $\\frac{50 \\times 80}{200}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{4000}{200} = 20$ students."
+    }
+  ],
+  "explanation": [
+    "If grade level and lunch choice are independent, 10th graders should like pizza at the same rate as everyone: $80/200 = 40\\%$.",
+    "$40\\%$ of the 50 tenth graders is $0.40 \\times 50 = 20$.",
+    "The formula $\\frac{50 \\times 80}{200} = 20$ says the same thing."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two routes, one answer",
+      "steps": [
+        "Column view: tenth graders are $50/200 = 25\\%$ of the school, so expect $25\\%$ of the 80 pizza fans: $20$.",
+        "Row view: pizza is chosen by $40\\%$ of students, so expect $40\\%$ of 50 tenth graders: $20$.",
+        "Independence means both views agree."
+      ]
+    }
+  ],
+  "tags": [
+    "chi-square",
+    "independence",
+    "expected-count",
+    "two-way-table",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

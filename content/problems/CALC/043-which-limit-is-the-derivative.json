@@ -1,0 +1,70 @@
+{
+  "id": "CALC.043",
+  "domain": "CALC",
+  "unit": 5,
+  "orderInUnit": 3,
+  "standard": "CALC.DER.A.1",
+  "difficulty": 1,
+  "prompt": "Let $f(x) = x^2$. Which limit equals $f'(3)$, the derivative of $f$ at $x = 3$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\lim_{h \\to 0} \\frac{(3 + h)^2 - 9}{h}$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\lim_{h \\to 0} \\left[ (3 + h)^2 - 9 \\right]$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\lim_{x \\to 3} (x^2 - 9)$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\lim_{h \\to 0} \\frac{(3 + h)^2}{h}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The derivative is a limit of SLOPES: a change in $f$ divided by a change in $x$, as the change in $x$ shrinks to $0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The derivative is a limit of SLOPES: a change in $f$ divided by a change in $x$, as the change in $x$ shrinks to $0$."
+    },
+    {
+      "level": "guide",
+      "text": "The definition is $f'(a) = \\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h}$. Put in $a = 3$ and $f(x) = x^2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$f(3 + h) = (3 + h)^2$ and $f(3) = 9$, so $f'(3) = \\lim_{h \\to 0} \\frac{(3 + h)^2 - 9}{h}$: choice A."
+    }
+  ],
+  "explanation": [
+    "Definition: $f'(a) = \\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h}$.",
+    "With $a = 3$: $f(3 + h) = (3 + h)^2$ and $f(3) = 9$.",
+    "So $f'(3) = \\lim_{h \\to 0} \\frac{(3 + h)^2 - 9}{h}$. B and C forget to divide by the run; D forgets to subtract $f(3)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the wrong ones fail",
+      "steps": [
+        "B and C are limits of a change in height alone, and both equal $0$ — a tangent slope is not zero here.",
+        "D is $\\frac{9 + \\text{small}}{\\text{tiny}}$, which blows up to infinity.",
+        "Only A is rise over run with the run shrinking: it equals $6$, the slope of the tangent at $x = 3$."
+      ]
+    }
+  ],
+  "tags": [
+    "derivative-definition",
+    "limit"
+  ],
+  "estimatedSeconds": 45
+}

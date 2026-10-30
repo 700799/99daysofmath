@@ -1,0 +1,84 @@
+{
+  "id": "STAT.049",
+  "domain": "STAT",
+  "unit": 5,
+  "orderInUnit": 9,
+  "standard": "STAT.COLL.A.1",
+  "difficulty": 3,
+  "prompt": "A coach numbers the $60$ members of a running club $01$ through $60$ and reads two-digit groups from a random digit table: $71\\ 48\\ 03\\ 62\\ 19\\ 48\\ 25\\ \\ldots$ Which members are the FIRST THREE selected for an SRS?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$71, 48, 03$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$48, 03, 62$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$48, 03, 19$",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "$48, 03, 48$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Only labels $01$ to $60$ exist. Skip any two-digit group outside that range, and skip repeats.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Only labels $01$ to $60$ exist. Skip any two-digit group outside that range, and skip repeats."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: with labels $1$ to $6$ and digits $8\\ 3\\ 3\\ 7\\ 5$, you skip $8$, take $3$, skip the repeat $3$, skip $7$, take $5$. Same rules with two-digit labels."
+    },
+    {
+      "level": "guide",
+      "text": "Walk the list: $71$ (too big, skip), $48$ (take), $03$ (take), $62$ (skip), $19$ (take)."
+    },
+    {
+      "level": "reveal",
+      "text": "The first three members chosen are $48, 03$ and $19$: choice C."
+    }
+  ],
+  "explanation": [
+    "Read the table in two-digit groups and keep only groups from $01$ to $60$ that have not appeared yet.",
+    "$71$ is above $60$: skip. $48$: keep. $03$: keep. $62$: skip. $19$: keep.",
+    "The sample so far is members $48, 03, 19$. Choice C. (The next group, $48$, would be skipped as a repeat, so D is wrong.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why this is an SRS",
+      "steps": [
+        "Each two-digit group is equally likely to be any of 00 to 99, so each valid label 01 to 60 is equally likely to come up next.",
+        "Skipping out-of-range and repeated groups keeps every remaining member equally likely at each step.",
+        "That gives every group of 3 members the same chance: a simple random sample."
+      ]
+    },
+    {
+      "title": "The trap of reading 71 as 7 and 1",
+      "steps": [
+        "With 60 members, labels must be two digits, so you must read two digits at a time.",
+        "Splitting 71 into 7 and 1 would change the labeling scheme mid-stream and over-select members 1 to 9.",
+        "Stick with two-digit groups: 71 is simply skipped."
+      ]
+    }
+  ],
+  "tags": [
+    "simple-random-sample",
+    "random-digit-table",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

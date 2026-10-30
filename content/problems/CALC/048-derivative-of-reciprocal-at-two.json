@@ -1,0 +1,57 @@
+{
+  "id": "CALC.048",
+  "domain": "CALC",
+  "unit": 5,
+  "orderInUnit": 8,
+  "standard": "CALC.DER.A.1",
+  "difficulty": 3,
+  "prompt": "Use the limit definition of the derivative to find $f'(2)$ for $f(x) = \\frac{1}{x}$. Give your answer as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "-1/4",
+  "alternativeAnswers": [
+    "-0.25"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Set up $\\lim_{h \\to 0} \\frac{\\frac{1}{2 + h} - \\frac{1}{2}}{h}$. Combine the two fractions on top first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Set up $\\lim_{h \\to 0} \\frac{\\frac{1}{2 + h} - \\frac{1}{2}}{h}$. Combine the two fractions on top first."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $\\frac{1}{2 + h} - \\frac{1}{2} = \\frac{2 - (2 + h)}{2(2 + h)} = \\frac{-h}{2(2 + h)}$. Notice an $h$ appeared on top, ready to cancel."
+    },
+    {
+      "level": "guide",
+      "text": "Divide that by $h$: $\\frac{-h}{2(2 + h) \\cdot h} = \\frac{-1}{2(2 + h)}$. Now let $h \\to 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{-1}{2 \\cdot 2} = -\\frac{1}{4}$."
+    }
+  ],
+  "explanation": [
+    "$f(2 + h) - f(2) = \\frac{1}{2 + h} - \\frac{1}{2} = \\frac{2 - (2 + h)}{2(2 + h)} = \\frac{-h}{2(2 + h)}$.",
+    "Divide by $h$: $\\frac{-1}{2(2 + h)}$.",
+    "Let $h \\to 0$: $f'(2) = \\frac{-1}{4}$. The tangent at $(2, \\frac{1}{2})$ slopes gently downward."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sanity check with secants",
+      "steps": [
+        "From $x = 2$ to $x = 2.1$: $\\frac{1/2.1 - 1/2}{0.1} = \\frac{0.47619 - 0.5}{0.1} \\approx -0.238$.",
+        "From $2$ to $2.01$: $\\frac{0.497512 - 0.5}{0.01} \\approx -0.249$.",
+        "Heading to $-0.25 = -\\frac{1}{4}$. Negative makes sense: $\\frac{1}{x}$ decreases as $x$ grows."
+      ]
+    }
+  ],
+  "tags": [
+    "derivative-definition",
+    "limit",
+    "complex-fraction",
+    "multi-step"
+  ],
+  "estimatedSeconds": 80
+}

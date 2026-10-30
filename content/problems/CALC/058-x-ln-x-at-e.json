@@ -1,0 +1,54 @@
+{
+  "id": "CALC.058",
+  "domain": "CALC",
+  "unit": 6,
+  "orderInUnit": 8,
+  "standard": "CALC.DER.A.2",
+  "difficulty": 3,
+  "prompt": "Let $f(x) = x \\ln x$. Find $f'(e)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$x \\ln x$ is a product, so use the product rule, not just the derivative of $\\ln x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$x \\ln x$ is a product, so use the product rule, not just the derivative of $\\ln x$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $x e^x$: product rule gives $1 \\cdot e^x + x \\cdot e^x$. Same shape here, with $\\ln x$ and its derivative $\\frac{1}{x}$."
+    },
+    {
+      "level": "guide",
+      "text": "$f'(x) = 1 \\cdot \\ln x + x \\cdot \\frac{1}{x} = \\ln x + 1$. Now use $\\ln e = 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$f'(e) = 1 + 1 = 2$."
+    }
+  ],
+  "explanation": [
+    "Product rule with $u = x$ and $v = \\ln x$: $f'(x) = u'v + uv' = \\ln x + x \\cdot \\frac{1}{x}$.",
+    "The second term simplifies to $1$, so $f'(x) = \\ln x + 1$.",
+    "Since $\\ln e = 1$, $f'(e) = 2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Common trap",
+      "steps": [
+        "Forgetting the product rule gives $f'(x) = \\frac{1}{x}$, which at $x = e$ is about $0.37$ — much too small.",
+        "Check with a secant: $\\frac{f(2.72) - f(2.71)}{0.01} = \\frac{2.72 \\ln 2.72 - 2.71 \\ln 2.71}{0.01} \\approx 2.0$.",
+        "The product rule answer $2$ is the one the numbers back up."
+      ]
+    }
+  ],
+  "tags": [
+    "product-rule",
+    "logarithm",
+    "multi-step"
+  ],
+  "estimatedSeconds": 60
+}

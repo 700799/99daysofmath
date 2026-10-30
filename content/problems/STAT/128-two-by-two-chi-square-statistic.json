@@ -1,0 +1,57 @@
+{
+  "id": "STAT.128",
+  "domain": "STAT",
+  "unit": 13,
+  "orderInUnit": 8,
+  "standard": "STAT.INF.C.2",
+  "difficulty": 3,
+  "prompt": "A clinic randomly assigns $100$ patients to a reminder-text program and $100$ to no reminders. Of the text group, $40$ show up for their checkup; of the control group, $30$ show up. Compute the chi-square statistic for the $2 \\times 2$ table (showed up / did not, by group). Round to two decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "2.2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.02,
+  "hint": "Build the expected counts first. Overall, $70$ of $200$ showed up.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Build the expected counts first. Overall, $70$ of $200$ showed up."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if 20 of 40 total showed up, split evenly across two groups of 20, you would expect 10 shows and 10 no-shows in each group. Same logic with 70 of 200."
+    },
+    {
+      "level": "guide",
+      "text": "Expected: $35$ shows and $65$ no-shows in each group. The four components are $\\frac{(40-35)^2}{35}$, $\\frac{(60-65)^2}{65}$, $\\frac{(30-35)^2}{35}$, $\\frac{(70-65)^2}{65}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.714 + 0.385 + 0.714 + 0.385 \\approx 2.20$."
+    }
+  ],
+  "explanation": [
+    "Observed: text group 40 show / 60 no-show; control 30 show / 70 no-show. Column totals: 70 show, 130 no-show; each row has 100.",
+    "Expected in every cell: $\\frac{100 \\times 70}{200} = 35$ shows and $\\frac{100 \\times 130}{200} = 65$ no-shows. Every observed cell is 5 away from expected.",
+    "$\\chi^2 = 2 \\times \\frac{25}{35} + 2 \\times \\frac{25}{65} = 1.429 + 0.769 \\approx 2.20$, with df $= (2-1)(2-1) = 1$. That is below the critical value $3.841$, so at $\\alpha = 0.05$ the texts are not shown to help."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare with a two-proportion z-test",
+      "steps": [
+        "The same data as a $z$-test: $\\hat{p}_1 = 0.40$, $\\hat{p}_2 = 0.30$, pooled $0.35$, SE $= \\sqrt{0.35 \\times 0.65 \\times 0.02} \\approx 0.0674$, so $z \\approx 1.48$.",
+        "For a $2 \\times 2$ table, $\\chi^2 = z^2$: $1.48^2 \\approx 2.20$.",
+        "Both tests give the same two-sided $p$-value (about $0.14$)."
+      ]
+    }
+  ],
+  "tags": [
+    "chi-square",
+    "two-way-table",
+    "test-statistic",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 100
+}

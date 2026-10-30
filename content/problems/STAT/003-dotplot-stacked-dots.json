@@ -1,0 +1,48 @@
+{
+  "id": "STAT.003",
+  "domain": "STAT",
+  "unit": 1,
+  "orderInUnit": 3,
+  "standard": "STAT.DATA.A.1",
+  "difficulty": 1,
+  "prompt": "Eight quiz scores are $6, 7, 7, 8, 8, 8, 9, 10$. If you draw a dotplot, how many dots are stacked above the number $8$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A dotplot puts ONE dot per data value, stacked above that number on the line.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A dotplot puts ONE dot per data value, stacked above that number on the line."
+    },
+    {
+      "level": "guide",
+      "text": "Count how many times $8$ appears in the list."
+    },
+    {
+      "level": "reveal",
+      "text": "$8$ appears three times, so there are $3$ dots above $8$."
+    }
+  ],
+  "explanation": [
+    "Each score becomes one dot above its value.",
+    "The score $8$ shows up three times in the list.",
+    "So the tallest stack, above $8$, has $3$ dots. That value is the mode."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build the whole plot",
+      "steps": [
+        "Above 6: 1 dot. Above 7: 2 dots. Above 8: 3 dots.",
+        "Above 9: 1 dot. Above 10: 1 dot. Total $1 + 2 + 3 + 1 + 1 = 8$ dots, matching the 8 scores.",
+        "The stack above 8 is the tallest, with 3 dots."
+      ]
+    }
+  ],
+  "tags": [
+    "dotplot",
+    "mode"
+  ],
+  "estimatedSeconds": 30
+}
