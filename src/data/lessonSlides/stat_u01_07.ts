@@ -1,5 +1,1779 @@
-import type { SlideBank } from './types';
+import type { LessonSlide, SlideBank } from './types';
+import type { SlideArt } from './types';
+import { AMB, EMR, INK, ROSE, SKY, VIO, W, arrow, art, axes, bars, balancePoint, boxPlot, dot, dotPlot, draws, fades, flow, histogram, line, path, pie, rect, sortedRow, text } from '../slideArt';
+import type { Range } from '../slideArt';
 
-// AP Statistics slide decks, units 1-7.
+// AP Statistics slide decks, units 1-7: describing data, center and spread,
+// the normal model, regression, sampling, experiments, and probability rules.
+// Every data set drawn here is the one the matching lesson works, so the deck
+// and the lesson say the same numbers.
 
-export const STAT_SLIDES_U01_07: SlideBank = {};
+const f = (n: number) => (Math.round(n * 100) / 100).toString();
+const sgn = (n: number) => f(n).replace('-', '−');
+
+/**
+ * A normal curve over a baseline marked at μ ± 1σ, 2σ, 3σ, with an optional
+ * shaded region under it and dashed marks at the values a question names.
+ */
+function normalFig(o: {
+  mu: number;
+  sigma: number;
+  shade?: [number, number];
+  shadeColor?: string;
+  shadeLabel?: { text: string; at: number; y?: number };
+  marks?: { at: number; label: string; color?: string }[];
+  tickText?: (k: number) => string;
+  title?: string;
+  caption?: string;
+  alt: string;
+}): SlideArt {
+  const { mu, sigma } = o;
+  const lo = mu - 3.6 * sigma, hi = mu + 3.6 * sigma;
+  const x0 = 36, x1 = W - 36, base = 196, peakH = 118;
+  const X = (v: number) => x0 + ((v - lo) / (hi - lo)) * (x1 - x0);
+  const pdf = (v: number) => Math.exp(-0.5 * ((v - mu) / sigma) ** 2);
+  const Y = (v: number) => base - peakH * pdf(v);
+  let b = o.title ? text(W / 2, 28, o.title, { size: 13, fill: VIO }) : '';
+  b += line(x0 - 10, base, x1 + 10, base, INK, 1.8);
+  const col = o.shadeColor ?? SKY;
+  if (o.shade) {
+    const a = Math.max(lo, Math.min(...o.shade));
+    const z = Math.min(hi, Math.max(...o.shade));
+    const n = 60;
+    let d = `M ${f(X(a))} ${f(base)}`;
+    for (let i = 0; i <= n; i++) {
+      const v = a + ((z - a) * i) / n;
+      d += ` L ${f(X(v))} ${f(Y(v))}`;
+    }
+    d += ` L ${f(X(z))} ${f(base)} Z`;
+    b += fades(path(d, col, 1.5, `${col}55`), 0.3);
+  }
+  const n = 120;
+  let d = '';
+  for (let i = 0; i <= n; i++) {
+    const v = lo + ((hi - lo) * i) / n;
+    d += `${i ? ' L' : 'M'} ${f(X(v))} ${f(Y(v))}`;
+  }
+  b += draws(path(d, AMB, 2.8), 700);
+  for (let k = -3; k <= 3; k++) {
+    const v = mu + k * sigma;
+    b += line(X(v), base - 4, X(v), base + 4, INK, 1.4, undefined, 0.55);
+    b += text(X(v), base + 18, o.tickText ? o.tickText(k) : sgn(v), { size: 10, op: 0.7 });
+  }
+  for (const m of o.marks ?? []) {
+    const mc = m.color ?? ROSE;
+    b += line(X(m.at), base, X(m.at), Y(m.at), mc, 2, '5 4');
+    b += text(X(m.at), base + 38, m.label, { size: 11, fill: mc });
+  }
+  if (o.shadeLabel) b += text(X(o.shadeLabel.at), o.shadeLabel.y ?? 172, o.shadeLabel.text, { size: 12, fill: col });
+  return art(o.alt, b, o.caption);
+}
+
+/** A scatterplot, optionally with a fitted line and one residual drawn in. */
+function scatterFig(
+  pts: { x: number; y: number }[],
+  o: {
+    range: Range;
+    ticks: { x: number[]; y: number[] };
+    fit?: { a: number; b: number; label: string; at: [number, number]; anchor?: 'start' | 'middle' | 'end' };
+    resid?: { x: number; y: number; label: string };
+    mean?: { x: number; y: number; label: string; anchor?: 'start' | 'middle' | 'end'; dx?: number; dy?: number; hollow?: boolean };
+    xLabel?: string;
+    yLabel?: string;
+    title?: string;
+    caption?: string;
+    alt: string;
+  },
+): SlideArt {
+  const ax = axes(o.range, { ticks: o.ticks, grid: true, pad: 36, xLabel: o.xLabel, yLabel: o.yLabel });
+  let b = (o.title ? text(W / 2, 18, o.title, { size: 12, fill: VIO }) : '') + ax.body;
+  if (o.fit) {
+    b += draws(ax.curve((x) => o.fit!.a + o.fit!.b * x, SKY, 2.6), 600, 0.2);
+    b += text(ax.X(o.fit.at[0]), ax.Y(o.fit.at[1]), o.fit.label, { size: 12, fill: SKY, anchor: o.fit.anchor ?? 'middle' });
+  }
+  pts.forEach((p, i) => {
+    b += fades(dot(ax.X(p.x), ax.Y(p.y), 5.5, AMB), 0.15 + i * 0.08);
+  });
+  if (o.resid && o.fit) {
+    const yhat = o.fit.a + o.fit.b * o.resid.x;
+    b += line(ax.X(o.resid.x), ax.Y(o.resid.y), ax.X(o.resid.x), ax.Y(yhat), ROSE, 3);
+    b += dot(ax.X(o.resid.x), ax.Y(o.resid.y), 6, ROSE);
+    b += text(ax.X(o.resid.x) + 10, (ax.Y(o.resid.y) + ax.Y(yhat)) / 2 + 4, o.resid.label, { size: 11, fill: ROSE, anchor: 'start' });
+  }
+  if (o.mean) {
+    const m = o.mean;
+    b += m.hollow ? `<circle cx="${f(ax.X(m.x))}" cy="${f(ax.Y(m.y))}" r="6" fill="none" stroke="${ROSE}" stroke-width="2.4"/>` : dot(ax.X(m.x), ax.Y(m.y), 6, EMR);
+    b += text(ax.X(m.x) + (m.dx ?? 10), ax.Y(m.y) + (m.dy ?? 18), m.label, { size: 11, fill: m.hollow ? ROSE : EMR, anchor: m.anchor ?? 'start' });
+  }
+  return art(o.alt, b, o.caption);
+}
+
+/** Two overlapping circles with the count in each region. */
+function vennFig(o: { A: string; B: string; onlyA: string; both: string; onlyB: string; neither?: string; title?: string; caption?: string; alt: string }): SlideArt {
+  const cy = 142, r = 68;
+  let b = o.title ? text(W / 2, 26, o.title, { size: 13, fill: VIO }) : '';
+  b += rect(52, 44, 296, 196, INK, 'none', 1.4, 8);
+  b += fades(`<circle cx="162" cy="${cy}" r="${r}" fill="${SKY}33" stroke="${SKY}" stroke-width="2.4"/>`, 0.1);
+  b += fades(`<circle cx="238" cy="${cy}" r="${r}" fill="${AMB}33" stroke="${AMB}" stroke-width="2.4"/>`, 0.25);
+  b += text(136, 62, o.A, { size: 13, fill: SKY });
+  b += text(264, 62, o.B, { size: 13, fill: AMB });
+  b += text(124, cy + 6, o.onlyA, { size: 16, fill: SKY });
+  b += text(200, cy + 6, o.both, { size: 16, fill: VIO });
+  b += text(276, cy + 6, o.onlyB, { size: 16, fill: AMB });
+  if (o.neither) b += text(304, 228, o.neither, { size: 11, op: 0.7 });
+  return art(o.alt, b, o.caption);
+}
+
+/** A two-stage tree: two first branches, each splitting in two, with the end products. */
+function treeFig(o: { first: [string, string]; second: [[string, string], [string, string]]; ends: [string, string, string, string]; hot?: number[]; title?: string; caption?: string; alt: string }): SlideArt {
+  let b = o.title ? text(W / 2, 28, o.title, { size: 13, fill: VIO }) : '';
+  const root: [number, number] = [40, 130];
+  const L1: [number, number][] = [[150, 80], [150, 180]];
+  const L2: [number, number][] = [[270, 50], [270, 110], [270, 150], [270, 210]];
+  const seg = (p: [number, number], q: [number, number], col: string, delay: number) =>
+    draws(line(p[0], p[1], q[0], q[1], col, 2.2), 140, delay);
+  b += seg(root, L1[0], SKY, 0) + seg(root, L1[1], SKY, 0);
+  b += text(95, 97, o.first[0], { size: 11, fill: SKY });
+  b += text(95, 168, o.first[1], { size: 11, fill: SKY });
+  b += seg(L1[0], L2[0], AMB, 0.4) + seg(L1[0], L2[1], AMB, 0.4) + seg(L1[1], L2[2], AMB, 0.4) + seg(L1[1], L2[3], AMB, 0.4);
+  b += text(210, 57, o.second[0][0], { size: 11, fill: AMB });
+  b += text(210, 105, o.second[0][1], { size: 11, fill: AMB });
+  b += text(210, 157, o.second[1][0], { size: 11, fill: AMB });
+  b += text(210, 205, o.second[1][1], { size: 11, fill: AMB });
+  b += dot(root[0], root[1], 5, INK);
+  for (const p of L1) b += dot(p[0], p[1], 4.5, SKY);
+  L2.forEach((p, i) => {
+    const hot = o.hot?.includes(i);
+    b += dot(p[0], p[1], 4.5, hot ? ROSE : AMB);
+    b += fades(text(284, p[1] + 4, o.ends[i], { size: 11, fill: hot ? ROSE : INK, anchor: 'start', op: hot ? undefined : 0.75 }), 0.9);
+  });
+  return art(o.alt, b, o.caption);
+}
+
+/** The 36 outcomes of two dice, with the ones in an event shaded. */
+function diceGrid(hot: (first: number, second: number) => boolean, o: { title?: string; caption?: string; alt: string; note?: string }): SlideArt {
+  const s = 20, gx = 130, gy = 66;
+  let b = o.title ? text(W / 2, 28, o.title, { size: 13, fill: VIO }) : '';
+  b += text(gx + 3 * s, 44, 'second die', { size: 10, op: 0.65 });
+  b += text(96, gy + 3 * s + 4, 'first die', { size: 10, op: 0.65, anchor: 'end' });
+  let count = 0;
+  for (let c = 1; c <= 6; c++) b += text(gx + (c - 0.5) * s, gy - 8, String(c), { size: 10, op: 0.7 });
+  for (let r = 1; r <= 6; r++) {
+    b += text(gx - 8, gy + (r - 0.5) * s + 4, String(r), { size: 10, op: 0.7, anchor: 'end' });
+    for (let c = 1; c <= 6; c++) {
+      const h = hot(r, c);
+      if (h) count++;
+      b += fades(rect(gx + (c - 1) * s, gy + (r - 1) * s, s, s, h ? ROSE : INK, h ? `${ROSE}66` : 'none', h ? 2 : 1, 3), 0.02 * (r * 6 + c));
+    }
+  }
+  b += text(W / 2, 212, o.note ?? `${count} of 36 outcomes shaded`, { size: 12, fill: ROSE });
+  return art(o.alt, b, o.caption);
+}
+
+/** A population drawn as a grid of dots, with the chosen individuals marked. */
+function popGrid(
+  n: number,
+  cols: number,
+  picked: number[],
+  o: { numbered?: boolean; rowLabels?: string[]; colors?: Record<number, string>; title?: string; caption?: string; alt: string; note?: string },
+): SlideArt {
+  const rows = Math.ceil(n / cols);
+  const dx = 26, dy = Math.min(34, 150 / Math.max(1, rows - 1));
+  const x0 = (W - (cols - 1) * dx) / 2 + 10, y0 = 72;
+  let b = o.title ? text(W / 2, 28, o.title, { size: 13, fill: VIO }) : '';
+  for (let i = 0; i < n; i++) {
+    const r = Math.floor(i / cols), c = i % cols;
+    const x = x0 + c * dx, y = y0 + r * dy;
+    const label = i + 1;
+    const hot = picked.includes(label);
+    const col = o.colors?.[label] ?? (hot ? ROSE : INK);
+    b += fades(hot ? dot(x, y, 9, col) : `<circle cx="${f(x)}" cy="${f(y)}" r="7" fill="none" stroke="${INK}" stroke-width="1.6" opacity="0.5"/>`, 0.02 * i);
+    if (o.numbered) b += text(x, y + 3, String(label).padStart(2, '0'), { size: 8, fill: hot ? '#fff' : INK, op: hot ? undefined : 0.6 });
+  }
+  (o.rowLabels ?? []).forEach((t, r) => {
+    b += text(x0 - 24, y0 + r * dy + 4, t, { size: 11, op: 0.7, anchor: 'end' });
+  });
+  if (o.note) b += text(W / 2, 240, o.note, { size: 12, fill: ROSE });
+  return art(o.alt, b, o.caption);
+}
+
+// ---------------- STAT-1 — Describing categorical and quantitative data ----------------
+const STAT_1: LessonSlide[] = [
+  {
+    kind: 'objective',
+    head: 'Pictures that tell the truth about data',
+    body: 'Twenty students name a favorite lunch; 24 students report a commute time. Today you will pick the right graph for each kind of variable, read it, and describe its shape in plain words. The right picture makes a pile of numbers talk.',
+    art: bars([{ name: 'students', vals: [8, 6, 4, 2], color: SKY }], { labels: ['pizza', 'tacos', 'salad', 'other'], title: 'Favorite lunch of 20 students', caption: 'Pizza 8, tacos 6, salad 4, other 2 — a categorical variable on a bar graph.' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Two kinds of variables',
+    body: 'A CATEGORICAL variable sorts individuals into groups: eye color, favorite lunch. A QUANTITATIVE variable is a number you can average: height, commute time. A number used as a label, like a jersey number or a zip code, is still categorical — averaging zip codes means nothing.',
+    compare: {
+      cols: [
+        { title: 'Categorical', lines: ['Names a group', 'Eye color, lunch, zip code', 'Count how many in each group'], tone: 'accent' },
+        { title: 'Quantitative', lines: ['Measures an amount', 'Height, commute, siblings', 'Averaging makes sense'], tone: 'ok' },
+      ],
+      note: 'Ask: would the AVERAGE mean anything? If not, the variable is categorical, even if it is written with digits.',
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'Categorical data: counts and percents',
+    body: 'Categorical data lives in a frequency table, a bar graph, or a pie chart. The RELATIVE FREQUENCY of a group is its count divided by the total. Pizza is 8 of 20 students: 8 ÷ 20 = 0.40, or 40% of the class.',
+    formula: {
+      tex: '\\text{relative frequency} = \\frac{\\text{count}}{\\text{total}} = \\frac{8}{20} = 0.40',
+      note: 'Every group\'s relative frequency adds to 1 — the whole pie.',
+      parts: [
+        { sym: '8', means: 'how many chose pizza', tone: 'accent' },
+        { sym: '20', means: 'everyone who was asked', tone: 'ok' },
+        { sym: '0.40', means: '40% — the size of the pizza slice', tone: 'warn' },
+      ],
+    },
+    art: pie([{ label: 'pizza', part: 8 }, { label: 'tacos', part: 6 }, { label: 'salad', part: 4 }, { label: 'other', part: 2 }], { title: 'The same 20 lunches as a pie', caption: '8 + 6 + 4 + 2 = 20, so 40% + 30% + 20% + 10% = 100%.' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Quantitative data: dot plots and histograms',
+    body: 'Quantitative data lives in a DOT PLOT (one dot per value), a STEMPLOT, or a HISTOGRAM. Fifteen students report how many pets they have: four say 0, six say 1, three say 2, one says 3 and one says 4. The dot plot shows every single value.',
+    art: dotPlot([0, 1, 2, 3, 4], [4, 6, 3, 1, 1], { title: 'Pets owned by 15 students', unit: 'number of pets', caption: 'Count the dots: 4 + 6 + 3 + 1 + 1 = 15 students. The tallest stack is at 1 pet.' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Describe it with SOCS',
+    body: 'Describe any distribution with SOCS: Shape, Outliers, Center, Spread — always in context. Shape is symmetric, skewed right, or skewed left, and it can be unimodal (one peak), bimodal (two peaks), or roughly uniform (flat).',
+    compare: {
+      cols: [
+        { title: 'Symmetric', lines: ['Mirror image around the middle', 'Mean ≈ median'], tone: 'ok' },
+        { title: 'Skewed right', lines: ['Long tail toward HIGH values', 'Mean > median'], tone: 'warn' },
+        { title: 'Skewed left', lines: ['Long tail toward LOW values', 'Mean < median'], tone: 'bad' },
+      ],
+      note: 'Shape first, then outliers, then a number for center and a number for spread.',
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'Skew is named for the tail',
+    body: 'The skew is named for the TAIL, not the peak. A long tail stretching toward the high values is skewed RIGHT. That tail drags the mean toward it, so in a skewed-right distribution the mean sits above the median.',
+    formula: {
+      tex: '\\text{tail to the right} \;\\Rightarrow\; \\text{skewed right} \;\\Rightarrow\; \\bar{x} > \\text{median}',
+      note: 'The mean chases the tail; the median stays put with the pile.',
+      parts: [
+        { sym: '\\text{tail}', means: 'the thin stretched-out side of the graph', tone: 'warn' },
+        { sym: '\\bar{x}', means: 'the mean, pulled toward the tail', tone: 'bad' },
+        { sym: '\\text{median}', means: 'the middle value, which barely moves', tone: 'ok' },
+      ],
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Classify three variables',
+    body: 'Number of siblings, eye color, zip code.\nSiblings is a count you can average: quantitative. Eye color names a group: categorical.\nA zip code is written with digits, but averaging zip codes means nothing — it is a label, so categorical.',
+    table: {
+      head: ['variable', 'could you average it?', 'type'],
+      rows: [['number of siblings', 'yes — 2.3 siblings makes sense', 'quantitative'], ['eye color', 'no', 'categorical'], ['zip code', 'no — a label made of digits', 'categorical']],
+      mark: 2,
+      note: 'Digits do not make a variable quantitative. Meaning does.',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Relative frequency of pizza',
+    body: 'Favorite lunch of 20 students: pizza 8, tacos 6, salad 4, other 2.\nRelative frequency = count ÷ total = 8 ÷ 20 = 0.40.\nPizza is 40% of the class — the tallest bar on the bar graph and the biggest slice of the pie.',
+    steps: {
+      steps: [
+        { tex: '8 + 6 + 4 + 2 = 20', text: 'Check the total first.' },
+        { tex: '\\frac{8}{20} = 0.40', text: 'Pizza count over the total.' },
+        { tex: '0.40 = 40\\%', text: 'Move the decimal two places for the percent.' },
+      ],
+      answer: '0.40 \\ (40\\%)',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Shape of 24 commute times',
+    body: 'Commute times in 10-minute bins: 0–10: 9 students, 10–20: 7, 20–30: 4, 30–40: 3, 40–50: 1.\nThe tallest bar is on the left and the bars shrink to the right, so the tail points toward the high values.\nShape: skewed right, one peak at 0–10 minutes. Most students live close; a few live far away.',
+    art: histogram(['0–10', '10–20', '20–30', '30–40', '40–50'], [9, 7, 4, 3, 1], { mark: 0, yLabel: 'count', title: 'Commute time (minutes), 24 students', caption: 'Bars touch because minutes are continuous. The long thin tail on the right names the skew.' }),
+  },
+  {
+    kind: 'example',
+    head: 'Median of the pets data',
+    body: 'Pets: 0 pets 4 students, 1 pet 6, 2 pets 3, 3 pets 1, 4 pets 1. Find the median and the shape.\nSorted, the 15 values are 0,0,0,0,1,1,1,1,1,1,2,2,2,3,4. The median is the 8th value, and the 5th through 10th values are all 1.\nMedian 1 pet. The peak is at 1 and the tail stretches to 4: skewed right.',
+    art: sortedRow([0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 4], { middle: 7, label: 'the 8th of 15 values', title: 'Fifteen values in order', caption: 'Seven values sit on each side of the 8th one, so the median is 1 pet.' }),
+  },
+  {
+    kind: 'example',
+    head: 'Another way: count up the stacks',
+    body: 'You do not have to write out all 15 values. Add the counts from the left until you pass the middle position, (15 + 1) ÷ 2 = 8.\nZero pets covers positions 1–4. One pet covers positions 5–10. Position 8 is in that stack.\nSo the median is 1 pet, straight from the frequency table.',
+    table: {
+      head: ['pets', 'count', 'positions covered'],
+      rows: [['0', '4', '1–4'], ['1', '6', '5–10'], ['2', '3', '11–13'], ['3', '1', '14'], ['4', '1', '15']],
+      mark: 1,
+      note: 'The 8th position lands inside the 1-pet row, so the median is 1.',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'A two-way table: conditional percent',
+    body: 'Fifty students were asked whether they prefer online or in-person class. Prefers online: 10th grade 12, 11th grade 18. Prefers in person: 10th grade 13, 11th grade 7.\nWhat percent of 11th graders prefer online? Stay inside the 11th-grade row: 18 + 7 = 25 eleventh graders.\n18 ÷ 25 = 0.72, so 72% — versus 12 ÷ 25 = 48% of 10th graders.',
+    table: {
+      head: ['', 'online', 'in person', 'total'],
+      rows: [['10th grade', '12', '13', '25'], ['11th grade', '18', '7', '25'], ['total', '30', '20', '50']],
+      mark: 1,
+      note: '"Of 11th graders" means the 11th-grade row is the whole: 18 of 25.',
+    },
+    formula: {
+      tex: 'P(\\text{online} \\mid \\text{11th}) = \\frac{18}{25} = 0.72',
+      note: 'A conditional percent divides by the row (or column) total, not by the grand total.',
+      parts: [
+        { sym: '18', means: '11th graders who prefer online', tone: 'accent' },
+        { sym: '25', means: 'all 11th graders — the condition', tone: 'ok' },
+      ],
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Picture it first: exam scores',
+    body: 'Scores of 24 students: 50–60: 1, 60–70: 2, 70–80: 4, 80–90: 9, 90–100: 8. Sketch the bars before you say anything.\nThe tall bars sit on the right (80–100) and the bars shrink toward the low scores. The tail points LEFT.\nSkewed left. The low tail drags the mean down, so mean < median.',
+    art: histogram(['50–60', '60–70', '70–80', '80–90', '90–100'], [1, 2, 4, 9, 8], { mark: 0, yLabel: 'count', title: 'Exam scores, 24 students', caption: 'The thin tail is on the LOW side, so this is skewed left and the mean sits below the median.' }),
+  },
+  {
+    kind: 'protip',
+    head: 'Say it in context, every time',
+    body: 'A full description never says just "skewed right." It says "the distribution of commute times is skewed right with a single peak at 0–10 minutes; the typical student lives about 10 minutes away, and times range from 0 to 50 minutes." Shape, outliers, center, spread — with the variable named.',
+    art: flow([{ label: 'Shape: symmetric, skewed, peaks' }, { label: 'Outliers: any value far from the rest?' }, { label: 'Center: median or mean, in units' }, { label: 'Spread: range or IQR, in units' }], { title: 'SOCS, in order, in context', caption: 'Four sentences, each naming the variable and its units.' }),
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: naming the skew after the pile',
+    body: 'A histogram with its tall bars on the right and a long thin tail to the left looks "heavy on the right," so students call it skewed right. It is skewed LEFT. Skew follows the tail. The exam-score histogram, piled up at 80–100 with a tail down to 50, is skewed left and its mean is below its median.',
+    compare: {
+      cols: [
+        { title: 'Looks like', lines: ['"The bars are tall on the right"', '"so it is skewed right"', 'Wrong'], tone: 'bad' },
+        { title: 'Actually', lines: ['The thin tail stretches LEFT', 'Skewed left', 'Mean < median'], tone: 'ok' },
+      ],
+      note: 'Find the long thin side. That side is the name of the skew.',
+    },
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: bar graph or histogram?',
+    body: 'A bar graph shows separate CATEGORIES (pizza, tacos, salad) and its bars have gaps between them; their order does not matter. A histogram groups a QUANTITATIVE variable into equal bins and its bars touch, because 10–20 minutes ends exactly where 20–30 begins. Check the horizontal axis before you describe shape — a bar graph has no shape to describe.',
+    compare: {
+      cols: [
+        { title: 'Bar graph', lines: ['Categories on the axis', 'Gaps between bars', 'No "skew" — order is arbitrary'], tone: 'accent' },
+        { title: 'Histogram', lines: ['Number line on the axis', 'Bars touch', 'Shape, center, spread apply'], tone: 'ok' },
+      ],
+    },
+  },
+  {
+    kind: 'challenge',
+    head: 'Extra credit: marginal, then conditional',
+    body: 'From the same two-way table (online: 12 and 18; in person: 13 and 7; 50 students in all), what percent of ALL students prefer online? And of the students who prefer online, what percent are 11th graders?\nThe first is marginal: 30 of 50. The second is conditional on the online column: 18 of 30.\nBoth come out to 60%, but they answer different questions.',
+    steps: {
+      steps: [
+        { tex: '12 + 18 = 30', text: 'Online total: the column margin.' },
+        { tex: '\\frac{30}{50} = 0.60', text: 'Marginal percent: 60% of all students prefer online.' },
+        { tex: '\\frac{18}{30} = 0.60', text: 'Conditional on online: 60% of online-preferrers are 11th graders.' },
+      ],
+      answer: '60\\%\\ \\text{and}\\ 60\\%',
+    },
+  },
+  {
+    kind: 'summary',
+    head: 'Graphs, shape, and the right words',
+    body: 'Categorical variables get bar graphs and pie charts, read with relative frequencies. Quantitative variables get dot plots and histograms, described with SOCS. Skew is named for the tail, and the mean follows the tail. In a two-way table, a conditional percent divides by a row or column total.',
+    table: {
+      head: ['variable', 'graph', 'describe with'],
+      rows: [['categorical', 'bar graph, pie chart', 'counts, relative frequencies'], ['quantitative', 'dot plot, histogram', 'shape, outliers, center, spread'], ['two categorical', 'two-way table', 'marginal and conditional percents']],
+    },
+  },
+];
+
+// ---------------- STAT-2 — Center, spread, boxplots and outliers ----------------
+
+/** The club-meeting ages as a box plot, with 45 sitting past the fence as its own dot. */
+const agesBoxFig = (() => {
+  const lo = 10, hi = 48, y = 130, x0 = 44, x1 = W - 30;
+  const X = (v: number) => x0 + ((v - lo) / (hi - lo)) * (x1 - x0);
+  let b = text(W / 2, 30, 'Ages 12, 14, 15, 15, 16, 18, 20, 45', { size: 13, fill: VIO });
+  b += line(X(12), y, X(14.5), y, INK, 2) + line(X(19), y, X(20), y, INK, 2);
+  b += line(X(12), y - 14, X(12), y + 14, INK, 2.4) + line(X(20), y - 14, X(20), y + 14, INK, 2.4);
+  b += fades(rect(X(14.5), y - 26, X(19) - X(14.5), 52, SKY, `${SKY}33`, 2.6, 5), 0.25);
+  b += line(X(15.5), y - 26, X(15.5), y + 26, ROSE, 3.4);
+  b += line(X(25.75), y - 44, X(25.75), y + 44, VIO, 2, '5 4');
+  b += fades(dot(X(45), y, 6.5, ROSE), 0.6);
+  const yy = 214;
+  b += arrow(x0 - 14, yy, x1 + 12, yy, INK, 1.8);
+  for (let v = 10; v <= 45; v += 5) {
+    b += line(X(v), yy - 4, X(v), yy + 4, INK, 1.4, undefined, 0.55);
+    b += text(X(v), yy + 18, String(v), { size: 10, op: 0.65 });
+  }
+  b += text(X(12), y + 44, 'min', { size: 10, op: 0.7 });
+  b += text(X(14.5), y + 44, 'Q1', { size: 10, fill: SKY });
+  b += text(X(19), y + 44, 'Q3', { size: 10, fill: SKY });
+  b += text(X(15.5), y - 34, 'median', { size: 11, fill: ROSE });
+  b += text(X(25.75), y - 54, 'fence 25.75', { size: 11, fill: VIO });
+  b += text(X(45), y - 34, 'outlier 45', { size: 11, fill: ROSE });
+  return art('A box plot of eight ages with the whisker stopping at 20, a dashed fence at 25.75 and the value 45 drawn as a separate outlier dot', b, 'The whisker stops at 20, the last value inside the fence. The 45 gets its own dot.');
+})();
+
+/** The deviations of 3, 5, 5, 8, 9 from their mean of 6, as arrows. */
+const deviationsFig = (() => {
+  const lo = 2, hi = 10, y = 150, x0 = 46, x1 = W - 34;
+  const X = (v: number) => x0 + ((v - lo) / (hi - lo)) * (x1 - x0);
+  let b = text(W / 2, 28, 'Deviations from the mean', { size: 13, fill: VIO });
+  b += line(x0 - 10, y, x1 + 10, y, INK, 2);
+  for (let v = lo; v <= hi; v++) {
+    b += line(X(v), y - 5, X(v), y + 5, INK, 1.4, undefined, 0.55);
+    b += text(X(v), y + 22, String(v), { size: 10, op: 0.65 });
+  }
+  b += line(X(6), 56, X(6), y, ROSE, 2, '5 4');
+  b += text(X(6), 46, 'mean 6', { size: 12, fill: ROSE });
+  b += fades(dot(X(3), y - 12, 6, AMB), 0.1) + fades(dot(X(5), y - 12, 6, AMB), 0.2) + fades(dot(X(5), y - 28, 6, AMB), 0.3) + fades(dot(X(8), y - 12, 6, AMB), 0.4) + fades(dot(X(9), y - 12, 6, AMB), 0.5);
+  b += draws(arrow(X(6), 104, X(3), 104, SKY, 2.4), 120, 0.6) + text(X(4.5), 96, '−3', { size: 12, fill: SKY });
+  b += draws(arrow(X(6), 82, X(5), 82, SKY, 2.4), 40, 0.7) + text(X(5.5), 74, '−1 (twice)', { size: 12, fill: SKY });
+  b += draws(arrow(X(6), 104, X(8), 104, EMR, 2.4), 80, 0.8) + text(X(7), 96, '+2', { size: 12, fill: EMR });
+  b += draws(arrow(X(6), 82, X(9), 82, EMR, 2.4), 120, 0.9) + text(X(7.5), 74, '+3', { size: 12, fill: EMR });
+  b += text(W / 2, 236, 'squared: 9, 1, 1, 4, 9 → sum 24', { size: 12, op: 0.75 });
+  return art('The values 3, 5, 5, 8 and 9 on a number line with arrows from the mean of 6 to each value showing deviations of minus 3, minus 1, minus 1, plus 2 and plus 3', b, 'Each arrow is a deviation x − x̄. Squaring makes them all positive; their sum is 24.');
+})();
+
+const STAT_2: LessonSlide[] = [
+  {
+    kind: 'objective',
+    head: 'One number for the middle, one for the spread',
+    body: 'Seven students spent 4, 6, 7, 8, 10, 12 and 16 minutes on homework. Today you will find the center two ways, measure the spread three ways, draw a boxplot, and decide with a rule — not a feeling — whether a value is an outlier.',
+    art: balancePoint([4, 6, 7, 8, 10, 12, 16], 9, { lo: 3, hi: 17, median: 8, title: 'Homework minutes: 4, 6, 7, 8, 10, 12, 16', caption: 'The beam balances at the mean, 9. The median, 8, is the 4th of the 7 values.' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Mean and median',
+    body: 'The MEAN is the balance point: add the values and divide by n. The MEDIAN is the middle value once the data are sorted; when n is even, average the two middle values. For 4, 6, 7, 8, 10, 12, 16 the mean is 63 ÷ 7 = 9 and the median is the 4th value, 8.',
+    formula: {
+      tex: '\\bar{x} = \\frac{\\sum x}{n} = \\frac{63}{7} = 9',
+      note: 'The median needs no formula — just sort and count to the middle.',
+      parts: [
+        { sym: '\\sum x', means: 'add up every value: 4 + 6 + 7 + 8 + 10 + 12 + 16 = 63', tone: 'accent' },
+        { sym: 'n', means: 'how many values there are: 7', tone: 'ok' },
+        { sym: '\\bar{x}', means: 'the mean, read "x-bar"', tone: 'warn' },
+      ],
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'Quartiles and the IQR',
+    body: 'QUARTILES cut the sorted data into quarters. Q1 is the median of the lower half and Q3 the median of the upper half; when n is odd, leave the overall median out of both halves. The IQR = Q3 − Q1 is the width of the middle 50%.',
+    formula: {
+      tex: '\\text{IQR} = Q_3 - Q_1 = 12 - 6 = 6',
+      note: 'For 4, 6, 7 | 8 | 10, 12, 16: the lower half has median 6, the upper half has median 12.',
+      parts: [
+        { sym: 'Q_1', means: 'median of the lower half, 4, 6, 7 → 6', tone: 'accent' },
+        { sym: 'Q_3', means: 'median of the upper half, 10, 12, 16 → 12', tone: 'ok' },
+        { sym: '\\text{IQR}', means: 'the spread of the middle half of the data', tone: 'warn' },
+      ],
+    },
+    art: sortedRow([4, 6, 7, 8, 10, 12, 16], { middle: 3, label: 'median 8 — left out of both halves', title: 'Sort, find the middle, then halve', caption: 'Lower half 4, 6, 7 gives Q1 = 6. Upper half 10, 12, 16 gives Q3 = 12.' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Standard deviation: typical distance from the mean',
+    body: 'The STANDARD DEVIATION s is roughly the typical distance of a value from the mean. Find each deviation x − x̄, square it, add them up, divide by n − 1, and take the square root. A small s means the values huddle near the mean; a large s means they are spread out.',
+    formula: {
+      tex: 's = \\sqrt{\\dfrac{\\sum (x - \\bar{x})^{2}}{n - 1}}',
+      note: 'Squaring stops the negatives from cancelling the positives; the square root brings the units back.',
+      parts: [
+        { sym: 'x - \\bar{x}', means: 'a deviation — how far one value sits from the mean', tone: 'accent' },
+        { sym: 'n - 1', means: 'one less than the count, for a sample', tone: 'warn' },
+        { sym: '\\sqrt{\\ }', means: 'undo the squaring so s is in the original units', tone: 'ok' },
+      ],
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'Five numbers, one boxplot, one outlier rule',
+    body: 'The FIVE-NUMBER SUMMARY (min, Q1, median, Q3, max) draws a BOXPLOT: the box holds the middle half, the whiskers reach the smallest and largest values that are not outliers. The 1.5 × IQR RULE: a value is an outlier if it is below Q1 − 1.5·IQR or above Q3 + 1.5·IQR.',
+    formula: {
+      tex: '\\text{fences:}\\quad Q_1 - 1.5\\,\\text{IQR} \\qquad Q_3 + 1.5\\,\\text{IQR}',
+      note: 'For the homework data: 6 − 9 = −3 and 12 + 9 = 21. Nothing lies outside, so no outliers.',
+      parts: [
+        { sym: '1.5\\,\\text{IQR}', means: 'one and a half box-widths: 1.5 × 6 = 9', tone: 'accent' },
+        { sym: 'Q_3 + 9 = 21', means: 'the upper fence — 16 is inside it', tone: 'ok' },
+      ],
+    },
+    art: boxPlot([4, 6, 8, 12, 16], 2, 18, { step: 2, title: 'Homework minutes: 4, 6, 8, 12, 16', caption: 'Box from Q1 = 6 to Q3 = 12, median line at 8, whiskers to 4 and 16.' }),
+  },
+  {
+    kind: 'example',
+    head: 'Mean and median of the homework minutes',
+    body: 'Minutes: 4, 6, 7, 8, 10, 12, 16.\nMean: 4 + 6 + 7 + 8 + 10 + 12 + 16 = 63, and 63 ÷ 7 = 9.\nThe data are already sorted; with 7 values the median is the 4th: 8. The mean is a little higher because 16 pulls it up.',
+    steps: {
+      steps: [
+        { tex: '4 + 6 + 7 + 8 + 10 + 12 + 16 = 63', text: 'Add every value.' },
+        { tex: '63 \\div 7 = 9', text: 'Divide by n = 7 for the mean.' },
+        { tex: '4, 6, 7, \\mathbf{8}, 10, 12, 16', text: 'Sorted already; the 4th of 7 is the median.' },
+      ],
+      answer: '\\bar{x} = 9,\\ \\text{median} = 8',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Five-number summary and IQR',
+    body: 'Same data: 4, 6, 7, 8, 10, 12, 16.\nMin 4, max 16, median 8. Lower half 4, 6, 7 has median Q1 = 6; upper half 10, 12, 16 has median Q3 = 12.\nFive-number summary 4, 6, 8, 12, 16. IQR = 12 − 6 = 6.',
+    steps: {
+      steps: [
+        { tex: '\\min = 4,\\quad \\max = 16', text: 'The ends of the sorted list.' },
+        { tex: 'Q_1 = 6', text: 'Median of the lower half 4, 6, 7.' },
+        { tex: 'Q_3 = 12', text: 'Median of the upper half 10, 12, 16.' },
+        { tex: '\\text{IQR} = 12 - 6 = 6', text: 'Q3 minus Q1.' },
+      ],
+      answer: '4,\\ 6,\\ 8,\\ 12,\\ 16;\\quad \\text{IQR} = 6',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Standard deviation of 3, 5, 5, 8, 9',
+    body: 'Mean = 30 ÷ 5 = 6.\nDeviations: −3, −1, −1, 2, 3. Squared: 9, 1, 1, 4, 9. Sum = 24.\nDivide by n − 1 = 4 to get the variance, 6. Then s = √6 ≈ 2.45.',
+    art: deviationsFig,
+    table: {
+      head: ['x', 'x − x̄', '(x − x̄)²'],
+      rows: [['3', '−3', '9'], ['5', '−1', '1'], ['5', '−1', '1'], ['8', '2', '4'], ['9', '3', '9'], ['sum', '0', '24']],
+      mark: 5,
+      note: 'Deviations always add to 0 — that is why we square them. 24 ÷ 4 = 6, and √6 ≈ 2.45.',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Is 45 an outlier?',
+    body: 'Ages at a club meeting: 12, 14, 15, 15, 16, 18, 20, 45.\nMedian = (15 + 16)/2 = 15.5. Lower half 12, 14, 15, 15 gives Q1 = 14.5; upper half 16, 18, 20, 45 gives Q3 = 19. IQR = 4.5, and 1.5 × 4.5 = 6.75.\nUpper fence = 19 + 6.75 = 25.75. Since 45 > 25.75, the 45 is an outlier. The lower fence, 7.75, catches nothing.',
+    steps: {
+      steps: [
+        { tex: 'Q_1 = \\tfrac{14 + 15}{2} = 14.5,\\quad Q_3 = \\tfrac{18 + 20}{2} = 19', text: 'Medians of the two halves of 4.' },
+        { tex: '\\text{IQR} = 19 - 14.5 = 4.5', text: 'Width of the box.' },
+        { tex: '1.5 \\times 4.5 = 6.75', text: 'One and a half box-widths.' },
+        { tex: '19 + 6.75 = 25.75 < 45', text: 'The 45 is past the upper fence.' },
+      ],
+      answer: '\\text{yes: } 45 > 25.75',
+    },
+    art: agesBoxFig,
+  },
+  {
+    kind: 'example',
+    head: 'Another way: count box-widths past Q3',
+    body: 'Instead of computing a fence, ask how many IQRs above Q3 the suspicious value sits.\n(45 − 19) ÷ 4.5 = 26 ÷ 4.5 ≈ 5.8 IQRs above Q3.\nAnything more than 1.5 IQRs out is an outlier, and 5.8 is nowhere close to the line. Same verdict, one division.',
+    steps: {
+      steps: [
+        { tex: '45 - 19 = 26', text: 'Distance above Q3.' },
+        { tex: '26 \\div 4.5 \\approx 5.8', text: 'Measured in box-widths.' },
+        { tex: '5.8 > 1.5', text: 'Far more than the cutoff.' },
+      ],
+      answer: '\\text{outlier}',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'What the 45 does to the mean',
+    body: 'For those ages, compare the mean and median with and without the 45.\nWith 45: mean = 155 ÷ 8 ≈ 19.4, median 15.5. Without 45: mean = 110 ÷ 7 ≈ 15.7, median 15.\nThe outlier moves the mean by almost 4 years but the median by only half a year. The median is RESISTANT; the mean is not.',
+    table: {
+      head: ['', 'mean', 'median'],
+      rows: [['with 45 (n = 8)', '155 ÷ 8 ≈ 19.4', '15.5'], ['without 45 (n = 7)', '110 ÷ 7 ≈ 15.7', '15'], ['change', 'about 3.7', '0.5']],
+      mark: 2,
+      note: 'One wild value drags the mean toward itself. The median barely notices.',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Picture it first: two classes, one test',
+    body: 'Class A: median 78, IQR 10. Class B: median 85, IQR 20. Sketch two boxplots: B\'s box sits farther right, A\'s box is half as wide.\nCenter: B\'s typical student scored higher, 85 versus 78.\nSpread: A\'s middle half is packed into 10 points instead of 20, so A was more consistent.',
+    compare: {
+      cols: [
+        { title: 'Class A', lines: ['median 78', 'IQR 10 — a narrow box', 'more consistent'], tone: 'accent' },
+        { title: 'Class B', lines: ['median 85', 'IQR 20 — a wide box', 'higher typical score'], tone: 'ok' },
+      ],
+      note: 'Compare centers with centers and spreads with spreads, and say which class each number belongs to.',
+    },
+  },
+  {
+    kind: 'protip',
+    head: 'The standard deviation recipe',
+    body: 'Students lose the thread in the middle of a standard deviation. Run the same five moves every time, and write the deviations in a column so you can check that they add to zero before you square anything.',
+    art: flow([{ label: 'Find the mean' }, { label: 'Subtract it from every value' }, { label: 'Square each deviation and add' }, { label: 'Divide by n − 1, then square root' }], { title: 'Five moves, same order every time', caption: 'For 3, 5, 5, 8, 9: mean 6, squares add to 24, 24 ÷ 4 = 6, s = √6 ≈ 2.45.' }),
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: n instead of n − 1, and Q1 + Q3',
+    body: 'Two slips cost the most points. Dividing the squared deviations by n gives a slightly-too-small answer (24 ÷ 5 = 4.8 instead of 6); a sample standard deviation divides by n − 1. And the IQR is Q3 MINUS Q1 — a width, never a sum. Sort before you find any median or quartile.',
+    compare: {
+      cols: [
+        { title: 'Wrong', lines: ['variance = 24 ÷ 5 = 4.8', 'IQR = 6 + 12 = 18'], tone: 'bad' },
+        { title: 'Right', lines: ['variance = 24 ÷ 4 = 6', 'IQR = 12 − 6 = 6'], tone: 'ok' },
+      ],
+      note: 'Sample standard deviation: n − 1 on the bottom. IQR: subtract, and it must come out positive.',
+    },
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: reporting the mean next to an outlier',
+    body: 'When the ages included the 45, the mean of 19.4 described nobody — seven of the eight people were 20 or under. Skewed data or outliers call for the median and the IQR, which are resistant. Mean and standard deviation are for roughly symmetric data with no outliers.',
+    compare: {
+      cols: [
+        { title: 'Resistant', lines: ['median', 'IQR', 'use with skew or outliers'], tone: 'ok' },
+        { title: 'Not resistant', lines: ['mean', 'standard deviation', 'use when symmetric, no outliers'], tone: 'warn' },
+      ],
+    },
+  },
+  {
+    kind: 'challenge',
+    head: 'Extra credit: add a value, keep the mean',
+    body: 'Add one more homework time to 4, 6, 7, 8, 10, 12, 16 so the mean stays exactly 9. What happens to the median?\nTo keep the mean at 9 with 8 values, the total must be 72, so the new value is 72 − 63 = 9.\nSorted, the list is 4, 6, 7, 8, 9, 10, 12, 16; the median is now (8 + 9)/2 = 8.5. The mean held still, the median moved up.',
+    steps: {
+      steps: [
+        { tex: '8 \\times 9 = 72', text: 'Eight values with mean 9 must total 72.' },
+        { tex: '72 - 63 = 9', text: 'The new value is 9 — adding the mean never moves the mean.' },
+        { tex: '\\tfrac{8 + 9}{2} = 8.5', text: 'With 8 values the median averages the 4th and 5th.' },
+      ],
+      answer: '\\text{add } 9;\\ \\text{median } 8 \\to 8.5',
+    },
+  },
+  {
+    kind: 'summary',
+    head: 'Center, spread, and what to trust',
+    body: 'Mean and median measure center; standard deviation, IQR and range measure spread. The five-number summary draws the boxplot, and the 1.5 × IQR rule decides which dots sit outside the whiskers. When the data are skewed or hold an outlier, report the resistant pair: median and IQR.',
+    table: {
+      head: ['measure', 'what it is', 'resistant?'],
+      rows: [['mean', 'sum ÷ n', 'no'], ['median', 'middle of the sorted list', 'yes'], ['standard deviation', 'typical distance from the mean (÷ n − 1)', 'no'], ['IQR', 'Q3 − Q1, width of the middle half', 'yes']],
+    },
+  },
+];
+
+// ---------------- STAT-3 — The normal distribution and z-scores ----------------
+const STAT_3: LessonSlide[] = [
+  {
+    kind: 'objective',
+    head: 'The bell curve, and where a score sits on it',
+    body: 'Test scores follow N(500, 100): a bell curve centered at 500 with standard deviation 100. A score of 650 sits 1.5 standard deviations above the mean, so z = 1.5. Today you will turn any value into a z-score and any z-score into an area under the curve.',
+    art: normalFig({ mu: 500, sigma: 100, marks: [{ at: 650, label: 'x = 650, z = 1.5' }], title: 'Scores are N(500, 100)', caption: 'The ticks are one standard deviation apart. 650 is one and a half of them past 500.', alt: 'A normal curve centered at 500 with ticks every 100 and a dashed line at 650 labelled z equals 1.5' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Two numbers describe the whole curve',
+    body: 'A NORMAL distribution is a symmetric bell curve described by its mean μ, the center, and its standard deviation σ, the distance from the center out to where the curve changes from steep to flat. We write N(μ, σ). N(500, 100) and N(64.5, 2.5) are the same shape, just relabelled.',
+    formula: {
+      tex: 'N(\\mu,\\ \\sigma)',
+      note: 'Same bell every time; μ slides it along the axis and σ stretches it wider or squeezes it narrower.',
+      parts: [
+        { sym: '\\mu', means: 'the mean — the peak and the line of symmetry', tone: 'accent' },
+        { sym: '\\sigma', means: 'the standard deviation — one tick on the axis', tone: 'ok' },
+      ],
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'The empirical rule: 68–95–99.7',
+    body: 'About 68% of values lie within 1σ of the mean, 95% within 2σ, and 99.7% within 3σ. Whatever is left over is split evenly between the two tails: beyond 2σ there is 5% in total, so 2.5% on each side.',
+    formula: {
+      tex: '\\mu \\pm 1\\sigma:\\ 68\\%\\qquad \\mu \\pm 2\\sigma:\\ 95\\%\\qquad \\mu \\pm 3\\sigma:\\ 99.7\\%',
+      note: 'Halve the leftover for one tail: (100 − 95)/2 = 2.5% beyond 2σ on one side.',
+      parts: [
+        { sym: '68\\%', means: 'between 400 and 600 for N(500, 100)', tone: 'accent' },
+        { sym: '95\\%', means: 'between 300 and 700', tone: 'ok' },
+        { sym: '2.5\\%', means: 'above 700 — half of the 5% left over', tone: 'warn' },
+      ],
+    },
+    art: normalFig({ mu: 500, sigma: 100, shade: [400, 600], shadeLabel: { text: '68%', at: 500, y: 150 }, title: 'Within one standard deviation', caption: 'The shaded middle, 400 to 600, holds about 68% of all scores.', alt: 'A normal curve centered at 500 with the region from 400 to 600 shaded and labelled 68 percent' }),
+  },
+  {
+    kind: 'concept',
+    head: 'The z-score counts standard deviations',
+    body: 'A Z-SCORE says how many standard deviations a value sits from the mean: z = (x − μ)/σ. Negative z means below the mean. Because z has no units, it lets you compare a test score with a height, or a score on one test with a score on another.',
+    formula: {
+      tex: 'z = \\frac{x - \\mu}{\\sigma}',
+      note: 'Subtract the center, then divide by one tick.',
+      parts: [
+        { sym: 'x - \\mu', means: 'how far the value is from the mean, in original units', tone: 'accent' },
+        { sym: '\\sigma', means: 'the size of one standard deviation', tone: 'ok' },
+        { sym: 'z', means: 'the distance measured in standard deviations', tone: 'warn' },
+      ],
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'The table gives the area to the LEFT',
+    body: 'The standard normal table (or normalcdf) gives the AREA TO THE LEFT of a z-score — the proportion of values below x. For an area to the right, subtract from 1. For an area between two values, subtract the two left-areas. Always sketch and shade before you compute.',
+    art: normalFig({ mu: 0, sigma: 1, shade: [-3.6, 1], shadeLabel: { text: 'area to the left of z', at: -0.9, y: 170 }, tickText: (k) => (k === 0 ? '0' : k > 0 ? String(k) : `−${-k}`), marks: [{ at: 1, label: 'z' }], title: 'The standard normal curve, N(0, 1)', caption: 'The table reports the shaded part: everything below the z you look up.', alt: 'The standard normal curve with everything to the left of z equals 1 shaded' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Going backwards: from a percent to a value',
+    body: 'Some questions start with the area: "what score is the top 10%?" Find the z with that area to its LEFT (invNorm), then unstandardize: x = μ + zσ. Top 10% means 90% is to the left, which is z ≈ 1.28.',
+    formula: {
+      tex: 'x = \\mu + z\\,\\sigma',
+      note: 'The z-score formula solved for x. A negative z makes the second term negative on its own.',
+      parts: [
+        { sym: 'z', means: 'looked up from the area, not computed from a value', tone: 'accent' },
+        { sym: 'z\\,\\sigma', means: 'how far from the mean, back in original units', tone: 'ok' },
+      ],
+    },
+  },
+  {
+    kind: 'example',
+    head: 'The z-score of 650',
+    body: 'Scores are N(500, 100). What is the z-score of 650?\nz = (650 − 500)/100 = 150/100.\nz = 1.5: the score is one and a half standard deviations above the mean.',
+    steps: {
+      steps: [
+        { tex: 'z = \\frac{x - \\mu}{\\sigma}', text: 'Start from the rule.' },
+        { tex: '= \\frac{650 - 500}{100}', text: 'Fill in the value, the mean, the standard deviation.' },
+        { tex: '= \\frac{150}{100} = 1.5', text: 'Positive, so above the mean.' },
+      ],
+      answer: 'z = 1.5',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Empirical rule: between 400 and 600, and above 700',
+    body: 'For N(500, 100): 400 and 600 are μ − 1σ and μ + 1σ, so about 68% of scores lie between them.\n700 is μ + 2σ. About 95% lie within 2σ, leaving 5% for the two tails together.\nHalf of that is in the upper tail: about 2.5% score above 700.',
+    art: normalFig({ mu: 500, sigma: 100, shade: [700, 860], shadeColor: ROSE, shadeLabel: { text: '2.5%', at: 745, y: 172 }, marks: [{ at: 700, label: 'x = 700, z = 2', color: VIO }], title: 'The tail above 700', caption: '5% lies beyond 2σ in both tails together, so 2.5% sits in this one.', alt: 'A normal curve centered at 500 with the small tail to the right of 700 shaded and labelled 2.5 percent' }),
+  },
+  {
+    kind: 'example',
+    head: 'Proportion below 650',
+    body: 'For N(500, 100), what proportion of scores are below 650?\nz = (650 − 500)/100 = 1.5. The table gives the area to the left of z = 1.5 as 0.9332.\nAbout 93.3% of scores are below 650, so about 6.7% are above.',
+    steps: {
+      steps: [
+        { tex: 'z = \\frac{650 - 500}{100} = 1.5', text: 'Standardize the value.' },
+        { tex: 'P(z < 1.5) = 0.9332', text: 'Look up the area to the left.' },
+        { tex: '1 - 0.9332 = 0.0668', text: 'The area to the right, if the question asks for "above".' },
+      ],
+      answer: '0.9332',
+    },
+    art: normalFig({ mu: 500, sigma: 100, shade: [140, 650], shadeLabel: { text: '0.9332', at: 450, y: 150 }, marks: [{ at: 650, label: 'x = 650, z = 1.5' }], title: 'Below 650', caption: 'Shade left of 650 — that is exactly what the table reports for z = 1.5.', alt: 'A normal curve centered at 500 with everything left of 650 shaded and labelled 0.9332' }),
+  },
+  {
+    kind: 'example',
+    head: 'Between two values: women\'s heights',
+    body: 'Adult women\'s heights are N(64.5, 2.5) inches. What proportion are between 62 and 67 inches?\nFor 62: (62 − 64.5)/2.5 = −1. For 67: (67 − 64.5)/2.5 = 1. So z = −1 and z = 1.\nArea left of 1 is 0.8413; area left of −1 is 0.1587. Subtract: 0.8413 − 0.1587 = 0.6826, about 68%.',
+    steps: {
+      steps: [
+        { tex: 'z_{62} = \\frac{62 - 64.5}{2.5} = -1,\\quad z_{67} = \\frac{67 - 64.5}{2.5} = 1', text: 'Standardize both ends.' },
+        { tex: 'P(z < 1) = 0.8413,\\quad P(z < -1) = 0.1587', text: 'Two left-areas from the table.' },
+        { tex: '0.8413 - 0.1587 = 0.6826', text: 'Big area minus small area leaves the middle.' },
+      ],
+      answer: '0.6826',
+    },
+    art: normalFig({ mu: 64.5, sigma: 2.5, shade: [62, 67], shadeLabel: { text: '0.6826', at: 64.5, y: 150 }, marks: [{ at: 62, label: 'z = −1' }, { at: 67, label: 'z = 1' }], title: 'Heights are N(64.5, 2.5) inches', caption: '62 and 67 are each one standard deviation from 64.5, so the middle is about 68%.', alt: 'A normal curve centered at 64.5 with the region from 62 to 67 shaded and labelled 0.6826' }),
+  },
+  {
+    kind: 'example',
+    head: 'Another way: notice the empirical rule',
+    body: 'Before reaching for the table, check whether the endpoints land on whole standard deviations.\n62 is exactly 1σ below 64.5 and 67 is exactly 1σ above, so the empirical rule says about 68% at once.\nThe table\'s 0.6826 agrees. Use the rule to estimate, and the table when the endpoints are not whole σs.',
+    table: {
+      head: ['z-scores', 'empirical rule', 'table'],
+      rows: [['−1 to 1', '68%', '0.6826'], ['−2 to 2', '95%', '0.9544'], ['−3 to 3', '99.7%', '0.9974']],
+      mark: 0,
+      note: 'Whole-number z-scores are the rule\'s home turf. Anything like z = 1.5 needs the table.',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'The top 10% cutoff',
+    body: 'For N(500, 100), what score puts you in the top 10%?\nTop 10% means 90% is to the left. The z with 0.90 to its left is about z = 1.28.\nUnstandardize: 500 + 1.28 × 100 = 628. A score of about 628 is the cutoff.',
+    steps: {
+      steps: [
+        { tex: '\\text{area left} = 0.90', text: 'Top 10% means 90% below the cutoff.' },
+        { tex: 'z \\approx 1.28', text: 'Look up 0.90 inside the table (invNorm).' },
+        { tex: '500 + 1.28 \\times 100 = 628', text: 'Unstandardize with μ + zσ.' },
+      ],
+      answer: '\\approx 628',
+    },
+    art: normalFig({ mu: 500, sigma: 100, shade: [628, 860], shadeColor: EMR, shadeLabel: { text: 'top 10%', at: 700, y: 172 }, marks: [{ at: 628, label: 'cutoff 628', color: EMR }], title: 'Where does the top 10% begin?', caption: '90% of the area sits left of the dashed line, 10% to its right.', alt: 'A normal curve centered at 500 with the region to the right of 628 shaded and labelled top 10 percent' }),
+  },
+  {
+    kind: 'example',
+    head: 'Picture it first: rejected chip bags',
+    body: 'Bags are filled N(10, 0.2) ounces and a bag under 9.7 oz is rejected. Sketch the curve, mark 9.7 on the left, shade below it.\nz = (9.7 − 10)/0.2 = −0.3/0.2, so z = −1.5.\nThe area to the left of −1.5 is 0.0668. About 6.7% of bags are rejected.',
+    steps: {
+      steps: [
+        { tex: 'z = \\frac{9.7 - 10}{0.2} = -1.5', text: 'Below the mean, so z is negative.' },
+        { tex: 'P(z < -1.5) = 0.0668', text: 'A left tail — read straight off the table.' },
+        { tex: '0.0668 \\approx 6.7\\%', text: 'About 7 bags in 100 are rejected.' },
+      ],
+      answer: '0.0668',
+    },
+    art: normalFig({ mu: 10, sigma: 0.2, shade: [9.28, 9.7], shadeColor: ROSE, shadeLabel: { text: '0.0668', at: 9.55, y: 172 }, marks: [{ at: 9.7, label: '9.7 oz, z = −1.5' }], title: 'Bag weights are N(10, 0.2) oz', caption: 'The rejected bags are the thin left tail below 9.7 ounces.', alt: 'A normal curve centered at 10 with the tail below 9.7 shaded and labelled 0.0668' }),
+  },
+  {
+    kind: 'protip',
+    head: 'Draw, mark, shade — then compute',
+    body: 'Every normal problem is the same four moves. Draw the bell and mark μ. Mark the value you were given. Shade the region the question describes. Only then standardize and look up the area. The sketch tells you whether your answer should be big or small before the table does.',
+    art: flow([{ label: 'Draw the curve, mark μ and the σ ticks' }, { label: 'Mark the value x (or the cutoff)' }, { label: 'Shade: left, right, or between?' }, { label: 'Standardize, look up, adjust' }], { title: 'The same four moves, every time', caption: 'If the shaded part looks small and your answer is 0.93, you shaded the wrong side.' }),
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: reading the wrong side of the table',
+    body: 'The table always gives the area to the LEFT. The proportion of scores above 650 is 1 − 0.9332 = 0.0668, not 0.9332. A quick sanity check: a value above the mean has more than half the area to its left, so "above" must be less than 0.5.',
+    compare: {
+      cols: [
+        { title: 'Below 650', tex: 'P(z < 1.5) = 0.9332', lines: ['Straight from the table', 'Big — most scores are below'], tone: 'ok' },
+        { title: 'Above 650', tex: '1 - 0.9332 = 0.0668', lines: ['Subtract from 1', 'Small — only the right tail'], tone: 'warn' },
+      ],
+      note: 'The two areas must add to 1. If yours do not, you read the table for the wrong side.',
+    },
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: unstandardizing with the wrong sign',
+    body: 'Going backwards, always use x = μ + zσ. The sign of z does the work: for the bottom 10%, z ≈ −1.28 and x = 500 + (−1.28)(100) = 372. Writing μ − zσ with a positive z gives the right number by accident here and the wrong one everywhere else.',
+    compare: {
+      cols: [
+        { title: 'Top 10%', tex: '500 + 1.28(100) = 628', lines: ['z is positive', 'cutoff above the mean'], tone: 'ok' },
+        { title: 'Bottom 10%', tex: '500 + (-1.28)(100) = 372', lines: ['z is negative', 'cutoff below the mean'], tone: 'accent' },
+      ],
+      note: 'One formula, two signs of z. Never flip the formula; let z carry the sign.',
+    },
+  },
+  {
+    kind: 'challenge',
+    head: 'Extra credit: between 350 and 700',
+    body: 'For N(500, 100), what proportion of scores lie between 350 and 700?\nz for 350 is −1.5; z for 700 is 2. Neither endpoint is a whole σ on both sides, so use the table.\nArea left of 2 is 0.9772; area left of −1.5 is 0.0668. Subtract: 0.9772 − 0.0668 = 0.9104, about 91%.',
+    steps: {
+      steps: [
+        { tex: 'z_{350} = \\frac{350 - 500}{100} = -1.5,\\quad z_{700} = \\frac{700 - 500}{100} = 2', text: 'Standardize both ends.' },
+        { tex: 'P(z < 2) = 0.9772', text: 'Area left of the upper end.' },
+        { tex: 'P(z < -1.5) = 0.0668', text: 'Area left of the lower end.' },
+        { tex: '0.9772 - 0.0668 = 0.9104', text: 'The middle is the difference.' },
+      ],
+      answer: '0.9104',
+    },
+  },
+  {
+    kind: 'summary',
+    head: 'Standardize, then shade',
+    body: 'A normal distribution is N(μ, σ). The z-score z = (x − μ)/σ measures distance from the mean in standard deviations. The table gives the area to the left of z; subtract from 1 for the right, subtract two left-areas for between. To go backwards, look up z from the area and unstandardize with x = μ + zσ.',
+    table: {
+      head: ['z', 'area to the left', 'where it came up'],
+      rows: [['−1.5', '0.0668', 'chip bags under 9.7 oz'], ['−1', '0.1587', 'heights under 62 in'], ['1', '0.8413', 'heights under 67 in'], ['1.28', '0.90', 'top 10% cutoff, 628'], ['1.5', '0.9332', 'scores under 650']],
+    },
+  },
+];
+
+// ---------------- STAT-4 — Scatterplots, correlation and least-squares regression ----------------
+const STUDY = [{ x: 1, y: 60 }, { x: 2, y: 65 }, { x: 3, y: 75 }, { x: 4, y: 80 }, { x: 5, y: 90 }];
+const STUDY_RANGE: Range = { x: [0, 6], y: [50, 95] };
+const STUDY_TICKS = { x: [1, 2, 3, 4, 5], y: [50, 60, 70, 80, 90] };
+
+const STAT_4: LessonSlide[] = [
+  {
+    kind: 'objective',
+    head: 'Two variables, one line through the cloud',
+    body: 'Five students studied 1, 2, 3, 4 and 5 hours and scored 60, 65, 75, 80 and 90. Today you will describe the pattern, measure how tight it is with r, fit the least-squares line, and then use that line carefully — predicting inside the data and never far beyond it.',
+    art: scatterFig(STUDY, { range: STUDY_RANGE, ticks: STUDY_TICKS, xLabel: 'hours', yLabel: 'score', title: 'Hours studied vs. test score', caption: 'Five points climbing to the right in nearly a straight line: positive, linear, strong.', alt: 'A scatterplot of five points at (1, 60), (2, 65), (3, 75), (4, 80) and (5, 90) rising to the right' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Reading a scatterplot',
+    body: 'A SCATTERPLOT shows two quantitative variables: the EXPLANATORY variable x on the horizontal axis and the RESPONSE y on the vertical. Describe it with direction (positive or negative), form (linear or curved), strength (how tightly the points hug the form), and any unusual points.',
+    compare: {
+      cols: [
+        { title: 'Direction', lines: ['Positive: up to the right', 'Negative: down to the right'], tone: 'accent' },
+        { title: 'Form', lines: ['Linear: a straight band', 'Curved: bends'], tone: 'ok' },
+        { title: 'Strength', lines: ['Strong: a tight band', 'Weak: a loose cloud'], tone: 'warn' },
+      ],
+      note: 'Say all three, then mention outliers, then name the variables in context.',
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'Correlation r',
+    body: 'The CORRELATION r measures the direction and strength of a LINEAR relationship. It is always between −1 and 1, has no units, and does not change if you swap x and y or change units. Near 0 is weak; near ±1 is strong. For the study data r = 0.993 — very strong and positive.',
+    formula: {
+      tex: '-1 \\le r \\le 1',
+      note: 'The sign gives the direction, the size gives the strength. r = −0.9 is stronger than r = 0.4.',
+      parts: [
+        { sym: 'r > 0', means: 'the points rise to the right', tone: 'ok' },
+        { sym: 'r < 0', means: 'the points fall to the right', tone: 'bad' },
+        { sym: '|r| \\approx 1', means: 'the points nearly sit on a line', tone: 'accent' },
+      ],
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'The least-squares regression line',
+    body: 'The LEAST-SQUARES LINE ŷ = a + bx makes the sum of the squared residuals as small as possible. Its slope is b = r·(s_y/s_x), and it always passes through the point of means (x̄, ȳ), so a = ȳ − b·x̄. For the study data that line is ŷ = 51.5 + 7.5x.',
+    formula: {
+      tex: '\\hat{y} = a + bx,\\qquad b = r\\,\\frac{s_y}{s_x},\\qquad a = \\bar{y} - b\\,\\bar{x}',
+      note: 'The hat on ŷ says "predicted". The line is a model, not a list of the actual scores.',
+      parts: [
+        { sym: 'b', means: 'the slope — predicted change in y per 1 unit of x', tone: 'accent' },
+        { sym: 'a', means: 'the intercept — predicted y when x = 0', tone: 'ok' },
+        { sym: '(\\bar{x}, \\bar{y})', means: 'the point of means, always on the line: (3, 74)', tone: 'warn' },
+      ],
+    },
+    art: scatterFig(STUDY, { range: STUDY_RANGE, ticks: STUDY_TICKS, xLabel: 'hours', yLabel: 'score', fit: { a: 51.5, b: 7.5, label: 'ŷ = 51.5 + 7.5x', at: [4.1, 56], anchor: 'start' }, mean: { x: 3, y: 74, label: '(x̄, ȳ) = (3, 74)' }, title: 'The least-squares line through the point of means', caption: 'The line passes through (3, 74) and climbs 7.5 points for every extra hour.', alt: 'The five study points with the least-squares line y-hat equals 51.5 plus 7.5x drawn through them and the point of means (3, 74) marked' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Residuals: actual minus predicted',
+    body: 'A RESIDUAL is actual − predicted, y − ŷ. Positive means the point sits above the line; negative means below. The residuals of a least-squares line always add to zero. And r² is the fraction of the variation in y that the linear relationship with x explains.',
+    formula: {
+      tex: '\\text{residual} = y - \\hat{y}',
+      note: 'Actual first, predicted second. The student who studied 2 hours scored 65 against a prediction of 66.5: residual −1.5.',
+      parts: [
+        { sym: 'y', means: 'what actually happened — the data point', tone: 'accent' },
+        { sym: '\\hat{y}', means: 'what the line said would happen', tone: 'ok' },
+        { sym: 'r^{2}', means: 'share of the variation in y explained by x', tone: 'warn' },
+      ],
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Describe the scatterplot',
+    body: 'Hours studied and test score: (1, 60), (2, 65), (3, 75), (4, 80), (5, 90).\nAs hours go up, scores go up: the direction is positive. The points fall close to a straight line: the form is linear and the strength is strong.\nNo unusual points. A strong, positive, linear relationship between hours studied and score.',
+    steps: {
+      steps: [
+        { text: 'Direction: every extra hour comes with a higher score — positive.' },
+        { text: 'Form: the five points nearly line up — linear.' },
+        { text: 'Strength: very little scatter around that line — strong. No outliers.' },
+      ],
+      answer: '\\text{positive, linear, strong}',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Find the regression line',
+    body: 'For the same data, x̄ = 3 and ȳ = 74. The deviations give Σ(x − x̄)(y − ȳ) = 75 and Σ(x − x̄)² = 10.\nSlope b = 75/10 = 7.5. The line passes through (3, 74), so a = 74 − 7.5 × 3 = 74 − 22.5 = 51.5.\nŷ = 51.5 + 7.5x.',
+    steps: {
+      steps: [
+        { tex: 'b = \\frac{\\sum (x - \\bar{x})(y - \\bar{y})}{\\sum (x - \\bar{x})^{2}} = \\frac{75}{10} = 7.5', text: 'Slope from the two sums.' },
+        { tex: 'a = \\bar{y} - b\\,\\bar{x} = 74 - 7.5(3) = 51.5', text: 'Force the line through the point of means.' },
+        { tex: '\\hat{y} = 51.5 + 7.5x', text: 'Write the line with the hat on y.' },
+      ],
+      answer: '\\hat{y} = 51.5 + 7.5x',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Interpret the slope and the intercept',
+    body: 'ŷ = 51.5 + 7.5x, where x is hours studied and y is the score.\nSlope 7.5: for each additional hour studied, the PREDICTED score rises by 7.5 points.\nIntercept 51.5: a student who studies 0 hours is predicted to score 51.5. Always say "predicted" — the line is a model, not a promise.',
+    compare: {
+      cols: [
+        { title: 'Slope 7.5', lines: ['Per extra hour of study,', 'predicted score rises 7.5 points'], tone: 'accent' },
+        { title: 'Intercept 51.5', lines: ['At 0 hours of study,', 'predicted score is 51.5'], tone: 'ok' },
+      ],
+      note: 'Every interpretation names both variables, their units, and the word "predicted."',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Predict, then find a residual',
+    body: 'Using ŷ = 51.5 + 7.5x, predict the score for 3.5 hours, then find the residual for the student who studied 2 hours and scored 65.\nPrediction: 51.5 + 7.5 × 3.5 = 51.5 + 26.25 = 77.75.\nFor x = 2: ŷ = 51.5 + 15 = 66.5. Residual = 65 − 66.5 = −1.5. The point sits 1.5 below the line.',
+    steps: {
+      steps: [
+        { tex: '\\hat{y} = 51.5 + 7.5(3.5) = 77.75', text: 'Substitute 3.5 hours — inside the data range, so this is fine.' },
+        { tex: '\\hat{y} = 51.5 + 7.5(2) = 66.5', text: 'The prediction for the 2-hour student.' },
+        { tex: '65 - 66.5 = -1.5', text: 'Actual minus predicted.' },
+      ],
+      answer: '77.75;\\ \\text{residual } -1.5',
+    },
+    art: scatterFig(STUDY, { range: STUDY_RANGE, ticks: STUDY_TICKS, xLabel: 'hours', yLabel: 'score', fit: { a: 51.5, b: 7.5, label: 'ŷ = 51.5 + 7.5x', at: [4.1, 56], anchor: 'start' }, resid: { x: 2, y: 65, label: 'residual −1.5' }, title: 'The 2-hour student sits just below the line', caption: 'Predicted 66.5, actual 65: the short red segment is the residual, −1.5.', alt: 'The study scatterplot with its regression line and a short vertical segment from the point (2, 65) down to the line marking a residual of minus 1.5' }),
+  },
+  {
+    kind: 'example',
+    head: 'Another way: slope from r and the two SDs',
+    body: 'Without the cross-product sum, the slope still comes from b = r·(s_y/s_x).\nFor the study data s_x = √(10/4) ≈ 1.58 hours, s_y = √(570/4) ≈ 11.94 points, and r = 0.993.\nb = 0.993 × 11.94 / 1.58 ≈ 7.5 — the same slope. Then a = 74 − 7.5(3) = 51.5 as before.',
+    steps: {
+      steps: [
+        { tex: 's_x = \\sqrt{\\tfrac{10}{4}} \\approx 1.58,\\quad s_y = \\sqrt{\\tfrac{570}{4}} \\approx 11.94', text: 'Standard deviations of x and y.' },
+        { tex: 'b = r\\,\\frac{s_y}{s_x} = 0.993 \\times \\frac{11.94}{1.58} \\approx 7.5', text: 'Correlation times the ratio of spreads.' },
+        { tex: 'a = 74 - 7.5(3) = 51.5', text: 'Through the point of means, as always.' },
+      ],
+      answer: '\\hat{y} = 51.5 + 7.5x',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'r² says how much the line explains',
+    body: 'For the study data, r = 0.993. Find and interpret r².\nr² = 0.993² ≈ 0.987.\nAbout 98.7% of the variation in test scores is explained by the linear relationship with hours studied. The other 1.3% is scatter the line cannot account for.',
+    formula: {
+      tex: 'r^{2} = 0.993^{2} \\approx 0.987',
+      note: '"98.7% of the variation in score is explained by the linear relationship with hours studied."',
+      parts: [
+        { sym: 'r^{2}', means: 'always between 0 and 1, never negative', tone: 'accent' },
+        { sym: '1 - r^{2}', means: 'the 1.3% left unexplained — the residual scatter', tone: 'warn' },
+      ],
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Picture it first: 20 hours of studying',
+    body: 'A classmate uses ŷ = 51.5 + 7.5x to predict the score after 20 hours. Sketch where x = 20 lands: far to the right of every data point.\nŷ = 51.5 + 7.5 × 20 = 201.5 — an impossible score.\nThe data covered only 1 to 5 hours. Predicting at 20 is EXTRAPOLATION, and the line is not trusted there.',
+    steps: {
+      steps: [
+        { tex: '\\hat{y} = 51.5 + 7.5(20) = 201.5', text: 'The arithmetic is fine.' },
+        { tex: '20 \\gg 5', text: 'But 20 hours is far outside the 1–5 hour range of the data.' },
+        { text: 'The relationship may bend or level off out there. Do not trust the prediction.' },
+      ],
+      answer: '201.5 \\text{ — impossible; extrapolation}',
+    },
+    art: scatterFig(STUDY, { range: { x: [0, 22], y: [40, 215] }, ticks: { x: [5, 10, 15, 20], y: [50, 100, 150, 200] }, xLabel: 'hours', yLabel: 'score', fit: { a: 51.5, b: 7.5, label: 'ŷ = 51.5 + 7.5x', at: [8, 60], anchor: 'start' }, mean: { x: 20, y: 201.5, label: 'predicted 201.5?', anchor: 'end', dx: -12, dy: 4, hollow: true }, title: 'The data stop at 5 hours; the line does not', caption: 'All five points huddle at the left. At 20 hours the line predicts 201.5 — a score that cannot exist.', alt: 'The five study points clustered at the left of a wide scatterplot with the regression line extended far to the right to a hollow point at 20 hours and 201.5 points' }),
+  },
+  {
+    kind: 'protip',
+    head: 'Interpretation sentences that score full marks',
+    body: 'Graders look for three things in every interpretation: the word PREDICTED, both variables named, and units. "For each additional hour studied, the predicted test score increases by 7.5 points." Use the same template for the intercept and for r², and you will never lose the point.',
+    art: flow([{ label: 'Slope: "for each extra 1 [x-unit], predicted y changes by b"' }, { label: 'Intercept: "when x = 0, predicted y is a" (if x = 0 makes sense)' }, { label: 'r²: "___% of the variation in y is explained by x"' }, { label: 'Residual: "the actual y was ___ above/below the prediction"' }], { title: 'Four sentences to memorize', caption: 'Fill the blanks with the context — hours, points, students — every time.' }),
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: predicted minus actual',
+    body: 'Residual is ACTUAL minus PREDICTED, in that order. For the 2-hour student: 65 − 66.5 = −1.5, a point below the line. Flip the order and you get +1.5, which says the student beat the prediction when they did not. The sign is the whole story of a residual.',
+    compare: {
+      cols: [
+        { title: 'Wrong order', tex: '66.5 - 65 = +1.5', lines: ['Says: above the line', 'The point is actually below'], tone: 'bad' },
+        { title: 'Right order', tex: '65 - 66.5 = -1.5', lines: ['Negative: below the line', 'Matches the picture'], tone: 'ok' },
+      ],
+      note: 'Check against the plot: a point below the line must have a negative residual.',
+    },
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: a strong r proves nothing about cause',
+    body: 'r = 0.993 says the points hug a line. It does not say that studying caused the scores — maybe motivated students both study more and score higher. Correlation is never causation, and a strong correlation never licenses a prediction far outside the data either.',
+    compare: {
+      cols: [
+        { title: 'r can tell you', lines: ['direction of the pattern', 'how linear and tight it is', 'how well x predicts y inside the data'], tone: 'ok' },
+        { title: 'r cannot tell you', lines: ['that x causes y', 'anything about curved patterns', 'what happens outside the data'], tone: 'bad' },
+      ],
+    },
+  },
+  {
+    kind: 'challenge',
+    head: 'Extra credit: all five residuals',
+    body: 'Find every residual for ŷ = 51.5 + 7.5x and add them up.\nPredictions at x = 1, 2, 3, 4, 5 are 59, 66.5, 74, 81.5, 89. Residuals: 60 − 59 = 1, 65 − 66.5 = −1.5, 75 − 74 = 1, 80 − 81.5 = −1.5, 90 − 89 = 1.\nSum: 1 − 1.5 + 1 − 1.5 + 1 = 0. A least-squares line always balances its residuals to zero.',
+    table: {
+      head: ['x', 'y', 'ŷ', 'y − ŷ'],
+      rows: [['1', '60', '59', '1'], ['2', '65', '66.5', '−1.5'], ['3', '75', '74', '1'], ['4', '80', '81.5', '−1.5'], ['5', '90', '89', '1'], ['sum', '370', '370', '0']],
+      mark: 5,
+      note: 'The residuals sum to 0, and the point of means (3, 74) has residual exactly 0.',
+    },
+    steps: {
+      steps: [
+        { tex: '\\hat{y}: 59,\\ 66.5,\\ 74,\\ 81.5,\\ 89', text: 'Plug x = 1 through 5 into the line.' },
+        { tex: '1,\\ -1.5,\\ 1,\\ -1.5,\\ 1', text: 'Actual minus predicted, five times.' },
+        { tex: '1 - 1.5 + 1 - 1.5 + 1 = 0', text: 'They cancel exactly.' },
+      ],
+      answer: '\\sum \\text{residuals} = 0',
+    },
+  },
+  {
+    kind: 'summary',
+    head: 'Describe, fit, interpret, beware',
+    body: 'Describe a scatterplot by direction, form, strength and unusual points. r measures linear strength between −1 and 1. The least-squares line ŷ = a + bx has slope b = r·s_y/s_x and passes through (x̄, ȳ). Residual = actual − predicted; r² is the share of variation explained. Never extrapolate, and never read cause into correlation.',
+    formula: {
+      tex: '\\hat{y} = 51.5 + 7.5x,\\qquad r = 0.993,\\qquad r^{2} \\approx 0.987',
+      note: 'The study-hours model in one line: slope, correlation, and the share it explains.',
+      parts: [
+        { sym: '7.5', means: 'predicted points per extra hour', tone: 'accent' },
+        { sym: '51.5', means: 'predicted score at 0 hours', tone: 'ok' },
+        { sym: '0.987', means: '98.7% of score variation explained by hours', tone: 'warn' },
+      ],
+    },
+  },
+];
+
+// ---------------- STAT-5 — Sampling: random samples, bias and survey design ----------------
+const STAT_5: LessonSlide[] = [
+  {
+    kind: 'objective',
+    head: 'Ask a few, learn about everyone',
+    body: 'A school of 1,200 students surveys 100 of them and 62% want a later start time. Today you will name the population and the sample, choose individuals with a random digit table, tell stratified from cluster from systematic sampling, and spot the biases that make a survey lie.',
+    art: popGrid(40, 10, [5, 9, 20, 31, 6], { numbered: true, title: 'Forty students, five chosen at random', note: 'SRS: 05, 09, 20, 31, 06', caption: 'Every student had the same chance. The five chosen ones are filled in.', alt: 'A grid of forty numbered circles with students 05, 06, 09, 20 and 31 filled in as the random sample' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Population, sample, parameter, statistic',
+    body: 'The POPULATION is everyone you want to know about; the SAMPLE is the part you actually measure. A PARAMETER describes the population (p, μ) and is usually unknown. A STATISTIC describes the sample (p̂, x̄) and is what you compute. The 62% came from the 100 surveyed, so it is a statistic.',
+    formula: {
+      tex: '\\hat{p} = \\frac{62}{100} = 0.62',
+      note: 'The hat means "from the sample." The population proportion p, of all 1,200 students, stays unknown.',
+      parts: [
+        { sym: '\\hat{p}', means: 'the sample proportion — a statistic', tone: 'accent' },
+        { sym: 'p', means: 'the population proportion — a parameter', tone: 'ok' },
+        { sym: '100', means: 'the sample size n', tone: 'warn' },
+      ],
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'A simple random sample',
+    body: 'A SIMPLE RANDOM SAMPLE (SRS) of size n gives every group of n individuals the same chance of being chosen. Number the population, then read a random digit table or use a random number generator, skipping numbers that are too big and numbers you have already used.',
+    table: {
+      head: ['step', 'what you do'],
+      rows: [['label', 'number the population 01 to 40'], ['read', 'take two digits at a time from the table'], ['filter', 'skip labels over 40 and repeats'], ['stop', 'when you have n labels']],
+      note: 'Two-digit labels because the population has 40 members; three digits for 100 to 999.',
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'Stratified, cluster, systematic',
+    body: 'STRATIFIED sampling splits the population into similar groups (strata) and takes an SRS from each, so every group is represented. CLUSTER sampling picks whole groups at random and measures everyone in them. SYSTEMATIC sampling takes every kth individual after a random start.',
+    compare: {
+      cols: [
+        { title: 'Stratified', lines: ['groups alike inside', 'SRS from EVERY group'], tone: 'accent' },
+        { title: 'Cluster', lines: ['each group a mini-population', 'SOME groups, everyone in them'], tone: 'ok' },
+        { title: 'Systematic', lines: ['random start', 'then every kth one'], tone: 'warn' },
+      ],
+      note: 'Stratified: a few from each. Cluster: all from a few.',
+    },
+    art: popGrid(40, 10, [2, 5, 9, 11, 14, 18, 23, 26, 30, 32, 35, 39], { rowLabels: ['9th', '10th', '11th', '12th'], title: 'Stratified: an SRS inside every grade', note: 'three chosen from each grade', caption: 'Each row is a grade. Three students are drawn at random from every row, so no grade is missed.', alt: 'Four rows of ten circles labelled 9th to 12th grade, with three filled circles chosen in every row' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Bias: a design that leans one way',
+    body: 'BIAS is a flaw in the design that pushes results in one direction. VOLUNTARY RESPONSE lets people choose themselves. CONVENIENCE takes whoever is easy to reach. UNDERCOVERAGE leaves part of the population with no chance of being picked. NONRESPONSE happens when chosen people do not answer.',
+    table: {
+      head: ['bias', 'what goes wrong', 'example'],
+      rows: [['voluntary response', 'people with strong opinions pick themselves', 'click "yes" or "no" on a website'], ['convenience', 'only the easy-to-reach are asked', 'shoppers at one mall at noon'], ['undercoverage', 'some people can never be chosen', 'phone survey misses those with no phone'], ['nonresponse', 'chosen people refuse or cannot be reached', '40% of the mailed surveys never return']],
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'Response bias, and why bigger does not mean better',
+    body: 'RESPONSE BIAS comes from the question itself: leading wording, a sensitive topic, or an interviewer\'s tone. Random chance causes VARIABILITY, which a bigger sample shrinks. A bigger sample does NOT shrink bias — ten thousand self-selected clicks are still a voluntary response sample.',
+    formula: {
+      tex: '\\text{variability} \\downarrow \\text{ as } n \\uparrow \\qquad\\qquad \\text{bias: unchanged by } n',
+      note: 'Only the design fixes bias; only random selection lets you generalize to the population.',
+      parts: [
+        { sym: '\\text{variability}', means: 'sample-to-sample wobble from chance alone', tone: 'ok' },
+        { sym: '\\text{bias}', means: 'a systematic lean baked into the design', tone: 'bad' },
+      ],
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Population, sample, or statistic?',
+    body: 'A school of 1,200 students surveys 100 of them; 62% of those surveyed want a later start time.\nPopulation: all 1,200 students. Sample: the 100 surveyed.\n62% was computed from the sample, so it is a statistic, p̂ = 0.62. The parameter is the unknown percent of all 1,200 who want a later start.',
+    steps: {
+      steps: [
+        { text: 'Population: who do we want to know about? All 1,200 students.' },
+        { text: 'Sample: who did we actually ask? The 100 surveyed.' },
+        { tex: '\\hat{p} = 0.62', text: 'Computed from the sample, so a statistic — the parameter p is unknown.' },
+      ],
+      answer: '\\text{statistic}',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'An SRS from a random digit table',
+    body: 'Choose an SRS of 5 from 40 students using the line 41050 92031 06449 05059.\nLabel the students 01 to 40. Read two digits at a time: 41, 05, 09, 20, 31, 06, 44, 90, 50, 59.\nSkip labels over 40 and any repeats. The sample is students 05, 09, 20, 31, 06.',
+    table: {
+      head: ['pair', 'keep?'],
+      rows: [['41', 'skip — over 40'], ['05', 'keep (1st)'], ['09', 'keep (2nd)'], ['20', 'keep (3rd)'], ['31', 'keep (4th)'], ['06', 'keep (5th) — done']],
+      mark: 5,
+      note: 'Five labels in hand, so 44, 90, 50 and 59 are never read.',
+    },
+    steps: {
+      steps: [
+        { tex: '01,\\ 02,\\ \\ldots,\\ 40', text: 'Two-digit labels for 40 students.' },
+        { tex: '41 \\mid 05 \\mid 09 \\mid 20 \\mid 31 \\mid 06', text: 'Read pairs; 41 is too big.' },
+        { tex: '\\{05, 09, 20, 31, 06\\}', text: 'Five usable labels, no repeats.' },
+      ],
+      answer: '05,\\ 09,\\ 20,\\ 31,\\ 06',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Plan A or plan B: name the design',
+    body: 'A principal wants student opinions on the cafeteria. Plan A: an SRS of 10 from each grade, 9–12. Plan B: pick 3 homerooms at random and survey everyone in them.\nPlan A samples inside every grade, so each grade is guaranteed a voice: stratified random sampling.\nPlan B picks whole groups and measures everyone inside: cluster sampling.',
+    compare: {
+      cols: [
+        { title: 'Plan A — stratified', lines: ['strata = grades', '10 from EACH grade', 'every grade represented'], tone: 'accent' },
+        { title: 'Plan B — cluster', lines: ['clusters = homerooms', 'ALL of 3 random homerooms', 'cheap: three rooms to visit'], tone: 'ok' },
+      ],
+    },
+    art: popGrid(40, 8, [1, 2, 3, 4, 5, 6, 7, 8, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32], { rowLabels: ['room 1', 'room 2', 'room 3', 'room 4', 'room 5'], title: 'Cluster: three whole homerooms', note: 'rooms 1, 3, 4 drawn — everyone inside is surveyed', caption: 'Plan B picks rooms, not students. Whole rows light up.', alt: 'Five rows of eight circles labelled room 1 to room 5, with every circle in rooms 1, 3 and 4 filled in' }),
+  },
+  {
+    kind: 'example',
+    head: '88% say taxes are too high',
+    body: 'A news website asks readers to click "yes" or "no" on whether taxes are too high; 88% click yes. What kind of bias is this?\nReaders chose themselves to answer — nobody selected them. People with strong feelings are the ones who bother to click.\nVoluntary response bias. The 88% says nothing reliable about the population, no matter how many clicked.',
+    compare: {
+      cols: [
+        { title: 'What happened', lines: ['readers selected themselves', 'the angry click more', '88% is inflated'], tone: 'bad' },
+        { title: 'What would fix it', lines: ['the site chooses who to ask', 'an SRS of its readers', 'follow up with non-responders'], tone: 'ok' },
+      ],
+      note: 'Name the bias AND the direction: this one overstates how many think taxes are too high.',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Another way: a random number generator',
+    body: 'Instead of a digit table, ask a calculator for random integers from 1 to 40 until you have five different ones.\nSuppose it gives 17, 3, 3, 28, 40, 9. The second 3 is a repeat, so skip it.\nThe sample is students 17, 03, 28, 40, 09 — a different SRS from the table\'s, and just as valid. Any method that gives every group of 5 the same chance is an SRS.',
+    table: {
+      head: ['generated', 'keep?'],
+      rows: [['17', 'keep'], ['3', 'keep'], ['3', 'skip — repeat'], ['28', 'keep'], ['40', 'keep — 40 is allowed'], ['9', 'keep — five in hand']],
+      mark: 2,
+      note: 'With a generator there is nothing to skip for size, only repeats.',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'A question that answers itself',
+    body: 'A survey asks: "Do you agree that overpaid athletes should be taxed more?" What is wrong?\nThe word "overpaid" tells the respondent what to think before they answer. Leading wording is a form of response bias.\nFix: "Should professional athletes pay a higher tax rate?" Neutral words, no verdict built in.',
+    compare: {
+      cols: [
+        { title: 'Leading', lines: ['"Do you agree that OVERPAID athletes…"', 'pushes toward yes'], tone: 'bad' },
+        { title: 'Neutral', lines: ['"Should professional athletes pay a higher tax rate?"', 'no verdict in the wording'], tone: 'ok' },
+      ],
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Picture it first: every 10th shopper',
+    body: 'A store wants a systematic sample of 50 of the 500 shoppers who enter today. Picture the shoppers in a line of 500.\n500 ÷ 50 = 10, so k = 10. Pick a random start from 1 to 10, say 7.\nSurvey shoppers 7, 17, 27, 37, … — every 10th shopper after the 7th — giving 50 in all.',
+    formula: {
+      tex: 'k = \\frac{N}{n} = \\frac{500}{50} = 10',
+      note: 'Random start from 1 to k, then every kth individual.',
+      parts: [
+        { sym: 'N', means: 'the population size, 500 shoppers', tone: 'accent' },
+        { sym: 'n', means: 'the sample size you want, 50', tone: 'ok' },
+        { sym: 'k', means: 'the gap between chosen shoppers', tone: 'warn' },
+      ],
+    },
+    steps: {
+      steps: [
+        { tex: '500 \\div 50 = 10', text: 'The gap k.' },
+        { tex: '\\text{start} \\in \\{1, \\ldots, 10\\},\\ \\text{say } 7', text: 'One random choice decides the whole sample.' },
+        { tex: '7,\\ 17,\\ 27,\\ \\ldots,\\ 497', text: 'Fifty shoppers, ten apart.' },
+      ],
+      answer: '\\text{every 10th shopper from a random start}',
+    },
+    art: popGrid(50, 10, [7, 17, 27, 37, 47], { numbered: true, title: 'Every 10th shopper after a random start of 7', note: 'k = 10: shoppers 7, 17, 27, 37, 47, …', caption: 'The first fifty shoppers in the line. One random start, then a fixed gap.', alt: 'Five rows of ten numbered circles with shoppers 7, 17, 27, 37 and 47 filled in — one in each row' }),
+  },
+  {
+    kind: 'protip',
+    head: 'Name the bias, then say which way it leans',
+    body: 'A full-credit answer about bias has two parts: what the flaw is, and the direction it pushes the result. "Voluntary response bias; people angry about taxes are more likely to click, so 88% overstates the true proportion." Never stop at the name.',
+    art: flow([{ label: 'Who could never be chosen? → undercoverage' }, { label: 'Who chose themselves? → voluntary response' }, { label: 'Who was asked only because they were handy? → convenience' }, { label: 'Did the wording push an answer? → response bias' }], { title: 'Four questions to find the flaw', caption: 'Ask them in order, then state whether the estimate is too high or too low.' }),
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: a bigger sample cures bias',
+    body: 'Ten thousand clicks feel more trustworthy than a hundred, but if the clickers chose themselves the sample is still a voluntary response sample. Sample size shrinks chance variability. It does nothing to a design flaw. Only the DESIGN fixes bias; only randomness lets you generalize.',
+    compare: {
+      cols: [
+        { title: 'Bigger n fixes', lines: ['sample-to-sample variability', 'the margin of error'], tone: 'ok' },
+        { title: 'Bigger n does NOT fix', lines: ['voluntary response', 'undercoverage', 'leading questions'], tone: 'bad' },
+      ],
+    },
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: mixing up stratified and cluster',
+    body: 'Both designs start by splitting the population into groups. The difference is what happens next. Stratified takes SOME from EVERY group. Cluster takes EVERY member of SOME groups. Ten from each grade is stratified; all of three homerooms is cluster.',
+    compare: {
+      cols: [
+        { title: 'Stratified', lines: ['some from every group', 'groups chosen on purpose', 'goal: represent every group'], tone: 'accent' },
+        { title: 'Cluster', lines: ['everyone from some groups', 'groups chosen at random', 'goal: save time and travel'], tone: 'ok' },
+      ],
+    },
+  },
+  {
+    kind: 'challenge',
+    head: 'Extra credit: a proportional stratified sample',
+    body: 'The 1,200 students are 400 ninth graders, 300 tenth, 300 eleventh and 200 twelfth. Take a stratified sample of 120 in which each grade is represented in proportion to its size.\n120 ÷ 1,200 = 0.10, so sample 10% of every grade.\nThat is 40 ninth graders, 30 tenth, 30 eleventh and 20 twelfth — chosen by SRS within each grade.',
+    steps: {
+      steps: [
+        { tex: '\\frac{120}{1200} = 0.10', text: 'The sampling fraction for every stratum.' },
+        { tex: '0.10 \\times 400 = 40,\\quad 0.10 \\times 300 = 30', text: 'Ninth and tenth grade.' },
+        { tex: '0.10 \\times 300 = 30,\\quad 0.10 \\times 200 = 20', text: 'Eleventh and twelfth grade.' },
+        { tex: '40 + 30 + 30 + 20 = 120', text: 'Check the total.' },
+      ],
+      answer: '40,\\ 30,\\ 30,\\ 20',
+    },
+  },
+  {
+    kind: 'summary',
+    head: 'Random selection is the whole game',
+    body: 'A statistic from the sample estimates a parameter of the population. An SRS gives every group of n the same chance; stratified, cluster and systematic designs use randomness differently. Bias is a design flaw that no sample size can cure, and only random selection lets the sample speak for the population.',
+    table: {
+      head: ['design', 'how it chooses', 'example here'],
+      rows: [['SRS', 'labels + random digits, skip big and repeats', '05, 09, 20, 31, 06 of 40'], ['stratified', 'an SRS from every group', '10 from each grade'], ['cluster', 'whole groups at random', '3 homerooms, everyone in them'], ['systematic', 'random start, every kth', 'every 10th shopper from 7']],
+    },
+  },
+];
+
+// ---------------- STAT-6 — Experiments vs observational studies; randomization, confounding ----------------
+
+/** Breakfast, sleep and grades: the confounder points at both. */
+const confoundFig = (() => {
+  let b = text(W / 2, 28, 'Which one raised the grades?', { size: 13, fill: VIO });
+  b += fades(rect(60, 150, 110, 40, SKY, `${SKY}22`, 2.4, 10), 0.1) + text(115, 175, 'breakfast', { size: 13, fill: SKY });
+  b += fades(rect(230, 150, 110, 40, EMR, `${EMR}22`, 2.4, 10), 0.2) + text(285, 175, 'grades', { size: 13, fill: EMR });
+  b += fades(rect(145, 56, 110, 40, ROSE, `${ROSE}22`, 2.4, 10), 0.3) + text(200, 81, 'sleep', { size: 13, fill: ROSE });
+  b += draws(arrow(170, 96, 122, 148, ROSE, 2.4), 80, 0.5);
+  b += draws(arrow(230, 96, 278, 148, ROSE, 2.4), 80, 0.5);
+  b += line(172, 170, 226, 170, INK, 2, '6 5', 0.6) + text(200, 162, '?', { size: 14, op: 0.7 });
+  b += text(W / 2, 226, 'sleep is tangled with breakfast — a confounder', { size: 12, op: 0.75 });
+  return art('Three boxes: breakfast and grades side by side with a dashed question mark between them, and sleep above with arrows pointing to both', b, 'Breakfast eaters also sleep more. Either one could explain the higher grades.');
+})();
+
+/** Twenty walkers, two soles each: the matched pairs design, five walkers shown. */
+const pairsFig = (() => {
+  const order = ['XY', 'YX', 'YX', 'XY', 'YX'];
+  let b = text(W / 2, 28, 'Each walker wears both soles; a coin picks the foot', { size: 12, fill: VIO });
+  order.forEach((o, i) => {
+    const cx = 50 + i * 75;
+    b += text(cx - 15, 94, 'L', { size: 9, op: 0.6 }) + text(cx + 15, 94, 'R', { size: 9, op: 0.6 });
+    [o[0], o[1]].forEach((m, k) => {
+      const x = cx - 30 + k * 32;
+      const col = m === 'X' ? SKY : AMB;
+      b += fades(rect(x, 104, 28, 28, col, `${col}33`, 2.2, 6), 0.15 * i + 0.1 * k);
+      b += text(x + 14, 123, m, { size: 13, fill: col });
+    });
+    b += text(cx, 156, `walker ${i + 1}`, { size: 10, op: 0.7 });
+  });
+  b += text(W / 2, 200, 'X = sole material X     Y = sole material Y', { size: 11, op: 0.75 });
+  b += text(W / 2, 226, 'compare the two soles within each walker, then average', { size: 11, fill: EMR });
+  return art('Five walkers, each with a left and right box marked X or Y in a random order, showing both sole materials worn by every person', b, 'Every walker is a block of two. The left-right assignment is randomized by coin flip.');
+})();
+
+const STAT_6: LessonSlide[] = [
+  {
+    kind: 'objective',
+    head: 'Who gets what? Let chance decide',
+    body: 'Forty tomato plants and two fertilizers: twenty plants get A and twenty get B, chosen by random numbers. Today you will tell an experiment from an observational study, name confounding variables, and design an experiment that can actually prove cause and effect.',
+    art: popGrid(40, 10, [1, 4, 6, 7, 10, 12, 15, 16, 19, 21, 22, 25, 28, 29, 31, 34, 35, 38, 39, 40], { title: 'Forty tomato plants, split by chance', note: 'filled = fertilizer A (20), hollow = fertilizer B (20)', caption: 'A random number generator picked the twenty A plants. The rest get B.', alt: 'A grid of forty circles with twenty filled in at random for fertilizer A and twenty hollow for fertilizer B' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Observe, or impose?',
+    body: 'In an OBSERVATIONAL STUDY you record what people already do. In an EXPERIMENT you IMPOSE a treatment on the subjects and watch the response. Only an experiment can show cause and effect, because only an experiment controls who gets which treatment.',
+    compare: {
+      cols: [
+        { title: 'Observational study', lines: ['subjects choose their own group', 'researchers only record', 'shows association'], tone: 'warn' },
+        { title: 'Experiment', lines: ['researchers assign the treatment', 'chance decides who gets what', 'can show cause'], tone: 'ok' },
+      ],
+      note: 'The test question: did the researchers DECIDE who got the treatment?',
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'Factors, levels, treatments, response',
+    body: 'The EXPLANATORY variable, or FACTOR, is what you change; its LEVELS are the values it takes. The RESPONSE is what you measure. A TREATMENT is one combination of levels: fertilizer A or B crossed with daily or weekly watering makes 2 × 2 = 4 treatments.',
+    formula: {
+      tex: '\\text{treatments} = (\\text{levels of factor 1}) \\times (\\text{levels of factor 2}) = 2 \\times 2 = 4',
+      note: 'Every combination is its own treatment: A-daily, A-weekly, B-daily, B-weekly.',
+      parts: [
+        { sym: '2', means: 'fertilizer levels: A, B', tone: 'accent' },
+        { sym: '\\times\\, 2', means: 'watering levels: daily, weekly', tone: 'ok' },
+        { sym: '4', means: 'treatment groups to randomize plants into', tone: 'warn' },
+      ],
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'Confounding: two explanations tangled together',
+    body: 'A CONFOUNDING variable is tangled up with the explanatory variable, so you cannot tell which one caused the response. Students who eat breakfast may also sleep more. If breakfast eaters earn higher grades, was it the breakfast or the sleep? Breakfast and sleep are confounded.',
+    art: confoundFig,
+  },
+  {
+    kind: 'concept',
+    head: 'Three principles of good design',
+    body: 'COMPARISON: use a control group or several treatments, so there is something to compare against. RANDOM ASSIGNMENT: let chance decide who gets what, which spreads confounders evenly across the groups. REPLICATION: use enough subjects in each group that chance differences average out.',
+    formula: {
+      tex: '\\text{compare} \;+\; \\text{randomize} \;+\; \\text{replicate}',
+      note: 'Random assignment is what handles confounding: the groups start out alike in sleep, income, everything.',
+      parts: [
+        { sym: '\\text{compare}', means: 'two or more groups, often one a control', tone: 'accent' },
+        { sym: '\\text{randomize}', means: 'chance assigns subjects to treatments', tone: 'ok' },
+        { sym: '\\text{replicate}', means: 'many subjects per group — here 20 plants each', tone: 'warn' },
+      ],
+    },
+    art: flow([{ label: 'Comparison: a control or several treatments' }, { label: 'Random assignment: chance makes the groups alike' }, { label: 'Replication: enough subjects in each group' }], { title: 'The three principles, in order', caption: 'An experiment missing any one of these cannot claim cause.' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Placebo, blinding, blocking',
+    body: 'A PLACEBO is a fake treatment, because people often improve just from taking "something." BLINDING keeps subjects (single-blind) or subjects and evaluators (double-blind) from knowing who got which treatment. BLOCKING groups similar subjects first and randomizes within each block; MATCHED PAIRS is blocking with two.',
+    compare: {
+      cols: [
+        { title: 'Placebo + blinding', lines: ['controls expectations', 'subjects and doctors cannot nudge the result'], tone: 'accent' },
+        { title: 'Blocking', lines: ['group alike subjects first', 'randomize inside each block', 'removes a known source of variation'], tone: 'ok' },
+        { title: 'Matched pairs', lines: ['blocks of two, or one person twice', 'both treatments per pair'], tone: 'warn' },
+      ],
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Coffee and heart disease',
+    body: 'Researchers look at hospital records and find that people who drink 3+ cups of coffee a day have less heart disease. Experiment or observational study?\nNobody assigned coffee; people chose their own coffee habits. The researchers only observed and recorded.\nObservational study. It cannot prove coffee prevents heart disease — coffee drinkers may differ in exercise, income, or age.',
+    steps: {
+      steps: [
+        { text: 'Who decided how much coffee each person drank? The people themselves.' },
+        { text: 'So nothing was imposed — the researchers only recorded. Observational.' },
+        { text: 'Confounders lurk: exercise, income, age could travel with coffee habits.' },
+      ],
+      answer: '\\text{observational study — association only}',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Design the tomato experiment',
+    body: 'You have 40 tomato plants and two fertilizers, A and B. Design a completely randomized experiment to compare them.\nNumber the plants 1–40. Use a random number generator to pick 20 plants for fertilizer A; the other 20 get B. Grow all plants under the same light, water and soil.\nAfter 8 weeks, measure each plant\'s height and compare the mean heights of the two groups.',
+    steps: {
+      steps: [
+        { tex: '1, 2, \\ldots, 40', text: 'Label every plant.' },
+        { tex: '20 \\to A,\\quad 20 \\to B', text: 'A random number generator picks the 20 A plants; the rest get B.' },
+        { text: 'Same conditions for everyone: light, water, soil — only the fertilizer differs.' },
+        { tex: '\\bar{x}_A \\text{ vs } \\bar{x}_B', text: 'After 8 weeks, compare the mean heights.' },
+      ],
+      answer: '\\text{randomize, control conditions, compare means}',
+    },
+    art: flow([{ label: 'Number the plants 1 to 40' }, { label: 'Random numbers: 20 get A, the other 20 get B' }, { label: 'Same light, water and soil for all' }, { label: 'After 8 weeks, compare the mean heights' }], { title: 'A completely randomized design', caption: 'Say HOW you randomize — "a random number generator" — not just that you did.' }),
+  },
+  {
+    kind: 'example',
+    head: 'Two factors, four treatments',
+    body: 'An experiment tests fertilizer type (A, B) and watering (daily, weekly) on plant growth. Name the factors, the response, and count the treatments.\nFactors: fertilizer type, 2 levels, and watering schedule, 2 levels. Response: plant growth, the height gained.\nTreatments = 2 × 2 = 4: A-daily, A-weekly, B-daily, B-weekly.',
+    table: {
+      head: ['', 'daily watering', 'weekly watering'],
+      rows: [['fertilizer A', 'A-daily', 'A-weekly'], ['fertilizer B', 'B-daily', 'B-weekly']],
+      note: 'Each cell is a treatment. With 40 plants, randomize 10 into each cell.',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Breakfast and grades: find the confounder',
+    body: 'A study finds students who eat breakfast earn higher grades. Name a possible confounding variable and explain.\nStudents who eat breakfast may also get more sleep, or have more support at home.\nSleep is tangled with breakfast: the breakfast group and the no-breakfast group differ in sleep too, so we cannot tell which one raised the grades.',
+    compare: {
+      cols: [
+        { title: 'Explanatory', lines: ['eats breakfast or not', 'chosen by the student'], tone: 'accent' },
+        { title: 'Confounder', lines: ['hours of sleep (or home support)', 'differs between the two groups', 'also affects grades'], tone: 'bad' },
+      ],
+      note: 'A confounder must do two things: differ between the groups AND affect the response.',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Another way: block before you randomize',
+    body: 'Suppose half the 40 tomato plants sit on a sunny bench and half on a shady one. Instead of hoping chance balances the sunlight, block on it.\nWithin the sunny bench, randomly assign 10 plants to A and 10 to B; do the same on the shady bench.\nNow each fertilizer is compared under equal light, and bench-to-bench differences cannot masquerade as a fertilizer effect.',
+    steps: {
+      steps: [
+        { tex: '\\text{block 1: sunny (20)},\\quad \\text{block 2: shady (20)}', text: 'Group the plants by what you know matters.' },
+        { tex: '10 \\to A,\\ 10 \\to B \\text{ in each block}', text: 'Randomize inside every block.' },
+        { tex: '\\bar{x}_A - \\bar{x}_B \\text{ per bench}', text: 'Compare within blocks, then combine.' },
+      ],
+      answer: '\\text{randomized block design}',
+    },
+    art: popGrid(40, 10, [2, 3, 6, 9, 11, 13, 14, 17, 18, 20, 21, 24, 25, 28, 30, 32, 33, 36, 37, 39], { rowLabels: ['sunny', 'sunny', 'shady', 'shady'], title: 'Blocked by bench, randomized inside each', note: 'filled = A: 10 on each bench; hollow = B', caption: 'Ten A plants and ten B plants on the sunny bench, and the same on the shady bench.', alt: 'Four rows of ten circles, the top two rows labelled sunny and the bottom two shady, with ten filled circles in each pair of rows' }),
+  },
+  {
+    kind: 'example',
+    head: 'A sugar pill and a blindfold',
+    body: 'A company tests a new headache pill. Why give half the subjects a sugar pill, and why keep both the subjects and the doctors from knowing who got which?\nThe sugar pill is a placebo: some people feel better just because they took "something." Comparing pill to placebo separates the drug\'s effect from the placebo effect.\nDouble-blinding stops subjects\' hopes and doctors\' expectations from biasing the reported pain levels.',
+    steps: {
+      steps: [
+        { text: 'Placebo control: measures how much improvement comes from expectation alone.' },
+        { text: 'Blind the subjects: hoping the pill works can itself reduce reported pain.' },
+        { text: 'Blind the doctors too: an evaluator who knows the group may rate pain differently.' },
+      ],
+      answer: '\\text{placebo control, double-blind}',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Picture it first: one walker, two soles',
+    body: 'A shoe company compares two sole materials for wear. Each of 20 volunteers wears material X on one foot and Y on the other, the foot chosen by coin flip. Picture one walker: both soles take the same steps.\nEach person is a block of two, so this is a matched pairs design; the coin flip randomizes which foot gets X.\nIt beats assigning 10 people to each material because people differ hugely in how far and how hard they walk — pairing removes that variation.',
+    art: pairsFig,
+  },
+  {
+    kind: 'protip',
+    head: 'Describe a design in three labelled boxes',
+    body: 'When a question says "describe an experiment," graders look for three things: how subjects were randomly assigned (say the method), what each group received, and what response was measured and compared. A quick diagram with those three boxes earns the points faster than a paragraph.',
+    art: flow([{ label: 'Random assignment — say how: numbers, generator, coin' }, { label: 'Group 1: treatment A · Group 2: treatment B or placebo' }, { label: 'Measure the response and compare the groups' }], { title: 'The three-box diagram', caption: 'Add "double-blind" or "blocked by ___" when the situation calls for it.' }),
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: random sampling vs random assignment',
+    body: 'Random SAMPLING chooses who is in the study; random ASSIGNMENT decides who gets which treatment. They do different jobs. Sampling lets you generalize to the population; assignment lets you claim cause. An experiment on volunteers with random assignment can prove cause for those volunteers — but not generalize to everyone.',
+    compare: {
+      cols: [
+        { title: 'Random sampling', lines: ['who gets INTO the study', 'buys: generalize to population'], tone: 'accent' },
+        { title: 'Random assignment', lines: ['who gets WHICH treatment', 'buys: cause and effect'], tone: 'ok' },
+      ],
+      note: 'An experiment without random assignment still proves nothing, however large.',
+    },
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: "they signed up, so it worked"',
+    body: 'Students who sign up for tutoring score higher than those who do not. That is not evidence tutoring works: the students chose tutoring themselves, and the motivated ones are the ones who sign up. Motivation is confounded with tutoring. Only random assignment to tutoring or no tutoring could settle it.',
+    compare: {
+      cols: [
+        { title: 'Self-selected', lines: ['students chose tutoring', 'motivation rides along', 'cannot conclude cause'], tone: 'bad' },
+        { title: 'Randomly assigned', lines: ['a coin picks who is tutored', 'motivation balanced across groups', 'can conclude cause'], tone: 'ok' },
+      ],
+    },
+  },
+  {
+    kind: 'challenge',
+    head: 'Extra credit: three fertilizers, two schedules, two benches',
+    body: 'An experiment uses 3 fertilizers and 2 watering schedules on 60 plants, blocked by two benches of 30. How many treatments, how many plants per treatment, and how many per treatment on each bench?\n3 × 2 = 6 treatments. 60 ÷ 6 = 10 plants per treatment overall.\nEach bench holds 30 plants, so randomize 30 ÷ 6 = 5 plants into each treatment on each bench.',
+    formula: {
+      tex: '3 \\times 2 = 6 \\text{ treatments},\\qquad \\frac{60}{6} = 10 \\text{ per treatment},\\qquad \\frac{30}{6} = 5 \\text{ per treatment per bench}',
+      note: 'Blocking does not change the number of treatments — it repeats the whole design inside every block.',
+      parts: [
+        { sym: '6', means: 'every fertilizer with every schedule', tone: 'accent' },
+        { sym: '5', means: 'plants in each of the 6 cells on each bench', tone: 'ok' },
+      ],
+    },
+    steps: {
+      steps: [
+        { tex: '3 \\times 2 = 6', text: 'Treatments are all the combinations.' },
+        { tex: '60 \\div 6 = 10', text: 'Equal groups across the whole experiment.' },
+        { tex: '30 \\div 6 = 5', text: 'Within one bench, each treatment gets five plants.' },
+      ],
+      answer: '6;\\ 10;\\ 5',
+    },
+  },
+  {
+    kind: 'summary',
+    head: 'Impose, randomize, compare',
+    body: 'An experiment imposes treatments; an observational study only records. Treatments are every combination of factor levels. Random assignment spreads confounders evenly, a control group gives a comparison, and replication tames chance. Placebos and blinding control expectations; blocking and matched pairs remove known variation.',
+    table: {
+      head: ['idea', 'what it does', 'example here'],
+      rows: [['random assignment', 'balances confounders across groups', '20 plants to A, 20 to B by random numbers'], ['control / placebo', 'something to compare against', 'the sugar pill'], ['double-blind', 'nobody\'s expectations nudge the result', 'headache pill trial'], ['blocking / matched pairs', 'removes known variation', 'benches; one walker, two soles']],
+    },
+  },
+];
+
+// ---------------- STAT-7 — Probability rules, conditional probability and independence ----------------
+const STAT_7: LessonSlide[] = [
+  {
+    kind: 'objective',
+    head: 'The rules that combine chances',
+    body: 'Roll two dice: 11 of the 36 equally likely outcomes show at least one six. Today you will combine events with the complement, addition and multiplication rules, read a conditional probability off a table or a tree, and test whether two events are independent.',
+    art: diceGrid((a, b) => a === 6 || b === 6, { title: 'At least one six: 11 of the 36 rolls', caption: 'The last row and the last column hold every roll with a six; the corner is counted once.', alt: 'A six by six grid of the outcomes of two dice with the eleven cells showing at least one six shaded' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Sample space and the complement rule',
+    body: 'A probability is a number from 0 to 1, and the probabilities of all the outcomes in the SAMPLE SPACE add to 1. The COMPLEMENT of A is "not A", so P(not A) = 1 − P(A). "At least one" problems are almost always easiest through the complement, "none."',
+    formula: {
+      tex: 'P(A^{c}) = 1 - P(A)',
+      note: '"At least one six" is the complement of "no sixes": 1 − 25/36 = 11/36.',
+      parts: [
+        { sym: 'A^{c}', means: 'the complement — everything that is not A', tone: 'accent' },
+        { sym: '1', means: 'the whole sample space', tone: 'ok' },
+      ],
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'The addition rule',
+    body: 'P(A or B) = P(A) + P(B) − P(A and B). The overlap gets added twice when you add P(A) and P(B), so subtract it once. If A and B are MUTUALLY EXCLUSIVE — they cannot both happen — the overlap is 0 and the rule is just P(A) + P(B).',
+    formula: {
+      tex: 'P(A \\cup B) = P(A) + P(B) - P(A \\cap B)',
+      note: 'Read ∪ as "or" and ∩ as "and." Draw the two circles and the subtraction explains itself.',
+      parts: [
+        { sym: 'A \\cup B', means: 'in A, in B, or in both', tone: 'accent' },
+        { sym: 'A \\cap B', means: 'in both — the overlap, counted twice without the minus', tone: 'warn' },
+      ],
+    },
+    art: vennFig({ A: 'A', B: 'B', onlyA: 'A only', both: 'A and B', onlyB: 'B only', neither: 'neither', title: 'P(A or B) covers three regions', caption: 'Adding P(A) and P(B) counts the middle twice. Subtract it once.', alt: 'Two overlapping circles labelled A and B with the regions A only, A and B, and B only, and the word neither outside' }),
+  },
+  {
+    kind: 'concept',
+    head: 'Conditional probability',
+    body: 'P(A | B) is the chance of A once you know B happened: P(A | B) = P(A and B) / P(B). Knowing B shrinks the world to the B outcomes, so B goes in the denominator. In a two-way table, "given B" means stay inside the B row or column.',
+    formula: {
+      tex: 'P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}',
+      note: 'The vertical bar reads "given." The event after it is the new whole.',
+      parts: [
+        { sym: 'A \\mid B', means: 'A, given that B happened', tone: 'accent' },
+        { sym: 'P(B)', means: 'the denominator — the condition shrinks the sample space to B', tone: 'ok' },
+      ],
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'The multiplication rule and trees',
+    body: 'P(A and B) = P(A) · P(B | A): the chance of the first thing, times the chance of the second given the first. A tree diagram does exactly this — multiply along a branch for "and," then add the branches that fit the event for "or."',
+    formula: {
+      tex: 'P(A \\cap B) = P(A)\\, P(B \\mid A)',
+      note: 'Along a branch, multiply. Across branches, add.',
+      parts: [
+        { sym: 'P(A)', means: 'the first stage of the tree', tone: 'accent' },
+        { sym: 'P(B \\mid A)', means: 'the second stage, knowing how the first came out', tone: 'ok' },
+      ],
+    },
+  },
+  {
+    kind: 'concept',
+    head: 'Independence',
+    body: 'A and B are INDEPENDENT when knowing one changes nothing about the other: P(A | B) = P(A), which is the same as P(A and B) = P(A)·P(B). Drawing with replacement keeps draws independent; drawing without replacement does not. Mutually exclusive events with positive probability are never independent.',
+    compare: {
+      cols: [
+        { title: 'Independent', lines: ['P(A | B) = P(A)', 'P(A and B) = P(A)·P(B)', 'knowing B tells you nothing'], tone: 'ok' },
+        { title: 'Mutually exclusive', lines: ['P(A and B) = 0', 'knowing B rules A out', 'the opposite of independent'], tone: 'bad' },
+      ],
+      note: 'Test independence with numbers, never with a feeling.',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'At least one six on two dice',
+    body: 'Two dice are rolled. What is the probability of at least one six?\nThe complement of "at least one six" is "no sixes." Each die shows no six with probability 5/6, and the dice are independent, so P(no sixes) = 5/6 × 5/6 = 25/36.\nP(at least one six) = 1 − 25/36 = 11/36 ≈ 0.306.',
+    steps: {
+      steps: [
+        { tex: 'P(\\text{no six on one die}) = \\tfrac{5}{6}', text: 'Five faces out of six are not a six.' },
+        { tex: 'P(\\text{no sixes}) = \\tfrac{5}{6} \\cdot \\tfrac{5}{6} = \\tfrac{25}{36}', text: 'Independent dice: multiply.' },
+        { tex: '1 - \\tfrac{25}{36} = \\tfrac{11}{36}', text: 'Complement rule.' },
+      ],
+      answer: '\\tfrac{11}{36} \\approx 0.306',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Sport or music?',
+    body: 'Of 100 students, 55 play a sport, 50 play music, and 30 do both. Find P(sport or music).\nP(S) = 0.55, P(M) = 0.50, P(S and M) = 0.30.\nP(S or M) = 0.55 + 0.50 − 0.30 = 0.75. Check with the Venn diagram: 25 + 30 + 20 = 75 students.',
+    steps: {
+      steps: [
+        { tex: 'P(S) = 0.55,\\ P(M) = 0.50,\\ P(S \\cap M) = 0.30', text: 'Turn the counts into probabilities.' },
+        { tex: '0.55 + 0.50 - 0.30', text: 'Addition rule: subtract the overlap once.' },
+        { tex: '= 0.75', text: 'Seventy-five of the hundred play at least one.' },
+      ],
+      answer: '0.75',
+    },
+    art: vennFig({ A: 'sport', B: 'music', onlyA: '25', both: '30', onlyB: '20', neither: 'neither 25', title: '100 students: sport, music, or both', caption: 'Sport only 25, both 30, music only 20: that is 75 in the circles and 25 outside.', alt: 'Two overlapping circles labelled sport and music with 25 in sport only, 30 in the overlap, 20 in music only and 25 outside' }),
+  },
+  {
+    kind: 'example',
+    head: 'Given a sport, how likely is music?',
+    body: 'Same 100 students. Given that a student plays a sport, what is the probability they also play music?\nP(M | S) = P(M and S) / P(S) = 0.30 / 0.55 = 30/55.\n≈ 0.545. Among the 55 athletes, 30 play music — the condition shrank the world to the sport circle.',
+    steps: {
+      steps: [
+        { tex: 'P(M \\mid S) = \\frac{P(M \\cap S)}{P(S)}', text: '"Given sport" puts P(S) on the bottom.' },
+        { tex: '= \\frac{0.30}{0.55} = \\frac{30}{55}', text: 'Thirty of the fifty-five athletes.' },
+        { tex: '\\approx 0.545', text: 'A bit more than half.' },
+      ],
+      answer: '\\tfrac{30}{55} \\approx 0.545',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Are sport and music independent?',
+    body: 'Independence would mean P(M | S) = P(M).\nP(M | S) ≈ 0.545 but P(M) = 0.50. Not equal, so not independent: athletes are a bit more likely to play music.\nSame answer the other way: P(S)·P(M) = 0.55 × 0.50 = 0.275, but P(S and M) = 0.30.',
+    compare: {
+      cols: [
+        { title: 'If independent', tex: 'P(M \\mid S) = P(M) = 0.50', lines: ['knowing sport changes nothing'], tone: 'plain' },
+        { title: 'Actually', tex: 'P(M \\mid S) \\approx 0.545', lines: ['0.545 ≠ 0.50', 'not independent'], tone: 'warn' },
+      ],
+      note: 'Or compare P(S)·P(M) = 0.275 with P(S and M) = 0.30. Either test, same verdict.',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Marbles without replacement',
+    body: 'A bag has 3 red and 2 blue marbles. Two are drawn without replacement. Find P(both red) and P(one of each color).\nP(RR) = 3/5 × 2/4 = 6/20 = 3/10. P(RB) = 3/5 × 2/4 = 6/20 and P(BR) = 2/5 × 3/4 = 6/20.\nP(one of each) = 6/20 + 6/20 = 12/20 = 3/5. And P(BB) = 2/5 × 1/4 = 2/20 = 1/10; the four branches add to 1.',
+    steps: {
+      steps: [
+        { tex: 'P(RR) = \\tfrac{3}{5} \\cdot \\tfrac{2}{4} = \\tfrac{6}{20} = \\tfrac{3}{10}', text: 'Multiply along the red-red branch; only 2 reds remain of 4.' },
+        { tex: 'P(RB) = \\tfrac{3}{5} \\cdot \\tfrac{2}{4} = \\tfrac{6}{20},\\quad P(BR) = \\tfrac{2}{5} \\cdot \\tfrac{3}{4} = \\tfrac{6}{20}', text: 'Two branches give one of each.' },
+        { tex: '\\tfrac{6}{20} + \\tfrac{6}{20} = \\tfrac{12}{20} = \\tfrac{3}{5}', text: 'Add the branches that fit.' },
+      ],
+      answer: 'P(RR) = \\tfrac{3}{10},\\quad P(\\text{one each}) = \\tfrac{3}{5}',
+    },
+    art: treeFig({ first: ['R 3/5', 'B 2/5'], second: [['R 2/4', 'B 2/4'], ['R 3/4', 'B 1/4']], ends: ['RR: 6/20', 'RB: 6/20', 'BR: 6/20', 'BB: 2/20'], hot: [1, 2], title: '3 red, 2 blue, two draws, no replacement', caption: 'The second-draw fractions have 4 on the bottom: one marble is gone. The two highlighted branches are "one of each."', alt: 'A tree diagram with first draw red 3/5 or blue 2/5, second draw fractions out of 4, and the four end products 6/20, 6/20, 6/20 and 2/20' }),
+  },
+  {
+    kind: 'example',
+    head: 'Another way: count equally likely pairs',
+    body: 'Forget the order and count PAIRS of marbles. Five marbles make 10 equally likely pairs.\nRed-red pairs: choose 2 of the 3 reds, 3 ways, so P(RR) = 3/10. One-of-each pairs: 3 reds × 2 blues = 6 pairs, so P(one of each) = 6/10 = 3/5.\nBlue-blue: 1 pair, 1/10. Same three answers as the tree, with no fractions to multiply.',
+    steps: {
+      steps: [
+        { tex: '\\binom{5}{2} = 10', text: 'Equally likely pairs of marbles.' },
+        { tex: '\\binom{3}{2} = 3 \\Rightarrow P(RR) = \\tfrac{3}{10}', text: 'Pairs made of two reds.' },
+        { tex: '3 \\times 2 = 6 \\Rightarrow P(\\text{one each}) = \\tfrac{6}{10} = \\tfrac{3}{5}', text: 'One red with one blue.' },
+      ],
+      answer: '\\tfrac{3}{10},\\ \\tfrac{3}{5},\\ \\tfrac{1}{10}',
+    },
+  },
+  {
+    kind: 'example',
+    head: 'Picture it first: a positive test',
+    body: '10% of people have a condition. The test is positive for 90% of people who have it and for 20% of people who do not. A random person tests positive. Draw the tree before you compute.\nP(have and +) = 0.10 × 0.90 = 0.09. P(not have and +) = 0.90 × 0.20 = 0.18. So P(+) = 0.09 + 0.18 = 0.27.\nP(have | +) = 0.09 / 0.27 = 1/3. Most positives are false positives, because the condition is rare.',
+    steps: {
+      steps: [
+        { tex: 'P(\\text{have} \\cap +) = 0.10 \\times 0.90 = 0.09', text: 'Top branch.' },
+        { tex: 'P(\\text{not} \\cap +) = 0.90 \\times 0.20 = 0.18', text: 'The false positives — a bigger branch, because 90% of people are healthy.' },
+        { tex: 'P(+) = 0.09 + 0.18 = 0.27', text: 'Add the two positive branches.' },
+        { tex: 'P(\\text{have} \\mid +) = \\frac{0.09}{0.27} = \\frac{1}{3}', text: 'Conditional: the positive branches are the new whole.' },
+      ],
+      answer: '\\tfrac{1}{3} \\approx 0.333',
+    },
+    art: treeFig({ first: ['have 0.10', 'not 0.90'], second: [['+ 0.90', '− 0.10'], ['+ 0.20', '− 0.80']], ends: ['have, +: 0.09', 'have, −: 0.01', 'not, +: 0.18', 'not, −: 0.72'], hot: [0, 2], title: 'Positive tests come from two branches', caption: 'Of the 0.27 who test positive, only 0.09 have the condition: one third.', alt: 'A tree diagram: have 0.10 or not 0.90, then positive or negative, with the two positive branches 0.09 and 0.18 highlighted' }),
+  },
+  {
+    kind: 'protip',
+    head: 'Table for "given," tree for "then"',
+    body: 'When a problem hands you counts in groups — sport, music, both — build a two-way table or Venn diagram and read conditionals by staying in one row. When a problem happens in stages — draw, then draw again; have it, then test — build a tree and multiply along the branches.',
+    art: flow([{ label: 'Counts in categories? → two-way table or Venn' }, { label: 'Stages, one after another? → tree diagram' }, { label: '"Given": shrink to that row, column or branch set' }, { label: '"At least one": go through the complement' }], { title: 'Pick the picture that fits the problem', caption: 'The picture chooses the formula for you.' }),
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: mutually exclusive means independent',
+    body: 'It is the opposite. Disjoint events cannot both happen, so knowing one happened changes the other\'s probability to 0 — the strongest dependence there is. Rolling a 2 and rolling a 5 on one die are mutually exclusive, and P(2 | 5) = 0, not 1/6.',
+    compare: {
+      cols: [
+        { title: 'Mutually exclusive', tex: 'P(A \\cap B) = 0', lines: ['one happening kills the other', 'P(A | B) = 0 ≠ P(A)'], tone: 'bad' },
+        { title: 'Independent', tex: 'P(A \\cap B) = P(A)P(B)', lines: ['one happening changes nothing', 'overlap is NOT zero (unless P = 0)'], tone: 'ok' },
+      ],
+      note: 'Events with positive probability cannot be both disjoint and independent.',
+    },
+  },
+  {
+    kind: 'trap',
+    head: 'Trap: P(A | B) is not P(B | A)',
+    body: 'P(positive | have) = 0.90 and P(have | positive) = 1/3 — very different numbers. The event after the bar is the denominator, the new whole. "Of the people who tested positive" and "of the people who have it" are different groups, so they give different fractions.',
+    compare: {
+      cols: [
+        { title: 'P(+ | have) = 0.90', lines: ['whole = people who have it', 'how good the test is at catching it'], tone: 'accent' },
+        { title: 'P(have | +) = 1/3', lines: ['whole = people who tested positive', 'what a positive result actually means'], tone: 'warn' },
+      ],
+      note: 'Ask: who is the "of" group? That group goes on the bottom.',
+    },
+  },
+  {
+    kind: 'challenge',
+    head: 'Extra credit: at least one six in three rolls',
+    body: 'Roll a die three times. What is the probability of at least one six?\nComplement: P(no six in three rolls) = (5/6)³ = 125/216.\nP(at least one six) = 1 − 125/216 = 91/216 ≈ 0.421. Compare with 11/36 ≈ 0.306 for two rolls — more rolls, more chances.',
+    steps: {
+      steps: [
+        { tex: 'P(\\text{no six}) = \\left(\\tfrac{5}{6}\\right)^{3} = \\tfrac{125}{216}', text: 'Three independent rolls: multiply three times.' },
+        { tex: '1 - \\tfrac{125}{216} = \\tfrac{91}{216}', text: 'Complement rule.' },
+        { tex: '\\approx 0.421', text: 'Up from 0.306 with two dice.' },
+      ],
+      answer: '\\tfrac{91}{216} \\approx 0.421',
+    },
+  },
+  {
+    kind: 'summary',
+    head: 'Four rules, two pictures',
+    body: 'Complement: P(not A) = 1 − P(A). Addition: P(A or B) = P(A) + P(B) − P(A and B). Conditional: P(A | B) = P(A and B)/P(B). Multiplication: P(A and B) = P(A)·P(B | A). Independence means P(A | B) = P(A). Tables and Venn diagrams handle categories; trees handle stages.',
+    table: {
+      head: ['rule', 'formula', 'used here'],
+      rows: [['complement', 'P(not A) = 1 − P(A)', '1 − 25/36 = 11/36'], ['addition', 'P(A) + P(B) − P(A and B)', '0.55 + 0.50 − 0.30 = 0.75'], ['conditional', 'P(A and B) / P(B)', '0.30 / 0.55 ≈ 0.545'], ['multiplication', 'P(A) · P(B | A)', '3/5 × 2/4 = 3/10'], ['independence', 'P(A | B) = P(A)', '0.545 ≠ 0.50 → not independent']],
+    },
+  },
+];
+
+export const STAT_SLIDES_U01_07: SlideBank = {
+  'STAT-1': STAT_1,
+  'STAT-2': STAT_2,
+  'STAT-3': STAT_3,
+  'STAT-4': STAT_4,
+  'STAT-5': STAT_5,
+  'STAT-6': STAT_6,
+  'STAT-7': STAT_7,
+};
