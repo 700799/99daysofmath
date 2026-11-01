@@ -1591,6 +1591,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Two proportions: pool first',
       body: 'To test H0: p1 = p2, act as if the two groups share one rate. Pool the successes to estimate it, build the standard error from the pooled rate, and measure the gap p̂1 − p̂2 in those standard errors.',
+      why: 'H0 says the two groups share the same success rate, so under H0 the best estimate of that one rate uses all the data: total successes over total people. The SE must describe a world where H0 is true, so it uses the pooled rate. The factor 1/n1 + 1/n2 appears because the difference of two independent proportions has a variance equal to the sum of their variances.',
       formula: {
         tex: 'z = \\frac{\\hat{p}_1 - \\hat{p}_2}{\\sqrt{\\hat{p}_c(1-\\hat{p}_c)\\left(\\frac{1}{n_1} + \\frac{1}{n_2}\\right)}}, \\qquad \\hat{p}_c = \\frac{x_1 + x_2}{n_1 + n_2}',
         note: 'Under H0 the groups share one proportion, so one pooled estimate goes in the SE.',
@@ -1605,6 +1606,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Two means',
       body: 'For independent samples, the difference of means has standard error √(s1²/n1 + s2²/n2). By hand use the conservative df, the smaller of n1 − 1 and n2 − 1; technology computes a larger df and a slightly smaller p-value.',
+      why: 'The difference of two independent sample means has a variance equal to the sum of their variances, s1²/n1 + s2²/n2. This is the same add-the-variances rule as for combining random variables, and SDs never add directly, so everything sits under one square root. Using the smaller df is a safe choice, because a smaller df gives fatter tails and a larger p-value.',
       formula: {
         tex: 't = \\frac{\\bar{x}_1 - \\bar{x}_2}{\\sqrt{\\dfrac{s_1^{2}}{n_1} + \\dfrac{s_2^{2}}{n_2}}}, \\qquad df = \\min(n_1 - 1,\\ n_2 - 1)',
         note: 'Variances add under the root, one from each sample.',
@@ -1619,6 +1621,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Paired data is one sample',
       body: 'Before-and-after scores on the SAME students are not two independent groups. Subtract to get one list of differences, then run a one-sample t-test on those differences with df = n − 1.',
+      why: 'When the same person appears twice, a high scorer tends to be high in both lists, so the two lists are not independent. Taking each person difference removes that person-to-person variation and leaves one honest list of numbers. A one-sample t on those differences then tests whether the average change is zero.',
       compare: {
         cols: [
           { title: 'Two independent samples', lines: ['different people in each group', 'two-sample t', 'SE from both variances'], tone: 'accent' },
@@ -1631,6 +1634,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Chi-square adds up surprise',
       body: 'For counts in categories, compare what you observed with what H0 predicts in every cell. Square each gap, scale it by the expected count, and add. A big total means the table is far from H0; the test is always right-tailed.',
+      why: 'If H0 is true, observed counts should land near the expected counts, so every gap O − E should be small. Gaps are positive or negative, so squaring stops them cancelling. Dividing by E makes a gap of 5 matter more where you expect 10 than where you expect 1000. The total is never negative and only large totals are evidence against H0, so the test is right-tailed.',
       formula: {
         tex: '\\chi^{2} = \\sum \\frac{(O - E)^{2}}{E}',
         note: 'One term per cell, all added. Bigger is more evidence against H0.',
@@ -1645,6 +1649,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Expected counts and degrees of freedom',
       body: 'Goodness-of-fit tests one categorical variable: expected = n × claimed proportion, df = categories − 1. Independence or homogeneity tests a two-way table: expected = row total × column total / grand total, df = (rows − 1)(columns − 1).',
+      why: 'Expected counts assume H0. If two variables are unrelated, every row should split across the columns in the same proportions, so a cell expects its row share times the column total, which is row × column / grand total. Degrees of freedom count how many cells can vary freely once the totals are fixed: with 6 faces and a fixed total, only 5 can be chosen freely.',
       table: {
         head: ['Test', 'Expected count', 'df', 'Critical value (α = 0.05)'],
         rows: [
@@ -1658,13 +1663,14 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: the drug trial',
-      body: 'H0: p1 = p2, Ha: p1 > p2. p̂1 = 0.60, p̂2 = 0.45, pooled p̂c = 105/200 = 0.525.\nSE = √(0.525 × 0.475 × (1/100 + 1/100)) ≈ 0.0706; z = (0.60 − 0.45)/0.0706 ≈ 2.12.\np-value = P(Z > 2.12) = 0.017 < 0.05: reject H0. Evidence the drug raises the improvement rate.',
+      body: 'In a drug trial, 60 of 100 treated patients improved versus 45 of 100 on a placebo. Is there evidence that the drug raises the improvement rate?',
       steps: {
         steps: [
-          { tex: '\\hat{p}_c = \\frac{60 + 45}{100 + 100} = 0.525', text: 'Pool all the improvements.' },
-          { tex: '\\text{SE} = \\sqrt{0.525(0.475)\\left(\\tfrac{1}{100} + \\tfrac{1}{100}\\right)} \\approx 0.0706', text: 'Standard error under H0.' },
-          { tex: 'z = \\frac{0.60 - 0.45}{0.0706} \\approx 2.12', text: 'The gap in standard errors.' },
-          { tex: 'P(Z > 2.12) = 0.017', text: 'One tail, since Ha says greater.' },
+          { tex: 'H_0:\\ p_1 = p_2,\\quad H_a:\\ p_1 > p_2', text: 'State the hypotheses about the two true improvement rates. The alternative is one-sided because the question asks whether the drug raises the rate.' },
+          { tex: 'n_1\\hat{p}_c = 52.5,\\ n_1(1-\\hat{p}_c) = 47.5\\ \\text{(same for group 2)}', text: 'Plan: a two-proportion z-test. The patients are randomly assigned, and with the pooled rate every group has at least 10 expected improvements and 10 expected non-improvements.' },
+          { tex: '\\hat{p}_c = \\frac{60 + 45}{100 + 100} = 0.525', text: 'Pool all the improvements: 105 successes out of 200 patients. H0 says both groups share one rate, so the pooled estimate is our best guess of it.' },
+          { tex: '\\text{SE} = \\sqrt{0.525(0.475)\\left(\\tfrac{1}{100} + \\tfrac{1}{100}\\right)} \\approx 0.0706', text: 'Put the pooled rate in the standard error, because the SE describes a world where H0 is true. The two (1/n) terms account for both groups.' },
+          { tex: 'z = \\frac{0.60 - 0.45}{0.0706} \\approx 2.12,\\quad P(Z > 2.12) = 0.017', text: 'The 15-point gap is about 2.12 standard errors. Only the upper tail counts, since Ha says greater, and its area is 0.017, below 0.05, so reject H0.' },
         ],
         answer: '0.017 < 0.05:\\ \\text{reject } H_0',
       },
@@ -1672,12 +1678,14 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Two classes, two means',
-      body: 'Class A (n = 25) averaged 78 with SD 10; Class B (n = 36) averaged 72 with SD 12, independent random samples. H0: μ1 = μ2, Ha: μ1 ≠ μ2.\nSE = √(10²/25 + 12²/36) = √(4 + 4) = √8 ≈ 2.83; t = (78 − 72)/2.83 ≈ 2.12.\nConservative df = 24: two-sided p-value ≈ 0.044 < 0.05. Reject H0; evidence the means differ.',
+      body: 'Class A (n = 25) averaged 78 with SD 10; Class B (n = 36) averaged 72 with SD 12, independent random samples. Is there evidence that the class means differ?',
       steps: {
         steps: [
-          { tex: '\\text{SE} = \\sqrt{\\tfrac{100}{25} + \\tfrac{144}{36}} = \\sqrt{8} \\approx 2.83', text: 'Each variance over its own n.' },
-          { tex: 't = \\frac{78 - 72}{2.83} \\approx 2.12', text: 'Six points is about 2.1 standard errors.' },
-          { tex: 'df = 24:\\ p\\text{-value} \\approx 0.044', text: 'Two-sided, with the smaller sample\'s df.' },
+          { tex: 'H_0:\\ \\mu_1 = \\mu_2,\\quad H_a:\\ \\mu_1 \\ne \\mu_2', text: 'State the hypotheses. The classes are independent random samples, not matched pairs, so a two-sample t-test is the right plan. The alternative is two-sided because any difference counts.' },
+          { tex: '\\text{SE} = \\sqrt{\\tfrac{10^{2}}{25} + \\tfrac{12^{2}}{36}} = \\sqrt{4 + 4} \\approx 2.83', text: 'Add the two variances of the sample means, s²/n for each class, then take the root. The variances add, but the SDs never do.' },
+          { tex: 't = \\frac{78 - 72}{2.83} \\approx 2.12', text: 'The 6-point gap between the sample means divided by the SE tells us it is about 2.12 standard errors from zero.' },
+          { tex: 'df = 24:\\ p\\text{-value} \\approx 0.044', text: 'By hand use the conservative df, the smaller of 24 and 35. The two tails of a t curve beyond 2.12 hold about 0.044 in total.' },
+          { tex: '0.044 < 0.05', text: 'The p-value is below α, so reject H0. There is convincing evidence that the two class means differ.' },
         ],
         answer: '0.044 < 0.05:\\ \\text{reject } H_0',
       },
@@ -1685,12 +1693,14 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Tutoring: before and after',
-      body: 'Eight students take a test before and after tutoring. The after − before differences have mean 3.0 and SD 4.0 points. Paired design: H0: μd = 0, Ha: μd > 0.\nSE = 4/√8 ≈ 1.41; t = 3.0/1.41 ≈ 2.12 with df = 7.\np-value = P(t7 > 2.12) ≈ 0.036 < 0.05: reject H0. Evidence scores improved.',
+      body: 'Eight students take a test before and after tutoring. The after − before differences have mean 3.0 and SD 4.0 points. Is there evidence that tutoring improved scores?',
       steps: {
         steps: [
-          { tex: 'd = \\text{after} - \\text{before}:\\ \\bar{d} = 3.0,\\ s_d = 4.0', text: 'One list of eight differences.' },
-          { tex: 't = \\frac{3.0}{4/\\sqrt{8}} \\approx 2.12,\\quad df = 7', text: 'A one-sample t on the differences.' },
-          { tex: 'P(t_7 > 2.12) \\approx 0.036', text: 'One tail: Ha says improved.' },
+          { text: 'Decide the design. The same eight students were measured twice, so each before score has a natural partner. This is paired data, and we work with the list of differences.' },
+          { tex: 'H_0:\\ \\mu_d = 0,\\quad H_a:\\ \\mu_d > 0', text: 'State hypotheses about the mean difference μd. Ha is one-sided because the question asks whether tutoring improved scores, which means after − before is positive.' },
+          { tex: 't = \\frac{3.0}{4/\\sqrt{8}} = \\frac{3.0}{1.41} \\approx 2.12,\\quad df = 7', text: 'Run a one-sample t on the differences. The SE is s_d/√n = 4/2.83 = 1.41, so the mean gain is 2.12 standard errors above 0, with df = n − 1 = 7.' },
+          { tex: 'P(t_{7} > 2.12) \\approx 0.036', text: 'Only the upper tail counts, since Ha says the gain is positive. The area beyond 2.12 on a t curve with 7 df is about 0.036.' },
+          { tex: '0.036 < 0.05', text: 'The p-value is below α, so reject H0. There is convincing evidence that tutoring raises mean scores.' },
         ],
         answer: '0.036 < 0.05:\\ \\text{reject } H_0',
       },
@@ -1698,7 +1708,17 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Is the die fair?',
-      body: 'A die is rolled 60 times: faces 1 to 6 come up 8, 12, 9, 14, 7, 10 times. Expected 60/6 = 10 each, all at least 5.\nχ² = (4 + 4 + 1 + 16 + 9 + 0)/10 = 3.4.\ndf = 5, critical value 11.070, p-value ≈ 0.64 > 0.05: fail to reject. No evidence the die is unfair.',
+      body: 'A die is rolled 60 times: faces 1 to 6 come up 8, 12, 9, 14, 7, 10 times. Is there evidence that the die is unfair?',
+      steps: {
+        steps: [
+          { tex: 'H_0:\\ \\text{each face has probability } \\tfrac16', text: 'State the hypotheses. H0 says the die is fair with every face at 1/6, and Ha says at least one face has a different probability. A goodness-of-fit test fits because we have one categorical variable.' },
+          { tex: 'E = 60 \\cdot \\tfrac{1}{6} = 10', text: 'Compute expected counts from H0 as n times the claimed proportion: 10 for every face. Each is at least 5, so the chi-square test is allowed.' },
+          { tex: '(O - E)^{2} = 4,\\ 4,\\ 1,\\ 16,\\ 9,\\ 0', text: 'Subtract expected from observed for each face and square: for example 8 − 10 = −2, which squares to 4. Squaring stops the over and under gaps from cancelling.' },
+          { tex: '\\chi^{2} = \\tfrac{4 + 4 + 1 + 16 + 9 + 0}{10} = 3.4', text: 'Divide each squared gap by E = 10 and add them all up. Because every E is 10, one division of the total 34 by 10 gives 3.4.' },
+          { tex: 'df = 6 - 1 = 5:\\ 3.4 < 11.070,\\ p \\approx 0.64', text: 'With df = 6 − 1 = 5, the critical value is 11.070. Our total is far below it, and the right-tail p-value is about 0.64, above 0.05, so fail to reject H0.' },
+        ],
+        answer: '\\text{fail to reject } H_0',
+      },
       table: {
         head: ['face', 'O', 'E', '(O − E)²/E'],
         rows: [['1', '8', '10', '0.4'], ['2', '12', '10', '0.4'], ['3', '9', '10', '0.1'], ['4', '14', '10', '1.6'], ['5', '7', '10', '0.9'], ['6', '10', '10', '0.0'], ['total', '60', '60', '3.4']],
@@ -1717,7 +1737,17 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Dogs or cats: a two-way table',
-      body: 'Group A: 30 prefer dogs, 20 prefer cats. Group B: 20 dogs, 30 cats. Is preference associated with group?\nEvery row and column total is 50, so each expected count is 50 × 50/100 = 25.\nχ² = 1 + 1 + 1 + 1 = 4.0; df = (2 − 1)(2 − 1) = 1, critical 3.841, p-value ≈ 0.046 < 0.05. Reject H0: evidence of an association.',
+      body: 'Group A: 30 prefer dogs, 20 prefer cats. Group B: 20 dogs, 30 cats. Is preference associated with group? Use a chi-square test for independence.',
+      steps: {
+        steps: [
+          { tex: 'H_0:\\ \\text{preference and group are independent}', text: 'State the hypotheses. H0 says group and preference have no association, and Ha says they do. A two-way table of counts calls for a chi-square test of independence.' },
+          { tex: 'E = \\frac{50 \\times 50}{100} = 25', text: 'Expected count is row total times column total over grand total. Every row and column total is 50, so every cell expects 25, which is at least 5.' },
+          { tex: '\\frac{(30 - 25)^{2}}{25} = 1', text: 'Every cell is off by exactly 5 from its expected 25 (30 and 20 against 25), and each squared gap 25 divided by 25 contributes 1.' },
+          { tex: '\\chi^{2} = 1 + 1 + 1 + 1 = 4.0', text: 'Add the four cell contributions to get the chi-square statistic 4.0.' },
+          { tex: 'df = (2-1)(2-1) = 1:\\ 4.0 > 3.841,\\ p \\approx 0.046', text: 'With df = (rows − 1)(columns − 1) = 1, the critical value is 3.841. Our 4.0 is beyond it, and p is about 0.046 < 0.05, so reject H0. Evidence of an association.' },
+        ],
+        answer: '\\text{reject } H_0:\\ \\text{evidence of an association}',
+      },
       art: bars([{ name: 'dogs', vals: [30, 20], color: SKY }, { name: 'cats', vals: [20, 30], color: AMB }], {
         labels: ['Group A', 'Group B'],
         title: 'Preference by group',
@@ -1733,12 +1763,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Another way: the same question as a z-test',
-      body: 'Check the dog/cat result with a two-proportion z-test on "prefers dogs": p̂A = 0.6, p̂B = 0.4.\nPooled p̂c = 50/100 = 0.5; SE = √(0.5 × 0.5 × (1/50 + 1/50)) = √0.01 = 0.1.\nz = (0.6 − 0.4)/0.1 = 2.0; two-sided p-value = 2 × 0.0228 = 0.046. And z² = 4.0 = χ²: on a 2 × 2 table the two tests are the same test.',
+      body: 'Check the dog/cat result with a two-proportion z-test on “prefers dogs”: p̂A = 0.6 and p̂B = 0.4. Do the two tests agree?',
       steps: {
         steps: [
-          { tex: '\\hat{p}_c = \\tfrac{30 + 20}{50 + 50} = 0.5', text: 'Pool the dog lovers.' },
-          { tex: '\\text{SE} = \\sqrt{0.5(0.5)\\left(\\tfrac{1}{50} + \\tfrac{1}{50}\\right)} = 0.1', text: 'Standard error under H0.' },
-          { tex: 'z = \\frac{0.6 - 0.4}{0.1} = 2.0,\\quad z^{2} = 4.0 = \\chi^{2}', text: 'Same p-value, 0.046, either way.' },
+          { tex: '\\hat{p}_c = \\tfrac{30 + 20}{50 + 50} = 0.5', text: 'Pool the dog lovers from both groups: 50 out of 100 people. Under H0 the two groups share this one rate.' },
+          { tex: '\\text{SE} = \\sqrt{0.5(0.5)\\left(\\tfrac{1}{50} + \\tfrac{1}{50}\\right)} = \\sqrt{0.01} = 0.1', text: 'Use the pooled rate in the standard error. The two groups of 50 contribute 1/50 each, so the quantity under the root is 0.25 × 0.04 = 0.01.' },
+          { tex: 'z = \\frac{0.6 - 0.4}{0.1} = 2.0', text: 'The 0.2 gap is 2 standard errors. The two-sided p-value is 2(0.0228) = 0.046, the same as the chi-square p-value.' },
+          { tex: 'z^{2} = 4.0 = \\chi^{2}', text: 'Square the z: it equals the chi-square statistic 4.0. For a 2 × 2 table the two tests are algebraically the same test, so they always agree.' },
         ],
         answer: 'z = 2.0,\\ z^{2} = \\chi^{2}',
       },
@@ -1746,7 +1777,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Picture it first: pick the test',
-      body: 'Before any arithmetic, picture the data. Two success rates? Two-proportion z. Two groups of measurements? Two-sample t. Same people twice? Paired t. Counts spread over categories? Chi-square. Naming the picture is the Plan step, and it is where most tests go wrong.',
+      body: 'Before any arithmetic, picture the data. Which test fits each kind of data? Naming the picture is the Plan step, and it is where most tests go wrong.',
+      steps: {
+        steps: [
+          { text: 'Ask first: are the data counts sorted into categories, or measurements or success rates? Counts across categories call for chi-square; success rates call for z procedures; measurements call for t procedures.' },
+          { text: 'For rates or measurements, ask how many groups there are. Two separate groups of people mean a two-sample test: two-proportion z for yes/no data, two-sample t for numbers.' },
+          { text: 'If one group of people is measured twice, or the data come in natural pairs, subtract to get differences and run a paired test: a one-sample t on the differences.' },
+          { text: 'Check that test conditions before computing: random sample or assignment, the 10% condition, and large enough counts or sample size, with expected counts at least 5 for chi-square.' },
+        ],
+        answer: '\\text{Match the data picture to the test, then check conditions}',
+      },
       table: {
         head: ['The data look like…', 'Test'],
         rows: [
@@ -1789,12 +1829,14 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'challenge',
       head: 'Extra credit: three colours of candy',
-      body: 'A maker claims 50% red, 30% blue, 20% green. A bag of 100 has 42 red, 38 blue, 20 green. Test at α = 0.05.\nExpected: 50, 30, 20. χ² = (42 − 50)²/50 + (38 − 30)²/30 + 0 = 1.28 + 2.13 ≈ 3.41.\ndf = 2, critical value 5.991, p-value ≈ 0.18: fail to reject. The claimed mix is plausible.',
+      body: 'A maker claims 50% red, 30% blue and 20% green. A bag of 100 has 42 red, 38 blue and 20 green. Is there evidence the claimed mix is wrong? Test at α = 0.05.',
       steps: {
         steps: [
-          { tex: 'E = 100(0.5, 0.3, 0.2) = 50, 30, 20', text: 'Expected counts from the claim, all at least 5.' },
-          { tex: '\\chi^{2} = \\tfrac{64}{50} + \\tfrac{64}{30} + \\tfrac{0}{20} \\approx 3.41', text: 'Add the three contributions.' },
-          { tex: 'df = 2:\\ 3.41 < 5.991,\\ p \\approx 0.18', text: 'Not beyond the critical value.' },
+          { tex: 'E = 100(0.5),\\ 100(0.3),\\ 100(0.2) = 50,\\ 30,\\ 20', text: 'Expected counts come from the claim: the bag size times each claimed proportion. All three are at least 5, so chi-square is allowed.' },
+          { tex: '\\frac{(42-50)^{2}}{50} = \\tfrac{64}{50} = 1.28', text: 'Red is 8 below its expectation. Square the gap to get 64 and divide by 50, so red adds 1.28 to the total.' },
+          { tex: '\\frac{(38-30)^{2}}{30} = \\tfrac{64}{30} \\approx 2.13,\\quad \\frac{(20-20)^{2}}{20} = 0', text: 'Blue is 8 above its expectation, so it adds 64/30 = 2.13. Green hit its expected count exactly and adds nothing.' },
+          { tex: '\\chi^{2} = 1.28 + 2.13 + 0 \\approx 3.41', text: 'Add the three contributions to get the chi-square statistic, about 3.41.' },
+          { tex: 'df = 3 - 1 = 2:\\ 3.41 < 5.991,\\ p \\approx 0.18', text: 'With df = 3 − 1 = 2, the critical value is 5.991. The 3.41 falls short of it, and p is about 0.18 > 0.05, so fail to reject H0. The claimed mix is plausible.' },
         ],
         answer: '\\text{fail to reject } H_0',
       },
@@ -1842,6 +1884,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'The model and the sample line',
       body: 'The population follows μy = α + βx: for each x, the mean response sits on a line with true slope β. The sample line ŷ = a + bx estimates it. b is our estimate of β, and SEb says how much b would wander from sample to sample.',
+      why: 'Real data scatter around a line, so we imagine the mean score for each number of hours lies exactly on a true line with slope β. Our 20 students give a sample line that lands near that line but not on it. The slope b is one draw from a sampling distribution centred at β, and SEb measures how far b typically lands from β.',
       formula: {
         tex: '\\mu_y = \\alpha + \\beta x \\qquad\\longrightarrow\\qquad \\hat{y} = a + bx',
         note: 'Greek letters for the population, Latin letters for the sample.',
@@ -1856,6 +1899,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Reading computer output',
       body: 'The Coef column holds a (the Constant row) and b (the x-variable row). SE Coef beside b is SEb. S is the standard deviation of the residuals, and R-Sq is r². The equation is ŷ = 12.5 + 2.40(hours).',
+      why: 'Software prints its numbers in a fixed layout, so the same few spots answer every question. The Constant row gives the intercept a, the variable row gives the slope b, and SE Coef beside it is SEb. T is Coef divided by SE Coef, so you can check it: 2.40/0.60 = 4.00. S measures the typical miss of a prediction, in the units of y.',
       table: {
         head: ['Predictor', 'Coef', 'SE Coef', 'T', 'P'],
         rows: [['Constant', '12.5', '3.2', '3.91', '0.001'], ['Hours', '2.40', '0.60', '4.00', '0.001']],
@@ -1867,6 +1911,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Conditions: LINER',
       body: 'Linear pattern in the scatterplot, Independent observations, Normal residuals, Equal spread of residuals across x, Random sample. Check the scatterplot for the L and the residual plot for the N and the E.',
+      why: 'The t procedures assume the points scatter around a line in the same way at every x. A curved pattern means the line is the wrong model, and a fan shape means the SE is wrong for some x values. Skewed residuals matter for small n, and non-independent observations make the SE too small. Each condition protects the SE and the p-value.',
       table: {
         head: ['Letter', 'Condition', 'Where to look'],
         rows: [
@@ -1882,6 +1927,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Interval and test for the slope',
       body: 'The slope gets the usual recipe: estimate ± t* × SE, with df = n − 2 because two parameters were estimated. The test of H0: β = 0 asks whether there is any linear relationship at all; its statistic is b divided by SEb.',
+      why: 'A slope of 0 means y does not change with x on average, so H0: β = 0 says there is no linear relationship. Dividing b by SEb counts how many standard errors the slope is from 0, the same pattern as other t tests. We spend two degrees of freedom because the line has two estimated numbers, the intercept and the slope, so df = n − 2.',
       formula: {
         tex: 'b \\pm t^{*}\\,SE_b, \\qquad t = \\frac{b - 0}{SE_b}, \\qquad df = n - 2',
         note: 'Most output prints this t and its two-sided p-value in the slope row.',
@@ -1896,6 +1942,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Four steps on the free-response',
       body: 'Every inference question is answered the same way. State the parameter and the hypotheses (or the interval you will build). Plan the procedure and check the conditions. Do the calculation: statistic, df, p-value. Conclude in context at α.',
+      why: 'Graders award points for each part of an argument: a named parameter, a justified method, a correct calculation, and a conclusion tied to the question. A correct number without conditions or context shows only a piece of the reasoning. Following the same four steps every time makes sure no point is left behind and stops you forgetting a condition under pressure.',
       art: flow(
         [
           { label: 'State: parameter, hypotheses', color: SKY },
@@ -1909,12 +1956,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: write the line, read the slope',
-      body: 'From the output: ŷ = 12.5 + 2.40(hours).\nSlope: each additional hour of study is associated with a predicted increase of 2.40 points in exam score, on average.\nr² = 47%: about 47% of the variation in scores is explained by the linear relationship with hours.',
+      body: 'The output gives ŷ = 12.5 + 2.40(hours). How do you read the slope, the intercept and r² in the context of study hours and exam score?',
       steps: {
         steps: [
-          { tex: '\\hat{y} = 12.5 + 2.40x', text: 'Constant then the x-variable coefficient.' },
-          { tex: 'b = 2.40 \\text{ points per hour}', text: 'Predicted change in y per unit of x, "associated with".' },
-          { tex: 'r^{2} = 0.47', text: 'Share of score variation explained by hours.' },
+          { tex: '\\hat{y} = 12.5 + 2.40x', text: 'Read the Coef column: the Constant row is the intercept a = 12.5 and the Hours row is the slope b = 2.40. The line is ŷ = a + bx.' },
+          { tex: 'b = 2.40 \\text{ points per hour}', text: 'The slope is the predicted change in y for one more unit of x. Say each extra hour is associated with a predicted 2.40-point rise, not causes, since we only observed students.' },
+          { tex: '\\hat{y}(0) = 12.5', text: 'The intercept is the predicted score at 0 hours. Treat it with care: the data run from 2 to 12 hours, so 0 hours is outside the data and is only the starting point of the line.' },
+          { tex: 'r^{2} = 0.47', text: 'Read r² as a share: about 47% of the variation in exam scores is explained by the linear relationship with hours. The other 53% comes from other things.' },
         ],
         answer: '\\hat{y} = 12.5 + 2.40x',
       },
@@ -1922,7 +1970,17 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Test the slope',
-      body: 'Is there a linear relationship between hours and score? H0: β = 0, Ha: β ≠ 0.\nt = b/SEb = 2.40/0.60, so t = 4.0 with df = n − 2 = 18.\nTwo-sided p-value ≈ 0.001 < 0.05: reject H0. Convincing evidence of a linear relationship between hours and score.',
+      body: 'Is there a linear relationship between hours and score? Use the output: b = 2.40, SEb = 0.60, n = 20. Test H0: β = 0 at α = 0.05.',
+      steps: {
+        steps: [
+          { tex: 'H_0:\\ \\beta = 0,\\quad H_a:\\ \\beta \\ne 0', text: 'State the hypotheses about the true slope β. H0 says hours tell us nothing about score on average. The question asks for any linear relationship, so Ha is two-sided.' },
+          { text: 'Plan and check LINER: a linear pattern in the scatterplot, independent students, no curve or fan in the residual plot, roughly normal residuals, and a random sample. Assume these hold here.' },
+          { tex: 't = \\frac{2.40 - 0}{0.60} = 4.0,\\quad df = 20 - 2 = 18', text: 'Divide the slope by its standard error: it is 4 standard errors from 0. Two coefficients were estimated, so df = n − 2 = 18.' },
+          { tex: 'p\\text{-value} \\approx 0.001', text: 'On a t curve with 18 df, the area in both tails beyond ±4.0 is about 0.001, matching the P column in the output.' },
+          { tex: '0.001 < 0.05', text: 'The p-value is below α, so reject H0. There is convincing evidence of a linear relationship between hours studied and exam score.' },
+        ],
+        answer: '0.001 < 0.05:\\ \\text{reject } H_0',
+      },
       art: bell(0, 1, {
         alt: 'A t curve with both far tails beyond 4.0 and minus 4.0 shaded, so little area that the p-value is about 0.001',
         title: 't curve, df = 18: the tails beyond ±4.0',
@@ -1937,12 +1995,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'A 95% interval for the slope',
-      body: 'df = 18, so t* = 2.101.\nME = 2.101 × 0.60 ≈ 1.26.\nInterval: 2.40 ± 1.26 = (1.14, 3.66) points per hour.',
+      body: 'Build a 95% confidence interval for the true slope β, using b = 2.40, SEb = 0.60 and n = 20.',
       steps: {
         steps: [
-          { tex: 'df = 20 - 2 = 18 \\Rightarrow t^{*} = 2.101', text: 'Two coefficients were estimated.' },
-          { tex: '\\text{ME} = 2.101 \\times 0.60 \\approx 1.26', text: 'Critical value times SEb.' },
-          { tex: '2.40 \\pm 1.26', text: 'Estimate plus or minus the margin.' },
+          { text: 'The same LINER conditions as for the test must hold before we build the interval. Assume the scatterplot and residual plot look fine for these 20 students.' },
+          { tex: 'df = 20 - 2 = 18 \\Rightarrow t^{*} = 2.101', text: 'The line used two estimated numbers, the intercept and the slope, so df = n − 2 = 18. The 95% critical value from the t table is 2.101.' },
+          { tex: '\\text{ME} = 2.101 \\times 0.60 \\approx 1.26', text: 'Multiply the critical value by the standard error of the slope to get the margin of error 1.26.' },
+          { tex: '2.40 \\pm 1.26 = (1.14,\\ 3.66)', text: 'Subtract and add the margin from b: 2.40 − 1.26 = 1.14 and 2.40 + 1.26 = 3.66. We are 95% confident the true slope lies in this range.' },
         ],
         answer: '(1.14,\\ 3.66)\\text{ points per hour}',
       },
@@ -1950,7 +2009,15 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Another way: let the interval decide',
-      body: 'Use (1.14, 3.66) to reach the test conclusion without a p-value.\nH0 says β = 0. The interval does not contain 0; every plausible slope is positive.\nSo at α = 0.05, two-sided, we reject H0, the same conclusion as the t-test.',
+      body: 'Use (1.14, 3.66) to reach the test conclusion without a p-value. Is 0 a plausible value for the slope?',
+      steps: {
+        steps: [
+          { tex: 'H_0:\\ \\beta = 0', text: 'The null value of the slope is 0, so ask whether 0 sits inside the 95% interval. Only values inside are plausible at the 5% level.' },
+          { tex: '0 \\notin (1.14,\\ 3.66)', text: 'Every value in the interval is positive and 0 lies to the left of it. So 0 is not a plausible slope.' },
+          { tex: '\\text{reject } H_0 \\text{ at } \\alpha = 0.05', text: 'A 95% interval and a two-sided test at α = 0.05 give the same verdict, so we reject H0. This matches the t-test with p ≈ 0.001.' },
+        ],
+        answer: '\\text{reject } H_0:\\ \\beta = 0',
+      },
       compare: {
         cols: [
           { title: 't-test', tex: 't = 4.0,\\ p \\approx 0.001', lines: ['reject H0: β = 0'], tone: 'accent' },
@@ -1962,7 +2029,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Predict, then find the residual',
-      body: 'A student who studied 10 hours scored 40.\nPredicted: ŷ = 12.5 + 2.40(10) = 12.5 + 24 = 36.5.\nResidual = actual − predicted = 40 − 36.5 = +3.5: the student scored 3.5 points above the line.',
+      body: 'A student who studied 10 hours scored 40. What does the line predict for 10 hours, and how far from the line is this student?',
+      steps: {
+        steps: [
+          { tex: '\\hat{y} = 12.5 + 2.40(10)', text: 'Put x = 10 into the least-squares line. This gives the score the line predicts for a student who studied 10 hours.' },
+          { tex: '\\hat{y} = 12.5 + 24 = 36.5', text: 'Multiply first, then add: 2.40 × 10 = 24, and 12.5 + 24 = 36.5. This is the predicted score, a typical value, not a guarantee.' },
+          { tex: '\\text{residual} = y - \\hat{y} = 40 - 36.5 = +3.5', text: 'A residual is actual minus predicted. Subtract the prediction from the real score of 40, which gives +3.5.' },
+          { text: 'The positive residual means the student scored 3.5 points above the line, the vertical gap from the dot down to the line in the picture.' },
+        ],
+        answer: '\\hat{y} = 36.5,\\ \\text{residual} = +3.5',
+      },
       art: scatterLine(
         [{ x: 2, y: 18 }, { x: 3, y: 17 }, { x: 4, y: 24 }, { x: 5, y: 22 }, { x: 6, y: 29 }, { x: 7, y: 27 }, { x: 8, y: 33 }, { x: 9, y: 36 }, { x: 11, y: 37 }, { x: 12, y: 42 }],
         2.4,
@@ -1983,7 +2059,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Picture it first: car weight and fuel',
-      body: 'Output for predicting fuel use from car weight (n = 12) shows slope b = −0.85 with SE 0.30. Picture the interval on a number line: is 0 inside?\ndf = 10, so t* = 1.812; ME = 1.812 × 0.30 ≈ 0.54.\n90% interval: −0.85 ± 0.54 = (−1.39, −0.31). The whole interval is negative: heavier cars are associated with lower fuel use per unit, and 0 is not a plausible slope.',
+      body: 'Output for predicting fuel economy (miles per gallon) from car weight (n = 12) shows slope b = −0.85 with SE 0.30. Is 0 a plausible slope? Build a 90% interval and picture it on a number line.',
+      steps: {
+        steps: [
+          { tex: 'df = 12 - 2 = 10 \\Rightarrow t^{*} = 1.812', text: 'Two coefficients were estimated, so df = n − 2 = 10. At 90% confidence the t table gives t* = 1.812, which is smaller than for 95%.' },
+          { tex: '\\text{ME} = 1.812 \\times 0.30 \\approx 0.54', text: 'Multiply the critical value by the SE of the slope: 1.812 × 0.30 = 0.5436, about 0.54.' },
+          { tex: '-0.85 \\pm 0.54 = (-1.39,\\ -0.31)', text: 'Subtract and add the margin from b = −0.85: −0.85 − 0.54 = −1.39 and −0.85 + 0.54 = −0.31.' },
+          { text: 'Look at the number line. The whole interval is negative and 0 is not inside, so 0 is not a plausible slope: heavier cars are associated with lower fuel economy.' },
+        ],
+        answer: '(-1.39,\\ -0.31)',
+      },
       art: numberLine(-2, 0, [{ at: -0.85, label: 'slope −0.85', color: AMB }], {
         step: 1,
         title: '90% interval for the slope, df = 10',
@@ -2019,12 +2104,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'challenge',
       head: 'Extra credit: a slope that just misses',
-      body: 'Output shows a slope of 3.0 with SE 1.5 from n = 22 points. Test H0: β = 0 at α = 0.05.\nt = 3.0/1.5 = 2.0 with df = 20; t* = 2.086, so the two-sided p-value ≈ 0.059 > 0.05. Fail to reject.\nCheck with the interval: 3.0 ± 2.086(1.5) = (−0.13, 6.13) contains 0, which agrees.',
+      body: 'Output shows a slope of 3.0 with SE 1.5 from n = 22 points. Test H0: β = 0 at α = 0.05, then check the verdict with a 95% interval.',
       steps: {
         steps: [
-          { tex: 't = \\frac{3.0}{1.5} = 2.0,\\quad df = 22 - 2 = 20', text: 'Two standard errors from zero.' },
-          { tex: '2.0 < t^{*} = 2.086 \\Rightarrow p \\approx 0.059', text: 'Just short of the α = 0.05 cutoff.' },
-          { tex: '3.0 \\pm 2.086(1.5) = (-0.13,\\ 6.13)', text: 'The interval reaches past 0: same verdict.' },
+          { tex: 't = \\frac{3.0}{1.5} = 2.0,\\quad df = 22 - 2 = 20', text: 'Divide the slope by its SE: it is 2 standard errors from 0. Two coefficients were estimated, so df = n − 2 = 20.' },
+          { tex: '2.0 < t^{*} = 2.086', text: 'Compare with the critical value for 95% and df = 20, which is 2.086. Our t is just short of it, so the result is not quite significant.' },
+          { tex: 'p\\text{-value} \\approx 0.059 > 0.05', text: 'The two-sided p-value for t = 2.0 with 20 df is about 0.059, above α, so fail to reject H0. There is not quite enough evidence of a linear relationship.' },
+          { tex: '3.0 \\pm 2.086(1.5) = (-0.13,\\ 6.13)', text: 'Check with the interval: the margin is 2.086 × 1.5 = 3.13. The interval reaches below 0, so 0 is plausible, which agrees with the test.' },
         ],
         answer: '\\text{fail to reject } H_0:\\ \\beta = 0',
       },
