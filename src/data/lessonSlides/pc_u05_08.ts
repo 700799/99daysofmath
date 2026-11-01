@@ -40,6 +40,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
         ],
         { labels: ['0', '1', '2', '3', '4', '5'], title: 'same start, wildly different finish', caption: 'Adding keeps the steps equal; multiplying makes every step bigger than the last.' },
       ),
+      why: 'Adding the same amount means every step is the same size, so a line climbs at a constant slope. Multiplying means every step is a percent of what you already have, so a bigger amount makes a bigger step. Check: from 40, the line adds 5 to reach 45, but doubling adds 40 to reach 80. Growth that feeds on itself is what makes the curve take off.',
     },
     {
       kind: 'concept',
@@ -64,6 +65,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
         mark: 0,
         note: 'At x = 0 the power b⁰ is 1, so y is just a. That is why a is the start.',
       },
+      why: 'Put x = 0 into the rule and you get y = a · b⁰ = a · 1 = a, so a really is where you begin. Each time x goes up by 1, one more copy of b gets multiplied in, which is why the table runs 200, then 200 · 1.5, then 200 · 1.5 · 1.5. The exponent only counts how many copies of b have been multiplied in.',
     },
     {
       kind: 'concept',
@@ -88,6 +90,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
           'Green multiplies by 1.6 and takes off; rose multiplies by 0.6 and fades.',
         );
       })(),
+      why: 'Multiplying by a number bigger than 1 makes a quantity larger, and multiplying by a number between 0 and 1 makes it smaller: 100 × 2 = 200 but 100 × 0.8 = 80. Because the very same multiplication repeats at every step, the direction never flips. The amount keeps growing or keeps shrinking, forever.',
     },
     {
       kind: 'concept',
@@ -107,16 +110,17 @@ export const PC_SLIDES_U05_08: SlideBank = {
         ],
         note: 'Never multiply by 0.08 for "up 8%" — that would throw away 92% of what you had.',
       },
+      why: 'Up 8% means you still own your whole amount, which is 1 times it, plus an extra 0.08 times it. Together that is 1.08 times the amount, so one multiplication does both jobs at once. Check: 1.08 × 500 = 500 + 40 = 540, which is $500 plus 8% of $500.',
     },
     {
       kind: 'example',
       head: 'Start simple: y = 4 · 2^x at x = 3',
-      body: 'Build the power first, then multiply by the start.\n2³ = 2 × 2 × 2 = 8. Now 4 × 8 = 32. Three doubling steps starting from 4 land you on 32.',
+      body: 'The rule is y = 4 · 2^x. What is y when x = 3?',
       steps: {
         steps: [
-          { tex: 'y = 4 \\cdot 2^{3}', text: 'Put x = 3 into the rule.' },
-          { tex: '2^{3} = 2 \\cdot 2 \\cdot 2 = 8', text: 'Build the power FIRST — three 2s multiplied.' },
-          { tex: '4 \\cdot 8 = 32', text: 'Now the start joins in.' },
+          { tex: 'y = 4 \\cdot 2^{3}', text: 'Replace x with 3 everywhere x appears in the rule. The 3 is the number of steps, so this asks for the value after three doublings.' },
+          { tex: '2^{3} = 2 \\cdot 2 \\cdot 2 = 8', text: 'Work out the power before anything else. An exponent says to multiply the base by itself that many times, and powers come before multiplication in the order of operations.' },
+          { tex: '4 \\cdot 8 = 32', text: 'Now multiply by the start. The 4 sits out front and is not raised to the power, so it simply scales the 8 you just found.' },
         ],
         answer: 'y = 32',
       },
@@ -124,7 +128,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
     {
       kind: 'example',
       head: 'Read the parts: y = 200 · 1.5^x',
-      body: 'What is the start and what is the growth factor?\nThe number out front is the start: 200. The base being raised to the power is the growth factor: 1.5. So you begin at 200 and multiply by 1.5 each step.',
+      body: 'In y = 200 · 1.5^x, which number is the start and which is the growth factor?',
       formula: {
         tex: 'y = 200 \\cdot 1.5^{x}',
         parts: [
@@ -133,11 +137,20 @@ export const PC_SLIDES_U05_08: SlideBank = {
           { sym: 'b > 1', means: 'bigger than 1, so this one grows', tone: 'warn' },
         ],
       },
+      steps: {
+        steps: [
+          { tex: 'y = a \\cdot b^{x}', text: 'Compare the rule to the general shape a · b^x. Matching the two shapes lets you read each number\'s job instead of guessing.' },
+          { tex: 'a = 200', text: 'The number out front, not touched by the exponent, is a. It is the start, the value at x = 0, because b to the zero power is 1.' },
+          { tex: 'b = 1.5', text: 'The number being raised to the power x is b, the growth factor. Every step multiplies the amount by 1.5, which keeps the old amount and adds half of it.' },
+          { tex: 'b > 1', text: 'Compare b with 1 to see the direction. Since 1.5 is bigger than 1, each step makes the amount larger, so this function grows instead of decaying.' },
+        ],
+        answer: 'a = 200 \\text{ (start)},\\ b = 1.5 \\text{ (factor)}',
+      },
     },
     {
       kind: 'example',
       head: 'Bacteria doubling every hour',
-      body: 'A dish holds 50 bacteria and the count doubles every hour. How many after 4 hours?\nStart 50, factor 2, four steps: y = 50 · 2⁴. Since 2⁴ = 16, you get 50 × 16 = 800 bacteria.',
+      body: 'A dish holds 50 bacteria and the count doubles every hour. How many are there after 4 hours?',
       table: {
         head: ['hour', 'bacteria'],
         rows: [['0', '50'], ['1', '100'], ['2', '200'], ['3', '400'], ['4', '800']],
@@ -146,9 +159,9 @@ export const PC_SLIDES_U05_08: SlideBank = {
       },
       steps: {
         steps: [
-          { tex: 'y = 50 \\cdot 2^{4}', text: 'Start 50, factor 2, four hours.' },
-          { tex: '2^{4} = 16', text: 'Four doublings is a factor of 16.' },
-          { tex: '50 \\cdot 16 = 800', text: 'Multiply the start by it.' },
+          { tex: 'y = 50 \\cdot 2^{4}', text: 'Fill in y = a · b^x. The start a is 50, the factor b is 2 because doubling means times 2, and x is 4 hours.' },
+          { tex: '2^{4} = 2 \\cdot 2 \\cdot 2 \\cdot 2 = 16', text: 'Do the power first. Four doublings in a row multiply by 2 four times, so the count ends up 16 times bigger than it began.' },
+          { tex: '50 \\cdot 16 = 800', text: 'Multiply the start by that 16. The table shows the same result one hour at a time: 50, 100, 200, 400, 800.' },
         ],
         answer: '800 \\text{ bacteria}',
       },
@@ -156,12 +169,12 @@ export const PC_SLIDES_U05_08: SlideBank = {
     {
       kind: 'example',
       head: 'A bigger one: a savings account',
-      body: 'A savings account grows 8% a year. What do you multiply by each year?\nKeep the 100% you have and add 8%: that is 108%. Written as a decimal, the growth factor is 1.08 — so $500 becomes 500 × 1.08 = $540 after one year.',
+      body: 'A savings account grows 8% a year. What factor do you multiply by each year, and what does $500 become after one year?',
       steps: {
         steps: [
-          { tex: '100\\% + 8\\% = 108\\%', text: 'Keep what you have, then add the interest.' },
-          { tex: '108\\% = 1.08', text: 'Percent to decimal: slide the point two places.' },
-          { tex: '500 \\cdot 1.08 = 540', text: 'One year of growth on $500.' },
+          { tex: '100\\% + 8\\% = 108\\%', text: 'Keep the whole 100% you already have and add the 8% interest. Growth means the old amount stays and the extra is added on top.' },
+          { tex: '108\\% = \\tfrac{108}{100} = 1.08', text: 'Change the percent to a decimal by dividing by 100, which slides the decimal point two places left. A percent is just a number out of 100.' },
+          { tex: '500 \\cdot 1.08 = 540', text: 'Test the factor on $500. Multiplying by 1.08 gives back the $500 plus 8% of it, which is $40, so the balance is $540.' },
         ],
         answer: 'b = 1.08',
       },
@@ -169,13 +182,13 @@ export const PC_SLIDES_U05_08: SlideBank = {
     {
       kind: 'example',
       head: 'A phone losing value',
-      body: 'A $600 phone loses 25% of its value every year. What is it worth after 2 years?\nLosing 25% means KEEPING 75%, so the factor is 0.75. Year 1: 600 × 0.75 = 450. Year 2: 450 × 0.75 = 337.50.',
+      body: 'A $600 phone loses 25% of its value every year. What is it worth after 2 years?',
       steps: {
         steps: [
-          { tex: '100\\% - 25\\% = 75\\%', text: 'Ask what STAYS, not what goes.' },
-          { tex: 'b = 0.75', text: 'That is the decay factor.' },
-          { tex: '600 \\cdot 0.75 = 450', text: 'After one year.' },
-          { tex: '450 \\cdot 0.75 = 337.50', text: 'After two years.' },
+          { tex: '100\\% - 25\\% = 75\\%', text: 'Ask what stays, not what goes. Losing 25% of the value means 75% is kept, and the kept part is what carries into the next year.' },
+          { tex: 'b = 0.75', text: 'Turn 75% into a decimal by dividing by 100. This is the decay factor, and it is less than 1, which tells you the value shrinks each year.' },
+          { tex: '600 \\cdot 0.75 = 450', text: 'Apply the factor once for year 1. Multiplying by 0.75 keeps three quarters of $600, which is $450.' },
+          { tex: '450 \\cdot 0.75 = 337.50', text: 'Apply the factor again for year 2, using the new value $450 as the starting amount. Three quarters of 450 is 337.50.' },
         ],
         answer: '\\$337.50',
       },
@@ -183,18 +196,27 @@ export const PC_SLIDES_U05_08: SlideBank = {
     {
       kind: 'example',
       head: 'Another way: build a table',
-      body: 'Followers start at 200 and grow 10% a week. How many after 2 weeks?\nSkip the formula and list it: week 0 is 200, week 1 is 200 + 20 = 220, week 2 is 220 + 22 = 242. Notice week 2 added MORE than week 1 — that is exponential growth showing off.',
+      body: 'Followers start at 200 and grow 10% a week. How many are there after 2 weeks? Build a table instead of using the formula.',
       table: {
         head: ['week', 'added', 'followers'],
         rows: [['0', '—', '200'], ['1', '+20', '220'], ['2', '+22', '242'], ['3', '+24.2', '266.2']],
         mark: 2,
         note: 'The ADDED column grows too. A line would add the same number every week.',
       },
+      steps: {
+        steps: [
+          { tex: '\\text{week } 0:\\ 200', text: 'Write the starting row first. Week 0 is before any growth has happened, so the count is just the 200 you began with.' },
+          { tex: '10\\% \\text{ of } 200 = 20,\\quad 200 + 20 = 220', text: 'Find 10% of 200 by dividing by 10, which gives 20. Add it to 200, because growth keeps the old amount and adds the extra.' },
+          { tex: '10\\% \\text{ of } 220 = 22,\\quad 220 + 22 = 242', text: 'Repeat for week 2, but take 10% of the NEW amount, 220. That is 22, a bigger raise than last week, which is exponential growth at work.' },
+          { tex: '200 \\cdot 1.1 \\cdot 1.1 = 242', text: 'Check with the factor 1.1, which is 100% + 10%. Multiplying twice gives 200 × 1.21 = 242, so the table and the formula agree.' },
+        ],
+        answer: '242 \\text{ followers}',
+      },
     },
     {
       kind: 'example',
       head: 'Another way: count the doublings',
-      body: 'A colony of 100 cells doubles every 3 hours. How many after 12 hours?\nDo not track every hour — track doublings. 12 ÷ 3 = 4 doublings, so multiply by 2 four times: 100 → 200 → 400 → 800 → 1600 cells.',
+      body: 'A colony of 100 cells doubles every 3 hours. How many cells are there after 12 hours?',
       art: numberLine(
         0,
         12,
@@ -207,15 +229,33 @@ export const PC_SLIDES_U05_08: SlideBank = {
         ],
         { step: 3, title: 'hours, one doubling every 3', caption: 'Four hops of ×2, not twelve hops of anything.' },
       ),
+      steps: {
+        steps: [
+          { tex: '12 \\div 3 = 4', text: 'Divide the total time by the doubling time. The colony doubles once per 3-hour block, so this counts how many doublings fit in 12 hours.' },
+          { tex: '100 \\cdot 2^{4}', text: 'Write the growth with that count as the exponent. Each doubling multiplies by 2, so four doublings multiply by 2 four times.' },
+          { tex: '2^{4} = 16', text: 'Evaluate the power. Four doublings give 2 × 2 × 2 × 2, so there are 16 times as many cells as at the start.' },
+          { tex: '100 \\cdot 16 = 1600', text: 'Multiply the start by 16. The number line shows the same hops: 100, 200, 400, 800, 1600.' },
+        ],
+        answer: '1600 \\text{ cells}',
+      },
     },
     {
       kind: 'example',
       head: 'Medicine leaving your blood',
-      body: 'Each hour, 20% of a medicine leaves your bloodstream. What factor do you multiply by?\nAsk what STAYS, not what leaves: 100% − 20% = 80%, so the factor is 0.8. Starting at 100 mg you get 80 mg, then 64 mg, then 51.2 mg.',
+      body: 'Each hour, 20% of a medicine leaves your bloodstream. What factor do you multiply by, and how much is left after 3 hours if you start with 100 mg?',
       table: {
         head: ['hour', 'mg left'],
         rows: [['0', '100'], ['1', '80'], ['2', '64'], ['3', '51.2'], ['4', '41.0']],
         note: 'It never reaches zero — each hour keeps 80% of a positive number.',
+      },
+      steps: {
+        steps: [
+          { tex: '100\\% - 20\\% = 80\\%', text: 'Ask what stays. If 20% leaves each hour, then 80% remains, and the remaining part is what you carry into the next hour.' },
+          { tex: 'b = 0.8', text: 'Write 80% as a decimal by dividing by 100. A factor of 0.8 is less than 1, so the amount shrinks every hour, which is decay.' },
+          { tex: '100 \\cdot 0.8^{3}', text: 'For 3 hours, multiply the starting 100 mg by 0.8 three times. Repeated multiplication is exactly what the exponent 3 records.' },
+          { tex: '0.8^{3} = 0.64 \\cdot 0.8 = 0.512,\\quad 100 \\cdot 0.512 = 51.2', text: 'Evaluate step by step: 0.8 × 0.8 = 0.64, then 0.64 × 0.8 = 0.512. Multiply by 100 to get 51.2 mg, matching the table.' },
+        ],
+        answer: '51.2 \\text{ mg}',
       },
     },
     {
@@ -243,7 +283,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
     {
       kind: 'challenge',
       head: 'Extra credit: the floor it never touches',
-      body: 'The graph of y = 12 · (1/2)^x drops forever. Does it ever reach zero?\nHalve 12 over and over: 6, 3, 1.5, 0.75, 0.375 … Half of a positive number is still positive, so the values crowd down toward 0 without ever landing there. That invisible floor is the horizontal asymptote y = 0.',
+      body: 'The graph of y = 12 · (1/2)^x keeps dropping. Does it ever reach zero?',
       art: (() => {
         const ax = axes({ x: [0, 6], y: [0, 13] }, { ticks: { x: [0, 1, 2, 3, 4, 5, 6], y: [0, 3, 6, 9, 12] }, grid: true, xLabel: 'x', pad: 34 });
         let b = ax.body + ax.curve((x) => 12 * Math.pow(0.5, x), ROSE, 3);
@@ -253,6 +293,15 @@ export const PC_SLIDES_U05_08: SlideBank = {
         b += text(W / 2, 22, 'halving 12 forever', { size: 12, op: 0.7 });
         return art('A decay curve falling toward the x-axis without ever touching it', b, 'The curve crowds the axis closer and closer — an asymptote, not a landing.');
       })(),
+      steps: {
+        steps: [
+          { tex: '12,\\ 6,\\ 3,\\ 1.5,\\ 0.75,\\ 0.375', text: 'Halve 12 again and again, which is the same as multiplying by the factor 1/2. The values shrink quickly, so you might guess they hit zero soon.' },
+          { tex: '\\tfrac12 \\cdot (\\text{positive}) > 0', text: 'Notice that half of a positive number is always still positive. Multiplying by 1/2 makes a number smaller but cannot turn it into 0 or a negative.' },
+          { tex: '12 \\cdot \\left(\\tfrac12\\right)^{x} > 0', text: 'So y stays above 0 for every x, because 12 and (1/2)^x are both positive. The graph can never touch the x-axis.' },
+          { tex: 'y \\to 0 \\text{ as } x \\to \\infty', text: 'The values get closer to 0 as x grows, like 0.375, then 0.1875, and so on. A line a curve approaches but never reaches is a horizontal asymptote, here y = 0.' },
+        ],
+        answer: '\\text{No: } y \\text{ gets close to } 0 \\text{ but never reaches it}',
+      },
     },
     {
       kind: 'summary',
@@ -290,6 +339,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
           { sym: 'x', means: 'the ANSWER — and it is always an exponent', tone: 'ok' },
         ],
       },
+      why: 'Exponentials and logs are one relationship written two ways: 2³ = 8 and log₂ 8 = 3 describe the very same fact. The log simply points at the exponent instead of at the answer. So whenever you see a log, the real question is a missing-exponent question, such as "2 multiplied by itself how many times makes 8?"',
     },
     {
       kind: 'concept',
@@ -312,6 +362,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
         return art('An exponential curve and a logarithm curve mirrored across the dashed line y equals x', b,
           'Fold the page along y = x and the two curves land on each other — that is what "undo" looks like.');
       })(),
+      why: 'Doing 2⁵ turns the input 5 into the output 32, and doing log₂ turns 32 back into 5, so each one reverses the other. On a graph, inputs and outputs trade places, which flips the picture across the line y = x. That mirror image is the visual signature of any pair of functions that undo each other.',
     },
     {
       kind: 'concept',
@@ -322,6 +373,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
         tex: '\\log(AB) = \\log A + \\log B',
         note: 'A hard multiplication inside turns into an easy addition outside. Division subtracts instead.',
       },
+      why: 'Multiplying powers of the same base adds their exponents: 2³ · 2⁴ = (2·2·2)(2·2·2·2) = 2⁷. A log reports exponents, so the log of a product is the sum of the logs, 3 + 4 = 7. Check: log₂ 8 + log₂ 16 = 3 + 4 = 7, and 8 × 16 = 128 = 2⁷.',
     },
     {
       kind: 'concept',
@@ -331,58 +383,128 @@ export const PC_SLIDES_U05_08: SlideBank = {
         tex: '\\log(A^{n}) = n \\log A',
         note: 'An exponent stuck inside the log slides out and becomes a plain multiplier.',
       },
+      why: 'Raising to a power is repeated multiplication, and the product rule turns each multiplication into an addition. So log(A³) = log(A · A · A) = log A + log A + log A = 3 log A. Check: log₂(4³) = log₂ 64 = 6, and 3 × log₂ 4 = 3 × 2 = 6.',
     },
     {
       kind: 'example',
       head: 'Start simple: log base 2 of 32',
-      body: 'Ask the question: 2 to what power gives 32?\nCount doublings from 1: 2, 4, 8, 16, 32 — that is five of them. So log₂ 32 = 5.',
+      body: 'Evaluate log base 2 of 32. Read the log as a question about an exponent.',
       steps: {
         steps: [
-          { tex: '\\log_{2} 32 = ?', text: 'Ask: 2 to what power gives 32?' },
-          { tex: '2,\\ 4,\\ 8,\\ 16,\\ 32', text: 'Count the doublings from 1 — five of them.' },
+          { tex: '\\log_{2} 32 = x \\iff 2^{x} = 32', text: 'Turn the log into its question form. A log is an exponent, so log base 2 of 32 asks which power of 2 equals 32.' },
+          { tex: '2,\\ 4,\\ 8,\\ 16,\\ 32', text: 'Start at 2 and keep doubling until you land on 32. Writing the list out beats guessing, and it shows how many doublings it takes.' },
+          { tex: '2^{5} = 32', text: 'Count the numbers in your list: five. Each one is one more factor of 2, so the exponent is the count of 2s multiplied.' },
         ],
-        answer: '5',
+        answer: '\\log_{2} 32 = 5',
       },
     },
     {
       kind: 'example',
       head: 'A bigger one: log base 3 of 81',
-      body: 'Ask: 3 to what power gives 81?\nMultiply 3s and count: 3, 9, 27, 81 — four of them. So log₃ 81 = 4, because 3⁴ = 81.',
+      body: 'Evaluate log base 3 of 81. Use the table of powers of 3.',
       table: {
         head: ['power', '3ⁿ'],
         rows: [['3¹', '3'], ['3²', '9'], ['3³', '27'], ['3⁴', '81']],
         mark: 3,
         note: 'Write the powers of the base down a column and read the answer off the row you need.',
       },
+      steps: {
+        steps: [
+          { tex: '\\log_{3} 81 = x \\iff 3^{x} = 81', text: 'Rewrite the log as a question: 3 to what power gives 81? The answer to a log is always an exponent.' },
+          { tex: '3,\\ 9,\\ 27,\\ 81', text: 'Multiply by 3 each time and write down the results. Each new number is exactly one more factor of 3 than the one before.' },
+          { tex: '3^{4} = 81', text: 'Count how many 3s it took to reach 81: four. So 3 to the fourth power is 81, and the exponent is 4.' },
+          { tex: '3 \\cdot 3 \\cdot 3 \\cdot 3 = 9 \\cdot 9 = 81', text: 'Check by multiplying out. 3 × 3 is 9, and 9 × 9 is 81, so four 3s really do make 81.' },
+        ],
+        answer: '\\log_{3} 81 = 4',
+      },
     },
-    { kind: 'example', head: 'Base 10: log of 1000', body: 'Ask: 10 to what power gives 1000?\n10 × 10 × 10 = 1000, so the answer is 3. With base 10 there is a shortcut — just count the zeros.' },
+    {
+      kind: 'example',
+      head: 'Base 10: log of 1000',
+      body: 'Evaluate the log of 1000. When no base is written, the base is 10.',
+      steps: {
+        steps: [
+          { tex: '\\log 1000 = \\log_{10} 1000', text: 'A log with no base written means base 10. So the question is: 10 to what power gives 1000?' },
+          { tex: '10 \\cdot 10 \\cdot 10 = 1000', text: 'Multiply tens until you reach 1000: 10, then 100, then 1000. It takes three tens, and the exponent counts the tens.' },
+          { tex: '10^{3} = 1000', text: 'Write that as a power. Three tens multiplied is 10 cubed, so the exponent, and therefore the log, is 3. Shortcut: count the zeros.' },
+        ],
+        answer: '\\log 1000 = 3',
+      },
+    },
     {
       kind: 'example',
       head: 'Use the product rule',
-      body: 'You are told log 2 = 0.301 and log 5 = 0.699. Find log 10.\nNotice 10 = 2 × 5, and multiplying inside means adding outside. So log 10 = 0.301 + 0.699 = 1, which checks out since 10¹ = 10.',
+      body: 'You are told log 2 = 0.301 and log 5 = 0.699. Find log 10 without a calculator.',
       steps: {
         steps: [
-          { tex: '10 = 2 \\cdot 5', text: 'Split the number into pieces you already know.' },
-          { tex: '\\log 10 = \\log 2 + \\log 5', text: 'Multiplying inside means adding outside.' },
-          { tex: '0.301 + 0.699 = 1', text: 'Add the two values you were given.' },
+          { tex: '10 = 2 \\cdot 5', text: 'Split 10 into factors whose logs you already know. The problem gave you log 2 and log 5, so 2 times 5 is the clue.' },
+          { tex: '\\log 10 = \\log(2 \\cdot 5)', text: 'Replace 10 by 2 · 5 inside the log. This is allowed because they are the same number, so the log has the same value.' },
+          { tex: '\\log(2 \\cdot 5) = \\log 2 + \\log 5', text: 'Use the product rule: the log of a product is the sum of the logs. Multiplying inside turns into adding outside.' },
+          { tex: '0.301 + 0.699 = 1.000', text: 'Add the two given values. Check: 10¹ = 10, so log 10 should be exactly 1, and it is.' },
         ],
         answer: '\\log 10 = 1',
       },
     },
-    { kind: 'example', head: 'Folding paper to 1024 layers', body: 'Each fold doubles the layers, starting from 1. How many folds reach 1024 layers?\nThis is log₂ 1024 in disguise. Double up: 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 — ten folds. (Try it with real paper; it gets impossible fast.)' },
-    { kind: 'example', head: 'Another way: multiply it out first', body: 'Evaluate log₂(8³) without the power rule.\n8³ = 8 × 8 × 8 = 512. Now ask: 2 to what power is 512? Count doublings — 2, 4, 8, 16, 32, 64, 128, 256, 512 — nine of them. Same answer the rule gives: 3 × 3 = 9.' },
+    {
+      kind: 'example',
+      head: 'Folding paper to 1024 layers',
+      body: 'Each fold doubles the layers, starting from 1. How many folds reach 1024 layers?',
+      steps: {
+        steps: [
+          { tex: '2^{n} = 1024', text: 'Write what you want. After n folds there are 2^n layers, because each fold multiplies the layers by 2. Set that equal to 1024.' },
+          { tex: 'n = \\log_{2} 1024', text: 'Rewrite it as a log. Asking for the exponent n that makes 2^n equal 1024 is exactly the question log base 2 of 1024 asks.' },
+          { tex: '1 \\to 2 \\to 4 \\to 8 \\to 16 \\to 32 \\to 64 \\to 128 \\to 256 \\to 512 \\to 1024', text: 'Answer it by doubling from 1 and counting. Each doubling is one fold, so the number of arrows is the number of folds.' },
+          { tex: '2^{10} = 1024', text: 'The list has ten doublings, so n = 10. Check: 2 to the tenth power really is 1024.' },
+        ],
+        answer: '10 \\text{ folds}',
+      },
+    },
+    {
+      kind: 'example',
+      head: 'Another way: multiply it out first',
+      body: 'Evaluate log base 2 of 8³ without the power rule: multiply it out first.',
+      steps: {
+        steps: [
+          { tex: '8^{3} = 8 \\cdot 8 \\cdot 8 = 512', text: 'Work out the power inside the log first. 8 × 8 is 64 and 64 × 8 is 512, so the log is really log base 2 of 512.' },
+          { tex: '\\log_{2} 512 = ?', text: 'Ask the log question: 2 to what power gives 512? Now it is a plain counting problem like the earlier ones.' },
+          { tex: '2,\\ 4,\\ 8,\\ 16,\\ 32,\\ 64,\\ 128,\\ 256,\\ 512', text: 'Double from 1 and count the numbers: there are nine, so nine doublings reach 512 and the log is 9.' },
+          { tex: '3 \\log_{2} 8 = 3 \\cdot 3 = 9', text: 'Compare with the power rule: log of 8³ is 3 times log 8, and log₂ 8 = 3. Both ways give 9, which confirms the rule.' },
+        ],
+        answer: '9',
+      },
+    },
     {
       kind: 'example',
       head: 'Another way: climb the scale one step',
-      body: 'On the Richter scale, how much stronger is a magnitude 7 quake than a magnitude 4?\nInstead of a formula, walk it: 4 to 5 is 10 times, 5 to 6 is 10 times again (100), 6 to 7 is 10 times again (1000). Three steps means 1000 times more shaking.',
+      body: 'On the Richter scale, how much stronger is a magnitude 7 quake than a magnitude 4? Walk up the scale one step at a time.',
       art: numberLine(4, 7, [
           { at: 4, label: '×1', color: SKY },
           { at: 5, label: '×10', color: AMB },
           { at: 6, label: '×100', color: AMB },
           { at: 7, label: '×1000', color: EMR },
         ], { step: 1, title: 'Richter magnitude', caption: 'Each whole step up is another factor of 10 — three steps is 1000×.' }),
+      steps: {
+        steps: [
+          { tex: '7 - 4 = 3', text: 'Count the whole steps between the two magnitudes. On a log scale the gap between the numbers is what matters, not the numbers themselves.' },
+          { tex: '\\times 10,\\ \\times 100,\\ \\times 1000', text: 'Each whole step up multiplies the shaking by 10. After one step it is 10 times, after two 10 × 10 = 100, after three 100 × 10 = 1000.' },
+          { tex: '10^{3} = 1000', text: 'Three steps of times 10 is 10 to the third power. The number of steps becomes the exponent on 10, which is how a log scale works.' },
+        ],
+        answer: '1000 \\text{ times stronger}',
+      },
     },
-    { kind: 'example', head: 'Decibels: concert versus whisper', body: 'A concert is 1,000,000 times as intense as a whisper. Decibels are 10 × log of the intensity.\nlog 1,000,000 = 6, because a million has six zeros. Then 10 × 6 = 60, so the concert is 60 decibels louder.' },
+    {
+      kind: 'example',
+      head: 'Decibels: concert versus whisper',
+      body: 'A concert is 1,000,000 times as intense as a whisper. Decibels are 10 × log of the intensity ratio. How many decibels louder is the concert?',
+      steps: {
+        steps: [
+          { tex: '\\text{dB} = 10 \\cdot \\log(1{,}000{,}000)', text: 'Put the intensity ratio into the decibel formula. The log shrinks a huge ratio into a small, easy number.' },
+          { tex: '1{,}000{,}000 = 10^{6} \\Rightarrow \\log = 6', text: 'Find the log by asking 10 to what power gives a million. A million is 1 followed by six zeros, so it is 10 to the sixth.' },
+          { tex: '10 \\cdot 6 = 60', text: 'Multiply by the 10 in the formula. The 10 just scales the log, so 10 × 6 gives 60.' },
+        ],
+        answer: '60 \\text{ decibels louder}',
+      },
+    },
     {
       kind: 'protip',
       head: 'Say the question out loud',
@@ -403,7 +525,20 @@ export const PC_SLIDES_U05_08: SlideBank = {
         ],
       },
     },
-    { kind: 'challenge', head: 'Extra credit: lemon juice versus water', body: 'On the pH scale, each step DOWN means 10 times more acidic. Lemon juice is pH 2 and water is pH 7 — how much more acidic is the lemon?\nCount the steps: 7 − 2 = 5. Each step multiplies by 10, so it is 10⁵ = 100,000 times more acidic. That is why a squeeze of lemon tastes so sharp.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: lemon juice versus water',
+      body: 'On the pH scale, each step DOWN means 10 times more acidic. Lemon juice is pH 2 and water is pH 7. How much more acidic is the lemon?',
+      steps: {
+        steps: [
+          { tex: '7 - 2 = 5', text: 'Subtract to count the steps down from water to lemon. The pH scale is a log scale, so the gap between the numbers is what counts.' },
+          { tex: '10 \\cdot 10 \\cdot 10 \\cdot 10 \\cdot 10', text: 'Each step multiplies the acidity by 10, so five steps multiply by 10 five times in a row.' },
+          { tex: '10^{5} = 100{,}000', text: 'Multiply it out: 10 × 10 = 100, then 1000, then 10,000, then 100,000. Five tens make a 1 followed by five zeros.' },
+          { tex: '\\log 100{,}000 = 5', text: 'Check with logs. The log of 100,000 is 5, matching the five pH steps, so the answer fits the log-scale idea.' },
+        ],
+        answer: '100{,}000 \\text{ times more acidic}',
+      },
+    },
     {
       kind: 'summary',
       head: 'One question, three rules',
@@ -445,6 +580,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
         return art('A doubling curve crossed by a horizontal line at 32, meeting it above x equals 5', b,
           'Solving 2ˣ = 32 is asking where the curve crosses that line.');
       })(),
+      why: 'Picture 2 raised to a power as a machine with one input. Different inputs give different outputs, because 2^x keeps climbing and never repeats a value. So if 2^m and 2^n are the same number, the machine must have been fed the same input, which means m = n.',
     },
     {
       kind: 'concept',
@@ -452,12 +588,13 @@ export const PC_SLIDES_U05_08: SlideBank = {
       body: 'A power buried under a multiplier cannot be compared yet. In 3 · 2^x = 96, divide both sides by 3 to get 2^x = 32, and only then match bases. Peel away everything around the power before you touch the exponent.',
       steps: {
         steps: [
-          { tex: '3 \\cdot 2^{x} = 96', text: 'The power is not alone yet.' },
-          { tex: '2^{x} = 32', text: 'Divide both sides by 3 to free it.' },
-          { tex: '2^{x} = 2^{5}', text: 'Now the bases match.' },
+          { tex: '3 \\cdot 2^{x} = 96', text: 'Look at what surrounds the power. The 2^x is being multiplied by 3, so it is not alone, and you cannot match bases until it is.' },
+          { tex: '2^{x} = 96 \\div 3 = 32', text: 'Divide both sides by 3. Doing the same thing to both sides keeps the equation true, and 96 ÷ 3 is 32.' },
+          { tex: '2^{x} = 2^{5}', text: 'Write 32 as 2^5, since five doublings from 1 reach 32. Now both sides are powers of 2, so the bases match and the exponents must match too.' },
         ],
         answer: 'x = 5',
       },
+      why: 'Matching bases only works when each side is a pure power. A multiplier out front changes the value, so 3 · 2^x and 2^x cannot be compared directly. Dividing both sides by 3 treats each side the same way, so the equation stays balanced, and it leaves 2^x alone, like unwrapping a gift before you look inside.',
     },
     {
       kind: 'concept',
@@ -468,6 +605,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
         tex: 'b^{x} = N \\ \\Rightarrow\\ x = \\dfrac{\\log N}{\\log b}',
         note: 'When the bases refuse to match, a log reaches up and grabs the exponent.',
       },
+      why: 'Taking the log of both sides is allowed because equal numbers always have equal logs. The power rule then turns log(b^x) into x · log b, so the exponent comes down beside the log and can be divided away. Check: 2^x = 10 gives x = log 10 ÷ log 2 = 1 ÷ 0.301 ≈ 3.32, and 2^3.32 is about 10.',
     },
     {
       kind: 'concept',
@@ -481,54 +619,103 @@ export const PC_SLIDES_U05_08: SlideBank = {
           { sym: '3', means: 'the answer to the log, so it becomes the power', tone: 'ok' },
         ],
       },
+      why: 'A log and a power are the same fact in two outfits: log₄ x = 3 says that 4 raised to the 3 gives x. Rewriting only changes the outfit, so nothing is gained or lost. The log was hiding x inside, and the power form leaves x alone on one side, where you just compute 4 · 4 · 4 = 64.',
     },
     {
       kind: 'example',
       head: 'Start simple: 2^x = 32',
-      body: 'Make the bases match.\n32 = 2⁵, so the equation reads 2^x = 2⁵. Same base means the exponents are equal, so x = 5.',
+      body: 'Make the bases match, then compare the exponents.',
       steps: {
         steps: [
-          { tex: '2^{x} = 32', text: 'Write the right side as a power of 2.' },
-          { tex: '32 = 2^{5}', text: 'Count the doublings: 2, 4, 8, 16, 32.' },
+          { tex: '2^{x} = 32', text: 'You want x, and it sits in the exponent. Try to rewrite 32 as a power of the same base, 2, so the two sides can be compared.' },
+          { tex: '2,\\ 4,\\ 8,\\ 16,\\ 32', text: 'Double from 1 and count: 2, 4, 8, 16, 32 takes five doublings. The count of factors of 2 is the power.' },
+          { tex: '2^{x} = 2^{5}', text: 'Replace 32 by 2^5. Now both sides are powers of 2, so the equation says the same base to two exponents gives the same number.' },
+          { tex: 'x = 5', text: 'Same base means the exponents must be equal, because 2 to a power never repeats a value. Check: 2⁵ = 32.' },
         ],
         answer: 'x = 5',
       },
     },
-    { kind: 'example', head: 'A bigger one: 5^x = 625', body: 'Write 625 as a power of 5.\nMultiply and count: 5, 25, 125, 625 — four fives. So 625 = 5⁴ and x = 4.' },
+    {
+      kind: 'example',
+      head: 'A bigger one: 5^x = 625',
+      body: 'Solve 5^x = 625 by writing 625 as a power of 5.',
+      steps: {
+        steps: [
+          { tex: '5,\\ 25,\\ 125,\\ 625', text: 'Multiply by 5 again and again. Each product is one more factor of 5, and you stop when you land on 625.' },
+          { tex: '625 = 5^{4}', text: 'You multiplied four fives, so 625 is 5 to the fourth power. The count of numbers in your list is the exponent.' },
+          { tex: '5^{x} = 5^{4}', text: 'Replace 625 with 5^4 so both sides are powers of 5. Matching bases is what lets you compare exponents.' },
+          { tex: 'x = 4', text: 'With equal bases the exponents must be equal. Check: 5⁴ = 25 × 25 = 625.' },
+        ],
+        answer: 'x = 4',
+      },
+    },
     {
       kind: 'example',
       head: 'A log equation: log base 4 of x = 3',
-      body: 'Flip it into exponential form.\nlog₄(x) = 3 means 4³ = x. Since 4 × 4 × 4 = 64, the answer is x = 64.',
+      body: 'Solve log base 4 of x = 3 by flipping it into exponential form.',
       steps: {
         steps: [
-          { tex: '\\log_{4}(x) = 3', text: 'Flip it into exponential form.' },
-          { tex: 'x = 4^{3}', text: 'Base to the answer.' },
+          { tex: '\\log_{4}(x) = 3', text: 'Read the log as a question: 4 to what power gives x? The equation says the answer to that question is 3.' },
+          { tex: 'x = 4^{3}', text: 'Rewrite in exponential form. The base 4 stays the base, and the answer 3 becomes the exponent, so x is 4 cubed.' },
+          { tex: '4^{3} = 4 \\cdot 4 \\cdot 4 = 16 \\cdot 4 = 64', text: 'Evaluate the power. 4 × 4 is 16 and 16 × 4 is 64. The log is gone, so this is plain arithmetic.' },
+          { tex: '\\log_{4}(64) = 3', text: 'Check by putting 64 back in. 4 to the 3 is 64, so the log is 3 as required, and 64 is positive so the log is legal.' },
         ],
         answer: 'x = 64',
       },
     },
-    { kind: 'example', head: 'Free the power: 3 · 2^x = 96', body: 'The power is not alone, so fix that first.\nDivide both sides by 3: 2^x = 32. Then 32 = 2⁵, so x = 5. Check it: 3 × 32 = 96. ✓' },
+    {
+      kind: 'example',
+      head: 'Free the power: 3 · 2^x = 96',
+      body: 'Solve 3 · 2^x = 96. The power has a multiplier, so deal with that first.',
+      steps: {
+        steps: [
+          { tex: '3 \\cdot 2^{x} = 96', text: 'Notice the 3 multiplying the power. You cannot match bases while the power has company, so first get 2^x alone.' },
+          { tex: '2^{x} = 96 \\div 3 = 32', text: 'Divide both sides by 3. Doing the same to both sides keeps the equation balanced, and 96 ÷ 3 = 32.' },
+          { tex: '2^{x} = 2^{5}', text: 'Write 32 as 2^5, because five doublings from 1 reach 32. Now both sides have base 2, which lets you compare exponents.' },
+          { tex: 'x = 5', text: 'Equal bases force equal exponents. Check it: 3 × 2⁵ = 3 × 32 = 96, which matches the original equation.' },
+        ],
+        answer: 'x = 5',
+      },
+    },
     {
       kind: 'example',
       head: 'When will savings double?',
-      body: 'Your savings double every 7 years and you have $2000. When do you reach $16,000?\nDivide first: 16,000 ÷ 2000 = 8, and 8 = 2³, so three doublings are needed. Three doublings × 7 years each = 21 years.',
+      body: 'Your savings double every 7 years and you have $2000. When do you reach $16,000?',
       art: funcGraph([{ f: (x) => 100 * Math.pow(1.07, x), label: 'balance' }], { range: { x: [0, 14], y: [0, 260] }, hAsymptote: { at: 200, label: 'double' }, points: [{ x: 10, y: 197, label: '10 years' }], xLabel: 'years', yLabel: '$', title: '7% growth doubles in about 10 years', caption: 'Curved, not straight — each year earns interest on the interest before it.' }),
+      steps: {
+        steps: [
+          { tex: '16{,}000 \\div 2000 = 8', text: 'Divide the target by the start to see how many times bigger the money must get. The ratio 8 does not depend on the dollar amounts.' },
+          { tex: '2^{n} = 8', text: 'Each doubling multiplies by 2, so after n doublings the money is 2^n times bigger. Set that equal to the ratio 8.' },
+          { tex: '8 = 2^{3} \\Rightarrow n = 3', text: 'Write 8 as 2 × 2 × 2, which is 2³. With matching bases the exponent must match, so n = 3 doublings.' },
+          { tex: '3 \\cdot 7 = 21', text: 'Each doubling takes 7 years, so multiply the doublings by 7. Check: 2000, 4000, 8000, 16,000 is three doublings.' },
+        ],
+        answer: '21 \\text{ years}',
+      },
     },
     {
       kind: 'example',
       head: 'Another way: list it out',
-      body: 'One streaming plan costs $80 a month. A rival starts at $5 and doubles every month — when do they match?\nSkip the algebra and list: month 1 is $5, then $10, $20, $40, $80. They match in month 5, and the list doubles as your check.',
+      body: 'One streaming plan costs $80 a month. A rival starts at $5 and doubles every month. When do they match? List the months instead of using algebra.',
       table: {
         head: ['month', 'rival', 'plan'],
         rows: [['1', '$5', '$80'], ['2', '$10', '$80'], ['3', '$20', '$80'], ['4', '$40', '$80'], ['5', '$80', '$80']],
         mark: 4,
         note: 'Listing is slower than algebra but it never lies — and it doubles as your check.',
       },
+      steps: {
+        steps: [
+          { tex: '\\text{month } 1:\\ \\$5', text: 'Start the list at month 1, where the rival costs $5. Listing works well when the numbers are small and the doubling is easy.' },
+          { tex: '5,\\ 10,\\ 20,\\ 40,\\ 80', text: 'Double each month. Doubling means multiplying by 2, so every entry is twice the one before it.' },
+          { tex: '\\text{month } 5:\\ \\$80 = \\$80', text: 'Find where the rival reaches $80, the price of the plan. The fifth number in the list is 80, so that is the month they match.' },
+          { tex: '5 \\cdot 2^{4} = 5 \\cdot 16 = 80', text: 'Check with a formula. Month n costs 5 · 2^(n − 1), so month 5 gives 5 × 2⁴ = 80. The list and formula agree.' },
+        ],
+        answer: '\\text{month } 5',
+      },
     },
     {
       kind: 'example',
       head: 'Another way: count halvings on a clock',
-      body: 'A 400 mg dose loses half every 4 hours. When is only 25 mg left?\nWalk the clock: hour 0 is 400, hour 4 is 200, hour 8 is 100, hour 12 is 50, hour 16 is 25. Four halvings at 4 hours each means 16 hours.',
+      body: 'A 400 mg dose loses half every 4 hours. When is only 25 mg left? Count the halvings.',
       art: numberLine(0, 16, [
           { at: 0, label: '400', color: SKY },
           { at: 4, label: '200', color: AMB },
@@ -536,8 +723,30 @@ export const PC_SLIDES_U05_08: SlideBank = {
           { at: 12, label: '50', color: AMB },
           { at: 16, label: '25', color: EMR },
         ], { step: 4, title: 'hours, half gone every 4', caption: 'Four halvings at four hours each — sixteen hours.' }),
+      steps: {
+        steps: [
+          { tex: '400 \\div 25 = 16', text: 'Divide the start by the target to see how much must disappear. The dose must shrink to one sixteenth of its size.' },
+          { tex: '16 = 2^{4}', text: 'Each halving cuts the amount by a factor of 2, so 16 is 2 × 2 × 2 × 2. That means four halvings are needed.' },
+          { tex: '400 \\to 200 \\to 100 \\to 50 \\to 25', text: 'Check by halving one step at a time. You count four halvings, matching 16 = 2⁴.' },
+          { tex: '4 \\cdot 4 = 16', text: 'Each halving takes 4 hours, so four halvings take 4 × 4 = 16 hours.' },
+        ],
+        answer: '16 \\text{ hours}',
+      },
     },
-    { kind: 'example', head: 'A population passing 10,000', body: 'A town of 1250 people doubles every 10 years. When does it hit 10,000?\nDivide: 10,000 ÷ 1250 = 8 = 2³, so three doublings. Three doublings × 10 years = 30 years.' },
+    {
+      kind: 'example',
+      head: 'A population passing 10,000',
+      body: 'A town of 1250 people doubles every 10 years. When does it reach 10,000?',
+      steps: {
+        steps: [
+          { tex: '10{,}000 \\div 1250 = 8', text: 'Divide the target by the start. The town must become 8 times as big, and the ratio ignores the exact head count.' },
+          { tex: '8 = 2^{3}', text: 'Doubling multiplies by 2 each time, and 8 is 2 × 2 × 2, or 2³. So exactly three doublings are needed.' },
+          { tex: '1250 \\to 2500 \\to 5000 \\to 10{,}000', text: 'Check by doubling one step at a time. You get three doublings, matching 2³.' },
+          { tex: '3 \\cdot 10 = 30', text: 'Each doubling takes 10 years, so three doublings take 3 × 10 = 30 years.' },
+        ],
+        answer: '30 \\text{ years}',
+      },
+    },
     {
       kind: 'protip',
       head: 'Divide before you count',
@@ -559,7 +768,21 @@ export const PC_SLIDES_U05_08: SlideBank = {
         note: 'Algebra will happily hand you an answer the log cannot accept. Always substitute back.',
       },
     },
-    { kind: 'challenge', head: 'Extra credit: two logs, one fake answer', body: 'Solve log₂(x) + log₂(x − 6) = 4.\nCombine: log₂(x(x − 6)) = 4, so x(x − 6) = 2⁴ = 16 and x² − 6x − 16 = 0. Factor into (x − 8)(x + 2) = 0, giving x = 8 or x = −2. But x = −2 would ask for log₂(−2), which is impossible — so the only answer is x = 8.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: two logs, one fake answer',
+      body: 'Solve log base 2 of x plus log base 2 of (x − 6) equals 4.',
+      steps: {
+        steps: [
+          { tex: '\\log_{2}(x) + \\log_{2}(x-6) = \\log_{2}\\bigl(x(x-6)\\bigr)', text: 'Combine the logs with the product rule, since adding logs outside means multiplying inside. One single log is easy to undo.' },
+          { tex: 'x(x-6) = 2^{4} = 16', text: 'Rewrite in exponential form: base 2 to the answer 4 equals the inside. 2⁴ is 16, so x times (x − 6) equals 16.' },
+          { tex: 'x^{2} - 6x - 16 = 0', text: 'Multiply out x(x − 6) = x² − 6x and move the 16 to the left. A quadratic must equal zero before you can factor it.' },
+          { tex: '(x-8)(x+2) = 0', text: 'Factor by finding two numbers that multiply to −16 and add to −6, namely −8 and +2. Each factor set to zero gives x = 8 or x = −2.' },
+          { tex: 'x = -2 \\Rightarrow \\log_{2}(-2)', text: 'Test both in the ORIGINAL equation. For x = −2 the log is impossible, so throw it out. For x = 8: log₂ 8 + log₂ 2 = 3 + 1 = 4, which works.' },
+        ],
+        answer: 'x = 8',
+      },
+    },
     {
       kind: 'summary',
       head: 'Match, free, log, check',
@@ -596,8 +819,14 @@ export const PC_SLIDES_U05_08: SlideBank = {
           { sym: '\\text{adj}', means: 'the side touching θ that is not the hypotenuse', tone: 'warn' },
         ],
       },
+      why: 'The names opposite and adjacent are not fixed properties of a side. They describe where a side sits compared with the angle you chose. Switch to the other acute angle and the two legs trade names, while the hypotenuse stays the same. A ratio only means something once you say which angle you are measuring from.',
     },
-    { kind: 'concept', head: 'SOH-CAH-TOA is the whole toolkit', body: 'Sine = Opposite ÷ Hypotenuse. Cosine = Adjacent ÷ Hypotenuse. Tangent = Opposite ÷ Adjacent. Three ratios, and every right-triangle problem is one of them in disguise.' },
+    {
+      kind: 'concept',
+      head: 'SOH-CAH-TOA is the whole toolkit',
+      body: 'Sine = Opposite ÷ Hypotenuse. Cosine = Adjacent ÷ Hypotenuse. Tangent = Opposite ÷ Adjacent. Three ratios, and every right-triangle problem is one of them in disguise.',
+      why: 'A bigger or smaller right triangle with the same angle has the same shape, so its side ratios do not change. A 3-4-5 and a 6-8-10 both give opposite over hypotenuse of 0.6. Sine, cosine and tangent are names for those shape-fixed ratios, which is why one angle always gives one answer.',
+    },
     {
       kind: 'concept',
       head: 'Triangles worth memorizing',
@@ -610,6 +839,7 @@ export const PC_SLIDES_U05_08: SlideBank = {
         ],
         note: 'Spot one of these and you can skip the calculator entirely.',
       },
+      why: 'Cut a square along its diagonal and you get two equal legs of 1, and the Pythagorean theorem makes the hypotenuse √(1 + 1) = √2. Cut an equilateral triangle of side 2 in half and the base becomes 1, with height √(4 − 1) = √3. Those two cuts are why the neat ratios exist.',
     },
     {
       kind: 'concept',
@@ -620,49 +850,122 @@ export const PC_SLIDES_U05_08: SlideBank = {
         tex: '\\sin\\theta = 0.6 \\ \\Rightarrow\\ \\theta = \\sin^{-1}(0.6)',
         note: 'Plain trig turns an angle into a ratio; inverse trig turns a ratio back into an angle.',
       },
+      why: 'Between 0° and 90° each angle gives exactly one ratio, so the process can run backward without confusion. If opposite over hypotenuse is 0.6, only one angle fits, and inverse sine finds it. It undoes sine in the same way a log undoes an exponent.',
     },
-    { kind: 'example', head: 'Start simple: name the sides', body: 'A right triangle has sides 3, 4, and 5. Which one is the hypotenuse?\nThe hypotenuse sits across from the right angle and is always the longest side. Of 3, 4, and 5, that is the 5.' },
+    {
+      kind: 'example',
+      head: 'Start simple: name the sides',
+      body: 'A right triangle has sides 3, 4 and 5. Which one is the hypotenuse?',
+      steps: {
+        steps: [
+          { tex: '\\text{right angle} \\to \\text{side across from it}', text: 'Find the right angle first. The hypotenuse is defined as the side straight across from it, so it never touches the right angle.' },
+          { tex: '\\text{longest side} = \\text{hypotenuse}', text: 'The right angle is the largest angle in the triangle, and the longest side always sits across from the largest angle.' },
+          { tex: '3 < 4 < 5', text: 'Compare the three lengths. The longest is 5, so 5 is the hypotenuse, and 3 and 4 are the legs.' },
+          { tex: '3^{2} + 4^{2} = 9 + 16 = 25 = 5^{2}', text: 'Check with the Pythagorean theorem. The legs squared add up to the hypotenuse squared, so 5 fits perfectly.' },
+        ],
+        answer: '\\text{hypotenuse} = 5',
+      },
+    },
     {
       kind: 'example',
       head: 'Sine and cosine in a 3-4-5',
-      body: 'An angle has opposite 3, adjacent 4, hypotenuse 5. Find sine and cosine.\nSOH: sine = 3 ÷ 5 = 0.6. CAH: cosine = 4 ÷ 5 = 0.8. Same triangle, same angle — only the chosen sides change.',
+      body: 'An angle has opposite side 3, adjacent side 4 and hypotenuse 5. Find the sine and cosine.',
       art: rightTriangle({ opp: '3', adj: '4', hyp: '5', angle: 'θ', shape: { opp: 3, adj: 4 }, caption: 'sin θ = 3/5 = 0.6 · cos θ = 4/5 = 0.8 · tan θ = 3/4 = 0.75' }),
       steps: {
         steps: [
-          { tex: '\\sin\\theta = \\tfrac{3}{5}', text: 'Opposite over hypotenuse.' },
-          { tex: '\\cos\\theta = \\tfrac{4}{5}', text: 'Adjacent over hypotenuse.' },
+          { tex: '\\text{opp} = 3,\\ \\text{adj} = 4,\\ \\text{hyp} = 5', text: 'Label the sides from the angle θ. The 3 is across from it, the 4 touches it, and the 5 is across from the right angle.' },
+          { tex: '\\sin\\theta = \\tfrac{\\text{opp}}{\\text{hyp}} = \\tfrac{3}{5} = 0.6', text: 'Use SOH: sine is opposite over hypotenuse. Put in 3 and 5 to get 3/5, which is 0.6 as a decimal.' },
+          { tex: '\\cos\\theta = \\tfrac{\\text{adj}}{\\text{hyp}} = \\tfrac{4}{5} = 0.8', text: 'Use CAH: cosine is adjacent over hypotenuse. Put in 4 and 5 to get 4/5, which is 0.8 as a decimal.' },
+          { tex: '0.6^{2} + 0.8^{2} = 0.36 + 0.64 = 1', text: 'Check with the Pythagorean identity. The squares of sine and cosine must add to 1, and they do, so both ratios are right.' },
         ],
         answer: '0.6 \\text{ and } 0.8',
       },
     },
-    { kind: 'example', head: 'A bigger one: tangent in a 6-8-10', body: 'The legs are 6 and 8. For the angle with opposite 6 and adjacent 8, find the tangent.\nTOA: tangent = 6 ÷ 8 = 0.75. The hypotenuse is not invited to this one — tangent uses only the two legs.' },
+    {
+      kind: 'example',
+      head: 'A bigger one: tangent in a 6-8-10',
+      body: 'The legs are 6 and 8 and the hypotenuse is 10. For the angle with opposite side 6 and adjacent side 8, find the tangent.',
+      steps: {
+        steps: [
+          { tex: '\\text{opp} = 6,\\ \\text{adj} = 8', text: 'Label from the chosen angle. The 6 is opposite and the 8 is adjacent, and the hypotenuse of 10 is not needed for this ratio.' },
+          { tex: '\\tan\\theta = \\tfrac{\\text{opp}}{\\text{adj}}', text: 'Choose the ratio by the sides you have. Tangent is opposite over adjacent (TOA), and both legs are given, so tangent is the one to use.' },
+          { tex: '\\tan\\theta = \\tfrac{6}{8} = \\tfrac{3}{4} = 0.75', text: 'Divide 6 by 8, which simplifies to 3/4 or 0.75. The hypotenuse never enters, because tangent uses only the two legs.' },
+          { tex: '6\\text{-}8\\text{-}10 = 2 \\cdot (3\\text{-}4\\text{-}5)', text: 'Notice this is the 3-4-5 triangle doubled. Doubling every side leaves ratios unchanged, so the tangent matches 3/4 from the small triangle.' },
+        ],
+        answer: '\\tan\\theta = 0.75',
+      },
+    },
     {
       kind: 'example',
       head: 'A ladder against a wall',
-      body: 'A ladder touches a wall 5 m up with its foot 5 m out. What angle does it make with the ground?\nOpposite is 5, adjacent is 5, so tan = 5 ÷ 5 = 1. The angle with tangent 1 is 45° — exactly halfway between flat and straight up.',
+      body: 'A ladder touches a wall 5 m up with its foot 5 m out from the wall. What angle does it make with the ground?',
       steps: {
         steps: [
-          { tex: '\\text{hyp} = 20,\\ \\theta = 60^{\\circ}', text: 'The ladder is the hypotenuse; the wall is opposite.' },
-          { tex: '\\sin 60^{\\circ} = \\dfrac{h}{20}', text: 'Opposite over hypotenuse — so use sine.' },
-          { tex: 'h = 20\\sin 60^{\\circ}', text: 'Multiply both sides by 20.' },
+          { tex: '\\text{opp} = 5,\\ \\text{adj} = 5', text: 'Sketch the triangle. The wall height 5 m is opposite the angle at the ground, and the 5 m along the ground touches that angle, so it is adjacent.' },
+          { tex: '\\tan\\theta = \\tfrac{5}{5} = 1', text: 'You know opposite and adjacent, so use tangent (TOA). Dividing 5 by 5 gives a ratio of 1.' },
+          { tex: '\\theta = \\tan^{-1}(1)', text: 'To go from a ratio back to an angle, use inverse tangent. The question becomes: which angle has a tangent of 1?' },
+          { tex: '\\theta = 45^{\\circ}', text: 'An angle with tangent 1 is 45°, because only the 45-45-90 triangle has two equal legs. The ladder leans halfway between flat and straight up.' },
         ],
-        answer: 'h \\approx 17.3 \\text{ ft}',
+        answer: '\\theta = 45^{\\circ}',
       },
     },
     {
       kind: 'example',
       head: 'A wheelchair ramp',
-      body: 'A ramp is 10 ft along the slope and rises at 30°. How high is the top?\nThe ramp itself is the hypotenuse, and the height is opposite the 30° angle. SOH: sin 30° = height ÷ 10, and sin 30° = 1/2, so the height is 5 ft.',
-      art: rightTriangle({ opp: '2 ft rise', adj: '24 ft run', hyp: 'the ramp', angle: 'about 5°', names: false, title: 'A gentle, legal slope', caption: 'A long run against a small rise gives a shallow angle — which is exactly the point.' }),
+      body: 'A ramp is 10 ft long along the slope and rises at 30°. How high is the top?',
+      art: rightTriangle({ opp: 'h = ?', adj: 'run', hyp: '10 ft ramp', angle: '30°', shape: { opp: 1, adj: 1.732 }, names: false, title: 'A 30° ramp', caption: 'The ramp is the hypotenuse, and the height is across from the 30° angle.' }),
+      steps: {
+        steps: [
+          { tex: '\\text{hyp} = 10,\\ \\text{opp} = h', text: 'Label from the 30° angle. The ramp is the slanted side across from the right angle, so it is the hypotenuse, and the height is opposite the angle.' },
+          { tex: '\\sin 30^{\\circ} = \\tfrac{h}{10}', text: 'Opposite and hypotenuse together point to sine (SOH). Write sine of the angle as the unknown height over 10.' },
+          { tex: '\\sin 30^{\\circ} = \\tfrac12', text: 'Use the known value sin 30° = 1/2. It comes from the 30-60-90 triangle, where the short side is half the hypotenuse.' },
+          { tex: 'h = 10 \\cdot \\tfrac12 = 5', text: 'Multiply both sides by 10 to get h alone. Whatever divides h gets cleared by multiplying, so h = 10 × 1/2 = 5.' },
+        ],
+        answer: 'h = 5 \\text{ ft}',
+      },
     },
     {
       kind: 'example',
       head: 'Another way: draw the picture first',
-      body: 'A tree casts a 20 ft shadow with a 45° angle of elevation to its top. How tall is the tree?\nSketch it: shadow along the ground, tree straight up, sunbeam as the slant. Two 45° angles means two equal legs, so the tree is exactly as tall as the shadow is long — 20 ft, no formula needed.',
-      art: rightTriangle({ opp: 'height = ?', adj: '12 ft', angle: '35°', shape: { opp: 2, adj: 3 }, caption: 'Sketch, label, THEN choose the ratio — never the other way round.' }),
+      body: 'A tree casts a 20 ft shadow, and the angle of elevation to its top is 45°. How tall is the tree?',
+      art: rightTriangle({ opp: 'tree = ?', adj: 'shadow 20 ft', angle: '45°', shape: { opp: 1, adj: 1 }, caption: 'Sketch, label, THEN choose the ratio — never the other way round.' }),
+      steps: {
+        steps: [
+          { tex: '\\text{shadow} = 20,\\ \\text{angle} = 45^{\\circ}', text: 'Sketch it: the shadow lies on the ground, the tree stands straight up, and the sunbeam is the slant. The 45° angle is at the tip of the shadow.' },
+          { tex: '180^{\\circ} - 90^{\\circ} - 45^{\\circ} = 45^{\\circ}', text: 'Find the third angle, since the angles of a triangle add to 180°. It is also 45°, so two angles are equal.' },
+          { tex: '\\text{height} = \\text{shadow}', text: 'Sides across from equal angles are equal, so the tree is exactly as tall as the shadow is long.' },
+          { tex: '\\tan 45^{\\circ} = \\tfrac{h}{20} = 1', text: 'Check with tangent. tan 45° = 1, so h ÷ 20 = 1, and multiplying both sides by 20 gives h = 20.' },
+        ],
+        answer: 'h = 20 \\text{ ft}',
+      },
     },
-    { kind: 'example', head: 'Another way: spot the special triangle', body: 'A kite flies on a 40 m string, 20 m above your hands. What angle does the string make with the ground?\nThe height is exactly half the string. The only right triangle where a leg is half the hypotenuse is the 30-60-90, so the angle is 30° — the same answer inverse sine of 1/2 gives.' },
-    { kind: 'example', head: 'A slide at the park', body: 'A slide meets the ground at 55° and the post makes a right angle. What is the third angle?\nAll three angles total 180°, and the right angle already used 90°. That leaves 90° to share, so the third angle is 90 − 55 = 35°.' },
+    {
+      kind: 'example',
+      head: 'Another way: spot the special triangle',
+      body: 'A kite flies on a 40 m string, 20 m above your hands. What angle does the string make with the ground?',
+      steps: {
+        steps: [
+          { tex: '\\text{hyp} = 40,\\ \\text{opp} = 20', text: 'Label from the angle at the ground. The string is the hypotenuse, and the height is the side opposite that angle.' },
+          { tex: '\\tfrac{20}{40} = \\tfrac12', text: 'Divide the height by the string length. The height is exactly half the string, so the ratio is 1/2.' },
+          { tex: '\\sin\\theta = \\tfrac12', text: 'Opposite over hypotenuse is sine (SOH), so sin θ = 1/2. Now you need the angle whose sine is 1/2.' },
+          { tex: '\\theta = 30^{\\circ}', text: 'The 30-60-90 triangle is the one with its short side half the hypotenuse, so θ = 30°. Inverse sine of 1/2 gives the same.' },
+        ],
+        answer: '\\theta = 30^{\\circ}',
+      },
+    },
+    {
+      kind: 'example',
+      head: 'A slide at the park',
+      body: 'A slide meets the ground at 55° and the post makes a right angle with the ground. What is the third angle of the triangle?',
+      steps: {
+        steps: [
+          { tex: 'A + B + C = 180^{\\circ}', text: 'Start from the fact that the three angles of any triangle add up to 180°. This is true for every triangle, right or not.' },
+          { tex: '90^{\\circ} + 55^{\\circ} + x = 180^{\\circ}', text: 'Put in the two angles you know, the right angle 90° and the 55° at the ground, and call the unknown angle x.' },
+          { tex: 'x = 180^{\\circ} - 145^{\\circ} = 35^{\\circ}', text: 'Add 90 + 55 = 145, then subtract it from 180 to get 35. Check: 90 + 55 + 35 = 180.' },
+        ],
+        answer: '35^{\\circ}',
+      },
+    },
     {
       kind: 'protip',
       head: 'Circle the angle before you choose',
@@ -688,7 +991,20 @@ export const PC_SLIDES_U05_08: SlideBank = {
         note: 'Only the hypotenuse keeps its name. Mark your angle before you name anything else.',
       },
     },
-    { kind: 'challenge', head: 'Extra credit: the half-hypotenuse clue', body: 'A 30-60-90 triangle has a hypotenuse of 12. How long is the side opposite the 30° angle, and why?\nsin 30° = 1/2, so that side is 12 × 1/2 = 6. Here is the reason: slice an equilateral triangle with side 12 straight down the middle, and the bottom edge splits into two 6s.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: the half-hypotenuse clue',
+      body: 'A 30-60-90 triangle has a hypotenuse of 12. How long is the side opposite the 30° angle, and why?',
+      steps: {
+        steps: [
+          { tex: '\\sin 30^{\\circ} = \\tfrac{\\text{opp}}{12}', text: 'Opposite and hypotenuse point to sine (SOH). Write sine of 30° as the unknown side over 12.' },
+          { tex: '\\sin 30^{\\circ} = \\tfrac12', text: 'Use the special value sin 30° = 1/2. The last step explains where this value comes from.' },
+          { tex: '\\text{opp} = 12 \\cdot \\tfrac12 = 6', text: 'Multiply both sides by 12 to clear the fraction. Half of 12 is 6, so the side opposite 30° is 6.' },
+          { tex: '\\text{equilateral, side } 12 \\to 6 + 6', text: 'To see why, slice an equilateral triangle of side 12 straight down the middle. The base splits into two 6s, and each half is a 30-60-90 with hypotenuse 12 and short side 6.' },
+        ],
+        answer: '6',
+      },
+    },
     {
       kind: 'summary',
       head: 'Label, choose, compute',
