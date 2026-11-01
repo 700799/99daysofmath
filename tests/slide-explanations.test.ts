@@ -11,7 +11,7 @@ import { LESSONS } from '../src/data/lessons';
 // standard. While a pass is in progress, EXPLAIN_ONLY="TRIG:1-7,GEO" checks
 // just those decks (a domain, or DOMAIN:from-to).
 
-const EXPLAINED: string[] = ['GEO', 'TRIG', 'PC', 'A1', 'SAT', '5.F', '6.NS', '6.RP', '6.EE', '6.G', '6.SP'];
+const EXPLAINED: string[] = ['GEO', 'TRIG', 'PC', 'A1', 'SAT', '5.F', '6.NS', '6.RP', '6.EE', '6.G', '6.SP', 'CALC'];
 
 const only = (process.env.EXPLAIN_ONLY ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 const specs = [...EXPLAINED, ...only];

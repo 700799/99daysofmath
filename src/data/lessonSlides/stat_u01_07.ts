@@ -751,6 +751,7 @@ const STAT_3: LessonSlide[] = [
     kind: 'concept',
     head: 'Two numbers describe the whole curve',
     body: 'A NORMAL distribution is a symmetric bell curve described by its mean μ, the center, and its standard deviation σ, the distance from the center out to where the curve changes from steep to flat. We write N(μ, σ). N(500, 100) and N(64.5, 2.5) are the same shape, just relabelled.',
+    why: 'Every normal curve has the same bell shape, and only its center and its scale change. Changing μ slides the whole curve left or right, and changing σ stretches or squeezes it. So two numbers are enough to rebuild any normal curve from the one standard bell.',
     formula: {
       tex: 'N(\\mu,\\ \\sigma)',
       note: 'Same bell every time; μ slides it along the axis and σ stretches it wider or squeezes it narrower.',
@@ -764,6 +765,7 @@ const STAT_3: LessonSlide[] = [
     kind: 'concept',
     head: 'The empirical rule: 68–95–99.7',
     body: 'About 68% of values lie within 1σ of the mean, 95% within 2σ, and 99.7% within 3σ. Whatever is left over is split evenly between the two tails: beyond 2σ there is 5% in total, so 2.5% on each side.',
+    why: 'The bell is built so that most values cluster near the center and the tails thin out fast. Measured in standard deviations from the mean, the share inside 1, 2 and 3 steps is always the same, 68%, 95% and 99.7%, whatever the units and whatever μ and σ are.',
     formula: {
       tex: '\\mu \\pm 1\\sigma:\\ 68\\%\\qquad \\mu \\pm 2\\sigma:\\ 95\\%\\qquad \\mu \\pm 3\\sigma:\\ 99.7\\%',
       note: 'Halve the leftover for one tail: (100 − 95)/2 = 2.5% beyond 2σ on one side.',
@@ -779,6 +781,7 @@ const STAT_3: LessonSlide[] = [
     kind: 'concept',
     head: 'The z-score counts standard deviations',
     body: 'A Z-SCORE says how many standard deviations a value sits from the mean: z = (x − μ)/σ. Negative z means below the mean. Because z has no units, it lets you compare a test score with a height, or a score on one test with a score on another.',
+    why: 'Subtracting μ moves the center of the data to 0, and dividing by σ rescales one standard deviation to exactly 1. Every normal distribution is relabelled onto the same standard scale, which is why one table serves them all and why values from different variables can be compared.',
     formula: {
       tex: 'z = \\frac{x - \\mu}{\\sigma}',
       note: 'Subtract the center, then divide by one tick.',
@@ -793,12 +796,14 @@ const STAT_3: LessonSlide[] = [
     kind: 'concept',
     head: 'The table gives the area to the LEFT',
     body: 'The standard normal table (or normalcdf) gives the AREA TO THE LEFT of a z-score — the proportion of values below x. For an area to the right, subtract from 1. For an area between two values, subtract the two left-areas. Always sketch and shade before you compute.',
+    why: 'Area under the curve is the proportion of values, and the total area is 1. The table lists the area from the far left edge up to z, which is everything below x. Anything else, above or between, is built from these left-areas by subtracting from 1 or subtracting two of them.',
     art: normalFig({ mu: 0, sigma: 1, shade: [-3.6, 1], shadeLabel: { text: 'area to the left of z', at: -0.9, y: 170 }, tickText: (k) => (k === 0 ? '0' : k > 0 ? String(k) : `−${-k}`), marks: [{ at: 1, label: 'z' }], title: 'The standard normal curve, N(0, 1)', caption: 'The table reports the shaded part: everything below the z you look up.', alt: 'The standard normal curve with everything to the left of z equals 1 shaded' }),
   },
   {
     kind: 'concept',
     head: 'Going backwards: from a percent to a value',
     body: 'Some questions start with the area: "what score is the top 10%?" Find the z with that area to its LEFT (invNorm), then unstandardize: x = μ + zσ. Top 10% means 90% is to the left, which is z ≈ 1.28.',
+    why: 'The z-score formula is just an equation, z = (x − μ)/σ, so to find x we undo it step by step: multiply by σ to cancel the division, then add μ to cancel the subtraction. Finding z from the percent is the same table, read in reverse.',
     formula: {
       tex: 'x = \\mu + z\\,\\sigma',
       note: 'The z-score formula solved for x. A negative z makes the second term negative on its own.',
@@ -811,12 +816,12 @@ const STAT_3: LessonSlide[] = [
   {
     kind: 'example',
     head: 'The z-score of 650',
-    body: 'Scores are N(500, 100). What is the z-score of 650?\nz = (650 − 500)/100 = 150/100.\nz = 1.5: the score is one and a half standard deviations above the mean.',
+    body: 'Scores are N(500, 100). What is the z-score of a score of 650, and what does it tell you?',
     steps: {
       steps: [
-        { tex: 'z = \\frac{x - \\mu}{\\sigma}', text: 'Start from the rule.' },
-        { tex: '= \\frac{650 - 500}{100}', text: 'Fill in the value, the mean, the standard deviation.' },
-        { tex: '= \\frac{150}{100} = 1.5', text: 'Positive, so above the mean.' },
+        { tex: 'z = \\frac{x - \\mu}{\\sigma}', text: 'Start from the z-score rule. It counts how many standard deviations a value sits from the mean, so it works for every normal distribution.' },
+        { tex: 'z = \\frac{650 - 500}{100}', text: 'Substitute x = 650, the mean μ = 500 and σ = 100. The top subtracts the mean to find the distance from the center, and the bottom measures that distance in units of σ.' },
+        { tex: 'z = \\frac{150}{100} = 1.5', text: 'Divide: 150 ÷ 100 = 1.5. The answer is positive because 650 is above the mean, and it says 650 is one and a half standard deviations above 500.' },
       ],
       answer: 'z = 1.5',
     },
@@ -824,18 +829,27 @@ const STAT_3: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Empirical rule: between 400 and 600, and above 700',
-    body: 'For N(500, 100): 400 and 600 are μ − 1σ and μ + 1σ, so about 68% of scores lie between them.\n700 is μ + 2σ. About 95% lie within 2σ, leaving 5% for the two tails together.\nHalf of that is in the upper tail: about 2.5% score above 700.',
+    body: 'For N(500, 100), about what percent of scores lie between 400 and 600, and about what percent score above 700?',
+    steps: {
+      steps: [
+        { tex: '400 = 500 - 1(100),\\quad 600 = 500 + 1(100)', text: 'Write the endpoints in standard deviations from the mean. Since σ = 100, the numbers 400 and 600 are exactly 1σ below and 1σ above 500, so the 1σ part of the rule applies.' },
+        { tex: '68\\%', text: 'The empirical rule says about 68% of values lie within 1σ of the mean, so about 68% of the scores are between 400 and 600.' },
+        { tex: '700 = 500 + 2(100)', text: 'Now 700 is exactly 2σ above the mean. The rule says 95% lie within 2σ, so 100% − 95% = 5% lie outside, split between the two tails.' },
+        { tex: '\\frac{5\\%}{2} = 2.5\\%', text: 'The curve is symmetric, so the two tails are equal. Half of the 5% is in the upper tail, so about 2.5% of scores are above 700.' },
+      ],
+      answer: '68\\%\\ \\text{between 400 and 600;}\\ 2.5\\%\\ \\text{above 700}',
+    },
     art: normalFig({ mu: 500, sigma: 100, shade: [700, 860], shadeColor: ROSE, shadeLabel: { text: '2.5%', at: 745, y: 172 }, marks: [{ at: 700, label: 'x = 700, z = 2', color: VIO }], title: 'The tail above 700', caption: '5% lies beyond 2σ in both tails together, so 2.5% sits in this one.', alt: 'A normal curve centered at 500 with the small tail to the right of 700 shaded and labelled 2.5 percent' }),
   },
   {
     kind: 'example',
     head: 'Proportion below 650',
-    body: 'For N(500, 100), what proportion of scores are below 650?\nz = (650 − 500)/100 = 1.5. The table gives the area to the left of z = 1.5 as 0.9332.\nAbout 93.3% of scores are below 650, so about 6.7% are above.',
+    body: 'For N(500, 100), what proportion of scores are below 650? Standardize first, then use the area to the left.',
     steps: {
       steps: [
-        { tex: 'z = \\frac{650 - 500}{100} = 1.5', text: 'Standardize the value.' },
-        { tex: 'P(z < 1.5) = 0.9332', text: 'Look up the area to the left.' },
-        { tex: '1 - 0.9332 = 0.0668', text: 'The area to the right, if the question asks for "above".' },
+        { tex: 'z = \\frac{650 - 500}{100} = 1.5', text: 'Standardize 650 with z = (x − μ)/σ, so the table, which is built for the standard normal curve, can be used. Here z = 1.5.' },
+        { tex: 'P(z < 1.5) = 0.9332', text: 'Look up z = 1.5. The table gives the area to the LEFT of z, which is exactly the proportion of scores below 650, so no adjusting is needed.' },
+        { tex: '1 - 0.9332 = 0.0668', text: 'If the question had asked for scores above 650, we would subtract from 1 because the total area is 1. For below, the answer stays 0.9332, about 93.3%, with 6.7% above.' },
       ],
       answer: '0.9332',
     },
@@ -844,12 +858,12 @@ const STAT_3: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Between two values: women\'s heights',
-    body: 'Adult women\'s heights are N(64.5, 2.5) inches. What proportion are between 62 and 67 inches?\nFor 62: (62 − 64.5)/2.5 = −1. For 67: (67 − 64.5)/2.5 = 1. So z = −1 and z = 1.\nArea left of 1 is 0.8413; area left of −1 is 0.1587. Subtract: 0.8413 − 0.1587 = 0.6826, about 68%.',
+    body: 'Adult women\'s heights are N(64.5, 2.5) inches. What proportion are between 62 and 67 inches?',
     steps: {
       steps: [
-        { tex: 'z_{62} = \\frac{62 - 64.5}{2.5} = -1,\\quad z_{67} = \\frac{67 - 64.5}{2.5} = 1', text: 'Standardize both ends.' },
-        { tex: 'P(z < 1) = 0.8413,\\quad P(z < -1) = 0.1587', text: 'Two left-areas from the table.' },
-        { tex: '0.8413 - 0.1587 = 0.6826', text: 'Big area minus small area leaves the middle.' },
+        { tex: 'z_{62} = \\frac{62 - 64.5}{2.5} = -1,\\quad z_{67} = \\frac{67 - 64.5}{2.5} = 1', text: 'Standardize both ends with z = (x − μ)/σ. The value 62 gives z = −1 and 67 gives z = 1, so they sit one σ on either side of the mean.' },
+        { tex: 'P(z < 1) = 0.8413,\\quad P(z < -1) = 0.1587', text: 'The table gives only areas to the left, so look up both ends. The area left of z = 1 is 0.8413 and the area left of z = −1 is 0.1587.' },
+        { tex: '0.8413 - 0.1587 = 0.6826', text: 'The big left-area covers everything below 67 and the small one covers everything below 62. Subtracting removes the part below 62 and leaves the middle: 0.6826.' },
       ],
       answer: '0.6826',
     },
@@ -858,7 +872,15 @@ const STAT_3: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Another way: notice the empirical rule',
-    body: 'Before reaching for the table, check whether the endpoints land on whole standard deviations.\n62 is exactly 1σ below 64.5 and 67 is exactly 1σ above, so the empirical rule says about 68% at once.\nThe table\'s 0.6826 agrees. Use the rule to estimate, and the table when the endpoints are not whole σs.',
+    body: 'Before reaching for the table, check whether the endpoints 62 and 67 land on whole standard deviations of the N(64.5, 2.5) curve.',
+    steps: {
+      steps: [
+        { tex: 'z_{62} = -1,\\quad z_{67} = 1', text: 'Standardize the endpoints: (62 − 64.5)/2.5 = −1 and (67 − 64.5)/2.5 = 1. Both are whole numbers, exactly one σ from the mean.' },
+        { tex: '\\mu \\pm 1\\sigma \\Rightarrow 68\\%', text: 'When both ends are the same whole number of σ on either side of the mean, the empirical rule applies directly. For ±1σ it says about 68% of values.' },
+        { tex: '0.8413 - 0.1587 = 0.6826 \\approx 68\\%', text: 'Check with the table: 0.8413 − 0.1587 = 0.6826, which rounds to about 68%. The rule is a quick estimate and the table is more precise, and here they agree.' },
+      ],
+      answer: '\\approx 68\\%',
+    },
     table: {
       head: ['z-scores', 'empirical rule', 'table'],
       rows: [['−1 to 1', '68%', '0.6826'], ['−2 to 2', '95%', '0.9544'], ['−3 to 3', '99.7%', '0.9974']],
@@ -869,12 +891,12 @@ const STAT_3: LessonSlide[] = [
   {
     kind: 'example',
     head: 'The top 10% cutoff',
-    body: 'For N(500, 100), what score puts you in the top 10%?\nTop 10% means 90% is to the left. The z with 0.90 to its left is about z = 1.28.\nUnstandardize: 500 + 1.28 × 100 = 628. A score of about 628 is the cutoff.',
+    body: 'For N(500, 100), what score puts you in the top 10%? Work backwards from the area to a score.',
     steps: {
       steps: [
-        { tex: '\\text{area left} = 0.90', text: 'Top 10% means 90% below the cutoff.' },
-        { tex: 'z \\approx 1.28', text: 'Look up 0.90 inside the table (invNorm).' },
-        { tex: '500 + 1.28 \\times 100 = 628', text: 'Unstandardize with μ + zσ.' },
+        { tex: '\\text{area left} = 0.90', text: 'The table gives areas to the left, so convert. If 10% of scores are above the cutoff, then 90% are below it, so the area to the left is 0.90.' },
+        { tex: 'z \\approx 1.28', text: 'Find 0.90 inside the table, or use invNorm, reading it in reverse to get z. The closest area is at z ≈ 1.28, positive because the cutoff is above the mean.' },
+        { tex: 'x = \\mu + z\\sigma = 500 + 1.28 \\times 100 = 628', text: 'Unstandardize with x = μ + zσ, the z-score formula solved for x. Multiplying z by σ turns standard deviations back into points, and adding the mean puts the answer on the score scale.' },
       ],
       answer: '\\approx 628',
     },
@@ -883,12 +905,12 @@ const STAT_3: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Picture it first: rejected chip bags',
-    body: 'Bags are filled N(10, 0.2) ounces and a bag under 9.7 oz is rejected. Sketch the curve, mark 9.7 on the left, shade below it.\nz = (9.7 − 10)/0.2 = −0.3/0.2, so z = −1.5.\nThe area to the left of −1.5 is 0.0668. About 6.7% of bags are rejected.',
+    body: 'Bags are filled N(10, 0.2) ounces and a bag under 9.7 oz is rejected. What proportion of bags are rejected? Sketch the curve, mark 9.7 on the left, and shade below it.',
     steps: {
       steps: [
-        { tex: 'z = \\frac{9.7 - 10}{0.2} = -1.5', text: 'Below the mean, so z is negative.' },
-        { tex: 'P(z < -1.5) = 0.0668', text: 'A left tail — read straight off the table.' },
-        { tex: '0.0668 \\approx 6.7\\%', text: 'About 7 bags in 100 are rejected.' },
+        { tex: 'z = \\frac{9.7 - 10}{0.2} = -1.5', text: 'Standardize: (9.7 − 10)/0.2 = −0.3/0.2 = −1.5. The z is negative because 9.7 is below the mean, 1.5 standard deviations to the left.' },
+        { tex: 'P(z < -1.5) = 0.0668', text: 'Rejected bags are those below 9.7, which is an area to the left, so the table applies directly with no subtraction. The area left of z = −1.5 is 0.0668.' },
+        { tex: '0.0668 \\approx 6.7\\%', text: 'Convert to a percent: 0.0668 is about 6.7%, so roughly 7 bags in every 100 are rejected. A thin left tail makes sense for a cutoff 1.5σ below the mean.' },
       ],
       answer: '0.0668',
     },
@@ -927,13 +949,13 @@ const STAT_3: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: between 350 and 700',
-    body: 'For N(500, 100), what proportion of scores lie between 350 and 700?\nz for 350 is −1.5; z for 700 is 2. Neither endpoint is a whole σ on both sides, so use the table.\nArea left of 2 is 0.9772; area left of −1.5 is 0.0668. Subtract: 0.9772 − 0.0668 = 0.9104, about 91%.',
+    body: 'For N(500, 100), what proportion of scores lie between 350 and 700? The ends are different numbers of σ from the mean, so plan to use the table.',
     steps: {
       steps: [
-        { tex: 'z_{350} = \\frac{350 - 500}{100} = -1.5,\\quad z_{700} = \\frac{700 - 500}{100} = 2', text: 'Standardize both ends.' },
-        { tex: 'P(z < 2) = 0.9772', text: 'Area left of the upper end.' },
-        { tex: 'P(z < -1.5) = 0.0668', text: 'Area left of the lower end.' },
-        { tex: '0.9772 - 0.0668 = 0.9104', text: 'The middle is the difference.' },
+        { tex: 'z_{350} = \\frac{350 - 500}{100} = -1.5,\\quad z_{700} = \\frac{700 - 500}{100} = 2', text: 'Standardize both ends: 350 gives z = −1.5 and 700 gives z = 2. They are different distances from the mean, so one empirical-rule percent will not do.' },
+        { tex: 'P(z < 2) = 0.9772', text: 'Look up the area left of the upper end, z = 2. It is 0.9772, and it covers everything below 700.' },
+        { tex: 'P(z < -1.5) = 0.0668', text: 'Look up the area left of the lower end, z = −1.5. It is 0.0668 and covers everything below 350, which is more than we want to count.' },
+        { tex: '0.9772 - 0.0668 = 0.9104', text: 'Subtract the small area from the big one so only the middle is left. That is 0.9104, so about 91% of scores are between 350 and 700.' },
       ],
       answer: '0.9104',
     },
@@ -965,6 +987,7 @@ const STAT_4: LessonSlide[] = [
     kind: 'concept',
     head: 'Reading a scatterplot',
     body: 'A SCATTERPLOT shows two quantitative variables: the EXPLANATORY variable x on the horizontal axis and the RESPONSE y on the vertical. Describe it with direction (positive or negative), form (linear or curved), strength (how tightly the points hug the form), and any unusual points.',
+    why: 'Each point is one individual measured twice, so the cloud shows whether the two measurements move together. Direction says whether they rise together, form says whether a straight line is a fair summary, and strength says how closely a single line follows the points.',
     compare: {
       cols: [
         { title: 'Direction', lines: ['Positive: up to the right', 'Negative: down to the right'], tone: 'accent' },
@@ -978,6 +1001,7 @@ const STAT_4: LessonSlide[] = [
     kind: 'concept',
     head: 'Correlation r',
     body: 'The CORRELATION r measures the direction and strength of a LINEAR relationship. It is always between −1 and 1, has no units, and does not change if you swap x and y or change units. Near 0 is weak; near ±1 is strong. For the study data r = 0.993 — very strong and positive.',
+    why: 'The correlation r is built from z-scores: it averages the products of each point\'s x z-score and y z-score. Points up-right or down-left give positive products and the others negative, so r measures how consistently the points follow a line. Z-scores have no units, so r has none either.',
     formula: {
       tex: '-1 \\le r \\le 1',
       note: 'The sign gives the direction, the size gives the strength. r = −0.9 is stronger than r = 0.4.',
@@ -992,6 +1016,7 @@ const STAT_4: LessonSlide[] = [
     kind: 'concept',
     head: 'The least-squares regression line',
     body: 'The LEAST-SQUARES LINE ŷ = a + bx makes the sum of the squared residuals as small as possible. Its slope is b = r·(s_y/s_x), and it always passes through the point of means (x̄, ȳ), so a = ȳ − b·x̄. For the study data that line is ŷ = 51.5 + 7.5x.',
+    why: 'Of all possible lines, the least-squares line has the smallest total of squared vertical misses, so large misses are punished hard. Forcing it through (x̄, ȳ) balances the misses above and below. The slope r·s_y/s_x says that one s_x step in x moves the prediction only r steps of s_y in y.',
     formula: {
       tex: '\\hat{y} = a + bx,\\qquad b = r\\,\\frac{s_y}{s_x},\\qquad a = \\bar{y} - b\\,\\bar{x}',
       note: 'The hat on ŷ says "predicted". The line is a model, not a list of the actual scores.',
@@ -1007,6 +1032,7 @@ const STAT_4: LessonSlide[] = [
     kind: 'concept',
     head: 'Residuals: actual minus predicted',
     body: 'A RESIDUAL is actual − predicted, y − ŷ. Positive means the point sits above the line; negative means below. The residuals of a least-squares line always add to zero. And r² is the fraction of the variation in y that the linear relationship with x explains.',
+    why: 'A residual measures the miss of one prediction, in the units of y: how far above or below the line the actual point sits. A least-squares line balances its positive and negative misses, so they sum to zero, and r² compares the size of the leftover misses with the total variation in y.',
     formula: {
       tex: '\\text{residual} = y - \\hat{y}',
       note: 'Actual first, predicted second. The student who studied 2 hours scored 65 against a prediction of 66.5: residual −1.5.',
@@ -1020,12 +1046,13 @@ const STAT_4: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Describe the scatterplot',
-    body: 'Hours studied and test score: (1, 60), (2, 65), (3, 75), (4, 80), (5, 90).\nAs hours go up, scores go up: the direction is positive. The points fall close to a straight line: the form is linear and the strength is strong.\nNo unusual points. A strong, positive, linear relationship between hours studied and score.',
+    body: 'Hours studied and test score: (1, 60), (2, 65), (3, 75), (4, 80), (5, 90). Describe the relationship using direction, form and strength.',
     steps: {
       steps: [
-        { text: 'Direction: every extra hour comes with a higher score — positive.' },
-        { text: 'Form: the five points nearly line up — linear.' },
-        { text: 'Strength: very little scatter around that line — strong. No outliers.' },
+        { text: 'Direction: as the hours go up, the scores go up, so the points rise from left to right and the association is positive.' },
+        { text: 'Form: the five points nearly line up along a straight band instead of bending, so a straight line is a fair summary and the form is linear.' },
+        { text: 'Strength: the points hug that line closely with very little scatter, so the relationship is strong. A loose cloud would be weak.' },
+        { text: 'Unusual points: none stands apart from the pattern. Put it in context: more hours studied goes with higher test scores.' },
       ],
       answer: '\\text{positive, linear, strong}',
     },
@@ -1033,12 +1060,12 @@ const STAT_4: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Find the regression line',
-    body: 'For the same data, x̄ = 3 and ȳ = 74. The deviations give Σ(x − x̄)(y − ȳ) = 75 and Σ(x − x̄)² = 10.\nSlope b = 75/10 = 7.5. The line passes through (3, 74), so a = 74 − 7.5 × 3 = 74 − 22.5 = 51.5.\nŷ = 51.5 + 7.5x.',
+    body: 'For the same data, x̄ = 3 and ȳ = 74. The deviations give Σ(x − x̄)(y − ȳ) = 75 and Σ(x − x̄)² = 10. Find the least-squares line.',
     steps: {
       steps: [
-        { tex: 'b = \\frac{\\sum (x - \\bar{x})(y - \\bar{y})}{\\sum (x - \\bar{x})^{2}} = \\frac{75}{10} = 7.5', text: 'Slope from the two sums.' },
-        { tex: 'a = \\bar{y} - b\\,\\bar{x} = 74 - 7.5(3) = 51.5', text: 'Force the line through the point of means.' },
-        { tex: '\\hat{y} = 51.5 + 7.5x', text: 'Write the line with the hat on y.' },
+        { tex: 'b = \\frac{\\sum (x - \\bar{x})(y - \\bar{y})}{\\sum (x - \\bar{x})^{2}} = \\frac{75}{10} = 7.5', text: 'For the slope, divide the sum of the x-deviation times y-deviation products by the sum of squared x-deviations. This formula gives the line with the smallest squared residuals.' },
+        { tex: 'a = \\bar{y} - b\\,\\bar{x} = 74 - 7.5(3) = 51.5', text: 'The least-squares line always passes through the point of means (3, 74). Substitute that point to solve for the intercept: 74 − 22.5 = 51.5.' },
+        { tex: '\\hat{y} = 51.5 + 7.5x', text: 'Write the line using ŷ with a hat, because it gives predicted scores and not actual ones. The slope 7.5 is the predicted gain in score per extra hour.' },
       ],
       answer: '\\hat{y} = 51.5 + 7.5x',
     },
@@ -1046,7 +1073,16 @@ const STAT_4: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Interpret the slope and the intercept',
-    body: 'ŷ = 51.5 + 7.5x, where x is hours studied and y is the score.\nSlope 7.5: for each additional hour studied, the PREDICTED score rises by 7.5 points.\nIntercept 51.5: a student who studies 0 hours is predicted to score 51.5. Always say "predicted" — the line is a model, not a promise.',
+    body: 'ŷ = 51.5 + 7.5x, where x is hours studied and y is the score. Interpret the slope and the intercept in context.',
+    steps: {
+      steps: [
+        { tex: 'b = 7.5', text: 'The slope is the number multiplying x. It is the change in ŷ when x goes up by 1, so each extra hour of study changes the predicted score by 7.5 points.' },
+        { text: 'The slope is positive, so the predicted score rises. Use the word predicted, because the line is a model of an average pattern and not a promise for each student.' },
+        { tex: 'a = 51.5 + 7.5(0) = 51.5', text: 'The intercept is ŷ when x = 0, found by putting 0 into the line. A student who studies 0 hours is predicted to score 51.5.' },
+        { text: 'Check whether the intercept makes sense: 0 hours is just outside the data, which run from 1 to 5 hours. Treat it as where the line starts and not as a precise prediction.' },
+      ],
+      answer: '+7.5\\ \\text{points per hour;}\\ 51.5\\ \\text{at 0 hours (predicted)}',
+    },
     compare: {
       cols: [
         { title: 'Slope 7.5', lines: ['Per extra hour of study,', 'predicted score rises 7.5 points'], tone: 'accent' },
@@ -1058,12 +1094,12 @@ const STAT_4: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Predict, then find a residual',
-    body: 'Using ŷ = 51.5 + 7.5x, predict the score for 3.5 hours, then find the residual for the student who studied 2 hours and scored 65.\nPrediction: 51.5 + 7.5 × 3.5 = 51.5 + 26.25 = 77.75.\nFor x = 2: ŷ = 51.5 + 15 = 66.5. Residual = 65 − 66.5 = −1.5. The point sits 1.5 below the line.',
+    body: 'Using ŷ = 51.5 + 7.5x, predict the score for 3.5 hours, then find the residual for the student who studied 2 hours and scored 65.',
     steps: {
       steps: [
-        { tex: '\\hat{y} = 51.5 + 7.5(3.5) = 77.75', text: 'Substitute 3.5 hours — inside the data range, so this is fine.' },
-        { tex: '\\hat{y} = 51.5 + 7.5(2) = 66.5', text: 'The prediction for the 2-hour student.' },
-        { tex: '65 - 66.5 = -1.5', text: 'Actual minus predicted.' },
+        { tex: '\\hat{y} = 51.5 + 7.5(3.5) = 77.75', text: 'Substitute x = 3.5 into the line. This is 3.5 hours, inside the data range of 1 to 5 hours, so predicting here is safe: 51.5 + 26.25 = 77.75.' },
+        { tex: '\\hat{y} = 51.5 + 7.5(2) = 66.5', text: 'For the residual, first find the line\'s prediction at this student\'s x = 2 hours: 51.5 + 15 = 66.5. The residual compares this with what really happened.' },
+        { tex: '65 - 66.5 = -1.5', text: 'Subtract actual minus predicted: 65 − 66.5 = −1.5. The negative sign says the point is below the line, so the student scored 1.5 points under the prediction.' },
       ],
       answer: '77.75;\\ \\text{residual } -1.5',
     },
@@ -1072,12 +1108,12 @@ const STAT_4: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Another way: slope from r and the two SDs',
-    body: 'Without the cross-product sum, the slope still comes from b = r·(s_y/s_x).\nFor the study data s_x = √(10/4) ≈ 1.58 hours, s_y = √(570/4) ≈ 11.94 points, and r = 0.993.\nb = 0.993 × 11.94 / 1.58 ≈ 7.5 — the same slope. Then a = 74 − 7.5(3) = 51.5 as before.',
+    body: 'Without the cross-product sum, the slope still comes from b = r·(s_y/s_x). Use r = 0.993 and find the two standard deviations first.',
     steps: {
       steps: [
-        { tex: 's_x = \\sqrt{\\tfrac{10}{4}} \\approx 1.58,\\quad s_y = \\sqrt{\\tfrac{570}{4}} \\approx 11.94', text: 'Standard deviations of x and y.' },
-        { tex: 'b = r\\,\\frac{s_y}{s_x} = 0.993 \\times \\frac{11.94}{1.58} \\approx 7.5', text: 'Correlation times the ratio of spreads.' },
-        { tex: 'a = 74 - 7.5(3) = 51.5', text: 'Through the point of means, as always.' },
+        { tex: 's_x = \\sqrt{\\tfrac{10}{4}} \\approx 1.58,\\quad s_y = \\sqrt{\\tfrac{570}{4}} \\approx 11.94', text: 'Find each standard deviation with the n − 1 formula. The squared x-deviations add to 10 and the squared y-deviations to 570, giving s_x ≈ 1.58 hours and s_y ≈ 11.94 points.' },
+        { tex: 'b = r\\,\\frac{s_y}{s_x} = 0.993 \\times \\frac{11.94}{1.58} \\approx 7.5', text: 'Multiply r by the ratio s_y/s_x. The ratio converts standard deviations of y per standard deviation of x into points per hour, giving a slope of about 7.5.' },
+        { tex: 'a = 74 - 7.5(3) = 51.5', text: 'Find the intercept as before. The line passes through the point of means (3, 74), so a = 74 − 22.5 = 51.5, and the line matches the first method.' },
       ],
       answer: '\\hat{y} = 51.5 + 7.5x',
     },
@@ -1085,9 +1121,18 @@ const STAT_4: LessonSlide[] = [
   {
     kind: 'example',
     head: 'r² says how much the line explains',
-    body: 'For the study data, r = 0.993. Find and interpret r².\nr² = 0.993² ≈ 0.987.\nAbout 98.7% of the variation in test scores is explained by the linear relationship with hours studied. The other 1.3% is scatter the line cannot account for.',
+    body: 'For the study data, r ≈ 0.993. Find and interpret r².',
+    steps: {
+      steps: [
+        { tex: 'r^{2} = \\frac{75^{2}}{10 \\cdot 570} = \\frac{5625}{5700} \\approx 0.987', text: 'Square the correlation, using the unrounded r = 75/√5700 ≈ 0.9934 so rounding does not creep in. Squaring also removes the sign, so r² is always between 0 and 1.' },
+        { text: 'Read r² as a share: it is the fraction of the variation in y that is accounted for by the linear relationship with x. So 0.987 means 98.7%.' },
+        { tex: '1 - 0.987 = 0.013', text: 'The rest, 1 − 0.987 = 0.013 or 1.3%, is variation the line cannot explain. It shows up as the scatter of the points around the line.' },
+        { text: 'Write the interpretation in context: 98.7% of the variation in test scores is explained by the linear relationship with hours studied.' },
+      ],
+      answer: '98.7\\%\\ \\text{of the variation in score is explained by hours}',
+    },
     formula: {
-      tex: 'r^{2} = 0.993^{2} \\approx 0.987',
+      tex: 'r^{2} = \\frac{5625}{5700} \\approx 0.987',
       note: '"98.7% of the variation in score is explained by the linear relationship with hours studied."',
       parts: [
         { sym: 'r^{2}', means: 'always between 0 and 1, never negative', tone: 'accent' },
@@ -1098,12 +1143,12 @@ const STAT_4: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Picture it first: 20 hours of studying',
-    body: 'A classmate uses ŷ = 51.5 + 7.5x to predict the score after 20 hours. Sketch where x = 20 lands: far to the right of every data point.\nŷ = 51.5 + 7.5 × 20 = 201.5 — an impossible score.\nThe data covered only 1 to 5 hours. Predicting at 20 is EXTRAPOLATION, and the line is not trusted there.',
+    body: 'A classmate uses ŷ = 51.5 + 7.5x to predict the score after 20 hours of studying. Sketch where x = 20 lands compared with the data, then decide whether to trust the answer.',
     steps: {
       steps: [
-        { tex: '\\hat{y} = 51.5 + 7.5(20) = 201.5', text: 'The arithmetic is fine.' },
-        { tex: '20 \\gg 5', text: 'But 20 hours is far outside the 1–5 hour range of the data.' },
-        { text: 'The relationship may bend or level off out there. Do not trust the prediction.' },
+        { tex: '\\hat{y} = 51.5 + 7.5(20) = 51.5 + 150 = 201.5', text: 'Substitute x = 20 into the line. The arithmetic is fine, but the result, 201.5, is an impossible test score.' },
+        { tex: '20 \\gg 5', text: 'Compare 20 hours with the data, which only cover 1 to 5 hours. Predicting far outside the range of the data is called extrapolation.' },
+        { text: 'We only know the line fits where we have data. Out there the relationship may bend or level off, so nothing supports the line. Do not trust the prediction.' },
       ],
       answer: '201.5 \\text{ — impossible; extrapolation}',
     },
@@ -1141,20 +1186,21 @@ const STAT_4: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: all five residuals',
-    body: 'Find every residual for ŷ = 51.5 + 7.5x and add them up.\nPredictions at x = 1, 2, 3, 4, 5 are 59, 66.5, 74, 81.5, 89. Residuals: 60 − 59 = 1, 65 − 66.5 = −1.5, 75 − 74 = 1, 80 − 81.5 = −1.5, 90 − 89 = 1.\nSum: 1 − 1.5 + 1 − 1.5 + 1 = 0. A least-squares line always balances its residuals to zero.',
+    body: 'Find every residual for ŷ = 51.5 + 7.5x and add them up. What do you notice?',
+    steps: {
+      steps: [
+        { tex: '\\hat{y}: 59,\\ 66.5,\\ 74,\\ 81.5,\\ 89', text: 'Plug each x = 1, 2, 3, 4, 5 into the line to get the predicted scores. Each one is 51.5 plus 7.5 times x, which gives 59, 66.5, 74, 81.5 and 89.' },
+        { tex: '1,\\ -1.5,\\ 1,\\ -1.5,\\ 1', text: 'Subtract predicted from actual for each point, since a residual is actual minus predicted: 60 − 59, 65 − 66.5, 75 − 74, 80 − 81.5 and 90 − 89.' },
+        { tex: '1 - 1.5 + 1 - 1.5 + 1 = 0', text: 'Add the five residuals. The positive ones total 3 and the negative ones total −3, so they cancel to exactly 0.' },
+        { text: 'This is no accident. The least-squares line balances the misses above and below it, so its residuals always sum to zero, and the point of means (3, 74) has residual 0.' },
+      ],
+      answer: '\\sum \\text{residuals} = 0',
+    },
     table: {
       head: ['x', 'y', 'ŷ', 'y − ŷ'],
       rows: [['1', '60', '59', '1'], ['2', '65', '66.5', '−1.5'], ['3', '75', '74', '1'], ['4', '80', '81.5', '−1.5'], ['5', '90', '89', '1'], ['sum', '370', '370', '0']],
       mark: 5,
       note: 'The residuals sum to 0, and the point of means (3, 74) has residual exactly 0.',
-    },
-    steps: {
-      steps: [
-        { tex: '\\hat{y}: 59,\\ 66.5,\\ 74,\\ 81.5,\\ 89', text: 'Plug x = 1 through 5 into the line.' },
-        { tex: '1,\\ -1.5,\\ 1,\\ -1.5,\\ 1', text: 'Actual minus predicted, five times.' },
-        { tex: '1 - 1.5 + 1 - 1.5 + 1 = 0', text: 'They cancel exactly.' },
-      ],
-      answer: '\\sum \\text{residuals} = 0',
     },
   },
   {

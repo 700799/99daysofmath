@@ -1388,6 +1388,7 @@ const U11: LessonSlide[] = [
     kind: 'concept',
     head: 'Chop it into strips',
     body: 'Split [a, b] into n equal strips of width Δx = (b − a)/n. Stand a rectangle on each strip and add their areas: height times width, summed. For y = x² on [0, 2] with n = 4, Δx = 0.5 and the strip edges are 0, 0.5, 1, 1.5, 2.',
+    why: 'Area of a rectangle is easy: height times width. A curved region is not a rectangle, but a very thin strip of it almost is, because the curve barely changes across a thin strip. Adding many rectangle areas approximates the whole area, and the thinner the strips the better the approximation.',
     art: sqFig(4, 'right', 'Right Riemann sum, n = 4: heights at the right edges', 'R₄ = 3.75', 'The same four strips, but each rectangle reaches up to the curve at its right edge, so they overshoot.', 'Four rectangles under the parabola from 0 to 2, each with its height taken at the right edge of its strip, poking above the curve'),
     formula: {
       tex: '\\Delta x = \\frac{b - a}{n} = \\frac{2 - 0}{4} = 0.5',
@@ -1403,12 +1404,13 @@ const U11: LessonSlide[] = [
     kind: 'concept',
     head: 'Left, right or midpoint',
     body: 'A LEFT sum reads each height at the left edge of its strip, a RIGHT sum at the right edge, a MIDPOINT sum at the middle. For a rising curve, left underestimates and right overestimates, and the truth sits between them. Midpoint is usually closest.',
+    why: 'For a rising curve a left rectangle uses the smallest height on its strip, so it sits under the curve, and a right rectangle uses the largest, so it pokes above. The true area is trapped between them. A midpoint rectangle overshoots on one half of its strip and undershoots on the other, so the errors nearly cancel.',
     art: sqFig(4, 'mid', 'Midpoint sum, n = 4: heights at the strip centres', 'M₄ = 2.625', 'Each rectangle overshoots on one side and falls short on the other, and the errors nearly cancel.', 'Four rectangles under the parabola from 0 to 2, each with its height taken at the middle of its strip, crossing the curve'),
     compare: {
       cols: [
         { title: 'Left', tex: 'f(x_{i-1})\\,\\Delta x', lines: ['Heights 0, 0.25, 1, 2.25', 'L₄ = 1.75, too low'], tone: 'accent' },
         { title: 'Right', tex: 'f(x_i)\\,\\Delta x', lines: ['Heights 0.25, 1, 2.25, 4', 'R₄ = 3.75, too high'], tone: 'bad' },
-        { title: 'Midpoint', tex: 'f(\\bar{x}_i)\\,\\Delta x', lines: ['Heights at 0.25, 0.75, …', 'M₄ = 2.625, close'], tone: 'ok' },
+        { title: 'Midpoint', tex: 'f(\\bar{x}_i)\\,\\Delta x', lines: ['Heights read at x = 0.25, 0.75, …', 'M₄ = 2.625, close'], tone: 'ok' },
       ],
       note: 'The true area is 8/3 ≈ 2.667. All three are estimates of the same thing.',
     },
@@ -1417,6 +1419,7 @@ const U11: LessonSlide[] = [
     kind: 'concept',
     head: 'Let the strips shrink: the definite integral',
     body: 'As n grows, the rectangles get skinny and the gaps between left, right and the curve close up. With n = 16 the left sum is already 2.42 and the right sum 2.92, squeezing toward 8/3 ≈ 2.67. The limit as n → ∞ is the DEFINITE INTEGRAL, written ∫₀² x² dx.',
+    why: 'With strips of width Δx, the gap between the right sum and the left sum is exactly (f(b) − f(a))·Δx, because every rectangle except one end cancels in the difference. Halving the width halves the gap. So the gap shrinks to zero as n grows, trapping a single number between the two sums.',
     art: sqFig(16, 'left', 'Left sum with n = 16: the gaps are closing', 'L₁₆ ≈ 2.42', 'Sixteen thin rectangles. Compare with the four fat ones two slides ago: much less is missing.', 'Sixteen thin rectangles under the parabola from 0 to 2, following the curve closely with only slivers of white above them'),
     formula: {
       tex: '\\int_{0}^{2} x^{2}\\,dx = \\lim_{n\\to\\infty} L_n = \\lim_{n\\to\\infty} R_n = \\frac{8}{3}',
@@ -1432,6 +1435,7 @@ const U11: LessonSlide[] = [
     kind: 'concept',
     head: 'The integral is signed area',
     body: 'A region below the x-axis counts NEGATIVE. The integral of x − 1 from 0 to 3 is not the total shaded area 2.5: the triangle below the axis contributes −0.5 and the one above contributes +2, so the integral is 1.5. The integral of x − 2 from 0 to 2 is −2, not 2.',
+    why: 'The integral is a sum of height times width, and heights below the axis are negative numbers. A negative height times a positive width gives a negative piece, so regions below the axis subtract. This is also why displacement differs from distance: leftward motion has negative velocity.',
     art: signedFig(),
     formula: {
       tex: '\\int_{0}^{3} (x - 1)\\,dx = -\\tfrac{1}{2} + 2 = \\tfrac{3}{2}',
@@ -1446,6 +1450,7 @@ const U11: LessonSlide[] = [
     kind: 'concept',
     head: 'Properties, and geometry shortcuts',
     body: 'Integrals obey simple rules: ∫ₐᵃ f = 0, swapping the limits flips the sign, constants pull out front, and ∫ₐᵇ + ∫ᵇᶜ = ∫ₐᶜ. And if f is a familiar shape, a line or a half circle, compute the integral with geometry: ∫₀⁴ 2x dx is a triangle with base 4 and height 8, so it is 16.',
+    why: 'Each rule comes straight from the sum of rectangles. A zero-width interval has no strips, so the sum is 0. Swapping the limits makes Δx = (a − b)/n negative, which flips the sign. Doubling every height doubles every rectangle, so constants pull out, and two neighbouring intervals just put their strips side by side.',
     art: triFig(),
     formula: {
       tex: '\\int_{0}^{4} 2x\\,dx = \\tfrac{1}{2}\\cdot 4 \\cdot 8 = 16',
@@ -1468,7 +1473,7 @@ const U11: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Start simple: a left sum with n = 4',
-    body: 'Estimate the area under f(x) = x² on [0, 2] with a LEFT Riemann sum, n = 4.\nΔx = 0.5, and the left edges are 0, 0.5, 1, 1.5 with heights 0, 0.25, 1, 2.25.\nThe heights sum to 3.5, so the area is about 3.5 × 0.5 = 1.75, an underestimate.',
+    body: 'Estimate the area under f(x) = x² on [0, 2] with a LEFT Riemann sum using n = 4 strips. Find the strip width, read the heights at the left edges, and add up the rectangles.',
     table: {
       head: ['strip', 'left edge', 'height f(x)'],
       rows: [['[0, 0.5]', '0', '0'], ['[0.5, 1]', '0.5', '0.25'], ['[1, 1.5]', '1', '1'], ['[1.5, 2]', '1.5', '2.25']],
@@ -1476,9 +1481,9 @@ const U11: LessonSlide[] = [
     },
     steps: {
       steps: [
-        { tex: '\\Delta x = \\tfrac{2 - 0}{4} = 0.5', text: 'Width of each strip.' },
-        { tex: 'f(0) + f(0.5) + f(1) + f(1.5) = 0 + 0.25 + 1 + 2.25 = 3.5', text: 'Add the four left-edge heights.' },
-        { tex: 'L_4 = 3.5 \\times 0.5 = 1.75', text: 'Multiply the sum of heights by the common width.' },
+        { tex: '\\Delta x = \\tfrac{2 - 0}{4} = 0.5', text: 'Find the width of each strip by dividing the interval length by the number of strips: (2 − 0)/4 = 0.5. All strips share this width, so it can be factored out.' },
+        { tex: 'f(0) + f(0.5) + f(1) + f(1.5) = 0 + 0.25 + 1 + 2.25 = 3.5', text: 'A left sum reads each height at the left edge of its strip: x = 0, 0.5, 1 and 1.5. Square each to get the heights 0, 0.25, 1 and 2.25, which add to 3.5.' },
+        { tex: 'L_4 = 3.5 \\times 0.5 = 1.75', text: 'Multiply the sum of heights by the common width, because each rectangle has area height × 0.5. This gives 1.75, an underestimate because the curve is rising.' },
       ],
       answer: 'L_4 = 1.75\\ \\text{(an underestimate)}',
     },
@@ -1486,13 +1491,13 @@ const U11: LessonSlide[] = [
   {
     kind: 'example',
     head: 'The same strips, a right sum',
-    body: 'Same curve, same four strips, but a RIGHT Riemann sum.\nRight edges 0.5, 1, 1.5, 2 have heights 0.25, 1, 2.25, 4, which sum to 7.5.\nArea ≈ 7.5 × 0.5 = 3.75, an overestimate. The true area 8/3 ≈ 2.67 sits between 1.75 and 3.75.',
+    body: 'Use the same curve and the same four strips, but a RIGHT Riemann sum. Read each height at the right edge, add, and multiply by the width. How does the answer compare with the left sum?',
     steps: {
       steps: [
-        { tex: 'x = 0.5,\\ 1,\\ 1.5,\\ 2', text: 'The right edge of each strip.' },
-        { tex: '0.25 + 1 + 2.25 + 4 = 7.5', text: 'Add the four heights.' },
-        { tex: 'R_4 = 7.5 \\times 0.5 = 3.75', text: 'Multiply by Δx.' },
-        { tex: '1.75 < \\tfrac{8}{3} < 3.75', text: 'The truth is trapped between the left and right sums.' },
+        { tex: 'x = 0.5,\\ 1,\\ 1.5,\\ 2', text: 'A right sum reads each height at the right edge of its strip. With strips of width 0.5, the right edges are x = 0.5, 1, 1.5 and 2.' },
+        { tex: '0.25 + 1 + 2.25 + 4 = 7.5', text: 'Square each right edge to get the heights 0.25, 1, 2.25 and 4, and add them. The total is 7.5.' },
+        { tex: 'R_4 = 7.5 \\times 0.5 = 3.75', text: 'Multiply by Δx = 0.5, the common width. This gives R₄ = 3.75, an overestimate because the curve rises and each rectangle pokes above it.' },
+        { tex: '1.75 < \\tfrac{8}{3} < 3.75', text: 'The exact area 8/3 ≈ 2.67 lies between the left sum 1.75 and the right sum 3.75, because for a rising curve left is too low and right is too high.' },
       ],
       answer: 'R_4 = 3.75\\ \\text{(an overestimate)}',
     },
@@ -1500,14 +1505,14 @@ const U11: LessonSlide[] = [
   {
     kind: 'example',
     head: 'The midpoint sum',
-    body: 'Same curve, same four strips, but heights read at the midpoints 0.25, 0.75, 1.25, 1.75.\nThe heights are 0.0625, 0.5625, 1.5625, 3.0625, which sum to 5.25.\nArea ≈ 5.25 × 0.5 = 2.625, very close to 8/3 ≈ 2.667.',
+    body: 'Same curve and same four strips, but read each height at the middle of its strip. Find the midpoints, square them, add the heights, and multiply by the width.',
     steps: {
       steps: [
-        { tex: '\\bar{x} = 0.25,\\ 0.75,\\ 1.25,\\ 1.75', text: 'The middle of each strip.' },
-        { tex: '0.25^{2} = 0.0625,\\quad 0.75^{2} = 0.5625', text: 'Square the first two midpoints.' },
-        { tex: '1.25^{2} = 1.5625,\\quad 1.75^{2} = 3.0625', text: 'Square the last two.' },
-        { tex: '0.0625 + 0.5625 + 1.5625 + 3.0625 = 5.25', text: 'Add the heights.' },
-        { tex: 'M_4 = 5.25 \\times 0.5 = 2.625', text: 'Multiply by Δx.' },
+        { tex: '\\bar{x} = 0.25,\\ 0.75,\\ 1.25,\\ 1.75', text: 'A midpoint sum reads each height at the middle of its strip. The strips are [0, 0.5], [0.5, 1], [1, 1.5] and [1.5, 2], so the midpoints are 0.25, 0.75, 1.25 and 1.75.' },
+        { tex: '0.25^{2} = 0.0625,\\quad 0.75^{2} = 0.5625', text: 'Square the first two midpoints to get their heights: 0.25² = 0.0625 and 0.75² = 0.5625. Squaring is just evaluating f(x) = x².' },
+        { tex: '1.25^{2} = 1.5625,\\quad 1.75^{2} = 3.0625', text: 'Square the last two midpoints the same way: 1.25² = 1.5625 and 1.75² = 3.0625.' },
+        { tex: '0.0625 + 0.5625 + 1.5625 + 3.0625 = 5.25', text: 'Add the four heights to get 5.25. We add first and multiply once at the end, which saves arithmetic and chances to slip.' },
+        { tex: 'M_4 = 5.25 \\times 0.5 = 2.625', text: 'Multiply by the width 0.5 to get M₄ = 2.625. This is very close to the exact 8/3 ≈ 2.667 because overshoot and undershoot on each strip nearly cancel.' },
       ],
       answer: 'M_4 = 2.625',
     },
@@ -1515,14 +1520,14 @@ const U11: LessonSlide[] = [
   {
     kind: 'example',
     head: 'The trapezoid rule',
-    body: 'Use the trapezoid rule with n = 4 on the same curve.\nEach strip becomes a trapezoid whose top joins two points on the curve, with area (Δx/2)(left height + right height).\nAdding them: (0.5/2)[f(0) + 2f(0.5) + 2f(1) + 2f(1.5) + f(2)] = 0.25 × 11 = 2.75.',
+    body: 'Estimate the same area with the trapezoid rule, n = 4. Instead of flat tops, each strip gets a slanted top joining two points on the curve.',
     art: trapFig(),
     steps: {
       steps: [
-        { tex: 'T_n = \\tfrac{\\Delta x}{2}\\big[f(x_0) + 2f(x_1) + \\cdots + 2f(x_{n-1}) + f(x_n)\\big]', text: 'Interior heights are shared by two trapezoids, so they count twice.' },
-        { tex: '\\tfrac{0.5}{2} = 0.25', text: 'Half the strip width.' },
-        { tex: '0 + 2(0.25) + 2(1) + 2(2.25) + 4 = 0 + 0.5 + 2 + 4.5 + 4 = 11', text: 'The bracket.' },
-        { tex: 'T_4 = 0.25 \\times 11 = 2.75', text: 'Multiply.' },
+        { tex: 'T_n = \\tfrac{\\Delta x}{2}\\big[f(x_0) + 2f(x_1) + \\cdots + 2f(x_{n-1}) + f(x_n)\\big]', text: 'Each trapezoid has area (Δx/2)(left height + right height). Adding them, every interior height is shared by two neighbours, so it appears twice and the end heights once.' },
+        { tex: '\\tfrac{0.5}{2} = 0.25', text: 'Compute half the strip width: 0.5/2 = 0.25. This is the common factor that sits outside the bracket.' },
+        { tex: '0 + 2(0.25) + 2(1) + 2(2.25) + 4 = 0 + 0.5 + 2 + 4.5 + 4 = 11', text: 'Evaluate the bracket using f(x) = x²: f(0) = 0, f(0.5) = 0.25, f(1) = 1, f(1.5) = 2.25 and f(2) = 4, doubling the three interior ones to get a total of 11.' },
+        { tex: 'T_4 = 0.25 \\times 11 = 2.75', text: 'Multiply the half-width 0.25 by the bracket 11 to get T₄ = 2.75. It sits between the left and right sums, and is closer to the true area 2.667.' },
       ],
       answer: 'T_4 = 2.75',
     },
@@ -1530,12 +1535,12 @@ const U11: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Another way: average the left and right sums',
-    body: 'A trapezoid sum is exactly the average of the left and right sums, because each trapezoid is the average of the two rectangles on its strip.\n(L₄ + R₄)/2 = (1.75 + 3.75)/2 = 5.5/2 = 2.75.\nSame 2.75 with no new arithmetic, and a quick check on the long formula.',
+    body: 'A trapezoid sum equals the average of the left and right sums. Use the values of L₄ and R₄ you already found to get T₄ with almost no new arithmetic.',
     steps: {
       steps: [
-        { tex: 'T_n = \\tfrac{L_n + R_n}{2}', text: 'Each trapezoid averages the left and right rectangles on its strip.' },
-        { tex: '\\tfrac{1.75 + 3.75}{2} = \\tfrac{5.5}{2}', text: 'Plug in the two sums already computed.' },
-        { tex: '= 2.75', text: 'Matches the direct formula.' },
+        { tex: 'T_n = \\tfrac{L_n + R_n}{2}', text: 'A trapezoid with parallel sides a and b has area equal to the average of a and b times its width, so each trapezoid is the average of the left and right rectangles on its strip.' },
+        { tex: '\\tfrac{1.75 + 3.75}{2} = \\tfrac{5.5}{2}', text: 'Plug in the two sums we already computed, L₄ = 1.75 and R₄ = 3.75, and add them to get 5.5 before halving.' },
+        { tex: '= 2.75', text: 'Halve 5.5 to get 2.75. This matches the direct trapezoid formula, so the two methods check each other.' },
       ],
       answer: 'T_4 = 2.75',
     },
@@ -1543,13 +1548,13 @@ const U11: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Picture it first: speedometer readings',
-    body: 'A car speedometer reads 10, 14, 20 and 22 m/s at t = 0, 2, 4 and 6 s. Estimate the distance traveled with a left Riemann sum.\nSketch the readings as bars: each bar is speed × 2 seconds = distance covered in that interval.\nLeft heights 10, 14, 20 (the final 22 is never used): (10 + 14 + 20) × 2 = 88 m. A right sum gives 112 m; the truth is between.',
+    body: 'A car speedometer reads 10, 14, 20 and 22 m/s at t = 0, 2, 4 and 6 s. Estimate the distance traveled with a left Riemann sum. Sketch each reading as a bar with height equal to the speed and width 2 seconds.',
     art: speedFig(),
     steps: {
       steps: [
-        { tex: '\\Delta t = 2\\ \\text{s}', text: 'Readings every two seconds.' },
-        { tex: '10 + 14 + 20 = 44', text: 'Left heights: the first three readings.' },
-        { tex: '44 \\times 2 = 88\\ \\text{m}', text: 'Speed times time is distance.' },
+        { tex: '\\Delta t = 2\\ \\text{s}', text: 'The readings are two seconds apart, so every rectangle has width Δt = 2 s. The time between readings is the width of each bar.' },
+        { tex: '10 + 14 + 20 = 44', text: 'A left sum uses the speed at the start of each interval, which means the first three readings 10, 14 and 20. The last reading 22 is unused because no interval starts there.' },
+        { tex: '44 \\times 2 = 88\\ \\text{m}', text: 'Speed times time is distance, so each bar is the distance covered in its interval. The sum of speeds 44 times 2 s gives 88 m.' },
         { tex: '(14 + 20 + 22) \\times 2 = 112\\ \\text{m}', text: 'The right sum, for comparison. The car sped up, so left is low and right is high.' },
       ],
       answer: '\\approx 88\\ \\text{m (left sum)}',
@@ -1558,13 +1563,13 @@ const U11: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Signed area by geometry',
-    body: 'Compute the integral of (x − 1) from 0 to 3 using geometry.\nThe line crosses the axis at x = 1. From 0 to 1 the triangle sits below the axis: area ½ · 1 · 1 = 0.5, counted as −0.5.\nFrom 1 to 3 the triangle is above: ½ · 2 · 2 = 2. Total signed area: 2 − 0.5 = 1.5.',
+    body: 'Compute the integral of (x − 1) from 0 to 3 using geometry only. Sketch the line, split where it crosses the axis, and use triangle areas.',
     steps: {
       steps: [
-        { tex: 'x - 1 = 0 \;\\Rightarrow\; x = 1', text: 'Where the line crosses the axis: split there.' },
-        { tex: '\\tfrac{1}{2}(1)(1) = 0.5 \;\\to\; -0.5', text: 'The triangle from 0 to 1 lies below the axis.' },
-        { tex: '\\tfrac{1}{2}(2)(2) = 2', text: 'The triangle from 1 to 3 lies above.' },
-        { tex: '-0.5 + 2 = 1.5', text: 'Add the signed pieces.' },
+        { tex: 'x - 1 = 0 \;\\Rightarrow\; x = 1', text: 'The line y = x − 1 crosses the axis at x = 1, so the region switches from below the axis to above it. Split the integral there so each piece is one triangle.' },
+        { tex: '\\tfrac{1}{2}(1)(1) = 0.5 \;\\to\; -0.5', text: 'From 0 to 1 the line is below the axis, forming a triangle with base 1 and height 1, area 0.5. Below the axis counts negative, so it contributes −0.5.' },
+        { tex: '\\tfrac{1}{2}(2)(2) = 2', text: 'From 1 to 3 the line is above the axis, forming a triangle with base 2 and height 2, area ½ · 2 · 2 = 2, which counts as positive.' },
+        { tex: '-0.5 + 2 = 1.5', text: 'Add the signed pieces: −0.5 + 2 = 1.5. The integral is signed area, so the part below the axis cancels part of the part above.' },
       ],
       answer: '\\int_{0}^{3} (x - 1)\\,dx = 1.5',
     },
@@ -1621,7 +1626,7 @@ const U11: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: an integral from a table',
-    body: 'A function is known only at five points: f(0) = 2, f(1) = 5, f(2) = 7, f(3) = 8, f(4) = 8. Estimate ∫₀⁴ f(x) dx with the trapezoid rule.\nΔx = 1. Connect the dots and add the four trapezoids.\nT₄ = (1/2)[2 + 2(5) + 2(7) + 2(8) + 8] = (1/2)(50) = 25.',
+    body: 'A function is known only at five points: f(0) = 2, f(1) = 5, f(2) = 7, f(3) = 8, f(4) = 8. Estimate ∫₀⁴ f(x) dx with the trapezoid rule, since a table gives no formula to integrate.',
     art: dataTrap(),
     table: {
       head: ['x', '0', '1', '2', '3', '4'],
@@ -1630,10 +1635,10 @@ const U11: LessonSlide[] = [
     },
     steps: {
       steps: [
-        { tex: '\\Delta x = \\tfrac{4 - 0}{4} = 1', text: 'Four strips of width 1.' },
-        { tex: '2 + 2(5) + 2(7) + 2(8) + 8', text: 'Ends once, interior points twice.' },
-        { tex: '= 2 + 10 + 14 + 16 + 8 = 50', text: 'Add the weighted heights.' },
-        { tex: 'T_4 = \\tfrac{1}{2} \\times 50 = 25', text: 'Multiply by Δx/2.' },
+        { tex: '\\Delta x = \\tfrac{4 - 0}{4} = 1', text: 'The x-values are 0, 1, 2, 3 and 4, so there are four strips and each has width Δx = (4 − 0)/4 = 1.' },
+        { tex: '2 + 2(5) + 2(7) + 2(8) + 8', text: 'In the trapezoid rule the two end heights are used once, and each interior height is shared by two trapezoids so it is counted twice.' },
+        { tex: '= 2 + 10 + 14 + 16 + 8 = 50', text: 'Add the weighted heights: 2 + 10 + 14 + 16 + 8 = 50. The table weights 1, 2, 2, 2, 1 make sure no height is missed.' },
+        { tex: 'T_4 = \\tfrac{1}{2} \\times 50 = 25', text: 'Multiply by Δx/2 = 1/2 to get T₄ = 25. The factor Δx/2 is the common half-width from each trapezoid formula.' },
         { tex: 'L_4 = 22,\\quad R_4 = 28', text: 'Check: the trapezoid estimate is their average, (22 + 28)/2 = 25.' },
       ],
       answer: '\\int_{0}^{4} f(x)\\,dx \\approx 25',
@@ -1794,6 +1799,7 @@ const U12: LessonSlide[] = [
     kind: 'concept',
     head: 'A whole family of antiderivatives',
     body: 'The derivative of x² is 2x. So is the derivative of x² + 1 and of x² − 1, because a constant differentiates to zero. Every antiderivative of 2x is x² + C for some constant C. The graphs are the same parabola slid up or down, and at x = 1 every one of them has slope 2.',
+    why: 'A constant has slope zero, so adding a constant to a function never changes its derivative. Graphically, every antiderivative is the same shape slid up or down, so all the parabolas have the same slope at the same x. That is why the answer to an antidifferentiation question must carry an unknown constant C.',
     art: familyFig(),
     formula: {
       tex: '\\int 2x\\,dx = x^{2} + C',
@@ -1809,6 +1815,7 @@ const U12: LessonSlide[] = [
     kind: 'concept',
     head: 'Reverse the power rule',
     body: 'Differentiating xⁿ multiplies by the power and lowers it by one. Antidifferentiating does the opposite in the opposite order: add one to the power, then divide by the new power. So the antiderivative of xⁿ is xⁿ⁺¹/(n + 1) + C, for every n except −1.',
+    why: 'Differentiation does two things: it multiplies by the power and then lowers the power by one. To undo that you reverse the steps in reverse order: raise the power by one, then divide by the new power. Check with x²: x³/3 differentiates to 3x²/3 = x². For n = −1 the new power would be 0, and dividing by zero is impossible.',
     art: flow([{ label: 'xⁿ', color: AMB }, { label: 'power + 1', color: SKY }, { label: '÷ new power', color: VIO }, { label: '+ C', color: EMR }], { horizontal: true, title: 'Power rule in reverse', caption: 'Check by differentiating: (n + 1)xⁿ/(n + 1) = xⁿ.' }),
     formula: {
       tex: '\\int x^{n}\\,dx = \\frac{x^{n+1}}{n + 1} + C \\qquad (n \\neq -1)',
@@ -1824,6 +1831,7 @@ const U12: LessonSlide[] = [
     kind: 'concept',
     head: 'The special ones to memorise',
     body: 'A few antiderivatives do not come from the power rule. 1/x gives ln|x| + C. eˣ gives eˣ + C. cos x gives sin x + C. And sin x gives −cos x + C, with the minus sign, because the derivative of cos x is −sin x. Across [0, π/2] the area under cos x is sin(π/2) − sin 0 = 1.',
+    why: 'Each entry is a derivative you already know, read backwards. eˣ is its own derivative, so it is its own antiderivative. The derivative of ln x is 1/x, so ln x undoes 1/x. The derivative of cos x is −sin x, so to get a plus sin x you need −cos x: that is where the minus in the sine row comes from.',
     art: cosFig(),
     table: {
       head: ['f(x)', 'Antiderivative F(x)', 'Check: F′(x)'],
@@ -1844,6 +1852,7 @@ const U12: LessonSlide[] = [
     kind: 'concept',
     head: 'FTC part 2: plug in the top, subtract the bottom',
     body: 'To evaluate a definite integral, find ANY antiderivative F, then compute F(b) − F(a). The integral is the rise of F across the interval. For x² on [0, 2], F(x) = x³/3 rises from F(0) = 0 to F(2) = 8/3, so the area is 8/3. No rectangles needed.',
+    why: 'F tells how much has accumulated, so its rise from a to b is the total change over the interval. Since F′ = f is the rate of change, adding up rate times small time over the whole interval gives that same net change. The constant C cancels in F(b) − F(a), so any antiderivative works.',
     art: ftc2Fig(),
     formula: {
       tex: '\\int_{0}^{2} x^{2}\\,dx = \\Big[\\tfrac{x^{3}}{3}\\Big]_{0}^{2} = \\tfrac{8}{3} - 0 = \\tfrac{8}{3}',
@@ -1859,6 +1868,7 @@ const U12: LessonSlide[] = [
     kind: 'concept',
     head: 'FTC part 1, and the net change idea',
     body: 'Define g(x) = ∫ₐˣ f(t) dt, the area accumulated from a up to x. Then g′(x) = f(x): accumulating and differentiating undo each other. Turned around, the integral of a RATE is the NET CHANGE: integrate velocity and you get displacement, integrate a flow rate and you get the amount that flowed in.',
+    why: 'When x moves a tiny step dx to the right, the accumulated area grows by a thin strip of height f(x) and width dx. So the growth of area per unit of dx is f(x), which is exactly g′(x) = f(x). Read the other way, adding up a rate over time gives the total change.',
     art: ftc1Fig(),
     compare: {
       cols: [
@@ -1871,13 +1881,13 @@ const U12: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Start simple: the antiderivative of 3x² + 2x',
-    body: 'Find the antiderivative of 3x² + 2x.\nTerm by term: 3x² becomes 3 · x³/3 = x³, and 2x becomes 2 · x²/2 = x².\nAdd the constant: x³ + x² + C. Check: the derivative of x³ + x² is 3x² + 2x.',
+    body: 'Find the antiderivative of 3x² + 2x. Work one term at a time with the reverse power rule, then check by differentiating.',
     steps: {
       steps: [
-        { tex: '\\int 3x^{2}\\,dx = 3 \\cdot \\tfrac{x^{3}}{3} = x^{3}', text: 'Power up to 3, divide by 3; the 3s cancel.' },
-        { tex: '\\int 2x\\,dx = 2 \\cdot \\tfrac{x^{2}}{2} = x^{2}', text: 'Power up to 2, divide by 2; the 2s cancel.' },
-        { tex: 'x^{3} + x^{2} + C', text: 'Add the pieces and the constant.' },
-        { tex: '\\tfrac{d}{dx}(x^{3} + x^{2} + C) = 3x^{2} + 2x', text: 'Check by differentiating.' },
+        { tex: '\\int 3x^{2}\\,dx = 3 \\cdot \\tfrac{x^{3}}{3} = x^{3}', text: 'Apply the reverse power rule to 3x²: raise the power to 3 and divide by the new power 3. The coefficient 3 then cancels the divisor, leaving x³.' },
+        { tex: '\\int 2x\\,dx = 2 \\cdot \\tfrac{x^{2}}{2} = x^{2}', text: 'Do the same for 2x: raise the power from 1 to 2 and divide by 2. The 2 in front cancels the divisor, leaving x².' },
+        { tex: 'x^{3} + x^{2} + C', text: 'Add the two pieces and include the constant C, because every antiderivative is only determined up to a constant that differentiates to zero.' },
+        { tex: '\\tfrac{d}{dx}(x^{3} + x^{2} + C) = 3x^{2} + 2x', text: 'Check by differentiating x³ + x² + C: the power rule gives 3x² + 2x and the constant disappears. Getting the original function back confirms the antiderivative.' },
       ],
       answer: 'x^{3} + x^{2} + C',
     },
@@ -1885,12 +1895,12 @@ const U12: LessonSlide[] = [
   {
     kind: 'example',
     head: 'The exact area under x² on [0, 2]',
-    body: 'Evaluate ∫₀² x² dx exactly.\nAn antiderivative is x³/3. F(2) − F(0) = 8/3 − 0 = 8/3.\nThat is about 2.667, right between the Riemann estimates 1.75 and 3.75 from Unit 11.',
+    body: 'Evaluate the definite integral of x² from 0 to 2 exactly, with no rectangles. Find an antiderivative, plug in the two limits, and subtract.',
     steps: {
       steps: [
-        { tex: 'F(x) = \\tfrac{x^{3}}{3}', text: 'Reverse power rule: up to 3, divide by 3.' },
-        { tex: 'F(2) = \\tfrac{2^{3}}{3} = \\tfrac{8}{3}', text: 'Evaluate at the top limit.' },
-        { tex: 'F(0) = \\tfrac{0^{3}}{3} = 0', text: 'Evaluate at the bottom limit.' },
+        { tex: 'F(x) = \\tfrac{x^{3}}{3}', text: 'Find an antiderivative with the reverse power rule: raise the power from 2 to 3 and divide by 3. Differentiating x³/3 gives x², so it works.' },
+        { tex: 'F(2) = \\tfrac{2^{3}}{3} = \\tfrac{8}{3}', text: 'Evaluate F at the top limit x = 2: 2³/3 = 8/3. The Fundamental Theorem needs F(b) − F(a), so we need both values.' },
+        { tex: 'F(0) = \\tfrac{0^{3}}{3} = 0', text: 'Evaluate F at the bottom limit x = 0, which gives 0³/3 = 0.' },
         { tex: '\\tfrac{8}{3} - 0 = \\tfrac{8}{3} \\approx 2.667', text: 'Subtract. It lands between the left sum 1.75 and the right sum 3.75.' },
       ],
       answer: '\\int_{0}^{2} x^{2}\\,dx = \\tfrac{8}{3}',
@@ -1899,14 +1909,14 @@ const U12: LessonSlide[] = [
   {
     kind: 'example',
     head: 'A logarithm appears: ∫₁ᵉ 1/x dx',
-    body: 'Evaluate the integral of 1/x from 1 to e.\nThe power rule fails for x⁻¹, so use the special antiderivative ln|x|.\nln e − ln 1 = 1 − 0 = 1.',
+    body: 'Evaluate the integral of 1/x from 1 to e. The usual reverse power rule fails on x⁻¹, so which antiderivative do you use instead?',
     art: recipFig(),
     steps: {
       steps: [
-        { tex: 'F(x) = \\ln|x|', text: 'The one power the reverse power rule cannot handle.' },
-        { tex: 'F(e) = \\ln e = 1', text: 'Top limit: e is the number whose natural log is 1.' },
-        { tex: 'F(1) = \\ln 1 = 0', text: 'Bottom limit.' },
-        { tex: '1 - 0 = 1', text: 'Subtract.' },
+        { tex: 'F(x) = \\ln|x|', text: 'The reverse power rule would give x⁰/0, which is impossible, so 1/x needs its own antiderivative. We know d/dx ln|x| = 1/x, so F(x) = ln|x|.' },
+        { tex: 'F(e) = \\ln e = 1', text: 'Evaluate at the top limit: ln e = 1, because e is by definition the number whose natural log is 1.' },
+        { tex: 'F(1) = \\ln 1 = 0', text: 'Evaluate at the bottom limit: ln 1 = 0, since e⁰ = 1.' },
+        { tex: '1 - 0 = 1', text: 'Subtract bottom from top: 1 − 0 = 1. So the area under 1/x from 1 to e is exactly 1, which is one way to define e.' },
       ],
       answer: '\\int_{1}^{e} \\frac{1}{x}\\,dx = 1',
     },
@@ -1914,13 +1924,13 @@ const U12: LessonSlide[] = [
   {
     kind: 'example',
     head: 'A trig integral: ∫₀^(π/2) cos x dx',
-    body: 'Evaluate the integral of cos x from 0 to π/2.\nAn antiderivative of cos x is sin x.\nsin(π/2) − sin 0 = 1 − 0 = 1.',
+    body: 'Evaluate the integral of cos x from 0 to π/2. Ask yourself which function has cos x as its derivative, then use top minus bottom.',
     steps: {
       steps: [
-        { tex: 'F(x) = \\sin x', text: 'The derivative of sin x is cos x.' },
-        { tex: 'F(\\tfrac{\\pi}{2}) = \\sin\\tfrac{\\pi}{2} = 1', text: 'Top limit.' },
-        { tex: 'F(0) = \\sin 0 = 0', text: 'Bottom limit.' },
-        { tex: '1 - 0 = 1', text: 'Subtract.' },
+        { tex: 'F(x) = \\sin x', text: 'We need a function whose derivative is cos x. Since d/dx sin x = cos x, F(x) = sin x is an antiderivative.' },
+        { tex: 'F(\\tfrac{\\pi}{2}) = \\sin\\tfrac{\\pi}{2} = 1', text: 'Evaluate at the top limit: sin(π/2) = 1, because on the unit circle the angle π/2 points straight up.' },
+        { tex: 'F(0) = \\sin 0 = 0', text: 'Evaluate at the bottom limit: sin 0 = 0, since the angle 0 points along the x-axis with no height.' },
+        { tex: '1 - 0 = 1', text: 'Subtract bottom from top, 1 − 0 = 1, as the Fundamental Theorem says. The area under cosine from 0 to π/2 is exactly 1.' },
       ],
       answer: '\\int_{0}^{\\pi/2} \\cos x\\,dx = 1',
     },
@@ -1928,12 +1938,12 @@ const U12: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Another way: pin down C with an initial condition',
-    body: 'f′(x) = 2x + 1 and f(1) = 4. Find f(x).\nAntidifferentiate to get the family f(x) = x² + x + C, then use the given point to find which member it is.\n1 + 1 + C = 4 gives C = 2, so f(x) = x² + x + 2. Check: f′ = 2x + 1 and f(1) = 4.',
+    body: 'You know that f′(x) = 2x + 1 and that f(1) = 4. Find f(x). Antidifferentiate to get a whole family, then use the given point to choose one member.',
     steps: {
       steps: [
-        { tex: 'f(x) = \\int (2x + 1)\\,dx = x^{2} + x + C', text: 'The whole family of antiderivatives.' },
-        { tex: 'f(1) = 1^{2} + 1 + C = 4', text: 'Impose the initial condition.' },
-        { tex: '2 + C = 4 \;\\Rightarrow\; C = 2', text: 'Solve for the constant.' },
+        { tex: 'f(x) = \\int (2x + 1)\\,dx = x^{2} + x + C', text: 'Antidifferentiate each term with the reverse power rule: 2x gives x² and 1 gives x. Keep + C, because the derivative alone cannot tell which vertical shift is correct.' },
+        { tex: 'f(1) = 1^{2} + 1 + C = 4', text: 'Use the given point f(1) = 4 by substituting x = 1 and setting the whole expression equal to 4. One known value is how a single fact picks one curve from the family.' },
+        { tex: '2 + C = 4 \;\\Rightarrow\; C = 2', text: 'Solve 2 + C = 4 to get C = 2, by subtracting 2 from both sides. Now the constant is known and no longer arbitrary.' },
         { tex: 'f(x) = x^{2} + x + 2', text: 'Check: f′(x) = 2x + 1 and f(1) = 1 + 1 + 2 = 4.' },
       ],
       answer: 'f(x) = x^{2} + x + 2',
@@ -1942,13 +1952,13 @@ const U12: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Picture it first: water flowing in',
-    body: 'Water flows into a tank at r(t) = 4t litres per minute. How much water enters during the first 5 minutes?\nSketch the rate: a line from 0 up to r(5) = 20. The total is the area under it, a triangle.\nBy the FTC: ∫₀⁵ 4t dt = [2t²]₀⁵ = 50 − 0 = 50 litres. Geometry agrees: ½ · 5 · 20 = 50.',
+    body: 'Water flows into a tank at r(t) = 4t litres per minute. How much water enters during the first 5 minutes? Sketch the rate line, then find the area under it two ways.',
     art: rateFig(),
     steps: {
       steps: [
-        { tex: '\\text{total} = \\int_{0}^{5} 4t\\,dt', text: 'The integral of a rate is the net change.' },
-        { tex: 'F(t) = 4 \\cdot \\tfrac{t^{2}}{2} = 2t^{2}', text: 'Antiderivative.' },
-        { tex: 'F(5) - F(0) = 2(25) - 0 = 50', text: 'Top minus bottom.' },
+        { tex: '\\text{total} = \\int_{0}^{5} 4t\\,dt', text: 'The flow rate says how fast the amount changes, so the total entering is the integral of the rate. Integrating r from 0 to 5 gives the net change in water.' },
+        { tex: 'F(t) = 4 \\cdot \\tfrac{t^{2}}{2} = 2t^{2}', text: 'Find an antiderivative with the reverse power rule: 4t becomes 4 times t²/2, which is 2t². Differentiating 2t² gives 4t, so it checks.' },
+        { tex: 'F(5) - F(0) = 2(25) - 0 = 50', text: 'Compute top minus bottom: F(5) − F(0) = 2(25) − 0 = 50. The units are litres, since litres per minute times minutes leaves litres.' },
         { tex: '\\tfrac{1}{2}(5)(20) = 50', text: 'Geometry check: a triangle with base 5 and height 20.' },
       ],
       answer: '50\\ \\text{litres}',
@@ -1999,16 +2009,16 @@ const U12: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: a fractional power',
-    body: 'Evaluate ∫₁⁴ 3√x dx.\nWrite √x as x^(1/2). Add 1 to the power: 3/2. Divide by 3/2, which is multiplying by 2/3, so the antiderivative is 3 · (2/3)x^(3/2) = 2x^(3/2).\nF(4) − F(1) = 2 · 8 − 2 · 1 = 16 − 2 = 14.',
+    body: 'Evaluate the integral of 3√x from 1 to 4. A square root is a power in disguise, so rewrite it first, then use the reverse power rule.',
     art: rootFig(),
     steps: {
       steps: [
-        { tex: '3\\sqrt{x} = 3x^{1/2}', text: 'Write the root as a power.' },
-        { tex: '\\tfrac{1}{2} + 1 = \\tfrac{3}{2}', text: 'Add one to the power.' },
+        { tex: '3\\sqrt{x} = 3x^{1/2}', text: 'Rewrite the square root as a power, x^(1/2), because the reverse power rule only works on powers of x.' },
+        { tex: '\\tfrac{1}{2} + 1 = \\tfrac{3}{2}', text: 'Add one to the exponent: 1/2 + 1 = 3/2. The reverse power rule raises the power by 1 before dividing.' },
         { tex: '3 \\cdot \\tfrac{x^{3/2}}{3/2} = 3 \\cdot \\tfrac{2}{3}x^{3/2} = 2x^{3/2}', text: 'Divide by the new power: dividing by 3/2 is multiplying by 2/3.' },
-        { tex: 'F(4) = 2 \\cdot 4^{3/2} = 2 \\cdot 8 = 16', text: '4^(3/2) is (√4)³ = 2³ = 8.' },
-        { tex: 'F(1) = 2 \\cdot 1 = 2', text: 'Bottom limit.' },
-        { tex: '16 - 2 = 14', text: 'Subtract.' },
+        { tex: 'F(4) = 2 \\cdot 4^{3/2} = 2 \\cdot 8 = 16', text: 'Evaluate at the top limit: 4^(3/2) means (√4)³ = 2³ = 8, so F(4) = 2 · 8 = 16. Taking the root first keeps the numbers small.' },
+        { tex: 'F(1) = 2 \\cdot 1 = 2', text: 'Evaluate at the bottom limit: 1 to any power is 1, so F(1) = 2 · 1 = 2.' },
+        { tex: '16 - 2 = 14', text: 'Subtract bottom from top: 16 − 2 = 14. The area is positive, as it should be for a curve above the axis.' },
       ],
       answer: '\\int_{1}^{4} 3\\sqrt{x}\\,dx = 14',
     },
@@ -2161,6 +2171,7 @@ const U13: LessonSlide[] = [
     kind: 'concept',
     head: 'u-substitution reverses the chain rule',
     body: 'The chain rule says the derivative of F(g(x)) is F′(g(x)) · g′(x). So an integrand of the form f(inside) · (derivative of inside) comes from a chain rule. Pick u = the inside function, compute du = u′(x) dx, and rewrite the whole integral in terms of u.',
+    why: 'Differentiating (x² + 1)⁴/4 with the chain rule gives (x² + 1)³ times 2x: the outside derivative times the derivative of the inside. If an integrand has that look, an inside function times its own derivative, it must have come from a chain rule. Substitution names the inside u so the integral becomes the simple one in u.',
     art: flow([{ label: 'pick u = inside', color: AMB }, { label: 'du = u′(x) dx', color: EMR }, { label: 'rewrite all in u', color: SKY }, { label: 'integrate, back to x', color: VIO }], { horizontal: true, title: 'The four moves of u-substitution', caption: 'Nothing with an x may survive the rewrite: every piece becomes u or du.' }),
     formula: {
       tex: '\\int f\\big(g(x)\\big)\\,g\\,\\!\\prime(x)\\,dx = \\int f(u)\\,du, \\qquad u = g(x)',
@@ -2176,6 +2187,7 @@ const U13: LessonSlide[] = [
     kind: 'concept',
     head: 'The test: is du really there?',
     body: 'After choosing u, the leftover factor must be du, or a constant times du. For ∫ 2x(x² + 1)³ dx, u = x² + 1 gives du = 2x dx, and 2x dx IS sitting in the integrand. The integral becomes ∫ u³ du. If the leftover is not a constant multiple of du, u-substitution is not the tool.',
+    why: 'The factor du = u′ dx is what turns the dx into du. Without it, you cannot write the integral purely in u, and a leftover x blocks you. A leftover constant is harmless, since you can divide by it, but a leftover x depends on the variable, so it cannot be pulled outside the integral.',
     art: braceFig(),
     compare: {
       cols: [
@@ -2189,6 +2201,7 @@ const U13: LessonSlide[] = [
     kind: 'concept',
     head: 'A missing constant is fine',
     body: 'If du = 2x dx but the integrand only has x dx, write x dx = du/2 and pull the 1/2 out front. For ∫ x·e^(x²) dx, u = x² gives du = 2x dx, so the integral is (1/2)∫ eᵘ du = (1/2)eᵘ + C. Only constants can be borrowed this way; a missing x cannot.',
+    why: 'Dividing du = 2x dx by 2 gives x dx = ½ du, which is a true statement, so the swap loses nothing. The ½ is a constant, so it can sit outside the integral. A missing x would be a function of x, and it could not leave the integral.',
     art: halfFig(),
     formula: {
       tex: 'x\\,dx = \\tfrac{1}{2}\\,du \\quad\\Longrightarrow\\quad \\int x\\,e^{x^{2}}\\,dx = \\tfrac{1}{2}\\int e^{u}\\,du',
@@ -2203,6 +2216,7 @@ const U13: LessonSlide[] = [
     kind: 'concept',
     head: 'Definite integral? Change the limits too',
     body: 'For a definite integral, convert the limits along with everything else: plug the old x-limits into u. With u = x² + 1, x = 0 gives u = 1 and x = 1 gives u = 2. Then ∫₀¹ 2x(x² + 1)³ dx = ∫₁² u³ du, and you never have to switch back to x.',
+    why: 'The limits of a definite integral are values of the variable you integrate with. Once you integrate in u, the limits must be u-values. Check: when x runs from 0 to 1, u = x² + 1 runs from 1 to 2, so the same stretch of accumulation is measured in new units and gives the same number.',
     art: limitsFig(),
     formula: {
       tex: '\\int_{0}^{1} 2x(x^{2}+1)^{3}\\,dx = \\int_{1}^{2} u^{3}\\,du',
@@ -2217,6 +2231,7 @@ const U13: LessonSlide[] = [
     kind: 'concept',
     head: 'Area between curves: top minus bottom',
     body: 'Find where the curves cross first; those crossings are the limits. Between them, the height of a thin strip is top − bottom, so the area is ∫ₐᵇ (top − bottom) dx. For y = x + 2 and y = x², the crossings are x = −1 and x = 2, the line is on top, and the area is 9/2. If the curves swap places, split at the crossing.',
+    why: 'A thin vertical strip at x has width dx and height top(x) − bottom(x), so its area is that height times dx. Adding the strips from a to b gives the integral. Subtracting removes the area under the lower curve, which is not part of the region. If the curves swapped places the difference would go negative, so split at the crossing.',
     art: enclosedFig(),
     formula: {
       tex: '\\int_{-1}^{2} \\big[(x + 2) - x^{2}\\big]\\,dx = \\tfrac{9}{2}',
@@ -2230,13 +2245,13 @@ const U13: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Start simple: ∫ 2x(x² + 1)³ dx',
-    body: 'Find the antiderivative of 2x(x² + 1)³.\nu = x² + 1, so du = 2x dx, and the integrand becomes u³ du.\n∫ u³ du = u⁴/4 + C. Back to x: (x² + 1)⁴/4 + C.',
+    body: 'Find the antiderivative of 2x(x² + 1)³. Look for an inside function whose derivative is also sitting in the integrand, then rewrite everything in u.',
     steps: {
       steps: [
-        { tex: 'u = x^{2} + 1', text: 'The inside function.' },
-        { tex: 'du = 2x\\,dx', text: 'Differentiate u; the 2x dx is exactly what is left over.' },
-        { tex: '\\int u^{3}\\,du = \\tfrac{u^{4}}{4} + C', text: 'Reverse power rule in u.' },
-        { tex: '\\tfrac{(x^{2}+1)^{4}}{4} + C', text: 'Substitute back. Check: the derivative is (x² + 1)³ · 2x.' },
+        { tex: 'u = x^{2} + 1', text: 'Choose u to be the inside function, x² + 1, the expression raised to a power. Its derivative should show up elsewhere in the integrand.' },
+        { tex: 'du = 2x\\,dx', text: 'Differentiate u to get du = 2x dx. That is exactly the leftover factor 2x dx in the integrand, so every piece can be written in u.' },
+        { tex: '\\int u^{3}\\,du = \\tfrac{u^{4}}{4} + C', text: 'Rewrite as ∫ u³ du and apply the reverse power rule: raise the power to 4 and divide by 4. No x is left, as substitution requires.' },
+        { tex: '\\tfrac{(x^{2}+1)^{4}}{4} + C', text: 'Replace u by x² + 1 to return to the original variable. Check by the chain rule: the derivative of (x² + 1)⁴/4 is (x² + 1)³ · 2x, the original integrand.' },
       ],
       answer: '\\tfrac{(x^{2}+1)^{4}}{4} + C',
     },
@@ -2244,12 +2259,12 @@ const U13: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Borrow a constant: ∫ x·e^(x²) dx',
-    body: 'Find the antiderivative of x·e^(x²).\nu = x², du = 2x dx, but only x dx is present, so x dx = du/2.\nThe integral is (1/2)∫ eᵘ du = (1/2)eᵘ + C = (1/2)e^(x²) + C.',
+    body: 'Find the antiderivative of x·e^(x²). The inside is x², whose derivative is 2x, but the integrand only has x. Can you still substitute?',
     steps: {
       steps: [
-        { tex: 'u = x^{2},\\quad du = 2x\\,dx', text: 'Inside function and its differential.' },
-        { tex: 'x\\,dx = \\tfrac{1}{2}\\,du', text: 'Solve for the piece you have.' },
-        { tex: '\\tfrac{1}{2}\\int e^{u}\\,du = \\tfrac{1}{2}e^{u} + C', text: 'The constant waits outside; eᵘ is its own antiderivative.' },
+        { tex: 'u = x^{2},\\quad du = 2x\\,dx', text: 'Let u = x², the inside function of the exponent. Differentiating gives du = 2x dx, using the power rule.' },
+        { tex: 'x\\,dx = \\tfrac{1}{2}\\,du', text: 'The integrand has only x dx, not 2x dx, so divide du = 2x dx by 2 to get x dx = ½ du. A missing constant is fine because constants can be moved.' },
+        { tex: '\\tfrac{1}{2}\\int e^{u}\\,du = \\tfrac{1}{2}e^{u} + C', text: 'Rewrite as ½ ∫ eᵘ du with the ½ parked outside. The antiderivative of eᵘ is eᵘ, since the exponential is its own derivative, so we get ½eᵘ + C.' },
         { tex: '\\tfrac{1}{2}e^{x^{2}} + C', text: 'Back to x. Check: the derivative is ½ · e^(x²) · 2x = x e^(x²).' },
       ],
       answer: '\\tfrac{1}{2}e^{x^{2}} + C',
@@ -2258,7 +2273,7 @@ const U13: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Definite, with new limits',
-    body: 'Evaluate ∫₀¹ 2x(x² + 1)³ dx.\nu = x² + 1. New limits: x = 0 gives u = 1, x = 1 gives u = 2.\n∫₁² u³ du = [u⁴/4]₁² = 16/4 − 1/4 = 15/4.',
+    body: 'Evaluate the definite integral of 2x(x² + 1)³ from 0 to 1. Use u = x² + 1, and decide what to do with the limits.',
     table: {
       head: ['x-limit', 'u = x² + 1'],
       rows: [['x = 0', 'u = 0 + 1 = 1'], ['x = 1', 'u = 1 + 1 = 2']],
@@ -2266,10 +2281,10 @@ const U13: LessonSlide[] = [
     },
     steps: {
       steps: [
-        { tex: 'u = x^{2} + 1,\\quad du = 2x\\,dx', text: 'Substitution.' },
-        { tex: 'x = 0 \\to u = 1,\\quad x = 1 \\to u = 2', text: 'Convert the limits.' },
-        { tex: '\\int_{1}^{2} u^{3}\\,du = \\Big[\\tfrac{u^{4}}{4}\\Big]_{1}^{2}', text: 'Integrate in u.' },
-        { tex: '\\tfrac{16}{4} - \\tfrac{1}{4} = \\tfrac{15}{4}', text: 'Top minus bottom.' },
+        { tex: 'u = x^{2} + 1,\\quad du = 2x\\,dx', text: 'Choose u = x² + 1, the inside function, so that du = 2x dx matches the factor 2x dx in the integrand.' },
+        { tex: 'x = 0 \\to u = 1,\\quad x = 1 \\to u = 2', text: 'Convert the limits by plugging each x-limit into u = x² + 1: x = 0 gives u = 1 and x = 1 gives u = 2. The limits must describe u now, not x.' },
+        { tex: '\\int_{1}^{2} u^{3}\\,du = \\Big[\\tfrac{u^{4}}{4}\\Big]_{1}^{2}', text: 'Rewrite and integrate in u with the reverse power rule: the antiderivative of u³ is u⁴/4. Keep the new limits 1 and 2 on the bracket.' },
+        { tex: '\\tfrac{16}{4} - \\tfrac{1}{4} = \\tfrac{15}{4}', text: 'Evaluate top minus bottom: 2⁴/4 − 1⁴/4 = 16/4 − 1/4 = 15/4. There is no switching back to x, because the limits are already in u.' },
       ],
       answer: '\\tfrac{15}{4} = 3.75',
     },
@@ -2277,13 +2292,13 @@ const U13: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Another way: go back to x, then plug in',
-    body: 'Same integral, keeping the original limits.\nThe antiderivative in x is (x² + 1)⁴/4. Evaluate it at x = 1 and x = 0.\n(2⁴)/4 − (1⁴)/4 = 16/4 − 1/4 = 15/4. Same answer; just never mix x-limits with a u-antiderivative.',
+    body: 'Evaluate the same integral again, but this time keep the original x-limits. Convert the antiderivative back to x first, then plug in 0 and 1.',
     steps: {
       steps: [
-        { tex: 'F(x) = \\tfrac{(x^{2}+1)^{4}}{4}', text: 'The antiderivative from the first example, back in x.' },
-        { tex: 'F(1) = \\tfrac{(1 + 1)^{4}}{4} = \\tfrac{16}{4}', text: 'Top x-limit.' },
-        { tex: 'F(0) = \\tfrac{(0 + 1)^{4}}{4} = \\tfrac{1}{4}', text: 'Bottom x-limit.' },
-        { tex: '\\tfrac{16}{4} - \\tfrac{1}{4} = \\tfrac{15}{4}', text: 'Agrees with the u-limits route.' },
+        { tex: 'F(x) = \\tfrac{(x^{2}+1)^{4}}{4}', text: 'Use the antiderivative F(x) = (x² + 1)⁴/4 already found, written in x. Because it is in x, we may use the original x-limits 0 and 1.' },
+        { tex: 'F(1) = \\tfrac{(1 + 1)^{4}}{4} = \\tfrac{16}{4}', text: 'Evaluate F at the top x-limit: (1 + 1)⁴/4 = 16/4. The Fundamental Theorem says to take F(b) first.' },
+        { tex: 'F(0) = \\tfrac{(0 + 1)^{4}}{4} = \\tfrac{1}{4}', text: 'Evaluate F at the bottom x-limit: (0 + 1)⁴/4 = 1/4, since 1 to any power is 1.' },
+        { tex: '\\tfrac{16}{4} - \\tfrac{1}{4} = \\tfrac{15}{4}', text: 'Subtract: 16/4 − 1/4 = 15/4. It agrees with the answer from converting the limits, so both routes work as long as you do not mix them.' },
       ],
       answer: '\\tfrac{15}{4}',
     },
@@ -2291,12 +2306,12 @@ const U13: LessonSlide[] = [
   {
     kind: 'example',
     head: 'A trig inside: ∫ cos(3x) dx',
-    body: 'Find the antiderivative of cos(3x).\nu = 3x, du = 3 dx, so dx = du/3.\n(1/3)∫ cos u du = (1/3) sin u + C = (1/3) sin(3x) + C.',
+    body: 'Find the antiderivative of cos(3x). The cosine has a function inside it, so which u removes the 3x?',
     steps: {
       steps: [
-        { tex: 'u = 3x,\\quad du = 3\\,dx', text: 'The inside is 3x.' },
-        { tex: 'dx = \\tfrac{1}{3}\\,du', text: 'Only dx is present, so borrow the 3.' },
-        { tex: '\\tfrac{1}{3}\\int \\cos u\\,du = \\tfrac{1}{3}\\sin u + C', text: 'Antiderivative of cos is sin.' },
+        { tex: 'u = 3x,\\quad du = 3\\,dx', text: 'The inside function of the cosine is 3x, so let u = 3x. Differentiating gives du = 3 dx.' },
+        { tex: 'dx = \\tfrac{1}{3}\\,du', text: 'The integrand has only dx, so divide du = 3 dx by 3 to get dx = ⅓ du. The constant ⅓ can wait outside the integral.' },
+        { tex: '\\tfrac{1}{3}\\int \\cos u\\,du = \\tfrac{1}{3}\\sin u + C', text: 'Rewrite as ⅓ ∫ cos u du. The antiderivative of cos u is sin u, since the derivative of sin is cos, so the result is ⅓ sin u + C.' },
         { tex: '\\tfrac{1}{3}\\sin(3x) + C', text: 'Back to x. Check: derivative is ⅓ · cos(3x) · 3 = cos(3x).' },
       ],
       answer: '\\tfrac{1}{3}\\sin(3x) + C',
@@ -2305,14 +2320,14 @@ const U13: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Picture it first: between y = x and y = x²',
-    body: 'Find the area between y = x and y = x² on [0, 1].\nSketch both: they meet at (0, 0) and (1, 1). Test x = 0.5: the line gives 0.5, the parabola gives 0.25, so the line is on top.\nArea = ∫₀¹ (x − x²) dx = [x²/2 − x³/3]₀¹ = 1/2 − 1/3 = 1/6.',
+    body: 'Find the area between y = x and y = x² on [0, 1]. Sketch both curves, find where they meet, and decide which one is on top.',
     art: testPointFig(),
     steps: {
       steps: [
-        { tex: 'x = x^{2} \;\\Rightarrow\; x = 0,\\ 1', text: 'Crossings give the limits.' },
-        { tex: '0.5 > 0.25', text: 'At x = 0.5 the line is above the parabola.' },
-        { tex: '\\int_{0}^{1} (x - x^{2})\\,dx = \\Big[\\tfrac{x^{2}}{2} - \\tfrac{x^{3}}{3}\\Big]_{0}^{1}', text: 'Integrate top minus bottom.' },
-        { tex: '\\tfrac{1}{2} - \\tfrac{1}{3} = \\tfrac{3}{6} - \\tfrac{2}{6} = \\tfrac{1}{6}', text: 'Evaluate; the bottom limit gives 0.' },
+        { tex: 'x = x^{2} \;\\Rightarrow\; x = 0,\\ 1', text: 'Set the two curves equal to find where they cross, because the crossings are the limits: x = x² gives x(x − 1) = 0, so x = 0 and x = 1.' },
+        { tex: '0.5 > 0.25', text: 'Test a point between the crossings to see which curve is on top. At x = 0.5 the line gives 0.5 and the parabola gives 0.25, so the line is above.' },
+        { tex: '\\int_{0}^{1} (x - x^{2})\\,dx = \\Big[\\tfrac{x^{2}}{2} - \\tfrac{x^{3}}{3}\\Big]_{0}^{1}', text: 'Integrate top minus bottom, x − x², from 0 to 1. Each thin strip has that height, and the integral adds the strips. The power rule gives x²/2 − x³/3.' },
+        { tex: '\\tfrac{1}{2} - \\tfrac{1}{3} = \\tfrac{3}{6} - \\tfrac{2}{6} = \\tfrac{1}{6}', text: 'Evaluate at the top limit: 1/2 − 1/3, which over the common denominator 6 is 3/6 − 2/6 = 1/6. The bottom limit gives 0, so the area is 1/6.' },
       ],
       answer: '\\text{area} = \\tfrac{1}{6}',
     },
@@ -2320,15 +2335,15 @@ const U13: LessonSlide[] = [
   {
     kind: 'example',
     head: 'A region with limits you must find',
-    body: 'Find the area enclosed by y = x + 2 and y = x².\nCrossings: x² = x + 2 gives (x − 2)(x + 1) = 0, so x = −1 and x = 2. At x = 0 the line is on top (2 > 0).\nArea = ∫₋₁² (x + 2 − x²) dx = [x²/2 + 2x − x³/3] from −1 to 2 = 10/3 − (−7/6) = 27/6 = 9/2.',
+    body: 'Find the area enclosed by y = x + 2 and y = x². No limits are given, so find where the curves cross, then integrate top minus bottom.',
     steps: {
       steps: [
-        { tex: 'x^{2} - x - 2 = 0 \;\\Rightarrow\; (x - 2)(x + 1) = 0', text: 'Set the curves equal and factor.' },
-        { tex: 'x = -1,\\quad x = 2', text: 'The limits of integration.' },
-        { tex: 'F(x) = \\tfrac{x^{2}}{2} + 2x - \\tfrac{x^{3}}{3}', text: 'Antiderivative of (x + 2) − x².' },
-        { tex: 'F(2) = 2 + 4 - \\tfrac{8}{3} = \\tfrac{10}{3}', text: 'Top limit.' },
-        { tex: 'F(-1) = \\tfrac{1}{2} - 2 + \\tfrac{1}{3} = -\\tfrac{7}{6}', text: 'Bottom limit.' },
-        { tex: '\\tfrac{10}{3} + \\tfrac{7}{6} = \\tfrac{20}{6} + \\tfrac{7}{6} = \\tfrac{27}{6} = \\tfrac{9}{2}', text: 'Subtract: a minus a negative is a plus.' },
+        { tex: 'x^{2} - x - 2 = 0 \;\\Rightarrow\; (x - 2)(x + 1) = 0', text: 'Set the curves equal and move everything to one side: x² = x + 2 becomes x² − x − 2 = 0, which factors as (x − 2)(x + 1) = 0.' },
+        { tex: 'x = -1,\\quad x = 2', text: 'Each factor gives a crossing, x = −1 and x = 2, and these crossings are the limits of integration. At x = 0 the line (2) is above the parabola (0).' },
+        { tex: 'F(x) = \\tfrac{x^{2}}{2} + 2x - \\tfrac{x^{3}}{3}', text: 'Find an antiderivative of top minus bottom, (x + 2) − x², using the power rule term by term: x²/2 + 2x − x³/3.' },
+        { tex: 'F(2) = 2 + 4 - \\tfrac{8}{3} = \\tfrac{10}{3}', text: 'Evaluate at the top limit x = 2: 2 + 4 − 8/3 = 6 − 8/3 = 10/3, computing each term with x = 2.' },
+        { tex: 'F(-1) = \\tfrac{1}{2} - 2 + \\tfrac{1}{3} = -\\tfrac{7}{6}', text: 'Evaluate at the bottom limit x = −1, taking care with signs since (−1)² = 1 and (−1)³ = −1: 1/2 − 2 + 1/3 = −7/6.' },
+        { tex: '\\tfrac{10}{3} + \\tfrac{7}{6} = \\tfrac{20}{6} + \\tfrac{7}{6} = \\tfrac{27}{6} = \\tfrac{9}{2}', text: 'Subtract bottom from top: 10/3 − (−7/6) = 20/6 + 7/6 = 27/6 = 9/2. Subtracting a negative adds, and the result is positive, as an area must be.' },
       ],
       answer: '\\text{area} = \\tfrac{9}{2} = 4.5',
     },
@@ -2383,16 +2398,16 @@ const U13: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: the bowl under y = 4',
-    body: 'Find the area between y = 4 and y = x².\nCrossings: x² = 4 gives x = −2 and x = 2, and the line y = 4 is on top (at x = 0, 4 > 0).\nArea = ∫₋₂² (4 − x²) dx = [4x − x³/3]₋₂² = (8 − 8/3) − (−8 + 8/3) = 32/3.',
+    body: 'Find the area between y = 4 and y = x². Sketch them, find where they cross, decide which is on top, and integrate top minus bottom.',
     art: fourFig(),
     steps: {
       steps: [
-        { tex: 'x^{2} = 4 \;\\Rightarrow\; x = \\pm 2', text: 'Crossings are the limits.' },
-        { tex: '4 - x^{2} \\ge 0 \\text{ on } [-2, 2]', text: 'The line is on top: at x = 0 it is 4 against 0.' },
-        { tex: 'F(x) = 4x - \\tfrac{x^{3}}{3}', text: 'Antiderivative of 4 − x².' },
-        { tex: 'F(2) = 8 - \\tfrac{8}{3} = \\tfrac{16}{3}', text: 'Top limit.' },
-        { tex: 'F(-2) = -8 + \\tfrac{8}{3} = -\\tfrac{16}{3}', text: 'Bottom limit.' },
-        { tex: '\\tfrac{16}{3} - \\left(-\\tfrac{16}{3}\\right) = \\tfrac{32}{3}', text: 'Subtract. Symmetry check: twice the area on [0, 2], 2 · 16/3.' },
+        { tex: 'x^{2} = 4 \;\\Rightarrow\; x = \\pm 2', text: 'Set the curves equal: x² = 4 gives x = ±2. These crossings are the limits of integration.' },
+        { tex: '4 - x^{2} \\ge 0 \\text{ on } [-2, 2]', text: 'At x = 0 the line y = 4 is above the parabola, which gives 0. So 4 − x² is top minus bottom, and it is non-negative everywhere between −2 and 2.' },
+        { tex: 'F(x) = 4x - \\tfrac{x^{3}}{3}', text: 'Find an antiderivative of 4 − x² term by term with the power rule: 4x − x³/3.' },
+        { tex: 'F(2) = 8 - \\tfrac{8}{3} = \\tfrac{16}{3}', text: 'Evaluate at the top limit x = 2: 8 − 8/3 = 24/3 − 8/3 = 16/3.' },
+        { tex: 'F(-2) = -8 + \\tfrac{8}{3} = -\\tfrac{16}{3}', text: 'Evaluate at the bottom limit x = −2: 4(−2) is −8 and −(−8)/3 is +8/3, giving −8 + 8/3 = −16/3.' },
+        { tex: '\\tfrac{16}{3} - \\left(-\\tfrac{16}{3}\\right) = \\tfrac{32}{3}', text: 'Subtract bottom from top: 16/3 − (−16/3) = 32/3. Symmetry check: the region is symmetric about the y-axis, so it is twice the area on [0, 2], which is 2 · 16/3.' },
       ],
       answer: '\\text{area} = \\tfrac{32}{3} \\approx 10.67',
     },
@@ -2518,6 +2533,7 @@ const U14: LessonSlide[] = [
     kind: 'concept',
     head: 'Slice, measure one slice, add',
     body: 'Every volume formula here is the same idea. Cut the solid into thin pieces of thickness dx. Find the area A(x) of one piece. Add them all with V = ∫ A(x) dx. Only the shape of the slice changes: a disc, a ring, a square.',
+    why: 'A thin slab of thickness dx has almost constant cross-section, so its volume is area times thickness, A(x)·dx, like a coin or a sheet of paper. Adding up the slabs from a to b is exactly what an integral does, so V = ∫A(x)dx for every solid. Only the formula for A changes.',
     art: sliceFlow(),
     formula: {
       tex: 'dV = A(x)\\,dx \;\\Longrightarrow\; V = \\int_{a}^{b} A(x)\\,dx',
@@ -2532,6 +2548,7 @@ const U14: LessonSlide[] = [
     kind: 'concept',
     head: 'Discs: revolve the region under a curve',
     body: 'Revolve the region under y = f(x) around the x-axis. Each slice is a disc of radius f(x), so its area is π[f(x)]². For y = x on [0, 3] the solid is a cone with radius 3 and height 3, and the radius at x is just x.',
+    why: 'Spinning a point at height f(x) around the x-axis sweeps out a circle of radius f(x), so every slice is a full disc. A disc of radius r has area πr², so the slice area is π[f(x)]². For the cone from y = x the radius grows steadily, and the result matches (1/3)πr²h.',
     art: coneSolid(),
     formula: {
       tex: 'V = \\pi \\int_{a}^{b} [f(x)]^{2}\\,dx',
@@ -2546,6 +2563,7 @@ const U14: LessonSlide[] = [
     kind: 'concept',
     head: 'Washers: when there is a hole',
     body: 'If there is a gap between the region and the axis, each slice is a ring with an outer radius R and an inner radius r. Its area is the big circle minus the hole: πR² − πr². Square each radius, then subtract; never subtract first.',
+    why: 'Spinning the region leaves a hole wherever the region does not touch the axis, so the slice is the big disc with a small disc removed. Its area is πR² minus πr², which is π(R² − r²). Subtracting the radii first would give the area of a single disc of radius R − r, which is a different, smaller shape.',
     art: washerSolid(),
     formula: {
       tex: 'V = \\pi \\int_{a}^{b} \\big(R^{2} - r^{2}\\big)\\,dx',
@@ -2561,6 +2579,7 @@ const U14: LessonSlide[] = [
     kind: 'concept',
     head: 'Cross-sections: squares standing on a base',
     body: 'Sometimes the slices are squares, semicircles or triangles standing on a flat base region. The length s(x) of the strip across the base is the side of the shape. For squares, A(x) = s², and there is no pi because nothing is revolved.',
+    why: 'Nothing is spun here, so slice areas come only from the shape you are told stands on the base. The base strip at x has a length s(x), and that length becomes the side (or diameter) of the standing shape. A square has area s², a semicircle on diameter s has area πs²/8, and the same slice-and-add integral applies.',
     art: crossFig(),
     compare: {
       cols: [
@@ -2575,6 +2594,7 @@ const U14: LessonSlide[] = [
     kind: 'concept',
     head: 'Accumulation: start plus the integral of the rate',
     body: 'The integral of a rate is the net CHANGE, not the amount on hand. So amount at time t = starting amount + the integral of the rate from 0 to t. A tank that holds 20 L and fills at 6t L/min has 20 + 27 = 47 L after 3 minutes.',
+    why: 'The integral of a rate adds up small changes, so it gives how much the quantity changed, not how much it holds. The amount now is the amount you began with plus all the changes since. With 20 L at the start and 27 L added, the tank holds 47 L.',
     art: accumFig(),
     formula: {
       tex: 'Q(t) = Q(0) + \\int_{0}^{t} r(u)\\,du',
@@ -2588,13 +2608,13 @@ const U14: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Start simple: spin y = √x',
-    body: 'Revolve the region under y = √x from 0 to 4 about the x-axis.\nThe disc radius is √x, so A(x) = π(√x)² = πx.\nV = π∫₀⁴ x dx = π[x²/2]₀⁴ = 8π ≈ 25.1.',
+    body: 'Revolve the region under y = √x from 0 to 4 about the x-axis. What is the volume of the solid? Slice it into discs, find one disc area, then add them up.',
     steps: {
       steps: [
-        { tex: 'A(x) = \\pi\\big(\\sqrt{x}\\big)^{2} = \\pi x', text: 'Square the radius: the square root and the square cancel.' },
-        { tex: 'V = \\pi\\int_{0}^{4} x\\,dx', text: 'Pull pi out front.' },
-        { tex: '\\pi\\Big[\\tfrac{x^{2}}{2}\\Big]_{0}^{4} = \\pi\\left(\\tfrac{16}{2} - 0\\right)', text: 'Antiderivative of x, then top minus bottom.' },
-        { tex: '8\\pi \\approx 25.13', text: 'Eight times pi.' },
+        { tex: 'A(x) = \\pi\\big(\\sqrt{x}\\big)^{2} = \\pi x', text: 'A slice at x is a disc whose radius is the height √x, so its area is π times the radius squared. The square and the square root cancel, leaving πx.' },
+        { tex: 'V = \\pi\\int_{0}^{4} x\\,dx', text: 'Add up the discs from x = 0 to x = 4 with an integral, V = ∫ A(x) dx. Pull the constant π out front, since constants move outside the integral.' },
+        { tex: '\\pi\\Big[\\tfrac{x^{2}}{2}\\Big]_{0}^{4} = \\pi\\left(\\tfrac{16}{2} - 0\\right)', text: 'Find an antiderivative of x with the reverse power rule, x²/2, then subtract its values at the limits: 16/2 − 0 = 8.' },
+        { tex: '8\\pi \\approx 25.13', text: 'Multiply by π to get 8π, about 25.13 since π ≈ 3.1416. The units are cubic units, as a volume should be.' },
       ],
       answer: 'V = 8\\pi \\approx 25.13',
     },
@@ -2602,12 +2622,12 @@ const U14: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Another way: check with the cone formula',
-    body: 'Revolve y = x on [0, 3] about the x-axis. By discs, V = π∫₀³ x² dx = π[x³/3]₀³ = 9π.\nThe solid is a cone with radius 3 and height 3, and the cone formula (1/3)πr²h gives (1/3)π(9)(3) = 9π.\nTwo routes, one answer: the integral is just the cone formula in disguise.',
+    body: 'Revolve y = x on [0, 3] about the x-axis. Find the volume with discs, then check it against the volume formula for a cone.',
     steps: {
       steps: [
-        { tex: 'V = \\pi\\int_{0}^{3} x^{2}\\,dx = \\pi\\Big[\\tfrac{x^{3}}{3}\\Big]_{0}^{3}', text: 'Discs of radius x.' },
-        { tex: '\\pi\\cdot\\tfrac{27}{3} = 9\\pi', text: 'Evaluate.' },
-        { tex: '\\tfrac{1}{3}\\pi r^{2} h = \\tfrac{1}{3}\\pi(3)^{2}(3) = 9\\pi', text: 'The geometry formula for a cone, r = 3 and h = 3.' },
+        { tex: 'V = \\pi\\int_{0}^{3} x^{2}\\,dx = \\pi\\Big[\\tfrac{x^{3}}{3}\\Big]_{0}^{3}', text: 'Each slice perpendicular to the x-axis is a disc of radius x, so A(x) = πx². Integrate from 0 to 3, and π comes out front, leaving the antiderivative x³/3.' },
+        { tex: '\\pi\\cdot\\tfrac{27}{3} = 9\\pi', text: 'Evaluate x³/3 at the limits: 27/3 = 9 at the top and 0 at the bottom, so the integral is π times 9.' },
+        { tex: '\\tfrac{1}{3}\\pi r^{2} h = \\tfrac{1}{3}\\pi(3)^{2}(3) = 9\\pi', text: 'Check with geometry: the solid is a cone of radius 3 and height 3, and (1/3)πr²h = (1/3)π(9)(3) = 9π. The two methods agree, so the integral is correct.' },
       ],
       answer: 'V = 9\\pi\\ \\text{both ways}',
     },
@@ -2615,15 +2635,15 @@ const U14: LessonSlide[] = [
   {
     kind: 'example',
     head: 'A washer: the gap between y = x and y = x²',
-    body: 'The region between y = x and y = x² on [0, 1] is revolved about the x-axis.\nThe line is higher, so R = x and r = x². At x = 0.6 that is R = 0.6 and r = 0.36.\nV = π∫₀¹ (x² − x⁴) dx = π(1/3 − 1/5) = 2π/15 ≈ 0.42.',
+    body: 'The region between y = x and y = x² on [0, 1] is revolved about the x-axis. The solid has a hole in the middle, so find the outer and inner radii and use washers.',
     art: washerStrip(),
     steps: {
       steps: [
-        { tex: 'R = x,\\quad r = x^{2}', text: 'The line is the outer edge; the parabola is the inner edge.' },
-        { tex: 'R^{2} - r^{2} = x^{2} - x^{4}', text: 'Square each radius, then subtract.' },
-        { tex: 'V = \\pi\\Big[\\tfrac{x^{3}}{3} - \\tfrac{x^{5}}{5}\\Big]_{0}^{1}', text: 'Antiderivative of x² − x⁴.' },
-        { tex: '\\pi\\left(\\tfrac{1}{3} - \\tfrac{1}{5}\\right) = \\pi\\cdot\\tfrac{5 - 3}{15}', text: 'Common denominator 15.' },
-        { tex: '\\tfrac{2\\pi}{15} \\approx 0.419', text: 'Simplify.' },
+        { tex: 'R = x,\\quad r = x^{2}', text: 'Measured from the x-axis, the line y = x is farther out, so R = x, and the parabola is nearer, so r = x². On [0, 1] we have x ≥ x², so the line is the outer edge.' },
+        { tex: 'R^{2} - r^{2} = x^{2} - x^{4}', text: 'Each slice is a ring, a big disc minus the hole, so its area is π(R² − r²). Square each radius first to get x² − x⁴, and never subtract the radii before squaring.' },
+        { tex: 'V = \\pi\\Big[\\tfrac{x^{3}}{3} - \\tfrac{x^{5}}{5}\\Big]_{0}^{1}', text: 'Integrate x² − x⁴ with the reverse power rule to get x³/3 − x⁵/5. The π stays out front as a constant factor.' },
+        { tex: '\\pi\\left(\\tfrac{1}{3} - \\tfrac{1}{5}\\right) = \\pi\\cdot\\tfrac{5 - 3}{15}', text: 'Evaluate from 0 to 1: the bottom limit gives 0, and the top gives 1/3 − 1/5. With the common denominator 15 that is 5/15 − 3/15 = 2/15.' },
+        { tex: '\\tfrac{2\\pi}{15} \\approx 0.419', text: 'So the volume is π · 2/15 = 2π/15, which is about 0.419 since 2π ≈ 6.283 and 6.283/15 ≈ 0.419.' },
       ],
       answer: 'V = \\tfrac{2\\pi}{15} \\approx 0.419',
     },
@@ -2631,13 +2651,13 @@ const U14: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Square cross-sections',
-    body: 'A solid has as its base the region under y = √x from 0 to 4, and cross-sections perpendicular to the x-axis are squares.\nEach square has side s = √x, so A(x) = (√x)² = x.\nV = ∫₀⁴ x dx = 8. No pi this time: the slices are squares, not discs.',
+    body: 'A solid has as its base the region under y = √x from 0 to 4, and its cross-sections perpendicular to the x-axis are squares. Find its volume from the slice area A(x).',
     steps: {
       steps: [
-        { tex: 's(x) = \\sqrt{x}', text: 'The strip across the base is the side of the square.' },
-        { tex: 'A(x) = s^{2} = x', text: 'Area of a square.' },
-        { tex: 'V = \\int_{0}^{4} x\\,dx = \\Big[\\tfrac{x^{2}}{2}\\Big]_{0}^{4}', text: 'Integrate the slice area.' },
-        { tex: '\\tfrac{16}{2} - 0 = 8', text: 'Evaluate.' },
+        { tex: 's(x) = \\sqrt{x}', text: 'The strip across the base at x has length √x, the height of the curve, and that length is the side of the square standing on it.' },
+        { tex: 'A(x) = s^{2} = x', text: 'A square with side s has area s², so A(x) = (√x)² = x. There is no π, because the slices are squares, not circles.' },
+        { tex: 'V = \\int_{0}^{4} x\\,dx = \\Big[\\tfrac{x^{2}}{2}\\Big]_{0}^{4}', text: 'Integrate the slice area from 0 to 4: V = ∫ x dx, and the reverse power rule gives the antiderivative x²/2.' },
+        { tex: '\\tfrac{16}{2} - 0 = 8', text: 'Evaluate top minus bottom: 4²/2 − 0 = 16/2 = 8, so the volume is 8 cubic units.' },
       ],
       answer: 'V = 8',
     },
@@ -2645,13 +2665,13 @@ const U14: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Picture it first: water in a tank',
-    body: 'A tank holds 20 L at t = 0 and water flows in at r(t) = 6t L/min. How much is in the tank at t = 3 min?\nSketch the rate: a line up to 18 at t = 3, and the water that arrives is the triangle under it.\nAmount = 20 + ∫₀³ 6t dt = 20 + 27 = 47 L.',
+    body: 'A tank holds 20 L at t = 0 and water flows in at r(t) = 6t L/min. How much is in the tank at t = 3 min? Sketch the rate line and ask whether the question wants the change or the total.',
     steps: {
       steps: [
-        { tex: 'Q(3) = 20 + \\int_{0}^{3} 6t\\,dt', text: 'Starting amount plus net change.' },
-        { tex: '\\int_{0}^{3} 6t\\,dt = \\Big[3t^{2}\\Big]_{0}^{3} = 27', text: 'Antiderivative 3t², then 27 − 0.' },
-        { tex: '\\tfrac{1}{2}(3)(18) = 27', text: 'Geometry check: a triangle with base 3 and height 18.' },
-        { tex: '20 + 27 = 47', text: 'Add what was already there.' },
+        { tex: 'Q(3) = 20 + \\int_{0}^{3} 6t\\,dt', text: 'The amount at time 3 equals the starting amount plus the net change. The net change is the integral of the rate, since integrating a rate gives the total that flowed in.' },
+        { tex: '\\int_{0}^{3} 6t\\,dt = \\Big[3t^{2}\\Big]_{0}^{3} = 27', text: 'Integrate 6t from 0 to 3 with the reverse power rule: the antiderivative is 3t². Then subtract: 3(9) − 0 = 27 litres arrived.' },
+        { tex: '\\tfrac{1}{2}(3)(18) = 27', text: 'Check with geometry: the area under the rate line is a triangle with base 3 and height r(3) = 18, so ½ · 3 · 18 = 27.' },
+        { tex: '20 + 27 = 47', text: 'Add the 20 litres that were already in the tank, because the integral counts only the change: 20 + 27 = 47 litres.' },
       ],
       answer: '47\\ \\text{L}',
     },
@@ -2659,14 +2679,14 @@ const U14: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Average value of x² on [0, 3]',
-    body: 'The average value of f on [a, b] is (1/(b − a)) times the integral of f.\nThe integral of x² from 0 to 3 is 27/3 = 9, so the average is 9/3 = 3.\nCheck: f(√3) = 3, so the function reaches its own average inside the interval.',
+    body: 'Find the average value of f(x) = x² on [0, 3]. Compute the area under the curve first, then spread it evenly over the width of the interval.',
     art: avgFig(),
     steps: {
       steps: [
-        { tex: '\\tfrac{1}{3 - 0}\\int_{0}^{3} x^{2}\\,dx', text: 'One over the interval length, times the integral.' },
-        { tex: '\\int_{0}^{3} x^{2}\\,dx = \\tfrac{3^{3}}{3} = 9', text: 'The area under the curve.' },
-        { tex: '\\tfrac{9}{3} = 3', text: 'Divide by the width.' },
-        { tex: 'x^{2} = 3 \;\\Rightarrow\; x = \\sqrt{3} \\approx 1.73', text: 'Where f hits the average, inside [0, 3].' },
+        { tex: '\\tfrac{1}{3 - 0}\\int_{0}^{3} x^{2}\\,dx', text: 'The average value of f on [a, b] is the integral divided by the length b − a. Here that is 1/(3 − 0) times the integral from 0 to 3.' },
+        { tex: '\\int_{0}^{3} x^{2}\\,dx = \\tfrac{3^{3}}{3} = 9', text: 'Find the integral with the reverse power rule: the antiderivative of x² is x³/3, so the area under the curve is 27/3 = 9.' },
+        { tex: '\\tfrac{9}{3} = 3', text: 'Divide the area 9 by the width 3 to get 3. This is the height of a rectangle with the same width and the same area as the region under the curve.' },
+        { tex: 'x^{2} = 3 \;\\Rightarrow\; x = \\sqrt{3} \\approx 1.73', text: 'Solve x² = 3 to see where f equals its average: x = √3 ≈ 1.73, which is inside [0, 3], as the Mean Value Theorem for integrals promises.' },
       ],
       answer: '\\text{average value} = 3',
     },
@@ -2722,15 +2742,15 @@ const U14: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: spin y = x² on [0, 2]',
-    body: 'The region under y = x² from 0 to 2 is revolved about the x-axis. Find the volume.\nThe disc radius is x², so the disc area is π(x²)² = πx⁴.\nV = π∫₀² x⁴ dx = π[x⁵/5]₀² = 32π/5 ≈ 20.11.',
+    body: 'The region under y = x² from 0 to 2 is revolved about the x-axis. Find the volume of the solid. Name the disc radius, write A(x), and integrate.',
     art: challengeSolid(),
     steps: {
       steps: [
-        { tex: 'r = x^{2}', text: 'The curve is the disc radius.' },
-        { tex: 'A(x) = \\pi\\big(x^{2}\\big)^{2} = \\pi x^{4}', text: 'Square the radius: powers multiply, 2 times 2 is 4.' },
-        { tex: 'V = \\pi\\int_{0}^{2} x^{4}\\,dx = \\pi\\Big[\\tfrac{x^{5}}{5}\\Big]_{0}^{2}', text: 'Integrate.' },
-        { tex: '\\pi\\cdot\\tfrac{32}{5} = \\tfrac{32\\pi}{5}', text: '2⁵ is 32.' },
-        { tex: '\\tfrac{32\\pi}{5} \\approx 20.11', text: 'As a decimal.' },
+        { tex: 'r = x^{2}', text: 'The curve is the distance from the axis to the edge of the solid, so it is the disc radius: r = x². Use the height of the curve, not the x-position.' },
+        { tex: 'A(x) = \\pi\\big(x^{2}\\big)^{2} = \\pi x^{4}', text: 'Square the radius, because disc area is π times radius squared: (x²)² = x⁴. Powers multiply, so 2 times 2 is 4.' },
+        { tex: 'V = \\pi\\int_{0}^{2} x^{4}\\,dx = \\pi\\Big[\\tfrac{x^{5}}{5}\\Big]_{0}^{2}', text: 'Integrate the slice area from 0 to 2 with the reverse power rule: the antiderivative of x⁴ is x⁵/5. Pull π out front first.' },
+        { tex: '\\pi\\cdot\\tfrac{32}{5} = \\tfrac{32\\pi}{5}', text: 'Evaluate x⁵/5 at the limits: 2⁵ = 32, so the top gives 32/5 and the bottom gives 0. Then multiply by π.' },
+        { tex: '\\tfrac{32\\pi}{5} \\approx 20.11', text: 'Convert to a decimal: 32π/5 ≈ 32(3.1416)/5 ≈ 20.11, a volume in cubic units.' },
       ],
       answer: 'V = \\tfrac{32\\pi}{5} \\approx 20.11',
     },
