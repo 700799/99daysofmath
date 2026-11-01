@@ -271,6 +271,7 @@ const U8: LessonSlide[] = [
     kind: 'concept',
     head: 'Differentiate both sides',
     body: 'Treat y as a function of x that you simply have not written out. Differentiate every term on both sides with respect to x. Whenever you differentiate a y-term, the chain rule tacks on a factor of dy/dx: the derivative of y² is 2y·dy/dx.',
+    why: 'Since y depends on x, y² is really (y(x))², a function inside a function. The chain rule differentiates the outside (squaring gives 2y) and then multiplies by the derivative of the inside, which is dy/dx. A plain x has inside derivative dx/dx = 1, so it needs no extra tag.',
     art: flow([{ label: 'y²', color: AMB }, { label: 'power rule: 2y', color: SKY }, { label: 'chain tag: × dy/dx', color: ROSE }], { horizontal: true, title: 'What happens to a y-term', caption: 'Power rule first, then the dy/dx tag. An x-term needs no tag because dx/dx = 1.' }),
     formula: {
       tex: 'x^{2} + y^{2} = 25 \;\\Longrightarrow\; 2x + 2y\\,\\frac{dy}{dx} = 0',
@@ -286,6 +287,7 @@ const U8: LessonSlide[] = [
     kind: 'concept',
     head: 'Then solve for dy/dx',
     body: 'After differentiating, dy/dx is just an unknown in a linear equation. Collect every dy/dx term on one side, factor dy/dx out, and divide by what is left. The answer usually has both x and y in it, so a slope needs the whole point.',
+    why: 'After differentiating, dy/dx appears only to the first power, multiplied by other things, so the equation is linear in it and ordinary algebra can isolate it. Check at (3, 4): −x/y gives −3/4, which matches the tangent you see on the circle and is perpendicular to the radius slope 4/3.',
     art: slopeField(),
     compare: {
       cols: [
@@ -300,6 +302,7 @@ const U8: LessonSlide[] = [
     kind: 'concept',
     head: 'Related rates: everything depends on time',
     body: 'When x and y both change with time t, differentiate the equation with respect to t instead. Now EVERY variable picks up its own rate: x² becomes 2x·dx/dt and y² becomes 2y·dy/dt. One equation links the quantities, so its derivative links their rates.',
+    why: 'The equation x² + y² = 100 is true at every moment, so both sides stay equal as time passes. Two things that are always equal must change at equal rates, so you may differentiate both sides with respect to t. Each variable is a function of time, so the chain rule gives it its own rate.',
     art: ladder({ base: 'x', wall: 'y', hyp: '10 ft', title: 'x² + y² = 100 at every instant', caption: 'As the base slides out, the top slides down. Both lengths are functions of t.', alt: 'A 10 foot ladder leaning on a wall, with the base distance labelled x and the height labelled y' }),
     formula: {
       tex: '2x\\,\\frac{dx}{dt} + 2y\\,\\frac{dy}{dt} = 0',
@@ -315,6 +318,7 @@ const U8: LessonSlide[] = [
     kind: 'concept',
     head: 'The recipe, and the units that check it',
     body: 'Draw a picture, name the variables, write ONE equation linking them, differentiate with respect to t, and only THEN plug in the numbers. Units are a free check: every rate is something per time, and a negative rate means the quantity is shrinking.',
+    why: 'Plugging in a number early freezes a quantity that is really moving, and the derivative of a frozen number is zero, so its rate vanishes. Keeping letters until after differentiating preserves every rate. Units help because a rate with respect to t is always a quantity per time.',
     art: flow([{ label: 'Draw it and name the variables', color: SKY }, { label: 'Write one equation linking them', color: AMB }, { label: 'Differentiate with respect to t', color: VIO }, { label: 'Plug in the numbers LAST', color: EMR }], { title: 'The related-rates recipe', caption: 'Anything that changes stays a letter until the derivative is done.' }),
     formula: {
       tex: '\\frac{d}{dt}\\big[\\,r^{3}\\big] = 3r^{2}\\,\\frac{dr}{dt}',
@@ -334,12 +338,12 @@ const U8: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Start simple: the circle',
-    body: 'Find dy/dx for x² + y² = 25.\nDifferentiate each term with respect to x, remembering the tag on y².\nThen collect and divide: dy/dx = −x/y.',
+    body: 'You have a circle that cannot be written as one formula y = …, and you want its slope dy/dx. Differentiate both sides, tag every y-term, then solve for dy/dx.',
     steps: {
       steps: [
-        { tex: '2x + 2y\\,\\tfrac{dy}{dx} = 0', text: 'Differentiate every term; y² gets its dy/dx tag.' },
-        { tex: '2y\\,\\tfrac{dy}{dx} = -2x', text: 'Move the x-term to the other side.' },
-        { tex: '\\tfrac{dy}{dx} = -\\tfrac{2x}{2y} = -\\tfrac{x}{y}', text: 'Divide by 2y and cancel the 2s.' },
+        { tex: '2x + 2y\\,\\tfrac{dy}{dx} = 0', text: 'Differentiate each term with respect to x. The x² gives 2x, and y² gives 2y times dy/dx by the chain rule because y depends on x. The constant 25 gives 0.' },
+        { tex: '2y\\,\\tfrac{dy}{dx} = -2x', text: 'Move the 2x to the right side by subtracting it from both sides. That leaves the only term containing dy/dx alone on the left, ready to be isolated.' },
+        { tex: '\\tfrac{dy}{dx} = -\\tfrac{2x}{2y} = -\\tfrac{x}{y}', text: 'Divide both sides by 2y to isolate dy/dx, then cancel the common factor 2. The slope depends on both x and y, so you need the whole point to use it.' },
       ],
       answer: '\\dfrac{dy}{dx} = -\\dfrac{x}{y}',
     },
@@ -347,12 +351,12 @@ const U8: LessonSlide[] = [
   {
     kind: 'example',
     head: 'A slope at a point: (3, 4)',
-    body: 'What is the slope of the tangent to x² + y² = 25 at (3, 4)?\nUse dy/dx = −x/y with x = 3 and y = 4.\nThe slope is −3/4. Check: the radius to (3, 4) has slope 4/3, and the tangent is perpendicular to it.',
+    body: 'What is the slope of the tangent to x² + y² = 25 at the point (3, 4)? Use the implicit derivative, then check the answer against the geometry of the radius.',
     art: perpendicular(),
     steps: {
       steps: [
-        { tex: '\\tfrac{dy}{dx} = -\\tfrac{x}{y}', text: 'The implicit derivative from the last slide.' },
-        { tex: '-\\tfrac{3}{4}', text: 'Plug in x = 3 and y = 4.' },
+        { tex: '\\tfrac{dy}{dx} = -\\tfrac{x}{y}', text: 'Start from dy/dx = −x/y, found on the last slide. It gives the slope of the tangent at any point on the circle, so we only have to feed it a point.' },
+        { tex: '-\\tfrac{3}{4}', text: 'Plug in x = 3 and y = 4. The point (3, 4) really is on the circle, since 9 + 16 = 25, so the formula applies and gives −3/4.' },
         { tex: '\\tfrac{4}{3}\\cdot\\left(-\\tfrac{3}{4}\\right) = -1', text: 'Check: radius slope times tangent slope is −1, so they are perpendicular.' },
       ],
       answer: '\\text{slope } -\\tfrac{3}{4}',
@@ -361,13 +365,13 @@ const U8: LessonSlide[] = [
   {
     kind: 'example',
     head: 'A product inside: xy = 12',
-    body: 'Find dy/dx for xy = 12 and evaluate it at (3, 4).\nThe left side is x times y, so use the product rule, and y′ is dy/dx.\nSolve: dy/dx = −y/x, which is −4/3 at (3, 4).',
+    body: 'Find dy/dx for xy = 12 and evaluate it at (3, 4). The left side multiplies two things that both depend on x, so which differentiation rule do you need?',
     steps: {
       steps: [
-        { tex: '(1)(y) + x\\,\\tfrac{dy}{dx} = 0', text: 'Product rule: derivative of x times y, plus x times derivative of y.' },
-        { tex: 'x\\,\\tfrac{dy}{dx} = -y', text: 'Move the y across.' },
-        { tex: '\\tfrac{dy}{dx} = -\\tfrac{y}{x}', text: 'Divide by x.' },
-        { tex: '-\\tfrac{4}{3}', text: 'At (3, 4): −4 over 3.' },
+        { tex: '(1)(y) + x\\,\\tfrac{dy}{dx} = 0', text: 'The left side is x times y, so use the product rule: (derivative of x) times y, plus x times (derivative of y). The derivative of y is dy/dx, and the constant 12 gives 0.' },
+        { tex: 'x\\,\\tfrac{dy}{dx} = -y', text: 'Subtract y from both sides to move it across. That leaves the only term containing dy/dx on the left, so we can isolate it next.' },
+        { tex: '\\tfrac{dy}{dx} = -\\tfrac{y}{x}', text: 'Divide both sides by x to get dy/dx alone. This is allowed because x is never zero on this curve, since xy = 12.' },
+        { tex: '-\\tfrac{4}{3}', text: 'Plug in x = 3 and y = 4, which lies on the curve because 3 × 4 = 12. The slope there is −4 over 3, so the curve is falling.' },
       ],
       answer: '\\dfrac{dy}{dx} = -\\dfrac{y}{x} = -\\dfrac{4}{3}\\ \\text{at } (3, 4)',
     },
@@ -375,12 +379,12 @@ const U8: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Another way: solve for y first',
-    body: 'For xy = 12 you CAN solve for y: y = 12/x.\nDifferentiate directly: dy/dx = −12/x², and at x = 3 that is −12/9 = −4/3.\nSame answer, which is the point: implicit differentiation agrees with the explicit route whenever both are possible.',
+    body: 'For xy = 12 you can also solve for y first and use the ordinary power rule. Does that route give the same slope at x = 3 as implicit differentiation?',
     steps: {
       steps: [
-        { tex: 'y = 12x^{-1}', text: 'Divide both sides by x.' },
-        { tex: '\\tfrac{dy}{dx} = -12x^{-2} = -\\tfrac{12}{x^{2}}', text: 'Power rule.' },
-        { tex: '-\\tfrac{12}{9} = -\\tfrac{4}{3}', text: 'Plug in x = 3.' },
+        { tex: 'y = 12x^{-1}', text: 'Since this curve can be solved for y, divide both sides of xy = 12 by x to get y = 12/x. Write it as 12x⁻¹ so the power rule applies.' },
+        { tex: '\\tfrac{dy}{dx} = -12x^{-2} = -\\tfrac{12}{x^{2}}', text: 'Apply the power rule to 12x⁻¹: bring down the exponent −1, multiply by 12, and lower the exponent to −2. This is ordinary differentiation, so no dy/dx tag is needed.' },
+        { tex: '-\\tfrac{12}{9} = -\\tfrac{4}{3}', text: 'Plug in x = 3 to get −12/9, which reduces to −4/3. It matches the implicit method, which is a good sign that both are right.' },
         { tex: '-\\tfrac{y}{x} = -\\tfrac{12/x}{x} = -\\tfrac{12}{x^{2}}', text: 'The implicit answer becomes the explicit one once you substitute y = 12/x.' },
       ],
       answer: '-\\tfrac{4}{3}\\ \\text{either way}',
@@ -389,14 +393,14 @@ const U8: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Picture it first: the balloon',
-    body: 'A spherical balloon is inflated so its radius grows at 2 cm/s. How fast is the volume growing when r = 5 cm?\nDraw the sphere, name r and V, and write V = (4/3)πr³.\nDifferentiate with respect to t, THEN plug in: dV/dt = 200π ≈ 628 cm³/s.',
+    body: 'A spherical balloon is inflated so its radius grows at 2 cm/s. How fast is the volume growing at the moment r = 5 cm? Draw it, name r and V, and find the one equation that links them.',
     art: balloon(),
     steps: {
       steps: [
-        { tex: 'V = \\tfrac{4}{3}\\pi r^{3}', text: 'The one equation linking volume and radius.' },
+        { tex: 'V = \\tfrac{4}{3}\\pi r^{3}', text: 'Volume and radius are linked by the sphere volume formula. Write that one equation first, because everything else comes from differentiating it.' },
         { tex: '\\tfrac{dV}{dt} = 4\\pi r^{2}\\,\\tfrac{dr}{dt}', text: 'Differentiate with respect to t: the r³ becomes 3r² times dr/dt, and 3 cancels the 1/3.' },
-        { tex: '4\\pi(5)^{2}(2) = 4\\pi \\cdot 25 \\cdot 2', text: 'Now plug in r = 5 and dr/dt = 2.' },
-        { tex: '200\\pi \\approx 628.3', text: 'Multiply: 4 × 25 × 2 = 200.' },
+        { tex: '4\\pi(5)^{2}(2) = 4\\pi \\cdot 25 \\cdot 2', text: 'Now plug in r = 5 and dr/dt = 2. We wait until after differentiating because r changes with time, and a plugged-in number would have lost its rate.' },
+        { tex: '200\\pi \\approx 628.3', text: 'Multiply 4 × 25 × 2 to get 200, so the volume grows at 200π cm³/s, about 628.3. The units are volume per time, as a rate of volume should be.' },
       ],
       answer: '\\dfrac{dV}{dt} = 200\\pi \\approx 628.3\\ \\text{cm}^{3}\\text{/s}',
     },
@@ -404,15 +408,15 @@ const U8: LessonSlide[] = [
   {
     kind: 'example',
     head: 'The sliding ladder',
-    body: 'A 10 ft ladder leans on a wall. Its base slides away at 1 ft/s. How fast is the top sliding down when the base is x = 6 ft from the wall?\nx² + y² = 100 links the two lengths, and when x = 6, y = 8.\nDifferentiate, plug in, and read the sign: dy/dt = −3/4 ft/s, so the top drops at 0.75 ft/s.',
+    body: 'A 10 ft ladder leans on a wall and its base slides away at 1 ft/s. How fast is the top sliding down when the base is 6 ft from the wall? Link the two lengths with one equation, differentiate in time, then plug in.',
     art: ladder({ base: 'x = 6 ft', wall: 'y = 8 ft', hyp: '10 ft', title: 'Base out at 1 ft/s: how fast does the top drop?', caption: 'Find y from the Pythagorean theorem before you plug in: 36 + y² = 100 gives y = 8.', rates: true, alt: 'A 10 foot ladder with its base 6 feet from the wall and its top 8 feet up, the base moving outward at 1 foot per second' }),
     steps: {
       steps: [
-        { tex: 'x^{2} + y^{2} = 100', text: 'The ladder is the hypotenuse, always 10.' },
-        { tex: '2x\\,\\tfrac{dx}{dt} + 2y\\,\\tfrac{dy}{dt} = 0', text: 'Differentiate with respect to t; each variable gets its rate.' },
-        { tex: 'y = \\sqrt{100 - 36} = 8', text: 'When x = 6, find the height.' },
-        { tex: '2(6)(1) + 2(8)\\,\\tfrac{dy}{dt} = 0', text: 'Plug in x = 6, dx/dt = 1, y = 8.' },
-        { tex: '16\\,\\tfrac{dy}{dt} = -12 \;\\Rightarrow\; \\tfrac{dy}{dt} = -\\tfrac{3}{4}', text: 'Solve. The minus sign means the top moves DOWN.' },
+        { tex: 'x^{2} + y^{2} = 100', text: 'The ladder, the wall and the floor form a right triangle, and the ladder is the hypotenuse, always 10 ft. So x² + y² = 100 holds at every instant.' },
+        { tex: '2x\\,\\tfrac{dx}{dt} + 2y\\,\\tfrac{dy}{dt} = 0', text: 'Differentiate both sides with respect to t. Both x and y change with time, so each term gets its own rate by the chain rule, and the constant 100 becomes 0.' },
+        { tex: 'y = \\sqrt{100 - 36} = 8', text: 'Find the height at this moment from the original equation: when x = 6, y² = 100 − 36 = 64, so y = 8. We need y as a number before solving.' },
+        { tex: '2(6)(1) + 2(8)\\,\\tfrac{dy}{dt} = 0', text: 'Plug x = 6, dx/dt = 1 and y = 8 into the differentiated equation. Now that the differentiating is finished, the numbers are safe to use.' },
+        { tex: '16\\,\\tfrac{dy}{dt} = -12 \;\\Rightarrow\; \\tfrac{dy}{dt} = -\\tfrac{3}{4}', text: 'Solve: 16 dy/dt = −12, so dy/dt = −3/4. The minus sign means y is shrinking, so the top of the ladder moves down the wall.' },
       ],
       answer: '\\dfrac{dy}{dt} = -\\dfrac{3}{4}\\ \\text{ft/s (down at 0.75 ft/s)}',
     },
@@ -420,15 +424,15 @@ const U8: LessonSlide[] = [
   {
     kind: 'example',
     head: 'The conical tank',
-    body: 'A conical tank has height 12 ft and top radius 6 ft. Water pours in at 3 ft³/min. How fast is the level rising when the water is h = 4 ft deep?\nSimilar triangles give r = h/2 at every depth, so when h = 4 the radius is r = 2.\nWrite V in terms of h alone, differentiate, and plug in: dh/dt = 3/(4π) ≈ 0.24 ft/min.',
+    body: 'Water pours into a cone-shaped tank (height 12 ft, top radius 6 ft) at 3 ft³/min. How fast is the level rising when the water is 4 ft deep? Remove the extra variable r first, then differentiate.',
     art: cone({ top: '6 ft', height: '12 ft', r: 'r = 2 ft', h: 'h = 4 ft', level: 1 / 3, title: 'Water in a cone: r is always h/2', caption: 'The water is a smaller cone, similar to the tank, so r/h = 6/12.', inflow: '3 ft³/min', alt: 'A conical tank 12 feet tall with top radius 6 feet, filled with water to a depth of 4 feet where the water radius is 2 feet' }),
     steps: {
       steps: [
-        { tex: '\\tfrac{r}{h} = \\tfrac{6}{12} \;\\Rightarrow\; r = \\tfrac{h}{2}', text: 'Similar triangles: the water cone matches the tank\u2019s shape.' },
-        { tex: 'V = \\tfrac{1}{3}\\pi\\left(\\tfrac{h}{2}\\right)^{2}h = \\tfrac{\\pi}{12}h^{3}', text: 'Replace r so V depends on h alone.' },
-        { tex: '\\tfrac{dV}{dt} = \\tfrac{\\pi}{4}h^{2}\\,\\tfrac{dh}{dt}', text: 'Differentiate: 3h² times π/12 is πh²/4.' },
-        { tex: '3 = \\tfrac{\\pi}{4}(16)\\,\\tfrac{dh}{dt} = 4\\pi\\,\\tfrac{dh}{dt}', text: 'Plug in dV/dt = 3 and h = 4.' },
-        { tex: '\\tfrac{dh}{dt} = \\tfrac{3}{4\\pi} \\approx 0.24', text: 'Divide by 4π.' },
+        { tex: '\\tfrac{r}{h} = \\tfrac{6}{12} \;\\Rightarrow\; r = \\tfrac{h}{2}', text: 'The water forms a smaller cone similar to the tank, so its radius to height ratio matches the tank: r/h = 6/12. That gives r = h/2 at every depth.' },
+        { tex: 'V = \\tfrac{1}{3}\\pi\\left(\\tfrac{h}{2}\\right)^{2}h = \\tfrac{\\pi}{12}h^{3}', text: 'Substitute r = h/2 into the cone volume formula. This leaves V in terms of h alone, which is exactly the variable whose rate we want.' },
+        { tex: '\\tfrac{dV}{dt} = \\tfrac{\\pi}{4}h^{2}\\,\\tfrac{dh}{dt}', text: 'Differentiate with respect to t. The power rule turns h³ into 3h² and the chain rule adds dh/dt, and 3 times π/12 simplifies to π/4.' },
+        { tex: '3 = \\tfrac{\\pi}{4}(16)\\,\\tfrac{dh}{dt} = 4\\pi\\,\\tfrac{dh}{dt}', text: 'Plug in dV/dt = 3 and h = 4. Then (π/4)(16) simplifies to 4π, so the equation becomes 3 = 4π times dh/dt.' },
+        { tex: '\\tfrac{dh}{dt} = \\tfrac{3}{4\\pi} \\approx 0.24', text: 'Divide both sides by 4π to get dh/dt = 3/(4π), about 0.24 ft/min. The rate is positive, so the water level is rising, as it should be.' },
       ],
       answer: '\\dfrac{dh}{dt} = \\dfrac{3}{4\\pi} \\approx 0.24\\ \\text{ft/min}',
     },
@@ -486,16 +490,16 @@ const U8: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: two cars leaving town',
-    body: 'One car drives east at 40 mph and another north at 30 mph, both leaving the same intersection at noon. At 1 p.m., how fast is the distance between them growing?\nAt 1 p.m. the legs are 40 and 30 miles, so the distance is z = 50 miles.\nDifferentiate x² + y² = z² with respect to t and plug in: dz/dt = 50 mph.',
+    body: 'One car drives east at 40 mph and another north at 30 mph, both leaving the same intersection at noon. How fast is the distance between them growing at 1 p.m.? Use the right triangle they make.',
     art: rightTriangle({ adj: '40 mi east', opp: '30 mi north', hyp: 'z = 50 mi', shape: { opp: 3, adj: 4 }, title: 'x² + y² = z² at every instant', caption: 'A 3-4-5 triangle scaled by 10: the legs grow at 40 and 30 mph.', alt: 'A right triangle with legs 40 miles east and 30 miles north and hypotenuse z = 50 miles' }),
     steps: {
       steps: [
         { tex: 'x^{2} + y^{2} = z^{2}', text: 'The one equation: the cars and the intersection form a right triangle.' },
-        { tex: '2x\\,\\tfrac{dx}{dt} + 2y\\,\\tfrac{dy}{dt} = 2z\\,\\tfrac{dz}{dt}', text: 'Differentiate with respect to t; all three lengths change.' },
-        { tex: 'x\\,\\tfrac{dx}{dt} + y\\,\\tfrac{dy}{dt} = z\\,\\tfrac{dz}{dt}', text: 'Divide everything by 2.' },
-        { tex: 'z = \\sqrt{40^{2} + 30^{2}} = 50', text: 'At 1 p.m.: x = 40, y = 30.' },
-        { tex: '40(40) + 30(30) = 50\\,\\tfrac{dz}{dt}', text: 'Plug in dx/dt = 40 and dy/dt = 30.' },
-        { tex: '\\tfrac{dz}{dt} = \\tfrac{2500}{50} = 50', text: '1600 + 900 = 2500, divided by 50.' },
+        { tex: '2x\\,\\tfrac{dx}{dt} + 2y\\,\\tfrac{dy}{dt} = 2z\\,\\tfrac{dz}{dt}', text: 'Differentiate both sides with respect to t. All three lengths x, y and z change with time, so each term gets its own rate by the chain rule.' },
+        { tex: 'x\\,\\tfrac{dx}{dt} + y\\,\\tfrac{dy}{dt} = z\\,\\tfrac{dz}{dt}', text: 'Divide every term by 2. The common factor 2 appears in all three terms, so removing it keeps the equation true and shortens the arithmetic.' },
+        { tex: 'z = \\sqrt{40^{2} + 30^{2}} = 50', text: 'Find z at 1 p.m. In one hour the cars have gone x = 40 and y = 30 miles, and the Pythagorean theorem gives z = 50.' },
+        { tex: '40(40) + 30(30) = 50\\,\\tfrac{dz}{dt}', text: 'Plug in dx/dt = 40 and dy/dt = 30 along with x = 40, y = 30 and z = 50. The differentiating is done, so every number is now safe to use.' },
+        { tex: '\\tfrac{dz}{dt} = \\tfrac{2500}{50} = 50', text: 'Add 1600 + 900 = 2500, then divide by 50 to get dz/dt = 50 mph. The cars separate at 50 mph, and the sign is positive because the distance is growing.' },
       ],
       answer: '\\dfrac{dz}{dt} = 50\\ \\text{mph}',
     },
@@ -669,6 +673,7 @@ const U9: LessonSlide[] = [
     kind: 'concept',
     head: 'The Mean Value Theorem',
     body: 'If f is continuous on [a, b] and differentiable on (a, b), some c between a and b has f′(c) equal to the average rate (f(b) − f(a))/(b − a). Somewhere, the instant rate equals the average rate. For f(x) = x² on [1, 4] the secant slope is 5, and the tangent at c = 2.5 matches it.',
+    why: 'Picture the secant line joining the two ends of the graph. Slide a parallel line toward the curve until it just touches; at that touching point the tangent has the secant slope. Continuity and differentiability are what guarantee the touching point exists, since a jump or a corner could dodge it.',
     art: mvtFig(),
     formula: {
       tex: 'f\\,\\!\\prime(c) = \\frac{f(b) - f(a)}{b - a}',
@@ -684,6 +689,7 @@ const U9: LessonSlide[] = [
     kind: 'concept',
     head: 'Critical points: where f′ is zero or undefined',
     body: 'A critical point is an x in the domain where f′(x) = 0 or f′(x) does not exist. A local max or min can only happen at a critical point or an endpoint. For f(x) = x³ − 3x, f′(x) = 3x² − 3 = 0 at x = −1 and x = 1, and the sign chart shows f′ positive, then negative, then positive.',
+    why: 'At the top of a smooth hill the curve is momentarily flat, so its slope is zero, and at a sharp corner the slope does not exist. Anywhere else the slope is defined and non-zero, so you are still climbing or descending and cannot be at a peak or valley. That is why only these points need checking.',
     art: signChart(-3, 3, [{ at: -1, label: 'x = −1' }, { at: 1, label: 'x = 1' }], [{ sign: '+', word: 'rising' }, { sign: '−', word: 'falling' }, { sign: '+', word: 'rising' }], { title: 'Sign chart of f′(x) = 3x² − 3 = 3(x − 1)(x + 1)', caption: 'Test one number in each gap: f′(−2) = 9, f′(0) = −3, f′(2) = 9.', alt: 'A sign chart for the derivative 3x squared minus 3, positive left of −1, negative between −1 and 1, positive right of 1' }),
     formula: {
       tex: 'f\\,\\!\\prime(x) = 3x^{2} - 3 = 3(x - 1)(x + 1) = 0',
@@ -698,6 +704,7 @@ const U9: LessonSlide[] = [
     kind: 'concept',
     head: 'The First Derivative Test',
     body: 'Look at the sign of f′ on each side of a critical point. If f′ changes from + to −, the point is a local MAX: the curve rose and then fell. From − to +, a local MIN. If f′ does not change sign, it is neither, just a flat moment on the way through.',
+    why: 'Positive slope means climbing and negative slope means descending. Climbing then descending leaves you on a peak, and descending then climbing leaves you in a valley. If the slope keeps the same sign you keep going the same way through the flat spot, so there is no peak or valley there.',
     art: threeShapes(),
     compare: {
       cols: [
@@ -712,6 +719,7 @@ const U9: LessonSlide[] = [
     kind: 'concept',
     head: 'The second derivative reads the bend',
     body: 'f″ > 0 means concave up: the curve holds water and every tangent sits below it. f″ < 0 means concave down. An INFLECTION POINT is where the concavity flips, so f″ changes sign there. For y = x³, f″ = 6x, negative on the left and positive on the right: inflection at the origin.',
+    why: 'The second derivative is the derivative of the slope. If it is positive the slopes keep increasing, so tangent lines tilt more and more upward as you move right, which makes a cup shape. If it is negative the slopes keep decreasing and the curve caps over like a frown.',
     art: concavityFig(),
     formula: {
       tex: 'f\\,\\!\\prime\\prime > 0 \\Rightarrow \\text{concave up}, \\qquad f\\,\\!\\prime\\prime < 0 \\Rightarrow \\text{concave down}',
@@ -727,6 +735,7 @@ const U9: LessonSlide[] = [
     kind: 'concept',
     head: 'Closed interval: the Candidates Test',
     body: 'On a closed interval [a, b] a continuous function always has an absolute max and min. Find them by evaluating f at every critical point inside the interval AND at both endpoints, then pick the biggest and smallest. On [0, 3] the candidates for x³ − 3x are x = 0, x = 1 and x = 3.',
+    why: 'The Extreme Value Theorem says a continuous function on [a, b] reaches a highest and a lowest value. If the highest point is in the interior, the curve is flat or cornered there, so it is a critical point. Otherwise it must be at an end, which is why the candidates are critical points plus endpoints.',
     art: candidatesFig(),
     table: {
       head: ['Candidate', 'Why it is a candidate', 'f(x)'],
@@ -746,13 +755,13 @@ const U9: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Start simple: the MVT point for x² on [1, 4]',
-    body: 'Find the c the Mean Value Theorem promises for f(x) = x² on [1, 4].\nAverage rate: (16 − 1)/(4 − 1) = 15/3 = 5.\nSet the instant rate equal to it: 2c = 5, so c = 2.5, which is inside (1, 4).',
+    body: 'Find the number c that the Mean Value Theorem promises for f(x) = x² on [1, 4]. Compare the average rate over the interval with the instant rate f′(c).',
     steps: {
       steps: [
-        { tex: 'f(4) = 16,\\quad f(1) = 1', text: 'Evaluate f at both ends.' },
-        { tex: '\\tfrac{f(4) - f(1)}{4 - 1} = \\tfrac{15}{3} = 5', text: 'The average rate of change is the secant slope.' },
-        { tex: 'f\\,\\!\\prime(x) = 2x', text: 'Differentiate.' },
-        { tex: '2c = 5 \;\\Rightarrow\; c = 2.5', text: 'Set the derivative equal to 5 and solve. 2.5 is between 1 and 4.' },
+        { tex: 'f(4) = 16,\\quad f(1) = 1', text: 'Evaluate f(x) = x² at both endpoints: f(4) = 16 and f(1) = 1. These two points are the ends of the secant line whose slope we need.' },
+        { tex: '\\tfrac{f(4) - f(1)}{4 - 1} = \\tfrac{15}{3} = 5', text: 'The average rate of change is rise over run between the ends, (16 − 1)/(4 − 1) = 5. This is the secant slope, and the MVT says some tangent matches it.' },
+        { tex: 'f\\,\\!\\prime(x) = 2x', text: 'Differentiate with the power rule to get f′(x) = 2x. This gives the instant rate at any point, which we will set equal to the average rate.' },
+        { tex: '2c = 5 \;\\Rightarrow\; c = 2.5', text: 'Set f′(c) = 5, so 2c = 5 and c = 2.5. The theorem needs c strictly between 1 and 4, and 2.5 is, so it is the promised point.' },
       ],
       answer: 'c = 2.5',
     },
@@ -760,14 +769,14 @@ const U9: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Find and classify the critical points',
-    body: 'Find the critical points of f(x) = x³ − 3x and classify each.\nf′(x) = 3x² − 3 = 3(x − 1)(x + 1) is zero at x = −1 and x = 1.\nf′ goes + to − at x = −1 (local max, f = 2) and − to + at x = 1 (local min, f = −2).',
+    body: 'Find the critical points of f(x) = x³ − 3x and decide whether each is a max, a min or neither. Find where f′ = 0, then use the sign of f′ on each side.',
     steps: {
       steps: [
-        { tex: 'f\\,\\!\\prime(x) = 3x^{2} - 3 = 3(x - 1)(x + 1)', text: 'Differentiate and factor.' },
-        { tex: 'x = -1,\\quad x = 1', text: 'Set f′ = 0: the two critical points.' },
-        { tex: 'f\\,\\!\\prime(-2) = 9 > 0,\\quad f\\,\\!\\prime(0) = -3 < 0,\\quad f\\,\\!\\prime(2) = 9 > 0', text: 'Test one point in each of the three gaps.' },
-        { tex: 'f(-1) = -1 + 3 = 2', text: '+ to − at x = −1: local max, height 2.' },
-        { tex: 'f(1) = 1 - 3 = -2', text: '− to + at x = 1: local min, height −2.' },
+        { tex: 'f\\,\\!\\prime(x) = 3x^{2} - 3 = 3(x - 1)(x + 1)', text: 'Differentiate with the power rule and factor out 3. Factoring turns f′ into a product, so its zeros can be read off directly.' },
+        { tex: 'x = -1,\\quad x = 1', text: 'Set f′ = 0 and solve: each factor gives one zero. The critical points are x = −1 and x = 1, the only places the slope can change sign.' },
+        { tex: 'f\\,\\!\\prime(-2) = 9 > 0,\\quad f\\,\\!\\prime(0) = -3 < 0,\\quad f\\,\\!\\prime(2) = 9 > 0', text: 'Test one point in each of the three gaps, here −2, 0 and 2, to get the sign of f′. Between critical points f′ cannot change sign, so one test point speaks for the whole gap.' },
+        { tex: 'f(-1) = -1 + 3 = 2', text: 'The sign goes + to − at x = −1, so the curve rose and then fell: a local max. Its height is f(−1) = −1 + 3 = 2.' },
+        { tex: 'f(1) = 1 - 3 = -2', text: 'The sign goes − to + at x = 1, so the curve fell and then rose: a local min. Its height is f(1) = 1 − 3 = −2.' },
       ],
       answer: '\\text{local max } (-1, 2),\\ \\text{local min } (1, -2)',
     },
@@ -775,14 +784,14 @@ const U9: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Absolute extremes on [0, 3]',
-    body: 'Find the absolute max and min of f(x) = x³ − 3x on [0, 3].\nCandidates: the critical point x = 1 (x = −1 is outside the interval) and the endpoints x = 0 and x = 3.\nf(0) = 0, f(1) = −2, f(3) = 27 − 9 = 18. Max 18 at x = 3, min −2 at x = 1.',
+    body: 'Find the absolute maximum and minimum of f(x) = x³ − 3x on the closed interval [0, 3]. List every candidate (critical points inside, plus both endpoints), then compare their heights.',
     steps: {
       steps: [
-        { tex: 'x = 1 \\ \\text{(inside)},\\quad x = -1 \\ \\text{(outside, discard)}', text: 'List the critical points that lie in [0, 3].' },
-        { tex: 'f(0) = 0', text: 'Left endpoint.' },
-        { tex: 'f(1) = 1 - 3 = -2', text: 'The critical point.' },
-        { tex: 'f(3) = 27 - 9 = 18', text: 'Right endpoint.' },
-        { tex: '18 > 0 > -2', text: 'Compare: the biggest is 18, the smallest is −2.' },
+        { tex: 'x = 1 \\ \\text{(inside)},\\quad x = -1 \\ \\text{(outside, discard)}', text: 'The critical points come from f′ = 0, namely x = ±1. Only points inside [0, 3] count, so keep x = 1 and discard x = −1.' },
+        { tex: 'f(0) = 0', text: 'Evaluate f at the left endpoint. Endpoints are always candidates on a closed interval, because the function may be largest or smallest right at an edge.' },
+        { tex: 'f(1) = 1 - 3 = -2', text: 'Evaluate f at the critical point x = 1 to get 1 − 3 = −2. A critical point is the only interior place where an extreme can hide.' },
+        { tex: 'f(3) = 27 - 9 = 18', text: 'Evaluate f at the right endpoint x = 3 to get 27 − 9 = 18. This is the other edge candidate.' },
+        { tex: '18 > 0 > -2', text: 'Compare the three values 0, −2 and 18. The Extreme Value Theorem guarantees the largest and smallest are among them, so the max is 18 and the min is −2.' },
       ],
       answer: '\\text{max } 18 \\text{ at } x = 3,\\quad \\text{min } {-2} \\text{ at } x = 1',
     },
@@ -790,14 +799,14 @@ const U9: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Where does x³ − 3x bend the other way?',
-    body: 'Find the inflection point of f(x) = x³ − 3x.\nf′(x) = 3x² − 3, so f″(x) = 6x, which is zero at x = 0.\nf″ is negative for x < 0 and positive for x > 0, so the concavity flips: inflection point (0, 0).',
+    body: 'Find the inflection point of f(x) = x³ − 3x, where the curve switches from bending one way to bending the other. Use the second derivative and check that its sign really flips.',
     steps: {
       steps: [
-        { tex: 'f\\,\\!\\prime(x) = 3x^{2} - 3', text: 'First derivative.' },
-        { tex: 'f\\,\\!\\prime\\prime(x) = 6x', text: 'Differentiate again.' },
-        { tex: '6x = 0 \;\\Rightarrow\; x = 0', text: 'Where the second derivative is zero.' },
-        { tex: 'f\\,\\!\\prime\\prime(-1) = -6 < 0,\\quad f\\,\\!\\prime\\prime(1) = 6 > 0', text: 'The sign flips from − to +, so it really is an inflection.' },
-        { tex: 'f(0) = 0', text: 'The point itself.' },
+        { tex: 'f\\,\\!\\prime(x) = 3x^{2} - 3', text: 'Differentiate with the power rule to get f′(x) = 3x² − 3. This is the slope function, and concavity is about how this slope itself changes.' },
+        { tex: 'f\\,\\!\\prime\\prime(x) = 6x', text: 'Differentiate again to get f″(x) = 6x. The second derivative says whether the slope is increasing (concave up) or decreasing (concave down).' },
+        { tex: '6x = 0 \;\\Rightarrow\; x = 0', text: 'Set f″ = 0 to find where the bend might flip: 6x = 0 gives x = 0. A flip can only happen where f″ is zero or undefined.' },
+        { tex: 'f\\,\\!\\prime\\prime(-1) = -6 < 0,\\quad f\\,\\!\\prime\\prime(1) = 6 > 0', text: 'Test one point on each side. f″(−1) = −6 is negative and f″(1) = 6 is positive, so the sign flips and x = 0 is a true inflection, not just a zero.' },
+        { tex: 'f(0) = 0', text: 'Find the height with f(0) = 0. An inflection point is a point on the curve, so it needs both coordinates: (0, 0).' },
       ],
       answer: '\\text{inflection point } (0, 0)',
     },
@@ -805,14 +814,14 @@ const U9: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Concave up where? f(x) = x⁴ − 6x²',
-    body: 'On what intervals is f(x) = x⁴ − 6x² concave up?\nf′(x) = 4x³ − 12x, so f″(x) = 12x² − 12 = 12(x − 1)(x + 1).\nf″ > 0 when x < −1 or x > 1. Concave up on (−∞, −1) and (1, ∞), with inflection points at x = −1 and x = 1.',
+    body: 'On what intervals is f(x) = x⁴ − 6x² concave up? Find f″, mark where it is zero, and read off where it is positive.',
     art: quarticFig(),
     steps: {
       steps: [
-        { tex: 'f\\,\\!\\prime(x) = 4x^{3} - 12x', text: 'First derivative.' },
-        { tex: 'f\\,\\!\\prime\\prime(x) = 12x^{2} - 12 = 12(x - 1)(x + 1)', text: 'Second derivative, factored.' },
-        { tex: 'f\\,\\!\\prime\\prime(-2) = 36 > 0,\\quad f\\,\\!\\prime\\prime(0) = -12 < 0,\\quad f\\,\\!\\prime\\prime(2) = 36 > 0', text: 'Test a point in each gap.' },
-        { tex: 'f(\\pm 1) = 1 - 6 = -5', text: 'The inflection points sit at height −5.' },
+        { tex: 'f\\,\\!\\prime(x) = 4x^{3} - 12x', text: 'Differentiate with the power rule: x⁴ gives 4x³ and 6x² gives 12x. This is the slope function, which we differentiate once more.' },
+        { tex: 'f\\,\\!\\prime\\prime(x) = 12x^{2} - 12 = 12(x - 1)(x + 1)', text: 'Differentiate again and factor: 12x² − 12 = 12(x − 1)(x + 1). Factoring shows the zeros x = ±1, where the concavity might switch.' },
+        { tex: 'f\\,\\!\\prime\\prime(-2) = 36 > 0,\\quad f\\,\\!\\prime\\prime(0) = -12 < 0,\\quad f\\,\\!\\prime\\prime(2) = 36 > 0', text: 'Test a point in each gap, since f″ cannot change sign between its zeros. It is positive at −2, negative at 0 and positive at 2, so the curve is concave up outside ±1.' },
+        { tex: 'f(\\pm 1) = 1 - 6 = -5', text: 'Because f″ changes sign at x = ±1, both are inflection points. Their height is f(±1) = 1 − 6 = −5, matching the dots on the graph.' },
       ],
       answer: '\\text{concave up on } (-\\infty, -1) \\cup (1, \\infty)',
     },
@@ -820,12 +829,12 @@ const U9: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Another way: the Second Derivative Test',
-    body: 'Classify the critical points of x³ − 3x without a sign chart.\nPlug each critical point into f″(x) = 6x: f″(−1) = −6 < 0, so x = −1 is a local max; f″(1) = 6 > 0, so x = 1 is a local min.\nSame answer as the first derivative test, in two lines. If f″ = 0 the test is silent and you go back to the sign chart.',
+    body: 'Classify the critical points of x³ − 3x without drawing a sign chart. Plug each critical point into f″ and read the sign.',
     steps: {
       steps: [
-        { tex: 'f\\,\\!\\prime\\prime(x) = 6x', text: 'Second derivative of x³ − 3x.' },
-        { tex: 'f\\,\\!\\prime\\prime(-1) = -6 < 0', text: 'Concave down at the critical point: a local MAX.' },
-        { tex: 'f\\,\\!\\prime\\prime(1) = 6 > 0', text: 'Concave up at the critical point: a local MIN.' },
+        { tex: 'f\\,\\!\\prime\\prime(x) = 6x', text: 'Differentiate twice to get f″(x) = 6x. The second derivative tells which way the curve bends at each critical point, so no sign chart is needed.' },
+        { tex: 'f\\,\\!\\prime\\prime(-1) = -6 < 0', text: 'At the critical point x = −1, f″ = −6 is negative, so the curve is concave down there. A flat spot that bends down is the top of a hill: a local MAX.' },
+        { tex: 'f\\,\\!\\prime\\prime(1) = 6 > 0', text: 'At x = 1, f″ = 6 is positive, so the curve is concave up. A flat spot that bends up is the bottom of a valley: a local MIN.' },
       ],
       answer: '\\text{max at } x = -1,\\ \\text{min at } x = 1',
     },
@@ -833,14 +842,14 @@ const U9: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Picture it first: the speeding driver',
-    body: 'A car covers 150 miles in 2 hours on a highway with a 70 mph limit. Can the driver claim never to have exceeded the limit?\nSketch position against time: the trip is a curve from (0, 0) to (2, 150), and the straight line between those points has slope 75.\nThe Mean Value Theorem says the curve is parallel to that line somewhere, so the speedometer read exactly 75 at some instant. The claim fails.',
+    body: 'A car covers 150 miles in 2 hours on a highway with a 70 mph limit. Can the driver truthfully say they never exceeded the limit? Sketch position against time and compare slopes.',
     art: carFig(),
     steps: {
       steps: [
-        { tex: '\\tfrac{150 - 0}{2 - 0} = 75 \\ \\text{mph}', text: 'Average speed is total distance over total time.' },
-        { tex: 's \\ \\text{continuous and differentiable}', text: 'A car cannot teleport or change speed instantly, so the MVT applies.' },
-        { tex: 's\\,\\!\\prime(c) = 75 \\ \\text{for some } c \\in (0, 2)', text: 'At some instant the speed equals the average speed.' },
-        { tex: '75 > 70', text: 'That instant was over the limit.' },
+        { tex: '\\tfrac{150 - 0}{2 - 0} = 75 \\ \\text{mph}', text: 'Average speed is total distance over total time: 150 miles in 2 hours is 75 mph. This is the slope of the straight line joining the ends of the position graph.' },
+        { tex: 's \\ \\text{continuous and differentiable}', text: 'Position is continuous and differentiable, because a car cannot teleport or change speed instantly, so the hypotheses of the Mean Value Theorem are met.' },
+        { tex: 's\\,\\!\\prime(c) = 75 \\ \\text{for some } c \\in (0, 2)', text: 'The MVT then gives a time c where the instant rate s′(c) equals the average rate. So at some instant the speedometer read exactly 75 mph.' },
+        { tex: '75 > 70', text: 'Compare with the limit: 75 is bigger than 70, so at that instant the driver was speeding and the claim of never exceeding the limit fails.' },
       ],
       answer: '\\text{No: at some moment the speed was exactly 75 mph}',
     },
@@ -884,16 +893,16 @@ const U9: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: analyse f(x) = x³ − 6x² + 9x completely',
-    body: 'Find every local extreme and the inflection point of f(x) = x³ − 6x² + 9x.\nf′(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3): a max at x = 1 with f = 4 and a min at x = 3 with f = 0.\nf″(x) = 6x − 12 is zero at x = 2, where f = 2, and it changes sign: inflection at (2, 2).',
+    body: 'Find every local extreme and the inflection point of f(x) = x³ − 6x² + 9x. Use f′ for the highs and lows and f″ for the bend.',
     art: cubic2Fig(),
     steps: {
       steps: [
-        { tex: 'f\\,\\!\\prime(x) = 3x^{2} - 12x + 9 = 3(x - 1)(x - 3)', text: 'Differentiate and factor.' },
-        { tex: 'f\\,\\!\\prime(0) = 9 > 0,\\quad f\\,\\!\\prime(2) = -3 < 0,\\quad f\\,\\!\\prime(4) = 9 > 0', text: 'Sign chart: + − +.' },
-        { tex: 'f(1) = 1 - 6 + 9 = 4', text: '+ to − at x = 1: local max (1, 4).' },
-        { tex: 'f(3) = 27 - 54 + 27 = 0', text: '− to + at x = 3: local min (3, 0).' },
-        { tex: 'f\\,\\!\\prime\\prime(x) = 6x - 12 = 0 \;\\Rightarrow\; x = 2', text: 'Second derivative zero at 2; negative before, positive after.' },
-        { tex: 'f(2) = 8 - 24 + 18 = 2', text: 'The inflection point is (2, 2).' },
+        { tex: 'f\\,\\!\\prime(x) = 3x^{2} - 12x + 9 = 3(x - 1)(x - 3)', text: 'Differentiate with the power rule and factor out 3, giving 3(x − 1)(x − 3). The zeros x = 1 and x = 3 are the critical points.' },
+        { tex: 'f\\,\\!\\prime(0) = 9 > 0,\\quad f\\,\\!\\prime(2) = -3 < 0,\\quad f\\,\\!\\prime(4) = 9 > 0', text: 'Test one point in each gap: f′(0) = 9, f′(2) = −3 and f′(4) = 9. The signs + − + show f rising, then falling, then rising.' },
+        { tex: 'f(1) = 1 - 6 + 9 = 4', text: 'The sign goes + to − at x = 1, so f stops rising and starts falling: a local max, of height f(1) = 1 − 6 + 9 = 4.' },
+        { tex: 'f(3) = 27 - 54 + 27 = 0', text: 'The sign goes − to + at x = 3, so f stops falling and starts rising: a local min, of height f(3) = 27 − 54 + 27 = 0.' },
+        { tex: 'f\\,\\!\\prime\\prime(x) = 6x - 12 = 0 \;\\Rightarrow\; x = 2', text: 'Differentiate again: f″(x) = 6x − 12 is zero at x = 2, negative before it and positive after, so the concavity flips there.' },
+        { tex: 'f(2) = 8 - 24 + 18 = 2', text: 'Because the concavity flips, x = 2 is an inflection point. Its height is f(2) = 8 − 24 + 18 = 2, so the point is (2, 2), halfway between the max and the min.' },
       ],
       answer: '\\text{max } (1, 4),\\ \\text{min } (3, 0),\\ \\text{inflection } (2, 2)',
     },
@@ -1027,6 +1036,7 @@ const U10: LessonSlide[] = [
     kind: 'concept',
     head: 'The optimization recipe',
     body: 'Draw it and name the variables. Write the quantity you want to optimize. Use the CONSTRAINT to get that quantity down to ONE variable. Then set the derivative to zero and solve. For the 400 m pen: 2x + 2y = 400 gives y = 200 − x, so A = x(200 − x).',
+    why: 'Calculus differentiates a function of one variable, so the constraint is needed to turn two variables into one. The fence length ties y to x, so the area depends on x alone. At the best x the area curve is at the top of a hill, where its slope A′ is zero.',
     art: penFig(),
     formula: {
       tex: '2x + 2y = 400 \;\\Rightarrow\; y = 200 - x \;\\Rightarrow\; A = x(200 - x)',
@@ -1042,6 +1052,7 @@ const U10: LessonSlide[] = [
     kind: 'concept',
     head: 'Check the domain and the endpoints',
     body: 'A candidate with x = 0 or a negative length is not a real answer. For a box folded from a 12 inch sheet, V′ = 0 at x = 2 and at x = 6, but x = 6 cuts the whole sheet away. The real domain is 0 < x < 6, and the best value can also sit at an endpoint of the domain, so always look there too.',
+    why: 'A derivative of zero only says the graph is flat there, not that the point is allowed or best. A real box needs positive side lengths, so x = 6 (no box) is not a useful answer. On a limited domain the maximum may also sit at an edge, so compare all candidates by their values.',
     art: boxCurve(),
     compare: {
       cols: [
@@ -1056,6 +1067,7 @@ const U10: LessonSlide[] = [
     kind: 'concept',
     head: 'Motion on a line: s, v, a',
     body: 'Position s(t) says where the particle is. Velocity v(t) = s′(t) says how fast and which way: positive means moving right, negative means moving left. Acceleration a(t) = v′(t) says how the velocity is changing. SPEED is |v|, which never has a sign.',
+    why: 'Velocity is how fast position changes, so it is the derivative of position, and acceleration is how fast velocity changes, so it is the derivative of velocity. The sign carries direction: if s is increasing then v is positive and the particle moves right. Speed ignores direction, so it is |v|.',
     art: flow([{ label: 's(t) position', color: SKY }, { label: 'v(t) = s′(t) velocity', color: AMB }, { label: 'a(t) = v′(t) acceleration', color: ROSE }], { horizontal: true, title: 'Differentiate to move right along the chain', caption: 'Each arrow is one derivative. Speed is the absolute value of v.' }),
     formula: {
       tex: 'v(t) = s\\,\\!\\prime(t), \\qquad a(t) = v\\,\\!\\prime(t) = s\\,\\!\\prime\\prime(t), \\qquad \\text{speed} = |v(t)|',
@@ -1071,6 +1083,7 @@ const U10: LessonSlide[] = [
     kind: 'concept',
     head: 'Speeding up or slowing down?',
     body: 'A particle speeds up when v and a have the SAME sign, because the acceleration pushes along the motion. It slows down when their signs differ. A positive acceleration does not by itself mean speeding up: if the particle is moving left, a positive a is a brake.',
+    why: 'Acceleration is the rate of change of velocity. If v is positive and a is positive, v grows, so the particle moves right faster. If v is negative and a is positive, v rises toward zero, such as −6 becoming −4, so the speed falls. Same signs grow |v|; different signs shrink it.',
     art: speedGrid(),
     compare: {
       cols: [
@@ -1090,6 +1103,7 @@ const U10: LessonSlide[] = [
     kind: 'concept',
     head: 'Displacement is not distance',
     body: 'DISPLACEMENT is s(end) − s(start): where you finished relative to where you began. DISTANCE adds up every leg separately, so every turn-around (where v = 0) matters. A particle that goes 0 to 4, back to 0, then out to 4 again has displacement 4 but travels 12.',
+    why: 'Displacement looks only at the two ends of the trip, so any backtracking cancels out. Distance measures every step, so a leftward leg must count as positive length. That is why you cut at the zeros of v: within each leg the particle never reverses, so |Δs| is exactly the length walked.',
     art: walk(-1, 5, 0, [{ by: 4, label: 'leg 1: +4' }, { by: -4, label: 'leg 2: −4' }, { by: 4, label: 'leg 3: +4' }], { title: 'Three legs on the number line', caption: 'Displacement 4 − 0 = 4. Distance 4 + 4 + 4 = 12.', answerLabel: 'ends at 4' }),
     compare: {
       cols: [
@@ -1102,14 +1116,14 @@ const U10: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Start simple: the 400 m pen',
-    body: 'You have 400 m of fence for a rectangular pen. What dimensions give the largest area?\nConstraint: 2x + 2y = 400, so y = 200 − x and A = x(200 − x) = 200x − x².\nA′ = 200 − 2x = 0 gives x = 100, y = 100, and A″ = −2 < 0 confirms a maximum: 10,000 m².',
+    body: 'You have 400 m of fence for a rectangular pen. What dimensions give the largest area? Write the area, use the fence constraint to reach one variable, then set the derivative to zero.',
     steps: {
       steps: [
-        { tex: '2x + 2y = 400 \;\\Rightarrow\; y = 200 - x', text: 'Solve the fence constraint for y.' },
-        { tex: 'A = x(200 - x) = 200x - x^{2}', text: 'Area in one variable.' },
-        { tex: 'A\\,\\!\\prime = 200 - 2x = 0 \;\\Rightarrow\; x = 100', text: 'Set the derivative to zero.' },
-        { tex: 'A\\,\\!\\prime\\prime = -2 < 0', text: 'Concave down, so this critical point is a maximum.' },
-        { tex: 'y = 200 - 100 = 100,\\quad A = 100 \\cdot 100 = 10{,}000', text: 'Back-substitute for y and compute the area.' },
+        { tex: '2x + 2y = 400 \;\\Rightarrow\; y = 200 - x', text: 'The fence is 400 m in total, so the perimeter equation 2x + 2y = 400 is the constraint. Solve it for y to get y = 200 − x, which will remove one variable.' },
+        { tex: 'A = x(200 - x) = 200x - x^{2}', text: 'Put y = 200 − x into the area formula A = xy. That gives A in terms of x alone, which is what we need in order to differentiate.' },
+        { tex: 'A\\,\\!\\prime = 200 - 2x = 0 \;\\Rightarrow\; x = 100', text: 'Differentiate with the power rule and set A′ = 0, because the top of the area curve has a flat tangent. 200 − 2x = 0 gives x = 100.' },
+        { tex: 'A\\,\\!\\prime\\prime = -2 < 0', text: 'Check the second derivative: A″ = −2 is negative, so the area graph is concave down at x = 100. That makes the critical point a maximum, not a minimum.' },
+        { tex: 'y = 200 - 100 = 100,\\quad A = 100 \\cdot 100 = 10{,}000', text: 'Back-substitute to find y = 200 − 100 = 100, and multiply to get the area 100 × 100 = 10,000. The best pen is a square.' },
       ],
       answer: '100\\ \\text{m} \\times 100\\ \\text{m},\\ \\text{area } 10{,}000\\ \\text{m}^{2}',
     },
@@ -1117,15 +1131,15 @@ const U10: LessonSlide[] = [
   {
     kind: 'example',
     head: 'A pen against a river',
-    body: 'A pen beside a river needs fence on only three sides. With 120 m of fence, what is the largest possible area?\nTwo sides of length x and one of length y: 2x + y = 120, so y = 120 − 2x.\nA = x(120 − 2x) = 120x − 2x², and A′ = 120 − 4x = 0 gives x = 30, y = 60: area 1800 m².',
+    body: 'A pen beside a river needs fence on only three sides, and you have 120 m of fence. What is the largest possible area? Be careful: the constraint is not the same as for the four-sided pen.',
     art: riverPen(),
     steps: {
       steps: [
-        { tex: '2x + y = 120 \;\\Rightarrow\; y = 120 - 2x', text: 'Only three sides use fence.' },
-        { tex: 'A = x(120 - 2x) = 120x - 2x^{2}', text: 'Area in one variable.' },
-        { tex: 'A\\,\\!\\prime = 120 - 4x = 0 \;\\Rightarrow\; x = 30', text: 'Set the derivative to zero.' },
-        { tex: 'y = 120 - 60 = 60', text: 'The side parallel to the river.' },
-        { tex: 'A = 30 \\cdot 60 = 1800', text: 'Multiply. A″ = −4 < 0 confirms the max.' },
+        { tex: '2x + y = 120 \;\\Rightarrow\; y = 120 - 2x', text: 'The river replaces one side, so only three sides need fence: two of length x and one of length y. The constraint is 2x + y = 120, so y = 120 − 2x.' },
+        { tex: 'A = x(120 - 2x) = 120x - 2x^{2}', text: 'Substitute y into the area A = xy to get A = x(120 − 2x) = 120x − 2x². Now A depends on x alone and can be differentiated.' },
+        { tex: 'A\\,\\!\\prime = 120 - 4x = 0 \;\\Rightarrow\; x = 30', text: 'Differentiate with the power rule and set A′ = 0 to find the flat top of the area curve: 120 − 4x = 0 gives x = 30.' },
+        { tex: 'y = 120 - 60 = 60', text: 'Go back to the constraint to find the third side: y = 120 − 2(30) = 60. This is the side parallel to the river.' },
+        { tex: 'A = 30 \\cdot 60 = 1800', text: 'Multiply 30 × 60 to get the area 1800 m². The second derivative A″ = −4 is negative, which confirms this is a maximum.' },
       ],
       answer: '1800\\ \\text{m}^{2}\\ (30\\ \\text{m by } 60\\ \\text{m})',
     },
@@ -1133,14 +1147,14 @@ const U10: LessonSlide[] = [
   {
     kind: 'example',
     head: 'The open box: a product-rule derivative',
-    body: 'Cut equal squares of side x from the corners of a 12 in by 12 in sheet and fold up the sides. What x gives the biggest open box?\nV = x(12 − 2x)² with 0 < x < 6. The product rule gives V′ = (12 − 2x)(12 − 6x).\nV′ = 0 at x = 6 (no box) or x = 2, and V(2) = 2 · 8² = 128 in³.',
+    body: 'Cut equal squares of side x from the corners of a 12 in by 12 in sheet and fold up the sides. What x gives the box with the biggest volume? Write V in terms of x, then differentiate.',
     steps: {
       steps: [
-        { tex: 'V = x(12 - 2x)^{2},\\quad 0 < x < 6', text: 'Base 12 − 2x on each side, height x.' },
-        { tex: 'V\\,\\!\\prime = (12 - 2x)^{2} + x \\cdot 2(12 - 2x)(-2)', text: 'Product rule, with the chain rule on the square.' },
-        { tex: '= (12 - 2x)\\big[(12 - 2x) - 4x\\big] = (12 - 2x)(12 - 6x)', text: 'Factor out the common (12 − 2x).' },
-        { tex: '12 - 2x = 0 \\Rightarrow x = 6, \\qquad 12 - 6x = 0 \\Rightarrow x = 2', text: 'Two critical points; x = 6 is the edge of the domain and gives no box.' },
-        { tex: 'V(2) = 2 \\cdot 8^{2} = 128', text: 'The box is 8 by 8 by 2.' },
+        { tex: 'V = x(12 - 2x)^{2},\\quad 0 < x < 6', text: 'The cut-out squares have side x, so the base is 12 − 2x on each side and the height is x. The volume is V = x(12 − 2x)², and x must stay between 0 and 6.' },
+        { tex: 'V\\,\\!\\prime = (12 - 2x)^{2} + x \\cdot 2(12 - 2x)(-2)', text: 'Differentiate with the product rule: (first)′ times second, plus first times (second)′. The chain rule handles the squared bracket, which gives 2(12 − 2x)(−2).' },
+        { tex: '= (12 - 2x)\\big[(12 - 2x) - 4x\\big] = (12 - 2x)(12 - 6x)', text: 'Factor out the common (12 − 2x) from both terms. A product of factors is easy to set to zero, because each factor can be zero separately.' },
+        { tex: '12 - 2x = 0 \\Rightarrow x = 6, \\qquad 12 - 6x = 0 \\Rightarrow x = 2', text: 'Set each factor to zero: x = 6 and x = 2. But x = 6 uses up the whole sheet and leaves no box (V = 0), so only x = 2 is a real candidate.' },
+        { tex: 'V(2) = 2 \\cdot 8^{2} = 128', text: 'Evaluate V(2) = 2 · 8² = 128. The base is 12 − 4 = 8 on each side, so the box is 8 by 8 by 2, and 128 beats the zero at both ends of the domain.' },
       ],
       answer: 'x = 2\\ \\text{in},\\quad V = 128\\ \\text{in}^{3}',
     },
@@ -1148,12 +1162,12 @@ const U10: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Another way: the vertex of a parabola',
-    body: 'A = 200x − x² is a downward parabola, so its maximum is at the vertex.\nThe vertex of ax² + bx + c sits at x = −b/(2a) = −200/(2 · (−1)) = 100.\nNo calculus needed for a quadratic, and it confirms x = 100. The derivative method is the one that still works when the function is not a parabola.',
+    body: 'A = 200x − x² is a downward parabola. Can you find its maximum without calculus, using the vertex formula? Compare the result with the derivative method.',
     steps: {
       steps: [
-        { tex: 'A = -x^{2} + 200x', text: 'Write it as a quadratic: a = −1, b = 200.' },
-        { tex: 'x = -\\tfrac{b}{2a} = -\\tfrac{200}{-2} = 100', text: 'The vertex formula.' },
-        { tex: 'A(100) = -10{,}000 + 20{,}000 = 10{,}000', text: 'Same maximum as before.' },
+        { tex: 'A = -x^{2} + 200x', text: 'Write the area in standard form ax² + bx + c. Here A = −x² + 200x, so a = −1 and b = 200, and since a is negative the parabola opens down and its vertex is a maximum.' },
+        { tex: 'x = -\\tfrac{b}{2a} = -\\tfrac{200}{-2} = 100', text: 'Use the vertex formula x = −b/(2a), which locates the line of symmetry of the parabola. It gives −200/(−2) = 100, the same x as the derivative method.' },
+        { tex: 'A(100) = -10{,}000 + 20{,}000 = 10{,}000', text: 'Evaluate A(100) = −10,000 + 20,000 = 10,000, the same maximum as before. Both methods agree, but only calculus works when the function is not a parabola.' },
       ],
       answer: 'x = 100,\\ A = 10{,}000\\ \\text{m}^{2}',
     },
@@ -1161,13 +1175,13 @@ const U10: LessonSlide[] = [
   {
     kind: 'example',
     head: 'When is the particle at rest?',
-    body: 'A particle moves along a line with s(t) = t³ − 6t² + 9t for t ≥ 0. When is it at rest?\nAt rest means v = 0. Differentiate: v(t) = 3t² − 12t + 9.\nFactor: 3(t − 1)(t − 3), so v = 0 at t = 1 and t = 3.',
+    body: 'A particle moves along a line with s(t) = t³ − 6t² + 9t for t ≥ 0. When is it at rest? Find the velocity, then solve for where it is zero.',
     steps: {
       steps: [
-        { tex: 'v(t) = s\\,\\!\\prime(t) = 3t^{2} - 12t + 9', text: 'Velocity is the derivative of position.' },
-        { tex: '= 3(t^{2} - 4t + 3)', text: 'Pull out the common factor 3.' },
-        { tex: '= 3(t - 1)(t - 3)', text: 'Factor the quadratic.' },
-        { tex: 'v = 0 \;\\Rightarrow\; t = 1 \\text{ or } t = 3', text: 'At rest at these two instants.' },
+        { tex: 'v(t) = s\\,\\!\\prime(t) = 3t^{2} - 12t + 9', text: 'Velocity is the derivative of position, so differentiate s(t) = t³ − 6t² + 9t with the power rule. This gives v(t) = 3t² − 12t + 9.' },
+        { tex: '= 3(t^{2} - 4t + 3)', text: 'The particle is at rest when v = 0. Pull out the common factor 3 first, which does not change where v is zero but makes the factoring easier.' },
+        { tex: '= 3(t - 1)(t - 3)', text: 'Factor the quadratic t² − 4t + 3 into two brackets whose constants multiply to 3 and add to −4, namely −1 and −3.' },
+        { tex: 'v = 0 \;\\Rightarrow\; t = 1 \\text{ or } t = 3', text: 'Set each factor to zero, since a product is zero only when one of its factors is. So v = 0 at t = 1 and t = 3, the only instants the particle is at rest.' },
       ],
       answer: 't = 1\\ \\text{and}\\ t = 3',
     },
@@ -1175,13 +1189,13 @@ const U10: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Speeding up at t = 4?',
-    body: 'Same particle, s(t) = t³ − 6t² + 9t. At t = 4, is it speeding up or slowing down?\nv(4) = 3(16) − 48 + 9 = 9, which is positive.\na(t) = v′(t) = 6t − 12, so a(4) = 12, also positive. Same sign: speeding up.',
+    body: 'For the same particle, s(t) = t³ − 6t² + 9t, is it speeding up or slowing down at t = 4? Find the signs of both velocity and acceleration, then compare them.',
     steps: {
       steps: [
-        { tex: 'v(4) = 3(4)^{2} - 12(4) + 9 = 48 - 48 + 9 = 9', text: 'Velocity at t = 4 is positive: moving right.' },
-        { tex: 'a(t) = v\\,\\!\\prime(t) = 6t - 12', text: 'Differentiate the velocity.' },
-        { tex: 'a(4) = 24 - 12 = 12', text: 'Acceleration at t = 4 is positive.' },
-        { tex: '(+)(+) \;\\Rightarrow\; \\text{speeding up}', text: 'Same sign, so the acceleration pushes along the motion.' },
+        { tex: 'v(4) = 3(4)^{2} - 12(4) + 9 = 48 - 48 + 9 = 9', text: 'Evaluate the velocity at t = 4: 3(16) − 48 + 9 = 9. It is positive, so the particle is moving to the right at that moment.' },
+        { tex: 'a(t) = v\\,\\!\\prime(t) = 6t - 12', text: 'Differentiate the velocity to get the acceleration, since a = v′. The power rule gives a(t) = 6t − 12.' },
+        { tex: 'a(4) = 24 - 12 = 12', text: 'Evaluate a(4) = 24 − 12 = 12. The acceleration is positive, so the velocity is increasing at that moment.' },
+        { tex: '(+)(+) \;\\Rightarrow\; \\text{speeding up}', text: 'Compare the signs: v and a are both positive. When velocity and acceleration have the same sign, the push is along the motion, so the particle is speeding up.' },
       ],
       answer: '\\text{speeding up: } v = 9 \\text{ and } a = 12 \\text{ share a sign}',
     },
@@ -1189,7 +1203,7 @@ const U10: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Total distance from t = 0 to t = 4',
-    body: 'Same particle. Find the total distance traveled from t = 0 to t = 4.\nIt turns around where v = 0, at t = 1 and t = 3, so split the trip there and find s at each time: s(0) = 0, s(1) = 4, s(3) = 0, s(4) = 4.\nLegs: |4 − 0| + |0 − 4| + |4 − 0| = 12. Displacement is only s(4) − s(0) = 4.',
+    body: 'For the same particle, find the total distance traveled from t = 0 to t = 4 and compare it with the displacement. Split the trip wherever the particle turns around.',
     table: {
       head: ['t', 's(t) = t³ − 6t² + 9t', 'position'],
       rows: [['0', '0 − 0 + 0', '0'], ['1', '1 − 6 + 9', '4'], ['3', '27 − 54 + 27', '0'], ['4', '64 − 96 + 36', '4']],
@@ -1197,11 +1211,11 @@ const U10: LessonSlide[] = [
     },
     steps: {
       steps: [
-        { tex: 't = 1,\\ t = 3', text: 'Turn-arounds: where v = 0.' },
-        { tex: '|s(1) - s(0)| = |4 - 0| = 4', text: 'Leg 1, moving right.' },
-        { tex: '|s(3) - s(1)| = |0 - 4| = 4', text: 'Leg 2, moving left.' },
-        { tex: '|s(4) - s(3)| = |4 - 0| = 4', text: 'Leg 3, moving right again.' },
-        { tex: '4 + 4 + 4 = 12', text: 'Add the legs. Displacement is just 4 − 0 = 4.' },
+        { tex: 't = 1,\\ t = 3', text: 'The particle can turn around only where v = 0, which we found at t = 1 and t = 3. Split the trip there so each leg moves in one direction only.' },
+        { tex: '|s(1) - s(0)| = |4 - 0| = 4', text: 'Leg 1 runs from t = 0 to 1, moving right since v > 0. Its length is |s(1) − s(0)| = |4 − 0| = 4.' },
+        { tex: '|s(3) - s(1)| = |0 - 4| = 4', text: 'Leg 2 runs from t = 1 to 3, moving left since v < 0. Its length is |s(3) − s(1)| = |0 − 4| = 4, and the absolute value makes it positive.' },
+        { tex: '|s(4) - s(3)| = |4 - 0| = 4', text: 'Leg 3 runs from t = 3 to 4, moving right again since v > 0. Its length is |s(4) − s(3)| = |4 − 0| = 4.' },
+        { tex: '4 + 4 + 4 = 12', text: 'Add the three leg lengths to get the distance 12. Displacement, end minus start, is only 4 − 0 = 4, because the leftward leg undoes the first rightward one.' },
       ],
       answer: '\\text{distance } 12,\\quad \\text{displacement } 4',
     },
@@ -1246,16 +1260,16 @@ const U10: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: when is it slowing down?',
-    body: 'A particle has velocity v(t) = t² − 4t + 3 for 0 ≤ t ≤ 4. On which intervals is it slowing down?\nv = (t − 1)(t − 3) is zero at t = 1 and t = 3; a(t) = 2t − 4, so a = 0 at t = 2.\nSlowing down means opposite signs: on 0 ≤ t < 1 (v positive, a negative) and on 2 < t < 3 (v negative, a positive).',
+    body: 'A particle has velocity v(t) = t² − 4t + 3 for 0 ≤ t ≤ 4. On which intervals is it slowing down? Find the sign of v and of a on each stretch, then compare them.',
     art: velocityFig(),
     steps: {
       steps: [
-        { tex: 'v(t) = (t - 1)(t - 3)', text: 'Factor: v is positive outside [1, 3] and negative inside.' },
+        { tex: 'v(t) = (t - 1)(t - 3)', text: 'Factor v to find where it changes sign. It is a parabola opening up with zeros at 1 and 3, so v is positive outside [1, 3] and negative between.' },
         { tex: 'a(t) = v\\,\\!\\prime(t) = 2t - 4', text: 'Acceleration is the slope of the v graph: negative before t = 2, positive after.' },
-        { tex: '0 \\le t < 1:\\ v > 0,\\ a < 0', text: 'Opposite signs: slowing down.' },
-        { tex: '1 < t < 2:\\ v < 0,\\ a < 0', text: 'Same signs: speeding up.' },
-        { tex: '2 < t < 3:\\ v < 0,\\ a > 0', text: 'Opposite signs: slowing down.' },
-        { tex: '3 < t \\le 4:\\ v > 0,\\ a > 0', text: 'Same signs: speeding up.' },
+        { tex: '0 \\le t < 1:\\ v > 0,\\ a < 0', text: 'On 0 ≤ t < 1, v is positive but a is negative. Opposite signs mean the acceleration pushes against the motion, so the particle is slowing down.' },
+        { tex: '1 < t < 2:\\ v < 0,\\ a < 0', text: 'On 1 < t < 2, v is negative and a is negative. Same signs mean the push is along the motion, so the particle is speeding up while moving left.' },
+        { tex: '2 < t < 3:\\ v < 0,\\ a > 0', text: 'On 2 < t < 3, v is still negative but a is now positive. Opposite signs again, so the particle slows down as it approaches its turn-around at t = 3.' },
+        { tex: '3 < t \\le 4:\\ v > 0,\\ a > 0', text: 'On 3 < t ≤ 4, v is positive and a is positive. Same signs, so the particle speeds up while moving right.' },
       ],
       answer: '\\text{slowing down on } [0, 1) \\text{ and } (2, 3)',
     },

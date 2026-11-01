@@ -209,6 +209,7 @@ const STAT_1: LessonSlide[] = [
     kind: 'concept',
     head: 'Two kinds of variables',
     body: 'A CATEGORICAL variable sorts individuals into groups: eye color, favorite lunch. A QUANTITATIVE variable is a number you can average: height, commute time. A number used as a label, like a jersey number or a zip code, is still categorical — averaging zip codes means nothing.',
+    why: 'Arithmetic only makes sense on numbers that measure an amount. Adding 2 siblings and 3 siblings gives 5 siblings, a real quantity, but adding two zip codes gives a number that names no place at all. Asking whether the average would mean anything tests exactly this.',
     compare: {
       cols: [
         { title: 'Categorical', lines: ['Names a group', 'Eye color, lunch, zip code', 'Count how many in each group'], tone: 'accent' },
@@ -221,6 +222,7 @@ const STAT_1: LessonSlide[] = [
     kind: 'concept',
     head: 'Categorical data: counts and percents',
     body: 'Categorical data lives in a frequency table, a bar graph, or a pie chart. The RELATIVE FREQUENCY of a group is its count divided by the total. Pizza is 8 of 20 students: 8 ÷ 20 = 0.40, or 40% of the class.',
+    why: 'A raw count means little until you know the total: 8 out of 20 is a big share, but 8 out of 2,000 is tiny. Dividing by the total puts every group on the same scale of parts of one whole, which is why all the shares must add up to 1.',
     formula: {
       tex: '\\text{relative frequency} = \\frac{\\text{count}}{\\text{total}} = \\frac{8}{20} = 0.40',
       note: 'Every group\'s relative frequency adds to 1 — the whole pie.',
@@ -236,12 +238,14 @@ const STAT_1: LessonSlide[] = [
     kind: 'concept',
     head: 'Quantitative data: dot plots and histograms',
     body: 'Quantitative data lives in a DOT PLOT (one dot per value), a STEMPLOT, or a HISTOGRAM. Fifteen students report how many pets they have: four say 0, six say 1, three say 2, one says 3 and one says 4. The dot plot shows every single value.',
+    why: 'A number line shows how far apart values are, which a list of categories cannot. Stacking a dot or a bar over each value shows where the data pile up, where they thin out and where there are gaps, and that picture of the pile is the shape of the distribution.',
     art: dotPlot([0, 1, 2, 3, 4], [4, 6, 3, 1, 1], { title: 'Pets owned by 15 students', unit: 'number of pets', caption: 'Count the dots: 4 + 6 + 3 + 1 + 1 = 15 students. The tallest stack is at 1 pet.' }),
   },
   {
     kind: 'concept',
     head: 'Describe it with SOCS',
     body: 'Describe any distribution with SOCS: Shape, Outliers, Center, Spread — always in context. Shape is symmetric, skewed right, or skewed left, and it can be unimodal (one peak), bimodal (two peaks), or roughly uniform (flat).',
+    why: 'Two data sets can share the same mean and still look nothing alike, so one number is never enough. SOCS forces four questions, what pattern, anything odd, what is typical and how much do values vary, so the description captures the whole distribution and not just one piece of it.',
     compare: {
       cols: [
         { title: 'Symmetric', lines: ['Mirror image around the middle', 'Mean ≈ median'], tone: 'ok' },
@@ -255,6 +259,7 @@ const STAT_1: LessonSlide[] = [
     kind: 'concept',
     head: 'Skew is named for the tail',
     body: 'The skew is named for the TAIL, not the peak. A long tail stretching toward the high values is skewed RIGHT. That tail drags the mean toward it, so in a skewed-right distribution the mean sits above the median.',
+    why: 'The mean is the balance point of the data, so a few far-out values in the tail act like a long lever and drag it toward them. The median only counts positions, so it stays with the bulk. Try 1, 2, 3, 4, 100: the mean is 22 but the median is still 3.',
     formula: {
       tex: '\\text{tail to the right} \;\\Rightarrow\; \\text{skewed right} \;\\Rightarrow\; \\bar{x} > \\text{median}',
       note: 'The mean chases the tail; the median stays put with the pile.',
@@ -268,7 +273,15 @@ const STAT_1: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Classify three variables',
-    body: 'Number of siblings, eye color, zip code.\nSiblings is a count you can average: quantitative. Eye color names a group: categorical.\nA zip code is written with digits, but averaging zip codes means nothing — it is a label, so categorical.',
+    body: 'Number of siblings, eye color, zip code. For each one, decide whether it is categorical or quantitative.\nThe test is simple: ask whether averaging the values would mean anything.',
+    steps: {
+      steps: [
+        { tex: '\\text{siblings: an average such as } 2.3 \\text{ makes sense}', text: 'Number of siblings is a count, and an average like 2.3 siblings per family has a real meaning. It measures an amount, so it is quantitative.' },
+        { text: 'Eye color only sorts people into named groups such as brown or blue. You cannot add or average colors, so the variable is categorical.' },
+        { tex: '\\text{the average of } 90210 \\text{ and } 10001 \\text{ means nothing}', text: 'A zip code is written with digits, but it is only a label for a place. Averaging two zip codes names no place, so zip code is categorical even though it looks like a number.' },
+      ],
+      answer: '\\text{quantitative, categorical, categorical}',
+    },
     table: {
       head: ['variable', 'could you average it?', 'type'],
       rows: [['number of siblings', 'yes — 2.3 siblings makes sense', 'quantitative'], ['eye color', 'no', 'categorical'], ['zip code', 'no — a label made of digits', 'categorical']],
@@ -279,12 +292,12 @@ const STAT_1: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Relative frequency of pizza',
-    body: 'Favorite lunch of 20 students: pizza 8, tacos 6, salad 4, other 2.\nRelative frequency = count ÷ total = 8 ÷ 20 = 0.40.\nPizza is 40% of the class — the tallest bar on the bar graph and the biggest slice of the pie.',
+    body: 'Favorite lunch of 20 students: pizza 8, tacos 6, salad 4, other 2. What fraction and what percent of the class chose pizza?',
     steps: {
       steps: [
-        { tex: '8 + 6 + 4 + 2 = 20', text: 'Check the total first.' },
-        { tex: '\\frac{8}{20} = 0.40', text: 'Pizza count over the total.' },
-        { tex: '0.40 = 40\\%', text: 'Move the decimal two places for the percent.' },
+        { tex: '8 + 6 + 4 + 2 = 20', text: 'Add all the group counts first to confirm the total of 20 students. A relative frequency always divides by the whole group, so the total must be right.' },
+        { tex: '\\frac{8}{20} = 0.40', text: 'Divide the pizza count by the total. Relative frequency means what part of the whole, so it is count over total, and 8 out of 20 is 0.40.' },
+        { tex: '0.40 = 40\\%', text: 'Multiply the decimal by 100 to get a percent, which moves the decimal point two places to the right. So 0.40 becomes 40%, the share of the class that chose pizza.' },
       ],
       answer: '0.40 \\ (40\\%)',
     },
@@ -292,19 +305,45 @@ const STAT_1: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Shape of 24 commute times',
-    body: 'Commute times in 10-minute bins: 0–10: 9 students, 10–20: 7, 20–30: 4, 30–40: 3, 40–50: 1.\nThe tallest bar is on the left and the bars shrink to the right, so the tail points toward the high values.\nShape: skewed right, one peak at 0–10 minutes. Most students live close; a few live far away.',
+    body: 'Commute times in 10-minute bins: 0–10: 9 students, 10–20: 7, 20–30: 4, 30–40: 3, 40–50: 1. Describe the shape of the distribution.',
+    steps: {
+      steps: [
+        { tex: '9 + 7 + 4 + 3 + 1 = 24', text: 'Add the bar heights to make sure they cover all 24 students. This also shows that the tallest bar, 9, is the first one, at 0–10 minutes.' },
+        { text: 'The bars start tallest on the left and shrink steadily to the right, so there is one peak, at 0–10 minutes. One peak means the distribution is unimodal.' },
+        { text: 'The thin tail stretches toward the high commute times on the right. Skew is named for the tail and not for the pile, so a tail on the right means skewed right.' },
+        { text: 'Say it in context: most students live close to school and a few live far away, and those few are what stretch the tail out to 40–50 minutes.' },
+      ],
+      answer: '\\text{skewed right, one peak at 0–10 minutes}',
+    },
     art: histogram(['0–10', '10–20', '20–30', '30–40', '40–50'], [9, 7, 4, 3, 1], { mark: 0, yLabel: 'count', title: 'Commute time (minutes), 24 students', caption: 'Bars touch because minutes are continuous. The long thin tail on the right names the skew.' }),
   },
   {
     kind: 'example',
     head: 'Median of the pets data',
-    body: 'Pets: 0 pets 4 students, 1 pet 6, 2 pets 3, 3 pets 1, 4 pets 1. Find the median and the shape.\nSorted, the 15 values are 0,0,0,0,1,1,1,1,1,1,2,2,2,3,4. The median is the 8th value, and the 5th through 10th values are all 1.\nMedian 1 pet. The peak is at 1 and the tail stretches to 4: skewed right.',
+    body: 'Pets: 0 pets 4 students, 1 pet 6, 2 pets 3, 3 pets 1, 4 pets 1. Find the median and the shape.',
+    steps: {
+      steps: [
+        { tex: '\\frac{15 + 1}{2} = 8', text: 'With n = 15 values the median sits in position (15 + 1) ÷ 2 = 8, because that leaves seven values below it and seven above it.' },
+        { tex: '0,0,0,0,1,1,1,\\mathbf{1},1,1,2,2,2,3,4', text: 'Write the values in order, repeating each one as many times as students reported it. Positions 5 through 10 are all 1, and position 8 is one of them.' },
+        { tex: '\\text{median} = 1', text: 'The 8th value is 1, so the median is 1 pet. At least half the students own 1 pet or fewer, and at least half own 1 pet or more.' },
+        { text: 'The peak is at 1 pet and a thin tail stretches up to 4 pets on the right. A tail on the right means the shape is skewed right.' },
+      ],
+      answer: '\\text{median } 1 \\text{ pet; skewed right}',
+    },
     art: sortedRow([0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 4], { middle: 7, label: 'the 8th of 15 values', title: 'Fifteen values in order', caption: 'Seven values sit on each side of the 8th one, so the median is 1 pet.' }),
   },
   {
     kind: 'example',
     head: 'Another way: count up the stacks',
-    body: 'You do not have to write out all 15 values. Add the counts from the left until you pass the middle position, (15 + 1) ÷ 2 = 8.\nZero pets covers positions 1–4. One pet covers positions 5–10. Position 8 is in that stack.\nSo the median is 1 pet, straight from the frequency table.',
+    body: 'You do not have to write out all 15 values. Use the frequency table to find which stack holds the middle position.',
+    steps: {
+      steps: [
+        { tex: '\\frac{15 + 1}{2} = 8', text: 'The middle position of 15 values is (15 + 1) ÷ 2 = 8. All we need is to find which stack in the table contains the 8th value.' },
+        { tex: '4,\\quad 4 + 6 = 10', text: 'Add the counts running down the table. Zero pets covers positions 1–4, and adding the six one-pet students reaches position 10, so running totals tell you which positions each row owns.' },
+        { tex: '4 < 8 \\le 10', text: 'Position 8 is past the end of the 0-pet stack, which stops at 4, but inside the 1-pet stack, which runs to 10. So the 8th value must be a 1.' },
+      ],
+      answer: '\\text{median} = 1 \\text{ pet}',
+    },
     table: {
       head: ['pets', 'count', 'positions covered'],
       rows: [['0', '4', '1–4'], ['1', '6', '5–10'], ['2', '3', '11–13'], ['3', '1', '14'], ['4', '1', '15']],
@@ -315,7 +354,16 @@ const STAT_1: LessonSlide[] = [
   {
     kind: 'example',
     head: 'A two-way table: conditional percent',
-    body: 'Fifty students were asked whether they prefer online or in-person class. Prefers online: 10th grade 12, 11th grade 18. Prefers in person: 10th grade 13, 11th grade 7.\nWhat percent of 11th graders prefer online? Stay inside the 11th-grade row: 18 + 7 = 25 eleventh graders.\n18 ÷ 25 = 0.72, so 72% — versus 12 ÷ 25 = 48% of 10th graders.',
+    body: 'Fifty students were asked whether they prefer online or in-person class. Prefers online: 10th grade 12, 11th grade 18. Prefers in person: 10th grade 13, 11th grade 7. What percent of 11th graders prefer online, and how does that compare with 10th graders?',
+    steps: {
+      steps: [
+        { tex: '18 + 7 = 25', text: 'Stay inside the 11th-grade row, because the question says of 11th graders. That row total, 25, is the new whole we will divide by.' },
+        { tex: '\\frac{18}{25} = 0.72', text: 'Divide the 11th graders who prefer online by all 25 eleventh graders. This is a conditional percent, so the bottom is the row total and not the 50 students altogether.' },
+        { tex: '\\frac{12}{25} = 0.48', text: 'Do the same in the 10th-grade row to compare: 12 of 25 prefer online, which is 48%. Both rows have 25 students, so the two percents are a fair comparison.' },
+        { tex: '72\\% - 48\\% = 24\\%', text: 'So 72% of 11th graders but only 48% of 10th graders prefer online, a 24-point gap between the grades.' },
+      ],
+      answer: '72\\% \\text{ of 11th graders (vs. } 48\\% \\text{ of 10th)}',
+    },
     table: {
       head: ['', 'online', 'in person', 'total'],
       rows: [['10th grade', '12', '13', '25'], ['11th grade', '18', '7', '25'], ['total', '30', '20', '50']],
@@ -334,7 +382,16 @@ const STAT_1: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Picture it first: exam scores',
-    body: 'Scores of 24 students: 50–60: 1, 60–70: 2, 70–80: 4, 80–90: 9, 90–100: 8. Sketch the bars before you say anything.\nThe tall bars sit on the right (80–100) and the bars shrink toward the low scores. The tail points LEFT.\nSkewed left. The low tail drags the mean down, so mean < median.',
+    body: 'Scores of 24 students: 50–60: 1, 60–70: 2, 70–80: 4, 80–90: 9, 90–100: 8. Sketch the bars before you say anything. Which way does the tail point?',
+    steps: {
+      steps: [
+        { tex: '1 + 2 + 4 + 9 + 8 = 24', text: 'Check that the heights add to 24 students, then sketch five touching bars. The two tallest bars, 9 and 8, are the two on the right.' },
+        { text: 'The bars are tall on the right and shrink toward the low scores on the left, leaving one long thin tail pointing left toward 50–60.' },
+        { text: 'Skew is named for the tail and not for the pile of tall bars. A tail on the left means skewed left, even though most of the data sit on the right.' },
+        { tex: '\\bar{x} < \\text{median}', text: 'The few low scores pull the mean down while the median stays with the pile, so the mean ends up below the median.' },
+      ],
+      answer: '\\text{skewed left; mean} < \\text{median}',
+    },
     art: histogram(['50–60', '60–70', '70–80', '80–90', '90–100'], [1, 2, 4, 9, 8], { mark: 0, yLabel: 'count', title: 'Exam scores, 24 students', caption: 'The thin tail is on the LOW side, so this is skewed left and the mean sits below the median.' }),
   },
   {
@@ -369,12 +426,13 @@ const STAT_1: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: marginal, then conditional',
-    body: 'From the same two-way table (online: 12 and 18; in person: 13 and 7; 50 students in all), what percent of ALL students prefer online? And of the students who prefer online, what percent are 11th graders?\nThe first is marginal: 30 of 50. The second is conditional on the online column: 18 of 30.\nBoth come out to 60%, but they answer different questions.',
+    body: 'From the same two-way table (online: 12 and 18; in person: 13 and 7; 50 students in all), what percent of ALL students prefer online? And of the students who prefer online, what percent are 11th graders? Watch which group goes on the bottom.',
     steps: {
       steps: [
-        { tex: '12 + 18 = 30', text: 'Online total: the column margin.' },
-        { tex: '\\frac{30}{50} = 0.60', text: 'Marginal percent: 60% of all students prefer online.' },
-        { tex: '\\frac{18}{30} = 0.60', text: 'Conditional on online: 60% of online-preferrers are 11th graders.' },
+        { tex: '12 + 18 = 30', text: 'Add the online column: 12 tenth graders plus 18 eleventh graders gives 30 students who prefer online. A total like this on the edge of the table is a marginal count.' },
+        { tex: '\\frac{30}{50} = 0.60', text: 'For the marginal percent, divide by the grand total of 50. The question says all students, so everyone belongs in the denominator, and 60% prefer online.' },
+        { tex: '\\frac{18}{30} = 0.60', text: 'For the conditional percent, restrict to the 30 who prefer online, which is the new whole. Of them 18 are eleventh graders, and 18 ÷ 30 is 0.60, or 60%.' },
+        { text: 'Both answers happen to be 60%, but only by coincidence of these numbers. One divides by all 50 students and the other by the 30 online students, so they answer different questions.' },
       ],
       answer: '60\\%\\ \\text{and}\\ 60\\%',
     },
@@ -450,6 +508,7 @@ const STAT_2: LessonSlide[] = [
     kind: 'concept',
     head: 'Mean and median',
     body: 'The MEAN is the balance point: add the values and divide by n. The MEDIAN is the middle value once the data are sorted; when n is even, average the two middle values. For 4, 6, 7, 8, 10, 12, 16 the mean is 63 ÷ 7 = 9 and the median is the 4th value, 8.',
+    why: 'Picture the values as equal weights on a ruler: the mean is the point where the ruler balances, so one distant weight pulls it strongly. The median only asks which value has half the data on each side, so how big the extreme values are does not matter, just their order.',
     formula: {
       tex: '\\bar{x} = \\frac{\\sum x}{n} = \\frac{63}{7} = 9',
       note: 'The median needs no formula — just sort and count to the middle.',
@@ -464,6 +523,7 @@ const STAT_2: LessonSlide[] = [
     kind: 'concept',
     head: 'Quartiles and the IQR',
     body: 'QUARTILES cut the sorted data into quarters. Q1 is the median of the lower half and Q3 the median of the upper half; when n is odd, leave the overall median out of both halves. The IQR = Q3 − Q1 is the width of the middle 50%.',
+    why: 'Q1, the median and Q3 split the sorted data into four groups with equal counts. The IQR measures the width of the middle two groups together, so it ignores the extremes in both tails. That makes it a measure of spread that one wild value cannot stretch.',
     formula: {
       tex: '\\text{IQR} = Q_3 - Q_1 = 12 - 6 = 6',
       note: 'For 4, 6, 7 | 8 | 10, 12, 16: the lower half has median 6, the upper half has median 12.',
@@ -479,6 +539,7 @@ const STAT_2: LessonSlide[] = [
     kind: 'concept',
     head: 'Standard deviation: typical distance from the mean',
     body: 'The STANDARD DEVIATION s is roughly the typical distance of a value from the mean. Find each deviation x − x̄, square it, add them up, divide by n − 1, and take the square root. A small s means the values huddle near the mean; a large s means they are spread out.',
+    why: 'Deviations from the mean always add to zero, because the mean balances the distances on each side, so we square them to make every distance count. Dividing by n − 1 instead of n corrects for data being closer to their own mean than to the true one. The square root brings back the original units.',
     formula: {
       tex: 's = \\sqrt{\\dfrac{\\sum (x - \\bar{x})^{2}}{n - 1}}',
       note: 'Squaring stops the negatives from cancelling the positives; the square root brings the units back.',
@@ -493,6 +554,7 @@ const STAT_2: LessonSlide[] = [
     kind: 'concept',
     head: 'Five numbers, one boxplot, one outlier rule',
     body: 'The FIVE-NUMBER SUMMARY (min, Q1, median, Q3, max) draws a BOXPLOT: the box holds the middle half, the whiskers reach the smallest and largest values that are not outliers. The 1.5 × IQR RULE: a value is an outlier if it is below Q1 − 1.5·IQR or above Q3 + 1.5·IQR.',
+    why: 'The box shows how wide the middle half of the data is, so a value more than one and a half box-widths beyond the box is far from where most of the data live. The 1.5 is a convention, not a law, but it flags the few values well outside the pack and ignores ordinary stragglers.',
     formula: {
       tex: '\\text{fences:}\\quad Q_1 - 1.5\\,\\text{IQR} \\qquad Q_3 + 1.5\\,\\text{IQR}',
       note: 'For the homework data: 6 − 9 = −3 and 12 + 9 = 21. Nothing lies outside, so no outliers.',
@@ -506,12 +568,13 @@ const STAT_2: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Mean and median of the homework minutes',
-    body: 'Minutes: 4, 6, 7, 8, 10, 12, 16.\nMean: 4 + 6 + 7 + 8 + 10 + 12 + 16 = 63, and 63 ÷ 7 = 9.\nThe data are already sorted; with 7 values the median is the 4th: 8. The mean is a little higher because 16 pulls it up.',
+    body: 'Homework minutes: 4, 6, 7, 8, 10, 12, 16. Find the mean and the median, and say which one the 16 pulls more.',
     steps: {
       steps: [
-        { tex: '4 + 6 + 7 + 8 + 10 + 12 + 16 = 63', text: 'Add every value.' },
-        { tex: '63 \\div 7 = 9', text: 'Divide by n = 7 for the mean.' },
-        { tex: '4, 6, 7, \\mathbf{8}, 10, 12, 16', text: 'Sorted already; the 4th of 7 is the median.' },
+        { tex: '4 + 6 + 7 + 8 + 10 + 12 + 16 = 63', text: 'Add all seven values. The mean is the total shared out equally, so the sum comes first, and the seven values add up to 63.' },
+        { tex: '63 \\div 7 = 9', text: 'Divide the total by n = 7, the number of values, to share it equally. This gives the mean, x̄ = 9 minutes, the balance point of the data.' },
+        { tex: '4, 6, 7, \\mathbf{8}, 10, 12, 16', text: 'The list is already sorted, which the median requires. With 7 values the middle is position (7 + 1) ÷ 2 = 4, and the 4th value is 8.' },
+        { text: 'The mean, 9, is a little above the median, 8, because the large value 16 pulls the balance point toward the high side, while the median ignores how big the 16 is.' },
       ],
       answer: '\\bar{x} = 9,\\ \\text{median} = 8',
     },
@@ -519,13 +582,13 @@ const STAT_2: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Five-number summary and IQR',
-    body: 'Same data: 4, 6, 7, 8, 10, 12, 16.\nMin 4, max 16, median 8. Lower half 4, 6, 7 has median Q1 = 6; upper half 10, 12, 16 has median Q3 = 12.\nFive-number summary 4, 6, 8, 12, 16. IQR = 12 − 6 = 6.',
+    body: 'Same data: 4, 6, 7, 8, 10, 12, 16. Find the five-number summary and the IQR.',
     steps: {
       steps: [
-        { tex: '\\min = 4,\\quad \\max = 16', text: 'The ends of the sorted list.' },
-        { tex: 'Q_1 = 6', text: 'Median of the lower half 4, 6, 7.' },
-        { tex: 'Q_3 = 12', text: 'Median of the upper half 10, 12, 16.' },
-        { tex: '\\text{IQR} = 12 - 6 = 6', text: 'Q3 minus Q1.' },
+        { tex: '\\min = 4,\\quad \\text{median} = 8,\\quad \\max = 16', text: 'The list is sorted, so the smallest and largest values sit at the ends: min = 4 and max = 16. The median of 7 values is the 4th one, 8.' },
+        { tex: 'Q_1 = 6', text: 'Split at the median and leave it out of both halves, because n is odd. The lower half is 4, 6, 7, and its middle value is Q1 = 6.' },
+        { tex: 'Q_3 = 12', text: 'The upper half is 10, 12, 16, and its middle value is Q3 = 12. So a quarter of the data lie above 12 and a quarter below 6.' },
+        { tex: '\\text{IQR} = 12 - 6 = 6', text: 'Subtract Q1 from Q3 to get the width of the middle half. It is a width, so it must be positive, which is why we subtract and never add: 12 − 6 = 6 minutes.' },
       ],
       answer: '4,\\ 6,\\ 8,\\ 12,\\ 16;\\quad \\text{IQR} = 6',
     },
@@ -533,7 +596,17 @@ const STAT_2: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Standard deviation of 3, 5, 5, 8, 9',
-    body: 'Mean = 30 ÷ 5 = 6.\nDeviations: −3, −1, −1, 2, 3. Squared: 9, 1, 1, 4, 9. Sum = 24.\nDivide by n − 1 = 4 to get the variance, 6. Then s = √6 ≈ 2.45.',
+    body: 'Find the standard deviation of 3, 5, 5, 8, 9. The deviations from the mean are the building blocks, so start there.',
+    steps: {
+      steps: [
+        { tex: '\\bar{x} = \\frac{3 + 5 + 5 + 8 + 9}{5} = \\frac{30}{5} = 6', text: 'Find the mean first, because standard deviation measures distance from it. The values add to 30, and 30 ÷ 5 = 6.' },
+        { tex: '-3,\\ -1,\\ -1,\\ 2,\\ 3', text: 'Subtract the mean from every value to get its deviation. They add to 0, which is a good check, because the mean balances the distances above and below.' },
+        { tex: '9 + 1 + 1 + 4 + 9 = 24', text: 'Square every deviation and add them up. Squaring makes all the terms positive so they cannot cancel, and it makes far-away values count extra.' },
+        { tex: '\\frac{24}{5 - 1} = 6', text: 'Divide by n − 1 = 4, not by 5, because this is a sample and the deviations are measured from x̄ instead of the true mean. The result, 6, is the variance.' },
+        { tex: 's = \\sqrt{6} \\approx 2.45', text: 'Take the square root to undo the squaring and return to the original units. A typical value sits about 2.45 away from the mean.' },
+      ],
+      answer: 's = \\sqrt{6} \\approx 2.45',
+    },
     art: deviationsFig,
     table: {
       head: ['x', 'x − x̄', '(x − x̄)²'],
@@ -545,13 +618,14 @@ const STAT_2: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Is 45 an outlier?',
-    body: 'Ages at a club meeting: 12, 14, 15, 15, 16, 18, 20, 45.\nMedian = (15 + 16)/2 = 15.5. Lower half 12, 14, 15, 15 gives Q1 = 14.5; upper half 16, 18, 20, 45 gives Q3 = 19. IQR = 4.5, and 1.5 × 4.5 = 6.75.\nUpper fence = 19 + 6.75 = 25.75. Since 45 > 25.75, the 45 is an outlier. The lower fence, 7.75, catches nothing.',
+    body: 'Ages at a club meeting: 12, 14, 15, 15, 16, 18, 20, 45. Use the 1.5 × IQR rule to decide whether 45 is an outlier.',
     steps: {
       steps: [
-        { tex: 'Q_1 = \\tfrac{14 + 15}{2} = 14.5,\\quad Q_3 = \\tfrac{18 + 20}{2} = 19', text: 'Medians of the two halves of 4.' },
-        { tex: '\\text{IQR} = 19 - 14.5 = 4.5', text: 'Width of the box.' },
-        { tex: '1.5 \\times 4.5 = 6.75', text: 'One and a half box-widths.' },
-        { tex: '19 + 6.75 = 25.75 < 45', text: 'The 45 is past the upper fence.' },
+        { tex: '\\text{median} = \\frac{15 + 16}{2} = 15.5', text: 'There are 8 ages, an even number, so the median averages the 4th and 5th values, 15 and 16. This splits the list into two halves of 4 with nothing left out.' },
+        { tex: 'Q_1 = \\tfrac{14 + 15}{2} = 14.5,\\quad Q_3 = \\tfrac{18 + 20}{2} = 19', text: 'Take the median of each half. The lower half 12, 14, 15, 15 gives 14.5 and the upper half 16, 18, 20, 45 gives 19, each by averaging its middle two values.' },
+        { tex: '\\text{IQR} = 19 - 14.5 = 4.5', text: 'Subtract to get the IQR, the width of the box: 19 − 14.5 = 4.5 years. The outlier rule is measured in these box-widths.' },
+        { tex: '1.5 \\times 4.5 = 6.75', text: 'The rule allows values up to one and a half box-widths beyond the box: 1.5 × 4.5 = 6.75 years. A value farther out than that is unusually far from the middle half.' },
+        { tex: '19 + 6.75 = 25.75, \\quad 14.5 - 6.75 = 7.75', text: 'Add 6.75 to Q3 for the upper fence, 25.75, and subtract it from Q1 for the lower fence, 7.75. The 45 is beyond 25.75, and nothing is below 7.75.' },
       ],
       answer: '\\text{yes: } 45 > 25.75',
     },
@@ -560,12 +634,12 @@ const STAT_2: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Another way: count box-widths past Q3',
-    body: 'Instead of computing a fence, ask how many IQRs above Q3 the suspicious value sits.\n(45 − 19) ÷ 4.5 = 26 ÷ 4.5 ≈ 5.8 IQRs above Q3.\nAnything more than 1.5 IQRs out is an outlier, and 5.8 is nowhere close to the line. Same verdict, one division.',
+    body: 'Instead of computing a fence, ask how many IQRs above Q3 the suspicious value sits, using Q3 = 19 and IQR = 4.5.',
     steps: {
       steps: [
-        { tex: '45 - 19 = 26', text: 'Distance above Q3.' },
-        { tex: '26 \\div 4.5 \\approx 5.8', text: 'Measured in box-widths.' },
-        { tex: '5.8 > 1.5', text: 'Far more than the cutoff.' },
+        { tex: '45 - 19 = 26', text: 'Find how far the 45 sits above Q3 by subtracting: 45 − 19 = 26 years. The fence is measured from the edge of the box, so Q3 is the starting point.' },
+        { tex: '26 \\div 4.5 \\approx 5.8', text: 'Divide by the IQR to count that distance in box-widths: 26 ÷ 4.5 ≈ 5.8. The rule is stated in box-widths, so this puts the distance in the same units as the rule.' },
+        { tex: '5.8 > 1.5', text: 'Compare with the cutoff of 1.5 box-widths. Since 5.8 is far larger than 1.5, the value is well beyond the fence, the same verdict as before: an outlier.' },
       ],
       answer: '\\text{outlier}',
     },
@@ -573,7 +647,16 @@ const STAT_2: LessonSlide[] = [
   {
     kind: 'example',
     head: 'What the 45 does to the mean',
-    body: 'For those ages, compare the mean and median with and without the 45.\nWith 45: mean = 155 ÷ 8 ≈ 19.4, median 15.5. Without 45: mean = 110 ÷ 7 ≈ 15.7, median 15.\nThe outlier moves the mean by almost 4 years but the median by only half a year. The median is RESISTANT; the mean is not.',
+    body: 'For the club ages 12, 14, 15, 15, 16, 18, 20, 45, compare the mean and median with and without the 45. Which one is resistant to the outlier?',
+    steps: {
+      steps: [
+        { tex: '\\frac{155}{8} \\approx 19.4', text: 'With all 8 ages the total is 155, so the mean is 155 ÷ 8 ≈ 19.4, which is larger than seven of the eight ages.' },
+        { tex: '\\frac{15 + 16}{2} = 15.5', text: 'The median of the 8 ages averages the 4th and 5th values, 15 and 16, giving 15.5. It depends only on those middle positions, not on how big the 45 is.' },
+        { tex: '\\frac{110}{7} \\approx 15.7,\\quad \\text{median} = 15', text: 'Now remove the 45. The total drops to 110 for 7 ages, so the mean is about 15.7, and the median is the 4th value, 15.' },
+        { tex: '19.4 - 15.7 \\approx 3.7,\\quad 15.5 - 15 = 0.5', text: 'Compare the changes. The mean moved by about 3.7 years but the median by only 0.5, so the median is resistant to the outlier and the mean is not.' },
+      ],
+      answer: '\\text{mean moves } 3.7;\\ \\text{median moves } 0.5',
+    },
     table: {
       head: ['', 'mean', 'median'],
       rows: [['with 45 (n = 8)', '155 ÷ 8 ≈ 19.4', '15.5'], ['without 45 (n = 7)', '110 ÷ 7 ≈ 15.7', '15'], ['change', 'about 3.7', '0.5']],
@@ -584,7 +667,16 @@ const STAT_2: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Picture it first: two classes, one test',
-    body: 'Class A: median 78, IQR 10. Class B: median 85, IQR 20. Sketch two boxplots: B\'s box sits farther right, A\'s box is half as wide.\nCenter: B\'s typical student scored higher, 85 versus 78.\nSpread: A\'s middle half is packed into 10 points instead of 20, so A was more consistent.',
+    body: 'Class A: median 78, IQR 10. Class B: median 85, IQR 20. Sketch two boxplots, then compare the two classes in center and in spread.',
+    steps: {
+      steps: [
+        { text: 'Sketch a number line and draw each box. Class B\'s median line, 85, sits to the right of Class A\'s, 78, so B\'s whole box is shifted to the right.' },
+        { tex: '85 - 78 = 7', text: 'Compare centers with centers: the medians differ by 7, so the typical student in Class B scored 7 points higher than the typical student in Class A.' },
+        { tex: '\\text{IQR}_A = 10 < \\text{IQR}_B = 20', text: 'Compare spreads with spreads. The IQR is the width of the box, and A\'s is 10 against B\'s 20, so A\'s middle half is packed into half the width.' },
+        { text: 'State the conclusion in context: Class B did better typically, but Class A was more consistent. Name the class with every number so the comparison is clear.' },
+      ],
+      answer: '\\text{B: higher center; A: smaller spread}',
+    },
     compare: {
       cols: [
         { title: 'Class A', lines: ['median 78', 'IQR 10 — a narrow box', 'more consistent'], tone: 'accent' },
@@ -625,12 +717,13 @@ const STAT_2: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: add a value, keep the mean',
-    body: 'Add one more homework time to 4, 6, 7, 8, 10, 12, 16 so the mean stays exactly 9. What happens to the median?\nTo keep the mean at 9 with 8 values, the total must be 72, so the new value is 72 − 63 = 9.\nSorted, the list is 4, 6, 7, 8, 9, 10, 12, 16; the median is now (8 + 9)/2 = 8.5. The mean held still, the median moved up.',
+    body: 'Add one more homework time to 4, 6, 7, 8, 10, 12, 16 so the mean stays exactly 9. What happens to the median?',
     steps: {
       steps: [
-        { tex: '8 \\times 9 = 72', text: 'Eight values with mean 9 must total 72.' },
-        { tex: '72 - 63 = 9', text: 'The new value is 9 — adding the mean never moves the mean.' },
-        { tex: '\\tfrac{8 + 9}{2} = 8.5', text: 'With 8 values the median averages the 4th and 5th.' },
+        { tex: '8 \\times 9 = 72', text: 'After adding one value there are 8 values, and a mean of 9 means a total of 8 × 9 = 72. The mean is total divided by n, so the total is mean times n.' },
+        { tex: '72 - 63 = 9', text: 'The old total was 63, so the new value must be 72 − 63 = 9. That makes sense: adding a value equal to the mean cannot move the balance point.' },
+        { tex: '4, 6, 7, 8, 9, 10, 12, 16', text: 'Insert the 9 in order, because the median needs a sorted list. The new 9 lands between the 8 and the 10.' },
+        { tex: '\\tfrac{8 + 9}{2} = 8.5', text: 'With 8 values the median is the average of the 4th and 5th values, 8 and 9, which is 8.5. The mean held still at 9, but the median moved up from 8.' },
       ],
       answer: '\\text{add } 9;\\ \\text{median } 8 \\to 8.5',
     },
