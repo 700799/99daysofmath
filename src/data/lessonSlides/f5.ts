@@ -28,6 +28,7 @@ export const F5_SLIDES: SlideBank = {
         mark: 2,
         note: 'The digit never changes. Only the seat it sits in changes what it is worth.',
       },
+      why: "We count in bundles of ten. Ten pennies make one dime, and ten dimes make one dollar. Numbers work the same way: ten ones make one ten, ten tens make one hundred. So each seat to the left holds bigger bundles, and the same digit is worth more there.",
     },
     {
       kind: 'concept',
@@ -40,6 +41,7 @@ export const F5_SLIDES: SlideBank = {
         [['200', '40'], ['60', '12']],
         { title: '24 × 13, cut into four easy pieces', total: '200 + 40 + 60 + 12 = 312', caption: 'A hard multiplication becomes four easy ones you can do in your head.' },
       ),
+      why: "Think of 13 bags with 24 candies in each. Ten of the bags hold 24 × 10 candies, and the other 3 bags hold 24 × 3 candies. Counting the bags in two piles changes nothing, so adding the two piles gives the same total as one big multiplication.",
     },
     {
       kind: 'concept',
@@ -48,18 +50,27 @@ export const F5_SLIDES: SlideBank = {
       formula: { tex: '432 \\div 6 = (420 + 12) \\div 6', note: 'Peel off a chunk you can divide in your head, then handle the rest.', parts: [{ sym: '420 \\div 6 = 70', means: 'a friendly chunk taken off first', tone: 'accent' }, { sym: '12 \\div 6 = 2', means: 'the small remainder, done separately', tone: 'ok' }] },
       steps: {
         steps: [
-          { tex: '432 \\div 6', text: 'Too big to know straight off.' },
-          { tex: '420 \\div 6 = 70', text: 'Peel off a friendly chunk first.' },
-          { tex: '12 \\div 6 = 2', text: 'Then finish what is left.' },
-          { tex: '70 + 2', text: 'Add the two answers.' },
+          { tex: '432 \\div 6', text: 'This is too big to know straight away, so we will not try to do it in one jump. We will split it into easy pieces.' },
+          { tex: '420 \\div 6 = 70', text: 'Peel off a friendly chunk. We know 6 × 7 = 42, so 6 × 70 = 420, and 420 divides by 6 easily.' },
+          { tex: '12 \\div 6 = 2', text: 'The leftover is 432 − 420 = 12. That small piece is easy to divide, because 6 goes into 12 exactly two times.' },
+          { tex: '70 + 2', text: 'Add the two answers. Seventy groups of 6 plus two more groups of 6 is the whole number of groups.' },
         ],
         answer: '72',
       },
+      why: "Dividing 432 by 6 asks how many groups of 6 fit inside 432. You can count those groups in handfuls: 70 groups use up 420, and the 12 left over holds 2 more groups. All the handfuls together are the full answer, just like paying with big bills first and coins last.",
     },
     {
       kind: 'example',
       head: 'Start simple: the value of a digit',
-      body: 'What is the 5 worth in 4,562?\nCount the places from the right: 2 ones, 6 tens, 5 hundreds. The 5 sits in the hundreds place. So it is worth 5 × 100 = 500.',
+      body: 'What is the 5 worth in 4,562? Find the seat the 5 sits in, then multiply the digit by what that seat is worth.',
+      steps: {
+        steps: [
+          { tex: '4{,}562 \\to \\text{ones, tens, hundreds}', text: 'Count the seats from the right. The 2 is in the ones seat, the 6 is in the tens seat, and the 5 is in the hundreds seat.' },
+          { tex: '\\text{hundreds seat} = 100', text: 'The hundreds seat is worth 100, because each seat to the left is worth ten times the seat before it.' },
+          { tex: '5 \\times 100 = 500', text: 'Multiply the digit by the worth of its seat. Five groups of one hundred is 500, just like five 100-dollar bills.' },
+        ],
+        answer: '500',
+      },
       table: {
         head: ['digit', 'place', 'value'],
         rows: [['3', 'thousands', '3,000'], ['4', 'hundreds', '400'], ['7', 'tens', '70'], ['2', 'ones', '2'],],
@@ -70,18 +81,26 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'One more digit: 28,514',
-      body: 'What is the 8 worth in 28,514?\nPlaces from the right: 4 ones, 1 ten, 5 hundreds, 8 thousands. The 8 is in the thousands place. Its value is 8 × 1,000 = 8,000.',
-      steps: { steps: [{ tex: '\\text{the } 8 \\text{ sits in thousands}', text: 'Find which place the digit occupies.' }, { tex: '8 \\times 1000 = 8000', text: 'Its value is the digit times the place.' }], answer: '8000' },
+      body: 'What is the 8 worth in 28,514? Find its seat first, then use the worth of that seat.',
+      steps: {
+        steps: [
+          { tex: '28{,}514 \\to 4,\\ 1,\\ 5,\\ 8,\\ 2', text: 'Count seats from the right: 4 is ones, 1 is tens, 5 is hundreds, and 8 is in the thousands seat.' },
+          { tex: '\\text{thousands seat} = 1000', text: 'The thousands seat is worth 1,000. That is ten hundreds, and each seat to the left is ten times bigger.' },
+          { tex: '8 \\times 1000 = 8000', text: 'Multiply the digit by the seat value. Eight bundles of one thousand make 8,000, so the 8 is not worth just 8.' },
+        ],
+        answer: '8000',
+      },
     },
     {
       kind: 'example',
       head: 'Easy multiply: 60 × 40',
-      body: 'Multiply the front digits first: 6 × 4 = 24. Now attach the zeros you set aside — one from 60 and one from 40. That gives 2,400. Zeros ride along for free!',
+      body: 'How can you multiply 60 × 40 without a calculator? Pull the zeros out of the way and multiply the small numbers.',
       steps: {
         steps: [
-          { tex: '6 \\times 4 = 24', text: 'Do the easy part first.' },
-          { tex: '60 \\times 40', text: 'There are two zeros in total.' },
-          { tex: '24 \\text{ then } 00', text: 'Stick them on the end.' },
+          { tex: '60 \\times 40 = (6 \\times 10) \\times (4 \\times 10)', text: 'Write each number as a digit times ten. 60 is six tens and 40 is four tens. This hides the zeros for a moment.' },
+          { tex: '6 \\times 4 = 24', text: 'Multiply the small numbers first. You already know this fact, and the order of multiplying does not change the answer.' },
+          { tex: '10 \\times 10 = 100', text: 'The two tens we set aside multiply to 100. That is why two zeros are waiting to be stuck back on.' },
+          { tex: '24 \\times 100 = 2400', text: 'Multiplying by 100 puts two zeros on the end of 24. So both zeros ride along and we get 2,400.' },
         ],
         answer: '2400',
       },
@@ -89,13 +108,13 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Bigger multiply: 24 × 13',
-      body: 'Break 13 into 10 + 3. First: 24 × 10 = 240. Then: 24 × 3 = 72. Add the pieces: 240 + 72 = 312.',
+      body: 'Multiply 24 × 13 by cutting BOTH numbers into tens and ones, like the grid on the concept slide. Four easy pieces, then add.',
       steps: {
         steps: [
-          { tex: '20 \\times 10 = 200', text: 'Big piece times big piece.' },
-          { tex: '20 \\times 3 = 60', text: 'Big times small.' },
-          { tex: '4 \\times 10 = 40', text: 'Small times big.' },
-          { tex: '4 \\times 3 = 12', text: 'Small times small — now add all four.' },
+          { tex: '24 = 20 + 4,\\quad 13 = 10 + 3', text: 'Split both numbers into tens and ones. Every piece of 24 must meet every piece of 13, so there will be four small products.' },
+          { tex: '20 \\times 10 = 200,\\quad 20 \\times 3 = 60', text: 'Do the two products that use the 20. Each is a friendly one: a multiple of ten times a small number.' },
+          { tex: '4 \\times 10 = 40,\\quad 4 \\times 3 = 12', text: 'Now do the two products that use the 4. These are the pieces people forget, and leaving them out makes the answer too small.' },
+          { tex: '200 + 60 + 40 + 12 = 312', text: 'Add all four pieces. The big rectangle was cut into four small rectangles, so the total area is their sum.' },
         ],
         answer: '312',
       },
@@ -103,14 +122,30 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Divide in chunks: 432 ÷ 6',
-      body: 'Look for a friendly chunk: 6 × 70 = 420, which is close to 432. The leftover is 432 − 420 = 12, and 12 ÷ 6 = 2. Stack the chunks: 70 + 2 = 72.',
-      steps: { steps: [{ tex: '420 \\div 6 = 70', text: 'Peel off a friendly chunk.' }, { tex: '12 \\div 6 = 2', text: 'Divide what is left.' }, { tex: '70 + 2 = 72', text: 'Add the two pieces.' }], answer: '72' },
+      body: 'How many 6s fit in 432? Look for a friendly chunk you know, take it off, and deal with what is left.',
+      steps: {
+        steps: [
+          { tex: '6 \\times 70 = 420', text: 'Pick a friendly chunk close to 432. Since 6 × 7 = 42, we know 6 × 70 = 420, which is very near 432.' },
+          { tex: '420 \\div 6 = 70', text: 'That chunk holds exactly 70 sixes. Taking it off first means we have already counted most of the groups.' },
+          { tex: '432 - 420 = 12,\\quad 12 \\div 6 = 2', text: 'Find the leftover: 432 minus 420 is 12. Six goes into 12 exactly two times, so two more groups fit.' },
+          { tex: '70 + 2 = 72', text: 'Add the groups from each piece. Seventy sixes plus two sixes is 72 sixes, so the answer is 72.' },
+        ],
+        answer: '72',
+      },
     },
     {
       kind: 'example',
       head: 'Another way: split the other number',
-      body: 'Multiply 24 × 13 by breaking apart 24 instead of 13.\n20 × 13 = 260 and 4 × 13 = 52. Add them: 260 + 52 = 312 — same answer, different split.',
-      steps: { steps: [{ tex: '13 = 10 + 3', text: 'Split the smaller factor instead.' }, { tex: '24(10) + 24(3) = 312', text: 'Multiply each piece, then add.' }], answer: '312' },
+      body: 'Multiply 24 × 13 again, but this time break apart 24 instead of 13. Do you get the same answer?',
+      steps: {
+        steps: [
+          { tex: '24 = 20 + 4', text: 'Split the 24 into 20 and 4 this time. Either number can be broken apart, because the answer is the same total either way.' },
+          { tex: '20 \\times 13 = 260', text: 'Multiply the 20 by the whole 13. That is 2 × 13 = 26 tens, so 260. Zeros ride along at the end.' },
+          { tex: '4 \\times 13 = 52', text: 'Multiply the 4 by the whole 13. Four groups of 10 is 40 and four groups of 3 is 12, and 40 + 12 is 52.' },
+          { tex: '260 + 52 = 312', text: 'Add both pieces. The result matches the first method, which is a good check that neither split lost a piece.' },
+        ],
+        answer: '312',
+      },
     },
     {
       kind: 'protip',
@@ -141,7 +176,20 @@ export const F5_SLIDES: SlideBank = {
       body: 'When you split 24 × 13 into 24 × 10 and 24 × 3, you must ADD BOTH pieces. Stopping at 240 is the most common mistake. Break apart, multiply each piece, then add them all.',
       compare: { cols: [{ title: 'Both pieces', tex: '240 + 72', lines: ['24×10 and 24×3', 'Total 312'], tone: 'ok' }, { title: 'One piece', tex: '240', lines: ['The 24×3 was dropped', 'Answer far too small'], tone: 'bad' }], note: 'Splitting only helps if you add every piece back.' },
     },
-    { kind: 'challenge', head: 'Extra credit: fill the theater', body: 'A theater has 18 rows with 15 seats each. How many seats in all?\nBreak 15 into 10 + 5: 18 × 10 = 180 and 18 × 5 = 90. Total: 180 + 90 = 270 seats.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: fill the theater',
+      body: 'A theater has 18 rows with 15 seats in each row. How many seats are there in all? Pick a split that makes the math easy.',
+      steps: {
+        steps: [
+          { tex: '18 \\times 15', text: 'Rows of seats means equal groups, so we multiply the number of rows by the seats in each row.' },
+          { tex: '15 = 10 + 5', text: 'Break 15 into 10 and 5. Ten is easy to multiply by, and 5 is half of ten, so both pieces are friendly.' },
+          { tex: '18 \\times 10 = 180,\\quad 18 \\times 5 = 90', text: 'Multiply 18 by each piece. Times 10 just adds a zero, and times 5 is half of that, so half of 180 is 90.' },
+          { tex: '180 + 90 = 270', text: 'Add the two pieces together. Ten seats per row plus five seats per row gives all fifteen seats per row.' },
+        ],
+        answer: '270 \\text{ seats}',
+      },
+    },
     {
       kind: 'summary',
       head: 'You\'ve got big numbers handled',
@@ -167,6 +215,7 @@ export const F5_SLIDES: SlideBank = {
       body: 'You can\'t add 1 slice of a pizza cut in halves to 1 slice cut in thirds — the pieces are different sizes! Fractions work the same way. You may only add or subtract when the denominators MATCH.',
       formula: { tex: '\\tfrac{1}{2} + \\tfrac{1}{3} \\ne \\tfrac{2}{5}', note: 'Halves and thirds are different-sized pieces. Rename before adding.', parts: [{ sym: '\\text{halves}', means: 'bigger pieces, two to a whole', tone: 'accent' }, { sym: '\\text{thirds}', means: 'smaller pieces, three to a whole', tone: 'ok' }] },
       art: fractionBar(2, 1, { label: '1/2', second: { parts: 3, shaded: 1, label: '1/3' }, title: 'halves and thirds are different sizes', caption: 'You cannot add these tops — the pieces are not the same size yet.' }),
+      why: "Adding fractions means counting pieces. Two slices and one slice make three slices only if every slice is the same size. A slice from a pizza cut in halves is bigger than a slice from a pizza cut in thirds, so you must cut them the same way before you count.",
     },
     {
       kind: 'concept',
@@ -177,6 +226,7 @@ export const F5_SLIDES: SlideBank = {
         tex: '\\frac{1}{2} + \\frac{1}{3} = \\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}',
         note: 'Rename both fractions so they share a bottom, then add the tops.',
       },
+      why: "Cutting each piece into smaller equal pieces does not change how much pizza you have. Cut each half into 3 pieces and it is 3 sixths. Cut each third into 2 pieces and it is 2 sixths. Now both are in sixths, so they can be counted together.",
     },
     {
       kind: 'concept',
@@ -190,29 +240,44 @@ export const F5_SLIDES: SlideBank = {
           { sym: 'd', means: 'the size of each piece — stays exactly as it was', tone: 'warn' },
         ],
       },
+      why: "The bottom number only names the kind of piece, like the word dollars or cents. 3 fifths plus 2 fifths is 5 fifths, the same way 3 apples plus 2 apples is 5 apples. You count how many pieces you have, and the kind of piece stays the same.",
     },
     {
       kind: 'example',
       head: 'Warm-up: same bottoms already',
-      body: '1/4 + 1/4 = ?\nThe pieces are already the same size (fourths). Add the tops: 1 + 1 = 2, so you get 2/4. Simplify: 2/4 = 1/2.',
-      steps: { steps: [{ tex: '\\tfrac{1}{5} + \\tfrac{2}{5}', text: 'The pieces are already the same size.' }, { tex: '\\tfrac{3}{5}', text: 'Add the tops, keep the bottom.' }], answer: '\\tfrac{3}{5}' },
+      body: 'What is 1/4 + 1/4? Check the bottoms first, then decide what to add.',
+      steps: {
+        steps: [
+          { tex: '\\tfrac{1}{4} + \\tfrac{1}{4}', text: 'Look at the bottoms. Both are 4, so both pieces are fourths. The pieces are the same size and we can add right away.' },
+          { tex: '\\tfrac{1 + 1}{4} = \\tfrac{2}{4}', text: 'Add the tops and keep the bottom. One slice plus one slice is two slices, and each slice is still a fourth.' },
+          { tex: '\\tfrac{2}{4} = \\tfrac{2 \\div 2}{4 \\div 2} = \\tfrac{1}{2}', text: 'Simplify by dividing top and bottom by 2. Two slices out of four is the same amount of pizza as one half.' },
+        ],
+        answer: '\\tfrac{1}{2}',
+      },
     },
     {
       kind: 'example',
       head: 'Subtract with same bottoms',
-      body: '5/8 − 1/8 = ?\nEighths minus eighths — same size, so just subtract tops: 5 − 1 = 4. That gives 4/8. Simplify by dividing top and bottom by 4: 1/2.',
-      steps: { steps: [{ tex: '\\tfrac{4}{7} - \\tfrac{1}{7}', text: 'Same-size pieces, so subtract directly.' }, { tex: '\\tfrac{3}{7}', text: 'Take the tops, keep the bottom.' }], answer: '\\tfrac{3}{7}' },
+      body: 'What is 5/8 − 1/8? The pieces match, so think about taking slices away.',
+      steps: {
+        steps: [
+          { tex: '\\tfrac{5}{8} - \\tfrac{1}{8}', text: 'Both fractions are eighths, so the pieces are the same size. That means we can subtract the tops right away.' },
+          { tex: '\\tfrac{5 - 1}{8} = \\tfrac{4}{8}', text: 'Subtract the tops and keep the bottom. You have 5 slices and eat 1, so 4 slices are left, and they are still eighths.' },
+          { tex: '\\tfrac{4}{8} = \\tfrac{4 \\div 4}{8 \\div 4} = \\tfrac{1}{2}', text: 'Simplify by dividing top and bottom by 4. Four slices out of eight is the same as half of the pizza.' },
+        ],
+        answer: '\\tfrac{1}{2}',
+      },
     },
     {
       kind: 'example',
       head: 'Different bottoms: 1/2 + 1/3',
-      body: 'Halves and thirds are different sizes, so rewrite both in sixths. 1/2 = 3/6 and 1/3 = 2/6. Now add the tops: 3/6 + 2/6 = 5/6.',
+      body: 'Halves and thirds are different sizes. What size piece can both of them be cut into, so you can add?',
       steps: {
         steps: [
-          { tex: '2 \\times 3 = 6', text: 'Find a bottom both can become.' },
-          { tex: '\\frac{1}{2} = \\frac{3}{6}', text: 'Multiply top and bottom by 3.' },
-          { tex: '\\frac{1}{3} = \\frac{2}{6}', text: 'Multiply top and bottom by 2.' },
-          { tex: '\\frac{3}{6} + \\frac{2}{6}', text: 'Same size now — add the tops.' },
+          { tex: '2 \\times 3 = 6', text: 'Find a bottom that both 2 and 3 go into. Six works, because 2 goes into 6 three times and 3 goes into 6 two times.' },
+          { tex: '\\frac{1}{2} = \\frac{1 \\times 3}{2 \\times 3} = \\frac{3}{6}', text: 'Multiply the top and bottom by 3. That cuts each half into 3 pieces, so the amount stays the same but the pieces are sixths.' },
+          { tex: '\\frac{1}{3} = \\frac{1 \\times 2}{3 \\times 2} = \\frac{2}{6}', text: 'Multiply the top and bottom by 2. That cuts each third into 2 pieces, so it is now 2 sixths with nothing lost.' },
+          { tex: '\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}', text: 'The pieces are now the same size, so add the tops and keep the bottom. Three slices plus two slices is five sixths.' },
         ],
         answer: '\\frac{5}{6}',
       },
@@ -220,19 +285,28 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Subtract: 3/4 − 1/2',
-      body: 'Rewrite 1/2 as fourths: 1/2 = 2/4. Now both are fourths: 3/4 − 2/4. Subtract tops: 3 − 2 = 1, so the answer is 1/4.',
-      steps: { steps: [{ tex: '\\tfrac{1}{2} = \\tfrac{2}{4}', text: 'Rename so both are quarters.' }, { tex: '\\tfrac{3}{4} - \\tfrac{2}{4} = \\tfrac{1}{4}', text: 'Now subtract the tops.' }], answer: '\\tfrac{1}{4}' },
+      body: 'What is 3/4 − 1/2? The bottoms are different, so first find a size of piece that fits both.',
+      steps: {
+        steps: [
+          { tex: '2 \\text{ goes into } 4', text: 'Check if one bottom fits in the other. Two goes into 4, so fourths will work as the common size for both fractions.' },
+          { tex: '\\tfrac{1}{2} = \\tfrac{1 \\times 2}{2 \\times 2} = \\tfrac{2}{4}', text: 'Rename the half as fourths. Multiply top and bottom by 2, which cuts the half into two pieces without changing how much it is.' },
+          { tex: '\\tfrac{3}{4} - \\tfrac{2}{4} = \\tfrac{3 - 2}{4}', text: 'Now both are fourths, so subtract the tops and keep the bottom. You have 3 slices and take away 2.' },
+          { tex: '\\tfrac{1}{4}', text: 'One slice is left and each slice is a fourth. It cannot be simplified, because 1 and 4 share no factor except 1.' },
+        ],
+        answer: '\\tfrac{1}{4}',
+      },
     },
     {
       kind: 'example',
       head: 'Answer bigger than 1: 2/3 + 3/4',
-      body: 'The common denominator of 3 and 4 is 12. Rewrite: 2/3 = 8/12 and 3/4 = 9/12. Add: 8/12 + 9/12 = 17/12, which is 1 whole and 5/12 — written 1 5/12.',
+      body: 'What is 2/3 + 3/4? Find a common size of piece, add, and watch for an answer that is more than one whole.',
       steps: {
         steps: [
-          { tex: '\\frac{2}{3} = \\frac{8}{12}', text: 'Twelfths work for both.' },
-          { tex: '\\frac{3}{4} = \\frac{9}{12}', text: 'Rename the second one too.' },
-          { tex: '\\frac{8 + 9}{12} = \\frac{17}{12}', text: 'Add the tops.' },
-          { tex: '\\frac{17}{12} = 1\\frac{5}{12}', text: 'Twelve twelfths make one whole.' },
+          { tex: '3 \\times 4 = 12', text: 'Multiply the bottoms to get a size both fit. Twelve works, because 3 goes into 12 four times and 4 goes into 12 three times.' },
+          { tex: '\\frac{2}{3} = \\frac{2 \\times 4}{3 \\times 4} = \\frac{8}{12}', text: 'Multiply top and bottom by 4. Whatever you do to the bottom you must do to the top, so the amount stays the same.' },
+          { tex: '\\frac{3}{4} = \\frac{3 \\times 3}{4 \\times 3} = \\frac{9}{12}', text: 'Rename the second fraction too, multiplying top and bottom by 3. Now both are in twelfths, the same size of piece.' },
+          { tex: '\\frac{8 + 9}{12} = \\frac{17}{12}', text: 'Add the tops and keep the bottom. Eight slices plus nine slices is 17 slices, and each slice is a twelfth.' },
+          { tex: '\\frac{17}{12} = 1\\frac{5}{12}', text: 'Twelve twelfths make one whole, so take out 12 of the 17 slices. That leaves 1 whole and 5 twelfths.' },
         ],
         answer: '1\\frac{5}{12}',
       },
@@ -240,19 +314,35 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Another way: list the multiples',
-      body: 'Add 1/4 + 1/6 by listing multiples instead of multiplying denominators.\nMultiples of 4: 4, 8, 12; of 6: 6, 12. The first shared one is 12. So 3/12 + 2/12 = 5/12.',
+      body: 'Add 1/4 + 1/6 by listing multiples of each bottom until you find one they share. That shared number is the new bottom.',
+      steps: {
+        steps: [
+          { tex: '4,\\ 8,\\ 12 \\qquad 6,\\ 12', text: 'List the multiples of each bottom number. The first number that shows up in both lists is the smallest piece size both can use.' },
+          { tex: '\\text{first match} = 12', text: 'Twelve is in both lists, so fourths and sixths can both be cut into twelfths. A smaller common size does not exist here.' },
+          { tex: '\\tfrac{1}{4} = \\tfrac{3}{12},\\quad \\tfrac{1}{6} = \\tfrac{2}{12}', text: 'Rename each fraction. Fourths to twelfths means multiply by 3, and sixths to twelfths means multiply by 2, top and bottom both.' },
+          { tex: '\\tfrac{3}{12} + \\tfrac{2}{12} = \\tfrac{5}{12}', text: 'Same size pieces now, so add the tops and keep the bottom. Three slices plus two slices is five twelfths.' },
+        ],
+        answer: '\\tfrac{5}{12}',
+      },
       table: {
-        head: ['×', '3', '4'],
-        rows: [['1', '3', '4'], ['2', '6', '8'], ['3', '9', '12'], ['4', '12', '16']],
-        mark: 3,
-        note: 'Walk down both lists until a number appears in each — 12 is the first match.',
+        head: ['count', 'multiples of 4', 'multiples of 6'],
+        rows: [['1', '4', '6'], ['2', '8', '12'], ['3', '12', '18']],
+        mark: 2,
+        note: 'Walk down both lists until a number appears in each. 12 is in the 4 list (4 × 3) and in the 6 list (6 × 2).',
       },
     },
     {
       kind: 'protip',
       head: 'Multiply the bottoms in a pinch',
       body: 'Can\'t spot the least common multiple? Just multiply the two denominators — it ALWAYS works as a common denominator. For 1/2 + 1/3 that gives sixths right away. You might simplify at the end, and that\'s fine.',
-      steps: { steps: [{ tex: '\\tfrac{1}{3} + \\tfrac{1}{4}', text: 'No obvious common denominator.' }, { tex: '3 \\times 4 = 12', text: 'Multiplying the bottoms always works.' }, { tex: '\\tfrac{4}{12} + \\tfrac{3}{12} = \\tfrac{7}{12}', text: 'Rename both, then add.' }], answer: '\\tfrac{7}{12}' },
+      steps: {
+        steps: [
+          { tex: '\\tfrac{1}{3} + \\tfrac{1}{4}', text: 'The bottoms are 3 and 4, and neither fits inside the other, so there is no obvious common size of piece.' },
+          { tex: '3 \\times 4 = 12', text: 'Multiply the bottoms. The result is always a number that both bottoms divide into, so it always works as a common size.' },
+          { tex: '\\tfrac{4}{12} + \\tfrac{3}{12} = \\tfrac{7}{12}', text: 'Rename both by multiplying top and bottom by the other fraction\'s bottom, then add the tops and keep the bottom.' },
+        ],
+        answer: '\\tfrac{7}{12}',
+      },
     },
     {
       kind: 'trap',
@@ -266,7 +356,20 @@ export const F5_SLIDES: SlideBank = {
         note: 'Adding two positive things must make something bigger. If it did not, check the bottom.',
       },
     },
-    { kind: 'challenge', head: 'Extra credit: three fractions', body: 'What is 1/2 + 1/3 + 1/4?\nUse 12 as the common denominator: 6/12 + 4/12 + 3/12 = 13/12. That is 1 whole and 1/12, so 1 1/12.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: three fractions',
+      body: 'What is 1/2 + 1/3 + 1/4? You need one piece size that all three bottoms fit into.',
+      steps: {
+        steps: [
+          { tex: '2,\\ 3,\\ 4 \\text{ all go into } 12', text: 'Find one bottom for all three fractions. Twelve works, since 2 goes into it 6 times, 3 goes 4 times, and 4 goes 3 times.' },
+          { tex: '\\tfrac{1}{2} = \\tfrac{6}{12},\\quad \\tfrac{1}{3} = \\tfrac{4}{12},\\quad \\tfrac{1}{4} = \\tfrac{3}{12}', text: 'Rename each fraction by multiplying top and bottom by the same number. The amounts do not change, only the size of the pieces.' },
+          { tex: '\\tfrac{6 + 4 + 3}{12} = \\tfrac{13}{12}', text: 'All the pieces are twelfths, so add the three tops and keep the bottom. That makes 13 slices, each one twelfth.' },
+          { tex: '\\tfrac{13}{12} = 1\\tfrac{1}{12}', text: 'Twelve twelfths make one whole. Take 12 of the 13 slices out as a whole, and 1 twelfth is left over.' },
+        ],
+        answer: '1\\tfrac{1}{12}',
+      },
+    },
     {
       kind: 'summary',
       head: 'Same size, then combine',
@@ -300,6 +403,7 @@ export const F5_SLIDES: SlideBank = {
         [['1/8', ''], ['', '']],
         { title: 'half of a quarter', total: '\\u00bd \\u00d7 \\u00bc = 1/8', caption: 'The shaded overlap is one piece out of eight.' },
       ),
+      why: "Picture a square cut into 2 columns and 4 rows. That makes 2 × 4 = 8 equal boxes, so the bottoms multiply to tell you the size of each box. Taking half of one quarter keeps just 1 box, which is 1 × 1 on top. So the answer is one eighth.",
     },
     {
       kind: 'concept',
@@ -310,6 +414,7 @@ export const F5_SLIDES: SlideBank = {
         note: 'Whenever you hear "of" in a fraction question, write a times sign.',
       },
       art: tape([{ label: '12 total', boxes: 3, each: '4', color: SKY }], { title: 'split 12 into 3 equal parts, take 2', caption: 'Each third is 4, so two thirds is 8.' }),
+      why: "Three groups of 4 is 3 × 4, and we say it with the word of. A fraction of a number works the same way. Two thirds of 12 means split 12 into 3 equal parts, which is 4 each, and take 2 of those parts, which is 8.",
     },
     {
       kind: 'concept',
@@ -317,33 +422,60 @@ export const F5_SLIDES: SlideBank = {
       body: '4 ÷ 1/3 asks: how many thirds fit inside 4 wholes? Each whole holds 3 thirds, so 4 wholes hold 4 × 3 = 12. Dividing by a fraction usually makes the answer BIGGER.',
       formula: { tex: 'a \\div \\tfrac{1}{n} = a \\times n', note: 'Dividing by a small piece gives a BIG answer — how many fit inside.', parts: [{ sym: '\\tfrac{1}{n}', means: 'the small piece you are fitting in', tone: 'accent' }, { sym: '\\times n', means: 'flipping it is what makes the answer grow', tone: 'ok' }] },
       art: fractionBar(12, 12, { label: '6 wholes, each cut in half — 12 halves fit', title: '6 ÷ ½ asks how many halves fit in 6', caption: 'Dividing by a number smaller than 1 gives you MORE, not less.' }),
+      why: "Every whole holds n pieces of size 1/n, like 4 quarters in one dollar. So 4 wholes hold 4 groups of n pieces, which is 4 × n. Dividing by a fraction counts how many small pieces fit, and small pieces fit many times, so the answer grows.",
     },
     {
       kind: 'example',
       head: 'Simplest multiply: 1/2 × 1/4',
-      body: 'Tops: 1 × 1 = 1. Bottoms: 2 × 4 = 8. Answer: 1/8 — half of a quarter is an eighth, like cutting a quarter-slice of toast in half.',
-      steps: { steps: [{ tex: '\\tfrac{1 \\times 1}{2 \\times 4}', text: 'Multiply straight across.' }, { tex: '= \\tfrac{1}{8}', text: 'Tops together, bottoms together.' }], answer: '\\tfrac{1}{8}' },
+      body: 'What is half of a quarter? Think of a quarter slice of toast cut in half. Use the multiply-across rule to find out how big one piece is.',
+      steps: {
+        steps: [
+          { tex: '\\tfrac12 \\times \\tfrac14', text: 'The word "of" means multiply, so half of a quarter is written as one half times one quarter.' },
+          { tex: '\\tfrac{1 \\times 1}{2 \\times 4}', text: 'Multiply tops with tops and bottoms with bottoms. The tops count the pieces you keep, and the bottoms count how many pieces the whole is cut into.' },
+          { tex: '\\tfrac{1}{8}', text: 'Cutting each of 4 slices in half makes 8 equal pieces in the whole, and you keep just one of them. That is one eighth.' },
+          { tex: '\\tfrac18 < \\tfrac14', text: 'Check the size. Half of a quarter must be smaller than a quarter, and one eighth is smaller, so the answer makes sense.' },
+        ],
+        answer: '\\tfrac{1}{8}',
+      },
     },
     {
       kind: 'example',
       head: 'Another: 1/3 × 1/2',
-      body: 'Tops: 1 × 1 = 1. Bottoms: 3 × 2 = 6. So 1/3 × 1/2 = 1/6 — a third of a half is a sixth.',
-      steps: { steps: [{ tex: '\\tfrac{1 \\times 1}{3 \\times 2}', text: 'Multiply across.' }, { tex: '= \\tfrac{1}{6}', text: 'A third of a half is a sixth.' }], answer: '\\tfrac{1}{6}' },
+      body: 'What is a third of a half? Use the same multiply-across rule and then check that the size makes sense.',
+      steps: {
+        steps: [
+          { tex: '\\tfrac13 \\times \\tfrac12', text: 'A third of a half means one third times one half, because the word "of" tells us to multiply the two fractions.' },
+          { tex: '\\tfrac{1 \\times 1}{3 \\times 2}', text: 'Multiply the tops together and the bottoms together. Cutting each of the 2 halves into 3 pieces makes 6 pieces in the whole.' },
+          { tex: '\\tfrac16', text: 'The tops give 1 times 1, which is 1. You keep just one of the 6 equal pieces, so the answer is one sixth.' },
+          { tex: '\\tfrac16 < \\tfrac12', text: 'Check the size. A third of a half should be smaller than the half you started with, and one sixth is smaller than one half.' },
+        ],
+        answer: '\\tfrac{1}{6}',
+      },
     },
     {
       kind: 'example',
       head: 'Fraction of a number: 2/3 of 12',
-      body: 'First find 1/3 of 12: that\'s 12 ÷ 3 = 4. You want TWO thirds, so double it: 2 × 4 = 8. Divide by the bottom, multiply by the top!',
-      steps: { steps: [{ tex: '\\text{"of"} \\to \\times', text: 'The word "of" means multiply.' }, { tex: '\\tfrac{2}{3} \\times 12 = \\tfrac{24}{3}', text: 'Multiply straight across.' }, { tex: '= 8', text: 'Simplify the result.' }], answer: '8' },
+      body: 'What is 2/3 of 12? Split the 12 into equal parts first, then take the number of parts you need.',
+      steps: {
+        steps: [
+          { tex: '\\tfrac23 \\times 12', text: 'The word "of" means multiply, so two thirds of 12 is written as two thirds times 12.' },
+          { tex: '12 \\div 3 = 4', text: 'The bottom 3 says to split 12 into 3 equal parts. Each part is 4, so one third of 12 is 4.' },
+          { tex: '2 \\times 4 = 8', text: 'The top 2 says to take two of those parts. Two groups of 4 make 8, so two thirds of 12 is 8.' },
+          { tex: '\\tfrac{2 \\times 12}{3} = \\tfrac{24}{3} = 8', text: 'Check by multiplying straight across: 24 divided by 3 is also 8, so both ways agree.' },
+        ],
+        answer: '8',
+      },
     },
     {
       kind: 'example',
       head: 'Divide: 6 ÷ 1/2',
-      body: 'How many halves fit inside 6 wholes? Each whole holds 2 halves. So 6 × 2 = 12 halves fit. Notice the answer got bigger!',
+      body: 'How many halves fit inside 6 wholes? Think of 6 pizzas, each cut into halves. Count the half-slices.',
       steps: {
         steps: [
-          { tex: '6 \\div \\tfrac{1}{2}', text: 'Ask: how many halves fit into 6?' },
-          { tex: '6 \\times \\tfrac{2}{1}', text: 'Flip the second fraction, then multiply.' },
+          { tex: '6 \\div \\tfrac{1}{2}', text: 'Dividing asks how many fit. Here we are asking how many pieces of size one half fit inside 6 wholes.' },
+          { tex: '1 \\text{ whole} = 2 \\text{ halves}', text: 'Each whole pizza holds exactly 2 half-slices. Halves are small, so lots of them fit in each whole.' },
+          { tex: '6 \\times 2 = 12', text: 'Six wholes with 2 halves in each makes 6 times 2 halves. This is the same as flipping one half to 2 over 1 and multiplying.' },
+          { tex: '12 \\times \\tfrac12 = 6', text: 'Check by multiplying back. Twelve halves is 12 times one half, which is 6, so the answer is right and bigger than 6.' },
         ],
         answer: '12',
       },
@@ -351,10 +483,31 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Divide: 3 ÷ 1/4',
-      body: 'How many quarters fit in 3 wholes? Each whole holds 4 quarters, so 3 × 4 = 12. Twelve quarter-pieces fit inside 3 wholes.',
-      steps: { steps: [{ tex: '3 \\times \\tfrac{4}{1}', text: 'Flip the second and multiply.' }, { tex: '= 12', text: 'Twelve quarters fit inside three.' }], answer: '12' },
+      body: 'How many quarters fit inside 3 wholes? Think of 3 dollars and count the quarters.',
+      steps: {
+        steps: [
+          { tex: '3 \\div \\tfrac{1}{4}', text: 'This asks how many pieces of size one quarter fit inside 3 wholes, which is the how-many-fit meaning of division.' },
+          { tex: '1 \\text{ whole} = 4 \\text{ quarters}', text: 'One whole holds 4 quarters, just like 4 quarter coins make a dollar. So each whole adds 4 pieces to the count.' },
+          { tex: '3 \\times 4 = 12', text: 'Three wholes with 4 quarters each is 3 times 4. This is the same as flipping one quarter to 4 over 1 and multiplying.' },
+          { tex: '12 \\times \\tfrac14 = 3', text: 'Check by multiplying back. Twelve quarters is 12 times one quarter, which is 3, so the answer 12 is right.' },
+        ],
+        answer: '12',
+      },
     },
-    { kind: 'example', head: 'Another way: multiply straight across', body: 'Find 2/3 of 12 without dividing first.\nMultiply the top: 2 × 12 = 24, then divide by the bottom: 24 ÷ 3 = 8. Same as 12 ÷ 3 × 2.' },
+    {
+      kind: 'example',
+      head: 'Another way: multiply straight across',
+      body: 'Find 2/3 of 12 again, but this time use the multiply-across rule right away, with no dividing first.',
+      steps: {
+        steps: [
+          { tex: '12 = \\tfrac{12}{1}', text: 'Write the whole number as a fraction over 1. Dividing by 1 changes nothing, and now both numbers are fractions we can multiply across.' },
+          { tex: '\\tfrac23 \\times \\tfrac{12}{1} = \\tfrac{2 \\times 12}{3 \\times 1}', text: 'Multiply the tops together and the bottoms together. This is the rule for any two fractions.' },
+          { tex: '\\tfrac{24}{3} = 24 \\div 3 = 8', text: 'A fraction bar means divide, so 24 over 3 is 24 divided by 3. That is 8.' },
+          { tex: '2 \\times 12 \\div 3 = 12 \\div 3 \\times 2', text: 'This matches the first way. Multiplying and dividing in a different order gives the same result, so both methods give 8.' },
+        ],
+        answer: '8',
+      },
+    },
     {
       kind: 'protip',
       head: 'Flip and multiply',
@@ -363,6 +516,7 @@ export const F5_SLIDES: SlideBank = {
         tex: 'a \\div \\frac{c}{d} = a \\times \\frac{d}{c}',
         note: 'Turn the second fraction upside down and the division becomes a multiplication.',
       },
+      why: 'Dividing by 1/2 asks how many halves fit, and every whole holds 2 halves, so you multiply by 2. The 2 is just 1/2 turned upside down. The same thing happens for every fraction.',
     },
     {
       kind: 'trap',
@@ -376,7 +530,20 @@ export const F5_SLIDES: SlideBank = {
         note: 'Dividing only shrinks when you divide by something bigger than 1.',
       },
     },
-    { kind: 'challenge', head: 'Extra credit: how many scoops', body: 'You have 2 1/2 cups of dough and each cookie needs 1/4 cup. How many cookies?\nAsk how many quarter-cups fit: 2 1/2 ÷ 1/4 = 10. You can make 10 cookies.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: how many scoops',
+      body: 'You have 2 1/2 cups of dough and each cookie needs 1/4 cup. How many cookies can you make? Ask how many quarter-cups fit.',
+      steps: {
+        steps: [
+          { tex: '2\\tfrac12 \\div \\tfrac14', text: 'Making cookies means asking how many quarter-cups fit inside 2 and a half cups, so this is a division by a fraction.' },
+          { tex: '2\\tfrac12 = \\tfrac{4}{2} + \\tfrac12 = \\tfrac52', text: 'Turn the mixed number into a fraction. Two wholes are 4 halves, and one more half makes 5 halves.' },
+          { tex: '\\tfrac52 \\times \\tfrac41 = \\tfrac{20}{2}', text: 'Flip the second fraction and multiply across. Each cup holds 4 quarter-cups, so we multiply by 4.' },
+          { tex: '\\tfrac{20}{2} = 10', text: 'Divide 20 by 2. Check with a picture: 2 cups hold 8 quarters and the half cup holds 2 more, which is 10 cookies.' },
+        ],
+        answer: '10 \\text{ cookies}',
+      },
+    },
     {
       kind: 'summary',
       head: 'Three moves to remember',
@@ -411,6 +578,7 @@ export const F5_SLIDES: SlideBank = {
         return art('Two decimals written one above the other with their decimal points in a single column', b,
           'Every place then sits over its own kind — tenths over tenths, hundredths over hundredths.');
       })(),
+      why: "Each column in a decimal has its own size: tenths, hundredths, and so on. Only the same kind of piece can be added, just like dollars go with dollars and cents go with cents. The point marks where the ones end, so lining up the points puts like with like.",
     },
     {
       kind: 'concept',
@@ -424,6 +592,7 @@ export const F5_SLIDES: SlideBank = {
         mark: 2,
         note: 'Add zeros on the end until both have the same number of places — then just compare.',
       },
+      why: "Writing a zero on the end of a decimal does not change its size. 0.5 is 5 tenths, and cutting each tenth into 10 hundredths makes it 50 hundredths. Once both numbers count the same size of piece, you just compare the counts, like 50 cents against 45 cents.",
     },
     {
       kind: 'concept',
@@ -437,15 +606,18 @@ export const F5_SLIDES: SlideBank = {
           { sym: '0.40', means: 'forty hundredths — which is the same as 0.4', tone: 'ok' },
         ],
       },
+      why: "A decimal is a fraction with a 10, 100, and so on on the bottom. 0.5 is 5/10 and 0.8 is 8/10. Multiplying across gives 40 over 100, and the two tens made the 100. Each decimal place is one factor of ten, so two places gives hundredths.",
     },
     {
       kind: 'example',
       head: 'Add: 0.2 + 0.35',
-      body: 'Give both two places: 0.20 + 0.35. Line up the points and add: 20 + 35 = 55 hundredths. Answer: 0.55.',
+      body: 'What is 0.2 + 0.35? The two numbers have different numbers of places, so make them match before you add.',
       steps: {
         steps: [
-          { tex: '0.20 + 0.35', text: 'Pad the shorter one with a zero.' },
-          { tex: '20 + 35 = 55', text: 'Now they are both hundredths.' },
+          { tex: '0.2 = 0.20', text: 'Add a zero on the right of 0.2. This does not change its size, because 2 tenths is the same as 20 hundredths.' },
+          { tex: '\\begin{array}{r} 0.20 \\\\ +\\ 0.35 \\end{array}', text: 'Stack the numbers with the decimal points in one column so that tenths sit over tenths and hundredths over hundredths.' },
+          { tex: '20 + 35 = 55', text: 'Both are counted in hundredths now, so add them like whole numbers. Twenty hundredths plus thirty-five hundredths is 55 hundredths.' },
+          { tex: '0.55', text: 'Write 55 hundredths as 0.55, with the point in the same spot as above. It is like 20 cents plus 35 cents making 55 cents.' },
         ],
         answer: '0.55',
       },
@@ -453,17 +625,27 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Add: 0.3 + 0.45',
-      body: 'Write 0.3 as 0.30 so both have two places. 0.30 + 0.45 = 0.75. Lining up the points keeps tenths with tenths and hundredths with hundredths.',
-      steps: { steps: [{ tex: '0.30 + 0.45', text: 'Pad the short one to two places.' }, { tex: '= 0.75', text: 'Add column by column.' }], answer: '0.75' },
+      body: 'What is 0.3 + 0.45? Give both numbers two places, then add one column at a time.',
+      steps: {
+        steps: [
+          { tex: '0.3 = 0.30', text: 'Write 0.3 as 0.30 so both have two places. Three tenths and thirty hundredths are the same amount.' },
+          { tex: '\\begin{array}{r} 0.30 \\\\ +\\ 0.45 \\end{array}', text: 'Line up the decimal points. Now tenths sit over tenths and hundredths over hundredths, so each column adds the same kind of piece.' },
+          { tex: '30 + 45 = 75', text: 'Add the hundredths as whole numbers. Zero plus five is 5 and three plus four is 7, so you get 75 hundredths.' },
+          { tex: '0.75', text: 'Write the answer with the decimal point lined up. Check with money: 30 cents plus 45 cents is 75 cents.' },
+        ],
+        answer: '0.75',
+      },
     },
     {
       kind: 'example',
       head: 'Subtract: 2 − 0.85',
-      body: 'Count UP from 0.85 instead of borrowing. From 0.85 to 1 is 0.15. From 1 to 2 is 1 more. Total: 1.15.',
+      body: 'What is 2 − 0.85? Think of paying 85 cents out of two dollars. The whole number 2 has no decimal places, so give it some.',
       steps: {
         steps: [
-          { tex: '2.00 - 0.85', text: 'Write 2 as 2.00 so the places line up.' },
-          { tex: '200 - 85 = 115', text: 'Both are hundredths now.' },
+          { tex: '2 = 2.00', text: 'Write 2 as 2.00. A whole number has an invisible decimal point on its right, and zeros after it do not change its value.' },
+          { tex: '2.00 - 0.85 \\to 200 - 85', text: 'Both numbers now count hundredths, so we can subtract them as whole numbers. 2 dollars is 200 cents.' },
+          { tex: '200 - 85 = 115', text: 'Subtract: 200 minus 80 is 120, and 120 minus 5 is 115. So there are 115 hundredths left.' },
+          { tex: '115 \\text{ hundredths} = 1.15', text: 'Put the decimal point back. 115 cents is 1 dollar and 15 cents, which is 1.15. Check: 0.85 + 1.15 = 2.' },
         ],
         answer: '1.15',
       },
@@ -471,12 +653,13 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Multiply: 0.5 × 0.8',
-      body: 'Ignore the points: 5 × 8 = 40. Count decimal places: one in 0.5, one in 0.8 — two total. Place the point two spots in: 0.40, which is 0.4.',
+      body: 'What is 0.5 × 0.8? Multiply as whole numbers first, then use the number of decimal places to put the point back.',
       steps: {
         steps: [
-          { tex: '5 \\times 8 = 40', text: 'Ignore the points for a moment.' },
-          { tex: '1 + 1 = 2 \\text{ places}', text: 'Count the decimal places that went in.' },
-          { tex: '0.40', text: 'Put two places back.' },
+          { tex: '5 \\times 8 = 40', text: 'Ignore the points for a moment. 0.5 is 5 tenths and 0.8 is 8 tenths, so first multiply the whole numbers 5 and 8.' },
+          { tex: '1 + 1 = 2 \\text{ places}', text: 'Count the decimal places that went in. Each number has one, and tenths times tenths gives hundredths, which is two places.' },
+          { tex: '40 \\to 0.40', text: 'Put the point so the answer has two decimal places. 40 hundredths is 0.40, with the point two places from the right.' },
+          { tex: '0.40 = 0.4', text: 'Drop the zero on the end because it adds nothing. Check: half of 0.8 is 0.4, so the answer fits.' },
         ],
         answer: '0.4',
       },
@@ -484,20 +667,44 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Multiply: 1.5 × 4',
-      body: 'Break it apart: 1 × 4 = 4, and 0.5 × 4 = 2. Add the pieces: 4 + 2 = 6. A whole-number multiplier just scales each part.',
-      steps: { steps: [{ tex: '15 \\times 4 = 60', text: 'Multiply as whole numbers.' }, { tex: '\\text{one place} \\to 6.0', text: 'Only one factor had a decimal place.' }], answer: '6' },
+      body: 'What is 1.5 × 4? Multiply as whole numbers, then decide where the decimal point goes.',
+      steps: {
+        steps: [
+          { tex: '15 \\times 4 = 60', text: 'Ignore the point at first. 1.5 is 15 tenths, so multiply the whole numbers 15 and 4 to get 60 tenths.' },
+          { tex: '1 + 0 = 1 \\text{ place}', text: 'Count the decimal places in the factors. 1.5 has one and 4 has none, so the answer gets one decimal place.' },
+          { tex: '60 \\text{ tenths} = 6.0', text: 'Put the point one place from the right. 60 tenths is 6.0, and 6.0 is the same as 6.' },
+          { tex: '1.5 \\times 4 = 4 + 2', text: 'Check by splitting 1.5 into 1 and 0.5. One four is 4 and half of 4 is 2, which makes 6, so the answer fits.' },
+        ],
+        answer: '6',
+      },
     },
     {
       kind: 'example',
       head: 'Another way: count the decimal places',
-      body: 'Multiply 1.5 × 4 by ignoring the dot first.\n15 × 4 = 60. There is one digit after the decimal in the problem, so put it back: 6.0, which is 6.',
-      table: { head: ['problem', 'places in', 'answer'], rows: [['0.5 × 0.8', '1 + 1 = 2', '0.40'], ['1.5 × 4', '1 + 0 = 1', '6.0'], ['0.3 × 0.7', '1 + 1 = 2', '0.21']], mark: 0, note: 'Count the places in the factors and the answer gets the same total.' },
+      body: 'Find 0.3 × 0.7 with the count-the-places shortcut, then check it a second way by turning the decimals into fractions.',
+      steps: {
+        steps: [
+          { tex: '3 \\times 7 = 21', text: 'Ignore the decimal points and multiply the whole numbers 3 and 7. This is the digit part of the answer.' },
+          { tex: '1 + 1 = 2 \\text{ places}', text: 'Count the decimal places in the two factors. Each has one, so the answer must have two decimal places, which are hundredths.' },
+          { tex: '21 \\to 0.21', text: 'Put the point so there are two places after it. 21 hundredths is written 0.21.' },
+          { tex: '\\tfrac{3}{10} \\times \\tfrac{7}{10} = \\tfrac{21}{100}', text: 'Check as fractions. Three tenths times seven tenths is 21 over 100, and 21 hundredths is 0.21, which matches the shortcut.' },
+        ],
+        answer: '0.21',
+      },
+      table: { head: ['problem', 'places in', 'answer'], rows: [['0.5 × 0.8', '1 + 1 = 2', '0.40'], ['1.5 × 4', '1 + 0 = 1', '6.0'], ['0.3 × 0.7', '1 + 1 = 2', '0.21']], mark: 2, note: 'Count the places in the factors and the answer gets the same total.' },
     },
     {
       kind: 'protip',
       head: 'Money is decimals in disguise',
       body: 'Think of decimals as dollars and cents: 0.5 is 50 cents, 0.45 is 45 cents. Comparing or adding money feels natural — use that instinct on any decimal problem.',
-      steps: { steps: [{ tex: '\\$2.35 = 235 \\text{ cents}', text: 'Think of the whole amount in cents.' }, { tex: '\\text{add as whole numbers}', text: 'Then put the point back at the end.' }] },
+      steps: {
+        steps: [
+          { tex: '\\$2.35 = 235 \\text{ cents},\\quad \\$1.50 = 150 \\text{ cents}', text: 'Write each amount in cents. Cents are the hundredths, so this turns both decimals into plain whole numbers.' },
+          { tex: '235 + 150 = 385', text: 'Add the whole numbers the way you always do. Because both are in cents, every digit is already in the right column.' },
+          { tex: '385 \\text{ cents} = \\$3.85', text: 'Put the point back before the last two digits, because 100 cents make one dollar. That gives 3 dollars and 85 cents.' },
+        ],
+        answer: '\\$3.85',
+      },
     },
     {
       kind: 'trap',
@@ -512,7 +719,20 @@ export const F5_SLIDES: SlideBank = {
         note: 'With whole numbers longer IS bigger. With decimals it is not — pad first.',
       },
     },
-    { kind: 'challenge', head: 'Extra credit: making change', body: 'You buy a $2.50 drink and a $1.75 snack with a $5 bill. How much change?\nAdd the cost: 2.50 + 1.75 = 4.25. Then 5.00 − 4.25 = $0.75 change.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: making change',
+      body: 'You buy a $2.50 drink and a $1.75 snack with a $5 bill. How much change do you get back? Find the total cost first.',
+      steps: {
+        steps: [
+          { tex: '2.50 + 1.75', text: 'Find what you spend altogether. Both prices have two decimal places, so line up the points and add cents to cents.' },
+          { tex: '250 + 175 = 425 \\to \\$4.25', text: 'In cents that is 250 plus 175, which makes 425. Write it back as dollars: 4 dollars and 25 cents.' },
+          { tex: '5.00 - 4.25 = 500 - 425', text: 'Change is what is left from the 5 dollars. Write 5 as 5.00 so both numbers count cents, then subtract.' },
+          { tex: '500 - 425 = 75 \\text{ cents}', text: 'The difference is 75 cents. Check: 4.25 plus 0.75 is 5.00, so adding the change to the cost gives the bill back.' },
+        ],
+        answer: '\\$0.75',
+      },
+    },
     {
       kind: 'summary',
       head: 'Points lined up, places counted',
@@ -543,12 +763,14 @@ export const F5_SLIDES: SlideBank = {
           { label: '× 100', color: VIO },
           { label: '200 cm', color: EMR },
         ], { horizontal: true, title: 'bigger unit to smaller unit', caption: 'Smaller units means MORE of them, so the number grows.' }),
+      why: "A smaller unit is a smaller piece, so you need more of them to cover the same length. One meter stick is covered by 100 little centimeter pieces, like one dollar is 100 pennies. So 3 meter sticks need 3 groups of 100 pieces, which is 3 × 100.",
     },
     {
       kind: 'concept',
       head: 'Small → big: divide',
       body: 'Going from a smaller unit to a bigger one means FEWER pieces, so divide. 400 cm = 400 ÷ 100 = 4 meters. Many small things bundle into few big things.',
       formula: { tex: '\\text{big} = \\dfrac{\\text{small}}{\\text{rate}}', note: 'Bigger units take fewer of them, so the number must shrink.', parts: [{ sym: '\\text{rate}', means: 'how many small units make one big one', tone: 'accent' }, { sym: '\\div', means: 'because the count has to come out smaller', tone: 'ok' }] },
+      why: "Going the other way, you are bundling small pieces into big ones. Each big unit takes a full bundle of the small ones, like 100 pennies make one dollar. To find how many bundles you can make, you ask how many 100s fit in 400, which is 400 ÷ 100 = 4.",
     },
     {
       kind: 'concept',
@@ -560,6 +782,7 @@ export const F5_SLIDES: SlideBank = {
         rows: [['1 m', 'cm', '× 100'], ['1 km', 'm', '× 1000'], ['1 ft', 'in', '× 12'], ['1 kg', 'g', '× 1000']],
         note: 'Learn these four and almost every conversion question is one multiplication.',
       },
+      why: "Every conversion is built from one fact: how many small units make one big unit. Once you know that fact, the rest is just multiplying or dividing by that number. It is like knowing 4 quarters make a dollar, which tells you that 3 dollars is 12 quarters.",
     },
     {
       kind: 'concept',
@@ -574,15 +797,18 @@ export const F5_SLIDES: SlideBank = {
         ],
       },
       art: shapeBox('length 3', 'width 2', { wUnits: 3, hUnits: 2, grid: true, inside: '6 per layer', title: 'one layer of a 3 × 2 × 4 box', caption: 'Six cubes in a layer, four layers high — 24 cubes in all.' }),
+      why: "Volume counts little cubes that each measure 1 by 1 by 1. A flat layer along the floor holds length times width cubes, like rows of eggs in a carton. Stack that layer as many times as the height says, so you multiply by the height. Each cube is a cubic unit, so the answer is in cubic units.",
     },
     {
       kind: 'example',
       head: 'Convert: 2 m to cm',
-      body: 'Meters are bigger than centimeters, so multiply. 1 m = 100 cm. 2 × 100 = 200 cm.',
+      body: 'How many centimeters are in 2 meters? Decide first whether the number should grow or shrink.',
       steps: {
         steps: [
-          { tex: '1 \\text{ m} = 100 \\text{ cm}', text: 'Start from the anchor you know.' },
-          { tex: '2 \\times 100', text: 'Going to a smaller unit, so multiply.' },
+          { tex: '1 \\text{ m} = 100 \\text{ cm}', text: 'Start from the anchor fact. One meter is as long as 100 centimeters, and every conversion between these two units uses it.' },
+          { tex: '\\text{big unit} \\to \\text{small unit}', text: 'Meters are bigger than centimeters. Measuring with smaller units takes more of them, so the number should get bigger and we multiply.' },
+          { tex: '2 \\times 100 = 200', text: 'Two meters is two groups of 100 centimeters. Multiply 2 by 100, which just puts two zeros on the end.' },
+          { tex: '200 > 2', text: 'Sense check. The answer is a bigger number than the 2 we started with, as it should be because centimeters are tiny.' },
         ],
         answer: '200 \\text{ cm}',
       },
@@ -590,23 +816,40 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Convert: 5 ft to inches',
-      body: 'Feet are bigger than inches, so multiply. 1 ft = 12 in. 5 × 12 = 60 inches.',
-      steps: { steps: [{ tex: '1 \\text{ ft} = 12 \\text{ in}', text: 'Recall the anchor.' }, { tex: '5 \\times 12 = 60', text: 'Smaller unit, so multiply.' }], answer: '60 \\text{ in}' },
+      body: 'How many inches are in 5 feet? Think about which unit is bigger and which way the number must move.',
+      steps: {
+        steps: [
+          { tex: '1 \\text{ ft} = 12 \\text{ in}', text: 'Recall the anchor. One foot is the same length as 12 inches, so this is the rate we use to change units.' },
+          { tex: '\\text{big unit} \\to \\text{small unit}', text: 'A foot is bigger than an inch. Going to the smaller unit means more pieces are needed, so the number grows and we multiply.' },
+          { tex: '5 \\times 12 = 60', text: 'Five feet is five groups of 12 inches. Multiply: 5 times 10 is 50 and 5 times 2 is 10, and 50 plus 10 is 60.' },
+        ],
+        answer: '60 \\text{ in}',
+      },
     },
     {
       kind: 'example',
       head: 'Convert back: 400 cm to m',
-      body: 'Centimeters are smaller than meters, so divide. 100 cm make 1 m. 400 ÷ 100 = 4 meters.',
-      steps: { steps: [{ tex: '100 \\text{ cm} = 1 \\text{ m}', text: 'Recall the metric anchor.' }, { tex: '400 \\div 100 = 4', text: 'Bigger unit, so divide.' }], answer: '4 \\text{ m}' },
+      body: 'How many meters are 400 centimeters? This time you go from the small unit to the big unit.',
+      steps: {
+        steps: [
+          { tex: '100 \\text{ cm} = 1 \\text{ m}', text: 'Recall the metric anchor. A bundle of 100 centimeters makes exactly one meter, so we will count bundles.' },
+          { tex: '\\text{small unit} \\to \\text{big unit}', text: 'Centimeters are smaller than meters. Big units need fewer pieces to cover the same length, so the number shrinks and we divide.' },
+          { tex: '400 \\div 100 = 4', text: 'Ask how many bundles of 100 fit in 400. Dividing by 100 takes two zeros off the end, which leaves 4.' },
+          { tex: '4 < 400', text: 'Sense check. The answer is a smaller number than 400, as it should be, because one meter is a long unit.' },
+        ],
+        answer: '4 \\text{ m}',
+      },
     },
     {
       kind: 'example',
       head: 'Volume of a 3 × 2 × 4 box',
-      body: 'Multiply the edges one pair at a time: 3 × 2 = 6. Then 6 × 4 = 24. The box holds 24 cubic units.',
+      body: 'How many unit cubes fill a box that is 3 long, 2 wide, and 4 tall? Build it one layer at a time.',
       steps: {
         steps: [
-          { tex: '3 \\times 2 = 6', text: 'The base layer holds 6 cubes.' },
-          { tex: '6 \\times 4 = 24', text: 'Stack four of those layers.' },
+          { tex: '3 \\times 2 = 6', text: 'First fill the floor. Three cubes in a row and 2 rows means 6 cubes in the base layer, which is the length times the width.' },
+          { tex: '\\text{4 layers high}', text: 'The height is 4, so we stack 4 layers that each look like the floor. Every layer holds the same 6 cubes.' },
+          { tex: '6 \\times 4 = 24', text: 'Four layers with 6 cubes in each layer is 6 times 4. That is the same as multiplying all three edges.' },
+          { tex: '24 \\text{ cubic units}', text: 'Write the units as cubic units, because we counted cubes that stretch in three directions, not flat squares.' },
         ],
         answer: '24 \\text{ cubic units}',
       },
@@ -614,14 +857,29 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Volume of a cube, edge 3',
-      body: 'A cube has equal edges, so volume = 3 × 3 × 3. That\'s 9 × 3 = 27. Answer: 27 cubic units.',
-      steps: { steps: [{ tex: 'V = 3 \\times 3 \\times 3', text: 'Every edge of a cube matches.' }, { tex: '= 27', text: 'Multiply all three.' }], answer: '27' },
+      body: 'A cube has every edge the same length. What is the volume of a cube with edge 3?',
+      steps: {
+        steps: [
+          { tex: 'l = w = h = 3', text: 'Every edge of a cube is the same, so the length, width and height are all 3. We can use the same volume rule as for any box.' },
+          { tex: '3 \\times 3 = 9', text: 'Start with the floor layer. Three rows of 3 cubes each is 9 cubes, which is the length times the width.' },
+          { tex: '9 \\times 3 = 27', text: 'The height is 3, so stack 3 layers of 9 cubes. That is 9 times 3, which is 27 cubes in all.' },
+        ],
+        answer: '27 \\text{ cubic units}',
+      },
     },
     {
       kind: 'example',
       head: 'Another way: base area times height',
-      body: 'Find the volume of a 3 × 2 × 4 box using layers.\nOne layer holds 3 × 2 = 6 cubes. There are 4 layers stacked up, so 6 × 4 = 24 cubic units.',
-      steps: { steps: [{ tex: '\\text{base} = 3 \\times 2 = 6', text: 'Find the floor area first.' }, { tex: '6 \\times 4 = 24', text: 'Then stack the layers.' }], answer: '24' },
+      body: 'Find the volume of a box that is 5 long, 4 wide, and 3 tall by finding one layer first, and then stacking the layers.',
+      steps: {
+        steps: [
+          { tex: '\\text{base} = 5 \\times 4 = 20', text: 'Find the area of the floor first. Five cubes in a row and 4 rows gives 20 cubes in one flat layer.' },
+          { tex: '\\text{height} = 3 \\text{ layers}', text: 'The box is 3 tall, so it has 3 layers, and each layer is a copy of the floor with the same 20 cubes.' },
+          { tex: '20 \\times 3 = 60', text: 'Multiply the base area by the number of layers. Three layers of 20 cubes is 60 cubes, so the volume is 60 cubic units.' },
+          { tex: '4 \\times 3 = 12,\\quad 12 \\times 5 = 60', text: 'Check by multiplying in a different order. Order does not matter for multiplying, so we still get 60.' },
+        ],
+        answer: '60 \\text{ cubic units}',
+      },
     },
     {
       kind: 'protip',
@@ -648,7 +906,20 @@ export const F5_SLIDES: SlideBank = {
         note: 'Count the dimensions in the question: a floor is flat, a box is not.',
       },
     },
-    { kind: 'challenge', head: 'Extra credit: pack the crate', body: 'A crate holds 96 cubic feet. Each small box is 12 cubic feet. How many boxes fit?\nDivide the space: 96 ÷ 12 = 8. Exactly 8 boxes fit with no room left.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: pack the crate',
+      body: 'A crate holds 96 cubic feet. Each small box takes up 12 cubic feet. How many boxes fit in the crate?',
+      steps: {
+        steps: [
+          { tex: '96 \\text{ ft}^3 \\text{ and } 12 \\text{ ft}^3', text: 'Both numbers are volumes measured in the same cubic unit, so we can compare them directly with no conversion.' },
+          { tex: '96 \\div 12', text: 'Dividing asks how many 12s fit inside 96. Each box uses up 12 of the cubic feet, so we count how many such pieces the crate holds.' },
+          { tex: '96 \\div 12 = 8', text: 'Count in 12s: 12, 24, 36, 48, 60, 72, 84, 96. That takes 8 steps, so 8 boxes fit.' },
+          { tex: '8 \\times 12 = 96', text: 'Check by multiplying back. Eight boxes of 12 cubic feet is exactly 96, so there is no space left over.' },
+        ],
+        answer: '8 \\text{ boxes}',
+      },
+    },
     {
       kind: 'summary',
       head: 'Direction and dimensions',
@@ -678,6 +949,7 @@ export const F5_SLIDES: SlideBank = {
           { sym: 'y', means: 'how far you climb UP after that', tone: 'ok' },
         ],
       },
+      why: "A coordinate plane is like a map where everyone must agree on the order, so that your friend can find the same spot. We always say how far to go across the ground first, then how far up. (3, 2) and (2, 3) are different spots, like a different street and floor.",
     },
     {
       kind: 'concept',
@@ -691,6 +963,7 @@ export const F5_SLIDES: SlideBank = {
           { at: 20, label: '20', color: AMB },
           { at: 25, label: '25', color: EMR },
         ], { step: 5, title: 'the same jump, every time', caption: 'Find the jump once and you can keep going for ever.' }),
+      why: "The first term is where you start, so it has taken zero jumps. The second term has taken one jump, the third has taken two, and the n-th term has taken n − 1 jumps. Check with 0, 4, 8, 12, 16: the 5th term took 4 jumps of 4, so 0 + 16 = 16.",
     },
     {
       kind: 'concept',
@@ -701,33 +974,46 @@ export const F5_SLIDES: SlideBank = {
         title: 'cups of water left', unit: 'cups', mark: 1,
         caption: 'Ten marks, so ten bottles were measured — count the dots, not the ticks.',
       }),
+      why: "Each X is one tally mark for one thing that was measured. A tall stack means that value showed up many times, and a short stack means it showed up few times. To get the total, count every X, because every X is exactly one measurement.",
     },
     {
       kind: 'example',
       head: 'Plot a point: right 3, up 2',
-      body: 'Start at the origin (0, 0). Run right 3 → x = 3. Jump up 2 → y = 2. The point is (3, 2).',
+      body: 'Where does the point (3, 2) go on the grid? Start at the corner and follow the directions in order: across, then up.',
       steps: {
         steps: [
-          { tex: '(3,\\ 2)', text: 'Start at the corner where the two lines meet.' },
-          { tex: '\\text{right } 3', text: 'Run across first.' },
-          { tex: '\\text{up } 2', text: 'Then climb.' },
+          { tex: '(0,\\ 0)', text: 'Put your pencil at the corner where the two number lines meet. This spot is called the origin, and every point is measured from it.' },
+          { tex: '\\text{right } 3', text: 'Run across first. The first number, x, tells how far to go along the bottom line, so move 3 steps to the right.' },
+          { tex: '\\text{up } 2', text: 'Now climb. The second number, y, tells how far to go up, so move 2 steps straight up from where you stopped.' },
+          { tex: '(3,\\ 2)', text: 'Mark a dot where you ended. It is written with the x number first and the y number second, so it is (3, 2).' },
         ],
+        answer: '(3,\\ 2)',
       },
     },
     {
       kind: 'example',
       head: 'Name the point: right 4, up 2',
-      body: 'Across first: x = 4. Up second: y = 2. Write it (x, y) = (4, 2). Order matters — (4, 2) and (2, 4) are DIFFERENT points!',
-      steps: { steps: [{ tex: '\\text{across first}', text: 'Read the x-value before anything else.' }, { tex: '(4, 2)', text: 'Then the y-value, in that order.' }], answer: '(4, 2)' },
+      body: 'A dot is 4 steps right and 2 steps up from the corner. What are its coordinates? Order matters here.',
+      steps: {
+        steps: [
+          { tex: '\\text{start at } (0,\\ 0)', text: 'Begin at the origin, where the two number lines meet. We count the steps from this corner to the dot.' },
+          { tex: 'x = 4', text: 'Read the steps across first. The dot is 4 steps to the right, so the x-number is 4, because x is the walk along the bottom.' },
+          { tex: 'y = 2', text: 'Then read the steps up. The dot is 2 steps above the bottom line, so the y-number is 2, the climb.' },
+          { tex: '(x,\\ y) = (4,\\ 2)', text: 'Write them in order, x first and y second, inside brackets. (2, 4) would be a different point, so never swap the order.' },
+        ],
+        answer: '(4,\\ 2)',
+      },
     },
     {
       kind: 'example',
       head: 'Extend a pattern: 5, 10, 15, …',
-      body: 'Find the jump: 10 − 5 = 5, so each term adds 5. The next term after 15 is 15 + 5 = 20.',
+      body: 'What are the next terms of the pattern 5, 10, 15, …? Find how much it jumps each time.',
       steps: {
         steps: [
-          { tex: '10 - 5 = 5', text: 'Subtract neighbours to find the jump.' },
-          { tex: '15 + 5 = 20', text: 'Keep adding the same jump.' },
+          { tex: '10 - 5 = 5', text: 'Subtract neighbors to find the jump. The second term minus the first term tells how much each step adds.' },
+          { tex: '15 - 10 = 5', text: 'Check the jump with a second pair of neighbors. It is also 5, so the jump is constant and the rule is safe to use.' },
+          { tex: '15 + 5 = 20', text: 'Add the jump to the last term to get the next term. Each new term is the one before it plus 5.' },
+          { tex: '20 + 5 = 25,\\quad 25 + 5 = 30', text: 'Keep adding the same jump to keep going. The pattern goes on adding 5 each time, as long as the rule stays the same.' },
         ],
         answer: '20,\\ 25,\\ 30',
       },
@@ -735,7 +1021,16 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Leap ahead: 0, 4, 8 … term 5?',
-      body: 'Start 0, jump +4. Term 5 makes four jumps from the start: 0 + 4 × 4 = 16. The rule start + jump × (n − 1) skips the counting.',
+      body: 'What is the 5th term of 0, 4, 8, …? Use the jump rule instead of listing every term.',
+      steps: {
+        steps: [
+          { tex: 'start = 0,\\quad jump = 4 - 0 = 4', text: 'Find the starting number and the jump. The first term is 0 and each term is 4 more than the one before it.' },
+          { tex: '5 - 1 = 4 \\text{ jumps}', text: 'Count the jumps. The first term needs no jump to get to, so term 5 takes only 4 jumps, not 5.' },
+          { tex: '4 \\times 4 = 16', text: 'Multiply the number of jumps by the size of the jump. Four jumps of 4 add up to 16.' },
+          { tex: '0 + 16 = 16', text: 'Add this to the starting number. Zero plus 16 is 16, which matches the table below, so term 5 is 16.' },
+        ],
+        answer: '16',
+      },
       table: {
         head: ['term', 'jumps so far', 'value'],
         rows: [['1', '0', '0'], ['2', '1', '4'], ['3', '2', '8'], ['4', '3', '12'], ['5', '4', '16']],
@@ -746,16 +1041,41 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Read a line plot',
-      body: 'A line plot shows 2 Xs above 1/2. Each X is one measured item. So 2 items measured exactly 1/2.',
-      steps: { steps: [{ tex: '\\text{count the X marks}', text: 'Each X is one data value.' }, { tex: '\\text{tallest stack wins}', text: 'The tallest column is the most common value.' }] },
+      body: 'The plot shows the cups of water left in some bottles. How many bottles were measured in all, and which amount was the most common?',
+      art: dotPlot(['1/4', '1/2', '3/4', '1'], [3, 4, 2, 1], {
+        title: 'cups of water left', unit: 'cups', mark: 1,
+        caption: 'Three Xs over 1/4, four over 1/2, two over 3/4, one over 1.',
+      }),
+      steps: {
+        steps: [
+          { tex: '\\text{one X} = \\text{one bottle}', text: 'Each X on a line plot stands for exactly one thing that was measured, so counting Xs counts bottles.' },
+          { tex: '3 + 4 + 2 + 1 = 10', text: 'Count the Xs over each number and add them. That is the total number of bottles that were measured.' },
+          { tex: '\\text{tallest stack} = 4 \\text{ over } \\tfrac12', text: 'Find the tallest stack. A taller stack means that value showed up more often, and the tallest is over 1/2 with 4 Xs.' },
+          { tex: '\\text{most common} = \\tfrac12 \\text{ cup}', text: 'So the amount that happened most often is one half cup. The stack height tells how many bottles had that amount.' },
+        ],
+        answer: '10 \\text{ bottles; most common } \\tfrac12 \\text{ cup}',
+      },
     },
     {
       kind: 'example',
       head: 'Another way: list the terms',
-      body: 'Find the 5th term of the pattern 0, 4, 8, … by listing.\nKeep adding 4: 0, 4, 8, 12, 16. The 5th number in the list is 16 — no formula needed.',
-      steps: { steps: [{ tex: '0, 4, 8, 12, 16', text: 'Write the terms out one by one.' }, { tex: '\\text{term } 5 = 16', text: 'Count along to the one you want.' }], answer: '16' },
+      body: 'Find the 5th term of the pattern 0, 4, 8, … by writing out the terms instead of using the rule.',
+      steps: {
+        steps: [
+          { tex: '0,\\ 4,\\ 8', text: 'Write down the terms you are given. Notice that each one is 4 more than the one before it, so the jump is 4.' },
+          { tex: '8 + 4 = 12,\\quad 12 + 4 = 16', text: 'Keep adding the jump to extend the list. Each new term is the last term plus 4, so the next two are 12 and 16.' },
+          { tex: '0,\\ 4,\\ 8,\\ 12,\\ 16', text: 'Count along the list: first 0, second 4, third 8, fourth 12, fifth 16. The fifth number is the 5th term.' },
+          { tex: '0 + 4 \\times 4 = 16', text: 'Check against the rule. Term 5 takes four jumps of 4 from the start, and 16 is what you get either way.' },
+        ],
+        answer: '16',
+      },
     },
-    { kind: 'protip', head: 'Check the jump twice', body: 'Before extending a pattern, compute the jump from TWO different pairs: 10 − 5 and 15 − 10. If both give the same jump, your rule is solid. Patterns with changing jumps need a different rule.' },
+    {
+      kind: 'protip',
+      head: 'Check the jump twice',
+      body: 'Before extending a pattern, compute the jump from TWO different pairs: 10 − 5 and 15 − 10. If both give the same jump, your rule is solid. Patterns with changing jumps need a different rule.',
+      why: 'One pair of neighbors could match by accident. Pattern 1, 2, 4 starts with a jump of 1 and then jumps by 2, so adding 1 each time would fail. A second check catches this.',
+    },
     {
       kind: 'trap',
       head: 'Trap: jumping before you run',
@@ -767,7 +1087,20 @@ export const F5_SLIDES: SlideBank = {
         ],
       },
     },
-    { kind: 'challenge', head: 'Extra credit: predict far ahead', body: 'A pattern follows the rule y = 2x: (1,2), (2,4), (3,6). What is y when x = 10?\nUse the rule instead of listing: y = 2 × 10 = 20.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: predict far ahead',
+      body: 'A pattern follows the rule y = 2x: (1, 2), (2, 4), (3, 6). What is y when x = 10? Use the rule instead of listing every point.',
+      steps: {
+        steps: [
+          { tex: '2 \\times 1 = 2,\\ 2 \\times 2 = 4,\\ 2 \\times 3 = 6', text: 'First check the rule on the points you were given. Each y is exactly twice its x, so the rule really matches the pattern.' },
+          { tex: 'y = 2x', text: 'The rule works for every x, so we do not need to list all the points. We can just put in the x we care about.' },
+          { tex: 'y = 2 \\times 10', text: 'Replace x with 10. The rule says to double it, so y is twice 10.' },
+          { tex: 'y = 20', text: 'Twice 10 is 20, so the point is (10, 20). Listing every point from 1 to 10 would have taken much longer.' },
+        ],
+        answer: 'y = 20',
+      },
+    },
     {
       kind: 'summary',
       head: 'Pictures you can read',
