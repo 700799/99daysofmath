@@ -317,6 +317,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'A function is a machine',
       body: 'A function takes a number in, does a job, and drops a new number out. The rule f(x) = x + 4 is a machine that adds 4 to whatever you feed it. Nothing mysterious — put a number in the hopper, catch what falls out.',
+      why: 'A function must give exactly one output for each input, or it would not be a reliable machine. With f(x) = x + 4, putting in 3 always gives 7 and never anything else. That reliability is what lets us chain machines together and run them backwards later.',
       formula: {
         tex: 'f(x) = 3x + 1',
         note: 'Whatever lands in the brackets is what x becomes — a number, a letter, another machine.',
@@ -331,6 +332,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Composition = two machines in a row',
       body: 'In f(g(x)), the output of machine g becomes the input of machine f. The INSIDE machine always runs FIRST, just like nested boxes: you open the small box before the big one. Work inside-out, every single time.',
+      why: 'The output of g is just a number, and f is ready to accept any number, so g\'s answer can be dropped straight into f. But f cannot start until it has its input, which is g\'s answer. So g must finish first. Check with g(x) = x + 1 and f(x) = 2x: g(3) = 4, then f(4) = 8.',
       art: machine('x', 'g then f', 'f(g(x))', { title: 'two machines bolted together', caption: 'The output of the first becomes the input of the second.' }),
       formula: {
         tex: 'f(g(x)) \\quad \\text{— innermost first}',
@@ -341,6 +343,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Order changes the answer',
       body: 'f(g(x)) and g(f(x)) use the same two machines but in opposite orders, and they usually give different answers. Putting on socks then shoes is not the same as shoes then socks. Always read which function is on the inside.',
+      why: 'Take f(x) = 3x + 1 and g(x) = 2x + 1, the pair behind the numbers above. Running g first gives f(g(x)) = 3(2x + 1) + 1 = 6x + 4, but running f first gives g(f(x)) = 2(3x + 1) + 1 = 6x + 3. The extra +1 gets multiplied by a different number depending on the order, so the two answers differ.',
       compare: {
         cols: [
           { title: 'f(g(2))', tex: 'g \\text{ first}', lines: ['g(2) = 5', 'f(5) = 16'], tone: 'accent' },
@@ -353,6 +356,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'An inverse is the UNDO machine',
       body: 'The inverse f⁻¹ takes an output and hands you back the original input. To find its rule, swap x and y and then solve for y. If f adds 9, then f⁻¹ subtracts 9 — the two machines cancel each other out.',
+      why: 'If f turns an input x into an output y, the inverse has to turn that same y back into x, so it is the steps of f done in reverse. Swapping x and y in the equation is exactly that role reversal. Check: f(x) = x + 9 sends 5 to 14, and the inverse subtracts 9 to send 14 back to 5.',
       art: machine('y', 'f⁻¹', 'x', { title: 'the undo machine', caption: 'The inverse runs the same steps backwards, in the opposite order.' }),
       formula: {
         tex: 'f^{-1}(f(x)) = x',
@@ -362,52 +366,117 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: f(g(2))',
-      body: 'Let f(x) = x + 4 and g(x) = 3x.\nInside first: g(2) = 3 × 2 = 6.\nThen f(6) = 6 + 4 = 10.',
+      body: 'Let f(x) = x + 4 and g(x) = 3x. Find f(g(2)). Which machine runs first?',
       steps: {
         steps: [
-          { tex: 'g(2)', text: 'Innermost brackets first — always.' },
-          { tex: 'g(2) = 2 + 3 = 5', text: 'That 5 is now the input for f.' },
-          { tex: 'f(5) = 2(5) + 1 = 11', text: 'Feed it into the outer machine.' },
+          { tex: 'f(g(2))\\ \\to\\ g(2)\\ \\text{first}', text: 'Look for the innermost brackets. g(2) sits inside f, so g must run first, because f cannot start until it has an input.' },
+          { tex: 'g(2) = 3 \\cdot 2 = 6', text: 'Run machine g: its rule is "multiply by 3", so the input 2 becomes 6.' },
+          { tex: 'f(6) = 6 + 4', text: 'That 6 is now the input for f. Put it where x was in f(x) = x + 4, which gives 6 + 4.' },
+          { tex: 'f(6) = 10', text: 'Add to finish. Two machines in a row turned 2 into 10, with g going first.' },
         ],
-        answer: '11',
+        answer: '10',
       },
     },
-    { kind: 'example', head: 'Flip the order: g(f(2))', body: 'Same two machines, opposite order.\nNow f runs first: f(2) = 2 + 4 = 6.\nThen g(6) = 3 × 6 = 18. Different answer, same numbers — order really matters.' },
-    { kind: 'example', head: 'Dollars to euros to yen', body: 'A money app uses e(d) = 0.9d for dollars to euros, then y(e) = 160e for euros to yen.\nStart with $50: 0.9 × 50 = 45 euros.\nThen 160 × 45 = 7200 yen. Two windows, in order.' },
+    {
+      kind: 'example',
+      head: 'Flip the order: g(f(2))',
+      body: 'Use the same machines, f(x) = x + 4 and g(x) = 3x, but in the opposite order. Find g(f(2)) and compare it with the last answer.',
+      steps: {
+        steps: [
+          { tex: 'g(f(2))\\ \\to\\ f(2)\\ \\text{first}', text: 'Now f is the inside machine, because f(2) sits in the brackets of g. So f runs first this time.' },
+          { tex: 'f(2) = 2 + 4 = 6', text: 'Run f: its rule adds 4, so the input 2 becomes 6.' },
+          { tex: 'g(6) = 3 \\cdot 6 = 18', text: 'Feed the 6 into g, whose rule is "multiply by 3". That gives 18.' },
+          { tex: '18 \\ne 10', text: 'The earlier order gave 10, so the order matters. Adding 4 before tripling also triples the 4, while adding after does not.' },
+        ],
+        answer: '18',
+      },
+    },
+    {
+      kind: 'example',
+      head: 'Dollars to euros to yen',
+      body: 'A money app uses e(d) = 0.9d to turn dollars into euros, then y(e) = 160e to turn euros into yen. How many yen is $50?',
+      steps: {
+        steps: [
+          { tex: 'y(e(50))', text: 'Write the trip as a composite. The dollars go through the euro window first, so e is the inside machine and y is outside.' },
+          { tex: 'e(50) = 0.9 \\cdot 50 = 45', text: 'Run the first machine. Each dollar is worth 0.9 euros, so multiply by 0.9 to get 45 euros.' },
+          { tex: 'y(45) = 160 \\cdot 45', text: 'The 45 euros is the input to the yen machine. Each euro is worth 160 yen, so we multiply 45 by 160.' },
+          { tex: '160 \\cdot 45 = 7200', text: 'Compute: 160 × 45 is 160 × 40 = 6400 plus 160 × 5 = 800, which is 7200. Order mattered, since euros had to exist before they could become yen.' },
+        ],
+        answer: '7200 \\text{ yen}',
+      },
+    },
     {
       kind: 'example',
       head: 'Another way: draw the chain',
-      body: 'Write the trip as arrows instead of nested letters.\n50 dollars → 45 euros → 7200 yen.\nEach arrow is one machine, and you follow them left to right. The nesting disappears and the order is obvious.',
+      body: 'Instead of nested letters, draw the machines as boxes in a row. Start with 2, add 3, then double. What comes out?',
+      steps: {
+        steps: [
+          { tex: '2 \\xrightarrow{+3} \\square \\xrightarrow{\\times 2} \\square', text: 'Draw one arrow per machine, left to right, in the order they run. Reading along the arrows replaces hunting for the innermost brackets.' },
+          { tex: '2 + 3 = 5', text: 'First box: add 3 to the input 2. This is the inside machine, so it goes first and gives 5.' },
+          { tex: '5 \\times 2 = 10', text: 'Second box: take the 5 that came out and double it. The output of box one is the input of box two.' },
+          { tex: '2 \\to 5 \\to 10', text: 'The whole trip is 2 to 5 to 10. Swapping the boxes would give (2 × 2) + 3 = 7, so the drawn order is what fixes the answer.' },
+        ],
+        answer: '10',
+      },
       art: machine('2', '+3 → ×2', '10', { title: 'the chain, drawn', caption: 'Drawing the boxes makes the order impossible to get wrong.' }),
     },
     {
       kind: 'example',
       head: 'Discount, then tax',
-      body: 'A jacket costs $80. A coupon takes 25% off, then 10% tax is added.\nDiscount machine: 0.75 × 80 = $60.\nTax machine: 10% of 60 is $6, so the final price is $66.',
+      body: 'A jacket costs $80. A coupon takes 25% off, then 10% tax is added. What is the final price?',
       steps: {
         steps: [
-          { tex: '\\$80 \\cdot 0.75 = \\$60', text: '25% off means keep 75%.' },
-          { tex: '\\$60 \\cdot 1.08 = \\$64.80', text: 'Then 8% tax on the discounted price.' },
+          { tex: '\\text{price} \\to \\text{discount} \\to \\text{tax}', text: 'Treat each step as a machine and run them in the order the store does. The discount comes first, and the tax is charged on whatever is left.' },
+          { tex: '80 \\cdot 0.75 = 60', text: 'Taking 25% off means you keep 75%, so multiply by 0.75. That makes the price $60.' },
+          { tex: '60 \\cdot 1.10 = 66', text: 'Adding 10% tax means paying 110% of the price, so multiply by 1.10. The tax is $6, so the total is $66.' },
+          { tex: '0.75 \\cdot 1.10 = 0.825', text: 'As a check, the two machines combine to one factor of 0.825, and 80 × 0.825 = 66. Tax on the smaller price is smaller, so the order matters.' },
         ],
-        answer: '\\$64.80',
+        answer: '\\$66',
       },
     },
-    { kind: 'example', head: 'Undoing a two-step machine', body: 'Let f(x) = 2x + 1, so f doubles and then adds 1. Find f⁻¹(9).\nUndo the LAST step first: 9 − 1 = 8.\nThen undo the doubling: 8 ÷ 2 = 4. So f⁻¹(9) = 4.' },
+    {
+      kind: 'example',
+      head: 'Undoing a two-step machine',
+      body: 'Let f(x) = 2x + 1, so f doubles and then adds 1. Find f⁻¹(9), the input that makes the output 9.',
+      steps: {
+        steps: [
+          { tex: 'x \\xrightarrow{\\times 2} \\square \\xrightarrow{+1} 9', text: 'List what f does in order: double, then add 1. The inverse must undo those steps in the opposite order, like taking off shoes before socks.' },
+          { tex: '9 - 1 = 8', text: 'The LAST step was adding 1, so undo it FIRST by subtracting 1. Subtraction cancels addition, so 9 becomes 8.' },
+          { tex: '8 \\div 2 = 4', text: 'Now undo the doubling by dividing by 2, since division cancels multiplication. That gives 4.' },
+          { tex: 'f(4) = 2 \\cdot 4 + 1 = 9', text: 'Check by running f forward. Doubling 4 gives 8, and adding 1 gives 9, so the input 4 really does produce 9.' },
+        ],
+        answer: 'f^{-1}(9) = 4',
+      },
+    },
     {
       kind: 'example',
       head: 'Another way: swap x and y',
-      body: 'Write y = 2x + 1, then trade the letters: x = 2y + 1.\nSolve for y: subtract 1 to get x − 1 = 2y, then divide by 2.\nThe rule is f⁻¹(x) = (x − 1) ÷ 2, and plugging in 9 gives 4.',
+      body: 'Find the rule for the inverse of f(x) = 2x + 1 by swapping x and y, then check it with the input 9.',
       steps: {
         steps: [
-          { tex: 'y = 2x + 5', text: 'Write the function with y.' },
-          { tex: 'x = 2y + 5', text: 'Swap x and y — that IS the undo.' },
-          { tex: 'x - 5 = 2y', text: 'Now solve for y.' },
-          { tex: 'y = \\dfrac{x - 5}{2}', text: 'The inverse rule.' },
+          { tex: 'y = 2x + 1', text: 'Write the function with y in place of f(x). Now x is the input and y is the output, which makes it easy to trade their roles.' },
+          { tex: 'x = 2y + 1', text: 'Swap x and y. The inverse takes the old output as its input and gives back the old input, so the two letters trade jobs.' },
+          { tex: 'x - 1 = 2y', text: 'Solve for y. First subtract 1 from both sides to get the 2y alone. Doing the same thing to both sides keeps the equation true.' },
+          { tex: 'y = \\dfrac{x - 1}{2}', text: 'Divide both sides by 2 to isolate y. This is the inverse rule, and it undoes the doubling and the adding in reverse order.' },
+          { tex: 'f^{-1}(9) = \\dfrac{9 - 1}{2} = 4', text: 'Check it with 9. Subtract 1 to get 8, then halve to get 4, which matches the answer from the other method.' },
         ],
-        answer: 'f^{-1}(x) = \\dfrac{x - 5}{2}',
+        answer: 'f^{-1}(x) = \\dfrac{x - 1}{2}',
       },
     },
-    { kind: 'example', head: 'Running a chain backwards', body: 'A store takes 20% off, then adds $5 shipping. You paid $45.\nShipping went on LAST, so peel it off FIRST: 45 − 5 = 40.\nThat $40 is 80% of the original, so 40 ÷ 0.8 = $50.' },
+    {
+      kind: 'example',
+      head: 'Running a chain backwards',
+      body: 'A store takes 20% off, then adds $5 shipping. You paid $45. What was the original price?',
+      steps: {
+        steps: [
+          { tex: '\\text{price} \\xrightarrow{\\times 0.8} \\square \\xrightarrow{+5} 45', text: 'Write the chain in the order it happened: first 20% off (keep 80%), then add $5 shipping. To go backwards, undo the steps in reverse order.' },
+          { tex: '45 - 5 = 40', text: 'Shipping was added LAST, so peel it off FIRST. Subtracting 5 undoes adding 5 and leaves the discounted price of $40.' },
+          { tex: '40 \\div 0.8 = 50', text: 'The discount kept 80% of the price, so undo it by dividing by 0.8. Dividing cancels multiplying, and 40 ÷ 0.8 is 50.' },
+          { tex: '50 \\cdot 0.8 + 5 = 45', text: 'Check by running forward. 80% of 50 is 40, and adding 5 gives 45, exactly what you paid.' },
+        ],
+        answer: '\\$50',
+      },
+    },
     {
       kind: 'protip',
       head: 'Check an inverse by round trip',
@@ -429,7 +498,21 @@ export const PC_SLIDES_U01_04: SlideBank = {
         note: 'f(g(x)) is read like an onion, from the middle out.',
       },
     },
-    { kind: 'challenge', head: 'Extra credit: compose with letters', body: 'Let f(x) = 3x and g(x) = x + 5. Find f(g(x)).\nThe inside machine hands over the whole expression x + 5.\nMachine f triples it: 3(x + 5) = 3x + 15. Check with x = 2: g(2) = 7 and f(7) = 21, and 3(2) + 15 = 21.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: compose with letters',
+      body: 'Let f(x) = 3x and g(x) = x + 5. Find a single rule for f(g(x)), using the letter x instead of a number.',
+      steps: {
+        steps: [
+          { tex: 'f(g(x)) = f(x + 5)', text: 'The inside machine runs first. With a letter input it hands over the whole expression x + 5, just as it would hand over a number.' },
+          { tex: 'f(\\square) = 3 \\cdot \\square', text: 'Recall the rule for f: whatever sits in the brackets gets multiplied by 3. So the box will hold x + 5.' },
+          { tex: 'f(x + 5) = 3(x + 5)', text: 'Put the entire expression x + 5 into f. Keep it in brackets so the 3 multiplies both parts.' },
+          { tex: '3(x + 5) = 3x + 15', text: 'Use the distributive property: 3 times x is 3x and 3 times 5 is 15. Skipping the brackets would give 3x + 5, which is wrong.' },
+          { tex: 'x = 2:\\ g(2) = 7,\\ f(7) = 21 = 3(2) + 15', text: 'Check with x = 2. Running the machines gives g(2) = 7 and f(7) = 21, and the formula gives 3(2) + 15 = 21, so they agree.' },
+        ],
+        answer: 'f(g(x)) = 3x + 15',
+      },
+    },
     {
       kind: 'summary',
       head: 'Forward inside-out, backward in reverse',
