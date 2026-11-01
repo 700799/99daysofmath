@@ -21,6 +21,7 @@ export const RP_SLIDES: SlideBank = {
           { label: 'dogs', boxes: 4, color: SKY },
         ], { title: '3 cats to 4 dogs', caption: 'One box each — the picture shows the comparison, not the total.' }),
       formula: { tex: '3 : 4 \\quad\\text{or}\\quad \\tfrac{3}{4} \\quad\\text{or}\\quad 3 \\text{ to } 4', note: 'Three ways to write the same comparison. The colon is the quickest.' },
+      why: 'Think of lining up your cats and dogs in two rows and matching them one by one. A ratio is just a short way to say how the two rows compare. The colon, the word "to" and the fraction bar are only three different ways to write down that one comparison.',
     },
     {
       kind: 'concept',
@@ -34,6 +35,7 @@ export const RP_SLIDES: SlideBank = {
         ],
         note: 'Whatever is said FIRST in the sentence is written first in the ratio.',
       },
+      why: 'A ratio is a sentence written in numbers, so the numbers have to sit in the same order as the words. Say "3 cats to 4 dogs" and then "4 dogs to 3 cats". Those sentences are not the same, because one starts with cats and the other starts with dogs. The numbers must be swapped to match.',
     },
     {
       kind: 'concept',
@@ -45,6 +47,7 @@ export const RP_SLIDES: SlideBank = {
         mark: 3,
         note: 'Whatever you do to one side you must do to the other, or it is a different comparison.',
       },
+      why: 'Picture 3 cats and 4 dogs. Now imagine two more families just like it, so you have 6 cats and 8 dogs. Every group still has 3 cats for 4 dogs, so the comparison did not change. Doubling both sides is just adding more copies of the same group.',
     },
     {
       kind: 'concept',
@@ -53,46 +56,90 @@ export const RP_SLIDES: SlideBank = {
       formula: { tex: '\\dfrac{a}{\\gcd} : \\dfrac{b}{\\gcd}', note: 'Divide both sides by the largest factor they share.', parts: [{ sym: '\\gcd', means: 'the biggest number dividing both amounts', tone: 'accent' }, { sym: '\\text{both sides}', means: 'must be divided, or the ratio changes', tone: 'bad' }] },
       steps: {
         steps: [
-          { tex: '4 : 6', text: 'What divides into both?' },
-          { tex: '4 \\div 2 = 2,\\ 6 \\div 2 = 3', text: 'Divide both by 2.' },
+          { tex: '4 : 6', text: 'Look for a number that divides evenly into both parts. Both 4 and 6 are even, so 2 will work.' },
+          { tex: '4 \\div 2 = 2,\\ 6 \\div 2 = 3', text: 'Divide both parts by 2. Using the same number on both sides keeps the comparison the same, only smaller.' },
         ],
         answer: '2 : 3',
       },
+      why: 'Think of 4 cats and 6 dogs as two equal teams of 2 cats and 3 dogs. The simplest form tells you what ONE team looks like. Once you cannot make the teams any smaller and still have whole animals, you have reached the simplest form.',
     },
     {
       kind: 'example',
       head: 'Write a ratio: 3 cats, 4 dogs',
-      body: 'What is the ratio of cats to dogs?\nCats are named first, so their number goes first: 3. Dogs come second: 4. The ratio is 3:4 — no simplifying needed, since nothing divides both.',
-      steps: { steps: [{ tex: '\\text{cats first}', text: 'The sentence names cats before dogs.' }, { tex: '3 : 4', text: 'Write them in that order.' }], answer: '3 : 4' },
+      body: 'A pet shop has 3 cats and 4 dogs. What is the ratio of cats to dogs?',
+      steps: { steps: [
+        { tex: '\\text{cats}\\ :\\ \\text{dogs}', text: 'Read the question. It says "cats to dogs", so cats are named first. The first thing named always goes first in the ratio.' },
+        { tex: '3 : 4', text: 'Put in the counts in that same order. There are 3 cats and 4 dogs, so write 3 first and 4 second.' },
+        { tex: '\\gcd(3, 4) = 1', text: 'Check if it can shrink. The only number that divides both 3 and 4 is 1, so the ratio is already in simplest form.' },
+      ], answer: '3 : 4' },
     },
     {
       kind: 'example',
       head: 'Simplify: 4 apples to 6 oranges',
-      body: 'Apples to oranges = 4:6.\nBoth numbers divide by 2: 4 ÷ 2 = 2 and 6 ÷ 2 = 3. Simplest form: 2:3.',
+      body: 'A bowl has 4 apples and 6 oranges. Write the ratio of apples to oranges in simplest form.',
       art: tape([
           { label: 'apples', boxes: 2, color: AMB },
           { label: 'oranges', boxes: 3, color: EMR },
         ], { title: '4 : 6 is really 2 : 3', caption: 'Group them in twos and the same comparison needs fewer boxes.' }),
+      steps: { steps: [
+        { tex: '4 : 6', text: 'Write the ratio in the order the question names things. Apples come first, so 4 goes first and 6 goes second.' },
+        { tex: '\\gcd(4, 6) = 2', text: 'Find a number that fits evenly into both parts. Both 4 and 6 can be split into groups of 2, so 2 is the biggest shared factor.' },
+        { tex: '4 \\div 2 = 2,\\ \\ 6 \\div 2 = 3', text: 'Divide both parts by 2. Doing the same thing to both sides keeps the comparison the same, like making groups of 2.' },
+        { tex: '2 : 3', text: 'Now check. Nothing bigger than 1 goes into both 2 and 3, so we are done. For every 2 apples there are 3 oranges.' },
+      ], answer: '2 : 3' },
     },
     {
       kind: 'example',
       head: 'Simplify: 5 cats to 10 dogs',
-      body: 'Cats to dogs = 5:10.\nBoth divide by 5: 5 ÷ 5 = 1 and 10 ÷ 5 = 2. Simplest form: 1:2 — one cat for every two dogs.',
-      steps: { steps: [{ tex: '\\gcd(5, 10) = 5', text: 'Find the biggest shared factor.' }, { tex: '\\tfrac{5}{5} : \\tfrac{10}{5}', text: 'Divide both sides by it.' }], answer: '1 : 2' },
+      body: 'There are 5 cats and 10 dogs at a shelter. What is the ratio of cats to dogs in simplest form?',
+      steps: { steps: [
+        { tex: '5 : 10', text: 'Write the counts in the order asked: cats first, then dogs. That gives 5 : 10.' },
+        { tex: '\\gcd(5, 10) = 5', text: 'Look for the biggest number that divides both. 5 goes into 5 once and into 10 twice, so 5 is the one to use.' },
+        { tex: '\\tfrac{5}{5} : \\tfrac{10}{5} = 1 : 2', text: 'Divide both parts by 5. The same divider on both sides keeps the comparison true, so 5 : 10 becomes 1 : 2.' },
+      ], answer: '1 : 2' },
     },
-    { kind: 'example', head: 'Watch the order: milk to flour', body: 'A recipe uses 2 cups flour and 3 cups milk. Ratio of MILK to flour?\nMilk is asked first, so milk\'s number leads: 3. Flour follows: 2. Answer: 3:2 — not 2:3!' },
-    { kind: 'example', head: 'Simplify: 6 blue to 9 red', body: 'Blue to red = 6:9.\nFind the common factor: both divide by 3. 6 ÷ 3 = 2 and 9 ÷ 3 = 3. Simplest form: 2:3.' },
+    {
+      kind: 'example',
+      head: 'Watch the order: milk to flour',
+      body: 'A recipe uses 2 cups of flour and 3 cups of milk. What is the ratio of MILK to flour?',
+      steps: { steps: [
+        { tex: '\\text{milk}\\ :\\ \\text{flour}', text: 'Read which word the question names first. It says "milk to flour", so milk goes first, even though the recipe lists flour first.' },
+        { tex: '\\text{milk} = 3,\\ \\text{flour} = 2', text: 'Pick out the right number for each. The recipe has 3 cups of milk and 2 cups of flour.' },
+        { tex: '3 : 2', text: 'Write them in the order the question asked: milk, then flour. The question sets the order, not the story.' },
+      ], answer: '3 : 2' },
+    },
+    {
+      kind: 'example',
+      head: 'Simplify: 6 blue to 9 red',
+      body: 'A bag has 6 blue marbles and 9 red marbles. Write blue to red in simplest form.',
+      steps: { steps: [
+        { tex: '6 : 9', text: 'Write the ratio in the order asked. Blue is named first, so 6 goes first and 9 goes second.' },
+        { tex: '\\gcd(6, 9) = 3', text: 'Find the biggest number that divides both. Count by 3s: 3, 6, 9. Both numbers are on that list, so 3 fits.' },
+        { tex: '6 \\div 3 = 2,\\ \\ 9 \\div 3 = 3', text: 'Divide both parts by 3. Splitting both sides the same way keeps the comparison the same.' },
+        { tex: '2 : 3', text: 'Nothing bigger than 1 divides both 2 and 3, so this is the simplest form. Every 2 blue go with 3 red.' },
+      ], answer: '2 : 3' },
+    },
     {
       kind: 'example',
       head: 'Bigger numbers: 8 boys to 12 girls',
-      body: 'Boys to girls = 8:12.\nBoth divide by 4: 8 ÷ 4 = 2 and 12 ÷ 4 = 3. Simplest form: 2:3 — for every 2 boys there are 3 girls.',
-      steps: { steps: [{ tex: '\\gcd(8, 12) = 4', text: 'Four divides both numbers.' }, { tex: '\\tfrac{8}{4} : \\tfrac{12}{4}', text: 'Divide each side by four.' }], answer: '2 : 3' },
+      body: 'A club has 8 boys and 12 girls. What is the ratio of boys to girls in simplest form?',
+      steps: { steps: [
+        { tex: '8 : 12', text: 'Write the counts in the order asked: boys first, then girls. That gives 8 : 12.' },
+        { tex: '\\gcd(8, 12) = 4', text: 'List the factors. 8 has 1, 2, 4, 8 and 12 has 1, 2, 3, 4, 6, 12. The biggest one they share is 4.' },
+        { tex: '\\tfrac{8}{4} : \\tfrac{12}{4} = 2 : 3', text: 'Divide both parts by 4. Dividing both sides by the same number never changes what the ratio says.' },
+        { tex: '2 : 3', text: 'This means for every 2 boys there are 3 girls. Nothing else divides 2 and 3, so it cannot shrink more.' },
+      ], answer: '2 : 3' },
     },
     {
       kind: 'example',
       head: 'Another way: divide by the biggest factor',
-      body: 'Simplify 8:12 in ONE step.\nInstead of halving twice (8:12 → 4:6 → 2:3), find the biggest number that divides both — 4. Then 8 ÷ 4 = 2 and 12 ÷ 4 = 3, giving 2:3 right away.',
-      steps: { steps: [{ tex: '6 : 9', text: 'Start with the raw ratio.' }, { tex: '\\gcd = 3', text: 'Three is the largest shared factor.' }, { tex: '2 : 3', text: 'One division reaches simplest form.' }], answer: '2 : 3' },
+      body: 'Simplify 12:18. You can halve and then divide again, or you can find the biggest shared factor and finish in one step. Try both.',
+      steps: { steps: [
+        { tex: '12 : 18 \\to 6 : 9', text: 'Small-steps way: both numbers are even, so divide both by 2. That leaves 6 : 9, which can still shrink.' },
+        { tex: '6 : 9 \\to 2 : 3', text: 'Both 6 and 9 divide by 3, so divide again. Now 2 : 3 cannot shrink any more.' },
+        { tex: '\\gcd(12, 18) = 6', text: 'One-step way: the biggest number that goes into both 12 and 18 is 6, because 6 × 2 = 12 and 6 × 3 = 18.' },
+        { tex: '\\tfrac{12}{6} : \\tfrac{18}{6} = 2 : 3', text: 'Divide both parts by 6 and you land on 2 : 3 straight away. Both ways agree, so the shortcut is safe.' },
+      ], answer: '2 : 3' },
     },
     {
       kind: 'protip',
@@ -104,19 +151,31 @@ export const RP_SLIDES: SlideBank = {
           { title: 'Divide by 4', tex: '8 : 12 \\to 2 : 3', lines: ['Nothing left to divide', 'Simplest form'], tone: 'ok' },
         ],
       },
+      why: 'Every time you divide you take out one shared factor. The biggest shared factor takes them all out at once. Smaller factors take out only some, so you have to keep going until nothing else fits.',
     },
     {
       kind: 'trap',
       head: 'Trap: flipping the order',
-      body: 'The #1 ratio mistake: writing the numbers in the order they appear in the story instead of the order the QUESTION asks. "Milk to flour" puts milk first even if flour was mentioned first. Always re-read which word comes first in the question.',
+      body: 'The #1 ratio mistake: writing the numbers in the order they appear in the story instead of the order the QUESTION asks. With 2 cups of flour and 3 cups of milk, "milk to flour" puts milk first. Always re-read which word comes first in the question.',
       compare: {
         cols: [
-          { title: 'Wrong', tex: '\\text{“milk to flour”} \\to 3 : 2', lines: ['Wrote flour first', 'Recipe ruined'], tone: 'bad' },
-          { title: 'Right', tex: '\\text{“milk to flour”} \\to 2 : 3', lines: ['Milk is named first', 'So milk goes first'], tone: 'ok' },
+          { title: 'Wrong', tex: '\\text{“milk to flour”} \\to 2 : 3', lines: ['Wrote flour first', 'Recipe ruined'], tone: 'bad' },
+          { title: 'Right', tex: '\\text{“milk to flour”} \\to 3 : 2', lines: ['Milk is named first', 'So milk goes first'], tone: 'ok' },
         ],
       },
+      why: 'The ratio 2 : 3 says the first thing is the smaller amount. If milk is first and you write 2, you are saying there is less milk than flour, and that is false. The order of the numbers has to match the order of the words.',
     },
-    { kind: 'challenge', head: 'Extra credit: mystery total', body: 'A shelf has red and blue books in the ratio 3:5, and 24 books in all. How many are red?\nAdd the parts: 3 + 5 = 8 parts = 24 books, so 1 part = 24 ÷ 8 = 3 books. Red is 3 parts: 3 × 3 = 9 red books.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: mystery total',
+      body: 'A shelf has red and blue books in the ratio 3:5, and 24 books in all. How many are red?',
+      steps: { steps: [
+        { tex: '3 + 5 = 8 \\text{ parts}', text: 'Add the ratio numbers to count the equal parts in the whole shelf. 3 red parts plus 5 blue parts make 8 parts.' },
+        { tex: '24 \\div 8 = 3', text: 'The 8 parts share 24 books equally, so divide. One part is worth 3 books.' },
+        { tex: '3 \\times 3 = 9', text: 'Red gets 3 parts and each part is 3 books, so multiply to get the red books.' },
+        { tex: '9 + 15 = 24', text: 'Check it. Blue is 5 parts, which is 5 × 3 = 15 books. 9 red plus 15 blue is 24, the full shelf.' },
+      ], answer: '9 \\text{ red books}' },
+    },
     {
       kind: 'summary',
       head: 'Ratios in three moves',
