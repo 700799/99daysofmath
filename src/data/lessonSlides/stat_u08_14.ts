@@ -253,6 +253,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'What a random variable is',
       body: 'A random variable X turns each outcome of a chance process into a number. A discrete one comes with a table: every value X can take and its probability. The probabilities must add to exactly 1.',
+      why: 'The probabilities must total 1 because exactly one outcome happens every time the process runs, so all the rows together cover the whole certain event. A table that sums to 0.9 or 1.1 describes something impossible. In the cars table, 0.10 + 0.40 + 0.35 + 0.15 = 1.00, so every household lands in exactly one row.',
       table: {
         head: ['cars per household, x', 'P(x)'],
         rows: [['0', '0.10'], ['1', '0.40'], ['2', '0.35'], ['3', '0.15'], ['total', '1.00']],
@@ -264,6 +265,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Expected value is a weighted average',
       body: 'The expected value μ is the average you would see over millions of repeats. Multiply every value by its probability and add. It does not have to be a value X can actually take: a die averaging 2.5 never lands on 2.5.',
+      why: 'Imagine 100 households from the cars table: about 10 have 0 cars, 40 have 1, 35 have 2 and 15 have 3. That is 0 + 40 + 70 + 45 = 155 cars, or 1.55 per household. Multiplying each value by its probability does the same job as dividing that total by 100, which is why expected value is the average of a huge number of repeats.',
       formula: {
         tex: '\\mu_X = E(X) = \\sum x \\cdot P(x)',
         note: 'Each value, weighted by how often it happens, all added up.',
@@ -285,6 +287,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Variance and standard deviation',
       body: 'Variance measures spread: take each deviation from the mean, square it, weight it by its probability and add. The standard deviation σ is the square root, so it comes back in the same units as X.',
+      why: 'Plain deviations from the mean always cancel out, because the values above the mean balance the values below it. Squaring makes every deviation positive, so far-away values pile up into a real measure of spread and count more than close ones. The square root at the end puts the answer back in the original units, such as cars instead of cars squared.',
       formula: {
         tex: '\\sigma_X^{2} = \\sum (x - \\mu_X)^{2}\\, P(x), \\qquad \\sigma_X = \\sqrt{\\sigma_X^{2}}',
         note: 'Squared distances from the mean, weighted by probability.',
@@ -299,6 +302,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Linear change: Y = a + bX',
       body: 'Add a constant and every value shifts, so the mean shifts, but the spread does not move. Multiply by b and both the mean and the standard deviation get multiplied by b (the SD by |b|).',
+      why: 'Adding 3 to every value slides the whole picture along the number line without changing how far values sit from each other, so the mean moves and the spread does not. Multiplying by 2.5 stretches every gap by 2.5, so distances from the mean grow by 2.5 too. The variance grows by 2.5 squared, and its root brings the SD to 2.5 times the old one.',
       formula: {
         tex: '\\mu_{a+bX} = a + b\\,\\mu_X, \\qquad \\sigma_{a+bX} = |b|\\,\\sigma_X',
         note: 'The shift a reaches the mean only; the scale b reaches both.',
@@ -318,6 +322,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Combining two random variables',
       body: 'For X + Y the means add; for X − Y the means subtract. If X and Y are independent, the variances ADD in both cases. Standard deviations never add directly.',
+      why: 'Totals add, so the average of a total is the total of the averages. Spread behaves differently: when X and Y are independent, a high X is just as likely to meet a low Y as a high one, so their swings partly cancel. That is why variances add and SDs do not. SDs of 6 and 8 combine to 10, not 14.',
       formula: {
         tex: '\\mu_{X+Y} = \\mu_X + \\mu_Y, \\qquad \\sigma_{X+Y}^{2} = \\sigma_X^{2} + \\sigma_Y^{2}',
         note: 'Means add. Variances add (when X and Y are independent). Then take the root.',
@@ -330,12 +335,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: a four-sided die',
-      body: 'Each face 1, 2, 3, 4 has probability 1/4.\nμ = 1(1/4) + 2(1/4) + 3(1/4) + 4(1/4) = 10/4.\nThe expected value is 2.5.',
+      body: 'A fair four-sided die shows 1, 2, 3 or 4. What is the expected value of one roll, and how can it be a number the die never shows?',
       steps: {
         steps: [
-          { tex: 'P(x) = \\tfrac{1}{4} \\text{ for each face}', text: 'A fair die: equal weights.' },
-          { tex: '\\mu = \\tfrac{1}{4}(1 + 2 + 3 + 4) = \\tfrac{10}{4}', text: 'Multiply each value by its probability and add.' },
-          { tex: '\\mu = 2.5', text: 'The long-run average, not a face on the die.' },
+          { tex: 'P(x) = \\tfrac{1}{4} \\text{ for each face}', text: 'A fair die makes every face equally likely. The four probabilities must add to 1, so each face gets weight 1/4.' },
+          { tex: '\\mu = 1\\left(\\tfrac14\\right) + 2\\left(\\tfrac14\\right) + 3\\left(\\tfrac14\\right) + 4\\left(\\tfrac14\\right)', text: 'Multiply each value by its probability and add. That is the definition of expected value: each face counts in proportion to how often it shows up.' },
+          { tex: '\\mu = \\tfrac{1}{4}(1 + 2 + 3 + 4) = \\tfrac{10}{4}', text: 'Add the four products. Every weight is 1/4, so you can factor it out, add 1 + 2 + 3 + 4 = 10, and divide by 4.' },
+          { tex: '\\mu = 2.5', text: 'Read 10/4 as 2.5. This is a long-run average over many rolls, so it does not have to be a face of the die. It is the balance point of the four bars.' },
         ],
         answer: '\\mu = 2.5',
       },
@@ -343,7 +349,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Spread of the same die',
-      body: 'Deviations from 2.5 are −1.5, −0.5, 0.5, 1.5; squared they are 2.25, 0.25, 0.25, 2.25.\nσ² = (2.25 + 0.25 + 0.25 + 2.25)/4 = 5/4 = 1.25.\nσ = √1.25 ≈ 1.12.',
+      body: 'Find the variance and standard deviation of the four-sided die, whose mean is 2.5. Which deviations do you need, and how do the probabilities weight them?',
+      steps: {
+        steps: [
+          { tex: 'x - 2.5 = -1.5,\\ -0.5,\\ 0.5,\\ 1.5', text: 'Subtract the mean 2.5 from each face to see how far it sits from the centre. The signs differ because the mean is in the middle of the faces.' },
+          { tex: '(x - 2.5)^{2} = 2.25,\\ 0.25,\\ 0.25,\\ 2.25', text: 'Square every deviation so the negatives stop cancelling the positives. Squaring also makes a far-away face count much more than a close one.' },
+          { tex: '\\sigma^{2} = \\tfrac14(2.25 + 0.25 + 0.25 + 2.25) = \\tfrac{5}{4} = 1.25', text: 'Weight each squared deviation by its probability 1/4 and add. This weighted average of squared distances is the variance, and the table shows the same total.' },
+          { tex: '\\sigma = \\sqrt{1.25} \\approx 1.12', text: 'Take the square root to undo the squaring. The standard deviation is in the same units as X, so a roll typically lands about 1.12 away from 2.5.' },
+        ],
+        answer: '\\sigma^{2} = 1.25,\\ \\sigma \\approx 1.12',
+      },
       table: {
         head: ['x', 'x − 2.5', '(x − 2.5)²', '× 1/4'],
         rows: [['1', '−1.5', '2.25', '0.5625'], ['2', '−0.5', '0.25', '0.0625'], ['3', '0.5', '0.25', '0.0625'], ['4', '1.5', '2.25', '0.5625'], ['sum', '', '', '1.25']],
@@ -354,12 +369,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'A raffle ticket',
-      body: 'A raffle sells 100 tickets at $2 each; one ticket wins $100. Let X be your net gain.\nWin (0.01): 100 − 2 = $98. Lose (0.99): −$2.\nE(X) = 98(0.01) + (−2)(0.99) = 0.98 − 1.98 = −$1.00.',
+      body: 'A raffle sells 100 tickets at $2 each; one ticket wins $100. Let X be your net gain. What do you expect to gain or lose per ticket?',
       steps: {
         steps: [
-          { tex: 'P(\\text{win}) = 0.01,\\ P(\\text{lose}) = 0.99', text: 'One winning ticket in a hundred.' },
-          { tex: '98(0.01) + (-2)(0.99)', text: 'Net gain times probability, for each outcome.' },
-          { tex: '0.98 - 1.98 = -1.00', text: 'On average you lose a dollar per ticket.' },
+          { tex: 'X = 100 - 2 = 98 \\quad\\text{or}\\quad X = -2', text: 'Net gain subtracts the ticket price from the prize. Winning nets 100 − 2 = $98, and losing leaves you down $2. Use net gain, since the $2 is spent either way.' },
+          { tex: 'P(\\text{win}) = \\tfrac{1}{100} = 0.01,\\quad P(\\text{lose}) = 0.99', text: 'One ticket wins out of 100, so P(win) is 0.01. The other 99 tickets lose, so P(lose) is 0.99, and the two probabilities add to 1.' },
+          { tex: 'E(X) = 98(0.01) + (-2)(0.99)', text: 'Multiply each net gain by its probability and add. This weighted average is the expected value, so the rare big win is counted only 1% of the time.' },
+          { tex: '0.98 - 1.98 = -1.00', text: 'Finish the arithmetic: 98 × 0.01 is 0.98 and −2 × 0.99 is −1.98. The negative answer means that over many tickets you lose about a dollar on each.' },
         ],
         answer: 'E(X) = -\\$1.00',
       },
@@ -367,7 +383,17 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Cars per household',
-      body: 'X = 0, 1, 2, 3 with probabilities 0.10, 0.40, 0.35, 0.15.\nμ = 0(0.10) + 1(0.40) + 2(0.35) + 3(0.15) = 0.40 + 0.70 + 0.45 = 1.55.\nσ² = 0.2403 + 0.1210 + 0.0709 + 0.3154 = 0.7475, so σ ≈ 0.865 cars.',
+      body: 'X is the number of cars in a household, with probabilities 0.10, 0.40, 0.35 and 0.15 for 0, 1, 2 and 3 cars. Find the mean and the standard deviation.',
+      steps: {
+        steps: [
+          { tex: '0.10 + 0.40 + 0.35 + 0.15 = 1.00', text: 'Check that the probabilities add to 1 before computing anything. They do, so this is a valid distribution and the formulas can be used.' },
+          { tex: '\\mu = 0(0.10) + 1(0.40) + 2(0.35) + 3(0.15) = 0.40 + 0.70 + 0.45 = 1.55', text: 'Multiply each number of cars by its probability and add. The zero-car row adds nothing, and the mean 1.55 sits between the two tall bars.' },
+          { tex: '\\sigma^{2} = (0-1.55)^{2}(0.10) + (1-1.55)^{2}(0.40) + (2-1.55)^{2}(0.35) + (3-1.55)^{2}(0.15)', text: 'For each row square the distance from 1.55 and weight it by that row probability. This is the variance definition applied one row at a time.' },
+          { tex: '= 0.2403 + 0.1210 + 0.0709 + 0.3154 = 0.7475', text: 'Add the four weighted squares. They are 0.2403, 0.1210, 0.0709 and 0.3154, which give a variance of 0.7475 squared cars.' },
+          { tex: '\\sigma = \\sqrt{0.7475} \\approx 0.865', text: 'Take the square root to return to cars. A typical household is about 0.865 cars away from the mean of 1.55.' },
+        ],
+        answer: '\\mu = 1.55,\\ \\sigma \\approx 0.865',
+      },
       art: pmf(['0', '1', '2', '3'], [0.1, 0.4, 0.35, 0.15], {
         alt: 'Bars of height 0.10, 0.40, 0.35 and 0.15 over 0, 1, 2 and 3 cars per household',
         title: 'Cars per household',
@@ -379,7 +405,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Another way: the shortcut for variance',
-      body: 'Instead of squaring every deviation, use σ² = E(X²) − μ².\nFor the cars: E(X²) = 0(0.10) + 1(0.40) + 4(0.35) + 9(0.15) = 0.40 + 1.40 + 1.35 = 3.15.\nσ² = 3.15 − 1.55² = 3.15 − 2.4025 = 0.7475. Same answer, less arithmetic.',
+      body: 'Instead of squaring every deviation, can you get the cars variance from σ² = E(X²) − μ²? Square the values first, then subtract the squared mean.',
+      steps: {
+        steps: [
+          { tex: 'E(X^{2}) = 0^{2}(0.10) + 1^{2}(0.40) + 2^{2}(0.35) + 3^{2}(0.15)', text: 'Square each value of X, not the probabilities, and weight the squares by P(x). The values 0, 1, 2, 3 square to 0, 1, 4, 9.' },
+          { tex: 'E(X^{2}) = 0 + 0.40 + 1.40 + 1.35 = 3.15', text: 'Add the four products: 0.40, 1.40 and 1.35 total 3.15. This is the average of the squared values, which is larger than the square of the average.' },
+          { tex: '\\mu^{2} = 1.55^{2} = 2.4025', text: 'Square the mean from the earlier example. The formula subtracts the mean squared, so be sure to square the 1.55 and not just use it as is.' },
+          { tex: '\\sigma^{2} = 3.15 - 2.4025 = 0.7475', text: 'Subtract. The answer matches the long method because expanding Σ(x − μ)²P(x) gives E(X²) − 2μ² + μ², which simplifies to E(X²) − μ².' },
+        ],
+        answer: '\\sigma^{2} = 0.7475',
+      },
       formula: {
         tex: '\\sigma^{2} = E(X^{2}) - \\mu^{2}',
         note: 'Weight the squared values by probability, then subtract the mean squared.',
@@ -392,11 +427,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Taxi fare: F = 3 + 2.5X',
-      body: 'A ride of X miles has mean 6 and SD 2 miles; the fare is F = 3 + 2.5X dollars.\nMean: μ_F = 3 + 2.5(6) = 3 + 15 = $18.\nSD: the +3 does nothing to spread, so σ_F = 2.5(2) = $5.',
+      body: 'A ride of X miles has mean 6 and SD 2 miles; the fare is F = 3 + 2.5X dollars. What are the mean and SD of the fare?',
       steps: {
         steps: [
-          { tex: '\\mu_F = 3 + 2.5(6) = 18', text: 'The mean goes through the whole formula.' },
-          { tex: '\\sigma_F = |2.5| \\cdot 2 = 5', text: 'The spread only feels the multiplier.' },
+          { tex: '\\mu_F = 3 + 2.5(6) = 3 + 15 = 18', text: 'Use the linear rule for the mean: the mean of a + bX is a + b times the mean of X. Both the $3 flat charge and the per-mile rate move the average fare.' },
+          { text: 'The +3 is added to every fare, so all fares shift together and the gaps between them stay the same. A flat charge therefore cannot change the spread at all.' },
+          { tex: '\\sigma_F = |2.5| \\cdot 2 = 5', text: 'The multiplier 2.5 stretches every gap between fares by 2.5, so the SD is multiplied by |b| = 2.5. Use the absolute value because a spread is never negative.' },
+          { tex: '\\mu_F = \\$18,\\quad \\sigma_F = \\$5', text: 'Put it together: a typical ride costs about $18, give or take about $5. The units are dollars because F is a fare.' },
         ],
         answer: '\\mu_F = \\$18,\\ \\sigma_F = \\$5',
       },
@@ -404,7 +441,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Picture it first: coffees all day',
-      body: 'A café sells X coffees in the morning (mean 40, SD 6) and Y in the afternoon (mean 50, SD 8), independently. Picture the SDs as legs of a right triangle.\nMeans add: 40 + 50 = 90. Variances add: 36 + 64 = 100.\nσ_T = √100 = 10 coffees, not 6 + 8 = 14.',
+      body: 'A café sells X coffees in the morning (mean 40, SD 6) and Y in the afternoon (mean 50, SD 8), independently. What are the mean and SD of the day total? Picture the SDs as the legs of a right triangle.',
+      steps: {
+        steps: [
+          { tex: '\\mu_T = 40 + 50 = 90', text: 'Means always add for a total, whether or not the variables are independent. The café averages 90 coffees a day.' },
+          { tex: '6^{2} = 36,\\quad 8^{2} = 64', text: 'Standard deviations cannot be added, but variances can when X and Y are independent. So first square each SD to get the two variances.' },
+          { tex: '\\sigma_T^{2} = 36 + 64 = 100', text: 'Add the variances. Independence is what makes this legal: the morning and afternoon swings do not line up, so their squared spreads simply add.' },
+          { tex: '\\sigma_T = \\sqrt{100} = 10', text: 'Take the root to get back to coffees. The answer is 10, not 6 + 8 = 14, just as the hypotenuse of a 6-8-10 triangle is shorter than the two legs added.' },
+        ],
+        answer: '\\mu_T = 90,\\ \\sigma_T = 10',
+      },
       art: rightTriangle({
         adj: 'σ = 6',
         opp: 'σ = 8',
@@ -421,9 +467,9 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       body: 'Whenever two independent variables combine, go through variances. Square each SD, add, then take the square root. Writing the three steps down stops the tempting mistake of adding the SDs.',
       steps: {
         steps: [
-          { tex: '6^{2} = 36,\\quad 8^{2} = 64', text: 'Square each standard deviation.' },
-          { tex: '36 + 64 = 100', text: 'Add the variances.' },
-          { tex: '\\sqrt{100} = 10', text: 'Take the root to get back to an SD.' },
+          { tex: '6^{2} = 36,\\quad 8^{2} = 64', text: 'Square each standard deviation first. Variance is the quantity that adds for independent variables, so turn the 6 and the 8 into 36 and 64.' },
+          { tex: '36 + 64 = 100', text: 'Add the two variances. This is allowed only when X and Y are independent; if they were linked, an extra term would be needed.' },
+          { tex: '\\sqrt{100} = 10', text: 'Take the square root of the total. The root converts squared units back to ordinary units, giving an SD you can compare with 6 and 8.' },
         ],
         answer: '\\sigma_{X+Y} = 10',
       },
@@ -450,13 +496,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'challenge',
       head: 'Extra credit: an ordinary six-sided die',
-      body: 'Find μ and σ for one roll of a fair six-sided die.\nμ = (1 + 2 + 3 + 4 + 5 + 6)/6 = 21/6 = 3.5.\nE(X²) = (1 + 4 + 9 + 16 + 25 + 36)/6 = 91/6 ≈ 15.17, so σ² = 15.17 − 12.25 ≈ 2.92 and σ ≈ 1.71.',
+      body: 'Find μ and σ for one roll of a fair six-sided die. Which variance formula is quicker here, and why?',
       steps: {
         steps: [
-          { tex: '\\mu = \\tfrac{21}{6} = 3.5', text: 'Equal weights, so average the faces.' },
-          { tex: 'E(X^{2}) = \\tfrac{91}{6} \\approx 15.17', text: 'Average the squared faces.' },
-          { tex: '\\sigma^{2} = 15.17 - 3.5^{2} = 2.92', text: 'The shortcut: E(X²) minus μ².' },
-          { tex: '\\sigma = \\sqrt{2.92} \\approx 1.71', text: 'Root it to get back to pips.' },
+          { tex: '\\mu = \\tfrac{1 + 2 + 3 + 4 + 5 + 6}{6} = \\tfrac{21}{6} = 3.5', text: 'Every face has probability 1/6, so factor that out and add the faces to get 21. Then 21/6 = 3.5, the balance point of the six bars.' },
+          { tex: 'E(X^{2}) = \\tfrac{1 + 4 + 9 + 16 + 25 + 36}{6} = \\tfrac{91}{6} \\approx 15.17', text: 'For the shortcut, square each face and average the squares. The squares add to 91, and 91/6 is about 15.17.' },
+          { tex: '\\sigma^{2} = \\tfrac{91}{6} - 3.5^{2} = 15.17 - 12.25 \\approx 2.92', text: 'Subtract the squared mean 3.5² = 12.25. The shortcut E(X²) − μ² saves finding six separate deviations, so it is quicker here.' },
+          { tex: '\\sigma = \\sqrt{2.92} \\approx 1.71', text: 'Take the root to return to pips on the die. A roll typically lands about 1.7 away from 3.5.' },
         ],
         answer: '\\mu = 3.5,\\ \\sigma \\approx 1.71',
       },

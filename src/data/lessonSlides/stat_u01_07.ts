@@ -1231,6 +1231,7 @@ const STAT_5: LessonSlide[] = [
     kind: 'concept',
     head: 'Population, sample, parameter, statistic',
     body: 'The POPULATION is everyone you want to know about; the SAMPLE is the part you actually measure. A PARAMETER describes the population (p, μ) and is usually unknown. A STATISTIC describes the sample (p̂, x̄) and is what you compute. The 62% came from the 100 surveyed, so it is a statistic.',
+    why: 'We cannot measure everyone, so we measure a sample and use it to estimate a fact about the population. The statistic changes from sample to sample, but the parameter is one fixed number. That is why the symbols differ: p̂ for what we computed, p for what we want to know.',
     formula: {
       tex: '\\hat{p} = \\frac{62}{100} = 0.62',
       note: 'The hat means "from the sample." The population proportion p, of all 1,200 students, stays unknown.',
@@ -1245,6 +1246,7 @@ const STAT_5: LessonSlide[] = [
     kind: 'concept',
     head: 'A simple random sample',
     body: 'A SIMPLE RANDOM SAMPLE (SRS) of size n gives every group of n individuals the same chance of being chosen. Number the population, then read a random digit table or use a random number generator, skipping numbers that are too big and numbers you have already used.',
+    why: 'Because every group of n has the same chance, no kind of student is favored and nothing the researcher prefers can sneak in. Skipping labels over 40 just ignores digits that match nobody, and skipping repeats keeps all the chosen students different from each other.',
     table: {
       head: ['step', 'what you do'],
       rows: [['label', 'number the population 01 to 40'], ['read', 'take two digits at a time from the table'], ['filter', 'skip labels over 40 and repeats'], ['stop', 'when you have n labels']],
@@ -1255,6 +1257,7 @@ const STAT_5: LessonSlide[] = [
     kind: 'concept',
     head: 'Stratified, cluster, systematic',
     body: 'STRATIFIED sampling splits the population into similar groups (strata) and takes an SRS from each, so every group is represented. CLUSTER sampling picks whole groups at random and measures everyone in them. SYSTEMATIC sampling takes every kth individual after a random start.',
+    why: 'Similar individuals give similar answers, so sampling inside each stratum guarantees every group appears and steadies the estimate. A cluster should look like a miniature of the whole population, so measuring a few whole clusters is cheaper yet still representative. A systematic sample is random only through its starting point.',
     compare: {
       cols: [
         { title: 'Stratified', lines: ['groups alike inside', 'SRS from EVERY group'], tone: 'accent' },
@@ -1269,6 +1272,7 @@ const STAT_5: LessonSlide[] = [
     kind: 'concept',
     head: 'Bias: a design that leans one way',
     body: 'BIAS is a flaw in the design that pushes results in one direction. VOLUNTARY RESPONSE lets people choose themselves. CONVENIENCE takes whoever is easy to reach. UNDERCOVERAGE leaves part of the population with no chance of being picked. NONRESPONSE happens when chosen people do not answer.',
+    why: 'Bias means the errors lean one way instead of canceling out. Each of these designs gives some people a bigger or smaller chance of landing in the sample than others, so the sample systematically differs from the population, and in a predictable direction.',
     table: {
       head: ['bias', 'what goes wrong', 'example'],
       rows: [['voluntary response', 'people with strong opinions pick themselves', 'click "yes" or "no" on a website'], ['convenience', 'only the easy-to-reach are asked', 'shoppers at one mall at noon'], ['undercoverage', 'some people can never be chosen', 'phone survey misses those with no phone'], ['nonresponse', 'chosen people refuse or cannot be reached', '40% of the mailed surveys never return']],
@@ -1278,6 +1282,7 @@ const STAT_5: LessonSlide[] = [
     kind: 'concept',
     head: 'Response bias, and why bigger does not mean better',
     body: 'RESPONSE BIAS comes from the question itself: leading wording, a sensitive topic, or an interviewer\'s tone. Random chance causes VARIABILITY, which a bigger sample shrinks. A bigger sample does NOT shrink bias — ten thousand self-selected clicks are still a voluntary response sample.',
+    why: 'Chance errors average out as n grows, because random ups and downs cancel each other. A bias leans the same way for every respondent, so collecting more answers only gives you more copies of the same mistake, measured more precisely. Bias has to be removed by the design.',
     formula: {
       tex: '\\text{variability} \\downarrow \\text{ as } n \\uparrow \\qquad\\qquad \\text{bias: unchanged by } n',
       note: 'Only the design fixes bias; only random selection lets you generalize to the population.',
@@ -1290,12 +1295,12 @@ const STAT_5: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Population, sample, or statistic?',
-    body: 'A school of 1,200 students surveys 100 of them; 62% of those surveyed want a later start time.\nPopulation: all 1,200 students. Sample: the 100 surveyed.\n62% was computed from the sample, so it is a statistic, p̂ = 0.62. The parameter is the unknown percent of all 1,200 who want a later start.',
+    body: 'A school of 1,200 students surveys 100 of them; 62% of those surveyed want a later start time. Name the population and the sample, and decide whether 62% is a parameter or a statistic.',
     steps: {
       steps: [
-        { text: 'Population: who do we want to know about? All 1,200 students.' },
-        { text: 'Sample: who did we actually ask? The 100 surveyed.' },
-        { tex: '\\hat{p} = 0.62', text: 'Computed from the sample, so a statistic — the parameter p is unknown.' },
+        { text: 'Population: the whole group we want to learn about, which here is all 1,200 students at the school.' },
+        { text: 'Sample: the part of the population we actually measured, which here is the 100 students surveyed. We use it to learn about everyone.' },
+        { tex: '\\hat{p} = 0.62', text: 'The 62% was computed from the sample, so it is a statistic, p̂ = 0.62. The parameter p, the percent of all 1,200 students who want a later start, stays unknown.' },
       ],
       answer: '\\text{statistic}',
     },
@@ -1303,26 +1308,36 @@ const STAT_5: LessonSlide[] = [
   {
     kind: 'example',
     head: 'An SRS from a random digit table',
-    body: 'Choose an SRS of 5 from 40 students using the line 41050 92031 06449 05059.\nLabel the students 01 to 40. Read two digits at a time: 41, 05, 09, 20, 31, 06, 44, 90, 50, 59.\nSkip labels over 40 and any repeats. The sample is students 05, 09, 20, 31, 06.',
+    body: 'Choose an SRS of 5 from 40 students using the line 41050 92031 06449 05059.',
+    steps: {
+      steps: [
+        { tex: '01,\\ 02,\\ \\ldots,\\ 40', text: 'Label the students 01 to 40. Use two-digit labels because 40 has two digits, so every student has a label of the same length.' },
+        { tex: '41 \\mid 05 \\mid 09 \\mid 20 \\mid 31 \\mid 06', text: 'Read the digits two at a time. The first pair, 41, is over 40, so it matches no student and is skipped.' },
+        { tex: '05,\\ 09,\\ 20,\\ 31,\\ 06', text: 'Keep each new label that is 40 or below, and skip repeats so that no student is chosen twice. The pairs 05, 09, 20, 31 and 06 all qualify.' },
+        { text: 'Stop as soon as you have five labels. The remaining pairs 44, 90, 50 and 59 are never needed, so the sample is students 05, 09, 20, 31 and 06.' },
+      ],
+      answer: '05,\\ 09,\\ 20,\\ 31,\\ 06',
+    },
     table: {
       head: ['pair', 'keep?'],
       rows: [['41', 'skip — over 40'], ['05', 'keep (1st)'], ['09', 'keep (2nd)'], ['20', 'keep (3rd)'], ['31', 'keep (4th)'], ['06', 'keep (5th) — done']],
       mark: 5,
       note: 'Five labels in hand, so 44, 90, 50 and 59 are never read.',
     },
-    steps: {
-      steps: [
-        { tex: '01,\\ 02,\\ \\ldots,\\ 40', text: 'Two-digit labels for 40 students.' },
-        { tex: '41 \\mid 05 \\mid 09 \\mid 20 \\mid 31 \\mid 06', text: 'Read pairs; 41 is too big.' },
-        { tex: '\\{05, 09, 20, 31, 06\\}', text: 'Five usable labels, no repeats.' },
-      ],
-      answer: '05,\\ 09,\\ 20,\\ 31,\\ 06',
-    },
   },
   {
     kind: 'example',
     head: 'Plan A or plan B: name the design',
-    body: 'A principal wants student opinions on the cafeteria. Plan A: an SRS of 10 from each grade, 9–12. Plan B: pick 3 homerooms at random and survey everyone in them.\nPlan A samples inside every grade, so each grade is guaranteed a voice: stratified random sampling.\nPlan B picks whole groups and measures everyone inside: cluster sampling.',
+    body: 'A principal wants student opinions on the cafeteria. Plan A: an SRS of 10 from each grade, 9–12. Plan B: pick 3 homerooms at random and survey everyone in them. Name each design.',
+    steps: {
+      steps: [
+        { text: 'Both plans first split the school into groups, so the question is what happens next: are SOME people taken from EVERY group, or EVERYONE from SOME groups?' },
+        { text: 'Plan A takes 10 students from each of the four grades, using an SRS inside each grade. Every grade gets a voice, which is stratified random sampling.' },
+        { text: 'Plan B picks three whole homerooms at random and surveys everyone inside them. It chooses entire groups rather than individual people, which is cluster sampling.' },
+        { text: 'Compare the goals: stratified sampling guarantees each grade is represented, while cluster sampling saves time because only three rooms need to be visited.' },
+      ],
+      answer: '\\text{A: stratified;}\\ \\text{B: cluster}',
+    },
     compare: {
       cols: [
         { title: 'Plan A — stratified', lines: ['strata = grades', '10 from EACH grade', 'every grade represented'], tone: 'accent' },
@@ -1334,7 +1349,16 @@ const STAT_5: LessonSlide[] = [
   {
     kind: 'example',
     head: '88% say taxes are too high',
-    body: 'A news website asks readers to click "yes" or "no" on whether taxes are too high; 88% click yes. What kind of bias is this?\nReaders chose themselves to answer — nobody selected them. People with strong feelings are the ones who bother to click.\nVoluntary response bias. The 88% says nothing reliable about the population, no matter how many clicked.',
+    body: 'A news website asks readers to click "yes" or "no" on whether taxes are too high; 88% click yes. What kind of bias is this, and which way does it push the result?',
+    steps: {
+      steps: [
+        { text: 'Ask who chose the respondents. Nobody did: readers decided for themselves whether to click, and the site did not select them.' },
+        { text: 'A sample made of people who choose themselves is a voluntary response sample. People with strong feelings are far more likely to bother to respond, so their voices are over-represented.' },
+        { text: 'Find the direction: angry readers click more, so the 88% probably overstates the proportion of all people who think taxes are too high.' },
+        { text: 'Counting more clicks cannot repair this, because the design is the flaw. Only random selection of who is asked could remove the bias.' },
+      ],
+      answer: '\\text{voluntary response bias; overstates}',
+    },
     compare: {
       cols: [
         { title: 'What happened', lines: ['readers selected themselves', 'the angry click more', '88% is inflated'], tone: 'bad' },
@@ -1346,7 +1370,16 @@ const STAT_5: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Another way: a random number generator',
-    body: 'Instead of a digit table, ask a calculator for random integers from 1 to 40 until you have five different ones.\nSuppose it gives 17, 3, 3, 28, 40, 9. The second 3 is a repeat, so skip it.\nThe sample is students 17, 03, 28, 40, 09 — a different SRS from the table\'s, and just as valid. Any method that gives every group of 5 the same chance is an SRS.',
+    body: 'Instead of a digit table, ask a calculator for random integers from 1 to 40 until you have five different ones. Suppose it gives 17, 3, 3, 28, 40, 9. Which students are in the sample?',
+    steps: {
+      steps: [
+        { text: 'Label the students 1 to 40 and have the calculator pick random integers in that range. No label is too large, so nothing is skipped for size.' },
+        { text: 'Keep 17, then 3. The second 3 is a repeat, and an SRS cannot choose the same student twice, so skip it.' },
+        { text: 'Keep 28 and 40. The 40 is allowed because the range runs from 1 up to and including 40.' },
+        { text: 'Keep 9 to reach five different students, then stop. Any method that gives every group of five the same chance is an SRS, so this is as valid as the table.' },
+      ],
+      answer: '17,\\ 3,\\ 28,\\ 40,\\ 9',
+    },
     table: {
       head: ['generated', 'keep?'],
       rows: [['17', 'keep'], ['3', 'keep'], ['3', 'skip — repeat'], ['28', 'keep'], ['40', 'keep — 40 is allowed'], ['9', 'keep — five in hand']],
@@ -1357,7 +1390,15 @@ const STAT_5: LessonSlide[] = [
   {
     kind: 'example',
     head: 'A question that answers itself',
-    body: 'A survey asks: "Do you agree that overpaid athletes should be taxed more?" What is wrong?\nThe word "overpaid" tells the respondent what to think before they answer. Leading wording is a form of response bias.\nFix: "Should professional athletes pay a higher tax rate?" Neutral words, no verdict built in.',
+    body: 'A survey asks: "Do you agree that overpaid athletes should be taxed more?" What is wrong with the question, and how would you fix it?',
+    steps: {
+      steps: [
+        { text: 'Read the wording for loaded words. "Overpaid" is a verdict hiding inside the question, telling the respondent what to think before they answer.' },
+        { text: 'Wording that pushes people toward one answer is a leading question, and it causes response bias. The answers lean toward yes because of the question, not because of true opinions.' },
+        { text: 'Fix it by removing the loaded word and offering both sides: "Should professional athletes pay a higher tax rate?" Neutral wording lets people give their own opinion.' },
+      ],
+      answer: '\\text{leading question; rewrite it neutrally}',
+    },
     compare: {
       cols: [
         { title: 'Leading', lines: ['"Do you agree that OVERPAID athletes…"', 'pushes toward yes'], tone: 'bad' },
@@ -1368,7 +1409,15 @@ const STAT_5: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Picture it first: every 10th shopper',
-    body: 'A store wants a systematic sample of 50 of the 500 shoppers who enter today. Picture the shoppers in a line of 500.\n500 ÷ 50 = 10, so k = 10. Pick a random start from 1 to 10, say 7.\nSurvey shoppers 7, 17, 27, 37, … — every 10th shopper after the 7th — giving 50 in all.',
+    body: 'A store wants a systematic sample of 50 of the 500 shoppers who enter today. Picture the shoppers in a line of 500. Find the gap and describe how to choose them.',
+    steps: {
+      steps: [
+        { tex: '500 \\div 50 = 10', text: 'Divide the population by the sample size: 500 ÷ 50 = 10. Taking every 10th shopper from a line of 500 gives exactly 50, so the gap is k = 10.' },
+        { tex: '\\text{start} \\in \\{1, \\ldots, 10\\},\\ \\text{say } 7', text: 'Choose the starting point at random from 1 to 10, say 7. That one random choice is what makes the sample random, because every later pick follows from it.' },
+        { tex: '7,\\ 17,\\ 27,\\ \\ldots,\\ 497', text: 'Add 10 each time: 7, 17, 27, 37 and so on up to 497. That is 50 shoppers, one from each block of ten.' },
+      ],
+      answer: '\\text{every 10th shopper from a random start}',
+    },
     formula: {
       tex: 'k = \\frac{N}{n} = \\frac{500}{50} = 10',
       note: 'Random start from 1 to k, then every kth individual.',
@@ -1377,14 +1426,6 @@ const STAT_5: LessonSlide[] = [
         { sym: 'n', means: 'the sample size you want, 50', tone: 'ok' },
         { sym: 'k', means: 'the gap between chosen shoppers', tone: 'warn' },
       ],
-    },
-    steps: {
-      steps: [
-        { tex: '500 \\div 50 = 10', text: 'The gap k.' },
-        { tex: '\\text{start} \\in \\{1, \\ldots, 10\\},\\ \\text{say } 7', text: 'One random choice decides the whole sample.' },
-        { tex: '7,\\ 17,\\ 27,\\ \\ldots,\\ 497', text: 'Fifty shoppers, ten apart.' },
-      ],
-      answer: '\\text{every 10th shopper from a random start}',
     },
     art: popGrid(50, 10, [7, 17, 27, 37, 47], { numbered: true, title: 'Every 10th shopper after a random start of 7', note: 'k = 10: shoppers 7, 17, 27, 37, 47, …', caption: 'The first fifty shoppers in the line. One random start, then a fixed gap.', alt: 'Five rows of ten numbered circles with shoppers 7, 17, 27, 37 and 47 filled in — one in each row' }),
   },
@@ -1419,13 +1460,13 @@ const STAT_5: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: a proportional stratified sample',
-    body: 'The 1,200 students are 400 ninth graders, 300 tenth, 300 eleventh and 200 twelfth. Take a stratified sample of 120 in which each grade is represented in proportion to its size.\n120 ÷ 1,200 = 0.10, so sample 10% of every grade.\nThat is 40 ninth graders, 30 tenth, 30 eleventh and 20 twelfth — chosen by SRS within each grade.',
+    body: 'The 1,200 students are 400 ninth graders, 300 tenth, 300 eleventh and 200 twelfth. Take a stratified sample of 120 in which each grade is represented in proportion to its size.',
     steps: {
       steps: [
-        { tex: '\\frac{120}{1200} = 0.10', text: 'The sampling fraction for every stratum.' },
-        { tex: '0.10 \\times 400 = 40,\\quad 0.10 \\times 300 = 30', text: 'Ninth and tenth grade.' },
-        { tex: '0.10 \\times 300 = 30,\\quad 0.10 \\times 200 = 20', text: 'Eleventh and twelfth grade.' },
-        { tex: '40 + 30 + 30 + 20 = 120', text: 'Check the total.' },
+        { tex: '\\frac{120}{1200} = 0.10', text: 'Find the overall sampling fraction: 120 of 1,200 is 0.10, or 10%. Proportional sampling uses the same fraction in every grade, so each grade appears as it does in the school.' },
+        { tex: '0.10 \\times 400 = 40,\\quad 0.10 \\times 300 = 30', text: 'Apply 10% to the ninth and tenth graders: 0.10 × 400 = 40 ninth graders and 0.10 × 300 = 30 tenth graders.' },
+        { tex: '0.10 \\times 300 = 30,\\quad 0.10 \\times 200 = 20', text: 'Apply 10% to the eleventh and twelfth graders: 0.10 × 300 = 30 eleventh graders and 0.10 × 200 = 20 twelfth graders.' },
+        { tex: '40 + 30 + 30 + 20 = 120', text: 'Check the total: the grade samples must add to the 120 we wanted, and they do. Each group is then chosen by an SRS within its own grade.' },
       ],
       answer: '40,\\ 30,\\ 30,\\ 20',
     },
@@ -1487,6 +1528,7 @@ const STAT_6: LessonSlide[] = [
     kind: 'concept',
     head: 'Observe, or impose?',
     body: 'In an OBSERVATIONAL STUDY you record what people already do. In an EXPERIMENT you IMPOSE a treatment on the subjects and watch the response. Only an experiment can show cause and effect, because only an experiment controls who gets which treatment.',
+    why: 'In an observational study the subjects sort themselves into groups, so the groups may differ in many ways besides the one you study. Only when researchers assign the treatment by chance can the groups be made alike, so that any difference in response can be traced to the treatment.',
     compare: {
       cols: [
         { title: 'Observational study', lines: ['subjects choose their own group', 'researchers only record', 'shows association'], tone: 'warn' },
@@ -1499,6 +1541,7 @@ const STAT_6: LessonSlide[] = [
     kind: 'concept',
     head: 'Factors, levels, treatments, response',
     body: 'The EXPLANATORY variable, or FACTOR, is what you change; its LEVELS are the values it takes. The RESPONSE is what you measure. A TREATMENT is one combination of levels: fertilizer A or B crossed with daily or weekly watering makes 2 × 2 = 4 treatments.',
+    why: 'A treatment is what is actually done to a subject, so it must name a level of every factor at once. With two fertilizers and two watering schedules, each plant gets one fertilizer and one schedule, which is 2 choices times 2 choices, or 4 different combinations.',
     formula: {
       tex: '\\text{treatments} = (\\text{levels of factor 1}) \\times (\\text{levels of factor 2}) = 2 \\times 2 = 4',
       note: 'Every combination is its own treatment: A-daily, A-weekly, B-daily, B-weekly.',
@@ -1513,12 +1556,14 @@ const STAT_6: LessonSlide[] = [
     kind: 'concept',
     head: 'Confounding: two explanations tangled together',
     body: 'A CONFOUNDING variable is tangled up with the explanatory variable, so you cannot tell which one caused the response. Students who eat breakfast may also sleep more. If breakfast eaters earn higher grades, was it the breakfast or the sleep? Breakfast and sleep are confounded.',
+    why: 'If two things always change together, the response cannot be credited to either one alone. Breakfast eaters differ in sleep as well, so higher grades could come from either. The two are mixed, and no amount of extra data can separate them. Only the design can.',
     art: confoundFig,
   },
   {
     kind: 'concept',
     head: 'Three principles of good design',
     body: 'COMPARISON: use a control group or several treatments, so there is something to compare against. RANDOM ASSIGNMENT: let chance decide who gets what, which spreads confounders evenly across the groups. REPLICATION: use enough subjects in each group that chance differences average out.',
+    why: 'Without a comparison you do not know what would have happened anyway. Random assignment makes groups alike on every variable, even ones nobody thought to measure. Replication matters because a few subjects can differ by luck, but across many subjects the luck evens out.',
     formula: {
       tex: '\\text{compare} \;+\; \\text{randomize} \;+\; \\text{replicate}',
       note: 'Random assignment is what handles confounding: the groups start out alike in sleep, income, everything.',
@@ -1534,6 +1579,7 @@ const STAT_6: LessonSlide[] = [
     kind: 'concept',
     head: 'Placebo, blinding, blocking',
     body: 'A PLACEBO is a fake treatment, because people often improve just from taking "something." BLINDING keeps subjects (single-blind) or subjects and evaluators (double-blind) from knowing who got which treatment. BLOCKING groups similar subjects first and randomizes within each block; MATCHED PAIRS is blocking with two.',
+    why: 'People who believe they are being treated often feel better, and evaluators who know the groups may rate them differently, so expectations act like a hidden treatment. A placebo gives everyone the same expectation, blinding hides the group from those who judge, and blocking removes a known source of variation before randomizing.',
     compare: {
       cols: [
         { title: 'Placebo + blinding', lines: ['controls expectations', 'subjects and doctors cannot nudge the result'], tone: 'accent' },
@@ -1545,7 +1591,7 @@ const STAT_6: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Coffee and heart disease',
-    body: 'Researchers look at hospital records and find that people who drink 3+ cups of coffee a day have less heart disease. Experiment or observational study?\nNobody assigned coffee; people chose their own coffee habits. The researchers only observed and recorded.\nObservational study. It cannot prove coffee prevents heart disease — coffee drinkers may differ in exercise, income, or age.',
+    body: 'Researchers look at hospital records and find that people who drink 3+ cups of coffee a day have less heart disease. Is this an experiment or an observational study, and can we conclude coffee prevents heart disease?',
     steps: {
       steps: [
         { text: 'Who decided how much coffee each person drank? The people themselves.' },
@@ -1558,13 +1604,13 @@ const STAT_6: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Design the tomato experiment',
-    body: 'You have 40 tomato plants and two fertilizers, A and B. Design a completely randomized experiment to compare them.\nNumber the plants 1–40. Use a random number generator to pick 20 plants for fertilizer A; the other 20 get B. Grow all plants under the same light, water and soil.\nAfter 8 weeks, measure each plant\'s height and compare the mean heights of the two groups.',
+    body: 'You have 40 tomato plants and two fertilizers, A and B. Design a completely randomized experiment to compare them.',
     steps: {
       steps: [
-        { tex: '1, 2, \\ldots, 40', text: 'Label every plant.' },
-        { tex: '20 \\to A,\\quad 20 \\to B', text: 'A random number generator picks the 20 A plants; the rest get B.' },
-        { text: 'Same conditions for everyone: light, water, soil — only the fertilizer differs.' },
-        { tex: '\\bar{x}_A \\text{ vs } \\bar{x}_B', text: 'After 8 weeks, compare the mean heights.' },
+        { tex: '1, 2, \\ldots, 40', text: 'Label every plant 1 to 40 so that each one can be selected by its number. Labels let a random number generator do the assigning, with no one choosing by hand.' },
+        { tex: '20 \\to A,\\quad 20 \\to B', text: 'Use a random number generator to pick 20 different labels for fertilizer A, and give the other 20 plants fertilizer B. Chance, not the experimenter, decides, which balances confounders across groups.' },
+        { text: 'Keep light, water and soil the same for every plant. Then the fertilizer is the only systematic difference between the groups, so any difference in growth can be credited to it.' },
+        { tex: '\\bar{x}_A \\text{ vs } \\bar{x}_B', text: 'After 8 weeks, measure each plant\'s height and compare the two mean heights. Comparing the groups is what shows the effect of one fertilizer against the other.' },
       ],
       answer: '\\text{randomize, control conditions, compare means}',
     },
@@ -1573,7 +1619,16 @@ const STAT_6: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Two factors, four treatments',
-    body: 'An experiment tests fertilizer type (A, B) and watering (daily, weekly) on plant growth. Name the factors, the response, and count the treatments.\nFactors: fertilizer type, 2 levels, and watering schedule, 2 levels. Response: plant growth, the height gained.\nTreatments = 2 × 2 = 4: A-daily, A-weekly, B-daily, B-weekly.',
+    body: 'An experiment tests fertilizer type (A, B) and watering (daily, weekly) on plant growth. Name the factors and the response, and count the treatments.',
+    steps: {
+      steps: [
+        { text: 'Factors are what the researchers change. Fertilizer type has 2 levels, A and B, and the watering schedule has 2 levels, daily and weekly.' },
+        { text: 'The response is what is measured to see the effect: plant growth, such as the height gained. It is not something the researchers set.' },
+        { tex: '2 \\times 2 = 4', text: 'A treatment is one combination of levels, one from each factor, so count treatments by multiplying the numbers of levels: 2 × 2 = 4.' },
+        { text: 'List them to check: A-daily, A-weekly, B-daily and B-weekly. With 40 plants, randomly assign 10 plants to each of the four treatments so the groups are equal in size.' },
+      ],
+      answer: '2 \\text{ factors, } 4 \\text{ treatments}',
+    },
     table: {
       head: ['', 'daily watering', 'weekly watering'],
       rows: [['fertilizer A', 'A-daily', 'A-weekly'], ['fertilizer B', 'B-daily', 'B-weekly']],
@@ -1583,7 +1638,16 @@ const STAT_6: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Breakfast and grades: find the confounder',
-    body: 'A study finds students who eat breakfast earn higher grades. Name a possible confounding variable and explain.\nStudents who eat breakfast may also get more sleep, or have more support at home.\nSleep is tangled with breakfast: the breakfast group and the no-breakfast group differ in sleep too, so we cannot tell which one raised the grades.',
+    body: 'A study finds students who eat breakfast earn higher grades. Name a possible confounding variable and explain how it could be the real cause.',
+    steps: {
+      steps: [
+        { text: 'This is an observational study: students chose for themselves whether to eat breakfast. Because the groups chose themselves, they may differ in other ways too.' },
+        { text: 'Pick a variable that differs between the groups: breakfast eaters may also sleep more hours, or have more support at home.' },
+        { text: 'Check that it also affects the response: more sleep helps students concentrate, so it tends to raise grades on its own.' },
+        { text: 'Because sleep goes along with breakfast and also affects grades, the two effects are mixed up. We cannot tell which one raised the grades, which makes sleep a confounder.' },
+      ],
+      answer: '\\text{sleep: differs between groups and affects grades}',
+    },
     compare: {
       cols: [
         { title: 'Explanatory', lines: ['eats breakfast or not', 'chosen by the student'], tone: 'accent' },
@@ -1595,12 +1659,12 @@ const STAT_6: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Another way: block before you randomize',
-    body: 'Suppose half the 40 tomato plants sit on a sunny bench and half on a shady one. Instead of hoping chance balances the sunlight, block on it.\nWithin the sunny bench, randomly assign 10 plants to A and 10 to B; do the same on the shady bench.\nNow each fertilizer is compared under equal light, and bench-to-bench differences cannot masquerade as a fertilizer effect.',
+    body: 'Suppose half the 40 tomato plants sit on a sunny bench and half on a shady one. Instead of hoping chance balances the sunlight, block on it. How do you randomize?',
     steps: {
       steps: [
-        { tex: '\\text{block 1: sunny (20)},\\quad \\text{block 2: shady (20)}', text: 'Group the plants by what you know matters.' },
-        { tex: '10 \\to A,\\ 10 \\to B \\text{ in each block}', text: 'Randomize inside every block.' },
-        { tex: '\\bar{x}_A - \\bar{x}_B \\text{ per bench}', text: 'Compare within blocks, then combine.' },
+        { tex: '\\text{block 1: sunny (20)},\\quad \\text{block 2: shady (20)}', text: 'Group the plants by the bench they sit on, since sunlight is a known source of variation. The sunny plants form one block and the shady plants form another.' },
+        { tex: '10 \\to A,\\ 10 \\to B \\text{ in each block}', text: 'Within each block, randomly assign 10 plants to A and 10 to B. Randomizing inside blocks keeps both fertilizers equally represented in sun and shade.' },
+        { tex: '\\bar{x}_A - \\bar{x}_B \\text{ per bench}', text: 'Compare A with B within each bench first, then combine. Each comparison is made under equal light, so bench-to-bench differences cannot pass for a fertilizer effect.' },
       ],
       answer: '\\text{randomized block design}',
     },
@@ -1609,7 +1673,7 @@ const STAT_6: LessonSlide[] = [
   {
     kind: 'example',
     head: 'A sugar pill and a blindfold',
-    body: 'A company tests a new headache pill. Why give half the subjects a sugar pill, and why keep both the subjects and the doctors from knowing who got which?\nThe sugar pill is a placebo: some people feel better just because they took "something." Comparing pill to placebo separates the drug\'s effect from the placebo effect.\nDouble-blinding stops subjects\' hopes and doctors\' expectations from biasing the reported pain levels.',
+    body: 'A company tests a new headache pill. Why give half the subjects a sugar pill, and why keep both the subjects and the doctors from knowing who got which?',
     steps: {
       steps: [
         { text: 'Placebo control: measures how much improvement comes from expectation alone.' },
@@ -1622,7 +1686,16 @@ const STAT_6: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Picture it first: one walker, two soles',
-    body: 'A shoe company compares two sole materials for wear. Each of 20 volunteers wears material X on one foot and Y on the other, the foot chosen by coin flip. Picture one walker: both soles take the same steps.\nEach person is a block of two, so this is a matched pairs design; the coin flip randomizes which foot gets X.\nIt beats assigning 10 people to each material because people differ hugely in how far and how hard they walk — pairing removes that variation.',
+    body: 'A shoe company compares two sole materials for wear. Each of 20 volunteers wears material X on one foot and Y on the other, the foot chosen by coin flip. Name the design and say why it beats giving 10 people each material.',
+    steps: {
+      steps: [
+        { text: 'Picture one walker: both feet take the same steps over the same ground, so the two soles face exactly the same conditions. Differences in walking habits are removed by the design.' },
+        { text: 'Each person is a block of two measurements and both treatments are given to every pair, so this is a matched pairs design.' },
+        { text: 'Flip a coin for each walker to decide which foot gets X. Random assignment inside each pair stops a left-foot or right-foot habit from being mistaken for a material effect.' },
+        { text: 'Compare the wear of X and Y within each walker, then average the differences. People vary widely in how hard they walk, and pairing cancels that variation, so this beats giving 10 people each material.' },
+      ],
+      answer: '\\text{matched pairs design}',
+    },
     art: pairsFig,
   },
   {
@@ -1657,7 +1730,16 @@ const STAT_6: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: three fertilizers, two schedules, two benches',
-    body: 'An experiment uses 3 fertilizers and 2 watering schedules on 60 plants, blocked by two benches of 30. How many treatments, how many plants per treatment, and how many per treatment on each bench?\n3 × 2 = 6 treatments. 60 ÷ 6 = 10 plants per treatment overall.\nEach bench holds 30 plants, so randomize 30 ÷ 6 = 5 plants into each treatment on each bench.',
+    body: 'An experiment uses 3 fertilizers and 2 watering schedules on 60 plants, blocked by two benches of 30. How many treatments, how many plants per treatment, and how many per treatment on each bench?',
+    steps: {
+      steps: [
+        { tex: '3 \\times 2 = 6', text: 'Treatments are all the combinations of one level from each factor, so multiply: 3 fertilizers times 2 schedules makes 6 treatments.' },
+        { tex: '60 \\div 6 = 10', text: 'Divide the 60 plants equally among the 6 treatments, so each treatment gets 60 ÷ 6 = 10 plants. Equal groups make for fair comparisons.' },
+        { tex: '30 \\div 6 = 5', text: 'Blocking repeats the design on each bench. A bench has 30 plants shared among 6 treatments, so each treatment gets 30 ÷ 6 = 5 plants on that bench.' },
+        { tex: '5 \\times 2 = 10', text: 'Check: 5 plants per treatment on each of 2 benches gives 5 × 2 = 10 plants per treatment, which matches the overall figure.' },
+      ],
+      answer: '6;\\ 10;\\ 5',
+    },
     formula: {
       tex: '3 \\times 2 = 6 \\text{ treatments},\\qquad \\frac{60}{6} = 10 \\text{ per treatment},\\qquad \\frac{30}{6} = 5 \\text{ per treatment per bench}',
       note: 'Blocking does not change the number of treatments — it repeats the whole design inside every block.',
@@ -1665,14 +1747,6 @@ const STAT_6: LessonSlide[] = [
         { sym: '6', means: 'every fertilizer with every schedule', tone: 'accent' },
         { sym: '5', means: 'plants in each of the 6 cells on each bench', tone: 'ok' },
       ],
-    },
-    steps: {
-      steps: [
-        { tex: '3 \\times 2 = 6', text: 'Treatments are all the combinations.' },
-        { tex: '60 \\div 6 = 10', text: 'Equal groups across the whole experiment.' },
-        { tex: '30 \\div 6 = 5', text: 'Within one bench, each treatment gets five plants.' },
-      ],
-      answer: '6;\\ 10;\\ 5',
     },
   },
   {
@@ -1698,6 +1772,7 @@ const STAT_7: LessonSlide[] = [
     kind: 'concept',
     head: 'Sample space and the complement rule',
     body: 'A probability is a number from 0 to 1, and the probabilities of all the outcomes in the SAMPLE SPACE add to 1. The COMPLEMENT of A is "not A", so P(not A) = 1 − P(A). "At least one" problems are almost always easiest through the complement, "none."',
+    why: 'Exactly one of A happens or A does not happen on every trial, so their probabilities use up the whole total of 1. That makes 1 − P(A) the quickest route when A is complicated: at least one six has many cases to count, but no sixes has just one.',
     formula: {
       tex: 'P(A^{c}) = 1 - P(A)',
       note: '"At least one six" is the complement of "no sixes": 1 − 25/36 = 11/36.',
@@ -1711,6 +1786,7 @@ const STAT_7: LessonSlide[] = [
     kind: 'concept',
     head: 'The addition rule',
     body: 'P(A or B) = P(A) + P(B) − P(A and B). The overlap gets added twice when you add P(A) and P(B), so subtract it once. If A and B are MUTUALLY EXCLUSIVE — they cannot both happen — the overlap is 0 and the rule is just P(A) + P(B).',
+    why: 'In the Venn picture, P(A) counts everything in circle A and P(B) counts everything in circle B, so the overlap lies in both circles and gets counted twice. Subtracting P(A and B) once leaves every outcome counted exactly once. Check: 55 + 50 = 105 students, minus 30 gives 75.',
     formula: {
       tex: 'P(A \\cup B) = P(A) + P(B) - P(A \\cap B)',
       note: 'Read ∪ as "or" and ∩ as "and." Draw the two circles and the subtraction explains itself.',
@@ -1725,6 +1801,7 @@ const STAT_7: LessonSlide[] = [
     kind: 'concept',
     head: 'Conditional probability',
     body: 'P(A | B) is the chance of A once you know B happened: P(A | B) = P(A and B) / P(B). Knowing B shrinks the world to the B outcomes, so B goes in the denominator. In a two-way table, "given B" means stay inside the B row or column.',
+    why: 'Once you know B happened, outcomes outside B are impossible, so B becomes the whole world and should have probability 1. Dividing P(A and B) by P(B) rescales B up to 1. In the sport and music table, that is 30 of the 55 athletes.',
     formula: {
       tex: 'P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}',
       note: 'The vertical bar reads "given." The event after it is the new whole.',
@@ -1738,6 +1815,7 @@ const STAT_7: LessonSlide[] = [
     kind: 'concept',
     head: 'The multiplication rule and trees',
     body: 'P(A and B) = P(A) · P(B | A): the chance of the first thing, times the chance of the second given the first. A tree diagram does exactly this — multiply along a branch for "and," then add the branches that fit the event for "or."',
+    why: 'To get both A and B, A must happen first and then B must happen in the world where A happened. A branch of a tree does exactly this: the first fraction is the share of cases that go down it and the second is the share of those that continue. A share of a share is multiplication, so (3/5)(2/4) = 3/10.',
     formula: {
       tex: 'P(A \\cap B) = P(A)\\, P(B \\mid A)',
       note: 'Along a branch, multiply. Across branches, add.',
@@ -1751,6 +1829,7 @@ const STAT_7: LessonSlide[] = [
     kind: 'concept',
     head: 'Independence',
     body: 'A and B are INDEPENDENT when knowing one changes nothing about the other: P(A | B) = P(A), which is the same as P(A and B) = P(A)·P(B). Drawing with replacement keeps draws independent; drawing without replacement does not. Mutually exclusive events with positive probability are never independent.',
+    why: 'Independent means learning that B happened leaves the chance of A unchanged, P(A | B) = P(A). Putting that into the multiplication rule gives P(A and B) = P(A)P(B). Mutually exclusive events are the opposite, since if B happens then A is impossible, so knowing B changes the chance of A to 0.',
     compare: {
       cols: [
         { title: 'Independent', lines: ['P(A | B) = P(A)', 'P(A and B) = P(A)·P(B)', 'knowing B tells you nothing'], tone: 'ok' },
@@ -1762,12 +1841,12 @@ const STAT_7: LessonSlide[] = [
   {
     kind: 'example',
     head: 'At least one six on two dice',
-    body: 'Two dice are rolled. What is the probability of at least one six?\nThe complement of "at least one six" is "no sixes." Each die shows no six with probability 5/6, and the dice are independent, so P(no sixes) = 5/6 × 5/6 = 25/36.\nP(at least one six) = 1 − 25/36 = 11/36 ≈ 0.306.',
+    body: 'Two dice are rolled. What is the probability of at least one six? Think about which event is easier to count.',
     steps: {
       steps: [
-        { tex: 'P(\\text{no six on one die}) = \\tfrac{5}{6}', text: 'Five faces out of six are not a six.' },
-        { tex: 'P(\\text{no sixes}) = \\tfrac{5}{6} \\cdot \\tfrac{5}{6} = \\tfrac{25}{36}', text: 'Independent dice: multiply.' },
-        { tex: '1 - \\tfrac{25}{36} = \\tfrac{11}{36}', text: 'Complement rule.' },
+        { tex: 'P(\\text{no six on one die}) = \\tfrac{5}{6}', text: 'The complement of at least one six is no sixes, which is easier because it is a single case. Start with one die: five faces out of six are not a six, so the chance is 5/6.' },
+        { tex: 'P(\\text{no sixes}) = \\tfrac{5}{6} \\cdot \\tfrac{5}{6} = \\tfrac{25}{36}', text: 'The two dice do not affect each other, so the events are independent and probabilities multiply. No six on both dice has probability 5/6 times 5/6, which is 25/36.' },
+        { tex: '1 - \\tfrac{25}{36} = \\tfrac{11}{36}', text: 'Apply the complement rule, P(A) = 1 − P(not A), because at least one six and no sixes together make up every outcome. This gives 11/36, about 0.306.' },
       ],
       answer: '\\tfrac{11}{36} \\approx 0.306',
     },
@@ -1775,12 +1854,12 @@ const STAT_7: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Sport or music?',
-    body: 'Of 100 students, 55 play a sport, 50 play music, and 30 do both. Find P(sport or music).\nP(S) = 0.55, P(M) = 0.50, P(S and M) = 0.30.\nP(S or M) = 0.55 + 0.50 − 0.30 = 0.75. Check with the Venn diagram: 25 + 30 + 20 = 75 students.',
+    body: 'Of 100 students, 55 play a sport, 50 play music, and 30 do both. Find P(sport or music).',
     steps: {
       steps: [
-        { tex: 'P(S) = 0.55,\\ P(M) = 0.50,\\ P(S \\cap M) = 0.30', text: 'Turn the counts into probabilities.' },
-        { tex: '0.55 + 0.50 - 0.30', text: 'Addition rule: subtract the overlap once.' },
-        { tex: '= 0.75', text: 'Seventy-five of the hundred play at least one.' },
+        { tex: 'P(S) = 0.55,\\ P(M) = 0.50,\\ P(S \\cap M) = 0.30', text: 'Turn the counts into probabilities by dividing each by 100: P(S) = 0.55, P(M) = 0.50 and P(S and M) = 0.30.' },
+        { tex: '0.55 + 0.50 - 0.30', text: 'Add P(S) and P(M), then subtract the overlap. The 30 students who do both are in both counts, so they were counted twice, and the addition rule takes them out once.' },
+        { tex: '= 0.75', text: 'The arithmetic gives 0.75. Check with the Venn diagram: 25 sport only plus 30 both plus 20 music only makes 75 of the 100 students who play at least one.' },
       ],
       answer: '0.75',
     },
@@ -1789,12 +1868,12 @@ const STAT_7: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Given a sport, how likely is music?',
-    body: 'Same 100 students. Given that a student plays a sport, what is the probability they also play music?\nP(M | S) = P(M and S) / P(S) = 0.30 / 0.55 = 30/55.\n≈ 0.545. Among the 55 athletes, 30 play music — the condition shrank the world to the sport circle.',
+    body: 'Same 100 students. Given that a student plays a sport, what is the probability they also play music?',
     steps: {
       steps: [
-        { tex: 'P(M \\mid S) = \\frac{P(M \\cap S)}{P(S)}', text: '"Given sport" puts P(S) on the bottom.' },
-        { tex: '= \\frac{0.30}{0.55} = \\frac{30}{55}', text: 'Thirty of the fifty-five athletes.' },
-        { tex: '\\approx 0.545', text: 'A bit more than half.' },
+        { tex: 'P(M \\mid S) = \\frac{P(M \\cap S)}{P(S)}', text: 'The word given tells us to restrict to the sport players, so the formula divides by the probability of the condition: P(M | S) = P(M and S) / P(S).' },
+        { tex: '= \\frac{0.30}{0.55} = \\frac{30}{55}', text: 'Substitute the values from before: 0.30 over 0.55. Multiplying top and bottom by 100 turns it into a count: 30 of the 55 athletes.' },
+        { tex: '\\approx 0.545', text: 'Divide: 30 ÷ 55 ≈ 0.545, a bit more than half. The condition shrank the world to the 55 students in the sport circle.' },
       ],
       answer: '\\tfrac{30}{55} \\approx 0.545',
     },
@@ -1802,7 +1881,16 @@ const STAT_7: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Are sport and music independent?',
-    body: 'Independence would mean P(M | S) = P(M).\nP(M | S) ≈ 0.545 but P(M) = 0.50. Not equal, so not independent: athletes are a bit more likely to play music.\nSame answer the other way: P(S)·P(M) = 0.55 × 0.50 = 0.275, but P(S and M) = 0.30.',
+    body: 'Are playing a sport and playing music independent for these 100 students? Compare P(M | S) with P(M) to decide.',
+    steps: {
+      steps: [
+        { text: 'Independence means knowing one event does not change the chance of the other, so the test is whether P(M | S) equals P(M).' },
+        { tex: 'P(M \\mid S) = \\frac{30}{55} \\approx 0.545', text: 'From the previous example, the probability of music given sport is 30 ÷ 55 ≈ 0.545, found by restricting to the 55 athletes.' },
+        { tex: 'P(M) = \\frac{50}{100} = 0.50', text: 'Compare with the overall probability of music, 50 ÷ 100 = 0.50, which uses all 100 students.' },
+        { tex: '0.545 \\ne 0.50', text: 'The numbers differ, so knowing a student plays a sport does change the chance they play music. Equivalently, P(S)·P(M) = 0.275 but P(S and M) = 0.30.' },
+      ],
+      answer: '\\text{not independent: } 0.545 \\ne 0.50',
+    },
     compare: {
       cols: [
         { title: 'If independent', tex: 'P(M \\mid S) = P(M) = 0.50', lines: ['knowing sport changes nothing'], tone: 'plain' },
@@ -1814,12 +1902,13 @@ const STAT_7: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Marbles without replacement',
-    body: 'A bag has 3 red and 2 blue marbles. Two are drawn without replacement. Find P(both red) and P(one of each color).\nP(RR) = 3/5 × 2/4 = 6/20 = 3/10. P(RB) = 3/5 × 2/4 = 6/20 and P(BR) = 2/5 × 3/4 = 6/20.\nP(one of each) = 6/20 + 6/20 = 12/20 = 3/5. And P(BB) = 2/5 × 1/4 = 2/20 = 1/10; the four branches add to 1.',
+    body: 'A bag has 3 red and 2 blue marbles. Two are drawn without replacement. Find P(both red) and P(one of each color).',
     steps: {
       steps: [
-        { tex: 'P(RR) = \\tfrac{3}{5} \\cdot \\tfrac{2}{4} = \\tfrac{6}{20} = \\tfrac{3}{10}', text: 'Multiply along the red-red branch; only 2 reds remain of 4.' },
-        { tex: 'P(RB) = \\tfrac{3}{5} \\cdot \\tfrac{2}{4} = \\tfrac{6}{20},\\quad P(BR) = \\tfrac{2}{5} \\cdot \\tfrac{3}{4} = \\tfrac{6}{20}', text: 'Two branches give one of each.' },
-        { tex: '\\tfrac{6}{20} + \\tfrac{6}{20} = \\tfrac{12}{20} = \\tfrac{3}{5}', text: 'Add the branches that fit.' },
+        { tex: 'P(RR) = \\tfrac{3}{5} \\cdot \\tfrac{2}{4} = \\tfrac{6}{20} = \\tfrac{3}{10}', text: 'For red-red, multiply along the branch. The first draw is red with probability 3/5. With one red gone, 2 reds remain among 4 marbles, so the second is red with probability 2/4.' },
+        { tex: 'P(RB) = \\tfrac{3}{5} \\cdot \\tfrac{2}{4} = \\tfrac{6}{20},\\quad P(BR) = \\tfrac{2}{5} \\cdot \\tfrac{3}{4} = \\tfrac{6}{20}', text: 'One of each can happen two ways: red then blue, or blue then red. Each is a branch multiplied the same way, and the second-draw fractions change because one marble is gone.' },
+        { tex: '\\tfrac{6}{20} + \\tfrac{6}{20} = \\tfrac{12}{20} = \\tfrac{3}{5}', text: 'The two orders are different branches that cannot both occur, so add them. We multiply along branches and add across branches.' },
+        { tex: 'P(BB) = \\tfrac{2}{5} \\cdot \\tfrac{1}{4} = \\tfrac{2}{20},\\quad \\tfrac{6 + 6 + 6 + 2}{20} = 1', text: 'Check: blue-blue is 2/5 times 1/4 = 2/20, and all four branches add to 20/20 = 1, so they account for every possible outcome.' },
       ],
       answer: 'P(RR) = \\tfrac{3}{10},\\quad P(\\text{one each}) = \\tfrac{3}{5}',
     },
@@ -1828,12 +1917,13 @@ const STAT_7: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Another way: count equally likely pairs',
-    body: 'Forget the order and count PAIRS of marbles. Five marbles make 10 equally likely pairs.\nRed-red pairs: choose 2 of the 3 reds, 3 ways, so P(RR) = 3/10. One-of-each pairs: 3 reds × 2 blues = 6 pairs, so P(one of each) = 6/10 = 3/5.\nBlue-blue: 1 pair, 1/10. Same three answers as the tree, with no fractions to multiply.',
+    body: 'Forget the order and count PAIRS of marbles instead. Five marbles make equally likely pairs; count the ones that fit each event.',
     steps: {
       steps: [
-        { tex: '\\binom{5}{2} = 10', text: 'Equally likely pairs of marbles.' },
-        { tex: '\\binom{3}{2} = 3 \\Rightarrow P(RR) = \\tfrac{3}{10}', text: 'Pairs made of two reds.' },
-        { tex: '3 \\times 2 = 6 \\Rightarrow P(\\text{one each}) = \\tfrac{6}{10} = \\tfrac{3}{5}', text: 'One red with one blue.' },
+        { tex: '\\binom{5}{2} = 10', text: 'If two marbles are drawn at random, every pair of marbles is equally likely. The number of pairs from 5 marbles is 5 choose 2, which is 10, so 10 goes on the bottom.' },
+        { tex: '\\binom{3}{2} = 3 \\Rightarrow P(RR) = \\tfrac{3}{10}', text: 'Red-red pairs: choose 2 of the 3 reds, which is 3 choose 2 = 3 ways. So P(RR) = 3/10, the same answer as the tree.' },
+        { tex: '3 \\times 2 = 6 \\Rightarrow P(\\text{one each}) = \\tfrac{6}{10} = \\tfrac{3}{5}', text: 'One of each: pair any of the 3 reds with any of the 2 blues, which is 3 × 2 = 6 pairs. So P(one of each) = 6/10 = 3/5.' },
+        { tex: '\\binom{2}{2} = 1 \\Rightarrow P(BB) = \\tfrac{1}{10}', text: 'Blue-blue has only 1 pair, so its probability is 1/10. The counts 3 + 6 + 1 make all 10 pairs. Counting pairs avoids multiplying changing fractions.' },
       ],
       answer: '\\tfrac{3}{10},\\ \\tfrac{3}{5},\\ \\tfrac{1}{10}',
     },
@@ -1841,13 +1931,13 @@ const STAT_7: LessonSlide[] = [
   {
     kind: 'example',
     head: 'Picture it first: a positive test',
-    body: '10% of people have a condition. The test is positive for 90% of people who have it and for 20% of people who do not. A random person tests positive. Draw the tree before you compute.\nP(have and +) = 0.10 × 0.90 = 0.09. P(not have and +) = 0.90 × 0.20 = 0.18. So P(+) = 0.09 + 0.18 = 0.27.\nP(have | +) = 0.09 / 0.27 = 1/3. Most positives are false positives, because the condition is rare.',
+    body: '10% of people have a condition. The test is positive for 90% of people who have it and for 20% of people who do not. A random person tests positive. Draw the tree before you compute, then find the chance they have the condition.',
     steps: {
       steps: [
-        { tex: 'P(\\text{have} \\cap +) = 0.10 \\times 0.90 = 0.09', text: 'Top branch.' },
-        { tex: 'P(\\text{not} \\cap +) = 0.90 \\times 0.20 = 0.18', text: 'The false positives — a bigger branch, because 90% of people are healthy.' },
-        { tex: 'P(+) = 0.09 + 0.18 = 0.27', text: 'Add the two positive branches.' },
-        { tex: 'P(\\text{have} \\mid +) = \\frac{0.09}{0.27} = \\frac{1}{3}', text: 'Conditional: the positive branches are the new whole.' },
+        { tex: 'P(\\text{have} \\cap +) = 0.10 \\times 0.90 = 0.09', text: 'Follow the branch have it, then test positive, and multiply: 0.10 × 0.90 = 0.09. The multiplication rule says P(A and B) = P(A)·P(B | A).' },
+        { tex: 'P(\\text{not} \\cap +) = 0.90 \\times 0.20 = 0.18', text: 'Follow not have it, then test positive, the false positives: 0.90 × 0.20 = 0.18. This branch is bigger because 90% of people are healthy, so a 20% false-alarm rate hits many people.' },
+        { tex: 'P(+) = 0.09 + 0.18 = 0.27', text: 'A positive test can arrive by either branch, and the branches cannot both happen, so add them. The probability of a positive test is 0.27.' },
+        { tex: 'P(\\text{have} \\mid +) = \\frac{0.09}{0.27} = \\frac{1}{3}', text: 'For have it given positive, the positive branches are the new whole, so divide: 0.09 ÷ 0.27 = 1/3. Most positives are false positives because the condition is rare.' },
       ],
       answer: '\\tfrac{1}{3} \\approx 0.333',
     },
@@ -1886,12 +1976,12 @@ const STAT_7: LessonSlide[] = [
   {
     kind: 'challenge',
     head: 'Extra credit: at least one six in three rolls',
-    body: 'Roll a die three times. What is the probability of at least one six?\nComplement: P(no six in three rolls) = (5/6)³ = 125/216.\nP(at least one six) = 1 − 125/216 = 91/216 ≈ 0.421. Compare with 11/36 ≈ 0.306 for two rolls — more rolls, more chances.',
+    body: 'Roll a die three times. What is the probability of at least one six? Use the complement.',
     steps: {
       steps: [
-        { tex: 'P(\\text{no six}) = \\left(\\tfrac{5}{6}\\right)^{3} = \\tfrac{125}{216}', text: 'Three independent rolls: multiply three times.' },
-        { tex: '1 - \\tfrac{125}{216} = \\tfrac{91}{216}', text: 'Complement rule.' },
-        { tex: '\\approx 0.421', text: 'Up from 0.306 with two dice.' },
+        { tex: 'P(\\text{no six}) = \\left(\\tfrac{5}{6}\\right)^{3} = \\tfrac{125}{216}', text: 'The complement of at least one six is no six in all three rolls. The rolls are independent, so multiply 5/6 three times to get 125/216.' },
+        { tex: '1 - \\tfrac{125}{216} = \\tfrac{91}{216}', text: 'Subtract from 1 using the complement rule, since the two events together cover every outcome: 1 − 125/216 = 91/216.' },
+        { tex: '\\approx 0.421', text: 'Convert to a decimal for comparison: 91 ÷ 216 ≈ 0.421, up from 11/36 ≈ 0.306 with two dice. More rolls give more chances to see a six.' },
       ],
       answer: '\\tfrac{91}{216} \\approx 0.421',
     },
