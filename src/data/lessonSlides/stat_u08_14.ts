@@ -543,6 +543,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'BINS: the four conditions',
       body: 'A count X is binomial when the setting passes four checks. Binary outcomes, Independent trials, a fixed Number of trials n, and the Same probability p of success every time. Coin flips, free throws and defective parts all qualify.',
+      why: 'Each condition protects one step of the formula. Independence and the same p let us multiply single-trial probabilities together, a fixed n lets us count orderings out of n, and binary outcomes mean each trial is just success or failure. If one fails, say p changes after every draw, the product p^k(1 − p)^(n − k) no longer describes the situation.',
       table: {
         head: ['Letter', 'Condition', 'Coin flips'],
         rows: [
@@ -558,6 +559,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'The binomial formula',
       body: 'The probability of exactly k successes has three pieces. C(n, k) counts the orderings the successes can land in, p^k pays for the successes, and (1 − p)^(n − k) pays for the failures.',
+      why: 'Take 4 flips and 2 heads. One particular ordering, HHTT, has probability 0.5 × 0.5 × 0.5 × 0.5 = (0.5)²(0.5)². Every other ordering with two heads has the same probability, and the orderings cannot happen together, so we add that probability once per ordering. There are C(4, 2) = 6 of them, which is why the count multiplies the probability.',
       formula: {
         tex: 'P(X = k) = \\binom{n}{k}\\, p^{k}\\,(1 - p)^{\\,n-k}',
         note: 'Orderings × successes × failures.',
@@ -572,6 +574,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Mean and SD of a binomial',
       body: 'You do not need the full table to know the centre and spread. The mean is np: 50 parts at a 10% defect rate average 5 defects. The standard deviation is √(np(1 − p)).',
+      why: 'A binomial count is the sum of n separate trials, each worth 1 for a success and 0 for a failure. One trial averages p, so n trials average np. One trial has variance p(1 − p), and independent variances add, so the count has variance np(1 − p). The square root of that is the SD.',
       formula: {
         tex: '\\mu_X = np, \\qquad \\sigma_X = \\sqrt{np(1-p)}',
         note: 'Centre and spread straight from n and p.',
@@ -585,6 +588,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Geometric: waiting for the first success',
       body: 'A geometric variable Y counts trials UNTIL the first success. The first success on trial k needs k − 1 failures first, then one success. On average you wait 1/p trials.',
+      why: 'To need exactly k trials, the first k − 1 must all fail and trial k must succeed. Independent trials multiply, so that is (1 − p) used k − 1 times, then one factor of p. The mean 1/p matches common sense: if p = 1/6, a six shows up about once per 6 rolls, so you expect to wait about 6 rolls.',
       formula: {
         tex: 'P(Y = k) = (1-p)^{\\,k-1}\\,p, \\qquad \\mu_Y = \\frac{1}{p}',
         note: 'Failures first, then the one success that ends the wait.',
@@ -605,6 +609,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Two rules that save you',
       body: 'Sampling without replacement is close enough to independent when the sample is under 10% of the population. And any "at least one" question is faster as 1 − P(none).',
+      why: 'Drawing without replacement slightly changes p after each draw, because one item has been removed. When the sample is under 10% of the population that change is tiny, so the trials are nearly independent. For at least one, the cases 1, 2, 3 and so on are many, but the only other case is none, and all probabilities total 1, so 1 − P(none) gives the answer in one step.',
       compare: {
         cols: [
           { title: '10% condition', lines: ['n ≤ 10% of the population', 'treat draws as independent', 'binomial is fine'], tone: 'accent' },
@@ -615,12 +620,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: 2 heads in 4 flips',
-      body: 'n = 4, p = 0.5, k = 2.\nC(4, 2) = 6 orderings, each with probability (0.5)²(0.5)² = 1/16.\nP(X = 2) = 6/16 = 0.375.',
+      body: 'Flip a fair coin 4 times. What is the probability of exactly 2 heads? Name n, p and k, then multiply the number of orderings by the probability of one ordering.',
       steps: {
         steps: [
-          { tex: '\\binom{4}{2} = 6', text: 'Six ways to place two heads among four flips.' },
-          { tex: '(0.5)^{2}(0.5)^{2} = \\tfrac{1}{16}', text: 'Each ordering has probability 1/16.' },
-          { tex: '6 \\cdot \\tfrac{1}{16} = 0.375', text: 'Orderings times the probability of one.' },
+          { tex: 'X \\sim B(4,\\ 0.5),\\quad k = 2', text: 'Check BINS: each flip is heads or tails, flips are independent, n = 4 is fixed, and p = 0.5 every time. So X, the number of heads, is binomial with k = 2.' },
+          { tex: '\\binom{4}{2} = \\tfrac{4 \\cdot 3}{2 \\cdot 1} = 6', text: 'Count the orderings of two heads among four flips: HHTT, HTHT, HTTH, THHT, THTH, TTHH. The binomial coefficient C(4, 2) gives the same six without listing.' },
+          { tex: '(0.5)^{2}(0.5)^{2} = \\tfrac{1}{16}', text: 'Each ordering has two heads and two tails. Because flips are independent we may multiply, so every ordering has the same probability 1/16.' },
+          { tex: '6 \\cdot \\tfrac{1}{16} = 0.375', text: 'The six orderings cannot happen together, so add their equal probabilities: 6 times 1/16 is 6/16 = 0.375.' },
         ],
         answer: 'P(X = 2) = 0.375',
       },
@@ -628,12 +634,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Free throws: exactly 4 of 5',
-      body: 'A player makes 80% of free throws. n = 5, p = 0.8, k = 4.\nC(5, 4) = 5, so P = 5 × (0.8)⁴ × (0.2)¹ = 5 × 0.4096 × 0.2.\nP(X = 4) = 0.4096 ≈ 0.410.',
+      body: 'A player makes 80% of free throws. In 5 shots, what is the probability of exactly 4 makes? Write n, p and k first, then use the binomial formula.',
       steps: {
         steps: [
-          { tex: '\\binom{5}{4} = 5', text: 'Five places for the single miss.' },
-          { tex: '(0.8)^{4} = 0.4096,\\quad (0.2)^{1} = 0.2', text: 'Four makes, one miss.' },
-          { tex: '5 \\times 0.4096 \\times 0.2 = 0.4096', text: 'Multiply the three pieces.' },
+          { tex: 'X \\sim B(5,\\ 0.8),\\quad k = 4', text: 'Each shot is a make or a miss, shots are assumed independent, n = 5 is fixed and p = 0.8 each time. So the binomial formula applies with k = 4.' },
+          { tex: '\\binom{5}{4} = 5', text: 'The one miss can be shot 1, 2, 3, 4 or 5, so there are five orderings. C(5, 4) counts them without listing.' },
+          { tex: '(0.8)^{4} = 0.4096,\\quad (0.2)^{1} = 0.2', text: 'Four makes multiply to 0.8⁴ = 0.4096, and the one miss contributes 1 − 0.8 = 0.2. Multiplying is allowed because shots are independent.' },
+          { tex: '5 \\times 0.4096 \\times 0.2 = 0.4096', text: 'Multiply orderings by the probability of one ordering. 0.4096 × 0.2 = 0.08192, and five of those make 0.4096.' },
         ],
         answer: 'P(X = 4) = 0.4096',
       },
@@ -641,7 +648,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'At least 4 of 5',
-      body: 'At least 4 means X = 4 or X = 5, so add two bars.\nP(X = 5) = (0.8)⁵ = 0.32768.\nP(X ≥ 4) = 0.4096 + 0.32768 = 0.73728 ≈ 0.737.',
+      body: 'Same shooter, 5 shots at p = 0.8. What is the probability of at least 4 makes? Which bars of the distribution do you add?',
+      steps: {
+        steps: [
+          { tex: 'P(X \\ge 4) = P(X = 4) + P(X = 5)', text: 'At least 4 means exactly 4 or exactly 5 makes. These cannot both happen, so we can add their probabilities.' },
+          { tex: 'P(X = 4) = \\binom54 (0.8)^{4}(0.2) = 0.4096', text: 'Use the binomial formula for k = 4, exactly as in the last example. The probability is 0.4096.' },
+          { tex: 'P(X = 5) = \\binom55 (0.8)^{5}(0.2)^{0} = 0.32768', text: 'For k = 5 there is only one ordering, so C(5, 5) = 1. There are no misses, and (0.2)⁰ = 1, so the result is just 0.8⁵ = 0.32768.' },
+          { tex: '0.4096 + 0.32768 = 0.73728 \\approx 0.737', text: 'Add the two bars. The answer is about 0.737, so this shooter makes at least 4 of 5 roughly 74% of the time.' },
+        ],
+        answer: 'P(X \\ge 4) \\approx 0.737',
+      },
       art: pmf(['0', '1', '2', '3', '4', '5'], [0.00032, 0.0064, 0.0512, 0.2048, 0.4096, 0.32768], {
         alt: 'Bars for 0 to 5 made free throws out of 5 at an 80% rate, with the bars at 4 and 5 highlighted',
         title: 'Makes in 5 shots, n = 5, p = 0.8',
@@ -654,12 +670,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Defects on a factory line',
-      body: 'A line has a 10% defect rate. In a batch of 50 parts, how many defects should you expect, give or take?\nμ = np = 50 × 0.1 = 5 defective parts.\nσ² = 50 × 0.1 × 0.9 = 4.5, so σ = √4.5 ≈ 2.12.',
+      body: 'A line has a 10% defect rate. In a batch of 50 parts, how many defects should you expect, give or take? Check BINS, then use the shortcuts for the mean and SD.',
       steps: {
         steps: [
-          { tex: '\\mu = 50(0.1) = 5', text: 'Expected number of defects.' },
-          { tex: '\\sigma^{2} = 50(0.1)(0.9) = 4.5', text: 'The variance: np(1 − p).' },
-          { tex: '\\sigma = \\sqrt{4.5} \\approx 2.12', text: 'Root it for the standard deviation.' },
+          { tex: 'X \\sim B(50,\\ 0.1)', text: 'Each part is defective or not, parts are independent on a long production line, n = 50 is fixed and p = 0.1. So the number of defects is binomial.' },
+          { tex: '\\mu = np = 50(0.1) = 5', text: 'Use mean = np. Each of the 50 parts is defective with probability 0.1, so on average 50 × 0.1 = 5 parts are bad.' },
+          { tex: '\\sigma^{2} = np(1-p) = 50(0.1)(0.9) = 4.5', text: 'Variance is np(1 − p). One part has variance p(1 − p) = 0.09, and 50 independent parts add, giving 50 × 0.09 = 4.5.' },
+          { tex: '\\sigma = \\sqrt{4.5} \\approx 2.12', text: 'Take the square root of the variance. A batch typically has 5 defects, give or take about 2.' },
         ],
         answer: '\\mu = 5,\\ \\sigma \\approx 2.12',
       },
@@ -667,7 +684,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Another way: "at least one" by the complement',
-      body: 'A spam filter misses 20% of spam. Of 3 spam emails, what is the chance at least one gets through?\nThe long way adds three cases: 0.384 + 0.096 + 0.008 = 0.488.\nThe short way: 1 − P(none) = 1 − (0.8)³ = 1 − 0.512 = 0.488.',
+      body: 'A spam filter misses 20% of spam. Of 3 spam emails, what is the chance at least one gets through? Can you avoid adding three separate cases?',
+      steps: {
+        steps: [
+          { tex: 'P(\\text{at least 1}) = 1 - P(\\text{none})', text: '“At least one gets through” and “none get through” cover every possibility between them, so their probabilities add to 1. Find the single easy case and subtract.' },
+          { tex: 'P(\\text{none}) = (0.8)^{3} = 0.512', text: 'None get through means the filter catches all 3. Each is caught with probability 0.8, independently, so multiply: 0.8 × 0.8 × 0.8 = 0.512.' },
+          { tex: '1 - 0.512 = 0.488', text: 'Subtract from 1. One subtraction replaces adding the three cases for 1, 2 and 3 emails getting through.' },
+          { tex: '0.384 + 0.096 + 0.008 = 0.488', text: 'Check with the long way from the table. Adding the three cases gives the same 0.488, so the shortcut is trustworthy.' },
+        ],
+        answer: 'P(\\text{at least one}) = 0.488',
+      },
       table: {
         head: ['emails through', 'probability'],
         rows: [['0', '(0.8)³ = 0.512'], ['1', '3(0.2)(0.8)² = 0.384'], ['2', '3(0.2)²(0.8) = 0.096'], ['3', '(0.2)³ = 0.008']],
@@ -678,7 +704,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Rolling for a six',
-      body: 'Roll a fair die until a 6 appears. Geometric with p = 1/6.\nFirst 6 on the 3rd roll: P(Y = 3) = (5/6)²(1/6) = 25/216 ≈ 0.116.\nExpected rolls: 1/p = 6.',
+      body: 'Roll a fair die until a 6 appears. What is the chance the first 6 comes on the 3rd roll, and how many rolls should you expect to wait?',
+      steps: {
+        steps: [
+          { tex: 'p = \\tfrac{1}{6}', text: 'Rolling until the first success is geometric, not binomial, because the number of trials is not fixed. A six has probability 1/6 on every roll.' },
+          { tex: 'P(Y = 3) = \\left(\\tfrac56\\right)^{2}\\left(\\tfrac16\\right)', text: 'The first six on roll 3 means rolls 1 and 2 are not sixes, 5/6 each, and roll 3 is a six, 1/6. Independent rolls multiply.' },
+          { tex: '\\tfrac{25}{216} \\approx 0.116', text: 'Multiply: 25/36 times 1/6 is 25/216, which is about 0.116. Each bar in the picture is 5/6 of the one before it.' },
+          { tex: '\\mu_Y = \\tfrac{1}{p} = 6', text: 'The expected wait is 1/p. A six appears about once in every 6 rolls, so you expect to roll 6 times, though any single wait can be much shorter or longer.' },
+        ],
+        answer: 'P(Y = 3) \\approx 0.116,\\ \\mu_Y = 6',
+      },
       art: pmf(['1', '2', '3', '4', '5', '6'], [1 / 6, 5 / 36, 25 / 216, 125 / 1296, 625 / 7776, 3125 / 46656], {
         alt: 'Bars shrinking from 0.167 down to 0.067 over rolls 1 to 6, showing when the first six arrives, with roll 3 highlighted',
         title: 'Roll on which the first 6 appears',
@@ -690,12 +725,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Picture it first: the inspector',
-      body: 'A shipment of 10,000 bulbs is 5% defective. An inspector tests 20 at random. Picture 20 draws from a huge box: 20 is far under 10% of 10,000, so treat the draws as independent.\nP(no defects) = (0.95)²⁰ ≈ 0.358.\nThe expected number of defects is np = 20 × 0.05 = 1.',
+      body: 'A shipment of 10,000 bulbs is 5% defective. An inspector tests 20 at random. What is the chance of no defects, and how many defects should be expected? Check independence first.',
       steps: {
         steps: [
-          { tex: '20 \\le 10\\% \\text{ of } 10{,}000', text: 'The 10% condition holds, so binomial is fine.' },
-          { tex: 'P(X = 0) = (0.95)^{20} \\approx 0.358', text: 'Twenty good bulbs in a row.' },
-          { tex: '\\mu = 20(0.05) = 1', text: 'About one defect per inspection, on average.' },
+          { tex: '20 \\le 10\\%\\ \\text{of}\\ 10{,}000 = 1000', text: 'Bulbs are drawn without replacement, which would break independence. But 20 is far under 10% of 10,000, so the trials are close enough to independent.' },
+          { tex: 'X \\sim B(20,\\ 0.05)', text: 'Each bulb is defective or not, n = 20 is fixed and p = 0.05 is nearly the same each draw. So the number of defects is binomial.' },
+          { tex: 'P(X = 0) = \\binom{20}{0}(0.05)^{0}(0.95)^{20} \\approx 0.358', text: 'Zero defects has one ordering, and no defects contributes a factor of 1. So only the twenty good bulbs in a row count: 0.95²⁰ is about 0.358.' },
+          { tex: '\\mu = np = 20(0.05) = 1', text: 'The expected number of defects is np. About one bad bulb per inspection, even though the most likely single outcome is zero.' },
         ],
         answer: 'P(X = 0) \\approx 0.358',
       },
@@ -723,12 +759,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'challenge',
       head: 'Extra credit: at least one six in four rolls',
-      body: 'Roll a fair die four times. What is the probability of at least one six?\nComplement: P(no six) = (5/6)⁴ = 625/1296 ≈ 0.482.\nP(at least one) = 1 − 0.482 = 671/1296 ≈ 0.518.',
+      body: 'Roll a fair die four times. What is the probability of at least one six? Decide whether adding cases or using the complement is shorter.',
       steps: {
         steps: [
-          { tex: 'P(\\text{no six}) = \\left(\\tfrac{5}{6}\\right)^{4} = \\tfrac{625}{1296}', text: 'Four failures in a row.' },
-          { tex: '1 - \\tfrac{625}{1296} = \\tfrac{671}{1296}', text: 'Subtract from 1.' },
-          { tex: '\\approx 0.518', text: 'A little better than a coin flip.' },
+          { tex: 'P(\\text{at least one}) = 1 - P(\\text{no six})', text: 'At least one six has four cases (one, two, three or four sixes). Its complement, no sixes at all, is a single case, so subtract that one from 1.' },
+          { tex: 'P(\\text{no six}) = \\left(\\tfrac{5}{6}\\right)^{4} = \\tfrac{625}{1296}', text: 'Each roll avoids a six with probability 5/6. The four rolls are independent, so multiply four copies of 5/6 to get 625/1296.' },
+          { tex: '1 - \\tfrac{625}{1296} = \\tfrac{671}{1296}', text: 'Subtract from 1 by writing 1 as 1296/1296, so the fractions share a denominator: 1296 − 625 = 671.' },
+          { tex: '\\tfrac{671}{1296} \\approx 0.518', text: 'Divide to get a decimal. The result is a little better than a coin flip, which is surprising for four rolls of a 1-in-6 chance.' },
         ],
         answer: 'P(\\text{at least one six}) \\approx 0.518',
       },
@@ -767,6 +804,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Parameter versus statistic',
       body: 'A parameter describes the population: p or μ. It is fixed, but unknown. A statistic describes one sample: p̂ or x̄. It is known, but changes from sample to sample. Inference uses the statistic you have to learn about the parameter you want.',
+      why: 'A parameter is one fixed number because there is only one population. A statistic comes from whichever sample you happened to draw, so a different sample gives a different value. That sample-to-sample wobble is why we need a sampling distribution: it tells us how far a statistic usually lands from the parameter it estimates.',
       compare: {
         cols: [
           { title: 'Parameter', tex: 'p,\\ \\mu', lines: ['describes the population', 'fixed and unknown'], tone: 'accent' },
@@ -779,6 +817,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'The sampling distribution of p̂',
       body: 'Sample proportions centre on the true p and spread out by √(p(1 − p)/n). The shape is approximately normal when both np and n(1 − p) are at least 10, the Large Counts condition.',
+      why: 'A sample proportion is a count of successes divided by n, and the count has mean np and SD √(np(1 − p)). Dividing both by n gives a mean of p and an SD of √(p(1 − p)/n), so p̂ is centred on p and clings tighter as n grows. Large Counts makes the count symmetric enough to look normal.',
       formula: {
         tex: '\\mu_{\\hat{p}} = p, \\qquad \\sigma_{\\hat{p}} = \\sqrt{\\frac{p(1-p)}{n}}',
         note: 'Unbiased centre, and a spread that shrinks with √n.',
@@ -793,6 +832,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'The sampling distribution of x̄',
       body: 'Sample means centre on μ and have standard deviation σ/√n. If the population itself is normal, x̄ is normal for any sample size, even n = 2.',
+      why: 'Averaging n values lets the highs and lows cancel. Variances of independent values add, so the sum has variance nσ², and dividing by n divides the variance by n², leaving σ²/n. The root of that is σ/√n. If the population is normal, a sum of normals is normal, so x̄ is normal at any n.',
       formula: {
         tex: '\\mu_{\\bar{x}} = \\mu, \\qquad \\sigma_{\\bar{x}} = \\frac{\\sigma}{\\sqrt{n}}',
         note: 'Divide the population SD by the square root of n, never by n.',
@@ -806,6 +846,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'The Central Limit Theorem',
       body: 'For a large enough sample, n ≥ 30 is the usual rule, x̄ is approximately normal no matter what shape the population has. Clinic waits are strongly skewed, but the means of n = 50 patients form a tight bell.',
+      why: 'One value from a skewed population can land far out in the long tail. A mean of 50 values mixes a few long waits with many short ones, which pulls the average toward the middle. A far-out mean would need many extreme values at once, which is rare, so the means pile up in a symmetric bell even though single values do not.',
       art: (() => {
         const ax = axes({ x: [0, 12], y: [0, 1.1] }, { ticks: { x: [2, 4, 6, 8, 10, 12] }, pad: 40, xLabel: 'minutes' });
         return art(
@@ -829,11 +870,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: the SD of x̄',
-      body: 'Exam scores have μ = 70 and σ = 12. For samples of 36 students, how much does x̄ vary?\nσ_x̄ = σ/√n = 12/√36 = 12/6.\nThe sample mean has standard deviation 2 points.',
+      body: 'Exam scores have μ = 70 and σ = 12. For samples of 36 students, how much does the sample mean x̄ vary from sample to sample?',
       steps: {
         steps: [
-          { tex: '\\sigma_{\\bar{x}} = \\frac{12}{\\sqrt{36}}', text: 'Population SD over root n.' },
-          { tex: '= \\frac{12}{6} = 2', text: 'Six times less spread than one student.' },
+          { tex: '\\sigma = 12,\\quad n = 36', text: 'Name what is given. The population SD 12 describes one student, and the sample size 36 tells us how many scores are averaged together.' },
+          { tex: '\\sigma_{\\bar{x}} = \\frac{\\sigma}{\\sqrt{n}} = \\frac{12}{\\sqrt{36}}', text: 'Use the SD of a sample mean, σ/√n. We divide by the root of n because variances shrink to σ²/n when averaging, and then the square root gives σ/√n.' },
+          { tex: '\\sigma_{\\bar{x}} = \\frac{12}{6} = 2', text: 'Take √36 = 6 and divide. Be careful to divide by 6, not by 36. The sample mean varies six times less than a single score.' },
+          { tex: '\\mu_{\\bar{x}} = 70,\\quad \\sigma_{\\bar{x}} = 2', text: 'Read the result: a typical sample mean misses 70 by about 2 points. A single student typically misses by 12 points, so averaging pays off.' },
         ],
         answer: '\\sigma_{\\bar{x}} = 2',
       },
@@ -841,7 +884,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Describe the sampling distribution of p̂',
-      body: 'In a city, 60% of adults own a bike. For random samples of 100 adults, describe p̂.\nMean 0.6. SD = √(0.6 × 0.4/100) = √0.0024 ≈ 0.049.\nnp = 60 and n(1 − p) = 40 are both at least 10, so the shape is approximately normal.',
+      body: 'In a city, 60% of adults own a bike. For random samples of 100 adults, describe the centre, spread and shape of the sample proportion p̂.',
+      steps: {
+        steps: [
+          { tex: '\\mu_{\\hat{p}} = p = 0.6', text: 'The centre of p̂ is the true proportion, because sample proportions are unbiased. On average they land right on 0.6.' },
+          { tex: '\\sigma_{\\hat{p}} = \\sqrt{\\tfrac{0.6(0.4)}{100}} = \\sqrt{0.0024} \\approx 0.049', text: 'Use √(p(1 − p)/n). First p(1 − p) = 0.24, then divide by n = 100 to get 0.0024, then take the square root.' },
+          { tex: 'np = 60 \\ge 10,\\quad n(1-p) = 40 \\ge 10', text: 'Check Large Counts: expect 60 owners and 40 non-owners, both at least 10. The 100 adults are also under 10% of a city, so the SD formula applies.' },
+          { tex: '\\hat{p} \\approx N(0.6,\\ 0.049)', text: 'Because Large Counts holds, the shape is approximately normal. Put the three facts together: centre 0.6, SD 0.049, normal shape.' },
+        ],
+        answer: '\\text{approximately normal, mean } 0.6,\\ \\text{SD } 0.049',
+      },
       art: bell(0.6, 0.049, {
         alt: 'A normal curve centred at 0.60 with tick marks at 0.50, 0.55, 0.60, 0.65 and 0.70',
         title: 'Sampling distribution of p̂, bikes',
@@ -853,7 +905,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'A sample mean above 73?',
-      body: 'Same exam: μ = 70, σ = 12, n = 36. What is the chance a sample mean lands above 73?\nx̄ is approximately normal with mean 70 and SD 2, so z = 1.5.\nP(Z > 1.5) = 1 − 0.9332 = 0.0668.',
+      body: 'Same exam: μ = 70, σ = 12, n = 36. What is the chance that a sample mean lands above 73?',
+      steps: {
+        steps: [
+          { tex: 'n = 36 \\ge 30', text: 'Check the shape first. With n at least 30 the Central Limit Theorem says x̄ is approximately normal, even if individual scores are not.' },
+          { tex: '\\mu_{\\bar{x}} = 70,\\quad \\sigma_{\\bar{x}} = \\tfrac{12}{\\sqrt{36}} = 2', text: 'The sample mean is centred at μ = 70 and has SD σ/√n = 12/6 = 2. This SD, not 12, describes how means vary.' },
+          { tex: 'z = \\frac{73 - 70}{2} = 1.5', text: 'Standardize with the SD of x̄. We are asking about a mean of 36 scores, so 73 is 1.5 standard deviations of x̄ above the centre.' },
+          { tex: 'P(Z > 1.5) = 1 - 0.9332 = 0.0668', text: 'The table gives the area to the left of 1.5, which is 0.9332. We want the upper tail, so subtract that from 1.' },
+        ],
+        answer: 'P(\\bar{x} > 73) = 0.0668',
+      },
       art: bell(70, 2, {
         alt: 'A normal curve centred at 70 with standard deviation 2 and the tail beyond 73 shaded',
         title: 'P(x̄ > 73) when μ = 70 and σ_x̄ = 2',
@@ -862,23 +923,17 @@ export const STAT_SLIDES_U08_14: SlideBank = {
         labels: [{ text: 'P = 0.0668', at: 75.3 }, { text: 'z = 1.5', at: 73, y: 160 }],
         caption: 'Three points above the mean is 1.5 standard deviations of x̄.',
       }),
-      steps: {
-        steps: [
-          { tex: 'z = \\frac{73 - 70}{2} = 1.5', text: 'Standardize with the SD of x̄, not σ.' },
-          { tex: 'P(Z > 1.5) = 1 - 0.9332 = 0.0668', text: 'Read the upper tail from the table.' },
-        ],
-        answer: 'P(\\bar{x} > 73) = 0.0668',
-      },
     },
     {
       kind: 'example',
       head: 'A sample proportion of 0.65 or more?',
-      body: 'Bikes again: p = 0.6, n = 100, SD of p̂ ≈ 0.049.\nz = (0.65 − 0.60)/0.049 ≈ 1.02.\nP(Z > 1.02) = 1 − 0.8461 = 0.1539 ≈ 0.154.',
+      body: 'Bikes again: p = 0.6 and n = 100. What is the chance that a sample has p̂ of 0.65 or more? Check the shape before using the normal table.',
       steps: {
         steps: [
-          { tex: '\\sigma_{\\hat{p}} = \\sqrt{\\tfrac{0.6(0.4)}{100}} \\approx 0.049', text: 'The SD of the sample proportion.' },
-          { tex: 'z = \\frac{0.65 - 0.60}{0.049} \\approx 1.02', text: 'How many SDs above p.' },
-          { tex: 'P(Z > 1.02) = 1 - 0.8461 = 0.1539', text: 'About a 15% chance.' },
+          { tex: 'np = 60 \\ge 10,\\quad n(1-p) = 40 \\ge 10', text: 'Large Counts holds, so p̂ is approximately normal and the z-table may be used. Without this check the table could be misleading.' },
+          { tex: '\\sigma_{\\hat{p}} = \\sqrt{\\tfrac{0.6(0.4)}{100}} \\approx 0.049', text: 'Find the SD of p̂ with √(p(1 − p)/n), using the true p = 0.6 because we are asking what would happen if p really is 0.6.' },
+          { tex: 'z = \\frac{0.65 - 0.60}{0.049} \\approx 1.02', text: 'Standardize by subtracting the centre and dividing by the SD of p̂. The sample proportion 0.65 is about 1.02 SDs above 0.6.' },
+          { tex: 'P(Z > 1.02) = 1 - 0.8461 = 0.1539', text: 'The table gives 0.8461 to the left of 1.02. Subtract from 1 for the upper tail: roughly a 15% chance, so not unusual.' },
         ],
         answer: 'P(\\hat{p} \\ge 0.65) \\approx 0.154',
       },
@@ -886,7 +941,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Another way: think in √n',
-      body: 'With n = 36 the SD of x̄ was 2. How many students to cut it to 1?\nSD = σ/√n, so halving the SD means doubling √n, which means quadrupling n.\nn = 4 × 36 = 144 students.',
+      body: 'With n = 36 the SD of x̄ was 2. How many students are needed to cut it to 1? Work with the square root rather than with n itself.',
+      steps: {
+        steps: [
+          { tex: '\\frac{12}{\\sqrt{n}} = 1', text: 'Write the goal as an equation. We want the SD of x̄, σ/√n with σ = 12, to equal 1, and we solve for n.' },
+          { tex: '\\sqrt{n} = 12', text: 'Multiply both sides by √n and then divide by 1, so √n = 12. Compare with the old √36 = 6: the root has to double to halve the SD.' },
+          { tex: 'n = 12^{2} = 144', text: 'Square both sides to undo the square root. That gives n = 144, so we need 144 students.' },
+          { tex: '144 = 4 \\times 36', text: 'Notice 144 is 4 times 36. Because of the root, halving the SD costs four times the data. Doubling n would only shrink the SD by a factor of √2, about 1.41.' },
+        ],
+        answer: 'n = 144',
+      },
       table: {
         head: ['n', '√n', 'SD of x̄ = 12/√n'],
         rows: [['36', '6', '2'], ['144', '12', '1'], ['576', '24', '0.5']],
@@ -897,7 +961,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Picture it first: the skewed clinic',
-      body: 'Waiting times are strongly right-skewed with μ = 4 and σ = 3 minutes. For n = 50 patients, what is P(x̄ > 5)? Picture the bell of means, not the skewed population.\nSD of x̄ = 3/√50 ≈ 0.424, so z = (5 − 4)/0.424 ≈ 2.36.\nP(Z > 2.36) ≈ 0.009.',
+      body: 'Waiting times are strongly right-skewed with μ = 4 and σ = 3 minutes. For n = 50 patients, what is P(x̄ > 5)? Picture the bell of means, not the skewed population.',
+      steps: {
+        steps: [
+          { tex: 'n = 50 \\ge 30', text: 'The population is skewed, so check the sample size instead. With n at least 30 the CLT makes x̄ approximately normal anyway.' },
+          { tex: '\\sigma_{\\bar{x}} = \\frac{3}{\\sqrt{50}} \\approx 0.424', text: 'The SD of x̄ is σ/√n. The root of 50 is about 7.07, and 3/7.07 is about 0.424 minutes.' },
+          { tex: 'z = \\frac{5 - 4}{0.424} \\approx 2.36', text: 'Standardize with the SD of x̄: a mean of 5 is 1 minute above 4, and that is about 2.36 standard deviations of x̄.' },
+          { tex: 'P(Z > 2.36) = 1 - 0.9909 \\approx 0.009', text: 'The table gives 0.9909 to the left, so the upper tail is about 0.009. Averages of 50 waits above 5 minutes are very rare.' },
+        ],
+        answer: 'P(\\bar{x} > 5) \\approx 0.009',
+      },
       art: bell(4, 0.424, {
         alt: 'A normal curve centred at 4 minutes with standard deviation 0.42 and the small tail beyond 5 shaded',
         title: 'Clinic waits: x̄ for n = 50',
@@ -941,12 +1014,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'challenge',
       head: 'Extra credit: one person versus nine',
-      body: 'IQ scores are normal with μ = 100 and σ = 15. Compare P(one person scores above 110) with P(the mean of 9 people is above 110).\nOne person: z = 10/15 ≈ 0.67, so P ≈ 0.2514.\nNine people: SD of x̄ = 15/√9 = 5, z = 10/5 = 2, so P = 0.0228.',
+      body: 'IQ scores are normal with μ = 100 and σ = 15. Compare P(one person scores above 110) with P(the mean of 9 people is above 110).',
       steps: {
         steps: [
-          { tex: 'z = \\frac{110 - 100}{15} \\approx 0.67,\\quad P \\approx 0.2514', text: 'One person: about a 1 in 4 chance.' },
-          { tex: '\\sigma_{\\bar{x}} = \\frac{15}{\\sqrt{9}} = 5', text: 'The mean of nine wanders far less.' },
-          { tex: 'z = \\frac{110 - 100}{5} = 2,\\quad P = 0.0228', text: 'Nine people averaging above 110 is rare.' },
+          { tex: 'z = \\frac{110 - 100}{15} \\approx 0.67', text: 'For one person, standardize with σ = 15. Scores are normal, so no CLT is needed. 110 is about two-thirds of an SD above the mean.' },
+          { tex: 'P(Z > 0.67) = 1 - 0.7486 = 0.2514', text: 'Read the area to the left from the table and subtract from 1. About a 1 in 4 chance that a single person scores above 110.' },
+          { tex: '\\sigma_{\\bar{x}} = \\frac{15}{\\sqrt{9}} = 5', text: 'For a mean of 9 people, use σ/√n. Since the population is normal, x̄ is normal even with n = 9, with SD 5.' },
+          { tex: 'z = \\frac{110 - 100}{5} = 2,\\quad P = 1 - 0.9772 = 0.0228', text: 'Standardize with the SD 5 of x̄. 110 is now 2 SDs above 100, which leaves only 0.0228 in the upper tail.' },
         ],
         answer: '0.2514 \\text{ versus } 0.0228',
       },
