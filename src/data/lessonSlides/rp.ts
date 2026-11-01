@@ -779,7 +779,7 @@ export const RP_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Fraction to percent: 3/4',
-      body: 'Write the fraction 3/4 as a percent.',
+      body: 'Write the fraction 3/4 as a percent. A percent is a number out of 100.',
       steps: { steps: [
         { tex: '\\tfrac{3}{4} = 3 \\div 4 = 0.75', text: 'A fraction bar means division. Dividing 3 by 4 turns the fraction into the decimal 0.75.' },
         { tex: '0.75 = \\tfrac{75}{100}', text: 'The decimal 0.75 means 75 hundredths. That is 75 out of every 100, which is exactly what a percent counts.' },
