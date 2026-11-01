@@ -137,9 +137,9 @@ export const NS_SLIDES: SlideBank = {
       body: 'Money makes decimals easy. Can you turn $5.00 − $2.30 into whole numbers of cents and subtract those?',
       steps: {
       steps: [
-        { tex: '\\$5.00 = 500\\text{¢},\\ \\$2.30 = 230\\text{¢}', text: 'Dollars with decimals are really a count of cents. Because 100 cents make a dollar, we can write both amounts as whole numbers of cents.' },
+        { tex: '\\$5.00 = 500\\text{ cents},\\ \\$2.30 = 230\\text{ cents}', text: 'Dollars with decimals are really a count of cents. Because 100 cents make a dollar, we can write both amounts as whole numbers of cents.' },
         { tex: '500 - 230 = 270', text: 'Subtract the whole numbers. Both amounts are counted in the same unit, cents, so we can subtract them like ordinary numbers.' },
-        { tex: '270\\text{¢} = \\$2.70', text: 'Change back to dollars by putting the point two places from the right, because 100 cents make one dollar. 270 cents is $2.70.' },
+        { tex: '270\\text{ cents} = \\$2.70', text: 'Change back to dollars by putting the point two places from the right, because 100 cents make one dollar. 270 cents is $2.70.' },
       ], answer: '\\$2.70',
     },
     },

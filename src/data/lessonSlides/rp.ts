@@ -738,7 +738,7 @@ export const RP_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Easiest: 50% of 80',
-      body: 'What is 50% of 80?',
+      body: 'What is 50% of 80? Work it out one step at a time and say why each step is allowed.',
       steps: { steps: [
         { tex: '50\\% = \\tfrac{50}{100} = \\tfrac{1}{2}', text: 'Turn the percent into a fraction. 50 out of 100 is the same as one half, which is the friendliest benchmark.' },
         { tex: '\\tfrac{1}{2} \\text{ of } 80', text: 'The word "of" means multiply, so we need half of 80. Taking half of a number is easy.' },
@@ -748,7 +748,7 @@ export const RP_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Quick trick: 10% of 250',
-      body: 'What is 10% of 250?',
+      body: 'What is 10% of 250? Work it out one step at a time and say why each step is allowed.',
       steps: { steps: [
         { tex: '10\\% = \\tfrac{10}{100} = \\tfrac{1}{10}', text: 'Turn the percent into a fraction. 10 out of 100 simplifies to one tenth.' },
         { tex: '250 \\div 10', text: 'One tenth of a number means dividing it by 10. Dividing by 10 moves every digit one place to the right.' },
@@ -758,7 +758,7 @@ export const RP_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Quarter power: 25% of 40',
-      body: 'What is 25% of 40?',
+      body: 'What is 25% of 40? Work it out one step at a time and say why each step is allowed.',
       steps: { steps: [
         { tex: '25\\% = \\tfrac{25}{100} = \\tfrac{1}{4}', text: 'Turn the percent into a fraction. Both 25 and 100 divide by 25, so 25 out of 100 is one quarter.' },
         { tex: '40 \\div 4', text: 'A quarter of a number means splitting it into 4 equal groups, so divide 40 by 4.' },
@@ -1058,7 +1058,7 @@ export const RP_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Straight percent: 25% of 80',
-      body: 'What is 25% of 80?',
+      body: 'What is 25% of 80? Work it out one step at a time and say why each step is allowed.',
       steps: { steps: [
         { tex: '25\\% = \\tfrac{25}{100} = \\tfrac{1}{4}', text: 'Write the percent as a fraction. 25 out of 100 simplifies to one quarter, which is a friendly benchmark.' },
         { tex: '\\tfrac{1}{4} \\text{ of } 80', text: 'The word "of" means multiply, so we need a quarter of 80. A quarter means splitting into 4 equal groups.' },
@@ -1069,7 +1069,7 @@ export const RP_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Point slide: 10% of 250',
-      body: 'What is 10% of 250?',
+      body: 'What is 10% of 250? Work it out one step at a time and say why each step is allowed.',
       steps: { steps: [
         { tex: '10\\% = \\tfrac{10}{100} = \\tfrac{1}{10}', text: 'Write the percent as a fraction. 10 out of 100 is one tenth of the whole amount.' },
         { tex: '250 \\div 10', text: 'Taking one tenth of a number means dividing it by 10, because 10 equal tenths make the whole.' },
@@ -1091,7 +1091,7 @@ export const RP_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Half off-ish: 50% of 86',
-      body: 'What is 50% of 86?',
+      body: 'What is 50% of 86? Work it out one step at a time and say why each step is allowed.',
       steps: { steps: [
         { tex: '50\\% = \\tfrac{50}{100} = \\tfrac{1}{2}', text: 'Write 50% as a fraction. 50 out of 100 is exactly one half.' },
         { tex: '\\tfrac{1}{2} \\text{ of } 86', text: 'The word "of" means multiply, so we need half of 86. Half means splitting into 2 equal groups.' },
@@ -1547,7 +1547,7 @@ export const RP_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Check equivalence: 2:3 and 8:12',
-      body: 'Is 2:3 equivalent to 8:12?',
+      body: 'Is 2:3 equivalent to 8:12? Work it out one step at a time and say why each step is allowed.',
       steps: { steps: [
         { tex: '8 \\div 2 = 4', text: 'Find the multiplier on the first parts. To get from 2 to 8 you multiply by 4, so the scale factor might be 4.' },
         { tex: '12 \\div 3 = 4', text: 'Check the second parts too. To get from 3 to 12 you also multiply by 4. Both sides use the same number.' },
@@ -1738,7 +1738,7 @@ export const RP_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Find time: 150 miles at 50 mph',
-      body: 'How long does a 150-mile trip take at 50 mph?',
+      body: 'How long does a 150-mile trip take at 50 mph? Work it out one step at a time and say why each step is allowed.',
       steps: { steps: [
         { tex: 't = \\dfrac{d}{r}', text: 'We want the time, so cover t in the triangle. Time is the distance divided by the rate.' },
         { tex: 't = 150 \\div 50', text: 'Put in the numbers. This asks how many 50-mile hours fit into the 150-mile trip.' },
