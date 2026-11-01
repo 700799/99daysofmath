@@ -24,6 +24,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Meet the parent functions',
       body: 'A few basic shapes do all the work: the line y = x, the parabola y = x², the V of y = |x|, and the curve y = √x. Every other graph in the family is one of these, moved. Learn the four plain shapes and the rest is just moving.',
+      why: 'Each parent is just a rule that turns x into a height. For y = x the height equals x, for y = x² it is x times x, for y = |x| it is the distance from zero, and for y = √x it is the number that squares to x. Different rules make different shapes, and every other graph in the family is one of these rules slightly changed.',
       art: (() => {
         const ax = axes({ x: [-3, 3], y: [-3, 5] }, { ticks: { x: [-2, 0, 2], y: [-2, 0, 2, 4] }, grid: true, pad: 30 });
         return art(
@@ -40,11 +41,12 @@ export const PC_SLIDES_U01_04: SlideBank = {
         );
       })(),
     },
-    { kind: 'concept', head: 'The graph is a sticker on a window', body: 'Picture the parent graph printed on a clear sticker. You can peel it up and press it down somewhere else, or stretch it taller, or flip it over. The shape never changes — only where it sits and how tall it is.' },
+    { kind: 'concept', head: 'The graph is a sticker on a window', body: 'Picture the parent graph printed on a clear sticker. You can peel it up and press it down somewhere else, or stretch it taller, or flip it over. The shape never changes — only where it sits and how tall it is.', why: 'Moving a graph only changes the coordinates of its points, not how the points sit relative to each other. If you add 3 to every height, every point rises by the same 3 together, so the distances between points stay exactly the same. That is why a transformed graph is the same shape in a new place, never a bent or squashed version.' },
     {
       kind: 'concept',
       head: 'Outside moves it up and down',
       body: 'A number added OUTSIDE the function changes every y-value. In f(x) + k, every point rises by k, so the whole sticker slides straight up. If k is negative, the sticker slides down instead.',
+      why: 'A graph is the set of points (x, f(x)). Writing f(x) + 3 keeps each x the same but makes its height 3 bigger, so a point like (2, 4) on y = x² becomes (2, 7). Every point climbs by 3 at the same moment, and that is exactly the whole graph sliding up.',
       compare: {
         cols: [
           { title: 'y = x²', tex: 'k = 0', lines: ['Vertex at (0, 0)', 'The parent, untouched'], tone: 'plain' },
@@ -81,6 +83,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Inside moves it left and right',
       body: 'A number tucked INSIDE, right next to the x, moves the graph sideways. In f(x − h) the sticker slides RIGHT by h. This one feels backwards at first, so it earns its own nickname: minus moves right.',
+      why: 'In f(x − 2), the new graph gives the height the old graph gave when its input was 2 smaller. To see the old height from x = 0, you now have to plug in x = 2, because 2 − 2 = 0. Every feature of the old graph arrives 2 steps later, so the picture sits 2 units to the right.',
       compare: {
         cols: [
           { title: 'y = (x − 2)²', tex: 'h = 2', lines: ['Moves RIGHT 2', 'Vertex at (2, 0)'], tone: 'ok' },
@@ -107,12 +110,13 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: y = x² + 3',
-      body: 'The +3 is OUTSIDE the square, so it lifts every point.\nThe bottom of the parabola moves from (0, 0) up to (0, 3).\nAnswer: the whole graph slides UP 3.',
+      body: 'Look at where the +3 sits in y = x² + 3. What does it do to the parabola?',
       steps: {
         steps: [
-          { tex: 'y = x^{2} + 3', text: 'The +3 is outside the square, so it is a k.' },
-          { tex: 'k = +3', text: 'Positive k means up.' },
-          { tex: '(0,\\,0) \\to (0,\\,3)', text: 'The vertex rises three.' },
+          { tex: 'y = x^{2} + 3', text: 'Ask where the 3 sits. It is added after the squaring is finished, outside the function, so it changes the output height. That makes it the k dial.' },
+          { tex: '(2,\\,4) \\to (2,\\,4 + 3) = (2,\\,7)', text: 'Test one point. (2, 4) is on y = x², and the new rule adds 3 to its height, so it lands at (2, 7). The x stays the same.' },
+          { tex: '(0,\\,0) \\to (0,\\,3)', text: 'Follow the vertex too. Its height 0 becomes 0 + 3 = 3 while x stays 0. The vertex is the lowest point, so it shows where the whole parabola went.' },
+          { tex: 'k = +3 \\Rightarrow \\text{up}', text: 'Every point rises by the same 3, and a positive k always means up. So the shape is unchanged and simply sits 3 higher.' },
         ],
         answer: '\\text{up 3}',
       },
@@ -120,20 +124,64 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Another way: track one point',
-      body: 'Instead of the whole curve, follow the vertex.\nFor y = (x − 4)², the vertex starts at (0, 0) and lands at (4, 0).\nOne point tells you where the whole sticker went, because the shape never changes.',
+      body: 'Instead of the whole curve, follow one point. Where does the vertex of y = (x − 4)² end up, and what does that tell you about the whole graph?',
+      steps: {
+        steps: [
+          { tex: 'x - 4 = 0 \\Rightarrow x = 4', text: 'The vertex of a parabola is where the squared part equals zero, since a square cannot go lower than 0. Here x − 4 = 0 happens at x = 4.' },
+          { tex: '(4 - 4)^{2} = 0', text: 'Put x = 4 into the rule to get the height. The bracket is 0 and 0² = 0, so the vertex is at (4, 0).' },
+          { tex: '(0,\\,0) \\to (4,\\,0)', text: 'The parent vertex was (0, 0), so it moved 4 steps right and 0 steps up. The height did not change, so the slide is purely sideways.' },
+          { tex: '\\text{right } 4', text: 'The graph is a rigid sticker, so every other point moved the same way. One point tells you where the whole graph went.' },
+        ],
+        answer: '\\text{vertex } (4,\\,0),\\ \\text{slid right } 4',
+      },
       table: {
-        head: ['on y = x²', 'add 3 to y', 'on y = x² + 3'],
-        rows: [['(0, 0)', '0 + 3', '(0, 3)'], ['(1, 1)', '1 + 3', '(1, 4)'], ['(2, 4)', '4 + 3', '(2, 7)']],
+        head: ['on y = x²', 'add 4 to x', 'on y = (x − 4)²'],
+        rows: [['(0, 0)', '0 + 4', '(4, 0)'], ['(1, 1)', '1 + 4', '(5, 1)'], ['(2, 4)', '2 + 4', '(6, 4)']],
         mark: 0,
         note: 'Move one point you know and the rest of the curve follows it.',
       },
     },
-    { kind: 'example', head: 'Moving a game sprite', body: 'In a video game, a sprite follows the path y = x². A coder changes it to y = (x − 7)².\nSet the inside to zero: x − 7 = 0, so x = 7.\nThe whole path slides RIGHT 7 steps across the screen.' },
-    { kind: 'example', head: 'Raising a skate ramp', body: 'A skate ramp curves like y = √x, and builders lift the whole thing 3 feet.\nLifting is a vertical move, so the change goes OUTSIDE: y = √x + 3.\nThe front edge that sat at (0, 0) is now at (0, 3).' },
+    {
+      kind: 'example',
+      head: 'Moving a game sprite',
+      body: 'In a video game, a sprite follows the path y = x². A coder changes it to y = (x − 7)². Which way does the path move, and how far?',
+      steps: {
+        steps: [
+          { tex: 'y = (x - 7)^{2}', text: 'The 7 is inside the brackets, touching x before the squaring happens. Inside numbers change the x-direction, so this is a left-right slide.' },
+          { tex: 'x - 7 = 0 \\Rightarrow x = 7', text: 'Find where the bracket is zero, because that is where the lowest point of the path sits. x − 7 = 0 gives x = 7.' },
+          { tex: '(0,\\,0) \\to (7,\\,0)', text: 'Check with the old low point. At x = 7 the height is (7 − 7)² = 0, so (0, 0) has moved to (7, 0). The height did not change.' },
+          { tex: '\\text{right } 7', text: 'Bigger x is to the right, so the path slid right. The minus sign inside is misleading, which is why we solve for the zero instead of reading the sign.' },
+        ],
+        answer: '\\text{right 7 steps}',
+      },
+    },
+    {
+      kind: 'example',
+      head: 'Raising a skate ramp',
+      body: 'A skate ramp curves like y = √x, and builders lift the whole thing 3 feet. What is the new rule, and where does the front edge go?',
+      steps: {
+        steps: [
+          { tex: '\\text{lift} = \\text{change the heights}', text: 'Lifting changes how high each point is, not where it sits left to right. Heights are the outputs, so the change must act on the output.' },
+          { tex: 'y = \\sqrt{x} + 3', text: 'Add 3 AFTER the square root is taken. If the 3 went inside, as in √(x + 3), it would slide the ramp sideways instead of lifting it.' },
+          { tex: '\\sqrt{0} + 3 = 3', text: 'Check the front edge. At x = 0 the square root is 0, so the new height is 0 + 3 = 3.' },
+          { tex: '(0,\\,0) \\to (0,\\,3)', text: 'The front edge moves from (0, 0) to (0, 3), straight up 3 feet with x unchanged. That matches a pure lift.' },
+        ],
+        answer: 'y = \\sqrt{x} + 3',
+      },
+    },
     {
       kind: 'example',
       head: 'Stretching a photo taller',
-      body: 'A photo app triples every height above the middle line. That is a·f(x) with a = 3.\nA point 5 units above the middle jumps to 15 units above.\nThe picture gets taller and skinnier, but nothing slides sideways.',
+      body: 'A photo app triples every height above the middle line. What rule is that, and what happens to a point that sits 5 units above the middle?',
+      steps: {
+        steps: [
+          { tex: 'y = a \\cdot f(x),\\ a = 3', text: 'Tripling every height means multiplying each output by 3. A number multiplied in front of the function is the a dial, so here a = 3.' },
+          { tex: '5 \\to 3 \\cdot 5 = 15', text: 'Test the point 5 units up. Its height 5 is multiplied by 3, so it jumps to 15 units above the middle line.' },
+          { tex: '3 \\cdot 0 = 0', text: 'A point right on the middle line has height 0, and 3 times 0 is still 0. So points on the axis stay put while the others stretch away from it.' },
+          { tex: 'x \\text{ unchanged}', text: 'Only the output was multiplied, never the x-value, so nothing slides sideways. Taller heights with the same x-positions make the picture taller and skinnier.' },
+        ],
+        answer: 'y = 3f(x):\\ \\text{every height} \\times 3',
+      },
       compare: {
         cols: [
           { title: 'a = 3 · taller', tex: 'y = 3x^{2}', lines: ['Every height ×3', 'Narrow and steep'], tone: 'ok' },
@@ -145,7 +193,16 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Flipping with a minus in front',
-      body: 'Compare y = |x| with y = −|x|.\nEvery positive height becomes negative, so the V turns upside down.\nThe sticker got flipped over the x-axis like a pancake.',
+      body: 'Compare y = x² with y = −x². What does the minus in front do to the graph?',
+      steps: {
+        steps: [
+          { tex: 'y = -x^{2} = -1 \\cdot x^{2}', text: 'A minus sign out front is the same as multiplying the output by −1. So this is the a dial with a = −1.' },
+          { tex: 'x = 2:\\ \\ 4 \\to -4', text: 'Test x = 2. The parent gives height 4, and multiplying by −1 gives −4. A positive height turns into a negative one of the same size.' },
+          { tex: '-1 \\cdot 0 = 0', text: 'At x = 0 the height is 0, and −1 times 0 is still 0. So the point on the x-axis does not move, like a hinge.' },
+          { tex: '(2,\\,4) \\to (2,\\,-4)', text: 'Every point lands as far below the axis as it was above it, with the same x. That is a reflection over the x-axis, so the smile becomes a frown.' },
+        ],
+        answer: '\\text{flipped over the } x\\text{-axis}',
+      },
       art: (() => {
         const ax = axes({ x: [-3, 3], y: [-6, 6] }, { ticks: { x: [-2, 0, 2], y: [-4, 0, 4] }, grid: true, pad: 30 });
         return art(
@@ -163,7 +220,16 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Another way: build a tiny table',
-      body: 'Unsure what a change does? Test three x-values.\nFor y = −|x| + 7: at x = −2 you get 5, at x = 0 you get 7, at x = 3 you get 4.\nThe numbers climb to 7 and fall again, so the peak is 7.',
+      body: 'Unsure what a change does? Build a small table. For y = (x − 1)², which x gives the lowest point?',
+      steps: {
+        steps: [
+          { tex: 'x - 1 = -1,\\ 0,\\ 1,\\ 2', text: 'Pick x = 0, 1, 2, 3 and subtract 1 from each. That is what the rule does inside the brackets before it squares anything.' },
+          { tex: '(x - 1)^{2} = 1,\\ 0,\\ 1,\\ 4', text: 'Now square each result. Squaring turns −1 into 1, so the heights are 1, 0, 1, and 4.' },
+          { tex: '(1,\\,0)', text: 'The smallest height is 0, and it happens at x = 1. That is exactly where the bracket x − 1 is zero, so the low point is at x = 1, not x = −1.' },
+          { tex: '\\text{vertex moved } (0,0) \\to (1,0)', text: 'The parent y = x² has its low point at x = 0, so the graph slid right 1. The table confirms that a minus inside moves right.' },
+        ],
+        answer: '\\text{lowest point at } x = 1\\ (\\text{right } 1)',
+      },
       table: {
         head: ['x', 'x − 1', '(x − 1)²'],
         rows: [['0', '−1', '1'], ['1', '0', '0'], ['2', '1', '1'], ['3', '2', '4']],
@@ -171,7 +237,20 @@ export const PC_SLIDES_U01_04: SlideBank = {
         note: 'The low point lands where the bracket is zero — at x = 1, not x = −1.',
       },
     },
-    { kind: 'example', head: 'Two moves at once', body: 'For y = (x + 4)² − 6, handle the moves one at a time.\nInside: x + 4 = 0 gives x = −4, so slide LEFT 4.\nOutside: −6 drops it 6. The lowest point lands at (−4, −6).' },
+    {
+      kind: 'example',
+      head: 'Two moves at once',
+      body: 'Find the lowest point of y = (x + 4)² − 6. Handle the two numbers one at a time.',
+      steps: {
+        steps: [
+          { tex: 'y = (x + 4)^{2} - 6', text: 'Sort the numbers first. The +4 touches x inside the brackets, so it moves left or right. The −6 is outside the square, so it moves up or down.' },
+          { tex: 'x + 4 = 0 \\Rightarrow x = -4', text: 'Inside: find where the bracket is zero. x + 4 = 0 gives x = −4, so the graph slides LEFT 4. The plus sign is misleading, so we never read it directly.' },
+          { tex: '(-4 + 4)^{2} - 6 = 0 - 6 = -6', text: 'Outside: put x = −4 into the rule. The square is 0, and the −6 is added to every height, so the lowest height is −6.' },
+          { tex: '(0,\\,0) \\to (-4,\\,0) \\to (-4,\\,-6)', text: 'Put the moves together. The old low point slides left 4, then drops 6, and it lands on (−4, −6).' },
+        ],
+        answer: '(-4,\\,-6)',
+      },
+    },
     {
       kind: 'protip',
       head: 'Inside or outside? Ask first',
@@ -199,15 +278,16 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'challenge',
       head: 'Extra credit: three moves at once',
-      body: 'Find the vertex of y = 2(x − 3)² + 5.\nInside first: x − 3 = 0 gives x = 3, so slide RIGHT 3.\nThe 2 stretches it taller and the +5 lifts it, so the vertex sits at (3, 5).',
+      body: 'Find the vertex of y = 2(x − 3)² + 5, and say which way it opens. Three dials are turned at once, so take them one at a time.',
       steps: {
         steps: [
-          { tex: 'y = -2(x + 1)^{2} + 5', text: 'Three dials are turned at once.' },
-          { tex: 'x + 1 = 0 \\Rightarrow x = -1', text: 'Inside first: the vertex slides LEFT 1.' },
-          { tex: 'a = -2', text: 'Twice as tall, and the minus flips it upside down.' },
-          { tex: '+5', text: 'Outside last: the whole thing lifts 5.' },
+          { tex: 'y = 2(x - 3)^{2} + 5', text: 'Name the three dials. The −3 is inside, the 2 is a multiplier in front, and the +5 is outside. Each one does its own job.' },
+          { tex: 'x - 3 = 0 \\Rightarrow x = 3', text: 'Inside first: the bracket is zero at x = 3, so the vertex slides RIGHT 3. Minus inside means right.' },
+          { tex: 'a = 2 \\Rightarrow 2 \\cdot 0 = 0', text: 'The 2 multiplies every height, so the parabola gets narrower and steeper. The vertex height is 0 and 2 times 0 is 0, so the stretch does not move the vertex.' },
+          { tex: '(3,\\,0) \\to (3,\\,0 + 5)', text: 'The +5 is outside, so every height rises 5. The vertex goes from (3, 0) to (3, 5).' },
+          { tex: 'a = 2 > 0 \\Rightarrow \\text{opens up}', text: 'The 2 is positive, so there is no flip. The arms point up, which makes the vertex the lowest point.' },
         ],
-        answer: '\\text{vertex } (-1,\\,5),\\ \\text{opens down}',
+        answer: '\\text{vertex } (3,\\,5),\\ \\text{opens up}',
       },
     },
     {
