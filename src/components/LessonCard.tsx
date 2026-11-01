@@ -551,6 +551,14 @@ function SlidePage({ slide }: { slide: LessonSlide }) {
       {slide.compare && <CompareView block={slide.compare} />}
       {slide.steps && <StepsView block={slide.steps} />}
       {slide.table && <TableView block={slide.table} />}
+
+      {/* The reason behind it: the part that turns a rule into something you understand. */}
+      {slide.why && (
+        <div className="mt-3 rounded-2xl border-2 border-accent/40 bg-accent-soft px-3 py-2.5">
+          <div className="font-display text-[11px] font-extrabold uppercase tracking-wider text-accent">💡 Why it works</div>
+          <RichText text={slide.why} className="mt-1" />
+        </div>
+      )}
     </div>
   );
 }
