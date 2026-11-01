@@ -380,6 +380,7 @@ export const NS_SLIDES: SlideBank = {
         mark: 2,
         note: 'List both sets, circle what appears in each, take the biggest one.',
       },
+      why: 'A common factor is a block size that fits into both numbers with nothing left over. 12 can be built from blocks of 1, 2, 3, 4, 6 or 12, and 18 from blocks of 1, 2, 3, 6, 9 or 18. Both lists share 1, 2, 3 and 6, and the biggest of those is the largest block that builds both.',
     },
     {
       kind: 'concept',
@@ -393,6 +394,7 @@ export const NS_SLIDES: SlideBank = {
         mark: 2,
         note: 'Count up in each number until the same value appears in both lists.',
       },
+      why: 'Counting by 4s lists the numbers 4 can reach, and counting by 6s lists the numbers 6 can reach. A number in both lists is a spot where both counters land together, like two kids with different step sizes. The first spot they share, 12, is the least common multiple.',
     },
     {
       kind: 'concept',
@@ -406,6 +408,7 @@ export const NS_SLIDES: SlideBank = {
         ],
         note: 'GCF shrinks, LCM grows. If your answer went the wrong way, you used the wrong one.',
       },
+      why: 'A factor is a part of a number, so it can never be bigger than the number it divides. A multiple is the number times something, so it can never be smaller. That is why a GCF is at most the smaller number, and an LCM is at least the bigger number.',
     },
     {
       kind: 'concept',
@@ -414,41 +417,102 @@ export const NS_SLIDES: SlideBank = {
       formula: { tex: '18 + 24 = 6(3 + 4)', note: 'Pull the shared factor out front and the sum becomes a product.', parts: [{ sym: '6', means: 'the greatest common factor of both numbers', tone: 'accent' }, { sym: '(3 + 4)', means: 'what is left when each is divided by six', tone: 'ok' }] },
       art: areaModel([{ label: '3', w: 2 }, { label: '4', w: 2 }], [{ label: '6', h: 1 }], [['18', '24']], { title: '18 + 24 = 6(3 + 4)', total: 'Pull the shared 6 out front', caption: 'Both numbers are built from sixes, so the six becomes the height of one wide box.' }),
       steps: {
-        steps: [
-          { tex: '12 + 18', text: 'Find what divides both.' },
-          { tex: '\\text{GCF} = 6', text: 'Six goes into each.' },
-          { tex: '6(2) + 6(3)', text: 'Rewrite each piece.' },
-          { tex: '6(2 + 3)', text: 'Pull the 6 outside.' },
-        ],
-        answer: '6(2 + 3)',
-      },
+      steps: [
+        { tex: '12 + 18', text: 'Look for the biggest number that divides both terms. Pulling out the greatest one leaves the smallest numbers inside the brackets.' },
+        { tex: '\\text{GCF} = 6', text: 'Six divides 12 (6 × 2) and 18 (6 × 3), and no bigger number divides both. So the greatest common factor is 6.' },
+        { tex: '6(2) + 6(3)', text: 'Rewrite each number as 6 times something. This does not change any value, it only shows the shared 6.' },
+        { tex: '6(2 + 3)', text: 'Pull the 6 outside the brackets, using the distributive property backwards. Check: 6 × 5 = 30 and 12 + 18 = 30.' },
+      ], answer: '6(2 + 3)',
+    },
+      why: 'Multiplying spreads over adding: 6(3 + 4) means 6 groups of 3 plus 6 groups of 4, which is 18 + 24. Factoring just runs that backwards. Picture a rectangle 6 tall made of a part 3 wide and a part 4 wide; its area is the same however you count it.',
     },
     {
       kind: 'example',
       head: 'Warm-up: GCF of 8 and 12',
-      body: 'Factors of 8: 1, 2, 4, 8. Factors of 12: 1, 2, 3, 4, 6, 12.\nShared factors: 1, 2, 4.\nThe greatest is 4, so GCF = 4.',
-      steps: { steps: [{ tex: '8 : 1, 2, 4, 8', text: 'List the factors of the first number.' }, { tex: '12 : 1, 2, 3, 4, 6, 12', text: 'List the factors of the second.' }, { tex: '\\text{largest shared} = 4', text: 'Take the biggest one they share.' }], answer: '4' },
+      body: 'Find the biggest number that divides both 8 and 12 with nothing left over. Start by listing the factors of each.',
+      steps: {
+      steps: [
+        { tex: '8: 1, 2, 4, 8', text: 'List every factor of 8, the numbers that divide it exactly. They come in pairs: 1 × 8 and 2 × 4.' },
+        { tex: '12: 1, 2, 3, 4, 6, 12', text: 'List every factor of 12 the same way. The pairs are 1 × 12, 2 × 6 and 3 × 4.' },
+        { tex: '\\text{shared}: 1, 2, 4', text: 'Circle the numbers that appear on both lists. A shared factor divides 8 and 12 both, so only these three qualify.' },
+        { tex: '\\text{GCF} = 4', text: 'The greatest means the biggest of the shared ones, which is 4. Check: 8 ÷ 4 = 2 and 12 ÷ 4 = 3 with nothing left over.' },
+      ], answer: '4',
     },
-    { kind: 'example', head: 'GCF of 12 and 18', body: 'Break into primes: 12 = 2 × 2 × 3 and 18 = 2 × 3 × 3.\nThey share one 2 and one 3.\nMultiply the shared primes: 2 × 3 = 6. GCF = 6.' },
+    },
+    {
+      kind: 'example',
+      head: 'GCF of 12 and 18',
+      body: 'Use prime factors this time. Break each number into primes, then see which primes they share.',
+      steps: {
+      steps: [
+        { tex: '12 = 2 \\times 2 \\times 3', text: 'Break 12 into prime numbers, which cannot be split any more. Primes are the basic building blocks of every number.' },
+        { tex: '18 = 2 \\times 3 \\times 3', text: 'Break 18 into primes the same way. Now both numbers are written with the same kinds of blocks.' },
+        { tex: '\\text{shared: } 2 \\text{ and } 3', text: 'Match them up. Both have one 2 and at least one 3, so the shared primes are a 2 and a 3.' },
+        { tex: '2 \\times 3 = 6', text: 'Multiply the shared primes. They are the pieces both numbers are built from, so their product is the biggest number that divides both: GCF = 6.' },
+      ], answer: '6',
+    },
+    },
     {
       kind: 'example',
       head: 'LCM of 4 and 6',
-      body: 'List multiples of 6: 6, 12, 18 …\nIs 6 a multiple of 4? No. Is 12? Yes — 4 × 3 = 12.\nLCM = 12.',
-      steps: { steps: [{ tex: '4, 8, 12, 16', text: 'Skip-count by four.' }, { tex: '6, 12, 18', text: 'Skip-count by six.' }, { tex: '\\text{first match} = 12', text: 'Twelve is where they first meet.' }], answer: '12' },
+      body: 'Find the smallest number that both 4 and 6 divide into. List multiples until the lists meet.',
+      steps: {
+      steps: [
+        { tex: '4, 8, 12, 16', text: 'Skip-count by 4 to list its multiples. A multiple is a number you reach by repeatedly adding 4.' },
+        { tex: '6, 12, 18', text: 'Skip-count by 6 to list its multiples. We stop when we find a number that is also on the list for 4.' },
+        { tex: '\\text{first match} = 12', text: 'Twelve is the first number on both lists, so both 4 and 6 divide it. 4 × 3 = 12 and 6 × 2 = 12. LCM = 12.' },
+      ], answer: '12',
     },
-    { kind: 'example', head: 'LCM of 3 and 5', body: 'The numbers 3 and 5 share no factors except 1.\nWhen that happens, just multiply them: 3 × 5 = 15.\nLCM = 15.' },
+    },
+    {
+      kind: 'example',
+      head: 'LCM of 3 and 5',
+      body: 'These numbers share no factors except 1. Does that give a shortcut for finding the LCM?',
+      steps: {
+      steps: [
+        { tex: '3, 6, 9, 12, 15', text: 'Skip-count by 3 to list its multiples. We keep going until we know where the two lists must meet.' },
+        { tex: '5, 10, 15', text: 'Skip-count by 5. The first number on both lists is 15, so 15 is the least common multiple.' },
+        { tex: '3 \\times 5 = 15', text: 'There is a shortcut. Since 3 and 5 share no factors, no smaller number can be a multiple of both, so multiplying them gives the LCM right away.' },
+      ], answer: '15',
+    },
+    },
     {
       kind: 'example',
       head: 'GCF of 16 and 24',
-      body: 'Primes: 16 = 2 × 2 × 2 × 2 and 24 = 2 × 2 × 2 × 3.\nThey share three 2s.\n2 × 2 × 2 = 8, so GCF = 8.',
-      steps: { steps: [{ tex: '16 = 8 \\times 2', text: 'Look for a large shared factor.' }, { tex: '24 = 8 \\times 3', text: 'Eight divides both exactly.' }], answer: '8' },
+      body: 'Break 16 and 24 into primes, then multiply the primes that both numbers share.',
+      steps: {
+      steps: [
+        { tex: '16 = 2 \\times 2 \\times 2 \\times 2', text: 'Break 16 into primes. It is four 2s multiplied together, since 2 × 2 = 4, 4 × 2 = 8 and 8 × 2 = 16.' },
+        { tex: '24 = 2 \\times 2 \\times 2 \\times 3', text: 'Break 24 into primes the same way: three 2s and one 3. Check: 8 × 3 = 24.' },
+        { tex: '\\text{shared: three } 2\\text{s}', text: 'Compare them. Both numbers have at least three 2s, but only 24 has a 3, so the shared primes are three 2s.' },
+        { tex: '2 \\times 2 \\times 2 = 8', text: 'Multiply the shared primes to get the GCF. Check: 16 ÷ 8 = 2 and 24 ÷ 8 = 3, both exact, and no bigger number works.' },
+      ], answer: '8',
     },
-    { kind: 'example', head: 'Rewrite 18 + 24 with the GCF', body: 'GCF of 18 and 24 is 6.\nWrite each as 6 times something: 18 = 6 × 3 and 24 = 6 × 4.\nSo 18 + 24 = 6(3 + 4). Check: 6 × 7 = 42, and 18 + 24 = 42. Match!' },
+    },
+    {
+      kind: 'example',
+      head: 'Rewrite 18 + 24 with the GCF',
+      body: 'Pull the greatest common factor out of the sum 18 + 24, so it is written as a product.',
+      steps: {
+      steps: [
+        { tex: '\\text{GCF}(18, 24) = 6', text: 'List the factors: 18 has 1, 2, 3, 6, 9, 18 and 24 has 1, 2, 3, 4, 6, 8, 12, 24. The biggest shared one is 6.' },
+        { tex: '18 = 6 \\times 3,\\ 24 = 6 \\times 4', text: 'Write each number as 6 times something. The 6 is the shared factor, and the 3 and 4 are what is left over.' },
+        { tex: '6(3 + 4)', text: 'Pull the 6 out front using the distributive property backwards. The leftovers 3 and 4 stay inside the brackets, still added.' },
+        { tex: '6 \\times 7 = 42 = 18 + 24', text: 'Check by multiplying out: 6 × 7 = 42, and 18 + 24 is also 42. Both forms have the same value.' },
+      ], answer: '6(3 + 4)',
+    },
+    },
     {
       kind: 'example',
       head: 'Another way: use prime factors',
-      body: 'Find the LCM of 4 and 6 with primes.\n4 = 2 × 2, 6 = 2 × 3. Take each prime the most it appears: 2 × 2 × 3 = 12.',
-      steps: { steps: [{ tex: '12 = 2^2 \\times 3', text: 'Break the first into primes.' }, { tex: '18 = 2 \\times 3^2', text: 'Break the second into primes.' }, { tex: '\\gcd = 2 \\times 3 = 6', text: 'Take the lowest power of each shared prime.' }], answer: '6' },
+      body: 'Find the LCM of 4 and 6 using primes instead of listing multiples.',
+      steps: {
+      steps: [
+        { tex: '4 = 2 \\times 2,\\ 6 = 2 \\times 3', text: 'Break both numbers into primes. 4 has two 2s, and 6 has one 2 and one 3.' },
+        { tex: '\\text{most of each prime}', text: 'Take each prime the greatest number of times it appears in either number: two 2s from the 4 and one 3 from the 6.' },
+        { tex: '2 \\times 2 \\times 3 = 12', text: 'Multiply them. This number contains everything 4 needs and everything 6 needs, and nothing extra, so it is the least common multiple.' },
+      ], answer: '12',
+    },
     },
     { kind: 'protip', head: 'Primes make it automatic', body: 'Break both numbers into prime factors. GCF = multiply the primes they SHARE. LCM = multiply the shared primes once, plus every leftover prime. One factor tree answers both questions.' },
     {
@@ -463,7 +527,19 @@ export const NS_SLIDES: SlideBank = {
         note: 'Check the size of your answer against the two numbers before you write it down.',
       },
     },
-    { kind: 'challenge', head: 'Extra credit: cut the ropes', body: 'Two ropes are 24 m and 36 m. Cut both into equal longest pieces with none left over. How long?\nThat is GCF(24, 36) = 12 m. Each piece is 12 m.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: cut the ropes',
+      body: 'Ropes of 24 m and 36 m are cut into equal pieces, as long as possible, with none left over. How long is each piece?',
+      steps: {
+      steps: [
+        { tex: '\\text{GCF}(24, 36)', text: 'Equal pieces that leave nothing over must divide both lengths. The longest such piece is the greatest common factor.' },
+        { tex: '24 = 2^3 \\times 3,\\ 36 = 2^2 \\times 3^2', text: 'Break both numbers into primes so we can see what they share. 24 is 2 × 2 × 2 × 3 and 36 is 2 × 2 × 3 × 3.' },
+        { tex: '2 \\times 2 \\times 3 = 12', text: 'They share two 2s and one 3. Multiply them to get the GCF, which is 12.' },
+        { tex: '24 \\div 12 = 2,\\ 36 \\div 12 = 3', text: 'Check: the first rope makes 2 pieces and the second makes 3, with nothing left over. A longer piece would not divide both.' },
+      ], answer: '12\\text{ m}',
+    },
+    },
     { kind: 'summary', head: 'Divide in, multiply out', body: 'GCF: the biggest number dividing into both — find it with shared prime factors. LCM: the smallest number both divide into — scan multiples of the larger number. Pull the GCF out of a sum to write it as GCF × (sum): 18 + 24 = 6(3 + 4).' },
   ],
   '6.NS-4': [
@@ -483,6 +559,7 @@ export const NS_SLIDES: SlideBank = {
           { at: 0, label: '0', color: VIO },
           { at: 2, label: '2', color: EMR },
         ], { step: 1, title: 'one line, both directions', caption: 'Zero is the middle. Left of it is owing; right of it is having.' }),
+      why: 'Counting numbers only go one way from the start, but life also goes the other way: owing money, going below freezing, diving under the sea. So the number line has to continue past zero. Each negative number is a mirror of a positive one, so −3 is as far left of zero as 3 is to the right.',
     },
     {
       kind: 'concept',
@@ -497,6 +574,7 @@ export const NS_SLIDES: SlideBank = {
         ],
         note: 'Forget the digits. Whichever sits further right on the line is the bigger number.',
       },
+      why: 'Each step to the right on a number line adds 1. So the further right you are, the more you have, even past zero: −2 is one step right of −3, so it is one bigger. A thermometer works the same way. Higher is warmer, and −2° is warmer than −7°.',
     },
     {
       kind: 'concept',
@@ -511,43 +589,80 @@ export const NS_SLIDES: SlideBank = {
           { sym: '-7', means: 'position: seven steps to the LEFT', tone: 'warn' },
         ],
       },
+      why: 'Imagine walking to zero. From −7 you take 7 steps, and from 7 you also take 7 steps. Steps are just a count, so they are never negative. The bars ask "how many steps from zero?" and not "which direction?", which is why the answer is never below 0.',
     },
     {
       kind: 'example',
       head: 'Warm-up: |−7|',
-      body: 'How far is −7 from 0? Count the steps: seven.\nDistance is always positive.\n|−7| = 7.',
-      steps: { steps: [{ tex: '-7 \\text{ is 7 steps from 0}', text: 'Count the steps back to zero.' }, { tex: '|-7| = 7', text: 'Distance is always positive.' }], answer: '7' },
+      body: 'Absolute value asks how far a number is from zero. How far is −7?',
+      steps: {
+      steps: [
+        { tex: '-7 \\to 0', text: 'Picture the number line and count the steps from −7 back to 0. Walking 1, 2, 3, 4, 5, 6, 7 takes seven steps.' },
+        { tex: '|-7| = 7', text: 'The bars ask only for the distance, not the direction. A distance is a count of steps, so it is positive: 7.' },
+        { tex: '|7| = 7', text: 'Check with the mirror number. 7 is also seven steps from zero, but on the other side, so both numbers share the answer 7.' },
+      ], answer: '7',
+    },
     },
     {
       kind: 'example',
       head: 'Compare: −5 or −2?',
-      body: 'Picture the number line: −5 sits five steps left of zero, −2 only two steps left.\n−2 is to the RIGHT of −5.\nSo −2 is greater: −2 > −5.',
-      steps: { steps: [{ tex: '-5 \\text{ lies left of } -2', text: 'Picture both on the number line.' }, { tex: '-2 > -5', text: 'Further right wins.' }], answer: '-2' },
+      body: 'Which is greater, −5 or −2? Picture the number line, and remember that right means bigger.',
+      steps: {
+      steps: [
+        { tex: '-5\\ \\ -2\\ \\ 0', text: 'Picture the line. −5 is five steps left of zero and −2 is only two steps left, so −5 is further left.' },
+        { tex: '-5 < -2', text: 'Left means smaller on a number line, so −5 is the smaller number and −2 is the greater one.' },
+        { tex: '\\text{owing } \\$5 \\text{ vs } \\$2', text: 'Check with money. Owing 5 dollars is worse than owing 2 dollars, so −2 leaves you better off. That agrees: −2 > −5.' },
+      ], answer: '-2 > -5',
+    },
     },
     {
       kind: 'example',
       head: 'Compute: |−15|',
-      body: 'The bars ask for distance from zero.\n−15 is fifteen steps from 0.\n|−15| = 15.',
-      steps: { steps: [{ tex: '-15 \\text{ is 15 steps from } 0', text: 'Count the distance back to zero.' }, { tex: '|-15| = 15', text: 'Distance never comes out negative.' }], answer: '15' },
+      body: 'The bars ask for distance from zero. How far from zero is −15?',
+      steps: {
+      steps: [
+        { tex: '-15 \\to 0', text: 'Count the distance from −15 back to zero on the number line. It is fifteen steps to the right.' },
+        { tex: '|-15| = 15', text: 'The bars report the distance and throw away the direction. A distance is never negative, so the answer is 15.' },
+        { tex: '|15| = 15', text: 'Check: 15 sits fifteen steps on the other side of zero, so it has the same absolute value. Opposites always do.' },
+      ], answer: '15',
+    },
     },
     {
       kind: 'example',
       head: 'Order −3, 2, −8',
-      body: 'Place each on the number line: −8 is furthest left, then −3, then 2 on the positive side.\nLeast to greatest reads left to right.\nAnswer: −8, −3, 2.',
-      steps: { steps: [{ tex: '-8,\\ -3,\\ 2', text: 'Place all three on the number line.' }, { tex: '\\text{read left to right}', text: 'That reading gives the order.' }], answer: '-8 < -3 < 2' },
+      body: 'Put −3, 2 and −8 in order from least to greatest. A quick number line makes this easy.',
+      steps: {
+      steps: [
+        { tex: '-8\\ \\ -3\\ \\ 0\\ \\ 2', text: 'Mark each number on the line. −8 is eight steps left of zero, −3 is three steps left, and 2 is two steps right.' },
+        { tex: '\\text{left} \\to \\text{right}', text: 'Read the dots from left to right. On a number line, the further left, the smaller the number, so this reads least to greatest.' },
+        { tex: '-8 < -3 < 2', text: 'Write the order with less-than signs. Check: both negatives are below zero and 2 is above it, so 2 is greatest.' },
+      ], answer: '-8 < -3 < 2',
+    },
       art: numberLine(-10, 4, [{ at: -8, label: '−8', color: SKY }, { at: -3, label: '−3', color: AMB }, { at: 2, label: '2', color: EMR }], { title: 'Read them left to right', caption: 'Plot all three, then read off the order: −8, then −3, then 2.' }),
     },
     {
       kind: 'example',
       head: 'Diver vs kite',
-      body: 'A diver is at −30 ft and a kite at 12 ft. Who is farther from sea level (0)?\nCompare distances: |−30| = 30 and |12| = 12.\n30 > 12, so the diver is farther — even though −30 is the SMALLER number.',
-      steps: { steps: [{ tex: '\\text{diver} = -30', text: 'Below sea level is negative.' }, { tex: '\\text{kite} = 20', text: 'Above ground is positive.' }, { tex: '20 > -30', text: 'The kite is higher up.' }], answer: '\\text{the kite}' },
+      body: 'A diver is at −30 ft and a kite at 12 ft. Who is farther from sea level, which is 0? Compare the distances, not the numbers.',
+      steps: {
+      steps: [
+        { tex: '|-30| = 30', text: 'Distance from sea level is the absolute value. The diver is 30 feet from zero, because 30 steps separate −30 from 0.' },
+        { tex: '|12| = 12', text: 'The kite is 12 feet from zero. Distances count steps no matter which side of zero you are on.' },
+        { tex: '30 > 12', text: 'Since 30 is bigger than 12, the diver is farther from sea level, even though −30 is the smaller NUMBER.' },
+      ], answer: '\\text{the diver}',
+    },
     },
     {
       kind: 'example',
       head: 'Another way: compare by distance',
-      body: 'Which is greater, −5 or −2?\nOn the number line −2 is closer to 0, and for negatives, closer to 0 means greater. So −2 > −5.',
-      steps: { steps: [{ tex: '|-8| = 8,\\ |-3| = 3', text: 'Measure each from zero.' }, { tex: '\\text{further out} \\to \\text{smaller}', text: 'Among negatives, further from zero is smaller.' }] },
+      body: 'Which is greater, −5 or −2? This time, skip the picture and compare how far each is from zero.',
+      steps: {
+      steps: [
+        { tex: '|-5| = 5,\\ |-2| = 2', text: 'Measure each number from zero. −5 is five steps out and −2 is only two steps out.' },
+        { tex: '\\text{further out} \\to \\text{smaller}', text: 'For negative numbers, being further from zero means being further left. Further left means smaller, like a bigger debt.' },
+        { tex: '-2 > -5', text: 'So −2, which is closer to zero, is the greater number. This agrees with the picture and with money: owing less is better.' },
+      ], answer: '-2 > -5',
+    },
     },
     { kind: 'protip', head: 'Tell a story with the sign', body: 'Stuck comparing negatives? Turn them into money: −5 means owing $5, −2 means owing $2. Owing less means you\'re better off, so −2 > −5. Real-life stories make signed numbers obvious.' },
     {
@@ -571,8 +686,15 @@ export const NS_SLIDES: SlideBank = {
     {
       kind: 'challenge',
       head: 'Extra credit: temperature swing',
-      body: 'It is −3°C, drops 4°, then rises 5°. Final temperature?\n−3 − 4 = −7, then −7 + 5 = −2°C.',
-      steps: { steps: [{ tex: '-6 \\text{ up to } 9', text: 'Write the two temperatures.' }, { tex: '6 + 9 = 15', text: 'Count in to zero, then out again.' }], answer: '15^\\circ' },
+      body: 'It is −3°C. The temperature drops 4°, then rises 5°. What is the final temperature?',
+      steps: {
+      steps: [
+        { tex: '-3 - 4 = -7', text: 'A drop of 4 degrees means moving 4 steps down the thermometer. Starting below zero at −3, going down 4 puts you at −7.' },
+        { tex: '-7 + 5 = -2', text: 'A rise of 5 degrees means moving 5 steps up: −6, −5, −4, −3, −2. You end below zero, because 5 is not enough to climb past 7.' },
+        { tex: '-4 + 5 = +1', text: 'Check another way. The two changes together are −4 and +5, which is a net rise of 1 degree.' },
+        { tex: '-3 + 1 = -2', text: 'Starting at −3 and rising 1 gives −2, which matches. The final temperature is −2°C.' },
+      ], answer: '-2^\\circ\\text{C}',
+    },
     },
     {
       kind: 'summary',
@@ -604,6 +726,7 @@ export const NS_SLIDES: SlideBank = {
           { x: -3, y: -2, label: '(−3, −2)', color: ROSE },
           { x: 3, y: -2, label: '(3, −2)', color: AMB },
         ], { range: { x: [-4, 4], y: [-3, 3] }, title: 'one point in each quadrant', caption: 'The signs alone tell you which quarter of the plane you are in.' }),
+      why: 'Think of a street map: first you walk along the street, then you go up or down the stairs. Everyone agrees to do the across trip first, so each pair names exactly one spot. (3, 2) and (2, 3) are different spots, because the two trips happen in a different order.',
     },
     {
       kind: 'concept',
@@ -615,6 +738,7 @@ export const NS_SLIDES: SlideBank = {
         rows: [['I (top right)', '+', '+'], ['II (top left)', '−', '+'], ['III (bottom left)', '−', '−'], ['IV (bottom right)', '+', '−']],
         note: 'Number them anticlockwise starting top right — that order never changes.',
       },
+      why: 'Right of the y-axis, x is positive, and left of it x is negative. Above the x-axis, y is positive, and below it y is negative. Each quadrant is one choice of left or right plus one choice of up or down, so two signs name the quadrant without any plotting.',
     },
     {
       kind: 'concept',
@@ -622,12 +746,13 @@ export const NS_SLIDES: SlideBank = {
       body: 'If two points share an x-coordinate, they sit on the same vertical line — subtract the y-values for the distance. Share a y? Subtract the x-values. Distance is always positive, so take the absolute value of the difference.',
       art: plotGrid([{ x: 2, y: 1, label: '(2, 1)', color: SKY }, { x: 2, y: 6, label: '(2, 6)', color: EMR }], { join: true, range: { x: [0, 8], y: [0, 7] }, title: 'Matching x, so count the y', caption: 'Both points sit on x = 2, so the distance is simply 6 − 1 = 5.' }),
       steps: {
-        steps: [
-          { tex: '(2,\\ 1) \\text{ to } (2,\\ 7)', text: 'Same x, so the move is straight up.' },
-          { tex: '7 - 1', text: 'Subtract the two y values.' },
-        ],
-        answer: '6 \\text{ units}',
-      },
+      steps: [
+        { tex: '(2,\\ 1) \\text{ to } (2,\\ 7)', text: 'Both points have x = 2, so they stand on the same vertical line. The whole trip goes straight up.' },
+        { tex: '7 - 1 = 6', text: 'Subtract the smaller y from the bigger y. This counts the steps between the two heights.' },
+        { tex: '1 \\to 7: 6 \\text{ jumps}', text: 'Check by counting up the grid: from y = 1 to 2, 3, 4, 5, 6, 7 is six jumps. That agrees with the subtraction.' },
+      ], answer: '6 \\text{ units}',
+    },
+      why: 'Same x means neither point is left or right of the other, so the whole trip is straight up or down. Counting steps between two heights is subtraction: from 1 up to 7 is 7 − 1 = 6. The absolute value just keeps the answer positive whichever point you name first.',
     },
     {
       kind: 'concept',
@@ -642,29 +767,94 @@ export const NS_SLIDES: SlideBank = {
         ],
         note: 'You cross an axis, so the coordinate measured AGAINST that axis changes sign.',
       },
+      why: 'A mirror keeps the distance from the mirror the same but swaps the side. The y-axis mirror keeps your height but swaps left and right, so x changes sign. The x-axis mirror swaps above and below, so y changes sign. The coordinate you do not cross stays the same.',
     },
-    { kind: 'example', head: 'Warm-up: plot (−2, 3)', body: 'Start at the origin (0, 0).\nx = −2: go LEFT 2. y = 3: go UP 3.\nThe point lands in the top-left region — Quadrant II.' },
+    {
+      kind: 'example',
+      head: 'Warm-up: plot (−2, 3)',
+      body: 'Plot the point (−2, 3) by following its directions from the origin. Which region does it land in?',
+      steps: {
+      steps: [
+        { tex: '(0,\\ 0)', text: 'Start at the origin, the point where the two axes cross. Every ordered pair is a set of directions from here.' },
+        { tex: 'x = -2:\\ \\text{left } 2', text: 'The first number is x, and it comes first: across. It is negative, so go 2 steps LEFT of the origin.' },
+        { tex: 'y = 3:\\ \\text{up } 3', text: 'The second number is y: up or down. It is positive, so go 3 steps UP from where you stopped.' },
+        { tex: '\\text{left and up}', text: 'Left of the y-axis and above the x-axis is the top-left region. That is Quadrant II.' },
+      ], answer: '\\text{Quadrant II}',
+    },
+    },
     {
       kind: 'example',
       head: 'Name the quadrant: (−3, 5)',
-      body: 'Check the signs: x is negative, y is positive.\nNegative x means left of the y-axis; positive y means above the x-axis.\nTop-left is Quadrant II.',
-      steps: { steps: [{ tex: 'x < 0,\\ y > 0', text: 'Read the two signs.' }, { tex: '\\text{left and up}', text: 'That places it in quadrant II.' }], answer: '\\text{II}' },
+      body: 'You can name the quadrant just by reading the signs of x and y.',
+      steps: {
+      steps: [
+        { tex: 'x = -3 < 0', text: 'The first coordinate is negative. Negative x means the point is left of the y-axis.' },
+        { tex: 'y = 5 > 0', text: 'The second coordinate is positive. Positive y means the point is above the x-axis.' },
+        { tex: '\\text{left and up}', text: 'Left and up is the top-left corner of the plane. The quadrants are numbered counterclockwise from top right, so this is Quadrant II.' },
+      ], answer: '\\text{II}',
     },
-    { kind: 'example', head: 'Name the quadrant: (6, −2)', body: 'Signs: x positive (right), y negative (down).\nRight and down is the bottom-right region.\nThat\'s Quadrant IV.' },
-    { kind: 'example', head: 'Vertical distance: (2, 1) to (2, 6)', body: 'Both points have x = 2, so they line up vertically.\nSubtract the y-values: 6 − 1 = 5.\nDistance: 5 units.' },
+    },
+    {
+      kind: 'example',
+      head: 'Name the quadrant: (6, −2)',
+      body: 'Read the two signs in (6, −2) to find which quadrant the point is in.',
+      steps: {
+      steps: [
+        { tex: 'x = 6 > 0', text: 'The first coordinate is positive. Positive x means the point is to the right of the y-axis.' },
+        { tex: 'y = -2 < 0', text: 'The second coordinate is negative. Negative y means the point is below the x-axis.' },
+        { tex: '\\text{right and down}', text: 'Right and down is the bottom-right region. Counting counterclockwise from the top right, that is Quadrant IV.' },
+      ], answer: '\\text{IV}',
+    },
+    },
+    {
+      kind: 'example',
+      head: 'Vertical distance: (2, 1) to (2, 6)',
+      body: 'Two points share the same x. How far apart are they?',
+      steps: {
+      steps: [
+        { tex: 'x: 2 = 2', text: 'Both points have x = 2, so they are on the same vertical line. All of the distance is in the y-values.' },
+        { tex: '6 - 1 = 5', text: 'Subtract the y-values, the bigger minus the smaller. This counts the steps from height 1 up to height 6.' },
+        { tex: '1 \\to 6: 5 \\text{ jumps}', text: 'Check by counting up: 2, 3, 4, 5, 6 is five jumps. The two points are 5 units apart.' },
+      ], answer: '5 \\text{ units}',
+    },
+    },
     {
       kind: 'example',
       head: 'Across the axis: (−3, 4) to (5, 4)',
-      body: 'Both have y = 4, so the path is horizontal.\nSubtract x-values: 5 − (−3) = 5 + 3 = 8.\nDistance: 8 units — count the 3 steps to zero plus 5 more.',
-      steps: { steps: [{ tex: 'y: 4 = 4', text: 'Matching y means a horizontal gap.' }, { tex: '|5 - (-3)| = 8', text: 'Subtracting a negative adds.' }], answer: '8' },
+      body: 'The two points are on opposite sides of the y-axis. How far apart are they?',
+      steps: {
+      steps: [
+        { tex: 'y: 4 = 4', text: 'Both points have y = 4, so they sit on the same horizontal line. The distance is in the x-values.' },
+        { tex: '5 - (-3) = 5 + 3 = 8', text: 'Subtract the x-values, the bigger minus the smaller. Subtracting a negative adds, because taking away a debt of 3 makes you 3 better off.' },
+        { tex: '3 + 5 = 8', text: 'Check by counting on the grid: 3 steps from −3 to the y-axis, then 5 more steps to x = 5. That is 8 units.' },
+      ], answer: '8 \\text{ units}',
+    },
     },
     {
       kind: 'example',
       head: 'Reflect (4, 3) across the y-axis',
-      body: 'The y-axis is a left-right mirror, so only x changes sign.\nx: 4 → −4. y stays 3.\nAnswer: (−4, 3).',
-      steps: { steps: [{ tex: '\\text{mirror in } y', text: 'The y-axis is the mirror line.' }, { tex: '(4, 3) \\to (-4, 3)', text: 'Only the x-sign flips.' }], answer: '(-4, 3)' },
+      body: 'Reflect the point (4, 3) across the y-axis. Which coordinate changes?',
+      steps: {
+      steps: [
+        { tex: '\\text{mirror: the } y\\text{-axis}', text: 'The y-axis is a vertical line, so it works like a mirror that swaps left and right. Up and down do not change.' },
+        { tex: 'x: 4 \\to -4', text: 'The point is 4 steps right of the mirror, so its image is 4 steps left. That is the same distance on the other side, so x flips sign.' },
+        { tex: 'y = 3', text: 'The y-value stays 3, because the point is reflected sideways and stays at the same height.' },
+        { tex: '(-4,\\ 3)', text: 'Put them together to get the image. Both points are 4 from the y-axis, so the mirror line sits exactly halfway between them.' },
+      ], answer: '(-4,\\ 3)',
     },
-    { kind: 'example', head: 'Another way: count to the mirror line', body: 'Reflect (3, 2) across the y-axis by counting.\nThe point is 3 right of the axis; its mirror image is 3 left at the same height: (−3, 2).' },
+    },
+    {
+      kind: 'example',
+      head: 'Another way: count to the mirror line',
+      body: 'Reflect (3, 2) across the y-axis by counting steps to the mirror instead of using a sign rule.',
+      steps: {
+      steps: [
+        { tex: '3 \\text{ right of the axis}', text: 'Count how far the point is from the y-axis, the mirror line. It is 3 steps to the right.' },
+        { tex: '3 \\text{ left of the axis}', text: 'A mirror image is the same distance from the mirror, on the other side. So go 3 steps left of the axis.' },
+        { tex: '(-3,\\ 2)', text: 'Stay at the same height, y = 2, because the mirror only swaps left and right. The image is (−3, 2), the same answer the sign rule gives.' },
+      ], answer: '(-3,\\ 2)',
+    },
+    },
     { kind: 'protip', head: 'Signs are a GPS', body: 'Before plotting, read the signs like directions: (+, +) means right-up, (−, +) left-up, (−, −) left-down, (+, −) right-down. You\'ll know the quadrant before your pencil moves. It also catches plotting mistakes instantly.' },
     {
       kind: 'trap',
@@ -678,7 +868,18 @@ export const NS_SLIDES: SlideBank = {
         ],
       },
     },
-    { kind: 'challenge', head: 'Extra credit: line length', body: 'A vertical segment runs from (2, 5) to (2, −1). How long is it?\nSubtract the y-values: 5 − (−1) = 6 units long.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: line length',
+      body: 'A vertical segment runs from (2, 5) to (2, −1). It crosses the x-axis. How long is it?',
+      steps: {
+      steps: [
+        { tex: 'x: 2 = 2', text: 'Both points have x = 2, so the segment is vertical and its length is found from the y-values.' },
+        { tex: '5 - (-1) = 5 + 1 = 6', text: 'Subtract the y-values, bigger minus smaller. Subtracting a negative adds, because the segment crosses the x-axis.' },
+        { tex: '5 + 1 = 6', text: 'Check by counting: 5 units down from y = 5 to the x-axis, then 1 more unit down to y = −1. That is 6 units in all.' },
+      ], answer: '6 \\text{ units}',
+    },
+    },
     { kind: 'summary', head: 'The whole plane, unlocked', body: 'Plot (x, y) by going across first, then up or down — signs give the direction. Quadrants I–IV are named by the sign pair. Grid-line distance: subtract the coordinates that differ and take absolute value. Reflections flip exactly one sign.' },
   ],
   '6.NS-6': [
@@ -694,6 +895,7 @@ export const NS_SLIDES: SlideBank = {
       body: 'The problem 1/2 ÷ 1/4 asks: how many quarter-pieces fit inside one half? Picture a half sandwich cut into quarters — two of them fit. That\'s why dividing by a small fraction gives a BIG answer.',
       formula: { tex: 'a \\div \\tfrac{1}{n} = a \\times n', note: 'Dividing by a small piece gives a big answer — how many fit inside.', parts: [{ sym: '\\tfrac{1}{n}', means: 'the small piece you are fitting in', tone: 'accent' }, { sym: '\\times n', means: 'flipping it is what makes the answer grow', tone: 'ok' }] },
       art: fractionBar(8, 8, { label: '8 quarters fit in 2 wholes', title: '2 ÷ ¼ — how many quarters?', caption: 'Dividing by a small piece gives a BIG answer, because many of them fit.' }),
+      why: 'Division is about fitting: 6 ÷ 2 asks how many 2s fit into 6. With fractions it is the same question. Quarters are small pieces, so many of them fit into a bigger piece: two quarters make a half. Small pieces give a bigger count.',
     },
     {
       kind: 'concept',
@@ -709,6 +911,7 @@ export const NS_SLIDES: SlideBank = {
           { sym: '\\text{Flip}', means: 'the SECOND fraction turns upside down', tone: 'warn' },
         ],
       },
+      why: 'Dividing by 1/4 asks how many quarters fit in each whole, and the answer is 4, so dividing by 1/4 is the same as multiplying by 4. The flipped fraction 4/1 is exactly that "how many fit in one whole" number. Keep-Change-Flip is this one fact used on every fraction.',
     },
     {
       kind: 'concept',
@@ -716,60 +919,107 @@ export const NS_SLIDES: SlideBank = {
       body: 'Dividing by 1/2 means asking how many halves fit — and 2 halves fit in every whole, so it\'s the same as multiplying by 2. The reciprocal 2/1 IS that "how many fit per whole" number. Flipping isn\'t a magic trick; it\'s the fitting rate.',
       art: fractionBar(2, 1, { label: '1 ÷ ½ asks how many halves', second: { parts: 2, shaded: 2, label: 'the answer is 2' }, title: 'Dividing by a half doubles', caption: 'Dividing by a number smaller than one makes the answer BIGGER — flipping is what captures that.' }),
       steps: {
-        steps: [
-          { tex: '1 \\div \\tfrac{1}{4}', text: 'How many quarters in one whole?' },
-          { tex: '4', text: 'Four of them.' },
-          { tex: '1 \\times \\tfrac{4}{1} = 4', text: 'Flipping gives the same answer — that is why it works.' },
-        ],
-      },
+      steps: [
+        { tex: '1 \\div \\tfrac{1}{4}', text: 'This asks how many quarter-pieces fit inside one whole. Think of cutting a pizza into quarters.' },
+        { tex: '4', text: 'Four quarters make one whole, so four pieces fit. That is the count the division is looking for.' },
+        { tex: '1 \\times \\tfrac{4}{1} = 4', text: 'Multiplying by the flipped fraction 4/1 gives the same 4. So flipping is just a shortcut for the number of pieces per whole.' },
+      ],
+    },
+      why: 'One whole holds 4 quarters, so dividing by 1/4 is the same as multiplying by 4. The same works for 3/4: one whole holds 4/3 pieces of size 3/4, because 3/4 × 4/3 = 1. The flipped fraction is always how many times the piece fits in one whole.',
     },
     {
       kind: 'concept',
       head: 'Then multiply straight across',
       body: 'After the flip, it\'s a multiplication you already know: tops times tops, bottoms times bottoms. Finish by simplifying — divide top and bottom by their GCF. An answer like 6/4 should leave home as 3/2.',
       formula: { tex: '\\dfrac{a}{b} \\times \\dfrac{d}{c} = \\dfrac{ad}{bc}', note: 'Tops multiply with tops, bottoms with bottoms.', parts: [{ sym: 'ad', means: 'the two numerators multiplied', tone: 'accent' }, { sym: 'bc', means: 'the two denominators multiplied', tone: 'ok' }] },
+      why: 'Multiplying fractions means taking a fraction of a fraction. Half of a half is a quarter: tops 1 × 1 = 1 and bottoms 2 × 2 = 4. Cutting a whole into b parts and then each part into c parts makes b × c parts, so the bottoms multiply and the tops count how many you keep.',
     },
     {
       kind: 'example',
       head: 'Warm-up: 1/2 ÷ 1/4',
-      body: 'Keep 1/2, change ÷ to ×, flip 1/4 to 4/1.\n1/2 × 4/1: tops 1 × 4 = 4, bottoms 2 × 1 = 2. That\'s 4/2.\nSimplify: 4/2 = 2. Two quarters fit in a half!',
-      steps: { steps: [{ tex: '\\tfrac{1}{2} \\times \\tfrac{4}{1}', text: 'Keep, change, flip.' }, { tex: '= \\tfrac{4}{2} = 2', text: 'Multiply across and simplify.' }], answer: '2' },
+      body: 'How many quarters fit inside one half? Use Keep-Change-Flip to find out, then see if it makes sense.',
+      steps: {
+      steps: [
+        { tex: '\\tfrac{1}{2} \\times \\tfrac{4}{1}', text: 'Keep 1/2, change ÷ to ×, and flip 1/4 to 4/1. Dividing by a fraction is the same as multiplying by its flip.' },
+        { tex: '\\tfrac{1 \\times 4}{2 \\times 1} = \\tfrac{4}{2}', text: 'Multiply the tops, 1 × 4 = 4, and multiply the bottoms, 2 × 1 = 2. That gives four halves.' },
+        { tex: '\\tfrac{4}{2} = 2', text: 'Simplify by dividing top and bottom by 2. Four halves is the same as 2, so two quarters fit in a half, just like the picture shows.' },
+      ], answer: '2',
+    },
     },
     {
       kind: 'example',
       head: 'Check it with a picture',
-      body: '1/3 ÷ 1/6 = ? Think: how many sixths fit inside one third?\nA third equals two sixths — picture a pizza slice cut in half.\nKeep-change-flip agrees: 1/3 × 6/1 = 6/3 = 2.',
-      steps: { steps: [{ tex: '\\tfrac{1}{2} \\div \\tfrac{1}{4}', text: 'How many quarters fit inside a half?' }, { tex: '\\text{two quarters fit}', text: 'The picture agrees with the arithmetic.' }], answer: '2' },
+      body: '1/3 ÷ 1/6 asks how many sixths fit inside one third. Use a picture first, then see if Keep-Change-Flip agrees.',
+      steps: {
+      steps: [
+        { tex: '\\tfrac{1}{3} = \\tfrac{2}{6}', text: 'Cut a pizza slice that is one third in half. Each piece is a sixth of the whole pizza, so one third is two sixths.' },
+        { tex: '\\text{two sixths fit}', text: 'The question asks how many sixths fit in a third. We just saw that the answer is 2.' },
+        { tex: '\\tfrac{1}{3} \\times \\tfrac{6}{1} = \\tfrac{6}{3} = 2', text: 'Now do Keep-Change-Flip: keep 1/3, change to ×, flip 1/6 to 6/1. Six thirds simplifies to 2, so the picture and the rule agree.' },
+      ], answer: '2',
+    },
     },
     {
       kind: 'example',
       head: 'Bigger than 1: 3/4 ÷ 1/2',
-      body: 'Keep-change-flip: 3/4 × 2/1.\nTops: 3 × 2 = 6. Bottoms: 4 × 1 = 4. That\'s 6/4.\nSimplify by dividing top and bottom by 2: 3/2, which is 1 1/2.',
-      steps: { steps: [{ tex: '\\tfrac{3}{4} \\times \\tfrac{2}{1}', text: 'Flip the second fraction.' }, { tex: '= \\tfrac{6}{4} = \\tfrac{3}{2}', text: 'Multiply across, then simplify.' }], answer: '\\tfrac{3}{2}' },
+      body: 'How many halves fit in three quarters? Use Keep-Change-Flip, then simplify.',
+      steps: {
+      steps: [
+        { tex: '\\tfrac{3}{4} \\times \\tfrac{2}{1}', text: 'Keep 3/4, change ÷ to ×, and flip the second fraction 1/2 into 2/1. Only the fraction you divide BY gets flipped.' },
+        { tex: '\\tfrac{3 \\times 2}{4 \\times 1} = \\tfrac{6}{4}', text: 'Multiply the tops, 3 × 2 = 6, and the bottoms, 4 × 1 = 4. The result is six quarters.' },
+        { tex: '\\tfrac{6}{4} = \\tfrac{3}{2}', text: 'Simplify by dividing the top and bottom by their GCF, 2. The answer is 3/2, which is 1 and a half.' },
+        { tex: '\\tfrac{3}{2} > \\tfrac{3}{4}', text: 'Sense check: halves are bigger than quarters, so we expect to fit a bit more than one half into three quarters. 3/2 is bigger than 1, so it makes sense.' },
+      ], answer: '\\tfrac{3}{2}',
+    },
     },
     {
       kind: 'example',
       head: 'Divide BY a whole number: 2/3 ÷ 4',
-      body: 'Write 4 as a fraction: 4/1. Flip it to 1/4.\n2/3 × 1/4: tops 2 × 1 = 2, bottoms 3 × 4 = 12. That\'s 2/12.\nSimplify: 2/12 = 1/6. Sharing 2/3 among 4 people gives each 1/6.',
-      steps: { steps: [{ tex: '4 = \\tfrac{4}{1}', text: 'A whole number is a fraction over one.' }, { tex: '\\tfrac{2}{3} \\times \\tfrac{1}{4} = \\tfrac{2}{12}', text: 'Flip it and multiply.' }, { tex: '= \\tfrac{1}{6}', text: 'Simplify the result.' }], answer: '\\tfrac{1}{6}' },
+      body: 'Share 2/3 equally among 4 people. Turn the whole number into a fraction, then use Keep-Change-Flip.',
+      steps: {
+      steps: [
+        { tex: '4 = \\tfrac{4}{1}', text: 'A whole number can be written as a fraction over 1 without changing its value. Now we can divide by it like any other fraction.' },
+        { tex: '\\tfrac{2}{3} \\times \\tfrac{1}{4}', text: 'Keep 2/3, change ÷ to ×, and flip 4/1 to 1/4. Dividing by 4 is the same as taking one quarter of the amount.' },
+        { tex: '\\tfrac{2}{12}', text: 'Multiply the tops, 2 × 1 = 2, and the bottoms, 3 × 4 = 12. This is the amount each person gets, before simplifying.' },
+        { tex: '\\tfrac{2}{12} = \\tfrac{1}{6}', text: 'Divide top and bottom by 2. Check: 4 people with 1/6 each is 4/6, which simplifies to 2/3, the amount we started with.' },
+      ], answer: '\\tfrac{1}{6}',
+    },
     },
     {
       kind: 'example',
       head: 'Full workout: 5/6 ÷ 1/2',
-      body: 'Keep 5/6, change to ×, flip 1/2 to 2/1.\nTops: 5 × 2 = 10. Bottoms: 6 × 1 = 6. That\'s 10/6.\nSimplify by 2: 5/3, or 1 2/3.',
-      steps: { steps: [{ tex: '\\tfrac{5}{6} \\times \\tfrac{2}{1}', text: 'Keep, change, flip.' }, { tex: '= \\tfrac{10}{6} = \\tfrac{5}{3}', text: 'Multiply across, then simplify.' }], answer: '\\tfrac{5}{3}' },
+      body: 'Keep, change, flip, multiply, then simplify. Watch which fraction gets flipped.',
+      steps: {
+      steps: [
+        { tex: '\\tfrac{5}{6} \\times \\tfrac{2}{1}', text: 'Keep 5/6, change ÷ to ×, and flip 1/2 into 2/1. The first fraction stays exactly as it is.' },
+        { tex: '\\tfrac{5 \\times 2}{6 \\times 1} = \\tfrac{10}{6}', text: 'Multiply the tops, 5 × 2 = 10, and the bottoms, 6 × 1 = 6. That gives ten sixths.' },
+        { tex: '\\tfrac{10}{6} = \\tfrac{5}{3}', text: 'Simplify by dividing top and bottom by their GCF, 2. The answer 5/3 is 1 and two thirds.' },
+        { tex: '\\tfrac{5}{3} > \\tfrac{5}{6}', text: 'Sense check: we divided by a number under 1, so the answer should be bigger than 5/6. And 5/3 is bigger, so it passes.' },
+      ], answer: '\\tfrac{5}{3}',
+    },
     },
     {
       kind: 'example',
       head: 'Another way: use common denominators',
-      body: 'Divide 3/4 ÷ 2/4 by comparing top numbers.\nWith the same bottom, just divide the tops: 3 ÷ 2 = 3/2 = 1 1/2.',
-      steps: { steps: [{ tex: '\\tfrac{3}{4} \\div \\tfrac{1}{2} = \\tfrac{3}{4} \\div \\tfrac{2}{4}', text: 'Rename both with the same bottom.' }, { tex: '3 \\div 2 = \\tfrac{3}{2}', text: 'Then just divide the tops.' }], answer: '\\tfrac{3}{2}' },
+      body: 'Divide 3/4 ÷ 1/2 by renaming both fractions so they have the same bottom. Then what is left to divide?',
+      steps: {
+      steps: [
+        { tex: '\\tfrac{1}{2} = \\tfrac{2}{4}', text: 'Rename 1/2 as 2/4 by multiplying the top and bottom by 2. The value stays the same, but now both fractions are measured in quarters.' },
+        { tex: '\\tfrac{3}{4} \\div \\tfrac{2}{4}', text: 'The problem is now 3 quarters divided by 2 quarters. Pieces of the same size can simply be counted.' },
+        { tex: '3 \\div 2 = \\tfrac{3}{2}', text: 'Divide the tops: 3 pieces divided into groups of 2 pieces is 3/2. The size of the piece no longer matters, so it matches Keep-Change-Flip.' },
+      ], answer: '\\tfrac{3}{2}',
+    },
     },
     {
       kind: 'protip',
       head: 'Predict big or small first',
       body: 'Before computing, ask: is the divisor smaller than 1? Then lots of pieces fit, so expect an answer BIGGER than the first fraction. Dividing by a number bigger than 1 shrinks things. This one prediction catches flipped-the-wrong-fraction errors instantly.',
-      steps: { steps: [{ tex: '\\text{dividing by} < 1', text: 'Ask whether the divisor is under one.' }, { tex: '\\text{answer grows}', text: 'If so, expect a bigger answer.' }] },
+      steps: {
+      steps: [
+        { tex: '\\text{divisor} < 1', text: 'Look at the number you are dividing BY. If it is under 1, it is a small piece, so lots of pieces will fit.' },
+        { tex: '\\text{answer grows}', text: 'So the answer must be bigger than the number you started with. Example: 3/4 ÷ 1/2 = 3/2, which is bigger than 3/4.' },
+        { tex: '\\text{divisor} > 1', text: 'If you divide by something bigger than 1, the answer shrinks instead, because a big piece fits fewer times.' },
+      ],
+    },
     },
     {
       kind: 'trap',
@@ -787,8 +1037,15 @@ export const NS_SLIDES: SlideBank = {
     {
       kind: 'challenge',
       head: 'Extra credit: how many batches',
-      body: 'You have 3 cups of flour and each batch needs 3/4 cup. How many batches?\n3 ÷ 3/4 = 3 × 4/3 = 12/3 = 4 batches.',
-      steps: { steps: [{ tex: '\\text{let } b = \\text{batches}', text: 'Name what you are counting.' }, { tex: '\\tfrac{5}{6} \\div \\tfrac{1}{6} = 5', text: 'Flip and multiply.' }], answer: '5' },
+      body: 'You have 3 cups of flour and each batch needs 3/4 cup. How many batches can you make?',
+      steps: {
+      steps: [
+        { tex: '3 \\div \\tfrac{3}{4}', text: 'The question asks how many 3/4-cup scoops fit in 3 cups, so it is a division. Write 3 as 3/1.' },
+        { tex: '3 \\times \\tfrac{4}{3} = \\tfrac{12}{3}', text: 'Keep 3, change ÷ to ×, and flip 3/4 to 4/3. Multiply the tops, 3 × 4 = 12, and keep the bottom 3.' },
+        { tex: '\\tfrac{12}{3} = 4', text: 'Divide 12 by 3 to get 4 batches. Sense check: each cup holds a little more than one batch, so three cups should give about four.' },
+        { tex: '4 \\times \\tfrac{3}{4} = 3', text: 'Check by multiplying back: 4 batches at 3/4 cup each uses 12/4 = 3 cups, exactly the flour we have.' },
+      ], answer: '4 \\text{ batches}',
+    },
     },
     {
       kind: 'summary',
@@ -821,6 +1078,7 @@ export const NS_SLIDES: SlideBank = {
           { title: 'Right', tex: '\\begin{matrix} 482 \\\\ \\ 37 \\end{matrix}', lines: ['Right-aligned', 'Ones under ones'], tone: 'ok' },
         ],
       },
+      why: 'A digit is worth different amounts in different columns: the 8 in 482 is 8 tens, and the 3 in 37 is 3 tens. We can only add or subtract amounts of the same size, ones with ones and tens with tens. Straight columns make that happen. Start on the right, because carries and borrows move left.',
     },
     {
       kind: 'concept',
@@ -829,12 +1087,13 @@ export const NS_SLIDES: SlideBank = {
       formula: { tex: '10 \\text{ ones} = 1 \\text{ ten}', note: 'A column can only hold nine. The tenth moves next door.', parts: [{ sym: '10', means: 'the moment a column overflows', tone: 'accent' }, { sym: '1 \\text{ ten}', means: 'what carries into the next column left', tone: 'ok' }] },
       art: tape([{ label: 'ones', boxes: 10, each: '1', color: SKY }, { label: 'becomes', boxes: 1, each: '10', color: EMR }], { total: 'ten ones trade for one ten', title: 'Ten of anything trades up', caption: 'A column can only hold nine. The tenth one moves next door as a single carry.' }),
       steps: {
-        steps: [
-          { tex: '8 + 7 = 15', text: 'Too big for one column.' },
-          { tex: '\\text{write } 5', text: 'Five stays in the ones.' },
-          { tex: '\\text{carry } 1', text: 'The ten moves next door.' },
-        ],
-      },
+      steps: [
+        { tex: '8 + 7 = 15', text: 'Add the ones column. Fifteen is too big for one column, because a column only holds the digits 0 to 9.' },
+        { tex: '\\text{write } 5', text: 'Fifteen ones is 1 ten and 5 ones. Write the 5 ones in the ones column, where they belong.' },
+        { tex: '\\text{carry } 1', text: 'Pass the ten to the tens column as a small 1. That ten is a real amount, so if you drop it your answer will be 10 too small.' },
+      ],
+    },
+      why: 'Each column can only hold the digits 0 to 9, because ten of one place is the same as one of the next place up, like ten pennies trading for a dime. If a column adds up to 15, that is 1 ten and 5 ones. Write the 5 and pass the ten to the next column.',
     },
     {
       kind: 'concept',
@@ -843,40 +1102,114 @@ export const NS_SLIDES: SlideBank = {
       formula: { tex: '1 \\text{ ten} = 10 \\text{ ones}', note: 'Break a ten into ten ones so the column has enough to subtract from.', parts: [{ sym: '1 \\text{ ten}', means: 'taken from the neighbour on the left', tone: 'accent' }, { sym: '10 \\text{ ones}', means: 'added to the column that ran short', tone: 'ok' }] },
       art: tape([{ label: 'one ten', boxes: 1, each: '10', color: EMR }, { label: 'becomes', boxes: 10, each: '1', color: SKY }], { total: 'borrow once, gain ten ones', title: 'Borrowing is trading down', caption: 'You break a ten into ten ones so the column above has enough to subtract from.' }),
       steps: {
-        steps: [
-          { tex: '4 - 7', text: 'Not enough in this column.' },
-          { tex: '\\text{take } 1 \\text{ from the tens}', text: 'That one ten is worth ten ones.' },
-          { tex: '14 - 7 = 7', text: 'Now there is plenty.' },
-        ],
-      },
+      steps: [
+        { tex: '4 - 7', text: 'The top digit 4 is smaller than 7, so we cannot take 7 away from it. We need more ones to work with.' },
+        { tex: '\\text{take } 1 \\text{ ten} = 10 \\text{ ones}', text: 'Borrow 1 ten from the tens column and trade it for 10 ones. The value is the same, and the tens digit goes down by 1.' },
+        { tex: '14 - 7 = 7', text: 'Now the ones column has 4 + 10 = 14, which is plenty. Subtract: 14 − 7 = 7.' },
+      ],
     },
-    { kind: 'example', head: 'Warm-up: 34 + 25', body: 'Stack: ones 4 + 5 = 9, no carry.\nTens: 3 + 2 = 5.\nAnswer: 59.' },
+      why: 'Borrowing is making change. If you owe 7 pennies but only have 4, you trade one dime for 10 pennies and now have 14. Your money is the same, just in smaller coins. That is why the tens digit drops by 1 while the ones digit gains 10.',
+    },
+    {
+      kind: 'example',
+      head: 'Warm-up: 34 + 25',
+      body: 'Stack 34 and 25 by place value and add column by column, starting on the right.',
+      steps: {
+      steps: [
+        { tex: '\\begin{matrix} 34 \\\\ +25 \\end{matrix}', text: 'Stack the numbers with ones under ones and tens under tens. Then we add from the right, in case something has to carry.' },
+        { tex: '4 + 5 = 9', text: 'Add the ones: 4 + 5 = 9. That is a single digit, so nothing carries into the tens.' },
+        { tex: '3 + 2 = 5', text: 'Add the tens: 3 + 2 = 5. Put the 5 in the tens place to make the answer 59.' },
+      ], answer: '59',
+    },
+    },
     {
       kind: 'example',
       head: 'One carry: 618 + 274',
-      body: 'Ones: 8 + 4 = 12 — write 2, carry 1.\nTens: 1 + 7 + the carry 1 = 9.\nHundreds: 6 + 2 = 8. Answer: 892.',
-      steps: { steps: [{ tex: '8 + 4 = 12', text: 'The ones column overflows.' }, { tex: '\\text{write } 2,\\ \\text{carry } 1', text: 'Keep two, carry one left.' }, { tex: '= 892', text: 'Finish the remaining columns.' }], answer: '892' },
+      body: 'Add 618 and 274 column by column. One column goes over 9, so a carry is needed.',
+      steps: {
+      steps: [
+        { tex: '8 + 4 = 12', text: 'Add the ones column first. Twelve is over 9, so it has to be split into 1 ten and 2 ones.' },
+        { tex: '\\text{write } 2,\\ \\text{carry } 1', text: 'Write the 2 ones in the answer and carry the 1 ten to the tens column. The carry is a real ten, so it must be added.' },
+        { tex: '1 + 7 + 1 = 9', text: 'Add the tens: the 1 from 618, the 7 from 274 and the carried 1. That makes 9, which is under 10, so nothing carries.' },
+        { tex: '6 + 2 = 8', text: 'Add the hundreds: 6 + 2 = 8. Reading the columns left to right gives 892.' },
+      ], answer: '892',
     },
-    { kind: 'example', head: 'Carry twice: 425 + 376', body: 'Ones: 5 + 6 = 11 — write 1, carry 1.\nTens: 2 + 7 + 1 = 10 — write 0, carry 1.\nHundreds: 4 + 3 + 1 = 8. Answer: 801.' },
-    { kind: 'example', head: 'Borrow twice: 952 − 387', body: 'Ones: 2 − 7 won\'t go. Borrow: 12 − 7 = 5, and the 5 tens become 4.\nTens: 4 − 8 won\'t go. Borrow: 14 − 8 = 6, and the 9 hundreds become 8.\nHundreds: 8 − 3 = 5. Answer: 565.' },
+    },
+    {
+      kind: 'example',
+      head: 'Carry twice: 425 + 376',
+      body: 'Add 425 and 376. Watch for carries in two columns, and do not drop either one.',
+      steps: {
+      steps: [
+        { tex: '5 + 6 = 11', text: 'Add the ones: 5 + 6 = 11. That is 1 ten and 1 one, so write 1 and carry the 1 ten.' },
+        { tex: '2 + 7 + 1 = 10', text: 'Add the tens: 2 + 7 plus the carried 1 makes 10. Ten tens is a hundred, so write 0 and carry 1 to the hundreds.' },
+        { tex: '4 + 3 + 1 = 8', text: 'Add the hundreds: 4 + 3 plus the carried 1 makes 8, with nothing left to carry. The answer is 801.' },
+      ], answer: '801',
+    },
+    },
+    {
+      kind: 'example',
+      head: 'Borrow twice: 952 − 387',
+      body: 'Subtract 387 from 952. The top digit is too small in two different columns, so you must borrow twice.',
+      steps: {
+      steps: [
+        { tex: '12 - 7 = 5', text: 'Ones: 2 is smaller than 7, so borrow 1 ten, which is worth 10 ones. Now we have 12 − 7 = 5, and the 5 tens become 4.' },
+        { tex: '14 - 8 = 6', text: 'Tens: the 4 tens are smaller than 8, so borrow 1 hundred, which is worth 10 tens. Now we have 14 − 8 = 6, and the 9 hundreds become 8.' },
+        { tex: '8 - 3 = 5', text: 'Hundreds: after lending, 8 − 3 = 5. Reading the columns gives 565.' },
+        { tex: '565 + 387 = 952', text: 'Check by adding back: subtraction and addition undo each other, so 565 + 387 should return 952, and it does.' },
+      ], answer: '565',
+    },
+    },
     {
       kind: 'example',
       head: 'Across the zeros: 500 − 173',
-      body: 'Ones: 0 − 3 won\'t go, and the tens are 0 too — borrow from the hundreds. 500 becomes 4 hundreds, 9 tens, 10 ones.\nOnes: 10 − 3 = 7. Tens: 9 − 7 = 2. Hundreds: 4 − 1 = 3.\nAnswer: 327.',
-      steps: { steps: [{ tex: '\\text{ones: } 0 - 3', text: 'Nothing to subtract from.' }, { tex: '\\text{borrow across the zeros}', text: 'Trade down twice to reach a ten.' }, { tex: '= 327', text: 'Then subtract each column.' }], answer: '327' },
+      body: 'The top number has zeros in the ones and tens, so there is nothing to borrow from nearby. Where does the borrow come from?',
+      steps: {
+      steps: [
+        { tex: '0 - 3', text: 'The ones column cannot subtract 3 from 0, and the tens digit is 0, so it has nothing to lend either. We must go to the hundreds.' },
+        { tex: '5 \\text{ hundreds} \\to 4 \\text{ hundreds} + 10 \\text{ tens}', text: 'Borrow 1 hundred from the 5, which is worth 10 tens. Now the tens column has 10 to work with.' },
+        { tex: '10 \\text{ tens} \\to 9 \\text{ tens} + 10 \\text{ ones}', text: 'Now lend 1 ten to the ones column, which is worth 10 ones. The tens become 9, and the ones become 10.' },
+        { tex: '10 - 3 = 7,\\ 9 - 7 = 2,\\ 4 - 1 = 3', text: 'Subtract each column: ones 10 − 3 = 7, tens 9 − 7 = 2, and hundreds 4 − 1 = 3. Check: 327 + 173 = 500.' },
+      ], answer: '327',
     },
-    { kind: 'example', head: 'Boss level: 1003 − 247', body: 'Borrow travels across two zeros: 1003 becomes 0 thousands, 9 hundreds, 9 tens, 13 ones.\nOnes: 13 − 7 = 6. Tens: 9 − 4 = 5. Hundreds: 9 − 2 = 7.\nAnswer: 756. Check: 756 + 247 = 1003. It works!' },
+    },
+    {
+      kind: 'example',
+      head: 'Boss level: 1003 − 247',
+      body: 'Borrow has to travel across two zeros to reach the thousands. Take it one column at a time.',
+      steps: {
+      steps: [
+        { tex: '1003 = 9 \\text{ hundreds},\\ 9 \\text{ tens},\\ 13 \\text{ ones}', text: 'The ones and tens cannot lend, so borrow from the thousand. One thousand is 10 hundreds, and passing the borrow along gives 9 hundreds, 9 tens and 13 ones.' },
+        { tex: '13 - 7 = 6', text: 'Ones: 13 − 7 = 6. The 13 came from keeping 3 ones and getting 10 more from a ten.' },
+        { tex: '9 - 4 = 5,\\ 9 - 2 = 7', text: 'Tens: 9 − 4 = 5. Hundreds: 9 − 2 = 7. The thousands column has nothing left, so the answer is three digits.' },
+        { tex: '756 + 247 = 1003', text: 'Check by adding back: 756 + 247 = 1003. It works, so 756 is right.' },
+      ], answer: '756',
+    },
+    },
     {
       kind: 'example',
       head: 'Another way: count up to subtract',
-      body: 'Find 1250 − 187 by counting up.\nFrom 187: +13 → 200, +1000 → 1200, +50 → 1250. Add the jumps: 13 + 1000 + 50 = 1063.',
-      art: numberLine(380, 960, [{ at: 387, label: '387', color: SKY }, { at: 952, label: '952', color: EMR }], { span: { from: 387, to: 952, label: 'the gap is 565' }, title: 'Subtraction is the gap', caption: 'Instead of borrowing, count up from the smaller number. The distance you travel is the answer.' }),
+      body: 'Find 1250 − 187 without borrowing. Count up from 187 to 1250 in friendly jumps, and add up the jumps.',
+      art: numberLine(150, 1300, [{ at: 187, label: '187', color: SKY }, { at: 1250, label: '1250', color: EMR }], { span: { from: 187, to: 1250, label: 'the gap is 1063' }, title: 'Subtraction is the gap', caption: 'Instead of borrowing, count up from the smaller number. The distance you travel is the answer.' }),
+      steps: {
+      steps: [
+        { tex: '187 + 13 = 200', text: 'Jump from 187 up to the next hundred, 200. That jump is 13, and landing on a round number makes the next jumps easy.' },
+        { tex: '200 + 1000 = 1200', text: 'Jump from 200 up by 1000 to land on 1200. Big round jumps are easy to do in your head.' },
+        { tex: '1200 + 50 = 1250', text: 'Finish with a jump of 50 to reach 1250, the number we are counting up to.' },
+        { tex: '13 + 1000 + 50 = 1063', text: 'The answer to the subtraction is the total distance travelled, the sum of the jumps. Check: 187 + 1063 = 1250.' },
+      ], answer: '1063',
+    },
     },
     {
       kind: 'protip',
       head: 'Check subtraction by adding back',
       body: 'Subtraction and addition undo each other. After computing 952 − 387 = 565, add back: 565 + 387 should return 952 — and it does. This check catches borrowing slips in seconds.',
-      steps: { steps: [{ tex: '952 - 387 = 565', text: 'Do the subtraction.' }, { tex: '565 + 387 = 952', text: 'Add the answer back to check.' }] },
+      steps: {
+      steps: [
+        { tex: '952 - 387 = 565', text: 'Do the subtraction first and get your answer, which is the amount left after taking 387 away.' },
+        { tex: '565 + 387 = 952', text: 'Now add the answer to the amount you took away. If you did it right, you must land back on the number you started with.' },
+      ],
+    },
       formula: {
         tex: 'a - b = c \\ \\Longrightarrow\\ c + b = a',
         note: 'Add your answer to what you took away. If you do not land back on the start, try again.',
@@ -884,7 +1217,19 @@ export const NS_SLIDES: SlideBank = {
     },
     { kind: 'trap', head: 'Trap: the vanishing carry', body: 'The most common error: computing 2 + 7 = 9 in the tens of 425 + 376 and FORGETTING the carried 1 from the ones. Write every carry as a small 1 above the next column. Carries and borrows always move to the next-larger place — never skip one.' },
     { kind: 'trap', head: 'Trap: subtracting upside-down', body: 'In 952 − 387, the ones column shows 2 − 7. You cannot sneakily flip it to 7 − 2 = 5 — that changes the problem! When the top digit is smaller, you must BORROW, not swap.' },
-    { kind: 'challenge', head: 'Extra credit: library count', body: 'A library has 1250 books, loans out 187, then buys 340. How many now?\n1250 − 187 = 1063, then 1063 + 340 = 1403 books.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: library count',
+      body: 'A library has 1250 books, loans out 187, then buys 340 more. How many books does it have now?',
+      steps: {
+      steps: [
+        { tex: '1250 - 187', text: 'Loaning books out takes books away, so subtract. Borrow across the zero in the tens by taking from the hundreds first.' },
+        { tex: '1250 - 187 = 1063', text: 'The subtraction gives 1063. Check by adding back: 1063 + 187 = 1250.' },
+        { tex: '1063 + 340', text: 'Buying books adds to what the library has, so now we add. Stack by place value: ones under ones.' },
+        { tex: '1063 + 340 = 1403', text: 'Ones: 3 + 0 = 3. Tens: 6 + 4 = 10, so write 0 and carry 1. Hundreds: 0 + 3 + 1 = 4. Thousands: 1. The answer is 1403 books.' },
+      ], answer: '1403 \\text{ books}',
+    },
+    },
     { kind: 'summary', head: 'Column by column wins', body: 'Stack numbers by place value and work right to left. Sums of 10+ carry a 1 to the next column; too-small digits borrow 10 from the left neighbor. Zeros pass the borrow along. Add back to check every subtraction!' },
   ],
   '6.NS-8': [
