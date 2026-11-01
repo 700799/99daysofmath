@@ -1060,6 +1060,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'The anatomy of an interval',
       body: 'Every confidence interval has the same shape: an estimate in the middle, plus or minus a margin of error. The margin of error is a critical value times a standard error. Change the confidence level and only the critical value changes.',
+      why: 'The estimate is our best single guess, but samples vary, so we surround it with a cushion. The standard error measures the typical sampling wobble, and the critical value says how many wobbles of cushion we need to be 90%, 95% or 99% sure the method captures the parameter. Changing the confidence level changes only how many SEs wide the cushion is.',
       formula: {
         tex: '\\text{estimate} \;\\pm\; (\\text{critical value}) \\times (\\text{standard error})',
         note: 'The right-hand product is the margin of error.',
@@ -1074,6 +1075,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Proportions use z*',
       body: 'For a proportion the standard error is √(p̂(1 − p̂)/n), and the critical value comes from the normal curve. Conditions: a random sample, the 10% condition, and at least 10 successes and 10 failures.',
+      why: 'The sampling distribution of p̂ is approximately normal, and 95% of a normal curve lies within 1.96 SDs of its centre. So p̂ lands within 1.96 SEs of p about 95% of the time, which also means p lies within 1.96 SEs of p̂ about 95% of the time. We use p̂ inside the SE because we do not know p.',
       formula: {
         tex: '\\hat{p} \\pm z^{*}\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}',
         note: 'z* = 1.645 for 90%, 1.960 for 95%, 2.576 for 99%.',
@@ -1094,6 +1096,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Means use t*',
       body: 'For a mean you must estimate σ with the sample SD s, and that extra uncertainty is paid for with a t critical value, df = n − 1. Conditions: random, 10%, and a normal population or n ≥ 30 (or no strong skew and no outliers in a small sample).',
+      why: 'Replacing σ with s adds extra variation, because s itself changes from sample to sample, especially in small samples. The t curve has heavier tails to pay for that, so t* is larger than z*. As n grows s becomes a reliable estimate and the t curve sits close to the normal one. For 95% and df = 15, t* = 2.131 against z* = 1.960.',
       formula: {
         tex: '\\bar{x} \\pm t^{*}\\,\\frac{s}{\\sqrt{n}}, \\qquad df = n - 1',
         note: 't* is a little bigger than z*, and the gap closes as n grows.',
@@ -1113,6 +1116,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'What 95% actually means',
       body: 'The 95% is about the METHOD. Imagine many random samples, each turned into an interval. About 95% of those intervals capture the true p; about 5% miss. You have one of them and do not know which kind it is.',
+      why: 'Think of each interval as a net thrown at a fixed target. The target p never moves; every sample throws a differently placed net. The method is built so that 95% of the nets catch the target. After you throw one net you cannot see whether it caught the target, but you do know how often this kind of net succeeds.',
       art: captureStrips({
         alt: 'Twenty horizontal confidence intervals stacked across a dashed vertical line at the true proportion; nineteen cross the line and one misses it',
         title: 'Twenty samples, twenty intervals',
@@ -1122,13 +1126,14 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: 60 bikes in 100',
-      body: 'p̂ = 0.60; checks: 60 successes and 40 failures, both at least 10.\nSE = √(0.6 × 0.4/100) = 0.049; ME = 1.96 × 0.049 ≈ 0.096.\nInterval: 0.60 ± 0.096 = (0.504, 0.696).',
+      body: 'In a random sample of 100 adults, 60 own a bike. Build a 95% confidence interval for the proportion of all adults who own a bike.',
       steps: {
         steps: [
-          { tex: '\\hat{p} = \\tfrac{60}{100} = 0.60', text: 'The estimate sits in the middle.' },
-          { tex: '\\text{SE} = \\sqrt{\\tfrac{0.6(0.4)}{100}} = 0.049', text: 'The standard error of p̂.' },
-          { tex: '\\text{ME} = 1.96 \\times 0.049 \\approx 0.096', text: 'z* for 95% times the SE.' },
-          { tex: '0.60 \\pm 0.096', text: 'Estimate plus or minus the margin of error.' },
+          { tex: 'n\\hat{p} = 60 \\ge 10,\\quad n(1-\\hat{p}) = 40 \\ge 10', text: 'Check the conditions first: the sample is random, 100 is under 10% of all adults, and there are at least 10 successes and 10 failures. So the normal model is fine.' },
+          { tex: '\\hat{p} = \\tfrac{60}{100} = 0.60', text: 'The sample proportion is the estimate, and it sits at the centre of the interval because the interval is symmetric around it.' },
+          { tex: '\\text{SE} = \\sqrt{\\tfrac{0.6(0.4)}{100}} = \\sqrt{0.0024} \\approx 0.049', text: 'The standard error measures how much p̂ typically wobbles. We use p̂ for p, since the true p is unknown when building an interval.' },
+          { tex: '\\text{ME} = 1.96 \\times 0.049 \\approx 0.096', text: 'Multiply the SE by z* = 1.96, the critical value that captures the middle 95% of a normal curve. This product is the margin of error.' },
+          { tex: '0.60 \\pm 0.096', text: 'Go 0.096 below and 0.096 above the estimate: 0.60 − 0.096 = 0.504 and 0.60 + 0.096 = 0.696.' },
         ],
         answer: '(0.504,\\ 0.696)',
       },
@@ -1136,7 +1141,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Say it in words',
-      body: 'Interpret the interval: "We are 95% confident that the interval from 0.504 to 0.696 captures the true proportion of all adults who own a bike."\nInterpret the level: "If we took many samples, about 95% of the intervals built this way would capture the true proportion."\nNever say there is a 95% chance p is in this interval: p is fixed, the interval is what varies.',
+      body: 'Interpret the interval (0.504, 0.696) and the 95% level in words. What three things must a good interpretation name?',
+      steps: {
+        steps: [
+          { text: 'Name the parameter: the true proportion of ALL adults who own a bike. The interval is a statement about the whole population, not about the 100 people sampled.' },
+          { text: 'Interpret the interval: we are 95% confident that the interval from 0.504 to 0.696 captures the true proportion of adults who own a bike. The word captures keeps the interval as the thing that varies.' },
+          { text: 'Interpret the level separately: if we took many random samples of 100 adults and built an interval from each, about 95% of those intervals would capture the true proportion.' },
+          { text: 'Avoid saying there is a 95% chance p is in this interval. Once the interval is computed, p is either inside or not, and the 95% describes how often the method succeeds.' },
+        ],
+        answer: '\\text{We are 95\\% confident the interval } (0.504,\\ 0.696) \\text{ captures the true proportion}',
+      },
       compare: {
         cols: [
           { title: 'The interval', lines: ['"We are 95% confident that', 'the interval (0.504, 0.696) captures', 'the true proportion of bike owners."'], tone: 'ok' },
@@ -1148,12 +1162,14 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'A 90% interval for voters',
-      body: 'Of 400 randomly chosen voters, 100 support a measure. p̂ = 100/400 = 0.25 and z* = 1.645.\nSE = √(0.25 × 0.75/400) ≈ 0.0217; ME = 1.645 × 0.0217 ≈ 0.036.\nInterval: 0.25 ± 0.036 = (0.214, 0.286).',
+      body: 'Of 400 randomly chosen voters, 100 support a measure. Build a 90% confidence interval for the proportion of all voters who support it.',
       steps: {
         steps: [
-          { tex: '\\hat{p} = 0.25,\\quad z^{*} = 1.645', text: 'A 90% level uses the smaller critical value.' },
-          { tex: '\\text{SE} = \\sqrt{\\tfrac{0.25(0.75)}{400}} \\approx 0.0217', text: 'The standard error.' },
-          { tex: '\\text{ME} = 1.645(0.0217) \\approx 0.036', text: 'Margin of error.' },
+          { tex: 'n\\hat{p} = 100 \\ge 10,\\quad n(1-\\hat{p}) = 300 \\ge 10', text: 'Check the conditions: the sample is random, 400 is under 10% of all voters, and there are at least 10 successes and 10 failures.' },
+          { tex: '\\hat{p} = \\tfrac{100}{400} = 0.25,\\quad z^{*} = 1.645', text: 'The estimate is 100/400. A 90% level leaves 5% in each tail, so z* = 1.645, which is smaller than 1.96 because we ask for less confidence.' },
+          { tex: '\\text{SE} = \\sqrt{\\tfrac{0.25(0.75)}{400}} \\approx 0.0217', text: 'Compute p̂(1 − p̂) = 0.1875, divide by 400 to get 0.00046875, and take the square root to get the standard error 0.0217.' },
+          { tex: '\\text{ME} = 1.645(0.0217) \\approx 0.036', text: 'Multiply the critical value by the SE to get the margin of error, about 0.036, or 3.6 percentage points.' },
+          { tex: '0.25 \\pm 0.036', text: 'Subtract and add the margin of error: 0.25 − 0.036 = 0.214 and 0.25 + 0.036 = 0.286.' },
         ],
         answer: '(0.214,\\ 0.286)',
       },
@@ -1161,7 +1177,17 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Flour bags: a t-interval',
-      body: 'A random sample of 16 bags has mean 50.0 oz and SD 8.0 oz; weights are roughly normal.\ndf = 15, so t* = 2.131. SE = 8/√16 = 2; ME = 2.131 × 2 = 4.26.\nInterval: 50 ± 4.26 = (45.74, 54.26) oz.',
+      body: 'A random sample of 16 bags has mean 50.0 oz and SD 8.0 oz; weights are roughly normal. Build a 95% confidence interval for the mean weight of all bags.',
+      steps: {
+        steps: [
+          { text: 'Check the conditions: the sample is random, 16 is under 10% of all bags, and the weights are roughly normal. That matters because n = 16 is too small for the CLT to rescue us.' },
+          { tex: 'df = 16 - 1 = 15 \\Rightarrow t^{*} = 2.131', text: 'The population SD is unknown, so use a t critical value with df = n − 1 = 15. At 95%, the t table gives 2.131, a little larger than z* = 1.96.' },
+          { tex: '\\text{SE} = \\frac{8}{\\sqrt{16}} = 2', text: 'The standard error of x̄ is s/√n, using the sample SD s = 8 in place of σ. The root of 16 is 4, so the SE is 2 oz.' },
+          { tex: '\\text{ME} = 2.131 \\times 2 \\approx 4.26', text: 'Multiply the critical value by the SE. The margin of error is 4.26 oz.' },
+          { tex: '50 \\pm 4.26', text: 'Subtract and add the margin of error: 50 − 4.26 = 45.74 and 50 + 4.26 = 54.26.' },
+        ],
+        answer: '(45.74,\\ 54.26)\\text{ oz}',
+      },
       art: bell(50, 2, {
         alt: 'A bell curve centred at 50 ounces with the middle band from 45.74 to 54.26 shaded',
         title: '95% t-interval for the mean, df = 15',
@@ -1174,11 +1200,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Another way: read the interval backwards',
-      body: 'An interval for a proportion is reported as (0.42, 0.50). What were p̂ and the margin of error?\np̂ is the midpoint: (0.42 + 0.50)/2 = 0.46.\nME is half the width: (0.50 − 0.42)/2 = 0.04.',
+      body: 'An interval for a proportion is reported as (0.42, 0.50). What were p̂ and the margin of error? Work from the two endpoints.',
       steps: {
         steps: [
-          { tex: '\\hat{p} = \\tfrac{0.42 + 0.50}{2} = 0.46', text: 'The estimate is always the centre.' },
-          { tex: '\\text{ME} = \\tfrac{0.50 - 0.42}{2} = 0.04', text: 'Half the width is the margin of error.' },
+          { tex: '\\text{width} = 0.50 - 0.42 = 0.08', text: 'The interval runs from p̂ − ME to p̂ + ME, so its width is 2 times the margin of error. Start by subtracting the endpoints.' },
+          { tex: '\\text{ME} = \\tfrac{0.08}{2} = 0.04', text: 'Divide the width by 2 to get the margin of error, since the margin is added once on each side of the estimate.' },
+          { tex: '\\hat{p} = \\tfrac{0.42 + 0.50}{2} = 0.46', text: 'The estimate sits exactly at the midpoint, so average the two endpoints. This works because the interval is symmetric around p̂.' },
+          { tex: '0.46 \\pm 0.04 = (0.42,\\ 0.50)', text: 'Check by rebuilding the interval from your answers. 0.46 − 0.04 = 0.42 and 0.46 + 0.04 = 0.50, which matches.' },
         ],
         answer: '\\hat{p} = 0.46,\\ \\text{ME} = 0.04',
       },
@@ -1186,12 +1214,14 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Sleep: 25 students',
-      body: 'A random sample of 25 students sleeps a mean of 7.2 hours with SD 1.5 hours.\ndf = 24, so t* = 2.064. SE = 1.5/√25 = 0.30; ME = 2.064 × 0.30 ≈ 0.62.\nInterval: 7.2 ± 0.62 = (6.58, 7.82) hours.',
+      body: 'A random sample of 25 students sleeps a mean of 7.2 hours with SD 1.5 hours. Build a 95% confidence interval for the mean nightly sleep of all students.',
       steps: {
         steps: [
-          { tex: 'df = 24 \\Rightarrow t^{*} = 2.064', text: 'Look up t* with n − 1 degrees of freedom.' },
-          { tex: '\\text{SE} = \\tfrac{1.5}{\\sqrt{25}} = 0.30', text: 'Sample SD over root n.' },
-          { tex: '\\text{ME} = 2.064(0.30) \\approx 0.62', text: 'Margin of error.' },
+          { text: 'Check the conditions: random sample, 25 is under 10% of all students. Because n is below 30, we would also look at a graph of the data for no strong skew or outliers; assume that is fine here.' },
+          { tex: 'df = 25 - 1 = 24 \\Rightarrow t^{*} = 2.064', text: 'Use a t critical value because σ is unknown. With df = n − 1 = 24, the 95% value is 2.064.' },
+          { tex: '\\text{SE} = \\tfrac{1.5}{\\sqrt{25}} = 0.30', text: 'The standard error is the sample SD over the root of n. The root of 25 is 5, so 1.5/5 = 0.30 hours.' },
+          { tex: '\\text{ME} = 2.064(0.30) \\approx 0.62', text: 'Multiply the critical value by the SE: 2.064 × 0.30 = 0.6192, about 0.62 hours.' },
+          { tex: '7.2 \\pm 0.62', text: 'Subtract and add the margin of error: 7.2 − 0.62 = 6.58 and 7.2 + 0.62 = 7.82.' },
         ],
         answer: '(6.58,\\ 7.82)\\text{ hours}',
       },
@@ -1199,7 +1229,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Picture it first: how many to poll?',
-      body: 'A pollster wants a 95% interval with margin of error at most 0.03 and no guess for p. Picture the margin shrinking as n grows, and use p̂ = 0.5, the worst case.\nn = (1.96/0.03)² × 0.5 × 0.5 = 4268.4 × 0.25 ≈ 1067.1.\nAlways round UP: n = 1068.',
+      body: 'A pollster wants a 95% interval with margin of error at most 0.03 and no guess for p. How many people must be polled? Picture the margin shrinking as n grows.',
+      steps: {
+        steps: [
+          { tex: '1.96\\sqrt{\\tfrac{\\hat{p}(1-\\hat{p})}{n}} \\le 0.03', text: 'Start from the margin of error formula and ask that it be at most 0.03. We then solve this inequality for n.' },
+          { tex: '\\hat{p}(1-\\hat{p}) = 0.5(0.5) = 0.25', text: 'With no guess for p, use p̂ = 0.5. That makes p̂(1 − p̂) as large as possible, 0.25, so the sample size will be big enough whatever p turns out to be.' },
+          { tex: 'n \\ge \\left(\\tfrac{1.96}{0.03}\\right)^{2}(0.25) = 4268.4 \\times 0.25 \\approx 1067.1', text: 'Square both sides to remove the root and move n to the left. Now 1.96/0.03 is about 65.33, its square is about 4268.4, and times 0.25 gives about 1067.1.' },
+          { tex: 'n = 1068', text: 'Round UP, never down. A sample of 1067 would give a margin of error just above 0.03, so only 1068 people guarantee it is at most 0.03.' },
+        ],
+        answer: 'n = 1068',
+      },
       formula: {
         tex: 'n = \\left(\\frac{z^{*}}{\\text{ME}}\\right)^{2} \\hat{p}(1-\\hat{p})',
         note: 'With no guess, p̂ = 0.5 makes p̂(1 − p̂) as big as it can be: 0.25.',
@@ -1248,12 +1287,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'challenge',
       head: 'Extra credit: the bikes at 99%',
-      body: 'Redo the bike interval (p̂ = 0.60, n = 100) at 99% confidence.\nz* = 2.576; SE is still 0.049, so ME = 2.576 × 0.049 ≈ 0.126.\nInterval: 0.60 ± 0.126 = (0.474, 0.726), wider than the 95% interval (0.504, 0.696).',
+      body: 'Redo the bike interval (p̂ = 0.60, n = 100) at 99% confidence. What changes, and what stays the same?',
       steps: {
         steps: [
-          { tex: 'z^{*} = 2.576', text: 'The 99% critical value.' },
-          { tex: '\\text{ME} = 2.576 \\times 0.049 \\approx 0.126', text: 'Same SE, bigger multiplier.' },
-          { tex: '0.60 \\pm 0.126', text: 'About 0.03 wider on each side than at 95%.' },
+          { tex: '\\hat{p} = 0.60,\\quad \\text{SE} = 0.049', text: 'The estimate and the standard error come from the same data, so they do not change. Only the critical value depends on the confidence level.' },
+          { tex: 'z^{*} = 2.576', text: 'A 99% level leaves only 0.5% in each tail, so we must go farther out on the normal curve: z* = 2.576, bigger than 1.96.' },
+          { tex: '\\text{ME} = 2.576 \\times 0.049 \\approx 0.126', text: 'Multiply the larger critical value by the same SE. The margin of error grows from 0.096 to 0.126.' },
+          { tex: '0.60 \\pm 0.126', text: 'Subtract and add the new margin: 0.60 − 0.126 = 0.474 and 0.60 + 0.126 = 0.726. It is about 0.03 wider on each side than at 95%.' },
         ],
         answer: '(0.474,\\ 0.726)',
       },
@@ -1294,6 +1334,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Hypotheses are about parameters',
       body: 'H0 says "nothing special" with an equals sign: p = 0.5 or μ = 500. Ha is what you suspect: less than, greater than, or not equal. Write both about the parameter, before you look at the data.',
+      why: 'We assume H0 is true and ask whether the data make that assumption look foolish, like a trial that starts by presuming innocence. That only works if H0 is one exact claim, which is why it uses an equals sign. Hypotheses are about the parameter, not p̂, because p̂ is already known, and writing them before seeing the data stops us choosing Ha to fit the result.',
       formula: {
         tex: 'H_0:\\ p = 0.5 \\qquad H_a:\\ p \\ne 0.5',
         note: 'Null: the coin is fair. Alternative: it is not, in either direction.',
@@ -1314,6 +1355,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'The test statistic',
       body: 'The test statistic measures how far the data sit from H0, in standard errors. For a proportion, the SE uses the null value p0. For a mean, s stands in for σ and the statistic is a t with df = n − 1.',
+      why: 'A raw gap such as 0.60 − 0.50 = 0.10 means little until you know how much p̂ normally varies. Dividing by the standard error turns the gap into a count of standard errors, a z or t that sits on a common scale. For a proportion the SE uses p0, because the test works in a world where H0 is true and p0 is the proportion in that world.',
       formula: {
         tex: 'z = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)/n}}, \\qquad t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}',
         note: 'Observed minus hypothesized, over the standard error.',
@@ -1328,6 +1370,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'The p-value',
       body: 'The p-value is the probability, IF H0 were true, of a statistic at least as extreme as the one you got. A two-sided test counts both tails, so double the one-tail area. Small p-value: the data would be surprising under H0.',
+      why: 'The curve shows what sample results look like if H0 is true. The p-value is the area in the tails beyond our result, the share of those results at least as extreme as ours. A small area means a result like ours would rarely happen by chance, which casts doubt on H0. A two-sided test counts extremes in both directions, so the one-tail area is doubled.',
       art: bell(0, 1, {
         alt: 'A standard normal curve with both tails beyond 2 and minus 2 shaded, each tail labelled 0.0228',
         title: 'Two-sided p-value: 2 × 0.0228 = 0.0456',
@@ -1342,6 +1385,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Decide at α, conclude in context',
       body: 'Pick a significance level α before testing, usually 0.05. If the p-value is at or below α, reject H0: there is convincing evidence for Ha. Otherwise fail to reject H0; you never "accept" it. Then say what that means for the coin, the bags, the customers.',
+      why: 'The level α is the false-alarm rate you are willing to tolerate. You choose it first so you cannot move the bar after seeing the result. If the p-value is at most α, the data are rarer than your tolerance. A large p-value only shows a lack of evidence, since a small sample can miss a real effect, so we say fail to reject rather than accept.',
       compare: {
         cols: [
           { title: 'p-value ≤ α', lines: ['reject H0', '"convincing evidence that…"'], tone: 'ok' },
@@ -1354,6 +1398,7 @@ export const STAT_SLIDES_U08_14: SlideBank = {
       kind: 'concept',
       head: 'Two kinds of error',
       body: 'A Type I error rejects a true H0; its probability is α. A Type II error fails to reject a false H0; its probability is β. Power is 1 − β, the chance of catching a real effect, and it rises with a bigger sample, a bigger α, or a bigger true effect.',
+      why: 'If H0 is true and you test at α = 0.05, about 5% of samples land in the rejection region by chance, which is the Type I error rate. If H0 is false the test can still miss it when the sample is small or noisy, which is a Type II error. Moving the cutoff trades one error for the other: a stricter cutoff makes false alarms rarer but real effects easier to miss.',
       table: {
         head: ['', 'Reject H0', 'Fail to reject H0'],
         rows: [['H0 is true', 'Type I error (prob. α)', 'correct'], ['H0 is false', 'correct (power = 1 − β)', 'Type II error (prob. β)']],
@@ -1372,12 +1417,14 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: 60 heads in 100',
-      body: 'H0: p = 0.5, Ha: p ≠ 0.5. Checks: 50 heads and 50 tails expected, both at least 10.\nSE = √(0.5 × 0.5/100) = 0.05, so z = (0.60 − 0.50)/0.05 = 2.0.\nTwo-sided p-value = 2 × 0.0228 = 0.0456 < 0.05: reject H0. There is convincing evidence the coin is not fair.',
+      body: 'A coin lands heads 60 times in 100 flips. Test at α = 0.05 whether the coin is fair. Follow the four steps: state, plan, do, conclude.',
       steps: {
         steps: [
-          { tex: 'H_0:\\ p = 0.5,\\quad H_a:\\ p \\ne 0.5', text: 'State the hypotheses about p.' },
-          { tex: 'z = \\frac{0.60 - 0.50}{\\sqrt{0.5(0.5)/100}} = 2.0', text: 'Two standard errors above fair.' },
-          { tex: 'p\\text{-value} = 2(0.0228) = 0.0456', text: 'Both tails, since Ha is two-sided.' },
+          { tex: 'H_0:\\ p = 0.5,\\quad H_a:\\ p \\ne 0.5', text: 'State the hypotheses about the true proportion p of heads. The alternative is two-sided because we want to detect a bent coin in either direction.' },
+          { tex: 'np_0 = 50 \\ge 10,\\quad n(1-p_0) = 50 \\ge 10', text: 'Plan: this is a one-sample z-test for a proportion. The flips are random and independent, and under H0 we expect 50 heads and 50 tails, both at least 10.' },
+          { tex: 'z = \\frac{0.60 - 0.50}{\\sqrt{0.5(0.5)/100}} = \\frac{0.10}{0.05} = 2.0', text: 'Do: the SE uses p0 = 0.5 because we assume H0 is true. A gap of 0.10 is two standard errors above fair.' },
+          { tex: 'p\\text{-value} = 2(0.0228) = 0.0456', text: 'The area above z = 2.0 is 0.0228. Since Ha is two-sided, the equally extreme low tail counts too, so double it.' },
+          { tex: '0.0456 < 0.05', text: 'Conclude: the p-value is below α, so reject H0. There is convincing evidence that the coin is not fair, that is, that the true proportion of heads is not 0.5.' },
         ],
         answer: '0.0456 < 0.05:\\ \\text{reject } H_0',
       },
@@ -1385,7 +1432,17 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Satisfaction below 80%?',
-      body: 'A company claims 80% of customers are satisfied; in a random sample of 200, only 150 are. H0: p = 0.8, Ha: p < 0.8, p̂ = 0.75.\nSE = √(0.8 × 0.2/200) ≈ 0.0283; z = (0.75 − 0.80)/0.0283 ≈ −1.77.\np-value = P(Z < −1.77) = 0.0384 < 0.05: reject H0. Evidence that satisfaction is below 80%.',
+      body: 'A company claims 80% of customers are satisfied; in a random sample of 200, only 150 are. Is there evidence that satisfaction is below 80%?',
+      steps: {
+        steps: [
+          { tex: 'H_0:\\ p = 0.8,\\quad H_a:\\ p < 0.8', text: 'State the hypotheses. The question asks whether satisfaction is below the claim, so Ha has one direction and the test is one-sided.' },
+          { tex: 'np_0 = 160 \\ge 10,\\quad n(1-p_0) = 40 \\ge 10', text: 'Plan: a one-sample z-test for a proportion. The sample is random, 200 is under 10% of customers, and under H0 we expect 160 satisfied and 40 not, both at least 10.' },
+          { tex: '\\text{SE} = \\sqrt{\\tfrac{0.8(0.2)}{200}} = \\sqrt{0.0008} \\approx 0.0283', text: 'Compute the SE using p0 = 0.8, since the test assumes H0 is true. Multiply 0.8 by 0.2, divide by 200, and take the root.' },
+          { tex: 'z = \\frac{0.75 - 0.80}{0.0283} \\approx -1.77', text: 'The sample proportion is 150/200 = 0.75. The negative z shows it lies 1.77 standard errors below the claim.' },
+          { tex: 'P(Z < -1.77) = 0.0384 < 0.05', text: 'Only the lower tail counts because Ha says less than. The area is 0.0384, below α = 0.05, so reject H0. There is evidence that satisfaction is below 80%.' },
+        ],
+        answer: '0.0384 < 0.05:\\ \\text{reject } H_0',
+      },
       art: bell(0.8, 0.0283, {
         alt: 'A normal curve centred at 0.80 with the left tail below 0.75 shaded',
         title: 'Under H₀, how often is p̂ this low?',
@@ -1399,12 +1456,14 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Rice bags: a t-test',
-      body: 'Bags are labelled 500 g. A random sample of 16 has mean 495 g and SD 8 g; weights are roughly normal. H0: μ = 500, Ha: μ < 500.\nSE = 8/√16 = 2; t = (495 − 500)/2 = −2.5 with df = 15.\np-value = P(t15 < −2.5) ≈ 0.012 < 0.05: reject H0. Evidence the bags are underfilled.',
+      body: 'Bags are labelled 500 g. A random sample of 16 has mean 495 g and SD 8 g; weights are roughly normal. Is there evidence the bags are underfilled?',
       steps: {
         steps: [
-          { tex: 'H_0:\\ \\mu = 500,\\quad H_a:\\ \\mu < 500', text: 'Underfilled means a one-sided alternative.' },
-          { tex: 't = \\frac{495 - 500}{8/\\sqrt{16}} = -2.5', text: 'Two and a half standard errors low.' },
-          { tex: 'df = 15:\\ p\\text{-value} \\approx 0.012', text: 'Left tail of the t curve.' },
+          { tex: 'H_0:\\ \\mu = 500,\\quad H_a:\\ \\mu < 500', text: 'State the hypotheses about the mean. Underfilled means below the label, so the alternative is one-sided and uses the less-than sign.' },
+          { text: 'Plan: a one-sample t-test for a mean, because σ is unknown. The sample is random, 16 is under 10% of bags, and weights are roughly normal, which matters because n is small.' },
+          { tex: 't = \\frac{495 - 500}{8/\\sqrt{16}} = \\frac{-5}{2} = -2.5', text: 'The SE is s/√n = 8/4 = 2. The sample mean is 5 g below the label, which is 2.5 standard errors low, so t is negative.' },
+          { tex: 'df = 15:\\ P(t_{15} < -2.5) \\approx 0.012', text: 'With df = n − 1 = 15, the left-tail area beyond −2.5 on the t curve is about 0.012. Only one tail counts since Ha is one-sided.' },
+          { tex: '0.012 < 0.05', text: 'The p-value is below α, so reject H0. There is convincing evidence that the true mean fill is less than 500 g.' },
         ],
         answer: '0.012 < 0.05:\\ \\text{reject } H_0',
       },
@@ -1412,12 +1471,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Cereal protein: two-sided t',
-      body: 'A box claims 10 g of protein per serving. A random sample of 25 servings has mean 10.4 g and SD 1.5 g. H0: μ = 10, Ha: μ ≠ 10.\nSE = 1.5/√25 = 0.3; t = (10.4 − 10)/0.3 ≈ 1.33 with df = 24.\nTwo-sided p-value ≈ 0.195 > 0.05: fail to reject H0. Not enough evidence the mean differs from 10 g.',
+      body: 'A box claims 10 g of protein per serving. A random sample of 25 servings has mean 10.4 g and SD 1.5 g. Is there evidence the true mean differs from 10 g?',
       steps: {
         steps: [
-          { tex: 't = \\frac{10.4 - 10}{1.5/\\sqrt{25}} \\approx 1.33', text: 'A little over one standard error.' },
-          { tex: 'df = 24:\\ p\\text{-value} \\approx 2(0.0975) = 0.195', text: 'Double the tail for a two-sided test.' },
-          { tex: '0.195 > 0.05', text: 'Fail to reject. The claim survives, unproven.' },
+          { tex: 'H_0:\\ \\mu = 10,\\quad H_a:\\ \\mu \\ne 10', text: 'State the hypotheses. The question asks whether the mean differs, in either direction, so the alternative is two-sided.' },
+          { tex: 't = \\frac{10.4 - 10}{1.5/\\sqrt{25}} = \\frac{0.4}{0.3} \\approx 1.33', text: 'The SE is s/√n = 1.5/5 = 0.3. The sample mean is only about 1.33 standard errors from the claim, not far for a sample mean.' },
+          { tex: 'df = 24:\\ p\\text{-value} \\approx 2(0.0975) = 0.195', text: 'With df = 24 the upper tail beyond 1.33 is about 0.0975. The test is two-sided, so double it to include the matching low tail.' },
+          { tex: '0.195 > 0.05', text: 'The p-value is larger than α, so fail to reject H0. There is not enough evidence the mean differs from 10 g. The claim survives, but we have not proven it.' },
         ],
         answer: '\\text{fail to reject } H_0',
       },
@@ -1425,7 +1485,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Another way: let a confidence interval decide',
-      body: 'For the coin, build a 95% interval instead. The interval uses p̂ for its SE: √(0.6 × 0.4/100) = 0.049.\n0.6 ± 1.96(0.049) = (0.504, 0.696).\nThe interval does not contain 0.5, so it agrees with the two-sided test at α = 0.05: reject p = 0.5.',
+      body: 'For the coin, can a 95% confidence interval reach the same verdict as the two-sided test? Build it and see whether 0.5 is inside.',
+      steps: {
+        steps: [
+          { tex: '\\text{SE} = \\sqrt{\\tfrac{0.6(0.4)}{100}} \\approx 0.049', text: 'An interval uses p̂ = 0.6 in the SE, because it estimates the true p and so does not assume anything about H0. This is a different SE from the test.' },
+          { tex: '0.6 \\pm 1.96(0.049) = (0.504,\\ 0.696)', text: 'Multiply 1.96 by 0.049 to get a margin of 0.096, then go that far each side of 0.6.' },
+          { tex: '0.5 \\notin (0.504,\\ 0.696)', text: 'The null value 0.5 is outside the interval. A 95% interval holds only the values that are plausible at the 5% level, so 0.5 is not plausible.' },
+          { tex: '\\text{reject } p = 0.5', text: 'This agrees with the two-sided test at α = 0.05, which also rejected. The two SEs differ slightly, so a result very close to the cutoff could split, but here they match.' },
+        ],
+        answer: '\\text{reject } p = 0.5',
+      },
       compare: {
         cols: [
           { title: 'Test', tex: 'z = 2.0,\\ p = 0.0456', lines: ['SE uses p0 = 0.5', 'reject at α = 0.05'], tone: 'accent' },
@@ -1437,7 +1506,16 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'example',
       head: 'Picture it first: the smoke detector',
-      body: 'A smoke detector tests H0: "no fire" against Ha: "fire". Picture the two ways it can be wrong.\nType I: it rejects "no fire" when there is none, a false alarm. Cost: annoyance, a wasted evacuation.\nType II: it fails to detect a real fire. Cost: danger to life. Here Type II is far worse, so you accept more false alarms (a larger α) to gain power.',
+      body: 'A smoke detector tests H0: “no fire” against Ha: “fire”. What do Type I and Type II errors mean here, and which is worse?',
+      steps: {
+        steps: [
+          { tex: '\\text{Type I: reject true } H_0', text: 'A Type I error rejects a true H0: the alarm sounds although there is no fire. The cost is annoyance and a wasted evacuation, and its probability is α.' },
+          { tex: '\\text{Type II: miss a false } H_0', text: 'A Type II error fails to reject a false H0: a real fire and a silent detector. The cost is danger to life, and its probability is β.' },
+          { text: 'Compare the costs. Missing a real fire is far worse than a false alarm, so here Type II is the error we most want to avoid.' },
+          { tex: '\\text{raise } \\alpha \\Rightarrow \\text{lower } \\beta,\\ \\text{power} = 1 - \\beta \\text{ rises}', text: 'Use a larger α. A more sensitive detector sounds more easily, so it misses fewer real fires, which means a smaller β and more power, at the price of more false alarms.' },
+        ],
+        answer: '\\text{Type II is worse: accept a larger } \\alpha \\text{ to gain power}',
+      },
       table: {
         head: ['', 'Alarm sounds (reject H0)', 'Silent (fail to reject)'],
         rows: [['No fire', 'Type I: false alarm', 'correct'], ['Fire', 'correct', 'Type II: missed fire']],
@@ -1468,12 +1546,13 @@ export const STAT_SLIDES_U08_14: SlideBank = {
     {
       kind: 'challenge',
       head: 'Extra credit: the same p̂, four times the data',
-      body: 'A coin shows p̂ = 0.55. Test H0: p = 0.5 against p ≠ 0.5 with n = 100, then with n = 400.\nn = 100: SE = 0.05, z = 1.0, p-value = 2(0.1587) = 0.317. Fail to reject.\nn = 400: SE = 0.025, z = 2.0, p-value = 0.0456. Reject. The same 55% becomes convincing once the sample is big enough.',
+      body: 'A coin shows p̂ = 0.55. Test H0: p = 0.5 against p ≠ 0.5 with n = 100, then with n = 400. Does the sample size change the verdict?',
       steps: {
         steps: [
-          { tex: 'n = 100:\\ z = \\frac{0.05}{0.05} = 1.0,\\ p\\text{-value} = 0.317', text: 'Not surprising for a fair coin.' },
-          { tex: 'n = 400:\\ \\text{SE} = \\sqrt{\\tfrac{0.25}{400}} = 0.025', text: 'Four times the data halves the SE.' },
-          { tex: 'z = \\frac{0.05}{0.025} = 2.0,\\ p\\text{-value} = 0.0456', text: 'Now the 5-point gap is two standard errors.' },
+          { tex: 'n = 100:\\ \\text{SE} = \\sqrt{\\tfrac{0.25}{100}} = 0.05,\\ z = \\frac{0.05}{0.05} = 1.0', text: 'With 100 flips the gap of 0.05 is exactly one standard error, since the SE under H0 is 0.05. That is a very common amount of chance wobble.' },
+          { tex: 'p\\text{-value} = 2(0.1587) = 0.317', text: 'The upper tail beyond z = 1.0 is 0.1587. Double it for the two-sided test. A p-value of 0.317 is above 0.05, so fail to reject.' },
+          { tex: 'n = 400:\\ \\text{SE} = \\sqrt{\\tfrac{0.25}{400}} = 0.025', text: 'Four times the data halves the SE, because the SE shrinks with √n. The gap of 0.05 stays the same size.' },
+          { tex: 'z = \\frac{0.05}{0.025} = 2.0,\\ p\\text{-value} = 0.0456', text: 'Now the same gap is two standard errors, so the p-value drops to 0.0456, below 0.05, and we reject. Bigger samples can detect smaller gaps.' },
         ],
         answer: '\\text{fail to reject at } n = 100;\\ \\text{reject at } n = 400',
       },
