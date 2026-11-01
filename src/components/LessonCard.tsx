@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
+import { parentOf } from '../utils/navHierarchy';
 import { useProgress, LESSON_COINS } from '../state/progress';
 import {
   lessonKey,
@@ -118,6 +120,12 @@ interface PracticeState {
 }
 
 export function LessonCard({ lesson, onClose, onStart }: Props) {
+  // The lesson covers the app header, so it carries its own way out: one step
+  // up the app's hierarchy (a unit's lesson goes up to the unit list), and Home.
+  const { pathname } = useLocation();
+  const up = parentOf(pathname);
+  const upLabel =
+    pathname.startsWith('/unit/') || pathname.startsWith('/sat/unit/') ? 'All units' : up?.label ?? 'Home';
   const completeLesson = useProgress((s) => s.completeLesson);
   const key = lessonKey(lesson.domain, lesson.unit);
   const [alreadyDone] = useState(() =>
@@ -209,12 +217,34 @@ export function LessonCard({ lesson, onClose, onStart }: Props) {
             </div>
           ) : (
             <>
-              <div className="flex shrink-0 items-center justify-between gap-3">
-                <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-accent truncate">
-                  📘 {lesson.domain} · Unit {lesson.unit}
-                </div>
-                <div className="shrink-0 text-[10px] font-display font-bold text-ink-dim tabular-nums">
-                  {pageIndex + 1} / {pages.length}
+              <div className="flex shrink-0 items-center gap-1">
+                {up && (
+                  <Link
+                    to={up.to}
+                    aria-label={`Back to ${upLabel}`}
+                    className="inline-flex min-h-11 min-w-0 items-center gap-1 rounded-xl px-2 font-display text-sm font-extrabold text-accent hover:bg-surface-2"
+                  >
+                    <span className="text-lg leading-none">←</span>
+                    <span className="truncate">{upLabel}</span>
+                  </Link>
+                )}
+                {up && up.to !== '/' && (
+                  <Link
+                    to="/"
+                    aria-label="Home"
+                    title="Home"
+                    className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-xl text-lg hover:bg-surface-2"
+                  >
+                    🏠
+                  </Link>
+                )}
+                <div className="ml-auto flex min-w-0 shrink-0 flex-col items-end leading-tight">
+                  <div className="text-[10px] font-display font-extrabold uppercase tracking-wider text-accent">
+                    {lesson.domain} · Unit {lesson.unit}
+                  </div>
+                  <div className="text-[10px] font-display font-bold text-ink-dim tabular-nums">
+                    {pageIndex + 1} / {pages.length}
+                  </div>
                 </div>
               </div>
 
