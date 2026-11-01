@@ -95,7 +95,7 @@ export const A1_SLIDES_U09_11: SlideBank = {
       kind: 'example',
       head: 'Another way: race the gap',
       body: 'Same phone plans, no equations. Think of it as a race: how long until Plan B\'s higher monthly price closes the gap in the starting fees?',
-      art: lineGraph([{ m: -2, b: 10, label: 'gap = 10 − 2 × months' }], { range: { x: [0, 7], y: [0, 12] }, showIntercept: false, xLabel: 'months', yLabel: 'gap in $', points: [{ x: 5, y: 0, label: 'gap is zero at 5 months' }], title: 'The gap closes to zero', caption: 'A $10 gap that shrinks $2 a month is gone after 5 months.' }),
+      art: lineGraph([{ m: -2, b: 10, label: 'gap = 10 − 2 × months' }], { range: { x: [0, 7], y: [0, 12] }, showIntercept: false, yLabel: 'gap in $', points: [{ x: 5, y: 0, label: 'gap = 0' }], title: 'The gap closes to zero', caption: 'A $10 gap that shrinks $2 a month is gone after 5 months.' }),
       steps: { steps: [{ tex: '20 - 10 = 10', text: 'Find the starting gap. Plan A charges $20 up front and Plan B charges $10, so Plan A begins $10 higher.' }, { tex: '7 - 5 = 2', text: 'Find how fast the gap shrinks. Each month Plan B adds $7 and Plan A adds $5, so Plan B climbs $2 closer every month.' }, { tex: '10 \\div 2 = 5', text: 'Divide the gap by the closing speed. Closing $2 at a time, a gap of $10 takes 5 months to reach zero.' }, { tex: '20 + 5(5) = 45 = 10 + 7(5)', text: 'Check with the real prices. After 5 months both plans cost $45, matching the algebra answer.' }], answer: '5 \\text{ months}' },
     },
     {
@@ -311,9 +311,9 @@ export const A1_SLIDES_U09_11: SlideBank = {
     {
       kind: 'example',
       head: 'Decay: a phone worth $600 losing 20% a year',
-      body: 'Losing 20% means keeping 80%, so the factor is 0.80 — not −0.20.\nAfter one year: 600 × 0.80 = 480.\nAfter two: 480 × 0.80 = 384. The value falls but never goes negative.',
+      body: 'A phone worth $600 loses 20% of its value each year. What is it worth after two years, and what factor do you multiply by?',
       art: bars([{ name: 'value in $', vals: [600, 480, 384, 307], color: ROSE }], { labels: ['now', '1 yr', '2 yr', '3 yr'], title: 'Each year keeps 80% of the last', caption: 'Decay shrinks toward zero without ever crossing it — the factor is between 0 and 1.' }),
-      steps: { steps: [{ tex: '\\text{down } 20\\% \\to \\times 0.80', text: 'Keep eighty percent, not minus twenty.' }, { tex: '600 \\times 0.80 = 480', text: 'One year of decay.' }, { tex: '480 \\times 0.80 = 384', text: 'Apply the same factor again.' }], answer: '\\$384' },
+      steps: { steps: [{ tex: '1 - 0.20 = 0.80', text: 'Turn the percent into a factor. Losing 20% means you keep 80%, so multiply by 0.80, not by minus 0.20 and not by 0.20.' }, { tex: '600 \\times 0.80 = 480', text: 'Apply the factor for year 1. Keeping 80% of $600 leaves $480, so the phone lost $120.' }, { tex: '480 \\times 0.80 = 384', text: 'Apply the same factor to the new value for year 2. It is 80% of $480, and 480 times 0.8 is 384.' }, { tex: '600 \\times 0.80^2 = 600 \\times 0.64 = 384', text: 'Check with a power. Two years means 0.80 squared, which is 0.64, and 600 times 0.64 is 384, the same answer. The value falls but never goes negative.' }], answer: '\\$384' },
     },
     {
       kind: 'concept',
