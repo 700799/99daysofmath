@@ -538,6 +538,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Degree and leading coefficient',
       body: 'The DEGREE is the biggest exponent on x. The LEADING COEFFICIENT is the number sitting in front of that biggest term. For 4x³ − 2x + 7 the degree is 3 and the leading coefficient is 4. Those two numbers run the whole show.',
+      why: 'For huge x the highest power swamps everything else. In 4x³ − 2x + 7 at x = 100, the 4x³ term is 4,000,000 while the −2x term is only −200 and the 7 is just 7. So the biggest power and the number in front of it decide the far-away behavior, and the smaller terms hardly matter there.',
       formula: {
         tex: 'p(x) = 2x^{3} - 5x + 1',
         note: 'Two numbers decide the whole shape before you plot a single point.',
@@ -551,6 +552,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'End behavior: where the arms point',
       body: 'The two far ends of a polynomial graph are its ARMS. An EVEN degree makes both arms point the same way; an ODD degree makes them point opposite ways. A positive leading coefficient throws the right arm UP, a negative one throws it DOWN.',
+      why: 'At the far ends the leading term dominates. An even power gives a positive answer for big positive and big negative x, since (−10)⁴ = 10,000, so both arms match. An odd power keeps the sign, since (−10)³ = −1,000, so the arms split. A negative leading coefficient just flips every one of those signs.',
       compare: {
         cols: [
           { title: 'Even degree', tex: 'x^{2},\\ x^{4}', lines: ['Both arms the same way', 'Up/up if a > 0'], tone: 'accent' },
@@ -575,6 +577,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Zeros hide inside the factors',
       body: 'A product is zero only when one of its pieces is zero. So set each factor equal to zero to find the x-intercepts. Watch the sign flip: the factor (x − 5) hides the zero +5, and (x + 2) hides the zero −2.',
+      why: 'Multiplying by 0 gives 0, and a product of nonzero numbers is never 0. So (x − 5)(x + 2) can only be 0 if one bracket is 0. The bracket x − 5 is 0 when x = 5, because 5 − 5 = 0. That is why the sign in the bracket is the opposite of the zero.',
       art: funcGraph([{ f: (x) => (x + 2) * (x - 1) }], { range: { x: [-4, 3], y: [-5, 6] }, zeros: [{ at: -2, label: 'x = −2' }, { at: 1, label: 'x = 1' }], title: '(x + 2)(x − 1) crosses twice', caption: 'Each factor set to zero gives one crossing. The factors ARE the zeros.' }),
       formula: {
         tex: 'p(x) = (x - 2)(x + 3)',
@@ -589,6 +592,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Multiplicity: bounce or cross',
       body: 'MULTIPLICITY is how many times a factor shows up. An ODD number of times means the graph CROSSES the axis there. An EVEN number means it just touches and BOUNCES back, like a ball tapping the floor.',
+      why: 'Near a zero, a factor like (x − 1) changes sign as x passes 1: negative at x = 0.9, positive at x = 1.1. Squared, (x − 1)² is positive on both sides, so the height cannot change sign and the graph touches the axis and turns back. An odd power, like a cube, keeps the sign change, so it passes through.',
       compare: {
         cols: [
           { title: 'Odd power · crosses', tex: '(x - 1)^{1}', lines: ['Passes straight through', 'Changes sign'], tone: 'ok' },
@@ -612,55 +616,120 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: find the degree',
-      body: 'Look at p(x) = 4x³ − 2x + 7.\nThe powers of x are 3, 1, and 0.\nThe biggest is 3, so the degree is 3 and the graph has opposite-pointing arms.',
+      body: 'Look at p(x) = 4x³ − 2x + 7. What is its degree, its leading coefficient, and what do the arms do?',
       steps: {
         steps: [
-          { tex: 'p(x) = 4x^{3} + x^{2} - 7', text: 'Find the biggest exponent on x.' },
-          { tex: '3 > 2 > 0', text: 'The x³ term wins.' },
+          { tex: '4x^{3} - 2x + 7', text: 'Look at the power of x in each term. The 4x³ term has power 3 and the −2x term has power 1. The constant 7 has power 0, since 7 is the same as 7x⁰.' },
+          { tex: '3 > 1 > 0', text: 'Compare the powers. The biggest is 3, and the degree is defined as the biggest exponent on x. So the degree is 3.' },
+          { tex: '\\text{leading coefficient} = 4', text: 'The leading coefficient is the number in front of that biggest term. It is 4, and it is positive, so it does not flip anything.' },
+          { tex: '\\text{odd degree},\\ a > 0', text: 'An odd degree means the arms point opposite ways, and a positive leading coefficient makes the right arm point up. So the left arm points down.' },
         ],
-        answer: '\\text{degree } 3',
+        answer: '\\text{degree } 3,\\ \\text{leading coefficient } 4',
       },
     },
     {
       kind: 'example',
       head: 'Zeros from two factors',
-      body: 'Take p(x) = (x − 5)(x + 2).\nSet each factor to zero: x − 5 = 0 gives x = 5.\nAnd x + 2 = 0 gives x = −2. The graph crosses the x-axis at −2 and 5.',
+      body: 'Take p(x) = (x − 5)(x + 2). Where does its graph meet the x-axis?',
       steps: {
         steps: [
-          { tex: '(x - 5)(x + 2) = 0', text: 'A product is zero when a factor is zero.' },
-          { tex: 'x - 5 = 0 \\Rightarrow x = 5', text: 'First bracket.' },
-          { tex: 'x + 2 = 0 \\Rightarrow x = -2', text: 'Second bracket.' },
+          { tex: '(x - 5)(x + 2) = 0', text: 'The graph meets the x-axis where the height p(x) is 0. So we set the whole product equal to 0 and look for the x-values that make that true.' },
+          { tex: 'x - 5 = 0 \\ \\text{or}\\ x + 2 = 0', text: 'A product is zero only when one of its factors is zero, since nonzero numbers never multiply to 0. So we can set each bracket to 0 on its own.' },
+          { tex: 'x - 5 = 0 \\Rightarrow x = 5', text: 'Solve the first bracket by adding 5 to both sides. That gives x = 5, and the sign flipped from the bracket.' },
+          { tex: 'x + 2 = 0 \\Rightarrow x = -2', text: 'Solve the second bracket by subtracting 2 from both sides. That gives x = −2. Check: (−2 + 2) = 0, so the whole product is 0.' },
         ],
         answer: 'x = 5 \\text{ or } x = -2',
       },
     },
-    { kind: 'example', head: 'Where do these arms point?', body: 'For p(x) = −2x⁴ + 3x, only the term −2x⁴ matters at the far ends.\nDegree 4 is even, so both arms match.\nThe −2 is negative, so both arms point DOWN.' },
+    {
+      kind: 'example',
+      head: 'Where do these arms point?',
+      body: 'For p(x) = −2x⁴ + 3x, which way do the left and right arms point?',
+      steps: {
+        steps: [
+          { tex: '-2x^{4} + 3x \\approx -2x^{4}', text: 'For huge x the biggest power wins. The 3x term is tiny next to −2x⁴, so only the leading term −2x⁴ decides the far ends.' },
+          { tex: '\\text{degree } 4\\ \\text{is even}', text: 'Check the degree. 4 is even, so x⁴ is positive for both big positive and big negative x. That means the two arms match each other.' },
+          { tex: 'a = -2 < 0', text: 'Check the sign of the leading coefficient. It is negative, so it turns every one of those positive values into negative ones.' },
+          { tex: '\\text{both arms down}', text: 'Put the two facts together. Both arms match, and both are negative, so both arms point DOWN.' },
+        ],
+        answer: '\\text{both arms point down}',
+      },
+    },
     {
       kind: 'example',
       head: 'Another way: test giant numbers',
-      body: 'Not sure about end behavior? Just plug in something huge.\nAt x = 10, −2x⁴ + 3x is about −20000. At x = −10 it is about −20000 too.\nBoth far ends dive down, which confirms both arms point DOWN.',
+      body: 'Not sure about end behavior? Plug in big numbers. For p(x) = x³ − 4x, what happens far left and far right?',
+      steps: {
+        steps: [
+          { tex: 'x = 10:\\ 1000 - 40 = 960', text: 'Try a big positive x. 10³ is 1000 and 4 · 10 is 40, so the answer is 960, which is positive.' },
+          { tex: 'x = 100:\\ 1{,}000{,}000 - 400 = 999{,}600', text: 'Go bigger. 100³ is 1,000,000 and 4 · 100 is 400. The x³ part is far bigger, so the output is a huge positive number.' },
+          { tex: 'x = -10:\\ -1000 + 40 = -960', text: 'Now try a big negative x. (−10)³ is −1000, because an odd power keeps the sign, and −4(−10) is +40. The result is −960.' },
+          { tex: '\\text{left down, right up}', text: 'The right end is positive and the left end is negative. That matches the leading term x³: odd degree and positive coefficient.' },
+        ],
+        answer: '\\text{left arm down, right arm up}',
+      },
       table: {
         head: ['x', 'x³ − 4x', 'sign'],
         rows: [['−100', '−999,600', 'very negative'], ['−10', '−960', 'negative'], ['10', '960', 'positive'], ['100', '999,600', 'very positive']],
         note: 'Far from the origin only the leading term matters — the rest is a rounding error.',
       },
     },
-    { kind: 'example', head: 'A roller-coaster track profile', body: 'A track is modeled by h(x) = −(x − 2)(x − 8), where h is height.\nThe track meets the ground where the height is zero: x = 2 and x = 8.\nBetween those two spots the height is positive — that is the hill.' },
+    {
+      kind: 'example',
+      head: 'A roller-coaster track profile',
+      body: 'A track is modeled by h(x) = −(x − 2)(x − 8), where h is the height. Where does the track meet the ground, and is it above the ground in between?',
+      steps: {
+        steps: [
+          { tex: '-(x - 2)(x - 8) = 0', text: 'The track is on the ground when the height is 0. So set h(x) = 0. The minus in front is just a number, and it cannot make a product zero.' },
+          { tex: 'x - 2 = 0 \\ \\text{or}\\ x - 8 = 0', text: 'A product is zero only when one factor is zero, so set each bracket to 0 separately.' },
+          { tex: 'x = 2 \\ \\text{or}\\ x = 8', text: 'Solving each bracket gives x = 2 and x = 8. These are the two spots where the track touches the ground.' },
+          { tex: 'h(5) = -(3)(-3) = 9', text: 'Test a point between them, x = 5. The brackets are 3 and −3, which multiply to −9, and the minus in front makes it +9. The height is positive, so the track forms a hill.' },
+        ],
+        answer: 'x = 2 \\text{ and } x = 8;\\ \\text{hill between}',
+      },
+    },
     {
       kind: 'example',
       head: 'Bounce instead of cross',
-      body: 'Look at p(x) = (x − 3)²(x + 1).\nThe factor (x − 3) appears twice, an even count, so the graph bounces at x = 3.\nThe factor (x + 1) appears once, so the graph crosses at x = −1.',
+      body: 'Look at p(x) = (x − 3)²(x + 1). At each zero, does the graph bounce or cross?',
       steps: {
         steps: [
-          { tex: 'p(x) = (x - 3)^{2}(x + 1)', text: 'Read the power on each bracket.' },
-          { tex: '(x - 3)^{2}', text: 'Even power at x = 3 — it bounces.' },
-          { tex: '(x + 1)^{1}', text: 'Odd power at x = −1 — it crosses.' },
+          { tex: 'p(x) = (x - 3)^{2}(x + 1)', text: 'Read the power on each bracket. This count is called the multiplicity of the zero, and it tells us how the graph behaves there.' },
+          { tex: '(x - 3)^{2}:\\ x = 3', text: 'The bracket (x − 3) has power 2, an even number. A squared factor is positive on both sides of 3, so the height cannot change sign. The graph bounces at x = 3.' },
+          { tex: '(x + 1)^{1}:\\ x = -1', text: 'The bracket (x + 1) has power 1, an odd number. It is negative on one side of −1 and positive on the other, so the sign changes. The graph crosses at x = −1.' },
+          { tex: '\\text{zeros: } 3\\ (\\text{even}),\\ -1\\ (\\text{odd})', text: 'Put it together. Even multiplicity touches and turns back, while odd multiplicity passes through the axis.' },
         ],
         answer: '\\text{bounce at } 3,\\ \\text{cross at } -1',
       },
     },
-    { kind: 'example', head: 'Another way: check the sign nearby', body: 'Why does a squared factor bounce? Test both sides of x = 3.\nJust left, (x − 3) is negative; squaring makes it positive.\nJust right, it is positive; squaring keeps it positive. The sign never flips, so the graph cannot pass through.' },
-    { kind: 'example', head: 'A box cut from cardboard', body: 'Cut a square of side x from each corner of a 12-by-12 inch sheet and fold up the sides: V(x) = x(12 − 2x)².\nAt x = 2: inside is 12 − 4 = 8, squared is 64.\nThen 2 × 64 = 128 cubic inches.' },
+    {
+      kind: 'example',
+      head: 'Another way: check the sign nearby',
+      body: 'Why does a squared factor bounce? Test x-values just left and just right of x = 3 in the factor (x − 3)².',
+      steps: {
+        steps: [
+          { tex: 'x = 2.9:\\ x - 3 = -0.1', text: 'Just to the left of 3, the bracket x − 3 is a small negative number. Here it is −0.1.' },
+          { tex: '(-0.1)^{2} = 0.01', text: 'Square it. A negative times a negative is positive, so the squared factor is +0.01, which is above the axis.' },
+          { tex: 'x = 3.1:\\ x - 3 = 0.1,\\ \\ (0.1)^{2} = 0.01', text: 'Just to the right, the bracket is +0.1, and squaring keeps it positive at 0.01. Both sides have the same sign.' },
+          { tex: '\\text{no sign change}', text: 'The height is 0 at x = 3 but positive on both sides, so the graph comes down to the axis and goes back up. It cannot pass through to the other side, so it bounces.' },
+        ],
+        answer: '\\text{the sign never flips, so it bounces}',
+      },
+    },
+    {
+      kind: 'example',
+      head: 'A box cut from cardboard',
+      body: 'Cut a square of side x from each corner of a 12-by-12 inch sheet and fold up the sides. The volume is V(x) = x(12 − 2x)². Find the volume when x = 2.',
+      steps: {
+        steps: [
+          { tex: '12 - 2x', text: 'The base shrinks to 12 − 2x because a square of side x is cut from both ends of each 12-inch edge. That is two cuts, 2x in total.' },
+          { tex: 'V(x) = x \\cdot (12 - 2x)^{2}', text: 'Volume is length times width times height. The base is (12 − 2x) by (12 − 2x), which squares, and the height is x, the folded-up side.' },
+          { tex: '12 - 2(2) = 8,\\ \\ 8^{2} = 64', text: 'Put in x = 2. First the bracket: 2 times 2 is 4, and 12 − 4 is 8. Then square it, since the exponent applies to the whole bracket: 64.' },
+          { tex: 'V(2) = 2 \\cdot 64 = 128', text: 'Multiply by the height x = 2, which gives 128. The units are inches times inches times inches, so the volume is in cubic inches.' },
+        ],
+        answer: '128 \\text{ cubic inches}',
+      },
+    },
     {
       kind: 'protip',
       head: 'Build polynomials backwards',
@@ -682,7 +751,21 @@ export const PC_SLIDES_U01_04: SlideBank = {
         note: 'A repeated factor is ONE x-intercept that behaves differently, not two intercepts.',
       },
     },
-    { kind: 'challenge', head: 'Extra credit: profit over months', body: 'A company models profit by P(m) = −(m − 2)(m − 11).\nProfit is zero at month 2 and month 11.\nThe minus in front flips the curve into an upside-down U, so profit rises after month 2, peaks in the middle, and returns to zero at month 11.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: profit over months',
+      body: 'A company models profit by P(m) = −(m − 2)(m − 11). Find when profit is zero, then find the month of greatest profit and how big it is.',
+      steps: {
+        steps: [
+          { tex: '-(m - 2)(m - 11) = 0', text: 'Profit is zero when P(m) = 0. A product is zero only when one factor is zero, so we set each bracket to 0.' },
+          { tex: 'm = 2 \\ \\text{or}\\ m = 11', text: 'm − 2 = 0 gives m = 2, and m − 11 = 0 gives m = 11. These are the two months where profit is zero.' },
+          { tex: '-m^{2}\\ \\text{leads}\\ \\Rightarrow\\ \\text{opens down}', text: 'Multiplying out, the leading term is −m². That is an even degree with a negative coefficient, so both arms point down and the curve is an upside-down U.' },
+          { tex: 'm = \\dfrac{2 + 11}{2} = 6.5', text: 'The top of a symmetric U sits exactly halfway between its two zeros. The midpoint of 2 and 11 is 6.5.' },
+          { tex: 'P(6.5) = -(4.5)(-4.5) = 20.25', text: 'Put in m = 6.5. The brackets are 4.5 and −4.5, which multiply to −20.25, and the minus in front flips it to 20.25.' },
+        ],
+        answer: '\\text{zero at } m=2,\\ 11;\\ \\text{peak at } m=6.5\\ \\text{with } P = 20.25',
+      },
+    },
     {
       kind: 'summary',
       head: 'Arms outside, zeros inside',
@@ -710,6 +793,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Top and bottom do different jobs',
       body: 'A rational function is a fraction with a polynomial on top and one on the bottom. The TOP decides where the graph equals zero. The BOTTOM decides where the graph blows up. Two questions, two places to look.',
+      why: 'A fraction equals zero only when its top is 0 and its bottom is not, as in 0 ÷ 7 = 0. A fraction has no value when its bottom is 0, because no number multiplied by 0 can give a nonzero top. That is why the top controls where the graph touches the axis and the bottom controls where it breaks.',
       formula: {
         tex: 'r(x) = \\dfrac{p(x)}{q(x)}',
         note: 'Two polynomials, one on top of the other — and each half answers a different question.',
@@ -723,6 +807,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'The line the graph runs away from',
       body: 'You can never divide by zero. So wherever the bottom equals zero, the graph refuses to exist and instead shoots off toward infinity beside that spot. That invisible line is a VERTICAL ASYMPTOTE — the graph gets close forever and never touches.',
+      why: 'Look at 1 ÷ (x − 1) just to the right of x = 1. At x = 1.1 it gives 10, at x = 1.01 it gives 100, and at x = 1.001 it gives 1000. Dividing by a smaller and smaller number gives a bigger and bigger answer, and exactly at 0 there is no answer at all. So the graph shoots up beside the line without ever reaching it.',
       art: (() => {
         const ax = axes({ x: [-4, 4], y: [-5, 5] }, { ticks: { x: [-2, 0, 2], y: [-4, 0, 4] }, grid: true, pad: 30 });
         let b = ax.body + ax.curve((x) => 1 / (x - 1), AMB, 2.8);
@@ -741,6 +826,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Horizontal asymptote: compare degrees',
       body: 'Look far to the right and the graph often flattens toward a level line. If the bottom degree is bigger, that line is y = 0. If the degrees tie, divide the leading coefficients. If the top degree is bigger, there is no horizontal asymptote.',
+      why: 'For huge x only the highest powers matter. Try (3x) ÷ (2x + 1) at x = 1000: that is 3000 ÷ 2001, about 1.5, which is the ratio of the leading numbers 3 and 2. If the bottom grows faster the fraction shrinks toward 0, and if the top grows faster the fraction keeps growing, so there is no level line.',
       compare: {
         cols: [
           { title: 'Bottom wins', tex: '\\deg q > \\deg p', lines: ['y = 0', 'Fades to the axis'], tone: 'accent' },
@@ -762,6 +848,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'A hole is one missing dot',
       body: 'If the SAME factor appears on top and bottom, it cancels. That x-value is still forbidden, but the graph does not run away there — it is a normal curve with one dot lifted out. That is a HOLE, and it is easy to miss.',
+      why: 'Take (x − 2)(x + 3) ÷ (x − 2). For any x other than 2 the matching brackets cancel, leaving x + 3. At x = 2 you would be dividing by zero, so that one point is missing. Its neighbors, like x = 1.99 giving 4.99, still sit on the line y = x + 3, so you see a line with a single gap at (2, 5).',
       art: funcGraph([{ f: (x) => x + 3 }], { range: { x: [-5, 4], y: [-3, 7] }, points: [{ x: 2, y: 5, label: 'hole at x = 2', hollow: true, color: ROSE }], title: 'A cancelled factor leaves a gap', caption: 'The curve is a perfectly ordinary line with exactly one point missing.' }),
       compare: {
         cols: [
@@ -774,19 +861,30 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: one asymptote',
-      body: 'Take f(x) = 1 ÷ (x − 6).\nThe bottom is zero when x = 6, and dividing by zero is not allowed.\nSo x = 6 is a vertical asymptote — the graph runs away from that line.',
+      body: 'Take f(x) = 1 ÷ (x − 6). Where is its vertical asymptote?',
       steps: {
         steps: [
-          { tex: 'r(x) = \\dfrac{1}{x - 3}', text: 'Set the bottom equal to zero.' },
-          { tex: 'x - 3 = 0', text: 'That is the forbidden input.' },
+          { tex: 'x - 6 = 0', text: 'The graph can break only where the bottom is 0, because dividing by zero is not allowed. So we set the bottom equal to zero.' },
+          { tex: 'x = 6', text: 'Add 6 to both sides to solve. At x = 6 the function has no value, so x = 6 is a forbidden input.' },
+          { tex: '\\text{top} = 1 \\ne 0', text: 'Check the top at x = 6. It is 1, not 0, so nothing cancels. A bottom zero that does not cancel gives a runaway line, not a hole.' },
+          { tex: 'x = 6\\ \\text{is a vertical asymptote}', text: 'So the graph shoots off toward infinity beside the line x = 6 and never touches it.' },
         ],
-        answer: 'x = 3',
+        answer: 'x = 6',
       },
     },
     {
       kind: 'example',
       head: 'Another way: sneak up on the line',
-      body: 'Watch the values as x creeps toward 6 from the right.\nAt x = 7 you get 1. At x = 6.1 you get 10. At x = 6.01 you get 100.\nThe numbers explode upward, which is exactly what running away from a line looks like.',
+      body: 'Watch the values of f(x) = 1 ÷ (x − 3) as x creeps toward 3 from the right. What happens to the output?',
+      steps: {
+        steps: [
+          { tex: 'x = 3.1:\\ x - 3 = 0.1,\\ \\ \\tfrac{1}{0.1} = 10', text: 'Start close to 3. The bottom x − 3 is 0.1, and 1 divided by 0.1 is 10.' },
+          { tex: 'x = 3.01:\\ \\tfrac{1}{0.01} = 100', text: 'Get closer. The bottom is now 0.01, a hundredth, and dividing 1 by a hundredth gives 100. Ten times closer made the answer ten times bigger.' },
+          { tex: 'x = 3.001:\\ \\tfrac{1}{0.001} = 1000', text: 'Closer again gives 1000. A smaller bottom always means a bigger result, because 1 fits into it more times.' },
+          { tex: 'x \\to 3^{+}\\ \\Rightarrow\\ f(x) \\to \\infty', text: 'The outputs grow without any limit as x nears 3, but x = 3 itself would be division by zero. That explosion is what an asymptote looks like.' },
+        ],
+        answer: '\\text{the outputs explode toward } \\infty\\text{, so } x = 3 \\text{ is a vertical asymptote}',
+      },
       table: {
         head: ['x', 'x − 3', '1 ÷ (x − 3)'],
         rows: [['3.1', '0.1', '10'], ['3.01', '0.01', '100'], ['3.001', '0.001', '1000'], ['3.0001', '0.0001', '10,000']],
@@ -796,20 +894,44 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Zeros come from the top',
-      body: 'For f(x) = (x − 2) ÷ (x + 5), set the top to zero.\nx − 2 = 0 gives x = 2.\nCheck it: f(2) = 0 ÷ 7 = 0. Zero cookies split among 7 friends is still zero each.',
+      body: 'For f(x) = (x − 2) ÷ (x + 5), where does the graph meet the x-axis?',
       steps: {
         steps: [
-          { tex: 'r(x) = \\dfrac{x - 4}{x + 2}', text: 'A fraction is zero only when its TOP is zero.' },
-          { tex: 'x - 4 = 0', text: 'Solve the numerator.' },
+          { tex: '\\dfrac{x - 2}{x + 5} = 0', text: 'The graph meets the x-axis where the output is 0. So we set the whole fraction equal to 0.' },
+          { tex: 'x - 2 = 0', text: 'A fraction is zero only when its top is zero, since any 0 ÷ something is 0. So we only need to set the top equal to 0.' },
+          { tex: 'x = 2', text: 'Add 2 to both sides to solve. So the candidate zero is x = 2.' },
+          { tex: 'f(2) = \\dfrac{0}{7} = 0', text: 'Check the bottom is not also zero. At x = 2 it is 2 + 5 = 7, so we get 0 ÷ 7 = 0, which is valid. Zero shared among 7 is still zero.' },
         ],
-        answer: 'x = 4',
+        answer: 'x = 2',
       },
     },
-    { kind: 'example', head: 'Splitting a pizza bill', body: 'You split a $120 bill among n friends, so c(n) = 120 ÷ n.\nWith 8 friends: 120 ÷ 8 = $15 each.\nWith 12 friends: 120 ÷ 12 = $10 each. More friends, smaller share.' },
+    {
+      kind: 'example',
+      head: 'Splitting a pizza bill',
+      body: 'You split a $120 bill among n friends, so each pays c(n) = 120 ÷ n. Find each share for 8 friends and for 12 friends.',
+      steps: {
+        steps: [
+          { tex: 'c(n) = \\dfrac{120}{n}', text: 'Total cost divided by the number of people gives each share. This is a rational function, with n on the bottom.' },
+          { tex: 'c(8) = \\dfrac{120}{8} = 15', text: 'Put n = 8 in the rule. 120 split 8 ways is 15, so each friend pays $15.' },
+          { tex: 'c(12) = \\dfrac{120}{12} = 10', text: 'Now put n = 12. 120 split 12 ways is 10, so each friend pays $10.' },
+          { tex: '12 > 8\\ \\Rightarrow\\ 10 < 15', text: 'More friends means a bigger bottom, and a bigger bottom makes the fraction smaller. The same bill gets cut into smaller pieces.' },
+        ],
+        answer: '\\$15 \\text{ and } \\$10',
+      },
+    },
     {
       kind: 'example',
       head: 'Another way: watch the table shrink',
-      body: 'Keep adding friends to that same $120 bill.\n120 friends pay $1 each. 1200 friends pay 10 cents each. 12000 friends pay 1 cent.\nThe share slides toward 0 but never quite gets there — the horizontal asymptote is y = 0.',
+      body: 'What does f(x) = 3x ÷ (x² + 1) approach as x gets huge? Make a table of values and compare degrees.',
+      steps: {
+        steps: [
+          { tex: 'f(10) = \\dfrac{30}{101} \\approx 0.297', text: 'Start with x = 10. The top is 30 and the bottom is 100 + 1 = 101, so the value is about 0.297.' },
+          { tex: 'f(100) = \\dfrac{300}{10001} \\approx 0.030', text: 'Try x = 100. The top is 300 but the bottom jumped to 10,001, so the value drops to about 0.03.' },
+          { tex: 'f(1000) \\approx 0.003', text: 'At x = 1000 the top is 3000 and the bottom is 1,000,001, giving about 0.003. The bottom grows much faster than the top.' },
+          { tex: '\\deg\\text{ top} = 1 < \\deg\\text{ bottom} = 2', text: 'The degrees explain the table: the bottom has the bigger degree, so it wins the race. When the bottom wins, the fraction shrinks toward 0.' },
+        ],
+        answer: 'y = 0',
+      },
       table: {
         head: ['x', '3x ÷ (x² + 1)'],
         rows: [['10', '0.297'], ['100', '0.030'], ['1000', '0.003'], ['10,000', '0.0003']],
@@ -819,17 +941,45 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'When the degrees tie',
-      body: 'Find the horizontal asymptote of f(x) = (3x² + 1) ÷ (x² − 4).\nTop degree 2, bottom degree 2 — a tie.\nDivide the leading numbers: 3 ÷ 1 = 3, so the line is y = 3.',
+      body: 'Find the horizontal asymptote of f(x) = (3x² + 1) ÷ (x² − 4).',
       steps: {
         steps: [
-          { tex: 'r(x) = \\dfrac{3x^{2} + 1}{2x^{2} - 5}', text: 'Both top and bottom are degree 2 — a tie.' },
-          { tex: '\\dfrac{3}{2}', text: 'Take the two leading coefficients.' },
+          { tex: '\\deg(3x^{2} + 1) = 2,\\ \\ \\deg(x^{2} - 4) = 2', text: 'Find the degree of the top and the bottom. Both are 2, so this is a tie.' },
+          { tex: '\\dfrac{3x^{2} + 1}{x^{2} - 4} \\approx \\dfrac{3x^{2}}{x^{2}}', text: 'For huge x, the +1 and the −4 are tiny next to the x² terms, so only the leading terms matter.' },
+          { tex: '\\dfrac{3x^{2}}{x^{2}} = 3', text: 'The x² on top and bottom cancel, leaving the ratio of the leading coefficients, 3 ÷ 1 = 3.' },
+          { tex: 'f(100) = \\dfrac{30001}{9996} \\approx 3.0013', text: 'Check at x = 100. The top is 30,001 and the bottom is 9,996, and the quotient is about 3.0013, very close to 3.' },
         ],
-        answer: 'y = 1.5',
+        answer: 'y = 3',
       },
     },
-    { kind: 'example', head: 'When the bottom wins the race', body: 'For f(x) = (2x + 1) ÷ (x² + 5), the top is degree 1 and the bottom is degree 2.\nAt x = 100 the top is about 200 and the bottom is about 10005.\nThat fraction is tiny, so the asymptote is y = 0.' },
-    { kind: 'example', head: 'Medicine fading over time', body: 'Medicine in the blood is C(t) = 20t ÷ (t² + 4) mg per liter after t hours.\nAt t = 2: the top is 40 and the bottom is 8, so C = 5 mg/L.\nLater the squared bottom grows faster, so the level slides back toward 0.' },
+    {
+      kind: 'example',
+      head: 'When the bottom wins the race',
+      body: 'For f(x) = (2x + 1) ÷ (x² + 5), the top is degree 1 and the bottom is degree 2. What is the horizontal asymptote?',
+      steps: {
+        steps: [
+          { tex: '\\deg\\text{ top} = 1,\\ \\deg\\text{ bottom} = 2', text: 'Compare the degrees. The bottom is bigger, so it grows faster than the top when x is large.' },
+          { tex: 'x = 100:\\ \\text{top} = 201,\\ \\text{bottom} = 10005', text: 'Test a big value. The top is 2 · 100 + 1 = 201, and the bottom is 100² + 5 = 10,005, which is far larger.' },
+          { tex: '\\dfrac{201}{10005} \\approx 0.02', text: 'A small number divided by a huge one is tiny. The result is about 0.02, so the graph is hugging the x-axis.' },
+          { tex: 'x \\to \\infty \\Rightarrow f(x) \\to 0', text: 'As x grows, the bottom pulls further ahead, so the fraction keeps shrinking toward 0. The line y = 0 is the horizontal asymptote.' },
+        ],
+        answer: 'y = 0',
+      },
+    },
+    {
+      kind: 'example',
+      head: 'Medicine fading over time',
+      body: 'Medicine in the blood is C(t) = 20t ÷ (t² + 4) mg per liter after t hours. Find the level at t = 2, and say what happens in the long run.',
+      steps: {
+        steps: [
+          { tex: 'C(2) = \\dfrac{20(2)}{2^{2} + 4}', text: 'Put t = 2 into the rule. The top is 20 times 2, and the bottom needs the square first, 2² = 4, then add 4.' },
+          { tex: 'C(2) = \\dfrac{40}{8} = 5', text: 'Finish the arithmetic. 40 ÷ 8 is 5, so there are 5 mg per liter after 2 hours.' },
+          { tex: '\\deg\\text{ top} = 1 < \\deg\\text{ bottom} = 2', text: 'For the long run compare degrees. The bottom has the bigger degree, so the bottom wins the race for large t.' },
+          { tex: 'C(100) = \\dfrac{2000}{10004} \\approx 0.2', text: 'Check with a large t. At 100 hours the level is about 0.2 mg per liter, far below the 5 at t = 2. The level slides toward 0 as t grows.' },
+        ],
+        answer: 'C(2) = 5 \\text{ mg/L;\\ later } C \\to 0',
+      },
+    },
     {
       kind: 'protip',
       head: 'Always cancel before you count',
@@ -850,7 +1000,21 @@ export const PC_SLIDES_U01_04: SlideBank = {
         ],
       },
     },
-    { kind: 'challenge', head: 'Extra credit: sort the bad x-values', body: 'For f(x) = (x − 3)(x + 1) ÷ [(x − 3)(x − 6)], list every forbidden x, then sort them.\nThe bottom is zero at x = 3 and x = 6.\nThe 3 cancels with the top, so it is a hole; the 6 does not cancel, so it is a vertical asymptote.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: sort the bad x-values',
+      body: 'For f(x) = (x − 3)(x + 1) ÷ [(x − 3)(x − 6)], list every forbidden x, then decide which are holes and which are vertical asymptotes.',
+      steps: {
+        steps: [
+          { tex: '(x - 3)(x - 6) = 0', text: 'Forbidden x-values make the bottom zero, because we cannot divide by 0. Set the bottom equal to 0.' },
+          { tex: 'x = 3 \\ \\text{or}\\ x = 6', text: 'Each bracket gives one forbidden value: x − 3 = 0 gives 3, and x − 6 = 0 gives 6.' },
+          { tex: '\\dfrac{(x - 3)(x + 1)}{(x - 3)(x - 6)} = \\dfrac{x + 1}{x - 6}', text: 'Cancel the matching factor (x − 3) from top and bottom. The cancelled factor leaves a hole, and only what is left on the bottom can make an asymptote.' },
+          { tex: 'x = 3:\\ \\text{hole at } \\left(3,\\,-\\tfrac43\\right)', text: 'The 3 cancelled, so it is a hole. Put x = 3 into the simplified rule to find its height: (3 + 1) ÷ (3 − 6) = −4/3.' },
+          { tex: 'x = 6:\\ \\text{vertical asymptote}', text: 'The factor (x − 6) did not cancel, and the top at x = 6 is 7, not 0. So x = 6 is a real vertical asymptote.' },
+        ],
+        answer: 'x = 3\\ \\text{(hole)},\\ x = 6\\ \\text{(vertical asymptote)}',
+      },
+    },
     {
       kind: 'summary',
       head: 'Top for zeros, bottom for trouble',
