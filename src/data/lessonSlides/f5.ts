@@ -1041,19 +1041,19 @@ export const F5_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Read a line plot',
-      body: 'The plot shows the cups of water left in some bottles. How many bottles were measured in all, and which amount was the most common?',
-      art: dotPlot(['1/4', '1/2', '3/4', '1'], [3, 4, 2, 1], {
-        title: 'cups of water left', unit: 'cups', mark: 1,
-        caption: 'Three Xs over 1/4, four over 1/2, two over 3/4, one over 1.',
+      body: 'The plot shows the cups of juice left in some bottles. How many bottles were measured in all, and which amount was the most common?',
+      art: dotPlot(['1/4', '1/2', '3/4', '1'], [2, 3, 4, 1], {
+        title: 'cups of juice left', unit: 'cups', mark: 2,
+        caption: 'Two Xs over 1/4, three over 1/2, four over 3/4, one over 1.',
       }),
       steps: {
         steps: [
           { tex: '\\text{one X} = \\text{one bottle}', text: 'Each X on a line plot stands for exactly one thing that was measured, so counting Xs counts bottles.' },
-          { tex: '3 + 4 + 2 + 1 = 10', text: 'Count the Xs over each number and add them. That is the total number of bottles that were measured.' },
-          { tex: '\\text{tallest stack} = 4 \\text{ over } \\tfrac12', text: 'Find the tallest stack. A taller stack means that value showed up more often, and the tallest is over 1/2 with 4 Xs.' },
-          { tex: '\\text{most common} = \\tfrac12 \\text{ cup}', text: 'So the amount that happened most often is one half cup. The stack height tells how many bottles had that amount.' },
+          { tex: '2 + 3 + 4 + 1 = 10', text: 'Count the Xs over each number and add them. That is the total number of bottles that were measured.' },
+          { tex: '\\text{tallest stack} = 4 \\text{ over } \\tfrac34', text: 'Find the tallest stack. A taller stack means that value showed up more often, and the tallest is over 3/4 with 4 Xs.' },
+          { tex: '\\text{most common} = \\tfrac34 \\text{ cup}', text: 'So the amount that happened most often is three quarters of a cup. The stack height tells how many bottles had that amount.' },
         ],
-        answer: '10 \\text{ bottles; most common } \\tfrac12 \\text{ cup}',
+        answer: '10 \\text{ bottles; most common } \\tfrac34 \\text{ cup}',
       },
     },
     {

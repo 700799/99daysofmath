@@ -25,6 +25,7 @@ export const NS_SLIDES: SlideBank = {
         ],
         note: 'The decimal point is the anchor. Everything else lines up from there.',
       },
+      why: 'A digit is worth different amounts in different places. The 4 in 3.4 means four tenths, but the 5 in 1.25 means five hundredths. You can only add or subtract things of the same size, like dollars with dollars and dimes with dimes. Lining up the points puts same-size places in the same column.',
     },
     {
       kind: 'concept',
@@ -38,6 +39,7 @@ export const NS_SLIDES: SlideBank = {
         mark: 3,
         note: 'Zeros AFTER the last digit change nothing. A zero between the point and a digit changes everything.',
       },
+      why: 'Think about money: $3.4 and $3.40 are the same amount, 3 dollars and 4 dimes, with zero extra pennies. A zero on the right only says "none of this smaller size", so the amount stays the same. A zero between the point and a digit is different, because it pushes that digit into a smaller place.',
     },
     {
       kind: 'concept',
@@ -50,29 +52,97 @@ export const NS_SLIDES: SlideBank = {
           { label: 'add or subtract as usual' },
           { label: 'drop the point straight down' },
         ], { title: 'the decimal column routine', caption: 'The point never moves sideways — it falls straight into the answer.' }),
+      why: 'The decimal point marks the spot where whole amounts end and parts begin. Adding never changes the size of a place: tenths plus tenths are still tenths. So the line between the ones and the tenths stays where it is, and the answer\'s point goes right below the others.',
     },
-    { kind: 'example', head: 'Warm-up: 0.3 + 0.4', body: 'Both numbers already have one place, and the points line up. Add the tenths: 3 + 4 = 7 tenths. Answer: 0.7.' },
+    {
+      kind: 'example',
+      head: 'Warm-up: 0.3 + 0.4',
+      body: 'Both numbers have one decimal place, and the points already line up. What is 3 tenths plus 4 tenths?',
+      steps: {
+      steps: [
+        { tex: '0.3 + 0.4', text: 'Both numbers only have a tenths place, so the points already line up. Nothing needs padding, and we can add right away.' },
+        { tex: '3 + 4 = 7', text: 'Add the digits in the tenths column. Three tenths plus four tenths is seven tenths, just like 3 apples plus 4 apples is 7 apples.' },
+        { tex: '0.7', text: 'Put the 7 in the tenths place, with the decimal point right in front of it. Seven tenths is written 0.7.' },
+      ], answer: '0.7',
+    },
+    },
     {
       kind: 'example',
       head: 'Pad a zero: 3.4 + 1.25',
-      body: 'Write 3.4 as 3.40 so both have two places.\n3.40 + 1.25: hundredths 0 + 5 = 5, tenths 4 + 2 = 6, ones 3 + 1 = 4.\nAnswer: 4.65.',
-      steps: { steps: [{ tex: '3.40 + 1.25', text: 'Pad the short one so both have two places.' }, { tex: '= 4.65', text: 'Add column by column, point straight down.' }], answer: '4.65' },
+      body: 'The two numbers have different numbers of decimal places. How do you line them up and add them?',
+      steps: {
+      steps: [
+        { tex: '3.40 + 1.25', text: 'Write 3.4 as 3.40. A zero on the right does not change the amount, and now both numbers have a hundredths column.' },
+        { tex: '0 + 5 = 5', text: 'Add the hundredths first, on the right: 0 + 5 = 5. We start at the smallest place so any carry can move left to the next place.' },
+        { tex: '4 + 2 = 6', text: 'Add the tenths: 4 + 2 = 6. Nothing is over 9, so there is nothing to carry and the 6 stays in the tenths place.' },
+        { tex: '3 + 1 = 4', text: 'Add the ones: 3 + 1 = 4. Bring the decimal point straight down between the ones and the tenths, so every digit stays in its own place.' },
+      ], answer: '4.65',
     },
-    { kind: 'example', head: 'Add with a carry: 0.75 + 0.5', body: 'Write 0.5 as 0.50.\n0.75 + 0.50: hundredths 5 + 0 = 5, tenths 7 + 5 = 12 — write 2, carry 1 to the ones.\nAnswer: 1.25.' },
+    },
+    {
+      kind: 'example',
+      head: 'Add with a carry: 0.75 + 0.5',
+      body: 'One number has two decimal places and the other has one. Pad it, add, and watch for a column that goes over 9.',
+      steps: {
+      steps: [
+        { tex: '0.75 + 0.50', text: 'Write 0.5 as 0.50 so both numbers have a hundredths column. Zeros on the right never change the value.' },
+        { tex: '5 + 0 = 5', text: 'Add the hundredths: 5 + 0 = 5. Nothing is over 9 here, so there is nothing to carry yet.' },
+        { tex: '7 + 5 = 12', text: 'Add the tenths: 7 + 5 = 12. A column holds one digit, so write the 2 and carry the 1, because 10 tenths make one whole.' },
+        { tex: '0 + 0 + 1 = 1', text: 'Add the ones: 0 + 0 + the carried 1 = 1. Twelve tenths is one whole plus two tenths, so the answer is 1.25.' },
+      ], answer: '1.25',
+    },
+    },
     {
       kind: 'example',
       head: 'A hidden point: 5 − 2.3',
-      body: 'A whole number has a secret decimal point: 5 is 5.0.\n5.0 − 2.3: borrow to make 10 − 3 = 7 tenths, then 4 − 2 = 2 ones.\nAnswer: 2.7.',
-      steps: { steps: [{ tex: '5.0 - 2.3', text: 'A whole number has a point after it.' }, { tex: '= 2.7', text: 'Now the columns line up properly.' }], answer: '2.7' },
+      body: 'The 5 has no decimal point written. How do you line it up with 2.3 and subtract?',
+      steps: {
+      steps: [
+        { tex: '5 = 5.0', text: 'A whole number has a hidden point right after its last digit. Write 5 as 5.0 so it has a tenths column that lines up with 2.3.' },
+        { tex: '10 - 3 = 7', text: 'Tenths: 0 − 3 will not work, so borrow 1 from the ones. That 1 is worth 10 tenths, so we get 10 − 3 = 7 tenths.' },
+        { tex: '4 - 2 = 2', text: 'Ones: the 5 gave one away, so it is now 4, and 4 − 2 = 2. Forgetting to lower the 5 to a 4 is a very common slip.' },
+        { tex: '2.7', text: 'Drop the decimal point straight down between the 2 and the 7. Check by adding back: 2.7 + 2.3 = 5.0, which matches.' },
+      ], answer: '2.7',
     },
-    { kind: 'example', head: 'Two carries: 2.6 + 3.45', body: 'Pad: 2.60 + 3.45.\nHundredths 0 + 5 = 5. Tenths 6 + 4 = 10 — write 0, carry 1. Ones 2 + 3 + 1 = 6.\nAnswer: 6.05.' },
+    },
+    {
+      kind: 'example',
+      head: 'Two carries: 2.6 + 3.45',
+      body: 'This sum has a carry in more than one column. Where do the carries happen, and where do they go?',
+      steps: {
+      steps: [
+        { tex: '2.60 + 3.45', text: 'Pad 2.6 to 2.60 so both numbers have a hundredths column. Now every column has a digit to add.' },
+        { tex: '0 + 5 = 5', text: 'Add the hundredths: 0 + 5 = 5. The sum is under 10, so nothing carries and we move left.' },
+        { tex: '6 + 4 = 10', text: 'Add the tenths: 6 + 4 = 10. Ten tenths make one whole, so write 0 in the tenths place and carry the 1 to the ones.' },
+        { tex: '2 + 3 + 1 = 6', text: 'Add the ones: 2 + 3 + the carried 1 = 6. The point drops straight down, so the answer is 6.05.' },
+      ], answer: '6.05',
+    },
+    },
     {
       kind: 'example',
       head: 'Borrow twice: 4.2 − 1.75',
-      body: 'Pad: 4.20 − 1.75.\nHundredths: borrow, 10 − 5 = 5. Tenths: 2 became 1, borrow again, 11 − 7 = 4. Ones: 3 − 1 = 2.\nAnswer: 2.45.',
-      steps: { steps: [{ tex: '4.20 - 1.75', text: 'Pad the top so both have two places.' }, { tex: '\\text{borrow across}', text: 'Trade down twice to subtract.' }, { tex: '= 2.45', text: 'Bring the point straight down.' }], answer: '2.45' },
+      body: 'After padding, the top digit is too small in two different columns. Where do you borrow, and what happens to the neighbor?',
+      steps: {
+      steps: [
+        { tex: '4.20 - 1.75', text: 'Pad 4.2 to 4.20 so both numbers have a hundredths column. Now each column has a top digit to subtract from.' },
+        { tex: '10 - 5 = 5', text: 'Hundredths: 0 − 5 will not work, so borrow 1 tenth from the 2. That tenth is worth 10 hundredths, so 10 − 5 = 5.' },
+        { tex: '11 - 7 = 4', text: 'Tenths: the 2 gave one away and is now 1, and 1 − 7 will not work. Borrow 1 from the ones to make 11 tenths, then 11 − 7 = 4.' },
+        { tex: '3 - 1 = 2', text: 'Ones: the 4 gave one away and is now 3, so 3 − 1 = 2. Check by adding back: 2.45 + 1.75 = 4.20.' },
+      ], answer: '2.45',
     },
-    { kind: 'example', head: 'Another way: think in cents', body: 'Compute $5.00 − $2.30 by switching to cents.\n500 cents − 230 cents = 270 cents. Change back: $2.70.' },
+    },
+    {
+      kind: 'example',
+      head: 'Another way: think in cents',
+      body: 'Money makes decimals easy. Can you turn $5.00 − $2.30 into whole numbers of cents and subtract those?',
+      steps: {
+      steps: [
+        { tex: '\\$5.00 = 500\\text{¢},\\ \\$2.30 = 230\\text{¢}', text: 'Dollars with decimals are really a count of cents. Because 100 cents make a dollar, we can write both amounts as whole numbers of cents.' },
+        { tex: '500 - 230 = 270', text: 'Subtract the whole numbers. Both amounts are counted in the same unit, cents, so we can subtract them like ordinary numbers.' },
+        { tex: '270\\text{¢} = \\$2.70', text: 'Change back to dollars by putting the point two places from the right, because 100 cents make one dollar. 270 cents is $2.70.' },
+      ], answer: '\\$2.70',
+    },
+    },
     { kind: 'protip', head: 'Estimate before you compute', body: 'Round first: 3.4 + 1.25 is about 3 + 1 = 4, so the answer should be a little over 4. If you get 45.65 or 0.465, the decimal point slipped. A ten-second estimate catches almost every point mistake.' },
     {
       kind: 'trap',
@@ -81,8 +151,8 @@ export const NS_SLIDES: SlideBank = {
       art: flow([{ label: '3.4 + 1.25', color: SKY }, { label: 'Points align, not the ends', color: EMR }, { label: 'Write 3.40, then add', color: VIO }], { title: 'The point is the anchor' }),
       compare: {
         cols: [
-          { title: 'Wrong', tex: '3.5 + 0.42 = 3.92', lines: ['Treated 5 as hundredths', 'Off by a lot'], tone: 'bad' },
-          { title: 'Right', tex: '3.50 + 0.42 = 3.92', lines: ['Wait — pad first', 'Then it is right'], tone: 'ok' },
+          { title: 'Wrong', tex: '1.25 + 0.34 = 1.59', lines: ['Lined up the ends', 'Read 3.4 as 0.34'], tone: 'bad' },
+          { title: 'Right', tex: '3.40 + 1.25 = 4.65', lines: ['Points in one column', 'Padded with a zero'], tone: 'ok' },
         ],
       },
     },
@@ -92,7 +162,19 @@ export const NS_SLIDES: SlideBank = {
       body: 'In 5 − 2.3, the 5 is really 5.0 — the point hides after the ones digit. If you skip that, you might write 5 − 2.3 = 2.3 or worse. Give whole numbers their decimal point and a zero before you subtract.',
       compare: { cols: [{ title: 'Written 5', tex: '5.0', lines: ['Point after the 5', 'Columns line up'], tone: 'ok' }, { title: 'Treated as 5', tex: '5\\ \\ \\ ', lines: ['No point to anchor', 'Columns drift'], tone: 'bad' }], note: 'Every whole number has a decimal point; it is just not written.' },
     },
-    { kind: 'challenge', head: 'Extra credit: drink and refill', body: 'A bottle holds 2.0 L. You pour out 0.75 L, then add back 0.3 L. How much now?\n2.0 − 0.75 = 1.25, then 1.25 + 0.3 = 1.55 L.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: drink and refill',
+      body: 'A bottle holds 2.0 L. You pour out 0.75 L, then add back 0.3 L. How much is in it now? Do it in two parts.',
+      steps: {
+      steps: [
+        { tex: '2.00 - 0.75', text: 'Pouring water out means subtracting. Pad 2.0 to 2.00 so the hundredths line up with 0.75.' },
+        { tex: '2.00 - 0.75 = 1.25', text: 'Borrow across the zeros: 200 hundredths minus 75 hundredths is 125 hundredths, which is 1.25. Check: 1.25 + 0.75 = 2.00.' },
+        { tex: '1.25 + 0.30', text: 'Adding water back means adding. Pad 0.3 to 0.30 so the hundredths line up with 1.25.' },
+        { tex: '1.25 + 0.30 = 1.55', text: 'Add column by column: 5 + 0 = 5, 2 + 3 = 5, 1 + 0 = 1, with the point straight down. The bottle holds 1.55 L.' },
+      ], answer: '1.55\\text{ L}',
+    },
+    },
     { kind: 'summary', head: 'Three moves, zero mistakes', body: 'Line up the decimal points in a straight column. Pad with zeros so both numbers have the same places. Compute like whole numbers and bring the point straight down. Estimate first to catch any slip!' },
   ],
   '6.NS-2': [
@@ -115,6 +197,7 @@ export const NS_SLIDES: SlideBank = {
           { sym: '0.12', means: 'twelve hundredths — smaller than either factor', tone: 'ok' },
         ],
       },
+      why: 'Every decimal is a whole number divided by 10, 100 and so on. So 0.4 × 0.3 is (4 ÷ 10) × (3 ÷ 10), which is 12 ÷ 100. You multiply the whole numbers first, then divide by one 10 for each decimal place. Counting places is just keeping track of those tens.',
     },
     {
       kind: 'concept',
@@ -127,6 +210,7 @@ export const NS_SLIDES: SlideBank = {
         [['0.12', ''], ['', '']],
         { title: 'a unit square cut into hundredths', total: '12 little squares out of 100', caption: 'Tenths across times tenths down makes hundredths — that is where the places come from.' },
       ),
+      why: 'Picture a square cut into 10 strips one way and 10 strips the other way, giving 100 little squares. A rectangle 0.4 wide and 0.3 tall covers 4 × 3 = 12 of them. Each little square is one hundredth, so the area is 12 hundredths, or 0.12.',
     },
     {
       kind: 'concept',
@@ -134,47 +218,105 @@ export const NS_SLIDES: SlideBank = {
       body: 'You\'re not allowed to be confused by a decimal divisor — so get rid of it! Move the decimal point right until the divisor is a whole number, and move the dividend\'s point the SAME number of spots. 4.8 ÷ 0.6 becomes 48 ÷ 6, which is easy.',
       art: flow([{ label: 'Move the divisor\'s point to the end', color: SKY }, { label: 'Slide the other one the same way', color: AMB }, { label: 'Now divide as usual', color: EMR }], { title: 'Both points move together' }),
       steps: {
-        steps: [
-          { tex: '1.44 \\div 0.4', text: 'You cannot divide by a decimal comfortably.' },
-          { tex: '14.4 \\div 4', text: 'Slide BOTH points one place right.' },
-          { tex: '= 3.6', text: 'Now it is an ordinary division.' },
-        ],
-        answer: '3.6',
-      },
+      steps: [
+        { tex: '1.44 \\div 0.4', text: 'Dividing by a decimal is awkward. We will turn this into an easier problem that has exactly the same answer.' },
+        { tex: '14.4 \\div 4', text: 'Slide BOTH points one place right. That multiplies both numbers by 10, and scaling both the same way keeps the answer unchanged.' },
+        { tex: '14.4 \\div 4 = 3.6', text: 'Divide as usual: 14 ÷ 4 is 3 with 2 left over, then 24 tenths ÷ 4 is 6 tenths. Keep the point straight above in the answer.' },
+      ], answer: '3.6',
+    },
+      why: 'Multiplying both numbers in a division by 10 does not change the answer, just like 6 ÷ 3 and 60 ÷ 30 are both 2. Sliding a point one place right is the same as multiplying by 10. Doing it to both numbers makes the divisor whole and keeps the answer the same.',
     },
     {
       kind: 'concept',
       head: 'Estimate to place the point',
       body: 'Before computing, round and guess: 1.2 × 3 is about 1 × 3 = 3, so expect an answer near 3. Estimates tell you whether the answer should be 0.36, 3.6, or 36. The digits come from multiplying; the point comes from thinking.',
       formula: { tex: '0.6 \\times 0.4 \\approx \\text{less than } 0.6', note: 'Multiplying by less than one always makes the answer smaller.', parts: [{ sym: '< 1', means: 'a factor below one shrinks the other number', tone: 'accent' }, { sym: '\\text{estimate}', means: 'tells you roughly where the point belongs', tone: 'ok' }] },
+      why: 'Rounding gives you a rough size to check against. The digits from multiplying can be perfect while the point is in the wrong spot. For 1.2 × 3, the digits are 36, and the estimate 1 × 3 = 3 tells you the answer is near 3, so it must be 3.6 and not 0.36 or 36.',
     },
     {
       kind: 'example',
       head: 'Warm-up: 0.3 × 0.7',
-      body: 'Ignore the points: 3 × 7 = 21.\nCount places: one in 0.3, one in 0.7 — two total.\nPlace the point two spots in: 0.21.',
-      steps: { steps: [{ tex: '3 \\times 7 = 21', text: 'Ignore the points and multiply.' }, { tex: '\\text{two places} \\to 0.21', text: 'One place each, so two in the answer.' }], answer: '0.21' },
+      body: 'Both numbers are less than 1. What do you do with the digits, and where does the decimal point go?',
+      steps: {
+      steps: [
+        { tex: '3 \\times 7 = 21', text: 'Ignore the points for now and multiply 3 × 7. Whole-number facts are easy, and we fix the point afterwards.' },
+        { tex: '1 + 1 = 2\\text{ places}', text: 'Count decimal places: 0.3 has one and 0.7 has one, so the answer needs two. Tenths times tenths make hundredths.' },
+        { tex: '0.21', text: 'Start at the right end of 21 and move the point two places left. The answer, 21 hundredths, is smaller than both factors, as it should be.' },
+      ], answer: '0.21',
     },
-    { kind: 'example', head: 'Multiply: 0.6 × 0.4', body: 'Whole numbers first: 6 × 4 = 24.\nDecimal places: 0.6 has one, 0.4 has one — two total.\nAnswer: 0.24.' },
+    },
+    {
+      kind: 'example',
+      head: 'Multiply: 0.6 × 0.4',
+      body: 'Multiply two tenths. How do you find the digits, and how many decimal places does the answer get?',
+      steps: {
+      steps: [
+        { tex: '6 \\times 4 = 24', text: 'Ignore the points and multiply the whole numbers. 6 × 4 is a basic fact, so the digits are 24.' },
+        { tex: '1 + 1 = 2\\text{ places}', text: 'Count the decimal places in both factors: one in 0.6 and one in 0.4. Add them to get two places in the answer.' },
+        { tex: '0.24', text: 'Move the point two places in from the right end of 24. Check the size: 0.24 is smaller than 0.6 and 0.4, as a fraction of a fraction should be.' },
+      ], answer: '0.24',
+    },
+    },
     {
       kind: 'example',
       head: 'One decimal factor: 1.2 × 3',
-      body: 'Ignore the point: 12 × 3 = 36.\nCount places: 1.2 has one, 3 has none — one total.\nAnswer: 3.6. Check: about 1 × 3 = 3. Fits!',
-      steps: { steps: [{ tex: '12 \\times 3 = 36', text: 'Multiply as whole numbers.' }, { tex: '\\text{one place} \\to 3.6', text: 'Only one factor had a decimal place.' }], answer: '3.6' },
+      body: 'Only one of the two factors has a decimal point. How many places does the answer get?',
+      steps: {
+      steps: [
+        { tex: '12 \\times 3 = 36', text: 'Ignore the point and multiply the whole numbers 12 and 3. That gives the digits 36.' },
+        { tex: '1 + 0 = 1\\text{ place}', text: 'Count the decimal places: 1.2 has one and 3 has none, so the answer gets one place. Only the places that are really there count.' },
+        { tex: '3.6', text: 'Put the point one place from the right end of 36. Estimate to check: 1 × 3 = 3, and 3.6 is close to that.' },
+      ], answer: '3.6',
     },
-    { kind: 'example', head: 'Divide: 2.5 ÷ 0.5', body: 'Slide both points one spot right: 2.5 ÷ 0.5 becomes 25 ÷ 5.\n25 ÷ 5 = 5.\nAnswer: 5 — how many halves fit in two and a half? Five!' },
+    },
+    {
+      kind: 'example',
+      head: 'Divide: 2.5 ÷ 0.5',
+      body: 'The divisor 0.5 is a decimal. How can you turn it into a whole number without changing the answer?',
+      steps: {
+      steps: [
+        { tex: '2.5 \\div 0.5 = 25 \\div 5', text: 'Slide both points one place right. This multiplies both numbers by 10, which keeps the answer the same and makes the divisor whole.' },
+        { tex: '25 \\div 5 = 5', text: 'Now divide the whole numbers: 25 ÷ 5 = 5. Dividing by a whole number is the kind of division you already know.' },
+        { tex: '5 \\text{ halves}', text: 'Check with a picture: 2.5 is five halves because each whole holds two halves and there is one more half. So five halves fit.' },
+      ], answer: '5',
+    },
+    },
     {
       kind: 'example',
       head: 'Divide: 4.8 ÷ 0.6',
-      body: 'Make the divisor whole: move both points one spot → 48 ÷ 6.\n48 ÷ 6 = 8.\nAnswer: 8. Sliding both points is fair because you scaled both numbers by 10.',
-      steps: { steps: [{ tex: '48 \\div 6', text: 'Slide both points one place right.' }, { tex: '= 8', text: 'Now it is ordinary whole-number division.' }], answer: '8' },
+      body: 'Make the divisor 0.6 a whole number first. What happens to the other number?',
+      steps: {
+      steps: [
+        { tex: '4.8 \\div 0.6 = 48 \\div 6', text: 'Slide both points one place right. Both numbers are multiplied by 10, so the answer does not change.' },
+        { tex: '48 \\div 6 = 8', text: 'Divide the whole numbers: 6 × 8 = 48, so 48 ÷ 6 = 8. Sliding the points made this an easy fact.' },
+        { tex: '8 \\times 0.6 = 4.8', text: 'Check by multiplying back: 8 × 0.6 is 8 × 6 = 48 with one place, which is 4.8. That matches the start, so 8 is right.' },
+      ], answer: '8',
+    },
     },
     {
       kind: 'example',
       head: 'Trailing zero: 0.5 × 0.8',
-      body: '5 × 8 = 40.\nTwo decimal places total, so count two spots in: 0.40.\nAnswer: 0.40, which is the same as 0.4 — count places BEFORE you drop the zero.',
-      steps: { steps: [{ tex: '5 \\times 8 = 40', text: 'Multiply the digits.' }, { tex: '\\text{two places} \\to 0.40', text: 'Place the point, then drop the trailing zero.' }], answer: '0.4' },
+      body: 'The digits multiply to something ending in zero. When do you drop that zero, and when must you not?',
+      steps: {
+      steps: [
+        { tex: '5 \\times 8 = 40', text: 'Ignore the points and multiply 5 × 8. The digits are 40, and the zero is part of them for now.' },
+        { tex: '1 + 1 = 2\\text{ places}', text: 'Count the decimal places first: one in 0.5 and one in 0.8, so two places. Place the point BEFORE you drop any zero.' },
+        { tex: '0.40 = 0.4', text: 'Two places in from the right of 40 gives 0.40. A zero on the right of a decimal is free to drop, so forty hundredths is the same as four tenths.' },
+      ], answer: '0.4',
     },
-    { kind: 'example', head: 'Another way: use fractions', body: 'Multiply 0.6 × 0.4 using fractions.\n6/10 × 4/10 = 24/100 = 0.24.' },
+    },
+    {
+      kind: 'example',
+      head: 'Another way: use fractions',
+      body: 'Write each decimal as a fraction, multiply the fractions, then turn the answer back into a decimal.',
+      steps: {
+      steps: [
+        { tex: '0.6 = \\tfrac{6}{10},\\ 0.4 = \\tfrac{4}{10}', text: 'A decimal with one place is that many tenths. So 0.6 is six tenths and 0.4 is four tenths.' },
+        { tex: '\\tfrac{6}{10} \\times \\tfrac{4}{10} = \\tfrac{24}{100}', text: 'Multiply tops and bottoms. 6 × 4 = 24 on top and 10 × 10 = 100 on the bottom, which is why two decimal places appear.' },
+        { tex: '\\tfrac{24}{100} = 0.24', text: 'Twenty-four hundredths is written 0.24. This matches the counting-places method, which is the proof that the rule works.' },
+      ], answer: '0.24',
+    },
+    },
     { kind: 'protip', head: 'The answer can shrink', body: 'Multiplying by a number smaller than 1 makes things SMALLER: 0.6 × 0.4 = 0.24, less than both factors. That\'s not a mistake — you\'re taking a fraction of a fraction. Use it as a check: decimal × decimal under 1 should shrink.' },
     {
       kind: 'trap',
@@ -195,7 +337,18 @@ export const NS_SLIDES: SlideBank = {
       body: 'When dividing, if you shift the divisor\'s point you MUST shift the dividend\'s point the same amount. Turning 4.8 ÷ 0.6 into 4.8 ÷ 6 changes the problem completely. Both points slide together, always.',
       compare: { cols: [{ title: 'Both points', tex: '4.8 \\div 0.6 \\to 48 \\div 6', lines: ['Same ratio', 'Answer is 8'], tone: 'ok' }, { title: 'One point', tex: '4.8 \\div 6', lines: ['Ratio changed', 'Answer is 0.8'], tone: 'bad' }], note: 'Sliding both points keeps the division exactly the same.' },
     },
-    { kind: 'challenge', head: 'Extra credit: bag the rice', body: 'A 12 kg sack of rice fills bags of 0.8 kg each. How many bags?\n12 ÷ 0.8: multiply both by 10 to get 120 ÷ 8 = 15 bags.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: bag the rice',
+      body: 'A 12 kg sack of rice fills bags of 0.8 kg each. How many bags can you fill?',
+      steps: {
+      steps: [
+        { tex: '12 \\div 0.8', text: 'The question asks how many 0.8 kg bags fit in 12 kg, so it is a division. Write it as 12 ÷ 0.8.' },
+        { tex: '12 \\div 0.8 = 120 \\div 8', text: 'Slide both points one place right. 12 is the same as 12.0, so it becomes 120, and 0.8 becomes 8. The answer stays the same.' },
+        { tex: '120 \\div 8 = 15', text: 'Divide the whole numbers: 8 × 15 = 120, so the answer is 15. Check: 15 bags × 0.8 kg = 12 kg.' },
+      ], answer: '15\\text{ bags}',
+    },
+    },
     {
       kind: 'summary',
       head: 'Digits first, point second',
