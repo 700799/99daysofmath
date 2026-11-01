@@ -433,7 +433,7 @@ export const RP_SLIDES: SlideBank = {
     {
       kind: 'example',
       head: 'Doubling: 4 pens cost $3',
-      body: 'Four pens cost $3. What do 8 pens cost?',
+      body: 'Four pens cost $3. What do 8 pens cost at the same price per pen?',
       steps: { steps: [
         { tex: '4 \\times 2 = 8', text: 'Find how the pens changed. 8 is 4 times 2, so we have two copies of the original order.' },
         { tex: '3 \\times 2', text: 'Two copies of the order cost two times as much. Whatever we do to the pens, we do to the price too.' },
@@ -793,7 +793,7 @@ export const RP_SLIDES: SlideBank = {
       steps: { steps: [
         { tex: '10\\% \\text{ of } 60 = 6', text: 'Find the easy one first. 10% is one tenth, so move the point one place left, and 60 becomes 6.' },
         { tex: '30\\% = 3 \\times 10\\%', text: 'Thirty percent is three lots of 10 percent. So 30% of 60 is three groups of what we just found.' },
-        { tex: '3 \\times 6 = 18', text: 'Multiply 6 by 3 to get 18.' },
+        { tex: '3 \\times 6 = 18', text: 'Multiply 6 by 3 to add up the three chunks, and you get 18.' },
         { tex: '0.30 \\times 60 = 18', text: 'Check with the decimal method. 0.30 times 60 is 18 as well, so both methods agree.' },
       ], answer: '18' },
     },
@@ -1409,7 +1409,7 @@ export const RP_SLIDES: SlideBank = {
       head: 'Inches to feet: 36 inches',
       body: 'A desk is 36 inches wide. How many feet is that?',
       steps: { steps: [
-        { tex: '1 \\text{ ft} = 12 \\text{ in}', text: 'Recall the anchor. Every 12 inches make one foot.' },
+        { tex: '1 \\text{ ft} = 12 \\text{ in}', text: 'Recall the anchor. Every 12 inches make one foot, and this is the rate we use.' },
         { tex: '\\text{feet are bigger}', text: 'A foot is a bigger unit than an inch, so we will have fewer feet than inches. Going to a bigger unit means divide.' },
         { tex: '36 \\div 12 = 3', text: 'Count how many groups of 12 inches fit into 36. Since 12 × 3 = 36, the answer is 3.' },
         { tex: '3 < 36', text: 'Sense-check. We moved to a bigger unit, so the number should shrink. 3 is smaller than 36, so it fits.' },
@@ -1441,7 +1441,7 @@ export const RP_SLIDES: SlideBank = {
       head: 'Ounces to pounds: 48 oz',
       body: 'A bag of flour weighs 48 ounces. How many pounds is that?',
       steps: { steps: [
-        { tex: '16 \\text{ oz} = 1 \\text{ lb}', text: 'Recall the anchor. Every 16 ounces make one pound.' },
+        { tex: '16 \\text{ oz} = 1 \\text{ lb}', text: 'Recall the anchor. Every 16 ounces make one pound, and this is the rate we use.' },
         { tex: '\\text{pounds are bigger}', text: 'A pound is heavier than an ounce, so we will have fewer pounds than ounces. Going to a bigger unit means divide.' },
         { tex: '48 \\div 16 = 3', text: 'Count how many groups of 16 ounces fit into 48 ounces. Since 16 × 3 = 48, the answer is 3.' },
       ], answer: '3 \\text{ lb}' },
@@ -1572,7 +1572,7 @@ export const RP_SLIDES: SlideBank = {
       steps: { steps: [
         { tex: '36 \\div 12 = 3', text: 'Find the scale factor by dividing the new cookies by the old cookies. We are making 3 times as many.' },
         { tex: '3 \\times 3', text: 'Use the same factor on the eggs. To keep the recipe tasting the same, both the cookies and the eggs must be tripled.' },
-        { tex: '3 \\times 3 = 9', text: 'Three batches of 3 eggs is 9 eggs.' },
+        { tex: '3 \\times 3 = 9', text: 'Three batches of 3 eggs each is 9 eggs, which is the answer.' },
       ], answer: '9 \\text{ eggs}' },
     },
     {
@@ -1619,7 +1619,7 @@ export const RP_SLIDES: SlideBank = {
       steps: { steps: [
         { tex: '6 \\div 3 = 2', text: 'Find the price of one pack by dividing the cost by the packs. Each pack costs $2.' },
         { tex: '8 \\times 2', text: 'Every pack costs the same $2, so 8 packs cost 8 times that price.' },
-        { tex: '8 \\times 2 = 16', text: 'Eight lots of $2 make $16.' },
+        { tex: '8 \\times 2 = 16', text: 'Eight lots of $2 add up to $16, which is the cost of 8 packs.' },
         { tex: '8 \\div 3 \\times 6 = 16', text: 'Check with a scale factor. 8 is 8/3 times 3, and 8/3 times 6 is 16, the same answer by a different road.' },
       ], answer: '\\$16' },
     },

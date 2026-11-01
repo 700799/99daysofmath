@@ -1250,6 +1250,7 @@ export const NS_SLIDES: SlideBank = {
           { at: 0, label: '0', color: VIO },
           { at: 1, label: '1', color: EMR },
         ], { step: 3, title: 'smallest on the left, biggest on the right', caption: 'Ordering signed numbers is just reading the line from left to right.' }),
+      why: 'Each step to the right on the number line adds 1. Starting at −9 and walking right you reach −8, −7, and so on, each one bigger than the last, then zero, then the positives. A thermometer works the same way: higher is warmer, so being further up or right always means bigger.',
     },
     {
       kind: 'concept',
@@ -1257,6 +1258,7 @@ export const NS_SLIDES: SlideBank = {
       body: 'All negatives live left of zero and all positives live right of it. So ANY positive beats ANY negative: even tiny 1 is greater than mighty-looking −100. Zero sits in the middle — bigger than every negative, smaller than every positive.',
       formula: { tex: 'a < 0 < b \\implies a < b', note: 'Zero is the dividing line, and it settles every mixed comparison.', parts: [{ sym: 'a < 0', means: 'anything left of zero', tone: 'accent' }, { sym: '0 < b', means: 'anything right of zero, which always wins', tone: 'ok' }] },
       art: numberLine(-8, 8, [{ at: -4, label: 'negatives', color: ROSE }, { at: 0, label: '0', color: VIO }, { at: 4, label: 'positives', color: EMR }], { title: 'Zero is the dividing line', caption: 'Everything left of zero is smaller than everything right of it, no matter the digits.' }),
+      why: 'Negative numbers are below zero, positive numbers are above zero, and zero sits between them. Think of money: owing 100 dollars can never leave you with more than having 1 dollar. Anything below zero is always below anything above zero, whatever the digits look like.',
     },
     {
       kind: 'concept',
@@ -1271,41 +1273,93 @@ export const NS_SLIDES: SlideBank = {
         ],
         note: 'With negatives the bigger digit means the SMALLER number. That flip is the whole lesson.',
       },
+      why: 'Owing less is better. −4 means owing 4 dollars and −9 means owing 9 dollars, so −4 leaves you with more. On a thermometer, −4° is only 4 below freezing, which is warmer than −9°. A bigger digit after the minus sign means a bigger debt, so a smaller number.',
     },
-    { kind: 'example', head: 'Warm-up: −3 or 1?', body: '1 is positive, so it sits right of zero. −3 sits left of zero.\nRight beats left.\n1 > −3.' },
+    {
+      kind: 'example',
+      head: 'Warm-up: −3 or 1?',
+      body: 'Which is greater, −3 or 1? One is negative and one is positive.',
+      steps: {
+      steps: [
+        { tex: '1 > 0', text: '1 is positive, so it sits to the right of zero. Every positive number is on the right side of the line.' },
+        { tex: '-3 < 0', text: '−3 is negative, so it sits to the left of zero. Every negative number is on the left side of the line.' },
+        { tex: '1 > -3', text: 'Right beats left, so 1 is greater. Check with money: owing 3 dollars is worse than having 1 dollar.' },
+      ], answer: '1 > -3',
+    },
+    },
     {
       kind: 'example',
       head: 'Two negatives: −4 or −9?',
-      body: 'Both are left of zero. −4 is only 4 steps out; −9 is 9 steps out.\n−4 sits closer to zero, so it\'s further right.\n−4 > −9.',
-      steps: { steps: [{ tex: '-9 \\text{ lies left of } -4', text: 'Picture both on the line.' }, { tex: '-4 > -9', text: 'Further right is bigger.' }], answer: '-4' },
+      body: 'Both numbers are negative, so the digits can fool you. Which is greater, −4 or −9?',
+      steps: {
+      steps: [
+        { tex: '|-4| = 4,\\ |-9| = 9', text: 'Both numbers are left of zero. −4 is only 4 steps out and −9 is 9 steps out.' },
+        { tex: '-9 \\text{ lies left of } -4', text: 'Picture them on the line. The one further from zero is further left, so −9 is to the left of −4.' },
+        { tex: '-4 > -9', text: 'Further right means bigger, so −4 is greater. Check with money: owing 4 dollars is better than owing 9.' },
+      ], answer: '-4 > -9',
     },
-    { kind: 'example', head: 'And again: −1 or −7?', body: 'Distance from zero: −1 is 1 step, −7 is 7 steps.\nCloser to zero wins among negatives.\n−1 > −7.' },
+    },
+    {
+      kind: 'example',
+      head: 'And again: −1 or −7?',
+      body: 'Another pair of negatives. Which is greater, −1 or −7?',
+      steps: {
+      steps: [
+        { tex: '|-1| = 1,\\ |-7| = 7', text: 'Measure how far each is from zero. −1 is one step out and −7 is seven steps out.' },
+        { tex: '\\text{closer to } 0 \\to \\text{further right}', text: 'Among negatives, the number closer to zero is further right on the line. Further right means bigger.' },
+        { tex: '-1 > -7', text: 'So −1 is the greater number. Check with temperature: −1° is much warmer than −7°.' },
+      ], answer: '-1 > -7',
+    },
+    },
     {
       kind: 'example',
       head: 'Order −2, 0, −5',
-      body: 'Place them: −5 is furthest left, then −2, then 0.\nLeast to greatest reads left to right.\nAnswer: −5, −2, 0.',
+      body: 'Put −2, 0 and −5 in order from least to greatest. Start with the most negative.',
       steps: {
-        steps: [
-          { tex: '-5 \\text{ is furthest left}', text: 'Start with the most negative.' },
-          { tex: '-2 \\text{ next}', text: 'Closer to zero than −5.' },
-          { tex: '0 \\text{ last}', text: 'Zero beats every negative.' },
-        ],
-        answer: '-5,\\ -2,\\ 0',
-      },
+      steps: [
+        { tex: '-5 \\text{ is furthest left}', text: 'The most negative number is the one furthest from zero on the left. That is −5, five steps out, so it is the least.' },
+        { tex: '-2 \\text{ next}', text: '−2 is only two steps left of zero, so it is closer to zero than −5. That puts it to the right of −5.' },
+        { tex: '0 \\text{ last}', text: 'Zero beats every negative number because it is further right. Nothing here is positive, so zero is the greatest.' },
+      ], answer: '-5 < -2 < 0',
+    },
     },
     {
       kind: 'example',
       head: 'Order −3, 2, −5',
-      body: 'Sort by position: −5 is leftmost, −3 comes next, and 2 sits on the positive side.\nSo −5 < −3 < 2.\nLeast to greatest: −5, −3, 2.',
-      steps: { steps: [{ tex: '-5,\\ -3,\\ 2', text: 'Place all three on the line.' }, { tex: '\\text{read left to right}', text: 'That reading is the order.' }], answer: '-5 < -3 < 2' },
+      body: 'Put −3, 2 and −5 in order from least to greatest. Sketch a quick number line.',
+      steps: {
+      steps: [
+        { tex: '-5\\ \\ -3\\ \\ 0\\ \\ 2', text: 'Mark each number on the line. −5 is five steps left of zero, −3 is three steps left, and 2 is two steps right.' },
+        { tex: '\\text{read left to right}', text: 'Reading left to right goes from smallest to biggest. The negatives come first, with −5 further left than −3.' },
+        { tex: '-5 < -3 < 2', text: 'Write the order with less-than signs. The positive number 2 is last, because every positive beats every negative.' },
+      ], answer: '-5 < -3 < 2',
+    },
     },
     {
       kind: 'example',
       head: 'Real life: coldest city',
-      body: 'Overnight temperatures: Oslo −8°, Denver 3°, Chicago −2°. Which is coldest?\nColdest = smallest = furthest left: −8 < −2 < 3.\nOslo is coldest, and Denver is warmest.',
-      art: numberLine(-20, 10, [{ at: -14, label: 'coldest', color: SKY }, { at: -6, label: 'chilly', color: AMB }, { at: 4, label: 'mild', color: EMR }], { title: 'Temperatures on the same line', caption: 'The coldest reading is the one furthest left, which is −14.' }),
+      body: 'Overnight temperatures: Oslo −8°, Denver 3°, Chicago −2°. Which city is coldest? Colder means smaller.',
+      art: numberLine(-10, 5, [{ at: -8, label: 'Oslo', color: SKY }, { at: -2, label: 'Chicago', color: AMB }, { at: 3, label: 'Denver', color: EMR }], { title: 'Temperatures on the same line', caption: 'The coldest reading is the one furthest left, which is Oslo at −8.' }),
+      steps: {
+      steps: [
+        { tex: '\\text{colder} = \\text{smaller}', text: 'On a thermometer, colder means lower, and lower means further left on the number line. So we are looking for the smallest number.' },
+        { tex: '-8 < -2 < 3', text: 'Compare them: 3 is positive so it is the greatest. Among −8 and −2, the one nearer zero is bigger, so −2 > −8.' },
+        { tex: '\\text{Oslo} = -8', text: 'The smallest is −8, so Oslo is coldest and Denver, at 3°, is warmest. Eight degrees below zero is colder than two below.' },
+      ], answer: '\\text{Oslo}',
     },
-    { kind: 'example', head: 'Another way: use distance from zero', body: 'Order −5, −8, −2 from least to greatest.\nFor negatives, the one farthest from zero is smallest: −8, then −5, then −2.' },
+    },
+    {
+      kind: 'example',
+      head: 'Another way: use distance from zero',
+      body: 'Order −5, −8 and −2 from least to greatest by comparing how far each is from zero.',
+      steps: {
+      steps: [
+        { tex: '|-5| = 5,\\ |-8| = 8,\\ |-2| = 2', text: 'Measure each number from zero. Since all three are negative, the distances show how deep each one goes.' },
+        { tex: '\\text{farthest from } 0 \\to \\text{smallest}', text: 'Among negatives, the one farthest from zero is the smallest, like the biggest debt. So −8 is the least and −2 is the greatest.' },
+        { tex: '-8 < -5 < -2', text: 'Write the order from least to greatest. Check with debts: owing 8 is worse than owing 5, which is worse than owing 2.' },
+      ], answer: '-8 < -5 < -2',
+    },
+    },
     { kind: 'protip', head: 'Sketch a mini number line', body: 'For any ordering question, draw a quick line, mark 0 in the middle, and drop a dot for each number. Then just read the dots left to right — the ordering does itself. Ten seconds of sketching beats a minute of second-guessing.' },
     {
       kind: 'trap',
@@ -1319,7 +1373,19 @@ export const NS_SLIDES: SlideBank = {
         ],
       },
     },
-    { kind: 'challenge', head: 'Extra credit: rank the divers', body: 'Divers are at −5, −8, −12, −20 m. List them from lowest to highest.\nLowest is farthest below zero: −20, −12, −8, −5.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: rank the divers',
+      body: 'Divers are at −5, −8, −12 and −20 m. List them from lowest to highest.',
+      steps: {
+      steps: [
+        { tex: '|-5|, |-8|, |-12|, |-20|', text: 'All four depths are negative, so compare how far each is from sea level. The distances are 5, 8, 12 and 20 meters.' },
+        { tex: '\\text{deepest} = \\text{lowest}', text: 'The diver furthest below sea level is the lowest, and the lowest number is the furthest left. So −20 is lowest.' },
+        { tex: '-20 < -12 < -8 < -5', text: 'Keep going in order of how deep they are. As the depths get smaller, the numbers get bigger, because they get closer to zero.' },
+        { tex: '\\text{lowest to highest}', text: 'Read the list from left to right: −20, −12, −8, −5. The diver at −5 is the highest, only 5 meters down.' },
+      ], answer: '-20,\\ -12,\\ -8,\\ -5',
+    },
+    },
     { kind: 'summary', head: 'One line rules them all', body: 'Right is bigger, left is smaller — everywhere on the number line. Every positive beats every negative, with zero in between. Among negatives, closer to zero is greater. Sketch the line and read your answer!' },
   ],
   '6.NS-9': [
@@ -1339,6 +1405,7 @@ export const NS_SLIDES: SlideBank = {
           { at: 0, label: '0', color: VIO },
           { at: 7, label: '7', color: EMR },
         ], { step: 2, title: 'same distance, other side', caption: 'Opposites are the same number of steps from zero, just in opposite directions.' }),
+      why: 'A mirror shows your reflection the same distance behind it as you are in front. Here zero is the mirror. 5 is five steps right of zero, so its opposite is five steps left: −5. Zero is standing on the mirror, so it is its own opposite.',
     },
     {
       kind: 'concept',
@@ -1348,6 +1415,7 @@ export const NS_SLIDES: SlideBank = {
         tex: '-(-3) = 3',
         note: 'Flip across zero, then flip back — you land exactly where you started.',
       },
+      why: 'Each opposite is one flip across zero. One flip sends 3 to −3, and a second flip sends −3 back to 3. It is like turning a light switch off and then on again, or turning around twice: after two flips you are facing the way you started.',
     },
     {
       kind: 'concept',
@@ -1362,30 +1430,93 @@ export const NS_SLIDES: SlideBank = {
         ],
         note: 'One asks "which side?", the other asks "how far?".',
       },
+      why: 'Absolute value is a distance, and distance counts steps, not directions. 6 and −6 are both 6 steps from zero, so they share the same absolute value. You cannot walk a negative number of steps, so the result is never below 0.',
     },
-    { kind: 'example', head: 'Warm-up: opposite of 7', body: '7 sits seven steps right of zero.\nIts mirror image is seven steps LEFT.\nThe opposite of 7 is −7.' },
+    {
+      kind: 'example',
+      head: 'Warm-up: opposite of 7',
+      body: 'The opposite of a number is its mirror image across zero. What is the opposite of 7?',
+      steps: {
+      steps: [
+        { tex: '7 \\text{ is 7 right of } 0', text: 'Find where 7 sits. It is seven steps to the right of zero on the number line.' },
+        { tex: '\\text{mirror: 7 left of } 0', text: 'An opposite is the same distance from zero on the other side, like a reflection. So go seven steps to the left.' },
+        { tex: '-7', text: 'Seven steps left of zero is −7, so the opposite of 7 is −7. The two numbers are the same distance from zero.' },
+      ], answer: '-7',
+    },
+    },
     {
       kind: 'example',
       head: 'Opposite of −15',
-      body: '−15 is fifteen steps left of zero.\nFlip across the mirror: fifteen steps right.\nThe opposite of −15 is 15.',
-      steps: { steps: [{ tex: '-15 \\text{ is 15 left of zero}', text: 'Find where it sits.' }, { tex: '-(-15) = 15', text: 'Mirror it to the other side.' }], answer: '15' },
+      body: 'What is the opposite of −15? Find where it sits, then flip it across zero.',
+      steps: {
+      steps: [
+        { tex: '-15 \\text{ is 15 left of } 0', text: 'Find where −15 sits. It is fifteen steps to the left of zero on the number line.' },
+        { tex: '\\text{mirror: 15 right of } 0', text: 'The opposite is the same distance from zero on the other side, so go fifteen steps to the right.' },
+        { tex: '-(-15) = 15', text: 'Fifteen steps right of zero is 15. The opposite of a negative number is positive, because it jumps to the other side.' },
+      ], answer: '15',
     },
-    { kind: 'example', head: 'Absolute value: |−12|', body: 'Ask the ruler: how far is −12 from 0?\nTwelve steps.\n|−12| = 12.' },
-    { kind: 'example', head: 'Careful now: |9|', body: 'The bars don\'t flip anything — they just measure.\n9 is nine steps from zero.\n|9| = 9. Still positive, no change.' },
+    },
+    {
+      kind: 'example',
+      head: 'Absolute value: |−12|',
+      body: 'Absolute value is a ruler. How far is −12 from zero?',
+      steps: {
+      steps: [
+        { tex: '-12 \\to 0', text: 'Think of walking from −12 back to zero along the number line. Count the steps you take.' },
+        { tex: '12 \\text{ steps}', text: 'You take twelve steps. A ruler reports only how far, never which way, so direction does not matter.' },
+        { tex: '|-12| = 12', text: 'Write the distance as the answer. A distance is a count of steps, so it is positive: 12.' },
+      ], answer: '12',
+    },
+    },
+    {
+      kind: 'example',
+      head: 'Careful now: |9|',
+      body: 'The bars do not flip anything, they just measure. What is |9|?',
+      steps: {
+      steps: [
+        { tex: '9 \\to 0', text: 'Measure how far 9 is from zero. It is nine steps to the left, back to zero.' },
+        { tex: '9 \\text{ steps}', text: 'The distance is nine steps. The bars only report the distance, so they leave a positive number alone.' },
+        { tex: '|9| = 9', text: 'The answer is 9, not −9. Absolute value never makes a number negative, and a positive number stays the same.' },
+      ], answer: '9',
+    },
+    },
     {
       kind: 'example',
       head: 'Double flip: −(−3)',
-      body: 'What is the opposite of (the opposite of −3)?\nFirst flip: opposite of −3 is 3. Second flip: opposite of 3 is −3.\nAnswer: −3 — two flips bring you home.',
-      steps: { steps: [{ tex: '-3 \\to 3', text: 'The inner minus already flipped it once.' }, { tex: '\\text{flip again} \\to 3', text: 'The outer minus flips it back.' }], answer: '3' },
+      body: 'What is −(−3)? Read it from the inside out: the number inside is −3, and the minus sign outside asks for its opposite.',
+      steps: {
+      steps: [
+        { tex: '-3 \\text{ is 3 left of } 0', text: 'Start with the inside. The number in the brackets is −3, which sits three steps to the left of zero.' },
+        { tex: '\\text{the outer minus: flip}', text: 'The minus sign outside the brackets means "take the opposite". That flips the number to the other side of zero.' },
+        { tex: '-(-3) = 3', text: 'The opposite of −3 is 3, three steps to the right. Two minus signs in a row cancel, like turning around twice.' },
+      ], answer: '3',
+    },
       art: numberLine(-6, 6, [{ at: -3, label: 'start at −3', color: SKY }, { at: 3, label: 'flip to 3', color: EMR }], { title: 'Flip twice and you are home', caption: 'Take the opposite of −3 and you land on 3 — one mirror across zero.' }),
     },
     {
       kind: 'example',
       head: 'Mix them: |−8| vs the opposite of 8',
-      body: '|−8| measures distance: 8. The opposite of 8 flips it: −8.\nSame starting digit, totally different answers!\n|−8| = 8, but the opposite of 8 is −8. Bars measure; the minus sign flips.',
-      steps: { steps: [{ tex: '|-8| = 8', text: 'Absolute value reports the distance.' }, { tex: '\\text{opposite of } 8 = -8', text: 'The opposite mirrors it.' }, { tex: '8 > -8', text: 'So they are not the same thing.' }] },
+      body: 'Two things that look alike: the absolute value of −8, and the opposite of 8. Do they give the same answer?',
+      steps: {
+      steps: [
+        { tex: '|-8| = 8', text: 'Absolute value is a ruler, and −8 is eight steps from zero. The bars report the distance, which is 8.' },
+        { tex: '\\text{opposite of } 8 = -8', text: 'The opposite is a mirror. It flips 8 to the other side of zero, which is −8.' },
+        { tex: '8 \\ne -8', text: 'The answers are different. Bars measure and give a positive distance, while the opposite flips the sign.' },
+      ], answer: '|-8| = 8,\\ \\text{ but the opposite of } 8 \\text{ is } -8',
     },
-    { kind: 'example', head: 'Another way: find the positive twin', body: 'What is |−6|?\nAbsolute value is distance from 0, always positive. The positive twin of −6 is 6, so |−6| = 6.' },
+    },
+    {
+      kind: 'example',
+      head: 'Another way: find the positive twin',
+      body: 'What is |−6|? Use the idea that a number and its opposite are twins at the same distance from zero.',
+      steps: {
+      steps: [
+        { tex: '-6 \\text{ and } 6', text: 'The number −6 has an opposite twin, 6, on the other side of zero. Both are the same distance from zero.' },
+        { tex: '\\text{distance is positive}', text: 'Absolute value is that distance, and a distance is never negative. So the answer must be the positive twin.' },
+        { tex: '|-6| = 6', text: 'The positive twin of −6 is 6, so |−6| = 6. Check by counting: six steps from −6 to 0.' },
+      ], answer: '6',
+    },
+    },
     {
       kind: 'protip',
       head: 'Mirror or ruler?',
@@ -1404,7 +1535,19 @@ export const NS_SLIDES: SlideBank = {
       art: numberLine(-10, 10, [{ at: -8, label: '−8 goes in', color: SKY }, { at: 8, label: '8 comes out', color: EMR }], { title: 'Bars measure, they do not group', caption: 'The bars are a ruler, not brackets. Whatever goes in, a distance comes out.' }),
     },
     { kind: 'trap', head: 'Trap: "opposite" means make it negative', body: 'The opposite isn\'t always negative — it\'s the OTHER side of zero. The opposite of −15 is positive 15. Flip the sign the number already has; don\'t just slap on a minus.' },
-    { kind: 'challenge', head: 'Extra credit: combine the signs', body: 'Compute |−6| + (−(−4)) − |3|.\n|−6| = 6, −(−4) = 4, |3| = 3. So 6 + 4 − 3 = 7.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: combine the signs',
+      body: 'Compute |−6| + (−(−4)) − |3|. Work out each piece first, from the inside out.',
+      steps: {
+      steps: [
+        { tex: '|-6| = 6', text: 'The bars measure how far −6 is from zero. That is 6 steps, so this piece is 6.' },
+        { tex: '-(-4) = 4', text: 'The inner number is −4 and the outer minus takes its opposite. The opposite of −4 is 4.' },
+        { tex: '|3| = 3', text: 'The bars on a positive number change nothing, because 3 is already three steps from zero.' },
+        { tex: '6 + 4 - 3 = 7', text: 'Put the pieces together: 6 + 4 = 10, then take away 3. The answer is 7.' },
+      ], answer: '7',
+    },
+    },
     { kind: 'summary', head: 'Flip and measure', body: 'Opposite = mirror across zero: flip the sign, and two flips return home (−(−n) = n). Absolute value = distance from zero: always 0 or positive, and opposites share it. Ask "mirror or ruler?" and the answer follows.' },
   ],
   '6.NS-10': [
@@ -1420,6 +1563,7 @@ export const NS_SLIDES: SlideBank = {
       body: 'If two points share an x-coordinate, they sit on the same vertical line — one directly above the other. The distance is just how far apart the y-values are: |y₁ − y₂|. The absolute value keeps distance positive no matter which point you name first.',
       formula: { tex: 'x_1 = x_2 \\implies d = |y_2 - y_1|', note: 'Matching x means the whole distance lives in the y-values.', parts: [{ sym: 'x_1 = x_2', means: 'both points sit on the same vertical line', tone: 'accent' }, { sym: '|y_2 - y_1|', means: 'subtract the y-values for the length', tone: 'ok' }] },
       art: plotGrid([{ x: 3, y: 2, label: '(3, 2)', color: SKY }, { x: 3, y: 7, label: '(3, 7)', color: EMR }], { join: true, range: { x: [0, 8], y: [0, 8] }, title: 'Length = 7 − 2 = 5', caption: 'The x-values match, so all the distance lives in the y-values.' }),
+      why: 'Same x means neither point is left or right of the other, so they are stacked in a straight line up and down. The distance is then just the number of grid steps between their heights, and counting steps between two numbers is subtraction. The absolute value keeps it positive.',
     },
     {
       kind: 'concept',
@@ -1427,6 +1571,7 @@ export const NS_SLIDES: SlideBank = {
       body: 'If two points share a y-coordinate, they line up side by side on a horizontal line. Distance = |x₁ − x₂|. Spot which coordinate MATCHES, then subtract the pair that differs.',
       formula: { tex: 'y_1 = y_2 \\implies d = |x_2 - x_1|', note: 'Matching y means the whole distance lives in the x-values.', parts: [{ sym: 'y_1 = y_2', means: 'both points sit on the same horizontal line', tone: 'accent' }, { sym: '|x_2 - x_1|', means: 'subtract the x-values for the length', tone: 'ok' }] },
       art: plotGrid([{ x: 1, y: 4, label: '(1, 4)', color: SKY }, { x: 6, y: 4, label: '(6, 4)', color: EMR }], { join: true, range: { x: [0, 8], y: [0, 7] }, title: 'Length = 6 − 1 = 5', caption: 'The y-values match, so all the distance lives in the x-values.' }),
+      why: 'Same y means neither point is above or below the other, so they sit side by side on a straight line across. The distance is just the number of grid steps between their x-values, which is found by subtracting. The absolute value keeps the answer positive.',
     },
     {
       kind: 'concept',
@@ -1434,35 +1579,100 @@ export const NS_SLIDES: SlideBank = {
       body: 'When one coordinate is negative and the other positive, the path crosses zero. From −2 to 5 is 2 steps to reach zero plus 5 more: 7 total. The subtraction agrees: 5 − (−2) = 5 + 2 = 7 — subtracting a negative adds.',
       formula: { tex: '|a| + |b| \\ \\text{when the signs differ}', note: 'Count in to zero, then out again. The two legs add.', parts: [{ sym: '|a|', means: 'how far the first point is from zero', tone: 'accent' }, { sym: '|b|', means: 'how far the second is, on the other side', tone: 'ok' }] },
       art: numberLine(-5, 7, [{ at: -2, label: '−2', color: SKY }, { at: 5, label: '5', color: EMR }], { span: { from: -2, to: 5, label: '2 + 5 = 7' }, title: 'Count to zero, then onward', caption: 'Two steps to reach zero, then five more. The total distance is seven.' }),
+      why: 'From −2 to 5 you cannot jump over zero. You walk 2 steps to reach it, then 5 more, so 7 steps in all. The subtraction 5 − (−2) says the same thing: taking away a debt of 2 is like gaining 2, so subtracting a negative adds.',
     },
     {
       kind: 'concept',
       head: 'Rectangles from corners',
       body: 'Given a rectangle\'s corner points, its sides run along grid lines. Width = the gap between the x-values; height = the gap between the y-values. Two subtractions and you know every side.',
       art: plotGrid([{ x: 0, y: 0 }, { x: 5, y: 0 }, { x: 5, y: 3 }, { x: 0, y: 3 }], { shape: true, range: { x: [0, 7], y: [0, 5] }, title: 'Sides 5 and 3 → area 15', caption: 'Read one horizontal side and one vertical side, then multiply.' }),
+      why: 'A rectangle\'s sides run along the grid lines, so each side is a same-x or same-y distance. Opposite sides are equal, so one horizontal gap and one vertical gap give every side length. Then perimeter is 2 times the sum of the two, and area is width times height.',
     },
-    { kind: 'example', head: 'Warm-up: (0, 0) to (0, 6)', body: 'Both points have x = 0, so the path is vertical.\nSubtract y-values: |6 − 0| = 6.\nDistance: 6 units.' },
+    {
+      kind: 'example',
+      head: 'Warm-up: (0, 0) to (0, 6)',
+      body: 'The two points are on the y-axis. How far apart are they?',
+      steps: {
+      steps: [
+        { tex: 'x: 0 = 0', text: 'Both points have x = 0, so they are on the same vertical line. That means the distance is found from the y-values.' },
+        { tex: '|6 - 0| = 6', text: 'Subtract the y-values and take the absolute value, so the answer is positive. 6 − 0 = 6.' },
+        { tex: '0 \\to 6: 6 \\text{ jumps}', text: 'Check by counting up the y-axis from 0 to 6. That is six jumps, so the distance is 6 units.' },
+      ], answer: '6 \\text{ units}',
+    },
+    },
     {
       kind: 'example',
       head: 'Vertical: (3, 2) to (3, 7)',
-      body: 'The x-coordinates match (both 3), so measure up-down.\n|7 − 2| = 5.\nDistance: 5 units.',
-      steps: { steps: [{ tex: 'x: 3 = 3', text: 'The x-values match.' }, { tex: '|7 - 2| = 5', text: 'Subtract the y-values.' }], answer: '5' },
+      body: 'Find the distance between (3, 2) and (3, 7).',
+      steps: {
+      steps: [
+        { tex: 'x: 3 = 3', text: 'The x-values match, so both points are on the same vertical line. The trip is straight up.' },
+        { tex: '|7 - 2| = 5', text: 'Subtract the y-values: the bigger minus the smaller. The absolute value makes sure the answer is a positive distance.' },
+        { tex: '2 \\to 7: 5 \\text{ jumps}', text: 'Check by counting up the grid from 2 to 7. That is five jumps, so the points are 5 units apart.' },
+      ], answer: '5 \\text{ units}',
     },
-    { kind: 'example', head: 'Horizontal: (1, 4) to (6, 4)', body: 'The y-coordinates match (both 4), so measure left-right.\n|6 − 1| = 5.\nDistance: 5 units.' },
+    },
+    {
+      kind: 'example',
+      head: 'Horizontal: (1, 4) to (6, 4)',
+      body: 'Find the distance between (1, 4) and (6, 4).',
+      steps: {
+      steps: [
+        { tex: 'y: 4 = 4', text: 'The y-values match, so both points are on the same horizontal line. The trip is straight across.' },
+        { tex: '|6 - 1| = 5', text: 'Subtract the x-values. The distance is found from the part that is different, so the matching y does not matter.' },
+        { tex: '1 \\to 6: 5 \\text{ jumps}', text: 'Check by counting along the grid from x = 1 to x = 6. That is five jumps, so the distance is 5 units.' },
+      ], answer: '5 \\text{ units}',
+    },
+    },
     {
       kind: 'example',
       head: 'Across zero: (−2, 4) to (5, 4)',
-      body: 'Same y, so subtract the x-values: 5 − (−2).\nSubtracting a negative adds: 5 + 2 = 7.\nDistance: 7 units — 2 steps to the y-axis, then 5 more.',
-      steps: { steps: [{ tex: 'y: 4 = 4', text: 'The y-values match.' }, { tex: '|5 - (-2)| = 7', text: 'Subtracting a negative adds.' }], answer: '7' },
+      body: 'The two points are on opposite sides of the y-axis. How far apart are they?',
+      steps: {
+      steps: [
+        { tex: 'y: 4 = 4', text: 'The y-values match, so the points are on a horizontal line and the distance is found from the x-values.' },
+        { tex: '|5 - (-2)| = |5 + 2|', text: 'Subtract the x-values. Subtracting a negative adds, because taking away a debt of 2 is like gaining 2.' },
+        { tex: '5 + 2 = 7', text: 'Add to get 7. Check on the grid: 2 steps from −2 to the y-axis, then 5 more steps to x = 5. That is 7 units.' },
+      ], answer: '7 \\text{ units}',
     },
-    { kind: 'example', head: 'Another crossing: (−3, 1) to (4, 1)', body: 'Same y = 1, so it\'s horizontal.\n|4 − (−3)| = |4 + 3| = 7.\nDistance: 7 units. Check by counting: 3 steps from −3 to 0, then 4 steps to 4.' },
+    },
+    {
+      kind: 'example',
+      head: 'Another crossing: (−3, 1) to (4, 1)',
+      body: 'Find the distance between (−3, 1) and (4, 1). The path crosses the y-axis.',
+      steps: {
+      steps: [
+        { tex: 'y: 1 = 1', text: 'The y-values match, so the path is horizontal. The distance comes from the x-values.' },
+        { tex: '|4 - (-3)| = |4 + 3|', text: 'Subtract the x-values. Subtracting a negative turns into adding, because the path crosses zero and both parts count.' },
+        { tex: '4 + 3 = 7', text: 'The sum is 7. Check by counting: 3 steps from −3 to 0, then 4 more steps to 4, which makes 7 units.' },
+      ], answer: '7 \\text{ units}',
+    },
+    },
     {
       kind: 'example',
       head: 'Rectangle sides from corners',
-      body: 'Corners: (1, 1), (5, 1), (5, 4), (1, 4).\nWidth: x goes from 1 to 5, so |5 − 1| = 4. Height: y goes from 1 to 4, so |4 − 1| = 3.\nThe sides are 4 and 3 — and the perimeter would be 4 + 3 + 4 + 3 = 14.',
-      steps: { steps: [{ tex: '\\text{width} = |x_2 - x_1|', text: 'Find one horizontal side.' }, { tex: '\\text{height} = |y_2 - y_1|', text: 'Find one vertical side.' }, { tex: 'A = w \\times h', text: 'Multiply for the area.' }] },
+      body: 'A rectangle has corners (1, 1), (5, 1), (5, 4) and (1, 4). Find its side lengths, perimeter and area.',
+      steps: {
+      steps: [
+        { tex: '\\text{width} = |5 - 1| = 4', text: 'The bottom side runs from (1, 1) to (5, 1). The y-values match, so subtract the x-values to get a width of 4.' },
+        { tex: '\\text{height} = |4 - 1| = 3', text: 'The right side runs from (5, 1) to (5, 4). The x-values match, so subtract the y-values to get a height of 3.' },
+        { tex: 'P = 2(4 + 3) = 14', text: 'Opposite sides of a rectangle are equal, so the perimeter is two widths plus two heights, which is 14 units.' },
+        { tex: 'A = 4 \\times 3 = 12', text: 'Area is the number of unit squares inside, which is width times height. That gives 12 square units.' },
+      ], answer: 'P = 14\\ \\text{units},\\ A = 12\\ \\text{square units}',
     },
-    { kind: 'example', head: 'Another way: count the steps', body: 'Find the distance from (1, 2) to (1, 7).\nSame x, so count straight up: 7 − 2 = 5 units.' },
+    },
+    {
+      kind: 'example',
+      head: 'Another way: count the steps',
+      body: 'Find the distance from (1, 2) to (1, 7) by counting steps, without using a formula.',
+      steps: {
+      steps: [
+        { tex: 'x: 1 = 1', text: 'Both points have x = 1, so they are on a vertical line. We only need to count the steps up.' },
+        { tex: '2 \\to 3 \\to 4 \\to 5 \\to 6 \\to 7', text: 'Count up the grid one square at a time from y = 2 to y = 7. Each move is one unit.' },
+        { tex: '5 \\text{ steps} = 7 - 2', text: 'There are five moves, and that matches the subtraction 7 − 2 = 5. So the distance is 5 units.' },
+      ], answer: '5 \\text{ units}',
+    },
+    },
     { kind: 'protip', head: 'Match first, subtract second', body: 'Start every problem by asking: which coordinate is the SAME in both points? That tells you the direction (same x → vertical, same y → horizontal). Then subtract the coordinates that differ and take the absolute value. Match, subtract, done.' },
     {
       kind: 'trap',
@@ -1470,7 +1680,19 @@ export const NS_SLIDES: SlideBank = {
       body: 'When a coordinate is negative, watch the subtraction: 5 − (−2) = 5 + 2 = 7, NOT 3. The two minus signs team up into a plus, because you\'re crossing zero. If you get 3, you dropped a sign — count the steps on the line to confirm 7.',
       art: numberLine(-5, 7, [{ at: -2, label: '−2', color: ROSE }, { at: 5, label: '5', color: EMR }], { span: { from: -2, to: 5, label: 'really 7 apart' }, title: 'Subtracting a negative adds', caption: 'The gap on the line is seven. Treating −2 as +2 would shrink it to three.' }),
     },
-    { kind: 'challenge', head: 'Extra credit: rectangle on a grid', body: 'A rectangle has corners (0,0), (5,0), (5,4), (0,4). Perimeter and area?\nSides 5 and 4: perimeter = 2(5 + 4) = 18 units; area = 5 × 4 = 20 square units.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: rectangle on a grid',
+      body: 'A rectangle has corners (0, 0), (5, 0), (5, 4) and (0, 4). Find its perimeter and area.',
+      steps: {
+      steps: [
+        { tex: '\\text{width} = |5 - 0| = 5', text: 'The bottom side runs from (0, 0) to (5, 0). The y-values match, so subtract the x-values: the width is 5.' },
+        { tex: '\\text{height} = |4 - 0| = 4', text: 'The left side runs from (0, 0) to (0, 4). The x-values match, so subtract the y-values: the height is 4.' },
+        { tex: 'P = 2(5 + 4) = 18', text: 'Opposite sides are equal, so the perimeter adds two widths and two heights: 5 + 4 + 5 + 4 = 18 units.' },
+        { tex: 'A = 5 \\times 4 = 20', text: 'Area counts the unit squares inside, which is width times height. That is 20 square units.' },
+      ], answer: 'P = 18\\ \\text{units},\\ A = 20\\ \\text{square units}',
+    },
+    },
     { kind: 'summary', head: 'One subtraction, real distance', body: 'Same x means vertical: distance = |y₁ − y₂|. Same y means horizontal: distance = |x₁ − x₂|. Crossing zero? Subtracting a negative ADDS the distances. For rectangles, the x-gap is the width and the y-gap is the height.' },
   ],
 };
