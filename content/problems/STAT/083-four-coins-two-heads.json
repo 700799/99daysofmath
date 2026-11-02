@@ -1,0 +1,52 @@
+{
+  "id": "STAT.083",
+  "domain": "STAT",
+  "unit": 9,
+  "orderInUnit": 3,
+  "standard": "STAT.PROB.C.1",
+  "difficulty": 1,
+  "prompt": "A fair coin is flipped $4$ times. What is the probability of getting exactly $2$ heads? Give your answer as a decimal.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.375",
+  "alternativeAnswers": [
+    "3/8",
+    "37.5%"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "Use the binomial formula $P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}$ with $n = 4$, $k = 2$, $p = 0.5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use the binomial formula $P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}$ with $n = 4$, $k = 2$, $p = 0.5$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\binom{4}{2} = 6$ ways to choose which 2 flips are heads. Each specific sequence has probability $(0.5)^4 = \\frac{1}{16}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 \\times \\frac{1}{16} = \\frac{6}{16} = 0.375$."
+    }
+  ],
+  "explanation": [
+    "$X$, the number of heads, is binomial with $n = 4$ and $p = 0.5$.",
+    "$P(X = 2) = \\binom{4}{2}(0.5)^2(0.5)^2 = 6 \\times 0.25 \\times 0.25$.",
+    "$6 \\times 0.0625 = 0.375$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "List the sequences",
+      "steps": [
+        "There are $2^4 = 16$ equally likely sequences of 4 flips.",
+        "The ones with exactly 2 heads: HHTT, HTHT, HTTH, THHT, THTH, TTHH — that is 6.",
+        "$\\frac{6}{16} = 0.375$."
+      ]
+    }
+  ],
+  "tags": [
+    "binomial",
+    "probability"
+  ],
+  "estimatedSeconds": 45
+}

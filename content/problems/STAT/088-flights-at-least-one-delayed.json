@@ -1,0 +1,56 @@
+{
+  "id": "STAT.088",
+  "domain": "STAT",
+  "unit": 9,
+  "orderInUnit": 8,
+  "standard": "STAT.PROB.C.1",
+  "difficulty": 3,
+  "prompt": "On a certain airline, $10\\%$ of flights are delayed, independently. A consultant takes $6$ flights this month. What is the probability that at least one of them is delayed? Round to three decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.469",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "\"At least one\" is the opposite of \"none\". Find $P(\\text{none delayed})$ and subtract from $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"At least one\" is the opposite of \"none\". Find $P(\\text{none delayed})$ and subtract from $1$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with 2 flights: $P(\\text{none}) = 0.9^2 = 0.81$, so $P(\\text{at least one}) = 0.19$. Same method with 6 flights."
+    },
+    {
+      "level": "guide",
+      "text": "$P(X = 0) = (0.9)^6$. Then $P(X \\ge 1) = 1 - (0.9)^6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(0.9)^6 \\approx 0.5314$, so $1 - 0.5314 = 0.4686 \\approx 0.469$."
+    }
+  ],
+  "explanation": [
+    "$X$ = number of delayed flights is binomial with $n = 6$, $p = 0.1$.",
+    "The complement of \"at least one delayed\" is \"zero delayed\": $P(X = 0) = \\binom{6}{0}(0.1)^0(0.9)^6 = 0.9^6 \\approx 0.5314$.",
+    "$P(X \\ge 1) = 1 - 0.5314 = 0.4686$, which rounds to $0.469$. Nearly a coin flip, even though each flight is only $10\\%$ likely to be delayed."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why not add six 10%s?",
+      "steps": [
+        "$6 \\times 0.10 = 0.60$ overcounts, because months with two or three delays get counted multiple times.",
+        "The complement avoids all that: the only way to have NO delay is all six on time, probability $0.9^6$.",
+        "Everything else — one delay, two, up to six — is the $1 - 0.9^6 \\approx 0.469$ we want."
+      ]
+    }
+  ],
+  "tags": [
+    "binomial",
+    "complement",
+    "at-least-one",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

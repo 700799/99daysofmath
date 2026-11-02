@@ -1,0 +1,72 @@
+{
+  "id": "STAT.046",
+  "domain": "STAT",
+  "unit": 5,
+  "orderInUnit": 6,
+  "standard": "STAT.COLL.A.1",
+  "difficulty": 2,
+  "prompt": "To estimate how many hours students sleep, a principal randomly selects $4$ of the school's $30$ homerooms and surveys EVERY student in those four rooms. What sampling method is this?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Stratified random sample",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Cluster random sample",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Simple random sample of students",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Systematic random sample",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Stratified takes SOME from EVERY group. Cluster takes ALL from SOME groups. Which happened?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Stratified takes SOME from EVERY group. Cluster takes ALL from SOME groups. Which happened?"
+    },
+    {
+      "level": "guide",
+      "text": "Only 4 of the 30 homerooms were picked, and everyone in those 4 was surveyed."
+    },
+    {
+      "level": "reveal",
+      "text": "All students from a few randomly chosen groups: a cluster sample, choice B."
+    }
+  ],
+  "explanation": [
+    "The homerooms are the clusters. The principal randomly chose a few clusters and surveyed everyone inside them.",
+    "A stratified sample would instead take a few students from EVERY homeroom.",
+    "Choosing whole groups is a cluster sample, done mainly for convenience. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why it is not an SRS",
+      "steps": [
+        "In an SRS of students, any two students have the same chance of being chosen together.",
+        "Here, two students in the same homeroom are always chosen together, and two in different unchosen rooms never are.",
+        "That dependence is the mark of a cluster sample."
+      ]
+    }
+  ],
+  "tags": [
+    "sampling-methods",
+    "cluster",
+    "stratified",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

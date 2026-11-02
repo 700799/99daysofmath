@@ -1,0 +1,57 @@
+{
+  "id": "STAT.118",
+  "domain": "STAT",
+  "unit": 12,
+  "orderInUnit": 8,
+  "standard": "STAT.INF.B.1",
+  "difficulty": 3,
+  "prompt": "Last year $30\\%$ of a town's households recycled. After a campaign, a random sample of $200$ households finds $72$ recycling. For the test of $H_0: p = 0.30$ versus $H_a: p > 0.30$, what is the value of the test statistic $z$? Round to two decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "1.85",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.02,
+  "hint": "First find $\\hat{p}$. Then $z = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)/n}}$, using the NULL value $p_0 = 0.30$ in the denominator.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First find $\\hat{p}$. Then $z = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)/n}}$, using the NULL value $p_0 = 0.30$ in the denominator."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $p_0 = 0.5$, $n = 100$, $\\hat{p} = 0.6$: $SD = \\sqrt{0.25/100} = 0.05$, $z = 0.1/0.05 = 2$. Same recipe with $0.30$, $200$ and $72/200$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\hat{p} = 72/200 = 0.36$. $\\sqrt{(0.3)(0.7)/200} = \\sqrt{0.00105} \\approx 0.0324$."
+    },
+    {
+      "level": "reveal",
+      "text": "$z = \\frac{0.36 - 0.30}{0.0324} \\approx 1.85$."
+    }
+  ],
+  "explanation": [
+    "Sample proportion: $\\hat{p} = 72/200 = 0.36$.",
+    "Under $H_0$, the SD of $\\hat{p}$ is $\\sqrt{p_0(1-p_0)/n} = \\sqrt{(0.30)(0.70)/200} = \\sqrt{0.00105} \\approx 0.0324$.",
+    "$z = (0.36 - 0.30)/0.0324 \\approx 1.85$. (For this one-sided test the $p$-value is about $0.032$, so at $\\alpha = 0.05$ there is convincing evidence recycling increased.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why p₀, not p̂, in the denominator",
+      "steps": [
+        "A significance test asks: IF $p = 0.30$, how surprising is $\\hat{p} = 0.36$?",
+        "So the spread must be computed under that assumption, with $0.30$: $SD \\approx 0.0324$.",
+        "(A confidence interval, which makes no assumption about $p$, would use $\\hat{p}$ instead.) $z \\approx 1.85$."
+      ]
+    }
+  ],
+  "tags": [
+    "significance-test",
+    "z-test",
+    "proportion",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 85
+}

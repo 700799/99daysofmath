@@ -1,0 +1,50 @@
+{
+  "id": "CALC.097",
+  "domain": "CALC",
+  "unit": 10,
+  "orderInUnit": 7,
+  "standard": "CALC.APP.A.2",
+  "difficulty": 2,
+  "prompt": "A ball is thrown upward from a balcony. Its height after $t$ seconds is $h(t) = -16t^2 + 64t + 5$ feet. What is the maximum height the ball reaches, in feet?",
+  "answerType": "numeric",
+  "primaryAnswer": "69",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "At the top of its flight the ball's velocity is zero. Find $h'(t)$ and set it to $0$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "At the top of its flight the ball's velocity is zero. Find $h'(t)$ and set it to $0$."
+    },
+    {
+      "level": "guide",
+      "text": "$h'(t) = -32t + 64 = 0$ gives $t = 2$. Now find the height at that time."
+    },
+    {
+      "level": "reveal",
+      "text": "$h(2) = -64 + 128 + 5 = 69$ feet."
+    }
+  ],
+  "explanation": [
+    "Velocity: $h'(t) = -32t + 64$. It is zero at $t = 2$ seconds.",
+    "Before $t = 2$ the velocity is positive (rising); after, negative (falling). So $t = 2$ is the peak.",
+    "Maximum height: $h(2) = -16(4) + 64(2) + 5 = -64 + 128 + 5 = 69$ feet."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Vertex formula",
+      "steps": [
+        "$h(t)$ is a downward parabola with vertex at $t = -\\frac{b}{2a} = -\\frac{64}{-32} = 2$.",
+        "That matches the calculus: the vertex is where the derivative is zero.",
+        "$h(2) = 69$ feet. The balcony is $5$ feet up, and the throw adds $64$ feet."
+      ]
+    }
+  ],
+  "tags": [
+    "motion",
+    "optimization",
+    "projectile",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

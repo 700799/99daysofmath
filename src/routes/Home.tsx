@@ -79,7 +79,7 @@ export function Home() {
           <p className="text-ink-muted mt-0.5 text-sm sm:text-base">
             {gradeLabel
               ? `${gradeLabel} grade — your course is first below, and every other one is open. Earn stars, stickers, and XP.`
-              : 'Seven courses, from 5th-grade Common Core up to SAT Math prep. Earn stars, stickers, and XP.'}
+              : 'Nine courses, from 5th-grade Common Core up to SAT prep and AP Calculus. Earn stars, stickers, and XP.'}
           </p>
         </div>
       </div>

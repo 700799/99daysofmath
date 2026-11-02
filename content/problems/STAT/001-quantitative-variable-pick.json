@@ -1,0 +1,72 @@
+{
+  "id": "STAT.001",
+  "domain": "STAT",
+  "unit": 1,
+  "orderInUnit": 1,
+  "standard": "STAT.DATA.A.1",
+  "difficulty": 1,
+  "prompt": "A school survey records four things about each student. Which one is a QUANTITATIVE variable?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Favorite lunch item",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Home zip code",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Jersey number on the soccer team",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Number of siblings",
+      "correct": true
+    }
+  ],
+  "primaryAnswer": "D",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Quantitative means the numbers MEASURE or COUNT something, so averaging them makes sense.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Quantitative means the numbers MEASURE or COUNT something, so averaging them makes sense."
+    },
+    {
+      "level": "guide",
+      "text": "A zip code and a jersey number are made of digits, but an \"average zip code\" is meaningless. They are labels."
+    },
+    {
+      "level": "reveal",
+      "text": "Number of siblings is a count. An average of $1.8$ siblings makes sense, so it is quantitative: choice D."
+    }
+  ],
+  "explanation": [
+    "A categorical variable sorts people into groups: lunch item, zip code and jersey number all do that, even when they use digits.",
+    "A quantitative variable counts or measures something, and arithmetic on it means something.",
+    "Number of siblings is a count, so it is quantitative. Choice D."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The averaging test",
+      "steps": [
+        "Ask: would an average of this variable mean anything?",
+        "Average zip code 94582.3? No. Average jersey number 11.4? No. Average favorite lunch? No.",
+        "Average number of siblings 1.8? Yes. That one is quantitative."
+      ]
+    }
+  ],
+  "tags": [
+    "variables",
+    "categorical",
+    "quantitative",
+    "word-problem"
+  ],
+  "estimatedSeconds": 35
+}

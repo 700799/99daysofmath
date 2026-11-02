@@ -159,7 +159,7 @@ export function StepsView({ block }: { block: StepsBlock }) {
                 <Tex tex={s.tex} />
               </div>
             )}
-            <div className={`text-[13px] font-semibold leading-snug text-ink-muted ${s.tex ? 'mt-0.5' : ''}`}>{s.text}</div>
+            <div className={`text-[14px] font-medium leading-snug text-ink ${s.tex ? 'mt-1' : ''}`}>{s.text}</div>
           </div>
         </div>
       ))}

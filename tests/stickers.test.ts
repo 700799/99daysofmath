@@ -27,7 +27,7 @@ describe('STICKER_DEFS', () => {
     const unitStickers = Object.entries(UNIT_COUNT_BY_DOMAIN)
       .filter(([d]) => d !== 'SAT')
       .reduce((sum, [, units]) => sum + units, 0);
-    const FIXED = 8 + 4 + 5 + 11 + 10 + 18; // streak, accuracy, XP, mastery, challenge, SAT
+    const FIXED = 8 + 4 + 5 + 13 + 10 + 18; // streak, accuracy, XP, mastery, challenge, SAT
     expect(TOTAL_STICKERS).toBe(unitStickers + FIXED);
   });
 

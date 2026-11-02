@@ -1,0 +1,51 @@
+{
+  "id": "STAT.124",
+  "domain": "STAT",
+  "unit": 13,
+  "orderInUnit": 4,
+  "standard": "STAT.INF.C.1",
+  "difficulty": 2,
+  "prompt": "An online store shows ad version 1 to a random sample of $100$ visitors and ad version 2 to another random sample of $100$. Version 1 gets $60$ clicks; version 2 gets $45$. For the test of $H_0: p_1 = p_2$, use the pooled proportion $\\hat{p}_c = \\frac{60 + 45}{200}$ and the formula $z = \\frac{\\hat{p}_1 - \\hat{p}_2}{\\sqrt{\\hat{p}_c(1-\\hat{p}_c)\\left(\\frac{1}{n_1} + \\frac{1}{n_2}\\right)}}$. What is $z$? Round to two decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "2.12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.02,
+  "hint": "Find $\\hat{p}_1$, $\\hat{p}_2$ and the pooled $\\hat{p}_c$ first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find $\\hat{p}_1$, $\\hat{p}_2$ and the pooled $\\hat{p}_c$ first."
+    },
+    {
+      "level": "guide",
+      "text": "$\\hat{p}_1 = 0.60$, $\\hat{p}_2 = 0.45$, $\\hat{p}_c = 105/200 = 0.525$. The denominator is $\\sqrt{0.525 \\times 0.475 \\times (0.01 + 0.01)}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Denominator $= \\sqrt{0.0049875} \\approx 0.0706$, so $z = 0.15/0.0706 \\approx 2.12$."
+    }
+  ],
+  "explanation": [
+    "$\\hat{p}_1 = 60/100 = 0.60$ and $\\hat{p}_2 = 45/100 = 0.45$, a difference of $0.15$.",
+    "Pooled: $\\hat{p}_c = 105/200 = 0.525$. Standard error under $H_0$: $\\sqrt{(0.525)(0.475)(1/100 + 1/100)} = \\sqrt{0.0049875} \\approx 0.0706$.",
+    "$z = 0.15/0.0706 \\approx 2.12$. The two-sided $p$-value is about $0.034$, so at $\\alpha = 0.05$ there is convincing evidence the click rates differ."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why pool?",
+      "steps": [
+        "$H_0$ says both ads have the SAME click rate. Our best single estimate of that common rate uses all 200 visitors: $105/200 = 0.525$.",
+        "Using one shared $\\hat{p}_c$ in the standard error keeps the test consistent with what it assumes.",
+        "That gives SE $\\approx 0.0706$ and $z \\approx 2.12$."
+      ]
+    }
+  ],
+  "tags": [
+    "two-sample",
+    "proportions",
+    "z-test",
+    "word-problem"
+  ],
+  "estimatedSeconds": 90
+}

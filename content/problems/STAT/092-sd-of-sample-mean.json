@@ -1,0 +1,50 @@
+{
+  "id": "STAT.092",
+  "domain": "STAT",
+  "unit": 10,
+  "orderInUnit": 2,
+  "standard": "STAT.PROB.C.3",
+  "difficulty": 1,
+  "prompt": "Scores on a statewide test have standard deviation $\\sigma = 12$ points. For random samples of $n = 36$ students, what is the standard deviation of the sample mean $\\bar{x}$?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Averages vary less than individuals. The formula is $\\sigma_{\\bar{x}} = \\frac{\\sigma}{\\sqrt{n}}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Averages vary less than individuals. The formula is $\\sigma_{\\bar{x}} = \\frac{\\sigma}{\\sqrt{n}}$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sqrt{36} = 6$. Divide $12$ by $6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sigma_{\\bar{x}} = \\frac{12}{\\sqrt{36}} = \\frac{12}{6} = 2$ points."
+    }
+  ],
+  "explanation": [
+    "The standard deviation of the sample mean is $\\sigma_{\\bar{x}} = \\sigma / \\sqrt{n}$.",
+    "$\\sqrt{36} = 6$, so $\\sigma_{\\bar{x}} = 12 / 6 = 2$.",
+    "Sample means of 36 students typically fall within about 2 points of the population mean — much tighter than individual scores."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why divide by the square root?",
+      "steps": [
+        "The mean of 36 scores is their sum divided by 36. The sum of 36 independent scores has variance $36 \\sigma^2$.",
+        "Dividing by 36 divides the variance by $36^2$, leaving $\\sigma^2 / 36$.",
+        "Square-root: SD $= \\sigma / 6 = 2$."
+      ]
+    }
+  ],
+  "tags": [
+    "sampling-distribution",
+    "sample-mean",
+    "standard-deviation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

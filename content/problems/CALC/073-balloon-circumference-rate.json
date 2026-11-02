@@ -1,0 +1,52 @@
+{
+  "id": "CALC.073",
+  "domain": "CALC",
+  "unit": 8,
+  "orderInUnit": 3,
+  "standard": "CALC.DER.B.2",
+  "difficulty": 1,
+  "prompt": "A spherical balloon is being inflated so that its radius grows at $2$ cm per second. How fast is its circumference $C = 2\\pi r$ growing, in cm per second? Round to two decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "12.57",
+  "alternativeAnswers": [
+    "12.566"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "Both $C$ and $r$ change with time. Differentiate $C = 2\\pi r$ with respect to $t$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Both $C$ and $r$ change with time. Differentiate $C = 2\\pi r$ with respect to $t$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{dC}{dt} = 2\\pi \\frac{dr}{dt}$. You know $\\frac{dr}{dt} = 2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{dC}{dt} = 2\\pi \\cdot 2 = 4\\pi \\approx 12.57$ cm/s."
+    }
+  ],
+  "explanation": [
+    "Related rates start with an equation linking the quantities: $C = 2\\pi r$.",
+    "Differentiate with respect to time: $\\frac{dC}{dt} = 2\\pi \\frac{dr}{dt}$.",
+    "Substitute $\\frac{dr}{dt} = 2$: $\\frac{dC}{dt} = 4\\pi \\approx 12.57$ cm/s. Notice the answer does not depend on the current radius — circumference is linear in $r$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in one second",
+      "steps": [
+        "In one second the radius grows by about $2$ cm.",
+        "The circumference grows by $2\\pi$ for every $1$ cm of radius, so it grows by $2 \\cdot 2\\pi = 4\\pi$ cm.",
+        "That is about $12.57$ cm per second."
+      ]
+    }
+  ],
+  "tags": [
+    "related-rates",
+    "circumference",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

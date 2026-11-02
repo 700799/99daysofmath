@@ -1,0 +1,55 @@
+{
+  "id": "CALC.068",
+  "domain": "CALC",
+  "unit": 7,
+  "orderInUnit": 8,
+  "standard": "CALC.DER.A.3",
+  "difficulty": 3,
+  "prompt": "Let $f(x) = \\tan(2x)$. Find $f'\\left(\\frac{\\pi}{8}\\right)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The derivative of $\\tan x$ is $\\sec^2 x$. With an inside function, multiply by the inside's derivative as well.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The derivative of $\\tan x$ is $\\sec^2 x$. With an inside function, multiply by the inside's derivative as well."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $\\frac{d}{dx}\\tan x$ at $x = \\frac{\\pi}{4}$ is $\\sec^2\\frac{\\pi}{4} = \\frac{1}{\\cos^2(\\pi/4)} = \\frac{1}{1/2} = 2$. Now the inside is $2x$, so expect one more factor."
+    },
+    {
+      "level": "guide",
+      "text": "$f'(x) = \\sec^2(2x) \\cdot 2 = 2\\sec^2(2x)$. At $x = \\frac{\\pi}{8}$ the inside is $\\frac{\\pi}{4}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2\\sec^2\\frac{\\pi}{4} = 2 \\cdot 2 = 4$."
+    }
+  ],
+  "explanation": [
+    "Outside $\\tan u$ has derivative $\\sec^2 u$; inside $u = 2x$ has derivative $2$. So $f'(x) = 2\\sec^2(2x)$.",
+    "At $x = \\frac{\\pi}{8}$: $2x = \\frac{\\pi}{4}$ and $\\cos\\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}$, so $\\sec^2\\frac{\\pi}{4} = \\frac{1}{1/2} = 2$.",
+    "$f'\\left(\\frac{\\pi}{8}\\right) = 2 \\cdot 2 = 4$. Dropping the chain factor gives $2$, half the true slope."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Derive $\\sec^2$ with the quotient rule",
+      "steps": [
+        "$\\tan u = \\frac{\\sin u}{\\cos u}$, so $\\frac{d}{du}\\tan u = \\frac{\\cos u \\cdot \\cos u - \\sin u \\cdot (-\\sin u)}{\\cos^2 u} = \\frac{\\cos^2 u + \\sin^2 u}{\\cos^2 u} = \\frac{1}{\\cos^2 u}$.",
+        "With $u = 2x$ the chain rule adds a factor $2$: $f'(x) = \\frac{2}{\\cos^2(2x)}$.",
+        "At $x = \\frac{\\pi}{8}$: $\\frac{2}{\\cos^2(\\pi/4)} = \\frac{2}{1/2} = 4$. Check: $\\frac{f(\\pi/8 + 0.001) - f(\\pi/8)}{0.001} = \\frac{\\tan(\\pi/4 + 0.002) - 1}{0.001} \\approx 4.01$."
+      ]
+    }
+  ],
+  "tags": [
+    "chain-rule",
+    "trig-derivative",
+    "tangent",
+    "multi-step"
+  ],
+  "estimatedSeconds": 65
+}

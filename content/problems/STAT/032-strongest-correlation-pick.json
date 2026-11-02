@@ -1,0 +1,70 @@
+{
+  "id": "STAT.032",
+  "domain": "STAT",
+  "unit": 4,
+  "orderInUnit": 2,
+  "standard": "STAT.DATA.C.3",
+  "difficulty": 1,
+  "prompt": "Four scatterplots have correlation coefficients $r = 0.85$, $r = -0.92$, $r = 0.15$ and $r = -0.40$. Which one shows the STRONGEST linear relationship?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$r = 0.85$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$r = -0.92$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$r = 0.15$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$r = -0.40$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Strength is about how CLOSE $r$ is to $1$ or $-1$. The sign only tells the direction.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Strength is about how CLOSE $r$ is to $1$ or $-1$. The sign only tells the direction."
+    },
+    {
+      "level": "guide",
+      "text": "Compare the absolute values: $0.85, 0.92, 0.15, 0.40$."
+    },
+    {
+      "level": "reveal",
+      "text": "$|{-0.92}| = 0.92$ is the largest, so $r = -0.92$ is the strongest: choice B."
+    }
+  ],
+  "explanation": [
+    "The correlation $r$ runs from $-1$ to $1$; values near either end mean the points hug a line tightly.",
+    "Ignoring signs, the sizes are $0.85, 0.92, 0.15, 0.40$.",
+    "$0.92$ is the biggest, so $r = -0.92$ describes the tightest (strongest) linear pattern. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture each plot",
+      "steps": [
+        "$r = 0.15$: a shapeless blob. $r = -0.40$: a loose downhill cloud.",
+        "$r = 0.85$: a fairly tight uphill band. $r = -0.92$: an even tighter downhill band.",
+        "Tightest band wins, regardless of up or down."
+      ]
+    }
+  ],
+  "tags": [
+    "correlation",
+    "strength"
+  ],
+  "estimatedSeconds": 30
+}

@@ -1,0 +1,49 @@
+{
+  "id": "CALC.032",
+  "domain": "CALC",
+  "unit": 4,
+  "orderInUnit": 2,
+  "standard": "CALC.LIM.B.2",
+  "difficulty": 1,
+  "prompt": "A typing app predicts that a student's speed after $t$ weeks of practice is $W(t) = \\frac{80t^2 + 10}{t^2 + 4}$ words per minute. According to the model, what speed does she approach with unlimited practice?",
+  "answerType": "numeric",
+  "primaryAnswer": "80",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "\"Unlimited practice\" means $t \\to \\infty$. Compare the highest powers on top and bottom.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Unlimited practice\" means $t \\to \\infty$. Compare the highest powers on top and bottom."
+    },
+    {
+      "level": "guide",
+      "text": "Top and bottom are both degree $2$, so the limit is the ratio of the leading coefficients: $\\frac{80}{1}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Her speed approaches $80$ words per minute."
+    }
+  ],
+  "explanation": [
+    "Divide top and bottom by $t^2$: $\\frac{80 + \\frac{10}{t^2}}{1 + \\frac{4}{t^2}}$.",
+    "As $t \\to \\infty$ the small fractions vanish, leaving $\\frac{80}{1}$.",
+    "The model has a ceiling of $80$ words per minute — a horizontal asymptote."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check a few weeks",
+      "steps": [
+        "Week 2: $W(2) = \\frac{330}{8} \\approx 41$ wpm. Week 10: $W(10) = \\frac{8010}{104} \\approx 77$ wpm.",
+        "Week 50: $W(50) = \\frac{200010}{2504} \\approx 79.9$ wpm.",
+        "The gains flatten out as she nears $80$ — the model says she can get as close as she likes, but never past it."
+      ]
+    }
+  ],
+  "tags": [
+    "limit-at-infinity",
+    "horizontal-asymptote",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

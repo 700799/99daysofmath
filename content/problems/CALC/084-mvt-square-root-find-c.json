@@ -1,0 +1,48 @@
+{
+  "id": "CALC.084",
+  "domain": "CALC",
+  "unit": 9,
+  "orderInUnit": 4,
+  "standard": "CALC.APP.A.1",
+  "difficulty": 2,
+  "prompt": "Let $f(x) = \\sqrt{x}$ on $[1, 9]$. Find the value $c$ in $(1, 9)$ guaranteed by the Mean Value Theorem.",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Average rate of change: $\\frac{f(9) - f(1)}{9 - 1}$. Then set $f'(c)$ equal to it.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Average rate of change: $\\frac{f(9) - f(1)}{9 - 1}$. Then set $f'(c)$ equal to it."
+    },
+    {
+      "level": "guide",
+      "text": "Average rate $= \\frac{3 - 1}{8} = \\frac{1}{4}$. And $f'(x) = \\frac{1}{2\\sqrt{x}}$. Solve $\\frac{1}{2\\sqrt{c}} = \\frac{1}{4}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2\\sqrt{c} = 4$, so $\\sqrt{c} = 2$ and $c = 4$."
+    }
+  ],
+  "explanation": [
+    "Secant slope: $\\frac{\\sqrt{9} - \\sqrt{1}}{9 - 1} = \\frac{2}{8} = \\frac{1}{4}$.",
+    "$f'(x) = \\frac{1}{2\\sqrt{x}}$. Set $\\frac{1}{2\\sqrt{c}} = \\frac{1}{4}$: cross-multiply to get $2\\sqrt{c} = 4$.",
+    "$\\sqrt{c} = 2$, so $c = 4$, which is indeed inside $(1, 9)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why $c$ is left of center",
+      "steps": [
+        "The midpoint of $[1, 9]$ is $5$, but $c = 4$. Is that reasonable?",
+        "$\\sqrt{x}$ is steep near $1$ and flat near $9$. The average slope $\\frac{1}{4}$ is matched where the curve has \"medium\" steepness.",
+        "Since the steep part is on the left, the medium slope occurs left of center. $c = 4$ fits."
+      ]
+    }
+  ],
+  "tags": [
+    "mean-value-theorem",
+    "square-root"
+  ],
+  "estimatedSeconds": 55
+}

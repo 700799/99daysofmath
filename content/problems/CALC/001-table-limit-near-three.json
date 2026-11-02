@@ -1,0 +1,48 @@
+{
+  "id": "CALC.001",
+  "domain": "CALC",
+  "unit": 1,
+  "orderInUnit": 1,
+  "standard": "CALC.LIM.A.1",
+  "difficulty": 1,
+  "prompt": "A function $f$ has these values near $x = 3$: $f(2.9) = 5.8$, $f(2.99) = 5.98$, $f(3.01) = 6.02$, $f(3.1) = 6.2$. Based on the table, what is $\\lim_{x \\to 3} f(x)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A limit asks where the outputs are HEADING as $x$ sneaks up on $3$ from both sides.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A limit asks where the outputs are HEADING as $x$ sneaks up on $3$ from both sides."
+    },
+    {
+      "level": "guide",
+      "text": "From the left the outputs go $5.8$, then $5.98$. From the right they go $6.2$, then $6.02$. Both lists close in on one number."
+    },
+    {
+      "level": "reveal",
+      "text": "Both sides squeeze toward $6$, so $\\lim_{x \\to 3} f(x) = 6$."
+    }
+  ],
+  "explanation": [
+    "Read the table from the left: $5.8$, then $5.98$ — climbing toward $6$.",
+    "Read it from the right: $6.2$, then $6.02$ — dropping toward $6$.",
+    "The two sides agree, so the limit is $6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Measure the miss",
+      "steps": [
+        "At $x = 2.99$ the output misses $6$ by $0.02$. At $x = 3.01$ it misses by $0.02$ the other way.",
+        "Each time $x$ gets ten times closer to $3$, the miss shrinks ten times too.",
+        "A gap you can make as small as you like means the target is exactly $6$."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "table"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,56 @@
+{
+  "id": "STAT.138",
+  "domain": "STAT",
+  "unit": 14,
+  "orderInUnit": 8,
+  "standard": "STAT.INF.C.4",
+  "difficulty": 3,
+  "prompt": "A regression of daily ice-cream sales on afternoon temperature reports slope $b = -0.9$ (sales measured in a city where hot afternoons send people to the beach instead) and R-Sq $= 49\\%$. What is the correlation $r$ between temperature and sales?",
+  "answerType": "numeric",
+  "primaryAnswer": "-0.7",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "$r^2 = 0.49$, so $|r| = \\sqrt{0.49}$. Then decide the SIGN.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$r^2 = 0.49$, so $|r| = \\sqrt{0.49}$. Then decide the SIGN."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: R-Sq $= 25\\%$ with a positive slope gives $r = +0.5$; the same R-Sq with a negative slope gives $r = -0.5$. The slope's sign is the correlation's sign."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sqrt{0.49} = 0.7$. The slope is negative, so the correlation is negative too."
+    },
+    {
+      "level": "reveal",
+      "text": "$r = -0.7$."
+    }
+  ],
+  "explanation": [
+    "$r^2 = 0.49$ gives $|r| = \\sqrt{0.49} = 0.7$ — but a square root alone cannot tell you the sign.",
+    "The slope and the correlation always share a sign, and $b = -0.9$ is negative.",
+    "So $r = -0.7$: a moderately strong negative linear relationship."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why they share a sign",
+      "steps": [
+        "The slope formula is $b = r \\cdot \\frac{s_y}{s_x}$, and both standard deviations are positive.",
+        "So $b$ is negative exactly when $r$ is negative.",
+        "With $b = -0.9$ and $|r| = 0.7$, $r = -0.7$."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "correlation",
+    "r-squared",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

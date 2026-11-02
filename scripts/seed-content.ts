@@ -37,6 +37,10 @@ import { problemsSATalg } from './seeds/SAT_alg.js';
 import { problemsSATadv } from './seeds/SAT_adv.js';
 import { problemsSATpsda } from './seeds/SAT_psda.js';
 import { problemsSATgeo } from './seeds/SAT_geo.js';
+import { problemsCALCu01_07 } from './seeds/CALC_u01_07.js';
+import { problemsCALCu08_14 } from './seeds/CALC_u08_14.js';
+import { problemsSTATu01_07 } from './seeds/STAT_u01_07.js';
+import { problemsSTATu08_14 } from './seeds/STAT_u08_14.js';
 import type { SeedProblem } from './seeds/types.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -105,6 +109,10 @@ async function main() {
     ...problemsSATadv,
     ...problemsSATpsda,
     ...problemsSATgeo,
+    ...problemsCALCu01_07,
+    ...problemsCALCu08_14,
+    ...problemsSTATu01_07,
+    ...problemsSTATu08_14,
   ];
 
   let created = 0;

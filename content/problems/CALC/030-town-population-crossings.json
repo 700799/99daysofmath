@@ -1,0 +1,55 @@
+{
+  "id": "CALC.030",
+  "domain": "CALC",
+  "unit": 3,
+  "orderInUnit": 10,
+  "standard": "CALC.LIM.B.1",
+  "difficulty": 3,
+  "prompt": "A continuous function $P(t)$ models the population (in thousands) of a town, where $t$ is years after 2000. Records show $P(0) = 12$, $P(10) = 20$ and $P(20) = 15$. What is the MINIMUM number of times in the interval $[0, 20]$ that the population must have been exactly $17$ thousand?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Apply the Intermediate Value Theorem on each stretch separately: $[0, 10]$ and $[10, 20]$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Apply the Intermediate Value Theorem on each stretch separately: $[0, 10]$ and $[10, 20]$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: a continuous function with $f(0) = 1$ and $f(5) = 3$ must hit $2$ at least once on $[0, 5]$. Now count how many stretches here have $17$ trapped between the endpoint values."
+    },
+    {
+      "level": "guide",
+      "text": "On $[0, 10]$ the population goes $12 \\to 20$: is $17$ in between? On $[10, 20]$ it goes $20 \\to 15$: is $17$ in between?"
+    },
+    {
+      "level": "reveal",
+      "text": "Yes on both stretches, so the population was exactly $17$ thousand at least once going up and at least once coming down: minimum $2$ times."
+    }
+  ],
+  "explanation": [
+    "On $[0, 10]$: $P$ is continuous and $12 < 17 < 20$, so by the IVT there is a time with $P = 17$.",
+    "On $[10, 20]$: $15 < 17 < 20$, so there is another such time, and it is different because it lies in a different stretch (at $t = 10$ itself $P = 20 \\ne 17$).",
+    "The IVT guarantees at least one crossing on each stretch, so the minimum is $2$. The real number could be larger if the population wobbled."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw the dots and connect them",
+      "steps": [
+        "Plot $(0, 12)$, $(10, 20)$ and $(20, 15)$, then draw the horizontal line at height $17$.",
+        "Any continuous curve through the three dots must cross that line on the way up and again on the way down.",
+        "Two crossings are forced; a wiggly curve could cross more, but never fewer."
+      ]
+    }
+  ],
+  "tags": [
+    "ivt",
+    "continuity",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 75
+}

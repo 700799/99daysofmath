@@ -1,0 +1,87 @@
+{
+  "id": "STAT.019",
+  "domain": "STAT",
+  "unit": 2,
+  "orderInUnit": 9,
+  "standard": "STAT.DATA.B.2",
+  "difficulty": 3,
+  "prompt": "A realtor lists the prices of $10$ homes. The most expensive home is then relisted at DOUBLE its price, and nothing else changes. Which statistics must change?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The mean and the standard deviation",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "The median and the IQR",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "All four: mean, median, SD and IQR",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "None of them, because only one value changed",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Resistant statistics depend on the POSITION of values in order, not their exact size. Non-resistant ones add up every value.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Resistant statistics depend on the POSITION of values in order, not their exact size. Non-resistant ones add up every value."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $1, 2, 3, 4, 5$. Change the $5$ to $50$. The median stays $3$ and the quartiles stay $1.5$ and $4.5$, but the mean jumps from $3$ to $12$. Same logic with 10 prices."
+    },
+    {
+      "level": "guide",
+      "text": "The biggest price is still the biggest after doubling, so the ordered list has the same 5th, 6th and quartile positions. Which statistics use the actual dollar amounts of every home?"
+    },
+    {
+      "level": "reveal",
+      "text": "The mean and SD use every value, so both increase. Median and IQR stay put. Choice A."
+    }
+  ],
+  "explanation": [
+    "The doubled price is still the maximum, so the order of the homes does not change. The median (average of the 5th and 6th prices) and the quartiles are unchanged, so the IQR is unchanged.",
+    "The mean adds every price, so it rises. The SD measures distance from the mean, and the new maximum sits much farther out, so the SD rises too.",
+    "Mean and SD change; median and IQR do not. Choice A."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Resistant vs non-resistant",
+      "steps": [
+        "Median and IQR are resistant: they shrug off extreme values.",
+        "Mean and SD are non-resistant: one extreme value can swing them a lot.",
+        "This is why the AP exam says to pair median with IQR for skewed data, and mean with SD for roughly symmetric data."
+      ]
+    },
+    {
+      "title": "The trap in choice D",
+      "steps": [
+        "\"Only one value changed\" sounds like a small change, but doubling the largest price is a huge change in dollars.",
+        "Any statistic that uses that dollar amount, like the mean, must move.",
+        "So D is false; only the position-based statistics stay fixed."
+      ]
+    }
+  ],
+  "tags": [
+    "resistance",
+    "mean",
+    "median",
+    "iqr",
+    "standard-deviation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 65
+}

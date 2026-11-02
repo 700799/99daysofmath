@@ -1,0 +1,78 @@
+{
+  "id": "CALC.109",
+  "domain": "CALC",
+  "unit": 11,
+  "orderInUnit": 9,
+  "standard": "CALC.INT.A.1",
+  "difficulty": 3,
+  "prompt": "Which definite integral equals $\\lim_{n \\to \\infty} \\sum_{k=1}^{n} \\frac{3}{n}\\left(2 + \\frac{3k}{n}\\right)^2$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$\\int_2^5 x^2 \\, dx$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\int_0^3 x^2 \\, dx$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$\\int_2^5 (2 + x)^2 \\, dx$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$\\int_0^5 x^2 \\, dx$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Match the pieces of a right Riemann sum: $\\Delta x = \\frac{b - a}{n}$ and $x_k = a + k\\Delta x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Match the pieces of a right Riemann sum: $\\Delta x = \\frac{b - a}{n}$ and $x_k = a + k\\Delta x$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $\\sum \\frac{1}{n}\\left(\\frac{k}{n}\\right)^2$ has $\\Delta x = \\frac{1}{n}$ and $x_k = 0 + \\frac{k}{n}$, so $a = 0$, $b = 1$, and it becomes $\\int_0^1 x^2 \\, dx$."
+    },
+    {
+      "level": "guide",
+      "text": "Here $\\Delta x = \\frac{3}{n}$, so $b - a = 3$. And $x_k = 2 + \\frac{3k}{n}$ means $a = 2$. The function applied to $x_k$ is squaring."
+    },
+    {
+      "level": "reveal",
+      "text": "$a = 2$, $b = 5$, $f(x) = x^2$: $\\int_2^5 x^2 \\, dx$, choice A."
+    }
+  ],
+  "explanation": [
+    "A right Riemann sum has the form $\\sum_{k=1}^{n} f(a + k\\Delta x) \\, \\Delta x$ with $\\Delta x = \\frac{b - a}{n}$.",
+    "Here $\\Delta x = \\frac{3}{n}$ (so the interval has length $3$) and $a + k\\Delta x = 2 + \\frac{3k}{n}$ (so $a = 2$ and $b = 5$). The summand squares $x_k$, so $f(x) = x^2$.",
+    "The limit is $\\int_2^5 x^2 \\, dx = \\frac{125 - 8}{3} = 39$. Choice A. (Choice C uses the right interval but squares $2 + x$ again, double-counting the shift.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A second correct reading",
+      "steps": [
+        "You could also read $\\frac{3k}{n}$ as $x_k$ on $[0, 3]$ and the summand as $f(x_k) = (2 + x_k)^2$: that gives $\\int_0^3 (2 + x)^2 \\, dx$.",
+        "That integral also equals $39$ — it is the same area shifted left by $2$. Both readings are valid; only A appears among the choices.",
+        "Choice B drops the shift entirely and gives $\\int_0^3 x^2 = 9$, a different number."
+      ]
+    }
+  ],
+  "tags": [
+    "riemann-sum",
+    "limit",
+    "definite-integral",
+    "pattern-recognition",
+    "multi-step"
+  ],
+  "estimatedSeconds": 85
+}

@@ -1,0 +1,56 @@
+{
+  "id": "STAT.120",
+  "domain": "STAT",
+  "unit": 12,
+  "orderInUnit": 10,
+  "standard": "STAT.INF.B.2",
+  "difficulty": 3,
+  "prompt": "Textbooks say normal human body temperature is $98.6^\\circ$F. A random sample of $49$ healthy adults has mean $\\bar{x} = 98.2^\\circ$F and standard deviation $s = 0.7^\\circ$F. For the test of $H_0: \\mu = 98.6$ versus $H_a: \\mu \\ne 98.6$, what is the value of the $t$ statistic?",
+  "answerType": "numeric",
+  "primaryAnswer": "-4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "$t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}$. Keep the sign — a sample mean below $\\mu_0$ gives a negative $t$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}$. Keep the sign — a sample mean below $\\mu_0$ gives a negative $t$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $\\bar{x} = 9$, $\\mu_0 = 10$, $s = 2$, $n = 4$: $SE = 1$, $t = (9 - 10)/1 = -1$. Same steps here."
+    },
+    {
+      "level": "guide",
+      "text": "$SE = 0.7/\\sqrt{49} = 0.7/7 = 0.1$. Then $t = (98.2 - 98.6)/0.1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$t = -0.4/0.1 = -4$."
+    }
+  ],
+  "explanation": [
+    "Standard error: $s/\\sqrt{n} = 0.7/7 = 0.1$ degrees.",
+    "Difference: $\\bar{x} - \\mu_0 = 98.2 - 98.6 = -0.4$.",
+    "$t = -0.4/0.1 = -4$, with df $= 48$. A sample mean 4 standard errors below 98.6 is extremely unlikely if $H_0$ is true ($p$-value well under $0.001$), so there is convincing evidence the true mean is not $98.6^\\circ$F."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the sign matters",
+      "steps": [
+        "$|t| = 4$ sets how surprising the result is; the sign says WHICH way the data lean.",
+        "Negative $t$: the sample mean is below the hypothesized $98.6$.",
+        "For the two-sided test the $p$-value uses both tails, but you still report $t = -4$ so a reader knows body temperatures came out lower."
+      ]
+    }
+  ],
+  "tags": [
+    "significance-test",
+    "t-test",
+    "mean",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

@@ -1,0 +1,51 @@
+{
+  "id": "CALC.067",
+  "domain": "CALC",
+  "unit": 7,
+  "orderInUnit": 7,
+  "standard": "CALC.DER.A.3",
+  "difficulty": 2,
+  "prompt": "A mass on a spring has position $x(t) = 4\\cos(3t)$ centimeters at time $t$ seconds. Find its velocity at $t = \\frac{\\pi}{2}$ seconds, in centimeters per second.",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Velocity is $x'(t)$. The derivative of $\\cos u$ is $-\\sin u \\cdot u'$, and here $u = 3t$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Velocity is $x'(t)$. The derivative of $\\cos u$ is $-\\sin u \\cdot u'$, and here $u = 3t$."
+    },
+    {
+      "level": "guide",
+      "text": "$x'(t) = 4 \\cdot (-\\sin(3t)) \\cdot 3 = -12\\sin(3t)$. At $t = \\frac{\\pi}{2}$ the angle is $\\frac{3\\pi}{2}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sin\\frac{3\\pi}{2} = -1$, so $v = -12(-1) = 12$ cm/s."
+    }
+  ],
+  "explanation": [
+    "Chain rule on $4\\cos(3t)$: outside gives $-4\\sin(3t)$, inside derivative is $3$, so $v(t) = -12\\sin(3t)$.",
+    "At $t = \\frac{\\pi}{2}$: $3t = \\frac{3\\pi}{2}$, and $\\sin\\frac{3\\pi}{2} = -1$.",
+    "$v = -12 \\cdot (-1) = 12$ cm/s: the mass is passing through the center, moving in the positive direction at top speed."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Where is the mass?",
+      "steps": [
+        "Position at $t = \\frac{\\pi}{2}$: $4\\cos\\frac{3\\pi}{2} = 0$. The mass is at the equilibrium point.",
+        "A spring moves fastest at equilibrium, and the maximum of $|{-12\\sin(3t)}|$ is $12$. So the speed must be $12$.",
+        "Direction: a moment earlier, at $t = \\frac{\\pi}{2} - 0.01$, the position is $4\\cos(1.5\\pi - 0.03) \\approx -0.12$, negative. Moving from negative toward zero means velocity is positive: $+12$ cm/s."
+      ]
+    }
+  ],
+  "tags": [
+    "chain-rule",
+    "trig-derivative",
+    "cosine",
+    "velocity",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

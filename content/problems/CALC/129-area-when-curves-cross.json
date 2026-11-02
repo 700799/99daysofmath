@@ -1,0 +1,57 @@
+{
+  "id": "CALC.129",
+  "domain": "CALC",
+  "unit": 13,
+  "orderInUnit": 9,
+  "standard": "CALC.INT.B.1",
+  "difficulty": 3,
+  "prompt": "Find the total area of the region between $y = x^3$ and $y = x$ from $x = 0$ to $x = 2$.",
+  "answerType": "numeric",
+  "primaryAnswer": "2.5",
+  "alternativeAnswers": [
+    "5/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Do the curves cross between $0$ and $2$? Solve $x^3 = x$. If they switch places, you need two integrals.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Do the curves cross between $0$ and $2$? Solve $x^3 = x$. If they switch places, you need two integrals."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: on $[0, 1]$, $x > x^3$ (try $x = 0.5$: $0.5 > 0.125$). On $[1, 2]$, $x^3 > x$ (try $x = 1.5$: $3.375 > 1.5$). The top curve switches at $x = 1$."
+    },
+    {
+      "level": "guide",
+      "text": "Area $= \\int_0^1 (x - x^3) \\, dx + \\int_1^2 (x^3 - x) \\, dx$. Compute each piece."
+    },
+    {
+      "level": "reveal",
+      "text": "First piece: $\\frac{1}{2} - \\frac{1}{4} = \\frac{1}{4}$. Second: $\\left(4 - 2\\right) - \\left(\\frac{1}{4} - \\frac{1}{2}\\right) = \\frac{9}{4}$. Total $= \\frac{10}{4} = 2.5$."
+    }
+  ],
+  "explanation": [
+    "$x^3 = x \\Rightarrow x(x^2 - 1) = 0 \\Rightarrow x = 0, 1$ (and $-1$, outside the interval). The curves cross at $x = 1$.",
+    "On $[0, 1]$ the line is on top: $\\int_0^1 (x - x^3) \\, dx = \\left[\\frac{x^2}{2} - \\frac{x^4}{4}\\right]_0^1 = \\frac{1}{4}$. On $[1, 2]$ the cubic is on top: $\\int_1^2 (x^3 - x) \\, dx = \\left[\\frac{x^4}{4} - \\frac{x^2}{2}\\right]_1^2 = (4 - 2) - \\left(\\frac{1}{4} - \\frac{1}{2}\\right) = 2 + \\frac{1}{4} = \\frac{9}{4}$.",
+    "Total area $= \\frac{1}{4} + \\frac{9}{4} = \\frac{10}{4} = 2.5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The single-integral trap",
+      "steps": [
+        "Computing $\\int_0^2 (x^3 - x) \\, dx = (4 - 2) - 0 = 2$ in one go gives $2$, which is wrong.",
+        "That integral counts the $[0, 1]$ sliver as NEGATIVE $\\frac{1}{4}$, canceling part of the real area: $\\frac{9}{4} - \\frac{1}{4} = 2$.",
+        "Area is always positive, so each piece must be counted with the correct top minus bottom: $\\frac{9}{4} + \\frac{1}{4} = 2.5$."
+      ]
+    }
+  ],
+  "tags": [
+    "area-between-curves",
+    "intersection",
+    "definite-integral",
+    "multi-step"
+  ],
+  "estimatedSeconds": 95
+}

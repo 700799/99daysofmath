@@ -1,0 +1,52 @@
+{
+  "id": "STAT.062",
+  "domain": "STAT",
+  "unit": 7,
+  "orderInUnit": 2,
+  "standard": "STAT.PROB.A.1",
+  "difficulty": 1,
+  "prompt": "A bag holds $3$ red, $5$ blue and $2$ green marbles. One marble is drawn at random. What is the probability it is blue? Give a fraction in lowest terms.",
+  "answerType": "fraction",
+  "primaryAnswer": "1/2",
+  "alternativeAnswers": [
+    "5/10",
+    "0.5",
+    "50%"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Equally likely outcomes: probability $=$ favorable outcomes divided by total outcomes.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Equally likely outcomes: probability $=$ favorable outcomes divided by total outcomes."
+    },
+    {
+      "level": "guide",
+      "text": "There are $5$ blue marbles out of $3 + 5 + 2 = 10$ total."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{5}{10} = \\frac{1}{2}$."
+    }
+  ],
+  "explanation": [
+    "Total marbles: $3 + 5 + 2 = 10$, each equally likely to be drawn.",
+    "Favorable outcomes (blue): $5$.",
+    "$P(\\text{blue}) = \\frac{5}{10} = \\frac{1}{2}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the complement",
+      "steps": [
+        "Not blue means red or green: $3 + 2 = 5$ marbles, probability $\\frac{5}{10}$.",
+        "So blue is $1 - \\frac{5}{10} = \\frac{1}{2}$."
+      ]
+    }
+  ],
+  "tags": [
+    "sample-space",
+    "equally-likely",
+    "word-problem"
+  ],
+  "estimatedSeconds": 25
+}

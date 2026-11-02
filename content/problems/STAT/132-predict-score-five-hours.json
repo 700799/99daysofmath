@@ -1,0 +1,50 @@
+{
+  "id": "STAT.132",
+  "domain": "STAT",
+  "unit": 14,
+  "orderInUnit": 2,
+  "standard": "STAT.INF.C.3",
+  "difficulty": 1,
+  "prompt": "Using the fitted model $\\hat{y} = 12.5 + 3.2x$, where $x$ is hours studied and $\\hat{y}$ is predicted exam score, what score does the model predict for a student who studies $5$ hours?",
+  "answerType": "numeric",
+  "primaryAnswer": "28.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "Substitute $x = 5$ into the equation.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitute $x = 5$ into the equation."
+    },
+    {
+      "level": "guide",
+      "text": "$\\hat{y} = 12.5 + 3.2(5)$. Multiply first, then add."
+    },
+    {
+      "level": "reveal",
+      "text": "$12.5 + 16 = 28.5$."
+    }
+  ],
+  "explanation": [
+    "Plug in: $\\hat{y} = 12.5 + 3.2 \\times 5$.",
+    "$3.2 \\times 5 = 16$, and $12.5 + 16 = 28.5$.",
+    "The model predicts a score of $28.5$ for 5 hours of study."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Start at the intercept and climb",
+      "steps": [
+        "With 0 hours the model predicts $12.5$.",
+        "Each hour adds $3.2$; five hours add $16$.",
+        "$12.5 + 16 = 28.5$."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "prediction",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

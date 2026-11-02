@@ -1,0 +1,49 @@
+{
+  "id": "CALC.045",
+  "domain": "CALC",
+  "unit": 5,
+  "orderInUnit": 5,
+  "standard": "CALC.DER.A.1",
+  "difficulty": 2,
+  "prompt": "Let $f(x) = x^2 + 1$. The tangent line to the graph at $x = 3$ has slope $f'(3) = \\lim_{h \\to 0} \\frac{f(3 + h) - f(3)}{h}$. Find the $y$-intercept of that tangent line.",
+  "answerType": "numeric",
+  "primaryAnswer": "-8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two jobs: find the slope with the limit, then write the line through the point $(3, f(3))$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two jobs: find the slope with the limit, then write the line through the point $(3, f(3))$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{(3 + h)^2 + 1 - 10}{h} = \\frac{6h + h^2}{h} = 6 + h \\to 6$. The point is $(3, 10)$. Use $y - 10 = 6(x - 3)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y = 6x - 18 + 10 = 6x - 8$. The $y$-intercept is $-8$."
+    }
+  ],
+  "explanation": [
+    "Slope: $f'(3) = \\lim_{h \\to 0} \\frac{(3 + h)^2 + 1 - 10}{h} = \\lim_{h \\to 0} (6 + h) = 6$.",
+    "Point: $f(3) = 9 + 1 = 10$, so the line passes through $(3, 10)$.",
+    "Point-slope: $y - 10 = 6(x - 3)$, so $y = 6x - 8$. The $y$-intercept is $-8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Slide down the tangent",
+      "steps": [
+        "Start at $(3, 10)$ on the tangent line. Each step of $1$ to the left drops the height by $6$.",
+        "Three steps left reach $x = 0$: $10 - 18 = -8$.",
+        "So the tangent crosses the $y$-axis at $-8$."
+      ]
+    }
+  ],
+  "tags": [
+    "tangent-line",
+    "derivative-definition",
+    "multi-step"
+  ],
+  "estimatedSeconds": 70
+}

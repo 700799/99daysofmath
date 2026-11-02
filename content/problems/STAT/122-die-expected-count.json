@@ -1,0 +1,50 @@
+{
+  "id": "STAT.122",
+  "domain": "STAT",
+  "unit": 13,
+  "orderInUnit": 2,
+  "standard": "STAT.INF.C.2",
+  "difficulty": 1,
+  "prompt": "To check whether a die is fair, a student rolls it $120$ times and records how often each face appears. In a chi-square goodness-of-fit test, what is the EXPECTED count for each face?",
+  "answerType": "numeric",
+  "primaryAnswer": "20",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Expected count $= n \\times$ (probability under $H_0$).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Expected count $= n \\times$ (probability under $H_0$)."
+    },
+    {
+      "level": "guide",
+      "text": "A fair die gives each face probability $\\frac{1}{6}$. Multiply by $120$."
+    },
+    {
+      "level": "reveal",
+      "text": "$120 \\times \\frac{1}{6} = 20$ for each face."
+    }
+  ],
+  "explanation": [
+    "$H_0$: the die is fair, so each face has probability $1/6$.",
+    "Expected count for a category is $n p_i = 120 \\times 1/6$.",
+    "Each face is expected $20$ times. The test compares the observed counts to these 20s."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Share equally",
+      "steps": [
+        "120 rolls split evenly among 6 faces.",
+        "$120 \\div 6 = 20$.",
+        "Observed counts will wobble around 20; the chi-square statistic measures how much."
+      ]
+    }
+  ],
+  "tags": [
+    "chi-square",
+    "goodness-of-fit",
+    "expected-count",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

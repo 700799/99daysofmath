@@ -1,0 +1,49 @@
+{
+  "id": "CALC.093",
+  "domain": "CALC",
+  "unit": 10,
+  "orderInUnit": 3,
+  "standard": "CALC.APP.A.2",
+  "difficulty": 1,
+  "prompt": "You have $40$ meters of fencing to enclose a rectangular garden. What is the largest area, in square meters, you can enclose?",
+  "answerType": "numeric",
+  "primaryAnswer": "100",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Call the width $x$. Then the length is $20 - x$ (half the fence goes to one width plus one length). Write the area as a function of $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Call the width $x$. Then the length is $20 - x$ (half the fence goes to one width plus one length). Write the area as a function of $x$."
+    },
+    {
+      "level": "guide",
+      "text": "$A(x) = x(20 - x) = 20x - x^2$. Set $A'(x) = 20 - 2x = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x = 10$, so the garden is $10 \\times 10$ and the area is $100$ m$^2$."
+    }
+  ],
+  "explanation": [
+    "Constraint: $2x + 2y = 40$, so $y = 20 - x$. Area: $A(x) = x(20 - x) = 20x - x^2$.",
+    "$A'(x) = 20 - 2x = 0$ gives $x = 10$. Since $A'' = -2 < 0$, this is a maximum.",
+    "Maximum area: $A(10) = 10 \\cdot 10 = 100$ m$^2$ — a square."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Try some rectangles",
+      "steps": [
+        "$5 \\times 15 = 75$. $8 \\times 12 = 96$. $10 \\times 10 = 100$. $12 \\times 8 = 96$.",
+        "The area peaks when the sides are equal.",
+        "For a fixed perimeter, the square always wins — calculus just proves what the table suggests."
+      ]
+    }
+  ],
+  "tags": [
+    "optimization",
+    "area",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

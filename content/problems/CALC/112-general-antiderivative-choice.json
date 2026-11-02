@@ -1,0 +1,70 @@
+{
+  "id": "CALC.112",
+  "domain": "CALC",
+  "unit": 12,
+  "orderInUnit": 2,
+  "standard": "CALC.INT.A.2",
+  "difficulty": 1,
+  "prompt": "Which expression is the general antiderivative of $f(x) = 4x^3 + 2$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$x^4 + 2x + C$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$12x^2 + C$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$x^4 + C$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$4x^4 + 2x + C$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Antidifferentiation reverses the power rule: raise the exponent by one, then divide by the new exponent.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Antidifferentiation reverses the power rule: raise the exponent by one, then divide by the new exponent."
+    },
+    {
+      "level": "guide",
+      "text": "$4x^3 \\to \\frac{4x^4}{4} = x^4$. The constant $2 \\to 2x$. Do not forget $+ C$."
+    },
+    {
+      "level": "reveal",
+      "text": "$x^4 + 2x + C$: choice A. Check by differentiating: $4x^3 + 2$. ✓"
+    }
+  ],
+  "explanation": [
+    "$\\int 4x^3 \\, dx = 4 \\cdot \\frac{x^4}{4} = x^4$ and $\\int 2 \\, dx = 2x$.",
+    "So the general antiderivative is $x^4 + 2x + C$, choice A.",
+    "Choice B is the DERIVATIVE of $f$, not an antiderivative; C forgot the $2$; D forgot to divide by the new exponent."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Differentiate each choice",
+      "steps": [
+        "The right answer must differentiate back to $4x^3 + 2$.",
+        "A: $4x^3 + 2$ ✓. B: $24x$ ✗. C: $4x^3$ ✗ (missing the $2$). D: $16x^3 + 2$ ✗.",
+        "Only A passes. Differentiating to check is always available and takes seconds."
+      ]
+    }
+  ],
+  "tags": [
+    "antiderivative",
+    "power-rule"
+  ],
+  "estimatedSeconds": 35
+}

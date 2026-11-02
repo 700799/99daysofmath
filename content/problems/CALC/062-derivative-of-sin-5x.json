@@ -1,0 +1,71 @@
+{
+  "id": "CALC.062",
+  "domain": "CALC",
+  "unit": 7,
+  "orderInUnit": 2,
+  "standard": "CALC.DER.A.3",
+  "difficulty": 1,
+  "prompt": "Which expression is the derivative of $y = \\sin(5x)$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$5\\cos(5x)$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$\\cos(5x)$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$-5\\cos(5x)$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$5\\cos(x)$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The derivative of $\\sin u$ is $\\cos u$ times $u'$. Here the inside is $u = 5x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The derivative of $\\sin u$ is $\\cos u$ times $u'$. Here the inside is $u = 5x$."
+    },
+    {
+      "level": "guide",
+      "text": "Keep the inside unchanged in the cosine, then multiply by the inside's derivative, which is $5$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y' = \\cos(5x) \\cdot 5 = 5\\cos(5x)$: choice A."
+    }
+  ],
+  "explanation": [
+    "Chain rule with outside $\\sin$ and inside $u = 5x$: $\\frac{dy}{dx} = \\cos(u) \\cdot \\frac{du}{dx}$.",
+    "$\\frac{du}{dx} = 5$, so $y' = 5\\cos(5x)$.",
+    "Choice B forgets the inside derivative; C has the sign of the derivative of cosine, not sine; D changes the inside, which the chain rule never does."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A speed picture",
+      "steps": [
+        "$\\sin(5x)$ completes a full wave every $\\frac{2\\pi}{5}$ units — five times as often as $\\sin x$.",
+        "Same height, five times as squeezed, so every slope is five times as steep.",
+        "That is exactly the factor $5$ in $5\\cos(5x)$. Check at $x = 0$: slope should be $5$, and $5\\cos 0 = 5$."
+      ]
+    }
+  ],
+  "tags": [
+    "chain-rule",
+    "trig-derivative",
+    "sine"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,51 @@
+{
+  "id": "STAT.125",
+  "domain": "STAT",
+  "unit": 13,
+  "orderInUnit": 5,
+  "standard": "STAT.INF.C.1",
+  "difficulty": 2,
+  "prompt": "A random sample of $36$ seniors studies a mean of $\\bar{x}_1 = 15.2$ hours per week with $s_1 = 3$; a random sample of $64$ juniors studies a mean of $\\bar{x}_2 = 13.7$ hours with $s_2 = 4$. For the two-sample $t$-test of $H_0: \\mu_1 = \\mu_2$, use $t = \\frac{\\bar{x}_1 - \\bar{x}_2}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}}$. What is $t$? Round to two decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "2.12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.02,
+  "hint": "Compute each $\\frac{s^2}{n}$ separately, add, then square-root.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Compute each $\\frac{s^2}{n}$ separately, add, then square-root."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{9}{36} = 0.25$ and $\\frac{16}{64} = 0.25$, so the SE is $\\sqrt{0.5}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$t = \\frac{1.5}{\\sqrt{0.5}} = \\frac{1.5}{0.7071} \\approx 2.12$."
+    }
+  ],
+  "explanation": [
+    "Difference of means: $15.2 - 13.7 = 1.5$ hours.",
+    "Standard error: $\\sqrt{3^2/36 + 4^2/64} = \\sqrt{0.25 + 0.25} = \\sqrt{0.5} \\approx 0.707$.",
+    "$t = 1.5/0.707 \\approx 2.12$. With the conservative df $= 35$ the two-sided $p$-value is roughly $0.04$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Variances add",
+      "steps": [
+        "The SD of $\\bar{x}_1$ is $3/6 = 0.5$; the SD of $\\bar{x}_2$ is $4/8 = 0.5$.",
+        "For independent samples, the variance of the difference is $0.5^2 + 0.5^2 = 0.5$, so its SD is $\\sqrt{0.5} \\approx 0.707$.",
+        "A $1.5$-hour gap divided by $0.707$ gives $t \\approx 2.12$."
+      ]
+    }
+  ],
+  "tags": [
+    "two-sample",
+    "t-test",
+    "difference-of-means",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

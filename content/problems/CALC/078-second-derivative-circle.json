@@ -1,0 +1,57 @@
+{
+  "id": "CALC.078",
+  "domain": "CALC",
+  "unit": 8,
+  "orderInUnit": 8,
+  "standard": "CALC.DER.B.2",
+  "difficulty": 3,
+  "prompt": "For the circle $x^2 + y^2 = 25$, find $\\frac{d^2y}{dx^2}$ at the point $(3, 4)$. Give your answer as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "-25/64",
+  "alternativeAnswers": [
+    "-0.390625"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "First get $y' = -\\frac{x}{y}$. Then differentiate THAT with the quotient rule, remembering $y$ still depends on $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First get $y' = -\\frac{x}{y}$. Then differentiate THAT with the quotient rule, remembering $y$ still depends on $x$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if $y' = \\frac{1}{y}$, then $y'' = -\\frac{1}{y^2} \\cdot y'$ by the chain rule. Any $y$ in the formula for $y'$ produces another $y'$ when you differentiate again."
+    },
+    {
+      "level": "guide",
+      "text": "$y'' = -\\frac{1 \\cdot y - x y'}{y^2}$. Replace $y'$ with $-\\frac{x}{y}$: $y'' = -\\frac{y + \\frac{x^2}{y}}{y^2} = -\\frac{x^2 + y^2}{y^3}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Since $x^2 + y^2 = 25$, $y'' = -\\frac{25}{y^3} = -\\frac{25}{64}$ at $y = 4$."
+    }
+  ],
+  "explanation": [
+    "From $2x + 2y y' = 0$, $y' = -\\frac{x}{y}$.",
+    "Quotient rule: $y'' = -\\frac{y - x y'}{y^2}$. Substitute $y' = -\\frac{x}{y}$: the top becomes $y + \\frac{x^2}{y} = \\frac{y^2 + x^2}{y}$, so $y'' = -\\frac{x^2 + y^2}{y^3}$.",
+    "Use the original equation $x^2 + y^2 = 25$: $y'' = -\\frac{25}{y^3}$. At $(3, 4)$: $-\\frac{25}{64}$. Negative, so the upper half of the circle is concave down — exactly right."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Use the explicit formula",
+      "steps": [
+        "Near $(3, 4)$ the circle is $y = \\sqrt{25 - x^2}$. Then $y' = \\frac{-x}{\\sqrt{25 - x^2}}$.",
+        "Quotient rule again gives $y'' = \\frac{-25}{(25 - x^2)^{3/2}}$.",
+        "At $x = 3$: $25 - 9 = 16$, $16^{3/2} = 64$, so $y'' = -\\frac{25}{64}$. Same answer, more algebra."
+      ]
+    }
+  ],
+  "tags": [
+    "implicit-differentiation",
+    "second-derivative",
+    "quotient-rule",
+    "multi-step"
+  ],
+  "estimatedSeconds": 95
+}

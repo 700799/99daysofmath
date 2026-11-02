@@ -1,0 +1,48 @@
+{
+  "id": "CALC.101",
+  "domain": "CALC",
+  "unit": 11,
+  "orderInUnit": 1,
+  "standard": "CALC.INT.A.1",
+  "difficulty": 1,
+  "prompt": "Estimate $\\int_0^4 x^2 \\, dx$ using a left Riemann sum with $4$ equal subintervals.",
+  "answerType": "numeric",
+  "primaryAnswer": "14",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Four subintervals on $[0, 4]$ means each has width $\\Delta x = 1$. A LEFT sum uses the left endpoint of each: $x = 0, 1, 2, 3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Four subintervals on $[0, 4]$ means each has width $\\Delta x = 1$. A LEFT sum uses the left endpoint of each: $x = 0, 1, 2, 3$."
+    },
+    {
+      "level": "guide",
+      "text": "Add the heights $f(0) + f(1) + f(2) + f(3)$ and multiply by the width $1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(0 + 1 + 4 + 9) \\cdot 1 = 14$."
+    }
+  ],
+  "explanation": [
+    "$\\Delta x = \\frac{4 - 0}{4} = 1$. Left endpoints: $0, 1, 2, 3$.",
+    "Heights: $0^2, 1^2, 2^2, 3^2 = 0, 1, 4, 9$.",
+    "Left sum $= 1 \\cdot (0 + 1 + 4 + 9) = 14$. Since $x^2$ is increasing, this underestimates the true area, which is $\\frac{64}{3} \\approx 21.3$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Draw the rectangles",
+      "steps": [
+        "On $[0, 1]$ the rectangle has height $f(0) = 0$ — it is flat, contributing nothing.",
+        "On $[1, 2]$, height $1$; on $[2, 3]$, height $4$; on $[3, 4]$, height $9$.",
+        "Each rectangle sits below the rising curve, so the total $14$ is an underestimate."
+      ]
+    }
+  ],
+  "tags": [
+    "riemann-sum",
+    "left-sum"
+  ],
+  "estimatedSeconds": 40
+}

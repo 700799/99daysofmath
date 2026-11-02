@@ -1,0 +1,53 @@
+{
+  "id": "CALC.134",
+  "domain": "CALC",
+  "unit": 14,
+  "orderInUnit": 4,
+  "standard": "CALC.INT.B.2",
+  "difficulty": 2,
+  "prompt": "The region between $y = x$ and $y = x^2$ (for $0 \\le x \\le 1$) is rotated about the $x$-axis. The volume is $k\\pi$ cubic units. Find $k$ as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "2/15",
+  "alternativeAnswers": [
+    "0.1333",
+    "0.133"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "The region does not touch the axis, so each slice is a WASHER: outer radius $R = x$ (the line is higher), inner radius $r = x^2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The region does not touch the axis, so each slice is a WASHER: outer radius $R = x$ (the line is higher), inner radius $r = x^2$."
+    },
+    {
+      "level": "guide",
+      "text": "Washer method: $V = \\pi \\int_0^1 (R^2 - r^2) \\, dx = \\pi \\int_0^1 (x^2 - x^4) \\, dx$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\pi\\left(\\frac{1}{3} - \\frac{1}{5}\\right) = \\frac{2\\pi}{15}$, so $k = \\frac{2}{15}$."
+    }
+  ],
+  "explanation": [
+    "On $[0, 1]$, $x \\ge x^2$, so the outer radius is $R = x$ and the inner radius is $r = x^2$.",
+    "$V = \\pi \\int_0^1 \\left(x^2 - (x^2)^2\\right) dx = \\pi \\int_0^1 (x^2 - x^4) \\, dx = \\pi\\left[\\frac{x^3}{3} - \\frac{x^5}{5}\\right]_0^1$.",
+    "$= \\pi\\left(\\frac{1}{3} - \\frac{1}{5}\\right) = \\frac{2\\pi}{15}$. So $k = \\frac{2}{15}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The classic mistake",
+      "steps": [
+        "Squaring the DIFFERENCE, $\\pi\\int_0^1 (x - x^2)^2 \\, dx$, is wrong: a washer's area is $\\pi R^2 - \\pi r^2$, not $\\pi(R - r)^2$.",
+        "The wrong version gives $\\frac{\\pi}{30}$, a quarter of the true volume.",
+        "Always subtract the squares: $\\pi(R^2 - r^2)$, giving $\\frac{2\\pi}{15}$."
+      ]
+    }
+  ],
+  "tags": [
+    "volume",
+    "washer-method",
+    "solid-of-revolution"
+  ],
+  "estimatedSeconds": 65
+}

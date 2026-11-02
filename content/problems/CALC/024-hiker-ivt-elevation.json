@@ -1,0 +1,71 @@
+{
+  "id": "CALC.024",
+  "domain": "CALC",
+  "unit": 3,
+  "orderInUnit": 4,
+  "standard": "CALC.LIM.B.1",
+  "difficulty": 2,
+  "prompt": "A hiker's elevation is a continuous function of time. At 8:00 am she is at $1200$ m, and at 11:00 am she is at $2100$ m. Must she have been at EXACTLY $1800$ m at some moment between 8:00 and 11:00?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Yes. Elevation is continuous and $1800$ lies between $1200$ and $2100$, so the Intermediate Value Theorem guarantees it.",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "No. She might have climbed past $1800$ m without ever being exactly there.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Only if she climbed at a constant rate the whole time.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Yes, and it must have happened at exactly 10:00 am.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Think of the Intermediate Value Theorem: a continuous function cannot skip over any height between two of its values.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Think of the Intermediate Value Theorem: a continuous function cannot skip over any height between two of its values."
+    },
+    {
+      "level": "guide",
+      "text": "Is $1800$ between $1200$ and $2100$? Is elevation continuous (no teleporting)?"
+    },
+    {
+      "level": "reveal",
+      "text": "Both are true, so the IVT guarantees a moment at exactly $1800$ m. It says nothing about WHEN, and the rate does not have to be constant."
+    }
+  ],
+  "explanation": [
+    "The IVT: if $f$ is continuous on $[a, b]$ and $N$ is between $f(a)$ and $f(b)$, then $f(c) = N$ for some $c$ in $(a, b)$.",
+    "Here $f(8) = 1200$, $f(11) = 2100$, and $N = 1800$ is in between.",
+    "So some time $c$ between 8:00 and 11:00 has elevation exactly $1800$ m. The theorem gives existence, not the time, and needs no constant rate."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why B is impossible",
+      "steps": [
+        "To get from $1200$ to $2100$ without touching $1800$, her elevation would have to jump over it.",
+        "A jump means a discontinuity, and we were told elevation is continuous — hikers do not teleport.",
+        "So she must have passed through $1800$, maybe several times if the trail dips and climbs."
+      ]
+    }
+  ],
+  "tags": [
+    "ivt",
+    "continuity",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

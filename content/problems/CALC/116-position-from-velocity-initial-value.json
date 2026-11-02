@@ -1,0 +1,50 @@
+{
+  "id": "CALC.116",
+  "domain": "CALC",
+  "unit": 12,
+  "orderInUnit": 6,
+  "standard": "CALC.INT.A.2",
+  "difficulty": 2,
+  "prompt": "A car moves along a straight road with velocity $v(t) = 6t + 2$ meters per second. At $t = 0$ its position is $s = 5$ meters. Find its position at $t = 3$ seconds, in meters.",
+  "answerType": "numeric",
+  "primaryAnswer": "38",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Position is an antiderivative of velocity. Integrate $v(t)$, then use $s(0) = 5$ to pin down the constant.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Position is an antiderivative of velocity. Integrate $v(t)$, then use $s(0) = 5$ to pin down the constant."
+    },
+    {
+      "level": "guide",
+      "text": "$s(t) = 3t^2 + 2t + C$. Since $s(0) = 5$, $C = 5$. Now evaluate at $t = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$s(3) = 27 + 6 + 5 = 38$ meters."
+    }
+  ],
+  "explanation": [
+    "$s(t) = \\int (6t + 2) \\, dt = 3t^2 + 2t + C$.",
+    "Initial condition: $s(0) = C = 5$. So $s(t) = 3t^2 + 2t + 5$.",
+    "$s(3) = 3(9) + 2(3) + 5 = 27 + 6 + 5 = 38$ m."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Start plus displacement",
+      "steps": [
+        "Displacement over $[0, 3]$ is $\\int_0^3 (6t + 2) \\, dt = [3t^2 + 2t]_0^3 = 27 + 6 = 33$ m.",
+        "Final position $=$ starting position $+$ displacement $= 5 + 33 = 38$ m.",
+        "This \"net change\" form of the FTC avoids solving for $C$."
+      ]
+    }
+  ],
+  "tags": [
+    "antiderivative",
+    "initial-value",
+    "motion",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

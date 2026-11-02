@@ -1,0 +1,51 @@
+{
+  "id": "STAT.077",
+  "domain": "STAT",
+  "unit": 8,
+  "orderInUnit": 7,
+  "standard": "STAT.PROB.B.2",
+  "difficulty": 2,
+  "prompt": "A machine cuts rod A with mean length $10$ cm and standard deviation $0.3$ cm, and rod B with mean $15$ cm and standard deviation $0.4$ cm. The two lengths are independent. A and B are glued end to end. What is the standard deviation of the total length $T = A + B$, in cm?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "Standard deviations do NOT add. Variances do — when the variables are independent.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Standard deviations do NOT add. Variances do — when the variables are independent."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sigma_T^2 = \\sigma_A^2 + \\sigma_B^2 = 0.3^2 + 0.4^2$. Then take the square root."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.09 + 0.16 = 0.25$, and $\\sqrt{0.25} = 0.5$ cm."
+    }
+  ],
+  "explanation": [
+    "For independent random variables, variances add: $\\sigma_T^2 = \\sigma_A^2 + \\sigma_B^2$.",
+    "$0.3^2 + 0.4^2 = 0.09 + 0.16 = 0.25$.",
+    "Convert back to a standard deviation: $\\sigma_T = \\sqrt{0.25} = 0.5$ cm. (The mean is $10 + 15 = 25$ cm, but the question asked for the SD.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why not just 0.7?",
+      "steps": [
+        "Adding the SDs ($0.3 + 0.4 = 0.7$) would assume a long A always pairs with a long B.",
+        "Independence means a long A is just as likely to pair with a short B, which partly cancels.",
+        "The Pythagorean-style rule $\\sqrt{0.3^2 + 0.4^2} = 0.5$ captures that cancellation."
+      ]
+    }
+  ],
+  "tags": [
+    "random-variable",
+    "combining-variables",
+    "standard-deviation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

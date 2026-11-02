@@ -1,0 +1,57 @@
+{
+  "id": "CALC.119",
+  "domain": "CALC",
+  "unit": 12,
+  "orderInUnit": 9,
+  "standard": "CALC.INT.A.2",
+  "difficulty": 3,
+  "prompt": "A particle moving along a line has acceleration $a(t) = 6t - 4$ m/s$^2$. At $t = 0$ its velocity is $1$ m/s and its position is $2$ m. Find its position at $t = 2$ seconds, in meters.",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two antiderivatives in a row: acceleration $\\to$ velocity $\\to$ position. Use an initial condition after each one.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two antiderivatives in a row: acceleration $\\to$ velocity $\\to$ position. Use an initial condition after each one."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Step one: $v(t) = \\int (6t - 4) \\, dt = 3t^2 - 4t + C_1$. With $v(0) = 1$, $C_1 = 1$, so $v(t) = 3t^2 - 4t + 1$."
+    },
+    {
+      "level": "guide",
+      "text": "Step two: $s(t) = \\int (3t^2 - 4t + 1) \\, dt = t^3 - 2t^2 + t + C_2$, and $s(0) = 2$ gives $C_2 = 2$. Now evaluate $s(2)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$s(2) = 8 - 8 + 2 + 2 = 4$ m."
+    }
+  ],
+  "explanation": [
+    "Velocity: $v(t) = 3t^2 - 4t + C_1$; $v(0) = 1$ forces $C_1 = 1$.",
+    "Position: $s(t) = t^3 - 2t^2 + t + C_2$; $s(0) = 2$ forces $C_2 = 2$.",
+    "$s(2) = 2^3 - 2(2)^2 + 2 + 2 = 8 - 8 + 2 + 2 = 4$ m. Note the particle is back near where it started — it slowed, reversed, and returned."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Net change twice",
+      "steps": [
+        "Displacement $= \\int_0^2 v(t) \\, dt = \\int_0^2 (3t^2 - 4t + 1) \\, dt = [t^3 - 2t^2 + t]_0^2 = 8 - 8 + 2 = 2$ m.",
+        "Position $=$ start $+$ displacement $= 2 + 2 = 4$ m.",
+        "You still need $v(t)$ first, so the first constant $C_1 = 1$ is unavoidable — but the second one can be skipped this way."
+      ]
+    }
+  ],
+  "tags": [
+    "antiderivative",
+    "initial-value",
+    "motion",
+    "acceleration",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 90
+}

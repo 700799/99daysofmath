@@ -1,0 +1,52 @@
+{
+  "id": "STAT.101",
+  "domain": "STAT",
+  "unit": 11,
+  "orderInUnit": 1,
+  "standard": "STAT.INF.A.1",
+  "difficulty": 1,
+  "prompt": "A poll finds that $62\\%$ of a random sample of adults support a new park, with a margin of error of $4$ percentage points at $95\\%$ confidence. What is the LOWER endpoint of the confidence interval, as a decimal?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.58",
+  "alternativeAnswers": [
+    "58%"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "A confidence interval is point estimate $\\pm$ margin of error.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A confidence interval is point estimate $\\pm$ margin of error."
+    },
+    {
+      "level": "guide",
+      "text": "Lower endpoint $= 0.62 - 0.04$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.62 - 0.04 = 0.58$. The interval is $(0.58, 0.66)$."
+    }
+  ],
+  "explanation": [
+    "The point estimate is $\\hat{p} = 0.62$ and the margin of error is $0.04$.",
+    "The interval runs from $0.62 - 0.04$ to $0.62 + 0.04$.",
+    "Lower endpoint: $0.58$. We are $95\\%$ confident the true proportion is between $0.58$ and $0.66$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "In percentage points",
+      "steps": [
+        "The poll says $62\\%$, give or take 4 points.",
+        "\"Give\" is $66\\%$; \"take\" is $58\\%$.",
+        "So the lower end is $58\\%$, or $0.58$."
+      ]
+    }
+  ],
+  "tags": [
+    "confidence-interval",
+    "margin-of-error",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

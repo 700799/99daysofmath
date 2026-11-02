@@ -1,0 +1,53 @@
+{
+  "id": "CALC.015",
+  "domain": "CALC",
+  "unit": 2,
+  "orderInUnit": 5,
+  "standard": "CALC.LIM.A.2",
+  "difficulty": 2,
+  "prompt": "Find $\\lim_{x \\to 9} \\frac{\\sqrt{x} - 3}{x - 9}$. Give your answer as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "1/6",
+  "alternativeAnswers": [
+    "0.1667",
+    "0.167"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "Substitution gives $\\frac{0}{0}$. With a square root on top, multiply top and bottom by the conjugate $\\sqrt{x} + 3$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitution gives $\\frac{0}{0}$. With a square root on top, multiply top and bottom by the conjugate $\\sqrt{x} + 3$."
+    },
+    {
+      "level": "guide",
+      "text": "$(\\sqrt{x} - 3)(\\sqrt{x} + 3) = x - 9$, which cancels the bottom. You are left with $\\frac{1}{\\sqrt{x} + 3}$."
+    },
+    {
+      "level": "reveal",
+      "text": "At $x = 9$: $\\frac{1}{\\sqrt{9} + 3} = \\frac{1}{6}$."
+    }
+  ],
+  "explanation": [
+    "Multiply by $\\frac{\\sqrt{x} + 3}{\\sqrt{x} + 3}$. The top becomes $x - 9$.",
+    "Now $\\frac{x - 9}{(x - 9)(\\sqrt{x} + 3)} = \\frac{1}{\\sqrt{x} + 3}$ for $x \\ne 9$.",
+    "Substitute $x = 9$: $\\frac{1}{3 + 3} = \\frac{1}{6}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Factor the bottom instead",
+      "steps": [
+        "Think of $x - 9$ as a difference of squares: $(\\sqrt{x})^2 - 3^2 = (\\sqrt{x} - 3)(\\sqrt{x} + 3)$.",
+        "Then $\\frac{\\sqrt{x} - 3}{(\\sqrt{x} - 3)(\\sqrt{x} + 3)} = \\frac{1}{\\sqrt{x} + 3}$.",
+        "Same answer, $\\frac{1}{6}$, with no conjugate trick needed."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "rationalize",
+    "indeterminate"
+  ],
+  "estimatedSeconds": 60
+}

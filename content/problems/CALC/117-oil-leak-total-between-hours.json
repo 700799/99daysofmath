@@ -1,0 +1,50 @@
+{
+  "id": "CALC.117",
+  "domain": "CALC",
+  "unit": 12,
+  "orderInUnit": 7,
+  "standard": "CALC.INT.A.2",
+  "difficulty": 2,
+  "prompt": "Oil leaks from a tank at a rate of $r(t) = 3t^2$ liters per hour, where $t$ is in hours. How many liters leak out between $t = 1$ and $t = 3$?",
+  "answerType": "numeric",
+  "primaryAnswer": "26",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A rate integrated over a time interval gives the total change: $\\int_1^3 r(t) \\, dt$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A rate integrated over a time interval gives the total change: $\\int_1^3 r(t) \\, dt$."
+    },
+    {
+      "level": "guide",
+      "text": "An antiderivative of $3t^2$ is $t^3$. Evaluate $t^3$ at $3$ and at $1$, then subtract."
+    },
+    {
+      "level": "reveal",
+      "text": "$27 - 1 = 26$ liters."
+    }
+  ],
+  "explanation": [
+    "Total leaked $= \\int_1^3 3t^2 \\, dt$.",
+    "$= [t^3]_1^3 = 3^3 - 1^3 = 27 - 1$.",
+    "$= 26$ liters. The leak speeds up over time (the rate at $t = 3$ is $27$ L/h versus $3$ L/h at $t = 1$), so most of the $26$ liters escape in the second hour."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Do not plug in $3$ alone",
+      "steps": [
+        "A common slip is to answer $r(3) = 27$ — but that is the RATE at $t = 3$ in liters per hour, not a number of liters.",
+        "The amount is the area under the rate curve from $1$ to $3$, which the FTC gives as $F(3) - F(1)$.",
+        "Subtracting $F(1) = 1$ matters: $26$, not $27$."
+      ]
+    }
+  ],
+  "tags": [
+    "net-change",
+    "rate",
+    "definite-integral",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

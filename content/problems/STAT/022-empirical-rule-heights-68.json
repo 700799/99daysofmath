@@ -1,0 +1,52 @@
+{
+  "id": "STAT.022",
+  "domain": "STAT",
+  "unit": 3,
+  "orderInUnit": 2,
+  "standard": "STAT.DATA.C.1",
+  "difficulty": 1,
+  "prompt": "The heights of adult men in a city are approximately normal with mean $70$ inches and standard deviation $3$ inches. About what percent of these men are between $67$ and $73$ inches tall?",
+  "answerType": "numeric",
+  "primaryAnswer": "68",
+  "alternativeAnswers": [
+    "68%",
+    "0.68"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Check how far $67$ and $73$ are from the mean, in standard deviations.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Check how far $67$ and $73$ are from the mean, in standard deviations."
+    },
+    {
+      "level": "guide",
+      "text": "$67 = 70 - 3$ and $73 = 70 + 3$: one SD on each side. The empirical rule (68-95-99.7) says how much lives within one SD."
+    },
+    {
+      "level": "reveal",
+      "text": "About $68$ percent of the men are between $67$ and $73$ inches."
+    }
+  ],
+  "explanation": [
+    "$67$ is one SD below the mean and $73$ is one SD above it.",
+    "For a normal distribution, about $68$ percent of values fall within one SD of the mean.",
+    "So about $68$ percent of the men are $67$ to $73$ inches tall."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Symmetry check",
+      "steps": [
+        "Half of the 68 percent, or 34 percent, sits between 70 and 73.",
+        "The other 34 percent sits between 67 and 70.",
+        "Together, $34 + 34 = 68$ percent."
+      ]
+    }
+  ],
+  "tags": [
+    "empirical-rule",
+    "normal-distribution",
+    "word-problem"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,65 @@
+{
+  "id": "STAT.038",
+  "domain": "STAT",
+  "unit": 4,
+  "orderInUnit": 8,
+  "standard": "STAT.DATA.C.4",
+  "difficulty": 3,
+  "prompt": "Four students reported hours studied ($x$) and quiz score ($y$): $(1, 2), (2, 4), (3, 5), (4, 7)$. What is the slope of the least-squares regression line?",
+  "answerType": "numeric",
+  "primaryAnswer": "1.6",
+  "alternativeAnswers": [
+    "8/5"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "The slope is $b = \\frac{\\sum (x - \\bar{x})(y - \\bar{y})}{\\sum (x - \\bar{x})^2}$. Start by finding $\\bar{x}$ and $\\bar{y}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The slope is $b = \\frac{\\sum (x - \\bar{x})(y - \\bar{y})}{\\sum (x - \\bar{x})^2}$. Start by finding $\\bar{x}$ and $\\bar{y}$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $(1, 1), (3, 5)$: $\\bar{x} = 2, \\bar{y} = 3$, deviations $(-1, -2)$ and $(1, 2)$. Top $= 2 + 2 = 4$, bottom $= 1 + 1 = 2$, slope $2$. Same recipe with four points."
+    },
+    {
+      "level": "guide",
+      "text": "$\\bar{x} = 2.5$, $\\bar{y} = 4.5$. The $x$-deviations are $-1.5, -0.5, 0.5, 1.5$ and the $y$-deviations are $-2.5, -0.5, 0.5, 2.5$. Multiply pairs and add; square the $x$-deviations and add."
+    },
+    {
+      "level": "reveal",
+      "text": "Top: $3.75 + 0.25 + 0.25 + 3.75 = 8$. Bottom: $2.25 + 0.25 + 0.25 + 2.25 = 5$. Slope $= \\frac{8}{5} = 1.6$ points per hour."
+    }
+  ],
+  "explanation": [
+    "$\\bar{x} = \\frac{1 + 2 + 3 + 4}{4} = 2.5$ and $\\bar{y} = \\frac{2 + 4 + 5 + 7}{4} = 4.5$.",
+    "Products of deviations: $(-1.5)(-2.5) + (-0.5)(-0.5) + (0.5)(0.5) + (1.5)(2.5) = 3.75 + 0.25 + 0.25 + 3.75 = 8$. Squared $x$-deviations: $2.25 + 0.25 + 0.25 + 2.25 = 5$.",
+    "Slope $b = \\frac{8}{5} = 1.6$: each extra hour of study predicts $1.6$ more points. (The intercept is $4.5 - 1.6(2.5) = 0.5$, so $\\hat{y} = 0.5 + 1.6x$.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with the calculator formula",
+      "steps": [
+        "$s_x = \\sqrt{\\frac{5}{3}} \\approx 1.291$ and $s_y = \\sqrt{\\frac{13}{3}} \\approx 2.082$, and $r = \\frac{8}{\\sqrt{5 \\cdot 13}} \\approx 0.992$.",
+        "$b = r \\frac{s_y}{s_x} = 0.992 \\times \\frac{2.082}{1.291} \\approx 1.6$. Same answer either route."
+      ]
+    },
+    {
+      "title": "The trap: slope between two points",
+      "steps": [
+        "Using just the first and last points gives $\\frac{7 - 2}{4 - 1} = \\frac{5}{3} \\approx 1.67$, which is close but not the least-squares slope.",
+        "The least-squares line uses ALL four points and minimizes the squared residuals.",
+        "That balancing act gives exactly $1.6$."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "slope",
+    "least-squares",
+    "word-problem"
+  ],
+  "estimatedSeconds": 90
+}

@@ -1,0 +1,72 @@
+{
+  "id": "STAT.004",
+  "domain": "STAT",
+  "unit": 1,
+  "orderInUnit": 4,
+  "standard": "STAT.DATA.A.2",
+  "difficulty": 2,
+  "prompt": "A histogram of home prices in a city has most bars bunched at the lower prices and a long thin tail stretching toward a few very expensive homes. Which word describes the shape?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Skewed left",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Skewed right",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Symmetric",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Uniform",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Skew is named for the direction the TAIL points, not where the pile of data sits.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Skew is named for the direction the TAIL points, not where the pile of data sits."
+    },
+    {
+      "level": "guide",
+      "text": "Expensive homes are large numbers, so they sit on the right side of the number line."
+    },
+    {
+      "level": "reveal",
+      "text": "The tail stretches to the right, so the distribution is skewed right: choice B."
+    }
+  ],
+  "explanation": [
+    "Most homes are moderately priced, so the tall bars sit on the left.",
+    "A few very expensive homes make a long tail toward the large values on the right.",
+    "The tail points right, so the shape is skewed right (choice B)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the mean being dragged",
+      "steps": [
+        "Imagine the histogram as a seesaw balanced at the mean.",
+        "A few huge prices on the right drag the balance point to the right of the median.",
+        "When the mean is pulled right, the tail is on the right: skewed right."
+      ]
+    }
+  ],
+  "tags": [
+    "shape",
+    "skew",
+    "histogram",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

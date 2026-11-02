@@ -1,9 +1,9 @@
 export type Domain =
   | '5.F' | '6.RP' | '6.NS' | '6.EE' | '6.G' | '6.SP'
-  | 'A1' | 'GEO' | 'TRIG' | 'PC' | 'SAT';
+  | 'A1' | 'GEO' | 'TRIG' | 'PC' | 'SAT' | 'CALC' | 'STAT';
 
 export const DOMAINS: Domain[] = [
-  '5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'A1', 'GEO', 'TRIG', 'PC', 'SAT',
+  '5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'A1', 'GEO', 'TRIG', 'PC', 'SAT', 'CALC', 'STAT',
 ];
 
 /**
@@ -15,7 +15,7 @@ export const DOMAINS: Domain[] = [
  * (see src/data/courses.ts), which may gather more than one domain.
  */
 export const TRAIL_DOMAINS: Domain[] = [
-  '5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'A1', 'GEO', 'TRIG', 'PC',
+  '5.F', '6.RP', '6.NS', '6.EE', '6.G', '6.SP', 'A1', 'GEO', 'TRIG', 'PC', 'CALC', 'STAT',
 ];
 
 /**
@@ -32,6 +32,8 @@ export function gradeLabelFor(domain: Domain): string {
   if (domain === 'TRIG') return 'Trigonometry';
   if (domain === 'PC') return 'Precalculus';
   if (domain === 'SAT') return 'SAT Math';
+  if (domain === 'CALC') return 'AP Calculus AB';
+  if (domain === 'STAT') return 'AP Statistics';
   return domain.startsWith('5.') ? '5th grade' : '6th grade';
 }
 
@@ -42,6 +44,8 @@ export function domainCourseName(domain: Domain): string {
   if (domain === 'TRIG') return 'Trigonometry';
   if (domain === 'PC') return 'Precalculus for Middle School';
   if (domain === 'SAT') return 'Digital SAT Math Prep';
+  if (domain === 'CALC') return 'AP Calculus AB';
+  if (domain === 'STAT') return 'AP Statistics';
   const grade = domain.startsWith('5.') ? '5th' : '6th';
   return `${DOMAIN_LABELS[domain]} — ${grade} Grade Math`;
 }
@@ -60,6 +64,8 @@ export const DOMAIN_LABELS: Record<Domain, string> = {
   TRIG: 'Trigonometry',
   PC: 'Precalculus',
   SAT: 'SAT Math',
+  CALC: 'AP Calculus AB',
+  STAT: 'AP Statistics',
 };
 
 export const DOMAIN_DESCRIPTIONS: Record<Domain, string> = {
@@ -74,6 +80,8 @@ export const DOMAIN_DESCRIPTIONS: Record<Domain, string> = {
   TRIG: 'Angles and radians, the unit circle, graphs of the trig functions, identities, equations, and the triangle laws',
   PC: 'Function transformations, polynomials, logarithms, trigonometry, sequences, and limits',
   SAT: 'The full Digital SAT Math blueprint: algebra, advanced math, problem-solving and data analysis, and geometry and trigonometry',
+  CALC: 'Limits and continuity, derivatives and their rules, applications from related rates to optimization, Riemann sums, the Fundamental Theorem, and integrals for area and volume',
+  STAT: 'Describing and collecting data, probability and random variables, sampling distributions, confidence intervals, significance tests, chi-square and inference for regression',
 };
 
 export const DOMAIN_COLORS: Record<Domain, string> = {
@@ -90,6 +98,8 @@ export const DOMAIN_COLORS: Record<Domain, string> = {
   TRIG: '#4C8C6E',   // pine
   PC: '#8C5F7D',     // mauve
   SAT: '#3E6B7A',    // petrol — the capstone section
+  CALC: '#6B5E9E',   // plum — the AP capstone
+  STAT: '#5E8A8C',   // juniper
 };
 
 export const DOMAIN_EMOJI: Record<Domain, string> = {
@@ -104,6 +114,8 @@ export const DOMAIN_EMOJI: Record<Domain, string> = {
   TRIG: '🌊',
   PC: '🎢',
   SAT: '🎯',
+  CALC: '📈',
+  STAT: '🧪',
 };
 
 export type AnswerType =

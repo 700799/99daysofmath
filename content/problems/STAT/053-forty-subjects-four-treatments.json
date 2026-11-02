@@ -1,0 +1,49 @@
+{
+  "id": "STAT.053",
+  "domain": "STAT",
+  "unit": 6,
+  "orderInUnit": 3,
+  "standard": "STAT.COLL.B.1",
+  "difficulty": 1,
+  "prompt": "A completely randomized experiment has $40$ subjects and $4$ treatments, with equal-sized groups. How many subjects receive each treatment?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Equal groups means the subjects are split evenly among the treatments.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Equal groups means the subjects are split evenly among the treatments."
+    },
+    {
+      "level": "guide",
+      "text": "Divide $40$ subjects by $4$ treatments."
+    },
+    {
+      "level": "reveal",
+      "text": "$40 \\div 4 = 10$ subjects per treatment."
+    }
+  ],
+  "explanation": [
+    "In a completely randomized design, subjects are randomly assigned to treatment groups.",
+    "With equal group sizes, $\\frac{40}{4} = 10$.",
+    "Each of the four treatments gets $10$ subjects."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "How the assignment is done",
+      "steps": [
+        "Number the subjects 1 to 40 and use a random number generator to pick 10 for treatment 1.",
+        "Pick 10 of the remaining 30 for treatment 2, then 10 of the remaining 20 for treatment 3.",
+        "The last 10 get treatment 4. Random, and 10 per group."
+      ]
+    }
+  ],
+  "tags": [
+    "experimental-design",
+    "random-assignment",
+    "word-problem"
+  ],
+  "estimatedSeconds": 25
+}

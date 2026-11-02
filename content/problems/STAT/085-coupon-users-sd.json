@@ -1,0 +1,50 @@
+{
+  "id": "STAT.085",
+  "domain": "STAT",
+  "unit": 9,
+  "orderInUnit": 5,
+  "standard": "STAT.PROB.C.1",
+  "difficulty": 2,
+  "prompt": "At a grocery store, $30\\%$ of customers use a coupon, independently of one another. Of the next $100$ customers, let $X$ be the number who use a coupon. What is the standard deviation of $X$? Round to two decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "4.58",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "For a binomial variable, $\\sigma_X = \\sqrt{np(1-p)}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "For a binomial variable, $\\sigma_X = \\sqrt{np(1-p)}$."
+    },
+    {
+      "level": "guide",
+      "text": "Compute $np(1-p) = 100(0.3)(0.7)$ first, then take the square root."
+    },
+    {
+      "level": "reveal",
+      "text": "$100(0.3)(0.7) = 21$, and $\\sqrt{21} \\approx 4.58$."
+    }
+  ],
+  "explanation": [
+    "$X$ is binomial with $n = 100$, $p = 0.3$.",
+    "Variance: $np(1-p) = 100 \\times 0.3 \\times 0.7 = 21$.",
+    "Standard deviation: $\\sqrt{21} \\approx 4.58$ customers. The mean is $30$, so typical counts land within about $\\pm 4.6$ of 30."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build it from one customer",
+      "steps": [
+        "One customer is a 0/1 variable with variance $p(1-p) = 0.21$.",
+        "100 independent customers: variances add, giving $100 \\times 0.21 = 21$.",
+        "SD $= \\sqrt{21} \\approx 4.58$. That is exactly where the formula $\\sqrt{np(1-p)}$ comes from."
+      ]
+    }
+  ],
+  "tags": [
+    "binomial",
+    "standard-deviation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,53 @@
+{
+  "id": "STAT.024",
+  "domain": "STAT",
+  "unit": 3,
+  "orderInUnit": 4,
+  "standard": "STAT.DATA.C.1",
+  "difficulty": 2,
+  "prompt": "Scores on a reasoning test are approximately normal with mean $100$ and standard deviation $15$. Using the empirical rule, about what percent of people score ABOVE $130$?",
+  "answerType": "numeric",
+  "primaryAnswer": "2.5",
+  "alternativeAnswers": [
+    "2.5%",
+    "0.025"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "$130 = 100 + 2(15)$, so $130$ is exactly two SDs above the mean.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$130 = 100 + 2(15)$, so $130$ is exactly two SDs above the mean."
+    },
+    {
+      "level": "guide",
+      "text": "About $95$ percent of scores are within two SDs, so $5$ percent lies in the two tails combined."
+    },
+    {
+      "level": "reveal",
+      "text": "The upper tail gets half of that $5$ percent: about $2.5$ percent score above $130$."
+    }
+  ],
+  "explanation": [
+    "$\\frac{130 - 100}{15} = 2$, so $130$ is two standard deviations above the mean.",
+    "The empirical rule puts $95$ percent of scores between $70$ and $130$, leaving $5$ percent outside.",
+    "By symmetry, half of that is above $130$: about $2.5$ percent."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build up from the middle",
+      "steps": [
+        "50 percent of scores are above the mean of 100.",
+        "Of those, the slice from 100 to 130 (two SDs) holds $\\frac{95}{2} = 47.5$ percent.",
+        "What is left above 130 is $50 - 47.5 = 2.5$ percent."
+      ]
+    }
+  ],
+  "tags": [
+    "empirical-rule",
+    "normal-distribution",
+    "tail",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

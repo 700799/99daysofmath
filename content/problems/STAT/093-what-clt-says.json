@@ -1,0 +1,71 @@
+{
+  "id": "STAT.093",
+  "domain": "STAT",
+  "unit": 10,
+  "orderInUnit": 3,
+  "standard": "STAT.PROB.C.3",
+  "difficulty": 1,
+  "prompt": "Which statement best describes the Central Limit Theorem?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The sample mean always equals the population mean when $n$ is large.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "For large $n$, the sampling distribution of $\\bar{x}$ is approximately normal, whatever the shape of the population.",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Taking a large sample makes the population itself approximately normal.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The standard deviation of $\\bar{x}$ grows as $n$ grows.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The CLT is about the SHAPE of the distribution of sample means, not about the population or any single sample.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The CLT is about the SHAPE of the distribution of sample means, not about the population or any single sample."
+    },
+    {
+      "level": "guide",
+      "text": "Rule out A (sample means still vary), C (the population does not change), and D (the SD of $\\bar{x}$ shrinks with $n$)."
+    },
+    {
+      "level": "reveal",
+      "text": "B: with a large enough sample, sample means are approximately normal even from a skewed population."
+    }
+  ],
+  "explanation": [
+    "The Central Limit Theorem says that as $n$ grows, the sampling distribution of $\\bar{x}$ becomes approximately normal, regardless of the population's shape.",
+    "A is false: $\\bar{x}$ gets close to $\\mu$ but still varies. C is false: the population is what it is. D is backwards: $\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n}$ shrinks.",
+    "So B is the correct description."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Three different distributions",
+      "steps": [
+        "Population distribution: all the individuals (any shape).",
+        "Distribution of one sample: looks roughly like the population.",
+        "Sampling distribution of $\\bar{x}$: the one the CLT is about — bell-shaped for large $n$ (a common rule: $n \\ge 30$)."
+      ]
+    }
+  ],
+  "tags": [
+    "central-limit-theorem",
+    "sampling-distribution",
+    "interpretation"
+  ],
+  "estimatedSeconds": 45
+}

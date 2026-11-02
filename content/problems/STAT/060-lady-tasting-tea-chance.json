@@ -1,0 +1,66 @@
+{
+  "id": "STAT.060",
+  "domain": "STAT",
+  "unit": 6,
+  "orderInUnit": 10,
+  "standard": "STAT.COLL.B.2",
+  "difficulty": 3,
+  "prompt": "In Fisher's famous experiment, a lady claims she can tell whether milk or tea was poured first. She is given $8$ cups, $4$ of each kind in random order, and must pick out the $4$ milk-first cups. If she is only guessing, what is the probability she identifies all $4$ correctly?",
+  "answerType": "fraction",
+  "primaryAnswer": "1/70",
+  "alternativeAnswers": [
+    "0.0143",
+    "0.014"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "If she guesses, every way of choosing $4$ cups out of $8$ is equally likely, and only ONE of those ways is completely right.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "If she guesses, every way of choosing $4$ cups out of $8$ is equally likely, and only ONE of those ways is completely right."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with $4$ cups, $2$ milk-first. The ways to choose 2 of 4 are $\\binom{4}{2} = 6$, and only one is right, so the chance is $\\frac{1}{6}$. Same idea with 8 and 4."
+    },
+    {
+      "level": "guide",
+      "text": "Count the ways to choose $4$ cups from $8$: $\\binom{8}{4} = \\frac{8 \\cdot 7 \\cdot 6 \\cdot 5}{4 \\cdot 3 \\cdot 2 \\cdot 1}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\binom{8}{4} = 70$, so the probability of a perfect guess is $\\frac{1}{70} \\approx 0.014$."
+    }
+  ],
+  "explanation": [
+    "Because the cups were put in RANDOM order, a guesser is equally likely to pick any set of $4$ cups.",
+    "The number of possible sets is $\\binom{8}{4} = \\frac{8 \\times 7 \\times 6 \\times 5}{24} = 70$, and exactly one set is the correct one.",
+    "So $P(\\text{all 4 correct by guessing}) = \\frac{1}{70} \\approx 0.014$. When she got them all right, Fisher argued chance was a poor explanation: the first significance test."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pick the cups one at a time",
+      "steps": [
+        "First pick: $\\frac{4}{8}$ chance it is milk-first. Second: $\\frac{3}{7}$. Third: $\\frac{2}{6}$. Fourth: $\\frac{1}{5}$.",
+        "Multiply: $\\frac{4}{8} \\cdot \\frac{3}{7} \\cdot \\frac{2}{6} \\cdot \\frac{1}{5} = \\frac{24}{1680} = \\frac{1}{70}$."
+      ]
+    },
+    {
+      "title": "Why randomization was the key",
+      "steps": [
+        "If the cups had been lined up in a pattern, the lady might have cracked the pattern instead of tasting.",
+        "Random order means the ONLY way to beat $\\frac{1}{70}$ reliably is real ability.",
+        "This is why every experiment randomizes: it makes chance the only alternative explanation, and chance can be computed."
+      ]
+    }
+  ],
+  "tags": [
+    "randomization",
+    "significance",
+    "combinations",
+    "fisher",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

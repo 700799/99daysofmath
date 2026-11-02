@@ -1,0 +1,49 @@
+{
+  "id": "STAT.057",
+  "domain": "STAT",
+  "unit": 6,
+  "orderInUnit": 7,
+  "standard": "STAT.COLL.B.1",
+  "difficulty": 2,
+  "prompt": "A pharmacist tests a drug at three doses (low, medium, high) given at two times of day (morning, evening). Every combination is tested. How many treatments does this experiment have?",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A treatment is one specific COMBINATION of the factor levels.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A treatment is one specific COMBINATION of the factor levels."
+    },
+    {
+      "level": "guide",
+      "text": "Three dose levels times two timing levels."
+    },
+    {
+      "level": "reveal",
+      "text": "$3 \\times 2 = 6$ treatments."
+    }
+  ],
+  "explanation": [
+    "There are two factors: dose (3 levels) and time of day (2 levels).",
+    "Each treatment pairs one dose with one time, and every pairing is used.",
+    "$3 \\times 2 = 6$ treatments: low-morning, low-evening, medium-morning, medium-evening, high-morning, high-evening."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Make a grid",
+      "steps": [
+        "Rows: low, medium, high. Columns: morning, evening.",
+        "The grid has $3 \\times 2 = 6$ cells, and each cell is one treatment."
+      ]
+    }
+  ],
+  "tags": [
+    "factors",
+    "treatments",
+    "experimental-design",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

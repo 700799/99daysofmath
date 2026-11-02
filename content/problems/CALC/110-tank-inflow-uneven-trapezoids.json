@@ -1,0 +1,56 @@
+{
+  "id": "CALC.110",
+  "domain": "CALC",
+  "unit": 11,
+  "orderInUnit": 10,
+  "standard": "CALC.INT.A.1",
+  "difficulty": 3,
+  "prompt": "Water flows into a tank at a rate $R(t)$ liters per minute. Measurements: $R(0) = 10$, $R(3) = 14$, $R(6) = 18$, $R(10) = 20$, $R(12) = 16$. Use a trapezoidal sum with the four subintervals given by the table to estimate the total water, in liters, that entered the tank from $t = 0$ to $t = 12$.",
+  "answerType": "numeric",
+  "primaryAnswer": "196",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The subintervals are NOT equal: widths $3, 3, 4, 2$. Compute each trapezoid separately with its own width.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The subintervals are NOT equal: widths $3, 3, 4, 2$. Compute each trapezoid separately with its own width."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up with the first strip: width $3$, parallel sides $10$ and $14$. Area $= 3 \\cdot \\frac{10 + 14}{2} = 36$ liters."
+    },
+    {
+      "level": "guide",
+      "text": "Next strips: $3 \\cdot \\frac{14 + 18}{2}$, $4 \\cdot \\frac{18 + 20}{2}$, $2 \\cdot \\frac{20 + 16}{2}$. Add all four."
+    },
+    {
+      "level": "reveal",
+      "text": "$36 + 48 + 76 + 36 = 196$ liters."
+    }
+  ],
+  "explanation": [
+    "Rate times time gives volume, so the total water is $\\int_0^{12} R(t) \\, dt$, approximated by trapezoids.",
+    "Strip by strip: $[0, 3]$: $3 \\cdot 12 = 36$. $[3, 6]$: $3 \\cdot 16 = 48$. $[6, 10]$: $4 \\cdot 19 = 76$. $[10, 12]$: $2 \\cdot 18 = 36$.",
+    "Total $\\approx 36 + 48 + 76 + 36 = 196$ liters. The uneven widths are the trap: the shortcut formula $\\frac{\\Delta x}{2}(y_0 + 2y_1 + \\dots)$ only works when all widths match."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Average rate on each stretch",
+      "steps": [
+        "A trapezoid is the same as assuming the rate was the AVERAGE of its two endpoint readings for the whole stretch.",
+        "Average rates: $12, 16, 19, 18$ L/min over $3, 3, 4, 2$ minutes.",
+        "$12 \\cdot 3 + 16 \\cdot 3 + 19 \\cdot 4 + 18 \\cdot 2 = 36 + 48 + 76 + 36 = 196$ L."
+      ]
+    }
+  ],
+  "tags": [
+    "trapezoidal-rule",
+    "table",
+    "accumulation",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 90
+}

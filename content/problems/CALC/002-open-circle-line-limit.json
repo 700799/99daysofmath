@@ -1,0 +1,49 @@
+{
+  "id": "CALC.002",
+  "domain": "CALC",
+  "unit": 1,
+  "orderInUnit": 2,
+  "standard": "CALC.LIM.A.1",
+  "difficulty": 1,
+  "prompt": "The graph of $g$ is the line $y = 2x + 1$ with one change: at $x = 2$ there is an open circle on the line and a solid dot at $(2, 7)$. What is $\\lim_{x \\to 2} g(x)$?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The limit cares about where the graph is HEADING near $x = 2$, not about the dot sitting at $x = 2$ itself.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The limit cares about where the graph is HEADING near $x = 2$, not about the dot sitting at $x = 2$ itself."
+    },
+    {
+      "level": "guide",
+      "text": "Walk along the line toward $x = 2$ from either side. What height does the line reach there? Use $y = 2x + 1$."
+    },
+    {
+      "level": "reveal",
+      "text": "$2(2) + 1 = 5$. The open circle is at height $5$, so the limit is $5$ — the solid dot at $7$ does not change that."
+    }
+  ],
+  "explanation": [
+    "Near $x = 2$ (but not at it), $g$ follows the line $y = 2x + 1$.",
+    "Approaching from both sides, the line heads to height $2(2) + 1 = 5$.",
+    "So $\\lim_{x \\to 2} g(x) = 5$. The solid dot at $(2, 7)$ is the value $g(2)$, which is a different question."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sneak up with numbers",
+      "steps": [
+        "$g(1.9) = 2(1.9) + 1 = 4.8$ and $g(1.99) = 4.98$.",
+        "$g(2.1) = 5.2$ and $g(2.01) = 5.02$.",
+        "Both sides close in on $5$. The lonely dot at $7$ never enters the calculation."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "graph",
+    "removable"
+  ],
+  "estimatedSeconds": 35
+}

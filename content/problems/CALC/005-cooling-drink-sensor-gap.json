@@ -1,0 +1,49 @@
+{
+  "id": "CALC.005",
+  "domain": "CALC",
+  "unit": 1,
+  "orderInUnit": 5,
+  "standard": "CALC.LIM.A.1",
+  "difficulty": 2,
+  "prompt": "A sensor logs the temperature $T(t)$ of a cooling drink, in degrees Celsius, but it dropped the reading at exactly $t = 5$ minutes. Nearby it recorded $T(4.9) = 61.2$, $T(4.99) = 60.12$, $T(5.01) = 59.88$, $T(5.1) = 58.8$. What does $\\lim_{t \\to 5} T(t)$ appear to be?",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The missing reading does not matter. A limit only asks where the readings are heading as $t$ closes in on $5$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The missing reading does not matter. A limit only asks where the readings are heading as $t$ closes in on $5$."
+    },
+    {
+      "level": "guide",
+      "text": "From before $t = 5$: $61.2$, then $60.12$. From after: $58.8$, then $59.88$. Both are closing in on the same temperature."
+    },
+    {
+      "level": "reveal",
+      "text": "Both sides head to $60$, so $\\lim_{t \\to 5} T(t) = 60$ degrees."
+    }
+  ],
+  "explanation": [
+    "From the left the readings fall: $61.2 \\to 60.12$, getting close to $60$.",
+    "From the right the readings rise: $58.8 \\to 59.88$, also getting close to $60$.",
+    "The two sides agree, so the limit is $60$. The drink was almost surely at $60$ degrees at $t = 5$, even though the sensor missed it."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Fill in the gap like a detective",
+      "steps": [
+        "Each step ten times closer in time brings the reading ten times closer: $1.2$ away, then $0.12$ away.",
+        "Continue the pattern: $0.012$ away, $0.0012$ away, and so on toward $60$.",
+        "The sensor dropped one point, but the pattern tells you exactly what it would have said."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "table",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,71 @@
+{
+  "id": "STAT.045",
+  "domain": "STAT",
+  "unit": 5,
+  "orderInUnit": 5,
+  "standard": "STAT.COLL.A.2",
+  "difficulty": 2,
+  "prompt": "A polling firm estimates the share of adults in a county who stream TV by calling randomly chosen LANDLINE numbers on weekday afternoons. Which source of bias is the most serious concern?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Response bias from callers lying about streaming",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Undercoverage: adults without landlines, and those at work, cannot be reached",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Voluntary response, because people chose to pick up the phone",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "There is no bias, because the numbers were chosen randomly",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Random selection only helps if everyone in the population has a chance to be selected. Who has NO chance here?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Random selection only helps if everyone in the population has a chance to be selected. Who has NO chance here?"
+    },
+    {
+      "level": "guide",
+      "text": "Younger adults and renters often have no landline, and most working adults are not home on weekday afternoons. Those groups probably stream more."
+    },
+    {
+      "level": "reveal",
+      "text": "Whole groups are left out of the sampling frame: undercoverage, choice B."
+    }
+  ],
+  "explanation": [
+    "The sampling frame is landline numbers answered on weekday afternoons. Cell-only households and people at work are missing from it entirely.",
+    "Those missing groups likely stream more than retirees at home with a landline, so the estimate will be too low.",
+    "Systematically leaving out part of the population is undercoverage. Choice B. Random dialing within a bad frame does not fix it, so D is wrong."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Frame vs population",
+      "steps": [
+        "Population: all adults in the county. Frame: the list you actually draw from, here landline numbers.",
+        "When the frame is smaller than the population in a lopsided way, you get undercoverage.",
+        "A better design would include cell numbers and call at varied times."
+      ]
+    }
+  ],
+  "tags": [
+    "bias",
+    "undercoverage",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

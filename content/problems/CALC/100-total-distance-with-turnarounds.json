@@ -1,0 +1,56 @@
+{
+  "id": "CALC.100",
+  "domain": "CALC",
+  "unit": 10,
+  "orderInUnit": 10,
+  "standard": "CALC.APP.A.2",
+  "difficulty": 3,
+  "prompt": "A particle moves along a line with position $s(t) = t^3 - 9t^2 + 24t$ meters for $0 \\le t \\le 5$ seconds. Find the TOTAL distance it travels during those five seconds, in meters.",
+  "answerType": "numeric",
+  "primaryAnswer": "28",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Total distance is not $s(5) - s(0)$ if the particle turns around. Find when $v(t) = 0$ first.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Total distance is not $s(5) - s(0)$ if the particle turns around. Find when $v(t) = 0$ first."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if something walks $3$ m forward, then $1$ m back, then $2$ m forward, its displacement is $4$ m but its distance is $3 + 1 + 2 = 6$ m. Add the legs as positive numbers."
+    },
+    {
+      "level": "guide",
+      "text": "$v(t) = 3t^2 - 18t + 24 = 3(t - 2)(t - 4)$, so it turns at $t = 2$ and $t = 4$. Compute $s(0)$, $s(2)$, $s(4)$, $s(5)$ and add the absolute changes."
+    },
+    {
+      "level": "reveal",
+      "text": "$s(0) = 0$, $s(2) = 20$, $s(4) = 16$, $s(5) = 20$. Distance $= 20 + 4 + 4 = 28$ m."
+    }
+  ],
+  "explanation": [
+    "$v(t) = 3t^2 - 18t + 24 = 3(t - 2)(t - 4)$. The particle reverses direction at $t = 2$ and $t = 4$.",
+    "Positions: $s(0) = 0$, $s(2) = 8 - 36 + 48 = 20$, $s(4) = 64 - 144 + 96 = 16$, $s(5) = 125 - 225 + 120 = 20$.",
+    "Legs: $|20 - 0| + |16 - 20| + |20 - 16| = 20 + 4 + 4 = 28$ meters. The displacement is only $20$ m, but the back-and-forth adds $8$ m of travel."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The trap answer",
+      "steps": [
+        "Computing $s(5) - s(0) = 20$ gives the displacement, not the distance.",
+        "Between $t = 2$ and $t = 4$ the particle backs up $4$ m, and that $4$ m counts twice in the distance: once going back, once recovering.",
+        "$20 + 2(4) = 28$ m."
+      ]
+    }
+  ],
+  "tags": [
+    "motion",
+    "total-distance",
+    "velocity",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 95
+}

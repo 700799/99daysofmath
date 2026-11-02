@@ -1,0 +1,49 @@
+{
+  "id": "CALC.013",
+  "domain": "CALC",
+  "unit": 2,
+  "orderInUnit": 3,
+  "standard": "CALC.LIM.A.2",
+  "difficulty": 1,
+  "prompt": "Find $\\lim_{x \\to 4} \\frac{x^2 - 16}{x - 4}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "8",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Substituting $x = 4$ gives $\\frac{0}{0}$. That is a signal to keep working, not an answer. Factor the top.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substituting $x = 4$ gives $\\frac{0}{0}$. That is a signal to keep working, not an answer. Factor the top."
+    },
+    {
+      "level": "guide",
+      "text": "$x^2 - 16 = (x - 4)(x + 4)$. The $(x - 4)$ on top cancels the one on the bottom."
+    },
+    {
+      "level": "reveal",
+      "text": "What remains is $x + 4$, and at $x = 4$ that is $8$."
+    }
+  ],
+  "explanation": [
+    "Direct substitution gives $\\frac{0}{0}$, an indeterminate form.",
+    "Factor: $\\frac{(x - 4)(x + 4)}{x - 4} = x + 4$ for every $x \\ne 4$.",
+    "The limit only cares about $x \\ne 4$, so $\\lim_{x \\to 4} (x + 4) = 8$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sneak up with a table",
+      "steps": [
+        "$x = 3.9$: $\\frac{15.21 - 16}{-0.1} = 7.9$. $x = 3.99$: $7.99$.",
+        "$x = 4.1$: $\\frac{16.81 - 16}{0.1} = 8.1$. $x = 4.01$: $8.01$.",
+        "Both sides squeeze toward $8$, agreeing with the algebra."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "factoring",
+    "indeterminate"
+  ],
+  "estimatedSeconds": 40
+}

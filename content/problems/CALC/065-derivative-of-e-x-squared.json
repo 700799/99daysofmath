@@ -1,0 +1,70 @@
+{
+  "id": "CALC.065",
+  "domain": "CALC",
+  "unit": 7,
+  "orderInUnit": 5,
+  "standard": "CALC.DER.A.3",
+  "difficulty": 2,
+  "prompt": "Which expression is the derivative of $y = e^{x^2}$?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$2x\\, e^{x^2}$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$e^{x^2}$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$x^2 e^{x^2 - 1}$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$e^{2x}$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$e^x$ is its own derivative, but here the exponent is $x^2$, not $x$. That inside function needs the chain rule.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$e^x$ is its own derivative, but here the exponent is $x^2$, not $x$. That inside function needs the chain rule."
+    },
+    {
+      "level": "guide",
+      "text": "Derivative of $e^u$ is $e^u \\cdot u'$. With $u = x^2$, $u' = 2x$."
+    },
+    {
+      "level": "reveal",
+      "text": "$y' = e^{x^2} \\cdot 2x = 2x\\, e^{x^2}$: choice A."
+    }
+  ],
+  "explanation": [
+    "Outside function: $e^u$, whose derivative is $e^u$ (unchanged). Inside: $u = x^2$.",
+    "Chain rule: $y' = e^{x^2} \\cdot \\frac{d}{dx}(x^2) = 2x\\, e^{x^2}$.",
+    "Choice B drops the inside derivative; C misuses the power rule on an exponential; D confuses $e^{x^2}$ with $(e^x)^2 = e^{2x}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Numerical check at $x = 1$",
+      "steps": [
+        "Choice A at $x = 1$ gives $2e \\approx 5.44$; choice B gives $e \\approx 2.72$.",
+        "Secant slope: $\\frac{e^{1.001^2} - e^{1}}{0.001} = \\frac{e^{1.002001} - e}{0.001} \\approx \\frac{2.72372 - 2.71828}{0.001} \\approx 5.44$.",
+        "Only choice A matches. Where the exponent is not plain $x$, the inside derivative is not optional."
+      ]
+    }
+  ],
+  "tags": [
+    "chain-rule",
+    "exponential"
+  ],
+  "estimatedSeconds": 45
+}

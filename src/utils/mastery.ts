@@ -156,6 +156,9 @@ function domainOfCluster(cluster: string): Domain {
   if (cluster.startsWith('A1.')) return 'A1';
   // All Precalculus strands (PC.TRIG.B, PC.LOG.A, …) live in the single PC domain.
   if (cluster.startsWith('PC.')) return 'PC';
+  // The AP courses likewise: CALC.DER.A, STAT.INF.B, …
+  if (cluster.startsWith('CALC.')) return 'CALC';
+  if (cluster.startsWith('STAT.')) return 'STAT';
   const parts = cluster.split('.');
   return `${parts[0]}.${parts[1]}` as Domain;
 }

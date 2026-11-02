@@ -1,0 +1,71 @@
+{
+  "id": "STAT.025",
+  "domain": "STAT",
+  "unit": 3,
+  "orderInUnit": 5,
+  "standard": "STAT.DATA.C.1",
+  "difficulty": 2,
+  "prompt": "Maya scored $82$ on a test with class mean $70$ and SD $8$. Leo scored $90$ on a different test with class mean $80$ and SD $10$. Who did better relative to their own class, and why?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Leo, because $90$ is a higher score than $82$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Maya, because her $z$-score of $1.5$ beats Leo's $z$-score of $1$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Leo, because $90 - 80 = 10$ is bigger than $82 - 70 = 12$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "They did equally well, since both are above their class mean",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Different tests have different scales. Put both scores on the same scale with $z$-scores.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Different tests have different scales. Put both scores on the same scale with $z$-scores."
+    },
+    {
+      "level": "guide",
+      "text": "Maya: $z = \\frac{82 - 70}{8}$. Leo: $z = \\frac{90 - 80}{10}$."
+    },
+    {
+      "level": "reveal",
+      "text": "Maya $z = 1.5$, Leo $z = 1.0$. Maya is farther above her class: choice B."
+    }
+  ],
+  "explanation": [
+    "Maya: $z = \\frac{82 - 70}{8} = \\frac{12}{8} = 1.5$.",
+    "Leo: $z = \\frac{90 - 80}{10} = \\frac{10}{10} = 1.0$.",
+    "A larger $z$-score means a score farther above its own class mean, so Maya did better relative to her class. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why the raw scores mislead",
+      "steps": [
+        "Leo's 90 is a bigger number, but his class average was 80, so the test was easier or graded more generously.",
+        "Maya's 82 came in a class averaging 70, and her class spread is tighter (SD 8), so 12 points above the mean is a big deal.",
+        "Standardizing removes the scale: 1.5 SDs beats 1.0 SD."
+      ]
+    }
+  ],
+  "tags": [
+    "z-score",
+    "comparing",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

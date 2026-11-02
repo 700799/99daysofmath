@@ -1,0 +1,58 @@
+{
+  "id": "CALC.019",
+  "domain": "CALC",
+  "unit": 2,
+  "orderInUnit": 9,
+  "standard": "CALC.LIM.A.2",
+  "difficulty": 3,
+  "prompt": "Find $\\lim_{x \\to 3} \\frac{\\frac{1}{x} - \\frac{1}{3}}{x - 3}$. Give your answer as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "-1/9",
+  "alternativeAnswers": [
+    "-0.111"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "Substitution gives $\\frac{0}{0}$. Start by combining the two small fractions on top into one fraction.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substitution gives $\\frac{0}{0}$. Start by combining the two small fractions on top into one fraction."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $\\frac{1}{x} - \\frac{1}{2} = \\frac{2 - x}{2x}$. Notice the top is $-(x - 2)$ — the sign flip is the key. Do the same with $3$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{1}{x} - \\frac{1}{3} = \\frac{3 - x}{3x} = \\frac{-(x - 3)}{3x}$. Now divide by $(x - 3)$ and cancel."
+    },
+    {
+      "level": "reveal",
+      "text": "You are left with $\\frac{-1}{3x}$. At $x = 3$ that is $-\\frac{1}{9}$."
+    }
+  ],
+  "explanation": [
+    "Combine the top: $\\frac{1}{x} - \\frac{1}{3} = \\frac{3 - x}{3x}$.",
+    "Divide by $(x - 3)$: $\\frac{3 - x}{3x(x - 3)} = \\frac{-(x - 3)}{3x(x - 3)} = \\frac{-1}{3x}$ for $x \\ne 3$.",
+    "Substitute $x = 3$: $\\frac{-1}{9}$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Numeric sanity check",
+      "steps": [
+        "At $x = 3.01$: top is $\\frac{1}{3.01} - \\frac{1}{3} \\approx -0.001107$, bottom is $0.01$, ratio $\\approx -0.1107$.",
+        "And $-\\frac{1}{9} \\approx -0.1111$. Close, and the negative sign is confirmed.",
+        "Negative makes sense: $\\frac{1}{x}$ is a decreasing function, so this slope-like ratio should be negative."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "complex-fraction",
+    "indeterminate",
+    "multi-step"
+  ],
+  "estimatedSeconds": 75
+}

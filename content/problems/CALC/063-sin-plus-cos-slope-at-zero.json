@@ -1,0 +1,49 @@
+{
+  "id": "CALC.063",
+  "domain": "CALC",
+  "unit": 7,
+  "orderInUnit": 3,
+  "standard": "CALC.DER.A.3",
+  "difficulty": 1,
+  "prompt": "Let $g(x) = 2\\sin x + \\cos x$. Find $g'(0)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two facts to memorize: $\\frac{d}{dx}\\sin x = \\cos x$ and $\\frac{d}{dx}\\cos x = -\\sin x$. Watch the minus sign on the second one.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two facts to memorize: $\\frac{d}{dx}\\sin x = \\cos x$ and $\\frac{d}{dx}\\cos x = -\\sin x$. Watch the minus sign on the second one."
+    },
+    {
+      "level": "guide",
+      "text": "$g'(x) = 2\\cos x - \\sin x$. Now substitute $x = 0$, using $\\cos 0 = 1$ and $\\sin 0 = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$g'(0) = 2(1) - 0 = 2$."
+    }
+  ],
+  "explanation": [
+    "Differentiate term by term: $\\frac{d}{dx}(2\\sin x) = 2\\cos x$ and $\\frac{d}{dx}(\\cos x) = -\\sin x$.",
+    "So $g'(x) = 2\\cos x - \\sin x$.",
+    "At $x = 0$: $2 \\cdot 1 - 0 = 2$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read it off the graphs",
+      "steps": [
+        "Near $x = 0$, $\\sin x$ looks like the line $y = x$ (slope $1$), so $2\\sin x$ has slope $2$ there.",
+        "Near $x = 0$, $\\cos x$ is at the top of its hill: flat, slope $0$.",
+        "Add the slopes: $2 + 0 = 2$. Same answer, no formula needed."
+      ]
+    }
+  ],
+  "tags": [
+    "trig-derivative",
+    "sine",
+    "cosine"
+  ],
+  "estimatedSeconds": 35
+}

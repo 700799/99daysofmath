@@ -1,0 +1,85 @@
+{
+  "id": "STAT.048",
+  "domain": "STAT",
+  "unit": 5,
+  "orderInUnit": 8,
+  "standard": "STAT.COLL.A.2",
+  "difficulty": 3,
+  "prompt": "To estimate the mean weekly study hours of all students at a university, a reporter interviews $50$ students in the library at $7$ a.m. on a Monday. How will this sample most likely affect the estimate?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "It will likely OVERESTIMATE the mean, because early-morning library users study more than typical students",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "It will likely UNDERESTIMATE the mean, because tired students cannot study well",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "It will be unbiased, because $50$ students is a large enough sample",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "It will be unbiased, because the reporter did not choose who would be in the library",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "This is a convenience sample. Ask how the people in it differ from the population, and in which direction.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "This is a convenience sample. Ask how the people in it differ from the population, and in which direction."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: estimating how much people exercise by surveying a gym at 6 a.m. would clearly overestimate. Same reasoning for the library."
+    },
+    {
+      "level": "guide",
+      "text": "Students who are in the library before 8 a.m. on a Monday are probably the heavy studiers. Does that push the sample mean up or down?"
+    },
+    {
+      "level": "reveal",
+      "text": "The sample is loaded with heavy studiers, so the estimate is too high: choice A."
+    }
+  ],
+  "explanation": [
+    "Students in the library at 7 a.m. are not typical. They are the ones who study the most, and students who rarely study are almost never there.",
+    "A sample that systematically includes high values produces a mean that is too high: the estimate will overstate the true mean.",
+    "Choice A. Sample size cannot fix a biased method (C), and \"the reporter did not choose\" is not the same as random selection (D)."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Bias is about the method, not luck",
+      "steps": [
+        "Repeat this method every Monday and you would get high estimates again and again.",
+        "That consistent lean in one direction is bias; it does not shrink as you add more 7 a.m. library-goers.",
+        "Only a random sample of ALL students fixes the lean."
+      ]
+    },
+    {
+      "title": "The trap in choice D",
+      "steps": [
+        "It is true the reporter did not hand-pick anyone, but the location and time did the picking.",
+        "Random sampling means every student had a known chance of selection; a student who never visits the library had zero chance.",
+        "Zero chance for part of the population means undercoverage and bias."
+      ]
+    }
+  ],
+  "tags": [
+    "bias",
+    "convenience-sample",
+    "direction-of-bias",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

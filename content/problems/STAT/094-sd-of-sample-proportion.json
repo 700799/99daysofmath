@@ -1,0 +1,51 @@
+{
+  "id": "STAT.094",
+  "domain": "STAT",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "STAT.PROB.C.4",
+  "difficulty": 2,
+  "prompt": "In a large city, $40\\%$ of voters support a ballot measure. A pollster takes a random sample of $100$ voters and records the sample proportion $\\hat{p}$ who support it. What is the standard deviation of the sampling distribution of $\\hat{p}$? Round to three decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.049",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "The formula is $\\sigma_{\\hat{p}} = \\sqrt{\\frac{p(1-p)}{n}}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The formula is $\\sigma_{\\hat{p}} = \\sqrt{\\frac{p(1-p)}{n}}$."
+    },
+    {
+      "level": "guide",
+      "text": "Compute $\\frac{0.4 \\times 0.6}{100} = 0.0024$, then square-root."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\sqrt{0.0024} \\approx 0.049$."
+    }
+  ],
+  "explanation": [
+    "The sampling distribution of $\\hat{p}$ has mean $p = 0.4$ and standard deviation $\\sqrt{p(1-p)/n}$.",
+    "$p(1-p)/n = (0.4)(0.6)/100 = 0.24/100 = 0.0024$.",
+    "$\\sqrt{0.0024} \\approx 0.049$. Sample proportions typically land within about 5 percentage points of $0.40$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Start from the count",
+      "steps": [
+        "The count of supporters $X$ is binomial with SD $\\sqrt{100(0.4)(0.6)} = \\sqrt{24} \\approx 4.9$ voters.",
+        "$\\hat{p} = X/100$, so divide that SD by 100.",
+        "$4.9 / 100 = 0.049$."
+      ]
+    }
+  ],
+  "tags": [
+    "sampling-distribution",
+    "sample-proportion",
+    "standard-deviation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

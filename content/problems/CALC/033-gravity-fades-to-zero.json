@@ -1,0 +1,49 @@
+{
+  "id": "CALC.033",
+  "domain": "CALC",
+  "unit": 4,
+  "orderInUnit": 3,
+  "standard": "CALC.LIM.B.2",
+  "difficulty": 1,
+  "prompt": "A space probe feels a gravitational pull of $F(d) = \\frac{5}{d^2}$ newtons when it is $d$ million kilometers from a planet. What does $F(d)$ approach as $d \\to \\infty$?",
+  "answerType": "numeric",
+  "primaryAnswer": "0",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "What happens to a fraction when its bottom grows without bound while its top stays fixed?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "What happens to a fraction when its bottom grows without bound while its top stays fixed?"
+    },
+    {
+      "level": "guide",
+      "text": "At $d = 10$, $F = 0.05$. At $d = 100$, $F = 0.0005$. Keep going."
+    },
+    {
+      "level": "reveal",
+      "text": "The pull shrinks toward $0$ newtons: $\\lim_{d \\to \\infty} \\frac{5}{d^2} = 0$."
+    }
+  ],
+  "explanation": [
+    "The numerator is a fixed $5$ while the denominator $d^2$ grows without bound.",
+    "A fixed amount divided by something enormous is tiny.",
+    "So $F(d) \\to 0$. The probe never feels exactly zero pull, but it gets as close as you like."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The asymptote picture",
+      "steps": [
+        "The graph of $\\frac{5}{d^2}$ hugs the $d$-axis more and more tightly as $d$ grows.",
+        "The line $F = 0$ is a horizontal asymptote.",
+        "Physically: deep space is \"weightless\" not because gravity switches off, but because its limit is zero."
+      ]
+    }
+  ],
+  "tags": [
+    "limit-at-infinity",
+    "horizontal-asymptote",
+    "word-problem"
+  ],
+  "estimatedSeconds": 35
+}

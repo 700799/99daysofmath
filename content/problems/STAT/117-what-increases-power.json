@@ -1,0 +1,72 @@
+{
+  "id": "STAT.117",
+  "domain": "STAT",
+  "unit": 12,
+  "orderInUnit": 7,
+  "standard": "STAT.INF.B.2",
+  "difficulty": 2,
+  "prompt": "A school district will test whether a tutoring program raises mean math scores. The researchers want to increase the POWER of the test — the probability of detecting a real improvement. Which change does that?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Increase the sample size.",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Lower the significance level from $0.05$ to $0.01$.",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Hope the true improvement is smaller than expected.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Switch from a one-sided to a two-sided alternative.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Power $= 1 - P(\\text{Type II error})$. Anything that makes a real effect easier to spot raises power.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Power $= 1 - P(\\text{Type II error})$. Anything that makes a real effect easier to spot raises power."
+    },
+    {
+      "level": "guide",
+      "text": "More data shrinks the standard error. A smaller $\\alpha$ makes rejecting harder. A smaller true effect is harder to see. A two-sided test splits $\\alpha$ across two tails."
+    },
+    {
+      "level": "reveal",
+      "text": "Only A raises power."
+    }
+  ],
+  "explanation": [
+    "Power rises with sample size: a bigger $n$ makes $s/\\sqrt{n}$ smaller, so a real improvement produces a larger test statistic.",
+    "B lowers power — a stricter $\\alpha$ means fewer rejections, including correct ones. C lowers power — small effects hide in the noise. D lowers power for detecting an increase, since the rejection region in the \"increase\" tail shrinks.",
+    "A is the one change that helps."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The three levers",
+      "steps": [
+        "Power goes UP with: larger $n$, larger $\\alpha$, larger true effect size.",
+        "B moves $\\alpha$ the wrong way; C moves the effect the wrong way; D is effectively a smaller $\\alpha$ in the direction that matters.",
+        "A moves $n$ the right way."
+      ]
+    }
+  ],
+  "tags": [
+    "significance-test",
+    "power",
+    "type-ii-error",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

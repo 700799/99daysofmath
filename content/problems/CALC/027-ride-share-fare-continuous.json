@@ -1,0 +1,50 @@
+{
+  "id": "CALC.027",
+  "domain": "CALC",
+  "unit": 3,
+  "orderInUnit": 7,
+  "standard": "CALC.LIM.B.1",
+  "difficulty": 2,
+  "prompt": "A ride-share app charges $C(m) = 2.5m + 3$ dollars for a trip of $m \\le 4$ miles, and $C(m) = 1.75m + b$ dollars for $m > 4$ miles. Find $b$ so that the fare is continuous at $4$ miles (no sudden price jump).",
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "No price jump at $4$ miles means both formulas must give the same fare as $m$ approaches $4$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "No price jump at $4$ miles means both formulas must give the same fare as $m$ approaches $4$."
+    },
+    {
+      "level": "guide",
+      "text": "First formula at $m = 4$: $2.5(4) + 3 = 13$. Second formula heads to $1.75(4) + b = 7 + b$. Set them equal."
+    },
+    {
+      "level": "reveal",
+      "text": "$7 + b = 13$, so $b = 6$."
+    }
+  ],
+  "explanation": [
+    "The fare at exactly $4$ miles is $C(4) = 2.5(4) + 3 = 13$ dollars.",
+    "For trips just over $4$ miles, the fare heads to $1.75(4) + b = 7 + b$.",
+    "Continuity requires $7 + b = 13$, so $b = 6$. The second rule is $1.75m + 6$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why a company would want this",
+      "steps": [
+        "If $b$ were $8$, a $4.01$-mile trip would cost about $15$ dollars while a $4$-mile trip costs $13$ — riders would be furious about the extra hundredth of a mile.",
+        "Setting $b = 6$ makes the price change SLOPE at $4$ miles (cheaper per mile after that) without any jump.",
+        "That is continuity in plain language: the graph bends but does not break."
+      ]
+    }
+  ],
+  "tags": [
+    "continuity",
+    "piecewise",
+    "parameter",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,48 @@
+{
+  "id": "CALC.035",
+  "domain": "CALC",
+  "unit": 4,
+  "orderInUnit": 5,
+  "standard": "CALC.LIM.B.2",
+  "difficulty": 2,
+  "prompt": "Find $\\lim_{x \\to \\infty} \\frac{4x^2 - x}{2x^2 + 7}$.",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Same degree on top and bottom. Only the leading coefficients survive at infinity.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Same degree on top and bottom. Only the leading coefficients survive at infinity."
+    },
+    {
+      "level": "guide",
+      "text": "Divide every term by $x^2$: $\\frac{4 - \\frac{1}{x}}{2 + \\frac{7}{x^2}}$."
+    },
+    {
+      "level": "reveal",
+      "text": "The small fractions vanish, leaving $\\frac{4}{2} = 2$."
+    }
+  ],
+  "explanation": [
+    "Divide top and bottom by the highest power, $x^2$.",
+    "That gives $\\frac{4 - 1/x}{2 + 7/x^2}$, and both $\\frac{1}{x}$ and $\\frac{7}{x^2}$ go to $0$.",
+    "The limit is $\\frac{4}{2} = 2$, so $y = 2$ is the horizontal asymptote."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Big-number check",
+      "steps": [
+        "At $x = 100$: $\\frac{40000 - 100}{20000 + 7} = \\frac{39900}{20007} \\approx 1.994$.",
+        "At $x = 10000$: $\\frac{399{,}990{,}000}{200{,}000{,}007} \\approx 1.99995$.",
+        "Creeping up on $2$ from below, exactly as the leading-coefficient rule predicts."
+      ]
+    }
+  ],
+  "tags": [
+    "limit-at-infinity",
+    "horizontal-asymptote"
+  ],
+  "estimatedSeconds": 45
+}

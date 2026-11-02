@@ -1,0 +1,51 @@
+{
+  "id": "STAT.061",
+  "domain": "STAT",
+  "unit": 7,
+  "orderInUnit": 1,
+  "standard": "STAT.PROB.A.1",
+  "difficulty": 1,
+  "prompt": "A forecast says the probability of rain tomorrow is $0.3$. What is the probability that it does NOT rain tomorrow?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.7",
+  "alternativeAnswers": [
+    "7/10",
+    "70%"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Rain\" and \"no rain\" are complements: exactly one of them happens, so their probabilities add to $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Rain\" and \"no rain\" are complements: exactly one of them happens, so their probabilities add to $1$."
+    },
+    {
+      "level": "guide",
+      "text": "$P(\\text{no rain}) = 1 - P(\\text{rain})$."
+    },
+    {
+      "level": "reveal",
+      "text": "$1 - 0.3 = 0.7$."
+    }
+  ],
+  "explanation": [
+    "The complement rule: $P(A^c) = 1 - P(A)$.",
+    "Here $P(\\text{rain}) = 0.3$.",
+    "So $P(\\text{no rain}) = 1 - 0.3 = 0.7$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in 10 days",
+      "steps": [
+        "Out of 10 days like tomorrow, about 3 would be rainy.",
+        "The other 7 would be dry: $\\frac{7}{10} = 0.7$."
+      ]
+    }
+  ],
+  "tags": [
+    "complement",
+    "probability-rules",
+    "word-problem"
+  ],
+  "estimatedSeconds": 25
+}

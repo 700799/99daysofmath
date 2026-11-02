@@ -1,0 +1,56 @@
+{
+  "id": "STAT.108",
+  "domain": "STAT",
+  "unit": 11,
+  "orderInUnit": 8,
+  "standard": "STAT.INF.A.2",
+  "difficulty": 3,
+  "prompt": "A random sample of $36$ college students sleeps an average of $\\bar{x} = 7.5$ hours per night with standard deviation $s = 1.2$ hours. Construct a $95\\%$ confidence interval for the mean nightly sleep of all students at the college, using $t^* = 2.030$ (df $= 35$). What is the UPPER endpoint? Round to two decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "7.91",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "Interval $= \\bar{x} \\pm t^* \\cdot \\frac{s}{\\sqrt{n}}$. The upper endpoint uses the plus.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Interval $= \\bar{x} \\pm t^* \\cdot \\frac{s}{\\sqrt{n}}$. The upper endpoint uses the plus."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $\\bar{x} = 10$, $s = 2$, $n = 4$, $t^* = 3$: SE $= 2/2 = 1$, ME $= 3$, upper endpoint $13$. Same three steps here."
+    },
+    {
+      "level": "guide",
+      "text": "$SE = 1.2/\\sqrt{36} = 0.2$. ME $= 2.030 \\times 0.2$. Add to $7.5$."
+    },
+    {
+      "level": "reveal",
+      "text": "ME $= 0.406$, so the upper endpoint is $7.5 + 0.406 = 7.906 \\approx 7.91$ hours."
+    }
+  ],
+  "explanation": [
+    "Conditions: random sample ✓; $n = 36 \\ge 30$, so the $t$ procedure is safe even without a normal population ✓.",
+    "Standard error: $s/\\sqrt{n} = 1.2/6 = 0.2$. Margin of error: $2.030 \\times 0.2 = 0.406$.",
+    "Interval: $7.5 \\pm 0.406 = (7.094, 7.906)$. The upper endpoint is $7.91$ hours."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Say what it means",
+      "steps": [
+        "We are $95\\%$ confident the true mean sleep for all students at this college is between $7.09$ and $7.91$ hours.",
+        "Notice the interval is about the MEAN, not about any individual student, many of whom sleep far outside this range.",
+        "The upper endpoint, $7.91$, is the most the average could plausibly be given this sample."
+      ]
+    }
+  ],
+  "tags": [
+    "confidence-interval",
+    "t-interval",
+    "mean",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

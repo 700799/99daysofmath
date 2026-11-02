@@ -69,6 +69,12 @@ export interface LessonSlide {
   steps?: StepsBlock;
   table?: TableBlock;
   art?: SlideArt;
+  /**
+   * The reason behind the idea, in plain words: why the rule is true, or why
+   * the step is allowed. Shown as its own "Why it works" box under the blocks.
+   * Every concept slide carries one.
+   */
+  why?: string;
 }
 
 export type SlideBank = Record<string, LessonSlide[]>; // key = `${domain}-${unit}`

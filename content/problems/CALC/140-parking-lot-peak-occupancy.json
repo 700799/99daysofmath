@@ -1,0 +1,56 @@
+{
+  "id": "CALC.140",
+  "domain": "CALC",
+  "unit": 14,
+  "orderInUnit": 10,
+  "standard": "CALC.INT.B.2",
+  "difficulty": 3,
+  "prompt": "A parking lot has $200$ cars at $t = 0$ (8 a.m.). For $0 \\le t \\le 8$ hours, cars enter at a rate of $E(t) = 48 - 4t$ cars per hour and leave at a rate of $L(t) = 4t$ cars per hour. What is the maximum number of cars in the lot during this period?",
+  "answerType": "numeric",
+  "primaryAnswer": "344",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The number of cars $N(t)$ grows while $E(t) > L(t)$ and shrinks once $L(t) > E(t)$. Find the time when the two rates are equal.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The number of cars $N(t)$ grows while $E(t) > L(t)$ and shrinks once $L(t) > E(t)$. Find the time when the two rates are equal."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $48 - 4t = 4t$ gives $t = 6$. Before $t = 6$ the net rate $E - L = 48 - 8t$ is positive; after, negative. So $N$ peaks at $t = 6$ (2 p.m.)."
+    },
+    {
+      "level": "guide",
+      "text": "$N(6) = 200 + \\int_0^6 (48 - 8t) \\, dt = 200 + [48t - 4t^2]_0^6$."
+    },
+    {
+      "level": "reveal",
+      "text": "$200 + (288 - 144) = 344$ cars."
+    }
+  ],
+  "explanation": [
+    "$N'(t) = E(t) - L(t) = 48 - 8t$. This is zero at $t = 6$, positive before and negative after, so $N$ has its maximum at $t = 6$.",
+    "$N(6) = N(0) + \\int_0^6 (48 - 8t) \\, dt = 200 + \\left[48t - 4t^2\\right]_0^6 = 200 + (288 - 144)$.",
+    "$= 344$ cars at 2 p.m. Check the endpoints: $N(0) = 200$ and $N(8) = 200 + (384 - 256) = 328$, both smaller. This is the standard AP \"rate in, rate out\" question."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count arrivals and departures",
+      "steps": [
+        "Arrivals from $0$ to $6$: $\\int_0^6 (48 - 4t) \\, dt = 288 - 72 = 216$ cars.",
+        "Departures from $0$ to $6$: $\\int_0^6 4t \\, dt = 72$ cars.",
+        "$200 + 216 - 72 = 344$ cars. Same peak, computed one flow at a time."
+      ]
+    }
+  ],
+  "tags": [
+    "accumulation",
+    "rate-in-rate-out",
+    "absolute-extrema",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 100
+}

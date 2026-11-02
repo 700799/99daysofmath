@@ -21,6 +21,10 @@ import { GEO_SLIDES_U01_07 } from './geo_u01_07';
 import { GEO_SLIDES_U08_14 } from './geo_u08_14';
 import { TRIG_SLIDES_U01_07 } from './trig_u01_07';
 import { TRIG_SLIDES_U08_14 } from './trig_u08_14';
+import { CALC_SLIDES_U01_07 } from './calc_u01_07';
+import { CALC_SLIDES_U08_14 } from './calc_u08_14';
+import { STAT_SLIDES_U01_07 } from './stat_u01_07';
+import { STAT_SLIDES_U08_14 } from './stat_u08_14';
 
 export type { LessonSlide, SlideBank } from './types';
 
@@ -48,4 +52,8 @@ export const LESSON_SLIDES: SlideBank = {
   ...GEO_SLIDES_U08_14,
   ...TRIG_SLIDES_U01_07,
   ...TRIG_SLIDES_U08_14,
+  ...CALC_SLIDES_U01_07,
+  ...CALC_SLIDES_U08_14,
+  ...STAT_SLIDES_U01_07,
+  ...STAT_SLIDES_U08_14,
 };

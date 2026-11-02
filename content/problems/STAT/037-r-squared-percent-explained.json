@@ -1,0 +1,52 @@
+{
+  "id": "STAT.037",
+  "domain": "STAT",
+  "unit": 4,
+  "orderInUnit": 7,
+  "standard": "STAT.DATA.C.4",
+  "difficulty": 2,
+  "prompt": "The correlation between hours of sleep and reaction-test score for a group of students is $r = 0.6$. What percent of the variation in reaction-test scores is explained by the linear relationship with hours of sleep?",
+  "answerType": "numeric",
+  "primaryAnswer": "36",
+  "alternativeAnswers": [
+    "36%",
+    "0.36"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The \"percent of variation explained\" is $r^2$, not $r$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The \"percent of variation explained\" is $r^2$, not $r$."
+    },
+    {
+      "level": "guide",
+      "text": "Square the correlation: $0.6^2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.6^2 = 0.36$, so $36$ percent of the variation is explained by the line."
+    }
+  ],
+  "explanation": [
+    "The coefficient of determination is $r^2 = 0.6^2 = 0.36$.",
+    "Interpretation: about $36$ percent of the variation in reaction-test scores is explained by the least-squares line using hours of sleep.",
+    "The other $64$ percent is due to other factors and chance."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "A common mix-up",
+      "steps": [
+        "$r = 0.6$ looks like \"60 percent,\" but $r$ is a correlation, not a percent of anything.",
+        "Squaring always shrinks a number between 0 and 1, so the explained share (36 percent) is smaller than $r$ suggests.",
+        "Going the other way, $r^2 = 0.36$ alone cannot tell you the sign of $r$ — you need the scatterplot or the slope for that."
+      ]
+    }
+  ],
+  "tags": [
+    "r-squared",
+    "coefficient-of-determination",
+    "word-problem"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,85 @@
+{
+  "id": "STAT.040",
+  "domain": "STAT",
+  "unit": 4,
+  "orderInUnit": 10,
+  "standard": "STAT.DATA.C.3",
+  "difficulty": 3,
+  "prompt": "Monthly data for a beach town show a strong positive correlation ($r = 0.9$) between ice cream sales and the number of drownings. Which conclusion is justified?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Eating ice cream causes drownings, so sales should be limited",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Drownings cause people to buy more ice cream",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "A lurking variable such as hot weather likely drives both, so no causal claim is justified",
+      "correct": true
+    },
+    {
+      "id": "D",
+      "label": "The correlation must be a mistake, because the two variables are unrelated",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "C",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "A strong correlation from observational data describes a pattern. It does not say WHY the pattern exists.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A strong correlation from observational data describes a pattern. It does not say WHY the pattern exists."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: shoe size and reading level are strongly correlated among children. Neither causes the other; age drives both. Look for the same kind of hidden variable here."
+    },
+    {
+      "level": "guide",
+      "text": "What changes month to month that would push BOTH ice cream sales and swimming (and so drownings) up at the same time?"
+    },
+    {
+      "level": "reveal",
+      "text": "Hot summer weather raises both. The correlation is real but not causal: choice C."
+    }
+  ],
+  "explanation": [
+    "These are observational data: nobody assigned towns to eat more ice cream. So correlation alone cannot establish cause and effect.",
+    "A lurking variable, hot weather, increases ice cream sales AND sends more people swimming, which raises drownings. That explains the strong $r$ without either variable causing the other.",
+    "Choice C is the only justified conclusion. Choice D is wrong because the correlation is genuine; it is the causal story that is missing."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "How you could test causation",
+      "steps": [
+        "Only a randomized experiment can establish cause: randomly assign beachgoers to eat ice cream or not and compare outcomes.",
+        "That is impossible and unethical here, so we are stuck with observational data and must be careful with our words.",
+        "The AP phrasing: \"there is a strong positive association, but this does not imply causation.\""
+      ]
+    },
+    {
+      "title": "The trap in choice D",
+      "steps": [
+        "It is tempting to dismiss a surprising correlation as an error.",
+        "But $r = 0.9$ computed correctly is a real feature of the data: the months really do move together.",
+        "The surprise disappears once you spot the common cause, which is the point of choice C."
+      ]
+    }
+  ],
+  "tags": [
+    "correlation",
+    "causation",
+    "lurking-variable",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

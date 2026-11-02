@@ -19,7 +19,7 @@ import { StickerCelebration } from '../components/StickerCelebration';
 import { correctMessage, wrongMessage } from '../utils/encouragement';
 import { playCorrect, playWrong, playUnitComplete } from '../utils/sound';
 import { computeXPGain } from '../utils/hintEconomics';
-import type { Problem, HintLevel, HintStep } from '../types/problem';
+import { CORE_DOMAINS, type Problem, type HintLevel, type HintStep } from '../types/problem';
 
 type Phase = 'loading' | 'problem' | 'feedback-correct' | 'feedback-wrong' | 'done';
 
@@ -62,9 +62,9 @@ export function Practice() {
     (async () => {
       try {
         // Adaptive practice pools the grade-level (core) domains only — the
-        // Algebra 1 and Precalculus trails have their own practice so kids
-        // aren't ambushed here.
-        const all = (await getAllProblems()).filter((p) => p.domain !== 'A1' && p.domain !== 'PC');
+        // high-school and AP courses have their own practice so kids aren't
+        // ambushed here.
+        const all = (await getAllProblems()).filter((p) => CORE_DOMAINS.includes(p.domain));
         if (cancelled) return;
         poolRef.current = all;
         const stats = useProgress.getState().problemStats;

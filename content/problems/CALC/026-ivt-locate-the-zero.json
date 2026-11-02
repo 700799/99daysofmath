@@ -1,0 +1,71 @@
+{
+  "id": "CALC.026",
+  "domain": "CALC",
+  "unit": 3,
+  "orderInUnit": 6,
+  "standard": "CALC.LIM.B.1",
+  "difficulty": 2,
+  "prompt": "Let $f(x) = x^3 - x - 1$, which is continuous everywhere. You compute $f(1) = -1$, $f(1.5) = 0.875$ and $f(2) = 5$. Which interval MUST contain a zero of $f$, according to the Intermediate Value Theorem?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$[1, 1.5]$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$[1.5, 2]$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$[0, 1]$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "None of these can be guaranteed.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The IVT guarantees a zero on an interval whenever the function is continuous and changes SIGN across it.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The IVT guarantees a zero on an interval whenever the function is continuous and changes SIGN across it."
+    },
+    {
+      "level": "guide",
+      "text": "Look at the signs: $f(1) < 0$, $f(1.5) > 0$, $f(2) > 0$. Where does the sign flip?"
+    },
+    {
+      "level": "reveal",
+      "text": "Negative at $1$, positive at $1.5$ — the sign flips on $[1, 1.5]$, so a zero is guaranteed there."
+    }
+  ],
+  "explanation": [
+    "On $[1, 1.5]$: $f(1) = -1 < 0$ and $f(1.5) = 0.875 > 0$. Zero lies between those outputs, so the IVT gives a $c$ with $f(c) = 0$.",
+    "On $[1.5, 2]$ both values are positive, so the IVT promises nothing there.",
+    "On $[0, 1]$: $f(0) = -1$ and $f(1) = -1$, both negative — again no guarantee. Only A is forced."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "This is the bisection method",
+      "steps": [
+        "Start with $[1, 2]$, where the sign changes. Check the midpoint $1.5$: positive.",
+        "Keep the half where the sign still changes: $[1, 1.5]$.",
+        "Repeat with midpoint $1.25$ ($f(1.25) \\approx -0.297$, negative), so the zero is in $[1.25, 1.5]$ — the real root is about $1.3247$."
+      ]
+    }
+  ],
+  "tags": [
+    "ivt",
+    "zeros",
+    "continuity"
+  ],
+  "estimatedSeconds": 55
+}

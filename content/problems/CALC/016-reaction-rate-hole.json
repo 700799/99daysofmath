@@ -1,0 +1,49 @@
+{
+  "id": "CALC.016",
+  "domain": "CALC",
+  "unit": 2,
+  "orderInUnit": 6,
+  "standard": "CALC.LIM.A.2",
+  "difficulty": 2,
+  "prompt": "A chemist models the rate of a reaction at concentration $c$ (moles per liter) by $R(c) = \\frac{c^2 - 25}{c - 5}$ grams per second. The formula is undefined at exactly $c = 5$. What value does the rate approach as $c \\to 5$?",
+  "answerType": "numeric",
+  "primaryAnswer": "10",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "\"Undefined at $c = 5$\" is just a hole in the formula. The limit asks what the rate is heading toward, so factor.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Undefined at $c = 5$\" is just a hole in the formula. The limit asks what the rate is heading toward, so factor."
+    },
+    {
+      "level": "guide",
+      "text": "$c^2 - 25 = (c - 5)(c + 5)$. Cancel the $(c - 5)$ with the bottom."
+    },
+    {
+      "level": "reveal",
+      "text": "That leaves $c + 5$, and as $c \\to 5$ it heads to $10$ grams per second."
+    }
+  ],
+  "explanation": [
+    "Substituting $c = 5$ gives $\\frac{0}{0}$, which means \"simplify first.\"",
+    "Factor and cancel: $\\frac{(c - 5)(c + 5)}{c - 5} = c + 5$ for $c \\ne 5$.",
+    "As $c \\to 5$, the rate approaches $5 + 5 = 10$ grams per second."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Nudge the concentration",
+      "steps": [
+        "At $c = 4.99$: $\\frac{24.9001 - 25}{-0.01} = 9.99$.",
+        "At $c = 5.01$: $\\frac{25.1001 - 25}{0.01} = 10.01$.",
+        "A chemist would simply report the rate at $c = 5$ as $10$ — the hole is an artifact of the formula, not of the chemistry."
+      ]
+    }
+  ],
+  "tags": [
+    "limit",
+    "factoring",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

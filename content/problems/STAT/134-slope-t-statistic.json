@@ -1,0 +1,51 @@
+{
+  "id": "STAT.134",
+  "domain": "STAT",
+  "unit": 14,
+  "orderInUnit": 4,
+  "standard": "STAT.INF.C.3",
+  "difficulty": 2,
+  "prompt": "From the study-hours regression, the slope estimate is $b = 3.2$ with standard error $SE_b = 0.8$. For the test of $H_0: \\beta = 0$ versus $H_a: \\beta \\ne 0$, what is the value of the $t$ statistic?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "The statistic has the usual shape: $t = \\frac{\\text{estimate} - \\text{hypothesized value}}{\\text{standard error}}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The statistic has the usual shape: $t = \\frac{\\text{estimate} - \\text{hypothesized value}}{\\text{standard error}}$."
+    },
+    {
+      "level": "guide",
+      "text": "Hypothesized slope is $0$, so $t = \\frac{3.2 - 0}{0.8}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$t = 3.2 / 0.8 = 4$."
+    }
+  ],
+  "explanation": [
+    "$t = \\frac{b - \\beta_0}{SE_b}$ with $\\beta_0 = 0$ under $H_0$.",
+    "$3.2 / 0.8 = 4$, with df $= 18$.",
+    "A slope 4 standard errors from zero gives a two-sided $p$-value under $0.001$: strong evidence of a linear relationship between hours and score."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "How many SEs from zero?",
+      "steps": [
+        "The slope could be off from the truth by about $0.8$ just from sampling.",
+        "Our slope $3.2$ is four of those \"wiggle units\" above zero.",
+        "Being 4 SEs out is far too much to blame on chance, which is what $t = 4$ expresses."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "slope",
+    "t-test",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

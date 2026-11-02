@@ -1,0 +1,51 @@
+{
+  "id": "CALC.071",
+  "domain": "CALC",
+  "unit": 8,
+  "orderInUnit": 1,
+  "standard": "CALC.DER.B.2",
+  "difficulty": 1,
+  "prompt": "The point $(3, 4)$ lies on the circle $x^2 + y^2 = 25$. Use implicit differentiation to find $\\frac{dy}{dx}$ at that point. Give your answer as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "-3/4",
+  "alternativeAnswers": [
+    "-0.75"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Differentiate both sides with respect to $x$. Every time you differentiate a $y$-term, tack on a $\\frac{dy}{dx}$ — $y$ depends on $x$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Differentiate both sides with respect to $x$. Every time you differentiate a $y$-term, tack on a $\\frac{dy}{dx}$ — $y$ depends on $x$."
+    },
+    {
+      "level": "guide",
+      "text": "$2x + 2y \\frac{dy}{dx} = 0$. Solve for $\\frac{dy}{dx}$, then put in $x = 3$ and $y = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{dy}{dx} = -\\frac{x}{y} = -\\frac{3}{4}$."
+    }
+  ],
+  "explanation": [
+    "Differentiate $x^2 + y^2 = 25$ term by term: $2x + 2y \\, y' = 0$. The $y'$ appears because $y$ is a function of $x$ (chain rule).",
+    "Solve: $y' = -\\frac{x}{y}$.",
+    "At $(3, 4)$: $y' = -\\frac{3}{4}$. The tangent slopes downward, as it should in the first quadrant of a circle."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Geometry check",
+      "steps": [
+        "The radius from the center $(0, 0)$ to $(3, 4)$ has slope $\\frac{4}{3}$.",
+        "A tangent to a circle is perpendicular to the radius, so its slope is the negative reciprocal: $-\\frac{3}{4}$.",
+        "Implicit differentiation and geometry agree."
+      ]
+    }
+  ],
+  "tags": [
+    "implicit-differentiation",
+    "circle",
+    "tangent-slope"
+  ],
+  "estimatedSeconds": 45
+}

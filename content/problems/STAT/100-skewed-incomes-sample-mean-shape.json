@@ -1,0 +1,77 @@
+{
+  "id": "STAT.100",
+  "domain": "STAT",
+  "unit": 10,
+  "orderInUnit": 10,
+  "standard": "STAT.PROB.C.3",
+  "difficulty": 3,
+  "prompt": "Household incomes in a county are strongly right-skewed with mean $\\mu$ and standard deviation $\\sigma$. A researcher takes a random sample of $n = 50$ households. Which statement about the sampling distribution of the sample mean $\\bar{x}$ is correct?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "It is strongly right-skewed, like the population.",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "It is approximately normal with mean $\\mu$ and standard deviation $\\sigma/\\sqrt{50}$.",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "It is approximately normal with mean $\\mu$ and standard deviation $\\sigma$.",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Its mean is less than $\\mu$ because the sample pulls toward the typical household.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "Two separate facts: the CLT handles the SHAPE, and $\\sigma/\\sqrt{n}$ handles the SPREAD.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two separate facts: the CLT handles the SHAPE, and $\\sigma/\\sqrt{n}$ handles the SPREAD."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: from ANY population, $\\mu_{\\bar{x}} = \\mu$ and $\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n}$ — that rules out two choices right away. Then ask what the CLT says about shape when $n = 50$."
+    },
+    {
+      "level": "guide",
+      "text": "A sample of 50 is large enough ($n \\ge 30$) for the CLT to make $\\bar{x}$ approximately normal even from a skewed population. The SD must have $\\sqrt{n}$ in it."
+    },
+    {
+      "level": "reveal",
+      "text": "B: approximately normal, centered at $\\mu$, with SD $\\sigma/\\sqrt{50}$."
+    }
+  ],
+  "explanation": [
+    "Center: $\\mu_{\\bar{x}} = \\mu$ always, so D is wrong — sample means are unbiased.",
+    "Spread: $\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n} = \\sigma/\\sqrt{50}$, so C is wrong.",
+    "Shape: the population is skewed, but $n = 50 \\ge 30$, so by the Central Limit Theorem $\\bar{x}$ is approximately normal. A is wrong; B is correct."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "What if n were small?",
+      "steps": [
+        "With $n = 3$, the sampling distribution of $\\bar{x}$ would still be noticeably right-skewed — the CLT needs a decent sample size.",
+        "Even then, its mean would be $\\mu$ and its SD would be $\\sigma/\\sqrt{3}$.",
+        "At $n = 50$ the skew has mostly averaged out, giving choice B."
+      ]
+    }
+  ],
+  "tags": [
+    "central-limit-theorem",
+    "sampling-distribution",
+    "interpretation",
+    "word-problem"
+  ],
+  "estimatedSeconds": 70
+}

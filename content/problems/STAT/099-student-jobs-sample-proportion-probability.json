@@ -1,0 +1,56 @@
+{
+  "id": "STAT.099",
+  "domain": "STAT",
+  "unit": 10,
+  "orderInUnit": 9,
+  "standard": "STAT.PROB.C.4",
+  "difficulty": 3,
+  "prompt": "Exactly $50\\%$ of the students at a large university have part-time jobs. A random sample of $400$ students is taken. What is the probability that the sample proportion with jobs is $0.55$ or higher? Use $P(Z \\ge 0.1) = 0.4602$, $P(Z \\ge 1) = 0.1587$, $P(Z \\ge 2) = 0.0228$. Round to four decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.0228",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "Find the SD of $\\hat{p}$ first: $\\sqrt{p(1-p)/n}$. Then standardize $0.55$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Find the SD of $\\hat{p}$ first: $\\sqrt{p(1-p)/n}$. Then standardize $0.55$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: with $p = 0.5$ and $n = 100$, $\\sigma_{\\hat{p}} = \\sqrt{0.25/100} = 0.05$. Here $n = 400$ makes it smaller."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sigma_{\\hat{p}} = \\sqrt{0.25/400} = 0.025$. Compute $z = \\frac{0.55 - 0.50}{0.025}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$z = 0.05/0.025 = 2$, so $P(\\hat{p} \\ge 0.55) = P(Z \\ge 2) = 0.0228$."
+    }
+  ],
+  "explanation": [
+    "Large Counts: $np = 200$ and $n(1-p) = 200$, both $\\ge 10$, so $\\hat{p}$ is approximately normal with mean $0.5$ and SD $\\sqrt{(0.5)(0.5)/400} = \\sqrt{0.000625} = 0.025$.",
+    "$z = \\frac{0.55 - 0.50}{0.025} = 2$.",
+    "$P(Z \\ge 2) = 0.0228$. A sample proportion of $0.55$ or more would happen only about $2\\%$ of the time."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Think in counts",
+      "steps": [
+        "$\\hat{p} \\ge 0.55$ means at least $0.55 \\times 400 = 220$ students with jobs.",
+        "The count is binomial with mean $200$ and SD $\\sqrt{400(0.5)(0.5)} = 10$.",
+        "$220$ is $2$ SDs above $200$, so $z = 2$ and the probability is $0.0228$."
+      ]
+    }
+  ],
+  "tags": [
+    "sampling-distribution",
+    "sample-proportion",
+    "normal-probability",
+    "word-problem"
+  ],
+  "estimatedSeconds": 90
+}

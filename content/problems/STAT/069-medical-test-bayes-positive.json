@@ -1,0 +1,69 @@
+{
+  "id": "STAT.069",
+  "domain": "STAT",
+  "unit": 7,
+  "orderInUnit": 9,
+  "standard": "STAT.PROB.A.2",
+  "difficulty": 3,
+  "prompt": "A disease affects $2$ percent of a population. A screening test is positive for $90$ percent of people who have the disease and also positive for $5$ percent of people who do not. If a randomly chosen person tests positive, what is the probability they actually have the disease? Give a decimal to three places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.269",
+  "alternativeAnswers": [
+    "0.2687",
+    "26.9%",
+    "18/67"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.002,
+  "hint": "You want $P(\\text{disease} \\mid \\text{positive})$, which is $\\frac{P(\\text{disease and positive})}{P(\\text{positive})}$. Build both pieces with a tree.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "You want $P(\\text{disease} \\mid \\text{positive})$, which is $\\frac{P(\\text{disease and positive})}{P(\\text{positive})}$. Build both pieces with a tree."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: out of 100 people, if 10 are sick and all test positive, and 9 healthy people also test positive, then $P(\\text{sick} \\mid \\text{positive}) = \\frac{10}{19}$. Same counting with this problem's numbers."
+    },
+    {
+      "level": "guide",
+      "text": "$P(\\text{disease and positive}) = 0.02 \\times 0.90 = 0.018$. $P(\\text{no disease and positive}) = 0.98 \\times 0.05 = 0.049$. So $P(\\text{positive}) = 0.067$. Now divide."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{0.018}{0.067} \\approx 0.269$. Only about $27$ percent of positives are truly sick."
+    }
+  ],
+  "explanation": [
+    "Tree: disease ($0.02$) then positive ($0.90$) gives $0.018$; no disease ($0.98$) then positive ($0.05$) gives $0.049$.",
+    "$P(\\text{positive}) = 0.018 + 0.049 = 0.067$.",
+    "$P(\\text{disease} \\mid \\text{positive}) = \\frac{0.018}{0.067} \\approx 0.269$. Because the disease is rare, most positives are false positives from the large healthy group."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count 1,000 people",
+      "steps": [
+        "20 have the disease; 18 of them test positive. 980 do not; $0.05 \\times 980 = 49$ of them test positive anyway.",
+        "Positives: $18 + 49 = 67$ people, of whom 18 are truly sick.",
+        "$\\frac{18}{67} \\approx 0.269$."
+      ]
+    },
+    {
+      "title": "The trap: answering 0.90",
+      "steps": [
+        "$0.90$ is $P(\\text{positive} \\mid \\text{disease})$: the chance a sick person tests positive.",
+        "The question flips the condition: $P(\\text{disease} \\mid \\text{positive})$. These are different, and here very different.",
+        "Always write down which event is the condition before computing."
+      ]
+    }
+  ],
+  "tags": [
+    "bayes",
+    "conditional-probability",
+    "tree-diagram",
+    "false-positive",
+    "word-problem"
+  ],
+  "estimatedSeconds": 90
+}

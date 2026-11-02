@@ -1,0 +1,77 @@
+{
+  "id": "CALC.108",
+  "domain": "CALC",
+  "unit": 11,
+  "orderInUnit": 8,
+  "standard": "CALC.INT.A.1",
+  "difficulty": 3,
+  "prompt": "A function $f$ is increasing and concave down on $[a, b]$. Which of the following approximations of $\\int_a^b f(x) \\, dx$ is guaranteed to be an OVERESTIMATE?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "A right Riemann sum",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "A left Riemann sum",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "A trapezoidal sum",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "None of these can be an overestimate.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two separate facts decide this: increasing vs. decreasing controls left/right sums; concave up vs. down controls trapezoids and midpoints.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two separate facts decide this: increasing vs. decreasing controls left/right sums; concave up vs. down controls trapezoids and midpoints."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Sketch $y = \\sqrt{x}$ on $[0, 4]$ — increasing and concave down. Draw one right-endpoint rectangle: its top edge sits above the curve. Draw one trapezoid: its slanted top cuts below the arching curve."
+    },
+    {
+      "level": "guide",
+      "text": "Increasing: each right-endpoint rectangle is taller than the curve, so the right sum overestimates; the left sum underestimates. Concave down: chords lie below the curve, so trapezoids underestimate."
+    },
+    {
+      "level": "reveal",
+      "text": "Only the right Riemann sum is guaranteed too big: choice A."
+    }
+  ],
+  "explanation": [
+    "For an INCREASING function, the right endpoint is the highest point on each subinterval, so right rectangles poke above the curve: the right sum is an overestimate. Left rectangles sit below: an underestimate.",
+    "For a CONCAVE DOWN function, the chord joining two points on the graph lies below the graph, so each trapezoid misses some area: the trapezoidal sum is an underestimate.",
+    "The only guaranteed overestimate listed is the right Riemann sum, choice A. (A midpoint sum would also overestimate for concave down, but it is not offered.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test with real numbers",
+      "steps": [
+        "Take $f(x) = \\sqrt{x}$ on $[0, 4]$, exact integral $\\frac{16}{3} \\approx 5.33$, with $4$ subintervals.",
+        "Right sum: $1(1 + 1.414 + 1.732 + 2) \\approx 6.15$ (over). Left sum: $1(0 + 1 + 1.414 + 1.732) \\approx 4.15$ (under). Trapezoid: average of those, $\\approx 5.15$ (under).",
+        "The numbers match the reasoning: only the right sum is too big."
+      ]
+    }
+  ],
+  "tags": [
+    "riemann-sum",
+    "over-under-estimate",
+    "concavity",
+    "multi-step"
+  ],
+  "estimatedSeconds": 80
+}

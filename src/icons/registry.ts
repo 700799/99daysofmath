@@ -53,6 +53,8 @@ export const DOMAIN_ICONS: Record<Domain, IconName> = {
   TRIG: 'numberline',
   PC: 'chart',
   SAT: 'flag',
+  CALC: 'chart',
+  STAT: 'chart',
 };
 
 /** Full standalone SVG document for an icon, rasterized at `px` square. */

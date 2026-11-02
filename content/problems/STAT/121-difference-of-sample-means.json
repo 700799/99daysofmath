@@ -1,0 +1,50 @@
+{
+  "id": "STAT.121",
+  "domain": "STAT",
+  "unit": 13,
+  "orderInUnit": 1,
+  "standard": "STAT.INF.C.1",
+  "difficulty": 1,
+  "prompt": "Two teachers compare final exam scores. A random sample from Class A has mean $\\bar{x}_A = 82.4$; a random sample from Class B has mean $\\bar{x}_B = 78.9$. What is the point estimate for $\\mu_A - \\mu_B$?",
+  "answerType": "numeric",
+  "primaryAnswer": "3.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "The natural estimate of a difference in population means is the difference in sample means.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The natural estimate of a difference in population means is the difference in sample means."
+    },
+    {
+      "level": "guide",
+      "text": "Compute $\\bar{x}_A - \\bar{x}_B$, keeping the order A minus B."
+    },
+    {
+      "level": "reveal",
+      "text": "$82.4 - 78.9 = 3.5$ points."
+    }
+  ],
+  "explanation": [
+    "The parameter is $\\mu_A - \\mu_B$; its point estimate is $\\bar{x}_A - \\bar{x}_B$.",
+    "$82.4 - 78.9 = 3.5$.",
+    "Class A scored 3.5 points higher on average in these samples. Whether that gap is statistically significant depends on the spreads and sample sizes."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Order matters",
+      "steps": [
+        "If you had defined the parameter as $\\mu_B - \\mu_A$, the estimate would be $-3.5$.",
+        "Always subtract in the same order as the parameter you wrote down.",
+        "Here it is A minus B: $+3.5$."
+      ]
+    }
+  ],
+  "tags": [
+    "two-sample",
+    "difference-of-means",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

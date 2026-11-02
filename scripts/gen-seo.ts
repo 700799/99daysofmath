@@ -34,7 +34,7 @@ const DIST = path.join(ROOT, 'dist');
 const LASTMOD = new Date().toISOString().slice(0, 10);
 
 // Course phrasing per domain — Algebra 1 and Precalculus are courses, not grades.
-const COURSE_NAME: Partial<Record<Domain, string>> = { A1: 'Algebra 1', PC: 'Precalculus' };
+const COURSE_NAME: Partial<Record<Domain, string>> = { A1: 'Algebra 1', PC: 'Precalculus', CALC: 'AP Calculus AB', STAT: 'AP Statistics' };
 const lessonCourse = (d: Domain) =>
   COURSE_NAME[d] ?? `${d.startsWith('5.') ? '5th' : '6th'} Grade Math`;
 const lessonProse = (d: Domain) =>

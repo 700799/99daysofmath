@@ -1,0 +1,58 @@
+{
+  "id": "CALC.050",
+  "domain": "CALC",
+  "unit": 5,
+  "orderInUnit": 10,
+  "standard": "CALC.DER.A.1",
+  "difficulty": 3,
+  "prompt": "A boat drifting down a river has traveled $s(t) = \\sqrt{t}$ kilometers after $t$ hours. Use the limit $\\lim_{h \\to 0} \\frac{\\sqrt{4 + h} - 2}{h}$ to find its instantaneous speed at $t = 4$ hours, in km per hour. Give your answer as a fraction.",
+  "answerType": "fraction",
+  "primaryAnswer": "1/4",
+  "alternativeAnswers": [
+    "0.25"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "Substituting $h = 0$ gives $\\frac{0}{0}$. With a square root, multiply top and bottom by the conjugate $\\sqrt{4 + h} + 2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Substituting $h = 0$ gives $\\frac{0}{0}$. With a square root, multiply top and bottom by the conjugate $\\sqrt{4 + h} + 2$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $(\\sqrt{4 + h} - 2)(\\sqrt{4 + h} + 2) = (4 + h) - 4 = h$. The messy root turns into a plain $h$ — that is the whole trick."
+    },
+    {
+      "level": "guide",
+      "text": "After multiplying, the fraction is $\\frac{h}{h(\\sqrt{4 + h} + 2)} = \\frac{1}{\\sqrt{4 + h} + 2}$. Now let $h \\to 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{\\sqrt{4} + 2} = \\frac{1}{4}$ km per hour."
+    }
+  ],
+  "explanation": [
+    "Multiply by the conjugate: $\\frac{(\\sqrt{4 + h} - 2)(\\sqrt{4 + h} + 2)}{h(\\sqrt{4 + h} + 2)} = \\frac{h}{h(\\sqrt{4 + h} + 2)}$.",
+    "Cancel $h$: $\\frac{1}{\\sqrt{4 + h} + 2}$.",
+    "As $h \\to 0$ this is $\\frac{1}{2 + 2} = \\frac{1}{4}$. The boat is drifting at $\\frac{1}{4}$ km/h at the $4$-hour mark — slowing, since $\\sqrt{t}$ flattens out."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Average speeds over shrinking windows",
+      "steps": [
+        "From $t = 4$ to $t = 5$: $\\frac{\\sqrt{5} - 2}{1} \\approx 0.236$ km/h.",
+        "From $4$ to $4.01$: $\\frac{\\sqrt{4.01} - 2}{0.01} \\approx \\frac{0.0024984}{0.01} \\approx 0.2498$ km/h.",
+        "The averages close in on $0.25 = \\frac{1}{4}$ km/h."
+      ]
+    }
+  ],
+  "tags": [
+    "derivative-definition",
+    "rationalize",
+    "velocity",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 80
+}

@@ -1,0 +1,49 @@
+{
+  "id": "CALC.113",
+  "domain": "CALC",
+  "unit": 12,
+  "orderInUnit": 3,
+  "standard": "CALC.INT.A.2",
+  "difficulty": 1,
+  "prompt": "Evaluate $\\int_1^e \\frac{1}{x} \\, dx$.",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Which function has derivative $\\frac{1}{x}$? Think logarithms.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Which function has derivative $\\frac{1}{x}$? Think logarithms."
+    },
+    {
+      "level": "guide",
+      "text": "$F(x) = \\ln x$. Evaluate $F(e) - F(1)$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\ln e - \\ln 1 = 1 - 0 = 1$."
+    }
+  ],
+  "explanation": [
+    "An antiderivative of $\\frac{1}{x}$ (for $x > 0$) is $\\ln x$.",
+    "By the FTC: $\\int_1^e \\frac{1}{x} \\, dx = \\ln e - \\ln 1$.",
+    "$= 1 - 0 = 1$. In fact this is one way to DEFINE $e$: the number that makes the area under $\\frac{1}{x}$ from $1$ equal to exactly $1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Power rule trap",
+      "steps": [
+        "Trying the power rule on $x^{-1}$ gives $\\frac{x^0}{0}$ — division by zero. The power rule fails exactly at $n = -1$.",
+        "That gap is filled by the logarithm: $\\frac{d}{dx} \\ln x = \\frac{1}{x}$.",
+        "So the area is $\\ln e - \\ln 1 = 1$."
+      ]
+    }
+  ],
+  "tags": [
+    "fundamental-theorem",
+    "logarithm",
+    "definite-integral"
+  ],
+  "estimatedSeconds": 35
+}

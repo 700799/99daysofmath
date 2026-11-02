@@ -1,0 +1,55 @@
+{
+  "id": "STAT.005",
+  "domain": "STAT",
+  "unit": 1,
+  "orderInUnit": 5,
+  "standard": "STAT.DATA.A.1",
+  "difficulty": 2,
+  "prompt": "The table gives the one-way commute times of $40$ employees, grouped as in a histogram. What percent of the employees commute less than $20$ minutes?",
+  "diagram": {
+    "kind": "ascii",
+    "art": " Minutes   | Employees\n-----------+----------\n  0 to <10 |     4\n 10 to <20 |    10\n 20 to <30 |    16\n 30 to <40 |    10"
+  },
+  "answerType": "numeric",
+  "primaryAnswer": "35",
+  "alternativeAnswers": [
+    "35%",
+    "0.35"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "\"Less than $20$ minutes\" covers the first TWO bars.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Less than $20$ minutes\" covers the first TWO bars."
+    },
+    {
+      "level": "guide",
+      "text": "Add those two counts, then divide by the total of $40$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 + 10 = 14$, and $\\frac{14}{40} = 0.35$, so $35$ percent."
+    }
+  ],
+  "explanation": [
+    "Commutes under $20$ minutes are in the $0$ to $10$ bar and the $10$ to $20$ bar.",
+    "$4 + 10 = 14$ employees.",
+    "$\\frac{14}{40} = 0.35$, which is $35$ percent."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the other side instead",
+      "steps": [
+        "Employees at $20$ minutes or more: $16 + 10 = 26$, which is $\\frac{26}{40} = 65$ percent.",
+        "Everyone is either under 20 or at least 20, so the rest is $100 - 65 = 35$ percent."
+      ]
+    }
+  ],
+  "tags": [
+    "histogram",
+    "relative-frequency",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,72 @@
+{
+  "id": "CALC.094",
+  "domain": "CALC",
+  "unit": 10,
+  "orderInUnit": 4,
+  "standard": "CALC.APP.A.2",
+  "difficulty": 2,
+  "prompt": "A particle moves along a line with position $s(t) = t^3 - 6t^2 + 9t$ for $t \\ge 0$. During which time interval is the particle moving to the LEFT (in the negative direction)?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$0 < t < 1$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$1 < t < 3$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$t > 3$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$0 < t < 3$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Moving left means velocity is negative. Find $v(t) = s'(t)$ and factor it.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Moving left means velocity is negative. Find $v(t) = s'(t)$ and factor it."
+    },
+    {
+      "level": "guide",
+      "text": "$v(t) = 3t^2 - 12t + 9 = 3(t - 1)(t - 3)$. Where is this negative?"
+    },
+    {
+      "level": "reveal",
+      "text": "Between the roots: $1 < t < 3$. Choice B."
+    }
+  ],
+  "explanation": [
+    "$v(t) = 3t^2 - 12t + 9 = 3(t^2 - 4t + 3) = 3(t - 1)(t - 3)$.",
+    "The product of two factors is negative exactly when they have opposite signs: $t - 1 > 0$ and $t - 3 < 0$, i.e. $1 < t < 3$.",
+    "So the particle moves left from $t = 1$ to $t = 3$. It turns around at both of those instants: $s(1) = 4$ and $s(3) = 0$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test a time in each region",
+      "steps": [
+        "$v(0.5) = 3(-0.5)(-2.5) = 3.75 > 0$: moving right.",
+        "$v(2) = 3(1)(-1) = -3 < 0$: moving left.",
+        "$v(4) = 3(3)(1) = 9 > 0$: moving right again. Only $(1, 3)$ is a leftward stretch."
+      ]
+    }
+  ],
+  "tags": [
+    "motion",
+    "velocity",
+    "sign-chart",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

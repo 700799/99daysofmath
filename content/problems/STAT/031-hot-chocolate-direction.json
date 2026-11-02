@@ -1,0 +1,72 @@
+{
+  "id": "STAT.031",
+  "domain": "STAT",
+  "unit": 4,
+  "orderInUnit": 1,
+  "standard": "STAT.DATA.C.3",
+  "difficulty": 1,
+  "prompt": "A café plots daily hot chocolate sales against the outdoor temperature. On warmer days, fewer hot chocolates are sold. What is the direction of the association?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Positive",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Negative",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "No association",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "It cannot be determined without the data",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Ask: as $x$ (temperature) goes UP, does $y$ (sales) go up or down?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Ask: as $x$ (temperature) goes UP, does $y$ (sales) go up or down?"
+    },
+    {
+      "level": "guide",
+      "text": "Warmer days bring lower sales, so the points slope downhill from left to right."
+    },
+    {
+      "level": "reveal",
+      "text": "Downhill means a negative association: choice B."
+    }
+  ],
+  "explanation": [
+    "Direction describes what $y$ does as $x$ increases.",
+    "Here sales FALL as temperature rises, so the cloud of points trends downward.",
+    "That is a negative association. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Two sample days",
+      "steps": [
+        "A cold day, say $30^\\circ$, might sell 60 hot chocolates: point $(30, 60)$.",
+        "A warm day, say $80^\\circ$, might sell 10: point $(80, 10)$.",
+        "Moving right from the first point to the second, you move down. Negative."
+      ]
+    }
+  ],
+  "tags": [
+    "scatterplot",
+    "direction",
+    "association",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

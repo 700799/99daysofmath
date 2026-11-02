@@ -1,0 +1,49 @@
+{
+  "id": "CALC.096",
+  "domain": "CALC",
+  "unit": 10,
+  "orderInUnit": 6,
+  "standard": "CALC.APP.A.2",
+  "difficulty": 2,
+  "prompt": "A rancher has $120$ meters of fence to build a rectangular pen against a long barn. The barn forms one side, so only three sides need fence. What is the maximum possible area of the pen, in square meters?",
+  "answerType": "numeric",
+  "primaryAnswer": "1800",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Let $x$ be the length of each side perpendicular to the barn. Two of those plus one parallel side use all $120$ m.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Let $x$ be the length of each side perpendicular to the barn. Two of those plus one parallel side use all $120$ m."
+    },
+    {
+      "level": "guide",
+      "text": "Parallel side $= 120 - 2x$. Area $A(x) = x(120 - 2x) = 120x - 2x^2$. Set $A'(x) = 0$."
+    },
+    {
+      "level": "reveal",
+      "text": "$120 - 4x = 0$ gives $x = 30$. The pen is $30 \\times 60$, area $1800$ m$^2$."
+    }
+  ],
+  "explanation": [
+    "Fence constraint: $2x + y = 120$, so $y = 120 - 2x$.",
+    "Area: $A(x) = x(120 - 2x) = 120x - 2x^2$. Then $A'(x) = 120 - 4x = 0$ at $x = 30$; $A'' = -4 < 0$ confirms a maximum.",
+    "$y = 120 - 60 = 60$. Maximum area $= 30 \\cdot 60 = 1800$ m$^2$. The free barn side lets the pen be twice as long as it is deep."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Split the fence in half",
+      "steps": [
+        "At the optimum, the two perpendicular sides together use $60$ m and the parallel side uses $60$ m — the fence splits evenly between the two directions.",
+        "That is a general pattern in these problems: the fence budget divides equally between \"across\" and \"along.\"",
+        "So $x = 30$, $y = 60$, area $1800$ m$^2$."
+      ]
+    }
+  ],
+  "tags": [
+    "optimization",
+    "area",
+    "word-problem"
+  ],
+  "estimatedSeconds": 65
+}

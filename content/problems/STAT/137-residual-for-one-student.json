@@ -1,0 +1,50 @@
+{
+  "id": "STAT.137",
+  "domain": "STAT",
+  "unit": 14,
+  "orderInUnit": 7,
+  "standard": "STAT.INF.C.4",
+  "difficulty": 2,
+  "prompt": "Using the model $\\hat{y} = 12.5 + 3.2x$ for exam score versus hours studied, one student studied $5$ hours and scored $30$. What is the residual for this student?",
+  "answerType": "numeric",
+  "primaryAnswer": "1.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "Residual $= $ actual $y$ $-$ predicted $\\hat{y}$. Actual minus predicted, in that order.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Residual $= $ actual $y$ $-$ predicted $\\hat{y}$. Actual minus predicted, in that order."
+    },
+    {
+      "level": "guide",
+      "text": "Predicted: $12.5 + 3.2(5) = 28.5$. Subtract from the actual $30$."
+    },
+    {
+      "level": "reveal",
+      "text": "$30 - 28.5 = 1.5$."
+    }
+  ],
+  "explanation": [
+    "Predicted score for 5 hours: $\\hat{y} = 12.5 + 16 = 28.5$.",
+    "Residual $= y - \\hat{y} = 30 - 28.5 = 1.5$.",
+    "A positive residual means the student scored $1.5$ points HIGHER than the line predicted."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Picture the point and the line",
+      "steps": [
+        "At $x = 5$ the line is at height $28.5$.",
+        "The data point sits at height $30$, a little above the line.",
+        "The vertical gap, $1.5$, is the residual — positive because the point is above."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "residual",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

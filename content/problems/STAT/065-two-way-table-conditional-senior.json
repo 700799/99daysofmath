@@ -1,0 +1,58 @@
+{
+  "id": "STAT.065",
+  "domain": "STAT",
+  "unit": 7,
+  "orderInUnit": 5,
+  "standard": "STAT.PROB.A.2",
+  "difficulty": 2,
+  "prompt": "The table shows $120$ students by grade and whether they have a part-time job. A student is chosen at random. Given that the student is a SENIOR, what is the probability they have a job?",
+  "diagram": {
+    "kind": "ascii",
+    "art": "         | Job | No job | Total\n---------+-----+--------+------\n Junior  |  30 |   20   |   50\n Senior  |  45 |   25   |   70\n Total   |  75 |   45   |  120"
+  },
+  "answerType": "fraction",
+  "primaryAnswer": "9/14",
+  "alternativeAnswers": [
+    "45/70",
+    "0.643",
+    "0.64"
+  ],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.005,
+  "hint": "\"Given that the student is a senior\" shrinks the sample space to the senior ROW only.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "\"Given that the student is a senior\" shrinks the sample space to the senior ROW only."
+    },
+    {
+      "level": "guide",
+      "text": "$P(\\text{job} \\mid \\text{senior}) = \\frac{\\text{seniors with a job}}{\\text{all seniors}} = \\frac{45}{70}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{45}{70} = \\frac{9}{14} \\approx 0.643$."
+    }
+  ],
+  "explanation": [
+    "Conditioning on \"senior\" means we only look at the $70$ seniors.",
+    "Of those, $45$ have a job.",
+    "$P(\\text{job} \\mid \\text{senior}) = \\frac{45}{70} = \\frac{9}{14} \\approx 0.643$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "With the formula",
+      "steps": [
+        "$P(\\text{job} \\mid \\text{senior}) = \\frac{P(\\text{job and senior})}{P(\\text{senior})} = \\frac{45/120}{70/120}$.",
+        "The 120s cancel, leaving $\\frac{45}{70} = \\frac{9}{14}$.",
+        "Compare: $P(\\text{job}) = \\frac{75}{120} = 0.625$, so seniors are a little more likely than students overall to have a job."
+      ]
+    }
+  ],
+  "tags": [
+    "conditional-probability",
+    "two-way-table",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

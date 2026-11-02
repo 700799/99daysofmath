@@ -1,0 +1,55 @@
+{
+  "id": "CALC.008",
+  "domain": "CALC",
+  "unit": 1,
+  "orderInUnit": 8,
+  "standard": "CALC.LIM.A.1",
+  "difficulty": 3,
+  "prompt": "Let $f(x) = x^2 + 1$ for $x < 2$ and $f(x) = 3x - k$ for $x \\ge 2$. For what value of $k$ does $\\lim_{x \\to 2} f(x)$ exist?",
+  "answerType": "numeric",
+  "primaryAnswer": "1",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The limit exists only if the left piece and the right piece are heading to the same height at $x = 2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The limit exists only if the left piece and the right piece are heading to the same height at $x = 2$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $f(x) = x$ for $x < 2$ and $f(x) = x + k$ for $x \\ge 2$. Left side heads to $2$, right side to $2 + k$. Matching them forces $k = 0$. Same method here."
+    },
+    {
+      "level": "guide",
+      "text": "Left-hand limit: $2^2 + 1 = 5$. Right-hand limit: $3(2) - k = 6 - k$. Set them equal."
+    },
+    {
+      "level": "reveal",
+      "text": "$6 - k = 5$ gives $k = 1$."
+    }
+  ],
+  "explanation": [
+    "From the left ($x < 2$): $x^2 + 1 \\to 4 + 1 = 5$.",
+    "From the right ($x \\ge 2$): $3x - k \\to 6 - k$.",
+    "For the limit to exist the sides must agree: $6 - k = 5$, so $k = 1$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check it with the fix in place",
+      "steps": [
+        "With $k = 1$ the right piece is $3x - 1$, and at $x = 2$ it gives $5$.",
+        "The left piece also heads to $5$. The two graphs meet at $(2, 5)$ — no gap, no jump.",
+        "Any other $k$ would leave a jump of size $|k - 1|$ at $x = 2$."
+      ]
+    }
+  ],
+  "tags": [
+    "one-sided-limit",
+    "piecewise",
+    "parameter",
+    "multi-step"
+  ],
+  "estimatedSeconds": 70
+}

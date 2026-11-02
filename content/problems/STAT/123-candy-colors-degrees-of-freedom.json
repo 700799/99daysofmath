@@ -1,0 +1,50 @@
+{
+  "id": "STAT.123",
+  "domain": "STAT",
+  "unit": 13,
+  "orderInUnit": 3,
+  "standard": "STAT.INF.C.2",
+  "difficulty": 1,
+  "prompt": "A candy company claims its five colors are produced in equal proportions. A student counts the colors in a large bag and runs a chi-square goodness-of-fit test. How many degrees of freedom does the test have?",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "For goodness-of-fit, df $=$ (number of categories) $- 1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "For goodness-of-fit, df $=$ (number of categories) $- 1$."
+    },
+    {
+      "level": "guide",
+      "text": "There are 5 color categories."
+    },
+    {
+      "level": "reveal",
+      "text": "df $= 5 - 1 = 4$."
+    }
+  ],
+  "explanation": [
+    "A goodness-of-fit test has one category per possible outcome: here, 5 colors.",
+    "Degrees of freedom $= k - 1 = 5 - 1$.",
+    "df $= 4$. (The number of candies in the bag does not affect df.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why minus one",
+      "steps": [
+        "Once you know the total and four of the five counts, the fifth count is forced.",
+        "Only four counts are \"free\" to vary.",
+        "So df $= 4$."
+      ]
+    }
+  ],
+  "tags": [
+    "chi-square",
+    "goodness-of-fit",
+    "degrees-of-freedom",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

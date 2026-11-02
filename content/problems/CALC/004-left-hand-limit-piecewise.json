@@ -1,0 +1,48 @@
+{
+  "id": "CALC.004",
+  "domain": "CALC",
+  "unit": 1,
+  "orderInUnit": 4,
+  "standard": "CALC.LIM.A.1",
+  "difficulty": 2,
+  "prompt": "Let $f(x) = x + 3$ for $x < 1$ and $f(x) = 6 - x$ for $x \\ge 1$. Find the left-hand limit $\\lim_{x \\to 1^-} f(x)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The little minus sign on $1^-$ means \"come from the LEFT,\" using $x$-values smaller than $1$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The little minus sign on $1^-$ means \"come from the LEFT,\" using $x$-values smaller than $1$."
+    },
+    {
+      "level": "guide",
+      "text": "For $x < 1$ the rule is $x + 3$. Let $x$ creep up to $1$ inside that rule."
+    },
+    {
+      "level": "reveal",
+      "text": "$1 + 3 = 4$, so $\\lim_{x \\to 1^-} f(x) = 4$."
+    }
+  ],
+  "explanation": [
+    "Coming from the left means $x < 1$, where $f(x) = x + 3$.",
+    "As $x \\to 1$, that piece heads to $1 + 3 = 4$.",
+    "So the left-hand limit is $4$. (From the right, $6 - 1 = 5$, so the two-sided limit does not exist — but the question only asked for the left side.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Plug in from the left",
+      "steps": [
+        "$f(0.9) = 3.9$, $f(0.99) = 3.99$, $f(0.999) = 3.999$.",
+        "The values climb toward $4$.",
+        "That is the left-hand limit, even though $f(1)$ itself equals $6 - 1 = 5$."
+      ]
+    }
+  ],
+  "tags": [
+    "one-sided-limit",
+    "piecewise"
+  ],
+  "estimatedSeconds": 45
+}

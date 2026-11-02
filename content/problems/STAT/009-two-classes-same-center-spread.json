@@ -1,0 +1,85 @@
+{
+  "id": "STAT.009",
+  "domain": "STAT",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "STAT.DATA.A.2",
+  "difficulty": 3,
+  "prompt": "Five students from Class A scored $70, 75, 80, 85, 90$ on a test. Five students from Class B scored $60, 78, 80, 82, 100$. Which comparison is correct?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Class B has a higher mean than Class A",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "The classes have the same mean and median, but Class B is more spread out",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "The classes have the same mean, but Class A has the higher median",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Class A is more spread out because its scores change by the same amount each time",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Compare center first (mean and median), then spread (range or how far scores sit from the middle).",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Compare center first (mean and median), then spread (range or how far scores sit from the middle)."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $4, 5, 6$ and $1, 5, 9$ both have mean $5$ and median $5$, but the second set is far more spread out. Same check here with five scores."
+    },
+    {
+      "level": "guide",
+      "text": "Class A: mean $= \\frac{400}{5} = 80$, median $80$. Class B: mean $= \\frac{400}{5} = 80$, median $80$. Now compare the ranges."
+    },
+    {
+      "level": "reveal",
+      "text": "Range A $= 90 - 70 = 20$; range B $= 100 - 60 = 40$. Same center, B more spread: choice B."
+    }
+  ],
+  "explanation": [
+    "Class A: $70 + 75 + 80 + 85 + 90 = 400$, so the mean is $80$; the middle value is $80$.",
+    "Class B: $60 + 78 + 80 + 82 + 100 = 400$, so the mean is also $80$; the middle value is also $80$.",
+    "Spread differs: Class A ranges $20$ points, Class B ranges $40$ points and its extreme scores sit farther from $80$. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Distances from the center",
+      "steps": [
+        "Class A distances from 80: $10, 5, 0, 5, 10$ — average distance 6.",
+        "Class B distances from 80: $20, 2, 0, 2, 20$ — average distance 8.8.",
+        "Bigger typical distance means more variability, so Class B is more spread out."
+      ]
+    },
+    {
+      "title": "Why choice D is a trap",
+      "steps": [
+        "Evenly spaced scores look \"orderly\", but spread is about how far values are from the center, not about a pattern.",
+        "Class A's farthest scores are 10 points from the middle; Class B's are 20 points away.",
+        "So Class B, not A, has the greater spread."
+      ]
+    }
+  ],
+  "tags": [
+    "comparing-distributions",
+    "center",
+    "spread",
+    "word-problem"
+  ],
+  "estimatedSeconds": 75
+}

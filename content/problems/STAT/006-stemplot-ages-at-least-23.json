@@ -1,0 +1,52 @@
+{
+  "id": "STAT.006",
+  "domain": "STAT",
+  "unit": 1,
+  "orderInUnit": 6,
+  "standard": "STAT.DATA.A.1",
+  "difficulty": 2,
+  "prompt": "The stemplot shows the ages of the $10$ players on a recreational soccer team (key: $2|3$ means $23$ years). How many players are $23$ or older?",
+  "diagram": {
+    "kind": "ascii",
+    "art": " Stem | Leaf\n------+---------\n   1  | 2 5 8\n   2  | 0 3 3 7\n   3  | 1 4\n   4  | 0"
+  },
+  "answerType": "numeric",
+  "primaryAnswer": "6",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Each leaf is one player. The stem is the tens digit and the leaf is the ones digit.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each leaf is one player. The stem is the tens digit and the leaf is the ones digit."
+    },
+    {
+      "level": "guide",
+      "text": "Rebuild the list: $12, 15, 18, 20, 23, 23, 27, 31, 34, 40$. Now count from $23$ upward."
+    },
+    {
+      "level": "reveal",
+      "text": "$23, 23, 27, 31, 34, 40$ — that is $6$ players."
+    }
+  ],
+  "explanation": [
+    "Read the plot row by row: stem $1$ gives $12, 15, 18$; stem $2$ gives $20, 23, 23, 27$; stem $3$ gives $31, 34$; stem $4$ gives $40$.",
+    "The ages that are $23$ or more are $23, 23, 27, 31, 34, 40$.",
+    "That is $6$ players."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count the ones you skip",
+      "steps": [
+        "Ages under 23 are $12, 15, 18, 20$ — four players.",
+        "There are 10 leaves in all, so $10 - 4 = 6$ players are 23 or older."
+      ]
+    }
+  ],
+  "tags": [
+    "stemplot",
+    "reading-displays",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

@@ -1,0 +1,71 @@
+{
+  "id": "STAT.054",
+  "domain": "STAT",
+  "unit": 6,
+  "orderInUnit": 4,
+  "standard": "STAT.COLL.B.2",
+  "difficulty": 2,
+  "prompt": "A survey finds that adults who take a daily vitamin get fewer colds than adults who do not. The vitamin-takers also exercise much more. Why can we NOT conclude the vitamin prevents colds?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Exercise is a confounding variable: it is mixed up with vitamin use and could be the real reason for fewer colds",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "The sample was too small",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Colds cannot be measured accurately",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The vitamin-takers had a placebo effect",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two things differ between the groups, not one. Which other difference could explain fewer colds?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two things differ between the groups, not one. Which other difference could explain fewer colds?"
+    },
+    {
+      "level": "guide",
+      "text": "The vitamin group also exercises more. If exercise reduces colds, you cannot tell whether the vitamin did anything."
+    },
+    {
+      "level": "reveal",
+      "text": "Exercise is confounded with vitamin use: choice A."
+    }
+  ],
+  "explanation": [
+    "The vitamin-takers and non-takers differ in TWO ways: vitamins and exercise.",
+    "Because exercise could reduce colds on its own, its effect is tangled with the vitamin's effect. That tangling is confounding.",
+    "Only a randomized experiment, which balances exercise across the groups, could separate the two. Choice A."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "What confounding means",
+      "steps": [
+        "A confounding variable is associated with the explanatory variable AND affects the response.",
+        "Exercise is tied to vitamin use (same people) and plausibly affects colds.",
+        "That is the textbook definition, so exercise confounds the comparison."
+      ]
+    }
+  ],
+  "tags": [
+    "confounding",
+    "observational-study",
+    "word-problem"
+  ],
+  "estimatedSeconds": 45
+}

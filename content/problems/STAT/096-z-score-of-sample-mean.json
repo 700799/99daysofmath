@@ -1,0 +1,51 @@
+{
+  "id": "STAT.096",
+  "domain": "STAT",
+  "unit": 10,
+  "orderInUnit": 6,
+  "standard": "STAT.PROB.C.3",
+  "difficulty": 2,
+  "prompt": "Scores on a college entrance exam have mean $500$ and standard deviation $100$. A random sample of $25$ students has sample mean $\\bar{x} = 530$. What is the $z$-score of this sample mean in the sampling distribution of $\\bar{x}$?",
+  "answerType": "numeric",
+  "primaryAnswer": "1.5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "Use the SD of the sample mean, $\\sigma/\\sqrt{n}$, not the SD of individual scores.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Use the SD of the sample mean, $\\sigma/\\sqrt{n}$, not the SD of individual scores."
+    },
+    {
+      "level": "guide",
+      "text": "$\\sigma_{\\bar{x}} = 100/\\sqrt{25} = 20$. Then $z = \\frac{530 - 500}{20}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$z = \\frac{30}{20} = 1.5$."
+    }
+  ],
+  "explanation": [
+    "The sampling distribution of $\\bar{x}$ has mean $500$ and SD $100/\\sqrt{25} = 100/5 = 20$.",
+    "$z = \\frac{\\bar{x} - \\mu}{\\sigma_{\\bar{x}}} = \\frac{530 - 500}{20}$.",
+    "$z = 1.5$. A sample mean of 530 is 1.5 standard deviations above what we expect."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare with one student",
+      "steps": [
+        "For a single student scoring 530, $z = (530 - 500)/100 = 0.3$ — not unusual at all.",
+        "But a sample MEAN of 530 from 25 students is harder to get by chance, since averages vary less.",
+        "Using the smaller SD of 20 gives $z = 1.5$ — the same 30-point gap is 5 times more surprising for an average."
+      ]
+    }
+  ],
+  "tags": [
+    "sampling-distribution",
+    "sample-mean",
+    "z-score",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

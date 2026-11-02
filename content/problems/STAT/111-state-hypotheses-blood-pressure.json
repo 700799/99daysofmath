@@ -1,0 +1,71 @@
+{
+  "id": "STAT.111",
+  "domain": "STAT",
+  "unit": 12,
+  "orderInUnit": 1,
+  "standard": "STAT.INF.B.1",
+  "difficulty": 1,
+  "prompt": "A clinic claims a new program lowers the mean systolic blood pressure of its patients below the current mean of $140$. Which pair of hypotheses is correct for testing this claim?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$H_0: \\mu = 140$, $H_a: \\mu < 140$",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "$H_0: \\mu < 140$, $H_a: \\mu = 140$",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "$H_0: \\bar{x} = 140$, $H_a: \\bar{x} < 140$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "$H_0: \\mu = 140$, $H_a: \\mu \\ne 140$",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "exact",
+  "hint": "The null hypothesis is the \"no change\" statement with an equals sign. The alternative carries the claim.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The null hypothesis is the \"no change\" statement with an equals sign. The alternative carries the claim."
+    },
+    {
+      "level": "guide",
+      "text": "Hypotheses are about the population parameter $\\mu$, never the sample statistic $\\bar{x}$. \"Lowers\" means a one-sided alternative."
+    },
+    {
+      "level": "reveal",
+      "text": "$H_0: \\mu = 140$ versus $H_a: \\mu < 140$. Choice A."
+    }
+  ],
+  "explanation": [
+    "$H_0$ always states equality: the program makes no difference, so $\\mu = 140$.",
+    "The claim \"lowers\" points in one direction, so $H_a: \\mu < 140$ (one-sided), not $\\ne$ as in D.",
+    "B puts the claim in the null; C uses the sample mean $\\bar{x}$, which we already know and never hypothesize about. A is correct."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Ask two questions",
+      "steps": [
+        "Parameter or statistic? Always the parameter $\\mu$. That kills C.",
+        "Which way does the claim point? \"Lower\" means $<$. That kills D and picks the direction.",
+        "The null gets the equals sign, so A."
+      ]
+    }
+  ],
+  "tags": [
+    "significance-test",
+    "hypotheses",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

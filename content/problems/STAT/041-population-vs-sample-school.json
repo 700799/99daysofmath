@@ -1,0 +1,71 @@
+{
+  "id": "STAT.041",
+  "domain": "STAT",
+  "unit": 5,
+  "orderInUnit": 1,
+  "standard": "STAT.COLL.A.1",
+  "difficulty": 1,
+  "prompt": "A high school has $1{,}200$ students. The student council surveys $100$ of them about a later start time. What is the POPULATION in this study?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "The $100$ students who were surveyed",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "All $1{,}200$ students at the school",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "The students who want a later start time",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "The members of the student council",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The population is the WHOLE group you want to learn about. The sample is the part you actually ask.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The population is the WHOLE group you want to learn about. The sample is the part you actually ask."
+    },
+    {
+      "level": "guide",
+      "text": "The council wants to know what the school thinks, not just what 100 students think."
+    },
+    {
+      "level": "reveal",
+      "text": "The population is all $1{,}200$ students: choice B. The $100$ surveyed are the sample."
+    }
+  ],
+  "explanation": [
+    "The council wants to draw a conclusion about the entire school.",
+    "So the population is every student, all $1{,}200$ of them.",
+    "The $100$ students surveyed are the sample, a part of the population used to learn about the whole. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Ask \"about whom?\"",
+      "steps": [
+        "The question the council really wants answered is \"Do OUR STUDENTS want a later start?\"",
+        "Whoever \"our students\" refers to is the population: all 1,200.",
+        "Anything smaller that is actually measured is a sample."
+      ]
+    }
+  ],
+  "tags": [
+    "population",
+    "sample",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

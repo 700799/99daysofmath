@@ -1,0 +1,51 @@
+{
+  "id": "STAT.114",
+  "domain": "STAT",
+  "unit": 12,
+  "orderInUnit": 4,
+  "standard": "STAT.INF.B.2",
+  "difficulty": 2,
+  "prompt": "A cereal box is labeled $10$ oz. A random sample of $64$ boxes has mean $\\bar{x} = 10.4$ oz and standard deviation $s = 1.6$ oz. For the test of $H_0: \\mu = 10$, what is the value of the $t$ statistic?",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "$t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}$."
+    },
+    {
+      "level": "guide",
+      "text": "$s/\\sqrt{n} = 1.6/\\sqrt{64} = 1.6/8 = 0.2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$t = \\frac{10.4 - 10}{0.2} = \\frac{0.4}{0.2} = 2$."
+    }
+  ],
+  "explanation": [
+    "The standard error of the mean is $s/\\sqrt{n} = 1.6/8 = 0.2$ oz.",
+    "The sample mean is $0.4$ oz above the labeled value.",
+    "$t = 0.4/0.2 = 2$, with $n - 1 = 63$ degrees of freedom. The sample mean sits 2 standard errors above 10 oz."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Build it from the gap",
+      "steps": [
+        "Gap between data and claim: $10.4 - 10 = 0.4$ oz.",
+        "Typical chance gap for a sample mean of 64 boxes: $0.2$ oz.",
+        "Observed gap is twice the typical gap, so $t = 2$."
+      ]
+    }
+  ],
+  "tags": [
+    "significance-test",
+    "t-test",
+    "mean",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

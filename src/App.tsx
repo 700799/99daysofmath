@@ -9,6 +9,7 @@ const DomainTrail = lazy(() => import('./routes/DomainTrail').then((m) => ({ def
 const Unit = lazy(() => import('./routes/Unit').then((m) => ({ default: m.Unit })));
 const UnitResults = lazy(() => import('./routes/UnitResults').then((m) => ({ default: m.UnitResults })));
 const Settings = lazy(() => import('./routes/Settings').then((m) => ({ default: m.Settings })));
+const Privacy = lazy(() => import('./routes/Privacy').then((m) => ({ default: m.Privacy })));
 const Shop = lazy(() => import('./routes/Shop').then((m) => ({ default: m.Shop })));
 const Rewards = lazy(() => import('./routes/Rewards').then((m) => ({ default: m.Rewards })));
 const DailyMix = lazy(() => import('./routes/DailyMix').then((m) => ({ default: m.DailyMix })));
@@ -182,6 +183,7 @@ export default function App() {
             <Route path="/arcade/tangram" element={<ArcadeGate title="Tangram"><Tangram /></ArcadeGate>} />
             <Route path="/arcade/bubbles" element={<ArcadeGate title="Bubble Pop"><BubblePop /></ArcadeGate>} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="/shop" element={<Shop />} />
             {/* Google sign-in returns here; Clerk finishes it and moves on. */}
             <Route path="/sso-callback" element={<SsoCallback />} />

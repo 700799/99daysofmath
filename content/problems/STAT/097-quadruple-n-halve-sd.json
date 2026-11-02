@@ -1,0 +1,49 @@
+{
+  "id": "STAT.097",
+  "domain": "STAT",
+  "unit": 10,
+  "orderInUnit": 7,
+  "standard": "STAT.PROB.C.3",
+  "difficulty": 2,
+  "prompt": "A quality engineer samples $n = 50$ bottles to estimate the mean fill volume. She wants to cut the standard deviation of $\\bar{x}$ in HALF. How many bottles should she sample instead?",
+  "answerType": "numeric",
+  "primaryAnswer": "200",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "$\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n}$ depends on the SQUARE ROOT of $n$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "$\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n}$ depends on the SQUARE ROOT of $n$."
+    },
+    {
+      "level": "guide",
+      "text": "To halve $\\sigma/\\sqrt{n}$ you need $\\sqrt{n}$ to double, so $n$ must be multiplied by $4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 \\times 50 = 200$ bottles."
+    }
+  ],
+  "explanation": [
+    "The SD of the sample mean is $\\sigma/\\sqrt{n}$.",
+    "Halving it requires doubling $\\sqrt{n}$; doubling a square root means quadrupling $n$.",
+    "New sample size: $4 \\times 50 = 200$ bottles. Precision is expensive — twice the precision costs four times the data."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check with numbers",
+      "steps": [
+        "Suppose $\\sigma = 10$ mL. With $n = 50$: $\\sigma_{\\bar{x}} = 10/\\sqrt{50} \\approx 1.41$.",
+        "With $n = 100$: $10/10 = 1.00$ — not yet half.",
+        "With $n = 200$: $10/\\sqrt{200} \\approx 0.71$, exactly half of $1.41$. ✓"
+      ]
+    }
+  ],
+  "tags": [
+    "sampling-distribution",
+    "sample-size",
+    "word-problem"
+  ],
+  "estimatedSeconds": 50
+}

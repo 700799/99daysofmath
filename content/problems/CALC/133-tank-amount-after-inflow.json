@@ -1,0 +1,50 @@
+{
+  "id": "CALC.133",
+  "domain": "CALC",
+  "unit": 14,
+  "orderInUnit": 3,
+  "standard": "CALC.INT.B.2",
+  "difficulty": 1,
+  "prompt": "A tank contains $50$ liters at $t = 0$. Water flows in at a rate of $r(t) = 2t$ liters per minute. How many liters are in the tank at $t = 10$ minutes?",
+  "answerType": "numeric",
+  "primaryAnswer": "150",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Amount at time $T$ $=$ starting amount $+ \\int_0^T (\\text{rate}) \\, dt$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Amount at time $T$ $=$ starting amount $+ \\int_0^T (\\text{rate}) \\, dt$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\int_0^{10} 2t \\, dt = [t^2]_0^{10} = 100$ liters added."
+    },
+    {
+      "level": "reveal",
+      "text": "$50 + 100 = 150$ liters."
+    }
+  ],
+  "explanation": [
+    "The water added from $0$ to $10$ minutes is $\\int_0^{10} 2t \\, dt = t^2\\Big|_0^{10} = 100$ L.",
+    "Add the initial amount: $50 + 100 = 150$ L.",
+    "This is the accumulation form of the FTC: $A(10) = A(0) + \\int_0^{10} A'(t) \\, dt$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Triangle under the rate graph",
+      "steps": [
+        "The rate graph $r = 2t$ is a line from $(0, 0)$ to $(10, 20)$.",
+        "The area under it is a triangle: $\\frac{1}{2} \\cdot 10 \\cdot 20 = 100$ liters.",
+        "Starting at $50$ and adding $100$ gives $150$ L."
+      ]
+    }
+  ],
+  "tags": [
+    "accumulation",
+    "net-change",
+    "rate",
+    "word-problem"
+  ],
+  "estimatedSeconds": 40
+}

@@ -1,0 +1,49 @@
+{
+  "id": "CALC.077",
+  "domain": "CALC",
+  "unit": 8,
+  "orderInUnit": 7,
+  "standard": "CALC.DER.B.2",
+  "difficulty": 2,
+  "prompt": "A stone dropped in a pond makes a circular ripple whose radius grows at $3$ cm per second. When the radius is $10$ cm, the area inside the ripple is growing at $k\\pi$ square cm per second. Find $k$.",
+  "answerType": "numeric",
+  "primaryAnswer": "60",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Start with $A = \\pi r^2$ and differentiate with respect to time. Remember the chain rule on $r^2$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Start with $A = \\pi r^2$ and differentiate with respect to time. Remember the chain rule on $r^2$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt}$. Substitute $r = 10$ and $\\frac{dr}{dt} = 3$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{dA}{dt} = 2\\pi(10)(3) = 60\\pi$, so $k = 60$."
+    }
+  ],
+  "explanation": [
+    "$A = \\pi r^2$, so $\\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt}$.",
+    "At the moment $r = 10$ with $\\frac{dr}{dt} = 3$: $\\frac{dA}{dt} = 2\\pi \\cdot 10 \\cdot 3 = 60\\pi$ cm$^2$/s.",
+    "So $k = 60$. Unlike the circumference, the area's growth rate depends on the current radius — a bigger ripple sweeps out area faster."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "The thin ring picture",
+      "steps": [
+        "In a short time $dt$ the ripple grows by a thin ring of width $3\\,dt$ and length (circumference) $2\\pi \\cdot 10 = 20\\pi$.",
+        "Ring area $\\approx 20\\pi \\cdot 3\\,dt = 60\\pi \\, dt$.",
+        "Divide by $dt$: the area grows at $60\\pi$ cm$^2$/s."
+      ]
+    }
+  ],
+  "tags": [
+    "related-rates",
+    "area",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

@@ -1,0 +1,70 @@
+{
+  "id": "STAT.051",
+  "domain": "STAT",
+  "unit": 6,
+  "orderInUnit": 1,
+  "standard": "STAT.COLL.B.1",
+  "difficulty": 1,
+  "prompt": "Researchers randomly assign $200$ volunteers to drink either regular coffee or decaf each morning for a month, then measure their reaction times. What kind of study is this?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "An observational study",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "An experiment",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "A census",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "A survey",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The key question: did the researchers DECIDE who got which treatment, or just watch what people already did?",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The key question: did the researchers DECIDE who got which treatment, or just watch what people already did?"
+    },
+    {
+      "level": "guide",
+      "text": "\"Randomly assign\" means the researchers imposed the treatment on each person."
+    },
+    {
+      "level": "reveal",
+      "text": "Imposing a treatment makes it an experiment: choice B."
+    }
+  ],
+  "explanation": [
+    "In an experiment, researchers assign treatments to subjects. Here they assigned regular or decaf coffee.",
+    "In an observational study they would merely record what people already drink.",
+    "Because the treatment was imposed, with random assignment, this is an experiment. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Spot the treatment",
+      "steps": [
+        "Treatment: regular vs decaf. Response: reaction time. Subjects: the 200 volunteers.",
+        "All three pieces plus random assignment are the anatomy of an experiment."
+      ]
+    }
+  ],
+  "tags": [
+    "experiment",
+    "observational-study",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

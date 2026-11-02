@@ -1,0 +1,49 @@
+{
+  "id": "CALC.086",
+  "domain": "CALC",
+  "unit": 9,
+  "orderInUnit": 6,
+  "standard": "CALC.APP.A.1",
+  "difficulty": 2,
+  "prompt": "Find the $x$-coordinate of the inflection point of $f(x) = x^3 - 6x^2 + 9x + 2$.",
+  "answerType": "numeric",
+  "primaryAnswer": "2",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "An inflection point is where concavity changes, which is where $f''$ changes sign. Differentiate twice.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "An inflection point is where concavity changes, which is where $f''$ changes sign. Differentiate twice."
+    },
+    {
+      "level": "guide",
+      "text": "$f'(x) = 3x^2 - 12x + 9$ and $f''(x) = 6x - 12$. Where is $f''$ zero?"
+    },
+    {
+      "level": "reveal",
+      "text": "$6x - 12 = 0$ gives $x = 2$. Since $f''$ is negative left of $2$ and positive right of $2$, concavity really does flip there."
+    }
+  ],
+  "explanation": [
+    "$f'(x) = 3x^2 - 12x + 9$, so $f''(x) = 6x - 12$.",
+    "$f''(x) = 0$ at $x = 2$. For $x < 2$, $f'' < 0$ (concave down); for $x > 2$, $f'' > 0$ (concave up).",
+    "Concavity changes, so $x = 2$ is the inflection point. (Its $y$-value is $f(2) = 8 - 24 + 18 + 2 = 4$.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Midpoint of the two extremes",
+      "steps": [
+        "$f'(x) = 3(x - 1)(x - 3)$, so $f$ has a local max at $x = 1$ and a local min at $x = 3$.",
+        "Every cubic is symmetric about its inflection point, which sits exactly halfway between its two turning points.",
+        "Halfway between $1$ and $3$ is $2$."
+      ]
+    }
+  ],
+  "tags": [
+    "inflection-point",
+    "concavity",
+    "second-derivative"
+  ],
+  "estimatedSeconds": 50
+}

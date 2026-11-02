@@ -1,0 +1,54 @@
+{
+  "id": "CALC.020",
+  "domain": "CALC",
+  "unit": 2,
+  "orderInUnit": 10,
+  "standard": "CALC.LIM.A.2",
+  "difficulty": 3,
+  "prompt": "An engineer studies a cart whose mass $m(t)$ (in kg) and speed $v(t)$ (in m/s) both change with time. She knows $\\lim_{t \\to 2} m(t) = 3$ and $\\lim_{t \\to 2} v(t) = 6$. The kinetic energy is $K(t) = \\frac{1}{2} m(t) \\, v(t)^2$. Find $\\lim_{t \\to 2} K(t)$ in joules.",
+  "answerType": "numeric",
+  "primaryAnswer": "54",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "The limit laws let you handle products and powers piece by piece: limit of a product is the product of the limits, limit of a square is the square of the limit.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The limit laws let you handle products and powers piece by piece: limit of a product is the product of the limits, limit of a square is the square of the limit."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if $\\lim v = 6$, then $\\lim v^2 = 6^2 = 36$. Now bring in the mass and the $\\frac{1}{2}$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\lim K = \\frac{1}{2} \\cdot \\lim m \\cdot (\\lim v)^2 = \\frac{1}{2} \\cdot 3 \\cdot 36$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{1}{2} \\cdot 3 \\cdot 36 = 54$ joules."
+    }
+  ],
+  "explanation": [
+    "Power law: $\\lim v(t)^2 = (\\lim v(t))^2 = 36$.",
+    "Product and constant laws: $\\lim K(t) = \\frac{1}{2} \\cdot 3 \\cdot 36$.",
+    "$= 54$ joules."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Common trap",
+      "steps": [
+        "Do not square the mass or forget the $\\frac{1}{2}$: $3^2 \\cdot 6 = 54$ happens to match here only by coincidence, so check the structure, not the number.",
+        "The formula squares the SPEED: $v^2 = 36$. Then multiply by mass $3$ and by $\\frac{1}{2}$.",
+        "$\\frac{1}{2}(3)(36) = 54$."
+      ]
+    }
+  ],
+  "tags": [
+    "limit-laws",
+    "word-problem",
+    "multi-step"
+  ],
+  "estimatedSeconds": 70
+}

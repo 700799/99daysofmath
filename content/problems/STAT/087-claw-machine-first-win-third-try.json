@@ -1,0 +1,50 @@
+{
+  "id": "STAT.087",
+  "domain": "STAT",
+  "unit": 9,
+  "orderInUnit": 7,
+  "standard": "STAT.PROB.C.2",
+  "difficulty": 2,
+  "prompt": "A claw machine grabs a prize on each try with probability $0.25$, independently. What is the probability that a player's FIRST win comes on exactly the $3$rd try? Round to four decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "0.1406",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.001,
+  "hint": "First win on try 3 means: miss, miss, then win. Multiply the three probabilities.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "First win on try 3 means: miss, miss, then win. Multiply the three probabilities."
+    },
+    {
+      "level": "guide",
+      "text": "The geometric formula: $P(Y = k) = (1-p)^{k-1} p$. Here $k = 3$, $p = 0.25$."
+    },
+    {
+      "level": "reveal",
+      "text": "$(0.75)^2(0.25) = 0.5625 \\times 0.25 = 0.140625 \\approx 0.1406$."
+    }
+  ],
+  "explanation": [
+    "The first success on the 3rd trial requires two failures followed by one success.",
+    "$P(Y = 3) = (0.75)(0.75)(0.25)$.",
+    "$0.5625 \\times 0.25 = 0.140625$, which rounds to $0.1406$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Shrinking chances",
+      "steps": [
+        "Win on try 1: $0.25$.",
+        "Win first on try 2: $0.75 \\times 0.25 = 0.1875$.",
+        "Win first on try 3: another factor of $0.75$: $0.1875 \\times 0.75 = 0.140625$. Each later try is $75\\%$ as likely as the one before."
+      ]
+    }
+  ],
+  "tags": [
+    "geometric",
+    "probability",
+    "word-problem"
+  ],
+  "estimatedSeconds": 55
+}

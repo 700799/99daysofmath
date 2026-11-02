@@ -1,0 +1,50 @@
+{
+  "id": "STAT.021",
+  "domain": "STAT",
+  "unit": 3,
+  "orderInUnit": 1,
+  "standard": "STAT.DATA.C.1",
+  "difficulty": 1,
+  "prompt": "Scores on a standardized test have mean $500$ and standard deviation $100$. Jordan scored $650$. What is Jordan's $z$-score?",
+  "answerType": "numeric",
+  "primaryAnswer": "1.5",
+  "alternativeAnswers": [
+    "3/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "A $z$-score counts how many standard deviations a value sits above (or below) the mean.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "A $z$-score counts how many standard deviations a value sits above (or below) the mean."
+    },
+    {
+      "level": "guide",
+      "text": "$z = \\frac{x - \\text{mean}}{\\text{SD}} = \\frac{650 - 500}{100}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$z = \\frac{150}{100} = 1.5$."
+    }
+  ],
+  "explanation": [
+    "Jordan is $650 - 500 = 150$ points above the mean.",
+    "One standard deviation is $100$ points, so $150$ points is $1.5$ standard deviations.",
+    "$z = 1.5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Count in SD steps",
+      "steps": [
+        "One SD above the mean is $600$; two SDs above is $700$.",
+        "$650$ is exactly halfway between those, so it is 1.5 SDs above the mean."
+      ]
+    }
+  ],
+  "tags": [
+    "z-score",
+    "standardizing",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

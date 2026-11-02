@@ -134,6 +134,8 @@ const MASTERY_STICKERS: StickerDef[] = [
   { id: 'mastery-GEO', emoji: '📏', label: 'Proof Master', category: 'mastery', hint: 'Finish all High School Geometry units' },
   { id: 'mastery-TRIG', emoji: '🌊', label: 'Wave Rider', category: 'mastery', hint: 'Finish all Trigonometry units' },
   { id: 'mastery-PC', emoji: '🎢', label: 'Precalc Pioneer', category: 'mastery', hint: 'Finish all Precalculus units' },
+  { id: 'mastery-CALC', emoji: '📈', label: 'Limit Breaker', category: 'mastery', hint: 'Finish all AP Calculus AB units' },
+  { id: 'mastery-STAT', emoji: '🧪', label: 'Data Detective', category: 'mastery', hint: 'Finish all AP Statistics units' },
   { id: 'mastery-grand', emoji: '🏅', label: '6th-Grade Champion', category: 'mastery', hint: 'Master every 6th-grade domain' },
 ];
 
@@ -162,6 +164,8 @@ export const UNIT_COUNT_BY_DOMAIN: Record<Domain, number> = {
   TRIG: 14,
   PC: 14,
   SAT: 18,
+  CALC: 14,
+  STAT: 14,
 };
 
 const ALL_UNIT_STICKERS: StickerDef[] = (() => {

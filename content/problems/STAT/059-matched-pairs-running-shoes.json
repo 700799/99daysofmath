@@ -1,0 +1,85 @@
+{
+  "id": "STAT.059",
+  "domain": "STAT",
+  "unit": 6,
+  "orderInUnit": 9,
+  "standard": "STAT.COLL.B.1",
+  "difficulty": 3,
+  "prompt": "To compare two running shoe brands, each of $20$ runners runs a timed mile in Brand X and a timed mile in Brand Y, with the order decided by a coin flip for each runner. Which design is this, and what is its advantage?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Completely randomized design; it is the simplest to run",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "Matched pairs design; each runner is their own control, so runner-to-runner differences are removed from the comparison",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "Observational study; the runners chose their own shoes",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Cluster sample; the runners were grouped by brand",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Every runner tries BOTH treatments. That is the fingerprint of one specific design.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Every runner tries BOTH treatments. That is the fingerprint of one specific design."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: a fast runner in X and a slow runner in Y tells you nothing about the shoes. But the SAME runner in X then Y, compared, cancels out that runner's ability. That is the whole idea."
+    },
+    {
+      "level": "guide",
+      "text": "Comparing each runner's two times is a matched pairs design. The coin flip randomizes the order so practice or fatigue does not favor one brand."
+    },
+    {
+      "level": "reveal",
+      "text": "Matched pairs, and the advantage is removing runner-to-runner variability: choice B."
+    }
+  ],
+  "explanation": [
+    "Each runner receives both treatments, and the two times for that runner are compared. This is a matched pairs design, a special block design where each subject is a block.",
+    "Runners vary hugely in speed. By comparing a runner only with themselves, that variability is removed, making a real shoe difference much easier to detect.",
+    "Randomizing the order of X and Y controls for warm-up and fatigue. Choice B."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "How the analysis changes",
+      "steps": [
+        "Instead of comparing the 20 X-times with the 20 Y-times as two groups, compute each runner's difference (X time minus Y time).",
+        "You get 20 differences, and the question becomes \"is the average difference zero?\"",
+        "This is the paired-data method that returns in the inference units."
+      ]
+    },
+    {
+      "title": "The trap in choice A",
+      "steps": [
+        "A completely randomized design would give 10 runners Brand X and 10 Brand Y, once each.",
+        "Here nobody is assigned to one brand; everyone does both.",
+        "Only the ORDER is randomized, which is the signature of matched pairs."
+      ]
+    }
+  ],
+  "tags": [
+    "matched-pairs",
+    "blocking",
+    "experimental-design",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

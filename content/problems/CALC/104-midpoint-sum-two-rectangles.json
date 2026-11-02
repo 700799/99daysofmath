@@ -1,0 +1,48 @@
+{
+  "id": "CALC.104",
+  "domain": "CALC",
+  "unit": 11,
+  "orderInUnit": 4,
+  "standard": "CALC.INT.A.1",
+  "difficulty": 2,
+  "prompt": "Estimate $\\int_0^4 (x^2 + 1) \\, dx$ using a midpoint Riemann sum with $2$ equal subintervals.",
+  "answerType": "numeric",
+  "primaryAnswer": "24",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two subintervals on $[0, 4]$: $[0, 2]$ and $[2, 4]$, each of width $2$. A midpoint sum evaluates $f$ at the CENTER of each.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two subintervals on $[0, 4]$: $[0, 2]$ and $[2, 4]$, each of width $2$. A midpoint sum evaluates $f$ at the CENTER of each."
+    },
+    {
+      "level": "guide",
+      "text": "Midpoints are $x = 1$ and $x = 3$. Compute $f(1)$ and $f(3)$, then multiply the sum by the width $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$f(1) = 2$, $f(3) = 10$. Sum $= 2(2 + 10) = 24$."
+    }
+  ],
+  "explanation": [
+    "$\\Delta x = 2$; the subintervals are $[0, 2]$ and $[2, 4]$ with midpoints $1$ and $3$.",
+    "$f(1) = 1 + 1 = 2$ and $f(3) = 9 + 1 = 10$.",
+    "Midpoint sum $= 2 \\cdot 2 + 2 \\cdot 10 = 24$. The exact value is $\\frac{64}{3} + 4 \\approx 25.33$, so the midpoint rule is already close with just two rectangles."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why midpoints beat endpoints",
+      "steps": [
+        "With the same two subintervals, the left sum is $2(f(0) + f(2)) = 2(1 + 5) = 12$ and the right sum is $2(f(2) + f(4)) = 2(5 + 17) = 44$.",
+        "Those are far off in opposite directions. The midpoint sum, $24$, lands near the truth.",
+        "A midpoint rectangle overshoots on one half of its interval and undershoots on the other, and the errors largely cancel."
+      ]
+    }
+  ],
+  "tags": [
+    "riemann-sum",
+    "midpoint-sum"
+  ],
+  "estimatedSeconds": 50
+}

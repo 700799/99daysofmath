@@ -1,0 +1,54 @@
+{
+  "id": "CALC.009",
+  "domain": "CALC",
+  "unit": 1,
+  "orderInUnit": 9,
+  "standard": "CALC.LIM.A.1",
+  "difficulty": 3,
+  "prompt": "The graph of $f$ has two pieces: for $x < -1$ it follows the line $y = 2x + 7$, and for $x \\ge -1$ it follows the parabola $y = x^2 + 4$. Find $\\lim_{x \\to -1} f(x)$.",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Two pieces means two one-sided limits. Find each, then see whether they agree.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Two pieces means two one-sided limits. Find each, then see whether they agree."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $y = x$ for $x < 1$ and $y = 2 - x$ for $x \\ge 1$. Left side heads to $1$, right side to $1$. They agree, so the limit is $1$. Same plan here, with $x = -1$."
+    },
+    {
+      "level": "guide",
+      "text": "Left piece at $x = -1$: $2(-1) + 7$. Right piece at $x = -1$: $(-1)^2 + 4$. Compute both."
+    },
+    {
+      "level": "reveal",
+      "text": "Left: $-2 + 7 = 5$. Right: $1 + 4 = 5$. They match, so the limit is $5$."
+    }
+  ],
+  "explanation": [
+    "From the left, $f$ follows $2x + 7$, which heads to $2(-1) + 7 = 5$.",
+    "From the right, $f$ follows $x^2 + 4$, which heads to $(-1)^2 + 4 = 5$.",
+    "Both one-sided limits are $5$, so $\\lim_{x \\to -1} f(x) = 5$. The two pieces join without a jump."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Watch the sign trap",
+      "steps": [
+        "A common slip is $(-1)^2 = -1$. Squaring a negative gives a positive: $(-1)^2 = 1$.",
+        "So the parabola piece gives $1 + 4 = 5$, not $3$.",
+        "With the sign handled, both pieces agree at $5$."
+      ]
+    }
+  ],
+  "tags": [
+    "one-sided-limit",
+    "piecewise",
+    "multi-step"
+  ],
+  "estimatedSeconds": 65
+}

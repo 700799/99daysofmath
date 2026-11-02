@@ -1,0 +1,48 @@
+{
+  "id": "CALC.041",
+  "domain": "CALC",
+  "unit": 5,
+  "orderInUnit": 1,
+  "standard": "CALC.DER.A.1",
+  "difficulty": 1,
+  "prompt": "Find the average rate of change of $f(x) = x^2$ on the interval $[1, 3]$.",
+  "answerType": "numeric",
+  "primaryAnswer": "4",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Average rate of change is the slope of the line joining the two endpoints: $\\frac{f(3) - f(1)}{3 - 1}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Average rate of change is the slope of the line joining the two endpoints: $\\frac{f(3) - f(1)}{3 - 1}$."
+    },
+    {
+      "level": "guide",
+      "text": "$f(3) = 9$ and $f(1) = 1$. Rise is $8$, run is $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{8}{2} = 4$."
+    }
+  ],
+  "explanation": [
+    "Average rate of change $= \\frac{f(b) - f(a)}{b - a}$.",
+    "$\\frac{f(3) - f(1)}{3 - 1} = \\frac{9 - 1}{2}$.",
+    "$= 4$. That is the slope of the secant line through $(1, 1)$ and $(3, 9)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why it is called a secant slope",
+      "steps": [
+        "Plot $(1, 1)$ and $(3, 9)$ on the parabola and draw the straight line through them.",
+        "Its slope is $\\frac{9 - 1}{3 - 1} = 4$ — ordinary Algebra 1 slope.",
+        "Later, sliding the second point toward the first turns this secant into a tangent, and the average rate into an instantaneous one."
+      ]
+    }
+  ],
+  "tags": [
+    "average-rate-of-change",
+    "secant"
+  ],
+  "estimatedSeconds": 35
+}

@@ -1,0 +1,71 @@
+{
+  "id": "CALC.087",
+  "domain": "CALC",
+  "unit": 9,
+  "orderInUnit": 7,
+  "standard": "CALC.APP.A.1",
+  "difficulty": 2,
+  "prompt": "A bacteria population (in thousands) is modeled by $P(t) = t^3 - 9t^2 + 24t + 10$ for $0 \\le t \\le 6$ hours. During which time interval is the population decreasing?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "$0 < t < 2$",
+      "correct": false
+    },
+    {
+      "id": "B",
+      "label": "$2 < t < 4$",
+      "correct": true
+    },
+    {
+      "id": "C",
+      "label": "$4 < t < 6$",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "It is never decreasing.",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "B",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Decreasing means $P'(t) < 0$. Find the derivative and factor it.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Decreasing means $P'(t) < 0$. Find the derivative and factor it."
+    },
+    {
+      "level": "guide",
+      "text": "$P'(t) = 3t^2 - 18t + 24 = 3(t - 2)(t - 4)$. Where is this product negative?"
+    },
+    {
+      "level": "reveal",
+      "text": "Between the roots, $2 < t < 4$, one factor is negative and one positive, so $P' < 0$. Choice B."
+    }
+  ],
+  "explanation": [
+    "$P'(t) = 3t^2 - 18t + 24 = 3(t^2 - 6t + 8) = 3(t - 2)(t - 4)$.",
+    "Sign chart: $P' > 0$ on $(0, 2)$, $P' < 0$ on $(2, 4)$, $P' > 0$ on $(4, 6)$.",
+    "The population falls only between hours $2$ and $4$: choice B. It peaks at $t = 2$ with $P(2) = 8 - 36 + 48 + 10 = 30$ thousand and bottoms out at $t = 4$ with $P(4) = 26$ thousand."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Test a point in each interval",
+      "steps": [
+        "$P'(1) = 3 - 18 + 24 = 9 > 0$: growing.",
+        "$P'(3) = 27 - 54 + 24 = -3 < 0$: shrinking.",
+        "$P'(5) = 75 - 90 + 24 = 9 > 0$: growing again. Only the middle interval is a decline."
+      ]
+    }
+  ],
+  "tags": [
+    "increasing-decreasing",
+    "first-derivative",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

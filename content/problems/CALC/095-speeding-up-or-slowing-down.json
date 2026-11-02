@@ -1,0 +1,72 @@
+{
+  "id": "CALC.095",
+  "domain": "CALC",
+  "unit": 10,
+  "orderInUnit": 5,
+  "standard": "CALC.APP.A.2",
+  "difficulty": 2,
+  "prompt": "A particle has velocity $v(t) = t^2 - 4t + 3$ m/s. At $t = 2.5$ seconds, which describes its motion?",
+  "answerType": "multiple-choice",
+  "choices": [
+    {
+      "id": "A",
+      "label": "Moving left and slowing down",
+      "correct": true
+    },
+    {
+      "id": "B",
+      "label": "Moving left and speeding up",
+      "correct": false
+    },
+    {
+      "id": "C",
+      "label": "Moving right and speeding up",
+      "correct": false
+    },
+    {
+      "id": "D",
+      "label": "Moving right and slowing down",
+      "correct": false
+    }
+  ],
+  "primaryAnswer": "A",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Direction comes from the sign of $v$. Speeding up or slowing down depends on whether $v$ and $a$ have the SAME sign or OPPOSITE signs.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Direction comes from the sign of $v$. Speeding up or slowing down depends on whether $v$ and $a$ have the SAME sign or OPPOSITE signs."
+    },
+    {
+      "level": "guide",
+      "text": "$v(2.5) = 6.25 - 10 + 3 = -0.75$ (negative). $a(t) = 2t - 4$, so $a(2.5) = 1$ (positive)."
+    },
+    {
+      "level": "reveal",
+      "text": "Negative velocity: moving left. Opposite signs: slowing down. Choice A."
+    }
+  ],
+  "explanation": [
+    "$v(2.5) = (2.5)^2 - 4(2.5) + 3 = 6.25 - 10 + 3 = -0.75 < 0$, so the particle moves left.",
+    "$a(t) = v'(t) = 2t - 4$, so $a(2.5) = 1 > 0$.",
+    "Velocity and acceleration have opposite signs, so the speed $|v|$ is decreasing: the particle is slowing down. Choice A. (Indeed it stops at $t = 3$, where $v = 0$.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Watch the speed directly",
+      "steps": [
+        "$v(2.4) = 5.76 - 9.6 + 3 = -0.84$, speed $0.84$.",
+        "$v(2.6) = 6.76 - 10.4 + 3 = -0.64$, speed $0.64$.",
+        "The speed is dropping from $0.84$ toward $0.64$ while the velocity stays negative: moving left and slowing down."
+      ]
+    }
+  ],
+  "tags": [
+    "motion",
+    "acceleration",
+    "speed",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

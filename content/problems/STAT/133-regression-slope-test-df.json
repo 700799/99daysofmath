@@ -1,0 +1,49 @@
+{
+  "id": "STAT.133",
+  "domain": "STAT",
+  "unit": 14,
+  "orderInUnit": 3,
+  "standard": "STAT.INF.C.3",
+  "difficulty": 1,
+  "prompt": "A researcher fits a least-squares line to data from $20$ randomly chosen farms, relating fertilizer amount to corn yield. For the $t$-test of the slope, $H_0: \\beta = 0$, how many degrees of freedom are used?",
+  "answerType": "numeric",
+  "primaryAnswer": "18",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Regression inference uses df $= n - 2$, because the line estimates TWO parameters: slope and intercept.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Regression inference uses df $= n - 2$, because the line estimates TWO parameters: slope and intercept."
+    },
+    {
+      "level": "guide",
+      "text": "$n = 20$ farms. Subtract 2."
+    },
+    {
+      "level": "reveal",
+      "text": "df $= 20 - 2 = 18$."
+    }
+  ],
+  "explanation": [
+    "For inference on the slope, the $t$ distribution has $n - 2$ degrees of freedom.",
+    "Two are lost because both the intercept and slope are estimated from the data.",
+    "df $= 20 - 2 = 18$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Compare with a one-sample t",
+      "steps": [
+        "A one-sample $t$-test estimates one thing (the mean), so df $= n - 1$.",
+        "A regression line estimates two things, so it loses two: df $= n - 2$.",
+        "With 20 farms, that is 18."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "degrees-of-freedom",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

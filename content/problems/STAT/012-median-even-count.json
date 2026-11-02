@@ -1,0 +1,49 @@
+{
+  "id": "STAT.012",
+  "domain": "STAT",
+  "unit": 2,
+  "orderInUnit": 2,
+  "standard": "STAT.DATA.B.1",
+  "difficulty": 1,
+  "prompt": "The numbers of text messages six friends sent during lunch were $4, 9, 12, 15, 20, 26$. What is the median?",
+  "answerType": "numeric",
+  "primaryAnswer": "13.5",
+  "alternativeAnswers": [
+    "27/2"
+  ],
+  "acceptanceMode": "normalized",
+  "hint": "The list is already in order. With an EVEN number of values there are two middle numbers.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The list is already in order. With an EVEN number of values there are two middle numbers."
+    },
+    {
+      "level": "guide",
+      "text": "The two middle values are the 3rd and 4th: $12$ and $15$. Average them."
+    },
+    {
+      "level": "reveal",
+      "text": "$\\frac{12 + 15}{2} = 13.5$ messages."
+    }
+  ],
+  "explanation": [
+    "Six values in order: $4, 9, 12, 15, 20, 26$.",
+    "The middle two are $12$ and $15$.",
+    "Median $= \\frac{12 + 15}{2} = 13.5$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Cross off from both ends",
+      "steps": [
+        "Cross off 4 and 26. Cross off 9 and 20.",
+        "Two numbers remain, 12 and 15; halfway between them is 13.5."
+      ]
+    }
+  ],
+  "tags": [
+    "median",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

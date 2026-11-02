@@ -1,0 +1,48 @@
+{
+  "id": "STAT.013",
+  "domain": "STAT",
+  "unit": 2,
+  "orderInUnit": 3,
+  "standard": "STAT.DATA.B.1",
+  "difficulty": 1,
+  "prompt": "The daily high temperatures (°F) in a town one week were $58, 63, 71, 66, 74, 60$ and $69$. What is the range of the temperatures?",
+  "answerType": "numeric",
+  "primaryAnswer": "16",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Range $=$ maximum $-$ minimum. It is a single number, not \"58 to 74\".",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Range $=$ maximum $-$ minimum. It is a single number, not \"58 to 74\"."
+    },
+    {
+      "level": "guide",
+      "text": "Find the hottest and coldest days: $74$ and $58$."
+    },
+    {
+      "level": "reveal",
+      "text": "$74 - 58 = 16$ degrees."
+    }
+  ],
+  "explanation": [
+    "The largest value is $74$ and the smallest is $58$.",
+    "Range $= 74 - 58 = 16$.",
+    "The range is the simplest measure of spread, though it depends only on the two extremes."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Sort first",
+      "steps": [
+        "In order: $58, 60, 63, 66, 69, 71, 74$.",
+        "The ends are 58 and 74, so the range is $74 - 58 = 16$."
+      ]
+    }
+  ],
+  "tags": [
+    "range",
+    "spread",
+    "word-problem"
+  ],
+  "estimatedSeconds": 30
+}

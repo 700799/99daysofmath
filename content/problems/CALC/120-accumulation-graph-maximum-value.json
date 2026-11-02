@@ -1,0 +1,56 @@
+{
+  "id": "CALC.120",
+  "domain": "CALC",
+  "unit": 12,
+  "orderInUnit": 10,
+  "standard": "CALC.INT.A.2",
+  "difficulty": 3,
+  "prompt": "The graph of $f$ on $[0, 4]$ is made of line segments: $f(t) = 2$ for $0 \\le t \\le 2$, then a straight line from $(2, 2)$ down to $(4, -2)$. Let $g(x) = \\int_0^x f(t) \\, dt$. What is the maximum value of $g$ on $[0, 4]$?",
+  "answerType": "numeric",
+  "primaryAnswer": "5",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "By the FTC, $g'(x) = f(x)$. So $g$ increases while $f > 0$ and decreases once $f < 0$. The maximum is where $f$ crosses from positive to negative.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "By the FTC, $g'(x) = f(x)$. So $g$ increases while $f > 0$ and decreases once $f < 0$. The maximum is where $f$ crosses from positive to negative."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: the line from $(2, 2)$ to $(4, -2)$ has slope $-2$, so it is $f(t) = 2 - 2(t - 2) = 6 - 2t$. It crosses zero at $t = 3$."
+    },
+    {
+      "level": "guide",
+      "text": "So $g$ peaks at $x = 3$. Compute $g(3)$ as area: a $2 \\times 2$ rectangle on $[0, 2]$ plus a triangle on $[2, 3]$ with base $1$ and height $2$."
+    },
+    {
+      "level": "reveal",
+      "text": "$g(3) = 4 + 1 = 5$."
+    }
+  ],
+  "explanation": [
+    "$g'(x) = f(x)$. The sign of $f$: positive on $[0, 3)$, zero at $t = 3$, negative on $(3, 4]$. So $g$ rises until $x = 3$ and falls after: its maximum is $g(3)$.",
+    "Area under $f$ from $0$ to $3$: rectangle $2 \\cdot 2 = 4$ on $[0, 2]$, plus the triangle from $t = 2$ (height $2$) to $t = 3$ (height $0$): $\\frac{1}{2}(1)(2) = 1$.",
+    "$g(3) = 4 + 1 = 5$. For comparison, $g(4) = 5 - 1 = 4$ (the triangle below the axis on $[3, 4]$ subtracts $1$) and $g(0) = 0$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why not the endpoint?",
+      "steps": [
+        "Candidates for a maximum on a closed interval: critical points of $g$ and the endpoints. $g(0) = 0$ and $g(4) = 4$.",
+        "The only critical point where $g'$ changes sign is $x = 3$, with $g(3) = 5$.",
+        "$5$ beats both endpoints, so the maximum value is $5$."
+      ]
+    }
+  ],
+  "tags": [
+    "accumulation-function",
+    "fundamental-theorem",
+    "graph",
+    "absolute-extrema",
+    "multi-step"
+  ],
+  "estimatedSeconds": 95
+}

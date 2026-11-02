@@ -24,6 +24,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Meet the parent functions',
       body: 'A few basic shapes do all the work: the line y = x, the parabola y = x², the V of y = |x|, and the curve y = √x. Every other graph in the family is one of these, moved. Learn the four plain shapes and the rest is just moving.',
+      why: 'Each parent is just a rule that turns x into a height. For y = x the height equals x, for y = x² it is x times x, for y = |x| it is the distance from zero, and for y = √x it is the number that squares to x. Different rules make different shapes, and every other graph in the family is one of these rules slightly changed.',
       art: (() => {
         const ax = axes({ x: [-3, 3], y: [-3, 5] }, { ticks: { x: [-2, 0, 2], y: [-2, 0, 2, 4] }, grid: true, pad: 30 });
         return art(
@@ -40,11 +41,12 @@ export const PC_SLIDES_U01_04: SlideBank = {
         );
       })(),
     },
-    { kind: 'concept', head: 'The graph is a sticker on a window', body: 'Picture the parent graph printed on a clear sticker. You can peel it up and press it down somewhere else, or stretch it taller, or flip it over. The shape never changes — only where it sits and how tall it is.' },
+    { kind: 'concept', head: 'The graph is a sticker on a window', body: 'Picture the parent graph printed on a clear sticker. You can peel it up and press it down somewhere else, or stretch it taller, or flip it over. The shape never changes — only where it sits and how tall it is.', why: 'Moving a graph only changes the coordinates of its points, not how the points sit relative to each other. If you add 3 to every height, every point rises by the same 3 together, so the distances between points stay exactly the same. That is why a transformed graph is the same shape in a new place, never a bent or squashed version.' },
     {
       kind: 'concept',
       head: 'Outside moves it up and down',
       body: 'A number added OUTSIDE the function changes every y-value. In f(x) + k, every point rises by k, so the whole sticker slides straight up. If k is negative, the sticker slides down instead.',
+      why: 'A graph is the set of points (x, f(x)). Writing f(x) + 3 keeps each x the same but makes its height 3 bigger, so a point like (2, 4) on y = x² becomes (2, 7). Every point climbs by 3 at the same moment, and that is exactly the whole graph sliding up.',
       compare: {
         cols: [
           { title: 'y = x²', tex: 'k = 0', lines: ['Vertex at (0, 0)', 'The parent, untouched'], tone: 'plain' },
@@ -81,6 +83,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Inside moves it left and right',
       body: 'A number tucked INSIDE, right next to the x, moves the graph sideways. In f(x − h) the sticker slides RIGHT by h. This one feels backwards at first, so it earns its own nickname: minus moves right.',
+      why: 'In f(x − 2), the new graph gives the height the old graph gave when its input was 2 smaller. To see the old height from x = 0, you now have to plug in x = 2, because 2 − 2 = 0. Every feature of the old graph arrives 2 steps later, so the picture sits 2 units to the right.',
       compare: {
         cols: [
           { title: 'y = (x − 2)²', tex: 'h = 2', lines: ['Moves RIGHT 2', 'Vertex at (2, 0)'], tone: 'ok' },
@@ -107,12 +110,13 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: y = x² + 3',
-      body: 'The +3 is OUTSIDE the square, so it lifts every point.\nThe bottom of the parabola moves from (0, 0) up to (0, 3).\nAnswer: the whole graph slides UP 3.',
+      body: 'Look at where the +3 sits in y = x² + 3. What does it do to the parabola?',
       steps: {
         steps: [
-          { tex: 'y = x^{2} + 3', text: 'The +3 is outside the square, so it is a k.' },
-          { tex: 'k = +3', text: 'Positive k means up.' },
-          { tex: '(0,\\,0) \\to (0,\\,3)', text: 'The vertex rises three.' },
+          { tex: 'y = x^{2} + 3', text: 'Ask where the 3 sits. It is added after the squaring is finished, outside the function, so it changes the output height. That makes it the k dial.' },
+          { tex: '(2,\\,4) \\to (2,\\,4 + 3) = (2,\\,7)', text: 'Test one point. (2, 4) is on y = x², and the new rule adds 3 to its height, so it lands at (2, 7). The x stays the same.' },
+          { tex: '(0,\\,0) \\to (0,\\,3)', text: 'Follow the vertex too. Its height 0 becomes 0 + 3 = 3 while x stays 0. The vertex is the lowest point, so it shows where the whole parabola went.' },
+          { tex: 'k = +3 \\Rightarrow \\text{up}', text: 'Every point rises by the same 3, and a positive k always means up. So the shape is unchanged and simply sits 3 higher.' },
         ],
         answer: '\\text{up 3}',
       },
@@ -120,20 +124,64 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Another way: track one point',
-      body: 'Instead of the whole curve, follow the vertex.\nFor y = (x − 4)², the vertex starts at (0, 0) and lands at (4, 0).\nOne point tells you where the whole sticker went, because the shape never changes.',
+      body: 'Instead of the whole curve, follow one point. Where does the vertex of y = (x − 4)² end up, and what does that tell you about the whole graph?',
+      steps: {
+        steps: [
+          { tex: 'x - 4 = 0 \\Rightarrow x = 4', text: 'The vertex of a parabola is where the squared part equals zero, since a square cannot go lower than 0. Here x − 4 = 0 happens at x = 4.' },
+          { tex: '(4 - 4)^{2} = 0', text: 'Put x = 4 into the rule to get the height. The bracket is 0 and 0² = 0, so the vertex is at (4, 0).' },
+          { tex: '(0,\\,0) \\to (4,\\,0)', text: 'The parent vertex was (0, 0), so it moved 4 steps right and 0 steps up. The height did not change, so the slide is purely sideways.' },
+          { tex: '\\text{right } 4', text: 'The graph is a rigid sticker, so every other point moved the same way. One point tells you where the whole graph went.' },
+        ],
+        answer: '\\text{vertex } (4,\\,0),\\ \\text{slid right } 4',
+      },
       table: {
-        head: ['on y = x²', 'add 3 to y', 'on y = x² + 3'],
-        rows: [['(0, 0)', '0 + 3', '(0, 3)'], ['(1, 1)', '1 + 3', '(1, 4)'], ['(2, 4)', '4 + 3', '(2, 7)']],
+        head: ['on y = x²', 'add 4 to x', 'on y = (x − 4)²'],
+        rows: [['(0, 0)', '0 + 4', '(4, 0)'], ['(1, 1)', '1 + 4', '(5, 1)'], ['(2, 4)', '2 + 4', '(6, 4)']],
         mark: 0,
         note: 'Move one point you know and the rest of the curve follows it.',
       },
     },
-    { kind: 'example', head: 'Moving a game sprite', body: 'In a video game, a sprite follows the path y = x². A coder changes it to y = (x − 7)².\nSet the inside to zero: x − 7 = 0, so x = 7.\nThe whole path slides RIGHT 7 steps across the screen.' },
-    { kind: 'example', head: 'Raising a skate ramp', body: 'A skate ramp curves like y = √x, and builders lift the whole thing 3 feet.\nLifting is a vertical move, so the change goes OUTSIDE: y = √x + 3.\nThe front edge that sat at (0, 0) is now at (0, 3).' },
+    {
+      kind: 'example',
+      head: 'Moving a game sprite',
+      body: 'In a video game, a sprite follows the path y = x². A coder changes it to y = (x − 7)². Which way does the path move, and how far?',
+      steps: {
+        steps: [
+          { tex: 'y = (x - 7)^{2}', text: 'The 7 is inside the brackets, touching x before the squaring happens. Inside numbers change the x-direction, so this is a left-right slide.' },
+          { tex: 'x - 7 = 0 \\Rightarrow x = 7', text: 'Find where the bracket is zero, because that is where the lowest point of the path sits. x − 7 = 0 gives x = 7.' },
+          { tex: '(0,\\,0) \\to (7,\\,0)', text: 'Check with the old low point. At x = 7 the height is (7 − 7)² = 0, so (0, 0) has moved to (7, 0). The height did not change.' },
+          { tex: '\\text{right } 7', text: 'Bigger x is to the right, so the path slid right. The minus sign inside is misleading, which is why we solve for the zero instead of reading the sign.' },
+        ],
+        answer: '\\text{right 7 steps}',
+      },
+    },
+    {
+      kind: 'example',
+      head: 'Raising a skate ramp',
+      body: 'A skate ramp curves like y = √x, and builders lift the whole thing 3 feet. What is the new rule, and where does the front edge go?',
+      steps: {
+        steps: [
+          { tex: '\\text{lift} = \\text{change the heights}', text: 'Lifting changes how high each point is, not where it sits left to right. Heights are the outputs, so the change must act on the output.' },
+          { tex: 'y = \\sqrt{x} + 3', text: 'Add 3 AFTER the square root is taken. If the 3 went inside, as in √(x + 3), it would slide the ramp sideways instead of lifting it.' },
+          { tex: '\\sqrt{0} + 3 = 3', text: 'Check the front edge. At x = 0 the square root is 0, so the new height is 0 + 3 = 3.' },
+          { tex: '(0,\\,0) \\to (0,\\,3)', text: 'The front edge moves from (0, 0) to (0, 3), straight up 3 feet with x unchanged. That matches a pure lift.' },
+        ],
+        answer: 'y = \\sqrt{x} + 3',
+      },
+    },
     {
       kind: 'example',
       head: 'Stretching a photo taller',
-      body: 'A photo app triples every height above the middle line. That is a·f(x) with a = 3.\nA point 5 units above the middle jumps to 15 units above.\nThe picture gets taller and skinnier, but nothing slides sideways.',
+      body: 'A photo app triples every height above the middle line. What rule is that, and what happens to a point that sits 5 units above the middle?',
+      steps: {
+        steps: [
+          { tex: 'y = a \\cdot f(x),\\ a = 3', text: 'Tripling every height means multiplying each output by 3. A number multiplied in front of the function is the a dial, so here a = 3.' },
+          { tex: '5 \\to 3 \\cdot 5 = 15', text: 'Test the point 5 units up. Its height 5 is multiplied by 3, so it jumps to 15 units above the middle line.' },
+          { tex: '3 \\cdot 0 = 0', text: 'A point right on the middle line has height 0, and 3 times 0 is still 0. So points on the axis stay put while the others stretch away from it.' },
+          { tex: 'x \\text{ unchanged}', text: 'Only the output was multiplied, never the x-value, so nothing slides sideways. Taller heights with the same x-positions make the picture taller and skinnier.' },
+        ],
+        answer: 'y = 3f(x):\\ \\text{every height} \\times 3',
+      },
       compare: {
         cols: [
           { title: 'a = 3 · taller', tex: 'y = 3x^{2}', lines: ['Every height ×3', 'Narrow and steep'], tone: 'ok' },
@@ -145,7 +193,16 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Flipping with a minus in front',
-      body: 'Compare y = |x| with y = −|x|.\nEvery positive height becomes negative, so the V turns upside down.\nThe sticker got flipped over the x-axis like a pancake.',
+      body: 'Compare y = x² with y = −x². What does the minus in front do to the graph?',
+      steps: {
+        steps: [
+          { tex: 'y = -x^{2} = -1 \\cdot x^{2}', text: 'A minus sign out front is the same as multiplying the output by −1. So this is the a dial with a = −1.' },
+          { tex: 'x = 2:\\ \\ 4 \\to -4', text: 'Test x = 2. The parent gives height 4, and multiplying by −1 gives −4. A positive height turns into a negative one of the same size.' },
+          { tex: '-1 \\cdot 0 = 0', text: 'At x = 0 the height is 0, and −1 times 0 is still 0. So the point on the x-axis does not move, like a hinge.' },
+          { tex: '(2,\\,4) \\to (2,\\,-4)', text: 'Every point lands as far below the axis as it was above it, with the same x. That is a reflection over the x-axis, so the smile becomes a frown.' },
+        ],
+        answer: '\\text{flipped over the } x\\text{-axis}',
+      },
       art: (() => {
         const ax = axes({ x: [-3, 3], y: [-6, 6] }, { ticks: { x: [-2, 0, 2], y: [-4, 0, 4] }, grid: true, pad: 30 });
         return art(
@@ -163,7 +220,16 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Another way: build a tiny table',
-      body: 'Unsure what a change does? Test three x-values.\nFor y = −|x| + 7: at x = −2 you get 5, at x = 0 you get 7, at x = 3 you get 4.\nThe numbers climb to 7 and fall again, so the peak is 7.',
+      body: 'Unsure what a change does? Build a small table. For y = (x − 1)², which x gives the lowest point?',
+      steps: {
+        steps: [
+          { tex: 'x - 1 = -1,\\ 0,\\ 1,\\ 2', text: 'Pick x = 0, 1, 2, 3 and subtract 1 from each. That is what the rule does inside the brackets before it squares anything.' },
+          { tex: '(x - 1)^{2} = 1,\\ 0,\\ 1,\\ 4', text: 'Now square each result. Squaring turns −1 into 1, so the heights are 1, 0, 1, and 4.' },
+          { tex: '(1,\\,0)', text: 'The smallest height is 0, and it happens at x = 1. That is exactly where the bracket x − 1 is zero, so the low point is at x = 1, not x = −1.' },
+          { tex: '\\text{vertex moved } (0,0) \\to (1,0)', text: 'The parent y = x² has its low point at x = 0, so the graph slid right 1. The table confirms that a minus inside moves right.' },
+        ],
+        answer: '\\text{lowest point at } x = 1\\ (\\text{right } 1)',
+      },
       table: {
         head: ['x', 'x − 1', '(x − 1)²'],
         rows: [['0', '−1', '1'], ['1', '0', '0'], ['2', '1', '1'], ['3', '2', '4']],
@@ -171,7 +237,20 @@ export const PC_SLIDES_U01_04: SlideBank = {
         note: 'The low point lands where the bracket is zero — at x = 1, not x = −1.',
       },
     },
-    { kind: 'example', head: 'Two moves at once', body: 'For y = (x + 4)² − 6, handle the moves one at a time.\nInside: x + 4 = 0 gives x = −4, so slide LEFT 4.\nOutside: −6 drops it 6. The lowest point lands at (−4, −6).' },
+    {
+      kind: 'example',
+      head: 'Two moves at once',
+      body: 'Find the lowest point of y = (x + 4)² − 6. Handle the two numbers one at a time.',
+      steps: {
+        steps: [
+          { tex: 'y = (x + 4)^{2} - 6', text: 'Sort the numbers first. The +4 touches x inside the brackets, so it moves left or right. The −6 is outside the square, so it moves up or down.' },
+          { tex: 'x + 4 = 0 \\Rightarrow x = -4', text: 'Inside: find where the bracket is zero. x + 4 = 0 gives x = −4, so the graph slides LEFT 4. The plus sign is misleading, so we never read it directly.' },
+          { tex: '(-4 + 4)^{2} - 6 = 0 - 6 = -6', text: 'Outside: put x = −4 into the rule. The square is 0, and the −6 is added to every height, so the lowest height is −6.' },
+          { tex: '(0,\\,0) \\to (-4,\\,0) \\to (-4,\\,-6)', text: 'Put the moves together. The old low point slides left 4, then drops 6, and it lands on (−4, −6).' },
+        ],
+        answer: '(-4,\\,-6)',
+      },
+    },
     {
       kind: 'protip',
       head: 'Inside or outside? Ask first',
@@ -199,15 +278,16 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'challenge',
       head: 'Extra credit: three moves at once',
-      body: 'Find the vertex of y = 2(x − 3)² + 5.\nInside first: x − 3 = 0 gives x = 3, so slide RIGHT 3.\nThe 2 stretches it taller and the +5 lifts it, so the vertex sits at (3, 5).',
+      body: 'Find the vertex of y = 2(x − 3)² + 5, and say which way it opens. Three dials are turned at once, so take them one at a time.',
       steps: {
         steps: [
-          { tex: 'y = -2(x + 1)^{2} + 5', text: 'Three dials are turned at once.' },
-          { tex: 'x + 1 = 0 \\Rightarrow x = -1', text: 'Inside first: the vertex slides LEFT 1.' },
-          { tex: 'a = -2', text: 'Twice as tall, and the minus flips it upside down.' },
-          { tex: '+5', text: 'Outside last: the whole thing lifts 5.' },
+          { tex: 'y = 2(x - 3)^{2} + 5', text: 'Name the three dials. The −3 is inside, the 2 is a multiplier in front, and the +5 is outside. Each one does its own job.' },
+          { tex: 'x - 3 = 0 \\Rightarrow x = 3', text: 'Inside first: the bracket is zero at x = 3, so the vertex slides RIGHT 3. Minus inside means right.' },
+          { tex: 'a = 2 \\Rightarrow 2 \\cdot 0 = 0', text: 'The 2 multiplies every height, so the parabola gets narrower and steeper. The vertex height is 0 and 2 times 0 is 0, so the stretch does not move the vertex.' },
+          { tex: '(3,\\,0) \\to (3,\\,0 + 5)', text: 'The +5 is outside, so every height rises 5. The vertex goes from (3, 0) to (3, 5).' },
+          { tex: 'a = 2 > 0 \\Rightarrow \\text{opens up}', text: 'The 2 is positive, so there is no flip. The arms point up, which makes the vertex the lowest point.' },
         ],
-        answer: '\\text{vertex } (-1,\\,5),\\ \\text{opens down}',
+        answer: '\\text{vertex } (3,\\,5),\\ \\text{opens up}',
       },
     },
     {
@@ -237,6 +317,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'A function is a machine',
       body: 'A function takes a number in, does a job, and drops a new number out. The rule f(x) = x + 4 is a machine that adds 4 to whatever you feed it. Nothing mysterious — put a number in the hopper, catch what falls out.',
+      why: 'A function must give exactly one output for each input, or it would not be a reliable machine. With f(x) = x + 4, putting in 3 always gives 7 and never anything else. That reliability is what lets us chain machines together and run them backwards later.',
       formula: {
         tex: 'f(x) = 3x + 1',
         note: 'Whatever lands in the brackets is what x becomes — a number, a letter, another machine.',
@@ -251,6 +332,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Composition = two machines in a row',
       body: 'In f(g(x)), the output of machine g becomes the input of machine f. The INSIDE machine always runs FIRST, just like nested boxes: you open the small box before the big one. Work inside-out, every single time.',
+      why: 'The output of g is just a number, and f is ready to accept any number, so g\'s answer can be dropped straight into f. But f cannot start until it has its input, which is g\'s answer. So g must finish first. Check with g(x) = x + 1 and f(x) = 2x: g(3) = 4, then f(4) = 8.',
       art: machine('x', 'g then f', 'f(g(x))', { title: 'two machines bolted together', caption: 'The output of the first becomes the input of the second.' }),
       formula: {
         tex: 'f(g(x)) \\quad \\text{— innermost first}',
@@ -261,6 +343,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Order changes the answer',
       body: 'f(g(x)) and g(f(x)) use the same two machines but in opposite orders, and they usually give different answers. Putting on socks then shoes is not the same as shoes then socks. Always read which function is on the inside.',
+      why: 'Take f(x) = 3x + 1 and g(x) = 2x + 1, the pair behind the numbers above. Running g first gives f(g(x)) = 3(2x + 1) + 1 = 6x + 4, but running f first gives g(f(x)) = 2(3x + 1) + 1 = 6x + 3. The extra +1 gets multiplied by a different number depending on the order, so the two answers differ.',
       compare: {
         cols: [
           { title: 'f(g(2))', tex: 'g \\text{ first}', lines: ['g(2) = 5', 'f(5) = 16'], tone: 'accent' },
@@ -273,6 +356,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'An inverse is the UNDO machine',
       body: 'The inverse f⁻¹ takes an output and hands you back the original input. To find its rule, swap x and y and then solve for y. If f adds 9, then f⁻¹ subtracts 9 — the two machines cancel each other out.',
+      why: 'If f turns an input x into an output y, the inverse has to turn that same y back into x, so it is the steps of f done in reverse. Swapping x and y in the equation is exactly that role reversal. Check: f(x) = x + 9 sends 5 to 14, and the inverse subtracts 9 to send 14 back to 5.',
       art: machine('y', 'f⁻¹', 'x', { title: 'the undo machine', caption: 'The inverse runs the same steps backwards, in the opposite order.' }),
       formula: {
         tex: 'f^{-1}(f(x)) = x',
@@ -282,52 +366,117 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: f(g(2))',
-      body: 'Let f(x) = x + 4 and g(x) = 3x.\nInside first: g(2) = 3 × 2 = 6.\nThen f(6) = 6 + 4 = 10.',
+      body: 'Let f(x) = x + 4 and g(x) = 3x. Find f(g(2)). Which machine runs first?',
       steps: {
         steps: [
-          { tex: 'g(2)', text: 'Innermost brackets first — always.' },
-          { tex: 'g(2) = 2 + 3 = 5', text: 'That 5 is now the input for f.' },
-          { tex: 'f(5) = 2(5) + 1 = 11', text: 'Feed it into the outer machine.' },
+          { tex: 'f(g(2))\\ \\to\\ g(2)\\ \\text{first}', text: 'Look for the innermost brackets. g(2) sits inside f, so g must run first, because f cannot start until it has an input.' },
+          { tex: 'g(2) = 3 \\cdot 2 = 6', text: 'Run machine g: its rule is "multiply by 3", so the input 2 becomes 6.' },
+          { tex: 'f(6) = 6 + 4', text: 'That 6 is now the input for f. Put it where x was in f(x) = x + 4, which gives 6 + 4.' },
+          { tex: 'f(6) = 10', text: 'Add to finish. Two machines in a row turned 2 into 10, with g going first.' },
         ],
-        answer: '11',
+        answer: '10',
       },
     },
-    { kind: 'example', head: 'Flip the order: g(f(2))', body: 'Same two machines, opposite order.\nNow f runs first: f(2) = 2 + 4 = 6.\nThen g(6) = 3 × 6 = 18. Different answer, same numbers — order really matters.' },
-    { kind: 'example', head: 'Dollars to euros to yen', body: 'A money app uses e(d) = 0.9d for dollars to euros, then y(e) = 160e for euros to yen.\nStart with $50: 0.9 × 50 = 45 euros.\nThen 160 × 45 = 7200 yen. Two windows, in order.' },
+    {
+      kind: 'example',
+      head: 'Flip the order: g(f(2))',
+      body: 'Use the same machines, f(x) = x + 4 and g(x) = 3x, but in the opposite order. Find g(f(2)) and compare it with the last answer.',
+      steps: {
+        steps: [
+          { tex: 'g(f(2))\\ \\to\\ f(2)\\ \\text{first}', text: 'Now f is the inside machine, because f(2) sits in the brackets of g. So f runs first this time.' },
+          { tex: 'f(2) = 2 + 4 = 6', text: 'Run f: its rule adds 4, so the input 2 becomes 6.' },
+          { tex: 'g(6) = 3 \\cdot 6 = 18', text: 'Feed the 6 into g, whose rule is "multiply by 3". That gives 18.' },
+          { tex: '18 \\ne 10', text: 'The earlier order gave 10, so the order matters. Adding 4 before tripling also triples the 4, while adding after does not.' },
+        ],
+        answer: '18',
+      },
+    },
+    {
+      kind: 'example',
+      head: 'Dollars to euros to yen',
+      body: 'A money app uses e(d) = 0.9d to turn dollars into euros, then y(e) = 160e to turn euros into yen. How many yen is $50?',
+      steps: {
+        steps: [
+          { tex: 'y(e(50))', text: 'Write the trip as a composite. The dollars go through the euro window first, so e is the inside machine and y is outside.' },
+          { tex: 'e(50) = 0.9 \\cdot 50 = 45', text: 'Run the first machine. Each dollar is worth 0.9 euros, so multiply by 0.9 to get 45 euros.' },
+          { tex: 'y(45) = 160 \\cdot 45', text: 'The 45 euros is the input to the yen machine. Each euro is worth 160 yen, so we multiply 45 by 160.' },
+          { tex: '160 \\cdot 45 = 7200', text: 'Compute: 160 × 45 is 160 × 40 = 6400 plus 160 × 5 = 800, which is 7200. Order mattered, since euros had to exist before they could become yen.' },
+        ],
+        answer: '7200 \\text{ yen}',
+      },
+    },
     {
       kind: 'example',
       head: 'Another way: draw the chain',
-      body: 'Write the trip as arrows instead of nested letters.\n50 dollars → 45 euros → 7200 yen.\nEach arrow is one machine, and you follow them left to right. The nesting disappears and the order is obvious.',
+      body: 'Instead of nested letters, draw the machines as boxes in a row. Start with 2, add 3, then double. What comes out?',
+      steps: {
+        steps: [
+          { tex: '2 \\xrightarrow{+3} \\square \\xrightarrow{\\times 2} \\square', text: 'Draw one arrow per machine, left to right, in the order they run. Reading along the arrows replaces hunting for the innermost brackets.' },
+          { tex: '2 + 3 = 5', text: 'First box: add 3 to the input 2. This is the inside machine, so it goes first and gives 5.' },
+          { tex: '5 \\times 2 = 10', text: 'Second box: take the 5 that came out and double it. The output of box one is the input of box two.' },
+          { tex: '2 \\to 5 \\to 10', text: 'The whole trip is 2 to 5 to 10. Swapping the boxes would give (2 × 2) + 3 = 7, so the drawn order is what fixes the answer.' },
+        ],
+        answer: '10',
+      },
       art: machine('2', '+3 → ×2', '10', { title: 'the chain, drawn', caption: 'Drawing the boxes makes the order impossible to get wrong.' }),
     },
     {
       kind: 'example',
       head: 'Discount, then tax',
-      body: 'A jacket costs $80. A coupon takes 25% off, then 10% tax is added.\nDiscount machine: 0.75 × 80 = $60.\nTax machine: 10% of 60 is $6, so the final price is $66.',
+      body: 'A jacket costs $80. A coupon takes 25% off, then 10% tax is added. What is the final price?',
       steps: {
         steps: [
-          { tex: '\\$80 \\cdot 0.75 = \\$60', text: '25% off means keep 75%.' },
-          { tex: '\\$60 \\cdot 1.08 = \\$64.80', text: 'Then 8% tax on the discounted price.' },
+          { tex: '\\text{price} \\to \\text{discount} \\to \\text{tax}', text: 'Treat each step as a machine and run them in the order the store does. The discount comes first, and the tax is charged on whatever is left.' },
+          { tex: '80 \\cdot 0.75 = 60', text: 'Taking 25% off means you keep 75%, so multiply by 0.75. That makes the price $60.' },
+          { tex: '60 \\cdot 1.10 = 66', text: 'Adding 10% tax means paying 110% of the price, so multiply by 1.10. The tax is $6, so the total is $66.' },
+          { tex: '0.75 \\cdot 1.10 = 0.825', text: 'As a check, the two machines combine to one factor of 0.825, and 80 × 0.825 = 66. Tax on the smaller price is smaller, so the order matters.' },
         ],
-        answer: '\\$64.80',
+        answer: '\\$66',
       },
     },
-    { kind: 'example', head: 'Undoing a two-step machine', body: 'Let f(x) = 2x + 1, so f doubles and then adds 1. Find f⁻¹(9).\nUndo the LAST step first: 9 − 1 = 8.\nThen undo the doubling: 8 ÷ 2 = 4. So f⁻¹(9) = 4.' },
+    {
+      kind: 'example',
+      head: 'Undoing a two-step machine',
+      body: 'Let f(x) = 2x + 1, so f doubles and then adds 1. Find f⁻¹(9), the input that makes the output 9.',
+      steps: {
+        steps: [
+          { tex: 'x \\xrightarrow{\\times 2} \\square \\xrightarrow{+1} 9', text: 'List what f does in order: double, then add 1. The inverse must undo those steps in the opposite order, like taking off shoes before socks.' },
+          { tex: '9 - 1 = 8', text: 'The LAST step was adding 1, so undo it FIRST by subtracting 1. Subtraction cancels addition, so 9 becomes 8.' },
+          { tex: '8 \\div 2 = 4', text: 'Now undo the doubling by dividing by 2, since division cancels multiplication. That gives 4.' },
+          { tex: 'f(4) = 2 \\cdot 4 + 1 = 9', text: 'Check by running f forward. Doubling 4 gives 8, and adding 1 gives 9, so the input 4 really does produce 9.' },
+        ],
+        answer: 'f^{-1}(9) = 4',
+      },
+    },
     {
       kind: 'example',
       head: 'Another way: swap x and y',
-      body: 'Write y = 2x + 1, then trade the letters: x = 2y + 1.\nSolve for y: subtract 1 to get x − 1 = 2y, then divide by 2.\nThe rule is f⁻¹(x) = (x − 1) ÷ 2, and plugging in 9 gives 4.',
+      body: 'Find the rule for the inverse of f(x) = 2x + 1 by swapping x and y, then check it with the input 9.',
       steps: {
         steps: [
-          { tex: 'y = 2x + 5', text: 'Write the function with y.' },
-          { tex: 'x = 2y + 5', text: 'Swap x and y — that IS the undo.' },
-          { tex: 'x - 5 = 2y', text: 'Now solve for y.' },
-          { tex: 'y = \\dfrac{x - 5}{2}', text: 'The inverse rule.' },
+          { tex: 'y = 2x + 1', text: 'Write the function with y in place of f(x). Now x is the input and y is the output, which makes it easy to trade their roles.' },
+          { tex: 'x = 2y + 1', text: 'Swap x and y. The inverse takes the old output as its input and gives back the old input, so the two letters trade jobs.' },
+          { tex: 'x - 1 = 2y', text: 'Solve for y. First subtract 1 from both sides to get the 2y alone. Doing the same thing to both sides keeps the equation true.' },
+          { tex: 'y = \\dfrac{x - 1}{2}', text: 'Divide both sides by 2 to isolate y. This is the inverse rule, and it undoes the doubling and the adding in reverse order.' },
+          { tex: 'f^{-1}(9) = \\dfrac{9 - 1}{2} = 4', text: 'Check it with 9. Subtract 1 to get 8, then halve to get 4, which matches the answer from the other method.' },
         ],
-        answer: 'f^{-1}(x) = \\dfrac{x - 5}{2}',
+        answer: 'f^{-1}(x) = \\dfrac{x - 1}{2}',
       },
     },
-    { kind: 'example', head: 'Running a chain backwards', body: 'A store takes 20% off, then adds $5 shipping. You paid $45.\nShipping went on LAST, so peel it off FIRST: 45 − 5 = 40.\nThat $40 is 80% of the original, so 40 ÷ 0.8 = $50.' },
+    {
+      kind: 'example',
+      head: 'Running a chain backwards',
+      body: 'A store takes 20% off, then adds $5 shipping. You paid $45. What was the original price?',
+      steps: {
+        steps: [
+          { tex: '\\text{price} \\xrightarrow{\\times 0.8} \\square \\xrightarrow{+5} 45', text: 'Write the chain in the order it happened: first 20% off (keep 80%), then add $5 shipping. To go backwards, undo the steps in reverse order.' },
+          { tex: '45 - 5 = 40', text: 'Shipping was added LAST, so peel it off FIRST. Subtracting 5 undoes adding 5 and leaves the discounted price of $40.' },
+          { tex: '40 \\div 0.8 = 50', text: 'The discount kept 80% of the price, so undo it by dividing by 0.8. Dividing cancels multiplying, and 40 ÷ 0.8 is 50.' },
+          { tex: '50 \\cdot 0.8 + 5 = 45', text: 'Check by running forward. 80% of 50 is 40, and adding 5 gives 45, exactly what you paid.' },
+        ],
+        answer: '\\$50',
+      },
+    },
     {
       kind: 'protip',
       head: 'Check an inverse by round trip',
@@ -349,7 +498,21 @@ export const PC_SLIDES_U01_04: SlideBank = {
         note: 'f(g(x)) is read like an onion, from the middle out.',
       },
     },
-    { kind: 'challenge', head: 'Extra credit: compose with letters', body: 'Let f(x) = 3x and g(x) = x + 5. Find f(g(x)).\nThe inside machine hands over the whole expression x + 5.\nMachine f triples it: 3(x + 5) = 3x + 15. Check with x = 2: g(2) = 7 and f(7) = 21, and 3(2) + 15 = 21.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: compose with letters',
+      body: 'Let f(x) = 3x and g(x) = x + 5. Find a single rule for f(g(x)), using the letter x instead of a number.',
+      steps: {
+        steps: [
+          { tex: 'f(g(x)) = f(x + 5)', text: 'The inside machine runs first. With a letter input it hands over the whole expression x + 5, just as it would hand over a number.' },
+          { tex: 'f(\\square) = 3 \\cdot \\square', text: 'Recall the rule for f: whatever sits in the brackets gets multiplied by 3. So the box will hold x + 5.' },
+          { tex: 'f(x + 5) = 3(x + 5)', text: 'Put the entire expression x + 5 into f. Keep it in brackets so the 3 multiplies both parts.' },
+          { tex: '3(x + 5) = 3x + 15', text: 'Use the distributive property: 3 times x is 3x and 3 times 5 is 15. Skipping the brackets would give 3x + 5, which is wrong.' },
+          { tex: 'x = 2:\\ g(2) = 7,\\ f(7) = 21 = 3(2) + 15', text: 'Check with x = 2. Running the machines gives g(2) = 7 and f(7) = 21, and the formula gives 3(2) + 15 = 21, so they agree.' },
+        ],
+        answer: 'f(g(x)) = 3x + 15',
+      },
+    },
     {
       kind: 'summary',
       head: 'Forward inside-out, backward in reverse',
@@ -375,6 +538,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Degree and leading coefficient',
       body: 'The DEGREE is the biggest exponent on x. The LEADING COEFFICIENT is the number sitting in front of that biggest term. For 4x³ − 2x + 7 the degree is 3 and the leading coefficient is 4. Those two numbers run the whole show.',
+      why: 'For huge x the highest power swamps everything else. In 4x³ − 2x + 7 at x = 100, the 4x³ term is 4,000,000 while the −2x term is only −200 and the 7 is just 7. So the biggest power and the number in front of it decide the far-away behavior, and the smaller terms hardly matter there.',
       formula: {
         tex: 'p(x) = 2x^{3} - 5x + 1',
         note: 'Two numbers decide the whole shape before you plot a single point.',
@@ -388,6 +552,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'End behavior: where the arms point',
       body: 'The two far ends of a polynomial graph are its ARMS. An EVEN degree makes both arms point the same way; an ODD degree makes them point opposite ways. A positive leading coefficient throws the right arm UP, a negative one throws it DOWN.',
+      why: 'At the far ends the leading term dominates. An even power gives a positive answer for big positive and big negative x, since (−10)⁴ = 10,000, so both arms match. An odd power keeps the sign, since (−10)³ = −1,000, so the arms split. A negative leading coefficient just flips every one of those signs.',
       compare: {
         cols: [
           { title: 'Even degree', tex: 'x^{2},\\ x^{4}', lines: ['Both arms the same way', 'Up/up if a > 0'], tone: 'accent' },
@@ -412,6 +577,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Zeros hide inside the factors',
       body: 'A product is zero only when one of its pieces is zero. So set each factor equal to zero to find the x-intercepts. Watch the sign flip: the factor (x − 5) hides the zero +5, and (x + 2) hides the zero −2.',
+      why: 'Multiplying by 0 gives 0, and a product of nonzero numbers is never 0. So (x − 5)(x + 2) can only be 0 if one bracket is 0. The bracket x − 5 is 0 when x = 5, because 5 − 5 = 0. That is why the sign in the bracket is the opposite of the zero.',
       art: funcGraph([{ f: (x) => (x + 2) * (x - 1) }], { range: { x: [-4, 3], y: [-5, 6] }, zeros: [{ at: -2, label: 'x = −2' }, { at: 1, label: 'x = 1' }], title: '(x + 2)(x − 1) crosses twice', caption: 'Each factor set to zero gives one crossing. The factors ARE the zeros.' }),
       formula: {
         tex: 'p(x) = (x - 2)(x + 3)',
@@ -426,6 +592,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Multiplicity: bounce or cross',
       body: 'MULTIPLICITY is how many times a factor shows up. An ODD number of times means the graph CROSSES the axis there. An EVEN number means it just touches and BOUNCES back, like a ball tapping the floor.',
+      why: 'Near a zero, a factor like (x − 1) changes sign as x passes 1: negative at x = 0.9, positive at x = 1.1. Squared, (x − 1)² is positive on both sides, so the height cannot change sign and the graph touches the axis and turns back. An odd power, like a cube, keeps the sign change, so it passes through.',
       compare: {
         cols: [
           { title: 'Odd power · crosses', tex: '(x - 1)^{1}', lines: ['Passes straight through', 'Changes sign'], tone: 'ok' },
@@ -449,55 +616,120 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: find the degree',
-      body: 'Look at p(x) = 4x³ − 2x + 7.\nThe powers of x are 3, 1, and 0.\nThe biggest is 3, so the degree is 3 and the graph has opposite-pointing arms.',
+      body: 'Look at p(x) = 4x³ − 2x + 7. What is its degree, its leading coefficient, and what do the arms do?',
       steps: {
         steps: [
-          { tex: 'p(x) = 4x^{3} + x^{2} - 7', text: 'Find the biggest exponent on x.' },
-          { tex: '3 > 2 > 0', text: 'The x³ term wins.' },
+          { tex: '4x^{3} - 2x + 7', text: 'Look at the power of x in each term. The 4x³ term has power 3 and the −2x term has power 1. The constant 7 has power 0, since 7 is the same as 7x⁰.' },
+          { tex: '3 > 1 > 0', text: 'Compare the powers. The biggest is 3, and the degree is defined as the biggest exponent on x. So the degree is 3.' },
+          { tex: '\\text{leading coefficient} = 4', text: 'The leading coefficient is the number in front of that biggest term. It is 4, and it is positive, so it does not flip anything.' },
+          { tex: '\\text{odd degree},\\ a > 0', text: 'An odd degree means the arms point opposite ways, and a positive leading coefficient makes the right arm point up. So the left arm points down.' },
         ],
-        answer: '\\text{degree } 3',
+        answer: '\\text{degree } 3,\\ \\text{leading coefficient } 4',
       },
     },
     {
       kind: 'example',
       head: 'Zeros from two factors',
-      body: 'Take p(x) = (x − 5)(x + 2).\nSet each factor to zero: x − 5 = 0 gives x = 5.\nAnd x + 2 = 0 gives x = −2. The graph crosses the x-axis at −2 and 5.',
+      body: 'Take p(x) = (x − 5)(x + 2). Where does its graph meet the x-axis?',
       steps: {
         steps: [
-          { tex: '(x - 5)(x + 2) = 0', text: 'A product is zero when a factor is zero.' },
-          { tex: 'x - 5 = 0 \\Rightarrow x = 5', text: 'First bracket.' },
-          { tex: 'x + 2 = 0 \\Rightarrow x = -2', text: 'Second bracket.' },
+          { tex: '(x - 5)(x + 2) = 0', text: 'The graph meets the x-axis where the height p(x) is 0. So we set the whole product equal to 0 and look for the x-values that make that true.' },
+          { tex: 'x - 5 = 0 \\ \\text{or}\\ x + 2 = 0', text: 'A product is zero only when one of its factors is zero, since nonzero numbers never multiply to 0. So we can set each bracket to 0 on its own.' },
+          { tex: 'x - 5 = 0 \\Rightarrow x = 5', text: 'Solve the first bracket by adding 5 to both sides. That gives x = 5, and the sign flipped from the bracket.' },
+          { tex: 'x + 2 = 0 \\Rightarrow x = -2', text: 'Solve the second bracket by subtracting 2 from both sides. That gives x = −2. Check: (−2 + 2) = 0, so the whole product is 0.' },
         ],
         answer: 'x = 5 \\text{ or } x = -2',
       },
     },
-    { kind: 'example', head: 'Where do these arms point?', body: 'For p(x) = −2x⁴ + 3x, only the term −2x⁴ matters at the far ends.\nDegree 4 is even, so both arms match.\nThe −2 is negative, so both arms point DOWN.' },
+    {
+      kind: 'example',
+      head: 'Where do these arms point?',
+      body: 'For p(x) = −2x⁴ + 3x, which way do the left and right arms point?',
+      steps: {
+        steps: [
+          { tex: '-2x^{4} + 3x \\approx -2x^{4}', text: 'For huge x the biggest power wins. The 3x term is tiny next to −2x⁴, so only the leading term −2x⁴ decides the far ends.' },
+          { tex: '\\text{degree } 4\\ \\text{is even}', text: 'Check the degree. 4 is even, so x⁴ is positive for both big positive and big negative x. That means the two arms match each other.' },
+          { tex: 'a = -2 < 0', text: 'Check the sign of the leading coefficient. It is negative, so it turns every one of those positive values into negative ones.' },
+          { tex: '\\text{both arms down}', text: 'Put the two facts together. Both arms match, and both are negative, so both arms point DOWN.' },
+        ],
+        answer: '\\text{both arms point down}',
+      },
+    },
     {
       kind: 'example',
       head: 'Another way: test giant numbers',
-      body: 'Not sure about end behavior? Just plug in something huge.\nAt x = 10, −2x⁴ + 3x is about −20000. At x = −10 it is about −20000 too.\nBoth far ends dive down, which confirms both arms point DOWN.',
+      body: 'Not sure about end behavior? Plug in big numbers. For p(x) = x³ − 4x, what happens far left and far right?',
+      steps: {
+        steps: [
+          { tex: 'x = 10:\\ 1000 - 40 = 960', text: 'Try a big positive x. 10³ is 1000 and 4 · 10 is 40, so the answer is 960, which is positive.' },
+          { tex: 'x = 100:\\ 1{,}000{,}000 - 400 = 999{,}600', text: 'Go bigger. 100³ is 1,000,000 and 4 · 100 is 400. The x³ part is far bigger, so the output is a huge positive number.' },
+          { tex: 'x = -10:\\ -1000 + 40 = -960', text: 'Now try a big negative x. (−10)³ is −1000, because an odd power keeps the sign, and −4(−10) is +40. The result is −960.' },
+          { tex: '\\text{left down, right up}', text: 'The right end is positive and the left end is negative. That matches the leading term x³: odd degree and positive coefficient.' },
+        ],
+        answer: '\\text{left arm down, right arm up}',
+      },
       table: {
         head: ['x', 'x³ − 4x', 'sign'],
         rows: [['−100', '−999,600', 'very negative'], ['−10', '−960', 'negative'], ['10', '960', 'positive'], ['100', '999,600', 'very positive']],
         note: 'Far from the origin only the leading term matters — the rest is a rounding error.',
       },
     },
-    { kind: 'example', head: 'A roller-coaster track profile', body: 'A track is modeled by h(x) = −(x − 2)(x − 8), where h is height.\nThe track meets the ground where the height is zero: x = 2 and x = 8.\nBetween those two spots the height is positive — that is the hill.' },
+    {
+      kind: 'example',
+      head: 'A roller-coaster track profile',
+      body: 'A track is modeled by h(x) = −(x − 2)(x − 8), where h is the height. Where does the track meet the ground, and is it above the ground in between?',
+      steps: {
+        steps: [
+          { tex: '-(x - 2)(x - 8) = 0', text: 'The track is on the ground when the height is 0. So set h(x) = 0. The minus in front is just a number, and it cannot make a product zero.' },
+          { tex: 'x - 2 = 0 \\ \\text{or}\\ x - 8 = 0', text: 'A product is zero only when one factor is zero, so set each bracket to 0 separately.' },
+          { tex: 'x = 2 \\ \\text{or}\\ x = 8', text: 'Solving each bracket gives x = 2 and x = 8. These are the two spots where the track touches the ground.' },
+          { tex: 'h(5) = -(3)(-3) = 9', text: 'Test a point between them, x = 5. The brackets are 3 and −3, which multiply to −9, and the minus in front makes it +9. The height is positive, so the track forms a hill.' },
+        ],
+        answer: 'x = 2 \\text{ and } x = 8;\\ \\text{hill between}',
+      },
+    },
     {
       kind: 'example',
       head: 'Bounce instead of cross',
-      body: 'Look at p(x) = (x − 3)²(x + 1).\nThe factor (x − 3) appears twice, an even count, so the graph bounces at x = 3.\nThe factor (x + 1) appears once, so the graph crosses at x = −1.',
+      body: 'Look at p(x) = (x − 3)²(x + 1). At each zero, does the graph bounce or cross?',
       steps: {
         steps: [
-          { tex: 'p(x) = (x - 3)^{2}(x + 1)', text: 'Read the power on each bracket.' },
-          { tex: '(x - 3)^{2}', text: 'Even power at x = 3 — it bounces.' },
-          { tex: '(x + 1)^{1}', text: 'Odd power at x = −1 — it crosses.' },
+          { tex: 'p(x) = (x - 3)^{2}(x + 1)', text: 'Read the power on each bracket. This count is called the multiplicity of the zero, and it tells us how the graph behaves there.' },
+          { tex: '(x - 3)^{2}:\\ x = 3', text: 'The bracket (x − 3) has power 2, an even number. A squared factor is positive on both sides of 3, so the height cannot change sign. The graph bounces at x = 3.' },
+          { tex: '(x + 1)^{1}:\\ x = -1', text: 'The bracket (x + 1) has power 1, an odd number. It is negative on one side of −1 and positive on the other, so the sign changes. The graph crosses at x = −1.' },
+          { tex: '\\text{zeros: } 3\\ (\\text{even}),\\ -1\\ (\\text{odd})', text: 'Put it together. Even multiplicity touches and turns back, while odd multiplicity passes through the axis.' },
         ],
         answer: '\\text{bounce at } 3,\\ \\text{cross at } -1',
       },
     },
-    { kind: 'example', head: 'Another way: check the sign nearby', body: 'Why does a squared factor bounce? Test both sides of x = 3.\nJust left, (x − 3) is negative; squaring makes it positive.\nJust right, it is positive; squaring keeps it positive. The sign never flips, so the graph cannot pass through.' },
-    { kind: 'example', head: 'A box cut from cardboard', body: 'Cut a square of side x from each corner of a 12-by-12 inch sheet and fold up the sides: V(x) = x(12 − 2x)².\nAt x = 2: inside is 12 − 4 = 8, squared is 64.\nThen 2 × 64 = 128 cubic inches.' },
+    {
+      kind: 'example',
+      head: 'Another way: check the sign nearby',
+      body: 'Why does a squared factor bounce? Test x-values just left and just right of x = 3 in the factor (x − 3)².',
+      steps: {
+        steps: [
+          { tex: 'x = 2.9:\\ x - 3 = -0.1', text: 'Just to the left of 3, the bracket x − 3 is a small negative number. Here it is −0.1.' },
+          { tex: '(-0.1)^{2} = 0.01', text: 'Square it. A negative times a negative is positive, so the squared factor is +0.01, which is above the axis.' },
+          { tex: 'x = 3.1:\\ x - 3 = 0.1,\\ \\ (0.1)^{2} = 0.01', text: 'Just to the right, the bracket is +0.1, and squaring keeps it positive at 0.01. Both sides have the same sign.' },
+          { tex: '\\text{no sign change}', text: 'The height is 0 at x = 3 but positive on both sides, so the graph comes down to the axis and goes back up. It cannot pass through to the other side, so it bounces.' },
+        ],
+        answer: '\\text{the sign never flips, so it bounces}',
+      },
+    },
+    {
+      kind: 'example',
+      head: 'A box cut from cardboard',
+      body: 'Cut a square of side x from each corner of a 12-by-12 inch sheet and fold up the sides. The volume is V(x) = x(12 − 2x)². Find the volume when x = 2.',
+      steps: {
+        steps: [
+          { tex: '12 - 2x', text: 'The base shrinks to 12 − 2x because a square of side x is cut from both ends of each 12-inch edge. That is two cuts, 2x in total.' },
+          { tex: 'V(x) = x \\cdot (12 - 2x)^{2}', text: 'Volume is length times width times height. The base is (12 − 2x) by (12 − 2x), which squares, and the height is x, the folded-up side.' },
+          { tex: '12 - 2(2) = 8,\\ \\ 8^{2} = 64', text: 'Put in x = 2. First the bracket: 2 times 2 is 4, and 12 − 4 is 8. Then square it, since the exponent applies to the whole bracket: 64.' },
+          { tex: 'V(2) = 2 \\cdot 64 = 128', text: 'Multiply by the height x = 2, which gives 128. The units are inches times inches times inches, so the volume is in cubic inches.' },
+        ],
+        answer: '128 \\text{ cubic inches}',
+      },
+    },
     {
       kind: 'protip',
       head: 'Build polynomials backwards',
@@ -519,7 +751,21 @@ export const PC_SLIDES_U01_04: SlideBank = {
         note: 'A repeated factor is ONE x-intercept that behaves differently, not two intercepts.',
       },
     },
-    { kind: 'challenge', head: 'Extra credit: profit over months', body: 'A company models profit by P(m) = −(m − 2)(m − 11).\nProfit is zero at month 2 and month 11.\nThe minus in front flips the curve into an upside-down U, so profit rises after month 2, peaks in the middle, and returns to zero at month 11.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: profit over months',
+      body: 'A company models profit by P(m) = −(m − 2)(m − 11). Find when profit is zero, then find the month of greatest profit and how big it is.',
+      steps: {
+        steps: [
+          { tex: '-(m - 2)(m - 11) = 0', text: 'Profit is zero when P(m) = 0. A product is zero only when one factor is zero, so we set each bracket to 0.' },
+          { tex: 'm = 2 \\ \\text{or}\\ m = 11', text: 'm − 2 = 0 gives m = 2, and m − 11 = 0 gives m = 11. These are the two months where profit is zero.' },
+          { tex: '-m^{2}\\ \\text{leads}\\ \\Rightarrow\\ \\text{opens down}', text: 'Multiplying out, the leading term is −m². That is an even degree with a negative coefficient, so both arms point down and the curve is an upside-down U.' },
+          { tex: 'm = \\dfrac{2 + 11}{2} = 6.5', text: 'The top of a symmetric U sits exactly halfway between its two zeros. The midpoint of 2 and 11 is 6.5.' },
+          { tex: 'P(6.5) = -(4.5)(-4.5) = 20.25', text: 'Put in m = 6.5. The brackets are 4.5 and −4.5, which multiply to −20.25, and the minus in front flips it to 20.25.' },
+        ],
+        answer: '\\text{zero at } m=2,\\ 11;\\ \\text{peak at } m=6.5\\ \\text{with } P = 20.25',
+      },
+    },
     {
       kind: 'summary',
       head: 'Arms outside, zeros inside',
@@ -547,6 +793,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Top and bottom do different jobs',
       body: 'A rational function is a fraction with a polynomial on top and one on the bottom. The TOP decides where the graph equals zero. The BOTTOM decides where the graph blows up. Two questions, two places to look.',
+      why: 'A fraction equals zero only when its top is 0 and its bottom is not, as in 0 ÷ 7 = 0. A fraction has no value when its bottom is 0, because no number multiplied by 0 can give a nonzero top. That is why the top controls where the graph touches the axis and the bottom controls where it breaks.',
       formula: {
         tex: 'r(x) = \\dfrac{p(x)}{q(x)}',
         note: 'Two polynomials, one on top of the other — and each half answers a different question.',
@@ -560,6 +807,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'The line the graph runs away from',
       body: 'You can never divide by zero. So wherever the bottom equals zero, the graph refuses to exist and instead shoots off toward infinity beside that spot. That invisible line is a VERTICAL ASYMPTOTE — the graph gets close forever and never touches.',
+      why: 'Look at 1 ÷ (x − 1) just to the right of x = 1. At x = 1.1 it gives 10, at x = 1.01 it gives 100, and at x = 1.001 it gives 1000. Dividing by a smaller and smaller number gives a bigger and bigger answer, and exactly at 0 there is no answer at all. So the graph shoots up beside the line without ever reaching it.',
       art: (() => {
         const ax = axes({ x: [-4, 4], y: [-5, 5] }, { ticks: { x: [-2, 0, 2], y: [-4, 0, 4] }, grid: true, pad: 30 });
         let b = ax.body + ax.curve((x) => 1 / (x - 1), AMB, 2.8);
@@ -578,6 +826,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'Horizontal asymptote: compare degrees',
       body: 'Look far to the right and the graph often flattens toward a level line. If the bottom degree is bigger, that line is y = 0. If the degrees tie, divide the leading coefficients. If the top degree is bigger, there is no horizontal asymptote.',
+      why: 'For huge x only the highest powers matter. Try (3x) ÷ (2x + 1) at x = 1000: that is 3000 ÷ 2001, about 1.5, which is the ratio of the leading numbers 3 and 2. If the bottom grows faster the fraction shrinks toward 0, and if the top grows faster the fraction keeps growing, so there is no level line.',
       compare: {
         cols: [
           { title: 'Bottom wins', tex: '\\deg q > \\deg p', lines: ['y = 0', 'Fades to the axis'], tone: 'accent' },
@@ -599,6 +848,7 @@ export const PC_SLIDES_U01_04: SlideBank = {
       kind: 'concept',
       head: 'A hole is one missing dot',
       body: 'If the SAME factor appears on top and bottom, it cancels. That x-value is still forbidden, but the graph does not run away there — it is a normal curve with one dot lifted out. That is a HOLE, and it is easy to miss.',
+      why: 'Take (x − 2)(x + 3) ÷ (x − 2). For any x other than 2 the matching brackets cancel, leaving x + 3. At x = 2 you would be dividing by zero, so that one point is missing. Its neighbors, like x = 1.99 giving 4.99, still sit on the line y = x + 3, so you see a line with a single gap at (2, 5).',
       art: funcGraph([{ f: (x) => x + 3 }], { range: { x: [-5, 4], y: [-3, 7] }, points: [{ x: 2, y: 5, label: 'hole at x = 2', hollow: true, color: ROSE }], title: 'A cancelled factor leaves a gap', caption: 'The curve is a perfectly ordinary line with exactly one point missing.' }),
       compare: {
         cols: [
@@ -611,19 +861,30 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Start simple: one asymptote',
-      body: 'Take f(x) = 1 ÷ (x − 6).\nThe bottom is zero when x = 6, and dividing by zero is not allowed.\nSo x = 6 is a vertical asymptote — the graph runs away from that line.',
+      body: 'Take f(x) = 1 ÷ (x − 6). Where is its vertical asymptote?',
       steps: {
         steps: [
-          { tex: 'r(x) = \\dfrac{1}{x - 3}', text: 'Set the bottom equal to zero.' },
-          { tex: 'x - 3 = 0', text: 'That is the forbidden input.' },
+          { tex: 'x - 6 = 0', text: 'The graph can break only where the bottom is 0, because dividing by zero is not allowed. So we set the bottom equal to zero.' },
+          { tex: 'x = 6', text: 'Add 6 to both sides to solve. At x = 6 the function has no value, so x = 6 is a forbidden input.' },
+          { tex: '\\text{top} = 1 \\ne 0', text: 'Check the top at x = 6. It is 1, not 0, so nothing cancels. A bottom zero that does not cancel gives a runaway line, not a hole.' },
+          { tex: 'x = 6\\ \\text{is a vertical asymptote}', text: 'So the graph shoots off toward infinity beside the line x = 6 and never touches it.' },
         ],
-        answer: 'x = 3',
+        answer: 'x = 6',
       },
     },
     {
       kind: 'example',
       head: 'Another way: sneak up on the line',
-      body: 'Watch the values as x creeps toward 6 from the right.\nAt x = 7 you get 1. At x = 6.1 you get 10. At x = 6.01 you get 100.\nThe numbers explode upward, which is exactly what running away from a line looks like.',
+      body: 'Watch the values of f(x) = 1 ÷ (x − 3) as x creeps toward 3 from the right. What happens to the output?',
+      steps: {
+        steps: [
+          { tex: 'x = 3.1:\\ x - 3 = 0.1,\\ \\ \\tfrac{1}{0.1} = 10', text: 'Start close to 3. The bottom x − 3 is 0.1, and 1 divided by 0.1 is 10.' },
+          { tex: 'x = 3.01:\\ \\tfrac{1}{0.01} = 100', text: 'Get closer. The bottom is now 0.01, a hundredth, and dividing 1 by a hundredth gives 100. Ten times closer made the answer ten times bigger.' },
+          { tex: 'x = 3.001:\\ \\tfrac{1}{0.001} = 1000', text: 'Closer again gives 1000. A smaller bottom always means a bigger result, because 1 fits into it more times.' },
+          { tex: 'x \\to 3^{+}\\ \\Rightarrow\\ f(x) \\to \\infty', text: 'The outputs grow without any limit as x nears 3, but x = 3 itself would be division by zero. That explosion is what an asymptote looks like.' },
+        ],
+        answer: '\\text{the outputs explode toward } \\infty\\text{, so } x = 3 \\text{ is a vertical asymptote}',
+      },
       table: {
         head: ['x', 'x − 3', '1 ÷ (x − 3)'],
         rows: [['3.1', '0.1', '10'], ['3.01', '0.01', '100'], ['3.001', '0.001', '1000'], ['3.0001', '0.0001', '10,000']],
@@ -633,20 +894,44 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'Zeros come from the top',
-      body: 'For f(x) = (x − 2) ÷ (x + 5), set the top to zero.\nx − 2 = 0 gives x = 2.\nCheck it: f(2) = 0 ÷ 7 = 0. Zero cookies split among 7 friends is still zero each.',
+      body: 'For f(x) = (x − 2) ÷ (x + 5), where does the graph meet the x-axis?',
       steps: {
         steps: [
-          { tex: 'r(x) = \\dfrac{x - 4}{x + 2}', text: 'A fraction is zero only when its TOP is zero.' },
-          { tex: 'x - 4 = 0', text: 'Solve the numerator.' },
+          { tex: '\\dfrac{x - 2}{x + 5} = 0', text: 'The graph meets the x-axis where the output is 0. So we set the whole fraction equal to 0.' },
+          { tex: 'x - 2 = 0', text: 'A fraction is zero only when its top is zero, since any 0 ÷ something is 0. So we only need to set the top equal to 0.' },
+          { tex: 'x = 2', text: 'Add 2 to both sides to solve. So the candidate zero is x = 2.' },
+          { tex: 'f(2) = \\dfrac{0}{7} = 0', text: 'Check the bottom is not also zero. At x = 2 it is 2 + 5 = 7, so we get 0 ÷ 7 = 0, which is valid. Zero shared among 7 is still zero.' },
         ],
-        answer: 'x = 4',
+        answer: 'x = 2',
       },
     },
-    { kind: 'example', head: 'Splitting a pizza bill', body: 'You split a $120 bill among n friends, so c(n) = 120 ÷ n.\nWith 8 friends: 120 ÷ 8 = $15 each.\nWith 12 friends: 120 ÷ 12 = $10 each. More friends, smaller share.' },
+    {
+      kind: 'example',
+      head: 'Splitting a pizza bill',
+      body: 'You split a $120 bill among n friends, so each pays c(n) = 120 ÷ n. Find each share for 8 friends and for 12 friends.',
+      steps: {
+        steps: [
+          { tex: 'c(n) = \\dfrac{120}{n}', text: 'Total cost divided by the number of people gives each share. This is a rational function, with n on the bottom.' },
+          { tex: 'c(8) = \\dfrac{120}{8} = 15', text: 'Put n = 8 in the rule. 120 split 8 ways is 15, so each friend pays $15.' },
+          { tex: 'c(12) = \\dfrac{120}{12} = 10', text: 'Now put n = 12. 120 split 12 ways is 10, so each friend pays $10.' },
+          { tex: '12 > 8\\ \\Rightarrow\\ 10 < 15', text: 'More friends means a bigger bottom, and a bigger bottom makes the fraction smaller. The same bill gets cut into smaller pieces.' },
+        ],
+        answer: '\\$15 \\text{ and } \\$10',
+      },
+    },
     {
       kind: 'example',
       head: 'Another way: watch the table shrink',
-      body: 'Keep adding friends to that same $120 bill.\n120 friends pay $1 each. 1200 friends pay 10 cents each. 12000 friends pay 1 cent.\nThe share slides toward 0 but never quite gets there — the horizontal asymptote is y = 0.',
+      body: 'What does f(x) = 3x ÷ (x² + 1) approach as x gets huge? Make a table of values and compare degrees.',
+      steps: {
+        steps: [
+          { tex: 'f(10) = \\dfrac{30}{101} \\approx 0.297', text: 'Start with x = 10. The top is 30 and the bottom is 100 + 1 = 101, so the value is about 0.297.' },
+          { tex: 'f(100) = \\dfrac{300}{10001} \\approx 0.030', text: 'Try x = 100. The top is 300 but the bottom jumped to 10,001, so the value drops to about 0.03.' },
+          { tex: 'f(1000) \\approx 0.003', text: 'At x = 1000 the top is 3000 and the bottom is 1,000,001, giving about 0.003. The bottom grows much faster than the top.' },
+          { tex: '\\deg\\text{ top} = 1 < \\deg\\text{ bottom} = 2', text: 'The degrees explain the table: the bottom has the bigger degree, so it wins the race. When the bottom wins, the fraction shrinks toward 0.' },
+        ],
+        answer: 'y = 0',
+      },
       table: {
         head: ['x', '3x ÷ (x² + 1)'],
         rows: [['10', '0.297'], ['100', '0.030'], ['1000', '0.003'], ['10,000', '0.0003']],
@@ -656,17 +941,45 @@ export const PC_SLIDES_U01_04: SlideBank = {
     {
       kind: 'example',
       head: 'When the degrees tie',
-      body: 'Find the horizontal asymptote of f(x) = (3x² + 1) ÷ (x² − 4).\nTop degree 2, bottom degree 2 — a tie.\nDivide the leading numbers: 3 ÷ 1 = 3, so the line is y = 3.',
+      body: 'Find the horizontal asymptote of f(x) = (3x² + 1) ÷ (x² − 4).',
       steps: {
         steps: [
-          { tex: 'r(x) = \\dfrac{3x^{2} + 1}{2x^{2} - 5}', text: 'Both top and bottom are degree 2 — a tie.' },
-          { tex: '\\dfrac{3}{2}', text: 'Take the two leading coefficients.' },
+          { tex: '\\deg(3x^{2} + 1) = 2,\\ \\ \\deg(x^{2} - 4) = 2', text: 'Find the degree of the top and the bottom. Both are 2, so this is a tie.' },
+          { tex: '\\dfrac{3x^{2} + 1}{x^{2} - 4} \\approx \\dfrac{3x^{2}}{x^{2}}', text: 'For huge x, the +1 and the −4 are tiny next to the x² terms, so only the leading terms matter.' },
+          { tex: '\\dfrac{3x^{2}}{x^{2}} = 3', text: 'The x² on top and bottom cancel, leaving the ratio of the leading coefficients, 3 ÷ 1 = 3.' },
+          { tex: 'f(100) = \\dfrac{30001}{9996} \\approx 3.0013', text: 'Check at x = 100. The top is 30,001 and the bottom is 9,996, and the quotient is about 3.0013, very close to 3.' },
         ],
-        answer: 'y = 1.5',
+        answer: 'y = 3',
       },
     },
-    { kind: 'example', head: 'When the bottom wins the race', body: 'For f(x) = (2x + 1) ÷ (x² + 5), the top is degree 1 and the bottom is degree 2.\nAt x = 100 the top is about 200 and the bottom is about 10005.\nThat fraction is tiny, so the asymptote is y = 0.' },
-    { kind: 'example', head: 'Medicine fading over time', body: 'Medicine in the blood is C(t) = 20t ÷ (t² + 4) mg per liter after t hours.\nAt t = 2: the top is 40 and the bottom is 8, so C = 5 mg/L.\nLater the squared bottom grows faster, so the level slides back toward 0.' },
+    {
+      kind: 'example',
+      head: 'When the bottom wins the race',
+      body: 'For f(x) = (2x + 1) ÷ (x² + 5), the top is degree 1 and the bottom is degree 2. What is the horizontal asymptote?',
+      steps: {
+        steps: [
+          { tex: '\\deg\\text{ top} = 1,\\ \\deg\\text{ bottom} = 2', text: 'Compare the degrees. The bottom is bigger, so it grows faster than the top when x is large.' },
+          { tex: 'x = 100:\\ \\text{top} = 201,\\ \\text{bottom} = 10005', text: 'Test a big value. The top is 2 · 100 + 1 = 201, and the bottom is 100² + 5 = 10,005, which is far larger.' },
+          { tex: '\\dfrac{201}{10005} \\approx 0.02', text: 'A small number divided by a huge one is tiny. The result is about 0.02, so the graph is hugging the x-axis.' },
+          { tex: 'x \\to \\infty \\Rightarrow f(x) \\to 0', text: 'As x grows, the bottom pulls further ahead, so the fraction keeps shrinking toward 0. The line y = 0 is the horizontal asymptote.' },
+        ],
+        answer: 'y = 0',
+      },
+    },
+    {
+      kind: 'example',
+      head: 'Medicine fading over time',
+      body: 'Medicine in the blood is C(t) = 20t ÷ (t² + 4) mg per liter after t hours. Find the level at t = 2, and say what happens in the long run.',
+      steps: {
+        steps: [
+          { tex: 'C(2) = \\dfrac{20(2)}{2^{2} + 4}', text: 'Put t = 2 into the rule. The top is 20 times 2, and the bottom needs the square first, 2² = 4, then add 4.' },
+          { tex: 'C(2) = \\dfrac{40}{8} = 5', text: 'Finish the arithmetic. 40 ÷ 8 is 5, so there are 5 mg per liter after 2 hours.' },
+          { tex: '\\deg\\text{ top} = 1 < \\deg\\text{ bottom} = 2', text: 'For the long run compare degrees. The bottom has the bigger degree, so the bottom wins the race for large t.' },
+          { tex: 'C(100) = \\dfrac{2000}{10004} \\approx 0.2', text: 'Check with a large t. At 100 hours the level is about 0.2 mg per liter, far below the 5 at t = 2. The level slides toward 0 as t grows.' },
+        ],
+        answer: 'C(2) = 5 \\text{ mg/L;\\ later } C \\to 0',
+      },
+    },
     {
       kind: 'protip',
       head: 'Always cancel before you count',
@@ -687,7 +1000,21 @@ export const PC_SLIDES_U01_04: SlideBank = {
         ],
       },
     },
-    { kind: 'challenge', head: 'Extra credit: sort the bad x-values', body: 'For f(x) = (x − 3)(x + 1) ÷ [(x − 3)(x − 6)], list every forbidden x, then sort them.\nThe bottom is zero at x = 3 and x = 6.\nThe 3 cancels with the top, so it is a hole; the 6 does not cancel, so it is a vertical asymptote.' },
+    {
+      kind: 'challenge',
+      head: 'Extra credit: sort the bad x-values',
+      body: 'For f(x) = (x − 3)(x + 1) ÷ [(x − 3)(x − 6)], list every forbidden x, then decide which are holes and which are vertical asymptotes.',
+      steps: {
+        steps: [
+          { tex: '(x - 3)(x - 6) = 0', text: 'Forbidden x-values make the bottom zero, because we cannot divide by 0. Set the bottom equal to 0.' },
+          { tex: 'x = 3 \\ \\text{or}\\ x = 6', text: 'Each bracket gives one forbidden value: x − 3 = 0 gives 3, and x − 6 = 0 gives 6.' },
+          { tex: '\\dfrac{(x - 3)(x + 1)}{(x - 3)(x - 6)} = \\dfrac{x + 1}{x - 6}', text: 'Cancel the matching factor (x − 3) from top and bottom. The cancelled factor leaves a hole, and only what is left on the bottom can make an asymptote.' },
+          { tex: 'x = 3:\\ \\text{hole at } \\left(3,\\,-\\tfrac43\\right)', text: 'The 3 cancelled, so it is a hole. Put x = 3 into the simplified rule to find its height: (3 + 1) ÷ (3 − 6) = −4/3.' },
+          { tex: 'x = 6:\\ \\text{vertical asymptote}', text: 'The factor (x − 6) did not cancel, and the top at x = 6 is 7, not 0. So x = 6 is a real vertical asymptote.' },
+        ],
+        answer: 'x = 3\\ \\text{(hole)},\\ x = 6\\ \\text{(vertical asymptote)}',
+      },
+    },
     {
       kind: 'summary',
       head: 'Top for zeros, bottom for trouble',

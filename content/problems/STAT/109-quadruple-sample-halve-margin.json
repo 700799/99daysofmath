@@ -1,0 +1,55 @@
+{
+  "id": "STAT.109",
+  "domain": "STAT",
+  "unit": 11,
+  "orderInUnit": 9,
+  "standard": "STAT.INF.A.1",
+  "difficulty": 3,
+  "prompt": "A survey of $200$ customers gives a $95\\%$ confidence interval for a proportion with margin of error $0.06$. The manager wants a margin of error of $0.03$ at the same confidence level, and expects $\\hat{p}$ to stay about the same. About how many customers should the new survey include?",
+  "answerType": "numeric",
+  "primaryAnswer": "800",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Margin of error is proportional to $\\frac{1}{\\sqrt{n}}$ — not $\\frac{1}{n}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Margin of error is proportional to $\\frac{1}{\\sqrt{n}}$ — not $\\frac{1}{n}$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: going from $n = 100$ to $n = 400$ doubles $\\sqrt{n}$ from 10 to 20, so the margin of error halves. Multiply $n$ by 4 to halve the margin."
+    },
+    {
+      "level": "guide",
+      "text": "Halving ME needs $\\sqrt{n}$ to double, so $n$ must be multiplied by $2^2 = 4$."
+    },
+    {
+      "level": "reveal",
+      "text": "$4 \\times 200 = 800$ customers."
+    }
+  ],
+  "explanation": [
+    "ME $= z^* \\sqrt{\\hat{p}(1-\\hat{p})/n}$. With $z^*$ and $\\hat{p}$ fixed, ME $\\propto 1/\\sqrt{n}$.",
+    "To cut ME from $0.06$ to $0.03$ (half), $\\sqrt{n}$ must double, so $n$ must quadruple.",
+    "New sample size: $4 \\times 200 = 800$. Doubling to 400 would only shrink the margin to about $0.042$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Plug in the ratio",
+      "steps": [
+        "$\\frac{\\text{ME}_{\\text{new}}}{\\text{ME}_{\\text{old}}} = \\sqrt{\\frac{n_{\\text{old}}}{n_{\\text{new}}}}$, so $\\frac{0.03}{0.06} = \\sqrt{\\frac{200}{n_{\\text{new}}}}$.",
+        "Square both sides: $\\frac{1}{4} = \\frac{200}{n_{\\text{new}}}$.",
+        "$n_{\\text{new}} = 800$."
+      ]
+    }
+  ],
+  "tags": [
+    "confidence-interval",
+    "sample-size",
+    "margin-of-error",
+    "word-problem"
+  ],
+  "estimatedSeconds": 65
+}

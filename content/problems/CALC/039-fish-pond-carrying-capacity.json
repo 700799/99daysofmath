@@ -1,0 +1,54 @@
+{
+  "id": "CALC.039",
+  "domain": "CALC",
+  "unit": 4,
+  "orderInUnit": 9,
+  "standard": "CALC.LIM.B.2",
+  "difficulty": 3,
+  "prompt": "A biologist stocks a pond and models the fish population after $t$ years as $P(t) = \\frac{900t + 300}{3t + 2}$. The pond's carrying capacity is the limit of $P(t)$ as $t \\to \\infty$. What is it?",
+  "answerType": "numeric",
+  "primaryAnswer": "300",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Top and bottom are both degree $1$ in $t$, so the long-run value is a ratio of leading coefficients.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Top and bottom are both degree $1$ in $t$, so the long-run value is a ratio of leading coefficients."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: $\\frac{6t}{3t} = 2$ for every $t \\ne 0$, so its limit is $2$. Adding constants like $+300$ and $+2$ cannot change where the ratio heads."
+    },
+    {
+      "level": "guide",
+      "text": "Divide every term by $t$: $\\frac{900 + \\frac{300}{t}}{3 + \\frac{2}{t}}$."
+    },
+    {
+      "level": "reveal",
+      "text": "As $t \\to \\infty$: $\\frac{900}{3} = 300$ fish."
+    }
+  ],
+  "explanation": [
+    "Divide top and bottom by $t$: $P(t) = \\frac{900 + 300/t}{3 + 2/t}$.",
+    "As $t \\to \\infty$, $\\frac{300}{t} \\to 0$ and $\\frac{2}{t} \\to 0$.",
+    "So $P(t) \\to \\frac{900}{3} = 300$. The pond can support about $300$ fish in the long run."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Read the story in the numbers",
+      "steps": [
+        "At stocking time, $P(0) = \\frac{300}{2} = 150$ fish.",
+        "After $2$ years: $P(2) = \\frac{2100}{8} \\approx 262$. After $20$ years: $P(20) = \\frac{18300}{62} \\approx 295$.",
+        "Growth slows as the pond fills, leveling off just under the asymptote $P = 300$."
+      ]
+    }
+  ],
+  "tags": [
+    "limit-at-infinity",
+    "horizontal-asymptote",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

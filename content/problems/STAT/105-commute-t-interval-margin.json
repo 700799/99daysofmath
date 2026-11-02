@@ -1,0 +1,51 @@
+{
+  "id": "STAT.105",
+  "domain": "STAT",
+  "unit": 11,
+  "orderInUnit": 5,
+  "standard": "STAT.INF.A.2",
+  "difficulty": 2,
+  "prompt": "A random sample of $16$ employees has a mean commute of $\\bar{x} = 25.3$ minutes with standard deviation $s = 4.2$ minutes. Commute times are approximately normal. For a $95\\%$ confidence interval for the mean commute, use $t^* = 2.131$ (df $= 15$). What is the margin of error? Round to two decimal places.",
+  "answerType": "numeric",
+  "primaryAnswer": "2.24",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "For a mean with unknown $\\sigma$, ME $= t^* \\cdot \\frac{s}{\\sqrt{n}}$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "For a mean with unknown $\\sigma$, ME $= t^* \\cdot \\frac{s}{\\sqrt{n}}$."
+    },
+    {
+      "level": "guide",
+      "text": "$\\frac{s}{\\sqrt{n}} = \\frac{4.2}{\\sqrt{16}} = \\frac{4.2}{4} = 1.05$."
+    },
+    {
+      "level": "reveal",
+      "text": "ME $= 2.131 \\times 1.05 \\approx 2.24$ minutes."
+    }
+  ],
+  "explanation": [
+    "Because the population SD is unknown, we use $s$ and a $t$ critical value with $n - 1 = 15$ degrees of freedom.",
+    "Standard error: $s/\\sqrt{n} = 4.2/4 = 1.05$.",
+    "Margin of error: $t^* \\times SE = 2.131 \\times 1.05 = 2.2376 \\approx 2.24$ minutes. The interval is roughly $25.3 \\pm 2.24$, or $(23.06, 27.54)$."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Why t and not z?",
+      "steps": [
+        "If $\\sigma$ were known we would use $z^* = 1.96$, giving ME $\\approx 2.06$.",
+        "We only have $s$ from 16 people, so there is extra uncertainty; $t^* = 2.131$ is a little bigger to account for it.",
+        "ME $= 2.131 \\times 1.05 \\approx 2.24$ — wider than the $z$ version, which is the honest answer."
+      ]
+    }
+  ],
+  "tags": [
+    "confidence-interval",
+    "t-interval",
+    "margin-of-error",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

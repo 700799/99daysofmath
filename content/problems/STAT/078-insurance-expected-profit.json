@@ -1,0 +1,63 @@
+{
+  "id": "STAT.078",
+  "domain": "STAT",
+  "unit": 8,
+  "orderInUnit": 8,
+  "standard": "STAT.PROB.B.1",
+  "difficulty": 3,
+  "prompt": "An insurance company charges $\\$500$ for a one-year policy. With probability $0.02$ the customer files a claim and the company pays out $\\$20{,}000$; otherwise it pays nothing. What is the company's expected profit per policy, in dollars?",
+  "answerType": "numeric",
+  "primaryAnswer": "100",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Profit is what comes in minus what goes out. The $\\$500$ always comes in; the payout only sometimes goes out.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Profit is what comes in minus what goes out. The $\\$500$ always comes in; the payout only sometimes goes out."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: a $\\$10$ ticket pays $\\$100$ with probability $0.05$. Expected profit for the seller is $10 - 0.05(100) = 10 - 5 = \\$5$. Same structure here."
+    },
+    {
+      "level": "guide",
+      "text": "Expected payout $= 0.02 \\times 20{,}000$. Subtract that from the $\\$500$ premium."
+    },
+    {
+      "level": "reveal",
+      "text": "$0.02 \\times 20{,}000 = 400$, so expected profit $= 500 - 400 = \\$100$."
+    }
+  ],
+  "explanation": [
+    "Define profit $P$: with probability $0.98$ the company keeps $\\$500$; with probability $0.02$ it gets $500 - 20{,}000 = -\\$19{,}500$.",
+    "$E(P) = 500(0.98) + (-19{,}500)(0.02) = 490 - 390 = 100$.",
+    "So the company expects to earn $\\$100$ per policy. On a single policy it may lose big, but averaged over thousands it earns about $\\$100$ each."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Premium minus expected payout",
+      "steps": [
+        "The premium is certain: $\\$500$ in.",
+        "The payout is a random variable with expected value $0.02 \\times 20{,}000 = \\$400$ out.",
+        "Expected profit $= 500 - 400 = \\$100$. Linearity of expectation lets you subtract expected values directly."
+      ]
+    },
+    {
+      "title": "A thousand policies",
+      "steps": [
+        "Sell 1,000 policies: income $= 1000 \\times 500 = \\$500{,}000$.",
+        "About $2\\%$, or 20 customers, file claims: payout $= 20 \\times 20{,}000 = \\$400{,}000$.",
+        "Net $\\$100{,}000$ over 1,000 policies is $\\$100$ each."
+      ]
+    }
+  ],
+  "tags": [
+    "random-variable",
+    "expected-value",
+    "multi-step",
+    "word-problem"
+  ],
+  "estimatedSeconds": 80
+}

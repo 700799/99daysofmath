@@ -1,0 +1,57 @@
+{
+  "id": "STAT.139",
+  "domain": "STAT",
+  "unit": 14,
+  "orderInUnit": 9,
+  "standard": "STAT.INF.C.3",
+  "difficulty": 3,
+  "prompt": "A free-response question shows partial regression output for predicting a car's fuel economy (mpg) from its weight (hundreds of kg): the slope is $b = -0.45$ and its $t$ statistic for testing $H_0: \\beta = 0$ is $t = -2.5$. The standard error of the slope is missing from the output. What is $SE_b$?",
+  "answerType": "numeric",
+  "primaryAnswer": "0.18",
+  "alternativeAnswers": [],
+  "acceptanceMode": "numeric-tolerance",
+  "numericTolerance": 0.01,
+  "hint": "The output's $t$ was computed as $t = \\frac{b - 0}{SE_b}$. You know $t$ and $b$; solve for $SE_b$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "The output's $t$ was computed as $t = \\frac{b - 0}{SE_b}$. You know $t$ and $b$; solve for $SE_b$."
+    },
+    {
+      "level": "nudge",
+      "title": "🪜 Try a simpler one",
+      "text": "Warm up: if $b = 6$ and $t = 3$, then $6 / SE_b = 3$, so $SE_b = 2$. Same algebra here — just watch the negatives."
+    },
+    {
+      "level": "guide",
+      "text": "$-2.5 = \\frac{-0.45}{SE_b}$, so $SE_b = \\frac{-0.45}{-2.5}$."
+    },
+    {
+      "level": "reveal",
+      "text": "$SE_b = 0.45 / 2.5 = 0.18$ mpg per hundred kg."
+    }
+  ],
+  "explanation": [
+    "The $t$ statistic for a slope is $t = b / SE_b$ when the null value is 0.",
+    "Rearrange: $SE_b = b / t = (-0.45)/(-2.5)$.",
+    "$SE_b = 0.18$. Standard errors are always positive, which the two negatives confirm. (A $95\\%$ interval would be roughly $-0.45 \\pm t^*(0.18)$.)"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Check it forwards",
+      "steps": [
+        "Suppose $SE_b = 0.18$. Then $t = -0.45 / 0.18 = -2.5$. ✓",
+        "Reading output backwards like this is a common free-response move: the test always links $b$, $SE_b$ and $t$.",
+        "Any one of the three can be recovered from the other two."
+      ]
+    }
+  ],
+  "tags": [
+    "regression",
+    "slope",
+    "standard-error",
+    "computer-output",
+    "word-problem"
+  ],
+  "estimatedSeconds": 60
+}

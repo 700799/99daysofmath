@@ -1,0 +1,47 @@
+{
+  "id": "CALC.012",
+  "domain": "CALC",
+  "unit": 2,
+  "orderInUnit": 2,
+  "standard": "CALC.LIM.A.2",
+  "difficulty": 1,
+  "prompt": "Suppose $\\lim_{x \\to a} f(x) = 4$ and $\\lim_{x \\to a} g(x) = -2$. Find $\\lim_{x \\to a} \\left[ 3f(x) - g(x) \\right]$.",
+  "answerType": "numeric",
+  "primaryAnswer": "14",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Limits respect constants, sums and differences: you can take the limit of each piece separately.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Limits respect constants, sums and differences: you can take the limit of each piece separately."
+    },
+    {
+      "level": "guide",
+      "text": "$\\lim 3f(x) = 3 \\cdot 4 = 12$ and $\\lim g(x) = -2$. Now subtract."
+    },
+    {
+      "level": "reveal",
+      "text": "$12 - (-2) = 14$."
+    }
+  ],
+  "explanation": [
+    "Constant multiple law: $\\lim 3f(x) = 3 \\lim f(x) = 12$.",
+    "Difference law: $\\lim [3f(x) - g(x)] = 12 - (-2)$.",
+    "$= 14$. Watch the double negative."
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Pretend they are numbers",
+      "steps": [
+        "Near $x = a$, $f(x)$ behaves like $4$ and $g(x)$ behaves like $-2$.",
+        "So $3f(x) - g(x)$ behaves like $3(4) - (-2) = 12 + 2$.",
+        "That is $14$. The limit laws say this shortcut is legitimate."
+      ]
+    }
+  ],
+  "tags": [
+    "limit-laws"
+  ],
+  "estimatedSeconds": 35
+}

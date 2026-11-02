@@ -1,0 +1,49 @@
+{
+  "id": "CALC.131",
+  "domain": "CALC",
+  "unit": 14,
+  "orderInUnit": 1,
+  "standard": "CALC.INT.B.2",
+  "difficulty": 1,
+  "prompt": "The region under $y = 2$ from $x = 0$ to $x = 3$ is rotated about the $x$-axis. The volume of the solid is $k\\pi$ cubic units. Find $k$.",
+  "answerType": "numeric",
+  "primaryAnswer": "12",
+  "alternativeAnswers": [],
+  "acceptanceMode": "normalized",
+  "hint": "Each cross-section perpendicular to the $x$-axis is a disc of radius $y = 2$. Disc method: $V = \\pi \\int_a^b r^2 \\, dx$.",
+  "hints": [
+    {
+      "level": "nudge",
+      "text": "Each cross-section perpendicular to the $x$-axis is a disc of radius $y = 2$. Disc method: $V = \\pi \\int_a^b r^2 \\, dx$."
+    },
+    {
+      "level": "guide",
+      "text": "$V = \\pi \\int_0^3 2^2 \\, dx = \\pi \\int_0^3 4 \\, dx$."
+    },
+    {
+      "level": "reveal",
+      "text": "$V = \\pi \\cdot 4 \\cdot 3 = 12\\pi$, so $k = 12$."
+    }
+  ],
+  "explanation": [
+    "Rotating a horizontal segment at height $2$ sweeps out a cylinder of radius $2$ and length $3$.",
+    "Disc method: $V = \\pi \\int_0^3 (2)^2 \\, dx = \\pi [4x]_0^3 = 12\\pi$.",
+    "$k = 12$. Check with the cylinder formula: $\\pi r^2 h = \\pi \\cdot 4 \\cdot 3 = 12\\pi$. ✓"
+  ],
+  "alternativeExplanations": [
+    {
+      "title": "Stack the coins",
+      "steps": [
+        "Picture $3$ units of coins, each a disc of radius $2$ and area $4\\pi$.",
+        "Volume $=$ area of a coin $\\times$ height of the stack $= 4\\pi \\cdot 3 = 12\\pi$.",
+        "The integral $\\pi \\int r^2 \\, dx$ is exactly this \"area times thickness, summed\" idea, and it works even when the radius changes."
+      ]
+    }
+  ],
+  "tags": [
+    "volume",
+    "disc-method",
+    "solid-of-revolution"
+  ],
+  "estimatedSeconds": 40
+}
