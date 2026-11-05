@@ -7,6 +7,8 @@ import { ARCADE_GAMES } from './arcade/shared';
 import { COSMETICS, BG_GRADIENT, emojiOf } from './Shop';
 import { STICKER_DEFS } from '../utils/encouragement';
 import { sfx } from '../utils/arcadeAV';
+import { CREW } from '../components/crew/crewData';
+import { Monster } from '../components/crew/Monster';
 
 // My Collection — a drawer/trophy-case page. Shows a big zoomed-in kawaii avatar
 // (your equipped character) plus galleries of the cool rewards & power-ups you've
@@ -21,7 +23,7 @@ const POWERUPS = [
   { lvl: 5, emoji: '👑', name: 'Champion Crown', blurb: 'Reach Level 5 in any unit' },
 ];
 
-type Zoom = { emoji?: string; mascot?: boolean; name: string; blurb?: string };
+type Zoom = { emoji?: string; mascot?: boolean; crew?: string; name: string; blurb?: string };
 
 export function Rewards() {
   const equipped = useProgress((s) => s.equipped);
@@ -101,6 +103,29 @@ export function Rewards() {
         ))}
       </Section>
 
+      {/* the Launch Bay crew: one joins for each sticker milestone */}
+      <Section title="👾 Bay crew" subtitle={`${CREW.filter((m) => stickers.length >= m.unlockAt).length} / ${CREW.length} aboard`}>
+        {CREW.map((m) => {
+          const aboard = stickers.length >= m.unlockAt;
+          return (
+            <Tile
+              key={m.id}
+              locked={!aboard}
+              onClick={() => aboard && open({ crew: m.id, name: m.name, blurb: m.blurb })}
+            >
+              {aboard ? (
+                <Monster id={m.id} className="crew-in h-12 w-11" />
+              ) : (
+                <Monster id={m.id} className="h-12 w-11 opacity-40" />
+              )}
+              <div className="text-[10px] font-display font-bold text-ink-muted truncate mt-0.5 max-w-full">
+                {aboard ? m.name : `${m.unlockAt} stickers`}
+              </div>
+            </Tile>
+          );
+        })}
+      </Section>
+
       {/* stickers */}
       <Section title="⭐ Stickers" subtitle={`${earnedStickers.length} / ${STICKER_DEFS.length}`}>
         {earnedStickers.length === 0 && <Empty>Earn stickers by learning & playing!</Empty>}
@@ -126,7 +151,7 @@ export function Rewards() {
             style={{ background: 'radial-gradient(circle at 50% 45%, rgba(217,70,239,0.55), rgba(15,23,42,0.92))' }}
           >
             <motion.div initial={{ scale: 0.4, rotate: -8 }} animate={{ scale: 1, rotate: 0 }} transition={{ type: 'spring', stiffness: 240, damping: 14 }} className="drop-shadow-[0_6px_10px_rgba(0,0,0,0.4)]">
-              {zoom.mascot ? <Mascot kind="captain" size={220} expr="cheer" /> : <div style={{ fontSize: 150 }}>{zoom.emoji}</div>}
+              {zoom.mascot ? <Mascot kind="captain" size={220} expr="cheer" /> : zoom.crew ? <Monster id={zoom.crew} className="crew-in nod h-56 w-48" /> : <div style={{ fontSize: 150 }}>{zoom.emoji}</div>}
             </motion.div>
             <div className="mt-4 font-display font-extrabold text-3xl text-white drop-shadow text-center">{zoom.name}</div>
             {zoom.blurb && <div className="mt-1 font-display font-bold text-white/85 text-center">{zoom.blurb}</div>}
