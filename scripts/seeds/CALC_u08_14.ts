@@ -892,7 +892,7 @@ export const problemsCALCu08_14: SeedProblem[] = [
       { level: 'guide', text: 'Step two: $s(t) = \\int (3t^2 - 4t + 1) \\, dt = t^3 - 2t^2 + t + C_2$, and $s(0) = 2$ gives $C_2 = 2$. Now evaluate $s(2)$.' },
       { level: 'reveal', text: '$s(2) = 8 - 8 + 2 + 2 = 4$ m.' },
     ],
-    explanation: ['Velocity: $v(t) = 3t^2 - 4t + C_1$; $v(0) = 1$ forces $C_1 = 1$.', 'Position: $s(t) = t^3 - 2t^2 + t + C_2$; $s(0) = 2$ forces $C_2 = 2$.', '$s(2) = 2^3 - 2(2)^2 + 2 + 2 = 8 - 8 + 2 + 2 = 4$ m. Note the particle is back near where it started — it slowed, reversed, and returned.'],
+    explanation: ['Velocity: $v(t) = 3t^2 - 4t + C_1$; $v(0) = 1$ forces $C_1 = 1$.', 'Position: $s(t) = t^3 - 2t^2 + t + C_2$; $s(0) = 2$ forces $C_2 = 2$.', '$s(2) = 2^3 - 2(2)^2 + 2 + 2 = 8 - 8 + 2 + 2 = 4$ m. Along the way it turns around twice: $v(t) = (3t - 1)(t - 1)$ is negative on $\\left(\\frac{1}{3}, 1\\right)$, so it backs up to $s(1) = 2$ before moving forward to $4$.'],
     alternativeExplanations: [
       { title: 'Net change twice', steps: ['Displacement $= \\int_0^2 v(t) \\, dt = \\int_0^2 (3t^2 - 4t + 1) \\, dt = [t^3 - 2t^2 + t]_0^2 = 8 - 8 + 2 = 2$ m.', 'Position $=$ start $+$ displacement $= 2 + 2 = 4$ m.', 'You still need $v(t)$ first, so the first constant $C_1 = 1$ is unavoidable — but the second one can be skipped this way.'] },
     ],

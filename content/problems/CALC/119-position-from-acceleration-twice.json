@@ -33,7 +33,7 @@
   "explanation": [
     "Velocity: $v(t) = 3t^2 - 4t + C_1$; $v(0) = 1$ forces $C_1 = 1$.",
     "Position: $s(t) = t^3 - 2t^2 + t + C_2$; $s(0) = 2$ forces $C_2 = 2$.",
-    "$s(2) = 2^3 - 2(2)^2 + 2 + 2 = 8 - 8 + 2 + 2 = 4$ m. Note the particle is back near where it started — it slowed, reversed, and returned."
+    "$s(2) = 2^3 - 2(2)^2 + 2 + 2 = 8 - 8 + 2 + 2 = 4$ m. Along the way it turns around twice: $v(t) = (3t - 1)(t - 1)$ is negative on $\\left(\\frac{1}{3}, 1\\right)$, so it backs up to $s(1) = 2$ before moving forward to $4$."
   ],
   "alternativeExplanations": [
     {
