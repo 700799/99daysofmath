@@ -5,7 +5,7 @@
   "orderInUnit": 6,
   "standard": "CALC.INT.B.2",
   "difficulty": 2,
-  "prompt": "A reservoir holds $1000$ cubic meters of water at $t = 0$. Water flows in at a constant $20$ m$^3$ per hour and is pumped out at a rate of $2t$ m$^3$ per hour, for $0 \\le t \\le 8$ hours. How much water is in the reservoir at $t = 8$, in cubic meters?",
+  "prompt": "A reservoir holds $1000$ cubic meters of water at $t = 0$. Water flows in at a constant $20$ m³ per hour and is pumped out at a rate of $2t$ m³ per hour, for $0 \\le t \\le 8$ hours. How much water is in the reservoir at $t = 8$, in cubic meters?",
   "answerType": "numeric",
   "primaryAnswer": "1096",
   "alternativeAnswers": [],
@@ -22,21 +22,21 @@
     },
     {
       "level": "reveal",
-      "text": "Change $= 96$ m$^3$, so the reservoir holds $1000 + 96 = 1096$ m$^3$."
+      "text": "Change $= 96$ m³, so the reservoir holds $1000 + 96 = 1096$ m³."
     }
   ],
   "explanation": [
-    "Net rate of change: $20 - 2t$ m$^3$/h.",
-    "Net change over $[0, 8]$: $\\int_0^8 (20 - 2t) \\, dt = 160 - 64 = 96$ m$^3$.",
-    "Final amount: $1000 + 96 = 1096$ m$^3$. (The outflow $2t$ overtakes the inflow $20$ only at $t = 10$, so the level is still rising at $t = 8$, just more slowly.)"
+    "Net rate of change: $20 - 2t$ m³/h.",
+    "Net change over $[0, 8]$: $\\int_0^8 (20 - 2t) \\, dt = 160 - 64 = 96$ m³.",
+    "Final amount: $1000 + 96 = 1096$ m³. (The outflow $2t$ overtakes the inflow $20$ only at $t = 10$, so the level is still rising at $t = 8$, just more slowly.)"
   ],
   "alternativeExplanations": [
     {
       "title": "In and out separately",
       "steps": [
-        "Total in: $20 \\cdot 8 = 160$ m$^3$.",
-        "Total out: $\\int_0^8 2t \\, dt = 64$ m$^3$ (a triangle of base $8$ and height $16$).",
-        "$1000 + 160 - 64 = 1096$ m$^3$."
+        "Total in: $20 \\cdot 8 = 160$ m³.",
+        "Total out: $\\int_0^8 2t \\, dt = 64$ m³ (a triangle of base $8$ and height $16$).",
+        "$1000 + 160 - 64 = 1096$ m³."
       ]
     }
   ],

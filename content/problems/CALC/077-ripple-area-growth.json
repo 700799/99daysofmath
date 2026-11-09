@@ -27,7 +27,7 @@
   ],
   "explanation": [
     "$A = \\pi r^2$, so $\\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt}$.",
-    "At the moment $r = 10$ with $\\frac{dr}{dt} = 3$: $\\frac{dA}{dt} = 2\\pi \\cdot 10 \\cdot 3 = 60\\pi$ cm$^2$/s.",
+    "At the moment $r = 10$ with $\\frac{dr}{dt} = 3$: $\\frac{dA}{dt} = 2\\pi \\cdot 10 \\cdot 3 = 60\\pi$ cm²/s.",
     "So $k = 60$. Unlike the circumference, the area's growth rate depends on the current radius — a bigger ripple sweeps out area faster."
   ],
   "alternativeExplanations": [
@@ -36,7 +36,7 @@
       "steps": [
         "In a short time $dt$ the ripple grows by a thin ring of width $3\\,dt$ and length (circumference) $2\\pi \\cdot 10 = 20\\pi$.",
         "Ring area $\\approx 20\\pi \\cdot 3\\,dt = 60\\pi \\, dt$.",
-        "Divide by $dt$: the area grows at $60\\pi$ cm$^2$/s."
+        "Divide by $dt$: the area grows at $60\\pi$ cm²/s."
       ]
     }
   ],

@@ -22,13 +22,13 @@
     },
     {
       "level": "reveal",
-      "text": "$5(1.5 + 4 + 4.5 + 2) = 5 \\cdot 12 = 60$ m$^2$."
+      "text": "$5(1.5 + 4 + 4.5 + 2) = 5 \\cdot 12 = 60$ m²."
     }
   ],
   "explanation": [
     "Four strips, each $\\Delta x = 5$ m wide.",
     "Trapezoid areas: $5 \\cdot 1.5 = 7.5$, $5 \\cdot 4 = 20$, $5 \\cdot 4.5 = 22.5$, $5 \\cdot 2 = 10$.",
-    "Total $\\approx 7.5 + 20 + 22.5 + 10 = 60$ m$^2$. Multiply by the river's speed and you have its flow rate — this is how real discharge is measured."
+    "Total $\\approx 7.5 + 20 + 22.5 + 10 = 60$ m². Multiply by the river's speed and you have its flow rate — this is how real discharge is measured."
   ],
   "alternativeExplanations": [
     {
@@ -36,7 +36,7 @@
       "steps": [
         "$T = \\frac{\\Delta x}{2}\\left(y_0 + 2y_1 + 2y_2 + 2y_3 + y_4\\right)$: the interior depths count twice because each belongs to two strips.",
         "$= \\frac{5}{2}(0 + 6 + 10 + 8 + 0) = \\frac{5}{2} \\cdot 24 = 60$.",
-        "Same $60$ m$^2$, and quicker when there are many measurements."
+        "Same $60$ m², and quicker when there are many measurements."
       ]
     }
   ],

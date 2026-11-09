@@ -5,7 +5,7 @@
   "orderInUnit": 9,
   "standard": "CALC.INT.A.2",
   "difficulty": 3,
-  "prompt": "A particle moving along a line has acceleration $a(t) = 6t - 4$ m/s$^2$. At $t = 0$ its velocity is $1$ m/s and its position is $2$ m. Find its position at $t = 2$ seconds, in meters.",
+  "prompt": "A particle moving along a line has acceleration $a(t) = 6t - 4$ m/s². At $t = 0$ its velocity is $1$ m/s and its position is $2$ m. Find its position at $t = 2$ seconds, in meters.",
   "answerType": "numeric",
   "primaryAnswer": "4",
   "alternativeAnswers": [],
