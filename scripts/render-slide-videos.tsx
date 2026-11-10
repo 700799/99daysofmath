@@ -172,6 +172,10 @@ const VIDEO_CSS = `
 }
 html, body { margin: 0; height: auto; min-height: 0; background: #05070f; }
 * { animation: none !important; transition: none !important; }
+/* The drawings draw themselves in with CSS animations that start invisible.
+   A still frame needs their finished state. */
+.sa-draw { stroke-dashoffset: 0 !important; stroke-dasharray: none !important; }
+.sa-fade, .sa-slide, .sa-beat { opacity: 1 !important; transform: none !important; }
 body { font-family: 'Inter', 'DejaVu Sans', sans-serif; }
 .font-display { font-family: 'Inter Display', 'Inter', sans-serif !important; }
 .vs { position: relative; width: ${W}px; height: ${H}px; overflow: hidden; background: #0b1020; color: rgb(var(--ink)); display: none; }
