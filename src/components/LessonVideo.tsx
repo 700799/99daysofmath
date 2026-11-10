@@ -20,15 +20,13 @@ const RATE_KEY = 'lesson:video-rate';
 function getInitialRate(): number {
   if (typeof window === 'undefined') return 1;
   const v = window.localStorage.getItem(RATE_KEY);
-  return v === '0.75' ? 0.75 : 1;
+  const n = Number(v);
+  return [0.75, 1, 1.25, 1.5].includes(n) ? n : 1;
 }
 
 /**
- * Lesson-video launcher: a compact tappable tile that opens a big full-screen
- * player laid out like the Math Stories reader — a split panel with the
- * lesson's key idea on one side and the animation on the other, plus a clean
- * Continue bar. The player fills the screen (no letterboxed video floating in a
- * black void) and drops the native control bar for a story-style look.
+ * Lesson-video launcher: a compact tappable tile that opens the full-screen
+ * player.
  *
  * No <video> mounts (or fetches) until the drawer opens — important for the
  * library page which lists 100+ videos.
@@ -53,7 +51,7 @@ export function LessonVideo({ src, title }: Props) {
         type="button"
         onClick={() => setOpen(true)}
         aria-label={`Open video: ${label}`}
-        className="group relative w-full block rounded-2xl overflow-hidden bg-slate-900 border-2 border-line text-left aspect-video active:scale-[0.99] transition-transform"
+        className="group relative w-full block rounded-2xl overflow-hidden bg-[#0b1020] border-2 border-line text-left aspect-video active:scale-[0.99] transition-transform"
       >
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-white">
           <span className="rounded-full bg-white/95 shadow-lg w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center text-2xl sm:text-3xl text-zinc-900">
@@ -108,13 +106,43 @@ function VideoPlayerModal({ open, onClose, title, src }: ModalProps) {
   );
 }
 
+interface Chapter {
+  t: number;
+  kind: string;
+  label: string;
+}
+
+const RATES = [0.75, 1, 1.25, 1.5];
+const KIND_LABEL: Record<string, string> = {
+  title: 'Start',
+  objective: 'The goal',
+  concept: 'Key idea',
+  example: 'Worked example',
+  protip: 'Pro tip',
+  trap: 'Watch out',
+  challenge: 'Challenge',
+  summary: 'Summary',
+  end: 'End',
+};
+
+function isPortraitPhone(): boolean {
+  return typeof window !== 'undefined' && window.innerWidth < 640 && window.innerHeight > window.innerWidth;
+}
+
+function clock(sec: number): string {
+  const s = Math.max(0, Math.floor(sec));
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+}
+
 /**
- * The full-screen playback surface: a header, a thin progress bar, and the
- * animation filling the rest — video only (the lesson recaps its key idea in a
- * summary at the end, so no busy side panel). The kid gets a 🐢 slow toggle and
- * a ⏪10s rewind but can never fast-forward, and there's NO "continue" button
- * to bail out early — a big Done button only appears once the video has played
- * all the way through (to its built-in summary).
+ * The full-screen playback surface, with the controls any video player has:
+ * tap the picture (or Space) to pause, drag the bar to any point, jump slide
+ * by slide, pick a speed, and close whenever you like. Each lesson video is a
+ * run of slides, so the bar carries a tick at every slide start and the header
+ * names the one on screen.
+ *
+ * Coins are still earned once per video, when it has genuinely been watched:
+ * reaching the end only counts if most of the running time was played.
  */
 function StoryVideoPlayer({
   src,
@@ -127,20 +155,51 @@ function StoryVideoPlayer({
 }) {
   const url = `${import.meta.env.BASE_URL}videos/lessons/${src}`;
   const ref = useRef<HTMLVideoElement | null>(null);
-  const maxRef = useRef(0); // furthest point watched — kids can rewind, never skip ahead
+  const watchedRef = useRef(0); // seconds actually played, for the coin award
+  const lastTickRef = useRef(0);
   const [ended, setEnded] = useState(false);
-  const [progress, setProgress] = useState(0); // 0..1 for the top bar
+  const [paused, setPaused] = useState(false);
+  const [time, setTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [chapters, setChapters] = useState<Chapter[]>([]);
   const [rate, setRate] = useState<number>(() => getInitialRate());
   const completeVideo = useProgress((s) => s.completeVideo);
   const [coinAward, setCoinAward] = useState(0); // >0 → show the "you earned coins" toast
+  // A wide video on an upright phone is a thin strip. There the whole player
+  // turns a quarter so the picture fills the screen; the viewer turns the
+  // phone. Their choice wins once they tap the button.
+  const [portrait, setPortrait] = useState(() => isPortraitPhone());
+  const [sideways, setSideways] = useState<boolean | null>(null);
+  useEffect(() => {
+    const on = () => setPortrait(isPortraitPhone());
+    window.addEventListener('resize', on);
+    return () => window.removeEventListener('resize', on);
+  }, []);
+  const turned = portrait && (sideways ?? true);
+
+  // Slide markers, when the video has them (older clips do not).
+  useEffect(() => {
+    let dead = false;
+    fetch(url.replace(/\.mp4$/, '.chapters.json'))
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => {
+        if (!dead && j && Array.isArray(j.chapters)) setChapters(j.chapters as Chapter[]);
+      })
+      .catch(() => {});
+    return () => {
+      dead = true;
+    };
+  }, [url]);
 
   // Apply + persist the playback rate.
   useEffect(() => {
     const v = ref.current;
     if (v) v.playbackRate = rate;
-  }, [rate]);
-  useEffect(() => {
-    window.localStorage.setItem(RATE_KEY, String(rate));
+    try {
+      window.localStorage.setItem(RATE_KEY, String(rate));
+    } catch {
+      /* storage blocked: the speed just is not remembered */
+    }
   }, [rate]);
 
   // Autoplay on open; pause + release on unmount (drawer close).
@@ -148,7 +207,7 @@ function StoryVideoPlayer({
     const v = ref.current;
     if (v) {
       v.playbackRate = rate;
-      v.play().catch(() => {});
+      v.play().catch(() => setPaused(true));
     }
     return () => {
       try {
@@ -160,158 +219,228 @@ function StoryVideoPlayer({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const replay = () => {
+  const toggle = () => {
     const v = ref.current;
     if (!v) return;
-    v.currentTime = 0;
-    setEnded(false);
-    setCoinAward(0);
-    v.play().catch(() => {});
+    if (v.ended) {
+      v.currentTime = 0;
+      setEnded(false);
+    }
+    if (v.paused) v.play().catch(() => {});
+    else v.pause();
+  };
+  const seek = (t: number) => {
+    const v = ref.current;
+    if (!v) return;
+    v.currentTime = Math.min(Math.max(0, t), v.duration || t);
+    lastTickRef.current = v.currentTime;
+    setTime(v.currentTime);
+    if (v.currentTime < (v.duration || Infinity) - 0.2) setEnded(false);
+  };
+  const chapterIndex = chapters.reduce((acc, c, i) => (time >= c.t - 0.05 ? i : acc), 0);
+  const current = chapters[chapterIndex];
+  const jump = (dir: -1 | 1) => {
+    if (!chapters.length) return seek(time + dir * 10);
+    // "Previous" first returns to the start of this slide, then goes back one.
+    if (dir < 0 && time - chapters[chapterIndex].t > 2) return seek(chapters[chapterIndex].t);
+    const next = chapters[Math.min(chapters.length - 1, Math.max(0, chapterIndex + dir))];
+    seek(next.t);
   };
 
-  // Kids may rewind, but never fast-forward past what they've watched.
-  const rewind10 = () => {
-    const v = ref.current;
-    if (!v) return;
-    v.currentTime = Math.max(0, v.currentTime - 10);
-    setEnded(false);
-  };
-  // Snap any forward jump back to the furthest-watched point (blocks skipping).
-  const guardForward = () => {
-    const v = ref.current;
-    if (!v) return;
-    if (v.currentTime > maxRef.current + 1) v.currentTime = maxRef.current;
-  };
+  // Keyboard: Space pauses, arrows move 5 s, [ and ] change slide.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === ' ' || e.key === 'k') {
+        e.preventDefault();
+        toggle();
+      } else if (e.key === 'ArrowLeft') seek((ref.current?.currentTime ?? 0) - 5);
+      else if (e.key === 'ArrowRight') seek((ref.current?.currentTime ?? 0) + 5);
+      else if (e.key === '[') jump(-1);
+      else if (e.key === ']') jump(1);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  });
+
+  const slideCount = chapters.filter((c) => c.kind !== 'title' && c.kind !== 'end').length;
+  const slideNo = chapters.slice(0, chapterIndex + 1).filter((c) => c.kind !== 'title' && c.kind !== 'end').length;
+  const ctl =
+    'h-11 min-w-11 px-3 rounded-md border border-white/20 bg-white/10 hover:bg-white/20 active:translate-y-px text-white font-display font-bold text-sm flex items-center justify-center gap-1.5 disabled:opacity-40';
 
   return (
     <div
-      className="relative w-full bg-slate-950 text-white flex flex-col"
-      style={{
-        height: '100dvh',
-        paddingTop: 'env(safe-area-inset-top)',
-        paddingBottom: 'env(safe-area-inset-bottom)',
-      }}
+      className="bg-[#05070f] text-white flex flex-col"
+      style={
+        turned
+          ? {
+              position: 'fixed',
+              top: 0,
+              left: '100vw',
+              width: '100dvh',
+              height: '100vw',
+              transformOrigin: 'top left',
+              transform: 'rotate(90deg)',
+            }
+          : {
+              position: 'relative',
+              width: '100%',
+              height: '100dvh',
+              paddingTop: 'env(safe-area-inset-top)',
+              paddingBottom: 'env(safe-area-inset-bottom)',
+            }
+      }
     >
-      {/* ── Header ── */}
-      <div className="px-4 sm:px-6 py-3 flex items-center justify-between gap-4 shrink-0 bg-black/50 backdrop-blur border-b border-white/10">
+      {/* ── Header: which lesson, which slide, and a way out ── */}
+      <div className={`px-4 sm:px-6 py-2.5 items-center justify-between gap-4 shrink-0 border-b border-cyan-300/25 bg-white/5 ${turned ? 'hidden' : 'flex'}`}>
         <div className="min-w-0">
-          <div className="text-[10px] sm:text-xs font-display font-extrabold uppercase tracking-wider text-sky-300">
-            🎬 Animation
+          <div className="font-mono text-2xs uppercase tracking-[0.18em] text-cyan-300 truncate">
+            {current && current.kind !== 'title' && current.kind !== 'end'
+              ? `${KIND_LABEL[current.kind] ?? 'Slide'} · ${slideNo} of ${slideCount}`
+              : 'Lesson video'}
           </div>
-          <h2 className="font-display font-extrabold text-white leading-tight text-lg sm:text-2xl truncate">
-            {title}
+          <h2 className="font-display font-extrabold text-white leading-tight text-base sm:text-xl truncate">
+            {current && current.kind !== 'title' && current.kind !== 'end' ? current.label : title}
           </h2>
         </div>
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Close"
-          className="w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white font-display font-extrabold text-lg shrink-0"
-        >
-          ✕
+        <button type="button" onClick={onClose} aria-label="Close video" className={ctl}>
+          ✕ <span className="hidden sm:inline">Close</span>
         </button>
       </div>
 
-      {/* video-progress bar (fills as it plays) */}
-      <div className="h-1.5 bg-black/60 shrink-0">
-        <div
-          className="h-full bg-gradient-to-r from-sky-400 to-emerald-400 transition-[width] duration-200"
-          style={{ width: `${Math.round(progress * 100)}%` }}
-        />
-      </div>
-
-      {/* ── Stage — the animation fills the whole screen (video only). ── */}
-      <div className="relative flex-1 min-h-0 w-full select-none">
-        <div className="relative w-full h-full flex items-center justify-center bg-black overflow-hidden">
-          <video
-            ref={ref}
-            src={url}
-            muted
-            playsInline
-            preload="auto"
-            className="w-full h-full object-contain bg-black"
-            aria-label={title}
-            onSeeking={guardForward}
-            onTimeUpdate={(e) => {
-              const v = e.currentTarget;
-              if (v.currentTime > maxRef.current + 1) {
-                v.currentTime = maxRef.current; // block a forward skip
-                return;
-              }
-              maxRef.current = Math.max(maxRef.current, v.currentTime);
-              if (v.duration > 0) setProgress(v.currentTime / v.duration);
-            }}
-            onEnded={() => {
-              setEnded(true);
-              // Reward coins the first time each math video is watched to the end.
+      {/* ── Stage: tap anywhere on the picture to pause or play ── */}
+      <div className="relative flex-1 min-h-0 w-full select-none bg-black">
+        <video
+          ref={ref}
+          src={url}
+          muted
+          playsInline
+          preload="auto"
+          className="w-full h-full object-contain bg-black cursor-pointer"
+          aria-label={title}
+          onClick={toggle}
+          onPlay={() => setPaused(false)}
+          onPause={() => setPaused(true)}
+          onLoadedMetadata={(e) => setDuration(e.currentTarget.duration || 0)}
+          onTimeUpdate={(e) => {
+            const v = e.currentTarget;
+            // Count only time that played through, not distance jumped.
+            const step = v.currentTime - lastTickRef.current;
+            if (step > 0 && step < 1.5) watchedRef.current += step;
+            lastTickRef.current = v.currentTime;
+            setTime(v.currentTime);
+          }}
+          onEnded={(e) => {
+            setEnded(true);
+            // Coins the first time a video is watched through (most of it played).
+            if (watchedRef.current >= (e.currentTarget.duration || 0) * 0.6) {
               const got = completeVideo(src);
               if (got > 0) setCoinAward(got);
-            }}
-          />
+            }
+          }}
+        />
 
-          {coinAward > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 12, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              className="absolute top-3 left-1/2 -translate-x-1/2 z-20 rounded-full bg-yellow-300 text-warn font-display font-extrabold text-sm px-4 py-1.5 shadow-lg"
-            >
-              +{coinAward} π coins!
-            </motion.div>
-          )}
+        {coinAward > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 12, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            className="absolute top-3 left-1/2 -translate-x-1/2 z-20 rounded-full bg-yellow-300 text-warn font-display font-extrabold text-sm px-4 py-1.5 shadow-lg"
+          >
+            +{coinAward} π coins!
+          </motion.div>
+        )}
 
-          {/* End screen — the ONLY way to finish: Done appears once the whole
-              video (incl. its summary) has played. Replay is offered too. */}
-          {ended ? (
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-black/60">
-              <button
-                type="button"
-                onClick={onClose}
-                className="rounded-full bg-duo-green hover:bg-duo-green-dark active:translate-y-0.5 text-white font-display font-extrabold text-xl px-10 h-16 shadow-lg shadow-black/30 transition"
-              >
-                Done ✓
-              </button>
-              <button
-                type="button"
-                onClick={replay}
-                className="rounded-full bg-white/95 hover:bg-white shadow px-5 h-12 flex items-center gap-2 font-display font-extrabold text-zinc-900"
-              >
-                ↻ Watch again
-              </button>
-            </div>
-          ) : (
+        {paused && !ended && (
+          <button
+            type="button"
+            onClick={toggle}
+            aria-label="Play"
+            className="absolute inset-0 m-auto h-20 w-20 rounded-full bg-black/60 border border-cyan-300/60 text-3xl text-white flex items-center justify-center"
+          >
+            ▶
+          </button>
+        )}
+
+        {ended && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/65">
             <button
               type="button"
-              onClick={replay}
-              className="absolute bottom-3 right-3 rounded-full bg-white/90 hover:bg-white text-zinc-700 font-display font-bold text-xs px-3 py-1 shadow active:translate-y-0.5"
+              onClick={onClose}
+              className="rounded-md bg-cyan-300 hover:bg-cyan-200 active:translate-y-0.5 text-[#0b1020] font-display font-extrabold text-lg px-8 h-14"
             >
-              ↻ Restart
+              Done ✓
             </button>
-          )}
-
-          {/* left controls: rewind (never fast-forward) + 🐢 slow toggle */}
-          <div className="absolute left-3 bottom-3 flex items-center gap-2">
-            {!ended && (
-              <button
-                type="button"
-                onClick={rewind10}
-                aria-label="Rewind 10 seconds"
-                className="rounded-full bg-white/90 hover:bg-white text-zinc-700 px-3 py-1 text-xs font-display font-bold shadow active:translate-y-0.5"
-              >
-                ⏪ 10s
-              </button>
-            )}
-            <button
-              type="button"
-              onClick={() => setRate((r) => (r === 1 ? 0.75 : 1))}
-              aria-pressed={rate < 1}
-              className={
-                'rounded-full px-3 py-1 text-xs font-display font-bold shadow ' +
-                (rate < 1 ? 'bg-amber-300 text-amber-900' : 'bg-white/90 text-ink-muted')
-              }
-            >
-              🐢 {rate < 1 ? '0.75×' : 'Slow it down'}
+            <button type="button" onClick={() => { seek(0); ref.current?.play().catch(() => {}); }} className={ctl}>
+              ↻ Watch again
             </button>
           </div>
+        )}
+      </div>
+
+      {/* ── Controls ── */}
+      <div className={`shrink-0 border-t border-cyan-300/25 bg-white/5 px-3 sm:px-6 ${turned ? 'py-1.5 flex items-center gap-3' : 'pt-2 pb-3'}`}>
+        <div className={`relative h-7 flex items-center ${turned ? 'order-2 flex-1 min-w-0' : ''}`}>
+          <input
+            type="range"
+            min={0}
+            max={duration || 0}
+            step={0.1}
+            value={Math.min(time, duration || 0)}
+            onChange={(e) => seek(Number(e.target.value))}
+            aria-label="Position in the video"
+            className="lesson-video-seek w-full"
+            style={{ ['--played' as string]: `${duration ? (time / duration) * 100 : 0}%` }}
+          />
+          {duration > 0 &&
+            chapters.slice(1).map((c) => (
+              <span
+                key={c.t}
+                aria-hidden="true"
+                className="pointer-events-none absolute top-1/2 h-3 w-px -translate-y-1/2 bg-white/70"
+                style={{ left: `${(c.t / duration) * 100}%` }}
+              />
+            ))}
+        </div>
+        <div className={turned ? 'contents' : 'mt-1.5 flex items-center gap-2'}>
+          <span className={turned ? 'order-1 flex items-center gap-2' : 'contents'}>
+          <button type="button" onClick={() => jump(-1)} aria-label="Previous slide" className={ctl}>
+            ⏮
+          </button>
+          <button type="button" onClick={toggle} aria-label={paused ? 'Play' : 'Pause'} className={`${ctl} min-w-16`}>
+            {ended ? '↻' : paused ? '▶ Play' : '❚❚ Pause'}
+          </button>
+          <button type="button" onClick={() => jump(1)} aria-label="Next slide" className={ctl}>
+            ⏭
+          </button>
+          <span className="ml-1 font-mono text-xs tabular-nums text-white/80 whitespace-nowrap">
+            {clock(time)} / {clock(duration)}
+          </span>
+          </span>
+          <span className={turned ? 'hidden' : 'flex-1'} />
+          <span className={turned ? 'order-3 flex items-center gap-2' : 'contents'}>
+          {portrait && (
+            <button
+              type="button"
+              onClick={() => setSideways(!turned)}
+              aria-label={turned ? 'Show the video upright' : 'Turn the video sideways to fill the screen'}
+              className={ctl}
+            >
+              {turned ? '⤢ Upright' : '⤢ Sideways'}
+            </button>
+          )}
+          <button
+            type="button"
+            onClick={() => setRate((r) => RATES[(RATES.indexOf(r) + 1) % RATES.length] ?? 1)}
+            aria-label={`Playback speed ${rate}×. Tap to change.`}
+            className={ctl}
+          >
+            {rate}×
+          </button>
+          {turned && (
+            <button type="button" onClick={onClose} aria-label="Close video" className={ctl}>
+              ✕
+            </button>
+          )}
+          </span>
         </div>
       </div>
     </div>

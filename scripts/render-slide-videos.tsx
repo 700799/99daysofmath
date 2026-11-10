@@ -74,6 +74,30 @@ const T_END = 3.2;
 const TWEEN = [0.35, 0.7];
 const T_TWEEN = 0.07;
 
+/**
+ * Where each slide starts, in seconds, on the same clock the renderer uses.
+ * The player uses these for its slide markers and previous/next buttons.
+ */
+export function chaptersFor(key: string): { t: number; kind: string; label: string }[] {
+  const picked = pickSlides(LESSON_SLIDES[key]);
+  const out = [{ t: 0, kind: 'title', label: 'Start' }];
+  let t = T_TITLE;
+  const reveal = (d: number) => TWEEN.length * T_TWEEN + d;
+  for (const s of picked) {
+    out.push({ t: Math.round(t * 100) / 100, kind: s.kind, label: s.head });
+    t += tIntro(s);
+    for (const st of s.steps?.steps ?? []) t += reveal(tStep(st.text));
+    if (s.steps?.answer) t += reveal(T_ANSWER);
+    if (s.why) t += reveal(tWhy(s.why));
+  }
+  out.push({ t: Math.round(t * 100) / 100, kind: 'end', label: 'Now you try' });
+  return out;
+}
+
+function writeChapters(key: string) {
+  fs.writeFileSync(path.join(OUT_DIR, `${key}-lesson.chapters.json`), JSON.stringify({ chapters: chaptersFor(key) }) + '\n');
+}
+
 // ── the page ────────────────────────────────────────────────────────────────
 const KIND: Record<LessonSlide['kind'], { label: string; tone: string }> = {
   objective: { label: 'The goal', tone: 'cyan' },
@@ -319,6 +343,7 @@ async function renderDeck(browser: Awaited<ReturnType<typeof chromium.launch>>, 
   const r = spawnSync('ffmpeg', ['-loglevel', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', listFile, '-vf', 'fps=30,format=yuv420p', '-c:v', 'libx264', '-preset', 'medium', '-crf', '26', '-tune', 'stillimage', '-g', '300', '-movflags', '+faststart', '-an', out], { stdio: 'inherit' });
   if (r.status !== 0) throw new Error(`ffmpeg failed for ${key}`);
   fs.rmSync(tmp, { recursive: true, force: true });
+  writeChapters(key);
   return { seconds: shots.reduce((a, s) => a + s.dur, 0), bytes: fs.statSync(out).size };
 }
 
@@ -329,8 +354,16 @@ async function main() {
   const [shard, shards] = shardArg ? shardArg.split('/').map(Number) : [0, 1];
   let keys = all ? Object.keys(LESSON_SLIDES) : args.filter((a) => !a.startsWith('--') && a !== shardArg);
   keys = keys.filter((k) => LESSON_SLIDES[k]?.length).filter((_, i) => i % shards === shard);
-  if (!keys.length) throw new Error('Name one or more lesson keys (e.g. 6.RP-3) or pass --all.');
+  if (!keys.length && !args.includes('--chapters-only')) throw new Error('Name one or more lesson keys (e.g. 6.RP-3) or pass --all.');
   fs.mkdirSync(OUT_DIR, { recursive: true });
+  if (args.includes('--chapters-only')) {
+    // Rewrite the slide markers and the list of lessons with a video, no rendering.
+    const have = Object.keys(LESSON_SLIDES).filter((k) => fs.existsSync(path.join(OUT_DIR, `${k}-lesson.mp4`)));
+    have.forEach(writeChapters);
+    fs.writeFileSync(KEYS_FILE, JSON.stringify(have) + '\n');
+    console.log(`chapters + key list written for ${have.length} lessons`);
+    return;
+  }
   const appCss = findAppCss();
   const browser = await chromium.launch({ executablePath: CHROME, args: ['--no-sandbox', '--font-render-hinting=none'] });
   let failed = 0;
