@@ -33,7 +33,7 @@
   "explanation": [
     "Constraint: $x^2 h = 32 \\Rightarrow h = \\frac{32}{x^2}$. Material: $S = x^2 + 4xh = x^2 + \\frac{128}{x}$.",
     "$S'(x) = 2x - \\frac{128}{x^2} = 0 \\Rightarrow 2x^3 = 128 \\Rightarrow x^3 = 64 \\Rightarrow x = 4$.",
-    "Check: $S''(x) = 2 + \\frac{256}{x^3} > 0$, so this is a minimum. The best box is $4 \\times 4$ with height $2$, using $S = 16 + 32 = 48$ ft$^2$ of material."
+    "Check: $S''(x) = 2 + \\frac{256}{x^3} > 0$, so this is a minimum. The best box is $4 \\times 4$ with height $2$, using $S = 16 + 32 = 48$ ft² of material."
   ],
   "alternativeExplanations": [
     {

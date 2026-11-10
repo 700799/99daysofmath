@@ -121,9 +121,9 @@ export const problemsCALCu08_14: SeedProblem[] = [
       { level: 'guide', text: '$\\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt}$. Substitute $r = 10$ and $\\frac{dr}{dt} = 3$.' },
       { level: 'reveal', text: '$\\frac{dA}{dt} = 2\\pi(10)(3) = 60\\pi$, so $k = 60$.' },
     ],
-    explanation: ['$A = \\pi r^2$, so $\\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt}$.', 'At the moment $r = 10$ with $\\frac{dr}{dt} = 3$: $\\frac{dA}{dt} = 2\\pi \\cdot 10 \\cdot 3 = 60\\pi$ cm$^2$/s.', 'So $k = 60$. Unlike the circumference, the area\'s growth rate depends on the current radius — a bigger ripple sweeps out area faster.'],
+    explanation: ['$A = \\pi r^2$, so $\\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt}$.', 'At the moment $r = 10$ with $\\frac{dr}{dt} = 3$: $\\frac{dA}{dt} = 2\\pi \\cdot 10 \\cdot 3 = 60\\pi$ cm²/s.', 'So $k = 60$. Unlike the circumference, the area\'s growth rate depends on the current radius — a bigger ripple sweeps out area faster.'],
     alternativeExplanations: [
-      { title: 'The thin ring picture', steps: ['In a short time $dt$ the ripple grows by a thin ring of width $3\\,dt$ and length (circumference) $2\\pi \\cdot 10 = 20\\pi$.', 'Ring area $\\approx 20\\pi \\cdot 3\\,dt = 60\\pi \\, dt$.', 'Divide by $dt$: the area grows at $60\\pi$ cm$^2$/s.'] },
+      { title: 'The thin ring picture', steps: ['In a short time $dt$ the ripple grows by a thin ring of width $3\\,dt$ and length (circumference) $2\\pi \\cdot 10 = 20\\pi$.', 'Ring area $\\approx 20\\pi \\cdot 3\\,dt = 60\\pi \\, dt$.', 'Divide by $dt$: the area grows at $60\\pi$ cm²/s.'] },
     ],
     tags: ['related-rates', 'area', 'word-problem'], estimatedSeconds: 55,
   },
@@ -157,7 +157,7 @@ export const problemsCALCu08_14: SeedProblem[] = [
     ],
     explanation: ['Similar triangles: $\\frac{r}{h} = \\frac{4}{12}$, so $r = \\frac{h}{3}$. The water volume is $V = \\frac{1}{3}\\pi r^2 h = \\frac{\\pi h^3}{27}$.', 'Differentiate: $\\frac{dV}{dt} = \\frac{3\\pi h^2}{27} \\frac{dh}{dt} = \\frac{\\pi h^2}{9} \\frac{dh}{dt}$.', 'With $\\frac{dV}{dt} = 2$ and $h = 3$: $2 = \\pi \\frac{dh}{dt}$, so $\\frac{dh}{dt} = \\frac{2}{\\pi} \\approx 0.64$ m/min. The level rises fast while the cone is narrow and slows as it widens.'],
     alternativeExplanations: [
-      { title: 'Rate equals flow over surface area', steps: ['Each minute $2$ m$^3$ arrives and spreads across the current water surface, a disc of radius $r = 1$ m when $h = 3$.', 'Surface area $= \\pi (1)^2 = \\pi$ m$^2$. Thickness added per minute $= \\frac{2}{\\pi} \\approx 0.64$ m.', 'This shortcut, $\\frac{dh}{dt} = \\frac{dV/dt}{\\text{surface area}}$, works for any tank — and it is exactly what the calculus produced.'] },
+      { title: 'Rate equals flow over surface area', steps: ['Each minute $2$ m³ arrives and spreads across the current water surface, a disc of radius $r = 1$ m when $h = 3$.', 'Surface area $= \\pi (1)^2 = \\pi$ m². Thickness added per minute $= \\frac{2}{\\pi} \\approx 0.64$ m.', 'This shortcut, $\\frac{dh}{dt} = \\frac{dV/dt}{\\text{surface area}}$, works for any tank — and it is exactly what the calculus produced.'] },
     ],
     tags: ['related-rates', 'cone', 'similar-triangles', 'word-problem', 'multi-step'], estimatedSeconds: 100,
   },
@@ -397,11 +397,11 @@ export const problemsCALCu08_14: SeedProblem[] = [
     hints: [
       { level: 'nudge', text: 'Acceleration is the derivative of velocity: $a(t) = v\'(t)$.' },
       { level: 'guide', text: '$a(t) = 6t$. Substitute $t = 2$.' },
-      { level: 'reveal', text: '$a(2) = 12$ m/s$^2$.' },
+      { level: 'reveal', text: '$a(2) = 12$ m/s².' },
     ],
-    explanation: ['$a(t) = v\'(t) = 6t$.', '$a(2) = 6(2) = 12$ m/s$^2$.', 'Note $v(2) = 12 - 12 = 0$: the particle is momentarily stopped at $t = 2$ but accelerating hard, so it immediately starts moving in the positive direction.'],
+    explanation: ['$a(t) = v\'(t) = 6t$.', '$a(2) = 6(2) = 12$ m/s².', 'Note $v(2) = 12 - 12 = 0$: the particle is momentarily stopped at $t = 2$ but accelerating hard, so it immediately starts moving in the positive direction.'],
     alternativeExplanations: [
-      { title: 'Rate of change of velocity', steps: ['$v(2) = 0$ and $v(2.1) = 3(4.41) - 12 = 1.23$.', 'Average acceleration over that tenth of a second: $\\frac{1.23}{0.1} = 12.3$ m/s$^2$.', 'Close to the instantaneous $12$ m/s$^2$; shrinking the window would bring it closer still.'] },
+      { title: 'Rate of change of velocity', steps: ['$v(2) = 0$ and $v(2.1) = 3(4.41) - 12 = 1.23$.', 'Average acceleration over that tenth of a second: $\\frac{1.23}{0.1} = 12.3$ m/s².', 'Close to the instantaneous $12$ m/s²; shrinking the window would bring it closer still.'] },
     ],
     tags: ['motion', 'acceleration', 'word-problem'], estimatedSeconds: 30,
   },
@@ -413,9 +413,9 @@ export const problemsCALCu08_14: SeedProblem[] = [
     hints: [
       { level: 'nudge', text: 'Call the width $x$. Then the length is $20 - x$ (half the fence goes to one width plus one length). Write the area as a function of $x$.' },
       { level: 'guide', text: '$A(x) = x(20 - x) = 20x - x^2$. Set $A\'(x) = 20 - 2x = 0$.' },
-      { level: 'reveal', text: '$x = 10$, so the garden is $10 \\times 10$ and the area is $100$ m$^2$.' },
+      { level: 'reveal', text: '$x = 10$, so the garden is $10 \\times 10$ and the area is $100$ m².' },
     ],
-    explanation: ['Constraint: $2x + 2y = 40$, so $y = 20 - x$. Area: $A(x) = x(20 - x) = 20x - x^2$.', '$A\'(x) = 20 - 2x = 0$ gives $x = 10$. Since $A\'\' = -2 < 0$, this is a maximum.', 'Maximum area: $A(10) = 10 \\cdot 10 = 100$ m$^2$ — a square.'],
+    explanation: ['Constraint: $2x + 2y = 40$, so $y = 20 - x$. Area: $A(x) = x(20 - x) = 20x - x^2$.', '$A\'(x) = 20 - 2x = 0$ gives $x = 10$. Since $A\'\' = -2 < 0$, this is a maximum.', 'Maximum area: $A(10) = 10 \\cdot 10 = 100$ m² — a square.'],
     alternativeExplanations: [
       { title: 'Try some rectangles', steps: ['$5 \\times 15 = 75$. $8 \\times 12 = 96$. $10 \\times 10 = 100$. $12 \\times 8 = 96$.', 'The area peaks when the sides are equal.', 'For a fixed perimeter, the square always wins — calculus just proves what the table suggests.'] },
     ],
@@ -475,11 +475,11 @@ export const problemsCALCu08_14: SeedProblem[] = [
     hints: [
       { level: 'nudge', text: 'Let $x$ be the length of each side perpendicular to the barn. Two of those plus one parallel side use all $120$ m.' },
       { level: 'guide', text: 'Parallel side $= 120 - 2x$. Area $A(x) = x(120 - 2x) = 120x - 2x^2$. Set $A\'(x) = 0$.' },
-      { level: 'reveal', text: '$120 - 4x = 0$ gives $x = 30$. The pen is $30 \\times 60$, area $1800$ m$^2$.' },
+      { level: 'reveal', text: '$120 - 4x = 0$ gives $x = 30$. The pen is $30 \\times 60$, area $1800$ m².' },
     ],
-    explanation: ['Fence constraint: $2x + y = 120$, so $y = 120 - 2x$.', 'Area: $A(x) = x(120 - 2x) = 120x - 2x^2$. Then $A\'(x) = 120 - 4x = 0$ at $x = 30$; $A\'\' = -4 < 0$ confirms a maximum.', '$y = 120 - 60 = 60$. Maximum area $= 30 \\cdot 60 = 1800$ m$^2$. The free barn side lets the pen be twice as long as it is deep.'],
+    explanation: ['Fence constraint: $2x + y = 120$, so $y = 120 - 2x$.', 'Area: $A(x) = x(120 - 2x) = 120x - 2x^2$. Then $A\'(x) = 120 - 4x = 0$ at $x = 30$; $A\'\' = -4 < 0$ confirms a maximum.', '$y = 120 - 60 = 60$. Maximum area $= 30 \\cdot 60 = 1800$ m². The free barn side lets the pen be twice as long as it is deep.'],
     alternativeExplanations: [
-      { title: 'Split the fence in half', steps: ['At the optimum, the two perpendicular sides together use $60$ m and the parallel side uses $60$ m — the fence splits evenly between the two directions.', 'That is a general pattern in these problems: the fence budget divides equally between "across" and "along."', 'So $x = 30$, $y = 60$, area $1800$ m$^2$.'] },
+      { title: 'Split the fence in half', steps: ['At the optimum, the two perpendicular sides together use $60$ m and the parallel side uses $60$ m — the fence splits evenly between the two directions.', 'That is a general pattern in these problems: the fence budget divides equally between "across" and "along."', 'So $x = 30$, $y = 60$, area $1800$ m².'] },
     ],
     tags: ['optimization', 'area', 'word-problem'], estimatedSeconds: 65,
   },
@@ -510,7 +510,7 @@ export const problemsCALCu08_14: SeedProblem[] = [
       { level: 'guide', text: '$S(x) = x^2 + \\frac{128}{x}$. Differentiate: $S\'(x) = 2x - \\frac{128}{x^2}$. Set it to zero and solve for $x^3$.' },
       { level: 'reveal', text: '$2x = \\frac{128}{x^2}$ gives $x^3 = 64$, so $x = 4$ feet (and $h = 2$ feet).' },
     ],
-    explanation: ['Constraint: $x^2 h = 32 \\Rightarrow h = \\frac{32}{x^2}$. Material: $S = x^2 + 4xh = x^2 + \\frac{128}{x}$.', '$S\'(x) = 2x - \\frac{128}{x^2} = 0 \\Rightarrow 2x^3 = 128 \\Rightarrow x^3 = 64 \\Rightarrow x = 4$.', 'Check: $S\'\'(x) = 2 + \\frac{256}{x^3} > 0$, so this is a minimum. The best box is $4 \\times 4$ with height $2$, using $S = 16 + 32 = 48$ ft$^2$ of material.'],
+    explanation: ['Constraint: $x^2 h = 32 \\Rightarrow h = \\frac{32}{x^2}$. Material: $S = x^2 + 4xh = x^2 + \\frac{128}{x}$.', '$S\'(x) = 2x - \\frac{128}{x^2} = 0 \\Rightarrow 2x^3 = 128 \\Rightarrow x^3 = 64 \\Rightarrow x = 4$.', 'Check: $S\'\'(x) = 2 + \\frac{256}{x^3} > 0$, so this is a minimum. The best box is $4 \\times 4$ with height $2$, using $S = 16 + 32 = 48$ ft² of material.'],
     alternativeExplanations: [
       { title: 'Compare nearby boxes', steps: ['$x = 3$: $h = \\frac{32}{9} \\approx 3.56$, $S = 9 + \\frac{128}{3} \\approx 51.7$.', '$x = 4$: $S = 16 + 32 = 48$. $x = 5$: $S = 25 + 25.6 = 50.6$.', 'Both neighbors use more material than $x = 4$, confirming the minimum. Notice the optimal box is exactly twice as wide as it is tall.'] },
     ],
@@ -624,11 +624,11 @@ export const problemsCALCu08_14: SeedProblem[] = [
     hints: [
       { level: 'nudge', text: 'Each $5$-meter strip is approximately a trapezoid whose parallel sides are the two depths at its edges.' },
       { level: 'guide', text: 'Strip areas: $5 \\cdot \\frac{0 + 3}{2}$, $5 \\cdot \\frac{3 + 5}{2}$, $5 \\cdot \\frac{5 + 4}{2}$, $5 \\cdot \\frac{4 + 0}{2}$. Add them.' },
-      { level: 'reveal', text: '$5(1.5 + 4 + 4.5 + 2) = 5 \\cdot 12 = 60$ m$^2$.' },
+      { level: 'reveal', text: '$5(1.5 + 4 + 4.5 + 2) = 5 \\cdot 12 = 60$ m².' },
     ],
-    explanation: ['Four strips, each $\\Delta x = 5$ m wide.', 'Trapezoid areas: $5 \\cdot 1.5 = 7.5$, $5 \\cdot 4 = 20$, $5 \\cdot 4.5 = 22.5$, $5 \\cdot 2 = 10$.', 'Total $\\approx 7.5 + 20 + 22.5 + 10 = 60$ m$^2$. Multiply by the river\'s speed and you have its flow rate — this is how real discharge is measured.'],
+    explanation: ['Four strips, each $\\Delta x = 5$ m wide.', 'Trapezoid areas: $5 \\cdot 1.5 = 7.5$, $5 \\cdot 4 = 20$, $5 \\cdot 4.5 = 22.5$, $5 \\cdot 2 = 10$.', 'Total $\\approx 7.5 + 20 + 22.5 + 10 = 60$ m². Multiply by the river\'s speed and you have its flow rate — this is how real discharge is measured.'],
     alternativeExplanations: [
-      { title: 'The trapezoid-rule shortcut', steps: ['$T = \\frac{\\Delta x}{2}\\left(y_0 + 2y_1 + 2y_2 + 2y_3 + y_4\\right)$: the interior depths count twice because each belongs to two strips.', '$= \\frac{5}{2}(0 + 6 + 10 + 8 + 0) = \\frac{5}{2} \\cdot 24 = 60$.', 'Same $60$ m$^2$, and quicker when there are many measurements.'] },
+      { title: 'The trapezoid-rule shortcut', steps: ['$T = \\frac{\\Delta x}{2}\\left(y_0 + 2y_1 + 2y_2 + 2y_3 + y_4\\right)$: the interior depths count twice because each belongs to two strips.', '$= \\frac{5}{2}(0 + 6 + 10 + 8 + 0) = \\frac{5}{2} \\cdot 24 = 60$.', 'Same $60$ m², and quicker when there are many measurements.'] },
     ],
     tags: ['trapezoidal-rule', 'table', 'area', 'word-problem'], estimatedSeconds: 60,
   },
@@ -884,7 +884,7 @@ export const problemsCALCu08_14: SeedProblem[] = [
   {
     domain: 'CALC', num: 119, unit: 12, order: 9, slug: 'position-from-acceleration-twice',
     standard: 'CALC.INT.A.2', difficulty: 3,
-    prompt: 'A particle moving along a line has acceleration $a(t) = 6t - 4$ m/s$^2$. At $t = 0$ its velocity is $1$ m/s and its position is $2$ m. Find its position at $t = 2$ seconds, in meters.',
+    prompt: 'A particle moving along a line has acceleration $a(t) = 6t - 4$ m/s². At $t = 0$ its velocity is $1$ m/s and its position is $2$ m. Find its position at $t = 2$ seconds, in meters.',
     answerType: 'numeric', primaryAnswer: '4', acceptanceMode: 'normalized',
     hints: [
       { level: 'nudge', text: 'Two antiderivatives in a row: acceleration $\\to$ velocity $\\to$ position. Use an initial condition after each one.' },
@@ -892,7 +892,7 @@ export const problemsCALCu08_14: SeedProblem[] = [
       { level: 'guide', text: 'Step two: $s(t) = \\int (3t^2 - 4t + 1) \\, dt = t^3 - 2t^2 + t + C_2$, and $s(0) = 2$ gives $C_2 = 2$. Now evaluate $s(2)$.' },
       { level: 'reveal', text: '$s(2) = 8 - 8 + 2 + 2 = 4$ m.' },
     ],
-    explanation: ['Velocity: $v(t) = 3t^2 - 4t + C_1$; $v(0) = 1$ forces $C_1 = 1$.', 'Position: $s(t) = t^3 - 2t^2 + t + C_2$; $s(0) = 2$ forces $C_2 = 2$.', '$s(2) = 2^3 - 2(2)^2 + 2 + 2 = 8 - 8 + 2 + 2 = 4$ m. Note the particle is back near where it started — it slowed, reversed, and returned.'],
+    explanation: ['Velocity: $v(t) = 3t^2 - 4t + C_1$; $v(0) = 1$ forces $C_1 = 1$.', 'Position: $s(t) = t^3 - 2t^2 + t + C_2$; $s(0) = 2$ forces $C_2 = 2$.', '$s(2) = 2^3 - 2(2)^2 + 2 + 2 = 8 - 8 + 2 + 2 = 4$ m. Along the way it turns around twice: $v(t) = (3t - 1)(t - 1)$ is negative on $\\left(\\frac{1}{3}, 1\\right)$, so it backs up to $s(1) = 2$ before moving forward to $4$.'],
     alternativeExplanations: [
       { title: 'Net change twice', steps: ['Displacement $= \\int_0^2 v(t) \\, dt = \\int_0^2 (3t^2 - 4t + 1) \\, dt = [t^3 - 2t^2 + t]_0^2 = 8 - 8 + 2 = 2$ m.', 'Position $=$ start $+$ displacement $= 2 + 2 = 4$ m.', 'You still need $v(t)$ first, so the first constant $C_1 = 1$ is unavoidable — but the second one can be skipped this way.'] },
     ],
@@ -1172,16 +1172,16 @@ export const problemsCALCu08_14: SeedProblem[] = [
   {
     domain: 'CALC', num: 136, unit: 14, order: 6, slug: 'reservoir-in-and-out-flow',
     standard: 'CALC.INT.B.2', difficulty: 2,
-    prompt: 'A reservoir holds $1000$ cubic meters of water at $t = 0$. Water flows in at a constant $20$ m$^3$ per hour and is pumped out at a rate of $2t$ m$^3$ per hour, for $0 \\le t \\le 8$ hours. How much water is in the reservoir at $t = 8$, in cubic meters?',
+    prompt: 'A reservoir holds $1000$ cubic meters of water at $t = 0$. Water flows in at a constant $20$ m³ per hour and is pumped out at a rate of $2t$ m³ per hour, for $0 \\le t \\le 8$ hours. How much water is in the reservoir at $t = 8$, in cubic meters?',
     answerType: 'numeric', primaryAnswer: '1096', acceptanceMode: 'normalized',
     hints: [
       { level: 'nudge', text: 'Net rate $=$ in $-$ out $= 20 - 2t$. The change in water is the integral of the net rate.' },
       { level: 'guide', text: '$\\int_0^8 (20 - 2t) \\, dt = [20t - t^2]_0^8 = 160 - 64$.' },
-      { level: 'reveal', text: 'Change $= 96$ m$^3$, so the reservoir holds $1000 + 96 = 1096$ m$^3$.' },
+      { level: 'reveal', text: 'Change $= 96$ m³, so the reservoir holds $1000 + 96 = 1096$ m³.' },
     ],
-    explanation: ['Net rate of change: $20 - 2t$ m$^3$/h.', 'Net change over $[0, 8]$: $\\int_0^8 (20 - 2t) \\, dt = 160 - 64 = 96$ m$^3$.', 'Final amount: $1000 + 96 = 1096$ m$^3$. (The outflow $2t$ overtakes the inflow $20$ only at $t = 10$, so the level is still rising at $t = 8$, just more slowly.)'],
+    explanation: ['Net rate of change: $20 - 2t$ m³/h.', 'Net change over $[0, 8]$: $\\int_0^8 (20 - 2t) \\, dt = 160 - 64 = 96$ m³.', 'Final amount: $1000 + 96 = 1096$ m³. (The outflow $2t$ overtakes the inflow $20$ only at $t = 10$, so the level is still rising at $t = 8$, just more slowly.)'],
     alternativeExplanations: [
-      { title: 'In and out separately', steps: ['Total in: $20 \\cdot 8 = 160$ m$^3$.', 'Total out: $\\int_0^8 2t \\, dt = 64$ m$^3$ (a triangle of base $8$ and height $16$).', '$1000 + 160 - 64 = 1096$ m$^3$.'] },
+      { title: 'In and out separately', steps: ['Total in: $20 \\cdot 8 = 160$ m³.', 'Total out: $\\int_0^8 2t \\, dt = 64$ m³ (a triangle of base $8$ and height $16$).', '$1000 + 160 - 64 = 1096$ m³.'] },
     ],
     tags: ['accumulation', 'net-change', 'rate-in-rate-out', 'word-problem'], estimatedSeconds: 60,
   },

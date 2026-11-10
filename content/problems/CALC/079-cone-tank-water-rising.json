@@ -42,8 +42,8 @@
     {
       "title": "Rate equals flow over surface area",
       "steps": [
-        "Each minute $2$ m$^3$ arrives and spreads across the current water surface, a disc of radius $r = 1$ m when $h = 3$.",
-        "Surface area $= \\pi (1)^2 = \\pi$ m$^2$. Thickness added per minute $= \\frac{2}{\\pi} \\approx 0.64$ m.",
+        "Each minute $2$ m³ arrives and spreads across the current water surface, a disc of radius $r = 1$ m when $h = 3$.",
+        "Surface area $= \\pi (1)^2 = \\pi$ m². Thickness added per minute $= \\frac{2}{\\pi} \\approx 0.64$ m.",
         "This shortcut, $\\frac{dh}{dt} = \\frac{dV/dt}{\\text{surface area}}$, works for any tank — and it is exactly what the calculus produced."
       ]
     }

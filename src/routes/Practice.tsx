@@ -19,7 +19,8 @@ import { StickerCelebration } from '../components/StickerCelebration';
 import { correctMessage, wrongMessage } from '../utils/encouragement';
 import { playCorrect, playWrong, playUnitComplete } from '../utils/sound';
 import { computeXPGain } from '../utils/hintEconomics';
-import { CORE_DOMAINS, type Problem, type HintLevel, type HintStep } from '../types/problem';
+import { CORE_DOMAINS, type Domain, type Problem, type HintLevel, type HintStep } from '../types/problem';
+import { getCourse, courseDomains } from '../data/courses';
 
 type Phase = 'loading' | 'problem' | 'feedback-correct' | 'feedback-wrong' | 'done';
 
@@ -61,10 +62,13 @@ export function Practice() {
     let cancelled = false;
     (async () => {
       try {
-        // Adaptive practice pools the grade-level (core) domains only — the
-        // high-school and AP courses have their own practice so kids aren't
-        // ambushed here.
-        const all = (await getAllProblems()).filter((p) => CORE_DOMAINS.includes(p.domain));
+        // Adaptive practice pools the student's own course: an AP Calculus
+        // student practises calculus, a 6th grader practises 6th grade. With
+        // no course picked yet it falls back to the grade-level (core)
+        // domains, so nobody is ambushed by material from another course.
+        const chosen = getCourse(useProgress.getState().startingCourse ?? '');
+        const pool: Domain[] = chosen ? courseDomains(chosen) : CORE_DOMAINS;
+        const all = (await getAllProblems()).filter((p) => pool.includes(p.domain));
         if (cancelled) return;
         poolRef.current = all;
         const stats = useProgress.getState().problemStats;
