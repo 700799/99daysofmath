@@ -1,4 +1,5 @@
 import type { Domain } from '../types/problem';
+import LESSON_VIDEO_KEYS from './lessonVideoKeys.json';
 import { LESSON_SLIDES } from './lessonSlides';
 import type { LessonSlide } from './lessonSlides';
 import { GEO_LESSONS } from './geo/lessons_u01_14';
@@ -1275,9 +1276,14 @@ export const LESSONS: Lesson[] = [
 ];
 
 // Attach each lesson's story-style slide deck (authored per-domain in lessonSlides/).
+// Every lesson's video is rendered from that deck (scripts/render-slide-videos.tsx),
+// which also writes the list of lessons that have one.
+const HAS_VIDEO = new Set<string>(LESSON_VIDEO_KEYS as string[]);
 for (const l of LESSONS) {
-  const s = LESSON_SLIDES[lessonKey(l.domain, l.unit)];
+  const key = lessonKey(l.domain, l.unit);
+  const s = LESSON_SLIDES[key];
   if (s && s.length) l.slides = s;
+  if (HAS_VIDEO.has(key)) l.videos = [{ title: 'Watch the lesson', src: `${key}-lesson.mp4` }];
 }
 
 const byKey = new Map(LESSONS.map((l) => [lessonKey(l.domain, l.unit), l]));
