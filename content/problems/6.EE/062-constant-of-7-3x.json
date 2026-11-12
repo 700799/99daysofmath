@@ -10,24 +10,25 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A constant has no variable.",
+  "hint": "A constant term is a number standing alone, with no letter attached to it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A constant has no variable."
+      "text": "A constant term is a number standing alone, with no letter attached to it."
     },
     {
       "level": "guide",
-      "text": "In $7 + 3x$, $3x$ has $x$; $7$ does not."
+      "text": "The expression $7 + 3x$ has two terms, $7$ and $3x$. Decide which one has no variable."
     },
     {
       "level": "reveal",
-      "text": "$7$."
+      "text": "The term with no variable is $7$, so the constant term is $7$."
     }
   ],
   "explanation": [
-    "A constant term contains no variable.",
-    "In $7 + 3x$, the constant is $7$."
+    "A **constant term** is a term whose value never changes because it has no variable.",
+    "The two terms of $7 + 3x$ are $7$ and $3x$.",
+    "$3x$ changes when $x$ changes, but $7$ does not, so the constant term is $7$."
   ],
   "tags": [
     "expression",

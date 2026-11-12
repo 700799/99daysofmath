@@ -32,23 +32,26 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Distribute the $3$.",
+  "hint": "The $3$ sits outside the parentheses, so it has to multiply both the $x$ and the $2$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Distribute the $3$."
+      "text": "The $3$ sits outside the parentheses, so it has to multiply both the $x$ and the $2$."
     },
     {
       "level": "guide",
-      "text": "$3 \\cdot x + 3 \\cdot 2 = ?$"
+      "text": "Work out $3 \\cdot x$ and $3 \\cdot 2$, add the products, and look for that expression among the choices."
     },
     {
       "level": "reveal",
-      "text": "$3x + 6$."
+      "text": "$3 \\cdot x + 3 \\cdot 2 = 3x + 6$, so the equivalent expression is choice C."
     }
   ],
   "explanation": [
-    "$3(x + 2) = 3x + 6$."
+    "Apply the distributive property, so that $3$ multiplies each term in $(x + 2)$.",
+    "The two products you get are $3 \\cdot x = 3x$ and $3 \\cdot 2 = 6$.",
+    "Together they make $3x + 6$, which is choice C.",
+    "Choice A forgot to multiply the $2$, which is the most common mistake here."
   ],
   "tags": [
     "distributive",

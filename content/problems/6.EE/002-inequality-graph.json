@@ -37,12 +37,12 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "There are **two** endpoints. Look at each circle (open vs filled) separately.",
+  "hint": "Look at each end of the shaded part separately. Is the circle there filled in or left open?",
   "explanation": [
-    "The shaded segment runs from $-1$ to $2$, so $x$ is **between** these values.",
-    "Left endpoint: circle at $-1$ is **closed** → $-1$ **is** included → $-1 \\le x$.",
-    "Right endpoint: circle at $2$ is **open** → $2$ is **not** included → $x < 2$.",
-    "Combine: $-1 \\le x < 2$."
+    "The shading runs from $-1$ to $2$, so $x$ lies **between** those two numbers and the answer is one joined inequality.",
+    "The circle at $-1$ is filled, which means $-1$ itself is included, so that end uses $\\le$: $-1 \\le x$.",
+    "The circle at $2$ is open, which means $2$ itself is left out, so that end uses $<$: $x < 2$.",
+    "Putting both ends together gives $-1 \\le x < 2$, which is choice B."
   ],
   "alternativeExplanations": [
     {
@@ -77,15 +77,15 @@
     },
     {
       "level": "nudge",
-      "text": "Walk the segment left to right. Each end: is the circle filled or open?"
+      "text": "Look at each end of the shaded part separately. Is the circle there filled in or left open?"
     },
     {
       "level": "guide",
-      "text": "Left circle is **filled** at $-1$ → $-1 \\le x$. Right circle is **open** at $2$ → $x < 2$. Combine: $-1 \\le x < 2$."
+      "text": "The left circle at $-1$ is filled, so $-1$ is included. The right circle at $2$ is open, so $2$ is not. Pick the symbol that matches each end."
     },
     {
       "level": "reveal",
-      "text": "Answer: $-1 \\le x < 2$."
+      "text": "Filled at $-1$ and open at $2$ gives $-1 \\le x < 2$, which is choice B."
     }
   ]
 }

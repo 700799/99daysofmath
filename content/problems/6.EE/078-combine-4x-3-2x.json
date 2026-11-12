@@ -13,30 +13,31 @@
     "3 + 6x"
   ],
   "acceptanceMode": "exact",
-  "hint": "Group the $x$ terms together.",
+  "hint": "Find the terms that share the same variable. The term without a variable stays separate.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Whatever operation is acting on the variable, do its OPPOSITE on both sides."
+      "text": "Imagine $x$ is the price of a pencil. You buy $4$ pencils, pay a $3$ dollar fee, then buy $2$ more pencils. How many pencils is that, and does the fee change?"
     },
     {
       "level": "nudge",
-      "text": "Group the $x$ terms together."
+      "text": "Find the terms that share the same variable. The term without a variable stays separate."
     },
     {
       "level": "guide",
-      "text": "$4x + 2x = 6x$."
+      "text": "$4x$ and $2x$ are like terms, so add $4 + 2$ for the new coefficient. The $3$ is carried along unchanged."
     },
     {
       "level": "reveal",
-      "text": "$6x + 3$."
+      "text": "$4x + 2x = 6x$, so the simplified expression is $6x + 3$."
     }
   ],
   "explanation": [
-    "Like terms: $4x$ and $2x$ → $6x$.",
-    "Constant: $3$.",
-    "Result: $6x + 3$."
+    "The terms $4x$ and $2x$ are alike because both contain $x$.",
+    "Add their coefficients to combine them: $4x + 2x = 6x$.",
+    "The constant $3$ has no variable, so it cannot join the $x$ terms.",
+    "The simplified expression is $6x + 3$, with one $x$ term and one number."
   ],
   "tags": [
     "MAP-practice",

@@ -13,25 +13,25 @@
     "6+n=14"
   ],
   "acceptanceMode": "exact",
-  "hint": "\"Plus\" means $+$; \"equals\" means $=$.",
+  "hint": "An equation needs an equals sign. Which word in the sentence stands for it?",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Plus\" means $+$; \"equals\" means $=$."
+      "text": "An equation needs an equals sign. Which word in the sentence stands for it?"
     },
     {
       "level": "guide",
-      "text": "Write: number + 6 = 14."
+      "text": "Write $n$ for the number, show that $6$ is added to it, and then set that equal to $14$."
     },
     {
       "level": "reveal",
-      "text": "$n + 6 = 14$."
+      "text": "Translating in order gives the equation $n+6=14$."
     }
   ],
   "explanation": [
-    "\"A number $n$ plus $6$\" → $n + 6$.",
-    "\"Equals $14$\" → $= 14$.",
-    "$n + 6 = 14$."
+    "\"A number plus $6$\" means $6$ is added to the unknown number $n$: $n + 6$.",
+    "The word \"equals\" becomes the $=$ sign, followed by $14$.",
+    "Putting the parts together gives the equation $n + 6 = 14$."
   ],
   "tags": [
     "equation",

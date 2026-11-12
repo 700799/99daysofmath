@@ -22,24 +22,26 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "$>$ means strictly greater (not equal).",
+  "hint": "Put $4$ in place of $x$ and read the statement out loud. Is it true?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$>$ means strictly greater (not equal)."
+      "text": "Put $4$ in place of $x$ and read the statement out loud. Is it true?"
     },
     {
       "level": "guide",
-      "text": "Is $4 > 4$ true?"
+      "text": "Substituting gives $4 > 4$. Decide whether a number can be greater than itself."
     },
     {
       "level": "reveal",
-      "text": "No — they're equal, not greater."
+      "text": "$4$ is equal to $4$, not greater, so the answer is No (choice B)."
     }
   ],
   "explanation": [
-    "$x > 4$ excludes $4$.",
-    "$4$ is not a solution."
+    "A value is a solution only if it makes the inequality true.",
+    "Substitute $4$ for $x$ to get the statement $4 > 4$.",
+    "A number is never greater than itself, and $>$ has no \"or equal to\" part.",
+    "So $x = 4$ is not a solution, and the answer is No, choice B."
   ],
   "tags": [
     "inequality",

@@ -13,23 +13,25 @@
     "13+n=20"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Translate word for word.",
+  "hint": "Translate the sentence word by word. Which word tells you where the equals sign goes?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Translate word for word."
+      "text": "Translate the sentence word by word. Which word tells you where the equals sign goes?"
     },
     {
       "level": "guide",
-      "text": "$n + 13 = 20$."
+      "text": "\"Plus\" means add and \"equals\" becomes $=$. Write $n$, then the addition of $13$, then the equals sign and $20$."
     },
     {
       "level": "reveal",
-      "text": "$n + 13 = 20$."
+      "text": "Following the sentence in order gives the equation $n+13=20$."
     }
   ],
   "explanation": [
-    "$n$ plus $13$ equals $20$: $n + 13 = 20$."
+    "\"A number $n$ plus $13$\" means $13$ is added to $n$, which is $n + 13$.",
+    "The word \"equals\" becomes the $=$ sign, and $20$ goes on the other side.",
+    "Reading the sentence left to right gives the equation $n + 13 = 20$."
   ],
   "tags": [
     "translate"

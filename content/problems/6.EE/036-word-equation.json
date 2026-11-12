@@ -10,24 +10,26 @@
   "primaryAnswer": "13",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Let $x$ = before. $x + 7 = 20$.",
+  "hint": "The starting amount is unknown. Call it $x$ and describe the story with an equation.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Let $x$ = before. $x + 7 = 20$."
+      "text": "The starting amount is unknown. Call it $x$ and describe the story with an equation."
     },
     {
       "level": "guide",
-      "text": "Solve: $x = 20 - 7$."
+      "text": "Her marbles plus $7$ more make $20$, so $x + 7 = 20$. Subtract $7$ from both sides to find $x$."
     },
     {
       "level": "reveal",
-      "text": "$x = 13$."
+      "text": "$20 - 7 = 13$, so Mia had $13$ marbles before."
     }
   ],
   "explanation": [
-    "Set up: $x + 7 = 20$.",
-    "$x = 13$ marbles."
+    "Let $x$ be the number of marbles Mia had at the start.",
+    "Getting $7$ more means adding, and the total is $20$, so the equation is $x + 7 = 20$.",
+    "Subtract $7$ from both sides to undo the addition: $x = 20 - 7 = 13$.",
+    "Mia had $13$ marbles before, and $13 + 7 = 20$ confirms it."
   ],
   "tags": [
     "CA",

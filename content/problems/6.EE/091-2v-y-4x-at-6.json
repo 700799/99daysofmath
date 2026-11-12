@@ -10,24 +10,25 @@
   "primaryAnswer": "24",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $6$ for $x$.",
+  "hint": "The rule says how to get $y$ from $x$. Use the given $x$ in the rule.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $6$ for $x$."
+      "text": "The rule says how to get $y$ from $x$. Use the given $x$ in the rule."
     },
     {
       "level": "guide",
-      "text": "$y = 4 \\cdot 6$."
+      "text": "$4x$ means $4$ times $x$, so with $x = 6$ you need to work out $4 \\times 6$."
     },
     {
       "level": "reveal",
-      "text": "$24$."
+      "text": "Four times six is $4 \\times 6 = 24$, so $y$ equals $24$."
     }
   ],
   "explanation": [
-    "$y = 4x$ with $x = 6$: $y = 24$.",
-    "Final answer: 24."
+    "The equation $y = 4x$ says $y$ is four times $x$.",
+    "Replace $x$ with the given value $6$, which makes the rule $y = 4(6)$.",
+    "Multiplying gives $24$, so the answer is $y = 24$ when $x = 6$."
   ],
   "tags": [
     "two-vars"

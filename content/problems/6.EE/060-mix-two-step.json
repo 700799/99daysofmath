@@ -10,30 +10,31 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Subtract $3$ first.",
+  "hint": "Two things happen to $x$: it is multiplied by $2$, then $3$ is added. Undo them in reverse order.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+      "text": "Solve $2x = 8$ first. Then notice that this problem becomes that one after a single step."
     },
     {
       "level": "nudge",
-      "text": "Subtract $3$ first."
+      "text": "Two things happen to $x$: it is multiplied by $2$, then $3$ is added. Undo them in reverse order."
     },
     {
       "level": "guide",
-      "text": "$2x = 8$. Now divide by $2$."
+      "text": "Subtract $3$ from both sides to get $2x = 8$. Then divide both sides by $2$."
     },
     {
       "level": "reveal",
-      "text": "$x = 4$."
+      "text": "$8 \\div 2 = 4$, so the solution of the equation is $x = 4$."
     }
   ],
   "explanation": [
-    "$2x + 3 = 11$.",
-    "$2x = 8$.",
-    "$x = 4$."
+    "In $2x + 3 = 11$, $x$ is multiplied by $2$ and then $3$ is added.",
+    "Undo the addition first by subtracting $3$ from both sides: $2x = 8$.",
+    "Undo the multiplication by dividing both sides by $2$: $x = 4$.",
+    "Check: $2(4) + 3 = 11$ is true, so the solution is $x = 4$."
   ],
   "tags": [
     "CA",

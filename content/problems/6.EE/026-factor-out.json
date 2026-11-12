@@ -13,29 +13,31 @@
     "3 (2x+3)"
   ],
   "acceptanceMode": "normalized",
-  "hint": "GCF of $6$ and $9$.",
+  "hint": "Factoring is distributing in reverse. Which is the largest number that divides both $6$ and $9$?",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Substitute a guess back into the equation. If both sides match, the guess is the answer."
+      "text": "Try $2x + 4$ first. Both parts can be divided by $2$, so it factors as $2(x + 2)$. Now do the same with a different common factor."
     },
     {
       "level": "nudge",
-      "text": "GCF of $6$ and $9$."
+      "text": "Factoring is distributing in reverse. Which is the largest number that divides both $6$ and $9$?"
     },
     {
       "level": "guide",
-      "text": "GCF is $3$. Divide each: $6x/3 = 2x$, $9/3 = 3$."
+      "text": "The greatest common factor of $6$ and $9$ is $3$. Divide each term by $3$ to find what goes inside the parentheses."
     },
     {
       "level": "reveal",
-      "text": "$3(2x + 3)$."
+      "text": "$6x \\div 3 = 2x$ and $9 \\div 3 = 3$, so the factored form is $3(2x + 3)$."
     }
   ],
   "explanation": [
-    "GCF$(6, 9) = 3$.",
-    "Factor: $3 \\cdot 2x + 3 \\cdot 3 = 3(2x + 3)$."
+    "Find the greatest common factor of the two numbers: the largest number dividing both $6$ and $9$ is $3$.",
+    "Rewrite each term as $3$ times something: $6x = 3 \\cdot 2x$ and $9 = 3 \\cdot 3$.",
+    "Pull the shared $3$ out front, which is the distributive property in reverse: $3(2x + 3)$.",
+    "Check by expanding: $3 \\cdot 2x + 3 \\cdot 3 = 6x + 9$. The answer is $3(2x + 3)$."
   ],
   "tags": [
     "CA",

@@ -10,29 +10,31 @@
   "primaryAnswer": "13",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute both values.",
+  "hint": "Match each letter to its own value, then think about which operation comes first.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Translate piece-by-piece: \"more than\" = +, \"product\" = ×, \"less than\" flips the order."
+      "text": "Read $2x + y$ as \"two copies of $x$ and one copy of $y$\". With $x = 3$ and $y = 7$, that is $3 + 3 + 7$."
     },
     {
       "level": "nudge",
-      "text": "Substitute both values."
+      "text": "Match each letter to its own value, then think about which operation comes first."
     },
     {
       "level": "guide",
-      "text": "$2(3) + 7$."
+      "text": "Substituting gives $2(3) + 7$. Multiply $2$ by $3$ before you add the $7$."
     },
     {
       "level": "reveal",
-      "text": "$6 + 7 = 13$."
+      "text": "$2 \\times 3 = 6$ and $6 + 7 = 13$, so the value is $13$."
     }
   ],
   "explanation": [
-    "$2x + y$ with $x = 3, y = 7$: $2(3) + 7 = 6 + 7 = 13$.",
-    "Final answer: 13."
+    "Replace $x$ with $3$ and $y$ with $7$ to get $2(3) + 7$.",
+    "Multiply first, because $2x$ means $2$ times $x$, which gives $2 \\times 3 = 6$.",
+    "Then add the value of $y$ to that product: $6 + 7 = 13$.",
+    "The value of the expression is $13$."
   ],
   "tags": [
     "MAP-practice",

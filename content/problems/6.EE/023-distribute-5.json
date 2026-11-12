@@ -12,23 +12,26 @@
     "10x + 15"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Distribute $5$ to both terms.",
+  "hint": "The $5$ outside must multiply both terms inside, including the one that already has a number.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Distribute $5$ to both terms."
+      "text": "The $5$ outside must multiply both terms inside, including the one that already has a number."
     },
     {
       "level": "guide",
-      "text": "$5 \\cdot 2x = 10x$, $5 \\cdot 3 = 15$."
+      "text": "Find $5 \\cdot 2x$ by multiplying $5$ and $2$ and keeping the $x$. Then find $5 \\cdot 3$."
     },
     {
       "level": "reveal",
-      "text": "$10x + 15$."
+      "text": "$5 \\cdot 2x = 10x$ and $5 \\cdot 3 = 15$, so the expanded form is $10x + 15$."
     }
   ],
   "explanation": [
-    "$5(2x + 3) = 10x + 15$."
+    "To expand, multiply the $5$ by each term inside the parentheses.",
+    "For the first term, multiply the numbers and keep the variable: $5 \\cdot 2x = 10x$.",
+    "For the second term, multiply the two numbers: $5 \\cdot 3 = 15$.",
+    "Join the products with a plus sign to get $10x + 15$."
   ],
   "tags": [
     "distributive"

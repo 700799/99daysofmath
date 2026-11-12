@@ -10,29 +10,31 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiply both sides by $\\frac{3}{2}$.",
+  "hint": "To undo multiplying by a fraction, you can multiply by the fraction flipped over.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Whatever operation is acting on the variable, do its OPPOSITE on both sides."
+      "text": "Read the equation as \"two thirds of $x$ is $10$\". If two of the three equal parts make $10$, how big is one part?"
     },
     {
       "level": "nudge",
-      "text": "Multiply both sides by $\\frac{3}{2}$."
+      "text": "To undo multiplying by a fraction, you can multiply by the fraction flipped over."
     },
     {
       "level": "guide",
-      "text": "$x = 10 \\cdot \\frac{3}{2}$."
+      "text": "Multiply both sides by $\\frac{3}{2}$, the reciprocal of $\\frac{2}{3}$. That leaves $x = 10 \\times \\frac{3}{2}$."
     },
     {
       "level": "reveal",
-      "text": "$x = 15$."
+      "text": "$10 \\times \\frac{3}{2} = \\frac{30}{2} = 15$, so the solution of the equation is $x = 15$."
     }
   ],
   "explanation": [
-    "$\\frac{2}{3} x = 10$.",
-    "Multiply both sides by $\\frac{3}{2}$: $x = 15$."
+    "The equation says that $\\frac{2}{3}$ of the number $x$ equals $10$.",
+    "Multiply both sides by the reciprocal $\\frac{3}{2}$, because $\\frac{3}{2} \\cdot \\frac{2}{3} = 1$ and that leaves $x$ alone.",
+    "The right side becomes $10 \\times \\frac{3}{2} = \\frac{30}{2}$, which simplifies to $15$.",
+    "Check: $\\frac{2}{3} \\times 15 = 10$ is true, so the solution is $x = 15$."
   ],
   "tags": [
     "MAP-practice",

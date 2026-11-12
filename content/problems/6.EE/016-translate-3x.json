@@ -16,7 +16,7 @@
     "(x+7)*2-4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Wrap the \"**sum of $x$ and $7$**\" inside parentheses before you multiply by $2$.",
+  "hint": "Break the phrase into parts. Which part has to be built first, before it can be doubled?",
   "hints": [
     {
       "level": "nudge",
@@ -25,22 +25,22 @@
     },
     {
       "level": "nudge",
-      "text": "Order of words = order of operations. Build the **inside** first, multiply by $2$, then subtract $4$."
+      "text": "Break the phrase into parts. Which part has to be built first, before it can be doubled?"
     },
     {
       "level": "guide",
-      "text": "Sum of $x$ and $7$ → $(x+7)$. Twice that → $2(x+7)$. Decreased by $4$ → $2(x+7) - 4$."
+      "text": "The sum of $x$ and $7$ is $(x+7)$. \"Twice\" multiplies that whole sum by $2$, and \"decreased by $4$\" is a subtraction at the end."
     },
     {
       "level": "reveal",
-      "text": "Answer: $2(x+7) - 4$ (equivalently $2x + 10$)."
+      "text": "Doubling the sum and then subtracting gives the expression $2(x+7)-4$."
     }
   ],
   "explanation": [
-    "Read in pieces: \"sum of $x$ and $7$\" → $(x+7)$.",
-    "\"Twice [that sum]\" → multiply the **whole sum** by $2$: $2(x+7)$.",
-    "\"Decreased by $4$\" → subtract $4$ from the result: $2(x+7) - 4$.",
-    "Distribute to check: $2(x+7) - 4 = 2x + 14 - 4 = 2x + 10$."
+    "Start with the innermost part: \"the sum of a number $x$ and $7$\" is $(x+7)$.",
+    "\"Twice\" that sum means the **whole** sum is multiplied by $2$, so parentheses are needed: $2(x+7)$.",
+    "\"Decreased by $4$\" means $4$ is subtracted from that result, which gives $2(x+7) - 4$.",
+    "The expression is $2(x+7)-4$. Distributing shows it also equals $2x + 10$."
   ],
   "tags": [
     "CA",

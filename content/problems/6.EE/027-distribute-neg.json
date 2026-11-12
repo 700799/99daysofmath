@@ -12,23 +12,26 @@
     "4x + 28"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply $4$ by each.",
+  "hint": "Picture $4$ bags that each hold $x$ and $7$. How many of each do you have in total?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply $4$ by each."
+      "text": "Picture $4$ bags that each hold $x$ and $7$. How many of each do you have in total?"
     },
     {
       "level": "guide",
-      "text": "$4x + 4 \\cdot 7$."
+      "text": "Multiply $4$ by $x$ and then $4$ by $7$. Write the two products with a plus sign between them."
     },
     {
       "level": "reveal",
-      "text": "$4x + 28$."
+      "text": "$4 \\cdot x = 4x$ and $4 \\cdot 7 = 28$, so the expanded form is $4x + 28$."
     }
   ],
   "explanation": [
-    "$4(x + 7) = 4x + 28$."
+    "Expanding means the $4$ outside multiplies every term inside the parentheses.",
+    "The first product is $4$ times $x$, which is $4x$.",
+    "The second product is $4$ times $7$, which is $28$.",
+    "Adding the two products gives the answer $4x + 28$."
   ],
   "tags": [
     "distributive"

@@ -12,29 +12,31 @@
     "5x + 8"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Distribute first, then combine.",
+  "hint": "The parentheses are in the way. Remove them first, then look for terms that are alike.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+      "text": "Start with just the second part. What do you get when you expand $2(x + 4)$?"
     },
     {
       "level": "nudge",
-      "text": "Distribute first, then combine."
+      "text": "The parentheses are in the way. Remove them first, then look for terms that are alike."
     },
     {
       "level": "guide",
-      "text": "$3x + 2x + 8$."
+      "text": "Distribute the $2$ to turn the expression into $3x + 2x + 8$. Now combine the two $x$ terms."
     },
     {
       "level": "reveal",
-      "text": "$5x + 8$."
+      "text": "$3x + 2x = 5x$, so the simplified expression is $5x + 8$."
     }
   ],
   "explanation": [
-    "$2(x + 4) = 2x + 8$.",
-    "$3x + 2x + 8 = 5x + 8$."
+    "Distribute the $2$ over the parentheses first: $2(x + 4) = 2x + 8$.",
+    "Rewrite the whole expression without parentheses: $3x + 2x + 8$.",
+    "Combine the like terms $3x$ and $2x$ by adding coefficients: $5x$.",
+    "The $8$ has no partner, so the answer is $5x + 8$."
   ],
   "tags": [
     "MAP-practice",

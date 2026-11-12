@@ -13,24 +13,25 @@
     "n"
   ],
   "acceptanceMode": "exact",
-  "hint": "Substitute and check the left side.",
+  "hint": "Test the value by substituting it. A solution must make both sides exactly equal.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute and check the left side."
+      "text": "Test the value by substituting it. A solution must make both sides exactly equal."
     },
     {
       "level": "guide",
-      "text": "$4(2) + 1 = 8 + 1 = 9 \\ne 10$."
+      "text": "With $y = 2$ the left side is $4(2) + 1$. Work it out and compare it with $10$."
     },
     {
       "level": "reveal",
-      "text": "$9 \\ne 10$ → no."
+      "text": "$4(2) + 1 = 9$, which is not $10$, so the answer is no."
     }
   ],
   "explanation": [
-    "$4(2) + 1 = 9$.",
-    "$9 \\ne 10$ → not a solution."
+    "Substitute $2$ for $y$ on the left side: $4(2) + 1$.",
+    "Multiply first to get $8$, then add $1$ to get $9$.",
+    "The left side is $9$ but the right side is $10$, so no, $y = 2$ is not a solution."
   ],
   "alternativeExplanations": [
     {

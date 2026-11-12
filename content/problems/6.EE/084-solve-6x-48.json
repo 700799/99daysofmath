@@ -10,24 +10,26 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Divide both sides by $6$.",
+  "hint": "Six equal groups of $x$ total $48$. Which operation finds the size of one group?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Divide both sides by $6$."
+      "text": "Six equal groups of $x$ total $48$. Which operation finds the size of one group?"
     },
     {
       "level": "guide",
-      "text": "$x = 48 \\div 6$."
+      "text": "Divide both sides by $6$ to undo the multiplication. You need the value of $48 \\div 6$."
     },
     {
       "level": "reveal",
-      "text": "$8$."
+      "text": "$48 \\div 6 = 8$, so each group is $8$ and the solution is $x = 8$."
     }
   ],
   "explanation": [
-    "$6x = 48$.",
-    "$x = 48 \\div 6 = 8$."
+    "$6x$ means $6$ times $x$, and that product is $48$.",
+    "Divide both sides by $6$, since division undoes multiplication.",
+    "The right side becomes $48 \\div 6 = 8$, so the result is $x = 8$.",
+    "Check: $6 \\times 8 = 48$ is true, so the solution is $x = 8$."
   ],
   "tags": [
     "solve",

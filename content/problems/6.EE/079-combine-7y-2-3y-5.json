@@ -13,30 +13,31 @@
     "3 + 10y"
   ],
   "acceptanceMode": "exact",
-  "hint": "Combine $y$ terms, then combine numbers.",
+  "hint": "There are two kinds of terms here. Keep each minus sign with the number right after it.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+      "text": "Try $7y + 3y$ by itself first. Both terms count $y$, so they make $10y$. Then deal with the plain numbers the same way."
     },
     {
       "level": "nudge",
-      "text": "Combine $y$ terms, then combine numbers."
+      "text": "There are two kinds of terms here. Keep each minus sign with the number right after it."
     },
     {
       "level": "guide",
-      "text": "$7y + 3y = 10y$ and $-2 + 5 = 3$."
+      "text": "Group the $y$ terms as $7y + 3y$ and the numbers as $-2 + 5$. Work out each group."
     },
     {
       "level": "reveal",
-      "text": "$10y + 3$."
+      "text": "$7y + 3y = 10y$ and $-2 + 5 = 3$, so the simplified expression is $10y + 3$."
     }
   ],
   "explanation": [
-    "$y$ terms: $7y + 3y = 10y$.",
-    "Constants: $-2 + 5 = 3$.",
-    "Result: $10y + 3$."
+    "Sort the terms into $y$ terms ($7y$ and $3y$) and constants ($-2$ and $5$).",
+    "Combine the $y$ terms by adding coefficients: $7y + 3y = 10y$.",
+    "Combine the constants, keeping the sign of each: $-2 + 5 = 3$.",
+    "The simplified expression is $10y + 3$, with one $y$ term and one number."
   ],
   "alternativeExplanations": [
     {

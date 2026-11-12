@@ -12,7 +12,7 @@
     "3.0"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Simplify the expression first — then read off the number in front of $y$.",
+  "hint": "The coefficient can only be read off once every $y$ term has been collected into one term.",
   "hints": [
     {
       "level": "nudge",
@@ -21,23 +21,23 @@
     },
     {
       "level": "nudge",
-      "text": "You can't read off the coefficient until **all** like-$y$ terms are combined."
+      "text": "The coefficient can only be read off once every $y$ term has been collected into one term."
     },
     {
       "level": "guide",
-      "text": "Distribute: $4(2y + 3) = 8y + 12$. So the expression is $8y + 12 - 5y + 8 = 3y + 20$."
+      "text": "Distribute the $4$ to get $8y + 12$. Then the $y$ terms to combine are $8y$ and $-5y$."
     },
     {
       "level": "reveal",
-      "text": "Coefficient of $y$ in $3y + 20$ is $\\boxed{3}$."
+      "text": "$8y - 5y = 3y$, so the simplified expression is $3y + 20$ and the coefficient of $y$ is $3$."
     }
   ],
   "explanation": [
-    "A **coefficient** is the number multiplied by a variable — but you only see the **true** coefficient after combining like terms.",
-    "Distribute the $4$: $4(2y + 3) = 8y + 12$.",
-    "Substitute back: $8y + 12 - 5y + 8$.",
-    "Group like terms: $(8y - 5y) + (12 + 8) = 3y + 20$.",
-    "The coefficient of $y$ is $3$."
+    "A **coefficient** is the number multiplying a variable, and it only shows clearly after like terms are combined.",
+    "Distribute the $4$ over both terms in the parentheses: $4(2y + 3) = 8y + 12$.",
+    "The whole expression is now $8y + 12 - 5y + 8$, with no parentheses left.",
+    "Group the terms that match each other: $(8y - 5y) + (12 + 8) = 3y + 20$.",
+    "The number in front of $y$ is $3$, so the coefficient of $y$ is $3$."
   ],
   "tags": [
     "vocabulary",

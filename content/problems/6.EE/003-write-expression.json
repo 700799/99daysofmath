@@ -14,9 +14,9 @@
   "acceptanceMode": "exact",
   "hint": "\"More than\" means add. \"$8$ more than $x$\" starts with $x$, then adds $8$.",
   "explanation": [
-    "\"More than a number\" means **add** to that number.",
-    "\"$8$ more than $x$\" means $x + 8$.",
-    "By the commutative property, $8 + x$ is also correct."
+    "The words \"more than\" tell you to **add** something to the number.",
+    "Start with the number $x$ and add $8$ to it, which is written $x + 8$.",
+    "Adding works in either order, so $8 + x$ means the same thing. The expression is $x + 8$."
   ],
   "alternativeExplanations": [
     {

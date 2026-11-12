@@ -10,30 +10,31 @@
   "primaryAnswer": "17",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Square first, then add.",
+  "hint": "Squaring a number means multiplying it by itself, and that happens before the adding.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+      "text": "Try $x = 2$ first: $2^2 + 1$ is $4 + 1 = 5$. Now follow the same two steps with the given value."
     },
     {
       "level": "nudge",
-      "text": "Square first, then add."
+      "text": "Squaring a number means multiplying it by itself, and that happens before the adding."
     },
     {
       "level": "guide",
-      "text": "$4^2 = 16$, then $16 + 1$."
+      "text": "With $x = 4$ the expression is $4^2 + 1$. Work out $4 \\times 4$, then add $1$."
     },
     {
       "level": "reveal",
-      "text": "$17$."
+      "text": "$4^2 = 16$ and $16 + 1 = 17$, so the value is $17$."
     }
   ],
   "explanation": [
-    "$x^2 + 1$ with $x = 4$.",
-    "$4^2 = 16$.",
-    "$16 + 1 = 17$."
+    "Replace the letter $x$ with its value $4$ to get $4^2 + 1$.",
+    "Exponents come before addition, so find $4^2 = 4 \\times 4 = 16$.",
+    "Then add the $1$ to that square: $16 + 1 = 17$.",
+    "The value of the expression is $17$."
   ],
   "tags": [
     "MAP-practice",

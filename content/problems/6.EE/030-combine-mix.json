@@ -12,30 +12,31 @@
     "3y + 3"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Combine $y$-terms.",
+  "hint": "Which terms here are the same kind, and which one stands alone?",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Whatever operation is acting on the variable, do its OPPOSITE on both sides."
+      "text": "Think of $y$ as a box. You have $5$ boxes, give away $2$ boxes, and also have $3$ loose items. The loose items cannot go into the box count."
     },
     {
       "level": "nudge",
-      "text": "Combine $y$-terms."
+      "text": "Which terms here are the same kind, and which one stands alone?"
     },
     {
       "level": "guide",
-      "text": "$5y - 2y = 3y$."
+      "text": "The terms $5y$ and $2y$ are alike, so subtract their coefficients: $5 - 2$. The $+3$ stays as it is."
     },
     {
       "level": "reveal",
-      "text": "$3y + 3$."
+      "text": "$5y - 2y = 3y$, so the simplified expression is $3y + 3$."
     }
   ],
   "explanation": [
-    "$5y - 2y = 3y$.",
-    "Constant: $+3$.",
-    "$3y + 3$."
+    "$5y$ and $2y$ are like terms because both have the variable $y$.",
+    "Subtract their coefficients to combine them: $5y - 2y = 3y$.",
+    "The constant $3$ has no variable, so it cannot be combined with $3y$.",
+    "The simplified expression is $3y + 3$, with two unlike terms left."
   ],
   "tags": [
     "combine-like"

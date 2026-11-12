@@ -12,24 +12,25 @@
     "x > 5"
   ],
   "acceptanceMode": "exact",
-  "hint": "\"More than\" means greater than.",
+  "hint": "\"More than\" compares two amounts. Decide which symbol opens toward the larger amount.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"More than\" means greater than."
+      "text": "\"More than\" compares two amounts. Decide which symbol opens toward the larger amount."
     },
     {
       "level": "guide",
-      "text": "Use the symbol $>$."
+      "text": "$x$ is the bigger quantity, so the open side of the symbol faces $x$. Write $x$, the symbol, then $5$."
     },
     {
       "level": "reveal",
-      "text": "$x > 5$."
+      "text": "\"More than\" means greater than, so the inequality is $x>5$."
     }
   ],
   "explanation": [
-    "\"More than\" → greater than → $>$.",
-    "$x > 5$."
+    "\"$x$ is more than $5$\" says that $x$ is the larger of the two amounts.",
+    "\"More than\" matches the greater-than symbol $>$, and $5$ itself is not included.",
+    "Writing it in the same order as the sentence gives $x > 5$."
   ],
   "tags": [
     "inequality",

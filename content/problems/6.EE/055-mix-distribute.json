@@ -12,23 +12,26 @@
     "6x - 8"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply $2$ by each term.",
+  "hint": "The $2$ multiplies both terms inside, and the minus sign between them stays a minus sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply $2$ by each term."
+      "text": "The $2$ multiplies both terms inside, and the minus sign between them stays a minus sign."
     },
     {
       "level": "guide",
-      "text": "$2 \\cdot 3x - 2 \\cdot 4$."
+      "text": "Find $2 \\cdot 3x$ and $2 \\cdot 4$, then write the second product subtracted from the first."
     },
     {
       "level": "reveal",
-      "text": "$6x - 8$."
+      "text": "$2 \\cdot 3x = 6x$ and $2 \\cdot 4 = 8$, so the expanded form is $6x - 8$."
     }
   ],
   "explanation": [
-    "$2(3x - 4) = 6x - 8$."
+    "Distribute the $2$ to each term inside the parentheses.",
+    "For the first term, multiply the numbers and keep $x$: $2 \\cdot 3x = 6x$.",
+    "For the second term, $2 \\cdot 4 = 8$, and it is still being subtracted.",
+    "Keeping the minus sign gives the answer $6x - 8$."
   ],
   "tags": [
     "distributive"

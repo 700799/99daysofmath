@@ -14,32 +14,32 @@
     "3(x-8)+x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"$8$ less than $x$\" means $x - 8$, NOT $8 - x$. The order matters!",
+  "hint": "Build the expression one phrase at a time, then look for like terms you can combine.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "\"$8$ less than $x$\" is \"start at $x$, subtract $8$\": $x - 8$. (Think: \"$8$ less than my age\" — if I'm $20$, the answer is $12$, not $-12$.)"
+      "text": "\"$8$ less than $x$\" means start at $x$ and subtract $8$: $x - 8$. Think of \"$8$ less than my age\": if I am $20$, the answer is $12$, not $-12$."
     },
     {
       "level": "nudge",
-      "text": "Build the quantity inside parentheses first, multiply by $3$, then add $x$."
+      "text": "Build the expression one phrase at a time, then look for like terms you can combine."
     },
     {
       "level": "guide",
-      "text": "$3(x - 8) + x$. Distribute: $3x - 24 + x$. Combine like terms: $4x - 24$."
+      "text": "The words give $3(x-8)+x$. Distribute the $3$ to get $3x - 24 + x$, then combine the two $x$ terms."
     },
     {
       "level": "reveal",
-      "text": "Simplified: $4x - 24$."
+      "text": "$3x + x = 4x$, so the simplified expression is $4x-24$."
     }
   ],
   "explanation": [
-    "\"$8$ less than $x$\" → $x - 8$ (the bigger thing comes first).",
-    "\"$3$ times the quantity\" → $3(x - 8)$.",
-    "\"Increased by $x$\" → $3(x - 8) + x$.",
-    "Distribute: $3 \\cdot x - 3 \\cdot 8 + x = 3x - 24 + x$.",
-    "Combine like terms: $3x + x = 4x$, so the answer is $4x - 24$."
+    "\"$8$ less than $x$\" means $8$ is taken away from $x$, so it is $x - 8$.",
+    "\"$3$ times the quantity\" multiplies that whole difference by $3$: $3(x - 8)$.",
+    "\"Increased by $x$\" adds one more $x$, giving $3(x - 8) + x$.",
+    "Distribute the $3$ to remove the parentheses: $3x - 24 + x$.",
+    "Combine the like terms $3x$ and $x$ to get $4x$, so the answer is $4x - 24$."
   ],
   "tags": [
     "translate",

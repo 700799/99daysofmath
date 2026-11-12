@@ -13,24 +13,25 @@
     "y"
   ],
   "acceptanceMode": "exact",
-  "hint": "Substitute and check.",
+  "hint": "Put the value in for $x$ and check whether the two sides come out equal.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute and check."
+      "text": "Put the value in for $x$ and check whether the two sides come out equal."
     },
     {
       "level": "guide",
-      "text": "$2(3) = 6$."
+      "text": "$2x$ means $2$ times $x$, so with $x = 3$ the left side is $2 \\times 3$. Compare it with $6$."
     },
     {
       "level": "reveal",
-      "text": "True → yes."
+      "text": "$2 \\times 3 = 6$, which equals the right side, so the answer is yes."
     }
   ],
   "explanation": [
-    "Substitute $x = 3$: $2(3) = 6$. ✓",
-    "Yes."
+    "To test the value, substitute $3$ for $x$ in $2x = 6$.",
+    "The left side becomes $2(3)$, which is $6$.",
+    "Both sides are $6$, so yes, $x = 3$ is a solution."
   ],
   "tags": [
     "check-solution"

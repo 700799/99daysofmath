@@ -15,31 +15,31 @@
     "8y>=500"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Sales = price × number of tickets. \"**At least** $\\$500$\" means sales must be ≥ $500$.",
+  "hint": "First write the money collected in terms of $y$. Then decide which symbol means \"at least\".",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "You don't have to solve for $y$ — the question wants the **inequality**, not the minimum number of tickets."
+      "text": "You do not have to solve for $y$. The question wants the **inequality**, not the smallest number of tickets."
     },
     {
       "level": "nudge",
-      "text": "Translate piece by piece: total sales = $8y$. \"At least $\\$500$\" → $\\ge 500$."
+      "text": "First write the money collected in terms of $y$. Then decide which symbol means \"at least\"."
     },
     {
       "level": "guide",
-      "text": "Sales $= 8y$. They need sales $\\ge 500$, so $8y \\ge 500$."
+      "text": "Each ticket brings in $8$ dollars, so sales are $8y$. \"At least $500$\" means $500$ or more, which uses $\\ge$."
     },
     {
       "level": "reveal",
-      "text": "Inequality: $8y \\ge 500$. (Solving: $y \\ge 62.5$, so they need at least $63$ tickets.)"
+      "text": "Sales of $8y$ must be $500$ or more, so the inequality is $8y≥500$."
     }
   ],
   "explanation": [
-    "Let $y$ = number of tickets. Each costs $\\$8$, so total sales $= 8y$ dollars.",
-    "Goal: sales must be **at least** $\\$500$.",
-    "\"At least\" → $\\ge$. So $8y \\ge 500$.",
-    "Bonus: divide by $8$ → $y \\ge 62.5$. Since tickets are whole, they need at least $63$ tickets."
+    "With $y$ tickets at $8$ dollars each, the total sales are $8y$ dollars.",
+    "\"At least $500$\" means the sales can equal $500$ or be greater, which is the symbol $\\ge$.",
+    "Put the two parts together to get the inequality $8y \\ge 500$.",
+    "As a check, $63$ tickets bring in $504$ dollars, which is enough, and $62$ tickets bring in only $496$."
   ],
   "tags": [
     "inequality",

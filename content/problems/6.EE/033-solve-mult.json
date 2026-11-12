@@ -10,23 +10,26 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Divide both sides by $3$.",
+  "hint": "Three equal groups of $x$ make $24$. How do you find the size of one group?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Divide both sides by $3$."
+      "text": "Three equal groups of $x$ make $24$. How do you find the size of one group?"
     },
     {
       "level": "guide",
-      "text": "$x = 24 / 3$."
+      "text": "Divide both sides by $3$, because dividing undoes multiplying. Work out $24 \\div 3$."
     },
     {
       "level": "reveal",
-      "text": "$x = 8$."
+      "text": "$24 \\div 3 = 8$, so each group is $8$ and the solution is $x = 8$."
     }
   ],
   "explanation": [
-    "$3x = 24 \\Rightarrow x = 8$."
+    "$3x$ means $3$ multiplied by $x$, and the result is $24$.",
+    "Divide both sides by $3$ to undo the multiplication and leave $x$ alone.",
+    "The right side becomes $24 \\div 3 = 8$, so the result is $x = 8$.",
+    "Check: $3 \\times 8 = 24$ is true, so the solution is $x = 8$."
   ],
   "tags": [
     "solve"

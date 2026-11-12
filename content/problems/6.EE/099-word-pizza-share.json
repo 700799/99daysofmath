@@ -12,29 +12,31 @@
     "8 friends"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Each share is $1$ divided by how many friends.",
+  "hint": "When a whole is shared equally, the size of each share tells you how many shares there are.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Substitute a guess back into the equation. If both sides match, the guess is the answer."
+      "text": "Suppose each friend got $\\dfrac{1}{4}$ of the pizza. Four quarters make a whole, so there would be $4$ friends. Use the same idea with eighths."
     },
     {
       "level": "nudge",
-      "text": "Each share is $1$ divided by how many friends."
+      "text": "When a whole is shared equally, the size of each share tells you how many shares there are."
     },
     {
       "level": "guide",
-      "text": "$\\dfrac{1}{p} = \\dfrac{1}{8}$."
+      "text": "With $p$ friends each share is $\\dfrac{1}{p}$, so $\\dfrac{1}{p} = \\dfrac{1}{8}$. Find how many eighths make one whole pizza."
     },
     {
       "level": "reveal",
-      "text": "$p = 8$."
+      "text": "Eight shares of $\\dfrac{1}{8}$ make one whole, so there are $8$ friends."
     }
   ],
   "explanation": [
-    "Each friend's share is $\\dfrac{1}{p}$. Set $\\dfrac{1}{p} = \\dfrac{1}{8}$.",
-    "$p = 8$."
+    "Sharing one pizza equally among $p$ friends gives each friend $\\dfrac{1}{p}$ of it.",
+    "Each share is $\\dfrac{1}{8}$, so the equation is $\\dfrac{1}{p} = \\dfrac{1}{8}$.",
+    "Two unit fractions are equal only when their denominators match, so $p = 8$.",
+    "There are $8$ friends, and $8 \\times \\dfrac{1}{8} = 1$ whole pizza confirms it."
   ],
   "alternativeExplanations": [
     {

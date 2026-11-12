@@ -13,29 +13,31 @@
     "150 miles"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $t = 2.5$.",
+  "hint": "The formula turns hours into miles. Decide which number replaces $t$.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Whatever operation is acting on the variable, do its OPPOSITE on both sides."
+      "text": "Split the trip into pieces: $2$ full hours and then half an hour more. At $60$ miles each hour, how far is each piece?"
     },
     {
       "level": "nudge",
-      "text": "Substitute $t = 2.5$."
+      "text": "The formula turns hours into miles. Decide which number replaces $t$."
     },
     {
       "level": "guide",
-      "text": "$d = 60 \\cdot 2.5$."
+      "text": "Put $2.5$ in for $t$ to get $d = 60 \\times 2.5$. You can find $60 \\times 2$ and $60 \\times 0.5$ and add them."
     },
     {
       "level": "reveal",
-      "text": "$150$."
+      "text": "$120 + 30 = 150$, so the car goes $150$ miles."
     }
   ],
   "explanation": [
-    "$d = 60(2.5) = 150$ miles.",
-    "Final answer: 150."
+    "In $d = 60t$, $t$ is the time in hours and $d$ is the distance in miles.",
+    "Replace $t$ with $2.5$, the number of hours driven: $d = 60 \\times 2.5$.",
+    "Split the product into two easier parts: $60 \\times 2 = 120$ and $60 \\times 0.5 = 30$, and $120 + 30 = 150$.",
+    "The car travels $150$ miles in $2.5$ hours."
   ],
   "alternativeExplanations": [
     {

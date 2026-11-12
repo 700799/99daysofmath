@@ -10,29 +10,31 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Exponents before addition/subtraction.",
+  "hint": "Look for the exponent. Powers are worked out before any adding or subtracting.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+      "text": "Try $1 + 3^2$ first. The power comes before the adding, so it is $1 + 9 = 10$. This problem starts the same way."
     },
     {
       "level": "nudge",
-      "text": "Exponents before addition/subtraction."
+      "text": "Look for the exponent. Powers are worked out before any adding or subtracting."
     },
     {
       "level": "guide",
-      "text": "$2^3 = 8$. Now $5 + 8 - 4$."
+      "text": "Replace $2^3$ with $2 \\times 2 \\times 2 = 8$. The expression becomes $5 + 8 - 4$, which you work from left to right."
     },
     {
       "level": "reveal",
-      "text": "$5 + 8 - 4 = 9$."
+      "text": "$5 + 8 = 13$ and $13 - 4 = 9$, so the value is $9$."
     }
   ],
   "explanation": [
-    "$2^3 = 8$.",
-    "$5 + 8 - 4 = 9$."
+    "Exponents come before addition and subtraction, so find $2^3$ first: $2 \\times 2 \\times 2 = 8$.",
+    "Put that value back in, which turns the expression into $5 + 8 - 4$.",
+    "Addition and subtraction go left to right, so add first: $5 + 8 = 13$.",
+    "Then subtract: $13 - 4 = 9$. The value of the expression is $9$."
   ],
   "tags": [
     "MAP-practice",

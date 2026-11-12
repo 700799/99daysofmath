@@ -10,23 +10,26 @@
   "primaryAnswer": "0",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Subtract $12$ from both sides.",
+  "hint": "Both sides show the same number, $12$. What does that tell you about how much $x$ adds?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Subtract $12$ from both sides."
+      "text": "Both sides show the same number, $12$. What does that tell you about how much $x$ adds?"
     },
     {
       "level": "guide",
-      "text": "$x = 12 - 12$."
+      "text": "Subtract $12$ from both sides as usual. The right side becomes $12 - 12$."
     },
     {
       "level": "reveal",
-      "text": "$x = 0$."
+      "text": "$12 - 12 = 0$, so the solution of the equation is $x = 0$."
     }
   ],
   "explanation": [
-    "$x + 12 = 12 \\Rightarrow x = 0$."
+    "In $x + 12 = 12$, the number $12$ is added to $x$.",
+    "Subtract $12$ from both sides to undo the addition: $x = 12 - 12$.",
+    "The difference is $0$, and zero is a perfectly good solution.",
+    "Check: $0 + 12 = 12$ is true, so the solution is $x = 0$."
   ],
   "tags": [
     "solve"

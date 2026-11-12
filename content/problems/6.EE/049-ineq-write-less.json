@@ -12,23 +12,25 @@
     "n < 30"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Less than\" means $<$.",
+  "hint": "Decide whether exactly $30$ riders is allowed. Read the wording \"less than\" carefully.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Less than\" means $<$."
+      "text": "Decide whether exactly $30$ riders is allowed. Read the wording \"less than\" carefully."
     },
     {
       "level": "guide",
-      "text": "$n < 30$."
+      "text": "\"Less than $30$\" does not include $30$ itself, so use the strict symbol. Put $n$ on the left side."
     },
     {
       "level": "reveal",
-      "text": "$n < 30$."
+      "text": "The number of riders must stay below $30$, so the inequality is $n<30$."
     }
   ],
   "explanation": [
-    "\"Less than $30$\" → $n < 30$."
+    "The variable $n$ stands for the number of riders on the bus.",
+    "\"Less than $30$\" means $29$ or fewer, so $30$ is not allowed and the symbol is $<$.",
+    "Writing the variable first gives the inequality $n < 30$."
   ],
   "tags": [
     "MAP-practice",

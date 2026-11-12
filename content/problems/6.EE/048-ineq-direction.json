@@ -13,23 +13,26 @@
     "negative direction"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$<$ means smaller — to the left.",
+  "hint": "On a number line, where do smaller numbers sit compared with larger ones?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$<$ means smaller — to the left."
+      "text": "On a number line, where do smaller numbers sit compared with larger ones?"
     },
     {
       "level": "guide",
-      "text": "From $-2$, smaller values are to the left."
+      "text": "$x < -2$ asks for numbers smaller than $-2$, such as $-3$ and $-5$. Find which side of $-2$ those are on."
     },
     {
       "level": "reveal",
-      "text": "Left."
+      "text": "Numbers smaller than $-2$ lie to its left, so the arrow points left."
     }
   ],
   "explanation": [
-    "$x < -2$ → values smaller than $-2$, which are to the left."
+    "The inequality $x < -2$ describes every number that is less than $-2$.",
+    "On a number line, numbers get smaller as you move to the left.",
+    "For example $-3$ and $-10$ are solutions, and both sit left of $-2$.",
+    "So the arrow starts at $-2$ and points left."
   ],
   "tags": [
     "inequality"

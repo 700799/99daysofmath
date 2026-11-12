@@ -10,12 +10,12 @@
   "primaryAnswer": "125",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$5^3$ means $5$ multiplied by itself $3$ times: $5 \\times 5 \\times 5$.",
+  "hint": "An exponent counts how many times the base is used as a factor. It is not the base times the exponent.",
   "explanation": [
-    "$5^3 = 5 \\times 5 \\times 5$.",
-    "$5 \\times 5 = 25$.",
-    "$25 \\times 5 = 125$.",
-    "$5^3 = 125$."
+    "The exponent $3$ means three factors of $5$ multiplied together: $5 \\times 5 \\times 5$.",
+    "Multiply the first two factors to make the work easier: $5 \\times 5 = 25$.",
+    "Multiply that product by the last factor: $25 \\times 5 = 125$.",
+    "So the value of the power $5^3$ is $125$."
   ],
   "alternativeExplanations": [
     {
@@ -35,15 +35,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "$5^3$ means $5$ multiplied by itself $3$ times: $5 \\times 5 \\times 5$."
+      "text": "An exponent counts how many times the base is used as a factor. It is not the base times the exponent."
     },
     {
       "level": "guide",
-      "text": "$5^3 = 5 \\times 5 \\times 5$."
+      "text": "Write $5^3$ as $5 \\times 5 \\times 5$. Find $5 \\times 5$ first, then multiply that result by $5$ again."
     },
     {
       "level": "reveal",
-      "text": "$5^3 = 125$."
+      "text": "$5 \\times 5 = 25$ and $25 \\times 5 = 125$, so the value of $5^3$ is $125$."
     }
   ]
 }

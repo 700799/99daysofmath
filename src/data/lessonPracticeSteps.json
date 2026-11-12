@@ -1,4 +1,104 @@
 {
+ "6.EE-1#0": [
+  "The small 2 means you multiply the base by itself: use 4 two times.",
+  "Write the power out as a multiplication, which is 4 × 4.",
+  "4 × 4 = 16, so the value of 4² is exactly 16."
+ ],
+ "6.EE-1#1": [
+  "The exponent 3 means you use 10 as a factor three times.",
+  "Write it out as 10 × 10 × 10, and start with 10 × 10 = 100.",
+  "Then 100 × 10 = 1000, so the value of 10³ is 1000."
+ ],
+ "6.EE-2#0": [
+  "Put 2 in place of y, and remember 5y means 5 times y.",
+  "The expression becomes 5·2 − 3, and you multiply first: 5·2 = 10.",
+  "Then subtract: 10 − 3 = 7, so the value is 7."
+ ],
+ "6.EE-2#1": [
+  "The word \"product\" is the answer to a multiplication.",
+  "So you need 4 multiplied by x, which is 4 · x.",
+  "A number times a letter is written side by side, so the answer is 4x."
+ ],
+ "6.EE-3#0": [
+  "The 5 outside multiplies each term inside the parentheses.",
+  "Multiply both parts by 5 to get 5·y = 5y and 5·3 = 15.",
+  "Add the two products, so the answer is 5y + 15."
+ ],
+ "6.EE-3#1": [
+  "Both terms have the same letter, so they are like terms and can be combined.",
+  "Subtract the numbers in front and keep the letter: 7 − 2 = 5.",
+  "So the expression 7a − 2a simplifies to just 5a."
+ ],
+ "6.EE-4#0": [
+  "Undo the adding of 9 by doing the opposite operation.",
+  "Subtract 9 from both sides, which leaves x = 20 − 9.",
+  "20 − 9 = 11, so the solution of the equation is x = 11."
+ ],
+ "6.EE-4#1": [
+  "4x means 4 times x, so undo the multiplying.",
+  "Divide both sides by 4, which leaves x = 28 ÷ 4.",
+  "28 ÷ 4 = 7, so the solution of the equation is x = 7."
+ ],
+ "6.EE-5#0": [
+  "Find the symbol that means \"greater than\".",
+  "\"Greater than\" is the symbol >, and its open side faces the bigger amount, n.",
+  "Write it in the same order as the words, so the answer is n > 7."
+ ],
+ "6.EE-5#1": [
+  "Look closely at the symbol: ≤ has an extra line under it.",
+  "≤ means \"less than or equal to\", so x may be equal to 4.",
+  "Since 4 ≤ 4 is true, the answer is yes."
+ ],
+ "6.EE-6#0": [
+  "Use the rule: put 7 in place of x.",
+  "2x means 2 times x, so the rule becomes y = 2·7.",
+  "2·7 = 14, so the value of y is 14 when x is 7."
+ ],
+ "6.EE-6#1": [
+  "The formula gives the cost when you know the number of tickets, n.",
+  "Put 4 in place of n to get c = 5·4.",
+  "5·4 = 20, so the cost of 4 tickets is 20 dollars."
+ ],
+ "6.EE-7#0": [
+  "A coefficient is the number that multiplies a variable.",
+  "9x means 9 times x, so look at the number in front of x.",
+  "That number is 9, so the coefficient is 9."
+ ],
+ "6.EE-7#1": [
+  "A constant term is a number with no variable attached.",
+  "The two terms are 3x and 8, and 3x has a variable.",
+  "The term without a variable is 8, so the constant term is 8."
+ ],
+ "6.EE-8#0": [
+  "Remove the parentheses by distributing, then compare the two expressions.",
+  "Multiply 3 by each term inside to get 3·x = 3x and 3·2 = 6.",
+  "That gives 3x + 6, the same expression, so the answer is yes."
+ ],
+ "6.EE-8#1": [
+  "Test the value: put 5 in place of x and see if the equation is true.",
+  "The left side becomes 5 − 3, which equals 2.",
+  "Both sides are 2, so the answer is yes."
+ ],
+ "6.EE-9#0": [
+  "With \"less than\", the order of the numbers matters.",
+  "\"n less than 12\" means start at 12 and take n away.",
+  "So the expression is 12 − n, and it is not n − 12."
+ ],
+ "6.EE-9#1": [
+  "3x means 3 times x, so use the opposite operation.",
+  "Divide both sides by 3, which leaves x = 21 ÷ 3.",
+  "21 ÷ 3 = 7, so the solution of the equation is x = 7."
+ ],
+ "6.EE-10#0": [
+  "Substitute: put 4 in place of x in the rule.",
+  "The rule becomes y = 2(4) + 1, and you multiply first: 2 × 4 = 8.",
+  "Then add 1 to get 8 + 1 = 9, so the value of y is 9."
+ ],
+ "6.EE-10#1": [
+  "Compare each pair: how do you get the second number from the first?",
+  "3 = 3 × 1, 6 = 3 × 2 and 9 = 3 × 3, so each time y is 3 times x.",
+  "The rule for the pattern is y = 3x."
+ ],
  "6.G-1#0": [
   "The area of a rectangle is its length times its width.",
   "The sides are 6 and 9, so multiply 6 × 9.",

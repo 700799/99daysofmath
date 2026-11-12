@@ -10,11 +10,12 @@
   "primaryAnswer": "17",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $4$ for $x$ first, then follow the order of operations: multiply before you add.",
+  "hint": "The letter $x$ stands for a number. Once you know the number, what should you do with the letter?",
   "explanation": [
-    "Substitute $x = 4$ into $3x + 5$: $3(4) + 5$.",
-    "Multiply first: $3 \\times 4 = 12$.",
-    "Then add: $12 + 5 = 17$."
+    "Replace $x$ with $4$, because the problem tells us that is its value: $3(4) + 5$.",
+    "Multiply before adding, as the order of operations says: $3 \\times 4 = 12$.",
+    "Now add the $5$ that was waiting: $12 + 5 = 17$.",
+    "The value of the expression is $17$."
   ],
   "alternativeExplanations": [
     {
@@ -43,15 +44,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $4$ for $x$ first, then follow the order of operations: multiply before you add."
+      "text": "The letter $x$ stands for a number. Once you know the number, what should you do with the letter?"
     },
     {
       "level": "guide",
-      "text": "Substitute $x = 4$ into $3x + 5$: $3(4) + 5$."
+      "text": "Put $4$ where $x$ is to get $3(4) + 5$. Multiply first, then add the $5$."
     },
     {
       "level": "reveal",
-      "text": "Then add: $12 + 5 = 17$."
+      "text": "$3 \\times 4 = 12$ and $12 + 5 = 17$, so the expression equals $17$."
     }
   ]
 }

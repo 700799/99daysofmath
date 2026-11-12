@@ -12,12 +12,12 @@
     "12+4x"
   ],
   "acceptanceMode": "exact",
-  "hint": "Distribute the $4$ to **both** terms inside the parentheses: $4 \\cdot x$ and $4 \\cdot 3$.",
+  "hint": "The number outside the parentheses multiplies everything inside, not just the first term.",
   "explanation": [
-    "Multiply $4$ by each term inside the parentheses.",
-    "$4 \\cdot x = 4x$.",
-    "$4 \\cdot 3 = 12$.",
-    "Add them: $4x + 12$."
+    "The distributive property says the $4$ multiplies each term inside the parentheses.",
+    "First multiply $4$ by the variable term: $4 \\cdot x = 4x$.",
+    "Then multiply $4$ by the number term: $4 \\cdot 3 = 12$.",
+    "Join the two products with the same plus sign to get $4x + 12$."
   ],
   "alternativeExplanations": [
     {
@@ -37,15 +37,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Distribute the $4$ to **both** terms inside the parentheses: $4 \\cdot x$ and $4 \\cdot 3$."
+      "text": "The number outside the parentheses multiplies everything inside, not just the first term."
     },
     {
       "level": "guide",
-      "text": "Multiply $4$ by each term inside the parentheses."
+      "text": "Multiply $4$ by $x$ and then $4$ by $3$, and keep the plus sign between the two results."
     },
     {
       "level": "reveal",
-      "text": "Add them: $4x + 12$."
+      "text": "$4 \\cdot x = 4x$ and $4 \\cdot 3 = 12$, so the expanded form is $4x + 12$."
     }
   ]
 }

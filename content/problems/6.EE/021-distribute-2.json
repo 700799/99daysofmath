@@ -13,23 +13,26 @@
     "12+3x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply $3$ by each term inside.",
+  "hint": "Think of $3$ groups of $(x + 4)$. Each group has an $x$ and a $4$ in it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply $3$ by each term inside."
+      "text": "Think of $3$ groups of $(x + 4)$. Each group has an $x$ and a $4$ in it."
     },
     {
       "level": "guide",
-      "text": "$3 \\cdot x + 3 \\cdot 4$."
+      "text": "Multiply the $3$ by $x$, then multiply the $3$ by $4$, and add the two products."
     },
     {
       "level": "reveal",
-      "text": "$3x + 12$."
+      "text": "$3 \\cdot x = 3x$ and $3 \\cdot 4 = 12$, so the result is $3x + 12$."
     }
   ],
   "explanation": [
-    "$3(x + 4) = 3x + 12$."
+    "The distributive property lets the $3$ multiply each term inside the parentheses.",
+    "Multiply $3$ by the first term, $x$, to get $3x$.",
+    "Multiply $3$ by the second term, $4$, to get $12$.",
+    "Add the two products to get the answer $3x + 12$."
   ],
   "tags": [
     "distributive"

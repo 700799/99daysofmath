@@ -12,24 +12,25 @@
     "open circle"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$>$ is strict (not equal).",
+  "hint": "Ask yourself whether $3$ itself makes the statement true. Is $3$ greater than $3$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$>$ is strict (not equal)."
+      "text": "Ask yourself whether $3$ itself makes the statement true. Is $3$ greater than $3$?"
     },
     {
       "level": "guide",
-      "text": "Open circle = strict inequality."
+      "text": "The symbol $>$ means strictly greater, so $3$ is not part of the solution. Which kind of circle shows a number that is left out?"
     },
     {
       "level": "reveal",
-      "text": "Open."
+      "text": "Because $3$ is not included, the circle at $3$ is open."
     }
   ],
   "explanation": [
-    "$>$ excludes $3$.",
-    "Open circle at $3$."
+    "The inequality $x > 3$ means $x$ is greater than $3$, with no \"or equal to\".",
+    "Test the endpoint: $3 > 3$ is false, so $3$ is not a solution.",
+    "A number that is left out is drawn with an empty circle, so the circle at $3$ is open."
   ],
   "tags": [
     "inequality"

@@ -10,23 +10,25 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $x = 5$.",
+  "hint": "The rule $y = 2x$ tells you how to turn any $x$ into its $y$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $x = 5$."
+      "text": "The rule $y = 2x$ tells you how to turn any $x$ into its $y$."
     },
     {
       "level": "guide",
-      "text": "$y = 2 \\cdot 5$."
+      "text": "$2x$ means $2$ times $x$. Put $5$ in for $x$ and work out $2 \\times 5$."
     },
     {
       "level": "reveal",
-      "text": "$y = 10$."
+      "text": "Doubling five gives $2 \\times 5 = 10$, so $y$ equals $10$."
     }
   ],
   "explanation": [
-    "$y = 2x = 2(5) = 10$."
+    "The equation $y = 2x$ says that $y$ is always double $x$.",
+    "Replace $x$ with the given value $5$, which makes the rule $y = 2(5)$.",
+    "Multiplying gives $10$, so the answer is $y = 10$ when $x = 5$."
   ],
   "tags": [
     "two-vars"

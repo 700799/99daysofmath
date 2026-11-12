@@ -10,29 +10,31 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Compute the numerator first, then divide.",
+  "hint": "A fraction bar groups the top like parentheses. The whole top is found before dividing.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Whatever operation is acting on the variable, do its OPPOSITE on both sides."
+      "text": "This expression asks for half of the total $x + 5$. Think of finding the middle between two numbers: add them up, then split the sum in two."
     },
     {
       "level": "nudge",
-      "text": "Compute the numerator first, then divide."
+      "text": "A fraction bar groups the top like parentheses. The whole top is found before dividing."
     },
     {
       "level": "guide",
-      "text": "Numerator: $7 + 5 = 12$. Then $12 \\div 2$."
+      "text": "With $x = 7$ the top is $7 + 5$. Add those, then divide the sum by $2$."
     },
     {
       "level": "reveal",
-      "text": "$6$."
+      "text": "$7 + 5 = 12$ and $12 \\div 2 = 6$, so the value is $6$."
     }
   ],
   "explanation": [
-    "$x + 5 = 7 + 5 = 12$.",
-    "$\\dfrac{12}{2} = 6$."
+    "Replace $x$ with its value $7$ in the top of the fraction: $\\dfrac{7 + 5}{2}$.",
+    "The fraction bar acts like parentheses, so add the top first: $7 + 5 = 12$.",
+    "Now divide that sum by the bottom number: $12 \\div 2 = 6$.",
+    "The value of the expression is $6$."
   ],
   "tags": [
     "MAP-practice",

@@ -12,30 +12,31 @@
     "5 books"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Set up an equation: cost per book $\\times$ books $=$ total.",
+  "hint": "The price of one book times the number of books equals the money spent.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Substitute a guess back into the equation. If both sides match, the guess is the answer."
+      "text": "Suppose you had only $24$ dollars. Two books cost $12 + 12 = 24$, so you could buy $2$. Use the same thinking with the larger amount."
     },
     {
       "level": "nudge",
-      "text": "Set up an equation: cost per book $\\times$ books $=$ total."
+      "text": "The price of one book times the number of books equals the money spent."
     },
     {
       "level": "guide",
-      "text": "$12b = 60$, so $b = 60 \\div 12$."
+      "text": "Let $b$ be the number of books, so $12b = 60$. Divide both sides by $12$."
     },
     {
       "level": "reveal",
-      "text": "$60 \\div 12 = 5$."
+      "text": "$60 \\div 12 = 5$, so you can buy $5$ books."
     }
   ],
   "explanation": [
-    "Let $b$ = number of books.",
-    "$12b = 60$.",
-    "$b = 60 \\div 12 = 5$ books."
+    "Let $b$ stand for the number of books you buy.",
+    "Each book costs $12$ dollars and all $60$ dollars is spent, so $12b = 60$.",
+    "Divide both sides by $12$ to undo the multiplication: $b = 60 \\div 12 = 5$.",
+    "You can buy $5$ books, and $5 \\times 12 = 60$ confirms it."
   ],
   "alternativeExplanations": [
     {

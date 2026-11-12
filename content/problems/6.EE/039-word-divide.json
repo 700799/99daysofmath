@@ -12,23 +12,26 @@
     "20 cookies"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Let $x$ = total. $\\frac{x}{5} = 4$.",
+  "hint": "The box was split into equal shares. Which operation rebuilds the whole from equal shares?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Let $x$ = total. $\\frac{x}{5} = 4$."
+      "text": "The box was split into equal shares. Which operation rebuilds the whole from equal shares?"
     },
     {
       "level": "guide",
-      "text": "$x = 4 \\cdot 5$."
+      "text": "If $x$ is the total, then $\\frac{x}{5} = 4$. Multiply both sides by $5$ to find $x$."
     },
     {
       "level": "reveal",
-      "text": "$x = 20$."
+      "text": "$5 \\times 4 = 20$, so there were $20$ cookies in the box."
     }
   ],
   "explanation": [
-    "Total $= 5 \\times 4 = 20$."
+    "Let $x$ be the number of cookies in the box.",
+    "Sharing equally among $5$ friends is division, and each gets $4$, so $\\frac{x}{5} = 4$.",
+    "Multiply both sides by $5$ to undo the division: $x = 5 \\times 4 = 20$.",
+    "The box held $20$ cookies, and $20 \\div 5 = 4$ confirms it."
   ],
   "tags": [
     "word",

@@ -10,29 +10,31 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You're solving $3x = 27$.",
+  "hint": "This time the output $y$ is known and the input $x$ is missing, so you work backward.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Substitute a guess back into the equation. If both sides match, the guess is the answer."
+      "text": "Try the question with $y = 6$: which number times $3$ makes $6$? It is $2$. Now ask the same question for $27$."
     },
     {
       "level": "nudge",
-      "text": "You're solving $3x = 27$."
+      "text": "This time the output $y$ is known and the input $x$ is missing, so you work backward."
     },
     {
       "level": "guide",
-      "text": "Divide both sides by $3$."
+      "text": "Put $27$ in for $y$ to get $27 = 3x$. Divide both sides by $3$."
     },
     {
       "level": "reveal",
-      "text": "$x = 27 \\div 3 = 9$."
+      "text": "Dividing gives $27 \\div 3 = 9$, so the value of $x$ is $9$."
     }
   ],
   "explanation": [
-    "Set $y = 27$: $27 = 3x$.",
-    "Divide: $x = 9$."
+    "Replace $y$ with $27$ in the rule, which gives $27 = 3x$.",
+    "Divide both sides by $3$ to undo the multiplication and leave $x$ alone.",
+    "Working out the division on the left gives $x = 27 \\div 3 = 9$.",
+    "Check: $3 \\times 9 = 27$ is true, so the answer is $x = 9$."
   ],
   "tags": [
     "MAP-practice",

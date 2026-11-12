@@ -10,25 +10,26 @@
   "primaryAnswer": "11",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiplication before addition (PEMDAS).",
+  "hint": "There are two operations here and no parentheses. Which one does the order of operations say comes first?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiplication before addition (PEMDAS)."
+      "text": "There are two operations here and no parentheses. Which one does the order of operations say comes first?"
     },
     {
       "level": "guide",
-      "text": "$2 \\times 4 = 8$, then $3 + 8$."
+      "text": "Multiplication comes before addition, so work out $2 \\times 4$ first. Then add $3$ to that product."
     },
     {
       "level": "reveal",
-      "text": "$11$."
+      "text": "$2 \\times 4 = 8$ and $3 + 8 = 11$, so the value is $11$."
     }
   ],
   "explanation": [
-    "Order: multiply first.",
-    "$2 \\times 4 = 8$.",
-    "$3 + 8 = 11$."
+    "With no parentheses, the order of operations says to multiply before you add.",
+    "Do the multiplication part of the expression first: $2 \\times 4 = 8$.",
+    "Now the expression is $3 + 8$, and adding gives $11$.",
+    "The value is $11$. Going left to right would give $20$, which is wrong."
   ],
   "tags": [
     "order-of-ops"

@@ -14,24 +14,25 @@
     "25·w"
   ],
   "acceptanceMode": "exact",
-  "hint": "Total = dollars per week $\\times$ weeks.",
+  "hint": "The same amount is saved again and again. Which operation is a shortcut for repeated adding?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Total = dollars per week $\\times$ weeks."
+      "text": "The same amount is saved again and again. Which operation is a shortcut for repeated adding?"
     },
     {
       "level": "guide",
-      "text": "$25 \\cdot w$."
+      "text": "He saves $25$ dollars in each of $w$ weeks, so multiply $25$ by $w$. Write the product without a times sign."
     },
     {
       "level": "reveal",
-      "text": "$25w$."
+      "text": "Multiplying the weekly amount by the number of weeks gives $25w$ dollars."
     }
   ],
   "explanation": [
-    "Saving $25$ per week for $w$ weeks = $25 \\cdot w = 25w$ dollars.",
-    "Final answer: 25w."
+    "Marcos adds $25$ dollars to his savings every week.",
+    "After $w$ weeks he has added $25$ a total of $w$ times, which is $25 \\times w$.",
+    "A number times a variable is written side by side, so the expression is $25w$."
   ],
   "tags": [
     "expression",
