@@ -10,11 +10,11 @@
   "primaryAnswer": "144",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Apply the discounts one after the other, not added together.",
+  "hint": "The second discount is taken from the sale price, not from the original price. That means the two percents cannot simply be added.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Apply the discounts one after the other, not added together."
+      "text": "The second discount is taken from the sale price, not from the original price. That means the two percents cannot simply be added."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "$200 \\times 0.80 = 160$, then take $10\\%$ off that."
+      "text": "Taking $20\\%$ off leaves $80\\%$, so the sale price is $200 \\times 0.80 = 160$. Then take $10\\%$ off that by multiplying $160$ by $0.90$."
     },
     {
       "level": "reveal",
-      "text": "$160 \\times 0.90 = \\$144$."
+      "text": "Since $160 \\times 0.90 = 144$, the final price is $144$ dollars."
     }
   ],
   "learningObjective": "Apply successive discounts correctly.",
   "topic": "Successive percent change",
   "explanation": [
-    "First discount: $200 \\times 0.80 = \\$160$.",
-    "Second discount, taken on the new price: $160 \\times 0.90 = \\$144$.",
-    "Or combine the multipliers: $200 \\times 0.80 \\times 0.90 = 200 \\times 0.72 = \\$144$."
+    "The first discount leaves $80\\%$ of the price, so the sale price is $200 \\times 0.80 = 160$ dollars.",
+    "The second discount applies to the sale price and leaves $90\\%$ of it: $160 \\times 0.90 = 144$.",
+    "Combining the multipliers gives the same result, since $200 \\times 0.72 = 144$. The final price is $144$ dollars."
   ],
   "alternativeExplanations": [
     {

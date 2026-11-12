@@ -10,27 +10,28 @@
   "primaryAnswer": "-4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find where the vertex is first, using $x = -\\dfrac{b}{2a}$.",
+  "hint": "The graph of this function is a parabola that opens upward. Where on such a parabola does the smallest output occur?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find where the vertex is first, using $x = -\\dfrac{b}{2a}$."
+      "text": "The graph of this function is a parabola that opens upward. Where on such a parabola does the smallest output occur?"
     },
     {
       "level": "guide",
-      "text": "$x = -\\dfrac{-8}{2(1)} = 4$. Now evaluate $f(4)$."
+      "text": "The minimum is at the vertex, where $x = -\\dfrac{b}{2a} = -\\dfrac{-8}{2(1)} = 4$. Substitute $4$ into the function to get the minimum value."
     },
     {
       "level": "reveal",
-      "text": "$f(4) = 16 - 32 + 12 = -4$."
+      "text": "Evaluating gives $f(4) = 16 - 32 + 12 = -4$, so the minimum value is $-4$."
     }
   ],
   "learningObjective": "Find the minimum of a quadratic given in standard form.",
   "topic": "Maximum and minimum values",
   "explanation": [
-    "The parabola opens upward ($a = 1 > 0$), so it has a minimum at its vertex.",
-    "The vertex is at $x = -\\dfrac{b}{2a} = \\dfrac{8}{2} = 4$.",
-    "The minimum value is $f(4) = 4^2 - 8(4) + 12 = 16 - 32 + 12 = -4$."
+    "The coefficient of $x^2$ is positive, so the parabola opens upward and its lowest point is the vertex.",
+    "The vertex is at $x = -\\dfrac{b}{2a} = \\dfrac{8}{2} = 4$, using $a = 1$ and $b = -8$.",
+    "Substitute to find the output there: $f(4) = 4^2 - 8(4) + 12 = 16 - 32 + 12 = -4$.",
+    "The minimum value of the function is $-4$."
   ],
   "alternativeExplanations": [
     {

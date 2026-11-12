@@ -10,27 +10,27 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Factored form hands you the zeros. The vertex sits exactly between them.",
+  "hint": "The function is given in factored form, which shows where the graph crosses the $x$-axis. How does the vertex relate to those crossings?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Factored form hands you the zeros. The vertex sits exactly between them."
+      "text": "The function is given in factored form, which shows where the graph crosses the $x$-axis. How does the vertex relate to those crossings?"
     },
     {
       "level": "guide",
-      "text": "The zeros are $-1$ and $5$."
+      "text": "The zeros are $x = -1$ and $x = 5$. A parabola is symmetric, so the vertex is halfway between them. Find the average of $-1$ and $5$."
     },
     {
       "level": "reveal",
-      "text": "Their average is $\\dfrac{-1 + 5}{2} = 2$."
+      "text": "The average is $\\dfrac{-1 + 5}{2} = 2$, so the $x$-coordinate of the vertex is $2$."
     }
   ],
   "learningObjective": "Locate the axis of symmetry as the midpoint of the zeros.",
   "topic": "Factored form",
   "explanation": [
-    "Setting each factor to zero gives the $x$-intercepts $x = -1$ and $x = 5$.",
-    "A parabola is symmetric, so its vertex lies halfway between the zeros.",
-    "The midpoint is $\\dfrac{-1 + 5}{2} = 2$."
+    "Set each factor equal to zero to find the $x$-intercepts: $x = -1$ and $x = 5$.",
+    "A parabola is symmetric about the vertical line through its vertex, so the vertex lies halfway between the two zeros.",
+    "The midpoint is $\\dfrac{-1 + 5}{2} = 2$, so the $x$-coordinate of the vertex is $2$."
   ],
   "alternativeExplanations": [
     {

@@ -14,27 +14,27 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "SOH: sine is opposite over hypotenuse.",
+  "hint": "Each trigonometric ratio compares two particular sides of a right triangle. Which two sides does sine use?",
   "hints": [
     {
       "level": "nudge",
-      "text": "SOH: sine is opposite over hypotenuse."
+      "text": "Each trigonometric ratio compares two particular sides of a right triangle. Which two sides does sine use?"
     },
     {
       "level": "guide",
-      "text": "$\\sin\\theta = \\dfrac{3}{5}$."
+      "text": "Sine is the opposite side over the hypotenuse, so $\\sin\\theta = \\dfrac{3}{5}$. Change that fraction into a decimal."
     },
     {
       "level": "reveal",
-      "text": "$0.6$."
+      "text": "Since $3 \\div 5 = 0.6$, the value of $\\sin\\theta$ is $0.6$."
     }
   ],
   "learningObjective": "Compute a sine ratio in a right triangle.",
   "topic": "Right-triangle trigonometry",
   "explanation": [
-    "SOH-CAH-TOA: $\\sin = \\dfrac{\\text{opposite}}{\\text{hypotenuse}}$.",
-    "$\\sin\\theta = \\dfrac{3}{5} = 0.6$.",
-    "The third side would be $4$, making this a $3$-$4$-$5$ triangle."
+    "The sine of an angle is the length of the opposite side divided by the length of the hypotenuse.",
+    "The opposite side is $3$ and the hypotenuse is $5$, so $\\sin\\theta = \\dfrac{3}{5}$.",
+    "Dividing gives $3 \\div 5 = 0.6$, so the value of $\\sin\\theta$ is $0.6$."
   ],
   "alternativeExplanations": [
     {

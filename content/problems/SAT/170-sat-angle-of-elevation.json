@@ -10,11 +10,11 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Tangent relates the opposite side (the height) to the adjacent side (the ground distance).",
+  "hint": "The tree, the ground and the line of sight make a right triangle. Decide which sides the height and the $40$ feet are, relative to the angle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Tangent relates the opposite side (the height) to the adjacent side (the ground distance)."
+      "text": "The tree, the ground and the line of sight make a right triangle. Decide which sides the height and the $40$ feet are, relative to the angle."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "$\\tan\\theta = \\dfrac{\\text{height}}{40} = 1.5$."
+      "text": "The height is opposite the angle and the $40$ feet is adjacent, so $\\tan\\theta = \\dfrac{h}{40} = 1.5$. Multiply both sides by $40$."
     },
     {
       "level": "reveal",
-      "text": "Height $= 1.5 \\times 40 = 60$ feet."
+      "text": "Since $1.5 \\times 40 = 60$, the tree is $60$ feet tall."
     }
   ],
   "learningObjective": "Use tangent to solve an angle-of-elevation problem.",
   "topic": "Trigonometry in context",
   "explanation": [
-    "The tree, the ground, and the line of sight form a right triangle. The height is opposite the angle; the $40$ feet is adjacent.",
-    "$\\tan\\theta = \\dfrac{\\text{opposite}}{\\text{adjacent}} = \\dfrac{h}{40} = 1.5$.",
-    "$h = 1.5 \\times 40 = 60$ feet."
+    "The tree, the ground and the line of sight form a right triangle. The height is opposite the angle and the $40$ feet is adjacent to it.",
+    "Tangent is opposite over adjacent, so $\\dfrac{h}{40} = 1.5$, where $h$ is the height.",
+    "Multiply both sides by $40$ to get $h = 1.5 \\times 40 = 60$, so the tree is $60$ feet tall."
   ],
   "alternativeExplanations": [
     {

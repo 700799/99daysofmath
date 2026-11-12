@@ -1670,6 +1670,435 @@
   "The heights are f(1) = 1 and f(4) = 16, so the rise is 16 − 1 = 15 and the run is 4 − 1 = 3.",
   "Dividing gives 15 ÷ 3 = 5, so the average rate of change is 5."
  ],
+ "SAT-1#0": [
+  "Undo the operations on x in reverse order: the subtraction first, then the multiplication.",
+  "Add 5 to both sides to get 7x = 35.",
+  "Divide both sides by 7 to get 35 ÷ 7 = 5.",
+  "The solution of the equation is x = 5."
+ ],
+ "SAT-1#1": [
+  "Remove the brackets first, then collect the x terms on one side.",
+  "Distribute the 3 over the bracket to get 3x + 12 = x + 20.",
+  "Subtract x and subtract 12 from both sides, which leaves 2x = 8.",
+  "Divide by 2, so the answer is x = 4."
+ ],
+ "SAT-1#2": [
+  "Infinitely many solutions means the two sides are exactly the same expression.",
+  "The constants already match, since both sides end in + 3.",
+  "The x terms must match as well, so ax has to equal 4x.",
+  "That happens when a = 4, so the answer is 4."
+ ],
+ "SAT-1#3": [
+  "Undo the addition first, then undo the multiplication by 2.",
+  "Subtract 9 from both sides to get 2x = −10.",
+  "Divide both sides by 2, which gives −10 ÷ 2 = −5.",
+  "The solution of the equation is x = −5."
+ ],
+ "SAT-2#0": [
+  "Slope is the change in y divided by the change in x.",
+  "The rise is 14 − 2 = 12 and the run is 5 − 1 = 4.",
+  "Divide rise by run: 12 ÷ 4 = 3, so the slope is 3."
+ ],
+ "SAT-2#1": [
+  "A one-time fee is what you pay before any months are counted, so think about n = 0.",
+  "When n = 0 the term 30n is zero, and only the constant 50 is left.",
+  "The 30 is the charge per month, and the 50 is charged once.",
+  "The one-time sign-up fee is 50 dollars."
+ ],
+ "SAT-2#2": [
+  "A linear function is built from its slope and its value at x = 0.",
+  "The slope is 5 and f(0) = −2, so the rule is f(x) = 5x − 2.",
+  "Substitute 3 for x in the rule to get f(3) = 5 × 3 − 2 = 15 − 2.",
+  "Finishing the subtraction, the value of f(3) is 13."
+ ],
+ "SAT-2#3": [
+  "The height starts at 30 and drops by the same amount each hour, so it is a linear model.",
+  "After t hours the height is 30 − 1.5t, so set 30 − 1.5t = 18.",
+  "Subtracting 18 and adding 1.5t to both sides gives 1.5t = 12, and 12 ÷ 1.5 = 8.",
+  "The candle is 18 cm tall after 8 hours."
+ ],
+ "SAT-3#0": [
+  "Get y alone on one side so the slope can be read as the number in front of x.",
+  "Subtract 6x from both sides to get 3y = −6x + 9.",
+  "Divide every term by 3 to get y = −2x + 3.",
+  "The number multiplying x is −2, so the slope is −2."
+ ],
+ "SAT-3#1": [
+  "The y-intercept is the point where the line crosses the y-axis, so x is 0 there.",
+  "Put 0 in place of x, which leaves 4y = 16.",
+  "Divide both sides by 4 to get y = 16 ÷ 4 = 4.",
+  "The y-intercept of the line is 4."
+ ],
+ "SAT-3#2": [
+  "Parallel lines never meet because they rise at the same rate, so they share a slope.",
+  "The given line y = 5x − 2 has slope 5, the number in front of x.",
+  "The point (0, 7) changes only the intercept of the new line, not its slope.",
+  "The slope of the parallel line is 5."
+ ],
+ "SAT-3#3": [
+  "Perpendicular slopes are negative reciprocals, so flip the fraction and change the sign.",
+  "The given slope is −4, which is −4/1 as a fraction.",
+  "Flipping gives −1/4, and changing the sign gives 1/4.",
+  "The slope of the perpendicular line is 1/4."
+ ],
+ "SAT-4#0": [
+  "The first equation already gives y in terms of x, so substitute it into the second.",
+  "Replace y with x + 2 in the second equation to get 2x + x + 2 = 11.",
+  "Combine like terms to get 3x + 2 = 11, so 3x = 9.",
+  "Divide by 3, so the answer is x = 3."
+ ],
+ "SAT-4#1": [
+  "The y terms are opposites, so adding the two equations removes y.",
+  "Adding the left sides and the right sides gives 2x = 14, so x = 7.",
+  "Put 7 back into the first equation, x + y = 12, to get y = 12 − 7.",
+  "Subtracting gives the answer: the value of y is 5."
+ ],
+ "SAT-4#2": [
+  "The question asks for x + y together, so look for a shortcut before solving for each letter.",
+  "Add the two equations to get 3x + 3y = 18.",
+  "Divide every term by 3 to get x + y = 6.",
+  "So the value of the sum x + y is 6."
+ ],
+ "SAT-4#3": [
+  "A system has no solution when the left sides match but the constants on the right do not.",
+  "Double the first equation to get 4x + 2ky = 10, which matches the 4x in the second.",
+  "The y parts must match too, so 2k = 6 and k = 3.",
+  "With k = 3 the constants are 10 and 9, which differ, so the answer is 3."
+ ],
+ "SAT-5#0": [
+  "Solve the inequality like an equation, then pick the largest whole number that fits.",
+  "Subtract 1 from both sides to get 4x < 20.",
+  "Divide by 4 to get x < 5, and note that 5 itself is not allowed.",
+  "The largest whole number below 5 is 4."
+ ],
+ "SAT-5#1": [
+  "Dividing an inequality by a negative number reverses the direction of the sign.",
+  "Divide both sides by −3, so 12 ÷ (−3) = −4 and the sign flips from > to <.",
+  "The solution is x < −4, so x is less than −4."
+ ],
+ "SAT-5#2": [
+  "The words at most mean the total cost must be less than or equal to 35.",
+  "With t texts the cost is 20 + 0.10t, so write 20 + 0.10t ≤ 35.",
+  "Subtract 20 to get 0.10t ≤ 15, then divide by 0.10 to get t ≤ 150.",
+  "The most texts you can send is 150."
+ ],
+ "SAT-5#3": [
+  "A point is a solution if its coordinates make the inequality a true statement.",
+  "Put x = 0 and y = 0 into the inequality to get 0 < 2(0) + 1.",
+  "The right side equals 1, and 0 < 1 is true.",
+  "The answer is yes, the point (0, 0) is a solution."
+ ],
+ "SAT-6#0": [
+  "When powers of the same base are multiplied, the exponents are added.",
+  "The exponents here are 5 and 3, so add them: 5 + 3 = 8.",
+  "The product is x⁸, so the power is 8."
+ ],
+ "SAT-6#1": [
+  "A fractional exponent stands for a root, and the bottom number tells which root.",
+  "The exponent 1/2 means square root, so find √16.",
+  "Since 4 × 4 = 16, the square root of 16 is 4.",
+  "So the value of 16^(1/2) is the number 4."
+ ],
+ "SAT-6#2": [
+  "A negative exponent means the reciprocal of the positive power, not a negative number.",
+  "Rewrite 5⁻² as a fraction with 1 on top and 5² on the bottom.",
+  "Work out the power on the bottom: 5² = 25.",
+  "The value of 5⁻² is the fraction 1/25."
+ ],
+ "SAT-6#3": [
+  "A square minus a square factors with the difference of squares pattern.",
+  "Write 25 as 5², so the expression is x² − 5².",
+  "The pattern gives (x − 5)(x + 5), which matches the form (x − a)(x + a).",
+  "Comparing the two forms shows that a = 5."
+ ],
+ "SAT-7#0": [
+  "Factor the quadratic by finding two numbers that multiply to 12 and add to −7.",
+  "The numbers −3 and −4 work, so the factored equation is (x − 3)(x − 4) = 0.",
+  "A product is zero when a factor is zero, so x = 3 or x = 4.",
+  "The larger of the two solutions is 4."
+ ],
+ "SAT-7#1": [
+  "Two different numbers have the same square, one positive and one negative.",
+  "Take the square root of both sides, remembering both signs: x = 7 or x = −7.",
+  "Both values work, because 7 × 7 = 49 and (−7) × (−7) = 49 as well.",
+  "The question asks for the negative solution, which is −7."
+ ],
+ "SAT-7#2": [
+  "The discriminant of ax² + bx + c is the quantity b² − 4ac.",
+  "Here a = 1, b = 4 and c = 1, so compute the value of 4² − 4 × 1 × 1.",
+  "That works out to 16 − 4, which equals 12.",
+  "The discriminant of the quadratic is 12."
+ ],
+ "SAT-7#3": [
+  "You do not need to solve, because the product of the solutions is c divided by a.",
+  "In this equation the leading coefficient is a = 2 and the constant is c = −8.",
+  "Divide the constant by the leading coefficient: −8 ÷ 2 = −4.",
+  "The product of the two solutions is −4."
+ ],
+ "SAT-8#0": [
+  "The graph crosses the y-axis where x equals 0.",
+  "Put 0 in for x, so the terms x² and 4x both become 0.",
+  "Only the constant term −9 is left.",
+  "The y-intercept of the graph is −9."
+ ],
+ "SAT-8#1": [
+  "A parabola is symmetric, so its vertex lies halfway between its two zeros.",
+  "The factors give the zeros x = 1 and x = 7.",
+  "Find the midpoint by averaging the two zeros: (1 + 7) ÷ 2 = 4.",
+  "The vertex is at the x-value 4."
+ ],
+ "SAT-8#2": [
+  "The equation is in vertex form, which shows the vertex without any work.",
+  "The vertex is (−5, −3), and the parabola opens up because the squared term is positive.",
+  "A square is never negative, so y is smallest when (x + 5)² equals 0.",
+  "So the minimum value of y is −3, reached at x = −5."
+ ],
+ "SAT-8#3": [
+  "For y = ax² + bx + c, the vertex has x-coordinate −b ÷ (2a).",
+  "Here a = 1 and b = −10, so the formula gives 10 ÷ 2.",
+  "Dividing gives 5, the line of symmetry of the parabola.",
+  "The x-coordinate of the vertex is 5."
+ ],
+ "SAT-9#0": [
+  "The notation p(3) means replace every x in the rule with 3.",
+  "Substitute to get 3² − 9, which is the same as 9 − 9.",
+  "The result is 0, which also shows that (x − 3) is a factor.",
+  "So the value of p(3) is exactly 0."
+ ],
+ "SAT-9#1": [
+  "The Remainder Theorem says the remainder on dividing by x − 3 equals the value at x = 3.",
+  "Substitute 3 into the polynomial x² + 1 to get 3² + 1.",
+  "That works out to 9 + 1, which equals 10.",
+  "The remainder of the division is 10."
+ ],
+ "SAT-9#2": [
+  "The unknown is in the denominator, so multiply both sides by x to clear the fraction.",
+  "Multiplying both sides by x gives the simpler equation 8 = 2x.",
+  "Divide both sides by 2 to get x = 4.",
+  "Check: 8 ÷ 4 = 2 is true, so the answer is 4."
+ ],
+ "SAT-9#3": [
+  "The graphs meet where both equations give the same y, so set them equal.",
+  "Setting them equal gives the equation x² = 4.",
+  "Take the square root with both signs: x = 2 or x = −2.",
+  "The positive x-value where they meet is 2."
+ ],
+ "SAT-10#0": [
+  "The starting value of an exponential model is its output when x = 0.",
+  "Any number to the power 0 is 1, so (1.25)⁰ = 1.",
+  "That leaves only the number in front: y = 400 × 1 = 400.",
+  "The starting value of the model is 400."
+ ],
+ "SAT-10#1": [
+  "Growing by a percent means keeping the whole amount and adding a part of it.",
+  "Write the rate 8% as the decimal 0.08 so it can be added.",
+  "Keeping the full 100% and adding 8% more gives 1 + 0.08 = 1.08.",
+  "So the yearly growth factor is b = 1.08."
+ ],
+ "SAT-10#2": [
+  "Tripling means multiplying by 3, once for each day that passes.",
+  "After one day there are 50 × 3 = 150 in the culture.",
+  "After the second day there are 150 × 3 = 450, which is 50 × 3².",
+  "So the culture has 450 after 2 days."
+ ],
+ "SAT-10#3": [
+  "The base 0.75 is the fraction of y that is kept at each step.",
+  "The fraction lost is the rest: 1 − 0.75 = 0.25.",
+  "Written as a percent, the decimal 0.25 is the same as 25%.",
+  "The value of y decreases by 25 percent each step."
+ ],
+ "SAT-11#0": [
+  "The price per pound stays the same, so cost grows in proportion to weight.",
+  "Compare the weights: 15 pounds is 3 times 5 pounds.",
+  "The cost is 3 times as much too: 3 × 8 = 24.",
+  "Fifteen pounds of apples cost 24 dollars."
+ ],
+ "SAT-11#1": [
+  "Two equal fractions can be solved by cross-multiplying.",
+  "Cross-multiply the two fractions to get 7x = 4 × 35 = 140.",
+  "Divide both sides by 7 to get 140 ÷ 7 = 20.",
+  "So the value of x in the proportion is 20."
+ ],
+ "SAT-11#2": [
+  "A ratio of 2 : 3 splits the marbles into equal parts, 2 red parts and 3 blue parts.",
+  "There are 2 + 3 = 5 parts, so one part is 40 ÷ 5 = 8 marbles.",
+  "Blue has 3 of the parts, so multiply: 3 × 8 = 24.",
+  "So there are 24 blue marbles in the set of 40."
+ ],
+ "SAT-11#3": [
+  "Use the fact that one foot is 12 inches.",
+  "Going to a smaller unit needs more of them, so multiply: 3.5 × 12.",
+  "Three feet is 36 inches and half a foot is 6 inches, for a total of 42.",
+  "So there are 42 inches in 3.5 feet."
+ ],
+ "SAT-12#0": [
+  "To find a percent of a number, write the percent as a decimal and multiply.",
+  "Write 15% as 0.15, so the product is 0.15 × 80.",
+  "Ten percent of 80 is 8 and five percent is 4, which add to 12.",
+  "So the answer is that 15% of 80 is 12."
+ ],
+ "SAT-12#1": [
+  "Percent change is the amount of change divided by the original value.",
+  "The price fell by 80 − 60 = 20 dollars in all.",
+  "Divide the change by the original price: 20 ÷ 80 = 0.25.",
+  "As a percent, the price fell by 25 percent."
+ ],
+ "SAT-12#2": [
+  "A 10% raise multiplies the old salary by 1.1, so work backward by dividing.",
+  "Call the old salary s, so the equation is 1.1s = 55000.",
+  "Divide both sides by 1.1 to get s = 50000.",
+  "The salary before the raise was 50,000 dollars."
+ ],
+ "SAT-12#3": [
+  "An increase keeps the full original amount and adds a percent of it.",
+  "The original is 100%, or 1, and the increase is 30%, or 0.30.",
+  "Add the two parts together to get 1 + 0.30 = 1.3.",
+  "The single multiplier for a 30% increase is 1.3."
+ ],
+ "SAT-13#0": [
+  "The mean is the sum of the values divided by how many values there are.",
+  "Add the four values to find the sum: 6 + 8 + 10 + 16 = 40.",
+  "There are 4 values, so divide the sum by 4: 40 ÷ 4 = 10.",
+  "The mean of the data set is 10."
+ ],
+ "SAT-13#1": [
+  "The median is the middle value once the numbers are in order.",
+  "Sort the list from least to greatest: 2, 3, 5, 9, 11.",
+  "With five values, the middle one is the third in the list.",
+  "The median of the data set is 5."
+ ],
+ "SAT-13#2": [
+  "Work with totals, because a mean times the count gives the sum.",
+  "The three numbers have a sum of 3 × 12 = 36.",
+  "Adding 20 makes the sum 56, and there are now 4 numbers.",
+  "Divide to get 56 ÷ 4 = 14, so the new mean is 14."
+ ],
+ "SAT-13#3": [
+  "The range is the largest value minus the smallest value.",
+  "The largest value is 22 and the smallest value is 4.",
+  "Subtract the smallest from the largest to get 22 − 4 = 18.",
+  "The range of the data set is 18."
+ ],
+ "SAT-14#0": [
+  "A line of best fit predicts y when you substitute a value for x.",
+  "Put 10 in place of x to get y = 3 × 10 − 4.",
+  "Multiply first to get 30, then subtract 4.",
+  "So the predicted value of y is 26."
+ ],
+ "SAT-14#1": [
+  "Probability is the number of favorable outcomes divided by the number of equally likely outcomes.",
+  "One of the 4 equal parts is red, so the probability is 1/4.",
+  "Write the fraction as a decimal by dividing: 1 ÷ 4 = 0.25.",
+  "The probability of landing on red is 0.25."
+ ],
+ "SAT-14#2": [
+  "The condition given senior means you look only at the seniors.",
+  "That makes the total 80, and 20 of those seniors walk.",
+  "Divide the walkers by the seniors: 20 ÷ 80 = 0.25.",
+  "So the probability that a senior walks is 0.25."
+ ],
+ "SAT-14#3": [
+  "A margin of error gives a range of plausible values on both sides of the estimate.",
+  "The largest plausible value is the estimate plus the margin.",
+  "Add the two percents to get 30 + 5 = 35.",
+  "The largest plausible value is 35 percent."
+ ],
+ "SAT-15#0": [
+  "Supplementary angles add up to 180 degrees.",
+  "Subtract the known angle from 180 to find the other one.",
+  "Carrying out the subtraction gives the result 180 − 38 = 142.",
+  "So the other angle measures 142 degrees."
+ ],
+ "SAT-15#1": [
+  "The three angles of any triangle add up to 180 degrees.",
+  "The two known angles add to 90 + 35 = 125.",
+  "Subtract from the total to get 180 − 125 = 55.",
+  "So the third angle measures 55 degrees."
+ ],
+ "SAT-15#2": [
+  "Vertical angles are across from each other where two lines cross, and they are equal.",
+  "Set the two measures equal to get 3x = 75.",
+  "Divide both sides by 3 to get 75 ÷ 3 = 25.",
+  "So the value of x is 25, and 3 × 25 = 75 checks."
+ ],
+ "SAT-15#3": [
+  "An exterior angle of a triangle equals the sum of the two far interior angles.",
+  "The far angles are equal, so call each one a and write 2a = 110.",
+  "Divide both sides by 2 to get a = 110 ÷ 2 = 55.",
+  "Each of the far angles measures 55 degrees."
+ ],
+ "SAT-16#0": [
+  "The area of a triangle is half of the base times the height.",
+  "Multiply the base by the height: 12 × 5 = 60.",
+  "Take half of that product to finish: 60 ÷ 2 = 30.",
+  "The area of the triangle is 30."
+ ],
+ "SAT-16#1": [
+  "The volume of a box is length times width times height.",
+  "Multiply the first two dimensions together: 3 × 4 = 12.",
+  "Multiply that result by the third dimension: 12 × 5 = 60.",
+  "The volume of the box is 60."
+ ],
+ "SAT-16#2": [
+  "Area uses two lengths multiplied together, so the scale factor is applied twice.",
+  "If lengths scale by k, then area scales by k².",
+  "Here k = 4, so the factor for area is 4² = 16.",
+  "The area scales by a factor of 16."
+ ],
+ "SAT-16#3": [
+  "The area of a circle is π times the radius squared.",
+  "Square the radius first, which gives 5² = 25.",
+  "The area is 25π, which has the form kπ.",
+  "Matching the two forms shows that k = 25."
+ ],
+ "SAT-17#0": [
+  "In a right triangle the squares of the legs add up to the square of the hypotenuse.",
+  "Square the two legs and add them: 36 + 64 = 100.",
+  "Take the square root to find the side: √100 = 10.",
+  "So the hypotenuse of the triangle has length 10."
+ ],
+ "SAT-17#1": [
+  "The sides of a 30-60-90 triangle are x, x√3 and 2x, where x is the shorter leg.",
+  "The hypotenuse is twice the shorter leg, and the shorter leg is 4.",
+  "Multiply the shorter leg by 2 to get 2 × 4 = 8.",
+  "So the hypotenuse of this triangle has length 8."
+ ],
+ "SAT-17#2": [
+  "Tangent of an angle is the opposite side divided by the adjacent side.",
+  "The opposite side is 3 and the adjacent side is 4, so tan is 3/4.",
+  "Write the fraction as a decimal by dividing: 3 ÷ 4 = 0.75.",
+  "The tangent of the angle is 0.75."
+ ],
+ "SAT-17#3": [
+  "The sine of an angle equals the cosine of its complement.",
+  "Complementary angles add to 90 degrees, so 40 + A = 90.",
+  "Subtract to find the missing angle: 90 − 40 = 50.",
+  "So the missing angle A measures 50 degrees."
+ ],
+ "SAT-18#0": [
+  "In the standard form of a circle, the right side is the radius squared.",
+  "That means r² = 49 for the circle in this question.",
+  "Take the positive square root of both sides: √49 = 7.",
+  "The radius of the circle is 7."
+ ],
+ "SAT-18#1": [
+  "An arc is a fraction of the circumference, set by its central angle.",
+  "The fraction is 120/360 = 1/3 of the circle.",
+  "The full circumference of the circle is 2 × π × 6 = 12π.",
+  "One third of 12π is 4π, so the value of k is 4."
+ ],
+ "SAT-18#2": [
+  "Use the fact that π radians equals 180 degrees.",
+  "Replace π with 180 degrees, so the angle π/3 becomes 180 ÷ 3.",
+  "The division gives 60 as the result.",
+  "So the angle π/3 radians is equal to 60 degrees."
+ ],
+ "SAT-18#3": [
+  "A sector is a fraction of the area of the circle, set by its central angle.",
+  "The fraction is 36/360 = 1/10 of the circle.",
+  "The full area of the circle is π × 10² = 100π.",
+  "One tenth of 100π is 10π, so the value of k is 10."
+ ],
  "STAT-1#0": [
   "A categorical variable is a label or group name, even when it is written with digits. Ask which of these you would never average.",
   "Shoe size, height and distance to school all measure an amount, so averages of them mean something.",

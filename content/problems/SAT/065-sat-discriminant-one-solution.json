@@ -10,27 +10,27 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Exactly one real solution means the discriminant is zero.",
+  "hint": "The number of real solutions of a quadratic depends on its discriminant. Which value of the discriminant gives exactly one solution?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Exactly one real solution means the discriminant is zero."
+      "text": "The number of real solutions of a quadratic depends on its discriminant. Which value of the discriminant gives exactly one solution?"
     },
     {
       "level": "guide",
-      "text": "Set $6^2 - 4(1)(c) = 0$."
+      "text": "Set the discriminant equal to zero with $a = 1$ and $b = 6$: $6^2 - 4(1)(c) = 0$. Solve this equation for $c$."
     },
     {
       "level": "reveal",
-      "text": "$36 = 4c$, so $c = 9$."
+      "text": "The equation $36 - 4c = 0$ gives $4c = 36$, so the value of $c$ is $9$."
     }
   ],
   "learningObjective": "Solve for a parameter using the discriminant-equals-zero condition.",
   "topic": "The discriminant",
   "explanation": [
-    "Exactly one real solution occurs when $b^2 - 4ac = 0$.",
-    "Here $36 - 4c = 0$, so $c = 9$.",
-    "Check: $x^2 + 6x + 9 = (x + 3)^2 = 0$ has the single solution $x = -3$ ✓"
+    "A quadratic has exactly one real solution when its discriminant $b^2 - 4ac$ equals zero.",
+    "Here $a = 1$ and $b = 6$, so the condition is $36 - 4c = 0$, which gives $c = 9$.",
+    "Check: $x^2 + 6x + 9 = (x + 3)^2$, which is zero only at $x = -3$. The value of $c$ is $9$."
   ],
   "alternativeExplanations": [
     {

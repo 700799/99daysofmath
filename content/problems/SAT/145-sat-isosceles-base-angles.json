@@ -10,27 +10,27 @@
   "primaryAnswer": "70",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The two base angles of an isosceles triangle are equal.",
+  "hint": "An isosceles triangle has two equal sides, and that forces two of its angles to be equal as well. Which two?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The two base angles of an isosceles triangle are equal."
+      "text": "An isosceles triangle has two equal sides, and that forces two of its angles to be equal as well. Which two?"
     },
     {
       "level": "guide",
-      "text": "They share the remaining $180 - 40 = 140$ degrees."
+      "text": "The two base angles are equal and share what is left after the $40°$ angle: $180 - 40 = 140$ degrees. Split that equally."
     },
     {
       "level": "reveal",
-      "text": "$140 \\div 2 = 70$ degrees each."
+      "text": "Since $140 \\div 2 = 70$, each base angle measures $70$ degrees."
     }
   ],
   "learningObjective": "Combine the isosceles base-angle property with the triangle sum.",
   "topic": "Isosceles triangles",
   "explanation": [
-    "In an isosceles triangle, the angles opposite the two congruent sides are equal — these are the base angles.",
-    "The vertex angle is $40°$, leaving $180 - 40 = 140°$ split evenly between them.",
-    "Each base angle is $140 \\div 2 = 70°$."
+    "In an isosceles triangle the angles opposite the two congruent sides, called the base angles, are equal.",
+    "The angle between the congruent sides is $40°$, which leaves $180 - 40 = 140$ degrees for the two base angles.",
+    "The base angles are equal, so each one is $140 \\div 2 = 70$ degrees."
   ],
   "alternativeExplanations": [
     {

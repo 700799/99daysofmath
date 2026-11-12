@@ -10,27 +10,27 @@
   "primaryAnswer": "25",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Percent change is the change divided by the *original* value.",
+  "hint": "Percent change compares the amount of change with one of the two values. Think about which value is the correct base.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Percent change is the change divided by the *original* value."
+      "text": "Percent change compares the amount of change with one of the two values. Think about which value is the correct base."
     },
     {
       "level": "guide",
-      "text": "The change is $10$, and the original is $40$."
+      "text": "The change is $50 - 40 = 10$, and the base is the original value $40$. Divide the change by the original and write the result as a percent."
     },
     {
       "level": "reveal",
-      "text": "$\\dfrac{10}{40} = 0.25 = 25\\%$."
+      "text": "The fraction $\\dfrac{10}{40}$ equals $0.25$, so the quantity increased by $25\\%$."
     }
   ],
   "learningObjective": "Compute a percent increase from two values.",
   "topic": "Percent change",
   "explanation": [
-    "Percent change $= \\dfrac{\\text{new} - \\text{old}}{\\text{old}} = \\dfrac{50 - 40}{40}$.",
-    "$= \\dfrac{10}{40} = 0.25$, or $25\\%$.",
-    "Dividing by the new value instead gives $20\\%$ — the standard trap on this question type."
+    "Percent change is the new value minus the old value, divided by the old value: $\\dfrac{50 - 40}{40}$.",
+    "The fraction simplifies to $\\dfrac{10}{40} = 0.25$, which is $25\\%$ as a percent.",
+    "Dividing by the new value instead would give $20\\%$, which is wrong. The percent increase is $25\\%$."
   ],
   "alternativeExplanations": [
     {

@@ -10,27 +10,28 @@
   "primaryAnswer": "88",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Chain the conversion factors so the unwanted units cancel.",
+  "hint": "Two units have to change: miles into feet and hours into seconds. Write each conversion as a fraction so unwanted units cancel.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Chain the conversion factors so the unwanted units cancel."
+      "text": "Two units have to change: miles into feet and hours into seconds. Write each conversion as a fraction so unwanted units cancel."
     },
     {
       "level": "guide",
-      "text": "$\\dfrac{60 \\text{ mi}}{1 \\text{ hr}} \\times \\dfrac{5280 \\text{ ft}}{1 \\text{ mi}} \\times \\dfrac{1 \\text{ hr}}{3600 \\text{ s}}$."
+      "text": "Multiply $60$ by $5280$ to change miles to feet, and divide by $3600$ to change hours to seconds: $\\dfrac{60 \\times 5280}{3600}$."
     },
     {
       "level": "reveal",
-      "text": "$\\dfrac{60 \\times 5280}{3600} = 88$ feet per second."
+      "text": "The result is $\\dfrac{316800}{3600} = 88$, so the speed is $88$ feet per second."
     }
   ],
   "learningObjective": "Chain unit conversions using dimensional analysis.",
   "topic": "Unit conversion",
   "explanation": [
-    "Write each conversion as a fraction arranged so the unwanted unit cancels diagonally.",
-    "$\\dfrac{60 \\text{ mi}}{\\text{hr}} \\times \\dfrac{5280 \\text{ ft}}{1 \\text{ mi}} \\times \\dfrac{1 \\text{ hr}}{3600 \\text{ s}}$: miles cancel, hours cancel, leaving feet per second.",
-    "$\\dfrac{60 \\times 5280}{3600} = \\dfrac{316800}{3600} = 88$ ft/s."
+    "Write each conversion as a fraction placed so that the unit you want to remove cancels.",
+    "Multiplying $60$ miles per hour by $5280$ feet per mile cancels miles. Dividing by $3600$ seconds per hour cancels hours.",
+    "Carrying out the arithmetic gives $\\dfrac{60 \\times 5280}{3600} = \\dfrac{316800}{3600} = 88$, with feet per second as the unit left over.",
+    "The speed of the car is $88$ feet per second."
   ],
   "alternativeExplanations": [
     {

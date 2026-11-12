@@ -10,11 +10,11 @@
   "primaryAnswer": "40",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Total weight is the van plus the boxes, and it must stay at or below the limit.",
+  "hint": "The bridge limit applies to the van and its load together. Think about how much of the limit the empty van already uses.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Total weight is the van plus the boxes, and it must stay at or below the limit."
+      "text": "The bridge limit applies to the van and its load together. Think about how much of the limit the empty van already uses."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "$3200 + 45b \\le 5000$, so $45b \\le 1800$."
+      "text": "With $b$ boxes the weight is $3200 + 45b$, and it must satisfy $3200 + 45b \\le 5000$. Subtract the weight of the van, then divide by $45$."
     },
     {
       "level": "reveal",
-      "text": "$b \\le 40$, so $40$ boxes."
+      "text": "This gives $45b \\le 1800$, so $b \\le 40$. The van can carry at most $40$ boxes."
     }
   ],
   "learningObjective": "Solve a real-world capacity inequality with a whole-number answer.",
   "topic": "Inequalities in context",
   "explanation": [
-    "The loaded weight is $3200 + 45b$, and it must satisfy $3200 + 45b \\le 5000$.",
-    "Subtract: $45b \\le 1800$.",
-    "Divide: $b \\le 40$. Since $1800 \\div 45 = 40$ exactly, the van can carry $40$ boxes and hit the limit precisely."
+    "The loaded weight is the van plus the boxes, $3200 + 45b$, and it must not exceed the limit: $3200 + 45b \\le 5000$.",
+    "Subtract $3200$ from both sides to find the weight available for boxes: $45b \\le 1800$.",
+    "Divide by $45$ to get $b \\le 40$. The division is exact, so $40$ boxes bring the van exactly to the limit.",
+    "The maximum number of boxes is $40$."
   ],
   "alternativeExplanations": [
     {

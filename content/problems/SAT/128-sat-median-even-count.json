@@ -13,11 +13,11 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "With an even number of values there is no single middle value.",
+  "hint": "Count the values in the list. When the count is even, no single value sits exactly in the middle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "With an even number of values there is no single middle value."
+      "text": "Count the values in the list. When the count is even, no single value sits exactly in the middle."
     },
     {
       "level": "nudge",
@@ -26,19 +26,19 @@
     },
     {
       "level": "guide",
-      "text": "The two middle values are $9$ and $12$."
+      "text": "The list is in order and has six values, so the middle pair is the third and fourth values, $9$ and $12$. Find the average of that pair."
     },
     {
       "level": "reveal",
-      "text": "Average them: $\\dfrac{9 + 12}{2} = 10.5$."
+      "text": "The average is $\\dfrac{9 + 12}{2} = 10.5$, so the median is $10.5$."
     }
   ],
   "learningObjective": "Find the median of an even-sized data set.",
   "topic": "Measures of center",
   "explanation": [
-    "The data is already sorted. With $6$ values, the middle two are the 3rd and 4th: $9$ and $12$.",
-    "The median is their average: $\\dfrac{9 + 12}{2} = 10.5$.",
-    "Note that the median need not be a value in the data set."
+    "The data are already in order, and with $6$ values the middle two are the third and fourth: $9$ and $12$.",
+    "For an even number of values the median is the average of the middle pair: $\\dfrac{9 + 12}{2} = 10.5$.",
+    "The median is $10.5$, even though that number is not itself in the data set."
   ],
   "alternativeExplanations": [
     {

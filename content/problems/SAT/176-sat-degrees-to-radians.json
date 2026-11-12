@@ -32,27 +32,27 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Multiply by $\\dfrac{\\pi}{180}$ to convert degrees to radians.",
+  "hint": "Degrees and radians measure the same turn in different units. Recall how many radians equal $180°$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply by $\\dfrac{\\pi}{180}$ to convert degrees to radians."
+      "text": "Degrees and radians measure the same turn in different units. Recall how many radians equal $180°$."
     },
     {
       "level": "guide",
-      "text": "$135 \\times \\dfrac{\\pi}{180} = \\dfrac{135\\pi}{180}$."
+      "text": "Since $180°$ equals $\\pi$ radians, multiply the degrees by $\\dfrac{\\pi}{180}$ to get $\\dfrac{135\\pi}{180}$. Then simplify the fraction."
     },
     {
       "level": "reveal",
-      "text": "Simplify by $45$: $\\dfrac{3\\pi}{4}$."
+      "text": "Dividing top and bottom by $45$ gives $\\dfrac{3\\pi}{4}$, which is choice A."
     }
   ],
   "learningObjective": "Convert between degrees and radians.",
   "topic": "Radians",
   "explanation": [
-    "Since $180° = \\pi$ radians, multiply degrees by $\\dfrac{\\pi}{180}$.",
-    "$135 \\times \\dfrac{\\pi}{180} = \\dfrac{135\\pi}{180}$, and $\\gcd(135, 180) = 45$.",
-    "Simplifying gives $\\dfrac{3\\pi}{4}$."
+    "A half turn is $180°$ or $\\pi$ radians, so degrees are changed to radians by multiplying by $\\dfrac{\\pi}{180}$.",
+    "Applying that to the angle gives $135 \\times \\dfrac{\\pi}{180} = \\dfrac{135\\pi}{180}$.",
+    "Both $135$ and $180$ are divisible by $45$, so the fraction simplifies to $\\dfrac{3\\pi}{4}$, which is choice A."
   ],
   "alternativeExplanations": [
     {

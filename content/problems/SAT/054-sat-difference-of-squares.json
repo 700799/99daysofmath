@@ -32,27 +32,28 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Both terms are perfect squares, separated by a minus sign.",
+  "hint": "Look at the two terms separately. Each one is a perfect square, and they are joined by a minus sign. Which factoring pattern fits?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Both terms are perfect squares, separated by a minus sign."
+      "text": "Look at the two terms separately. Each one is a perfect square, and they are joined by a minus sign. Which factoring pattern fits?"
     },
     {
       "level": "guide",
-      "text": "The pattern $a^2 - b^2 = (a + b)(a - b)$ applies with $a = x$ and $b = 3$."
+      "text": "Use the difference of squares pattern $a^2 - b^2 = (a + b)(a - b)$ with $a = x$ and $b = 3$, because $9 = 3^2$."
     },
     {
       "level": "reveal",
-      "text": "$(x + 3)(x - 3)$."
+      "text": "The pattern gives $(x + 3)(x - 3)$, which is choice B."
     }
   ],
   "learningObjective": "Factor a difference of two squares.",
   "topic": "Factoring",
   "explanation": [
-    "$x^2 - 9$ is $x^2 - 3^2$: a difference of squares.",
-    "The pattern is $a^2 - b^2 = (a + b)(a - b)$, giving $(x + 3)(x - 3)$.",
-    "Expanding confirms it: $x^2 - 3x + 3x - 9 = x^2 - 9$ ✓. Choice A expands to $x^2 - 6x + 9$, which has a middle term the original does not."
+    "Rewrite the expression as $x^2 - 3^2$, which shows that it is a difference of two squares.",
+    "The pattern $a^2 - b^2 = (a + b)(a - b)$ applies with $a = x$ and $b = 3$, giving $(x + 3)(x - 3)$.",
+    "Expanding confirms it, because the middle terms $-3x$ and $+3x$ cancel to leave $x^2 - 9$.",
+    "The equivalent expression is $(x + 3)(x - 3)$, which is choice B."
   ],
   "alternativeExplanations": [
     {

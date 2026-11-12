@@ -10,27 +10,27 @@
   "primaryAnswer": "23",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $x = 5$ into the equation.",
+  "hint": "A line of best fit works like any linear rule. The number of hours studied is the input for the variable $x$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $x = 5$ into the equation."
+      "text": "A line of best fit works like any linear rule. The number of hours studied is the input for the variable $x$."
     },
     {
       "level": "guide",
-      "text": "$y = 2.4(5) + 11$."
+      "text": "Replace $x$ with $5$ in the model to get $y = 2.4(5) + 11$. Multiply first, then add."
     },
     {
       "level": "reveal",
-      "text": "$y = 12 + 11 = 23$."
+      "text": "Since $2.4 \\times 5 = 12$ and $12 + 11 = 23$, the predicted score is $23$."
     }
   ],
   "learningObjective": "Use a line of best fit to make a prediction.",
   "topic": "Lines of best fit",
   "explanation": [
-    "Substitute the given input: $y = 2.4(5) + 11$.",
-    "$2.4 \\times 5 = 12$, so $y = 12 + 11 = 23$.",
-    "This is a *predicted* value from the model, not an observed data point."
+    "The model takes hours studied as its input, so substitute $x = 5$: $y = 2.4(5) + 11$.",
+    "Multiply first to get $2.4 \\times 5 = 12$, then add the constant: $12 + 11 = 23$.",
+    "The model predicts a score of $23$. This is a prediction and not an observed data point."
   ],
   "alternativeExplanations": [
     {

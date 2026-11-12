@@ -10,27 +10,27 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Parallel lines have identical slopes.",
+  "hint": "What do two parallel lines always have in common? Use that fact to learn something about line $\\ell$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Parallel lines have identical slopes."
+      "text": "What do two parallel lines always have in common? Use that fact to learn something about line $\\ell$."
     },
     {
       "level": "guide",
-      "text": "So $\\ell$ has slope $-\\tfrac{1}{2}$. Substitute $(4, 1)$ into $y = -\\tfrac{1}{2}x + b$."
+      "text": "Line $\\ell$ has the same slope, $-\\tfrac{1}{2}$. Substitute the point $(4, 1)$ into $y = -\\tfrac{1}{2}x + b$ and solve for $b$."
     },
     {
       "level": "reveal",
-      "text": "$1 = -2 + b$, so $b = 3$."
+      "text": "The substitution gives $1 = -2 + b$, so $b = 3$. The $y$-intercept of line $\\ell$ is $3$."
     }
   ],
   "learningObjective": "Use the parallel-slope condition to build a new line.",
   "topic": "Parallel lines",
   "explanation": [
-    "Parallel means same slope, so $\\ell$ has slope $-\\tfrac{1}{2}$.",
-    "Substitute the point $(4, 1)$: $1 = -\\tfrac{1}{2}(4) + b = -2 + b$.",
-    "So $b = 3$, and $\\ell$ is $y = -\\tfrac{1}{2}x + 3$."
+    "Parallel lines have equal slopes, so line $\\ell$ has slope $-\\tfrac{1}{2}$ and equation $y = -\\tfrac{1}{2}x + b$.",
+    "The line passes through $(4, 1)$, so substitute those coordinates: $1 = -\\tfrac{1}{2}(4) + b = -2 + b$.",
+    "Add $2$ to both sides to get $b = 3$. The $y$-intercept of line $\\ell$ is $3$."
   ],
   "alternativeExplanations": [
     {

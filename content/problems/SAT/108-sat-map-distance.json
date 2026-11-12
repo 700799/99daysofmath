@@ -11,11 +11,11 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "Set up a proportion: inches over miles equals inches over miles.",
+  "hint": "A map scale keeps inches and miles in a fixed ratio. Use that ratio for the given distance on the map.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Set up a proportion: inches over miles equals inches over miles."
+      "text": "A map scale keeps inches and miles in a fixed ratio. Use that ratio for the given distance on the map."
     },
     {
       "level": "nudge",
@@ -24,19 +24,19 @@
     },
     {
       "level": "guide",
-      "text": "$\\dfrac{2}{25} = \\dfrac{7.5}{d}$."
+      "text": "Write inches over miles on both sides: $\\dfrac{2}{25} = \\dfrac{7.5}{d}$. Cross-multiply and solve for $d$."
     },
     {
       "level": "reveal",
-      "text": "$2d = 187.5$, so $d = 93.75$ miles."
+      "text": "Cross-multiplying gives $2d = 187.5$, so $d = 93.75$. The cities are $93.75$ miles apart."
     }
   ],
   "learningObjective": "Apply a map scale that is not a unit rate.",
   "topic": "Scale and proportions",
   "explanation": [
-    "Write the proportion with matching units in matching positions: $\\dfrac{2 \\text{ in}}{25 \\text{ mi}} = \\dfrac{7.5 \\text{ in}}{d \\text{ mi}}$.",
-    "Cross-multiply: $2d = 25 \\times 7.5 = 187.5$.",
-    "$d = 93.75$ miles."
+    "Write a proportion with inches on top and miles on the bottom: $\\dfrac{2}{25} = \\dfrac{7.5}{d}$.",
+    "Cross-multiply to remove the fractions, which gives $2d = 25 \\times 7.5 = 187.5$.",
+    "Divide by $2$ to get $d = 93.75$, so the actual distance is $93.75$ miles."
   ],
   "alternativeExplanations": [
     {

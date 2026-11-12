@@ -10,11 +10,11 @@
   "primaryAnswer": "120",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "What fraction of the full circumference is this arc?",
+  "hint": "Compare the arc with the whole circumference. The fraction of the circumference equals the fraction of a full turn.",
   "hints": [
     {
       "level": "nudge",
-      "text": "What fraction of the full circumference is this arc?"
+      "text": "Compare the arc with the whole circumference. The fraction of the circumference equals the fraction of a full turn."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "The circumference is $18\\pi$, and $\\dfrac{6\\pi}{18\\pi} = \\dfrac{1}{3}$."
+      "text": "The circumference is $2\\pi(9) = 18\\pi$, so the arc is $\\dfrac{6\\pi}{18\\pi} = \\dfrac{1}{3}$ of the circle. Take that fraction of $360°$."
     },
     {
       "level": "reveal",
-      "text": "$\\tfrac{1}{3}$ of $360° = 120°$."
+      "text": "One third of $360°$ is $120°$, so the central angle measures $120$ degrees."
     }
   ],
   "learningObjective": "Recover a central angle from an arc length.",
   "topic": "Arcs and sectors",
   "explanation": [
-    "The full circumference is $2\\pi(9) = 18\\pi$.",
-    "The arc is $\\dfrac{6\\pi}{18\\pi} = \\dfrac{1}{3}$ of the circle.",
-    "So the central angle is $\\dfrac{1}{3} \\times 360° = 120°$."
+    "The full circumference of the circle is $2\\pi r = 2\\pi(9) = 18\\pi$.",
+    "The arc is $\\dfrac{6\\pi}{18\\pi} = \\dfrac{1}{3}$ of the circumference, so its angle is one third of a full turn.",
+    "One third of $360°$ is $120°$, so the central angle measures $120$ degrees."
   ],
   "alternativeExplanations": [
     {

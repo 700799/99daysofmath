@@ -32,27 +32,28 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Factor out the common $x$ first.",
+  "hint": "Look at the two terms of $p(x)$. They share a common factor, and removing it is the natural first step.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Factor out the common $x$ first."
+      "text": "Look at the two terms of $p(x)$. They share a common factor, and removing it is the natural first step."
     },
     {
       "level": "guide",
-      "text": "$x^3 - 4x = x(x^2 - 4)$, and $x^2 - 4$ is a difference of squares."
+      "text": "Taking out $x$ gives $x(x^2 - 4)$. The bracket $x^2 - 4$ is a difference of squares, so factor it once more."
     },
     {
       "level": "reveal",
-      "text": "$p(x) = x(x + 2)(x - 2)$, so $x - 2$ is a factor."
+      "text": "The full factorization is $p(x) = x(x + 2)(x - 2)$, so $x - 2$ is a factor, which is choice B."
     }
   ],
   "learningObjective": "Factor a cubic by extracting a common term and a difference of squares.",
   "topic": "Polynomial factoring",
   "explanation": [
-    "Factor out the common $x$: $x^3 - 4x = x(x^2 - 4)$.",
-    "The remaining factor is a difference of squares: $x^2 - 4 = (x + 2)(x - 2)$.",
-    "So $p(x) = x(x + 2)(x - 2)$, and $x - 2$ appears among the factors."
+    "Both terms contain $x$, so factor it out first: $x^3 - 4x = x(x^2 - 4)$.",
+    "The bracket is a difference of squares because $4 = 2^2$, so $x^2 - 4 = (x + 2)(x - 2)$.",
+    "The complete factorization is $p(x) = x(x + 2)(x - 2)$, and none of the other choices appears in it.",
+    "The factor among the choices is $x - 2$, which is choice B."
   ],
   "alternativeExplanations": [
     {

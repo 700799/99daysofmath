@@ -32,11 +32,11 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "No solution means the two sides never meet — parallel lines.",
+  "hint": "Think of each side as a line. A linear equation has no solution when the two sides change at the same rate but start from different values.",
   "hints": [
     {
       "level": "nudge",
-      "text": "No solution means the two sides never meet — parallel lines."
+      "text": "Think of each side as a line. A linear equation has no solution when the two sides change at the same rate but start from different values."
     },
     {
       "level": "nudge",
@@ -45,11 +45,11 @@
     },
     {
       "level": "guide",
-      "text": "Gather the $x$ terms: $(k - 3)x = -13$."
+      "text": "Collect the $x$ terms on the left: $(k - 3)x = -13$. Ask which value of $k$ makes it impossible to solve this for $x$."
     },
     {
       "level": "reveal",
-      "text": "If $k = 3$ the left side is $0$ and the equation reads $0 = -13$, which is impossible. So $k = 3$."
+      "text": "When $k = 3$ the left side becomes $0$ and the equation says $0 = -13$, which is never true. The answer is $3$, choice C."
     }
   ],
   "learningObjective": "Determine the constant that makes a linear equation unsolvable.",

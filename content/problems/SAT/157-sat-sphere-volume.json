@@ -32,11 +32,11 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The sphere volume formula is on the reference sheet: $V = \\tfrac{4}{3}\\pi r^3$.",
+  "hint": "The volume formula for a sphere is on the reference sheet. It uses the radius raised to a power, so take care with the order of steps.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The sphere volume formula is on the reference sheet: $V = \\tfrac{4}{3}\\pi r^3$."
+      "text": "The volume formula for a sphere is on the reference sheet. It uses the radius raised to a power, so take care with the order of steps."
     },
     {
       "level": "nudge",
@@ -45,19 +45,20 @@
     },
     {
       "level": "guide",
-      "text": "$\\tfrac{4}{3}\\pi (3)^3 = \\tfrac{4}{3}\\pi (27)$."
+      "text": "Use $V = \\tfrac{4}{3}\\pi r^3$ with $r = 3$. Cube the radius first to get $27$, then multiply: $\\tfrac{4}{3}\\pi(27)$."
     },
     {
       "level": "reveal",
-      "text": "$36\\pi$."
+      "text": "Since $\\tfrac{4}{3} \\times 27 = 36$, the volume of the sphere is $36\\pi$, which is choice B."
     }
   ],
   "learningObjective": "Apply the sphere volume formula.",
   "topic": "Volume",
   "explanation": [
-    "$V = \\tfrac{4}{3}\\pi r^3$ with $r = 3$.",
-    "$r^3 = 27$, so $V = \\tfrac{4}{3}\\pi(27) = 4\\pi \\times 9 = 36\\pi$.",
-    "Cube the radius before multiplying by the fraction — $\\left(\\tfrac{4}{3} \\times 3\\right)^3$ is a different and wrong quantity."
+    "The volume of a sphere is $V = \\tfrac{4}{3}\\pi r^3$, and the radius here is $3$.",
+    "Cube the radius first, because the exponent applies only to $r$: $3^3 = 27$.",
+    "Then multiply by the fraction, dividing $27$ by $3$ first: $\\tfrac{4}{3} \\times 27 = 4 \\times 9 = 36$.",
+    "The volume of the sphere is $36\\pi$, which is choice B."
   ],
   "alternativeExplanations": [
     {

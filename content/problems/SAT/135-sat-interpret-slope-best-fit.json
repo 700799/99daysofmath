@@ -32,19 +32,19 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The slope is a rate: output units per input unit.",
+  "hint": "In the model, $1.8$ is the number multiplied by $x$. Think about what the slope of a line measures in terms of the two variables.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The slope is a rate: output units per input unit."
+      "text": "In the model, $1.8$ is the number multiplied by $x$. Think about what the slope of a line measures in terms of the two variables."
     },
     {
       "level": "guide",
-      "text": "Here that is feet per year."
+      "text": "The slope is the change in $y$ for each increase of $1$ in $x$. Here $y$ is height in feet and $x$ is years since planting."
     },
     {
       "level": "reveal",
-      "text": "$1.8$ is the predicted growth in feet for each additional year."
+      "text": "The number $1.8$ is the predicted increase in height, in feet, for each year, which is choice B."
     }
   ],
   "learningObjective": "Interpret the slope of a line of best fit in context.",

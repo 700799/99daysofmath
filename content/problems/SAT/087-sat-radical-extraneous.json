@@ -10,11 +10,11 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Square both sides — then check your answers in the original equation.",
+  "hint": "A square root is in the way. Think about how to remove it, and about why that move can create answers that do not really work.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Square both sides — then check your answers in the original equation."
+      "text": "A square root is in the way. Think about how to remove it, and about why that move can create answers that do not really work."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "$x + 7 = x^2 - 10x + 25$, so $x^2 - 11x + 18 = 0$."
+      "text": "Squaring both sides gives $x + 7 = x^2 - 10x + 25$, which rearranges to $x^2 - 11x + 18 = 0$. Factor it, then test each result in the original equation."
     },
     {
       "level": "reveal",
-      "text": "$(x - 9)(x - 2) = 0$ gives $x = 9$ or $x = 2$, but $x = 2$ fails the original. The solution is $9$."
+      "text": "Factoring gives $(x - 9)(x - 2) = 0$. The value $2$ fails because $\\sqrt{9}$ is not $-3$, so the solution is $x = 9$."
     }
   ],
   "learningObjective": "Solve a radical equation and reject extraneous solutions.",
   "topic": "Radical equations",
   "explanation": [
-    "Square both sides: $x + 7 = (x - 5)^2 = x^2 - 10x + 25$.",
-    "Rearrange: $x^2 - 11x + 18 = 0$, which factors as $(x - 9)(x - 2) = 0$, giving $x = 9$ or $x = 2$.",
-    "Check both. $x = 9$: $\\sqrt{16} = 4$ and $9 - 5 = 4$ ✓. $x = 2$: $\\sqrt{9} = 3$ but $2 - 5 = -3$ ✗. Only $x = 9$ works."
+    "Square both sides to remove the root: $x + 7 = (x - 5)^2 = x^2 - 10x + 25$.",
+    "Move every term to one side to get $x^2 - 11x + 18 = 0$, which factors as $(x - 9)(x - 2) = 0$. The candidates are $x = 9$ and $x = 2$.",
+    "Squaring can add false solutions, so check both. For $x = 9$, $\\sqrt{16} = 4$ and $9 - 5 = 4$, which agree.",
+    "For $x = 2$, $\\sqrt{9} = 3$ but $2 - 5 = -3$, so it fails. The only solution is $x = 9$."
   ],
   "alternativeExplanations": [
     {

@@ -10,11 +10,11 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Volume multiplies three lengths together, and each one doubled.",
+  "hint": "Volume is a product of three lengths. Think about what happens to a product when each of its three factors is doubled.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Volume multiplies three lengths together, and each one doubled."
+      "text": "Volume is a product of three lengths. Think about what happens to a product when each of its three factors is doubled."
     },
     {
       "level": "nudge",
@@ -23,11 +23,11 @@
     },
     {
       "level": "guide",
-      "text": "$2 \\times 2 \\times 2$."
+      "text": "The new volume is $(2\\ell)(2w)(2h)$, which has three factors of $2$ in front of the original $\\ell wh$. Work out $2 \\times 2 \\times 2$."
     },
     {
       "level": "reveal",
-      "text": "$8$ times."
+      "text": "Since $2 \\times 2 \\times 2 = 8$, the new volume is $8$ times the original volume."
     }
   ],
   "learningObjective": "Apply the cube relationship between linear scale and volume.",

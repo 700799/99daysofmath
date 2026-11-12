@@ -10,11 +10,11 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Touching the $x$-axis at exactly one point means exactly one real zero.",
+  "hint": "A graph that only touches the $x$-axis has a single repeated zero. What does that say about the discriminant of the quadratic?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Touching the $x$-axis at exactly one point means exactly one real zero."
+      "text": "A graph that only touches the $x$-axis has a single repeated zero. What does that say about the discriminant of the quadratic?"
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "Set the discriminant to zero: $b^2 - 4(1)(9) = 0$."
+      "text": "Set the discriminant equal to zero with $a = 1$ and $c = 9$: $b^2 - 4(1)(9) = 0$. Solve for $b$ and keep the sign the problem asks for."
     },
     {
       "level": "reveal",
-      "text": "$b^2 = 36$, so $b = \\pm 6$; since $b$ is positive, $b = 6$."
+      "text": "The equation gives $b^2 = 36$, so $b$ is $6$ or $-6$. Since $b$ is positive, the value of $b$ is $6$."
     }
   ],
   "learningObjective": "Connect tangency to the x-axis with a zero discriminant.",
   "topic": "The discriminant",
   "explanation": [
-    "A parabola touching the $x$-axis at exactly one point has a repeated root, so its discriminant is zero.",
-    "$b^2 - 4(1)(9) = 0$ gives $b^2 = 36$ and $b = \\pm 6$.",
-    "The problem states $b$ is positive, so $b = 6$. Check: $x^2 + 6x + 9 = (x + 3)^2$, tangent at $x = -3$ ✓"
+    "A parabola that touches the $x$-axis at exactly one point has a repeated root, so its discriminant equals zero.",
+    "Write that condition with $a = 1$ and $c = 9$: $b^2 - 4(1)(9) = 0$, which gives $b^2 = 36$.",
+    "Both $6$ and $-6$ square to $36$, but the problem says $b$ is positive, so $b = 6$.",
+    "Check: $x^2 + 6x + 9 = (x + 3)^2$, which touches the axis only at $x = -3$. The value of $b$ is $6$."
   ],
   "alternativeExplanations": [
     {

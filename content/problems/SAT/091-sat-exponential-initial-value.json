@@ -10,27 +10,27 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Any nonzero number raised to the power $0$ equals $1$.",
+  "hint": "Substituting $0$ puts a zero in the exponent. Recall the value of any nonzero number raised to the power zero.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Any nonzero number raised to the power $0$ equals $1$."
+      "text": "Substituting $0$ puts a zero in the exponent. Recall the value of any nonzero number raised to the power zero."
     },
     {
       "level": "guide",
-      "text": "$f(0) = 3 \\cdot 2^0 = 3 \\cdot 1$."
+      "text": "Write $f(0) = 3 \\cdot 2^0$. Since $2^0 = 1$, the product is easy to finish."
     },
     {
       "level": "reveal",
-      "text": "$f(0) = 3$."
+      "text": "The product is $3 \\cdot 1 = 3$, so the value of $f(0)$ is $3$."
     }
   ],
   "learningObjective": "Evaluate an exponential function at zero to find its initial value.",
   "topic": "Exponential functions",
   "explanation": [
-    "$2^0 = 1$, since anything nonzero to the zero power is $1$.",
-    "So $f(0) = 3 \\cdot 1 = 3$.",
-    "In the form $f(x) = ab^x$, the coefficient $a$ is always the initial value — the output at $x = 0$."
+    "Substitute $x = 0$ into the rule to get $f(0) = 3 \\cdot 2^0$.",
+    "Any nonzero number raised to the power zero equals $1$, so $2^0 = 1$ and $f(0) = 3 \\cdot 1 = 3$.",
+    "In the form $f(x) = ab^x$ the coefficient $a$ is always the output at $x = 0$, so the value of $f(0)$ is $3$."
   ],
   "alternativeExplanations": [
     {

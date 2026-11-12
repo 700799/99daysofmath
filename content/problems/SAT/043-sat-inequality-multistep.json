@@ -32,27 +32,27 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Subtract $4$ from both sides first.",
+  "hint": "Two steps isolate $x$ here. One of them involves a negative number, so think about what that does to the sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Subtract $4$ from both sides first."
+      "text": "Two steps isolate $x$ here. One of them involves a negative number, so think about what that does to the sign."
     },
     {
       "level": "guide",
-      "text": "$-3x < 15$. Now divide by $-3$ — and remember what that does."
+      "text": "Subtract $4$ from both sides to get $-3x < 15$. Then divide by $-3$ and reverse the direction of the inequality."
     },
     {
       "level": "reveal",
-      "text": "Dividing by $-3$ flips the sign: $x > -5$."
+      "text": "Dividing gives $x > -5$ once the sign is reversed, which is choice B."
     }
   ],
   "learningObjective": "Solve a multi-step inequality requiring a sign flip.",
   "topic": "Linear inequalities",
   "explanation": [
-    "Subtract $4$ from both sides: $-3x < 15$.",
-    "Divide by $-3$ and reverse the inequality: $x > -5$.",
-    "Check with $x = 0$: $4 - 0 = 4 < 19$ ✓, and $0$ is indeed greater than $-5$."
+    "Subtract $4$ from both sides to isolate the $x$ term: $-3x < 15$.",
+    "Divide both sides by $-3$. Dividing by a negative number reverses the inequality, so $x > -5$.",
+    "Test $x = 0$, which is greater than $-5$: $4 - 3(0) = 4$, and that is less than $19$. The solution is $x > -5$, choice B."
   ],
   "alternativeExplanations": [
     {

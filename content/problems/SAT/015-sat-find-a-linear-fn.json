@@ -10,27 +10,27 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$f(0)$ hands you $b$ immediately — the $ax$ term vanishes.",
+  "hint": "One of the two conditions uses the input $0$. Think about what happens to the term $ax$ when $x$ is zero.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$f(0)$ hands you $b$ immediately — the $ax$ term vanishes."
+      "text": "One of the two conditions uses the input $0$. Think about what happens to the term $ax$ when $x$ is zero."
     },
     {
       "level": "guide",
-      "text": "With $b = -4$, the second condition says $5a - 4 = 11$."
+      "text": "Because $f(0) = b$, you know $b = -4$. Use that in the second condition, $f(5) = 5a + b = 11$, and solve for $a$."
     },
     {
       "level": "reveal",
-      "text": "$5a = 15$, so $a = 3$."
+      "text": "The equation $5a - 4 = 11$ gives $5a = 15$, so the value of $a$ is $3$."
     }
   ],
   "learningObjective": "Recover the parameters of a linear function from two function values.",
   "topic": "Building a linear function",
   "explanation": [
-    "$f(0) = a(0) + b = b$, so $b = -4$.",
-    "Then $f(5) = 5a + b = 5a - 4 = 11$.",
-    "Add $4$: $5a = 15$, so $a = 3$."
+    "Substituting $x = 0$ removes the $ax$ term, so $f(0) = b$ and therefore $b = -4$.",
+    "Now use the second condition with that value of $b$: $f(5) = 5a - 4 = 11$.",
+    "Add $4$ to both sides to get $5a = 15$, then divide by $5$. The value of $a$ is $3$."
   ],
   "alternativeExplanations": [
     {

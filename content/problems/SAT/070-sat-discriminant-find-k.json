@@ -10,11 +10,11 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Exactly one real solution means the discriminant equals zero.",
+  "hint": "Think about the discriminant of a quadratic. Its value decides whether there are two, one or no real solutions.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Exactly one real solution means the discriminant equals zero."
+      "text": "Think about the discriminant of a quadratic. Its value decides whether there are two, one or no real solutions."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "Set $12^2 - 4(k)(9) = 0$."
+      "text": "One real solution needs a discriminant of zero. With $a = k$, $b = 12$ and $c = 9$, set $12^2 - 4(k)(9) = 0$ and solve for $k$."
     },
     {
       "level": "reveal",
-      "text": "$144 = 36k$, so $k = 4$."
+      "text": "The equation $144 - 36k = 0$ gives $36k = 144$, so the value of $k$ is $4$."
     }
   ],
   "learningObjective": "Solve for a leading coefficient using the discriminant condition.",
   "topic": "The discriminant",
   "explanation": [
-    "The discriminant is $b^2 - 4ac = 144 - 36k$, and one real solution requires it to be zero.",
-    "$144 - 36k = 0$, so $k = 4$.",
-    "Check: $4x^2 + 12x + 9 = (2x + 3)^2$, which has the single solution $x = -\\tfrac{3}{2}$ ✓"
+    "The discriminant is $b^2 - 4ac = 144 - 36k$, and exactly one real solution requires it to equal zero.",
+    "Solve $144 - 36k = 0$ by adding $36k$ to both sides and dividing by $36$, which gives $k = 4$.",
+    "Check: $4x^2 + 12x + 9 = (2x + 3)^2$, which is zero only at $x = -\\tfrac{3}{2}$. The value of $k$ is $4$."
   ],
   "alternativeExplanations": [
     {

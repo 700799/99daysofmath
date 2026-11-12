@@ -33,9 +33,10 @@
   "learningObjective": "Extrapolate a linear model backwards to its initial value.",
   "topic": "Linear models in context",
   "explanation": [
-    "The rate of change is $\\dfrac{10.5 - 18}{5 - 2} = \\dfrac{-7.5}{3} = -2.5$ cm per hour.",
-    "\"Before it was lit\" means $t = 0$, which is $2$ hours before the 18 cm reading.",
-    "Going backwards adds height: $18 + 2(2.5) = 23$ cm."
+    "A constant burning rate means height is a linear function of time. The rate is $\\dfrac{10.5 - 18}{5 - 2} = \\dfrac{-7.5}{3} = -2.5$ cm per hour.",
+    "The phrase before it was lit means time $0$, which is $2$ hours earlier than the reading of $18$ cm.",
+    "Going back in time undoes the burning, so add $2$ hours of burning to that reading: $18 + 2(2.5) = 23$.",
+    "The candle was $23$ cm tall before it was lit."
   ],
   "alternativeExplanations": [
     {

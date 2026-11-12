@@ -10,27 +10,27 @@
   "primaryAnswer": "30",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Area of a triangle is half the base times the height.",
+  "hint": "Recall the area formula for a triangle. It uses the base and the height, with one extra factor that is easy to forget.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Area of a triangle is half the base times the height."
+      "text": "Recall the area formula for a triangle. It uses the base and the height, with one extra factor that is easy to forget."
     },
     {
       "level": "guide",
-      "text": "$\\tfrac{1}{2}(12)(5)$."
+      "text": "The area is half of base times height, so work out $\\tfrac{1}{2}(12)(5)$. Multiplying $12$ by $5$ first makes it easy."
     },
     {
       "level": "reveal",
-      "text": "$30$."
+      "text": "Since $12 \\times 5 = 60$ and half of $60$ is $30$, the area of the triangle is $30$."
     }
   ],
   "learningObjective": "Compute the area of a triangle.",
   "topic": "Area",
   "explanation": [
-    "Area $= \\tfrac{1}{2}bh = \\tfrac{1}{2}(12)(5)$.",
-    "$= \\tfrac{1}{2}(60) = 30$.",
-    "Forgetting the $\\tfrac{1}{2}$ gives $60$, which is the area of the surrounding rectangle — and an answer choice."
+    "The area of a triangle is half the base times the height, so write $\\tfrac{1}{2}(12)(5)$.",
+    "Multiply the base by the height to get $60$, then take half of that to get $30$.",
+    "The area of the triangle is $30$. Leaving out the half would give the area of the surrounding rectangle instead."
   ],
   "alternativeExplanations": [
     {

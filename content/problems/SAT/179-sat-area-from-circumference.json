@@ -32,11 +32,11 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Work back to the radius first — it is the bridge between the two formulas.",
+  "hint": "Circumference and area both depend on the radius. Find the radius from the one you know, then use it in the other.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Work back to the radius first — it is the bridge between the two formulas."
+      "text": "Circumference and area both depend on the radius. Find the radius from the one you know, then use it in the other."
     },
     {
       "level": "nudge",
@@ -45,19 +45,19 @@
     },
     {
       "level": "guide",
-      "text": "$2\\pi r = 20\\pi$ gives $r = 10$."
+      "text": "Set $2\\pi r = 20\\pi$ and divide by $2\\pi$ to get $r = 10$. Then use the area formula $\\pi r^2$ with that radius."
     },
     {
       "level": "reveal",
-      "text": "Area $= \\pi(10)^2 = 100\\pi$."
+      "text": "The area is $\\pi(10)^2 = 100\\pi$, which is choice B."
     }
   ],
   "learningObjective": "Chain the circumference and area formulas through the radius.",
   "topic": "Circles",
   "explanation": [
-    "From the circumference: $2\\pi r = 20\\pi$, so $r = 10$.",
-    "Then the area is $\\pi r^2 = \\pi(10)^2 = 100\\pi$.",
-    "Choice C uses the diameter $20$ in place of the radius."
+    "The circumference formula gives $2\\pi r = 20\\pi$, and dividing both sides by $2\\pi$ gives $r = 10$.",
+    "Use that radius in the area formula: $\\pi r^2 = \\pi(10)^2 = 100\\pi$.",
+    "Choice C wrongly uses the diameter $20$ in place of the radius. The area is $100\\pi$, choice B."
   ],
   "alternativeExplanations": [
     {

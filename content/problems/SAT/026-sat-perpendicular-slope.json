@@ -32,27 +32,27 @@
   "primaryAnswer": "D",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Perpendicular slopes are negative reciprocals — you must both flip and negate.",
+  "hint": "Perpendicular lines have slopes that are related in a specific way. Two things must change about the original slope.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Perpendicular slopes are negative reciprocals — you must both flip and negate."
+      "text": "Perpendicular lines have slopes that are related in a specific way. Two things must change about the original slope."
     },
     {
       "level": "guide",
-      "text": "Flip $\\tfrac{3}{4}$ to get $\\tfrac{4}{3}$, then attach the opposite sign."
+      "text": "Read the slope $\\tfrac{3}{4}$ from the equation. Turn the fraction upside down, then change its sign."
     },
     {
       "level": "reveal",
-      "text": "The perpendicular slope is $-\\tfrac{4}{3}$."
+      "text": "Flipping gives $\\tfrac{4}{3}$ and changing the sign gives $-\\tfrac{4}{3}$, which is choice D."
     }
   ],
   "learningObjective": "Apply the negative-reciprocal condition for perpendicular lines.",
   "topic": "Perpendicular lines",
   "explanation": [
-    "Perpendicular slopes multiply to $-1$.",
-    "The given slope is $\\tfrac{3}{4}$, so the perpendicular slope $m$ satisfies $\\tfrac{3}{4}m = -1$.",
-    "$m = -\\tfrac{4}{3}$. Check: $\\tfrac{3}{4} \\times -\\tfrac{4}{3} = -1$ ✓"
+    "Slopes of perpendicular lines multiply to $-1$, so each one is the negative reciprocal of the other.",
+    "The given line has slope $\\tfrac{3}{4}$, so the perpendicular slope $m$ must satisfy $\\tfrac{3}{4}m = -1$.",
+    "Solving gives $m = -\\tfrac{4}{3}$, and the check $\\tfrac{3}{4} \\times \\left(-\\tfrac{4}{3}\\right) = -1$ works. The answer is choice D."
   ],
   "alternativeExplanations": [
     {

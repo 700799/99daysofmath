@@ -10,27 +10,27 @@
   "primaryAnswer": "62",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Supplementary angles sum to $180°$.",
+  "hint": "The word supplementary describes a pair of angles with a particular sum. Recall what that sum is.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Supplementary angles sum to $180°$."
+      "text": "The word supplementary describes a pair of angles with a particular sum. Recall what that sum is."
     },
     {
       "level": "guide",
-      "text": "$180 - 118$."
+      "text": "Supplementary angles add to $180°$, so the other angle is found by subtracting: $180 - 118$."
     },
     {
       "level": "reveal",
-      "text": "$62$ degrees."
+      "text": "Since $180 - 118 = 62$, the other angle measures $62$ degrees."
     }
   ],
   "learningObjective": "Apply the supplementary-angle relationship.",
   "topic": "Angle pairs",
   "explanation": [
-    "Supplementary angles add to $180°$ — they form a straight line.",
-    "$180 - 118 = 62°$.",
-    "Complementary angles, by contrast, add to $90°$."
+    "Supplementary angles add up to $180°$, because together they form a straight line.",
+    "One angle is $118°$, so subtract it from the total: $180 - 118 = 62$.",
+    "The other angle measures $62$ degrees. Complementary angles would add to $90°$ instead."
   ],
   "alternativeExplanations": [
     {

@@ -10,27 +10,27 @@
   "primaryAnswer": "120",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "An exterior angle equals the sum of the two remote interior angles.",
+  "hint": "An exterior angle of a triangle is related to the two interior angles that are not next to it. Recall that relationship.",
   "hints": [
     {
       "level": "nudge",
-      "text": "An exterior angle equals the sum of the two remote interior angles."
+      "text": "An exterior angle of a triangle is related to the two interior angles that are not next to it. Recall that relationship."
     },
     {
       "level": "guide",
-      "text": "$50 + 70$."
+      "text": "The Exterior Angle Theorem says the exterior angle equals the sum of the two remote interior angles, so add: $50 + 70$."
     },
     {
       "level": "reveal",
-      "text": "$120$ degrees."
+      "text": "Since $50 + 70 = 120$, the exterior angle measures $120$ degrees."
     }
   ],
   "learningObjective": "Apply the exterior angle theorem.",
   "topic": "Triangle angles",
   "explanation": [
-    "The Exterior Angle Theorem: an exterior angle of a triangle equals the sum of the two non-adjacent (remote) interior angles.",
-    "$50 + 70 = 120°$.",
-    "Check the long way: the third interior angle is $180 - 120 = 60°$, and its exterior partner is $180 - 60 = 120°$ ✓"
+    "The Exterior Angle Theorem says an exterior angle of a triangle equals the sum of the two interior angles not adjacent to it.",
+    "Add the two remote interior angles: $50 + 70 = 120$.",
+    "A longer check agrees: the third interior angle is $180 - 120 = 60°$, and its exterior angle is $180 - 60 = 120°$. The exterior angle measures $120$ degrees."
   ],
   "alternativeExplanations": [
     {

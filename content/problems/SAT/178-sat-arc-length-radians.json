@@ -10,11 +10,11 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "When the angle is in radians, arc length has a very short formula.",
+  "hint": "The angle is given in radians, not degrees. Radians are defined so that arc length has an especially simple formula.",
   "hints": [
     {
       "level": "nudge",
-      "text": "When the angle is in radians, arc length has a very short formula."
+      "text": "The angle is given in radians, not degrees. Radians are defined so that arc length has an especially simple formula."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "$s = r\\theta$."
+      "text": "For an angle in radians, arc length is $s = r\\theta$. Here the radius is $5$ and the angle is $1.2$, so multiply them."
     },
     {
       "level": "reveal",
-      "text": "$s = 5 \\times 1.2 = 6$."
+      "text": "Since $5 \\times 1.2 = 6$, the length of the arc is $6$."
     }
   ],
   "learningObjective": "Use the radian arc-length formula.",
   "topic": "Radians",
   "explanation": [
-    "For an angle measured in radians, arc length is $s = r\\theta$ — no fractions of $360$ required.",
-    "$s = 5 \\times 1.2 = 6$.",
-    "This simplicity is the whole reason radians exist as a unit."
+    "When the central angle is measured in radians, the arc length is the radius times the angle, $s = r\\theta$.",
+    "Substitute the radius $5$ and the angle $1.2$ to get $s = 5 \\times 1.2$.",
+    "The product is $6$, so the length of the arc is $6$."
   ],
   "alternativeExplanations": [
     {

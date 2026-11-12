@@ -10,27 +10,27 @@
   "primaryAnswer": "11",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "\"No more than\" means $\\le$. Build $3b + 7 \\le 40$.",
+  "hint": "Part of the limit is already used up by the equipment. Think about which symbol matches the phrase no more than.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"No more than\" means $\\le$. Build $3b + 7 \\le 40$."
+      "text": "Part of the limit is already used up by the equipment. Think about which symbol matches the phrase no more than."
     },
     {
       "level": "guide",
-      "text": "Subtract $7$: $3b \\le 33$."
+      "text": "With $b$ boxes the total weight is $3b + 7$, and it must satisfy $3b + 7 \\le 40$. Subtract $7$, then divide by $3$."
     },
     {
       "level": "reveal",
-      "text": "$b \\le 11$, so the greatest whole number of boxes is $11$."
+      "text": "This gives $3b \\le 33$, so $b \\le 11$. The greatest number of boxes is $11$."
     }
   ],
   "learningObjective": "Translate a capacity constraint into an inequality and interpret the result.",
   "topic": "Inequalities in context",
   "explanation": [
-    "\"No more than $40$\" translates to $\\le 40$. The total weight is $3b + 7$.",
-    "So $3b + 7 \\le 40$, giving $3b \\le 33$ and $b \\le 11$.",
-    "Boxes come in whole numbers, so the maximum is $11$. Check: $3(11) + 7 = 40$ ✓, exactly at the limit."
+    "The phrase no more than $40$ means the total can equal $40$ or be less. With $b$ boxes the total weight is $3b + 7$.",
+    "Write and solve the inequality: $3b + 7 \\le 40$ gives $3b \\le 33$, so $b \\le 11$.",
+    "Boxes are whole objects, and $11$ boxes weigh $3(11) + 7 = 40$ pounds, exactly at the limit. The greatest number of boxes is $11$."
   ],
   "alternativeExplanations": [
     {

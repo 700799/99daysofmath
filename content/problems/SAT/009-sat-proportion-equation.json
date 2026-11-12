@@ -10,11 +10,11 @@
   "primaryAnswer": "23",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two fractions set equal to each other — cross-multiply.",
+  "hint": "A single fraction equals a single fraction here. What technique removes both denominators in one move?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two fractions set equal to each other — cross-multiply."
+      "text": "A single fraction equals a single fraction here. What technique removes both denominators in one move?"
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "$3(2x - 1) = 5(x + 4)$. Distribute both sides carefully."
+      "text": "Cross-multiply to get $3(2x - 1) = 5(x + 4)$. Distribute on both sides, taking care with the $-1$, and then collect terms."
     },
     {
       "level": "reveal",
-      "text": "$6x - 3 = 5x + 20$, so $x = 23$."
+      "text": "Distributing gives $6x - 3 = 5x + 20$. Subtracting $5x$ and adding $3$ leaves the answer $x = 23$."
     }
   ],
   "learningObjective": "Solve a proportion involving linear expressions.",
   "topic": "Proportions with variables",
   "explanation": [
-    "Cross-multiply: $3(2x - 1) = 5(x + 4)$.",
-    "Distribute: $6x - 3 = 5x + 20$.",
-    "Subtract $5x$ and add $3$: $x = 23$. Check: $\\dfrac{45}{5} = 9$ and $\\dfrac{27}{3} = 9$ ✓"
+    "Cross-multiply, which is the same as multiplying both sides by $15$ to clear the denominators: $3(2x - 1) = 5(x + 4)$.",
+    "Distribute on each side so the brackets disappear: $6x - 3 = 5x + 20$.",
+    "Subtract $5x$ from both sides and add $3$ to both sides, which leaves $x = 23$.",
+    "Check both fractions: $\\dfrac{45}{5} = 9$ and $\\dfrac{27}{3} = 9$, so the value of $x$ is $23$."
   ],
   "alternativeExplanations": [
     {

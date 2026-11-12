@@ -10,27 +10,27 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The residual is the actual value minus the predicted value.",
+  "hint": "A residual measures how far a data point is from the line. Recall which value is subtracted from which.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The residual is the actual value minus the predicted value."
+      "text": "A residual measures how far a data point is from the line. Recall which value is subtracted from which."
     },
     {
       "level": "guide",
-      "text": "The model predicts $3(6) + 8 = 26$; the actual value is $30$."
+      "text": "The line predicts $y = 3(6) + 8 = 26$ when $x = 6$, while the actual value is $30$. Subtract the predicted value from the actual value."
     },
     {
       "level": "reveal",
-      "text": "$30 - 26 = 4$."
+      "text": "The residual is $30 - 26 = 4$, so the residual for that point is $4$."
     }
   ],
   "learningObjective": "Compute a residual from a model and an observed point.",
   "topic": "Residuals",
   "explanation": [
-    "Predicted value: $y = 3(6) + 8 = 18 + 8 = 26$.",
-    "Actual value from the data point: $30$.",
-    "Residual $=$ actual $-$ predicted $= 30 - 26 = 4$. A positive residual means the point sits above the line."
+    "Find the value the line predicts at $x = 6$: $y = 3(6) + 8 = 26$.",
+    "The actual value comes from the data point itself, and it is $30$.",
+    "The residual is actual minus predicted, $30 - 26 = 4$. It is positive because the point lies above the line, so the residual is $4$."
   ],
   "alternativeExplanations": [
     {

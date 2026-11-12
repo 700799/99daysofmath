@@ -32,19 +32,19 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Which form is actually called \"vertex form\"?",
+  "hint": "Each form of a quadratic shows a different feature without any work. Think about which form is named after the vertex.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Which form is actually called \"vertex form\"?"
+      "text": "Each form of a quadratic shows a different feature without any work. Think about which form is named after the vertex."
     },
     {
       "level": "guide",
-      "text": "Look for the form built around a single squared binomial plus a constant."
+      "text": "Look for the form with one squared bracket and a constant added outside it. The two constants in that form are the coordinates of the vertex."
     },
     {
       "level": "reveal",
-      "text": "$a(x - h)^2 + k$ shows the vertex $(h, k)$ directly."
+      "text": "The form $f(x) = a(x - h)^2 + k$ shows the vertex $(h, k)$ directly, which is choice C."
     }
   ],
   "learningObjective": "Match each quadratic form to the feature it reveals.",

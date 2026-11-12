@@ -10,27 +10,27 @@
   "primaryAnswer": "75",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The three angles of any triangle add to $180°$.",
+  "hint": "The three angles of every triangle have a fixed total. Recall that total, since two of the angles are known.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The three angles of any triangle add to $180°$."
+      "text": "The three angles of every triangle have a fixed total. Recall that total, since two of the angles are known."
     },
     {
       "level": "guide",
-      "text": "$40 + 65 = 105$."
+      "text": "The angles add to $180°$. The two known angles add to $40 + 65 = 105$, so subtract that from $180$."
     },
     {
       "level": "reveal",
-      "text": "$180 - 105 = 75$ degrees."
+      "text": "Since $180 - 105 = 75$, the third angle measures $75$ degrees."
     }
   ],
   "learningObjective": "Apply the triangle angle sum.",
   "topic": "Triangle angles",
   "explanation": [
-    "The interior angles of a triangle always sum to $180°$.",
-    "$40 + 65 = 105$.",
-    "$180 - 105 = 75°$."
+    "The interior angles of any triangle add up to $180°$.",
+    "The two known angles account for $40 + 65 = 105$ degrees of that total.",
+    "The third angle is what remains: $180 - 105 = 75$, so it measures $75$ degrees."
   ],
   "alternativeExplanations": [
     {

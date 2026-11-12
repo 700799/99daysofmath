@@ -13,27 +13,27 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "TOA: tangent is opposite over adjacent.",
+  "hint": "Tangent compares two sides of a right triangle, and neither of them is the hypotenuse. Which two are they?",
   "hints": [
     {
       "level": "nudge",
-      "text": "TOA: tangent is opposite over adjacent."
+      "text": "Tangent compares two sides of a right triangle, and neither of them is the hypotenuse. Which two are they?"
     },
     {
       "level": "guide",
-      "text": "$\\tan\\theta = \\dfrac{12}{5}$."
+      "text": "Tangent is the opposite side over the adjacent side, so $\\tan\\theta = \\dfrac{12}{5}$. Change that fraction into a decimal."
     },
     {
       "level": "reveal",
-      "text": "$2.4$."
+      "text": "Since $12 \\div 5 = 2.4$, the value of $\\tan\\theta$ is $2.4$."
     }
   ],
   "learningObjective": "Compute a tangent ratio in a right triangle.",
   "topic": "Right-triangle trigonometry",
   "explanation": [
-    "$\\tan = \\dfrac{\\text{opposite}}{\\text{adjacent}} = \\dfrac{12}{5} = 2.4$.",
-    "The hypotenuse here would be $13$ — this is a $5$-$12$-$13$ triangle.",
-    "Note that tangent, unlike sine and cosine, can exceed $1$."
+    "The tangent of an angle is the opposite side divided by the adjacent side.",
+    "The opposite side is $12$ and the adjacent side is $5$, so $\\tan\\theta = \\dfrac{12}{5}$.",
+    "Dividing gives $2.4$, so the value of $\\tan\\theta$ is $2.4$. Tangent can be greater than $1$, unlike sine and cosine."
   ],
   "alternativeExplanations": [
     {

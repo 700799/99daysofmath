@@ -10,11 +10,11 @@
   "primaryAnswer": "-2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "For $Ax + By = C$, the slope is $-A/B$.",
+  "hint": "The slope is hidden while the equation is in standard form. Think about how the slope depends on the coefficients of $x$ and $y$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "For $Ax + By = C$, the slope is $-A/B$."
+      "text": "The slope is hidden while the equation is in standard form. Think about how the slope depends on the coefficients of $x$ and $y$."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "So $-\\dfrac{3}{k} = \\dfrac{3}{2}$."
+      "text": "Solving for $y$ gives $y = -\\dfrac{3}{k}x + \\dfrac{12}{k}$, so the slope is $-\\dfrac{3}{k}$. Set that equal to $\\dfrac{3}{2}$ and solve for $k$."
     },
     {
       "level": "reveal",
-      "text": "Cross-multiply: $3k = -6$, so $k = -2$."
+      "text": "Cross-multiplying $-\\dfrac{3}{k} = \\dfrac{3}{2}$ gives $3k = -6$, so the value of $k$ is $-2$."
     }
   ],
   "learningObjective": "Solve for an unknown coefficient given a required slope.",
   "topic": "Parameters in linear equations",
   "explanation": [
-    "Solve for $y$: $ky = -3x + 12$, so $y = -\\dfrac{3}{k}x + \\dfrac{12}{k}$.",
-    "The slope is $-\\dfrac{3}{k}$, and this must equal $\\dfrac{3}{2}$.",
-    "Cross-multiplying gives $-6 = 3k$, so $k = -2$. Check: $3x - 2y = 12$ becomes $y = \\tfrac{3}{2}x - 6$ ✓"
+    "Solve for $y$ to expose the slope: $ky = -3x + 12$, so $y = -\\dfrac{3}{k}x + \\dfrac{12}{k}$.",
+    "The coefficient of $x$ is the slope, so $-\\dfrac{3}{k}$ must equal the given slope $\\dfrac{3}{2}$.",
+    "Cross-multiplying the two fractions gives $-6 = 3k$, and dividing by $3$ gives $k = -2$.",
+    "Check: $3x - 2y = 12$ rearranges to $y = \\tfrac{3}{2}x - 6$, which has the right slope. The value of $k$ is $-2$."
   ],
   "alternativeExplanations": [
     {

@@ -10,27 +10,27 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Isolate the term containing $x$ first.",
+  "hint": "The unknown is in a denominator. Get the term that contains $x$ alone before dealing with that.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Isolate the term containing $x$ first."
+      "text": "The unknown is in a denominator. Get the term that contains $x$ alone before dealing with that."
     },
     {
       "level": "guide",
-      "text": "Subtract $\\tfrac{1}{2}$: $\\dfrac{1}{x} = \\dfrac{3}{4} - \\dfrac{2}{4} = \\dfrac{1}{4}$."
+      "text": "Subtract $\\tfrac{1}{2}$ from both sides. Using the common denominator $4$, the right side is $\\dfrac{3}{4} - \\dfrac{2}{4}$. Compare the result with $\\dfrac{1}{x}$."
     },
     {
       "level": "reveal",
-      "text": "If $\\dfrac{1}{x} = \\dfrac{1}{4}$, then $x = 4$."
+      "text": "The subtraction gives $\\dfrac{1}{x} = \\dfrac{1}{4}$, so the value of $x$ is $4$."
     }
   ],
   "learningObjective": "Solve a simple rational equation by isolating the reciprocal.",
   "topic": "Rational equations",
   "explanation": [
-    "Subtract $\\tfrac{1}{2}$ from both sides: $\\dfrac{1}{x} = \\dfrac{3}{4} - \\dfrac{1}{2} = \\dfrac{1}{4}$.",
-    "Two fractions with numerator $1$ are equal only when their denominators are equal.",
-    "So $x = 4$. Check: $\\tfrac{1}{4} + \\tfrac{1}{2} = \\tfrac{3}{4}$ ✓"
+    "Subtract $\\tfrac{1}{2}$ from both sides to isolate the term with $x$: $\\dfrac{1}{x} = \\dfrac{3}{4} - \\dfrac{2}{4} = \\dfrac{1}{4}$.",
+    "Two fractions with numerator $1$ are equal only when their denominators are equal, so $x = 4$.",
+    "Check: $\\tfrac{1}{4} + \\tfrac{1}{2} = \\tfrac{3}{4}$, so the value of $x$ is $4$."
   ],
   "alternativeExplanations": [
     {

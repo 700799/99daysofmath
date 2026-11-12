@@ -10,27 +10,28 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Let $a$ be the adult price and $c$ the child price, then write both sentences as equations.",
+  "hint": "There are two unknown prices and two purchases. Give each price a letter and turn each purchase into its own equation.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Let $a$ be the adult price and $c$ the child price, then write both sentences as equations."
+      "text": "There are two unknown prices and two purchases. Give each price a letter and turn each purchase into its own equation."
     },
     {
       "level": "guide",
-      "text": "$3a + 2c = 34$ and $2a + 5c = 41$. Scale them so one variable cancels."
+      "text": "With $a$ for adult and $c$ for child, the equations are $3a + 2c = 34$ and $2a + 5c = 41$. Multiply the first by $5$ and the second by $2$ so the child terms match, then subtract."
     },
     {
       "level": "reveal",
-      "text": "Multiply the first by $5$ and the second by $2$: $15a + 10c = 170$ and $4a + 10c = 82$. Subtracting gives $11a = 88$, so $a = 8$."
+      "text": "The scaled equations are $15a + 10c = 170$ and $4a + 10c = 82$. Subtracting gives $11a = 88$, so one adult ticket costs $8$ dollars."
     }
   ],
   "learningObjective": "Translate a two-item pricing situation into a system and solve it.",
   "topic": "Systems in context",
   "explanation": [
-    "Let $a$ = adult price and $c$ = child price. Then $3a + 2c = 34$ and $2a + 5c = 41$.",
-    "To eliminate $c$, scale to a common coefficient of $10$: multiply the first by $5$ ($15a + 10c = 170$) and the second by $2$ ($4a + 10c = 82$).",
-    "Subtract: $11a = 88$, so $a = \\$8$. (Then $c = \\$5$.)"
+    "Let $a$ be the adult price and $c$ the child price. The two purchases give $3a + 2c = 34$ and $2a + 5c = 41$.",
+    "To eliminate $c$, make its coefficients equal. Multiply the first equation by $5$ to get $15a + 10c = 170$ and the second by $2$ to get $4a + 10c = 82$.",
+    "Subtract the second scaled equation from the first, which removes $c$ and leaves $11a = 88$.",
+    "Divide by $11$ to get $a = 8$. One adult ticket costs $8$ dollars, and a child ticket then costs $5$ dollars."
   ],
   "alternativeExplanations": [
     {

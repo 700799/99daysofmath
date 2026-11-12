@@ -32,27 +32,27 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The sides of a $45$-$45$-$90$ triangle are in the ratio $1 : 1 : \\sqrt{2}$.",
+  "hint": "This is one of the special right triangles. Its three sides always stand in the same ratio, which is worth knowing by heart.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The sides of a $45$-$45$-$90$ triangle are in the ratio $1 : 1 : \\sqrt{2}$."
+      "text": "This is one of the special right triangles. Its three sides always stand in the same ratio, which is worth knowing by heart."
     },
     {
       "level": "guide",
-      "text": "The hypotenuse is the leg times $\\sqrt{2}$."
+      "text": "The sides of a $45$-$45$-$90$ triangle are in the ratio $1 : 1 : \\sqrt{2}$, so the hypotenuse is a leg times $\\sqrt{2}$. The leg here is $7$."
     },
     {
       "level": "reveal",
-      "text": "$7\\sqrt{2}$."
+      "text": "Multiplying the leg by $\\sqrt{2}$ gives a hypotenuse of $7\\sqrt{2}$, which is choice B."
     }
   ],
   "learningObjective": "Apply the 45-45-90 side ratio.",
   "topic": "Special right triangles",
   "explanation": [
     "In a $45$-$45$-$90$ triangle the two legs are equal and the hypotenuse is $\\sqrt{2}$ times a leg.",
-    "So the hypotenuse is $7\\sqrt{2}$.",
-    "Verify with Pythagoras: $7^2 + 7^2 = 98$, and $\\sqrt{98} = 7\\sqrt{2}$ ✓"
+    "Each leg is $7$, so the hypotenuse is $7\\sqrt{2}$.",
+    "The Pythagorean theorem agrees, since $7^2 + 7^2 = 98$ and $\\sqrt{98} = 7\\sqrt{2}$. The answer is choice B."
   ],
   "alternativeExplanations": [
     {

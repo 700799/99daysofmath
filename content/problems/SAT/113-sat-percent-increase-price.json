@@ -10,27 +10,27 @@
   "primaryAnswer": "92",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A $15\\%$ increase means the new price is $115\\%$ of the old.",
+  "hint": "A markup adds a percent of the price on top of the full original price. What percent of the old price is the new price?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A $15\\%$ increase means the new price is $115\\%$ of the old."
+      "text": "A markup adds a percent of the price on top of the full original price. What percent of the old price is the new price?"
     },
     {
       "level": "guide",
-      "text": "$80 \\times 1.15$."
+      "text": "The new price is $100\\% + 15\\% = 115\\%$ of the old price, so multiply: $80 \\times 1.15$."
     },
     {
       "level": "reveal",
-      "text": "$\\$92$."
+      "text": "Since $80 \\times 1.15 = 92$, the new price of the jacket is $92$ dollars."
     }
   ],
   "learningObjective": "Apply a percent increase using a single multiplier.",
   "topic": "Percent change",
   "explanation": [
-    "A $15\\%$ increase keeps the original $100\\%$ and adds $15\\%$, so multiply by $1.15$.",
-    "$80 \\times 1.15 = 92$.",
-    "Or compute the increase separately: $0.15 \\times 80 = 12$, then $80 + 12 = \\$92$."
+    "A $15\\%$ markup keeps the original $100\\%$ and adds $15\\%$ more, so the multiplier is $1.15$.",
+    "Multiply the original price by that number: $80 \\times 1.15 = 92$.",
+    "Finding the increase separately gives $0.15 \\times 80 = 12$ and $80 + 12 = 92$. The new price is $92$ dollars."
   ],
   "alternativeExplanations": [
     {

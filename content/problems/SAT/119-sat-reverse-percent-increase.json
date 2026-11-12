@@ -10,11 +10,11 @@
   "primaryAnswer": "120",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The $156$ is $130\\%$ of the original.",
+  "hint": "The number $156$ is the result after the increase. What percent of the original number does it represent?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $156$ is $130\\%$ of the original."
+      "text": "The number $156$ is the result after the increase. What percent of the original number does it represent?"
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "$1.30n = 156$."
+      "text": "An increase of $30\\%$ multiplies the original number $n$ by $1.30$, so $1.30n = 156$. Divide both sides by $1.30$."
     },
     {
       "level": "reveal",
-      "text": "$n = \\dfrac{156}{1.30} = 120$."
+      "text": "Since $156 \\div 1.30 = 120$, the original number was $120$."
     }
   ],
   "learningObjective": "Reverse a percent increase to recover the original value.",
   "topic": "Reverse percentages",
   "explanation": [
-    "Increasing by $30\\%$ means multiplying by $1.30$, so $1.30n = 156$.",
-    "Divide: $n = \\dfrac{156}{1.3} = 120$.",
-    "Check: $30\\%$ of $120$ is $36$, and $120 + 36 = 156$ ✓"
+    "Increasing a number by $30\\%$ multiplies it by $1.30$, so the original number $n$ satisfies $1.30n = 156$.",
+    "Divide both sides by $1.30$ to undo the multiplication: $n = \\dfrac{156}{1.3} = 120$.",
+    "Check: $30\\%$ of $120$ is $36$, and $120 + 36 = 156$. The original number was $120$."
   ],
   "alternativeExplanations": [
     {

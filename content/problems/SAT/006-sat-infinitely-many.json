@@ -28,9 +28,10 @@
   "learningObjective": "Recognize the condition for a linear equation to have infinitely many solutions.",
   "topic": "Number of solutions",
   "explanation": [
-    "Distribute on the left: $3(2x + 1) = 6x + 3$.",
-    "The equation becomes $6x + 3 = 6x + c$.",
-    "Infinitely many solutions means every $x$ works, which happens only when the two sides are identical. The $x$ terms already agree, so we need $c = 3$."
+    "Distribute the $3$ on the left side so both sides have the same form: $3(2x + 1) = 6x + 3$.",
+    "The equation is now $6x + 3 = 6x + c$, and the $x$ terms on the two sides already match.",
+    "Infinitely many solutions means every value of $x$ works, which happens only when the two sides are identical.",
+    "The constants must therefore match as well, so the value of $c$ is $3$."
   ],
   "alternativeExplanations": [
     {

@@ -32,27 +32,28 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Treat $A$ and $b$ as if they were ordinary numbers and isolate $h$.",
+  "hint": "Solving a formula for one letter uses the same moves as solving an equation with numbers. Which operations are attached to $h$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Treat $A$ and $b$ as if they were ordinary numbers and isolate $h$."
+      "text": "Solving a formula for one letter uses the same moves as solving an equation with numbers. Which operations are attached to $h$?"
     },
     {
       "level": "guide",
-      "text": "Multiply both sides by $2$ to clear the fraction: $2A = bh$."
+      "text": "The letter $h$ is multiplied by $\\tfrac{1}{2}$ and by $b$. Multiply both sides by $2$ to get $2A = bh$, then remove the $b$."
     },
     {
       "level": "reveal",
-      "text": "Divide both sides by $b$: $h = \\dfrac{2A}{b}$."
+      "text": "Dividing both sides by $b$ gives $h = \\dfrac{2A}{b}$, which is choice B."
     }
   ],
   "learningObjective": "Rearrange a literal equation to isolate a chosen variable.",
   "topic": "Literal equations",
   "explanation": [
-    "Multiply both sides by $2$: $2A = bh$.",
-    "Divide both sides by $b$: $h = \\dfrac{2A}{b}$.",
-    "The steps are identical to solving a numeric equation — the other letters simply come along for the ride."
+    "Multiply both sides by $2$ to clear the fraction $\\tfrac{1}{2}$, which gives $2A = bh$.",
+    "Divide both sides by $b$, because $b$ is multiplied by $h$ and division undoes that: $h = \\dfrac{2A}{b}$.",
+    "These are the same steps used with numbers, and the other letters are simply carried along.",
+    "The correct equation is $h = \\dfrac{2A}{b}$, which is choice B."
   ],
   "alternativeExplanations": [
     {

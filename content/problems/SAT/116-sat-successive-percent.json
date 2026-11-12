@@ -32,19 +32,19 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Percent changes multiply — they do not add or cancel.",
+  "hint": "It is tempting to say the two changes cancel. Notice that the second $20\\%$ is taken from a different amount than the first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Percent changes multiply — they do not add or cancel."
+      "text": "It is tempting to say the two changes cancel. Notice that the second $20\\%$ is taken from a different amount than the first."
     },
     {
       "level": "guide",
-      "text": "The combined multiplier is $1.20 \\times 0.80$."
+      "text": "Turn each change into a multiplier. An increase of $20\\%$ multiplies by $1.20$ and a decrease of $20\\%$ multiplies by $0.80$, so find $1.20 \\times 0.80$."
     },
     {
       "level": "reveal",
-      "text": "$1.20 \\times 0.80 = 0.96$, which is $4\\%$ below the original."
+      "text": "The product is $0.96$, so the final price is $96\\%$ of the original. That is $4\\%$ lower, choice B."
     }
   ],
   "learningObjective": "Chain successive percent changes with multipliers.",

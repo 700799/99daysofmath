@@ -28,9 +28,10 @@
   "learningObjective": "Solve a work-rate problem by reducing to a single-unit rate.",
   "topic": "Rates",
   "explanation": [
-    "Total effort is machines × hours: $3 \\times 4 = 12$ machine-hours produced $120$ parts.",
-    "So one machine-hour produces $120 \\div 12 = 10$ parts.",
-    "The new scenario is $5 \\times 6 = 30$ machine-hours, giving $30 \\times 10 = 300$ parts."
+    "Measure the work in machine-hours. Three machines for $4$ hours is $3 \\times 4 = 12$ machine-hours, and that produced $120$ parts.",
+    "One machine-hour therefore produces $120 \\div 12 = 10$ parts, which is the rate for a single machine.",
+    "Five machines for $6$ hours is $5 \\times 6 = 30$ machine-hours at the same rate.",
+    "Multiply to find the output: $30 \\times 10 = 300$, so the five machines produce $300$ parts."
   ],
   "alternativeExplanations": [
     {

@@ -10,11 +10,11 @@
   "primaryAnswer": "64",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Maximum height means the vertex of this downward parabola.",
+  "hint": "The height formula is a quadratic with a negative leading coefficient. Think about the shape of its graph and where the highest point is.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Maximum height means the vertex of this downward parabola."
+      "text": "The height formula is a quadratic with a negative leading coefficient. Think about the shape of its graph and where the highest point is."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "The vertex is at $t = -\\dfrac{64}{2(-16)} = 2$ seconds."
+      "text": "The peak is at the vertex, where $t = -\\dfrac{b}{2a} = -\\dfrac{64}{2(-16)} = 2$ seconds. Substitute $t = 2$ into $h(t)$ to find the height."
     },
     {
       "level": "reveal",
-      "text": "$h(2) = -16(4) + 64(2) = -64 + 128 = 64$ feet."
+      "text": "Evaluating gives $h(2) = -16(4) + 64(2) = -64 + 128 = 64$, so the maximum height is $64$ feet."
     }
   ],
   "learningObjective": "Apply the vertex formula to a projectile-motion model.",
   "topic": "Quadratic models in context",
   "explanation": [
-    "The coefficient of $t^2$ is negative, so the parabola opens downward and its vertex is the maximum.",
-    "The vertex occurs at $t = -\\dfrac{b}{2a} = -\\dfrac{64}{-32} = 2$ seconds.",
-    "The maximum height is $h(2) = -16(2)^2 + 64(2) = -64 + 128 = 64$ feet."
+    "The coefficient of $t^2$ is negative, so the parabola opens downward and its vertex is the highest point.",
+    "The vertex occurs at $t = -\\dfrac{b}{2a} = -\\dfrac{64}{-32} = 2$ seconds after the throw.",
+    "Substitute that time into the height function: $h(2) = -16(2)^2 + 64(2) = -64 + 128 = 64$.",
+    "The ball reaches a maximum height of $64$ feet."
   ],
   "alternativeExplanations": [
     {

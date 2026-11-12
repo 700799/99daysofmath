@@ -10,11 +10,11 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Solve the system, then build the requested expression.",
+  "hint": "The expression $2x - y$ cannot be read off directly. Find $x$ and $y$ first, then build the expression from them.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Solve the system, then build the requested expression."
+      "text": "The expression $2x - y$ cannot be read off directly. Find $x$ and $y$ first, then build the expression from them."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "From the second equation, $y = 3x - 5$. Substitute into the first."
+      "text": "The second equation rearranges to $y = 3x - 5$. Substitute that into the first equation to get $x + 2(3x - 5) = 11$ and solve for $x$."
     },
     {
       "level": "reveal",
-      "text": "$x + 2(3x - 5) = 11$ gives $7x = 21$, so $x = 3$ and $y = 4$. Then $2(3) - 4 = 2$."
+      "text": "This gives $7x = 21$, so $x = 3$ and $y = 4$. The value of $2x - y$ is $6 - 4 = 2$."
     }
   ],
   "learningObjective": "Solve a system and evaluate a compound expression.",
   "topic": "Systems and expressions",
   "explanation": [
-    "Isolate $y$ in the second equation: $y = 3x - 5$.",
-    "Substitute into the first: $x + 2(3x - 5) = 11$, so $x + 6x - 10 = 11$ and $7x = 21$, giving $x = 3$.",
-    "Then $y = 3(3) - 5 = 4$, and $2x - y = 6 - 4 = 2$."
+    "Isolate $y$ in the second equation, since its coefficient is $-1$: $y = 3x - 5$.",
+    "Substitute into the first equation to get one unknown: $x + 2(3x - 5) = 11$, which simplifies to $7x - 10 = 11$.",
+    "Add $10$ and divide by $7$ to get $x = 3$. Then $y = 3(3) - 5 = 4$.",
+    "Now build the expression the question asks for: $2x - y = 2(3) - 4 = 2$."
   ],
   "alternativeExplanations": [
     {

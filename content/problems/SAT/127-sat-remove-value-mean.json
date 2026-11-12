@@ -10,11 +10,11 @@
   "primaryAnswer": "14",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Convert the mean into a total first.",
+  "hint": "A mean alone does not tell you the individual numbers, but it does tell you their total. Start from that total.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Convert the mean into a total first."
+      "text": "A mean alone does not tell you the individual numbers, but it does tell you their total. Start from that total."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "The total is $8 \\times 15 = 120$. Removing $22$ leaves $98$ across $7$ numbers."
+      "text": "The total is $8 \\times 15 = 120$. Taking out $22$ leaves $120 - 22 = 98$, shared among the $7$ numbers that remain. Divide to find the new mean."
     },
     {
       "level": "reveal",
-      "text": "$98 \\div 7 = 14$."
+      "text": "Since $98 \\div 7 = 14$, the mean of the remaining numbers is $14$."
     }
   ],
   "learningObjective": "Recompute a mean after removing a value.",
   "topic": "Working with means",
   "explanation": [
-    "The original sum is $8 \\times 15 = 120$.",
-    "Removing $22$ leaves a sum of $120 - 22 = 98$ across $7$ numbers.",
-    "The new mean is $98 \\div 7 = 14$. It fell because the removed value was above the old mean."
+    "The sum of the numbers is the mean times the count, so the original sum is $8 \\times 15 = 120$.",
+    "Removing $22$ leaves a sum of $120 - 22 = 98$, and there are now $7$ numbers.",
+    "The new mean is $98 \\div 7 = 14$. It is lower because the removed number was above the old mean."
   ],
   "alternativeExplanations": [
     {

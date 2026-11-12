@@ -10,27 +10,27 @@
   "primaryAnswer": "75",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "\"Of\" means multiply. Convert the percent to a decimal first.",
+  "hint": "A percent is a number out of $100$, and the word of signals an operation. Rewrite the percent in a form you can calculate with.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Of\" means multiply. Convert the percent to a decimal first."
+      "text": "A percent is a number out of $100$, and the word of signals an operation. Rewrite the percent in a form you can calculate with."
     },
     {
       "level": "guide",
-      "text": "$0.30 \\times 250$."
+      "text": "Write $30\\%$ as the decimal $0.30$ and multiply it by the whole amount: $0.30 \\times 250$."
     },
     {
       "level": "reveal",
-      "text": "$75$."
+      "text": "Since $0.30 \\times 250 = 75$, the answer is that $30\\%$ of $250$ is $75$."
     }
   ],
   "learningObjective": "Compute a percent of a number.",
   "topic": "Basic percentages",
   "explanation": [
-    "$30\\% = 0.30$.",
-    "\"Percent of\" means multiply: $0.30 \\times 250 = 75$.",
-    "Mental check: $10\\%$ of $250$ is $25$, so $30\\%$ is $3 \\times 25 = 75$ ✓"
+    "Change the percent into a decimal by dividing by $100$: $30\\% = 0.30$.",
+    "A percent of a number means multiply, so work out $0.30 \\times 250 = 75$.",
+    "As a check, $10\\%$ of $250$ is $25$ and three of those make $75$. So $30\\%$ of $250$ is $75$."
   ],
   "alternativeExplanations": [
     {

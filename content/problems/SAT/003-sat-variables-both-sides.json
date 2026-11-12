@@ -10,27 +10,28 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Collect the $x$ terms on one side and the constants on the other.",
+  "hint": "The variable appears on both sides. Think about how to collect the $x$ terms on one side and the plain numbers on the other.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Collect the $x$ terms on one side and the constants on the other."
+      "text": "The variable appears on both sides. Think about how to collect the $x$ terms on one side and the plain numbers on the other."
     },
     {
       "level": "guide",
-      "text": "Subtract $4x$ from both sides: $9 = 3x - 12$."
+      "text": "Subtract the smaller term $4x$ from both sides so the coefficient stays positive: $9 = 3x - 12$. Then move the $12$ across."
     },
     {
       "level": "reveal",
-      "text": "Add $12$: $21 = 3x$, so $x = 7$."
+      "text": "Adding $12$ gives $21 = 3x$, and dividing by $3$ gives the answer $x = 7$."
     }
   ],
   "learningObjective": "Solve a linear equation with the variable on both sides.",
   "topic": "Variables on both sides",
   "explanation": [
-    "Subtract $4x$ from both sides: $9 = 3x - 12$.",
-    "Add $12$ to both sides: $21 = 3x$.",
-    "Divide by $3$: $x = 7$. Check: $4(7) + 9 = 37$ and $7(7) - 12 = 37$ ✓"
+    "Subtract $4x$ from both sides so that $x$ appears on only one side: $9 = 3x - 12$.",
+    "Add $12$ to both sides to move the constants together: $21 = 3x$.",
+    "Divide both sides by $3$ to isolate the variable: $x = 7$.",
+    "Check both sides: $4(7) + 9 = 37$ and $7(7) - 12 = 37$ agree, so the value of $x$ is $7$."
   ],
   "alternativeExplanations": [
     {

@@ -10,11 +10,11 @@
   "primaryAnswer": "-4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A horizontal line meets a parabola once only when it passes through the vertex.",
+  "hint": "Picture a horizontal line sliding up and down across a parabola. At which height does it meet the curve only once?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A horizontal line meets a parabola once only when it passes through the vertex."
+      "text": "Picture a horizontal line sliding up and down across a parabola. At which height does it meet the curve only once?"
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "The vertex is at $x = -\\dfrac{-6}{2} = 3$."
+      "text": "The line must pass through the vertex. The vertex is at $x = -\\dfrac{-6}{2(1)} = 3$, so find the value of $y$ on the parabola at $x = 3$."
     },
     {
       "level": "reveal",
-      "text": "The vertex $y$-value is $9 - 18 + 5 = -4$, so $k = -4$."
+      "text": "At $x = 3$ the parabola gives $y = 9 - 18 + 5 = -4$, so the value of $k$ is $-4$."
     }
   ],
   "learningObjective": "Connect a single intersection with a horizontal line to the vertex of a parabola.",
   "topic": "Nonlinear systems",
   "explanation": [
-    "A horizontal line either misses an upward parabola, cuts it twice, or touches it exactly once — and the last case happens only at the vertex.",
-    "The vertex is at $x = -\\dfrac{b}{2a} = 3$, where $y = 3^2 - 6(3) + 5 = 9 - 18 + 5 = -4$.",
-    "So $k = -4$."
+    "A horizontal line misses an upward parabola, crosses it twice, or touches it once. It touches once only at the vertex.",
+    "The vertex is at $x = -\\dfrac{b}{2a} = 3$, and there $y = 3^2 - 6(3) + 5 = -4$.",
+    "The line must be at the height of the vertex, so the value of $k$ is $-4$."
   ],
   "alternativeExplanations": [
     {

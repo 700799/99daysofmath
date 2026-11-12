@@ -13,11 +13,11 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "You want minutes, so divide pages by pages-per-minute.",
+  "hint": "You know the number of pages and the pages printed each minute. Which operation gives a result measured in minutes?",
   "hints": [
     {
       "level": "nudge",
-      "text": "You want minutes, so divide pages by pages-per-minute."
+      "text": "You know the number of pages and the pages printed each minute. Which operation gives a result measured in minutes?"
     },
     {
       "level": "nudge",
@@ -26,19 +26,19 @@
     },
     {
       "level": "guide",
-      "text": "$693 \\div 18$."
+      "text": "Divide the total pages by the rate: $693 \\div 18$. It helps to note that $18 \\times 38 = 684$."
     },
     {
       "level": "reveal",
-      "text": "$38.5$ minutes."
+      "text": "Since $693 \\div 18 = 38.5$, the job takes $38.5$ minutes."
     }
   ],
   "learningObjective": "Invert a rate to find elapsed time.",
   "topic": "Rates",
   "explanation": [
-    "Time $= \\dfrac{\\text{total pages}}{\\text{pages per minute}} = \\dfrac{693}{18}$.",
-    "$18 \\times 38 = 684$, leaving $9$ pages, which is half a minute more.",
-    "So the time is $38.5$ minutes."
+    "Time equals the total number of pages divided by the pages printed per minute, which is $\\dfrac{693}{18}$.",
+    "Since $18 \\times 38 = 684$, there are $9$ pages left over, and $9$ pages take half a minute.",
+    "The total printing time is $38.5$ minutes."
   ],
   "alternativeExplanations": [
     {

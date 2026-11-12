@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Same base, multiplied together — the exponents combine by addition.",
+  "hint": "Both factors are powers of the same base. Recall what happens to the exponents when such powers are multiplied.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same base, multiplied together — the exponents combine by addition."
+      "text": "Both factors are powers of the same base. Recall what happens to the exponents when such powers are multiplied."
     },
     {
       "level": "guide",
-      "text": "$x^5 \\cdot x^3 = x^{5+3}$."
+      "text": "Think of $x^5$ as five copies of $x$ and $x^3$ as three more copies. Count the copies by adding the exponents: $x^{5+3}$."
     },
     {
       "level": "reveal",
-      "text": "$x^8$."
+      "text": "Adding the exponents gives $x^8$, which is choice A."
     }
   ],
   "learningObjective": "Apply the product rule for exponents.",

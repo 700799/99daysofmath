@@ -10,27 +10,27 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Sort the values before doing anything else.",
+  "hint": "The median is the middle value, but only once the data are in order. Is this list in order yet?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sort the values before doing anything else."
+      "text": "The median is the middle value, but only once the data are in order. Is this list in order yet?"
     },
     {
       "level": "guide",
-      "text": "Sorted: $1, 3, 5, 7, 9$."
+      "text": "Arrange the values from least to greatest: $1, 3, 5, 7, 9$. With five values, the median is the third one in the list."
     },
     {
       "level": "reveal",
-      "text": "The middle value is $5$."
+      "text": "The third value in the sorted list is $5$, so the median is $5$."
     }
   ],
   "learningObjective": "Find the median of an unsorted data set.",
   "topic": "Measures of center",
   "explanation": [
-    "Sort the values: $1, 3, 5, 7, 9$.",
-    "With five values, the median is the third one.",
-    "That is $5$."
+    "Put the values in order from least to greatest: $1, 3, 5, 7, 9$.",
+    "There are five values, so the middle one is the third, with two values on each side.",
+    "The third value is $5$, so the median of the data set is $5$."
   ],
   "alternativeExplanations": [
     {

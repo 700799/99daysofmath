@@ -10,11 +10,11 @@
   "primaryAnswer": "18",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Write one equation for the *count* of coins and one for their *value*.",
+  "hint": "You know two totals about the jar: how many coins there are and how much they are worth. Each total gives its own equation.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Write one equation for the *count* of coins and one for their *value*."
+      "text": "You know two totals about the jar: how many coins there are and how much they are worth. Each total gives its own equation."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "$d + q = 30$ and $0.10d + 0.25q = 5.70$. Substitute $d = 30 - q$."
+      "text": "With $d$ dimes and $q$ quarters, $d + q = 30$ and $0.10d + 0.25q = 5.70$. Replace $d$ with $30 - q$ in the value equation and solve for $q$."
     },
     {
       "level": "reveal",
-      "text": "$0.10(30 - q) + 0.25q = 5.70$ gives $3 + 0.15q = 5.70$, so $q = 18$."
+      "text": "The equation becomes $3 + 0.15q = 5.70$, so $0.15q = 2.70$ and $q = 18$. The jar holds $18$ quarters."
     }
   ],
   "learningObjective": "Model a count-and-value situation as a system.",
   "topic": "Systems in context",
   "explanation": [
-    "Let $d$ = dimes and $q$ = quarters. Count: $d + q = 30$. Value: $0.10d + 0.25q = 5.70$.",
-    "Substitute $d = 30 - q$: $0.10(30 - q) + 0.25q = 5.70$, so $3 - 0.10q + 0.25q = 5.70$.",
-    "$0.15q = 2.70$, so $q = 18$ quarters (and $12$ dimes). Check: $12(0.10) + 18(0.25) = 1.20 + 4.50 = \\$5.70$ ✓"
+    "Let $d$ be the number of dimes and $q$ the number of quarters. Counting coins gives $d + q = 30$, and adding values gives $0.10d + 0.25q = 5.70$.",
+    "Substitute $d = 30 - q$ into the value equation so only $q$ remains: $0.10(30 - q) + 0.25q = 5.70$.",
+    "Distribute and combine like terms: $3 + 0.15q = 5.70$, so $0.15q = 2.70$ and $q = 18$.",
+    "Check with $12$ dimes: $12(0.10) + 18(0.25) = 1.20 + 4.50 = 5.70$. The jar contains $18$ quarters."
   ],
   "alternativeExplanations": [
     {

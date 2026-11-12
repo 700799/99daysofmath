@@ -10,27 +10,27 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The $y$-intercept is the value when $x = 0$.",
+  "hint": "The graph meets the $y$-axis where the input is zero. Think about what each term of the expression becomes there.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $y$-intercept is the value when $x = 0$."
+      "text": "The graph meets the $y$-axis where the input is zero. Think about what each term of the expression becomes there."
     },
     {
       "level": "guide",
-      "text": "Substituting $x = 0$ kills both the $x^2$ and the $x$ term."
+      "text": "Substitute $x = 0$ into $y = x^2 - 6x + 8$. The terms $x^2$ and $-6x$ both become zero, so see what is left."
     },
     {
       "level": "reveal",
-      "text": "Only the constant survives: $y = 8$."
+      "text": "Only the constant remains, so $y = 8$ and the $y$-intercept is $8$."
     }
   ],
   "learningObjective": "Identify the y-intercept of a quadratic in standard form.",
   "topic": "Standard form",
   "explanation": [
-    "Substitute $x = 0$: $y = 0 - 0 + 8 = 8$.",
-    "In standard form $y = ax^2 + bx + c$, the constant $c$ is always the $y$-intercept.",
-    "This is the one feature standard form displays for free — the zeros and vertex both require work."
+    "The $y$-intercept is the value of $y$ when $x = 0$, so substitute: $y = 0^2 - 6(0) + 8 = 8$.",
+    "In standard form $y = ax^2 + bx + c$, the constant $c$ is always the $y$-intercept for this reason.",
+    "Here the constant is $8$, so the $y$-intercept of the graph is $8$."
   ],
   "alternativeExplanations": [
     {

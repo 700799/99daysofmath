@@ -10,11 +10,11 @@
   "primaryAnswer": "24",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "\"True for all values of $x$\" means the two sides are the same polynomial — match them term by term.",
+  "hint": "An equation that holds for every $x$ has the same polynomial on both sides. That lets you compare the two sides one term at a time.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"True for all values of $x$\" means the two sides are the same polynomial — match them term by term."
+      "text": "An equation that holds for every $x$ has the same polynomial on both sides. That lets you compare the two sides one term at a time."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "Expanding the left gives $x^2 + (a + 3)x + 3a$. So $a + 3 = 11$."
+      "text": "Expand the left side to get $x^2 + (a + 3)x + 3a$. Match the $x$ terms, so $a + 3 = 11$, and match the constants, so $b = 3a$."
     },
     {
       "level": "reveal",
-      "text": "$a = 8$, and then $b = 3a = 24$."
+      "text": "From $a + 3 = 11$ you get $a = 8$, and then $b = 3(8) = 24$. The value of $b$ is $24$."
     }
   ],
   "learningObjective": "Use coefficient matching to find unknown constants in an identity.",
   "topic": "Polynomial identities",
   "explanation": [
-    "Expand the left side: $(x + a)(x + 3) = x^2 + 3x + ax + 3a = x^2 + (a + 3)x + 3a$.",
-    "Since the equation holds for every $x$, matching coefficients gives $a + 3 = 11$ and $b = 3a$.",
-    "From the first, $a = 8$. Then $b = 3(8) = 24$. Check: $(x + 8)(x + 3) = x^2 + 11x + 24$ ✓"
+    "Expand the left side and group like terms: $(x + a)(x + 3) = x^2 + (a + 3)x + 3a$.",
+    "The equation is true for all $x$, so the coefficients on the two sides must match. That gives $a + 3 = 11$ and $b = 3a$.",
+    "The first equation gives $a = 8$, and substituting into the second gives $b = 3(8) = 24$.",
+    "Check: $(x + 8)(x + 3) = x^2 + 11x + 24$, so the value of $b$ is $24$."
   ],
   "alternativeExplanations": [
     {

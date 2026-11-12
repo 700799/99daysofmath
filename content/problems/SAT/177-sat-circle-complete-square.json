@@ -10,11 +10,11 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Complete the square in $x$ and again in $y$.",
+  "hint": "The radius cannot be read from this form. Think about how to turn the equation into the standard form with two squared brackets.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Complete the square in $x$ and again in $y$."
+      "text": "The radius cannot be read from this form. Think about how to turn the equation into the standard form with two squared brackets."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "$(x^2 - 6x + 9) + (y^2 + 4y + 4) = 12 + 9 + 4$."
+      "text": "Complete the square for $x$ by adding $9$ and for $y$ by adding $4$, on both sides: $(x^2 - 6x + 9) + (y^2 + 4y + 4) = 12 + 9 + 4$. Factor each group."
     },
     {
       "level": "reveal",
-      "text": "$(x - 3)^2 + (y + 2)^2 = 25$, so $r = 5$."
+      "text": "The equation becomes $(x - 3)^2 + (y + 2)^2 = 25$, so $r^2 = 25$ and the radius is $5$."
     }
   ],
   "learningObjective": "Convert an expanded circle equation to standard form.",
   "topic": "Circle equations",
   "explanation": [
-    "Group the terms: $(x^2 - 6x) + (y^2 + 4y) = 12$.",
-    "Complete each square. For $x$: half of $-6$ is $-3$, squared is $9$. For $y$: half of $4$ is $2$, squared is $4$. Add both to *each* side: $(x^2 - 6x + 9) + (y^2 + 4y + 4) = 12 + 9 + 4$.",
-    "That is $(x - 3)^2 + (y + 2)^2 = 25$, so the centre is $(3, -2)$ and the radius is $5$."
+    "Group the $x$ terms and the $y$ terms so each group can become a perfect square: $(x^2 - 6x) + (y^2 + 4y) = 12$.",
+    "Half of $-6$ is $-3$, whose square is $9$. Half of $4$ is $2$, whose square is $4$. Add both numbers to each side to keep the equation balanced.",
+    "The equation is now $(x^2 - 6x + 9) + (y^2 + 4y + 4) = 25$, which factors as $(x - 3)^2 + (y + 2)^2 = 25$.",
+    "The right side is the radius squared, so the radius of the circle is $\\sqrt{25} = 5$."
   ],
   "alternativeExplanations": [
     {

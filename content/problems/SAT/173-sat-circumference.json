@@ -32,27 +32,27 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Circumference is $2\\pi r$.",
+  "hint": "Circumference is the distance around a circle. Choose the formula for that, not the one for area.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Circumference is $2\\pi r$."
+      "text": "Circumference is the distance around a circle. Choose the formula for that, not the one for area."
     },
     {
       "level": "guide",
-      "text": "$2\\pi(7)$."
+      "text": "The circumference is $2\\pi r$. With radius $7$, that is $2\\pi(7)$, so multiply $2$ by $7$."
     },
     {
       "level": "reveal",
-      "text": "$14\\pi$."
+      "text": "Since $2 \\times 7 = 14$, the circumference is $14\\pi$, which is choice B."
     }
   ],
   "learningObjective": "Compute a circumference from a radius.",
   "topic": "Circles",
   "explanation": [
-    "Circumference $= 2\\pi r = 2\\pi(7) = 14\\pi$.",
-    "Choice C, $49\\pi$, is the *area* — it squares the radius instead of doubling it.",
-    "Circumference is also $\\pi d$, and the diameter here is $14$."
+    "The circumference of a circle is $2\\pi r$, and the radius here is $7$.",
+    "Substituting gives $2\\pi(7) = 14\\pi$, which also equals $\\pi$ times the diameter $14$.",
+    "Choice C is the area, which squares the radius. The circumference is $14\\pi$, choice B."
   ],
   "alternativeExplanations": [
     {

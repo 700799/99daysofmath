@@ -10,11 +10,11 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Compute the right-hand side to a single number before touching $a$.",
+  "hint": "The right side contains only known numbers. Turn it into a single number before you do anything with $a$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Compute the right-hand side to a single number before touching $a$."
+      "text": "The right side contains only known numbers. Turn it into a single number before you do anything with $a$."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "$h(3) = 5 - 6 = -1$, so the right side is $-1 + 4 = 3$."
+      "text": "Work out $h(3) = 5 - 2(3) = -1$, so the right side is $-1 + 4 = 3$. Now write $h(a)$ using the rule and set it equal to $3$."
     },
     {
       "level": "reveal",
-      "text": "Solve $5 - 2a = 3$: $-2a = -2$, so $a = 1$."
+      "text": "Solving $5 - 2a = 3$ gives $-2a = -2$, so the value of $a$ is $1$."
     }
   ],
   "learningObjective": "Solve an equation involving function notation on both sides.",
   "topic": "Function notation",
   "explanation": [
-    "First evaluate the known side: $h(3) = 5 - 2(3) = -1$.",
-    "So the equation reads $h(a) = -1 + 4 = 3$.",
-    "Now $5 - 2a = 3$, giving $-2a = -2$ and $a = 1$. Check: $h(1) = 3$ ✓"
+    "Evaluate the known side first, because it contains no unknown: $h(3) = 5 - 2(3) = -1$.",
+    "The equation now says $h(a) = -1 + 4 = 3$, which is a simple target for the function.",
+    "Replace $h(a)$ with the rule to get $5 - 2a = 3$. Subtracting $5$ gives $-2a = -2$, so $a = 1$.",
+    "A check confirms that $h(1) = 5 - 2 = 3$, so the value of $a$ is $1$."
   ],
   "alternativeExplanations": [
     {

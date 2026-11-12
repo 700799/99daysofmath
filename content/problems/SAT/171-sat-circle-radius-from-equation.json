@@ -10,27 +10,27 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "In standard form the right side is $r^2$, not $r$.",
+  "hint": "Compare the equation with the standard form of a circle. Be careful about what the number on the right side stands for.",
   "hints": [
     {
       "level": "nudge",
-      "text": "In standard form the right side is $r^2$, not $r$."
+      "text": "Compare the equation with the standard form of a circle. Be careful about what the number on the right side stands for."
     },
     {
       "level": "guide",
-      "text": "So $r^2 = 25$."
+      "text": "In $(x - h)^2 + (y - k)^2 = r^2$ the right side is the radius squared. Here $r^2 = 25$, so take the square root."
     },
     {
       "level": "reveal",
-      "text": "$r = 5$."
+      "text": "Since $\\sqrt{25} = 5$, the radius of the circle is $5$."
     }
   ],
   "learningObjective": "Read the radius from the standard form of a circle equation.",
   "topic": "Circle equations",
   "explanation": [
-    "Standard form is $(x - h)^2 + (y - k)^2 = r^2$.",
-    "Here $r^2 = 25$, so $r = \\sqrt{25} = 5$.",
-    "Answering $25$ is the trap — the right side is the radius *squared*."
+    "The standard form of a circle is $(x - h)^2 + (y - k)^2 = r^2$, where $r$ is the radius.",
+    "Matching the right sides gives $r^2 = 25$, so the number $25$ is the radius squared.",
+    "Taking the positive square root gives $r = 5$, so the radius of the circle is $5$."
   ],
   "alternativeExplanations": [
     {

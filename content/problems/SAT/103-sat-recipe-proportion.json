@@ -10,27 +10,27 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Set up a proportion with cups on top and cookies on the bottom in both fractions.",
+  "hint": "The recipe is scaled up at the same rate, so flour and cookies stay in the same ratio. Set up two equal ratios.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Set up a proportion with cups on top and cookies on the bottom in both fractions."
+      "text": "The recipe is scaled up at the same rate, so flour and cookies stay in the same ratio. Set up two equal ratios."
     },
     {
       "level": "guide",
-      "text": "$\\dfrac{2}{24} = \\dfrac{c}{60}$."
+      "text": "Write cups over cookies on both sides: $\\dfrac{2}{24} = \\dfrac{c}{60}$. Cross-multiply and solve for $c$."
     },
     {
       "level": "reveal",
-      "text": "$24c = 120$, so $c = 5$ cups."
+      "text": "Cross-multiplying gives $24c = 120$, so $c = 5$. The recipe needs $5$ cups of flour."
     }
   ],
   "learningObjective": "Set up and solve a proportion in context.",
   "topic": "Proportions",
   "explanation": [
-    "Keep the units consistent: $\\dfrac{2 \\text{ cups}}{24 \\text{ cookies}} = \\dfrac{c \\text{ cups}}{60 \\text{ cookies}}$.",
-    "Cross-multiply: $2(60) = 24c$, so $120 = 24c$.",
-    "$c = 5$ cups."
+    "Keep the same units in the same positions: $\\dfrac{2}{24} = \\dfrac{c}{60}$, with cups on top and cookies on the bottom.",
+    "Cross-multiply to remove the fractions: $2(60) = 24c$, so $120 = 24c$.",
+    "Divide by $24$ to get $c = 5$, so $5$ cups of flour are needed for $60$ cookies."
   ],
   "alternativeExplanations": [
     {

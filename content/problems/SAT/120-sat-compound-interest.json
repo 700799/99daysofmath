@@ -10,11 +10,11 @@
   "primaryAnswer": "2205",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Compounded means the second year earns interest on the first year's interest too.",
+  "hint": "With compounding, the interest from the first year stays in the account. Think about what amount the second year's interest is based on.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Compounded means the second year earns interest on the first year's interest too."
+      "text": "With compounding, the interest from the first year stays in the account. Think about what amount the second year's interest is based on."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "$2000 \\times 1.05 = 2100$ after one year."
+      "text": "After one year the balance is $2000 \\times 1.05 = 2100$. Apply the same multiplier $1.05$ again to that new balance."
     },
     {
       "level": "reveal",
-      "text": "$2100 \\times 1.05 = \\$2{,}205$."
+      "text": "Since $2100 \\times 1.05 = 2205$, the balance after two years is $2205$ dollars."
     }
   ],
   "learningObjective": "Compute a compound-interest balance.",
   "topic": "Interest",
   "explanation": [
-    "Compound interest applies the multiplier once per period: $A = 2000(1.05)^2$.",
-    "Year 1: $2000 \\times 1.05 = \\$2100$. Year 2: $2100 \\times 1.05 = \\$2205$.",
-    "The extra $\\$5$ over simple interest is the interest earned on the first year's $\\$100$."
+    "Compound interest multiplies the balance by $1.05$ once each year, so after two years $A = 2000(1.05)^2$.",
+    "After the first year the balance is $2000 \\times 1.05 = 2100$ dollars.",
+    "After the second year the balance is $2100 \\times 1.05 = 2205$ dollars.",
+    "The balance after $2$ years is $2205$ dollars, which is $5$ dollars more than simple interest would give."
   ],
   "alternativeExplanations": [
     {

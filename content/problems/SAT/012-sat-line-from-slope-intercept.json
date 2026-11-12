@@ -32,27 +32,27 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "A point with $x = 0$ is the $y$-intercept.",
+  "hint": "Look closely at the given point. What is special about a point whose $x$-coordinate is zero?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A point with $x = 0$ is the $y$-intercept."
+      "text": "Look closely at the given point. What is special about a point whose $x$-coordinate is zero?"
     },
     {
       "level": "guide",
-      "text": "In $y = mx + b$, $m$ is the slope and $b$ is the $y$-intercept."
+      "text": "The point $(0, 5)$ lies on the $y$-axis, so it gives $b$ in $y = mx + b$. The slope $-2$ goes in place of $m$."
     },
     {
       "level": "reveal",
-      "text": "$m = -2$ and $b = 5$, so $y = -2x + 5$."
+      "text": "Putting $m = -2$ and $b = 5$ into the form gives $y = -2x + 5$, which is choice B."
     }
   ],
   "learningObjective": "Write a linear equation from a slope and the y-intercept.",
   "topic": "Slope-intercept form",
   "explanation": [
-    "The point $(0, 5)$ has $x = 0$, so it is the $y$-intercept: $b = 5$.",
-    "The slope is given as $m = -2$.",
-    "Substituting into $y = mx + b$ gives $y = -2x + 5$."
+    "The point $(0, 5)$ has $x = 0$, so it is where the line crosses the $y$-axis. That makes the $y$-intercept $b = 5$.",
+    "The slope is given directly as $m = -2$, so no calculation is needed for it.",
+    "Substituting both values into slope-intercept form $y = mx + b$ gives $y = -2x + 5$, which is choice B."
   ],
   "alternativeExplanations": [
     {

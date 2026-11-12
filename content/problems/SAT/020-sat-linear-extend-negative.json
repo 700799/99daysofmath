@@ -10,11 +10,11 @@
   "primaryAnswer": "-7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The outputs are decreasing, so the slope is negative.",
+  "hint": "Compare the two outputs as the input grows. Are they going up or down, and what does that say about the sign of the slope?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The outputs are decreasing, so the slope is negative."
+      "text": "Compare the two outputs as the input grows. Are they going up or down, and what does that say about the sign of the slope?"
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "Slope $= \\dfrac{1 - 9}{6 - 2} = -2$."
+      "text": "The slope is $\\dfrac{1 - 9}{6 - 2}$, a drop of $8$ over a run of $4$. Apply that same rate to the $4$ steps from $x = 6$ to $x = 10$."
     },
     {
       "level": "reveal",
-      "text": "From $x = 6$ to $x = 10$ is $4$ more steps: $1 + (-2)(4) = -7$."
+      "text": "The slope is $-2$, so $f(10) = 1 + (-2)(4) = -7$. The value of $f(10)$ is $-7$."
     }
   ],
   "learningObjective": "Extend a decreasing linear function beyond the given values.",
   "topic": "Linear growth",
   "explanation": [
-    "Slope $= \\dfrac{1 - 9}{6 - 2} = \\dfrac{-8}{4} = -2$.",
-    "Each step of $+1$ in $x$ lowers the output by $2$.",
-    "From $x = 6$ to $x = 10$: $f(10) = 1 - 2(4) = -7$."
+    "Find the slope from the two known points: $\\dfrac{1 - 9}{6 - 2} = \\dfrac{-8}{4} = -2$.",
+    "A slope of $-2$ means every increase of $1$ in $x$ lowers the output by $2$.",
+    "From $x = 6$ to $x = 10$ is $4$ steps, so the output falls by $8$ from $f(6) = 1$. That gives $f(10) = 1 - 8 = -7$."
   ],
   "alternativeExplanations": [
     {

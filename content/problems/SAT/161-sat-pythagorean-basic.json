@@ -10,27 +10,27 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Use $a^2 + b^2 = c^2$ — or recognize a familiar triple.",
+  "hint": "The two legs of a right triangle determine its hypotenuse. Which theorem connects the three sides of a right triangle?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use $a^2 + b^2 = c^2$ — or recognize a familiar triple."
+      "text": "The two legs of a right triangle determine its hypotenuse. Which theorem connects the three sides of a right triangle?"
     },
     {
       "level": "guide",
-      "text": "$36 + 64 = 100$."
+      "text": "Use the Pythagorean theorem with legs $6$ and $8$: $c^2 = 6^2 + 8^2 = 36 + 64$. Add, then take the square root."
     },
     {
       "level": "reveal",
-      "text": "$c = \\sqrt{100} = 10$."
+      "text": "The sum is $100$ and $\\sqrt{100} = 10$, so the hypotenuse has length $10$."
     }
   ],
   "learningObjective": "Apply the Pythagorean theorem to find a hypotenuse.",
   "topic": "Pythagorean theorem",
   "explanation": [
-    "$a^2 + b^2 = c^2$, so $6^2 + 8^2 = c^2$.",
-    "$36 + 64 = 100$, so $c = 10$.",
-    "This is the $3$-$4$-$5$ triple doubled — recognizing it skips the arithmetic entirely."
+    "The Pythagorean theorem says $a^2 + b^2 = c^2$ for a right triangle, so $6^2 + 8^2 = c^2$.",
+    "Squaring each leg and adding gives $36 + 64 = 100$, so $c^2 = 100$.",
+    "Take the positive square root to get $c = 10$. The hypotenuse has length $10$, which is the $3$-$4$-$5$ triangle doubled."
   ],
   "alternativeExplanations": [
     {

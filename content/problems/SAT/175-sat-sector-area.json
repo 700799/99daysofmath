@@ -32,27 +32,27 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Find the fraction of the circle, then take that fraction of the area.",
+  "hint": "A sector is a slice of the circle. The central angle tells you what fraction of the full area the slice covers.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the fraction of the circle, then take that fraction of the area."
+      "text": "A sector is a slice of the circle. The central angle tells you what fraction of the full area the slice covers."
     },
     {
       "level": "guide",
-      "text": "$\\dfrac{60}{360} = \\dfrac{1}{6}$, and the area is $36\\pi$."
+      "text": "The fraction is $\\dfrac{60}{360} = \\dfrac{1}{6}$, and the full area is $\\pi(6)^2 = 36\\pi$. Take one sixth of the area."
     },
     {
       "level": "reveal",
-      "text": "$\\tfrac{1}{6}(36\\pi) = 6\\pi$."
+      "text": "One sixth of $36\\pi$ is $6\\pi$, so the area of the sector is $6\\pi$, which is choice B."
     }
   ],
   "learningObjective": "Compute a sector area as a fraction of the circle area.",
   "topic": "Arcs and sectors",
   "explanation": [
-    "The fraction of the circle is $\\dfrac{60}{360} = \\dfrac{1}{6}$.",
-    "The full area is $\\pi r^2 = \\pi(6)^2 = 36\\pi$.",
-    "The sector area is $\\dfrac{1}{6} \\times 36\\pi = 6\\pi$."
+    "The central angle is $\\dfrac{60}{360} = \\dfrac{1}{6}$ of a full turn, so the sector is one sixth of the circle.",
+    "The area of the full circle is $\\pi r^2 = \\pi(6)^2 = 36\\pi$.",
+    "One sixth of that area is $\\tfrac{1}{6}(36\\pi) = 6\\pi$, so the sector area is choice B."
   ],
   "alternativeExplanations": [
     {
