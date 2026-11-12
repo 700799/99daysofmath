@@ -10,7 +10,7 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Seven values → middle value at position $4$.",
+  "hint": "The median in a five-number summary is the ordinary median: the middle of the sorted values.",
   "hints": [
     {
       "level": "nudge",
@@ -19,20 +19,21 @@
     },
     {
       "level": "nudge",
-      "text": "Seven values → middle value at position $4$."
+      "text": "The median in a five-number summary is the ordinary median: the middle of the sorted values."
     },
     {
       "level": "guide",
-      "text": "$3, 4, 5, \\boxed{6}, 7, 8, 9$."
+      "text": "The seven values $3, 4, 5, 6, 7, 8, 9$ are in order. The middle one is in position $4$, with three values on each side."
     },
     {
       "level": "reveal",
-      "text": "$6$."
+      "text": "The fourth value is $6$, so the median is $6$."
     }
   ],
   "explanation": [
-    "Sorted with $7$ values, the middle is the $4$th: $6$.",
-    "Final answer: 6."
+    "The five-number summary lists the minimum, $Q_1$, the median, $Q_3$ and the maximum.",
+    "The data is sorted and has $7$ values, so the median is the $4$th value.",
+    "Counting along $3, 4, 5, 6$, the $4$th value is $6$, so the median is $6$."
   ],
   "tags": [
     "MAP-practice",

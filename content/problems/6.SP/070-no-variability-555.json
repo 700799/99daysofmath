@@ -10,7 +10,7 @@
   "primaryAnswer": "0",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Compare the values to each other.",
+  "hint": "Variability is about how much the values differ from each other, so compare them.",
   "hints": [
     {
       "level": "nudge",
@@ -19,20 +19,21 @@
     },
     {
       "level": "nudge",
-      "text": "Compare the values to each other."
+      "text": "Variability is about how much the values differ from each other, so compare them."
     },
     {
       "level": "guide",
-      "text": "All values are the same."
+      "text": "All three values are $5$. Try a measure of spread such as the range: the largest value minus the smallest value is $5 - 5$."
     },
     {
       "level": "reveal",
-      "text": "Variability $= 0$."
+      "text": "The values do not differ at all, so the variability is $0$."
     }
   ],
   "explanation": [
-    "Every value equals $5$, so the data does not spread at all.",
-    "Range $= 5 - 5 = 0$."
+    "Variability measures how much the values in a data set differ from one another.",
+    "Every value here equals $5$, so no value is different from any other.",
+    "The range confirms it: $5 - 5 = 0$, so the variability is $0$."
   ],
   "tags": [
     "MAP-practice",

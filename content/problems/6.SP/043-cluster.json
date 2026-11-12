@@ -12,23 +12,25 @@
     "Cluster"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A clustering of values.",
+  "hint": "Tall bins mean that many data values fall close together in that part of the number line.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A clustering of values."
+      "text": "Tall bins mean that many data values fall close together in that part of the number line."
     },
     {
       "level": "guide",
-      "text": "Many values bunched together."
+      "text": "The word you want describes a bunch of things grouped tightly together, such as a group of stars or grapes."
     },
     {
       "level": "reveal",
-      "text": "Cluster."
+      "text": "A region of tall bins is called a cluster."
     }
   ],
   "explanation": [
-    "Tall bins close together form a cluster."
+    "The height of a histogram bin tells how many values fall in that interval.",
+    "Several very tall bins side by side mean that a lot of the data is bunched in that region.",
+    "A place where data values bunch together is called a cluster."
   ],
   "tags": [
     "shape",

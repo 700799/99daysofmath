@@ -22,24 +22,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Which has many possible answers?",
+  "hint": "For each choice, ask whether one measurement settles it or whether you need many measurements.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Which has many possible answers?"
+      "text": "For each choice, ask whether one measurement settles it or whether you need many measurements."
     },
     {
       "level": "guide",
-      "text": "Many 6th graders, many heights."
+      "text": "The Empire State Building has one height. The school has many 6th graders, and their heights will differ from each other."
     },
     {
       "level": "reveal",
-      "text": "B."
+      "text": "The answer is B, \"How tall are 6th graders in our school?\", since those heights vary."
     }
   ],
   "explanation": [
-    "A has one fixed answer.",
-    "B varies across students → statistical."
+    "A statistical question anticipates a variety of answers instead of one fixed answer.",
+    "Choice A asks about one building, which has a single fixed height, so it is not statistical.",
+    "Choice B asks about many students whose heights differ, so B is the statistical question."
   ],
   "tags": [
     "statistical-question"

@@ -10,7 +10,7 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find $Q_1$ and $Q_3$, then subtract.",
+  "hint": "You need the two quartiles first. Each one is the median of one half of the sorted data.",
   "hints": [
     {
       "level": "nudge",
@@ -19,21 +19,22 @@
     },
     {
       "level": "nudge",
-      "text": "Find $Q_1$ and $Q_3$, then subtract."
+      "text": "You need the two quartiles first. Each one is the median of one half of the sorted data."
     },
     {
       "level": "guide",
-      "text": "Lower half: $\\{2,4,6,8\\}$, $Q_1 = 5$. Upper half: $\\{10,12,14,16\\}$, $Q_3 = 13$."
+      "text": "The lower half $\\{2, 4, 6, 8\\}$ has median $Q_1 = 5$, and the upper half $\\{10, 12, 14, 16\\}$ has median $Q_3 = 13$. Subtract to get the IQR."
     },
     {
       "level": "reveal",
-      "text": "IQR $= 13 - 5 = 8$."
+      "text": "$13 - 5 = 8$, so the IQR of the set is $8$."
     }
   ],
   "explanation": [
-    "Lower-half median: $(4+6)/2 = 5$ → $Q_1$.",
-    "Upper-half median: $(12+14)/2 = 13$ → $Q_3$.",
-    "IQR: $13 - 5 = 8$."
+    "The $8$ ordered values split into the lower half $\\{2, 4, 6, 8\\}$ and the upper half $\\{10, 12, 14, 16\\}$.",
+    "$Q_1$ is the median of the lower half: $(4 + 6) \\div 2 = 5$.",
+    "$Q_3$ is the median of the upper half: $(12 + 14) \\div 2 = 13$.",
+    "The IQR is the difference of the quartiles: $13 - 5 = 8$."
   ],
   "tags": [
     "MAP-practice",

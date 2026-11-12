@@ -27,25 +27,26 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The $100$ is an outlier — it pulls the mean up.",
+  "hint": "Four of the values are close together and one is far away. Think about which measure that far value changes.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $100$ is an outlier — it pulls the mean up."
+      "text": "Four of the values are close together and one is far away. Think about which measure that far value changes."
     },
     {
       "level": "guide",
-      "text": "Mean: $122/5 = 24.4$. Median: $6$."
+      "text": "The median is the middle of $4, 5, 6, 7, 100$. For the mean, add all five values to get $122$ and divide by $5$. Compare the two results."
     },
     {
       "level": "reveal",
-      "text": "Mean ($24.4$) > median ($6$)."
+      "text": "The mean is $24.4$ and the median is $6$, so the mean (choice A) is larger."
     }
   ],
   "explanation": [
-    "Mean: $(4 + 5 + 6 + 7 + 100)/5 = 24.4$.",
-    "Median: $6$.",
-    "Mean is much larger because of the outlier."
+    "Find the mean by adding all the values and dividing by the count: $(4 + 5 + 6 + 7 + 100) \\div 5 = 122 \\div 5 = 24.4$.",
+    "Find the median by taking the middle of the sorted list $4, 5, 6, 7, 100$, which is $6$.",
+    "The outlier $100$ raises the total a lot, but it is still just one position in the ordered list, so only the mean is pulled up.",
+    "Since $24.4 > 6$, the mean is larger, which is choice A."
   ],
   "tags": [
     "MAP-practice",

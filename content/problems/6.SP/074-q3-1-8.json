@@ -12,24 +12,25 @@
     "13/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Upper half: $\\{5, 6, 7, 8\\}$.",
+  "hint": "The upper quartile is the median of the upper half, the four largest values in this set.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Upper half: $\\{5, 6, 7, 8\\}$."
+      "text": "The upper quartile is the median of the upper half, the four largest values in this set."
     },
     {
       "level": "guide",
-      "text": "Median: $(6 + 7)/2$."
+      "text": "The upper half is $\\{5, 6, 7, 8\\}$. Its two middle values are $6$ and $7$, so compute $(6 + 7) \\div 2$."
     },
     {
       "level": "reveal",
-      "text": "$6.5$."
+      "text": "$(6 + 7) \\div 2 = 6.5$, so the upper quartile is $Q_3 = 6.5$."
     }
   ],
   "explanation": [
-    "Upper half: $\\{5, 6, 7, 8\\}$.",
-    "Median: $(6 + 7)/2 = 6.5$."
+    "The $8$ ordered values split into two halves, and the upper half is $\\{5, 6, 7, 8\\}$.",
+    "$Q_3$ is the median of the upper half, which has two middle values, $6$ and $7$.",
+    "Average them: $(6 + 7) \\div 2 = 6.5$, so the upper quartile is $Q_3 = 6.5$."
   ],
   "tags": [
     "quartile"

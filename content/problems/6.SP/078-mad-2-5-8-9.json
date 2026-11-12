@@ -12,7 +12,7 @@
     "5/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Mean first.",
+  "hint": "Every distance in a MAD is measured from the mean, so the mean has to come first.",
   "hints": [
     {
       "level": "nudge",
@@ -21,21 +21,22 @@
     },
     {
       "level": "nudge",
-      "text": "Mean first."
+      "text": "Every distance in a MAD is measured from the mean, so the mean has to come first."
     },
     {
       "level": "guide",
-      "text": "Mean $= 24/4 = 6$. Distances: $4, 1, 2, 3$."
+      "text": "The mean is $(2 + 5 + 8 + 9) \\div 4 = 6$. The distances from $6$ are $4, 1, 2$ and $3$. Find the average of those four distances."
     },
     {
       "level": "reveal",
-      "text": "MAD $= (4+1+2+3)/4 = 10/4 = 2.5$."
+      "text": "The distances total $10$, and $10 \\div 4 = 2.5$, so the MAD is $2.5$."
     }
   ],
   "explanation": [
-    "Mean: $24/4 = 6$.",
-    "$|2-6|=4,\\ |5-6|=1,\\ |8-6|=2,\\ |9-6|=3$. Sum: $10$.",
-    "MAD: $10/4 = 2.5$."
+    "Compute the mean, the center that the distances are measured from: $(2 + 5 + 8 + 9) \\div 4 = 24 \\div 4 = 6$.",
+    "Find how far each value is from $6$: $|2-6| = 4$, $|5-6| = 1$, $|8-6| = 2$ and $|9-6| = 3$.",
+    "Add the four distances to get the total deviation: $4 + 1 + 2 + 3 = 10$.",
+    "Divide by the number of values: $10 \\div 4 = 2.5$, so the MAD is $2.5$."
   ],
   "tags": [
     "MAP-practice",

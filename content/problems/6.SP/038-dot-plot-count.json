@@ -10,23 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Add the dots.",
+  "hint": "Every dot on a dot plot is one data point, no matter which value it sits above.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add the dots."
+      "text": "Every dot on a dot plot is one data point, no matter which value it sits above."
     },
     {
       "level": "guide",
-      "text": "$3 + 4 + 5$."
+      "text": "The three stacks hold $3$, $4$ and $5$ dots. Add the three stack sizes to count all the dots."
     },
     {
       "level": "reveal",
-      "text": "$12$."
+      "text": "$3 + 4 + 5 = 12$, so there are $12$ data points in total."
     }
   ],
   "explanation": [
-    "$3 + 4 + 5 = 12$."
+    "In a dot plot, one dot stands for one data point.",
+    "The total number of data points is therefore the total number of dots across all three values.",
+    "Add the stacks: $3 + 4 + 5 = 12$, so there are $12$ data points."
   ],
   "tags": [
     "dot-plot"

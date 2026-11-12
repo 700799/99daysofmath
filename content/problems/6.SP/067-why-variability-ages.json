@@ -27,24 +27,26 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Are all 6th graders born on the same day?",
+  "hint": "Variability means the data values are not all the same. Think about whether every 6th grader was born on the same day.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Are all 6th graders born on the same day?"
+      "text": "Variability means the data values are not all the same. Think about whether every 6th grader was born on the same day."
     },
     {
       "level": "guide",
-      "text": "No — birthdays spread across many months."
+      "text": "Choices B and C both say that all students have the same age, which would mean no variability. Look for the choice that gives a reason ages differ."
     },
     {
       "level": "reveal",
-      "text": "A."
+      "text": "The answer is A: students have different birthdays, so their ages are not all the same."
     }
   ],
   "explanation": [
-    "6th graders are typically $11$ or $12$ depending on birthday — different ages → variability.",
-    "Final answer: A."
+    "Data shows variability when its values differ from one another.",
+    "Students in 6th grade were born on different days, so some are $11$ and some are $12$, and their exact ages differ.",
+    "Choices B and C claim everyone is the same age, which would mean no variability at all.",
+    "So the reason for the variability is choice A, different birthdays."
   ],
   "tags": [
     "variability"

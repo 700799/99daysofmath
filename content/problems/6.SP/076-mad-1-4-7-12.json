@@ -12,25 +12,26 @@
     "7/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the mean first.",
+  "hint": "MAD takes three stages: find the mean, find how far each value is from it, then average those distances.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the mean first."
+      "text": "MAD takes three stages: find the mean, find how far each value is from it, then average those distances."
     },
     {
       "level": "guide",
-      "text": "Mean $= (1+4+7+12)/4 = 24/4 = 6$. Distances from $6$: $5, 2, 1, 6$."
+      "text": "The mean is $(1 + 4 + 7 + 12) \\div 4 = 6$. The distances from $6$ are $5, 2, 1$ and $6$. Add them and divide by $4$."
     },
     {
       "level": "reveal",
-      "text": "MAD $= (5+2+1+6)/4 = 14/4 = 3.5$."
+      "text": "The distances total $14$, and $14 \\div 4 = 3.5$, so the MAD is $3.5$."
     }
   ],
   "explanation": [
-    "Mean: $24/4 = 6$.",
-    "$|1-6|=5,\\ |4-6|=2,\\ |7-6|=1,\\ |12-6|=6$. Sum: $14$.",
-    "MAD: $14/4 = 3.5$."
+    "Find the mean first, since every distance is measured from it: $(1 + 4 + 7 + 12) \\div 4 = 24 \\div 4 = 6$.",
+    "Find each distance from the mean: $|1-6| = 5$, $|4-6| = 2$, $|7-6| = 1$ and $|12-6| = 6$.",
+    "Add the distances to get the total deviation: $5 + 2 + 1 + 6 = 14$.",
+    "Average the distances over the $4$ values: $14 \\div 4 = 3.5$, so the MAD is $3.5$."
   ],
   "alternativeExplanations": [
     {

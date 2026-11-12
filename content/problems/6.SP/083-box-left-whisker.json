@@ -15,24 +15,25 @@
     "lowest value"
   ],
   "acceptanceMode": "exact",
-  "hint": "Whiskers extend to the extremes.",
+  "hint": "The whiskers are the lines that stick out from the box toward the two ends of the data.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Whiskers extend to the extremes."
+      "text": "The whiskers are the lines that stick out from the box toward the two ends of the data."
     },
     {
       "level": "guide",
-      "text": "Left = smallest."
+      "text": "The number line increases from left to right, so the left whisker stretches to the smallest value in the data set."
     },
     {
       "level": "reveal",
-      "text": "minimum."
+      "text": "The left whisker reaches the minimum."
     }
   ],
   "explanation": [
-    "Left whisker → minimum value of the data. Right whisker → maximum.",
-    "Final answer: minimum."
+    "A box plot shows the five-number summary on a number line that increases to the right.",
+    "The box covers $Q_1$ to $Q_3$, and the whiskers extend from the box to the extreme values.",
+    "The left whisker ends at the smallest value, so it reaches the minimum."
   ],
   "tags": [
     "box-plot"

@@ -10,24 +10,25 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Count which values tie for most appearances.",
+  "hint": "A data set can have more than one mode when values tie for appearing most often.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Count which values tie for most appearances."
+      "text": "A data set can have more than one mode when values tie for appearing most often."
     },
     {
       "level": "guide",
-      "text": "$3$ appears twice; $7$ appears twice."
+      "text": "Tally the list: $3$ appears twice, $5$ once, $7$ twice and $9$ once. See which values share the highest tally."
     },
     {
       "level": "reveal",
-      "text": "$2$ modes."
+      "text": "Both $3$ and $7$ appear twice, so the data set has $2$ modes."
     }
   ],
   "explanation": [
-    "$3$ and $7$ both appear $2$ times.",
-    "$2$ modes."
+    "Count how often each value appears: $3$ twice, $5$ once, $7$ twice and $9$ once.",
+    "The highest count is $2$, and two different values, $3$ and $7$, reach it.",
+    "Every value tied for the highest count is a mode, so there are $2$ modes."
   ],
   "tags": [
     "mode"

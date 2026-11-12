@@ -10,7 +10,7 @@
   "primaryAnswer": "1700",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Total $=$ mean $\\times$ count.",
+  "hint": "The mean is the total divided by the count, so you can undo the division to get the total back.",
   "hints": [
     {
       "level": "nudge",
@@ -19,20 +19,21 @@
     },
     {
       "level": "nudge",
-      "text": "Total $=$ mean $\\times$ count."
+      "text": "The mean is the total divided by the count, so you can undo the division to get the total back."
     },
     {
       "level": "guide",
-      "text": "$20 \\cdot 85$."
+      "text": "Multiply the mean by the number of students: $85 \\times 20$. One way is $85 \\times 2 = 170$, then multiply by $10$."
     },
     {
       "level": "reveal",
-      "text": "$1700$."
+      "text": "$85 \\times 20 = 1700$, so the scores total $1700$ points."
     }
   ],
   "explanation": [
-    "Sum $=$ mean $\\times$ count $= 85 \\cdot 20 = 1700$.",
-    "Final answer: 1700."
+    "The mean equals the total divided by the count, so the total equals the mean times the count.",
+    "Here the mean is $85$ and the count is $20$ students, so the total is $85 \\times 20$.",
+    "$85 \\times 20 = 1700$, so the total of all the scores is $1700$."
   ],
   "tags": [
     "MAP-practice",

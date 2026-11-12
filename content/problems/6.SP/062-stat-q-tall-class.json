@@ -13,24 +13,25 @@
     "y"
   ],
   "acceptanceMode": "exact",
-  "hint": "Different students may have different heights.",
+  "hint": "Think about what you would write down if you measured everyone in the class.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Different students may have different heights."
+      "text": "Think about what you would write down if you measured everyone in the class."
     },
     {
       "level": "guide",
-      "text": "Multiple answers expected → statistical."
+      "text": "The question asks about many students, and their heights will not all match. A question whose answers vary like this is statistical."
     },
     {
       "level": "reveal",
-      "text": "Yes."
+      "text": "The answer is yes, because the heights vary from student to student."
     }
   ],
   "explanation": [
-    "Different students have different heights, so the question anticipates variability.",
-    "Yes — it is statistical."
+    "A statistical question is one that anticipates variability in the answers.",
+    "This question is about all the students in a class, and different students have different heights.",
+    "Because the data would vary, yes, it is a statistical question."
   ],
   "tags": [
     "statistical-question"

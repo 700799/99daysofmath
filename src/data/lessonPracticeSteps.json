@@ -1,1 +1,108 @@
-{}
+{
+ "6.SP-1#0": [
+  "The mean is the total of the values shared equally among them.",
+  "Add the three values to get the total: 10 + 20 + 30 = 60.",
+  "There are 3 values, so divide the total by 3: 60 ÷ 3 = 20.",
+  "The mean of the three numbers is 20."
+ ],
+ "6.SP-1#1": [
+  "The median is the middle value once the numbers are in order.",
+  "Sort the numbers from least to greatest: 2, 4, 5, 8, 9.",
+  "There are 5 values, so the middle one is the 3rd.",
+  "The 3rd value is 5, so the median is 5."
+ ],
+ "6.SP-2#0": [
+  "Check for a value that is far from the others, because it affects the mean more than the median.",
+  "200 is an outlier: the mean is (30 + 32 + 35 + 200) ÷ 4 = 74.25, far above three of the four salaries.",
+  "The median is halfway between 32 and 35, which is 33.5, close to most salaries.",
+  "The median is the better choice for a typical salary."
+ ],
+ "6.SP-2#1": [
+  "The median is the middle value of the sorted list.",
+  "The list 4, 4, 10 is already in order and has 3 values.",
+  "The middle (2nd) value is 4, so the median is 4."
+ ],
+ "6.SP-3#0": [
+  "The range is the largest value minus the smallest value.",
+  "Find the extremes: the max is 22 and the min is 6.",
+  "Subtract the min from the max: 22 − 6 = 16, so the range is 16."
+ ],
+ "6.SP-3#1": [
+  "The range measures how far the data stretches from min to max.",
+  "Every value is 7, so the max is 7 and the min is 7.",
+  "Subtract the min from the max: 7 − 7 = 0, so the range is 0."
+ ],
+ "6.SP-4#0": [
+  "On a dot plot, each dot stands for one data point.",
+  "The dots above 2 are the data points that equal 2.",
+  "There are 4 dots there, so 4 data points are 2."
+ ],
+ "6.SP-4#1": [
+  "Think about which display is built from the five-number summary.",
+  "A bar graph only compares counts for separate categories.",
+  "A box plot marks the quartiles with the box edges and the median with a line inside.",
+  "The answer is the box plot."
+ ],
+ "6.SP-5#0": [
+  "Think of the word for a value that lies outside the main group.",
+  "Most data values sit close together, but this one is far away from all of them.",
+  "Such a value is called an outlier."
+ ],
+ "6.SP-5#1": [
+  "Center tells only what a typical value is.",
+  "A good description also says how spread out the values are, using range or IQR.",
+  "It can also mention shape, such as skew, clusters or gaps.",
+  "One good answer is spread (shape also works)."
+ ],
+ "6.SP-6#0": [
+  "The mode is the value that appears most often.",
+  "Count each value: 6 appears three times, while 2 and 9 appear once each.",
+  "6 appears the most, so the mode is 6."
+ ],
+ "6.SP-6#1": [
+  "Each number in the list is one data point.",
+  "Count the numbers one by one: 11, 13, 15, 17.",
+  "That is four numbers, so there are 4 data points."
+ ],
+ "6.SP-7#0": [
+  "A statistical question expects answers that vary.",
+  "This one asks about each student, and students take different amounts of time to eat.",
+  "The answers will vary, so yes, it is statistical."
+ ],
+ "6.SP-7#1": [
+  "A statistical question needs variability in its answers.",
+  "California has one capital, so everyone gives the same answer.",
+  "There is only one fact, so no, it is not statistical."
+ ],
+ "6.SP-8#0": [
+  "With an even number of values, the median is the average of the two middle ones.",
+  "The set has 4 values in order; the middle two are 3 and 7.",
+  "Average the two middle values to find the halfway point: (3 + 7) ÷ 2 = 5.",
+  "The median of the set is 5."
+ ],
+ "6.SP-8#1": [
+  "The mean is the sum of the values divided by how many there are.",
+  "Add the values: 6 + 8 + 10 = 24, and there are 3 of them.",
+  "Divide the sum by the count: 24 ÷ 3 = 8, so the mean is 8."
+ ],
+ "6.SP-9#0": [
+  "Each dot on a dot plot is one measurement.",
+  "Dots stacked above 3 are the measurements that equal 3.",
+  "There are 4 dots above 3, so 4 measurements equal 3."
+ ],
+ "6.SP-9#1": [
+  "In a histogram, the height of a bar is a count.",
+  "The bar from 20–29 counts the values that fall in that range.",
+  "Its height is 8, so 8 values are in that range."
+ ],
+ "6.SP-10#0": [
+  "To find a mean, add the values and divide by the count.",
+  "Find the sum: 2 + 4 + 6 + 8 = 20, and the set has 4 values.",
+  "Share the sum equally: 20 ÷ 4 = 5, so the mean is 5."
+ ],
+ "6.SP-10#1": [
+  "The range is the max minus the min.",
+  "In this set the max is 11 and the min is 2.",
+  "Take the min away from the max: 11 − 2 = 9, so the range is 9."
+ ]
+}

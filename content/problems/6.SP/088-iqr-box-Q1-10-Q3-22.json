@@ -10,7 +10,7 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "IQR $= Q_3 - Q_1$.",
+  "hint": "The IQR is the length of the box, from the lower quartile to the upper quartile.",
   "hints": [
     {
       "level": "nudge",
@@ -19,20 +19,21 @@
     },
     {
       "level": "nudge",
-      "text": "IQR $= Q_3 - Q_1$."
+      "text": "The IQR is the length of the box, from the lower quartile to the upper quartile."
     },
     {
       "level": "guide",
-      "text": "$22 - 10$."
+      "text": "Use $Q_3 = 22$ and $Q_1 = 10$ and subtract the lower from the upper: $22 - 10$."
     },
     {
       "level": "reveal",
-      "text": "$12$."
+      "text": "$22 - 10 = 12$, so the IQR of the box plot is $12$."
     }
   ],
   "explanation": [
-    "IQR $= Q_3 - Q_1 = 22 - 10 = 12$.",
-    "Final answer: 12."
+    "The interquartile range measures the spread of the middle half of the data.",
+    "It is found by subtracting the lower quartile from the upper quartile: $Q_3 - Q_1$.",
+    "Here that is $22 - 10 = 12$, so the IQR is $12$."
   ],
   "tags": [
     "MAP-practice",

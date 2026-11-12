@@ -14,24 +14,25 @@
     "yes"
   ],
   "acceptanceMode": "exact",
-  "hint": "The box ends are quartiles, the middle line is the median.",
+  "hint": "Recall the five numbers a box plot is drawn from and where each one appears.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The box ends are quartiles, the middle line is the median."
+      "text": "Recall the five numbers a box plot is drawn from and where each one appears."
     },
     {
       "level": "guide",
-      "text": "Both are visible."
+      "text": "The left and right edges of the box are $Q_1$ and $Q_3$, and the line inside the box is the median. Check whether the statement mentions anything else."
     },
     {
       "level": "reveal",
-      "text": "True."
+      "text": "The statement is true: a box plot shows the median and both quartiles."
     }
   ],
   "explanation": [
-    "On a box plot: box edges $= Q_1$ and $Q_3$; the line inside $=$ median.",
-    "True."
+    "A box plot is drawn from the minimum, $Q_1$, the median, $Q_3$ and the maximum.",
+    "The two edges of the box mark the quartiles $Q_1$ and $Q_3$.",
+    "The line inside the box marks the median, so the statement is true."
   ],
   "tags": [
     "box-plot"

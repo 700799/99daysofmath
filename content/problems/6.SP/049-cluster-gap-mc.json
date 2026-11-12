@@ -27,24 +27,26 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "A bunch of dots, then nothing, then a few more.",
+  "hint": "Picture the plot: a crowd of dots in one place, an empty stretch, and then a few more dots.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A bunch of dots, then nothing, then a few more."
+      "text": "Picture the plot: a crowd of dots in one place, an empty stretch, and then a few more dots."
     },
     {
       "level": "guide",
-      "text": "Cluster around $20$ and gap before the dots at $50$."
+      "text": "The many dots near $20$ form a bunch, and nothing lies between that bunch and the few dots near $50$. Use the vocabulary words for a bunch and for an empty stretch."
     },
     {
       "level": "reveal",
-      "text": "Cluster + gap."
+      "text": "The data shows a cluster near $20$ and a gap before $50$, which is choice A, cluster + gap."
     }
   ],
   "explanation": [
-    "Dots near $20$ are a cluster.",
-    "Empty area between $20$ and $50$ is a gap."
+    "Most of the dots sit close together near $20$, and a group of close values is called a cluster.",
+    "Between that group and the few dots near $50$ there are no dots, and an empty stretch is called a gap.",
+    "The plot is not symmetric or uniform, because the dots are not balanced or evenly spread.",
+    "So the best description is choice A, cluster + gap."
   ],
   "tags": [
     "shape"

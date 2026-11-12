@@ -10,24 +10,26 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "IQR $= Q_3 - Q_1$.",
+  "hint": "The IQR is the difference between the upper quartile and the lower quartile, so you need both quartiles.",
   "hints": [
     {
       "level": "nudge",
-      "text": "IQR $= Q_3 - Q_1$."
+      "text": "The IQR is the difference between the upper quartile and the lower quartile, so you need both quartiles."
     },
     {
       "level": "guide",
-      "text": "$Q_3 = 6.5$ and $Q_1 = 2.5$."
+      "text": "The lower half $\\{1, 2, 3, 4\\}$ gives $Q_1 = 2.5$ and the upper half $\\{5, 6, 7, 8\\}$ gives $Q_3 = 6.5$. Subtract the first from the second."
     },
     {
       "level": "reveal",
-      "text": "$6.5 - 2.5 = 4$."
+      "text": "$6.5 - 2.5 = 4$, so the IQR of the set is $4$."
     }
   ],
   "explanation": [
-    "From the previous two problems: $Q_1 = 2.5$, $Q_3 = 6.5$.",
-    "IQR: $6.5 - 2.5 = 4$."
+    "Split the $8$ ordered values into the lower half $\\{1, 2, 3, 4\\}$ and the upper half $\\{5, 6, 7, 8\\}$.",
+    "The median of the lower half is $Q_1 = (2 + 3) \\div 2 = 2.5$.",
+    "The median of the upper half is $Q_3 = (6 + 7) \\div 2 = 6.5$.",
+    "The IQR is the distance between the quartiles: $6.5 - 2.5 = 4$."
   ],
   "tags": [
     "IQR"

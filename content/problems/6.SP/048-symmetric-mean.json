@@ -10,24 +10,25 @@
   "primaryAnswer": "50",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Symmetric → mean ≈ median.",
+  "hint": "In a symmetric data set the two sides balance each other around the center.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Symmetric → mean ≈ median."
+      "text": "In a symmetric data set the two sides balance each other around the center."
     },
     {
       "level": "guide",
-      "text": "Median ≈ mean."
+      "text": "When the sides balance, the mean and the median land in about the same place. The mean is given as $50$."
     },
     {
       "level": "reveal",
-      "text": "$50$."
+      "text": "The median is approximately $50$, the same as the mean."
     }
   ],
   "explanation": [
-    "Symmetric: mean ≈ median.",
-    "Both ≈ $50$."
+    "A symmetric data set has matching left and right sides around its center.",
+    "With no skew or tail to pull the mean away, the mean and the median are about equal.",
+    "The mean is $50$, so the median is approximately $50$ as well."
   ],
   "tags": [
     "shape",

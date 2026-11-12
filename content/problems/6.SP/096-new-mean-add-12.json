@@ -10,7 +10,7 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the new sum, then divide by the new count.",
+  "hint": "Adding a value changes both the total and the number of values, so update both before dividing.",
   "hints": [
     {
       "level": "nudge",
@@ -19,21 +19,22 @@
     },
     {
       "level": "nudge",
-      "text": "Find the new sum, then divide by the new count."
+      "text": "Adding a value changes both the total and the number of values, so update both before dividing."
     },
     {
       "level": "guide",
-      "text": "Old sum $= 12$. New sum $= 24$. New count $= 4$."
+      "text": "The old total is $2 + 4 + 6 = 12$. Adding $12$ makes the total $24$, and the set now has $4$ values. Divide the new total by the new count."
     },
     {
       "level": "reveal",
-      "text": "$24 / 4 = 6$."
+      "text": "$24 \\div 4 = 6$, so the new mean is $6$."
     }
   ],
   "explanation": [
-    "Old sum: $2+4+6 = 12$.",
-    "Add $12$: new sum $= 24$.",
-    "New count: $4$. New mean: $24 / 4 = 6$."
+    "The three original values add to $2 + 4 + 6 = 12$.",
+    "Including the new value raises the total to $12 + 12 = 24$.",
+    "The data set now has $4$ values instead of $3$.",
+    "Divide the new total by the new count: $24 \\div 4 = 6$, so the new mean is $6$."
   ],
   "tags": [
     "MAP-practice",

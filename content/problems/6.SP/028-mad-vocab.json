@@ -13,23 +13,25 @@
     "average"
   ],
   "acceptanceMode": "normalized",
-  "hint": "MAD = Mean Absolute Deviation — from what center?",
+  "hint": "Look at the letters in MAD: the M stands for one of the measures of center.",
   "hints": [
     {
       "level": "nudge",
-      "text": "MAD = Mean Absolute Deviation — from what center?"
+      "text": "Look at the letters in MAD: the M stands for one of the measures of center."
     },
     {
       "level": "guide",
-      "text": "It uses the mean as center."
+      "text": "MAD is short for mean absolute deviation. Each deviation is a distance from the center value named in that first word."
     },
     {
       "level": "reveal",
-      "text": "The mean."
+      "text": "MAD is the average distance of the values from the mean."
     }
   ],
   "explanation": [
-    "MAD is the mean of $|x - \\bar{x}|$ for each value."
+    "MAD stands for mean absolute deviation, and a deviation is a distance from a center value.",
+    "To compute it, you find the distance $|x - \\bar{x}|$ between each value $x$ and the mean $\\bar{x}$.",
+    "Averaging those distances gives the MAD, so it measures the average distance from the mean."
   ],
   "tags": [
     "MAD",

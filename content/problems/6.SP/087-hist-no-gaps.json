@@ -14,24 +14,25 @@
     "yes"
   ],
   "acceptanceMode": "exact",
-  "hint": "Histograms group continuous intervals.",
+  "hint": "Histogram bars sit over number intervals that follow one another along a number line.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Histograms group continuous intervals."
+      "text": "Histogram bars sit over number intervals that follow one another along a number line."
     },
     {
       "level": "guide",
-      "text": "Bars touch."
+      "text": "Where one interval ends, the next one begins, with no numbers left out in between. Think about what that does to neighbouring bars."
     },
     {
       "level": "reveal",
-      "text": "True."
+      "text": "The statement is true: the bars of a histogram touch, with no gaps between them."
     }
   ],
   "explanation": [
-    "Histograms cover continuous intervals, so bars share edges.",
-    "True."
+    "A histogram groups numerical data into intervals that cover the number line one after another.",
+    "Each interval starts where the previous one ends, so neighbouring bars share an edge.",
+    "The bars are therefore drawn without gaps, and the statement is true."
   ],
   "tags": [
     "histogram"

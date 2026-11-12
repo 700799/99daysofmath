@@ -10,7 +10,7 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Upper half: $12, 14, 16, 18$.",
+  "hint": "$Q3$ is the median of the upper half, the values that come after the median $10$.",
   "hints": [
     {
       "level": "nudge",
@@ -19,20 +19,22 @@
     },
     {
       "level": "nudge",
-      "text": "Upper half: $12, 14, 16, 18$."
+      "text": "$Q3$ is the median of the upper half, the values that come after the median $10$."
     },
     {
       "level": "guide",
-      "text": "Median of $12, 14, 16, 18$: average of $14$ and $16$."
+      "text": "The upper half is $12, 14, 16, 18$. That is four values, so average the two in the middle, $14$ and $16$."
     },
     {
       "level": "reveal",
-      "text": "$(14 + 16)/2 = 15$."
+      "text": "$(14 + 16) \\div 2 = 15$, so the upper quartile is $Q3 = 15$."
     }
   ],
   "explanation": [
-    "Upper half (above median): $12, 14, 16, 18$.",
-    "Median of upper: $15$."
+    "The median $10$ splits the nine values into a lower half and an upper half, and $10$ itself belongs to neither.",
+    "The upper half is the four values above the median: $12, 14, 16, 18$.",
+    "$Q3$ is the median of this half. With four values, the middle two are $14$ and $16$.",
+    "Average them: $(14 + 16) \\div 2 = 15$, so the upper quartile is $Q3 = 15$."
   ],
   "tags": [
     "quartile"

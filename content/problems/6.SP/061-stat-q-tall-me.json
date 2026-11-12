@@ -13,24 +13,25 @@
     "n"
   ],
   "acceptanceMode": "exact",
-  "hint": "Statistical questions expect a variety of answers.",
+  "hint": "A statistical question is one whose answers you would expect to vary from one case to another.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Statistical questions expect a variety of answers."
+      "text": "A statistical question is one whose answers you would expect to vary from one case to another."
     },
     {
       "level": "guide",
-      "text": "\"How tall am I?\" has just one answer."
+      "text": "\"How tall am I?\" asks about one person at one moment. Think about how many different answers a measurement of one person can give."
     },
     {
       "level": "reveal",
-      "text": "No — no variability."
+      "text": "The answer is no, because one person has one height and nothing varies."
     }
   ],
   "explanation": [
-    "A statistical question anticipates variability.",
-    "\"How tall am I?\" has a single answer → not statistical."
+    "A statistical question anticipates variability, meaning the data collected to answer it will differ.",
+    "\"How tall am I?\" is about a single person, and measuring that person gives a single height.",
+    "With only one answer there is no variability, so no, it is not a statistical question."
   ],
   "tags": [
     "statistical-question"

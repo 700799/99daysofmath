@@ -10,7 +10,7 @@
   "primaryAnswer": "19",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Six values: average the middle two.",
+  "hint": "Count the values first: an even count means the median falls between two of them.",
   "hints": [
     {
       "level": "nudge",
@@ -19,20 +19,21 @@
     },
     {
       "level": "nudge",
-      "text": "Six values: average the middle two."
+      "text": "Count the values first: an even count means the median falls between two of them."
     },
     {
       "level": "guide",
-      "text": "Middle two: $18$ and $20$. Average: $(18+20)/2$."
+      "text": "Of the six sorted values, the third and fourth are $18$ and $20$. Find their average, $(18 + 20) \\div 2$."
     },
     {
       "level": "reveal",
-      "text": "$19$."
+      "text": "$(18 + 20) \\div 2 = 19$, so the median of the six values is $19$."
     }
   ],
   "explanation": [
-    "Six values (already sorted).",
-    "Middle two: $18, 20$. Median: $(18+20)/2 = 19$."
+    "The set $12, 14, 18, 20, 25, 26$ is already in order and has $6$ values.",
+    "With an even count, the median is the average of the $3$rd and $4$th values, $18$ and $20$.",
+    "$(18 + 20) \\div 2 = 19$, so the median of the six values is $19$."
   ],
   "tags": [
     "MAP-practice",

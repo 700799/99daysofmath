@@ -15,24 +15,25 @@
     "1 value"
   ],
   "acceptanceMode": "exact",
-  "hint": "Each dot is one observation.",
+  "hint": "Think about how a dot plot is built: a dot is added every time a value is recorded.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Each dot is one observation."
+      "text": "Think about how a dot plot is built: a dot is added every time a value is recorded."
     },
     {
       "level": "guide",
-      "text": "\"One data ___\"."
+      "text": "If a value occurs three times in the data, three dots are stacked above it. So a single dot stands for a single piece of data."
     },
     {
       "level": "reveal",
-      "text": "one data point (or one value)."
+      "text": "Each dot represents one data point (one value)."
     }
   ],
   "explanation": [
-    "Each dot in a dot plot represents one observation (one data value).",
-    "Final answer: one data point."
+    "A dot plot is made by placing a dot above a number each time that number appears in the data.",
+    "So the number of dots above a value equals how many times that value was observed.",
+    "That means each dot represents one data point."
   ],
   "tags": [
     "dot-plot"

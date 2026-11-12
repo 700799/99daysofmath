@@ -10,23 +10,25 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Mean = sum divided by count.",
+  "hint": "To find a mean, pool all the values into one total and then share that total equally.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Mean = sum divided by count."
+      "text": "To find a mean, pool all the values into one total and then share that total equally."
     },
     {
       "level": "guide",
-      "text": "Sum: $3 + 7 + 8 + 6 = 24$. Count: $4$."
+      "text": "Add $3 + 7 + 8 + 6$ to get $24$. There are $4$ values, so the next step is to divide $24$ by $4$."
     },
     {
       "level": "reveal",
-      "text": "$24 \\div 4 = 6$."
+      "text": "$24 \\div 4 = 6$, so the mean of the four numbers is $6$."
     }
   ],
   "explanation": [
-    "Sum: $24$. Count: $4$. Mean: $6$."
+    "Add all the values, because the mean starts from the total: $3 + 7 + 8 + 6 = 24$.",
+    "Count how many values share that total: there are $4$ numbers in the list.",
+    "Divide the total by the count to get the mean: $24 \\div 4 = 6$, so the mean is $6$."
   ],
   "tags": [
     "mean"

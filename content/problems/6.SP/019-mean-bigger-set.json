@@ -10,23 +10,25 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Sum / count.",
+  "hint": "There are six values this time, and $18$ is listed twice. Both copies belong in the total.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sum / count."
+      "text": "There are six values this time, and $18$ is listed twice. Both copies belong in the total."
     },
     {
       "level": "guide",
-      "text": "Sum: $11 + 13 + 14 + 16 + 18 + 18 = 90$. Count: $6$."
+      "text": "The sum $11 + 13 + 14 + 16 + 18 + 18$ is $90$. Divide that total by the $6$ values."
     },
     {
       "level": "reveal",
-      "text": "$90 / 6 = 15$."
+      "text": "$90 \\div 6 = 15$, so the mean of the six values is $15$."
     }
   ],
   "explanation": [
-    "Sum: $90$. Count: $6$. Mean: $15$."
+    "Add all six values, counting $18$ twice because it appears twice: $11 + 13 + 14 + 16 + 18 + 18 = 90$.",
+    "Count the values in the list: there are $6$, so the total is shared six ways.",
+    "Divide the total by the count: $90 \\div 6 = 15$, so the mean is $15$."
   ],
   "tags": [
     "mean"

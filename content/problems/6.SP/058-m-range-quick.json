@@ -10,23 +10,25 @@
   "primaryAnswer": "11",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Max - min.",
+  "hint": "The range needs just the highest and the lowest number in the list.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Max - min."
+      "text": "The range needs just the highest and the lowest number in the list."
     },
     {
       "level": "guide",
-      "text": "$12 - 1$."
+      "text": "Looking through $1, 8, 4, 12, 2$, the highest value is $12$ and the lowest is $1$. Subtract the lowest from the highest."
     },
     {
       "level": "reveal",
-      "text": "$11$."
+      "text": "$12 - 1 = 11$, so the range of the five numbers is $11$."
     }
   ],
   "explanation": [
-    "$12 - 1 = 11$."
+    "The range is found by subtracting the smallest value from the largest value.",
+    "In the list $1, 8, 4, 12, 2$ the largest value is $12$ and the smallest is $1$.",
+    "Subtract: $12 - 1 = 11$, so the range of the five numbers is $11$."
   ],
   "tags": [
     "range"

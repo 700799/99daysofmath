@@ -10,23 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Don't forget to count $0$.",
+  "hint": "A value of $0$ adds nothing to the sum, but it is still a data value and must be counted.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Don't forget to count $0$."
+      "text": "A value of $0$ adds nothing to the sum, but it is still a data value and must be counted."
     },
     {
       "level": "guide",
-      "text": "Sum: $0 + 4 + 6 + 10 = 20$. Count: $4$."
+      "text": "The sum is $0 + 4 + 6 + 10 = 20$. There are $4$ values (the zero counts), so divide $20$ by $4$."
     },
     {
       "level": "reveal",
-      "text": "$20 / 4 = 5$."
+      "text": "$20 \\div 4 = 5$, so the mean of the four values is $5$."
     }
   ],
   "explanation": [
-    "Sum: $20$. Count: $4$. Mean: $5$."
+    "Add all four values, including the zero, to get the total: $0 + 4 + 6 + 10 = 20$.",
+    "Count the values. The $0$ is a real data value, so the count is $4$, not $3$.",
+    "Divide the total by the count: $20 \\div 4 = 5$, so the mean is $5$."
   ],
   "tags": [
     "mean"

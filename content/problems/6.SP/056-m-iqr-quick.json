@@ -10,7 +10,7 @@
   "primaryAnswer": "13",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "IQR $= Q3 - Q1$.",
+  "hint": "The interquartile range is the distance between the lower quartile and the upper quartile.",
   "hints": [
     {
       "level": "nudge",
@@ -19,19 +19,21 @@
     },
     {
       "level": "nudge",
-      "text": "IQR $= Q3 - Q1$."
+      "text": "The interquartile range is the distance between the lower quartile and the upper quartile."
     },
     {
       "level": "guide",
-      "text": "$20 - 7$."
+      "text": "The quartiles are given as $Q1 = 7$ and $Q3 = 20$, so take the smaller away from the larger: $20 - 7$."
     },
     {
       "level": "reveal",
-      "text": "$13$."
+      "text": "$20 - 7 = 13$, so the IQR of this data is $13$."
     }
   ],
   "explanation": [
-    "IQR $= 13$."
+    "The quartiles check out: the lower half $5, 7, 9$ has median $7$ and the upper half $15, 20, 25$ has median $20$.",
+    "The IQR is the spread of the middle half, found as $Q3 - Q1$.",
+    "Subtract: $20 - 7 = 13$, so the IQR of this data is $13$."
   ],
   "tags": [
     "IQR"

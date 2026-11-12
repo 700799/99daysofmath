@@ -10,23 +10,25 @@
   "primaryAnswer": "3.4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Add all dot-values and divide by count.",
+  "hint": "The dots give you a list of five values. Treat it like any other list when finding the mean.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add all dot-values and divide by count."
+      "text": "The dots give you a list of five values. Treat it like any other list when finding the mean."
     },
     {
       "level": "guide",
-      "text": "Sum: $2 + 3 + 3 + 4 + 5 = 17$. Count: $5$."
+      "text": "Add the values $2 + 3 + 3 + 4 + 5$ to get $17$, counting $3$ twice. Then divide $17$ by the $5$ data points."
     },
     {
       "level": "reveal",
-      "text": "$17 / 5 = 3.4$."
+      "text": "$17 \\div 5 = 3.4$, so the mean of the dot plot data is $3.4$."
     }
   ],
   "explanation": [
-    "Sum: $17$. Count: $5$. Mean: $3.4$."
+    "Add all the values shown by the dots, using $3$ twice because it has two dots: $2 + 3 + 3 + 4 + 5 = 17$.",
+    "Count the data points, one for each dot: there are $5$.",
+    "Divide the total by the count: $17 \\div 5 = 3.4$, so the mean is $3.4$."
   ],
   "tags": [
     "dot-plot",

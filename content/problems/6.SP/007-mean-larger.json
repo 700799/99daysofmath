@@ -12,12 +12,12 @@
     "80.0"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Add up all the scores, then divide by how many there are.",
+  "hint": "The mean score is what each test would be if the total points were shared out equally.",
   "explanation": [
-    "Add the scores: $80 + 85 + 90 + 70 + 75 = 400$.",
-    "Count: $5$ scores.",
-    "Divide: $400 \\div 5 = 80$.",
-    "Mean $= 80$."
+    "Start by adding the scores, since the mean is built from the total: $80 + 85 + 90 + 70 + 75 = 400$.",
+    "Count the scores that make up that total: there are $5$ of them.",
+    "Divide the total by the number of scores: $400 \\div 5 = 80$.",
+    "The mean of the five test scores is $80$."
   ],
   "alternativeExplanations": [
     {
@@ -37,15 +37,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Add up all the scores, then divide by how many there are."
+      "text": "The mean score is what each test would be if the total points were shared out equally."
     },
     {
       "level": "guide",
-      "text": "Add the scores: $80 + 85 + 90 + 70 + 75 = 400$."
+      "text": "Add the five scores, $80 + 85 + 90 + 70 + 75$, to get $400$. Then split $400$ into $5$ equal parts."
     },
     {
       "level": "reveal",
-      "text": "Mean $= 80$."
+      "text": "$400 \\div 5 = 80$, so the mean score is $80$."
     }
   ]
 }

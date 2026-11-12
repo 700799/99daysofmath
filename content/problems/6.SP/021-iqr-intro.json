@@ -10,23 +10,25 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "It's already sorted. Find the middle.",
+  "hint": "This list is already in order from least to greatest, so you only need to locate its middle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "It's already sorted. Find the middle."
+      "text": "This list is already in order from least to greatest, so you only need to locate its middle."
     },
     {
       "level": "guide",
-      "text": "$7$ numbers, middle is $4$th."
+      "text": "Count the values: there are $7$. The middle one is the $4$th, because three values come before it and three come after."
     },
     {
       "level": "reveal",
-      "text": "$7$."
+      "text": "The $4$th value is $7$, so the median is $7$."
     }
   ],
   "explanation": [
-    "Middle of $7$ sorted: $7$."
+    "The data $1, 3, 5, 7, 9, 11, 13$ is already sorted, so no reordering is needed.",
+    "There are $7$ values, an odd count, so the median is the single middle value, the $4$th.",
+    "Counting in from either end, the $4$th value is $7$, so the median is $7$."
   ],
   "tags": [
     "median"

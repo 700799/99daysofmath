@@ -10,23 +10,25 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Max minus min.",
+  "hint": "Only two numbers in the list matter for the range: the top one and the bottom one.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Max minus min."
+      "text": "Only two numbers in the list matter for the range: the top one and the bottom one."
     },
     {
       "level": "guide",
-      "text": "Max: $15$, Min: $7$."
+      "text": "In $8, 12, 7, 15, 9$ the largest value is $15$ and the smallest is $7$. Subtract to see how far apart they are."
     },
     {
       "level": "reveal",
-      "text": "$15 - 7 = 8$."
+      "text": "$15 - 7 = 8$, so the range of the list is $8$."
     }
   ],
   "explanation": [
-    "$15 - 7 = 8$."
+    "The range is the gap between the largest and the smallest value in the data.",
+    "Checking each number in $8, 12, 7, 15, 9$, the largest is $15$ and the smallest is $7$.",
+    "Subtract the smallest from the largest: $15 - 7 = 8$, so the range is $8$."
   ],
   "tags": [
     "range"

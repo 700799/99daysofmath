@@ -32,7 +32,7 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Look for a question whose answer **varies** from person to person.",
+  "hint": "Price, release date and screen size are each a single fact you could look up. Only one option asks about a whole group of people.",
   "hints": [
     {
       "level": "nudge",
@@ -41,15 +41,15 @@
     },
     {
       "level": "nudge",
-      "text": "A, C, D each have one fixed answer (a price, a date, a measurement). Only one option asks about a group."
+      "text": "Price, release date and screen size are each a single fact you could look up. Only one option asks about a whole group of people."
     },
     {
       "level": "guide",
-      "text": "B asks \"how many hours per day do **$7$th graders** spend\" — different students give different answers. Statistical."
+      "text": "Choice B asks how many hours per day $7$th graders spend on their phones. Different students would report different numbers, and that is the sign of a statistical question."
     },
     {
       "level": "reveal",
-      "text": "Answer: B."
+      "text": "The answer is B, because phone hours vary from one $7$th grader to the next."
     }
   ],
   "explanation": [

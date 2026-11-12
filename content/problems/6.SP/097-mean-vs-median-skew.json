@@ -27,7 +27,7 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Which type of outlier pulls the mean DOWN, away from the median?",
+  "hint": "The mean and median disagree by a lot here. Think about which kind of extreme value drags a mean downward.",
   "hints": [
     {
       "level": "nudge",
@@ -36,20 +36,22 @@
     },
     {
       "level": "nudge",
-      "text": "Which type of outlier pulls the mean DOWN, away from the median?"
+      "text": "The mean and median disagree by a lot here. Think about which kind of extreme value drags a mean downward."
     },
     {
       "level": "guide",
-      "text": "Low values pull the mean below the median."
+      "text": "The mean $70$ is well below the median $85$. A few very small scores would lower the total without changing the middle score much."
     },
     {
       "level": "reveal",
-      "text": "A."
+      "text": "The answer is A: there are likely some low outliers, a few very small values."
     }
   ],
   "explanation": [
-    "Outliers pull the mean toward them but barely move the median.",
-    "Mean ($70$) is less than median ($85$) → some low outliers pulled it down."
+    "Outliers pull the mean toward them but hardly move the median.",
+    "Here the mean, $70$, is lower than the median, $85$, so something pulled the mean down.",
+    "A few very small values would do that, while large values would push the mean up instead.",
+    "So the data likely has low outliers, which is choice A."
   ],
   "tags": [
     "MAP-practice",

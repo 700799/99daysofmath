@@ -10,24 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Mode = most dots.",
+  "hint": "On a dot plot, the mode is the value with the tallest stack of dots above it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Mode = most dots."
+      "text": "On a dot plot, the mode is the value with the tallest stack of dots above it."
     },
     {
       "level": "guide",
-      "text": "Most dots is at $4$."
+      "text": "Compare the three stacks: $3$ dots at the value $2$, $5$ dots at the value $4$, and $2$ dots at the value $6$. Which stack is tallest?"
     },
     {
       "level": "reveal",
-      "text": "$4$."
+      "text": "The value $4$ has the most dots ($5$), so the mode is $4$."
     }
   ],
   "explanation": [
-    "Value $4$ has $5$ dots — the most.",
-    "Mode: $4$."
+    "Each dot is one data point, so the number of dots above a value tells how often it occurs.",
+    "The value $2$ occurs $3$ times, $4$ occurs $5$ times, and $6$ occurs $2$ times.",
+    "The mode is the value that occurs most, and $5$ dots is the most, so the mode is $4$."
   ],
   "tags": [
     "dot-plot"

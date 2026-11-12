@@ -10,24 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Even count → average the two middle values.",
+  "hint": "Four values is an even count, so no single value sits exactly in the middle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Even count → average the two middle values."
+      "text": "Four values is an even count, so no single value sits exactly in the middle."
     },
     {
       "level": "guide",
-      "text": "Middle two: $4$ and $6$. Average $= (4 + 6)/2$."
+      "text": "The two middle values of $2, 4, 6, 8$ are $4$ and $6$. Find the number halfway between them: $(4 + 6) \\div 2$."
     },
     {
       "level": "reveal",
-      "text": "$5$."
+      "text": "$(4 + 6) \\div 2 = 5$, so the median of the set is $5$."
     }
   ],
   "explanation": [
-    "Even number of values: average the two middle ones.",
-    "$(4 + 6) / 2 = 5$."
+    "The set $2, 4, 6, 8$ is in order and has an even number of values.",
+    "With an even count, the median is the average of the two middle values, which are $4$ and $6$.",
+    "$(4 + 6) \\div 2 = 5$, so the median of the set is $5$."
   ],
   "tags": [
     "median",

@@ -12,12 +12,13 @@
     "6.0"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The **mean** is the sum of all values divided by the number of values.",
+  "hint": "The **mean** is the fair share: pool all the values together, then split the total evenly among them.",
   "explanation": [
-    "Add the values: $4 + 5 + 6 + 7 + 8 = 30$.",
-    "Count the values: there are $5$ numbers.",
-    "Divide: $30 \\div 5 = 6$.",
-    "The mean is $6$."
+    "The mean is found by adding every value and then dividing by how many values there are.",
+    "Add the values first to get the total: $4 + 5 + 6 + 7 + 8 = 30$.",
+    "Count the values, because the total is shared among all of them: there are $5$ numbers.",
+    "Divide the total by the count: $30 \\div 5 = 6$.",
+    "The mean of the data set is $6$, which is also the middle number of this evenly spaced list."
   ],
   "alternativeExplanations": [
     {
@@ -47,15 +48,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "The **mean** is the sum of all values divided by the number of values."
+      "text": "The **mean** is the fair share: pool all the values together, then split the total evenly among them."
     },
     {
       "level": "guide",
-      "text": "Add the values: $4 + 5 + 6 + 7 + 8 = 30$."
+      "text": "Add $4 + 5 + 6 + 7 + 8$ to get the total, then divide that total by $5$ because there are five values."
     },
     {
       "level": "reveal",
-      "text": "The mean is $6$."
+      "text": "The sum is $30$ and $30 \\div 5 = 6$, so the mean is $6$."
     }
   ],
   "diagram": {

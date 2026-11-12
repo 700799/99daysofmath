@@ -10,24 +10,25 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Sort first.",
+  "hint": "The middle value can only be found once the numbers are written from least to greatest.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sort first."
+      "text": "The middle value can only be found once the numbers are written from least to greatest."
     },
     {
       "level": "guide",
-      "text": "Sorted: $2, 5, 7, 9, 11$. Middle value?"
+      "text": "In order the list is $2, 5, 7, 9, 11$. Five values means the third one is in the middle."
     },
     {
       "level": "reveal",
-      "text": "$7$."
+      "text": "The third value is $7$, so the median is $7$."
     }
   ],
   "explanation": [
-    "Sorted: $2, 5, 7, 9, 11$.",
-    "Middle: $7$."
+    "Write the numbers from least to greatest, since the median depends on order: $2, 5, 7, 9, 11$.",
+    "The list has $5$ values, so the middle one is the $3$rd, with two values on each side.",
+    "The $3$rd value in the sorted list is $7$, so the median is $7$."
   ],
   "tags": [
     "median"

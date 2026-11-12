@@ -10,24 +10,25 @@
   "primaryAnswer": "11",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Range $= \\text{max} - \\text{min}$.",
+  "hint": "The range is the distance from the smallest value in the set to the largest.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Range $= \\text{max} - \\text{min}$."
+      "text": "The range is the distance from the smallest value in the set to the largest."
     },
     {
       "level": "guide",
-      "text": "Max $= 15$, min $= 4$."
+      "text": "In $\\{7, 10, 4, 15\\}$ the maximum is $15$ and the minimum is $4$. Subtract the minimum from the maximum."
     },
     {
       "level": "reveal",
-      "text": "$15 - 4 = 11$."
+      "text": "$15 - 4 = 11$, so the range of the set is $11$."
     }
   ],
   "explanation": [
-    "Max $= 15$, min $= 4$.",
-    "Range $= 15 - 4 = 11$."
+    "The range is the maximum value minus the minimum value.",
+    "In the set $\\{7, 10, 4, 15\\}$ the maximum is $15$ and the minimum is $4$.",
+    "Subtract: $15 - 4 = 11$, so the range of the set is $11$."
   ],
   "tags": [
     "range"

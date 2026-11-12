@@ -13,24 +13,25 @@
     "10 to 19"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Higher bar = more values.",
+  "hint": "Each bin of a histogram has a count, and a higher count means a taller bar.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Higher bar = more values."
+      "text": "Each bin of a histogram has a count, and a higher count means a taller bar."
     },
     {
       "level": "guide",
-      "text": "$7 > 4$."
+      "text": "The bin $0$-$9$ holds $4$ values and the bin $10$-$19$ holds $7$ values. Compare the numbers $4$ and $7$."
     },
     {
       "level": "reveal",
-      "text": "$10$–$19$."
+      "text": "Since $7 > 4$, the bin $10$-$19$ has more values."
     }
   ],
   "explanation": [
-    "$10$–$19$ has $7$ vs. $4$ in $0$–$9$.",
-    "More values in $10$–$19$."
+    "A histogram sorts the data into bins and records how many values land in each bin.",
+    "Here the bin $0$-$9$ has $4$ values and the bin $10$-$19$ has $7$ values.",
+    "Because $7$ is greater than $4$, the bin $10$-$19$ has more values."
   ],
   "tags": [
     "histogram"

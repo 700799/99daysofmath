@@ -10,23 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Even number of values → average the middle two.",
+  "hint": "Count the values first. An even count means two numbers share the middle spot.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Even number of values → average the middle two."
+      "text": "Count the values first. An even count means two numbers share the middle spot."
     },
     {
       "level": "guide",
-      "text": "Middle: $3$ and $5$. Average them."
+      "text": "In $1, 3, 5, 7$ the two middle values are $3$ and $5$. The median is halfway between them, so average those two."
     },
     {
       "level": "reveal",
-      "text": "$(3 + 5)/2 = 4$."
+      "text": "$(3 + 5) \\div 2 = 4$, so the median of the list is $4$."
     }
   ],
   "explanation": [
-    "Middle two: $3, 5$. Mean: $4$."
+    "The list $1, 3, 5, 7$ is already in order and has $4$ values.",
+    "With an even count there is no single middle value, so take the two middle values, $3$ and $5$.",
+    "The median is their average: $(3 + 5) \\div 2 = 4$, so the median is $4$."
   ],
   "tags": [
     "median"

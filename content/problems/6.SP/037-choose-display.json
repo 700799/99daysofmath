@@ -27,23 +27,26 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Dot plots get cluttered with many values.",
+  "hint": "Picture hundreds of values. A display that draws every single value would become crowded and hard to read.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Dot plots get cluttered with many values."
+      "text": "Picture hundreds of values. A display that draws every single value would become crowded and hard to read."
     },
     {
       "level": "guide",
-      "text": "Histograms bin values to show shape."
+      "text": "A dot plot needs one dot per value, and a box plot shows only five summary numbers. Think about the display that groups values into bins and draws a bar for each bin."
     },
     {
       "level": "reveal",
-      "text": "Histogram."
+      "text": "The best choice is the histogram (choice B), because its bars outline the shape of a large data set."
     }
   ],
   "explanation": [
-    "Histograms group values into bins and show the shape clearly."
+    "A dot plot draws one dot for every value, so with many values it becomes cluttered.",
+    "A box plot shows only the five-number summary, so peaks and clusters inside the data are hidden.",
+    "A histogram groups the values into bins, and the bar heights show where data piles up and where it thins out.",
+    "So the histogram, choice B, is best for showing the shape of a large distribution."
   ],
   "tags": [
     "CA",

@@ -12,23 +12,25 @@
     "the median"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A box plot shows 5 numbers: min, Q1, ?, Q3, max.",
+  "hint": "A box plot is drawn from five numbers: the minimum, $Q1$, one more in the middle, $Q3$ and the maximum.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A box plot shows 5 numbers: min, Q1, ?, Q3, max."
+      "text": "A box plot is drawn from five numbers: the minimum, $Q1$, one more in the middle, $Q3$ and the maximum."
     },
     {
       "level": "guide",
-      "text": "Center of the box is the median."
+      "text": "The two ends of the box are $Q1$ and $Q3$. The line inside the box marks the value that splits the data into two equal halves."
     },
     {
       "level": "reveal",
-      "text": "Median."
+      "text": "The line inside the box represents the median."
     }
   ],
   "explanation": [
-    "The vertical line in a box plot marks the median."
+    "A box plot displays the five-number summary: minimum, $Q1$, median, $Q3$ and maximum.",
+    "The whisker ends show the minimum and maximum, and the two edges of the box show $Q1$ and $Q3$.",
+    "That leaves the line drawn inside the box, which marks the median of the data."
   ],
   "tags": [
     "box-plot"

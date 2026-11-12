@@ -27,7 +27,7 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Three big things to look at.",
+  "hint": "A good description answers three questions about the data, not just one.",
   "hints": [
     {
       "level": "nudge",
@@ -36,19 +36,22 @@
     },
     {
       "level": "nudge",
-      "text": "Three big things to look at."
+      "text": "A good description answers three questions about the data, not just one."
     },
     {
       "level": "guide",
-      "text": "Where it's centered, how spread out, what shape."
+      "text": "Ask where the data is centered, how spread out it is, and what its overall shape looks like. Find the choice that covers all three."
     },
     {
       "level": "reveal",
-      "text": "Center, spread, and shape."
+      "text": "The answer is A: mention the center, the spread and the shape."
     }
   ],
   "explanation": [
-    "A complete description includes center (mean/median), spread (range/IQR), and shape (symmetric, skewed, clusters, gaps, outliers)."
+    "The center, such as the mean or median, tells what a typical value is.",
+    "The spread, such as the range or IQR, tells how much the values vary.",
+    "The shape tells whether the data is symmetric or skewed and whether it has clusters, gaps or outliers.",
+    "A complete description uses all three, so the answer is choice A."
   ],
   "tags": [
     "MAP-practice",
