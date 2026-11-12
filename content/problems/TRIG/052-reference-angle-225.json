@@ -10,25 +10,25 @@
   "primaryAnswer": "45",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$225^\\circ$ is in Quadrant III, past the $180^\\circ$ mark.",
+  "hint": "First place the angle in a quadrant. The reference angle is then the gap between the terminal side and the nearest part of the $x$-axis.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$225^\\circ$ is in Quadrant III, past the $180^\\circ$ mark."
+      "text": "First place the angle in a quadrant. The reference angle is then the gap between the terminal side and the nearest part of the $x$-axis."
     },
     {
       "level": "guide",
-      "text": "In Quadrant III the reference angle is the angle minus $180^\\circ$."
+      "text": "The angle $225^\\circ$ is in Quadrant III, just past the $180^\\circ$ mark, so the reference angle is the angle minus $180^\\circ$."
     },
     {
       "level": "reveal",
-      "text": "$225 - 180 = 45^\\circ$."
+      "text": "$225 - 180 = 45$, so the reference angle is $45$ degrees."
     }
   ],
   "explanation": [
-    "$225^\\circ$ lands in Quadrant III, between $180^\\circ$ and $270^\\circ$.",
+    "The angle $225^\\circ$ lands in Quadrant III, between $180^\\circ$ and $270^\\circ$.",
     "The nearest part of the $x$-axis is the $180^\\circ$ direction, so measure from there: $225^\\circ - 180^\\circ$.",
-    "The reference angle is $45^\\circ$."
+    "The difference is $45$, so the reference angle is $45^\\circ$."
   ],
   "alternativeExplanations": [
     {

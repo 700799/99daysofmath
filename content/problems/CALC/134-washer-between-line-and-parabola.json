@@ -14,25 +14,25 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "The region does not touch the axis, so each slice is a WASHER: outer radius $R = x$ (the line is higher), inner radius $r = x^2$.",
+  "hint": "The region does not touch the axis, so each slice is a washer with a hole. Decide which curve gives the outer radius and which gives the inner radius.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The region does not touch the axis, so each slice is a WASHER: outer radius $R = x$ (the line is higher), inner radius $r = x^2$."
+      "text": "The region does not touch the axis, so each slice is a washer with a hole. Decide which curve gives the outer radius and which gives the inner radius."
     },
     {
       "level": "guide",
-      "text": "Washer method: $V = \\pi \\int_0^1 (R^2 - r^2) \\, dx = \\pi \\int_0^1 (x^2 - x^4) \\, dx$."
+      "text": "The line is higher, so the outer radius is $R = x$ and the inner radius is $r = x^2$. The washer method gives $V = \\pi \\int_0^1 (R^2 - r^2) \\, dx = \\pi \\int_0^1 (x^2 - x^4) \\, dx$."
     },
     {
       "level": "reveal",
-      "text": "$\\pi\\left(\\frac{1}{3} - \\frac{1}{5}\\right) = \\frac{2\\pi}{15}$, so $k = \\frac{2}{15}$."
+      "text": "The volume of the solid is $\\pi\\left(\\frac{1}{3} - \\frac{1}{5}\\right) = \\frac{2\\pi}{15}$, so $k = \\frac{2}{15}$."
     }
   ],
   "explanation": [
     "On $[0, 1]$, $x \\ge x^2$, so the outer radius is $R = x$ and the inner radius is $r = x^2$.",
-    "$V = \\pi \\int_0^1 \\left(x^2 - (x^2)^2\\right) dx = \\pi \\int_0^1 (x^2 - x^4) \\, dx = \\pi\\left[\\frac{x^3}{3} - \\frac{x^5}{5}\\right]_0^1$.",
-    "$= \\pi\\left(\\frac{1}{3} - \\frac{1}{5}\\right) = \\frac{2\\pi}{15}$. So $k = \\frac{2}{15}$."
+    "The washer method subtracts the hole from the disc: $V = \\pi \\int_0^1 \\left(x^2 - (x^2)^2\\right) dx = \\pi \\int_0^1 (x^2 - x^4) \\, dx = \\pi\\left[\\frac{x^3}{3} - \\frac{x^5}{5}\\right]_0^1$.",
+    "Evaluating at the limits gives $\\pi\\left(\\frac{1}{3} - \\frac{1}{5}\\right) = \\frac{2\\pi}{15}$, so the answer is $k = \\frac{2}{15}$."
   ],
   "alternativeExplanations": [
     {

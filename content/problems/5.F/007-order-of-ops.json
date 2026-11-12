@@ -10,25 +10,25 @@
   "primaryAnswer": "30",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Parentheses first!",
+  "hint": "The order of operations says which part to work out first. Look for grouping symbols before anything else.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Parentheses first!"
+      "text": "The order of operations says which part to work out first. Look for grouping symbols before anything else."
     },
     {
       "level": "guide",
-      "text": "$8 + 4 = 12$. Now the expression is $3 \\times 12 - 6$."
+      "text": "Do the parentheses first: $8 + 4 = 12$. The expression becomes $3 \\times 12 - 6$, and multiplication comes before subtraction."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 12 = 36$, then $36 - 6 = 30$."
+      "text": "$3 \\times 12 = 36$ and $36 - 6 = 30$, so the expression equals $30$."
     }
   ],
   "explanation": [
-    "Parentheses first: $8 + 4 = 12$.",
-    "Multiply: $3 \\times 12 = 36$.",
-    "Subtract: $36 - 6 = 30$."
+    "Work inside the parentheses first, because grouping symbols come before everything else: $8 + 4 = 12$.",
+    "Multiply next, since multiplication comes before subtraction: $3 \\times 12 = 36$.",
+    "Subtract last: $36 - 6 = 30$, so the value of the expression is $30$."
   ],
   "alternativeExplanations": [
     {

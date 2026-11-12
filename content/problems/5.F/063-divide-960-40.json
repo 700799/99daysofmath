@@ -10,25 +10,25 @@
   "primaryAnswer": "24",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Both numbers end in a zero — you can cross one zero off each.",
+  "hint": "Both numbers are multiples of ten. Dividing both of them by the same number does not change the quotient.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Both numbers end in a zero — you can cross one zero off each."
+      "text": "Both numbers are multiples of ten. Dividing both of them by the same number does not change the quotient."
     },
     {
       "level": "guide",
-      "text": "$960 \\div 40$ is the same as $96 \\div 4$."
+      "text": "Divide $960$ and $40$ each by $10$. That turns the problem into the simpler division $96 \\div 4$."
     },
     {
       "level": "reveal",
-      "text": "$96 \\div 4 = 24$."
+      "text": "$96 \\div 4 = 24$, so the quotient $960 \\div 40$ is also $24$."
     }
   ],
   "explanation": [
-    "Dividing both numbers by $10$ does not change the answer, so $960 \\div 40 = 96 \\div 4$.",
-    "$96 \\div 4 = 24$ because $4 \\times 24 = 96$.",
-    "Check the original: $40 \\times 24 = 960$ ✓, so the quotient is $24$."
+    "Dividing both numbers by $10$ does not change the answer, so $960 \\div 40$ is the same as $96 \\div 4$.",
+    "Now divide the smaller numbers: $96 \\div 4 = 24$, because $4 \\times 20 = 80$ and $4 \\times 4 = 16$.",
+    "Check with the original numbers: $40 \\times 24 = 960$, so the quotient is $24$."
   ],
   "alternativeExplanations": [
     {

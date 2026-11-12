@@ -32,9 +32,9 @@
     }
   ],
   "explanation": [
-    "If two angles of one triangle are congruent to two angles of another, the third pair must match too, since all three sum to $180^\\circ$.",
-    "Matching angles means the same shape, though possibly a different size — that is similarity.",
-    "The criterion is AA."
+    "If two angles of one triangle match two angles of another, the third angles must match too, because each triangle's angles add to $180^\\circ$.",
+    "Triangles with all the same angles have the same shape, though they may differ in size, and that is what similar means.",
+    "So two pairs of congruent angles are enough, and the criterion is called AA, for Angle-Angle."
   ],
   "alternativeExplanations": [
     {

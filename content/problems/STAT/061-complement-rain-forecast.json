@@ -13,25 +13,25 @@
     "70%"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Rain\" and \"no rain\" are complements: exactly one of them happens, so their probabilities add to $1$.",
+  "hint": "Rain and no rain are complements: exactly one of them happens, so what must their two probabilities add up to?",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Rain\" and \"no rain\" are complements: exactly one of them happens, so their probabilities add to $1$."
+      "text": "Rain and no rain are complements: exactly one of them happens, so what must their two probabilities add up to?"
     },
     {
       "level": "guide",
-      "text": "$P(\\text{no rain}) = 1 - P(\\text{rain})$."
+      "text": "The probabilities of an event and its complement total $1$, so subtract the chance of rain from $1$: $1 - 0.3$."
     },
     {
       "level": "reveal",
-      "text": "$1 - 0.3 = 0.7$."
+      "text": "$1 - 0.3 = 0.7$, so the probability that it does not rain is $0.7$."
     }
   ],
   "explanation": [
-    "The complement rule: $P(A^c) = 1 - P(A)$.",
-    "Here $P(\\text{rain}) = 0.3$.",
-    "So $P(\\text{no rain}) = 1 - 0.3 = 0.7$."
+    "Tomorrow it either rains or it does not, so these two events are complements and their probabilities add to $1$.",
+    "The complement rule says $P(A^c) = 1 - P(A)$, and here $P(\\text{rain}) = 0.3$.",
+    "So $P(\\text{no rain}) = 1 - 0.3 = 0.7$, a $70$ percent chance of a dry day."
   ],
   "alternativeExplanations": [
     {

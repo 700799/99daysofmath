@@ -12,23 +12,27 @@
     "8/9 in³"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Total unit cubes: $3 \\times 4 \\times 2 = 24$.",
+  "hint": "The small cubes are not $1$ inch wide, so counting cubes is not the final answer. What is the volume of just one small cube?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Total unit cubes: $3 \\times 4 \\times 2 = 24$."
+      "text": "The small cubes are not $1$ inch wide, so counting cubes is not the final answer. What is the volume of just one small cube?"
     },
     {
       "level": "guide",
-      "text": "Each unit cube has volume $(\\frac{1}{3})^3 = \\frac{1}{27}$."
+      "text": "There are $3 \\times 4 \\times 2 = 24$ small cubes, and each one has volume $\\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$ cubic inch. Multiply the count by that volume."
     },
     {
       "level": "reveal",
-      "text": "Total: $24 \\times \\frac{1}{27} = \\frac{24}{27} = \\frac{8}{9}$."
+      "text": "$24 \\times \\frac{1}{27} = \\frac{24}{27} = \\frac{8}{9}$, so the total volume is $\\frac{8}{9}$ cubic inch."
     }
   ],
   "explanation": [
-    "$24$ unit cubes × $\\frac{1}{27}$ in³ each $= \\frac{24}{27} = \\frac{8}{9}$ in³."
+    "Count the small cubes in the box: $3 \\times 4 \\times 2 = 24$ cubes.",
+    "Each small cube has an edge of $\\frac{1}{3}$ inch, so its volume is $\\frac{1}{3} \\times \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{27}$ cubic inch.",
+    "The total volume is the number of cubes times the volume of each: $24 \\times \\frac{1}{27} = \\frac{24}{27}$.",
+    "Divide the top and bottom by $3$ to simplify: $\\frac{24}{27} = \\frac{8}{9}$.",
+    "The total volume of the box is $\\frac{8}{9}$ cubic inch."
   ],
   "tags": [
     "CA",

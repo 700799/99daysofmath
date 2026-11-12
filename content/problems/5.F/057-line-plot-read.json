@@ -15,24 +15,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Each X is one ribbon.",
+  "hint": "On a line plot, every mark stands for one measured item. Find the place on the number line that the question asks about.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Each X is one ribbon."
+      "text": "On a line plot, every mark stands for one measured item. Find the place on the number line that the question asks about."
     },
     {
       "level": "guide",
-      "text": "Count the Xs stacked above the $\\frac{1}{2}$ mark."
+      "text": "Find the mark for $\\frac{1}{2}$ on the number line and count the Xs stacked directly above it, one by one."
     },
     {
       "level": "reveal",
-      "text": "There are $3$ Xs above $\\frac{1}{2}$."
+      "text": "There are $3$ Xs above the $\\frac{1}{2}$ mark, so $3$ ribbons measured $\\frac{1}{2}$ foot."
     }
   ],
   "explanation": [
-    "On a line plot, each X is one data point.",
-    "Above $\\frac{1}{2}$ there are $3$ Xs, so $3$ ribbons measured $\\frac{1}{2}$ foot."
+    "On a line plot, each X stands for exactly one ribbon that was measured.",
+    "The Xs are stacked above the length they belong to, so look only at the stack above $\\frac{1}{2}$.",
+    "That stack has $3$ Xs, so $3$ ribbons measured $\\frac{1}{2}$ foot."
   ],
   "tags": [
     "line-plot",

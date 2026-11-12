@@ -10,23 +10,26 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$x + 7 = 12$.",
+  "hint": "This time you know $y$ and need $x$. Put the known value into the rule first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$x + 7 = 12$."
+      "text": "This time you know $y$ and need $x$. Put the known value into the rule first."
     },
     {
       "level": "guide",
-      "text": "$x = 12 - 7$."
+      "text": "Replacing $y$ with $12$ gives $x + 7 = 12$. Subtract $7$ from both sides of it."
     },
     {
       "level": "reveal",
-      "text": "$x = 5$."
+      "text": "Subtracting gives $12 - 7 = 5$, so the value of $x$ is $5$."
     }
   ],
   "explanation": [
-    "$x + 7 = 12 \\Rightarrow x = 5$."
+    "Put $12$ in place of $y$ in the rule, which gives $12 = x + 7$.",
+    "Subtract $7$ from both sides to undo the addition and get $x$ alone.",
+    "The result of the subtraction is $x = 12 - 7 = 5$.",
+    "Check: $5 + 7 = 12$ is true, so the answer is $x = 5$."
   ],
   "tags": [
     "two-vars"

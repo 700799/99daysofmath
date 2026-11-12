@@ -10,24 +10,25 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Arc length has a beautifully short formula in radians: $s = r\\theta$.",
+  "hint": "When the central angle is in radians, arc length has a short formula that uses only the radius and the angle: $s = r\\theta$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Arc length has a beautifully short formula in radians: $s = r\\theta$."
+      "text": "When the central angle is in radians, arc length has a short formula that uses only the radius and the angle: $s = r\\theta$."
     },
     {
       "level": "guide",
-      "text": "Substitute $r = 5$ and $\\theta = 2$."
+      "text": "The pool gives radius $r = 5$ ft and angle $\\theta = 2$ radians. Substitute both into $s = r\\theta$ and multiply."
     },
     {
       "level": "reveal",
-      "text": "$s = 5 \\times 2 = 10$ ft."
+      "text": "$s = 5 \\times 2 = 10$, so the arc of rope is $10$ feet long."
     }
   ],
   "explanation": [
-    "When the angle is measured in radians, arc length is simply $s = r\\theta$.",
-    "Here $r = 5$ ft and $\\theta = 2$ radians, so $s = 5 \\times 2 = 10$ ft."
+    "When the angle is measured in radians, arc length is the radius times the angle, $s = r\\theta$.",
+    "The angle is already in radians, so substitute $r = 5$ ft and $\\theta = 2$ directly: $s = 5 \\times 2$.",
+    "The product is $10$, so the rope covers an arc $10$ ft long."
   ],
   "alternativeExplanations": [
     {

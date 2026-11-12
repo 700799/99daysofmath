@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Unprinted area $=$ square area $-$ circle area.",
+  "hint": "The unprinted part is whatever is left of the square once the circle is removed. Which two areas do you need?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Unprinted area $=$ square area $-$ circle area."
+      "text": "The unprinted part is whatever is left of the square once the circle is removed. Which two areas do you need?"
     },
     {
       "level": "guide",
-      "text": "The square is $10 \\times 10 = 100$. The circle has diameter $10$, so its radius is $5$ and its area is $25\\pi$."
+      "text": "The square has area $10 \\times 10 = 100$. The circle's diameter is $10$, so its radius is $5$ and its area is $25\\pi$. Subtract the circle from the square."
     },
     {
       "level": "reveal",
-      "text": "$100 - 25\\pi \\approx 100 - 78.5 = 21.5$ sq cm."
+      "text": "$100 - 25\\pi \\approx 100 - 78.5 = 21.5$, so about $21.5$ square centimeters stay unprinted, choice A."
     }
   ],
   "explanation": [
-    "Square area: $10^2 = 100$ sq cm.",
-    "The circle touches all four sides, so its diameter is $10$ and its radius is $5$: area $= \\pi(5)^2 = 25\\pi \\approx 78.5$ sq cm.",
-    "Subtract: $100 - 78.5 = 21.5$ sq cm in the four corners. Choice A."
+    "The whole napkin is a square with area $10^2 = 100$ square centimeters.",
+    "The circle touches all four sides, so its diameter is $10$ and its radius is $5$, giving an area of $\\pi(5)^2 = 25\\pi \\approx 78.5$ square centimeters.",
+    "Subtracting the printed circle leaves $100 - 78.5 = 21.5$ square centimeters in the corners, which is choice A."
   ],
   "alternativeExplanations": [
     {

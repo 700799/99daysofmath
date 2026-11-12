@@ -14,25 +14,25 @@
     "50%"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Equally likely outcomes: probability $=$ favorable outcomes divided by total outcomes.",
+  "hint": "Every marble is equally likely to be drawn, so the probability is the favorable count divided by the total count.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Equally likely outcomes: probability $=$ favorable outcomes divided by total outcomes."
+      "text": "Every marble is equally likely to be drawn, so the probability is the favorable count divided by the total count."
     },
     {
       "level": "guide",
-      "text": "There are $5$ blue marbles out of $3 + 5 + 2 = 10$ total."
+      "text": "The bag holds $3 + 5 + 2 = 10$ marbles and $5$ of them are blue. Write that as a fraction and reduce it."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{5}{10} = \\frac{1}{2}$."
+      "text": "$\\frac{5}{10} = \\frac{1}{2}$, so the probability of drawing a blue marble is $\\frac{1}{2}$."
     }
   ],
   "explanation": [
-    "Total marbles: $3 + 5 + 2 = 10$, each equally likely to be drawn.",
-    "Favorable outcomes (blue): $5$.",
-    "$P(\\text{blue}) = \\frac{5}{10} = \\frac{1}{2}$."
+    "Count all the marbles first, because each one is equally likely: $3 + 5 + 2 = 10$.",
+    "The favorable outcomes are the blue marbles, and there are $5$ of them.",
+    "$P(\\text{blue}) = \\frac{5}{10}$, which reduces to $\\frac{1}{2}$ in lowest terms."
   ],
   "alternativeExplanations": [
     {

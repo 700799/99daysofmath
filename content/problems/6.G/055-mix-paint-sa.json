@@ -10,28 +10,31 @@
   "primaryAnswer": "54",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Surface area of cube: $6s^2$.",
+  "hint": "Paint covers the outside surfaces of the cube. Which measurement adds up the areas of all the faces?",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Split or rearrange the shape into pieces whose formulas you already know."
+      "text": "Paint one face at a time. One face takes $9$ square feet, two faces take $18$, and so on up to the last face."
     },
     {
       "level": "nudge",
-      "text": "Surface area of cube: $6s^2$."
+      "text": "Paint covers the outside surfaces of the cube. Which measurement adds up the areas of all the faces?"
     },
     {
       "level": "guide",
-      "text": "$6 \\times 9$."
+      "text": "Each face is $3 \\times 3 = 9$ square feet, and a cube has $6$ faces. Multiply those two numbers."
     },
     {
       "level": "reveal",
-      "text": "$54$."
+      "text": "$6 \\times 9 = 54$, so you paint $54$ square feet."
     }
   ],
   "explanation": [
-    "$SA = 6(3)^2 = 54$ sq ft."
+    "Painting every face means covering the whole surface area of the cube.",
+    "One face is a square with side $3$ ft, and its area is $3 \\times 3 = 9$ square feet.",
+    "The cube has $6$ equal faces, so the total is $6 \\times 9 = 54$.",
+    "You paint $54$ square feet in all."
   ],
   "tags": [
     "surface-area",

@@ -10,27 +10,27 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The sides are in the ratio $1 : \\sqrt{3} : 2$, shortest opposite the $30°$.",
+  "hint": "A $30$-$60$-$90$ triangle has a fixed side ratio. Recall the ratio and which side lies opposite the smallest angle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The sides are in the ratio $1 : \\sqrt{3} : 2$, shortest opposite the $30°$."
+      "text": "A $30$-$60$-$90$ triangle has a fixed side ratio. Recall the ratio and which side lies opposite the smallest angle."
     },
     {
       "level": "guide",
-      "text": "The hypotenuse is twice the shortest side."
+      "text": "The sides are in the ratio $1 : \\sqrt{3} : 2$, with the shortest side opposite the $30°$ angle. The hypotenuse is twice that shortest side, which is $5$."
     },
     {
       "level": "reveal",
-      "text": "$2 \\times 5 = 10$."
+      "text": "Since $2 \\times 5 = 10$, the hypotenuse has length $10$."
     }
   ],
   "learningObjective": "Apply the 30-60-90 side ratio.",
   "topic": "Special right triangles",
   "explanation": [
-    "In a $30$-$60$-$90$ triangle the sides are $x$, $x\\sqrt{3}$, and $2x$, with $x$ opposite the $30°$ angle.",
-    "Here $x = 5$, so the hypotenuse is $2(5) = 10$.",
-    "The remaining side, opposite the $60°$, is $5\\sqrt{3}$."
+    "In a $30$-$60$-$90$ triangle the sides are $x$, $x\\sqrt{3}$ and $2x$, where $x$ is opposite the $30°$ angle.",
+    "The side opposite the $30°$ angle is given as $5$, so $x = 5$.",
+    "The hypotenuse is $2x = 2(5) = 10$, so its length is $10$."
   ],
   "alternativeExplanations": [
     {

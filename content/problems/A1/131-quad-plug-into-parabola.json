@@ -10,25 +10,25 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $3$ for $x$ in $y = x^2$.",
+  "hint": "The equation tells you how to get $y$ from any $x$. Use the $x$-value that the question gives.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $3$ for $x$ in $y = x^2$."
+      "text": "The equation tells you how to get $y$ from any $x$. Use the $x$-value that the question gives."
     },
     {
       "level": "guide",
-      "text": "$y = 3^2$ means $3 \\times 3$."
+      "text": "Replace $x$ with $3$ to get $y = 3^2$, which means $3$ multiplied by itself."
     },
     {
       "level": "reveal",
-      "text": "$y = 9$."
+      "text": "$3 \\times 3 = 9$, so the value of $y$ is $9$ when $x$ is $3$."
     }
   ],
   "explanation": [
-    "Substitute: $y = 3^2$.",
-    "$3 \\times 3 = 9$.",
-    "So $y = 9$."
+    "Substitute $3$ for $x$ in the equation of the parabola: $y = 3^2$.",
+    "Squaring a number means multiplying it by itself: $3 \\times 3 = 9$.",
+    "So $y = 9$, and the point $(3, 9)$ is on the parabola."
   ],
   "alternativeExplanations": [
     {

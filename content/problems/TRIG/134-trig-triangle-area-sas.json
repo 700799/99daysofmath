@@ -10,25 +10,25 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Use the sine area formula: Area $= \\frac{1}{2}ab\\sin C$.",
+  "hint": "You know two sides and the angle between them. There is an area formula built for exactly that, using the sine of the included angle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use the sine area formula: Area $= \\frac{1}{2}ab\\sin C$."
+      "text": "You know two sides and the angle between them. There is an area formula built for exactly that, using the sine of the included angle."
     },
     {
       "level": "guide",
-      "text": "Substitute: $\\frac{1}{2}(8)(10)\\sin 30^\\circ$."
+      "text": "The formula is Area $= \\frac{1}{2}ab\\sin C$. Substitute the two sides and the angle: $\\frac{1}{2}(8)(10)\\sin 30^\\circ$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2}(80)(0.5) = 20$ square metres."
+      "text": "$\\frac{1}{2}(80)(0.5) = 20$, so the garden bed has an area of $20$ square metres."
     }
   ],
   "explanation": [
     "When you know two sides and the angle between them, Area $= \\frac{1}{2}ab\\sin C$.",
-    "Substitute: Area $= \\frac{1}{2}(8)(10)\\sin 30^\\circ = 40 \\times 0.5$.",
-    "The area is $20$ square metres."
+    "Substitute the sides and the angle, using $\\sin 30^\\circ = 0.5$: Area $= \\frac{1}{2}(8)(10)\\sin 30^\\circ = 40 \\times 0.5$.",
+    "The product is $20$, so the area is $20$ square metres."
   ],
   "alternativeExplanations": [
     {

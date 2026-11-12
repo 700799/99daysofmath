@@ -13,29 +13,31 @@
     "450 miles"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find miles per gallon, then multiply.",
+  "hint": "The car gets the same distance out of every gallon. Find how far a single gallon takes it.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Convert percent ↔ fraction ↔ decimal. Sometimes the easiest form unlocks the answer."
+      "text": "Use the gallons you already know about: $8$ gallons take the car $240$ miles, so how far would $16$ gallons take it? Your answer for $15$ gallons should be a little less."
     },
     {
       "level": "nudge",
-      "text": "Find miles per gallon, then multiply."
+      "text": "The car gets the same distance out of every gallon. Find how far a single gallon takes it."
     },
     {
       "level": "guide",
-      "text": "mpg $= 240 \\div 8 = 30$. Miles $= 30 \\times 15$."
+      "text": "The car goes $240 \\div 8 = 30$ miles on one gallon. Multiply that by $15$ gallons."
     },
     {
       "level": "reveal",
-      "text": "$30 \\times 15 = 450$."
+      "text": "$30 \\times 15 = 450$, so the car can go $450$ miles on $15$ gallons."
     }
   ],
   "explanation": [
-    "mpg: $240 \\div 8 = 30$.",
-    "$30 \\times 15 = 450$ miles."
+    "Find the unit rate first: $240 \\div 8 = 30$ miles per gallon.",
+    "Each of the $15$ gallons gives another $30$ miles, so multiply $30 \\times 15$.",
+    "Work it out in parts: $30 \\times 10 = 300$ and $30 \\times 5 = 150$, and $300 + 150 = 450$.",
+    "The car can travel $450$ miles on $15$ gallons."
   ],
   "alternativeExplanations": [
     {

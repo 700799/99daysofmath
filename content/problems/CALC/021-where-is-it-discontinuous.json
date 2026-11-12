@@ -10,19 +10,19 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A function cannot be continuous at a point where it is not even defined. Where is the bottom zero?",
+  "hint": "A function cannot be continuous at a point where it is not even defined. Where does this fraction fail to have a value?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A function cannot be continuous at a point where it is not even defined. Where is the bottom zero?"
+      "text": "A function cannot be continuous at a point where it is not even defined. Where does this fraction fail to have a value?"
     },
     {
       "level": "guide",
-      "text": "Set $x - 1 = 0$."
+      "text": "A fraction is undefined where its bottom is zero, so set the denominator $x - 1$ equal to $0$ and solve for $x$."
     },
     {
       "level": "reveal",
-      "text": "$x = 1$. The function is undefined there, so it is not continuous at $x = 1$ (it has a hole)."
+      "text": "The bottom is zero at $x = 1$. The function is undefined there, so it is not continuous at $x = 1$ (it has a hole)."
     }
   ],
   "explanation": [

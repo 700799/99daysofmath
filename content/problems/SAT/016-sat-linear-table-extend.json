@@ -10,27 +10,27 @@
   "primaryAnswer": "26",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the constant rate of change first.",
+  "hint": "A linear function changes by the same amount for every step of $1$ in the input. Find that constant rate before anything else.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the constant rate of change first."
+      "text": "A linear function changes by the same amount for every step of $1$ in the input. Find that constant rate before anything else."
     },
     {
       "level": "guide",
-      "text": "From $x = 1$ to $x = 3$ the output rose $6$ over a run of $2$, so the slope is $3$."
+      "text": "From $x = 1$ to $x = 3$ the output rises from $8$ to $14$, a rise of $6$ over a run of $2$. Use that slope to step from $x = 3$ on to $x = 7$."
     },
     {
       "level": "reveal",
-      "text": "From $x = 3$ to $x = 7$ is 4 more steps: $14 + 3(4) = 26$."
+      "text": "The slope is $3$ and $x = 7$ is $4$ steps past $x = 3$, so $g(7) = 14 + 3(4) = 26$."
     }
   ],
   "learningObjective": "Extend a linear pattern using a constant rate of change.",
   "topic": "Linear growth",
   "explanation": [
-    "Slope $= \\dfrac{14 - 8}{3 - 1} = \\dfrac{6}{2} = 3$: every increase of $1$ in $x$ raises $g$ by $3$.",
-    "From $x = 3$ to $x = 7$ is an increase of $4$, so $g$ rises by $3 \\times 4 = 12$.",
-    "$g(7) = 14 + 12 = 26$."
+    "Find the slope from the two known values: $\\dfrac{14 - 8}{3 - 1} = \\dfrac{6}{2} = 3$. Each increase of $1$ in $x$ raises $g$ by $3$.",
+    "Going from $x = 3$ to $x = 7$ is an increase of $4$, so the output rises by $3 \\times 4 = 12$.",
+    "Add that rise to the known value $g(3) = 14$ to get $g(7) = 14 + 12 = 26$."
   ],
   "alternativeExplanations": [
     {

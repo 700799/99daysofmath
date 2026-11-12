@@ -13,11 +13,12 @@
     "60mph"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A unit rate is the amount **per 1**. Divide the total miles by the total hours.",
+  "hint": "A rate in miles per hour tells how far Sam goes in **one** hour. Which operation shares the miles equally among the hours?",
   "explanation": [
-    "Set up the rate: $\\frac{180 \\text{ miles}}{3 \\text{ hours}}$.",
-    "Divide: $180 \\div 3 = 60$.",
-    "Sam's unit rate is $60$ miles per hour."
+    "A unit rate compares a quantity to **one** of something, here miles for each $1$ hour.",
+    "Write the rate as $\\frac{180 \\text{ miles}}{3 \\text{ hours}}$, because \"per\" means the miles are divided by the hours.",
+    "Divide both parts by $3$ so the bottom becomes $1$ hour: $180 \\div 3 = 60$.",
+    "Sam's rate is $60$ miles per hour."
   ],
   "alternativeExplanations": [
     {
@@ -45,15 +46,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "A unit rate is the amount **per 1**. Divide the total miles by the total hours."
+      "text": "A rate in miles per hour tells how far Sam goes in **one** hour. Which operation shares the miles equally among the hours?"
     },
     {
       "level": "guide",
-      "text": "Set up the rate: $\\frac{180 \\text{ miles}}{3 \\text{ hours}}$."
+      "text": "Sam's $180$ miles are spread over $3$ hours, so divide the miles by the hours: work out $180 \\div 3$."
     },
     {
       "level": "reveal",
-      "text": "Sam's unit rate is $60$ miles per hour."
+      "text": "$180 \\div 3 = 60$, so Sam drives at $60$ miles per hour."
     }
   ]
 }

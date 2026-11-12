@@ -10,25 +10,25 @@
   "primaryAnswer": "47",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$10^3$ is $1{,}000$, so the number gets a thousand times bigger.",
+  "hint": "Start by working out what the power of ten is worth. Then think about what multiplying by it does to the decimal point.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$10^3$ is $1{,}000$, so the number gets a thousand times bigger."
+      "text": "Start by working out what the power of ten is worth. Then think about what multiplying by it does to the decimal point."
     },
     {
       "level": "guide",
-      "text": "Slide the decimal point three places to the right: $0.047 \\to 0.47 \\to 4.7 \\to ?$"
+      "text": "$10^3 = 1{,}000$, so move the decimal point three places to the right: $0.047$ becomes $0.47$, then $4.7$, and then one more shift."
     },
     {
       "level": "reveal",
-      "text": "The third shift gives $47$."
+      "text": "The third shift turns $4.7$ into $47$, so $0.047 \\times 10^3 = 47$."
     }
   ],
   "explanation": [
-    "$10^3 = 1{,}000$, and multiplying by it moves the decimal point three places right.",
-    "Shift one: $0.047 \\to 0.47$. Shift two: $0.47 \\to 4.7$. Shift three: $4.7 \\to 47$.",
-    "So $0.047 \\times 10^3 = 47$."
+    "The power $10^3$ equals $1{,}000$, and multiplying by it moves the decimal point three places to the right.",
+    "Shift one place at a time: $0.047$ becomes $0.47$, then $4.7$, then $47$.",
+    "After three shifts the number is $47$, so $0.047 \\times 10^3 = 47$."
   ],
   "alternativeExplanations": [
     {

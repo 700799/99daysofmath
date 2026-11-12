@@ -18,11 +18,11 @@
     "11/4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply each length by how many ribbons have it, then add everything.",
+  "hint": "Several ribbons share the same length, so each length has to be counted more than once before you add everything up.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply each length by how many ribbons have it, then add everything."
+      "text": "Several ribbons share the same length, so each length has to be counted more than once before you add everything up."
     },
     {
       "level": "nudge",
@@ -31,18 +31,18 @@
     },
     {
       "level": "guide",
-      "text": "$2 \\times \\frac{1}{4} = \\frac{2}{4}$, $3 \\times \\frac{1}{2} = \\frac{3}{2}$, $1 \\times \\frac{3}{4} = \\frac{3}{4}$."
+      "text": "Change every length to fourths: $2$ ribbons of $\\frac{1}{4}$, $3$ ribbons of $\\frac{2}{4}$ and $1$ ribbon of $\\frac{3}{4}$. Count how many fourths each group gives, then add."
     },
     {
       "level": "reveal",
-      "text": "In quarters: $2 + 6 + 3 = 11$ quarters $= \\frac{11}{4} = 2\\frac{3}{4}$ ft."
+      "text": "The fourths add to $2 + 6 + 3 = 11$, and $\\frac{11}{4} = 2\\frac{3}{4}$, so the total length is $2.75$ feet."
     }
   ],
   "explanation": [
-    "Count in quarters of a foot: the $\\frac{1}{4}$-ribbons give $2 \\times 1 = 2$ quarters.",
-    "The $\\frac{1}{2}$-ribbons give $3 \\times 2 = 6$ quarters.",
-    "The $\\frac{3}{4}$-ribbon gives $3$ quarters.",
-    "Total: $2 + 6 + 3 = 11$ quarters $= \\frac{11}{4} = 2\\frac{3}{4} = 2.75$ feet."
+    "Count everything in quarters of a foot. The two $\\frac{1}{4}$ ribbons give $2 \\times 1 = 2$ quarters.",
+    "Each $\\frac{1}{2}$ ribbon is $2$ quarters, so the three of them give $3 \\times 2 = 6$ quarters.",
+    "The single $\\frac{3}{4}$ ribbon adds $3$ more quarters to the count.",
+    "Altogether there are $2 + 6 + 3 = 11$ quarters, and $\\frac{11}{4} = 2\\frac{3}{4} = 2.75$ feet."
   ],
   "alternativeExplanations": [
     {

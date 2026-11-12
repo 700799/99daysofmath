@@ -10,25 +10,25 @@
   "primaryAnswer": "40",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "An inscribed angle is always half of the arc it intercepts.",
+  "hint": "A central angle and an inscribed angle that cut off the same arc are related in a fixed way. Compare each with the arc.",
   "hints": [
     {
       "level": "nudge",
-      "text": "An inscribed angle is always half of the arc it intercepts."
+      "text": "A central angle and an inscribed angle that cut off the same arc are related in a fixed way. Compare each with the arc."
     },
     {
       "level": "guide",
-      "text": "The arc is $80^\\circ$, so take half of it."
+      "text": "The arc is $80^\\circ$, and an inscribed angle measures half of its intercepted arc. Take half of $80$."
     },
     {
       "level": "reveal",
-      "text": "$80 \\div 2 = 40^\\circ$."
+      "text": "$80 \\div 2 = 40$, so the inscribed angle measures $40^\\circ$."
     }
   ],
   "explanation": [
-    "A central angle equals its intercepted arc, so the arc here is $80^\\circ$.",
-    "An inscribed angle (vertex on the circle) is half its intercepted arc.",
-    "So the inscribed angle is $\\frac{80}{2} = 40^\\circ$."
+    "The intercepted arc measures $80^\\circ$, the same as the central angle that cuts it off.",
+    "An inscribed angle has its vertex on the circle, and the Inscribed Angle Theorem says it is half its intercepted arc.",
+    "So the inscribed angle is half of $80^\\circ$, which is $\\frac{80}{2} = 40^\\circ$."
   ],
   "alternativeExplanations": [
     {

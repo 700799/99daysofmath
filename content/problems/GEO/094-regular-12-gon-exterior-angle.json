@@ -10,25 +10,25 @@
   "primaryAnswer": "30",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The exterior angles of ANY convex polygon always add to $360^\\circ$.",
+  "hint": "The exterior angles of any convex polygon add up to the same total, one full turn. Recall that total.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The exterior angles of ANY convex polygon always add to $360^\\circ$."
+      "text": "The exterior angles of any convex polygon add up to the same total, one full turn. Recall that total."
     },
     {
       "level": "guide",
-      "text": "Regular means all $12$ exterior angles are equal, so divide $360$ by $12$."
+      "text": "The exterior angles total $360^\\circ$, and a regular polygon has $12$ equal ones here, so divide $360$ by $12$."
     },
     {
       "level": "reveal",
-      "text": "$360 \\div 12 = 30^\\circ$."
+      "text": "$360 \\div 12 = 30$, so each exterior angle measures $30^\\circ$."
     }
   ],
   "explanation": [
-    "Walking once around any convex polygon turns you through a full $360^\\circ$.",
-    "In a regular $12$-gon those turns are all equal: $360 \\div 12$.",
-    "Each exterior angle is $30^\\circ$."
+    "Walking once around any convex polygon turns you through one full turn, so the exterior angles add to $360^\\circ$.",
+    "A regular polygon with $12$ sides has $12$ equal exterior angles, so each is $360 \\div 12$.",
+    "That division gives $30$, so each exterior angle is $30^\\circ$."
   ],
   "alternativeExplanations": [
     {

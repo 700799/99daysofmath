@@ -12,24 +12,26 @@
     "$84"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply $12$ by $7$.",
+  "hint": "The formula is already written for you. You only need to use the right number for $n$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply $12$ by $7$."
+      "text": "The formula is already written for you. You only need to use the right number for $n$."
     },
     {
       "level": "guide",
-      "text": "$12 \\times 7$."
+      "text": "Put $7$ in for $n$ to get $c = 12 \\times 7$. Splitting it as $10 \\times 7$ plus $2 \\times 7$ can help."
     },
     {
       "level": "reveal",
-      "text": "$84$."
+      "text": "$12 \\times 7 = 84$, so seven tickets cost $84$ dollars."
     }
   ],
   "explanation": [
-    "$c = 12n$ with $n = 7$: $c = 12 \\cdot 7 = 84$.",
-    "Cost: \\$$84$."
+    "In $c = 12n$, $n$ is the number of tickets and $c$ is the total cost.",
+    "Replace $n$ with $7$, the number of tickets bought: $c = 12 \\times 7$.",
+    "Break up the product: $10 \\times 7 = 70$ and $2 \\times 7 = 14$, and $70 + 14 = 84$.",
+    "The total cost of $7$ tickets is $84$ dollars."
   ],
   "tags": [
     "two-vars",

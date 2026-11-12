@@ -10,7 +10,7 @@
   "primaryAnswer": "10.65",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Try an easier version: $2.5$ kg that gains $0.25$ kg and then $0.1$ kg. Write them all with two decimal places — $2.50 + 0.25 + 0.10 = 2.85$. Giving every number the same number of decimal places is the whole trick.",
+  "hint": "Each gain makes the puppy heavier, so the weights are joined together. Keep the decimal points lined up when you combine them.",
   "hints": [
     {
       "level": "nudge",
@@ -19,22 +19,22 @@
     },
     {
       "level": "nudge",
-      "text": "Gaining weight means adding. Add all three numbers, keeping the decimal points stacked."
+      "text": "Each gain makes the puppy heavier, so the weights are joined together. Keep the decimal points lined up when you combine them."
     },
     {
       "level": "guide",
-      "text": "Write them all with two decimal places: $8.40 + 1.35 + 0.90$."
+      "text": "Write every number with two decimal places: $8.40 + 1.35 + 0.90$. Add the first two, and then add the third to that result."
     },
     {
       "level": "reveal",
-      "text": "$8.40 + 1.35 = 9.75$, and $9.75 + 0.90 = 10.65$ kg."
+      "text": "$8.40 + 1.35 = 9.75$ and $9.75 + 0.90 = 10.65$, so the puppy now weighs $10.65$ kg."
     }
   ],
   "explanation": [
-    "Rewrite every number with two decimal places so the columns match: $8.40$, $1.35$, $0.90$.",
-    "Add the first two: $8.40 + 1.35 = 9.75$.",
-    "Add the third: $9.75 + 0.90 = 10.65$.",
-    "The puppy now weighs $10.65$ kg."
+    "Write every weight with two decimal places so the columns match: $8.40$, $1.35$ and $0.90$.",
+    "Add the starting weight and the first gain: $8.40 + 1.35 = 9.75$.",
+    "Add the second gain to that: $9.75 + 0.90 = 10.65$.",
+    "After both gains, the puppy now weighs $10.65$ kilograms."
   ],
   "alternativeExplanations": [
     {

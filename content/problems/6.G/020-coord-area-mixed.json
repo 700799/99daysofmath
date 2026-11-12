@@ -10,29 +10,31 @@
   "primaryAnswer": "48",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Width: $|5 - (-3)| = 8$. Height: $|4 - (-2)| = 6$.",
+  "hint": "Negative coordinates do not change the method. You still need the width and the height, found as distances between coordinates.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+      "text": "You could also count: going from $-3$ to $5$ on a number line means $3$ steps to reach zero and then $5$ more steps."
     },
     {
       "level": "nudge",
-      "text": "Width: $|5 - (-3)| = 8$. Height: $|4 - (-2)| = 6$."
+      "text": "Negative coordinates do not change the method. You still need the width and the height, found as distances between coordinates."
     },
     {
       "level": "guide",
-      "text": "$A = 8 \\times 6$."
+      "text": "The width goes from $x = -3$ to $x = 5$, which is $5 - (-3) = 8$. The height goes from $y = -2$ to $y = 4$, which is $4 - (-2) = 6$. Multiply them."
     },
     {
       "level": "reveal",
-      "text": "$48$."
+      "text": "$8 \\times 6 = 48$, so the area of the rectangle is $48$ square units."
     }
   ],
   "explanation": [
-    "Width $8$, height $6$.",
-    "$A = 48$."
+    "The bottom side runs from $(-3, -2)$ to $(5, -2)$, so the width is $5 - (-3) = 5 + 3 = 8$.",
+    "The right side runs from $(5, -2)$ to $(5, 4)$, so the height is $4 - (-2) = 4 + 2 = 6$.",
+    "Multiply width by height to get the area of the rectangle: $8 \\times 6 = 48$.",
+    "The area of the rectangle is $48$ square units."
   ],
   "tags": [
     "MAP-practice",

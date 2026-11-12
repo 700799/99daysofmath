@@ -14,25 +14,25 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Each leaf is one player. The stem is the tens digit and the leaf is the ones digit.",
+  "hint": "In a stemplot the stem is the tens digit and each leaf is the ones digit of one player. Where in the plot does the age $23$ sit?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Each leaf is one player. The stem is the tens digit and the leaf is the ones digit."
+      "text": "In a stemplot the stem is the tens digit and each leaf is the ones digit of one player. Where in the plot does the age $23$ sit?"
     },
     {
       "level": "guide",
-      "text": "Rebuild the list: $12, 15, 18, 20, 23, 23, 27, 31, 34, 40$. Now count from $23$ upward."
+      "text": "Written out, the ages are $12, 15, 18, 20, 23, 23, 27, 31, 34, 40$. Count every age from the first $23$ to the end of the list, and remember that $23$ itself is included."
     },
     {
       "level": "reveal",
-      "text": "$23, 23, 27, 31, 34, 40$ — that is $6$ players."
+      "text": "The ages $23, 23, 27, 31, 34, 40$ qualify, so $6$ players are $23$ or older."
     }
   ],
   "explanation": [
-    "Read the plot row by row: stem $1$ gives $12, 15, 18$; stem $2$ gives $20, 23, 23, 27$; stem $3$ gives $31, 34$; stem $4$ gives $40$.",
-    "The ages that are $23$ or more are $23, 23, 27, 31, 34, 40$.",
-    "That is $6$ players."
+    "Read the plot row by row to recover the ages: stem $1$ gives $12, 15, 18$; stem $2$ gives $20, 23, 23, 27$; stem $3$ gives $31, 34$; stem $4$ gives $40$.",
+    "\"$23$ or older\" includes $23$ itself, so both leaves of $3$ on stem $2$ count, along with everything after them.",
+    "The ages that qualify are $23, 23, 27, 31, 34, 40$, which is $6$ players."
   ],
   "alternativeExplanations": [
     {

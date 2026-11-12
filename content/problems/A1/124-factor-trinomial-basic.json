@@ -14,26 +14,26 @@
     "(x+3)(x+2)"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Hunt for two numbers that MULTIPLY to $6$ and ADD to $5$.",
+  "hint": "Factoring this kind of trinomial comes down to finding two numbers. Think about what their product and their sum must be.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Hunt for two numbers that MULTIPLY to $6$ and ADD to $5$."
+      "text": "Factoring this kind of trinomial comes down to finding two numbers. Think about what their product and their sum must be."
     },
     {
       "level": "guide",
-      "text": "Pairs for $6$: $1 \\times 6$ and $2 \\times 3$. Which pair adds to $5$?"
+      "text": "You need two numbers that multiply to $6$ and add to $5$. The pairs for $6$ are $1$ and $6$, or $2$ and $3$. Test their sums."
     },
     {
       "level": "reveal",
-      "text": "$2 + 3 = 5$ and $2 \\times 3 = 6$, so $x^2 + 5x + 6 = (x + 2)(x + 3)$."
+      "text": "$2 \\times 3 = 6$ and $2 + 3 = 5$, so the factored form is $(x + 2)(x + 3)$."
     }
   ],
   "explanation": [
-    "Find two numbers that multiply to $6$ and add to $5$.",
-    "The pair is $2$ and $3$.",
-    "So $x^2 + 5x + 6 = (x + 2)(x + 3)$.",
-    "Check by expanding: $x^2 + 3x + 2x + 6$. It matches."
+    "To factor $x^2 + 5x + 6$, look for two numbers that multiply to $6$ and add to $5$.",
+    "The pair $2$ and $3$ works, because $2 \\times 3 = 6$ and $2 + 3 = 5$.",
+    "Those numbers go into the two brackets, so $x^2 + 5x + 6 = (x + 2)(x + 3)$.",
+    "Check by expanding the brackets: $x^2 + 3x + 2x + 6 = x^2 + 5x + 6$, which matches."
   ],
   "alternativeExplanations": [
     {

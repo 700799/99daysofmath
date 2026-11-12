@@ -12,24 +12,26 @@
     "15 cu units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$V = l \\cdot w \\cdot h$.",
+  "hint": "The volume of a box comes from multiplying its three dimensions. One of these dimensions makes the work very short.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$V = l \\cdot w \\cdot h$."
+      "text": "The volume of a box comes from multiplying its three dimensions. One of these dimensions makes the work very short."
     },
     {
       "level": "guide",
-      "text": "$1 \\cdot 3 \\cdot 5$."
+      "text": "Set up $1 \\times 3 \\times 5$. Multiplying by $1$ changes nothing, so you only need $3 \\times 5$."
     },
     {
       "level": "reveal",
-      "text": "$15$."
+      "text": "$1 \\times 3 \\times 5 = 15$, so the volume of the box is $15$ cubic units."
     }
   ],
   "explanation": [
-    "$V = 1 \\cdot 3 \\cdot 5 = 15$ cubic units.",
-    "Final answer: 15."
+    "The volume of a box is length times width times height: $V = 1 \\times 3 \\times 5$.",
+    "Multiplying by $1$ leaves a number unchanged, so $1 \\times 3 = 3$.",
+    "Then multiply by the last dimension: $3 \\times 5 = 15$.",
+    "The volume of the box is $15$ cubic units."
   ],
   "tags": [
     "volume"

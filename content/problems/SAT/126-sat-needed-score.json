@@ -10,19 +10,19 @@
   "primaryAnswer": "94",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Work with totals, not averages.",
+  "hint": "Averages cannot be added directly. Think about the total number of points the student has now and the total needed later.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Work with totals, not averages."
+      "text": "Averages cannot be added directly. Think about the total number of points the student has now and the total needed later."
     },
     {
       "level": "guide",
-      "text": "Current total: $5 \\times 82 = 410$. Needed total: $6 \\times 84 = 504$."
+      "text": "The total so far is $5 \\times 82 = 410$. Six tests with an average of $84$ need a total of $6 \\times 84 = 504$. Compare the two totals."
     },
     {
       "level": "reveal",
-      "text": "$504 - 410 = 94$."
+      "text": "The sixth test must supply the difference, $504 - 410 = 94$, so a score of $94$ is needed."
     }
   ],
   "learningObjective": "Use the sum-equals-mean-times-count relationship.",

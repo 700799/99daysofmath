@@ -10,19 +10,19 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The FTC says: the derivative of $\\int_a^x f(t) \\, dt$ with respect to $x$ is just $f(x)$. No integrating needed.",
+  "hint": "The Fundamental Theorem of Calculus tells you the derivative of $\\int_a^x f(t) \\, dt$ directly. No integrating is needed.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The FTC says: the derivative of $\\int_a^x f(t) \\, dt$ with respect to $x$ is just $f(x)$. No integrating needed."
+      "text": "The Fundamental Theorem of Calculus tells you the derivative of $\\int_a^x f(t) \\, dt$ directly. No integrating is needed."
     },
     {
       "level": "guide",
-      "text": "So $g'(x) = x^2 + 1$. Substitute $x = 2$."
+      "text": "The derivative of the accumulation function is the integrand evaluated at $x$, so $g'(x) = x^2 + 1$. Substitute $x = 2$."
     },
     {
       "level": "reveal",
-      "text": "$g'(2) = 4 + 1 = 5$."
+      "text": "Substituting gives $g'(2) = 4 + 1 = 5$, so the answer is $5$."
     }
   ],
   "explanation": [

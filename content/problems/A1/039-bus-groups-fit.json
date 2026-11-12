@@ -10,11 +10,11 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Subtract the $12$ students already aboard from both sides.",
+  "hint": "Some seats are already taken. Work out what is left before thinking about groups.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Subtract the $12$ students already aboard from both sides."
+      "text": "Some seats are already taken. Work out what is left before thinking about groups."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$4g \\le 28$. Divide both sides by $4$."
+      "text": "Subtract $12$ from both sides to get $4g \\le 28$. Then divide both sides by $4$."
     },
     {
       "level": "reveal",
-      "text": "$g \\le 7$, so at most $7$ groups can board."
+      "text": "$g \\le 7$, so the greatest number of groups that can board is $7$."
     }
   ],
   "explanation": [
-    "Subtract 12 from both sides: $4g \\le 28$.",
-    "Divide by 4: $g \\le 7$.",
-    "The greatest whole number of groups is 7. Check: $12 + 4(7) = 40$ students — exactly full, and \"at most 40\" allows it. ✓"
+    "Subtract the $12$ students already aboard from both sides: $4g \\le 28$ seats remain for groups.",
+    "Divide both sides by $4$, a positive number, so the sign stays: $g \\le 7$.",
+    "The greatest whole number allowed is $7$ groups. Check: $12 + 4(7) = 40$ students, and \"at most $40$\" allows a full bus."
   ],
   "alternativeExplanations": [
     {

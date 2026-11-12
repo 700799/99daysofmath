@@ -12,24 +12,26 @@
     "12 ft"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$1$ yd $= 3$ ft.",
+  "hint": "Yards are bigger than feet. When you switch to a smaller unit, you need more of them to cover the same length.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$1$ yd $= 3$ ft."
+      "text": "Yards are bigger than feet. When you switch to a smaller unit, you need more of them to cover the same length."
     },
     {
       "level": "guide",
-      "text": "$4 \\times 3$."
+      "text": "One yard is $3$ feet, so $4$ yards is four groups of $3$ feet: work out $4 \\times 3$."
     },
     {
       "level": "reveal",
-      "text": "$12$ ft."
+      "text": "$4 \\times 3 = 12$, so a length of $4$ yards is $12$ feet."
     }
   ],
   "explanation": [
-    "$4 \\times 3 = 12$ feet.",
-    "Final answer: 12."
+    "Use the fact given in the problem: $1$ yard is the same length as $3$ feet.",
+    "Each of the $4$ yards becomes $3$ feet, so multiply the yards by $3$.",
+    "Four groups of three feet make $4 \\times 3 = 12$ feet.",
+    "Four yards are the same length as $12$ feet."
   ],
   "tags": [
     "conversion",

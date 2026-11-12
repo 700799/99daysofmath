@@ -12,25 +12,25 @@
     "9/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Set the curves equal to find the intersection points: $4 - x^2 = x + 2$.",
+  "hint": "Set the two curves equal to find where they intersect. Those $x$-values are the limits of the integral.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Set the curves equal to find the intersection points: $4 - x^2 = x + 2$."
+      "text": "Set the two curves equal to find where they intersect. Those $x$-values are the limits of the integral."
     },
     {
       "level": "guide",
-      "text": "$x^2 + x - 2 = 0 \\Rightarrow (x + 2)(x - 1) = 0$, so $x = -2$ and $x = 1$. The parabola is on top between them. Integrate $(4 - x^2) - (x + 2)$."
+      "text": "Solving $4 - x^2 = x + 2$ gives $x^2 + x - 2 = 0$, so $(x + 2)(x - 1) = 0$ and $x = -2$ or $x = 1$. The parabola is on top between them, so integrate $(4 - x^2) - (x + 2)$."
     },
     {
       "level": "reveal",
-      "text": "$\\int_{-2}^{1} (2 - x - x^2) \\, dx = \\left[2x - \\frac{x^2}{2} - \\frac{x^3}{3}\\right]_{-2}^{1} = \\frac{7}{6} - \\left(-\\frac{10}{3}\\right) = \\frac{9}{2} = 4.5$."
+      "text": "The area is $\\int_{-2}^{1} (2 - x - x^2) \\, dx = \\left[2x - \\frac{x^2}{2} - \\frac{x^3}{3}\\right]_{-2}^{1} = \\frac{7}{6} - \\left(-\\frac{10}{3}\\right) = \\frac{9}{2}$, so the region has area $4.5$ square units."
     }
   ],
   "explanation": [
-    "Intersections: $4 - x^2 = x + 2 \\Rightarrow x^2 + x - 2 = 0 \\Rightarrow x = -2, 1$. At $x = 0$ the parabola gives $4$ and the line $2$, so the parabola is on top.",
-    "Area $= \\int_{-2}^{1} \\left[(4 - x^2) - (x + 2)\\right] dx = \\int_{-2}^{1} (2 - x - x^2) \\, dx$.",
-    "Antiderivative $F(x) = 2x - \\frac{x^2}{2} - \\frac{x^3}{3}$. $F(1) = 2 - \\frac{1}{2} - \\frac{1}{3} = \\frac{7}{6}$; $F(-2) = -4 - 2 + \\frac{8}{3} = -\\frac{10}{3}$. Area $= \\frac{7}{6} + \\frac{20}{6} = \\frac{27}{6} = 4.5$."
+    "Find the intersections: $4 - x^2 = x + 2$ gives $x^2 + x - 2 = 0$, so $x = -2$ or $x = 1$. At $x = 0$ the parabola gives $4$ and the line $2$, so the parabola is on top.",
+    "The area is the integral of top minus bottom: $\\int_{-2}^{1} \\left[(4 - x^2) - (x + 2)\\right] dx = \\int_{-2}^{1} (2 - x - x^2) \\, dx$.",
+    "With the antiderivative $F(x) = 2x - \\frac{x^2}{2} - \\frac{x^3}{3}$, the values are $F(1) = 2 - \\frac{1}{2} - \\frac{1}{3} = \\frac{7}{6}$ and $F(-2) = -4 - 2 + \\frac{8}{3} = -\\frac{10}{3}$. The area is $\\frac{7}{6} + \\frac{20}{6} = \\frac{27}{6} = 4.5$."
   ],
   "alternativeExplanations": [
     {

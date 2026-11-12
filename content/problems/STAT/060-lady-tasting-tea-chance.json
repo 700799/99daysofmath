@@ -13,11 +13,11 @@
     "0.014"
   ],
   "acceptanceMode": "normalized",
-  "hint": "If she guesses, every way of choosing $4$ cups out of $8$ is equally likely, and only ONE of those ways is completely right.",
+  "hint": "If she is guessing, every possible set of $4$ cups is equally likely to be her choice. How many of those sets are completely right?",
   "hints": [
     {
       "level": "nudge",
-      "text": "If she guesses, every way of choosing $4$ cups out of $8$ is equally likely, and only ONE of those ways is completely right."
+      "text": "If she is guessing, every possible set of $4$ cups is equally likely to be her choice. How many of those sets are completely right?"
     },
     {
       "level": "nudge",
@@ -26,11 +26,11 @@
     },
     {
       "level": "guide",
-      "text": "Count the ways to choose $4$ cups from $8$: $\\binom{8}{4} = \\frac{8 \\cdot 7 \\cdot 6 \\cdot 5}{4 \\cdot 3 \\cdot 2 \\cdot 1}$."
+      "text": "Only one set is correct, so the probability is $1$ over the number of ways to choose $4$ cups from $8$, which is $\\binom{8}{4} = \\frac{8 \\cdot 7 \\cdot 6 \\cdot 5}{4 \\cdot 3 \\cdot 2 \\cdot 1}$."
     },
     {
       "level": "reveal",
-      "text": "$\\binom{8}{4} = 70$, so the probability of a perfect guess is $\\frac{1}{70} \\approx 0.014$."
+      "text": "$\\binom{8}{4} = 70$, so the probability of a perfect guess is $\\frac{1}{70}$, about $0.014$."
     }
   ],
   "explanation": [

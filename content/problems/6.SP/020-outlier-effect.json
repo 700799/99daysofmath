@@ -10,30 +10,31 @@
   "primaryAnswer": "18.8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Sum increases by $50$, count increases by $1$.",
+  "hint": "A new value changes two things about the mean: the total goes up and so does the number of values.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Mean is fair-shares; median is the middle. Pick the one the question actually asks for."
+      "text": "Try a tiny set first: the mean of $2$ and $4$ is $3$. Add a much larger value such as $30$ and see which way the mean moves."
     },
     {
       "level": "nudge",
-      "text": "Sum increases by $50$, count increases by $1$."
+      "text": "A new value changes two things about the mean: the total goes up and so does the number of values."
     },
     {
       "level": "guide",
-      "text": "New sum: $44 + 50 = 94$. New count: $5$."
+      "text": "The old total is $4 \\times 11 = 44$. Adding $50$ makes the new total $94$, and there are now $5$ values, so divide $94$ by $5$."
     },
     {
       "level": "reveal",
-      "text": "$94 / 5 = 18.8$."
+      "text": "$94 \\div 5 = 18.8$, so the new mean is $18.8$."
     }
   ],
   "explanation": [
-    "Old sum: $44$. New sum: $94$.",
-    "New count: $5$.",
-    "New mean: $18.8$."
+    "The original total is $8 + 10 + 12 + 14 = 44$, which matches a mean of $11$ for $4$ values.",
+    "Adding the outlier raises the total by $50$: $44 + 50 = 94$.",
+    "The data set now has one more value, so the count is $5$ instead of $4$.",
+    "Divide the new total by the new count: $94 \\div 5 = 18.8$, so the new mean is $18.8$."
   ],
   "tags": [
     "CA",

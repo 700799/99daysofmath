@@ -10,27 +10,27 @@
   "primaryAnswer": "80",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The $\\$60$ represents what fraction of the original price?",
+  "hint": "The $60$ dollars is the price after the discount, not before. What percent of the original price does it represent?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $\\$60$ represents what fraction of the original price?"
+      "text": "The $60$ dollars is the price after the discount, not before. What percent of the original price does it represent?"
     },
     {
       "level": "guide",
-      "text": "A $25\\%$ discount leaves $75\\%$, so $0.75p = 60$."
+      "text": "A $25\\%$ discount leaves $75\\%$ of the price, so with $p$ as the original price, $0.75p = 60$. Divide to find $p$."
     },
     {
       "level": "reveal",
-      "text": "$p = \\dfrac{60}{0.75} = 80$ dollars."
+      "text": "Since $60 \\div 0.75 = 80$, the original price of the shoes was $80$ dollars."
     }
   ],
   "learningObjective": "Reverse a percent change to recover the original amount.",
   "topic": "Reverse percentages",
   "explanation": [
     "A $25\\%$ discount means the customer pays $75\\%$ of the original price.",
-    "So $0.75p = 60$, giving $p = \\dfrac{60}{0.75} = \\$80$.",
-    "Check: $25\\%$ of $80$ is $20$, and $80 - 20 = \\$60$ ✓"
+    "With $p$ as the original price, $0.75p = 60$. Dividing both sides by $0.75$ gives $p = 80$.",
+    "Check: $25\\%$ of $80$ is $20$, and $80 - 20 = 60$. The original price was $80$ dollars."
   ],
   "alternativeExplanations": [
     {

@@ -11,19 +11,19 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "$t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}$.",
+  "hint": "A $t$ statistic compares the gap between the sample mean and the claimed mean with the standard error of the mean.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}$."
+      "text": "A $t$ statistic compares the gap between the sample mean and the claimed mean with the standard error of the mean."
     },
     {
       "level": "guide",
-      "text": "$s/\\sqrt{n} = 1.6/\\sqrt{64} = 1.6/8 = 0.2$."
+      "text": "The standard error is $s/\\sqrt{n} = 1.6/\\sqrt{64} = 0.2$. Divide the gap $10.4 - 10$ by that standard error."
     },
     {
       "level": "reveal",
-      "text": "$t = \\frac{10.4 - 10}{0.2} = \\frac{0.4}{0.2} = 2$."
+      "text": "$t = \\frac{0.4}{0.2} = 2$, so the sample mean is $2$ standard errors above $10$ oz and the $t$ statistic is $2$."
     }
   ],
   "explanation": [

@@ -10,19 +10,19 @@
   "primaryAnswer": "150",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Isolate the sine first, exactly as you would isolate $x$ in a linear equation.",
+  "hint": "Isolate the sine first, exactly as you would isolate $x$ in a linear equation. After that it is a unit circle question.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Isolate the sine first, exactly as you would isolate $x$ in a linear equation."
+      "text": "Isolate the sine first, exactly as you would isolate $x$ in a linear equation. After that it is a unit circle question."
     },
     {
       "level": "guide",
-      "text": "$2\\sin\\theta = 1$, so $\\sin\\theta = \\frac{1}{2}$. The reference angle is $30^\\circ$."
+      "text": "Adding $1$ and dividing by $2$ gives $\\sin\\theta = \\frac{1}{2}$, so the reference angle is $30^\\circ$. Sine is positive in quadrants I and II, so find the angle in each."
     },
     {
       "level": "reveal",
-      "text": "Sine is positive in quadrants I and II: $30^\\circ$ and $180^\\circ - 30^\\circ = 150^\\circ$. The larger is $150^\\circ$."
+      "text": "The solutions are $30^\\circ$ and $180^\\circ - 30^\\circ = 150^\\circ$, so the larger one is $150$ degrees."
     }
   ],
   "explanation": [

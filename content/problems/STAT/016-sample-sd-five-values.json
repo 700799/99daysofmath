@@ -13,25 +13,26 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "The mean is $5$. Standard deviation measures the typical distance of a value from the mean.",
+  "hint": "Standard deviation describes the typical distance of the values from their mean, so the mean is the place to start.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The mean is $5$. Standard deviation measures the typical distance of a value from the mean."
+      "text": "Standard deviation describes the typical distance of the values from their mean, so the mean is the place to start."
     },
     {
       "level": "guide",
-      "text": "Square each deviation: $(-4)^2, (-2)^2, 0^2, 2^2, 4^2 = 16, 4, 0, 4, 16$. Add them, divide by $n - 1 = 4$, then take the square root."
+      "text": "The mean is $5$, so the deviations are $-4, -2, 0, 2, 4$. Square them, add the squares, divide by $n - 1 = 4$, and take the square root."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{40}{4} = 10$, and $\\sqrt{10} \\approx 3.16$ cm."
+      "text": "The squares add to $40$, $\\frac{40}{4} = 10$, and $\\sqrt{10} \\approx 3.16$, so the sample standard deviation is about $3.16$ cm."
     }
   ],
   "explanation": [
-    "Mean $= \\frac{1 + 3 + 5 + 7 + 9}{5} = 5$.",
-    "Deviations $-4, -2, 0, 2, 4$ square to $16, 4, 0, 4, 16$, which sum to $40$.",
-    "Sample variance $= \\frac{40}{5 - 1} = 10$, so $s = \\sqrt{10} \\approx 3.16$ cm."
+    "Deviations are measured from the mean, which is $\\frac{1 + 3 + 5 + 7 + 9}{5} = 5$ cm.",
+    "The deviations $-4, -2, 0, 2, 4$ are squared so that negatives do not cancel positives: $16, 4, 0, 4, 16$, which sum to $40$.",
+    "For a sample, divide by $n - 1$ rather than $n$, so the variance is $\\frac{40}{4} = 10$.",
+    "The standard deviation is the square root of the variance, so $s = \\sqrt{10} \\approx 3.16$ cm."
   ],
   "alternativeExplanations": [
     {

@@ -14,11 +14,11 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "\"Not the bus\" means walk plus car — or the column total minus the bus count.",
+  "hint": "Students who do not take the bus either walk or go by car. Find that count for each grade before comparing.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Not the bus\" means walk plus car — or the column total minus the bus count."
+      "text": "Students who do not take the bus either walk or go by car. Find that count for each grade before comparing."
     },
     {
       "level": "nudge",
@@ -27,19 +27,19 @@
     },
     {
       "level": "guide",
-      "text": "Grade 9: $110 - 45 = 65$. Grade 10: $90 - 35 = 55$."
+      "text": "Subtract the bus riders from each column total. Grade $9$ has $110 - 45$ and Grade $10$ has $90 - 35$. Then subtract the two results."
     },
     {
       "level": "reveal",
-      "text": "$65 - 55 = 10$."
+      "text": "The counts are $65$ and $55$, so there are $65 - 55 = 10$ more Grade $9$ students who do not take the bus."
     }
   ],
   "learningObjective": "Combine complement and comparison steps on a two-way table.",
   "topic": "Two-way tables",
   "explanation": [
-    "Grade 9 students not taking the bus: $110 - 45 = 65$ (equivalently $30 + 35$).",
-    "Grade 10 students not taking the bus: $90 - 35 = 55$ (equivalently $20 + 35$).",
-    "The difference is $65 - 55 = 10$."
+    "In Grade $9$, the students not taking the bus number $110 - 45 = 65$, which matches $30 + 35$ from the other rows.",
+    "In Grade $10$, the students not taking the bus number $90 - 35 = 55$, which matches $20 + 35$.",
+    "Subtract to compare the grades: $65 - 55 = 10$, so there are $10$ more such students in Grade $9$."
   ],
   "alternativeExplanations": [
     {

@@ -32,27 +32,28 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Undo the operations in reverse order: the $+7$ comes off before the $\\times 3$.",
+  "hint": "The variable $x$ was multiplied by $3$ and then had $7$ added. Which of those two operations should you undo first?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Undo the operations in reverse order: the $+7$ comes off before the $\\times 3$."
+      "text": "The variable $x$ was multiplied by $3$ and then had $7$ added. Which of those two operations should you undo first?"
     },
     {
       "level": "guide",
-      "text": "Subtract $7$ from both sides to get $3x = 15$."
+      "text": "Undo the addition by subtracting $7$ from both sides, which leaves $3x = 15$. Now undo the multiplication."
     },
     {
       "level": "reveal",
-      "text": "$3x = 15$, so $x = 5$."
+      "text": "Dividing $15$ by $3$ gives $x = 5$, which is choice B."
     }
   ],
   "learningObjective": "Solve a two-step linear equation in one variable.",
   "topic": "Two-step equations",
   "explanation": [
-    "Subtract $7$ from both sides: $3x = 15$.",
-    "Divide both sides by $3$: $x = 5$.",
-    "Check: $3(5) + 7 = 15 + 7 = 22$ ✓"
+    "Subtract $7$ from both sides to undo the addition, which leaves the $x$ term alone: $3x = 15$.",
+    "Divide both sides by $3$ to undo the multiplication, which gives $x = 5$.",
+    "Check by substituting back: $3(5) + 7 = 15 + 7 = 22$, which matches the right side.",
+    "The value of $x$ is $5$, which is choice B."
   ],
   "alternativeExplanations": [
     {

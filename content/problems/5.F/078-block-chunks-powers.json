@@ -12,26 +12,26 @@
     "100,000"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Turn each power of ten into a regular number first.",
+  "hint": "Each power of ten is just a regular number written in a short way. Change both of them before deciding what to do.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Turn each power of ten into a regular number first."
+      "text": "Each power of ten is just a regular number written in a short way. Change both of them before deciding what to do."
     },
     {
       "level": "guide",
-      "text": "$10^2 = 100$ chunks and $10^3 = 1{,}000$ blocks each. Now multiply."
+      "text": "$10^2 = 100$ chunks and $10^3 = 1{,}000$ blocks in each chunk. Equal groups mean multiplying, so find $100 \\times 1{,}000$."
     },
     {
       "level": "reveal",
-      "text": "$100 \\times 1{,}000 = 100{,}000$ blocks."
+      "text": "$100 \\times 1{,}000 = 100{,}000$, so the whole world has $100{,}000$ blocks."
     }
   ],
   "explanation": [
-    "$10^2 = 100$ and $10^3 = 1{,}000$.",
-    "Total blocks $= 100 \\times 1{,}000$. Multiplying by $1{,}000$ adds three zeros to $100$.",
-    "$100 \\times 1{,}000 = 100{,}000$ blocks in the world.",
-    "Notice the shortcut: two zeros plus three zeros gives five zeros, which is $10^5$."
+    "Change the powers into regular numbers: $10^2 = 100$ chunks and $10^3 = 1{,}000$ blocks per chunk.",
+    "Every chunk holds the same number of blocks, so multiply the two numbers: $100 \\times 1{,}000$.",
+    "Multiplying by $1{,}000$ puts three zeros on the end of $100$, which gives $100{,}000$ blocks.",
+    "The zeros show a shortcut: two zeros and three zeros make five zeros, so the answer is also $10^5$."
   ],
   "alternativeExplanations": [
     {

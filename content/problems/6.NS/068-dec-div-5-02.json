@@ -10,29 +10,31 @@
   "primaryAnswer": "25",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Move both decimal points so the divisor is a whole number.",
+  "hint": "Dividing by a decimal is awkward. Both numbers can be scaled by the same power of ten without changing the quotient.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Use the \"keep–change–flip\" trick whenever you see division by a fraction."
+      "text": "The decimal $0.2$ is one fifth. Think about how many fifths are in one whole, and then in five wholes."
     },
     {
       "level": "nudge",
-      "text": "Move both decimal points so the divisor is a whole number."
+      "text": "Dividing by a decimal is awkward. Both numbers can be scaled by the same power of ten without changing the quotient."
     },
     {
       "level": "guide",
-      "text": "Move one place: $50 \\div 2$."
+      "text": "Multiply both $5$ and $0.2$ by $10$, which moves each decimal point one place. The problem becomes $50 \\div 2$."
     },
     {
       "level": "reveal",
-      "text": "$50 \\div 2 = 25$."
+      "text": "$50 \\div 2 = 25$, so the answer to $5 \\div 0.2$ is $25$."
     }
   ],
   "explanation": [
-    "Shift both numbers $\\times 10$: $5 \\div 0.2 = 50 \\div 2$.",
-    "$50 \\div 2 = 25$."
+    "Make the divisor a whole number by multiplying both numbers by $10$. This keeps the quotient the same.",
+    "After both decimal points move one place, $5 \\div 0.2$ becomes $50 \\div 2$.",
+    "Dividing the whole numbers now gives $50 \\div 2 = 25$.",
+    "So $5 \\div 0.2 = 25$. You can check by multiplying back: $0.2 \\times 25 = 5$."
   ],
   "alternativeExplanations": [
     {

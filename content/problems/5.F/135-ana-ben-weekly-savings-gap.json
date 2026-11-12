@@ -13,19 +13,19 @@
     "$10"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Build both money patterns week by week, then compare week $5$.",
+  "hint": "Each person's savings make a pattern that grows by the same amount every week. Compare the two patterns at the same week.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Build both money patterns week by week, then compare week $5$."
+      "text": "Each person's savings make a pattern that grows by the same amount every week. Compare the two patterns at the same week."
     },
     {
       "level": "guide",
-      "text": "Ana: $4, 8, 12, 16, 20$. Ben: $6, 12, 18, 24, 30$."
+      "text": "After $5$ weeks Ana has $5 \\times 4$ dollars and Ben has $5 \\times 6$ dollars. Find both amounts and then subtract."
     },
     {
       "level": "reveal",
-      "text": "$30 - 20 = 10$ dollars more for Ben."
+      "text": "Ana has $\\$20$ and Ben has $\\$30$, and $30 - 20 = 10$, so Ben has $\\$10$ more than Ana."
     }
   ],
   "explanation": [

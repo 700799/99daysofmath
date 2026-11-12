@@ -13,25 +13,25 @@
     "40%"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The probabilities in a valid distribution must add up to exactly $1$.",
+  "hint": "A probability distribution covers every possible value of $X$. What must all of its probabilities add up to?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The probabilities in a valid distribution must add up to exactly $1$."
+      "text": "A probability distribution covers every possible value of $X$. What must all of its probabilities add up to?"
     },
     {
       "level": "guide",
-      "text": "Add the three known probabilities and subtract from $1$."
+      "text": "The total has to be $1$, so add the three known probabilities, $0.15 + 0.35 + 0.10$, and subtract that sum from $1$."
     },
     {
       "level": "reveal",
-      "text": "$0.15 + 0.35 + 0.10 = 0.60$, so $P(X = 2) = 1 - 0.60 = 0.40$."
+      "text": "The known ones total $0.60$, so $P(X = 2) = 1 - 0.60 = 0.40$."
     }
   ],
   "explanation": [
-    "A probability distribution lists every possible outcome, so its probabilities sum to $1$.",
-    "The known ones total $0.15 + 0.35 + 0.10 = 0.60$.",
-    "The missing one fills the gap: $1 - 0.60 = 0.40$."
+    "A probability distribution lists every possible outcome, so its probabilities must sum to exactly $1$.",
+    "The three known probabilities add up to $0.15 + 0.35 + 0.10 = 0.60$.",
+    "The missing probability fills the gap, so $P(X = 2) = 1 - 0.60 = 0.40$."
   ],
   "alternativeExplanations": [
     {

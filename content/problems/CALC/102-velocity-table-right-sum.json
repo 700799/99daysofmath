@@ -10,25 +10,25 @@
   "primaryAnswer": "50",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Distance is the area under the velocity graph. Each subinterval is $2$ seconds wide; a RIGHT sum uses the reading at the END of each subinterval.",
+  "hint": "Distance is the area under the velocity graph. Each subinterval is $2$ seconds wide, and a right sum uses the reading at the end of each subinterval.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Distance is the area under the velocity graph. Each subinterval is $2$ seconds wide; a RIGHT sum uses the reading at the END of each subinterval."
+      "text": "Distance is the area under the velocity graph. Each subinterval is $2$ seconds wide, and a right sum uses the reading at the end of each subinterval."
     },
     {
       "level": "guide",
-      "text": "Right endpoints are $t = 2, 4, 6$ with velocities $8, 10, 7$. Multiply each by $2$ seconds."
+      "text": "The right endpoints are $t = 2, 4, 6$ with velocities $8, 10, 7$. Multiply each velocity by $2$ seconds and add the results."
     },
     {
       "level": "reveal",
-      "text": "$2(8 + 10 + 7) = 2 \\cdot 25 = 50$ meters."
+      "text": "The estimate is $2(8 + 10 + 7) = 2 \\cdot 25 = 50$, so the cyclist travels about $50$ meters."
     }
   ],
   "explanation": [
-    "Subintervals: $[0, 2]$, $[2, 4]$, $[4, 6]$, each of width $\\Delta t = 2$.",
-    "Right-endpoint velocities: $v(2) = 8$, $v(4) = 10$, $v(6) = 7$.",
-    "Estimated distance $= 2 \\cdot 8 + 2 \\cdot 10 + 2 \\cdot 7 = 50$ m. (The left sum would give $2(5 + 8 + 10) = 46$ m; the truth is somewhere around there.)"
+    "The three subintervals are $[0, 2]$, $[2, 4]$, $[4, 6]$, each of width $\\Delta t = 2$.",
+    "A right sum uses the velocity at the end of each subinterval: $v(2) = 8$, $v(4) = 10$, $v(6) = 7$.",
+    "The estimated distance is $2 \\cdot 8 + 2 \\cdot 10 + 2 \\cdot 7 = 50$ m. (The left sum would give $2(5 + 8 + 10) = 46$ m, and the truth is somewhere around there.)"
   ],
   "alternativeExplanations": [
     {

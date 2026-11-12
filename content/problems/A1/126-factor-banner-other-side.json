@@ -30,9 +30,9 @@
     }
   ],
   "explanation": [
-    "Factor the area: find numbers multiplying to $12$, adding to $7$.",
-    "The pair is $3$ and $4$: $x^2 + 7x + 12 = (x + 3)(x + 4)$.",
-    "One side is $(x + 3)$, so the other side is $x + 4$ feet."
+    "Area is one side times the other, so factor the area by finding two numbers that multiply to $12$ and add to $7$.",
+    "The pair is $3$ and $4$, which gives $x^2 + 7x + 12 = (x + 3)(x + 4)$.",
+    "One factor is the known side $(x + 3)$, so the other side is $x + 4$ feet long."
   ],
   "alternativeExplanations": [
     {

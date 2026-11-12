@@ -27,29 +27,31 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Spread = how far apart the values are.",
+  "hint": "Spread describes how far apart the values in a set are. Both sets here have the same middle value, $6$.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Draw a tiny dot plot. The shape of the data tells you which statistic to use."
+      "text": "Picture each set as dots on a number line. In which set are the dots farther from the middle dot?"
     },
     {
       "level": "nudge",
-      "text": "Spread = how far apart the values are."
+      "text": "Spread describes how far apart the values in a set are. Both sets here have the same middle value, $6$."
     },
     {
       "level": "guide",
-      "text": "A range: $2$. B range: $10$."
+      "text": "Compare the ranges. Set $A$ runs from $5$ to $7$, and set $B$ runs from $1$ to $11$. Subtract for each set."
     },
     {
       "level": "reveal",
-      "text": "B."
+      "text": "The range of $A$ is $2$ and the range of $B$ is $10$, so set B has the greater spread."
     }
   ],
   "explanation": [
-    "A: range $2$. B: range $10$.",
-    "B has greater spread."
+    "One simple way to measure spread is the range, the largest value minus the smallest.",
+    "Set $A$ has range $7 - 5 = 2$, so its values stay close to $6$.",
+    "Set $B$ has range $11 - 1 = 10$, so its values reach much farther from $6$.",
+    "Since $10 > 2$, set $B$ has the greater spread, which is choice B."
   ],
   "tags": [
     "spread"

@@ -13,7 +13,7 @@
     "2/8"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Say just $2$ cups held $\\frac{1}{4}$ and $\\frac{3}{4}$. Together that is $1$ cup, and $1 \\div 2 = \\frac{1}{2}$ cup each. Total first, then share — same plan below.",
+  "hint": "Sharing equally means finding the total amount of juice first. After that, the total is split among the six cups.",
   "hints": [
     {
       "level": "nudge",
@@ -22,21 +22,21 @@
     },
     {
       "level": "nudge",
-      "text": "Step 1 is the TOTAL juice; step 2 is splitting that total among $6$ cups."
+      "text": "Sharing equally means finding the total amount of juice first. After that, the total is split among the six cups."
     },
     {
       "level": "guide",
-      "text": "In eighths: $2 \\times \\frac{1}{8} = \\frac{2}{8}$, $3 \\times \\frac{1}{4} = \\frac{6}{8}$, and $\\frac{1}{2} = \\frac{4}{8}$."
+      "text": "Write everything in eighths: $2 \\times \\frac{1}{8} = \\frac{2}{8}$, $3 \\times \\frac{1}{4} = \\frac{6}{8}$ and $\\frac{1}{2} = \\frac{4}{8}$. Add them, then divide the total by $6$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{2 + 6 + 4}{8} = \\frac{12}{8} = 1\\frac{1}{2}$ cups total, and $1\\frac{1}{2} \\div 6 = \\frac{1}{4}$ cup each."
+      "text": "The total is $\\frac{12}{8} = 1\\frac{1}{2}$ cups, and $1\\frac{1}{2} \\div 6 = \\frac{1}{4}$, so each cup would hold $\\frac{1}{4}$ cup."
     }
   ],
   "explanation": [
-    "Rewrite everything in eighths: the two $\\frac{1}{8}$ cups give $\\frac{2}{8}$, the three $\\frac{1}{4}$ cups give $\\frac{6}{8}$, and the single $\\frac{1}{2}$ cup gives $\\frac{4}{8}$.",
-    "Total juice: $\\frac{2}{8} + \\frac{6}{8} + \\frac{4}{8} = \\frac{12}{8} = 1\\frac{1}{2}$ cups.",
-    "Share it among the $6$ cups: $1\\frac{1}{2} \\div 6 = \\frac{3}{2} \\div 6 = \\frac{3}{12} = \\frac{1}{4}$.",
+    "Rewrite each amount in eighths: the two $\\frac{1}{8}$ cups give $\\frac{2}{8}$, the three $\\frac{1}{4}$ cups give $\\frac{6}{8}$ and the $\\frac{1}{2}$ cup gives $\\frac{4}{8}$.",
+    "Add to find the total juice: $\\frac{2}{8} + \\frac{6}{8} + \\frac{4}{8} = \\frac{12}{8} = 1\\frac{1}{2}$ cups.",
+    "Share the total equally among the $6$ cups: $1\\frac{1}{2} \\div 6 = \\frac{3}{2} \\div 6 = \\frac{3}{12} = \\frac{1}{4}$.",
     "Each cup would hold $\\frac{1}{4}$ cup of juice."
   ],
   "alternativeExplanations": [

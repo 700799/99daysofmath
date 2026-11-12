@@ -10,7 +10,7 @@
   "primaryAnswer": "56",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Warm up on $[(4 + 2) \\div 3] \\times [10 - (2 \\times 3)]$. Left bracket: $6 \\div 3 = 2$. Right bracket: $10 - 6 = 4$. Then $2 \\times 4 = 8$. Same two-bracket plan below.",
+  "hint": "There are two brackets multiplied together. Treat each bracket as its own small problem before multiplying.",
   "hints": [
     {
       "level": "nudge",
@@ -19,22 +19,22 @@
     },
     {
       "level": "nudge",
-      "text": "Treat the two brackets as two separate mini-problems, then multiply your two results."
+      "text": "There are two brackets multiplied together. Treat each bracket as its own small problem before multiplying."
     },
     {
       "level": "guide",
-      "text": "Left bracket: $18 + 6 = 24$, then $24 \\div 3$. Right bracket: $2 \\times 4 = 8$, then $15 - 8$."
+      "text": "Left bracket: $18 + 6 = 24$, then $24 \\div 3$. Right bracket: $2 \\times 4 = 8$, then $15 - 8$. Multiply your two results."
     },
     {
       "level": "reveal",
-      "text": "Left is $8$, right is $7$, and $8 \\times 7 = 56$."
+      "text": "The left bracket is $8$ and the right bracket is $7$, and $8 \\times 7 = 56$, so the expression equals $56$."
     }
   ],
   "explanation": [
-    "Left bracket: the parentheses go first, $18 + 6 = 24$, then $24 \\div 3 = 8$.",
-    "Right bracket: the parentheses go first, $2 \\times 4 = 8$, then $15 - 8 = 7$.",
+    "In the left bracket, the parentheses go first: $18 + 6 = 24$, and then $24 \\div 3 = 8$.",
+    "In the right bracket, the parentheses go first: $2 \\times 4 = 8$, and then $15 - 8 = 7$.",
     "Now multiply the two finished brackets: $8 \\times 7 = 56$.",
-    "The expression equals $56$."
+    "The whole expression has a value of $56$."
   ],
   "alternativeExplanations": [
     {

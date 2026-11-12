@@ -12,29 +12,31 @@
     "175 ft"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the new position first, then take its absolute value.",
+  "hint": "This takes two steps. Find where the submarine ends up, then ask how far that position is from sea level, which is $0$.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try a 10×-easier version: shrink each number by a factor of 10 and watch the structure."
+      "text": "Try smaller numbers: dive to $-5$ ft and rise $2$ ft. You end at $-3$ ft, which is $3$ ft from sea level. Use the same two steps here."
     },
     {
       "level": "nudge",
-      "text": "Find the new position first, then take its absolute value."
+      "text": "This takes two steps. Find where the submarine ends up, then ask how far that position is from sea level, which is $0$."
     },
     {
       "level": "guide",
-      "text": "Position: $-250 + 75 = -175$. Distance: $|-175|$."
+      "text": "The new position is $-250 + 75$. Because $75$ is less than $250$, the submarine is still below sea level. The distance from sea level is the absolute value of the position."
     },
     {
       "level": "reveal",
-      "text": "$175$ ft below sea level — $175$ ft from sea level."
+      "text": "$-250 + 75 = -175$ and $|-175| = 175$, so the submarine is $175$ ft from sea level."
     }
   ],
   "explanation": [
-    "New position: $-250 + 75 = -175$.",
-    "Distance from sea level (the value $0$): $|-175| = 175$ ft."
+    "Rising $75$ ft means adding $75$ to the starting position: $-250 + 75$.",
+    "The rise is smaller than the depth, so the submarine stays below sea level at $-(250 - 75) = -175$ ft.",
+    "Sea level is $0$, so the distance from sea level is the absolute value of the position: $|-175|$.",
+    "$|-175| = 175$, so the submarine is $175$ ft from sea level."
   ],
   "tags": [
     "MAP-practice",

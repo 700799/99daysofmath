@@ -10,23 +10,26 @@
   "primaryAnswer": "200",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$10\\%$ of something is $20$. The whole is $10$ times bigger.",
+  "hint": "Here the part is known and the whole is missing. If $20$ is only one tenth of the number, is the number bigger or smaller than $20$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$10\\%$ of something is $20$. The whole is $10$ times bigger."
+      "text": "Here the part is known and the whole is missing. If $20$ is only one tenth of the number, is the number bigger or smaller than $20$?"
     },
     {
       "level": "guide",
-      "text": "Multiply $20 \\times 10$."
+      "text": "$10\\%$ is one tenth, so the whole number is made of $10$ pieces that are each $20$. Work out $20 \\times 10$."
     },
     {
       "level": "reveal",
-      "text": "$20 \\times 10 = 200$."
+      "text": "Ten pieces of $20$ make $20 \\times 10 = 200$, so the number is $200$."
     }
   ],
   "explanation": [
-    "If $10\\%$ is $20$, then $100\\%$ is $20 \\times 10 = 200$."
+    "$10\\%$ means one tenth, so $20$ is one of ten equal pieces of the unknown number.",
+    "The whole is all ten pieces together, so multiply the piece by $10$: $20 \\times 10 = 200$.",
+    "Check by going forward: $10\\%$ of $200$ is $200 \\div 10 = 20$, which is correct.",
+    "The number we were looking for is $200$."
   ],
   "alternativeExplanations": [
     {

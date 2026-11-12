@@ -10,24 +10,26 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$25\\% \\cdot N = 15$.",
+  "hint": "The $15$ is only a piece of the mystery number. What fraction of the whole is $25\\%$, and how many such pieces make the whole?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$25\\% \\cdot N = 15$."
+      "text": "The $15$ is only a piece of the mystery number. What fraction of the whole is $25\\%$, and how many such pieces make the whole?"
     },
     {
       "level": "guide",
-      "text": "$N = 15 \\div 0.25$."
+      "text": "$25\\%$ is one quarter, so $15$ is one of $4$ equal pieces. The whole number is $4$ of those pieces: work out $15 \\times 4$."
     },
     {
       "level": "reveal",
-      "text": "$15 \\div 0.25 = 60$."
+      "text": "Four pieces of $15$ make $15 \\times 4 = 60$, so the number is $60$."
     }
   ],
   "explanation": [
-    "Let $N$ be the whole. $0.25 \\cdot N = 15$.",
-    "$N = 15 \\div 0.25 = 60$."
+    "$25\\%$ equals $\\frac{1}{4}$, so $15$ is one quarter of the unknown number.",
+    "Four quarters make the whole, so multiply the quarter by $4$: $15 \\times 4 = 60$.",
+    "Check by going forward: one quarter of $60$ is $60 \\div 4 = 15$, which matches.",
+    "The number we were looking for is $60$."
   ],
   "alternativeExplanations": [
     {

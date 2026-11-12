@@ -32,11 +32,11 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Set the two expressions equal and look at the resulting quadratic.",
+  "hint": "Solutions of the system are points where the parabola and the line meet. Combine the two equations into one and study it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Set the two expressions equal and look at the resulting quadratic."
+      "text": "Solutions of the system are points where the parabola and the line meet. Combine the two equations into one and study it."
     },
     {
       "level": "nudge",
@@ -45,19 +45,20 @@
     },
     {
       "level": "guide",
-      "text": "$x^2 - 4x + 5 = 2x - 3$ becomes $x^2 - 6x + 8 = 0$."
+      "text": "Setting the right sides equal and collecting terms gives $x^2 - 6x + 8 = 0$. Work out its discriminant, $(-6)^2 - 4(1)(8)$, to count the solutions."
     },
     {
       "level": "reveal",
-      "text": "Its discriminant is $36 - 32 = 4 > 0$, so there are two solutions."
+      "text": "The discriminant is $36 - 32 = 4$, which is positive, so the system has exactly two solutions, choice C."
     }
   ],
   "learningObjective": "Count intersections of a parabola and a line using the discriminant.",
   "topic": "Nonlinear systems",
   "explanation": [
-    "Set the expressions equal: $x^2 - 4x + 5 = 2x - 3$.",
-    "Collect everything on one side: $x^2 - 6x + 8 = 0$.",
-    "The discriminant is $(-6)^2 - 4(1)(8) = 36 - 32 = 4$, which is positive — two distinct real solutions. (Factoring confirms: $(x - 2)(x - 4) = 0$.)"
+    "Both equations give $y$, so set the expressions equal: $x^2 - 4x + 5 = 2x - 3$.",
+    "Subtract $2x$ and add $3$ to collect everything on one side: $x^2 - 6x + 8 = 0$.",
+    "The discriminant is $(-6)^2 - 4(1)(8) = 36 - 32 = 4$. A positive discriminant means two different real values of $x$.",
+    "Factoring agrees, since $(x - 2)(x - 4) = 0$. The system has exactly two solutions, which is choice C."
   ],
   "alternativeExplanations": [
     {

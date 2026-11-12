@@ -10,23 +10,26 @@
   "primaryAnswer": "13",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Add $4$ to both sides.",
+  "hint": "Here $4$ is being taken away from $x$. Which operation puts it back?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add $4$ to both sides."
+      "text": "Here $4$ is being taken away from $x$. Which operation puts it back?"
     },
     {
       "level": "guide",
-      "text": "$x = 9 + 4$."
+      "text": "Add $4$ to both sides so the subtraction is undone. The right side becomes $9 + 4$."
     },
     {
       "level": "reveal",
-      "text": "$x = 13$."
+      "text": "$9 + 4 = 13$, so the solution of the equation is $x = 13$."
     }
   ],
   "explanation": [
-    "$x - 4 = 9 \\Rightarrow x = 13$."
+    "In $x - 4 = 9$, the number $4$ is subtracted from $x$.",
+    "Addition undoes subtraction, so add $4$ to both sides of the equation.",
+    "The left side becomes $x$ and the right side becomes $9 + 4 = 13$.",
+    "Check: $13 - 4 = 9$ is true, so the solution is $x = 13$."
   ],
   "tags": [
     "solve"

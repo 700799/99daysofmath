@@ -10,24 +10,26 @@
   "primaryAnswer": "24",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Parentheses first, then multiply.",
+  "hint": "Once $b$ has a value, the parentheses hold a sum you can work out first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Parentheses first, then multiply."
+      "text": "Once $b$ has a value, the parentheses hold a sum you can work out first."
     },
     {
       "level": "guide",
-      "text": "$4(5 + 1) = 4 \\cdot 6$."
+      "text": "With $b = 5$ the expression is $4(5 + 1)$. Add inside the parentheses, then multiply by $4$."
     },
     {
       "level": "reveal",
-      "text": "$24$."
+      "text": "$5 + 1 = 6$ and $4 \\times 6 = 24$, so the value is $24$."
     }
   ],
   "explanation": [
-    "$4(b + 1)$ with $b = 5$: $4(5 + 1) = 4 \\cdot 6 = 24$.",
-    "Final answer: 24."
+    "Replace the letter $b$ with its value $5$ to get $4(5 + 1)$.",
+    "Parentheses come first, so add inside them: $5 + 1 = 6$.",
+    "Then multiply that sum by the $4$ outside: $4 \\times 6 = 24$.",
+    "The value of the expression is $24$."
   ],
   "alternativeExplanations": [
     {

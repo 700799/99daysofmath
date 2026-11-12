@@ -12,24 +12,26 @@
     "500 cm"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$1$ m $= 100$ cm. Multiply.",
+  "hint": "A centimeter is much shorter than a meter, so it takes many of them to match each meter. Will the answer be larger or smaller than $5$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$1$ m $= 100$ cm. Multiply."
+      "text": "A centimeter is much shorter than a meter, so it takes many of them to match each meter. Will the answer be larger or smaller than $5$?"
     },
     {
       "level": "guide",
-      "text": "$5 \\times 100$."
+      "text": "Each meter is $100$ centimeters, so multiply the $5$ meters by $100$."
     },
     {
       "level": "reveal",
-      "text": "$500$ cm."
+      "text": "$5 \\times 100 = 500$, so a length of $5$ meters is $500$ centimeters."
     }
   ],
   "explanation": [
-    "$5 \\times 100 = 500$ centimeters.",
-    "Final answer: 500."
+    "The problem gives the fact that $1$ meter equals $100$ centimeters.",
+    "Converting to the smaller unit means multiplying, so set up $5 \\times 100$.",
+    "Multiplying by $100$ puts two zeros after the $5$, giving $500$.",
+    "Five meters are the same length as $500$ centimeters."
   ],
   "tags": [
     "conversion",

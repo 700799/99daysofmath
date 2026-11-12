@@ -12,24 +12,26 @@
     "6 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Area of a right triangle $= \\tfrac{1}{2}(\\text{leg}_1)(\\text{leg}_2)$.",
+  "hint": "The two legs lie along the axes and meet in a right angle at the origin. One leg can be the base and the other the height.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Area of a right triangle $= \\tfrac{1}{2}(\\text{leg}_1)(\\text{leg}_2)$."
+      "text": "The two legs lie along the axes and meet in a right angle at the origin. One leg can be the base and the other the height."
     },
     {
       "level": "guide",
-      "text": "$\\tfrac{1}{2}(3)(4)$."
+      "text": "The leg to $(3,0)$ has length $3$ and the leg to $(0,4)$ has length $4$. Take half of $3 \\times 4$."
     },
     {
       "level": "reveal",
-      "text": "$6$."
+      "text": "$\\frac{1}{2} \\times 3 \\times 4 = 6$, so the area of the triangle is $6$ square units."
     }
   ],
   "explanation": [
-    "Legs $3$ and $4$.",
-    "$\\tfrac{1}{2} \\cdot 3 \\cdot 4 = 6$."
+    "The leg from $(0,0)$ to $(3,0)$ lies on the $x$-axis and is $3$ units long.",
+    "The leg from $(0,0)$ to $(0,4)$ lies on the $y$-axis and is $4$ units long.",
+    "The legs are perpendicular, so they act as base and height: $A = \\frac{1}{2} \\times 3 \\times 4$.",
+    "Half of $12$ is $6$, so the area of the triangle is $6$ square units."
   ],
   "tags": [
     "coordinate-plane",

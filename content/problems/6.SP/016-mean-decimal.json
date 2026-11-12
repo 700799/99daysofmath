@@ -15,24 +15,25 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.05,
-  "hint": "Sum then divide by count.",
+  "hint": "Decimals work the same way as whole numbers here: find the total, then share it equally.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sum then divide by count."
+      "text": "Decimals work the same way as whole numbers here: find the total, then share it equally."
     },
     {
       "level": "guide",
-      "text": "Sum: $10$. Count: $3$."
+      "text": "Add $2.5 + 3.5 + 4$ to get $10$. There are $3$ values, so divide $10$ by $3$ and round to two decimal places."
     },
     {
       "level": "reveal",
-      "text": "$10 / 3 \\approx 3.33$."
+      "text": "$10 \\div 3 \\approx 3.33$, so the mean is about $3.33$."
     }
   ],
   "explanation": [
-    "Sum: $2.5 + 3.5 + 4 = 10$.",
-    "$10 / 3 \\approx 3.33$."
+    "Add the three values to find the total: $2.5 + 3.5 + 4 = 10$.",
+    "There are $3$ values, so the total must be split into $3$ equal shares.",
+    "Divide: $10 \\div 3 = 3.333\\ldots$, which rounds to $3.33$, so the mean is about $3.33$."
   ],
   "tags": [
     "mean",

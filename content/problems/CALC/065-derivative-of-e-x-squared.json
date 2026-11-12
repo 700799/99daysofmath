@@ -40,17 +40,17 @@
     },
     {
       "level": "guide",
-      "text": "Derivative of $e^u$ is $e^u \\cdot u'$. With $u = x^2$, $u' = 2x$."
+      "text": "The derivative of $e^u$ is $e^u \\cdot u'$. Here the inside is $u = x^2$, whose derivative is $u' = 2x$. Multiply the two pieces together."
     },
     {
       "level": "reveal",
-      "text": "$y' = e^{x^2} \\cdot 2x = 2x\\, e^{x^2}$: choice A."
+      "text": "The derivative is $y' = e^{x^2} \\cdot 2x = 2x\\, e^{x^2}$, which is choice A."
     }
   ],
   "explanation": [
-    "Outside function: $e^u$, whose derivative is $e^u$ (unchanged). Inside: $u = x^2$.",
-    "Chain rule: $y' = e^{x^2} \\cdot \\frac{d}{dx}(x^2) = 2x\\, e^{x^2}$.",
-    "Choice B drops the inside derivative; C misuses the power rule on an exponential; D confuses $e^{x^2}$ with $(e^x)^2 = e^{2x}$."
+    "The outside function is $e^u$, whose derivative is $e^u$ (unchanged). The inside function is $u = x^2$.",
+    "The chain rule multiplies by the inside derivative: $y' = e^{x^2} \\cdot \\frac{d}{dx}(x^2) = 2x\\, e^{x^2}$, choice A.",
+    "Choice B drops the inside derivative. C misuses the power rule on an exponential. D confuses $e^{x^2}$ with $(e^x)^2 = e^{2x}$."
   ],
   "alternativeExplanations": [
     {

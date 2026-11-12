@@ -13,24 +13,25 @@
     "y"
   ],
   "acceptanceMode": "exact",
-  "hint": "Substitute $4$ for $x$ and check.",
+  "hint": "To test a possible solution, put it into the equation and see if both sides agree.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $4$ for $x$ and check."
+      "text": "To test a possible solution, put it into the equation and see if both sides agree."
     },
     {
       "level": "guide",
-      "text": "$4 + 5 = 9$. Is this true?"
+      "text": "Replace $x$ with $4$ on the left side to get $4 + 5$. Compare that sum with $9$."
     },
     {
       "level": "reveal",
-      "text": "True → yes."
+      "text": "$4 + 5 = 9$ matches the right side, so the answer is yes."
     }
   ],
   "explanation": [
-    "Substitute $x = 4$: $4 + 5 = 9$. ✓",
-    "Yes — $x = 4$ is a solution."
+    "A solution is a value that makes the equation true.",
+    "Substitute $4$ for $x$ on the left side: $4 + 5 = 9$.",
+    "The left side equals the right side, $9$, so yes, $x = 4$ is a solution."
   ],
   "tags": [
     "check-solution"

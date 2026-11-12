@@ -13,24 +13,25 @@
     "y"
   ],
   "acceptanceMode": "exact",
-  "hint": "Distribute: $5(x - 2)$.",
+  "hint": "Expand the expression with parentheses and watch what happens to the minus sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Distribute: $5(x - 2)$."
+      "text": "Expand the expression with parentheses and watch what happens to the minus sign."
     },
     {
       "level": "guide",
-      "text": "$5 \\cdot x - 5 \\cdot 2 = 5x - 10$."
+      "text": "In $5(x - 2)$, multiply $5$ by $x$ and $5$ by $2$, keeping the subtraction. Compare the result with $5x - 10$."
     },
     {
       "level": "reveal",
-      "text": "Yes."
+      "text": "$5 \\cdot x - 5 \\cdot 2 = 5x - 10$, the same as the first expression, so the answer is yes."
     }
   ],
   "explanation": [
-    "$5(x - 2) = 5x - 10$.",
-    "Equivalent."
+    "Expand $5(x - 2)$ by using the distributive property.",
+    "The $5$ multiplies both terms, and the subtraction stays: $5 \\cdot x - 5 \\cdot 2$.",
+    "This gives $5x - 10$, which matches the first expression, so yes, they are equivalent."
   ],
   "tags": [
     "equivalent",

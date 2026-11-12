@@ -10,25 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Write $16$ as a power of $2$ so both sides match.",
+  "hint": "Write $16$ as a power of $2$ so both sides have a matching base.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Write $16$ as a power of $2$ so both sides match."
+      "text": "Write $16$ as a power of $2$ so both sides have a matching base."
     },
     {
       "level": "guide",
-      "text": "$16 = 2^4$, so $2^{x+1} = 2^4$, which means $x + 1 = 4$."
+      "text": "Since $16 = 2^4$, the equation becomes $2^{x+1} = 2^4$. Set the exponents equal to get $x + 1 = 4$, then solve."
     },
     {
       "level": "reveal",
-      "text": "$x + 1 = 4$ gives $x = 3$."
+      "text": "Subtracting $1$ from both sides of $x + 1 = 4$ gives $x = 3$."
     }
   ],
   "explanation": [
-    "Make the bases match: $16 = 2^4$.",
-    "Now $2^{x+1} = 2^4$, so the exponents are equal: $x + 1 = 4$.",
-    "Subtract $1$: $x = 3$. Check: $2^{3+1} = 2^4 = 16$."
+    "Make the bases match by writing $16$ as $2^4$.",
+    "Now $2^{x+1} = 2^4$, and equal bases mean the exponents are equal: $x + 1 = 4$.",
+    "Subtracting $1$ gives $x = 3$. Checking, $2^{3+1} = 2^4 = 16$, so the answer is $3$."
   ],
   "alternativeExplanations": [
     {

@@ -32,11 +32,11 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The volunteers were *randomly assigned* to the groups. What does that permit?",
+  "hint": "Two features of the design matter: how people got into the study and how they were put into groups. Each one limits or allows a different conclusion.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The volunteers were *randomly assigned* to the groups. What does that permit?"
+      "text": "Two features of the design matter: how people got into the study and how they were put into groups. Each one limits or allows a different conclusion."
     },
     {
       "level": "nudge",
@@ -45,11 +45,11 @@
     },
     {
       "level": "guide",
-      "text": "Random assignment to treatments allows a causal conclusion."
+      "text": "Random assignment to the two groups supports a claim of cause and effect. The people were volunteers, though, so the result does not extend to all adults."
     },
     {
       "level": "reveal",
-      "text": "But the volunteers were not randomly selected from all adults, so the conclusion stays with them."
+      "text": "The best conclusion is that the program likely caused the lower heart rates among these volunteers, which is choice A."
     }
   ],
   "learningObjective": "Distinguish what random assignment and random selection each justify.",

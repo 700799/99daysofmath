@@ -13,25 +13,26 @@
     "0.020"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply as whole numbers, then count decimal places.",
+  "hint": "Multiply the digits as if there were no decimal points. The total number of decimal places in the two factors goes into the product.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply as whole numbers, then count decimal places."
+      "text": "Multiply the digits as if there were no decimal points. The total number of decimal places in the two factors goes into the product."
     },
     {
       "level": "guide",
-      "text": "$4 \\times 5 = 20$. Decimal places: $1 + 2 = 3$."
+      "text": "Work out $4 \\times 5$. Then count places: $0.4$ has one and $0.05$ has two, so the product needs three decimal places. You may need a zero in front as a placeholder."
     },
     {
       "level": "reveal",
-      "text": "$0.020 = 0.02$."
+      "text": "$4 \\times 5 = 20$, and with three decimal places this is $0.020$, which equals $0.02$."
     }
   ],
   "explanation": [
-    "$4 \\times 5 = 20$.",
-    "Total decimal places: $1 + 2 = 3$.",
-    "Place the point: $0.020 = 0.02$."
+    "Ignore the decimal points first and multiply the digits: $4 \\times 5 = 20$.",
+    "Count the decimal places in the factors: $0.4$ has $1$ and $0.05$ has $2$, for a total of $3$.",
+    "Write $20$ with three decimal places. A zero is needed in front as a placeholder, giving $0.020$.",
+    "The final zero can be dropped, so the product is $0.02$."
   ],
   "tags": [
     "decimal",

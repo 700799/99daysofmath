@@ -22,25 +22,26 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "$65$ is an outlier.",
+  "hint": "Four of the ages are in the low thirties, and one age is very different from the rest.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$65$ is an outlier."
+      "text": "Four of the ages are in the low thirties, and one age is very different from the rest."
     },
     {
       "level": "guide",
-      "text": "Median is resistant to outliers."
+      "text": "The age $65$ is an outlier. Work out the mean, $191 \\div 5$, and the median, the middle of $30, 31, 32, 33, 65$, and see which is closer to most of the ages."
     },
     {
       "level": "reveal",
-      "text": "Median."
+      "text": "The mean is $38.2$ and the median is $32$, so the median (choice B) is the better summary."
     }
   ],
   "explanation": [
-    "Mean: $38.2$ (pulled up by $65$).",
-    "Median: $32$ (resistant to outlier).",
-    "Median better describes typical age."
+    "Add the five ages and divide by $5$ to get the mean: $(30 + 31 + 32 + 33 + 65) \\div 5 = 191 \\div 5 = 38.2$.",
+    "The median is the middle of the ordered ages $30, 31, 32, 33, 65$, which is $32$.",
+    "The outlier $65$ pulls the mean up to $38.2$, which is older than four of the five teachers.",
+    "The median $32$ is close to most of the ages, so the median, choice B, is the better summary."
   ],
   "tags": [
     "MAP-practice",

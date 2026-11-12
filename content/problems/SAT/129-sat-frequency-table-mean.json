@@ -17,11 +17,11 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "Each row represents several students, so weight each value by its frequency.",
+  "hint": "Each row of the table stands for several students. A value that many students share must count once for each of those students.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Each row represents several students, so weight each value by its frequency."
+      "text": "Each row of the table stands for several students. A value that many students share must count once for each of those students."
     },
     {
       "level": "nudge",
@@ -30,19 +30,19 @@
     },
     {
       "level": "guide",
-      "text": "Total pets $= 1(2) + 2(5) + 3(8) + 4(5) = 2 + 10 + 24 + 20 = 56$."
+      "text": "Multiply each number of pets by its number of students and add: $1(2) + 2(5) + 3(8) + 4(5)$. Then divide the total by the $20$ students."
     },
     {
       "level": "reveal",
-      "text": "$56 \\div 20 = 2.8$ pets per student."
+      "text": "The total is $2 + 10 + 24 + 20 = 56$ pets, and $56 \\div 20 = 2.8$. The mean is $2.8$ pets per student."
     }
   ],
   "learningObjective": "Compute a mean from a frequency table.",
   "topic": "Frequency tables",
   "explanation": [
-    "Multiply each value by how many students reported it: $1(2) + 2(5) + 3(8) + 4(5)$.",
-    "That is $2 + 10 + 24 + 20 = 56$ total pets.",
-    "Divide by the number of students: $56 \\div 20 = 2.8$."
+    "Multiply each number of pets by the number of students who own that many: $1(2) + 2(5) + 3(8) + 4(5)$.",
+    "Adding the products gives $2 + 10 + 24 + 20 = 56$ pets in total.",
+    "Divide by the $20$ students to get $56 \\div 20 = 2.8$, so the mean is $2.8$ pets per student."
   ],
   "alternativeExplanations": [
     {

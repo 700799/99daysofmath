@@ -16,24 +16,25 @@
     "sin(θ)"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Cosecant is already a reciprocal — of which function?",
+  "hint": "Cosecant is already a reciprocal of one of the three main functions. Which function is it the reciprocal of?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Cosecant is already a reciprocal — of which function?"
+      "text": "Cosecant is already a reciprocal of one of the three main functions. Which function is it the reciprocal of?"
     },
     {
       "level": "guide",
-      "text": "$\\csc\\theta = \\frac{1}{\\sin\\theta}$, so $\\frac{1}{\\csc\\theta}$ is the reciprocal of a reciprocal."
+      "text": "Since $\\csc\\theta = \\frac{1}{\\sin\\theta}$, the expression $\\frac{1}{\\csc\\theta}$ is the reciprocal of a reciprocal. Think about what flipping a fraction twice does."
     },
     {
       "level": "reveal",
-      "text": "Flipping twice returns you to where you started: $\\sin\\theta$."
+      "text": "Flipping twice returns you to where you started, so the expression equals $\\sin\\theta$ (type sin(theta))."
     }
   ],
   "explanation": [
-    "By definition $\\csc\\theta = \\frac{1}{\\sin\\theta}$.",
-    "So $\\frac{1}{\\csc\\theta} = \\frac{1}{1/\\sin\\theta} = \\sin\\theta$."
+    "By definition cosecant is the reciprocal of sine: $\\csc\\theta = \\frac{1}{\\sin\\theta}$.",
+    "Substitute that into the expression to get $\\frac{1}{\\csc\\theta} = \\frac{1}{1/\\sin\\theta}$, a reciprocal of a reciprocal.",
+    "Dividing by a fraction means multiplying by its flip, so the result is $\\sin\\theta$."
   ],
   "alternativeExplanations": [
     {

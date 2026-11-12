@@ -13,23 +13,26 @@
     "49 cm²"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Area of square $= s^2$.",
+  "hint": "Area counts the unit squares that cover a shape. For a square, what do you multiply to count them all?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Area of square $= s^2$."
+      "text": "Area counts the unit squares that cover a shape. For a square, what do you multiply to count them all?"
     },
     {
       "level": "guide",
-      "text": "$7 \\times 7$."
+      "text": "Every side of this square is $7$ cm, so multiply side by side: work out $7 \\times 7$."
     },
     {
       "level": "reveal",
-      "text": "$49$."
+      "text": "$7 \\times 7 = 49$, so the area is $49$ square centimeters."
     }
   ],
   "explanation": [
-    "$A = s^2 = 7^2 = 49$ sq cm."
+    "A square is a rectangle whose length and width are equal, so its area is side times side.",
+    "Each side is $7$ cm, which means the square holds $7$ rows of $7$ unit squares: $7 \\times 7$.",
+    "Multiply to find the number of unit squares: $7 \\times 7 = 49$.",
+    "The area of the square is $49$ square centimeters."
   ],
   "tags": [
     "area",

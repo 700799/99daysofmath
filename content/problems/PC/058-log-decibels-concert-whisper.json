@@ -10,11 +10,11 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find $\\log_{10}(1{,}000{,}000)$ first, then multiply by $10$.",
+  "hint": "Find $\\log_{10}(1{,}000{,}000)$ first, then multiply that result by $10$ as the decibel rule says.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find $\\log_{10}(1{,}000{,}000)$ first, then multiply by $10$."
+      "text": "Find $\\log_{10}(1{,}000{,}000)$ first, then multiply that result by $10$ as the decibel rule says."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$1{,}000{,}000$ has six zeros, so $\\log_{10}(1{,}000{,}000) = 6$."
+      "text": "The number $1{,}000{,}000$ has six zeros, so it is $10^6$ and $\\log_{10}(1{,}000{,}000) = 6$. The decibel rule multiplies that by $10$."
     },
     {
       "level": "reveal",
-      "text": "$10 \\times 6 = 60$ decibels louder."
+      "text": "Multiplying gives $10 \\times 6 = 60$, so the concert is $60$ decibels louder."
     }
   ],
   "explanation": [
-    "A million is $10^6$, so $\\log_{10}(1{,}000{,}000) = 6$.",
-    "Decibels multiply that log by $10$.",
-    "$10 \\times 6 = 60$ decibels louder."
+    "A million is $10^6$, so the log of the intensity ratio is $\\log_{10}(1{,}000{,}000) = 6$.",
+    "The decibel formula multiplies that log by $10$ to get the change in loudness.",
+    "So the concert is $10 \\times 6 = 60$ decibels louder than the whisper."
   ],
   "alternativeExplanations": [
     {

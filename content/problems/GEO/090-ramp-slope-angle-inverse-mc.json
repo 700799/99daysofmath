@@ -53,9 +53,9 @@
     }
   ],
   "explanation": [
-    "Set up the ratio with the angle at the bottom of the ramp: opposite $= 2$ (rise), adjacent $= 24$ (run).",
-    "$\\tan \\theta = \\frac{2}{24} \\approx 0.0833$.",
-    "Undo the tangent: $\\theta = \\tan^{-1}(0.0833) \\approx 4.8^\\circ$ — the ramp just barely passes code. Choice B."
+    "The ramp angle is at the bottom of the ramp, so the rise of $2$ is the opposite side and the run of $24$ is the adjacent side.",
+    "Opposite over adjacent is tangent, so $\\tan \\theta = \\frac{2}{24} \\approx 0.0833$, which is a ratio and not yet the angle.",
+    "The inverse tangent gives the angle: $\\theta = \\tan^{-1}(0.0833) \\approx 4.8^\\circ$, which is choice B and sits right at the code limit."
   ],
   "alternativeExplanations": [
     {

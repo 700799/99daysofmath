@@ -12,24 +12,26 @@
     "2/1"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Dividing by a fraction is the same as multiplying by its **reciprocal**.",
+  "hint": "Think of this as asking how many quarters fit inside one half. Dividing by a fraction means multiplying by its **reciprocal**.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Dividing by a fraction is the same as multiplying by its **reciprocal**."
+      "text": "Think of this as asking how many quarters fit inside one half. Dividing by a fraction means multiplying by its **reciprocal**."
     },
     {
       "level": "guide",
-      "text": "$\\frac{1}{2} \\div \\frac{1}{4} = \\frac{1}{2} \\times \\frac{4}{1}$."
+      "text": "Flip the divisor $\\frac{1}{4}$ to get $\\frac{4}{1}$ and rewrite the problem as $\\frac{1}{2} \\times \\frac{4}{1}$. Multiply across to finish."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2} \\times 4 = 2$."
+      "text": "$\\frac{1}{2} \\times \\frac{4}{1} = \\frac{4}{2} = 2$, so two quarters fit in one half and the answer is $2$."
     }
   ],
   "explanation": [
-    "Flip the divisor: $\\frac{1}{4} \\to \\frac{4}{1}$.",
-    "Multiply: $\\frac{1}{2} \\cdot \\frac{4}{1} = \\frac{4}{2} = 2$."
+    "Dividing by $\\frac{1}{4}$ asks how many quarters fit into $\\frac{1}{2}$, and it equals multiplying by the reciprocal of $\\frac{1}{4}$.",
+    "The reciprocal of $\\frac{1}{4}$ is $\\frac{4}{1}$, so rewrite the problem as $\\frac{1}{2} \\times \\frac{4}{1}$.",
+    "Multiply the numerators and the denominators to get $\\frac{1 \\times 4}{2 \\times 1} = \\frac{4}{2}$.",
+    "Since $4 \\div 2 = 2$, the answer is $2$. This makes sense because two quarters make one half."
   ],
   "tags": [
     "fraction-division"

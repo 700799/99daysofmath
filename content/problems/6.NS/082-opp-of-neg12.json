@@ -10,24 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Flip the sign.",
+  "hint": "The opposite of a number is just as far from $0$ but on the other side of the number line.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Flip the sign."
+      "text": "The opposite of a number is just as far from $0$ but on the other side of the number line."
     },
     {
       "level": "guide",
-      "text": "$-12 \\to 12$."
+      "text": "$-12$ is $12$ units to the left of $0$. Find the number that is $12$ units to the right by changing the sign."
     },
     {
       "level": "reveal",
-      "text": "$12$."
+      "text": "Changing the sign of $-12$ gives $12$, so the opposite is $12$."
     }
   ],
   "explanation": [
-    "Opposite of $-12$ is $12$.",
-    "Final answer: 12."
+    "Opposites are the same distance from $0$ on different sides of the number line.",
+    "$-12$ is $12$ units to the left of $0$, so its opposite is $12$ units to the right.",
+    "That number is $12$, so the opposite of $-12$ is $12$."
   ],
   "tags": [
     "integer",

@@ -10,15 +10,15 @@
   "primaryAnswer": "-7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Quotient rule: $\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$. The order on top matters.",
+  "hint": "This is one function divided by another, so the quotient rule applies. Remember that the order of the two terms on top matters.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Quotient rule: $\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$. The order on top matters."
+      "text": "This is one function divided by another, so the quotient rule applies. Remember that the order of the two terms on top matters."
     },
     {
       "level": "guide",
-      "text": "$u = 2x + 1$, $u' = 2$; $v = x - 3$, $v' = 1$. So $g'(x) = \\frac{2(x - 3) - (2x + 1)(1)}{(x - 3)^2}$."
+      "text": "Use $\\frac{u'v - uv'}{v^2}$ with top $u = 2x + 1$ (derivative $2$) and bottom $v = x - 3$ (derivative $1$). That gives $g'(x) = \\frac{2(x - 3) - (2x + 1)(1)}{(x - 3)^2}$. Simplify the top, then substitute $x = 4$."
     },
     {
       "level": "reveal",
@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "Top of the quotient rule: $u'v - uv' = 2(x - 3) - (2x + 1) = 2x - 6 - 2x - 1 = -7$.",
-    "So $g'(x) = \\frac{-7}{(x - 3)^2}$.",
-    "At $x = 4$: $\\frac{-7}{(1)^2} = -7$. The graph is falling steeply just right of its asymptote at $x = 3$."
+    "The top of the quotient rule is $u'v - uv' = 2(x - 3) - (2x + 1) = 2x - 6 - 2x - 1 = -7$.",
+    "The bottom of the quotient rule is the old denominator squared, so $g'(x) = \\frac{-7}{(x - 3)^2}$.",
+    "At $x = 4$ this is $\\frac{-7}{(1)^2} = -7$. The graph is falling steeply just right of its asymptote at $x = 3$."
   ],
   "alternativeExplanations": [
     {

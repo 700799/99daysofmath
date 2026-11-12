@@ -13,24 +13,26 @@
     "2,500"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$1$ kg $= 1000$ g. Multiply.",
+  "hint": "A kilogram is a thousand times heavier than a gram. Expect the number of grams to be much larger than $2.5$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$1$ kg $= 1000$ g. Multiply."
+      "text": "A kilogram is a thousand times heavier than a gram. Expect the number of grams to be much larger than $2.5$."
     },
     {
       "level": "guide",
-      "text": "$2.5 \\times 1000$."
+      "text": "Multiply $2.5$ by $1000$. Multiplying by $1000$ moves the decimal point three places to the right."
     },
     {
       "level": "reveal",
-      "text": "$2500$ g."
+      "text": "$2.5 \\times 1000 = 2500$, so a mass of $2.5$ kilograms is $2500$ grams."
     }
   ],
   "explanation": [
-    "$2.5 \\times 1000 = 2500$ grams.",
-    "Final answer: 2500."
+    "The conversion fact is $1$ kilogram $= 1000$ grams, so kilograms are multiplied by $1000$.",
+    "Think of $2.5$ kilograms as $2$ kilograms plus half a kilogram.",
+    "Two kilograms is $2000$ grams and half a kilogram is $500$ grams, so the total is $2500$.",
+    "A mass of $2.5$ kilograms is the same as $2500$ grams."
   ],
   "alternativeExplanations": [
     {

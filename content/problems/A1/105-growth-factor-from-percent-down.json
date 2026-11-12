@@ -13,25 +13,25 @@
     ".8"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Losing 20% means you KEEP the rest. What percent is left?",
+  "hint": "The factor describes what remains, not what is lost. What percent of the amount is still there after the loss?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Losing 20% means you KEEP the rest. What percent is left?"
+      "text": "The factor describes what remains, not what is lost. What percent of the amount is still there after the loss?"
     },
     {
       "level": "guide",
-      "text": "$100\\% - 20\\% = 80\\%$. Turn that into a decimal."
+      "text": "Losing $20\\%$ leaves $100\\% - 20\\% = 80\\%$. Change that percent to a decimal by dividing by $100$."
     },
     {
       "level": "reveal",
-      "text": "$80\\% = 0.80$. Multiply by 0.80 each year."
+      "text": "$80\\%$ written as a decimal is $0.80$, so you multiply by $0.80$ each year."
     }
   ],
   "explanation": [
-    "\"Down 20%\" means you keep $100\\% - 20\\% = 80\\%$ of the amount.",
-    "As a decimal, $80\\% = 0.80$.",
-    "So each year you multiply by 0.80. (Never multiply by 0.20 — that is what you LOSE.)"
+    "Shrinking by $20\\%$ means you keep the rest, which is $100\\% - 20\\% = 80\\%$ of the amount.",
+    "To write a percent as a decimal, divide by $100$: $80\\% = 0.80$.",
+    "So the yearly factor is $0.80$. Multiplying by $0.20$ would give only the part that is lost."
   ],
   "alternativeExplanations": [
     {

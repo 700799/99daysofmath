@@ -16,11 +16,11 @@
     "50l+20"
   ],
   "acceptanceMode": "normalized",
-  "hint": "One part repeats every level; one part happens only once.",
+  "hint": "Sort the story into a part that happens again for every level and a part that happens only once.",
   "hints": [
     {
       "level": "nudge",
-      "text": "One part repeats every level; one part happens only once."
+      "text": "Sort the story into a part that happens again for every level and a part that happens only once."
     },
     {
       "level": "nudge",
@@ -29,17 +29,17 @@
     },
     {
       "level": "guide",
-      "text": "$50$ coins per level for $L$ levels is $50L$. What do you add for the one-time bonus?"
+      "text": "Earning $50$ coins on each of $L$ levels gives $50L$. The welcome bonus of $20$ is added a single time."
     },
     {
       "level": "reveal",
-      "text": "Total coins: $50L + 20$."
+      "text": "Putting the repeating part and the one-time bonus together, the total is $50L + 20$ coins."
     }
   ],
   "explanation": [
-    "The repeating part: $50$ coins each level, $L$ times, gives $50L$.",
-    "The one-time part: the $20$-coin bonus is added once.",
-    "Total: $50L + 20$."
+    "The coins earned from levels repeat: $50$ coins for each of $L$ levels is $50 \\times L$, written $50L$.",
+    "The welcome bonus happens only once, so it is a plain $20$ that does not get multiplied by $L$.",
+    "Adding the two parts gives the total number of coins: $50L + 20$."
   ],
   "alternativeExplanations": [
     {

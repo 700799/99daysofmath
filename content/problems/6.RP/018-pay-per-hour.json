@@ -13,24 +13,26 @@
     "9 dollars"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find pay for $1$ hour.",
+  "hint": "Liam is paid the same amount for every hour. How can you find the pay for just one of those hours?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find pay for $1$ hour."
+      "text": "Liam is paid the same amount for every hour. How can you find the pay for just one of those hours?"
     },
     {
       "level": "guide",
-      "text": "$72 \\div 8 = ?$"
+      "text": "His $72$ dollars cover $8$ equal hours of work, so divide the pay by the hours: find $72 \\div 8$."
     },
     {
       "level": "reveal",
-      "text": "$72 \\div 8 = 9$. Liam earns \\$$9$/hour."
+      "text": "$72 \\div 8 = 9$, so Liam earns $9$ dollars per hour."
     }
   ],
   "explanation": [
-    "Total pay ÷ hours: $72 \\div 8 = 9$.",
-    "Pay rate is \\$$9$ per hour."
+    "Pay per hour is a unit rate, the amount earned for $1$ hour of work.",
+    "Divide the total pay by the number of hours: $72 \\div 8$.",
+    "Use a multiplication fact to divide: since $8 \\times 9 = 72$, the quotient is $9$.",
+    "Liam earns $9$ dollars for each hour he works."
   ],
   "tags": [
     "unit-rate",

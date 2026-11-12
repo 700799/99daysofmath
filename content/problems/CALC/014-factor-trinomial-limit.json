@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "Substituting $x = -2$ gives $\\frac{0}{0}$, so there is a hole to remove.",
-    "Factor the top: $(x + 2)(x + 3)$. Cancel the shared $(x + 2)$.",
-    "The limit of $x + 3$ as $x \\to -2$ is $-2 + 3 = 1$."
+    "Substituting $x = -2$ gives $\\frac{0}{0}$, so there is a hole to remove before the limit can be read.",
+    "Factor the top as $(x + 2)(x + 3)$ and cancel the shared factor $(x + 2)$, which is allowed because $x \\ne -2$ near the point.",
+    "What is left is $x + 3$, and as $x \\to -2$ it heads to $-2 + 3 = 1$, so the limit is $1$."
   ],
   "alternativeExplanations": [
     {

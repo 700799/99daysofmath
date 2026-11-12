@@ -10,19 +10,19 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Pair them up: $3$ with $9$, $6$ with $18$, $9$ with $27$.",
+  "hint": "Pair each number in Pattern X with the number in the same position in Pattern Y. Then look for a multiplying relationship.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Pair them up: $3$ with $9$, $6$ with $18$, $9$ with $27$."
+      "text": "Pair each number in Pattern X with the number in the same position in Pattern Y. Then look for a multiplying relationship."
     },
     {
       "level": "guide",
-      "text": "Divide a Y number by its X partner: $9 \\div 3$."
+      "text": "The pairs are $3$ and $9$, $6$ and $18$, $9$ and $27$, $12$ and $36$. Divide each Y number by its X partner, starting with $9 \\div 3$."
     },
     {
       "level": "reveal",
-      "text": "Every pair gives $3$, so Y is always $3$ times X."
+      "text": "Every pair gives a quotient of $3$, so each number in Pattern Y is $3$ times the matching number in Pattern X."
     }
   ],
   "explanation": [

@@ -12,30 +12,31 @@
     "61.20"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply as whole numbers, then place the decimal.",
+  "hint": "Decimal points can be left out during the multiplication and put back at the end. Count how many decimal places the two factors have altogether.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try a 10×-easier version: shrink each number by a factor of 10 and watch the structure."
+      "text": "Estimate with easier numbers first: $14 \\times 4.5$ is $63$. An estimate like this tells you where the decimal point must go."
     },
     {
       "level": "nudge",
-      "text": "Multiply as whole numbers, then place the decimal."
+      "text": "Decimal points can be left out during the multiplication and put back at the end. Count how many decimal places the two factors have altogether."
     },
     {
       "level": "guide",
-      "text": "$136 \\times 45 = 6120$. Total decimal places: $1 + 1 = 2$."
+      "text": "Multiply $136 \\times 45$ by adding $136 \\times 40$ and $136 \\times 5$. Each factor has one decimal place, so the product needs two."
     },
     {
       "level": "reveal",
-      "text": "$61.20 = 61.2$."
+      "text": "$5440 + 680 = 6120$, and with two decimal places the product is $61.20$, which is $61.2$."
     }
   ],
   "explanation": [
-    "$136 \\times 45$: $136 \\times 40 = 5440$; $136 \\times 5 = 680$; sum $= 6120$.",
-    "Decimal places: $1 + 1 = 2$.",
-    "$6120 \\to 61.20 = 61.2$."
+    "Drop the decimal points and multiply the whole numbers $136 \\times 45$ in two parts.",
+    "The parts are $136 \\times 40 = 5440$ and $136 \\times 5 = 680$, and their sum is $6120$.",
+    "Each factor has one decimal place, so the product needs $1 + 1 = 2$ decimal places.",
+    "Placing the point gives $61.20$, so the product is $61.2$. This is close to the estimate $14 \\times 4.5 = 63$."
   ],
   "tags": [
     "MAP-practice",

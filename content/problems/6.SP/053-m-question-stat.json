@@ -22,23 +22,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "It has just one answer.",
+  "hint": "Ask yourself whether you would need to collect a set of data to answer this question.",
   "hints": [
     {
       "level": "nudge",
-      "text": "It has just one answer."
+      "text": "Ask yourself whether you would need to collect a set of data to answer this question."
     },
     {
       "level": "guide",
-      "text": "Statistical questions anticipate variability."
+      "text": "The Empire State Building is one building with one height. A statistical question needs answers that vary from one case to the next."
     },
     {
       "level": "reveal",
-      "text": "No — one fixed answer."
+      "text": "The answer is No (choice B), because the question has one fixed answer."
     }
   ],
   "explanation": [
-    "One fixed answer → not statistical."
+    "A statistical question anticipates variability, so its answer comes from data that differs from case to case.",
+    "This question is about a single building, and that building has one fixed height.",
+    "With only one possible answer there is no variability, so the answer is No, choice B."
   ],
   "tags": [
     "statistical-question"

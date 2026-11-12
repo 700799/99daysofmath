@@ -10,25 +10,25 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Divide both sides by $4$: $c \\le 25 \\div 4$.",
+  "hint": "Solve the inequality first, then think about what kind of number a count of credits has to be.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Divide both sides by $4$: $c \\le 25 \\div 4$."
+      "text": "Solve the inequality first, then think about what kind of number a count of credits has to be."
     },
     {
       "level": "guide",
-      "text": "$c \\le 6.25$. You cannot buy a quarter of a credit — round DOWN to a whole number."
+      "text": "Dividing both sides by $4$ gives $c \\le 6.25$. You cannot buy part of a credit, so look for the largest whole number that fits."
     },
     {
       "level": "reveal",
-      "text": "The greatest whole number of credits is $6$."
+      "text": "The largest whole number not above $6.25$ is $6$, so you can buy $6$ credits."
     }
   ],
   "explanation": [
-    "Divide both sides by 4: $c \\le 6.25$.",
-    "Credits come in whole numbers, so take the biggest whole number that fits: 6.",
-    "Check: $4 \\times 6 = \\$24 \\le \\$25$ ✓, but $4 \\times 7 = \\$28$ busts the budget."
+    "Divide both sides of $4c \\le 25$ by $4$ to get $c \\le 6.25$.",
+    "Credits only come in whole numbers, so take the largest whole number that is not more than $6.25$, which is $6$.",
+    "Check: $6$ credits cost $4 \\times 6 = 24$ dollars, which fits, but $7$ credits cost $28$ dollars, so the answer is $6$."
   ],
   "alternativeExplanations": [
     {

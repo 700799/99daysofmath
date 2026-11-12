@@ -22,24 +22,26 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Range = max - min for each.",
+  "hint": "Find the range of each set separately, then see which range is the bigger number.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Range = max - min for each."
+      "text": "Find the range of each set separately, then see which range is the bigger number."
     },
     {
       "level": "guide",
-      "text": "A: $9 - 5 = 4$. B: $14 - 2 = 12$."
+      "text": "For the first set subtract $9 - 5$. For the second set subtract $14 - 2$. Compare the two differences."
     },
     {
       "level": "reveal",
-      "text": "B has range $12$."
+      "text": "The ranges are $4$ and $12$, so $\\{2, 5, 9, 14\\}$ (choice B) has the greater range."
     }
   ],
   "explanation": [
-    "A range: $4$. B range: $12$.",
-    "B is greater."
+    "The range of a set is its largest value minus its smallest value.",
+    "For the first set, $\\{5, 7, 9\\}$, the range is $9 - 5 = 4$.",
+    "For the second set, $\\{2, 5, 9, 14\\}$, the range is $14 - 2 = 12$.",
+    "Since $12 > 4$, the set $\\{2, 5, 9, 14\\}$ has the greater range, which is choice B."
   ],
   "tags": [
     "range",

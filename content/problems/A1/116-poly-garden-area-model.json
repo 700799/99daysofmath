@@ -14,26 +14,26 @@
     "x²+5x+6"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Split the garden into 4 patches: cut the length into $x$ and $3$, the width into $x$ and $2$.",
+  "hint": "Area is length times width. Picture the garden cut into four smaller patches, one for each pair of pieces.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Split the garden into 4 patches: cut the length into $x$ and $3$, the width into $x$ and $2$."
+      "text": "Area is length times width. Picture the garden cut into four smaller patches, one for each pair of pieces."
     },
     {
       "level": "guide",
-      "text": "The 4 patch areas are $x \\times x$, $x \\times 2$, $3 \\times x$, and $3 \\times 2$. Add them up."
+      "text": "Multiply each part of $(x + 3)$ by each part of $(x + 2)$: the patches are $x \\times x$, $x \\times 2$, $3 \\times x$ and $3 \\times 2$. Add them and combine like terms."
     },
     {
       "level": "reveal",
-      "text": "$x^2 + 2x + 3x + 6 = x^2 + 5x + 6$."
+      "text": "$x^2 + 2x + 3x + 6$ combines to give an area of $x^2 + 5x + 6$ square meters."
     }
   ],
   "explanation": [
-    "Draw the area model: a rectangle split into 4 patches.",
-    "Patch areas: $x^2$, $2x$, $3x$, and $6$.",
-    "Combine the middle terms: $2x + 3x = 5x$.",
-    "Area: $x^2 + 5x + 6$ square meters."
+    "Use an area model: split the length into $x$ and $3$ and the width into $x$ and $2$, which makes four patches.",
+    "Multiply to find each patch area: $x^2$, $2x$, $3x$ and $6$.",
+    "The two middle patches are like terms, so combine them: $2x + 3x = 5x$.",
+    "The total area is $x^2 + 5x + 6$ square meters."
   ],
   "alternativeExplanations": [
     {

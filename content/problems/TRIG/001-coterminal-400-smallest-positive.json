@@ -10,19 +10,19 @@
   "primaryAnswer": "40",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "One full trip around the wheel is $360^\\circ$ — that much rotation puts you right back where you started.",
+  "hint": "One full trip around the wheel is $360^\\circ$, and that much rotation puts the car right back where it started. How much of the $400^\\circ$ is left over after a full trip?",
   "hints": [
     {
       "level": "nudge",
-      "text": "One full trip around the wheel is $360^\\circ$ — that much rotation puts you right back where you started."
+      "text": "One full trip around the wheel is $360^\\circ$, and that much rotation puts the car right back where it started. How much of the $400^\\circ$ is left over after a full trip?"
     },
     {
       "level": "guide",
-      "text": "Peel off one full turn: compute $400^\\circ - 360^\\circ$."
+      "text": "Take one full turn away from the rotation, because a full turn does not change the final position: work out $400^\\circ - 360^\\circ$."
     },
     {
       "level": "reveal",
-      "text": "$400^\\circ - 360^\\circ = 40^\\circ$, so the car ends up $40^\\circ$ around the wheel."
+      "text": "$400^\\circ - 360^\\circ = 40^\\circ$, so a rotation of $40$ degrees leaves the car in the same spot."
     }
   ],
   "explanation": [

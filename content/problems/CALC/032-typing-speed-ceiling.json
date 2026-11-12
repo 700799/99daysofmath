@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "Divide top and bottom by $t^2$: $\\frac{80 + \\frac{10}{t^2}}{1 + \\frac{4}{t^2}}$.",
+    "Divide top and bottom by $t^2$, the highest power, to get $\\frac{80 + \\frac{10}{t^2}}{1 + \\frac{4}{t^2}}$.",
     "As $t \\to \\infty$ the small fractions vanish, leaving $\\frac{80}{1}$.",
-    "The model has a ceiling of $80$ words per minute — a horizontal asymptote."
+    "The model has a ceiling of $80$ words per minute, which is a horizontal asymptote of the graph."
   ],
   "alternativeExplanations": [
     {

@@ -10,27 +10,27 @@
   "primaryAnswer": "25",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Divide the part by the whole, then convert to a percent.",
+  "hint": "Decide which number is the part and which is the whole. A percent compares the part with the whole.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Divide the part by the whole, then convert to a percent."
+      "text": "Decide which number is the part and which is the whole. A percent compares the part with the whole."
     },
     {
       "level": "guide",
-      "text": "$\\dfrac{18}{72} = 0.25$."
+      "text": "The part is $18$ and the whole is $72$, so divide: $\\dfrac{18}{72}$. Simplify the fraction, then write it as a percent."
     },
     {
       "level": "reveal",
-      "text": "$0.25 = 25\\%$."
+      "text": "The fraction $\\dfrac{18}{72}$ equals $\\dfrac{1}{4} = 0.25$, so $18$ is $25\\%$ of $72$."
     }
   ],
   "learningObjective": "Express one number as a percent of another.",
   "topic": "Basic percentages",
   "explanation": [
-    "The structure is part $=$ percent $\\times$ whole, so percent $= \\dfrac{\\text{part}}{\\text{whole}}$.",
-    "$\\dfrac{18}{72} = \\dfrac{1}{4} = 0.25$.",
-    "As a percent that is $25\\%$."
+    "A percent is the part divided by the whole, so write the fraction $\\dfrac{18}{72}$.",
+    "Simplify by dividing top and bottom by $18$: $\\dfrac{18}{72} = \\dfrac{1}{4} = 0.25$.",
+    "Multiply by $100$ to change the decimal to a percent, so $18$ is $25\\%$ of $72$."
   ],
   "alternativeExplanations": [
     {

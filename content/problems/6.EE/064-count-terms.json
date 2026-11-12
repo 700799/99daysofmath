@@ -10,24 +10,26 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Terms are separated by $+$ or $-$ signs.",
+  "hint": "Terms are the pieces of an expression that are separated by plus and minus signs.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Terms are separated by $+$ or $-$ signs."
+      "text": "Terms are the pieces of an expression that are separated by plus and minus signs."
     },
     {
       "level": "guide",
-      "text": "Identify each piece: $3x$, $5$, $-2y$."
+      "text": "Split $3x + 5 - 2y$ at the $+$ and the $-$ signs. Count the pieces you get."
     },
     {
       "level": "reveal",
-      "text": "$3$ terms."
+      "text": "The pieces are $3x$, $5$ and $-2y$, so there are $3$ terms."
     }
   ],
   "explanation": [
-    "Terms in $3x + 5 - 2y$: $3x$, $5$, and $-2y$.",
-    "Count: $3$."
+    "The plus and minus signs divide an expression into its terms.",
+    "Splitting $3x + 5 - 2y$ at those signs gives $3x$, $5$ and $-2y$.",
+    "None of these are like terms, so nothing can be combined.",
+    "Counting them shows the expression has $3$ terms."
   ],
   "tags": [
     "expression",

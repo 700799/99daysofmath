@@ -13,26 +13,26 @@
     "$6"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Split the $\\$15$ into $5$ equal parts first — that tells you what one fifth is worth.",
+  "hint": "Finding a fraction of an amount starts with the denominator. It tells you how many equal parts to split the allowance into.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Split the $\\$15$ into $5$ equal parts first — that tells you what one fifth is worth."
+      "text": "Finding a fraction of an amount starts with the denominator. It tells you how many equal parts to split the allowance into."
     },
     {
       "level": "guide",
-      "text": "$15 \\div 5 = 3$, so one fifth is $\\$3$. You need two of those fifths."
+      "text": "Split $\\$15$ into $5$ equal parts with $15 \\div 5$ to find one fifth. Jordan saves two of those fifths."
     },
     {
       "level": "reveal",
-      "text": "$2 \\times 3 = 6$, so $\\$6$ goes into savings."
+      "text": "One fifth is $\\$3$, and $2 \\times 3 = 6$, so $\\$6$ goes into savings each week."
     }
   ],
   "explanation": [
-    "\"$\\frac{2}{5}$ of $\\$15$\" means $\\frac{2}{5} \\times 15$.",
-    "Split $\\$15$ into $5$ equal fifths: $15 \\div 5 = 3$, so each fifth is $\\$3$.",
-    "Two of those fifths is $2 \\times 3 = 6$.",
-    "Jordan saves $\\$6$ every week."
+    "Taking two fifths of fifteen dollars means multiplying $\\frac{2}{5} \\times 15$.",
+    "Split the fifteen dollars into $5$ equal parts: $15 \\div 5 = 3$, so each fifth is worth three dollars.",
+    "Jordan saves two of the fifths, and $2 \\times 3 = 6$.",
+    "So six dollars, or $\\$6$, goes into savings every week."
   ],
   "alternativeExplanations": [
     {

@@ -14,11 +14,11 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "One number is charged once; the other is charged per hour. Build $75 + 45h = 322.50$.",
+  "hint": "One charge is paid a single time and the other is paid once for every hour. Write the bill as a fixed part plus an hourly part.",
   "hints": [
     {
       "level": "nudge",
-      "text": "One number is charged once; the other is charged per hour. Build $75 + 45h = 322.50$."
+      "text": "One charge is paid a single time and the other is paid once for every hour. Write the bill as a fixed part plus an hourly part."
     },
     {
       "level": "nudge",
@@ -27,19 +27,20 @@
     },
     {
       "level": "guide",
-      "text": "Subtract the flat fee: $45h = 247.50$."
+      "text": "With $h$ hours of work the bill is $75 + 45h = 322.50$. Subtract the flat fee to find what the hours alone cost, then divide by the hourly rate."
     },
     {
       "level": "reveal",
-      "text": "$h = \\dfrac{247.50}{45} = 5.5$ hours."
+      "text": "The hours cost $322.50 - 75 = 247.50$, and $247.50 \\div 45 = 5.5$, so the plumber worked $5.5$ hours."
     }
   ],
   "learningObjective": "Model a flat-fee-plus-rate situation and solve for the rate quantity.",
   "topic": "Linear models in context",
   "explanation": [
-    "The flat fee is paid once and the hourly rate is paid $h$ times, so the total is $75 + 45h$.",
-    "Set that equal to the bill: $75 + 45h = 322.50$.",
-    "Subtract $75$: $45h = 247.50$. Divide by $45$: $h = 5.5$ hours."
+    "The flat fee is paid once and the hourly rate is paid $h$ times, so the total bill is $75 + 45h$.",
+    "Set that expression equal to the bill the customer paid: $75 + 45h = 322.50$.",
+    "Subtract $75$ from both sides to leave only the hourly charges: $45h = 247.50$.",
+    "Divide by $45$ to find the number of hours: $h = 5.5$, so the plumber worked $5.5$ hours."
   ],
   "alternativeExplanations": [
     {

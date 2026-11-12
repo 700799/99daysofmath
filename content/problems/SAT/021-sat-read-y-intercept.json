@@ -10,27 +10,27 @@
   "primaryAnswer": "-4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The $y$-intercept is the output when $x = 0$.",
+  "hint": "The graph crosses the $y$-axis at a point where one coordinate is zero. Which coordinate is it?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $y$-intercept is the output when $x = 0$."
+      "text": "The graph crosses the $y$-axis at a point where one coordinate is zero. Which coordinate is it?"
     },
     {
       "level": "guide",
-      "text": "Substitute $x = 0$: $y = 3(0) - 4$."
+      "text": "Every point on the $y$-axis has $x = 0$, so substitute $0$ for $x$ in $y = 3x - 4$ and simplify."
     },
     {
       "level": "reveal",
-      "text": "$y = -4$."
+      "text": "Since $3(0) - 4 = -4$, the $y$-intercept of the graph is $-4$."
     }
   ],
   "learningObjective": "Identify the y-intercept from slope-intercept form.",
   "topic": "Slope-intercept form",
   "explanation": [
-    "In $y = mx + b$, the constant $b$ is the $y$-intercept.",
-    "Here $b = -4$, so the graph crosses the $y$-axis at $-4$.",
-    "Confirm by substituting $x = 0$: $y = 3(0) - 4 = -4$ ✓"
+    "The equation is in the form $y = mx + b$, where the constant $b$ is the $y$-intercept.",
+    "Here the constant is $-4$, so the graph should cross the $y$-axis at $-4$.",
+    "Substituting $x = 0$ confirms it: $y = 3(0) - 4 = -4$, so the $y$-intercept is $-4$."
   ],
   "alternativeExplanations": [
     {

@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "The mean of a discrete random variable is $\\sum x \\cdot P(x)$ — value times probability, summed.",
+  "hint": "The mean of a discrete random variable is a weighted average: each value counts in proportion to its probability.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The mean of a discrete random variable is $\\sum x \\cdot P(x)$ — value times probability, summed."
+      "text": "The mean of a discrete random variable is a weighted average: each value counts in proportion to its probability."
     },
     {
       "level": "guide",
-      "text": "Compute $1(0.2) + 2(0.5) + 3(0.3)$."
+      "text": "Multiply each number of toppings by its probability and add the three products: $1(0.2) + 2(0.5) + 3(0.3)$."
     },
     {
       "level": "reveal",
-      "text": "$0.2 + 1.0 + 0.9 = 2.1$ toppings."
+      "text": "$0.2 + 1.0 + 0.9 = 2.1$, so the mean is $2.1$ toppings."
     }
   ],
   "explanation": [
-    "Multiply each value by its probability: $1(0.2) = 0.2$, $2(0.5) = 1.0$, $3(0.3) = 0.9$.",
-    "Add: $0.2 + 1.0 + 0.9 = 2.1$.",
-    "So $\\mu_X = 2.1$ toppings. It need not be a whole number — it is a long-run average."
+    "The mean is $\\mu_X = \\sum x \\cdot P(x)$, so multiply each value by its probability: $1(0.2) = 0.2$, $2(0.5) = 1.0$, $3(0.3) = 0.9$.",
+    "Adding the three weighted values gives $0.2 + 1.0 + 0.9 = 2.1$.",
+    "So $\\mu_X = 2.1$ toppings. It need not be a whole number because it is a long-run average."
   ],
   "alternativeExplanations": [
     {

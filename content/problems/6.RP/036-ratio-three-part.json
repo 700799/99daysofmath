@@ -12,25 +12,26 @@
     "10 beads"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Add the parts of the ratio to get the total.",
+  "hint": "The ratio tells you how the beads split into equal-sized parts. How many parts are there altogether when you add the three numbers?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add the parts of the ratio to get the total."
+      "text": "The ratio tells you how the beads split into equal-sized parts. How many parts are there altogether when you add the three numbers?"
     },
     {
       "level": "guide",
-      "text": "Parts $= 2 + 3 + 5 = 10$. Each part $= 20 / 10 = 2$ beads."
+      "text": "There are $2 + 3 + 5 = 10$ parts for $20$ beads, so each part is $20 \\div 10 = 2$ beads. Green has $5$ of those parts."
     },
     {
       "level": "reveal",
-      "text": "Green has $5$ parts: $5 \\times 2 = 10$."
+      "text": "$5 \\times 2 = 10$, so there are $10$ green beads."
     }
   ],
   "explanation": [
-    "Total parts: $2 + 3 + 5 = 10$.",
-    "Each part: $20 \\div 10 = 2$ beads.",
-    "Green: $5 \\times 2 = 10$."
+    "Add the ratio numbers to count the equal parts in the whole bracelet: $2 + 3 + 5 = 10$ parts.",
+    "Divide the total by the number of parts to find the size of one part: $20 \\div 10 = 2$ beads.",
+    "Green is $5$ parts of the ratio, so multiply $5 \\times 2 = 10$.",
+    "There are $10$ green beads, along with $4$ red and $6$ blue, which add to $20$."
   ],
   "tags": [
     "CA",

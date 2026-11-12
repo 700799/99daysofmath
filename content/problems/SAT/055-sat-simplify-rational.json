@@ -32,27 +32,28 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Factor the numerator before trying to cancel anything.",
+  "hint": "Nothing can be cancelled while the numerator is a difference. Look for a way to write the numerator as a product.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Factor the numerator before trying to cancel anything."
+      "text": "Nothing can be cancelled while the numerator is a difference. Look for a way to write the numerator as a product."
     },
     {
       "level": "guide",
-      "text": "$x^2 - 4 = (x + 2)(x - 2)$."
+      "text": "The numerator is a difference of squares: $x^2 - 4 = (x + 2)(x - 2)$. Compare its factors with the denominator $x + 2$."
     },
     {
       "level": "reveal",
-      "text": "The $(x + 2)$ factors cancel, leaving $x - 2$."
+      "text": "The factor $(x + 2)$ cancels from top and bottom, leaving $x - 2$, which is choice A."
     }
   ],
   "learningObjective": "Simplify a rational expression by factoring and cancelling.",
   "topic": "Rational expressions",
   "explanation": [
-    "Factor the numerator as a difference of squares: $x^2 - 4 = (x + 2)(x - 2)$.",
-    "The expression becomes $\\dfrac{(x + 2)(x - 2)}{x + 2}$.",
-    "Cancel the common factor $(x + 2)$, which is legal because $x \\neq -2$: the result is $x - 2$."
+    "Factor the numerator as a difference of squares, since $4 = 2^2$: $x^2 - 4 = (x + 2)(x - 2)$.",
+    "The fraction is now $\\dfrac{(x + 2)(x - 2)}{x + 2}$, with the same factor on the top and the bottom.",
+    "Cancel the common factor $(x + 2)$. This is allowed because $x \\neq -2$, so the factor is not zero.",
+    "What remains is $x - 2$, which is choice A."
   ],
   "alternativeExplanations": [
     {

@@ -12,19 +12,19 @@
     "3.50"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Drop the points and multiply $14 \\times 25$ first.",
+  "hint": "Multiply the digits as whole numbers first. Then use the decimal places in the factors to place the point.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Drop the points and multiply $14 \\times 25$ first."
+      "text": "Multiply the digits as whole numbers first. Then use the decimal places in the factors to place the point."
     },
     {
       "level": "guide",
-      "text": "$14 \\times 25 = 350$. Each factor has one decimal place, so the product needs two."
+      "text": "$14 \\times 25 = 350$. Each factor has one decimal place, so the product must have two decimal places."
     },
     {
       "level": "reveal",
-      "text": "Two places in $350$ gives $3.50$, which is $3.5$."
+      "text": "Two decimal places in $350$ gives $3.50$, so $1.4 \\times 2.5 = 3.5$."
     }
   ],
   "explanation": [

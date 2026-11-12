@@ -10,25 +10,25 @@
   "primaryAnswer": "-4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "In $y = mx + b$, the $y$-intercept $b$ is the number ADDED at the end — where the line STARTS on the $y$-axis.",
+  "hint": "In $y = mx + b$, one letter is the number added on at the end. That is where the line crosses the $y$-axis.",
   "hints": [
     {
       "level": "nudge",
-      "text": "In $y = mx + b$, the $y$-intercept $b$ is the number ADDED at the end — where the line STARTS on the $y$-axis."
+      "text": "In $y = mx + b$, one letter is the number added on at the end. That is where the line crosses the $y$-axis."
     },
     {
       "level": "guide",
-      "text": "$3x - 4$ is the same as $3x + (-4)$."
+      "text": "Rewrite $3x - 4$ as $3x + (-4)$ so it matches $mx + b$. The sign travels with the number."
     },
     {
       "level": "reveal",
-      "text": "The $y$-intercept is $-4$."
+      "text": "Matching the forms gives $b = -4$, so the $y$-intercept is $-4$."
     }
   ],
   "explanation": [
-    "Match $y = 3x - 4$ to $y = mx + b$: here $b = -4$.",
-    "The minus sign belongs to the $4$ — the start is BELOW zero.",
-    "The line crosses the $y$-axis at $(0, -4)$."
+    "Match $y = 3x - 4$ to the form $y = mx + b$ by writing the subtraction as $3x + (-4)$.",
+    "The number in the $b$ position is $-4$. The minus sign belongs to the $4$.",
+    "So the $y$-intercept is $-4$, and the line crosses the $y$-axis at the point $(0, -4)$."
   ],
   "alternativeExplanations": [
     {

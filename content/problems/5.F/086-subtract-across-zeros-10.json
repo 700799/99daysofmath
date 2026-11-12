@@ -26,10 +26,10 @@
     }
   ],
   "explanation": [
-    "Write the problem as $10.00 - 4.37$ so both numbers have hundredths.",
-    "Counting up is easier than borrowing across two zeros: from $4.37$ up to $5.00$ is $0.63$.",
-    "From $5.00$ up to $10.00$ is $5$ more.",
-    "Total distance: $0.63 + 5 = 5.63$, so $10 - 4.37 = 5.63$."
+    "Write the problem as $10.00 - 4.37$ so that both numbers show hundredths.",
+    "Counting up avoids regrouping across two zeros. From $4.37$ up to $5.00$ is $0.63$.",
+    "From $5.00$ up to $10.00$ is another $5$ whole units.",
+    "The two jumps total $0.63 + 5 = 5.63$, so the difference $10 - 4.37$ is $5.63$."
   ],
   "alternativeExplanations": [
     {

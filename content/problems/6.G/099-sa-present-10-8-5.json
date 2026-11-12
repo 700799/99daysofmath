@@ -12,29 +12,32 @@
     "340 sq in"
   ],
   "acceptanceMode": "normalized",
-  "hint": "SA $= 2(lw + lh + wh)$.",
+  "hint": "The wrapping paper covers every face of the box. A box has three pairs of matching rectangular faces.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Split or rearrange the shape into pieces whose formulas you already know."
+      "text": "Wrap it in stages: the top and bottom together, then the front and back together, then the two ends together."
     },
     {
       "level": "nudge",
-      "text": "SA $= 2(lw + lh + wh)$."
+      "text": "The wrapping paper covers every face of the box. A box has three pairs of matching rectangular faces."
     },
     {
       "level": "guide",
-      "text": "$10 \\cdot 8 = 80$, $10 \\cdot 5 = 50$, $8 \\cdot 5 = 40$. Sum $= 170$. Double $= 340$."
+      "text": "The face areas are $10 \\times 8 = 80$, $10 \\times 5 = 50$ and $8 \\times 5 = 40$. Add them and double the sum."
     },
     {
       "level": "reveal",
-      "text": "$340$."
+      "text": "$2(80 + 50 + 40) = 2 \\times 170 = 340$, so you need $340$ square inches of wrapping paper."
     }
   ],
   "explanation": [
-    "Pairs of faces: $80$, $50$, $40$. Sum: $170$.",
-    "Total: $2(170) = 340$ sq in."
+    "The paper must cover the whole outside, so find the surface area of the box.",
+    "The three different faces have areas $10 \\times 8 = 80$, $10 \\times 5 = 50$ and $8 \\times 5 = 40$.",
+    "Add them: $80 + 50 + 40 = 170$ square inches for one face of each kind.",
+    "Each face comes in a pair, so double it: $2 \\times 170 = 340$.",
+    "The box needs $340$ square inches of wrapping paper."
   ],
   "tags": [
     "MAP-practice",

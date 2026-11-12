@@ -10,25 +10,25 @@
   "primaryAnswer": "112",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "In a parallelogram, angles that sit next to each other are supplementary — they add to $180^\\circ$.",
+  "hint": "Angles $A$ and $B$ are neighbors in the parallelogram. Think about how consecutive angles between parallel sides are related.",
   "hints": [
     {
       "level": "nudge",
-      "text": "In a parallelogram, angles that sit next to each other are supplementary — they add to $180^\\circ$."
+      "text": "Angles $A$ and $B$ are neighbors in the parallelogram. Think about how consecutive angles between parallel sides are related."
     },
     {
       "level": "guide",
-      "text": "So $68 + \\angle B = 180$."
+      "text": "Consecutive angles of a parallelogram are supplementary, so $68 + \\angle B = 180$. Subtract to find $\\angle B$."
     },
     {
       "level": "reveal",
-      "text": "$\\angle B = 180 - 68 = 112^\\circ$."
+      "text": "$\\angle B = 180 - 68 = 112^\\circ$, so the neighboring angle is $112^\\circ$."
     }
   ],
   "explanation": [
-    "Opposite sides of a parallelogram are parallel, so consecutive angles are same-side interior angles and add to $180^\\circ$.",
-    "Set up $68 + \\angle B = 180$.",
-    "Subtract: $\\angle B = 112^\\circ$."
+    "Opposite sides of a parallelogram are parallel, so two consecutive angles are same-side interior angles and add to $180^\\circ$.",
+    "With $\\angle A = 68^\\circ$, this fact gives the equation $68 + \\angle B = 180$.",
+    "Subtracting $68$ from both sides gives the answer $\\angle B = 112^\\circ$."
   ],
   "alternativeExplanations": [
     {

@@ -13,26 +13,26 @@
     "6,0"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The first number is the sideways move; the second is the up move.",
+  "hint": "An ordered pair lists the sideways distance first and the upward distance second. What number shows no movement at all?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The first number is the sideways move; the second is the up move."
+      "text": "An ordered pair lists the sideways distance first and the upward distance second. What number shows no movement at all?"
     },
     {
       "level": "guide",
-      "text": "You moved $6$ right, so $x = 6$. You never moved up, so $y = 0$."
+      "text": "Walking $6$ units right gives $x = 6$. You did not go up, so think about what the $y$-coordinate must be."
     },
     {
       "level": "reveal",
-      "text": "The library is at $(6, 0)$."
+      "text": "Not moving up means $y = 0$, so the library is at $(6, 0)$."
     }
   ],
   "explanation": [
-    "Coordinates are written $(x, y)$: over first, then up.",
-    "Walking $6$ units right makes $x = 6$.",
-    "Not going up at all makes $y = 0$.",
-    "So the library sits at $(6, 0)$ — right on the $x$-axis."
+    "Coordinates are written $(x, y)$, with the distance across first and the distance up second.",
+    "Walking $6$ units right from the origin makes $x = 6$.",
+    "Not going up at all leaves the $y$-coordinate at $0$.",
+    "So the library is at $(6, 0)$, a point right on the $x$-axis."
   ],
   "alternativeExplanations": [
     {

@@ -10,11 +10,11 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Corresponding angles formed by a transversal across parallel lines are equal.",
+  "hint": "Corresponding angles sit in matching positions at the two intersections. What is true of them when the lines are parallel?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Corresponding angles formed by a transversal across parallel lines are equal."
+      "text": "Corresponding angles sit in matching positions at the two intersections. What is true of them when the lines are parallel?"
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "So $3x + 10 = 5x - 30$."
+      "text": "Corresponding angles are equal, so write $3x + 10 = 5x - 30$. Collect the $x$ terms on one side and the numbers on the other."
     },
     {
       "level": "reveal",
-      "text": "$40 = 2x$, so $x = 20$."
+      "text": "Subtracting $3x$ and adding $30$ gives $40 = 2x$, so the value of $x$ is $20$."
     }
   ],
   "learningObjective": "Set up an equation from an angle relationship in a parallel-line figure.",
   "topic": "Parallel lines",
   "explanation": [
-    "Corresponding angles are congruent when the lines are parallel, so set the expressions equal: $3x + 10 = 5x - 30$.",
-    "Subtract $3x$ and add $30$: $40 = 2x$.",
-    "$x = 20$. Check: both angles measure $70°$ ✓"
+    "Corresponding angles are congruent when the lines are parallel, so set the two expressions equal: $3x + 10 = 5x - 30$.",
+    "Subtract $3x$ from both sides and add $30$ to both sides, which leaves $40 = 2x$.",
+    "Divide by $2$ to get $x = 20$. Both angles then measure $70°$, so the value of $x$ is $20$."
   ],
   "alternativeExplanations": [
     {

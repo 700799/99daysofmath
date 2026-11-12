@@ -12,24 +12,25 @@
     "300 cm"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$1$ meter $= 100$ centimeters.",
+  "hint": "Metric length units are linked by powers of ten. How many centimeters make up one meter?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$1$ meter $= 100$ centimeters."
+      "text": "Metric length units are linked by powers of ten. How many centimeters make up one meter?"
     },
     {
       "level": "guide",
-      "text": "Multiply the meters by $100$."
+      "text": "One meter is $100$ centimeters, and centimeters are the smaller unit, so multiply the $3$ meters by $100$."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 100 = 300$ cm."
+      "text": "$3 \\times 100 = 300$, so a length of $3$ meters equals $300$ centimeters."
     }
   ],
   "explanation": [
-    "$1$ m $= 100$ cm.",
-    "$3 \\times 100 = 300$ cm."
+    "The key fact is that $1$ meter equals $100$ centimeters.",
+    "Centimeters are smaller than meters, so it takes more of them. That means multiplying by $100$.",
+    "Work it out: $3 \\times 100 = 300$, so $3$ meters is $300$ centimeters."
   ],
   "tags": [
     "measurement",

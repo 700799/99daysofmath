@@ -10,11 +10,11 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Clear the denominator by multiplying all three parts by $2$.",
+  "hint": "First find the range of $x$ by working on all three parts together. Then count the whole numbers in that range, watching the two ends.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Clear the denominator by multiplying all three parts by $2$."
+      "text": "First find the range of $x$ by working on all three parts together. Then count the whole numbers in that range, watching the two ends."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "$-6 < x - 4 \\le 2$, then add $4$ throughout."
+      "text": "Multiply all three parts by $2$ to get $-6 < x - 4 \\le 2$, then add $4$ to get $-2 < x \\le 6$. Decide which end value is included."
     },
     {
       "level": "reveal",
-      "text": "$-2 < x \\le 6$, so $x$ runs from $-1$ to $6$: that is $8$ integers."
+      "text": "The value $-2$ is excluded and $6$ is included, so the integers run from $-1$ to $6$. That makes $8$ integer values."
     }
   ],
   "learningObjective": "Solve a compound inequality and count the integers in the solution set.",
   "topic": "Compound inequalities",
   "explanation": [
-    "Multiply all three parts by $2$: $-6 < x - 4 \\le 2$.",
-    "Add $4$ to all three parts: $-2 < x \\le 6$.",
-    "The left bound is strict, so $-2$ is excluded and the smallest integer is $-1$. The right bound is inclusive, so $6$ counts. The integers $-1, 0, 1, 2, 3, 4, 5, 6$ number $8$."
+    "Multiply all three parts by $2$ to clear the denominator: $-6 < x - 4 \\le 2$.",
+    "Add $4$ to all three parts to isolate $x$: $-2 < x \\le 6$.",
+    "The left sign is strict, so $-2$ does not count and the smallest integer is $-1$. The right sign allows equality, so $6$ counts.",
+    "The integers $-1, 0, 1, 2, 3, 4, 5, 6$ satisfy the inequality, so there are $8$ integer values."
   ],
   "alternativeExplanations": [
     {

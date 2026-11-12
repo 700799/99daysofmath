@@ -10,25 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Undo in reverse order: the $+5$ was done last, so remove it first.",
+  "hint": "Undo the operations in the reverse of the order they were done. Which was done to $x$ last?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Undo in reverse order: the $+5$ was done last, so remove it first."
+      "text": "Undo the operations in the reverse of the order they were done. Which was done to $x$ last?"
     },
     {
       "level": "guide",
-      "text": "Subtract $5$ from both sides: $3x = 15$. Now divide by $3$."
+      "text": "Subtract $5$ from both sides to get $3x = 15$. Then divide both sides by $3$."
     },
     {
       "level": "reveal",
-      "text": "$x = 15 \\div 3 = 5$."
+      "text": "$15 \\div 3 = 5$, so the equation's solution is $x = 5$."
     }
   ],
   "explanation": [
-    "Subtract 5 from both sides: $3x = 15$.",
-    "Divide both sides by 3: $x = 5$.",
-    "Check: $3(5) + 5 = 20$. ✓"
+    "The $+5$ was applied last, so remove it first by subtracting $5$ from both sides: $3x = 15$.",
+    "Then undo the multiplication by dividing both sides by $3$, which gives $x = 5$.",
+    "Check: $3(5) + 5 = 15 + 5 = 20$, which is true, so the answer is $x = 5$."
   ],
   "alternativeExplanations": [
     {

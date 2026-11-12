@@ -10,26 +10,27 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$f(3)$ means \"replace every $x$ with $3$\".",
+  "hint": "The notation $f(3)$ is an instruction about the input. What should happen to every $x$ in the rule?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$f(3)$ means \"replace every $x$ with $3$\"."
+      "text": "The notation $f(3)$ is an instruction about the input. What should happen to every $x$ in the rule?"
     },
     {
       "level": "guide",
-      "text": "Compute $4(3) - 7$."
+      "text": "Replace $x$ with $3$ in the rule to get $4(3) - 7$. Multiply first, then subtract."
     },
     {
       "level": "reveal",
-      "text": "$12 - 7 = 5$."
+      "text": "Since $4(3) = 12$ and $12 - 7 = 5$, the value of $f(3)$ is $5$."
     }
   ],
   "learningObjective": "Evaluate a linear function at a given input.",
   "topic": "Function notation",
   "explanation": [
-    "Function notation $f(3)$ is an instruction: substitute $3$ for $x$.",
-    "$f(3) = 4(3) - 7 = 12 - 7 = 5$."
+    "Function notation $f(3)$ means the input is $3$, so substitute $3$ for $x$ in the rule $4x - 7$.",
+    "Multiplication comes before subtraction, so first work out $4(3) = 12$.",
+    "Then subtract: $12 - 7 = 5$, so the value of $f(3)$ is $5$."
   ],
   "alternativeExplanations": [
     {

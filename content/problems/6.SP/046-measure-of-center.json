@@ -32,24 +32,26 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Range measures **spread**, not center.",
+  "hint": "A measure of center gives one typical value. A measure of spread tells how far apart the values are.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Range measures **spread**, not center."
+      "text": "A measure of center gives one typical value. A measure of spread tells how far apart the values are."
     },
     {
       "level": "guide",
-      "text": "Mean, median, mode = center. Range = spread."
+      "text": "Mean, median and mode each name a typical value in the data. One choice is found by subtracting the smallest value from the largest, which describes something different."
     },
     {
       "level": "reveal",
-      "text": "Range."
+      "text": "The range (choice C) is not a measure of center, because it measures spread."
     }
   ],
   "explanation": [
-    "Mean, median, mode describe center.",
-    "Range describes spread."
+    "Measures of center describe a typical or middle value of a data set.",
+    "The mean, the median and the mode each do this in a different way, so A, B and D are measures of center.",
+    "The range is the largest value minus the smallest, which tells how spread out the data is.",
+    "So the range, choice C, is not a measure of center."
   ],
   "tags": [
     "vocabulary"

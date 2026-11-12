@@ -32,29 +32,31 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Use the distributive property.",
+  "hint": "The $6$ multiplies both terms in the parentheses. Some of the wrong choices skip one of them.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Substitute a guess back into the equation. If both sides match, the guess is the answer."
+      "text": "Try $6(x + 5)$ first: it expands to $6x + 30$. This problem only changes the $x$ term to $2x$."
     },
     {
       "level": "nudge",
-      "text": "Use the distributive property."
+      "text": "The $6$ multiplies both terms in the parentheses. Some of the wrong choices skip one of them."
     },
     {
       "level": "guide",
-      "text": "$6 \\cdot 2x + 6 \\cdot 5$."
+      "text": "Work out $6 \\cdot 2x$ and $6 \\cdot 5$, then look for the choice with both of those products."
     },
     {
       "level": "reveal",
-      "text": "$12x + 30$."
+      "text": "$6 \\cdot 2x = 12x$ and $6 \\cdot 5 = 30$, so the equivalent expression is $12x + 30$, choice B."
     }
   ],
   "explanation": [
-    "$6(2x + 5) = 6 \\cdot 2x + 6 \\cdot 5 = 12x + 30$.",
-    "Final answer: B."
+    "Distribute the $6$ to each term inside the parentheses.",
+    "The first product is $6 \\cdot 2x = 12x$, which comes from $6 \\times 2 = 12$.",
+    "The second product is $6 \\cdot 5 = 30$, a plain number.",
+    "Together they give $12x + 30$, which is choice B."
   ],
   "alternativeExplanations": [
     {

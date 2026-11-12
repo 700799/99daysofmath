@@ -10,25 +10,25 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Velocity is the derivative of position. Differentiate term by term.",
+  "hint": "Velocity is the derivative of position. Differentiate $s(t)$ one term at a time with the power rule.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Velocity is the derivative of position. Differentiate term by term."
+      "text": "Velocity is the derivative of position. Differentiate $s(t)$ one term at a time with the power rule."
     },
     {
       "level": "guide",
-      "text": "$v(t) = s'(t) = 3t^2 - 12t + 9$. Substitute $t = 4$."
+      "text": "The derivative is $v(t) = s'(t) = 3t^2 - 12t + 9$. Substitute $t = 4$ and combine the three numbers."
     },
     {
       "level": "reveal",
-      "text": "$3(16) - 48 + 9 = 48 - 48 + 9 = 9$ m/s."
+      "text": "Substituting gives $3(16) - 48 + 9 = 9$, so the velocity is $9$ meters per second."
     }
   ],
   "explanation": [
-    "$v(t) = s'(t) = 3t^2 - 12t + 9$.",
-    "$v(4) = 3(16) - 12(4) + 9 = 48 - 48 + 9$.",
-    "$= 9$ m/s. Positive, so the particle is moving in the positive direction at $t = 4$."
+    "Velocity is the rate of change of position, so differentiate: $v(t) = s'(t) = 3t^2 - 12t + 9$.",
+    "Substitute the time $t = 4$ into the velocity: $v(4) = 3(16) - 12(4) + 9 = 48 - 48 + 9$.",
+    "The velocity is $9$ m/s. It is positive, so the particle is moving in the positive direction at $t = 4$."
   ],
   "alternativeExplanations": [
     {

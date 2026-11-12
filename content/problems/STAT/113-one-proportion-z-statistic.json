@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "Use $p_0 = 0.5$ (the null value) in the standard deviation, not $\\hat{p}$.",
+  "hint": "The test statistic measures how far the sample proportion is from the claimed value, in standard deviations computed under the null hypothesis.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use $p_0 = 0.5$ (the null value) in the standard deviation, not $\\hat{p}$."
+      "text": "The test statistic measures how far the sample proportion is from the claimed value, in standard deviations computed under the null hypothesis."
     },
     {
       "level": "guide",
-      "text": "$\\sqrt{0.5 \\times 0.5 / 100} = 0.05$. Then $z = \\frac{0.56 - 0.50}{0.05}$."
+      "text": "Use the null value $p_0 = 0.5$ in the denominator: $\\sqrt{0.5 \\times 0.5 / 100} = 0.05$. The sample proportion is $\\hat{p} = 0.56$, so compute $z = \\frac{0.56 - 0.50}{0.05}$."
     },
     {
       "level": "reveal",
-      "text": "$z = 0.06 / 0.05 = 1.2$."
+      "text": "$z = 0.06 / 0.05 = 1.2$, so the test statistic is $1.2$."
     }
   ],
   "explanation": [
-    "$\\hat{p} = 56/100 = 0.56$ and $p_0 = 0.5$.",
-    "Under $H_0$, the SD of $\\hat{p}$ is $\\sqrt{(0.5)(0.5)/100} = 0.05$.",
-    "$z = (0.56 - 0.50)/0.05 = 1.2$: the sample proportion is 1.2 standard deviations above the claimed value."
+    "The sample proportion is $\\hat{p} = 56/100 = 0.56$ and the null value is $p_0 = 0.5$.",
+    "A test assumes $H_0$ is true, so the standard deviation of $\\hat{p}$ uses $p_0$: $\\sqrt{(0.5)(0.5)/100} = 0.05$.",
+    "$z = (0.56 - 0.50)/0.05 = 1.2$, so the sample proportion is 1.2 standard deviations above the claimed value."
   ],
   "alternativeExplanations": [
     {

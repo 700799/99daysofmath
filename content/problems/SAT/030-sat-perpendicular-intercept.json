@@ -10,11 +10,11 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the slope of $\\ell$ first, then take the negative reciprocal.",
+  "hint": "You need the slope of line $m$, but only line $\\ell$ has an equation. Start by finding the slope of $\\ell$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the slope of $\\ell$ first, then take the negative reciprocal."
+      "text": "You need the slope of line $m$, but only line $\\ell$ has an equation. Start by finding the slope of $\\ell$."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "$\\ell$ has slope $\\tfrac{5}{2}$, so $m$ has slope $-\\tfrac{2}{5}$."
+      "text": "Solving $5x - 2y = 8$ for $y$ shows $\\ell$ has slope $\\tfrac{5}{2}$, so $m$ has slope $-\\tfrac{2}{5}$. Substitute $(5, 1)$ into $y = -\\tfrac{2}{5}x + b$."
     },
     {
       "level": "reveal",
-      "text": "Substitute $(5, 1)$: $1 = -\\tfrac{2}{5}(5) + b = -2 + b$, so $b = 3$."
+      "text": "The substitution gives $1 = -2 + b$, so $b = 3$. The $y$-intercept of line $m$ is $3$."
     }
   ],
   "learningObjective": "Chain the perpendicular condition with point substitution.",
   "topic": "Perpendicular lines",
   "explanation": [
-    "Rewrite $\\ell$: $-2y = -5x + 8$, so $y = \\tfrac{5}{2}x - 4$ and its slope is $\\tfrac{5}{2}$.",
-    "Perpendicular slope is the negative reciprocal: $-\\tfrac{2}{5}$.",
-    "Substitute $(5, 1)$ into $y = -\\tfrac{2}{5}x + b$: $1 = -2 + b$, so $b = 3$."
+    "Rewrite line $\\ell$ in slope-intercept form: $-2y = -5x + 8$, so $y = \\tfrac{5}{2}x - 4$. Its slope is $\\tfrac{5}{2}$.",
+    "A perpendicular line has the negative reciprocal slope, so line $m$ has slope $-\\tfrac{2}{5}$.",
+    "Substitute the point $(5, 1)$ into $y = -\\tfrac{2}{5}x + b$, which gives $1 = -2 + b$.",
+    "Adding $2$ to both sides gives $b = 3$, so the $y$-intercept of line $m$ is $3$."
   ],
   "alternativeExplanations": [
     {

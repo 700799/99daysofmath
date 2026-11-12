@@ -10,11 +10,11 @@
   "primaryAnswer": "132.5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Start with the Law of Sines: $\\frac{\\sin B}{9} = \\frac{\\sin 35^\\circ}{7}$.",
+  "hint": "A side and its opposite angle are known, so start with the Law of Sines to find $\\sin B$. Remember that two different angles can share one sine value.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Start with the Law of Sines: $\\frac{\\sin B}{9} = \\frac{\\sin 35^\\circ}{7}$."
+      "text": "A side and its opposite angle are known, so start with the Law of Sines to find $\\sin B$. Remember that two different angles can share one sine value."
     },
     {
       "level": "nudge",
@@ -23,15 +23,15 @@
     },
     {
       "level": "guide",
-      "text": "$\\sin B = \\frac{9\\sin 35^\\circ}{7} \\approx 0.7375$, and your calculator returns $B \\approx 47.5^\\circ$."
+      "text": "The Law of Sines gives $\\sin B = \\frac{9\\sin 35^\\circ}{7} \\approx 0.7375$, and a calculator returns the acute angle $B \\approx 47.5^\\circ$. The obtuse angle with the same sine is its supplement."
     },
     {
       "level": "reveal",
-      "text": "The obtuse partner has the same sine: $180^\\circ - 47.5^\\circ = 132.5^\\circ$."
+      "text": "The obtuse partner has the same sine: $180^\\circ - 47.5^\\circ = 132.5^\\circ$, so the obtuse value of $B$ is $132.5$ degrees."
     }
   ],
   "explanation": [
-    "Law of Sines: $\\frac{\\sin B}{b} = \\frac{\\sin A}{a}$, so $\\sin B = \\frac{9\\sin 35^\\circ}{7} \\approx 0.73745$.",
+    "The Law of Sines gives $\\frac{\\sin B}{b} = \\frac{\\sin A}{a}$, so $\\sin B = \\frac{9\\sin 35^\\circ}{7} \\approx 0.73745$.",
     "The calculator gives the acute answer, $B \\approx 47.5^\\circ$.",
     "Sine is also positive in the second quadrant, so $B = 180^\\circ - 47.5^\\circ = 132.5^\\circ$ has the very same sine.",
     "Check it is legal: $35^\\circ + 132.5^\\circ = 167.5^\\circ < 180^\\circ$, so the obtuse triangle really exists."

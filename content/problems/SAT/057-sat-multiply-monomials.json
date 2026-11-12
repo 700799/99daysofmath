@@ -32,11 +32,11 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Handle the coefficients, the $x$ powers, and the $y$ powers as three separate jobs.",
+  "hint": "This product has three kinds of pieces: plain numbers, powers of $x$ and powers of $y$. Treat each kind on its own.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Handle the coefficients, the $x$ powers, and the $y$ powers as three separate jobs."
+      "text": "This product has three kinds of pieces: plain numbers, powers of $x$ and powers of $y$. Treat each kind on its own."
     },
     {
       "level": "nudge",
@@ -45,19 +45,20 @@
     },
     {
       "level": "guide",
-      "text": "Coefficients multiply: $3 \\times 4 = 12$. Exponents on matching bases add."
+      "text": "Multiply the coefficients $3$ and $4$. Add the exponents of $x$, which are $2$ and $5$. Add the exponents of $y$, which are $3$ and $1$."
     },
     {
       "level": "reveal",
-      "text": "$x^{2+5} = x^7$ and $y^{3+1} = y^4$, giving $12x^7y^4$."
+      "text": "The pieces are $12$, $x^7$ and $y^4$, so the product is $12x^7y^4$, which is choice A."
     }
   ],
   "learningObjective": "Multiply monomials with multiple variables.",
   "topic": "Exponent rules",
   "explanation": [
-    "Multiply the coefficients: $3 \\times 4 = 12$.",
-    "Add the exponents on $x$: $x^2 \\cdot x^5 = x^7$.",
-    "Add the exponents on $y$, remembering that a bare $y$ has exponent $1$: $y^3 \\cdot y^1 = y^4$. The product is $12x^7y^4$."
+    "Multiply the coefficients first, since the order of multiplication does not matter: $3 \\times 4 = 12$.",
+    "Powers of the same base multiply by adding exponents, so $x^2 \\cdot x^5 = x^7$.",
+    "A plain $y$ has exponent $1$, so adding the exponents of $y$ gives $y^3 \\cdot y = y^4$.",
+    "Putting the three pieces together gives $12x^7y^4$, which is choice A."
   ],
   "alternativeExplanations": [
     {

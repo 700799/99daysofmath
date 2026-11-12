@@ -10,24 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Count how many $5$'s.",
+  "hint": "A dot plot gets one dot for each data value, stacked above that value on the number line.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Count how many $5$'s."
+      "text": "A dot plot gets one dot for each data value, stacked above that value on the number line."
     },
     {
       "level": "guide",
-      "text": "$5$ appears in the data three times."
+      "text": "Look through $\\{2, 3, 3, 5, 5, 5\\}$ and count how many of the values are equal to $5$."
     },
     {
       "level": "reveal",
-      "text": "$3$."
+      "text": "The value $5$ appears three times, so $3$ dots sit above $5$."
     }
   ],
   "explanation": [
-    "Three $5$'s → three dots above $5$.",
-    "Final answer: 3."
+    "Each value in the data becomes one dot above its number on the dot plot.",
+    "In $\\{2, 3, 3, 5, 5, 5\\}$ the value $5$ appears three times.",
+    "Three copies of $5$ make three dots, so $3$ dots sit above the value $5$."
   ],
   "tags": [
     "dot-plot"

@@ -10,11 +10,11 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A line parallel to one side of a triangle cuts the other two sides proportionally.",
+  "hint": "The brace is parallel to the base of the triangle. Recall what a parallel line does to the two sides it crosses.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A line parallel to one side of a triangle cuts the other two sides proportionally."
+      "text": "The brace is parallel to the base of the triangle. Recall what a parallel line does to the two sides it crosses."
     },
     {
       "level": "nudge",
@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "Set up $\\frac{AD}{DB} = \\frac{AE}{EC}$, that is $\\frac{4}{6} = \\frac{6}{EC}$."
+      "text": "The sides are cut proportionally, so write $\\frac{AD}{DB} = \\frac{AE}{EC}$, which here is $\\frac{4}{6} = \\frac{6}{EC}$. Cross-multiply to finish."
     },
     {
       "level": "reveal",
-      "text": "Cross-multiply: $4 \\cdot EC = 36$, so $EC = 9$."
+      "text": "$4 \\cdot EC = 36$, so the missing length is $EC = 9$."
     }
   ],
   "explanation": [
-    "Because $\\overline{DE} \\parallel \\overline{BC}$, the corresponding angles make $\\triangle ADE \\sim \\triangle ABC$, and the brace splits the two sides proportionally.",
-    "That gives $\\frac{AD}{DB} = \\frac{AE}{EC}$, so $\\frac{4}{6} = \\frac{6}{EC}$.",
-    "Cross-multiply: $4 \\cdot EC = 6 \\times 6 = 36$, so $EC = 9$.",
-    "Check the whole sides too: $\\frac{AD}{AB} = \\frac{4}{10}$ and $\\frac{AE}{AC} = \\frac{6}{15}$, and both equal $0.4$. ✓"
+    "Since $\\overline{DE} \\parallel \\overline{BC}$, the Triangle Proportionality Theorem says the brace divides sides $\\overline{AB}$ and $\\overline{AC}$ in the same ratio.",
+    "That gives the proportion $\\frac{AD}{DB} = \\frac{AE}{EC}$, which becomes $\\frac{4}{6} = \\frac{6}{EC}$ with the known lengths.",
+    "Cross-multiplying gives $4 \\cdot EC = 6 \\times 6 = 36$, and dividing by $4$ shows the missing piece is $EC = 9$.",
+    "The whole sides agree as well, since $\\frac{AD}{AB} = \\frac{4}{10}$ and $\\frac{AE}{AC} = \\frac{6}{15}$ both equal $0.4$."
   ],
   "alternativeExplanations": [
     {

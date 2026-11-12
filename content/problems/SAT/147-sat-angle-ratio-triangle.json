@@ -10,11 +10,11 @@
   "primaryAnswer": "90",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Call the angles $x$, $2x$, and $3x$.",
+  "hint": "A ratio gives the relative sizes of the angles, not their actual sizes. Use one unknown for the size of a single part.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Call the angles $x$, $2x$, and $3x$."
+      "text": "A ratio gives the relative sizes of the angles, not their actual sizes. Use one unknown for the size of a single part."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "Their sum is $6x = 180$."
+      "text": "Call the angles $x$, $2x$ and $3x$. They add to $180°$, so $6x = 180$. Solve for $x$, then find the largest angle $3x$."
     },
     {
       "level": "reveal",
-      "text": "$x = 30$, so the largest angle is $3(30) = 90$ degrees."
+      "text": "Since $x = 30$, the largest angle is $3(30) = 90$ degrees."
     }
   ],
   "learningObjective": "Use a ratio together with the triangle angle sum.",
   "topic": "Triangle angles",
   "explanation": [
-    "Let the angles be $x$, $2x$, and $3x$.",
-    "Their sum is $180$: $x + 2x + 3x = 6x = 180$, so $x = 30$.",
-    "The angles are $30°$, $60°$, and $90°$ — the largest is $90°$, so this is a right triangle."
+    "Angles in the ratio $1 : 2 : 3$ can be written as $x$, $2x$ and $3x$ for some number $x$.",
+    "The angles of a triangle add to $180°$, so $x + 2x + 3x = 6x = 180$, which gives $x = 30$.",
+    "The angles are $30°$, $60°$ and $90°$, so the largest angle measures $90$ degrees."
   ],
   "alternativeExplanations": [
     {

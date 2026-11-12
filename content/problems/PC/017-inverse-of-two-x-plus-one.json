@@ -18,17 +18,17 @@
     },
     {
       "level": "guide",
-      "text": "Undo the $+1$ first: $9 - 1 = 8$. Then undo the doubling."
+      "text": "Undo the last step first by subtracting $1$: $9 - 1 = 8$. Then undo the doubling by dividing that $8$ by $2$."
     },
     {
       "level": "reveal",
-      "text": "$8 \\div 2 = 4$, so $f^{-1}(9) = 4$."
+      "text": "Halving gives $8 \\div 2 = 4$, so the value of $f^{-1}(9)$ is $4$."
     }
   ],
   "explanation": [
-    "Forward: double, then add 1.",
-    "Backward: subtract 1, then halve.",
-    "$9 - 1 = 8$, and $8 \\div 2 = 4$. Check: $f(4) = 9$."
+    "Going forward, $f$ doubles its input and then adds $1$.",
+    "Going backward, the inverse undoes those steps in reverse order: it subtracts $1$ first and then halves.",
+    "Subtracting gives $9 - 1 = 8$ and halving gives $8 \\div 2 = 4$. Checking forward, $f(4) = 2(4) + 1 = 9$, so $f^{-1}(9) = 4$."
   ],
   "alternativeExplanations": [
     {

@@ -10,11 +10,11 @@
   "primaryAnswer": "1950",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Density is mass per unit volume, so mass is density times volume.",
+  "hint": "Density tells how many grams are in each cubic centimeter. Think about how to combine it with the volume to get a mass.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Density is mass per unit volume, so mass is density times volume."
+      "text": "Density tells how many grams are in each cubic centimeter. Think about how to combine it with the volume to get a mass."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "$7.8 \\times 250$."
+      "text": "Every one of the $250$ cubic centimeters has a mass of $7.8$ grams, so multiply: $7.8 \\times 250$."
     },
     {
       "level": "reveal",
-      "text": "$1{,}950$ grams."
+      "text": "Since $7.8 \\times 250 = 1950$, the mass of the block is $1950$ grams."
     }
   ],
   "learningObjective": "Apply a density rate to compute a total.",
   "topic": "Rates",
   "explanation": [
-    "Density $= \\dfrac{\\text{mass}}{\\text{volume}}$, so mass $=$ density $\\times$ volume.",
-    "$7.8 \\dfrac{\\text{g}}{\\text{cm}^3} \\times 250 \\text{ cm}^3 = 1950$ grams — the cubic centimeters cancel, leaving grams ✓",
-    "Dividing instead would give about $32$, which is not a plausible mass for a block of metal."
+    "Density is mass divided by volume, so mass equals density times volume.",
+    "Multiply the density by the volume: $7.8 \\times 250 = 1950$. The cubic centimeters cancel and leave grams.",
+    "The mass of the block is $1950$ grams."
   ],
   "alternativeExplanations": [
     {

@@ -12,24 +12,25 @@
     "20 units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Squares have $4$ equal sides.",
+  "hint": "All four sides of a square are equal, so one side length is enough to find the perimeter.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Squares have $4$ equal sides."
+      "text": "All four sides of a square are equal, so one side length is enough to find the perimeter."
     },
     {
       "level": "guide",
-      "text": "Side $= 5$. Perimeter $= 4 \\cdot 5$."
+      "text": "The side from $(0,0)$ to $(5,0)$ is $5$ units long. A square has $4$ of these sides, so work out $4 \\times 5$."
     },
     {
       "level": "reveal",
-      "text": "$20$."
+      "text": "$4 \\times 5 = 20$, so the perimeter of the square is $20$ units."
     }
   ],
   "explanation": [
-    "Side $= 5$.",
-    "Perimeter $= 4 \\cdot 5 = 20$."
+    "Find one side from two neighboring vertices: from $(0,0)$ to $(5,0)$ is $5$ units.",
+    "Every side of a square has the same length, so the perimeter is $4$ times one side.",
+    "That gives $4 \\times 5 = 20$, so the perimeter is $20$ units."
   ],
   "tags": [
     "coordinate-plane",

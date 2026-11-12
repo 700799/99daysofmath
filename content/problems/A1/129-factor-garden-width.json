@@ -35,9 +35,9 @@
     }
   ],
   "explanation": [
-    "Factor the area: numbers multiplying to $18$, adding to $9$.",
-    "The pair is $6$ and $3$: $x^2 + 9x + 18 = (x + 6)(x + 3)$.",
-    "The length is $(x + 6)$, so the width is $x + 3$ meters."
+    "Area is length times width, so factor the area by finding two numbers that multiply to $18$ and add to $9$.",
+    "The pair is $6$ and $3$, which gives $x^2 + 9x + 18 = (x + 6)(x + 3)$.",
+    "One factor is the length $(x + 6)$, so the other factor is the width: $x + 3$ meters."
   ],
   "alternativeExplanations": [
     {

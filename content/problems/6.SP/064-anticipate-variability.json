@@ -14,7 +14,7 @@
     "N S N S"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Mark a question $S$ if its answer **varies** across the group; $N$ if it has one fixed answer.",
+  "hint": "Words such as \"each\" or \"students in my class\" signal a group whose answers will vary. A question about one person or one thing has one answer.",
   "hints": [
     {
       "level": "nudge",
@@ -23,24 +23,24 @@
     },
     {
       "level": "nudge",
-      "text": "Look for the giveaway \"**each**\", \"**every**\", or \"**students in my class**\" — those signal variability."
+      "text": "Words such as \"each\" or \"students in my class\" signal a group whose answers will vary. A question about one person or one thing has one answer."
     },
     {
       "level": "guide",
-      "text": "1) one fact → N. 2) many players → S. 3) one building → N. 4) many students → S. Answer: $NSNS$."
+      "text": "Label them in order: question 1 is about one person, question 2 about many players, question 3 about one building, and question 4 about many students. Write N for one answer and S for many."
     },
     {
       "level": "reveal",
-      "text": "Answer: $NSNS$."
+      "text": "The labels in order are N, S, N, S, so the answer is $NSNS$."
     }
   ],
   "explanation": [
-    "A statistical question expects **variability**. Walk each one:",
-    "1) \"How tall am I?\" → one specific person, one answer. **N**.",
-    "2) \"How tall is each player on the team?\" → many players, each different height. **S**.",
-    "3) \"How tall is the tallest building in Dubai?\" → one specific building, one answer. **N**.",
-    "4) \"How many minutes does it take students in my class to eat lunch?\" → many students, varying times. **S**.",
-    "Sequence: **$NSNS$**."
+    "A statistical question expects variability, so check each question for one answer or many.",
+    "1) \"How tall am I?\" is about one person with one height, so it is **N**.",
+    "2) \"How tall is each player on the team?\" covers many players with different heights, so it is **S**.",
+    "3) \"How tall is the tallest building in Dubai?\" is about one building with one height, so it is **N**.",
+    "4) The lunch question covers many students whose times vary, so it is **S**.",
+    "Putting the four labels in order gives the answer $NSNS$."
   ],
   "tags": [
     "vocabulary",

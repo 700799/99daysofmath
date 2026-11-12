@@ -10,25 +10,25 @@
   "primaryAnswer": "7200",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two machines in a row. Dollars must become euros FIRST.",
+  "hint": "Two machines run in a row here. Which currency must the dollars become first?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two machines in a row. Dollars must become euros FIRST."
+      "text": "Two machines run in a row here. Which currency must the dollars become first?"
     },
     {
       "level": "guide",
-      "text": "$e(50) = 0.9 \\times 50 = 45$ euros. Now feed 45 into the yen machine."
+      "text": "Run the euro machine first: $e(50) = 0.9 \\times 50 = 45$ euros. Then feed $45$ into the yen machine, which multiplies by $160$."
     },
     {
       "level": "reveal",
-      "text": "$y(45) = 160 \\times 45 = 7200$ yen."
+      "text": "The yen machine gives $160 \\times 45 = 7200$, so you end with $7200$ yen."
     }
   ],
   "explanation": [
-    "This is a composition: $y(e(50))$.",
-    "Inside first: $0.9 \\times 50 = 45$ euros.",
-    "Then $160 \\times 45 = 7200$ yen."
+    "Changing dollars to euros and then euros to yen is a composition, written $y(e(50))$.",
+    "Work the inside machine first: $0.9 \\times 50 = 45$, so $50$ dollars becomes $45$ euros.",
+    "Then the outside machine turns euros into yen: $160 \\times 45 = 7200$, so you end with $7200$ yen."
   ],
   "alternativeExplanations": [
     {

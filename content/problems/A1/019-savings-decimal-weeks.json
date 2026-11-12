@@ -10,11 +10,11 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Subtract the $\\$9$ head start from both sides first.",
+  "hint": "The decimal does not change the method. Deal with the money you already had before the weekly amount.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Subtract the $\\$9$ head start from both sides first."
+      "text": "The decimal does not change the method. Deal with the money you already had before the weekly amount."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$4.5w = 27$. Now divide both sides by $4.5$."
+      "text": "Subtract $9$ from both sides to get $4.5w = 27$. Then divide both sides by $4.5$."
     },
     {
       "level": "reveal",
-      "text": "$w = 27 \\div 4.5 = 6$ weeks."
+      "text": "$27 \\div 4.5 = 6$, so you reach $36$ dollars after $6$ weeks."
     }
   ],
   "explanation": [
-    "Subtract 9 from both sides: $4.5w = 27$.",
-    "Divide by 4.5: $w = 6$.",
-    "Check: $4.5 \\times 6 + 9 = 27 + 9 = 36$. ✓"
+    "Subtract the $9$ you started with from both sides, leaving $4.5w = 27$ to be saved.",
+    "Divide both sides by $4.5$ to undo the multiplication: $w = 27 \\div 4.5 = 6$.",
+    "Check: $4.5 \\times 6 + 9 = 27 + 9 = 36$, so it takes $6$ weeks to reach the goal."
   ],
   "alternativeExplanations": [
     {

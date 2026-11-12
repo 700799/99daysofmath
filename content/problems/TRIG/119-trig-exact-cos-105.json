@@ -14,11 +14,11 @@
     "(√2-√6)/4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Use $\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$ with $A = 60^\\circ$ and $B = 45^\\circ$.",
+  "hint": "The angle $105^\\circ$ is a sum of two special angles, so the cosine sum formula applies. Watch the minus sign in the middle of that formula.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use $\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$ with $A = 60^\\circ$ and $B = 45^\\circ$."
+      "text": "The angle $105^\\circ$ is a sum of two special angles, so the cosine sum formula applies. Watch the minus sign in the middle of that formula."
     },
     {
       "level": "nudge",
@@ -27,17 +27,17 @@
     },
     {
       "level": "guide",
-      "text": "That gives $\\frac{1}{2}\\cdot\\frac{\\sqrt{2}}{2} - \\frac{\\sqrt{3}}{2}\\cdot\\frac{\\sqrt{2}}{2} = \\frac{\\sqrt{2}}{4} - \\frac{\\sqrt{6}}{4}$."
+      "text": "Use $\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$ with $A = 60^\\circ$ and $B = 45^\\circ$. That gives $\\frac{1}{2}\\cdot\\frac{\\sqrt{2}}{2} - \\frac{\\sqrt{3}}{2}\\cdot\\frac{\\sqrt{2}}{2}$, so multiply out each product."
     },
     {
       "level": "reveal",
-      "text": "So $\\cos 105^\\circ = \\frac{\\sqrt{2} - \\sqrt{6}}{4}$, a negative number."
+      "text": "The products are $\\frac{\\sqrt{2}}{4} - \\frac{\\sqrt{6}}{4}$, so $\\cos 105^\\circ = \\frac{\\sqrt{2} - \\sqrt{6}}{4}$, a negative number."
     }
   ],
   "explanation": [
-    "Apply the cosine sum formula: $\\cos 105^\\circ = \\cos 60^\\circ\\cos 45^\\circ - \\sin 60^\\circ\\sin 45^\\circ$.",
-    "Substitute the special values: $\\frac{1}{2}\\cdot\\frac{\\sqrt{2}}{2} - \\frac{\\sqrt{3}}{2}\\cdot\\frac{\\sqrt{2}}{2}$.",
-    "That is $\\frac{\\sqrt{2}}{4} - \\frac{\\sqrt{6}}{4} = \\frac{\\sqrt{2} - \\sqrt{6}}{4}$.",
+    "Apply the cosine sum formula to the two special angles: $\\cos 105^\\circ = \\cos 60^\\circ\\cos 45^\\circ - \\sin 60^\\circ\\sin 45^\\circ$.",
+    "Substitute the special values for each angle: $\\frac{1}{2}\\cdot\\frac{\\sqrt{2}}{2} - \\frac{\\sqrt{3}}{2}\\cdot\\frac{\\sqrt{2}}{2}$.",
+    "Multiplying out and combining over the common denominator gives $\\frac{\\sqrt{2}}{4} - \\frac{\\sqrt{6}}{4} = \\frac{\\sqrt{2} - \\sqrt{6}}{4}$.",
     "Numerically this is about $\\frac{1.414 - 2.449}{4} \\approx -0.259$, and a calculator confirms $\\cos 105^\\circ \\approx -0.259$."
   ],
   "alternativeExplanations": [

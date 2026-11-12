@@ -14,24 +14,26 @@
     "1,4"
   ],
   "acceptanceMode": "exact",
-  "hint": "It shares one coordinate with each of the others.",
+  "hint": "In a rectangle lined up with the grid, the corners use only two different $x$-values and two different $y$-values.",
   "hints": [
     {
       "level": "nudge",
-      "text": "It shares one coordinate with each of the others."
+      "text": "In a rectangle lined up with the grid, the corners use only two different $x$-values and two different $y$-values."
     },
     {
       "level": "guide",
-      "text": "Same $x$ as $(1, 1)$ and same $y$ as $(5, 4)$."
+      "text": "The $x$-values so far are $1$, $5$, $5$ and the $y$-values are $1$, $1$, $4$. Each value must appear twice, so see which $x$ and which $y$ are used only once."
     },
     {
       "level": "reveal",
-      "text": "$(1, 4)$."
+      "text": "The missing corner uses $x = 1$ and $y = 4$, so the fourth vertex is $(1, 4)$."
     }
   ],
   "explanation": [
-    "Opposite of $(5, 4)$: needs $x = 1$, $y = 4$.",
-    "$(1, 4)$."
+    "Each side of the rectangle is horizontal or vertical, so every $x$-value and every $y$-value is shared by two corners.",
+    "Among the given points, $x = 5$ appears twice but $x = 1$ appears once, so the missing corner has $x = 1$.",
+    "In the same way, $y = 1$ appears twice but $y = 4$ appears once, so the missing corner has $y = 4$.",
+    "The fourth vertex of the rectangle is $(1, 4)$."
   ],
   "tags": [
     "coordinate-plane",

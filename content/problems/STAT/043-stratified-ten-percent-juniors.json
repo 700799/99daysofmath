@@ -10,19 +10,19 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Each grade is a stratum. Sample from the junior stratum only for this question.",
+  "hint": "In a stratified sample each grade is sampled separately. Which grade's count matters for this question?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Each grade is a stratum. Sample from the junior stratum only for this question."
+      "text": "In a stratified sample each grade is sampled separately. Which grade's count matters for this question?"
     },
     {
       "level": "guide",
-      "text": "Take $10$ percent of $200$."
+      "text": "Only the junior stratum matters, and it has $200$ students. Take $10$ percent of $200$."
     },
     {
       "level": "reveal",
-      "text": "$0.10 \\times 200 = 20$ juniors."
+      "text": "$0.10 \\times 200 = 20$, so the sample contains $20$ juniors."
     }
   ],
   "explanation": [

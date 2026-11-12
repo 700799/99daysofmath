@@ -10,23 +10,26 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiply both sides by $4$.",
+  "hint": "The fraction bar means $x$ is divided by $4$. Which operation undoes dividing?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply both sides by $4$."
+      "text": "The fraction bar means $x$ is divided by $4$. Which operation undoes dividing?"
     },
     {
       "level": "guide",
-      "text": "$x = 5 \\times 4$."
+      "text": "Multiply both sides by $4$ to cancel the division. The right side becomes $5 \\times 4$."
     },
     {
       "level": "reveal",
-      "text": "$x = 20$."
+      "text": "$5 \\times 4 = 20$, so the solution of the equation is $x = 20$."
     }
   ],
   "explanation": [
-    "$\\frac{x}{4} = 5 \\Rightarrow x = 20$."
+    "$\\frac{x}{4}$ means $x$ divided by $4$, and that quotient equals $5$.",
+    "Multiplication undoes division, so multiply both sides by $4$.",
+    "The left side becomes $x$ and the right side becomes $5 \\times 4 = 20$.",
+    "Check: $20 \\div 4 = 5$ is true, so the solution is $x = 20$."
   ],
   "tags": [
     "solve"

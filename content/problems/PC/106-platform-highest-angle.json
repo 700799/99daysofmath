@@ -10,11 +10,11 @@
   "primaryAnswer": "90",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The height is biggest when $\\sin\\theta$ is biggest.",
+  "hint": "Only the sine part of the rule changes, so the height is biggest when $\\sin\\theta$ is biggest.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The height is biggest when $\\sin\\theta$ is biggest."
+      "text": "Only the sine part of the rule changes, so the height is biggest when $\\sin\\theta$ is biggest."
     },
     {
       "level": "guide",
@@ -22,7 +22,7 @@
     },
     {
       "level": "reveal",
-      "text": "$\\sin 90^\\circ = 1$, so the robot is highest at $\\theta = 90^\\circ$ (height $10$ m)."
+      "text": "Since $\\sin 90^\\circ = 1$, the robot is highest at $\\theta = 90^\\circ$, where the height is $10$ m."
     }
   ],
   "explanation": [

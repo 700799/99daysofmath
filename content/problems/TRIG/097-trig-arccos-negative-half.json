@@ -10,19 +10,19 @@
   "primaryAnswer": "120",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The reference angle is $60^\\circ$, because $\\cos 60^\\circ = \\frac{1}{2}$.",
+  "hint": "Ignore the minus sign at first and find the reference angle from the positive value. Then use the output range of $\\arccos$ to place the angle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The reference angle is $60^\\circ$, because $\\cos 60^\\circ = \\frac{1}{2}$."
+      "text": "Ignore the minus sign at first and find the reference angle from the positive value. Then use the output range of $\\arccos$ to place the angle."
     },
     {
       "level": "guide",
-      "text": "$\\arccos$ returns angles from $0^\\circ$ to $180^\\circ$, and cosine is negative in the second quadrant."
+      "text": "The reference angle is $60^\\circ$, because $\\cos 60^\\circ = \\frac{1}{2}$. The function $\\arccos$ returns angles from $0^\\circ$ to $180^\\circ$, and cosine is negative in the second quadrant."
     },
     {
       "level": "reveal",
-      "text": "The second-quadrant angle with reference $60^\\circ$ is $180^\\circ - 60^\\circ = 120^\\circ$."
+      "text": "The second-quadrant angle with reference $60^\\circ$ is $180^\\circ - 60^\\circ = 120^\\circ$, so the answer is $120$."
     }
   ],
   "explanation": [

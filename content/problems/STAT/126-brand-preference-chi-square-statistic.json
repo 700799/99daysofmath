@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "Under $H_0$ each brand is expected $60/3 = 20$ times.",
+  "hint": "Chi-square compares observed counts with the counts the null hypothesis predicts. What does \"equally likely\" predict for each brand out of $60$ purchases?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Under $H_0$ each brand is expected $60/3 = 20$ times."
+      "text": "Chi-square compares observed counts with the counts the null hypothesis predicts. What does \"equally likely\" predict for each brand out of $60$ purchases?"
     },
     {
       "level": "guide",
-      "text": "Compute $\\frac{(30-20)^2}{20} + \\frac{(20-20)^2}{20} + \\frac{(10-20)^2}{20}$."
+      "text": "Each brand is expected $60/3 = 20$ times. Compute one term per brand and add: $\\frac{(30-20)^2}{20} + \\frac{(20-20)^2}{20} + \\frac{(10-20)^2}{20}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{100}{20} + 0 + \\frac{100}{20} = 5 + 0 + 5 = 10$."
+      "text": "$\\frac{100}{20} + 0 + \\frac{100}{20} = 5 + 0 + 5$, so the chi-square statistic is $10$."
     }
   ],
   "explanation": [
-    "Expected counts: $60 \\times \\frac{1}{3} = 20$ for each brand.",
-    "Components: X: $(30-20)^2/20 = 5$; Y: $(20-20)^2/20 = 0$; Z: $(10-20)^2/20 = 5$.",
-    "$\\chi^2 = 5 + 0 + 5 = 10$ with df $= 2$. That is well above the $\\alpha = 0.05$ critical value of $5.991$, so the data give convincing evidence the brands are not equally popular."
+    "If the brands are equally likely, each expected count is $60 \\times \\frac{1}{3} = 20$.",
+    "Each brand contributes $(O - E)^2/E$: X gives $(30-20)^2/20 = 5$, Y gives $(20-20)^2/20 = 0$ and Z gives $(10-20)^2/20 = 5$.",
+    "$\\chi^2 = 5 + 0 + 5 = 10$ with df $= 2$. That is well above the $\\alpha = 0.05$ critical value of $5.991$, so the brands do not appear equally popular."
   ],
   "alternativeExplanations": [
     {

@@ -17,19 +17,19 @@
     "3 x (8 + 5)"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The word \"sum\" means addition, so $8$ and $5$ get added.",
+  "hint": "Look for the word \"sum\" in the phrase. It tells you which two numbers are joined and with which operation.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The word \"sum\" means addition, so $8$ and $5$ get added."
+      "text": "Look for the word \"sum\" in the phrase. It tells you which two numbers are joined and with which operation."
     },
     {
       "level": "guide",
-      "text": "The whole sum gets tripled, so wrap the addition in parentheses before multiplying."
+      "text": "The sum is $8 + 5$. All of that sum gets tripled, so put the addition in parentheses and multiply the parentheses by $3$."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times (8 + 5)$."
+      "text": "The expression is $3 \\times (8 + 5)$, with parentheses so the whole sum is multiplied."
     }
   ],
   "explanation": [

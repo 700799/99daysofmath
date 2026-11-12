@@ -32,19 +32,19 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "This is the Factor Theorem: a zero of the polynomial corresponds to a factor.",
+  "hint": "The statement says that $3$ is a zero of the polynomial. Recall the theorem that links a zero to a factor.",
   "hints": [
     {
       "level": "nudge",
-      "text": "This is the Factor Theorem: a zero of the polynomial corresponds to a factor."
+      "text": "The statement says that $3$ is a zero of the polynomial. Recall the theorem that links a zero to a factor."
     },
     {
       "level": "guide",
-      "text": "If $p(a) = 0$, then $(x - a)$ divides $p(x)$."
+      "text": "The Factor Theorem says that if $p(a) = 0$, then $(x - a)$ divides $p(x)$. Use $a = 3$ and watch the sign inside the bracket."
     },
     {
       "level": "reveal",
-      "text": "With $a = 3$, the factor is $x - 3$."
+      "text": "With $a = 3$ the factor is $x - 3$, so the statement that must be true is choice B."
     }
   ],
   "learningObjective": "State and apply the Factor Theorem.",

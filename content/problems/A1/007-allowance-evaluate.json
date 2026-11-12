@@ -10,25 +10,25 @@
   "primaryAnswer": "75",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Replace $w$ with $6$ in $10w + 15$.",
+  "hint": "The formula tells you your money for any number of weeks. Which letter does the question give a value for?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Replace $w$ with $6$ in $10w + 15$."
+      "text": "The formula tells you your money for any number of weeks. Which letter does the question give a value for?"
     },
     {
       "level": "guide",
-      "text": "$10 \\times 6 = 60$. Now add the $\\$15$ you started with."
+      "text": "Write $6$ in place of $w$ to get $10(6) + 15$. Find the allowance total first, then add what you started with."
     },
     {
       "level": "reveal",
-      "text": "$60 + 15 = 75$ dollars."
+      "text": "$10 \\times 6 = 60$ and $60 + 15 = 75$, so you have $75$ dollars after $6$ weeks."
     }
   ],
   "explanation": [
-    "Substitute $w = 6$: $10(6) + 15$.",
-    "Multiply: $10 \\times 6 = 60$.",
-    "Add the starting money: $60 + 15 = 75$. You have $\\$75$."
+    "The question is about $6$ weeks, so substitute $w = 6$ into the formula: $10(6) + 15$.",
+    "Multiply first to find the allowance earned over six weeks: $10 \\times 6 = 60$.",
+    "Add the $15$ dollars you already had: $60 + 15 = 75$, so you have $75$ dollars."
   ],
   "alternativeExplanations": [
     {

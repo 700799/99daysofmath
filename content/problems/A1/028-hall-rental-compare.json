@@ -10,11 +10,11 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Put the $g$'s on one team: subtract $6g$ from both sides.",
+  "hint": "Guests appear on both sides of the equation. Collect the $g$ terms on one side before dividing.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Put the $g$'s on one team: subtract $6g$ from both sides."
+      "text": "Guests appear on both sides of the equation. Collect the $g$ terms on one side before dividing."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$40 = 4g$. Divide both sides by $4$."
+      "text": "Subtract $6g$ from both sides to get $40 = 4g$. Then divide both sides by $4$."
     },
     {
       "level": "reveal",
-      "text": "$g = 40 \\div 4 = 10$ guests."
+      "text": "$40 \\div 4 = 10$, so the halls cost the same for $10$ guests."
     }
   ],
   "explanation": [
-    "Subtract $6g$ from both sides: $40 = 4g$.",
-    "Divide by 4: $g = 10$.",
-    "Check: hall A costs $40 + 6(10) = \\$100$; hall B costs $10(10) = \\$100$. ✓"
+    "Subtract $6g$ from both sides so the variable is only on the right: $40 = 4g$.",
+    "Divide both sides by $4$ to undo the multiplication, which gives $g = 10$.",
+    "Check: Hall A costs $40 + 6(10) = 100$ dollars and Hall B costs $10(10) = 100$ dollars, so they match at $10$ guests."
   ],
   "alternativeExplanations": [
     {

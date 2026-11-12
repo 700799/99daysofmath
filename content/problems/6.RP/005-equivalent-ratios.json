@@ -32,11 +32,12 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Simplify $4 : 10$ by dividing both numbers by their greatest common factor.",
+  "hint": "Equivalent ratios come from multiplying or dividing **both** numbers by the same amount. What number divides evenly into both parts here?",
   "explanation": [
-    "The greatest common factor of $4$ and $10$ is $2$.",
-    "Divide both parts of the ratio by $2$: $\\frac{4}{2} : \\frac{10}{2} = 2 : 5$.",
-    "So $4 : 10 = 2 : 5$."
+    "Two ratios are equivalent when one can be turned into the other by multiplying or dividing both parts by the same number.",
+    "Divide both parts of $4 : 10$ by their common factor $2$ to get $2 : 5$, which is choice B.",
+    "The other choices fail: $8 : 15$ doubles only the first part correctly, while $4 : 5$ and $5 : 10$ each change just one part.",
+    "The ratio equivalent to $4 : 10$ is $2 : 5$, choice B."
   ],
   "alternativeExplanations": [
     {
@@ -56,15 +57,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Simplify $4 : 10$ by dividing both numbers by their greatest common factor."
+      "text": "Equivalent ratios come from multiplying or dividing **both** numbers by the same amount. What number divides evenly into both parts here?"
     },
     {
       "level": "guide",
-      "text": "The greatest common factor of $4$ and $10$ is $2$."
+      "text": "Both $4$ and $10$ are even, so divide each one by $2$ and look for that result among the choices."
     },
     {
       "level": "reveal",
-      "text": "So $4 : 10 = 2 : 5$."
+      "text": "$4 \\div 2 = 2$ and $10 \\div 2 = 5$, so the equivalent ratio is $2 : 5$, choice B."
     }
   ],
   "diagram": {

@@ -18,25 +18,25 @@
     "15+5x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the START (money at week $0$) and the MOVE (money added per week).",
+  "hint": "Find two things in the story: how much you have at week zero, and how much is added each week.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the START (money at week $0$) and the MOVE (money added per week)."
+      "text": "Find two things in the story: how much you have at week zero, and how much is added each week."
     },
     {
       "level": "guide",
-      "text": "Start $b = 15$, move $m = 5$ per week. Fill in $y = mx + b$."
+      "text": "The starting amount is $b = 15$ and the weekly change is $m = 5$. Put them into $y = mx + b$."
     },
     {
       "level": "reveal",
-      "text": "$y = 5x + 15$."
+      "text": "With slope $5$ and starting value $15$, the equation is $y = 5x + 15$."
     }
   ],
   "explanation": [
-    "The start is $b = 15$ — the money before any weeks pass.",
-    "The move is $m = 5$ — dollars added each week.",
-    "Equation: $y = 5x + 15$."
+    "The starting value is the money you have before any weeks pass, so $b = 15$.",
+    "The rate of change is the money added each week, so the slope is $m = 5$.",
+    "Putting these into $y = mx + b$ gives the equation $y = 5x + 15$."
   ],
   "alternativeExplanations": [
     {

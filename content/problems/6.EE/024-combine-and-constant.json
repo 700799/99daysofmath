@@ -12,25 +12,26 @@
     "5x + 9"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Combine $x$-terms; combine constants.",
+  "hint": "Sort the four terms into two kinds: those with $x$ and those that are plain numbers.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Combine $x$-terms; combine constants."
+      "text": "Sort the four terms into two kinds: those with $x$ and those that are plain numbers."
     },
     {
       "level": "guide",
-      "text": "$2x + 3x = 5x$, $5 + 4 = 9$."
+      "text": "Add the $x$ terms, $2x$ and $3x$, together. Then add the plain numbers, $5$ and $4$, together."
     },
     {
       "level": "reveal",
-      "text": "$5x + 9$."
+      "text": "$2x + 3x = 5x$ and $5 + 4 = 9$, so the simplified expression is $5x + 9$."
     }
   ],
   "explanation": [
-    "$x$-terms: $2x + 3x = 5x$.",
-    "Constants: $5 + 4 = 9$.",
-    "$5x + 9$."
+    "Only like terms can be combined, so first group the $x$ terms and the constants.",
+    "Combine the terms with $x$ by adding their coefficients: $2x + 3x = 5x$.",
+    "Combine the plain numbers by adding them: $5 + 4 = 9$.",
+    "An $x$ term and a number cannot be joined, so the answer is $5x + 9$."
   ],
   "tags": [
     "CA",

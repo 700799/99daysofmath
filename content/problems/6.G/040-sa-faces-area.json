@@ -10,28 +10,31 @@
   "primaryAnswer": "54",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$6$ faces, each $9$ cm².",
+  "hint": "The area of one face is already given, so you do not need the side length. How many faces does a cube have?",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Split or rearrange the shape into pieces whose formulas you already know."
+      "text": "Picture the cube unfolded into a net. You would see the same $9$ cm² square repeated once for each face."
     },
     {
       "level": "nudge",
-      "text": "$6$ faces, each $9$ cm²."
+      "text": "The area of one face is already given, so you do not need the side length. How many faces does a cube have?"
     },
     {
       "level": "guide",
-      "text": "$6 \\times 9$."
+      "text": "A cube has $6$ equal faces and each has area $9$. Multiply $6$ by $9$ to get the total."
     },
     {
       "level": "reveal",
-      "text": "$54$."
+      "text": "$6 \\times 9 = 54$, so the total surface area is $54$ square centimeters."
     }
   ],
   "explanation": [
-    "Total SA $= 6 \\times 9 = 54$ cm²."
+    "The total surface area is the sum of the areas of all the faces of the cube.",
+    "A cube has $6$ faces, and every face has the same area, $9$ square centimeters.",
+    "Adding six equal areas is the same as multiplying: $6 \\times 9 = 54$.",
+    "The total surface area of the cube is $54$ square centimeters."
   ],
   "tags": [
     "surface-area"

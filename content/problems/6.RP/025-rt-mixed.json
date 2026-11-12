@@ -10,24 +10,26 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the ratio $y \\div x$ from the other rows.",
+  "hint": "Every pair in a ratio table is linked by the same multiplier. Use a complete pair to discover how $y$ comes from $x$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the ratio $y \\div x$ from the other rows."
+      "text": "Every pair in a ratio table is linked by the same multiplier. Use a complete pair to discover how $y$ comes from $x$."
     },
     {
       "level": "guide",
-      "text": "$8/2 = 4$ and $40/10 = 4$, so $y = 4x$."
+      "text": "From $2/8$ you get $8 \\div 2 = 4$, and $10/40$ agrees because $40 \\div 10 = 4$. So $y$ is $4$ times $x$: multiply $5$ by $4$."
     },
     {
       "level": "reveal",
-      "text": "For $x = 5$: $y = 5 \\times 4 = 20$."
+      "text": "$5 \\times 4 = 20$, so the missing $y$ value is $20$."
     }
   ],
   "explanation": [
-    "Pattern: $y = 4x$.",
-    "For $x = 5$: $y = 20$."
+    "Use the complete pair $2/8$ to find the rule: $8 \\div 2 = 4$, so $y$ is $4$ times $x$.",
+    "Confirm the rule with the other complete pair: $10 \\times 4 = 40$, which is correct.",
+    "Apply the rule to the middle pair, where $x = 5$: $5 \\times 4 = 20$.",
+    "The missing $y$ value in the table is $20$."
   ],
   "tags": [
     "MAP-practice",

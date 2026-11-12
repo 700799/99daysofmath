@@ -10,7 +10,7 @@
   "primaryAnswer": "30",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Warm up on $2 \\times [10 - (1 + 2 \\times 2)]$. Inside: $2 \\times 2 = 4$, then $1 + 4 = 5$, then $10 - 5 = 5$, then $2 \\times 5 = 10$. The big problem uses exactly that order.",
+  "hint": "Work from the innermost grouping outward. Inside each grouping, remember that multiplication is done before addition.",
   "hints": [
     {
       "level": "nudge",
@@ -19,22 +19,22 @@
     },
     {
       "level": "nudge",
-      "text": "Go from the innermost parentheses outward, and inside them, multiply before you add."
+      "text": "Work from the innermost grouping outward. Inside each grouping, remember that multiplication is done before addition."
     },
     {
       "level": "guide",
-      "text": "Inside the parentheses: $2 \\times 3 = 6$, then $4 + 6 = 10$."
+      "text": "Inside the parentheses, do $2 \\times 3 = 6$ first and then $4 + 6 = 10$. The brackets now hold $20 - 10$, and the result is multiplied by $3$."
     },
     {
       "level": "reveal",
-      "text": "$20 - 10 = 10$, and $3 \\times 10 = 30$."
+      "text": "$20 - 10 = 10$ and $3 \\times 10 = 30$, so the expression equals $30$."
     }
   ],
   "explanation": [
-    "Innermost first: inside $(4 + 2 \\times 3)$, multiplication beats addition, so $2 \\times 3 = 6$ and then $4 + 6 = 10$.",
-    "Now the brackets read $[20 - 10] = 10$.",
-    "Finally, $3 \\times 10 = 30$.",
-    "The expression equals $30$."
+    "Start inside the parentheses $(4 + 2 \\times 3)$. Multiplication comes before addition, so $2 \\times 3 = 6$ and then $4 + 6 = 10$.",
+    "Now the brackets read $20 - 10$, which equals $10$.",
+    "Finally multiply by the number in front of the brackets: $3 \\times 10 = 30$.",
+    "The whole expression has a value of $30$."
   ],
   "alternativeExplanations": [
     {

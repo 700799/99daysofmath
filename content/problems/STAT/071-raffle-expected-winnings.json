@@ -10,25 +10,25 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Expected value is a weighted average: each outcome times its probability, then add.",
+  "hint": "Expected value is a weighted average of the payouts, where each payout is weighted by how likely it is.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Expected value is a weighted average: each outcome times its probability, then add."
+      "text": "Expected value is a weighted average of the payouts, where each payout is weighted by how likely it is."
     },
     {
       "level": "guide",
-      "text": "$E(X) = 10(0.1) + 0(0.9)$."
+      "text": "Multiply each payout by its probability and add the results: $10(0.1) + 0(0.9)$."
     },
     {
       "level": "reveal",
-      "text": "$10(0.1) + 0(0.9) = 1 + 0 = 1$. The ticket is worth $\\$1$ on average."
+      "text": "$1 + 0 = 1$, so the expected value is $\\$1$: on average a ticket pays one dollar."
     }
   ],
   "explanation": [
-    "$E(X) = \\sum x \\cdot P(x)$, so multiply each payout by its probability.",
-    "$10 \\times 0.1 = 1$ and $0 \\times 0.9 = 0$.",
-    "Add them: $E(X) = 1$. Over many tickets, the average payout is $\\$1$ per ticket."
+    "The expected value is $E(X) = \\sum x \\cdot P(x)$, so each payout is multiplied by its probability.",
+    "The two products are $10 \\times 0.1 = 1$ for a winning ticket and $0 \\times 0.9 = 0$ for a losing one.",
+    "Adding them gives $E(X) = 1$, so over many tickets the average payout is $\\$1$ per ticket."
   ],
   "alternativeExplanations": [
     {

@@ -10,25 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "First find $\\int_3^5 f(x) \\, dx$ by subtracting: the piece from $1$ to $5$ minus the piece from $1$ to $3$.",
+  "hint": "The interval from $1$ to $5$ splits into a piece from $1$ to $3$ and a piece from $3$ to $5$. How can the two known integrals give you $\\int_3^5 f(x) \\, dx$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find $\\int_3^5 f(x) \\, dx$ by subtracting: the piece from $1$ to $5$ minus the piece from $1$ to $3$."
+      "text": "The interval from $1$ to $5$ splits into a piece from $1$ to $3$ and a piece from $3$ to $5$. How can the two known integrals give you $\\int_3^5 f(x) \\, dx$?"
     },
     {
       "level": "guide",
-      "text": "$\\int_3^5 f = 8 - 3 = 5$. Then $\\int_3^5 (2f + 1) \\, dx = 2 \\int_3^5 f \\, dx + \\int_3^5 1 \\, dx$."
+      "text": "Subtracting gives $\\int_3^5 f = 8 - 3 = 5$. Then split the new integral with linearity: $\\int_3^5 (2f + 1) \\, dx = 2 \\int_3^5 f \\, dx + \\int_3^5 1 \\, dx$."
     },
     {
       "level": "reveal",
-      "text": "$2(5) + (5 - 3) = 10 + 2 = 12$."
+      "text": "The value is $2(5) + (5 - 3) = 10 + 2 = 12$, so the integral equals $12$."
     }
   ],
   "explanation": [
-    "Additivity: $\\int_1^5 f = \\int_1^3 f + \\int_3^5 f$, so $\\int_3^5 f = 8 - 3 = 5$.",
-    "Linearity: $\\int_3^5 (2f + 1) \\, dx = 2\\int_3^5 f \\, dx + \\int_3^5 1 \\, dx = 2(5) + 2$.",
-    "$= 12$. The $\\int_3^5 1 \\, dx = 2$ term is the width of the interval — easy to forget."
+    "Integrals add over adjacent intervals: $\\int_1^5 f = \\int_1^3 f + \\int_3^5 f$, so $\\int_3^5 f = 8 - 3 = 5$.",
+    "Linearity lets you split the sum and pull out the constant: $\\int_3^5 (2f + 1) \\, dx = 2\\int_3^5 f \\, dx + \\int_3^5 1 \\, dx = 2(5) + 2$.",
+    "The total is $12$. The $\\int_3^5 1 \\, dx = 2$ term is the width of the interval, which is easy to forget."
   ],
   "alternativeExplanations": [
     {

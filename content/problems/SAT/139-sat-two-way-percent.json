@@ -15,11 +15,11 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.6,
-  "hint": "\"Of the students who take the bus\" names the denominator.",
+  "hint": "Read the phrase after the word of carefully. It tells you which group is the whole for this percent.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Of the students who take the bus\" names the denominator."
+      "text": "Read the phrase after the word of carefully. It tells you which group is the whole for this percent."
     },
     {
       "level": "nudge",
@@ -28,19 +28,19 @@
     },
     {
       "level": "guide",
-      "text": "The Bus row totals $80$, and $45$ of those are in Grade 9."
+      "text": "The whole is the students who take the bus, and the Bus row has a total of $80$. Of these, $45$ are in Grade $9$, so work out $\\dfrac{45}{80}$."
     },
     {
       "level": "reveal",
-      "text": "$\\dfrac{45}{80} = 0.5625 \\approx 56\\%$."
+      "text": "The fraction $\\dfrac{45}{80}$ equals $0.5625$, which rounds to $56\\%$."
     }
   ],
   "learningObjective": "Compute a row-conditional percentage from a two-way table.",
   "topic": "Two-way tables",
   "explanation": [
-    "The phrase \"of the students who take the bus\" restricts the pool to the Bus row, total $80$.",
-    "Of those, $45$ are in Grade 9.",
-    "$\\dfrac{45}{80} = 0.5625$, which rounds to $56\\%$."
+    "The phrase of the students who take the bus limits the group to the Bus row, which has a total of $80$.",
+    "Within that row, the number of students in Grade $9$ is $45$.",
+    "Divide to get $\\dfrac{45}{80} = 0.5625$, which is $56\\%$ to the nearest whole percent."
   ],
   "alternativeExplanations": [
     {

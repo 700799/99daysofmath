@@ -16,11 +16,11 @@
     "y=6+3x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Slope first: $m = \\frac{y_2 - y_1}{x_2 - x_1}$. Then notice one point has $x = 0$.",
+  "hint": "Find the slope from the two points first. Then look closely at the $x$-value of one of the points.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Slope first: $m = \\frac{y_2 - y_1}{x_2 - x_1}$. Then notice one point has $x = 0$."
+      "text": "Find the slope from the two points first. Then look closely at the $x$-value of one of the points."
     },
     {
       "level": "nudge",
@@ -29,17 +29,17 @@
     },
     {
       "level": "guide",
-      "text": "$m = \\frac{12 - 6}{2 - 0} = 3$. The point $(0, 6)$ IS the $y$-intercept."
+      "text": "The slope is $m = \\frac{12 - 6}{2 - 0} = 3$. The point $(0, 6)$ lies on the $y$-axis, so it tells you $b$ directly."
     },
     {
       "level": "reveal",
-      "text": "$y = 3x + 6$."
+      "text": "With $m = 3$ and $b = 6$, the equation of the line is $y = 3x + 6$."
     }
   ],
   "explanation": [
-    "Slope: $m = \\frac{12 - 6}{2 - 0} = \\frac{6}{2} = 3$.",
-    "A point with $x = 0$ gives $b$ for free: $b = 6$.",
-    "Equation: $y = 3x + 6$."
+    "Find the slope from the two points: $m = \\frac{12 - 6}{2 - 0} = \\frac{6}{2} = 3$.",
+    "A point with $x = 0$ is the $y$-intercept, so $(0, 6)$ gives $b = 6$ without any extra work.",
+    "Putting $m = 3$ and $b = 6$ into $y = mx + b$ gives the equation $y = 3x + 6$."
   ],
   "alternativeExplanations": [
     {

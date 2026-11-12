@@ -10,29 +10,31 @@
   "primaryAnswer": "17",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Add $12$ to both sides.",
+  "hint": "$12$ is being subtracted from $y$. Use the opposite operation on both sides.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Whatever operation is acting on the variable, do its OPPOSITE on both sides."
+      "text": "Read it as a story: you had $y$ stickers, gave away $12$, and have $5$ left. How many did you start with?"
     },
     {
       "level": "nudge",
-      "text": "Add $12$ to both sides."
+      "text": "$12$ is being subtracted from $y$. Use the opposite operation on both sides."
     },
     {
       "level": "guide",
-      "text": "$y = 5 + 12$."
+      "text": "Add $12$ to both sides to cancel the subtraction. The right side becomes $5 + 12$."
     },
     {
       "level": "reveal",
-      "text": "$17$."
+      "text": "$5 + 12 = 17$, so the solution of the equation is $y = 17$."
     }
   ],
   "explanation": [
-    "$y - 12 = 5$.",
-    "$y = 5 + 12 = 17$."
+    "In $y - 12 = 5$, the number $12$ is subtracted from $y$.",
+    "Add $12$ to both sides, because addition undoes subtraction.",
+    "The right side becomes $5 + 12 = 17$, so the result is $y = 17$.",
+    "Check: $17 - 12 = 5$ is true, so the solution is $y = 17$."
   ],
   "tags": [
     "MAP-practice",

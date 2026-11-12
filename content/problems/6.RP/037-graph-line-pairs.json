@@ -10,24 +10,26 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Unit rate = $y / x$ at one point.",
+  "hint": "A straight line through the origin shows a proportional relationship, so $y$ is always the same multiple of $x$. The unit rate is that multiple.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Unit rate = $y / x$ at one point."
+      "text": "A straight line through the origin shows a proportional relationship, so $y$ is always the same multiple of $x$. The unit rate is that multiple."
     },
     {
       "level": "guide",
-      "text": "$\\frac{12}{3} = ?$"
+      "text": "At the point $(3, 12)$, $x$ is $3$ and $y$ is $12$. Divide $y$ by $x$ to see how much $y$ there is for each $1$ of $x$."
     },
     {
       "level": "reveal",
-      "text": "$12 \\div 3 = 4$."
+      "text": "$12 \\div 3 = 4$, so the unit rate is $4$ units of $y$ for each $1$ of $x$."
     }
   ],
   "explanation": [
-    "Unit rate: $\\frac{12}{3} = 4$.",
-    "For every $1$ $x$, $y$ goes up by $4$."
+    "For a line through the origin, the ratio $\\frac{y}{x}$ is the same at every point, and that ratio is the unit rate.",
+    "Use the point given in the problem to write that ratio: $\\frac{y}{x} = \\frac{12}{3}$.",
+    "Dividing gives $12 \\div 3 = 4$, which means the line also passes through $(1, 4)$.",
+    "The unit rate is $4$ units of $y$ for every $1$ unit of $x$."
   ],
   "tags": [
     "graph",

@@ -32,19 +32,19 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Is $\\frac{7}{8}$ less than $1$ or more than $1$?",
+  "hint": "Before multiplying anything, compare the fraction with one whole. That tells you how the product compares with the other factor.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Is $\\frac{7}{8}$ less than $1$ or more than $1$?"
+      "text": "Before multiplying anything, compare the fraction with one whole. That tells you how the product compares with the other factor."
     },
     {
       "level": "guide",
-      "text": "Taking $\\frac{7}{8}$ of something means taking almost all of it — but never more than all of it."
+      "text": "$\\frac{7}{8}$ is less than $1$, so $\\frac{7}{8}$ of $24$ is most of $24$ but not all of it. Compare that with Ben's answer of $27$."
     },
     {
       "level": "reveal",
-      "text": "The answer has to be under $24$, so $27$ is too big. (It is really $21$.)"
+      "text": "The product must be less than $24$, so $27$ is too big. That is choice B, and the real value is $21$."
     }
   ],
   "explanation": [

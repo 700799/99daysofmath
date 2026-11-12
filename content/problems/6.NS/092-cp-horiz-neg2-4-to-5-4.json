@@ -12,24 +12,26 @@
     "7 units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Same y-value means horizontal.",
+  "hint": "Check which coordinate is the same in both points. A shared coordinate means the segment runs straight across or straight up.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same y-value means horizontal."
+      "text": "Check which coordinate is the same in both points. A shared coordinate means the segment runs straight across or straight up."
     },
     {
       "level": "guide",
-      "text": "Subtract the x-values: $|5 - (-2)|$."
+      "text": "Both points have $y = 4$, so the segment is horizontal. Subtract the $x$-values and take the absolute value: $|5 - (-2)|$."
     },
     {
       "level": "reveal",
-      "text": "$|5 - (-2)| = 7$."
+      "text": "$|5 - (-2)| = |5 + 2| = 7$, so the distance is $7$ units."
     }
   ],
   "explanation": [
-    "Both points share $y = 4$ → horizontal segment.",
-    "$|5 - (-2)| = |7| = 7$."
+    "Both points have $y = 4$, so they lie on the same horizontal line.",
+    "The distance is the absolute value of the difference of the $x$-values: $|5 - (-2)|$.",
+    "Subtracting $-2$ is the same as adding $2$, so this is $|5 + 2| = 7$.",
+    "The distance between the points is $7$ units."
   ],
   "alternativeExplanations": [
     {

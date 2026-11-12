@@ -31,9 +31,10 @@
     }
   ],
   "explanation": [
-    "Rectangle piece: $3 \\times 4 = 12$ square feet.",
-    "The semicircle spans the $3$ ft top edge, so that $3$ ft is the diameter and the radius is $1.5$ ft.",
-    "Semicircle piece: $\\frac{1}{2}\\pi(1.5)^2 = \\frac{1}{2}\\pi(2.25) \\approx 3.53$ sq ft. Total: $12 + 3.53 = 15.53$ square feet."
+    "The window is a rectangle plus a semicircle, and the rectangle has area $3 \\times 4 = 12$ square feet.",
+    "The semicircle sits on the $3$ ft top edge, so $3$ ft is its diameter and its radius is $1.5$ ft.",
+    "Half of a circle with that radius has area $\\frac{1}{2}\\pi(1.5)^2 = \\frac{1}{2}\\pi(2.25) \\approx 3.53$ square feet.",
+    "Adding the two parts gives a total area of about $12 + 3.53 = 15.53$ square feet."
   ],
   "alternativeExplanations": [
     {

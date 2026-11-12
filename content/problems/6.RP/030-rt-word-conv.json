@@ -13,29 +13,31 @@
     "54 inches"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Each foot adds $12$ inches.",
+  "hint": "Every foot contains the same number of inches. When you change from a bigger unit to a smaller one, do you expect more or fewer units?",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Convert percent ↔ fraction ↔ decimal. Sometimes the easiest form unlocks the answer."
+      "text": "Break the length into a whole number of feet plus half a foot. Half a foot is easy to change into inches by itself."
     },
     {
       "level": "nudge",
-      "text": "Each foot adds $12$ inches."
+      "text": "Every foot contains the same number of inches. When you change from a bigger unit to a smaller one, do you expect more or fewer units?"
     },
     {
       "level": "guide",
-      "text": "Multiply $4.5 \\times 12$."
+      "text": "Each foot is $12$ inches, so multiply the number of feet by $12$: work out $4.5 \\times 12$. It may help to split it into $4 \\times 12$ and $0.5 \\times 12$."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 12 = 48$, plus $0.5 \\times 12 = 6$. Total: $54$ inches."
+      "text": "$48 + 6 = 54$, so there are $54$ inches in $4.5$ feet."
     }
   ],
   "explanation": [
-    "$1$ ft $= 12$ in.",
-    "$4.5 \\times 12 = 54$ inches."
+    "The conversion rate is $12$ inches for every $1$ foot, so feet are multiplied by $12$ to get inches.",
+    "Split $4.5$ feet into $4$ feet and half a foot to make the multiplication easy.",
+    "Four feet is $4 \\times 12 = 48$ inches and half a foot is $6$ inches, which add to $54$.",
+    "There are $54$ inches in a length of $4.5$ feet."
   ],
   "tags": [
     "MAP-practice",

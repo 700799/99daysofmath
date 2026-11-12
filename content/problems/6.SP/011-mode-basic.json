@@ -10,24 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Mode = most frequent.",
+  "hint": "The mode is the number you see repeated the most in the list.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Mode = most frequent."
+      "text": "The mode is the number you see repeated the most in the list."
     },
     {
       "level": "guide",
-      "text": "Count: $4$ appears $3$ times."
+      "text": "Go through $1, 4, 4, 7, 4, 2$ and tally the repeats. Only one number shows up more than once; count its copies."
     },
     {
       "level": "reveal",
-      "text": "$4$."
+      "text": "$4$ appears $3$ times and every other value appears once, so the mode is $4$."
     }
   ],
   "explanation": [
-    "$4$ appears most often.",
-    "Mode: $4$."
+    "The mode is the value that occurs most often, so count how many times each value appears.",
+    "The values $1$, $7$ and $2$ each appear once, while $4$ appears $3$ times.",
+    "Since $4$ appears more often than any other value, the mode is $4$."
   ],
   "tags": [
     "mode"

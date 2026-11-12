@@ -32,19 +32,19 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Round each number to the nearest whole number first.",
+  "hint": "An exact sum is not needed. Replace each decimal with the whole number it is nearest to.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Round each number to the nearest whole number first."
+      "text": "An exact sum is not needed. Replace each decimal with the whole number it is nearest to."
     },
     {
       "level": "guide",
-      "text": "$4.87$ rounds to $5$ and $3.95$ rounds to $4$."
+      "text": "$4.87$ is just under $5$ and $3.95$ is just under $4$. Add those two rounded whole numbers."
     },
     {
       "level": "reveal",
-      "text": "$5 + 4 = 9$, so choose C."
+      "text": "$5 + 4 = 9$, so the sum is closest to $9$, which is choice C."
     }
   ],
   "explanation": [

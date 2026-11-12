@@ -10,25 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Distribute: the $3$ outside hands itself to EVERYONE inside the parentheses.",
+  "hint": "The $3$ outside the parentheses multiplies everything inside them. Clear the parentheses before solving.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Distribute: the $3$ outside hands itself to EVERYONE inside the parentheses."
+      "text": "The $3$ outside the parentheses multiplies everything inside them. Clear the parentheses before solving."
     },
     {
       "level": "guide",
-      "text": "$3x + 6 = 21$. Subtract $6$, then divide by $3$."
+      "text": "Distributing gives $3x + 6 = 21$. Subtract $6$ from both sides, then divide by $3$."
     },
     {
       "level": "reveal",
-      "text": "$3x = 15$, so $x = 5$."
+      "text": "$3x = 15$, and dividing by $3$ gives the solution $x = 5$."
     }
   ],
   "explanation": [
-    "Distribute the 3: $3(x + 2) = 3x + 6$.",
-    "Solve $3x + 6 = 21$: subtract 6 to get $3x = 15$.",
-    "Divide by 3: $x = 5$. Check: $3(5 + 2) = 21$. ✓"
+    "Use the distributive property to multiply the $3$ by both terms inside: $3(x + 2) = 3x + 6$.",
+    "Now solve $3x + 6 = 21$ by subtracting $6$ from both sides to get $3x = 15$.",
+    "Divide both sides by $3$ to get $x = 5$. Check: $3(5 + 2) = 3(7) = 21$."
   ],
   "alternativeExplanations": [
     {

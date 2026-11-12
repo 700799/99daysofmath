@@ -12,11 +12,11 @@
     "5/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "You know $s = r\\theta$, and this time $s$ and $r$ are given while $\\theta$ is the unknown.",
+  "hint": "The arc length formula $s = r\\theta$ still applies. This time the arc and the radius are given, and the angle is the unknown.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You know $s = r\\theta$, and this time $s$ and $r$ are given while $\\theta$ is the unknown."
+      "text": "The arc length formula $s = r\\theta$ still applies. This time the arc and the radius are given, and the angle is the unknown."
     },
     {
       "level": "nudge",
@@ -25,11 +25,11 @@
     },
     {
       "level": "guide",
-      "text": "Solve the formula for $\\theta$: $\\theta = \\frac{s}{r}$."
+      "text": "Solve the formula for the angle by dividing both sides by $r$, which gives $\\theta = \\frac{s}{r}$. Here that is $\\frac{15}{6}$."
     },
     {
       "level": "reveal",
-      "text": "$\\theta = \\frac{15}{6} = 2.5$ radians."
+      "text": "$\\theta = \\frac{15}{6} = 2.5$, so the central angle is $2.5$ radians."
     }
   ],
   "explanation": [

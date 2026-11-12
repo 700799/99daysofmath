@@ -10,10 +10,12 @@
   "primaryAnswer": "14",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Range $=$ largest $-$ smallest.",
+  "hint": "The **range** tells how far the data stretches, from its smallest value to its largest value.",
   "explanation": [
-    "Largest value: $22$. Smallest value: $8$.",
-    "Range $= 22 - 8 = 14$."
+    "The range measures spread as the distance between the largest and smallest values.",
+    "Look through the whole list to find the extremes: the largest value is $22$ and the smallest is $8$.",
+    "Subtract the smallest from the largest to get that distance: $22 - 8 = 14$.",
+    "The range of the data set is $14$."
   ],
   "alternativeExplanations": [
     {
@@ -33,15 +35,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Range $=$ largest $-$ smallest."
+      "text": "The **range** tells how far the data stretches, from its smallest value to its largest value."
     },
     {
       "level": "guide",
-      "text": "Largest value: $22$. Smallest value: $8$."
+      "text": "Scan the list for the two extremes: the largest value is $22$ and the smallest is $8$. Subtract the smaller from the larger."
     },
     {
       "level": "reveal",
-      "text": "Range $= 22 - 8 = 14$."
+      "text": "$22 - 8 = 14$, so the range of the data is $14$."
     }
   ],
   "diagram": {

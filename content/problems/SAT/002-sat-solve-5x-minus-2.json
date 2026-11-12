@@ -10,27 +10,27 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You can distribute the $5$ — or divide both sides by $5$ first. The second is faster.",
+  "hint": "The whole bracket $(x - 2)$ is multiplied by $5$. Is there a way to remove that $5$ without distributing?",
   "hints": [
     {
       "level": "nudge",
-      "text": "You can distribute the $5$ — or divide both sides by $5$ first. The second is faster."
+      "text": "The whole bracket $(x - 2)$ is multiplied by $5$. Is there a way to remove that $5$ without distributing?"
     },
     {
       "level": "guide",
-      "text": "Dividing both sides by $5$ gives $x - 2 = 7$."
+      "text": "Since $35$ is a multiple of $5$, divide both sides by $5$ to get $x - 2 = 7$. One more step isolates $x$."
     },
     {
       "level": "reveal",
-      "text": "$x - 2 = 7$, so $x = 9$."
+      "text": "Adding $2$ to both sides gives $x = 7 + 2 = 9$, so the value of $x$ is $9$."
     }
   ],
   "learningObjective": "Solve a linear equation with a factored side efficiently.",
   "topic": "Equations with parentheses",
   "explanation": [
-    "The left side is $5$ times the quantity $(x - 2)$, so divide both sides by $5$ first: $x - 2 = 7$.",
-    "Add $2$ to both sides: $x = 9$.",
-    "Check: $5(9 - 2) = 5(7) = 35$ ✓"
+    "The left side is $5$ times the quantity $(x - 2)$, so dividing both sides by $5$ removes the factor cleanly: $x - 2 = 7$.",
+    "Add $2$ to both sides to undo the subtraction, which gives $x = 9$.",
+    "Check by substituting: $5(9 - 2) = 5(7) = 35$, so the value of $x$ is $9$."
   ],
   "alternativeExplanations": [
     {

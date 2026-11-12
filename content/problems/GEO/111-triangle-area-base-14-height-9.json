@@ -10,25 +10,25 @@
   "primaryAnswer": "63",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Area of a triangle is $\\frac{1}{2}bh$.",
+  "hint": "Recall the area formula for a triangle. It uses the base and the height, with one extra step compared with a rectangle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Area of a triangle is $\\frac{1}{2}bh$."
+      "text": "Recall the area formula for a triangle. It uses the base and the height, with one extra step compared with a rectangle."
     },
     {
       "level": "guide",
-      "text": "$14 \\times 9 = 126$. Now take half."
+      "text": "The formula is $A = \\frac{1}{2}bh$. First multiply $14 \\times 9 = 126$, and then take half of that product."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2}(126) = 63$ square inches."
+      "text": "$\\frac{1}{2}(126) = 63$, so the flag has an area of $63$ square inches."
     }
   ],
   "explanation": [
-    "Use $A = \\frac{1}{2}bh$ with $b = 14$ and $h = 9$.",
-    "Multiply the base and height: $14 \\times 9 = 126$.",
-    "Halve it: the flag covers $63$ square inches."
+    "The area of a triangle is $A = \\frac{1}{2}bh$, because a triangle is half of a parallelogram with the same base and height.",
+    "Multiplying the base by the height gives $14 \\times 9 = 126$.",
+    "Half of $126$ is $63$, so the flag covers $63$ square inches."
   ],
   "alternativeExplanations": [
     {

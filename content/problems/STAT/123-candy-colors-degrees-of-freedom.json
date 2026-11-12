@@ -10,25 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "For goodness-of-fit, df $=$ (number of categories) $- 1$.",
+  "hint": "Degrees of freedom in a goodness-of-fit test depend on how many categories there are, not on how many candies were counted.",
   "hints": [
     {
       "level": "nudge",
-      "text": "For goodness-of-fit, df $=$ (number of categories) $- 1$."
+      "text": "Degrees of freedom in a goodness-of-fit test depend on how many categories there are, not on how many candies were counted."
     },
     {
       "level": "guide",
-      "text": "There are 5 color categories."
+      "text": "The rule is the number of categories minus $1$. There are five colors, so subtract $1$ from $5$."
     },
     {
       "level": "reveal",
-      "text": "df $= 5 - 1 = 4$."
+      "text": "$5 - 1 = 4$, so the test has $4$ degrees of freedom."
     }
   ],
   "explanation": [
-    "A goodness-of-fit test has one category per possible outcome: here, 5 colors.",
-    "Degrees of freedom $= k - 1 = 5 - 1$.",
-    "df $= 4$. (The number of candies in the bag does not affect df.)"
+    "A goodness-of-fit test has one category for each possible outcome, which here means the 5 colors.",
+    "Once four category counts are known the fifth is fixed by the total, so the degrees of freedom are $k - 1 = 5 - 1$.",
+    "The test has $4$ degrees of freedom. (The number of candies in the bag does not affect this.)"
   ],
   "alternativeExplanations": [
     {

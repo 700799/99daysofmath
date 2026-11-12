@@ -11,11 +11,11 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.02,
-  "hint": "Build the expected counts first. Overall, $70$ of $200$ showed up.",
+  "hint": "Chi-square needs expected counts, and those come from the overall show-up rate. How many of the $200$ patients showed up in total?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Build the expected counts first. Overall, $70$ of $200$ showed up."
+      "text": "Chi-square needs expected counts, and those come from the overall show-up rate. How many of the $200$ patients showed up in total?"
     },
     {
       "level": "nudge",
@@ -24,11 +24,11 @@
     },
     {
       "level": "guide",
-      "text": "Expected: $35$ shows and $65$ no-shows in each group. The four components are $\\frac{(40-35)^2}{35}$, $\\frac{(60-65)^2}{65}$, $\\frac{(30-35)^2}{35}$, $\\frac{(70-65)^2}{65}$."
+      "text": "With $70$ of $200$ showing up, expect $35$ shows and $65$ no-shows in each group. The four terms are $\\frac{(40-35)^2}{35}$, $\\frac{(60-65)^2}{65}$, $\\frac{(30-35)^2}{35}$ and $\\frac{(70-65)^2}{65}$. Add them."
     },
     {
       "level": "reveal",
-      "text": "$0.714 + 0.385 + 0.714 + 0.385 \\approx 2.20$."
+      "text": "$0.714 + 0.385 + 0.714 + 0.385 \\approx 2.20$, so the chi-square statistic is about $2.20$."
     }
   ],
   "explanation": [

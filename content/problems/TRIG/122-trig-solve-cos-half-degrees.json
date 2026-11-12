@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The reference angle is $60^\\circ$, since $\\cos 60^\\circ = \\frac{1}{2}$.",
+  "hint": "Start with the reference angle: which special angle has a cosine of $\\frac{1}{2}$? Then ask in which quadrants cosine is positive.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The reference angle is $60^\\circ$, since $\\cos 60^\\circ = \\frac{1}{2}$."
+      "text": "Start with the reference angle: which special angle has a cosine of $\\frac{1}{2}$? Then ask in which quadrants cosine is positive."
     },
     {
       "level": "guide",
-      "text": "Cosine is POSITIVE in quadrants I and IV, so look for one answer in each."
+      "text": "The reference angle is $60^\\circ$, since $\\cos 60^\\circ = \\frac{1}{2}$. Cosine is POSITIVE in quadrants I and IV, so place that reference angle in each of them."
     },
     {
       "level": "reveal",
-      "text": "Quadrant I gives $60^\\circ$; quadrant IV gives $360^\\circ - 60^\\circ = 300^\\circ$."
+      "text": "Quadrant I gives $60^\\circ$ and quadrant IV gives $360^\\circ - 60^\\circ = 300^\\circ$, which is choice A."
     }
   ],
   "explanation": [

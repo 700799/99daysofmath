@@ -10,25 +10,25 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Split the ordered list into a lower half and an upper half. $Q_1$ is the median of the lower half, $Q_3$ the median of the upper half.",
+  "hint": "The IQR measures the spread of the middle half of the data. Which two quartiles do you need to find first?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Split the ordered list into a lower half and an upper half. $Q_1$ is the median of the lower half, $Q_3$ the median of the upper half."
+      "text": "The IQR measures the spread of the middle half of the data. Which two quartiles do you need to find first?"
     },
     {
       "level": "guide",
-      "text": "Lower half $3, 5, 7, 8$ has median $\\frac{5 + 7}{2} = 6$. Upper half $10, 12, 14, 18$ has median $\\frac{12 + 14}{2} = 13$."
+      "text": "Split the ordered list into halves: $3, 5, 7, 8$ and $10, 12, 14, 18$. The median of each half gives $Q_1 = \\frac{5 + 7}{2}$ and $Q_3 = \\frac{12 + 14}{2}$, and then you subtract."
     },
     {
       "level": "reveal",
-      "text": "IQR $= Q_3 - Q_1 = 13 - 6 = 7$ hours."
+      "text": "$Q_1 = 6$ and $Q_3 = 13$, so the IQR is $13 - 6 = 7$ hours."
     }
   ],
   "explanation": [
-    "With eight values, the lower half is $3, 5, 7, 8$ and the upper half is $10, 12, 14, 18$.",
-    "$Q_1 = \\frac{5 + 7}{2} = 6$ and $Q_3 = \\frac{12 + 14}{2} = 13$.",
-    "IQR $= 13 - 6 = 7$: the middle half of the students span $7$ hours."
+    "With eight ordered values, the lower half is $3, 5, 7, 8$ and the upper half is $10, 12, 14, 18$.",
+    "Each quartile is the median of its half, so $Q_1 = \\frac{5 + 7}{2} = 6$ and $Q_3 = \\frac{12 + 14}{2} = 13$.",
+    "The IQR is $Q_3 - Q_1 = 13 - 6 = 7$, so the middle half of the students span $7$ hours."
   ],
   "alternativeExplanations": [
     {

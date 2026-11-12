@@ -10,25 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "\"Number of trials until the first success\" is a GEOMETRIC variable.",
+  "hint": "$Y$ counts trials up to and including the first success. That kind of waiting-time variable has a special name and a simple mean.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Number of trials until the first success\" is a GEOMETRIC variable."
+      "text": "$Y$ counts trials up to and including the first success. That kind of waiting-time variable has a special name and a simple mean."
     },
     {
       "level": "guide",
-      "text": "The mean of a geometric distribution is $\\frac{1}{p}$."
+      "text": "$Y$ is geometric with $p = 0.2$, and the mean of a geometric variable is $\\frac{1}{p}$, so compute $\\frac{1}{0.2}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{0.2} = 5$ calls on average."
+      "text": "$\\frac{1}{0.2} = 5$, so she expects to make $5$ calls to get her first sale."
     }
   ],
   "explanation": [
-    "Each call is a trial; the first sale is the first success. $Y$ is geometric with $p = 0.2$.",
-    "The mean of a geometric variable is $\\mu_Y = \\frac{1}{p}$.",
-    "$\\frac{1}{0.2} = 5$ calls."
+    "Each call is an independent trial and the first sale is the first success, so $Y$ is geometric with $p = 0.2$.",
+    "The mean of a geometric variable is $\\mu_Y = \\frac{1}{p}$, because rarer successes take longer to arrive.",
+    "$\\frac{1}{0.2} = 5$, so on average her first sale comes on call number $5$."
   ],
   "alternativeExplanations": [
     {

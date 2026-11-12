@@ -10,25 +10,25 @@
   "primaryAnswer": "16",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Nested boxes: open the INSIDE box $g(5)$ first.",
+  "hint": "Think of nested boxes: the INSIDE one, $g(5)$, has to be opened before $f$ can do anything.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Nested boxes: open the INSIDE box $g(5)$ first."
+      "text": "Think of nested boxes: the INSIDE one, $g(5)$, has to be opened before $f$ can do anything."
     },
     {
       "level": "guide",
-      "text": "$g(5) = 5 - 1 = 4$. Now square that."
+      "text": "Work out the inside first: $g(5) = 5 - 1 = 4$. Then give that $4$ to $f$, which squares its input."
     },
     {
       "level": "reveal",
-      "text": "$f(4) = 4^2 = 16$."
+      "text": "Squaring gives $f(4) = 4^2 = 16$, so the value of $f(g(5))$ is $16$."
     }
   ],
   "explanation": [
-    "Inside first: $g(5) = 4$.",
-    "Then the outside machine squares it: $4^2 = 16$.",
-    "Careful — squaring 5 first would give 25, which is the wrong order."
+    "Start with the inside function, which subtracts $1$: $g(5) = 5 - 1 = 4$.",
+    "Then the outside machine squares what it receives: $4^2 = 16$, so $f(g(5)) = 16$.",
+    "Squaring $5$ first would give $25$, which uses the wrong order, so the correct answer is $16$."
   ],
   "alternativeExplanations": [
     {

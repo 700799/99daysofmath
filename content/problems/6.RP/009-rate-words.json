@@ -13,25 +13,26 @@
     "60kmh"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A rate per hour means: per **1** hour.",
+  "hint": "\"Km per hour\" asks how many kilometers the car covers in a single hour. How do you share a distance equally over the hours?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A rate per hour means: per **1** hour."
+      "text": "\"Km per hour\" asks how many kilometers the car covers in a single hour. How do you share a distance equally over the hours?"
     },
     {
       "level": "guide",
-      "text": "Divide the total km by the total hours."
+      "text": "The car covers $120$ km in $2$ hours, so split the distance into $2$ equal parts: find $120 \\div 2$."
     },
     {
       "level": "reveal",
-      "text": "$120 \\div 2 = ?$"
+      "text": "$120 \\div 2 = 60$, so the car travels $60$ km per hour."
     }
   ],
   "explanation": [
-    "Set up: $\\frac{120 \\text{ km}}{2 \\text{ hr}}$.",
-    "Divide: $120 \\div 2 = 60$.",
-    "Rate is $60$ km/h."
+    "A rate in km per hour is the distance for each $1$ hour, so the distance is divided by the time.",
+    "Set up $\\frac{120 \\text{ km}}{2 \\text{ hours}}$ and divide top and bottom by $2$ to reach $1$ hour.",
+    "The division gives $120 \\div 2 = 60$ for the top number.",
+    "The car's rate is $60$ km per hour."
   ],
   "tags": [
     "rate"

@@ -10,26 +10,26 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Set $h = 0$ and pull out the GCF: $20t - 5t^2 = 5t(4 - t)$.",
+  "hint": "The water is at height zero twice: when it leaves and when it lands. Set the formula equal to zero and factor it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Set $h = 0$ and pull out the GCF: $20t - 5t^2 = 5t(4 - t)$."
+      "text": "The water is at height zero twice: when it leaves and when it lands. Set the formula equal to zero and factor it."
     },
     {
       "level": "guide",
-      "text": "Zero-product rule on $5t(4 - t) = 0$: either $t = 0$ or $4 - t = 0$."
+      "text": "Factor out the common factor: $20t - 5t^2 = 5t(4 - t) = 0$. By the zero-product rule, either $5t = 0$ or $4 - t = 0$."
     },
     {
       "level": "reveal",
-      "text": "$t = 0$ is the launch; the landing is $t = 4$ seconds."
+      "text": "$t = 0$ is the launch, so the water lands at the other solution, $t = 4$ seconds."
     }
   ],
   "explanation": [
-    "Set the height to zero: $20t - 5t^2 = 0$.",
-    "Factor out the GCF: $5t(4 - t) = 0$.",
-    "Zero-product rule: $t = 0$ or $t = 4$.",
-    "$t = 0$ is when the water leaves the spout; it lands at $t = 4$ seconds."
+    "The water is on the ground when its height is zero, so set $20t - 5t^2 = 0$.",
+    "Both terms share the factor $5t$, so factor it out: $5t(4 - t) = 0$.",
+    "By the zero-product rule one factor must be zero, which gives $t = 0$ or $t = 4$.",
+    "$t = 0$ is the moment the water leaves the spout, so it lands at $t = 4$ seconds."
   ],
   "alternativeExplanations": [
     {

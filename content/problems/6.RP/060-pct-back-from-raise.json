@@ -13,30 +13,31 @@
     "$20.00"
   ],
   "acceptanceMode": "normalized",
-  "hint": "New wage is $110\\%$ of original.",
+  "hint": "Be careful: the raise was $10\\%$ of the **original** wage, not $10\\%$ of the new wage. What percent of the original wage is the new wage?",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sketch a tape diagram: equal blocks for each part. What does one block represent here?"
+      "text": "Try an easier wage first: if someone earned $10$ dollars an hour, what would a $10\\%$ raise make it? Notice what you multiplied by."
     },
     {
       "level": "nudge",
-      "text": "New wage is $110\\%$ of original."
+      "text": "Be careful: the raise was $10\\%$ of the **original** wage, not $10\\%$ of the new wage. What percent of the original wage is the new wage?"
     },
     {
       "level": "guide",
-      "text": "$1.10 \\cdot x = 22$, so $x = 22 / 1.10$."
+      "text": "After the raise the worker earns $100\\% + 10\\% = 110\\%$ of the original, so $1.10$ times the original is $22$. Undo the multiplication: find $22 \\div 1.10$."
     },
     {
       "level": "reveal",
-      "text": "$22 \\div 1.10 = 20$."
+      "text": "$22 \\div 1.10 = 20$, so the original wage was $20$ dollars per hour."
     }
   ],
   "explanation": [
-    "$110\\%$ of original $= 22$.",
-    "$22 \\div 1.10 = 20$.",
-    "Original: \\$$20$/hr."
+    "A $10\\%$ raise means the new wage is $110\\%$ of the original, which is $1.10$ times the original.",
+    "So $1.10 \\times \\text{original} = 22$, and dividing undoes the multiplication: $22 \\div 1.10 = 20$.",
+    "Check it: $10\\%$ of $20$ is $2$, and $20 + 2 = 22$, which matches the new wage.",
+    "The original wage was $20$ dollars per hour."
   ],
   "tags": [
     "CA",

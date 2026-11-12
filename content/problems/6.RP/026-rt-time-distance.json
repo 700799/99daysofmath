@@ -13,24 +13,26 @@
     "1 hour"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$15$ is how many times $5$?",
+  "hint": "The bike keeps a steady pace, so a longer ride takes proportionally longer. How many times farther is the new distance?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$15$ is how many times $5$?"
+      "text": "The bike keeps a steady pace, so a longer ride takes proportionally longer. How many times farther is the new distance?"
     },
     {
       "level": "guide",
-      "text": "Multiply both sides by $3$."
+      "text": "Fifteen miles is $3$ times as far as $5$ miles, since $15 \\div 5 = 3$. Multiply the $20$ minutes by $3$."
     },
     {
       "level": "reveal",
-      "text": "$5 \\times 3 = 15$ miles, $20 \\times 3 = 60$ min."
+      "text": "$20 \\times 3 = 60$, so riding $15$ miles takes the bike $60$ minutes."
     }
   ],
   "explanation": [
-    "Scale by $3$: $5 \\to 15$.",
-    "Time: $20 \\times 3 = 60$ minutes."
+    "At a constant speed, distance and time grow by the same factor.",
+    "Find the factor from the distances: $15 \\div 5 = 3$, so the ride is $3$ times as long.",
+    "Multiply the time by the same factor: $20 \\times 3 = 60$.",
+    "The bike needs $60$ minutes, which is one hour, to go $15$ miles."
   ],
   "tags": [
     "ratio-table",

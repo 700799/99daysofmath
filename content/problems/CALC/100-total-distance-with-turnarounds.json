@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$v(t) = 3t^2 - 18t + 24 = 3(t - 2)(t - 4)$, so it turns at $t = 2$ and $t = 4$. Compute $s(0)$, $s(2)$, $s(4)$, $s(5)$ and add the absolute changes."
+      "text": "The velocity is $v(t) = 3t^2 - 18t + 24 = 3(t - 2)(t - 4)$, so it turns at $t = 2$ and $t = 4$. Compute $s(0)$, $s(2)$, $s(4)$, $s(5)$ and add the absolute changes."
     },
     {
       "level": "reveal",
-      "text": "$s(0) = 0$, $s(2) = 20$, $s(4) = 16$, $s(5) = 20$. Distance $= 20 + 4 + 4 = 28$ m."
+      "text": "The positions are $s(0) = 0$, $s(2) = 20$, $s(4) = 16$, $s(5) = 20$. The total distance is $20 + 4 + 4 = 28$ meters."
     }
   ],
   "explanation": [
-    "$v(t) = 3t^2 - 18t + 24 = 3(t - 2)(t - 4)$. The particle reverses direction at $t = 2$ and $t = 4$.",
-    "Positions: $s(0) = 0$, $s(2) = 8 - 36 + 48 = 20$, $s(4) = 64 - 144 + 96 = 16$, $s(5) = 125 - 225 + 120 = 20$.",
-    "Legs: $|20 - 0| + |16 - 20| + |20 - 16| = 20 + 4 + 4 = 28$ meters. The displacement is only $20$ m, but the back-and-forth adds $8$ m of travel."
+    "The velocity is $v(t) = 3t^2 - 18t + 24 = 3(t - 2)(t - 4)$. The particle reverses direction at $t = 2$ and $t = 4$.",
+    "Find the position at the start, each turn and the end: $s(0) = 0$, $s(2) = 8 - 36 + 48 = 20$, $s(4) = 64 - 144 + 96 = 16$, $s(5) = 125 - 225 + 120 = 20$.",
+    "Add the legs as positive lengths: $|20 - 0| + |16 - 20| + |20 - 16| = 20 + 4 + 4 = 28$ meters. The displacement is only $20$ m, but the back-and-forth adds $8$ m of travel."
   ],
   "alternativeExplanations": [
     {

@@ -14,29 +14,31 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.05,
-  "hint": "Find each distance from the mean, then average.",
+  "hint": "MAD asks how far each value sits from the mean, on average. Distances are never negative.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Mean is fair-shares; median is the middle. Pick the one the question actually asks for."
+      "text": "Try an even smaller set first: for the values $3$ and $5$ with mean $4$, how far is each value from the mean?"
     },
     {
       "level": "nudge",
-      "text": "Find each distance from the mean, then average."
+      "text": "MAD asks how far each value sits from the mean, on average. Distances are never negative."
     },
     {
       "level": "guide",
-      "text": "Distances: $|2-4| = 2, |4-4| = 0, |6-4| = 2$."
+      "text": "The distances from the mean $4$ are $|2-4| = 2$, $|4-4| = 0$ and $|6-4| = 2$. Add these three distances and divide by $3$."
     },
     {
       "level": "reveal",
-      "text": "Sum: $4$. Average: $4/3 \\approx 1.33$."
+      "text": "The distances add to $4$, and $4 \\div 3 = \\frac{4}{3} \\approx 1.33$, so the MAD is $\\frac{4}{3}$."
     }
   ],
   "explanation": [
-    "Distances from $4$: $2, 0, 2$.",
-    "Mean: $4 / 3 \\approx 1.33$."
+    "The mean is given as $4$, so measure how far each value is from $4$.",
+    "The distances are $|2 - 4| = 2$, $|4 - 4| = 0$ and $|6 - 4| = 2$. Absolute value keeps each distance positive.",
+    "Add the distances to get the total deviation: $2 + 0 + 2 = 4$.",
+    "Divide by the $3$ values to average them: the MAD is $\\frac{4}{3}$, or about $1.33$."
   ],
   "tags": [
     "MAD"

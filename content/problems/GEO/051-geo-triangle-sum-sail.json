@@ -10,25 +10,25 @@
   "primaryAnswer": "65",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The three angles of any triangle add to the same total.",
+  "hint": "Every triangle has the same angle total, no matter its shape. Recall that total and use the two angles you know.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The three angles of any triangle add to the same total."
+      "text": "Every triangle has the same angle total, no matter its shape. Recall that total and use the two angles you know."
     },
     {
       "level": "guide",
-      "text": "That total is $180^\\circ$, so compute $180 - 40 - 75$."
+      "text": "The three angles add to $180^\\circ$, so take both known angles away from it: work out $180 - 40 - 75$."
     },
     {
       "level": "reveal",
-      "text": "$180 - 115 = 65^\\circ$."
+      "text": "$40 + 75 = 115$ and $180 - 115 = 65$, so the third angle is $65^\\circ$."
     }
   ],
   "explanation": [
-    "The Triangle Sum Theorem says the three interior angles add to $180^\\circ$.",
-    "Add what you know: $40 + 75 = 115$.",
-    "Subtract from the total: $180 - 115 = 65^\\circ$."
+    "The Triangle Sum Theorem says the three interior angles of any triangle add to $180^\\circ$.",
+    "The two known angles already account for $40 + 75 = 115^\\circ$ of that total.",
+    "The third angle is what remains, $180 - 115 = 65$, so it measures $65^\\circ$."
   ],
   "alternativeExplanations": [
     {

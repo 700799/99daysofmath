@@ -32,27 +32,27 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The arc is a fraction of the whole circumference — which fraction?",
+  "hint": "An arc is a piece of the circumference. The central angle tells you what fraction of the whole circle the piece is.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The arc is a fraction of the whole circumference — which fraction?"
+      "text": "An arc is a piece of the circumference. The central angle tells you what fraction of the whole circle the piece is."
     },
     {
       "level": "guide",
-      "text": "$\\dfrac{90}{360} = \\dfrac{1}{4}$, and the circumference is $16\\pi$."
+      "text": "The fraction is $\\dfrac{90}{360} = \\dfrac{1}{4}$, and the full circumference is $2\\pi(8) = 16\\pi$. Take one quarter of the circumference."
     },
     {
       "level": "reveal",
-      "text": "$\\tfrac{1}{4}(16\\pi) = 4\\pi$."
+      "text": "One quarter of $16\\pi$ is $4\\pi$, so the arc length is $4\\pi$, which is choice B."
     }
   ],
   "learningObjective": "Compute an arc length as a fraction of the circumference.",
   "topic": "Arcs and sectors",
   "explanation": [
-    "The central angle is $\\dfrac{90}{360} = \\dfrac{1}{4}$ of the full circle.",
-    "The full circumference is $2\\pi(8) = 16\\pi$.",
-    "The arc is one quarter of that: $4\\pi$."
+    "The central angle is $\\dfrac{90}{360} = \\dfrac{1}{4}$ of a full turn, so the arc is one quarter of the circle.",
+    "The full circumference of the circle is $2\\pi r = 2\\pi(8) = 16\\pi$.",
+    "One quarter of the circumference is $\\tfrac{1}{4}(16\\pi) = 4\\pi$, so the arc length is choice B."
   ],
   "alternativeExplanations": [
     {

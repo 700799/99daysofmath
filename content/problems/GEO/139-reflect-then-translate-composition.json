@@ -14,11 +14,11 @@
     "-3,2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Do the two moves in order, one at a time, and write down the point in between.",
+  "hint": "There are two moves, and the order matters. Carry out the reflection first and write down where the point is before translating.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Do the two moves in order, one at a time, and write down the point in between."
+      "text": "There are two moves, and the order matters. Carry out the reflection first and write down where the point is before translating."
     },
     {
       "level": "nudge",
@@ -27,17 +27,17 @@
     },
     {
       "level": "guide",
-      "text": "Reflecting across the $y$-axis (a vertical mirror) negates $x$: $(3, -2) \\to (-3, -2)$."
+      "text": "Reflecting across the $y$-axis changes the sign of $x$, so $(3, -2) \\to (-3, -2)$. Now move that point up $4$ units."
     },
     {
       "level": "reveal",
-      "text": "Now translate up $4$: $(-3, -2 + 4) = (-3, 2)$."
+      "text": "Adding $4$ to the second coordinate gives $(-3, -2 + 4)$, so the final point is $(-3, 2)$."
     }
   ],
   "explanation": [
-    "Step 1 — reflect across the $y$-axis: the rule is $(x, y) \\to (-x, y)$, so $(3, -2) \\to (-3, -2)$.",
-    "Step 2 — translate $4$ units up: add $4$ to the $y$-coordinate, giving $(-3, -2 + 4)$.",
-    "The final image is $(-3, 2)$."
+    "First reflect across the $y$-axis, which uses the rule $(x, y) \\to (-x, y)$, so $(3, -2)$ goes to $(-3, -2)$.",
+    "Next translate $4$ units up, which adds $4$ to the second coordinate and gives $(-3, -2 + 4)$.",
+    "The final image after both moves is the point $(-3, 2)$."
   ],
   "alternativeExplanations": [
     {

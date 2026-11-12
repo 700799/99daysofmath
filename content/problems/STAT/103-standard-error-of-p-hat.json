@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "Plug $\\hat{p} = 0.5$ and $n = 100$ into the formula.",
+  "hint": "The standard error formula is given in the question. Identify which numbers from the sample play the roles of $\\hat{p}$ and $n$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Plug $\\hat{p} = 0.5$ and $n = 100$ into the formula."
+      "text": "The standard error formula is given in the question. Identify which numbers from the sample play the roles of $\\hat{p}$ and $n$."
     },
     {
       "level": "guide",
-      "text": "$\\frac{0.5 \\times 0.5}{100} = 0.0025$. Now square-root."
+      "text": "Put $\\hat{p} = 0.5$ and $n = 100$ under the square root: $\\frac{0.5 \\times 0.5}{100} = 0.0025$. Then take the square root."
     },
     {
       "level": "reveal",
-      "text": "$\\sqrt{0.0025} = 0.05$."
+      "text": "$\\sqrt{0.0025} = 0.05$, so the standard error of $\\hat{p}$ is $0.05$."
     }
   ],
   "explanation": [
     "The standard error estimates how much $\\hat{p}$ varies from sample to sample, using $\\hat{p}$ in place of the unknown $p$.",
-    "$\\hat{p}(1-\\hat{p})/n = (0.5)(0.5)/100 = 0.0025$.",
-    "$SE = \\sqrt{0.0025} = 0.05$, or 5 percentage points."
+    "Substituting the sample values under the square root gives $\\hat{p}(1-\\hat{p})/n = (0.5)(0.5)/100 = 0.0025$.",
+    "The standard error is $\\sqrt{0.0025} = 0.05$, or 5 percentage points."
   ],
   "alternativeExplanations": [
     {

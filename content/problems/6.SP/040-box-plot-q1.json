@@ -10,23 +10,25 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "IQR = $Q3 - Q1$.",
+  "hint": "On a box plot the IQR is the width of the box, from its left edge to its right edge.",
   "hints": [
     {
       "level": "nudge",
-      "text": "IQR = $Q3 - Q1$."
+      "text": "On a box plot the IQR is the width of the box, from its left edge to its right edge."
     },
     {
       "level": "guide",
-      "text": "$20 - 12$."
+      "text": "The box runs from $Q1 = 12$ to $Q3 = 20$. Subtract the lower quartile from the upper quartile: $20 - 12$."
     },
     {
       "level": "reveal",
-      "text": "$8$."
+      "text": "$20 - 12 = 8$, so the IQR for this box plot is $8$."
     }
   ],
   "explanation": [
-    "IQR: $20 - 12 = 8$."
+    "The interquartile range is the upper quartile minus the lower quartile.",
+    "The box plot gives the lower quartile $Q1 = 12$ and the upper quartile $Q3 = 20$.",
+    "Subtract: $20 - 12 = 8$, so the IQR for this box plot is $8$."
   ],
   "tags": [
     "box-plot",

@@ -10,24 +10,26 @@
   "primaryAnswer": "11",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $5$ and follow order of operations.",
+  "hint": "Put the given number in for $x$, then follow the order of operations.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $5$ and follow order of operations."
+      "text": "Put the given number in for $x$, then follow the order of operations."
     },
     {
       "level": "guide",
-      "text": "$2(5) + 1 = 10 + 1$."
+      "text": "With $x = 5$ the rule becomes $y = 2(5) + 1$. Multiply first, then add $1$."
     },
     {
       "level": "reveal",
-      "text": "$11$."
+      "text": "$2 \\times 5 = 10$ and $10 + 1 = 11$, so the value of $y$ is $11$."
     }
   ],
   "explanation": [
-    "$y = 2x + 1$. Plug $x = 5$: $y = 2(5) + 1 = 11$.",
-    "Final answer: 11."
+    "Substitute $5$ for $x$ in the given rule: $y = 2(5) + 1$.",
+    "Multiplication comes before addition, so find $2 \\times 5 = 10$.",
+    "Then add $1$ to that product to get $10 + 1 = 11$.",
+    "So the value of $y$ is $11$ when $x = 5$."
   ],
   "tags": [
     "two-vars",

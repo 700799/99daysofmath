@@ -10,25 +10,25 @@
   "primaryAnswer": "-16",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "On a closed interval the extreme values happen at critical numbers inside or at the endpoints. Find the candidates, then compare.",
+  "hint": "On a closed interval the extreme values happen at critical numbers inside the interval or at the endpoints. Find the candidates, then compare.",
   "hints": [
     {
       "level": "nudge",
-      "text": "On a closed interval the extreme values happen at critical numbers inside or at the endpoints. Find the candidates, then compare."
+      "text": "On a closed interval the extreme values happen at critical numbers inside the interval or at the endpoints. Find the candidates, then compare."
     },
     {
       "level": "guide",
-      "text": "$f'(x) = 3x^2 - 12 = 0$ gives $x = \\pm 2$; only $x = 2$ is in $[0, 3]$. Evaluate $f(0)$, $f(2)$, $f(3)$."
+      "text": "Solving $f'(x) = 3x^2 - 12 = 0$ gives $x = \\pm 2$, and only $x = 2$ is in $[0, 3]$. Evaluate $f$ at $0$, $2$ and $3$ and pick the smallest value."
     },
     {
       "level": "reveal",
-      "text": "$f(0) = 0$, $f(2) = 8 - 24 = -16$, $f(3) = 27 - 36 = -9$. The smallest is $-16$."
+      "text": "The values are $f(0) = 0$, $f(2) = 8 - 24 = -16$ and $f(3) = 27 - 36 = -9$. The smallest is $-16$, the absolute minimum value."
     }
   ],
   "explanation": [
-    "Critical numbers: $3x^2 - 12 = 0 \\Rightarrow x^2 = 4 \\Rightarrow x = 2$ (we drop $-2$, outside the interval).",
-    "Candidates: $f(0) = 0$, $f(2) = -16$, $f(3) = -9$.",
-    "The absolute minimum VALUE is $-16$, reached at $x = 2$. Note the question asks for the value, not the location."
+    "Find the critical numbers: $3x^2 - 12 = 0$ gives $x^2 = 4$, so $x = 2$ (we drop $-2$ because it is outside the interval).",
+    "Evaluate the function at every candidate, the critical number and both endpoints: $f(0) = 0$, $f(2) = -16$, $f(3) = -9$.",
+    "The absolute minimum value is $-16$, reached at $x = 2$. Note the question asks for the value, not the location."
   ],
   "alternativeExplanations": [
     {

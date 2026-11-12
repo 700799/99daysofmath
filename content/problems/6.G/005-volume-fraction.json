@@ -12,12 +12,13 @@
     "0.125"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Volume $= l \\times w \\times h$. Multiply three fractions by multiplying numerators and denominators.",
+  "hint": "Volume is still length times width times height when the sides are fractions. How do you multiply fractions together?",
   "explanation": [
-    "Volume $= \\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2}$.",
-    "Numerators: $1 \\times 1 \\times 1 = 1$.",
-    "Denominators: $2 \\times 2 \\times 2 = 8$.",
-    "Volume $= \\frac{1}{8}$ cubic foot."
+    "The volume of a box is length times width times height, and this rule also holds for fraction side lengths.",
+    "Write the product with the given sides: $V = \\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2}$.",
+    "To multiply fractions, multiply the numerators: $1 \\times 1 \\times 1 = 1$.",
+    "Then multiply the denominators to get the bottom of the answer: $2 \\times 2 \\times 2 = 8$.",
+    "The volume is $\\frac{1}{8}$ cubic foot, which makes sense because $8$ of these small boxes fill a $1$ ft cube."
   ],
   "alternativeExplanations": [
     {
@@ -38,19 +39,19 @@
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try a similar but smaller shape (all sides ÷ 2) and look at how the formula behaves."
+      "text": "Try whole numbers first: a box that is $2$ by $2$ by $2$ has volume $2 \\times 2 \\times 2 = 8$. Fractions follow the same rule."
     },
     {
       "level": "nudge",
-      "text": "Volume $= l \\times w \\times h$. Multiply three fractions by multiplying numerators and denominators."
+      "text": "Volume is still length times width times height when the sides are fractions. How do you multiply fractions together?"
     },
     {
       "level": "guide",
-      "text": "Volume $= \\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2}$."
+      "text": "Set up $\\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2}$. Multiply the three numerators together, then multiply the three denominators together."
     },
     {
       "level": "reveal",
-      "text": "Volume $= \\frac{1}{8}$ cubic foot."
+      "text": "The numerators give $1$ and the denominators give $8$, so the volume is $\\frac{1}{8}$ cubic foot."
     }
   ],
   "diagram": {

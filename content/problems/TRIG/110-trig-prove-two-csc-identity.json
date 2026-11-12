@@ -32,11 +32,11 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Add the two fractions over the common denominator $\\sin\\theta(1 + \\cos\\theta)$.",
+  "hint": "Two fractions with different denominators can only be added over a common denominator. Here that is the product $\\sin\\theta(1 + \\cos\\theta)$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add the two fractions over the common denominator $\\sin\\theta(1 + \\cos\\theta)$."
+      "text": "Two fractions with different denominators can only be added over a common denominator. Here that is the product $\\sin\\theta(1 + \\cos\\theta)$."
     },
     {
       "level": "nudge",
@@ -45,18 +45,18 @@
     },
     {
       "level": "guide",
-      "text": "The numerator becomes $\\sin^2\\theta + (1 + \\cos\\theta)^2 = \\sin^2\\theta + 1 + 2\\cos\\theta + \\cos^2\\theta$."
+      "text": "The numerator becomes $\\sin^2\\theta + (1 + \\cos\\theta)^2 = \\sin^2\\theta + 1 + 2\\cos\\theta + \\cos^2\\theta$. Replace $\\sin^2\\theta + \\cos^2\\theta$ with $1$ and factor what remains."
     },
     {
       "level": "reveal",
-      "text": "That is $2 + 2\\cos\\theta = 2(1 + \\cos\\theta)$, so the fraction reduces to $\\frac{2}{\\sin\\theta} = 2\\csc\\theta$."
+      "text": "The top is $2 + 2\\cos\\theta = 2(1 + \\cos\\theta)$, so the fraction reduces to $\\frac{2}{\\sin\\theta} = 2\\csc\\theta$, choice A."
     }
   ],
   "explanation": [
     "Use the common denominator $\\sin\\theta(1 + \\cos\\theta)$; the numerator becomes $\\sin^2\\theta + (1 + \\cos\\theta)^2$.",
-    "Expand: $\\sin^2\\theta + 1 + 2\\cos\\theta + \\cos^2\\theta$, and since $\\sin^2\\theta + \\cos^2\\theta = 1$ this is $2 + 2\\cos\\theta = 2(1 + \\cos\\theta)$.",
+    "Expand the square: $\\sin^2\\theta + 1 + 2\\cos\\theta + \\cos^2\\theta$, and since $\\sin^2\\theta + \\cos^2\\theta = 1$ this is $2 + 2\\cos\\theta = 2(1 + \\cos\\theta)$.",
     "Now the $(1 + \\cos\\theta)$ cancels top and bottom, leaving $\\frac{2}{\\sin\\theta}$.",
-    "And $\\frac{2}{\\sin\\theta} = 2\\csc\\theta$."
+    "One over sine is cosecant, so $\\frac{2}{\\sin\\theta} = 2\\csc\\theta$."
   ],
   "alternativeExplanations": [
     {

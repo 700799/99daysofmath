@@ -12,29 +12,31 @@
     "12 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the leg lengths first.",
+  "hint": "The area of a right triangle uses its two legs, the sides that meet at the right angle. Use the coordinates to find how long they are.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Use the \"keep–change–flip\" trick whenever you see division by a fraction."
+      "text": "This triangle is exactly half of the rectangle with corners $(0, 0)$, $(6, 0)$, $(6, 4)$ and $(0, 4)$. What is the area of that rectangle?"
     },
     {
       "level": "nudge",
-      "text": "Find the leg lengths first."
+      "text": "The area of a right triangle uses its two legs, the sides that meet at the right angle. Use the coordinates to find how long they are."
     },
     {
       "level": "guide",
-      "text": "Horizontal leg = $6$, vertical leg = $4$. Area = $\\tfrac{1}{2} \\cdot 6 \\cdot 4$."
+      "text": "The horizontal leg from $(0, 0)$ to $(6, 0)$ is $6$ units and the vertical leg from $(6, 0)$ to $(6, 4)$ is $4$ units. Use area $= \\tfrac{1}{2} \\cdot 6 \\cdot 4$."
     },
     {
       "level": "reveal",
-      "text": "$\\tfrac{1}{2} \\cdot 24 = 12$."
+      "text": "$\\tfrac{1}{2} \\cdot 24 = 12$, so the area is $12$ square units."
     }
   ],
   "explanation": [
-    "Legs are $6$ (horizontal) and $4$ (vertical).",
-    "Area of right triangle: $\\tfrac{1}{2} \\cdot 6 \\cdot 4 = 12$."
+    "The side from $(0, 0)$ to $(6, 0)$ is horizontal with length $6$, and the side from $(6, 0)$ to $(6, 4)$ is vertical with length $4$.",
+    "These two sides meet at a right angle at $(6, 0)$, so they are the base and the height.",
+    "The area of a triangle is half of base times height: $\\tfrac{1}{2} \\cdot 6 \\cdot 4$.",
+    "$\\tfrac{1}{2} \\cdot 24 = 12$, so the area is $12$ square units."
   ],
   "tags": [
     "MAP-practice",

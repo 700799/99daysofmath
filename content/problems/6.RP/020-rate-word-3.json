@@ -12,30 +12,31 @@
     "30 pages"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$2$ minutes is how many seconds?",
+  "hint": "The two times are in different units, one in seconds and one in minutes. Put them in the same unit before comparing.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sketch a tape diagram: equal blocks for each part. What does one block represent here?"
+      "text": "Start with the smaller question: how many pages does the printer make in $40$ seconds, which is two lots of $20$ seconds?"
     },
     {
       "level": "nudge",
-      "text": "$2$ minutes is how many seconds?"
+      "text": "The two times are in different units, one in seconds and one in minutes. Put them in the same unit before comparing."
     },
     {
       "level": "guide",
-      "text": "Find pages per second, then multiply by $120$."
+      "text": "Two minutes is $120$ seconds, and $120 \\div 20 = 6$, so the printer repeats its $20$-second job $6$ times. Multiply the $5$ pages by $6$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{5}{20} = 0.25$ pages/sec. $0.25 \\times 120 = 30$ pages."
+      "text": "$5 \\times 6 = 30$, so the printer prints $30$ pages in $2$ minutes."
     }
   ],
   "explanation": [
-    "Rate: $5 \\div 20 = 0.25$ pages/sec.",
-    "$2$ minutes $= 120$ sec.",
-    "Pages: $0.25 \\times 120 = 30$."
+    "Change $2$ minutes into seconds so both times use the same unit: $2 \\times 60 = 120$ seconds.",
+    "Count how many $20$-second blocks fit in that time: $120 \\div 20 = 6$ blocks.",
+    "Each block produces $5$ pages, so multiply to get $5 \\times 6 = 30$.",
+    "The printer prints $30$ pages in $2$ minutes."
   ],
   "alternativeExplanations": [
     {

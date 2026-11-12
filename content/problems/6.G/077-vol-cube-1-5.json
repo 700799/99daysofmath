@@ -12,24 +12,26 @@
     "3.375 cu units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$V = s^3$.",
+  "hint": "The cube's volume is edge times edge times edge. With a decimal edge, multiply carefully in two steps.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$V = s^3$."
+      "text": "The cube's volume is edge times edge times edge. With a decimal edge, multiply carefully in two steps."
     },
     {
       "level": "guide",
-      "text": "$1.5 \\cdot 1.5 = 2.25$. Then $2.25 \\cdot 1.5$."
+      "text": "First find $1.5 \\times 1.5 = 2.25$. Then multiply $2.25$ by $1.5$ one more time."
     },
     {
       "level": "reveal",
-      "text": "$3.375$."
+      "text": "$2.25 \\times 1.5 = 3.375$, so the volume of the cube is $3.375$ cubic units."
     }
   ],
   "explanation": [
-    "$1.5^2 = 2.25$.",
-    "$2.25 \\cdot 1.5 = 3.375$."
+    "The volume of a cube is its edge cubed: $V = 1.5 \\times 1.5 \\times 1.5$.",
+    "Multiply the first two edges together: $1.5 \\times 1.5 = 2.25$.",
+    "Multiply by the edge again, as one whole plus one half of $2.25$: $2.25 \\times 1.5 = 2.25 + 1.125 = 3.375$.",
+    "The volume of the cube is $3.375$ cubic units."
   ],
   "tags": [
     "volume",

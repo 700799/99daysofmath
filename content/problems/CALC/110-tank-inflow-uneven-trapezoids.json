@@ -10,30 +10,30 @@
   "primaryAnswer": "196",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The subintervals are NOT equal: widths $3, 3, 4, 2$. Compute each trapezoid separately with its own width.",
+  "hint": "The subintervals are not equal: their widths are $3, 3, 4, 2$. Compute each trapezoid separately with its own width.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The subintervals are NOT equal: widths $3, 3, 4, 2$. Compute each trapezoid separately with its own width."
+      "text": "The subintervals are not equal: their widths are $3, 3, 4, 2$. Compute each trapezoid separately with its own width."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up with the first strip: width $3$, parallel sides $10$ and $14$. Area $= 3 \\cdot \\frac{10 + 14}{2} = 36$ liters."
+      "text": "Warm up with the first strip: width $3$, parallel sides $10$ and $14$. Its area is $3 \\cdot \\frac{10 + 14}{2} = 36$ liters."
     },
     {
       "level": "guide",
-      "text": "Next strips: $3 \\cdot \\frac{14 + 18}{2}$, $4 \\cdot \\frac{18 + 20}{2}$, $2 \\cdot \\frac{20 + 16}{2}$. Add all four."
+      "text": "The next strips are $3 \\cdot \\frac{14 + 18}{2}$, $4 \\cdot \\frac{18 + 20}{2}$ and $2 \\cdot \\frac{20 + 16}{2}$. Work these out and add all four strips."
     },
     {
       "level": "reveal",
-      "text": "$36 + 48 + 76 + 36 = 196$ liters."
+      "text": "The four strips add to $36 + 48 + 76 + 36 = 196$ liters."
     }
   ],
   "explanation": [
     "Rate times time gives volume, so the total water is $\\int_0^{12} R(t) \\, dt$, approximated by trapezoids.",
-    "Strip by strip: $[0, 3]$: $3 \\cdot 12 = 36$. $[3, 6]$: $3 \\cdot 16 = 48$. $[6, 10]$: $4 \\cdot 19 = 76$. $[10, 12]$: $2 \\cdot 18 = 36$.",
-    "Total $\\approx 36 + 48 + 76 + 36 = 196$ liters. The uneven widths are the trap: the shortcut formula $\\frac{\\Delta x}{2}(y_0 + 2y_1 + \\dots)$ only works when all widths match."
+    "Each strip is its width times the average of its two rates. On $[0, 3]$: $3 \\cdot 12 = 36$. On $[3, 6]$: $3 \\cdot 16 = 48$. On $[6, 10]$: $4 \\cdot 19 = 76$. On $[10, 12]$: $2 \\cdot 18 = 36$.",
+    "The total is about $36 + 48 + 76 + 36 = 196$ liters. The uneven widths are the trap: the shortcut formula $\\frac{\\Delta x}{2}(y_0 + 2y_1 + \\dots)$ only works when all widths match."
   ],
   "alternativeExplanations": [
     {

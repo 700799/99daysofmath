@@ -12,23 +12,26 @@
     "60 cubic units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$V = l \\cdot w \\cdot h$.",
+  "hint": "The three numbers are the length, width and height of the prism. How do you combine them to count the cubes inside?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$V = l \\cdot w \\cdot h$."
+      "text": "The three numbers are the length, width and height of the prism. How do you combine them to count the cubes inside?"
     },
     {
       "level": "guide",
-      "text": "$3 \\times 4 \\times 5$."
+      "text": "Multiply all three dimensions together. A good start is $3 \\times 4 = 12$, and then multiply that result by $5$."
     },
     {
       "level": "reveal",
-      "text": "$60$."
+      "text": "$12 \\times 5 = 60$, so the volume of the prism is $60$ cubic units."
     }
   ],
   "explanation": [
-    "$V = 3 \\cdot 4 \\cdot 5 = 60$."
+    "Volume of a rectangular prism is length times width times height: $V = 3 \\times 4 \\times 5$.",
+    "The bottom layer holds $3 \\times 4 = 12$ unit cubes.",
+    "The prism is $5$ layers tall, so it holds $12 \\times 5 = 60$ cubes.",
+    "The volume of the prism is $60$ cubic units."
   ],
   "tags": [
     "volume",

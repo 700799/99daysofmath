@@ -10,23 +10,26 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$l = V / (w h)$.",
+  "hint": "The volume is the product of three numbers and one of them is missing. How can you find a missing factor?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$l = V / (w h)$."
+      "text": "The volume is the product of three numbers and one of them is missing. How can you find a missing factor?"
     },
     {
       "level": "guide",
-      "text": "$l = 72 / 12$."
+      "text": "Width times height is $3 \\times 4 = 12$, so the length times $12$ equals $72$. Divide $72$ by $12$."
     },
     {
       "level": "reveal",
-      "text": "$l = 6$."
+      "text": "$72 \\div 12 = 6$, so the length of the box is $6$ units."
     }
   ],
   "explanation": [
-    "$l = 72 / (3 \\cdot 4) = 6$."
+    "Write the volume formula with the known values: $72 = l \\times 3 \\times 4$.",
+    "Multiply the width and the height together: $3 \\times 4 = 12$, so $l \\times 12 = 72$.",
+    "Divide both sides by $12$ to undo the multiplication: $l = 72 \\div 12 = 6$.",
+    "The length is $6$ units, which checks because $6 \\times 3 \\times 4 = 72$."
   ],
   "tags": [
     "volume"

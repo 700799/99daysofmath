@@ -18,17 +18,17 @@
     },
     {
       "level": "guide",
-      "text": "$32 = 2^5$, so the equation says $2^x = 2^5$."
+      "text": "Since $32 = 2^5$, the equation becomes $2^x = 2^5$. Compare the two exponents on the matching bases."
     },
     {
       "level": "reveal",
-      "text": "Same base means the exponents match: $x = 5$."
+      "text": "Equal bases mean equal exponents, so $x = 5$."
     }
   ],
   "explanation": [
-    "The same-base trick: make both sides powers of the SAME base.",
-    "$32 = 2^5$, so $2^x = 2^5$.",
-    "If the bases match, the exponents must match: $x = 5$."
+    "The same-base method rewrites both sides as powers of the SAME base.",
+    "Here $32 = 2^5$, so the equation becomes $2^x = 2^5$ with the same base on each side.",
+    "When the bases match, the exponents must match too, so $x = 5$."
   ],
   "alternativeExplanations": [
     {

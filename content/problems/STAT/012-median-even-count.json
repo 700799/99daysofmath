@@ -12,25 +12,25 @@
     "27/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The list is already in order. With an EVEN number of values there are two middle numbers.",
+  "hint": "The median is the middle of an ordered list. With six values, is there a single middle number?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The list is already in order. With an EVEN number of values there are two middle numbers."
+      "text": "The median is the middle of an ordered list. With six values, is there a single middle number?"
     },
     {
       "level": "guide",
-      "text": "The two middle values are the 3rd and 4th: $12$ and $15$. Average them."
+      "text": "Six values have two middle positions, the 3rd and 4th, which hold $12$ and $15$. The median is the number halfway between them."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{12 + 15}{2} = 13.5$ messages."
+      "text": "$\\frac{12 + 15}{2} = 13.5$, so the median is $13.5$ messages."
     }
   ],
   "explanation": [
-    "Six values in order: $4, 9, 12, 15, 20, 26$.",
-    "The middle two are $12$ and $15$.",
-    "Median $= \\frac{12 + 15}{2} = 13.5$."
+    "The values $4, 9, 12, 15, 20, 26$ are already in order, which is what the median requires.",
+    "With an even count of six there is no single middle value, so use the 3rd and 4th values, $12$ and $15$.",
+    "Averaging them gives $\\frac{12 + 15}{2} = 13.5$, so the median is $13.5$ messages."
   ],
   "alternativeExplanations": [
     {

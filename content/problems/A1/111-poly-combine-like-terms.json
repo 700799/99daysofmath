@@ -12,25 +12,25 @@
     "7 x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Both terms are $x$-terms — the same kind of sticker.",
+  "hint": "Check the variable part of each term. When the variable parts match, the terms can be combined.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Both terms are $x$-terms — the same kind of sticker."
+      "text": "Check the variable part of each term. When the variable parts match, the terms can be combined."
     },
     {
       "level": "guide",
-      "text": "Four $x$ stickers plus three $x$ stickers. Add the front numbers: $4 + 3$."
+      "text": "Both terms are $x$-terms, so add the numbers in front and keep the $x$: work out $4 + 3$."
     },
     {
       "level": "reveal",
-      "text": "$4x + 3x = 7x$."
+      "text": "$4 + 3 = 7$, so the expression simplifies to $7x$."
     }
   ],
   "explanation": [
-    "$4x$ and $3x$ are like terms — same variable part.",
-    "Add the coefficients: $4 + 3 = 7$.",
-    "Answer: $7x$."
+    "$4x$ and $3x$ are like terms because they have the same variable part, $x$.",
+    "Like terms are combined by adding their coefficients: $4 + 3 = 7$.",
+    "The variable part stays the same, so the answer is $7x$."
   ],
   "alternativeExplanations": [
     {

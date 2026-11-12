@@ -10,19 +10,19 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You do not need to expand — the degrees combine.",
+  "hint": "Full expansion is not needed. Think only about which single product creates the highest power of $x$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You do not need to expand — the degrees combine."
+      "text": "Full expansion is not needed. Think only about which single product creates the highest power of $x$."
     },
     {
       "level": "guide",
-      "text": "The highest-degree term comes from multiplying the two leading terms: $x^2 \\cdot x^3$."
+      "text": "The highest power comes from multiplying the leading terms of the two brackets, $x^2 \\cdot x^3$. Add the exponents to find it."
     },
     {
       "level": "reveal",
-      "text": "$x^5$, so the degree is $5$."
+      "text": "Since $x^2 \\cdot x^3 = x^5$ and no other term has a higher power, the degree is $5$."
     }
   ],
   "learningObjective": "Determine the degree of a product of polynomials.",

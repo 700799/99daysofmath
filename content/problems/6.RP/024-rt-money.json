@@ -14,25 +14,26 @@
     "$3.5"
   ],
   "acceptanceMode": "normalized",
-  "hint": "First find the cost per pencil.",
+  "hint": "Three does not multiply neatly up to seven, so go through the price of a **single** pencil first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find the cost per pencil."
+      "text": "Three does not multiply neatly up to seven, so go through the price of a **single** pencil first."
     },
     {
       "level": "guide",
-      "text": "Cost per pencil $= 1.50 \\div 3 = 0.50$."
+      "text": "One pencil costs $1.50 \\div 3 = 0.50$ dollars. Multiply that unit price by $7$ pencils."
     },
     {
       "level": "reveal",
-      "text": "$7 \\times 0.50 = 3.50$."
+      "text": "$7 \\times 0.50 = 3.50$, so the price of $7$ pencils is $3.50$ dollars."
     }
   ],
   "explanation": [
-    "Per pencil: $1.50 \\div 3 = 0.50$.",
-    "For $7$: $7 \\times 0.50 = 3.50$.",
-    "Total: \\$$3.50$."
+    "Find the unit price by dividing the cost by the number of pencils: $1.50 \\div 3 = 0.50$ dollars each.",
+    "Going through the price of one pencil works for any number of pencils, even when the numbers do not scale neatly.",
+    "Multiply the unit price by the number wanted: $7 \\times 0.50 = 3.50$.",
+    "The cost of seven pencils is $3.50$ dollars."
   ],
   "tags": [
     "ratio-table",

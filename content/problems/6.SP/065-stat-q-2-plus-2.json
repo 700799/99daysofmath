@@ -13,24 +13,25 @@
     "n"
   ],
   "acceptanceMode": "exact",
-  "hint": "Is there variability?",
+  "hint": "A statistical question needs variability. Ask whether anyone could correctly give a different answer here.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Is there variability?"
+      "text": "A statistical question needs variability. Ask whether anyone could correctly give a different answer here."
     },
     {
       "level": "guide",
-      "text": "$2 + 2$ has exactly one answer."
+      "text": "The sum $2 + 2$ is a fixed arithmetic fact. Everyone who works it out gets the same number, so no data needs collecting."
     },
     {
       "level": "reveal",
-      "text": "No."
+      "text": "The answer is no, because the question has exactly one answer."
     }
   ],
   "explanation": [
-    "$2 + 2 = 4$ — single fixed answer, no variability.",
-    "Not statistical."
+    "A statistical question is answered by collecting data that varies.",
+    "The sum $2 + 2$ always equals $4$, so every correct response is the same.",
+    "There is no variability in the answers, so no, it is not a statistical question."
   ],
   "tags": [
     "statistical-question"

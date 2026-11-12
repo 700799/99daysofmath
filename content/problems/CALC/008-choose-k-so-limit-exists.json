@@ -10,30 +10,30 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The limit exists only if the left piece and the right piece are heading to the same height at $x = 2$.",
+  "hint": "A two-sided limit exists only when the left piece and the right piece head to the same height. What does each piece approach at $x = 2$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The limit exists only if the left piece and the right piece are heading to the same height at $x = 2$."
+      "text": "A two-sided limit exists only when the left piece and the right piece head to the same height. What does each piece approach at $x = 2$?"
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up: $f(x) = x$ for $x < 2$ and $f(x) = x + k$ for $x \\ge 2$. Left side heads to $2$, right side to $2 + k$. Matching them forces $k = 0$. Same method here."
+      "text": "Warm up with $f(x) = x$ for $x < 2$ and $f(x) = x + k$ for $x \\ge 2$. The left side heads to $2$ and the right side to $2 + k$, so matching them forces $k = 0$. Use the same method here."
     },
     {
       "level": "guide",
-      "text": "Left-hand limit: $2^2 + 1 = 5$. Right-hand limit: $3(2) - k = 6 - k$. Set them equal."
+      "text": "The left piece heads to $2^2 + 1 = 5$ and the right piece heads to $3(2) - k = 6 - k$. Set these two heights equal and solve for $k$."
     },
     {
       "level": "reveal",
-      "text": "$6 - k = 5$ gives $k = 1$."
+      "text": "Solving $6 - k = 5$ gives $k = 1$, so the limit exists when $k = 1$."
     }
   ],
   "explanation": [
-    "From the left ($x < 2$): $x^2 + 1 \\to 4 + 1 = 5$.",
-    "From the right ($x \\ge 2$): $3x - k \\to 6 - k$.",
-    "For the limit to exist the sides must agree: $6 - k = 5$, so $k = 1$."
+    "From the left, where $x < 2$, the rule is $x^2 + 1$, and it heads to $4 + 1 = 5$.",
+    "From the right, where $x \\ge 2$, the rule is $3x - k$, and it heads to $6 - k$.",
+    "A limit exists only when both sides agree, so $6 - k = 5$, which gives $k = 1$."
   ],
   "alternativeExplanations": [
     {

@@ -13,29 +13,31 @@
     "$35.00"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find cost per ticket first.",
+  "hint": "Four does not multiply neatly to fourteen, so find what one ticket costs and build up from there.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Convert percent ↔ fraction ↔ decimal. Sometimes the easiest form unlocks the answer."
+      "text": "Try halving the deal: if $4$ tickets cost $10$ dollars, what do $2$ tickets cost? Can you make $14$ out of groups of $4$ and $2$?"
     },
     {
       "level": "nudge",
-      "text": "Find cost per ticket first."
+      "text": "Four does not multiply neatly to fourteen, so find what one ticket costs and build up from there."
     },
     {
       "level": "guide",
-      "text": "Per ticket: $10 / 4 = 2.50$."
+      "text": "One ticket costs $10 \\div 4 = 2.50$ dollars. Multiply that unit price by $14$ tickets."
     },
     {
       "level": "reveal",
-      "text": "$14 \\times 2.50 = 35$."
+      "text": "$14 \\times 2.50 = 35$, so the cost of $14$ tickets is $35$ dollars."
     }
   ],
   "explanation": [
-    "Per ticket: $10 \\div 4 = 2.50$.",
-    "$14 \\times 2.50 = 35$ dollars."
+    "Find the unit rate by dividing cost by tickets: $10 \\div 4 = 2.50$ dollars per ticket.",
+    "Multiply by the number of tickets wanted, since every ticket costs the same: $14 \\times 2.50$.",
+    "Work it in pieces: $14 \\times 2 = 28$ and $14 \\times 0.50 = 7$, and $28 + 7 = 35$.",
+    "The cost of fourteen tickets is $35$ dollars."
   ],
   "tags": [
     "CA",

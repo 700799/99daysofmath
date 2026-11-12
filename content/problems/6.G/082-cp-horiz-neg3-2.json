@@ -12,24 +12,26 @@
     "5 units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Same y → subtract x-values.",
+  "hint": "The $y$-coordinates match, so the segment is horizontal. Be careful because one end is on the negative side.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same y → subtract x-values."
+      "text": "The $y$-coordinates match, so the segment is horizontal. Be careful because one end is on the negative side."
     },
     {
       "level": "guide",
-      "text": "$|2 - (-3)|$."
+      "text": "Find the distance between $x = -3$ and $x = 2$ by subtracting: $2 - (-3)$. Subtracting a negative is the same as adding."
     },
     {
       "level": "reveal",
-      "text": "$5$."
+      "text": "$2 - (-3) = 2 + 3 = 5$, so the segment is $5$ units long."
     }
   ],
   "explanation": [
-    "$|2 - (-3)| = |5| = 5$.",
-    "Final answer: 5."
+    "Both points have $y = 4$, so the segment runs left to right.",
+    "Its length is the distance between the $x$-coordinates: $|2 - (-3)|$.",
+    "Subtracting $-3$ is the same as adding $3$, so $2 - (-3) = 2 + 3 = 5$.",
+    "The segment is $5$ units long: $3$ units to reach zero and $2$ more after that."
   ],
   "tags": [
     "coordinate-plane",

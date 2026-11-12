@@ -12,25 +12,25 @@
     "3/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Let $x$ be the distance from the wall to the bottom and $y$ the height of the top. The ladder is the hypotenuse: $x^2 + y^2 = 100$.",
+  "hint": "The ladder, the wall and the ground make a right triangle whose hypotenuse stays $10$ feet. Which equation links the two changing sides?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Let $x$ be the distance from the wall to the bottom and $y$ the height of the top. The ladder is the hypotenuse: $x^2 + y^2 = 100$."
+      "text": "The ladder, the wall and the ground make a right triangle whose hypotenuse stays $10$ feet. Which equation links the two changing sides?"
     },
     {
       "level": "guide",
-      "text": "Differentiate: $2x \\frac{dx}{dt} + 2y \\frac{dy}{dt} = 0$. When $x = 6$, $y = 8$ (a 6-8-10 triangle), and $\\frac{dx}{dt} = 2$."
+      "text": "With $x$ along the ground and $y$ up the wall, $x^2 + y^2 = 100$. Differentiate with respect to time: $2x \\frac{dx}{dt} + 2y \\frac{dy}{dt} = 0$. When $x = 6$, $y = 8$ (a 6-8-10 triangle), and $\\frac{dx}{dt} = 2$."
     },
     {
       "level": "reveal",
-      "text": "$2(6)(2) + 2(8)\\frac{dy}{dt} = 0$ gives $\\frac{dy}{dt} = -1.5$. The top slides down at $1.5$ ft/s."
+      "text": "Solving $2(6)(2) + 2(8)\\frac{dy}{dt} = 0$ gives $\\frac{dy}{dt} = -1.5$, so the top slides down at $1.5$ feet per second."
     }
   ],
   "explanation": [
-    "Equation: $x^2 + y^2 = 100$. Differentiate with respect to $t$: $2x x' + 2y y' = 0$, so $y' = -\\frac{x x'}{y}$.",
-    "When $x = 6$: $y = \\sqrt{100 - 36} = 8$.",
-    "$y' = -\\frac{6 \\cdot 2}{8} = -1.5$ ft/s. The negative sign means the height is decreasing: the top slides down at $1.5$ ft/s."
+    "The Pythagorean theorem gives $x^2 + y^2 = 100$. Differentiate with respect to $t$: $2x x' + 2y y' = 0$, so $y' = -\\frac{x x'}{y}$.",
+    "Find the height at this moment from the same equation: when $x = 6$, $y = \\sqrt{100 - 36} = 8$.",
+    "Then $y' = -\\frac{6 \\cdot 2}{8} = -1.5$ ft/s. The negative sign means the height is decreasing: the top slides down at $1.5$ ft/s."
   ],
   "alternativeExplanations": [
     {

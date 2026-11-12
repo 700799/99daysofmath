@@ -13,24 +13,26 @@
     "420mi"
   ],
   "acceptanceMode": "normalized",
-  "hint": "First find the rate per hour.",
+  "hint": "The train keeps the same speed the whole time. If you knew how far it goes in one hour, how could you find the distance for any number of hours?",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find the rate per hour."
+      "text": "The train keeps the same speed the whole time. If you knew how far it goes in one hour, how could you find the distance for any number of hours?"
     },
     {
       "level": "guide",
-      "text": "Then multiply that rate by $7$."
+      "text": "First find the speed: $300 \\div 5 = 60$ miles each hour. Then multiply that speed by $7$ hours."
     },
     {
       "level": "reveal",
-      "text": "$300 \\div 5 = 60$ mph. $60 \\times 7 = 420$ miles."
+      "text": "$60 \\times 7 = 420$, so the train travels $420$ miles in $7$ hours."
     }
   ],
   "explanation": [
-    "Unit rate: $300 \\div 5 = 60$ mph.",
-    "Distance in $7$ hours: $60 \\times 7 = 420$ miles."
+    "Find the unit rate first, because it tells the distance for every single hour: $300 \\div 5 = 60$ miles per hour.",
+    "At a constant rate, distance equals rate times time, so multiply $60$ by the $7$ hours.",
+    "Multiplying the speed by the time gives $60 \\times 7 = 420$ miles.",
+    "The train goes $420$ miles in $7$ hours."
   ],
   "tags": [
     "unit-rate",

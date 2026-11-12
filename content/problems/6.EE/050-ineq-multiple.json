@@ -10,29 +10,31 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Count values that are $\\geq 5$.",
+  "hint": "Test each number in the set one at a time. Remember that $\\geq$ lets the number equal $5$.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Translate piece-by-piece: \"more than\" = +, \"product\" = ×, \"less than\" flips the order."
+      "text": "Picture a number line with a filled dot at $5$ and an arrow going right. Which numbers in the set land on the dot or the arrow?"
     },
     {
       "level": "nudge",
-      "text": "Count values that are $\\geq 5$."
+      "text": "Test each number in the set one at a time. Remember that $\\geq$ lets the number equal $5$."
     },
     {
       "level": "guide",
-      "text": "$5, 6, 9$ all satisfy."
+      "text": "$2$ and $4$ are too small. Check whether $5$, $6$ and $9$ are each at least $5$, then count the ones that pass."
     },
     {
       "level": "reveal",
-      "text": "$3$ solutions."
+      "text": "$5$, $6$ and $9$ all satisfy $x \\geq 5$, so there are $3$ solutions."
     }
   ],
   "explanation": [
-    "$5 \\geq 5$ ✓; $6 \\geq 5$ ✓; $9 \\geq 5$ ✓.",
-    "Total: $3$."
+    "A number is a solution of $x \\geq 5$ if it is $5$ or larger.",
+    "The numbers $2$ and $4$ are less than $5$, so they are not solutions.",
+    "The number $5$ works because of \"or equal to\", and $6$ and $9$ work because they are greater.",
+    "That makes three solutions: $5$, $6$ and $9$. The answer is $3$."
   ],
   "tags": [
     "inequality"

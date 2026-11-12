@@ -10,19 +10,19 @@
   "primaryAnswer": "68",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The sample mean is an unbiased estimator: on average it hits the population mean.",
+  "hint": "Sample means vary from sample to sample, but they are centered somewhere. The sample mean is an unbiased estimator.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The sample mean is an unbiased estimator: on average it hits the population mean."
+      "text": "Sample means vary from sample to sample, but they are centered somewhere. The sample mean is an unbiased estimator."
     },
     {
       "level": "guide",
-      "text": "$\\mu_{\\bar{x}} = \\mu$, no matter the sample size."
+      "text": "Unbiased means $\\mu_{\\bar{x}} = \\mu$ for any sample size, so the answer is the population mean given in the problem."
     },
     {
       "level": "reveal",
-      "text": "The mean of the sampling distribution is $68$ inches."
+      "text": "The mean of the sampling distribution is $68$ inches, the same as the population mean."
     }
   ],
   "explanation": [

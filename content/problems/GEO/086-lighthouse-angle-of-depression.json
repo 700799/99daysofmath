@@ -10,25 +10,25 @@
   "primaryAnswer": "257.3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The angle of depression from the top equals the angle of elevation from the boat — they are alternate interior angles across the horizontal.",
+  "hint": "The angle of depression is measured down from a horizontal line at the top. Think about which angle inside the triangle at the boat has the same size.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The angle of depression from the top equals the angle of elevation from the boat — they are alternate interior angles across the horizontal."
+      "text": "The angle of depression is measured down from a horizontal line at the top. Think about which angle inside the triangle at the boat has the same size."
     },
     {
       "level": "guide",
-      "text": "From the boat's corner, the lighthouse ($120$) is opposite and the water distance $d$ is adjacent: $\\tan 25^\\circ = \\frac{120}{d}$."
+      "text": "The angle at the boat is also $25^\\circ$. From there the lighthouse height $120$ is opposite and the distance $d$ is adjacent, so $\\tan 25^\\circ = \\frac{120}{d}$."
     },
     {
       "level": "reveal",
-      "text": "$d = \\frac{120}{\\tan 25^\\circ} \\approx \\frac{120}{0.4663} \\approx 257.3$ ft."
+      "text": "$d = \\frac{120}{\\tan 25^\\circ} \\approx \\frac{120}{0.4663} \\approx 257.3$, so the boat is about $257.3$ feet from the base."
     }
   ],
   "explanation": [
-    "Slide the $25^\\circ$ angle of depression down to the boat — it becomes a $25^\\circ$ angle of elevation inside the triangle.",
-    "With that angle, the height $120$ is opposite and the distance $d$ is adjacent, so $\\tan 25^\\circ = \\frac{120}{d}$.",
-    "Solve for $d$: $d = \\frac{120}{\\tan 25^\\circ} \\approx 257.3$ ft."
+    "The horizontal line at the top is parallel to the water, so the $25^\\circ$ angle of depression equals the angle of elevation at the boat, as alternate interior angles.",
+    "From the boat's angle, the height $120$ is the opposite side and the distance $d$ is the adjacent side, so $\\tan 25^\\circ = \\frac{120}{d}$.",
+    "Solving for $d$ gives $d = \\frac{120}{\\tan 25^\\circ} \\approx 257.3$, so the boat is about $257.3$ feet from the base."
   ],
   "alternativeExplanations": [
     {

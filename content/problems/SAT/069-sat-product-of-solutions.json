@@ -10,11 +10,11 @@
   "primaryAnswer": "-12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The solutions of $ax^2 + bx + c = 0$ multiply to $c/a$.",
+  "hint": "You can find both solutions and multiply them. There is also a rule that gives the product straight from two of the coefficients.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The solutions of $ax^2 + bx + c = 0$ multiply to $c/a$."
+      "text": "You can find both solutions and multiply them. There is also a rule that gives the product straight from two of the coefficients."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "Here $a = 1$ and $c = -12$."
+      "text": "The solutions of $ax^2 + bx + c = 0$ multiply to $\\dfrac{c}{a}$. In this equation $a = 1$ and $c = -12$, so divide them."
     },
     {
       "level": "reveal",
-      "text": "The product is $-12$."
+      "text": "The product is $\\dfrac{-12}{1} = -12$, so the solutions multiply to $-12$."
     }
   ],
   "learningObjective": "Use the product-of-roots relationship for a quadratic.",
   "topic": "Roots of quadratics",
   "explanation": [
-    "For $ax^2 + bx + c = 0$, the product of the solutions is $\\dfrac{c}{a} = \\dfrac{-12}{1} = -12$.",
-    "Confirm by factoring: $(x - 6)(x + 2) = 0$ gives $6$ and $-2$.",
-    "$6 \\times (-2) = -12$ ✓"
+    "For any quadratic $ax^2 + bx + c = 0$, the product of the solutions is $\\dfrac{c}{a}$, which here is $\\dfrac{-12}{1} = -12$.",
+    "Factoring confirms the rule: $(x - 6)(x + 2) = 0$ has solutions $6$ and $-2$.",
+    "Multiplying them gives $6 \\times (-2) = -12$, so the product of the solutions is $-12$."
   ],
   "alternativeExplanations": [
     {

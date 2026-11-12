@@ -10,11 +10,11 @@
   "primaryAnswer": "49",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Range is the maximum minus the minimum.",
+  "hint": "Recall how the range of a data set is defined. It links the two extreme values by one subtraction.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Range is the maximum minus the minimum."
+      "text": "Recall how the range of a data set is defined. It links the two extreme values by one subtraction."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "So maximum $=$ minimum $+$ range."
+      "text": "Range equals maximum minus minimum, so the maximum equals the minimum plus the range. Here that is $12 + 37$."
     },
     {
       "level": "reveal",
-      "text": "$12 + 37 = 49$."
+      "text": "Since $12 + 37 = 49$, the maximum value in the data set is $49$."
     }
   ],
   "learningObjective": "Rearrange the definition of range to find a missing extreme.",
   "topic": "Measures of spread",
   "explanation": [
-    "Range $=$ maximum $-$ minimum, so maximum $=$ minimum $+$ range.",
-    "$12 + 37 = 49$.",
-    "Check: $49 - 12 = 37$ ✓"
+    "The range is the maximum minus the minimum, so the maximum equals the minimum plus the range.",
+    "Add the given numbers to find the maximum: $12 + 37 = 49$.",
+    "Check with the definition: $49 - 12 = 37$, so the maximum value is $49$."
   ],
   "alternativeExplanations": [
     {

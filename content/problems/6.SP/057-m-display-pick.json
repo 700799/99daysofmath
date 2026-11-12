@@ -27,23 +27,26 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "For small datasets, dots show every value.",
+  "hint": "With only five values, you can afford a display that shows every single score.",
   "hints": [
     {
       "level": "nudge",
-      "text": "For small datasets, dots show every value."
+      "text": "With only five values, you can afford a display that shows every single score."
     },
     {
       "level": "guide",
-      "text": "Histograms shine with many values."
+      "text": "A histogram with $1$-point bins would be mostly empty bars, and a pie chart hides the actual scores. Think about the display that places one mark per score on a number line."
     },
     {
       "level": "reveal",
-      "text": "Dot plot."
+      "text": "A dot plot (choice A) works well for five scores."
     }
   ],
   "explanation": [
-    "Dot plots are great for small datasets — every value is visible."
+    "A dot plot puts one dot on a number line for each score, so all $5$ scores can be seen.",
+    "A histogram with $1$-point bins would have many empty bins and only a few bars of height $1$.",
+    "A pie chart of letter grades would hide the actual scores.",
+    "So the dot plot, choice A, is the display that works well."
   ],
   "tags": [
     "display"

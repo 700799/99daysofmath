@@ -11,19 +11,19 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "A two-sided alternative counts BOTH tails: results as extreme as $2.0$ in either direction.",
+  "hint": "The alternative is two-sided, so results far from $0.4$ in either direction count as evidence. How many tails does that involve?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A two-sided alternative counts BOTH tails: results as extreme as $2.0$ in either direction."
+      "text": "The alternative is two-sided, so results far from $0.4$ in either direction count as evidence. How many tails does that involve?"
     },
     {
       "level": "guide",
-      "text": "$p\\text{-value} = P(Z > 2.0) + P(Z < -2.0)$, and the normal curve is symmetric."
+      "text": "Add the two tails, $P(Z > 2.0) + P(Z < -2.0)$. The normal curve is symmetric, so the tails are equal and you can double $0.0228$."
     },
     {
       "level": "reveal",
-      "text": "$2 \\times 0.0228 = 0.0456$."
+      "text": "$2 \\times 0.0228 = 0.0456$, so the two-sided $p$-value is $0.0456$."
     }
   ],
   "explanation": [

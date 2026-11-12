@@ -10,23 +10,25 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$5y$ means $5$ times $y$.",
+  "hint": "A number written right next to a letter means the two are multiplied.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$5y$ means $5$ times $y$."
+      "text": "A number written right next to a letter means the two are multiplied."
     },
     {
       "level": "guide",
-      "text": "$5 \\times 4$."
+      "text": "$5y$ means $5$ times $y$. Put $4$ in for $y$ and work out $5 \\times 4$."
     },
     {
       "level": "reveal",
-      "text": "$20$."
+      "text": "Five times four is $5 \\times 4 = 20$, so $5y$ equals $20$."
     }
   ],
   "explanation": [
-    "$5y = 5 \\times 4 = 20$."
+    "A number beside a variable means multiplication, so $5y$ is $5 \\times y$.",
+    "Replace $y$ with its value $4$ to get $5 \\times 4$.",
+    "The product is $20$, so $5y$ equals $20$ (not $54$)."
   ],
   "tags": [
     "evaluate"

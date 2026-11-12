@@ -18,17 +18,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\log_2(8^3) = 3 \\cdot \\log_2(8)$, and $\\log_2(8) = 3$."
+      "text": "Slide the exponent out to get $\\log_2(8^3) = 3 \\cdot \\log_2(8)$. Since $2^3 = 8$, the log part is $\\log_2(8) = 3$. Now multiply."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 3 = 9$."
+      "text": "Multiplying gives $3 \\times 3 = 9$, so the value of $\\log_2(8^3)$ is $9$."
     }
   ],
   "explanation": [
-    "The power rule lets the exponent slide out front: $\\log_2(8^3) = 3 \\cdot \\log_2(8)$.",
-    "$\\log_2(8) = 3$ because $2^3 = 8$.",
-    "$3 \\times 3 = 9$."
+    "The power rule lets the exponent move out front: $\\log_2(8^3) = 3 \\cdot \\log_2(8)$.",
+    "The remaining log is $\\log_2(8) = 3$, because three twos multiply to make $2^3 = 8$.",
+    "Multiplying the two threes gives $3 \\times 3 = 9$, so the value is $9$."
   ],
   "alternativeExplanations": [
     {

@@ -10,23 +10,26 @@
   "primaryAnswer": "22",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Add the two areas.",
+  "hint": "An L-shape is hard to measure all at once. It becomes easy when you treat it as two rectangles joined together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add the two areas."
+      "text": "An L-shape is hard to measure all at once. It becomes easy when you treat it as two rectangles joined together."
     },
     {
       "level": "guide",
-      "text": "$4 \\times 3 = 12$, $2 \\times 5 = 10$."
+      "text": "Find each rectangle's area: $4 \\times 3$ for the first and $2 \\times 5$ for the second. Then add the two areas."
     },
     {
       "level": "reveal",
-      "text": "$12 + 10 = 22$."
+      "text": "$12 + 10 = 22$, so the total area of the L-shape is $22$ square units."
     }
   ],
   "explanation": [
-    "Decompose: $12 + 10 = 22$."
+    "Split the L-shape into the two rectangles it is made of, because rectangle areas are easy to find.",
+    "The first rectangle has an area of $4 \\times 3 = 12$ square units.",
+    "The second rectangle has an area of $2 \\times 5 = 10$ square units.",
+    "The pieces do not overlap, so add them: $12 + 10 = 22$ square units in total."
   ],
   "tags": [
     "composite",

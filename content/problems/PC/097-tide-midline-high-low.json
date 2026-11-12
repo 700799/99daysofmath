@@ -10,19 +10,19 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The midline is the level the wave wiggles around — right between the highest and lowest.",
+  "hint": "The midline is the level the wave wiggles around, right between the highest and lowest depths.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The midline is the level the wave wiggles around — right between the highest and lowest."
+      "text": "The midline is the level the wave wiggles around, right between the highest and lowest depths."
     },
     {
       "level": "guide",
-      "text": "Average them: $(9 + 3) \\div 2$."
+      "text": "Halfway between two numbers is their average, so add the two depths and halve: $(9 + 3) \\div 2$."
     },
     {
       "level": "reveal",
-      "text": "$(9 + 3) \\div 2 = 6$ metres."
+      "text": "The average is $(9 + 3) \\div 2 = 6$, so the midline depth is $6$ metres."
     }
   ],
   "explanation": [

@@ -32,27 +32,27 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Solve it exactly as you would an equation — you are dividing by a positive number, so the sign will not flip.",
+  "hint": "An inequality is solved with the same moves as an equation. Think about whether any of your moves will affect the direction of the sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Solve it exactly as you would an equation — you are dividing by a positive number, so the sign will not flip."
+      "text": "An inequality is solved with the same moves as an equation. Think about whether any of your moves will affect the direction of the sign."
     },
     {
       "level": "guide",
-      "text": "Add $5$: $3x > 15$."
+      "text": "Add $5$ to both sides to get $3x > 15$. Then divide by $3$, which is positive, so the sign keeps its direction."
     },
     {
       "level": "reveal",
-      "text": "Divide by $3$: $x > 5$."
+      "text": "Dividing $15$ by $3$ gives $x > 5$, which is choice A."
     }
   ],
   "learningObjective": "Solve a two-step linear inequality.",
   "topic": "Linear inequalities",
   "explanation": [
-    "Add $5$ to both sides: $3x > 15$.",
-    "Divide both sides by $3$. Since $3$ is positive, the direction of the inequality does not change: $x > 5$.",
-    "Check with $x = 6$: $3(6) - 5 = 13 > 10$ ✓"
+    "Add $5$ to both sides to isolate the $x$ term: $3x > 15$.",
+    "Divide both sides by $3$. Because $3$ is positive, the inequality keeps its direction: $x > 5$.",
+    "Test a value such as $x = 6$: $3(6) - 5 = 13$, which is greater than $10$. The solution is $x > 5$, choice A."
   ],
   "alternativeExplanations": [
     {

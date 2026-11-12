@@ -14,25 +14,26 @@
     "4,8"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The $y$ value is always twice $x$.",
+  "hint": "Look at how each pair changes into the next one. What happens to the first number, and what happens to the second?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $y$ value is always twice $x$."
+      "text": "Look at how each pair changes into the next one. What happens to the first number, and what happens to the second?"
     },
     {
       "level": "guide",
-      "text": "If $x = 4$, then $y = ?$"
+      "text": "The first number goes up by $1$ each time and the second is always double the first. The next first number is $4$, so double it."
     },
     {
       "level": "reveal",
-      "text": "$y = 2 \\times 4 = 8$. Pair: $(4, 8)$."
+      "text": "$4 \\times 2 = 8$, so the next pair is $(4, 8)$."
     }
   ],
   "explanation": [
-    "Each $y$ is $2 \\times$ the $x$.",
-    "$x = 4 \\Rightarrow y = 8$.",
-    "Pair: $(4, 8)$."
+    "A ratio of $1 : 2$ means the second number in each pair is $2$ times the first.",
+    "The first numbers are $1, 2, 3$, so the next first number is $4$.",
+    "Double it to keep the ratio $1 : 2$, which gives $4 \\times 2 = 8$.",
+    "The next pair on the graph is $(4, 8)$."
   ],
   "tags": [
     "ratio",

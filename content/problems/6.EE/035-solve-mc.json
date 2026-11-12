@@ -32,24 +32,26 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Try each. Which one makes left side equal $10$?",
+  "hint": "A solution is a value that makes the equation a true statement. You can test each choice.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Try each. Which one makes left side equal $10$?"
+      "text": "A solution is a value that makes the equation a true statement. You can test each choice."
     },
     {
       "level": "guide",
-      "text": "$4 + 6 = 10$. ✓"
+      "text": "Put each choice in for $x$ and add $6$. You are looking for the one where the total is exactly $10$."
     },
     {
       "level": "reveal",
-      "text": "B."
+      "text": "$4 + 6 = 10$, so the value that works is $4$, choice B."
     }
   ],
   "explanation": [
-    "Substitute each into $x + 6 = 10$.",
-    "$4 + 6 = 10$ ✓."
+    "A value makes the equation true if adding $6$ to it gives exactly $10$.",
+    "Test each of the four choices in turn: $2 + 6 = 8$, $4 + 6 = 10$, $6 + 6 = 12$ and $16 + 6 = 22$.",
+    "Only $4$ gives $10$, so the answer is $4$, choice B.",
+    "Subtracting also works: $10 - 6 = 4$ gives the same value."
   ],
   "tags": [
     "check-solution"

@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "The statistic has the usual shape: $t = \\frac{\\text{estimate} - \\text{hypothesized value}}{\\text{standard error}}$.",
+  "hint": "Every $t$ statistic has the same shape: how far the estimate is from the hypothesized value, measured in standard errors.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The statistic has the usual shape: $t = \\frac{\\text{estimate} - \\text{hypothesized value}}{\\text{standard error}}$."
+      "text": "Every $t$ statistic has the same shape: how far the estimate is from the hypothesized value, measured in standard errors."
     },
     {
       "level": "guide",
-      "text": "Hypothesized slope is $0$, so $t = \\frac{3.2 - 0}{0.8}$."
+      "text": "The hypothesized slope is $0$, the estimate is $3.2$ and the standard error is $0.8$, so compute $t = \\frac{3.2 - 0}{0.8}$."
     },
     {
       "level": "reveal",
-      "text": "$t = 3.2 / 0.8 = 4$."
+      "text": "$t = 3.2 / 0.8 = 4$, so the slope is $4$ standard errors from zero and the $t$ statistic is $4$."
     }
   ],
   "explanation": [
-    "$t = \\frac{b - \\beta_0}{SE_b}$ with $\\beta_0 = 0$ under $H_0$.",
-    "$3.2 / 0.8 = 4$, with df $= 18$.",
-    "A slope 4 standard errors from zero gives a two-sided $p$-value under $0.001$: strong evidence of a linear relationship between hours and score."
+    "The test statistic for a slope is $t = \\frac{b - \\beta_0}{SE_b}$, and $\\beta_0 = 0$ under $H_0$.",
+    "Substituting the output values gives $3.2 / 0.8 = 4$, with df $= 18$.",
+    "So $t = 4$. A slope 4 standard errors from zero gives a two-sided $p$-value under $0.001$, strong evidence of a linear relationship between hours and score."
   ],
   "alternativeExplanations": [
     {

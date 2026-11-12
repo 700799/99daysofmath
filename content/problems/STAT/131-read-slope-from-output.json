@@ -11,19 +11,19 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "The change in predicted $y$ per unit of $x$ is the SLOPE.",
+  "hint": "\"Change in predicted score for each additional hour\" describes one particular number in a regression equation. Which one?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The change in predicted $y$ per unit of $x$ is the SLOPE."
+      "text": "\"Change in predicted score for each additional hour\" describes one particular number in a regression equation. Which one?"
     },
     {
       "level": "guide",
-      "text": "In the output, the slope is the Coef on the line for the explanatory variable, \"Hours\"."
+      "text": "It is the slope. In computer output the slope is the Coef value on the row named after the explanatory variable, \"Hours\"."
     },
     {
       "level": "reveal",
-      "text": "Slope $= 3.2$ points per hour."
+      "text": "The slope is $3.2$, so the predicted score rises $3.2$ points for each additional hour."
     }
   ],
   "explanation": [

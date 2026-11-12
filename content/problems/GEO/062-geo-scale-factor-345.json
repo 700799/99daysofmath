@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "The scale factor is the ratio of a new side to its corresponding original side.",
-    "$\\frac{9}{3} = 3$, $\\frac{12}{4} = 3$, and $\\frac{15}{5} = 3$.",
-    "Every pair gives the same ratio, so the scale factor is 3 and the sails are similar."
+    "The scale factor from small to large is the ratio of a side of the large sail to the matching side of the small sail.",
+    "Each pair of matching sides gives the same value: $\\frac{9}{3} = 3$, $\\frac{12}{4} = 3$ and $\\frac{15}{5} = 3$.",
+    "Because all three ratios agree, the sails are similar and the scale factor is $3$."
   ],
   "alternativeExplanations": [
     {

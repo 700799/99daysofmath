@@ -12,23 +12,25 @@
     "Gap"
   ],
   "acceptanceMode": "normalized",
-  "hint": "An empty space.",
+  "hint": "Think of the ordinary word for an empty space between two things.",
   "hints": [
     {
       "level": "nudge",
-      "text": "An empty space."
+      "text": "Think of the ordinary word for an empty space between two things."
     },
     {
       "level": "guide",
-      "text": "Same word as for a space between things."
+      "text": "If no data values fall in part of the number line, the dot plot shows a blank stretch there with dots on either side. The name is a short, three-letter word."
     },
     {
       "level": "reveal",
-      "text": "Gap."
+      "text": "A region with no dots is called a gap."
     }
   ],
   "explanation": [
-    "Empty regions are called gaps."
+    "Dots on a dot plot show where data values are, so a stretch with no dots has no data values.",
+    "Such an empty stretch separates the groups of dots on either side of it.",
+    "A region of a dot plot with no dots is called a gap."
   ],
   "tags": [
     "vocabulary"

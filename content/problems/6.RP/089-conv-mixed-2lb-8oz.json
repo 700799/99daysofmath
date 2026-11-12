@@ -12,29 +12,31 @@
     "40 oz"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Convert the pounds first, then add the leftover ounces.",
+  "hint": "The weight is given in two different units. Only the pounds need converting, because the $8$ ounces are already in ounces.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Convert percent ↔ fraction ↔ decimal. Sometimes the easiest form unlocks the answer."
+      "text": "Split the weight into two pieces, the pounds and the leftover ounces. Deal with each piece on its own, then put them back together."
     },
     {
       "level": "nudge",
-      "text": "Convert the pounds first, then add the leftover ounces."
+      "text": "The weight is given in two different units. Only the pounds need converting, because the $8$ ounces are already in ounces."
     },
     {
       "level": "guide",
-      "text": "$2 \\times 16 = 32$, then $32 + 8$."
+      "text": "Change the pounds first: $2 \\times 16 = 32$ ounces. Then add on the extra $8$ ounces."
     },
     {
       "level": "reveal",
-      "text": "$32 + 8 = 40$ oz."
+      "text": "$32 + 8 = 40$, so the package weighs $40$ ounces in total."
     }
   ],
   "explanation": [
-    "Pounds to ounces: $2 \\times 16 = 32$.",
-    "Add the extra $8$: $32 + 8 = 40$ oz."
+    "Convert the pounds to ounces using $1$ pound $= 16$ ounces: $2 \\times 16 = 32$ ounces.",
+    "The remaining $8$ ounces are already in the right unit, so they stay as they are.",
+    "Add the two amounts because together they make the whole weight: $32 + 8 = 40$.",
+    "The package weighs a total of $40$ ounces."
   ],
   "alternativeExplanations": [
     {

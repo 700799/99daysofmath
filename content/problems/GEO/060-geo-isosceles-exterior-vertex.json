@@ -10,11 +10,11 @@
   "primaryAnswer": "70",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The exterior angle at $B$ and the interior angle $\\angle B$ form a linear pair.",
+  "hint": "The exterior angle at $B$ sits beside the interior angle at $B$ on one straight line. Start by finding that interior angle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The exterior angle at $B$ and the interior angle $\\angle B$ form a linear pair."
+      "text": "The exterior angle at $B$ sits beside the interior angle at $B$ on one straight line. Start by finding that interior angle."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\angle B = 180 - 125 = 55^\\circ$, and $\\angle C$ equals $\\angle B$ because the truss is isosceles."
+      "text": "The interior angle is $\\angle B = 180 - 125 = 55^\\circ$, and $\\angle C$ matches it because the truss is isosceles. Use the triangle total to get $\\angle A$."
     },
     {
       "level": "reveal",
-      "text": "$\\angle A = 180 - 55 - 55 = 70^\\circ$."
+      "text": "$\\angle A = 180 - 55 - 55 = 70^\\circ$, so the vertex angle is $70^\\circ$."
     }
   ],
   "explanation": [
-    "The exterior angle at $B$ and the interior $\\angle B$ sit along a straight rafter: $\\angle B = 180 - 125 = 55^\\circ$.",
-    "Because $\\overline{AB} \\cong \\overline{AC}$, the base angles are congruent, so $\\angle C = 55^\\circ$ too.",
-    "Triangle Sum finishes it: $\\angle A = 180 - 55 - 55 = 70^\\circ$."
+    "The exterior angle at $B$ and the interior angle at $B$ form a linear pair, so $\\angle B = 180 - 125 = 55^\\circ$.",
+    "Since $\\overline{AB} \\cong \\overline{AC}$, the angles opposite those sides are congruent, which makes $\\angle C = 55^\\circ$ as well.",
+    "The three angles add to $180^\\circ$, so the vertex angle is $\\angle A = 180 - 55 - 55 = 70^\\circ$."
   ],
   "alternativeExplanations": [
     {

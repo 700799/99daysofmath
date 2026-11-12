@@ -10,23 +10,26 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiply all three.",
+  "hint": "A tank shaped like a box has a length, a width and a height. Volume uses all three of them.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply all three."
+      "text": "A tank shaped like a box has a length, a width and a height. Volume uses all three of them."
     },
     {
       "level": "guide",
-      "text": "$4 \\times 5 \\times 3$."
+      "text": "Multiply the dimensions $4 \\times 5 \\times 3$. Start with $4 \\times 5 = 20$ and then multiply by $3$."
     },
     {
       "level": "reveal",
-      "text": "$60$."
+      "text": "$20 \\times 3 = 60$, so the volume of the tank is $60$ cubic feet."
     }
   ],
   "explanation": [
-    "$V = 60$ ft³."
+    "The tank is a rectangular prism, so its volume is length times width times height.",
+    "With the given measurements that is $V = 4 \\times 5 \\times 3$.",
+    "Multiply in two easy steps: $4 \\times 5 = 20$, and then $20 \\times 3 = 60$.",
+    "The volume of the water tank is $60$ cubic feet."
   ],
   "tags": [
     "volume",

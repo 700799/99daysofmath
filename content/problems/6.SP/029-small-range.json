@@ -10,23 +10,25 @@
   "primaryAnswer": "0",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Max minus min.",
+  "hint": "When every value is the same, think about how far the data stretches from end to end.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Max minus min."
+      "text": "When every value is the same, think about how far the data stretches from end to end."
     },
     {
       "level": "guide",
-      "text": "Max and min are both $5$."
+      "text": "The largest value is $5$ and the smallest value is also $5$. Subtract the smallest from the largest as usual."
     },
     {
       "level": "reveal",
-      "text": "$5 - 5 = 0$."
+      "text": "$5 - 5 = 0$, so the range of this data is $0$."
     }
   ],
   "explanation": [
-    "All values equal $5$. Range: $0$."
+    "The range is the largest value minus the smallest value.",
+    "Every value in the list is $5$, so the largest and the smallest are both $5$.",
+    "Subtract: $5 - 5 = 0$, so the range is $0$ because the data has no spread at all."
   ],
   "tags": [
     "range"

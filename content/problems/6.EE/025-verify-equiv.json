@@ -22,24 +22,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Apply the distributive property.",
+  "hint": "Two expressions are equivalent when they give the same value for every $x$. Try rewriting one to look like the other.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Apply the distributive property."
+      "text": "Two expressions are equivalent when they give the same value for every $x$. Try rewriting one to look like the other."
     },
     {
       "level": "guide",
-      "text": "$2(x + 3) = 2x + 6$."
+      "text": "Expand $2(x + 3)$ by multiplying $2$ by $x$ and $2$ by $3$. Then compare your result with $2x + 6$."
     },
     {
       "level": "reveal",
-      "text": "They match. Yes."
+      "text": "$2(x + 3) = 2x + 6$, which matches exactly, so the answer is Yes (choice A)."
     }
   ],
   "explanation": [
-    "$2(x + 3) = 2x + 6$.",
-    "They are equivalent."
+    "Use the distributive property on $2(x + 3)$, so the $2$ multiplies both terms.",
+    "The two products are $2 \\cdot x = 2x$ and $2 \\cdot 3 = 6$, giving $2x + 6$.",
+    "This is exactly the second expression, so they are equivalent. The answer is Yes, choice A."
   ],
   "tags": [
     "equivalent"

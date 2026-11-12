@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Opposite over hypotenuse means sine: $\\sin(30^\\circ) = \\frac{h}{10}$."
+      "text": "Opposite over hypotenuse is sine, so write $\\sin(30^\\circ) = \\frac{h}{10}$ and use the exact value $\\sin(30^\\circ) = \\frac{1}{2}$."
     },
     {
       "level": "reveal",
-      "text": "$\\sin(30^\\circ) = \\frac{1}{2}$, so $h = \\frac{1}{2} \\times 10 = 5$ ft."
+      "text": "The height is $h = \\frac{1}{2} \\times 10 = 5$, so the top of the ramp is $5$ ft high."
     }
   ],
   "explanation": [
-    "Label first: the ramp itself is the hypotenuse ($10$ ft), and the height is opposite the $30^\\circ$ angle.",
-    "Opposite and hypotenuse means SOH: $\\sin(30^\\circ) = \\frac{h}{10}$.",
-    "$\\sin(30^\\circ) = \\frac{1}{2}$, so $h = 5$ ft."
+    "Label the triangle first: the ramp itself is the hypotenuse, $10$ ft, and the height is opposite the $30^\\circ$ angle.",
+    "Opposite and hypotenuse go together in SOH, so $\\sin(30^\\circ) = \\frac{h}{10}$.",
+    "Since $\\sin(30^\\circ) = \\frac{1}{2}$, the height is half the ramp length: $h = \\frac{1}{2} \\times 10 = 5$ ft."
   ],
   "alternativeExplanations": [
     {

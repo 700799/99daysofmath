@@ -32,11 +32,11 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The two shorter sides must together exceed the longest side.",
+  "hint": "Three lengths form a triangle only if the two shorter sides can reach past the ends of the longest side. Test that idea on each set.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The two shorter sides must together exceed the longest side."
+      "text": "Three lengths form a triangle only if the two shorter sides can reach past the ends of the longest side. Test that idea on each set."
     },
     {
       "level": "nudge",
@@ -45,19 +45,20 @@
     },
     {
       "level": "guide",
-      "text": "For choice B: is $3 + 4$ greater than $8$?"
+      "text": "In each choice, add the two shorter lengths and compare the sum with the longest. For choice B, compare $3 + 4$ with $8$."
     },
     {
       "level": "reveal",
-      "text": "$3 + 4 = 7 < 8$, so those lengths cannot close into a triangle."
+      "text": "Since $3 + 4 = 7$ is less than $8$, the lengths $3$, $4$, $8$ cannot form a triangle, which is choice B."
     }
   ],
   "learningObjective": "Apply the triangle inequality.",
   "topic": "Triangle inequality",
   "explanation": [
-    "The Triangle Inequality: the sum of any two sides must exceed the third. In practice, just check the two shortest against the longest.",
-    "A: $5 + 7 = 12 > 10$ ✓. B: $3 + 4 = 7 < 8$ ✗. C: $6 + 6 = 12 > 6$ ✓. D: $8 + 15 = 23 > 17$ ✓",
-    "Only choice B fails."
+    "The Triangle Inequality says the sum of any two sides must be greater than the third side. Checking the two shortest against the longest is enough.",
+    "Choice A works because $5 + 7 = 12 > 10$, choice C works because $6 + 6 = 12 > 6$, and choice D works because $8 + 15 = 23 > 17$.",
+    "Choice B fails, because $3 + 4 = 7$ is less than $8$ and the two short sides cannot meet.",
+    "The set that could not form a triangle is $3$, $4$, $8$, which is choice B."
   ],
   "alternativeExplanations": [
     {

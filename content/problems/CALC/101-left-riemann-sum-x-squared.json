@@ -10,25 +10,25 @@
   "primaryAnswer": "14",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Four subintervals on $[0, 4]$ means each has width $\\Delta x = 1$. A LEFT sum uses the left endpoint of each: $x = 0, 1, 2, 3$.",
+  "hint": "Four equal subintervals on $[0, 4]$ each have width $1$. A left sum takes the height of each rectangle from the left endpoint of its subinterval.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Four subintervals on $[0, 4]$ means each has width $\\Delta x = 1$. A LEFT sum uses the left endpoint of each: $x = 0, 1, 2, 3$."
+      "text": "Four equal subintervals on $[0, 4]$ each have width $1$. A left sum takes the height of each rectangle from the left endpoint of its subinterval."
     },
     {
       "level": "guide",
-      "text": "Add the heights $f(0) + f(1) + f(2) + f(3)$ and multiply by the width $1$."
+      "text": "The left endpoints are $x = 0, 1, 2, 3$. Add the heights $f(0) + f(1) + f(2) + f(3)$ and multiply by the width $1$."
     },
     {
       "level": "reveal",
-      "text": "$(0 + 1 + 4 + 9) \\cdot 1 = 14$."
+      "text": "The left sum is $(0 + 1 + 4 + 9) \\cdot 1 = 14$, so the estimate of the integral is $14$."
     }
   ],
   "explanation": [
-    "$\\Delta x = \\frac{4 - 0}{4} = 1$. Left endpoints: $0, 1, 2, 3$.",
-    "Heights: $0^2, 1^2, 2^2, 3^2 = 0, 1, 4, 9$.",
-    "Left sum $= 1 \\cdot (0 + 1 + 4 + 9) = 14$. Since $x^2$ is increasing, this underestimates the true area, which is $\\frac{64}{3} \\approx 21.3$."
+    "The width of each rectangle is $\\Delta x = \\frac{4 - 0}{4} = 1$, and the left endpoints are $0, 1, 2, 3$.",
+    "The heights come from squaring each left endpoint: $0^2, 1^2, 2^2, 3^2 = 0, 1, 4, 9$.",
+    "The left sum is $1 \\cdot (0 + 1 + 4 + 9) = 14$. Since $x^2$ is increasing, this underestimates the true area, which is $\\frac{64}{3} \\approx 21.3$."
   ],
   "alternativeExplanations": [
     {

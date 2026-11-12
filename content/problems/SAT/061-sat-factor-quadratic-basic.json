@@ -28,9 +28,10 @@
   "learningObjective": "Solve a monic quadratic by factoring.",
   "topic": "Factoring quadratics",
   "explanation": [
-    "Look for two numbers whose product is $+12$ and whose sum is $-7$: those are $-3$ and $-4$.",
-    "So $x^2 - 7x + 12 = (x - 3)(x - 4) = 0$.",
-    "A product is zero only when a factor is zero, so $x = 3$ or $x = 4$. The greater is $4$."
+    "To factor, look for two numbers with product $12$ and sum $-7$. The numbers $-3$ and $-4$ fit both conditions.",
+    "The equation can therefore be written as $(x - 3)(x - 4) = 0$.",
+    "A product is zero only when one of its factors is zero, so $x = 3$ or $x = 4$.",
+    "The greater of the two solutions is $4$."
   ],
   "alternativeExplanations": [
     {

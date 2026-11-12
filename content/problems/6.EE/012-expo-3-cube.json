@@ -10,23 +10,26 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$2^3 = 2 \\times 2 \\times 2$.",
+  "hint": "The exponent tells you how many twos to multiply. Be careful not to multiply the base by the exponent.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$2^3 = 2 \\times 2 \\times 2$."
+      "text": "The exponent tells you how many twos to multiply. Be careful not to multiply the base by the exponent."
     },
     {
       "level": "guide",
-      "text": "$2 \\times 2 = 4$, then $4 \\times 2$."
+      "text": "Write $2^3$ as $2 \\times 2 \\times 2$. Start with $2 \\times 2$, then double that result."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 2 = 8$."
+      "text": "$2 \\times 2 = 4$ and $4 \\times 2 = 8$, so the value of $2^3$ is $8$."
     }
   ],
   "explanation": [
-    "$2^3 = 2 \\cdot 2 \\cdot 2 = 8$."
+    "The exponent $3$ means three factors of $2$: $2 \\times 2 \\times 2$.",
+    "Multiply the first pair of twos to get $2 \\times 2 = 4$.",
+    "Multiply by the last two to get $4 \\times 2 = 8$.",
+    "So the value of $2^3$ is $8$, which is different from $2 \\times 3 = 6$."
   ],
   "tags": [
     "exponent"

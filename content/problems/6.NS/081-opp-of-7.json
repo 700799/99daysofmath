@@ -12,24 +12,25 @@
     "−7"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The opposite has the same distance from $0$ but the other sign.",
+  "hint": "Opposites sit on different sides of $0$ but at the same distance from it. Think about where $7$ is on the number line.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The opposite has the same distance from $0$ but the other sign."
+      "text": "Opposites sit on different sides of $0$ but at the same distance from it. Think about where $7$ is on the number line."
     },
     {
       "level": "guide",
-      "text": "Flip the sign: $7 \\to -7$."
+      "text": "$7$ is $7$ units to the right of $0$. Its opposite is $7$ units to the left of $0$, so change the sign."
     },
     {
       "level": "reveal",
-      "text": "$-7$."
+      "text": "The number $7$ units left of $0$ is $-7$, so the opposite of $7$ is $-7$."
     }
   ],
   "explanation": [
-    "Opposite of $7$ is $-7$ (same distance from $0$, opposite sign).",
-    "Final answer: -7."
+    "The opposite of a number is the same distance from $0$ but on the other side.",
+    "$7$ is $7$ units to the right of $0$, so its opposite is $7$ units to the left.",
+    "That number is $-7$, so the opposite of $7$ is $-7$."
   ],
   "tags": [
     "integer",

@@ -29,10 +29,10 @@
     }
   ],
   "explanation": [
-    "The points $(1,2)$ and $(7,2)$ share $y = 2$, so they are the two bottom corners.",
-    "$(7,6)$ is directly above $(7,2)$, so it is the top-right corner and the rectangle is $4$ units tall.",
-    "The missing top-left corner must line up above $(1,2)$ and across from $(7,6)$: $x = 1$ and $y = 6$.",
-    "The fourth corner is $(1, 6)$."
+    "The points $(1, 2)$ and $(7, 2)$ share $y = 2$, so they are the two bottom corners.",
+    "The point $(7, 6)$ is directly above $(7, 2)$, so it is the top right corner and the rectangle is $4$ units tall.",
+    "The missing top left corner must be straight above $(1, 2)$ and level with $(7, 6)$, so $x = 1$ and $y = 6$.",
+    "The fourth corner of the rectangle is $(1, 6)$."
   ],
   "alternativeExplanations": [
     {

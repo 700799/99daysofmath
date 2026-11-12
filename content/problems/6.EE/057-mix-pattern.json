@@ -12,30 +12,31 @@
     "y = 4x + 1"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The output goes up by $4$ each time. What's the constant?",
+  "hint": "Look at how much the output grows each time the input goes up by $1$.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+      "text": "Try the pattern $1 \\to 4$, $2 \\to 8$, $3 \\to 12$ first. Its rule is $y = 4x$. How are the outputs in this problem different from those?"
     },
     {
       "level": "nudge",
-      "text": "The output goes up by $4$ each time. What's the constant?"
+      "text": "Look at how much the output grows each time the input goes up by $1$."
     },
     {
       "level": "guide",
-      "text": "When $x = 0$, $y$ would be $1$. So $y = 4x + 1$."
+      "text": "The outputs $5, 9, 13$ go up by $4$ each time, so the rule starts with $4x$. Compare $4 \\times 1$ with the real output $5$ to find what must be added."
     },
     {
       "level": "reveal",
-      "text": "$y = 4x + 1$."
+      "text": "$4(1) = 4$ is one short of $5$, so the rule is $y=4x+1$."
     }
   ],
   "explanation": [
-    "Rate of change: $4$.",
-    "When $x = 1$: $4(1) + 1 = 5$ ✓.",
-    "Rule: $y = 4x + 1$."
+    "Each time $x$ goes up by $1$, the output goes up by $4$ (from $5$ to $9$ to $13$), so $x$ is multiplied by $4$.",
+    "Test $4x$ alone on the first pair: $4(1) = 4$, but the output is $5$, so $1$ more is needed.",
+    "That suggests the rule is $y = 4x + 1$, but it should be tested.",
+    "Check the other pairs: $4(2) + 1 = 9$ and $4(3) + 1 = 13$. The rule is $y = 4x + 1$."
   ],
   "tags": [
     "CA",

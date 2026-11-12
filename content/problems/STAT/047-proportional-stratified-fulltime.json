@@ -10,19 +10,19 @@
   "primaryAnswer": "36",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "\"In proportion to their sizes\" means the sample has the same full-time fraction as the company.",
+  "hint": "\"In proportion to their sizes\" means the sample should have the same full-time share as the whole company.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"In proportion to their sizes\" means the sample has the same full-time fraction as the company."
+      "text": "\"In proportion to their sizes\" means the sample should have the same full-time share as the whole company."
     },
     {
       "level": "guide",
-      "text": "Full-time fraction: $\\frac{900}{1500} = 0.6$. Apply that to the sample of $60$."
+      "text": "Full-time employees are $\\frac{900}{1500} = 0.6$ of the company. Apply that same fraction to the sample of $60$."
     },
     {
       "level": "reveal",
-      "text": "$0.6 \\times 60 = 36$ full-time employees (and $24$ part-time)."
+      "text": "$0.6 \\times 60 = 36$, so the sample has $36$ full-time employees (and $24$ part-time)."
     }
   ],
   "explanation": [

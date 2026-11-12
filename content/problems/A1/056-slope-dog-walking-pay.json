@@ -10,25 +10,25 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Rate = change in money $\\div$ change in walks — that is a slope!",
+  "hint": "A rate in dollars per walk is a slope. Compare how the money changed with how the number of walks changed.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Rate = change in money $\\div$ change in walks — that is a slope!"
+      "text": "A rate in dollars per walk is a slope. Compare how the money changed with how the number of walks changed."
     },
     {
       "level": "guide",
-      "text": "Money changed $30 - 18 = 12$ dollars over $5 - 3 = 2$ walks."
+      "text": "Your earnings went up by $30 - 18 = 12$ dollars while the walks went up by $5 - 3 = 2$. Divide the dollars by the walks."
     },
     {
       "level": "reveal",
-      "text": "$12 \\div 2 = 6$ dollars per walk."
+      "text": "$12 \\div 2 = 6$, so you earn $6$ dollars per walk."
     }
   ],
   "explanation": [
-    "Treat the data as points: $(3, 18)$ and $(5, 30)$.",
-    "Rise: $30 - 18 = 12$. Run: $5 - 3 = 2$.",
-    "Slope $= 12 \\div 2 = 6$ — you earn $\\$6$ per walk."
+    "Treat the data as two points with walks first and dollars second: $(3, 18)$ and $(5, 30)$.",
+    "The change in dollars is $30 - 18 = 12$, and the change in walks is $5 - 3 = 2$.",
+    "The rate is the slope, $12 \\div 2 = 6$, so you earn $6$ dollars per walk."
   ],
   "alternativeExplanations": [
     {

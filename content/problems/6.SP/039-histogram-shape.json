@@ -27,23 +27,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The skew direction follows the tail.",
+  "hint": "Skew is named for the side where the data trails off thinly, not the side where the bars are tall.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The skew direction follows the tail."
+      "text": "Skew is named for the side where the data trails off thinly, not the side where the bars are tall."
     },
     {
       "level": "guide",
-      "text": "Tail on right = skewed right."
+      "text": "This histogram has its tall bars on the left and a long, low tail stretching out to the right. Name the skew after the tail's side."
     },
     {
       "level": "reveal",
-      "text": "Skewed right."
+      "text": "The tail is on the right, so the distribution is skewed right (choice B)."
     }
   ],
   "explanation": [
-    "Tail extends to the right → skewed right."
+    "A symmetric distribution looks about the same on both sides, but here one side has a long tail, so it is skewed.",
+    "The direction of a skew is the direction in which the tail points, not where most of the data sits.",
+    "The tail extends to the right, so the distribution is skewed right, which is choice B."
   ],
   "tags": [
     "MAP-practice",

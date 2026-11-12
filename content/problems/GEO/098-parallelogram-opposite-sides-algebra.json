@@ -10,25 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Opposite sides of a parallelogram are congruent, so those two expressions are equal.",
+  "hint": "Sides $\\overline{AB}$ and $\\overline{CD}$ are opposite each other. Recall what is true about opposite sides of a parallelogram.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Opposite sides of a parallelogram are congruent, so those two expressions are equal."
+      "text": "Sides $\\overline{AB}$ and $\\overline{CD}$ are opposite each other. Recall what is true about opposite sides of a parallelogram."
     },
     {
       "level": "guide",
-      "text": "Solve $3x + 2 = 17$."
+      "text": "Opposite sides are congruent, so the two lengths are equal. Solve the equation $3x + 2 = 17$."
     },
     {
       "level": "reveal",
-      "text": "$3x = 15$, so $x = 5$."
+      "text": "$3x = 15$, so the value of the variable is $x = 5$."
     }
   ],
   "explanation": [
-    "Opposite sides of a parallelogram have equal length: $3x + 2 = 17$.",
-    "Subtract $2$ from both sides: $3x = 15$.",
-    "Divide by $3$: $x = 5$. Check: $3(5) + 2 = 17$ ✓"
+    "Opposite sides of a parallelogram are congruent, so their lengths are equal: $3x + 2 = 17$.",
+    "Subtracting $2$ from both sides leaves the simpler equation $3x = 15$.",
+    "Dividing by $3$ gives $x = 5$, and the check $3(5) + 2 = 17$ confirms it."
   ],
   "alternativeExplanations": [
     {

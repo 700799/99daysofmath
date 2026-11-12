@@ -10,12 +10,12 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "List multiples of each number. The smallest one in both lists is the LCM.",
+  "hint": "A common multiple is a number that both $4$ and $6$ divide evenly. Listing the multiples of each will show where they first meet.",
   "explanation": [
-    "Multiples of $4$: $4, 8, 12, 16, 20, 24, \\ldots$",
-    "Multiples of $6$: $6, 12, 18, 24, \\ldots$",
-    "The smallest number in **both** lists is $12$.",
-    "LCM $= 12$."
+    "List multiples of $4$ by counting in fours: $4, 8, 12, 16, 20, 24, \\ldots$",
+    "List multiples of $6$ by counting in sixes: $6, 12, 18, 24, \\ldots$",
+    "The numbers in **both** lists are $12, 24, \\ldots$ These are the common multiples.",
+    "The smallest common multiple is $12$, so the LCM of $4$ and $6$ is $12$."
   ],
   "alternativeExplanations": [
     {
@@ -35,15 +35,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "List multiples of each number. The smallest one in both lists is the LCM."
+      "text": "A common multiple is a number that both $4$ and $6$ divide evenly. Listing the multiples of each will show where they first meet."
     },
     {
       "level": "guide",
-      "text": "Multiples of $4$: $4, 8, 12, 16, 20, 24, \\ldots$"
+      "text": "The multiples of $4$ are $4, 8, 12, 16, 20, 24, \\ldots$ Now count by $6$ and stop at the first number that is also in the list for $4$."
     },
     {
       "level": "reveal",
-      "text": "LCM $= 12$."
+      "text": "Counting by $6$ gives $6, 12, \\ldots$ and $12$ is in both lists, so the least common multiple is $12$."
     }
   ]
 }

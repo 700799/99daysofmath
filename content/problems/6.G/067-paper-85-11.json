@@ -12,24 +12,26 @@
     "93.5 sq in"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Length $\\times$ width.",
+  "hint": "A sheet of paper is a rectangle. The decimal does not change the rule for finding its area.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Length $\\times$ width."
+      "text": "A sheet of paper is a rectangle. The decimal does not change the rule for finding its area."
     },
     {
       "level": "guide",
-      "text": "$11 \\times 8.5$."
+      "text": "You need $11 \\times 8.5$. Split $8.5$ into $8$ and $0.5$, multiply each part by $11$, and add the two products."
     },
     {
       "level": "reveal",
-      "text": "$93.5$."
+      "text": "$88 + 5.5 = 93.5$, so the area of the sheet is $93.5$ square inches."
     }
   ],
   "explanation": [
-    "$11 \\times 8.5$: $11 \\cdot 8 = 88$ and $11 \\cdot 0.5 = 5.5$.",
-    "$88 + 5.5 = 93.5$ sq in."
+    "The area of a rectangle is length times width, so compute $11 \\times 8.5$.",
+    "Break $8.5$ into $8 + 0.5$ so each part is easy to multiply by $11$.",
+    "The two partial products are $11 \\times 8 = 88$ and $11 \\times 0.5 = 5.5$.",
+    "Add them to get $88 + 5.5 = 93.5$, so the area is $93.5$ square inches."
   ],
   "tags": [
     "area",

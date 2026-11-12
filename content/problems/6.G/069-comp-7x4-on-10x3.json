@@ -12,29 +12,31 @@
     "58 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Add the two areas.",
+  "hint": "Stacking one rectangle on another makes a composite figure. Its area is the areas of the parts put together.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sketch the shape and label every length. A 30-second drawing saves 5 minutes of thinking."
+      "text": "Try easier numbers first: a $2 \\times 1$ rectangle stacked on a $3 \\times 1$ rectangle covers $2 + 3 = 5$ squares in all."
     },
     {
       "level": "nudge",
-      "text": "Add the two areas."
+      "text": "Stacking one rectangle on another makes a composite figure. Its area is the areas of the parts put together."
     },
     {
       "level": "guide",
-      "text": "$7 \\cdot 4 = 28$, $10 \\cdot 3 = 30$."
+      "text": "The top rectangle has area $7 \\times 4 = 28$ and the bottom rectangle has area $10 \\times 3 = 30$. Add these two numbers."
     },
     {
       "level": "reveal",
-      "text": "$28 + 30 = 58$."
+      "text": "$28 + 30 = 58$, so the total area of the figure is $58$ square units."
     }
   ],
   "explanation": [
-    "Top: $28$. Bottom: $30$.",
-    "Total: $58$."
+    "Find the area of the top rectangle: $7 \\times 4 = 28$.",
+    "Find the area of the bottom rectangle: $10 \\times 3 = 30$.",
+    "The rectangles touch but do not overlap, so add their areas: $28 + 30 = 58$.",
+    "The total area of the figure is $58$ square units."
   ],
   "tags": [
     "MAP-practice",

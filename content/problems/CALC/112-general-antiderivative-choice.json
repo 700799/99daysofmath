@@ -40,17 +40,17 @@
     },
     {
       "level": "guide",
-      "text": "$4x^3 \\to \\frac{4x^4}{4} = x^4$. The constant $2 \\to 2x$. Do not forget $+ C$."
+      "text": "The term $4x^3$ becomes $\\frac{4x^4}{4} = x^4$, and the constant $2$ becomes $2x$. Do not forget to add the constant $C$."
     },
     {
       "level": "reveal",
-      "text": "$x^4 + 2x + C$: choice A. Check by differentiating: $4x^3 + 2$. ✓"
+      "text": "The general antiderivative is $x^4 + 2x + C$, which is choice A. Differentiating it gives back $4x^3 + 2$."
     }
   ],
   "explanation": [
-    "$\\int 4x^3 \\, dx = 4 \\cdot \\frac{x^4}{4} = x^4$ and $\\int 2 \\, dx = 2x$.",
+    "Reverse the power rule on each term: $\\int 4x^3 \\, dx = 4 \\cdot \\frac{x^4}{4} = x^4$ and $\\int 2 \\, dx = 2x$.",
     "So the general antiderivative is $x^4 + 2x + C$, choice A.",
-    "Choice B is the DERIVATIVE of $f$, not an antiderivative; C forgot the $2$; D forgot to divide by the new exponent."
+    "Choice B is the derivative of $f$, not an antiderivative. C forgot the $2$, and D forgot to divide by the new exponent."
   ],
   "alternativeExplanations": [
     {

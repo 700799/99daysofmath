@@ -10,24 +10,26 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "List them: $1$ × what?",
+  "hint": "Factors come in pairs that multiply to the number. Start with $1$ and its partner, then test each next whole number.",
   "hints": [
     {
       "level": "nudge",
-      "text": "List them: $1$ × what?"
+      "text": "Factors come in pairs that multiply to the number. Start with $1$ and its partner, then test each next whole number."
     },
     {
       "level": "guide",
-      "text": "$1, 2, 4, 5, 10, 20$."
+      "text": "Find the pairs that multiply to $20$: $1 \\times 20$, $2 \\times 10$ and $4 \\times 5$. Check that $3$ does not divide $20$, then count every number in the pairs."
     },
     {
       "level": "reveal",
-      "text": "That's $6$ factors."
+      "text": "The factors are $1, 2, 4, 5, 10, 20$, so $20$ has $6$ factors."
     }
   ],
   "explanation": [
-    "Factors of $20$: $1, 2, 4, 5, 10, 20$.",
-    "Count: $6$."
+    "Look for pairs of whole numbers that multiply to $20$, starting from $1$: $1 \\times 20$, $2 \\times 10$, $4 \\times 5$.",
+    "$3$ is not a factor because $20 \\div 3$ leaves a remainder, and after $4$ the pairs repeat.",
+    "Listing each number from the pairs in order gives $1, 2, 4, 5, 10, 20$.",
+    "Counting the list shows that $20$ has $6$ factors."
   ],
   "tags": [
     "factors"

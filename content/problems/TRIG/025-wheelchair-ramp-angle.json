@@ -10,24 +10,24 @@
   "primaryAnswer": "4.8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You know the opposite side ($2$) and the adjacent side ($24$) — that pair points to tangent.",
+  "hint": "You know the rise, which is opposite the angle, and the run, which is adjacent to it. Which ratio uses that pair of sides?",
   "hints": [
     {
       "level": "nudge",
-      "text": "You know the opposite side ($2$) and the adjacent side ($24$) — that pair points to tangent."
+      "text": "You know the rise, which is opposite the angle, and the run, which is adjacent to it. Which ratio uses that pair of sides?"
     },
     {
       "level": "guide",
-      "text": "$\\tan \\theta = \\frac{2}{24}$. To get $\\theta$ itself, use the inverse tangent, $\\tan^{-1}$."
+      "text": "Opposite over adjacent is tangent, so $\\tan \\theta = \\frac{2}{24}$. To get the angle itself, apply the inverse tangent, $\\tan^{-1}$, to that fraction."
     },
     {
       "level": "reveal",
-      "text": "$\\theta = \\tan^{-1}\\left(\\frac{2}{24}\\right) = \\tan^{-1}(0.08333) \\approx 4.8^\\circ$."
+      "text": "$\\theta = \\tan^{-1}\\left(\\frac{2}{24}\\right) = \\tan^{-1}(0.08333) \\approx 4.8^\\circ$, so the ramp makes an angle of about $4.8$ degrees with the ground."
     }
   ],
   "explanation": [
     "The rise is opposite the angle and the run is adjacent, so use tangent: $\\tan \\theta = \\frac{2}{24}$.",
-    "Simplify: $\\frac{2}{24} = 0.08333$.",
+    "Simplify the ratio to a decimal so it can go into a calculator: $\\frac{2}{24} = 0.08333$.",
     "Undo the tangent with $\\tan^{-1}$: $\\theta = \\tan^{-1}(0.08333) \\approx 4.76^\\circ$, which rounds to $4.8^\\circ$."
   ],
   "alternativeExplanations": [

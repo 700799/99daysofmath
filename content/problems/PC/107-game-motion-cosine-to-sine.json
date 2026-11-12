@@ -10,25 +10,25 @@
   "primaryAnswer": "0.8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Use $\\sin^2\\theta + \\cos^2\\theta = 1$ to find $\\sin^2\\theta$ first.",
+  "hint": "Sine and cosine are linked by the identity $\\sin^2\\theta + \\cos^2\\theta = 1$. Use it to find $\\sin^2\\theta$ first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use $\\sin^2\\theta + \\cos^2\\theta = 1$ to find $\\sin^2\\theta$ first."
+      "text": "Sine and cosine are linked by the identity $\\sin^2\\theta + \\cos^2\\theta = 1$. Use it to find $\\sin^2\\theta$ first."
     },
     {
       "level": "guide",
-      "text": "$\\sin^2\\theta = 1 - 0.6^2 = 1 - 0.36 = 0.64$. Now take the square root."
+      "text": "Rearranging gives $\\sin^2\\theta = 1 - 0.6^2 = 1 - 0.36 = 0.64$. Now take the square root and decide the sign from the quadrant."
     },
     {
       "level": "reveal",
-      "text": "$\\sqrt{0.64} = 0.8$. In Quadrant 1 sine is positive, so $\\sin\\theta = 0.8$."
+      "text": "The square root is $\\sqrt{0.64} = 0.8$, and sine is positive in Quadrant 1, so $\\sin\\theta = 0.8$."
     }
   ],
   "explanation": [
     "The identity $\\sin^2\\theta + \\cos^2\\theta = 1$ links the two values, so knowing one gives the other.",
-    "$\\sin^2\\theta = 1 - 0.6^2 = 1 - 0.36 = 0.64$.",
-    "Take the square root: $\\sin\\theta = 0.8$. Quadrant 1 is up-and-right, where sine is positive, so keep the plus."
+    "Solving for the sine part gives $\\sin^2\\theta = 1 - 0.6^2 = 1 - 0.36 = 0.64$.",
+    "Taking the square root gives $0.8$. Quadrant 1 is up and to the right, where sine is positive, so $\\sin\\theta = 0.8$."
   ],
   "alternativeExplanations": [
     {

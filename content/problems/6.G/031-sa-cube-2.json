@@ -10,23 +10,26 @@
   "primaryAnswer": "24",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A cube has $6$ identical square faces.",
+  "hint": "Imagine unfolding the cube flat. It opens into equal square faces. How many are there, and how big is each?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A cube has $6$ identical square faces."
+      "text": "Imagine unfolding the cube flat. It opens into equal square faces. How many are there, and how big is each?"
     },
     {
       "level": "guide",
-      "text": "Each face: $2 \\times 2 = 4$. Total: $6 \\times 4$."
+      "text": "One face is a $2$ by $2$ square with area $2 \\times 2 = 4$. The cube has $6$ of these faces, so multiply."
     },
     {
       "level": "reveal",
-      "text": "$24$."
+      "text": "$6 \\times 4 = 24$, so the surface area of the cube is $24$ square units."
     }
   ],
   "explanation": [
-    "$6$ faces of $4$: $6 \\times 4 = 24$."
+    "Surface area is the total area of all the outside faces of the cube.",
+    "Each face is a square with side $2$, so one face has area $2 \\times 2 = 4$.",
+    "A cube has $6$ equal faces, so the total is $6 \\times 4 = 24$.",
+    "The surface area of the cube is $24$ square units."
   ],
   "tags": [
     "surface-area",

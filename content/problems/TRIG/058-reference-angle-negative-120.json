@@ -10,25 +10,25 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Turn it into a positive coterminal angle first: $-120 + 360$.",
+  "hint": "Reference angles are easiest to find from a positive angle. What can you add to a negative angle to get a positive one that ends in the same place?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Turn it into a positive coterminal angle first: $-120 + 360$."
+      "text": "Reference angles are easiest to find from a positive angle. What can you add to a negative angle to get a positive one that ends in the same place?"
     },
     {
       "level": "guide",
-      "text": "That gives $240^\\circ$, which is in Quadrant III."
+      "text": "Add a full turn: $-120 + 360 = 240^\\circ$, which is in Quadrant III. In that quadrant the reference angle is the angle minus $180^\\circ$."
     },
     {
       "level": "reveal",
-      "text": "Reference angle: $240 - 180 = 60^\\circ$."
+      "text": "$240 - 180 = 60$, so the reference angle is $60$ degrees."
     }
   ],
   "explanation": [
     "Add a full turn to get a positive angle in the same place: $-120^\\circ + 360^\\circ = 240^\\circ$.",
-    "$240^\\circ$ lies in Quadrant III, between $180^\\circ$ and $270^\\circ$.",
-    "Its reference angle is $240^\\circ - 180^\\circ = 60^\\circ$."
+    "The angle $240^\\circ$ lies in Quadrant III, between $180^\\circ$ and $270^\\circ$, so its nearest axis direction is $180^\\circ$.",
+    "Its reference angle is the distance back to that direction: $240^\\circ - 180^\\circ = 60^\\circ$."
   ],
   "alternativeExplanations": [
     {

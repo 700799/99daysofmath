@@ -12,24 +12,26 @@
     "15 cups"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find flour per serving first.",
+  "hint": "Each serving needs the same amount of flour. Work out the flour for one serving and build up to ten.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find flour per serving first."
+      "text": "Each serving needs the same amount of flour. Work out the flour for one serving and build up to ten."
     },
     {
       "level": "guide",
-      "text": "Per serving: $6 \\div 4 = 1.5$. For $10$: $1.5 \\times 10$."
+      "text": "One serving uses $6 \\div 4 = 1.5$ cups of flour. Multiply that by $10$ servings."
     },
     {
       "level": "reveal",
-      "text": "$1.5 \\times 10 = 15$."
+      "text": "$1.5 \\times 10 = 15$, so $10$ servings need $15$ cups of flour."
     }
   ],
   "explanation": [
-    "Per serving: $6 \\div 4 = 1.5$ cups.",
-    "$10$ servings: $1.5 \\times 10 = 15$ cups."
+    "Find the unit rate by dividing flour by servings: $6 \\div 4 = 1.5$ cups per serving.",
+    "Multiply the unit rate by the number of servings wanted: $1.5 \\times 10$.",
+    "Multiplying by $10$ moves the decimal point one place right, giving $15$.",
+    "Ten servings need $15$ cups of flour."
   ],
   "alternativeExplanations": [
     {

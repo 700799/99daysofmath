@@ -10,23 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Just count them.",
+  "hint": "Each interval in the list is one bin, and each bin gets one bar in the histogram.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Just count them."
+      "text": "Each interval in the list is one bin, and each bin gets one bar in the histogram."
     },
     {
       "level": "guide",
-      "text": "List them out."
+      "text": "Go through the intervals one at a time: $0$-$4$, then $5$-$9$, then $10$-$14$, $15$-$19$ and $20$-$24$. Keep a count as you go."
     },
     {
       "level": "reveal",
-      "text": "$5$."
+      "text": "There are five intervals, so the histogram has $5$ bins."
     }
   ],
   "explanation": [
-    "Bins: $5$."
+    "A bin is one interval of values, so the number of bins equals the number of intervals listed.",
+    "The intervals given in the problem are $0$-$4$, $5$-$9$, $10$-$14$, $15$-$19$ and $20$-$24$.",
+    "Counting them gives five intervals, so the histogram has $5$ bins."
   ],
   "tags": [
     "histogram"

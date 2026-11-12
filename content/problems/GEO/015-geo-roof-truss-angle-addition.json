@@ -10,25 +10,25 @@
   "primaryAnswer": "73",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The brace splits the big angle into two pieces that stack back together.",
+  "hint": "The brace cuts the large angle into two smaller ones. How do the small pieces relate to the whole angle?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The brace splits the big angle into two pieces that stack back together."
+      "text": "The brace cuts the large angle into two smaller ones. How do the small pieces relate to the whole angle?"
     },
     {
       "level": "guide",
-      "text": "Angle Addition Postulate: $\\angle ABD + \\angle DBC = \\angle ABC$."
+      "text": "The Angle Addition Postulate says $\\angle ABC = \\angle ABD + \\angle DBC$, so add $32$ and $41$."
     },
     {
       "level": "reveal",
-      "text": "$32 + 41 = 73^\\circ$."
+      "text": "$32 + 41 = 73$, so the whole angle $\\angle ABC$ measures $73^\\circ$."
     }
   ],
   "explanation": [
-    "Because $\\overrightarrow{BD}$ lies inside $\\angle ABC$, the two small angles add to the big one.",
-    "Angle Addition: $\\angle ABC = \\angle ABD + \\angle DBC$.",
-    "$32 + 41 = 73$, so $\\angle ABC = 73^\\circ$."
+    "Ray $\\overrightarrow{BD}$ lies inside $\\angle ABC$, so it divides that angle into two parts with no gap and no overlap.",
+    "The Angle Addition Postulate then says the parts add to the whole: $\\angle ABC = \\angle ABD + \\angle DBC$.",
+    "Substituting the two measures gives $32 + 41 = 73$, so the whole angle is $\\angle ABC = 73^\\circ$."
   ],
   "alternativeExplanations": [
     {

@@ -15,19 +15,19 @@
     "Counterexample"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The word starts with \"counter,\" as in something that counters a claim.",
+  "hint": "The claim is general, and one drawing was enough to defeat it. The name describes an example that goes against a claim.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The word starts with \"counter,\" as in something that counters a claim."
+      "text": "The claim is general, and one drawing was enough to defeat it. The name describes an example that goes against a claim."
     },
     {
       "level": "guide",
-      "text": "It is one example that runs counter to the statement."
+      "text": "The word joins a prefix meaning \"against\" to the word \"example\". Your rhombus is one of these."
     },
     {
       "level": "reveal",
-      "text": "It is called a counterexample."
+      "text": "A single example that proves a statement false is called a counterexample."
     }
   ],
   "explanation": [

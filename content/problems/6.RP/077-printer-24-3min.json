@@ -10,24 +10,26 @@
   "primaryAnswer": "80",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find pages per minute first.",
+  "hint": "Ten is not a multiple of three, so scaling directly is awkward. Find how many pages the printer makes in a single minute.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find pages per minute first."
+      "text": "Ten is not a multiple of three, so scaling directly is awkward. Find how many pages the printer makes in a single minute."
     },
     {
       "level": "guide",
-      "text": "Rate $= 24 \\div 3 = 8$ pages/min."
+      "text": "The printer makes $24 \\div 3 = 8$ pages each minute. Multiply that rate by $10$ minutes."
     },
     {
       "level": "reveal",
-      "text": "$8 \\times 10 = 80$."
+      "text": "$8 \\times 10 = 80$, so the printer prints $80$ pages in $10$ minutes."
     }
   ],
   "explanation": [
-    "Rate: $24 \\div 3 = 8$ pages/min.",
-    "In $10$ min: $8 \\times 10 = 80$."
+    "Find the unit rate by dividing pages by minutes: $24 \\div 3 = 8$ pages per minute.",
+    "At the same rate, every minute adds $8$ more pages, so multiply by the $10$ minutes.",
+    "Multiplying the rate by the time gives $8 \\times 10 = 80$ pages.",
+    "The printer can print $80$ pages in $10$ minutes."
   ],
   "alternativeExplanations": [
     {

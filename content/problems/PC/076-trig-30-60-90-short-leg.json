@@ -10,25 +10,25 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Use SOH with the $30^\\circ$ angle: $\\sin(30^\\circ) = \\frac{\\text{opposite}}{12}$.",
+  "hint": "The short leg is opposite the $30^\\circ$ angle and you know the hypotenuse. Which ratio links those two sides?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use SOH with the $30^\\circ$ angle: $\\sin(30^\\circ) = \\frac{\\text{opposite}}{12}$."
+      "text": "The short leg is opposite the $30^\\circ$ angle and you know the hypotenuse. Which ratio links those two sides?"
     },
     {
       "level": "guide",
-      "text": "$\\sin(30^\\circ) = \\frac{1}{2}$, so opposite $= \\frac{1}{2} \\times 12$."
+      "text": "Sine links them: $\\sin(30^\\circ) = \\frac{\\text{opposite}}{12}$. Since $\\sin(30^\\circ) = \\frac{1}{2}$, the opposite side is $\\frac{1}{2} \\times 12$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2} \\times 12 = 6$."
+      "text": "Half of the hypotenuse is $\\frac{1}{2} \\times 12 = 6$, so the short leg is $6$ long."
     }
   ],
   "explanation": [
     "In a $30$-$60$-$90$ triangle, the side opposite $30^\\circ$ is always HALF the hypotenuse.",
-    "That is the same as $\\sin(30^\\circ) = \\frac{1}{2}$.",
-    "$\\frac{1}{2} \\times 12 = 6$."
+    "That fact is the same as saying $\\sin(30^\\circ) = \\frac{1}{2}$, since sine is opposite over hypotenuse.",
+    "Half of $12$ is $\\frac{1}{2} \\times 12 = 6$, so the short leg has length $6$."
   ],
   "alternativeExplanations": [
     {

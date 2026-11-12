@@ -10,24 +10,24 @@
   "primaryAnswer": "150",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Amount at time $T$ $=$ starting amount $+ \\int_0^T (\\text{rate}) \\, dt$.",
+  "hint": "The amount at a later time is the starting amount plus everything that flowed in. How do you get the total inflow from a rate?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Amount at time $T$ $=$ starting amount $+ \\int_0^T (\\text{rate}) \\, dt$."
+      "text": "The amount at a later time is the starting amount plus everything that flowed in. How do you get the total inflow from a rate?"
     },
     {
       "level": "guide",
-      "text": "$\\int_0^{10} 2t \\, dt = [t^2]_0^{10} = 100$ liters added."
+      "text": "Integrate the rate from $0$ to $10$: $\\int_0^{10} 2t \\, dt = [t^2]_0^{10} = 100$ liters added. Now add this to the $50$ liters already in the tank."
     },
     {
       "level": "reveal",
-      "text": "$50 + 100 = 150$ liters."
+      "text": "The tank holds $50 + 100 = 150$ liters at ten minutes."
     }
   ],
   "explanation": [
     "The water added from $0$ to $10$ minutes is $\\int_0^{10} 2t \\, dt = t^2\\Big|_0^{10} = 100$ L.",
-    "Add the initial amount: $50 + 100 = 150$ L.",
+    "Add the initial amount to the water that flowed in: $50 + 100 = 150$ L.",
     "This is the accumulation form of the FTC: $A(10) = A(0) + \\int_0^{10} A'(t) \\, dt$."
   ],
   "alternativeExplanations": [

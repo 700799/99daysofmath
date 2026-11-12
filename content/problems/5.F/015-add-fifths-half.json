@@ -13,25 +13,25 @@
     "90%"
   ],
   "acceptanceMode": "normalized",
-  "hint": "What denominator works for both fifths and halves?",
+  "hint": "Fifths and halves cannot be added until they are cut into pieces of the same size. Think about a number both denominators divide.",
   "hints": [
     {
       "level": "nudge",
-      "text": "What denominator works for both fifths and halves?"
+      "text": "Fifths and halves cannot be added until they are cut into pieces of the same size. Think about a number both denominators divide."
     },
     {
       "level": "guide",
-      "text": "Tenths: $\\frac{2}{5} = \\frac{4}{10}$ and $\\frac{1}{2} = \\frac{5}{10}$."
+      "text": "Use tenths. Rewrite $\\frac{2}{5}$ as $\\frac{4}{10}$ and $\\frac{1}{2}$ as $\\frac{5}{10}$, then add the numerators."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{4}{10} + \\frac{5}{10} = \\frac{9}{10}$."
+      "text": "$\\frac{4}{10} + \\frac{5}{10} = \\frac{9}{10}$, so the sum of the two fractions is $\\frac{9}{10}$."
     }
   ],
   "explanation": [
-    "The least common denominator of $5$ and $2$ is $10$.",
-    "$\\frac{2}{5} = \\frac{4}{10}$ and $\\frac{1}{2} = \\frac{5}{10}$.",
-    "$\\frac{4}{10} + \\frac{5}{10} = \\frac{9}{10}$."
+    "The smallest number that both $5$ and $2$ divide is $10$, so tenths work as the common denominator.",
+    "Rename each fraction: $\\frac{2}{5} = \\frac{4}{10}$ (multiply by $2$) and $\\frac{1}{2} = \\frac{5}{10}$ (multiply by $5$).",
+    "Add the tenths: $\\frac{4}{10} + \\frac{5}{10} = \\frac{9}{10}$. Nothing divides both $9$ and $10$, so this is the final answer."
   ],
   "alternativeExplanations": [
     {

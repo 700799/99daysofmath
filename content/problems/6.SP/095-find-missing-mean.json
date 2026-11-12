@@ -10,30 +10,30 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Total $=$ mean $\\times$ count.",
+  "hint": "A mean and a count together tell you the total, because the total equals the mean times the count.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Draw a tiny dot plot. The shape of the data tells you which statistic to use."
+      "text": "Try two numbers first: if two numbers have mean $12$ and one of them is $10$, what total must the pair share?"
     },
     {
       "level": "nudge",
-      "text": "Total $=$ mean $\\times$ count."
+      "text": "A mean and a count together tell you the total, because the total equals the mean times the count."
     },
     {
       "level": "guide",
-      "text": "Sum $= 12 \\cdot 4 = 48$. Current sum: $10 + 14 + 9 = 33$."
+      "text": "The four numbers must add to $12 \\times 4 = 48$. The three known numbers add to $10 + 14 + 9 = 33$, so subtract to find the missing one."
     },
     {
       "level": "reveal",
-      "text": "Missing $= 48 - 33 = 15$."
+      "text": "$48 - 33 = 15$, so the fourth number is $15$."
     }
   ],
   "explanation": [
-    "Need total: $12 \\cdot 4 = 48$.",
-    "Sum of three: $10 + 14 + 9 = 33$.",
-    "Missing: $48 - 33 = 15$."
+    "Since the mean is the total divided by the count, the total is $12 \\times 4 = 48$.",
+    "The three known numbers add to $10 + 14 + 9 = 33$.",
+    "The fourth number makes up the rest of the total: $48 - 33 = 15$, so the fourth number is $15$."
   ],
   "alternativeExplanations": [
     {

@@ -13,24 +13,26 @@
     "greater than"
   ],
   "acceptanceMode": "exact",
-  "hint": "Put both in the same form.",
+  "hint": "A decimal and a fraction are hard to compare directly. Rewrite one of them so both numbers are in the same form.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Put both in the same form."
+      "text": "A decimal and a fraction are hard to compare directly. Rewrite one of them so both numbers are in the same form."
     },
     {
       "level": "guide",
-      "text": "$\\tfrac{1}{4} = 0.25$."
+      "text": "Change $\\tfrac{1}{4}$ to a decimal by dividing $1$ by $4$, which gives $0.25$. Then compare $0.5$ with $0.25$ by looking at the tenths digits."
     },
     {
       "level": "reveal",
-      "text": "$0.5 > 0.25$, so $0.5 > \\tfrac{1}{4}$."
+      "text": "$0.5$ has $5$ tenths and $0.25$ has only $2$, so $0.5 > \\tfrac{1}{4}$ and the symbol is $>$."
     }
   ],
   "explanation": [
-    "$\\tfrac{1}{4} = 0.25$.",
-    "$0.5 > 0.25$, so $0.5 > \\tfrac{1}{4}$."
+    "Write both numbers as decimals so they can be compared place by place.",
+    "The fraction $\\tfrac{1}{4}$ means $1 \\div 4$, which is $0.25$ as a decimal.",
+    "Compare $0.5$ and $0.25$. Writing $0.5$ as $0.50$ shows $50$ hundredths against $25$ hundredths.",
+    "Since $0.50 > 0.25$, the statement is $0.5 > \\tfrac{1}{4}$ and the symbol is $>$."
   ],
   "alternativeExplanations": [
     {

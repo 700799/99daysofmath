@@ -12,24 +12,26 @@
     "5/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Lower half: $\\{1, 2, 3, 4\\}$.",
+  "hint": "The lower quartile is the median of the lower half of the data, so split the sorted list in two first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Lower half: $\\{1, 2, 3, 4\\}$."
+      "text": "The lower quartile is the median of the lower half of the data, so split the sorted list in two first."
     },
     {
       "level": "guide",
-      "text": "Median of the lower half: average of $2$ and $3$."
+      "text": "Eight values split evenly, so the lower half is $\\{1, 2, 3, 4\\}$. Its two middle values are $2$ and $3$, and their average is the quartile."
     },
     {
       "level": "reveal",
-      "text": "$(2 + 3)/2 = 2.5$."
+      "text": "$(2 + 3) \\div 2 = 2.5$, so the lower quartile is $Q_1 = 2.5$."
     }
   ],
   "explanation": [
-    "Lower half: $\\{1, 2, 3, 4\\}$.",
-    "Median: $(2 + 3)/2 = 2.5$."
+    "The data has $8$ values in order, so it splits into a lower half and an upper half of $4$ values each.",
+    "The lower half is $\\{1, 2, 3, 4\\}$, and $Q_1$ is the median of this half.",
+    "Four values have two in the middle, $2$ and $3$, so average them: $(2 + 3) \\div 2 = 2.5$.",
+    "The lower quartile of the data is $Q_1 = 2.5$."
   ],
   "tags": [
     "quartile"

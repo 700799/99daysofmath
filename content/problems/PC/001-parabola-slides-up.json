@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "In $f(x) + k$, the $k$ is added AFTER the function does its job.",
-    "Every $y$-value grows by $5$.",
-    "So the whole graph slides UP $5$ units."
+    "In the form $f(x) + k$, the number $k$ is added after the function has done its job, so it changes outputs and not inputs.",
+    "Here $k = 5$, which means every $y$-value on the parabola becomes $5$ larger than before.",
+    "Raising every point by the same amount moves the whole graph straight up, so it slides UP $5$ units."
   ],
   "alternativeExplanations": [
     {

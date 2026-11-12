@@ -10,25 +10,25 @@
   "primaryAnswer": "40",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Doubling is exponential: multiply by 2 each hour, three times.",
+  "hint": "Doubling means multiplying, not adding. Think about how many times the count gets doubled in three hours.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Doubling is exponential: multiply by 2 each hour, three times."
+      "text": "Doubling means multiplying, not adding. Think about how many times the count gets doubled in three hours."
     },
     {
       "level": "guide",
-      "text": "Hour 1: $5 \\times 2 = 10$. Hour 2: $10 \\times 2 = 20$."
+      "text": "Start at $5$ and multiply by $2$ once for each hour: $5 \\times 2 = 10$, then $10 \\times 2 = 20$, then one more time."
     },
     {
       "level": "reveal",
-      "text": "Hour 3: $20 \\times 2 = 40$ bacteria."
+      "text": "The third doubling is $20 \\times 2 = 40$, so there are $40$ bacteria after $3$ hours."
     }
   ],
   "explanation": [
-    "Exponential growth multiplies by the same factor each step: here, $\\times 2$ every hour.",
-    "Formula: $y = 5 \\cdot 2^x$. At $x = 3$: $5 \\cdot 2^3 = 5 \\cdot 8$.",
-    "That is 40 bacteria."
+    "Doubling every hour is exponential growth, which multiplies by the same factor of $2$ each step.",
+    "The formula is $y = 5 \\cdot 2^x$, and at $x = 3$ it gives $5 \\cdot 2^3 = 5 \\cdot 8$.",
+    "Multiplying gives $40$, so there are $40$ bacteria after three hours."
   ],
   "alternativeExplanations": [
     {

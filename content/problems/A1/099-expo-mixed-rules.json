@@ -12,11 +12,11 @@
     "x⁵"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Handle the power of a power first: $(x^3)^2 = x^{3 \\times 2} = x^6$.",
+  "hint": "Three exponent rules are needed here. Take them one at a time, starting with the power of a power.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Handle the power of a power first: $(x^3)^2 = x^{3 \\times 2} = x^6$."
+      "text": "Three exponent rules are needed here. Take them one at a time, starting with the power of a power."
     },
     {
       "level": "nudge",
@@ -25,17 +25,17 @@
     },
     {
       "level": "guide",
-      "text": "Now multiply: $x^6 \\cdot x^4 = x^{6+4} = x^{10}$. Then divide."
+      "text": "$(x^3)^2 = x^6$. Then multiply by adding exponents: $x^6 \\cdot x^4 = x^{10}$. Last, divide by subtracting the exponent $5$."
     },
     {
       "level": "reveal",
-      "text": "$x^{10} \\div x^5 = x^{10-5} = x^5$."
+      "text": "$x^{10} \\div x^5 = x^{10-5}$, so the expression simplifies to $x^5$."
     }
   ],
   "explanation": [
-    "Power rule first: $(x^3)^2 = x^6$ — 2 groups of 3 copies.",
-    "Product rule: $x^6 \\cdot x^4 = x^{10}$ — combine the copies.",
-    "Quotient rule: $x^{10} \\div x^5 = x^5$ — cancel 5 copies. Answer: $x^5$."
+    "Use the power rule first and multiply the exponents: $(x^3)^2 = x^6$.",
+    "Use the product rule next and add the exponents: $x^6 \\cdot x^4 = x^{10}$.",
+    "Use the quotient rule last and subtract the exponents: $x^{10} \\div x^5 = x^5$, so the answer is $x^5$."
   ],
   "alternativeExplanations": [
     {

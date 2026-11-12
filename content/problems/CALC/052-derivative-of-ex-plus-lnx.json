@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two famous facts: $e^x$ is its own derivative, and the derivative of $\\ln x$ is $\\frac{1}{x}$.",
+  "hint": "Two standard facts are needed: the derivative of $e^x$ and the derivative of $\\ln x$. Recall each one.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two famous facts: $e^x$ is its own derivative, and the derivative of $\\ln x$ is $\\frac{1}{x}$."
+      "text": "Two standard facts are needed: the derivative of $e^x$ and the derivative of $\\ln x$. Recall each one."
     },
     {
       "level": "guide",
-      "text": "Differentiate each term separately and add the results."
+      "text": "The function $e^x$ is its own derivative, and the derivative of $\\ln x$ is $\\frac{1}{x}$. Differentiate each term separately and add the results."
     },
     {
       "level": "reveal",
-      "text": "$f'(x) = e^x + \\frac{1}{x}$: choice A."
+      "text": "The sum rule gives $f'(x) = e^x + \\frac{1}{x}$, which is choice A."
     }
   ],
   "explanation": [
-    "$\\frac{d}{dx} e^x = e^x$ — the exponential is its own derivative.",
-    "$\\frac{d}{dx} \\ln x = \\frac{1}{x}$ for $x > 0$.",
-    "Sum rule: $f'(x) = e^x + \\frac{1}{x}$. Choice B wrongly treats $e^x$ like a power $x^n$; C forgets to differentiate $\\ln x$; D has the wrong sign."
+    "The exponential is its own derivative, so $\\frac{d}{dx} e^x = e^x$.",
+    "The natural log has derivative $\\frac{d}{dx} \\ln x = \\frac{1}{x}$ for $x > 0$.",
+    "Sum rule: $f'(x) = e^x + \\frac{1}{x}$. Choice B wrongly treats $e^x$ like a power $x^n$, C forgets to differentiate $\\ln x$, and D has the wrong sign."
   ],
   "alternativeExplanations": [
     {

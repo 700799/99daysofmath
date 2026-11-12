@@ -10,27 +10,27 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The $2y$ terms are opposites — add the equations.",
+  "hint": "Look at the $y$ terms in the two equations. They have the same size and opposite signs, which suggests a method.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $2y$ terms are opposites — add the equations."
+      "text": "Look at the $y$ terms in the two equations. They have the same size and opposite signs, which suggests a method."
     },
     {
       "level": "guide",
-      "text": "Adding gives $4x = 16$, so $x = 4$."
+      "text": "Add the equations so the $2y$ terms cancel: $4x = 16$. After finding $x$, use $x - 2y = 0$ to find $y$, then add the two values."
     },
     {
       "level": "reveal",
-      "text": "Then $4 - 2y = 0$ gives $y = 2$, so $x + y = 6$."
+      "text": "Here $x = 4$, and $4 - 2y = 0$ gives $y = 2$. The value of $x + y$ is $4 + 2 = 6$."
     }
   ],
   "learningObjective": "Solve a system and evaluate a requested combination of the variables.",
   "topic": "Elimination",
   "explanation": [
-    "Add the equations: $(3x + 2y) + (x - 2y) = 16 + 0$, so $4x = 16$ and $x = 4$.",
-    "Substitute into the second equation: $4 - 2y = 0$, so $y = 2$.",
-    "The question asks for $x + y = 4 + 2 = 6$."
+    "Add the equations, because $+2y$ and $-2y$ cancel: $(3x + 2y) + (x - 2y) = 16 + 0$, so $4x = 16$ and $x = 4$.",
+    "Substitute $x = 4$ into the second equation to find the other variable: $4 - 2y = 0$, so $y = 2$.",
+    "The question asks for the sum, so add the two values: $x + y = 4 + 2 = 6$."
   ],
   "alternativeExplanations": [
     {

@@ -10,24 +10,25 @@
   "primaryAnswer": "13",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Range = max - min.",
+  "hint": "Range is about the two ends of the data: the biggest value and the smallest value.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Range = max - min."
+      "text": "Range is about the two ends of the data: the biggest value and the smallest value."
     },
     {
       "level": "guide",
-      "text": "Max: $18$. Min: $5$."
+      "text": "The biggest number in the list is $18$ and the smallest is $5$. Find the difference between them."
     },
     {
       "level": "reveal",
-      "text": "$18 - 5 = 13$."
+      "text": "$18 - 5 = 13$, so the range of this list is $13$."
     }
   ],
   "explanation": [
-    "Max: $18$, Min: $5$.",
-    "Range: $13$."
+    "The range is the largest value minus the smallest value, so find those two first.",
+    "Looking across $12, 5, 18, 9, 14$, the maximum is $18$ and the minimum is $5$.",
+    "Subtract to find how far apart they are: $18 - 5 = 13$, so the range of this list is $13$."
   ],
   "tags": [
     "range"

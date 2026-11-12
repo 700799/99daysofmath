@@ -10,24 +10,26 @@
   "primaryAnswer": "325",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$300 + 25$.",
+  "hint": "The play area and the sandbox are side by side and do not overlap. What should you do with their two areas?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$300 + 25$."
+      "text": "The play area and the sandbox are side by side and do not overlap. What should you do with their two areas?"
     },
     {
       "level": "guide",
-      "text": "Rectangle: $300$. Square: $25$."
+      "text": "The play area is $20 \\times 15$ and the sandbox is $5 \\times 5$. Compute each product and then add them."
     },
     {
       "level": "reveal",
-      "text": "$325$."
+      "text": "$300 + 25 = 325$, so the combined area is $325$ square units."
     }
   ],
   "explanation": [
-    "$20 \\times 15 = 300$. $5 \\times 5 = 25$.",
-    "Total: $325$."
+    "The combined area is the area of the play area plus the area of the sandbox.",
+    "The rectangular play area covers $20 \\times 15 = 300$ square units.",
+    "The square sandbox covers $5 \\times 5 = 25$ square units.",
+    "Adding the two parts gives $300 + 25 = 325$ square units."
   ],
   "tags": [
     "composite",

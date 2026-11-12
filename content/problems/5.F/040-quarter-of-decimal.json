@@ -14,30 +14,30 @@
     "4/5"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$0.25$ is a familiar fraction in disguise.",
+  "hint": "One of these decimals is equal to a very common fraction. Using that fraction can turn the multiplication into something simpler.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$0.25$ is a familiar fraction in disguise."
+      "text": "One of these decimals is equal to a very common fraction. Using that fraction can turn the multiplication into something simpler."
     },
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "$0.25 = \\frac{1}{4}$, so this is the same as $3.2 \\div 4$."
+      "text": "Think of $0.25$ as the fraction $\\frac{1}{4}$. Multiplying by one fourth is the same as dividing by $4$, so this is $3.2 \\div 4$."
     },
     {
       "level": "guide",
-      "text": "$3.2 \\div 4$: think $32 \\div 4 = 8$, then place the decimal."
+      "text": "Since $0.25$ is one fourth, find a quarter of $3.2$ by dividing by $4$. Think of $32$ tenths divided by $4$."
     },
     {
       "level": "reveal",
-      "text": "$3.2 \\div 4 = 0.8$."
+      "text": "$32$ tenths divided by $4$ is $8$ tenths, so $0.25 \\times 3.2 = 0.8$."
     }
   ],
   "explanation": [
-    "$0.25 = \\frac{1}{4}$, so $0.25 \\times 3.2$ is one quarter of $3.2$.",
-    "$3.2 \\div 4 = 0.8$.",
-    "Check by counting decimal places: $25 \\times 32 = 800$; three decimal places → $0.800 = 0.8$ ✓."
+    "The decimal $0.25$ equals $\\frac{1}{4}$, so $0.25 \\times 3.2$ means one quarter of $3.2$.",
+    "Take a quarter by dividing by $4$: $3.2$ is $32$ tenths, and $32 \\div 4 = 8$ tenths, which is $0.8$.",
+    "Check with whole numbers: $25 \\times 32 = 800$, and three decimal places give $0.800 = 0.8$, so the product is $0.8$."
   ],
   "alternativeExplanations": [
     {

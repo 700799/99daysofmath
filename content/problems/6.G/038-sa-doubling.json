@@ -10,28 +10,31 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$6s^2 = 24$.",
+  "hint": "The surface area of a cube is made of $6$ equal square faces. What is the area of just one of them?",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try a similar but smaller shape (all sides ÷ 2) and look at how the formula behaves."
+      "text": "Go forward with an easy cube first: a cube with side $1$ has surface area $6 \\times 1 = 6$. Now think about how to go backward from $24$."
     },
     {
       "level": "nudge",
-      "text": "$6s^2 = 24$."
+      "text": "The surface area of a cube is made of $6$ equal square faces. What is the area of just one of them?"
     },
     {
       "level": "guide",
-      "text": "$s^2 = 4$."
+      "text": "Divide to find one face: $24 \\div 6 = 4$. Now find the side of a square whose area is $4$."
     },
     {
       "level": "reveal",
-      "text": "$s = 2$."
+      "text": "Since $2 \\times 2 = 4$, the side length of the cube is $2$ units."
     }
   ],
   "explanation": [
-    "$6s^2 = 24 \\Rightarrow s^2 = 4 \\Rightarrow s = 2$."
+    "A cube has $6$ equal faces, so its surface area is $6s^2$ and here $6s^2 = 24$.",
+    "Divide by $6$ to find the area of one face: $s^2 = 24 \\div 6 = 4$.",
+    "The side is the number that multiplies by itself to make $4$, and $2 \\times 2 = 4$.",
+    "The side length of the cube is $2$ units."
   ],
   "tags": [
     "surface-area",

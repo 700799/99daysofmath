@@ -32,11 +32,11 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Radius is half the diameter, and the centre sits one radius above the lowest seat.",
+  "hint": "Radius is half the diameter, and the centre sits one radius above the lowest seat. Those two facts give the amplitude and the midline.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Radius is half the diameter, and the centre sits one radius above the lowest seat."
+      "text": "Radius is half the diameter, and the centre sits one radius above the lowest seat. Those two facts give the amplitude and the midline."
     },
     {
       "level": "nudge",
@@ -45,17 +45,17 @@
     },
     {
       "level": "guide",
-      "text": "Amplitude $= 20$, midline $= 2 + 20 = 22$, and period $60$ forces $B = \\frac{2\\pi}{60} = \\frac{\\pi}{30}$."
+      "text": "The amplitude is $20$, the midline is $2 + 20 = 22$, and a period of $60$ forces $B = \\frac{2\\pi}{60} = \\frac{\\pi}{30}$. Then decide which sign makes the height start at its lowest."
     },
     {
       "level": "reveal",
-      "text": "Starting at the BOTTOM needs a flipped cosine: $h = 22 - 20\\cos\\left(\\frac{\\pi t}{30}\\right)$."
+      "text": "Starting at the BOTTOM needs a flipped cosine, so the equation is $h = 22 - 20\\cos\\left(\\frac{\\pi t}{30}\\right)$, choice A."
     }
   ],
   "explanation": [
     "The radius is $\\frac{40}{2} = 20$ m, so the amplitude is $20$.",
     "The centre of the wheel is one radius above the lowest seat: $2 + 20 = 22$ m, which is the midline.",
-    "One turn takes $60$ s, so $\\frac{2\\pi}{B} = 60$ and $B = \\frac{\\pi}{30}$.",
+    "One turn takes $60$ s, so the period formula gives $\\frac{2\\pi}{B} = 60$ and $B = \\frac{\\pi}{30}$.",
     "At $t = 0$ you are at the minimum, and a negative cosine starts at its minimum: $h = 22 - 20\\cos\\left(\\frac{\\pi t}{30}\\right)$."
   ],
   "alternativeExplanations": [

@@ -10,25 +10,25 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find an antiderivative of $3x^2$ — a function whose derivative is $3x^2$ — then evaluate it at $2$ and at $0$ and subtract.",
+  "hint": "Find an antiderivative of $3x^2$, a function whose derivative is $3x^2$. Then think about how the two limits are used.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find an antiderivative of $3x^2$ — a function whose derivative is $3x^2$ — then evaluate it at $2$ and at $0$ and subtract."
+      "text": "Find an antiderivative of $3x^2$, a function whose derivative is $3x^2$. Then think about how the two limits are used."
     },
     {
       "level": "guide",
-      "text": "The derivative of $x^3$ is $3x^2$, so $F(x) = x^3$. Compute $F(2) - F(0)$."
+      "text": "The derivative of $x^3$ is $3x^2$, so use $F(x) = x^3$. Evaluate it at the upper and lower limits and compute $F(2) - F(0)$."
     },
     {
       "level": "reveal",
-      "text": "$2^3 - 0^3 = 8$."
+      "text": "The value is $2^3 - 0^3 = 8$, so the integral equals $8$."
     }
   ],
   "explanation": [
-    "Antiderivative: $\\int 3x^2 \\, dx = x^3 + C$. For a definite integral the $C$ cancels, so use $F(x) = x^3$.",
-    "Fundamental Theorem of Calculus: $\\int_0^2 3x^2 \\, dx = F(2) - F(0) = 8 - 0$.",
-    "$= 8$. This is the exact area under $y = 3x^2$ from $0$ to $2$."
+    "The antiderivative is $\\int 3x^2 \\, dx = x^3 + C$. For a definite integral the $C$ cancels, so use $F(x) = x^3$.",
+    "The Fundamental Theorem of Calculus gives $\\int_0^2 3x^2 \\, dx = F(2) - F(0) = 8 - 0$.",
+    "The answer is $8$. This is the exact area under $y = 3x^2$ from $0$ to $2$."
   ],
   "alternativeExplanations": [
     {

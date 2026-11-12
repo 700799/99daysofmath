@@ -32,23 +32,23 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "$\\tan x = \\frac{\\sin x}{\\cos x}$, and a fraction blows up when its DENOMINATOR is zero.",
+  "hint": "Write $\\tan x = \\frac{\\sin x}{\\cos x}$. A fraction blows up, giving a vertical asymptote, when its DENOMINATOR is zero.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$\\tan x = \\frac{\\sin x}{\\cos x}$, and a fraction blows up when its DENOMINATOR is zero."
+      "text": "Write $\\tan x = \\frac{\\sin x}{\\cos x}$. A fraction blows up, giving a vertical asymptote, when its DENOMINATOR is zero."
     },
     {
       "level": "guide",
-      "text": "So ask: for which $x$ is $\\cos x = 0$?"
+      "text": "So the question becomes: for which values of $x$ is $\\cos x = 0$? Find the first one on the unit circle and how often it recurs."
     },
     {
       "level": "reveal",
-      "text": "Cosine is zero at $\\frac{\\pi}{2}$ and then every $\\pi$ after that: $x = \\frac{\\pi}{2} + k\\pi$."
+      "text": "Cosine is zero at $\\frac{\\pi}{2}$ and then every $\\pi$ after that, so the asymptotes are at $x = \\frac{\\pi}{2} + k\\pi$, choice A."
     }
   ],
   "explanation": [
-    "Write tangent as $\\frac{\\sin x}{\\cos x}$.",
+    "Write tangent as the quotient $\\frac{\\sin x}{\\cos x}$, which has a problem wherever the bottom is zero.",
     "The function is undefined exactly where $\\cos x = 0$, which happens at $\\frac{\\pi}{2}$, $\\frac{3\\pi}{2}$, $-\\frac{\\pi}{2}$, and so on.",
     "All of those are captured by $x = \\frac{\\pi}{2} + k\\pi$, and the graph shoots off to infinity at each one."
   ],

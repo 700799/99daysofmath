@@ -14,30 +14,31 @@
     "-1,6"
   ],
   "acceptanceMode": "exact",
-  "hint": "In a rectangle, opposite sides have the same length.",
+  "hint": "The sides of this rectangle are horizontal and vertical. That means its corners use only two different $x$-values and two different $y$-values.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Plot each number on a quick number line. Distances and order get obvious right away."
+      "text": "Try a rectangle with corners $(0, 0)$, $(3, 0)$ and $(3, 2)$ first. Its fourth corner is $(0, 2)$, which takes its $x$ from one corner and its $y$ from another."
     },
     {
       "level": "nudge",
-      "text": "In a rectangle, opposite sides have the same length."
+      "text": "The sides of this rectangle are horizontal and vertical. That means its corners use only two different $x$-values and two different $y$-values."
     },
     {
       "level": "guide",
-      "text": "The missing vertex shares $x = -1$ with one vertex and $y = 6$ with another."
+      "text": "The $x$-values so far are $-1, 5, 5$ and the $y$-values are $2, 2, 6$. Each value must be used exactly twice, so find the $x$ and the $y$ that have only been used once."
     },
     {
       "level": "reveal",
-      "text": "$(-1, 6)$."
+      "text": "$x = -1$ and $y = 6$ have each been used once, so the fourth vertex is $(-1, 6)$."
     }
   ],
   "explanation": [
-    "$(-1, 2)$ and $(5, 2)$ form the bottom edge ($y = 2$).",
-    "$(5, 2)$ and $(5, 6)$ form the right edge ($x = 5$).",
-    "The top-left vertex needs $x = -1$ and $y = 6$ → $(-1, 6)$."
+    "$(-1, 2)$ and $(5, 2)$ share $y = 2$, so they form the bottom side of the rectangle.",
+    "$(5, 2)$ and $(5, 6)$ share $x = 5$, so they form the right side.",
+    "The missing corner is on the left side, so $x = -1$, and on the top side, so $y = 6$.",
+    "So the fourth vertex of the rectangle is $(-1, 6)$."
   ],
   "alternativeExplanations": [
     {

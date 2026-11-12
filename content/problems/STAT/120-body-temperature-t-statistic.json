@@ -11,30 +11,30 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "$t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}$. Keep the sign — a sample mean below $\\mu_0$ gives a negative $t$.",
+  "hint": "The $t$ statistic counts how many standard errors the sample mean lies from $98.6$. The sample mean is below that value, so think about the sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$t = \\frac{\\bar{x} - \\mu_0}{s/\\sqrt{n}}$. Keep the sign — a sample mean below $\\mu_0$ gives a negative $t$."
+      "text": "The $t$ statistic counts how many standard errors the sample mean lies from $98.6$. The sample mean is below that value, so think about the sign."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up: $\\bar{x} = 9$, $\\mu_0 = 10$, $s = 2$, $n = 4$: $SE = 1$, $t = (9 - 10)/1 = -1$. Same steps here."
+      "text": "Warm up with easier numbers: $\\bar{x} = 9$, $\\mu_0 = 10$, $s = 2$ and $n = 4$. The standard error is $2/\\sqrt{4} = 1$, so $t = (9 - 10)/1 = -1$. Follow the same steps here."
     },
     {
       "level": "guide",
-      "text": "$SE = 0.7/\\sqrt{49} = 0.7/7 = 0.1$. Then $t = (98.2 - 98.6)/0.1$."
+      "text": "The standard error is $0.7/\\sqrt{49} = 0.7/7 = 0.1$. Then compute $t = (98.2 - 98.6)/0.1$, keeping the negative sign."
     },
     {
       "level": "reveal",
-      "text": "$t = -0.4/0.1 = -4$."
+      "text": "$t = -0.4/0.1 = -4$, so the sample mean is $4$ standard errors below $98.6$ and the $t$ statistic is $-4$."
     }
   ],
   "explanation": [
-    "Standard error: $s/\\sqrt{n} = 0.7/7 = 0.1$ degrees.",
-    "Difference: $\\bar{x} - \\mu_0 = 98.2 - 98.6 = -0.4$.",
-    "$t = -0.4/0.1 = -4$, with df $= 48$. A sample mean 4 standard errors below 98.6 is extremely unlikely if $H_0$ is true ($p$-value well under $0.001$), so there is convincing evidence the true mean is not $98.6^\\circ$F."
+    "The standard error of the mean is $s/\\sqrt{n} = 0.7/7 = 0.1$ degrees.",
+    "The sample mean differs from the null value by $\\bar{x} - \\mu_0 = 98.2 - 98.6 = -0.4$ degrees.",
+    "Dividing gives $t = -0.4/0.1 = -4$, with df $= 48$. A sample mean 4 standard errors below 98.6 is very unlikely if $H_0$ is true, so there is convincing evidence the true mean is not $98.6^\\circ$F."
   ],
   "alternativeExplanations": [
     {

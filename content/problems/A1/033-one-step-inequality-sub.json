@@ -16,25 +16,25 @@
     "5<=x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Undo the $-3$: add $3$ to both sides. The $\\ge$ sign stays put.",
+  "hint": "Use the opposite operation to undo the $-3$. Think about whether that changes the direction of the sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Undo the $-3$: add $3$ to both sides. The $\\ge$ sign stays put."
+      "text": "Use the opposite operation to undo the $-3$. Think about whether that changes the direction of the sign."
     },
     {
       "level": "guide",
-      "text": "$x \\ge 2 + 3$."
+      "text": "Add $3$ to both sides and leave the $\\ge$ sign alone: $x \\ge 2 + 3$."
     },
     {
       "level": "reveal",
-      "text": "$x \\ge 5$."
+      "text": "$2 + 3 = 5$, so the solution set is $x \\ge 5$."
     }
   ],
   "explanation": [
-    "Add 3 to both sides: $x \\ge 5$.",
-    "Adding never flips the sign.",
-    "Check the boundary: $5 - 3 = 2$, and $2 \\ge 2$ is true, so 5 itself is included."
+    "Add $3$ to both sides to undo the subtraction, which gives $x \\ge 5$.",
+    "Adding the same number to both sides never flips an inequality sign, so $\\ge$ stays as it is.",
+    "Check the boundary: $5 - 3 = 2$ and $2 \\ge 2$ is true, so $5$ is included and the answer is $x \\ge 5$."
   ],
   "alternativeExplanations": [
     {

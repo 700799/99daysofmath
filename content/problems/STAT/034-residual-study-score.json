@@ -10,25 +10,25 @@
   "primaryAnswer": "-5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Residual $=$ actual $-$ predicted. Find the predicted score first.",
+  "hint": "A residual compares what actually happened with what the line predicted, in that order.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Residual $=$ actual $-$ predicted. Find the predicted score first."
+      "text": "A residual compares what actually happened with what the line predicted, in that order."
     },
     {
       "level": "guide",
-      "text": "Predicted: $\\hat{y} = 20 + 0.8(50) = 60$. Now subtract: $55 - 60$."
+      "text": "The line predicts $\\hat{y} = 20 + 0.8(50) = 60$ for this student. Subtract that prediction from the actual score of $55$."
     },
     {
       "level": "reveal",
-      "text": "Residual $= 55 - 60 = -5$. The student scored $5$ points below the prediction."
+      "text": "$55 - 60 = -5$, so the residual is $-5$: the student scored $5$ points below the prediction."
     }
   ],
   "explanation": [
-    "Predicted score for $x = 50$: $\\hat{y} = 20 + 0.8(50) = 20 + 40 = 60$.",
-    "Residual $= y - \\hat{y} = 55 - 60 = -5$.",
-    "A negative residual means the point sits BELOW the line: the student did worse than the line predicted."
+    "The residual needs the predicted score first: $\\hat{y} = 20 + 0.8(50) = 20 + 40 = 60$.",
+    "Residual means actual minus predicted, so $y - \\hat{y} = 55 - 60 = -5$.",
+    "The residual is $-5$. A negative residual means the point sits BELOW the line, so the student did worse than predicted."
   ],
   "alternativeExplanations": [
     {

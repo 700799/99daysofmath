@@ -13,25 +13,25 @@
     "-.5"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Square the cosine first, then double it, then subtract $1$.",
+  "hint": "Follow the order of operations in the formula: square the cosine first, then double it, then subtract $1$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Square the cosine first, then double it, then subtract $1$."
+      "text": "Follow the order of operations in the formula: square the cosine first, then double it, then subtract $1$."
     },
     {
       "level": "guide",
-      "text": "$\\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$, and $2 \\times \\frac{1}{4} = \\frac{1}{2}$."
+      "text": "Squaring gives $\\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$, and doubling gives $2 \\times \\frac{1}{4} = \\frac{1}{2}$. One subtraction is left."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2} - 1 = -\\frac{1}{2}$."
+      "text": "$\\frac{1}{2} - 1 = -\\frac{1}{2}$, so $\\cos(2\\theta)$ is negative one half."
     }
   ],
   "explanation": [
-    "Substitute into $\\cos(2\\theta) = 2\\cos^2\\theta - 1$: $2\\left(\\frac{1}{2}\\right)^2 - 1$.",
+    "Substitute the given cosine into the formula $\\cos(2\\theta) = 2\\cos^2\\theta - 1$ to get $2\\left(\\frac{1}{2}\\right)^2 - 1$.",
     "Square first: $\\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$, then double it to get $\\frac{1}{2}$.",
-    "Finally subtract: $\\frac{1}{2} - 1 = -\\frac{1}{2}$."
+    "Finally subtract the one: $\\frac{1}{2} - 1 = -\\frac{1}{2}$, so the answer is $\\cos(2\\theta) = -\\frac{1}{2}$."
   ],
   "alternativeExplanations": [
     {

@@ -10,25 +10,25 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "At position $x$, the side of the square is the height of the base region there: $s = \\sqrt{x}$. The square's area is $s^2$.",
+  "hint": "At position $x$, the side of the square is the height of the base region there. The area of the square is the side squared.",
   "hints": [
     {
       "level": "nudge",
-      "text": "At position $x$, the side of the square is the height of the base region there: $s = \\sqrt{x}$. The square's area is $s^2$."
+      "text": "At position $x$, the side of the square is the height of the base region there. The area of the square is the side squared."
     },
     {
       "level": "guide",
-      "text": "$V = \\int_0^4 (\\sqrt{x})^2 \\, dx = \\int_0^4 x \\, dx$."
+      "text": "The side is $s = \\sqrt{x}$, so each slice has area $x$. Add up the slices: $V = \\int_0^4 (\\sqrt{x})^2 \\, dx = \\int_0^4 x \\, dx$."
     },
     {
       "level": "reveal",
-      "text": "$\\left[\\frac{x^2}{2}\\right]_0^4 = 8$."
+      "text": "The integral is $\\left[\\frac{x^2}{2}\\right]_0^4 = 8$, so the volume is $8$ cubic units."
     }
   ],
   "explanation": [
-    "Volume by cross-sections: $V = \\int_a^b A(x) \\, dx$, where $A(x)$ is the area of the slice at $x$.",
-    "Side of the square $= \\sqrt{x}$, so $A(x) = x$.",
-    "$V = \\int_0^4 x \\, dx = 8$ cubic units. No $\\pi$ appears — these slices are squares, not discs."
+    "Volume by cross-sections is $V = \\int_a^b A(x) \\, dx$, where $A(x)$ is the area of the slice at $x$.",
+    "The side of the square is $\\sqrt{x}$, so the area of each slice is $A(x) = x$.",
+    "Then $V = \\int_0^4 x \\, dx = 8$ cubic units. No $\\pi$ appears, because these slices are squares, not discs."
   ],
   "alternativeExplanations": [
     {

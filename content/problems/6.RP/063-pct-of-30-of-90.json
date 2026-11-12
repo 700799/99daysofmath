@@ -10,24 +10,26 @@
   "primaryAnswer": "27",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$30\\% = 0.30$.",
+  "hint": "Change the percent into a decimal first. Then remember that \"of\" in a percent question means multiply.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$30\\% = 0.30$."
+      "text": "Change the percent into a decimal first. Then remember that \"of\" in a percent question means multiply."
     },
     {
       "level": "guide",
-      "text": "$0.30 \\times 90$."
+      "text": "$30\\% = 0.30$, so set up $0.30 \\times 90$. A shortcut is to compute $3 \\times 9$ and then place the decimal point."
     },
     {
       "level": "reveal",
-      "text": "$0.30 \\times 90 = 27$."
+      "text": "The product is $0.30 \\times 90 = 27$, so $30\\%$ of $90$ equals $27$."
     }
   ],
   "explanation": [
-    "$30\\% = 0.30$.",
-    "$0.30 \\times 90 = 27$."
+    "Divide by $100$ to turn the percent into a decimal: $30\\% = 0.30$.",
+    "Multiply by the whole: $0.30 \\times 90$ is the same as $3 \\times 9$ because the tenths and the tens cancel.",
+    "The multiplication fact $3 \\times 9$ gives the product $27$.",
+    "Multiplying the decimal by the whole shows that $30\\%$ of $90$ is $27$."
   ],
   "alternativeExplanations": [
     {

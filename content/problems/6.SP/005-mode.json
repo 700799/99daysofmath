@@ -10,7 +10,7 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The mode is the value that **appears most often**.",
+  "hint": "The **mode** is the value that shows up more times than any other value in the list.",
   "explanation": [
     "Count how often each value appears:",
     "$4$ appears $3$ times. $6$ appears $2$ times. $7$ and $9$ each appear $1$ time.",
@@ -32,15 +32,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "The mode is the value that **appears most often**."
+      "text": "The **mode** is the value that shows up more times than any other value in the list."
     },
     {
       "level": "guide",
-      "text": "Count how often each value appears:"
+      "text": "Tally each number in this list: how many times do you see $4$, how many times $6$, and how many times $7$ and $9$?"
     },
     {
       "level": "reveal",
-      "text": "$4$ appears the most — so the mode is $4$."
+      "text": "$4$ appears $3$ times, more than any other value, so the mode is $4$."
     }
   ],
   "diagram": {

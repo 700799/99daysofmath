@@ -32,19 +32,19 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Is $\\frac{3}{4}$ bigger or smaller than one whole?",
+  "hint": "Compare the fraction of the wall Rosa paints with one whole wall. Does she paint more than the whole wall, or less?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Is $\\frac{3}{4}$ bigger or smaller than one whole?"
+      "text": "Compare the fraction of the wall Rosa paints with one whole wall. Does she paint more than the whole wall, or less?"
     },
     {
       "level": "guide",
-      "text": "Multiplying by a number less than $1$ always shrinks the amount you started with."
+      "text": "Her paint is $\\frac{3}{4} \\times 6$ quarts. Since $\\frac{3}{4}$ is less than $1$, multiplying by it makes the $6$ smaller."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{3}{4}$ is less than $1$, so the paint needed is less than $6$ quarts."
+      "text": "A factor less than $1$ shrinks the amount, so she uses less than $6$ quarts. That is choice C."
     }
   ],
   "explanation": [

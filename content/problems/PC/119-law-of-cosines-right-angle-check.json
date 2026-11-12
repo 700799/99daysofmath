@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "$169 = 25 + 144 - 2 \\times 5 \\times 12 \\times \\cos C$, which is $169 = 169 - 120\\cos C$."
+      "text": "The Law of Cosines gives $169 = 25 + 144 - 2 \\times 5 \\times 12 \\times \\cos C$, which is $169 = 169 - 120\\cos C$. Find what $\\cos C$ must be."
     },
     {
       "level": "reveal",
-      "text": "That forces $120\\cos C = 0$, so $\\cos C = 0$ and $C = 90^\\circ$."
+      "text": "That forces $120\\cos C = 0$, so $\\cos C = 0$ and the angle is $C = 90^\\circ$."
     }
   ],
   "explanation": [
-    "Set $c = 13$: $13^2 = 5^2 + 12^2 - 2(5)(12)\\cos C$.",
-    "$169 = 25 + 144 - 120\\cos C = 169 - 120\\cos C$.",
-    "Subtract $169$ from both sides: $0 = -120\\cos C$, so $\\cos C = 0$.",
-    "The angle with cosine $0$ is $90^\\circ$ — this triangle is a right triangle."
+    "Put $c = 13$ into the Law of Cosines: $13^2 = 5^2 + 12^2 - 2(5)(12)\\cos C$.",
+    "Working out the squares and the product gives $169 = 25 + 144 - 120\\cos C = 169 - 120\\cos C$.",
+    "Subtracting $169$ from both sides leaves $0 = -120\\cos C$, so $\\cos C = 0$.",
+    "The angle with cosine $0$ is $90^\\circ$, so this is a right triangle and the answer is $90$."
   ],
   "alternativeExplanations": [
     {

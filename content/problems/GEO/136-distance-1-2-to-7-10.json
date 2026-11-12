@@ -10,19 +10,19 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Use the distance formula: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+  "hint": "The straight path between the two places is the hypotenuse of a right triangle. Its legs run along the grid lines.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use the distance formula: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$."
+      "text": "The straight path between the two places is the hypotenuse of a right triangle. Its legs run along the grid lines."
     },
     {
       "level": "guide",
-      "text": "$\\Delta x = 7 - 1 = 6$ and $\\Delta y = 10 - 2 = 8$."
+      "text": "The horizontal gap is $7 - 1 = 6$ and the vertical gap is $10 - 2 = 8$. Put these into the distance formula $d = \\sqrt{6^2 + 8^2}$."
     },
     {
       "level": "reveal",
-      "text": "$d = \\sqrt{36 + 64} = \\sqrt{100} = 10$ blocks."
+      "text": "$d = \\sqrt{36 + 64} = \\sqrt{100} = 10$, so they are $10$ blocks apart."
     }
   ],
   "explanation": [

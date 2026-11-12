@@ -10,11 +10,11 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Write both totals: $12 + 8m$ and $10m$. Set them equal.",
+  "hint": "Write an expression for the total paid to each service after $m$ months, then think about what \"the same total\" means.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Write both totals: $12 + 8m$ and $10m$. Set them equal."
+      "text": "Write an expression for the total paid to each service after $m$ months, then think about what \"the same total\" means."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$12 + 8m = 10m$. Subtract $8m$ from both sides: $12 = 2m$."
+      "text": "Set the totals equal: $12 + 8m = 10m$. Subtract $8m$ from both sides to get $12 = 2m$."
     },
     {
       "level": "reveal",
-      "text": "$m = 12 \\div 2 = 6$ months. Both totals are $\\$60$."
+      "text": "$12 \\div 2 = 6$, so the totals match after $6$ months, when each is $60$ dollars."
     }
   ],
   "explanation": [
-    "Total cost is where the two rules cross: $12 + 8m = 10m$.",
-    "Subtract $8m$: $12 = 2m$, so $m = 6$.",
-    "Check: $12 + 48 = 60$ and $10 \\times 6 = 60$. Same total. ✓"
+    "The first service costs $12 + 8m$ and the rival costs $10m$, so equal totals means $12 + 8m = 10m$.",
+    "Subtract $8m$ from both sides to get $12 = 2m$, then divide by $2$ to get $m = 6$.",
+    "Check: $12 + 48 = 60$ and $10 \\times 6 = 60$, so the totals are the same after $6$ months."
   ],
   "alternativeExplanations": [
     {

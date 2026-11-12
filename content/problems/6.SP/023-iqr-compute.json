@@ -10,28 +10,30 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "IQR = $Q3 - Q1$.",
+  "hint": "The IQR (interquartile range) is the distance between the two quartiles, the width of the middle half of the data.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sort the data from least to greatest first — many statistics get easy after that."
+      "text": "Picture the sorted data split into four equal groups. Which part of the data does the IQR stretch across?"
     },
     {
       "level": "nudge",
-      "text": "IQR = $Q3 - Q1$."
+      "text": "The IQR (interquartile range) is the distance between the two quartiles, the width of the middle half of the data."
     },
     {
       "level": "guide",
-      "text": "$11 - 3$."
+      "text": "Both quartiles are given, so subtract the lower one from the upper one: work out $11 - 3$."
     },
     {
       "level": "reveal",
-      "text": "$8$."
+      "text": "$11 - 3 = 8$, so the interquartile range is $8$."
     }
   ],
   "explanation": [
-    "IQR $= 11 - 3 = 8$."
+    "The interquartile range measures the spread of the middle half of the data, from $Q1$ to $Q3$.",
+    "The problem gives both quartiles: $Q1 = 3$ and $Q3 = 11$.",
+    "Subtract the lower quartile from the upper quartile: $11 - 3 = 8$, so the IQR is $8$."
   ],
   "tags": [
     "MAP-practice",

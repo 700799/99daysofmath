@@ -10,24 +10,26 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Width $= |4 - 1| = 3$, height $= |5 - 1| = 4$.",
+  "hint": "You need the width and the height before you can find area. The $x$-values give one and the $y$-values give the other.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Width $= |4 - 1| = 3$, height $= |5 - 1| = 4$."
+      "text": "You need the width and the height before you can find area. The $x$-values give one and the $y$-values give the other."
     },
     {
       "level": "guide",
-      "text": "$A = w \\cdot h = 3 \\cdot 4$."
+      "text": "The corners use $x = 1$ and $x = 4$, so the width is $4 - 1 = 3$. They use $y = 1$ and $y = 5$, so the height is $5 - 1 = 4$. Multiply these."
     },
     {
       "level": "reveal",
-      "text": "$12$."
+      "text": "$3 \\times 4 = 12$, so the area of the rectangle is $12$ square units."
     }
   ],
   "explanation": [
-    "Width $3$, height $4$.",
-    "$A = 12$."
+    "The corners only use the $x$-values $1$ and $4$, so the rectangle is $4 - 1 = 3$ units wide.",
+    "The corners only use the $y$-values $1$ and $5$, so the rectangle is $5 - 1 = 4$ units tall.",
+    "Area of a rectangle is width times height, which gives $3 \\times 4 = 12$.",
+    "The area of the rectangle is $12$ square units."
   ],
   "tags": [
     "coord",

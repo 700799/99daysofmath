@@ -49,8 +49,8 @@
   ],
   "explanation": [
     "The IVT: if $f$ is continuous on $[a, b]$ and $N$ is between $f(a)$ and $f(b)$, then $f(c) = N$ for some $c$ in $(a, b)$.",
-    "Here $f(8) = 1200$, $f(11) = 2100$, and $N = 1800$ is in between.",
-    "So some time $c$ between 8:00 and 11:00 has elevation exactly $1800$ m. The theorem gives existence, not the time, and needs no constant rate."
+    "Here $f(8) = 1200$ and $f(11) = 2100$, and the target $N = 1800$ lies between those two elevations.",
+    "So some time $c$ between 8:00 and 11:00 has elevation exactly $1800$ m, which is choice A. The theorem gives existence, not the time, and needs no constant rate."
   ],
   "alternativeExplanations": [
     {

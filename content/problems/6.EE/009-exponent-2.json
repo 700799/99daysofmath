@@ -10,23 +10,25 @@
   "primaryAnswer": "25",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$5^2$ means $5$ times $5$.",
+  "hint": "The small raised $2$ tells you how many copies of the base to multiply together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$5^2$ means $5$ times $5$."
+      "text": "The small raised $2$ tells you how many copies of the base to multiply together."
     },
     {
       "level": "guide",
-      "text": "$5 \\times 5 = ?$"
+      "text": "Write $5^2$ as two fives multiplied, $5 \\times 5$, and work out that product."
     },
     {
       "level": "reveal",
-      "text": "$25$."
+      "text": "Two fives multiplied give $5 \\times 5 = 25$, so the value of $5^2$ is $25$."
     }
   ],
   "explanation": [
-    "$5^2 = 5 \\times 5 = 25$."
+    "The exponent $2$ means the base $5$ is used as a factor two times.",
+    "Write the power out as a multiplication: $5^2 = 5 \\times 5$.",
+    "The product is $25$, so $5^2$ equals $25$ (not $5 \\times 2 = 10$)."
   ],
   "tags": [
     "exponent"

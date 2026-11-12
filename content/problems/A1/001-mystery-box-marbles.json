@@ -14,19 +14,19 @@
     "3+b"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A variable is a mystery box: $b$ stands for however many marbles are hiding in the bag.",
+  "hint": "A variable stands for a number you do not know yet. Think about what happens to the bag's count when more marbles go in.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A variable is a mystery box: $b$ stands for however many marbles are hiding in the bag."
+      "text": "A variable stands for a number you do not know yet. Think about what happens to the bag's count when more marbles go in."
     },
     {
       "level": "guide",
-      "text": "You start with $b$ and ADD $3$. What operation joins them?"
+      "text": "The bag starts with $b$ marbles and gains $3$ more, so join $b$ and $3$ with the operation that means \"more\"."
     },
     {
       "level": "reveal",
-      "text": "The total is $b + 3$."
+      "text": "Adding the $3$ new marbles to the $b$ already there gives a total of $b + 3$ marbles."
     }
   ],
   "explanation": [

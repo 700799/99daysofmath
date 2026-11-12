@@ -32,24 +32,26 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "A vertical side has matching $x$ values.",
+  "hint": "A side that is lined up with the axes is perfectly horizontal or perfectly vertical. What must two points share for that to happen?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A vertical side has matching $x$ values."
+      "text": "A side that is lined up with the axes is perfectly horizontal or perfectly vertical. What must two points share for that to happen?"
     },
     {
       "level": "guide",
-      "text": "Both have $x = 1$."
+      "text": "Look for a pair with the same $x$-coordinate or the same $y$-coordinate. Check each choice and see which pair matches in one coordinate."
     },
     {
       "level": "reveal",
-      "text": "B."
+      "text": "Only $(1, 2)$ and $(1, 5)$ share a coordinate, $x = 1$, so the answer is choice B."
     }
   ],
   "explanation": [
-    "Same $x$ means vertical side.",
-    "$(1, 2)$ and $(1, 5)$ both have $x = 1$."
+    "A rectangle aligned with the axes has only horizontal and vertical sides.",
+    "Two points on a vertical side share the same $x$, and two points on a horizontal side share the same $y$.",
+    "In choices A, C and D both coordinates change, so those pairs make slanted segments.",
+    "The points $(1, 2)$ and $(1, 5)$ both have $x = 1$, so they form a vertical side. The answer is B."
   ],
   "tags": [
     "coord"

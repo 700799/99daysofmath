@@ -10,25 +10,25 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Follow the two steps exactly as the proof describes them.",
+  "hint": "The proof names two operations in order. Carry out each one on both sides of the equation.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Follow the two steps exactly as the proof describes them."
+      "text": "The proof names two operations in order. Carry out each one on both sides of the equation."
     },
     {
       "level": "guide",
-      "text": "After adding 7: $3x = 27$. Now divide by 3."
+      "text": "Adding $7$ to both sides of $3x - 7 = 20$ gives $3x = 27$. Now do the division that step 3 describes."
     },
     {
       "level": "reveal",
-      "text": "$x = 9$."
+      "text": "$27 \\div 3 = 9$, so the proof reaches the value $x = 9$."
     }
   ],
   "explanation": [
-    "Step 2 adds 7 to both sides: $3x - 7 + 7 = 20 + 7$, so $3x = 27$.",
-    "Step 3 divides both sides by 3: $x = 9$.",
-    "Check by substituting: $3(9) - 7 = 27 - 7 = 20$. ✓"
+    "Step 2 uses the Addition Property of Equality: adding $7$ to both sides gives $3x - 7 + 7 = 20 + 7$, so $3x = 27$.",
+    "Step 3 uses the Division Property of Equality: dividing both sides by $3$ gives $x = 9$.",
+    "Substituting back gives $3(9) - 7 = 27 - 7 = 20$, so the proof correctly reaches $x = 9$."
   ],
   "alternativeExplanations": [
     {

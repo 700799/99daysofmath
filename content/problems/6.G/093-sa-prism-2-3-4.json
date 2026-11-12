@@ -12,25 +12,26 @@
     "52 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Use SA $= 2(lw + lh + wh)$.",
+  "hint": "Opposite faces of a rectangular prism match. So there are only three different rectangles to find.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use SA $= 2(lw + lh + wh)$."
+      "text": "Opposite faces of a rectangular prism match. So there are only three different rectangles to find."
     },
     {
       "level": "guide",
-      "text": "$lw = 6, lh = 8, wh = 12$. Sum: $26$. Double: $52$."
+      "text": "The three rectangles have areas $2 \\times 3 = 6$, $2 \\times 4 = 8$ and $3 \\times 4 = 12$. Add them and then double."
     },
     {
       "level": "reveal",
-      "text": "$52$."
+      "text": "$2(6 + 8 + 12) = 2 \\times 26 = 52$, so the surface area is $52$ square units."
     }
   ],
   "explanation": [
-    "Pairs of faces: $lw = 6$, $lh = 8$, $wh = 12$.",
-    "Sum: $6 + 8 + 12 = 26$.",
-    "Total: $2(26) = 52$."
+    "List the three different faces: $2 \\times 3 = 6$, $2 \\times 4 = 8$ and $3 \\times 4 = 12$.",
+    "Add these three areas together to cover half of the prism: $6 + 8 + 12 = 26$.",
+    "Each face appears twice on the prism, so double the sum: $2 \\times 26 = 52$.",
+    "The surface area of the prism is $52$ square units."
   ],
   "alternativeExplanations": [
     {

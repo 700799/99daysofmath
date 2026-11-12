@@ -32,11 +32,11 @@
   "primaryAnswer": "D",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Solve the inequality first, then see which choice falls outside the solution set.",
+  "hint": "The question asks for a value that fails. Find the full solution set first, then look for the choice that lies outside it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Solve the inequality first, then see which choice falls outside the solution set."
+      "text": "The question asks for a value that fails. Find the full solution set first, then look for the choice that lies outside it."
     },
     {
       "level": "nudge",
@@ -45,19 +45,20 @@
     },
     {
       "level": "guide",
-      "text": "$-2x \\ge -6$; dividing by $-2$ flips it to $x \\le 3$."
+      "text": "Subtract $7$ to get $-2x \\ge -6$. Divide by $-2$ and reverse the sign to get $x \\le 3$. Compare each choice with $3$."
     },
     {
       "level": "reveal",
-      "text": "Every choice at or below $3$ works, so the one that fails is $4$."
+      "text": "The values $-2$, $0$ and $3$ are all at most $3$. The value $4$ is greater than $3$, so the answer is $4$, choice D."
     }
   ],
   "learningObjective": "Solve an inequality and identify a value outside the solution set.",
   "topic": "Linear inequalities",
   "explanation": [
-    "Subtract $7$: $-2x \\ge -6$.",
-    "Divide by $-2$ and flip the inequality: $x \\le 3$.",
-    "Choices A, B, and C are all at most $3$ and therefore work. Choice D, $x = 4$, is greater than $3$ and fails: $7 - 2(4) = -1$, which is not $\\ge 1$."
+    "Subtract $7$ from both sides to isolate the $x$ term: $-2x \\ge -6$.",
+    "Divide by $-2$ and reverse the inequality, because the divisor is negative: $x \\le 3$.",
+    "Choices A, B and C are all at most $3$, so each of them is a solution.",
+    "The value $4$ is greater than $3$, and $7 - 2(4) = -1$ is not at least $1$. The value that is not a solution is $4$, choice D."
   ],
   "alternativeExplanations": [
     {

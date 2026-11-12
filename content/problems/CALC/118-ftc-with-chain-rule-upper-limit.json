@@ -32,11 +32,11 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The upper limit is $x^2$, not $x$. That makes $h$ a composition: $h(x) = G(x^2)$ where $G(u) = \\int_0^u \\cos t \\, dt$. Chain rule!",
+  "hint": "The upper limit is $x^2$, not $x$. That makes $h$ a composition, $h(x) = G(x^2)$ where $G(u) = \\int_0^u \\cos t \\, dt$, so the chain rule is needed.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The upper limit is $x^2$, not $x$. That makes $h$ a composition: $h(x) = G(x^2)$ where $G(u) = \\int_0^u \\cos t \\, dt$. Chain rule!"
+      "text": "The upper limit is $x^2$, not $x$. That makes $h$ a composition, $h(x) = G(x^2)$ where $G(u) = \\int_0^u \\cos t \\, dt$, so the chain rule is needed."
     },
     {
       "level": "nudge",
@@ -45,17 +45,17 @@
     },
     {
       "level": "guide",
-      "text": "$G'(x^2) = \\cos(x^2)$ and $(x^2)' = 2x$. Multiply."
+      "text": "The outside piece is $G'(x^2) = \\cos(x^2)$ and the derivative of the upper limit is $(x^2)' = 2x$. Multiply these two pieces together."
     },
     {
       "level": "reveal",
-      "text": "$h'(x) = 2x \\cos(x^2)$: choice A."
+      "text": "The derivative is $h'(x) = 2x \\cos(x^2)$, which is choice A."
     }
   ],
   "explanation": [
     "Write $h(x) = G(u)$ with $u = x^2$ and $G(u) = \\int_0^u \\cos t \\, dt$. By the FTC, $G'(u) = \\cos u$.",
-    "Chain rule: $h'(x) = G'(u) \\cdot \\frac{du}{dx} = \\cos(x^2) \\cdot 2x$.",
-    "Choice A. Choice B forgets the chain rule factor; C and D confuse \"derivative of the integral\" with actually integrating $\\cos$ to get $\\sin$."
+    "The chain rule multiplies by the derivative of the upper limit: $h'(x) = G'(u) \\cdot \\frac{du}{dx} = \\cos(x^2) \\cdot 2x$.",
+    "That is choice A. Choice B forgets the chain rule factor, and C and D confuse \"derivative of the integral\" with actually integrating $\\cos$ to get $\\sin$."
   ],
   "alternativeExplanations": [
     {

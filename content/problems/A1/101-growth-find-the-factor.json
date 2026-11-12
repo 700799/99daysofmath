@@ -10,25 +10,25 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Divide any term by the one before it: $6 \\div 3 = ?$",
+  "hint": "The pattern multiplies instead of adding. Compare one term with the term just before it to see the multiplier.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Divide any term by the one before it: $6 \\div 3 = ?$"
+      "text": "The pattern multiplies instead of adding. Compare one term with the term just before it to see the multiplier."
     },
     {
       "level": "guide",
-      "text": "$6 \\div 3 = 2$, and $12 \\div 6 = 2$ too. The multiplier repeats."
+      "text": "Divide a term by the one before it, for example $6 \\div 3$, then test another pair such as $12 \\div 6$ to make sure it repeats."
     },
     {
       "level": "reveal",
-      "text": "The growth factor is 2 — each step doubles."
+      "text": "Each division gives $2$, so the growth factor is $2$ and every step doubles."
     }
   ],
   "explanation": [
-    "Exponential patterns MULTIPLY by the same factor each step.",
-    "Divide neighbors to find it: $6 \\div 3 = 2$, $12 \\div 6 = 2$, $24 \\div 12 = 2$.",
-    "The growth factor is 2."
+    "An exponential pattern multiplies by the same number at every step, and that number is called the growth factor.",
+    "Divide each term by the one before it to find the multiplier: $6 \\div 3 = 2$, $12 \\div 6 = 2$ and $24 \\div 12 = 2$.",
+    "The same result appears every time, so the growth factor is $2$."
   ],
   "alternativeExplanations": [
     {

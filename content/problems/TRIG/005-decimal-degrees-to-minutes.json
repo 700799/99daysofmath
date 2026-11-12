@@ -10,19 +10,19 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The whole-degree part is $18^\\circ$. The leftover to convert is $0.25^\\circ$.",
+  "hint": "The whole-degree part, $18^\\circ$, is already done. Only the decimal part of the heading has to be turned into minutes.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The whole-degree part is $18^\\circ$. The leftover to convert is $0.25^\\circ$."
+      "text": "The whole-degree part, $18^\\circ$, is already done. Only the decimal part of the heading has to be turned into minutes."
     },
     {
       "level": "guide",
-      "text": "Each degree holds 60 minutes, so multiply: $0.25 \\times 60$."
+      "text": "The leftover is $0.25^\\circ$, and each degree holds 60 minutes, so multiply the leftover by 60: work out $0.25 \\times 60$."
     },
     {
       "level": "reveal",
-      "text": "$0.25 \\times 60 = 15$, so the heading is $18^\\circ 15'$."
+      "text": "$0.25 \\times 60 = 15$, so the heading is $18^\\circ 15'$ and $15$ minutes are reported."
     }
   ],
   "explanation": [

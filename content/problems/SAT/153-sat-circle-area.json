@@ -32,27 +32,27 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Area of a circle is $\\pi r^2$.",
+  "hint": "A circle has two common formulas, one for the distance around and one for the space inside. Pick the one for area.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Area of a circle is $\\pi r^2$."
+      "text": "A circle has two common formulas, one for the distance around and one for the space inside. Pick the one for area."
     },
     {
       "level": "guide",
-      "text": "$\\pi (6)^2$."
+      "text": "The area of a circle is $\\pi r^2$. With radius $6$, square the radius and then multiply by $\\pi$: $\\pi(6)^2$."
     },
     {
       "level": "reveal",
-      "text": "$36\\pi$."
+      "text": "Since $6^2 = 36$, the area of the circle is $36\\pi$, which is choice B."
     }
   ],
   "learningObjective": "Compute the area of a circle from its radius.",
   "topic": "Circles",
   "explanation": [
-    "Area $= \\pi r^2 = \\pi(6)^2 = 36\\pi$.",
-    "Choice A, $12\\pi$, is the *circumference* ($2\\pi r$) — the classic mix-up.",
-    "Choice D squares the diameter instead of the radius."
+    "The area of a circle is given by $\\pi r^2$, and the radius here is $6$.",
+    "Square the radius first to get $6^2 = 36$, so the area is $36\\pi$.",
+    "Choice A is the circumference $2\\pi r$, and choice D squares the diameter. The area is $36\\pi$, choice B."
   ],
   "alternativeExplanations": [
     {

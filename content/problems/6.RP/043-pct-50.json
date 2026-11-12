@@ -10,24 +10,26 @@
   "primaryAnswer": "21",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$50\\%$ is one half.",
+  "hint": "Fifty percent is $50$ out of $100$. What everyday word describes that much of something?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$50\\%$ is one half."
+      "text": "Fifty percent is $50$ out of $100$. What everyday word describes that much of something?"
     },
     {
       "level": "guide",
-      "text": "Divide by $2$."
+      "text": "$50\\%$ means one half, so split $42$ into two equal parts: work out $42 \\div 2$."
     },
     {
       "level": "reveal",
-      "text": "$42 \\div 2 = 21$."
+      "text": "Half of $42$ is $42 \\div 2 = 21$, so $50\\%$ of $42$ equals $21$."
     }
   ],
   "explanation": [
-    "$50\\% = \\frac{1}{2}$.",
-    "$42 \\div 2 = 21$."
+    "$50\\%$ equals the fraction $\\frac{50}{100}$, which simplifies to one half, $\\frac{1}{2}$.",
+    "Taking half of a number means dividing it by $2$.",
+    "Half of $40$ is $20$ and half of $2$ is $1$, so $42 \\div 2 = 21$.",
+    "Half of $42$ is $21$, so $50\\%$ of $42$ equals $21$."
   ],
   "tags": [
     "percent"

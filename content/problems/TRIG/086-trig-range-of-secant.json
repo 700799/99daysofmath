@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Secant is $\\frac{1}{\\cos x}$, and $\\cos x$ lives between $-1$ and $1$.",
+  "hint": "Secant is $\\frac{1}{\\cos x}$, and $\\cos x$ only takes values between $-1$ and $1$. Think about reciprocals of numbers in that interval.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Secant is $\\frac{1}{\\cos x}$, and $\\cos x$ lives between $-1$ and $1$."
+      "text": "Secant is $\\frac{1}{\\cos x}$, and $\\cos x$ only takes values between $-1$ and $1$. Think about reciprocals of numbers in that interval."
     },
     {
       "level": "guide",
-      "text": "Dividing $1$ by something small makes something BIG. What is the smallest that $|\\sec x|$ can be?"
+      "text": "Dividing $1$ by something small makes something BIG. Work out the smallest size $|\\sec x|$ can have, which happens when $|\\cos x|$ is as large as possible."
     },
     {
       "level": "reveal",
-      "text": "The best case is $\\cos x = \\pm 1$, giving $\\sec x = \\pm 1$; every other value is further from zero."
+      "text": "The smallest size comes from $\\cos x = \\pm 1$, giving $\\sec x = \\pm 1$, so the range is $y \\le -1$ or $y \\ge 1$, choice A."
     }
   ],
   "explanation": [
-    "Since $|\\cos x| \\le 1$, taking the reciprocal gives $|\\sec x| \\ge 1$.",
+    "Secant is the reciprocal of cosine. Since $|\\cos x| \\le 1$, taking the reciprocal gives $|\\sec x| \\ge 1$.",
     "So secant can equal $1$ or $-1$ but nothing in between.",
-    "The range is $y \\le -1$ or $y \\ge 1$ — the graph is made of U-shaped branches that never enter the strip between the lines $y = 1$ and $y = -1$."
+    "The range is $y \\le -1$ or $y \\ge 1$. The graph is made of U-shaped branches that never enter the strip between the lines $y = 1$ and $y = -1$."
   ],
   "alternativeExplanations": [
     {

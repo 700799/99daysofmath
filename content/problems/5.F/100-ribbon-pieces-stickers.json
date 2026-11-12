@@ -13,7 +13,7 @@
     "$2.00"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Try smaller numbers: a $1.0$ m ribbon cut into $0.5$ m pieces gives $1.0 \\div 0.5 = 2$ pieces, and at $\\$0.10$ a sticker that is $2 \\times 0.10 = \\$0.20$. Divide to count the pieces, then multiply by the price — same two steps.",
+  "hint": "Find out how many pieces the ribbon makes before thinking about money. Each piece then needs one sticker.",
   "hints": [
     {
       "level": "nudge",
@@ -22,22 +22,22 @@
     },
     {
       "level": "nudge",
-      "text": "First find how many pieces there are, then pay for one sticker per piece."
+      "text": "Find out how many pieces the ribbon makes before thinking about money. Each piece then needs one sticker."
     },
     {
       "level": "guide",
-      "text": "Pieces $= 2.4 \\div 0.3$. Multiply both by $10$ to get $24 \\div 3$."
+      "text": "The number of pieces is $2.4 \\div 0.3$, which equals $24 \\div 3$ after multiplying both by $10$. Then multiply the pieces by $0.25$ dollars."
     },
     {
       "level": "reveal",
-      "text": "$24 \\div 3 = 8$ pieces, and $8 \\times \\$0.25 = \\$2.00$."
+      "text": "$24 \\div 3 = 8$ pieces and $8 \\times 0.25 = 2.00$, so the stickers cost $\\$2$ in all."
     }
   ],
   "explanation": [
-    "Step 1 — count the pieces: $2.4 \\div 0.3$. Multiply both numbers by $10$ to clear the decimal, giving $24 \\div 3 = 8$ pieces.",
-    "Step 2 — pay for the stickers: $8 \\times \\$0.25$.",
-    "Four quarters make a dollar, so $8$ quarters make $\\$2.00$.",
-    "The stickers cost $\\$2$ in all."
+    "Count the pieces first with $2.4 \\div 0.3$. Multiplying both numbers by $10$ gives $24 \\div 3 = 8$ pieces.",
+    "Each piece gets one sticker costing a quarter of a dollar, so the cost is $8 \\times 0.25$ dollars.",
+    "Four quarters make one dollar, so eight quarters make two dollars.",
+    "The stickers cost two dollars in all, which is $\\$2$."
   ],
   "alternativeExplanations": [
     {

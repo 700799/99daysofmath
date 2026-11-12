@@ -12,25 +12,25 @@
     "7,000"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Which place is the $7$ sitting in? Count from the right: ones, tens, hundreds…",
+  "hint": "Every digit has a place, and the place decides what the digit is worth. Which place holds the $7$ here?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Which place is the $7$ sitting in? Count from the right: ones, tens, hundreds…"
+      "text": "Every digit has a place, and the place decides what the digit is worth. Which place holds the $7$ here?"
     },
     {
       "level": "guide",
-      "text": "The $7$ is in the thousands place, so its value is $7 \\times 1000$."
+      "text": "Count places from the right in $47{,}283$: ones, tens, hundreds, thousands. The $7$ sits in the thousands place, so work out $7 \\times 1000$."
     },
     {
       "level": "reveal",
-      "text": "$7 \\times 1000 = 7000$."
+      "text": "$7 \\times 1000 = 7000$, so the digit $7$ has a value of $7000$."
     }
   ],
   "explanation": [
-    "Reading $47{,}283$ from the right: $3$ ones, $8$ tens, $2$ hundreds, $7$ thousands, $4$ ten-thousands.",
-    "The digit $7$ is in the **thousands** place.",
-    "So its value is $7 \\times 1000 = 7000$."
+    "Name the places of $47{,}283$ from the right: $3$ ones, $8$ tens, $2$ hundreds, $7$ thousands and $4$ ten-thousands.",
+    "The digit $7$ is in the **thousands** place, so it stands for $7$ thousands and not just $7$.",
+    "Multiply the digit by its place: $7 \\times 1000 = 7000$, so the value of the $7$ is $7000$."
   ],
   "alternativeExplanations": [
     {

@@ -12,11 +12,12 @@
     "14 units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the length and width by counting between vertices that share a coordinate.",
+  "hint": "Perimeter is the distance around the rectangle. Use the coordinates to find how long each side is.",
   "explanation": [
-    "Length: from $(1, 1)$ to $(5, 1)$ → $5 - 1 = 4$ units.",
-    "Width: from $(1, 1)$ to $(1, 4)$ → $4 - 1 = 3$ units.",
-    "Perimeter $= 2(l + w) = 2(4 + 3) = 2 \\times 7 = 14$ units."
+    "The bottom side runs from $(1, 1)$ to $(5, 1)$. Only $x$ changes, so its length is $5 - 1 = 4$ units.",
+    "The left side runs from $(1, 1)$ to $(1, 4)$. Only $y$ changes, so its length is $4 - 1 = 3$ units.",
+    "Opposite sides of a rectangle are equal, so the perimeter is two lengths plus two widths: $2(4 + 3)$.",
+    "Add inside the parentheses and double: $2 \\times 7 = 14$, so the perimeter is $14$ units."
   ],
   "alternativeExplanations": [
     {
@@ -35,15 +36,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the length and width by counting between vertices that share a coordinate."
+      "text": "Perimeter is the distance around the rectangle. Use the coordinates to find how long each side is."
     },
     {
       "level": "guide",
-      "text": "Length: from $(1, 1)$ to $(5, 1)$ → $5 - 1 = 4$ units."
+      "text": "From $(1, 1)$ to $(5, 1)$ the length is $5 - 1 = 4$, and from $(1, 1)$ to $(1, 4)$ the width is $4 - 1 = 3$. Add up all four sides."
     },
     {
       "level": "reveal",
-      "text": "Perimeter $= 2(l + w) = 2(4 + 3) = 2 \\times 7 = 14$ units."
+      "text": "The sides are $4$, $3$, $4$ and $3$, so the perimeter is $2(4 + 3) = 14$ units."
     }
   ],
   "diagram": {

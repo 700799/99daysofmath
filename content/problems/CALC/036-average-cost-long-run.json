@@ -10,25 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Split the fraction: $\\frac{500}{x} + \\frac{3x}{x}$. One piece fades away as $x$ grows.",
+  "hint": "Try splitting the fraction into two parts, one for the fixed cost and one for the cost per gadget. One of them fades away as $x$ grows.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Split the fraction: $\\frac{500}{x} + \\frac{3x}{x}$. One piece fades away as $x$ grows."
+      "text": "Try splitting the fraction into two parts, one for the fixed cost and one for the cost per gadget. One of them fades away as $x$ grows."
     },
     {
       "level": "guide",
-      "text": "$\\frac{500}{x} \\to 0$ as $x \\to \\infty$, and $\\frac{3x}{x} = 3$."
+      "text": "Write $A(x) = \\frac{500}{x} + \\frac{3x}{x}$. The second part simplifies to a constant. Decide what $\\frac{500}{x}$ does as $x \\to \\infty$."
     },
     {
       "level": "reveal",
-      "text": "The average cost approaches $3$ dollars per gadget."
+      "text": "Since $\\frac{500}{x} \\to 0$, the average cost approaches $3$ dollars per gadget."
     }
   ],
   "explanation": [
-    "$A(x) = \\frac{500}{x} + 3$.",
+    "Split the fraction into the fixed cost share and the per-gadget cost: $A(x) = \\frac{500}{x} + 3$.",
     "As $x \\to \\infty$, the fixed cost $500$ is spread over so many gadgets that $\\frac{500}{x} \\to 0$.",
-    "So $A(x) \\to 3$: in the long run, average cost is just the per-gadget cost."
+    "So $A(x) \\to 3$: in the long run, average cost is just the per-gadget cost of $3$ dollars."
   ],
   "alternativeExplanations": [
     {

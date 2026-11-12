@@ -32,11 +32,11 @@
   "primaryAnswer": "D",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The margin of error creates an interval around the estimate.",
+  "hint": "A margin of error does not give one exact value. It gives a range of plausible values on both sides of the estimate.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The margin of error creates an interval around the estimate."
+      "text": "A margin of error does not give one exact value. It gives a range of plausible values on both sides of the estimate."
     },
     {
       "level": "nudge",
@@ -45,11 +45,11 @@
     },
     {
       "level": "guide",
-      "text": "The interval is $48 \\pm 3$, so from $45\\%$ to $51\\%$."
+      "text": "Subtract and add the margin: $48 - 3 = 45$ and $48 + 3 = 51$. The plausible values run from $45\\%$ to $51\\%$, so test each choice against that range."
     },
     {
       "level": "reveal",
-      "text": "$53\\%$ falls outside that interval."
+      "text": "The values $45\\%$, $47\\%$ and $51\\%$ are inside the range, but $53\\%$ is outside it. The answer is $53\\%$, choice D."
     }
   ],
   "learningObjective": "Build and use a margin-of-error interval.",

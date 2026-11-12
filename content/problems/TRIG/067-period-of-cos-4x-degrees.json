@@ -10,25 +10,25 @@
   "primaryAnswer": "90",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "In degrees, the period of $y = \\cos(bx)$ is $\\frac{360^\\circ}{b}$.",
+  "hint": "A plain cosine wave repeats every $360^\\circ$. A number multiplying $x$ inside makes it repeat that many times as often.",
   "hints": [
     {
       "level": "nudge",
-      "text": "In degrees, the period of $y = \\cos(bx)$ is $\\frac{360^\\circ}{b}$."
+      "text": "A plain cosine wave repeats every $360^\\circ$. A number multiplying $x$ inside makes it repeat that many times as often."
     },
     {
       "level": "guide",
-      "text": "Here $b = 4$, so compute $\\frac{360}{4}$."
+      "text": "In degrees, the period of $y = \\cos(bx)$ is $\\frac{360^\\circ}{b}$. Here $b = 4$, so work out $\\frac{360}{4}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{360}{4} = 90$, so the period is $90^\\circ$."
+      "text": "$\\frac{360}{4} = 90$, so the period of the wave is $90^\\circ$."
     }
   ],
   "explanation": [
-    "A basic cosine wave repeats every $360^\\circ$.",
+    "A basic cosine wave repeats every $360^\\circ$, one full trip around the unit circle.",
     "The factor of 4 inside makes the input run four times as fast, packing four cycles into that same space.",
-    "Each cycle is therefore $\\frac{360^\\circ}{4} = 90^\\circ$ wide."
+    "Each cycle is therefore $\\frac{360^\\circ}{4} = 90^\\circ$ wide, so the period is $90$ degrees."
   ],
   "alternativeExplanations": [
     {

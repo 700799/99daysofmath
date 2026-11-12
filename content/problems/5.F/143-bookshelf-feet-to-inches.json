@@ -10,25 +10,25 @@
   "primaryAnswer": "84",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Each foot is $12$ inches long.",
+  "hint": "Inches are smaller than feet, so the number of inches will be larger. How many inches are in one foot?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Each foot is $12$ inches long."
+      "text": "Inches are smaller than feet, so the number of inches will be larger. How many inches are in one foot?"
     },
     {
       "level": "guide",
-      "text": "Multiply: $7 \\times 12$."
+      "text": "Every foot is $12$ inches, and the shelf is $7$ feet tall, so work out $7 \\times 12$."
     },
     {
       "level": "reveal",
-      "text": "$7 \\times 12 = 84$ inches."
+      "text": "$7 \\times 12 = 84$, so the bookshelf is $84$ inches tall."
     }
   ],
   "explanation": [
-    "There are $12$ inches in every foot, and you are trading feet for smaller units, so multiply.",
-    "$7 \\times 12 = 84$.",
-    "The bookshelf is $84$ inches tall."
+    "There are $12$ inches in every foot. Changing feet into a smaller unit means multiplying.",
+    "Multiply the number of feet by $12$: $7 \\times 12 = 84$.",
+    "So the bookshelf is $84$ inches tall."
   ],
   "alternativeExplanations": [
     {

@@ -32,27 +32,28 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Double the first equation and compare it with the second.",
+  "hint": "Compare the coefficients in the two equations. One left side looks like a multiple of the other, so make them match and see.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Double the first equation and compare it with the second."
+      "text": "Compare the coefficients in the two equations. One left side looks like a multiple of the other, so make them match and see."
     },
     {
       "level": "guide",
-      "text": "Doubling gives $4x + 6y = 24$, but the second equation says $18$."
+      "text": "Multiply the first equation by $2$ to get $4x + 6y = 24$. The second equation says the same left side equals $18$. Can both be true?"
     },
     {
       "level": "reveal",
-      "text": "Same left side, different right side — parallel lines, so no solutions."
+      "text": "The same expression cannot equal both $24$ and $18$, so the lines are parallel and there are no solutions, which is choice B."
     }
   ],
   "learningObjective": "Recognize an inconsistent system from proportional coefficients with a mismatched constant.",
   "topic": "Number of solutions",
   "explanation": [
-    "Multiply the first equation by $2$: $4x + 6y = 24$.",
-    "The second equation says the same expression equals $18$. It cannot be both $24$ and $18$.",
-    "The lines have the same slope but different intercepts — they are parallel and never meet, so there is no solution."
+    "Multiply the first equation by $2$ so its left side matches the second equation: $4x + 6y = 24$.",
+    "The second equation says the same expression $4x + 6y$ equals $18$. No pair of numbers can make it equal both $24$ and $18$.",
+    "The two lines have the same slope and different intercepts, so they are parallel and never meet.",
+    "The system therefore has no solutions, which is choice B."
   ],
   "alternativeExplanations": [
     {

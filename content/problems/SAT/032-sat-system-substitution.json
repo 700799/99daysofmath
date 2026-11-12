@@ -10,27 +10,27 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "One equation already gives $y$ in terms of $x$ — substitute it into the other.",
+  "hint": "The first equation already says what $y$ equals in terms of $x$. How can you use that in the second equation?",
   "hints": [
     {
       "level": "nudge",
-      "text": "One equation already gives $y$ in terms of $x$ — substitute it into the other."
+      "text": "The first equation already says what $y$ equals in terms of $x$. How can you use that in the second equation?"
     },
     {
       "level": "guide",
-      "text": "$3x + 2x = 20$, so $5x = 20$."
+      "text": "Replace $y$ with $2x$ in $3x + y = 20$ to get $3x + 2x = 20$. Solve for $x$, and then remember the question asks for $y$."
     },
     {
       "level": "reveal",
-      "text": "$x = 4$, so $y = 2(4) = 8$."
+      "text": "Since $5x = 20$, $x = 4$. Then $y = 2(4) = 8$, so the value of $y$ is $8$."
     }
   ],
   "learningObjective": "Solve a system by substitution when one variable is isolated.",
   "topic": "Substitution",
   "explanation": [
-    "Replace $y$ with $2x$ in the second equation: $3x + 2x = 20$.",
-    "That gives $5x = 20$, so $x = 4$.",
-    "The question asks for $y$, so finish: $y = 2(4) = 8$."
+    "Substitute $2x$ for $y$ in the second equation, since the first equation says they are equal: $3x + 2x = 20$.",
+    "Combine like terms to get $5x = 20$, and divide by $5$ to find $x = 4$.",
+    "The question asks for $y$, so use the first equation again: $y = 2(4) = 8$."
   ],
   "alternativeExplanations": [
     {

@@ -10,11 +10,12 @@
   "primaryAnswer": "13",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Replace each letter with its value, then follow order of operations.",
+  "hint": "There are two letters, and each one has its own value. Swap each letter for its number before you calculate.",
   "explanation": [
-    "Substitute: $2(5) + 3$.",
-    "Multiply first: $2 \\times 5 = 10$.",
-    "Then add: $10 + 3 = 13$."
+    "Replace $a$ with $5$ and $b$ with $3$, since those are the given values: $2(5) + 3$.",
+    "Multiplication comes before addition, so find $2 \\times 5 = 10$.",
+    "Then add the value of $b$ to that product: $10 + 3 = 13$.",
+    "The value of the expression is $13$ for these values of $a$ and $b$."
   ],
   "alternativeExplanations": [
     {
@@ -33,15 +34,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Replace each letter with its value, then follow order of operations."
+      "text": "There are two letters, and each one has its own value. Swap each letter for its number before you calculate."
     },
     {
       "level": "guide",
-      "text": "Substitute: $2(5) + 3$."
+      "text": "With $a = 5$ and $b = 3$ the expression is $2(5) + 3$. Multiply first, then add."
     },
     {
       "level": "reveal",
-      "text": "Then add: $10 + 3 = 13$."
+      "text": "$2 \\times 5 = 10$ and $10 + 3 = 13$, so the value is $13$."
     }
   ]
 }

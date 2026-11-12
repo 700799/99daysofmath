@@ -10,25 +10,25 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Dividing by a decimal is easier if you first make the divisor a whole number.",
+  "hint": "Dividing by a decimal is awkward. The problem gets easier if the divisor becomes a whole number first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Dividing by a decimal is easier if you first make the divisor a whole number."
+      "text": "Dividing by a decimal is awkward. The problem gets easier if the divisor becomes a whole number first."
     },
     {
       "level": "guide",
-      "text": "Multiply both numbers by $10$: $7.2 \\div 0.8$ becomes $72 \\div 8$."
+      "text": "Multiply both $7.2$ and $0.8$ by $10$. The quotient does not change, and the problem becomes $72 \\div 8$."
     },
     {
       "level": "reveal",
-      "text": "$72 \\div 8 = 9$."
+      "text": "$72 \\div 8 = 9$, so the quotient $7.2 \\div 0.8$ is also $9$."
     }
   ],
   "explanation": [
-    "Scaling both numbers by the same amount does not change a quotient, so multiply each by $10$.",
-    "$7.2 \\times 10 = 72$ and $0.8 \\times 10 = 8$, turning the problem into $72 \\div 8$.",
-    "$72 \\div 8 = 9$, so $7.2 \\div 0.8 = 9$."
+    "Multiplying both numbers by the same amount does not change a quotient, so multiply each one by $10$.",
+    "$7.2 \\times 10 = 72$ and $0.8 \\times 10 = 8$, which turns the problem into $72 \\div 8$.",
+    "Dividing gives $72 \\div 8 = 9$, so $7.2 \\div 0.8 = 9$. Nine groups of $0.8$ make $7.2$."
   ],
   "alternativeExplanations": [
     {

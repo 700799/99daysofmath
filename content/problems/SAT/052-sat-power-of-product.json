@@ -32,19 +32,19 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The outside exponent applies to *everything* inside the parentheses — the $2$ as well as the $x^3$.",
+  "hint": "The exponent outside the parentheses applies to every factor inside. Count the factors inside before you start.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The outside exponent applies to *everything* inside the parentheses — the $2$ as well as the $x^3$."
+      "text": "The exponent outside the parentheses applies to every factor inside. Count the factors inside before you start."
     },
     {
       "level": "guide",
-      "text": "$2^2 = 4$, and $(x^3)^2 = x^{3 \\cdot 2}$."
+      "text": "Square the coefficient to get $2^2$, and square the power to get $(x^3)^2 = x^{3 \\cdot 2}$. Then put the two results together."
     },
     {
       "level": "reveal",
-      "text": "$4x^6$."
+      "text": "Since $2^2 = 4$ and $(x^3)^2 = x^6$, the expression equals $4x^6$, which is choice C."
     }
   ],
   "learningObjective": "Apply the power-of-a-product and power-of-a-power rules together.",

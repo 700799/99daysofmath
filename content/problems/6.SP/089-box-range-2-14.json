@@ -10,29 +10,30 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Range $= \\text{max} - \\text{min}$.",
+  "hint": "Five numbers are given, but the range uses only the two at the very ends.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sort the data from least to greatest first — many statistics get easy after that."
+      "text": "Picture the box plot's two whisker tips. The range uses only those two ends, not the box in the middle."
     },
     {
       "level": "nudge",
-      "text": "Range $= \\text{max} - \\text{min}$."
+      "text": "Five numbers are given, but the range uses only the two at the very ends."
     },
     {
       "level": "guide",
-      "text": "$14 - 2$."
+      "text": "Ignore the quartiles and the median. Take the maximum $14$ and the minimum $2$ and subtract."
     },
     {
       "level": "reveal",
-      "text": "$12$."
+      "text": "$14 - 2 = 12$, so the range of the data is $12$."
     }
   ],
   "explanation": [
-    "Range = maximum $-$ minimum $= 14 - 2 = 12$.",
-    "Final answer: 12."
+    "The range is the maximum minus the minimum, so the quartiles and median are not needed.",
+    "From the box plot, the maximum is $14$ and the minimum is $2$.",
+    "Subtract: $14 - 2 = 12$, so the range of the data is $12$."
   ],
   "tags": [
     "MAP-practice",

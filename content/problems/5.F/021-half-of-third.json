@@ -15,25 +15,25 @@
   "primaryAnswer": "1/6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiply the tops, multiply the bottoms.",
+  "hint": "Multiplying fractions does not need a common denominator. Think about what happens to the numerators and to the denominators.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply the tops, multiply the bottoms."
+      "text": "Multiplying fractions does not need a common denominator. Think about what happens to the numerators and to the denominators."
     },
     {
       "level": "guide",
-      "text": "$1 \\times 1 = 1$ and $2 \\times 3 = 6$."
+      "text": "Multiply the numerators $1 \\times 1$ for the new top, and multiply the denominators $2 \\times 3$ for the new bottom."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2} \\times \\frac{1}{3} = \\frac{1}{6}$."
+      "text": "The top is $1$ and the bottom is $6$, so the product is $\\frac{1}{6}$."
     }
   ],
   "explanation": [
-    "Multiply numerators: $1 \\times 1 = 1$.",
-    "Multiply denominators: $2 \\times 3 = 6$.",
-    "So the product is $\\frac{1}{6}$ — half of a third of the grid."
+    "To multiply fractions, multiply the numerators together: $1 \\times 1 = 1$.",
+    "Then multiply the two denominators together: $2 \\times 3 = 6$.",
+    "The product is $\\frac{1}{6}$, which makes sense because half of one third is one sixth."
   ],
   "alternativeExplanations": [
     {

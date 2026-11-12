@@ -10,25 +10,25 @@
   "primaryAnswer": "81",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$3^4$ means four copies of 3 multiplied: $3 \\times 3 \\times 3 \\times 3$.",
+  "hint": "The exponent tells you how many times the base is used as a factor. Write the power out as a multiplication.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$3^4$ means four copies of 3 multiplied: $3 \\times 3 \\times 3 \\times 3$."
+      "text": "The exponent tells you how many times the base is used as a factor. Write the power out as a multiplication."
     },
     {
       "level": "guide",
-      "text": "Triple step by step: 3, 9, 27, ..."
+      "text": "$3^4$ is $3 \\times 3 \\times 3 \\times 3$. Keep tripling from the first factor: $3$, $9$, $27$, and then once more."
     },
     {
       "level": "reveal",
-      "text": "One more triple: $27 \\times 3 = 81$ people."
+      "text": "The last tripling is $27 \\times 3 = 81$, so $81$ new people hear the rumor."
     }
   ],
   "explanation": [
-    "Each round multiplies by 3, so round 4 is $3^4 = 3 \\times 3 \\times 3 \\times 3$.",
-    "Step by step: $3 \\times 3 = 9$, $9 \\times 3 = 27$, $27 \\times 3 = 81$.",
-    "81 new people hear the rumor in round 4."
+    "Each round multiplies the number of new people by $3$, so round four is $3^4 = 3 \\times 3 \\times 3 \\times 3$.",
+    "Multiply step by step: $3 \\times 3 = 9$, then $9 \\times 3 = 27$, then $27 \\times 3 = 81$.",
+    "So $3^4 = 81$, and $81$ new people hear the rumor in round four."
   ],
   "alternativeExplanations": [
     {

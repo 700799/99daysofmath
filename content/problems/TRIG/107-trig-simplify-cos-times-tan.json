@@ -16,25 +16,25 @@
     "sin(θ)"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Replace $\\tan\\theta$ with $\\frac{\\sin\\theta}{\\cos\\theta}$ and see what cancels.",
+  "hint": "Rewrite the tangent in terms of sine and cosine using the quotient identity. Then look for a factor that appears on both the top and the bottom.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Replace $\\tan\\theta$ with $\\frac{\\sin\\theta}{\\cos\\theta}$ and see what cancels."
+      "text": "Rewrite the tangent in terms of sine and cosine using the quotient identity. Then look for a factor that appears on both the top and the bottom."
     },
     {
       "level": "guide",
-      "text": "$\\cos\\theta \\cdot \\frac{\\sin\\theta}{\\cos\\theta}$ — the cosines are on opposite sides of the fraction bar."
+      "text": "The product becomes $\\cos\\theta \\cdot \\frac{\\sin\\theta}{\\cos\\theta}$. The two cosines are on opposite sides of the fraction bar, so they cancel."
     },
     {
       "level": "reveal",
-      "text": "They cancel, leaving $\\sin\\theta$."
+      "text": "After the cosines cancel, what is left is $\\sin\\theta$ (type sin(theta))."
     }
   ],
   "explanation": [
     "Rewrite the tangent using the quotient identity: $\\cos\\theta \\cdot \\frac{\\sin\\theta}{\\cos\\theta}$.",
     "The $\\cos\\theta$ in front cancels with the $\\cos\\theta$ in the denominator.",
-    "What is left is $\\sin\\theta$."
+    "What is left after cancelling is $\\sin\\theta$, a single trig function."
   ],
   "alternativeExplanations": [
     {

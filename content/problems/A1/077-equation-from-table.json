@@ -16,25 +16,25 @@
     "y=3+5x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Two jobs: find the constant JUMP (that is $m$), then the value at $x = 0$ (that is $b$).",
+  "hint": "You need two things from the table: the constant change in $y$, and the $y$-value where $x$ is zero.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two jobs: find the constant JUMP (that is $m$), then the value at $x = 0$ (that is $b$)."
+      "text": "You need two things from the table: the constant change in $y$, and the $y$-value where $x$ is zero."
     },
     {
       "level": "guide",
-      "text": "Jump: $8 - 3 = 5$. Start: $y = 3$ when $x = 0$."
+      "text": "The $y$-values rise by $8 - 3 = 5$ each step, so $m = 5$. At $x = 0$ the table shows $y = 3$, so $b = 3$."
     },
     {
       "level": "reveal",
-      "text": "$y = 5x + 3$."
+      "text": "With slope $5$ and intercept $3$, the equation of the line is $y = 5x + 3$."
     }
   ],
   "explanation": [
-    "The jump: $3 \\to 8 \\to 13$ climbs by $5$ each step, so $m = 5$.",
-    "The start: at $x = 0$, $y = 3$, so $b = 3$.",
-    "Equation: $y = 5x + 3$. Check: $x = 2$ gives $5 \\times 2 + 3 = 13$. Correct!"
+    "The $y$-values go $3$, $8$, $13$, rising by $5$ each time $x$ goes up by $1$, so the slope is $m = 5$.",
+    "The table shows $y = 3$ when $x = 0$, so the $y$-intercept is $b = 3$.",
+    "The equation is $y = 5x + 3$. Check with $x = 2$: $5 \\times 2 + 3 = 13$, which matches the table."
   ],
   "alternativeExplanations": [
     {

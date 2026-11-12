@@ -10,27 +10,27 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Both terms share a common factor of $x$.",
+  "hint": "There is no constant term in this equation. Look at what the two terms that remain have in common.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Both terms share a common factor of $x$."
+      "text": "There is no constant term in this equation. Look at what the two terms that remain have in common."
     },
     {
       "level": "guide",
-      "text": "Factor it out: $x(x - 5) = 0$."
+      "text": "Both terms contain $x$, so factor it out to get $x(x - 5) = 0$. Then set each factor equal to zero."
     },
     {
       "level": "reveal",
-      "text": "So $x = 0$ or $x = 5$; the nonzero solution is $5$."
+      "text": "The factors give $x = 0$ and $x = 5$, so the nonzero solution is $5$."
     }
   ],
   "learningObjective": "Solve a quadratic with no constant term by factoring out the variable.",
   "topic": "Factoring quadratics",
   "explanation": [
-    "Factor out the common $x$: $x(x - 5) = 0$.",
-    "Setting each factor to zero: $x = 0$ or $x - 5 = 0$, so $x = 5$.",
-    "The question asks for the nonzero one: $5$."
+    "Factor out the common $x$ rather than dividing by it, so no solution is lost: $x(x - 5) = 0$.",
+    "A product is zero only when one factor is zero, so either $x = 0$ or $x - 5 = 0$.",
+    "The second case gives $x = 5$, so the nonzero solution is $5$."
   ],
   "alternativeExplanations": [
     {

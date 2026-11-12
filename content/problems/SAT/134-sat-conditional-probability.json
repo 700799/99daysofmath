@@ -17,27 +17,27 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.005,
-  "hint": "\"Selected from Grade 10\" restricts the pool. What is the new denominator?",
+  "hint": "The student is chosen only from Grade $10$. That condition changes the group you divide by.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Selected from Grade 10\" restricts the pool. What is the new denominator?"
+      "text": "The student is chosen only from Grade $10$. That condition changes the group you divide by."
     },
     {
       "level": "guide",
-      "text": "The Grade 10 column totals $90$, and $35$ of them take the bus."
+      "text": "The Grade $10$ column has a total of $90$ students, and $35$ of them take the bus. Divide $35$ by $90$ and round to two decimal places."
     },
     {
       "level": "reveal",
-      "text": "$\\dfrac{35}{90} \\approx 0.39$."
+      "text": "The fraction $\\dfrac{35}{90}$ is about $0.389$, so the probability is $0.39$ to the nearest hundredth."
     }
   ],
   "learningObjective": "Compute a conditional probability from a two-way table.",
   "topic": "Conditional probability",
   "explanation": [
-    "The condition \"from Grade 10\" restricts attention to that column, whose total is $90$.",
-    "Within Grade 10, $35$ students take the bus.",
-    "$\\dfrac{35}{90} = 0.3888\\ldots \\approx 0.39$."
+    "The student comes from Grade $10$, so only that column of the table matters. Its total is $90$ students.",
+    "Within Grade $10$, the number of students who take the bus is $35$.",
+    "Divide to get $\\dfrac{35}{90} = 0.3888\\ldots$, which rounds to a probability of $0.39$."
   ],
   "alternativeExplanations": [
     {

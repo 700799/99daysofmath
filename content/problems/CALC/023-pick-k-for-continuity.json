@@ -10,25 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Continuous at $3$ means the two pieces meet: the left piece must arrive at the same height the right piece starts at.",
+  "hint": "Continuous at $3$ means the two pieces meet: the left piece must arrive at the same height where the right piece starts.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Continuous at $3$ means the two pieces meet: the left piece must arrive at the same height the right piece starts at."
+      "text": "Continuous at $3$ means the two pieces meet: the left piece must arrive at the same height where the right piece starts."
     },
     {
       "level": "guide",
-      "text": "Right piece at $x = 3$: $3^2 = 9$. Left piece heads to $2(3) + k = 6 + k$. Set them equal."
+      "text": "The right piece at $x = 3$ gives $3^2 = 9$. The left piece heads to $2(3) + k = 6 + k$. Set the two heights equal and solve."
     },
     {
       "level": "reveal",
-      "text": "$6 + k = 9$, so $k = 3$."
+      "text": "Solving $6 + k = 9$ gives $k = 3$, so the function is continuous when $k = 3$."
     }
   ],
   "explanation": [
     "The right piece gives $f(3) = 9$ and a right-hand limit of $9$.",
-    "The left-hand limit is $2(3) + k = 6 + k$.",
-    "For continuity, $6 + k = 9$, so $k = 3$."
+    "The left piece is a line, so its left-hand limit at $3$ is $2(3) + k = 6 + k$.",
+    "Continuity needs both sides to match the value, so $6 + k = 9$ and $k = 3$."
   ],
   "alternativeExplanations": [
     {

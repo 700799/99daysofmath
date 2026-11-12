@@ -10,27 +10,27 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "\"Per hour\" means divide by the number of hours.",
+  "hint": "Speed in miles per hour tells how many miles are covered in one hour. Which operation shares the distance equally among the hours?",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Per hour\" means divide by the number of hours."
+      "text": "Speed in miles per hour tells how many miles are covered in one hour. Which operation shares the distance equally among the hours?"
     },
     {
       "level": "guide",
-      "text": "$180 \\div 3$."
+      "text": "Divide the total distance by the total time, which here is $180 \\div 3$."
     },
     {
       "level": "reveal",
-      "text": "$60$ miles per hour."
+      "text": "Since $180 \\div 3 = 60$, the speed of the car is $60$ miles per hour."
     }
   ],
   "learningObjective": "Compute a unit rate from a total and a quantity.",
   "topic": "Unit rates",
   "explanation": [
-    "A rate \"per hour\" is the total distance divided by the total time.",
-    "$180 \\div 3 = 60$ miles per hour.",
-    "The units confirm the setup: miles ÷ hours gives miles per hour."
+    "A rate per hour is the total distance divided by the total time taken.",
+    "The car covers $180$ miles in $3$ hours, so the speed is $180 \\div 3 = 60$.",
+    "Miles divided by hours gives miles per hour, so the speed is $60$ miles per hour."
   ],
   "alternativeExplanations": [
     {

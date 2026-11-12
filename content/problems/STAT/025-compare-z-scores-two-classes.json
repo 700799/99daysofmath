@@ -20,7 +20,7 @@
     },
     {
       "id": "C",
-      "label": "Leo, because $90 - 80 = 10$ is bigger than $82 - 70 = 12$",
+      "label": "Leo, because his class has the larger standard deviation ($10$ versus $8$)",
       "correct": false
     },
     {
@@ -32,25 +32,26 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Different tests have different scales. Put both scores on the same scale with $z$-scores.",
+  "hint": "The two tests have different means and spreads, so raw scores cannot be compared directly. What measure puts both on a common scale?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Different tests have different scales. Put both scores on the same scale with $z$-scores."
+      "text": "The two tests have different means and spreads, so raw scores cannot be compared directly. What measure puts both on a common scale?"
     },
     {
       "level": "guide",
-      "text": "Maya: $z = \\frac{82 - 70}{8}$. Leo: $z = \\frac{90 - 80}{10}$."
+      "text": "Find each student's $z$-score using their own class: Maya has $\\frac{82 - 70}{8}$ and Leo has $\\frac{90 - 80}{10}$. The larger one did better relative to the class."
     },
     {
       "level": "reveal",
-      "text": "Maya $z = 1.5$, Leo $z = 1.0$. Maya is farther above her class: choice B."
+      "text": "Maya's $z$-score is $1.5$ and Leo's is $1$, so Maya did better relative to her class: choice B."
     }
   ],
   "explanation": [
-    "Maya: $z = \\frac{82 - 70}{8} = \\frac{12}{8} = 1.5$.",
-    "Leo: $z = \\frac{90 - 80}{10} = \\frac{10}{10} = 1.0$.",
-    "A larger $z$-score means a score farther above its own class mean, so Maya did better relative to her class. Choice B."
+    "A $z$-score tells how many standard deviations a score is above its own class mean, so it allows a fair comparison across tests.",
+    "Maya is $12$ points above a class mean of $70$ with SD $8$, so $z = \\frac{82 - 70}{8} = \\frac{12}{8} = 1.5$.",
+    "Leo is $10$ points above a class mean of $80$ with SD $10$, so $z = \\frac{90 - 80}{10} = 1$, which is smaller even though his raw score is higher.",
+    "Maya is farther above her class mean in standard deviations, so she did better relative to her class. That is choice B."
   ],
   "alternativeExplanations": [
     {

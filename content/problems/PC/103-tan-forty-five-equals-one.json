@@ -10,25 +10,25 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You are dividing a number by ITSELF.",
+  "hint": "The sine and cosine are the same number at $45^\\circ$, so you are dividing a number by ITSELF.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You are dividing a number by ITSELF."
+      "text": "The sine and cosine are the same number at $45^\\circ$, so you are dividing a number by ITSELF."
     },
     {
       "level": "guide",
-      "text": "Any number divided by itself (as long as it is not zero) equals $1$."
+      "text": "Any number that is not zero, divided by itself, gives the same result every time. Apply that to $\\frac{\\sin 45^\\circ}{\\cos 45^\\circ}$."
     },
     {
       "level": "reveal",
-      "text": "$\\tan 45^\\circ = 1$."
+      "text": "A number divided by itself is $1$, so $\\tan 45^\\circ = 1$."
     }
   ],
   "explanation": [
-    "$\\tan\\theta$ is just sine divided by cosine — height up divided by shadow across.",
-    "At $45^\\circ$ you are exactly on the diagonal, so you have gone as far up as you have gone across: $\\sin 45^\\circ = \\cos 45^\\circ$.",
-    "Dividing equal numbers gives $1$, so $\\tan 45^\\circ = 1$."
+    "The tangent is sine divided by cosine, which is height up divided by distance across.",
+    "At $45^\\circ$ the point is exactly on the diagonal, so it is as far up as it is across: $\\sin 45^\\circ = \\cos 45^\\circ$.",
+    "Dividing two equal nonzero numbers gives $1$, so $\\tan 45^\\circ = 1$."
   ],
   "alternativeExplanations": [
     {

@@ -10,11 +10,11 @@
   "primaryAnswer": "54.3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The taut string is the hypotenuse — it is the slanted side, not a leg.",
+  "hint": "The taut string is the slanted side of the triangle, so it is the hypotenuse and not a leg. Where does the kite's height sit relative to the angle?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The taut string is the hypotenuse — it is the slanted side, not a leg."
+      "text": "The taut string is the slanted side of the triangle, so it is the hypotenuse and not a leg. Where does the kite's height sit relative to the angle?"
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Height is opposite the angle and the string is the hypotenuse, so $\\sin \\theta = \\frac{65}{80}$."
+      "text": "Height is opposite the angle and the string is the hypotenuse, so $\\sin \\theta = \\frac{65}{80}$. Turn the fraction into a decimal and apply the inverse sine."
     },
     {
       "level": "reveal",
-      "text": "$\\theta = \\sin^{-1}(0.8125) \\approx 54.3^\\circ$."
+      "text": "$\\theta = \\sin^{-1}(0.8125) \\approx 54.3^\\circ$, so the string makes an angle of about $54.3$ degrees with the ground."
     }
   ],
   "explanation": [
     "The string is the hypotenuse ($80$ m) and the kite height is the side opposite the angle ($65$ m).",
-    "Opposite over hypotenuse is sine: $\\sin \\theta = \\frac{65}{80} = 0.8125$.",
-    "Apply the inverse sine: $\\theta = \\sin^{-1}(0.8125) \\approx 54.3^\\circ$."
+    "Opposite over hypotenuse is sine, so write the ratio and turn it into a decimal: $\\sin \\theta = \\frac{65}{80} = 0.8125$.",
+    "Apply the inverse sine to recover the angle: $\\theta = \\sin^{-1}(0.8125) \\approx 54.3^\\circ$."
   ],
   "alternativeExplanations": [
     {

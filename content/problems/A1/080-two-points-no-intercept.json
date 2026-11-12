@@ -16,11 +16,11 @@
     "y=2+3x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Step 1: slope from the two points. Step 2: plug one point into $y = 3x + b$ to find $b$.",
+  "hint": "Neither point has $x = 0$, so this takes two stages: find the slope, then use a point to find the intercept.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Step 1: slope from the two points. Step 2: plug one point into $y = 3x + b$ to find $b$."
+      "text": "Neither point has $x = 0$, so this takes two stages: find the slope, then use a point to find the intercept."
     },
     {
       "level": "nudge",
@@ -29,17 +29,17 @@
     },
     {
       "level": "guide",
-      "text": "$m = \\frac{11 - 5}{3 - 1} = 3$. Then $5 = 3 \\times 1 + b$, so $b = ?$"
+      "text": "The slope is $m = \\frac{11 - 5}{3 - 1} = 3$. Put the point $(1, 5)$ into $y = 3x + b$ to get $5 = 3 \\times 1 + b$, then solve for $b$."
     },
     {
       "level": "reveal",
-      "text": "$b = 2$, so $y = 3x + 2$."
+      "text": "Solving gives $b = 2$, so the equation of the line is $y = 3x + 2$."
     }
   ],
   "explanation": [
-    "Slope: $m = \\frac{11 - 5}{3 - 1} = \\frac{6}{2} = 3$.",
-    "Find $b$ with the point $(1, 5)$: $5 = 3 \\times 1 + b$, so $b = 2$.",
-    "Equation: $y = 3x + 2$. Check with $(3, 11)$: $3 \\times 3 + 2 = 11$. Correct!"
+    "Find the slope from the two points: $m = \\frac{11 - 5}{3 - 1} = \\frac{6}{2} = 3$.",
+    "Substitute the point $(1, 5)$ into $y = 3x + b$ to find the intercept: $5 = 3 \\times 1 + b$, so $b = 2$.",
+    "The equation is $y = 3x + 2$. Check with the other point $(3, 11)$: $3 \\times 3 + 2 = 11$, which is correct."
   ],
   "alternativeExplanations": [
     {

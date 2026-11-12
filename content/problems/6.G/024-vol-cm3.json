@@ -10,23 +10,26 @@
   "primaryAnswer": "24",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiply all three.",
+  "hint": "A box is a rectangular prism. Its volume comes from all three of its edge lengths together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply all three."
+      "text": "A box is a rectangular prism. Its volume comes from all three of its edge lengths together."
     },
     {
       "level": "guide",
-      "text": "$2 \\times 3 \\times 4$."
+      "text": "Multiply the three measurements: $2 \\times 3 \\times 4$. Find $2 \\times 3$ first and then multiply by $4$."
     },
     {
       "level": "reveal",
-      "text": "$24$."
+      "text": "$2 \\times 3 = 6$ and $6 \\times 4 = 24$, so the volume is $24$ cubic centimeters."
     }
   ],
   "explanation": [
-    "$V = 24$ cm³."
+    "The volume of a box is found by multiplying length, width and height: $V = 2 \\times 3 \\times 4$.",
+    "Multiply the first pair to count the cubes in one layer: $2 \\times 3 = 6$.",
+    "Multiply by the last dimension to count all the layers: $6 \\times 4 = 24$.",
+    "The volume of the box is $24$ cubic centimeters."
   ],
   "tags": [
     "volume"

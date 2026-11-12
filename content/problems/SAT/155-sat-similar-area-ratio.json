@@ -32,19 +32,19 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Area is a two-dimensional measure, so the scale factor applies twice.",
+  "hint": "Area depends on two lengths multiplied together. If every length is scaled, think about how many times the scale factor is used.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Area is a two-dimensional measure, so the scale factor applies twice."
+      "text": "Area depends on two lengths multiplied together. If every length is scaled, think about how many times the scale factor is used."
     },
     {
       "level": "guide",
-      "text": "The area ratio is the side ratio squared."
+      "text": "Every side is $3$ times as long, so both the base and the height are multiplied by $3$. The area is multiplied by $3 \\times 3$, the square of the side ratio."
     },
     {
       "level": "reveal",
-      "text": "$3^2 = 9$, so the ratio is $1 : 9$."
+      "text": "Since $3^2 = 9$, the ratio of the areas is $1 : 9$, which is choice C."
     }
   ],
   "learningObjective": "Apply the square relationship between linear scale and area.",

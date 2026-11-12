@@ -10,25 +10,25 @@
   "primaryAnswer": "0.75",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "TOA: Tangent is Opposite over Adjacent. The hypotenuse is not invited.",
+  "hint": "Use TOA: Tangent is Opposite over Adjacent. The hypotenuse is not needed for this ratio.",
   "hints": [
     {
       "level": "nudge",
-      "text": "TOA: Tangent is Opposite over Adjacent. The hypotenuse is not invited."
+      "text": "Use TOA: Tangent is Opposite over Adjacent. The hypotenuse is not needed for this ratio."
     },
     {
       "level": "guide",
-      "text": "Opposite is $6$, adjacent is $8$, so tangent $= \\frac{6}{8}$."
+      "text": "The opposite side is $6$ and the adjacent side is $8$, so the tangent is $\\frac{6}{8}$. Simplify it and write it as a decimal."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{6}{8} = \\frac{3}{4} = 0.75$."
+      "text": "Simplifying gives $\\frac{6}{8} = \\frac{3}{4} = 0.75$, so the tangent is $0.75$."
     }
   ],
   "explanation": [
-    "TOA: Tangent $=$ Opposite $\\div$ Adjacent.",
-    "Here that is $6 \\div 8$.",
-    "Simplify: $\\frac{6}{8} = \\frac{3}{4} = 0.75$."
+    "The TOA part of SOH-CAH-TOA says Tangent $=$ Opposite $\\div$ Adjacent.",
+    "For this angle the opposite side is $6$ and the adjacent side is $8$, so the tangent is $6 \\div 8$.",
+    "Simplifying the fraction, $\\frac{6}{8} = \\frac{3}{4} = 0.75$, so the tangent is $0.75$."
   ],
   "alternativeExplanations": [
     {

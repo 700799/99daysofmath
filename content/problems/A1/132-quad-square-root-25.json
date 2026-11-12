@@ -10,25 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "What number times itself gives $25$?",
+  "hint": "The equation asks which number, multiplied by itself, makes $25$. There is more than one such number.",
   "hints": [
     {
       "level": "nudge",
-      "text": "What number times itself gives $25$?"
+      "text": "The equation asks which number, multiplied by itself, makes $25$. There is more than one such number."
     },
     {
       "level": "guide",
-      "text": "Both $5 \\times 5$ and $(-5) \\times (-5)$ equal $25$."
+      "text": "Both $5 \\times 5$ and $(-5) \\times (-5)$ equal $25$, so there are two solutions. The question wants the one above zero."
     },
     {
       "level": "reveal",
-      "text": "The positive solution is $x = 5$."
+      "text": "The solutions are $5$ and $-5$, so the positive solution is $x = 5$."
     }
   ],
   "explanation": [
-    "Ask: what squared gives 25?",
-    "$5^2 = 25$ and $(-5)^2 = 25$ — squares have TWO roots.",
-    "The positive one is $x = 5$."
+    "Solving $x^2 = 25$ means finding every number whose square is $25$.",
+    "Both $5^2 = 25$ and $(-5)^2 = 25$ are true, so the equation has two solutions.",
+    "The question asks for the positive one, which is $x = 5$."
   ],
   "alternativeExplanations": [
     {

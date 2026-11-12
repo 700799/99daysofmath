@@ -10,11 +10,11 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You only need the $x$ terms, not the whole expansion.",
+  "hint": "The question asks only about the $x$ term. Think about which of the four products in the expansion contain exactly one $x$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You only need the $x$ terms, not the whole expansion."
+      "text": "The question asks only about the $x$ term. Think about which of the four products in the expansion contain exactly one $x$."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "The two products giving an $x$ term are $2x \\cdot 5$ and $-3 \\cdot x$."
+      "text": "The outer product is $2x \\cdot 5$ and the inner product is $-3 \\cdot x$. Work out both of them and add the results."
     },
     {
       "level": "reveal",
-      "text": "$10x - 3x = 7x$, so $b = 7$."
+      "text": "The two products are $10x$ and $-3x$, which combine to $7x$. The value of $b$ is $7$."
     }
   ],
   "learningObjective": "Extract a single coefficient from a binomial product.",
   "topic": "Expanding expressions",
   "explanation": [
-    "Expanding fully: $(2x - 3)(x + 5) = 2x^2 + 10x - 3x - 15 = 2x^2 + 7x - 15$.",
-    "So $a = 2$, $b = 7$, and $c = -15$.",
-    "The question asks only for $b$, which is $7$."
+    "Multiply each term of the first bracket by each term of the second: $(2x - 3)(x + 5) = 2x^2 + 10x - 3x - 15$.",
+    "Combine the two like terms in the middle to get $2x^2 + 7x - 15$.",
+    "Matching this with $ax^2 + bx + c$ shows that the coefficient of $x$ is $7$, so $b = 7$."
   ],
   "alternativeExplanations": [
     {

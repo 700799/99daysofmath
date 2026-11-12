@@ -32,25 +32,25 @@
   "primaryAnswer": "D",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Tangent is opposite over adjacent — no hypotenuse involved at all.",
+  "hint": "Tangent is opposite over adjacent, so the hypotenuse is not involved at all. Use the two legs of the $30$-$60$-$90$ triangle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Tangent is opposite over adjacent — no hypotenuse involved at all."
+      "text": "Tangent is opposite over adjacent, so the hypotenuse is not involved at all. Use the two legs of the $30$-$60$-$90$ triangle."
     },
     {
       "level": "guide",
-      "text": "Opposite the $60^\\circ$ angle is $\\sqrt{3}$; adjacent to it is $1$."
+      "text": "In the triangle with sides $1$, $\\sqrt{3}$, $2$, the leg opposite the $60^\\circ$ angle is $\\sqrt{3}$ and the leg adjacent to it is $1$. Divide opposite by adjacent."
     },
     {
       "level": "reveal",
-      "text": "$\\tan 60^\\circ = \\frac{\\sqrt{3}}{1} = \\sqrt{3} \\approx 1.73$."
+      "text": "$\\tan 60^\\circ = \\frac{\\sqrt{3}}{1} = \\sqrt{3} \\approx 1.73$, so the exact value is $\\sqrt{3}$, choice D."
     }
   ],
   "explanation": [
     "In the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$, the side opposite $60^\\circ$ is $\\sqrt{3}$ and the adjacent side is $1$.",
-    "Tangent is opposite over adjacent: $\\frac{\\sqrt{3}}{1}$.",
-    "So $\\tan 60^\\circ = \\sqrt{3} \\approx 1.73$."
+    "Tangent is opposite over adjacent, which gives the fraction $\\frac{\\sqrt{3}}{1}$.",
+    "Dividing by $1$ changes nothing, so $\\tan 60^\\circ = \\sqrt{3}$, about $1.73$."
   ],
   "alternativeExplanations": [
     {

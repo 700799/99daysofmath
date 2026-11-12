@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "For a binomial variable, $\\sigma_X = \\sqrt{np(1-p)}$.",
+  "hint": "The count of coupon users among $100$ independent customers is binomial, and a binomial variable has its own formula for standard deviation.",
   "hints": [
     {
       "level": "nudge",
-      "text": "For a binomial variable, $\\sigma_X = \\sqrt{np(1-p)}$."
+      "text": "The count of coupon users among $100$ independent customers is binomial, and a binomial variable has its own formula for standard deviation."
     },
     {
       "level": "guide",
-      "text": "Compute $np(1-p) = 100(0.3)(0.7)$ first, then take the square root."
+      "text": "Use $\\sigma_X = \\sqrt{np(1-p)}$. Work out the variance $100(0.3)(0.7)$ first and then take its square root."
     },
     {
       "level": "reveal",
-      "text": "$100(0.3)(0.7) = 21$, and $\\sqrt{21} \\approx 4.58$."
+      "text": "$100(0.3)(0.7) = 21$ and $\\sqrt{21} \\approx 4.58$, so the standard deviation is about $4.58$ customers."
     }
   ],
   "explanation": [
-    "$X$ is binomial with $n = 100$, $p = 0.3$.",
-    "Variance: $np(1-p) = 100 \\times 0.3 \\times 0.7 = 21$.",
-    "Standard deviation: $\\sqrt{21} \\approx 4.58$ customers. The mean is $30$, so typical counts land within about $\\pm 4.6$ of 30."
+    "$X$ counts successes among $100$ independent customers, so it is binomial with $n = 100$ and $p = 0.3$.",
+    "The variance of a binomial variable is $np(1-p) = 100 \\times 0.3 \\times 0.7 = 21$.",
+    "The standard deviation is $\\sqrt{21} \\approx 4.58$ customers. The mean is $30$, so typical counts land within about $4.6$ of $30$."
   ],
   "alternativeExplanations": [
     {

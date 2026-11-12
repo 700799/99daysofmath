@@ -12,29 +12,31 @@
     "2x + 6"
   ],
   "acceptanceMode": "exact",
-  "hint": "Distribute first, then combine.",
+  "hint": "Clear the parentheses first, then look for like terms to combine.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Translate piece-by-piece: \"more than\" = +, \"product\" = ×, \"less than\" flips the order."
+      "text": "Write out the three groups: $(x + 2) + (x + 2) + (x + 2)$. Count the $x$'s and the $2$'s, then take one $x$ away."
     },
     {
       "level": "nudge",
-      "text": "Distribute first, then combine."
+      "text": "Clear the parentheses first, then look for like terms to combine."
     },
     {
       "level": "guide",
-      "text": "$3(x + 2) = 3x + 6$. Then $3x + 6 - x$."
+      "text": "Distribute to get $3x + 6 - x$. The $x$ terms are $3x$ and $-x$, and $-x$ means $-1x$."
     },
     {
       "level": "reveal",
-      "text": "$2x + 6$."
+      "text": "$3x - x = 2x$, so the simplified expression is $2x + 6$."
     }
   ],
   "explanation": [
-    "Distribute: $3(x + 2) = 3x + 6$.",
-    "Combine: $3x + 6 - x = 2x + 6$."
+    "Distribute the $3$ over both terms in the parentheses: $3(x + 2) = 3x + 6$.",
+    "The expression is now $3x + 6 - x$, with no parentheses.",
+    "Combine the like terms, remembering that $x$ means $1x$: $3x - x = 2x$.",
+    "The $6$ stays as it is, so the answer is $2x + 6$."
   ],
   "tags": [
     "MAP-practice",

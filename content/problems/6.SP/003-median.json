@@ -10,12 +10,12 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "First put the numbers in **order**. The median is the middle value.",
+  "hint": "The median is the middle value, but only after the numbers are lined up from smallest to largest.",
   "explanation": [
-    "Sort the list: $2, 3, 5, 7, 9$.",
-    "There are $5$ numbers — the middle one is the $3$rd value.",
-    "The middle value is $5$.",
-    "Median $= 5$."
+    "The median is the middle value of a sorted list, so sorting comes first: $2, 3, 5, 7, 9$.",
+    "There are $5$ numbers, an odd count, so exactly one value sits in the middle: the $3$rd one.",
+    "The $3$rd value is $5$, with $2$ and $3$ below it and $7$ and $9$ above it.",
+    "The median of the data set is $5$."
   ],
   "alternativeExplanations": [
     {
@@ -36,15 +36,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "First put the numbers in **order**. The median is the middle value."
+      "text": "The median is the middle value, but only after the numbers are lined up from smallest to largest."
     },
     {
       "level": "guide",
-      "text": "Sort the list: $2, 3, 5, 7, 9$."
+      "text": "Put the list in order: $2, 3, 5, 7, 9$. With five values, look for the third one, which has two values on each side."
     },
     {
       "level": "reveal",
-      "text": "Median $= 5$."
+      "text": "The third value in the sorted list is $5$, so the median is $5$."
     }
   ],
   "diagram": {

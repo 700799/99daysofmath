@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "Zeros are the $x$-values that make $p(x) = 0$.",
-    "$x - 5 = 0 \\to x = 5$ and $x + 2 = 0 \\to x = -2$.",
-    "The larger zero is $5$."
+    "Zeros are the $x$-values that make $p(x) = 0$, and a product is zero only when one factor is zero.",
+    "Setting each factor to zero gives $x - 5 = 0$, so $x = 5$, and $x + 2 = 0$, so $x = -2$.",
+    "Comparing the two zeros, $5$ is greater than $-2$, so the larger zero is $5$."
   ],
   "alternativeExplanations": [
     {

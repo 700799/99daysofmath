@@ -15,7 +15,7 @@
     "3667230.00"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply $87315 \\times 42$. Break $42 = 40 + 2$ to keep the arithmetic clean.",
+  "hint": "An estimate tells you what size of answer to expect. Round the bus price to an easy number and think about roughly how many millions the total should be.",
   "hints": [
     {
       "level": "nudge",
@@ -24,22 +24,23 @@
     },
     {
       "level": "nudge",
-      "text": "Estimate first: $87000 \\times 42 \\approx 3{,}654{,}000$. Your real answer should be near that."
+      "text": "An estimate tells you what size of answer to expect. Round the bus price to an easy number and think about roughly how many millions the total should be."
     },
     {
       "level": "guide",
-      "text": "$87315 \\times 40 = 3{,}492{,}600$. $87315 \\times 2 = 174{,}630$. Sum: $3{,}492{,}600 + 174{,}630 = 3{,}667{,}230$."
+      "text": "Split the multiplication into $87{,}315 \\times 40$ and $87{,}315 \\times 2$. The first is $87{,}315 \\times 4$ with a zero attached. Find both products and add them."
     },
     {
       "level": "reveal",
-      "text": "Total cost = $\\$3{,}667{,}230$."
+      "text": "$3{,}492{,}600 + 174{,}630 = 3{,}667{,}230$, so the buses cost $3{,}667{,}230$ dollars in total."
     }
   ],
   "explanation": [
-    "Distribute $42 = 40 + 2$: $87315 \\times 42 = 87315 \\times 40 + 87315 \\times 2$.",
-    "$87315 \\times 2 = 174630$.",
-    "$87315 \\times 40 = 87315 \\times 4 \\times 10 = 349260 \\times 10 = 3{,}492{,}600$.",
-    "Add: $3{,}492{,}600 + 174{,}630 = 3{,}667{,}230$."
+    "The total cost is $42$ equal amounts of $87{,}315$ dollars, so multiply $87{,}315 \\times 42$.",
+    "Split $42$ into $40 + 2$. The distributive property lets you multiply by each part and add: $87315 \\times 40 + 87315 \\times 2$.",
+    "First find the smaller part by doubling: $87315 \\times 2 = 174{,}630$.",
+    "For the larger part multiply by $4$ and then by $10$: $87315 \\times 4 = 349{,}260$, so $87315 \\times 40 = 3{,}492{,}600$.",
+    "Add the two parts: $3{,}492{,}600 + 174{,}630 = 3{,}667{,}230$. The total cost is $3{,}667{,}230$ dollars."
   ],
   "tags": [
     "multiply",

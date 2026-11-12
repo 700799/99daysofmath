@@ -13,24 +13,25 @@
     "4 feet"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$12$ inches make $1$ foot.",
+  "hint": "Feet are a bigger unit than inches, so the number of feet will be smaller. How many inches are in one foot?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$12$ inches make $1$ foot."
+      "text": "Feet are a bigger unit than inches, so the number of feet will be smaller. How many inches are in one foot?"
     },
     {
       "level": "guide",
-      "text": "Going from a small unit to a bigger unit means divide."
+      "text": "There are $12$ inches in each foot. Going from a small unit to a bigger one means dividing, so work out $48 \\div 12$."
     },
     {
       "level": "reveal",
-      "text": "$48 \\div 12 = 4$ feet."
+      "text": "$48 \\div 12 = 4$, so a length of $48$ inches equals $4$ feet."
     }
   ],
   "explanation": [
-    "$12$ in $= 1$ ft.",
-    "$48 \\div 12 = 4$ feet."
+    "The key fact is that $12$ inches make $1$ foot.",
+    "Feet are larger than inches, so group the inches into twelves by dividing.",
+    "Work it out: $48 \\div 12 = 4$, so $48$ inches is $4$ feet."
   ],
   "alternativeExplanations": [
     {

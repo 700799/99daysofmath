@@ -13,7 +13,7 @@
     "1/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Try friendlier numbers: $0.5$ cup per batch for $2$ batches is $1$ cup, and splitting $1$ cup into $4$ jars gives $0.25$ cup each. Multiply to find the total, then divide the total by the number of jars — same two steps.",
+  "hint": "Two things happen to the sugar. First it is measured out for several batches, and then it is shared equally among jars.",
   "hints": [
     {
       "level": "nudge",
@@ -22,22 +22,22 @@
     },
     {
       "level": "nudge",
-      "text": "Two steps: find the total sugar for $4$ batches, then share that total among $6$ jars."
+      "text": "Two things happen to the sugar. First it is measured out for several batches, and then it is shared equally among jars."
     },
     {
       "level": "guide",
-      "text": "Total sugar $= 0.75 \\times 4$. Then divide that total by $6$."
+      "text": "The total sugar is $0.75 \\times 4$ cups. Once you have that total, divide it by the $6$ jars."
     },
     {
       "level": "reveal",
-      "text": "$0.75 \\times 4 = 3$ cups, and $3 \\div 6 = 0.5$ cup per jar."
+      "text": "$0.75 \\times 4 = 3$ cups and $3 \\div 6 = 0.5$, so each jar gets $0.5$ cup of sugar."
     }
   ],
   "explanation": [
-    "Step 1 — total sugar: $0.75 \\times 4$. Since $75 \\times 4 = 300$ and $0.75$ has two decimal places, the product is $3.00 = 3$ cups.",
-    "Step 2 — share it out: $3 \\div 6$.",
-    "Six jars from $3$ cups means each jar gets half a cup: $3 \\div 6 = 0.5$.",
-    "So each jar holds $0.5$ cup of sugar."
+    "Find the total sugar first: $0.75 \\times 4$. Since $75 \\times 4 = 300$ and there are two decimal places, the total is $3.00 = 3$ cups.",
+    "Next share the $3$ cups evenly among the jars, which is $3 \\div 6$.",
+    "Three cups split six ways gives half a cup each, so $3 \\div 6 = 0.5$.",
+    "Each jar gets $0.5$ cup of sugar."
   ],
   "alternativeExplanations": [
     {

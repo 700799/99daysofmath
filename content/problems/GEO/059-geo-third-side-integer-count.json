@@ -53,10 +53,10 @@
     }
   ],
   "explanation": [
-    "The Triangle Inequality gives a range: the third side $s$ satisfies $12 - 7 < s < 12 + 7$, so $5 < s < 19$.",
-    "Both endpoints are excluded — at exactly 5 or exactly 19 the triangle flattens into a line.",
-    "The whole numbers that fit are $6, 7, 8, \\dots, 18$.",
-    "Count them: $18 - 6 + 1 = 13$ possible lengths."
+    "The Triangle Inequality says the third side $s$ must be longer than the difference of the other two and shorter than their sum, so $12 - 7 < s < 12 + 7$, or $5 < s < 19$.",
+    "Neither end value is allowed, because a side of exactly $5$ or $19$ would flatten the triangle into a straight line.",
+    "The whole numbers that fit in this range are therefore $6, 7, 8, \\dots, 18$.",
+    "Counting them gives $18 - 6 + 1 = 13$ possible lengths, which is choice A."
   ],
   "alternativeExplanations": [
     {

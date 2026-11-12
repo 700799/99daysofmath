@@ -10,25 +10,26 @@
   "primaryAnswer": "0.24",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Ignore decimals first: $6 \\times 4 = 24$.",
+  "hint": "Treat the factors as whole numbers first. The decimal places you ignored decide where the point goes in the product.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Ignore decimals first: $6 \\times 4 = 24$."
+      "text": "Treat the factors as whole numbers first. The decimal places you ignored decide where the point goes in the product."
     },
     {
       "level": "guide",
-      "text": "Count decimal places: $0.6$ has $1$, $0.4$ has $1$. Total: $2$."
+      "text": "Find $6 \\times 4$, then count decimal places: $0.6$ has one and $0.4$ has one. The product needs that many places in total."
     },
     {
       "level": "reveal",
-      "text": "Move the decimal $2$ places left: $0.24$."
+      "text": "$6 \\times 4 = 24$, and moving the point two places left gives $0.24$."
     }
   ],
   "explanation": [
-    "$6 \\times 4 = 24$.",
-    "$1 + 1 = 2$ decimal places.",
-    "Result: $0.24$."
+    "Multiply the digits as whole numbers, leaving the points out for now: $6 \\times 4 = 24$.",
+    "Each factor has one decimal place, so the product needs $1 + 1 = 2$ decimal places.",
+    "Write $24$ with two decimal places, which means the point goes in front of the $2$.",
+    "The product is $0.24$. This is sensible because both factors are less than $1$, so the answer is smaller than either."
   ],
   "tags": [
     "decimal",

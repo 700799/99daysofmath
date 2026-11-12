@@ -10,11 +10,11 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Start from the period of plain tangent — and it is NOT $360^\\circ$.",
+  "hint": "Start from the period of plain tangent, and remember that it is NOT $360^\\circ$. Then think about what a number multiplying the angle does.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Start from the period of plain tangent — and it is NOT $360^\\circ$."
+      "text": "Start from the period of plain tangent, and remember that it is NOT $360^\\circ$. Then think about what a number multiplying the angle does."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$y = \\tan\\theta$ has period $180^\\circ$; a coefficient $B$ inside divides that period by $B$."
+      "text": "The function $y = \\tan\\theta$ has period $180^\\circ$, and a coefficient $B$ inside divides that period by $B$. Here that means $\\frac{180^\\circ}{3}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{180^\\circ}{3} = 60^\\circ$."
+      "text": "$\\frac{180^\\circ}{3} = 60^\\circ$, so the period is $60$ degrees."
     }
   ],
   "explanation": [
     "The period of $y = \\tan\\theta$ is $180^\\circ$, half that of sine and cosine.",
-    "For $y = \\tan(B\\theta)$ the period becomes $\\frac{180^\\circ}{B}$.",
-    "With $B = 3$ the period is $\\frac{180^\\circ}{3} = 60^\\circ$."
+    "For $y = \\tan(B\\theta)$ the period becomes $\\frac{180^\\circ}{B}$, since the input runs $B$ times as fast.",
+    "Here the coefficient is $B = 3$, so the period is $\\frac{180^\\circ}{3} = 60^\\circ$."
   ],
   "alternativeExplanations": [
     {

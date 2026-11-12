@@ -10,25 +10,25 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Stretching taller is the same as $3 \\cdot f(x)$: every height gets multiplied.",
+  "hint": "Stretching taller works like $3 \\cdot f(x)$. What does that do to the height of each point?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Stretching taller is the same as $3 \\cdot f(x)$: every height gets multiplied."
+      "text": "Stretching taller works like $3 \\cdot f(x)$. What does that do to the height of each point?"
     },
     {
       "level": "guide",
-      "text": "Multiply the old height $5$ by $3$."
+      "text": "Tripling means multiplying by $3$, and the old height is $5$ units. Work out $3 \\times 5$."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 5 = 15$ units above the middle line."
+      "text": "The new height is $3 \\times 5 = 15$, so the point is now $15$ units above the middle line."
     }
   ],
   "explanation": [
-    "A vertical stretch multiplies every $y$-value by the same number.",
-    "Tripling means multiply by $3$.",
-    "$3 \\times 5 = 15$."
+    "A vertical stretch multiplies every height by the same number and leaves left-right positions alone.",
+    "The word tripling tells us the multiplier is $3$, and the point started $5$ units above the line.",
+    "Multiplying gives $3 \\times 5 = 15$, so the point is now $15$ units above the middle line."
   ],
   "alternativeExplanations": [
     {

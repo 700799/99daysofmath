@@ -18,7 +18,7 @@
     },
     {
       "level": "guide",
-      "text": "In $y = a\\sin x$, the amplitude is $|a|$."
+      "text": "In an equation of the form $y = a\\sin x$, the amplitude is $|a|$. Read off the number multiplying the sine in this equation."
     },
     {
       "level": "reveal",

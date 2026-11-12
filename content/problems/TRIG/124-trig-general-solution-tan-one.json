@@ -32,23 +32,23 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "A general solution adds one full PERIOD of the function each time.",
+  "hint": "A general solution starts from one solution and adds one full PERIOD of the function each time. What is the period of tangent?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A general solution adds one full PERIOD of the function each time."
+      "text": "A general solution starts from one solution and adds one full PERIOD of the function each time. What is the period of tangent?"
     },
     {
       "level": "guide",
-      "text": "The period of tangent is $180^\\circ$, not $360^\\circ$."
+      "text": "One solution is $45^\\circ$, since $\\tan 45^\\circ = 1$. The period of tangent is $180^\\circ$, not $360^\\circ$, so add multiples of $180^\\circ$ to that solution."
     },
     {
       "level": "reveal",
-      "text": "So the answers are $45^\\circ$, $225^\\circ$, $405^\\circ$, ... that is, $45^\\circ + 180^\\circ k$."
+      "text": "The answers are $45^\\circ$, $225^\\circ$, $405^\\circ$ and so on, that is, $\\theta = 45^\\circ + 180^\\circ k$, choice A."
     }
   ],
   "explanation": [
-    "One solution is $\\theta = 45^\\circ$, since $\\tan 45^\\circ = 1$.",
+    "One solution is $\\theta = 45^\\circ$, since $\\tan 45^\\circ = 1$ in the triangle with equal legs.",
     "Tangent repeats every $180^\\circ$, so every angle $180^\\circ$ away from a solution is also a solution.",
     "The general solution is $\\theta = 45^\\circ + 180^\\circ k$ for any integer $k$."
   ],

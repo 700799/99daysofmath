@@ -13,11 +13,11 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "The slope is $b = \\frac{\\sum (x - \\bar{x})(y - \\bar{y})}{\\sum (x - \\bar{x})^2}$. Start by finding $\\bar{x}$ and $\\bar{y}$.",
+  "hint": "The least-squares slope compares how $x$ and $y$ vary together with how $x$ varies alone. Both parts are measured from the means, so find $\\bar{x}$ and $\\bar{y}$ first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The slope is $b = \\frac{\\sum (x - \\bar{x})(y - \\bar{y})}{\\sum (x - \\bar{x})^2}$. Start by finding $\\bar{x}$ and $\\bar{y}$."
+      "text": "The least-squares slope compares how $x$ and $y$ vary together with how $x$ varies alone. Both parts are measured from the means, so find $\\bar{x}$ and $\\bar{y}$ first."
     },
     {
       "level": "nudge",
@@ -26,17 +26,18 @@
     },
     {
       "level": "guide",
-      "text": "$\\bar{x} = 2.5$, $\\bar{y} = 4.5$. The $x$-deviations are $-1.5, -0.5, 0.5, 1.5$ and the $y$-deviations are $-2.5, -0.5, 0.5, 2.5$. Multiply pairs and add; square the $x$-deviations and add."
+      "text": "$\\bar{x} = 2.5$ and $\\bar{y} = 4.5$. The $x$-deviations are $-1.5, -0.5, 0.5, 1.5$ and the $y$-deviations are $-2.5, -0.5, 0.5, 2.5$. Multiply matching pairs and add for the top; square the $x$-deviations and add for the bottom."
     },
     {
       "level": "reveal",
-      "text": "Top: $3.75 + 0.25 + 0.25 + 3.75 = 8$. Bottom: $2.25 + 0.25 + 0.25 + 2.25 = 5$. Slope $= \\frac{8}{5} = 1.6$ points per hour."
+      "text": "The top is $3.75 + 0.25 + 0.25 + 3.75 = 8$ and the bottom is $2.25 + 0.25 + 0.25 + 2.25 = 5$, so the slope is $\\frac{8}{5} = 1.6$ points per hour."
     }
   ],
   "explanation": [
-    "$\\bar{x} = \\frac{1 + 2 + 3 + 4}{4} = 2.5$ and $\\bar{y} = \\frac{2 + 4 + 5 + 7}{4} = 4.5$.",
-    "Products of deviations: $(-1.5)(-2.5) + (-0.5)(-0.5) + (0.5)(0.5) + (1.5)(2.5) = 3.75 + 0.25 + 0.25 + 3.75 = 8$. Squared $x$-deviations: $2.25 + 0.25 + 0.25 + 2.25 = 5$.",
-    "Slope $b = \\frac{8}{5} = 1.6$: each extra hour of study predicts $1.6$ more points. (The intercept is $4.5 - 1.6(2.5) = 0.5$, so $\\hat{y} = 0.5 + 1.6x$.)"
+    "Deviations are measured from the means, so compute $\\bar{x} = \\frac{1 + 2 + 3 + 4}{4} = 2.5$ and $\\bar{y} = \\frac{2 + 4 + 5 + 7}{4} = 4.5$.",
+    "The products of paired deviations are $(-1.5)(-2.5) + (-0.5)(-0.5) + (0.5)(0.5) + (1.5)(2.5) = 8$, which measures how $x$ and $y$ move together.",
+    "The squared $x$-deviations add to $2.25 + 0.25 + 0.25 + 2.25 = 5$, which measures the spread in $x$ alone.",
+    "The slope is $b = \\frac{8}{5} = 1.6$, so each extra hour of study predicts $1.6$ more points. (The intercept is $4.5 - 1.6(2.5) = 0.5$, so $\\hat{y} = 0.5 + 1.6x$.)"
   ],
   "alternativeExplanations": [
     {

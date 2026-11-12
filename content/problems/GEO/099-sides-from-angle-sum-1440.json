@@ -10,11 +10,11 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Start from $(n - 2) \\times 180 = 1440$ and work backwards.",
+  "hint": "You know the angle sum and need the number of sides. Use the angle sum formula with $n$ as the unknown.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Start from $(n - 2) \\times 180 = 1440$ and work backwards."
+      "text": "You know the angle sum and need the number of sides. Use the angle sum formula with $n$ as the unknown."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Divide both sides by $180$: $n - 2 = 8$."
+      "text": "Set $(n - 2) \\times 180 = 1440$. Dividing both sides by $180$ gives $n - 2 = 8$, which leaves one more step."
     },
     {
       "level": "reveal",
-      "text": "Add $2$: $n = 10$ sides."
+      "text": "Adding $2$ gives $n = 10$, so the polygon has $10$ sides."
     }
   ],
   "explanation": [
-    "Set up the interior-angle-sum formula as an equation: $(n - 2) \\times 180 = 1440$.",
-    "Divide both sides by $180$: $n - 2 = 8$.",
-    "Add $2$ to both sides: $n = 10$. The polygon is a decagon."
+    "The interior angle sum of a polygon with $n$ sides is $(n - 2) \\times 180$, so set that equal to the given total: $(n - 2) \\times 180 = 1440$.",
+    "Dividing both sides by $180$ undoes the multiplication and gives $n - 2 = 8$.",
+    "Adding $2$ to both sides gives $n = 10$, so the polygon has $10$ sides and is a decagon."
   ],
   "alternativeExplanations": [
     {

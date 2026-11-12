@@ -12,24 +12,26 @@
     "$45"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Size\" of debt means absolute value.",
+  "hint": "The negative sign says the money is owed. The size of the debt is how far the balance is from zero, without the sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Size\" of debt means absolute value."
+      "text": "The negative sign says the money is owed. The size of the debt is how far the balance is from zero, without the sign."
     },
     {
       "level": "guide",
-      "text": "$|{-45}| = ?$"
+      "text": "The size of a number, ignoring its sign, is its absolute value. Work out $|{-45}|$, the distance from $-45$ to $0$."
     },
     {
       "level": "reveal",
-      "text": "$45$."
+      "text": "$|{-45}| = 45$, so the debt is $45$ dollars."
     }
   ],
   "explanation": [
-    "$|{-45}| = 45$.",
-    "Debt size: \\$$45$."
+    "A balance of $-45$ means the account is $45$ dollars below zero.",
+    "The size of a debt is the distance of the balance from $0$, which is its absolute value.",
+    "Compute the absolute value by dropping the negative sign: $|{-45}| = 45$.",
+    "The size of the debt is $45$ dollars."
   ],
   "tags": [
     "absolute-value",

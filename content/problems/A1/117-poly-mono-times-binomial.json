@@ -14,26 +14,26 @@
     "6x²+8x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The $2x$ outside hands a snack to BOTH terms inside.",
+  "hint": "The $2x$ outside the parentheses must multiply both terms inside. Work on the numbers and the letters separately.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $2x$ outside hands a snack to BOTH terms inside."
+      "text": "The $2x$ outside the parentheses must multiply both terms inside. Work on the numbers and the letters separately."
     },
     {
       "level": "guide",
-      "text": "$2x \\times 3x = 6x^2$ (multiply numbers, multiply the $x$s)."
+      "text": "Find $2x \\times 3x$ by multiplying $2 \\times 3$ and $x \\times x$. Then find $2x \\times 4$ and add the two products."
     },
     {
       "level": "reveal",
-      "text": "$2x \\times 3x = 6x^2$ and $2x \\times 4 = 8x$, so the answer is $6x^2 + 8x$."
+      "text": "$2x \\times 3x = 6x^2$ and $2x \\times 4 = 8x$, so the product is $6x^2 + 8x$."
     }
   ],
   "explanation": [
-    "Distribute $2x$ to each term.",
-    "$2x \\times 3x = 6x^2$ — the coefficients multiply and $x \\times x = x^2$.",
-    "$2x \\times 4 = 8x$.",
-    "Answer: $6x^2 + 8x$."
+    "Use the distributive property to multiply $2x$ by each term inside the parentheses.",
+    "For the first term, the coefficients multiply and $x \\times x = x^2$, so $2x \\times 3x = 6x^2$.",
+    "For the second term, only the numbers multiply: $2x \\times 4 = 8x$.",
+    "Adding the two products gives the answer $6x^2 + 8x$."
   ],
   "alternativeExplanations": [
     {

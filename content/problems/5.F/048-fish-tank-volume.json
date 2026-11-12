@@ -17,11 +17,11 @@
     "72,000"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Same box formula, just bigger numbers: $l \\times w \\times h$.",
+  "hint": "A fish tank is shaped like a box. Its volume comes from multiplying its three measurements together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same box formula, just bigger numbers: $l \\times w \\times h$."
+      "text": "A fish tank is shaped like a box. Its volume comes from multiplying its three measurements together."
     },
     {
       "level": "nudge",
@@ -30,17 +30,17 @@
     },
     {
       "level": "guide",
-      "text": "$60 \\times 30 = 1800$. Then multiply by $40$."
+      "text": "Multiply $60 \\times 30 \\times 40$. Do $60 \\times 30 = 1800$ first, and then multiply that result by $40$."
     },
     {
       "level": "reveal",
-      "text": "$1800 \\times 40 = 72{,}000$ cubic cm."
+      "text": "$1800 \\times 40 = 72{,}000$, so the tank's volume is $72{,}000$ cubic centimeters."
     }
   ],
   "explanation": [
-    "$V = 60 \\times 30 \\times 40$.",
-    "$60 \\times 30 = 1800$.",
-    "$1800 \\times 40 = 72{,}000$ cubic centimeters."
+    "The tank is a rectangular box, so its volume is length times width times height: $60 \\times 30 \\times 40$.",
+    "Multiply the length and width to get the area of the bottom: $60 \\times 30 = 1800$.",
+    "Multiply by the height: $1800 \\times 40 = 72{,}000$, so the volume is $72{,}000$ cubic centimeters."
   ],
   "alternativeExplanations": [
     {

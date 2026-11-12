@@ -10,25 +10,25 @@
   "primaryAnswer": "720",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The interior angle sum of an $n$-gon is $(n - 2) \\times 180^\\circ$.",
+  "hint": "The total of the interior angles depends only on the number of sides. Recall the formula that uses the number of sides $n$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The interior angle sum of an $n$-gon is $(n - 2) \\times 180^\\circ$."
+      "text": "The total of the interior angles depends only on the number of sides. Recall the formula that uses the number of sides $n$."
     },
     {
       "level": "guide",
-      "text": "With $n = 6$: $(6 - 2) \\times 180$."
+      "text": "The sum for a polygon with $n$ sides is $(n - 2) \\times 180^\\circ$. Put in $n = 6$ and work out $(6 - 2) \\times 180$."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 180 = 720^\\circ$."
+      "text": "$4 \\times 180 = 720$, so the interior angles add to $720^\\circ$."
     }
   ],
   "explanation": [
-    "Use the formula $(n - 2) \\times 180^\\circ$ with $n = 6$.",
-    "$(6 - 2) = 4$.",
-    "$4 \\times 180 = 720^\\circ$."
+    "The interior angles of a polygon with $n$ sides add to $(n - 2) \\times 180^\\circ$, because the polygon can be cut into $n - 2$ triangles.",
+    "A hexagon has $n = 6$, so it splits into $6 - 2 = 4$ triangles.",
+    "Each triangle contributes $180^\\circ$, so the sum is $4 \\times 180 = 720^\\circ$."
   ],
   "alternativeExplanations": [
     {

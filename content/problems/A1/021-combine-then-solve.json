@@ -10,25 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "First tidy up: $2x$ and $3x$ are like terms. Combine them.",
+  "hint": "Before undoing anything, look at the left side. Can the two terms be joined into one?",
   "hints": [
     {
       "level": "nudge",
-      "text": "First tidy up: $2x$ and $3x$ are like terms. Combine them."
+      "text": "Before undoing anything, look at the left side. Can the two terms be joined into one?"
     },
     {
       "level": "guide",
-      "text": "$2x + 3x = 5x$, so $5x = 25$. Now divide both sides by $5$."
+      "text": "$2x$ and $3x$ are like terms that combine to $5x$, so the equation is $5x = 25$. Divide both sides by $5$."
     },
     {
       "level": "reveal",
-      "text": "$x = 25 \\div 5 = 5$."
+      "text": "$25 \\div 5 = 5$, so the equation's solution is $x = 5$."
     }
   ],
   "explanation": [
-    "Combine like terms first: $2x + 3x = 5x$.",
-    "Now solve $5x = 25$: divide both sides by 5.",
-    "$x = 5$. Check: $2(5) + 3(5) = 10 + 15 = 25$. ✓"
+    "$2x$ and $3x$ are like terms, so combine them first: $2x + 3x = 5x$.",
+    "The equation is now $5x = 25$, and dividing both sides by $5$ undoes the multiplication.",
+    "That gives $x = 5$. Check: $2(5) + 3(5) = 10 + 15 = 25$, which is true."
   ],
   "alternativeExplanations": [
     {

@@ -10,25 +10,25 @@
   "primaryAnswer": "110",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "An exterior angle is related to the two interior angles far away from it.",
+  "hint": "An exterior angle of a triangle is tied to the two interior angles that do not touch it. Recall that relationship.",
   "hints": [
     {
       "level": "nudge",
-      "text": "An exterior angle is related to the two interior angles far away from it."
+      "text": "An exterior angle of a triangle is tied to the two interior angles that do not touch it. Recall that relationship."
     },
     {
       "level": "guide",
-      "text": "The Exterior Angle Theorem: the exterior angle equals the SUM of the two remote interior angles."
+      "text": "The Exterior Angle Theorem says the exterior angle equals the sum of the two remote interior angles, so add $50$ and $60$."
     },
     {
       "level": "reveal",
-      "text": "$50 + 60 = 110^\\circ$."
+      "text": "$50 + 60 = 110$, so the exterior angle measures $110^\\circ$."
     }
   ],
   "explanation": [
-    "The Exterior Angle Theorem says an exterior angle equals the sum of the two remote (non-adjacent) interior angles.",
-    "The remote interior angles here are $50^\\circ$ and $60^\\circ$.",
-    "So the exterior angle is $50 + 60 = 110^\\circ$."
+    "The Exterior Angle Theorem says an exterior angle of a triangle equals the sum of the two remote interior angles.",
+    "The remote angles are the ones at the other two corners, which measure $50^\\circ$ and $60^\\circ$.",
+    "Adding them gives $50 + 60 = 110$, so the exterior angle is $110^\\circ$."
   ],
   "alternativeExplanations": [
     {

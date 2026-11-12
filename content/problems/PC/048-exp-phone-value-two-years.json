@@ -10,11 +10,11 @@
   "primaryAnswer": "337.5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Losing $25\\%$ means keeping $75\\%$. Turn that into a decay factor.",
+  "hint": "Losing $25\\%$ means keeping $75\\%$. Turn that into a decay factor and use it once per year.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Losing $25\\%$ means keeping $75\\%$. Turn that into a decay factor."
+      "text": "Losing $25\\%$ means keeping $75\\%$. Turn that into a decay factor and use it once per year."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$100\\% - 25\\% = 75\\% = 0.75$. Year 1: $600 \\times 0.75 = 450$."
+      "text": "The factor is $100\\% - 25\\% = 75\\% = 0.75$. After year 1 the phone is worth $600 \\times 0.75 = 450$. Apply the factor to $450$ once more."
     },
     {
       "level": "reveal",
-      "text": "Year 2: $450 \\times 0.75 = 337.5$, so the phone is worth $\\$337.50$."
+      "text": "Year 2 gives $450 \\times 0.75 = 337.5$, so the phone is worth $337.50$ dollars."
     }
   ],
   "explanation": [
-    "Losing $25\\%$ means $75\\%$ stays, so the decay factor is $0.75$.",
-    "After year 1: $600 \\times 0.75 = 450$.",
-    "After year 2: $450 \\times 0.75 = 337.5$ dollars."
+    "Losing $25\\%$ each year means $75\\%$ of the value stays, so the decay factor is $0.75$.",
+    "After the first year the value is $600 \\times 0.75 = 450$ dollars.",
+    "The second year shrinks that new value: $450 \\times 0.75 = 337.5$, so the phone is worth $337.50$ dollars."
   ],
   "alternativeExplanations": [
     {

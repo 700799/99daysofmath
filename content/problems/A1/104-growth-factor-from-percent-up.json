@@ -12,25 +12,25 @@
     "1.1"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Growing 10% means you keep ALL of it (100%) plus 10% more.",
+  "hint": "After the growth you still have all of the original amount, plus a bit extra. What percent of the original is that in total?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Growing 10% means you keep ALL of it (100%) plus 10% more."
+      "text": "After the growth you still have all of the original amount, plus a bit extra. What percent of the original is that in total?"
     },
     {
       "level": "guide",
-      "text": "$100\\% + 10\\% = 110\\%$. Turn that percent into a decimal."
+      "text": "Keeping $100\\%$ and gaining $10\\%$ gives $100\\% + 10\\% = 110\\%$. Change that percent to a decimal by dividing by $100$."
     },
     {
       "level": "reveal",
-      "text": "$110\\% = 1.10$. Multiply by 1.10 each year."
+      "text": "$110\\%$ written as a decimal is $1.10$, so the growth factor is $1.10$."
     }
   ],
   "explanation": [
-    "\"Up 10%\" means the new amount is 110% of the old one.",
-    "As a decimal, $110\\% = 1.10$.",
-    "So each year you multiply by the growth factor 1.10."
+    "Growing by $10\\%$ means the new amount is the whole old amount plus a tenth more, which is $110\\%$ of it.",
+    "To write a percent as a decimal, divide by $100$: $110\\% = 1.10$.",
+    "So each year the quantity is multiplied by the growth factor $1.10$."
   ],
   "alternativeExplanations": [
     {

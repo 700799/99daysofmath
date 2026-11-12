@@ -10,11 +10,11 @@
   "primaryAnswer": "1024",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$2^{10}$ is ten copies of 2 multiplied. Use a landmark: $2^5 = 32$.",
+  "hint": "Multiplying ten $2$s one at a time is slow. Look for a way to split the power into two equal pieces you already know.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$2^{10}$ is ten copies of 2 multiplied. Use a landmark: $2^5 = 32$."
+      "text": "Multiplying ten $2$s one at a time is slow. Look for a way to split the power into two equal pieces you already know."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Product rule with numbers: $2^{10} = 2^5 \\times 2^5 = 32 \\times 32$."
+      "text": "Because $5 + 5 = 10$, the product rule gives $2^{10} = 2^5 \\times 2^5$, and $2^5 = 32$. Work out $32 \\times 32$."
     },
     {
       "level": "reveal",
-      "text": "$32 \\times 32 = 1024$ people."
+      "text": "$32 \\times 32 = 1024$, so the picture reaches $1024$ people in round ten."
     }
   ],
   "explanation": [
-    "Each round doubles the reach, so round 10 is $2^{10}$.",
-    "Split it with the product rule: $2^{10} = 2^5 \\cdot 2^5$ because $5 + 5 = 10$.",
-    "$32 \\times 32 = 1024$ people."
+    "Each round doubles the number of people reached, so round ten reaches $2^{10}$ people.",
+    "Split the power with the product rule: $2^{10} = 2^5 \\cdot 2^5$, because the exponents $5 + 5$ add to $10$.",
+    "Since $2^5 = 32$, the answer is $32 \\times 32 = 1024$ people reached in round ten."
   ],
   "alternativeExplanations": [
     {

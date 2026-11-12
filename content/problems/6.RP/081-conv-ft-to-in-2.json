@@ -13,24 +13,26 @@
     "24 inches"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply by the conversion rate.",
+  "hint": "A foot is longer than an inch, so the number of inches will be bigger than the number of feet. Which operation makes the number bigger?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply by the conversion rate."
+      "text": "A foot is longer than an inch, so the number of inches will be bigger than the number of feet. Which operation makes the number bigger?"
     },
     {
       "level": "guide",
-      "text": "$2 \\times 12$."
+      "text": "Each foot is $12$ inches and there are $2$ feet, so multiply $2 \\times 12$."
     },
     {
       "level": "reveal",
-      "text": "$24$."
+      "text": "$2 \\times 12 = 24$, so there are $24$ inches in $2$ feet."
     }
   ],
   "explanation": [
-    "Each foot has $12$ inches.",
-    "$2 \\times 12 = 24$ inches."
+    "The conversion fact is that $1$ foot equals $12$ inches.",
+    "Changing to a smaller unit means more of them, so multiply the feet by $12$.",
+    "Two groups of twelve make $2 \\times 12 = 24$ inches.",
+    "Two feet are the same length as $24$ inches."
   ],
   "tags": [
     "conversion",

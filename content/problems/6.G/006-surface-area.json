@@ -12,11 +12,13 @@
     "54 in^2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A cube has **$6$ identical square faces**. Find the area of one face, then multiply by $6$.",
+  "hint": "Surface area is the total area of every outside face. How many faces does a cube have, and what shape are they?",
   "explanation": [
-    "Each face is a $3 \\times 3$ square: area $= 9$ sq in.",
-    "There are $6$ faces in a cube.",
-    "Total surface area $= 6 \\times 9 = 54$ square inches."
+    "Surface area means the sum of the areas of all the faces, so start with one face.",
+    "Each face of the cube is a $3$ in by $3$ in square, and its area is $3 \\times 3 = 9$ square inches.",
+    "A cube has $6$ identical faces: top, bottom, and four around the sides.",
+    "Multiply the area of one face by the number of faces: $6 \\times 9 = 54$.",
+    "The total surface area of the cube is $54$ square inches."
   ],
   "alternativeExplanations": [
     {
@@ -36,15 +38,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "A cube has **$6$ identical square faces**. Find the area of one face, then multiply by $6$."
+      "text": "Surface area is the total area of every outside face. How many faces does a cube have, and what shape are they?"
     },
     {
       "level": "guide",
-      "text": "Each face is a $3 \\times 3$ square: area $= 9$ sq in."
+      "text": "Each face is a square with side $3$ in, so one face has area $3 \\times 3 = 9$. Now count all the faces of the cube and multiply."
     },
     {
       "level": "reveal",
-      "text": "Total surface area $= 6 \\times 9 = 54$ square inches."
+      "text": "A cube has $6$ faces, so the total surface area is $6 \\times 9 = 54$ square inches."
     }
   ],
   "diagram": {

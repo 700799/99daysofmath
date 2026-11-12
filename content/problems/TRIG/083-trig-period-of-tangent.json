@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Tangent is not like sine and cosine — it repeats twice as often.",
+  "hint": "Tangent is not like sine and cosine. Think about what happens to the quotient $\\frac{\\sin\\theta}{\\cos\\theta}$ when both parts change sign together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Tangent is not like sine and cosine — it repeats twice as often."
+      "text": "Tangent is not like sine and cosine. Think about what happens to the quotient $\\frac{\\sin\\theta}{\\cos\\theta}$ when both parts change sign together."
     },
     {
       "level": "guide",
-      "text": "Compare $\\tan 30^\\circ$ with $\\tan 210^\\circ$. Both equal $\\frac{\\sqrt{3}}{3}$."
+      "text": "Compare $\\tan 30^\\circ$ with $\\tan 210^\\circ$, which is half a turn later. Both equal $\\frac{\\sqrt{3}}{3}$, so the values have already repeated."
     },
     {
       "level": "reveal",
-      "text": "Tangent repeats every $180^\\circ$, that is, every $\\pi$ radians."
+      "text": "Tangent repeats every $180^\\circ$, that is, every $\\pi$ radians, so the period is $\\pi$, choice A."
     }
   ],
   "explanation": [
     "Tangent is $\\frac{\\sin\\theta}{\\cos\\theta}$, and adding $\\pi$ flips the sign of BOTH the sine and the cosine.",
     "Two sign flips cancel in a quotient, so $\\tan(\\theta + \\pi) = \\tan\\theta$.",
-    "The period is therefore $\\pi$, not $2\\pi$."
+    "The values repeat after only half a turn, so the period is $\\pi$, not $2\\pi$."
   ],
   "alternativeExplanations": [
     {

@@ -10,7 +10,7 @@
   "primaryAnswer": "1/12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Try an easier pair: $1$ sandwich among $2$ kids is $\\frac{1}{2}$ each, and $1$ sandwich among $4$ kids is $\\frac{1}{4}$ each. The difference is $\\frac{1}{2} - \\frac{1}{4} = \\frac{1}{4}$. Turn each sharing into a fraction, then subtract — same plan here.",
+  "hint": "Find each kid's share as a fraction first, then subtract the smaller share from the larger one.",
   "hints": [
     {
       "level": "nudge",
@@ -31,9 +31,9 @@
     }
   ],
   "explanation": [
-    "Each sharing is a division written as a fraction: Table A gets $3 \\div 4 = \\frac{3}{4}$ per kid, and Table B gets $5 \\div 6 = \\frac{5}{6}$ per kid.",
-    "To compare and subtract, rewrite both in twelfths: $\\frac{3}{4} = \\frac{9}{12}$ and $\\frac{5}{6} = \\frac{10}{12}$.",
-    "Subtract: $\\frac{10}{12} - \\frac{9}{12} = \\frac{1}{12}$.",
+    "Each sharing is a division written as a fraction. Table A gives $3 \\div 4 = \\frac{3}{4}$ per kid and Table B gives $5 \\div 6 = \\frac{5}{6}$ per kid.",
+    "To subtract, rewrite both shares in twelfths: $\\frac{3}{4} = \\frac{9}{12}$ and $\\frac{5}{6} = \\frac{10}{12}$.",
+    "Subtract the smaller share from the larger one: $\\frac{10}{12} - \\frac{9}{12} = \\frac{1}{12}$.",
     "Each kid at Table B gets $\\frac{1}{12}$ of a sandwich more."
   ],
   "alternativeExplanations": [

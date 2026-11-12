@@ -10,29 +10,31 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute, then evaluate exponent before multiplication.",
+  "hint": "This expression has two parts that both use $x$. Find the value of each part before adding.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+      "text": "Try only the first part: when $x = 3$, what is $x^2$? Remember that it means $3 \\times 3$."
     },
     {
       "level": "nudge",
-      "text": "Substitute, then evaluate exponent before multiplication."
+      "text": "This expression has two parts that both use $x$. Find the value of each part before adding."
     },
     {
       "level": "guide",
-      "text": "$3^2 + 2(3) = 9 + 6$."
+      "text": "With $x = 3$, the parts are $3^2$ and $2(3)$. Work out the power and the product, then add them."
     },
     {
       "level": "reveal",
-      "text": "$9 + 6 = 15$."
+      "text": "$3^2 = 9$ and $2 \\times 3 = 6$, and $9 + 6 = 15$, so the value is $15$."
     }
   ],
   "explanation": [
-    "$x^2 = 9$. $2x = 6$.",
-    "Sum: $15$."
+    "Put $3$ in place of every $x$, which gives $3^2 + 2(3)$.",
+    "Exponents come first in the order of operations: $3^2 = 3 \\times 3 = 9$.",
+    "Next do the multiplication in the second term: $2 \\times 3 = 6$.",
+    "Add the two parts: $9 + 6 = 15$. The value is $15$."
   ],
   "tags": [
     "MAP-practice",

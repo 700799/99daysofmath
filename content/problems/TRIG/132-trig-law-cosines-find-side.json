@@ -10,25 +10,25 @@
   "primaryAnswer": "6.24",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two sides and the angle BETWEEN them means the Law of Cosines.",
+  "hint": "Two sides and the angle BETWEEN them is the side-angle-side case. That calls for the Law of Cosines, not the Law of Sines.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two sides and the angle BETWEEN them means the Law of Cosines."
+      "text": "Two sides and the angle BETWEEN them is the side-angle-side case. That calls for the Law of Cosines, not the Law of Sines."
     },
     {
       "level": "guide",
-      "text": "$c^2 = a^2 + b^2 - 2ab\\cos C = 25 + 49 - 2(5)(7)\\cos 60^\\circ$."
+      "text": "Set up $c^2 = a^2 + b^2 - 2ab\\cos C = 25 + 49 - 2(5)(7)\\cos 60^\\circ$. Use $\\cos 60^\\circ = 0.5$, simplify, and take the square root at the end."
     },
     {
       "level": "reveal",
-      "text": "$c^2 = 74 - 70(0.5) = 39$, so $c = \\sqrt{39} \\approx 6.24$."
+      "text": "$c^2 = 74 - 70(0.5) = 39$, so the third side is $c = \\sqrt{39} \\approx 6.24$."
     }
   ],
   "explanation": [
-    "With two sides and the included angle, use $c^2 = a^2 + b^2 - 2ab\\cos C$.",
-    "Substitute: $c^2 = 25 + 49 - 2(5)(7)(0.5) = 74 - 35 = 39$.",
-    "Take the square root: $c = \\sqrt{39} \\approx 6.24$."
+    "With two sides and the included angle, use the Law of Cosines, $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+    "Substitute the two sides and the value $\\cos 60^\\circ = 0.5$, then simplify: $c^2 = 25 + 49 - 2(5)(7)(0.5) = 74 - 35 = 39$.",
+    "Take the square root to undo the square: $c = \\sqrt{39} \\approx 6.24$."
   ],
   "alternativeExplanations": [
     {

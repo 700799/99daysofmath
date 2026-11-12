@@ -10,25 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The hypotenuse is always the longest side of a right triangle.",
+  "hint": "The hypotenuse is always the longest side of a right triangle, across from the right angle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The hypotenuse is always the longest side of a right triangle."
+      "text": "The hypotenuse is always the longest side of a right triangle, across from the right angle."
     },
     {
       "level": "guide",
-      "text": "Compare $3$, $4$, and $5$. Which is biggest?"
+      "text": "Compare the three side lengths $3$, $4$, and $5$, and pick the biggest one."
     },
     {
       "level": "reveal",
-      "text": "The hypotenuse is $5$."
+      "text": "The longest side is $5$, so the hypotenuse is $5$."
     }
   ],
   "explanation": [
-    "The hypotenuse sits directly across from the $90^\\circ$ corner.",
-    "It is always the longest side.",
-    "Of $3$, $4$, and $5$, the longest is $5$."
+    "The hypotenuse sits directly across from the $90^\\circ$ corner of the triangle.",
+    "Because it faces the largest angle, it is always the longest of the three sides.",
+    "Of the lengths $3$, $4$, and $5$, the longest is $5$, so the hypotenuse is $5$."
   ],
   "alternativeExplanations": [
     {

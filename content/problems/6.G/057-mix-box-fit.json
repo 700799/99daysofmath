@@ -10,28 +10,31 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Volume in cubic cm = number of unit cubes.",
+  "hint": "Each small cube takes up exactly $1$ cubic centimeter. So the number of cubes that fit is the same as which measurement of the box?",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+      "text": "Build it in layers. The bottom layer is $4$ cubes by $3$ cubes, and the box is tall enough for $5$ of those layers."
     },
     {
       "level": "nudge",
-      "text": "Volume in cubic cm = number of unit cubes."
+      "text": "Each small cube takes up exactly $1$ cubic centimeter. So the number of cubes that fit is the same as which measurement of the box?"
     },
     {
       "level": "guide",
-      "text": "$4 \\times 3 \\times 5$."
+      "text": "Find the volume of the box: $4 \\times 3 \\times 5$. Start with $4 \\times 3 = 12$ and multiply by $5$."
     },
     {
       "level": "reveal",
-      "text": "$60$."
+      "text": "$12 \\times 5 = 60$, so $60$ of the $1$ cm cubes fit in the box."
     }
   ],
   "explanation": [
-    "Volume $= 60$ cubic cm. So $60$ unit cubes."
+    "A $1$ cm cube has a volume of $1$ cubic centimeter, so the number of cubes equals the box's volume.",
+    "The volume of the box is length times width times height: $4 \\times 3 \\times 5$.",
+    "One layer holds $4 \\times 3 = 12$ cubes, and $5$ layers hold $12 \\times 5 = 60$ cubes.",
+    "Exactly $60$ unit cubes fit in the box."
   ],
   "tags": [
     "MAP-practice",

@@ -10,19 +10,19 @@
   "primaryAnswer": "180",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Half of a full turn. A full turn is $360^\\circ$.",
+  "hint": "The angle $\\pi$ radians is half of a full turn, and a full turn is $360^\\circ$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Half of a full turn. A full turn is $360^\\circ$."
+      "text": "The angle $\\pi$ radians is half of a full turn, and a full turn is $360^\\circ$."
     },
     {
       "level": "guide",
-      "text": "Half of $360^\\circ$ is $360 \\div 2$."
+      "text": "Half a turn in degrees is half of $360^\\circ$, so work out $360 \\div 2$."
     },
     {
       "level": "reveal",
-      "text": "$\\pi$ radians $= 180^\\circ$. This is the swap rule you will use again and again."
+      "text": "Since $360 \\div 2 = 180$, the angle $\\pi$ radians equals $180^\\circ$. You will use this swap rule again and again."
     }
   ],
   "explanation": [

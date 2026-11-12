@@ -10,25 +10,25 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Let $u = 2x$, so $du = 2 \\, dx$ and $dx = \\frac{du}{2}$. The limits become $0$ and $\\pi$.",
+  "hint": "The sine has an inside function, $2x$. A substitution for that inside function turns this into a basic sine integral.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Let $u = 2x$, so $du = 2 \\, dx$ and $dx = \\frac{du}{2}$. The limits become $0$ and $\\pi$."
+      "text": "The sine has an inside function, $2x$. A substitution for that inside function turns this into a basic sine integral."
     },
     {
       "level": "guide",
-      "text": "$\\frac{1}{2}\\int_0^{\\pi} \\sin u \\, du = \\frac{1}{2}[-\\cos u]_0^{\\pi}$."
+      "text": "Let $u = 2x$, so $dx = \\frac{du}{2}$ and the limits become $0$ and $\\pi$. The integral is $\\frac{1}{2}\\int_0^{\\pi} \\sin u \\, du = \\frac{1}{2}[-\\cos u]_0^{\\pi}$. Evaluate the cosine at both limits."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2}\\left(-\\cos \\pi + \\cos 0\\right) = \\frac{1}{2}(1 + 1) = 1$."
+      "text": "The value is $\\frac{1}{2}\\left(-\\cos \\pi + \\cos 0\\right) = \\frac{1}{2}(1 + 1) = 1$, so the integral equals $1$."
     }
   ],
   "explanation": [
-    "With $u = 2x$: $\\int_0^{\\pi/2} \\sin(2x) \\, dx = \\frac{1}{2}\\int_0^{\\pi} \\sin u \\, du$.",
-    "$= \\frac{1}{2}[-\\cos u]_0^{\\pi} = \\frac{1}{2}\\left(-(-1) - (-1)\\right) = \\frac{1}{2}(2)$.",
-    "$= 1$. One full arch of $\\sin(2x)$ has area $1$ — half the area $2$ of an arch of $\\sin x$, because it is squeezed to half the width."
+    "With $u = 2x$ and $dx = \\frac{du}{2}$, the limits become $0$ and $\\pi$ and the integral becomes $\\int_0^{\\pi/2} \\sin(2x) \\, dx = \\frac{1}{2}\\int_0^{\\pi} \\sin u \\, du$.",
+    "An antiderivative of sine is negative cosine, so this is $\\frac{1}{2}[-\\cos u]_0^{\\pi} = \\frac{1}{2}\\left(-(-1) - (-1)\\right) = \\frac{1}{2}(2)$.",
+    "The answer is $1$. One full arch of $\\sin(2x)$ has area $1$, half the area $2$ of an arch of $\\sin x$, because it is squeezed to half the width."
   ],
   "alternativeExplanations": [
     {

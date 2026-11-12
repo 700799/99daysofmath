@@ -10,25 +10,25 @@
   "primaryAnswer": "503",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Use $V = \\pi r^2 h$ and keep $\\pi$ until the end.",
+  "hint": "The tank is a cylinder, so use the cylinder volume formula. Leave $\\pi$ as a symbol until the last step so rounding stays accurate.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use $V = \\pi r^2 h$ and keep $\\pi$ until the end."
+      "text": "The tank is a cylinder, so use the cylinder volume formula. Leave $\\pi$ as a symbol until the last step so rounding stays accurate."
     },
     {
       "level": "guide",
-      "text": "$\\pi(4)^2(10) = 160\\pi$ cubic feet."
+      "text": "With $V = \\pi r^2 h$, the volume is $\\pi(4)^2(10) = 160\\pi$ cubic feet. Change that to a decimal and round it."
     },
     {
       "level": "reveal",
-      "text": "$160\\pi \\approx 502.65$, which rounds to $503$ cubic feet."
+      "text": "$160\\pi \\approx 502.65$, so the tank holds about $503$ cubic feet."
     }
   ],
   "explanation": [
-    "Base area: $\\pi(4)^2 = 16\\pi$ square feet.",
-    "Times the height: $16\\pi \\times 10 = 160\\pi$ cubic feet.",
-    "$160 \\times 3.14159 \\approx 502.65$, so the tank holds about $503$ cubic feet."
+    "The base of the tank is a circle with area $\\pi(4)^2 = 16\\pi$ square feet.",
+    "Multiplying the base area by the height gives $16\\pi \\times 10 = 160\\pi$ cubic feet.",
+    "Since $160 \\times 3.14159 \\approx 502.65$, the tank holds about $503$ cubic feet."
   ],
   "alternativeExplanations": [
     {

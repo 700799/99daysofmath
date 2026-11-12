@@ -12,29 +12,31 @@
     "$38.25"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$3$ books = $3 \\times 12.75$.",
+  "hint": "Three books at the same price means three equal amounts. Decide which operation combines equal amounts into a total.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Plot each number on a quick number line. Distances and order get obvious right away."
+      "text": "Try three books at $12$ dollars each first. Then think about what the extra $75$ cents on each book adds."
     },
     {
       "level": "nudge",
-      "text": "$3$ books = $3 \\times 12.75$."
+      "text": "Three books at the same price means three equal amounts. Decide which operation combines equal amounts into a total."
     },
     {
       "level": "guide",
-      "text": "$3 \\times 12 = 36$; $3 \\times 0.75 = 2.25$."
+      "text": "Multiply $3 \\times 12.75$ in two parts: $3 \\times 12$ for the dollars and $3 \\times 0.75$ for the cents. Add the two results."
     },
     {
       "level": "reveal",
-      "text": "$36 + 2.25 = 38.25$."
+      "text": "$36 + 2.25 = 38.25$, so three books cost $38.25$ dollars."
     }
   ],
   "explanation": [
-    "Break it up: $3 \\times 12 = 36$ and $3 \\times 0.75 = 2.25$.",
-    "Total: $36 + 2.25 = 38.25$."
+    "Three books at the same price cost $3 \\times 12.75$.",
+    "Break the price into $12 + 0.75$ so each part is easy to multiply: $3 \\times 12 = 36$ and $3 \\times 0.75 = 2.25$.",
+    "Add the two parts, which the distributive property allows: $36 + 2.25 = 38.25$.",
+    "So three books cost $38.25$ dollars in total."
   ],
   "alternativeExplanations": [
     {

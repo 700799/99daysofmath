@@ -10,25 +10,25 @@
   "primaryAnswer": "2.64",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Write $5$ as $5.00$ first.",
+  "hint": "The whole number has no decimal digits showing, but you can give it some. That makes the subtraction line up.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Write $5$ as $5.00$ first."
+      "text": "The whole number has no decimal digits showing, but you can give it some. That makes the subtraction line up."
     },
     {
       "level": "guide",
-      "text": "Count up from $2.36$: $+0.64$ reaches $3$, then $+2$ reaches $5$."
+      "text": "Write $5$ as $5.00$. Then count up from $2.36$: first to the next whole number $3$, and then from $3$ on to $5$."
     },
     {
       "level": "reveal",
-      "text": "$0.64 + 2 = 2.64$."
+      "text": "It takes $0.64$ to reach $3$ and $2$ more to reach $5$, so $5 - 2.36 = 2.64$."
     }
   ],
   "explanation": [
-    "Write the problem as $5.00 - 2.36$.",
-    "Count up: $2.36 + 0.64 = 3.00$, and $3.00 + 2.00 = 5.00$.",
-    "Total counted: $2.64$."
+    "Write $5$ as $5.00$ so it has the same decimal places as $2.36$.",
+    "Count up from $2.36$ to find the difference: $2.36 + 0.64 = 3.00$, and then $3.00 + 2.00 = 5.00$.",
+    "The two jumps add to $0.64 + 2.00 = 2.64$, so $5 - 2.36 = 2.64$."
   ],
   "tags": [
     "decimals",

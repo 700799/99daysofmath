@@ -32,11 +32,11 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Losing $12\\%$ means keeping the rest. What fraction remains?",
+  "hint": "The car loses part of its value each year, so think about the part it keeps. That kept fraction is the yearly multiplier.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Losing $12\\%$ means keeping the rest. What fraction remains?"
+      "text": "The car loses part of its value each year, so think about the part it keeps. That kept fraction is the yearly multiplier."
     },
     {
       "level": "nudge",
@@ -45,19 +45,20 @@
     },
     {
       "level": "guide",
-      "text": "$100\\% - 12\\% = 88\\%$, so the multiplier is $0.88$."
+      "text": "Keeping $100\\% - 12\\% = 88\\%$ means multiplying by $0.88$ each year. Apply that multiplier $t$ times to the starting value $24000$."
     },
     {
       "level": "reveal",
-      "text": "$24000(0.88)^t$."
+      "text": "Multiplying by $0.88$ a total of $t$ times gives $24000(0.88)^t$, which is choice C."
     }
   ],
   "learningObjective": "Build an exponential decay model from a percent loss.",
   "topic": "Exponential decay",
   "explanation": [
-    "A $12\\%$ loss leaves $88\\%$ of the value, so the annual multiplier is $0.88$.",
-    "Applying it $t$ times gives $24000(0.88)^t$.",
-    "Choice A retains only $12\\%$ each year; choice B grows the value; choice D is linear and subtracts 12 cents a year."
+    "Losing $12\\%$ of the value leaves $88\\%$ of it, so each year the value is multiplied by $0.88$.",
+    "Applying that multiplier once per year for $t$ years gives $24000(0.88)^t$.",
+    "Choice A keeps only $12\\%$ each year, choice B makes the value grow, and choice D subtracts a fixed $12$ cents a year.",
+    "The correct expression is $24000(0.88)^t$, which is choice C."
   ],
   "alternativeExplanations": [
     {

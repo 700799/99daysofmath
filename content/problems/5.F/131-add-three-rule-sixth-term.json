@@ -10,25 +10,25 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Keep listing and count the numbers as you go — $0$ counts as the 1st one.",
+  "hint": "The starting number counts as the first number in the pattern. Keep careful track of positions as you add.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Keep listing and count the numbers as you go — $0$ counts as the 1st one."
+      "text": "The starting number counts as the first number in the pattern. Keep careful track of positions as you add."
     },
     {
       "level": "guide",
-      "text": "After $9$ comes $12$, then the next one."
+      "text": "The list so far has four numbers, ending at $9$. Add $3$ to get the 5th number, and add $3$ again to get the 6th."
     },
     {
       "level": "reveal",
-      "text": "$0, 3, 6, 9, 12, 15$ — the 6th number is $15$."
+      "text": "The list is $0, 3, 6, 9, 12, 15$, so the 6th number is $15$."
     }
   ],
   "explanation": [
-    "Write the pattern out, counting positions: 1st $= 0$, 2nd $= 3$, 3rd $= 6$, 4th $= 9$, 5th $= 12$, 6th $= 15$.",
-    "Each step adds $3$, and going from the 1st to the 6th number takes $5$ steps.",
-    "That matches the arithmetic: $0 + 5 \\times 3 = 15$."
+    "Write the pattern out and count positions: 1st is $0$, 2nd is $3$, 3rd is $6$, 4th is $9$, 5th is $12$ and 6th is $15$.",
+    "Each step adds $3$, and going from the 1st number to the 6th takes $5$ steps.",
+    "The arithmetic agrees: $0 + 5 \\times 3 = 15$, so the 6th number is $15$."
   ],
   "alternativeExplanations": [
     {

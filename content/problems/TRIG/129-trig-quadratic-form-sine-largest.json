@@ -10,11 +10,11 @@
   "primaryAnswer": "270",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Let $u = \\sin x$ and factor the quadratic $2u^2 + u - 1 = 0$.",
+  "hint": "Treat the equation as a quadratic in $\\sin x$. Let $u = \\sin x$ and look for a way to factor $2u^2 + u - 1 = 0$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Let $u = \\sin x$ and factor the quadratic $2u^2 + u - 1 = 0$."
+      "text": "Treat the equation as a quadratic in $\\sin x$. Let $u = \\sin x$ and look for a way to factor $2u^2 + u - 1 = 0$."
     },
     {
       "level": "nudge",
@@ -23,16 +23,16 @@
     },
     {
       "level": "guide",
-      "text": "It factors as $(2u - 1)(u + 1) = 0$, so $\\sin x = \\frac{1}{2}$ or $\\sin x = -1$."
+      "text": "The quadratic factors as $(2u - 1)(u + 1) = 0$, so $\\sin x = \\frac{1}{2}$ or $\\sin x = -1$. List the angles in the interval for both equations before choosing the largest."
     },
     {
       "level": "reveal",
-      "text": "$\\sin x = \\frac{1}{2}$ gives $30^\\circ$ and $150^\\circ$; $\\sin x = -1$ gives $270^\\circ$, the largest."
+      "text": "$\\sin x = \\frac{1}{2}$ gives $30^\\circ$ and $150^\\circ$, and $\\sin x = -1$ gives $270^\\circ$, so the largest solution is $270$ degrees."
     }
   ],
   "explanation": [
-    "Substituting $u = \\sin x$ turns the equation into $2u^2 + u - 1 = 0$.",
-    "Factoring gives $(2u - 1)(u + 1) = 0$, so $\\sin x = \\frac{1}{2}$ or $\\sin x = -1$.",
+    "Substituting $u = \\sin x$ turns the equation into the quadratic $2u^2 + u - 1 = 0$.",
+    "Factoring gives $(2u - 1)(u + 1) = 0$, and setting each factor to zero gives $\\sin x = \\frac{1}{2}$ or $\\sin x = -1$.",
     "From $\\sin x = \\frac{1}{2}$: $x = 30^\\circ$ and $x = 150^\\circ$. From $\\sin x = -1$: $x = 270^\\circ$, the bottom of the unit circle.",
     "The three solutions are $30^\\circ$, $150^\\circ$ and $270^\\circ$, so the largest is $270^\\circ$."
   ],

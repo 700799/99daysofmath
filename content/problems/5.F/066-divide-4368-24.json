@@ -10,26 +10,26 @@
   "primaryAnswer": "182",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Build the answer in chunks. How many hundreds of $24$s fit inside $4{,}368$?",
+  "hint": "Build the quotient in pieces. Take out large groups of twenty-four first, and then deal with whatever is left.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Build the answer in chunks. How many hundreds of $24$s fit inside $4{,}368$?"
+      "text": "Build the quotient in pieces. Take out large groups of twenty-four first, and then deal with whatever is left."
     },
     {
       "level": "guide",
-      "text": "$24 \\times 100 = 2400$, so at least $100$ fit. Try $24 \\times 180$ next."
+      "text": "$24 \\times 100 = 2400$ fits, and $24 \\times 80 = 1920$ more also fits. Subtract $24 \\times 180 = 4320$ from $4{,}368$ and divide the leftover by $24$."
     },
     {
       "level": "reveal",
-      "text": "$24 \\times 180 = 4320$, leaving $48$, and $48 \\div 24 = 2$. So $180 + 2 = 182$."
+      "text": "$4368 - 4320 = 48$ and $48 \\div 24 = 2$, so the quotient is $180 + 2 = 182$."
     }
   ],
   "explanation": [
-    "Take a big bite first: $24 \\times 180 = 4{,}320$.",
-    "Subtract: $4{,}368 - 4{,}320 = 48$.",
-    "$48 \\div 24 = 2$, with nothing left over.",
-    "So $4{,}368 \\div 24 = 180 + 2 = 182$."
+    "Take out a large number of groups first: $24 \\times 180 = 4{,}320$, which is close to $4{,}368$.",
+    "Subtract to find what is still left to divide: $4{,}368 - 4{,}320 = 48$.",
+    "The leftover holds exactly two more groups, because $48 \\div 24 = 2$.",
+    "Add the groups together: $180 + 2 = 182$, so the quotient $4{,}368 \\div 24$ is $182$."
   ],
   "alternativeExplanations": [
     {

@@ -5,7 +5,7 @@
   "orderInUnit": 7,
   "standard": "6.NS.B.2",
   "difficulty": 3,
-  "prompt": "Compute $4{,}872 \\div 24$ using long division. Express the remainder as a **decimal**. (Continue dividing past the decimal point as needed.)",
+  "prompt": "Compute $4{,}872 \\div 24$ using long division.",
   "answerType": "numeric",
   "primaryAnswer": "203",
   "alternativeAnswers": [
@@ -14,7 +14,7 @@
   ],
   "acceptanceMode": "normalized",
   "numericTolerance": 0.001,
-  "hint": "Estimate first: $4800 \\div 24 = 200$, so expect the answer to be near $200$.",
+  "hint": "A big dividend can be broken into pieces that are easy to divide. Look for a piece of $4872$ that is an obvious multiple of $24$.",
   "hints": [
     {
       "level": "nudge",
@@ -23,22 +23,22 @@
     },
     {
       "level": "nudge",
-      "text": "Split: $4872 = 4800 + 72$. Divide each piece by $24$ separately."
+      "text": "A big dividend can be broken into pieces that are easy to divide. Look for a piece of $4872$ that is an obvious multiple of $24$."
     },
     {
       "level": "guide",
-      "text": "$4800 \\div 24 = 200$. $72 \\div 24 = 3$. Total: $200 + 3 = 203$. (Remainder is $0$, no decimal needed.)"
+      "text": "Write $4872$ as $4800 + 72$. Divide each part by $24$ on its own, then add the two quotients. Check whether anything is left over."
     },
     {
       "level": "reveal",
-      "text": "$4872 \\div 24 = 203$."
+      "text": "$4800 \\div 24 = 200$ and $72 \\div 24 = 3$, so $4{,}872 \\div 24 = 203$ with no remainder."
     }
   ],
   "explanation": [
-    "Use friendly chunks: $4872 = 4800 + 72$.",
-    "$4800 \\div 24 = 200$ (since $24 \\times 2 = 48$, so $24 \\times 200 = 4800$).",
-    "$72 \\div 24 = 3$ (since $24 \\times 3 = 72$).",
-    "Sum the partial quotients: $200 + 3 = 203$. The remainder is $0$."
+    "Break the dividend into friendly parts that $24$ divides easily: $4872 = 4800 + 72$.",
+    "Since $24 \\times 2 = 48$, it follows that $24 \\times 200 = 4800$, so the first part gives $4800 \\div 24 = 200$.",
+    "For the leftover part, use the fact that $24 \\times 3 = 72$, so $72 \\div 24 = 3$.",
+    "Add the partial quotients: $200 + 3 = 203$. The remainder is $0$, so no decimal digits are needed and the answer is $203$."
   ],
   "tags": [
     "long-division",

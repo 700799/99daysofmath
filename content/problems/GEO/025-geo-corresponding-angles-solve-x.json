@@ -10,19 +10,19 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Corresponding angles on parallel lines are congruent — so set the expressions EQUAL, not summed.",
+  "hint": "Corresponding angles sit in matching positions at the two crossings. When the lines are parallel, how do their measures compare?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Corresponding angles on parallel lines are congruent — so set the expressions EQUAL, not summed."
+      "text": "Corresponding angles sit in matching positions at the two crossings. When the lines are parallel, how do their measures compare?"
     },
     {
       "level": "guide",
-      "text": "Solve $5x - 20 = 3x + 10$."
+      "text": "Corresponding angles on parallel lines are congruent, so set the expressions equal and solve $5x - 20 = 3x + 10$."
     },
     {
       "level": "reveal",
-      "text": "$2x = 30$, so $x = 15$."
+      "text": "$2x = 30$, so $x = 15$ and both angles measure $55^\\circ$."
     }
   ],
   "explanation": [

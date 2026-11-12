@@ -10,25 +10,25 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Both orders have the SAME 2 kid tickets. Stack the equations and subtract to cancel the kids.",
+  "hint": "Compare the two orders. They contain the same number of kid tickets, so the difference in price comes only from adults.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Both orders have the SAME 2 kid tickets. Stack the equations and subtract to cancel the kids."
+      "text": "Compare the two orders. They contain the same number of kid tickets, so the difference in price comes only from adults."
     },
     {
       "level": "guide",
-      "text": "$(3a + 2k) - (a + 2k) = 41 - 23$ gives $2a = 18$."
+      "text": "Write $3a + 2k = 41$ and $a + 2k = 23$. Subtract the second from the first so the kid tickets cancel: $2a = 41 - 23$."
     },
     {
       "level": "reveal",
-      "text": "$a = 18 \\div 2 = 9$ dollars per adult ticket."
+      "text": "$2a = 18$, so one adult ticket costs $a = 9$ dollars."
     }
   ],
   "explanation": [
-    "Write the rules: $3a + 2k = 41$ and $a + 2k = 23$.",
-    "Both have $2k$, so subtract the second from the first — the kid tickets cancel: $2a = 18$.",
-    "$a = 9$. Check: $2k = 23 - 9 = 14$, and $27 + 14 = 41$. ✓"
+    "Write an equation for each order: $3a + 2k = 41$ and $a + 2k = 23$.",
+    "Both equations contain $2k$, so subtracting the second from the first cancels the kid tickets and leaves $2a = 18$.",
+    "Divide by $2$ to get $a = 9$ dollars. Check: $2k = 23 - 9 = 14$, and $27 + 14 = 41$."
   ],
   "alternativeExplanations": [
     {

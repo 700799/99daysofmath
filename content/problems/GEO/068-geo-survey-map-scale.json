@@ -10,25 +10,25 @@
   "primaryAnswer": "140",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The map and the real lot are similar figures, with a fixed scale factor between them.",
+  "hint": "A map is a scaled copy of the real ground. Think about what each single inch on the map stands for.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The map and the real lot are similar figures, with a fixed scale factor between them."
+      "text": "A map is a scaled copy of the real ground. Think about what each single inch on the map stands for."
     },
     {
       "level": "guide",
-      "text": "Each inch is worth 40 feet, so multiply: $3.5 \\times 40$."
+      "text": "Every inch on the map represents $40$ feet, and the line is $3.5$ inches long, so multiply $3.5 \\times 40$."
     },
     {
       "level": "reveal",
-      "text": "$3.5 \\times 40 = 140$ feet."
+      "text": "$3.5 \\times 40 = 140$, so the real property line is $140$ feet long."
     }
   ],
   "explanation": [
-    "A map scale is a scale factor: $1$ inch on paper stands for $40$ feet on the ground.",
-    "Set up the proportion $\\frac{1 \\text{ in}}{40 \\text{ ft}} = \\frac{3.5 \\text{ in}}{x \\text{ ft}}$.",
-    "Cross-multiply: $x = 3.5 \\times 40 = 140$ feet."
+    "The map scale works as a scale factor: each $1$ inch on paper stands for $40$ feet on the ground.",
+    "Equal ratios of map length to real length give the proportion $\\frac{1}{40} = \\frac{3.5}{x}$, with $x$ in feet.",
+    "Cross-multiplying gives $x = 3.5 \\times 40 = 140$, so the property line is $140$ feet long."
   ],
   "alternativeExplanations": [
     {

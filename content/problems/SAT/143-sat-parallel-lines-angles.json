@@ -10,19 +10,19 @@
   "primaryAnswer": "65",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "When parallel lines are cut by a transversal, every angle is either equal to $115°$ or supplementary to it.",
+  "hint": "The parallel lines create eight angles, but the question depends on only one word. Recall what supplementary means for a pair of angles.",
   "hints": [
     {
       "level": "nudge",
-      "text": "When parallel lines are cut by a transversal, every angle is either equal to $115°$ or supplementary to it."
+      "text": "The parallel lines create eight angles, but the question depends on only one word. Recall what supplementary means for a pair of angles."
     },
     {
       "level": "guide",
-      "text": "The supplementary partner satisfies $115 + x = 180$."
+      "text": "Supplementary angles add to $180°$, so the unknown angle $x$ satisfies $115 + x = 180$. Subtract to find it."
     },
     {
       "level": "reveal",
-      "text": "$x = 65$ degrees."
+      "text": "Since $180 - 115 = 65$, an angle supplementary to it measures $65$ degrees."
     }
   ],
   "learningObjective": "Use the two-angle structure formed by a transversal across parallel lines.",

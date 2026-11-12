@@ -13,30 +13,31 @@
     "275 sq ft"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Garden area minus pond area.",
+  "hint": "The pond takes up part of the garden. The area that is not pond is the garden's area with the pond's area taken off.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try a similar but smaller shape (all sides ÷ 2) and look at how the formula behaves."
+      "text": "Shrink the problem: a $4 \\times 3$ garden with a $1 \\times 1$ pond has $12 - 1 = 11$ squares of garden left."
     },
     {
       "level": "nudge",
-      "text": "Garden area minus pond area."
+      "text": "The pond takes up part of the garden. The area that is not pond is the garden's area with the pond's area taken off."
     },
     {
       "level": "guide",
-      "text": "$20 \\cdot 15 = 300$, $5 \\cdot 5 = 25$."
+      "text": "The garden is $20 \\times 15 = 300$ and the pond is $5 \\times 5 = 25$. Subtract the pond from the garden."
     },
     {
       "level": "reveal",
-      "text": "$300 - 25 = 275$."
+      "text": "$300 - 25 = 275$, so $275$ square units of the garden are not covered by the pond."
     }
   ],
   "explanation": [
-    "Garden: $20 \\cdot 15 = 300$.",
-    "Pond: $25$.",
-    "Not pond: $300 - 25 = 275$ sq units."
+    "Find the area of the whole garden: $20 \\times 15 = 300$ square units.",
+    "Find the area of the pond in the corner: $5 \\times 5 = 25$ square units.",
+    "The pond lies inside the garden, so subtract it: $300 - 25 = 275$.",
+    "The area not covered by the pond is $275$ square units."
   ],
   "tags": [
     "MAP-practice",

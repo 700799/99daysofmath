@@ -32,11 +32,11 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "First find the expected WINNINGS, ignoring the cost. Then subtract the $\\$2$ to play.",
+  "hint": "Work in two stages: find what the player wins on average, and then account for the price of playing.",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find the expected WINNINGS, ignoring the cost. Then subtract the $\\$2$ to play."
+      "text": "Work in two stages: find what the player wins on average, and then account for the price of playing."
     },
     {
       "level": "nudge",
@@ -45,17 +45,17 @@
     },
     {
       "level": "guide",
-      "text": "Expected winnings $= 5 \\cdot \\frac{1}{4} + 1 \\cdot \\frac{1}{4} + 0 \\cdot \\frac{1}{2}$. Compare that to $\\$2$."
+      "text": "Expected winnings are $5 \\cdot \\frac{1}{4} + 1 \\cdot \\frac{1}{4} + 0 \\cdot \\frac{1}{2}$. Compare that average with the $\\$2$ cost of a play."
     },
     {
       "level": "reveal",
-      "text": "Expected winnings $= 1.25 + 0.25 = 1.50$. Net: $1.50 - 2 = -0.50$, a loss of $\\$0.50$ per play."
+      "text": "Expected winnings are $1.25 + 0.25 = 1.50$, and $1.50 - 2 = -0.50$, so the player loses $\\$0.50$ per play on average: choice B."
     }
   ],
   "explanation": [
-    "Expected winnings: $5(0.25) + 1(0.25) + 0(0.5) = 1.25 + 0.25 + 0 = \\$1.50$.",
-    "Each play costs $\\$2$, so the expected net is $1.50 - 2.00 = -\\$0.50$.",
-    "A negative expected net means the player loses $\\$0.50$ per play on average — choice B. A fair game would have expected net $\\$0$."
+    "The expected winnings weight each prize by its probability: $5(0.25) + 1(0.25) + 0(0.5) = \\$1.50$.",
+    "Each play costs two dollars, so subtract the cost from the expected winnings: $1.50 - 2.00 = -0.50$ dollars.",
+    "A negative expected net means the player loses $\\$0.50$ per play on average, which is choice B. A fair game would have an expected net of $\\$0$."
   ],
   "alternativeExplanations": [
     {

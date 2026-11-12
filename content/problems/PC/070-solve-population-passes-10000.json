@@ -10,11 +10,11 @@
   "primaryAnswer": "30",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Divide the target by the start to see how much growth is needed.",
+  "hint": "Divide the target population by the starting population to see how much growth is needed.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Divide the target by the start to see how much growth is needed."
+      "text": "Divide the target population by the starting population to see how much growth is needed."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$10000 \\div 1250 = 8$, and $8 = 2^3$, so you need $3$ doublings."
+      "text": "The growth needed is $10000 \\div 1250 = 8$, and $8 = 2^3$, so you need $3$ doublings. Each doubling takes $10$ years."
     },
     {
       "level": "reveal",
-      "text": "$3$ doublings $\\times 10$ years each $= 30$ years."
+      "text": "Three doublings at $10$ years each take $3 \\times 10 = 30$ years."
     }
   ],
   "explanation": [
-    "Set up $1250 \\cdot 2^{t/10} = 10000$.",
-    "Divide by $1250$: $2^{t/10} = 8 = 2^3$, so $t/10 = 3$.",
-    "Multiply by $10$: $t = 30$ years."
+    "After $t$ years there have been $t/10$ doublings, so set up $1250 \\cdot 2^{t/10} = 10000$.",
+    "Dividing both sides by $1250$ gives $2^{t/10} = 8 = 2^3$, so the exponents match and $t/10 = 3$.",
+    "Multiplying both sides by $10$ gives $t = 30$, so the town reaches $10000$ people after $30$ years."
   ],
   "alternativeExplanations": [
     {

@@ -12,24 +12,26 @@
     "4 pints"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Divide cups by the rate.",
+  "hint": "Pints are larger than cups, so there will be fewer pints than cups. How many cups go into each pint?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Divide cups by the rate."
+      "text": "Pints are larger than cups, so there will be fewer pints than cups. How many cups go into each pint?"
     },
     {
       "level": "guide",
-      "text": "$8 \\div 2$."
+      "text": "Every $2$ cups fill one pint, so split the $8$ cups into groups of $2$: find $8 \\div 2$."
     },
     {
       "level": "reveal",
-      "text": "$4$ pints."
+      "text": "$8 \\div 2 = 4$, so there are $4$ pints in $8$ cups."
     }
   ],
   "explanation": [
-    "$8 \\div 2 = 4$ pints.",
-    "Final answer: 4."
+    "The fact given is that $2$ cups make $1$ pint.",
+    "Changing to the bigger unit means dividing, so compute $8 \\div 2$ to count the pairs of cups.",
+    "Splitting eight cups into pairs gives $8 \\div 2 = 4$ pairs.",
+    "Eight cups are the same amount as $4$ pints."
   ],
   "tags": [
     "conversion",

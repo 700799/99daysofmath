@@ -10,23 +10,25 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Max - min.",
+  "hint": "The ends of the two whiskers on a box plot give exactly the two numbers the range needs.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Max - min."
+      "text": "The ends of the two whiskers on a box plot give exactly the two numbers the range needs."
     },
     {
       "level": "guide",
-      "text": "$25 - 5$."
+      "text": "The maximum is $25$ and the minimum is $5$. The range is the difference between them, so work out $25 - 5$."
     },
     {
       "level": "reveal",
-      "text": "$20$."
+      "text": "$25 - 5 = 20$, so the range of the data is $20$."
     }
   ],
   "explanation": [
-    "Range: $25 - 5 = 20$."
+    "The range is the maximum minus the minimum, and a box plot shows both at the ends of its whiskers.",
+    "From the box plot, the minimum is $5$ and the maximum is $25$.",
+    "Subtract the minimum from the maximum: $25 - 5 = 20$, so the range is $20$."
   ],
   "tags": [
     "box-plot",

@@ -1,5 +1,6 @@
 import type { Domain } from '../types/problem';
 import LESSON_VIDEO_KEYS from './lessonVideoKeys.json';
+import PRACTICE_STEPS from './lessonPracticeSteps.json';
 import { LESSON_SLIDES } from './lessonSlides';
 import type { LessonSlide } from './lessonSlides';
 import { GEO_LESSONS } from './geo/lessons_u01_14';
@@ -1284,6 +1285,12 @@ for (const l of LESSONS) {
   const s = LESSON_SLIDES[key];
   if (s && s.length) l.slides = s;
   if (HAS_VIDEO.has(key)) l.videos = [{ title: 'Watch the lesson', src: `${key}-lesson.mp4` }];
+  // "Try it" questions get their full worked steps from one file, keyed
+  // "<lesson key>#<question index>". The steps double as the hint ladder.
+  l.practice.forEach((q, i) => {
+    const steps = (PRACTICE_STEPS as Record<string, string[]>)[`${key}#${i}`];
+    if (steps) q.steps = steps;
+  });
 }
 
 const byKey = new Map(LESSONS.map((l) => [lessonKey(l.domain, l.unit), l]));

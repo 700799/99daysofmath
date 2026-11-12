@@ -18,17 +18,17 @@
     },
     {
       "level": "guide",
-      "text": "The undo machine subtracts 9. Apply it to 20."
+      "text": "The undo machine subtracts $9$ from whatever it is given. Apply that to $20$ by working out $20 - 9$."
     },
     {
       "level": "reveal",
-      "text": "$20 - 9 = 11$."
+      "text": "Subtracting gives $20 - 9 = 11$, so the value of $f^{-1}(20)$ is $11$."
     }
   ],
   "explanation": [
-    "$f$ adds $9$, so $f^{-1}$ subtracts $9$.",
-    "$f^{-1}(20) = 20 - 9 = 11$.",
-    "Check: $f(11) = 11 + 9 = 20$. It really does undo."
+    "The function $f$ adds $9$, so its inverse must subtract $9$ to get back to the starting number.",
+    "Apply the inverse to $20$ by subtracting $9$ from it: $f^{-1}(20) = 20 - 9 = 11$.",
+    "Check by going forward: $f(11) = 11 + 9 = 20$, so the answer $11$ really does undo $f$."
   ],
   "alternativeExplanations": [
     {

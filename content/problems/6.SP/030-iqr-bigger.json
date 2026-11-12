@@ -5,33 +5,35 @@
   "orderInUnit": 10,
   "standard": "6.SP.B.5.c",
   "difficulty": 3,
-  "prompt": "For $1, 2, 4, 5, 7, 8, 10, 11$: $Q1 = 2.5$, $Q3 = 9$. Find IQR.",
+  "prompt": "For $1, 2, 4, 5, 7, 8, 10, 11$: $Q1 = 3$, $Q3 = 9$. Find IQR.",
   "answerType": "numeric",
-  "primaryAnswer": "6.5",
+  "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "IQR = $Q3 - Q1$.",
+  "hint": "The quartiles are already worked out for you. The IQR is the gap between them.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sort the data from least to greatest first — many statistics get easy after that."
+      "text": "Picture the sorted data split into four equal groups. The IQR measures how wide the middle two groups are."
     },
     {
       "level": "nudge",
-      "text": "IQR = $Q3 - Q1$."
+      "text": "The quartiles are already worked out for you. The IQR is the gap between them."
     },
     {
       "level": "guide",
-      "text": "$9 - 2.5$."
+      "text": "Use the given values $Q3 = 9$ and $Q1 = 3$, and subtract the lower quartile from the upper: $9 - 3$."
     },
     {
       "level": "reveal",
-      "text": "$6.5$."
+      "text": "$9 - 3 = 6$, so with these quartiles the IQR is $6$."
     }
   ],
   "explanation": [
-    "$Q3 - Q1 = 6.5$."
+    "The interquartile range is the distance from the lower quartile to the upper quartile.",
+    "The problem gives the quartiles to use: $Q1 = 3$ and $Q3 = 9$.",
+    "Subtract the lower from the upper: $9 - 3 = 6$, so the IQR is $6$."
   ],
   "tags": [
     "CA",

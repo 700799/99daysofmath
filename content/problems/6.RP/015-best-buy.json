@@ -32,25 +32,26 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Find price per ounce for each.",
+  "hint": "You cannot compare the bottles fairly until both prices are for the same amount. Find what **one ounce** costs in each bottle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find price per ounce for each."
+      "text": "You cannot compare the bottles fairly until both prices are for the same amount. Find what **one ounce** costs in each bottle."
     },
     {
       "level": "guide",
-      "text": "A: $3 \\div 12$. B: $4 \\div 20$."
+      "text": "Divide price by ounces for each bottle: Bottle A is $3 \\div 12$ dollars per ounce and Bottle B is $4 \\div 20$ dollars per ounce. Compare the two results."
     },
     {
       "level": "reveal",
-      "text": "A: \\$$0.25$/oz. B: \\$$0.20$/oz. B is cheaper per oz."
+      "text": "Bottle A costs $0.25$ dollars per ounce and Bottle B costs $0.20$ dollars per ounce, so Bottle B is the better buy."
     }
   ],
   "explanation": [
-    "A: $3 \\div 12 = \\$0.25$/oz.",
-    "B: $4 \\div 20 = \\$0.20$/oz.",
-    "B costs less per ounce — better buy."
+    "The better buy is the one with the lower unit price, which is the cost for $1$ ounce.",
+    "For Bottle A, divide the price by the ounces: $3 \\div 12 = 0.25$ dollars per ounce.",
+    "For Bottle B, do the same division: $4 \\div 20 = 0.20$ dollars per ounce.",
+    "Because $0.20$ is less than $0.25$, Bottle B (choice B) is the better buy."
   ],
   "tags": [
     "CA",

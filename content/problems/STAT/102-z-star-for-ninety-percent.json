@@ -32,25 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "A $90\\%$ interval leaves $10\\%$ outside, split as $5\\%$ in each tail.",
+  "hint": "A $90\\%$ interval keeps the middle $90\\%$ of the standard normal curve. How much area does that leave in each tail?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A $90\\%$ interval leaves $10\\%$ outside, split as $5\\%$ in each tail."
+      "text": "A $90\\%$ interval keeps the middle $90\\%$ of the standard normal curve. How much area does that leave in each tail?"
     },
     {
       "level": "guide",
-      "text": "$z^*$ is the value with $5\\%$ of the standard normal curve above it. Recall: $1.96$ cuts off $2.5\\%$, $2.576$ cuts off $0.5\\%$."
+      "text": "Each tail holds $5\\%$, so $z^*$ has $5\\%$ of the curve above it. For reference, $1.96$ cuts off $2.5\\%$ and $2.576$ cuts off $0.5\\%$, so the value you want is smaller than both."
     },
     {
       "level": "reveal",
-      "text": "$z^* = 1.645$ for $90\\%$ confidence."
+      "text": "The value with $5\\%$ above it is $z^* = 1.645$, which is choice B."
     }
   ],
   "explanation": [
     "For confidence level $C$, $z^*$ is the value such that the middle $C$ of the standard normal curve lies between $-z^*$ and $z^*$.",
-    "For $90\\%$, each tail has $5\\%$, and $P(Z > 1.645) = 0.05$.",
-    "So $z^* = 1.645$. The other values belong to $80\\%$ ($1.282$), $95\\%$ ($1.960$), and $99\\%$ ($2.576$)."
+    "For $90\\%$ the leftover $10\\%$ is split evenly, so each tail has $5\\%$, and $P(Z > 1.645) = 0.05$.",
+    "So $z^* = 1.645$, choice B. The other values belong to $80\\%$ ($1.282$), $95\\%$ ($1.960$) and $99\\%$ ($2.576$)."
   ],
   "alternativeExplanations": [
     {

@@ -12,25 +12,26 @@
     "9 cups"
   ],
   "acceptanceMode": "normalized",
-  "hint": "How many times more flour than $2$ is $6$?",
+  "hint": "Using more flour means using more sugar in the same proportion. How many times bigger is your amount of flour than the recipe's?",
   "hints": [
     {
       "level": "nudge",
-      "text": "How many times more flour than $2$ is $6$?"
+      "text": "Using more flour means using more sugar in the same proportion. How many times bigger is your amount of flour than the recipe's?"
     },
     {
       "level": "guide",
-      "text": "Scale **both** sides by the same factor."
+      "text": "You use $6$ cups of flour instead of $2$, which is $3$ times as much. Multiply the $3$ cups of sugar by $3$ as well."
     },
     {
       "level": "reveal",
-      "text": "Flour: $2 \\to 6$ is $\\times 3$. So sugar: $3 \\times 3 = 9$."
+      "text": "$3 \\times 3 = 9$, so you need $9$ cups of sugar."
     }
   ],
   "explanation": [
-    "Flour scaled by $6 \\div 2 = 3$.",
-    "Apply the same factor to sugar: $3 \\times 3 = 9$.",
-    "You need $9$ cups of sugar."
+    "The recipe ratio of flour to sugar is $2 : 3$, and every batch must keep that ratio.",
+    "Compare the flour amounts to find the scale factor: $6 \\div 2 = 3$.",
+    "Scale the sugar by the same factor, because both parts of a ratio must change together: $3 \\times 3 = 9$.",
+    "You need $9$ cups of sugar for $6$ cups of flour."
   ],
   "tags": [
     "CA",

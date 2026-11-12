@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "Use the SD of the sample mean, $\\sigma/\\sqrt{n}$, not the SD of individual scores.",
+  "hint": "This $z$-score is for a sample mean, not for one student. Which standard deviation describes how much sample means vary?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use the SD of the sample mean, $\\sigma/\\sqrt{n}$, not the SD of individual scores."
+      "text": "This $z$-score is for a sample mean, not for one student. Which standard deviation describes how much sample means vary?"
     },
     {
       "level": "guide",
-      "text": "$\\sigma_{\\bar{x}} = 100/\\sqrt{25} = 20$. Then $z = \\frac{530 - 500}{20}$."
+      "text": "The standard deviation of $\\bar{x}$ is $100/\\sqrt{25} = 20$. Use it in the $z$-score: $z = \\frac{530 - 500}{20}$."
     },
     {
       "level": "reveal",
-      "text": "$z = \\frac{30}{20} = 1.5$."
+      "text": "$z = \\frac{30}{20} = 1.5$, so the sample mean is $1.5$ standard deviations above the population mean."
     }
   ],
   "explanation": [
-    "The sampling distribution of $\\bar{x}$ has mean $500$ and SD $100/\\sqrt{25} = 100/5 = 20$.",
-    "$z = \\frac{\\bar{x} - \\mu}{\\sigma_{\\bar{x}}} = \\frac{530 - 500}{20}$.",
-    "$z = 1.5$. A sample mean of 530 is 1.5 standard deviations above what we expect."
+    "The sampling distribution of $\\bar{x}$ has mean $500$ and standard deviation $100/\\sqrt{25} = 100/5 = 20$.",
+    "Standardize the sample mean with that smaller standard deviation: $z = \\frac{\\bar{x} - \\mu}{\\sigma_{\\bar{x}}} = \\frac{530 - 500}{20}$.",
+    "$z = 1.5$, so a sample mean of 530 is 1.5 standard deviations above what we expect."
   ],
   "alternativeExplanations": [
     {

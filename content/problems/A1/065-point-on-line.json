@@ -10,25 +10,25 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Replace $x$ with $4$ in the equation.",
+  "hint": "The equation gives $y$ for any $x$ you choose. Use the $x$-value from the question.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Replace $x$ with $4$ in the equation."
+      "text": "The equation gives $y$ for any $x$ you choose. Use the $x$-value from the question."
     },
     {
       "level": "guide",
-      "text": "$y = 2 \\times 4 + 1$. Multiply first."
+      "text": "Replace $x$ with $4$ to get $y = 2 \\times 4 + 1$. Multiply before you add."
     },
     {
       "level": "reveal",
-      "text": "$8 + 1 = 9$."
+      "text": "$2 \\times 4 = 8$ and $8 + 1 = 9$, so $y$ equals $9$ when $x$ is $4$."
     }
   ],
   "explanation": [
-    "Substitute: $y = 2 \\times 4 + 1$.",
-    "$2 \\times 4 = 8$, then $8 + 1 = 9$.",
-    "So the point $(4, 9)$ sits on the line."
+    "Substitute $4$ for $x$ in the equation of the line: $y = 2 \\times 4 + 1$.",
+    "Follow the order of operations by multiplying first and then adding: $2 \\times 4 = 8$ and $8 + 1 = 9$.",
+    "So $y = 9$, which means the point $(4, 9)$ lies on the line."
   ],
   "alternativeExplanations": [
     {

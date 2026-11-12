@@ -14,24 +14,25 @@
     "q1 and q3"
   ],
   "acceptanceMode": "exact",
-  "hint": "The box of a box plot.",
+  "hint": "Quartiles cut the sorted data into four equal parts, each holding about $25\\%$ of the values.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The box of a box plot."
+      "text": "Quartiles cut the sorted data into four equal parts, each holding about $25\\%$ of the values."
     },
     {
       "level": "guide",
-      "text": "Lower and upper quartiles."
+      "text": "The lowest $25\\%$ lies below the lower quartile and the highest $25\\%$ lies above the upper quartile. What remains in between is the box of a box plot."
     },
     {
       "level": "reveal",
-      "text": "$Q_1$ and $Q_3$."
+      "text": "The middle $50\\%$ of the data sits between $Q_1$ and $Q_3$."
     }
   ],
   "explanation": [
-    "$Q_1$ marks the $25\\%$ point and $Q_3$ marks the $75\\%$ point.",
-    "Between them sits the middle $50\\%$ of the data."
+    "The quartiles divide the ordered data into four parts with about $25\\%$ of the values in each.",
+    "$Q_1$ has $25\\%$ of the data below it, and $Q_3$ has $75\\%$ of the data below it.",
+    "The part between them holds $75\\% - 25\\% = 50\\%$, so the middle $50\\%$ sits between $Q_1$ and $Q_3$."
   ],
   "tags": [
     "quartile",

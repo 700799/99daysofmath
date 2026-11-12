@@ -10,26 +10,26 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two sides and the angle squeezed between them (SAS) is the Law of Cosines tool.",
+  "hint": "You know two sides and the angle squeezed between them (SAS). Which law finds the third side from that?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two sides and the angle squeezed between them (SAS) is the Law of Cosines tool."
+      "text": "You know two sides and the angle squeezed between them (SAS). Which law finds the third side from that?"
     },
     {
       "level": "guide",
-      "text": "$c^2 = a^2 + b^2 - 2ab\\cos C = 9 + 64 - 2 \\times 3 \\times 8 \\times \\cos 60^\\circ$."
+      "text": "Use the Law of Cosines: $c^2 = a^2 + b^2 - 2ab\\cos C = 9 + 64 - 2 \\times 3 \\times 8 \\times \\cos 60^\\circ$. Put in the value of $\\cos 60^\\circ$ and simplify."
     },
     {
       "level": "reveal",
-      "text": "$\\cos 60^\\circ = \\frac{1}{2}$, so $c^2 = 73 - 24 = 49$ and $c = 7$."
+      "text": "Since $\\cos 60^\\circ = \\frac{1}{2}$, we get $c^2 = 73 - 24 = 49$, so side $c = 7$."
     }
   ],
   "explanation": [
-    "Use $c^2 = a^2 + b^2 - 2ab\\cos C$.",
-    "$3^2 + 8^2 = 9 + 64 = 73$.",
-    "The correction term: $2 \\times 3 \\times 8 \\times \\frac{1}{2} = 24$.",
-    "$c^2 = 73 - 24 = 49$, so $c = \\sqrt{49} = 7$."
+    "Two sides and the included angle call for the Law of Cosines, $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+    "The squares of the known sides add to $3^2 + 8^2 = 9 + 64 = 73$.",
+    "The correction term uses $\\cos 60^\\circ = \\frac{1}{2}$: it is $2 \\times 3 \\times 8 \\times \\frac{1}{2} = 24$.",
+    "So $c^2 = 73 - 24 = 49$, and taking the square root gives $c = 7$."
   ],
   "alternativeExplanations": [
     {

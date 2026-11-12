@@ -14,25 +14,25 @@
     "2 \\cdot n = 18"
   ],
   "acceptanceMode": "exact",
-  "hint": "\"Twice\" means $\\times 2$.",
+  "hint": "\"Twice\" is a word for a certain multiplication. The word \"is\" tells you where the equals sign goes.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Twice\" means $\\times 2$."
+      "text": "\"Twice\" is a word for a certain multiplication. The word \"is\" tells you where the equals sign goes."
     },
     {
       "level": "guide",
-      "text": "$2n = 18$."
+      "text": "Twice a number means $2$ times $n$, written $2n$. Set that equal to $18$."
     },
     {
       "level": "reveal",
-      "text": "$2n = 18$."
+      "text": "Two times the number equals $18$, so the equation is $2n=18$."
     }
   ],
   "explanation": [
-    "\"Twice $n$\" → $2n$.",
-    "\"Is $18$\" → $= 18$.",
-    "$2n = 18$."
+    "\"Twice a number\" means the number is multiplied by $2$, which is $2n$.",
+    "In a math sentence, the word \"is\" means equals.",
+    "So \"twice a number is $18$\" becomes the equation $2n = 18$."
   ],
   "tags": [
     "equation",

@@ -10,19 +10,19 @@
   "primaryAnswer": "45",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "All the way around the center is $360^\\circ$.",
+  "hint": "All the slices meet at the center of the pizza. Think about the total angle around a point.",
   "hints": [
     {
       "level": "nudge",
-      "text": "All the way around the center is $360^\\circ$."
+      "text": "All the slices meet at the center of the pizza. Think about the total angle around a point."
     },
     {
       "level": "guide",
-      "text": "Eight equal slices share that $360^\\circ$ evenly."
+      "text": "A full turn around the center is $360^\\circ$, and the $8$ equal slices share it evenly. Divide $360$ by $8$."
     },
     {
       "level": "reveal",
-      "text": "$360 \\div 8 = 45^\\circ$."
+      "text": "$360 \\div 8 = 45$, so each slice has a central angle of $45^\\circ$."
     }
   ],
   "explanation": [

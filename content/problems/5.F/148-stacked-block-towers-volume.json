@@ -10,25 +10,25 @@
   "primaryAnswer": "48",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the volume of each box on its own, then put the two volumes together.",
+  "hint": "The structure is made of two rectangular boxes. Volumes of parts that do not overlap can be added together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the volume of each box on its own, then put the two volumes together."
+      "text": "The structure is made of two rectangular boxes. Volumes of parts that do not overlap can be added together."
     },
     {
       "level": "guide",
-      "text": "Bottom: $6 \\times 2 \\times 3$. Top: $2 \\times 2 \\times 3$."
+      "text": "The bottom part is $6 \\times 2 \\times 3$ and the top part is $2 \\times 2 \\times 3$. Work out each volume, and then add them."
     },
     {
       "level": "reveal",
-      "text": "$36 + 12 = 48$ cubic centimeters."
+      "text": "The parts are $36$ and $12$ cubic centimeters, so the total volume is $36 + 12 = 48$ cubic centimeters."
     }
   ],
   "explanation": [
-    "Bottom part: $6 \\times 2 \\times 3 = 36$ cubic centimeters.",
-    "Top part: $2 \\times 2 \\times 3 = 12$ cubic centimeters.",
-    "Because the two parts do not overlap, add them: $36 + 12 = 48$ cubic centimeters."
+    "Multiply the three edges of the bottom part: $6 \\times 2 \\times 3 = 36$ cubic centimeters.",
+    "Do the same for the top part: $2 \\times 2 \\times 3 = 12$ cubic centimeters.",
+    "The two parts do not overlap, so add them: $36 + 12 = 48$ cubic centimeters in total."
   ],
   "alternativeExplanations": [
     {

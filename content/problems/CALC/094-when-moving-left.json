@@ -32,25 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Moving left means velocity is negative. Find $v(t) = s'(t)$ and factor it.",
+  "hint": "Moving left means the velocity is negative. So you need the velocity function and the times when it is below zero.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Moving left means velocity is negative. Find $v(t) = s'(t)$ and factor it."
+      "text": "Moving left means the velocity is negative. So you need the velocity function and the times when it is below zero."
     },
     {
       "level": "guide",
-      "text": "$v(t) = 3t^2 - 12t + 9 = 3(t - 1)(t - 3)$. Where is this negative?"
+      "text": "The velocity is $v(t) = s'(t) = 3t^2 - 12t + 9 = 3(t - 1)(t - 3)$. Decide for which times this product of factors is negative."
     },
     {
       "level": "reveal",
-      "text": "Between the roots: $1 < t < 3$. Choice B."
+      "text": "The product is negative between the roots, so the particle moves left for $1 < t < 3$, which is choice B."
     }
   ],
   "explanation": [
-    "$v(t) = 3t^2 - 12t + 9 = 3(t^2 - 4t + 3) = 3(t - 1)(t - 3)$.",
-    "The product of two factors is negative exactly when they have opposite signs: $t - 1 > 0$ and $t - 3 < 0$, i.e. $1 < t < 3$.",
-    "So the particle moves left from $t = 1$ to $t = 3$. It turns around at both of those instants: $s(1) = 4$ and $s(3) = 0$."
+    "Differentiate the position and factor the result: $v(t) = 3t^2 - 12t + 9 = 3(t^2 - 4t + 3) = 3(t - 1)(t - 3)$.",
+    "The product of two factors is negative exactly when they have opposite signs: $t - 1 > 0$ and $t - 3 < 0$, which means $1 < t < 3$.",
+    "So the particle moves left from $t = 1$ to $t = 3$, choice B. It turns around at both of those instants: $s(1) = 4$ and $s(3) = 0$."
   ],
   "alternativeExplanations": [
     {

@@ -18,25 +18,25 @@
     "75%"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The denominators match, so just add the numerators.",
+  "hint": "Look at the denominators. When they match, the pieces are all the same size, so you can count them together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The denominators match, so just add the numerators."
+      "text": "Look at the denominators. When they match, the pieces are all the same size, so you can count them together."
     },
     {
       "level": "guide",
-      "text": "$1 + 2 = 3$ fourths."
+      "text": "Both fractions are fourths. Keep the denominator $4$ and add the numerators $1 + 2$ to count the fourths."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{4} + \\frac{2}{4} = \\frac{3}{4}$."
+      "text": "$1 + 2 = 3$, so the sum is $\\frac{3}{4}$, three fourths."
     }
   ],
   "explanation": [
-    "Same denominator means the pieces are the same size.",
-    "Add the counts: $1 + 2 = 3$ pieces.",
-    "So the sum is $\\frac{3}{4}$."
+    "Both fractions have the denominator $4$, which means every piece is the same size.",
+    "Because the pieces match, add how many there are: $1 + 2 = 3$ pieces.",
+    "The pieces are still fourths, so the sum is $\\frac{3}{4}$."
   ],
   "tags": [
     "fractions",

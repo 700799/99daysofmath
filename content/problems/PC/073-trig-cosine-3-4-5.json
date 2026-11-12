@@ -10,25 +10,25 @@
   "primaryAnswer": "0.8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "CAH: Cosine is Adjacent over Hypotenuse.",
+  "hint": "Use the CAH part of SOH-CAH-TOA: Cosine is Adjacent over Hypotenuse. Which two sides are those here?",
   "hints": [
     {
       "level": "nudge",
-      "text": "CAH: Cosine is Adjacent over Hypotenuse."
+      "text": "Use the CAH part of SOH-CAH-TOA: Cosine is Adjacent over Hypotenuse. Which two sides are those here?"
     },
     {
       "level": "guide",
-      "text": "Adjacent is $4$ and hypotenuse is $5$, so cosine $= \\frac{4}{5}$."
+      "text": "The adjacent side is $4$ and the hypotenuse is $5$, so the cosine is $\\frac{4}{5}$. Write that fraction as a decimal."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{4}{5} = 0.8$."
+      "text": "Dividing gives $\\frac{4}{5} = 0.8$, so the cosine of the angle is $0.8$."
     }
   ],
   "explanation": [
-    "CAH: Cosine $=$ Adjacent $\\div$ Hypotenuse.",
-    "Adjacent means the leg that touches the angle.",
-    "$4 \\div 5 = 0.8$."
+    "The CAH part of SOH-CAH-TOA says Cosine $=$ Adjacent $\\div$ Hypotenuse.",
+    "Adjacent means the leg that touches the angle, which is $4$ here, and the hypotenuse is $5$.",
+    "Dividing gives $4 \\div 5 = 0.8$, so the cosine is $0.8$."
   ],
   "alternativeExplanations": [
     {

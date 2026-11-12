@@ -13,29 +13,31 @@
     "A fell more"
   ],
   "acceptanceMode": "exact",
-  "hint": "Compare how far each is from $0$.",
+  "hint": "Both changes are negative, so both stocks fell. \"Fell more\" asks about the size of the drop, not about which number is greater.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Rewrite the numbers in matching form (all fractions OR all decimals) before you operate."
+      "text": "Think of each change as money lost: losing $3.50$ dollars or losing $1.25$ dollars. Which loss is bigger?"
     },
     {
       "level": "nudge",
-      "text": "Compare how far each is from $0$."
+      "text": "Both changes are negative, so both stocks fell. \"Fell more\" asks about the size of the drop, not about which number is greater."
     },
     {
       "level": "guide",
-      "text": "$|-3.5| = 3.5$ and $|-1.25| = 1.25$."
+      "text": "The size of each drop is its absolute value: $|-3.5| = 3.5$ and $|-1.25| = 1.25$. Compare these two sizes."
     },
     {
       "level": "reveal",
-      "text": "$3.5 > 1.25$, so Stock A fell more."
+      "text": "$3.5 > 1.25$, so Stock A is the one that fell more."
     }
   ],
   "explanation": [
-    "Absolute values: $|-3.5| = 3.5,\\ |-1.25| = 1.25$.",
-    "$3.5 > 1.25$, so A had the bigger drop."
+    "A negative change means a fall, and the size of the fall is the absolute value of the change.",
+    "Find the size of both drops: $|-3.5| = 3.5$ and $|-1.25| = 1.25$.",
+    "Compare them: $3.5 > 1.25$, so the drop of Stock A is larger.",
+    "Stock A fell more, even though $-3.5$ is the smaller number."
   ],
   "alternativeExplanations": [
     {

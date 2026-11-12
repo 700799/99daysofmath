@@ -12,28 +12,31 @@
     "30 cubic feet"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$V = lwh$.",
+  "hint": "The amount of water that fills a tank is the tank's volume. Which formula gives the volume of a box shape?",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sketch the shape and label every length. A 30-second drawing saves 5 minutes of thinking."
+      "text": "Start with a shallower tank: a $5 \\times 3 \\times 1$ tank holds $15$ cubic feet. This tank is twice as deep."
     },
     {
       "level": "nudge",
-      "text": "$V = lwh$."
+      "text": "The amount of water that fills a tank is the tank's volume. Which formula gives the volume of a box shape?"
     },
     {
       "level": "guide",
-      "text": "$5 \\times 3 \\times 2$."
+      "text": "Multiply the three dimensions: $5 \\times 3 \\times 2$. Work out $5 \\times 3 = 15$ and then double it."
     },
     {
       "level": "reveal",
-      "text": "$30$."
+      "text": "$15 \\times 2 = 30$, so it takes $30$ cubic feet of water to fill the tank."
     }
   ],
   "explanation": [
-    "$V = 5 \\cdot 3 \\cdot 2 = 30$ ft³."
+    "Filling the tank means filling its whole inside space, which is its volume.",
+    "The tank is a rectangular prism, so $V = 5 \\times 3 \\times 2$.",
+    "Multiply two numbers first, $5 \\times 3 = 15$, and then multiply by the third: $15 \\times 2 = 30$.",
+    "The tank holds $30$ cubic feet of water."
   ],
   "tags": [
     "MAP-practice",

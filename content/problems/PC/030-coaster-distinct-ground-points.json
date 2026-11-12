@@ -10,11 +10,11 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find every $x$ that makes a factor zero — but count repeats only ONCE.",
+  "hint": "Find every $x$ that makes a factor zero, but count a repeated value only ONCE.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find every $x$ that makes a factor zero — but count repeats only ONCE."
+      "text": "Find every $x$ that makes a factor zero, but count a repeated value only ONCE."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "The factors give $x = 0$, $x = 4$ (twice), and $x = 9$."
+      "text": "The factors give $x = 0$, then $x = 4$ (from the squared factor, so it appears twice), and $x = 9$. Count the different values."
     },
     {
       "level": "reveal",
-      "text": "The different ground points are $0$, $4$, and $9$ — that is $3$ places."
+      "text": "The different ground points are $0$, $4$, and $9$, so the track meets the ground at $3$ places."
     }
   ],
   "explanation": [
-    "Set each factor to zero: $x = 0$, $x = 4$, $x = 9$.",
+    "Setting each factor to zero gives $x = 0$, $x = 4$, and $x = 9$.",
     "The factor $(x - 4)$ appears twice, but $4$ is still one single spot on the track.",
-    "So the track meets the ground at $3$ different $x$-values."
+    "So the track touches or crosses the ground at $3$ different $x$-values."
   ],
   "alternativeExplanations": [
     {

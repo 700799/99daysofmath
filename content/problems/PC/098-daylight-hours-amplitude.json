@@ -10,11 +10,11 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Amplitude is HALF the distance from the highest point to the lowest point.",
+  "hint": "Amplitude is HALF the distance from the highest point of the wave to the lowest point.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Amplitude is HALF the distance from the highest point to the lowest point."
+      "text": "Amplitude is HALF the distance from the highest point of the wave to the lowest point."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "The gap is $16 - 8 = 8$ hours. Halve it."
+      "text": "The gap between the longest and shortest days is $16 - 8 = 8$ hours. Take half of that gap."
     },
     {
       "level": "reveal",
-      "text": "$8 \\div 2 = 4$ hours."
+      "text": "Half the gap is $8 \\div 2 = 4$, so the amplitude is $4$ hours."
     }
   ],
   "explanation": [
-    "Peak $= 16$ h, trough $= 8$ h.",
-    "Amplitude is the half-gap: $(16 - 8) \\div 2 = 8 \\div 2 = 4$ hours.",
-    "Check with the midline: the middle is $(16 + 8) \\div 2 = 12$ h, and $12 + 4 = 16$, $12 - 4 = 8$. ✓"
+    "The peak of the daylight wave is $16$ hours and the trough is $8$ hours.",
+    "Amplitude is half the gap between them: $(16 - 8) \\div 2 = 8 \\div 2 = 4$ hours.",
+    "Check with the midline, $(16 + 8) \\div 2 = 12$ hours: $12 + 4 = 16$ and $12 - 4 = 8$, so the amplitude is $4$."
   ],
   "alternativeExplanations": [
     {

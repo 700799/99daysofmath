@@ -10,11 +10,11 @@
   "primaryAnswer": "13000",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiply by $1.04$.",
+  "hint": "Growing by a percent means the town keeps everyone it had and gains a fraction more. What single multiplier describes that?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply by $1.04$."
+      "text": "Growing by a percent means the town keeps everyone it had and gains a fraction more. What single multiplier describes that?"
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "$4\\%$ of $12{,}500$ is $500$."
+      "text": "Find the increase first: $4\\%$ of $12{,}500$ is $0.04 \\times 12500 = 500$. Then add the increase to the starting population."
     },
     {
       "level": "reveal",
-      "text": "$12{,}500 + 500 = 13{,}000$."
+      "text": "Adding gives $12{,}500 + 500 = 13{,}000$, so the population after the year is $13{,}000$."
     }
   ],
   "learningObjective": "Apply a percent increase to a large quantity.",
   "topic": "Percent change",
   "explanation": [
-    "$4\\%$ of $12{,}500$ is $0.04 \\times 12500 = 500$.",
-    "The new population is $12500 + 500 = 13{,}000$.",
-    "Or in one step: $12500 \\times 1.04 = 13{,}000$."
+    "Find the size of the increase, which is $4\\%$ of the population: $0.04 \\times 12500 = 500$.",
+    "Add the increase to the starting population to get $12500 + 500 = 13{,}000$.",
+    "A single multiplication gives the same result, $12500 \\times 1.04 = 13{,}000$, so the population is $13{,}000$."
   ],
   "alternativeExplanations": [
     {

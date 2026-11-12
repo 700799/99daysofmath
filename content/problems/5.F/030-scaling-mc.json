@@ -32,19 +32,19 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Multiplying by a number bigger than 1 makes things bigger; smaller than 1 makes them smaller.",
+  "hint": "You can compare without multiplying. Think about what multiplying by a factor above $1$, equal to $1$, or below $1$ does to a number.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiplying by a number bigger than 1 makes things bigger; smaller than 1 makes them smaller."
+      "text": "You can compare without multiplying. Think about what multiplying by a factor above $1$, equal to $1$, or below $1$ does to a number."
     },
     {
       "level": "guide",
-      "text": "Which factor is greater than $1$? Only $\\frac{9}{8}$."
+      "text": "Check the second factor in each choice: $\\frac{7}{8}$ and $\\frac{3}{4}$ are less than $1$, and $1$ changes nothing. Look for the factor greater than $1$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{5}{6} \\times \\frac{9}{8} > \\frac{5}{6}$ because $\\frac{9}{8} > 1$. Choose C."
+      "text": "Only $\\frac{9}{8}$ is greater than $1$, so $\\frac{5}{6} \\times \\frac{9}{8}$ is the product greater than $\\frac{5}{6}$. That is choice C."
     }
   ],
   "explanation": [

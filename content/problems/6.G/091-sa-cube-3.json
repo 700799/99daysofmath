@@ -12,24 +12,26 @@
     "54 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A cube has $6$ equal faces.",
+  "hint": "A cube is covered by identical square faces. Work out one square and then count the squares.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A cube has $6$ equal faces."
+      "text": "A cube is covered by identical square faces. Work out one square and then count the squares."
     },
     {
       "level": "guide",
-      "text": "Each face: $3 \\cdot 3 = 9$. Total: $6 \\cdot 9$."
+      "text": "With an edge of $3$, one face has area $3 \\times 3 = 9$. Multiply this by the number of faces on a cube."
     },
     {
       "level": "reveal",
-      "text": "$54$."
+      "text": "$6 \\times 9 = 54$, so the surface area of the cube is $54$ square units."
     }
   ],
   "explanation": [
-    "One face: $9$ sq units.",
-    "$6$ faces: $6 \\cdot 9 = 54$."
+    "One face of the cube is a $3$ by $3$ square with area $3 \\times 3 = 9$.",
+    "A cube has $6$ faces, and all of them have this same area.",
+    "Multiply to add the six equal faces: $6 \\times 9 = 54$.",
+    "The surface area of the cube is $54$ square units."
   ],
   "tags": [
     "surface-area",

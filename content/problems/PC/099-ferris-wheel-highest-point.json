@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Highest $=$ midline $+$ amplitude $= 22 + 18$."
+      "text": "The highest point is the midline plus the amplitude, which here means adding $22 + 18$."
     },
     {
       "level": "reveal",
-      "text": "$22 + 18 = 40$ metres."
+      "text": "The sum is $22 + 18 = 40$, so the seat reaches a highest height of $40$ metres."
     }
   ],
   "explanation": [
     "The wave climbs highest when $\\sin(x) = 1$, which happens at $x = 90^\\circ$.",
-    "Then $h = 18 \\times 1 + 22$.",
-    "$h = 40$ metres. That is the midline $22$ plus the amplitude $18$."
+    "Putting that value into the rule gives $h = 18 \\times 1 + 22$.",
+    "So the highest height is $h = 40$ metres, which is the midline $22$ plus the amplitude $18$."
   ],
   "alternativeExplanations": [
     {

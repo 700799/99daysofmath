@@ -12,24 +12,26 @@
     "24 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Add up the $6$ square areas.",
+  "hint": "When the net folds up, its squares become the faces of the cube. So the net's area is the cube's surface area.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add up the $6$ square areas."
+      "text": "When the net folds up, its squares become the faces of the cube. So the net's area is the cube's surface area."
     },
     {
       "level": "guide",
-      "text": "Each square: $4$. Total: $6 \\cdot 4$."
+      "text": "Each square has side $2$, so its area is $2 \\times 2 = 4$. The net has $6$ of these squares."
     },
     {
       "level": "reveal",
-      "text": "$24$."
+      "text": "$6 \\times 4 = 24$, so the surface area of the cube is $24$ square units."
     }
   ],
   "explanation": [
-    "Each square: $2 \\cdot 2 = 4$.",
-    "$6$ squares: $6 \\cdot 4 = 24$."
+    "The net is the cube's surface laid flat, so its total area equals the surface area.",
+    "Each square in the net has area $2 \\times 2 = 4$.",
+    "There are $6$ squares, so the total is $6 \\times 4 = 24$.",
+    "The surface area of the cube is $24$ square units."
   ],
   "tags": [
     "net",

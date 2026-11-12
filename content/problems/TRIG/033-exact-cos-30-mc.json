@@ -32,25 +32,25 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Use the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$.",
+  "hint": "Use the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$. Cosine needs the leg that touches the angle and the hypotenuse.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$."
+      "text": "Use the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$. Cosine needs the leg that touches the angle and the hypotenuse."
     },
     {
       "level": "guide",
-      "text": "Next to the $30^\\circ$ angle sits the long leg $\\sqrt{3}$; the hypotenuse is $2$."
+      "text": "Next to the $30^\\circ$ angle sits the long leg $\\sqrt{3}$, and the hypotenuse is $2$. Put adjacent over hypotenuse."
     },
     {
       "level": "reveal",
-      "text": "$\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, which is about $0.866$."
+      "text": "$\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, which is about $0.866$ and is choice C."
     }
   ],
   "explanation": [
     "In the $30$-$60$-$90$ triangle the sides are $1$ (opposite $30^\\circ$), $\\sqrt{3}$ (opposite $60^\\circ$), and $2$ (the hypotenuse).",
     "Cosine is adjacent over hypotenuse, and the side adjacent to the $30^\\circ$ angle is $\\sqrt{3}$.",
-    "So $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2} \\approx 0.866$."
+    "So the exact value is $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, which is about $0.866$."
   ],
   "alternativeExplanations": [
     {

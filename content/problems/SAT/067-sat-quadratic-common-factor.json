@@ -10,11 +10,11 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Factor out the greatest common factor first.",
+  "hint": "Before using any formula, check whether the two terms share a factor. Factoring is the fastest route when there is no constant term.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Factor out the greatest common factor first."
+      "text": "Before using any formula, check whether the two terms share a factor. Factoring is the fastest route when there is no constant term."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "$2x(x - 4) = 0$."
+      "text": "Both terms contain $2x$, so write the equation as $2x(x - 4) = 0$. Set each factor equal to zero to find both solutions."
     },
     {
       "level": "reveal",
-      "text": "So $x = 0$ or $x = 4$; the greatest is $4$."
+      "text": "The solutions are $x = 0$ and $x = 4$, so the greatest solution is $4$."
     }
   ],
   "learningObjective": "Solve a quadratic by factoring out a common monomial.",
   "topic": "Factoring quadratics",
   "explanation": [
-    "Both terms share $2x$: $2x^2 - 8x = 2x(x - 4)$.",
-    "Set the product to zero: $2x = 0$ gives $x = 0$, and $x - 4 = 0$ gives $x = 4$.",
-    "The greatest solution is $4$."
+    "Both terms share the factor $2x$, so factor it out: $2x^2 - 8x = 2x(x - 4)$.",
+    "A product equals zero only when a factor equals zero, so $2x = 0$ or $x - 4 = 0$.",
+    "These give $x = 0$ and $x = 4$, so the greatest solution is $4$."
   ],
   "alternativeExplanations": [
     {

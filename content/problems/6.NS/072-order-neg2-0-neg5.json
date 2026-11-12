@@ -13,24 +13,26 @@
     "-5 -2 0"
   ],
   "acceptanceMode": "exact",
-  "hint": "Most-negative first.",
+  "hint": "Least to greatest is the left-to-right order on a number line. Among negative numbers, the one farther from zero is smaller.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Most-negative first."
+      "text": "Least to greatest is the left-to-right order on a number line. Among negative numbers, the one farther from zero is smaller."
     },
     {
       "level": "guide",
-      "text": "$-5 < -2 < 0$."
+      "text": "Compare the two negatives first: $-5$ is farther left than $-2$. Zero is greater than any negative number, so decide where it goes."
     },
     {
       "level": "reveal",
-      "text": "$-5,\\ -2,\\ 0$."
+      "text": "Since $-5 < -2 < 0$, the order from least to greatest is $-5,\\ -2,\\ 0$."
     }
   ],
   "explanation": [
-    "On a number line, $-5$ is farthest left, then $-2$, then $0$.",
-    "Order: $-5,\\ -2,\\ 0$."
+    "Place the numbers on a number line, where numbers farther left are smaller.",
+    "$-5$ is $5$ units left of $0$ and $-2$ is only $2$ units left, so $-5$ is the least.",
+    "$0$ is to the right of both negative numbers, so it is the greatest.",
+    "From least to greatest the order is $-5,\\ -2,\\ 0$."
   ],
   "tags": [
     "integer",

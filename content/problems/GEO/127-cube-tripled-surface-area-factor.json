@@ -10,19 +10,19 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Surface area is built from two dimensions, so scaling hits it twice.",
+  "hint": "Each face of a cube is a square, and its area depends on two lengths. Think about what tripling both of them does.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Surface area is built from two dimensions, so scaling hits it twice."
+      "text": "Each face of a cube is a square, and its area depends on two lengths. Think about what tripling both of them does."
     },
     {
       "level": "guide",
-      "text": "Test it: a cube of edge $1$ has surface area $6$; a cube of edge $3$ has surface area $6(3^2) = 54$."
+      "text": "Try a real case: a cube with edge $1$ has surface area $6$, and a cube with edge $3$ has surface area $6(3^2) = 54$. Compare the two results."
     },
     {
       "level": "reveal",
-      "text": "$54 \\div 6 = 9$ times as much."
+      "text": "$54 \\div 6 = 9$, so the new surface area is $9$ times the original."
     }
   ],
   "explanation": [

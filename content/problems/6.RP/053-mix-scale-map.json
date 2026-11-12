@@ -12,23 +12,26 @@
     "175 miles"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Each inch represents $50$ miles.",
+  "hint": "A map scale is a rate: every inch on the map stands for the same number of real miles.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Each inch represents $50$ miles."
+      "text": "A map scale is a rate: every inch on the map stands for the same number of real miles."
     },
     {
       "level": "guide",
-      "text": "$3.5 \\times 50$."
+      "text": "Each inch is $50$ miles, so multiply the map distance by $50$: work out $3.5 \\times 50$. You can do $3 \\times 50$ and $0.5 \\times 50$ separately."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 50 = 150$, plus $0.5 \\times 50 = 25$. Total: $175$."
+      "text": "$150 + 25 = 175$, so $3.5$ inches on the map is $175$ miles."
     }
   ],
   "explanation": [
-    "$3.5 \\times 50 = 175$ miles."
+    "The scale says $1$ inch stands for $50$ miles, so the real distance is the map distance times $50$.",
+    "Split $3.5$ into $3$ and $0.5$ to multiply more easily.",
+    "Three inches is $3 \\times 50 = 150$ miles and half an inch is $25$ miles, which total $175$.",
+    "A map distance of $3.5$ inches represents $175$ miles."
   ],
   "tags": [
     "conversion",

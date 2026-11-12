@@ -13,24 +13,25 @@
     "y"
   ],
   "acceptanceMode": "exact",
-  "hint": "Distribute the right side.",
+  "hint": "One expression has parentheses and the other does not. Removing the parentheses makes them easy to compare.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Distribute the right side."
+      "text": "One expression has parentheses and the other does not. Removing the parentheses makes them easy to compare."
     },
     {
       "level": "guide",
-      "text": "$3(x + 4) = 3x + 12$."
+      "text": "Distribute the $3$ in $3(x + 4)$: multiply $3$ by $x$ and $3$ by $4$. See whether you get $3x + 12$."
     },
     {
       "level": "reveal",
-      "text": "Yes — they're equal."
+      "text": "$3 \\cdot x + 3 \\cdot 4 = 3x + 12$, the same as the first expression, so the answer is yes."
     }
   ],
   "explanation": [
-    "$3(x + 4) = 3 \\cdot x + 3 \\cdot 4 = 3x + 12$.",
-    "Equivalent."
+    "Expand $3(x + 4)$ by using the distributive property.",
+    "The $3$ multiplies each term inside: $3 \\cdot x = 3x$ and $3 \\cdot 4 = 12$.",
+    "The result $3x + 12$ matches the first expression, so yes, they are equivalent."
   ],
   "alternativeExplanations": [
     {

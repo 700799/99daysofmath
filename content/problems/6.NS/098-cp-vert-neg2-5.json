@@ -12,29 +12,31 @@
     "7 units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Same x — vertical distance.",
+  "hint": "The two points have the same x-coordinate, so one is directly above the other. Only the y-values matter for the distance.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try a 10×-easier version: shrink each number by a factor of 10 and watch the structure."
+      "text": "Try $(1, 0)$ to $(1, 5)$ first, which is $5$ units. Starting from $y = -2$ instead adds the units below the x-axis."
     },
     {
       "level": "nudge",
-      "text": "Same x — vertical distance."
+      "text": "The two points have the same x-coordinate, so one is directly above the other. Only the y-values matter for the distance."
     },
     {
       "level": "guide",
-      "text": "$|5 - (-2)|$."
+      "text": "Take the absolute value of the difference of the y-values: $|5 - (-2)|$. Subtracting $-2$ is the same as adding $2$."
     },
     {
       "level": "reveal",
-      "text": "$|5 - (-2)| = |7| = 7$."
+      "text": "$|5 - (-2)| = |5 + 2| = 7$, so the distance is $7$ units."
     }
   ],
   "explanation": [
-    "Same x → vertical segment.",
-    "$|5 - (-2)| = |7| = 7$."
+    "Both points have $x = 1$, so they lie on a vertical line.",
+    "The distance on a vertical line is the absolute value of the difference of the y-values: $|5 - (-2)|$.",
+    "Subtracting a negative is the same as adding, so this equals $|5 + 2| = 7$.",
+    "The distance from $(1, -2)$ to $(1, 5)$ is $7$ units."
   ],
   "tags": [
     "MAP-practice",

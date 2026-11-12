@@ -10,19 +10,19 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Try it with $\\theta = 30^\\circ$: $\\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}\\right)^2$.",
+  "hint": "Test the expression on an angle whose sine and cosine you know exactly, such as $30^\\circ$, and see what total you get.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Try it with $\\theta = 30^\\circ$: $\\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}\\right)^2$."
+      "text": "Test the expression on an angle whose sine and cosine you know exactly, such as $30^\\circ$, and see what total you get."
     },
     {
       "level": "guide",
-      "text": "That is $\\frac{1}{4} + \\frac{3}{4}$. Now try $\\theta = 0^\\circ$ and see whether you get the same total."
+      "text": "With $\\theta = 30^\\circ$ the expression is $\\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}\\right)^2 = \\frac{1}{4} + \\frac{3}{4}$. Add these, then try $\\theta = 0^\\circ$ and compare the totals."
     },
     {
       "level": "reveal",
-      "text": "Every angle gives the same answer: $1$."
+      "text": "Every angle gives the same total, so $\\sin^2\\theta + \\cos^2\\theta = 1$."
     }
   ],
   "explanation": [

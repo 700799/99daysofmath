@@ -10,23 +10,26 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Divide both sides by $0.5$.",
+  "hint": "$0.5$ is the same as one half. If half of a number is $4$, how does the whole number compare?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Divide both sides by $0.5$."
+      "text": "$0.5$ is the same as one half. If half of a number is $4$, how does the whole number compare?"
     },
     {
       "level": "guide",
-      "text": "$x = 4 / 0.5$."
+      "text": "Divide both sides by $0.5$, which gives $x = 4 \\div 0.5$. Dividing by a half is the same as doubling."
     },
     {
       "level": "reveal",
-      "text": "$x = 8$."
+      "text": "$4 \\div 0.5 = 8$, so the solution of the equation is $x = 8$."
     }
   ],
   "explanation": [
-    "$0.5x = 4 \\Rightarrow x = 8$."
+    "$0.5x$ means $0.5$ times $x$, which is half of $x$.",
+    "Divide both sides by $0.5$ to undo the multiplication: $x = 4 \\div 0.5$.",
+    "Dividing by one half doubles the number, so $x = 8$.",
+    "Check: $0.5 \\times 8 = 4$ is true, so the solution is $x = 8$."
   ],
   "tags": [
     "solve",

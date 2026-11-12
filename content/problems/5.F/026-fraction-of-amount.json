@@ -10,24 +10,25 @@
   "primaryAnswer": "24",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "\"Of\" means multiply: $\\frac{3}{5} \\times 40$.",
+  "hint": "Finding a fraction of a group means multiplying. The denominator tells you how many equal parts to split the class into.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Of\" means multiply: $\\frac{3}{5} \\times 40$."
+      "text": "Finding a fraction of a group means multiplying. The denominator tells you how many equal parts to split the class into."
     },
     {
       "level": "guide",
-      "text": "Find $\\frac{1}{5}$ of $40$ first: $40 \\div 5 = 8$."
+      "text": "Split the $40$ students into $5$ equal groups with $40 \\div 5$. Then take $3$ of those groups."
     },
     {
       "level": "reveal",
-      "text": "Then $3$ fifths is $3 \\times 8 = 24$."
+      "text": "One fifth is $40 \\div 5 = 8$ students, and $3 \\times 8 = 24$, so $24$ students take the bus."
     }
   ],
   "explanation": [
-    "One fifth of $40$ is $40 \\div 5 = 8$.",
-    "Three fifths is $3 \\times 8 = 24$ students."
+    "The fraction $\\frac{3}{5}$ of $40$ means splitting the class into $5$ equal parts and taking $3$ of them.",
+    "One fifth of the class is $40 \\div 5 = 8$ students.",
+    "Three fifths is three of those parts: $3 \\times 8 = 24$, so $24$ students take the bus."
   ],
   "alternativeExplanations": [
     {

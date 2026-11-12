@@ -10,11 +10,11 @@
   "primaryAnswer": "28",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A midpoint splits the rod into two EQUAL halves, so set the two expressions equal.",
+  "hint": "Think about what the word midpoint tells you about the two parts $AM$ and $MB$ of the rod.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A midpoint splits the rod into two EQUAL halves, so set the two expressions equal."
+      "text": "Think about what the word midpoint tells you about the two parts $AM$ and $MB$ of the rod."
     },
     {
       "level": "nudge",
@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "Solve $3x - 1 = x + 9$ for $x$, then use it to find one half."
+      "text": "The halves are equal, so solve $3x - 1 = x + 9$ for $x$. Then find the length of one half and double it."
     },
     {
       "level": "reveal",
-      "text": "$2x = 10$ gives $x = 5$, so $AM = 14$ and $AB = 2(14) = 28$."
+      "text": "$2x = 10$ gives $x = 5$, so each half is $14$ and the whole rod is $AB = 28$."
     }
   ],
   "explanation": [
-    "Midpoint means $AM = MB$, so $3x - 1 = x + 9$.",
-    "Subtract $x$ from both sides and add 1: $2x = 10$, so $x = 5$.",
-    "One half is $AM = 3(5) - 1 = 14$, and $MB = 5 + 9 = 14$ agrees.",
-    "The whole rod is both halves: $AB = 14 + 14 = 28$."
+    "A midpoint cuts a segment into two equal parts, so $AM = MB$ and we can write $3x - 1 = x + 9$.",
+    "Subtract $x$ from both sides and add $1$ to both sides: $2x = 10$, so $x = 5$.",
+    "Substitute to get one half: $AM = 3(5) - 1 = 14$, and $MB = 5 + 9 = 14$ agrees with it.",
+    "The rod is made of both halves, so $AB = 14 + 14 = 28$."
   ],
   "alternativeExplanations": [
     {

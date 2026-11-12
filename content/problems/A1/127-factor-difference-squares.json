@@ -14,25 +14,25 @@
     "(x-5)(x+5)"
   ],
   "acceptanceMode": "normalized",
-  "hint": "This is a DIFFERENCE of SQUARES: $x^2$ is a square, and $25 = 5^2$ is a square.",
+  "hint": "Look at each term on its own. Both are perfect squares, and they are joined by a minus sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "This is a DIFFERENCE of SQUARES: $x^2$ is a square, and $25 = 5^2$ is a square."
+      "text": "Look at each term on its own. Both are perfect squares, and they are joined by a minus sign."
     },
     {
       "level": "guide",
-      "text": "The pattern: $a^2 - b^2 = (a + b)(a - b)$. Here $a = x$ and $b = 5$."
+      "text": "Use the difference of squares pattern $a^2 - b^2 = (a + b)(a - b)$ with $a = x$ and $b = 5$, since $25 = 5^2$."
     },
     {
       "level": "reveal",
-      "text": "$x^2 - 25 = (x + 5)(x - 5)$."
+      "text": "Putting $x$ and $5$ into the pattern gives the factored form $(x + 5)(x - 5)$."
     }
   ],
   "explanation": [
-    "Spot the pattern: both terms are perfect squares with a minus between them.",
-    "$a^2 - b^2 = (a + b)(a - b)$ with $a = x$, $b = 5$.",
-    "So $x^2 - 25 = (x + 5)(x - 5)$."
+    "Both terms are perfect squares with a minus sign between them, because $25 = 5^2$. This is a difference of squares.",
+    "The pattern is $a^2 - b^2 = (a + b)(a - b)$, and here $a = x$ and $b = 5$.",
+    "Substituting into the pattern gives the factored form $x^2 - 25 = (x + 5)(x - 5)$."
   ],
   "alternativeExplanations": [
     {

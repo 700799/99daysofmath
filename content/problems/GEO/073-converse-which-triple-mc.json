@@ -32,25 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The converse of the Pythagorean theorem: if $a^2 + b^2 = c^2$ then the triangle is right. Test the two short sides against the longest.",
+  "hint": "A triangle is right exactly when the squares of its two shorter sides add up to the square of its longest side. Test each set that way.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The converse of the Pythagorean theorem: if $a^2 + b^2 = c^2$ then the triangle is right. Test the two short sides against the longest."
+      "text": "A triangle is right exactly when the squares of its two shorter sides add up to the square of its longest side. Test each set that way."
     },
     {
       "level": "guide",
-      "text": "Try $9$, $12$, $15$: is $9^2 + 12^2$ equal to $15^2$?"
+      "text": "Check the set $9$, $12$, $15$: compare $9^2 + 12^2$ with $15^2$ and see whether the two values match."
     },
     {
       "level": "reveal",
-      "text": "$81 + 144 = 225 = 15^2$, so $9$-$12$-$15$ is right. It is the $3$-$4$-$5$ triple tripled."
+      "text": "$81 + 144 = 225 = 15^2$, so the sides $9$, $12$, $15$ make a right triangle, which is choice B."
     }
   ],
   "explanation": [
-    "The converse says a triangle is right exactly when the squares of the two shorter sides add to the square of the longest.",
-    "Check B: $9^2 + 12^2 = 81 + 144 = 225$ and $15^2 = 225$. ✓",
-    "The others fail: $36 + 49 = 85 \\neq 64$, $16 + 25 = 41 \\neq 36$, and $25 + 36 = 61 \\neq 100$."
+    "The converse of the Pythagorean Theorem says a triangle is right exactly when the squares of the two shorter sides add to the square of the longest.",
+    "For choice B, $9^2 + 12^2 = 81 + 144 = 225$, and $15^2 = 225$ as well, so this set works.",
+    "The other sets fail the test, since $36 + 49 = 85 \\neq 64$, $16 + 25 = 41 \\neq 36$ and $25 + 36 = 61 \\neq 100$, so the answer is choice B."
   ],
   "alternativeExplanations": [
     {

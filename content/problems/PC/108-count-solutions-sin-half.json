@@ -23,11 +23,11 @@
     },
     {
       "level": "guide",
-      "text": "The line at height $0.5$ cuts the circle once on the way up (Quadrant 1) and once on the way back down (Quadrant 2)."
+      "text": "The line at height $0.5$ cuts the circle once on the way up, in Quadrant 1, and once on the way back down, in Quadrant 2."
     },
     {
       "level": "reveal",
-      "text": "There are $2$ solutions: $30^\\circ$ and $150^\\circ$."
+      "text": "There are $2$ solutions, namely $30^\\circ$ and $150^\\circ$."
     }
   ],
   "explanation": [

@@ -12,26 +12,26 @@
     "1,026"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Break $27$ into $20 + 7$ and multiply each part by $38$.",
+  "hint": "A two-digit multiplier can be split into tens and ones. Multiply by each part, then put the parts together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Break $27$ into $20 + 7$ and multiply each part by $38$."
+      "text": "A two-digit multiplier can be split into tens and ones. Multiply by each part, then put the parts together."
     },
     {
       "level": "guide",
-      "text": "$38 \\times 20 = 760$ and $38 \\times 7 = 266$. Add them."
+      "text": "Split $27$ into $20 + 7$. Find $38 \\times 20$ and $38 \\times 7$, then add the two partial products."
     },
     {
       "level": "reveal",
-      "text": "$760 + 266 = 1026$."
+      "text": "$38 \\times 20 = 760$ and $38 \\times 7 = 266$, and $760 + 266 = 1026$, so the product is $1026$."
     }
   ],
   "explanation": [
-    "Split $27$ into $20 + 7$.",
-    "$38 \\times 20 = 760$.",
-    "$38 \\times 7 = 266$.",
-    "$760 + 266 = 1026$."
+    "Split $27$ into $20 + 7$, because multiplying by each part separately is easier than doing it all at once.",
+    "Multiply by the tens part: $38 \\times 20 = 760$, which is $38 \\times 2$ with a zero attached.",
+    "Multiply by the ones part: $38 \\times 7 = 266$, since $30 \\times 7 = 210$ and $8 \\times 7 = 56$.",
+    "Add the partial products to cover all $27$ groups: $760 + 266 = 1026$, so $38 \\times 27 = 1026$."
   ],
   "alternativeExplanations": [
     {

@@ -48,9 +48,9 @@
     }
   ],
   "explanation": [
-    "Direction describes what $y$ does as $x$ increases.",
-    "Here sales FALL as temperature rises, so the cloud of points trends downward.",
-    "That is a negative association. Choice B."
+    "Direction describes what happens to $y$ as $x$ increases across the scatterplot.",
+    "Here sales FALL as temperature rises, so the cloud of points trends downward from left to right.",
+    "A downward trend is a negative association, which is choice B."
   ],
   "alternativeExplanations": [
     {

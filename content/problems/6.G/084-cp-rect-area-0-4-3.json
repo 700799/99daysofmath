@@ -12,24 +12,26 @@
     "12 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$A = L \\cdot W$.",
+  "hint": "Area needs the length and the width. Read each one from the corners by looking at how far $x$ and $y$ go.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$A = L \\cdot W$."
+      "text": "Area needs the length and the width. Read each one from the corners by looking at how far $x$ and $y$ go."
     },
     {
       "level": "guide",
-      "text": "$4 \\cdot 3$."
+      "text": "The rectangle reaches from $x = 0$ to $x = 4$ and from $y = 0$ to $y = 3$. So it is $4$ by $3$. Multiply those."
     },
     {
       "level": "reveal",
-      "text": "$12$."
+      "text": "$4 \\times 3 = 12$, so the area of the rectangle is $12$ square units."
     }
   ],
   "explanation": [
-    "Length $4$ and width $3$: area $= 12$ sq units.",
-    "Final answer: 12."
+    "The corners show that $x$ runs from $0$ to $4$, so the length is $4$.",
+    "They also show that $y$ runs from $0$ to $3$, so the width is $3$.",
+    "Multiply length by width to count the unit squares inside: $4 \\times 3 = 12$.",
+    "The area of the rectangle is $12$ square units."
   ],
   "tags": [
     "coordinate-plane",

@@ -10,27 +10,27 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You can factor — or use the fact that the solutions of $ax^2 + bx + c = 0$ sum to $-b/a$.",
+  "hint": "You could factor and add the two solutions. There is also a shortcut that reads the sum straight from the coefficients.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You can factor — or use the fact that the solutions of $ax^2 + bx + c = 0$ sum to $-b/a$."
+      "text": "You could factor and add the two solutions. There is also a shortcut that reads the sum straight from the coefficients."
     },
     {
       "level": "guide",
-      "text": "Here $a = 1$ and $b = -8$."
+      "text": "The solutions of $ax^2 + bx + c = 0$ add up to $-\\dfrac{b}{a}$. In this equation $a = 1$ and $b = -8$, so substitute those."
     },
     {
       "level": "reveal",
-      "text": "The sum is $-(-8)/1 = 8$."
+      "text": "The sum is $-\\dfrac{-8}{1} = 8$, so the solutions add up to $8$."
     }
   ],
   "learningObjective": "Use the sum-of-roots relationship for a quadratic.",
   "topic": "Roots of quadratics",
   "explanation": [
-    "For $ax^2 + bx + c = 0$, the two solutions sum to $-\\dfrac{b}{a}$ and multiply to $\\dfrac{c}{a}$.",
-    "Here $-\\dfrac{-8}{1} = 8$.",
-    "Confirm by factoring: $(x - 1)(x - 7) = 0$ gives $1$ and $7$, which sum to $8$ ✓"
+    "For any quadratic $ax^2 + bx + c = 0$, the two solutions add up to $-\\dfrac{b}{a}$.",
+    "Here $a = 1$ and $b = -8$, so the sum is $-\\dfrac{-8}{1} = 8$.",
+    "Factoring confirms this: $(x - 1)(x - 7) = 0$ has solutions $1$ and $7$, and their sum is $8$."
   ],
   "alternativeExplanations": [
     {

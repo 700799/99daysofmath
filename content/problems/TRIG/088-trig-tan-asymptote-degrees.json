@@ -10,25 +10,25 @@
   "primaryAnswer": "90",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Tangent is undefined wherever the cosine underneath it is zero.",
+  "hint": "Tangent is sine divided by cosine, so it is undefined wherever the cosine underneath it is zero.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Tangent is undefined wherever the cosine underneath it is zero."
+      "text": "Tangent is sine divided by cosine, so it is undefined wherever the cosine underneath it is zero."
     },
     {
       "level": "guide",
-      "text": "Between $0^\\circ$ and $180^\\circ$, where does cosine equal $0$?"
+      "text": "Look for the angle between $0^\\circ$ and $180^\\circ$ where cosine equals $0$. On the unit circle that is where the $x$-coordinate is zero."
     },
     {
       "level": "reveal",
-      "text": "At $90^\\circ$, so the simulation crashes at $\\theta = 90^\\circ$."
+      "text": "Cosine is zero at $90^\\circ$, so the simulation crashes at $\\theta = 90^\\circ$."
     }
   ],
   "explanation": [
-    "$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$ is undefined when $\\cos\\theta = 0$.",
+    "The quotient $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$ is undefined when $\\cos\\theta = 0$, because division by zero is not allowed.",
     "On the interval from $0^\\circ$ to $180^\\circ$ the only such angle is $90^\\circ$.",
-    "The graph has a vertical asymptote there, so the value the program tries to compute does not exist."
+    "The graph has a vertical asymptote there, so the program crashes at $90$ degrees."
   ],
   "alternativeExplanations": [
     {

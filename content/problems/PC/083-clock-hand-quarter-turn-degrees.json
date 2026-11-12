@@ -10,19 +10,19 @@
   "primaryAnswer": "90",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A full turn all the way around is $360^\\circ$.",
+  "hint": "Start from a full turn all the way around the clock, which is $360^\\circ$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A full turn all the way around is $360^\\circ$."
+      "text": "Start from a full turn all the way around the clock, which is $360^\\circ$."
     },
     {
       "level": "guide",
-      "text": "A quarter of a full turn is $360 \\div 4$."
+      "text": "The hand made a quarter of a full turn, so divide the full turn by four: $360 \\div 4$."
     },
     {
       "level": "reveal",
-      "text": "$360 \\div 4 = 90$, so the hand turned $90^\\circ$."
+      "text": "Since $360 \\div 4 = 90$, the clock hand turned $90^\\circ$."
     }
   ],
   "explanation": [

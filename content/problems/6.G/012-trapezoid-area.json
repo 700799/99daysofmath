@@ -10,28 +10,32 @@
   "primaryAnswer": "32",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Trapezoid area $= \\frac{1}{2}(b_1 + b_2) h$.",
+  "hint": "A trapezoid has two different parallel sides. The area formula uses their average as the width. How do you average two numbers?",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try a similar but smaller shape (all sides ÷ 2) and look at how the formula behaves."
+      "text": "Try an easier shape first: a rectangle that is $8$ wide and $4$ tall has area $32$. Notice that $8$ is the average of $6$ and $10$."
     },
     {
       "level": "nudge",
-      "text": "Trapezoid area $= \\frac{1}{2}(b_1 + b_2) h$."
+      "text": "A trapezoid has two different parallel sides. The area formula uses their average as the width. How do you average two numbers?"
     },
     {
       "level": "guide",
-      "text": "$\\frac{1}{2}(6 + 10)(4) = \\frac{1}{2}(16)(4)$."
+      "text": "Add the parallel sides to get $6 + 10 = 16$, take half to get the average width $8$, then multiply that by the height $4$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2} \\cdot 64 = 32$."
+      "text": "$\\frac{1}{2}(6 + 10)(4) = 8 \\times 4 = 32$, so the area of the trapezoid is $32$ square units."
     }
   ],
   "explanation": [
-    "$A = \\frac{1}{2}(b_1 + b_2)h = \\frac{1}{2}(16)(4) = 32$."
+    "The area of a trapezoid is $\\frac{1}{2}(b_1 + b_2)h$, which is the average of the two parallel sides times the height.",
+    "Add the two parallel sides first: $6 + 10 = 16$.",
+    "Half of $16$ is $8$, so the trapezoid has the same area as a rectangle that is $8$ wide.",
+    "Multiply this average width by the height: $8 \\times 4 = 32$.",
+    "The area of the trapezoid is $32$ square units."
   ],
   "tags": [
     "MAP-practice",

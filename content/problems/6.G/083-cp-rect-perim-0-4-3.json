@@ -12,24 +12,26 @@
     "14 units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find length and width first.",
+  "hint": "Perimeter adds the lengths of all four sides. Use the corners to find the two different side lengths.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find length and width first."
+      "text": "Perimeter adds the lengths of all four sides. Use the corners to find the two different side lengths."
     },
     {
       "level": "guide",
-      "text": "L $= 4$, W $= 3$. Perimeter $= 2(L + W)$."
+      "text": "The side from $(0,0)$ to $(4,0)$ has length $4$ and the side from $(4,0)$ to $(4,3)$ has length $3$. Now find $2(4 + 3)$."
     },
     {
       "level": "reveal",
-      "text": "$2(4 + 3) = 14$."
+      "text": "$2 \\times 7 = 14$, so the perimeter of the rectangle is $14$ units."
     }
   ],
   "explanation": [
-    "Length: $4$, width: $3$.",
-    "Perimeter: $2(4 + 3) = 14$."
+    "The bottom side from $(0,0)$ to $(4,0)$ is $4$ units long.",
+    "The right side from $(4,0)$ to $(4,3)$ is $3$ units long.",
+    "A rectangle has two sides of each length, so $P = 2(4 + 3) = 2 \\times 7$.",
+    "The perimeter of the rectangle is $14$ units."
   ],
   "tags": [
     "coordinate-plane",

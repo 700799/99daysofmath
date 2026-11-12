@@ -14,7 +14,7 @@
     "x<=27"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"At most $40$ total\" means the **sum** of riders cannot exceed $40$.",
+  "hint": "\"At most\" sets a limit that the total may reach but not pass. Which symbol says that?",
   "hints": [
     {
       "level": "nudge",
@@ -23,22 +23,22 @@
     },
     {
       "level": "nudge",
-      "text": "Build the inequality in two steps: total ≤ 40, then solve for $x$."
+      "text": "\"At most\" sets a limit that the total may reach but not pass. Which symbol says that?"
     },
     {
       "level": "guide",
-      "text": "Riders on the bus = $13 + x$. \"At most $40$\" → $13 + x ≤ 40$. Subtract $13$: $x ≤ 27$."
+      "text": "The total on the bus is $13 + x$, and it must be $40$ or fewer: $13 + x \\le 40$. Subtract $13$ from both sides."
     },
     {
       "level": "reveal",
-      "text": "Answer: $x ≤ 27$."
+      "text": "$40 - 13 = 27$, so the inequality for the extra riders is $x≤27$."
     }
   ],
   "explanation": [
-    "Set up: total riders after boarding $= 13 + x$.",
-    "\"At most\" $40$ means $13 + x \\le 40$.",
-    "Subtract $13$ from both sides: $x \\le 27$.",
-    "Sanity-check: $x = 27$ gives $40$ riders (full bus, still allowed). $x = 28$ gives $41$ — too many."
+    "After boarding, the number of riders is the $13$ already there plus $x$ more: $13 + x$.",
+    "\"At most $40$\" means the total can equal $40$ or be smaller, so $13 + x \\le 40$.",
+    "Subtract $13$ from both sides to get $x$ alone: $x \\le 27$.",
+    "Check: $27$ more riders makes exactly $40$, which is allowed, but $28$ makes $41$. The answer is $x \\le 27$."
   ],
   "tags": [
     "inequality",

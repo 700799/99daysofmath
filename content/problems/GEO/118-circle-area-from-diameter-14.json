@@ -10,25 +10,25 @@
   "primaryAnswer": "154",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The formula needs the radius, but you were handed the diameter.",
+  "hint": "The area formula for a circle uses the radius. Check which measurement of the pizza you were actually given.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The formula needs the radius, but you were handed the diameter."
+      "text": "The area formula for a circle uses the radius. Check which measurement of the pizza you were actually given."
     },
     {
       "level": "guide",
-      "text": "Radius $= 14 \\div 2 = 7$ inches. Now use $A = \\pi r^2$."
+      "text": "The radius is half the diameter, so $r = 14 \\div 2 = 7$ inches. Now use $A = \\pi r^2$ with $3.14$ for $\\pi$."
     },
     {
       "level": "reveal",
-      "text": "$A \\approx 3.14 \\times 49 \\approx 153.86 \\approx 154$ square inches."
+      "text": "$A \\approx 3.14 \\times 49 = 153.86$, so the area is about $154$ square inches."
     }
   ],
   "explanation": [
-    "Halve the diameter to get the radius: $r = 7$ inches.",
-    "Square it: $7^2 = 49$.",
-    "Multiply by $\\pi$: $3.14 \\times 49 = 153.86$, which rounds to $154$ square inches."
+    "The area formula needs the radius, which is half the diameter: $r = 14 \\div 2 = 7$ inches.",
+    "The formula $A = \\pi r^2$ squares the radius first, and $7^2 = 49$.",
+    "Multiplying by $3.14$ gives $3.14 \\times 49 = 153.86$, which rounds to $154$ square inches."
   ],
   "alternativeExplanations": [
     {

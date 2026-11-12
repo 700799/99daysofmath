@@ -10,11 +10,11 @@
   "primaryAnswer": "30",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Write the revenue equation: $3h + 2d = 180$.",
+  "hint": "The total collected comes from two items. Think about how much of the money you can already account for.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Write the revenue equation: $3h + 2d = 180$."
+      "text": "The total collected comes from two items. Think about how much of the money you can already account for."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "Substitute $h = 40$: $120 + 2d = 180$."
+      "text": "The revenue equation is $3h + 2d = 180$. Put $h = 40$ in to get $120 + 2d = 180$, then solve for the number of drinks."
     },
     {
       "level": "reveal",
-      "text": "$2d = 60$, so $d = 30$ drinks."
+      "text": "Subtracting gives $2d = 60$, so $d = 30$. The vendor sold $30$ drinks."
     }
   ],
   "learningObjective": "Model a two-item revenue situation and solve for one quantity.",
   "topic": "Two-variable models in context",
   "explanation": [
-    "Total revenue is price times quantity, summed over both items: $3h + 2d = 180$.",
-    "The vendor sold $40$ hot dogs, so $3(40) = \\$120$ came from hot dogs.",
-    "That leaves $180 - 120 = \\$60$ from drinks at $\\$2$ each: $d = 30$."
+    "Revenue is price times quantity for each item, so the total is $3h + 2d = 180$.",
+    "The vendor sold $40$ hot dogs, which brought in $3(40) = 120$ dollars.",
+    "The rest of the money, $180 - 120 = 60$ dollars, came from drinks.",
+    "Each drink costs $2$ dollars, so $60 \\div 2 = 30$. The vendor sold $30$ drinks."
   ],
   "alternativeExplanations": [
     {

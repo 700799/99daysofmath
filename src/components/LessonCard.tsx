@@ -117,6 +117,7 @@ function baseSecsFor(page: Page, lesson: Lesson): number {
 interface PracticeState {
   val: string;
   checked: boolean;
+  hints?: number; // how many steps the student has uncovered as hints
 }
 
 export function LessonCard({ lesson, onClose, onStart }: Props) {
@@ -658,7 +659,7 @@ function PracticePage({
             type="text"
             inputMode="text"
             value={state.val}
-            onChange={(e) => onChange({ val: e.target.value, checked: false })}
+            onChange={(e) => onChange({ ...state, val: e.target.value, checked: false })}
             onKeyDown={(e) => {
               if (e.key === 'Enter' && state.val.trim()) onChange({ ...state, checked: true });
             }}
@@ -674,6 +675,13 @@ function PracticePage({
             Check
           </button>
         </div>
+        {!state.checked && (
+          <HintLadder
+            steps={item.steps}
+            shown={state.hints ?? 0}
+            onMore={() => onChange({ ...state, hints: Math.min(item.steps.length, (state.hints ?? 0) + 1) })}
+          />
+        )}
         {state.checked && (
           <div className="mt-3">
             <div
@@ -697,6 +705,45 @@ function PracticePage({
           </div>
         )}
       </div>
+    </div>
+  );
+}
+
+/**
+ * Layered hints for a "Try it" question. The worked steps are written as a
+ * ladder (the idea first, the answer last), so each tap uncovers one more step
+ * and the student takes only as much help as they need.
+ */
+export function HintLadder({ steps, shown, onMore }: { steps: string[]; shown: number; onMore: () => void }) {
+  if (steps.length === 0) return null;
+  const more = shown < steps.length;
+  const nextIsAnswer = shown === steps.length - 1;
+  const label = shown === 0 ? 'Show a hint' : nextIsAnswer ? 'Show the last step' : 'Need another hint?';
+  return (
+    <div className="mt-3">
+      {shown > 0 && (
+        <ol className="mb-2 space-y-1.5">
+          {steps.slice(0, shown).map((s, i) => (
+            <li key={i} className="flex gap-2 rounded-xl border border-warn/40 bg-warn-soft px-3 py-2 text-sm text-ink">
+              <span className="shrink-0 font-display text-xs font-extrabold uppercase tracking-wide text-warn">
+                Hint {i + 1}
+              </span>
+              <span>{s}</span>
+            </li>
+          ))}
+        </ol>
+      )}
+      {more && (
+        <button
+          type="button"
+          onClick={onMore}
+          className="inline-flex min-h-11 items-center gap-2 rounded-full bg-warn-soft px-4 py-2 font-display text-sm font-bold text-warn transition-colors hover:bg-amber-200"
+        >
+          <span>💡</span>
+          <span>{label}</span>
+          <span className="text-xs font-bold opacity-70">{shown}/{steps.length}</span>
+        </button>
+      )}
     </div>
   );
 }

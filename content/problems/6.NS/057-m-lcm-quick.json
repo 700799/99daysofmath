@@ -10,25 +10,26 @@
   "primaryAnswer": "30",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiples of $6$: $6, 12, 18, 24, 30$.",
+  "hint": "The LCM is the first number you reach when counting by sixes that you also reach when counting by tens.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiples of $6$: $6, 12, 18, 24, 30$."
+      "text": "The LCM is the first number you reach when counting by sixes that you also reach when counting by tens."
     },
     {
       "level": "guide",
-      "text": "Multiples of $10$: $10, 20, 30$."
+      "text": "Count by sixes: $6, 12, 18, 24, 30$. Count by tens: $10, 20, 30$. Look for the first number that is in both lists."
     },
     {
       "level": "reveal",
-      "text": "Smallest match: $30$."
+      "text": "The first number in both lists is $30$, so the LCM of $6$ and $10$ is $30$."
     }
   ],
   "explanation": [
-    "Multiples of $6$: $6, 12, 18, 24, \\mathbf{30}$.",
-    "Multiples of $10$: $10, 20, \\mathbf{30}$.",
-    "LCM $= 30$."
+    "List the multiples of $6$ in order: $6, 12, 18, 24, \\mathbf{30}$.",
+    "List the multiples of $10$ in order: $10, 20, \\mathbf{30}$.",
+    "Neither $10$ nor $20$ is a multiple of $6$, so $30$ is the first number in both lists.",
+    "So the least common multiple of $6$ and $10$ is $30$."
   ],
   "tags": [
     "lcm"

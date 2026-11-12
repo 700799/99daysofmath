@@ -35,9 +35,9 @@
     }
   ],
   "explanation": [
-    "Like terms have the same variable part: $4x$ and $2x$ match.",
-    "Combine them: $4x + 2x = 6x$.",
-    "The plain number 3 has no partner, so the answer is $6x + 3$."
+    "Like terms have the same variable part, so $4x$ and $2x$ are like terms while $3$ is a plain number.",
+    "Like terms can be added by adding their coefficients, so $4x + 2x = 6x$.",
+    "The plain number $3$ has no partner to join, so the simplified expression is $6x + 3$."
   ],
   "alternativeExplanations": [
     {

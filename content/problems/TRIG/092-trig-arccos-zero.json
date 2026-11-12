@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The question is \"which angle has cosine equal to $0$?\", not \"what is the cosine of $0$?\"",
+  "hint": "The question is \"which angle has cosine equal to $0$?\", not \"what is the cosine of $0$?\" Keep those two apart.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The question is \"which angle has cosine equal to $0$?\", not \"what is the cosine of $0$?\""
+      "text": "The question is \"which angle has cosine equal to $0$?\", not \"what is the cosine of $0$?\" Keep those two apart."
     },
     {
       "level": "guide",
-      "text": "On the unit circle, cosine is the $x$-coordinate. Where is $x = 0$?"
+      "text": "On the unit circle, cosine is the $x$-coordinate. Look for the point between $0^\\circ$ and $180^\\circ$ where $x = 0$."
     },
     {
       "level": "reveal",
-      "text": "Straight up, at $90^\\circ$. So $\\arccos(0) = 90^\\circ$."
+      "text": "The $x$-coordinate is zero straight up, at $90^\\circ$, so $\\arccos(0) = 90^\\circ$, choice A."
     }
   ],
   "explanation": [
-    "$\\arccos$ asks for the angle whose cosine is the given number.",
+    "The function $\\arccos$ asks for the angle whose cosine is the given number.",
     "Cosine is the $x$-coordinate on the unit circle, and $x = 0$ at the top of the circle, at $90^\\circ$.",
-    "So $\\arccos(0) = 90^\\circ$."
+    "That angle is inside the output range of the inverse cosine, so $\\arccos(0) = 90^\\circ$."
   ],
   "alternativeExplanations": [
     {

@@ -49,7 +49,7 @@
   ],
   "explanation": [
     "With two sides and a non-included angle (SSA), the given side can sometimes reach the base in two ways.",
-    "The critical height is $h = b\\sin A = 10\\sin 40^\\circ \\approx 6.43$.",
+    "The critical height is the shortest distance to the base: $h = b\\sin A = 10\\sin 40^\\circ \\approx 6.43$.",
     "Because $h < a < b$, that is $6.43 < 8 < 10$, side $a$ is long enough to reach but short enough to reach twice.",
     "So there are two possible triangles, one with an acute angle $B$ and one with an obtuse angle $B$."
   ],

@@ -10,19 +10,19 @@
   "primaryAnswer": "200",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n}$ depends on the SQUARE ROOT of $n$.",
+  "hint": "The standard deviation of $\\bar{x}$ is $\\sigma/\\sqrt{n}$. Notice that it depends on the square root of the sample size, not on $n$ directly.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n}$ depends on the SQUARE ROOT of $n$."
+      "text": "The standard deviation of $\\bar{x}$ is $\\sigma/\\sqrt{n}$. Notice that it depends on the square root of the sample size, not on $n$ directly."
     },
     {
       "level": "guide",
-      "text": "To halve $\\sigma/\\sqrt{n}$ you need $\\sqrt{n}$ to double, so $n$ must be multiplied by $4$."
+      "text": "To halve $\\sigma/\\sqrt{n}$ the value of $\\sqrt{n}$ must double, which means $n$ itself must be multiplied by $4$. Apply that to $50$."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 50 = 200$ bottles."
+      "text": "$4 \\times 50 = 200$, so she should sample $200$ bottles."
     }
   ],
   "explanation": [

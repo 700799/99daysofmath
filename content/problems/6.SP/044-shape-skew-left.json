@@ -27,24 +27,26 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Skew direction = tail direction.",
+  "hint": "A long tail on the left means there are a few unusually small values. Think about which measure those values drag along.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Skew direction = tail direction."
+      "text": "A long tail on the left means there are a few unusually small values. Think about which measure those values drag along."
     },
     {
       "level": "guide",
-      "text": "Skewed left → tail of small values pulls mean down."
+      "text": "The small values in the tail lower the total, so they pull the mean down toward the left. The median stays near the middle of the bulk of the data."
     },
     {
       "level": "reveal",
-      "text": "Mean < median."
+      "text": "The mean is typically less than the median, which is choice A."
     }
   ],
   "explanation": [
-    "Long tail on left pulls the mean toward small values.",
-    "Mean < median."
+    "A long tail on the left means the distribution is skewed left, with a few values much smaller than the rest.",
+    "Those small values lower the sum, so the mean is pulled toward the tail.",
+    "The median depends only on the middle position, so it stays with the main group of data.",
+    "The mean therefore ends up less than the median, which is choice A."
   ],
   "tags": [
     "MAP-practice",

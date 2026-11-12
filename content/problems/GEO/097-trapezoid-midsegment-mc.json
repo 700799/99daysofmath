@@ -32,25 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The midsegment of a trapezoid is the AVERAGE of the two parallel sides.",
+  "hint": "The midsegment of a trapezoid lies halfway between the two parallel sides. Its length is related to both of them.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The midsegment of a trapezoid is the AVERAGE of the two parallel sides."
+      "text": "The midsegment of a trapezoid lies halfway between the two parallel sides. Its length is related to both of them."
     },
     {
       "level": "guide",
-      "text": "Average $14$ and $22$: add them, then halve."
+      "text": "The midsegment is the average of the parallel sides, so add $14$ and $22$ and then divide the sum by $2$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{14 + 22}{2} = \\frac{36}{2} = 18$ ft."
+      "text": "$\\frac{14 + 22}{2} = \\frac{36}{2} = 18$, so the hose is $18$ feet long, choice B."
     }
   ],
   "explanation": [
-    "The midsegment length is $\\frac{b_1 + b_2}{2}$.",
-    "Substitute: $\\frac{14 + 22}{2} = \\frac{36}{2}$.",
-    "The hose is $18$ ft long. Choice B."
+    "The midsegment of a trapezoid is parallel to the bases, and its length is their average, $\\frac{b_1 + b_2}{2}$.",
+    "Substituting the two parallel sides gives $\\frac{14 + 22}{2} = \\frac{36}{2}$.",
+    "That equals $18$, so the hose is $18$ feet long, which is choice B."
   ],
   "alternativeExplanations": [
     {

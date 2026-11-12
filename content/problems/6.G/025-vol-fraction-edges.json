@@ -12,28 +12,31 @@
     "0.75"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply the three.",
+  "hint": "Fraction side lengths still use length times width times height. Look for two factors that are easy to multiply first.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sketch the shape and label every length. A 30-second drawing saves 5 minutes of thinking."
+      "text": "Try it with whole numbers first: a $1 \\times 3 \\times 2$ prism has volume $6$. The same multiplying works with fractions."
     },
     {
       "level": "nudge",
-      "text": "Multiply the three."
+      "text": "Fraction side lengths still use length times width times height. Look for two factors that are easy to multiply first."
     },
     {
       "level": "guide",
-      "text": "$\\frac{1}{2} \\cdot \\frac{3}{4} = \\frac{3}{8}$, then $\\times 2$."
+      "text": "Notice that $\\frac{1}{2} \\times 2 = 1$. That leaves only $1 \\times \\frac{3}{4}$ to work out."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{3}{8} \\cdot 2 = \\frac{6}{8} = \\frac{3}{4}$."
+      "text": "$\\frac{1}{2} \\times \\frac{3}{4} \\times 2 = \\frac{3}{4}$, so the volume is $\\frac{3}{4}$ cubic unit."
     }
   ],
   "explanation": [
-    "$V = \\frac{1}{2} \\cdot \\frac{3}{4} \\cdot 2 = \\frac{6}{8} = \\frac{3}{4}$."
+    "The volume of a prism is the product of its three dimensions: $V = \\frac{1}{2} \\times \\frac{3}{4} \\times 2$.",
+    "You may multiply in any order, so pair $\\frac{1}{2}$ with $2$ first because $\\frac{1}{2} \\times 2 = 1$.",
+    "What remains is the product $1 \\times \\frac{3}{4}$, and multiplying by one changes nothing, so it equals $\\frac{3}{4}$.",
+    "The volume is $\\frac{3}{4}$ cubic unit. Multiplying straight across gives $\\frac{6}{8}$, which simplifies to the same value."
   ],
   "tags": [
     "CA",

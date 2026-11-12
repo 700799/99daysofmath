@@ -12,25 +12,25 @@
     "-0.25"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Check the point is on the curve: $4 - 6 + 9 = 7$. Then differentiate implicitly; the $-xy$ term needs the product rule.",
+  "hint": "First check that the point is on the curve. Then differentiate implicitly, noticing that the $-xy$ term is a product.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Check the point is on the curve: $4 - 6 + 9 = 7$. Then differentiate implicitly; the $-xy$ term needs the product rule."
+      "text": "First check that the point is on the curve. Then differentiate implicitly, noticing that the $-xy$ term is a product."
     },
     {
       "level": "guide",
-      "text": "$2x - (y + x y') + 2y y' = 0$. Substitute $x = 2$, $y = 3$: $4 - 3 - 2y' + 6y' = 0$."
+      "text": "Differentiating gives $2x - (y + x y') + 2y y' = 0$. Substitute $x = 2$ and $y = 3$ to get $4 - 3 - 2y' + 6y' = 0$, then solve for $y'$."
     },
     {
       "level": "reveal",
-      "text": "$1 + 4y' = 0$, so $y' = -\\frac{1}{4}$."
+      "text": "The equation simplifies to $1 + 4y' = 0$, so the slope of the tangent is $y' = -\\frac{1}{4}$."
     }
   ],
   "explanation": [
-    "Differentiate: $2x - (y + x y') + 2y y' = 0$.",
-    "Solve for $y'$: $y'(2y - x) = y - 2x$, so $y' = \\frac{y - 2x}{2y - x}$.",
-    "At $(2, 3)$: $y' = \\frac{3 - 4}{6 - 2} = -\\frac{1}{4}$."
+    "Differentiate both sides, using the product rule on $xy$ and the chain rule on $y^2$: $2x - (y + x y') + 2y y' = 0$.",
+    "Collect the terms with $y'$ and solve: $y'(2y - x) = y - 2x$, so $y' = \\frac{y - 2x}{2y - x}$.",
+    "At the point $(2, 3)$ the slope is $y' = \\frac{3 - 4}{6 - 2} = -\\frac{1}{4}$."
   ],
   "alternativeExplanations": [
     {

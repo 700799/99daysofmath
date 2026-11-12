@@ -12,29 +12,31 @@
     "255 cans"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Current $+$ collected $=$ goal.",
+  "hint": "The cans they have plus the cans still to collect must equal the goal.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Translate piece-by-piece: \"more than\" = +, \"product\" = ×, \"less than\" flips the order."
+      "text": "Think of it as a gap on a number line from $245$ up to $500$. The value of $c$ is the length of that gap."
     },
     {
       "level": "nudge",
-      "text": "Current $+$ collected $=$ goal."
+      "text": "The cans they have plus the cans still to collect must equal the goal."
     },
     {
       "level": "guide",
-      "text": "$245 + c = 500$. Subtract $245$."
+      "text": "The equation is $245 + c = 500$. Subtract $245$ from both sides to find $c$."
     },
     {
       "level": "reveal",
-      "text": "$c = 500 - 245 = 255$."
+      "text": "$500 - 245 = 255$, so the school must collect $255$ more cans."
     }
   ],
   "explanation": [
-    "Set up: $245 + c = 500$.",
-    "Subtract $245$ from both sides: $c = 255$."
+    "The cans already collected plus $c$ more must reach the goal: $245 + c = 500$.",
+    "Subtract $245$ from both sides to undo the addition and leave $c$ alone.",
+    "Working out the subtraction on the right gives $c = 500 - 245 = 255$.",
+    "The school needs $255$ more cans, and $245 + 255 = 500$ confirms it."
   ],
   "alternativeExplanations": [
     {

@@ -10,27 +10,27 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "At an $x$-intercept, the graph is on the $x$-axis — so $y = 0$.",
+  "hint": "Picture the point where the line meets the $x$-axis. What must its $y$-coordinate be?",
   "hints": [
     {
       "level": "nudge",
-      "text": "At an $x$-intercept, the graph is on the $x$-axis — so $y = 0$."
+      "text": "Picture the point where the line meets the $x$-axis. What must its $y$-coordinate be?"
     },
     {
       "level": "guide",
-      "text": "Set $y = 0$: $2x + 3(0) = 12$."
+      "text": "Every point on the $x$-axis has $y = 0$. Put $0$ in place of $y$ to get $2x + 3(0) = 12$, then solve for $x$."
     },
     {
       "level": "reveal",
-      "text": "$2x = 12$, so $x = 6$."
+      "text": "The equation reduces to $2x = 12$, so the $x$-intercept is $6$."
     }
   ],
   "learningObjective": "Find an intercept from standard form by zeroing the other variable.",
   "topic": "Intercepts from standard form",
   "explanation": [
-    "An $x$-intercept has $y = 0$. Substitute: $2x + 3(0) = 12$.",
-    "That leaves $2x = 12$, so $x = 6$.",
-    "The intercept point is $(6, 0)$; the question asks only for the $x$-value."
+    "An $x$-intercept lies on the $x$-axis, so its $y$-coordinate is $0$. Substitute that: $2x + 3(0) = 12$.",
+    "The $y$ term disappears, leaving $2x = 12$, and dividing by $2$ gives $x = 6$.",
+    "The graph crosses the $x$-axis at the point $(6, 0)$, so the $x$-intercept is $6$."
   ],
   "alternativeExplanations": [
     {

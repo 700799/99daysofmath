@@ -10,24 +10,24 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Set $d(t) = 10$ and isolate the sine.",
+  "hint": "Replace $d(t)$ with the target depth of $10$ feet. Then isolate the sine, treating it like the unknown in a linear equation.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Set $d(t) = 10$ and isolate the sine."
+      "text": "Replace $d(t)$ with the target depth of $10$ feet. Then isolate the sine, treating it like the unknown in a linear equation."
     },
     {
       "level": "guide",
-      "text": "$4\\sin\\left(\\frac{\\pi t}{6}\\right) = 2$, so $\\sin\\left(\\frac{\\pi t}{6}\\right) = \\frac{1}{2}$."
+      "text": "Subtracting $8$ gives $4\\sin\\left(\\frac{\\pi t}{6}\\right) = 2$, so $\\sin\\left(\\frac{\\pi t}{6}\\right) = \\frac{1}{2}$. Find the smallest positive angle with that sine and set $\\frac{\\pi t}{6}$ equal to it."
     },
     {
       "level": "reveal",
-      "text": "The first time that happens is $\\frac{\\pi t}{6} = \\frac{\\pi}{6}$, giving $t = 1$ hour."
+      "text": "The first angle with sine $\\frac{1}{2}$ is $\\frac{\\pi}{6}$, so $\\frac{\\pi t}{6} = \\frac{\\pi}{6}$ and the depth first reaches $10$ feet at $t = 1$ hour."
     }
   ],
   "explanation": [
     "Set the model equal to the target depth: $8 + 4\\sin\\left(\\frac{\\pi t}{6}\\right) = 10$.",
-    "Subtract $8$ and divide by $4$: $\\sin\\left(\\frac{\\pi t}{6}\\right) = \\frac{1}{2}$.",
+    "Subtract $8$ and divide by $4$ to isolate the sine: $\\sin\\left(\\frac{\\pi t}{6}\\right) = \\frac{1}{2}$.",
     "The smallest positive angle with sine $\\frac{1}{2}$ is $\\frac{\\pi}{6}$, so $\\frac{\\pi t}{6} = \\frac{\\pi}{6}$ and $t = 1$.",
     "The water first reaches $10$ feet at 1:00 a.m."
   ],

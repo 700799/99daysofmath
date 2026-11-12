@@ -15,19 +15,19 @@
     "hypotenuse-leg"
   ],
   "acceptanceMode": "normalized",
-  "hint": "This shortcut only exists for RIGHT triangles.",
+  "hint": "Right triangles have their own special congruence shortcut. Look at which two parts of the ramps are said to match.",
   "hints": [
     {
       "level": "nudge",
-      "text": "This shortcut only exists for RIGHT triangles."
+      "text": "Right triangles have their own special congruence shortcut. Look at which two parts of the ramps are said to match."
     },
     {
       "level": "guide",
-      "text": "The two parts named are the hypotenuse and a leg."
+      "text": "The matching parts are the hypotenuse and one leg. Take the first letter of each of those two words."
     },
     {
       "level": "reveal",
-      "text": "This is HL — Hypotenuse-Leg."
+      "text": "Hypotenuse and leg give the HL criterion, short for Hypotenuse-Leg."
     }
   ],
   "explanation": [

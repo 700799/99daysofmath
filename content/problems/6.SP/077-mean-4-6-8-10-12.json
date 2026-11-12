@@ -10,24 +10,25 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Sum, then divide by the count.",
+  "hint": "These five numbers are evenly spaced, but the usual method still works: total, then equal shares.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sum, then divide by the count."
+      "text": "These five numbers are evenly spaced, but the usual method still works: total, then equal shares."
     },
     {
       "level": "guide",
-      "text": "Sum $= 40$, count $= 5$."
+      "text": "The total is $4 + 6 + 8 + 10 + 12 = 40$. Divide that by the $5$ values in the set."
     },
     {
       "level": "reveal",
-      "text": "$40/5 = 8$."
+      "text": "$40 \\div 5 = 8$, so the mean of the set is $8$."
     }
   ],
   "explanation": [
-    "$4+6+8+10+12 = 40$.",
-    "$40 / 5 = 8$."
+    "Add the values to find the total: $4 + 6 + 8 + 10 + 12 = 40$.",
+    "There are $5$ values, so the total is split into $5$ equal shares.",
+    "$40 \\div 5 = 8$, so the mean of the set is $8$."
   ],
   "alternativeExplanations": [
     {

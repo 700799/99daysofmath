@@ -13,30 +13,31 @@
     "-4 is closer"
   ],
   "acceptanceMode": "exact",
-  "hint": "Distance to $0$ is the absolute value.",
+  "hint": "\"Closer to zero\" is about distance only, not about which number is greater. Which idea measures distance from zero?",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Rewrite the numbers in matching form (all fractions OR all decimals) before you operate."
+      "text": "Imagine standing at $0$ on the number line. Count how many steps it takes to walk to each number."
     },
     {
       "level": "nudge",
-      "text": "Distance to $0$ is the absolute value."
+      "text": "\"Closer to zero\" is about distance only, not about which number is greater. Which idea measures distance from zero?"
     },
     {
       "level": "guide",
-      "text": "$|-4| = 4$ and $|6| = 6$."
+      "text": "Use absolute value: $|-4| = 4$ and $|6| = 6$. Compare the two distances and pick the smaller one."
     },
     {
       "level": "reveal",
-      "text": "$4 < 6$, so $-4$ is closer to $0$."
+      "text": "$4 < 6$, so the number closer to $0$ is $-4$."
     }
   ],
   "explanation": [
-    "$|-4| = 4$ and $|6| = 6$.",
-    "$-4$ sits $4$ away from $0$; $6$ sits $6$ away.",
-    "$-4$ is closer to $0$."
+    "The distance of a number from $0$ is its absolute value.",
+    "Find the distance of each number from zero: $|-4| = 4$ and $|6| = 6$.",
+    "So $-4$ is $4$ units from $0$, while $6$ is $6$ units from $0$.",
+    "Since $4 < 6$, the number closer to $0$ is $-4$."
   ],
   "tags": [
     "MAP-practice",

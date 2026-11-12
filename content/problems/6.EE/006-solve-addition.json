@@ -12,12 +12,12 @@
     "x=8"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Get $x$ alone by undoing the $+7$. Subtract $7$ from **both** sides.",
+  "hint": "Something was added to $x$ to make $15$. Which operation undoes adding?",
   "explanation": [
-    "Start with $x + 7 = 15$.",
-    "Subtract $7$ from both sides: $x + 7 - 7 = 15 - 7$.",
-    "Simplify: $x = 8$.",
-    "Check: $8 + 7 = 15$. ✓"
+    "The equation $x + 7 = 15$ says that adding $7$ to $x$ gives $15$.",
+    "Subtraction undoes addition, so subtract $7$ from both sides to keep the equation balanced: $x + 7 - 7 = 15 - 7$.",
+    "The left side is now just $x$ and the right side is $8$, so $x = 8$.",
+    "Check by putting it back: $8 + 7 = 15$, which is true. The solution is $x = 8$."
   ],
   "alternativeExplanations": [
     {
@@ -36,15 +36,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Get $x$ alone by undoing the $+7$. Subtract $7$ from **both** sides."
+      "text": "Something was added to $x$ to make $15$. Which operation undoes adding?"
     },
     {
       "level": "guide",
-      "text": "Start with $x + 7 = 15$."
+      "text": "Subtract $7$ from both sides so that $x$ is alone. On the right you need to work out $15 - 7$."
     },
     {
       "level": "reveal",
-      "text": "Check: $8 + 7 = 15$. ✓"
+      "text": "$15 - 7 = 8$, so the solution of the equation is $x = 8$."
     }
   ]
 }

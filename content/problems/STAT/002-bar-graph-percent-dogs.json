@@ -13,15 +13,15 @@
     "0.4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A percent is a part out of a whole, times $100$. The whole here is all $40$ students.",
+  "hint": "A percent compares a part with the whole group. Which number is the part here, and which is the whole?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A percent is a part out of a whole, times $100$. The whole here is all $40$ students."
+      "text": "A percent compares a part with the whole group. Which number is the part here, and which is the whole?"
     },
     {
       "level": "guide",
-      "text": "Divide the dog count by the total: $\\frac{16}{40}$."
+      "text": "The part is the $16$ dog owners and the whole is all $40$ students, so work out $\\frac{16}{40}$ and turn it into a percent."
     },
     {
       "level": "reveal",
@@ -29,9 +29,9 @@
     }
   ],
   "explanation": [
-    "The bar for dogs is $16$ students tall, and the whole class is $40$ students.",
-    "Relative frequency $= \\frac{16}{40} = 0.40$.",
-    "That is $40$ percent."
+    "The question asks about dog owners only, so the part is the $16$ students in the dog bar.",
+    "The whole is every student surveyed, which is $40$, so the relative frequency is $\\frac{16}{40} = 0.40$.",
+    "Multiplying by $100$ turns the decimal into a percent, so $40$ percent of the students have a dog."
   ],
   "alternativeExplanations": [
     {

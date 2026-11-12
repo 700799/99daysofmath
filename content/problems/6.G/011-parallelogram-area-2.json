@@ -10,23 +10,25 @@
   "primaryAnswer": "36",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Parallelogram area $= b \\cdot h$.",
+  "hint": "The slanted sides of a parallelogram do not matter for area. Which two measurements do matter?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Parallelogram area $= b \\cdot h$."
+      "text": "The slanted sides of a parallelogram do not matter for area. Which two measurements do matter?"
     },
     {
       "level": "guide",
-      "text": "$9 \\times 4$."
+      "text": "Multiply the base by the height that stands straight up from it. Here that means finding $9 \\times 4$."
     },
     {
       "level": "reveal",
-      "text": "$36$."
+      "text": "$9 \\times 4 = 36$, so the parallelogram covers $36$ square units."
     }
   ],
   "explanation": [
-    "$A = bh = 9 \\times 4 = 36$."
+    "A parallelogram has the same area as a rectangle with the same base and height, so use $A = bh$.",
+    "The base is $9$ and the height is $4$, which gives $A = 9 \\times 4$.",
+    "Multiplying gives $9 \\times 4 = 36$, so the area is $36$ square units."
   ],
   "tags": [
     "area",

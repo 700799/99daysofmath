@@ -14,29 +14,31 @@
     "-13°F"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Dropping makes it more negative.",
+  "hint": "A drop in temperature makes the number smaller. The temperature is already below zero, so it moves even farther from zero.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Use the \"keep–change–flip\" trick whenever you see division by a fraction."
+      "text": "Picture a thermometer as a vertical number line. Start at $-8$ and move down $5$ more marks."
     },
     {
       "level": "nudge",
-      "text": "Dropping makes it more negative."
+      "text": "A drop in temperature makes the number smaller. The temperature is already below zero, so it moves even farther from zero."
     },
     {
       "level": "guide",
-      "text": "$-8 - 5$."
+      "text": "Subtract the drop from the starting temperature: $-8 - 5$. On a number line this is $5$ steps left from $-8$."
     },
     {
       "level": "reveal",
-      "text": "$-13$."
+      "text": "$-8 - 5 = -13$, so the new temperature is $-13\\degree$F."
     }
   ],
   "explanation": [
-    "Subtract: $-8 - 5 = -13$.",
-    "New temperature: $-13\\degree$F."
+    "A drop of $5$ degrees means subtracting $5$ from the starting temperature: $-8 - 5$.",
+    "On a number line, start at $-8$ and move $5$ units to the left, away from $0$.",
+    "This lands $8 + 5 = 13$ units below zero, so $-8 - 5 = -13$.",
+    "The new temperature is $-13\\degree$F, colder than before."
   ],
   "alternativeExplanations": [
     {

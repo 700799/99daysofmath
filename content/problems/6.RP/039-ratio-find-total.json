@@ -12,30 +12,31 @@
     "14 animals"
   ],
   "acceptanceMode": "normalized",
-  "hint": "First find the number of dogs.",
+  "hint": "Read the question carefully: it asks for all the animals, not just the dogs. You will need the number of dogs first.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sketch a tape diagram: equal blocks for each part. What does one block represent here?"
+      "text": "Try a smaller shelter with exactly $5$ cats and $2$ dogs. How many animals is that altogether, and how does it grow?"
     },
     {
       "level": "nudge",
-      "text": "First find the number of dogs."
+      "text": "Read the question carefully: it asks for all the animals, not just the dogs. You will need the number of dogs first."
     },
     {
       "level": "guide",
-      "text": "Cats scaled by $\\frac{10}{5} = 2$. Apply to dogs: $2 \\times 2 = 4$ dogs."
+      "text": "Cats are $5$ parts and there are $10$ cats, so each part is $10 \\div 5 = 2$ animals. Dogs are $2$ parts, which is $4$ dogs. Now add cats and dogs."
     },
     {
       "level": "reveal",
-      "text": "Total: $10 + 4 = 14$."
+      "text": "$10 + 4 = 14$, so there are $14$ animals in total."
     }
   ],
   "explanation": [
-    "Scale: $10 / 5 = 2$.",
-    "Dogs: $2 \\times 2 = 4$.",
-    "Total: $10 + 4 = 14$."
+    "In the ratio $5 : 2$, cats are $5$ equal parts and dogs are $2$ equal parts.",
+    "Ten cats fill $5$ parts, so one part is $10 \\div 5 = 2$ animals.",
+    "Dogs are $2$ parts, so there are $2 \\times 2 = 4$ dogs.",
+    "Add the two groups, $10 + 4 = 14$, so the shelter has $14$ animals in total."
   ],
   "tags": [
     "MAP-practice",

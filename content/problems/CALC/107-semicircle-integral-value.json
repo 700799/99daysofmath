@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Square both sides of $y = \\sqrt{9 - x^2}$: $x^2 + y^2 = 9$. What shape is that, and which part does the square root pick out?",
+  "hint": "Square both sides of $y = \\sqrt{9 - x^2}$ to get $x^2 + y^2 = 9$. What shape is that, and which part does the square root pick out?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Square both sides of $y = \\sqrt{9 - x^2}$: $x^2 + y^2 = 9$. What shape is that, and which part does the square root pick out?"
+      "text": "Square both sides of $y = \\sqrt{9 - x^2}$ to get $x^2 + y^2 = 9$. What shape is that, and which part does the square root pick out?"
     },
     {
       "level": "guide",
-      "text": "It is the UPPER half of a circle of radius $3$. The integral is the area of that semicircle."
+      "text": "It is the upper half of a circle of radius $3$. The integral is the area of that semicircle, so use half of $\\pi r^2$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2}\\pi(3)^2 = \\frac{9\\pi}{2}$: choice A."
+      "text": "The semicircle has area $\\frac{1}{2}\\pi(3)^2 = \\frac{9\\pi}{2}$, which is choice A."
     }
   ],
   "explanation": [

@@ -12,28 +12,31 @@
     "1 m³"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply: $\\frac{1}{2} \\cdot 1 \\cdot 2$.",
+  "hint": "One side is a fraction, but the volume rule does not change. Multiply the three measurements in any order you like.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+      "text": "Think of the base first. The floor of the box is $\\frac{1}{2}$ m by $1$ m, which is half a square meter, and the box is $2$ m tall."
     },
     {
       "level": "nudge",
-      "text": "Multiply: $\\frac{1}{2} \\cdot 1 \\cdot 2$."
+      "text": "One side is a fraction, but the volume rule does not change. Multiply the three measurements in any order you like."
     },
     {
       "level": "guide",
-      "text": "$\\frac{1}{2} \\cdot 2 = 1$."
+      "text": "Set up $\\frac{1}{2} \\times 1 \\times 2$. It helps to pair $\\frac{1}{2}$ with $2$, since half of $2$ is easy."
     },
     {
       "level": "reveal",
-      "text": "$1$ m³."
+      "text": "$\\frac{1}{2} \\times 2 = 1$ and $1 \\times 1 = 1$, so the volume is $1$ cubic meter."
     }
   ],
   "explanation": [
-    "$V = \\frac{1}{2} \\cdot 1 \\cdot 2 = 1$ m³."
+    "Volume is width times length times height, even when a side is a fraction: $V = \\frac{1}{2} \\times 1 \\times 2$.",
+    "Multiplication can be done in any order, so start with $\\frac{1}{2} \\times 2 = 1$.",
+    "Then multiply by the remaining side: $1 \\times 1 = 1$.",
+    "The volume of the box is $1$ cubic meter."
   ],
   "tags": [
     "volume",

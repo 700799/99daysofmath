@@ -15,25 +15,25 @@
     "pi / 2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Half a circle is $180^\\circ$, and in radians that same half circle is $\\pi$.",
+  "hint": "Half a circle is $180^\\circ$, and in radians that same half circle is $\\pi$. What part of a half circle is a right angle?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Half a circle is $180^\\circ$, and in radians that same half circle is $\\pi$."
+      "text": "Half a circle is $180^\\circ$, and in radians that same half circle is $\\pi$. What part of a half circle is a right angle?"
     },
     {
       "level": "guide",
-      "text": "Multiply by the conversion factor $\\frac{\\pi}{180}$: $90 \\times \\frac{\\pi}{180}$."
+      "text": "To change degrees into radians, multiply by the conversion factor $\\frac{\\pi}{180}$: set up $90 \\times \\frac{\\pi}{180}$ and reduce the fraction."
     },
     {
       "level": "reveal",
-      "text": "$90 \\times \\frac{\\pi}{180} = \\frac{\\pi}{2}$."
+      "text": "$90 \\times \\frac{\\pi}{180} = \\frac{\\pi}{2}$, so a right angle is $\\frac{\\pi}{2}$ radians (type pi/2)."
     }
   ],
   "explanation": [
     "Radians and degrees measure the same turn, and $180^\\circ = \\pi$ radians is the bridge between them.",
     "To go from degrees to radians, multiply by $\\frac{\\pi}{180}$: $90 \\times \\frac{\\pi}{180} = \\frac{90\\pi}{180}$.",
-    "That simplifies to $\\frac{\\pi}{2}$."
+    "Because $90$ is half of $180$, the fraction simplifies to $\\frac{\\pi}{2}$ radians."
   ],
   "alternativeExplanations": [
     {

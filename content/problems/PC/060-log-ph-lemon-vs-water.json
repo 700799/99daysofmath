@@ -10,11 +10,11 @@
   "primaryAnswer": "100000",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Count the steps between pH $7$ and pH $2$ first.",
+  "hint": "Count the steps between pH $7$ and pH $2$ first, since every step is one factor of ten.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Count the steps between pH $7$ and pH $2$ first."
+      "text": "Count the steps between pH $7$ and pH $2$ first, since every step is one factor of ten."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$7 - 2 = 5$ steps, and each step is $\\times 10$. Compute $10^5$."
+      "text": "There are $7 - 2 = 5$ steps, and each step multiplies the acidity by $10$. Work out $10^5$."
     },
     {
       "level": "reveal",
-      "text": "$10^5 = 100000$, so lemon juice is $100{,}000$ times more acidic."
+      "text": "Since $10^5 = 100000$, lemon juice is $100{,}000$ times more acidic than water."
     }
   ],
   "explanation": [
-    "pH is a log scale, so each whole number is one power of ten.",
-    "From pH $7$ down to pH $2$ is $5$ steps.",
-    "$10^5 = 100000$ times more acidic."
+    "The pH scale is a log scale, so each whole number is one power of ten.",
+    "Going from pH $7$ down to pH $2$ is $7 - 2 = 5$ steps.",
+    "Five steps multiply the acidity by $10^5 = 100000$, so lemon juice is $100{,}000$ times more acidic."
   ],
   "alternativeExplanations": [
     {

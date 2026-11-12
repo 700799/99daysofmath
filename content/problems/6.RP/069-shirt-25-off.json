@@ -13,30 +13,31 @@
     "$30.00"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the discount, then subtract.",
+  "hint": "A sale takes away part of the price. Decide how many dollars come off before finding what is left to pay.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Picture a ratio table: write the rate in one row, then scale both columns by the same number."
+      "text": "Think of $25\\%$ as one quarter. What is one quarter of the shirt's price, and what is left after taking it away?"
     },
     {
       "level": "nudge",
-      "text": "Find the discount, then subtract."
+      "text": "A sale takes away part of the price. Decide how many dollars come off before finding what is left to pay."
     },
     {
       "level": "guide",
-      "text": "Discount $= 0.25 \\times 40 = 10$. Sale $= 40 - 10$."
+      "text": "$25\\%$ is one quarter, so the discount is $40 \\div 4 = 10$ dollars. Take that away from the $40$ dollar price."
     },
     {
       "level": "reveal",
-      "text": "$40 - 10 = 30$."
+      "text": "$40 - 10 = 30$, so the sale price is $30$ dollars."
     }
   ],
   "explanation": [
-    "Discount: $0.25 \\times 40 = 10$.",
-    "Sale price: $40 - 10 = 30$.",
-    "You pay \\$$30$."
+    "$25\\%$ off means one quarter of the price is removed, and one quarter of $40$ is $40 \\div 4 = 10$ dollars.",
+    "Subtract the discount from the original price: $40 - 10 = 30$.",
+    "You can also say you pay $75\\%$ of the price, and $0.75 \\times 40 = 30$ confirms it.",
+    "The sale price of the shirt is $30$ dollars."
   ],
   "alternativeExplanations": [
     {

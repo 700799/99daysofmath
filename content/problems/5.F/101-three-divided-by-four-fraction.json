@@ -12,25 +12,25 @@
     "0.75"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A fraction bar is just another way to write a division sign.",
+  "hint": "A fraction and a division problem are two ways of writing the same thing. Think about what the fraction bar means.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A fraction bar is just another way to write a division sign."
+      "text": "A fraction and a division problem are two ways of writing the same thing. Think about what the fraction bar means."
     },
     {
       "level": "guide",
-      "text": "The number being shared goes on top; the number of shares goes on the bottom."
+      "text": "The number being divided goes on top as the numerator. The number you divide by goes on the bottom as the denominator."
     },
     {
       "level": "reveal",
-      "text": "$3 \\div 4 = \\frac{3}{4}$."
+      "text": "With $3$ on top and $4$ on the bottom, $3 \\div 4 = \\frac{3}{4}$."
     }
   ],
   "explanation": [
-    "A fraction means \"top divided by bottom,\" so any division can be written as a fraction.",
+    "A fraction means the top number divided by the bottom number, so any division can be written as a fraction.",
     "Here $3$ is being split into $4$ equal parts, so $3$ is the numerator and $4$ is the denominator.",
-    "$3 \\div 4 = \\frac{3}{4}$."
+    "That gives $3 \\div 4 = \\frac{3}{4}$, which is three fourths."
   ],
   "alternativeExplanations": [
     {

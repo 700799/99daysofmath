@@ -13,11 +13,11 @@
     ".5"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The period of $y = a\\sin(bx)$ is $\\frac{2\\pi}{b}$ — set that equal to what you are given.",
+  "hint": "The period of $y = a\\sin(bx)$ depends only on $b$, through the formula $\\frac{2\\pi}{b}$. Set that formula equal to the period you are given.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The period of $y = a\\sin(bx)$ is $\\frac{2\\pi}{b}$ — set that equal to what you are given."
+      "text": "The period of $y = a\\sin(bx)$ depends only on $b$, through the formula $\\frac{2\\pi}{b}$. Set that formula equal to the period you are given."
     },
     {
       "level": "nudge",
@@ -26,16 +26,16 @@
     },
     {
       "level": "guide",
-      "text": "Solve $\\frac{2\\pi}{b} = 4\\pi$ for $b$: multiply both sides by $b$, then divide."
+      "text": "Solve $\\frac{2\\pi}{b} = 4\\pi$ for $b$: multiply both sides by $b$ to get $2\\pi = 4\\pi b$, then divide both sides by $4\\pi$."
     },
     {
       "level": "reveal",
-      "text": "$2\\pi = 4\\pi b$, so $b = \\frac{2\\pi}{4\\pi} = \\frac{1}{2}$."
+      "text": "Dividing gives $b = \\frac{2\\pi}{4\\pi} = \\frac{1}{2}$, so the value of $b$ is one half."
     }
   ],
   "explanation": [
     "Use the period formula: period $= \\frac{2\\pi}{b}$, so $\\frac{2\\pi}{b} = 4\\pi$.",
-    "Multiply both sides by $b$: $2\\pi = 4\\pi b$.",
+    "Multiply both sides by $b$ to clear the fraction: $2\\pi = 4\\pi b$.",
     "Divide both sides by $4\\pi$: $b = \\frac{2\\pi}{4\\pi} = \\frac{1}{2}$. The 3 out front is the amplitude and never affects the period."
   ],
   "alternativeExplanations": [

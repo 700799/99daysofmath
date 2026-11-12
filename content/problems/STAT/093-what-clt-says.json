@@ -49,8 +49,8 @@
   ],
   "explanation": [
     "The Central Limit Theorem says that as $n$ grows, the sampling distribution of $\\bar{x}$ becomes approximately normal, regardless of the population's shape.",
-    "A is false: $\\bar{x}$ gets close to $\\mu$ but still varies. C is false: the population is what it is. D is backwards: $\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n}$ shrinks.",
-    "So B is the correct description."
+    "A is false because $\\bar{x}$ gets close to $\\mu$ but still varies. C is false because sampling does not change the population. D is backwards, since $\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n}$ shrinks.",
+    "So B is the correct description of the theorem."
   ],
   "alternativeExplanations": [
     {

@@ -14,31 +14,31 @@
     "(−4,−2);4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Same $x$ means $M$ and $N$ are stacked vertically. Distance is the gap between their $y$-coordinates.",
+  "hint": "Build $N$ one coordinate at a time. One coordinate is copied from $M$, and the other is replaced by its opposite.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Two points with the same $x$ form a **vertical segment**. The distance is $|y_1 - y_2|$ — no need for a fancy formula."
+      "text": "Two points with the same $x$ form a **vertical segment**. The distance is simply $|y_1 - y_2|$, so no other formula is needed."
     },
     {
       "level": "nudge",
-      "text": "Opposite of $y = 2$ is $y = -2$. So $N = (-4, -2)$."
+      "text": "Build $N$ one coordinate at a time. One coordinate is copied from $M$, and the other is replaced by its opposite."
     },
     {
       "level": "guide",
-      "text": "$M = (-4, 2)$, $N = (-4, -2)$. Vertical distance = $|2 - (-2)| = 4$ units."
+      "text": "$N$ keeps $x = -4$ and takes the opposite of $y = 2$, so $N = (-4, -2)$. The two points share an $x$-value, so the distance is $|2 - (-2)|$."
     },
     {
       "level": "reveal",
-      "text": "$N = (-4, -2)$; distance $= 4$."
+      "text": "$|2 - (-2)| = 4$, so $N$ is $(-4, -2)$ and the points are $4$ units apart. Written in the asked form: $(-4,-2);4$."
     }
   ],
   "explanation": [
-    "$M = (-4, 2)$. \"Same $x$\" → $N$'s $x$-coordinate is also $-4$.",
-    "\"Opposite $y$\" → $N$'s $y$-coordinate is $-2$. So $N = (-4, -2)$.",
-    "Both points lie on the vertical line $x = -4$.",
-    "Distance between points with the same $x$ = $|y_M - y_N| = |2 - (-2)| = 4$ units."
+    "$M$ is $(-4, 2)$, and $N$ has the same $x$-coordinate, so the $x$-coordinate of $N$ is also $-4$.",
+    "The $y$-coordinate of $N$ is the opposite of $2$, which is $-2$. So $N = (-4, -2)$.",
+    "Both points lie on the vertical line $x = -4$, so the distance is just the gap between their $y$-values.",
+    "That gap is $|2 - (-2)| = |2 + 2| = 4$ units, so the answer is $(-4,-2);4$."
   ],
   "tags": [
     "coordinate",

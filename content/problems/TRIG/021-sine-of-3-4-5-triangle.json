@@ -13,25 +13,25 @@
     ".6"
   ],
   "acceptanceMode": "normalized",
-  "hint": "SOH: Sine is Opposite over Hypotenuse.",
+  "hint": "Use the SOH part of SOH-CAH-TOA: sine is the opposite side over the hypotenuse. Which sides of this triangle play those two roles?",
   "hints": [
     {
       "level": "nudge",
-      "text": "SOH: Sine is Opposite over Hypotenuse."
+      "text": "Use the SOH part of SOH-CAH-TOA: sine is the opposite side over the hypotenuse. Which sides of this triangle play those two roles?"
     },
     {
       "level": "guide",
-      "text": "The side opposite $\\theta$ is $3$ and the hypotenuse is $5$."
+      "text": "The side opposite $\\theta$ is $3$ and the hypotenuse, the longest side, is $5$. Write the sine as opposite divided by hypotenuse."
     },
     {
       "level": "reveal",
-      "text": "$\\sin \\theta = \\frac{3}{5} = 0.6$."
+      "text": "$\\sin \\theta = \\frac{3}{5}$, which is the same as the decimal $0.6$."
     }
   ],
   "explanation": [
     "Sine compares the side across from the angle to the hypotenuse: $\\sin \\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}$.",
-    "Here the opposite side is 3 and the hypotenuse is 5.",
-    "So $\\sin \\theta = \\frac{3}{5} = 0.6$."
+    "Here the opposite side is 3 and the hypotenuse, the longest side, is 5.",
+    "So the sine of the angle is $\\sin \\theta = \\frac{3}{5} = 0.6$."
   ],
   "alternativeExplanations": [
     {

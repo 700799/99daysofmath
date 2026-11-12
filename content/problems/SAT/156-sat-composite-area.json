@@ -10,27 +10,27 @@
   "primaryAnswer": "275",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the whole area, then subtract the part that is no longer garden.",
+  "hint": "The patio takes away part of the garden. Think of the remaining garden as a large shape with a smaller shape removed.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the whole area, then subtract the part that is no longer garden."
+      "text": "The patio takes away part of the garden. Think of the remaining garden as a large shape with a smaller shape removed."
     },
     {
       "level": "guide",
-      "text": "Garden: $20 \\times 15 = 300$. Patio: $5 \\times 5 = 25$."
+      "text": "The full rectangle has area $20 \\times 15 = 300$ square feet, and the patio has area $5 \\times 5 = 25$ square feet. Subtract the second from the first."
     },
     {
       "level": "reveal",
-      "text": "$300 - 25 = 275$ square feet."
+      "text": "Since $300 - 25 = 275$, the remaining garden has an area of $275$ square feet."
     }
   ],
   "learningObjective": "Compute a composite area by subtraction.",
   "topic": "Composite area",
   "explanation": [
-    "Total rectangle area: $20 \\times 15 = 300$ square feet.",
-    "Patio area: $5^2 = 25$ square feet.",
-    "Remaining garden: $300 - 25 = 275$ square feet."
+    "The whole rectangular plot has area length times width: $20 \\times 15 = 300$ square feet.",
+    "The square patio has area $5^2 = 25$ square feet, and that part is no longer garden.",
+    "Subtract the patio from the whole: $300 - 25 = 275$, so $275$ square feet of garden remain."
   ],
   "alternativeExplanations": [
     {

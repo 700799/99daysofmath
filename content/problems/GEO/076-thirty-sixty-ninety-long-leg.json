@@ -16,19 +16,19 @@
     "6 * sqrt(3)"
   ],
   "acceptanceMode": "normalized",
-  "hint": "In a $30$-$60$-$90$ triangle the sides go short leg, short leg $\\times \\sqrt{3}$, short leg $\\times 2$.",
+  "hint": "The sides of this special triangle follow a fixed pattern based on the short leg. Recall how the hypotenuse and the longer leg compare with it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "In a $30$-$60$-$90$ triangle the sides go short leg, short leg $\\times \\sqrt{3}$, short leg $\\times 2$."
+      "text": "The sides of this special triangle follow a fixed pattern based on the short leg. Recall how the hypotenuse and the longer leg compare with it."
     },
     {
       "level": "guide",
-      "text": "The hypotenuse is twice the short leg, so the short leg is $12 \\div 2 = 6$."
+      "text": "The hypotenuse is twice the short leg, so the short leg is $12 \\div 2 = 6$. The longer leg is the short leg times $\\sqrt{3}$."
     },
     {
       "level": "reveal",
-      "text": "The longer leg is $6\\sqrt{3}$."
+      "text": "The longer leg, opposite the $60^\\circ$ angle, has exact length $6\\sqrt{3}$."
     }
   ],
   "explanation": [

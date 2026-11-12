@@ -10,11 +10,11 @@
   "primaryAnswer": "100",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Profit is what comes in minus what goes out. The $\\$500$ always comes in; the payout only sometimes goes out.",
+  "hint": "Profit is money in minus money out. The premium always comes in, but the payout goes out only some of the time.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Profit is what comes in minus what goes out. The $\\$500$ always comes in; the payout only sometimes goes out."
+      "text": "Profit is money in minus money out. The premium always comes in, but the payout goes out only some of the time."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Expected payout $= 0.02 \\times 20{,}000$. Subtract that from the $\\$500$ premium."
+      "text": "The expected payout is $0.02 \\times 20{,}000$. Subtract that amount from the $\\$500$ premium the company always collects."
     },
     {
       "level": "reveal",
-      "text": "$0.02 \\times 20{,}000 = 400$, so expected profit $= 500 - 400 = \\$100$."
+      "text": "$0.02 \\times 20{,}000 = 400$ and $500 - 400 = 100$, so the expected profit is $\\$100$ per policy."
     }
   ],
   "explanation": [
-    "Define profit $P$: with probability $0.98$ the company keeps $\\$500$; with probability $0.02$ it gets $500 - 20{,}000 = -\\$19{,}500$.",
-    "$E(P) = 500(0.98) + (-19{,}500)(0.02) = 490 - 390 = 100$.",
-    "So the company expects to earn $\\$100$ per policy. On a single policy it may lose big, but averaged over thousands it earns about $\\$100$ each."
+    "Define the profit on one policy: with probability $0.98$ the company keeps $\\$500$, and with probability $0.02$ it ends with $500 - 20{,}000 = -\\$19{,}500$.",
+    "Weight each profit by its probability: $E(P) = 500(0.98) + (-19{,}500)(0.02) = 490 - 390 = 100$.",
+    "The company expects to earn $\\$100$ per policy. A single policy may lose a lot, but the average over thousands is about $\\$100$ each."
   ],
   "alternativeExplanations": [
     {

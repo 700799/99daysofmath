@@ -13,23 +13,25 @@
     "h ≥ 48"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"At least $48$\" — riders need $h \\geq 48$.",
+  "hint": "A height requirement is a minimum. Is someone exactly $48$ inches tall allowed to ride?",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"At least $48$\" — riders need $h \\geq 48$."
+      "text": "A height requirement is a minimum. Is someone exactly $48$ inches tall allowed to ride?"
     },
     {
       "level": "guide",
-      "text": "$h \\geq ?$"
+      "text": "Riders must be $48$ inches or taller. Choose the symbol that means \"greater than or equal to\" and put $h$ on the left."
     },
     {
       "level": "reveal",
-      "text": "$h \\geq 48$."
+      "text": "Heights of $48$ inches or more are allowed, so the inequality is $h≥48$."
     }
   ],
   "explanation": [
-    "Riders must be at least $48$ inches: $h \\geq 48$."
+    "A height requirement of $48$ inches means riders must be at least that tall.",
+    "\"At least\" includes $48$ itself and everything above it, so the symbol is $\\geq$.",
+    "With $h$ for the height in inches, the inequality is $h \\geq 48$."
   ],
   "tags": [
     "CA",

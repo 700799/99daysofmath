@@ -12,25 +12,25 @@
     "2,500"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Milli\" means one thousandth — there are $1000$ mL in $1$ L.",
+  "hint": "The prefix milli means one thousandth. Use it to decide how many milliliters make one liter.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Milli\" means one thousandth — there are $1000$ mL in $1$ L."
+      "text": "The prefix milli means one thousandth. Use it to decide how many milliliters make one liter."
     },
     {
       "level": "guide",
-      "text": "Multiply: $2.5 \\times 1000$."
+      "text": "One liter is $1000$ milliliters. Milliliters are the smaller unit, so multiply $2.5$ by $1000$."
     },
     {
       "level": "reveal",
-      "text": "$2.5 \\times 1000 = 2500$ mL."
+      "text": "$2.5 \\times 1000 = 2500$, so the jug holds $2500$ milliliters."
     }
   ],
   "explanation": [
-    "One liter is $1000$ milliliters, and milliliters are smaller units, so the number gets bigger.",
-    "$2.5 \\times 1000 = 2500$.",
-    "The jug holds $2500$ milliliters."
+    "One liter is $1000$ milliliters. Milliliters are the smaller unit, so the number of them will be bigger.",
+    "Multiply the number of liters by $1000$: $2.5 \\times 1000 = 2500$.",
+    "The jug holds $2500$ milliliters of water."
   ],
   "alternativeExplanations": [
     {

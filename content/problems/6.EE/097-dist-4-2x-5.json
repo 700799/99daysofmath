@@ -12,29 +12,31 @@
     "8x + 20"
   ],
   "acceptanceMode": "exact",
-  "hint": "Multiply $4$ by each term inside.",
+  "hint": "To distribute, the outside number multiplies every term in the parentheses.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Pick a small value for the variable and check the structure — does each side balance?"
+      "text": "Try $4(x + 5)$ first: it becomes $4x + 20$. In this problem the first term inside is $2x$ instead of $x$."
     },
     {
       "level": "nudge",
-      "text": "Multiply $4$ by each term inside."
+      "text": "To distribute, the outside number multiplies every term in the parentheses."
     },
     {
       "level": "guide",
-      "text": "$4 \\cdot 2x + 4 \\cdot 5$."
+      "text": "Work out $4 \\cdot 2x$ by multiplying $4$ and $2$ and keeping $x$. Then work out $4 \\cdot 5$."
     },
     {
       "level": "reveal",
-      "text": "$8x + 20$."
+      "text": "$4 \\cdot 2x = 8x$ and $4 \\cdot 5 = 20$, so the result is $8x + 20$."
     }
   ],
   "explanation": [
-    "$4(2x + 5) = 4 \\cdot 2x + 4 \\cdot 5 = 8x + 20$.",
-    "Final answer: 8x+20."
+    "Distribute the $4$ to each term inside the parentheses.",
+    "The first product is $4 \\cdot 2x = 8x$, which comes from $4 \\times 2 = 8$.",
+    "The second product is $4 \\cdot 5 = 20$, a plain number.",
+    "Adding the two products gives the answer $8x + 20$."
   ],
   "tags": [
     "MAP-practice",

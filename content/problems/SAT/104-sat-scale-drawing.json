@@ -10,19 +10,19 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "First find the actual length in centimeters, then convert.",
+  "hint": "There are two jobs in this question: scaling up from the drawing, and changing units. Do them one at a time.",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find the actual length in centimeters, then convert."
+      "text": "There are two jobs in this question: scaling up from the drawing, and changing units. Do them one at a time."
     },
     {
       "level": "guide",
-      "text": "$6 \\times 250 = 1500$ centimeters."
+      "text": "Each centimeter on the drawing stands for $250$ real centimeters, so the wall is $6 \\times 250$ centimeters long. Then change centimeters to meters."
     },
     {
       "level": "reveal",
-      "text": "$1500$ cm $\\div 100 = 15$ meters."
+      "text": "The wall is $1500$ centimeters, and $1500 \\div 100 = 15$, so the actual length is $15$ meters."
     }
   ],
   "learningObjective": "Apply a scale factor and convert the result to the requested unit.",

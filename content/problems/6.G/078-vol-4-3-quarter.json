@@ -10,29 +10,31 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiply in any order.",
+  "hint": "Multiply the three dimensions as usual. Doing the whole numbers first leaves one easy fraction step.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try a similar but smaller shape (all sides ÷ 2) and look at how the formula behaves."
+      "text": "Try it without the fraction first: a $4 \\times 3 \\times 1$ box has volume $12$. This box is only a quarter as tall."
     },
     {
       "level": "nudge",
-      "text": "Multiply in any order."
+      "text": "Multiply the three dimensions as usual. Doing the whole numbers first leaves one easy fraction step."
     },
     {
       "level": "guide",
-      "text": "$4 \\cdot 3 = 12$. Then $12 \\cdot \\tfrac{1}{4}$."
+      "text": "Multiply $4 \\times 3 = 12$. Then find $12 \\times \\frac{1}{4}$, which is the same as one fourth of $12$."
     },
     {
       "level": "reveal",
-      "text": "$3$."
+      "text": "One fourth of $12$ is $3$, so the volume of the box is $3$ cubic units."
     }
   ],
   "explanation": [
-    "$4 \\cdot 3 = 12$.",
-    "$12 \\cdot \\tfrac{1}{4} = 3$ cubic units."
+    "The volume is the product of the three dimensions: $4 \\times 3 \\times \\frac{1}{4}$.",
+    "Multiply the two whole numbers first: $4 \\times 3 = 12$.",
+    "Multiplying by $\\frac{1}{4}$ means the same as dividing by $4$: $12 \\times \\frac{1}{4} = 12 \\div 4 = 3$.",
+    "The volume of the box is $3$ cubic units."
   ],
   "tags": [
     "MAP-practice",

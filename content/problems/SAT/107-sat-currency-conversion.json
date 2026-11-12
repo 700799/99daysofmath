@@ -10,11 +10,11 @@
   "primaryAnswer": "320",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Decide whether the answer should be larger or smaller than $400$ before computing.",
+  "hint": "Before computing, decide whether the number of US dollars should be larger or smaller than $400$. That tells you which operation to use.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Decide whether the answer should be larger or smaller than $400$ before computing."
+      "text": "Before computing, decide whether the number of US dollars should be larger or smaller than $400$. That tells you which operation to use."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "A US dollar is worth more, so the US amount must be smaller — divide."
+      "text": "One US dollar buys more than one Canadian dollar, so fewer US dollars are needed. Divide the Canadian amount by the rate: $400 \\div 1.25$."
     },
     {
       "level": "reveal",
-      "text": "$400 \\div 1.25 = 320$ US dollars."
+      "text": "Since $400 \\div 1.25 = 320$, the amount is $320$ US dollars."
     }
   ],
   "learningObjective": "Convert between currencies, choosing the correct direction.",
   "topic": "Unit conversion",
   "explanation": [
-    "The relationship is $1 \\text{ USD} = 1.25 \\text{ CAD}$.",
-    "Set up so Canadian dollars cancel: $400 \\text{ CAD} \\times \\dfrac{1 \\text{ USD}}{1.25 \\text{ CAD}} = 320$ USD.",
-    "Multiplying instead would give $500$, which is the trap answer."
+    "The exchange rate says that $1$ US dollar equals $1.25$ Canadian dollars.",
+    "To change Canadian dollars into US dollars, divide by $1.25$ so the Canadian units cancel: $400 \\div 1.25 = 320$.",
+    "The answer is smaller than $400$, as expected, so $400$ Canadian dollars equal $320$ US dollars."
   ],
   "alternativeExplanations": [
     {

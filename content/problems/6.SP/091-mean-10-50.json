@@ -10,24 +10,25 @@
   "primaryAnswer": "30",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Sum and divide by $5$.",
+  "hint": "The mean is the equal share each value would get if the total were split evenly.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sum and divide by $5$."
+      "text": "The mean is the equal share each value would get if the total were split evenly."
     },
     {
       "level": "guide",
-      "text": "Sum $= 150$."
+      "text": "The five values add to $10 + 20 + 30 + 40 + 50 = 150$. Divide that total by $5$."
     },
     {
       "level": "reveal",
-      "text": "$150 / 5 = 30$."
+      "text": "$150 \\div 5 = 30$, so the mean of the set is $30$."
     }
   ],
   "explanation": [
-    "Sum: $150$.",
-    "Mean: $150 / 5 = 30$."
+    "Add the five values to get the total: $10 + 20 + 30 + 40 + 50 = 150$.",
+    "The set has $5$ values, so divide the total by $5$.",
+    "$150 \\div 5 = 30$, so the mean of the set is $30$."
   ],
   "alternativeExplanations": [
     {

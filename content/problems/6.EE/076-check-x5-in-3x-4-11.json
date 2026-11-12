@@ -13,24 +13,25 @@
     "y"
   ],
   "acceptanceMode": "exact",
-  "hint": "Substitute and simplify the left side.",
+  "hint": "You do not need to solve the equation. Just test whether the given value makes it true.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute and simplify the left side."
+      "text": "You do not need to solve the equation. Just test whether the given value makes it true."
     },
     {
       "level": "guide",
-      "text": "$3(5) - 4 = 15 - 4 = 11$."
+      "text": "With $x = 5$ the left side is $3(5) - 4$. Multiply, subtract, and compare with $11$."
     },
     {
       "level": "reveal",
-      "text": "Matches $11$ → yes."
+      "text": "$15 - 4 = 11$, which equals the right side, so the answer is yes."
     }
   ],
   "explanation": [
-    "$3(5) - 4 = 15 - 4 = 11$. ✓",
-    "Yes."
+    "Substitute $5$ for $x$ on the left side: $3(5) - 4$.",
+    "Multiply first to get $15$, then subtract $4$ to get $11$.",
+    "The left side equals the right side, $11$, so yes, $x = 5$ is a solution."
   ],
   "tags": [
     "check-solution"

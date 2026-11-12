@@ -15,19 +15,19 @@
     "2pi/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "For $y = \\sin(bx)$ the period is $\\frac{2\\pi}{b}$ — the $b$ squeezes the wave horizontally.",
+  "hint": "A number multiplying $x$ inside the sine squeezes the wave horizontally, so it repeats sooner than the usual $2\\pi$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "For $y = \\sin(bx)$ the period is $\\frac{2\\pi}{b}$ — the $b$ squeezes the wave horizontally."
+      "text": "A number multiplying $x$ inside the sine squeezes the wave horizontally, so it repeats sooner than the usual $2\\pi$."
     },
     {
       "level": "guide",
-      "text": "Here $b = 2$, so compute $\\frac{2\\pi}{2}$."
+      "text": "For $y = \\sin(bx)$ the period is $\\frac{2\\pi}{b}$. Here $b = 2$, so work out $\\frac{2\\pi}{2}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{2\\pi}{2} = \\pi$."
+      "text": "$\\frac{2\\pi}{2} = \\pi$, so the period is $\\pi$ radians (type pi)."
     }
   ],
   "explanation": [

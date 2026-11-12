@@ -12,24 +12,26 @@
     "12 qt"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$1$ gal $= 4$ qt.",
+  "hint": "Each gallon can be poured into a fixed number of quart containers. How many quarts come from one gallon?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$1$ gal $= 4$ qt."
+      "text": "Each gallon can be poured into a fixed number of quart containers. How many quarts come from one gallon?"
     },
     {
       "level": "guide",
-      "text": "$3 \\times 4$."
+      "text": "One gallon fills $4$ quarts, so $3$ gallons fill $3$ times as many: multiply $3 \\times 4$."
     },
     {
       "level": "reveal",
-      "text": "$12$ qt."
+      "text": "$3 \\times 4 = 12$, so an amount of $3$ gallons is $12$ quarts."
     }
   ],
   "explanation": [
-    "$3 \\times 4 = 12$ quarts.",
-    "Final answer: 12."
+    "Start from the given fact that $1$ gallon equals $4$ quarts.",
+    "Quarts are the smaller unit, so the count goes up and you multiply the gallons by $4$.",
+    "Three groups of four quarts make $3 \\times 4 = 12$ quarts.",
+    "Three gallons are the same amount as $12$ quarts."
   ],
   "tags": [
     "conversion",

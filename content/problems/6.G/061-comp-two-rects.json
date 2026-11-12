@@ -12,25 +12,26 @@
     "20 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find each area, then add.",
+  "hint": "The two rectangles sit next to each other without overlapping. Find how much space each one covers.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find each area, then add."
+      "text": "The two rectangles sit next to each other without overlapping. Find how much space each one covers."
     },
     {
       "level": "guide",
-      "text": "$4 \\cdot 3 = 12$ and $4 \\cdot 2 = 8$."
+      "text": "The first rectangle covers $4 \\times 3$ and the second covers $4 \\times 2$. Compute both products and add them."
     },
     {
       "level": "reveal",
-      "text": "$12 + 8 = 20$."
+      "text": "$12 + 8 = 20$, so the total area is $20$ square units."
     }
   ],
   "explanation": [
-    "Rect $1$: $4 \\times 3 = 12$.",
-    "Rect $2$: $4 \\times 2 = 8$.",
-    "Total: $12 + 8 = 20$."
+    "Find the area of the first rectangle: $4 \\times 3 = 12$.",
+    "Find the area of the second rectangle: $4 \\times 2 = 8$.",
+    "The rectangles do not overlap, so the total is the sum $12 + 8 = 20$.",
+    "The total area of the two rectangles is $20$ square units."
   ],
   "alternativeExplanations": [
     {

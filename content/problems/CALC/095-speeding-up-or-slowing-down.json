@@ -32,24 +32,24 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Direction comes from the sign of $v$. Speeding up or slowing down depends on whether $v$ and $a$ have the SAME sign or OPPOSITE signs.",
+  "hint": "Direction comes from the sign of $v$. Speeding up or slowing down depends on whether $v$ and $a$ have the same sign or opposite signs.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Direction comes from the sign of $v$. Speeding up or slowing down depends on whether $v$ and $a$ have the SAME sign or OPPOSITE signs."
+      "text": "Direction comes from the sign of $v$. Speeding up or slowing down depends on whether $v$ and $a$ have the same sign or opposite signs."
     },
     {
       "level": "guide",
-      "text": "$v(2.5) = 6.25 - 10 + 3 = -0.75$ (negative). $a(t) = 2t - 4$, so $a(2.5) = 1$ (positive)."
+      "text": "The velocity is $v(2.5) = 6.25 - 10 + 3 = -0.75$, which is negative. The acceleration is $a(t) = 2t - 4$, so $a(2.5) = 1$, which is positive. Now read off the direction and compare the signs."
     },
     {
       "level": "reveal",
-      "text": "Negative velocity: moving left. Opposite signs: slowing down. Choice A."
+      "text": "Negative velocity means moving left, and opposite signs mean slowing down. That is choice A."
     }
   ],
   "explanation": [
-    "$v(2.5) = (2.5)^2 - 4(2.5) + 3 = 6.25 - 10 + 3 = -0.75 < 0$, so the particle moves left.",
-    "$a(t) = v'(t) = 2t - 4$, so $a(2.5) = 1 > 0$.",
+    "The velocity is $v(2.5) = (2.5)^2 - 4(2.5) + 3 = 6.25 - 10 + 3 = -0.75 < 0$, so the particle moves left.",
+    "The acceleration is the derivative of velocity, $a(t) = v'(t) = 2t - 4$, so $a(2.5) = 1 > 0$.",
     "Velocity and acceleration have opposite signs, so the speed $|v|$ is decreasing: the particle is slowing down. Choice A. (Indeed it stops at $t = 3$, where $v = 0$.)"
   ],
   "alternativeExplanations": [

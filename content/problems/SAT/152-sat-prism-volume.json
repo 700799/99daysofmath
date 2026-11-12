@@ -10,27 +10,27 @@
   "primaryAnswer": "120",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Volume of a rectangular prism is length times width times height.",
+  "hint": "Volume counts the unit cubes that fill a solid. For a box shape, which three measurements are combined, and how?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Volume of a rectangular prism is length times width times height."
+      "text": "Volume counts the unit cubes that fill a solid. For a box shape, which three measurements are combined, and how?"
     },
     {
       "level": "guide",
-      "text": "$4 \\times 5 \\times 6$."
+      "text": "Multiply the three dimensions together: $4 \\times 5 \\times 6$. You can multiply them in any order."
     },
     {
       "level": "reveal",
-      "text": "$120$."
+      "text": "Since $4 \\times 5 = 20$ and $20 \\times 6 = 120$, the volume of the prism is $120$."
     }
   ],
   "learningObjective": "Compute the volume of a rectangular prism.",
   "topic": "Volume",
   "explanation": [
-    "Volume $= \\ell wh = 4 \\times 5 \\times 6 = 120$.",
-    "Equivalently: one layer holds $4 \\times 5 = 20$ unit cubes, and there are $6$ layers.",
-    "The order of multiplication does not matter."
+    "The volume of a rectangular prism is length times width times height, which here is $4 \\times 5 \\times 6$.",
+    "One layer holds $4 \\times 5 = 20$ unit cubes, and there are $6$ such layers stacked up.",
+    "Multiplying gives $20 \\times 6 = 120$, so the volume of the prism is $120$."
   ],
   "alternativeExplanations": [
     {

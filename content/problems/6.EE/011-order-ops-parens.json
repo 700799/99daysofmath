@@ -10,24 +10,26 @@
   "primaryAnswer": "24",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Parentheses first.",
+  "hint": "Parentheses are a signal: whatever is inside them gets done before anything else.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Parentheses first."
+      "text": "Parentheses are a signal: whatever is inside them gets done before anything else."
     },
     {
       "level": "guide",
-      "text": "$6 + 2 = 8$, then $8 \\times 3$."
+      "text": "Add inside the parentheses first to get $6 + 2 = 8$. Then multiply that sum by $3$."
     },
     {
       "level": "reveal",
-      "text": "$24$."
+      "text": "$8 \\times 3 = 24$, so the whole expression equals $24$."
     }
   ],
   "explanation": [
-    "$(6 + 2) = 8$.",
-    "$8 \\times 3 = 24$."
+    "Parentheses come first in the order of operations, so start inside them.",
+    "Add the two numbers inside the parentheses: $6 + 2 = 8$.",
+    "Multiply that sum by the $3$ outside: $8 \\times 3 = 24$.",
+    "The value of the expression is $24$."
   ],
   "tags": [
     "order-of-ops",

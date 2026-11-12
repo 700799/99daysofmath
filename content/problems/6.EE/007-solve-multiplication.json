@@ -12,12 +12,12 @@
     "x=8"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Undo the multiplication by **dividing** both sides by $3$.",
+  "hint": "$3x$ means $3$ times $x$. Which operation undoes multiplying a number by $3$?",
   "explanation": [
-    "Start with $3x = 24$.",
-    "Divide both sides by $3$: $\\frac{3x}{3} = \\frac{24}{3}$.",
-    "Simplify: $x = 8$.",
-    "Check: $3 \\times 8 = 24$. ✓"
+    "The equation $3x = 24$ says that three copies of $x$ make $24$.",
+    "Division undoes multiplication, so divide both sides by $3$: $\\frac{3x}{3} = \\frac{24}{3}$.",
+    "The left side becomes $x$ and the right side becomes $8$, so $x = 8$.",
+    "Check by multiplying: $3 \\times 8 = 24$, which is true. The solution is $x = 8$."
   ],
   "alternativeExplanations": [
     {
@@ -37,15 +37,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Undo the multiplication by **dividing** both sides by $3$."
+      "text": "$3x$ means $3$ times $x$. Which operation undoes multiplying a number by $3$?"
     },
     {
       "level": "guide",
-      "text": "Start with $3x = 24$."
+      "text": "Divide both sides by $3$ to leave $x$ alone. That means working out $24 \\div 3$."
     },
     {
       "level": "reveal",
-      "text": "Check: $3 \\times 8 = 24$. ✓"
+      "text": "$24 \\div 3 = 8$, so the solution of the equation is $x = 8$."
     }
   ]
 }

@@ -10,25 +10,25 @@
   "primaryAnswer": "28",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The bill was DIVIDED by $4$. Undo division with multiplication.",
+  "hint": "The bill was divided by $4$ to get each share. Which operation undoes a division?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The bill was DIVIDED by $4$. Undo division with multiplication."
+      "text": "The bill was divided by $4$ to get each share. Which operation undoes a division?"
     },
     {
       "level": "guide",
-      "text": "Multiply BOTH sides by $4$: $b = 7 \\times 4$."
+      "text": "Multiply both sides of $\\frac{b}{4} = 7$ by $4$ so that $b$ stands alone: $b = 7 \\times 4$."
     },
     {
       "level": "reveal",
-      "text": "$b = 28$. The bill was $\\$28$."
+      "text": "$7 \\times 4 = 28$, so the whole bill was $28$ dollars."
     }
   ],
   "explanation": [
-    "The bill split 4 ways gives $\\frac{b}{4} = 7$.",
-    "Multiply both sides by 4: $b = 28$.",
-    "Check: $28 \\div 4 = 7$ each. ✓"
+    "The equation $\\frac{b}{4} = 7$ says the bill split four ways gives $\\$7$ each.",
+    "Multiplication undoes division, so multiply both sides by $4$ to get $b = 7 \\times 4 = 28$.",
+    "Check: $28 \\div 4 = 7$ dollars each, so the whole bill was $28$ dollars."
   ],
   "alternativeExplanations": [
     {

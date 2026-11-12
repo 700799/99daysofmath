@@ -10,25 +10,25 @@
   "primaryAnswer": "30",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The graph of $y = x + 2$ is a straight line. The region under it from $0$ to $6$ is a trapezoid.",
+  "hint": "The graph of $y = x + 2$ is a straight line. What familiar shape lies under it between $x = 0$ and $x = 6$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The graph of $y = x + 2$ is a straight line. The region under it from $0$ to $6$ is a trapezoid."
+      "text": "The graph of $y = x + 2$ is a straight line. What familiar shape lies under it between $x = 0$ and $x = 6$?"
     },
     {
       "level": "guide",
-      "text": "The two parallel sides are the heights at $x = 0$ and $x = 6$: $2$ and $8$. The width is $6$."
+      "text": "The region is a trapezoid. Its two parallel sides are the heights at $x = 0$ and $x = 6$, which are $2$ and $8$, and its width is $6$. Use the trapezoid area formula."
     },
     {
       "level": "reveal",
-      "text": "Trapezoid area $= \\frac{2 + 8}{2} \\cdot 6 = 30$."
+      "text": "The trapezoid area is $\\frac{2 + 8}{2} \\cdot 6 = 30$, so the integral equals $30$."
     }
   ],
   "explanation": [
     "A definite integral of a nonnegative function is the area under its graph.",
     "Here the region is a trapezoid with parallel sides $f(0) = 2$ and $f(6) = 8$ and width $6$.",
-    "Area $= \\frac{(2 + 8)}{2} \\cdot 6 = 5 \\cdot 6 = 30$."
+    "The area is the average of the parallel sides times the width: $\\frac{(2 + 8)}{2} \\cdot 6 = 5 \\cdot 6 = 30$."
   ],
   "alternativeExplanations": [
     {

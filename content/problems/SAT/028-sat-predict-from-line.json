@@ -10,11 +10,11 @@
   "primaryAnswer": "13",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "One of the given points is already the $y$-intercept.",
+  "hint": "Look at the first point before computing anything. It tells you one part of the line's equation directly.",
   "hints": [
     {
       "level": "nudge",
-      "text": "One of the given points is already the $y$-intercept."
+      "text": "Look at the first point before computing anything. It tells you one part of the line's equation directly."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "Slope $= \\dfrac{7 - (-3)}{5 - 0} = 2$, and $b = -3$."
+      "text": "The point $(0, -3)$ gives $b = -3$. The slope is $\\dfrac{7 - (-3)}{5 - 0}$. Write the equation, then substitute $x = 8$."
     },
     {
       "level": "reveal",
-      "text": "$y = 2x - 3$, so at $x = 8$: $y = 13$."
+      "text": "The slope is $2$, so the line is $y = 2x - 3$. At $x = 8$ the value of $y$ is $16 - 3 = 13$."
     }
   ],
   "learningObjective": "Build a line from two points and evaluate it at a new input.",
   "topic": "Writing and using linear equations",
   "explanation": [
-    "The point $(0, -3)$ has $x = 0$, so the $y$-intercept is $-3$.",
-    "Slope $= \\dfrac{7 - (-3)}{5 - 0} = \\dfrac{10}{5} = 2$.",
-    "So $y = 2x - 3$, and at $x = 8$: $y = 16 - 3 = 13$."
+    "The point $(0, -3)$ has $x = 0$, so it gives the $y$-intercept directly: $b = -3$.",
+    "Compute the slope from the two points: $\\dfrac{7 - (-3)}{5 - 0} = \\dfrac{10}{5} = 2$.",
+    "The equation of the line is therefore $y = 2x - 3$.",
+    "Substitute $x = 8$ to get $y = 2(8) - 3 = 13$, so the value of $y$ is $13$."
   ],
   "alternativeExplanations": [
     {

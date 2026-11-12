@@ -10,19 +10,19 @@
   "primaryAnswer": "36",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "How many items are in ONE pack? That is the parentheses part.",
+  "hint": "The parentheses describe what is inside a single pack. Work that out before thinking about all four packs.",
   "hints": [
     {
       "level": "nudge",
-      "text": "How many items are in ONE pack? That is the parentheses part."
+      "text": "The parentheses describe what is inside a single pack. Work that out before thinking about all four packs."
     },
     {
       "level": "guide",
-      "text": "$6 + 3 = 9$ items per pack, and there are $4$ packs."
+      "text": "One pack has $6 + 3 = 9$ items. There are $4$ packs exactly like it, so multiply $4 \\times 9$."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 9 = 36$ items."
+      "text": "$4 \\times 9 = 36$, so the expression has a value of $36$ items."
     }
   ],
   "explanation": [

@@ -13,12 +13,13 @@
     "60 cubic inches"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Volume of a rectangular prism is **length × width × height**.",
+  "hint": "Volume counts the unit cubes that fill a box. Which three measurements does a rectangular prism give you to multiply?",
   "explanation": [
-    "Volume = $l \\times w \\times h = 3 \\times 4 \\times 5$.",
-    "First multiply $3 \\times 4 = 12$.",
-    "Then $12 \\times 5 = 60$.",
-    "The volume is $60$ cubic inches."
+    "The volume of a rectangular prism is length times width times height, because that counts the cubes in one layer and then the number of layers.",
+    "Put in the measurements from the problem: $V = 3 \\times 4 \\times 5$.",
+    "Multiply the first two numbers to get the cubes in one layer: $3 \\times 4 = 12$.",
+    "There are $5$ layers, so multiply again: $12 \\times 5 = 60$.",
+    "The volume of the prism is $60$ cubic inches."
   ],
   "alternativeExplanations": [
     {
@@ -47,15 +48,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Volume of a rectangular prism is **length × width × height**."
+      "text": "Volume counts the unit cubes that fill a box. Which three measurements does a rectangular prism give you to multiply?"
     },
     {
       "level": "guide",
-      "text": "Volume = $l \\times w \\times h = 3 \\times 4 \\times 5$."
+      "text": "Use volume equals length times width times height with these numbers: set up $3 \\times 4 \\times 5$ and multiply two of them first."
     },
     {
       "level": "reveal",
-      "text": "The volume is $60$ cubic inches."
+      "text": "$3 \\times 4 = 12$ and $12 \\times 5 = 60$, so the volume is $60$ cubic inches."
     }
   ],
   "diagram": {

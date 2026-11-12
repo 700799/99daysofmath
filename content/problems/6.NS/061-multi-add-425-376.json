@@ -10,25 +10,26 @@
   "primaryAnswer": "801",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Line up the digits by place value, then add.",
+  "hint": "Stack the numbers so ones are under ones, tens under tens and hundreds under hundreds. Add each column starting from the right.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Line up the digits by place value, then add."
+      "text": "Stack the numbers so ones are under ones, tens under tens and hundreds under hundreds. Add each column starting from the right."
     },
     {
       "level": "guide",
-      "text": "Ones: $5 + 6 = 11$ (carry $1$). Tens: $2 + 7 + 1 = 10$ (carry $1$). Hundreds: $4 + 3 + 1 = 8$."
+      "text": "Ones: $5 + 6 = 11$, so write $1$ and carry $1$. Next add the tens $2 + 7$ plus the carried $1$, and carry again if you get $10$ or more. Then finish the hundreds."
     },
     {
       "level": "reveal",
-      "text": "$801$."
+      "text": "The tens give $10$ and the hundreds give $4 + 3 + 1 = 8$, so the sum is $801$."
     }
   ],
   "explanation": [
-    "Stack the numbers and add column by column.",
-    "Ones: $11$ (write 1, carry 1). Tens: $10$ (write 0, carry 1). Hundreds: $8$.",
-    "Result: $801$."
+    "Stack the numbers by place value and add one column at a time, starting with the ones.",
+    "Ones: $5 + 6 = 11$. Write $1$ in the ones place and carry $1$ ten.",
+    "Tens: $2 + 7 + 1 = 10$. Write $0$ in the tens place and carry $1$ hundred.",
+    "Hundreds: $4 + 3 + 1 = 8$. Reading the digits gives the sum $801$."
   ],
   "alternativeExplanations": [
     {

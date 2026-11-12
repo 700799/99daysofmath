@@ -32,24 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Statistical questions have varied answers.",
+  "hint": "A statistical question is one where you would need to collect data because the answers vary.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Statistical questions have varied answers."
+      "text": "A statistical question is one where you would need to collect data because the answers vary."
     },
     {
       "level": "guide",
-      "text": "Which one expects different answers from different people?"
+      "text": "Test each choice by asking whether everyone would give the same answer. Three choices have one fixed answer; look for the one about a whole group of people."
     },
     {
       "level": "reveal",
-      "text": "B — students' heights vary."
+      "text": "The answer is B, \"How tall are students in our class?\", because heights differ from student to student."
     }
   ],
   "explanation": [
-    "Statistical questions anticipate variability.",
-    "Heights of students vary across the class."
+    "A statistical question anticipates variability, meaning the data collected will not all be the same.",
+    "The teacher's age, the time right now, and the days in a week each have one fixed answer, so A, C and D are not statistical.",
+    "Heights differ across the students in a class, so choice B is the statistical question."
   ],
   "tags": [
     "statistical-question"

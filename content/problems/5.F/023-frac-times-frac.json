@@ -13,24 +13,25 @@
     "0.5"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Tops together, bottoms together — then simplify.",
+  "hint": "Fraction multiplication works straight across. After you multiply, check whether the result can be written with smaller numbers.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Tops together, bottoms together — then simplify."
+      "text": "Fraction multiplication works straight across. After you multiply, check whether the result can be written with smaller numbers."
     },
     {
       "level": "guide",
-      "text": "$\\frac{2 \\times 3}{3 \\times 4} = \\frac{6}{12}$."
+      "text": "Multiply the tops $2 \\times 3$ and the bottoms $3 \\times 4$ to get a fraction in twelfths. Then divide top and bottom by their largest common factor."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{6}{12} = \\frac{1}{2}$."
+      "text": "$\\frac{2}{3} \\times \\frac{3}{4} = \\frac{6}{12}$, and dividing both parts by $6$ gives $\\frac{1}{2}$."
     }
   ],
   "explanation": [
-    "$\\frac{2}{3} \\times \\frac{3}{4} = \\frac{6}{12}$.",
-    "Divide top and bottom by $6$: $\\frac{1}{2}$."
+    "Multiply the numerators and the denominators: $\\frac{2 \\times 3}{3 \\times 4} = \\frac{6}{12}$.",
+    "Both $6$ and $12$ can be divided by $6$, so the fraction can be simplified.",
+    "Dividing top and bottom by $6$ gives $\\frac{1}{2}$, so the product in simplest form is $\\frac{1}{2}$."
   ],
   "alternativeExplanations": [
     {

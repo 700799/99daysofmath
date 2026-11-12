@@ -32,11 +32,11 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Look for the largest perfect square that divides $50$.",
+  "hint": "A square root simplifies when the number inside has a perfect square as a factor. Which perfect squares divide $50$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Look for the largest perfect square that divides $50$."
+      "text": "A square root simplifies when the number inside has a perfect square as a factor. Which perfect squares divide $50$?"
     },
     {
       "level": "nudge",
@@ -45,19 +45,19 @@
     },
     {
       "level": "guide",
-      "text": "$50 = 25 \\times 2$, and $25$ is a perfect square."
+      "text": "Write $50$ as $25 \\times 2$, since $25$ is the largest perfect square factor. Then take the square root of $25$ out in front."
     },
     {
       "level": "reveal",
-      "text": "$\\sqrt{50} = \\sqrt{25}\\sqrt{2} = 5\\sqrt{2}$."
+      "text": "Since $\\sqrt{25} = 5$, the result is $\\sqrt{50} = 5\\sqrt{2}$, which is choice B."
     }
   ],
   "learningObjective": "Simplify a radical by extracting a perfect-square factor.",
   "topic": "Radicals",
   "explanation": [
-    "Split $50$ into a perfect square times the rest: $50 = 25 \\times 2$.",
-    "Radicals distribute over multiplication: $\\sqrt{50} = \\sqrt{25} \\cdot \\sqrt{2} = 5\\sqrt{2}$.",
-    "Choice A leaves the $25$ inside and outside at once — the square root of $25$ is $5$, not $25$."
+    "Write $50$ as a perfect square times another number: $50 = 25 \\times 2$.",
+    "The square root of a product is the product of the square roots, so $\\sqrt{50} = \\sqrt{25} \\cdot \\sqrt{2}$.",
+    "Since $\\sqrt{25} = 5$, this simplifies to $5\\sqrt{2}$, which is choice B."
   ],
   "alternativeExplanations": [
     {

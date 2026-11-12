@@ -10,25 +10,25 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A polynomial has no holes, no jumps and no breaks. For a limit like that you can just substitute.",
+  "hint": "A polynomial has no holes, jumps or breaks. What does that let you do when you take its limit?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A polynomial has no holes, no jumps and no breaks. For a limit like that you can just substitute."
+      "text": "A polynomial has no holes, jumps or breaks. What does that let you do when you take its limit?"
     },
     {
       "level": "guide",
-      "text": "Put $x = 2$ into $x^2 + 3x - 1$: that is $4 + 6 - 1$."
+      "text": "Because the polynomial is continuous, substitute $x = 2$ into $x^2 + 3x - 1$. That gives $4 + 6 - 1$, which you still need to add up."
     },
     {
       "level": "reveal",
-      "text": "$4 + 6 - 1 = 9$."
+      "text": "Adding gives $4 + 6 - 1 = 9$, so the limit is $9$."
     }
   ],
   "explanation": [
-    "Polynomials are continuous everywhere, so the limit equals the value.",
-    "Substitute $x = 2$: $2^2 + 3(2) - 1 = 4 + 6 - 1$.",
-    "$= 9$."
+    "Polynomials are continuous everywhere, so the limit equals the value of the function at that point.",
+    "Substitute $x = 2$ into each term of the polynomial and simplify: $2^2 + 3(2) - 1 = 4 + 6 - 1$.",
+    "The three numbers add up to $9$, so the limit is $\\lim_{x \\to 2} (x^2 + 3x - 1) = 9$."
   ],
   "alternativeExplanations": [
     {

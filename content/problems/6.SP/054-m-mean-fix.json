@@ -10,29 +10,31 @@
   "primaryAnswer": "79",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Old sum is $5 \\times 80 = 400$.",
+  "hint": "You do not know the five scores, but the mean tells you what they add up to.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Use a sample of 3–4 values to see how the rule works, then apply it to the real data."
+      "text": "Try a smaller class: two scores with mean $80$ and a third score of $74$. Is the new mean above or below $80$, and by a lot or a little?"
     },
     {
       "level": "nudge",
-      "text": "Old sum is $5 \\times 80 = 400$."
+      "text": "You do not know the five scores, but the mean tells you what they add up to."
     },
     {
       "level": "guide",
-      "text": "New sum: $474$. New count: $6$."
+      "text": "The five scores total $5 \\times 80 = 400$. Adding the score of $74$ gives $474$, and now there are $6$ scores to share that total."
     },
     {
       "level": "reveal",
-      "text": "$474 / 6 = 79$."
+      "text": "$474 \\div 6 = 79$, so the new mean is $79$."
     }
   ],
   "explanation": [
-    "Old sum: $400$. Add $74$: $474$.",
-    "Divide by $6$: $79$."
+    "The mean times the count gives the total, so the first five scores add to $5 \\times 80 = 400$.",
+    "Add the sixth score to that total: $400 + 74 = 474$.",
+    "There are now $6$ scores, so the new total is divided by $6$.",
+    "Dividing gives $474 \\div 6 = 79$, so the new mean is $79$."
   ],
   "tags": [
     "CA",

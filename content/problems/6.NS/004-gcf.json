@@ -10,12 +10,12 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "List the factors of each number. The largest one that's in both lists is the GCF.",
+  "hint": "A common factor divides both numbers with nothing left over. Listing the factors of each number shows which ones they share.",
   "explanation": [
-    "Factors of $18$: $1, 2, 3, 6, 9, 18$.",
-    "Factors of $24$: $1, 2, 3, 4, 6, 8, 12, 24$.",
-    "The largest number in both lists is $6$.",
-    "So $\\text{GCF}(18, 24) = 6$."
+    "List every factor of $18$, because the GCF must be one of them: $1, 2, 3, 6, 9, 18$.",
+    "List every factor of $24$ in the same way: $1, 2, 3, 4, 6, 8, 12, 24$.",
+    "The numbers that appear in both lists are $1, 2, 3$ and $6$. These are the common factors.",
+    "The largest common factor is $6$, so $\\text{GCF}(18, 24) = 6$."
   ],
   "alternativeExplanations": [
     {
@@ -36,15 +36,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "List the factors of each number. The largest one that's in both lists is the GCF."
+      "text": "A common factor divides both numbers with nothing left over. Listing the factors of each number shows which ones they share."
     },
     {
       "level": "guide",
-      "text": "Factors of $18$: $1, 2, 3, 6, 9, 18$."
+      "text": "The factors of $18$ are $1, 2, 3, 6, 9, 18$. Write the factors of $24$ in the same way, then pick the largest number that is in both lists."
     },
     {
       "level": "reveal",
-      "text": "So $\\text{GCF}(18, 24) = 6$."
+      "text": "The shared factors are $1, 2, 3, 6$, so the greatest common factor is $6$."
     }
   ]
 }

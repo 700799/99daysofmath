@@ -10,25 +10,25 @@
   "primaryAnswer": "14",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A function is a machine: one input goes in, one output comes out.",
+  "hint": "A function works like a machine that follows one rule. What does this machine's rule do to a number?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A function is a machine: one input goes in, one output comes out."
+      "text": "A function works like a machine that follows one rule. What does this machine's rule do to a number?"
     },
     {
       "level": "guide",
-      "text": "The machine's rule is \"double\" — multiply the input by $2$."
+      "text": "\"Doubles\" means the machine multiplies its input by $2$, so work out $7 \\times 2$."
     },
     {
       "level": "reveal",
-      "text": "$7 \\times 2 = 14$."
+      "text": "$7 \\times 2 = 14$, so the number that comes out is $14$."
     }
   ],
   "explanation": [
-    "The machine's rule: multiply the input by $2$.",
-    "Input $7$: $7 \\times 2 = 14$.",
-    "One input in, exactly ONE output out — that is what makes it a function."
+    "The machine's rule is \"double\", which means multiply whatever goes in by $2$.",
+    "Feed in the input $7$ and apply the rule: $7 \\times 2 = 14$.",
+    "So $14$ comes out. One input always gives exactly one output, which is what makes this a function."
   ],
   "alternativeExplanations": [
     {

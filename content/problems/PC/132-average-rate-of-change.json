@@ -10,25 +10,25 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Average rate of change is just the SLOPE between two points.",
+  "hint": "Average speed is an average rate of change, which is the SLOPE between two points on the trip.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Average rate of change is just the SLOPE between two points."
+      "text": "Average speed is an average rate of change, which is the SLOPE between two points on the trip."
     },
     {
       "level": "guide",
-      "text": "Distance changed by $150 - 30 = 120$ km; time changed by $3 - 1 = 2$ hours."
+      "text": "The distance changed by $150 - 30 = 120$ km while the time changed by $3 - 1 = 2$ hours. Divide the first change by the second."
     },
     {
       "level": "reveal",
-      "text": "$120 \\div 2 = 60$ km per hour."
+      "text": "Dividing gives $120 \\div 2 = 60$, so the average speed is $60$ km per hour."
     }
   ],
   "explanation": [
-    "Average rate of change = change in distance ÷ change in time.",
-    "$(150 - 30) \\div (3 - 1) = 120 \\div 2$.",
-    "$= 60$ km per hour."
+    "Average rate of change is the change in distance divided by the change in time.",
+    "Between the two readings this is $(150 - 30) \\div (3 - 1) = 120 \\div 2$.",
+    "So the average speed is $60$ km per hour."
   ],
   "alternativeExplanations": [
     {

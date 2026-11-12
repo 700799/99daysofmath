@@ -10,25 +10,25 @@
   "primaryAnswer": "55",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The filter is a machine: one photo in, exactly one filtered photo out.",
+  "hint": "The filter is a rule that changes brightness. The photo's brightness is the input to that rule.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The filter is a machine: one photo in, exactly one filtered photo out."
+      "text": "The filter is a rule that changes brightness. The photo's brightness is the input to that rule."
     },
     {
       "level": "guide",
-      "text": "Feed in $40$: $f(40) = 40 + 15$."
+      "text": "Put $40$ in for $p$ in the rule $f(p) = p + 15$, which gives $40 + 15$."
     },
     {
       "level": "reveal",
-      "text": "$40 + 15 = 55$."
+      "text": "$40 + 15 = 55$, so the brightness that comes out is $55$."
     }
   ],
   "explanation": [
-    "The filter's rule: add $15$ to the brightness.",
-    "$f(40) = 40 + 15 = 55$.",
-    "Every input photo gets exactly ONE output photo — that is why a filter is a function."
+    "The filter's rule is to add $15$ to whatever brightness goes in.",
+    "The input is $40$, so apply the rule to it: $f(40) = 40 + 15 = 55$.",
+    "The output brightness is $55$. Each photo gives exactly one result, which is why the filter is a function."
   ],
   "alternativeExplanations": [
     {

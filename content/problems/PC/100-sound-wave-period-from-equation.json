@@ -10,11 +10,11 @@
   "primaryAnswer": "40",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "One full wave is the PERIOD, and period $= 360^\\circ \\div b$.",
+  "hint": "One full wave is the PERIOD, and the period is $360^\\circ \\div b$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "One full wave is the PERIOD, and period $= 360^\\circ \\div b$."
+      "text": "One full wave is the PERIOD, and the period is $360^\\circ \\div b$."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Here $b = 9$, so compute $360 \\div 9$."
+      "text": "The number in front of $x$ inside the sine is $b = 9$, so work out $360 \\div 9$."
     },
     {
       "level": "reveal",
-      "text": "$360 \\div 9 = 40$, so one wave is $40^\\circ$ long."
+      "text": "Since $360 \\div 9 = 40$, one full wave is $40^\\circ$ long."
     }
   ],
   "explanation": [
-    "For $y = a\\sin(bx)$, the period is $360^\\circ \\div b$.",
-    "The $2$ out front is the amplitude — how LOUD the tone is — and it does not change the length of a wave.",
-    "$360 \\div 9 = 40^\\circ$. A bigger $b$ packs the waves tighter, which is what a higher pitch sounds like."
+    "For a wave of the form $y = a\\sin(bx)$, the period is $360^\\circ \\div b$.",
+    "The $2$ out front is the amplitude, which sets how LOUD the tone is and does not change the length of a wave.",
+    "With $b = 9$, the period is $360 \\div 9 = 40^\\circ$, so one full wave is $40^\\circ$ long."
   ],
   "alternativeExplanations": [
     {

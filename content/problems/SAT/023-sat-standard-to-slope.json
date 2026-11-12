@@ -10,27 +10,27 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Solve for $y$ to reveal the slope.",
+  "hint": "The slope is easy to read once the equation has $y$ alone on one side. Rearrange it into that form.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Solve for $y$ to reveal the slope."
+      "text": "The slope is easy to read once the equation has $y$ alone on one side. Rearrange it into that form."
     },
     {
       "level": "guide",
-      "text": "Subtract $4x$: $-2y = -4x + 10$. Now divide by $-2$."
+      "text": "Subtract $4x$ from both sides to get $-2y = -4x + 10$. Then divide every term by $-2$, watching each sign."
     },
     {
       "level": "reveal",
-      "text": "$y = 2x - 5$, so the slope is $2$."
+      "text": "The result is $y = 2x - 5$, and the number multiplying $x$ is the slope, so the slope is $2$."
     }
   ],
   "learningObjective": "Convert standard form to slope-intercept form.",
   "topic": "Form conversion",
   "explanation": [
-    "Isolate the $y$ term: $-2y = -4x + 10$.",
-    "Divide every term by $-2$: $y = 2x - 5$.",
-    "The coefficient of $x$ is the slope: $2$. Both signs flipped when dividing by a negative — that is where this question is usually lost."
+    "Subtract $4x$ from both sides to isolate the $y$ term: $-2y = -4x + 10$.",
+    "Divide every term by $-2$ to get $y$ alone. Each sign changes, giving $y = 2x - 5$.",
+    "In the form $y = mx + b$ the coefficient of $x$ is the slope, so the slope of the line is $2$."
   ],
   "alternativeExplanations": [
     {

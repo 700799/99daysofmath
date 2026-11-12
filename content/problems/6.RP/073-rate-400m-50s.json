@@ -12,24 +12,26 @@
     "8 m/s"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Meters $\\div$ seconds.",
+  "hint": "Meters per second is the distance covered in a single second. The unit name tells you what to divide by what.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Meters $\\div$ seconds."
+      "text": "Meters per second is the distance covered in a single second. The unit name tells you what to divide by what."
     },
     {
       "level": "guide",
-      "text": "$400 \\div 50$."
+      "text": "Meters come first, so divide $400$ meters by $50$ seconds. It helps to cancel a zero from each and think of $40 \\div 5$."
     },
     {
       "level": "reveal",
-      "text": "$8$."
+      "text": "$400 \\div 50 = 8$, so the runner's rate is $8$ meters per second."
     }
   ],
   "explanation": [
-    "$400 \\div 50 = 8$ m/s.",
-    "Final answer: 8."
+    "The rate \"meters per second\" is found by dividing meters by seconds.",
+    "Write $\\frac{400}{50}$ and divide top and bottom by $10$ to get the easier fraction $\\frac{40}{5}$.",
+    "Finish the easier division to get $40 \\div 5 = 8$.",
+    "The runner covers $8$ meters every second."
   ],
   "tags": [
     "unit-rate",

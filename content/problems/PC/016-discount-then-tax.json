@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "Discount machine: paying $75\\%$ of $\\$80$ gives $\\$60$.",
-    "Tax machine: $10\\%$ of $\\$60$ is $\\$6$.",
-    "$60 + 6 = \\$66$."
+    "The coupon acts first: taking $25\\%$ off means paying $75\\%$, and $0.75 \\times 80 = 60$, so the price drops to $60$ dollars.",
+    "The tax applies to the new price, not the original: $10\\%$ of $60$ dollars is $6$ dollars.",
+    "Adding the tax gives $60 + 6 = 66$, so the final price is $66$ dollars."
   ],
   "alternativeExplanations": [
     {

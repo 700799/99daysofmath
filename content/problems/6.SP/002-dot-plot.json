@@ -17,9 +17,10 @@
   "acceptanceMode": "normalized",
   "hint": "Count the number of dots stacked above the value $2$ on the number line.",
   "explanation": [
-    "Look at the column **above 2** on the dot plot.",
-    "Count the dots in that column: there are $4$.",
-    "So $4$ families have exactly $2$ pets."
+    "In a dot plot each dot stands for one family, and the dot sits above that family's number of pets.",
+    "Find $2$ on the number line and look only at the column of dots directly above it.",
+    "Count the dots in that column one at a time: there are $4$ dots.",
+    "Each dot is one family, so $4$ families have exactly $2$ pets."
   ],
   "alternativeExplanations": [
     {

@@ -10,25 +10,25 @@
   "primaryAnswer": "125",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$5^3$ means three copies of 5 multiplied: $5 \\times 5 \\times 5$.",
+  "hint": "The small raised $3$ is not a multiplier. It tells you how many copies of $5$ to multiply together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$5^3$ means three copies of 5 multiplied: $5 \\times 5 \\times 5$."
+      "text": "The small raised $3$ is not a multiplier. It tells you how many copies of $5$ to multiply together."
     },
     {
       "level": "guide",
-      "text": "First pair: $5 \\times 5 = 25$. Now multiply by the last 5."
+      "text": "$5^3$ means $5 \\times 5 \\times 5$. Start with $5 \\times 5 = 25$, then multiply that result by the last $5$."
     },
     {
       "level": "reveal",
-      "text": "$25 \\times 5 = 125$."
+      "text": "$25 \\times 5 = 125$, so the value of $5^3$ is $125$."
     }
   ],
   "explanation": [
-    "The exponent counts copies: $5^3 = 5 \\times 5 \\times 5$.",
-    "Step by step: $5 \\times 5 = 25$, then $25 \\times 5 = 125$.",
-    "$5^3 = 125$ — not $5 \\times 3 = 15$."
+    "The exponent counts the copies of the base, so $5^3 = 5 \\times 5 \\times 5$.",
+    "Multiply step by step: $5 \\times 5 = 25$, and then $25 \\times 5 = 125$.",
+    "So $5^3 = 125$. It is not $5 \\times 3 = 15$, which is a common mistake."
   ],
   "alternativeExplanations": [
     {

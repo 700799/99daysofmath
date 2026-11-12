@@ -27,23 +27,26 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Symmetric means evenly balanced.",
+  "hint": "A symmetric distribution looks like a mirror image: the left side balances the right side.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Symmetric means evenly balanced."
+      "text": "A symmetric distribution looks like a mirror image: the left side balances the right side."
     },
     {
       "level": "guide",
-      "text": "No outliers pulling either way."
+      "text": "With no long tail on either side, nothing pulls the mean away from the middle. Think about where that leaves the mean compared with the median."
     },
     {
       "level": "reveal",
-      "text": "Equal."
+      "text": "The mean and median are equal, or very nearly equal, which is choice A."
     }
   ],
   "explanation": [
-    "In symmetric distributions, mean ≈ median."
+    "In a symmetric distribution the values on the left of the center balance the values on the right.",
+    "The median sits at the center because half the values are on each side.",
+    "The mean is the balance point, and balanced sides put it at the center too.",
+    "So the mean and median are typically equal, which is choice A."
   ],
   "tags": [
     "shape"

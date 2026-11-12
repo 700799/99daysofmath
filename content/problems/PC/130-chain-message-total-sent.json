@@ -10,11 +10,11 @@
   "primaryAnswer": "126",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The daily counts are $2, 4, 8, 16, \\dots$ — geometric with $r = 2$. You need their SUM.",
+  "hint": "The daily counts are $2, 4, 8, 16, \\dots$, a geometric list with $r = 2$. You need their SUM.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The daily counts are $2, 4, 8, 16, \\dots$ — geometric with $r = 2$. You need their SUM."
+      "text": "The daily counts are $2, 4, 8, 16, \\dots$, a geometric list with $r = 2$. You need their SUM."
     },
     {
       "level": "nudge",
@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "$S_6 = 2 \\times \\frac{2^6 - 1}{2 - 1} = 2 \\times (64 - 1)$."
+      "text": "Use the geometric sum rule with $n = 6$: $S_6 = 2 \\times \\frac{2^6 - 1}{2 - 1} = 2 \\times (64 - 1)$. Finish the multiplication."
     },
     {
       "level": "reveal",
-      "text": "$2 \\times 63 = 126$ messages."
+      "text": "The total is $2 \\times 63 = 126$, so $126$ messages are sent in the first $6$ days."
     }
   ],
   "explanation": [
-    "The daily counts form a geometric sequence: $2, 4, 8, 16, 32, 64$.",
-    "A series is the sum, so use $S_n = a_1 \\times \\frac{r^n - 1}{r - 1}$.",
-    "$S_6 = 2 \\times \\frac{2^6 - 1}{2 - 1} = 2 \\times 63$.",
-    "$= 126$ messages."
+    "The daily counts form a geometric sequence, $2, 4, 8, 16, 32, 64$, because each day doubles the one before.",
+    "A series is the sum of those terms, and the rule for it is $S_n = a_1 \\times \\frac{r^n - 1}{r - 1}$.",
+    "With six days, first term $2$ and ratio $2$, the rule gives $S_6 = 2 \\times \\frac{2^6 - 1}{2 - 1} = 2 \\times 63$.",
+    "So a total of $126$ messages are sent."
   ],
   "alternativeExplanations": [
     {

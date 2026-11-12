@@ -10,25 +10,25 @@
   "primaryAnswer": "0",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Compare degrees: the top is degree $1$ and the bottom is degree $2$.",
+  "hint": "Compare the degrees of the top and the bottom. Which of the two grows faster as $x$ gets large?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Compare degrees: the top is degree $1$ and the bottom is degree $2$."
+      "text": "Compare the degrees of the top and the bottom. Which of the two grows faster as $x$ gets large?"
     },
     {
       "level": "guide",
-      "text": "When the BOTTOM is bigger, the bottom grows faster and squashes the fraction."
+      "text": "The top has degree $1$ and the bottom has degree $2$. When the BOTTOM degree is bigger, think about what a fast-growing bottom does to the fraction."
     },
     {
       "level": "reveal",
-      "text": "The horizontal asymptote is $y = 0$."
+      "text": "The bottom outgrows the top, so the fraction shrinks toward zero and the horizontal asymptote is $y = 0$."
     }
   ],
   "explanation": [
-    "Top degree $1$ is smaller than bottom degree $2$.",
-    "A fast-growing bottom makes the whole fraction tiny.",
-    "So the graph flattens toward $y = 0$."
+    "The top has degree $1$, which is smaller than the bottom's degree $2$.",
+    "For large $x$ the bottom grows much faster than the top, which makes the whole fraction tiny.",
+    "So the graph flattens toward the $x$-axis and the horizontal asymptote is $y = 0$."
   ],
   "alternativeExplanations": [
     {

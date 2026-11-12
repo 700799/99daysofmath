@@ -10,11 +10,11 @@
   "primaryAnswer": "160",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Are the outputs changing by a constant amount, or by a constant factor?",
+  "hint": "Compare each output with the one before it. Decide whether the same amount is being added or the same factor is being multiplied.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Are the outputs changing by a constant amount, or by a constant factor?"
+      "text": "Compare each output with the one before it. Decide whether the same amount is being added or the same factor is being multiplied."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "Each output is double the one before, so $f(x) = 5 \\cdot 2^x$."
+      "text": "Each output is twice the previous one and $f(0) = 5$, so $f(x) = 5 \\cdot 2^x$. Use that rule with $x = 5$, or keep doubling from $f(3) = 40$."
     },
     {
       "level": "reveal",
-      "text": "$f(5) = 5 \\cdot 32 = 160$."
+      "text": "Since $2^5 = 32$, $f(5) = 5 \\cdot 32 = 160$. The value of $f(5)$ is $160$."
     }
   ],
   "learningObjective": "Identify an exponential pattern and extend it.",
   "topic": "Exponential functions",
   "explanation": [
-    "The ratios are all $2$ ($10/5 = 2$, $20/10 = 2$, $40/20 = 2$), so the function is exponential with base $2$.",
-    "The initial value is $f(0) = 5$, so $f(x) = 5 \\cdot 2^x$.",
-    "$f(5) = 5 \\cdot 2^5 = 5 \\cdot 32 = 160$."
+    "The ratios $\\dfrac{10}{5}$, $\\dfrac{20}{10}$ and $\\dfrac{40}{20}$ all equal $2$, so the function is exponential with base $2$.",
+    "The starting value is $f(0) = 5$, so the rule is $f(x) = 5 \\cdot 2^x$.",
+    "Substitute $x = 5$ into the rule to get $f(5) = 5 \\cdot 2^5 = 5 \\cdot 32 = 160$, so the value of $f(5)$ is $160$."
   ],
   "alternativeExplanations": [
     {

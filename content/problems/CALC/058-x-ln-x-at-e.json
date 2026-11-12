@@ -19,21 +19,21 @@
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up with $x e^x$: product rule gives $1 \\cdot e^x + x \\cdot e^x$. Same shape here, with $\\ln x$ and its derivative $\\frac{1}{x}$."
+      "text": "Warm up with $x e^x$: the product rule gives $1 \\cdot e^x + x \\cdot e^x$. The shape is the same here, with $\\ln x$ and its derivative $\\frac{1}{x}$."
     },
     {
       "level": "guide",
-      "text": "$f'(x) = 1 \\cdot \\ln x + x \\cdot \\frac{1}{x} = \\ln x + 1$. Now use $\\ln e = 1$."
+      "text": "The product rule gives $f'(x) = 1 \\cdot \\ln x + x \\cdot \\frac{1}{x} = \\ln x + 1$. Now substitute $x = e$ and use the value of $\\ln e$."
     },
     {
       "level": "reveal",
-      "text": "$f'(e) = 1 + 1 = 2$."
+      "text": "Since $\\ln e = 1$, the value of the derivative is $f'(e) = 1 + 1 = 2$."
     }
   ],
   "explanation": [
-    "Product rule with $u = x$ and $v = \\ln x$: $f'(x) = u'v + uv' = \\ln x + x \\cdot \\frac{1}{x}$.",
+    "Use the product rule with $u = x$ and $v = \\ln x$: $f'(x) = u'v + uv' = \\ln x + x \\cdot \\frac{1}{x}$.",
     "The second term simplifies to $1$, so $f'(x) = \\ln x + 1$.",
-    "Since $\\ln e = 1$, $f'(e) = 2$."
+    "Since $\\ln e = 1$, substituting $x = e$ into the derivative gives the answer $f'(e) = 2$."
   ],
   "alternativeExplanations": [
     {

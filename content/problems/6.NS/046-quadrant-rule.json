@@ -32,23 +32,26 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Both negative is the lower-left.",
+  "hint": "Negative $x$ means left of the $y$-axis and negative $y$ means below the $x$-axis. Picture where both are true at once.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Both negative is the lower-left."
+      "text": "Negative $x$ means left of the $y$-axis and negative $y$ means below the $x$-axis. Picture where both are true at once."
     },
     {
       "level": "guide",
-      "text": "Quadrant III is lower-left ($-,-$)."
+      "text": "Left and below is the lower-left region. The quadrants are numbered I, II, III, IV going counter-clockwise from the upper right, so count around to the lower left."
     },
     {
       "level": "reveal",
-      "text": "III."
+      "text": "Counting upper right, upper left, lower left gives the third quadrant, so the answer is Quadrant III (choice C)."
     }
   ],
   "explanation": [
-    "Lower-left quadrant has $x < 0$ and $y < 0$ → Quadrant III."
+    "The condition $x < 0$ puts a point to the left of the $y$-axis.",
+    "The condition $y < 0$ puts a point below the $x$-axis, so together the point is in the lower-left region.",
+    "Quadrants are numbered counter-clockwise from the upper right: I upper right, II upper left, III lower left, IV lower right.",
+    "The lower-left region is Quadrant III, which is choice C."
   ],
   "tags": [
     "coordinate",

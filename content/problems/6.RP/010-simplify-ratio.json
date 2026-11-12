@@ -14,25 +14,26 @@
     "2 : 3"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find a number that divides both sides evenly.",
+  "hint": "A ratio is in lowest terms when no number bigger than $1$ divides both parts. Look for the largest number that goes into both.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find a number that divides both sides evenly."
+      "text": "A ratio is in lowest terms when no number bigger than $1$ divides both parts. Look for the largest number that goes into both."
     },
     {
       "level": "guide",
-      "text": "What is the greatest common factor of $12$ and $18$?"
+      "text": "The greatest common factor of $12$ and $18$ is $6$. Divide each part of the ratio by $6$."
     },
     {
       "level": "reveal",
-      "text": "GCF is $6$. Divide both: $12 \\div 6 = 2$, $18 \\div 6 = 3$. Answer: $2:3$."
+      "text": "$12 \\div 6 = 2$ and $18 \\div 6 = 3$, so the ratio in lowest terms is $2 : 3$."
     }
   ],
   "explanation": [
-    "The greatest common factor of $12$ and $18$ is $6$.",
-    "Divide both parts by $6$: $\\frac{12}{6} = 2$ and $\\frac{18}{6} = 3$.",
-    "Simplified ratio: $2:3$."
+    "Simplifying a ratio works like simplifying a fraction: divide both parts by a common factor.",
+    "The factors shared by $12$ and $18$ are $1, 2, 3$ and $6$, so the greatest common factor is $6$.",
+    "Dividing both parts by $6$ keeps the ratio equivalent and gives $12 \\div 6 = 2$ and $18 \\div 6 = 3$.",
+    "The simplest form is $2 : 3$, because $2$ and $3$ share no factor other than $1$."
   ],
   "tags": [
     "ratio",

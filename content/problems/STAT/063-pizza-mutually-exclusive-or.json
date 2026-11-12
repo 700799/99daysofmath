@@ -13,25 +13,25 @@
     "11/20"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Cannot be both\" means the events are mutually exclusive (disjoint).",
+  "hint": "An order cannot be both kinds of pizza at once. What does that tell you about how the two events overlap?",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Cannot be both\" means the events are mutually exclusive (disjoint)."
+      "text": "An order cannot be both kinds of pizza at once. What does that tell you about how the two events overlap?"
     },
     {
       "level": "guide",
-      "text": "For disjoint events, $P(A \\text{ or } B) = P(A) + P(B)$."
+      "text": "The events are mutually exclusive, so there is no overlap to remove and the probabilities simply add: $0.20 + 0.35$."
     },
     {
       "level": "reveal",
-      "text": "$0.20 + 0.35 = 0.55$."
+      "text": "$0.20 + 0.35 = 0.55$, so the probability of cheese or pepperoni is $0.55$."
     }
   ],
   "explanation": [
-    "Cheese and pepperoni orders do not overlap, so they are mutually exclusive.",
-    "The addition rule for disjoint events: $P(A \\cup B) = P(A) + P(B)$.",
-    "$0.20 + 0.35 = 0.55$, or $55$ percent of orders."
+    "Cheese orders and pepperoni orders never overlap, so the two events are mutually exclusive.",
+    "For mutually exclusive events the addition rule is $P(A \\cup B) = P(A) + P(B)$, with nothing to subtract.",
+    "$0.20 + 0.35 = 0.55$, so $55$ percent of orders are cheese or pepperoni."
   ],
   "alternativeExplanations": [
     {

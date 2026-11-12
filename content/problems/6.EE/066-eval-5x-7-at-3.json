@@ -10,24 +10,26 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $3$ for $x$, then compute.",
+  "hint": "After you substitute, there is a multiplication and a subtraction. Which one comes first?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $3$ for $x$, then compute."
+      "text": "After you substitute, there is a multiplication and a subtraction. Which one comes first?"
     },
     {
       "level": "guide",
-      "text": "$5(3) - 7$."
+      "text": "With $x = 3$ the expression is $5(3) - 7$. Multiply $5$ by $3$, then take away $7$."
     },
     {
       "level": "reveal",
-      "text": "$15 - 7 = 8$."
+      "text": "$5 \\times 3 = 15$ and $15 - 7 = 8$, so the value is $8$."
     }
   ],
   "explanation": [
-    "$5x - 7$ with $x = 3$: $5(3) - 7 = 15 - 7 = 8$.",
-    "Final answer: 8."
+    "Replace the letter $x$ with its value $3$ to get $5(3) - 7$.",
+    "Multiplication comes before subtraction, so find $5 \\times 3 = 15$.",
+    "Then subtract the $7$ from that product: $15 - 7 = 8$.",
+    "The value of the expression is $8$."
   ],
   "tags": [
     "evaluate"

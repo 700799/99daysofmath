@@ -12,24 +12,25 @@
     "0.125"
   ],
   "acceptanceMode": "normalized",
-  "hint": "You are sharing half of something among $4$ people.",
+  "hint": "Dividing a fraction by a whole number is like sharing it equally. Will each share be bigger or smaller than one half?",
   "hints": [
     {
       "level": "nudge",
-      "text": "You are sharing half of something among $4$ people."
+      "text": "Dividing a fraction by a whole number is like sharing it equally. Will each share be bigger or smaller than one half?"
     },
     {
       "level": "guide",
-      "text": "Cutting $\\frac{1}{2}$ into $4$ equal pieces makes the pieces $4$ times smaller."
+      "text": "Splitting $\\frac{1}{2}$ into $4$ equal shares is the same as taking one fourth of it, so find $\\frac{1}{2} \\times \\frac{1}{4}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2} \\div 4 = \\frac{1}{8}$."
+      "text": "$\\frac{1}{2} \\times \\frac{1}{4} = \\frac{1}{8}$, so each share is one eighth: $\\frac{1}{2} \\div 4 = \\frac{1}{8}$."
     }
   ],
   "explanation": [
-    "Sharing $\\frac{1}{2}$ among $4$: each share is $\\frac{1}{2} \\times \\frac{1}{4}$.",
-    "$\\frac{1}{2} \\times \\frac{1}{4} = \\frac{1}{8}$."
+    "Dividing $\\frac{1}{2}$ by $4$ means sharing one half equally among $4$, so each share is smaller than a half.",
+    "Each share is one fourth of the half, which can be written as $\\frac{1}{2} \\times \\frac{1}{4}$.",
+    "Multiply across to get $\\frac{1}{8}$, so the answer is $\\frac{1}{2} \\div 4 = \\frac{1}{8}$."
   ],
   "alternativeExplanations": [
     {

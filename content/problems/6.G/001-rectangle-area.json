@@ -19,11 +19,12 @@
     "40 sq cm"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Area of a rectangle is **length × width**.",
+  "hint": "Area tells how many unit squares cover the rectangle. Which two measurements on the picture do you multiply?",
   "explanation": [
-    "The rectangle is $8$ cm long and $5$ cm tall.",
-    "Area = length × width = $8 \\times 5$.",
-    "$8 \\times 5 = 40$ square centimeters."
+    "Read the side lengths from the picture: the rectangle is $8$ cm long and $5$ cm tall.",
+    "A rectangle can be filled with rows of unit squares, so its area is length times width: $8 \\times 5$.",
+    "Think of $5$ rows with $8$ squares in each row, which gives $8 \\times 5 = 40$ squares.",
+    "The area of the rectangle is $40$ square centimeters."
   ],
   "alternativeExplanations": [
     {
@@ -52,15 +53,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Area of a rectangle is **length × width**."
+      "text": "Area tells how many unit squares cover the rectangle. Which two measurements on the picture do you multiply?"
     },
     {
       "level": "guide",
-      "text": "The rectangle is $8$ cm long and $5$ cm tall."
+      "text": "Read the labels on the picture: the rectangle is $8$ cm long and $5$ cm tall. Multiply length by width, so work out $8 \\times 5$."
     },
     {
       "level": "reveal",
-      "text": "$8 \\times 5 = 40$ square centimeters."
+      "text": "$8 \\times 5 = 40$, so the area of the rectangle is $40$ square centimeters."
     }
   ]
 }

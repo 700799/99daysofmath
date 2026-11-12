@@ -10,25 +10,25 @@
   "primaryAnswer": "48",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the big rectangle's area, then subtract the piece that was removed.",
+  "hint": "Think of the bed as a full rectangle with a smaller rectangle removed. How can two areas give you what is left?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the big rectangle's area, then subtract the piece that was removed."
+      "text": "Think of the bed as a full rectangle with a smaller rectangle removed. How can two areas give you what is left?"
     },
     {
       "level": "guide",
-      "text": "Big rectangle: $10 \\times 6 = 60$ sq ft. Removed corner: $4 \\times 3 = 12$ sq ft."
+      "text": "The full rectangle is $10 \\times 6 = 60$ sq ft and the removed corner is $4 \\times 3 = 12$ sq ft. Subtract the second from the first."
     },
     {
       "level": "reveal",
-      "text": "$60 - 12 = 48$ square feet."
+      "text": "$60 - 12 = 48$, so the bed has an area of $48$ square feet."
     }
   ],
   "explanation": [
-    "Treat the L as a full rectangle with a bite taken out.",
-    "Full rectangle: $10 \\times 6 = 60$ sq ft. Bite: $4 \\times 3 = 12$ sq ft.",
-    "Remaining area: $60 - 12 = 48$ square feet."
+    "The L shape is a full rectangle with one rectangular corner cut away, so its area is the difference of two rectangle areas.",
+    "The full rectangle covers $10 \\times 6 = 60$ square feet and the cut corner covers $4 \\times 3 = 12$ square feet.",
+    "Subtracting gives $60 - 12 = 48$ square feet for the remaining bed."
   ],
   "alternativeExplanations": [
     {

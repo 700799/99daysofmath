@@ -12,29 +12,31 @@
     "12 pencils"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Divide total dollars by cost per pencil.",
+  "hint": "You know the total money and the price of one item. Which operation tells you how many equal prices fit into the total?",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Use the \"keep–change–flip\" trick whenever you see division by a fraction."
+      "text": "A pencil costs one quarter of a dollar. Think about how many quarters make a single dollar, then how many make three."
     },
     {
       "level": "nudge",
-      "text": "Divide total dollars by cost per pencil."
+      "text": "You know the total money and the price of one item. Which operation tells you how many equal prices fit into the total?"
     },
     {
       "level": "guide",
-      "text": "$3.00 \\div 0.25 = ?$"
+      "text": "Set up $3.00 \\div 0.25$. Multiplying both numbers by $100$ turns it into $300 \\div 25$, which is easier to work out."
     },
     {
       "level": "reveal",
-      "text": "$3 \\div 0.25 = 12$ pencils."
+      "text": "$300 \\div 25 = 12$, so you can buy $12$ pencils."
     }
   ],
   "explanation": [
-    "$3 \\div 0.25 = 12$.",
-    "You can buy $12$ pencils."
+    "To find how many pencils the money buys, divide the total by the price of one pencil: $3.00 \\div 0.25$.",
+    "Multiply both numbers by $100$ to remove the decimals. The quotient stays the same, and the problem becomes $300 \\div 25$.",
+    "Four $25$s make $100$, so there are $4 \\times 3 = 12$ of them in $300$.",
+    "You can buy $12$ pencils with $3$ dollars."
   ],
   "tags": [
     "MAP-practice",

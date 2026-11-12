@@ -11,11 +11,11 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "\"At least one\" is the opposite of \"none\". Find $P(\\text{none delayed})$ and subtract from $1$.",
+  "hint": "\"At least one delayed\" includes many cases. The opposite event, no delays at all, is a single case.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"At least one\" is the opposite of \"none\". Find $P(\\text{none delayed})$ and subtract from $1$."
+      "text": "\"At least one delayed\" includes many cases. The opposite event, no delays at all, is a single case."
     },
     {
       "level": "nudge",
@@ -24,11 +24,11 @@
     },
     {
       "level": "guide",
-      "text": "$P(X = 0) = (0.9)^6$. Then $P(X \\ge 1) = 1 - (0.9)^6$."
+      "text": "Each flight is on time with probability $0.9$, so $P(\\text{none delayed}) = (0.9)^6$. Subtract that from $1$ to get the chance of at least one delay."
     },
     {
       "level": "reveal",
-      "text": "$(0.9)^6 \\approx 0.5314$, so $1 - 0.5314 = 0.4686 \\approx 0.469$."
+      "text": "$(0.9)^6 \\approx 0.5314$ and $1 - 0.5314 = 0.4686$, so the probability is about $0.469$."
     }
   ],
   "explanation": [

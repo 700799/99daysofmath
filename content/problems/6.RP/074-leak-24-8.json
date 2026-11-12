@@ -10,24 +10,26 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Cups $\\div$ hours.",
+  "hint": "The leak is steady, so the same amount drips out every hour. How do you find the amount for just one hour?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Cups $\\div$ hours."
+      "text": "The leak is steady, so the same amount drips out every hour. How do you find the amount for just one hour?"
     },
     {
       "level": "guide",
-      "text": "$24 \\div 8$."
+      "text": "Twenty-four cups leaked over $8$ equal hours, so divide the cups by the hours: find $24 \\div 8$."
     },
     {
       "level": "reveal",
-      "text": "$3$."
+      "text": "$24 \\div 8 = 3$, so the faucet leaks $3$ cups per hour."
     }
   ],
   "explanation": [
-    "$24 \\div 8 = 3$ cups/hour.",
-    "Final answer: 3."
+    "Cups per hour is a unit rate, the number of cups for $1$ hour.",
+    "Divide the total cups by the total hours: $24 \\div 8$.",
+    "Use a multiplication fact to divide: because $8 \\times 3 = 24$, the quotient is $3$.",
+    "The faucet leaks $3$ cups every hour."
   ],
   "tags": [
     "unit-rate",

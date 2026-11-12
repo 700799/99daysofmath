@@ -12,26 +12,26 @@
     ".75"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"How much faster\" means find the difference between the two times.",
+  "hint": "The question compares two finishing times. Finding how much faster one runner was means finding the gap between the times.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"How much faster\" means find the difference between the two times."
+      "text": "The question compares two finishing times. Finding how much faster one runner was means finding the gap between the times."
     },
     {
       "level": "guide",
-      "text": "Write $13.2$ as $13.20$ so it has hundredths, then subtract $12.45$."
+      "text": "Mia's time is smaller, so subtract it from Leo's. Write $13.2$ as $13.20$ so both have hundredths, then find $13.20 - 12.45$."
     },
     {
       "level": "reveal",
-      "text": "$13.20 - 12.45 = 0.75$ seconds."
+      "text": "$13.20 - 12.45 = 0.75$, so Mia was $0.75$ seconds faster."
     }
   ],
   "explanation": [
-    "The faster runner has the **smaller** time, so subtract: $13.2 - 12.45$.",
-    "Write $13.2$ as $13.20$ so both times show hundredths.",
-    "Count up from $12.45$: $+0.55$ reaches $13.00$, then $+0.20$ reaches $13.20$, and $0.55 + 0.20 = 0.75$.",
-    "Mia was $0.75$ seconds faster."
+    "The faster runner has the **smaller** time, so the gap is $13.2 - 12.45$.",
+    "Write $13.2$ as $13.20$ so that both times show hundredths of a second.",
+    "Count up from $12.45$: adding $0.55$ reaches $13.00$ and adding $0.20$ more reaches $13.20$, for a total of $0.75$.",
+    "Mia was $0.75$ seconds faster than Leo."
   ],
   "alternativeExplanations": [
     {

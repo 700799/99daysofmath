@@ -32,7 +32,7 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "A statistical question can have **many different answers** across the people or things being measured.",
+  "hint": "A statistical question expects many different answers (variability). A question with a single factual answer is not statistical.",
   "explanation": [
     "A **statistical question** anticipates **variability** in the answers — different respondents give different numbers/responses.",
     "A: \"How old is Ms. Lee?\" → one answer. Not statistical.",
@@ -72,15 +72,15 @@
     },
     {
       "level": "nudge",
-      "text": "Statistical = expects spread/variability. A single-answer question (one fact) is NOT statistical."
+      "text": "A statistical question expects many different answers (variability). A question with a single factual answer is not statistical."
     },
     {
       "level": "guide",
-      "text": "A, B, D each have **one** answer (a fact). C will have many different answers across students. Only C is statistical."
+      "text": "Ms. Lee's age, the school's start time and the days in February each have just one answer. Check which remaining choice asks about every student and would give a spread of numbers."
     },
     {
       "level": "reveal",
-      "text": "Answer: C."
+      "text": "The answer is C: homework minutes differ from student to student, so that question anticipates variability."
     }
   ]
 }

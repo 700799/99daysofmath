@@ -10,19 +10,19 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "One full beat is one full wave — that is the PERIOD.",
+  "hint": "One full beat is one full wave of the trace, and the width of one wave is the PERIOD.",
   "hints": [
     {
       "level": "nudge",
-      "text": "One full beat is one full wave — that is the PERIOD."
+      "text": "One full beat is one full wave of the trace, and the width of one wave is the PERIOD."
     },
     {
       "level": "guide",
-      "text": "Period $= 360^\\circ \\div b$, and here $b = 6$."
+      "text": "The period is $360^\\circ \\div b$, and the number in front of $x$ here is $b = 6$. Work out $360 \\div 6$."
     },
     {
       "level": "reveal",
-      "text": "$360 \\div 6 = 60$, so one beat is $60^\\circ$ wide."
+      "text": "Since $360 \\div 6 = 60$, one full beat is $60^\\circ$ wide."
     }
   ],
   "explanation": [

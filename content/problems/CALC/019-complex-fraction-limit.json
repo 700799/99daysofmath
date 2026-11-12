@@ -13,20 +13,20 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "Substitution gives $\\frac{0}{0}$. Start by combining the two small fractions on top into one fraction.",
+  "hint": "Substitution gives $\\frac{0}{0}$. Start by combining the two small fractions on top into a single fraction.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitution gives $\\frac{0}{0}$. Start by combining the two small fractions on top into one fraction."
+      "text": "Substitution gives $\\frac{0}{0}$. Start by combining the two small fractions on top into a single fraction."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up: $\\frac{1}{x} - \\frac{1}{2} = \\frac{2 - x}{2x}$. Notice the top is $-(x - 2)$ — the sign flip is the key. Do the same with $3$."
+      "text": "Warm up: $\\frac{1}{x} - \\frac{1}{2} = \\frac{2 - x}{2x}$. Notice that the top is $-(x - 2)$, and that sign flip is the key. Do the same with $3$."
     },
     {
       "level": "guide",
-      "text": "$\\frac{1}{x} - \\frac{1}{3} = \\frac{3 - x}{3x} = \\frac{-(x - 3)}{3x}$. Now divide by $(x - 3)$ and cancel."
+      "text": "With a common denominator, $\\frac{1}{x} - \\frac{1}{3} = \\frac{3 - x}{3x} = \\frac{-(x - 3)}{3x}$. Now divide by $(x - 3)$ and cancel that factor."
     },
     {
       "level": "reveal",
@@ -34,9 +34,9 @@
     }
   ],
   "explanation": [
-    "Combine the top: $\\frac{1}{x} - \\frac{1}{3} = \\frac{3 - x}{3x}$.",
-    "Divide by $(x - 3)$: $\\frac{3 - x}{3x(x - 3)} = \\frac{-(x - 3)}{3x(x - 3)} = \\frac{-1}{3x}$ for $x \\ne 3$.",
-    "Substitute $x = 3$: $\\frac{-1}{9}$."
+    "Combine the top over the common denominator $3x$: $\\frac{1}{x} - \\frac{1}{3} = \\frac{3 - x}{3x}$.",
+    "Dividing by $(x - 3)$ and writing $3 - x$ as $-(x - 3)$ lets the factor cancel: $\\frac{-(x - 3)}{3x(x - 3)} = \\frac{-1}{3x}$ for $x \\ne 3$.",
+    "The simplified form is continuous at $3$, so substitute $x = 3$ to get the limit $-\\frac{1}{9}$."
   ],
   "alternativeExplanations": [
     {

@@ -10,23 +10,26 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Think of a box.",
+  "hint": "Think about a cardboard box or a brick. Count the flat sides you could put a sticker on.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Think of a box."
+      "text": "Think about a cardboard box or a brick. Count the flat sides you could put a sticker on."
     },
     {
       "level": "guide",
-      "text": "Top, bottom, $4$ sides."
+      "text": "Count in groups: the top and the bottom make $2$, then count the sides that go around the middle."
     },
     {
       "level": "reveal",
-      "text": "$6$."
+      "text": "There are $2$ plus $4$ around the sides, so a rectangular prism has $6$ faces."
     }
   ],
   "explanation": [
-    "$1$ top + $1$ bottom + $4$ sides $= 6$ faces."
+    "A face is one of the flat surfaces of a solid shape.",
+    "A rectangular prism has a top and a bottom, which makes $2$ faces.",
+    "It also has a front, a back, a left side and a right side, which makes $4$ more.",
+    "Add the two groups: altogether a rectangular prism has $2 + 4 = 6$ faces."
   ],
   "tags": [
     "surface-area",

@@ -50,7 +50,7 @@
   "explanation": [
     "A $30$-$60$-$90$ triangle always has sides in the ratio $1 : \\sqrt{3} : 2$ (short leg : long leg : hypotenuse).",
     "The hypotenuse $12$ corresponds to the $2$, so every side is scaled by $\\frac{12}{2} = 6$.",
-    "The short leg, opposite $30^\\circ$, is $1 \\times 6 = 6$."
+    "The short leg, opposite $30^\\circ$, is $1 \\times 6 = 6$, which is half the hypotenuse."
   ],
   "alternativeExplanations": [
     {

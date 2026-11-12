@@ -12,29 +12,31 @@
     "720 qt"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply by $4$.",
+  "hint": "Every gallon in the pool is worth the same number of quarts. Quarts are smaller, so the count will go up.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Picture a ratio table: write the rate in one row, then scale both columns by the same number."
+      "text": "Start with a small pool: how many quarts are in $2$ gallons? Decide whether the number of quarts is bigger or smaller than the number of gallons."
     },
     {
       "level": "nudge",
-      "text": "Multiply by $4$."
+      "text": "Every gallon in the pool is worth the same number of quarts. Quarts are smaller, so the count will go up."
     },
     {
       "level": "guide",
-      "text": "$180 \\times 4$."
+      "text": "Multiply the $180$ gallons by $4$ quarts per gallon. Splitting it as $100 \\times 4$ and $80 \\times 4$ makes it easier."
     },
     {
       "level": "reveal",
-      "text": "$720$ qt."
+      "text": "$400 + 320 = 720$, so the pool holds $720$ quarts."
     }
   ],
   "explanation": [
-    "$180 \\times 4 = 720$ quarts.",
-    "Final answer: 720."
+    "Each gallon equals $4$ quarts, so the number of quarts is the gallons times $4$.",
+    "Break $180$ into $100 + 80$ to multiply in parts: $100 \\times 4 = 400$ and $80 \\times 4 = 320$.",
+    "Add the two partial products to get the total: $400 + 320 = 720$.",
+    "The pool holds $720$ quarts of water."
   ],
   "alternativeExplanations": [
     {

@@ -32,25 +32,26 @@
   "primaryAnswer": "D",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Simplify $4:6$.",
+  "hint": "Three of the choices are the same ratio in disguise. Simplify the given ratio first, then see which choice does not match it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Simplify $4:6$."
+      "text": "Three of the choices are the same ratio in disguise. Simplify the given ratio first, then see which choice does not match it."
     },
     {
       "level": "guide",
-      "text": "$4:6 = 2:3$. Which option does NOT simplify to $2:3$?"
+      "text": "$4 : 6$ simplifies to $2 : 3$. Simplify $8 : 12$ and $6 : 9$ and compare each choice with $2 : 3$."
     },
     {
       "level": "reveal",
-      "text": "$5:7$ has no common factor — not equivalent."
+      "text": "$8 : 12$ and $6 : 9$ both simplify to $2 : 3$, but $5 : 7$ does not, so the answer is $5 : 7$, choice D."
     }
   ],
   "explanation": [
-    "$4:6 = 2:3$.",
-    "$8:12 = 2:3$, $6:9 = 2:3$, $2:3$ ✓ — all equivalent.",
-    "$5:7$ has GCF $1$ — not equivalent."
+    "Divide both parts of $4 : 6$ by $2$ to get its simplest form, $2 : 3$.",
+    "Choice A is already $2 : 3$, choice B is $8 : 12$ divided by $4$, and choice C is $6 : 9$ divided by $3$, so all three match.",
+    "Choice D, $5 : 7$, is already in simplest form and it is not $2 : 3$.",
+    "The ratio that is NOT equivalent to $4 : 6$ is $5 : 7$, choice D."
   ],
   "tags": [
     "MAP-practice",

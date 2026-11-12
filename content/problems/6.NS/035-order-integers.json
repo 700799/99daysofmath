@@ -12,24 +12,26 @@
     "−2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Smallest first — that's the most negative.",
+  "hint": "Least to greatest is the left-to-right order on a number line. Negative numbers come before zero, and zero comes before positives.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Smallest first — that's the most negative."
+      "text": "Least to greatest is the left-to-right order on a number line. Negative numbers come before zero, and zero comes before positives."
     },
     {
       "level": "guide",
-      "text": "Sorted: $-7, -2, 0, 3, 5$."
+      "text": "Start with the negatives: $-7$ is farther left than $-2$. Then place $0$, and finish with the positives $3$ and $5$. Read off the second number in your list."
     },
     {
       "level": "reveal",
-      "text": "Second is $-2$."
+      "text": "The order is $-7, -2, 0, 3, 5$, so the second number is $-2$."
     }
   ],
   "explanation": [
-    "Ordered: $-7, -2, 0, 3, 5$.",
-    "Second: $-2$."
+    "Ordering from least to greatest means listing the numbers from left to right on a number line.",
+    "The negatives come first. $-7$ is farther from $0$ than $-2$, so $-7$ is the least and $-2$ is next.",
+    "Then comes $0$, followed by the positives in order, $3$ and $5$. The full list is $-7, -2, 0, 3, 5$.",
+    "The second number in the ordered list is $-2$."
   ],
   "tags": [
     "integer",

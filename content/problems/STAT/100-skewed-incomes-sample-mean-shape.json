@@ -53,9 +53,9 @@
     }
   ],
   "explanation": [
-    "Center: $\\mu_{\\bar{x}} = \\mu$ always, so D is wrong — sample means are unbiased.",
-    "Spread: $\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n} = \\sigma/\\sqrt{50}$, so C is wrong.",
-    "Shape: the population is skewed, but $n = 50 \\ge 30$, so by the Central Limit Theorem $\\bar{x}$ is approximately normal. A is wrong; B is correct."
+    "The center of the sampling distribution is always $\\mu_{\\bar{x}} = \\mu$, so D is wrong because sample means are unbiased.",
+    "The spread is $\\sigma_{\\bar{x}} = \\sigma/\\sqrt{n} = \\sigma/\\sqrt{50}$, so C is wrong because it leaves out the square root of $n$.",
+    "The population is skewed, but $n = 50 \\ge 30$, so by the Central Limit Theorem $\\bar{x}$ is approximately normal. That rules out A, and B is correct."
   ],
   "alternativeExplanations": [
     {

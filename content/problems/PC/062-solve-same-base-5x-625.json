@@ -10,25 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Keep multiplying by $5$ and see how many it takes to reach $625$.",
+  "hint": "Keep multiplying by $5$ and see how many fives it takes to reach $625$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Keep multiplying by $5$ and see how many it takes to reach $625$."
+      "text": "Keep multiplying by $5$ and see how many fives it takes to reach $625$."
     },
     {
       "level": "guide",
-      "text": "$5, 25, 125, 625$ — count them."
+      "text": "The powers of five run $5, 25, 125, 625$. Count how many fives were multiplied to reach the last one."
     },
     {
       "level": "reveal",
-      "text": "$5^4 = 625$, so $x = 4$."
+      "text": "Four fives are needed, so $5^4 = 625$ and $x = 4$."
     }
   ],
   "explanation": [
-    "Write $625$ as a power of $5$.",
-    "$5 \\times 5 \\times 5 \\times 5 = 625$, so $625 = 5^4$.",
-    "Now $5^x = 5^4$, so $x = 4$."
+    "To match the bases, write $625$ as a power of $5$.",
+    "Multiplying four fives together gives $5 \\times 5 \\times 5 \\times 5 = 625$, so $625 = 5^4$.",
+    "Now the equation reads $5^x = 5^4$, and equal bases force equal exponents, so $x = 4$."
   ],
   "alternativeExplanations": [
     {

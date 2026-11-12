@@ -12,24 +12,26 @@
     "24 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find each piece, then add.",
+  "hint": "A capital T is a bar across the top and a stem below it. Each of those parts is a rectangle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find each piece, then add."
+      "text": "A capital T is a bar across the top and a stem below it. Each of those parts is a rectangle."
     },
     {
       "level": "guide",
-      "text": "$6 \\cdot 2 = 12$ and $4 \\cdot 3 = 12$."
+      "text": "The top bar has area $6 \\times 2$ and the stem has area $4 \\times 3$. Work out both and add them together."
     },
     {
       "level": "reveal",
-      "text": "$12 + 12 = 24$."
+      "text": "Both parts have area $12$, and $12 + 12 = 24$, so the total area is $24$ square units."
     }
   ],
   "explanation": [
-    "Top: $12$. Stem: $12$.",
-    "Total: $24$."
+    "Split the T-shape into its top bar and its stem, which are both rectangles.",
+    "The top bar has an area of $6 \\times 2 = 12$ square units.",
+    "The stem has an area of $4 \\times 3 = 12$ square units as well.",
+    "Add the two rectangles: $12 + 12 = 24$, so the total area is $24$ square units."
   ],
   "tags": [
     "composite",

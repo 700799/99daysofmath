@@ -16,29 +16,31 @@
     "range and IQR"
   ],
   "acceptanceMode": "exact",
-  "hint": "Variability = how spread out the data is.",
+  "hint": "Variability describes how spread out the data values are, not where they are centered.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Use a sample of 3–4 values to see how the rule works, then apply it to the real data."
+      "text": "Think about a simple list such as $1, 5, 9$. Which numbers could you report to describe how spread out it is?"
     },
     {
       "level": "nudge",
-      "text": "Variability = how spread out the data is."
+      "text": "Variability describes how spread out the data values are, not where they are centered."
     },
     {
       "level": "guide",
-      "text": "Two of: range, IQR, MAD."
+      "text": "Think of the measures found by subtracting: largest minus smallest, and $Q_3 - Q_1$. A third one averages the distances from the mean. Name any two."
     },
     {
       "level": "reveal",
-      "text": "range, IQR (or any two of range / IQR / MAD)."
+      "text": "Two measures of variability are the range and the IQR (the MAD would also count)."
     }
   ],
   "explanation": [
-    "Measures of variability include range, IQR (interquartile range), and MAD (mean absolute deviation).",
-    "Final answer: range, IQR."
+    "A measure of variability tells how spread out the values of a data set are.",
+    "The range is the largest value minus the smallest, and the IQR (interquartile range) is $Q_3 - Q_1$.",
+    "The MAD (mean absolute deviation) is the average distance of the values from the mean.",
+    "Any two of these work, so one correct answer is range, IQR."
   ],
   "tags": [
     "vocabulary",

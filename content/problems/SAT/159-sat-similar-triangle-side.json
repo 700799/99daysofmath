@@ -10,11 +10,11 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the scale factor from the pair of sides you know.",
+  "hint": "Similar triangles are the same shape at different sizes, so one multiplier links every pair of matching sides. Find it from the pair you know.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the scale factor from the pair of sides you know."
+      "text": "Similar triangles are the same shape at different sizes, so one multiplier links every pair of matching sides. Find it from the pair you know."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "$15 \\div 6 = 2.5$."
+      "text": "The scale factor from $ABC$ to $DEF$ is $15 \\div 6 = 2.5$. Side $EF$ matches side $BC$, so multiply $8$ by that factor."
     },
     {
       "level": "reveal",
-      "text": "$8 \\times 2.5 = 20$."
+      "text": "Since $8 \\times 2.5 = 20$, the length of side $EF$ is $20$."
     }
   ],
   "learningObjective": "Use a similarity scale factor to find a missing side.",
   "topic": "Similarity",
   "explanation": [
-    "Corresponding sides of similar triangles are in a constant ratio: $\\dfrac{DE}{AB} = \\dfrac{15}{6} = 2.5$.",
-    "Every side of $DEF$ is $2.5$ times its partner in $ABC$.",
-    "$EF = 2.5 \\times BC = 2.5 \\times 8 = 20$."
+    "Corresponding sides of similar triangles have a constant ratio, and the known pair gives $\\dfrac{DE}{AB} = \\dfrac{15}{6} = 2.5$.",
+    "Every side of triangle $DEF$ is therefore $2.5$ times the matching side of triangle $ABC$.",
+    "Side $EF$ matches side $BC$, so $EF = 2.5 \\times 8 = 20$. The length of side $EF$ is $20$."
   ],
   "alternativeExplanations": [
     {

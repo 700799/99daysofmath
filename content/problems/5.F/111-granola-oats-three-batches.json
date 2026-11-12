@@ -13,26 +13,26 @@
     "6/3"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Three batches means $\\frac{2}{3}$ added three times — or $3 \\times \\frac{2}{3}$.",
+  "hint": "Every batch uses the same amount of oats. Three equal amounts can be found by adding repeatedly or by multiplying.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Three batches means $\\frac{2}{3}$ added three times — or $3 \\times \\frac{2}{3}$."
+      "text": "Every batch uses the same amount of oats. Three equal amounts can be found by adding repeatedly or by multiplying."
     },
     {
       "level": "guide",
-      "text": "Multiply the top number by $3$ and leave the bottom alone: $3 \\times \\frac{2}{3} = \\frac{6}{3}$."
+      "text": "Work out $3 \\times \\frac{2}{3}$. The whole number multiplies the numerator while the denominator stays the same, giving a number of thirds."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{6}{3} = 2$, so Maya needs $2$ cups."
+      "text": "$3 \\times \\frac{2}{3} = \\frac{6}{3} = 2$, so Maya needs $2$ cups of oats."
     }
   ],
   "explanation": [
     "Three batches each use $\\frac{2}{3}$ cup, so the total is $3 \\times \\frac{2}{3}$.",
-    "When you multiply a fraction by a whole number, the whole number multiplies the numerator: $3 \\times \\frac{2}{3} = \\frac{6}{3}$.",
-    "$\\frac{6}{3}$ means $6 \\div 3$, which is $2$.",
-    "Maya needs $2$ cups of oats."
+    "A whole number times a fraction multiplies the numerator, because it counts more pieces of the same size: $3 \\times \\frac{2}{3} = \\frac{6}{3}$.",
+    "The fraction $\\frac{6}{3}$ means $6 \\div 3$, and that equals $2$.",
+    "Maya needs $2$ cups of oats for three batches."
   ],
   "alternativeExplanations": [
     {

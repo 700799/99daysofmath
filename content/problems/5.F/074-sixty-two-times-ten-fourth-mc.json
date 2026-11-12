@@ -48,9 +48,9 @@
     }
   ],
   "explanation": [
-    "$10^4 = 10 \\times 10 \\times 10 \\times 10 = 10{,}000$.",
-    "Multiplying by $10{,}000$ adds four zeros to the end of $62$.",
-    "$62 \\to 620 \\to 6{,}200 \\to 62{,}000 \\to 620{,}000$, so the answer is $620{,}000$ (C)."
+    "Find the power of ten first: $10^4 = 10 \\times 10 \\times 10 \\times 10 = 10{,}000$.",
+    "Multiplying a whole number by $10{,}000$ puts four zeros on the end of it.",
+    "Writing $62$ with four zeros gives $620{,}000$, so the answer is choice C."
   ],
   "alternativeExplanations": [
     {

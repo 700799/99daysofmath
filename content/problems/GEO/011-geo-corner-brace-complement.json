@@ -10,25 +10,25 @@
   "primaryAnswer": "55",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Complementary angles add to $90^\\circ$ — a square corner.",
+  "hint": "The word complementary tells you what the two angles add up to. Which total goes with a square corner?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Complementary angles add to $90^\\circ$ — a square corner."
+      "text": "The word complementary tells you what the two angles add up to. Which total goes with a square corner?"
     },
     {
       "level": "guide",
-      "text": "Compute $90 - 35$."
+      "text": "Complementary angles have a sum of $90^\\circ$, so subtract the known angle from that total: work out $90 - 35$."
     },
     {
       "level": "reveal",
-      "text": "$90 - 35 = 55^\\circ$."
+      "text": "$90 - 35 = 55$, so the other angle measures $55^\\circ$."
     }
   ],
   "explanation": [
-    "Complementary angles are two angles whose measures add to $90^\\circ$.",
-    "Subtract the known angle: $90 - 35 = 55$.",
-    "Check: $35 + 55 = 90$. ✓"
+    "Two angles are complementary when their measures add to $90^\\circ$, the size of a square corner.",
+    "One angle is $35^\\circ$, so the other is what is left of the $90^\\circ$: $90 - 35 = 55$.",
+    "The check $35 + 55 = 90$ works, so the other angle is $55^\\circ$."
   ],
   "alternativeExplanations": [
     {

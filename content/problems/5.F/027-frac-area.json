@@ -13,25 +13,25 @@
     "1.0"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Area of a rectangle = length × width, even with fractions.",
+  "hint": "The area of a rectangle is its length times its width. That rule still works when the sides are fractions.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Area of a rectangle = length × width, even with fractions."
+      "text": "The area of a rectangle is its length times its width. That rule still works when the sides are fractions."
     },
     {
       "level": "guide",
-      "text": "$\\frac{2}{3} \\times \\frac{3}{2} = \\frac{6}{6}$."
+      "text": "Multiply the side lengths: $\\frac{2}{3} \\times \\frac{3}{2}$. Multiply the tops, multiply the bottoms, and then simplify."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{6}{6} = 1$ square inch."
+      "text": "$\\frac{2}{3} \\times \\frac{3}{2} = \\frac{6}{6} = 1$, so the area of the sticker is $1$ square inch."
     }
   ],
   "explanation": [
-    "Area $= \\frac{2}{3} \\times \\frac{3}{2}$.",
-    "Multiply across: $\\frac{2 \\times 3}{3 \\times 2} = \\frac{6}{6} = 1$.",
-    "The fractions are reciprocals, so the product is exactly $1$ square inch."
+    "Area of a rectangle is length times width, so the area is $\\frac{2}{3} \\times \\frac{3}{2}$.",
+    "Multiply across: $\\frac{2 \\times 3}{3 \\times 2} = \\frac{6}{6}$, and six sixths make exactly one whole.",
+    "The two side lengths are reciprocals, so their product is $1$. The area is $1$ square inch."
   ],
   "tags": [
     "fractions",

@@ -13,26 +13,26 @@
     "$22.50"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Six equal payments means $3.75 \\times 6$.",
+  "hint": "Every friend pays the same amount. Which operation combines six equal amounts quickly?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Six equal payments means $3.75 \\times 6$."
+      "text": "Every friend pays the same amount. Which operation combines six equal amounts quickly?"
     },
     {
       "level": "guide",
-      "text": "Multiply the digits first: $375 \\times 6 = 2250$. Now place the decimal point."
+      "text": "Work out $3.75 \\times 6$. Multiply $375 \\times 6$ as whole numbers first, then put two decimal places in the product."
     },
     {
       "level": "reveal",
-      "text": "$3.75$ has two decimal places, so the answer does too: $\\$22.50$."
+      "text": "$375 \\times 6 = 2250$, which becomes $22.50$, so the friends pay $\\$22.50$ altogether."
     }
   ],
   "explanation": [
-    "Six equal prices means multiply: $\\$3.75 \\times 6$.",
-    "Multiply without the point: $375 \\times 6 = 2{,}250$.",
-    "$3.75$ has two decimal places, so the product needs two: $22.50$.",
-    "Altogether they pay $\\$22.50$."
+    "Six equal prices can be combined by multiplying the price by six: $3.75 \\times 6$.",
+    "Multiply without the decimal point first: $375 \\times 6 = 2{,}250$.",
+    "The price $3.75$ has two decimal places, so the product needs two as well: $22.50$.",
+    "Altogether the six friends pay $22.50$ dollars for their tickets."
   ],
   "alternativeExplanations": [
     {

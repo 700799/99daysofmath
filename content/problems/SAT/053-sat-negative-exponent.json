@@ -32,19 +32,19 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "A negative exponent means reciprocal, not negative.",
+  "hint": "A negative exponent does not make anything negative. Recall what it means for the position of its base in a fraction.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A negative exponent means reciprocal, not negative."
+      "text": "A negative exponent does not make anything negative. Recall what it means for the position of its base in a fraction."
     },
     {
       "level": "guide",
-      "text": "The exponent $-2$ belongs to $x$ only, not to the coefficient $3$."
+      "text": "The exponent $-2$ belongs only to $x$, so rewrite $x^{-2}$ as $\\dfrac{1}{x^2}$. The coefficient $3$ stays where it is, on top."
     },
     {
       "level": "reveal",
-      "text": "$3x^{-2} = 3 \\cdot \\dfrac{1}{x^2} = \\dfrac{3}{x^2}$."
+      "text": "The expression becomes $3 \\cdot \\dfrac{1}{x^2} = \\dfrac{3}{x^2}$, which is choice B."
     }
   ],
   "learningObjective": "Rewrite a negative exponent as a reciprocal.",

@@ -10,19 +10,19 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Half a turn is $\\pi$ radians. A full turn is two halves.",
+  "hint": "Half a turn is $\\pi$ radians, and a full turn is made of two halves.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Half a turn is $\\pi$ radians. A full turn is two halves."
+      "text": "Half a turn is $\\pi$ radians, and a full turn is made of two halves."
     },
     {
       "level": "guide",
-      "text": "Two halves means $\\pi + \\pi = 2\\pi$ radians."
+      "text": "Put two half turns together: $\\pi + \\pi$ radians. Write that sum as a multiple of $\\pi$."
     },
     {
       "level": "reveal",
-      "text": "A full turn is $2\\pi$ radians, so $n = 2$."
+      "text": "A full turn is $\\pi + \\pi = 2\\pi$ radians, so $n = 2$."
     }
   ],
   "explanation": [

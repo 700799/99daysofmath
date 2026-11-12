@@ -12,24 +12,26 @@
     "2.15"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Line up the decimal points.",
+  "hint": "When adding decimals, digits with the same place value must be in the same column. The decimal points show you how to line them up.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Line up the decimal points."
+      "text": "When adding decimals, digits with the same place value must be in the same column. The decimal points show you how to line them up."
     },
     {
       "level": "guide",
-      "text": "Write $0.70 + 1.45$."
+      "text": "Write $0.7$ as $0.70$ so both numbers have two decimal places. Stack $0.70$ and $1.45$ with the points lined up and add from the right, carrying if needed."
     },
     {
       "level": "reveal",
-      "text": "$0.70 + 1.45 = 2.15$."
+      "text": "Adding the columns gives $0.70 + 1.45 = 2.15$, so the sum is $2.15$."
     }
   ],
   "explanation": [
-    "Match decimal places: $0.70 + 1.45$.",
-    "Add: $2.15$."
+    "Line up the decimal points and write $0.7$ as $0.70$ so both numbers have a hundredths digit.",
+    "Hundredths: $0 + 5 = 5$. Tenths: $7 + 4 = 11$, so write $1$ and carry $1$ to the ones.",
+    "Ones: $0 + 1 + 1 = 2$, where the extra $1$ is the carry.",
+    "Placing the point between the ones and tenths, the sum is $2.15$."
   ],
   "tags": [
     "decimal",

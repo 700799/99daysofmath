@@ -10,19 +10,19 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Cosine alone never gets bigger than 1.",
+  "hint": "Cosine on its own never gets bigger than 1. Think about what multiplying by a number does to that largest value.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Cosine alone never gets bigger than 1."
+      "text": "Cosine on its own never gets bigger than 1. Think about what multiplying by a number does to that largest value."
     },
     {
       "level": "guide",
-      "text": "So the biggest $2\\cos x$ can be is $2$ times that largest cosine value."
+      "text": "The biggest $2\\cos x$ can be is $2$ times the largest cosine value, so multiply $2$ by $1$."
     },
     {
       "level": "reveal",
-      "text": "$2 \\times 1 = 2$, so the maximum is $2$."
+      "text": "$2 \\times 1 = 2$, so the maximum value of the function is $2$."
     }
   ],
   "explanation": [

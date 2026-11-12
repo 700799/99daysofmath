@@ -32,11 +32,11 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "For similar solids: lengths scale by $k$, surface areas by $k^2$, volumes by $k^3$.",
+  "hint": "Similar solids do not have volumes in the same ratio as their heights. Think about how many dimensions volume involves.",
   "hints": [
     {
       "level": "nudge",
-      "text": "For similar solids: lengths scale by $k$, surface areas by $k^2$, volumes by $k^3$."
+      "text": "Similar solids do not have volumes in the same ratio as their heights. Think about how many dimensions volume involves."
     },
     {
       "level": "nudge",
@@ -45,17 +45,17 @@
     },
     {
       "level": "guide",
-      "text": "Here $k = \\frac{3}{5}$, and volume needs the cube."
+      "text": "The lengths are in the ratio $\\frac{3}{5}$, and volume scales by the cube of the length ratio. Work out $\\left(\\frac{3}{5}\\right)^3$."
     },
     {
       "level": "reveal",
-      "text": "$\\left(\\frac{3}{5}\\right)^3 = \\frac{27}{125}$, so the ratio is $27 : 125$. Choice C."
+      "text": "$\\left(\\frac{3}{5}\\right)^3 = \\frac{27}{125}$, so the volumes are in the ratio $27 : 125$, which is choice C."
     }
   ],
   "explanation": [
-    "Similar solids have all matching lengths in the same ratio, here $3 : 5$.",
-    "Volume is a three-dimensional measure, so it scales by the cube of that ratio.",
-    "$3^3 : 5^3 = 27 : 125$. Choice C."
+    "The cans are similar, so every pair of matching lengths has the same ratio as the heights, $3 : 5$.",
+    "Volume is measured in three dimensions, so the volume ratio is the cube of the length ratio.",
+    "Cubing each part gives $3^3 : 5^3 = 27 : 125$, which is choice C."
   ],
   "alternativeExplanations": [
     {

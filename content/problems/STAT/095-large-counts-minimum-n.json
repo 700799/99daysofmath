@@ -10,25 +10,26 @@
   "primaryAnswer": "100",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "With a small $p$, the harder condition to meet is $np \\ge 10$ — you need enough expected defects.",
+  "hint": "There are two conditions to meet. With a small $p$, think about which one is harder to satisfy: enough expected defects or enough expected good items?",
   "hints": [
     {
       "level": "nudge",
-      "text": "With a small $p$, the harder condition to meet is $np \\ge 10$ — you need enough expected defects."
+      "text": "There are two conditions to meet. With a small $p$, think about which one is harder to satisfy: enough expected defects or enough expected good items?"
     },
     {
       "level": "guide",
-      "text": "Solve $0.10n \\ge 10$. Then check $n(0.90) \\ge 10$ too."
+      "text": "Expected defects are the hard part, so solve $0.10n \\ge 10$ for $n$. Then confirm that $0.90n \\ge 10$ also holds at that value."
     },
     {
       "level": "reveal",
-      "text": "$n \\ge 100$. At $n = 100$: $np = 10$ ✓ and $n(1-p) = 90$ ✓."
+      "text": "$n \\ge 100$, and at $n = 100$ the counts are $np = 10$ and $n(1-p) = 90$, so the smallest sample size is $100$."
     }
   ],
   "explanation": [
-    "Normal approximation for $\\hat{p}$ needs at least 10 expected successes and 10 expected failures.",
-    "$np \\ge 10$ gives $0.1n \\ge 10$, so $n \\ge 100$. $n(1-p) \\ge 10$ gives $0.9n \\ge 10$, so $n \\ge 11.1$.",
-    "Both must hold, so the binding one is $n \\ge 100$. The smallest sample size is $100$."
+    "A normal approximation for $\\hat{p}$ needs at least 10 expected successes and at least 10 expected failures.",
+    "The first condition, $np \\ge 10$, becomes $0.1n \\ge 10$, which gives $n \\ge 100$.",
+    "The second condition, $n(1-p) \\ge 10$, gives $0.9n \\ge 10$, so $n \\ge 11.1$, which is far easier to meet.",
+    "Both must hold, so the stricter one decides: the smallest sample size is $100$."
   ],
   "alternativeExplanations": [
     {

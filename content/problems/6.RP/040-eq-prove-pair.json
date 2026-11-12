@@ -32,29 +32,31 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Find the unit rate from $120 / 2$ first.",
+  "hint": "A constant speed means every trip has the same miles per hour. Find the car's speed for one hour, then test the choices against it.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try the same problem with friendlier numbers first — say \"20% of 50\" — then come back to this one."
+      "text": "Start with an easier question: how far does this car go in just $1$ hour? Every correct pair must agree with that distance."
     },
     {
       "level": "nudge",
-      "text": "Find the unit rate from $120 / 2$ first."
+      "text": "A constant speed means every trip has the same miles per hour. Find the car's speed for one hour, then test the choices against it."
     },
     {
       "level": "guide",
-      "text": "$120 / 2 = 60$ mph. Check each option."
+      "text": "The car's speed is $120 \\div 2 = 60$ miles per hour. Divide miles by hours in each choice and look for another $60$."
     },
     {
       "level": "reveal",
-      "text": "B: $300 / 5 = 60$ mph ✓."
+      "text": "$300 \\div 5 = 60$, so the equivalent rate is $300$ miles in $5$ hours, choice B."
     }
   ],
   "explanation": [
-    "Unit rate: $120 / 2 = 60$ mph.",
-    "A: $45$ mph; B: $60$ mph ✓; C: $80$ mph; D: $45$ mph."
+    "Equivalent rates have the same unit rate, so first find the car's: $120 \\div 2 = 60$ miles per hour.",
+    "Check choice B the same way: $300 \\div 5 = 60$ miles per hour, which matches.",
+    "The other choices give $45$, $80$ and $45$ miles per hour, so they are different speeds.",
+    "The pair with an equivalent rate is $300$ miles in $5$ hours, choice B."
   ],
   "tags": [
     "CA",

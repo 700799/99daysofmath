@@ -10,25 +10,25 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Write two rules: $c + d = 12$ and $c = d + 4$.",
+  "hint": "There are two unknowns, cats and dogs, and the story gives two facts. Turn each fact into an equation.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Write two rules: $c + d = 12$ and $c = d + 4$."
+      "text": "There are two unknowns, cats and dogs, and the story gives two facts. Turn each fact into an equation."
     },
     {
       "level": "guide",
-      "text": "Swap in what $c$ equals: $(d + 4) + d = 12$, so $2d + 4 = 12$."
+      "text": "Use $c + d = 12$ and $c = d + 4$. Substitute to get $(d + 4) + d = 12$, which simplifies to $2d + 4 = 12$."
     },
     {
       "level": "reveal",
-      "text": "$2d = 8$, so $d = 4$ dogs and $c = 4 + 4 = 8$ cats."
+      "text": "$2d = 8$ gives $d = 4$ dogs, so there are $c = 4 + 4 = 8$ cats."
     }
   ],
   "explanation": [
-    "Two rules must both be true: cats plus dogs is 12, and cats are 4 more than dogs.",
-    "Substitute $c = d + 4$ into $c + d = 12$: $2d + 4 = 12$, so $d = 4$.",
-    "Cats: $c = 4 + 4 = 8$. Check: $8 + 4 = 12$ pets. ✓"
+    "Write the two facts as equations: $c + d = 12$ for the total and $c = d + 4$ because there are $4$ more cats.",
+    "Substitute $d + 4$ for $c$ in the first equation: $2d + 4 = 12$, so $2d = 8$ and $d = 4$.",
+    "The number of cats is $c = 4 + 4 = 8$. Check: $8 + 4 = 12$ pets in total."
   ],
   "alternativeExplanations": [
     {

@@ -10,25 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Velocity is $x'(t)$. The derivative of $\\cos u$ is $-\\sin u \\cdot u'$, and here $u = 3t$.",
+  "hint": "Velocity is $x'(t)$. The cosine has an inside function $3t$, so think about the chain rule and the sign of the derivative of cosine.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Velocity is $x'(t)$. The derivative of $\\cos u$ is $-\\sin u \\cdot u'$, and here $u = 3t$."
+      "text": "Velocity is $x'(t)$. The cosine has an inside function $3t$, so think about the chain rule and the sign of the derivative of cosine."
     },
     {
       "level": "guide",
-      "text": "$x'(t) = 4 \\cdot (-\\sin(3t)) \\cdot 3 = -12\\sin(3t)$. At $t = \\frac{\\pi}{2}$ the angle is $\\frac{3\\pi}{2}$."
+      "text": "The derivative of $\\cos u$ is $-\\sin u \\cdot u'$, so $x'(t) = 4 \\cdot (-\\sin(3t)) \\cdot 3 = -12\\sin(3t)$. At $t = \\frac{\\pi}{2}$ the angle is $\\frac{3\\pi}{2}$, so find the sine of that angle."
     },
     {
       "level": "reveal",
-      "text": "$\\sin\\frac{3\\pi}{2} = -1$, so $v = -12(-1) = 12$ cm/s."
+      "text": "Since $\\sin\\frac{3\\pi}{2} = -1$, the velocity is $-12(-1) = 12$ centimeters per second."
     }
   ],
   "explanation": [
-    "Chain rule on $4\\cos(3t)$: outside gives $-4\\sin(3t)$, inside derivative is $3$, so $v(t) = -12\\sin(3t)$.",
-    "At $t = \\frac{\\pi}{2}$: $3t = \\frac{3\\pi}{2}$, and $\\sin\\frac{3\\pi}{2} = -1$.",
-    "$v = -12 \\cdot (-1) = 12$ cm/s: the mass is passing through the center, moving in the positive direction at top speed."
+    "Use the chain rule on $4\\cos(3t)$: the outside gives $-4\\sin(3t)$ and the inside derivative is $3$, so $v(t) = -12\\sin(3t)$.",
+    "At $t = \\frac{\\pi}{2}$ the angle is $3t = \\frac{3\\pi}{2}$, and the unit circle gives $\\sin\\frac{3\\pi}{2} = -1$.",
+    "So $v = -12 \\cdot (-1) = 12$ cm/s: the mass is passing through the center, moving in the positive direction at top speed."
   ],
   "alternativeExplanations": [
     {

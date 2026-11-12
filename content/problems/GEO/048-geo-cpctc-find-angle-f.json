@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "Angles in a triangle sum to $180^\\circ$: $\\angle C = 180 - 55 - 65 = 60^\\circ$.",
-    "The statement $\\triangle ABC \\cong \\triangle DEF$ lists corresponding vertices in order: $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$.",
-    "By CPCTC, $\\angle F \\cong \\angle C$, so $\\angle F = 60^\\circ$."
+    "The angles of a triangle add to $180^\\circ$, so the third angle of the first panel is $\\angle C = 180 - 55 - 65 = 60^\\circ$.",
+    "The statement $\\triangle ABC \\cong \\triangle DEF$ lists matching vertices in the same order, so $A$ pairs with $D$, $B$ with $E$, and $C$ with $F$.",
+    "Corresponding parts of congruent triangles are congruent, so $\\angle F = \\angle C = 60^\\circ$."
   ],
   "alternativeExplanations": [
     {

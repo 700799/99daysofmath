@@ -10,25 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Each cross-section perpendicular to the $x$-axis is a disc of radius $y = 2$. Disc method: $V = \\pi \\int_a^b r^2 \\, dx$.",
+  "hint": "Each cross-section perpendicular to the $x$-axis is a disc. What is its radius, and which volume formula adds up discs?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Each cross-section perpendicular to the $x$-axis is a disc of radius $y = 2$. Disc method: $V = \\pi \\int_a^b r^2 \\, dx$."
+      "text": "Each cross-section perpendicular to the $x$-axis is a disc. What is its radius, and which volume formula adds up discs?"
     },
     {
       "level": "guide",
-      "text": "$V = \\pi \\int_0^3 2^2 \\, dx = \\pi \\int_0^3 4 \\, dx$."
+      "text": "The radius is the height $y = 2$, so the disc method $V = \\pi \\int_a^b r^2 \\, dx$ gives $V = \\pi \\int_0^3 2^2 \\, dx = \\pi \\int_0^3 4 \\, dx$. Evaluate this integral."
     },
     {
       "level": "reveal",
-      "text": "$V = \\pi \\cdot 4 \\cdot 3 = 12\\pi$, so $k = 12$."
+      "text": "The volume of the solid is $V = \\pi \\cdot 4 \\cdot 3 = 12\\pi$, so $k = 12$."
     }
   ],
   "explanation": [
     "Rotating a horizontal segment at height $2$ sweeps out a cylinder of radius $2$ and length $3$.",
-    "Disc method: $V = \\pi \\int_0^3 (2)^2 \\, dx = \\pi [4x]_0^3 = 12\\pi$.",
-    "$k = 12$. Check with the cylinder formula: $\\pi r^2 h = \\pi \\cdot 4 \\cdot 3 = 12\\pi$. ✓"
+    "The disc method gives the volume $V = \\pi \\int_0^3 (2)^2 \\, dx = \\pi [4x]_0^3 = 12\\pi$.",
+    "So $k = 12$. The cylinder formula agrees, since $\\pi r^2 h = \\pi \\cdot 4 \\cdot 3 = 12\\pi$."
   ],
   "alternativeExplanations": [
     {

@@ -14,27 +14,27 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "The two acute angles of a right triangle are complementary.",
+  "hint": "Think about how the two acute angles of a right triangle are related, and what that means for the side opposite one of them.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The two acute angles of a right triangle are complementary."
+      "text": "Think about how the two acute angles of a right triangle are related, and what that means for the side opposite one of them."
     },
     {
       "level": "guide",
-      "text": "And $\\sin x = \\cos(90° - x)$."
+      "text": "The acute angles add to $90°$, so $B = 90° - A$. The cofunction identity says $\\cos(90° - A) = \\sin A$, so compare $\\cos B$ with $\\sin A$."
     },
     {
       "level": "reveal",
-      "text": "So $\\cos B = \\sin A = 0.8$."
+      "text": "The two values are equal, so $\\cos B = \\sin A = 0.8$."
     }
   ],
   "learningObjective": "Apply the complementary-angle (cofunction) identity.",
   "topic": "Trigonometric identities",
   "explanation": [
-    "The acute angles of a right triangle sum to $90°$, so $B = 90° - A$.",
-    "The cofunction identity says $\\cos(90° - A) = \\sin A$.",
-    "Therefore $\\cos B = \\sin A = 0.8$."
+    "The acute angles of a right triangle add up to $90°$, so $B = 90° - A$.",
+    "The side opposite angle $A$ is the side adjacent to angle $B$, which is why $\\cos(90° - A) = \\sin A$.",
+    "Therefore $\\cos B$ equals $\\sin A$, and the value of $\\cos B$ is $0.8$."
   ],
   "alternativeExplanations": [
     {

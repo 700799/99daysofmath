@@ -18,27 +18,27 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "Probability is the favorable count over the total count.",
+  "hint": "A probability compares the outcomes you want with all possible outcomes. Decide which two numbers in the table those are.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Probability is the favorable count over the total count."
+      "text": "A probability compares the outcomes you want with all possible outcomes. Decide which two numbers in the table those are."
     },
     {
       "level": "guide",
-      "text": "$50$ students walk out of $200$ total."
+      "text": "No grade is specified, so the whole group of $200$ students is the denominator. The Walk row has a total of $50$ students. Divide."
     },
     {
       "level": "reveal",
-      "text": "$\\dfrac{50}{200} = 0.25$."
+      "text": "The fraction $\\dfrac{50}{200}$ equals $0.25$, so the probability is $0.25$."
     }
   ],
   "learningObjective": "Read a simple probability from a two-way table.",
   "topic": "Two-way tables",
   "explanation": [
-    "The question puts no condition on grade, so the denominator is every student: $200$.",
-    "The Walk row totals $50$.",
-    "$\\dfrac{50}{200} = 0.25$."
+    "The question puts no condition on grade, so every one of the $200$ students could be chosen.",
+    "The Walk row of the table has a total of $50$ students, and these are the favorable outcomes.",
+    "Divide favorable by total: $\\dfrac{50}{200} = 0.25$, so the probability is $0.25$."
   ],
   "alternativeExplanations": [
     {

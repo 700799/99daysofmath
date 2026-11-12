@@ -10,27 +10,27 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The $y$ terms are already opposites. What happens if you add the equations?",
+  "hint": "Compare the $y$ terms in the two equations. What would happen to them if the equations were added together?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $y$ terms are already opposites. What happens if you add the equations?"
+      "text": "Compare the $y$ terms in the two equations. What would happen to them if the equations were added together?"
     },
     {
       "level": "guide",
-      "text": "Adding gives $2x = 14$."
+      "text": "Adding the left sides gives $2x$ because $+y$ and $-y$ cancel. Adding the right sides gives $10 + 4$. Solve the equation that results."
     },
     {
       "level": "reveal",
-      "text": "$x = 7$."
+      "text": "The sum is $2x = 14$, and dividing by $2$ gives $x = 7$."
     }
   ],
   "learningObjective": "Solve a system by elimination when a variable already cancels.",
   "topic": "Elimination",
   "explanation": [
-    "Add the two equations term by term: $(x + y) + (x - y) = 10 + 4$.",
-    "The $y$ terms cancel: $2x = 14$.",
-    "$x = 7$ (and then $y = 3$)."
+    "Add the two equations side by side, because the $y$ terms are opposites: $(x + y) + (x - y) = 10 + 4$.",
+    "The $y$ terms cancel, which leaves an equation in $x$ alone: $2x = 14$.",
+    "Divide by $2$ to get $x = 7$. Then $y = 3$, and both original equations hold, so the value of $x$ is $7$."
   ],
   "alternativeExplanations": [
     {

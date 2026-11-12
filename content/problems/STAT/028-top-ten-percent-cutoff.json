@@ -32,8 +32,8 @@
     }
   ],
   "explanation": [
-    "Top $10$ percent means $90$ percent of scores lie below the cutoff. In the standard normal table, an area of $0.90$ corresponds to $z \\approx 1.28$.",
-    "Unstandardize: $x = \\mu + z\\sigma = 500 + 1.28(100) = 628$.",
+    "Top $10$ percent means $90$ percent of scores lie below the cutoff. In the standard normal table, an area of $0.90$ to the left corresponds to $z \\approx 1.28$.",
+    "Turn that $z$-score back into an exam score with $x = \\mu + z\\sigma = 500 + 1.28(100) = 628$.",
     "A student needs about $628$ to qualify. (A calculator gives $z = 1.2816$, so $628.2$, the same to the nearest point.)"
   ],
   "alternativeExplanations": [

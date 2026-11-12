@@ -13,24 +13,26 @@
     "1.5"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Total cost $\\div$ pounds.",
+  "hint": "The price per pound is what one pound costs. You know what five pounds cost together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Total cost $\\div$ pounds."
+      "text": "The price per pound is what one pound costs. You know what five pounds cost together."
     },
     {
       "level": "guide",
-      "text": "$7.50 \\div 5$."
+      "text": "Share the $7.50$ dollars equally among the $5$ pounds by working out $7.50 \\div 5$."
     },
     {
       "level": "reveal",
-      "text": "$\\$1.50$."
+      "text": "$7.50 \\div 5 = 1.50$, so apples cost $1.50$ dollars per pound."
     }
   ],
   "explanation": [
-    "$7.50 \\div 5 = 1.50$.",
-    "Cost: \\$$1.50$/lb."
+    "To get the cost for one pound, divide the total cost by the number of pounds.",
+    "Set up $7.50 \\div 5$. Thinking in cents, that is $750 \\div 5$.",
+    "Dividing gives $750 \\div 5 = 150$ cents, which is the same as $1.50$ dollars.",
+    "The apples cost $1.50$ dollars per pound."
   ],
   "tags": [
     "unit-rate",

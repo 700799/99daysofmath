@@ -10,11 +10,11 @@
   "primaryAnswer": "30",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Set the sum of the three expressions equal to $180$.",
+  "hint": "The three expressions are the angles of one triangle. What do the angles of a triangle always add up to?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Set the sum of the three expressions equal to $180$."
+      "text": "The three expressions are the angles of one triangle. What do the angles of a triangle always add up to?"
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "$2x + (3x + 10) + (x - 10) = 180$."
+      "text": "Write the sum as $2x + (3x + 10) + (x - 10) = 180$. Combine the $x$ terms and the constants, then solve."
     },
     {
       "level": "reveal",
-      "text": "The constants cancel: $6x = 180$, so $x = 30$."
+      "text": "The constants cancel and leave $6x = 180$, so the value of $x$ is $30$."
     }
   ],
   "learningObjective": "Solve for a variable using the triangle angle sum.",
   "topic": "Triangle angles",
   "explanation": [
-    "The three angles sum to $180°$: $2x + 3x + 10 + x - 10 = 180$.",
-    "Combine like terms — the $+10$ and $-10$ cancel: $6x = 180$.",
-    "$x = 30$. The angles are $60°$, $100°$, and $20°$, which do sum to $180$ ✓"
+    "The angles of a triangle add to $180°$, so $2x + 3x + 10 + x - 10 = 180$.",
+    "Combine like terms. The $+10$ and $-10$ cancel, leaving $6x = 180$.",
+    "Divide by $6$ to get $x = 30$. The angles are $60°$, $100°$ and $20°$, which do add to $180°$, so $x = 30$."
   ],
   "alternativeExplanations": [
     {

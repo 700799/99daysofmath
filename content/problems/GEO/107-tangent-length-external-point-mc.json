@@ -32,25 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A radius drawn to the point of tangency is perpendicular to the tangent line — there is a right angle at $T$.",
+  "hint": "A tangent line and the radius drawn to the point of tangency meet at a special angle. Use that to see what kind of triangle $OTP$ is.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A radius drawn to the point of tangency is perpendicular to the tangent line — there is a right angle at $T$."
+      "text": "A tangent line and the radius drawn to the point of tangency meet at a special angle. Use that to see what kind of triangle $OTP$ is."
     },
     {
       "level": "guide",
-      "text": "So $\\triangle OTP$ is right-angled at $T$, with hypotenuse $OP = 17$ and leg $OT = 8$."
+      "text": "The right angle is at $T$, so $OP = 17$ is the hypotenuse and $OT = 8$ is a leg. Solve $PT^2 = 17^2 - 8^2$."
     },
     {
       "level": "reveal",
-      "text": "$PT^2 = 17^2 - 8^2 = 289 - 64 = 225$, so $PT = 15$."
+      "text": "$PT^2 = 289 - 64 = 225$, so the tangent segment is $PT = 15$, which is choice B."
     }
   ],
   "explanation": [
-    "The tangent meets the radius $\\overline{OT}$ at a right angle, so $\\triangle OTP$ is a right triangle.",
-    "The hypotenuse is $OP = 17$ (it faces the right angle) and one leg is the radius $8$.",
-    "$PT = \\sqrt{289 - 64} = \\sqrt{225} = 15$. Choice B."
+    "A tangent is perpendicular to the radius at the point of tangency, so $\\triangle OTP$ has a right angle at $T$.",
+    "The side $OP = 17$ is across from the right angle, so it is the hypotenuse, and the radius $OT = 8$ is one leg.",
+    "The Pythagorean Theorem gives $PT = \\sqrt{289 - 64} = \\sqrt{225} = 15$, which is choice B."
   ],
   "alternativeExplanations": [
     {

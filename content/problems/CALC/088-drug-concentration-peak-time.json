@@ -31,9 +31,9 @@
     }
   ],
   "explanation": [
-    "$C'(t) = 5e^{-0.5t} + 5t \\cdot (-0.5)e^{-0.5t} = 5e^{-0.5t}(1 - 0.5t)$.",
-    "Since $e^{-0.5t} > 0$ always, $C'(t) = 0$ only when $1 - 0.5t = 0$, i.e. $t = 2$.",
-    "For $t < 2$, $C' > 0$ (rising); for $t > 2$, $C' < 0$ (falling). The peak concentration is at $t = 2$ hours, where $C(2) = \\frac{10}{e} \\approx 3.68$ mg/L."
+    "Use the product rule, with the chain rule on the exponential: $C'(t) = 5e^{-0.5t} + 5t \\cdot (-0.5)e^{-0.5t} = 5e^{-0.5t}(1 - 0.5t)$.",
+    "Since $e^{-0.5t} > 0$ always, $C'(t) = 0$ only when $1 - 0.5t = 0$, which means $t = 2$.",
+    "For $t < 2$, $C' > 0$ (rising), and for $t > 2$, $C' < 0$ (falling). The peak concentration is at $t = 2$ hours, where $C(2) = \\frac{10}{e} \\approx 3.68$ mg/L."
   ],
   "alternativeExplanations": [
     {

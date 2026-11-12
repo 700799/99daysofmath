@@ -10,24 +10,26 @@
   "primaryAnswer": "2.76",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Line up the decimal points.",
+  "hint": "Subtraction works column by column, so each digit must sit under a digit with the same place value. Line up the decimal points first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Line up the decimal points."
+      "text": "Subtraction works column by column, so each digit must sit under a digit with the same place value. Line up the decimal points first."
     },
     {
       "level": "guide",
-      "text": "Rewrite as $5.60 - 2.84$."
+      "text": "Write $5.6$ as $5.60$ so both numbers have two decimal places. Then work out $5.60 - 2.84$ from the right, regrouping when the top digit is too small."
     },
     {
       "level": "reveal",
-      "text": "Borrow as needed: $5.60 - 2.84 = 2.76$."
+      "text": "After regrouping, $5.60 - 2.84 = 2.76$, so the difference is $2.76$."
     }
   ],
   "explanation": [
-    "Align: $5.60 - 2.84$.",
-    "Subtract: $2.76$."
+    "Line up the decimal points and write $5.6$ as $5.60$ so both numbers have a hundredths digit.",
+    "Hundredths: $0 - 4$ is not possible, so regroup one tenth as ten hundredths and compute $10 - 4 = 6$.",
+    "Tenths: only $5$ tenths remain, and $5 - 8$ needs regrouping too, so take one whole and compute $15 - 8 = 7$.",
+    "Ones: $4$ ones remain, and $4 - 2 = 2$. Reading the digits with the point in place, the answer is $2.76$."
   ],
   "tags": [
     "decimal"

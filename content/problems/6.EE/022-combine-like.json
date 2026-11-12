@@ -10,23 +10,25 @@
   "primaryAnswer": "7x",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Add the coefficients.",
+  "hint": "Both terms count the same thing, $x$. Think of $4$ apples plus $3$ apples.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add the coefficients."
+      "text": "Both terms count the same thing, $x$. Think of $4$ apples plus $3$ apples."
     },
     {
       "level": "guide",
-      "text": "$4 + 3 = 7$."
+      "text": "Because both terms have $x$, add only the numbers in front, $4 + 3$, and keep the $x$."
     },
     {
       "level": "reveal",
-      "text": "$7x$."
+      "text": "$4 + 3 = 7$, so the simplified expression is $7x$."
     }
   ],
   "explanation": [
-    "$4x + 3x = (4 + 3)x = 7x$."
+    "$4x$ and $3x$ are like terms because they have the same variable, $x$.",
+    "Like terms are combined by adding their coefficients: $4 + 3 = 7$.",
+    "The variable stays the same, so $4x + 3x$ simplifies to $7x$."
   ],
   "tags": [
     "combine-like"

@@ -13,29 +13,31 @@
     "$35.00"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the discount, then subtract.",
+  "hint": "The discount is a percent of the toy's price. Find that amount in dollars, then take it off.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sketch a tape diagram: equal blocks for each part. What does one block represent here?"
+      "text": "Try a friendlier discount first: what is $10\\%$ of the toy's price? A $30\\%$ discount is three of those."
     },
     {
       "level": "nudge",
-      "text": "Find the discount, then subtract."
+      "text": "The discount is a percent of the toy's price. Find that amount in dollars, then take it off."
     },
     {
       "level": "guide",
-      "text": "Discount $= 0.30 \\times 50 = 15$. Sale $= 50 - 15$."
+      "text": "$10\\%$ of $50$ is $5$ dollars, so $30\\%$ is $3 \\times 5 = 15$ dollars. Subtract that discount from $50$."
     },
     {
       "level": "reveal",
-      "text": "$50 - 15 = 35$."
+      "text": "$50 - 15 = 35$, so the sale price is $35$ dollars."
     }
   ],
   "explanation": [
-    "Discount: $0.30 \\times 50 = 15$.",
-    "Sale price: $50 - 15 = 35$."
+    "Find $10\\%$ of the price by dividing by $10$: $50 \\div 10 = 5$ dollars.",
+    "$30\\%$ is three times as much, so the discount is $3 \\times 5 = 15$ dollars.",
+    "A discount is subtracted from the price: $50 - 15 = 35$.",
+    "The sale price of the toy is $35$ dollars."
   ],
   "alternativeExplanations": [
     {

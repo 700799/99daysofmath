@@ -10,25 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The power is not alone yet. Get $2^x$ by itself first.",
+  "hint": "The power is not alone yet. Get $2^x$ by itself before thinking about the exponent.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The power is not alone yet. Get $2^x$ by itself first."
+      "text": "The power is not alone yet. Get $2^x$ by itself before thinking about the exponent."
     },
     {
       "level": "guide",
-      "text": "Divide both sides by $3$: $2^x = 32$."
+      "text": "Divide both sides by $3$ to get $2^x = 32$. Then write $32$ as a power of $2$."
     },
     {
       "level": "reveal",
-      "text": "$32 = 2^5$, so $x = 5$."
+      "text": "Since $32 = 2^5$, the exponents match and $x = 5$."
     }
   ],
   "explanation": [
-    "Peel away the multiplier before touching the exponent.",
-    "Divide both sides by $3$: $2^x = 32$.",
-    "$32 = 2^5$, so $x = 5$. Check: $3 \\times 32 = 96$."
+    "Remove the multiplier before working on the exponent, because the same-base method needs the power alone.",
+    "Dividing both sides of the equation by $3$ gives $2^x = 32$.",
+    "Since $32 = 2^5$, the exponents match and $x = 5$. Checking the original equation, $3 \\times 2^5 = 3 \\times 32 = 96$."
   ],
   "alternativeExplanations": [
     {

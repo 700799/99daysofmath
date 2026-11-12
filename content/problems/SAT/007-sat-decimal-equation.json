@@ -10,11 +10,11 @@
   "primaryAnswer": "14",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Decimals are not harder than integers — or multiply everything by $100$ to remove them.",
+  "hint": "The decimals make this look harder than it is. The steps are the same as for whole numbers, or you can scale every term to clear them.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Decimals are not harder than integers — or multiply everything by $100$ to remove them."
+      "text": "The decimals make this look harder than it is. The steps are the same as for whole numbers, or you can scale every term to clear them."
     },
     {
       "level": "nudge",
@@ -23,19 +23,20 @@
     },
     {
       "level": "guide",
-      "text": "Subtract $0.25x$ from both sides: $1.5 = 0.15x - 0.6$."
+      "text": "Multiply every term by $100$ to get $25x + 150 = 40x - 60$, then collect the $x$ terms on the right and the numbers on the left."
     },
     {
       "level": "reveal",
-      "text": "Add $0.6$: $2.1 = 0.15x$, so $x = 14$."
+      "text": "Subtracting $25x$ and adding $60$ gives $210 = 15x$, so the answer is $x = 14$."
     }
   ],
   "learningObjective": "Solve a linear equation with decimal coefficients.",
   "topic": "Decimal coefficients",
   "explanation": [
-    "Subtract $0.25x$ from both sides: $1.5 = 0.15x - 0.6$.",
-    "Add $0.6$ to both sides: $2.1 = 0.15x$.",
-    "Divide: $x = \\dfrac{2.1}{0.15} = 14$. Check: $0.25(14) + 1.5 = 5$ and $0.4(14) - 0.6 = 5$ ✓"
+    "Multiply every term by $100$ to remove the decimals, which keeps the equation balanced: $25x + 150 = 40x - 60$.",
+    "Subtract $25x$ from both sides so that $x$ appears only on the right: $150 = 15x - 60$.",
+    "Add $60$ to both sides to collect the constants: $210 = 15x$.",
+    "Divide by $15$ to get $x = 14$. A check gives $0.25(14) + 1.5 = 5$ and $0.4(14) - 0.6 = 5$, so the value of $x$ is $14$."
   ],
   "alternativeExplanations": [
     {

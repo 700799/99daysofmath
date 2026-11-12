@@ -11,29 +11,29 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "The output's $t$ was computed as $t = \\frac{b - 0}{SE_b}$. You know $t$ and $b$; solve for $SE_b$.",
+  "hint": "The $t$ statistic in the output was built from the slope and its standard error. You know two of those three numbers, so work backward.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The output's $t$ was computed as $t = \\frac{b - 0}{SE_b}$. You know $t$ and $b$; solve for $SE_b$."
+      "text": "The $t$ statistic in the output was built from the slope and its standard error. You know two of those three numbers, so work backward."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up: if $b = 6$ and $t = 3$, then $6 / SE_b = 3$, so $SE_b = 2$. Same algebra here — just watch the negatives."
+      "text": "Warm up: if $b = 6$ and $t = 3$, then $6 / SE_b = 3$, so $SE_b = 2$. The algebra is the same here, but watch the negatives."
     },
     {
       "level": "guide",
-      "text": "$-2.5 = \\frac{-0.45}{SE_b}$, so $SE_b = \\frac{-0.45}{-2.5}$."
+      "text": "The statistic was computed as $t = \\frac{b}{SE_b}$, so write $-2.5 = \\frac{-0.45}{SE_b}$ and rearrange it to $SE_b = \\frac{-0.45}{-2.5}$."
     },
     {
       "level": "reveal",
-      "text": "$SE_b = 0.45 / 2.5 = 0.18$ mpg per hundred kg."
+      "text": "$0.45 / 2.5 = 0.18$, so the standard error of the slope is $0.18$ mpg per hundred kg."
     }
   ],
   "explanation": [
     "The $t$ statistic for a slope is $t = b / SE_b$ when the null value is 0.",
-    "Rearrange: $SE_b = b / t = (-0.45)/(-2.5)$.",
+    "Rearranging to isolate the unknown gives $SE_b = b / t = (-0.45)/(-2.5)$.",
     "$SE_b = 0.18$. Standard errors are always positive, which the two negatives confirm. (A $95\\%$ interval would be roughly $-0.45 \\pm t^*(0.18)$.)"
   ],
   "alternativeExplanations": [

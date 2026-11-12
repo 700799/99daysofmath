@@ -10,11 +10,11 @@
   "primaryAnswer": "714",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two steps: first find the total pencils, then take away what the office keeps.",
+  "hint": "This story has two parts. One part builds up a total and the other part takes some away. Decide which comes first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two steps: first find the total pencils, then take away what the office keeps."
+      "text": "This story has two parts. One part builds up a total and the other part takes some away. Decide which comes first."
     },
     {
       "level": "nudge",
@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "Total: $24 \\times 36$. Try $24 \\times 36 = 24 \\times 30 + 24 \\times 6$."
+      "text": "Find the total with $24 \\times 36$, splitting it as $24 \\times 30 + 24 \\times 6$. Then subtract the $150$ pencils the office keeps."
     },
     {
       "level": "reveal",
-      "text": "$24 \\times 36 = 720 + 144 = 864$. Then $864 - 150 = 714$."
+      "text": "$24 \\times 36 = 720 + 144 = 864$ and $864 - 150 = 714$, so $714$ pencils are left for the classrooms."
     }
   ],
   "explanation": [
-    "Step 1 — total pencils: $24 \\times 36$.",
-    "$24 \\times 30 = 720$ and $24 \\times 6 = 144$, so the total is $720 + 144 = 864$.",
-    "Step 2 — remove the office pencils: $864 - 150 = 714$.",
-    "So $714$ pencils go to the classrooms."
+    "First find how many pencils arrive in all: $24$ boxes of $36$ means $24 \\times 36$.",
+    "Split the $36$ to multiply: $24 \\times 30 = 720$ and $24 \\times 6 = 144$, so the total is $720 + 144 = 864$ pencils.",
+    "The office keeps $150$ of them, so subtract: $864 - 150 = 714$.",
+    "That leaves $714$ pencils for the classrooms."
   ],
   "alternativeExplanations": [
     {

@@ -14,15 +14,15 @@
     "1.67"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Use the identity $1 + \\tan^2\\theta = \\sec^2\\theta$.",
+  "hint": "One of the Pythagorean identities links tangent directly to secant, so you do not need the sine or cosine at all.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use the identity $1 + \\tan^2\\theta = \\sec^2\\theta$."
+      "text": "One of the Pythagorean identities links tangent directly to secant, so you do not need the sine or cosine at all."
     },
     {
       "level": "guide",
-      "text": "$1 + \\frac{16}{9} = \\frac{25}{9}$, so $\\sec^2\\theta = \\frac{25}{9}$."
+      "text": "Use $1 + \\tan^2\\theta = \\sec^2\\theta$: here $1 + \\frac{16}{9} = \\frac{25}{9}$, so $\\sec^2\\theta = \\frac{25}{9}$. Take the square root with the sign that fits the first quadrant."
     },
     {
       "level": "reveal",
@@ -30,8 +30,8 @@
     }
   ],
   "explanation": [
-    "Apply $1 + \\tan^2\\theta = \\sec^2\\theta$ with $\\tan\\theta = \\frac{4}{3}$.",
-    "$1 + \\frac{16}{9} = \\frac{9}{9} + \\frac{16}{9} = \\frac{25}{9}$, so $\\sec^2\\theta = \\frac{25}{9}$.",
+    "The identity $1 + \\tan^2\\theta = \\sec^2\\theta$ links tangent to secant, so apply it with $\\tan\\theta = \\frac{4}{3}$.",
+    "Square the tangent and add over a common denominator: $1 + \\frac{16}{9} = \\frac{9}{9} + \\frac{16}{9} = \\frac{25}{9}$, so $\\sec^2\\theta = \\frac{25}{9}$.",
     "Taking the positive root (quadrant I makes everything positive) gives $\\sec\\theta = \\frac{5}{3}$."
   ],
   "alternativeExplanations": [

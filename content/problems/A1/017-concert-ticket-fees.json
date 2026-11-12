@@ -10,25 +10,25 @@
   "primaryAnswer": "45",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Take the fee off first: subtract $6$ from both sides.",
+  "hint": "The fee was added after the two tickets were counted. Remove the last thing that was done first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Take the fee off first: subtract $6$ from both sides."
+      "text": "The fee was added after the two tickets were counted. Remove the last thing that was done first."
     },
     {
       "level": "guide",
-      "text": "$2t = 90$. Now divide both sides by $2$."
+      "text": "Subtract the $6$ from both sides to get $2t = 90$. Then divide both sides by $2$."
     },
     {
       "level": "reveal",
-      "text": "$t = 90 \\div 2 = 45$ dollars."
+      "text": "$90 \\div 2 = 45$, so one ticket costs $45$ dollars."
     }
   ],
   "explanation": [
-    "Subtract the fee: $2t = 96 - 6 = 90$.",
-    "Divide by 2: $t = 45$.",
-    "Check: $2(45) + 6 = 96$. ✓ Each ticket is $\\$45$."
+    "Take the service fee off both sides first: $2t = 96 - 6 = 90$, the cost of the tickets alone.",
+    "Two tickets cost $90$, so divide both sides by $2$ to find one ticket: $t = 45$.",
+    "Check: $2(45) + 6 = 90 + 6 = 96$, so each ticket costs $45$ dollars."
   ],
   "alternativeExplanations": [
     {

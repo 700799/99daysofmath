@@ -32,27 +32,28 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Growing by a *percent* each year is repeated multiplication, not repeated addition.",
+  "hint": "Growth by a fixed percent each year is different from growth by a fixed dollar amount. Does it call for repeated adding or repeated multiplying?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Growing by a *percent* each year is repeated multiplication, not repeated addition."
+      "text": "Growth by a fixed percent each year is different from growth by a fixed dollar amount. Does it call for repeated adding or repeated multiplying?"
     },
     {
       "level": "guide",
-      "text": "Each year the value is multiplied by $1 + 0.06 = 1.06$."
+      "text": "Each year the value keeps its full $100\\%$ and gains $6\\%$ more, so it is multiplied by $1.06$. Apply that multiplier $t$ times to $400$."
     },
     {
       "level": "reveal",
-      "text": "After $t$ years: $400(1.06)^t$."
+      "text": "Multiplying by $1.06$ a total of $t$ times gives $400(1.06)^t$, which is choice B."
     }
   ],
   "learningObjective": "Build an exponential growth model from a percent rate.",
   "topic": "Exponential models",
   "explanation": [
-    "A $6\\%$ increase means keeping the original $100\\%$ and adding $6\\%$ more, so multiply by $1.06$.",
-    "Repeating that for $t$ years gives $400(1.06)^t$.",
-    "Choice A models linear growth of $6$ cents per year. Choice C loses $94\\%$ per year. Choice D multiplies by $6$ each year."
+    "A $6\\%$ increase keeps the original $100\\%$ and adds $6\\%$ more, so each year the value is multiplied by $1.06$.",
+    "Repeating that multiplication for $t$ years gives the exponential expression $400(1.06)^t$.",
+    "Choice A adds only $6$ cents per year, choice C keeps only $6\\%$ each year, and choice D multiplies the value by $6$ each year.",
+    "The correct model is $400(1.06)^t$, which is choice B."
   ],
   "alternativeExplanations": [
     {

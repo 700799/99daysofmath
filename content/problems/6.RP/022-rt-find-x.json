@@ -10,24 +10,26 @@
   "primaryAnswer": "40",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "What's the multiplier from input to output?",
+  "hint": "Both known pairs follow one rule. Divide each output by its input and see what number keeps showing up.",
   "hints": [
     {
       "level": "nudge",
-      "text": "What's the multiplier from input to output?"
+      "text": "Both known pairs follow one rule. Divide each output by its input and see what number keeps showing up."
     },
     {
       "level": "guide",
-      "text": "$\\frac{10}{2} = 5$ and $\\frac{25}{5} = 5$. So output $= 5 \\times$ input."
+      "text": "$10 \\div 2 = 5$ and $25 \\div 5 = 5$, so every output is $5$ times the input. Now multiply $8$ by $5$."
     },
     {
       "level": "reveal",
-      "text": "$8 \\times 5 = 40$."
+      "text": "Multiplying gives $8 \\times 5 = 40$, so the input $8$ maps to the output $40$."
     }
   ],
   "explanation": [
-    "Each output is $5$ times the input.",
-    "$8 \\times 5 = 40$."
+    "A ratio table has a constant multiplier, found by dividing an output by its input: $10 \\div 2 = 5$.",
+    "Check it with the second pair: $5 \\times 5 = 25$, so the rule \"multiply by $5$\" is correct.",
+    "Use the rule on the new input: $8 \\times 5 = 40$.",
+    "In this ratio table the input $8$ maps to $40$."
   ],
   "tags": [
     "ratio-table"

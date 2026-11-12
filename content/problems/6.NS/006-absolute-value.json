@@ -10,11 +10,11 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Absolute value is the **distance** from $0$ on the number line. Distance is always positive (or zero).",
+  "hint": "Absolute value measures **distance** from $0$ on the number line. Can a distance ever be a negative number?",
   "explanation": [
-    "Absolute value bars $|\\;|$ ask for the distance from $0$.",
-    "$-7$ is $7$ units to the **left** of $0$ on the number line.",
-    "Distance is always positive: $|-7| = 7$."
+    "The bars in $|-7|$ ask for the distance between $-7$ and $0$ on the number line.",
+    "$-7$ sits $7$ units to the **left** of $0$, so the distance is $7$ units.",
+    "A distance is never negative, so the sign is dropped and $|-7| = 7$."
   ],
   "alternativeExplanations": [
     {
@@ -33,15 +33,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Absolute value is the **distance** from $0$ on the number line. Distance is always positive (or zero)."
+      "text": "Absolute value measures **distance** from $0$ on the number line. Can a distance ever be a negative number?"
     },
     {
       "level": "guide",
-      "text": "Absolute value bars $|\\;|$ ask for the distance from $0$."
+      "text": "Find $-7$ on a number line and count the units between it and $0$. The direction (left) does not matter, only the number of units."
     },
     {
       "level": "reveal",
-      "text": "Distance is always positive: $|-7| = 7$."
+      "text": "$-7$ is $7$ units away from $0$, so $|-7| = 7$."
     }
   ]
 }

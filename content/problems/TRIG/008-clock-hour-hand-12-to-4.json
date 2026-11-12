@@ -10,25 +10,25 @@
   "primaryAnswer": "120",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A clock face is a full circle cut into 12 equal hour marks.",
+  "hint": "A clock face is a full circle cut into 12 equal hour marks. How many degrees does one of those gaps take up?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A clock face is a full circle cut into 12 equal hour marks."
+      "text": "A clock face is a full circle cut into 12 equal hour marks. How many degrees does one of those gaps take up?"
     },
     {
       "level": "guide",
-      "text": "Each hour mark is $\\frac{360^\\circ}{12} = 30^\\circ$. How many hour marks from 12 to 4?"
+      "text": "Each gap between hour marks is $\\frac{360^\\circ}{12} = 30^\\circ$. Count the gaps the hand crosses going from the 12 to the 4 and multiply by $30$."
     },
     {
       "level": "reveal",
-      "text": "Four marks at $30^\\circ$ each: $4 \\times 30 = 120^\\circ$."
+      "text": "The hand crosses four gaps of $30^\\circ$ each, and $4 \\times 30 = 120$, so it has turned $120$ degrees."
     }
   ],
   "explanation": [
     "The 12 hour marks split $360^\\circ$ evenly, so each gap is $\\frac{360}{12} = 30^\\circ$.",
     "Going from 12 to 4 crosses four of those gaps.",
-    "$4 \\times 30 = 120^\\circ$."
+    "Four gaps of $30^\\circ$ make $4 \\times 30 = 120^\\circ$, so the hour hand has turned $120$ degrees."
   ],
   "alternativeExplanations": [
     {

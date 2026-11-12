@@ -32,25 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Give both numbers the same number of decimal places.",
+  "hint": "A decimal with more digits is not always bigger. Compare place by place, starting with the tenths.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Give both numbers the same number of decimal places."
+      "text": "A decimal with more digits is not always bigger. Compare place by place, starting with the tenths."
     },
     {
       "level": "guide",
-      "text": "$0.5 = 0.50$. Now compare $0.45$ and $0.50$."
+      "text": "Write $0.5$ as $0.50$ so both numbers have hundredths. Then compare $45$ hundredths with $50$ hundredths."
     },
     {
       "level": "reveal",
-      "text": "$0.50 > 0.45$, so $0.5$ is greater — choose B."
+      "text": "$0.50$ is more than $0.45$, so $0.5$ is the greater number. That is choice B."
     }
   ],
   "explanation": [
-    "Write both as hundredths: $0.45$ and $0.50$.",
-    "$50$ hundredths is more than $45$ hundredths.",
-    "So $0.5 > 0.45$."
+    "Give both numbers two decimal places so they are easy to compare: $0.45$ and $0.5 = 0.50$.",
+    "Now both are counted in hundredths, and $50$ hundredths is more than $45$ hundredths.",
+    "So $0.5 > 0.45$, and the greater number is $0.5$, choice B."
   ],
   "alternativeExplanations": [
     {

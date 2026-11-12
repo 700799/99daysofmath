@@ -32,24 +32,26 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "$x \\leq 3$ means $x$ can be $3$ or less.",
+  "hint": "The symbol $\\leq$ means \"less than or equal to\". Which choices are no bigger than $3$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$x \\leq 3$ means $x$ can be $3$ or less."
+      "text": "The symbol $\\leq$ means \"less than or equal to\". Which choices are no bigger than $3$?"
     },
     {
       "level": "guide",
-      "text": "Is $3 \\leq 3$ true? Yes."
+      "text": "Compare each choice with $3$. The numbers $5$, $4$ and $7$ are all greater, so check the remaining one."
     },
     {
       "level": "reveal",
-      "text": "C."
+      "text": "$3 \\leq 3$ is true because of the \"or equal to\" part, so the solution is $3$, choice C."
     }
   ],
   "explanation": [
-    "$x \\leq 3$ allows values $\\leq 3$.",
-    "$3 \\leq 3$ ✓. Answer: C."
+    "$x \\leq 3$ is true for $3$ and for every number smaller than $3$.",
+    "The choices $5$, $4$ and $7$ are all greater than $3$, so they fail.",
+    "The choice $3$ works because $3 \\leq 3$ allows the two sides to be equal.",
+    "The only solution listed is $3$, which is choice C."
   ],
   "tags": [
     "inequality",

@@ -1,0 +1,2999 @@
+{
+ "5.F-1#0": [
+  "Find which place the 8 sits in, because the place decides its value.",
+  "Counting places from the right, the 8 is in the thousands place.",
+  "Multiply the digit by the value of its place: 8 × 1000 = 8000.",
+  "So the value of the 8 in this number is 8000."
+ ],
+ "5.F-1#1": [
+  "Multiply the non-zero digits first and deal with the zeros afterwards.",
+  "The front digits of the two numbers give 6 × 4 = 24.",
+  "There is one zero in 60 and one in 40, so attach two zeros to 24.",
+  "So the product of 60 and 40 is 2400."
+ ],
+ "5.F-2#0": [
+  "The denominators match, so the pieces are the same size and you can add the tops.",
+  "Add the two numerators: 1 + 1 = 2, which gives 2/4.",
+  "Simplify the fraction by dividing its top and bottom by 2.",
+  "So the sum of the two fourths is 1/2."
+ ],
+ "5.F-2#1": [
+  "Both fractions are eighths, so subtract the numerators and keep the denominator.",
+  "Subtract the top numbers: 5 − 1 = 4, which gives 4/8.",
+  "Simplify the fraction by dividing its top and bottom by 4.",
+  "So the difference in simplest form is 1/2."
+ ],
+ "5.F-3#0": [
+  "To multiply fractions, multiply the tops together and the bottoms together.",
+  "The two top numbers give 1 × 1 = 1 for the new numerator.",
+  "The two bottom numbers give 3 × 2 = 6 for the new denominator.",
+  "So the product of the two fractions is 1/6."
+ ],
+ "5.F-3#1": [
+  "Dividing by 1/4 asks how many quarters fit inside 3 wholes.",
+  "Each whole can be cut into exactly 4 quarters.",
+  "Three wholes hold 3 × 4 = 12 quarters in all.",
+  "So the answer to 3 ÷ 1/4 is 12 quarters, or just 12."
+ ],
+ "5.F-4#0": [
+  "Line up the decimal points so that matching places are added together.",
+  "Write 0.2 as 0.20 so both numbers have hundredths.",
+  "Add the hundredths: 20 hundredths + 35 hundredths = 55 hundredths.",
+  "So the sum of the two decimals is 0.55."
+ ],
+ "5.F-4#1": [
+  "Split 1.5 into a whole part and a decimal part, then multiply each by 4.",
+  "The whole number part of 1.5 gives 1 × 4 = 4.",
+  "The decimal part gives 0.5 × 4 = 2, because four halves make two.",
+  "Add the two parts: 4 + 2 = 6, so the product is 6."
+ ],
+ "5.F-5#0": [
+  "Use the fact that 100 centimeters make 1 meter.",
+  "Meters are the bigger unit, so divide the centimeters by 100.",
+  "Divide to change the units to meters: 400 ÷ 100 = 4.",
+  "So a length of 400 cm is 4 meters."
+ ],
+ "5.F-5#1": [
+  "A cube has the same length, width and height, so multiply the edge three times.",
+  "Start with 3 × 3 = 9 cubes for the bottom layer.",
+  "There are 3 layers of that size, so 9 × 3 = 27.",
+  "The volume of the cube is 27 cubic units."
+ ],
+ "5.F-6#0": [
+  "An ordered pair is written (x, y): the distance across first, then the distance up.",
+  "Going right 4 from the origin makes the first number 4.",
+  "Going up 2 from there makes the second number 2.",
+  "So the coordinates of the point are (4, 2)."
+ ],
+ "5.F-6#1": [
+  "Look at how much the numbers grow from one term to the next.",
+  "From 5 to 10 and from 10 to 15 the jump is +5 each time.",
+  "Add 5 to the last number shown: 15 + 5 = 20.",
+  "So the next number in the pattern is 20."
+ ],
+ "5.F-7#0": [
+  "Think of 40 as 4 × 10, so you can multiply in two easy steps.",
+  "First multiply the 35 by the 4, which gives 35 × 4 = 140.",
+  "Then multiply that result by the 10: 140 × 10 = 1,400.",
+  "So the product of 35 and 40 is 1,400."
+ ],
+ "5.F-7#1": [
+  "Split 11 into 10 + 1 and multiply 124 by each part.",
+  "The ten gives 124 × 10 = 1,240, which is 124 with a zero attached.",
+  "The one gives 124 × 1 = 124, the number itself.",
+  "Add the two parts: 1,240 + 124 = 1,364, so the product is 1,364."
+ ],
+ "5.F-7#2": [
+  "Ask how many groups of 24 fit into 720, using a fact you already know.",
+  "A helpful multiplication fact to start from is 24 × 3 = 72.",
+  "Make both sides ten times bigger: 24 × 30 = 720.",
+  "So the quotient of 720 ÷ 24 is equal to 30."
+ ],
+ "5.F-8#0": [
+  "The exponent tells how many tens are multiplied together.",
+  "Here it means 10 × 10 × 10, three tens in all.",
+  "Three tens multiplied give a 1 followed by three zeros.",
+  "So 10³ written as a regular number is 1,000."
+ ],
+ "5.F-8#1": [
+  "Multiplying by 100 makes each digit worth 100 times as much.",
+  "The decimal point moves two places to the right, one for each zero in 100.",
+  "The number changes from 0.7 to 7 and then to 70.",
+  "So the product of 0.7 and 100 is 70."
+ ],
+ "5.F-8#2": [
+  "Dividing by 10 makes each digit worth one tenth as much.",
+  "Every digit moves one place to the right, so the zero at the end drops off.",
+  "The number changes from 250 to 25 after that shift.",
+  "So the quotient of 250 ÷ 10 is equal to 25."
+ ],
+ "5.F-9#0": [
+  "Line up the decimal points before adding, so matching places are added.",
+  "Write 0.5 as 0.50 so both numbers have hundredths.",
+  "Add place by place to get 1.25 + 0.50 = 1.75.",
+  "So the sum of the two decimals is 1.75."
+ ],
+ "5.F-9#1": [
+  "Give the whole number a decimal place so the two numbers line up.",
+  "Write 5 as 5.0, then trade one whole for ten tenths.",
+  "Now subtract: 10 tenths − 3 tenths = 7 tenths, and 4 − 1 = 3 ones.",
+  "Three ones and seven tenths make 3.7, so the difference is 3.7."
+ ],
+ "5.F-9#2": [
+  "Change is the amount paid minus the price, so this is a subtraction.",
+  "Set it up as 5.00 − 3.65 with the decimal points lined up.",
+  "Count up from 3.65: add 0.35 to reach 4.00, then 1.00 more to reach 5.00.",
+  "Add the two jumps: the change is 0.35 + 1.00 = 1.35 dollars."
+ ],
+ "5.F-10#0": [
+  "Multiply as if both numbers were whole, then place the decimal point.",
+  "Without the decimal point, the digits give 4 × 6 = 24.",
+  "The factor 0.4 has one decimal place, so the product needs one too.",
+  "Putting one decimal place in 24 gives the product 2.4."
+ ],
+ "5.F-10#1": [
+  "Multiply the digits first, then count the decimal places in both factors.",
+  "Without the decimal points, the digits give 2 × 5 = 10.",
+  "Each factor has one decimal place, so the product needs two: 0.10.",
+  "Dropping the zero at the end, the product is 0.1."
+ ],
+ "5.F-10#2": [
+  "Think of 3.6 as a number of tenths that can be shared equally.",
+  "There are 36 tenths in the number 3.6.",
+  "Share them into 4 equal groups: 36 ÷ 4 = 9 tenths in each.",
+  "Nine tenths is written 0.9, so the quotient is 0.9."
+ ],
+ "5.F-11#0": [
+  "A fraction bar means the same thing as a division sign.",
+  "The number being divided, 5, goes on top as the numerator.",
+  "The number you divide by, 6, goes on the bottom as the denominator.",
+  "So 5 ÷ 6 written as a fraction is five sixths, 5/6."
+ ],
+ "5.F-11#1": [
+  "Sharing equally is division: the sandwiches are divided by the friends.",
+  "Three sandwiches shared by four friends is the division 3 ÷ 4.",
+  "A division can be written as a fraction with the first number on top.",
+  "So each friend gets 3/4 of a sandwich."
+ ],
+ "5.F-11#2": [
+  "Divide the top by the bottom to see how many wholes there are.",
+  "Four goes into 11 two times, because 4 × 2 = 8.",
+  "Subtract to find the leftover pieces: 11 − 8 = 3 fourths.",
+  "Two wholes and three fourths make the mixed number 2 3/4."
+ ],
+ "5.F-12#0": [
+  "Split the 20 into as many equal parts as the denominator says.",
+  "One fourth of 20 is found by dividing: 20 ÷ 4 = 5.",
+  "Three fourths is three of those equal parts: 3 × 5 = 15.",
+  "So three fourths of 20 is equal to 15."
+ ],
+ "5.F-12#1": [
+  "Six laps of the same length means multiplying the lap length by 6.",
+  "Count the quarter miles in six laps: 6 × 1/4 = 6/4.",
+  "Four quarters make 1 whole, leaving 2 quarters, which is 1/2.",
+  "So the six laps add up to 1 1/2 miles."
+ ],
+ "5.F-12#2": [
+  "Split the 12 into as many equal parts as the denominator says.",
+  "One third of 12 is found by dividing: 12 ÷ 3 = 4.",
+  "Two thirds is two of those equal parts: 2 × 4 = 8.",
+  "So two thirds of 12 is equal to 8."
+ ],
+ "5.F-13#0": [
+  "Work out what is inside the parentheses before anything else.",
+  "Add the numbers inside the parentheses first: 6 + 2 = 8.",
+  "Now multiply by the number in front: 4 × 8 = 32.",
+  "So the value of the expression is 32."
+ ],
+ "5.F-13#1": [
+  "There are no parentheses, so multiplication is done before subtraction.",
+  "Do the multiplication part of the expression first: 3 × 4 = 12.",
+  "Then subtract that product from the 20: 20 − 12 = 8.",
+  "So the value of the expression is 8."
+ ],
+ "5.F-13#2": [
+  "The parentheses group the addition, so do that part first.",
+  "Add the numbers inside the parentheses first: 15 + 5 = 20.",
+  "Now divide that sum by the 5 outside: 20 ÷ 5 = 4.",
+  "So the value of the expression is 4."
+ ],
+ "5.F-14#0": [
+  "The starting number 0 counts as the 1st number in the pattern.",
+  "Keep adding 4 to list five numbers: 0, 4, 8, 12, 16.",
+  "Count along the list to find the number in position five.",
+  "So the 5th number in the pattern is 16."
+ ],
+ "5.F-14#1": [
+  "Compare the amounts the two patterns add each time.",
+  "Pattern A grows by 3 and pattern B grows by 9, and 9 ÷ 3 = 3.",
+  "Check with matching terms: 3 and 9, then 6 and 18.",
+  "So each B term is 3 times the A term."
+ ],
+ "5.F-14#2": [
+  "The starting number 0 counts as the 1st number in the pattern.",
+  "Keep adding 10 to list four numbers: 0, 10, 20, 30.",
+  "Count along the list to find the number in position four.",
+  "So the 4th number in the pattern is 30."
+ ],
+ "5.F-15#0": [
+  "The volume of a box is length times width times height.",
+  "Multiply two of the edges first to get one layer: 5 × 4 = 20.",
+  "Multiply that layer by the third edge: 20 × 3 = 60.",
+  "So the volume of the box is 60 cubic units."
+ ],
+ "5.F-15#1": [
+  "Use the fact that 1 meter equals 100 centimeters.",
+  "Centimeters are the smaller unit, so multiply the meters by 100.",
+  "Multiply to change the units to centimeters: 3 × 100 = 300.",
+  "So there are 300 centimeters in 3 meters."
+ ],
+ "5.F-15#2": [
+  "Use the fact that 1 foot equals 12 inches.",
+  "Inches are the smaller unit, so multiply the feet by 12.",
+  "Multiply to change the units to inches: 4 × 12 = 48.",
+  "So there are 48 inches in 4 feet."
+ ],
+ "5.F-16#0": [
+  "An ordered pair is written (x, y): the distance right first, then the distance up.",
+  "Going right 2 from the origin makes the first number 2.",
+  "Going up 5 from there makes the second number 5.",
+  "So the coordinates of the point are (2, 5)."
+ ],
+ "5.F-16#1": [
+  "Triangles are named by how many of their sides are the same length.",
+  "This triangle has all three of its sides equal.",
+  "The prefix \"equi\" means equal and \"lateral\" means side.",
+  "So the triangle is called an equilateral triangle."
+ ],
+ "5.F-16#2": [
+  "Think about what the corners of a rectangle look like.",
+  "Every corner of a rectangle is a square corner, which is a right angle.",
+  "A rectangle has four corners in all, one where each pair of sides meets.",
+  "So a rectangle has exactly 4 right angles."
+ ],
+ "6.EE-1#0": [
+  "The small 2 means you multiply the base by itself: use 4 two times.",
+  "Write the power out as a multiplication, which is 4 × 4.",
+  "4 × 4 = 16, so the value of 4² is exactly 16."
+ ],
+ "6.EE-1#1": [
+  "The exponent 3 means you use 10 as a factor three times.",
+  "Write it out as 10 × 10 × 10, and start with 10 × 10 = 100.",
+  "Then 100 × 10 = 1000, so the value of 10³ is 1000."
+ ],
+ "6.EE-2#0": [
+  "Put 2 in place of y, and remember 5y means 5 times y.",
+  "The expression becomes 5·2 − 3, and you multiply first: 5·2 = 10.",
+  "Then subtract: 10 − 3 = 7, so the value is 7."
+ ],
+ "6.EE-2#1": [
+  "The word \"product\" is the answer to a multiplication.",
+  "So you need 4 multiplied by x, which is 4 · x.",
+  "A number times a letter is written side by side, so the answer is 4x."
+ ],
+ "6.EE-3#0": [
+  "The 5 outside multiplies each term inside the parentheses.",
+  "Multiply both parts by 5 to get 5·y = 5y and 5·3 = 15.",
+  "Add the two products, so the answer is 5y + 15."
+ ],
+ "6.EE-3#1": [
+  "Both terms have the same letter, so they are like terms and can be combined.",
+  "Subtract the numbers in front and keep the letter: 7 − 2 = 5.",
+  "So the expression 7a − 2a simplifies to just 5a."
+ ],
+ "6.EE-4#0": [
+  "Undo the adding of 9 by doing the opposite operation.",
+  "Subtract 9 from both sides, which leaves x = 20 − 9.",
+  "20 − 9 = 11, so the solution of the equation is x = 11."
+ ],
+ "6.EE-4#1": [
+  "4x means 4 times x, so undo the multiplying.",
+  "Divide both sides by 4, which leaves x = 28 ÷ 4.",
+  "28 ÷ 4 = 7, so the solution of the equation is x = 7."
+ ],
+ "6.EE-5#0": [
+  "Find the symbol that means \"greater than\".",
+  "\"Greater than\" is the symbol >, and its open side faces the bigger amount, n.",
+  "Write it in the same order as the words, so the answer is n > 7."
+ ],
+ "6.EE-5#1": [
+  "Look closely at the symbol: ≤ has an extra line under it.",
+  "≤ means \"less than or equal to\", so x may be equal to 4.",
+  "Since 4 ≤ 4 is true, the answer is yes."
+ ],
+ "6.EE-6#0": [
+  "Use the rule: put 7 in place of x.",
+  "2x means 2 times x, so the rule becomes y = 2·7.",
+  "2·7 = 14, so the value of y is 14 when x is 7."
+ ],
+ "6.EE-6#1": [
+  "The formula gives the cost when you know the number of tickets, n.",
+  "Put 4 in place of n to get c = 5·4.",
+  "5·4 = 20, so the cost of 4 tickets is 20 dollars."
+ ],
+ "6.EE-7#0": [
+  "A coefficient is the number that multiplies a variable.",
+  "9x means 9 times x, so look at the number in front of x.",
+  "That number is 9, so the coefficient is 9."
+ ],
+ "6.EE-7#1": [
+  "A constant term is a number with no variable attached.",
+  "The two terms are 3x and 8, and 3x has a variable.",
+  "The term without a variable is 8, so the constant term is 8."
+ ],
+ "6.EE-8#0": [
+  "Remove the parentheses by distributing, then compare the two expressions.",
+  "Multiply 3 by each term inside to get 3·x = 3x and 3·2 = 6.",
+  "That gives 3x + 6, the same expression, so the answer is yes."
+ ],
+ "6.EE-8#1": [
+  "Test the value: put 5 in place of x and see if the equation is true.",
+  "The left side becomes 5 − 3, which equals 2.",
+  "Both sides are 2, so the answer is yes."
+ ],
+ "6.EE-9#0": [
+  "With \"less than\", the order of the numbers matters.",
+  "\"n less than 12\" means start at 12 and take n away.",
+  "So the expression is 12 − n, and it is not n − 12."
+ ],
+ "6.EE-9#1": [
+  "3x means 3 times x, so use the opposite operation.",
+  "Divide both sides by 3, which leaves x = 21 ÷ 3.",
+  "21 ÷ 3 = 7, so the solution of the equation is x = 7."
+ ],
+ "6.EE-10#0": [
+  "Substitute: put 4 in place of x in the rule.",
+  "The rule becomes y = 2(4) + 1, and you multiply first: 2 × 4 = 8.",
+  "Then add 1 to get 8 + 1 = 9, so the value of y is 9."
+ ],
+ "6.EE-10#1": [
+  "Compare each pair: how do you get the second number from the first?",
+  "3 = 3 × 1, 6 = 3 × 2 and 9 = 3 × 3, so each time y is 3 times x.",
+  "The rule for the pattern is y = 3x."
+ ],
+ "6.G-1#0": [
+  "The area of a rectangle is its length times its width.",
+  "The sides are 6 and 9, so multiply 6 × 9.",
+  "6 × 9 = 54, so the area is 54 square units."
+ ],
+ "6.G-1#1": [
+  "A triangle's area is half of its base times its height.",
+  "Set up ½ × 12 × 5. Take half of the base first: half of 12 is 6.",
+  "6 × 5 = 30, so the area is 30 square units."
+ ],
+ "6.G-2#0": [
+  "Both points have the same x, so the segment is vertical.",
+  "For a vertical segment, subtract the y-values: 5 − (−2).",
+  "Subtracting a negative is the same as adding: 5 + 2 = 7.",
+  "The distance between the points is 7 units."
+ ],
+ "6.G-2#1": [
+  "Find the side length first, then use side × side for area.",
+  "From (0,0) to (5,0) only x changes, so the side is 5 − 0 = 5.",
+  "Area = 5 × 5 = 25, so the area is 25 square units."
+ ],
+ "6.G-3#0": [
+  "The volume of a box is length × width × height.",
+  "Multiply two of the sides first: 4 × 2 = 8.",
+  "Then multiply by the third side: 8 × 3 = 24.",
+  "The volume of the box is 24 cubic units."
+ ],
+ "6.G-3#1": [
+  "Volume is still length × width × height when one side is a fraction.",
+  "Multiply the two whole numbers first: 4 × 6 = 24.",
+  "Multiplying by ½ takes half of the number: ½ × 24 = 12.",
+  "The volume of the box is 12 cubic units."
+ ],
+ "6.G-4#0": [
+  "Surface area adds up the areas of all the faces, and a cube has 6 equal square faces.",
+  "One face is a square with area 5 × 5 = 25 square units.",
+  "Multiply by the 6 faces of the cube: 6 × 25 = 150.",
+  "The surface area is 150 square units."
+ ],
+ "6.G-4#1": [
+  "A square face has area equal to side × side.",
+  "The side of this face is 2, so multiply 2 × 2.",
+  "2 × 2 = 4, so the face has an area of 4 square units."
+ ],
+ "6.G-5#0": [
+  "Find the area of each rectangle, then add the two areas.",
+  "The first rectangle is 3 × 4 = 12 and the second is 2 × 4 = 8.",
+  "12 + 8 = 20, so the combined area is 20 square units."
+ ],
+ "6.G-5#1": [
+  "When a piece is removed, subtract its area from the whole area.",
+  "The whole square is 10 × 10 = 100 and the corner is 5 × 5 = 25.",
+  "100 − 25 = 75, so the area left is 75 square units."
+ ],
+ "6.G-6#0": [
+  "The volume of a cube is side × side × side.",
+  "With side 4, start by multiplying two of them: 4 × 4 = 16.",
+  "Then 16 × 4 = 64, so the volume is 64 cubic units."
+ ],
+ "6.G-6#1": [
+  "The area of a triangle is half of base × height.",
+  "Set up ½ × 10 × 3. Take half of the base first: half of 10 is 5.",
+  "5 × 3 = 15, so the area is 15 square units."
+ ],
+ "6.G-7#0": [
+  "Side-by-side rectangles do not overlap, so add their areas.",
+  "The first is 5 × 4 = 20 and the second is 5 × 3 = 15.",
+  "20 + 15 = 35, so the total area is 35 square units."
+ ],
+ "6.G-7#1": [
+  "A cut-out piece is taken away, so subtract its area from the rectangle.",
+  "The rectangle is 10 × 6 = 60 and the cut-out is 3 × 2 = 6.",
+  "60 − 6 = 54, so the area left is 54 square units."
+ ],
+ "6.G-8#0": [
+  "A cube's volume is its edge multiplied three times.",
+  "Start with two of the edges: 3 × 3 = 9.",
+  "Then 9 × 3 = 27, so the volume is 27 cubic units."
+ ],
+ "6.G-8#1": [
+  "Multiply the three sides of the box, in any order you like.",
+  "Start with the two whole numbers: 1 × 2 = 2.",
+  "Now multiply by ½. Half of 2 is 1, so 2 × ½ = 1.",
+  "The volume of the box is 1 cubic unit."
+ ],
+ "6.G-9#0": [
+  "Both points have x = 1, so the segment is vertical.",
+  "The length is the difference of the y-values: 6 − 2.",
+  "6 − 2 = 4, so the segment is 4 units long."
+ ],
+ "6.G-9#1": [
+  "Use the corners to find the width and the height, then multiply.",
+  "From (0, 0) to (5, 0) the width is 5, and from (5, 0) to (5, 2) the height is 2.",
+  "5 × 2 = 10, so the area is 10 square units."
+ ],
+ "6.G-10#0": [
+  "SA means surface area: the total area of all 6 square faces of the cube.",
+  "Each face is a square with area 5 × 5 = 25 square units.",
+  "6 × 25 = 150, so the surface area is 150 square units."
+ ],
+ "6.G-10#1": [
+  "Faces are the flat sides of a solid shape, so count them on a cube.",
+  "A cube has a top, a bottom, and 4 faces around the sides.",
+  "1 + 1 + 4 = 6, so a cube has 6 faces, all equal squares."
+ ],
+ "6.NS-1#0": [
+  "Line up the decimal points so each digit sits under one with the same place value.",
+  "Write 2.6 as 2.60, then add 2.60 + 3.45 column by column from the right.",
+  "Hundredths: 0 + 5 = 5. Tenths: 6 + 4 = 10, so write 0 and carry 1. Ones: 2 + 3 + 1 = 6.",
+  "Reading the digits with the point in place, the sum is 6.05."
+ ],
+ "6.NS-1#1": [
+  "Line up the decimal points and give both numbers the same number of decimal places.",
+  "Write 4.2 as 4.20, then subtract 1.75 from the right, regrouping when the top digit is too small.",
+  "Work each column: hundredths 10 − 5 = 5, tenths 11 − 7 = 4, ones 3 − 1 = 2.",
+  "Reading the digits with the point in place, the difference is 2.45."
+ ],
+ "6.NS-2#0": [
+  "Multiply as whole numbers first, then count the decimal places in both factors.",
+  "Without the decimal points, the whole numbers give 3 × 7 = 21.",
+  "0.3 and 0.7 each have one decimal place, so the product needs two.",
+  "Placing the point two places from the right gives 0.21."
+ ],
+ "6.NS-2#1": [
+  "Make the divisor a whole number by moving the decimal point in both numbers the same way.",
+  "Multiply both numbers by 10, so 2.5 ÷ 0.5 becomes 25 ÷ 5.",
+  "25 ÷ 5 = 5, so the answer to 2.5 ÷ 0.5 is also 5."
+ ],
+ "6.NS-3#0": [
+  "Break each number into prime factors and look for the factors they share.",
+  "Written as products of primes, 16 = 2·2·2·2 and 24 = 2·2·2·3.",
+  "Both numbers contain three 2s, so the common part is 2·2·2.",
+  "2·2·2 = 8, so the GCF of 16 and 24 is 8."
+ ],
+ "6.NS-3#1": [
+  "Check whether 3 and 5 share any factor other than 1.",
+  "They share no factors, so the LCM is simply their product, 3 × 5.",
+  "3 × 5 = 15, so the LCM of 3 and 5 is 15."
+ ],
+ "6.NS-4#0": [
+  "Absolute value is the distance from 0 on the number line, so it is never negative.",
+  "Count the units between -15 and 0, ignoring the direction.",
+  "-15 is 15 units away from 0, so the answer is |-15| = 15."
+ ],
+ "6.NS-4#1": [
+  "Least to greatest is the left-to-right order on a number line.",
+  "Of the two negatives, -8 is farther left than -3, and the positive number 2 comes last.",
+  "Since -8 < -3 < 2, the order from least to greatest is -8, -3, 2."
+ ],
+ "6.NS-5#0": [
+  "The signs of x and y tell you which quadrant a point is in.",
+  "Here x = 6 is positive (right of the y-axis) and y = -2 is negative (below the x-axis).",
+  "Right and below is the bottom-right region, which is Quadrant IV."
+ ],
+ "6.NS-5#1": [
+  "Both points have y = 4, so they lie on a horizontal line and only the x-values matter.",
+  "Subtract the x-values: 5 − (−3), which is the same as 5 + 3.",
+  "5 + 3 = 8, so the distance between the points is 8 units."
+ ],
+ "6.NS-6#0": [
+  "Dividing by a fraction is the same as multiplying by its reciprocal.",
+  "Flip 1/6 to get 6/1, then multiply across: 1/3 × 6/1 = 6/3.",
+  "6/3 simplifies to 2, so the answer is 2."
+ ],
+ "6.NS-6#1": [
+  "To divide by a fraction, multiply by its reciprocal instead.",
+  "Flip 1/2 to get 2/1, then multiply across: 5/6 × 2/1 = 10/6.",
+  "Divide top and bottom by 2 to simplify 10/6.",
+  "The answer is 5/3, which is the same as 1 2/3."
+ ],
+ "6.NS-7#0": [
+  "Stack the numbers by place value and add each column from the right, carrying when a column reaches 10.",
+  "In the ones column, 8 + 4 = 12, so write 2 and carry 1.",
+  "In the tens column, 1 + 7 + 1 = 9, and in the hundreds column, 6 + 2 = 8.",
+  "Reading the digits in order, the sum is 892."
+ ],
+ "6.NS-7#1": [
+  "The top number has zeros, so you must borrow across them before subtracting.",
+  "Regroup 500 as 4 hundreds, 9 tens and 10 ones.",
+  "Work each column: ones 10 − 3 = 7, tens 9 − 7 = 2, hundreds 4 − 1 = 3.",
+  "Reading the digits in order, the difference 500 − 173 is 327."
+ ],
+ "6.NS-8#0": [
+  "On a number line, the number farther to the right is greater.",
+  "−1 is only 1 unit left of 0, while −7 is 7 units left, so −1 is closer to 0.",
+  "−1 is to the right of −7, so −1 > −7 and the answer is −1."
+ ],
+ "6.NS-8#1": [
+  "Picture a number line and list the numbers from leftmost to rightmost.",
+  "Both negatives come before 2, and −5 is farther left than −3.",
+  "Since −5 < −3 < 2, the order from least to greatest is −5, −3, 2."
+ ],
+ "6.NS-9#0": [
+  "The opposite of a number is its mirror image across 0 on the number line.",
+  "−15 is 15 units to the left of 0, so its opposite is 15 units to the right.",
+  "So the opposite of −15 is the positive number 15."
+ ],
+ "6.NS-9#1": [
+  "Absolute value means the distance from 0 on the number line.",
+  "9 is already 9 units to the right of 0, so nothing changes.",
+  "The distance from 0 is 9, so the answer is |9| = 9."
+ ],
+ "6.NS-10#0": [
+  "Both points have x = 0, so they lie on a vertical line.",
+  "On a vertical line the distance is the difference of the y-values: |6 − 0|.",
+  "|6 − 0| = 6, so the distance between the points is 6 units."
+ ],
+ "6.NS-10#1": [
+  "Both points have y = 1, so they lie on a horizontal line.",
+  "On a horizontal line the distance is the difference of the x-values: |4 − (−3)|, which is 4 + 3.",
+  "4 + 3 = 7, so the distance between the points is 7 units."
+ ],
+ "6.RP-1#0": [
+  "A ratio lists the amounts in the order the words are given, then gets simplified like a fraction.",
+  "Blue comes first, so blue to red is 6:9.",
+  "Both 6 and 9 can be divided by 3: 6 ÷ 3 = 2 and 9 ÷ 3 = 3.",
+  "The ratio of blue to red in simplest form is 2:3."
+ ],
+ "6.RP-1#1": [
+  "Write the boys first because the question says boys to girls, then look for a common factor.",
+  "There are 8 boys and 12 girls, so boys to girls is 8:12.",
+  "The largest number that divides both 8 and 12 is 4: 8 ÷ 4 = 2 and 12 ÷ 4 = 3.",
+  "The simplest ratio of boys to girls is 2:3."
+ ],
+ "6.RP-2#0": [
+  "Cost per apple means the price of one apple, so share the total cost equally.",
+  "Divide the dollars by the number of apples: 4 ÷ 8.",
+  "The division gives 4 ÷ 8 = 0.50, which is half a dollar.",
+  "Each apple costs 50 cents, which is 0.50 dollars."
+ ],
+ "6.RP-2#1": [
+  "Meters per second is the distance covered in one second.",
+  "Divide the meters by the seconds: 100 ÷ 20.",
+  "100 ÷ 20 = 5, so the runner goes 5 meters per second."
+ ],
+ "6.RP-3#0": [
+  "Every pair in a ratio table uses the same multiplier, so find it from a pair you know.",
+  "12 ÷ 3 = 4 and 20 ÷ 5 = 4, so each output is the input × 4.",
+  "Use the same rule on the input 7: 7 × 4 = 28.",
+  "The output that goes with 7 is 28."
+ ],
+ "6.RP-3#1": [
+  "More mix makes more cookies at the same rate, so compare the amounts of mix.",
+  "6 cups is 3 times as much as 2 cups, because 6 ÷ 2 = 3.",
+  "Triple the number of cookies too: 10 × 3 = 30.",
+  "So 6 cups of mix make 30 cookies."
+ ],
+ "6.RP-4#0": [
+  "This ratio compares a part with the whole team, so you need the total number of players first.",
+  "Add the two groups to get the whole team: 7 + 3 = 10 players.",
+  "Defenders come first in the ratio, and there are 3 of them.",
+  "The ratio of defenders to the whole team is 3:10."
+ ],
+ "6.RP-4#1": [
+  "A fraction of the bag is the part you want over the total number of chips.",
+  "Find the total number of chips in the bag: 5 + 5 = 10.",
+  "Red chips over total chips is 5/10.",
+  "Divide top and bottom by 5 to simplify, so 1/2 of the chips are red."
+ ],
+ "6.RP-5#0": [
+  "Percent means out of 100, so change the percent into a decimal and multiply.",
+  "Divide the percent by 100 to get the decimal: 10 ÷ 100 = 0.10.",
+  "Multiply the decimal by the whole amount: 0.10 × 250 = 25.",
+  "This shows that 10% of 250 is equal to 25."
+ ],
+ "6.RP-5#1": [
+  "Look for a simple fraction that means the same as 25%.",
+  "25% is one quarter, so divide the number by 4.",
+  "Dividing gives 40 ÷ 4 = 10, so 25% of 40 is equal to 10."
+ ],
+ "6.RP-6#0": [
+  "Use the fact that every foot is the same number of inches.",
+  "1 foot = 12 inches, so multiply the feet by 12.",
+  "5 × 12 = 60, so there are 60 inches in 5 feet."
+ ],
+ "6.RP-6#1": [
+  "Centimeters are smaller than meters, so the number will get bigger: multiply.",
+  "Each meter is 100 cm, so work out 3.5 × 100.",
+  "Multiplying by 100 moves the decimal point two places right: 3.5 becomes 350.",
+  "So there are 350 cm in 3.5 meters."
+ ],
+ "6.RP-7#0": [
+  "10% is one tenth, and there is a quick shortcut for dividing by 10.",
+  "Move the decimal point one place to the left: 250 becomes 25.0.",
+  "One tenth of 250 is 25, so 10% of 250 is 25."
+ ],
+ "6.RP-7#1": [
+  "Think about what everyday fraction 50% stands for.",
+  "50% is one half, so divide the number by 2.",
+  "Halving gives 86 ÷ 2 = 43, so 50% of 86 is equal to 43."
+ ],
+ "6.RP-8#0": [
+  "Speed in mph means how many miles the car goes in one hour.",
+  "Divide the miles by the hours: 240 ÷ 4.",
+  "240 ÷ 4 = 60, so the car drives at 60 mph."
+ ],
+ "6.RP-8#1": [
+  "Cost per orange is the price of one orange, so share the total cost equally.",
+  "Divide the dollars by the number of oranges: 4 ÷ 8.",
+  "4 ÷ 8 = 0.50, so each orange costs 50 cents (0.50 dollars)."
+ ],
+ "6.RP-9#0": [
+  "Inches are smaller than feet, so there will be fewer feet: divide.",
+  "12 inches make 1 foot, so count the groups of 12 in 36.",
+  "36 ÷ 12 = 3, so there are 3 feet in 36 inches."
+ ],
+ "6.RP-9#1": [
+  "A kilometer is much longer than a meter, so the number of meters will be bigger.",
+  "1 km = 1000 m, so multiply the kilometers by 1000.",
+  "Multiplying gives 5 × 1000 = 5000, so 5 km is equal to 5000 meters."
+ ],
+ "6.RP-10#0": [
+  "Find the price of one pack first, then build up to 8 packs.",
+  "Divide the cost by the packs: one pack costs 20 ÷ 5 = 4 dollars.",
+  "Multiply the unit price by 8 packs: 4 × 8 = 32.",
+  "The cost for 8 packs is 32 dollars."
+ ],
+ "6.RP-10#1": [
+  "The bigger batch keeps the same ratio of eggs to cookies, so find how many times bigger it is.",
+  "36 ÷ 12 = 3, so there are 3 times as many cookies.",
+  "Use 3 times as many eggs as well: 3 × 3 = 9.",
+  "The recipe needs 9 eggs to make 36 cookies."
+ ],
+ "6.RP-11#0": [
+  "When you know the speed and the time, distance = rate × time.",
+  "The rate is 20 km/h and the time is 2 hours, so work out 20 × 2.",
+  "20 × 2 = 40, so the boat travels a distance of 40 km."
+ ],
+ "6.RP-11#1": [
+  "Speed is the distance covered in one hour, so rate = distance ÷ time.",
+  "The distance is 900 miles and the time is 3 hours, so work out 900 ÷ 3.",
+  "900 ÷ 3 = 300, so the jet flies at 300 mph."
+ ],
+ "6.RP-11#2": [
+  "The speed is given per second but the time is in minutes, so match the units first.",
+  "There are 60 seconds in 1 minute, so the time is 60 seconds.",
+  "Now use the rule distance = rate × time: 5 × 60 = 300.",
+  "The runner covers 300 meters in 1 minute."
+ ],
+ "6.SP-1#0": [
+  "The mean is the total of the values shared equally among them.",
+  "Add the three values to get the total: 10 + 20 + 30 = 60.",
+  "There are 3 values, so divide the total by 3: 60 ÷ 3 = 20.",
+  "The mean of the three numbers is 20."
+ ],
+ "6.SP-1#1": [
+  "The median is the middle value once the numbers are in order.",
+  "Sort the numbers from least to greatest: 2, 4, 5, 8, 9.",
+  "There are 5 values, so the middle one is the 3rd.",
+  "The 3rd value is 5, so the median is 5."
+ ],
+ "6.SP-2#0": [
+  "Check for a value that is far from the others, because it affects the mean more than the median.",
+  "200 is an outlier: the mean is (30 + 32 + 35 + 200) ÷ 4 = 74.25, far above three of the four salaries.",
+  "The median is halfway between 32 and 35, which is 33.5, close to most salaries.",
+  "The median is the better choice for a typical salary."
+ ],
+ "6.SP-2#1": [
+  "The median is the middle value of the sorted list.",
+  "The list 4, 4, 10 is already in order and has 3 values.",
+  "The middle (2nd) value is 4, so the median is 4."
+ ],
+ "6.SP-3#0": [
+  "The range is the largest value minus the smallest value.",
+  "Find the extremes: the max is 22 and the min is 6.",
+  "Subtract the min from the max: 22 − 6 = 16, so the range is 16."
+ ],
+ "6.SP-3#1": [
+  "The range measures how far the data stretches from min to max.",
+  "Every value is 7, so the max is 7 and the min is 7.",
+  "Subtract the min from the max: 7 − 7 = 0, so the range is 0."
+ ],
+ "6.SP-4#0": [
+  "On a dot plot, each dot stands for one data point.",
+  "The dots above 2 are the data points that equal 2.",
+  "There are 4 dots there, so 4 data points are 2."
+ ],
+ "6.SP-4#1": [
+  "Think about which display is built from the five-number summary.",
+  "A bar graph only compares counts for separate categories.",
+  "A box plot marks the quartiles with the box edges and the median with a line inside.",
+  "The answer is the box plot."
+ ],
+ "6.SP-5#0": [
+  "Think of the word for a value that lies outside the main group.",
+  "Most data values sit close together, but this one is far away from all of them.",
+  "Such a value is called an outlier."
+ ],
+ "6.SP-5#1": [
+  "Center tells only what a typical value is.",
+  "A good description also says how spread out the values are, using range or IQR.",
+  "It can also mention shape, such as skew, clusters or gaps.",
+  "One good answer is spread (shape also works)."
+ ],
+ "6.SP-6#0": [
+  "The mode is the value that appears most often.",
+  "Count each value: 6 appears three times, while 2 and 9 appear once each.",
+  "6 appears the most, so the mode is 6."
+ ],
+ "6.SP-6#1": [
+  "Each number in the list is one data point.",
+  "Count the numbers one by one: 11, 13, 15, 17.",
+  "That is four numbers, so there are 4 data points."
+ ],
+ "6.SP-7#0": [
+  "A statistical question expects answers that vary.",
+  "This one asks about each student, and students take different amounts of time to eat.",
+  "The answers will vary, so yes, it is statistical."
+ ],
+ "6.SP-7#1": [
+  "A statistical question needs variability in its answers.",
+  "California has one capital, so everyone gives the same answer.",
+  "There is only one fact, so no, it is not statistical."
+ ],
+ "6.SP-8#0": [
+  "With an even number of values, the median is the average of the two middle ones.",
+  "The set has 4 values in order; the middle two are 3 and 7.",
+  "Average the two middle values to find the halfway point: (3 + 7) ÷ 2 = 5.",
+  "The median of the set is 5."
+ ],
+ "6.SP-8#1": [
+  "The mean is the sum of the values divided by how many there are.",
+  "Add the values: 6 + 8 + 10 = 24, and there are 3 of them.",
+  "Divide the sum by the count: 24 ÷ 3 = 8, so the mean is 8."
+ ],
+ "6.SP-9#0": [
+  "Each dot on a dot plot is one measurement.",
+  "Dots stacked above 3 are the measurements that equal 3.",
+  "There are 4 dots above 3, so 4 measurements equal 3."
+ ],
+ "6.SP-9#1": [
+  "In a histogram, the height of a bar is a count.",
+  "The bar from 20–29 counts the values that fall in that range.",
+  "Its height is 8, so 8 values are in that range."
+ ],
+ "6.SP-10#0": [
+  "To find a mean, add the values and divide by the count.",
+  "Find the sum: 2 + 4 + 6 + 8 = 20, and the set has 4 values.",
+  "Share the sum equally: 20 ÷ 4 = 5, so the mean is 5."
+ ],
+ "6.SP-10#1": [
+  "The range is the max minus the min.",
+  "In this set the max is 11 and the min is 2.",
+  "Take the min away from the max: 11 − 2 = 9, so the range is 9."
+ ],
+ "A1-1#0": [
+  "Build the phrase in two parts: first \"twice n\", then what \"5 less than\" does to it.",
+  "\"Twice n\" means 2 times n, which is written 2n.",
+  "\"5 less than\" an amount means you subtract 5 from that amount, so the 5 comes last.",
+  "Taking 5 away from 2n gives the expression 2n − 5."
+ ],
+ "A1-1#1": [
+  "To evaluate an expression, put the given number in place of the letter.",
+  "Replace w with 4, so the expression becomes 10 × 4 + 15.",
+  "Multiply before adding, as the order of operations says: 10 × 4 = 40.",
+  "Then add the 15: 40 + 15 = 55, so the value is 55."
+ ],
+ "A1-1#2": [
+  "Like terms have the same letter part, and only like terms can be combined.",
+  "The x-terms are 6x and 2x, and adding them gives 6x + 2x = 8x.",
+  "The plain number 3 has no partner, so it stays as it is.",
+  "Putting the parts together, the simplified expression is 8x + 3."
+ ],
+ "A1-1#3": [
+  "Think about how many wheels one car has, then how the total grows with each extra car.",
+  "Each car brings 4 wheels, so the total is 4 for every one of the c cars.",
+  "That is 4 times c, and in algebra the times sign is left out.",
+  "The expression for the number of wheels is 4c."
+ ],
+ "A1-1#4": [
+  "Put the given value in place of n, then follow the order of operations.",
+  "Replace n with 6, so the expression becomes 5 × 6 − 2.",
+  "Multiply first, because multiplication comes before subtraction: 5 × 6 = 30.",
+  "Then subtract 2: 30 − 2 = 28, so the value is 28."
+ ],
+ "A1-2#0": [
+  "3x means 3 times x, so use the opposite of multiplying to get x alone.",
+  "Divide both sides by 3 to keep the equation balanced: x = 21 ÷ 3.",
+  "Since 21 ÷ 3 = 7, the solution of the equation is x = 7."
+ ],
+ "A1-2#1": [
+  "Two things were done to x, so undo them in reverse order: the adding first.",
+  "Subtract 4 from both sides, which leaves 5x = 25.",
+  "Divide both sides by 5 to undo the multiplying: x = 25 ÷ 5.",
+  "The solution of the equation is x = 5."
+ ],
+ "A1-2#2": [
+  "The bill was divided by 4, so think about which operation undoes a division.",
+  "Multiply both sides by 4 to get b alone: b = 7 × 4.",
+  "Since 7 × 4 = 28, the whole bill was 28 dollars."
+ ],
+ "A1-2#3": [
+  "Six was taken away from x, so use the opposite operation to get it back.",
+  "Add 6 to both sides to keep the equation balanced: x = 11 + 6.",
+  "Since 11 + 6 = 17, the solution of the equation is x = 17."
+ ],
+ "A1-2#4": [
+  "Undo the operations in reverse order, starting with the number that was added.",
+  "Subtract 3 from both sides, which leaves 2x = 12.",
+  "Divide both sides by 2 to undo the multiplying: x = 12 ÷ 2.",
+  "The solution of the equation is x = 6."
+ ],
+ "A1-3#0": [
+  "Clear the parentheses first by multiplying the 4 by each term inside them.",
+  "Distributing the 4 to both terms gives the equation 4x + 4 = 24.",
+  "Subtract 4 from both sides, which leaves 4x = 20.",
+  "Divide both sides by 4, so the solution is x = 5."
+ ],
+ "A1-3#1": [
+  "There is an x-term on each side, so collect them on one side first.",
+  "Subtract 2x from both sides, which leaves 4x = 20.",
+  "Divide both sides by 4 to get x alone: x = 20 ÷ 4.",
+  "The solution of the equation is x = 5."
+ ],
+ "A1-3#2": [
+  "The room fee is paid only once, so remove it before dealing with the cost per guest.",
+  "Subtract 40 from both sides, which leaves 6g = 60.",
+  "Divide both sides by 6 to find the number of guests: g = 60 ÷ 6.",
+  "The division gives g = 10, so you can invite 10 guests."
+ ],
+ "A1-3#3": [
+  "Either distribute the 3 or, since 12 divides evenly by 3, divide both sides by 3 first.",
+  "Dividing both sides by 3 leaves the simpler equation x − 2 = 4.",
+  "Add 2 to both sides to undo the subtracting: x = 4 + 2.",
+  "The solution of the equation is x = 6."
+ ],
+ "A1-3#4": [
+  "Gather the x-terms on one side and the plain numbers on the other side.",
+  "Subtract 4x from both sides, which leaves 2x + 1 = 9.",
+  "Subtract 1 from both sides, which leaves 2x = 8.",
+  "Divide both sides by 2, so the solution is x = 4."
+ ],
+ "A1-4#0": [
+  "Solve an inequality with the same steps as an equation, and watch whether the sign must flip.",
+  "Subtract 1 from both sides, which leaves 2x < 8.",
+  "Divide both sides by 2, a positive number, so the sign does not flip.",
+  "The solution of the inequality is x < 4."
+ ],
+ "A1-4#1": [
+  "To get x alone you must divide by a negative number, which has a special rule for inequalities.",
+  "Divide both sides by −2, and work out 10 ÷ (−2) = −5.",
+  "Dividing by a negative flips the sign, so ≤ becomes ≥.",
+  "The solution of the inequality is x ≥ −5."
+ ],
+ "A1-4#2": [
+  "Solve it like a two-step equation, then read the answer as a number of whole weeks.",
+  "Subtract 18 from both sides, which leaves 8w ≥ 32.",
+  "Divide both sides by 8, a positive number, to get w ≥ 4.",
+  "The smallest value allowed is 4, so the fewest whole weeks is 4."
+ ],
+ "A1-4#3": [
+  "Use the opposite of subtracting 4, and think about whether that changes the sign.",
+  "Add 4 to both sides, which gives x < 6 + 4.",
+  "Adding never flips an inequality sign, so the solution is x < 10."
+ ],
+ "A1-4#4": [
+  "Getting x alone means dividing by a negative number, so remember what that does to the sign.",
+  "Divide both sides by −3, and work out 12 ÷ (−3) = −4.",
+  "Flip the sign because you divided by a negative, so ≤ becomes ≥.",
+  "The solution of the inequality is x ≥ −4."
+ ],
+ "A1-5#0": [
+  "The notation f(6) means the input is 6, so put 6 where x is in the rule.",
+  "Replacing x with 6 in the rule gives f(6) = 5 × 6, a product to work out.",
+  "Since 5 × 6 = 30, the value of f(6) is the number 30."
+ ],
+ "A1-5#1": [
+  "The notation f(10) tells you to use 10 as the input in place of x.",
+  "Replace x with 10 and do the multiplying first: 2 × 10 = 20.",
+  "Then add the 1: 20 + 1 = 21, so the value of f(10) is 21."
+ ],
+ "A1-5#2": [
+  "You know the output and need the input, so run the rule backward.",
+  "The rule multiplies by 4, so undo it by dividing the output by 4.",
+  "Since 32 ÷ 4 = 8, the input that went in was 8."
+ ],
+ "A1-5#3": [
+  "Put 6 in place of x in the rule, then follow the order of operations.",
+  "Multiply first, because it comes before subtraction: 3 × 6 = 18.",
+  "Then subtract 4: 18 − 4 = 14, so the value of f(6) is 14."
+ ],
+ "A1-5#4": [
+  "The letter h is just the name of the rule, and h(0) means the input is 0.",
+  "Replace x with 0 and multiply, remembering that anything times zero is zero: 2 × 0 = 0.",
+  "Then add 9: 0 + 9 = 9, so the value of h(0) is 9. An input of zero leaves only the added number."
+ ],
+ "A1-6#0": [
+  "Slope compares how far a line goes up with how far it goes across.",
+  "Slope is rise divided by run, so set up 10 ÷ 5.",
+  "Since 10 ÷ 5 = 2, the slope of the line is 2."
+ ],
+ "A1-6#1": [
+  "Slope between two points is the change in y divided by the change in x.",
+  "The rise is the change in the y-values: 11 − 3 = 8.",
+  "The run is the change in the x-values, in the same order: 4 − 2 = 2.",
+  "Slope is rise over run, so the slope is 8 ÷ 2 = 4."
+ ],
+ "A1-6#2": [
+  "\"Dollars per walk\" is a rate, so share the money equally among the walks.",
+  "Divide the total dollars by the number of walks: 18 ÷ 3.",
+  "Since 18 ÷ 3 = 6, you earn 6 dollars per walk."
+ ],
+ "A1-6#3": [
+  "Find how much y changes and how much x changes between the two points.",
+  "The rise is 12 − 2 = 10, and the run is 5 − 0 = 5.",
+  "Slope is rise over run, so the slope is 10 ÷ 5 = 2."
+ ],
+ "A1-6#4": [
+  "Subtract the y-values and the x-values in the same order, and keep any negative sign.",
+  "The rise is 1 − 7 = −6, and the run is 3 − 1 = 2.",
+  "Slope is rise over run, so the slope is −6 ÷ 2 = −3. The line goes downhill."
+ ],
+ "A1-7#0": [
+  "Compare the equation with y = mx + b, where b is the y-intercept.",
+  "The number in the b position is the one added at the end, and the minus sign stays with the 3.",
+  "So the y-intercept of the line is −3."
+ ],
+ "A1-7#1": [
+  "Put the given x-value into the equation in place of x.",
+  "Multiply first, because it comes before addition: 2 × 4 = 8.",
+  "Then add 1: 8 + 1 = 9, so the value of y is 9."
+ ],
+ "A1-7#2": [
+  "The formula has a starting amount and an amount added each week, so use w = 6.",
+  "Find the money added over six weeks: 5 × 6 = 30 dollars.",
+  "Add the starting amount: 15 + 30 = 45, so you have 45 dollars."
+ ],
+ "A1-7#3": [
+  "Compare the equation with the form y = mx + b and decide which letter is the slope.",
+  "The slope m is the number that multiplies x, and here that number is 6.",
+  "So the slope of the line is 6. The −1 is the y-intercept, not the slope."
+ ],
+ "A1-7#4": [
+  "Replace x with the given value and follow the order of operations.",
+  "Multiply first, because it comes before addition: 2 × 4 = 8.",
+  "Then add 5: 8 + 5 = 13, so the value of y is 13."
+ ],
+ "A1-8#0": [
+  "Use the slope-intercept form y = mx + b, which has a place for each number given.",
+  "The slope goes in for m and the y-intercept goes in for b, so m = 2 and b = 9.",
+  "Filling in both values gives the equation y = 2x + 9."
+ ],
+ "A1-8#1": [
+  "Decide which cost is paid once at the start and which is paid again every month.",
+  "The one-time fee is the starting value, so b = 25.",
+  "The monthly charge is the rate of change, so the slope is m = 10.",
+  "Putting them into y = mx + b gives the equation y = 10x + 25."
+ ],
+ "A1-8#2": [
+  "You need the constant change in y for the slope and the y-value at x = 0 for the start.",
+  "The y-values go up by 10 − 7 = 3 each step, so the slope is m = 3.",
+  "When x = 0 the table shows y = 7, so the y-intercept is b = 7.",
+  "The equation of the line is y = 3x + 7."
+ ],
+ "A1-8#3": [
+  "Put the slope and the point into y = mx + b, so b is the only unknown left.",
+  "Using slope m = 3 with the point's values x = 2 and y = 11 gives 11 = 3 × 2 + b.",
+  "Multiply to get 11 = 6 + b, then subtract 6 from both sides.",
+  "Solving for the y-intercept gives the answer b = 5."
+ ],
+ "A1-8#4": [
+  "Slope-intercept form is y = mx + b, with the slope as m and the y-intercept as b.",
+  "Here the slope is m = 5 and the y-intercept is b = −2.",
+  "Adding a negative 2 is written as subtracting 2, so the equation is y = 5x − 2."
+ ],
+ "A1-9#0": [
+  "Both rules describe the same y, so their right-hand sides must be equal.",
+  "Set the two expressions equal to each other: 2x = x + 6.",
+  "Subtract x from both sides, so the solution is x = 6."
+ ],
+ "A1-9#1": [
+  "One equation has +y and the other has −y, so adding the equations will cancel y.",
+  "Add the two equations: the y terms cancel and you get 2x = 14.",
+  "Divide both sides by 2, so x = 7. The matching y-value is 5."
+ ],
+ "A1-9#2": [
+  "Both orders include the same 2 kid tickets, so the price difference comes only from adult tickets.",
+  "Subtract the smaller total from the larger one: 41 − 23 = 18 dollars.",
+  "That 18 dollars pays for the 2 extra adult tickets, so divide: 18 ÷ 2 = 9.",
+  "So the price of one adult ticket is 9 dollars."
+ ],
+ "A1-9#3": [
+  "The first equation tells you what y equals, so substitute that into the second equation.",
+  "Replacing y with 2x turns the second equation into x + 2x = 12.",
+  "Combine like terms to get 3x = 12, then divide both sides by 3.",
+  "Dividing 12 by 3 gives the solution of the system, x = 4."
+ ],
+ "A1-9#4": [
+  "The y terms have opposite signs, so adding the two equations makes them cancel.",
+  "Adding the left sides and the right sides gives 2x = 10.",
+  "Divide both sides by 2, so the solution is x = 5."
+ ],
+ "A1-10#0": [
+  "Each power is a row of copies of x being multiplied, so count all the copies.",
+  "There are 2 copies in x² and 5 copies in x⁵, which makes 2 + 5 = 7 copies.",
+  "Multiplying powers with the same base adds the exponents, so the answer is x⁷."
+ ],
+ "A1-10#1": [
+  "Think about what an exponent of zero means: no copies of 6 are multiplied at all.",
+  "Multiplying by nothing leaves the number that changes nothing in multiplication, which is 1.",
+  "Any nonzero number to the power 0 equals 1, so the answer is 1."
+ ],
+ "A1-10#2": [
+  "A negative exponent does not make the answer negative. It moves the power under a 1.",
+  "Rewrite the power as a fraction with 1 on top: 2⁻² = 1 ÷ 2².",
+  "Since 2² = 4, the value of the power is the fraction 1/4."
+ ],
+ "A1-10#3": [
+  "The bases are the same and the powers are multiplied, so think about what happens to the exponents.",
+  "Multiplying powers with the same base adds the exponents: 6 + 3 = 9.",
+  "So the product simplifies to x^9, a single power of x."
+ ],
+ "A1-10#4": [
+  "The bases are the same and the powers are divided, so some copies of x cancel.",
+  "Dividing powers with the same base subtracts the exponents: 8 − 2 = 6.",
+  "So the quotient simplifies to x^6, a single power of x."
+ ],
+ "A1-11#0": [
+  "After growing, you still have all of the original amount plus the extra part.",
+  "Keeping 100% and gaining 10% makes 110% of the original in all.",
+  "Written as a decimal, 110% is 1.10, so the yearly factor is 1.10."
+ ],
+ "A1-11#1": [
+  "Gaining the same amount every week is linear growth, which adds each step.",
+  "Find the followers gained in three weeks: 3 × 100 = 300.",
+  "Add the starting number of followers: 200 + 300 = 500 followers after 3 weeks."
+ ],
+ "A1-11#2": [
+  "This pattern grows by multiplying, so compare each term with the one before it.",
+  "Divide each term by the one before it: 12 ÷ 4 = 3 and 36 ÷ 12 = 3.",
+  "Every step multiplies by 3, so the growth factor is 3."
+ ],
+ "A1-11#3": [
+  "Check whether the pattern adds or multiplies by comparing neighbouring terms.",
+  "Each term is double the one before it, since 10 ÷ 5 = 2 and 20 ÷ 10 = 2.",
+  "Multiply the last term by 2: 40 × 2 = 80, so the next number is 80."
+ ],
+ "A1-11#4": [
+  "\"Triple\" means multiply by 3, so the rule for each step is already given.",
+  "Check the pattern: 2 × 3 = 6 and 6 × 3 = 18, so each step multiplies by 3.",
+  "Multiply the last term by 3: 18 × 3 = 54, so the next number is 54."
+ ],
+ "A1-12#0": [
+  "The minus sign in front of the second parentheses applies to every term inside.",
+  "Distribute the minus so both terms are subtracted: 4x + 6 − x − 2.",
+  "Combine like terms, letters with letters and numbers with numbers: 4x − x = 3x and 6 − 2 = 4.",
+  "Putting the parts together, the simplified expression is 3x + 4."
+ ],
+ "A1-12#1": [
+  "Multiply each term in the first bracket by each term in the second, like four patches of a rectangle.",
+  "The four products from multiplying each pair are x², 1x, 4x and 4.",
+  "Combine the two x-terms because they are like terms: 1x + 4x = 5x.",
+  "Adding all the pieces, the product is x² + 5x + 4."
+ ],
+ "A1-12#2": [
+  "Adding polynomials means combining the terms that have the same letter part.",
+  "Add the x-terms together by adding their coefficients: 2x + 4x = 6x.",
+  "Add the plain numbers together in the same way: 3 + 1 = 4.",
+  "Putting the two results together, the sum is 6x + 4."
+ ],
+ "A1-12#3": [
+  "Multiply every term in the first bracket by every term in the second, then combine like terms.",
+  "The four products from multiplying each pair are x·x = x², x·3 = 3x, 1·x = x and 1·3 = 3.",
+  "Combine the middle terms because they are like terms: 3x + x = 4x.",
+  "The product is x² + 4x + 3, which you type as x^2 + 4x + 3."
+ ],
+ "A1-13#0": [
+  "Factoring starts with the largest number that divides every term.",
+  "The greatest common factor of 4x and 8 is 4, because 4x = 4 × x and 8 = 4 × 2.",
+  "Pull the 4 out in front, so the factored form is 4(x + 2)."
+ ],
+ "A1-13#1": [
+  "Look for two numbers whose product is the last number and whose sum is the middle number.",
+  "The numbers must multiply to 8 and add to 6, and the pair 2 and 4 does both.",
+  "Put those numbers into the brackets, so the factored form is (x + 2)(x + 4)."
+ ],
+ "A1-13#2": [
+  "Find two numbers that multiply to the constant term and add to the number in front of x.",
+  "The numbers must multiply to 6 and add to 5, and the pair 2 and 3 does both.",
+  "Put those numbers into the brackets, so the factored form is (x + 2)(x + 3)."
+ ],
+ "A1-13#3": [
+  "Start with the pairs that multiply to 12, because there are only a few of them.",
+  "The factor pairs of 12 are 1 and 12, 2 and 6, and 3 and 4.",
+  "Only 3 + 4 equals 7, so the two numbers are 3 and 4."
+ ],
+ "A1-14#0": [
+  "Ask which number multiplied by itself gives 49, and remember there are two such numbers.",
+  "Both 7 × 7 and (−7) × (−7) equal 49, so the solutions are 7 and −7.",
+  "The question asks for the positive solution, which is 7."
+ ],
+ "A1-14#1": [
+  "When a product equals zero, at least one of the factors must be zero.",
+  "Set each factor equal to zero: x − 6 = 0 gives x = 6, and x + 2 = 0 gives x = −2.",
+  "The question asks for the positive solution, which is 6."
+ ],
+ "A1-14#2": [
+  "A graph crosses the x-axis at the points where y equals zero.",
+  "Set y to 0 to get x² − 4 = 0, then add 4 to both sides so that x² = 4.",
+  "The numbers whose square is 4 are 2 and −2, and the positive one is 2."
+ ],
+ "A1-14#3": [
+  "A parabola is symmetric, so its vertex sits exactly halfway between its two zeros.",
+  "Find the halfway point by averaging the zeros: (1 + 7) ÷ 2.",
+  "Since 8 ÷ 2 = 4, the x-value of the vertex is 4."
+ ],
+ "CALC-1#0": [
+  "A limit asks where the heights are heading near x = 1, not what happens at x = 1 itself. Try to simplify the fraction.",
+  "Factor the top: x² − 1 = (x − 1)(x + 1). Cancelling (x − 1) shows that away from x = 1 the graph is the line y = x + 1 with a hole.",
+  "Trace along that line toward x = 1: the heights head to 1 + 1 = 2.",
+  "So the limit of the function as x approaches 1 is 2."
+ ],
+ "CALC-1#1": [
+  "A two-sided limit exists when the values from the left and from the right close in on the same number.",
+  "The values in the left column, 4.9, 4.99, 4.999, climb toward 5.",
+  "The values in the right column, 5.1, 5.01, 5.001, fall toward 5.",
+  "Both sides agree, so the limit of h(x) as x approaches 3 is 5."
+ ],
+ "CALC-1#2": [
+  "The plus sign on 3⁺ means you approach from the right, so only x-values greater than 3 matter. Pick the rule for those values.",
+  "For x > 3 the rule is x + 2, so let x slide down to 3 in that rule: 3 + 2.",
+  "The right-hand limit is 5 (the left-hand limit is 6, so the two-sided limit does not exist)."
+ ],
+ "CALC-1#3": [
+  "An absolute value depends on the sign of what is inside. Decide the sign of x − 2 when x is to the left of 2.",
+  "For x < 2, the inside x − 2 is negative, so the absolute value flips its sign: |x − 2| = −(x − 2).",
+  "The fraction is then −(x − 2)/(x − 2) = −1 for every x on the left.",
+  "The values are always −1 on that side, so the left-hand limit is −1."
+ ],
+ "CALC-2#0": [
+  "Substituting x = 5 gives 0/0, which means the fraction should be simplified before taking the limit.",
+  "Factor the top as a difference of squares and cancel: (x − 5)(x + 5)/(x − 5) = x + 5.",
+  "Substitute x = 5 into what is left: 5 + 5 = 10, so the limit is 10."
+ ],
+ "CALC-2#1": [
+  "Substituting x = 0 gives 0/0. With a square root on top, multiplying by the conjugate clears the root.",
+  "Multiply top and bottom by the conjugate √(x + 9) + 3: the top becomes (x + 9) − 9 = x.",
+  "Cancel the x on top with the x on the bottom to get 1/(√(x + 9) + 3).",
+  "Substitute x = 0 into the simplified fraction: 1/(3 + 3) = 1/6, so the limit is 1/6."
+ ],
+ "CALC-2#2": [
+  "Substituting x = 1 gives 0/0, so look for a common factor of the top and the bottom.",
+  "Factor the top by finding two numbers that multiply to −4 and add to 3: x² + 3x − 4 = (x + 4)(x − 1).",
+  "Cancel the shared factor (x − 1) to leave x + 4.",
+  "Substitute x = 1 into what is left: 1 + 4 = 5, so the limit is 5."
+ ],
+ "CALC-2#3": [
+  "Substituting x = −2 gives 0/0, so look for a common factor of the top and the bottom.",
+  "Factor the top by finding two numbers that multiply to −6 and add to −1: x² − x − 6 = (x − 3)(x + 2).",
+  "Cancel the shared factor (x + 2) to leave x − 3.",
+  "Substitute x = −2 into what is left: −2 − 3 = −5, so the limit is −5."
+ ],
+ "CALC-3#0": [
+  "Continuous at x = 1 means the two pieces meet there: the left piece must arrive at the height where the right piece starts.",
+  "The left piece heads to 2(1) + k = 2 + k. The right piece gives the value 1² + 4 = 5.",
+  "Set the two heights equal and solve: 2 + k = 5.",
+  "Subtracting 2 from both sides gives the answer, k = 3."
+ ],
+ "CALC-3#1": [
+  "To fill a hole, give the function the value that the graph is heading toward, which is the limit at that point.",
+  "Factor and cancel: (x − 4)(x + 4)/(x − 4) = x + 4, so g(x) = x + 4 away from 4.",
+  "The limit of the function at 4 is therefore 4 + 4 = 8.",
+  "Define g(4) = 8 and the function becomes continuous."
+ ],
+ "CALC-3#2": [
+  "The Intermediate Value Theorem says a continuous function takes every value between two of its outputs.",
+  "Here h(2) = −3 is negative and h(3) = 2 is positive, so h changes sign between x = 2 and x = 3.",
+  "A continuous function cannot change sign without passing through 0.",
+  "So there is a root between 2 and 3 (it is √7 ≈ 2.65), and the integer is 3."
+ ],
+ "CALC-3#3": [
+  "A rational function is discontinuous wherever its bottom is zero, whether that makes a hole or an asymptote.",
+  "No factor of the bottom cancels with the top x + 3, so every zero of the bottom is a break.",
+  "The bottom (x − 2)(x + 5) is zero at x = 2 and at x = −5.",
+  "Those are two vertical asymptotes, so the function has 2 points of discontinuity."
+ ],
+ "CALC-4#0": [
+  "For a limit at infinity of a rational function, compare the highest powers on the top and the bottom.",
+  "The degrees are equal (both 2), so the lower powers stop mattering and only the leading terms 7x² and 2x² count.",
+  "Take the ratio of the leading coefficients: the limit is 7/2."
+ ],
+ "CALC-4#1": [
+  "For a limit at infinity of a rational function, compare the highest powers on the top and the bottom.",
+  "The top has degree 1 and the bottom has degree 3.",
+  "The bottom grows much faster than the top, so the fraction shrinks and the limit is 0."
+ ],
+ "CALC-4#2": [
+  "A vertical asymptote happens where the bottom of the fraction is zero while the top is not zero.",
+  "The bottom x − 5 is zero at x = 5, and the top is 6 there, not 0.",
+  "A nonzero top over a bottom that shrinks to 0 grows without bound.",
+  "The vertical asymptote is the line x = 5."
+ ],
+ "CALC-4#3": [
+  "The long-run cost is the limit as t grows without bound, so compare the highest powers of t on the top and the bottom.",
+  "The degrees are equal (both 1), so the constants 5 and 2 stop mattering.",
+  "Take the ratio of the leading coefficients: 40/1 = 40.",
+  "The cost settles toward 40 dollars per gadget."
+ ],
+ "CALC-5#0": [
+  "The average rate of change is the slope of the secant line through the two endpoints of the interval.",
+  "Find the values of the function at the endpoints: f(3) = 9 + 9 = 18 and f(1) = 1 + 3 = 4.",
+  "The slope of the secant is rise over run: (18 − 4)/(3 − 1) = 14/2.",
+  "Dividing gives 7, so the average rate of change is 7."
+ ],
+ "CALC-5#1": [
+  "The derivative at a point is the slope of the tangent line there. Find a formula for the derivative first.",
+  "From the limit definition (or the power rule) the derivative of x² is 2x.",
+  "Substitute x = 3 into the derivative: 2(3) = 6, so the slope at 3 is 6."
+ ],
+ "CALC-5#2": [
+  "A tangent line needs a point and a slope. The slope comes from the derivative at x = 3.",
+  "The point is (3, 9) because 3² = 9, and the slope is the derivative 2x at 3, which is 6.",
+  "Use point-slope form: y − 9 = 6(x − 3), which simplifies to y = 6x − 9.",
+  "The line crosses the y-axis at −9, so the y-intercept is −9."
+ ],
+ "CALC-5#3": [
+  "Velocity is the rate of change of position, so it is the derivative of the position function.",
+  "Differentiate the position with the power rule: the velocity is 10t.",
+  "Substitute t = 2 into the velocity: 10(2) = 20, so the velocity is 20 m/s."
+ ],
+ "CALC-6#0": [
+  "Use the power rule on each term: bring the exponent down in front and lower it by one.",
+  "The derivative of 4x³ is 12x² and the derivative of −5x is −5, so the derivative is 12x² − 5.",
+  "Substitute x = 2 into the derivative: 12(4) − 5 = 48 − 5 = 43, so the answer is 43."
+ ],
+ "CALC-6#1": [
+  "This is a product of two functions, x and eˣ, so the product rule is needed.",
+  "Product rule: the derivative is 1·eˣ + x·eˣ, the first times the derivative of the second plus the second times the derivative of the first.",
+  "At x = 0 this is e⁰ + 0·e⁰ = 1 + 0, so the answer is 1."
+ ],
+ "CALC-6#2": [
+  "This is one function divided by another, so use the quotient rule (or split the fraction first).",
+  "Quotient rule: the derivative is (2·x − (2x + 1)·1)/x², and the top simplifies to −1, giving −1/x².",
+  "Substitute x = 1 into the derivative: −1/1² = −1, so the answer is −1.",
+  "As a check, the function can be rewritten as 2 + 1/x, whose derivative −1/x² agrees."
+ ],
+ "CALC-6#3": [
+  "The slope of a curve at a point is the value of its derivative there.",
+  "The derivative of the natural log function ln x is 1/x.",
+  "Substitute x = 4: the slope of the curve there is 1/4."
+ ],
+ "CALC-7#0": [
+  "This is a power of an inside function, x² + 3, so use the chain rule.",
+  "Differentiate the outside power and multiply by the derivative of the inside: 4(x² + 3)³ · 2x.",
+  "At x = 1 the inside is 4, so the value is 4 · 4³ · 2 = 4 · 64 · 2.",
+  "Multiplying gives 512, so the derivative at x = 1 is 512."
+ ],
+ "CALC-7#1": [
+  "The sine has an inside function, 5x, so use the chain rule.",
+  "The derivative of the outside is cosine, and the derivative of the inside is 5, so the derivative is 5cos(5x).",
+  "At x = 0 this is 5 · cos 0 = 5 · 1, so the answer is 5."
+ ],
+ "CALC-7#2": [
+  "The exponent is 3x rather than x, so use the chain rule.",
+  "The exponential stays the same and is multiplied by the derivative of 3x, so the derivative is 3e^(3x).",
+  "At x = 0 this is 3 · e⁰ = 3 · 1, so the answer is 3."
+ ],
+ "CALC-7#3": [
+  "The slope is the derivative of tan x, which is sec²x, the same as 1/cos²x.",
+  "At the angle π/4 the cosine is √2/2, so its square is 1/2.",
+  "Dividing 1 by 1/2 gives 2, so the slope of the tangent curve there is 2."
+ ],
+ "CALC-8#0": [
+  "Differentiate both sides with respect to x. Because y depends on x, the y² term picks up a factor of dy/dx.",
+  "Differentiating gives 2x + 2y·dy/dx = 0, and solving for the slope gives dy/dx = −x/y.",
+  "Substitute the point (5, 12): the slope is −5/12."
+ ],
+ "CALC-8#1": [
+  "Differentiate both sides with respect to x. Because y depends on x, the y² term picks up a factor of dy/dx.",
+  "Differentiating both sides with the power rule gives 2y·dy/dx = 3x².",
+  "Divide by 2y to solve for the slope: dy/dx = 3x²/(2y).",
+  "Substitute the point (1, 1): 3(1)/(2·1) = 3/2, so the slope is 3/2."
+ ],
+ "CALC-8#2": [
+  "Write a formula linking the area and the side, then differentiate it with respect to time.",
+  "The area is A = s², so by the chain rule dA/dt = 2s·ds/dt.",
+  "Plug in s = 10 and ds/dt = 3: 2(10)(3) = 60, so the area grows at 60 cm²/s."
+ ],
+ "CALC-8#3": [
+  "Write a formula linking the area and the radius, then differentiate it with respect to time.",
+  "The area is A = πr², so by the chain rule dA/dt = 2πr·dr/dt.",
+  "Plug in the radius r = 4 and the rate dr/dt = 2: 2π(4)(2) = 16π in²/s.",
+  "The area is growing at 16π in²/s, which is about 50.3 in²/s."
+ ],
+ "CALC-9#0": [
+  "The Mean Value Theorem finds a point where the tangent slope equals the average rate of change over the interval.",
+  "The average rate of change is (36 − 0)/(6 − 0) = 6.",
+  "The derivative is 2x, so set 2c = 6 and solve.",
+  "Dividing by 2 gives c = 3, which lies inside the interval."
+ ],
+ "CALC-9#1": [
+  "A critical point is where the derivative is zero or undefined, so differentiate first.",
+  "The derivative is 2x − 8. Set it equal to zero: 2x − 8 = 0.",
+  "Adding 8 and dividing by 2 gives the critical point x = 4."
+ ],
+ "CALC-9#2": [
+  "On a closed interval, the absolute maximum is at a critical point inside the interval or at an endpoint.",
+  "The derivative −2x + 4 is zero at x = 2, which is inside the interval.",
+  "Evaluate the function at the critical point and at both endpoints: f(0) = 0, f(2) = −4 + 8 = 4, and f(5) = −25 + 20 = −5.",
+  "The biggest of these values is 4, so the absolute maximum value is 4."
+ ],
+ "CALC-9#3": [
+  "An inflection point is where the concavity changes, which is where the second derivative changes sign.",
+  "The first derivative is 3x² − 12x, so the second derivative is 6x − 12.",
+  "The second derivative is zero at x = 2, negative to the left and positive to the right, so the inflection point is at x = 2."
+ ],
+ "CALC-10#0": [
+  "Call the sides x and y. Use the perimeter to write the area with only one variable, then maximize it.",
+  "The perimeter gives 2x + 2y = 200, so y = 100 − x and the area is A = x(100 − x) = 100x − x².",
+  "Set the derivative to zero: 100 − 2x = 0 gives x = 50, so y is also 50.",
+  "The largest area is 50 × 50 = 2500 m², and the rectangle is a square."
+ ],
+ "CALC-10#1": [
+  "At rest means the velocity is zero, and velocity is the derivative of position.",
+  "The velocity is 2t − 4. Set it equal to zero: 2t − 4 = 0.",
+  "Adding 4 and dividing by 2 shows the particle is at rest at t = 2."
+ ],
+ "CALC-10#2": [
+  "Call one number x. The other is then 20 − x, so the product depends on x alone.",
+  "Multiplying the two numbers, the product is P = x(20 − x) = 20x − x².",
+  "Set the derivative to zero: 20 − 2x = 0 gives x = 10, so both numbers are 10.",
+  "So the largest possible product is 10 × 10 = 100."
+ ],
+ "CALC-10#3": [
+  "Acceleration is the derivative of velocity, and velocity is the derivative of position, so differentiate twice.",
+  "The velocity is 3t² − 3, so the acceleration is 6t.",
+  "Substitute t = 2 into the acceleration: 6(2) = 12, so the acceleration is 12."
+ ],
+ "CALC-11#0": [
+  "Split [0, 4] into 4 equal pieces. A left sum uses the height at the left end of each piece.",
+  "Each piece has width 1, and the left endpoints 0, 1, 2, 3 give heights 0, 1, 2, 3.",
+  "Add the heights and multiply by the width: (0 + 1 + 2 + 3) × 1 = 6, so the left sum is 6."
+ ],
+ "CALC-11#1": [
+  "Split [0, 4] into 4 equal pieces. A right sum uses the height at the right end of each piece.",
+  "Each piece has width 1, and the right endpoints 1, 2, 3, 4 give heights 1, 2, 3, 4.",
+  "Add the heights and multiply by the width: (1 + 2 + 3 + 4) × 1 = 10, so the right sum is 10."
+ ],
+ "CALC-11#2": [
+  "A definite integral of a function above the axis is the area under its graph. Sketch the line y = 2x from 0 to 4.",
+  "The region is a triangle with base 4 and height 2(4) = 8.",
+  "The area of the triangle is ½ × 4 × 8 = 16, so the integral is 16."
+ ],
+ "CALC-11#3": [
+  "A definite integral counts area below the x-axis as negative. Sketch the line y = x − 2 from 0 to 2.",
+  "The line runs from (0, −2) up to (2, 0), so the triangle sits below the axis, with base 2 and height 2. Its area is ½ × 2 × 2 = 2.",
+  "Area below the axis counts as negative, so the integral is −2."
+ ],
+ "CALC-12#0": [
+  "Use the Fundamental Theorem: find an antiderivative, then subtract its value at the lower limit from its value at the upper limit.",
+  "An antiderivative of 4x³ is x⁴, because the derivative of x⁴ is 4x³.",
+  "Evaluate at the limits: 1⁴ − 0⁴ = 1 − 0, so the integral is 1."
+ ],
+ "CALC-12#1": [
+  "Use the Fundamental Theorem: find an antiderivative, then subtract its value at the lower limit from its value at the upper limit.",
+  "An antiderivative of 2x is x², because the derivative of x² is 2x.",
+  "Evaluate at the limits: 3² − 1² = 9 − 1, so the integral is 8."
+ ],
+ "CALC-12#2": [
+  "Work backward from the derivative to the function, then use the known value to find the constant.",
+  "An antiderivative of 3x² is x³, so f(x) = x³ + C, and f(0) = 7 gives C = 7.",
+  "Substitute x = 2 into the formula x³ + 7: 8 + 7 = 15, so the value f(2) is 15."
+ ],
+ "CALC-12#3": [
+  "Use the Fundamental Theorem: find an antiderivative of sin x, then evaluate it at π and at 0.",
+  "An antiderivative of sin x is −cos x, because the derivative of cos x is −sin x.",
+  "Evaluate at the limits: −cos π − (−cos 0) = 1 + 1, so the integral is 2."
+ ],
+ "CALC-13#0": [
+  "The factor 3x² is the derivative of the inside function x³ + 1, so a substitution will work.",
+  "Let u = x³ + 1, so du = 3x² dx. The limits become u = 1 and u = 2, and the integral is that of u² from 1 to 2.",
+  "An antiderivative of u² is u³/3. Evaluating from 1 to 2 gives 8/3 − 1/3 = 7/3, so the integral is 7/3."
+ ],
+ "CALC-13#1": [
+  "The cosine has an inside function, 5x, so the antiderivative needs a factor to undo the chain rule.",
+  "An antiderivative of cos(5x) is (1/5) sin(5x), since differentiating it brings back the 5.",
+  "Evaluate at the limits: (1/5) sin(π/2) − (1/5) sin 0 = 1/5 − 0, so the integral is 1/5."
+ ],
+ "CALC-13#2": [
+  "Find where the two graphs cross, decide which is on top, then integrate top minus bottom.",
+  "Setting x² = 4 gives crossings at x = −2 and x = 2, and between them the line y = 4 is on top.",
+  "The area is the integral of (4 − x²) from −2 to 2, with antiderivative 4x − x³/3.",
+  "Evaluating gives (8 − 8/3) − (−8 + 8/3) = 32/3, so the area is 32/3."
+ ],
+ "CALC-13#3": [
+  "Decide which graph is on top on the interval, then integrate top minus bottom.",
+  "On (0, 1) the line y = x is above y = x³ (for example 0.5 is bigger than 0.125).",
+  "The integral of (x − x³) from 0 to 1 uses the antiderivative x²/2 − x⁴/4 and gives 1/2 − 1/4 = 1/4, so the area is 1/4."
+ ],
+ "CALC-14#0": [
+  "Revolving a region around the x-axis makes discs. The volume adds up the areas of the discs along the interval.",
+  "Every disc has radius 2, so each has area π × 2² = 4π.",
+  "The area is constant over a length of 5, so the volume is 4π × 5 = 20π, which is about 62.83."
+ ],
+ "CALC-14#1": [
+  "Revolving a region around the x-axis makes discs whose radius is the height of the curve, here y = x.",
+  "Each disc has area π × x², so the volume is π times the integral of x² from 0 to 2, which is π × 8/3.",
+  "The volume is 8π/3, which is about 8.38."
+ ],
+ "CALC-14#2": [
+  "For a solid with known cross-sections, the volume is the integral of the cross-section area.",
+  "The side of each square is the height of the region, which is x, so the area of a slice is x².",
+  "The integral of x² from 0 to 3 is 3³/3 = 27/3, so the volume is 9."
+ ],
+ "CALC-14#3": [
+  "The average value of a function on an interval is its integral divided by the length of the interval.",
+  "The integral of 2x from 0 to 4 uses the antiderivative x² and equals 16 − 0 = 16.",
+  "Divide by the length of the interval: 16/4 = 4, so the average value is 4."
+ ],
+ "GEO-1#0": [
+  "S lies between R and T, so the two shorter segments join to make the whole segment RT.",
+  "Segment Addition gives RS + ST = RT, so add the two lengths: 9 + 14.",
+  "9 + 14 = 23, so the whole segment RT is 23 units long."
+ ],
+ "GEO-1#1": [
+  "The midpoint of a segment on a number line is the average of the two endpoint coordinates.",
+  "Add the coordinates and divide by 2: (−6 + 10)/2 = 4/2.",
+  "4/2 = 2, so the midpoint is at the coordinate 2."
+ ],
+ "GEO-1#2": [
+  "B is between A and C, so the two parts AB and BC add up to the whole length AC.",
+  "Put in the known lengths: AB + 17 = 41, so subtract 17 from 41.",
+  "41 − 17 = 24, so the missing part AB is 24 units long."
+ ],
+ "GEO-1#3": [
+  "The distance between two points on a number line is the absolute value of the difference of their coordinates.",
+  "Subtract the coordinates: 7 − (−5) = 7 + 5, because subtracting a negative means adding.",
+  "7 + 5 = 12, so the length PQ is 12 units."
+ ],
+ "GEO-2#0": [
+  "Two angles are supplementary when their measures add to 180°, a straight angle.",
+  "Subtract the known angle from the total: work out 180 − 72.",
+  "180 − 72 = 108, so the supplement of angle P measures 108°."
+ ],
+ "GEO-2#1": [
+  "Ray QS splits angle PQR into two smaller angles, and those two parts add up to the whole angle.",
+  "Angle addition gives 31 + angle SQR = 90, so subtract 31 from 90.",
+  "90 − 31 = 59, so the other part, angle SQR, measures 59°."
+ ],
+ "GEO-2#2": [
+  "Vertical angles are the two angles across from each other where two lines cross.",
+  "Vertical angles are always congruent, so no calculation is needed here.",
+  "The angle vertical to the 143° angle also measures 143°."
+ ],
+ "GEO-2#3": [
+  "Two angles are complementary when their measures add to 90°, a right angle.",
+  "Subtract the known angle from that total: work out 90 − 44.",
+  "90 − 44 = 46, so the complement of the angle measures 46°."
+ ],
+ "GEO-3#0": [
+  "Alternate exterior angles lie outside the parallel lines, on opposite sides of the transversal.",
+  "When the lines are parallel, alternate exterior angles are congruent, so the two measures are equal.",
+  "The alternate exterior partner of the 47° angle also measures 47°."
+ ],
+ "GEO-3#1": [
+  "Co-interior angles lie between the parallel lines on the same side of the transversal.",
+  "With parallel lines they are supplementary, so 118 + y = 180. Subtract 118 from 180.",
+  "180 − 118 = 62, so the other angle gives a value of y = 62."
+ ],
+ "GEO-3#2": [
+  "Corresponding angles sit in the same position at each of the two crossings.",
+  "When the lines are parallel, corresponding angles are congruent, so their measures match.",
+  "The corresponding angle therefore also measures 105°."
+ ],
+ "GEO-3#3": [
+  "A transversal across parallel lines makes only two angle sizes: one acute size and its supplement.",
+  "The acute size is 55°, so the obtuse size is its supplement: work out 180 − 55.",
+  "180 − 55 = 125, so the obtuse angle at the second avenue is 125°."
+ ],
+ "GEO-4#0": [
+  "A conditional has the form \"if p, then q\", and its related statements come from swapping or negating the parts.",
+  "Negating both parts gives the inverse, and swapping plus negating gives the contrapositive.",
+  "Swapping the hypothesis and conclusion with no negating gives the converse."
+ ],
+ "GEO-4#1": [
+  "The related statements of \"if p, then q\" are the converse, the inverse and the contrapositive.",
+  "The contrapositive swaps the two parts and negates both, giving \"if not q, then not p\".",
+  "It is logically equivalent to the original, so the answer is the contrapositive."
+ ],
+ "GEO-4#2": [
+  "Look for a shared quantity: angle B appears in both of the given equations.",
+  "Angle B links the two equations, so angle A and angle C must be equal to each other.",
+  "Chaining equalities through a middle term is the Transitive Property."
+ ],
+ "GEO-4#3": [
+  "A general claim says something is true in every case that fits its hypothesis.",
+  "One case that fits the hypothesis but breaks the conclusion is enough to show the claim is false.",
+  "An example like that is called a counterexample."
+ ],
+ "GEO-5#0": [
+  "Congruence criteria are named by listing the matching parts, using S for a side and A for an angle.",
+  "Here three pairs of sides match and no angles are used, so write one S for each pair.",
+  "Three pairs of equal sides is the SSS criterion."
+ ],
+ "GEO-5#1": [
+  "List the matching parts in the order you meet them going around the triangle.",
+  "There are two pairs of equal angles, and the equal side is not between them, so the order is angle, angle, side.",
+  "Two angles and a non-included side is the AAS criterion."
+ ],
+ "GEO-5#2": [
+  "The order of the letters in a congruence statement shows which parts match.",
+  "B pairs with Y and C pairs with Z, so side YZ corresponds to side BC.",
+  "Corresponding parts of congruent triangles are congruent, so YZ = 9 cm."
+ ],
+ "GEO-5#3": [
+  "Once two triangles are proven congruent, every pair of matching sides and angles is congruent too.",
+  "The reason is written out as \"Corresponding Parts of Congruent Triangles are Congruent\".",
+  "Taking the first letter of each main word gives the abbreviation CPCTC."
+ ],
+ "GEO-6#0": [
+  "The three interior angles of any triangle add to 180°.",
+  "Add the two known angles first: 35 + 85 = 120.",
+  "Subtract from the total: 180 − 120 = 60, so angle C is 60°."
+ ],
+ "GEO-6#1": [
+  "In an isosceles triangle the two base angles, opposite the equal sides, are equal.",
+  "Call each base angle x. The angle sum gives 30 + 2x = 180, so 2x = 150.",
+  "Dividing by 2 gives x = 75, so each base angle is 75°."
+ ],
+ "GEO-6#2": [
+  "A segment joining the midpoints of two sides of a triangle is called a midsegment.",
+  "A midsegment is parallel to the third side and half as long, so MN is half of QR.",
+  "24 ÷ 2 = 12, so the midsegment MN is 12 cm long."
+ ],
+ "GEO-6#3": [
+  "An exterior angle of a triangle equals the sum of the two remote interior angles.",
+  "So 45 plus the other remote angle equals 130. Subtract 45 from 130.",
+  "130 − 45 = 85, so the other remote interior angle is 85°."
+ ],
+ "GEO-7#0": [
+  "The scale factor is the ratio of a side in the new triangle to the matching side in the original.",
+  "AB matches PQ, so divide the new length by the original length: 15 ÷ 5.",
+  "15 ÷ 5 = 3, so the scale factor is 3 and every length triples."
+ ],
+ "GEO-7#1": [
+  "Similar triangles have matching sides in the same ratio. AB matches DE, and BC matches EF.",
+  "Find the scale factor from the known pair: 12/8 = 1.5.",
+  "Multiply BC by the scale factor: EF = 10 × 1.5 = 15."
+ ],
+ "GEO-7#2": [
+  "Similarity criteria are named by the matching parts, and here only angles are known.",
+  "Both triangles have a 40° angle and a 75° angle, so two pairs of angles are equal.",
+  "Two pairs of equal angles is enough, and this is AA similarity."
+ ],
+ "GEO-7#3": [
+  "The sun hits the child and the tree at the same angle, so the two shadow triangles are similar.",
+  "Match height to shadow in a proportion: 5/3 = h/27.",
+  "Multiply both sides by 27: h = 27 × 5/3 = 45, so the tree is 45 ft tall."
+ ],
+ "GEO-8#0": [
+  "The Pythagorean theorem links the sides of a right triangle: leg² + leg² = hypotenuse².",
+  "Square each leg and add the results: 9² + 12² = 81 + 144 = 225.",
+  "Take the square root: √225 = 15, so the hypotenuse is 15 units long."
+ ],
+ "GEO-8#1": [
+  "The diagonal splits the screen into two right triangles, with the width and height as the legs.",
+  "Use the Pythagorean theorem to square and add the legs: 36² + 15² = 1296 + 225 = 1521.",
+  "Take the square root: √1521 = 39, so the diagonal is 39 in long."
+ ],
+ "GEO-8#2": [
+  "The distance between two points is the hypotenuse of a right triangle whose legs are the horizontal and vertical gaps.",
+  "The horizontal gap is 3 − (−2) = 5 and the vertical gap is 13 − 1 = 12.",
+  "Use the Pythagorean theorem: d = √(25 + 144) = √169 = 13, so the distance is 13 units."
+ ],
+ "GEO-8#3": [
+  "A 45-45-90 triangle has two equal legs, and its sides follow a fixed pattern.",
+  "In this pattern the hypotenuse is always the leg length times √2.",
+  "The leg is 10 cm, so the hypotenuse is 10√2 cm, which is about 14.14 cm."
+ ],
+ "GEO-9#0": [
+  "The sine of an angle in a right triangle is the opposite side divided by the hypotenuse.",
+  "The opposite side is 3 and the hypotenuse is 5, so the sine is 3/5.",
+  "Dividing 3 by 5 gives 0.6, so the sine of the angle is 0.6."
+ ],
+ "GEO-9#1": [
+  "The cosine of an angle in a right triangle is the adjacent side divided by the hypotenuse.",
+  "Here the adjacent side is 8 and the hypotenuse is 17, so put 8 over 17.",
+  "The fraction cannot be simplified, so the cosine of the angle is 8/17."
+ ],
+ "GEO-9#2": [
+  "The memory aid SOH-CAH-TOA lists which two sides each ratio uses.",
+  "SOH is sine = opposite/hypotenuse, and CAH is cosine = adjacent/hypotenuse, so neither one matches.",
+  "TOA is tangent = opposite/adjacent, so the ratio is tangent."
+ ],
+ "GEO-9#3": [
+  "The ramp, the ground and the height form a right triangle. The ramp is the hypotenuse and the height is opposite the 30° angle.",
+  "Opposite and hypotenuse go with sine, so sin 30° = h/12, which gives h = 12 × sin 30°.",
+  "Since sin 30° = 0.5, h = 12 × 0.5 = 6, so the top end is 6 ft high."
+ ],
+ "GEO-10#0": [
+  "The interior angles of a polygon with n sides add to (n − 2) × 180°.",
+  "A pentagon has 5 sides, so the sum is (5 − 2) × 180 = 3 × 180.",
+  "3 × 180 = 540, so the interior angles add to 540°."
+ ],
+ "GEO-10#1": [
+  "Angles P and Q are next to each other, and consecutive angles of a parallelogram are supplementary.",
+  "That means 110 + angle Q = 180, so subtract 110 from 180.",
+  "180 − 110 = 70, so the neighboring angle Q of the parallelogram measures 70°."
+ ],
+ "GEO-10#2": [
+  "The exterior angles of any convex polygon add up to 360°, one full turn.",
+  "A regular polygon has equal exterior angles, so divide 360 by the 9 sides.",
+  "360 ÷ 9 = 40, so each exterior angle of the polygon measures 40°."
+ ],
+ "GEO-10#3": [
+  "The midsegment of a trapezoid joins the midpoints of the two non-parallel sides.",
+  "Its length is the average of the two parallel sides: (8 + 14)/2 = 22/2.",
+  "22/2 = 11, so the midsegment is 11 in long."
+ ],
+ "GEO-11#0": [
+  "An inscribed angle measures half of the arc it intercepts.",
+  "So the arc is twice the inscribed angle: multiply 35 by 2.",
+  "35 × 2 = 70, so the intercepted arc of the angle measures 70°."
+ ],
+ "GEO-11#1": [
+  "Arc length is a fraction of the whole circumference, and the fraction is the central angle over 360°.",
+  "The circumference is 2π(6) = 12π, and 120/360 = 1/3 of the circle.",
+  "One third of 12π is 4π, so the arc length is 4π units."
+ ],
+ "GEO-11#2": [
+  "A tangent line touches a circle at exactly one point, called the point of tangency.",
+  "A theorem says the radius drawn to the point of tangency is perpendicular to the tangent line.",
+  "Perpendicular lines meet at right angles, so the angle is 90°."
+ ],
+ "GEO-11#3": [
+  "A sector is a fraction of the whole circle, and the fraction is the central angle over 360°.",
+  "The whole circle has area π(4²) = 16π, and 90/360 = 1/4 of the circle.",
+  "One quarter of 16π is 4π, so the sector has an area of 4π cm²."
+ ],
+ "GEO-12#0": [
+  "The area of a triangle is half of the base times the height.",
+  "Multiply the base and the height first: 14 × 10 = 140.",
+  "Half of 140 is 70, so the area is 70 cm²."
+ ],
+ "GEO-12#1": [
+  "The area of a circle is A = πr², where r is the radius.",
+  "Square the radius first: 5² = 25, so the area is A = π × 25.",
+  "The exact area of the tabletop is 25π m²."
+ ],
+ "GEO-12#2": [
+  "The area of a trapezoid is half the sum of the parallel sides, times the height.",
+  "Add the parallel sides, 6 + 10 = 16, and take half to get an average width of 8.",
+  "Multiply by the height: 8 × 4 = 32, so the area is 32 square inches."
+ ],
+ "GEO-12#3": [
+  "Perimeter is the total distance around the outside of a shape.",
+  "A rectangle has two sides of each length: P = 2(8) + 2(5) = 16 + 10.",
+  "16 + 10 = 26, so the perimeter of the quilt is 26 ft."
+ ],
+ "GEO-13#0": [
+  "The volume of a cube is its edge length multiplied by itself three times.",
+  "Set up the product V = 5 × 5 × 5, and start with 5 × 5 = 25.",
+  "25 × 5 = 125, so the volume of the cube is 125 cm³."
+ ],
+ "GEO-13#1": [
+  "The volume of a cylinder is the area of its circular base times its height: V = πr²h.",
+  "The base area is π × 2² = 4π, so the volume is V = 4π × 7.",
+  "4 × 7 = 28, so the volume of the cylinder is 28π m³."
+ ],
+ "GEO-13#2": [
+  "A cone holds exactly one third as much as a cylinder with the same base and height.",
+  "The matching cylinder holds 60 cm³, so divide that volume by 3.",
+  "60 ÷ 3 = 20, so the volume of the cone is 20 cm³."
+ ],
+ "GEO-13#3": [
+  "When every length is multiplied by k, every area is multiplied by k², because area uses two dimensions.",
+  "Every length doubles here, so k = 2 and the area factor is 2².",
+  "2² = 4, so the surface area becomes 4 times as large."
+ ],
+ "GEO-14#0": [
+  "The y-axis is a vertical mirror line, so a reflection across it moves a point left or right only.",
+  "The rule is (x, y) → (−x, y): change the sign of x and keep y.",
+  "The opposite of −3 is 3, so the image is the point (3, 7)."
+ ],
+ "GEO-14#1": [
+  "A 180° rotation about the origin sends a point to the opposite side of the origin.",
+  "The rule is (x, y) → (−x, −y), so change the sign of both coordinates.",
+  "2 becomes −2 and −6 becomes 6, so the image is the point (−2, 6)."
+ ],
+ "GEO-14#2": [
+  "The midpoint of a segment is found by averaging the x-coordinates and averaging the y-coordinates.",
+  "For the x-coordinate, (2 + 8)/2 = 5. For the y-coordinate, (5 + 11)/2 = 8.",
+  "Putting the two averages together, the midpoint is the point (5, 8)."
+ ],
+ "GEO-14#3": [
+  "Slope is the change in y divided by the change in x between two points on the line.",
+  "Subtract in the same order for both: m = (9 − 1)/(4 − 0) = 8/4.",
+  "8/4 = 2, so the slope of the line is 2."
+ ],
+ "PC-1#0": [
+  "A number outside the bars changes heights, so think about what happens to the point of the V at (0, 0).",
+  "The −4 is outside the bars, so every point drops 4, and the point moves from (0, 0) to (0, −4).",
+  "The y-coordinate of the point of the V is −4."
+ ],
+ "PC-1#1": [
+  "The lowest point of a parabola is where the squared part equals zero.",
+  "Set the inside to zero: x + 4 = 0. A PLUS inside moves the graph LEFT.",
+  "Solving gives x = −4, so the lowest point has x-coordinate −4."
+ ],
+ "PC-1#2": [
+  "The minus in front flips the V upside down, so its tip is now the top of the graph.",
+  "The tip is at x = 0, where y = −0 + 7 = 7, and every other x gives less.",
+  "The greatest y-value the graph reaches is 7."
+ ],
+ "PC-2#0": [
+  "Work from the inside out: the inside function g goes first.",
+  "The inside function adds 1 to its input, so g(3) = 3 + 1 = 4.",
+  "Then the outside function doubles that result: f(4) = 2 × 4 = 8, so f(g(3)) = 8."
+ ],
+ "PC-2#1": [
+  "The inverse is the undo machine, so think about how to reverse what f does.",
+  "Since f adds 9, the undo machine subtracts 9 from its input.",
+  "Subtracting gives 20 − 9 = 11, so the answer is f⁻¹(20) = 11."
+ ],
+ "PC-2#2": [
+  "Undo the steps in reverse order: shipping was added last, so remove it first.",
+  "Take off shipping: 45 − 5 = 40. That 40 dollars is 80% of the original price.",
+  "Dividing gives 40 ÷ 0.8 = 50, so the original price was 50 dollars."
+ ],
+ "PC-3#0": [
+  "A product is zero when one of its factors is zero, so look at each factor.",
+  "Each factor gives one zero: x = 1, x = 4, and x = −3.",
+  "All three are different, so there are 3 real zeros."
+ ],
+ "PC-3#1": [
+  "Look at the exponent on each factor to see how the graph behaves at that zero.",
+  "The exponent on (x − 3) is 2, which is even, and even multiplicity means the graph touches and bounces.",
+  "The graph bounces off the x-axis at x = 3."
+ ],
+ "PC-3#2": [
+  "Substitute x = 2 and follow the order of operations, starting inside the parentheses.",
+  "Inside the parentheses: 12 − 2(2) = 8. Then square it: 8² = 64.",
+  "Multiply by x: 2 × 64 = 128, so the volume is 128 cubic inches."
+ ],
+ "PC-4#0": [
+  "Try some big values of n and watch what happens to each person's share.",
+  "With 120 friends each pays 1 dollar, and with 1200 friends each pays 10 cents, so the share keeps shrinking.",
+  "The cost heads toward 0, which is the horizontal asymptote."
+ ],
+ "PC-4#1": [
+  "Compare the degree of the top with the degree of the bottom.",
+  "The top has degree 1 and the bottom has degree 2, so the bottom grows faster and squashes the fraction.",
+  "The fraction shrinks toward zero, so the asymptote is y = 0."
+ ],
+ "PC-4#2": [
+  "Before counting bottom factors, check whether any of them cancels with the top.",
+  "The (x + 2) cancels, so x = −2 is a hole, and what is left on the bottom is (x − 1)(x − 7).",
+  "That leaves 2 vertical asymptotes, at x = 1 and x = 7."
+ ],
+ "PC-5#0": [
+  "In an exponential rule, the growth factor is the number you multiply by at each step.",
+  "That number is the base, which is the number raised to the power x.",
+  "The base here is 1.5, so the growth factor is 1.5."
+ ],
+ "PC-5#1": [
+  "A decay factor describes what STAYS each hour, not what leaves.",
+  "If 20% leaves, then 100% − 20% = 80% stays in the bloodstream.",
+  "Written as a decimal, 80% is 0.8, so the decay factor is 0.8."
+ ],
+ "PC-5#2": [
+  "Gaining 10% each week means multiplying by a growth factor of 1.1 every week.",
+  "After the first week you have 200 × 1.1 = 220 followers.",
+  "After the second week you have 220 × 1.1 = 242 followers."
+ ],
+ "PC-5#3": [
+  "Keep halving 12 and watch where the values are heading.",
+  "The values shrink toward zero (12, 6, 3, 1.5, 0.75 …) but half of a positive number is still positive, so they never reach it.",
+  "The line the graph hugs is the asymptote y = 0."
+ ],
+ "PC-6#0": [
+  "A log asks a question: 5 to what power gives 125?",
+  "Multiply fives until you reach it: 5 × 5 × 5 = 125, which uses three fives.",
+  "So the power is 3, and log base 5 of 125 equals 3."
+ ],
+ "PC-6#1": [
+  "Each fold doubles the layers, so this asks for log base 2 of 1024.",
+  "Double from 1 and count each step: 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024.",
+  "That is ten doublings, so it takes 10 folds."
+ ],
+ "PC-6#2": [
+  "Subtracting logs with the same base means dividing the numbers inside.",
+  "Divide inside to get one log: 96 ÷ 3 = 32, so the expression is log base 2 of 32.",
+  "Because 2⁵ = 32, the log equals 5, which is the answer."
+ ],
+ "PC-6#3": [
+  "The pH scale is a log scale, so count the steps between the two values.",
+  "There are 7 − 2 = 5 steps, and each step down is 10 times more acidic.",
+  "Five steps give 10⁵ = 100,000, so lemon juice is 100,000 times more acidic."
+ ],
+ "PC-7#0": [
+  "Write 625 as a power of 5 so that both sides share a base.",
+  "Multiply by 5 and count: 5, 25, 125, 625, which takes four fives, so 625 = 5⁴.",
+  "Matching the exponents on both sides gives x = 4."
+ ],
+ "PC-7#1": [
+  "Write 16 as a power of 2 so that both sides share a base.",
+  "Since 16 = 2⁴, the equation becomes 2^(x+1) = 2⁴, and the exponents must match: x + 1 = 4.",
+  "Subtracting 1 from both sides gives the answer x = 3."
+ ],
+ "PC-7#2": [
+  "Count how many halvings take 400 mg down to 25 mg, then turn halvings into hours.",
+  "Halving step by step, 400 → 200 → 100 → 50 → 25, takes 4 halvings.",
+  "Each halving takes 4 hours, so the time is 4 × 4 = 16 hours."
+ ],
+ "PC-7#3": [
+  "Divide the target by the start to see how many doublings are needed.",
+  "The growth needed is 10,000 ÷ 1250 = 8, and 8 = 2³, so that is 3 doublings.",
+  "Each doubling takes 10 years, so the town needs 3 × 10 = 30 years."
+ ],
+ "PC-8#0": [
+  "In a 30-60-90 triangle, the side opposite 30° has a fixed link to the hypotenuse.",
+  "That side is always half the hypotenuse, so work out 12 ÷ 2.",
+  "Half of 12 is 6, so the side opposite 30° is 6 long."
+ ],
+ "PC-8#1": [
+  "The three angles of any triangle add up to 180°.",
+  "The right angle takes 90°, leaving 90° for the other two angles to share.",
+  "Subtracting gives 90 − 55 = 35, so the third angle is 35°."
+ ],
+ "PC-8#2": [
+  "The string is the hypotenuse and the height is opposite the angle, so use sine.",
+  "Sine is opposite over hypotenuse: sin = 20 ÷ 40 = 1/2.",
+  "The angle whose sine is 1/2 is 30°, so the string makes a 30° angle with the ground."
+ ],
+ "PC-8#3": [
+  "The hypotenuse sits across from the right angle of the triangle.",
+  "Because it faces the biggest angle, it is always the longest side.",
+  "The longest of 3, 4, 5 is 5, so the hypotenuse is 5."
+ ],
+ "PC-9#0": [
+  "Use the swap rule between the two units: π radians = 180°.",
+  "The angle π/2 is half of π, so take half of 180°.",
+  "Half of 180° is 90°, so π/2 radians is the same as 90°."
+ ],
+ "PC-9#1": [
+  "Think of sin 30° as the height of the short leg in a 30-60-90 triangle with hypotenuse 1.",
+  "Slice an equilateral triangle with side 1 down the middle: the short leg is exactly 1/2.",
+  "That short leg is the height at 30°, so sin 30° = 1/2 and n = 2."
+ ],
+ "PC-9#2": [
+  "Cosine is the across number and sine is the up number of the point on the circle.",
+  "Negative across means left of centre, and negative up means below centre.",
+  "Left and below is the bottom-left slice, which is Quadrant 3 (180°–270°)."
+ ],
+ "PC-10#0": [
+  "The amplitude is the number multiplying the sine, not the number added at the end.",
+  "The number in front of the sine here is 7, while the 2 only sets the midline.",
+  "The amplitude is 7, so the wave swings 7 above and 7 below the midline y = 2."
+ ],
+ "PC-10#1": [
+  "The period is 360° divided by b, the number in front of x inside the cosine.",
+  "Here b = 4, so the period is 360 ÷ 4 degrees.",
+  "Dividing gives 360 ÷ 4 = 90, so one full wave takes 90°."
+ ],
+ "PC-10#2": [
+  "Amplitude is half the gap between the highest and lowest values of the wave.",
+  "The gap from longest to shortest day is 16 − 8 = 8 hours.",
+  "Half that gap is 8 ÷ 2 = 4, so the amplitude is 4 hours (around a midline of 12 hours)."
+ ],
+ "PC-11#0": [
+  "Tangent can be built from the other two: tan θ = sin θ ÷ cos θ.",
+  "Put in the given values to get tan θ = 0.6 ÷ 0.8.",
+  "That is the same as 6/8 = 3/4, so tan θ = 0.75."
+ ],
+ "PC-11#1": [
+  "Sine is the height of the point, so picture a flat line at height 0.5 across the unit circle.",
+  "The line cuts the circle in two places: one going up and one coming down.",
+  "So there are 2 solutions, at 30° and 150°."
+ ],
+ "PC-11#2": [
+  "Tangent is sin θ ÷ cos θ, so ask where else that fraction has the same value.",
+  "Flipping the sign of BOTH sin θ and cos θ leaves the fraction unchanged, and that happens half a turn away.",
+  "Adding half a turn gives 45 + 180 = 225, so the other answer is 225°."
+ ],
+ "PC-12#0": [
+  "Two sides and the angle between them (SAS) call for the Law of Cosines.",
+  "Set up c² = 25 + 256 − 2(5)(16)cos 120°, and use the value cos 120° = −0.5.",
+  "Subtracting a negative ADDS, so the equation becomes c² = 281 + 80 = 361.",
+  "Taking the square root gives c = √361 = 19 km."
+ ],
+ "PC-12#1": [
+  "With three sides known, use the Law of Cosines with 13 as the side across from the angle.",
+  "This gives 169 = 25 + 144 − 2(5)(12)cos C, which is 169 = 169 − 120 cos C.",
+  "So 120 cos C = 0, which means that cos C = 0.",
+  "The angle with cosine 0 is 90°, so it is a right triangle."
+ ],
+ "PC-12#2": [
+  "The two paths and the gap between their ends form a triangle, so use the Law of Cosines.",
+  "Set up c² = 900 + 6400 − 2(30)(80)(0.5) = 7300 − 2400, using the value cos 60° = 0.5.",
+  "That gives c² = 4900, and the square root of 4900 is 70.",
+  "The far ends of the paths are 70 m apart."
+ ],
+ "PC-13#0": [
+  "The same number of seats is added each row, so this is an arithmetic sequence with first term 12 and d = 3.",
+  "Row 20 is 19 jumps after row 1, and 19 × 3 = 57 extra seats.",
+  "Adding gives 12 + 57 = 69, so row 20 has 69 seats."
+ ],
+ "PC-13#1": [
+  "Pair the ends of the list: 1 + 100 = 101, 2 + 99 = 101, and so on.",
+  "Every pair makes 101, and 100 numbers make 50 pairs.",
+  "Multiplying gives 50 × 101 = 5050, so the sum is 5050."
+ ],
+ "PC-13#2": [
+  "Use the geometric rule: term n = 3 × 2^(n−1), so term 8 uses the exponent 7.",
+  "Seven doublings in a row give the power 2^7 = 128.",
+  "Multiplying gives 3 × 128 = 384, so the eighth term is 384."
+ ],
+ "PC-14#0": [
+  "Substituting gives 0 ÷ 0, which is a signal to factor the top.",
+  "The top factors as (x − 2)(x − 5), and the (x − 2) cancels with the bottom, leaving x − 5.",
+  "Substitute into what is left: 2 − 5 = −3, so the limit is −3."
+ ],
+ "PC-14#1": [
+  "Watch the piece 6 ÷ t and ask what happens to it when t becomes huge.",
+  "A fixed top over a growing bottom fades: 6 ÷ 60 = 0.1, then 6 ÷ 600 = 0.01, so that piece heads to 0.",
+  "So the temperature heads to 18 + 0 = 18 degrees."
+ ],
+ "PC-14#2": [
+  "Average rate of change is rise over run between the two points on the graph.",
+  "The heights are f(1) = 1 and f(4) = 16, so the rise is 16 − 1 = 15 and the run is 4 − 1 = 3.",
+  "Dividing gives 15 ÷ 3 = 5, so the average rate of change is 5."
+ ],
+ "SAT-1#0": [
+  "Undo the operations on x in reverse order: the subtraction first, then the multiplication.",
+  "Add 5 to both sides to get 7x = 35.",
+  "Divide both sides by 7 to get 35 ÷ 7 = 5.",
+  "The solution of the equation is x = 5."
+ ],
+ "SAT-1#1": [
+  "Remove the brackets first, then collect the x terms on one side.",
+  "Distribute the 3 over the bracket to get 3x + 12 = x + 20.",
+  "Subtract x and subtract 12 from both sides, which leaves 2x = 8.",
+  "Divide by 2, so the answer is x = 4."
+ ],
+ "SAT-1#2": [
+  "Infinitely many solutions means the two sides are exactly the same expression.",
+  "The constants already match, since both sides end in + 3.",
+  "The x terms must match as well, so ax has to equal 4x.",
+  "That happens when a = 4, so the answer is 4."
+ ],
+ "SAT-1#3": [
+  "Undo the addition first, then undo the multiplication by 2.",
+  "Subtract 9 from both sides to get 2x = −10.",
+  "Divide both sides by 2, which gives −10 ÷ 2 = −5.",
+  "The solution of the equation is x = −5."
+ ],
+ "SAT-2#0": [
+  "Slope is the change in y divided by the change in x.",
+  "The rise is 14 − 2 = 12 and the run is 5 − 1 = 4.",
+  "Divide rise by run: 12 ÷ 4 = 3, so the slope is 3."
+ ],
+ "SAT-2#1": [
+  "A one-time fee is what you pay before any months are counted, so think about n = 0.",
+  "When n = 0 the term 30n is zero, and only the constant 50 is left.",
+  "The 30 is the charge per month, and the 50 is charged once.",
+  "The one-time sign-up fee is 50 dollars."
+ ],
+ "SAT-2#2": [
+  "A linear function is built from its slope and its value at x = 0.",
+  "The slope is 5 and f(0) = −2, so the rule is f(x) = 5x − 2.",
+  "Substitute 3 for x in the rule to get f(3) = 5 × 3 − 2 = 15 − 2.",
+  "Finishing the subtraction, the value of f(3) is 13."
+ ],
+ "SAT-2#3": [
+  "The height starts at 30 and drops by the same amount each hour, so it is a linear model.",
+  "After t hours the height is 30 − 1.5t, so set 30 − 1.5t = 18.",
+  "Subtracting 18 and adding 1.5t to both sides gives 1.5t = 12, and 12 ÷ 1.5 = 8.",
+  "The candle is 18 cm tall after 8 hours."
+ ],
+ "SAT-3#0": [
+  "Get y alone on one side so the slope can be read as the number in front of x.",
+  "Subtract 6x from both sides to get 3y = −6x + 9.",
+  "Divide every term by 3 to get y = −2x + 3.",
+  "The number multiplying x is −2, so the slope is −2."
+ ],
+ "SAT-3#1": [
+  "The y-intercept is the point where the line crosses the y-axis, so x is 0 there.",
+  "Put 0 in place of x, which leaves 4y = 16.",
+  "Divide both sides by 4 to get y = 16 ÷ 4 = 4.",
+  "The y-intercept of the line is 4."
+ ],
+ "SAT-3#2": [
+  "Parallel lines never meet because they rise at the same rate, so they share a slope.",
+  "The given line y = 5x − 2 has slope 5, the number in front of x.",
+  "The point (0, 7) changes only the intercept of the new line, not its slope.",
+  "The slope of the parallel line is 5."
+ ],
+ "SAT-3#3": [
+  "Perpendicular slopes are negative reciprocals, so flip the fraction and change the sign.",
+  "The given slope is −4, which is −4/1 as a fraction.",
+  "Flipping gives −1/4, and changing the sign gives 1/4.",
+  "The slope of the perpendicular line is 1/4."
+ ],
+ "SAT-4#0": [
+  "The first equation already gives y in terms of x, so substitute it into the second.",
+  "Replace y with x + 2 in the second equation to get 2x + x + 2 = 11.",
+  "Combine like terms to get 3x + 2 = 11, so 3x = 9.",
+  "Divide by 3, so the answer is x = 3."
+ ],
+ "SAT-4#1": [
+  "The y terms are opposites, so adding the two equations removes y.",
+  "Adding the left sides and the right sides gives 2x = 14, so x = 7.",
+  "Put 7 back into the first equation, x + y = 12, to get y = 12 − 7.",
+  "Subtracting gives the answer: the value of y is 5."
+ ],
+ "SAT-4#2": [
+  "The question asks for x + y together, so look for a shortcut before solving for each letter.",
+  "Add the two equations to get 3x + 3y = 18.",
+  "Divide every term by 3 to get x + y = 6.",
+  "So the value of the sum x + y is 6."
+ ],
+ "SAT-4#3": [
+  "A system has no solution when the left sides match but the constants on the right do not.",
+  "Double the first equation to get 4x + 2ky = 10, which matches the 4x in the second.",
+  "The y parts must match too, so 2k = 6 and k = 3.",
+  "With k = 3 the constants are 10 and 9, which differ, so the answer is 3."
+ ],
+ "SAT-5#0": [
+  "Solve the inequality like an equation, then pick the largest whole number that fits.",
+  "Subtract 1 from both sides to get 4x < 20.",
+  "Divide by 4 to get x < 5, and note that 5 itself is not allowed.",
+  "The largest whole number below 5 is 4."
+ ],
+ "SAT-5#1": [
+  "Dividing an inequality by a negative number reverses the direction of the sign.",
+  "Divide both sides by −3, so 12 ÷ (−3) = −4 and the sign flips from > to <.",
+  "The solution is x < −4, so x is less than −4."
+ ],
+ "SAT-5#2": [
+  "The words at most mean the total cost must be less than or equal to 35.",
+  "With t texts the cost is 20 + 0.10t, so write 20 + 0.10t ≤ 35.",
+  "Subtract 20 to get 0.10t ≤ 15, then divide by 0.10 to get t ≤ 150.",
+  "The most texts you can send is 150."
+ ],
+ "SAT-5#3": [
+  "A point is a solution if its coordinates make the inequality a true statement.",
+  "Put x = 0 and y = 0 into the inequality to get 0 < 2(0) + 1.",
+  "The right side equals 1, and 0 < 1 is true.",
+  "The answer is yes, the point (0, 0) is a solution."
+ ],
+ "SAT-6#0": [
+  "When powers of the same base are multiplied, the exponents are added.",
+  "The exponents here are 5 and 3, so add them: 5 + 3 = 8.",
+  "The product is x⁸, so the power is 8."
+ ],
+ "SAT-6#1": [
+  "A fractional exponent stands for a root, and the bottom number tells which root.",
+  "The exponent 1/2 means square root, so find √16.",
+  "Since 4 × 4 = 16, the square root of 16 is 4.",
+  "So the value of 16^(1/2) is the number 4."
+ ],
+ "SAT-6#2": [
+  "A negative exponent means the reciprocal of the positive power, not a negative number.",
+  "Rewrite 5⁻² as a fraction with 1 on top and 5² on the bottom.",
+  "Work out the power on the bottom: 5² = 25.",
+  "The value of 5⁻² is the fraction 1/25."
+ ],
+ "SAT-6#3": [
+  "A square minus a square factors with the difference of squares pattern.",
+  "Write 25 as 5², so the expression is x² − 5².",
+  "The pattern gives (x − 5)(x + 5), which matches the form (x − a)(x + a).",
+  "Comparing the two forms shows that a = 5."
+ ],
+ "SAT-7#0": [
+  "Factor the quadratic by finding two numbers that multiply to 12 and add to −7.",
+  "The numbers −3 and −4 work, so the factored equation is (x − 3)(x − 4) = 0.",
+  "A product is zero when a factor is zero, so x = 3 or x = 4.",
+  "The larger of the two solutions is 4."
+ ],
+ "SAT-7#1": [
+  "Two different numbers have the same square, one positive and one negative.",
+  "Take the square root of both sides, remembering both signs: x = 7 or x = −7.",
+  "Both values work, because 7 × 7 = 49 and (−7) × (−7) = 49 as well.",
+  "The question asks for the negative solution, which is −7."
+ ],
+ "SAT-7#2": [
+  "The discriminant of ax² + bx + c is the quantity b² − 4ac.",
+  "Here a = 1, b = 4 and c = 1, so compute the value of 4² − 4 × 1 × 1.",
+  "That works out to 16 − 4, which equals 12.",
+  "The discriminant of the quadratic is 12."
+ ],
+ "SAT-7#3": [
+  "You do not need to solve, because the product of the solutions is c divided by a.",
+  "In this equation the leading coefficient is a = 2 and the constant is c = −8.",
+  "Divide the constant by the leading coefficient: −8 ÷ 2 = −4.",
+  "The product of the two solutions is −4."
+ ],
+ "SAT-8#0": [
+  "The graph crosses the y-axis where x equals 0.",
+  "Put 0 in for x, so the terms x² and 4x both become 0.",
+  "Only the constant term −9 is left.",
+  "The y-intercept of the graph is −9."
+ ],
+ "SAT-8#1": [
+  "A parabola is symmetric, so its vertex lies halfway between its two zeros.",
+  "The factors give the zeros x = 1 and x = 7.",
+  "Find the midpoint by averaging the two zeros: (1 + 7) ÷ 2 = 4.",
+  "The vertex is at the x-value 4."
+ ],
+ "SAT-8#2": [
+  "The equation is in vertex form, which shows the vertex without any work.",
+  "The vertex is (−5, −3), and the parabola opens up because the squared term is positive.",
+  "A square is never negative, so y is smallest when (x + 5)² equals 0.",
+  "So the minimum value of y is −3, reached at x = −5."
+ ],
+ "SAT-8#3": [
+  "For y = ax² + bx + c, the vertex has x-coordinate −b ÷ (2a).",
+  "Here a = 1 and b = −10, so the formula gives 10 ÷ 2.",
+  "Dividing gives 5, the line of symmetry of the parabola.",
+  "The x-coordinate of the vertex is 5."
+ ],
+ "SAT-9#0": [
+  "The notation p(3) means replace every x in the rule with 3.",
+  "Substitute to get 3² − 9, which is the same as 9 − 9.",
+  "The result is 0, which also shows that (x − 3) is a factor.",
+  "So the value of p(3) is exactly 0."
+ ],
+ "SAT-9#1": [
+  "The Remainder Theorem says the remainder on dividing by x − 3 equals the value at x = 3.",
+  "Substitute 3 into the polynomial x² + 1 to get 3² + 1.",
+  "That works out to 9 + 1, which equals 10.",
+  "The remainder of the division is 10."
+ ],
+ "SAT-9#2": [
+  "The unknown is in the denominator, so multiply both sides by x to clear the fraction.",
+  "Multiplying both sides by x gives the simpler equation 8 = 2x.",
+  "Divide both sides by 2 to get x = 4.",
+  "Check: 8 ÷ 4 = 2 is true, so the answer is 4."
+ ],
+ "SAT-9#3": [
+  "The graphs meet where both equations give the same y, so set them equal.",
+  "Setting them equal gives the equation x² = 4.",
+  "Take the square root with both signs: x = 2 or x = −2.",
+  "The positive x-value where they meet is 2."
+ ],
+ "SAT-10#0": [
+  "The starting value of an exponential model is its output when x = 0.",
+  "Any number to the power 0 is 1, so (1.25)⁰ = 1.",
+  "That leaves only the number in front: y = 400 × 1 = 400.",
+  "The starting value of the model is 400."
+ ],
+ "SAT-10#1": [
+  "Growing by a percent means keeping the whole amount and adding a part of it.",
+  "Write the rate 8% as the decimal 0.08 so it can be added.",
+  "Keeping the full 100% and adding 8% more gives 1 + 0.08 = 1.08.",
+  "So the yearly growth factor is b = 1.08."
+ ],
+ "SAT-10#2": [
+  "Tripling means multiplying by 3, once for each day that passes.",
+  "After one day there are 50 × 3 = 150 in the culture.",
+  "After the second day there are 150 × 3 = 450, which is 50 × 3².",
+  "So the culture has 450 after 2 days."
+ ],
+ "SAT-10#3": [
+  "The base 0.75 is the fraction of y that is kept at each step.",
+  "The fraction lost is the rest: 1 − 0.75 = 0.25.",
+  "Written as a percent, the decimal 0.25 is the same as 25%.",
+  "The value of y decreases by 25 percent each step."
+ ],
+ "SAT-11#0": [
+  "The price per pound stays the same, so cost grows in proportion to weight.",
+  "Compare the weights: 15 pounds is 3 times 5 pounds.",
+  "The cost is 3 times as much too: 3 × 8 = 24.",
+  "Fifteen pounds of apples cost 24 dollars."
+ ],
+ "SAT-11#1": [
+  "Two equal fractions can be solved by cross-multiplying.",
+  "Cross-multiply the two fractions to get 7x = 4 × 35 = 140.",
+  "Divide both sides by 7 to get 140 ÷ 7 = 20.",
+  "So the value of x in the proportion is 20."
+ ],
+ "SAT-11#2": [
+  "A ratio of 2 : 3 splits the marbles into equal parts, 2 red parts and 3 blue parts.",
+  "There are 2 + 3 = 5 parts, so one part is 40 ÷ 5 = 8 marbles.",
+  "Blue has 3 of the parts, so multiply: 3 × 8 = 24.",
+  "So there are 24 blue marbles in the set of 40."
+ ],
+ "SAT-11#3": [
+  "Use the fact that one foot is 12 inches.",
+  "Going to a smaller unit needs more of them, so multiply: 3.5 × 12.",
+  "Three feet is 36 inches and half a foot is 6 inches, for a total of 42.",
+  "So there are 42 inches in 3.5 feet."
+ ],
+ "SAT-12#0": [
+  "To find a percent of a number, write the percent as a decimal and multiply.",
+  "Write 15% as 0.15, so the product is 0.15 × 80.",
+  "Ten percent of 80 is 8 and five percent is 4, which add to 12.",
+  "So the answer is that 15% of 80 is 12."
+ ],
+ "SAT-12#1": [
+  "Percent change is the amount of change divided by the original value.",
+  "The price fell by 80 − 60 = 20 dollars in all.",
+  "Divide the change by the original price: 20 ÷ 80 = 0.25.",
+  "As a percent, the price fell by 25 percent."
+ ],
+ "SAT-12#2": [
+  "A 10% raise multiplies the old salary by 1.1, so work backward by dividing.",
+  "Call the old salary s, so the equation is 1.1s = 55000.",
+  "Divide both sides by 1.1 to get s = 50000.",
+  "The salary before the raise was 50,000 dollars."
+ ],
+ "SAT-12#3": [
+  "An increase keeps the full original amount and adds a percent of it.",
+  "The original is 100%, or 1, and the increase is 30%, or 0.30.",
+  "Add the two parts together to get 1 + 0.30 = 1.3.",
+  "The single multiplier for a 30% increase is 1.3."
+ ],
+ "SAT-13#0": [
+  "The mean is the sum of the values divided by how many values there are.",
+  "Add the four values to find the sum: 6 + 8 + 10 + 16 = 40.",
+  "There are 4 values, so divide the sum by 4: 40 ÷ 4 = 10.",
+  "The mean of the data set is 10."
+ ],
+ "SAT-13#1": [
+  "The median is the middle value once the numbers are in order.",
+  "Sort the list from least to greatest: 2, 3, 5, 9, 11.",
+  "With five values, the middle one is the third in the list.",
+  "The median of the data set is 5."
+ ],
+ "SAT-13#2": [
+  "Work with totals, because a mean times the count gives the sum.",
+  "The three numbers have a sum of 3 × 12 = 36.",
+  "Adding 20 makes the sum 56, and there are now 4 numbers.",
+  "Divide to get 56 ÷ 4 = 14, so the new mean is 14."
+ ],
+ "SAT-13#3": [
+  "The range is the largest value minus the smallest value.",
+  "The largest value is 22 and the smallest value is 4.",
+  "Subtract the smallest from the largest to get 22 − 4 = 18.",
+  "The range of the data set is 18."
+ ],
+ "SAT-14#0": [
+  "A line of best fit predicts y when you substitute a value for x.",
+  "Put 10 in place of x to get y = 3 × 10 − 4.",
+  "Multiply first to get 30, then subtract 4.",
+  "So the predicted value of y is 26."
+ ],
+ "SAT-14#1": [
+  "Probability is the number of favorable outcomes divided by the number of equally likely outcomes.",
+  "One of the 4 equal parts is red, so the probability is 1/4.",
+  "Write the fraction as a decimal by dividing: 1 ÷ 4 = 0.25.",
+  "The probability of landing on red is 0.25."
+ ],
+ "SAT-14#2": [
+  "The condition given senior means you look only at the seniors.",
+  "That makes the total 80, and 20 of those seniors walk.",
+  "Divide the walkers by the seniors: 20 ÷ 80 = 0.25.",
+  "So the probability that a senior walks is 0.25."
+ ],
+ "SAT-14#3": [
+  "A margin of error gives a range of plausible values on both sides of the estimate.",
+  "The largest plausible value is the estimate plus the margin.",
+  "Add the two percents to get 30 + 5 = 35.",
+  "The largest plausible value is 35 percent."
+ ],
+ "SAT-15#0": [
+  "Supplementary angles add up to 180 degrees.",
+  "Subtract the known angle from 180 to find the other one.",
+  "Carrying out the subtraction gives the result 180 − 38 = 142.",
+  "So the other angle measures 142 degrees."
+ ],
+ "SAT-15#1": [
+  "The three angles of any triangle add up to 180 degrees.",
+  "The two known angles add to 90 + 35 = 125.",
+  "Subtract from the total to get 180 − 125 = 55.",
+  "So the third angle measures 55 degrees."
+ ],
+ "SAT-15#2": [
+  "Vertical angles are across from each other where two lines cross, and they are equal.",
+  "Set the two measures equal to get 3x = 75.",
+  "Divide both sides by 3 to get 75 ÷ 3 = 25.",
+  "So the value of x is 25, and 3 × 25 = 75 checks."
+ ],
+ "SAT-15#3": [
+  "An exterior angle of a triangle equals the sum of the two far interior angles.",
+  "The far angles are equal, so call each one a and write 2a = 110.",
+  "Divide both sides by 2 to get a = 110 ÷ 2 = 55.",
+  "Each of the far angles measures 55 degrees."
+ ],
+ "SAT-16#0": [
+  "The area of a triangle is half of the base times the height.",
+  "Multiply the base by the height: 12 × 5 = 60.",
+  "Take half of that product to finish: 60 ÷ 2 = 30.",
+  "The area of the triangle is 30."
+ ],
+ "SAT-16#1": [
+  "The volume of a box is length times width times height.",
+  "Multiply the first two dimensions together: 3 × 4 = 12.",
+  "Multiply that result by the third dimension: 12 × 5 = 60.",
+  "The volume of the box is 60."
+ ],
+ "SAT-16#2": [
+  "Area uses two lengths multiplied together, so the scale factor is applied twice.",
+  "If lengths scale by k, then area scales by k².",
+  "Here k = 4, so the factor for area is 4² = 16.",
+  "The area scales by a factor of 16."
+ ],
+ "SAT-16#3": [
+  "The area of a circle is π times the radius squared.",
+  "Square the radius first, which gives 5² = 25.",
+  "The area is 25π, which has the form kπ.",
+  "Matching the two forms shows that k = 25."
+ ],
+ "SAT-17#0": [
+  "In a right triangle the squares of the legs add up to the square of the hypotenuse.",
+  "Square the two legs and add them: 36 + 64 = 100.",
+  "Take the square root to find the side: √100 = 10.",
+  "So the hypotenuse of the triangle has length 10."
+ ],
+ "SAT-17#1": [
+  "The sides of a 30-60-90 triangle are x, x√3 and 2x, where x is the shorter leg.",
+  "The hypotenuse is twice the shorter leg, and the shorter leg is 4.",
+  "Multiply the shorter leg by 2 to get 2 × 4 = 8.",
+  "So the hypotenuse of this triangle has length 8."
+ ],
+ "SAT-17#2": [
+  "Tangent of an angle is the opposite side divided by the adjacent side.",
+  "The opposite side is 3 and the adjacent side is 4, so tan is 3/4.",
+  "Write the fraction as a decimal by dividing: 3 ÷ 4 = 0.75.",
+  "The tangent of the angle is 0.75."
+ ],
+ "SAT-17#3": [
+  "The sine of an angle equals the cosine of its complement.",
+  "Complementary angles add to 90 degrees, so 40 + A = 90.",
+  "Subtract to find the missing angle: 90 − 40 = 50.",
+  "So the missing angle A measures 50 degrees."
+ ],
+ "SAT-18#0": [
+  "In the standard form of a circle, the right side is the radius squared.",
+  "That means r² = 49 for the circle in this question.",
+  "Take the positive square root of both sides: √49 = 7.",
+  "The radius of the circle is 7."
+ ],
+ "SAT-18#1": [
+  "An arc is a fraction of the circumference, set by its central angle.",
+  "The fraction is 120/360 = 1/3 of the circle.",
+  "The full circumference of the circle is 2 × π × 6 = 12π.",
+  "One third of 12π is 4π, so the value of k is 4."
+ ],
+ "SAT-18#2": [
+  "Use the fact that π radians equals 180 degrees.",
+  "Replace π with 180 degrees, so the angle π/3 becomes 180 ÷ 3.",
+  "The division gives 60 as the result.",
+  "So the angle π/3 radians is equal to 60 degrees."
+ ],
+ "SAT-18#3": [
+  "A sector is a fraction of the area of the circle, set by its central angle.",
+  "The fraction is 36/360 = 1/10 of the circle.",
+  "The full area of the circle is π × 10² = 100π.",
+  "One tenth of 100π is 10π, so the value of k is 10."
+ ],
+ "STAT-1#0": [
+  "A categorical variable is a label or group name, even when it is written with digits. Ask which of these you would never average.",
+  "Shoe size, height and distance to school all measure an amount, so averages of them mean something.",
+  "A jersey number only identifies a player, and an average jersey number means nothing.",
+  "Jersey number is the categorical variable."
+ ],
+ "STAT-1#1": [
+  "Relative frequency compares one category's count with the total: count ÷ total.",
+  "Tacos were chosen by 6 of the 20 students, so compute 6 ÷ 20 = 0.30.",
+  "As a percent, the relative frequency of tacos is 30%."
+ ],
+ "STAT-1#2": [
+  "Skew is named after the side with the long tail, not the side with the pile of values.",
+  "Most games cluster at 0 to 2 goals, on the low side.",
+  "The tail stretches out toward 5 and 7, the high values on the right.",
+  "The long tail is on the high side, so the distribution is skewed right."
+ ],
+ "STAT-1#3": [
+  "The words \"of 10th graders\" mean the whole is only the 10th-grade row, not everyone in the table.",
+  "Add the two counts in that row to get the 10th-grade total: 12 + 13 = 25 students.",
+  "In-person fans are 13 of those 25, and 13 ÷ 25 = 0.52.",
+  "So 52% of 10th graders prefer in person."
+ ],
+ "STAT-2#0": [
+  "The median is the middle value, but only after the numbers are put in order.",
+  "Sorted from smallest to largest, the list is 1, 3, 5, 7, 9.",
+  "With five values, the middle one is the 3rd value in the sorted list.",
+  "The 3rd value is 5, so the median is 5."
+ ],
+ "STAT-2#1": [
+  "The IQR is Q3 − Q1, where each quartile is the median of one half of the ordered data.",
+  "The lower half is 2, 4, 6, 8, and its median gives Q1 = (4 + 6)/2 = 5.",
+  "The upper half is 10, 12, 14, 16, and its median gives Q3 = (12 + 14)/2 = 13.",
+  "Subtract the quartiles to get the IQR: 13 − 5 = 8."
+ ],
+ "STAT-2#2": [
+  "The outlier rule puts a fence 1.5 IQRs above Q3, so find the IQR first.",
+  "Subtract the quartiles to get the IQR: Q3 − Q1 = 30 − 20 = 10.",
+  "One and a half IQRs is the distance to the fence: 1.5 × 10 = 15.",
+  "The upper fence is 30 + 15 = 45, so any point above 45 is an outlier."
+ ],
+ "STAT-2#3": [
+  "Standard deviation comes from the squared distances of the values from the mean.",
+  "The mean is 3, so the deviations are −2, −1, 0, 1, 2 and their squares 4, 1, 0, 1, 4 add up to 10.",
+  "For a sample, divide by n − 1 = 4 to get the variance: 10 ÷ 4 = 2.5.",
+  "The standard deviation is the square root of the variance: s = √2.5 ≈ 1.58."
+ ],
+ "STAT-3#0": [
+  "A z-score counts how many standard deviations a value is from the mean.",
+  "Subtract the mean and divide by the standard deviation: z = (72 − 60)/8.",
+  "That is 12/8 = 1.5 standard deviations above the mean.",
+  "So a score of 72 has a z-score of 1.5."
+ ],
+ "STAT-3#1": [
+  "The empirical rule gives three percents for a normal distribution: 68, 95 and 99.7.",
+  "They go with 1, 2 and 3 standard deviations from the mean, in that order.",
+  "Within 2 standard deviations is the middle number of the three.",
+  "About 95% of the distribution lies within 2 standard deviations of the mean."
+ ],
+ "STAT-3#2": [
+  "The empirical rule says 68% of values lie between z = −1 and z = 1, and the two tails outside are equal.",
+  "The two tails together hold 100% − 68% = 32% of the values.",
+  "Half of that is in the lower tail: 32% ÷ 2 = 16% (a table gives 0.1587).",
+  "So about 16% of the values fall below z = −1."
+ ],
+ "STAT-3#3": [
+  "A cutoff for the top 5% is a z-score turned back into a score: x = mean + z × SD.",
+  "Top 5% means 95% of scores are to the left, which is the given z = 1.645.",
+  "Turn the z-score back into an IQ score: x = 100 + 1.645 × 15 = 100 + 24.7.",
+  "The cutoff is x ≈ 124.7, so a score of about 125."
+ ],
+ "STAT-4#0": [
+  "A residual is the actual value minus the predicted value, in that order.",
+  "The actual score is 80 and the line predicts 81.5, so compute 80 − 81.5.",
+  "The residual is −1.5: the point is 1.5 below the line."
+ ],
+ "STAT-4#1": [
+  "A regression line gives a prediction when you substitute the x-value into the equation.",
+  "Put x = 6 into the line and multiply first: 10 + 2 × 6 = 10 + 12.",
+  "The line predicts a y-value of 22 when x = 6."
+ ],
+ "STAT-4#2": [
+  "Strength depends on how close r is to 1 or −1, not on the sign.",
+  "Ignore the signs and compare sizes: 0.9 is closer to 1 than 0.4 is.",
+  "So r = −0.9 shows the stronger linear relationship."
+ ],
+ "STAT-4#3": [
+  "The percent of variation explained by the line is r², not r itself.",
+  "Square the correlation to get the fraction explained: 0.8² = 0.64.",
+  "So 64% of the variation in y is explained, and the other 36% is unexplained scatter."
+ ],
+ "STAT-5#0": [
+  "A parameter describes a whole population, and a statistic describes a sample.",
+  "The 62% was computed from only the 100 students who were asked, which is a sample.",
+  "A number that describes a sample is a statistic, so 62% is a statistic."
+ ],
+ "STAT-5#1": [
+  "Name a sampling method by asking how the people were chosen. Was any random process used?",
+  "The reporter simply talked to whoever was at the mall at that moment, with no randomness.",
+  "This is convenience sampling, which is biased toward people free at noon on a weekday."
+ ],
+ "STAT-5#2": [
+  "Labels have two digits, so read the digits in pairs and skip any pair that is not a label from 01 to 30.",
+  "Split the digits into pairs from the left: 78, 03, 41, 19, 03.",
+  "The pair 78 is bigger than 30, so skip it and move to the next pair.",
+  "The first usable label is 03, so person 3 is chosen first."
+ ],
+ "STAT-5#3": [
+  "In a systematic sample, the step size k is the population size divided by the sample size.",
+  "Divide the 2,000 names by the 100 wanted: 2000 ÷ 100 = 20.",
+  "So k = 20: take every 20th name after a random start from 1 to 20."
+ ],
+ "STAT-6#0": [
+  "A treatment is one combination of a level from each factor, so count the combinations.",
+  "Each of the 2 fertilizers is paired with each of the 3 watering levels: 2 × 3.",
+  "That makes 6 treatments in the experiment."
+ ],
+ "STAT-6#1": [
+  "Cause and effect needs the groups to be alike in everything except the treatment.",
+  "Only random assignment of treatments balances out the confounding variables, and that happens only when the researcher imposes the treatments.",
+  "The study type that can show cause and effect is an experiment."
+ ],
+ "STAT-6#2": [
+  "Ask how the students ended up in the tutoring group. Was anything randomly assigned?",
+  "Students chose tutoring themselves, so this is an observational study.",
+  "More motivated students may have signed up, so motivation is confounded with tutoring.",
+  "No, you cannot conclude that tutoring caused the higher scores."
+ ],
+ "STAT-6#3": [
+  "In this kind of matched pairs design, each subject acts as his or her own pair.",
+  "The comparison is made within one person, so that person tries every treatment, in random order.",
+  "Each subject receives 2 treatments, which is both of them."
+ ],
+ "STAT-7#0": [
+  "An event and its complement cover everything, so their probabilities add to 1.",
+  "Use the complement rule and subtract from 1: P(not A) = 1 − P(A) = 1 − 0.35.",
+  "The subtraction gives 0.65, so the probability of not A is 0.65."
+ ],
+ "STAT-7#1": [
+  "The events overlap, so adding P(A) and P(B) counts the overlap twice. The general addition rule subtracts it once.",
+  "Write the rule with the given numbers: P(A or B) = P(A) + P(B) − P(A and B) = 0.4 + 0.5 − 0.2.",
+  "The arithmetic gives 0.7, so the probability of A or B is 0.7."
+ ],
+ "STAT-7#2": [
+  "Two events are independent exactly when P(A and B) equals P(A) × P(B).",
+  "Multiply the two separate probabilities together: P(A) × P(B) = 0.4 × 0.5 = 0.2.",
+  "That product matches the given value P(A and B) = 0.2.",
+  "The test is passed, so yes, A and B are independent."
+ ],
+ "STAT-7#3": [
+  "Without replacement, the second draw depends on the first, so multiply the first probability by a conditional one.",
+  "The first marble is blue with probability 2/5, since 2 of the 5 marbles are blue.",
+  "With one blue gone, 1 of the remaining 4 marbles is blue: probability 1/4.",
+  "Multiply the two steps: P(both blue) = 2/5 × 1/4 = 2/20, which reduces to 1/10."
+ ],
+ "STAT-8#0": [
+  "The expected value is a weighted average: multiply each value by its probability and add.",
+  "Write one product for each value: E(X) = 0(0.2) + 1(0.5) + 2(0.3).",
+  "The products are 0, 0.5 and 0.6, and they add to 1.1.",
+  "So the expected value of X is 1.1."
+ ],
+ "STAT-8#1": [
+  "Adding a constant shifts every value but does not change spread. Multiplying by a constant stretches the spread.",
+  "The + 10 is ignored, and the 4 multiplies the standard deviation: 4 × 3.",
+  "So the standard deviation of Y is 12."
+ ],
+ "STAT-8#2": [
+  "For independent variables, standard deviations do not add, but variances do.",
+  "Square each SD and add the variances: 3² + 4² = 9 + 16 = 25.",
+  "Take the square root to return to a standard deviation: √25 = 5.",
+  "So the standard deviation of X + Y is 5, not 3 + 4 = 7."
+ ],
+ "STAT-8#3": [
+  "Expected net gain weights each possible net result by its probability, and the 1 dollar cost counts in every result.",
+  "A win nets 5 − 1 = 4 with probability 0.1, and a loss nets −1 with probability 0.9.",
+  "Weight each net result by its probability and add: 4(0.1) + (−1)(0.9) = 0.4 − 0.9 = −0.5.",
+  "The expected net gain is −0.5 dollars, a loss of 50 cents per play on average."
+ ],
+ "STAT-9#0": [
+  "The flips are independent, so multiply the probability of heads once for each flip.",
+  "Each flip is heads with probability 0.5, and there is only one way to get all heads: C(3, 3) = 1.",
+  "P = (0.5)³ = 0.125, so the probability of three heads is 0.125, or 1/8."
+ ],
+ "STAT-9#1": [
+  "The mean of a binomial variable is the number of trials times the probability of success: μ = np.",
+  "Here there are n = 100 trials with success probability p = 0.2, so compute 100 × 0.2.",
+  "The mean of the binomial variable is 20."
+ ],
+ "STAT-9#2": [
+  "Waiting for the first success is a geometric setting, and its mean is 1/p.",
+  "The chance of a win on each card is p = 0.25, so compute 1 ÷ 0.25.",
+  "On average it takes 4 cards to get the first win."
+ ],
+ "STAT-9#3": [
+  "Use the binomial idea: count the orderings with exactly 2 heads, then multiply by the probability of one ordering.",
+  "There are C(6, 2) = 15 ways to choose which two flips are heads.",
+  "Each specific sequence of six flips has probability (0.5)⁶ = 1/64.",
+  "Multiply the count by that probability: 15 × 1/64 = 15/64, which is about 0.234."
+ ],
+ "STAT-10#0": [
+  "Sample means vary less than individual values: the standard deviation of x̄ is σ/√n.",
+  "Substitute the population SD of 20 and the sample size of 25: 20/√25 = 20/5.",
+  "So the standard deviation of the sample mean is 4."
+ ],
+ "STAT-10#1": [
+  "The standard deviation of a sample proportion is √(p(1 − p)/n).",
+  "Substitute p = 0.5 and n = 100 under the square root: √(0.5 × 0.5 / 100) = √0.0025.",
+  "So the standard deviation of the sample proportion is 0.05."
+ ],
+ "STAT-10#2": [
+  "This is about a sample mean, so standardize with the standard deviation of x̄, which is σ/√n.",
+  "The standard deviation of the sample mean is 15/√9 = 5.",
+  "Standardize 110 with that smaller standard deviation: z = (110 − 100)/5 = 2.",
+  "The area above z = 2 is 0.0228, so the probability that the sample mean is over 110 is 0.0228."
+ ],
+ "STAT-10#3": [
+  "The standard deviation of x̄ is σ/√n, so it shrinks with the square root of the sample size.",
+  "To halve it, √n must double, which means n must be 4 times as large.",
+  "Multiply the old sample size by 4: the new sample size is 4 × 20 = 80."
+ ],
+ "STAT-11#0": [
+  "The margin of error is the critical value times the standard error of p̂.",
+  "The standard error of the sample proportion is √(0.5 × 0.5 / 100) = 0.05.",
+  "For 95% confidence the critical value is z* = 1.96, so ME = 1.96 × 0.05.",
+  "The margin of error is 0.098, or about 0.10."
+ ],
+ "STAT-11#1": [
+  "For a mean, the margin of error is t* times the standard error s/√n.",
+  "The standard error of the sample mean is 6/√9 = 2.",
+  "Multiply by the critical value: ME = 2.262 × 2 = 4.524.",
+  "The margin of error is about 4.52."
+ ],
+ "STAT-11#2": [
+  "A confidence interval is p̂ ± margin of error, so p̂ sits exactly in the middle of the interval.",
+  "Find the midpoint by averaging the endpoints: (0.42 + 0.50)/2.",
+  "The midpoint is 0.46, so the sample proportion was 0.46."
+ ],
+ "STAT-11#3": [
+  "With no guess for p, use the worst case p = 0.5, and solve the margin of error formula for n.",
+  "With those numbers the formula becomes n = (1.96/0.05)² × 0.25, which is (39.2)² × 0.25.",
+  "Squaring and then multiplying gives 1536.64 × 0.25 = 384.16 people.",
+  "Sample size must be a whole number that is big enough, so round up to 385."
+ ],
+ "STAT-12#0": [
+  "The z statistic measures how far p̂ is from the null value, in standard deviations computed with the null value.",
+  "Use p = 0.5 from the null hypothesis in the standard deviation: √(0.5 × 0.5 / 100) = 0.05.",
+  "Divide the gap between the sample proportion and 0.50 by it: (0.55 − 0.50)/0.05 = 0.05/0.05.",
+  "The division gives 1, so the z statistic is 1.0."
+ ],
+ "STAT-12#1": [
+  "The t statistic is the distance from x̄ to the null mean, divided by the standard error s/√n.",
+  "The standard error of the sample mean is 10/√25 = 2.",
+  "Divide the gap between the sample mean and 50 by it: (52 − 50)/2 = 2/2.",
+  "The division gives 1, so the t statistic is 1.0."
+ ],
+ "STAT-12#2": [
+  "The decision rule compares the p-value with the significance level α.",
+  "Here the p-value 0.03 is at or below α = 0.05, so the result would be unlikely if H0 were true.",
+  "The evidence is strong enough, so the decision is to reject H0."
+ ],
+ "STAT-12#3": [
+  "A Type I error means rejecting H0 when H0 is actually true.",
+  "H0 is rejected exactly when the p-value is at or below α, and when H0 is true that happens with probability α.",
+  "So the probability of a Type I error is α = 0.01."
+ ],
+ "STAT-13#0": [
+  "The pooled proportion treats the two groups as one big sample: total successes over total sample size.",
+  "Add the successes and add the sizes: (40 + 20)/(80 + 80) = 60/160.",
+  "The pooled proportion is 0.375, which is 3/8."
+ ],
+ "STAT-13#1": [
+  "Each cell contributes (observed − expected)² divided by expected to the chi-square statistic.",
+  "Substitute the observed count 30 and the expected count 25: (30 − 25)²/25 = 25/25.",
+  "This cell's contribution to chi-square is 1."
+ ],
+ "STAT-13#2": [
+  "For a test of independence, the degrees of freedom are (rows − 1) × (columns − 1).",
+  "The table has 3 rows and 4 columns, so compute (3 − 1)(4 − 1) = 2 × 3.",
+  "The test has 6 degrees of freedom."
+ ],
+ "STAT-13#3": [
+  "For two independent samples, the standard error of the difference adds the two variance terms under one square root.",
+  "Square each standard deviation and divide by its sample size: 6²/36 = 36/36 and 8²/64 = 64/64.",
+  "Each term equals 1, so the sum under the square root is 1 + 1 = 2.",
+  "The standard error of the difference is √2, which is about 1.41."
+ ],
+ "STAT-14#0": [
+  "The t statistic for a slope is the estimate minus the null value, divided by its standard error.",
+  "The null value is 0, so t = b/SE_b = 3.0/1.5.",
+  "The slope is 2 standard errors from zero, so the t statistic is 2."
+ ],
+ "STAT-14#1": [
+  "Inference for a regression slope uses df = n − 2, because the slope and the intercept are both estimated.",
+  "There are 22 data points, so subtract 2 from 22.",
+  "The slope test has 20 degrees of freedom."
+ ],
+ "STAT-14#2": [
+  "The margin of error is the critical value times the standard error of the slope: ME = t* × SE_b.",
+  "Substitute the critical value and the standard error: 2.101 × 0.60 = 1.2606.",
+  "The margin of error is about 1.26."
+ ],
+ "STAT-14#3": [
+  "To predict from a regression line, substitute the x-value into the equation.",
+  "Put x = 5 into the line and multiply before adding: 12.5 + 2.4 × 5 = 12.5 + 12.",
+  "The line predicts a score of 24.5 for 5 hours."
+ ],
+ "TRIG-1#0": [
+  "Quadrants change every 90°, at 90°, 180°, 270° and 360°. Find which two of these the angle sits between.",
+  "The angle 315° is past 270° and short of 360°.",
+  "That is the last quarter of the turn, so 315° is in Quadrant IV."
+ ],
+ "TRIG-1#1": [
+  "Coterminal angles differ by full turns of 360°, so keep taking 360 away until the result is under 360.",
+  "Subtract one full turn: 800 − 360 = 440, which is still more than 360.",
+  "Subtract a second full turn: 440 − 360 = 80, which is now under 360.",
+  "The coterminal angle between 0° and 360° is 80°."
+ ],
+ "TRIG-1#2": [
+  "Adding a full turn of 360° does not move the terminal side, and it can make a negative angle positive.",
+  "Add one full turn to the angle: −120 + 360.",
+  "The sum is 240, so the positive coterminal angle is 240°."
+ ],
+ "TRIG-1#3": [
+  "The minute hand goes all the way around the clock, a full 360°, in one hour.",
+  "One hour is 60 minutes, so share the 360° equally: 360 ÷ 60.",
+  "360 ÷ 60 = 6, so the minute hand turns 6° each minute."
+ ],
+ "TRIG-2#0": [
+  "A half turn is 180° and also π radians, so degrees become radians when you multiply by π/180.",
+  "Multiply the angle by the factor: 60 × π/180 = 60π/180.",
+  "Divide top and bottom by 60 to simplify, which gives π/3 radians."
+ ],
+ "TRIG-2#1": [
+  "To go from radians to degrees, multiply by 180/π, or simply replace π with 180°.",
+  "Replacing π with 180° turns the angle π/4 into 180° divided by 4.",
+  "180 ÷ 4 = 45, so the angle is 45° in degrees."
+ ],
+ "TRIG-2#2": [
+  "When the angle is in radians, arc length is radius times angle: s = rθ.",
+  "Put in the radius 6 and the angle 3 radians: s = 6 × 3.",
+  "6 × 3 = 18, so the length of the arc is 18 m."
+ ],
+ "TRIG-2#3": [
+  "With the angle in radians, the area of a sector is A = ½r²θ.",
+  "Square the radius first, then substitute: A = ½ × 16 × 0.5.",
+  "Half of 16 is 8, and 8 × 0.5 = 4, so the area is 4 square units."
+ ],
+ "TRIG-3#0": [
+  "Sine compares two sides of a right triangle: the opposite side over the hypotenuse (SOH).",
+  "The opposite side is 3 and the hypotenuse is 5, so write 3 over 5.",
+  "So sin θ = 3/5, which is 0.6 as a decimal."
+ ],
+ "TRIG-3#1": [
+  "Cosine is the adjacent side over the hypotenuse (CAH), so decide which length plays each role.",
+  "The 5 m along the ground touches the angle, so it is adjacent, and the 13 m ladder is the hypotenuse.",
+  "Adjacent over hypotenuse gives the cosine of the angle: cos θ = 5/13."
+ ],
+ "TRIG-3#2": [
+  "Rise is opposite the angle and run is adjacent to it, and that pair of sides goes with tangent.",
+  "Opposite over adjacent gives the tangent of the angle: tan θ = 3/3 = 1.",
+  "The angle whose tangent is 1 is 45°, so the angle of elevation is 45°."
+ ],
+ "TRIG-3#3": [
+  "The unknown x is divided by 12, so find the value of sin 30° and then multiply both sides by 12.",
+  "The exact value is sin 30° = 0.5, so the equation reads 0.5 = x/12.",
+  "Multiplying both sides by 12 gives x = 12 × 0.5, so the answer is x = 6."
+ ],
+ "TRIG-4#0": [
+  "Use the 30-60-90 triangle, whose sides are 1, √3 and 2, and remember sine is opposite over hypotenuse.",
+  "The side opposite the 30° angle is 1 and the hypotenuse is 2.",
+  "Opposite over hypotenuse gives the exact value sin 30° = 1/2."
+ ],
+ "TRIG-4#1": [
+  "Tangent is opposite over adjacent, so think about the two legs of a 45-45-90 triangle.",
+  "Both legs of a 45-45-90 triangle are equal, for example 1 and 1.",
+  "Equal legs give tan 45° = 1/1, so the answer is 1."
+ ],
+ "TRIG-4#2": [
+  "In a 45-45-90 triangle the sides follow the pattern 1, 1, √2, so the hypotenuse is a leg times √2.",
+  "Each leg here is 9, so multiply 9 by √2 and leave the root as it is.",
+  "The exact hypotenuse is 9√2, which is about 12.7."
+ ],
+ "TRIG-4#3": [
+  "A 30-60-90 triangle has sides in the pattern 1, √3, 2, with the 1 opposite the 30° angle.",
+  "So the short leg, opposite 30°, is always half the hypotenuse: work out 20 ÷ 2.",
+  "20 ÷ 2 = 10, so the side opposite the 30° angle is 10."
+ ],
+ "TRIG-5#0": [
+  "On the unit circle cosine is the x-coordinate of the point, and it helps to change the angle to degrees.",
+  "The angle π/3 is 180° ÷ 3 = 60°, so you need cos 60°.",
+  "From the 30-60-90 triangle, cos 60° = 1/2, so cos(π/3) = 1/2."
+ ],
+ "TRIG-5#1": [
+  "On the unit circle sine is the y-coordinate, so find the point where the angle π/2 lands.",
+  "The angle π/2 is a quarter turn, which is the top of the circle at the point (0, 1).",
+  "The y-coordinate of that point is 1, so sin(π/2) = 1."
+ ],
+ "TRIG-5#2": [
+  "Sine is the y-coordinate of the point on the unit circle, so locate the point for the angle π.",
+  "The angle π is a half turn, which lands on the left of the circle at the point (−1, 0).",
+  "The y-coordinate there is 0, so sin(π) = 0."
+ ],
+ "TRIG-5#3": [
+  "Find the quadrant and the reference angle first; the reference angle gives the size and the quadrant gives the sign.",
+  "The angle 3π/4 is 135°, which is in Quadrant II with reference angle π/4 (45°).",
+  "The size is cos(π/4) = √2/2, and cosine is negative in Quadrant II because x is negative there.",
+  "So the exact value is cos(3π/4) = −√2/2."
+ ],
+ "TRIG-6#0": [
+  "A reference angle is the acute angle between the terminal side and the nearest part of the x-axis.",
+  "The angle 135° is in Quadrant II, so the nearest part of the x-axis is at 180°.",
+  "Subtract to get the gap: 180 − 135 = 45, so the reference angle is 45°."
+ ],
+ "TRIG-6#1": [
+  "Measure the acute gap between the terminal side and the x-axis, after finding the quadrant of the angle.",
+  "The angle 240° is in Quadrant III, just past the 180° mark on the x-axis.",
+  "Subtract 180 from the angle: 240 − 180 = 60, so the reference angle is 60°."
+ ],
+ "TRIG-6#2": [
+  "Tangent is sine divided by cosine, so its sign depends on the signs of both in that quadrant.",
+  "The angle 200° is in Quadrant III, where sine and cosine are both negative.",
+  "A negative divided by a negative is positive, so tan 200° is positive."
+ ],
+ "TRIG-6#3": [
+  "Use the reference angle for the size of the cosine and the quadrant for its sign.",
+  "The reference angle is 180 − 120 = 60°, and cos 60° = 1/2, so the size is 1/2.",
+  "The angle 120° is in Quadrant II, where x is negative, so cosine is negative there.",
+  "Putting size and sign together gives cos 120° = −1/2."
+ ],
+ "TRIG-7#0": [
+  "Amplitude is the height of the wave above its midline, set by the number in front of the sine.",
+  "In y = 5 sin(4x) the number in front is 5; the 4 inside only changes the period.",
+  "The amplitude is the size of that number, so it is 5."
+ ],
+ "TRIG-7#1": [
+  "A number b multiplying x inside the sine squeezes the wave, so the period is 2π divided by b.",
+  "Here the number inside is b = 4, so the period is 2π/4.",
+  "Simplifying 2π/4 gives π/2, so the wave repeats every π/2."
+ ],
+ "TRIG-7#2": [
+  "The midline is the horizontal line the wave swings around, set by the constant added at the end.",
+  "In y = 3 cos x − 2 the constant added on is −2, which moves the whole wave down 2.",
+  "So the midline is y = −2, and the value asked for is −2."
+ ],
+ "TRIG-7#3": [
+  "Amplitude is the distance from the midline to the peak, which is half the gap between highest and lowest.",
+  "Find the full gap between the maximum and the minimum: 15 − 9 = 6 hours.",
+  "Half of that gap is 6 ÷ 2 = 3, so the amplitude is 3 hours."
+ ],
+ "TRIG-8#0": [
+  "A number subtracted from x inside the function slides the graph sideways; this is the phase shift.",
+  "The inside is x − π/3, which is zero when x = π/3, so the cycle now starts at π/3.",
+  "Starting later means the graph slides right, so the phase shift is π/3 to the right."
+ ],
+ "TRIG-8#1": [
+  "A constant added outside the cosine moves the whole graph up or down without changing its shape.",
+  "In y = cos x + 6 the constant added outside is 6, and it is positive.",
+  "The whole wave rises 6 units, so the vertical shift is 6 (up 6)."
+ ],
+ "TRIG-8#2": [
+  "The period of a sine or cosine wave is 2π/b, so b is 2π divided by the period.",
+  "Put in the period given in the question: b = 2π ÷ 4π.",
+  "The π cancels and 2 ÷ 4 = 1/2, so the value of b is 1/2."
+ ],
+ "TRIG-8#3": [
+  "The midline lies halfway between the top and the bottom of the wave, so average the two values.",
+  "Add the maximum and the minimum, then halve: d = (9 + 1)/2.",
+  "(9 + 1)/2 = 10/2 = 5, so the midline of the wave is d = 5."
+ ],
+ "TRIG-9#0": [
+  "Tangent is sine divided by cosine, so compare the sine and cosine of 45°.",
+  "At 45° the sine and the cosine are equal; both are √2/2.",
+  "A number divided by itself is 1, so tan 45° = 1."
+ ],
+ "TRIG-9#1": [
+  "Secant is the reciprocal of cosine, so find the cosine of the angle first.",
+  "On the unit circle 0° is the point (1, 0), so cos 0° = 1.",
+  "The reciprocal of 1 is 1/1, so sec 0° = 1."
+ ],
+ "TRIG-9#2": [
+  "Cosecant is the reciprocal of sine, so start by finding the sine of the angle.",
+  "The angle π/2 is the top of the unit circle, where the height is 1, so sin(π/2) = 1.",
+  "The reciprocal of 1 is 1/1, so csc(π/2) = 1."
+ ],
+ "TRIG-9#3": [
+  "Tangent is sine over cosine, and both change sign after a half turn, so the quotient is back where it started.",
+  "That means tangent repeats every half turn, which is 180°.",
+  "A half turn is π radians, so the period of y = tan x is π."
+ ],
+ "TRIG-10#0": [
+  "Read arcsin(1/2) as a question: which angle between −90° and 90° has a sine of 1/2?",
+  "From the 30-60-90 triangle, sin 30° = 1/2, and 30° is inside the allowed range.",
+  "So arcsin(1/2) is 30°, and the number to enter is 30."
+ ],
+ "TRIG-10#1": [
+  "Read arccos(1/2) as a question: which angle between 0° and 180° has a cosine of 1/2?",
+  "From the 30-60-90 triangle, cos 60° = 1/2, and 60° is inside the range [0°, 180°].",
+  "So arccos(1/2) is 60°, and the answer is 60."
+ ],
+ "TRIG-10#2": [
+  "Read arctan(1) as a question: which angle between −90° and 90° has a tangent of 1?",
+  "Tangent is 1 when the opposite and adjacent sides are equal, which happens at 45°.",
+  "Since tan 45° = 1, the value of arctan(1) is 45°."
+ ],
+ "TRIG-10#3": [
+  "The inverse sine returns an angle between −90° and 90°, so look for the angle in that range whose sine is −1.",
+  "Sine is −1 at the bottom of the unit circle, and in this range that angle is written −90°.",
+  "The angle −90° is the endpoint of the arcsin range, so it is allowed and arcsin(−1) = −90°."
+ ],
+ "TRIG-11#0": [
+  "This sum of squares is one of the fundamental identities, and it comes from the unit circle.",
+  "The point (cos θ, sin θ) is 1 unit from the origin, so the Pythagorean theorem gives cos²θ + sin²θ = 1².",
+  "This is the Pythagorean identity, so the expression simplifies to 1."
+ ],
+ "TRIG-11#1": [
+  "Secant is a reciprocal function, so rewrite it using cosine and see what cancels.",
+  "Since sec θ = 1/cos θ, the product is cos θ × 1/cos θ.",
+  "The cosines cancel, so the product is 1."
+ ],
+ "TRIG-11#2": [
+  "Sine and cosine of one angle are linked by the Pythagorean identity sin²θ + cos²θ = 1.",
+  "Substitute the cosine and solve for the square of the sine: sin²θ = 1 − 9/25 = 16/25.",
+  "The square root of 16/25 is 4/5 or −4/5, and in Quadrant I sine is positive.",
+  "So sin θ = 4/5, which is 0.8 as a decimal."
+ ],
+ "TRIG-11#3": [
+  "Sine divided by cosine is one of the quotient identities, so it has a single-function name.",
+  "In a right triangle, dividing opposite/hypotenuse by adjacent/hypotenuse leaves opposite/adjacent.",
+  "Opposite over adjacent is tangent, so the expression simplifies to tan θ."
+ ],
+ "TRIG-12#0": [
+  "The pattern 2 sin θ cos θ is the double-angle formula for sine read backwards.",
+  "With θ = 30° the expression equals sin 2θ, which is sin 60°.",
+  "The exact value is sin 60° = √3/2, so the answer is √3/2."
+ ],
+ "TRIG-12#1": [
+  "The double-angle formula for sine uses both given values: sin 2θ = 2 sin θ cos θ.",
+  "Substitute the sine and the cosine: sin 2θ = 2(4/5)(3/5).",
+  "Multiply across: 2 × 12/25 = 24/25, so the answer is sin 2θ = 24/25, or 0.96."
+ ],
+ "TRIG-12#2": [
+  "The formula only needs the square of the sine, so square the given value before anything else.",
+  "Squaring the given sine value gives sin²θ = (1/2)² = 1/4.",
+  "Substitute that square into the formula: cos 2θ = 1 − 2(1/4) = 1 − 1/2.",
+  "Subtracting gives 1 − 1/2 = 1/2, so the answer is cos 2θ = 1/2."
+ ],
+ "TRIG-12#3": [
+  "Cosine times cosine plus sine times sine is the pattern of a cosine difference formula.",
+  "The plus sign means this is cos(A − B) with A = 40° and B = 10°.",
+  "So the expression equals cos(40° − 10°) = cos 30°.",
+  "The exact value of cos 30° is √3/2, so the answer is √3/2."
+ ],
+ "TRIG-13#0": [
+  "Sine is the y-coordinate on the unit circle, so ask where the height of the point is zero.",
+  "The height is 0 where the circle crosses the x-axis, on the right and on the left.",
+  "Those points are at θ = 0 and θ = π, and 2π is left out of the interval.",
+  "So the two solutions in the interval are 0 and π."
+ ],
+ "TRIG-13#1": [
+  "Cosine is the x-coordinate on the unit circle, so ask where the point is as far right as possible.",
+  "The x-coordinate reaches 1 only at the point (1, 0), which is the starting point of the circle.",
+  "That point is at θ = 0, and 2π is not in the interval, so the only solution is θ = 0."
+ ],
+ "TRIG-13#2": [
+  "Sine is the height on the unit circle, so ask in which quadrants the height is positive.",
+  "A positive sine such as 0.4 happens in Quadrant I and again in Quadrant II, once in each.",
+  "That makes 2 solutions in one full turn of the circle."
+ ],
+ "TRIG-13#3": [
+  "Get the sine by itself first, just as you would isolate x in a linear equation.",
+  "Divide both sides by 2, which gives sin θ = 1/2.",
+  "Between 0° and 90° the angle with sine 1/2 is 30°, so θ = 30°."
+ ],
+ "TRIG-14#0": [
+  "A side and its opposite angle are known, so use the Law of Sines: a/sin A = b/sin B.",
+  "Solve for the unknown side: b = a sin B / sin A = 5 × sin 90° / sin 30°.",
+  "Since sin 90° = 1 and sin 30° = 0.5, this is 5(1)/0.5.",
+  "Dividing 5 by 0.5 gives 10, so the side is b = 10."
+ ],
+ "TRIG-14#1": [
+  "With two sides and the angle between them, the area is ½ab sin C.",
+  "Substitute the two sides and the angle: Area = ½(10)(12) sin 30° = 60 × 0.5.",
+  "60 × 0.5 = 30, so the area is 30 square units."
+ ],
+ "TRIG-14#2": [
+  "Two sides and the included angle are known, so use the Law of Cosines: c² = a² + b² − 2ab cos C.",
+  "Substitute the values: c² = 9 + 16 − 2(3)(4)cos 90°, and cos 90° = 0, so the last term vanishes.",
+  "That leaves c² = 25, and the square root of 25 is 5, so c = 5."
+ ],
+ "TRIG-14#3": [
+  "With all three sides known, rearrange the Law of Cosines to cos C = (a² + b² − c²)/(2ab).",
+  "Substitute the squares of the sides: cos C = (25 + 64 − 49)/(2 × 5 × 8).",
+  "The top is 40 and the bottom is 80, so cos C = 40/80 = 1/2."
+ ]
+}

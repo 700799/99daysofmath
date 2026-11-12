@@ -10,25 +10,25 @@
   "primaryAnswer": "84",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Area of a parallelogram is base times height — no halving.",
+  "hint": "A parallelogram can be rearranged into a rectangle with the same base and height. Think about what that means for its area.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Area of a parallelogram is base times height — no halving."
+      "text": "A parallelogram can be rearranged into a rectangle with the same base and height. Think about what that means for its area."
     },
     {
       "level": "guide",
-      "text": "Multiply $12 \\times 7$."
+      "text": "The area is base times height with no halving, so multiply the base $12$ by the height $7$."
     },
     {
       "level": "reveal",
-      "text": "$12 \\times 7 = 84$ square centimeters."
+      "text": "$12 \\times 7 = 84$, so the tile has an area of $84$ square centimeters."
     }
   ],
   "explanation": [
-    "For a parallelogram, $A = bh$.",
-    "Substitute: $A = 12 \\times 7$.",
-    "The tile covers $84$ square centimeters."
+    "The area of a parallelogram is $A = bh$, since cutting off one end and sliding it over makes a rectangle.",
+    "Substituting the base and the height gives $A = 12 \\times 7$.",
+    "The product is $84$, so the tile covers $84$ square centimeters."
   ],
   "alternativeExplanations": [
     {

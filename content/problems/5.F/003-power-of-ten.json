@@ -12,24 +12,25 @@
     "1,000"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$10^3$ means $10 \\times 10 \\times 10$.",
+  "hint": "An exponent tells you how many times the base is used as a factor. How many tens get multiplied here?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$10^3$ means $10 \\times 10 \\times 10$."
+      "text": "An exponent tells you how many times the base is used as a factor. How many tens get multiplied here?"
     },
     {
       "level": "guide",
-      "text": "The exponent counts the zeros: $10^3$ has $3$ zeros."
+      "text": "The exponent is $3$, so write three tens and multiply them: $10 \\times 10 \\times 10$. Start with $10 \\times 10 = 100$."
     },
     {
       "level": "reveal",
-      "text": "$10 \\times 10 \\times 10 = 1000$."
+      "text": "$100 \\times 10 = 1000$, so $10^3$ equals $1000$, a one followed by three zeros."
     }
   ],
   "explanation": [
-    "$10^3 = 10 \\times 10 \\times 10$.",
-    "$10 \\times 10 = 100$, and $100 \\times 10 = 1000$."
+    "The exponent $3$ means the base $10$ is used as a factor three times: $10^3 = 10 \\times 10 \\times 10$.",
+    "Multiply two of the tens first to get $10 \\times 10 = 100$.",
+    "Multiply by the last ten: $100 \\times 10 = 1000$, so $10^3 = 1000$."
   ],
   "alternativeExplanations": [
     {

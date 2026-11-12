@@ -12,24 +12,25 @@
     "0.125"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Rewrite $\\frac{3}{4}$ as eighths.",
+  "hint": "Eighths and fourths are different sized pieces. Can the fourths be cut smaller so that both fractions are in eighths?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Rewrite $\\frac{3}{4}$ as eighths."
+      "text": "Eighths and fourths are different sized pieces. Can the fourths be cut smaller so that both fractions are in eighths?"
     },
     {
       "level": "guide",
-      "text": "$\\frac{3}{4} = \\frac{6}{8}$."
+      "text": "Multiply the top and bottom of $\\frac{3}{4}$ by $2$ to turn it into eighths. Then subtract it from $\\frac{7}{8}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{7}{8} - \\frac{6}{8} = \\frac{1}{8}$."
+      "text": "$\\frac{3}{4} = \\frac{6}{8}$ and $\\frac{7}{8} - \\frac{6}{8} = \\frac{1}{8}$, so the difference is $\\frac{1}{8}$."
     }
   ],
   "explanation": [
-    "$\\frac{3}{4} = \\frac{6}{8}$.",
-    "$\\frac{7}{8} - \\frac{6}{8} = \\frac{1}{8}$."
+    "Since $8$ is a multiple of $4$, eighths can be the common denominator for both fractions.",
+    "Rename the second fraction by doubling its top and bottom: $\\frac{3}{4} = \\frac{6}{8}$.",
+    "Subtract eighths from eighths: $\\frac{7}{8} - \\frac{6}{8} = \\frac{1}{8}$, so the answer is $\\frac{1}{8}$."
   ],
   "tags": [
     "fractions",

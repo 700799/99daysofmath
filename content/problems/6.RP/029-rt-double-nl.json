@@ -10,29 +10,31 @@
   "primaryAnswer": "42",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The pairs form a constant ratio.",
+  "hint": "A double number line pairs numbers that stay in one fixed ratio. What do you multiply the top number by to get its partner below?",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Picture a ratio table: write the rate in one row, then scale both columns by the same number."
+      "text": "Use the pair you know to find a smaller one: what bottom value matches $1$ on the top line?"
     },
     {
       "level": "nudge",
-      "text": "The pairs form a constant ratio."
+      "text": "A double number line pairs numbers that stay in one fixed ratio. What do you multiply the top number by to get its partner below?"
     },
     {
       "level": "guide",
-      "text": "$24 / 4 = 6$, so bottom is $6 \\times$ top."
+      "text": "The matching pair $4$ and $24$ shows the bottom value is $6$ times the top, because $24 \\div 4 = 6$. Multiply $7$ by $6$."
     },
     {
       "level": "reveal",
-      "text": "$7 \\times 6 = 42$."
+      "text": "$7 \\times 6 = 42$, so $42$ on the bottom line matches $7$ on the top."
     }
   ],
   "explanation": [
-    "Ratio: $6$ per $1$.",
-    "$7 \\times 6 = 42$."
+    "Matching marks on a double number line form equivalent ratios, so one multiplier links top to bottom.",
+    "Use the known pair to find it: $24 \\div 4 = 6$, so each top value is multiplied by $6$.",
+    "Apply that to the new top value: $7 \\times 6 = 42$.",
+    "The bottom line shows $42$ where the top line shows $7$."
   ],
   "tags": [
     "double-number-line"

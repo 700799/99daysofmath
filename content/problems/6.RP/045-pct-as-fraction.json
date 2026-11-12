@@ -13,24 +13,26 @@
     "0.75"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Percent means \"per $100$\".",
+  "hint": "The word percent means \"out of $100$\". That tells you exactly which number to put on the bottom of the fraction.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Percent means \"per $100$\"."
+      "text": "The word percent means \"out of $100$\". That tells you exactly which number to put on the bottom of the fraction."
     },
     {
       "level": "guide",
-      "text": "$\\frac{75}{100}$. Simplify it."
+      "text": "Write $75\\%$ as $\\frac{75}{100}$. Then simplify by dividing the top and bottom by their greatest common factor, $25$."
     },
     {
       "level": "reveal",
-      "text": "GCF of $75$ and $100$ is $25$. $\\frac{75}{100} = \\frac{3}{4}$."
+      "text": "$75 \\div 25 = 3$ and $100 \\div 25 = 4$, so $75\\%$ is the fraction $\\frac{3}{4}$."
     }
   ],
   "explanation": [
-    "$75\\% = \\frac{75}{100}$.",
-    "Divide both by $25$: $\\frac{3}{4}$."
+    "Percent means per hundred, so $75\\%$ is written as $\\frac{75}{100}$.",
+    "Both $75$ and $100$ are multiples of $25$, so $25$ is a common factor to divide by.",
+    "Dividing top and bottom by $25$ gives $\\frac{3}{4}$, and no number bigger than $1$ divides both $3$ and $4$.",
+    "Written as a fraction in simplest form, $75\\%$ is $\\frac{3}{4}$."
   ],
   "tags": [
     "percent",

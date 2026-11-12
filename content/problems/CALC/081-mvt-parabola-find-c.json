@@ -10,25 +10,25 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "First compute the average rate of change $\\frac{f(4) - f(0)}{4 - 0}$. Then find where the derivative equals that number.",
+  "hint": "First compute the average rate of change of $f$ over the whole interval. Then find where the derivative equals that number.",
   "hints": [
     {
       "level": "nudge",
-      "text": "First compute the average rate of change $\\frac{f(4) - f(0)}{4 - 0}$. Then find where the derivative equals that number."
+      "text": "First compute the average rate of change of $f$ over the whole interval. Then find where the derivative equals that number."
     },
     {
       "level": "guide",
-      "text": "$f(4) = 1$ and $f(0) = 1$, so the average rate is $0$. Solve $f'(c) = 2c - 4 = 0$."
+      "text": "The endpoint values are $f(4) = 1$ and $f(0) = 1$, so the average rate is $0$. The derivative is $f'(c) = 2c - 4$, so solve $2c - 4 = 0$."
     },
     {
       "level": "reveal",
-      "text": "$2c - 4 = 0$ gives $c = 2$."
+      "text": "Solving $2c - 4 = 0$ gives $c = 2$, which lies inside the interval."
     }
   ],
   "explanation": [
-    "Average rate of change: $\\frac{f(4) - f(0)}{4} = \\frac{1 - 1}{4} = 0$.",
+    "The average rate of change over the interval is $\\frac{f(4) - f(0)}{4} = \\frac{1 - 1}{4} = 0$.",
     "The MVT promises a $c$ with $f'(c) = 0$. Since $f'(x) = 2x - 4$, set $2c - 4 = 0$.",
-    "$c = 2$. The tangent there is horizontal, parallel to the (flat) secant line joining the endpoints."
+    "This gives $c = 2$. The tangent there is horizontal, parallel to the (flat) secant line joining the endpoints."
   ],
   "alternativeExplanations": [
     {

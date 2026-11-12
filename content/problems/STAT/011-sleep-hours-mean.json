@@ -12,25 +12,25 @@
     "15/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The mean is the total divided by how many values there are.",
+  "hint": "The mean shares the total evenly across the nights. What two numbers do you need before you can divide?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The mean is the total divided by how many values there are."
+      "text": "The mean shares the total evenly across the nights. What two numbers do you need before you can divide?"
     },
     {
       "level": "guide",
-      "text": "Add: $7 + 8 + 6 + 9 + 7.5 = 37.5$. Then divide by $5$."
+      "text": "Add the five nights, $7 + 8 + 6 + 9 + 7.5$, and then divide that total by $5$ because there are five nights."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{37.5}{5} = 7.5$ hours."
+      "text": "The total is $37.5$ and $\\frac{37.5}{5} = 7.5$, so her mean is $7.5$ hours of sleep."
     }
   ],
   "explanation": [
-    "Total sleep: $7 + 8 + 6 + 9 + 7.5 = 37.5$ hours.",
-    "Five nights, so divide by $5$.",
-    "Mean $= \\frac{37.5}{5} = 7.5$ hours."
+    "The mean is the total amount of sleep divided by the number of nights, so start with the total: $7 + 8 + 6 + 9 + 7.5 = 37.5$ hours.",
+    "There are five nights in the log, so the total is divided by $5$.",
+    "$\\frac{37.5}{5} = 7.5$, so Priya's mean is $7.5$ hours of sleep per night."
   ],
   "alternativeExplanations": [
     {

@@ -32,11 +32,11 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The numerator is one of the Pythagorean identities rearranged.",
+  "hint": "Look at the numerator on its own. It is one of the Pythagorean identities with a term moved to the other side.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The numerator is one of the Pythagorean identities rearranged."
+      "text": "Look at the numerator on its own. It is one of the Pythagorean identities with a term moved to the other side."
     },
     {
       "level": "nudge",
@@ -45,16 +45,16 @@
     },
     {
       "level": "guide",
-      "text": "$\\sec^2\\theta - 1 = \\tan^2\\theta$. Now the fraction is $\\frac{\\tan^2\\theta}{\\sin^2\\theta}$."
+      "text": "Since $\\sec^2\\theta - 1 = \\tan^2\\theta$, the fraction is $\\frac{\\tan^2\\theta}{\\sin^2\\theta}$. Rewrite the tangent as sine over cosine and see what cancels."
     },
     {
       "level": "reveal",
-      "text": "Write $\\tan^2\\theta = \\frac{\\sin^2\\theta}{\\cos^2\\theta}$; the $\\sin^2\\theta$ cancels and leaves $\\frac{1}{\\cos^2\\theta} = \\sec^2\\theta$."
+      "text": "Writing $\\tan^2\\theta = \\frac{\\sin^2\\theta}{\\cos^2\\theta}$, the $\\sin^2\\theta$ cancels and leaves $\\frac{1}{\\cos^2\\theta} = \\sec^2\\theta$, choice A."
     }
   ],
   "explanation": [
-    "Since $1 + \\tan^2\\theta = \\sec^2\\theta$, the numerator $\\sec^2\\theta - 1$ equals $\\tan^2\\theta$.",
-    "The fraction becomes $\\frac{\\tan^2\\theta}{\\sin^2\\theta} = \\frac{\\sin^2\\theta / \\cos^2\\theta}{\\sin^2\\theta}$.",
+    "Since $1 + \\tan^2\\theta = \\sec^2\\theta$, subtracting one shows that the numerator $\\sec^2\\theta - 1$ equals $\\tan^2\\theta$.",
+    "Rewriting tangent as sine over cosine, the fraction becomes $\\frac{\\tan^2\\theta}{\\sin^2\\theta} = \\frac{\\sin^2\\theta / \\cos^2\\theta}{\\sin^2\\theta}$.",
     "The $\\sin^2\\theta$ terms cancel, leaving $\\frac{1}{\\cos^2\\theta}$, which is $\\sec^2\\theta$."
   ],
   "alternativeExplanations": [

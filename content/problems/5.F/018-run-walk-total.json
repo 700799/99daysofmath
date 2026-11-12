@@ -12,11 +12,11 @@
     "17/12"
   ],
   "acceptanceMode": "normalized",
-  "hint": "You are combining two distances — that is addition.",
+  "hint": "Two distances are being joined into one trip, so which operation fits? Notice the fractions have different denominators.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You are combining two distances — that is addition."
+      "text": "Two distances are being joined into one trip, so which operation fits? Notice the fractions have different denominators."
     },
     {
       "level": "nudge",
@@ -25,18 +25,18 @@
     },
     {
       "level": "guide",
-      "text": "$\\frac{2}{3} = \\frac{8}{12}$ and $\\frac{3}{4} = \\frac{9}{12}$."
+      "text": "Add $\\frac{2}{3} + \\frac{3}{4}$ using twelfths: $\\frac{2}{3} = \\frac{8}{12}$ and $\\frac{3}{4} = \\frac{9}{12}$. The sum will be more than one whole."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{8}{12} + \\frac{9}{12} = \\frac{17}{12} = 1\\frac{5}{12}$."
+      "text": "$\\frac{8}{12} + \\frac{9}{12} = \\frac{17}{12} = 1\\frac{5}{12}$, so Maya travelled $1\\frac{5}{12}$ miles in all."
     }
   ],
   "explanation": [
-    "The least common denominator of $3$ and $4$ is $12$.",
-    "$\\frac{2}{3} = \\frac{8}{12}$ and $\\frac{3}{4} = \\frac{9}{12}$.",
-    "$\\frac{8}{12} + \\frac{9}{12} = \\frac{17}{12}$.",
-    "$\\frac{17}{12} = 1\\frac{5}{12}$ miles."
+    "The total distance is the sum $\\frac{2}{3} + \\frac{3}{4}$, and the smallest common denominator of $3$ and $4$ is $12$.",
+    "Rename both fractions in twelfths: $\\frac{2}{3} = \\frac{8}{12}$ and $\\frac{3}{4} = \\frac{9}{12}$.",
+    "Add the numerators now that the pieces match: $\\frac{8}{12} + \\frac{9}{12} = \\frac{17}{12}$.",
+    "Twelve twelfths make one whole mile, leaving $5$ twelfths, so the total is $1\\frac{5}{12}$ miles."
   ],
   "alternativeExplanations": [
     {

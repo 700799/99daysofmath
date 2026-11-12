@@ -26,10 +26,10 @@
     }
   ],
   "explanation": [
-    "Factor: numbers with product $6$ and sum $-5$ are $-2$ and $-3$.",
-    "So $(x - 2)(x - 3) = 0$.",
-    "Zero-product rule: $x = 2$ or $x = 3$.",
-    "The larger solution is $3$."
+    "To factor the left side, find two numbers with product $6$ and sum $-5$. They are $-2$ and $-3$.",
+    "Write the equation in factored form using those numbers: $(x - 2)(x - 3) = 0$.",
+    "By the zero-product rule one factor must be zero, so $x = 2$ or $x = 3$.",
+    "The larger of the two solutions is $3$."
   ],
   "alternativeExplanations": [
     {

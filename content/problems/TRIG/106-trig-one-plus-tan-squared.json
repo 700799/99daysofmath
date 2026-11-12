@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Rewrite $\\tan^2\\theta$ as $\\frac{\\sin^2\\theta}{\\cos^2\\theta}$ and put everything over $\\cos^2\\theta$.",
+  "hint": "Tangent can be rewritten with sine and cosine. Try writing the whole expression as one fraction with $\\cos^2\\theta$ on the bottom.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Rewrite $\\tan^2\\theta$ as $\\frac{\\sin^2\\theta}{\\cos^2\\theta}$ and put everything over $\\cos^2\\theta$."
+      "text": "Tangent can be rewritten with sine and cosine. Try writing the whole expression as one fraction with $\\cos^2\\theta$ on the bottom."
     },
     {
       "level": "guide",
-      "text": "$\\frac{\\cos^2\\theta}{\\cos^2\\theta} + \\frac{\\sin^2\\theta}{\\cos^2\\theta} = \\frac{\\cos^2\\theta + \\sin^2\\theta}{\\cos^2\\theta} = \\frac{1}{\\cos^2\\theta}$."
+      "text": "With $\\tan^2\\theta = \\frac{\\sin^2\\theta}{\\cos^2\\theta}$, the sum is $\\frac{\\cos^2\\theta}{\\cos^2\\theta} + \\frac{\\sin^2\\theta}{\\cos^2\\theta} = \\frac{\\cos^2\\theta + \\sin^2\\theta}{\\cos^2\\theta} = \\frac{1}{\\cos^2\\theta}$. Name the reciprocal of cosine."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{\\cos^2\\theta} = \\sec^2\\theta$."
+      "text": "The reciprocal of cosine is secant, so $\\frac{1}{\\cos^2\\theta} = \\sec^2\\theta$, choice A."
     }
   ],
   "explanation": [
     "Take the identity $\\sin^2\\theta + \\cos^2\\theta = 1$ and divide every term by $\\cos^2\\theta$.",
-    "That gives $\\tan^2\\theta + 1 = \\sec^2\\theta$.",
-    "So $1 + \\tan^2\\theta = \\sec^2\\theta$ — the second member of the Pythagorean family."
+    "Sine over cosine is tangent and one over cosine is secant, so that gives $\\tan^2\\theta + 1 = \\sec^2\\theta$.",
+    "So $1 + \\tan^2\\theta = \\sec^2\\theta$, the second member of the Pythagorean family."
   ],
   "alternativeExplanations": [
     {

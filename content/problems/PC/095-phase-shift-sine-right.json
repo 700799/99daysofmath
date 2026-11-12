@@ -26,8 +26,8 @@
     }
   ],
   "explanation": [
-    "Plain $\\sin(x)$ starts its climb at $x = 0$.",
-    "For $\\sin(x - 30^\\circ)$, the inside is zero when $x = 30^\\circ$, so the wave starts its climb $30^\\circ$ later.",
+    "The plain wave $\\sin(x)$ starts its climb where the inside of the sine is zero, at $x = 0$.",
+    "For $\\sin(x - 30^\\circ)$, the inside is zero when $x = 30^\\circ$, so this wave starts its climb $30^\\circ$ later.",
     "Starting later means the whole wave has slid $30^\\circ$ to the RIGHT."
   ],
   "alternativeExplanations": [

@@ -12,29 +12,31 @@
     "64 cubes"
   ],
   "acceptanceMode": "normalized",
-  "hint": "How many fit along each edge?",
+  "hint": "First think about one edge of the box. How many small cubes can sit in a row along $1$ inch?",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+      "text": "Compare volumes instead: each small cube has volume $\\frac{1}{64}$ cubic inch, and the box has volume $1$ cubic inch."
     },
     {
       "level": "nudge",
-      "text": "How many fit along each edge?"
+      "text": "First think about one edge of the box. How many small cubes can sit in a row along $1$ inch?"
     },
     {
       "level": "guide",
-      "text": "Each edge fits $4$ cubes ($1 \\div \\tfrac{1}{4} = 4$)."
+      "text": "Along each edge, $1 \\div \\frac{1}{4} = 4$ small cubes fit. The box is $4$ cubes long, $4$ wide and $4$ tall, so multiply $4 \\times 4 \\times 4$."
     },
     {
       "level": "reveal",
-      "text": "$4 \\cdot 4 \\cdot 4 = 64$."
+      "text": "$4 \\times 4 \\times 4 = 64$, so $64$ of the small cubes fit inside the box."
     }
   ],
   "explanation": [
-    "Each edge of the big box fits $1 \\div \\tfrac{1}{4} = 4$ small cubes.",
-    "Total: $4^3 = 64$ cubes."
+    "Find how many small cubes fit along one edge: $1 \\div \\frac{1}{4} = 4$.",
+    "The same is true for the length, the width and the height, so the box holds a $4 \\times 4 \\times 4$ block of cubes.",
+    "Multiply to count all the small cubes: $4 \\times 4 = 16$, and $16 \\times 4 = 64$.",
+    "Exactly $64$ of the $\\frac{1}{4}$-inch cubes fit in the box."
   ],
   "alternativeExplanations": [
     {

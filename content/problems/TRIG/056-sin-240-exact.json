@@ -14,24 +14,24 @@
     "-√3/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the reference angle first: $240^\\circ$ is in Quadrant III.",
+  "hint": "Work in two steps: the reference angle gives the size of the answer, and the quadrant gives its sign. Start by placing $240^\\circ$ in a quadrant.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the reference angle first: $240^\\circ$ is in Quadrant III."
+      "text": "Work in two steps: the reference angle gives the size of the answer, and the quadrant gives its sign. Start by placing $240^\\circ$ in a quadrant."
     },
     {
       "level": "guide",
-      "text": "Reference angle: $240 - 180 = 60^\\circ$, and $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$. Now the sign."
+      "text": "The angle is in Quadrant III, so the reference angle is $240 - 180 = 60^\\circ$, and $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$. Now decide the sign from the $y$-coordinates in that quadrant."
     },
     {
       "level": "reveal",
-      "text": "Quadrant III is below the $x$-axis, so sine is negative: $-\\frac{\\sqrt{3}}{2}$."
+      "text": "Quadrant III is below the $x$-axis, so sine is negative there and $\\sin 240^\\circ = -\\frac{\\sqrt{3}}{2}$."
     }
   ],
   "explanation": [
-    "$240^\\circ$ is in Quadrant III, and its reference angle is $240^\\circ - 180^\\circ = 60^\\circ$.",
-    "The magnitude is $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.",
+    "The angle $240^\\circ$ is in Quadrant III, and its reference angle is $240^\\circ - 180^\\circ = 60^\\circ$.",
+    "The size of the answer comes from the reference angle: $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.",
     "Sine is the $y$-coordinate, and Quadrant III lies below the $x$-axis, so $\\sin 240^\\circ = -\\frac{\\sqrt{3}}{2} \\approx -0.87$."
   ],
   "alternativeExplanations": [

@@ -32,27 +32,28 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Compute both, or reason from the shape: is there a value pulling one of them?",
+  "hint": "Look at how the values are spread. One value is much larger than the others, and that affects one of the two measures more.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Compute both, or reason from the shape: is there a value pulling one of them?"
+      "text": "Look at how the values are spread. One value is much larger than the others, and that affects one of the two measures more."
     },
     {
       "level": "guide",
-      "text": "Mean $= 25 \\div 5 = 5$; median is the middle value, $4$."
+      "text": "The list is already sorted, so the median is the third value. For the mean, add the five values to get $25$ and divide by $5$."
     },
     {
       "level": "reveal",
-      "text": "$5 > 4$, so the mean is greater."
+      "text": "The mean is $5$ and the median is $4$, so the mean is greater than the median, which is choice A."
     }
   ],
   "learningObjective": "Compare mean and median for a skewed data set.",
   "topic": "Center and shape",
   "explanation": [
-    "The values are already sorted, so the median is the third: $4$.",
-    "The mean is $\\dfrac{2 + 4 + 4 + 5 + 10}{5} = \\dfrac{25}{5} = 5$.",
-    "The mean exceeds the median because the value $10$ sits far above the rest and drags the mean up."
+    "The values are already in order, so the median is the third of the five values, which is $4$.",
+    "The mean is the sum divided by the count: $\\dfrac{2 + 4 + 4 + 5 + 10}{5} = \\dfrac{25}{5} = 5$.",
+    "The value $10$ lies far above the rest and pulls the mean up, while the median does not move.",
+    "Since $5$ is greater than $4$, the mean is greater than the median, which is choice A."
   ],
   "alternativeExplanations": [
     {

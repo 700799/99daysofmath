@@ -10,11 +10,11 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $t = 2$ into the top AND the bottom separately.",
+  "hint": "Substitute $t = 2$ into the top AND the bottom separately before you divide.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $t = 2$ into the top AND the bottom separately."
+      "text": "Substitute $t = 2$ into the top AND the bottom separately before you divide."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Top: $20 \\times 2 = 40$. Bottom: $2^2 + 4 = 8$."
+      "text": "The top is $20 \\times 2 = 40$ and the bottom is $2^2 + 4 = 8$. Now divide the top by the bottom."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{40}{8} = 5$ milligrams per liter."
+      "text": "Dividing gives $\\frac{40}{8} = 5$, so $C(2)$ is $5$ milligrams per liter."
     }
   ],
   "explanation": [
-    "Top: $20t = 20 \\times 2 = 40$.",
-    "Bottom: $t^2 + 4 = 4 + 4 = 8$.",
-    "$\\frac{40}{8} = 5$ mg per liter."
+    "Replace $t$ with $2$ in the top of the fraction: $20t = 20 \\times 2 = 40$.",
+    "Do the same in the bottom, squaring before adding: $t^2 + 4 = 4 + 4 = 8$.",
+    "Now divide the two results: $\\frac{40}{8} = 5$, so $C(2) = 5$ mg per liter."
   ],
   "alternativeExplanations": [
     {

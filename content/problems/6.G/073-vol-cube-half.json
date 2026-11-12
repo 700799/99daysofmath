@@ -13,24 +13,26 @@
     "0.125"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$V = s^3$.",
+  "hint": "A cube's volume is its edge used as a factor three times. That works for a fraction edge as well.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$V = s^3$."
+      "text": "A cube's volume is its edge used as a factor three times. That works for a fraction edge as well."
     },
     {
       "level": "guide",
-      "text": "$\\left(\\tfrac{1}{2}\\right)^3 = \\tfrac{1}{2} \\cdot \\tfrac{1}{2} \\cdot \\tfrac{1}{2}$."
+      "text": "Write $\\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2}$. Multiply the tops together and multiply the bottoms together."
     },
     {
       "level": "reveal",
-      "text": "$\\tfrac{1}{8}$."
+      "text": "The tops give $1$ and the bottoms give $2 \\times 2 \\times 2 = 8$, so the volume is $\\frac{1}{8}$ cubic unit."
     }
   ],
   "explanation": [
-    "$\\left(\\tfrac{1}{2}\\right)^3 = \\tfrac{1}{8}$ cubic units.",
-    "Final answer: 1/8."
+    "The volume of a cube is edge times edge times edge, so $V = \\left(\\frac{1}{2}\\right)^3$.",
+    "Multiply the first two factors, top by top and bottom by bottom: $\\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$.",
+    "Multiply by the third factor in the same way: $\\frac{1}{4} \\times \\frac{1}{2} = \\frac{1}{8}$.",
+    "The volume of the cube is $\\frac{1}{8}$ cubic unit."
   ],
   "tags": [
     "volume",

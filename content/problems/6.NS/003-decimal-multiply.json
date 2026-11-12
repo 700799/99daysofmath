@@ -13,11 +13,12 @@
     ".24"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply as if there were no decimal points, then count total decimal places in both factors and place the decimal in the answer.",
+  "hint": "Decimals can be multiplied like whole numbers first. Afterwards the decimal places in both factors tell you where the point goes.",
   "explanation": [
-    "Ignore the decimals: $6 \\times 4 = 24$.",
-    "Count the decimal places: $0.6$ has $1$, $0.4$ has $1$, total $= 2$.",
-    "Place the decimal $2$ places from the right of $24$: $0.24$."
+    "Ignore the decimal points for a moment and multiply the digits: $6 \\times 4 = 24$.",
+    "Count the decimal places in the factors: $0.6$ has $1$ and $0.4$ has $1$, so the product must have $2$.",
+    "This works because tenths times tenths gives hundredths: $\\frac{6}{10} \\times \\frac{4}{10} = \\frac{24}{100}$.",
+    "Place the point two places from the right of $24$, so the answer is $0.24$."
   ],
   "alternativeExplanations": [
     {
@@ -37,15 +38,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply as if there were no decimal points, then count total decimal places in both factors and place the decimal in the answer."
+      "text": "Decimals can be multiplied like whole numbers first. Afterwards the decimal places in both factors tell you where the point goes."
     },
     {
       "level": "guide",
-      "text": "Ignore the decimals: $6 \\times 4 = 24$."
+      "text": "Multiply $6 \\times 4$ without the points. Then count the decimal places: $0.6$ has one and $0.4$ has one, so the product needs two."
     },
     {
       "level": "reveal",
-      "text": "Place the decimal $2$ places from the right of $24$: $0.24$."
+      "text": "$6 \\times 4 = 24$, and with two decimal places the answer is $0.24$."
     }
   ]
 }

@@ -13,24 +13,26 @@
     "25 %"
   ],
   "acceptanceMode": "exact",
-  "hint": "Part $\\div$ whole.",
+  "hint": "Write the two numbers as a fraction, with the part on top and the whole on the bottom. Which number is the whole here?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Part $\\div$ whole."
+      "text": "Write the two numbers as a fraction, with the part on top and the whole on the bottom. Which number is the whole here?"
     },
     {
       "level": "guide",
-      "text": "$8 / 32 = 0.25$."
+      "text": "The fraction is $\\frac{8}{32}$. Since $8$ goes into $32$ exactly $4$ times, it simplifies to $\\frac{1}{4}$. Turn that fraction into a percent."
     },
     {
       "level": "reveal",
-      "text": "$0.25 = 25\\%$."
+      "text": "One quarter is $\\frac{1}{4} = 0.25$, so the number $8$ is $25\\%$ of $32$."
     }
   ],
   "explanation": [
-    "$\\frac{8}{32} = 0.25$.",
-    "$0.25 = 25\\%$."
+    "The number after \"of\" is the whole, so the comparison is $\\frac{8}{32}$.",
+    "Divide both numbers by $8$ to get the simpler fraction $\\frac{1}{4}$.",
+    "One quarter equals $0.25$, and $0.25 \\times 100 = 25$ gives the percent.",
+    "The answer is that $8$ is $25\\%$ of $32$."
   ],
   "alternativeExplanations": [
     {

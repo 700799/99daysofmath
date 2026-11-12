@@ -10,11 +10,11 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The $x$s do not match yet. Multiply the whole second equation by 2 to get $2x + 2y = 16$.",
+  "hint": "Neither variable cancels straight away. Think about how to make the $x$ terms match in both equations.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $x$s do not match yet. Multiply the whole second equation by 2 to get $2x + 2y = 16$."
+      "text": "Neither variable cancels straight away. Think about how to make the $x$ terms match in both equations."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Now stack and subtract: $(2x + 3y) - (2x + 2y) = 19 - 16$."
+      "text": "Multiply the second equation by $2$ to get $2x + 2y = 16$. Subtract it from the first: $(2x + 3y) - (2x + 2y) = 19 - 16$."
     },
     {
       "level": "reveal",
-      "text": "The $x$s cancel: $y = 3$. (And $x = 5$.)"
+      "text": "The $x$ terms cancel and leave $y = 3$. The matching value of $x$ is $5$."
     }
   ],
   "explanation": [
-    "To cancel with elimination, the copies must match. Double the second equation: $2x + 2y = 16$.",
-    "Subtract it from the first: the $2x$s vanish and $3y - 2y = y$.",
-    "$y = 19 - 16 = 3$. Check: $x = 5$, and $10 + 9 = 19$. ✓"
+    "For elimination the $x$ terms must match, so multiply every term of the second equation by $2$: $2x + 2y = 16$.",
+    "Subtract this from the first equation. The $2x$ terms cancel and $3y - 2y$ leaves a single $y$.",
+    "The right side gives $19 - 16 = 3$, so $y = 3$. Check with $x = 5$: $10 + 9 = 19$."
   ],
   "alternativeExplanations": [
     {

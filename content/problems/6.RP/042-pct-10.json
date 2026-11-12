@@ -10,24 +10,26 @@
   "primaryAnswer": "25",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$10\\%$ means $\\frac{1}{10}$.",
+  "hint": "Ten percent is one of the easiest percents to find. What fraction of the whole is $10\\%$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$10\\%$ means $\\frac{1}{10}$."
+      "text": "Ten percent is one of the easiest percents to find. What fraction of the whole is $10\\%$?"
     },
     {
       "level": "guide",
-      "text": "Move the decimal one place left."
+      "text": "$10\\%$ is one tenth, so divide $250$ by $10$. Dividing by $10$ moves each digit one place to the right."
     },
     {
       "level": "reveal",
-      "text": "$250 \\div 10 = 25$."
+      "text": "One tenth of $250$ is $250 \\div 10 = 25$, so $10\\%$ of $250$ equals $25$."
     }
   ],
   "explanation": [
-    "$10\\% = 0.10$.",
-    "$250 \\times 0.10 = 25$."
+    "$10\\%$ means $10$ out of $100$, which simplifies to $\\frac{1}{10}$.",
+    "One tenth of a number is that number divided by $10$.",
+    "Dividing $250$ by $10$ removes the final zero and leaves $25$.",
+    "This means $10\\%$ of $250$ is equal to $25$."
   ],
   "tags": [
     "percent"

@@ -48,10 +48,10 @@
     }
   ],
   "explanation": [
-    "Write $7$ as $7.0$ so the tenths line up.",
-    "There are $0$ tenths on top, so regroup one whole into $10$ tenths: $7.0$ becomes $6$ and $10$ tenths.",
-    "$10 - 4 = 6$ tenths, and the whole-number part is $6$.",
-    "So $7 - 0.4 = 6.6$, which is choice A."
+    "Write $7$ as $7.0$ so that both numbers have a tenths digit to line up.",
+    "There are $0$ tenths on top, so trade one whole for $10$ tenths. Now $7.0$ is $6$ wholes and $10$ tenths.",
+    "Subtract the tenths, $10 - 4 = 6$ tenths, and the whole number part stays at $6$.",
+    "So the difference is $7 - 0.4 = 6.6$, which is choice A."
   ],
   "alternativeExplanations": [
     {

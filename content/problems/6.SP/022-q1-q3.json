@@ -10,29 +10,31 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Lower half: $1, 3, 5$.",
+  "hint": "First split the data at its median. The lower half is every value below that middle number.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Draw a tiny dot plot. The shape of the data tells you which statistic to use."
+      "text": "Try a shorter list first: for $1, 3, 5$, which value sits in the middle? The lower quartile is found the same way on the lower half."
     },
     {
       "level": "nudge",
-      "text": "Lower half: $1, 3, 5$."
+      "text": "First split the data at its median. The lower half is every value below that middle number."
     },
     {
       "level": "guide",
-      "text": "Median of $1, 3, 5$."
+      "text": "The median of the whole list is $7$, so the lower half is $1, 3, 5$. Now find the middle of those three values."
     },
     {
       "level": "reveal",
-      "text": "$3$."
+      "text": "The middle of $1, 3, 5$ is $3$, so $Q1 = 3$."
     }
   ],
   "explanation": [
-    "Lower half: $1, 3, 5$.",
-    "Median: $3$."
+    "The median of $1, 3, 5, 7, 9, 11, 13$ is the $4$th value, $7$, which splits the data into two halves.",
+    "The lower half is the values below the median: $1, 3, 5$.",
+    "$Q1$ is the median of that lower half, and the middle of three values is the $2$nd one.",
+    "The $2$nd value of $1, 3, 5$ is $3$, so $Q1 = 3$."
   ],
   "tags": [
     "CA",

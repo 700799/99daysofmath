@@ -10,19 +10,19 @@
   "primaryAnswer": "45",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$\\arctan(1)$ asks: which angle has a tangent of $1$?",
+  "hint": "The expression $\\arctan(1)$ asks a question: which angle has a tangent of $1$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$\\arctan(1)$ asks: which angle has a tangent of $1$?"
+      "text": "The expression $\\arctan(1)$ asks a question: which angle has a tangent of $1$?"
     },
     {
       "level": "guide",
-      "text": "Tangent is rise over run, so you need the angle where rise and run are equal."
+      "text": "Tangent is rise over run, so you need the angle in a right triangle whose two legs are equal. Think of the triangle made by cutting a square along its diagonal."
     },
     {
       "level": "reveal",
-      "text": "That is $45^\\circ$."
+      "text": "Equal legs give a $45$-$45$-$90$ triangle, so the ramp angle is $45$ degrees."
     }
   ],
   "explanation": [

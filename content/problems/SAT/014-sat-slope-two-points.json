@@ -10,27 +10,27 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Slope is rise over run: the change in $y$ divided by the change in $x$.",
+  "hint": "Slope compares two changes between the points. Which change goes on top and which goes on the bottom?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Slope is rise over run: the change in $y$ divided by the change in $x$."
+      "text": "Slope compares two changes between the points. Which change goes on top and which goes on the bottom?"
     },
     {
       "level": "guide",
-      "text": "The $y$ values change by $19 - 7 = 12$; the $x$ values change by $6 - 2 = 4$."
+      "text": "The rise is the change in $y$, which is $19 - 7$. The run is the change in $x$, which is $6 - 2$. Divide the rise by the run."
     },
     {
       "level": "reveal",
-      "text": "$\\dfrac{12}{4} = 3$."
+      "text": "The rise is $12$ and the run is $4$, so the slope of the line is $\\dfrac{12}{4} = 3$."
     }
   ],
   "learningObjective": "Compute the slope of a line through two given points.",
   "topic": "Slope formula",
   "explanation": [
-    "Slope $= \\dfrac{y_2 - y_1}{x_2 - x_1} = \\dfrac{19 - 7}{6 - 2}$.",
-    "$= \\dfrac{12}{4} = 3$.",
-    "The order of the points does not matter as long as it is consistent: $\\dfrac{7 - 19}{2 - 6} = \\dfrac{-12}{-4} = 3$ too."
+    "Slope is the change in $y$ divided by the change in $x$, so write $\\dfrac{19 - 7}{6 - 2}$ using the two points in the same order.",
+    "Simplify the top and bottom separately to get $\\dfrac{12}{4}$, which equals $3$.",
+    "Reversing the order of the points gives $\\dfrac{-12}{-4}$, which is also $3$, so the slope of the line is $3$."
   ],
   "alternativeExplanations": [
     {

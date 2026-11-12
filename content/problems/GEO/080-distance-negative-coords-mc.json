@@ -32,11 +32,11 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the horizontal gap and the vertical gap first — subtracting a negative is the same as adding.",
+  "hint": "Find how far apart the points are horizontally and vertically. Take care with the signs when you subtract a negative coordinate.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the horizontal gap and the vertical gap first — subtracting a negative is the same as adding."
+      "text": "Find how far apart the points are horizontally and vertically. Take care with the signs when you subtract a negative coordinate."
     },
     {
       "level": "nudge",
@@ -45,17 +45,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\Delta x = 5 - (-3) = 8$ and $\\Delta y = -4 - 2 = -6$. Squaring kills the minus sign."
+      "text": "The changes are $5 - (-3) = 8$ and $-4 - 2 = -6$. Square each one, add the squares, and take the square root."
     },
     {
       "level": "reveal",
-      "text": "$d = \\sqrt{8^2 + (-6)^2} = \\sqrt{64 + 36} = \\sqrt{100} = 10$."
+      "text": "$d = \\sqrt{8^2 + (-6)^2} = \\sqrt{100} = 10$, so the drone flies $10$ units, choice A."
     }
   ],
   "explanation": [
-    "Horizontal change: $5 - (-3) = 8$. Vertical change: $-4 - 2 = -6$.",
-    "The distance formula squares both, so the sign of $-6$ does not matter: $64 + 36 = 100$.",
-    "$d = \\sqrt{100} = 10$ units. Choice A."
+    "The horizontal change is $5 - (-3) = 8$ and the vertical change is $-4 - 2 = -6$.",
+    "The distance formula squares both changes, so the negative sign disappears: $8^2 + (-6)^2 = 64 + 36 = 100$.",
+    "Taking the square root gives $d = \\sqrt{100} = 10$ units, which is choice A."
   ],
   "alternativeExplanations": [
     {

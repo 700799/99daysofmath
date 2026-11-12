@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Translate each phrase separately: \"no more than\" and \"at least\" are different symbols.",
+  "hint": "The sentence contains two separate conditions, one about money and one about shirts. Translate each phrase into its own symbol.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Translate each phrase separately: \"no more than\" and \"at least\" are different symbols."
+      "text": "The sentence contains two separate conditions, one about money and one about shirts. Translate each phrase into its own symbol."
     },
     {
       "level": "guide",
-      "text": "\"No more than $\\$120$\" is $\\le 120$; \"at least $4$ shirts\" is $s \\ge 4$."
+      "text": "The cost is $9s + 15p$ because shirts cost $9$ dollars and pants cost $15$ dollars. No more than means $\\le$, and at least means $\\ge$."
     },
     {
       "level": "reveal",
-      "text": "And the shirts cost $\\$9$ each, so the shirt term is $9s$: choice A."
+      "text": "The system is $9s + 15p \\le 120$ together with $s \\ge 4$, which is choice A."
     }
   ],
   "learningObjective": "Translate constraint language into a system of inequalities.",

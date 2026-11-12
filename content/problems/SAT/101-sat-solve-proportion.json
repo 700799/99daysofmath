@@ -10,27 +10,27 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Cross-multiply, or notice how the denominator changed.",
+  "hint": "The two fractions are equal, so the top and bottom of the first were scaled by the same number. Compare the two denominators.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Cross-multiply, or notice how the denominator changed."
+      "text": "The two fractions are equal, so the top and bottom of the first were scaled by the same number. Compare the two denominators."
     },
     {
       "level": "guide",
-      "text": "$4 \\times 5 = 20$, so the numerator scales by $5$ too."
+      "text": "The denominator $4$ became $20$, which is $5$ times as large. Multiply the numerator $3$ by the same factor."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 5 = 15$."
+      "text": "Since $3 \\times 5 = 15$, the value of $x$ is $15$."
     }
   ],
   "learningObjective": "Solve a basic proportion.",
   "topic": "Proportions",
   "explanation": [
-    "Cross-multiply: $3 \\times 20 = 4x$, so $60 = 4x$ and $x = 15$.",
-    "Or scale directly: the denominator went from $4$ to $20$, a factor of $5$.",
-    "Applying the same factor to the numerator: $3 \\times 5 = 15$."
+    "Cross-multiply the proportion to get $3 \\times 20 = 4x$, which simplifies to $60 = 4x$.",
+    "Divide both sides by $4$ to isolate the variable, giving $x = 15$.",
+    "Scaling confirms it: the denominator was multiplied by $5$, and $3 \\times 5 = 15$. The value of $x$ is $15$."
   ],
   "alternativeExplanations": [
     {

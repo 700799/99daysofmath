@@ -10,19 +10,19 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A treatment is one specific COMBINATION of the factor levels.",
+  "hint": "A treatment is one specific combination of a level from each factor. How many factors are there, and how many levels does each have?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A treatment is one specific COMBINATION of the factor levels."
+      "text": "A treatment is one specific combination of a level from each factor. How many factors are there, and how many levels does each have?"
     },
     {
       "level": "guide",
-      "text": "Three dose levels times two timing levels."
+      "text": "Dose has three levels and time of day has two. Every dose is paired with every time, so multiply the number of levels."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 2 = 6$ treatments."
+      "text": "$3 \\times 2 = 6$, so the experiment has $6$ treatments."
     }
   ],
   "explanation": [

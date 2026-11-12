@@ -13,24 +13,25 @@
     "neg 3"
   ],
   "acceptanceMode": "exact",
-  "hint": "Closer to $0$ on the number line means greater.",
+  "hint": "For two negative numbers, the one closer to $0$ is farther right on the number line, and farther right means greater.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Closer to $0$ on the number line means greater."
+      "text": "For two negative numbers, the one closer to $0$ is farther right on the number line, and farther right means greater."
     },
     {
       "level": "guide",
-      "text": "$-3$ is to the right of $-7$."
+      "text": "$-7$ is $7$ units left of $0$ and $-3$ is $3$ units left of $0$. Decide which one sits closer to zero."
     },
     {
       "level": "reveal",
-      "text": "$-3 > -7$."
+      "text": "$-3$ is closer to $0$ and to the right of $-7$, so $-3$ is greater."
     }
   ],
   "explanation": [
-    "$-3$ is closer to $0$ than $-7$ is.",
-    "So $-3 > -7$."
+    "Both numbers are negative, so both are to the left of $0$ on the number line.",
+    "$-3$ is $3$ units from $0$ and $-7$ is $7$ units from $0$, so $-3$ is closer to $0$.",
+    "Being closer to $0$ on the negative side means being farther right, so $-3 > -7$ and the greater number is $-3$."
   ],
   "alternativeExplanations": [
     {

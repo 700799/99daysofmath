@@ -17,25 +17,26 @@
     "0.35"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Less than $20$ minutes\" covers the first TWO bars.",
+  "hint": "Each bar covers a range of times. Decide which bars lie completely below $20$ minutes before you count anyone.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Less than $20$ minutes\" covers the first TWO bars."
+      "text": "Each bar covers a range of times. Decide which bars lie completely below $20$ minutes before you count anyone."
     },
     {
       "level": "guide",
-      "text": "Add those two counts, then divide by the total of $40$."
+      "text": "The $0$ to $10$ bar holds $4$ employees and the $10$ to $20$ bar holds $10$. Add those counts, then divide the sum by the total of $40$."
     },
     {
       "level": "reveal",
-      "text": "$4 + 10 = 14$, and $\\frac{14}{40} = 0.35$, so $35$ percent."
+      "text": "$4 + 10 = 14$ and $\\frac{14}{40} = 0.35$, so $35$ percent of the employees commute less than $20$ minutes."
     }
   ],
   "explanation": [
-    "Commutes under $20$ minutes are in the $0$ to $10$ bar and the $10$ to $20$ bar.",
-    "$4 + 10 = 14$ employees.",
-    "$\\frac{14}{40} = 0.35$, which is $35$ percent."
+    "A commute under $20$ minutes falls in either the $0$ to $10$ bar or the $10$ to $20$ bar, so those are the two bars to use.",
+    "Adding their counts gives $4 + 10 = 14$ employees with a commute below $20$ minutes.",
+    "The whole group is $40$ employees, so the fraction is $\\frac{14}{40} = 0.35$.",
+    "As a percent, $35$ percent of the employees commute less than $20$ minutes."
   ],
   "alternativeExplanations": [
     {

@@ -12,24 +12,26 @@
     "$85"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Withdraw subtracts; deposit adds.",
+  "hint": "Each transaction changes the balance. Decide which one takes money out of the account and which one puts money in.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Withdraw subtracts; deposit adds."
+      "text": "Each transaction changes the balance. Decide which one takes money out of the account and which one puts money in."
     },
     {
       "level": "guide",
-      "text": "$100 - 40 + 25$."
+      "text": "A withdrawal is subtracted and a deposit is added, so the expression is $100 - 40 + 25$. Work from left to right."
     },
     {
       "level": "reveal",
-      "text": "$85$."
+      "text": "$100 - 40 = 60$ and $60 + 25 = 85$, so the final balance is $85$ dollars."
     }
   ],
   "explanation": [
-    "$100 - 40 = 60$.",
-    "$60 + 25 = 85$."
+    "A withdrawal lowers the balance and a deposit raises it, so the balance is $100 - 40 + 25$.",
+    "Subtract the withdrawal from the starting balance first: $100 - 40 = 60$.",
+    "Then add the deposit to that amount: $60 + 25 = 85$.",
+    "So the final balance in the account is $85$ dollars."
   ],
   "tags": [
     "integer",

@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "The partner in Quadrant 2 is $180^\\circ - \\theta$, so compute $180 - 30$."
+      "text": "The partner of an angle $\\theta$ in Quadrant 2 is $180^\\circ - \\theta$, so work out $180 - 30$."
     },
     {
       "level": "reveal",
-      "text": "$180 - 30 = 150$, so the other answer is $150^\\circ$."
+      "text": "Subtracting gives $180 - 30 = 150$, so the other answer is $150^\\circ$."
     }
   ],
   "explanation": [
-    "Two points on the unit circle sit at the same height: one in Quadrant 1 and its mirror in Quadrant 2.",
-    "The mirror of $\\theta$ across the top of the circle is $180^\\circ - \\theta$.",
-    "$180 - 30 = 150^\\circ$. Check: $\\sin 150^\\circ = 0.5$ too. ✓"
+    "Two points on the unit circle sit at the same height: one in Quadrant 1 and its mirror image in Quadrant 2.",
+    "The mirror image of the angle $\\theta$ across the vertical axis is $180^\\circ - \\theta$.",
+    "Here that is $180 - 30 = 150^\\circ$. Checking, $\\sin 150^\\circ = 0.5$ as well, so the other answer is $150^\\circ$."
   ],
   "alternativeExplanations": [
     {

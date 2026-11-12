@@ -13,24 +13,25 @@
     "solid"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$\\geq$ includes equality.",
+  "hint": "Check the endpoint first. Does the number $5$ itself make $x \\geq 5$ true?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$\\geq$ includes equality."
+      "text": "Check the endpoint first. Does the number $5$ itself make $x \\geq 5$ true?"
     },
     {
       "level": "guide",
-      "text": "Closed (filled) circle when \"or equal to\"."
+      "text": "The symbol $\\geq$ means greater than **or equal to**, so $5$ counts as a solution. Which kind of circle shows a number that is included?"
     },
     {
       "level": "reveal",
-      "text": "Closed."
+      "text": "Because $5$ is included, the circle at $5$ is closed (filled in)."
     }
   ],
   "explanation": [
-    "$\\geq$ includes $5$.",
-    "Closed (solid) circle at $5$."
+    "The symbol $\\geq$ means \"greater than or equal to\".",
+    "Test the endpoint: $5 \\geq 5$ is true, so $5$ is a solution.",
+    "An included number is drawn with a filled circle, so the circle at $5$ is closed."
   ],
   "tags": [
     "inequality"

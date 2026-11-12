@@ -12,26 +12,26 @@
     "$4.15"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"In all\" means add. Line up the decimal points like the price tags in a column.",
+  "hint": "The words \"in all\" tell you to join the two prices. Money amounts must have their decimal points lined up.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"In all\" means add. Line up the decimal points like the price tags in a column."
+      "text": "The words \"in all\" tell you to join the two prices. Money amounts must have their decimal points lined up."
     },
     {
       "level": "guide",
-      "text": "Hundredths: $5 + 0 = 5$. Tenths: $7 + 4 = 11$ tenths, so carry."
+      "text": "Stack $2.75$ over $1.40$. Add the hundredths, then the tenths ($7 + 4$ makes more than ten, so regroup), then the dollars."
     },
     {
       "level": "reveal",
-      "text": "$2.75 + 1.40 = 4.15$."
+      "text": "$2.75 + 1.40 = 4.15$, so you spend $\\$4.15$ in all."
     }
   ],
   "explanation": [
-    "Stack the prices with the decimal points lined up: $2.75$ over $1.40$.",
-    "Hundredths: $5 + 0 = 5$. Tenths: $7 + 4 = 11$, so write $1$ and carry $1$ whole dollar.",
-    "Dollars: $2 + 1 + 1 = 4$.",
-    "The total is $\\$4.15$."
+    "Spending \"in all\" means adding, so stack $2.75$ over $1.40$ with the decimal points lined up.",
+    "Add the hundredths, $5 + 0 = 5$. Add the tenths, $7 + 4 = 11$, so write $1$ and carry $1$ whole dollar.",
+    "Add the dollars with the carried one: $2 + 1 + 1 = 4$ dollars.",
+    "The total is $4$ dollars and $15$ cents, so you spend $\\$4.15$."
   ],
   "alternativeExplanations": [
     {

@@ -10,24 +10,26 @@
   "primaryAnswer": "14",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $4$ in place of $a$.",
+  "hint": "Swap the letter $a$ for its number, and remember that $3a$ means $3$ times $a$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $4$ in place of $a$."
+      "text": "Swap the letter $a$ for its number, and remember that $3a$ means $3$ times $a$."
     },
     {
       "level": "guide",
-      "text": "$3(4) + 2$."
+      "text": "With $a = 4$ the expression is $3(4) + 2$. Find the product first, then add $2$."
     },
     {
       "level": "reveal",
-      "text": "$12 + 2 = 14$."
+      "text": "$3 \\times 4 = 12$ and $12 + 2 = 14$, so the value is $14$."
     }
   ],
   "explanation": [
-    "$3a + 2$ with $a = 4$: $3(4) + 2$.",
-    "$12 + 2 = 14$."
+    "Replace the letter $a$ with its value $4$ to get $3(4) + 2$.",
+    "Multiply first, as the order of operations requires: $3 \\times 4 = 12$.",
+    "Then add the $2$ that was waiting: $12 + 2 = 14$.",
+    "The value of the expression is $14$."
   ],
   "tags": [
     "evaluate"

@@ -10,26 +10,26 @@
   "primaryAnswer": "5050",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Pair the first with the last: $1 + 100$. Then $2 + 99$. Notice anything?",
+  "hint": "Pair the first number with the last: $1 + 100$. Then try $2 + 99$. What do you notice about the totals?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Pair the first with the last: $1 + 100$. Then $2 + 99$. Notice anything?"
+      "text": "Pair the first number with the last: $1 + 100$. Then try $2 + 99$. What do you notice about the totals?"
     },
     {
       "level": "guide",
-      "text": "Every pair adds to $101$, and $100$ numbers make $50$ pairs."
+      "text": "Every pair adds to $101$, and $100$ numbers make $50$ pairs. Multiply the number of pairs by the pair total."
     },
     {
       "level": "reveal",
-      "text": "$50 \\times 101 = 5050$."
+      "text": "The product is $50 \\times 101 = 5050$, so the sum is $5050$."
     }
   ],
   "explanation": [
-    "Use the shortcut: sum $= n \\times \\frac{\\text{first} + \\text{last}}{2}$.",
-    "Here $n = 100$, first $= 1$, last $= 100$.",
-    "$100 \\times \\frac{101}{2} = 50 \\times 101$.",
-    "$= 5050$."
+    "For an arithmetic list the sum is $n \\times \\frac{\\text{first} + \\text{last}}{2}$, which is the pairing idea in one formula.",
+    "Here there are $n = 100$ numbers, the first is $1$, and the last is $100$.",
+    "Substituting these into the formula gives $100 \\times \\frac{101}{2} = 50 \\times 101$.",
+    "So the sum of the numbers from $1$ to $100$ is $5050$."
   ],
   "alternativeExplanations": [
     {

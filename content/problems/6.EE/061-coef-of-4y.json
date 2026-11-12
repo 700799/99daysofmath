@@ -10,24 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The coefficient is the number multiplied by the variable.",
+  "hint": "A coefficient is the number that is multiplied by a variable.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The coefficient is the number multiplied by the variable."
+      "text": "A coefficient is the number that is multiplied by a variable."
     },
     {
       "level": "guide",
-      "text": "In $4y$, the number in front of $y$ is the coefficient."
+      "text": "$4y$ is short for $4 \\times y$. Look at which number is attached to the $y$."
     },
     {
       "level": "reveal",
-      "text": "$4$."
+      "text": "The number multiplying $y$ is $4$, so the coefficient is $4$."
     }
   ],
   "explanation": [
-    "$4y$ means $4 \\times y$.",
-    "The coefficient is $4$."
+    "The term $4y$ is a short way to write $4 \\times y$.",
+    "The **coefficient** is the number part that multiplies the variable.",
+    "Here that number is $4$, so the coefficient of $y$ is $4$."
   ],
   "tags": [
     "expression",

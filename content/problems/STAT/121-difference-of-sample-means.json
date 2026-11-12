@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "The natural estimate of a difference in population means is the difference in sample means.",
+  "hint": "A point estimate is a single best guess for a parameter. What sample quantity naturally estimates a difference of two population means?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The natural estimate of a difference in population means is the difference in sample means."
+      "text": "A point estimate is a single best guess for a parameter. What sample quantity naturally estimates a difference of two population means?"
     },
     {
       "level": "guide",
-      "text": "Compute $\\bar{x}_A - \\bar{x}_B$, keeping the order A minus B."
+      "text": "Use the difference of the sample means in the same order as the parameter, A minus B: $82.4 - 78.9$."
     },
     {
       "level": "reveal",
-      "text": "$82.4 - 78.9 = 3.5$ points."
+      "text": "$82.4 - 78.9 = 3.5$, so the point estimate is $3.5$ points."
     }
   ],
   "explanation": [
-    "The parameter is $\\mu_A - \\mu_B$; its point estimate is $\\bar{x}_A - \\bar{x}_B$.",
-    "$82.4 - 78.9 = 3.5$.",
-    "Class A scored 3.5 points higher on average in these samples. Whether that gap is statistically significant depends on the spreads and sample sizes."
+    "The parameter is $\\mu_A - \\mu_B$, and each population mean is estimated by its sample mean, so the point estimate is $\\bar{x}_A - \\bar{x}_B$.",
+    "Subtracting in the order A minus B gives $82.4 - 78.9 = 3.5$.",
+    "The point estimate is $3.5$ points. Whether that gap is statistically significant depends on the spreads and sample sizes."
   ],
   "alternativeExplanations": [
     {

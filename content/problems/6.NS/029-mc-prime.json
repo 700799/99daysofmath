@@ -32,24 +32,26 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "A prime number has only $1$ and itself as factors.",
+  "hint": "A prime number has exactly two factors, $1$ and itself. Test each choice to see whether a smaller number divides it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A prime number has only $1$ and itself as factors."
+      "text": "A prime number has exactly two factors, $1$ and itself. Test each choice to see whether a smaller number divides it."
     },
     {
       "level": "guide",
-      "text": "$9 = 3 \\times 3$, $15 = 3 \\times 5$, $21 = 3 \\times 7$."
+      "text": "Try dividing each choice by $3$. Three of the numbers, $9$, $15$ and $21$, are in the three times table. See what happens with the remaining one."
     },
     {
       "level": "reveal",
-      "text": "$17$ has no factors except $1$ and $17$."
+      "text": "$9 = 3 \\times 3$, $15 = 3 \\times 5$ and $21 = 3 \\times 7$, so the prime is $17$ (choice C)."
     }
   ],
   "explanation": [
-    "$9, 15, 21$ all have factors besides $1$ and themselves.",
-    "$17$ is prime."
+    "A prime number can only be divided exactly by $1$ and by itself, so look for other factors of each choice.",
+    "$9 = 3 \\times 3$, $15 = 3 \\times 5$ and $21 = 3 \\times 7$, so these three all have $3$ as a factor and are not prime.",
+    "$17$ is not divisible by $2$, $3$ or $4$, and $5 \\times 5$ is already more than $17$, so no other factor exists.",
+    "The prime number is $17$, which is choice C."
   ],
   "tags": [
     "prime"

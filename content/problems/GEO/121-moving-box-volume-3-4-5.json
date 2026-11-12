@@ -10,25 +10,25 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Volume of a rectangular prism is length $\\times$ width $\\times$ height.",
+  "hint": "Volume counts the unit cubes that fill the box. Think about how the three dimensions combine to count them.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Volume of a rectangular prism is length $\\times$ width $\\times$ height."
+      "text": "Volume counts the unit cubes that fill the box. Think about how the three dimensions combine to count them."
     },
     {
       "level": "guide",
-      "text": "$3 \\times 4 = 12$. Now multiply by $5$."
+      "text": "The volume of a rectangular prism is length times width times height. Start with $3 \\times 4 = 12$ and then multiply by $5$."
     },
     {
       "level": "reveal",
-      "text": "$12 \\times 5 = 60$ cubic feet."
+      "text": "$12 \\times 5 = 60$, so the box has a volume of $60$ cubic feet."
     }
   ],
   "explanation": [
-    "Multiply the three dimensions: $V = 3 \\times 4 \\times 5$.",
-    "$3 \\times 4 = 12$, then $12 \\times 5 = 60$.",
-    "The box holds $60$ cubic feet."
+    "The volume of a rectangular prism is the product of its three dimensions, so $V = 3 \\times 4 \\times 5$.",
+    "Multiplying in order gives $3 \\times 4 = 12$ and then $12 \\times 5 = 60$.",
+    "The moving box therefore holds $60$ cubic feet."
   ],
   "alternativeExplanations": [
     {

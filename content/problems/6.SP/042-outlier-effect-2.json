@@ -12,24 +12,25 @@
     "the mean"
   ],
   "acceptanceMode": "normalized",
-  "hint": "One big number can shift the average a lot.",
+  "hint": "Imagine one value in a list becoming huge. Think about what happens to the total and what happens to the middle position.",
   "hints": [
     {
       "level": "nudge",
-      "text": "One big number can shift the average a lot."
+      "text": "Imagine one value in a list becoming huge. Think about what happens to the total and what happens to the middle position."
     },
     {
       "level": "guide",
-      "text": "Median uses position; mean uses value."
+      "text": "The mean is built from the sum of every value, so one extreme value changes it. The median only looks at which value is in the middle of the order."
     },
     {
       "level": "reveal",
-      "text": "Mean."
+      "text": "Outliers affect the mean more than the median."
     }
   ],
   "explanation": [
-    "Mean uses every value, so outliers shift it.",
-    "Median is based on rank — outliers barely affect it."
+    "The mean adds up every value, so a very large or very small value changes the total and shifts the mean.",
+    "The median depends only on the middle position, and an outlier is still just one value at the end of the order.",
+    "That is why outliers usually affect the mean more than the median."
   ],
   "tags": [
     "outlier"

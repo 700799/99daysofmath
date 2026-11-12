@@ -10,25 +10,25 @@
   "primaryAnswer": "17",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Something had $6$ taken away and left $11$. Undo subtraction with addition.",
+  "hint": "Some number had $6$ taken away and $11$ was left. How do you get back what was taken away?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Something had $6$ taken away and left $11$. Undo subtraction with addition."
+      "text": "Some number had $6$ taken away and $11$ was left. How do you get back what was taken away?"
     },
     {
       "level": "guide",
-      "text": "Add $6$ to BOTH sides: $x = 11 + 6$."
+      "text": "Add $6$ to both sides to cancel the subtraction: $x = 11 + 6$."
     },
     {
       "level": "reveal",
-      "text": "$x = 17$."
+      "text": "$11 + 6 = 17$, so the equation's solution is $x = 17$."
     }
   ],
   "explanation": [
-    "Undo the $-6$ by adding 6 to both sides.",
-    "$x = 11 + 6 = 17$.",
-    "Check: $17 - 6 = 11$. ✓"
+    "The $6$ is being subtracted from $x$, and addition is the operation that undoes subtraction.",
+    "Adding $6$ to both sides keeps the equation balanced and gives $x = 11 + 6 = 17$.",
+    "Check by substituting: $17 - 6 = 11$, which is true, so $x = 17$."
   ],
   "alternativeExplanations": [
     {

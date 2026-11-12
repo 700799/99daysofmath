@@ -10,25 +10,25 @@
   "primaryAnswer": "16",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Squaring means the number times ITSELF: $(-4) \\times (-4)$.",
+  "hint": "Squaring means multiplying a number by itself. Think about the sign you get when the number is negative.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Squaring means the number times ITSELF: $(-4) \\times (-4)$."
+      "text": "Squaring means multiplying a number by itself. Think about the sign you get when the number is negative."
     },
     {
       "level": "guide",
-      "text": "A negative times a negative is positive."
+      "text": "Put in $x = -4$ to get $y = (-4) \\times (-4)$. A negative times a negative gives a positive."
     },
     {
       "level": "reveal",
-      "text": "$(-4)^2 = 16$, so $y = 16$."
+      "text": "$(-4) \\times (-4) = 16$, so the value of $y$ is $16$ when $x$ is $-4$."
     }
   ],
   "explanation": [
-    "Substitute: $y = (-4)^2 = (-4) \\times (-4)$.",
-    "Negative times negative is positive: $16$.",
-    "So $y = 16$ — same as $x = 4$. That is why the U is symmetric."
+    "Substitute $-4$ for $x$, keeping it in parentheses: $y = (-4)^2 = (-4) \\times (-4)$.",
+    "A negative number times a negative number is positive, so the product is $16$.",
+    "So $y = 16$, the same height as at $x = 4$. That is why the parabola is symmetric."
   ],
   "alternativeExplanations": [
     {

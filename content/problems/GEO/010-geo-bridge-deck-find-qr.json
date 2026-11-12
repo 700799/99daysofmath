@@ -10,11 +10,11 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The two pieces add to the whole: $PQ + QR = PR$.",
+  "hint": "Point $Q$ splits the deck into two parts. Think about how those parts relate to the full length $PR$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The two pieces add to the whole: $PQ + QR = PR$."
+      "text": "Point $Q$ splits the deck into two parts. Think about how those parts relate to the full length $PR$."
     },
     {
       "level": "nudge",
@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "Solve $(2x + 1) + (x - 3) = 25$, which simplifies to $3x - 2 = 25$."
+      "text": "Segment Addition gives $(2x + 1) + (x - 3) = 25$, which simplifies to $3x - 2 = 25$. Solve it, then put $x$ into $x - 3$."
     },
     {
       "level": "reveal",
-      "text": "$3x = 27$ gives $x = 9$, so $QR = 9 - 3 = 6$ m."
+      "text": "$3x = 27$ gives $x = 9$, so the length of $QR$ is $9 - 3 = 6$ meters."
     }
   ],
   "explanation": [
-    "Segment Addition: $PQ + QR = PR$, so $(2x + 1) + (x - 3) = 25$.",
-    "Combine like terms: $3x - 2 = 25$, so $3x = 27$ and $x = 9$.",
-    "Now substitute back into the piece the question asked for: $QR = x - 3 = 9 - 3 = 6$ m.",
-    "Check: $PQ = 2(9) + 1 = 19$, and $19 + 6 = 25$. ✓"
+    "Since $Q$ is between $P$ and $R$, the Segment Addition Postulate gives $PQ + QR = PR$, so $(2x + 1) + (x - 3) = 25$.",
+    "Combine like terms to get $3x - 2 = 25$, then add $2$ and divide by $3$: $3x = 27$ and $x = 9$.",
+    "The question asks for a length and not for $x$, so substitute into that piece: $QR = 9 - 3 = 6$ meters.",
+    "As a check, $PQ = 2(9) + 1 = 19$ and $19 + 6 = 25$, which matches the whole deck."
   ],
   "alternativeExplanations": [
     {

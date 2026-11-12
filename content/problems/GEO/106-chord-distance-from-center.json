@@ -10,19 +10,19 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Draw the perpendicular from the center to the chord — it always cuts the chord exactly in half.",
+  "hint": "Draw the perpendicular from the center to the chord, and a radius to one end of the chord. Look at the triangle that forms.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Draw the perpendicular from the center to the chord — it always cuts the chord exactly in half."
+      "text": "Draw the perpendicular from the center to the chord, and a radius to one end of the chord. Look at the triangle that forms."
     },
     {
       "level": "guide",
-      "text": "That makes a right triangle with hypotenuse $13$ (a radius) and one leg $24 \\div 2 = 12$."
+      "text": "The perpendicular cuts the chord in half, giving a right triangle with hypotenuse $13$ and one leg $24 \\div 2 = 12$. Find the other leg $d$."
     },
     {
       "level": "reveal",
-      "text": "$d^2 = 13^2 - 12^2 = 169 - 144 = 25$, so $d = 5$ cm."
+      "text": "$d^2 = 169 - 144 = 25$, so the chord is $d = 5$ cm from the center."
     }
   ],
   "explanation": [

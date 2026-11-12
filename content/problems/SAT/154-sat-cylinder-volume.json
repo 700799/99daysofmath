@@ -32,27 +32,27 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Volume of a cylinder is the base area times the height.",
+  "hint": "A cylinder is a stack of identical circles. Think of its volume as the area of one circle times the number of layers.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Volume of a cylinder is the base area times the height."
+      "text": "A cylinder is a stack of identical circles. Think of its volume as the area of one circle times the number of layers."
     },
     {
       "level": "guide",
-      "text": "The base is a circle of area $\\pi(3)^2 = 9\\pi$."
+      "text": "The base is a circle with area $\\pi(3)^2 = 9\\pi$. Multiply that base area by the height, which is $10$."
     },
     {
       "level": "reveal",
-      "text": "$9\\pi \\times 10 = 90\\pi$."
+      "text": "Since $9\\pi \\times 10 = 90\\pi$, the volume of the cylinder is $90\\pi$, which is choice C."
     }
   ],
   "learningObjective": "Compute the volume of a cylinder.",
   "topic": "Volume",
   "explanation": [
-    "Volume $= \\pi r^2 h$, which is the circular base area times the height.",
-    "$\\pi(3)^2(10) = 9\\pi \\times 10 = 90\\pi$.",
-    "Choice A forgets to square the radius; choice D squares the height instead."
+    "The volume of a cylinder is $\\pi r^2 h$, which is the area of the circular base times the height.",
+    "The base area is $\\pi(3)^2 = 9\\pi$, and multiplying by the height gives $9\\pi \\times 10 = 90\\pi$.",
+    "Choice A forgets to square the radius and choice D squares the height. The volume is $90\\pi$, choice C."
   ],
   "alternativeExplanations": [
     {

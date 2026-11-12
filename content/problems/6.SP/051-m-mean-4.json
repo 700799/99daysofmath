@@ -10,23 +10,25 @@
   "primaryAnswer": "25",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Sum / count.",
+  "hint": "Find the total of the four numbers, then split it into four equal shares.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sum / count."
+      "text": "Find the total of the four numbers, then split it into four equal shares."
     },
     {
       "level": "guide",
-      "text": "Sum: $100$. Count: $4$."
+      "text": "$10 + 20 + 30 + 40$ makes $100$. Because the list has $4$ values, the next step is $100 \\div 4$."
     },
     {
       "level": "reveal",
-      "text": "$100 / 4 = 25$."
+      "text": "$100 \\div 4 = 25$, so the mean of the four numbers is $25$."
     }
   ],
   "explanation": [
-    "Sum: $100$. Mean: $25$."
+    "Add the four values to get the total: $10 + 20 + 30 + 40 = 100$.",
+    "The total is shared among $4$ values, so $4$ is the number to divide by.",
+    "Divide: $100 \\div 4 = 25$, so the mean of the four numbers is $25$."
   ],
   "tags": [
     "mean"

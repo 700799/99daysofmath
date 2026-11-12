@@ -10,11 +10,11 @@
   "primaryAnswer": "69.4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The $40$ m is opposite the angle of elevation and the $15$ m is adjacent to it.",
+  "hint": "Sort the two lengths by their position: the $40$ m is opposite the angle of elevation and the $15$ m is adjacent to it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $40$ m is opposite the angle of elevation and the $15$ m is adjacent to it."
+      "text": "Sort the two lengths by their position: the $40$ m is opposite the angle of elevation and the $15$ m is adjacent to it."
     },
     {
       "level": "nudge",
@@ -23,11 +23,11 @@
     },
     {
       "level": "guide",
-      "text": "Opposite over adjacent is tangent: $\\tan\\theta = \\frac{40}{15}$."
+      "text": "Opposite over adjacent is tangent, so $\\tan\\theta = \\frac{40}{15}$. Apply the inverse tangent to that ratio to get the angle."
     },
     {
       "level": "reveal",
-      "text": "$\\theta = \\arctan\\left(\\frac{40}{15}\\right) = \\arctan(2.6667) \\approx 69.4^\\circ$."
+      "text": "$\\theta = \\arctan\\left(\\frac{40}{15}\\right) = \\arctan(2.6667) \\approx 69.4^\\circ$, so the angle of elevation is about $69.4$ degrees."
     }
   ],
   "explanation": [

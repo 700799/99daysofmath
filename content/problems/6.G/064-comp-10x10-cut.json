@@ -12,24 +12,26 @@
     "88 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Big minus cut-out.",
+  "hint": "Think of the square as a whole sheet and the rectangle as a piece you cut away from it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Big minus cut-out."
+      "text": "Think of the square as a whole sheet and the rectangle as a piece you cut away from it."
     },
     {
       "level": "guide",
-      "text": "$10 \\cdot 10 = 100$, $4 \\cdot 3 = 12$."
+      "text": "The square has area $10 \\times 10 = 100$. The removed rectangle has area $4 \\times 3 = 12$. Find the difference."
     },
     {
       "level": "reveal",
-      "text": "$100 - 12 = 88$."
+      "text": "$100 - 12 = 88$, so the area remaining is $88$ square units."
     }
   ],
   "explanation": [
-    "$100 - 12 = 88$ sq units.",
-    "Final answer: 88."
+    "The whole square has area $10 \\times 10 = 100$ square units.",
+    "The rectangle that is removed has area $4 \\times 3 = 12$ square units.",
+    "Removing a piece means subtracting its area: $100 - 12 = 88$.",
+    "The area remaining is $88$ square units."
   ],
   "tags": [
     "composite",

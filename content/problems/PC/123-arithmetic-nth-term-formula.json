@@ -18,18 +18,18 @@
     },
     {
       "level": "guide",
-      "text": "To reach term $10$ you take $10 - 1 = 9$ jumps of size $4$, which is $36$."
+      "text": "To reach term $10$ you take $10 - 1 = 9$ jumps of size $4$, which is $36$ in all. Add that to the first term."
     },
     {
       "level": "reveal",
-      "text": "$a_{10} = 5 + 36 = 41$."
+      "text": "Adding the jumps to the start gives $a_{10} = 5 + 36 = 41$."
     }
   ],
   "explanation": [
-    "$a_n = a_1 + (n - 1)d$.",
-    "$a_{10} = 5 + (10 - 1) \\times 4$.",
-    "$= 5 + 9 \\times 4 = 5 + 36$.",
-    "$= 41$."
+    "The formula for an arithmetic sequence is $a_n = a_1 + (n - 1)d$, because term $n$ is $n - 1$ jumps past the first.",
+    "Substituting the given numbers for the tenth term gives $a_{10} = 5 + (10 - 1) \\times 4$.",
+    "Multiplying before adding, this is the same as $5 + 9 \\times 4 = 5 + 36$.",
+    "So the tenth term of the sequence is $a_{10} = 41$."
   ],
   "alternativeExplanations": [
     {

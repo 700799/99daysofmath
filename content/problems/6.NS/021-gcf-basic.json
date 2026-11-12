@@ -10,25 +10,26 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "List factors of each, find the largest in both.",
+  "hint": "A common factor divides both numbers exactly. Write out all the factors of each number and see which ones they share.",
   "hints": [
     {
       "level": "nudge",
-      "text": "List factors of each, find the largest in both."
+      "text": "A common factor divides both numbers exactly. Write out all the factors of each number and see which ones they share."
     },
     {
       "level": "guide",
-      "text": "Factors of $12$: $1, 2, 3, 4, 6, 12$. Factors of $18$: $1, 2, 3, 6, 9, 18$."
+      "text": "The factors of $12$ are $1, 2, 3, 4, 6, 12$ and the factors of $18$ are $1, 2, 3, 6, 9, 18$. Circle the numbers that are in both lists."
     },
     {
       "level": "reveal",
-      "text": "Common factors: $1, 2, 3, 6$. Greatest: $6$."
+      "text": "The common factors are $1, 2, 3, 6$, and the greatest of them is $6$."
     }
   ],
   "explanation": [
-    "Factors of $12$: $1, 2, 3, 4, 6, 12$.",
-    "Factors of $18$: $1, 2, 3, 6, 9, 18$.",
-    "GCF $= 6$."
+    "List the factors of $12$ by finding every number that divides it exactly: $1, 2, 3, 4, 6, 12$.",
+    "Do the same for $18$ to get its factors: $1, 2, 3, 6, 9, 18$.",
+    "The numbers in both lists are $1, 2, 3$ and $6$, so these are the common factors.",
+    "The greatest common factor of $12$ and $18$ is $6$."
   ],
   "tags": [
     "gcf"

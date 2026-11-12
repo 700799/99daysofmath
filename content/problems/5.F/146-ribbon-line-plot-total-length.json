@@ -13,26 +13,26 @@
     "2.75"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Handle one column at a time: how much ribbon do the two $\\frac{1}{4}$-ft pieces make together?",
+  "hint": "Several pieces share the same length. Find the ribbon in each column of the plot before adding the columns together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Handle one column at a time: how much ribbon do the two $\\frac{1}{4}$-ft pieces make together?"
+      "text": "Several pieces share the same length. Find the ribbon in each column of the plot before adding the columns together."
     },
     {
       "level": "guide",
-      "text": "Quarters: $2 \\times \\frac{1}{4} = \\frac{1}{2}$. Halves: $3 \\times \\frac{1}{2} = 1\\frac{1}{2}$. Plus one $\\frac{3}{4}$."
+      "text": "The columns give $2 \\times \\frac{1}{4}$, $3 \\times \\frac{1}{2}$ and one $\\frac{3}{4}$. Write each result in fourths, and then add the fourths."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2} + 1\\frac{1}{2} + \\frac{3}{4} = 2\\frac{3}{4}$ feet."
+      "text": "$\\frac{2}{4} + \\frac{6}{4} + \\frac{3}{4} = \\frac{11}{4}$, so the total length is $2\\frac{3}{4}$ feet."
     }
   ],
   "explanation": [
-    "The $\\frac{1}{4}$-ft column: $2 \\times \\frac{1}{4} = \\frac{2}{4} = \\frac{1}{2}$ ft.",
-    "The $\\frac{1}{2}$-ft column: $3 \\times \\frac{1}{2} = \\frac{3}{2} = 1\\frac{1}{2}$ ft.",
-    "The $\\frac{3}{4}$-ft column: just $\\frac{3}{4}$ ft.",
-    "Add them in fourths: $\\frac{2}{4} + \\frac{6}{4} + \\frac{3}{4} = \\frac{11}{4} = 2\\frac{3}{4}$ feet."
+    "The column above $\\frac{1}{4}$ has two pieces: $2 \\times \\frac{1}{4} = \\frac{2}{4}$ foot.",
+    "The column above $\\frac{1}{2}$ has three pieces: $3 \\times \\frac{1}{2} = \\frac{3}{2}$, which is $\\frac{6}{4}$ feet.",
+    "The column above $\\frac{3}{4}$ has just one piece, so it adds $\\frac{3}{4}$ foot.",
+    "Add them in fourths: $\\frac{2}{4} + \\frac{6}{4} + \\frac{3}{4} = \\frac{11}{4} = 2\\frac{3}{4}$ feet in total."
   ],
   "alternativeExplanations": [
     {

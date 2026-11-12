@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "First find the mean. Then variance is $\\sum (x - \\mu)^2 \\cdot P(x)$.",
+  "hint": "Variance measures the average squared distance from the mean, so the mean has to be found before anything else.",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find the mean. Then variance is $\\sum (x - \\mu)^2 \\cdot P(x)$."
+      "text": "Variance measures the average squared distance from the mean, so the mean has to be found before anything else."
     },
     {
       "level": "guide",
-      "text": "The mean is $0(0.3) + 1(0.4) + 2(0.3) = 1$. Now square each distance from $1$ and weight by probability."
+      "text": "The mean is $0(0.3) + 1(0.4) + 2(0.3) = 1$. Square each value's distance from $1$, multiply by its probability, and add."
     },
     {
       "level": "reveal",
-      "text": "$(0-1)^2(0.3) + (1-1)^2(0.4) + (2-1)^2(0.3) = 0.3 + 0 + 0.3 = 0.6$."
+      "text": "$(0-1)^2(0.3) + (1-1)^2(0.4) + (2-1)^2(0.3) = 0.3 + 0 + 0.3$, so the variance of the number of goals is $0.6$."
     }
   ],
   "explanation": [
-    "Mean: $\\mu = 0(0.3) + 1(0.4) + 2(0.3) = 0 + 0.4 + 0.6 = 1$ goal.",
-    "Variance weights each squared distance from the mean by its probability: $(0-1)^2(0.3) = 0.3$, $(1-1)^2(0.4) = 0$, $(2-1)^2(0.3) = 0.3$.",
-    "Sum: $\\sigma_X^2 = 0.6$. (The standard deviation would be $\\sqrt{0.6} \\approx 0.77$ goals.)"
+    "Start with the mean, since variance is measured around it: $\\mu = 0(0.3) + 1(0.4) + 2(0.3) = 1$ goal.",
+    "Weight each squared distance from the mean by its probability: $(0-1)^2(0.3) = 0.3$, $(1-1)^2(0.4) = 0$ and $(2-1)^2(0.3) = 0.3$.",
+    "The sum is the variance, $\\sigma_X^2 = 0.6$. (The standard deviation would be $\\sqrt{0.6} \\approx 0.77$ goals.)"
   ],
   "alternativeExplanations": [
     {

@@ -32,24 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Replace $\\pi$ with $180^\\circ$, since $\\pi$ radians IS half a circle.",
+  "hint": "A half circle is $\\pi$ radians and also $180^\\circ$. That lets you trade the symbol $\\pi$ for a number of degrees.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Replace $\\pi$ with $180^\\circ$, since $\\pi$ radians IS half a circle."
+      "text": "A half circle is $\\pi$ radians and also $180^\\circ$. That lets you trade the symbol $\\pi$ for a number of degrees."
     },
     {
       "level": "guide",
-      "text": "That turns $\\frac{\\pi}{3}$ into $\\frac{180^\\circ}{3}$."
+      "text": "Replace $\\pi$ with $180^\\circ$ in the angle, which turns $\\frac{\\pi}{3}$ into $\\frac{180^\\circ}{3}$. Then do the division."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{180^\\circ}{3} = 60^\\circ$."
+      "text": "$\\frac{180^\\circ}{3} = 60^\\circ$, so the angle is $60$ degrees, choice B."
     }
   ],
   "explanation": [
-    "Because $\\pi$ radians equals $180^\\circ$, you can swap $\\pi$ for $180^\\circ$ anywhere.",
-    "$\\frac{\\pi}{3}$ becomes $\\frac{180^\\circ}{3} = 60^\\circ$."
+    "Because $\\pi$ radians equals $180^\\circ$, you can swap $\\pi$ for $180^\\circ$ in any radian measure.",
+    "With that swap, $\\frac{\\pi}{3}$ becomes $\\frac{180^\\circ}{3}$, one third of a half circle.",
+    "Dividing gives $\\frac{180^\\circ}{3} = 60^\\circ$, so the answer is $60^\\circ$."
   ],
   "alternativeExplanations": [
     {

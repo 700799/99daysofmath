@@ -10,25 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Period $= \\frac{2\\pi}{B}$, where $B$ is whatever multiplies $x$ inside the cosine.",
+  "hint": "The period comes from the number multiplying $x$ inside the cosine. The amplitude $4$ and the shift $7$ play no part in it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Period $= \\frac{2\\pi}{B}$, where $B$ is whatever multiplies $x$ inside the cosine."
+      "text": "The period comes from the number multiplying $x$ inside the cosine. The amplitude $4$ and the shift $7$ play no part in it."
     },
     {
       "level": "guide",
-      "text": "Here $B = \\frac{\\pi}{6}$, so compute $2\\pi \\div \\frac{\\pi}{6}$."
+      "text": "Use period $= \\frac{2\\pi}{B}$ with $B = \\frac{\\pi}{6}$, so work out $2\\pi \\div \\frac{\\pi}{6}$ by multiplying by the reciprocal."
     },
     {
       "level": "reveal",
-      "text": "$2\\pi \\times \\frac{6}{\\pi} = 12$ months."
+      "text": "$2\\pi \\times \\frac{6}{\\pi} = 12$, so the model repeats every $12$ months."
     }
   ],
   "explanation": [
-    "The coefficient of $x$ inside the cosine is $B = \\frac{\\pi}{6}$.",
-    "Period $= \\frac{2\\pi}{B} = \\frac{2\\pi}{\\pi/6} = 2\\pi \\times \\frac{6}{\\pi} = 12$.",
-    "A period of $12$ months is exactly what you want for a model of the seasons — it repeats once a year."
+    "The coefficient of $x$ inside the cosine is $B = \\frac{\\pi}{6}$, and that number alone sets the period.",
+    "Apply the period formula and divide by the fraction by multiplying by its reciprocal: $\\frac{2\\pi}{B} = \\frac{2\\pi}{\\pi/6} = 2\\pi \\times \\frac{6}{\\pi} = 12$.",
+    "A period of $12$ months is exactly what you want for a model of the seasons, since it repeats once a year."
   ],
   "alternativeExplanations": [
     {

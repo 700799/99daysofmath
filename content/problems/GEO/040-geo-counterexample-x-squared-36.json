@@ -10,11 +10,11 @@
   "primaryAnswer": "-6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You need a number that makes the \"if\" part true while making the \"then\" part false.",
+  "hint": "A counterexample has to make the \"if\" part true and the \"then\" part false at the same time.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You need a number that makes the \"if\" part true while making the \"then\" part false."
+      "text": "A counterexample has to make the \"if\" part true and the \"then\" part false at the same time."
     },
     {
       "level": "nudge",
@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "What other number, besides 6, squares to 36?"
+      "text": "You need a number other than $6$ whose square is $36$. Think about what happens when a negative number is squared."
     },
     {
       "level": "reveal",
-      "text": "$x = -6$: it satisfies $(-6)^2 = 36$, but it is not equal to 6."
+      "text": "The value $x = -6$ works, because $(-6)^2 = 36$ but $-6$ is not equal to $6$."
     }
   ],
   "explanation": [
-    "A counterexample must satisfy the hypothesis and break the conclusion.",
-    "Take $x = -6$. The hypothesis holds because $(-6)^2 = 36$.",
-    "The conclusion fails because $-6 \\ne 6$. So $-6$ is a counterexample and the claim is false.",
-    "The repaired statement would be \"if $x^2 = 36$, then $x = 6$ or $x = -6$.\""
+    "A counterexample must satisfy the hypothesis $x^2 = 36$ and still make the conclusion $x = 6$ false.",
+    "Try $x = -6$: the hypothesis holds, because a negative times a negative is positive and $(-6)^2 = 36$.",
+    "The conclusion fails because $-6 \\ne 6$, so $x = -6$ is a counterexample and the claim is false.",
+    "A true version of the claim would say that $x = 6$ or $x = -6$."
   ],
   "alternativeExplanations": [
     {

@@ -32,11 +32,11 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Unpainted $=$ square $-$ quarter circle.",
+  "hint": "The unpainted part is the tile with the blue region taken away. Work out which two areas you need to compare.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Unpainted $=$ square $-$ quarter circle."
+      "text": "The unpainted part is the tile with the blue region taken away. Work out which two areas you need to compare."
     },
     {
       "level": "nudge",
@@ -45,17 +45,17 @@
     },
     {
       "level": "guide",
-      "text": "Square: $12^2 = 144$ sq in. Quarter circle: $\\frac{1}{4}\\pi(12)^2 = 36\\pi$."
+      "text": "The square has area $12^2 = 144$ sq in, and the quarter circle has area $\\frac{1}{4}\\pi(12)^2 = 36\\pi$. Subtract the second from the first."
     },
     {
       "level": "reveal",
-      "text": "$144 - 36\\pi \\approx 144 - 113.1 = 30.9$ sq in."
+      "text": "$144 - 36\\pi \\approx 144 - 113.1 = 30.9$, so about $30.9$ square inches stay unpainted, choice A."
     }
   ],
   "explanation": [
-    "The whole tile is $12 \\times 12 = 144$ square inches.",
-    "The blue region is one quarter of a circle of radius $12$: $\\frac{1}{4}\\pi(12)^2 = \\frac{1}{4}(144\\pi) = 36\\pi \\approx 113.1$ sq in.",
-    "Unpainted: $144 - 113.1 = 30.9$ square inches. Choice A."
+    "The whole tile is a square with area $12 \\times 12 = 144$ square inches.",
+    "The blue region is one quarter of a circle of radius $12$, so its area is $\\frac{1}{4}\\pi(12)^2 = 36\\pi \\approx 113.1$ square inches.",
+    "Subtracting the painted part leaves $144 - 113.1 = 30.9$ square inches unpainted, which is choice A."
   ],
   "alternativeExplanations": [
     {

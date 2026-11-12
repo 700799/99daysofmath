@@ -32,27 +32,27 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The base is the growth factor ($2$ for doubling). The exponent must count how many doublings have happened.",
+  "hint": "Doubling fixes the base of the exponential. The harder part is the exponent, which must count doublings rather than hours.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The base is the growth factor ($2$ for doubling). The exponent must count how many doublings have happened."
+      "text": "Doubling fixes the base of the exponential. The harder part is the exponent, which must count doublings rather than hours."
     },
     {
       "level": "guide",
-      "text": "After $t$ hours, the number of $5$-hour periods that have elapsed is $t/5$."
+      "text": "One doubling takes $5$ hours, so after $t$ hours there have been $\\dfrac{t}{5}$ doublings. Use that as the exponent on the base $2$."
     },
     {
       "level": "reveal",
-      "text": "$P = 2000(2)^{t/5}$."
+      "text": "The model is $P = 2000(2)^{t/5}$, which is choice B."
     }
   ],
   "learningObjective": "Build an exponential model when the period differs from the time unit.",
   "topic": "Exponential models",
   "explanation": [
-    "Doubling means the base is $2$.",
-    "The exponent must count doublings, not hours. In $t$ hours there are $\\dfrac{t}{5}$ five-hour periods.",
-    "So $P = 2000(2)^{t/5}$. Check at $t = 5$: $2000 \\cdot 2^1 = 4000$ ✓ — exactly one doubling."
+    "The population doubles, so the base of the exponential is $2$ and the starting amount is $2000$.",
+    "The exponent must count how many doublings have happened. In $t$ hours there are $\\dfrac{t}{5}$ periods of five hours.",
+    "This gives $P = 2000(2)^{t/5}$. At $t = 5$ it gives $4000$, which is exactly one doubling, so the answer is choice B."
   ],
   "alternativeExplanations": [
     {

@@ -10,25 +10,25 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Disc method: radius $= \\sqrt{x}$, so $r^2 = x$. Set up $\\pi \\int_0^4 x \\, dx$.",
+  "hint": "Use the disc method. The radius of each disc is the height of the curve, so think about what the radius squared becomes.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Disc method: radius $= \\sqrt{x}$, so $r^2 = x$. Set up $\\pi \\int_0^4 x \\, dx$."
+      "text": "Use the disc method. The radius of each disc is the height of the curve, so think about what the radius squared becomes."
     },
     {
       "level": "guide",
-      "text": "$\\pi \\left[\\frac{x^2}{2}\\right]_0^4 = \\pi \\cdot \\frac{16}{2}$."
+      "text": "The radius is $\\sqrt{x}$, so $r^2 = x$ and the volume is $\\pi \\int_0^4 x \\, dx = \\pi \\left[\\frac{x^2}{2}\\right]_0^4 = \\pi \\cdot \\frac{16}{2}$. Simplify the fraction."
     },
     {
       "level": "reveal",
-      "text": "$V = 8\\pi$, so $k = 8$."
+      "text": "The volume of the solid is $V = 8\\pi$, so $k = 8$."
     }
   ],
   "explanation": [
     "Each slice at position $x$ is a disc of radius $\\sqrt{x}$ and area $\\pi(\\sqrt{x})^2 = \\pi x$.",
-    "$V = \\pi \\int_0^4 x \\, dx = \\pi \\cdot \\frac{x^2}{2}\\Big|_0^4 = 8\\pi$.",
-    "$k = 8$. The square root squares away — that is why $y = \\sqrt{x}$ is the friendliest curve to rotate."
+    "Adding up the discs with an integral gives $V = \\pi \\int_0^4 x \\, dx = \\pi \\cdot \\frac{x^2}{2}\\Big|_0^4 = 8\\pi$.",
+    "So $k = 8$. The square root squares away, which is why $y = \\sqrt{x}$ is the friendliest curve to rotate."
   ],
   "alternativeExplanations": [
     {

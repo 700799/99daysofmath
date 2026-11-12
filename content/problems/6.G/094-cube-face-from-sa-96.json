@@ -12,24 +12,26 @@
     "16 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A cube has $6$ equal faces.",
+  "hint": "The total surface area of a cube is shared equally among its faces. How many equal shares are there?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A cube has $6$ equal faces."
+      "text": "The total surface area of a cube is shared equally among its faces. How many equal shares are there?"
     },
     {
       "level": "guide",
-      "text": "$96 \\div 6$."
+      "text": "A cube has $6$ identical faces, so split the total into $6$ equal parts: work out $96 \\div 6$."
     },
     {
       "level": "reveal",
-      "text": "$16$."
+      "text": "$96 \\div 6 = 16$, so one face has an area of $16$ square units."
     }
   ],
   "explanation": [
-    "$96 \\div 6 = 16$ sq units per face.",
-    "Final answer: 16."
+    "A cube has $6$ faces that all have the same area.",
+    "The total surface area is $6$ times one face, so one face is the total divided by $6$.",
+    "Do the division: $96 \\div 6 = 16$, which checks because $6 \\times 16 = 96$.",
+    "The area of one face is $16$ square units."
   ],
   "tags": [
     "surface-area",

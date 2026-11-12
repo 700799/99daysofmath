@@ -10,25 +10,25 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A diagonal splits the rectangle into two right triangles whose legs are the sides of the rectangle.",
+  "hint": "The stripe is a diagonal of the rectangle. Look at the triangle it makes with two sides of the flag.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A diagonal splits the rectangle into two right triangles whose legs are the sides of the rectangle."
+      "text": "The stripe is a diagonal of the rectangle. Look at the triangle it makes with two sides of the flag."
     },
     {
       "level": "guide",
-      "text": "Compute $9^2 + 12^2$."
+      "text": "The sides $9$ and $12$ are the legs of a right triangle, so the stripe satisfies $c^2 = 9^2 + 12^2$. Add the squares and take the square root."
     },
     {
       "level": "reveal",
-      "text": "$81 + 144 = 225$ and $\\sqrt{225} = 15$ inches."
+      "text": "$81 + 144 = 225$ and $\\sqrt{225} = 15$, so the stripe is $15$ inches long."
     }
   ],
   "explanation": [
-    "The two sides, $9$ and $12$, are the legs of a right triangle; the stripe is the hypotenuse.",
-    "$9^2 + 12^2 = 81 + 144 = 225$.",
-    "$\\sqrt{225} = 15$, so the gold stripe is $15$ inches long."
+    "The corners of a rectangle are right angles, so the sides $9$ and $12$ are legs of a right triangle and the stripe is its hypotenuse.",
+    "By the Pythagorean Theorem, the square of the stripe's length is $9^2 + 12^2 = 81 + 144 = 225$.",
+    "Since $\\sqrt{225} = 15$, the gold stripe is $15$ inches long."
   ],
   "alternativeExplanations": [
     {

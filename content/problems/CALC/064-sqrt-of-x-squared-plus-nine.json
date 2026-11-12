@@ -13,25 +13,25 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "Write the root as a power of the inside: $h(x) = (x^2 + 9)^{1/2}$. Then chain rule.",
+  "hint": "Write the root as a power of the inside: $h(x) = (x^2 + 9)^{1/2}$. Then think about the chain rule.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Write the root as a power of the inside: $h(x) = (x^2 + 9)^{1/2}$. Then chain rule."
+      "text": "Write the root as a power of the inside: $h(x) = (x^2 + 9)^{1/2}$. Then think about the chain rule."
     },
     {
       "level": "guide",
-      "text": "Outside: $\\frac{1}{2}(x^2 + 9)^{-1/2}$. Inside derivative: $2x$. Multiply: $h'(x) = \\frac{2x}{2\\sqrt{x^2 + 9}} = \\frac{x}{\\sqrt{x^2 + 9}}$."
+      "text": "The outside power gives $\\frac{1}{2}(x^2 + 9)^{-1/2}$ and the inside derivative is $2x$. Multiply them: $h'(x) = \\frac{2x}{2\\sqrt{x^2 + 9}} = \\frac{x}{\\sqrt{x^2 + 9}}$. Now substitute $x = 4$."
     },
     {
       "level": "reveal",
-      "text": "At $x = 4$: $\\frac{4}{\\sqrt{16 + 9}} = \\frac{4}{5}$."
+      "text": "At $x = 4$ the derivative is $\\frac{4}{\\sqrt{16 + 9}}$, so $h'(4) = \\frac{4}{5}$."
     }
   ],
   "explanation": [
-    "Let $u = x^2 + 9$ so $h = u^{1/2}$. Then $h'(x) = \\frac{1}{2}u^{-1/2} \\cdot u'$.",
-    "$u' = 2x$, and the $2$s cancel: $h'(x) = \\frac{x}{\\sqrt{x^2 + 9}}$.",
-    "At $x = 4$ the root is $\\sqrt{25} = 5$, so $h'(4) = \\frac{4}{5}$."
+    "Let $u = x^2 + 9$ so $h = u^{1/2}$. Then the chain rule gives $h'(x) = \\frac{1}{2}u^{-1/2} \\cdot u'$.",
+    "The inside derivative is $u' = 2x$, and the $2$s cancel: $h'(x) = \\frac{x}{\\sqrt{x^2 + 9}}$.",
+    "At $x = 4$ the root is $\\sqrt{25} = 5$, so the answer is $h'(4) = \\frac{4}{5}$."
   ],
   "alternativeExplanations": [
     {

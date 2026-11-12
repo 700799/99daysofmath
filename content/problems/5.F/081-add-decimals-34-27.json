@@ -26,10 +26,10 @@
     }
   ],
   "explanation": [
-    "Line up the decimal points so tenths sit under tenths and ones under ones.",
-    "Add the tenths: $4 + 7 = 11$ tenths. That is $1$ whole plus $1$ tenth, so write $1$ and carry the whole.",
-    "Add the ones: $3 + 2 + 1 = 6$.",
-    "So $3.4 + 2.7 = 6.1$."
+    "Line up the decimal points so that tenths are under tenths and ones are under ones.",
+    "Add the tenths: $4 + 7 = 11$ tenths. That is $1$ whole and $1$ tenth, so write $1$ tenth and carry the whole.",
+    "Add the ones together with the carried whole: $3 + 2 + 1 = 6$ ones.",
+    "Six ones and one tenth make $6.1$, so $3.4 + 2.7 = 6.1$."
   ],
   "alternativeExplanations": [
     {

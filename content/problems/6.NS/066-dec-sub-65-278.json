@@ -12,24 +12,26 @@
     "3.72"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Pad to the same number of decimal places: $6.50 - 2.78$.",
+  "hint": "The two numbers have a different number of decimal places. Make the places match before you subtract so each column lines up.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Pad to the same number of decimal places: $6.50 - 2.78$."
+      "text": "The two numbers have a different number of decimal places. Make the places match before you subtract so each column lines up."
     },
     {
       "level": "guide",
-      "text": "Subtract column by column, regrouping."
+      "text": "Write $6.5$ as $6.50$ and stack it over $2.78$. Subtract from the right. The hundredths and tenths columns both need regrouping because the top digit is smaller."
     },
     {
       "level": "reveal",
-      "text": "$6.50 - 2.78 = 3.72$."
+      "text": "After regrouping twice, $6.50 - 2.78 = 3.72$, so the difference is $3.72$."
     }
   ],
   "explanation": [
-    "Rewrite $6.5$ as $6.50$.",
-    "$6.50 - 2.78 = 3.72$."
+    "Rewrite $6.5$ as $6.50$. The extra zero does not change the value and gives both numbers two decimal places.",
+    "Hundredths: $0 - 8$ is not possible, so regroup one tenth and compute $10 - 8 = 2$.",
+    "Tenths: $4$ tenths remain, and $4 - 7$ needs regrouping, so take one whole and compute $14 - 7 = 7$.",
+    "Ones: $5$ ones remain, and $5 - 2 = 3$. The difference is $3.72$."
   ],
   "tags": [
     "decimal",

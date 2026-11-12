@@ -18,24 +18,25 @@
     "0.6"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$0.6$ means $6$ tenths.",
+  "hint": "Read the decimal out loud using its place value name. The name tells you the numerator and the denominator.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$0.6$ means $6$ tenths."
+      "text": "Read the decimal out loud using its place value name. The name tells you the numerator and the denominator."
     },
     {
       "level": "guide",
-      "text": "$\\frac{6}{10}$ — divide top and bottom by $2$."
+      "text": "$0.6$ is six tenths, so write $\\frac{6}{10}$. Then divide the top and bottom by a number that goes into both."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{6}{10} = \\frac{3}{5}$."
+      "text": "Dividing $6$ and $10$ by $2$ gives $\\frac{3}{5}$, so $0.6 = \\frac{3}{5}$ in simplest form."
     }
   ],
   "explanation": [
-    "$0.6 = \\frac{6}{10}$ (six tenths).",
-    "Simplify by dividing both by $2$: $\\frac{3}{5}$."
+    "The digit $6$ is in the tenths place, so $0.6$ means six tenths, or $\\frac{6}{10}$.",
+    "Both $6$ and $10$ are even, so the fraction can be simplified by dividing each by $2$.",
+    "That gives $\\frac{3}{5}$, and nothing else divides both $3$ and $5$, so $0.6 = \\frac{3}{5}$."
   ],
   "tags": [
     "decimals",

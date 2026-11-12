@@ -12,24 +12,25 @@
     "3 units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Same x → subtract y-values.",
+  "hint": "Look at which coordinate stays the same in both points. That tells you which direction the segment runs.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same x → subtract y-values."
+      "text": "Look at which coordinate stays the same in both points. That tells you which direction the segment runs."
     },
     {
       "level": "guide",
-      "text": "$|5 - 2|$."
+      "text": "Both points have $x = 1$, so the segment is vertical. Subtract the $y$-values: $5 - 2$."
     },
     {
       "level": "reveal",
-      "text": "$3$."
+      "text": "$5 - 2 = 3$, so the segment is $3$ units long."
     }
   ],
   "explanation": [
-    "Vertical segment: $|5 - 2| = 3$ units.",
-    "Final answer: 3."
+    "The two points share $x = 1$, so the segment goes straight up and down.",
+    "The length of a vertical segment is the difference between the $y$-coordinates: $|5 - 2|$.",
+    "The subtraction gives $5 - 2 = 3$, so the segment is $3$ units long."
   ],
   "tags": [
     "coordinate-plane",

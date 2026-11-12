@@ -12,11 +12,11 @@
     "-0.75"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The $y$-values drop from $5$ to $2$, so the slope is negative.",
+  "hint": "Notice whether the $y$-values go up or down from the first point to the second. That decides the sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $y$-values drop from $5$ to $2$, so the slope is negative."
+      "text": "Notice whether the $y$-values go up or down from the first point to the second. That decides the sign."
     },
     {
       "level": "nudge",
@@ -25,17 +25,17 @@
     },
     {
       "level": "guide",
-      "text": "Rise: $2 - 5 = -3$. Run: $5 - 1 = 4$."
+      "text": "The rise is $2 - 5 = -3$ and the run is $5 - 1 = 4$. Write rise over run and keep the negative sign."
     },
     {
       "level": "reveal",
-      "text": "Slope $= \\frac{-3}{4}$."
+      "text": "Rise over run is $\\frac{-3}{4}$, so the slope of the line is $-\\frac{3}{4}$."
     }
   ],
   "explanation": [
-    "Rise: $2 - 5 = -3$.",
-    "Run: $5 - 1 = 4$.",
-    "Slope $= -\\frac{3}{4}$ — a gentle downhill: down $3$ for every $4$ across."
+    "The rise is the change in $y$: $2 - 5 = -3$, negative because the line drops.",
+    "The run is the change in $x$, subtracted in the same order: $5 - 1 = 4$.",
+    "Slope is rise over run, so the slope is $-\\frac{3}{4}$. The line goes down $3$ for every $4$ across."
   ],
   "alternativeExplanations": [
     {

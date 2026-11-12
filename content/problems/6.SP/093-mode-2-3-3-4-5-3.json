@@ -10,24 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Most common value.",
+  "hint": "The mode is the value that occurs more often than any other value.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Most common value."
+      "text": "The mode is the value that occurs more often than any other value."
     },
     {
       "level": "guide",
-      "text": "$3$ appears three times."
+      "text": "Count the copies of each number in $\\{2, 3, 3, 4, 5, 3\\}$. Notice that $3$ shows up in three different places."
     },
     {
       "level": "reveal",
-      "text": "$3$."
+      "text": "$3$ appears three times and the others appear once, so the mode is $3$."
     }
   ],
   "explanation": [
-    "$3$ appears three times — more than any other value.",
-    "Mode = $3$."
+    "Count how many times each value appears in the set.",
+    "The values $2$, $4$ and $5$ appear once each, and $3$ appears three times.",
+    "The most frequent value is $3$, so the mode is $3$."
   ],
   "tags": [
     "mode"

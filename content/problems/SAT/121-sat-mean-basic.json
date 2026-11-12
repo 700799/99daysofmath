@@ -10,27 +10,27 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Add the values, then divide by how many there are.",
+  "hint": "The mean shares the total equally among all the values. What two numbers do you need in order to do that?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add the values, then divide by how many there are."
+      "text": "The mean shares the total equally among all the values. What two numbers do you need in order to do that?"
     },
     {
       "level": "guide",
-      "text": "The sum is $36$ and there are $4$ values."
+      "text": "Add the four values, $4 + 8 + 10 + 14$, and then divide that sum by the number of values, which is $4$."
     },
     {
       "level": "reveal",
-      "text": "$36 \\div 4 = 9$."
+      "text": "The sum is $36$ and $36 \\div 4 = 9$, so the mean of the data set is $9$."
     }
   ],
   "learningObjective": "Compute the mean of a small data set.",
   "topic": "Measures of center",
   "explanation": [
-    "Sum the values: $4 + 8 + 10 + 14 = 36$.",
-    "Divide by the count: $36 \\div 4 = 9$.",
-    "Sanity check: the mean must lie between the smallest and largest values, and $9$ is between $4$ and $14$ ✓"
+    "Add all the values to find the total: $4 + 8 + 10 + 14 = 36$.",
+    "Divide the total by the number of values, which is $4$: $36 \\div 4 = 9$.",
+    "The result lies between the smallest value $4$ and the largest value $14$, as a mean must. The mean is $9$."
   ],
   "alternativeExplanations": [
     {

@@ -12,24 +12,25 @@
     "5 units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The y-coordinates match, so the points sit on the same horizontal line.",
+  "hint": "Compare the two points carefully. One of their coordinates is the same, and that tells you the direction of the line between them.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The y-coordinates match, so the points sit on the same horizontal line."
+      "text": "Compare the two points carefully. One of their coordinates is the same, and that tells you the direction of the line between them."
     },
     {
       "level": "guide",
-      "text": "Subtract the x-coordinates."
+      "text": "Both points have $y = 2$, so they lie on one horizontal line. The distance is the difference of the $x$-coordinates, $6 - 1$."
     },
     {
       "level": "reveal",
-      "text": "$6 - 1 = 5$ units."
+      "text": "$6 - 1 = 5$, so the points are $5$ units apart."
     }
   ],
   "explanation": [
-    "Both points have $y = 2$, so the distance is purely horizontal.",
-    "Distance $= 6 - 1 = 5$ units."
+    "Both points have the same $y$-coordinate, $2$, so they sit on the same horizontal line.",
+    "On a horizontal line, the distance is just how far apart the $x$-coordinates are.",
+    "Subtract them: $6 - 1 = 5$, so the points are $5$ units apart."
   ],
   "tags": [
     "coordinate-plane",

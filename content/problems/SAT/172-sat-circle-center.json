@@ -32,27 +32,27 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The form is $(x - h)^2 + (y - k)^2 = r^2$ with centre $(h, k)$.",
+  "hint": "The center can be read from the two brackets in the equation. Watch the signs, since the standard form uses subtraction.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The form is $(x - h)^2 + (y - k)^2 = r^2$ with centre $(h, k)$."
+      "text": "The center can be read from the two brackets in the equation. Watch the signs, since the standard form uses subtraction."
     },
     {
       "level": "guide",
-      "text": "$(y + 2)$ is really $(y - (-2))$."
+      "text": "Match with $(x - h)^2 + (y - k)^2 = r^2$. The bracket $(x - 3)$ gives $h = 3$. Rewrite $(y + 2)$ as $(y - (-2))$ to read $k$."
     },
     {
       "level": "reveal",
-      "text": "The centre is $(3, -2)$."
+      "text": "This gives $h = 3$ and $k = -2$, so the center is $(3, -2)$, which is choice B."
     }
   ],
   "learningObjective": "Read the center from the standard form of a circle equation.",
   "topic": "Circle equations",
   "explanation": [
-    "Match against $(x - h)^2 + (y - k)^2 = r^2$.",
-    "$(x - 3)$ gives $h = 3$. $(y + 2) = (y - (-2))$ gives $k = -2$.",
-    "The centre is $(3, -2)$."
+    "Compare the equation with the standard form $(x - h)^2 + (y - k)^2 = r^2$, whose center is $(h, k)$.",
+    "The bracket $(x - 3)$ gives $h = 3$. The bracket $(y + 2)$ equals $(y - (-2))$, so $k = -2$.",
+    "The center of the circle is $(3, -2)$, which is choice B."
   ],
   "alternativeExplanations": [
     {

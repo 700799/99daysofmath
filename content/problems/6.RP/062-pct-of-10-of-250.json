@@ -10,24 +10,26 @@
   "primaryAnswer": "25",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$10\\% = 0.10$.",
+  "hint": "To find $10\\%$ you can use a decimal. Which decimal means the same as $10$ out of $100$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$10\\% = 0.10$."
+      "text": "To find $10\\%$ you can use a decimal. Which decimal means the same as $10$ out of $100$?"
     },
     {
       "level": "guide",
-      "text": "$0.10 \\times 250$."
+      "text": "$10\\% = 0.10$, so multiply $0.10 \\times 250$. Multiplying by $0.10$ shifts the decimal point one place to the left."
     },
     {
       "level": "reveal",
-      "text": "$25$."
+      "text": "The product is $0.10 \\times 250 = 25$, so $10\\%$ of $250$ equals $25$."
     }
   ],
   "explanation": [
-    "$10\\% = 0.10$.",
-    "$0.10 \\times 250 = 25$."
+    "Write the percent as a decimal by dividing by $100$: $10\\% = 0.10$.",
+    "Multiply the decimal by the whole amount: $0.10 \\times 250$.",
+    "Moving the decimal point in $250$ one place to the left gives $25$.",
+    "The decimal method shows that $10\\%$ of $250$ is $25$."
   ],
   "alternativeExplanations": [
     {

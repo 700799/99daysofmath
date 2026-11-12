@@ -13,25 +13,25 @@
     "1.2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Three copies of $\\frac{2}{5}$.",
+  "hint": "A whole number times a fraction means that many copies of the fraction. Picture three groups of two fifths.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Three copies of $\\frac{2}{5}$."
+      "text": "A whole number times a fraction means that many copies of the fraction. Picture three groups of two fifths."
     },
     {
       "level": "guide",
-      "text": "$\\frac{2}{5} + \\frac{2}{5} + \\frac{2}{5} = \\frac{6}{5}$."
+      "text": "Each copy has $2$ fifths, so count the fifths in $3$ copies: multiply $3 \\times 2$ and keep the denominator $5$."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times \\frac{2}{5} = \\frac{6}{5} = 1\\frac{1}{5}$."
+      "text": "$3 \\times 2 = 6$ fifths, so the product is $\\frac{6}{5}$, which is also $1\\frac{1}{5}$."
     }
   ],
   "explanation": [
-    "$3 \\times \\frac{2}{5}$ means three copies of two-fifths.",
-    "$2 \\times 3 = 6$ fifths → $\\frac{6}{5}$.",
-    "As a mixed number: $1\\frac{1}{5}$."
+    "$3 \\times \\frac{2}{5}$ means three copies of two fifths added together.",
+    "Count the fifths by multiplying the whole number by the numerator: $3 \\times 2 = 6$ fifths, or $\\frac{6}{5}$.",
+    "Five fifths make one whole, so $\\frac{6}{5}$ can also be written as the mixed number $1\\frac{1}{5}$."
   ],
   "tags": [
     "fractions",

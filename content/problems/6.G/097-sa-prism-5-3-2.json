@@ -12,29 +12,31 @@
     "62 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "SA $= 2(lw + lh + wh)$.",
+  "hint": "Surface area is the sum of all six faces. Because opposite faces match, you only need three different areas.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Tag every length with its units. Area answers are square units; volume is cubic."
+      "text": "Unfold the prism in your mind. The net shows a $5 \\times 3$ rectangle twice, a $5 \\times 2$ rectangle twice, and a $3 \\times 2$ rectangle twice."
     },
     {
       "level": "nudge",
-      "text": "SA $= 2(lw + lh + wh)$."
+      "text": "Surface area is the sum of all six faces. Because opposite faces match, you only need three different areas."
     },
     {
       "level": "guide",
-      "text": "$lw = 15$, $lh = 10$, $wh = 6$. Sum $= 31$. Double $= 62$."
+      "text": "The three areas are $5 \\times 3 = 15$, $5 \\times 2 = 10$ and $3 \\times 2 = 6$. Add them, then multiply the sum by $2$."
     },
     {
       "level": "reveal",
-      "text": "$62$."
+      "text": "$2(15 + 10 + 6) = 2 \\times 31 = 62$, so the surface area is $62$ square units."
     }
   ],
   "explanation": [
-    "$5 \\cdot 3 = 15$, $5 \\cdot 2 = 10$, $3 \\cdot 2 = 6$.",
-    "Sum: $31$. Total: $2 \\cdot 31 = 62$."
+    "Find the three different face areas: $5 \\times 3 = 15$, $5 \\times 2 = 10$ and $3 \\times 2 = 6$.",
+    "Add them to get the area of one face of each kind: $15 + 10 + 6 = 31$.",
+    "Double the sum because each face has a matching opposite face: $2 \\times 31 = 62$.",
+    "The surface area of the prism is $62$ square units."
   ],
   "tags": [
     "MAP-practice",

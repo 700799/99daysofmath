@@ -13,12 +13,12 @@
     "9 1/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "When there are **two middle values**, the median is the average of those two.",
+  "hint": "With an even number of values there is no single middle value. Think about what to do with the two in the middle.",
   "explanation": [
-    "Sort the list (already sorted): $4, 8, 11, 15$.",
-    "Even number of values ($4$) → two middle values: $8$ and $11$.",
-    "Average them: $\\frac{8 + 11}{2} = \\frac{19}{2} = 9.5$.",
-    "Median $= 9.5$."
+    "The list $4, 8, 11, 15$ is already sorted, which is needed before finding a median.",
+    "There are $4$ values, an even count, so two values share the middle: $8$ and $11$.",
+    "The median is halfway between them, so average the two: $\\frac{8 + 11}{2} = \\frac{19}{2} = 9.5$.",
+    "The median is $9.5$, even though that number is not in the list."
   ],
   "alternativeExplanations": [
     {
@@ -38,15 +38,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "When there are **two middle values**, the median is the average of those two."
+      "text": "With an even number of values there is no single middle value. Think about what to do with the two in the middle."
     },
     {
       "level": "guide",
-      "text": "Sort the list (already sorted): $4, 8, 11, 15$."
+      "text": "The list $4, 8, 11, 15$ is already in order. The two middle values are $8$ and $11$, so find the number halfway between them by averaging."
     },
     {
       "level": "reveal",
-      "text": "Median $= 9.5$."
+      "text": "$\\frac{8 + 11}{2} = \\frac{19}{2} = 9.5$, so the median of the list is $9.5$."
     }
   ],
   "diagram": {

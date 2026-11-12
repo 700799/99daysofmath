@@ -27,29 +27,31 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Outliers shift the mean.",
+  "hint": "An outlier is one extreme value. Decide which measure of center barely notices a single extreme value.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Use a sample of 3–4 values to see how the rule works, then apply it to the real data."
+      "text": "Try a small set: $4, 5, 6$ and then one extra value of $100$. Which changes more when the big value joins, the mean or the median?"
     },
     {
       "level": "nudge",
-      "text": "Outliers shift the mean."
+      "text": "An outlier is one extreme value. Decide which measure of center barely notices a single extreme value."
     },
     {
       "level": "guide",
-      "text": "Median is based on rank, so it's stable."
+      "text": "The mean uses the size of every value, so the outlier drags it. The median only needs the middle position in the ordered list, and the mode may not be near the center at all."
     },
     {
       "level": "reveal",
-      "text": "Median."
+      "text": "The median (choice B) is the most reliable measure of center when there is a big outlier."
     }
   ],
   "explanation": [
-    "Median is resistant to outliers.",
-    "Mean is pulled by extreme values."
+    "The mean is computed from the sum of all values, so a big outlier pulls it toward the extreme.",
+    "The mode is just the most common value, which does not have to be near the middle of the data.",
+    "The median is the middle value in order, and an outlier at one end does not change which value is in the middle by much.",
+    "So the median, choice B, is the most reliable measure of center here."
   ],
   "tags": [
     "CA",

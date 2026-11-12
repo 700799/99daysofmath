@@ -13,25 +13,25 @@
     ".96"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Use $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$.",
+  "hint": "The double-angle formula for sine uses both the sine and the cosine of the original angle, and both are given here.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$."
+      "text": "The double-angle formula for sine uses both the sine and the cosine of the original angle, and both are given here."
     },
     {
       "level": "guide",
-      "text": "Substitute: $2 \\times \\frac{3}{5} \\times \\frac{4}{5}$."
+      "text": "Use the formula $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$ and substitute the two given values: $2 \\times \\frac{3}{5} \\times \\frac{4}{5}$."
     },
     {
       "level": "reveal",
-      "text": "$2 \\times \\frac{12}{25} = \\frac{24}{25} = 0.96$."
+      "text": "$2 \\times \\frac{12}{25} = \\frac{24}{25}$, so $\\sin(2\\theta)$ is $\\frac{24}{25}$, or $0.96$ as a decimal."
     }
   ],
   "explanation": [
-    "The double-angle formula is $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$.",
-    "Substituting, $\\sin(2\\theta) = 2 \\cdot \\frac{3}{5} \\cdot \\frac{4}{5} = \\frac{24}{25}$.",
-    "As a decimal that is $0.96$."
+    "The double-angle formula for sine is $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$.",
+    "Substituting the given sine and cosine, $\\sin(2\\theta) = 2 \\cdot \\frac{3}{5} \\cdot \\frac{4}{5} = \\frac{24}{25}$.",
+    "As a decimal that is $0.96$, so the answer is $\\frac{24}{25}$."
   ],
   "alternativeExplanations": [
     {

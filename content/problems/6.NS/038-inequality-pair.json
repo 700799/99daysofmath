@@ -13,31 +13,31 @@
     "c,a,b,d"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Coldest = **most negative** = farthest **left** on the number line. Don't confuse magnitude with order!",
+  "hint": "Colder means a lower number. Put all four temperatures on one number line and read them from left to right.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm-up: $-3$ vs $-10$ — which is colder? $-10$, even though its **absolute value** is bigger. Negative numbers reverse the usual size order."
+      "text": "Warm-up: which is colder, $-3$ or $-10$? It is $-10$, even though its **absolute value** is bigger. Negative numbers reverse the usual size order."
     },
     {
       "level": "nudge",
-      "text": "Plot all four temperatures on a number line. Reading left → right gives coldest → warmest."
+      "text": "Colder means a lower number. Put all four temperatures on one number line and read them from left to right."
     },
     {
       "level": "guide",
-      "text": "From least to greatest: $-18 < -12 < -5 < 4$. That's Chicago ($-18$), Anchorage ($-12$), Buffalo ($-5$), Denver ($4$)."
+      "text": "Among the negatives, the one farthest from zero is the coldest, so compare $-18$, $-12$ and $-5$. The only positive temperature, $4$, must come last. Then swap each number for its city letter."
     },
     {
       "level": "reveal",
-      "text": "Order: $C, A, B, D$."
+      "text": "$-18 < -12 < -5 < 4$ gives Chicago, Anchorage, Buffalo, Denver, so the answer is $C,A,B,D$."
     }
   ],
   "explanation": [
-    "Coldest = lowest temperature = farthest **left** on a number line.",
-    "On a number line: $-18$ is leftmost, then $-12$, then $-5$, then $0$, then $4$.",
-    "So coldest to warmest: $-18, -12, -5, 4$ → Chicago, Anchorage, Buffalo, Denver.",
-    "Answer: $C, A, B, D$."
+    "The coldest city has the lowest temperature, which is the number farthest **left** on a number line.",
+    "Place the temperatures on a number line: $-18$ is leftmost, then $-12$, then $-5$, and $4$ is to the right of $0$.",
+    "From least to greatest the temperatures are $-18, -12, -5, 4$, which belong to Chicago, Anchorage, Buffalo and Denver.",
+    "Using first letters, coldest to warmest is $C,A,B,D$."
   ],
   "tags": [
     "integer",

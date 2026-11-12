@@ -10,27 +10,27 @@
   "primaryAnswer": "540",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The formula is $(n - 2) \\times 180°$ for an $n$-sided polygon.",
+  "hint": "Any polygon can be cut into triangles from one corner. The number of triangles depends on the number of sides.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The formula is $(n - 2) \\times 180°$ for an $n$-sided polygon."
+      "text": "Any polygon can be cut into triangles from one corner. The number of triangles depends on the number of sides."
     },
     {
       "level": "guide",
-      "text": "A pentagon has $n = 5$, so $(5 - 2) \\times 180$."
+      "text": "An $n$-sided polygon has an angle sum of $(n - 2) \\times 180°$. A pentagon has $5$ sides, so work out $(5 - 2) \\times 180$."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 180 = 540$ degrees."
+      "text": "Since $3 \\times 180 = 540$, the interior angles of a pentagon add up to $540$ degrees."
     }
   ],
   "learningObjective": "Apply the polygon interior-angle-sum formula.",
   "topic": "Polygons",
   "explanation": [
-    "An $n$-sided polygon splits into $n - 2$ triangles, each contributing $180°$.",
-    "For a pentagon: $(5 - 2) \\times 180 = 3 \\times 180 = 540°$.",
-    "If the pentagon is regular, each angle is $540 \\div 5 = 108°$."
+    "A polygon with $n$ sides can be divided into $n - 2$ triangles, and each triangle contributes $180°$.",
+    "A pentagon has $5$ sides, so it divides into $5 - 2 = 3$ triangles.",
+    "The angle sum is $3 \\times 180 = 540$, so the interior angles total $540$ degrees."
   ],
   "alternativeExplanations": [
     {

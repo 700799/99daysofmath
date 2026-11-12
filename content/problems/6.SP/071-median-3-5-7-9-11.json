@@ -10,24 +10,25 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The middle value (data is already sorted).",
+  "hint": "The set is already listed from least to greatest, so look for the value in the middle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The middle value (data is already sorted)."
+      "text": "The set is already listed from least to greatest, so look for the value in the middle."
     },
     {
       "level": "guide",
-      "text": "Five values; middle is position $3$."
+      "text": "There are five values, so the middle one is in position $3$, with two values before it and two after it."
     },
     {
       "level": "reveal",
-      "text": "$7$."
+      "text": "The third value is $7$, so the median is $7$."
     }
   ],
   "explanation": [
-    "Sorted: $3, 5, 7, 9, 11$. Middle value is $7$.",
-    "Final answer: 7."
+    "The values $3, 5, 7, 9, 11$ are already in order, which is required for finding a median.",
+    "With $5$ values, the median is the $3$rd one because it has two values on each side.",
+    "The $3$rd value is $7$, so the median is $7$."
   ],
   "tags": [
     "median"

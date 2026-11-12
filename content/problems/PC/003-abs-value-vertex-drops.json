@@ -10,19 +10,19 @@
   "primaryAnswer": "-4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The point of the parent V sits at $(0, 0)$.",
+  "hint": "Where is the point of the parent V before anything changes? Then ask what a number outside the bars does to heights.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The point of the parent V sits at $(0, 0)$."
+      "text": "Where is the point of the parent V before anything changes? Then ask what a number outside the bars does to heights."
     },
     {
       "level": "guide",
-      "text": "The $-4$ is outside the bars, so every point drops $4$."
+      "text": "The parent V has its point at $(0, 0)$. The $-4$ is outside the bars, so lower that point's $y$-value by $4$."
     },
     {
       "level": "reveal",
-      "text": "The point of the V moves from $0$ down to $-4$."
+      "text": "The point of the V drops from $0$ to $0 - 4 = -4$, so its $y$-coordinate is $-4$."
     }
   ],
   "explanation": [

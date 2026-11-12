@@ -10,27 +10,28 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Set the two expressions for $y$ equal to each other.",
+  "hint": "At an intersection point both equations give the same $y$ for the same $x$. Use that to write one equation in $x$ alone.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Set the two expressions for $y$ equal to each other."
+      "text": "At an intersection point both equations give the same $y$ for the same $x$. Use that to write one equation in $x$ alone."
     },
     {
       "level": "guide",
-      "text": "$x^2 = x + 6$, so $x^2 - x - 6 = 0$."
+      "text": "Set $x^2 = x + 6$ and move everything to one side: $x^2 - x - 6 = 0$. Factor by finding two numbers with product $-6$ and sum $-1$."
     },
     {
       "level": "reveal",
-      "text": "$(x - 3)(x + 2) = 0$, so $x = 3$ or $x = -2$; the greater is $3$."
+      "text": "The factors are $(x - 3)(x + 2) = 0$, so $x = 3$ or $x = -2$. The greater $x$-coordinate is $3$."
     }
   ],
   "learningObjective": "Solve a nonlinear system by substitution.",
   "topic": "Nonlinear systems",
   "explanation": [
-    "Both equations give $y$, so set them equal: $x^2 = x + 6$.",
-    "Rearrange to a standard quadratic: $x^2 - x - 6 = 0$.",
-    "Factor: $(x - 3)(x + 2) = 0$, so $x = 3$ or $x = -2$. The greater is $3$."
+    "Both equations are solved for $y$, so set the right sides equal: $x^2 = x + 6$.",
+    "Subtract $x$ and $6$ from both sides to get a quadratic equal to zero: $x^2 - x - 6 = 0$.",
+    "Factor it as $(x - 3)(x + 2) = 0$, which gives $x = 3$ or $x = -2$.",
+    "The greater of the two $x$-coordinates is $3$."
   ],
   "alternativeExplanations": [
     {

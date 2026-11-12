@@ -10,23 +10,26 @@
   "primaryAnswer": "21",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Compute exponent first.",
+  "hint": "Only $a$ is squared here. The exponent does not apply to $b$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Compute exponent first."
+      "text": "Only $a$ is squared here. The exponent does not apply to $b$."
     },
     {
       "level": "guide",
-      "text": "$4^2 + 5 = 16 + 5$."
+      "text": "With $a = 4$ and $b = 5$ you get $4^2 + 5$. Work out the power first, then add."
     },
     {
       "level": "reveal",
-      "text": "$21$."
+      "text": "$4^2 = 16$ and $16 + 5 = 21$, so the value is $21$."
     }
   ],
   "explanation": [
-    "$4^2 = 16$. $16 + 5 = 21$."
+    "Substitute the two given values to get $4^2 + 5$.",
+    "Exponents come before addition, so find $4^2 = 4 \\times 4 = 16$.",
+    "Now add the value of $b$ to that square: $16 + 5 = 21$.",
+    "The value of the expression is $21$ when $a = 4$ and $b = 5$."
   ],
   "tags": [
     "evaluate"

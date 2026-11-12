@@ -13,11 +13,11 @@
     ".75"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Both of these exact values happen to be the same number.",
+  "hint": "Recall both exact values from the $30$-$60$-$90$ triangle. The angles $60^\\circ$ and $30^\\circ$ are complements, so compare the sine of one with the cosine of the other.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Both of these exact values happen to be the same number."
+      "text": "Recall both exact values from the $30$-$60$-$90$ triangle. The angles $60^\\circ$ and $30^\\circ$ are complements, so compare the sine of one with the cosine of the other."
     },
     {
       "level": "nudge",
@@ -26,16 +26,16 @@
     },
     {
       "level": "guide",
-      "text": "$\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$ and $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$. Multiply the two fractions."
+      "text": "Both factors are the same number: $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$ and $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$. Multiply the two fractions, tops together and bottoms together."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{\\sqrt{3}}{2} \\times \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{3}\\cdot\\sqrt{3}}{4} = \\frac{3}{4}$."
+      "text": "$\\frac{\\sqrt{3}}{2} \\times \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{3}\\cdot\\sqrt{3}}{4} = \\frac{3}{4}$, so the product is exactly three fourths."
     }
   ],
   "explanation": [
     "Both values come from the $30$-$60$-$90$ triangle: $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$ and $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$.",
-    "Multiply straight across: $\\frac{\\sqrt{3} \\times \\sqrt{3}}{2 \\times 2} = \\frac{\\sqrt{3}\\cdot\\sqrt{3}}{4}$.",
+    "Multiply straight across, numerators together and denominators together: $\\frac{\\sqrt{3} \\times \\sqrt{3}}{2 \\times 2} = \\frac{\\sqrt{3}\\cdot\\sqrt{3}}{4}$.",
     "A square root times itself gives the number back, so $\\sqrt{3} \\times \\sqrt{3} = 3$ and the answer is $\\frac{3}{4}$."
   ],
   "alternativeExplanations": [

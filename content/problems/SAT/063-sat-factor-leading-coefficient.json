@@ -32,9 +32,10 @@
   "learningObjective": "Solve a quadratic with a leading coefficient other than 1.",
   "topic": "Factoring quadratics",
   "explanation": [
-    "Factor: $2x^2 + 5x - 3 = (2x - 1)(x + 3)$. Verify the middle term: $6x - x = 5x$ ✓",
-    "Set each factor to zero: $2x - 1 = 0$ gives $x = \\tfrac{1}{2}$, and $x + 3 = 0$ gives $x = -3$.",
-    "The positive solution is $\\tfrac{1}{2}$, or $0.5$."
+    "Factor the quadratic as $(2x - 1)(x + 3)$. The outer and inner products are $6x$ and $-x$, which combine to the required $5x$.",
+    "Set each factor equal to zero, because a product is zero only when one factor is: $2x - 1 = 0$ or $x + 3 = 0$.",
+    "The first equation gives $x = \\tfrac{1}{2}$ and the second gives $x = -3$.",
+    "The positive solution is $\\tfrac{1}{2}$, which is $0.5$ as a decimal."
   ],
   "alternativeExplanations": [
     {

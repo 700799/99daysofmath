@@ -12,19 +12,19 @@
     "100,000"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The little raised number tells you how many $10$s get multiplied together.",
+  "hint": "The small raised number is an exponent. It tells how many tens are multiplied together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The little raised number tells you how many $10$s get multiplied together."
+      "text": "The small raised number is an exponent. It tells how many tens are multiplied together."
     },
     {
       "level": "guide",
-      "text": "$10^5 = 10 \\times 10 \\times 10 \\times 10 \\times 10$ — that is five zeros after the $1$."
+      "text": "Write out five tens: $10 \\times 10 \\times 10 \\times 10 \\times 10$. Each multiplication by ten puts one more zero after the $1$."
     },
     {
       "level": "reveal",
-      "text": "$10^5 = 100{,}000$."
+      "text": "Five tens multiplied together make a $1$ with five zeros, so $10^5 = 100{,}000$."
     }
   ],
   "explanation": [

@@ -12,25 +12,25 @@
     "-3/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Today was FASTER than average, so expect a negative $z$-score.",
+  "hint": "Today's ride was shorter than usual. What does that tell you about the sign of the $z$-score?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Today was FASTER than average, so expect a negative $z$-score."
+      "text": "Today's ride was shorter than usual. What does that tell you about the sign of the $z$-score?"
     },
     {
       "level": "guide",
-      "text": "$z = \\frac{12 - 15}{2}$."
+      "text": "Subtract the mean from today's time, keeping the order value minus mean, then divide by the standard deviation: $\\frac{12 - 15}{2}$."
     },
     {
       "level": "reveal",
-      "text": "$z = \\frac{-3}{2} = -1.5$."
+      "text": "$z = \\frac{-3}{2} = -1.5$, so today's ride was $1.5$ standard deviations below the mean."
     }
   ],
   "explanation": [
-    "Today's ride is $12 - 15 = -3$ minutes compared with the mean, so $3$ minutes short.",
-    "Each SD is $2$ minutes, so $3$ minutes is $1.5$ SDs.",
-    "Below the mean means negative: $z = -1.5$."
+    "Compare today's ride with the mean: $12 - 15 = -3$, so the ride was $3$ minutes shorter than average.",
+    "Each standard deviation is $2$ minutes, so $3$ minutes is $\\frac{3}{2} = 1.5$ standard deviations.",
+    "The value is below the mean, so the sign is negative and $z = -1.5$."
   ],
   "alternativeExplanations": [
     {

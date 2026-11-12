@@ -13,7 +13,7 @@
     "two"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A **term** is a number or variable expression separated by $+$ or $-$. Count after combining like terms.",
+  "hint": "You cannot count the terms until the parentheses are gone and like terms are combined.",
   "hints": [
     {
       "level": "nudge",
@@ -22,22 +22,22 @@
     },
     {
       "level": "nudge",
-      "text": "Distribute the $3$, then collect $x$-terms separately from constants."
+      "text": "You cannot count the terms until the parentheses are gone and like terms are combined."
     },
     {
       "level": "guide",
-      "text": "$3(x + 2) + 4x - 5 = 3x + 6 + 4x - 5 = (3x + 4x) + (6 - 5) = 7x + 1$."
+      "text": "Distribute to get $3x + 6 + 4x - 5$. Combine the $x$ terms together and the numbers together, then count what is left."
     },
     {
       "level": "reveal",
-      "text": "$7x + 1$ has $\\boxed{2}$ terms ($7x$ and $1$)."
+      "text": "The expression simplifies to $7x + 1$, which has $2$ terms."
     }
   ],
   "explanation": [
-    "Distribute: $3(x + 2) = 3x + 6$. So the expression becomes $3x + 6 + 4x - 5$.",
-    "Group like terms: $(3x + 4x) + (6 - 5)$.",
-    "Combine: $7x + 1$.",
-    "Count the terms: $7x$ is one term, $+1$ is another. **Total: $2$ terms.**"
+    "Distribute the $3$ to remove the parentheses: $3(x + 2) = 3x + 6$, so the expression is $3x + 6 + 4x - 5$.",
+    "Group the like terms so they can be combined: $(3x + 4x) + (6 - 5)$.",
+    "Combining each group gives $7x + 1$, and nothing more can be combined.",
+    "Terms are the parts separated by plus or minus signs, here $7x$ and $1$. The simplified expression has $2$ terms."
   ],
   "tags": [
     "expression",

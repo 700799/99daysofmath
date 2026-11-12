@@ -10,25 +10,25 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The ramp is the hypotenuse and the height is opposite the $30^\\circ$ angle. Opposite and hypotenuse means sine.",
+  "hint": "The ramp surface is the hypotenuse and the height is the side opposite the $30^\\circ$ angle. Which trig ratio links opposite and hypotenuse?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The ramp is the hypotenuse and the height is opposite the $30^\\circ$ angle. Opposite and hypotenuse means sine."
+      "text": "The ramp surface is the hypotenuse and the height is the side opposite the $30^\\circ$ angle. Which trig ratio links opposite and hypotenuse?"
     },
     {
       "level": "guide",
-      "text": "Write $\\sin 30^\\circ = \\frac{h}{20}$, then multiply both sides by 20."
+      "text": "Opposite over hypotenuse is sine, so write $\\sin 30^\\circ = \\frac{h}{20}$ and multiply both sides by 20 to isolate the height."
     },
     {
       "level": "reveal",
-      "text": "$\\sin 30^\\circ = 0.5$, so $h = 20 \\times 0.5 = 10$ ft."
+      "text": "$\\sin 30^\\circ = 0.5$, so $h = 20 \\times 0.5 = 10$, and the top of the ramp is $10$ ft high."
     }
   ],
   "explanation": [
     "The slanted ramp is the hypotenuse ($20$ ft) and the height $h$ sits opposite the $30^\\circ$ angle.",
-    "Opposite over hypotenuse is sine: $\\sin 30^\\circ = \\frac{h}{20}$.",
-    "Since $\\sin 30^\\circ = \\frac{1}{2}$, we get $h = 20 \\times \\frac{1}{2} = 10$ ft."
+    "Opposite over hypotenuse is sine, so the equation is $\\sin 30^\\circ = \\frac{h}{20}$.",
+    "Since $\\sin 30^\\circ = \\frac{1}{2}$, we get $h = 20 \\times \\frac{1}{2} = 10$, so the top of the ramp is $10$ ft above the ground."
   ],
   "alternativeExplanations": [
     {

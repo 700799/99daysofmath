@@ -10,24 +10,26 @@
   "primaryAnswer": "17",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Add $5$ to both sides.",
+  "hint": "$5$ has been subtracted from $x$. What do you do to both sides to undo that?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add $5$ to both sides."
+      "text": "$5$ has been subtracted from $x$. What do you do to both sides to undo that?"
     },
     {
       "level": "guide",
-      "text": "$x = 12 + 5$."
+      "text": "Add $5$ to both sides, which cancels the $-5$ on the left. The right side becomes $12 + 5$."
     },
     {
       "level": "reveal",
-      "text": "$17$."
+      "text": "$12 + 5 = 17$, so the solution of the equation is $x = 17$."
     }
   ],
   "explanation": [
-    "$x - 5 = 12$. Add $5$: $x = 17$.",
-    "Final answer: 17."
+    "In $x - 5 = 12$, the number $5$ is subtracted from $x$.",
+    "Add $5$ to both sides, because adding undoes subtracting and keeps the balance.",
+    "The right side becomes $12 + 5 = 17$, so the result is $x = 17$.",
+    "Check: $17 - 5 = 12$ is true, so the solution is $x = 17$."
   ],
   "alternativeExplanations": [
     {

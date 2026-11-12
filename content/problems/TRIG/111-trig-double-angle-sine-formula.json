@@ -32,24 +32,24 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Write $2\\theta$ as $\\theta + \\theta$ and use the sum formula.",
+  "hint": "A doubled angle is the same angle added to itself. That lets you use the sum formula for sine.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Write $2\\theta$ as $\\theta + \\theta$ and use the sum formula."
+      "text": "A doubled angle is the same angle added to itself. That lets you use the sum formula for sine."
     },
     {
       "level": "guide",
-      "text": "$\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$. Put $A = B = \\theta$."
+      "text": "Write $2\\theta$ as $\\theta + \\theta$ and use $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$ with $A = B = \\theta$. Then combine the two terms."
     },
     {
       "level": "reveal",
-      "text": "You get $\\sin\\theta\\cos\\theta + \\cos\\theta\\sin\\theta = 2\\sin\\theta\\cos\\theta$."
+      "text": "You get $\\sin\\theta\\cos\\theta + \\cos\\theta\\sin\\theta = 2\\sin\\theta\\cos\\theta$, which is choice A."
     }
   ],
   "explanation": [
-    "Treat $2\\theta$ as $\\theta + \\theta$ and apply $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$.",
-    "With $A = B = \\theta$ this gives $\\sin\\theta\\cos\\theta + \\cos\\theta\\sin\\theta$.",
+    "Treat $2\\theta$ as $\\theta + \\theta$ and apply the sine sum formula $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$.",
+    "With both angles equal to $\\theta$, the formula gives $\\sin\\theta\\cos\\theta + \\cos\\theta\\sin\\theta$.",
     "The two terms are identical, so they combine to $2\\sin\\theta\\cos\\theta$."
   ],
   "alternativeExplanations": [

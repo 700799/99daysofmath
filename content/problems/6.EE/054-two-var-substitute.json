@@ -10,23 +10,26 @@
   "primaryAnswer": "13",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute and compute.",
+  "hint": "Replace $x$ with its value, then follow the order of operations.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute and compute."
+      "text": "Replace $x$ with its value, then follow the order of operations."
     },
     {
       "level": "guide",
-      "text": "$y = 3(4) + 1$."
+      "text": "With $x = 4$ the rule becomes $y = 3(4) + 1$. Multiply before you add."
     },
     {
       "level": "reveal",
-      "text": "$y = 12 + 1 = 13$."
+      "text": "$3 \\times 4 = 12$ and $12 + 1 = 13$, so the value of $y$ is $13$."
     }
   ],
   "explanation": [
-    "$y = 3(4) + 1 = 13$."
+    "Substitute $4$ for $x$ in the given rule: $y = 3(4) + 1$.",
+    "Multiply first, because $3x$ means $3$ times $x$, which gives $3 \\times 4 = 12$.",
+    "Then add the $1$ to that product to get $12 + 1 = 13$.",
+    "So the value of $y$ is $13$ when $x = 4$."
   ],
   "tags": [
     "two-vars"

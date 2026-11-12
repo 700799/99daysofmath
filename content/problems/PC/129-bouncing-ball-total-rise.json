@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "For a shrinking geometric series, the total is $\\frac{a_1}{1 - r} = \\frac{16}{1 - \\frac{1}{2}}$."
+      "text": "For a shrinking geometric series, the total is $\\frac{a_1}{1 - r}$, which here is $\\frac{16}{1 - \\frac{1}{2}}$. Simplify the bottom and divide."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{16}{0.5} = 32$ cm."
+      "text": "The total is $\\frac{16}{0.5} = 32$, so the ball rises $32$ cm in all."
     }
   ],
   "explanation": [
-    "The rises are $16, 8, 4, 2, 1, \\dots$ — geometric with $r = \\frac{1}{2}$.",
-    "When $r$ is between $-1$ and $1$, the pieces shrink so fast that the sum settles on a limit.",
-    "Total $= \\frac{a_1}{1 - r} = \\frac{16}{1 - 0.5} = \\frac{16}{0.5}$.",
-    "$= 32$ cm."
+    "The rises are $16, 8, 4, 2, 1, \\dots$, a geometric sequence with ratio $r = \\frac{1}{2}$.",
+    "When $r$ is between $-1$ and $1$, the terms shrink so fast that the sum settles on a limit.",
+    "That limit is the first term divided by one minus the ratio: $\\frac{a_1}{1 - r} = \\frac{16}{1 - 0.5} = \\frac{16}{0.5}$.",
+    "So the total rise distance is $32$ cm."
   ],
   "alternativeExplanations": [
     {

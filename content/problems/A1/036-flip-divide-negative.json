@@ -14,25 +14,25 @@
     "-4>x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "To get $x$ alone, divide both sides by $-3$. Dividing by a NEGATIVE flips the sign.",
+  "hint": "To isolate $x$ you must divide by a negative number. Remember the special rule for inequalities when you do that.",
   "hints": [
     {
       "level": "nudge",
-      "text": "To get $x$ alone, divide both sides by $-3$. Dividing by a NEGATIVE flips the sign."
+      "text": "To isolate $x$ you must divide by a negative number. Remember the special rule for inequalities when you do that."
     },
     {
       "level": "guide",
-      "text": "$x \\; ? \\; 12 \\div (-3)$ — the $>$ turns into $<$."
+      "text": "Divide both sides by $-3$ and reverse the sign, so $>$ becomes $<$. Then work out $12 \\div (-3)$."
     },
     {
       "level": "reveal",
-      "text": "$x < -4$."
+      "text": "$12 \\div (-3) = -4$ and the sign flips, so the solution set is $x < -4$."
     }
   ],
   "explanation": [
-    "Divide both sides by $-3$ and FLIP the inequality: $x < -4$.",
-    "Dividing by a negative is like walking backwards — it turns you around.",
-    "Check: $x = -5$ gives $-3(-5) = 15 > 12$. ✓"
+    "Divide both sides by $-3$ to get $x$ alone, and flip the inequality sign: $x < -4$.",
+    "The flip is needed because multiplying or dividing by a negative reverses the order of numbers on the number line.",
+    "Check with a value below $-4$: $x = -5$ gives $-3(-5) = 15$, and $15 > 12$ is true, so $x < -4$."
   ],
   "alternativeExplanations": [
     {

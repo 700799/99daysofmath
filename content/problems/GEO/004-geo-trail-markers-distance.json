@@ -10,25 +10,25 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Distance is never negative — it is just how far you walk.",
+  "hint": "Distance counts how many units lie between the markers, so it can never be negative. One marker is left of zero and one is right of it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Distance is never negative — it is just how far you walk."
+      "text": "Distance counts how many units lie between the markers, so it can never be negative. One marker is left of zero and one is right of it."
     },
     {
       "level": "guide",
-      "text": "On a number line, distance is $|$larger $-$ smaller$|$: $|6 - (-4)|$."
+      "text": "Subtract the smaller coordinate from the larger one: set up $6 - (-4)$, and remember that subtracting a negative means adding."
     },
     {
       "level": "reveal",
-      "text": "$6 - (-4) = 6 + 4 = 10$ units."
+      "text": "$6 - (-4) = 6 + 4 = 10$, so the markers are $10$ units apart."
     }
   ],
   "explanation": [
-    "The distance between two points on a number line is the absolute value of their difference.",
-    "$|6 - (-4)| = |6 + 4| = 10$.",
-    "Walking from $-4$ up to $0$ is 4 units, then $0$ up to $6$ is 6 more: $4 + 6 = 10$."
+    "The distance between two points on a number line is the absolute value of the difference of their coordinates.",
+    "Here that is $|6 - (-4)| = |6 + 4| = 10$, since subtracting $-4$ is the same as adding $4$.",
+    "You can confirm it by walking $4$ units from $-4$ to $0$ and then $6$ more to reach $6$, so the markers are $10$ units apart."
   ],
   "alternativeExplanations": [
     {

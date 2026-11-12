@@ -10,25 +10,25 @@
   "primaryAnswer": "14",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$f(4)$ means feed the machine a $4$: replace every $x$ with $4$.",
+  "hint": "$f(4)$ asks what the rule gives when the input is $4$. Where does the $4$ go in the rule?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$f(4)$ means feed the machine a $4$: replace every $x$ with $4$."
+      "text": "$f(4)$ asks what the rule gives when the input is $4$. Where does the $4$ go in the rule?"
     },
     {
       "level": "guide",
-      "text": "Compute $3 \\times 4$ first, then add $2$."
+      "text": "Replace $x$ with $4$ to get $3 \\times 4 + 2$. Multiply first, then add."
     },
     {
       "level": "reveal",
-      "text": "$3 \\times 4 = 12$, then $12 + 2 = 14$."
+      "text": "$3 \\times 4 = 12$ and $12 + 2 = 14$, so the value of $f(4)$ is $14$."
     }
   ],
   "explanation": [
-    "Replace $x$ with $4$: $f(4) = 3 \\times 4 + 2$.",
-    "Multiply first: $3 \\times 4 = 12$.",
-    "Add: $12 + 2 = 14$."
+    "$f(4)$ means the input is $4$, so replace $x$ with $4$: $f(4) = 3 \\times 4 + 2$.",
+    "Multiplication comes before addition, so work out $3 \\times 4 = 12$ first.",
+    "Then add the $2$: $12 + 2 = 14$, so the answer is $f(4) = 14$."
   ],
   "alternativeExplanations": [
     {

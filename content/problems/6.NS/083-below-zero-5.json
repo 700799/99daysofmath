@@ -12,24 +12,25 @@
     "−5"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Below\" zero means negative.",
+  "hint": "Numbers above zero are positive and numbers below zero are negative. Decide which side of zero this temperature is on.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Below\" zero means negative."
+      "text": "Numbers above zero are positive and numbers below zero are negative. Decide which side of zero this temperature is on."
     },
     {
       "level": "guide",
-      "text": "Use a minus sign."
+      "text": "The size of the number is $5$. The word \"below\" tells you its sign, so put that sign in front of the $5$."
     },
     {
       "level": "reveal",
-      "text": "$-5$."
+      "text": "Below zero means negative, so the number is $-5$."
     }
   ],
   "explanation": [
-    "Below zero is represented by a negative number.",
-    "\"$5$ below\" $= -5$."
+    "Zero is the reference point. Values above it are positive and values below it are negative.",
+    "The temperature is $5$ degrees away from zero, and the word \"below\" means it is on the negative side.",
+    "So \"$5$ degrees below zero\" is written as $-5$."
   ],
   "tags": [
     "integer",

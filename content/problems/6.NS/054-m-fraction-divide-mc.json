@@ -32,23 +32,26 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Flip and multiply.",
+  "hint": "Dividing by a fraction is the same as multiplying by its reciprocal. Decide which fraction gets flipped before you multiply.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Flip and multiply."
+      "text": "Dividing by a fraction is the same as multiplying by its reciprocal. Decide which fraction gets flipped before you multiply."
     },
     {
       "level": "guide",
-      "text": "$\\frac{2}{5} \\times 10 = \\frac{20}{5}$."
+      "text": "Flip $\\frac{1}{10}$ to get $\\frac{10}{1}$ and rewrite the problem as $\\frac{2}{5} \\times \\frac{10}{1}$. Multiply across, then simplify."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{20}{5} = 4$."
+      "text": "$\\frac{2}{5} \\times \\frac{10}{1} = \\frac{20}{5} = 4$, so the correct choice is $4$ (choice C)."
     }
   ],
   "explanation": [
-    "$\\frac{2}{5} \\div \\frac{1}{10} = \\frac{2}{5} \\times \\frac{10}{1} = \\frac{20}{5} = 4$."
+    "Dividing by $\\frac{1}{10}$ is the same as multiplying by its reciprocal, $\\frac{10}{1}$.",
+    "Rewrite the whole problem as a multiplication: $\\frac{2}{5} \\times \\frac{10}{1}$.",
+    "Multiply across the tops and the bottoms to get $\\frac{2 \\times 10}{5 \\times 1} = \\frac{20}{5}$.",
+    "Since $20 \\div 5 = 4$, the quotient is $4$, which is choice C."
   ],
   "tags": [
     "fraction-division"

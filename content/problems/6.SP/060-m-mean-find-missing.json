@@ -10,29 +10,31 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Total sum is $40$ ($4 \\times 10$).",
+  "hint": "The mean and the count together tell you what all four numbers must add up to.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Mean is fair-shares; median is the middle. Pick the one the question actually asks for."
+      "text": "Try two numbers first: if two numbers have mean $10$ and one of them is $8$, what total must they share?"
     },
     {
       "level": "nudge",
-      "text": "Total sum is $40$ ($4 \\times 10$)."
+      "text": "The mean and the count together tell you what all four numbers must add up to."
     },
     {
       "level": "guide",
-      "text": "Three sum to $8 + 11 + 9 = 28$."
+      "text": "The four numbers total $4 \\times 10 = 40$. The three known numbers add to $8 + 11 + 9 = 28$, so find what is left."
     },
     {
       "level": "reveal",
-      "text": "$40 - 28 = 12$."
+      "text": "$40 - 28 = 12$, so the fourth number is $12$."
     }
   ],
   "explanation": [
-    "Sum needed: $40$. Have: $28$.",
-    "Missing: $12$."
+    "The total equals the mean times the count, so the four numbers add to $4 \\times 10 = 40$.",
+    "The three known numbers add to $8 + 11 + 9 = 28$.",
+    "The fourth number is whatever is left of the total: $40 - 28 = 12$.",
+    "The fourth number is $12$, and checking, $(8 + 11 + 9 + 12) \\div 4 = 10$."
   ],
   "tags": [
     "CA",

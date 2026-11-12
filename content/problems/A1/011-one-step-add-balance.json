@@ -10,25 +10,25 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The equation is a balance scale. To undo $+9$, subtract $9$ — from BOTH sides.",
+  "hint": "Think of the equation as a balance scale. What would undo the adding of $9$ and still keep the scale level?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The equation is a balance scale. To undo $+9$, subtract $9$ — from BOTH sides."
+      "text": "Think of the equation as a balance scale. What would undo the adding of $9$ and still keep the scale level?"
     },
     {
       "level": "guide",
-      "text": "$x + 9 - 9 = 15 - 9$."
+      "text": "Subtract $9$ from both sides so that $x$ is left alone: $x + 9 - 9 = 15 - 9$."
     },
     {
       "level": "reveal",
-      "text": "$x = 6$."
+      "text": "$15 - 9 = 6$, so the equation's solution is $x = 6$."
     }
   ],
   "explanation": [
-    "Undo the $+9$ by subtracting 9 from both sides.",
-    "$x = 15 - 9 = 6$.",
-    "Check: $6 + 9 = 15$. ✓"
+    "To get $x$ alone we undo the $+9$, and subtraction is the opposite of addition.",
+    "Subtracting $9$ from both sides keeps the equation balanced and gives $x = 15 - 9 = 6$.",
+    "Check by putting $6$ back in: $6 + 9 = 15$, which is true, so $x = 6$."
   ],
   "alternativeExplanations": [
     {

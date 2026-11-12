@@ -10,24 +10,25 @@
   "primaryAnswer": "9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Sort the numbers.",
+  "hint": "The numbers are scrambled, and a median only makes sense once they are in order.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sort the numbers."
+      "text": "The numbers are scrambled, and a median only makes sense once they are in order."
     },
     {
       "level": "guide",
-      "text": "Sorted: $4, 6, 7, 9, 10, 12, 15$. Find the middle."
+      "text": "Sorted, the list is $4, 6, 7, 9, 10, 12, 15$. With seven values, the middle one is the fourth, with three on each side."
     },
     {
       "level": "reveal",
-      "text": "$9$."
+      "text": "The fourth value is $9$, so the median is $9$."
     }
   ],
   "explanation": [
-    "Sorted: $4, 6, 7, 9, 10, 12, 15$.",
-    "$7$ values, middle is the $4$th: $9$."
+    "Sort the values from least to greatest, because the median is the middle of the ordered list: $4, 6, 7, 9, 10, 12, 15$.",
+    "There are $7$ values, so the middle is the $4$th one, leaving $3$ values below and $3$ above.",
+    "The $4$th value is $9$, so the median is $9$."
   ],
   "tags": [
     "median"

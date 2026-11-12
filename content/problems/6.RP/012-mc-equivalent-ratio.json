@@ -32,25 +32,26 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Equivalent ratios reduce to the same simplest form.",
+  "hint": "It is easier to compare ratios after each one is simplified. What is the simplest form of the ratio in the question?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Equivalent ratios reduce to the same simplest form."
+      "text": "It is easier to compare ratios after each one is simplified. What is the simplest form of the ratio in the question?"
     },
     {
       "level": "guide",
-      "text": "Simplify $4:6$ first."
+      "text": "Dividing both parts of $4 : 6$ by $2$ gives $2 : 3$. Simplify each choice and find the one that also becomes $2 : 3$."
     },
     {
       "level": "reveal",
-      "text": "$4:6 = 2:3$. Check each option: $6:9 = 2:3$ ✓."
+      "text": "$6 : 9$ divided by $3$ on both sides is $2 : 3$, so the answer is $6 : 9$, choice B."
     }
   ],
   "explanation": [
-    "$4:6$ simplifies to $2:3$ (divide both by $2$).",
-    "Check $6:9$: divide both by $3$ → $2:3$. ✓",
-    "Answer: $6:9$."
+    "Equivalent ratios all simplify to the same lowest-terms ratio, so start by simplifying $4 : 6$ to $2 : 3$.",
+    "Test choice B by dividing both parts by $3$: $6 \\div 3 = 2$ and $9 \\div 3 = 3$, which gives $2 : 3$.",
+    "The other choices simplify to $3 : 4$, $4 : 5$ and $1 : 2$, and none of those equals $2 : 3$.",
+    "The ratio equivalent to $4 : 6$ is $6 : 9$, choice B."
   ],
   "tags": [
     "MAP-practice",

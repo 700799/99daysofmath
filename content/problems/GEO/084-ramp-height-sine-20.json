@@ -10,25 +10,25 @@
   "primaryAnswer": "5.1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The ramp itself is the hypotenuse; the height is opposite the $20^\\circ$ angle.",
+  "hint": "Sketch the right triangle made by the ramp, the ground and the height. Decide which side the ramp is and where the height sits compared with the $20^\\circ$ angle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The ramp itself is the hypotenuse; the height is opposite the $20^\\circ$ angle."
+      "text": "Sketch the right triangle made by the ramp, the ground and the height. Decide which side the ramp is and where the height sits compared with the $20^\\circ$ angle."
     },
     {
       "level": "guide",
-      "text": "Opposite and hypotenuse means sine: $\\sin 20^\\circ = \\frac{h}{15}$."
+      "text": "The ramp is the hypotenuse and the height is opposite the angle, so use sine: $\\sin 20^\\circ = \\frac{h}{15}$. Multiply both sides by $15$."
     },
     {
       "level": "reveal",
-      "text": "$h = 15 \\sin 20^\\circ \\approx 15(0.342) \\approx 5.1$ ft."
+      "text": "$h = 15 \\sin 20^\\circ \\approx 15(0.342) \\approx 5.1$, so the top of the ramp is about $5.1$ feet high."
     }
   ],
   "explanation": [
-    "Label the triangle: hypotenuse $= 15$ (the ramp), unknown height opposite the $20^\\circ$ angle.",
-    "Opposite over hypotenuse is sine, so $\\sin 20^\\circ = \\frac{h}{15}$.",
-    "Multiply both sides by $15$: $h = 15 \\sin 20^\\circ \\approx 5.1$ ft."
+    "In the right triangle, the ramp of length $15$ is the hypotenuse and the unknown height $h$ is opposite the $20^\\circ$ angle.",
+    "Opposite over hypotenuse is the sine ratio, so $\\sin 20^\\circ = \\frac{h}{15}$.",
+    "Multiplying both sides by $15$ gives $h = 15 \\sin 20^\\circ \\approx 5.1$, so the ramp top is about $5.1$ feet above the ground."
   ],
   "alternativeExplanations": [
     {

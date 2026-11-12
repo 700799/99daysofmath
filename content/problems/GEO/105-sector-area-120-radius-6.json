@@ -14,25 +14,25 @@
     "12π"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Sector area is a fraction of the whole circle's area: $\\frac{\\theta}{360} \\times \\pi r^2$.",
+  "hint": "A wedge is a sector, which is a fraction of the whole circle's area. The central angle tells you the fraction.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sector area is a fraction of the whole circle's area: $\\frac{\\theta}{360} \\times \\pi r^2$."
+      "text": "A wedge is a sector, which is a fraction of the whole circle's area. The central angle tells you the fraction."
     },
     {
       "level": "guide",
-      "text": "Whole circle: $\\pi(6)^2 = 36\\pi$. And $120^\\circ$ is $\\frac{1}{3}$ of a full turn."
+      "text": "The whole circle has area $\\pi(6)^2 = 36\\pi$, and $120^\\circ$ is $\\frac{120}{360} = \\frac{1}{3}$ of a full turn. Take one third of the area."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{3} \\times 36\\pi = 12\\pi$ square inches."
+      "text": "$\\frac{1}{3} \\times 36\\pi = 12\\pi$, so the wedge has an area of $12\\pi$ square inches."
     }
   ],
   "explanation": [
-    "Area of the full circle: $\\pi r^2 = \\pi(6)^2 = 36\\pi$ sq in.",
-    "$\\frac{120}{360} = \\frac{1}{3}$, so the wedge is a third of the window.",
-    "Sector area $= \\frac{1}{3}(36\\pi) = 12\\pi$ sq in (about $37.7$)."
+    "The area of the full window is $\\pi r^2 = \\pi(6)^2 = 36\\pi$ square inches.",
+    "The wedge's central angle is $\\frac{120}{360} = \\frac{1}{3}$ of a full turn, so the wedge is one third of the window.",
+    "The sector area is $\\frac{1}{3}(36\\pi) = 12\\pi$ square inches, or about $37.7$ square inches."
   ],
   "alternativeExplanations": [
     {

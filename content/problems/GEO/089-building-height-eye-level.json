@@ -10,11 +10,11 @@
   "primaryAnswer": "98.7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The triangle starts at eye level, not at the ground — so trigonometry gives only the part of the building ABOVE the surveyor's eyes.",
+  "hint": "The angle is measured from the surveyor's eyes, not from the ground. Think about which part of the building the right triangle actually covers.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The triangle starts at eye level, not at the ground — so trigonometry gives only the part of the building ABOVE the surveyor's eyes."
+      "text": "The angle is measured from the surveyor's eyes, not from the ground. Think about which part of the building the right triangle actually covers."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Find that upper piece: $\\tan 32^\\circ = \\frac{x}{150}$, so $x = 150 \\tan 32^\\circ \\approx 93.7$ ft."
+      "text": "Find the part above eye level first: $\\tan 32^\\circ = \\frac{x}{150}$, so $x = 150 \\tan 32^\\circ \\approx 93.7$ ft. Then account for the eye height."
     },
     {
       "level": "reveal",
-      "text": "Add the eye height back: $93.7 + 5 \\approx 98.7$ ft."
+      "text": "Adding the eye height gives $93.7 + 5 \\approx 98.7$, so the building is about $98.7$ feet tall."
     }
   ],
   "explanation": [
-    "The horizontal sight line sits $5$ ft up, so the right triangle has adjacent leg $150$ and opposite leg $x$ = the building above eye level.",
-    "$\\tan 32^\\circ = \\frac{x}{150}$ gives $x = 150 \\tan 32^\\circ \\approx 93.73$ ft.",
-    "The building also extends from the ground up to eye level, so add $5$: about $98.7$ ft tall."
+    "The line of sight starts $5$ feet above the ground, so the right triangle has an adjacent leg of $150$ and an opposite leg $x$ that is only the part of the building above eye level.",
+    "Tangent links those two legs: $\\tan 32^\\circ = \\frac{x}{150}$, so $x = 150 \\tan 32^\\circ \\approx 93.73$ feet.",
+    "The bottom $5$ feet of the building lie below eye level, so add them: the building is about $93.73 + 5 \\approx 98.7$ feet tall."
   ],
   "alternativeExplanations": [
     {

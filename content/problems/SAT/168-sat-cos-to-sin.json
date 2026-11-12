@@ -13,11 +13,11 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.005,
-  "hint": "Cosine gives you the adjacent side and the hypotenuse. Find the third side.",
+  "hint": "The cosine value tells you two sides of a right triangle. Sine needs a different side, so that side must be found first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Cosine gives you the adjacent side and the hypotenuse. Find the third side."
+      "text": "The cosine value tells you two sides of a right triangle. Sine needs a different side, so that side must be found first."
     },
     {
       "level": "nudge",
@@ -26,19 +26,19 @@
     },
     {
       "level": "guide",
-      "text": "Adjacent $= 5$, hypotenuse $= 13$, so the opposite side is $12$."
+      "text": "Take the adjacent side as $5$ and the hypotenuse as $13$. The opposite side is $\\sqrt{13^2 - 5^2} = 12$. Then write sine as opposite over hypotenuse."
     },
     {
       "level": "reveal",
-      "text": "$\\sin\\theta = \\dfrac{12}{13} \\approx 0.92$."
+      "text": "The ratio is $\\sin\\theta = \\dfrac{12}{13}$, which is about $0.92$ to the nearest hundredth."
     }
   ],
   "learningObjective": "Find one trig ratio from another using the triangle sides.",
   "topic": "Right-triangle trigonometry",
   "explanation": [
-    "$\\cos\\theta = \\dfrac{\\text{adjacent}}{\\text{hypotenuse}} = \\dfrac{5}{13}$, so treat the adjacent side as $5$ and the hypotenuse as $13$.",
-    "By the Pythagorean theorem the opposite side is $\\sqrt{169 - 25} = 12$.",
-    "$\\sin\\theta = \\dfrac{\\text{opposite}}{\\text{hypotenuse}} = \\dfrac{12}{13} \\approx 0.92$."
+    "Cosine is adjacent over hypotenuse, so $\\cos\\theta = \\dfrac{5}{13}$ lets you treat the adjacent side as $5$ and the hypotenuse as $13$.",
+    "The Pythagorean theorem gives the opposite side: $\\sqrt{169 - 25} = \\sqrt{144} = 12$.",
+    "Sine is opposite over hypotenuse, so $\\sin\\theta = \\dfrac{12}{13}$, which rounds to $0.92$."
   ],
   "alternativeExplanations": [
     {

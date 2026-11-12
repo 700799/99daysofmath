@@ -11,11 +11,11 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "Standardize the SAMPLE MEAN. Its SD is $\\sigma/\\sqrt{n}$, which is smaller than $0.3$.",
+  "hint": "The question is about a sample mean of $9$ boxes, so standardize with the standard deviation of $\\bar{x}$, which is smaller than $0.3$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Standardize the SAMPLE MEAN. Its SD is $\\sigma/\\sqrt{n}$, which is smaller than $0.3$."
+      "text": "The question is about a sample mean of $9$ boxes, so standardize with the standard deviation of $\\bar{x}$, which is smaller than $0.3$."
     },
     {
       "level": "nudge",
@@ -24,17 +24,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\sigma_{\\bar{x}} = 0.3/\\sqrt{9} = 0.1$. Compute $z = \\frac{16.0 - 16.1}{0.1}$ and pick the matching table value."
+      "text": "$\\sigma_{\\bar{x}} = 0.3/\\sqrt{9} = 0.1$. Compute $z = \\frac{16.0 - 16.1}{0.1}$ and pick the table value that matches it."
     },
     {
       "level": "reveal",
-      "text": "$z = -0.1/0.1 = -1$, so $P(\\bar{x} < 16.0) = P(Z < -1) = 0.1587$."
+      "text": "$z = -1$, so the probability that the sample mean is below $16.0$ oz is $P(Z < -1) = 0.1587$."
     }
   ],
   "explanation": [
-    "Because the population is normal, $\\bar{x}$ is normal for any $n$, with mean $16.1$ and SD $0.3/\\sqrt{9} = 0.1$ oz.",
-    "$z = \\frac{16.0 - 16.1}{0.1} = -1$.",
-    "$P(Z < -1) = 0.1587$. About a $16\\%$ chance the 9-box average comes in under 16 oz."
+    "Because the population is normal, $\\bar{x}$ is normal for any $n$, with mean $16.1$ and standard deviation $0.3/\\sqrt{9} = 0.1$ oz.",
+    "Standardizing $16.0$ with that standard deviation gives $z = \\frac{16.0 - 16.1}{0.1} = -1$.",
+    "$P(Z < -1) = 0.1587$, so there is about a $16\\%$ chance the 9-box average comes in under 16 oz."
   ],
   "alternativeExplanations": [
     {

@@ -10,11 +10,11 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "How many $6$-hour periods fit into $24$ hours?",
+  "hint": "The amount is cut in half once per half-life. Start by counting how many half-lives pass during the given time.",
   "hints": [
     {
       "level": "nudge",
-      "text": "How many $6$-hour periods fit into $24$ hours?"
+      "text": "The amount is cut in half once per half-life. Start by counting how many half-lives pass during the given time."
     },
     {
       "level": "nudge",
@@ -23,19 +23,19 @@
     },
     {
       "level": "guide",
-      "text": "Four periods, so the amount halves four times."
+      "text": "Since $24 \\div 6 = 4$, the amount is halved four times. Begin at $80$ milligrams and halve it step by step."
     },
     {
       "level": "reveal",
-      "text": "$80 \\to 40 \\to 20 \\to 10 \\to 5$ mg."
+      "text": "The amounts go $80$, $40$, $20$, $10$, $5$, so $5$ milligrams remain after $24$ hours."
     }
   ],
   "learningObjective": "Apply repeated halving over a fixed number of half-life periods.",
   "topic": "Exponential decay",
   "explanation": [
-    "$24 \\div 6 = 4$, so four half-lives elapse.",
-    "Halving four times: $80 \\to 40 \\to 20 \\to 10 \\to 5$.",
-    "Using the formula: $80\\left(\\tfrac{1}{2}\\right)^{24/6} = 80\\left(\\tfrac{1}{2}\\right)^{4} = \\dfrac{80}{16} = 5$ mg."
+    "Count the half-lives in the time given: $24 \\div 6 = 4$, so the amount is halved four times.",
+    "Halving four times in a row gives $80 \\to 40 \\to 20 \\to 10 \\to 5$.",
+    "The formula agrees, since $80\\left(\\tfrac{1}{2}\\right)^{4} = \\dfrac{80}{16} = 5$. After $24$ hours, $5$ milligrams remain."
   ],
   "alternativeExplanations": [
     {

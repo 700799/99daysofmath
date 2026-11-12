@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Power $= 1 - P(\\text{Type II error})$. Anything that makes a real effect easier to spot raises power.",
+  "hint": "Power is the chance of detecting an effect that is really there. Ask which change would make a real improvement easier to spot.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Power $= 1 - P(\\text{Type II error})$. Anything that makes a real effect easier to spot raises power."
+      "text": "Power is the chance of detecting an effect that is really there. Ask which change would make a real improvement easier to spot."
     },
     {
       "level": "guide",
-      "text": "More data shrinks the standard error. A smaller $\\alpha$ makes rejecting harder. A smaller true effect is harder to see. A two-sided test splits $\\alpha$ across two tails."
+      "text": "Go through the choices: more data shrinks the standard error, a smaller $\\alpha$ makes rejecting harder, a smaller true effect is harder to see, and a two-sided test splits $\\alpha$ across two tails."
     },
     {
       "level": "reveal",
-      "text": "Only A raises power."
+      "text": "Only increasing the sample size raises power, so the answer is choice A."
     }
   ],
   "explanation": [

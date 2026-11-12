@@ -18,18 +18,18 @@
     },
     {
       "level": "guide",
-      "text": "$c^2 = 30^2 + 80^2 - 2 \\times 30 \\times 80 \\times \\cos 60^\\circ = 900 + 6400 - 2400$."
+      "text": "Use the Law of Cosines with the two paths: $c^2 = 30^2 + 80^2 - 2 \\times 30 \\times 80 \\times \\cos 60^\\circ = 900 + 6400 - 2400$. Finish the arithmetic and take the square root."
     },
     {
       "level": "reveal",
-      "text": "$c^2 = 4900$, so $c = 70$ meters."
+      "text": "The total is $c^2 = 4900$, so the straight distance from $P$ to $Q$ is $c = 70$ meters."
     }
   ],
   "explanation": [
-    "The corner, $P$, and $Q$ form a triangle with the pond inside it.",
-    "$30^2 + 80^2 = 900 + 6400 = 7300$.",
-    "Correction term: $2 \\times 30 \\times 80 \\times \\frac{1}{2} = 2400$.",
-    "$c^2 = 7300 - 2400 = 4900$, so $c = 70$ m."
+    "The corner, point $P$, and point $Q$ form a triangle with the pond inside it, and the two paths are two of its sides.",
+    "The squares of the paths add to $30^2 + 80^2 = 900 + 6400 = 7300$.",
+    "The correction term uses $\\cos 60^\\circ = \\frac{1}{2}$: it is $2 \\times 30 \\times 80 \\times \\frac{1}{2} = 2400$.",
+    "So $c^2 = 7300 - 2400 = 4900$, and the distance across is $c = 70$ m."
   ],
   "alternativeExplanations": [
     {

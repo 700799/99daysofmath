@@ -12,23 +12,26 @@
     "120 sq ft"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$A = l \\times w$.",
+  "hint": "The floor of the room is a rectangle. Area tells how many square feet of floor there are.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$A = l \\times w$."
+      "text": "The floor of the room is a rectangle. Area tells how many square feet of floor there are."
     },
     {
       "level": "guide",
-      "text": "$12 \\times 10$."
+      "text": "Multiply the two side lengths of the room. Here you need the product $12 \\times 10$."
     },
     {
       "level": "reveal",
-      "text": "$120$."
+      "text": "$12 \\times 10 = 120$, so the area of the room is $120$ square feet."
     }
   ],
   "explanation": [
-    "$A = 12 \\times 10 = 120$ sq ft."
+    "The room's floor is a rectangle, and the area of a rectangle is length times width.",
+    "Use the two measurements given for the room: $A = 12 \\times 10$.",
+    "Multiplying by $10$ puts a zero on the end of $12$, which gives $120$.",
+    "The area of the room is $120$ square feet."
   ],
   "tags": [
     "area",

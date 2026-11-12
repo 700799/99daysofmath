@@ -12,24 +12,26 @@
     "46 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Rectangle area plus triangle area.",
+  "hint": "The figure is a rectangle plus a triangle. Be careful: the triangle has its own base, different from the rectangle's side.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Rectangle area plus triangle area."
+      "text": "The figure is a rectangle plus a triangle. Be careful: the triangle has its own base, different from the rectangle's side."
     },
     {
       "level": "guide",
-      "text": "$8 \\cdot 5 = 40$ and $\\tfrac{1}{2} \\cdot 4 \\cdot 3 = 6$."
+      "text": "The rectangle has area $8 \\times 5 = 40$. The triangle has area $\\frac{1}{2} \\times 4 \\times 3$. Find it and add it to $40$."
     },
     {
       "level": "reveal",
-      "text": "$40 + 6 = 46$."
+      "text": "The triangle has area $6$, and $40 + 6 = 46$, so the total area is $46$ square units."
     }
   ],
   "explanation": [
-    "Rectangle: $40$. Triangle: $\\tfrac{1}{2}(4)(3) = 6$.",
-    "Total: $46$."
+    "Find the area of the rectangle by multiplying its sides: $8 \\times 5 = 40$.",
+    "Find the area of the triangle, which is half of base times height: $\\frac{1}{2} \\times 4 \\times 3 = 6$.",
+    "The triangle is attached to the rectangle, so add the areas: $40 + 6 = 46$.",
+    "The total area of the figure is $46$ square units."
   ],
   "tags": [
     "composite",

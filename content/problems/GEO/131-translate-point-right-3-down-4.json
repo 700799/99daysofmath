@@ -14,25 +14,25 @@
     "5,1"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Right changes only $x$; down changes only $y$.",
+  "hint": "A translation slides the piece. Decide which coordinate a move to the right changes and which one a move down changes.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Right changes only $x$; down changes only $y$."
+      "text": "A translation slides the piece. Decide which coordinate a move to the right changes and which one a move down changes."
     },
     {
       "level": "guide",
-      "text": "Right $3$: $2 + 3 = 5$. Down $4$: $5 - 4 = 1$."
+      "text": "Moving right $3$ adds to $x$, so $2 + 3 = 5$. Moving down $4$ subtracts from $y$, so work out $5 - 4$."
     },
     {
       "level": "reveal",
-      "text": "The piece lands at $(5, 1)$."
+      "text": "$5 - 4 = 1$, so the piece lands at the point $(5, 1)$."
     }
   ],
   "explanation": [
-    "A translation slides a point without turning or resizing it.",
-    "Moving right adds to $x$: $2 + 3 = 5$. Moving down subtracts from $y$: $5 - 4 = 1$.",
-    "The image is $(5, 1)$."
+    "A translation slides a point without turning or resizing it, so each coordinate just shifts by a fixed amount.",
+    "Moving right adds to the first coordinate, $2 + 3 = 5$, and moving down subtracts from the second, $5 - 4 = 1$.",
+    "The image of the game piece is therefore the point $(5, 1)$."
   ],
   "alternativeExplanations": [
     {

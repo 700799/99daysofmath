@@ -10,23 +10,26 @@
   "primaryAnswer": "64",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$V = s^3$.",
+  "hint": "In a cube the length, the width and the height are all the same number. What does that mean for the volume formula?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$V = s^3$."
+      "text": "In a cube the length, the width and the height are all the same number. What does that mean for the volume formula?"
     },
     {
       "level": "guide",
-      "text": "$4 \\times 4 \\times 4$."
+      "text": "Multiply the side by itself three times. For this cube that means $4 \\times 4 \\times 4$, and you can start with $4 \\times 4 = 16$."
     },
     {
       "level": "reveal",
-      "text": "$4 \\cdot 16 = 64$."
+      "text": "$16 \\times 4 = 64$, so the volume of the cube is $64$ cubic units."
     }
   ],
   "explanation": [
-    "$V = s^3 = 4^3 = 64$."
+    "A cube is a box with equal edges, so its volume is side times side times side, written $s^3$.",
+    "With a side of $4$, the volume is $4^3 = 4 \\times 4 \\times 4$.",
+    "Multiply in two steps: $4 \\times 4 = 16$, and then $16 \\times 4 = 64$.",
+    "The volume of the cube is $64$ cubic units."
   ],
   "tags": [
     "volume",

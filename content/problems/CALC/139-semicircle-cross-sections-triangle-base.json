@@ -12,11 +12,11 @@
     "9/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "At position $x$ the base region has height $2x$. That is the DIAMETER of the semicircle, so the radius is $x$.",
+  "hint": "At position $x$ the base region has height $2x$. That is the diameter of the semicircle, so the radius is $x$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "At position $x$ the base region has height $2x$. That is the DIAMETER of the semicircle, so the radius is $x$."
+      "text": "At position $x$ the base region has height $2x$. That is the diameter of the semicircle, so the radius is $x$."
     },
     {
       "level": "nudge",
@@ -25,17 +25,17 @@
     },
     {
       "level": "guide",
-      "text": "$V = \\int_0^3 \\frac{\\pi x^2}{2} \\, dx = \\frac{\\pi}{2}\\left[\\frac{x^3}{3}\\right]_0^3$."
+      "text": "Add up the slice areas from $0$ to $3$: $V = \\int_0^3 \\frac{\\pi x^2}{2} \\, dx = \\frac{\\pi}{2}\\left[\\frac{x^3}{3}\\right]_0^3$. Evaluate the bracket at the upper limit."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{\\pi}{2} \\cdot 9 = \\frac{9\\pi}{2}$, so $k = 4.5$."
+      "text": "The volume of the solid is $\\frac{\\pi}{2} \\cdot 9 = \\frac{9\\pi}{2}$, so $k = 4.5$."
     }
   ],
   "explanation": [
-    "Diameter of the slice at $x$: $2x - 0 = 2x$. Radius: $x$. Area: $A(x) = \\frac{1}{2}\\pi x^2$.",
-    "$V = \\int_0^3 A(x) \\, dx = \\frac{\\pi}{2}\\int_0^3 x^2 \\, dx = \\frac{\\pi}{2} \\cdot \\frac{27}{3} = \\frac{9\\pi}{2}$.",
-    "$k = \\frac{9}{2} = 4.5$. The trap is using $2x$ as the radius, which quadruples the answer to $18\\pi$."
+    "The diameter of the slice at $x$ is $2x - 0 = 2x$, so the radius is $x$ and the area is $A(x) = \\frac{1}{2}\\pi x^2$.",
+    "Integrate the slice area over the base: $V = \\int_0^3 A(x) \\, dx = \\frac{\\pi}{2}\\int_0^3 x^2 \\, dx = \\frac{\\pi}{2} \\cdot \\frac{27}{3} = \\frac{9\\pi}{2}$.",
+    "So $k = \\frac{9}{2} = 4.5$. The trap is using $2x$ as the radius, which quadruples the answer to $18\\pi$."
   ],
   "alternativeExplanations": [
     {

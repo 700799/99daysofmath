@@ -15,19 +15,19 @@
     "side-angle-side"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Write the parts in the order you meet them going around the triangle: side, then angle, then side.",
+  "hint": "Congruence criteria are named by listing the matching parts in the order you meet them around the triangle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Write the parts in the order you meet them going around the triangle: side, then angle, then side."
+      "text": "Congruence criteria are named by listing the matching parts in the order you meet them around the triangle."
     },
     {
       "level": "guide",
-      "text": "The angle sits BETWEEN the two sides, so the letters read S, A, S."
+      "text": "Here you meet a side, then the angle between the two sides, then the other side. Write one letter for each part."
     },
     {
       "level": "reveal",
-      "text": "This is SAS — Side-Angle-Side."
+      "text": "Side, included angle, side is the SAS criterion, short for Side-Angle-Side."
     }
   ],
   "explanation": [

@@ -10,26 +10,26 @@
   "primaryAnswer": "34",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A linear pair always adds to $180^\\circ$.",
+  "hint": "The two angles of a linear pair lie along one straight rail. What total must their measures make?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A linear pair always adds to $180^\\circ$."
+      "text": "The two angles of a linear pair lie along one straight rail. What total must their measures make?"
     },
     {
       "level": "guide",
-      "text": "Write $(2x + 10) + 3x = 180$ and combine like terms."
+      "text": "Set the sum equal to a straight angle: $(2x + 10) + 3x = 180$. Combine like terms before solving."
     },
     {
       "level": "reveal",
-      "text": "$5x + 10 = 180$, so $5x = 170$ and $x = 34$."
+      "text": "$5x + 10 = 180$ gives $5x = 170$, so the answer is $x = 34$."
     }
   ],
   "explanation": [
-    "The two angles form a linear pair, so their measures sum to $180^\\circ$.",
-    "$(2x + 10) + 3x = 180$ becomes $5x + 10 = 180$.",
-    "Subtract 10 and divide by 5: $5x = 170$, so $x = 34$.",
-    "Check: the angles are $78^\\circ$ and $102^\\circ$, and $78 + 102 = 180$. ✓"
+    "The two angles form a linear pair, so together they make a straight angle and their measures add to $180^\\circ$.",
+    "Writing that as an equation gives $(2x + 10) + 3x = 180$, and combining like terms gives $5x + 10 = 180$.",
+    "Subtract $10$ from both sides and divide by $5$: $5x = 170$, so $x = 34$.",
+    "As a check, the angles are $78^\\circ$ and $102^\\circ$, and those do add to $180^\\circ$."
   ],
   "alternativeExplanations": [
     {

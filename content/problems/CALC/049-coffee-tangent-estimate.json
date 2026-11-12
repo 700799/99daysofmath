@@ -10,11 +10,11 @@
   "primaryAnswer": "64",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$T'(5) = -3$ means: at the $5$-minute mark, the coffee is cooling at about $3$ degrees per minute.",
+  "hint": "$T'(5) = -3$ means that at the $5$-minute mark, the coffee is cooling at about $3$ degrees per minute.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$T'(5) = -3$ means: at the $5$-minute mark, the coffee is cooling at about $3$ degrees per minute."
+      "text": "$T'(5) = -3$ means that at the $5$-minute mark, the coffee is cooling at about $3$ degrees per minute."
     },
     {
       "level": "nudge",
@@ -23,16 +23,16 @@
     },
     {
       "level": "guide",
-      "text": "Tangent line: $T(t) \\approx T(5) + T'(5)(t - 5) = 70 - 3(t - 5)$. Put in $t = 7$."
+      "text": "The tangent line at the $5$-minute mark is $T(t) \\approx T(5) + T'(5)(t - 5) = 70 - 3(t - 5)$. Put in $t = 7$ and simplify."
     },
     {
       "level": "reveal",
-      "text": "$70 - 3(2) = 64$ degrees."
+      "text": "The tangent line gives $70 - 3(2) = 64$, so the coffee is about $64$ degrees Celsius."
     }
   ],
   "explanation": [
-    "The tangent line at $t = 5$ is $L(t) = T(5) + T'(5)(t - 5) = 70 - 3(t - 5)$.",
-    "At $t = 7$: $L(7) = 70 - 3 \\cdot 2 = 64$.",
+    "The tangent line at $t = 5$ uses the known value and slope: $L(t) = T(5) + T'(5)(t - 5) = 70 - 3(t - 5)$.",
+    "Evaluate the line at $t = 7$, two minutes later: $L(7) = 70 - 3 \\cdot 2 = 64$.",
     "So the coffee is about $64$ degrees at $7$ minutes. It is an estimate: the real cooling rate slows as the coffee nears room temperature, so the true value is a little above $64$."
   ],
   "alternativeExplanations": [

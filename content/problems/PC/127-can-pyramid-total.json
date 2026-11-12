@@ -18,18 +18,18 @@
     },
     {
       "level": "guide",
-      "text": "There are $n = 20$ rows, the first is $20$ and the last is $1$. Sum $= 20 \\times \\frac{20 + 1}{2}$."
+      "text": "There are $n = 20$ rows, the first has $20$ cans and the last has $1$. Use the sum formula $20 \\times \\frac{20 + 1}{2}$."
     },
     {
       "level": "reveal",
-      "text": "$20 \\times \\frac{21}{2} = 10 \\times 21 = 210$ cans."
+      "text": "The sum is $20 \\times \\frac{21}{2} = 10 \\times 21 = 210$, so the stack has $210$ cans."
     }
   ],
   "explanation": [
-    "The rows form the arithmetic list $20, 19, \\dots, 2, 1$.",
-    "A series is the SUM of a sequence, and the shortcut is $n \\times \\frac{\\text{first} + \\text{last}}{2}$.",
-    "$20 \\times \\frac{20 + 1}{2} = 20 \\times 10.5$.",
-    "$= 210$ cans."
+    "The rows form the arithmetic list $20, 19, \\dots, 2, 1$, dropping by one can each time.",
+    "A series is the SUM of a sequence, and for an arithmetic one the shortcut is $n \\times \\frac{\\text{first} + \\text{last}}{2}$.",
+    "With $20$ rows, first row $20$ and last row $1$, this is $20 \\times \\frac{20 + 1}{2} = 20 \\times 10.5$.",
+    "So the whole stack holds $210$ cans."
   ],
   "alternativeExplanations": [
     {

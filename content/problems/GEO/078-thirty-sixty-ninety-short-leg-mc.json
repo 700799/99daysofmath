@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The side opposite the smallest angle is the shortest side.",
+  "hint": "In any triangle the smallest angle faces the shortest side. Recall the side pattern of this special right triangle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The side opposite the smallest angle is the shortest side."
+      "text": "In any triangle the smallest angle faces the shortest side. Recall the side pattern of this special right triangle."
     },
     {
       "level": "guide",
-      "text": "In a $30$-$60$-$90$ triangle, the hypotenuse is exactly twice the side opposite $30^\\circ$."
+      "text": "The sides are in the ratio $1 : \\sqrt{3} : 2$, so the side opposite $30^\\circ$ is half the hypotenuse. Take half of $20$."
     },
     {
       "level": "reveal",
-      "text": "Half of $20$ is $10$ ft."
+      "text": "$20 \\div 2 = 10$, so that side is $10$ feet long, which is choice A."
     }
   ],
   "explanation": [

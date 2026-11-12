@@ -10,11 +10,11 @@
   "primaryAnswer": "274.9",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The watered patch is a sector: a slice of a circle with radius $15$ ft.",
+  "hint": "The watered region is shaped like a slice of a circle. Decide what the radius is and what fraction of the full circle is covered.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The watered patch is a sector: a slice of a circle with radius $15$ ft."
+      "text": "The watered region is shaped like a slice of a circle. Decide what the radius is and what fraction of the full circle is covered."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Sector area $= \\frac{140}{360} \\times \\pi (15)^2$. Note that $15$ is the radius, since the spray reaches $15$ ft out from the sprinkler."
+      "text": "The spray distance $15$ ft is the radius, so the sector area is $\\frac{140}{360} \\times \\pi (15)^2$. Evaluate that product."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{140}{360} \\times 225\\pi \\approx 0.3889 \\times 706.86 \\approx 274.9$ sq ft."
+      "text": "$\\frac{140}{360} \\times 225\\pi \\approx 0.3889 \\times 706.86 \\approx 274.9$, so the sprinkler waters about $274.9$ square feet."
     }
   ],
   "explanation": [
-    "The spray distance $15$ ft is the radius, so the full circle would cover $\\pi(15)^2 = 225\\pi \\approx 706.86$ sq ft.",
-    "The sprinkler only sweeps $140^\\circ$ of that, a fraction of $\\frac{140}{360} \\approx 0.3889$.",
-    "Area $\\approx 0.3889 \\times 706.86 \\approx 274.9$ square feet."
+    "The water reaches $15$ feet from the sprinkler, so $15$ is the radius and a full circle would cover $\\pi(15)^2 = 225\\pi \\approx 706.86$ square feet.",
+    "The sprinkler only turns through $140^\\circ$, which is the fraction $\\frac{140}{360} \\approx 0.3889$ of a full circle.",
+    "Multiplying gives $0.3889 \\times 706.86 \\approx 274.9$, so the watered area is about $274.9$ square feet."
   ],
   "alternativeExplanations": [
     {

@@ -17,25 +17,25 @@
     "40 ≥ s"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"At most 40\" means 40 is the ceiling: 40 is OK, 41 is not.",
+  "hint": "Think about what \"at most\" allows. Is exactly $40$ students fine? Is $41$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"At most 40\" means 40 is the ceiling: 40 is OK, 41 is not."
+      "text": "Think about what \"at most\" allows. Is exactly $40$ students fine? Is $41$?"
     },
     {
       "level": "guide",
-      "text": "So $s$ can be less than 40 OR equal to 40. Which symbol says that?"
+      "text": "The count $s$ can be $40$ or any smaller number, so you need the symbol meaning \"less than or equal to\"."
     },
     {
       "level": "reveal",
-      "text": "$s \\le 40$ — written as \"s <= 40\"."
+      "text": "The inequality is $s \\le 40$, which you type as \"s <= 40\"."
     }
   ],
   "explanation": [
-    "\"At most 40\" means the count can be 40 or anything smaller.",
-    "That is $s \\le 40$.",
-    "The \"or equal\" bar matters: exactly 40 students is still allowed."
+    "\"At most $40$\" means the number of students can be $40$ or anything smaller, but never more.",
+    "The symbol for \"less than or equal to\" says exactly that, so the inequality is $s \\le 40$.",
+    "The \"or equal to\" part matters because a bus with exactly $40$ students is still allowed, so the answer is \"s <= 40\"."
   ],
   "alternativeExplanations": [
     {

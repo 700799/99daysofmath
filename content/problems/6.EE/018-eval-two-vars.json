@@ -10,23 +10,26 @@
   "primaryAnswer": "11",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Replace $a$ with $3$ and $b$ with $5$.",
+  "hint": "Each letter has its own number. Be careful to put the right number with the right letter.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Replace $a$ with $3$ and $b$ with $5$."
+      "text": "Each letter has its own number. Be careful to put the right number with the right letter."
     },
     {
       "level": "guide",
-      "text": "$2(3) + 5 = 6 + 5$."
+      "text": "With $a = 3$ and $b = 5$ you get $2(3) + 5$. Do the multiplication before the addition."
     },
     {
       "level": "reveal",
-      "text": "$11$."
+      "text": "$2 \\times 3 = 6$ and $6 + 5 = 11$, so the value is $11$."
     }
   ],
   "explanation": [
-    "Substitute: $2(3) + 5 = 6 + 5 = 11$."
+    "Substitute the given values, $3$ for $a$ and $5$ for $b$: $2(3) + 5$.",
+    "Multiply first, because $2a$ means $2$ times $a$, which gives $2 \\times 3 = 6$.",
+    "Add the value of $b$ to finish: $6 + 5 = 11$.",
+    "The value of the expression is $11$ when $a = 3$ and $b = 5$."
   ],
   "tags": [
     "evaluate"

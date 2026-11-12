@@ -10,24 +10,25 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Same $x$, vertical line.",
+  "hint": "Compare the two points. One coordinate is the same in both, so the side runs straight along a grid line.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same $x$, vertical line."
+      "text": "Compare the two points. One coordinate is the same in both, so the side runs straight along a grid line."
     },
     {
       "level": "guide",
-      "text": "$|7 - 1| = ?$"
+      "text": "Both points have $x = 2$, so the side is vertical. Its length is the difference of the $y$-values $7$ and $1$."
     },
     {
       "level": "reveal",
-      "text": "$6$."
+      "text": "$7 - 1 = 6$, so the side is $6$ units long."
     }
   ],
   "explanation": [
-    "Same $x$ → vertical side.",
-    "Length $= |7 - 1| = 6$."
+    "Both points have the same $x$-coordinate, $2$, so the side goes straight up and down.",
+    "For a vertical side, the length is how far apart the $y$-coordinates are: $|7 - 1|$.",
+    "Subtracting gives $7 - 1 = 6$, so the side is $6$ units long."
   ],
   "tags": [
     "coord",

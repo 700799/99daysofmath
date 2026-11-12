@@ -13,30 +13,31 @@
     "$6.00"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$10\\%$ of $40$ is $4$. What's $5\\%$?",
+  "hint": "Fifteen percent can be built from two easier percents, $10\\%$ and $5\\%$. Notice that $5\\%$ is half of $10\\%$.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try the same problem with friendlier numbers first — say \"20% of 50\" — then come back to this one."
+      "text": "Try friendlier pieces first: find $10\\%$ of the meal, then $5\\%$ as half of that. A $15\\%$ tip is the two together."
     },
     {
       "level": "nudge",
-      "text": "$10\\%$ of $40$ is $4$. What's $5\\%$?"
+      "text": "Fifteen percent can be built from two easier percents, $10\\%$ and $5\\%$. Notice that $5\\%$ is half of $10\\%$."
     },
     {
       "level": "guide",
-      "text": "$5\\%$ is half of $10\\%$, so $5\\% = 2$. Add: $10\\% + 5\\% = 4 + 2 = 6$."
+      "text": "$10\\%$ of $40$ is $4$ dollars, and $5\\%$ is half of that, $2$ dollars. Add the two pieces to get $15\\%$."
     },
     {
       "level": "reveal",
-      "text": "$15\\%$ of $40 = 6$ dollars."
+      "text": "$4 + 2 = 6$, so the tip is $6$ dollars."
     }
   ],
   "explanation": [
-    "$10\\%$ of $40 = 4$.",
-    "$5\\%$ of $40 = 2$.",
-    "Total $15\\%$: $4 + 2 = 6$ dollars."
+    "Split $15\\%$ into $10\\% + 5\\%$, because each piece is easy to find mentally.",
+    "$10\\%$ of $40$ is $40 \\div 10 = 4$, and $5\\%$ is half of that, which is $2$.",
+    "Add the pieces: $4 + 2 = 6$. The decimal method agrees, since $0.15 \\times 40 = 6$.",
+    "The tip on the meal is $6$ dollars."
   ],
   "tags": [
     "MAP-practice",

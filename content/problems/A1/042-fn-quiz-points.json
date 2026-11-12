@@ -10,25 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$f(3)$ means \"feed the machine a $3$\" — replace $q$ with $3$.",
+  "hint": "The notation $f(3)$ is not multiplication. It tells you which input to feed into the rule.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$f(3)$ means \"feed the machine a $3$\" — replace $q$ with $3$."
+      "text": "The notation $f(3)$ is not multiplication. It tells you which input to feed into the rule."
     },
     {
       "level": "guide",
-      "text": "$f(3) = 4 \\times 3$."
+      "text": "Replace $q$ with $3$ in the rule $f(q) = 4q$, which gives the product $4 \\times 3$ to work out."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 3 = 12$ points."
+      "text": "Multiplying gives $4 \\times 3 = 12$, so $f(3)$ is a score of $12$ points."
     }
   ],
   "explanation": [
-    "$f(q) = 4q$ is a machine named $f$: input questions, output points.",
-    "$f(3)$ means put $3$ into the machine: $4 \\times 3 = 12$.",
-    "Three correct questions earn $12$ points."
+    "The rule $f(q) = 4q$ takes a number of questions as its input and gives points as its output.",
+    "$f(3)$ means the input is $3$, so replace $q$ with $3$ and multiply: $4 \\times 3 = 12$.",
+    "So $f(3) = 12$, meaning three correct questions earn $12$ points."
   ],
   "alternativeExplanations": [
     {

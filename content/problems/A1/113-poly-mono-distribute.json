@@ -14,26 +14,26 @@
     "x²+5x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The outside $x$ hands a snack to EVERYONE inside the parentheses.",
+  "hint": "The $x$ outside the parentheses multiplies every term inside them. This is the distributive property.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The outside $x$ hands a snack to EVERYONE inside the parentheses."
+      "text": "The $x$ outside the parentheses multiplies every term inside them. This is the distributive property."
     },
     {
       "level": "guide",
-      "text": "$x \\times x = x^2$ and $x \\times 5 = 5x$."
+      "text": "Multiply $x$ by each term in turn: first $x \\times x$, then $x \\times 5$. Add the two products."
     },
     {
       "level": "reveal",
-      "text": "$x(x + 5) = x^2 + 5x$."
+      "text": "$x \\times x = x^2$ and $x \\times 5 = 5x$, so the product is $x^2 + 5x$."
     }
   ],
   "explanation": [
-    "Distribute the outside $x$ to both terms inside.",
-    "$x \\times x = x^2$.",
-    "$x \\times 5 = 5x$.",
-    "Answer: $x^2 + 5x$."
+    "Use the distributive property to multiply the outside $x$ by both terms inside the parentheses.",
+    "The first product is $x \\times x = x^2$, because two copies of $x$ are multiplied.",
+    "The second product is $x \\times 5$, which is written $5x$.",
+    "Adding the two products gives the answer $x^2 + 5x$."
   ],
   "alternativeExplanations": [
     {

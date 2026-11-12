@@ -12,25 +12,25 @@
     "2/6"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The word \"of\" here means multiply: $\\frac{1}{2}$ of $\\frac{2}{3}$.",
+  "hint": "Sam eats part of a part. The word \"of\" between two fractions tells you which operation to use.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The word \"of\" here means multiply: $\\frac{1}{2}$ of $\\frac{2}{3}$."
+      "text": "Sam eats part of a part. The word \"of\" between two fractions tells you which operation to use."
     },
     {
       "level": "guide",
-      "text": "Multiply straight across: $\\frac{1}{2} \\times \\frac{2}{3} = \\frac{1 \\times 2}{2 \\times 3}$."
+      "text": "Half of two thirds is $\\frac{1}{2} \\times \\frac{2}{3}$. Multiply the numerators, multiply the denominators, and then simplify the result."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{2}{6} = \\frac{1}{3}$ of the whole pan."
+      "text": "$\\frac{1}{2} \\times \\frac{2}{3} = \\frac{2}{6} = \\frac{1}{3}$, so Sam ate $\\frac{1}{3}$ of the whole pan."
     }
   ],
   "explanation": [
-    "Sam eats half of the leftovers, so the question is $\\frac{1}{2} \\times \\frac{2}{3}$.",
+    "Sam eats half of the leftover brownies, so the amount is $\\frac{1}{2} \\times \\frac{2}{3}$ of the pan.",
     "Multiply the numerators and the denominators: $\\frac{1 \\times 2}{2 \\times 3} = \\frac{2}{6}$.",
-    "$\\frac{2}{6}$ simplifies to $\\frac{1}{3}$.",
+    "Divide the top and bottom of $\\frac{2}{6}$ by $2$ to simplify it to $\\frac{1}{3}$.",
     "Sam ate $\\frac{1}{3}$ of the whole pan."
   ],
   "alternativeExplanations": [

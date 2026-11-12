@@ -10,29 +10,31 @@
   "primaryAnswer": "13",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Adding the same number to every value shifts the mean by that number.",
+  "hint": "When every value goes up by the same amount, the whole data set slides along the number line together.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sort the data from least to greatest first — many statistics get easy after that."
+      "text": "Try a tiny set first: the mean of $1$ and $3$ is $2$. Add $4$ to each value and find the new mean. What happened to it?"
     },
     {
       "level": "nudge",
-      "text": "Adding the same number to every value shifts the mean by that number."
+      "text": "When every value goes up by the same amount, the whole data set slides along the number line together."
     },
     {
       "level": "guide",
-      "text": "New mean $= 9 + 4$."
+      "text": "Each of the four values rises by $4$, so the fair share rises by $4$ too. Add $4$ to the old mean of $9$."
     },
     {
       "level": "reveal",
-      "text": "$13$."
+      "text": "$9 + 4 = 13$, so the new mean is $13$."
     }
   ],
   "explanation": [
-    "Adding a constant to every value shifts the mean by the same constant.",
-    "New mean: $9 + 4 = 13$."
+    "Adding $4$ to each of the $4$ values raises the total by $4 \\times 4 = 16$, from $36$ to $52$.",
+    "The count is still $4$, so the new mean is $52 \\div 4 = 13$.",
+    "This matches the shortcut that adding the same number to every value shifts the mean by that number: $9 + 4 = 13$.",
+    "The new mean of the data set is $13$."
   ],
   "alternativeExplanations": [
     {

@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "Residual $= $ actual $y$ $-$ predicted $\\hat{y}$. Actual minus predicted, in that order.",
+  "hint": "A residual is the gap between what the student actually scored and what the line predicted, taken as actual minus predicted.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Residual $= $ actual $y$ $-$ predicted $\\hat{y}$. Actual minus predicted, in that order."
+      "text": "A residual is the gap between what the student actually scored and what the line predicted, taken as actual minus predicted."
     },
     {
       "level": "guide",
-      "text": "Predicted: $12.5 + 3.2(5) = 28.5$. Subtract from the actual $30$."
+      "text": "The prediction for $5$ hours is $12.5 + 3.2(5) = 28.5$. Subtract that from the actual score of $30$."
     },
     {
       "level": "reveal",
-      "text": "$30 - 28.5 = 1.5$."
+      "text": "$30 - 28.5 = 1.5$, so the residual is $1.5$ points."
     }
   ],
   "explanation": [
-    "Predicted score for 5 hours: $\\hat{y} = 12.5 + 16 = 28.5$.",
-    "Residual $= y - \\hat{y} = 30 - 28.5 = 1.5$.",
-    "A positive residual means the student scored $1.5$ points HIGHER than the line predicted."
+    "First find the predicted score for 5 hours: $\\hat{y} = 12.5 + 16 = 28.5$.",
+    "The residual is actual minus predicted: $y - \\hat{y} = 30 - 28.5 = 1.5$.",
+    "The residual is $1.5$. It is positive, so the student scored $1.5$ points HIGHER than the line predicted."
   ],
   "alternativeExplanations": [
     {
