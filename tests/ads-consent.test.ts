@@ -32,7 +32,7 @@ describe('where ads may appear', () => {
       '/', '/trail/5.F', '/trail/6.RP', '/trail/A1', '/trail/GEO', '/unit/6.NS/3', '/unit/A1/14',
       '/course/grade5', '/course/grade6', '/course/algebra1', '/course/geometry', '/finals/algebra1',
       '/review', '/review/6.G', '/stories', '/mathematicians', '/arcade', '/arcade/snake', '/videos',
-      '/mix', '/practice', '/report', '/settings', '/shop', '/rewards', '/privacy', '/map5', '/nope',
+      '/mix', '/practice', '/report', '/settings', '/shop', '/rewards', '/privacy', '/terms', '/map5', '/nope',
     ]) expect(adsAllowedOn(p), p).toBe(false);
   });
 });

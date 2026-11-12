@@ -204,9 +204,13 @@ export function AppShell({ children }: Props) {
         <Link to="/privacy" className="font-display font-bold hover:text-ink">
           Privacy &amp; cookies
         </Link>
+        <Link to="/terms" className="font-display font-bold hover:text-ink">
+          Terms of use
+        </Link>
         <button type="button" onClick={resetConsent} className="font-display font-bold hover:text-ink">
           Cookie settings
         </button>
+        <span className="basis-full sm:basis-auto sm:ml-auto">© {new Date().getFullYear()} Math10x. All rights reserved.</span>
       </footer>
       <CookieNotice />
       <XpFlash />
