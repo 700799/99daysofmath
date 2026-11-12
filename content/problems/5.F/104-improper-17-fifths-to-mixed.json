@@ -7,9 +7,9 @@
   "difficulty": 1,
   "prompt": "Write $\\frac{17}{5}$ as a mixed number.",
   "answerType": "fraction",
-  "primaryAnswer": "17/5",
+  "primaryAnswer": "3 2/5",
   "alternativeAnswers": [
-    "3 2/5",
+    "17/5",
     "3.4"
   ],
   "acceptanceMode": "normalized",
