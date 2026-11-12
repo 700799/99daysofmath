@@ -10,25 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "What is the biggest number that divides BOTH $4$ and $8$?",
+  "hint": "A common factor divides every term evenly. Look at the numbers in the two terms and ask what divides both.",
   "hints": [
     {
       "level": "nudge",
-      "text": "What is the biggest number that divides BOTH $4$ and $8$?"
+      "text": "A common factor divides every term evenly. Look at the numbers in the two terms and ask what divides both."
     },
     {
       "level": "guide",
-      "text": "$4 = 4 \\times 1$ and $8 = 4 \\times 2$ — both terms hold a $4$."
+      "text": "Write each number as a product: $4 = 4 \\times 1$ and $8 = 4 \\times 2$. Pick the largest number that appears in both."
     },
     {
       "level": "reveal",
-      "text": "The GCF is $4$."
+      "text": "Both terms contain a factor of $4$ and nothing larger, so the greatest common factor is $4$."
     }
   ],
   "explanation": [
-    "List what each term shares.",
-    "$4x = 4 \\times x$ and $8 = 4 \\times 2$.",
-    "The biggest shared factor is $4$."
+    "To find the greatest common factor, look for the largest number that divides every term.",
+    "Write each term as a product: $4x = 4 \\times x$ and $8 = 4 \\times 2$.",
+    "The largest factor that both terms share is $4$, so the greatest common factor is $4$."
   ],
   "alternativeExplanations": [
     {

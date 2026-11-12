@@ -13,25 +13,25 @@
     "2/8"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Slope = rise over run: put $2$ over $8$.",
+  "hint": "Slope is a comparison of rise to run. Decide which measurement of the ramp is which.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Slope = rise over run: put $2$ over $8$."
+      "text": "Slope is a comparison of rise to run. Decide which measurement of the ramp is which."
     },
     {
       "level": "guide",
-      "text": "$\\frac{2}{8}$ can be simplified — divide top and bottom by $2$."
+      "text": "Put the rise of $2$ over the run of $8$ to get $\\frac{2}{8}$, then simplify by dividing top and bottom by $2$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{2}{8} = \\frac{1}{4}$."
+      "text": "$\\frac{2}{8}$ simplifies to $\\frac{1}{4}$, so the slope of the ramp is $\\frac{1}{4}$."
     }
   ],
   "explanation": [
-    "Slope = rise over run = $\\frac{2}{8}$.",
-    "Simplify: $\\frac{2}{8} = \\frac{1}{4}$.",
-    "The ramp climbs $1$ ft for every $4$ ft across — a gentle slope."
+    "Slope is rise over run, and the ramp rises $2$ ft over a run of $8$ ft, so the slope is $\\frac{2}{8}$.",
+    "Both numbers share a factor of $2$, so divide the top and bottom by $2$ to simplify: $\\frac{2}{8} = \\frac{1}{4}$.",
+    "The slope is $\\frac{1}{4}$, meaning the ramp climbs $1$ ft for every $4$ ft across."
   ],
   "alternativeExplanations": [
     {

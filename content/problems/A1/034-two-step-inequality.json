@@ -14,25 +14,25 @@
     "4>x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Two steps, same as an equation: subtract $1$ from both sides first.",
+  "hint": "This takes two steps, just like a two-step equation. Undo the addition before the multiplication.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two steps, same as an equation: subtract $1$ from both sides first."
+      "text": "This takes two steps, just like a two-step equation. Undo the addition before the multiplication."
     },
     {
       "level": "guide",
-      "text": "$2x < 8$. Divide both sides by $2$ — dividing by a POSITIVE keeps the sign as is."
+      "text": "Subtract $1$ from both sides to get $2x < 8$. Then divide both sides by $2$, which is positive, so the sign stays."
     },
     {
       "level": "reveal",
-      "text": "$x < 4$."
+      "text": "$8 \\div 2 = 4$, so the solution set is $x < 4$."
     }
   ],
   "explanation": [
-    "Subtract 1 from both sides: $2x < 8$.",
-    "Divide by 2 (positive, so no flip): $x < 4$.",
-    "Check: $x = 3$ gives $2(3) + 1 = 7 < 9$. ✓"
+    "Subtract $1$ from both sides to undo the addition, which leaves $2x < 8$.",
+    "Divide both sides by $2$. Dividing by a positive number does not flip the sign, so $x < 4$.",
+    "Check with a value below $4$: $x = 3$ gives $2(3) + 1 = 7$, and $7 < 9$ is true, so $x < 4$."
   ],
   "alternativeExplanations": [
     {

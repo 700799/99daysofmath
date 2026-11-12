@@ -10,11 +10,11 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Set $y = 0$: solve $0 = 4x - 8$.",
+  "hint": "Every point on the $x$-axis has a $y$-value of zero. Use that fact in the equation.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Set $y = 0$: solve $0 = 4x - 8$."
+      "text": "Every point on the $x$-axis has a $y$-value of zero. Use that fact in the equation."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Add $8$ to both sides: $8 = 4x$. Then divide."
+      "text": "Set $y = 0$ to get $0 = 4x - 8$. Add $8$ to both sides, then divide both sides by $4$."
     },
     {
       "level": "reveal",
-      "text": "$x = 8 \\div 4 = 2$."
+      "text": "$8 = 4x$ gives $x = 2$, so the line crosses the $x$-axis at $x = 2$."
     }
   ],
   "explanation": [
-    "On the $x$-axis, $y = 0$: set $0 = 4x - 8$.",
-    "Add $8$: $8 = 4x$.",
-    "Divide by $4$: $x = 2$. The line crosses at $(2, 0)$."
+    "Points on the $x$-axis have $y = 0$, so replace $y$ with $0$: $0 = 4x - 8$.",
+    "Add $8$ to both sides to move the plain number away from the $x$ term: $8 = 4x$.",
+    "Divide both sides by $4$ to get $x = 2$. The line crosses the $x$-axis at $(2, 0)$."
   ],
   "alternativeExplanations": [
     {

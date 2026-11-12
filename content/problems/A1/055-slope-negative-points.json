@@ -10,25 +10,25 @@
   "primaryAnswer": "-2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The line goes DOWN from left to right, so expect a negative slope.",
+  "hint": "Look at what happens to $y$ as $x$ grows. That tells you the sign of the slope before you calculate.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The line goes DOWN from left to right, so expect a negative slope."
+      "text": "Look at what happens to $y$ as $x$ grows. That tells you the sign of the slope before you calculate."
     },
     {
       "level": "guide",
-      "text": "Rise: $0 - 10 = -10$. Run: $5 - 0 = 5$."
+      "text": "The rise is $0 - 10 = -10$ and the run is $5 - 0 = 5$. Divide the rise by the run and keep the negative sign."
     },
     {
       "level": "reveal",
-      "text": "$-10 \\div 5 = -2$."
+      "text": "$-10 \\div 5 = -2$, so the slope of the line is $-2$."
     }
   ],
   "explanation": [
-    "Rise: $0 - 10 = -10$ (the $y$-values FALL).",
-    "Run: $5 - 0 = 5$.",
-    "Slope $= \\frac{-10}{5} = -2$ — downhill."
+    "The rise is the change in $y$: $0 - 10 = -10$. It is negative because the $y$-values fall.",
+    "The run is the change in $x$, subtracted in the same order: $5 - 0 = 5$.",
+    "Slope is rise over run, so the slope is $\\frac{-10}{5} = -2$, a line that goes downhill."
   ],
   "alternativeExplanations": [
     {

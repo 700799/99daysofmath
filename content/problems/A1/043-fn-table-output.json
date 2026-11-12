@@ -10,25 +10,25 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the row of the table where the input is $2$.",
+  "hint": "A table lists each input next to its own output. You only need to read the right pair.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the row of the table where the input is $2$."
+      "text": "A table lists each input next to its own output. You only need to read the right pair."
     },
     {
       "level": "guide",
-      "text": "The table pairs each input with exactly one output: $2 \\to ?$"
+      "text": "Look for the pair that starts with input $2$ and read the output written beside it."
     },
     {
       "level": "reveal",
-      "text": "Input $2$ pairs with output $10$."
+      "text": "Input $2$ is paired with output $10$, so the answer is $10$."
     }
   ],
   "explanation": [
-    "A table is a list of the machine's input-output pairs.",
-    "The pair with input $2$ is $2 \\to 10$.",
-    "The output is $10$."
+    "A function table is a list of input and output pairs for the rule.",
+    "Find the pair whose input is $2$. The table shows it as $2 \\to 10$.",
+    "So the output for input $2$ is $10$."
   ],
   "alternativeExplanations": [
     {

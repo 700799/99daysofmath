@@ -10,11 +10,11 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "This time you know the OUTPUT ($35$) and need the input. Run the machine backward.",
+  "hint": "Here the output is known and the input is missing, so you need to run the rule backward.",
   "hints": [
     {
       "level": "nudge",
-      "text": "This time you know the OUTPUT ($35$) and need the input. Run the machine backward."
+      "text": "Here the output is known and the input is missing, so you need to run the rule backward."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "The machine multiplies by $5$, so undo it: divide $35$ by $5$."
+      "text": "The rule multiplies by $5$, so the equation is $5x = 35$. Undo the multiplication by dividing $35$ by $5$."
     },
     {
       "level": "reveal",
-      "text": "$35 \\div 5 = 7$."
+      "text": "$35 \\div 5 = 7$, so the input fed in was $x = 7$."
     }
   ],
   "explanation": [
-    "Set up the equation: $5x = 35$.",
-    "Undo \"times $5$\" with \"divide by $5$\": $x = 35 \\div 5$.",
-    "The input was $x = 7$."
+    "The output is $35$ and the rule is $5x$, so write the equation $5x = 35$.",
+    "Division undoes multiplication, so divide both sides by $5$: $x = 35 \\div 5$.",
+    "That gives $x = 7$, so the input fed into the machine was $7$."
   ],
   "alternativeExplanations": [
     {

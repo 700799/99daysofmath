@@ -10,26 +10,26 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Hitting the ground means $h = 0$: solve $45 - 5t^2 = 0$.",
+  "hint": "The ground is at height zero. Use that value of $h$ to turn the formula into an equation for $t$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Hitting the ground means $h = 0$: solve $45 - 5t^2 = 0$."
+      "text": "The ground is at height zero. Use that value of $h$ to turn the formula into an equation for $t$."
     },
     {
       "level": "guide",
-      "text": "Move and divide: $5t^2 = 45$, so $t^2 = 9$."
+      "text": "Solve $45 - 5t^2 = 0$. Add $5t^2$ to both sides to get $45 = 5t^2$, divide by $5$ to get $t^2 = 9$, then take the square root."
     },
     {
       "level": "reveal",
-      "text": "$t^2 = 9$ gives $t = 3$ (time can't be negative). It lands after $3$ seconds."
+      "text": "$t^2 = 9$ gives $t = 3$, since time cannot be negative. The ball lands after $3$ seconds."
     }
   ],
   "explanation": [
-    "Set the height to zero: $45 - 5t^2 = 0$.",
-    "Add $5t^2$ to both sides: $45 = 5t^2$.",
-    "Divide by 5: $t^2 = 9$, so $t = 3$ or $t = -3$.",
-    "Time must be positive: the ball lands after $3$ seconds."
+    "The ball hits the ground when its height is zero, so set $45 - 5t^2 = 0$.",
+    "Add $5t^2$ to both sides to move the squared term across: $45 = 5t^2$.",
+    "Divide both sides by $5$ to get $t^2 = 9$, which means $t = 3$ or $t = -3$.",
+    "A time cannot be negative, so the ball hits the ground after $3$ seconds."
   ],
   "alternativeExplanations": [
     {

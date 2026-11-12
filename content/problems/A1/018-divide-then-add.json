@@ -10,11 +10,11 @@
   "primaryAnswer": "18",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The $-2$ happened last, so undo it first: add $2$ to both sides.",
+  "hint": "Two things happened to $x$: it was divided by $3$, then $2$ was taken away. Undo them in reverse order.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $-2$ happened last, so undo it first: add $2$ to both sides."
+      "text": "Two things happened to $x$: it was divided by $3$, then $2$ was taken away. Undo them in reverse order."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\frac{x}{3} = 6$. Now undo the \"divide by 3\" by multiplying both sides by $3$."
+      "text": "Add $2$ to both sides to get $\\frac{x}{3} = 6$. Then multiply both sides by $3$."
     },
     {
       "level": "reveal",
-      "text": "$x = 6 \\times 3 = 18$."
+      "text": "$6 \\times 3 = 18$, so the equation's solution is $x = 18$."
     }
   ],
   "explanation": [
-    "Add 2 to both sides: $\\frac{x}{3} = 6$.",
-    "Multiply both sides by 3: $x = 18$.",
-    "Check: $18 \\div 3 - 2 = 6 - 2 = 4$. ✓"
+    "The $-2$ was done last, so undo it first by adding $2$ to both sides: $\\frac{x}{3} = 6$.",
+    "Now undo the division by multiplying both sides by $3$, which gives $x = 18$.",
+    "Check: $18 \\div 3 - 2 = 6 - 2 = 4$, which is true, so the answer is $x = 18$."
   ],
   "alternativeExplanations": [
     {

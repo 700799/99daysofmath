@@ -10,25 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$y = 3$ has no $x$ in it at all. What does that tell you?",
+  "hint": "Look closely at the equation. There is no $x$ in it at all, so what can $x$ change?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$y = 3$ has no $x$ in it at all. What does that tell you?"
+      "text": "Look closely at the equation. There is no $x$ in it at all, so what can $x$ change?"
     },
     {
       "level": "guide",
-      "text": "Think of it as $y = 0x + 3$: slope $0$, start $3$."
+      "text": "Think of $y = 3$ as $y = 0x + 3$. Putting in $x = 100$ gives $0 \\times 100 + 3$, and zero times any number is zero."
     },
     {
       "level": "reveal",
-      "text": "$y$ is ALWAYS $3$, even at $x = 100$."
+      "text": "The value of $y$ is always $3$ on this line, so $y = 3$ when $x = 100$."
     }
   ],
   "explanation": [
-    "$y = 3$ means $y = 0x + 3$: the slope is $0$.",
-    "With zero slope the line never climbs or falls — it is horizontal.",
-    "At $x = 100$ (or any $x$), $y = 3$."
+    "The equation $y = 3$ can be written as $y = 0x + 3$, a line with slope $0$.",
+    "A slope of zero means the line never rises or falls, so it is horizontal and every point has the same height.",
+    "At $x = 100$, or at any other $x$, the value of $y$ is $3$."
   ],
   "alternativeExplanations": [
     {

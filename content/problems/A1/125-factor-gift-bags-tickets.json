@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "Identical bags with none left over means each term must split evenly.",
-    "The GCF of $6x$ and $12$ is $6$.",
-    "Factored: $6x + 12 = 6(x + 2)$ — that is $6$ bags of $(x + 2)$ tickets each."
+    "Identical bags with nothing left over means the number of bags must divide each term evenly.",
+    "The largest number that divides both $6x$ and $12$ is their greatest common factor, which is $6$.",
+    "Factoring gives $6x + 12 = 6(x + 2)$, so the greatest number of bags is $6$, each holding $x + 2$ tickets."
   ],
   "alternativeExplanations": [
     {

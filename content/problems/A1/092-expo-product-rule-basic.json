@@ -12,25 +12,25 @@
     "x⁷"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$x^3$ is 3 copies of $x$, and $x^4$ is 4 more copies. Count ALL the copies.",
+  "hint": "Each power is a string of copies of $x$ being multiplied. Think about how many copies there are altogether.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$x^3$ is 3 copies of $x$, and $x^4$ is 4 more copies. Count ALL the copies."
+      "text": "Each power is a string of copies of $x$ being multiplied. Think about how many copies there are altogether."
     },
     {
       "level": "guide",
-      "text": "Multiplying powers with the same base ADDS the exponents: $x^{3+4}$."
+      "text": "$x^3$ has $3$ copies and $x^4$ has $4$ more, so multiplying powers of the same base adds the exponents: $x^{3+4}$."
     },
     {
       "level": "reveal",
-      "text": "$x^3 \\cdot x^4 = x^7$."
+      "text": "$3 + 4 = 7$, so the product simplifies to $x^7$."
     }
   ],
   "explanation": [
-    "$x^3 \\cdot x^4$ means $(x \\cdot x \\cdot x)(x \\cdot x \\cdot x \\cdot x)$ — copies of $x$ lined up.",
-    "Count them: $3 + 4 = 7$ copies total.",
-    "So $x^3 \\cdot x^4 = x^7$. Product rule: add the exponents."
+    "Write out the copies of $x$ in each power: $x^3 \\cdot x^4$ means $(x \\cdot x \\cdot x)(x \\cdot x \\cdot x \\cdot x)$.",
+    "Count the factors of $x$ in the whole product: $3 + 4 = 7$ copies.",
+    "So $x^3 \\cdot x^4 = x^7$. This is the product rule: add the exponents when the bases match."
   ],
   "alternativeExplanations": [
     {

@@ -10,11 +10,11 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Track both: A is $10 \\cdot 2^w$ and B is $10 + 100w$.",
+  "hint": "One account multiplies and the other adds. Write a rule for each and compare them week by week.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Track both: A is $10 \\cdot 2^w$ and B is $10 + 100w$."
+      "text": "One account multiplies and the other adds. Write a rule for each and compare them week by week."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Week 5: A $= 320$, B $= 510$. B still leads. Try week 6."
+      "text": "A has $10 \\cdot 2^w$ followers and B has $10 + 100w$. At week $5$, A has $320$ and B has $510$, so B still leads. Check week $6$."
     },
     {
       "level": "reveal",
-      "text": "Week 6: A $= 640$, B $= 610$. A first passes B at week 6."
+      "text": "At week $6$, A has $640$ and B has $610$, so A first passes B after $6$ weeks."
     }
   ],
   "explanation": [
-    "Linear B adds 100 each week; exponential A multiplies by 2.",
-    "Table — week 4: A = 160, B = 410. Week 5: A = 320, B = 510. Week 6: A = 640, B = 610.",
-    "A first passes B after 6 weeks. Exponential always wins eventually."
+    "Account B is linear because it adds $100$ each week, and account A is exponential because it multiplies by $2$.",
+    "Compare them in a table. Week $4$ gives $160$ and $410$, week $5$ gives $320$ and $510$, and week $6$ gives $640$ and $610$.",
+    "Week $6$ is the first time A is larger, so the answer is $6$ weeks. Exponential growth always overtakes linear growth in the end."
   ],
   "alternativeExplanations": [
     {

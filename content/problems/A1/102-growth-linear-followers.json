@@ -10,25 +10,25 @@
   "primaryAnswer": "500",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Adding the same amount each step is LINEAR growth: start plus 100 per week.",
+  "hint": "The account gains the same number of followers each week. Is that adding or multiplying growth?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Adding the same amount each step is LINEAR growth: start plus 100 per week."
+      "text": "The account gains the same number of followers each week. Is that adding or multiplying growth?"
     },
     {
       "level": "guide",
-      "text": "Total added in 3 weeks: $3 \\times 100 = 300$."
+      "text": "This is linear growth, so start with $200$ and add $100$ for each of the $3$ weeks: $200 + 3 \\times 100$."
     },
     {
       "level": "reveal",
-      "text": "$200 + 300 = 500$ followers."
+      "text": "$3 \\times 100 = 300$ and $200 + 300 = 500$, so the account has $500$ followers after $3$ weeks."
     }
   ],
   "explanation": [
-    "Linear growth ADDS the same amount every step.",
-    "Rule: followers $= 200 + 100w$. At $w = 3$: $200 + 300$.",
-    "That is 500 followers."
+    "Gaining the same amount every week is linear growth, which adds a constant each step.",
+    "The rule is followers $= 200 + 100w$, and at $w = 3$ this is $200 + 300$.",
+    "Adding gives $500$, so the account has $500$ followers after three weeks."
   ],
   "alternativeExplanations": [
     {

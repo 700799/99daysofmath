@@ -10,25 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The slope is the constant JUMP in $y$ each time $x$ grows by $1$.",
+  "hint": "When $x$ goes up by $1$ each time, the slope is the amount $y$ changes at each step.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The slope is the constant JUMP in $y$ each time $x$ grows by $1$."
+      "text": "When $x$ goes up by $1$ each time, the slope is the amount $y$ changes at each step."
     },
     {
       "level": "guide",
-      "text": "From $9$ to $13$ is a jump of how much? Check $13$ to $17$ too."
+      "text": "Subtract neighbouring $y$-values: find $13 - 9$ and $17 - 13$ and check that they agree."
     },
     {
       "level": "reveal",
-      "text": "Both jumps are $4$, so $m = 4$."
+      "text": "Both differences are $4$, so the slope of the line is $m = 4$."
     }
   ],
   "explanation": [
-    "$x$ climbs by $1$ each column, and $y$ climbs $9 \\to 13 \\to 17$.",
-    "Each jump: $13 - 9 = 4$ and $17 - 13 = 4$.",
-    "A constant jump of $4$ per step means slope $m = 4$."
+    "The $x$-values go up by $1$ each time, while the $y$-values go $9$, $13$, $17$.",
+    "Find each jump by subtracting: $13 - 9 = 4$ and $17 - 13 = 4$.",
+    "The $y$-value rises by a constant $4$ for every $1$ step in $x$, so the slope is $m = 4$."
   ],
   "alternativeExplanations": [
     {

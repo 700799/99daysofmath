@@ -10,25 +10,25 @@
   "primaryAnswer": "220",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $L = 4$ into $50L + 20$.",
+  "hint": "The formula already describes your coins. You only need to use the number of levels the question gives.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $L = 4$ into $50L + 20$."
+      "text": "The formula already describes your coins. You only need to use the number of levels the question gives."
     },
     {
       "level": "guide",
-      "text": "$50 \\times 4 = 200$. Now add the bonus."
+      "text": "Put $4$ in place of $L$ to get $50(4) + 20$. Multiply first, then add the bonus."
     },
     {
       "level": "reveal",
-      "text": "$200 + 20 = 220$ coins."
+      "text": "$50 \\times 4 = 200$ and $200 + 20 = 220$, so you have $220$ coins after $4$ levels."
     }
   ],
   "explanation": [
-    "Substitute $L = 4$: $50(4) + 20$.",
-    "Multiply first: $50 \\times 4 = 200$.",
-    "Add the bonus: $200 + 20 = 220$ coins."
+    "The question asks about $4$ levels, so substitute $L = 4$ into the formula to get $50(4) + 20$.",
+    "Multiplication comes before addition in the order of operations, so work out $50 \\times 4 = 200$ first.",
+    "Then add the one-time bonus: $200 + 20 = 220$, so you have $220$ coins."
   ],
   "alternativeExplanations": [
     {

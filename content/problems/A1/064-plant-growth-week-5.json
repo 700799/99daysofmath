@@ -10,25 +10,25 @@
   "primaryAnswer": "19",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Start at $4$ (that is $b$), then MOVE up $3$ for each of the $5$ weeks.",
+  "hint": "The formula has a starting height and a growth each week. The question tells you how many weeks have passed.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Start at $4$ (that is $b$), then MOVE up $3$ for each of the $5$ weeks."
+      "text": "The formula has a starting height and a growth each week. The question tells you how many weeks have passed."
     },
     {
       "level": "guide",
-      "text": "Growth: $3 \\times 5 = 15$. Add the starting height."
+      "text": "Put $w = 5$ into the formula to get $h = 4 + 3 \\times 5$. Find the growth first, then add the starting height."
     },
     {
       "level": "reveal",
-      "text": "$4 + 15 = 19$ cm."
+      "text": "$3 \\times 5 = 15$ and $4 + 15 = 19$, so the plant is $19$ cm tall after $5$ weeks."
     }
   ],
   "explanation": [
-    "Plug in $w = 5$: $h = 4 + 3 \\times 5$.",
-    "Multiply first: $3 \\times 5 = 15$.",
-    "Add the start: $4 + 15 = 19$ cm tall."
+    "Substitute $w = 5$ into the formula because five weeks have passed: $h = 4 + 3 \\times 5$.",
+    "Multiply first to find how much the plant grew in that time: $3 \\times 5 = 15$ cm.",
+    "Add the starting height: $4 + 15 = 19$, so the plant is $19$ cm tall."
   ],
   "alternativeExplanations": [
     {

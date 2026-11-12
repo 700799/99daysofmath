@@ -18,25 +18,25 @@
     "25+10x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The one-time fee is the START ($b$); the monthly charge is the MOVE ($m$).",
+  "hint": "One cost is paid a single time and the other is paid again every month. Decide which is the start and which is the rate.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The one-time fee is the START ($b$); the monthly charge is the MOVE ($m$)."
+      "text": "One cost is paid a single time and the other is paid again every month. Decide which is the start and which is the rate."
     },
     {
       "level": "guide",
-      "text": "$b = 25$, $m = 10$. Fill in $y = mx + b$."
+      "text": "The sign-up fee is the starting value $b = 25$ and the monthly charge is the slope $m = 10$. Put them into $y = mx + b$."
     },
     {
       "level": "reveal",
-      "text": "$y = 10x + 25$."
+      "text": "With slope $10$ and starting value $25$, the equation is $y = 10x + 25$."
     }
   ],
   "explanation": [
-    "At $0$ months you already owe the sign-up fee: $b = 25$.",
-    "Each month adds $\\$10$: $m = 10$.",
-    "Equation: $y = 10x + 25$."
+    "At zero months you have already paid the sign-up fee, so the starting value is $b = 25$.",
+    "Every month adds another $10$ dollars to the total, so the slope is $m = 10$.",
+    "Putting these into $y = mx + b$ gives the equation $y = 10x + 25$."
   ],
   "alternativeExplanations": [
     {

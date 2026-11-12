@@ -14,25 +14,25 @@
     "5x+1"
   ],
   "acceptanceMode": "normalized",
-  "hint": "In $y = mx + b$, drop the slope into the $m$ spot and the intercept into the $b$ spot.",
+  "hint": "The form $y = mx + b$ has one place for the slope and one place for the $y$-intercept.",
   "hints": [
     {
       "level": "nudge",
-      "text": "In $y = mx + b$, drop the slope into the $m$ spot and the intercept into the $b$ spot."
+      "text": "The form $y = mx + b$ has one place for the slope and one place for the $y$-intercept."
     },
     {
       "level": "guide",
-      "text": "$m = 5$ and $b = 1$: $y = 5x + \\underline{\\ \\ }$."
+      "text": "The slope goes in for $m$ and the intercept goes in for $b$, so use $m = 5$ and $b = 1$."
     },
     {
       "level": "reveal",
-      "text": "$y = 5x + 1$."
+      "text": "Filling in both values gives the equation $y = 5x + 1$."
     }
   ],
   "explanation": [
-    "The template is $y = mx + b$.",
-    "Slope $m = 5$ goes in front of $x$; intercept $b = 1$ is added at the end.",
-    "Equation: $y = 5x + 1$."
+    "Slope-intercept form is $y = mx + b$, where $m$ is the slope and $b$ is the $y$-intercept.",
+    "The slope $m = 5$ goes in front of $x$, and the intercept $b = 1$ is added at the end.",
+    "Substituting both values gives the equation $y = 5x + 1$."
   ],
   "alternativeExplanations": [
     {

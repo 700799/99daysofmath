@@ -10,25 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "First find the TOTAL drop: $80 - 56$.",
+  "hint": "\"Per hour\" asks for a rate. You need the total change and the time it took.",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find the TOTAL drop: $80 - 56$."
+      "text": "\"Per hour\" asks for a rate. You need the total change and the time it took."
     },
     {
       "level": "guide",
-      "text": "It dropped $24\\%$ in $2$ hours. Divide by the hours."
+      "text": "The battery fell from $80$ to $56$, a drop of $80 - 56 = 24$ percent. Share that drop equally over the $2$ hours."
     },
     {
       "level": "reveal",
-      "text": "$24 \\div 2 = 12$ percent per hour."
+      "text": "$24 \\div 2 = 12$, so the battery drops $12$ percent per hour."
     }
   ],
   "explanation": [
-    "Total drop: $80 - 56 = 24$ percent.",
-    "Per hour: $24 \\div 2 = 12$.",
-    "The rate of change is $-12\\%$ per hour — battery is going DOWN."
+    "First find the total drop by subtracting the end value from the start value: $80 - 56 = 24$ percent.",
+    "That drop took $2$ hours, so divide to find the drop in one hour: $24 \\div 2 = 12$.",
+    "The battery drops $12$ percent per hour. As a rate of change this is $-12$ because the level is going down."
   ],
   "alternativeExplanations": [
     {

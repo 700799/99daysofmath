@@ -544,6 +544,367 @@
   "In this set the max is 11 and the min is 2.",
   "Take the min away from the max: 11 − 2 = 9, so the range is 9."
  ],
+ "A1-1#0": [
+  "Build the phrase in two parts: first \"twice n\", then what \"5 less than\" does to it.",
+  "\"Twice n\" means 2 times n, which is written 2n.",
+  "\"5 less than\" an amount means you subtract 5 from that amount, so the 5 comes last.",
+  "Taking 5 away from 2n gives the expression 2n − 5."
+ ],
+ "A1-1#1": [
+  "To evaluate an expression, put the given number in place of the letter.",
+  "Replace w with 4, so the expression becomes 10 × 4 + 15.",
+  "Multiply before adding, as the order of operations says: 10 × 4 = 40.",
+  "Then add the 15: 40 + 15 = 55, so the value is 55."
+ ],
+ "A1-1#2": [
+  "Like terms have the same letter part, and only like terms can be combined.",
+  "The x-terms are 6x and 2x, and adding them gives 6x + 2x = 8x.",
+  "The plain number 3 has no partner, so it stays as it is.",
+  "Putting the parts together, the simplified expression is 8x + 3."
+ ],
+ "A1-1#3": [
+  "Think about how many wheels one car has, then how the total grows with each extra car.",
+  "Each car brings 4 wheels, so the total is 4 for every one of the c cars.",
+  "That is 4 times c, and in algebra the times sign is left out.",
+  "The expression for the number of wheels is 4c."
+ ],
+ "A1-1#4": [
+  "Put the given value in place of n, then follow the order of operations.",
+  "Replace n with 6, so the expression becomes 5 × 6 − 2.",
+  "Multiply first, because multiplication comes before subtraction: 5 × 6 = 30.",
+  "Then subtract 2: 30 − 2 = 28, so the value is 28."
+ ],
+ "A1-2#0": [
+  "3x means 3 times x, so use the opposite of multiplying to get x alone.",
+  "Divide both sides by 3 to keep the equation balanced: x = 21 ÷ 3.",
+  "Since 21 ÷ 3 = 7, the solution of the equation is x = 7."
+ ],
+ "A1-2#1": [
+  "Two things were done to x, so undo them in reverse order: the adding first.",
+  "Subtract 4 from both sides, which leaves 5x = 25.",
+  "Divide both sides by 5 to undo the multiplying: x = 25 ÷ 5.",
+  "The solution of the equation is x = 5."
+ ],
+ "A1-2#2": [
+  "The bill was divided by 4, so think about which operation undoes a division.",
+  "Multiply both sides by 4 to get b alone: b = 7 × 4.",
+  "Since 7 × 4 = 28, the whole bill was 28 dollars."
+ ],
+ "A1-2#3": [
+  "Six was taken away from x, so use the opposite operation to get it back.",
+  "Add 6 to both sides to keep the equation balanced: x = 11 + 6.",
+  "Since 11 + 6 = 17, the solution of the equation is x = 17."
+ ],
+ "A1-2#4": [
+  "Undo the operations in reverse order, starting with the number that was added.",
+  "Subtract 3 from both sides, which leaves 2x = 12.",
+  "Divide both sides by 2 to undo the multiplying: x = 12 ÷ 2.",
+  "The solution of the equation is x = 6."
+ ],
+ "A1-3#0": [
+  "Clear the parentheses first by multiplying the 4 by each term inside them.",
+  "Distributing the 4 to both terms gives the equation 4x + 4 = 24.",
+  "Subtract 4 from both sides, which leaves 4x = 20.",
+  "Divide both sides by 4, so the solution is x = 5."
+ ],
+ "A1-3#1": [
+  "There is an x-term on each side, so collect them on one side first.",
+  "Subtract 2x from both sides, which leaves 4x = 20.",
+  "Divide both sides by 4 to get x alone: x = 20 ÷ 4.",
+  "The solution of the equation is x = 5."
+ ],
+ "A1-3#2": [
+  "The room fee is paid only once, so remove it before dealing with the cost per guest.",
+  "Subtract 40 from both sides, which leaves 6g = 60.",
+  "Divide both sides by 6 to find the number of guests: g = 60 ÷ 6.",
+  "The division gives g = 10, so you can invite 10 guests."
+ ],
+ "A1-3#3": [
+  "Either distribute the 3 or, since 12 divides evenly by 3, divide both sides by 3 first.",
+  "Dividing both sides by 3 leaves the simpler equation x − 2 = 4.",
+  "Add 2 to both sides to undo the subtracting: x = 4 + 2.",
+  "The solution of the equation is x = 6."
+ ],
+ "A1-3#4": [
+  "Gather the x-terms on one side and the plain numbers on the other side.",
+  "Subtract 4x from both sides, which leaves 2x + 1 = 9.",
+  "Subtract 1 from both sides, which leaves 2x = 8.",
+  "Divide both sides by 2, so the solution is x = 4."
+ ],
+ "A1-4#0": [
+  "Solve an inequality with the same steps as an equation, and watch whether the sign must flip.",
+  "Subtract 1 from both sides, which leaves 2x < 8.",
+  "Divide both sides by 2, a positive number, so the sign does not flip.",
+  "The solution of the inequality is x < 4."
+ ],
+ "A1-4#1": [
+  "To get x alone you must divide by a negative number, which has a special rule for inequalities.",
+  "Divide both sides by −2, and work out 10 ÷ (−2) = −5.",
+  "Dividing by a negative flips the sign, so ≤ becomes ≥.",
+  "The solution of the inequality is x ≥ −5."
+ ],
+ "A1-4#2": [
+  "Solve it like a two-step equation, then read the answer as a number of whole weeks.",
+  "Subtract 18 from both sides, which leaves 8w ≥ 32.",
+  "Divide both sides by 8, a positive number, to get w ≥ 4.",
+  "The smallest value allowed is 4, so the fewest whole weeks is 4."
+ ],
+ "A1-4#3": [
+  "Use the opposite of subtracting 4, and think about whether that changes the sign.",
+  "Add 4 to both sides, which gives x < 6 + 4.",
+  "Adding never flips an inequality sign, so the solution is x < 10."
+ ],
+ "A1-4#4": [
+  "Getting x alone means dividing by a negative number, so remember what that does to the sign.",
+  "Divide both sides by −3, and work out 12 ÷ (−3) = −4.",
+  "Flip the sign because you divided by a negative, so ≤ becomes ≥.",
+  "The solution of the inequality is x ≥ −4."
+ ],
+ "A1-5#0": [
+  "The notation f(6) means the input is 6, so put 6 where x is in the rule.",
+  "Replacing x with 6 in the rule gives f(6) = 5 × 6, a product to work out.",
+  "Since 5 × 6 = 30, the value of f(6) is the number 30."
+ ],
+ "A1-5#1": [
+  "The notation f(10) tells you to use 10 as the input in place of x.",
+  "Replace x with 10 and do the multiplying first: 2 × 10 = 20.",
+  "Then add the 1: 20 + 1 = 21, so the value of f(10) is 21."
+ ],
+ "A1-5#2": [
+  "You know the output and need the input, so run the rule backward.",
+  "The rule multiplies by 4, so undo it by dividing the output by 4.",
+  "Since 32 ÷ 4 = 8, the input that went in was 8."
+ ],
+ "A1-5#3": [
+  "Put 6 in place of x in the rule, then follow the order of operations.",
+  "Multiply first, because it comes before subtraction: 3 × 6 = 18.",
+  "Then subtract 4: 18 − 4 = 14, so the value of f(6) is 14."
+ ],
+ "A1-5#4": [
+  "The letter h is just the name of the rule, and h(0) means the input is 0.",
+  "Replace x with 0 and multiply, remembering that anything times zero is zero: 2 × 0 = 0.",
+  "Then add 9: 0 + 9 = 9, so the value of h(0) is 9. An input of zero leaves only the added number."
+ ],
+ "A1-6#0": [
+  "Slope compares how far a line goes up with how far it goes across.",
+  "Slope is rise divided by run, so set up 10 ÷ 5.",
+  "Since 10 ÷ 5 = 2, the slope of the line is 2."
+ ],
+ "A1-6#1": [
+  "Slope between two points is the change in y divided by the change in x.",
+  "The rise is the change in the y-values: 11 − 3 = 8.",
+  "The run is the change in the x-values, in the same order: 4 − 2 = 2.",
+  "Slope is rise over run, so the slope is 8 ÷ 2 = 4."
+ ],
+ "A1-6#2": [
+  "\"Dollars per walk\" is a rate, so share the money equally among the walks.",
+  "Divide the total dollars by the number of walks: 18 ÷ 3.",
+  "Since 18 ÷ 3 = 6, you earn 6 dollars per walk."
+ ],
+ "A1-6#3": [
+  "Find how much y changes and how much x changes between the two points.",
+  "The rise is 12 − 2 = 10, and the run is 5 − 0 = 5.",
+  "Slope is rise over run, so the slope is 10 ÷ 5 = 2."
+ ],
+ "A1-6#4": [
+  "Subtract the y-values and the x-values in the same order, and keep any negative sign.",
+  "The rise is 1 − 7 = −6, and the run is 3 − 1 = 2.",
+  "Slope is rise over run, so the slope is −6 ÷ 2 = −3. The line goes downhill."
+ ],
+ "A1-7#0": [
+  "Compare the equation with y = mx + b, where b is the y-intercept.",
+  "The number in the b position is the one added at the end, and the minus sign stays with the 3.",
+  "So the y-intercept of the line is −3."
+ ],
+ "A1-7#1": [
+  "Put the given x-value into the equation in place of x.",
+  "Multiply first, because it comes before addition: 2 × 4 = 8.",
+  "Then add 1: 8 + 1 = 9, so the value of y is 9."
+ ],
+ "A1-7#2": [
+  "The formula has a starting amount and an amount added each week, so use w = 6.",
+  "Find the money added over six weeks: 5 × 6 = 30 dollars.",
+  "Add the starting amount: 15 + 30 = 45, so you have 45 dollars."
+ ],
+ "A1-7#3": [
+  "Compare the equation with the form y = mx + b and decide which letter is the slope.",
+  "The slope m is the number that multiplies x, and here that number is 6.",
+  "So the slope of the line is 6. The −1 is the y-intercept, not the slope."
+ ],
+ "A1-7#4": [
+  "Replace x with the given value and follow the order of operations.",
+  "Multiply first, because it comes before addition: 2 × 4 = 8.",
+  "Then add 5: 8 + 5 = 13, so the value of y is 13."
+ ],
+ "A1-8#0": [
+  "Use the slope-intercept form y = mx + b, which has a place for each number given.",
+  "The slope goes in for m and the y-intercept goes in for b, so m = 2 and b = 9.",
+  "Filling in both values gives the equation y = 2x + 9."
+ ],
+ "A1-8#1": [
+  "Decide which cost is paid once at the start and which is paid again every month.",
+  "The one-time fee is the starting value, so b = 25.",
+  "The monthly charge is the rate of change, so the slope is m = 10.",
+  "Putting them into y = mx + b gives the equation y = 10x + 25."
+ ],
+ "A1-8#2": [
+  "You need the constant change in y for the slope and the y-value at x = 0 for the start.",
+  "The y-values go up by 10 − 7 = 3 each step, so the slope is m = 3.",
+  "When x = 0 the table shows y = 7, so the y-intercept is b = 7.",
+  "The equation of the line is y = 3x + 7."
+ ],
+ "A1-8#3": [
+  "Put the slope and the point into y = mx + b, so b is the only unknown left.",
+  "Using slope m = 3 with the point's values x = 2 and y = 11 gives 11 = 3 × 2 + b.",
+  "Multiply to get 11 = 6 + b, then subtract 6 from both sides.",
+  "Solving for the y-intercept gives the answer b = 5."
+ ],
+ "A1-8#4": [
+  "Slope-intercept form is y = mx + b, with the slope as m and the y-intercept as b.",
+  "Here the slope is m = 5 and the y-intercept is b = −2.",
+  "Adding a negative 2 is written as subtracting 2, so the equation is y = 5x − 2."
+ ],
+ "A1-9#0": [
+  "Both rules describe the same y, so their right-hand sides must be equal.",
+  "Set the two expressions equal to each other: 2x = x + 6.",
+  "Subtract x from both sides, so the solution is x = 6."
+ ],
+ "A1-9#1": [
+  "One equation has +y and the other has −y, so adding the equations will cancel y.",
+  "Add the two equations: the y terms cancel and you get 2x = 14.",
+  "Divide both sides by 2, so x = 7. The matching y-value is 5."
+ ],
+ "A1-9#2": [
+  "Both orders include the same 2 kid tickets, so the price difference comes only from adult tickets.",
+  "Subtract the smaller total from the larger one: 41 − 23 = 18 dollars.",
+  "That 18 dollars pays for the 2 extra adult tickets, so divide: 18 ÷ 2 = 9.",
+  "So the price of one adult ticket is 9 dollars."
+ ],
+ "A1-9#3": [
+  "The first equation tells you what y equals, so substitute that into the second equation.",
+  "Replacing y with 2x turns the second equation into x + 2x = 12.",
+  "Combine like terms to get 3x = 12, then divide both sides by 3.",
+  "Dividing 12 by 3 gives the solution of the system, x = 4."
+ ],
+ "A1-9#4": [
+  "The y terms have opposite signs, so adding the two equations makes them cancel.",
+  "Adding the left sides and the right sides gives 2x = 10.",
+  "Divide both sides by 2, so the solution is x = 5."
+ ],
+ "A1-10#0": [
+  "Each power is a row of copies of x being multiplied, so count all the copies.",
+  "There are 2 copies in x² and 5 copies in x⁵, which makes 2 + 5 = 7 copies.",
+  "Multiplying powers with the same base adds the exponents, so the answer is x⁷."
+ ],
+ "A1-10#1": [
+  "Think about what an exponent of zero means: no copies of 6 are multiplied at all.",
+  "Multiplying by nothing leaves the number that changes nothing in multiplication, which is 1.",
+  "Any nonzero number to the power 0 equals 1, so the answer is 1."
+ ],
+ "A1-10#2": [
+  "A negative exponent does not make the answer negative. It moves the power under a 1.",
+  "Rewrite the power as a fraction with 1 on top: 2⁻² = 1 ÷ 2².",
+  "Since 2² = 4, the value of the power is the fraction 1/4."
+ ],
+ "A1-10#3": [
+  "The bases are the same and the powers are multiplied, so think about what happens to the exponents.",
+  "Multiplying powers with the same base adds the exponents: 6 + 3 = 9.",
+  "So the product simplifies to x^9, a single power of x."
+ ],
+ "A1-10#4": [
+  "The bases are the same and the powers are divided, so some copies of x cancel.",
+  "Dividing powers with the same base subtracts the exponents: 8 − 2 = 6.",
+  "So the quotient simplifies to x^6, a single power of x."
+ ],
+ "A1-11#0": [
+  "After growing, you still have all of the original amount plus the extra part.",
+  "Keeping 100% and gaining 10% makes 110% of the original in all.",
+  "Written as a decimal, 110% is 1.10, so the yearly factor is 1.10."
+ ],
+ "A1-11#1": [
+  "Gaining the same amount every week is linear growth, which adds each step.",
+  "Find the followers gained in three weeks: 3 × 100 = 300.",
+  "Add the starting number of followers: 200 + 300 = 500 followers after 3 weeks."
+ ],
+ "A1-11#2": [
+  "This pattern grows by multiplying, so compare each term with the one before it.",
+  "Divide each term by the one before it: 12 ÷ 4 = 3 and 36 ÷ 12 = 3.",
+  "Every step multiplies by 3, so the growth factor is 3."
+ ],
+ "A1-11#3": [
+  "Check whether the pattern adds or multiplies by comparing neighbouring terms.",
+  "Each term is double the one before it, since 10 ÷ 5 = 2 and 20 ÷ 10 = 2.",
+  "Multiply the last term by 2: 40 × 2 = 80, so the next number is 80."
+ ],
+ "A1-11#4": [
+  "\"Triple\" means multiply by 3, so the rule for each step is already given.",
+  "Check the pattern: 2 × 3 = 6 and 6 × 3 = 18, so each step multiplies by 3.",
+  "Multiply the last term by 3: 18 × 3 = 54, so the next number is 54."
+ ],
+ "A1-12#0": [
+  "The minus sign in front of the second parentheses applies to every term inside.",
+  "Distribute the minus so both terms are subtracted: 4x + 6 − x − 2.",
+  "Combine like terms, letters with letters and numbers with numbers: 4x − x = 3x and 6 − 2 = 4.",
+  "Putting the parts together, the simplified expression is 3x + 4."
+ ],
+ "A1-12#1": [
+  "Multiply each term in the first bracket by each term in the second, like four patches of a rectangle.",
+  "The four products from multiplying each pair are x², 1x, 4x and 4.",
+  "Combine the two x-terms because they are like terms: 1x + 4x = 5x.",
+  "Adding all the pieces, the product is x² + 5x + 4."
+ ],
+ "A1-12#2": [
+  "Adding polynomials means combining the terms that have the same letter part.",
+  "Add the x-terms together by adding their coefficients: 2x + 4x = 6x.",
+  "Add the plain numbers together in the same way: 3 + 1 = 4.",
+  "Putting the two results together, the sum is 6x + 4."
+ ],
+ "A1-12#3": [
+  "Multiply every term in the first bracket by every term in the second, then combine like terms.",
+  "The four products from multiplying each pair are x·x = x², x·3 = 3x, 1·x = x and 1·3 = 3.",
+  "Combine the middle terms because they are like terms: 3x + x = 4x.",
+  "The product is x² + 4x + 3, which you type as x^2 + 4x + 3."
+ ],
+ "A1-13#0": [
+  "Factoring starts with the largest number that divides every term.",
+  "The greatest common factor of 4x and 8 is 4, because 4x = 4 × x and 8 = 4 × 2.",
+  "Pull the 4 out in front, so the factored form is 4(x + 2)."
+ ],
+ "A1-13#1": [
+  "Look for two numbers whose product is the last number and whose sum is the middle number.",
+  "The numbers must multiply to 8 and add to 6, and the pair 2 and 4 does both.",
+  "Put those numbers into the brackets, so the factored form is (x + 2)(x + 4)."
+ ],
+ "A1-13#2": [
+  "Find two numbers that multiply to the constant term and add to the number in front of x.",
+  "The numbers must multiply to 6 and add to 5, and the pair 2 and 3 does both.",
+  "Put those numbers into the brackets, so the factored form is (x + 2)(x + 3)."
+ ],
+ "A1-13#3": [
+  "Start with the pairs that multiply to 12, because there are only a few of them.",
+  "The factor pairs of 12 are 1 and 12, 2 and 6, and 3 and 4.",
+  "Only 3 + 4 equals 7, so the two numbers are 3 and 4."
+ ],
+ "A1-14#0": [
+  "Ask which number multiplied by itself gives 49, and remember there are two such numbers.",
+  "Both 7 × 7 and (−7) × (−7) equal 49, so the solutions are 7 and −7.",
+  "The question asks for the positive solution, which is 7."
+ ],
+ "A1-14#1": [
+  "When a product equals zero, at least one of the factors must be zero.",
+  "Set each factor equal to zero: x − 6 = 0 gives x = 6, and x + 2 = 0 gives x = −2.",
+  "The question asks for the positive solution, which is 6."
+ ],
+ "A1-14#2": [
+  "A graph crosses the x-axis at the points where y equals zero.",
+  "Set y to 0 to get x² − 4 = 0, then add 4 to both sides so that x² = 4.",
+  "The numbers whose square is 4 are 2 and −2, and the positive one is 2."
+ ],
+ "A1-14#3": [
+  "A parabola is symmetric, so its vertex sits exactly halfway between its two zeros.",
+  "Find the halfway point by averaging the zeros: (1 + 7) ÷ 2.",
+  "Since 8 ÷ 2 = 4, the x-value of the vertex is 4."
+ ],
  "GEO-1#0": [
   "S lies between R and T, so the two shorter segments join to make the whole segment RT.",
   "Segment Addition gives RS + ST = RT, so add the two lengths: 9 + 14.",

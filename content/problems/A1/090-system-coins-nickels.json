@@ -10,30 +10,30 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two rules in cents: $n + d = 15$ coins and $5n + 10d = 110$ cents.",
+  "hint": "You know two facts: how many coins there are and how much they are worth. Each fact gives one equation.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two rules in cents: $n + d = 15$ coins and $5n + 10d = 110$ cents."
+      "text": "You know two facts: how many coins there are and how much they are worth. Each fact gives one equation."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Try all-nickels first: $15$ nickels is only $\\$0.75$ — too little by $\\$0.35$. Every dime swap adds $\\$0.05$, so count the swaps."
+      "text": "Try all-nickels first: $15$ nickels is only $\\$0.75$, too little by $\\$0.35$. Every dime swap adds $\\$0.05$, so count the swaps."
     },
     {
       "level": "guide",
-      "text": "Swap in $d = 15 - n$: $5n + 10(15 - n) = 110$, so $150 - 5n = 110$."
+      "text": "In cents, $n + d = 15$ and $5n + 10d = 110$. Substitute $d = 15 - n$ to get $5n + 10(15 - n) = 110$, which simplifies to $150 - 5n = 110$."
     },
     {
       "level": "reveal",
-      "text": "$5n = 40$, so $n = 8$ nickels. (And 7 dimes.)"
+      "text": "$5n = 40$, so there are $n = 8$ nickels, along with $7$ dimes."
     }
   ],
   "explanation": [
-    "Count rule: $n + d = 15$. Money rule in cents: $5n + 10d = 110$.",
-    "Substitute $d = 15 - n$: $5n + 150 - 10n = 110$, so $-5n = -40$.",
-    "$n = 8$. Check: $8 \\times 5 + 7 \\times 10 = 40 + 70 = 110$ cents. ✓"
+    "Write a count equation, $n + d = 15$, and a value equation in cents, $5n + 10d = 110$.",
+    "Substitute $d = 15 - n$ into the value equation: $5n + 150 - 10n = 110$, which gives $-5n = -40$.",
+    "Divide by $-5$ to get $n = 8$ nickels. Check: $8 \\times 5 + 7 \\times 10 = 40 + 70 = 110$ cents."
   ],
   "alternativeExplanations": [
     {

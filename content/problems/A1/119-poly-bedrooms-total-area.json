@@ -14,11 +14,11 @@
     "3x²+9x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Total means ADD the two areas: $(x^2 + 6x) + (2x^2 + 3x)$.",
+  "hint": "\"Total\" tells you which operation to use on the two areas. Then only like terms can be joined.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Total means ADD the two areas: $(x^2 + 6x) + (2x^2 + 3x)$."
+      "text": "\"Total\" tells you which operation to use on the two areas. Then only like terms can be joined."
     },
     {
       "level": "nudge",
@@ -27,18 +27,18 @@
     },
     {
       "level": "guide",
-      "text": "Sort by kind: $x^2$-terms together, $x$-terms together."
+      "text": "Add the areas: $(x^2 + 6x) + (2x^2 + 3x)$. Group the $x^2$-terms together and the $x$-terms together, then add each group."
     },
     {
       "level": "reveal",
-      "text": "$x^2 + 2x^2 = 3x^2$ and $6x + 3x = 9x$. Total: $3x^2 + 9x$."
+      "text": "$x^2 + 2x^2 = 3x^2$ and $6x + 3x = 9x$, so the total area is $3x^2 + 9x$ square feet."
     }
   ],
   "explanation": [
-    "Add the two polynomials: $(x^2 + 6x) + (2x^2 + 3x)$.",
-    "$x^2$-terms: $1x^2 + 2x^2 = 3x^2$.",
-    "$x$-terms: $6x + 3x = 9x$.",
-    "Total area: $3x^2 + 9x$ square feet."
+    "The total floor area is the sum of the two polynomials: $(x^2 + 6x) + (2x^2 + 3x)$.",
+    "Combine the squared terms, remembering that $x^2$ means $1x^2$: $1x^2 + 2x^2 = 3x^2$.",
+    "Combine the $x$-terms by adding their coefficients: $6x + 3x = 9x$.",
+    "The total floor area is $3x^2 + 9x$ square feet."
   ],
   "alternativeExplanations": [
     {

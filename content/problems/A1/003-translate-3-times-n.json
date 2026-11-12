@@ -15,24 +15,25 @@
     "3 n"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Times\" means multiply.",
+  "hint": "Decide which operation the word \"times\" is asking for, and how algebra usually writes it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Times\" means multiply."
+      "text": "Decide which operation the word \"times\" is asking for, and how algebra usually writes it."
     },
     {
       "level": "guide",
-      "text": "In algebra we write a number glued to a letter to show multiplication: $3$ times $n$ is written without a symbol between them."
+      "text": "\"$3$ times $n$\" is the product $3 \\times n$. In algebra the number is written right next to the letter with no times sign."
     },
     {
       "level": "reveal",
-      "text": "The expression is $3n$."
+      "text": "Writing the $3$ directly in front of the letter gives the expression $3n$."
     }
   ],
   "explanation": [
-    "\"3 times a number $n$\" means $3 \\times n$.",
-    "In algebra we drop the times sign and write it as $3n$."
+    "The word \"times\" tells us to multiply, so the phrase means $3 \\times n$.",
+    "In algebra the times sign is left out because $\\times$ looks too much like the letter $x$, so the number is written next to the variable.",
+    "That makes the expression $3n$, which reads as \"three times a number $n$\"."
   ],
   "alternativeExplanations": [
     {

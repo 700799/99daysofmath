@@ -10,25 +10,25 @@
   "primaryAnswer": "48",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Exponent first: $2^4 = ?$",
+  "hint": "The order of operations matters here. Decide whether the power or the multiplication by $3$ comes first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Exponent first: $2^4 = ?$"
+      "text": "The order of operations matters here. Decide whether the power or the multiplication by $3$ comes first."
     },
     {
       "level": "guide",
-      "text": "$2^4 = 16$. Now multiply by the start value 3."
+      "text": "Put in $x = 4$ to get $y = 3 \\cdot 2^4$. Work out $2^4 = 16$ first, then multiply by the starting value $3$."
     },
     {
       "level": "reveal",
-      "text": "$y = 3 \\times 16 = 48$."
+      "text": "$3 \\times 16 = 48$, so the value of $y$ is $48$ when $x$ is $4$."
     }
   ],
   "explanation": [
-    "$y = a \\cdot b^x$ means start $\\times$ factor, applied $x$ times.",
-    "Compute the power first: $2^4 = 16$.",
-    "Then $y = 3 \\times 16 = 48$. (Not $6^4$ — never multiply the start into the base!)"
+    "In $y = a \\cdot b^x$ the starting value $a$ is multiplied by the factor $b$ a total of $x$ times.",
+    "Exponents come before multiplication, so work out the power first: $2^4 = 16$.",
+    "Then multiply by the starting value: $y = 3 \\times 16 = 48$. Do not multiply $3$ by $2$ first, since $6^4$ is a different number."
   ],
   "alternativeExplanations": [
     {

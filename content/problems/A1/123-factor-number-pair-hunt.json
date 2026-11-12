@@ -10,25 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "List the pairs that multiply to $12$: $1 \\times 12$, $2 \\times 6$, $3 \\times 4$.",
+  "hint": "Start with the multiplying condition because only a few whole-number pairs satisfy it. Then test each pair against the sum.",
   "hints": [
     {
       "level": "nudge",
-      "text": "List the pairs that multiply to $12$: $1 \\times 12$, $2 \\times 6$, $3 \\times 4$."
+      "text": "Start with the multiplying condition because only a few whole-number pairs satisfy it. Then test each pair against the sum."
     },
     {
       "level": "guide",
-      "text": "Which pair adds to $7$? Check: $1 + 12 = 13$, $2 + 6 = 8$, $3 + 4 = ?$"
+      "text": "The pairs that multiply to $12$ are $1$ and $12$, $2$ and $6$, and $3$ and $4$. Find each sum and look for $7$."
     },
     {
       "level": "reveal",
-      "text": "$3 + 4 = 7$, so the pair is $3$ and $4$. The larger is $4$."
+      "text": "$3 + 4 = 7$, so the numbers are $3$ and $4$, and the larger one is $4$."
     }
   ],
   "explanation": [
-    "List factor pairs of 12: (1, 12), (2, 6), (3, 4).",
-    "Only $3 + 4 = 7$.",
-    "The larger number is $4$."
+    "List the whole-number pairs that multiply to $12$: $1$ and $12$, $2$ and $6$, $3$ and $4$.",
+    "Check the sum of each pair. Only $3 + 4$ gives $7$, since the others give $13$ and $8$.",
+    "The two numbers are $3$ and $4$, so the larger number is $4$."
   ],
   "alternativeExplanations": [
     {

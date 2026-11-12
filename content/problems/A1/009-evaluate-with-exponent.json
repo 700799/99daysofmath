@@ -10,11 +10,11 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $3$ for BOTH $x$'s: $3^2 + 2 \\times 3$.",
+  "hint": "The letter $x$ appears twice in this expression. Both of them stand for the same number.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $3$ for BOTH $x$'s: $3^2 + 2 \\times 3$."
+      "text": "The letter $x$ appears twice in this expression. Both of them stand for the same number."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$3^2 = 9$ and $2 \\times 3 = 6$. Now add them."
+      "text": "With $x = 3$ the expression is $3^2 + 2(3)$. Work out the square and the product separately, then add them."
     },
     {
       "level": "reveal",
-      "text": "$9 + 6 = 15$."
+      "text": "$3^2 = 9$ and $2 \\times 3 = 6$, so the value is $9 + 6 = 15$."
     }
   ],
   "explanation": [
-    "Substitute $x = 3$: $3^2 + 2(3)$.",
-    "Exponent first: $3^2 = 3 \\times 3 = 9$.",
-    "Then $2 \\times 3 = 6$, and $9 + 6 = 15$."
+    "Substitute $3$ for every $x$, which turns the expression into $3^2 + 2(3)$.",
+    "Exponents come first in the order of operations, and $3^2$ means $3 \\times 3 = 9$.",
+    "Next multiply $2 \\times 3 = 6$, then add the two parts: $9 + 6 = 15$, so the value is $15$."
   ],
   "alternativeExplanations": [
     {

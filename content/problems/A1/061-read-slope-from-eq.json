@@ -10,25 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "In $y = mx + b$, the slope $m$ is the number MULTIPLYING $x$.",
+  "hint": "Compare the equation with the form $y = mx + b$. One of those letters stands for the slope.",
   "hints": [
     {
       "level": "nudge",
-      "text": "In $y = mx + b$, the slope $m$ is the number MULTIPLYING $x$."
+      "text": "Compare the equation with the form $y = mx + b$. One of those letters stands for the slope."
     },
     {
       "level": "guide",
-      "text": "What number sits right in front of $x$ in $5x + 2$?"
+      "text": "The slope $m$ is the number that multiplies $x$. Look at what sits directly in front of $x$ in $5x + 2$."
     },
     {
       "level": "reveal",
-      "text": "The slope is $5$."
+      "text": "The number multiplying $x$ is $5$, so the slope of the line is $5$."
     }
   ],
   "explanation": [
-    "Match $y = 5x + 2$ to $y = mx + b$.",
-    "The number multiplying $x$ is $m = 5$ — how you MOVE.",
-    "The $+2$ is $b$, where you START — not the slope."
+    "Line up $y = 5x + 2$ with the slope-intercept form $y = mx + b$.",
+    "The slope $m$ is the number multiplying $x$, and here that number is $5$.",
+    "So the slope is $5$. The $+2$ is the $y$-intercept $b$, which is where the line starts, not the slope."
   ],
   "alternativeExplanations": [
     {

@@ -13,26 +13,26 @@
     "4 + 3x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The minus sign hits EVERY term in the second parentheses.",
+  "hint": "The minus sign in front of the second parentheses applies to every term inside, not only the first one.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The minus sign hits EVERY term in the second parentheses."
+      "text": "The minus sign in front of the second parentheses applies to every term inside, not only the first one."
     },
     {
       "level": "guide",
-      "text": "Rewrite it as $5x + 7 - 2x - 3$, then combine like terms."
+      "text": "Rewrite the expression without parentheses as $5x + 7 - 2x - 3$. Then combine the $x$-terms and the plain numbers."
     },
     {
       "level": "reveal",
-      "text": "$5x - 2x = 3x$ and $7 - 3 = 4$, so the answer is $3x + 4$."
+      "text": "$5x - 2x = 3x$ and $7 - 3 = 4$, so the difference is $3x + 4$."
     }
   ],
   "explanation": [
-    "Distribute the minus: $(5x + 7) - (2x + 3) = 5x + 7 - 2x - 3$.",
-    "$x$-terms: $5x - 2x = 3x$.",
-    "Numbers: $7 - 3 = 4$.",
-    "Answer: $3x + 4$."
+    "Distribute the minus sign to both terms in the second parentheses: $(5x + 7) - (2x + 3) = 5x + 7 - 2x - 3$.",
+    "Combine the $x$-terms by subtracting the coefficients: $5x - 2x = 3x$.",
+    "Combine the plain numbers in the same way: $7 - 3 = 4$.",
+    "Putting the two results together, the answer is $3x + 4$."
   ],
   "alternativeExplanations": [
     {

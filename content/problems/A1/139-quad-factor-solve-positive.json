@@ -10,11 +10,11 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two numbers that multiply to $-15$ and add to $-2$. Different signs!",
+  "hint": "Factor first by finding two numbers with the right product and sum. The product is negative, so their signs differ.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two numbers that multiply to $-15$ and add to $-2$. Different signs!"
+      "text": "Factor first by finding two numbers with the right product and sum. The product is negative, so their signs differ."
     },
     {
       "level": "nudge",
@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "The pair is $-5$ and $+3$: $(x - 5)(x + 3) = 0$. Now zero-product."
+      "text": "The numbers $-5$ and $3$ multiply to $-15$ and add to $-2$, so $(x - 5)(x + 3) = 0$. Set each factor equal to zero."
     },
     {
       "level": "reveal",
-      "text": "$x = 5$ or $x = -3$. The positive solution is $5$."
+      "text": "The solutions are $x = 5$ and $x = -3$, so the positive solution is $5$."
     }
   ],
   "explanation": [
-    "Hunt: product $-15$, sum $-2$. The pair is $-5$ and $3$.",
-    "Factor: $(x - 5)(x + 3) = 0$.",
-    "Zero-product rule: $x = 5$ or $x = -3$.",
-    "The positive solution is $5$."
+    "Look for two numbers with product $-15$ and sum $-2$. The pair is $-5$ and $3$.",
+    "Use them to write the equation in factored form: $(x - 5)(x + 3) = 0$.",
+    "By the zero-product rule one factor must be zero, so $x = 5$ or $x = -3$.",
+    "The question asks for the positive solution, which is $5$."
   ],
   "alternativeExplanations": [
     {

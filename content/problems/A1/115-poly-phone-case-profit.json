@@ -14,26 +14,26 @@
     "2x²+3x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Profit means money in minus money out: $(3x^2 + 5x) - (x^2 + 2x)$.",
+  "hint": "Profit is the money that comes in minus the money that goes out. Take care when subtracting a whole expression.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Profit means money in minus money out: $(3x^2 + 5x) - (x^2 + 2x)$."
+      "text": "Profit is the money that comes in minus the money that goes out. Take care when subtracting a whole expression."
     },
     {
       "level": "guide",
-      "text": "The minus distributes: $3x^2 + 5x - x^2 - 2x$. Now match $x^2$ with $x^2$, and $x$ with $x$."
+      "text": "Write $(3x^2 + 5x) - (x^2 + 2x)$ and distribute the minus to get $3x^2 + 5x - x^2 - 2x$. Combine the $x^2$-terms, then the $x$-terms."
     },
     {
       "level": "reveal",
-      "text": "$3x^2 - x^2 = 2x^2$ and $5x - 2x = 3x$. Profit: $2x^2 + 3x$."
+      "text": "$3x^2 - x^2 = 2x^2$ and $5x - 2x = 3x$, so the profit is $2x^2 + 3x$ dollars."
     }
   ],
   "explanation": [
-    "Profit = revenue $-$ cost = $(3x^2 + 5x) - (x^2 + 2x)$.",
-    "Distribute the minus: $3x^2 + 5x - x^2 - 2x$.",
-    "Combine like terms: $3x^2 - x^2 = 2x^2$, $5x - 2x = 3x$.",
-    "Profit: $2x^2 + 3x$ dollars."
+    "Profit is revenue minus cost, so write $(3x^2 + 5x) - (x^2 + 2x)$.",
+    "Distribute the minus sign to both cost terms so each one is subtracted: $3x^2 + 5x - x^2 - 2x$.",
+    "Combine like terms, matching squares with squares: $3x^2 - x^2 = 2x^2$ and $5x - 2x = 3x$.",
+    "Putting the two results together, the profit is $2x^2 + 3x$ dollars."
   ],
   "alternativeExplanations": [
     {

@@ -16,30 +16,30 @@
     "-3<=x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Subtract $5$ from both sides first — the sign does not flip for subtraction.",
+  "hint": "Isolate the $x$ term first. Then watch closely for the step where the sign has to turn around.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Subtract $5$ from both sides first — the sign does not flip for subtraction."
+      "text": "Isolate the $x$ term first. Then watch closely for the step where the sign has to turn around."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Practice the flip on a tiny one: $-2x \\le 6$ gives $x \\ge -3$ — dividing by a NEGATIVE flips the sign."
+      "text": "Practice the flip on a tiny one: $-2x \\le 6$ gives $x \\ge -3$; dividing by a NEGATIVE flips the sign."
     },
     {
       "level": "guide",
-      "text": "$-2x \\le 6$. Now divide by $-2$ and FLIP the sign."
+      "text": "Subtract $5$ from both sides to get $-2x \\le 6$. Then divide by $-2$ and reverse the inequality sign."
     },
     {
       "level": "reveal",
-      "text": "$x \\ge -3$."
+      "text": "$6 \\div (-2) = -3$ and the sign flips, so the solution set is $x \\ge -3$."
     }
   ],
   "explanation": [
-    "Subtract 5 from both sides: $-2x \\le 6$.",
-    "Divide both sides by $-2$ and flip $\\le$ to $\\ge$: $x \\ge -3$.",
-    "Check: $x = 0$ gives $5 - 0 = 5 \\le 11$ ✓, and $x = -4$ gives $5 + 8 = 13$, which fails — so the cut really is at $-3$."
+    "Subtract $5$ from both sides, which does not affect the sign: $-2x \\le 6$.",
+    "Divide both sides by $-2$ and flip $\\le$ to $\\ge$, because dividing by a negative reverses the order: $x \\ge -3$.",
+    "Check: $x = 0$ gives $5 \\le 11$, which is true, while $x = -4$ gives $5 + 8 = 13$, which fails. So the answer is $x \\ge -3$."
   ],
   "alternativeExplanations": [
     {

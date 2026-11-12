@@ -10,25 +10,25 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Before riding, $m = 0$. That makes this a \"where do you START\" question.",
+  "hint": "Before you ride at all, the number of minutes is zero. What part of the cost is left then?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Before riding, $m = 0$. That makes this a \"where do you START\" question."
+      "text": "Before you ride at all, the number of minutes is zero. What part of the cost is left then?"
     },
     {
       "level": "guide",
-      "text": "Plug in $m = 0$: $y = 2 + 0.15 \\times 0$."
+      "text": "Put $m = 0$ into the formula to get $y = 2 + 0.15 \\times 0$. Anything times zero is zero."
     },
     {
       "level": "reveal",
-      "text": "$y = 2 + 0 = 2$ dollars — the unlock fee."
+      "text": "$y = 2 + 0 = 2$, so you pay $2$ dollars before riding a single minute."
     }
   ],
   "explanation": [
-    "At $m = 0$: $y = 2 + 0.15 \\times 0 = 2$.",
-    "The $2$ is the $y$-intercept $b$ — the START, the unlock fee you pay no matter what.",
-    "The $0.15$ is the slope — how the cost MOVES per minute."
+    "Substitute $m = 0$ into the formula, since no minutes have been ridden: $y = 2 + 0.15 \\times 0 = 2$.",
+    "The $2$ is the $y$-intercept of the line. It is the starting fee you pay to unlock the scooter no matter how long you ride.",
+    "So the cost at zero minutes is $2$ dollars. The $0.15$ is the slope, the extra cost for each minute."
   ],
   "alternativeExplanations": [
     {

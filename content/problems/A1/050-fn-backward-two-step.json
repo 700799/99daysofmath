@@ -10,30 +10,30 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The machine does \"times $2$, then plus $3$\". Undo the steps in REVERSE order.",
+  "hint": "The machine does two things in order. To find the input, undo them starting with the one done last.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The machine does \"times $2$, then plus $3$\". Undo the steps in REVERSE order."
+      "text": "The machine does two things in order. To find the input, undo them starting with the one done last."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Simpler: $2x + 3 = 9$ gives $2x = 6$, so $x = 3$. Undo in reverse — subtract the $3$, then divide by the $2$."
+      "text": "Simpler: $2x + 3 = 9$ gives $2x = 6$, so $x = 3$. Undo in reverse: subtract the $3$, then divide by the $2$."
     },
     {
       "level": "guide",
-      "text": "First undo \"plus $3$\": $19 - 3 = 16$. Then undo \"times $2$\"."
+      "text": "Solve $2x + 3 = 19$: subtract $3$ to get $2x = 16$, then undo the \"times $2$\" by dividing."
     },
     {
       "level": "reveal",
-      "text": "$16 \\div 2 = 8$."
+      "text": "$16 \\div 2 = 8$, so the input that went in was $8$."
     }
   ],
   "explanation": [
-    "Set up: $2x + 3 = 19$.",
-    "Undo \"plus $3$\": $2x = 19 - 3 = 16$.",
-    "Undo \"times $2$\": $x = 16 \\div 2 = 8$."
+    "The output is $19$, so set the rule equal to it: $2x + 3 = 19$.",
+    "Undo the \"plus $3$\" first by subtracting $3$ from both sides: $2x = 16$.",
+    "Undo the \"times $2$\" by dividing both sides by $2$: $x = 8$, so the input was $8$."
   ],
   "alternativeExplanations": [
     {

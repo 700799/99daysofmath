@@ -18,11 +18,11 @@
     "55+3x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Sunrise is hour $0$ — that temperature is your START, $b$.",
+  "hint": "Sunrise is the moment when zero hours have passed. What does the temperature at that moment tell you?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sunrise is hour $0$ — that temperature is your START, $b$."
+      "text": "Sunrise is the moment when zero hours have passed. What does the temperature at that moment tell you?"
     },
     {
       "level": "nudge",
@@ -31,17 +31,17 @@
     },
     {
       "level": "guide",
-      "text": "$b = 55$ and the MOVE is $+3$ per hour, so $m = 3$."
+      "text": "The starting temperature gives $b = 55$, and a rise of $3$ degrees each hour gives $m = 3$. Put them into $y = mx + b$."
     },
     {
       "level": "reveal",
-      "text": "$y = 3x + 55$."
+      "text": "With slope $3$ and starting value $55$, the equation is $y = 3x + 55$."
     }
   ],
   "explanation": [
-    "At $x = 0$ hours the temperature is $55^\\circ$: $b = 55$.",
-    "It rises $3^\\circ$ per hour: $m = 3$.",
-    "Equation: $y = 3x + 55$."
+    "At $x = 0$ hours the temperature is $55^\\circ$, so the starting value is $b = 55$.",
+    "The temperature rises $3^\\circ$ every hour, so the slope is $m = 3$.",
+    "Putting these into $y = mx + b$ gives the equation $y = 3x + 55$."
   ],
   "alternativeExplanations": [
     {

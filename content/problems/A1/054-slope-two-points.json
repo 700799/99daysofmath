@@ -10,25 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Slope $= \\frac{y_2 - y_1}{x_2 - x_1}$ — change in $y$ over change in $x$.",
+  "hint": "With two points, slope is the change in the $y$-values divided by the change in the $x$-values.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Slope $= \\frac{y_2 - y_1}{x_2 - x_1}$ — change in $y$ over change in $x$."
+      "text": "With two points, slope is the change in the $y$-values divided by the change in the $x$-values."
     },
     {
       "level": "guide",
-      "text": "Rise: $8 - 2 = 6$. Run: $3 - 1 = 2$."
+      "text": "Subtract in the same order for both: the rise is $8 - 2 = 6$ and the run is $3 - 1 = 2$. Now divide rise by run."
     },
     {
       "level": "reveal",
-      "text": "$6 \\div 2 = 3$."
+      "text": "$6 \\div 2 = 3$, so the slope of the line is $3$."
     }
   ],
   "explanation": [
-    "Rise: $y_2 - y_1 = 8 - 2 = 6$.",
-    "Run: $x_2 - x_1 = 3 - 1 = 2$.",
-    "Slope $= \\frac{6}{2} = 3$."
+    "The rise is the change in $y$ between the points: $y_2 - y_1 = 8 - 2 = 6$.",
+    "The run is the change in $x$, taken in the same order: $x_2 - x_1 = 3 - 1 = 2$.",
+    "Slope is rise over run, so the slope is $\\frac{6}{2} = 3$."
   ],
   "alternativeExplanations": [
     {

@@ -18,25 +18,25 @@
     "-2t+20"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The height goes DOWN, so the rate is negative: $-2$ cm per hour.",
+  "hint": "The candle gets shorter as time passes. What does that mean for the sign of the rate of change?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The height goes DOWN, so the rate is negative: $-2$ cm per hour."
+      "text": "The candle gets shorter as time passes. What does that mean for the sign of the rate of change?"
     },
     {
       "level": "guide",
-      "text": "Start at $20$, subtract $2$ for each hour: $h = 20 - \\underline{\\ \\ }t$."
+      "text": "The starting height is $20$ and the candle loses $2$ cm each hour, so subtract $2t$ from $20$."
     },
     {
       "level": "reveal",
-      "text": "$h = 20 - 2t$."
+      "text": "Starting at $20$ and losing $2$ per hour gives the equation $h = 20 - 2t$."
     }
   ],
   "explanation": [
-    "Start: $b = 20$ cm at $t = 0$.",
-    "Move: the candle LOSES $2$ cm per hour, so $m = -2$.",
-    "Equation: $h = 20 - 2t$."
+    "At $t = 0$ the candle is $20$ cm tall, so the starting value is $20$.",
+    "The candle loses $2$ cm every hour, so the rate of change is negative: $m = -2$.",
+    "Starting value plus rate times hours gives the equation $h = 20 - 2t$."
   ],
   "alternativeExplanations": [
     {

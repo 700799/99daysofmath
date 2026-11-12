@@ -10,24 +10,25 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Open the mystery box: replace $n$ with $7$.",
+  "hint": "The letter $n$ is holding the place of a number, and the problem tells you which number it is.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Open the mystery box: replace $n$ with $7$."
+      "text": "The letter $n$ is holding the place of a number, and the problem tells you which number it is."
     },
     {
       "level": "guide",
-      "text": "Now compute $7 + 5$."
+      "text": "Swap the $n$ for $7$ so the expression becomes $7 + 5$, then add the two numbers."
     },
     {
       "level": "reveal",
-      "text": "$7 + 5 = 12$."
+      "text": "Since $7 + 5 = 12$, the value of $n + 5$ is $12$."
     }
   ],
   "explanation": [
-    "Substitute $n = 7$ into the expression.",
-    "$n + 5$ becomes $7 + 5 = 12$."
+    "The problem says $n = 7$, so we substitute, which means writing $7$ wherever $n$ appears.",
+    "The expression $n + 5$ becomes $7 + 5$, which now has only numbers in it and can be added.",
+    "Adding gives $7 + 5 = 12$, so the value of the expression is $12$."
   ],
   "alternativeExplanations": [
     {

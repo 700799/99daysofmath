@@ -10,25 +10,25 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$4x$ means $4$ times $x$. Undo multiplication with division.",
+  "hint": "$4x$ means $4$ multiplied by $x$. Which operation undoes a multiplication and keeps both sides equal?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$4x$ means $4$ times $x$. Undo multiplication with division."
+      "text": "$4x$ means $4$ multiplied by $x$. Which operation undoes a multiplication and keeps both sides equal?"
     },
     {
       "level": "guide",
-      "text": "Divide BOTH sides by $4$: $x = 28 \\div 4$."
+      "text": "Divide both sides by $4$ so that only $x$ remains on the left: $x = 28 \\div 4$."
     },
     {
       "level": "reveal",
-      "text": "$x = 7$."
+      "text": "$28 \\div 4 = 7$, so the equation's solution is $x = 7$."
     }
   ],
   "explanation": [
-    "Undo \"times 4\" by dividing both sides by 4.",
-    "$x = 28 \\div 4 = 7$.",
-    "Check: $4(7) = 28$. ✓"
+    "The $x$ is being multiplied by $4$, and division is the operation that undoes multiplication.",
+    "Dividing both sides by $4$ keeps the equation balanced and gives $x = 28 \\div 4 = 7$.",
+    "Check by substituting: $4(7) = 28$, which is true, so $x = 7$."
   ],
   "alternativeExplanations": [
     {

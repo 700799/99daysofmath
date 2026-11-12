@@ -14,11 +14,11 @@
     "x²+3x-10"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Same area model as before, but one edge piece is $-2$. Keep its sign!",
+  "hint": "Multiply length by width as with any rectangle. One of the numbers is negative, so carry its sign through each product.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same area model as before, but one edge piece is $-2$. Keep its sign!"
+      "text": "Multiply length by width as with any rectangle. One of the numbers is negative, so carry its sign through each product."
     },
     {
       "level": "nudge",
@@ -27,18 +27,18 @@
     },
     {
       "level": "guide",
-      "text": "The 4 patches: $x^2$, $-2x$, $5x$, and $5 \\times (-2) = -10$."
+      "text": "The four products are $x \\times x = x^2$, $x \\times (-2) = -2x$, $5 \\times x = 5x$ and $5 \\times (-2) = -10$. Add them and combine the middle terms."
     },
     {
       "level": "reveal",
-      "text": "$x^2 - 2x + 5x - 10 = x^2 + 3x - 10$."
+      "text": "$x^2 - 2x + 5x - 10$ combines to give an area of $x^2 + 3x - 10$ square meters."
     }
   ],
   "explanation": [
-    "Distribute twice: $(x + 5)(x - 2) = x(x - 2) + 5(x - 2)$.",
-    "That gives $x^2 - 2x + 5x - 10$.",
-    "Combine the middle terms: $-2x + 5x = 3x$.",
-    "Area: $x^2 + 3x - 10$ square meters."
+    "Distribute each term of the first bracket over the second: $(x + 5)(x - 2) = x(x - 2) + 5(x - 2)$.",
+    "Multiplying out each part, with the signs kept, gives $x^2 - 2x + 5x - 10$.",
+    "The two middle terms are like terms, so combine them: $-2x + 5x = 3x$.",
+    "The area of the patio is $x^2 + 3x - 10$ square meters."
   ],
   "alternativeExplanations": [
     {

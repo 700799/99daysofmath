@@ -10,25 +10,25 @@
   "primaryAnswer": "320",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Losing 20% means keeping 80%: multiply by 0.80 each year.",
+  "hint": "Each year the phone keeps part of its value. Find the percent it keeps and use that as a multiplier.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Losing 20% means keeping 80%: multiply by 0.80 each year."
+      "text": "Each year the phone keeps part of its value. Find the percent it keeps and use that as a multiplier."
     },
     {
       "level": "guide",
-      "text": "Year 1: $500 \\times 0.80 = 400$. Now do year 2."
+      "text": "Keeping $80\\%$ means multiplying by $0.80$ each year. After one year the value is $500 \\times 0.80 = 400$. Apply the factor once more."
     },
     {
       "level": "reveal",
-      "text": "Year 2: $400 \\times 0.80 = 320$ dollars."
+      "text": "$400 \\times 0.80 = 320$, so the phone is worth $320$ dollars after $2$ years."
     }
   ],
   "explanation": [
-    "Each year the phone keeps 80% of its value: factor 0.80.",
-    "Formula: $500 \\times 0.80^2 = 500 \\times 0.64$.",
-    "That is $\\$320$ after 2 years."
+    "Losing $20\\%$ a year means the phone keeps $80\\%$ of its value, so the yearly factor is $0.80$.",
+    "Two years means applying the factor twice: $500 \\times 0.80^2 = 500 \\times 0.64$.",
+    "Multiplying gives $320$, so the phone is worth $320$ dollars after two years."
   ],
   "alternativeExplanations": [
     {

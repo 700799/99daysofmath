@@ -10,25 +10,25 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Distribute: the $3$ snacks go to EVERYONE inside the parentheses — guests AND helpers.",
+  "hint": "Every person in the parentheses gets $3$ snacks, guests and helpers alike. Multiply the $3$ through first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Distribute: the $3$ snacks go to EVERYONE inside the parentheses — guests AND helpers."
+      "text": "Every person in the parentheses gets $3$ snacks, guests and helpers alike. Multiply the $3$ through first."
     },
     {
       "level": "guide",
-      "text": "$3g + 12 = 33$. Subtract $12$ from both sides."
+      "text": "Distributing gives $3g + 12 = 33$. Subtract $12$ from both sides, then divide by $3$."
     },
     {
       "level": "reveal",
-      "text": "$3g = 21$, so $g = 7$ guests."
+      "text": "$3g = 21$, so there are $g = 7$ guests at the table."
     }
   ],
   "explanation": [
-    "Distribute the 3: $3g + 12 = 33$.",
-    "Subtract 12: $3g = 21$.",
-    "Divide by 3: $g = 7$. Check: $3(7 + 4) = 3(11) = 33$. ✓"
+    "Distribute the $3$ to both terms inside the parentheses: $3g + 12 = 33$.",
+    "Subtract $12$ from both sides to remove the helpers' snacks, leaving $3g = 21$.",
+    "Divide both sides by $3$ to get $g = 7$ guests. Check: $3(7 + 4) = 3(11) = 33$."
   ],
   "alternativeExplanations": [
     {

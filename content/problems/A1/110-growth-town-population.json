@@ -10,11 +10,11 @@
   "primaryAnswer": "2420",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Up 10% means multiply by 1.10 each year — do NOT just add 200 twice.",
+  "hint": "Percent growth multiplies. The second year grows from the new population, not from the original one.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Up 10% means multiply by 1.10 each year — do NOT just add 200 twice."
+      "text": "Percent growth multiplies. The second year grows from the new population, not from the original one."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Year 1: $2000 \\times 1.10 = 2200$. Now grow year 2 from 2200."
+      "text": "Multiply by $1.10$ each year. After one year the town has $2000 \\times 1.10 = 2200$ people. Grow that number by the same factor again."
     },
     {
       "level": "reveal",
-      "text": "Year 2: $2200 \\times 1.10 = 2420$ people."
+      "text": "$2200 \\times 1.10 = 2420$, so the town has $2420$ people after $2$ years."
     }
   ],
   "explanation": [
-    "Growth factor: $100\\% + 10\\% = 1.10$ per year.",
-    "Two years: $2000 \\times 1.10^2 = 2000 \\times 1.21$.",
-    "That is 2420 people — more than $2000 + 200 + 200 = 2400$, because year 2 grows the NEW total."
+    "Growing by $10\\%$ means keeping $100\\%$ and adding $10\\%$, so the yearly growth factor is $1.10$.",
+    "Two years means using the factor twice: $2000 \\times 1.10^2 = 2000 \\times 1.21$.",
+    "That gives $2420$ people. It is more than $2000 + 200 + 200 = 2400$ because the second year grows the new total."
   ],
   "alternativeExplanations": [
     {

@@ -10,11 +10,11 @@
   "primaryAnswer": "1024",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Ten doublings means $1 \\times 2^{10}$ cents.",
+  "hint": "Doubling ten times is a power of $2$. Think about a quick way to reach that power without ten separate steps.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Ten doublings means $1 \\times 2^{10}$ cents."
+      "text": "Doubling ten times is a power of $2$. Think about a quick way to reach that power without ten separate steps."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Use a landmark: $2^5 = 32$, and $2^{10} = 32 \\times 32$."
+      "text": "The value is $1 \\times 2^{10}$ cents. Use the fact that $2^5 = 32$ and that $2^{10} = 2^5 \\times 2^5 = 32 \\times 32$."
     },
     {
       "level": "reveal",
-      "text": "$32 \\times 32 = 1024$ cents (over ten dollars!)."
+      "text": "$32 \\times 32 = 1024$, so the penny is worth $1024$ cents after ten doublings."
     }
   ],
   "explanation": [
-    "Doubling is exponential: $y = 1 \\cdot 2^x$ cents after $x$ doublings.",
-    "At $x = 10$: $2^{10} = 2^5 \\times 2^5 = 32 \\times 32$.",
-    "The penny is worth 1024 cents — more than $\\$10$ from one cent."
+    "Doubling is exponential growth, so the value after $x$ doublings is $y = 1 \\cdot 2^x$ cents.",
+    "At $x = 10$ split the power into two easier ones: $2^{10} = 2^5 \\times 2^5 = 32 \\times 32$.",
+    "Multiplying gives $1024$, so the penny is worth $1024$ cents, which is more than ten dollars."
   ],
   "alternativeExplanations": [
     {

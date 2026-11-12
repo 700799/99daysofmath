@@ -10,25 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Both rules give the same $y$, so the right sides must match: set $x + 3 = 2x$.",
+  "hint": "Both rules describe the same $y$. What does that tell you about the two right-hand sides?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Both rules give the same $y$, so the right sides must match: set $x + 3 = 2x$."
+      "text": "Both rules describe the same $y$. What does that tell you about the two right-hand sides?"
     },
     {
       "level": "guide",
-      "text": "Subtract $x$ from both sides of $x + 3 = 2x$ to get $3 = x$."
+      "text": "Set the two expressions for $y$ equal: $x + 3 = 2x$. Then subtract $x$ from both sides."
     },
     {
       "level": "reveal",
-      "text": "$x = 3$. Check: $y = 3 + 3 = 6$ and $y = 2 \\times 3 = 6$. Both rules agree."
+      "text": "Subtracting $x$ leaves $3 = x$, so $x = 3$. Both rules then give $y = 6$."
     }
   ],
   "explanation": [
-    "A system is two rules that must both be true at once — the point where two lines cross.",
-    "Since both equal $y$, set them equal: $x + 3 = 2x$.",
-    "Subtract $x$: $3 = x$. Check: both rules give $y = 6$. ✓"
+    "A system is a pair of rules that must both be true at once, which happens where the two lines cross.",
+    "Both right sides equal the same $y$, so they equal each other: $x + 3 = 2x$.",
+    "Subtract $x$ from both sides to get $x = 3$. Check: both rules give $y = 6$, so they agree."
   ],
   "alternativeExplanations": [
     {

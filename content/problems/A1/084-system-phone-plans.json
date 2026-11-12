@@ -10,25 +10,25 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Set the two costs equal: $20 + 5m = 10 + 7m$.",
+  "hint": "Write an expression for the cost of each plan after $m$ months. \"Cost the same\" tells you how to connect them.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Set the two costs equal: $20 + 5m = 10 + 7m$."
+      "text": "Write an expression for the cost of each plan after $m$ months. \"Cost the same\" tells you how to connect them."
     },
     {
       "level": "guide",
-      "text": "Subtract $5m$ and $10$ from both sides: $10 = 2m$."
+      "text": "Set the costs equal: $20 + 5m = 10 + 7m$. Subtract $5m$ and then $10$ from both sides to get $10 = 2m$."
     },
     {
       "level": "reveal",
-      "text": "$m = 10 \\div 2 = 5$ months."
+      "text": "$10 \\div 2 = 5$, so the plans cost the same after $5$ months."
     }
   ],
   "explanation": [
-    "Same cost means $20 + 5m = 10 + 7m$.",
-    "Subtract $5m$: $20 = 10 + 2m$. Subtract $10$: $10 = 2m$.",
-    "$m = 5$. Check: both plans cost $\\$45$ at 5 months. ✓"
+    "Plan A costs $20 + 5m$ and Plan B costs $10 + 7m$, so equal cost means $20 + 5m = 10 + 7m$.",
+    "Subtract $5m$ from both sides to get $20 = 10 + 2m$, then subtract $10$ to get $10 = 2m$.",
+    "Divide by $2$ to get $m = 5$ months. Check: both plans cost $45$ dollars at that point."
   ],
   "alternativeExplanations": [
     {

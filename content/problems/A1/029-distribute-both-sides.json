@@ -10,11 +10,11 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Distribute first: hand the $4$ to both terms inside the parentheses.",
+  "hint": "Clear the parentheses first. After that it is an equation with $x$ on both sides.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Distribute first: hand the $4$ to both terms inside the parentheses."
+      "text": "Clear the parentheses first. After that it is an equation with $x$ on both sides."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$4x - 8 = 2x + 6$. Subtract $2x$ from both sides, then add $8$."
+      "text": "Distributing gives $4x - 8 = 2x + 6$. Subtract $2x$ from both sides, then add $8$ to both sides."
     },
     {
       "level": "reveal",
-      "text": "$2x = 14$, so $x = 7$."
+      "text": "$2x = 14$, and dividing by $2$ gives the solution $x = 7$."
     }
   ],
   "explanation": [
-    "Distribute: $4(x - 2) = 4x - 8$.",
-    "Subtract $2x$ from both sides: $2x - 8 = 6$.",
-    "Add 8: $2x = 14$, so $x = 7$. Check: $4(7 - 2) = 20$ and $2(7) + 6 = 20$. ✓"
+    "Distribute the $4$ to both terms inside the parentheses: $4(x - 2) = 4x - 8$.",
+    "Subtract $2x$ from both sides to gather the variable on the left: $2x - 8 = 6$.",
+    "Add $8$ to both sides to get $2x = 14$, then divide by $2$ to get $x = 7$. Check: $4(7 - 2) = 20$ and $2(7) + 6 = 20$."
   ],
   "alternativeExplanations": [
     {

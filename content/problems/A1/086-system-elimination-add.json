@@ -10,25 +10,25 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Stack the equations and add them. The $+y$ and $-y$ cancel out.",
+  "hint": "Look at the $y$ terms in the two equations. One is added and the other is subtracted.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Stack the equations and add them. The $+y$ and $-y$ cancel out."
+      "text": "Look at the $y$ terms in the two equations. One is added and the other is subtracted."
     },
     {
       "level": "guide",
-      "text": "Adding gives $2x = 14$."
+      "text": "Add the two equations together. The $+y$ and $-y$ cancel, leaving $2x = 14$."
     },
     {
       "level": "reveal",
-      "text": "$x = 14 \\div 2 = 7$. (And $y = 3$.)"
+      "text": "$14 \\div 2 = 7$, so $x = 7$. The matching value of $y$ is $3$."
     }
   ],
   "explanation": [
-    "Elimination means \"stack and cancel.\" Stack the two equations and add straight down.",
-    "$x + x = 2x$, $y + (-y) = 0$, and $10 + 4 = 14$. The $y$s vanish: $2x = 14$.",
-    "$x = 7$. Check: $7 + 3 = 10$ and $7 - 3 = 4$. ✓"
+    "Elimination means adding or subtracting whole equations so that one variable cancels. Here, add them.",
+    "Adding gives $x + x = 2x$, $y + (-y) = 0$ and $10 + 4 = 14$, so the result is $2x = 14$.",
+    "Divide by $2$ to get $x = 7$. Check with $y = 3$: $7 + 3 = 10$ and $7 - 3 = 4$."
   ],
   "alternativeExplanations": [
     {

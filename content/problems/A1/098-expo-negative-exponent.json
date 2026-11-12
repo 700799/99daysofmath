@@ -12,30 +12,30 @@
     "0.125"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A negative exponent means \"flip it under 1\": $2^{-3} = \\frac{1}{2^3}$.",
+  "hint": "A negative exponent does not make the answer negative. It moves the power to the bottom of a fraction.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A negative exponent means \"flip it under 1\": $2^{-3} = \\frac{1}{2^3}$."
+      "text": "A negative exponent does not make the answer negative. It moves the power to the bottom of a fraction."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up with $2^{-1}$, which is $\\frac{1}{2}$. A negative exponent flips the power under a $1$ — so $2^{-3}$ flips $2^3$."
+      "text": "Warm up with $2^{-1}$, which is $\\frac{1}{2}$. A negative exponent flips the power under a $1$, so $2^{-3}$ flips $2^3$."
     },
     {
       "level": "guide",
-      "text": "Evaluate the bottom: $2^3 = 8$."
+      "text": "Rewrite $2^{-3}$ as $\\frac{1}{2^3}$, then work out the power on the bottom."
     },
     {
       "level": "reveal",
-      "text": "$2^{-3} = \\frac{1}{8}$."
+      "text": "$2^3 = 8$, so the value of $2^{-3}$ is $\\frac{1}{8}$."
     }
   ],
   "explanation": [
-    "A negative exponent is not a negative number — it flips the power under 1.",
-    "$2^{-3} = \\frac{1}{2^3}$, and $2^3 = 8$.",
-    "So $2^{-3} = \\frac{1}{8}$."
+    "A negative exponent means take the reciprocal, so the power moves under a $1$ and its exponent becomes positive.",
+    "That gives $2^{-3} = \\frac{1}{2^3}$, and the bottom is $2 \\times 2 \\times 2 = 8$.",
+    "So $2^{-3} = \\frac{1}{8}$, which is a small positive fraction and not a negative number."
   ],
   "alternativeExplanations": [
     {

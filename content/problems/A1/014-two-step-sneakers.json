@@ -10,25 +10,25 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Undo the $+20$ first: subtract $20$ from both sides.",
+  "hint": "Two things were done to $w$: it was multiplied by $8$, then $20$ was added. Undo the last one first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Undo the $+20$ first: subtract $20$ from both sides."
+      "text": "Two things were done to $w$: it was multiplied by $8$, then $20$ was added. Undo the last one first."
     },
     {
       "level": "guide",
-      "text": "$8w = 48$. Now divide both sides by $8$."
+      "text": "Subtract $20$ from both sides to get $8w = 48$. Then divide both sides by $8$."
     },
     {
       "level": "reveal",
-      "text": "$w = 48 \\div 8 = 6$ weeks."
+      "text": "$48 \\div 8 = 6$, so it takes $6$ weeks to afford the sneakers."
     }
   ],
   "explanation": [
-    "Subtract 20 from both sides: $8w = 48$.",
-    "Divide both sides by 8: $w = 6$.",
-    "Check: $8(6) + 20 = 68$. ✓ 6 weeks."
+    "Undo the addition first by subtracting $20$ from both sides, which leaves $8w = 48$.",
+    "Now undo the multiplication by dividing both sides by $8$, which gives $w = 6$.",
+    "Check: $8(6) + 20 = 48 + 20 = 68$, so you can buy the sneakers after $6$ weeks."
   ],
   "alternativeExplanations": [
     {

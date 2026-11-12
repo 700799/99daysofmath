@@ -10,25 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Subtract $18$ from both sides first.",
+  "hint": "Solve this like a two-step equation. Then read your answer as a number of whole weeks.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Subtract $18$ from both sides first."
+      "text": "Solve this like a two-step equation. Then read your answer as a number of whole weeks."
     },
     {
       "level": "guide",
-      "text": "$8w \\ge 32$. Divide both sides by $8$."
+      "text": "Subtract $18$ from both sides to get $8w \\ge 32$. Then divide both sides by $8$."
     },
     {
       "level": "reveal",
-      "text": "$w \\ge 4$, so the fewest whole weeks is $4$."
+      "text": "$w \\ge 4$, so the fewest whole weeks you must save is $4$."
     }
   ],
   "explanation": [
-    "Subtract 18 from both sides: $8w \\ge 32$.",
-    "Divide by 8 (positive, no flip): $w \\ge 4$.",
-    "The fewest whole weeks is 4. Check: $8(4) + 18 = \\$50$, and \"at least $\\$50$\" includes exactly $\\$50$. ✓"
+    "Subtract $18$ from both sides to remove the money you already have: $8w \\ge 32$.",
+    "Divide both sides by $8$. It is positive, so the sign does not flip, and $w \\ge 4$.",
+    "The smallest value allowed is $4$ weeks. Check: $8(4) + 18 = 50$ dollars, and \"at least $\\$50$\" includes exactly $\\$50$."
   ],
   "alternativeExplanations": [
     {

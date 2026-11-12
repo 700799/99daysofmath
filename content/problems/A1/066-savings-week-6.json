@@ -10,25 +10,25 @@
   "primaryAnswer": "45",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "START at $15$, then MOVE up $5$ per week for $6$ weeks.",
+  "hint": "You begin with some money and add the same amount every week. Find how much was added, then include the start.",
   "hints": [
     {
       "level": "nudge",
-      "text": "START at $15$, then MOVE up $5$ per week for $6$ weeks."
+      "text": "You begin with some money and add the same amount every week. Find how much was added, then include the start."
     },
     {
       "level": "guide",
-      "text": "Added money: $5 \\times 6 = 30$. Now add the start."
+      "text": "Put $w = 6$ into the formula to get $s = 15 + 5 \\times 6$. Work out the weekly savings first."
     },
     {
       "level": "reveal",
-      "text": "$15 + 30 = 45$ dollars."
+      "text": "$5 \\times 6 = 30$ and $15 + 30 = 45$, so you have $45$ dollars after $6$ weeks."
     }
   ],
   "explanation": [
-    "Plug in $w = 6$: $s = 15 + 5 \\times 6$.",
-    "$5 \\times 6 = 30$.",
-    "$15 + 30 = 45$ — you have $\\$45$."
+    "Substitute $w = 6$ into the savings formula because six weeks have passed: $s = 15 + 5 \\times 6$.",
+    "Multiply first to find the money added over six weeks: $5 \\times 6 = 30$ dollars.",
+    "Add the money you started with: $15 + 30 = 45$, so you have $45$ dollars."
   ],
   "alternativeExplanations": [
     {

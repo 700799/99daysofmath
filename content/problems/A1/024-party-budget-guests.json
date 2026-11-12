@@ -10,25 +10,25 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The room fee is one-time. Subtract $40$ from both sides first.",
+  "hint": "The room fee is paid once no matter how many guests come. Take care of it before the per-guest cost.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The room fee is one-time. Subtract $40$ from both sides first."
+      "text": "The room fee is paid once no matter how many guests come. Take care of it before the per-guest cost."
     },
     {
       "level": "guide",
-      "text": "$6g = 60$. Divide both sides by $6$."
+      "text": "Subtract $40$ from both sides to get $6g = 60$. Then divide both sides by $6$."
     },
     {
       "level": "reveal",
-      "text": "$g = 60 \\div 6 = 10$ guests."
+      "text": "$60 \\div 6 = 10$, so you can invite $10$ guests."
     }
   ],
   "explanation": [
-    "Subtract the room fee: $6g = 100 - 40 = 60$.",
-    "Divide by 6: $g = 10$.",
-    "Check: $40 + 6(10) = 100$. ✓ You can invite 10 guests."
+    "Subtract the room fee from both sides to see what is left for guests: $6g = 100 - 40 = 60$.",
+    "Each guest costs $6$ dollars, so divide both sides by $6$ to get $g = 10$.",
+    "Check: $40 + 6(10) = 100$, which uses the whole budget, so you can invite $10$ guests."
   ],
   "alternativeExplanations": [
     {

@@ -13,25 +13,25 @@
     "5 (x + 2)"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Pull out what every term shares. What divides both $5x$ and $10$?",
+  "hint": "Factoring is distributing in reverse. Start by finding the largest number that divides both terms.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Pull out what every term shares. What divides both $5x$ and $10$?"
+      "text": "Factoring is distributing in reverse. Start by finding the largest number that divides both terms."
     },
     {
       "level": "guide",
-      "text": "The GCF is $5$. Write $5x + 10 = 5(\\;? + ?\\;)$ and fill the blanks."
+      "text": "The greatest common factor is $5$. Divide each term by $5$ to find what stays inside the parentheses: $5x \\div 5$ and $10 \\div 5$."
     },
     {
       "level": "reveal",
-      "text": "$5x + 10 = 5(x + 2)$."
+      "text": "$5x \\div 5 = x$ and $10 \\div 5 = 2$, so the factored form is $5(x + 2)$."
     }
   ],
   "explanation": [
-    "Both terms share a factor of $5$.",
-    "Pull it out: $5x = 5 \\times x$ and $10 = 5 \\times 2$.",
-    "Factored form: $5(x + 2)$."
+    "Both terms can be divided by $5$, so $5$ is the greatest common factor.",
+    "Write each term as $5$ times something: $5x = 5 \\times x$ and $10 = 5 \\times 2$.",
+    "Pull the shared $5$ out in front of the parentheses to get the factored form $5(x + 2)$."
   ],
   "alternativeExplanations": [
     {

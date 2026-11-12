@@ -10,25 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitution means \"swap in what $y$ equals.\" Replace $y$ in the second equation with $x + 1$.",
+  "hint": "The first equation already tells you what $y$ is equal to. Use that inside the second equation.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitution means \"swap in what $y$ equals.\" Replace $y$ in the second equation with $x + 1$."
+      "text": "The first equation already tells you what $y$ is equal to. Use that inside the second equation."
     },
     {
       "level": "guide",
-      "text": "That gives $x + (x + 1) = 9$, so $2x + 1 = 9$."
+      "text": "Replace $y$ with $x + 1$ in the second equation: $x + (x + 1) = 9$, which simplifies to $2x + 1 = 9$."
     },
     {
       "level": "reveal",
-      "text": "$2x = 8$, so $x = 4$. (And $y = 5$.)"
+      "text": "$2x = 8$, so $x = 4$. The matching value of $y$ is $5$."
     }
   ],
   "explanation": [
-    "The first rule tells you exactly what $y$ is: $x + 1$. Swap that in for $y$ in the second rule.",
-    "$x + (x + 1) = 9$ becomes $2x + 1 = 9$, so $2x = 8$.",
-    "$x = 4$. Check: $y = 5$ and $4 + 5 = 9$. ✓"
+    "The first equation says $y$ equals $x + 1$, so substitute that expression for $y$ in the second equation.",
+    "This gives $x + (x + 1) = 9$, which combines to $2x + 1 = 9$, and subtracting $1$ leaves $2x = 8$.",
+    "Divide by $2$ to get $x = 4$. Check: $y = 5$ and $4 + 5 = 9$, which is true."
   ],
   "alternativeExplanations": [
     {

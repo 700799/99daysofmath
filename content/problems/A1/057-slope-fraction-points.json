@@ -12,25 +12,25 @@
     "0.75"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Slope $= \\frac{y_2 - y_1}{x_2 - x_1}$. Keep the answer as a fraction.",
+  "hint": "Use the change in $y$ over the change in $x$. The answer does not have to be a whole number.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Slope $= \\frac{y_2 - y_1}{x_2 - x_1}$. Keep the answer as a fraction."
+      "text": "Use the change in $y$ over the change in $x$. The answer does not have to be a whole number."
     },
     {
       "level": "guide",
-      "text": "Rise: $4 - 1 = 3$. Run: $6 - 2 = 4$."
+      "text": "The rise is $4 - 1 = 3$ and the run is $6 - 2 = 4$. Write the rise over the run as a fraction."
     },
     {
       "level": "reveal",
-      "text": "Slope $= \\frac{3}{4}$."
+      "text": "Rise over run is $\\frac{3}{4}$, so the slope of the line is $\\frac{3}{4}$."
     }
   ],
   "explanation": [
-    "Rise: $4 - 1 = 3$.",
-    "Run: $6 - 2 = 4$.",
-    "Slope $= \\frac{3}{4}$ — up $3$ for every $4$ across. A slope does not have to be a whole number!"
+    "The rise is the change in the $y$-values: $4 - 1 = 3$.",
+    "The run is the change in the $x$-values, in the same order: $6 - 2 = 4$.",
+    "Slope is rise over run, so the slope is $\\frac{3}{4}$. The line goes up $3$ for every $4$ across."
   ],
   "alternativeExplanations": [
     {

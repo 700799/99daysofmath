@@ -10,25 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Slope = rise $\\div$ run.",
+  "hint": "Slope compares how far something goes up with how far it goes across. Which two numbers in the story are those?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Slope = rise $\\div$ run."
+      "text": "Slope compares how far something goes up with how far it goes across. Which two numbers in the story are those?"
     },
     {
       "level": "guide",
-      "text": "Rise is $6$, run is $2$: compute $6 \\div 2$."
+      "text": "The rise is $6$ and the run is $2$, so set up rise over run as $\\frac{6}{2}$ and divide."
     },
     {
       "level": "reveal",
-      "text": "$6 \\div 2 = 3$."
+      "text": "$6 \\div 2 = 3$, so the slope of the staircase is $3$."
     }
   ],
   "explanation": [
-    "Slope is rise over run: $\\frac{6}{2}$.",
-    "$6 \\div 2 = 3$.",
-    "For every $1$ step across, the stairs climb $3$ up."
+    "Slope is defined as rise over run, so write the rise of $6$ over the run of $2$: $\\frac{6}{2}$.",
+    "Carry out the division to turn the fraction into one number: $6 \\div 2 = 3$.",
+    "The slope is $3$, which means the stairs climb $3$ units for every $1$ unit across."
   ],
   "alternativeExplanations": [
     {

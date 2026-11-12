@@ -10,11 +10,11 @@
   "primaryAnswer": "-12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The battery is DRAINING, so the rate should come out negative.",
+  "hint": "The battery level is falling over time. What does that tell you about the sign of the rate?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The battery is DRAINING, so the rate should come out negative."
+      "text": "The battery level is falling over time. What does that tell you about the sign of the rate?"
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Change in percent: $64 - 88 = -24$. Change in hours: $3 - 1 = 2$."
+      "text": "The percent changed by $64 - 88 = -24$ while the hours changed by $3 - 1 = 2$. Divide the change in percent by the change in hours."
     },
     {
       "level": "reveal",
-      "text": "$-24 \\div 2 = -12$ percent per hour."
+      "text": "$-24 \\div 2 = -12$, so the rate of change is $-12$ percent per hour."
     }
   ],
   "explanation": [
-    "Points: $(1, 88)$ and $(3, 64)$.",
-    "Rise: $64 - 88 = -24$. Run: $3 - 1 = 2$.",
-    "Slope $= \\frac{-24}{2} = -12$: the battery loses $12\\%$ each hour."
+    "Write the log as two points with the hour first and the percent second: $(1, 88)$ and $(3, 64)$.",
+    "The change in percent is $64 - 88 = -24$, and the change in hours is $3 - 1 = 2$.",
+    "The rate of change is the slope, $\\frac{-24}{2} = -12$, so the battery loses $12$ percent each hour."
   ],
   "alternativeExplanations": [
     {

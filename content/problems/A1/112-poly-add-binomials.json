@@ -13,15 +13,15 @@
     "9 + 5x"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Sort the stickers: $x$-terms in one pile, plain numbers in another.",
+  "hint": "Sort the terms into two kinds: the ones with $x$ and the plain numbers. Each kind is added separately.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sort the stickers: $x$-terms in one pile, plain numbers in another."
+      "text": "Sort the terms into two kinds: the ones with $x$ and the plain numbers. Each kind is added separately."
     },
     {
       "level": "guide",
-      "text": "$3x + 2x$ makes one pile, $4 + 5$ makes the other."
+      "text": "Group the like terms: $3x + 2x$ for the $x$-terms and $4 + 5$ for the numbers. Add each group."
     },
     {
       "level": "reveal",
@@ -29,10 +29,10 @@
     }
   ],
   "explanation": [
-    "Adding polynomials means combining like terms.",
-    "$x$-terms: $3x + 2x = 5x$.",
-    "Numbers: $4 + 5 = 9$.",
-    "Answer: $5x + 9$."
+    "Adding polynomials means combining like terms, and the parentheses can be dropped because everything is added.",
+    "Combine the $x$-terms by adding their coefficients: $3x + 2x = 5x$.",
+    "Combine the plain numbers in the same way: $4 + 5 = 9$.",
+    "Putting the two results together, the sum is $5x + 9$."
   ],
   "alternativeExplanations": [
     {

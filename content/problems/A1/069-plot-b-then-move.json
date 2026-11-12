@@ -10,11 +10,11 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The slope $3$ means: for every $1$ right, go UP $3$.",
+  "hint": "The slope tells you how much the line rises each time you move $1$ unit to the right.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The slope $3$ means: for every $1$ right, go UP $3$."
+      "text": "The slope tells you how much the line rises each time you move $1$ unit to the right."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Start at height $2$, rise $3$: $2 + 3 = ?$"
+      "text": "The slope is $3$, so moving right $1$ from $(0, 2)$ raises the height by $3$. Add that to the starting height of $2$."
     },
     {
       "level": "reveal",
-      "text": "You land at $(1, 5)$, so $y = 5$."
+      "text": "$2 + 3 = 5$, so you land on the point $(1, 5)$ and the $y$-value is $5$."
     }
   ],
   "explanation": [
-    "Graphing recipe: plot $b$, then use $m$ as rise over run.",
-    "Slope $3 = \\frac{3}{1}$: right $1$, up $3$.",
-    "From $(0, 2)$: right $1$, up $3$ lands on $(1, 5)$ — the $y$-value is $5$."
+    "To graph a line in slope-intercept form, plot the $y$-intercept first and then use the slope as rise over run.",
+    "The slope $3$ is the same as $\\frac{3}{1}$, which means go up $3$ for each $1$ to the right.",
+    "Starting from $(0, 2)$, moving right $1$ and up $3$ lands on $(1, 5)$, so the $y$-value is $5$."
   ],
   "alternativeExplanations": [
     {

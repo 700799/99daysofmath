@@ -10,11 +10,11 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "This is a difference of squares: $x^2 - 16 = x^2 - (\\;?\\;)^2$.",
+  "hint": "The leftover area is one square minus another square. Which number has a square equal to $16$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "This is a difference of squares: $x^2 - 16 = x^2 - (\\;?\\;)^2$."
+      "text": "The leftover area is one square minus another square. Which number has a square equal to $16$?"
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "What number squared gives $16$?"
+      "text": "Write $16$ as a square so the expression becomes $x^2 - 4^2$, then match it to the pattern $(x + a)(x - a)$."
     },
     {
       "level": "reveal",
-      "text": "$4^2 = 16$, so $x^2 - 16 = (x + 4)(x - 4)$ and $a = 4$."
+      "text": "Since $4^2 = 16$, the area factors as $(x + 4)(x - 4)$, so $a = 4$."
     }
   ],
   "explanation": [
-    "Write $16$ as a square: $16 = 4^2$.",
-    "Difference of squares: $x^2 - 4^2 = (x + 4)(x - 4)$.",
-    "So $a = 4$."
+    "Write $16$ as a perfect square, $16 = 4^2$, so the area is $x^2 - 4^2$.",
+    "A difference of squares factors as a sum times a difference: $x^2 - 4^2 = (x + 4)(x - 4)$.",
+    "Comparing with the given form $(x + a)(x - a)$ shows that the value is $a = 4$."
   ],
   "alternativeExplanations": [
     {

@@ -10,25 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$g$ is just another machine's name. Feed it a $3$: replace $x$ with $3$.",
+  "hint": "The letter $g$ is only the name of this rule. It works the same way as a rule named $f$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$g$ is just another machine's name. Feed it a $3$: replace $x$ with $3$."
+      "text": "The letter $g$ is only the name of this rule. It works the same way as a rule named $f$."
     },
     {
       "level": "guide",
-      "text": "Compute $2 \\times 3$ first, then subtract from $10$."
+      "text": "Replace $x$ with $3$ to get $10 - 2 \\times 3$. Do the multiplication before the subtraction."
     },
     {
       "level": "reveal",
-      "text": "$10 - 2 \\times 3 = 10 - 6 = 4$."
+      "text": "$2 \\times 3 = 6$ and $10 - 6 = 4$, so the value of $g(3)$ is $4$."
     }
   ],
   "explanation": [
-    "Replace $x$ with $3$: $g(3) = 10 - 2 \\times 3$.",
-    "Multiply first: $2 \\times 3 = 6$.",
-    "Subtract: $10 - 6 = 4$."
+    "$g(3)$ means the input is $3$, so replace $x$ with $3$: $g(3) = 10 - 2 \\times 3$.",
+    "Multiplication comes before subtraction, so work out $2 \\times 3 = 6$ first.",
+    "Then subtract from $10$: $10 - 6 = 4$, so the answer is $g(3) = 4$."
   ],
   "alternativeExplanations": [
     {

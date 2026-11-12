@@ -12,19 +12,19 @@
     "x⁵"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Write it as a fraction: 8 copies of $x$ on top, 3 copies on the bottom.",
+  "hint": "Write the division as a fraction and picture the copies of $x$ on the top and on the bottom.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Write it as a fraction: 8 copies of $x$ on top, 3 copies on the bottom."
+      "text": "Write the division as a fraction and picture the copies of $x$ on the top and on the bottom."
     },
     {
       "level": "guide",
-      "text": "Each bottom copy cancels one top copy. How many top copies survive?"
+      "text": "There are $8$ copies of $x$ on top and $3$ on the bottom. Each bottom copy cancels one top copy, so work out $8 - 3$."
     },
     {
       "level": "reveal",
-      "text": "$8 - 3 = 5$ copies survive: $x^5$."
+      "text": "$8 - 3 = 5$ copies are left on top, so the answer is $x^5$."
     }
   ],
   "explanation": [

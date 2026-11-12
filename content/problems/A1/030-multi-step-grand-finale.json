@@ -10,11 +10,11 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Do the full cleanup routine: distribute the $5$, then combine like terms on the left.",
+  "hint": "Tidy the left side completely before moving anything across the equals sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Do the full cleanup routine: distribute the $5$, then combine like terms on the left."
+      "text": "Tidy the left side completely before moving anything across the equals sign."
     },
     {
       "level": "nudge",
@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "$5x - 5 - 2x = 3x - 5$, so the equation is $3x - 5 = 2x + 7$. Subtract $2x$ from both sides."
+      "text": "Distribute and combine: $5x - 5 - 2x = 3x - 5$, so the equation is $3x - 5 = 2x + 7$. Subtract $2x$, then add $5$."
     },
     {
       "level": "reveal",
-      "text": "$x - 5 = 7$, so $x = 12$."
+      "text": "$x - 5 = 7$, and adding $5$ to both sides gives the solution $x = 12$."
     }
   ],
   "explanation": [
-    "Distribute: $5(x - 1) = 5x - 5$.",
-    "Combine like terms on the left: $5x - 5 - 2x = 3x - 5$.",
-    "Subtract $2x$ from both sides: $x - 5 = 7$, so $x = 12$.",
-    "Check: $5(11) - 24 = 31$ and $2(12) + 7 = 31$. ✓"
+    "Distribute the $5$ to both terms in the parentheses: $5(x - 1) = 5x - 5$.",
+    "Combine the like terms on the left side: $5x - 5 - 2x = 3x - 5$.",
+    "Subtract $2x$ from both sides to get $x - 5 = 7$, then add $5$ to get $x = 12$.",
+    "Check: the left side is $5(11) - 24 = 31$ and the right side is $2(12) + 7 = 31$, so $x = 12$."
   ],
   "alternativeExplanations": [
     {

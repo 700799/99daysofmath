@@ -10,25 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Get all the $x$'s on one team: subtract $2x$ from both sides.",
+  "hint": "There is an $x$ term on each side. Collect them on one side before you do anything else.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Get all the $x$'s on one team: subtract $2x$ from both sides."
+      "text": "There is an $x$ term on each side. Collect them on one side before you do anything else."
     },
     {
       "level": "guide",
-      "text": "$5x - 2x = 12$, so $3x = 12$."
+      "text": "Subtract $2x$ from both sides so that $5x - 2x = 12$, which simplifies to $3x = 12$. Then divide by $3$."
     },
     {
       "level": "reveal",
-      "text": "$x = 12 \\div 3 = 4$."
+      "text": "$12 \\div 3 = 4$, so the equation's solution is $x = 4$."
     }
   ],
   "explanation": [
-    "Subtract $2x$ from both sides: $3x = 12$.",
-    "Divide by 3: $x = 4$.",
-    "Check: $5(4) = 20$ and $2(4) + 12 = 20$. ✓ Both sides match."
+    "Subtract $2x$ from both sides to gather the variable on the left: $3x = 12$.",
+    "Divide both sides by $3$ to undo the multiplication, which gives $x = 4$.",
+    "Check: $5(4) = 20$ and $2(4) + 12 = 20$, so both sides match and $x = 4$."
   ],
   "alternativeExplanations": [
     {

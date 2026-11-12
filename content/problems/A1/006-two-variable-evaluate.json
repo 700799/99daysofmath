@@ -10,25 +10,25 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two mystery boxes this time: put $3$ in for $x$ and $4$ in for $y$.",
+  "hint": "There are two letters here, and each one has its own value to put in.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two mystery boxes this time: put $3$ in for $x$ and $4$ in for $y$."
+      "text": "There are two letters here, and each one has its own value to put in."
     },
     {
       "level": "guide",
-      "text": "$2x = 2 \\times 3 = 6$. Now add $y$."
+      "text": "Replace $x$ with $3$ and $y$ with $4$ to get $2(3) + 4$. Do the multiplication before the addition."
     },
     {
       "level": "reveal",
-      "text": "$6 + 4 = 10$."
+      "text": "$2 \\times 3 = 6$ and $6 + 4 = 10$, so the value of $2x + y$ is $10$."
     }
   ],
   "explanation": [
-    "Substitute both values: $2(3) + 4$.",
-    "Multiply first: $2 \\times 3 = 6$.",
-    "Add: $6 + 4 = 10$."
+    "Substitute both given values, writing $3$ for $x$ and $4$ for $y$, to get $2(3) + 4$.",
+    "Multiply before adding, because the $2$ belongs to the $x$ only: $2 \\times 3 = 6$.",
+    "Now add the value of $y$: $6 + 4 = 10$, so the expression equals $10$."
   ],
   "alternativeExplanations": [
     {

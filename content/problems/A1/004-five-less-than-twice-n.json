@@ -14,25 +14,25 @@
     "-5+2n"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Twice $n$\" means $2n$. Build that part first.",
+  "hint": "This phrase has two parts. Work out which part is built first and which part is done to it afterwards.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Twice $n$\" means $2n$. Build that part first."
+      "text": "This phrase has two parts. Work out which part is built first and which part is done to it afterwards."
     },
     {
       "level": "guide",
-      "text": "\"$5$ less than\" something means you SUBTRACT $5$ from it — the $5$ comes off the end, not the front."
+      "text": "\"Twice a number\" is $2n$. \"$5$ less than\" that amount means you take $5$ away from $2n$, not the other way round."
     },
     {
       "level": "reveal",
-      "text": "Take $2n$ and subtract $5$: the expression is $2n - 5$."
+      "text": "Start with $2n$ and subtract $5$, so the expression is $2n - 5$."
     }
   ],
   "explanation": [
-    "\"Twice a number $n$\" is $2n$.",
-    "\"5 less than\" that amount means subtract 5 FROM it: $2n - 5$.",
-    "Careful: it is not $5 - 2n$ — the phrase flips the order."
+    "\"Twice a number $n$\" means two times $n$, which is written $2n$.",
+    "\"$5$ less than\" an amount means that amount made smaller by $5$, so the $5$ is subtracted from $2n$.",
+    "The expression is $2n - 5$. It is not $5 - 2n$, because the words come in the opposite order to the symbols."
   ],
   "alternativeExplanations": [
     {

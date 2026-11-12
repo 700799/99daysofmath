@@ -10,25 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Swap in what $y$ equals: replace $y$ in $3x + y = 14$ with $2x - 1$.",
+  "hint": "One equation is already solved for $y$. That makes substitution the natural method here.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Swap in what $y$ equals: replace $y$ in $3x + y = 14$ with $2x - 1$."
+      "text": "One equation is already solved for $y$. That makes substitution the natural method here."
     },
     {
       "level": "guide",
-      "text": "$3x + 2x - 1 = 14$ becomes $5x - 1 = 14$, so $5x = 15$."
+      "text": "Replace $y$ with $2x - 1$ in the second equation: $3x + 2x - 1 = 14$, which simplifies to $5x - 1 = 14$."
     },
     {
       "level": "reveal",
-      "text": "$x = 15 \\div 5 = 3$. (And $y = 2 \\times 3 - 1 = 5$.)"
+      "text": "$5x = 15$, so $x = 3$. The matching value of $y$ is $2 \\times 3 - 1 = 5$."
     }
   ],
   "explanation": [
-    "The first rule hands you $y$ on a plate: $y = 2x - 1$. Swap it into the second rule.",
-    "$3x + (2x - 1) = 14$ combines to $5x - 1 = 14$.",
-    "Add 1: $5x = 15$, so $x = 3$. Check: $9 + 5 = 14$. ✓"
+    "The first equation gives $y$ as $2x - 1$, so substitute that expression for $y$ in the second equation.",
+    "This gives $3x + (2x - 1) = 14$, and combining like terms makes it $5x - 1 = 14$.",
+    "Add $1$ to get $5x = 15$, then divide by $5$ to get $x = 3$. Check: $y = 5$ and $9 + 5 = 14$."
   ],
   "alternativeExplanations": [
     {

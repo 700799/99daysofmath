@@ -12,25 +12,25 @@
     "x⁸"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$(x^2)^4$ means four copies of $x^2$ multiplied: $x^2 \\cdot x^2 \\cdot x^2 \\cdot x^2$.",
+  "hint": "The outside exponent tells you how many copies of the whole bracket are multiplied together.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$(x^2)^4$ means four copies of $x^2$ multiplied: $x^2 \\cdot x^2 \\cdot x^2 \\cdot x^2$."
+      "text": "The outside exponent tells you how many copies of the whole bracket are multiplied together."
     },
     {
       "level": "guide",
-      "text": "Each $x^2$ carries 2 copies of $x$, and there are 4 groups: $2 \\times 4$ copies."
+      "text": "$(x^2)^4$ is four groups of $x^2$, and each group holds $2$ copies of $x$, so there are $2 \\times 4$ copies."
     },
     {
       "level": "reveal",
-      "text": "$(x^2)^4 = x^{2 \\times 4} = x^8$."
+      "text": "$2 \\times 4 = 8$, so the expression simplifies to $x^8$."
     }
   ],
   "explanation": [
-    "A power of a power is copies of copies: 4 groups, each holding 2 copies of $x$.",
-    "4 groups $\\times$ 2 copies each $= 8$ copies.",
-    "So $(x^2)^4 = x^8$. Power rule: multiply the exponents."
+    "A power raised to a power means repeated groups: $(x^2)^4$ is $4$ groups, each holding $2$ copies of $x$.",
+    "Count all the copies by multiplying the groups by the copies in each: $4 \\times 2 = 8$.",
+    "So $(x^2)^4 = x^8$. This is the power rule: multiply the exponents."
   ],
   "alternativeExplanations": [
     {
