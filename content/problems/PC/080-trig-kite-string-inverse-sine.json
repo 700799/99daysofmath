@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\sin(\\text{angle}) = \\frac{20}{40} = \\frac{1}{2}$. Now ask which angle has sine $\\frac{1}{2}$."
+      "text": "Set up the ratio $\\sin(\\text{angle}) = \\frac{20}{40} = \\frac{1}{2}$. Now ask which angle has a sine of $\\frac{1}{2}$."
     },
     {
       "level": "reveal",
-      "text": "The inverse sine of $\\frac{1}{2}$ is $30^\\circ$."
+      "text": "The inverse sine of $\\frac{1}{2}$ is $30^\\circ$, so the string makes a $30^\\circ$ angle with the ground."
     }
   ],
   "explanation": [
-    "Label the triangle: string $= $ hypotenuse $= 40$, height $= $ opposite $= 20$.",
-    "SOH gives $\\sin(\\text{angle}) = \\frac{20}{40} = \\frac{1}{2}$.",
-    "Inverse sine turns the ratio back into an angle: $30^\\circ$."
+    "Label the triangle: the string is the hypotenuse, $40$ m, and the kite's height is the opposite side, $20$ m.",
+    "SOH says sine is opposite over hypotenuse, so $\\sin(\\text{angle}) = \\frac{20}{40} = \\frac{1}{2}$.",
+    "Inverse sine turns the ratio back into an angle, and the angle whose sine is $\\frac{1}{2}$ is $30^\\circ$."
   ],
   "alternativeExplanations": [
     {

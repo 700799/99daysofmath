@@ -10,25 +10,25 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The midline is set by the number ADDED at the end.",
+  "hint": "The midline is the level the wave wiggles around, and it is set by the number ADDED at the end.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The midline is set by the number ADDED at the end."
+      "text": "The midline is the level the wave wiggles around, and it is set by the number ADDED at the end."
     },
     {
       "level": "guide",
-      "text": "In $y = a\\sin(x) + k$, the midline is $y = k$."
+      "text": "In $y = a\\sin(x) + k$, the midline is $y = k$. Find the number that plays the part of $k$ in $y = \\sin(x) + 7$."
     },
     {
       "level": "reveal",
-      "text": "The midline is $y = 7$."
+      "text": "The number added is $7$, so the midline is $y = 7$."
     }
   ],
   "explanation": [
-    "Plain $\\sin(x)$ wiggles around $y = 0$.",
-    "Adding $7$ lifts every single point of the wave up by $7$, so the whole wave now wiggles around $y = 7$.",
-    "The midline is $y = 7$."
+    "The plain wave $\\sin(x)$ wiggles evenly above and below the level $y = 0$.",
+    "Adding $7$ lifts every point of the wave up by $7$, so the whole wave now wiggles around $y = 7$.",
+    "That middle level is the midline, so the midline is $y = 7$."
   ],
   "alternativeExplanations": [
     {

@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "Every triangle's angles total $180^\\circ$.",
-    "The right angle takes $90^\\circ$, leaving $90^\\circ$ for the other two.",
-    "$90 - 55 = 35$, so the third angle is $35^\\circ$."
+    "The angles of every triangle add up to $180^\\circ$.",
+    "The right angle takes $90^\\circ$ of that total, which leaves $90^\\circ$ for the other two angles to share.",
+    "One of them is $55^\\circ$, so the third angle is $90 - 55 = 35$ degrees."
   ],
   "alternativeExplanations": [
     {

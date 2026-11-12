@@ -10,19 +10,19 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "On the unit circle the point is $(\\cos\\theta, \\sin\\theta)$ and the radius is $1$.",
+  "hint": "On the unit circle the point for $\\theta$ is $(\\cos\\theta, \\sin\\theta)$ and the radius is $1$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "On the unit circle the point is $(\\cos\\theta, \\sin\\theta)$ and the radius is $1$."
+      "text": "On the unit circle the point for $\\theta$ is $(\\cos\\theta, \\sin\\theta)$ and the radius is $1$."
     },
     {
       "level": "guide",
-      "text": "The Pythagorean theorem on that little triangle says across$^2$ $+$ up$^2$ $=$ radius$^2$."
+      "text": "The Pythagorean theorem on that little triangle says the across leg squared plus the up leg squared equals the radius squared."
     },
     {
       "level": "reveal",
-      "text": "Radius$^2 = 1^2 = 1$, so $\\sin^2\\theta + \\cos^2\\theta = 1$."
+      "text": "The radius squared is $1^2 = 1$, so $\\sin^2\\theta + \\cos^2\\theta = 1$."
     }
   ],
   "explanation": [

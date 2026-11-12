@@ -10,25 +10,25 @@
   "primaryAnswer": "242",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Up $10\\%$ means the growth factor is $1.1$.",
+  "hint": "A gain of $10\\%$ each week is a growth factor. What do you multiply by, and how many times?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Up $10\\%$ means the growth factor is $1.1$."
+      "text": "A gain of $10\\%$ each week is a growth factor. What do you multiply by, and how many times?"
     },
     {
       "level": "guide",
-      "text": "Week 1: $200 \\times 1.1 = 220$. Now grow $220$ by another $10\\%$."
+      "text": "The factor is $1.1$. After week 1 you have $200 \\times 1.1 = 220$. Now grow that $220$ by another $10\\%$ for week 2."
     },
     {
       "level": "reveal",
-      "text": "$220 \\times 1.1 = 242$ followers."
+      "text": "Week 2 gives $220 \\times 1.1 = 242$, so you have $242$ followers after $2$ weeks."
     }
   ],
   "explanation": [
-    "Up $10\\%$ gives a growth factor of $1.1$.",
-    "After week 1: $200 \\times 1.1 = 220$.",
-    "After week 2: $220 \\times 1.1 = 242$ followers."
+    "Going up $10\\%$ means keeping $100\\%$ and adding $10\\%$, so the growth factor is $1.1$.",
+    "After the first week the count is $200 \\times 1.1 = 220$ followers.",
+    "The second week grows the new total, not the old one: $220 \\times 1.1 = 242$ followers."
   ],
   "alternativeExplanations": [
     {

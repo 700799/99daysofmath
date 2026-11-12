@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$400 \\to 200 \\to 100 \\to 50 \\to 25$ is $4$ halvings."
+      "text": "Halve step by step: $400 \\to 200 \\to 100 \\to 50 \\to 25$. That is $4$ halvings, and each one takes $4$ hours."
     },
     {
       "level": "reveal",
-      "text": "$4$ halvings $\\times 4$ hours each $= 16$ hours."
+      "text": "Four halvings at $4$ hours each take $4 \\times 4 = 16$ hours."
     }
   ],
   "explanation": [
-    "Halving means the decay factor is $\\frac{1}{2}$.",
-    "$400 \\to 200 \\to 100 \\to 50 \\to 25$ takes $4$ halvings.",
-    "Each halving takes $4$ hours, so $4 \\times 4 = 16$ hours."
+    "Losing half the amount each time means the decay factor is $\\frac{1}{2}$ per $4$-hour period.",
+    "Halving repeatedly, $400 \\to 200 \\to 100 \\to 50 \\to 25$, reaches $25$ mg after $4$ halvings.",
+    "Each halving takes $4$ hours, so the total time is $4 \\times 4 = 16$ hours."
   ],
   "alternativeExplanations": [
     {

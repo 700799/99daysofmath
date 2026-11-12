@@ -10,25 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Each factor hides one zero. Count the factors.",
+  "hint": "Each factor is zero for one value of $x$. How many factors are there, and are their zeros all different?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Each factor hides one zero. Count the factors."
+      "text": "Each factor is zero for one value of $x$. How many factors are there, and are their zeros all different?"
     },
     {
       "level": "guide",
-      "text": "The zeros are $x = 1$, $x = 4$, and $x = -3$ — all different."
+      "text": "Set each factor to zero to get $x = 1$, $x = 4$, and $x = -3$. Check that no value repeats, then count them."
     },
     {
       "level": "reveal",
-      "text": "There are $3$ real zeros."
+      "text": "The three values are all different, so the polynomial has $3$ real zeros."
     }
   ],
   "explanation": [
-    "Set each factor equal to zero one at a time.",
-    "$x = 1$, $x = 4$, and $x = -3$.",
-    "That is $3$ different zeros, so the graph crosses the $x$-axis 3 times."
+    "A product is zero only when one of its factors is zero, so set each factor to zero in turn.",
+    "The three factors give the zeros $x = 1$, $x = 4$, and $x = -3$.",
+    "Those are $3$ different values, so there are $3$ real zeros and the graph crosses the $x$-axis $3$ times."
   ],
   "alternativeExplanations": [
     {

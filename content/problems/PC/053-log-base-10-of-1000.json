@@ -10,25 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Ask: $10$ to what power gives $1000$?",
+  "hint": "A base ten log asks which power of $10$ gives the number inside. What power gives $1000$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Ask: $10$ to what power gives $1000$?"
+      "text": "A base ten log asks which power of $10$ gives the number inside. What power gives $1000$?"
     },
     {
       "level": "guide",
-      "text": "$10 \\times 10 \\times 10 = 1000$. How many tens did you use?"
+      "text": "Write $1000$ as $10 \\times 10 \\times 10$ and count how many tens were multiplied together."
     },
     {
       "level": "reveal",
-      "text": "$10^3 = 1000$, so $\\log_{10}(1000) = 3$."
+      "text": "Three tens are used, so $10^3 = 1000$ and $\\log_{10}(1000) = 3$."
     }
   ],
   "explanation": [
-    "Base $10$ logs ask how many tens are multiplied together.",
-    "$10^3 = 1000$.",
-    "So $\\log_{10}(1000) = 3$."
+    "A base $10$ log asks how many tens are multiplied together to make the number.",
+    "Three tens make a thousand, which is written $10^3 = 1000$.",
+    "The exponent is the value of the log, so $\\log_{10}(1000) = 3$."
   ],
   "alternativeExplanations": [
     {

@@ -10,25 +10,25 @@
   "primaryAnswer": "0.75",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Use the identity $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$.",
+  "hint": "Tangent can be built from the two values you already have. Which identity connects all three?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use the identity $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$."
+      "text": "Tangent can be built from the two values you already have. Which identity connects all three?"
     },
     {
       "level": "guide",
-      "text": "Divide: $0.6 \\div 0.8$."
+      "text": "Use $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$ with the given values, which means dividing $0.6 \\div 0.8$."
     },
     {
       "level": "reveal",
-      "text": "$0.6 \\div 0.8 = 0.75$."
+      "text": "Dividing gives $0.6 \\div 0.8 = 0.75$, so the tangent of the angle is $0.75$."
     }
   ],
   "explanation": [
-    "Tangent is height up divided by shadow across: $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$.",
-    "Substitute: $\\tan\\theta = \\frac{0.6}{0.8}$.",
-    "$0.6 \\div 0.8 = 0.75$. (Check: $0.6^2 + 0.8^2 = 0.36 + 0.64 = 1$, so these values really can sit on the unit circle.)"
+    "Tangent is height up divided by distance across: $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$.",
+    "Substituting the given sine and cosine values gives $\\tan\\theta = \\frac{0.6}{0.8}$.",
+    "Dividing, $0.6 \\div 0.8 = 0.75$, so $\\tan\\theta = 0.75$. As a check, $0.6^2 + 0.8^2 = 1$, so these values fit the unit circle."
   ],
   "alternativeExplanations": [
     {

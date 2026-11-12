@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$12 \\div 3 = 4$ doublings. Now compute $100 \\cdot 2^4$."
+      "text": "The number of doublings is $12 \\div 3 = 4$. Each one multiplies by $2$, so work out $100 \\cdot 2^4$."
     },
     {
       "level": "reveal",
-      "text": "$2^4 = 16$, so $100 \\times 16 = 1600$ cells."
+      "text": "Since $2^4 = 16$, there are $100 \\times 16 = 1600$ cells after $12$ hours."
     }
   ],
   "explanation": [
-    "Doubling time is $3$ hours, so in $12$ hours there are $12 \\div 3 = 4$ doublings.",
-    "Each doubling multiplies by $2$, so multiply by $2^4 = 16$.",
-    "$100 \\times 16 = 1600$ cells."
+    "The doubling time is $3$ hours, so $12$ hours holds $12 \\div 3 = 4$ doublings.",
+    "Each doubling multiplies the count by $2$, so four of them multiply it by $2^4 = 16$.",
+    "Starting from $100$ cells, that gives $100 \\times 16 = 1600$ cells."
   ],
   "alternativeExplanations": [
     {

@@ -10,25 +10,25 @@
   "primaryAnswer": "0.8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "If $20\\%$ leaves, ask what percent STAYS.",
+  "hint": "If $20\\%$ of the medicine leaves each hour, ask what percent STAYS in the blood.",
   "hints": [
     {
       "level": "nudge",
-      "text": "If $20\\%$ leaves, ask what percent STAYS."
+      "text": "If $20\\%$ of the medicine leaves each hour, ask what percent STAYS in the blood."
     },
     {
       "level": "guide",
-      "text": "$100\\% - 20\\% = 80\\%$ stays. Turn $80\\%$ into a decimal."
+      "text": "Subtract to find what stays: $100\\% - 20\\% = 80\\%$. Now turn $80\\%$ into a decimal."
     },
     {
       "level": "reveal",
-      "text": "$80\\% = 0.8$, so the decay factor is $0.8$."
+      "text": "As a decimal, $80\\% = 0.8$, so the decay factor is $0.8$."
     }
   ],
   "explanation": [
-    "A decay factor is about what is LEFT, not what left.",
-    "$100\\% - 20\\% = 80\\%$ stays each hour.",
-    "$80\\% = 0.8$, so multiply by $0.8$ every hour. Because $0.8$ is between $0$ and $1$, the amount shrinks."
+    "A decay factor describes what is LEFT after each step, not what went away.",
+    "If $20\\%$ leaves each hour, then $100\\% - 20\\% = 80\\%$ stays.",
+    "Since $80\\% = 0.8$, you multiply by $0.8$ every hour. A factor between $0$ and $1$ makes the amount shrink."
   ],
   "alternativeExplanations": [
     {

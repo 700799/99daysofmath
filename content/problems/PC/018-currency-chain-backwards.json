@@ -10,11 +10,11 @@
   "primaryAnswer": "100",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You are running the chain BACKWARDS, so undo the LAST machine first — socks then shoes means shoes off first.",
+  "hint": "You are running the chain BACKWARDS, so undo the LAST machine first. Socks then shoes means shoes come off first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You are running the chain BACKWARDS, so undo the LAST machine first — socks then shoes means shoes off first."
+      "text": "You are running the chain BACKWARDS, so undo the LAST machine first. Socks then shoes means shoes come off first."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Undo the yen machine: $12000 \\div 150 = 80$ euros. Now undo the euro machine."
+      "text": "Undo the yen machine by dividing: $12000 \\div 150 = 80$ euros. Then undo the euro machine by dividing $80$ by $0.8$."
     },
     {
       "level": "reveal",
-      "text": "$80 \\div 0.8 = 100$, so you started with $\\$100$."
+      "text": "Dividing gives $80 \\div 0.8 = 100$, so you started with $100$ dollars."
     }
   ],
   "explanation": [
-    "Forward the order is dollars $\\to$ euros $\\to$ yen.",
-    "Backward you undo in reverse: yen $\\to$ euros first.",
-    "$12000 \\div 150 = 80$ euros, then $80 \\div 0.8 = 100$ dollars."
+    "Going forward, the order is dollars to euros and then euros to yen.",
+    "Going backward, each machine is undone in reverse order, so first turn yen back into euros: $12000 \\div 150 = 80$ euros.",
+    "Then turn euros back into dollars: $80 \\div 0.8 = 100$, so the starting amount was $100$ dollars."
   ],
   "alternativeExplanations": [
     {

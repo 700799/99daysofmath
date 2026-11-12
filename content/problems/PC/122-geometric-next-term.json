@@ -18,17 +18,17 @@
     },
     {
       "level": "guide",
-      "text": "$6 \\div 2 = 3$, $18 \\div 6 = 3$, $54 \\div 18 = 3$. The rule multiplies by $3$."
+      "text": "The ratios are $6 \\div 2 = 3$, $18 \\div 6 = 3$, and $54 \\div 18 = 3$, so the rule multiplies by $3$. Apply it to the last term."
     },
     {
       "level": "reveal",
-      "text": "$54 \\times 3 = 162$."
+      "text": "Multiplying once more gives $54 \\times 3 = 162$, so the next term is $162$."
     }
   ],
   "explanation": [
-    "The jumps are $4, 12, 36$ — not the same, so it is not arithmetic.",
-    "Divide instead: each term is $3$ times the one before, so this is GEOMETRIC with $r = 3$.",
-    "$54 \\times 3 = 162$."
+    "The jumps between terms are $4, 12, 36$, which are not equal, so the sequence is not arithmetic.",
+    "Dividing instead shows each term is $3$ times the one before, so it is GEOMETRIC with $r = 3$.",
+    "Continuing the rule from the last term gives $54 \\times 3 = 162$."
   ],
   "alternativeExplanations": [
     {

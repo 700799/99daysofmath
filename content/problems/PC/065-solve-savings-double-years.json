@@ -10,25 +10,25 @@
   "primaryAnswer": "21",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "First find how many times the money has to double.",
+  "hint": "First find how many times the money has to double to get from $2000$ dollars to $16000$ dollars.",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find how many times the money has to double."
+      "text": "First find how many times the money has to double to get from $2000$ dollars to $16000$ dollars."
     },
     {
       "level": "guide",
-      "text": "$16000 \\div 2000 = 8$, and $8 = 2^3$, so that is $3$ doublings."
+      "text": "The money must grow by a factor of $16000 \\div 2000 = 8$, and $8 = 2^3$, so that is $3$ doublings. Each doubling takes $7$ years."
     },
     {
       "level": "reveal",
-      "text": "$3$ doublings $\\times 7$ years each $= 21$ years."
+      "text": "Three doublings at $7$ years each take $3 \\times 7 = 21$ years."
     }
   ],
   "explanation": [
-    "Compare the amounts: $16000 \\div 2000 = 8$.",
-    "Solve $2^n = 8$, so $n = 3$ doublings.",
-    "Each doubling takes $7$ years: $3 \\times 7 = 21$ years."
+    "Compare the two amounts to find the growth needed: $16000 \\div 2000 = 8$.",
+    "Each doubling multiplies by $2$, so solve $2^n = 8$ to get $n = 3$ doublings.",
+    "Each doubling takes $7$ years, so the wait is $3 \\times 7 = 21$ years."
   ],
   "alternativeExplanations": [
     {

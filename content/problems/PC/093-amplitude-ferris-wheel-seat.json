@@ -10,24 +10,24 @@
   "primaryAnswer": "18",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The amplitude is the number multiplying the sine.",
+  "hint": "The amplitude is the number multiplying the sine, not the number added at the end.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The amplitude is the number multiplying the sine."
+      "text": "The amplitude is the number multiplying the sine, not the number added at the end."
     },
     {
       "level": "guide",
-      "text": "In $h = a\\sin(x) + k$, the amplitude is $a$ and the midline is $k$."
+      "text": "Compare with $h = a\\sin(x) + k$, where $a$ is the amplitude and $k$ is the midline. Decide which of $18$ and $22$ is $a$."
     },
     {
       "level": "reveal",
-      "text": "The amplitude is $18$ metres."
+      "text": "The number multiplying the sine is $18$, so the amplitude is $18$ metres."
     }
   ],
   "explanation": [
-    "Compare to $h = a\\sin(x) + k$.",
-    "Here $a = 18$ and the midline $k = 22$.",
+    "Compare the rule with the standard form $h = a\\sin(x) + k$.",
+    "Here $a = 18$ multiplies the sine and $k = 22$ is added, so $22$ is the midline.",
     "The seat rises $18$ m above and falls $18$ m below the $22$ m midline, so the amplitude is $18$."
   ],
   "alternativeExplanations": [

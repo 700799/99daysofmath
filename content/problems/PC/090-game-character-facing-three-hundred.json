@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$300^\\circ$ is between $270^\\circ$ and $360^\\circ$ — the bottom-right slice."
+      "text": "The angle $300^\\circ$ is between $270^\\circ$ and $360^\\circ$, which is the bottom-right slice. Count the quadrants counter-clockwise to name that slice."
     },
     {
       "level": "reveal",
-      "text": "Bottom-right is Quadrant $4$, so the answer is $4$."
+      "text": "The bottom-right slice is Quadrant $4$, so the answer is $4$."
     }
   ],
   "explanation": [
-    "Quadrants are counted counter-clockwise from due east: Q1 is $0^\\circ$–$90^\\circ$, Q2 is $90^\\circ$–$180^\\circ$, Q3 is $180^\\circ$–$270^\\circ$, Q4 is $270^\\circ$–$360^\\circ$.",
-    "$300^\\circ$ lands between $270^\\circ$ and $360^\\circ$.",
-    "So the character faces into Quadrant $4$ — down and to the right. There $\\cos$ is positive and $\\sin$ is negative."
+    "Quadrants are counted counter-clockwise from due east: Q1 covers $0^\\circ$ to $90^\\circ$, Q2 covers $90^\\circ$ to $180^\\circ$, Q3 covers $180^\\circ$ to $270^\\circ$, and Q4 covers $270^\\circ$ to $360^\\circ$.",
+    "The angle $300^\\circ$ lands between $270^\\circ$ and $360^\\circ$, which is the fourth range in that list.",
+    "So the character faces into Quadrant $4$, down and to the right, where cosine is positive and sine is negative."
   ],
   "alternativeExplanations": [
     {

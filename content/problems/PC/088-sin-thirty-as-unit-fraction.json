@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Half of $1$ is $\\frac{1}{2}$, so $\\sin 30^\\circ = \\frac{1}{2}$."
+      "text": "The radius is $1$ and half of $1$ is $\\frac{1}{2}$, so $\\sin 30^\\circ = \\frac{1}{2}$. Match that with the form $\\frac{1}{n}$."
     },
     {
       "level": "reveal",
-      "text": "The denominator is $2$, so $n = 2$."
+      "text": "The denominator of $\\frac{1}{2}$ is $2$, so $n = 2$."
     }
   ],
   "explanation": [
     "The point at $30^\\circ$ on the unit circle is $\\left(\\frac{\\sqrt{3}}{2}, \\frac{1}{2}\\right)$.",
-    "Sine reads the height, which is $\\frac{1}{2}$ — exactly half the radius.",
-    "Written as $\\frac{1}{n}$, that makes $n = 2$."
+    "Sine reads the height of that point, which is $\\frac{1}{2}$, exactly half the radius.",
+    "Matching $\\frac{1}{2}$ with the form $\\frac{1}{n}$ shows that $n = 2$."
   ],
   "alternativeExplanations": [
     {

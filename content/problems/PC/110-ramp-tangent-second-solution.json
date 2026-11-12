@@ -10,11 +10,11 @@
   "primaryAnswer": "225",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$. If sine and cosine BOTH flip sign, the fraction stays the same.",
+  "hint": "Recall $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$. If sine and cosine BOTH flip sign, the fraction stays the same.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$. If sine and cosine BOTH flip sign, the fraction stays the same."
+      "text": "Recall $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$. If sine and cosine BOTH flip sign, the fraction stays the same."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Add half a turn to the first answer: $45 + 180$."
+      "text": "Both signs flip at the opposite point of the circle, so add half a turn to the first answer: $45 + 180$."
     },
     {
       "level": "reveal",
-      "text": "$45 + 180 = 225$, so the other answer is $225^\\circ$."
+      "text": "Adding gives $45 + 180 = 225$, so the other answer is $225^\\circ$."
     }
   ],
   "explanation": [
-    "At $45^\\circ$ the point is $(0.707, 0.707)$, so $\\tan 45^\\circ = 1$.",
-    "Straight across the circle, at $225^\\circ$, the point is $(-0.707, -0.707)$. Both parts flipped sign, and two minus signs cancel when you divide.",
-    "$\\tan 225^\\circ = \\frac{-0.707}{-0.707} = 1$ as well, so the other answer is $225^\\circ$."
+    "At $45^\\circ$ the point on the unit circle is about $(0.707, 0.707)$, so $\\tan 45^\\circ = 1$.",
+    "Straight across the circle, at $225^\\circ$, the point is $(-0.707, -0.707)$. Both coordinates changed sign, and two negatives cancel when divided.",
+    "So $\\tan 225^\\circ = \\frac{-0.707}{-0.707} = 1$ as well, and the other answer is $225^\\circ$."
   ],
   "alternativeExplanations": [
     {

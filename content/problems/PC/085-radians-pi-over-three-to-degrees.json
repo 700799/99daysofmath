@@ -10,25 +10,25 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Start from the swap rule: $\\pi$ radians $= 180^\\circ$.",
+  "hint": "Start from the swap rule between the two units: $\\pi$ radians $= 180^\\circ$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Start from the swap rule: $\\pi$ radians $= 180^\\circ$."
+      "text": "Start from the swap rule between the two units: $\\pi$ radians $= 180^\\circ$."
     },
     {
       "level": "guide",
-      "text": "$\\frac{\\pi}{3}$ is one third of $\\pi$, so take one third of $180^\\circ$."
+      "text": "The angle $\\frac{\\pi}{3}$ is one third of $\\pi$, so take one third of $180^\\circ$ by dividing by $3$."
     },
     {
       "level": "reveal",
-      "text": "$180 \\div 3 = 60$, so $\\frac{\\pi}{3}$ radians $= 60^\\circ$."
+      "text": "Since $180 \\div 3 = 60$, the angle $\\frac{\\pi}{3}$ radians equals $60^\\circ$."
     }
   ],
   "explanation": [
-    "The swap rule is $\\pi$ radians $= 180^\\circ$.",
-    "$\\frac{\\pi}{3}$ means $\\pi$ cut into 3 equal pieces, so cut $180^\\circ$ into 3 equal pieces too.",
-    "$180 \\div 3 = 60$. So $\\frac{\\pi}{3}$ radians $= 60^\\circ$."
+    "The swap rule between radians and degrees is $\\pi$ radians $= 180^\\circ$.",
+    "The angle $\\frac{\\pi}{3}$ is $\\pi$ cut into $3$ equal pieces, so cut $180^\\circ$ into $3$ equal pieces too.",
+    "Dividing gives $180 \\div 3 = 60$, so the angle $\\frac{\\pi}{3}$ radians equals $60^\\circ$."
   ],
   "alternativeExplanations": [
     {

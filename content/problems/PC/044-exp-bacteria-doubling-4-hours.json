@@ -10,25 +10,25 @@
   "primaryAnswer": "800",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Doubling means the growth factor is $2$. The start is $50$.",
+  "hint": "Doubling means the growth factor is $2$, and the count begins at $50$. How many doublings happen in $4$ hours?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Doubling means the growth factor is $2$. The start is $50$."
+      "text": "Doubling means the growth factor is $2$, and the count begins at $50$. How many doublings happen in $4$ hours?"
     },
     {
       "level": "guide",
-      "text": "Use $y = 50 \\cdot 2^x$ with $x = 4$. First find $2^4$."
+      "text": "Use $y = 50 \\cdot 2^x$ with $x = 4$ hours. First find $2^4$, then multiply the result by $50$."
     },
     {
       "level": "reveal",
-      "text": "$2^4 = 16$, and $50 \\times 16 = 800$ bacteria."
+      "text": "Since $2^4 = 16$ and $50 \\times 16 = 800$, there are $800$ bacteria after $4$ hours."
     }
   ],
   "explanation": [
-    "Start $a = 50$, growth factor $b = 2$, steps $x = 4$.",
-    "$y = 50 \\cdot 2^4$.",
-    "$2^4 = 16$, so $y = 50 \\times 16 = 800$ bacteria."
+    "The start value is $a = 50$, the growth factor is $b = 2$ because of doubling, and there are $x = 4$ hourly steps.",
+    "Putting these three numbers into the exponential form $y = a \\cdot b^x$ gives $y = 50 \\cdot 2^4$.",
+    "Since $2^4 = 16$, the count is $50 \\times 16 = 800$ bacteria after $4$ hours."
   ],
   "alternativeExplanations": [
     {

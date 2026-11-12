@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Set the inside to zero: $x - 3 = 0$. Solve for $x$."
+      "text": "The vertex sits where the squared part is zero, so set the inside equal to zero, $x - 3 = 0$, and solve for $x$."
     },
     {
       "level": "reveal",
-      "text": "$x - 3 = 0$ gives $x = 3$, so the vertex sits at $x = 3$."
+      "text": "Solving $x - 3 = 0$ gives $x = 3$, so the vertex sits at $x = 3$."
     }
   ],
   "explanation": [
-    "A parabola turns around where the squared part equals zero.",
-    "Set $x - 3 = 0$, so $x = 3$.",
-    "The $2$ stretches it and the $+5$ lifts it, but neither moves it left or right. The vertex is at $x = 3$."
+    "A parabola turns around where its squared part equals zero, because a square can never be smaller than zero.",
+    "Setting the inside to zero gives $x - 3 = 0$, and adding $3$ to both sides gives $x = 3$.",
+    "The $2$ stretches the graph and the $+5$ lifts it, but neither moves it left or right, so the vertex is at $x = 3$."
   ],
   "alternativeExplanations": [
     {

@@ -26,10 +26,10 @@
     }
   ],
   "explanation": [
-    "At $x = 2$ both top and bottom are $0$, so there is a hole, not a wall.",
-    "Factor: $x^2 - 7x + 10 = (x - 2)(x - 5)$.",
-    "Cancel the shared $(x - 2)$: what is left is $x - 5$.",
-    "Substitute: $2 - 5 = -3$."
+    "At $x = 2$ both the top and the bottom equal $0$, so the graph has a hole there, not an asymptote.",
+    "Factor the top with two numbers that multiply to $10$ and add to $-7$: $x^2 - 7x + 10 = (x - 2)(x - 5)$.",
+    "Cancel the shared factor $(x - 2)$, and what is left is $x - 5$.",
+    "Substituting $x = 2$ into what is left gives $2 - 5 = -3$, so the limit is $-3$."
   ],
   "alternativeExplanations": [
     {

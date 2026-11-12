@@ -18,17 +18,17 @@
     },
     {
       "level": "guide",
-      "text": "$m - 2 = 0$ gives month 2, and $m - 11 = 0$ gives month 11."
+      "text": "Solve $m - 2 = 0$ and $m - 11 = 0$ to find the two zero-profit months, then choose the later one."
     },
     {
       "level": "reveal",
-      "text": "The later zero-profit month is month $11$."
+      "text": "The two months are $2$ and $11$, so the later zero-profit month is month $11$."
     }
   ],
   "explanation": [
-    "Set each factor to zero.",
-    "Month $2$ and month $11$ both give zero profit.",
-    "The later one is month $11$."
+    "Profit is zero when the product is zero, so set each factor equal to zero.",
+    "Solving $m - 2 = 0$ gives month $2$, and solving $m - 11 = 0$ gives month $11$.",
+    "Month $11$ comes after month $2$, so the later zero-profit month is $11$."
   ],
   "alternativeExplanations": [
     {

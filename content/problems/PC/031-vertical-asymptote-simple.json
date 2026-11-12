@@ -18,17 +18,17 @@
     },
     {
       "level": "guide",
-      "text": "Set $x - 6 = 0$ and solve."
+      "text": "The bottom of the fraction is $x - 6$, so set $x - 6 = 0$ and solve for $x$."
     },
     {
       "level": "reveal",
-      "text": "$x = 6$ is the vertical asymptote."
+      "text": "Solving gives $x = 6$, so the vertical asymptote is the line $x = 6$."
     }
   ],
   "explanation": [
-    "Vertical asymptotes come from the BOTTOM of the fraction.",
-    "The bottom is zero when $x = 6$.",
-    "The graph runs away from the line $x = 6$ and never touches it."
+    "Vertical asymptotes come from the BOTTOM of the fraction, where division by zero would happen.",
+    "The bottom $x - 6$ is zero when $x = 6$, and the top is $1$ there, not zero.",
+    "So the graph shoots away near the line $x = 6$ and never touches it, and the asymptote is at $x = 6$."
   ],
   "alternativeExplanations": [
     {

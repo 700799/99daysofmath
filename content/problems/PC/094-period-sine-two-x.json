@@ -10,25 +10,25 @@
   "primaryAnswer": "180",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Period $= 360^\\circ \\div b$, where $b$ is the number in FRONT of $x$ inside the sine.",
+  "hint": "The period is $360^\\circ \\div b$, where $b$ is the number in FRONT of $x$ inside the sine.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Period $= 360^\\circ \\div b$, where $b$ is the number in FRONT of $x$ inside the sine."
+      "text": "The period is $360^\\circ \\div b$, where $b$ is the number in FRONT of $x$ inside the sine."
     },
     {
       "level": "guide",
-      "text": "Here $b = 2$, so the period is $360 \\div 2$."
+      "text": "In $y = \\sin(2x)$ the number in front of $x$ is $b = 2$, so the period is $360 \\div 2$."
     },
     {
       "level": "reveal",
-      "text": "$360 \\div 2 = 180$, so the period is $180^\\circ$."
+      "text": "Since $360 \\div 2 = 180$, the period of the wave is $180^\\circ$."
     }
   ],
   "explanation": [
     "The period is how far along $x$ you travel before one full wave finishes and starts over.",
-    "Plain $\\sin(x)$ takes $360^\\circ$. The $2$ inside makes $x$ count DOUBLE-time, so the wave finishes twice as fast.",
-    "Period $= 360 \\div 2 = 180^\\circ$."
+    "Plain $\\sin(x)$ takes $360^\\circ$, and the $2$ inside makes the angle grow twice as fast, so the wave finishes in half the distance.",
+    "The period is therefore half of the usual one: $360 \\div 2 = 180^\\circ$."
   ],
   "alternativeExplanations": [
     {

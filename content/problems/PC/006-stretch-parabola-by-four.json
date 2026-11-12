@@ -10,25 +10,25 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A number multiplying the whole function stretches the graph taller.",
+  "hint": "A number multiplying the whole function changes heights only. What happens to each $y$-value when it is multiplied by $4$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A number multiplying the whole function stretches the graph taller."
+      "text": "A number multiplying the whole function changes heights only. What happens to each $y$-value when it is multiplied by $4$?"
     },
     {
       "level": "guide",
-      "text": "Find $x^2$ first when $x = 1$, then multiply that answer by $4$."
+      "text": "Use the new rule at $x = 1$: first find $1^2$, then multiply that result by $4$."
     },
     {
       "level": "reveal",
-      "text": "$1^2 = 1$, and $4 \\times 1 = 4$."
+      "text": "Since $1^2 = 1$ and $4 \\times 1 = 4$, the new $y$-value at $x = 1$ is $4$."
     }
   ],
   "explanation": [
-    "In $a \\cdot f(x)$, every $y$-value is multiplied by $a$.",
-    "Here $a = 4$, so heights become $4$ times bigger.",
-    "The point $(1, 1)$ becomes $(1, 4)$."
+    "In $a \\cdot f(x)$, every $y$-value is multiplied by $a$ while the $x$-values stay the same.",
+    "Here $a = 4$, so each point on $y = x^2$ becomes $4$ times as high.",
+    "The old height at $x = 1$ was $1$, so the new height is $4 \\times 1 = 4$ and the point is $(1, 4)$."
   ],
   "alternativeExplanations": [
     {

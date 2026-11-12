@@ -10,11 +10,11 @@
   "primaryAnswer": "128",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $x = 2$ everywhere, then follow the order of operations — the parentheses first.",
+  "hint": "Substitute $x = 2$ everywhere, then follow the order of operations, starting with the parentheses.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $x = 2$ everywhere, then follow the order of operations — the parentheses first."
+      "text": "Substitute $x = 2$ everywhere, then follow the order of operations, starting with the parentheses."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Inside: $12 - 2(2) = 8$. Square it: $8^2 = 64$. Now multiply by $x = 2$."
+      "text": "Inside the parentheses, $12 - 2(2) = 8$. Squaring gives $8^2 = 64$. The last step is to multiply $64$ by $x = 2$."
     },
     {
       "level": "reveal",
-      "text": "$2 \\times 64 = 128$ cubic inches."
+      "text": "Multiplying gives $2 \\times 64 = 128$, so the volume is $128$ cubic inches."
     }
   ],
   "explanation": [
-    "Substitute $x = 2$: $V = 2(12 - 4)^2$.",
-    "Inside the parentheses: $12 - 4 = 8$.",
-    "Square it: $64$. Then $2 \\times 64 = 128$ cubic inches."
+    "Substitute $x = 2$ into the formula to get $V = 2(12 - 2 \\cdot 2)^2 = 2(12 - 4)^2$.",
+    "Parentheses come first in the order of operations, and $12 - 4 = 8$.",
+    "Next square to get $64$, then multiply: $2 \\times 64 = 128$, so the volume is $128$ cubic inches."
   ],
   "alternativeExplanations": [
     {

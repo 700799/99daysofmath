@@ -10,25 +10,25 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Work INSIDE first: what does $g$ do to $2$?",
+  "hint": "A composition is worked from the inside out. Which function is sitting inside the parentheses here?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Work INSIDE first: what does $g$ do to $2$?"
+      "text": "A composition is worked from the inside out. Which function is sitting inside the parentheses here?"
     },
     {
       "level": "guide",
-      "text": "$g(2) = 3 \\times 2 = 6$. Now feed that $6$ into $f$."
+      "text": "Start with the inside function: $g(2) = 3 \\times 2 = 6$. Then feed that $6$ into $f$, which adds $4$."
     },
     {
       "level": "reveal",
-      "text": "$f(6) = 6 + 4 = 10$."
+      "text": "Because $f(6) = 6 + 4 = 10$, the value of $f(g(2))$ is $10$."
     }
   ],
   "explanation": [
-    "Composition runs inside-out.",
-    "$g(2) = 6$.",
-    "$f(6) = 6 + 4 = 10$."
+    "A composition runs from the inside out, so $g$ acts on $2$ before $f$ does anything.",
+    "The inside function triples its input, so $g(2) = 3 \\times 2 = 6$.",
+    "The outside function adds $4$ to that result, so $f(6) = 6 + 4 = 10$ and $f(g(2)) = 10$."
   ],
   "alternativeExplanations": [
     {

@@ -10,25 +10,25 @@
   "primaryAnswer": "0",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Try some big numbers for $n$ and watch what happens to the cost.",
+  "hint": "Try some big numbers for $n$ and watch what happens to the cost per person.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Try some big numbers for $n$ and watch what happens to the cost."
+      "text": "Try some big numbers for $n$ and watch what happens to the cost per person."
     },
     {
       "level": "guide",
-      "text": "$c(120) = 1$ dollar. $c(1200) = 0.1$ dollars. The costs keep shrinking."
+      "text": "With $120$ friends the cost is $c(120) = 1$ dollar, and with $1200$ friends it is $c(1200) = 0.1$ dollars. See where this shrinking pattern is heading."
     },
     {
       "level": "reveal",
-      "text": "The cost heads toward $0$ — that is the horizontal asymptote $y = 0$."
+      "text": "The cost heads toward $0$, which is the horizontal asymptote $y = 0$."
     }
   ],
   "explanation": [
-    "Splitting a fixed bill among more people means smaller shares.",
-    "As $n \\to \\infty$, $\\frac{120}{n}$ shrinks toward $0$.",
-    "The line $y = 0$ is a horizontal asymptote: the cost gets tiny but never actually reaches zero."
+    "Splitting a fixed bill among more people gives each person a smaller share.",
+    "As $n$ grows without bound, the fraction $\\frac{120}{n}$ shrinks toward $0$ because the top stays fixed.",
+    "The cost gets tiny but never actually reaches zero, so it approaches $0$ and $y = 0$ is a horizontal asymptote."
   ],
   "alternativeExplanations": [
     {

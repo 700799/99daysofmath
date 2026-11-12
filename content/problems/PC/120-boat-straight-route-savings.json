@@ -10,11 +10,11 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "This is two steps: first find the straight-line distance, then compare it with the sailed distance.",
+  "hint": "This takes two steps: first find the straight-line distance, then compare it with the sailed distance.",
   "hints": [
     {
       "level": "nudge",
-      "text": "This is two steps: first find the straight-line distance, then compare it with the sailed distance."
+      "text": "This takes two steps: first find the straight-line distance, then compare it with the sailed distance."
     },
     {
       "level": "nudge",
@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "Straight line: $c^2 = 25 + 256 - 2(5)(16)(-\\frac{1}{2}) = 281 + 80 = 361$, so $c = 19$ km. The boat sailed $5 + 16 = 21$ km."
+      "text": "For the straight line, $c^2 = 25 + 256 - 2(5)(16)(-\\frac{1}{2}) = 281 + 80 = 361$, so $c = 19$ km. The boat sailed $5 + 16 = 21$ km. Subtract to compare."
     },
     {
       "level": "reveal",
-      "text": "$21 - 19 = 2$ kilometers saved."
+      "text": "The difference is $21 - 19 = 2$, so the straight route is $2$ kilometers shorter."
     }
   ],
   "explanation": [
-    "Step 1 — the straight route uses the Law of Cosines: $c^2 = 5^2 + 16^2 - 2(5)(16)\\cos 120^\\circ$.",
-    "$\\cos 120^\\circ = -\\frac{1}{2}$, so $c^2 = 281 + 80 = 361$ and $c = 19$ km.",
-    "Step 2 — the boat actually sailed $5 + 16 = 21$ km.",
-    "The straight route is $21 - 19 = 2$ km shorter."
+    "The straight route is the third side of the triangle, so use the Law of Cosines: $c^2 = 5^2 + 16^2 - 2(5)(16)\\cos 120^\\circ$.",
+    "Since $\\cos 120^\\circ = -\\frac{1}{2}$, this becomes $c^2 = 281 + 80 = 361$, so the straight route is $c = 19$ km.",
+    "The boat itself sailed both legs, a total of $5 + 16 = 21$ km.",
+    "Comparing the two, the straight route is $21 - 19 = 2$ km shorter."
   ],
   "alternativeExplanations": [
     {

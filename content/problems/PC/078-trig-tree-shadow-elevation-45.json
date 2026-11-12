@@ -10,11 +10,11 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Draw the right triangle: the shadow is the bottom, the tree is the upright side.",
+  "hint": "Draw the right triangle: the shadow is the bottom side and the tree is the upright side.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Draw the right triangle: the shadow is the bottom, the tree is the upright side."
+      "text": "Draw the right triangle: the shadow is the bottom side and the tree is the upright side."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "From the shadow tip, the tree is opposite and the shadow is adjacent: $\\tan(45^\\circ) = \\frac{h}{20}$."
+      "text": "Seen from the shadow tip, the tree is opposite the angle and the shadow is adjacent, so use tangent: $\\tan(45^\\circ) = \\frac{h}{20}$."
     },
     {
       "level": "reveal",
-      "text": "$\\tan(45^\\circ) = 1$, so $\\frac{h}{20} = 1$ and $h = 20$ ft."
+      "text": "Since $\\tan(45^\\circ) = 1$, we get $\\frac{h}{20} = 1$, so the tree is $h = 20$ ft tall."
     }
   ],
   "explanation": [
-    "Angle of elevation is measured UP from the flat ground.",
-    "The tree is opposite that angle and the shadow is adjacent, so use TOA: $\\tan(45^\\circ) = \\frac{h}{20}$.",
-    "$\\tan(45^\\circ) = 1$, so $h = 20$ ft."
+    "An angle of elevation is measured UP from the flat ground to the line of sight.",
+    "The tree is opposite that angle and the shadow is adjacent, so TOA gives $\\tan(45^\\circ) = \\frac{h}{20}$.",
+    "Because $\\tan(45^\\circ) = 1$, the height equals the shadow length, so the tree is $h = 20$ ft tall."
   ],
   "alternativeExplanations": [
     {

@@ -18,17 +18,17 @@
     },
     {
       "level": "guide",
-      "text": "$7 - 3 = 4$, $11 - 7 = 4$, $15 - 11 = 4$. The rule adds $4$ each step."
+      "text": "The differences are $7 - 3 = 4$, $11 - 7 = 4$, and $15 - 11 = 4$, so the rule adds $4$ each step. Apply it to the last term."
     },
     {
       "level": "reveal",
-      "text": "$15 + 4 = 19$."
+      "text": "Adding once more gives $15 + 4 = 19$, so the next term is $19$."
     }
   ],
   "explanation": [
-    "A sequence is an ordered list with a rule.",
-    "The gaps are $4, 4, 4$ — the same amount each time, so this is ARITHMETIC.",
-    "Keep the rule going: $15 + 4 = 19$."
+    "A sequence is an ordered list that follows a rule, so first find the rule.",
+    "The gaps between terms are $4, 4, 4$, the same each time, so this sequence is ARITHMETIC.",
+    "Continuing the rule from the last term gives $15 + 4 = 19$."
   ],
   "alternativeExplanations": [
     {

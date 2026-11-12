@@ -10,25 +10,25 @@
   "primaryAnswer": "1000",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "First count the steps between $4$ and $7$.",
+  "hint": "First count the steps between magnitude $4$ and magnitude $7$. What does each step do to the shaking?",
   "hints": [
     {
       "level": "nudge",
-      "text": "First count the steps between $4$ and $7$."
+      "text": "First count the steps between magnitude $4$ and magnitude $7$. What does each step do to the shaking?"
     },
     {
       "level": "guide",
-      "text": "That is $7 - 4 = 3$ steps, and each step multiplies by $10$."
+      "text": "There are $7 - 4 = 3$ steps, and each step multiplies the shaking by $10$. Work out $10 \\times 10 \\times 10$."
     },
     {
       "level": "reveal",
-      "text": "$10^3 = 1000$ times more shaking."
+      "text": "Three steps give $10^3 = 1000$, so the magnitude $7$ quake has $1000$ times more shaking."
     }
   ],
   "explanation": [
-    "The Richter scale is a log scale, so the NUMBER is really an exponent.",
-    "From $4$ to $7$ is $3$ steps, and each step means $\\times 10$.",
-    "$10 \\times 10 \\times 10 = 1000$ times more shaking."
+    "The Richter scale is a log scale, so the magnitude number acts like an exponent on $10$.",
+    "Going from $4$ to $7$ is $7 - 4 = 3$ steps, and each step multiplies the shaking by $10$.",
+    "Three steps multiply by $10 \\times 10 \\times 10 = 1000$, so there is $1000$ times more shaking."
   ],
   "alternativeExplanations": [
     {

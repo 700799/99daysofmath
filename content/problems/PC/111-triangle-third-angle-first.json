@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "Every triangle's angles total $180^\\circ$.",
-    "The two known angles add to $40 + 75 = 115$.",
-    "$180 - 115 = 65^\\circ$."
+    "The three angles of every triangle add up to $180^\\circ$.",
+    "The two known angles use up $40 + 75 = 115$ degrees of that total.",
+    "The third angle is what remains: $180 - 115 = 65$ degrees."
   ],
   "alternativeExplanations": [
     {

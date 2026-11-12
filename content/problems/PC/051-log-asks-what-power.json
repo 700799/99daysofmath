@@ -18,17 +18,17 @@
     },
     {
       "level": "guide",
-      "text": "Count the doublings: $2, 4, 8, 16, 32$."
+      "text": "Count the doublings as you multiply by $2$ again and again: $2, 4, 8, 16, 32$. How many numbers are in that list?"
     },
     {
       "level": "reveal",
-      "text": "$2^5 = 32$, so $\\log_2(32) = 5$."
+      "text": "It takes five doublings, so $2^5 = 32$ and $\\log_2(32) = 5$."
     }
   ],
   "explanation": [
-    "A log asks for the exponent, and the answer IS the exponent.",
-    "$2^5 = 32$.",
-    "So $\\log_2(32) = 5$."
+    "A log asks for an exponent: $\\log_2(32)$ is the power of $2$ that produces $32$.",
+    "Multiplying $2$ by itself five times gives $2^5 = 32$.",
+    "The exponent is the answer to the log, so $\\log_2(32) = 5$."
   ],
   "alternativeExplanations": [
     {

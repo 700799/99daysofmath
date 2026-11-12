@@ -10,25 +10,25 @@
   "primaryAnswer": "45",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You know the opposite side ($5$ up) and the adjacent side ($5$ out), so use tangent.",
+  "hint": "You know the side opposite the angle ($5$ up) and the side adjacent to it ($5$ out). Which ratio uses those two?",
   "hints": [
     {
       "level": "nudge",
-      "text": "You know the opposite side ($5$ up) and the adjacent side ($5$ out), so use tangent."
+      "text": "You know the side opposite the angle ($5$ up) and the side adjacent to it ($5$ out). Which ratio uses those two?"
     },
     {
       "level": "guide",
-      "text": "$\\tan(\\text{angle}) = \\frac{5}{5} = 1$. Which angle has a tangent of $1$?"
+      "text": "Tangent uses opposite over adjacent: $\\tan(\\text{angle}) = \\frac{5}{5} = 1$. Now ask which angle has a tangent of $1$."
     },
     {
       "level": "reveal",
-      "text": "The inverse tangent of $1$ is $45^\\circ$."
+      "text": "The inverse tangent of $1$ is $45^\\circ$, so the ladder makes a $45^\\circ$ angle with the ground."
     }
   ],
   "explanation": [
-    "Opposite $= 5$ and adjacent $= 5$, so use TOA.",
-    "$\\tan(\\text{angle}) = \\frac{5}{5} = 1$.",
-    "Inverse tangent turns the ratio back into an angle: the angle is $45^\\circ$."
+    "The wall height is opposite the angle and the ground distance is adjacent, both $5$ m, so TOA applies.",
+    "Opposite over adjacent gives the ratio $\\tan(\\text{angle}) = \\frac{5}{5} = 1$.",
+    "Inverse tangent turns a ratio back into an angle, and the angle with tangent $1$ is $45^\\circ$."
   ],
   "alternativeExplanations": [
     {

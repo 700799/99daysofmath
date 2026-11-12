@@ -31,10 +31,10 @@
     }
   ],
   "explanation": [
-    "Average speed over a window is the trip summary; the speedometer is the instant value.",
-    "Shrink the window: $20.5$, then $20.05$, then $20.005$.",
-    "The extra bits $0.5, 0.05, 0.005$ are being squeezed to $0$.",
-    "The limit is $20$ meters per second."
+    "The average speed over a time window summarizes that stretch, while the speedometer shows the speed at one instant.",
+    "As the window shrinks, the averages run $20.5$, then $20.05$, and next would be $20.005$.",
+    "The extra amounts $0.5, 0.05, 0.005$ above $20$ are being squeezed toward $0$.",
+    "So the limit of the averages is $20$, and the speedometer reads $20$ meters per second."
   ],
   "alternativeExplanations": [
     {

@@ -10,19 +10,19 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The amplitude is the number multiplying the sine.",
+  "hint": "The amplitude tells how far the wave swings from its middle. Which number in the rule controls that?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The amplitude is the number multiplying the sine."
+      "text": "The amplitude tells how far the wave swings from its middle. Which number in the rule controls that?"
     },
     {
       "level": "guide",
-      "text": "In $y = a\\sin(x)$, the amplitude is $a$ — how far the wave swings from the middle."
+      "text": "In $y = a\\sin(x)$, the amplitude is the number $a$ multiplying the sine. Find the number in that position in $y = 4\\sin(x)$."
     },
     {
       "level": "reveal",
-      "text": "The amplitude is $4$."
+      "text": "The number in front of the sine is $4$, so the amplitude is $4$."
     }
   ],
   "explanation": [

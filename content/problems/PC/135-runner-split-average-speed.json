@@ -18,18 +18,18 @@
     },
     {
       "level": "guide",
-      "text": "Distance change: $400 - 100 = 300$ m. Time change: $75 - 15 = 60$ s."
+      "text": "The distance change is $400 - 100 = 300$ m and the time change is $75 - 15 = 60$ s. Divide the distance by the time."
     },
     {
       "level": "reveal",
-      "text": "$300 \\div 60 = 5$ meters per second."
+      "text": "Dividing gives $300 \\div 60 = 5$, so her average speed is $5$ meters per second."
     }
   ],
   "explanation": [
-    "Use average rate of change = change in distance ÷ change in time.",
-    "$400 - 100 = 300$ meters.",
-    "$75 - 15 = 60$ seconds.",
-    "$300 \\div 60 = 5$ m/s."
+    "Average rate of change is the change in distance divided by the change in time.",
+    "The distance covered between the splits is $400 - 100 = 300$ meters.",
+    "The time that passed between the splits is $75 - 15 = 60$ seconds.",
+    "So her average speed between the splits is $300 \\div 60 = 5$ m/s."
   ],
   "alternativeExplanations": [
     {

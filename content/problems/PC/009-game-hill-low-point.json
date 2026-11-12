@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Set the inside equal to zero: $x + 4 = 0$."
+      "text": "The lowest point is where the squared part is zero, so set the inside equal to zero: solve $x + 4 = 0$."
     },
     {
       "level": "reveal",
-      "text": "$x + 4 = 0$ gives $x = -4$. The lowest point is at $x = -4$."
+      "text": "Solving $x + 4 = 0$ gives $x = -4$, so the lowest point of the hill is at $x = -4$."
     }
   ],
   "explanation": [
-    "The lowest point happens where the squared part is zero.",
-    "Solve $x + 4 = 0$ to get $x = -4$.",
-    "The $-6$ drops the hill 6 units, but does not change the $x$-coordinate."
+    "The lowest point happens where the squared part is zero, since a square is never negative.",
+    "Set the inside to zero: $x + 4 = 0$, and subtracting $4$ from both sides gives $x = -4$.",
+    "The $-6$ drops the hill $6$ units but does not move it sideways, so the lowest point has $x$-coordinate $-4$."
   ],
   "alternativeExplanations": [
     {

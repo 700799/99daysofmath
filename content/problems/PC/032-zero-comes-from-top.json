@@ -10,25 +10,25 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A fraction equals zero only when its TOP equals zero.",
+  "hint": "A fraction equals zero only when its TOP equals zero and its bottom does not.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A fraction equals zero only when its TOP equals zero."
+      "text": "A fraction equals zero only when its TOP equals zero and its bottom does not."
     },
     {
       "level": "guide",
-      "text": "Set $x - 2 = 0$ and solve."
+      "text": "The top of this fraction is $x - 2$, so set $x - 2 = 0$ and solve for $x$."
     },
     {
       "level": "reveal",
-      "text": "$x = 2$ makes the top zero, so $f(2) = \\frac{0}{7} = 0$."
+      "text": "The top is zero at $x = 2$, and $f(2) = \\frac{0}{7} = 0$, so the answer is $x = 2$."
     }
   ],
   "explanation": [
-    "Zeros come from the TOP of the fraction.",
-    "$x - 2 = 0$ gives $x = 2$.",
-    "Check: $f(2) = \\frac{0}{7} = 0$."
+    "Zeros of a fraction come from its TOP, because zero divided by a nonzero number is zero.",
+    "Setting the top to zero gives $x - 2 = 0$, so $x = 2$.",
+    "Check that the bottom is not zero there: $f(2) = \\frac{0}{7} = 0$, so $x = 2$ works."
   ],
   "alternativeExplanations": [
     {

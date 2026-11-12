@@ -10,25 +10,25 @@
   "primaryAnswer": "18",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "This time $f$ is on the inside, so $f$ runs FIRST.",
+  "hint": "This time $f$ is on the inside, so $f$ runs FIRST and $g$ works on its result.",
   "hints": [
     {
       "level": "nudge",
-      "text": "This time $f$ is on the inside, so $f$ runs FIRST."
+      "text": "This time $f$ is on the inside, so $f$ runs FIRST and $g$ works on its result."
     },
     {
       "level": "guide",
-      "text": "$f(2) = 2 + 4 = 6$. Now put that $6$ into $g$."
+      "text": "Start inside: $f(2) = 2 + 4 = 6$. Then put that $6$ into $g$, which multiplies by $3$."
     },
     {
       "level": "reveal",
-      "text": "$g(6) = 3 \\times 6 = 18$."
+      "text": "Because $g(6) = 3 \\times 6 = 18$, the value of $g(f(2))$ is $18$."
     }
   ],
   "explanation": [
-    "The inside machine always goes first. Here that is $f$.",
-    "$f(2) = 6$.",
-    "$g(6) = 18$. Notice this is NOT the same as $f(g(2)) = 10$ — order matters."
+    "The inside machine always goes first, and here the inside machine is $f$.",
+    "The function $f$ adds $4$ to its input, so the inside value is $f(2) = 2 + 4 = 6$.",
+    "Then $g$ triples that result: $g(6) = 18$. This differs from $f(g(2)) = 10$, so the order matters, and the answer is $18$."
   ],
   "alternativeExplanations": [
     {

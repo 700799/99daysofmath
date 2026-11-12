@@ -824,6 +824,239 @@
   "Subtract in the same order for both: m = (9 − 1)/(4 − 0) = 8/4.",
   "8/4 = 2, so the slope of the line is 2."
  ],
+ "PC-1#0": [
+  "A number outside the bars changes heights, so think about what happens to the point of the V at (0, 0).",
+  "The −4 is outside the bars, so every point drops 4, and the point moves from (0, 0) to (0, −4).",
+  "The y-coordinate of the point of the V is −4."
+ ],
+ "PC-1#1": [
+  "The lowest point of a parabola is where the squared part equals zero.",
+  "Set the inside to zero: x + 4 = 0. A PLUS inside moves the graph LEFT.",
+  "Solving gives x = −4, so the lowest point has x-coordinate −4."
+ ],
+ "PC-1#2": [
+  "The minus in front flips the V upside down, so its tip is now the top of the graph.",
+  "The tip is at x = 0, where y = −0 + 7 = 7, and every other x gives less.",
+  "The greatest y-value the graph reaches is 7."
+ ],
+ "PC-2#0": [
+  "Work from the inside out: the inside function g goes first.",
+  "The inside function adds 1 to its input, so g(3) = 3 + 1 = 4.",
+  "Then the outside function doubles that result: f(4) = 2 × 4 = 8, so f(g(3)) = 8."
+ ],
+ "PC-2#1": [
+  "The inverse is the undo machine, so think about how to reverse what f does.",
+  "Since f adds 9, the undo machine subtracts 9 from its input.",
+  "Subtracting gives 20 − 9 = 11, so the answer is f⁻¹(20) = 11."
+ ],
+ "PC-2#2": [
+  "Undo the steps in reverse order: shipping was added last, so remove it first.",
+  "Take off shipping: 45 − 5 = 40. That 40 dollars is 80% of the original price.",
+  "Dividing gives 40 ÷ 0.8 = 50, so the original price was 50 dollars."
+ ],
+ "PC-3#0": [
+  "A product is zero when one of its factors is zero, so look at each factor.",
+  "Each factor gives one zero: x = 1, x = 4, and x = −3.",
+  "All three are different, so there are 3 real zeros."
+ ],
+ "PC-3#1": [
+  "Look at the exponent on each factor to see how the graph behaves at that zero.",
+  "The exponent on (x − 3) is 2, which is even, and even multiplicity means the graph touches and bounces.",
+  "The graph bounces off the x-axis at x = 3."
+ ],
+ "PC-3#2": [
+  "Substitute x = 2 and follow the order of operations, starting inside the parentheses.",
+  "Inside the parentheses: 12 − 2(2) = 8. Then square it: 8² = 64.",
+  "Multiply by x: 2 × 64 = 128, so the volume is 128 cubic inches."
+ ],
+ "PC-4#0": [
+  "Try some big values of n and watch what happens to each person's share.",
+  "With 120 friends each pays 1 dollar, and with 1200 friends each pays 10 cents, so the share keeps shrinking.",
+  "The cost heads toward 0, which is the horizontal asymptote."
+ ],
+ "PC-4#1": [
+  "Compare the degree of the top with the degree of the bottom.",
+  "The top has degree 1 and the bottom has degree 2, so the bottom grows faster and squashes the fraction.",
+  "The fraction shrinks toward zero, so the asymptote is y = 0."
+ ],
+ "PC-4#2": [
+  "Before counting bottom factors, check whether any of them cancels with the top.",
+  "The (x + 2) cancels, so x = −2 is a hole, and what is left on the bottom is (x − 1)(x − 7).",
+  "That leaves 2 vertical asymptotes, at x = 1 and x = 7."
+ ],
+ "PC-5#0": [
+  "In an exponential rule, the growth factor is the number you multiply by at each step.",
+  "That number is the base, which is the number raised to the power x.",
+  "The base here is 1.5, so the growth factor is 1.5."
+ ],
+ "PC-5#1": [
+  "A decay factor describes what STAYS each hour, not what leaves.",
+  "If 20% leaves, then 100% − 20% = 80% stays in the bloodstream.",
+  "Written as a decimal, 80% is 0.8, so the decay factor is 0.8."
+ ],
+ "PC-5#2": [
+  "Gaining 10% each week means multiplying by a growth factor of 1.1 every week.",
+  "After the first week you have 200 × 1.1 = 220 followers.",
+  "After the second week you have 220 × 1.1 = 242 followers."
+ ],
+ "PC-5#3": [
+  "Keep halving 12 and watch where the values are heading.",
+  "The values shrink toward zero (12, 6, 3, 1.5, 0.75 …) but half of a positive number is still positive, so they never reach it.",
+  "The line the graph hugs is the asymptote y = 0."
+ ],
+ "PC-6#0": [
+  "A log asks a question: 5 to what power gives 125?",
+  "Multiply fives until you reach it: 5 × 5 × 5 = 125, which uses three fives.",
+  "So the power is 3, and log base 5 of 125 equals 3."
+ ],
+ "PC-6#1": [
+  "Each fold doubles the layers, so this asks for log base 2 of 1024.",
+  "Double from 1 and count each step: 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024.",
+  "That is ten doublings, so it takes 10 folds."
+ ],
+ "PC-6#2": [
+  "Subtracting logs with the same base means dividing the numbers inside.",
+  "Divide inside to get one log: 96 ÷ 3 = 32, so the expression is log base 2 of 32.",
+  "Because 2⁵ = 32, the log equals 5, which is the answer."
+ ],
+ "PC-6#3": [
+  "The pH scale is a log scale, so count the steps between the two values.",
+  "There are 7 − 2 = 5 steps, and each step down is 10 times more acidic.",
+  "Five steps give 10⁵ = 100,000, so lemon juice is 100,000 times more acidic."
+ ],
+ "PC-7#0": [
+  "Write 625 as a power of 5 so that both sides share a base.",
+  "Multiply by 5 and count: 5, 25, 125, 625, which takes four fives, so 625 = 5⁴.",
+  "Matching the exponents on both sides gives x = 4."
+ ],
+ "PC-7#1": [
+  "Write 16 as a power of 2 so that both sides share a base.",
+  "Since 16 = 2⁴, the equation becomes 2^(x+1) = 2⁴, and the exponents must match: x + 1 = 4.",
+  "Subtracting 1 from both sides gives the answer x = 3."
+ ],
+ "PC-7#2": [
+  "Count how many halvings take 400 mg down to 25 mg, then turn halvings into hours.",
+  "Halving step by step, 400 → 200 → 100 → 50 → 25, takes 4 halvings.",
+  "Each halving takes 4 hours, so the time is 4 × 4 = 16 hours."
+ ],
+ "PC-7#3": [
+  "Divide the target by the start to see how many doublings are needed.",
+  "The growth needed is 10,000 ÷ 1250 = 8, and 8 = 2³, so that is 3 doublings.",
+  "Each doubling takes 10 years, so the town needs 3 × 10 = 30 years."
+ ],
+ "PC-8#0": [
+  "In a 30-60-90 triangle, the side opposite 30° has a fixed link to the hypotenuse.",
+  "That side is always half the hypotenuse, so work out 12 ÷ 2.",
+  "Half of 12 is 6, so the side opposite 30° is 6 long."
+ ],
+ "PC-8#1": [
+  "The three angles of any triangle add up to 180°.",
+  "The right angle takes 90°, leaving 90° for the other two angles to share.",
+  "Subtracting gives 90 − 55 = 35, so the third angle is 35°."
+ ],
+ "PC-8#2": [
+  "The string is the hypotenuse and the height is opposite the angle, so use sine.",
+  "Sine is opposite over hypotenuse: sin = 20 ÷ 40 = 1/2.",
+  "The angle whose sine is 1/2 is 30°, so the string makes a 30° angle with the ground."
+ ],
+ "PC-8#3": [
+  "The hypotenuse sits across from the right angle of the triangle.",
+  "Because it faces the biggest angle, it is always the longest side.",
+  "The longest of 3, 4, 5 is 5, so the hypotenuse is 5."
+ ],
+ "PC-9#0": [
+  "Use the swap rule between the two units: π radians = 180°.",
+  "The angle π/2 is half of π, so take half of 180°.",
+  "Half of 180° is 90°, so π/2 radians is the same as 90°."
+ ],
+ "PC-9#1": [
+  "Think of sin 30° as the height of the short leg in a 30-60-90 triangle with hypotenuse 1.",
+  "Slice an equilateral triangle with side 1 down the middle: the short leg is exactly 1/2.",
+  "That short leg is the height at 30°, so sin 30° = 1/2 and n = 2."
+ ],
+ "PC-9#2": [
+  "Cosine is the across number and sine is the up number of the point on the circle.",
+  "Negative across means left of centre, and negative up means below centre.",
+  "Left and below is the bottom-left slice, which is Quadrant 3 (180°–270°)."
+ ],
+ "PC-10#0": [
+  "The amplitude is the number multiplying the sine, not the number added at the end.",
+  "The number in front of the sine here is 7, while the 2 only sets the midline.",
+  "The amplitude is 7, so the wave swings 7 above and 7 below the midline y = 2."
+ ],
+ "PC-10#1": [
+  "The period is 360° divided by b, the number in front of x inside the cosine.",
+  "Here b = 4, so the period is 360 ÷ 4 degrees.",
+  "Dividing gives 360 ÷ 4 = 90, so one full wave takes 90°."
+ ],
+ "PC-10#2": [
+  "Amplitude is half the gap between the highest and lowest values of the wave.",
+  "The gap from longest to shortest day is 16 − 8 = 8 hours.",
+  "Half that gap is 8 ÷ 2 = 4, so the amplitude is 4 hours (around a midline of 12 hours)."
+ ],
+ "PC-11#0": [
+  "Tangent can be built from the other two: tan θ = sin θ ÷ cos θ.",
+  "Put in the given values to get tan θ = 0.6 ÷ 0.8.",
+  "That is the same as 6/8 = 3/4, so tan θ = 0.75."
+ ],
+ "PC-11#1": [
+  "Sine is the height of the point, so picture a flat line at height 0.5 across the unit circle.",
+  "The line cuts the circle in two places: one going up and one coming down.",
+  "So there are 2 solutions, at 30° and 150°."
+ ],
+ "PC-11#2": [
+  "Tangent is sin θ ÷ cos θ, so ask where else that fraction has the same value.",
+  "Flipping the sign of BOTH sin θ and cos θ leaves the fraction unchanged, and that happens half a turn away.",
+  "Adding half a turn gives 45 + 180 = 225, so the other answer is 225°."
+ ],
+ "PC-12#0": [
+  "Two sides and the angle between them (SAS) call for the Law of Cosines.",
+  "Set up c² = 25 + 256 − 2(5)(16)cos 120°, and use the value cos 120° = −0.5.",
+  "Subtracting a negative ADDS, so the equation becomes c² = 281 + 80 = 361.",
+  "Taking the square root gives c = √361 = 19 km."
+ ],
+ "PC-12#1": [
+  "With three sides known, use the Law of Cosines with 13 as the side across from the angle.",
+  "This gives 169 = 25 + 144 − 2(5)(12)cos C, which is 169 = 169 − 120 cos C.",
+  "So 120 cos C = 0, which means that cos C = 0.",
+  "The angle with cosine 0 is 90°, so it is a right triangle."
+ ],
+ "PC-12#2": [
+  "The two paths and the gap between their ends form a triangle, so use the Law of Cosines.",
+  "Set up c² = 900 + 6400 − 2(30)(80)(0.5) = 7300 − 2400, using the value cos 60° = 0.5.",
+  "That gives c² = 4900, and the square root of 4900 is 70.",
+  "The far ends of the paths are 70 m apart."
+ ],
+ "PC-13#0": [
+  "The same number of seats is added each row, so this is an arithmetic sequence with first term 12 and d = 3.",
+  "Row 20 is 19 jumps after row 1, and 19 × 3 = 57 extra seats.",
+  "Adding gives 12 + 57 = 69, so row 20 has 69 seats."
+ ],
+ "PC-13#1": [
+  "Pair the ends of the list: 1 + 100 = 101, 2 + 99 = 101, and so on.",
+  "Every pair makes 101, and 100 numbers make 50 pairs.",
+  "Multiplying gives 50 × 101 = 5050, so the sum is 5050."
+ ],
+ "PC-13#2": [
+  "Use the geometric rule: term n = 3 × 2^(n−1), so term 8 uses the exponent 7.",
+  "Seven doublings in a row give the power 2^7 = 128.",
+  "Multiplying gives 3 × 128 = 384, so the eighth term is 384."
+ ],
+ "PC-14#0": [
+  "Substituting gives 0 ÷ 0, which is a signal to factor the top.",
+  "The top factors as (x − 2)(x − 5), and the (x − 2) cancels with the bottom, leaving x − 5.",
+  "Substitute into what is left: 2 − 5 = −3, so the limit is −3."
+ ],
+ "PC-14#1": [
+  "Watch the piece 6 ÷ t and ask what happens to it when t becomes huge.",
+  "A fixed top over a growing bottom fades: 6 ÷ 60 = 0.1, then 6 ÷ 600 = 0.01, so that piece heads to 0.",
+  "So the temperature heads to 18 + 0 = 18 degrees."
+ ],
+ "PC-14#2": [
+  "Average rate of change is rise over run between the two points on the graph.",
+  "The heights are f(1) = 1 and f(4) = 16, so the rise is 16 − 1 = 15 and the run is 4 − 1 = 3.",
+  "Dividing gives 15 ÷ 3 = 5, so the average rate of change is 5."
+ ],
  "STAT-1#0": [
   "A categorical variable is a label or group name, even when it is written with digits. Ask which of these you would never average.",
   "Shoe size, height and distance to school all measure an amount, so averages of them mean something.",

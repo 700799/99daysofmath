@@ -10,11 +10,11 @@
   "primaryAnswer": "390",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You need a SERIES — the sum of the weekly amounts, not just week $12$ by itself.",
+  "hint": "You need a SERIES, the sum of all the weekly amounts, not just the amount for week $12$ by itself.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You need a SERIES — the sum of the weekly amounts, not just week $12$ by itself."
+      "text": "You need a SERIES, the sum of all the weekly amounts, not just the amount for week $12$ by itself."
     },
     {
       "level": "nudge",
@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "First find the last term: week $12$ saves $5 + 11 \\times 5 = 60$ dollars. Now you have first $= 5$, last $= 60$, $n = 12$."
+      "text": "First find the last term: week $12$ saves $5 + 11 \\times 5 = 60$ dollars. Now the first term is $5$, the last is $60$, and $n = 12$, so use the sum formula."
     },
     {
       "level": "reveal",
-      "text": "Sum $= 12 \\times \\frac{5 + 60}{2} = 6 \\times 65 = 390$ dollars."
+      "text": "The sum is $12 \\times \\frac{5 + 60}{2} = 6 \\times 65 = 390$, so you have saved $390$ dollars."
     }
   ],
   "explanation": [
-    "Step 1 — find the last term with $a_n = a_1 + (n-1)d$: $a_{12} = 5 + 11 \\times 5 = 60$.",
-    "Step 2 — add the list with the pair-the-ends shortcut: sum $= n \\times \\frac{\\text{first} + \\text{last}}{2}$.",
-    "$12 \\times \\frac{5 + 60}{2} = 12 \\times 32.5$.",
-    "$= 390$ dollars."
+    "First find the last term with $a_n = a_1 + (n-1)d$: week $12$ saves $a_{12} = 5 + 11 \\times 5 = 60$ dollars.",
+    "Then add the whole list with the pairing shortcut: the sum is $n \\times \\frac{\\text{first} + \\text{last}}{2}$.",
+    "Substituting the twelve weeks and both end amounts gives $12 \\times \\frac{5 + 60}{2} = 12 \\times 32.5$.",
+    "So the total saved after $12$ weeks is $390$ dollars."
   ],
   "alternativeExplanations": [
     {

@@ -10,11 +10,11 @@
   "primaryAnswer": "210",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two edges and the angle squeezed between them: pull the Law of Cosines out of the toolbox.",
+  "hint": "Two edges and the angle squeezed between them: this is the setting for the Law of Cosines.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two edges and the angle squeezed between them: pull the Law of Cosines out of the toolbox."
+      "text": "Two edges and the angle squeezed between them: this is the setting for the Law of Cosines."
     },
     {
       "level": "nudge",
@@ -23,18 +23,18 @@
     },
     {
       "level": "guide",
-      "text": "$90^2 + 150^2 = 8100 + 22500 = 30600$, and the correction is $2 \\times 90 \\times 150 \\times (-\\frac{1}{2}) = -13500$."
+      "text": "The squares add to $90^2 + 150^2 = 8100 + 22500 = 30600$, and the correction term is $2 \\times 90 \\times 150 \\times (-\\frac{1}{2}) = -13500$. Subtract the correction from the sum of squares."
     },
     {
       "level": "reveal",
-      "text": "Subtracting $-13500$ adds it: $c^2 = 30600 + 13500 = 44100$, so $c = 210$ ft."
+      "text": "Subtracting $-13500$ adds it: $c^2 = 30600 + 13500 = 44100$, so the posts are $c = 210$ ft apart."
     }
   ],
   "explanation": [
-    "Home plate and the two posts form a triangle with a $120^\\circ$ corner.",
-    "$c^2 = 90^2 + 150^2 - 2(90)(150)\\cos 120^\\circ$.",
-    "$\\cos 120^\\circ = -\\frac{1}{2}$, so the last term is $-13500$ and subtracting it ADDS $13500$.",
-    "$c^2 = 30600 + 13500 = 44100$, so $c = \\sqrt{44100} = 210$ ft."
+    "Home plate and the two posts form a triangle with a $120^\\circ$ corner between the known edges.",
+    "The Law of Cosines gives the distance between the posts: $c^2 = 90^2 + 150^2 - 2(90)(150)\\cos 120^\\circ$.",
+    "Since $\\cos 120^\\circ = -\\frac{1}{2}$, the last product is $-13500$, and subtracting it ADDS $13500$.",
+    "So $c^2 = 30600 + 13500 = 44100$, and the posts are $c = \\sqrt{44100} = 210$ ft apart."
   ],
   "alternativeExplanations": [
     {

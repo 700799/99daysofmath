@@ -10,26 +10,26 @@
   "primaryAnswer": "50",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The $100$ m gap sits ACROSS from the drone's $90^\\circ$ angle — that is your matching pair.",
+  "hint": "The $100$ m gap sits ACROSS from the drone's $90^\\circ$ angle, and that side with its angle is your matching pair.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $100$ m gap sits ACROSS from the drone's $90^\\circ$ angle — that is your matching pair."
+      "text": "The $100$ m gap sits ACROSS from the drone's $90^\\circ$ angle, and that side with its angle is your matching pair."
     },
     {
       "level": "guide",
-      "text": "The side from $B$ to the drone sits across from angle $A = 30^\\circ$. So $\\frac{a}{\\sin 30^\\circ} = \\frac{100}{\\sin 90^\\circ}$."
+      "text": "The side from $B$ to the drone sits across from angle $A = 30^\\circ$. Call it $a$ and use the Law of Sines: $\\frac{a}{\\sin 30^\\circ} = \\frac{100}{\\sin 90^\\circ}$."
     },
     {
       "level": "reveal",
-      "text": "$a = 100 \\times \\frac{1}{2} = 50$ meters."
+      "text": "Solving gives $a = 100 \\times \\frac{1}{2} = 50$, so the drone is $50$ meters from friend $B$."
     }
   ],
   "explanation": [
-    "Label the triangle: the two friends and the drone are the corners.",
-    "The $100$ m side is across from the $90^\\circ$ drone angle, so use that pair.",
-    "$\\frac{a}{\\sin 30^\\circ} = \\frac{100}{\\sin 90^\\circ} = 100$.",
-    "$a = 100 \\times \\frac{1}{2} = 50$ m."
+    "Label the triangle so that the two friends and the drone are its three corners.",
+    "The $100$ m side is across from the $90^\\circ$ angle at the drone, which gives a complete side and angle pair.",
+    "The side from $B$ to the drone is across from the $30^\\circ$ angle, so the Law of Sines gives $\\frac{a}{\\sin 30^\\circ} = \\frac{100}{\\sin 90^\\circ} = 100$.",
+    "Multiplying by $\\sin 30^\\circ = \\frac{1}{2}$ gives $a = 50$, so the drone is $50$ m from friend $B$."
   ],
   "alternativeExplanations": [
     {

@@ -10,26 +10,26 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the two heights first, then take rise over run.",
+  "hint": "Find the height of the graph at each of the two $x$-values first, then take rise over run.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the two heights first, then take rise over run."
+      "text": "Find the height of the graph at each of the two $x$-values first, then take rise over run."
     },
     {
       "level": "guide",
-      "text": "$f(1) = 1$ and $f(4) = 16$, so the rise is $16 - 1 = 15$ and the run is $4 - 1 = 3$."
+      "text": "The heights are $f(1) = 1$ and $f(4) = 16$, so the rise is $16 - 1 = 15$ and the run is $4 - 1 = 3$. Divide rise by run."
     },
     {
       "level": "reveal",
-      "text": "$15 \\div 3 = 5$."
+      "text": "Dividing gives $15 \\div 3 = 5$, so the average rate of change is $5$."
     }
   ],
   "explanation": [
-    "Average rate of change $= \\frac{f(4) - f(1)}{4 - 1}$.",
-    "$f(4) = 16$ and $f(1) = 1$.",
-    "$\\frac{16 - 1}{4 - 1} = \\frac{15}{3}$.",
-    "$= 5$."
+    "The average rate of change from $1$ to $4$ is the slope $\\frac{f(4) - f(1)}{4 - 1}$.",
+    "Squaring the two inputs gives the heights $f(4) = 16$ and $f(1) = 1$.",
+    "Substituting these values into the slope gives $\\frac{16 - 1}{4 - 1} = \\frac{15}{3}$.",
+    "So the average rate of change is $5$."
   ],
   "alternativeExplanations": [
     {

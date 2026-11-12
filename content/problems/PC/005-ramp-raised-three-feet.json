@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "Raising the ramp does not change how steep it is, only how high it sits.",
-    "That is $f(x) + k$ — a vertical slide.",
-    "Up $3$ feet means $k = 3$."
+    "Raising the whole ramp does not change how steep it is, only how high every point sits.",
+    "A change in height alone is a vertical slide, which has the form $f(x) + k$ with $k$ added outside the square root.",
+    "Moving up $3$ feet adds $3$ to every output, so $k = 3$ and the new rule is $y = \\sqrt{x} + 3$."
   ],
   "alternativeExplanations": [
     {

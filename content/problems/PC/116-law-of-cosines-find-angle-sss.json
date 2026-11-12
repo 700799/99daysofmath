@@ -18,18 +18,18 @@
     },
     {
       "level": "guide",
-      "text": "Put $7$ in the $c$ spot: $49 = 9 + 25 - 2 \\times 3 \\times 5 \\times \\cos C$, so $49 = 34 - 30\\cos C$."
+      "text": "Put $7$ in the $c$ spot: $49 = 9 + 25 - 2 \\times 3 \\times 5 \\times \\cos C$, which simplifies to $49 = 34 - 30\\cos C$. Solve this for $\\cos C$."
     },
     {
       "level": "reveal",
-      "text": "$30\\cos C = 34 - 49 = -15$, so $\\cos C = -\\frac{1}{2}$ and $C = 120^\\circ$."
+      "text": "Rearranging gives $30\\cos C = 34 - 49 = -15$, so $\\cos C = -\\frac{1}{2}$ and the angle is $C = 120^\\circ$."
     }
   ],
   "explanation": [
-    "The angle you want is across from the side $7$, so $7$ plays the role of $c$.",
-    "$49 = 9 + 25 - 30\\cos C$.",
-    "$49 = 34 - 30\\cos C$, so $30\\cos C = -15$.",
-    "$\\cos C = -\\frac{1}{2}$, which happens at $C = 120^\\circ$."
+    "The wanted angle is across from the side of length $7$, so $7$ plays the role of $c$ in the Law of Cosines.",
+    "Substituting the three side lengths gives $49 = 9 + 25 - 30\\cos C$.",
+    "Adding the squares, that is $49 = 34 - 30\\cos C$, so rearranging gives $30\\cos C = 34 - 49 = -15$.",
+    "Dividing gives $\\cos C = -\\frac{1}{2}$, and the triangle angle with that cosine is $C = 120^\\circ$."
   ],
   "alternativeExplanations": [
     {

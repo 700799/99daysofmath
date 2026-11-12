@@ -10,25 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The degree is the BIGGEST exponent on $x$.",
+  "hint": "The degree of a polynomial is the BIGGEST exponent that appears on $x$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The degree is the BIGGEST exponent on $x$."
+      "text": "The degree of a polynomial is the BIGGEST exponent that appears on $x$."
     },
     {
       "level": "guide",
-      "text": "The exponents here are $3$, $1$, and $0$. Which is largest?"
+      "text": "The terms have exponents $3$, $1$, and $0$ (the plain number). Pick out the largest of those three."
     },
     {
       "level": "reveal",
-      "text": "The degree is $3$."
+      "text": "The largest exponent is $3$, so the degree of $p(x)$ is $3$."
     }
   ],
   "explanation": [
-    "Look at every power of $x$: $x^3$, $x$, and the plain number $7$.",
-    "The highest power is $3$.",
-    "So the degree is $3$."
+    "Look at the power of $x$ in every term: $x^3$, then $x$ to the first power, then the plain number $7$.",
+    "The degree is the highest of those powers, and the highest one here is $3$.",
+    "So the degree of the polynomial is $3$."
   ],
   "alternativeExplanations": [
     {

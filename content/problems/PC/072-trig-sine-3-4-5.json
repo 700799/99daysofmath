@@ -10,25 +10,25 @@
   "primaryAnswer": "0.6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "SOH: Sine is Opposite over Hypotenuse.",
+  "hint": "Use the SOH part of SOH-CAH-TOA: Sine is Opposite over Hypotenuse. Which two sides do you need?",
   "hints": [
     {
       "level": "nudge",
-      "text": "SOH: Sine is Opposite over Hypotenuse."
+      "text": "Use the SOH part of SOH-CAH-TOA: Sine is Opposite over Hypotenuse. Which two sides do you need?"
     },
     {
       "level": "guide",
-      "text": "Opposite is $3$ and hypotenuse is $5$, so sine $= \\frac{3}{5}$."
+      "text": "The opposite side is $3$ and the hypotenuse is $5$, so the sine is $\\frac{3}{5}$. Turn that fraction into a decimal."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{3}{5} = 0.6$."
+      "text": "Dividing gives $\\frac{3}{5} = 0.6$, so the sine of the angle is $0.6$."
     }
   ],
   "explanation": [
-    "SOH-CAH-TOA starts with SOH: Sine $=$ Opposite $\\div$ Hypotenuse.",
-    "Here that is $3 \\div 5$.",
-    "$3 \\div 5 = 0.6$."
+    "SOH-CAH-TOA starts with SOH, which says Sine $=$ Opposite $\\div$ Hypotenuse.",
+    "For this angle the opposite side is $3$ and the hypotenuse is $5$, so the sine is $3 \\div 5$.",
+    "As a decimal, $3 \\div 5 = 0.6$, so the sine is $0.6$."
   ],
   "alternativeExplanations": [
     {

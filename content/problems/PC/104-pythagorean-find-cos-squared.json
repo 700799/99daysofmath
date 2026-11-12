@@ -10,25 +10,25 @@
   "primaryAnswer": "0.64",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The two squares always add to $1$.",
+  "hint": "For any angle, the squares of sine and cosine always add to $1$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The two squares always add to $1$."
+      "text": "For any angle, the squares of sine and cosine always add to $1$."
     },
     {
       "level": "guide",
-      "text": "$\\cos^2\\theta = 1 - \\sin^2\\theta = 1 - 0.36$."
+      "text": "Rearrange the identity to $\\cos^2\\theta = 1 - \\sin^2\\theta$, then put in the given value: $1 - 0.36$."
     },
     {
       "level": "reveal",
-      "text": "$1 - 0.36 = 0.64$."
+      "text": "Subtracting gives $1 - 0.36 = 0.64$, so the value of $\\cos^2\\theta$ is $0.64$."
     }
   ],
   "explanation": [
-    "The Pythagorean identity: $\\sin^2\\theta + \\cos^2\\theta = 1$.",
-    "Substitute the known piece: $0.36 + \\cos^2\\theta = 1$.",
-    "Subtract: $\\cos^2\\theta = 1 - 0.36 = 0.64$."
+    "The Pythagorean identity says $\\sin^2\\theta + \\cos^2\\theta = 1$ for any angle.",
+    "Substitute the known piece to get $0.36 + \\cos^2\\theta = 1$.",
+    "Subtracting $0.36$ from both sides gives the answer $\\cos^2\\theta = 1 - 0.36 = 0.64$."
   ],
   "alternativeExplanations": [
     {

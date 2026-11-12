@@ -10,11 +10,11 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Look for the factor that appears on BOTH the top and the bottom.",
+  "hint": "Look for the factor that appears on BOTH the top and the bottom of the fraction.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Look for the factor that appears on BOTH the top and the bottom."
+      "text": "Look for the factor that appears on BOTH the top and the bottom of the fraction."
     },
     {
       "level": "nudge",
@@ -23,11 +23,11 @@
     },
     {
       "level": "guide",
-      "text": "$(x - 3)$ is on top and bottom, so it cancels. Set $x - 3 = 0$."
+      "text": "The factor $(x - 3)$ is on the top and the bottom, so it cancels. Set $x - 3 = 0$ to find where the hole is."
     },
     {
       "level": "reveal",
-      "text": "The hole is at $x = 3$."
+      "text": "Solving $x - 3 = 0$ gives $x = 3$, so the hole is at $x = 3$."
     }
   ],
   "explanation": [

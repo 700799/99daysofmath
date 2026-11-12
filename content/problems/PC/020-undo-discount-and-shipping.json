@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$45 - 5 = 40$. That $\\$40$ is the discounted price, which is $80\\%$ of the original."
+      "text": "Remove the shipping: $45 - 5 = 40$. That $40$ dollars is the discounted price, which is $80\\%$ of the original, so divide it by $0.8$."
     },
     {
       "level": "reveal",
-      "text": "$40 \\div 0.8 = 50$, so the original price was $\\$50$."
+      "text": "Dividing gives $40 \\div 0.8 = 50$, so the original price was $50$ dollars."
     }
   ],
   "explanation": [
-    "Take off the shipping first: $45 - 5 = 40$.",
-    "A $20\\%$ discount means you paid $80\\%$ of the original.",
-    "$40 \\div 0.8 = 50$. The original price was $\\$50$."
+    "Shipping was the last thing added, so remove it first: $45 - 5 = 40$ dollars.",
+    "A $20\\%$ discount means the $40$ dollars is $80\\%$ of the original price, so the original times $0.8$ equals $40$.",
+    "Dividing undoes that multiplication: $40 \\div 0.8 = 50$, so the original price was $50$ dollars."
   ],
   "alternativeExplanations": [
     {

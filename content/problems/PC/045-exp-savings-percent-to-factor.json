@@ -10,25 +10,25 @@
   "primaryAnswer": "1.08",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You keep everything you had — that is $100\\%$ — and then add more.",
+  "hint": "You keep everything you had, which is $100\\%$, and then some more is added on top.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You keep everything you had — that is $100\\%$ — and then add more."
+      "text": "You keep everything you had, which is $100\\%$, and then some more is added on top."
     },
     {
       "level": "guide",
-      "text": "$100\\% + 8\\% = 108\\%$. Now turn $108\\%$ into a decimal."
+      "text": "Add the gain to what you keep: $100\\% + 8\\% = 108\\%$. Now write $108\\%$ as a decimal by dividing by $100$."
     },
     {
       "level": "reveal",
-      "text": "$108\\% = 1.08$, so the growth factor is $1.08$."
+      "text": "As a decimal, $108\\% = 1.08$, so the growth factor is $1.08$."
     }
   ],
   "explanation": [
-    "Growing by $8\\%$ means you keep all $100\\%$ AND gain $8\\%$ more.",
-    "Together that is $108\\%$ of what you had.",
-    "$108\\% = 1.08$, so multiply by $1.08$ each year."
+    "Growing by $8\\%$ means you keep all $100\\%$ of the money AND gain $8\\%$ more.",
+    "Together that is $108\\%$ of what you had at the start of the year.",
+    "Writing the percent as a decimal gives $108\\% = 1.08$, so you multiply by $1.08$ each year."
   ],
   "alternativeExplanations": [
     {

@@ -26,10 +26,10 @@
     }
   ],
   "explanation": [
-    "Substituting $x = 3$ gives $\\frac{0}{0}$ — that means \"keep working\", not \"no answer\".",
-    "Factor the top as a difference of squares: $(x - 3)(x + 3)$.",
-    "Cancel the shared $(x - 3)$, leaving $x + 3$ everywhere except at the hole.",
-    "Now substitute: $3 + 3 = 6$."
+    "Substituting $x = 3$ gives $\\frac{0}{0}$, which means more work is needed, not that there is no answer.",
+    "Factor the top as a difference of squares: $x^2 - 9 = (x - 3)(x + 3)$.",
+    "Cancel the shared factor $(x - 3)$, which leaves $x + 3$ everywhere except at the hole.",
+    "Now substituting is safe: $3 + 3 = 6$, so the limit is $6$."
   ],
   "alternativeExplanations": [
     {

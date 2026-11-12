@@ -10,19 +10,19 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Cosine is the FIRST number in the point $(x, y)$ — how far across you are.",
+  "hint": "Cosine is the FIRST number in the point $(x, y)$, which tells how far across you are.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Cosine is the FIRST number in the point $(x, y)$ — how far across you are."
+      "text": "Cosine is the FIRST number in the point $(x, y)$, which tells how far across you are."
     },
     {
       "level": "guide",
-      "text": "The point at $0^\\circ$ is $(1, 0)$, so the across number is $1$."
+      "text": "The point at $0^\\circ$ is $(1, 0)$. Read off its first coordinate, the across number."
     },
     {
       "level": "reveal",
-      "text": "$\\cos 0^\\circ = 1$."
+      "text": "The across number is $1$, so $\\cos 0^\\circ = 1$."
     }
   ],
   "explanation": [

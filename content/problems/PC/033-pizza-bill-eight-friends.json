@@ -10,25 +10,25 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Put $8$ in for $n$.",
+  "hint": "The formula gives the cost per person once you know $n$. Which number replaces $n$ here?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Put $8$ in for $n$."
+      "text": "The formula gives the cost per person once you know $n$. Which number replaces $n$ here?"
     },
     {
       "level": "guide",
-      "text": "Compute $120 \\div 8$."
+      "text": "Put $8$ in place of $n$ to get $\\frac{120}{8}$, then carry out the division $120 \\div 8$."
     },
     {
       "level": "reveal",
-      "text": "$120 \\div 8 = 15$, so each person pays $\\$15$."
+      "text": "Since $120 \\div 8 = 15$, each person pays $15$ dollars."
     }
   ],
   "explanation": [
-    "Substitute $n = 8$ into $c(n) = \\frac{120}{n}$.",
-    "$c(8) = \\frac{120}{8}$.",
-    "$120 \\div 8 = 15$ dollars each."
+    "There are $8$ friends, so substitute $n = 8$ into $c(n) = \\frac{120}{n}$.",
+    "That gives $c(8) = \\frac{120}{8}$, which means the bill is shared equally among $8$ people.",
+    "Dividing gives $120 \\div 8 = 15$, so each person pays $15$ dollars."
   ],
   "alternativeExplanations": [
     {

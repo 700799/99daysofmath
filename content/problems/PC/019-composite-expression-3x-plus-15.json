@@ -29,17 +29,17 @@
     },
     {
       "level": "guide",
-      "text": "Feed $x + 5$ into $f$: you get $3(x + 5)$. Now distribute the 3."
+      "text": "Feed the expression $x + 5$ into $f$, which triples its input, to get $3(x + 5)$. Then distribute the $3$."
     },
     {
       "level": "reveal",
-      "text": "$3(x + 5) = 3x + 15$."
+      "text": "Distributing gives $3(x + 5) = 3x + 15$, so the simplified form of $f(g(x))$ is $3x + 15$."
     }
   ],
   "explanation": [
-    "The inside machine gives $x + 5$.",
-    "The outside machine triples whatever it gets: $3(x + 5)$.",
-    "Distribute: $3x + 15$."
+    "The inside machine $g$ turns $x$ into the expression $x + 5$.",
+    "The outside machine $f$ triples whatever it receives, so $f(g(x)) = 3(x + 5)$.",
+    "Distributing the $3$ over both terms gives the simplified answer $3x + 15$."
   ],
   "alternativeExplanations": [
     {

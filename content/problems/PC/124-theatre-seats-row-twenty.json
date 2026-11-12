@@ -10,26 +10,26 @@
   "primaryAnswer": "69",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Same amount added each row means this is an ARITHMETIC sequence with $a_1 = 12$ and $d = 3$.",
+  "hint": "The same amount is added each row, so this is an ARITHMETIC sequence with $a_1 = 12$ and $d = 3$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same amount added each row means this is an ARITHMETIC sequence with $a_1 = 12$ and $d = 3$."
+      "text": "The same amount is added each row, so this is an ARITHMETIC sequence with $a_1 = 12$ and $d = 3$."
     },
     {
       "level": "guide",
-      "text": "Row $20$ is $19$ rows behind row $1$, so it has taken $19$ jumps of $3$ seats: $57$ extra seats."
+      "text": "Row $20$ is $19$ rows behind row $1$, so it has gained $19$ jumps of $3$ seats, which is $57$ extra seats. Add those to row 1."
     },
     {
       "level": "reveal",
-      "text": "$12 + 57 = 69$ seats."
+      "text": "Adding gives $12 + 57 = 69$, so row $20$ has $69$ seats."
     }
   ],
   "explanation": [
-    "$a_n = a_1 + (n - 1)d$ with $a_1 = 12$ and $d = 3$.",
-    "$a_{20} = 12 + (20 - 1) \\times 3$.",
-    "$= 12 + 19 \\times 3 = 12 + 57$.",
-    "$= 69$ seats."
+    "The rows follow $a_n = a_1 + (n - 1)d$ with first term $a_1 = 12$ and common difference $d = 3$.",
+    "For row $20$ the formula gives the seat count $a_{20} = 12 + (20 - 1) \\times 3$.",
+    "Multiplying first, this is the same as $12 + 19 \\times 3 = 12 + 57$.",
+    "So row $20$ of the theatre has $69$ seats."
   ],
   "alternativeExplanations": [
     {

@@ -10,11 +10,11 @@
   "primaryAnswer": "35",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Height above ground $=$ centre height $+$ radius $\\times \\sin\\theta$.",
+  "hint": "The seat's height above the ground is the centre height plus the radius times $\\sin\\theta$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Height above ground $=$ centre height $+$ radius $\\times \\sin\\theta$."
+      "text": "The seat's height above the ground is the centre height plus the radius times $\\sin\\theta$."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\sin 90^\\circ = 1$, so the height is $20 + 15 \\times 1$."
+      "text": "At $\\theta = 90^\\circ$ the sine is $\\sin 90^\\circ = 1$, so the height is $20 + 15 \\times 1$. Add these up."
     },
     {
       "level": "reveal",
-      "text": "$20 + 15 = 35$ metres."
+      "text": "The height is $20 + 15 = 35$, so the seat is $35$ metres above the ground."
     }
   ],
   "explanation": [
-    "Put the centre of the wheel at the middle of a unit-circle picture. The seat rides the rim.",
-    "Its height above the centre is radius $\\times \\sin\\theta = 15\\sin\\theta$, and the centre itself is $20$ m up.",
-    "At $\\theta = 90^\\circ$, $\\sin 90^\\circ = 1$, so the height is $20 + 15 \\times 1 = 35$ m."
+    "Put the centre of the wheel at the middle of a unit-circle picture, with the seat riding around the rim.",
+    "The seat's height above the centre is the radius times $\\sin\\theta$, or $15\\sin\\theta$, and the centre itself is $20$ m up.",
+    "At $\\theta = 90^\\circ$, $\\sin 90^\\circ = 1$, so the height is $20 + 15 \\times 1 = 35$ m above the ground."
   ],
   "alternativeExplanations": [
     {

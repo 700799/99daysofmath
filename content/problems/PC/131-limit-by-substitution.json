@@ -10,26 +10,26 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A limit asks \"where is this heading?\" For a smooth, unbroken rule you can just walk right in and substitute.",
+  "hint": "A limit asks where the values are heading. For a smooth, unbroken rule like this one, you can simply substitute.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A limit asks \"where is this heading?\" For a smooth, unbroken rule you can just walk right in and substitute."
+      "text": "A limit asks where the values are heading. For a smooth, unbroken rule like this one, you can simply substitute."
     },
     {
       "level": "guide",
-      "text": "Put $x = 2$ into $3x + 1$: that is $3(2) + 1$."
+      "text": "Put $x = 2$ into the rule $3x + 1$, which gives $3(2) + 1$. Work that out."
     },
     {
       "level": "reveal",
-      "text": "$6 + 1 = 7$."
+      "text": "The value is $6 + 1 = 7$, so the expression approaches $7$."
     }
   ],
   "explanation": [
-    "This rule has no holes and no breaks near $x = 2$.",
-    "When nothing is broken, the limit is just the value: substitute.",
-    "$3(2) + 1 = 6 + 1$.",
-    "$= 7$."
+    "The rule $3x + 1$ is a straight line, so it has no holes and no breaks near $x = 2$.",
+    "When nothing is broken, the limit equals the value of the rule, so substitute $x = 2$.",
+    "Multiplying first and then adding, that gives $3(2) + 1 = 6 + 1$.",
+    "So the expression approaches the value $7$ as $x \\to 2$."
   ],
   "alternativeExplanations": [
     {

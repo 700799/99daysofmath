@@ -10,11 +10,11 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Subtracting logs means DIVIDING inside: $\\log A - \\log B = \\log\\left(\\frac{A}{B}\\right)$.",
+  "hint": "Subtracting logs with the same base means DIVIDING inside: $\\log A - \\log B = \\log\\left(\\frac{A}{B}\\right)$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Subtracting logs means DIVIDING inside: $\\log A - \\log B = \\log\\left(\\frac{A}{B}\\right)$."
+      "text": "Subtracting logs with the same base means DIVIDING inside: $\\log A - \\log B = \\log\\left(\\frac{A}{B}\\right)$."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Combine into one log: $\\log_2\\left(\\frac{96}{3}\\right) = \\log_2(32)$."
+      "text": "Combine into one log: $\\log_2\\left(\\frac{96}{3}\\right) = \\log_2(32)$. Now ask what power of $2$ gives $32$."
     },
     {
       "level": "reveal",
-      "text": "$2^5 = 32$, so the answer is $5$."
+      "text": "Because $2^5 = 32$, the single log equals $5$, which is the answer."
     }
   ],
   "explanation": [
-    "The quotient rule: subtracting logs is dividing inside.",
-    "$\\log_2(96) - \\log_2(3) = \\log_2\\left(\\frac{96}{3}\\right) = \\log_2(32)$.",
-    "$2^5 = 32$, so the answer is $5$."
+    "The quotient rule says that subtracting two logs with the same base is the same as dividing inside one log.",
+    "Dividing $96$ by $3$ inside one log gives $\\log_2(96) - \\log_2(3) = \\log_2\\left(\\frac{96}{3}\\right) = \\log_2(32)$.",
+    "Since $2^5 = 32$, the single log equals $5$, which is the answer."
   ],
   "alternativeExplanations": [
     {

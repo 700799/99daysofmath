@@ -10,24 +10,24 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Start from the identity $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+  "hint": "Start from the Pythagorean identity that links sine and cosine: $\\sin^2\\theta + \\cos^2\\theta = 1$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Start from the identity $\\sin^2\\theta + \\cos^2\\theta = 1$."
+      "text": "Start from the Pythagorean identity that links sine and cosine: $\\sin^2\\theta + \\cos^2\\theta = 1$."
     },
     {
       "level": "guide",
-      "text": "Subtract $\\sin^2\\theta$ from both sides: $\\cos^2\\theta = 1 - \\sin^2\\theta$."
+      "text": "Subtract $\\sin^2\\theta$ from both sides of the identity to get $\\cos^2\\theta = 1 - \\sin^2\\theta$. Read off the power on the cosine."
     },
     {
       "level": "reveal",
-      "text": "So $1 - \\sin^2\\theta = \\cos^2\\theta$ and $n = 2$."
+      "text": "The expression $1 - \\sin^2\\theta$ equals $\\cos^2\\theta$, which means the power is $n = 2$."
     }
   ],
   "explanation": [
-    "The Pythagorean identity says $\\sin^2\\theta + \\cos^2\\theta = 1$.",
-    "Move $\\sin^2\\theta$ to the other side: $\\cos^2\\theta = 1 - \\sin^2\\theta$.",
+    "The Pythagorean identity says $\\sin^2\\theta + \\cos^2\\theta = 1$ for every angle.",
+    "Subtracting $\\sin^2\\theta$ from both sides of the identity gives $\\cos^2\\theta = 1 - \\sin^2\\theta$.",
     "So the expression simplifies to $\\cos^2\\theta$, and the power is $n = 2$."
   ],
   "alternativeExplanations": [

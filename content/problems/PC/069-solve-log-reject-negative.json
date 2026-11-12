@@ -10,11 +10,11 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Adding logs means multiplying inside: combine them into one log first.",
+  "hint": "Adding logs with the same base means multiplying inside, so combine them into one log first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Adding logs means multiplying inside: combine them into one log first."
+      "text": "Adding logs with the same base means multiplying inside, so combine them into one log first."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\log_2\\big(x(x-6)\\big) = 4$ means $x(x - 6) = 2^4 = 16$, so $x^2 - 6x - 16 = 0$."
+      "text": "The combined equation $\\log_2\\big(x(x-6)\\big) = 4$ means $x(x - 6) = 2^4 = 16$, so $x^2 - 6x - 16 = 0$. Factor this and test each solution in the original logs."
     },
     {
       "level": "reveal",
-      "text": "That factors as $(x - 8)(x + 2) = 0$, giving $x = 8$ or $x = -2$. But $\\log_2(-2)$ is impossible, so $x = 8$."
+      "text": "It factors as $(x - 8)(x + 2) = 0$, giving $x = 8$ or $x = -2$. Since $\\log_2(-2)$ is impossible, the answer is $x = 8$."
     }
   ],
   "explanation": [
-    "Combine with the product rule: $\\log_2\\big(x(x-6)\\big) = 4$.",
-    "Rewrite as a power: $x(x - 6) = 2^4 = 16$, so $x^2 - 6x - 16 = 0$.",
-    "Factor: $(x - 8)(x + 2) = 0$. The value $x = -2$ BREAKS the log (you cannot log a negative), so the only answer is $x = 8$."
+    "Combine the two logs with the product rule: $\\log_2\\big(x(x-6)\\big) = 4$.",
+    "Rewrite the log equation as a power: $x(x - 6) = 2^4 = 16$, which rearranges to $x^2 - 6x - 16 = 0$.",
+    "Factoring gives $(x - 8)(x + 2) = 0$. The value $x = -2$ fails because a log cannot take a negative input, so the only answer is $x = 8$."
   ],
   "alternativeExplanations": [
     {

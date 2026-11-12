@@ -10,19 +10,19 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Sine is the SECOND number in the point $(x, y)$ — how high up you are.",
+  "hint": "Sine is the SECOND number in the point $(x, y)$, which tells how high up you are.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sine is the SECOND number in the point $(x, y)$ — how high up you are."
+      "text": "Sine is the SECOND number in the point $(x, y)$, which tells how high up you are."
     },
     {
       "level": "guide",
-      "text": "The point at $90^\\circ$ is $(0, 1)$, so the height is $1$."
+      "text": "The point at $90^\\circ$ is $(0, 1)$. Read off its second coordinate, the height."
     },
     {
       "level": "reveal",
-      "text": "$\\sin 90^\\circ = 1$."
+      "text": "The height of that point is $1$, so $\\sin 90^\\circ = 1$."
     }
   ],
   "explanation": [

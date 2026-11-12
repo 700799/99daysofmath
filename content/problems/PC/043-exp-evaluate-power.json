@@ -10,25 +10,25 @@
   "primaryAnswer": "32",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Do the power FIRST, then multiply by the start.",
+  "hint": "Follow the order of operations: the power is done FIRST, and only then do you multiply by the start value.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Do the power FIRST, then multiply by the start."
+      "text": "Follow the order of operations: the power is done FIRST, and only then do you multiply by the start value."
     },
     {
       "level": "guide",
-      "text": "$2^3 = 2 \\times 2 \\times 2 = 8$. Now multiply by $4$."
+      "text": "Work out the power: $2^3 = 2 \\times 2 \\times 2 = 8$. Then multiply that $8$ by the $4$ in front."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 8 = 32$."
+      "text": "Multiplying gives $4 \\times 8 = 32$, so the value of $y$ at $x = 3$ is $32$."
     }
   ],
   "explanation": [
-    "Powers come before multiplying.",
-    "$2^3 = 8$.",
-    "$4 \\times 8 = 32$, so $y = 32$."
+    "In the order of operations, powers come before multiplying, so handle $2^x$ first.",
+    "With $x = 3$, the power is three twos multiplied together: $2^3 = 2 \\times 2 \\times 2 = 8$.",
+    "Now multiply by the front number: $4 \\times 8 = 32$, so $y = 32$."
   ],
   "alternativeExplanations": [
     {

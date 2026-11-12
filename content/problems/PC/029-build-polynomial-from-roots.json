@@ -27,17 +27,17 @@
     },
     {
       "level": "guide",
-      "text": "The zero $4$ gives $(x - 4)$. The zero $-3$ gives $(x - (-3))$, which is $(x + 3)$."
+      "text": "The zero $4$ gives $(x - 4)$. The zero $-3$ gives $(x - (-3))$, which is $(x + 3)$. Multiply these two factors together."
     },
     {
       "level": "reveal",
-      "text": "The polynomial is $(x - 4)(x + 3)$."
+      "text": "With leading coefficient $1$, the polynomial is $(x - 4)(x + 3)$."
     }
   ],
   "explanation": [
-    "A zero at $r$ always comes from the factor $(x - r)$.",
-    "Zero $4$ gives $(x - 4)$; zero $-3$ gives $(x + 3)$.",
-    "Multiply them together: $(x - 4)(x + 3)$."
+    "A zero at $r$ always comes from the factor $(x - r)$, because that factor equals zero when $x = r$.",
+    "The zero $4$ gives the factor $(x - 4)$, and the zero $-3$ gives $(x - (-3)) = (x + 3)$.",
+    "Multiplying the factors with nothing extra in front keeps the leading coefficient $1$, so the answer is $(x - 4)(x + 3)$."
   ],
   "alternativeExplanations": [
     {

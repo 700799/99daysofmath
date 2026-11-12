@@ -10,25 +10,25 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Substitute $t = 5$ into the rule.",
+  "hint": "The rule turns trip time into average speed. Which number should replace $t$ for this trip?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $t = 5$ into the rule."
+      "text": "The rule turns trip time into average speed. Which number should replace $t$ for this trip?"
     },
     {
       "level": "guide",
-      "text": "Compute $300 \\div 5$."
+      "text": "Put $5$ hours in place of $t$ to get $\\frac{300}{5}$, then carry out the division $300 \\div 5$."
     },
     {
       "level": "reveal",
-      "text": "$300 \\div 5 = 60$ miles per hour."
+      "text": "Since $300 \\div 5 = 60$, the average speed is $60$ miles per hour."
     }
   ],
   "explanation": [
-    "Speed is distance divided by time.",
-    "$s(5) = \\frac{300}{5}$.",
-    "$300 \\div 5 = 60$ miles per hour."
+    "Average speed is distance divided by time, which is exactly what the rule $s(t) = \\frac{300}{t}$ says.",
+    "The trip takes $5$ hours, so substitute to get $s(5) = \\frac{300}{5}$.",
+    "Dividing gives $300 \\div 5 = 60$, so the average speed is $60$ miles per hour."
   ],
   "alternativeExplanations": [
     {

@@ -10,26 +10,26 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You have a matching pair (side $b$ with angle $B$), so reach for the Law of Sines.",
+  "hint": "You have a matching pair, side $b$ with its opposite angle $B$. Which law works with such pairs?",
   "hints": [
     {
       "level": "nudge",
-      "text": "You have a matching pair (side $b$ with angle $B$), so reach for the Law of Sines."
+      "text": "You have a matching pair, side $b$ with its opposite angle $B$. Which law works with such pairs?"
     },
     {
       "level": "guide",
-      "text": "Set up $\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$, which is $\\frac{a}{\\sin 30^\\circ} = \\frac{10}{\\sin 90^\\circ}$."
+      "text": "Use the Law of Sines: $\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$, which here is $\\frac{a}{\\sin 30^\\circ} = \\frac{10}{\\sin 90^\\circ}$. Put in the exact sine values and solve for $a$."
     },
     {
       "level": "reveal",
-      "text": "$\\sin 30^\\circ = \\frac{1}{2}$ and $\\sin 90^\\circ = 1$, so $a = 10 \\times \\frac{1}{2} = 5$."
+      "text": "With $\\sin 30^\\circ = \\frac{1}{2}$ and $\\sin 90^\\circ = 1$, we get $a = 10 \\times \\frac{1}{2} = 5$, so side $a$ is $5$."
     }
   ],
   "explanation": [
-    "The Law of Sines pairs each side with the angle ACROSS from it.",
-    "$\\frac{a}{\\sin 30^\\circ} = \\frac{10}{\\sin 90^\\circ}$.",
-    "Since $\\sin 90^\\circ = 1$, the right side is just $10$.",
-    "$a = 10 \\times \\sin 30^\\circ = 10 \\times \\frac{1}{2} = 5$."
+    "The Law of Sines pairs each side with the angle ACROSS from it, and all those ratios are equal.",
+    "Using the known pair and the wanted pair gives $\\frac{a}{\\sin 30^\\circ} = \\frac{10}{\\sin 90^\\circ}$.",
+    "Since $\\sin 90^\\circ = 1$, the right side is simply $10$.",
+    "Multiplying both sides by $\\sin 30^\\circ$ gives $a = 10 \\times \\frac{1}{2} = 5$, so side $a$ is $5$."
   ],
   "alternativeExplanations": [
     {

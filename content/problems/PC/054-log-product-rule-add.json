@@ -18,17 +18,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\log(10) = \\log(2 \\times 5) = \\log(2) + \\log(5)$."
+      "text": "Split the log with the product rule: $\\log(10) = \\log(2 \\times 5) = \\log(2) + \\log(5)$. Now add the two given decimals."
     },
     {
       "level": "reveal",
-      "text": "$0.301 + 0.699 = 1$, so $\\log(10) = 1$."
+      "text": "Adding gives $0.301 + 0.699 = 1$, so the value of $\\log(10)$ is $1$."
     }
   ],
   "explanation": [
-    "The product rule says $\\log(AB) = \\log A + \\log B$: multiply inside, add outside.",
-    "Since $10 = 2 \\times 5$, write $\\log(10) = \\log(2) + \\log(5)$.",
-    "$0.301 + 0.699 = 1$."
+    "The product rule says $\\log(AB) = \\log A + \\log B$: multiplying inside becomes adding outside.",
+    "Since $10 = 2 \\times 5$, the rule lets us write $\\log(10) = \\log(2) + \\log(5)$.",
+    "Adding the two given values, $0.301 + 0.699 = 1$, so $\\log(10) = 1$."
   ],
   "alternativeExplanations": [
     {

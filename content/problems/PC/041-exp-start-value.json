@@ -10,19 +10,19 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The START is the number sitting out front, before the power.",
+  "hint": "The START is the number sitting out front, before the power does anything.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The START is the number sitting out front, before the power."
+      "text": "The START is the number sitting out front, before the power does anything."
     },
     {
       "level": "guide",
-      "text": "Try $x = 0$. Since $3^0 = 1$, you get $y = 5 \\times 1$."
+      "text": "Test it with $x = 0$, when no steps have happened yet. Since $3^0 = 1$, the value is $y = 5 \\times 1$."
     },
     {
       "level": "reveal",
-      "text": "The start value is $5$."
+      "text": "At $x = 0$ the value is $5 \\times 1 = 5$, so the start value is $5$."
     }
   ],
   "explanation": [

@@ -10,26 +10,26 @@
   "primaryAnswer": "19",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You know two sides and the angle squeezed between them. That is the Law of Cosines.",
+  "hint": "You know two sides and the angle squeezed between them. That is a job for the Law of Cosines.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You know two sides and the angle squeezed between them. That is the Law of Cosines."
+      "text": "You know two sides and the angle squeezed between them. That is a job for the Law of Cosines."
     },
     {
       "level": "guide",
-      "text": "$c^2 = 5^2 + 16^2 - 2 \\times 5 \\times 16 \\times \\cos 120^\\circ$, and $\\cos 120^\\circ = -\\frac{1}{2}$."
+      "text": "Set up $c^2 = 5^2 + 16^2 - 2 \\times 5 \\times 16 \\times \\cos 120^\\circ$, and use $\\cos 120^\\circ = -\\frac{1}{2}$. Watch the sign of the last term."
     },
     {
       "level": "reveal",
-      "text": "Subtracting a negative ADDS: $c^2 = 281 + 80 = 361$, so $c = 19$ km."
+      "text": "Subtracting a negative ADDS, so $c^2 = 281 + 80 = 361$ and the boat is $c = 19$ km from its start."
     }
   ],
   "explanation": [
-    "The two legs and the straight-home line form a triangle.",
-    "$5^2 + 16^2 = 25 + 256 = 281$.",
-    "The correction: $2 \\times 5 \\times 16 \\times (-\\frac{1}{2}) = -80$, and subtracting $-80$ adds $80$.",
-    "$c^2 = 281 + 80 = 361$, so $c = 19$ km."
+    "The two legs of the trip and the straight line home form a triangle, with the $120^\\circ$ angle between the legs.",
+    "The squares of the two legs add to $5^2 + 16^2 = 25 + 256 = 281$.",
+    "The correction term is $2 \\times 5 \\times 16 \\times (-\\frac{1}{2}) = -80$, and subtracting $-80$ adds $80$.",
+    "So $c^2 = 281 + 80 = 361$, and the boat is $c = 19$ km from where it started."
   ],
   "alternativeExplanations": [
     {

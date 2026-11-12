@@ -18,17 +18,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\log_4(x) = 3$ means $4^3 = x$."
+      "text": "In exponential form, $\\log_4(x) = 3$ means $4^3 = x$. Work out the product $4 \\times 4 \\times 4$ to find $x$."
     },
     {
       "level": "reveal",
-      "text": "$4^3 = 64$, so $x = 64$."
+      "text": "Since $4^3 = 64$, the solution of the equation is $x = 64$."
     }
   ],
   "explanation": [
-    "A log equation flips into an exponential one.",
-    "$\\log_4(x) = 3$ says: $4$ raised to the $3$ gives $x$.",
-    "$4 \\times 4 \\times 4 = 64$, so $x = 64$."
+    "A log equation can always be rewritten as an exponential equation that says the same thing.",
+    "The statement $\\log_4(x) = 3$ says that $4$ raised to the power $3$ gives $x$.",
+    "Computing the power, $4 \\times 4 \\times 4 = 64$, shows that the solution is $x = 64$."
   ],
   "alternativeExplanations": [
     {

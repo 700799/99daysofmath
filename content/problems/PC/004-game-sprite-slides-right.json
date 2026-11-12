@@ -26,8 +26,8 @@
     }
   ],
   "explanation": [
-    "The change is inside the parentheses, so it is a sideways slide.",
-    "$f(x - h)$ moves the graph RIGHT by $h$.",
+    "The $-7$ is inside the parentheses with $x$, so it changes inputs and causes a sideways slide.",
+    "The rule $f(x - h)$ moves a graph RIGHT by $h$, because $x$ must be $h$ larger to give the same output.",
     "Here $h = 7$, so the sprite path moves RIGHT $7$ units."
   ],
   "alternativeExplanations": [
