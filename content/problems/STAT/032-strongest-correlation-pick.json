@@ -32,25 +32,25 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Strength is about how CLOSE $r$ is to $1$ or $-1$. The sign only tells the direction.",
+  "hint": "Strength depends on how close $r$ is to $1$ or $-1$. The sign only tells you the direction of the trend.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Strength is about how CLOSE $r$ is to $1$ or $-1$. The sign only tells the direction."
+      "text": "Strength depends on how close $r$ is to $1$ or $-1$. The sign only tells you the direction of the trend."
     },
     {
       "level": "guide",
-      "text": "Compare the absolute values: $0.85, 0.92, 0.15, 0.40$."
+      "text": "Drop the signs and compare the sizes $0.85$, $0.92$, $0.15$ and $0.40$. The largest size belongs to the strongest relationship."
     },
     {
       "level": "reveal",
-      "text": "$|{-0.92}| = 0.92$ is the largest, so $r = -0.92$ is the strongest: choice B."
+      "text": "$0.92$ is the largest size, so $r = -0.92$ shows the strongest linear relationship: choice B."
     }
   ],
   "explanation": [
-    "The correlation $r$ runs from $-1$ to $1$; values near either end mean the points hug a line tightly.",
-    "Ignoring signs, the sizes are $0.85, 0.92, 0.15, 0.40$.",
-    "$0.92$ is the biggest, so $r = -0.92$ describes the tightest (strongest) linear pattern. Choice B."
+    "The correlation $r$ runs from $-1$ to $1$, and values near either end mean the points hug a line tightly.",
+    "Because a negative sign only means a downhill trend, compare the sizes without signs: $0.85, 0.92, 0.15, 0.40$.",
+    "$0.92$ is the biggest, so $r = -0.92$ describes the strongest linear pattern. That is choice B."
   ],
   "alternativeExplanations": [
     {

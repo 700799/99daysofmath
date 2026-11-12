@@ -10,25 +10,25 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "For a binomial variable, the mean is simply $np$.",
+  "hint": "Each shot is an independent make or miss with the same chance, so the number of makes is a binomial variable. What is its mean?",
   "hints": [
     {
       "level": "nudge",
-      "text": "For a binomial variable, the mean is simply $np$."
+      "text": "Each shot is an independent make or miss with the same chance, so the number of makes is a binomial variable. What is its mean?"
     },
     {
       "level": "guide",
-      "text": "$n = 25$ shots, $p = 0.8$. Multiply."
+      "text": "The binomial mean is $np$. Here there are $n = 25$ shots with $p = 0.8$, so multiply $25 \\times 0.8$."
     },
     {
       "level": "reveal",
-      "text": "$\\mu_X = 25 \\times 0.8 = 20$ makes."
+      "text": "$25 \\times 0.8 = 20$, so she is expected to make $20$ free throws."
     }
   ],
   "explanation": [
-    "The number of makes $X$ is binomial with $n = 25$ and $p = 0.8$.",
-    "The mean of a binomial distribution is $\\mu_X = np$.",
-    "$25 \\times 0.8 = 20$ expected makes."
+    "The number of makes $X$ counts successes in $25$ independent shots, so it is binomial with $n = 25$ and $p = 0.8$.",
+    "The mean of a binomial distribution is $\\mu_X = np$, the number of trials times the chance of success.",
+    "$25 \\times 0.8 = 20$, so the expected number of makes is $20$."
   ],
   "alternativeExplanations": [
     {

@@ -11,11 +11,11 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "Find the SD of $\\hat{p}$ first: $\\sqrt{p(1-p)/n}$. Then standardize $0.55$.",
+  "hint": "To find a probability for a sample proportion, you need its standard deviation first and then a $z$-score for $0.55$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the SD of $\\hat{p}$ first: $\\sqrt{p(1-p)/n}$. Then standardize $0.55$."
+      "text": "To find a probability for a sample proportion, you need its standard deviation first and then a $z$-score for $0.55$."
     },
     {
       "level": "nudge",
@@ -24,17 +24,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\sigma_{\\hat{p}} = \\sqrt{0.25/400} = 0.025$. Compute $z = \\frac{0.55 - 0.50}{0.025}$."
+      "text": "$\\sigma_{\\hat{p}} = \\sqrt{0.25/400} = 0.025$. Standardize with $z = \\frac{0.55 - 0.50}{0.025}$ and match it to one of the given table values."
     },
     {
       "level": "reveal",
-      "text": "$z = 0.05/0.025 = 2$, so $P(\\hat{p} \\ge 0.55) = P(Z \\ge 2) = 0.0228$."
+      "text": "$z = 2$, so the probability that the sample proportion is $0.55$ or higher is $P(Z \\ge 2) = 0.0228$."
     }
   ],
   "explanation": [
-    "Large Counts: $np = 200$ and $n(1-p) = 200$, both $\\ge 10$, so $\\hat{p}$ is approximately normal with mean $0.5$ and SD $\\sqrt{(0.5)(0.5)/400} = \\sqrt{0.000625} = 0.025$.",
-    "$z = \\frac{0.55 - 0.50}{0.025} = 2$.",
-    "$P(Z \\ge 2) = 0.0228$. A sample proportion of $0.55$ or more would happen only about $2\\%$ of the time."
+    "Large Counts holds because $np = 200$ and $n(1-p) = 200$ are both at least $10$, so $\\hat{p}$ is approximately normal with mean $0.5$ and standard deviation $\\sqrt{(0.5)(0.5)/400} = 0.025$.",
+    "Standardize the cutoff to find how unusual it is: $z = \\frac{0.55 - 0.50}{0.025} = 2$.",
+    "$P(Z \\ge 2) = 0.0228$, so a sample proportion of $0.55$ or more would happen only about $2\\%$ of the time."
   ],
   "alternativeExplanations": [
     {

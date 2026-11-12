@@ -11,11 +11,11 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "\"More than 3 attempts\" means the first 3 attempts all failed. Nothing else needs to happen.",
+  "hint": "Think about what \"more than $3$ attempts\" says about the first three attempts. Nothing after them matters.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"More than 3 attempts\" means the first 3 attempts all failed. Nothing else needs to happen."
+      "text": "Think about what \"more than $3$ attempts\" says about the first three attempts. Nothing after them matters."
     },
     {
       "level": "nudge",
@@ -24,17 +24,17 @@
     },
     {
       "level": "guide",
-      "text": "For a geometric variable, $P(Y > k) = (1 - p)^k$. Use $k = 3$, $p = 0.3$."
+      "text": "The first three attempts must all fail, and each fails with probability $0.7$. So $P(Y > 3) = (1 - p)^3 = (0.7)^3$."
     },
     {
       "level": "reveal",
-      "text": "$(0.7)^3 = 0.343$."
+      "text": "$(0.7)^3 = 0.343$, so the probability that it takes more than $3$ attempts is $0.343$."
     }
   ],
   "explanation": [
-    "Let $Y$ be the attempt number of the first success; $Y$ is geometric with $p = 0.3$.",
-    "$Y > 3$ happens exactly when attempts 1, 2 and 3 all fail: $P(Y > 3) = 0.7 \\times 0.7 \\times 0.7$.",
-    "$0.7^3 = 0.343$."
+    "Let $Y$ be the attempt on which the first success occurs, so $Y$ is geometric with $p = 0.3$.",
+    "$Y > 3$ happens exactly when attempts 1, 2 and 3 all fail, and by independence $P(Y > 3) = 0.7 \\times 0.7 \\times 0.7$.",
+    "$0.7^3 = 0.343$, so the probability of needing more than three attempts is $0.343$."
   ],
   "alternativeExplanations": [
     {

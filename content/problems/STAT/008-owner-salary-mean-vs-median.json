@@ -54,8 +54,8 @@
   ],
   "explanation": [
     "Sorted, the salaries are nine values near $\\$40{,}000$ and one at $\\$400{,}000$. The 5th and 6th values are both about $\\$40{,}000$, so the median is about $\\$40{,}000$.",
-    "Mean $= \\frac{9 \\times 40{,}000 + 400{,}000}{10} = \\frac{760{,}000}{10} = \\$76{,}000$.",
-    "The one huge salary pulls the mean far above the median. Choice A. (Choice D mixes up the two: $\\$76{,}000$ is the mean.)"
+    "The mean uses every dollar: $\\frac{9 \\times 40{,}000 + 400{,}000}{10} = \\frac{760{,}000}{10}$, which is $\\$76{,}000$.",
+    "The one huge salary pulls the mean far above the median, so choice A is true. (Choice D mixes up the two: $\\$76{,}000$ is the mean.)"
   ],
   "alternativeExplanations": [
     {

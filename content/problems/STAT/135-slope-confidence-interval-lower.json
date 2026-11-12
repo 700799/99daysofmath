@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "Interval $= b \\pm t^* \\cdot SE_b$.",
+  "hint": "A confidence interval for a slope is the estimate plus or minus a margin of error, and the lower endpoint uses the minus.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Interval $= b \\pm t^* \\cdot SE_b$."
+      "text": "A confidence interval for a slope is the estimate plus or minus a margin of error, and the lower endpoint uses the minus."
     },
     {
       "level": "guide",
-      "text": "Margin of error $= 2.101 \\times 0.8 \\approx 1.68$. Subtract from $3.2$."
+      "text": "The margin of error is $t^* \\cdot SE_b = 2.101 \\times 0.8 \\approx 1.68$. Subtract that from the slope estimate $3.2$."
     },
     {
       "level": "reveal",
-      "text": "$3.2 - 1.68 = 1.52$."
+      "text": "$3.2 - 1.68 = 1.52$, so the lower endpoint is about $1.52$."
     }
   ],
   "explanation": [
-    "Margin of error: $t^* \\times SE_b = 2.101 \\times 0.8 = 1.6808$.",
-    "Interval: $3.2 \\pm 1.68$, or $(1.52, 4.88)$.",
-    "Lower endpoint $\\approx 1.52$. We are $95\\%$ confident each extra hour of study is associated with between $1.52$ and $4.88$ more points, on average."
+    "The margin of error is the critical value times the standard error: $t^* \\times SE_b = 2.101 \\times 0.8 = 1.6808$.",
+    "The interval is estimate $\\pm$ margin, so it is $3.2 \\pm 1.68$, or $(1.52, 4.88)$.",
+    "The lower endpoint is about $1.52$. We are $95\\%$ confident each extra hour of study is associated with between $1.52$ and $4.88$ more points, on average."
   ],
   "alternativeExplanations": [
     {

@@ -13,30 +13,30 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "Adding $32$ slides every value the same amount, which does NOT change spread. Multiplying by $1.8$ does.",
+  "hint": "The conversion does two things to each temperature: it multiplies and it adds. Think about which of those changes how spread out the values are.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Adding $32$ slides every value the same amount, which does NOT change spread. Multiplying by $1.8$ does."
+      "text": "The conversion does two things to each temperature: it multiplies and it adds. Think about which of those changes how spread out the values are."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up: the values $1, 3$ have SD $\\sqrt{2}$. Add $10$: $11, 13$ — same SD. Double them: $2, 6$ — the SD doubles. Multiply stretches spread; add does not."
+      "text": "Warm up with the values $1, 3$, which have SD $\\sqrt{2}$. Add $10$ to get $11, 13$ and the SD stays the same. Double them to get $2, 6$ and the SD doubles. Multiplying stretches spread; adding does not."
     },
     {
       "level": "guide",
-      "text": "Multiply the old SD by the multiplier $1.8$ and ignore the $+32$."
+      "text": "Adding $32$ shifts every day equally, so it leaves the spread alone. Only the multiplier matters: multiply the Celsius standard deviation $4$ by $1.8$."
     },
     {
       "level": "reveal",
-      "text": "$1.8 \\times 4 = 7.2$ degrees Fahrenheit."
+      "text": "$1.8 \\times 4 = 7.2$, so the standard deviation is $7.2$ degrees Fahrenheit."
     }
   ],
   "explanation": [
-    "A linear change $y = a + bx$ changes the mean to $a + b \\cdot \\bar{x}$ but the SD to $|b| \\cdot s_x$.",
-    "Here $b = 1.8$, so $s_F = 1.8 \\times 4 = 7.2$.",
-    "The $+32$ shifts every day by the same amount, so distances between values, and the SD, are untouched. (The mean becomes $1.8(20) + 32 = 68$.)"
+    "For a linear change $y = a + bx$, the mean becomes $a + b\\bar{x}$ but the standard deviation becomes $|b| \\cdot s_x$.",
+    "The $+32$ moves every day by the same amount, so the distances between values, and therefore the spread, are untouched.",
+    "The multiplier $1.8$ stretches every distance by $1.8$, so $s_F = 1.8 \\times 4 = 7.2$ degrees Fahrenheit. (The mean becomes $1.8(20) + 32 = 68$.)"
   ],
   "alternativeExplanations": [
     {

@@ -10,19 +10,19 @@
   "primaryAnswer": "76",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "For $Y = aX + b$, the mean transforms the same way: $\\mu_Y = a\\mu_X + b$.",
+  "hint": "Profit is a linear function of $X$. What happens to a mean when every value is multiplied by a number and then shifted?",
   "hints": [
     {
       "level": "nudge",
-      "text": "For $Y = aX + b$, the mean transforms the same way: $\\mu_Y = a\\mu_X + b$."
+      "text": "Profit is a linear function of $X$. What happens to a mean when every value is multiplied by a number and then shifted?"
     },
     {
       "level": "guide",
-      "text": "Here $a = 8$ and $b = -20$. Plug in $\\mu_X = 12$."
+      "text": "The mean follows the same rule as the values: $\\mu_Y = 8\\mu_X - 20$. Substitute $\\mu_X = 12$."
     },
     {
       "level": "reveal",
-      "text": "$\\mu_Y = 8(12) - 20 = 96 - 20 = 76$ dollars."
+      "text": "$8(12) - 20 = 96 - 20 = 76$, so the mean hourly profit is $\\$76$."
     }
   ],
   "explanation": [

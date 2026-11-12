@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Compare the $p$-value to $\\alpha$. Small $p$-value means the data would be unlikely if $H_0$ were true.",
+  "hint": "The decision in a significance test comes from comparing two numbers, the $p$-value and $\\alpha$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Compare the $p$-value to $\\alpha$. Small $p$-value means the data would be unlikely if $H_0$ were true."
+      "text": "The decision in a significance test comes from comparing two numbers, the $p$-value and $\\alpha$."
     },
     {
       "level": "guide",
-      "text": "$0.03 < 0.05$. When $p \\le \\alpha$, we reject $H_0$."
+      "text": "Here $0.03 < 0.05$. A $p$-value at or below $\\alpha$ means the data would be unlikely if $H_0$ were true, and that tells you which decision to make."
     },
     {
       "level": "reveal",
-      "text": "Reject $H_0$: there is convincing evidence the mean fill differs from 12 oz. Choice A."
+      "text": "Reject $H_0$: there is convincing evidence the mean fill is not 12 oz, which is choice A."
     }
   ],
   "explanation": [

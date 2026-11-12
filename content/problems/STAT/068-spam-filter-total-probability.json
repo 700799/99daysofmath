@@ -13,11 +13,11 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "An email can be flagged in two ways: it is spam AND flagged, or it is legitimate AND flagged. Add those two branches.",
+  "hint": "An email can end up flagged by two different routes: it is spam and flagged, or it is legitimate and flagged. A tree diagram keeps the routes apart.",
   "hints": [
     {
       "level": "nudge",
-      "text": "An email can be flagged in two ways: it is spam AND flagged, or it is legitimate AND flagged. Add those two branches."
+      "text": "An email can end up flagged by two different routes: it is spam and flagged, or it is legitimate and flagged. A tree diagram keeps the routes apart."
     },
     {
       "level": "nudge",
@@ -26,17 +26,17 @@
     },
     {
       "level": "guide",
-      "text": "Spam branch: $0.60 \\times 0.95$. Legitimate branch: $0.40 \\times 0.02$. Add."
+      "text": "Multiply along each branch, $0.60 \\times 0.95$ for spam and $0.40 \\times 0.02$ for legitimate mail, and then add the two products."
     },
     {
       "level": "reveal",
-      "text": "$0.57 + 0.008 = 0.578$."
+      "text": "$0.57 + 0.008 = 0.578$, so the probability that an email gets flagged is $0.578$."
     }
   ],
   "explanation": [
-    "Draw a tree. First split: spam ($0.60$) or legitimate ($0.40$). Second split: flagged or not.",
-    "$P(\\text{spam and flagged}) = 0.60 \\times 0.95 = 0.570$. $P(\\text{legit and flagged}) = 0.40 \\times 0.02 = 0.008$.",
-    "Flagged emails come from either branch, so $P(\\text{flagged}) = 0.570 + 0.008 = 0.578$, about $58$ percent."
+    "Draw a tree whose first split is spam ($0.60$) or legitimate ($0.40$) and whose second split is flagged or not.",
+    "Multiplying along the branches gives $P(\\text{spam and flagged}) = 0.60 \\times 0.95 = 0.570$ and $P(\\text{legit and flagged}) = 0.40 \\times 0.02 = 0.008$.",
+    "The two branches cannot both happen, so their probabilities add: $P(\\text{flagged}) = 0.570 + 0.008 = 0.578$, about $58$ percent."
   ],
   "alternativeExplanations": [
     {

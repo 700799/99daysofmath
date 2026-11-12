@@ -12,25 +12,25 @@
     "3/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A $z$-score counts how many standard deviations a value sits above (or below) the mean.",
+  "hint": "A $z$-score counts how many standard deviations a value sits above or below the mean.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A $z$-score counts how many standard deviations a value sits above (or below) the mean."
+      "text": "A $z$-score counts how many standard deviations a value sits above or below the mean."
     },
     {
       "level": "guide",
-      "text": "$z = \\frac{x - \\text{mean}}{\\text{SD}} = \\frac{650 - 500}{100}$."
+      "text": "Jordan's distance from the mean is $650 - 500$ points. Divide that distance by the standard deviation, $100$, to count the standard deviations."
     },
     {
       "level": "reveal",
-      "text": "$z = \\frac{150}{100} = 1.5$."
+      "text": "$z = \\frac{650 - 500}{100} = \\frac{150}{100} = 1.5$, so Jordan's score is $1.5$ standard deviations above the mean."
     }
   ],
   "explanation": [
-    "Jordan is $650 - 500 = 150$ points above the mean.",
-    "One standard deviation is $100$ points, so $150$ points is $1.5$ standard deviations.",
-    "$z = 1.5$."
+    "First find how far Jordan is from the mean: $650 - 500 = 150$ points above it.",
+    "A $z$-score measures that distance in standard deviations, and one standard deviation is $100$ points.",
+    "$z = \\frac{150}{100} = 1.5$, so Jordan scored $1.5$ standard deviations above the mean."
   ],
   "alternativeExplanations": [
     {

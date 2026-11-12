@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The null hypothesis is the \"no change\" statement with an equals sign. The alternative carries the claim.",
+  "hint": "A null hypothesis says \"no change\" and contains an equals sign. The claim someone hopes to show goes in the alternative.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The null hypothesis is the \"no change\" statement with an equals sign. The alternative carries the claim."
+      "text": "A null hypothesis says \"no change\" and contains an equals sign. The claim someone hopes to show goes in the alternative."
     },
     {
       "level": "guide",
-      "text": "Hypotheses are about the population parameter $\\mu$, never the sample statistic $\\bar{x}$. \"Lowers\" means a one-sided alternative."
+      "text": "Hypotheses describe the population mean $\\mu$, never the sample mean $\\bar{x}$. The word \"lowers\" points in one direction, so the alternative should use a less-than sign with $140$."
     },
     {
       "level": "reveal",
-      "text": "$H_0: \\mu = 140$ versus $H_a: \\mu < 140$. Choice A."
+      "text": "The correct pair is $H_0: \\mu = 140$ against $H_a: \\mu < 140$, which is choice A."
     }
   ],
   "explanation": [

@@ -10,25 +10,25 @@
   "primaryAnswer": "40",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Plug $x = 8$ into the equation.",
+  "hint": "A regression equation turns a value of $x$ into a predicted $y$. Which value of $x$ does this question give you?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Plug $x = 8$ into the equation."
+      "text": "A regression equation turns a value of $x$ into a predicted $y$. Which value of $x$ does this question give you?"
     },
     {
       "level": "guide",
-      "text": "$\\hat{y} = 12 + 3.5(8)$. Multiply first, then add."
+      "text": "Replace $x$ with $8$ weeks: $\\hat{y} = 12 + 3.5(8)$. Do the multiplication before the addition."
     },
     {
       "level": "reveal",
-      "text": "$12 + 28 = 40$ cm."
+      "text": "$3.5 \\times 8 = 28$ and $12 + 28 = 40$, so the line predicts a height of $40$ cm."
     }
   ],
   "explanation": [
-    "Substitute $x = 8$: $\\hat{y} = 12 + 3.5(8)$.",
-    "$3.5 \\times 8 = 28$.",
-    "$\\hat{y} = 12 + 28 = 40$ cm. The hat on $\\hat{y}$ reminds you this is a prediction, not a measurement."
+    "The line predicts height from weeks, so substitute $x = 8$: $\\hat{y} = 12 + 3.5(8)$.",
+    "Multiplication comes before addition, and $3.5 \\times 8 = 28$ cm of predicted growth.",
+    "$\\hat{y} = 12 + 28 = 40$, so the predicted height is $40$ cm. The hat on $\\hat{y}$ marks it as a prediction, not a measurement."
   ],
   "alternativeExplanations": [
     {

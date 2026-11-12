@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "Adding a constant shifts every value but does not change spread. Multiplying by a constant DOES scale the spread.",
+  "hint": "The formula multiplies each temperature by $1.8$ and then adds $32$. Only one of those two steps changes how spread out the values are.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Adding a constant shifts every value but does not change spread. Multiplying by a constant DOES scale the spread."
+      "text": "The formula multiplies each temperature by $1.8$ and then adds $32$. Only one of those two steps changes how spread out the values are."
     },
     {
       "level": "guide",
-      "text": "For $Y = aX + b$, $\\sigma_Y = |a| \\cdot \\sigma_X$. The $+32$ does nothing to the SD."
+      "text": "Adding $32$ shifts all values together, so ignore it. For $Y = aX + b$ the rule is $\\sigma_Y = |a| \\cdot \\sigma_X$, so compute $1.8 \\times 2.5$."
     },
     {
       "level": "reveal",
-      "text": "$\\sigma_F = 1.8 \\times 2.5 = 4.5^\\circ$F."
+      "text": "$1.8 \\times 2.5 = 4.5$, so the standard deviation is $4.5$ degrees Fahrenheit."
     }
   ],
   "explanation": [
-    "Standard deviation measures how spread out values are. Adding $32$ slides all values together and leaves the spread alone.",
-    "Multiplying by $1.8$ stretches every gap between values by $1.8$.",
-    "So $\\sigma_F = 1.8(2.5) = 4.5$ degrees Fahrenheit."
+    "Standard deviation measures spread, and adding $32$ slides all values together, so it leaves the spread alone.",
+    "Multiplying by $1.8$ stretches every gap between values by a factor of $1.8$, so the standard deviation is stretched the same way.",
+    "So $\\sigma_F = 1.8(2.5) = 4.5$, a standard deviation of $4.5$ degrees Fahrenheit."
   ],
   "alternativeExplanations": [
     {

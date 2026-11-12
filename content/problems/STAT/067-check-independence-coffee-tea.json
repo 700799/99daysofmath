@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Independence is a calculation, not a feeling. Test: does $P(A \\cap B) = P(A) \\cdot P(B)$?",
+  "hint": "Independence is checked with a calculation, not a feeling. What should $P(A \\cap B)$ equal when two events are independent?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Independence is a calculation, not a feeling. Test: does $P(A \\cap B) = P(A) \\cdot P(B)$?"
+      "text": "Independence is checked with a calculation, not a feeling. What should $P(A \\cap B)$ equal when two events are independent?"
     },
     {
       "level": "guide",
-      "text": "Compute $0.4 \\times 0.5$ and compare it with $0.2$."
+      "text": "Multiply the two separate probabilities, $0.4 \\times 0.5$, and compare the product with the given $P(\\text{both}) = 0.2$."
     },
     {
       "level": "reveal",
-      "text": "$0.4 \\times 0.5 = 0.2 = P(\\text{both})$, so the events are independent: choice A."
+      "text": "$0.4 \\times 0.5 = 0.2$, which equals $P(\\text{both})$, so the events are independent: choice A."
     }
   ],
   "explanation": [
-    "Two events are independent when $P(A \\cap B) = P(A) \\cdot P(B)$.",
-    "$P(\\text{coffee}) \\cdot P(\\text{pastry}) = 0.4 \\times 0.5 = 0.20$, and $P(\\text{both}) = 0.20$. They match.",
-    "So coffee and pastry orders are independent. Choice A. (Being able to order both is about overlap, not independence, so B is wrong.)"
+    "Two events are independent exactly when $P(A \\cap B) = P(A) \\cdot P(B)$, so that is the test to run.",
+    "The product is $P(\\text{coffee}) \\cdot P(\\text{pastry}) = 0.4 \\times 0.5 = 0.20$, and the survey gives $P(\\text{both}) = 0.20$, so they match.",
+    "Coffee and pastry orders are independent, which is choice A. (Being able to order both is about overlap, not independence, so B is wrong.)"
   ],
   "alternativeExplanations": [
     {

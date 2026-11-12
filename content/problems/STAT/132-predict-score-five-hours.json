@@ -11,24 +11,24 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "Substitute $x = 5$ into the equation.",
+  "hint": "The model turns hours studied into a predicted score. Which value replaces $x$ for this student?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitute $x = 5$ into the equation."
+      "text": "The model turns hours studied into a predicted score. Which value replaces $x$ for this student?"
     },
     {
       "level": "guide",
-      "text": "$\\hat{y} = 12.5 + 3.2(5)$. Multiply first, then add."
+      "text": "Substitute $x = 5$ to get $\\hat{y} = 12.5 + 3.2(5)$, and do the multiplication before the addition."
     },
     {
       "level": "reveal",
-      "text": "$12.5 + 16 = 28.5$."
+      "text": "$12.5 + 16 = 28.5$, so the model predicts a score of $28.5$."
     }
   ],
   "explanation": [
-    "Plug in: $\\hat{y} = 12.5 + 3.2 \\times 5$.",
-    "$3.2 \\times 5 = 16$, and $12.5 + 16 = 28.5$.",
+    "The student studied 5 hours, so substitute $x = 5$: $\\hat{y} = 12.5 + 3.2 \\times 5$.",
+    "Multiplication comes first, so $3.2 \\times 5 = 16$, and then $12.5 + 16 = 28.5$.",
     "The model predicts a score of $28.5$ for 5 hours of study."
   ],
   "alternativeExplanations": [

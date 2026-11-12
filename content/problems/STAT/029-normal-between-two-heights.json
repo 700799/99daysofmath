@@ -15,11 +15,11 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.005,
-  "hint": "Standardize BOTH ends: $65$ is one SD below the mean, $74$ is two SDs above.",
+  "hint": "An area between two heights needs two $z$-scores, one for each end of the interval.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Standardize BOTH ends: $65$ is one SD below the mean, $74$ is two SDs above."
+      "text": "An area between two heights needs two $z$-scores, one for each end of the interval."
     },
     {
       "level": "nudge",
@@ -28,17 +28,17 @@
     },
     {
       "level": "guide",
-      "text": "Table values: $P(Z < 2) = 0.9772$ and $P(Z < -1) = 0.1587$. Subtract."
+      "text": "$65$ is at $z = -1$ and $74$ is at $z = 2$. The table gives $P(Z < 2) = 0.9772$ and $P(Z < -1) = 0.1587$, and the area between is the difference."
     },
     {
       "level": "reveal",
-      "text": "$0.9772 - 0.1587 = 0.8185 \\approx 0.819$."
+      "text": "$0.9772 - 0.1587 = 0.8185$, so about $0.819$ of men are between $65$ and $74$ inches tall."
     }
   ],
   "explanation": [
-    "$z_1 = \\frac{65 - 68}{3} = -1$ and $z_2 = \\frac{74 - 68}{3} = 2$.",
-    "Area to the left of $z = 2$ is $0.9772$; area to the left of $z = -1$ is $0.1587$.",
-    "The area between is $0.9772 - 0.1587 = 0.8185$, so about $0.819$, or $82$ percent of men."
+    "Standardize both ends so the table can be used: $z_1 = \\frac{65 - 68}{3} = -1$ and $z_2 = \\frac{74 - 68}{3} = 2$.",
+    "The table gives areas to the left: $0.9772$ below $z = 2$ and $0.1587$ below $z = -1$.",
+    "Subtracting removes the part below $65$ inches: $0.9772 - 0.1587 = 0.8185$, so about $0.819$, or $82$ percent of men."
   ],
   "alternativeExplanations": [
     {

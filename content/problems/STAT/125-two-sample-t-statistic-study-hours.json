@@ -11,24 +11,24 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.02,
-  "hint": "Compute each $\\frac{s^2}{n}$ separately, add, then square-root.",
+  "hint": "The denominator is the standard error of the difference. Build it piece by piece: one $\\frac{s^2}{n}$ term for each group.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Compute each $\\frac{s^2}{n}$ separately, add, then square-root."
+      "text": "The denominator is the standard error of the difference. Build it piece by piece: one $\\frac{s^2}{n}$ term for each group."
     },
     {
       "level": "guide",
-      "text": "$\\frac{9}{36} = 0.25$ and $\\frac{16}{64} = 0.25$, so the SE is $\\sqrt{0.5}$."
+      "text": "$\\frac{9}{36} = 0.25$ and $\\frac{16}{64} = 0.25$, so the standard error is $\\sqrt{0.5}$. Divide the difference of means, $15.2 - 13.7$, by it."
     },
     {
       "level": "reveal",
-      "text": "$t = \\frac{1.5}{\\sqrt{0.5}} = \\frac{1.5}{0.7071} \\approx 2.12$."
+      "text": "$t = \\frac{1.5}{\\sqrt{0.5}} = \\frac{1.5}{0.7071} \\approx 2.12$, so the $t$ statistic is about $2.12$."
     }
   ],
   "explanation": [
-    "Difference of means: $15.2 - 13.7 = 1.5$ hours.",
-    "Standard error: $\\sqrt{3^2/36 + 4^2/64} = \\sqrt{0.25 + 0.25} = \\sqrt{0.5} \\approx 0.707$.",
+    "The numerator is the difference of the sample means: $15.2 - 13.7 = 1.5$ hours.",
+    "The standard error combines the variability of both samples: $\\sqrt{3^2/36 + 4^2/64} = \\sqrt{0.25 + 0.25} = \\sqrt{0.5} \\approx 0.707$.",
     "$t = 1.5/0.707 \\approx 2.12$. With the conservative df $= 35$ the two-sided $p$-value is roughly $0.04$."
   ],
   "alternativeExplanations": [

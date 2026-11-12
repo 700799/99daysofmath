@@ -13,25 +13,25 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "A confidence interval is point estimate $\\pm$ margin of error.",
+  "hint": "A confidence interval is built by going one margin of error below and above the point estimate.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A confidence interval is point estimate $\\pm$ margin of error."
+      "text": "A confidence interval is built by going one margin of error below and above the point estimate."
     },
     {
       "level": "guide",
-      "text": "Lower endpoint $= 0.62 - 0.04$."
+      "text": "Write the percentages as decimals: the estimate is $0.62$ and the margin is $0.04$. The lower endpoint comes from subtracting, $0.62 - 0.04$."
     },
     {
       "level": "reveal",
-      "text": "$0.62 - 0.04 = 0.58$. The interval is $(0.58, 0.66)$."
+      "text": "$0.62 - 0.04 = 0.58$, so the lower endpoint is $0.58$ and the interval is $(0.58, 0.66)$."
     }
   ],
   "explanation": [
-    "The point estimate is $\\hat{p} = 0.62$ and the margin of error is $0.04$.",
-    "The interval runs from $0.62 - 0.04$ to $0.62 + 0.04$.",
-    "Lower endpoint: $0.58$. We are $95\\%$ confident the true proportion is between $0.58$ and $0.66$."
+    "As decimals, the point estimate is $\\hat{p} = 0.62$ and the margin of error is $0.04$.",
+    "A confidence interval is estimate $\\pm$ margin of error, so it runs from $0.62 - 0.04$ to $0.62 + 0.04$.",
+    "The lower endpoint is $0.58$. We are $95\\%$ confident the true proportion is between $0.58$ and $0.66$."
   ],
   "alternativeExplanations": [
     {

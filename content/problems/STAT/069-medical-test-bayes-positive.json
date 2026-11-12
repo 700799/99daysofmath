@@ -15,11 +15,11 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.002,
-  "hint": "You want $P(\\text{disease} \\mid \\text{positive})$, which is $\\frac{P(\\text{disease and positive})}{P(\\text{positive})}$. Build both pieces with a tree.",
+  "hint": "The condition is a positive test, so the question is what fraction of all positive results come from people who really have the disease.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You want $P(\\text{disease} \\mid \\text{positive})$, which is $\\frac{P(\\text{disease and positive})}{P(\\text{positive})}$. Build both pieces with a tree."
+      "text": "The condition is a positive test, so the question is what fraction of all positive results come from people who really have the disease."
     },
     {
       "level": "nudge",
@@ -28,17 +28,18 @@
     },
     {
       "level": "guide",
-      "text": "$P(\\text{disease and positive}) = 0.02 \\times 0.90 = 0.018$. $P(\\text{no disease and positive}) = 0.98 \\times 0.05 = 0.049$. So $P(\\text{positive}) = 0.067$. Now divide."
+      "text": "True positives: $0.02 \\times 0.90 = 0.018$. False positives: $0.98 \\times 0.05 = 0.049$. All positives total $0.067$, so divide the true positives by that total."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{0.018}{0.067} \\approx 0.269$. Only about $27$ percent of positives are truly sick."
+      "text": "$\\frac{0.018}{0.067} \\approx 0.269$, so only about $27$ percent of people who test positive have the disease."
     }
   ],
   "explanation": [
-    "Tree: disease ($0.02$) then positive ($0.90$) gives $0.018$; no disease ($0.98$) then positive ($0.05$) gives $0.049$.",
-    "$P(\\text{positive}) = 0.018 + 0.049 = 0.067$.",
-    "$P(\\text{disease} \\mid \\text{positive}) = \\frac{0.018}{0.067} \\approx 0.269$. Because the disease is rare, most positives are false positives from the large healthy group."
+    "A tree gives the two ways to test positive: disease ($0.02$) then positive ($0.90$) is $0.018$, and no disease ($0.98$) then positive ($0.05$) is $0.049$.",
+    "Adding the two routes gives the chance of any positive result: $P(\\text{positive}) = 0.018 + 0.049 = 0.067$.",
+    "The conditional probability is the true-positive share of all positives: $\\frac{0.018}{0.067} \\approx 0.269$.",
+    "The answer is about $0.269$. Because the disease is rare, most positives are false positives from the large healthy group."
   ],
   "alternativeExplanations": [
     {

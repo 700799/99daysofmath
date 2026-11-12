@@ -10,25 +10,25 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Expected count $= \\frac{\\text{row total} \\times \\text{column total}}{\\text{grand total}}$.",
+  "hint": "If grade and lunch choice are independent, 10th graders should choose pizza at the same rate as the whole school. That idea gives the expected count.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Expected count $= \\frac{\\text{row total} \\times \\text{column total}}{\\text{grand total}}$."
+      "text": "If grade and lunch choice are independent, 10th graders should choose pizza at the same rate as the whole school. That idea gives the expected count."
     },
     {
       "level": "guide",
-      "text": "Plug in: $\\frac{50 \\times 80}{200}$."
+      "text": "The formula is expected count $= \\frac{\\text{row total} \\times \\text{column total}}{\\text{grand total}}$. Fill in the totals for this cell: $\\frac{50 \\times 80}{200}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{4000}{200} = 20$ students."
+      "text": "$\\frac{4000}{200} = 20$, so the expected count is $20$ students."
     }
   ],
   "explanation": [
     "If grade level and lunch choice are independent, 10th graders should like pizza at the same rate as everyone: $80/200 = 40\\%$.",
-    "$40\\%$ of the 50 tenth graders is $0.40 \\times 50 = 20$.",
-    "The formula $\\frac{50 \\times 80}{200} = 20$ says the same thing."
+    "Applying that rate to the 50 tenth graders gives $0.40 \\times 50 = 20$.",
+    "The formula $\\frac{50 \\times 80}{200} = 20$ says the same thing, so the expected count is $20$ students."
   ],
   "alternativeExplanations": [
     {

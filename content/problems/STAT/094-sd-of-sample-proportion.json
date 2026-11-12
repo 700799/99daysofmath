@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "The formula is $\\sigma_{\\hat{p}} = \\sqrt{\\frac{p(1-p)}{n}}$.",
+  "hint": "A sample proportion varies from sample to sample, and its standard deviation depends on both $p$ and the sample size.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The formula is $\\sigma_{\\hat{p}} = \\sqrt{\\frac{p(1-p)}{n}}$."
+      "text": "A sample proportion varies from sample to sample, and its standard deviation depends on both $p$ and the sample size."
     },
     {
       "level": "guide",
-      "text": "Compute $\\frac{0.4 \\times 0.6}{100} = 0.0024$, then square-root."
+      "text": "Use $\\sigma_{\\hat{p}} = \\sqrt{\\frac{p(1-p)}{n}}$ with $p = 0.4$ and $n = 100$: compute $\\frac{0.4 \\times 0.6}{100} = 0.0024$ and take the square root."
     },
     {
       "level": "reveal",
-      "text": "$\\sqrt{0.0024} \\approx 0.049$."
+      "text": "$\\sqrt{0.0024} \\approx 0.049$, so the standard deviation of $\\hat{p}$ is about $0.049$."
     }
   ],
   "explanation": [
     "The sampling distribution of $\\hat{p}$ has mean $p = 0.4$ and standard deviation $\\sqrt{p(1-p)/n}$.",
-    "$p(1-p)/n = (0.4)(0.6)/100 = 0.24/100 = 0.0024$.",
-    "$\\sqrt{0.0024} \\approx 0.049$. Sample proportions typically land within about 5 percentage points of $0.40$."
+    "Inside the square root, the fraction is $p(1-p)/n = (0.4)(0.6)/100 = 0.24/100 = 0.0024$.",
+    "$\\sqrt{0.0024} \\approx 0.049$, so sample proportions typically land within about 5 percentage points of $0.40$."
   ],
   "alternativeExplanations": [
     {

@@ -10,11 +10,11 @@
   "primaryAnswer": "56",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Build the line first: slope $b = r \\frac{s_y}{s_x}$, and the line always passes through $(\\bar{x}, \\bar{y})$.",
+  "hint": "You are not given the line, only summary statistics. A line needs a slope and one point, and the least-squares line always passes through the point of means.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Build the line first: slope $b = r \\frac{s_y}{s_x}$, and the line always passes through $(\\bar{x}, \\bar{y})$."
+      "text": "You are not given the line, only summary statistics. A line needs a slope and one point, and the least-squares line always passes through the point of means."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$b = 0.75 \\times \\frac{8}{2} = 3$. Intercept $a = \\bar{y} - b\\bar{x} = 50 - 3(10) = 20$. Now plug $x = 12$ into $\\hat{y} = 20 + 3x$."
+      "text": "The slope is $b = 0.75 \\times \\frac{8}{2} = 3$ and the intercept is $a = \\bar{y} - b\\bar{x} = 50 - 3(10) = 20$. Now put $x = 12$ into $\\hat{y} = 20 + 3x$."
     },
     {
       "level": "reveal",
-      "text": "$\\hat{y} = 20 + 3(12) = 56$, so about $\\$5{,}600$ in sales."
+      "text": "$\\hat{y} = 20 + 3(12) = 56$, so the predicted sales are $56$ hundred dollars, about $\\$5{,}600$."
     }
   ],
   "explanation": [
-    "Slope: $b = r \\dfrac{s_y}{s_x} = 0.75 \\times \\dfrac{8}{2} = 3$.",
-    "Intercept: the line passes through $(\\bar{x}, \\bar{y}) = (10, 50)$, so $a = 50 - 3(10) = 20$ and $\\hat{y} = 20 + 3x$.",
-    "At $x = 12$: $\\hat{y} = 20 + 36 = 56$ hundred dollars."
+    "The slope comes from the summary statistics: $b = r \\dfrac{s_y}{s_x} = 0.75 \\times \\dfrac{8}{2} = 3$.",
+    "The line passes through $(\\bar{x}, \\bar{y}) = (10, 50)$, so the intercept is $a = 50 - 3(10) = 20$ and the line is $\\hat{y} = 20 + 3x$.",
+    "At $x = 12$ the prediction is $\\hat{y} = 20 + 36 = 56$, so sales of about $56$ hundred dollars."
   ],
   "alternativeExplanations": [
     {

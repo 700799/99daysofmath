@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "Standard deviations do NOT add. Variances do — when the variables are independent.",
+  "hint": "Standard deviations of independent variables do not simply add. A different measure of spread does add.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Standard deviations do NOT add. Variances do — when the variables are independent."
+      "text": "Standard deviations of independent variables do not simply add. A different measure of spread does add."
     },
     {
       "level": "guide",
-      "text": "$\\sigma_T^2 = \\sigma_A^2 + \\sigma_B^2 = 0.3^2 + 0.4^2$. Then take the square root."
+      "text": "Variances add for independent variables: $\\sigma_T^2 = 0.3^2 + 0.4^2$. Take the square root of that sum to return to a standard deviation."
     },
     {
       "level": "reveal",
-      "text": "$0.09 + 0.16 = 0.25$, and $\\sqrt{0.25} = 0.5$ cm."
+      "text": "$0.09 + 0.16 = 0.25$ and $\\sqrt{0.25} = 0.5$, so the standard deviation of the total length is $0.5$ cm."
     }
   ],
   "explanation": [
-    "For independent random variables, variances add: $\\sigma_T^2 = \\sigma_A^2 + \\sigma_B^2$.",
-    "$0.3^2 + 0.4^2 = 0.09 + 0.16 = 0.25$.",
-    "Convert back to a standard deviation: $\\sigma_T = \\sqrt{0.25} = 0.5$ cm. (The mean is $10 + 15 = 25$ cm, but the question asked for the SD.)"
+    "For independent random variables the variances add, so $\\sigma_T^2 = \\sigma_A^2 + \\sigma_B^2$.",
+    "Squaring the two standard deviations and adding gives $0.3^2 + 0.4^2 = 0.09 + 0.16 = 0.25$.",
+    "Take the square root to get back to a standard deviation: $\\sigma_T = \\sqrt{0.25} = 0.5$ cm. (The mean is $10 + 15 = 25$ cm, but the question asked for the SD.)"
   ],
   "alternativeExplanations": [
     {

@@ -11,11 +11,11 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.02,
-  "hint": "Three ingredients: $\\hat{p}_1$, $\\hat{p}_2$, and the pooled $\\hat{p}_c = \\frac{48 + 28}{120 + 80}$.",
+  "hint": "A pooled two-proportion test needs three ingredients: each group's sample proportion and the pooled proportion from both groups combined.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Three ingredients: $\\hat{p}_1$, $\\hat{p}_2$, and the pooled $\\hat{p}_c = \\frac{48 + 28}{120 + 80}$."
+      "text": "A pooled two-proportion test needs three ingredients: each group's sample proportion and the pooled proportion from both groups combined."
     },
     {
       "level": "nudge",
@@ -24,17 +24,18 @@
     },
     {
       "level": "guide",
-      "text": "$\\hat{p}_1 = 0.40$, $\\hat{p}_2 = 0.35$, $\\hat{p}_c = 76/200 = 0.38$. SE $= \\sqrt{0.38 \\times 0.62 \\times (1/120 + 1/80)}$."
+      "text": "$\\hat{p}_1 = 0.40$, $\\hat{p}_2 = 0.35$ and $\\hat{p}_c = 76/200 = 0.38$. The standard error is $\\sqrt{0.38 \\times 0.62 \\times (1/120 + 1/80)}$. Divide the difference $0.05$ by it."
     },
     {
       "level": "reveal",
-      "text": "SE $= \\sqrt{0.2356 \\times 0.02083} = \\sqrt{0.004908} \\approx 0.0701$, so $z = 0.05/0.0701 \\approx 0.71$."
+      "text": "The standard error is $\\sqrt{0.004908} \\approx 0.0701$, so the test statistic is $z = 0.05/0.0701 \\approx 0.71$."
     }
   ],
   "explanation": [
-    "$\\hat{p}_1 = 48/120 = 0.40$, $\\hat{p}_2 = 28/80 = 0.35$; difference $0.05$.",
-    "Pooled: $\\hat{p}_c = 76/200 = 0.38$. $\\frac{1}{120} + \\frac{1}{80} = 0.00833 + 0.0125 = 0.02083$. SE $= \\sqrt{0.38 \\times 0.62 \\times 0.02083} = \\sqrt{0.004908} \\approx 0.0701$.",
-    "$z = 0.05/0.0701 \\approx 0.71$. The two-sided $p$-value is about $0.48$ — no evidence the methods differ."
+    "The sample proportions are $\\hat{p}_1 = 48/120 = 0.40$ and $\\hat{p}_2 = 28/80 = 0.35$, a difference of $0.05$.",
+    "Under $H_0$ both methods share one voting rate, so pool the data: $\\hat{p}_c = 76/200 = 0.38$.",
+    "The sample-size part is $\\frac{1}{120} + \\frac{1}{80} = 0.02083$, so the standard error is $\\sqrt{0.38 \\times 0.62 \\times 0.02083} = \\sqrt{0.004908} \\approx 0.0701$.",
+    "$z = 0.05/0.0701 \\approx 0.71$. The two-sided $p$-value is about $0.48$, so there is no evidence the methods differ."
   ],
   "alternativeExplanations": [
     {

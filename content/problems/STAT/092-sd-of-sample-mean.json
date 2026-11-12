@@ -10,25 +10,25 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Averages vary less than individuals. The formula is $\\sigma_{\\bar{x}} = \\frac{\\sigma}{\\sqrt{n}}$.",
+  "hint": "Averages of many students vary less than individual scores do. By what factor does averaging shrink the standard deviation?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Averages vary less than individuals. The formula is $\\sigma_{\\bar{x}} = \\frac{\\sigma}{\\sqrt{n}}$."
+      "text": "Averages of many students vary less than individual scores do. By what factor does averaging shrink the standard deviation?"
     },
     {
       "level": "guide",
-      "text": "$\\sqrt{36} = 6$. Divide $12$ by $6$."
+      "text": "The formula is $\\sigma_{\\bar{x}} = \\frac{\\sigma}{\\sqrt{n}}$. Here $\\sqrt{36} = 6$, so divide the population value $12$ by $6$."
     },
     {
       "level": "reveal",
-      "text": "$\\sigma_{\\bar{x}} = \\frac{12}{\\sqrt{36}} = \\frac{12}{6} = 2$ points."
+      "text": "$\\frac{12}{6} = 2$, so the standard deviation of the sample mean is $2$ points."
     }
   ],
   "explanation": [
-    "The standard deviation of the sample mean is $\\sigma_{\\bar{x}} = \\sigma / \\sqrt{n}$.",
-    "$\\sqrt{36} = 6$, so $\\sigma_{\\bar{x}} = 12 / 6 = 2$.",
-    "Sample means of 36 students typically fall within about 2 points of the population mean — much tighter than individual scores."
+    "The standard deviation of the sample mean is $\\sigma_{\\bar{x}} = \\sigma / \\sqrt{n}$, which is smaller than $\\sigma$ because averaging smooths out individual variation.",
+    "The sample size is $n = 36$ and $\\sqrt{36} = 6$, so the formula gives $\\sigma_{\\bar{x}} = 12 / 6 = 2$.",
+    "The answer is $2$ points: means of 36 students typically fall within about 2 points of the population mean."
   ],
   "alternativeExplanations": [
     {

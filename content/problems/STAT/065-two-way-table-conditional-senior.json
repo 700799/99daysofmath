@@ -19,25 +19,25 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.005,
-  "hint": "\"Given that the student is a senior\" shrinks the sample space to the senior ROW only.",
+  "hint": "The words \"given that the student is a senior\" shrink the group you are choosing from. Which part of the table is left?",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Given that the student is a senior\" shrinks the sample space to the senior ROW only."
+      "text": "The words \"given that the student is a senior\" shrink the group you are choosing from. Which part of the table is left?"
     },
     {
       "level": "guide",
-      "text": "$P(\\text{job} \\mid \\text{senior}) = \\frac{\\text{seniors with a job}}{\\text{all seniors}} = \\frac{45}{70}$."
+      "text": "Only the senior row matters. It has $70$ seniors, and $45$ of them have a job, so write $\\frac{45}{70}$ and simplify."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{45}{70} = \\frac{9}{14} \\approx 0.643$."
+      "text": "$\\frac{45}{70} = \\frac{9}{14}$, so the probability is $\\frac{9}{14}$, about $0.643$."
     }
   ],
   "explanation": [
-    "Conditioning on \"senior\" means we only look at the $70$ seniors.",
-    "Of those, $45$ have a job.",
-    "$P(\\text{job} \\mid \\text{senior}) = \\frac{45}{70} = \\frac{9}{14} \\approx 0.643$."
+    "Conditioning on \"senior\" means the sample space is no longer all $120$ students, only the $70$ seniors.",
+    "Within that row, $45$ seniors have a part-time job, so those are the favorable outcomes.",
+    "The conditional probability is $P(\\text{job} \\mid \\text{senior}) = \\frac{45}{70} = \\frac{9}{14}$, which is about $0.643$."
   ],
   "alternativeExplanations": [
     {

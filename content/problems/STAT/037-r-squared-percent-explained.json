@@ -13,15 +13,15 @@
     "0.36"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The \"percent of variation explained\" is $r^2$, not $r$.",
+  "hint": "The share of variation explained by a regression line is not $r$ itself. Which related quantity measures it?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The \"percent of variation explained\" is $r^2$, not $r$."
+      "text": "The share of variation explained by a regression line is not $r$ itself. Which related quantity measures it?"
     },
     {
       "level": "guide",
-      "text": "Square the correlation: $0.6^2$."
+      "text": "The coefficient of determination is $r^2$, so square the correlation, $0.6^2$, and write the result as a percent."
     },
     {
       "level": "reveal",
@@ -29,9 +29,9 @@
     }
   ],
   "explanation": [
-    "The coefficient of determination is $r^2 = 0.6^2 = 0.36$.",
-    "Interpretation: about $36$ percent of the variation in reaction-test scores is explained by the least-squares line using hours of sleep.",
-    "The other $64$ percent is due to other factors and chance."
+    "The percent of variation explained is the coefficient of determination, $r^2$, not the correlation $r$.",
+    "Squaring the correlation gives the fraction of variation explained: $r^2 = 0.6^2 = 0.36$.",
+    "So about $36$ percent of the variation in reaction-test scores is explained by the linear relationship with sleep, and the other $64$ percent comes from other factors and chance."
   ],
   "alternativeExplanations": [
     {

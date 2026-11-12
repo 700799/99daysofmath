@@ -34,9 +34,10 @@
     }
   ],
   "explanation": [
-    "Median $= 19$ (5th of 9). Lower half $14, 16, 17, 18$: $Q_1 = \\frac{16 + 17}{2} = 16.5$. Upper half $21, 22, 24, 38$: $Q_3 = \\frac{22 + 24}{2} = 23$.",
-    "IQR $= 23 - 16.5 = 6.5$, and $1.5 \\times 6.5 = 9.75$.",
-    "Upper fence $= 23 + 9.75 = 32.75$ pounds. Since $38 > 32.75$, the heaviest dog is an outlier; the lower fence $16.5 - 9.75 = 6.75$ flags nothing."
+    "With nine values the median is the 5th, $19$. Leaving it out, the lower half is $14, 16, 17, 18$ and the upper half is $21, 22, 24, 38$.",
+    "Each quartile is the median of its half: $Q_1 = \\frac{16 + 17}{2} = 16.5$ and $Q_3 = \\frac{22 + 24}{2} = 23$.",
+    "The IQR is $23 - 16.5 = 6.5$, and the rule reaches $1.5 \\times 6.5 = 9.75$ beyond the quartile.",
+    "The upper fence is $23 + 9.75 = 32.75$ pounds. Since $38 > 32.75$, the heaviest dog is an outlier."
   ],
   "alternativeExplanations": [
     {

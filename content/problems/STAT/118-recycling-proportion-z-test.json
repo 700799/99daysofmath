@@ -11,29 +11,29 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.02,
-  "hint": "First find $\\hat{p}$. Then $z = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)/n}}$, using the NULL value $p_0 = 0.30$ in the denominator.",
+  "hint": "The test statistic compares the sample proportion with the null value $0.30$, so the sample proportion has to be found first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find $\\hat{p}$. Then $z = \\frac{\\hat{p} - p_0}{\\sqrt{p_0(1-p_0)/n}}$, using the NULL value $p_0 = 0.30$ in the denominator."
+      "text": "The test statistic compares the sample proportion with the null value $0.30$, so the sample proportion has to be found first."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up: $p_0 = 0.5$, $n = 100$, $\\hat{p} = 0.6$: $SD = \\sqrt{0.25/100} = 0.05$, $z = 0.1/0.05 = 2$. Same recipe with $0.30$, $200$ and $72/200$."
+      "text": "Warm up with easier numbers: $p_0 = 0.5$, $n = 100$ and $\\hat{p} = 0.6$. The standard deviation is $\\sqrt{0.25/100} = 0.05$, so $z = 0.1/0.05 = 2$. Use the same recipe with $0.30$, $200$ and $72/200$."
     },
     {
       "level": "guide",
-      "text": "$\\hat{p} = 72/200 = 0.36$. $\\sqrt{(0.3)(0.7)/200} = \\sqrt{0.00105} \\approx 0.0324$."
+      "text": "$\\hat{p} = 72/200 = 0.36$, and the standard deviation under $H_0$ is $\\sqrt{(0.3)(0.7)/200} = \\sqrt{0.00105} \\approx 0.0324$. Divide the gap $0.36 - 0.30$ by it."
     },
     {
       "level": "reveal",
-      "text": "$z = \\frac{0.36 - 0.30}{0.0324} \\approx 1.85$."
+      "text": "$z = \\frac{0.36 - 0.30}{0.0324} \\approx 1.85$, so the test statistic is about $1.85$."
     }
   ],
   "explanation": [
-    "Sample proportion: $\\hat{p} = 72/200 = 0.36$.",
-    "Under $H_0$, the SD of $\\hat{p}$ is $\\sqrt{p_0(1-p_0)/n} = \\sqrt{(0.30)(0.70)/200} = \\sqrt{0.00105} \\approx 0.0324$.",
+    "The sample proportion of recycling households is $\\hat{p} = 72/200 = 0.36$.",
+    "Under $H_0$ the standard deviation of $\\hat{p}$ uses the null value: $\\sqrt{(0.30)(0.70)/200} = \\sqrt{0.00105} \\approx 0.0324$.",
     "$z = (0.36 - 0.30)/0.0324 \\approx 1.85$. (For this one-sided test the $p$-value is about $0.032$, so at $\\alpha = 0.05$ there is convincing evidence recycling increased.)"
   ],
   "alternativeExplanations": [

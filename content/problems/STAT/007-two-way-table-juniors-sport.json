@@ -33,9 +33,9 @@
     }
   ],
   "explanation": [
-    "This is a conditional relative frequency: the condition is \"junior\", so use only the junior row.",
-    "Juniors who play a sport: $30$. All juniors: $50$.",
-    "$\\frac{30}{50} = 0.60 = 60$ percent."
+    "The phrase \"of the juniors\" sets a condition, so the whole is the junior row only, not all $120$ students.",
+    "From the table, $30$ juniors play a sport and there are $50$ juniors altogether.",
+    "The conditional relative frequency is $\\frac{30}{50} = 0.60$, so $60$ percent of the juniors play a sport."
   ],
   "alternativeExplanations": [
     {

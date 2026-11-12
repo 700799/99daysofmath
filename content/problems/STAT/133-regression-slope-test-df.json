@@ -10,25 +10,25 @@
   "primaryAnswer": "18",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Regression inference uses df $= n - 2$, because the line estimates TWO parameters: slope and intercept.",
+  "hint": "A regression line is described by two estimated numbers. Each estimated parameter costs one degree of freedom.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Regression inference uses df $= n - 2$, because the line estimates TWO parameters: slope and intercept."
+      "text": "A regression line is described by two estimated numbers. Each estimated parameter costs one degree of freedom."
     },
     {
       "level": "guide",
-      "text": "$n = 20$ farms. Subtract 2."
+      "text": "The slope and the intercept are both estimated, so the rule is df $= n - 2$. Here $n = 20$ farms."
     },
     {
       "level": "reveal",
-      "text": "df $= 20 - 2 = 18$."
+      "text": "$20 - 2 = 18$, so the test uses $18$ degrees of freedom."
     }
   ],
   "explanation": [
-    "For inference on the slope, the $t$ distribution has $n - 2$ degrees of freedom.",
-    "Two are lost because both the intercept and slope are estimated from the data.",
-    "df $= 20 - 2 = 18$."
+    "For inference about a regression slope, the $t$ distribution has $n - 2$ degrees of freedom.",
+    "Two are lost because both the intercept and the slope are estimated from the data.",
+    "With $20$ farms, the degrees of freedom are $20 - 2 = 18$."
   ],
   "alternativeExplanations": [
     {

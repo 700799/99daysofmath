@@ -14,24 +14,24 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.003,
-  "hint": "Standardize first: $z = \\frac{12.5 - 10}{2}$.",
+  "hint": "Normal areas are found from $z$-scores, so the first move is to turn $12.5$ hours into a number of standard deviations.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Standardize first: $z = \\frac{12.5 - 10}{2}$."
+      "text": "Normal areas are found from $z$-scores, so the first move is to turn $12.5$ hours into a number of standard deviations."
     },
     {
       "level": "guide",
-      "text": "$z = 1.25$. Look up $P(Z < 1.25)$ in the standard normal table, or use normalcdf$(-\\infty, 1.25)$."
+      "text": "$z = \\frac{12.5 - 10}{2} = 1.25$. \"Less than\" means the area to the left, so look up $P(Z < 1.25)$ in the table or use normalcdf."
     },
     {
       "level": "reveal",
-      "text": "$P(Z < 1.25) \\approx 0.894$, so about $89.4$ percent of charges last under $12.5$ hours."
+      "text": "$P(Z < 1.25) \\approx 0.894$, so about $0.894$ of charges last less than $12.5$ hours."
     }
   ],
   "explanation": [
-    "$z = \\frac{12.5 - 10}{2} = 1.25$.",
-    "The standard normal table gives the area to the LEFT of $z = 1.25$ as $0.8944$.",
+    "Standardize the cutoff so the standard normal table can be used: $z = \\frac{12.5 - 10}{2} = 1.25$.",
+    "\"Less than $12.5$ hours\" is the area to the LEFT of $z = 1.25$, which the table gives as $0.8944$.",
     "So about $0.894$ of charges, roughly $89$ percent, last less than $12.5$ hours."
   ],
   "alternativeExplanations": [

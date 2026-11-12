@@ -10,11 +10,11 @@
   "primaryAnswer": "800",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Margin of error is proportional to $\\frac{1}{\\sqrt{n}}$ — not $\\frac{1}{n}$.",
+  "hint": "Think about how the margin of error depends on $n$. It shrinks with the square root of the sample size, not with $n$ itself.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Margin of error is proportional to $\\frac{1}{\\sqrt{n}}$ — not $\\frac{1}{n}$."
+      "text": "Think about how the margin of error depends on $n$. It shrinks with the square root of the sample size, not with $n$ itself."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Halving ME needs $\\sqrt{n}$ to double, so $n$ must be multiplied by $2^2 = 4$."
+      "text": "Going from $0.06$ to $0.03$ halves the margin, which needs $\\sqrt{n}$ to double. So $n$ must be multiplied by $2^2 = 4$: work out $4 \\times 200$."
     },
     {
       "level": "reveal",
-      "text": "$4 \\times 200 = 800$ customers."
+      "text": "$4 \\times 200 = 800$, so the new survey should include about $800$ customers."
     }
   ],
   "explanation": [
-    "ME $= z^* \\sqrt{\\hat{p}(1-\\hat{p})/n}$. With $z^*$ and $\\hat{p}$ fixed, ME $\\propto 1/\\sqrt{n}$.",
-    "To cut ME from $0.06$ to $0.03$ (half), $\\sqrt{n}$ must double, so $n$ must quadruple.",
-    "New sample size: $4 \\times 200 = 800$. Doubling to 400 would only shrink the margin to about $0.042$."
+    "The margin of error is $z^* \\sqrt{\\hat{p}(1-\\hat{p})/n}$. With $z^*$ and $\\hat{p}$ fixed, it is proportional to $1/\\sqrt{n}$.",
+    "Cutting the margin from $0.06$ to $0.03$ halves it, so $\\sqrt{n}$ must double, and that means $n$ must quadruple.",
+    "The new sample size is $4 \\times 200 = 800$ customers. Doubling to 400 would only shrink the margin to about $0.042$."
   ],
   "alternativeExplanations": [
     {

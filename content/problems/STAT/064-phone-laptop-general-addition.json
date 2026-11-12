@@ -14,25 +14,25 @@
     "0.80"
   ],
   "acceptanceMode": "normalized",
-  "hint": "These events overlap (some students own both), so you cannot just add.",
+  "hint": "Some students own both devices. If you add the two percentages, how many times are those students counted?",
   "hints": [
     {
       "level": "nudge",
-      "text": "These events overlap (some students own both), so you cannot just add."
+      "text": "Some students own both devices. If you add the two percentages, how many times are those students counted?"
     },
     {
       "level": "guide",
-      "text": "General addition rule: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$. The subtraction removes the double-counted overlap."
+      "text": "Use the general addition rule $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$, which removes the double-counted overlap: $0.6 + 0.5 - 0.3$."
     },
     {
       "level": "reveal",
-      "text": "$0.6 + 0.5 - 0.3 = 0.8$."
+      "text": "$0.6 + 0.5 - 0.3 = 0.8$, so the probability of owning a tablet or a console is $0.8$."
     }
   ],
   "explanation": [
-    "Adding $0.6 + 0.5 = 1.1$ counts the $30$ percent who own both devices twice, which is why it exceeds $1$.",
-    "Subtract the overlap once: $1.1 - 0.3 = 0.8$.",
-    "$P(\\text{tablet or console}) = 0.8$, so $80$ percent own at least one."
+    "Adding $0.6 + 0.5 = 1.1$ counts the $30$ percent who own both devices twice, which is why the sum exceeds $1$.",
+    "Subtracting the overlap once fixes the double count: $1.1 - 0.3 = 0.8$.",
+    "So $P(\\text{tablet or console}) = 0.8$, meaning $80$ percent of students own at least one of the two."
   ],
   "alternativeExplanations": [
     {

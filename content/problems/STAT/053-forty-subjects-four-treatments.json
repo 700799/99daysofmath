@@ -10,25 +10,25 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Equal groups means the subjects are split evenly among the treatments.",
+  "hint": "\"Equal-sized groups\" tells you the subjects are shared out evenly, one group for each treatment.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Equal groups means the subjects are split evenly among the treatments."
+      "text": "\"Equal-sized groups\" tells you the subjects are shared out evenly, one group for each treatment."
     },
     {
       "level": "guide",
-      "text": "Divide $40$ subjects by $4$ treatments."
+      "text": "There are $40$ subjects to share among $4$ treatment groups of the same size, so divide $40$ by $4$."
     },
     {
       "level": "reveal",
-      "text": "$40 \\div 4 = 10$ subjects per treatment."
+      "text": "$40 \\div 4 = 10$, so each treatment is given to $10$ subjects."
     }
   ],
   "explanation": [
-    "In a completely randomized design, subjects are randomly assigned to treatment groups.",
-    "With equal group sizes, $\\frac{40}{4} = 10$.",
-    "Each of the four treatments gets $10$ subjects."
+    "In a completely randomized design, every subject is assigned by chance to exactly one treatment group.",
+    "The groups must be the same size, so the $40$ subjects are split evenly: $\\frac{40}{4} = 10$.",
+    "Each of the four treatments is received by $10$ subjects."
   ],
   "alternativeExplanations": [
     {

@@ -823,5 +823,311 @@
   "Slope is the change in y divided by the change in x between two points on the line.",
   "Subtract in the same order for both: m = (9 − 1)/(4 − 0) = 8/4.",
   "8/4 = 2, so the slope of the line is 2."
+ ],
+ "STAT-1#0": [
+  "A categorical variable is a label or group name, even when it is written with digits. Ask which of these you would never average.",
+  "Shoe size, height and distance to school all measure an amount, so averages of them mean something.",
+  "A jersey number only identifies a player, and an average jersey number means nothing.",
+  "Jersey number is the categorical variable."
+ ],
+ "STAT-1#1": [
+  "Relative frequency compares one category's count with the total: count ÷ total.",
+  "Tacos were chosen by 6 of the 20 students, so compute 6 ÷ 20 = 0.30.",
+  "As a percent, the relative frequency of tacos is 30%."
+ ],
+ "STAT-1#2": [
+  "Skew is named after the side with the long tail, not the side with the pile of values.",
+  "Most games cluster at 0 to 2 goals, on the low side.",
+  "The tail stretches out toward 5 and 7, the high values on the right.",
+  "The long tail is on the high side, so the distribution is skewed right."
+ ],
+ "STAT-1#3": [
+  "The words \"of 10th graders\" mean the whole is only the 10th-grade row, not everyone in the table.",
+  "Add the two counts in that row to get the 10th-grade total: 12 + 13 = 25 students.",
+  "In-person fans are 13 of those 25, and 13 ÷ 25 = 0.52.",
+  "So 52% of 10th graders prefer in person."
+ ],
+ "STAT-2#0": [
+  "The median is the middle value, but only after the numbers are put in order.",
+  "Sorted from smallest to largest, the list is 1, 3, 5, 7, 9.",
+  "With five values, the middle one is the 3rd value in the sorted list.",
+  "The 3rd value is 5, so the median is 5."
+ ],
+ "STAT-2#1": [
+  "The IQR is Q3 − Q1, where each quartile is the median of one half of the ordered data.",
+  "The lower half is 2, 4, 6, 8, and its median gives Q1 = (4 + 6)/2 = 5.",
+  "The upper half is 10, 12, 14, 16, and its median gives Q3 = (12 + 14)/2 = 13.",
+  "Subtract the quartiles to get the IQR: 13 − 5 = 8."
+ ],
+ "STAT-2#2": [
+  "The outlier rule puts a fence 1.5 IQRs above Q3, so find the IQR first.",
+  "Subtract the quartiles to get the IQR: Q3 − Q1 = 30 − 20 = 10.",
+  "One and a half IQRs is the distance to the fence: 1.5 × 10 = 15.",
+  "The upper fence is 30 + 15 = 45, so any point above 45 is an outlier."
+ ],
+ "STAT-2#3": [
+  "Standard deviation comes from the squared distances of the values from the mean.",
+  "The mean is 3, so the deviations are −2, −1, 0, 1, 2 and their squares 4, 1, 0, 1, 4 add up to 10.",
+  "For a sample, divide by n − 1 = 4 to get the variance: 10 ÷ 4 = 2.5.",
+  "The standard deviation is the square root of the variance: s = √2.5 ≈ 1.58."
+ ],
+ "STAT-3#0": [
+  "A z-score counts how many standard deviations a value is from the mean.",
+  "Subtract the mean and divide by the standard deviation: z = (72 − 60)/8.",
+  "That is 12/8 = 1.5 standard deviations above the mean.",
+  "So a score of 72 has a z-score of 1.5."
+ ],
+ "STAT-3#1": [
+  "The empirical rule gives three percents for a normal distribution: 68, 95 and 99.7.",
+  "They go with 1, 2 and 3 standard deviations from the mean, in that order.",
+  "Within 2 standard deviations is the middle number of the three.",
+  "About 95% of the distribution lies within 2 standard deviations of the mean."
+ ],
+ "STAT-3#2": [
+  "The empirical rule says 68% of values lie between z = −1 and z = 1, and the two tails outside are equal.",
+  "The two tails together hold 100% − 68% = 32% of the values.",
+  "Half of that is in the lower tail: 32% ÷ 2 = 16% (a table gives 0.1587).",
+  "So about 16% of the values fall below z = −1."
+ ],
+ "STAT-3#3": [
+  "A cutoff for the top 5% is a z-score turned back into a score: x = mean + z × SD.",
+  "Top 5% means 95% of scores are to the left, which is the given z = 1.645.",
+  "Turn the z-score back into an IQ score: x = 100 + 1.645 × 15 = 100 + 24.7.",
+  "The cutoff is x ≈ 124.7, so a score of about 125."
+ ],
+ "STAT-4#0": [
+  "A residual is the actual value minus the predicted value, in that order.",
+  "The actual score is 80 and the line predicts 81.5, so compute 80 − 81.5.",
+  "The residual is −1.5: the point is 1.5 below the line."
+ ],
+ "STAT-4#1": [
+  "A regression line gives a prediction when you substitute the x-value into the equation.",
+  "Put x = 6 into the line and multiply first: 10 + 2 × 6 = 10 + 12.",
+  "The line predicts a y-value of 22 when x = 6."
+ ],
+ "STAT-4#2": [
+  "Strength depends on how close r is to 1 or −1, not on the sign.",
+  "Ignore the signs and compare sizes: 0.9 is closer to 1 than 0.4 is.",
+  "So r = −0.9 shows the stronger linear relationship."
+ ],
+ "STAT-4#3": [
+  "The percent of variation explained by the line is r², not r itself.",
+  "Square the correlation to get the fraction explained: 0.8² = 0.64.",
+  "So 64% of the variation in y is explained, and the other 36% is unexplained scatter."
+ ],
+ "STAT-5#0": [
+  "A parameter describes a whole population, and a statistic describes a sample.",
+  "The 62% was computed from only the 100 students who were asked, which is a sample.",
+  "A number that describes a sample is a statistic, so 62% is a statistic."
+ ],
+ "STAT-5#1": [
+  "Name a sampling method by asking how the people were chosen. Was any random process used?",
+  "The reporter simply talked to whoever was at the mall at that moment, with no randomness.",
+  "This is convenience sampling, which is biased toward people free at noon on a weekday."
+ ],
+ "STAT-5#2": [
+  "Labels have two digits, so read the digits in pairs and skip any pair that is not a label from 01 to 30.",
+  "Split the digits into pairs from the left: 78, 03, 41, 19, 03.",
+  "The pair 78 is bigger than 30, so skip it and move to the next pair.",
+  "The first usable label is 03, so person 3 is chosen first."
+ ],
+ "STAT-5#3": [
+  "In a systematic sample, the step size k is the population size divided by the sample size.",
+  "Divide the 2,000 names by the 100 wanted: 2000 ÷ 100 = 20.",
+  "So k = 20: take every 20th name after a random start from 1 to 20."
+ ],
+ "STAT-6#0": [
+  "A treatment is one combination of a level from each factor, so count the combinations.",
+  "Each of the 2 fertilizers is paired with each of the 3 watering levels: 2 × 3.",
+  "That makes 6 treatments in the experiment."
+ ],
+ "STAT-6#1": [
+  "Cause and effect needs the groups to be alike in everything except the treatment.",
+  "Only random assignment of treatments balances out the confounding variables, and that happens only when the researcher imposes the treatments.",
+  "The study type that can show cause and effect is an experiment."
+ ],
+ "STAT-6#2": [
+  "Ask how the students ended up in the tutoring group. Was anything randomly assigned?",
+  "Students chose tutoring themselves, so this is an observational study.",
+  "More motivated students may have signed up, so motivation is confounded with tutoring.",
+  "No, you cannot conclude that tutoring caused the higher scores."
+ ],
+ "STAT-6#3": [
+  "In this kind of matched pairs design, each subject acts as his or her own pair.",
+  "The comparison is made within one person, so that person tries every treatment, in random order.",
+  "Each subject receives 2 treatments, which is both of them."
+ ],
+ "STAT-7#0": [
+  "An event and its complement cover everything, so their probabilities add to 1.",
+  "Use the complement rule and subtract from 1: P(not A) = 1 − P(A) = 1 − 0.35.",
+  "The subtraction gives 0.65, so the probability of not A is 0.65."
+ ],
+ "STAT-7#1": [
+  "The events overlap, so adding P(A) and P(B) counts the overlap twice. The general addition rule subtracts it once.",
+  "Write the rule with the given numbers: P(A or B) = P(A) + P(B) − P(A and B) = 0.4 + 0.5 − 0.2.",
+  "The arithmetic gives 0.7, so the probability of A or B is 0.7."
+ ],
+ "STAT-7#2": [
+  "Two events are independent exactly when P(A and B) equals P(A) × P(B).",
+  "Multiply the two separate probabilities together: P(A) × P(B) = 0.4 × 0.5 = 0.2.",
+  "That product matches the given value P(A and B) = 0.2.",
+  "The test is passed, so yes, A and B are independent."
+ ],
+ "STAT-7#3": [
+  "Without replacement, the second draw depends on the first, so multiply the first probability by a conditional one.",
+  "The first marble is blue with probability 2/5, since 2 of the 5 marbles are blue.",
+  "With one blue gone, 1 of the remaining 4 marbles is blue: probability 1/4.",
+  "Multiply the two steps: P(both blue) = 2/5 × 1/4 = 2/20, which reduces to 1/10."
+ ],
+ "STAT-8#0": [
+  "The expected value is a weighted average: multiply each value by its probability and add.",
+  "Write one product for each value: E(X) = 0(0.2) + 1(0.5) + 2(0.3).",
+  "The products are 0, 0.5 and 0.6, and they add to 1.1.",
+  "So the expected value of X is 1.1."
+ ],
+ "STAT-8#1": [
+  "Adding a constant shifts every value but does not change spread. Multiplying by a constant stretches the spread.",
+  "The + 10 is ignored, and the 4 multiplies the standard deviation: 4 × 3.",
+  "So the standard deviation of Y is 12."
+ ],
+ "STAT-8#2": [
+  "For independent variables, standard deviations do not add, but variances do.",
+  "Square each SD and add the variances: 3² + 4² = 9 + 16 = 25.",
+  "Take the square root to return to a standard deviation: √25 = 5.",
+  "So the standard deviation of X + Y is 5, not 3 + 4 = 7."
+ ],
+ "STAT-8#3": [
+  "Expected net gain weights each possible net result by its probability, and the 1 dollar cost counts in every result.",
+  "A win nets 5 − 1 = 4 with probability 0.1, and a loss nets −1 with probability 0.9.",
+  "Weight each net result by its probability and add: 4(0.1) + (−1)(0.9) = 0.4 − 0.9 = −0.5.",
+  "The expected net gain is −0.5 dollars, a loss of 50 cents per play on average."
+ ],
+ "STAT-9#0": [
+  "The flips are independent, so multiply the probability of heads once for each flip.",
+  "Each flip is heads with probability 0.5, and there is only one way to get all heads: C(3, 3) = 1.",
+  "P = (0.5)³ = 0.125, so the probability of three heads is 0.125, or 1/8."
+ ],
+ "STAT-9#1": [
+  "The mean of a binomial variable is the number of trials times the probability of success: μ = np.",
+  "Here there are n = 100 trials with success probability p = 0.2, so compute 100 × 0.2.",
+  "The mean of the binomial variable is 20."
+ ],
+ "STAT-9#2": [
+  "Waiting for the first success is a geometric setting, and its mean is 1/p.",
+  "The chance of a win on each card is p = 0.25, so compute 1 ÷ 0.25.",
+  "On average it takes 4 cards to get the first win."
+ ],
+ "STAT-9#3": [
+  "Use the binomial idea: count the orderings with exactly 2 heads, then multiply by the probability of one ordering.",
+  "There are C(6, 2) = 15 ways to choose which two flips are heads.",
+  "Each specific sequence of six flips has probability (0.5)⁶ = 1/64.",
+  "Multiply the count by that probability: 15 × 1/64 = 15/64, which is about 0.234."
+ ],
+ "STAT-10#0": [
+  "Sample means vary less than individual values: the standard deviation of x̄ is σ/√n.",
+  "Substitute the population SD of 20 and the sample size of 25: 20/√25 = 20/5.",
+  "So the standard deviation of the sample mean is 4."
+ ],
+ "STAT-10#1": [
+  "The standard deviation of a sample proportion is √(p(1 − p)/n).",
+  "Substitute p = 0.5 and n = 100 under the square root: √(0.5 × 0.5 / 100) = √0.0025.",
+  "So the standard deviation of the sample proportion is 0.05."
+ ],
+ "STAT-10#2": [
+  "This is about a sample mean, so standardize with the standard deviation of x̄, which is σ/√n.",
+  "The standard deviation of the sample mean is 15/√9 = 5.",
+  "Standardize 110 with that smaller standard deviation: z = (110 − 100)/5 = 2.",
+  "The area above z = 2 is 0.0228, so the probability that the sample mean is over 110 is 0.0228."
+ ],
+ "STAT-10#3": [
+  "The standard deviation of x̄ is σ/√n, so it shrinks with the square root of the sample size.",
+  "To halve it, √n must double, which means n must be 4 times as large.",
+  "Multiply the old sample size by 4: the new sample size is 4 × 20 = 80."
+ ],
+ "STAT-11#0": [
+  "The margin of error is the critical value times the standard error of p̂.",
+  "The standard error of the sample proportion is √(0.5 × 0.5 / 100) = 0.05.",
+  "For 95% confidence the critical value is z* = 1.96, so ME = 1.96 × 0.05.",
+  "The margin of error is 0.098, or about 0.10."
+ ],
+ "STAT-11#1": [
+  "For a mean, the margin of error is t* times the standard error s/√n.",
+  "The standard error of the sample mean is 6/√9 = 2.",
+  "Multiply by the critical value: ME = 2.262 × 2 = 4.524.",
+  "The margin of error is about 4.52."
+ ],
+ "STAT-11#2": [
+  "A confidence interval is p̂ ± margin of error, so p̂ sits exactly in the middle of the interval.",
+  "Find the midpoint by averaging the endpoints: (0.42 + 0.50)/2.",
+  "The midpoint is 0.46, so the sample proportion was 0.46."
+ ],
+ "STAT-11#3": [
+  "With no guess for p, use the worst case p = 0.5, and solve the margin of error formula for n.",
+  "With those numbers the formula becomes n = (1.96/0.05)² × 0.25, which is (39.2)² × 0.25.",
+  "Squaring and then multiplying gives 1536.64 × 0.25 = 384.16 people.",
+  "Sample size must be a whole number that is big enough, so round up to 385."
+ ],
+ "STAT-12#0": [
+  "The z statistic measures how far p̂ is from the null value, in standard deviations computed with the null value.",
+  "Use p = 0.5 from the null hypothesis in the standard deviation: √(0.5 × 0.5 / 100) = 0.05.",
+  "Divide the gap between the sample proportion and 0.50 by it: (0.55 − 0.50)/0.05 = 0.05/0.05.",
+  "The division gives 1, so the z statistic is 1.0."
+ ],
+ "STAT-12#1": [
+  "The t statistic is the distance from x̄ to the null mean, divided by the standard error s/√n.",
+  "The standard error of the sample mean is 10/√25 = 2.",
+  "Divide the gap between the sample mean and 50 by it: (52 − 50)/2 = 2/2.",
+  "The division gives 1, so the t statistic is 1.0."
+ ],
+ "STAT-12#2": [
+  "The decision rule compares the p-value with the significance level α.",
+  "Here the p-value 0.03 is at or below α = 0.05, so the result would be unlikely if H0 were true.",
+  "The evidence is strong enough, so the decision is to reject H0."
+ ],
+ "STAT-12#3": [
+  "A Type I error means rejecting H0 when H0 is actually true.",
+  "H0 is rejected exactly when the p-value is at or below α, and when H0 is true that happens with probability α.",
+  "So the probability of a Type I error is α = 0.01."
+ ],
+ "STAT-13#0": [
+  "The pooled proportion treats the two groups as one big sample: total successes over total sample size.",
+  "Add the successes and add the sizes: (40 + 20)/(80 + 80) = 60/160.",
+  "The pooled proportion is 0.375, which is 3/8."
+ ],
+ "STAT-13#1": [
+  "Each cell contributes (observed − expected)² divided by expected to the chi-square statistic.",
+  "Substitute the observed count 30 and the expected count 25: (30 − 25)²/25 = 25/25.",
+  "This cell's contribution to chi-square is 1."
+ ],
+ "STAT-13#2": [
+  "For a test of independence, the degrees of freedom are (rows − 1) × (columns − 1).",
+  "The table has 3 rows and 4 columns, so compute (3 − 1)(4 − 1) = 2 × 3.",
+  "The test has 6 degrees of freedom."
+ ],
+ "STAT-13#3": [
+  "For two independent samples, the standard error of the difference adds the two variance terms under one square root.",
+  "Square each standard deviation and divide by its sample size: 6²/36 = 36/36 and 8²/64 = 64/64.",
+  "Each term equals 1, so the sum under the square root is 1 + 1 = 2.",
+  "The standard error of the difference is √2, which is about 1.41."
+ ],
+ "STAT-14#0": [
+  "The t statistic for a slope is the estimate minus the null value, divided by its standard error.",
+  "The null value is 0, so t = b/SE_b = 3.0/1.5.",
+  "The slope is 2 standard errors from zero, so the t statistic is 2."
+ ],
+ "STAT-14#1": [
+  "Inference for a regression slope uses df = n − 2, because the slope and the intercept are both estimated.",
+  "There are 22 data points, so subtract 2 from 22.",
+  "The slope test has 20 degrees of freedom."
+ ],
+ "STAT-14#2": [
+  "The margin of error is the critical value times the standard error of the slope: ME = t* × SE_b.",
+  "Substitute the critical value and the standard error: 2.101 × 0.60 = 1.2606.",
+  "The margin of error is about 1.26."
+ ],
+ "STAT-14#3": [
+  "To predict from a regression line, substitute the x-value into the equation.",
+  "Put x = 5 into the line and multiply before adding: 12.5 + 2.4 × 5 = 12.5 + 12.",
+  "The line predicts a score of 24.5 for 5 hours."
  ]
 }

@@ -49,8 +49,8 @@
   ],
   "explanation": [
     "$r^2$ measures the fraction of the variation in the response ($y$) that the least-squares line accounts for.",
-    "B misreads it as a success rate for individuals; C confuses $r^2$ with $r$ (here $r = 0.8$); D asserts causation, which a regression cannot establish.",
-    "A is the standard interpretation."
+    "B misreads it as a success rate for individuals, C confuses $r^2$ with $r$ (here $r = 0.8$), and D asserts causation, which a regression cannot establish.",
+    "A is the standard interpretation, so choice A is correct."
   ],
   "alternativeExplanations": [
     {

@@ -14,11 +14,11 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "\"At least one\" is the complement of \"none.\" Find $P(\\text{none defective})$ first.",
+  "hint": "\"At least one\" covers several cases at once. Its opposite is a single case that is much easier to compute.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"At least one\" is the complement of \"none.\" Find $P(\\text{none defective})$ first."
+      "text": "\"At least one\" covers several cases at once. Its opposite is a single case that is much easier to compute."
     },
     {
       "level": "nudge",
@@ -27,17 +27,17 @@
     },
     {
       "level": "guide",
-      "text": "Each bulb is fine with probability $0.9$, and the bulbs are independent: $P(\\text{none}) = 0.9^3$."
+      "text": "The opposite event is that no bulb is defective. Each bulb is fine with probability $0.9$ and the bulbs are independent, so find $0.9^3$ and subtract it from $1$."
     },
     {
       "level": "reveal",
-      "text": "$0.9^3 = 0.729$, so $P(\\text{at least one}) = 1 - 0.729 = 0.271$."
+      "text": "$0.9^3 = 0.729$ and $1 - 0.729 = 0.271$, so the probability of at least one defective bulb is $0.271$."
     }
   ],
   "explanation": [
-    "\"At least one defective\" covers many cases (exactly 1, exactly 2, all 3). Its complement, \"no defectives,\" is a single case.",
-    "By independence, $P(\\text{none}) = 0.9 \\times 0.9 \\times 0.9 = 0.729$.",
-    "$P(\\text{at least one}) = 1 - 0.729 = 0.271$."
+    "\"At least one defective\" covers exactly 1, exactly 2 and all 3, but its complement, \"no defectives\", is a single case.",
+    "By independence the chance that all three bulbs are fine is $0.9 \\times 0.9 \\times 0.9 = 0.729$.",
+    "The complement rule then gives the answer: $P(\\text{at least one}) = 1 - 0.729 = 0.271$."
   ],
   "alternativeExplanations": [
     {

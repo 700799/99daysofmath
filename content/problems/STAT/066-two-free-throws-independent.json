@@ -13,25 +13,25 @@
     "16/25"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Independent events: the probability of both is the product of the probabilities.",
+  "hint": "The two shots are independent, so the first result does not change the second. Which rule gives the chance that both events happen?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Independent events: the probability of both is the product of the probabilities."
+      "text": "The two shots are independent, so the first result does not change the second. Which rule gives the chance that both events happen?"
     },
     {
       "level": "guide",
-      "text": "$P(\\text{make and make}) = 0.8 \\times 0.8$."
+      "text": "For independent events, multiply the probabilities. Each shot goes in with probability $0.8$, so compute $0.8 \\times 0.8$."
     },
     {
       "level": "reveal",
-      "text": "$0.8 \\times 0.8 = 0.64$."
+      "text": "$0.8 \\times 0.8 = 0.64$, so the probability she makes both free throws is $0.64$."
     }
   ],
   "explanation": [
-    "Because the shots are independent, $P(A \\cap B) = P(A) \\cdot P(B)$.",
-    "$0.8 \\times 0.8 = 0.64$.",
-    "There is a $64$ percent chance she makes both."
+    "Because the shots are independent, the multiplication rule $P(A \\cap B) = P(A) \\cdot P(B)$ applies.",
+    "Each shot is made with probability $0.8$, so the product is $0.8 \\times 0.8 = 0.64$.",
+    "There is a $64$ percent chance that she makes both free throws."
   ],
   "alternativeExplanations": [
     {

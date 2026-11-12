@@ -10,25 +10,25 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Expected count $= n \\times$ (probability under $H_0$).",
+  "hint": "Expected counts describe what the null hypothesis predicts. What does a fair die say about the chance of each face?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Expected count $= n \\times$ (probability under $H_0$)."
+      "text": "Expected counts describe what the null hypothesis predicts. What does a fair die say about the chance of each face?"
     },
     {
       "level": "guide",
-      "text": "A fair die gives each face probability $\\frac{1}{6}$. Multiply by $120$."
+      "text": "A fair die gives every face probability $\\frac{1}{6}$. Multiply that probability by the $120$ rolls."
     },
     {
       "level": "reveal",
-      "text": "$120 \\times \\frac{1}{6} = 20$ for each face."
+      "text": "$120 \\times \\frac{1}{6} = 20$, so the expected count is $20$ for each face."
     }
   ],
   "explanation": [
-    "$H_0$: the die is fair, so each face has probability $1/6$.",
-    "Expected count for a category is $n p_i = 120 \\times 1/6$.",
-    "Each face is expected $20$ times. The test compares the observed counts to these 20s."
+    "The null hypothesis says the die is fair, so each face has probability $1/6$.",
+    "An expected count is the number of trials times that probability, $n p_i = 120 \\times 1/6$.",
+    "Each face is expected $20$ times, and the test compares the observed counts with these 20s."
   ],
   "alternativeExplanations": [
     {

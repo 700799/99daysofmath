@@ -14,25 +14,25 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "Use the binomial formula $P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}$ with $n = 4$, $k = 2$, $p = 0.5$.",
+  "hint": "Four independent flips with the same chance of heads make a binomial setting. You need both the number of arrangements and the chance of each one.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use the binomial formula $P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}$ with $n = 4$, $k = 2$, $p = 0.5$."
+      "text": "Four independent flips with the same chance of heads make a binomial setting. You need both the number of arrangements and the chance of each one."
     },
     {
       "level": "guide",
-      "text": "$\\binom{4}{2} = 6$ ways to choose which 2 flips are heads. Each specific sequence has probability $(0.5)^4 = \\frac{1}{16}$."
+      "text": "There are $\\binom{4}{2} = 6$ ways to choose which two flips are heads, and each specific sequence has probability $(0.5)^4 = \\frac{1}{16}$. Multiply the two."
     },
     {
       "level": "reveal",
-      "text": "$6 \\times \\frac{1}{16} = \\frac{6}{16} = 0.375$."
+      "text": "$6 \\times \\frac{1}{16} = \\frac{6}{16} = 0.375$, so the probability of exactly $2$ heads is $0.375$."
     }
   ],
   "explanation": [
-    "$X$, the number of heads, is binomial with $n = 4$ and $p = 0.5$.",
-    "$P(X = 2) = \\binom{4}{2}(0.5)^2(0.5)^2 = 6 \\times 0.25 \\times 0.25$.",
-    "$6 \\times 0.0625 = 0.375$."
+    "The number of heads $X$ is binomial with $n = 4$ and $p = 0.5$, so the binomial formula applies.",
+    "$P(X = 2) = \\binom{4}{2}(0.5)^2(0.5)^2$, where $\\binom{4}{2} = 6$ counts the orders in which two heads can appear.",
+    "$6 \\times 0.25 \\times 0.25 = 6 \\times 0.0625 = 0.375$, so the probability of exactly two heads is $0.375$."
   ],
   "alternativeExplanations": [
     {

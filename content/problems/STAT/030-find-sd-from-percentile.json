@@ -13,11 +13,11 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.1,
-  "hint": "You know the mean, a value and the area below it. The unknown is the SD. Start from the $z$-score that matches the area.",
+  "hint": "You know the mean, one value and the area below it. An area can be matched to a $z$-score, and a $z$-score links the value to the standard deviation.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You know the mean, a value and the area below it. The unknown is the SD. Start from the $z$-score that matches the area."
+      "text": "You know the mean, one value and the area below it. An area can be matched to a $z$-score, and a $z$-score links the value to the standard deviation."
     },
     {
       "level": "nudge",
@@ -26,17 +26,17 @@
     },
     {
       "level": "guide",
-      "text": "An area of $0.16$ to the left matches $z \\approx -1$ (the empirical rule, or invNorm$(0.16) = -0.99$). Set $\\frac{244 - 250}{\\sigma} = -1$ and solve."
+      "text": "An area of $0.16$ to the left matches $z \\approx -1$ by the empirical rule. Set $\\frac{244 - 250}{\\sigma} = -1$ and solve for $\\sigma$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{-6}{\\sigma} = -1$ gives $\\sigma = 6$ grams."
+      "text": "$\\frac{-6}{\\sigma} = -1$ gives $\\sigma = 6$, so the standard deviation is $6$ grams."
     }
   ],
   "explanation": [
-    "By the empirical rule, about $16$ percent of a normal distribution lies more than one SD below the mean, so $244$ grams is at $z \\approx -1$.",
-    "Set up the $z$-score: $-1 = \\frac{244 - 250}{\\sigma} = \\frac{-6}{\\sigma}$.",
-    "Solve: $\\sigma = 6$ grams. (Using invNorm$(0.16) = -0.994$ gives $\\sigma = 6.03$, the same to the nearest gram.)"
+    "By the empirical rule, about $16$ percent of a normal distribution lies more than one standard deviation below the mean, so $244$ grams is at $z \\approx -1$.",
+    "Write the $z$-score formula with the unknown standard deviation: $-1 = \\frac{244 - 250}{\\sigma} = \\frac{-6}{\\sigma}$.",
+    "Solving gives $\\sigma = 6$ grams. (Using invNorm$(0.16) = -0.994$ gives $\\sigma = 6.03$, the same to the nearest gram.)"
   ],
   "alternativeExplanations": [
     {

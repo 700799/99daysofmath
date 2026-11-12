@@ -11,11 +11,11 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "Interval $= \\bar{x} \\pm t^* \\cdot \\frac{s}{\\sqrt{n}}$. The upper endpoint uses the plus.",
+  "hint": "The interval is the sample mean plus or minus a margin of error, and the upper endpoint uses the plus sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Interval $= \\bar{x} \\pm t^* \\cdot \\frac{s}{\\sqrt{n}}$. The upper endpoint uses the plus."
+      "text": "The interval is the sample mean plus or minus a margin of error, and the upper endpoint uses the plus sign."
     },
     {
       "level": "nudge",
@@ -24,17 +24,17 @@
     },
     {
       "level": "guide",
-      "text": "$SE = 1.2/\\sqrt{36} = 0.2$. ME $= 2.030 \\times 0.2$. Add to $7.5$."
+      "text": "The standard error is $1.2/\\sqrt{36} = 0.2$ and the margin of error is $2.030 \\times 0.2$. Add that margin to $7.5$."
     },
     {
       "level": "reveal",
-      "text": "ME $= 0.406$, so the upper endpoint is $7.5 + 0.406 = 7.906 \\approx 7.91$ hours."
+      "text": "The margin of error is $0.406$, so the upper endpoint is $7.5 + 0.406 = 7.906$, about $7.91$ hours."
     }
   ],
   "explanation": [
-    "Conditions: random sample ✓; $n = 36 \\ge 30$, so the $t$ procedure is safe even without a normal population ✓.",
-    "Standard error: $s/\\sqrt{n} = 1.2/6 = 0.2$. Margin of error: $2.030 \\times 0.2 = 0.406$.",
-    "Interval: $7.5 \\pm 0.406 = (7.094, 7.906)$. The upper endpoint is $7.91$ hours."
+    "The conditions hold: the sample is random, and $n = 36 \\ge 30$ makes the $t$ procedure safe even without a normal population.",
+    "The standard error is $s/\\sqrt{n} = 1.2/6 = 0.2$, and the margin of error is $2.030 \\times 0.2 = 0.406$.",
+    "The interval is $7.5 \\pm 0.406 = (7.094, 7.906)$, so the upper endpoint is about $7.91$ hours."
   ],
   "alternativeExplanations": [
     {

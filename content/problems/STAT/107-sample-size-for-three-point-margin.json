@@ -10,25 +10,25 @@
   "primaryAnswer": "1068",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Set $z^* \\sqrt{\\frac{p^*(1-p^*)}{n}} \\le 0.03$ and solve for $n$.",
+  "hint": "The sample size hides inside the margin of error formula. Write the requirement as an inequality with $n$ as the unknown.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Set $z^* \\sqrt{\\frac{p^*(1-p^*)}{n}} \\le 0.03$ and solve for $n$."
+      "text": "The sample size hides inside the margin of error formula. Write the requirement as an inequality with $n$ as the unknown."
     },
     {
       "level": "guide",
-      "text": "$n \\ge \\left(\\frac{1.96}{0.03}\\right)^2 (0.5)(0.5)$. Compute, then round UP."
+      "text": "Solving $1.96 \\sqrt{\\frac{(0.5)(0.5)}{n}} \\le 0.03$ for $n$ gives $n \\ge \\left(\\frac{1.96}{0.03}\\right)^2 (0.5)(0.5)$. Compute it, and remember to round UP."
     },
     {
       "level": "reveal",
-      "text": "$(65.33)^2 \\times 0.25 \\approx 1067.1$, so $n = 1068$."
+      "text": "$(65.33)^2 \\times 0.25 \\approx 1067.1$, so the smallest sample size that works is $1068$."
     }
   ],
   "explanation": [
-    "The margin of error is $z^* \\sqrt{p^*(1-p^*)/n}$. Requiring it to be at most $0.03$ gives $n \\ge p^*(1-p^*) (z^*/0.03)^2$.",
-    "$(1.96/0.03)^2 = (65.33)^2 \\approx 4268.4$; times $0.25$ gives $\\approx 1067.1$.",
-    "Sample sizes are whole numbers and we need AT LEAST this much, so round up: $n = 1068$."
+    "The margin of error is $z^* \\sqrt{p^*(1-p^*)/n}$. Requiring it to be at most $0.03$ and solving for $n$ gives $n \\ge p^*(1-p^*) (z^*/0.03)^2$.",
+    "Substituting the numbers, $(1.96/0.03)^2 = (65.33)^2 \\approx 4268.4$, and multiplying by $0.25$ gives about $1067.1$.",
+    "A sample size is a whole number and must be AT LEAST this large, so round up: $n = 1068$."
   ],
   "alternativeExplanations": [
     {

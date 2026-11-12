@@ -11,11 +11,11 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "Subtracting random variables still ADDS their variances. Uncertainty piles up whether you add or subtract.",
+  "hint": "A difference of two independent quantities is at least as uncertain as either one. Decide what happens to variances when you subtract random variables.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Subtracting random variables still ADDS their variances. Uncertainty piles up whether you add or subtract."
+      "text": "A difference of two independent quantities is at least as uncertain as either one. Decide what happens to variances when you subtract random variables."
     },
     {
       "level": "nudge",
@@ -24,17 +24,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\sigma_D^2 = \\sigma_E^2 + \\sigma_M^2 = 3^2 + 4^2$. Then square-root."
+      "text": "Variances add even for a difference: $\\sigma_D^2 = \\sigma_E^2 + \\sigma_M^2 = 3^2 + 4^2$. Then take the square root."
     },
     {
       "level": "reveal",
-      "text": "$9 + 16 = 25$, so $\\sigma_D = 5$ minutes."
+      "text": "$9 + 16 = 25$ and $\\sqrt{25} = 5$, so the standard deviation of $D$ is $5$ minutes."
     }
   ],
   "explanation": [
-    "For independent $E$ and $M$, $\\text{Var}(E - M) = \\text{Var}(E) + \\text{Var}(M)$. The minus sign does not turn into a minus for variances.",
-    "$3^2 + 4^2 = 9 + 16 = 25$.",
-    "$\\sigma_D = \\sqrt{25} = 5$ minutes. (The mean of $D$ is $34 - 30 = 4$ minutes — that one does subtract.)"
+    "For independent $E$ and $M$, $\\text{Var}(E - M) = \\text{Var}(E) + \\text{Var}(M)$. The minus sign does not become a minus for variances.",
+    "The variances are the squared standard deviations, so the sum is $3^2 + 4^2 = 9 + 16 = 25$.",
+    "The standard deviation is $\\sigma_D = \\sqrt{25} = 5$ minutes. (The mean of $D$ is $34 - 30 = 4$ minutes, and that one does subtract.)"
   ],
   "alternativeExplanations": [
     {

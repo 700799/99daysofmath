@@ -10,25 +10,25 @@
   "primaryAnswer": "16",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Range $=$ maximum $-$ minimum. It is a single number, not \"58 to 74\".",
+  "hint": "The range is one number that tells how far apart the two most extreme values are.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Range $=$ maximum $-$ minimum. It is a single number, not \"58 to 74\"."
+      "text": "The range is one number that tells how far apart the two most extreme values are."
     },
     {
       "level": "guide",
-      "text": "Find the hottest and coldest days: $74$ and $58$."
+      "text": "Scan the week for the hottest and the coldest day. They are $74$ and $58$, so subtract the smaller from the larger."
     },
     {
       "level": "reveal",
-      "text": "$74 - 58 = 16$ degrees."
+      "text": "$74 - 58 = 16$, so the range is $16$ degrees Fahrenheit."
     }
   ],
   "explanation": [
-    "The largest value is $74$ and the smallest is $58$.",
-    "Range $= 74 - 58 = 16$.",
-    "The range is the simplest measure of spread, though it depends only on the two extremes."
+    "The range only needs the two extremes, so find them: the largest high is $74$ and the smallest is $58$.",
+    "Subtract the minimum from the maximum to get the range: $74 - 58 = 16$.",
+    "The range of the temperatures is $16$ degrees, a quick measure of spread that depends only on the two extreme days."
   ],
   "alternativeExplanations": [
     {

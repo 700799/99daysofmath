@@ -11,24 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.02,
-  "hint": "Find $\\hat{p}_1$, $\\hat{p}_2$ and the pooled $\\hat{p}_c$ first.",
+  "hint": "The formula needs three proportions: one from each ad and the pooled one that combines both samples. Find those before touching the square root.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find $\\hat{p}_1$, $\\hat{p}_2$ and the pooled $\\hat{p}_c$ first."
+      "text": "The formula needs three proportions: one from each ad and the pooled one that combines both samples. Find those before touching the square root."
     },
     {
       "level": "guide",
-      "text": "$\\hat{p}_1 = 0.60$, $\\hat{p}_2 = 0.45$, $\\hat{p}_c = 105/200 = 0.525$. The denominator is $\\sqrt{0.525 \\times 0.475 \\times (0.01 + 0.01)}$."
+      "text": "$\\hat{p}_1 = 0.60$, $\\hat{p}_2 = 0.45$ and $\\hat{p}_c = 105/200 = 0.525$. The denominator is $\\sqrt{0.525 \\times 0.475 \\times (0.01 + 0.01)}$, and the numerator is the difference of the two sample proportions."
     },
     {
       "level": "reveal",
-      "text": "Denominator $= \\sqrt{0.0049875} \\approx 0.0706$, so $z = 0.15/0.0706 \\approx 2.12$."
+      "text": "The denominator is $\\sqrt{0.0049875} \\approx 0.0706$, so the test statistic is $z = 0.15/0.0706 \\approx 2.12$."
     }
   ],
   "explanation": [
-    "$\\hat{p}_1 = 60/100 = 0.60$ and $\\hat{p}_2 = 45/100 = 0.45$, a difference of $0.15$.",
-    "Pooled: $\\hat{p}_c = 105/200 = 0.525$. Standard error under $H_0$: $\\sqrt{(0.525)(0.475)(1/100 + 1/100)} = \\sqrt{0.0049875} \\approx 0.0706$.",
+    "The sample proportions are $\\hat{p}_1 = 60/100 = 0.60$ and $\\hat{p}_2 = 45/100 = 0.45$, a difference of $0.15$.",
+    "Under $H_0$ the two ads share one click rate, so pool the samples: $\\hat{p}_c = 105/200 = 0.525$.",
+    "The standard error under $H_0$ uses the pooled value: $\\sqrt{(0.525)(0.475)(1/100 + 1/100)} = \\sqrt{0.0049875} \\approx 0.0706$.",
     "$z = 0.15/0.0706 \\approx 2.12$. The two-sided $p$-value is about $0.034$, so at $\\alpha = 0.05$ there is convincing evidence the click rates differ."
   ],
   "alternativeExplanations": [

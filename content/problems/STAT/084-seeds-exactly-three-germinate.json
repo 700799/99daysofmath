@@ -11,25 +11,25 @@
   "alternativeAnswers": [],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "This is binomial: $n = 5$, $p = 0.6$, and you want $P(X = 3)$.",
+  "hint": "Five independent seeds, each with the same chance of germinating: what kind of random variable counts the successes?",
   "hints": [
     {
       "level": "nudge",
-      "text": "This is binomial: $n = 5$, $p = 0.6$, and you want $P(X = 3)$."
+      "text": "Five independent seeds, each with the same chance of germinating: what kind of random variable counts the successes?"
     },
     {
       "level": "guide",
-      "text": "$P(X = 3) = \\binom{5}{3}(0.6)^3(0.4)^2$. Note $\\binom{5}{3} = 10$."
+      "text": "The count of germinating seeds is binomial with $n = 5$ and $p = 0.6$, so $P(X = 3) = \\binom{5}{3}(0.6)^3(0.4)^2$, where $\\binom{5}{3} = 10$."
     },
     {
       "level": "reveal",
-      "text": "$10 \\times 0.216 \\times 0.16 = 0.3456$."
+      "text": "$10 \\times 0.216 \\times 0.16 = 0.3456$, so the probability that exactly $3$ seeds germinate is $0.3456$."
     }
   ],
   "explanation": [
-    "Binomial setting: 5 independent seeds, each germinates ($p = 0.6$) or not ($0.4$).",
-    "$P(X = 3) = \\binom{5}{3}(0.6)^3(0.4)^2 = 10 \\times 0.216 \\times 0.16$.",
-    "$0.216 \\times 0.16 = 0.03456$, times $10$ gives $0.3456$."
+    "This is a binomial setting: $5$ independent seeds, each of which germinates with probability $0.6$ or fails with probability $0.4$.",
+    "The formula needs three successes, two failures and the $\\binom{5}{3} = 10$ ways to arrange them: $P(X = 3) = 10 \\times (0.6)^3 \\times (0.4)^2 = 10 \\times 0.216 \\times 0.16$.",
+    "$0.216 \\times 0.16 = 0.03456$, and ten times that is $0.3456$, the probability of exactly three."
   ],
   "alternativeExplanations": [
     {

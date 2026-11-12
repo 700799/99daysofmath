@@ -10,25 +10,25 @@
   "primaryAnswer": "50",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "First find the IQR: $Q_3 - Q_1$.",
+  "hint": "The outlier rule builds a fence above $Q_3$. The distance to the fence depends on the IQR, so that comes first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find the IQR: $Q_3 - Q_1$."
+      "text": "The outlier rule builds a fence above $Q_3$. The distance to the fence depends on the IQR, so that comes first."
     },
     {
       "level": "guide",
-      "text": "IQR $= 32 - 20 = 12$. The upper fence is $Q_3 + 1.5 \\times 12$."
+      "text": "The IQR is $32 - 20 = 12$ minutes. The upper fence sits $1.5 \\times 12$ above $Q_3$, so work out $32 + 1.5 \\times 12$."
     },
     {
       "level": "reveal",
-      "text": "$32 + 18 = 50$. Any delivery over $50$ minutes is an outlier."
+      "text": "$1.5 \\times 12 = 18$ and $32 + 18 = 50$, so any delivery longer than $50$ minutes counts as an outlier."
     }
   ],
   "explanation": [
-    "IQR $= Q_3 - Q_1 = 32 - 20 = 12$ minutes.",
-    "$1.5 \\times \\text{IQR} = 1.5 \\times 12 = 18$.",
-    "Upper fence $= Q_3 + 18 = 50$ minutes. Deliveries above $50$ minutes are flagged as outliers."
+    "The rule measures distance in IQRs, so first find the IQR: $Q_3 - Q_1 = 32 - 20 = 12$ minutes.",
+    "The fence lies one and a half IQRs beyond the quartile, and $1.5 \\times 12 = 18$ minutes.",
+    "The upper fence is $Q_3 + 18 = 32 + 18 = 50$, so deliveries longer than $50$ minutes are outliers."
   ],
   "alternativeExplanations": [
     {

@@ -10,25 +10,25 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The slope formula uses the correlation and the two standard deviations: $b = r \\cdot \\frac{s_y}{s_x}$.",
+  "hint": "The slope of a least-squares line can be built from three summary numbers: the correlation and the two standard deviations.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The slope formula uses the correlation and the two standard deviations: $b = r \\cdot \\frac{s_y}{s_x}$."
+      "text": "The slope of a least-squares line can be built from three summary numbers: the correlation and the two standard deviations."
     },
     {
       "level": "guide",
-      "text": "$b = 0.8 \\times \\frac{10}{4}$."
+      "text": "The formula is $b = r \\cdot \\frac{s_y}{s_x}$, with the standard deviation of the response on top. Substitute to get $b = 0.8 \\times \\frac{10}{4}$."
     },
     {
       "level": "reveal",
-      "text": "$b = 0.8 \\times 2.5 = 2$: each extra $100$ square feet adds about $\\$2{,}000$ to the predicted price."
+      "text": "$0.8 \\times 2.5 = 2$, so the slope is $2$: each extra $100$ square feet adds about $\\$2{,}000$ to the predicted price."
     }
   ],
   "explanation": [
-    "The least-squares slope is $b = r \\dfrac{s_y}{s_x}$.",
-    "$\\dfrac{s_y}{s_x} = \\dfrac{10}{4} = 2.5$, and $0.8 \\times 2.5 = 2$.",
-    "Slope $= 2$: each additional hundred square feet raises the predicted price by $2$ thousand dollars."
+    "The least-squares slope is $b = r \\dfrac{s_y}{s_x}$, with the standard deviation of the response (price) on top.",
+    "The ratio is $\\dfrac{s_y}{s_x} = \\dfrac{10}{4} = 2.5$, and multiplying by the correlation gives $0.8 \\times 2.5 = 2$.",
+    "The slope is $2$, so each additional hundred square feet raises the predicted price by $2$ thousand dollars."
   ],
   "alternativeExplanations": [
     {

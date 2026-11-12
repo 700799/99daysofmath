@@ -12,25 +12,25 @@
     "139/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "A $z$-score of $2$ means two standard deviations ABOVE the mean.",
+  "hint": "This runs the $z$-score idea backward: you know how many standard deviations she is from the mean and want the actual height.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A $z$-score of $2$ means two standard deviations ABOVE the mean."
+      "text": "This runs the $z$-score idea backward: you know how many standard deviations she is from the mean and want the actual height."
     },
     {
       "level": "guide",
-      "text": "Unstandardize: $x = \\text{mean} + z \\cdot \\text{SD} = 64.5 + 2(2.5)$."
+      "text": "A $z$-score of $2$ puts her two standard deviations above the mean, so start at $64.5$ and add $2 \\times 2.5$."
     },
     {
       "level": "reveal",
-      "text": "$64.5 + 5 = 69.5$ inches."
+      "text": "$64.5 + 5 = 69.5$, so the recruit is $69.5$ inches tall."
     }
   ],
   "explanation": [
-    "Solve $z = \\frac{x - \\mu}{\\sigma}$ for $x$: $x = \\mu + z\\sigma$.",
-    "Two SDs is $2 \\times 2.5 = 5$ inches.",
-    "$x = 64.5 + 5 = 69.5$ inches, about 5 feet 9.5 inches."
+    "Solving $z = \\frac{x - \\mu}{\\sigma}$ for $x$ gives $x = \\mu + z\\sigma$, which turns a $z$-score back into a height.",
+    "Two standard deviations is $2 \\times 2.5 = 5$ inches, and a positive $z$ means above the mean.",
+    "$x = 64.5 + 5 = 69.5$, so she is $69.5$ inches tall, about 5 feet 9.5 inches."
   ],
   "alternativeExplanations": [
     {
