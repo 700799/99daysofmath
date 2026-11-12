@@ -15,7 +15,7 @@
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sort the data from least to greatest first — many statistics get easy after that."
+      "text": "Picture the box of a box plot drawn from $Q1$ to $Q3$. The IQR is how wide that box is."
     },
     {
       "level": "nudge",

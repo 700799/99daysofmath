@@ -15,7 +15,7 @@
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sort the data from least to greatest first — many statistics get easy after that."
+      "text": "Try a smaller change first: add the value $4$ to the set and the mean stays the same. What happens when the new value is larger than the mean?"
     },
     {
       "level": "nudge",

@@ -15,7 +15,7 @@
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Mean is fair-shares; median is the middle. Pick the one the question actually asks for."
+      "text": "Try a tiny set first: the mean of $2$ and $4$ is $3$. Add a much larger value such as $30$ and see which way the mean moves."
     },
     {
       "level": "nudge",

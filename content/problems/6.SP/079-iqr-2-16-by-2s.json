@@ -15,7 +15,7 @@
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Mean is fair-shares; median is the middle. Pick the one the question actually asks for."
+      "text": "Try half the list first: what is the median of just $2, 4, 6, 8$? The quartiles are medians of each half."
     },
     {
       "level": "nudge",

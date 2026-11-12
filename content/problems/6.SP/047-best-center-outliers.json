@@ -32,7 +32,7 @@
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Use a sample of 3–4 values to see how the rule works, then apply it to the real data."
+      "text": "Try a small set: $4, 5, 6$ and then one extra value of $100$. Which changes more when the big value joins, the mean or the median?"
     },
     {
       "level": "nudge",

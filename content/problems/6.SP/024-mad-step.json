@@ -19,7 +19,7 @@
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Mean is fair-shares; median is the middle. Pick the one the question actually asks for."
+      "text": "Try an even smaller set first: for the values $3$ and $5$ with mean $4$, how far is each value from the mean?"
     },
     {
       "level": "nudge",

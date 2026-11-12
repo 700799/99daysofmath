@@ -15,7 +15,7 @@
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Use a sample of 3–4 values to see how the rule works, then apply it to the real data."
+      "text": "Try a smaller class: two scores with mean $80$ and a third score of $74$. Is the new mean above or below $80$, and by a lot or a little?"
     },
     {
       "level": "nudge",

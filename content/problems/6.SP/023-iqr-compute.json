@@ -15,7 +15,7 @@
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sort the data from least to greatest first — many statistics get easy after that."
+      "text": "Picture the sorted data split into four equal groups. Which part of the data does the IQR stretch across?"
     },
     {
       "level": "nudge",

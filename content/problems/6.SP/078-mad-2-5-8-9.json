@@ -17,7 +17,7 @@
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Sort the data from least to greatest first — many statistics get easy after that."
+      "text": "Try a tiny set first: for $4$ and $6$ with mean $5$, each value is $1$ away from the mean. The MAD is the average of those distances."
     },
     {
       "level": "nudge",
