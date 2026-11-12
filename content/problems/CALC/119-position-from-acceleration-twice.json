@@ -10,30 +10,30 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two antiderivatives in a row: acceleration $\\to$ velocity $\\to$ position. Use an initial condition after each one.",
+  "hint": "You need two antiderivatives in a row: acceleration to velocity, then velocity to position. Use an initial condition after each one.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two antiderivatives in a row: acceleration $\\to$ velocity $\\to$ position. Use an initial condition after each one."
+      "text": "You need two antiderivatives in a row: acceleration to velocity, then velocity to position. Use an initial condition after each one."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Step one: $v(t) = \\int (6t - 4) \\, dt = 3t^2 - 4t + C_1$. With $v(0) = 1$, $C_1 = 1$, so $v(t) = 3t^2 - 4t + 1$."
+      "text": "Do step one first. Integrating the acceleration gives $v(t) = \\int (6t - 4) \\, dt = 3t^2 - 4t + C_1$. The starting velocity $v(0) = 1$ makes $C_1 = 1$, so $v(t) = 3t^2 - 4t + 1$."
     },
     {
       "level": "guide",
-      "text": "Step two: $s(t) = \\int (3t^2 - 4t + 1) \\, dt = t^3 - 2t^2 + t + C_2$, and $s(0) = 2$ gives $C_2 = 2$. Now evaluate $s(2)$."
+      "text": "For step two, integrate the velocity: $s(t) = \\int (3t^2 - 4t + 1) \\, dt = t^3 - 2t^2 + t + C_2$, and the starting position $s(0) = 2$ gives $C_2 = 2$. Now evaluate $s(2)$."
     },
     {
       "level": "reveal",
-      "text": "$s(2) = 8 - 8 + 2 + 2 = 4$ m."
+      "text": "The position at two seconds is $s(2) = 8 - 8 + 2 + 2 = 4$ meters."
     }
   ],
   "explanation": [
-    "Velocity: $v(t) = 3t^2 - 4t + C_1$; $v(0) = 1$ forces $C_1 = 1$.",
-    "Position: $s(t) = t^3 - 2t^2 + t + C_2$; $s(0) = 2$ forces $C_2 = 2$.",
-    "$s(2) = 2^3 - 2(2)^2 + 2 + 2 = 8 - 8 + 2 + 2 = 4$ m. Along the way it turns around twice: $v(t) = (3t - 1)(t - 1)$ is negative on $\\left(\\frac{1}{3}, 1\\right)$, so it backs up to $s(1) = 2$ before moving forward to $4$."
+    "Integrate the acceleration to get the velocity $v(t) = 3t^2 - 4t + C_1$, and $v(0) = 1$ forces $C_1 = 1$.",
+    "Integrate the velocity to get the position $s(t) = t^3 - 2t^2 + t + C_2$, and $s(0) = 2$ forces $C_2 = 2$.",
+    "Then $s(2) = 2^3 - 2(2)^2 + 2 + 2 = 8 - 8 + 2 + 2 = 4$ m. Along the way it turns around twice: $v(t) = (3t - 1)(t - 1)$ is negative on $\\left(\\frac{1}{3}, 1\\right)$, so it backs up before moving forward to $4$."
   ],
   "alternativeExplanations": [
     {

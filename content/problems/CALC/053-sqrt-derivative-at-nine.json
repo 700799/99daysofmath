@@ -14,25 +14,25 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "Rewrite the root as a power: $\\sqrt{x} = x^{1/2}$. Then the power rule works.",
+  "hint": "Rewrite the root as a power: $\\sqrt{x} = x^{1/2}$. Which derivative rule works on a power of $x$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Rewrite the root as a power: $\\sqrt{x} = x^{1/2}$. Then the power rule works."
+      "text": "Rewrite the root as a power: $\\sqrt{x} = x^{1/2}$. Which derivative rule works on a power of $x$?"
     },
     {
       "level": "guide",
-      "text": "$f'(x) = \\frac{1}{2} x^{-1/2} = \\frac{1}{2\\sqrt{x}}$. Substitute $x = 9$."
+      "text": "The power rule gives $f'(x) = \\frac{1}{2} x^{-1/2} = \\frac{1}{2\\sqrt{x}}$. Substitute $x = 9$ and simplify the root."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2 \\cdot 3} = \\frac{1}{6}$."
+      "text": "Since $\\sqrt{9} = 3$, the derivative is $\\frac{1}{2 \\cdot 3}$, so $f'(9) = \\frac{1}{6}$."
     }
   ],
   "explanation": [
-    "$\\sqrt{x} = x^{1/2}$, so by the power rule $f'(x) = \\frac{1}{2} x^{-1/2}$.",
-    "A negative exponent means \"in the denominator\": $f'(x) = \\frac{1}{2\\sqrt{x}}$.",
-    "At $x = 9$: $\\frac{1}{2 \\cdot 3} = \\frac{1}{6}$."
+    "Write $\\sqrt{x} = x^{1/2}$, so by the power rule $f'(x) = \\frac{1}{2} x^{-1/2}$.",
+    "A negative exponent means the power sits in the denominator: $f'(x) = \\frac{1}{2\\sqrt{x}}$.",
+    "At $x = 9$ the square root is $3$, so the answer is $f'(9) = \\frac{1}{2 \\cdot 3} = \\frac{1}{6}$."
   ],
   "alternativeExplanations": [
     {

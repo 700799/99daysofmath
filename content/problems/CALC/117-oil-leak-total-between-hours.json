@@ -10,25 +10,25 @@
   "primaryAnswer": "26",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A rate integrated over a time interval gives the total change: $\\int_1^3 r(t) \\, dt$.",
+  "hint": "A rate integrated over a time interval gives the total change. Which integral describes the oil leaked between $t = 1$ and $t = 3$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A rate integrated over a time interval gives the total change: $\\int_1^3 r(t) \\, dt$."
+      "text": "A rate integrated over a time interval gives the total change. Which integral describes the oil leaked between $t = 1$ and $t = 3$?"
     },
     {
       "level": "guide",
-      "text": "An antiderivative of $3t^2$ is $t^3$. Evaluate $t^3$ at $3$ and at $1$, then subtract."
+      "text": "Set up $\\int_1^3 3t^2 \\, dt$. An antiderivative of $3t^2$ is $t^3$. Evaluate $t^3$ at $3$ and at $1$, then subtract."
     },
     {
       "level": "reveal",
-      "text": "$27 - 1 = 26$ liters."
+      "text": "The amount leaked is $27 - 1 = 26$ liters."
     }
   ],
   "explanation": [
-    "Total leaked $= \\int_1^3 3t^2 \\, dt$.",
-    "$= [t^3]_1^3 = 3^3 - 1^3 = 27 - 1$.",
-    "$= 26$ liters. The leak speeds up over time (the rate at $t = 3$ is $27$ L/h versus $3$ L/h at $t = 1$), so most of the $26$ liters escape in the second hour."
+    "The total leaked is the integral of the rate over the two hours, $\\int_1^3 3t^2 \\, dt$.",
+    "An antiderivative of the rate is $t^3$, so the integral is $[t^3]_1^3 = 3^3 - 1^3 = 27 - 1$.",
+    "That is $26$ liters. The leak speeds up over time (the rate at $t = 3$ is $27$ L/h versus $3$ L/h at $t = 1$), so most of the $26$ liters escape in the second hour."
   ],
   "alternativeExplanations": [
     {

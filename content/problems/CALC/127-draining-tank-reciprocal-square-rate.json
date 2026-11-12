@@ -10,25 +10,25 @@
   "primaryAnswer": "50",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Total drained $= \\int_0^5 \\frac{60}{(t + 1)^2} \\, dt$. Let $u = t + 1$, so $du = dt$ and the limits become $1$ and $6$.",
+  "hint": "The total drained is the integral of the rate over the first $5$ minutes. The $(t + 1)$ in the denominator suggests a substitution.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Total drained $= \\int_0^5 \\frac{60}{(t + 1)^2} \\, dt$. Let $u = t + 1$, so $du = dt$ and the limits become $1$ and $6$."
+      "text": "The total drained is the integral of the rate over the first $5$ minutes. The $(t + 1)$ in the denominator suggests a substitution."
     },
     {
       "level": "guide",
-      "text": "$60\\int_1^6 u^{-2} \\, du = 60\\left[-\\frac{1}{u}\\right]_1^6$."
+      "text": "Let $u = t + 1$, so $du = dt$ and the limits become $1$ and $6$. Then the integral is $60\\int_1^6 u^{-2} \\, du = 60\\left[-\\frac{1}{u}\\right]_1^6$. Evaluate at both limits."
     },
     {
       "level": "reveal",
-      "text": "$60\\left(-\\frac{1}{6} + 1\\right) = 60 \\cdot \\frac{5}{6} = 50$ liters."
+      "text": "The amount drained is $60\\left(-\\frac{1}{6} + 1\\right) = 60 \\cdot \\frac{5}{6} = 50$ liters."
     }
   ],
   "explanation": [
-    "Amount $= \\int_0^5 60(t + 1)^{-2} \\, dt$. Substitute $u = t + 1$: $60\\int_1^6 u^{-2} \\, du$.",
-    "Antiderivative of $u^{-2}$ is $-u^{-1}$: $60\\left[-\\frac{1}{u}\\right]_1^6 = 60\\left(-\\frac{1}{6} - (-1)\\right) = 60 \\cdot \\frac{5}{6}$.",
-    "$= 50$ liters. The rate starts at $60$ L/min and falls fast, to $\\frac{60}{36} \\approx 1.7$ L/min by $t = 5$, so most of the $50$ liters leave early."
+    "The amount is $\\int_0^5 60(t + 1)^{-2} \\, dt$. Substituting $u = t + 1$ turns it into $60\\int_1^6 u^{-2} \\, du$.",
+    "The antiderivative of $u^{-2}$ is $-u^{-1}$, so the integral is $60\\left[-\\frac{1}{u}\\right]_1^6 = 60\\left(-\\frac{1}{6} - (-1)\\right) = 60 \\cdot \\frac{5}{6}$.",
+    "That is $50$ liters. The rate starts at $60$ L/min and falls fast, to $\\frac{60}{36} \\approx 1.7$ L/min by $t = 5$, so most of the $50$ liters leave early."
   ],
   "alternativeExplanations": [
     {

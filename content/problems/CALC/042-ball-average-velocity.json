@@ -10,25 +10,25 @@
   "primaryAnswer": "24",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Average velocity is change in height divided by change in time.",
+  "hint": "Average velocity is the change in height divided by the change in time over the interval.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Average velocity is change in height divided by change in time."
+      "text": "Average velocity is the change in height divided by the change in time over the interval."
     },
     {
       "level": "guide",
-      "text": "$h(0) = 0$ and $h(1) = 40 - 16 = 24$. Divide the change in height by $1$ second."
+      "text": "The heights are $h(0) = 0$ and $h(1) = 40 - 16 = 24$. Divide the change in height by the $1$ second that passed."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{24 - 0}{1 - 0} = 24$ feet per second."
+      "text": "The average velocity is $\\frac{24 - 0}{1 - 0} = 24$ feet per second."
     }
   ],
   "explanation": [
-    "$h(1) = 40(1) - 16(1)^2 = 24$ feet, and $h(0) = 0$.",
-    "Average velocity $= \\frac{h(1) - h(0)}{1 - 0} = \\frac{24}{1}$.",
-    "$= 24$ ft/s. The ball started faster than that and slowed down; $24$ is the average over the whole second."
+    "Find the two heights: $h(1) = 40(1) - 16(1)^2 = 24$ feet, and $h(0) = 0$.",
+    "Average velocity is change in height over change in time: $\\frac{h(1) - h(0)}{1 - 0} = \\frac{24}{1}$.",
+    "The answer is $24$ ft/s. The ball started faster than that and slowed down, and $24$ is the average over the whole second."
   ],
   "alternativeExplanations": [
     {

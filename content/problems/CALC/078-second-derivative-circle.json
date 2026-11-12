@@ -12,11 +12,11 @@
     "-0.390625"
   ],
   "acceptanceMode": "normalized",
-  "hint": "First get $y' = -\\frac{x}{y}$. Then differentiate THAT with the quotient rule, remembering $y$ still depends on $x$.",
+  "hint": "First find $y'$ by implicit differentiation. Then differentiate that result again, remembering that $y$ still depends on $x$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "First get $y' = -\\frac{x}{y}$. Then differentiate THAT with the quotient rule, remembering $y$ still depends on $x$."
+      "text": "First find $y'$ by implicit differentiation. Then differentiate that result again, remembering that $y$ still depends on $x$."
     },
     {
       "level": "nudge",
@@ -25,17 +25,17 @@
     },
     {
       "level": "guide",
-      "text": "$y'' = -\\frac{1 \\cdot y - x y'}{y^2}$. Replace $y'$ with $-\\frac{x}{y}$: $y'' = -\\frac{y + \\frac{x^2}{y}}{y^2} = -\\frac{x^2 + y^2}{y^3}$."
+      "text": "Start from $y' = -\\frac{x}{y}$ and use the quotient rule: $y'' = -\\frac{1 \\cdot y - x y'}{y^2}$. Replace $y'$ with $-\\frac{x}{y}$ to get $y'' = -\\frac{y + \\frac{x^2}{y}}{y^2} = -\\frac{x^2 + y^2}{y^3}$."
     },
     {
       "level": "reveal",
-      "text": "Since $x^2 + y^2 = 25$, $y'' = -\\frac{25}{y^3} = -\\frac{25}{64}$ at $y = 4$."
+      "text": "Since $x^2 + y^2 = 25$, the second derivative is $y'' = -\\frac{25}{y^3} = -\\frac{25}{64}$ at $y = 4$."
     }
   ],
   "explanation": [
-    "From $2x + 2y y' = 0$, $y' = -\\frac{x}{y}$.",
+    "Differentiating the circle equation gives $2x + 2y y' = 0$, so the first derivative is $y' = -\\frac{x}{y}$.",
     "Quotient rule: $y'' = -\\frac{y - x y'}{y^2}$. Substitute $y' = -\\frac{x}{y}$: the top becomes $y + \\frac{x^2}{y} = \\frac{y^2 + x^2}{y}$, so $y'' = -\\frac{x^2 + y^2}{y^3}$.",
-    "Use the original equation $x^2 + y^2 = 25$: $y'' = -\\frac{25}{y^3}$. At $(3, 4)$: $-\\frac{25}{64}$. Negative, so the upper half of the circle is concave down — exactly right."
+    "Use the original equation $x^2 + y^2 = 25$: $y'' = -\\frac{25}{y^3}$. At $(3, 4)$ this is $-\\frac{25}{64}$. It is negative, so the upper half of the circle is concave down, as expected."
   ],
   "alternativeExplanations": [
     {

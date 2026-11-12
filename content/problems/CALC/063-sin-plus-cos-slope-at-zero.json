@@ -10,25 +10,25 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two facts to memorize: $\\frac{d}{dx}\\sin x = \\cos x$ and $\\frac{d}{dx}\\cos x = -\\sin x$. Watch the minus sign on the second one.",
+  "hint": "You need the derivatives of $\\sin x$ and $\\cos x$. One of them brings a minus sign, so recall which.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two facts to memorize: $\\frac{d}{dx}\\sin x = \\cos x$ and $\\frac{d}{dx}\\cos x = -\\sin x$. Watch the minus sign on the second one."
+      "text": "You need the derivatives of $\\sin x$ and $\\cos x$. One of them brings a minus sign, so recall which."
     },
     {
       "level": "guide",
-      "text": "$g'(x) = 2\\cos x - \\sin x$. Now substitute $x = 0$, using $\\cos 0 = 1$ and $\\sin 0 = 0$."
+      "text": "Since $\\frac{d}{dx}\\sin x = \\cos x$ and $\\frac{d}{dx}\\cos x = -\\sin x$, the derivative is $g'(x) = 2\\cos x - \\sin x$. Now substitute $x = 0$, using $\\cos 0 = 1$ and $\\sin 0 = 0$."
     },
     {
       "level": "reveal",
-      "text": "$g'(0) = 2(1) - 0 = 2$."
+      "text": "Substituting gives $2(1) - 0$, so the answer is $g'(0) = 2$."
     }
   ],
   "explanation": [
-    "Differentiate term by term: $\\frac{d}{dx}(2\\sin x) = 2\\cos x$ and $\\frac{d}{dx}(\\cos x) = -\\sin x$.",
-    "So $g'(x) = 2\\cos x - \\sin x$.",
-    "At $x = 0$: $2 \\cdot 1 - 0 = 2$."
+    "Differentiate term by term, using the sine and cosine rules: $\\frac{d}{dx}(2\\sin x) = 2\\cos x$ and $\\frac{d}{dx}(\\cos x) = -\\sin x$.",
+    "Adding the two results gives the derivative $g'(x) = 2\\cos x - \\sin x$.",
+    "At $x = 0$ the cosine is $1$ and the sine is $0$, so $g'(0) = 2 \\cdot 1 - 0 = 2$."
   ],
   "alternativeExplanations": [
     {

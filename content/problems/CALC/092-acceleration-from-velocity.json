@@ -10,24 +10,24 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Acceleration is the derivative of velocity: $a(t) = v'(t)$.",
+  "hint": "Acceleration measures how fast velocity changes. Which operation on $v(t)$ gives the acceleration?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Acceleration is the derivative of velocity: $a(t) = v'(t)$."
+      "text": "Acceleration measures how fast velocity changes. Which operation on $v(t)$ gives the acceleration?"
     },
     {
       "level": "guide",
-      "text": "$a(t) = 6t$. Substitute $t = 2$."
+      "text": "Acceleration is the derivative of velocity, so $a(t) = v'(t) = 6t$. Substitute $t = 2$ into this acceleration function."
     },
     {
       "level": "reveal",
-      "text": "$a(2) = 12$ m/s²."
+      "text": "The acceleration is $a(2) = 12$ meters per second squared."
     }
   ],
   "explanation": [
-    "$a(t) = v'(t) = 6t$.",
-    "$a(2) = 6(2) = 12$ m/s².",
+    "Acceleration is the derivative of velocity, so the power rule gives $a(t) = v'(t) = 6t$.",
+    "Substitute the time $t = 2$ to get $a(2) = 6(2) = 12$ meters per second squared.",
     "Note $v(2) = 12 - 12 = 0$: the particle is momentarily stopped at $t = 2$ but accelerating hard, so it immediately starts moving in the positive direction."
   ],
   "alternativeExplanations": [

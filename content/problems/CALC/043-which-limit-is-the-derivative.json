@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The derivative is a limit of SLOPES: a change in $f$ divided by a change in $x$, as the change in $x$ shrinks to $0$.",
+  "hint": "The derivative is a limit of slopes: a change in $f$ divided by a change in $x$, as the change in $x$ shrinks to $0$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The derivative is a limit of SLOPES: a change in $f$ divided by a change in $x$, as the change in $x$ shrinks to $0$."
+      "text": "The derivative is a limit of slopes: a change in $f$ divided by a change in $x$, as the change in $x$ shrinks to $0$."
     },
     {
       "level": "guide",
-      "text": "The definition is $f'(a) = \\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h}$. Put in $a = 3$ and $f(x) = x^2$."
+      "text": "The definition is $f'(a) = \\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h}$. Put in $a = 3$ and $f(x) = x^2$, then compare with the choices."
     },
     {
       "level": "reveal",
-      "text": "$f(3 + h) = (3 + h)^2$ and $f(3) = 9$, so $f'(3) = \\lim_{h \\to 0} \\frac{(3 + h)^2 - 9}{h}$: choice A."
+      "text": "Since $f(3 + h) = (3 + h)^2$ and $f(3) = 9$, the derivative is $f'(3) = \\lim_{h \\to 0} \\frac{(3 + h)^2 - 9}{h}$, which is choice A."
     }
   ],
   "explanation": [
-    "Definition: $f'(a) = \\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h}$.",
-    "With $a = 3$: $f(3 + h) = (3 + h)^2$ and $f(3) = 9$.",
-    "So $f'(3) = \\lim_{h \\to 0} \\frac{(3 + h)^2 - 9}{h}$. B and C forget to divide by the run; D forgets to subtract $f(3)$."
+    "Start from the definition of the derivative at a point: $f'(a) = \\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h}$.",
+    "With $a = 3$ and $f(x) = x^2$, the two values are $f(3 + h) = (3 + h)^2$ and $f(3) = 9$.",
+    "So $f'(3) = \\lim_{h \\to 0} \\frac{(3 + h)^2 - 9}{h}$, choice A. B and C forget to divide by the run, and D forgets to subtract $f(3)$."
   ],
   "alternativeExplanations": [
     {

@@ -32,30 +32,30 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Factor both top and bottom completely before deciding anything. A factor that cancels makes a hole; one that survives on the bottom makes an asymptote.",
+  "hint": "Factor both top and bottom completely before deciding anything. A factor that cancels makes a hole, and one that survives on the bottom makes an asymptote.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Factor both top and bottom completely before deciding anything. A factor that cancels makes a hole; one that survives on the bottom makes an asymptote."
+      "text": "Factor both top and bottom completely before deciding anything. A factor that cancels makes a hole, and one that survives on the bottom makes an asymptote."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up: $\\frac{x - 1}{(x - 1)(x + 3)}$. The $(x - 1)$ cancels, so $x = 1$ is a hole; $(x + 3)$ stays, so $x = -3$ is an asymptote."
+      "text": "Warm up: $\\frac{x - 1}{(x - 1)(x + 3)}$. The $(x - 1)$ cancels, so $x = 1$ is a hole. The $(x + 3)$ stays, so $x = -3$ is an asymptote."
     },
     {
       "level": "guide",
-      "text": "Top: $(x - 2)(x + 2)$. Bottom: $(x - 2)(x + 1)$. Which factor appears in both?"
+      "text": "The top factors as $(x - 2)(x + 2)$ and the bottom as $(x - 2)(x + 1)$. Which factor appears in both, and which one stays on the bottom?"
     },
     {
       "level": "reveal",
-      "text": "$(x - 2)$ cancels: hole at $x = 2$. $(x + 1)$ remains: vertical asymptote at $x = -1$."
+      "text": "The factor $(x - 2)$ cancels, giving a hole at $x = 2$. The factor $(x + 1)$ remains, giving a vertical asymptote at $x = -1$. That is choice B."
     }
   ],
   "explanation": [
-    "Factor: $f(x) = \\frac{(x - 2)(x + 2)}{(x - 2)(x + 1)}$.",
-    "Cancel $(x - 2)$: for $x \\ne 2$, $f(x) = \\frac{x + 2}{x + 1}$. At $x = 2$ the limit is $\\frac{4}{3}$ but $f(2)$ is undefined — a hole.",
-    "The remaining factor $(x + 1)$ is zero at $x = -1$ while the top is $1 \\ne 0$ there, so $|f(x)| \\to \\infty$: a vertical asymptote at $x = -1$. (Also $y = 1$ is the horizontal asymptote.)"
+    "Factor the top and the bottom so common factors are visible: $f(x) = \\frac{(x - 2)(x + 2)}{(x - 2)(x + 1)}$.",
+    "Cancel $(x - 2)$: for $x \\ne 2$, $f(x) = \\frac{x + 2}{x + 1}$. At $x = 2$ the limit is $\\frac{4}{3}$ but $f(2)$ is undefined, so there is a hole.",
+    "The remaining factor $(x + 1)$ is zero at $x = -1$ while the top is $1 \\ne 0$ there, so $|f(x)| \\to \\infty$ and there is a vertical asymptote at $x = -1$. That matches choice B."
   ],
   "alternativeExplanations": [
     {

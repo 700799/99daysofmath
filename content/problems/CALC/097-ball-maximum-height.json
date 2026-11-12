@@ -10,25 +10,25 @@
   "primaryAnswer": "69",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "At the top of its flight the ball's velocity is zero. Find $h'(t)$ and set it to $0$.",
+  "hint": "At the top of its flight the ball stops rising for an instant. What does that say about its velocity at that moment?",
   "hints": [
     {
       "level": "nudge",
-      "text": "At the top of its flight the ball's velocity is zero. Find $h'(t)$ and set it to $0$."
+      "text": "At the top of its flight the ball stops rising for an instant. What does that say about its velocity at that moment?"
     },
     {
       "level": "guide",
-      "text": "$h'(t) = -32t + 64 = 0$ gives $t = 2$. Now find the height at that time."
+      "text": "The velocity is zero at the peak, so solve $h'(t) = -32t + 64 = 0$ to get $t = 2$. Now find the height at that time."
     },
     {
       "level": "reveal",
-      "text": "$h(2) = -64 + 128 + 5 = 69$ feet."
+      "text": "The maximum height is $h(2) = -64 + 128 + 5 = 69$ feet."
     }
   ],
   "explanation": [
-    "Velocity: $h'(t) = -32t + 64$. It is zero at $t = 2$ seconds.",
-    "Before $t = 2$ the velocity is positive (rising); after, negative (falling). So $t = 2$ is the peak.",
-    "Maximum height: $h(2) = -16(4) + 64(2) + 5 = -64 + 128 + 5 = 69$ feet."
+    "The velocity is $h'(t) = -32t + 64$, and it is zero at $t = 2$ seconds.",
+    "Before $t = 2$ the velocity is positive (rising), and after it is negative (falling). So $t = 2$ is the peak.",
+    "Substituting that time gives the maximum height: $h(2) = -16(4) + 64(2) + 5 = -64 + 128 + 5 = 69$ feet."
   ],
   "alternativeExplanations": [
     {

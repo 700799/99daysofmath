@@ -10,11 +10,11 @@
   "primaryAnswer": "-2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "For huge $|x|$, $\\sqrt{x^2 + 1}$ behaves like $\\sqrt{x^2} = |x|$. Since $x$ is NEGATIVE here, $|x| = -x$.",
+  "hint": "For huge $|x|$, $\\sqrt{x^2 + 1}$ behaves like $\\sqrt{x^2} = |x|$. Think about what $|x|$ equals when $x$ is negative.",
   "hints": [
     {
       "level": "nudge",
-      "text": "For huge $|x|$, $\\sqrt{x^2 + 1}$ behaves like $\\sqrt{x^2} = |x|$. Since $x$ is NEGATIVE here, $|x| = -x$."
+      "text": "For huge $|x|$, $\\sqrt{x^2 + 1}$ behaves like $\\sqrt{x^2} = |x|$. Think about what $|x|$ equals when $x$ is negative."
     },
     {
       "level": "nudge",
@@ -23,16 +23,16 @@
     },
     {
       "level": "guide",
-      "text": "Top behaves like $2x$. Bottom behaves like $-x$. Simplify $\\frac{2x}{-x}$."
+      "text": "The top behaves like $2x$. Since $x$ is negative, the bottom behaves like $|x| = -x$. Simplify the ratio $\\frac{2x}{-x}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{2x}{-x} = -2$, so the limit is $-2$."
+      "text": "The ratio is $\\frac{2x}{-x} = -2$, so the limit is $-2$."
     }
   ],
   "explanation": [
-    "For $x < 0$, $\\sqrt{x^2 + 1} = |x|\\sqrt{1 + \\frac{1}{x^2}} = -x\\sqrt{1 + \\frac{1}{x^2}}$.",
-    "Divide top and bottom by $x$ (negative): $\\frac{2 - \\frac{5}{x}}{-\\sqrt{1 + \\frac{1}{x^2}}}$.",
+    "For $x < 0$, pull $x^2$ out of the root: $\\sqrt{x^2 + 1} = |x|\\sqrt{1 + \\frac{1}{x^2}} = -x\\sqrt{1 + \\frac{1}{x^2}}$.",
+    "Divide top and bottom by $x$, which is negative here: $\\frac{2 - \\frac{5}{x}}{-\\sqrt{1 + \\frac{1}{x^2}}}$.",
     "As $x \\to -\\infty$ the small terms vanish, leaving $\\frac{2}{-1} = -2$."
   ],
   "alternativeExplanations": [

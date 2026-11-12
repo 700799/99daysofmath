@@ -10,25 +10,25 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Which function has derivative $\\frac{1}{x}$? Think logarithms.",
+  "hint": "Which function has derivative $\\frac{1}{x}$? Think about the logarithm functions you know.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Which function has derivative $\\frac{1}{x}$? Think logarithms."
+      "text": "Which function has derivative $\\frac{1}{x}$? Think about the logarithm functions you know."
     },
     {
       "level": "guide",
-      "text": "$F(x) = \\ln x$. Evaluate $F(e) - F(1)$."
+      "text": "An antiderivative is $F(x) = \\ln x$. Evaluate it at the two limits and compute $F(e) - F(1)$."
     },
     {
       "level": "reveal",
-      "text": "$\\ln e - \\ln 1 = 1 - 0 = 1$."
+      "text": "The value is $\\ln e - \\ln 1 = 1 - 0 = 1$, so the integral equals $1$."
     }
   ],
   "explanation": [
-    "An antiderivative of $\\frac{1}{x}$ (for $x > 0$) is $\\ln x$.",
-    "By the FTC: $\\int_1^e \\frac{1}{x} \\, dx = \\ln e - \\ln 1$.",
-    "$= 1 - 0 = 1$. In fact this is one way to DEFINE $e$: the number that makes the area under $\\frac{1}{x}$ from $1$ equal to exactly $1$."
+    "An antiderivative of $\\frac{1}{x}$ (for $x > 0$) is the natural logarithm $\\ln x$.",
+    "By the Fundamental Theorem of Calculus, $\\int_1^e \\frac{1}{x} \\, dx = \\ln e - \\ln 1$.",
+    "This is $1 - 0 = 1$. In fact this is one way to define $e$: the number that makes the area under $\\frac{1}{x}$ from $1$ equal to exactly $1$."
   ],
   "alternativeExplanations": [
     {

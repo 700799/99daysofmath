@@ -10,24 +10,24 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "\"Undefined at $c = 5$\" is just a hole in the formula. The limit asks what the rate is heading toward, so factor.",
+  "hint": "Being undefined at $c = 5$ only means the formula has a hole there. The limit asks what the rate heads toward, so look for a way to simplify the fraction.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Undefined at $c = 5$\" is just a hole in the formula. The limit asks what the rate is heading toward, so factor."
+      "text": "Being undefined at $c = 5$ only means the formula has a hole there. The limit asks what the rate heads toward, so look for a way to simplify the fraction."
     },
     {
       "level": "guide",
-      "text": "$c^2 - 25 = (c - 5)(c + 5)$. Cancel the $(c - 5)$ with the bottom."
+      "text": "Factor the top as a difference of squares, $c^2 - 25 = (c - 5)(c + 5)$, then cancel the $(c - 5)$ with the bottom and see what is left."
     },
     {
       "level": "reveal",
-      "text": "That leaves $c + 5$, and as $c \\to 5$ it heads to $10$ grams per second."
+      "text": "That leaves $c + 5$, and as $c \\to 5$ it heads to $10$, so the rate approaches $10$ grams per second."
     }
   ],
   "explanation": [
-    "Substituting $c = 5$ gives $\\frac{0}{0}$, which means \"simplify first.\"",
-    "Factor and cancel: $\\frac{(c - 5)(c + 5)}{c - 5} = c + 5$ for $c \\ne 5$.",
+    "Substituting $c = 5$ gives $\\frac{0}{0}$, which is a signal to simplify first.",
+    "Factor the top and cancel the common factor: $\\frac{(c - 5)(c + 5)}{c - 5} = c + 5$ for every $c \\ne 5$.",
     "As $c \\to 5$, the rate approaches $5 + 5 = 10$ grams per second."
   ],
   "alternativeExplanations": [

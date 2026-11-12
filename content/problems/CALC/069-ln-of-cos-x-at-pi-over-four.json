@@ -10,29 +10,29 @@
   "primaryAnswer": "-1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Outside function $\\ln u$ has derivative $\\frac{1}{u} \\cdot u'$. Here the inside is $u = \\cos x$.",
+  "hint": "The outside function $\\ln u$ has derivative $\\frac{1}{u} \\cdot u'$. Here the inside is $u = \\cos x$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Outside function $\\ln u$ has derivative $\\frac{1}{u} \\cdot u'$. Here the inside is $u = \\cos x$."
+      "text": "The outside function $\\ln u$ has derivative $\\frac{1}{u} \\cdot u'$. Here the inside is $u = \\cos x$."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up with $\\ln(x^2)$: $\\frac{1}{x^2} \\cdot 2x = \\frac{2}{x}$. Same shape here: one over the inside, times the inside's derivative."
+      "text": "Warm up with $\\ln(x^2)$: its derivative is $\\frac{1}{x^2} \\cdot 2x = \\frac{2}{x}$. The shape is the same here: one over the inside, times the derivative of the inside."
     },
     {
       "level": "guide",
-      "text": "$f'(x) = \\frac{1}{\\cos x} \\cdot (-\\sin x) = -\\frac{\\sin x}{\\cos x} = -\\tan x$. Substitute $x = \\frac{\\pi}{4}$."
+      "text": "The chain rule gives $f'(x) = \\frac{1}{\\cos x} \\cdot (-\\sin x) = -\\frac{\\sin x}{\\cos x} = -\\tan x$. Substitute $x = \\frac{\\pi}{4}$ and evaluate the tangent."
     },
     {
       "level": "reveal",
-      "text": "$-\\tan\\frac{\\pi}{4} = -1$."
+      "text": "Since $\\tan\\frac{\\pi}{4} = 1$, the value of the derivative is $f'\\left(\\frac{\\pi}{4}\\right) = -1$."
     }
   ],
   "explanation": [
-    "Chain rule: $\\frac{d}{dx}\\ln(\\cos x) = \\frac{1}{\\cos x} \\cdot \\frac{d}{dx}\\cos x$.",
-    "The inside derivative is $-\\sin x$, so $f'(x) = -\\frac{\\sin x}{\\cos x} = -\\tan x$.",
+    "By the chain rule, the derivative is one over the inside times the derivative of the inside: $\\frac{d}{dx}\\ln(\\cos x) = \\frac{1}{\\cos x} \\cdot \\frac{d}{dx}\\cos x$.",
+    "The derivative of the inside is $-\\sin x$, so the result simplifies to $f'(x) = -\\frac{\\sin x}{\\cos x} = -\\tan x$.",
     "At $x = \\frac{\\pi}{4}$, $\\sin$ and $\\cos$ are equal, so $\\tan\\frac{\\pi}{4} = 1$ and $f'\\left(\\frac{\\pi}{4}\\right) = -1$. The function is falling, since $\\cos x$ shrinks toward $0$ as $x$ heads to $\\frac{\\pi}{2}$."
   ],
   "alternativeExplanations": [

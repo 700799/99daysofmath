@@ -18,11 +18,11 @@
     },
     {
       "level": "guide",
-      "text": "First formula at $m = 4$: $2.5(4) + 3 = 13$. Second formula heads to $1.75(4) + b = 7 + b$. Set them equal."
+      "text": "The first formula at $m = 4$ gives $2.5(4) + 3 = 13$. The second formula heads to $1.75(4) + b = 7 + b$. Set them equal."
     },
     {
       "level": "reveal",
-      "text": "$7 + b = 13$, so $b = 6$."
+      "text": "Solving $7 + b = 13$ gives $b = 6$, so the fare is continuous when $b = 6$."
     }
   ],
   "explanation": [

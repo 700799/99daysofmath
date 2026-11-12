@@ -10,29 +10,29 @@
   "primaryAnswer": "0",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Quotient rule: $\\frac{u'v - uv'}{v^2}$ with $u = e^x$ and $v = x$.",
+  "hint": "This is a quotient, so use the quotient rule $\\frac{u'v - uv'}{v^2}$ with top $u = e^x$ and bottom $v = x$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Quotient rule: $\\frac{u'v - uv'}{v^2}$ with $u = e^x$ and $v = x$."
+      "text": "This is a quotient, so use the quotient rule $\\frac{u'v - uv'}{v^2}$ with top $u = e^x$ and bottom $v = x$."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up with $\\frac{x^2}{x}$: quotient rule gives $\\frac{2x \\cdot x - x^2 \\cdot 1}{x^2} = \\frac{x^2}{x^2} = 1$, which is right since $\\frac{x^2}{x} = x$. Same recipe with $e^x$ on top."
+      "text": "Warm up with $\\frac{x^2}{x}$: the quotient rule gives $\\frac{2x \\cdot x - x^2 \\cdot 1}{x^2} = \\frac{x^2}{x^2} = 1$, which is right since $\\frac{x^2}{x} = x$. Use the same recipe with $e^x$ on top."
     },
     {
       "level": "guide",
-      "text": "$h'(x) = \\frac{e^x \\cdot x - e^x \\cdot 1}{x^2} = \\frac{e^x (x - 1)}{x^2}$. Substitute $x = 1$."
+      "text": "The quotient rule gives $h'(x) = \\frac{e^x \\cdot x - e^x \\cdot 1}{x^2} = \\frac{e^x (x - 1)}{x^2}$. Substitute $x = 1$ and look at the factor $(x - 1)$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{e(1 - 1)}{1} = 0$. The tangent at $x = 1$ is horizontal."
+      "text": "At $x = 1$ the derivative is $\\frac{e(1 - 1)}{1} = 0$, so $h'(1) = 0$ and the tangent there is horizontal."
     }
   ],
   "explanation": [
-    "$u = e^x$, $u' = e^x$; $v = x$, $v' = 1$.",
-    "$h'(x) = \\frac{e^x x - e^x}{x^2} = \\frac{e^x(x - 1)}{x^2}$.",
+    "Name the parts for the quotient rule: top $u = e^x$ with $u' = e^x$, and bottom $v = x$ with $v' = 1$.",
+    "The quotient rule $\\frac{u'v - uv'}{v^2}$ then gives the derivative, which factors nicely: $h'(x) = \\frac{e^x x - e^x}{x^2} = \\frac{e^x(x - 1)}{x^2}$.",
     "At $x = 1$ the factor $(x - 1)$ is $0$, so $h'(1) = 0$. In fact $x = 1$ is where $\\frac{e^x}{x}$ bottoms out, at height $e$."
   ],
   "alternativeExplanations": [

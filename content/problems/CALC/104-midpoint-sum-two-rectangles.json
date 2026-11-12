@@ -10,25 +10,25 @@
   "primaryAnswer": "24",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two subintervals on $[0, 4]$: $[0, 2]$ and $[2, 4]$, each of width $2$. A midpoint sum evaluates $f$ at the CENTER of each.",
+  "hint": "Two equal subintervals on $[0, 4]$ are $[0, 2]$ and $[2, 4]$, each of width $2$. A midpoint sum evaluates $f$ at the center of each one.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two subintervals on $[0, 4]$: $[0, 2]$ and $[2, 4]$, each of width $2$. A midpoint sum evaluates $f$ at the CENTER of each."
+      "text": "Two equal subintervals on $[0, 4]$ are $[0, 2]$ and $[2, 4]$, each of width $2$. A midpoint sum evaluates $f$ at the center of each one."
     },
     {
       "level": "guide",
-      "text": "Midpoints are $x = 1$ and $x = 3$. Compute $f(1)$ and $f(3)$, then multiply the sum by the width $2$."
+      "text": "The midpoints are $x = 1$ and $x = 3$. Compute $f(1)$ and $f(3)$, then multiply their sum by the width $2$."
     },
     {
       "level": "reveal",
-      "text": "$f(1) = 2$, $f(3) = 10$. Sum $= 2(2 + 10) = 24$."
+      "text": "The heights are $f(1) = 2$ and $f(3) = 10$, so the midpoint sum is $2(2 + 10) = 24$."
     }
   ],
   "explanation": [
-    "$\\Delta x = 2$; the subintervals are $[0, 2]$ and $[2, 4]$ with midpoints $1$ and $3$.",
-    "$f(1) = 1 + 1 = 2$ and $f(3) = 9 + 1 = 10$.",
-    "Midpoint sum $= 2 \\cdot 2 + 2 \\cdot 10 = 24$. The exact value is $\\frac{64}{3} + 4 \\approx 25.33$, so the midpoint rule is already close with just two rectangles."
+    "The width is $\\Delta x = 2$, and the subintervals are $[0, 2]$ and $[2, 4]$ with midpoints $1$ and $3$.",
+    "The heights at the two midpoints are $f(1) = 1 + 1 = 2$ and $f(3) = 9 + 1 = 10$.",
+    "The midpoint sum is $2 \\cdot 2 + 2 \\cdot 10 = 24$. The exact value is $\\frac{64}{3} + 4 \\approx 25.33$, so the midpoint rule is already close with just two rectangles."
   ],
   "alternativeExplanations": [
     {

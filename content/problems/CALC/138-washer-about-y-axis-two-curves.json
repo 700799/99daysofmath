@@ -14,30 +14,30 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "Rotating about the $y$-axis: slice horizontally and write both curves as $x$ in terms of $y$. Which curve is farther from the $y$-axis at a given height?",
+  "hint": "Rotating about the $y$-axis means slicing horizontally, so write both curves as $x$ in terms of $y$. Which curve is farther from the $y$-axis at a given height?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Rotating about the $y$-axis: slice horizontally and write both curves as $x$ in terms of $y$. Which curve is farther from the $y$-axis at a given height?"
+      "text": "Rotating about the $y$-axis means slicing horizontally, so write both curves as $x$ in terms of $y$. Which curve is farther from the $y$-axis at a given height?"
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up: at height $y = 0.25$, the line $y = x$ gives $x = 0.25$ and the parabola $y = x^2$ gives $x = \\sqrt{0.25} = 0.5$. The parabola is farther out, so it is the OUTER radius."
+      "text": "Warm up: at height $y = 0.25$, the line $y = x$ gives $x = 0.25$ and the parabola $y = x^2$ gives $x = \\sqrt{0.25} = 0.5$. The parabola is farther out, so it is the outer radius."
     },
     {
       "level": "guide",
-      "text": "Outer $R = \\sqrt{y}$, inner $r = y$, for $y$ from $0$ to $1$. $V = \\pi \\int_0^1 \\left((\\sqrt{y})^2 - y^2\\right) dy = \\pi \\int_0^1 (y - y^2) \\, dy$."
+      "text": "The outer radius is $R = \\sqrt{y}$ and the inner radius is $r = y$, for $y$ from $0$ to $1$. The washer method gives $V = \\pi \\int_0^1 \\left((\\sqrt{y})^2 - y^2\\right) dy = \\pi \\int_0^1 (y - y^2) \\, dy$."
     },
     {
       "level": "reveal",
-      "text": "$\\pi\\left(\\frac{1}{2} - \\frac{1}{3}\\right) = \\frac{\\pi}{6}$, so $k = \\frac{1}{6}$."
+      "text": "The volume of the solid is $\\pi\\left(\\frac{1}{2} - \\frac{1}{3}\\right) = \\frac{\\pi}{6}$, so $k = \\frac{1}{6}$."
     }
   ],
   "explanation": [
     "Solve for $x$: the line is $x = y$ and the parabola is $x = \\sqrt{y}$. For $0 < y < 1$, $\\sqrt{y} > y$, so the parabola is the outer edge.",
-    "Washers in $y$: $V = \\pi \\int_0^1 (R^2 - r^2) \\, dy = \\pi \\int_0^1 (y - y^2) \\, dy = \\pi\\left[\\frac{y^2}{2} - \\frac{y^3}{3}\\right]_0^1$.",
-    "$= \\pi\\left(\\frac{1}{2} - \\frac{1}{3}\\right) = \\frac{\\pi}{6}$. So $k = \\frac{1}{6}$. Compare: about the $x$-axis the same region gave $\\frac{2\\pi}{15}$ — the axis matters."
+    "Use washers stacked along $y$, outer radius squared minus inner radius squared: $V = \\pi \\int_0^1 (R^2 - r^2) \\, dy = \\pi \\int_0^1 (y - y^2) \\, dy = \\pi\\left[\\frac{y^2}{2} - \\frac{y^3}{3}\\right]_0^1$.",
+    "This is $\\pi\\left(\\frac{1}{2} - \\frac{1}{3}\\right) = \\frac{\\pi}{6}$, so $k = \\frac{1}{6}$. About the $x$-axis the same region gave $\\frac{2\\pi}{15}$, so the choice of axis matters."
   ],
   "alternativeExplanations": [
     {

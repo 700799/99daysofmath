@@ -10,25 +10,25 @@
   "primaryAnswer": "38",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Position is an antiderivative of velocity. Integrate $v(t)$, then use $s(0) = 5$ to pin down the constant.",
+  "hint": "Position is an antiderivative of velocity. An antiderivative comes with an unknown constant, and the starting position can pin it down.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Position is an antiderivative of velocity. Integrate $v(t)$, then use $s(0) = 5$ to pin down the constant."
+      "text": "Position is an antiderivative of velocity. An antiderivative comes with an unknown constant, and the starting position can pin it down."
     },
     {
       "level": "guide",
-      "text": "$s(t) = 3t^2 + 2t + C$. Since $s(0) = 5$, $C = 5$. Now evaluate at $t = 3$."
+      "text": "Integrating gives $s(t) = 3t^2 + 2t + C$. Since $s(0) = 5$, the constant is $C = 5$. Now evaluate the position at $t = 3$."
     },
     {
       "level": "reveal",
-      "text": "$s(3) = 27 + 6 + 5 = 38$ meters."
+      "text": "The position at three seconds is $s(3) = 27 + 6 + 5 = 38$ meters."
     }
   ],
   "explanation": [
-    "$s(t) = \\int (6t + 2) \\, dt = 3t^2 + 2t + C$.",
-    "Initial condition: $s(0) = C = 5$. So $s(t) = 3t^2 + 2t + 5$.",
-    "$s(3) = 3(9) + 2(3) + 5 = 27 + 6 + 5 = 38$ m."
+    "Integrate the velocity to get the position: $s(t) = \\int (6t + 2) \\, dt = 3t^2 + 2t + C$.",
+    "Use the initial condition to find the constant: $s(0) = C = 5$. So $s(t) = 3t^2 + 2t + 5$.",
+    "At three seconds the position is $s(3) = 3(9) + 2(3) + 5 = 27 + 6 + 5 = 38$ m."
   ],
   "alternativeExplanations": [
     {

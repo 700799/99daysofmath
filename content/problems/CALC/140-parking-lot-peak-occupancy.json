@@ -19,21 +19,21 @@
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up: $48 - 4t = 4t$ gives $t = 6$. Before $t = 6$ the net rate $E - L = 48 - 8t$ is positive; after, negative. So $N$ peaks at $t = 6$ (2 p.m.)."
+      "text": "Warm up: $48 - 4t = 4t$ gives $t = 6$. Before $t = 6$ the net rate $E - L = 48 - 8t$ is positive, and after it is negative. So $N$ peaks at $t = 6$ (2 p.m.)."
     },
     {
       "level": "guide",
-      "text": "$N(6) = 200 + \\int_0^6 (48 - 8t) \\, dt = 200 + [48t - 4t^2]_0^6$."
+      "text": "The count at the peak is the starting count plus the net change: $N(6) = 200 + \\int_0^6 (48 - 8t) \\, dt = 200 + [48t - 4t^2]_0^6$. Evaluate the bracket."
     },
     {
       "level": "reveal",
-      "text": "$200 + (288 - 144) = 344$ cars."
+      "text": "The maximum number in the lot is $200 + (288 - 144) = 344$ cars."
     }
   ],
   "explanation": [
-    "$N'(t) = E(t) - L(t) = 48 - 8t$. This is zero at $t = 6$, positive before and negative after, so $N$ has its maximum at $t = 6$.",
-    "$N(6) = N(0) + \\int_0^6 (48 - 8t) \\, dt = 200 + \\left[48t - 4t^2\\right]_0^6 = 200 + (288 - 144)$.",
-    "$= 344$ cars at 2 p.m. Check the endpoints: $N(0) = 200$ and $N(8) = 200 + (384 - 256) = 328$, both smaller. This is the standard AP \"rate in, rate out\" question."
+    "The net rate is $N'(t) = E(t) - L(t) = 48 - 8t$. This is zero at $t = 6$, positive before and negative after, so $N$ has its maximum at $t = 6$.",
+    "Add the net change to the starting count: $N(6) = N(0) + \\int_0^6 (48 - 8t) \\, dt = 200 + \\left[48t - 4t^2\\right]_0^6 = 200 + (288 - 144)$.",
+    "That is $344$ cars at 2 p.m. Check the endpoints: $N(0) = 200$ and $N(8) = 200 + (384 - 256) = 328$, both smaller. This is the standard AP \"rate in, rate out\" question."
   ],
   "alternativeExplanations": [
     {

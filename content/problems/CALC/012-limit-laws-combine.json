@@ -10,25 +10,25 @@
   "primaryAnswer": "14",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Limits respect constants, sums and differences: you can take the limit of each piece separately.",
+  "hint": "Limits respect constant multiples, sums and differences, so you may take the limit of each piece separately.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Limits respect constants, sums and differences: you can take the limit of each piece separately."
+      "text": "Limits respect constant multiples, sums and differences, so you may take the limit of each piece separately."
     },
     {
       "level": "guide",
-      "text": "$\\lim 3f(x) = 3 \\cdot 4 = 12$ and $\\lim g(x) = -2$. Now subtract."
+      "text": "The constant multiple law gives $\\lim 3f(x) = 3 \\cdot 4 = 12$, and you know $\\lim g(x) = -2$. Now subtract the second from the first, watching the signs."
     },
     {
       "level": "reveal",
-      "text": "$12 - (-2) = 14$."
+      "text": "Subtracting a negative adds: $12 - (-2) = 14$, so the limit is $14$."
     }
   ],
   "explanation": [
-    "Constant multiple law: $\\lim 3f(x) = 3 \\lim f(x) = 12$.",
-    "Difference law: $\\lim [3f(x) - g(x)] = 12 - (-2)$.",
-    "$= 14$. Watch the double negative."
+    "By the constant multiple law, the $3$ can come outside: $\\lim 3f(x) = 3 \\lim f(x) = 3 \\cdot 4 = 12$.",
+    "By the difference law, the limit of a difference is the difference of the limits: $\\lim [3f(x) - g(x)] = 12 - (-2)$.",
+    "Subtracting $-2$ is the same as adding $2$, so the limit is $14$."
   ],
   "alternativeExplanations": [
     {

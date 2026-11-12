@@ -10,19 +10,19 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Same degree on top and bottom. Only the leading coefficients survive at infinity.",
+  "hint": "The top and bottom have the same degree, so think about which terms still matter when $x$ is enormous.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same degree on top and bottom. Only the leading coefficients survive at infinity."
+      "text": "The top and bottom have the same degree, so think about which terms still matter when $x$ is enormous."
     },
     {
       "level": "guide",
-      "text": "Divide every term by $x^2$: $\\frac{4 - \\frac{1}{x}}{2 + \\frac{7}{x^2}}$."
+      "text": "Divide every term by $x^2$, the highest power: $\\frac{4 - \\frac{1}{x}}{2 + \\frac{7}{x^2}}$. Then let the small fractions go to $0$."
     },
     {
       "level": "reveal",
-      "text": "The small fractions vanish, leaving $\\frac{4}{2} = 2$."
+      "text": "The small fractions vanish, leaving $\\frac{4}{2} = 2$, so the limit is $2$."
     }
   ],
   "explanation": [

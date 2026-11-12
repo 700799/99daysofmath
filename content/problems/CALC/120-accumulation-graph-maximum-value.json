@@ -23,11 +23,11 @@
     },
     {
       "level": "guide",
-      "text": "So $g$ peaks at $x = 3$. Compute $g(3)$ as area: a $2 \\times 2$ rectangle on $[0, 2]$ plus a triangle on $[2, 3]$ with base $1$ and height $2$."
+      "text": "So $g$ peaks at $x = 3$. Compute $g(3)$ as an area: a $2$ by $2$ rectangle on $[0, 2]$ plus a triangle on $[2, 3]$ with base $1$ and height $2$."
     },
     {
       "level": "reveal",
-      "text": "$g(3) = 4 + 1 = 5$."
+      "text": "The rectangle has area $4$ and the triangle has area $1$, so the maximum value is $g(3) = 4 + 1 = 5$."
     }
   ],
   "explanation": [

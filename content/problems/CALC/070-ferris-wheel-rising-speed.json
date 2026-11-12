@@ -14,30 +14,30 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "The rising speed is $h'(t)$. The $20$ vanishes; $-18\\cos(\\text{inside})$ needs the chain rule with inside $\\frac{\\pi}{15}t$.",
+  "hint": "The rising speed is $h'(t)$. The $20$ vanishes, and the cosine term needs the chain rule with inside $\\frac{\\pi}{15}t$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The rising speed is $h'(t)$. The $20$ vanishes; $-18\\cos(\\text{inside})$ needs the chain rule with inside $\\frac{\\pi}{15}t$."
+      "text": "The rising speed is $h'(t)$. The $20$ vanishes, and the cosine term needs the chain rule with inside $\\frac{\\pi}{15}t$."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up: $\\frac{d}{dt}\\left[-\\cos(2t)\\right] = -(-\\sin(2t)) \\cdot 2 = 2\\sin(2t)$. Two minus signs cancel and the inside rate comes along. Same thing here with $18$ and $\\frac{\\pi}{15}$."
+      "text": "Warm up: $\\frac{d}{dt}\\left[-\\cos(2t)\\right] = -(-\\sin(2t)) \\cdot 2 = 2\\sin(2t)$. Two minus signs cancel and the inside rate comes along. The same thing happens here with $18$ and $\\frac{\\pi}{15}$."
     },
     {
       "level": "guide",
-      "text": "$h'(t) = -18 \\cdot (-\\sin(\\tfrac{\\pi}{15}t)) \\cdot \\frac{\\pi}{15} = \\frac{6\\pi}{5}\\sin\\left(\\frac{\\pi}{15}t\\right)$. At $t = 7.5$ the angle is $\\frac{\\pi}{2}$."
+      "text": "The chain rule gives $h'(t) = -18 \\cdot (-\\sin(\\tfrac{\\pi}{15}t)) \\cdot \\frac{\\pi}{15} = \\frac{6\\pi}{5}\\sin\\left(\\frac{\\pi}{15}t\\right)$. At $t = 7.5$ the angle is $\\frac{\\pi}{2}$, so evaluate the sine there."
     },
     {
       "level": "reveal",
-      "text": "$\\sin\\frac{\\pi}{2} = 1$, so $h'(7.5) = \\frac{6\\pi}{5} \\approx 3.77$ m/s."
+      "text": "Since $\\sin\\frac{\\pi}{2} = 1$, the rider rises at $h'(7.5) = \\frac{6\\pi}{5} \\approx 3.77$ meters per second."
     }
   ],
   "explanation": [
-    "Chain rule on $-18\\cos\\left(\\frac{\\pi}{15}t\\right)$: the outside gives $+18\\sin\\left(\\frac{\\pi}{15}t\\right)$ (two minus signs cancel), and the inside derivative is $\\frac{\\pi}{15}$.",
-    "So $h'(t) = 18 \\cdot \\frac{\\pi}{15}\\sin\\left(\\frac{\\pi}{15}t\\right) = \\frac{6\\pi}{5}\\sin\\left(\\frac{\\pi}{15}t\\right)$.",
-    "At $t = 7.5$: $\\frac{\\pi}{15} \\cdot 7.5 = \\frac{\\pi}{2}$ and $\\sin\\frac{\\pi}{2} = 1$, so $h'(7.5) = \\frac{6\\pi}{5} \\approx 3.77$ m/s. That is the rider's fastest climb, exactly level with the hub at height $20$ m."
+    "Use the chain rule on $-18\\cos\\left(\\frac{\\pi}{15}t\\right)$: the outside gives $+18\\sin\\left(\\frac{\\pi}{15}t\\right)$ (two minus signs cancel), and the inside derivative is $\\frac{\\pi}{15}$.",
+    "Multiplying the outside and inside pieces gives the rising speed $h'(t) = 18 \\cdot \\frac{\\pi}{15}\\sin\\left(\\frac{\\pi}{15}t\\right) = \\frac{6\\pi}{5}\\sin\\left(\\frac{\\pi}{15}t\\right)$.",
+    "At $t = 7.5$ the angle is $\\frac{\\pi}{15} \\cdot 7.5 = \\frac{\\pi}{2}$ and $\\sin\\frac{\\pi}{2} = 1$, so $h'(7.5) = \\frac{6\\pi}{5} \\approx 3.77$ m/s. That is the fastest climb of the ride, exactly level with the hub at height $20$ m."
   ],
   "alternativeExplanations": [
     {

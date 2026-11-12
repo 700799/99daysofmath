@@ -23,16 +23,16 @@
     },
     {
       "level": "guide",
-      "text": "Divide every term by $t$: $\\frac{900 + \\frac{300}{t}}{3 + \\frac{2}{t}}$."
+      "text": "Divide every term by $t$ to get $\\frac{900 + \\frac{300}{t}}{3 + \\frac{2}{t}}$, then let the fractions with $t$ underneath go to $0$."
     },
     {
       "level": "reveal",
-      "text": "As $t \\to \\infty$: $\\frac{900}{3} = 300$ fish."
+      "text": "As $t \\to \\infty$ the population heads to $\\frac{900}{3} = 300$, so the carrying capacity is $300$ fish."
     }
   ],
   "explanation": [
-    "Divide top and bottom by $t$: $P(t) = \\frac{900 + 300/t}{3 + 2/t}$.",
-    "As $t \\to \\infty$, $\\frac{300}{t} \\to 0$ and $\\frac{2}{t} \\to 0$.",
+    "Divide top and bottom by $t$, the highest power: $P(t) = \\frac{900 + 300/t}{3 + 2/t}$.",
+    "As $t \\to \\infty$, both small fractions shrink: $\\frac{300}{t} \\to 0$ and $\\frac{2}{t} \\to 0$.",
     "So $P(t) \\to \\frac{900}{3} = 300$. The pond can support about $300$ fish in the long run."
   ],
   "alternativeExplanations": [

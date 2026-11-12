@@ -10,24 +10,24 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Set up $\\lim_{h \\to 0} \\frac{(2 + h)^2 - 4}{h}$ and expand the square.",
+  "hint": "The definition of the derivative at $2$ is a limit of secant slopes. Write the difference quotient for $f(x) = x^2$ at $a = 2$ before simplifying anything.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Set up $\\lim_{h \\to 0} \\frac{(2 + h)^2 - 4}{h}$ and expand the square."
+      "text": "The definition of the derivative at $2$ is a limit of secant slopes. Write the difference quotient for $f(x) = x^2$ at $a = 2$ before simplifying anything."
     },
     {
       "level": "guide",
-      "text": "$(2 + h)^2 = 4 + 4h + h^2$, so the top is $4h + h^2 = h(4 + h)$. Cancel the $h$."
+      "text": "Set up $\\lim_{h \\to 0} \\frac{(2 + h)^2 - 4}{h}$. Expanding gives $(2 + h)^2 = 4 + 4h + h^2$, so the top is $4h + h^2 = h(4 + h)$. Cancel the $h$."
     },
     {
       "level": "reveal",
-      "text": "What is left is $4 + h$, and as $h \\to 0$ that is $4$."
+      "text": "What is left is $4 + h$, and as $h \\to 0$ that heads to $4$, so $f'(2) = 4$."
     }
   ],
   "explanation": [
-    "$f'(2) = \\lim_{h \\to 0} \\frac{(2 + h)^2 - 2^2}{h}$.",
-    "Expand: $\\frac{4 + 4h + h^2 - 4}{h} = \\frac{4h + h^2}{h} = 4 + h$ for $h \\ne 0$.",
+    "Write the limit definition of the derivative with $a = 2$: $f'(2) = \\lim_{h \\to 0} \\frac{(2 + h)^2 - 2^2}{h}$.",
+    "Expand the square and cancel $h$, which is allowed because $h \\ne 0$: $\\frac{4 + 4h + h^2 - 4}{h} = \\frac{4h + h^2}{h} = 4 + h$.",
     "Let $h \\to 0$: $f'(2) = 4$. The tangent to $y = x^2$ at $(2, 4)$ has slope $4$."
   ],
   "alternativeExplanations": [

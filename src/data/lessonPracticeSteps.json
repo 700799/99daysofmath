@@ -1157,6 +1157,309 @@
   "Find the halfway point by averaging the zeros: (1 + 7) ÷ 2.",
   "Since 8 ÷ 2 = 4, the x-value of the vertex is 4."
  ],
+ "CALC-1#0": [
+  "A limit asks where the heights are heading near x = 1, not what happens at x = 1 itself. Try to simplify the fraction.",
+  "Factor the top: x² − 1 = (x − 1)(x + 1). Cancelling (x − 1) shows that away from x = 1 the graph is the line y = x + 1 with a hole.",
+  "Trace along that line toward x = 1: the heights head to 1 + 1 = 2.",
+  "So the limit of the function as x approaches 1 is 2."
+ ],
+ "CALC-1#1": [
+  "A two-sided limit exists when the values from the left and from the right close in on the same number.",
+  "The values in the left column, 4.9, 4.99, 4.999, climb toward 5.",
+  "The values in the right column, 5.1, 5.01, 5.001, fall toward 5.",
+  "Both sides agree, so the limit of h(x) as x approaches 3 is 5."
+ ],
+ "CALC-1#2": [
+  "The plus sign on 3⁺ means you approach from the right, so only x-values greater than 3 matter. Pick the rule for those values.",
+  "For x > 3 the rule is x + 2, so let x slide down to 3 in that rule: 3 + 2.",
+  "The right-hand limit is 5 (the left-hand limit is 6, so the two-sided limit does not exist)."
+ ],
+ "CALC-1#3": [
+  "An absolute value depends on the sign of what is inside. Decide the sign of x − 2 when x is to the left of 2.",
+  "For x < 2, the inside x − 2 is negative, so the absolute value flips its sign: |x − 2| = −(x − 2).",
+  "The fraction is then −(x − 2)/(x − 2) = −1 for every x on the left.",
+  "The values are always −1 on that side, so the left-hand limit is −1."
+ ],
+ "CALC-2#0": [
+  "Substituting x = 5 gives 0/0, which means the fraction should be simplified before taking the limit.",
+  "Factor the top as a difference of squares and cancel: (x − 5)(x + 5)/(x − 5) = x + 5.",
+  "Substitute x = 5 into what is left: 5 + 5 = 10, so the limit is 10."
+ ],
+ "CALC-2#1": [
+  "Substituting x = 0 gives 0/0. With a square root on top, multiplying by the conjugate clears the root.",
+  "Multiply top and bottom by the conjugate √(x + 9) + 3: the top becomes (x + 9) − 9 = x.",
+  "Cancel the x on top with the x on the bottom to get 1/(√(x + 9) + 3).",
+  "Substitute x = 0 into the simplified fraction: 1/(3 + 3) = 1/6, so the limit is 1/6."
+ ],
+ "CALC-2#2": [
+  "Substituting x = 1 gives 0/0, so look for a common factor of the top and the bottom.",
+  "Factor the top by finding two numbers that multiply to −4 and add to 3: x² + 3x − 4 = (x + 4)(x − 1).",
+  "Cancel the shared factor (x − 1) to leave x + 4.",
+  "Substitute x = 1 into what is left: 1 + 4 = 5, so the limit is 5."
+ ],
+ "CALC-2#3": [
+  "Substituting x = −2 gives 0/0, so look for a common factor of the top and the bottom.",
+  "Factor the top by finding two numbers that multiply to −6 and add to −1: x² − x − 6 = (x − 3)(x + 2).",
+  "Cancel the shared factor (x + 2) to leave x − 3.",
+  "Substitute x = −2 into what is left: −2 − 3 = −5, so the limit is −5."
+ ],
+ "CALC-3#0": [
+  "Continuous at x = 1 means the two pieces meet there: the left piece must arrive at the height where the right piece starts.",
+  "The left piece heads to 2(1) + k = 2 + k. The right piece gives the value 1² + 4 = 5.",
+  "Set the two heights equal and solve: 2 + k = 5.",
+  "Subtracting 2 from both sides gives the answer, k = 3."
+ ],
+ "CALC-3#1": [
+  "To fill a hole, give the function the value that the graph is heading toward, which is the limit at that point.",
+  "Factor and cancel: (x − 4)(x + 4)/(x − 4) = x + 4, so g(x) = x + 4 away from 4.",
+  "The limit of the function at 4 is therefore 4 + 4 = 8.",
+  "Define g(4) = 8 and the function becomes continuous."
+ ],
+ "CALC-3#2": [
+  "The Intermediate Value Theorem says a continuous function takes every value between two of its outputs.",
+  "Here h(2) = −3 is negative and h(3) = 2 is positive, so h changes sign between x = 2 and x = 3.",
+  "A continuous function cannot change sign without passing through 0.",
+  "So there is a root between 2 and 3 (it is √7 ≈ 2.65), and the integer is 3."
+ ],
+ "CALC-3#3": [
+  "A rational function is discontinuous wherever its bottom is zero, whether that makes a hole or an asymptote.",
+  "No factor of the bottom cancels with the top x + 3, so every zero of the bottom is a break.",
+  "The bottom (x − 2)(x + 5) is zero at x = 2 and at x = −5.",
+  "Those are two vertical asymptotes, so the function has 2 points of discontinuity."
+ ],
+ "CALC-4#0": [
+  "For a limit at infinity of a rational function, compare the highest powers on the top and the bottom.",
+  "The degrees are equal (both 2), so the lower powers stop mattering and only the leading terms 7x² and 2x² count.",
+  "Take the ratio of the leading coefficients: the limit is 7/2."
+ ],
+ "CALC-4#1": [
+  "For a limit at infinity of a rational function, compare the highest powers on the top and the bottom.",
+  "The top has degree 1 and the bottom has degree 3.",
+  "The bottom grows much faster than the top, so the fraction shrinks and the limit is 0."
+ ],
+ "CALC-4#2": [
+  "A vertical asymptote happens where the bottom of the fraction is zero while the top is not zero.",
+  "The bottom x − 5 is zero at x = 5, and the top is 6 there, not 0.",
+  "A nonzero top over a bottom that shrinks to 0 grows without bound.",
+  "The vertical asymptote is the line x = 5."
+ ],
+ "CALC-4#3": [
+  "The long-run cost is the limit as t grows without bound, so compare the highest powers of t on the top and the bottom.",
+  "The degrees are equal (both 1), so the constants 5 and 2 stop mattering.",
+  "Take the ratio of the leading coefficients: 40/1 = 40.",
+  "The cost settles toward 40 dollars per gadget."
+ ],
+ "CALC-5#0": [
+  "The average rate of change is the slope of the secant line through the two endpoints of the interval.",
+  "Find the values of the function at the endpoints: f(3) = 9 + 9 = 18 and f(1) = 1 + 3 = 4.",
+  "The slope of the secant is rise over run: (18 − 4)/(3 − 1) = 14/2.",
+  "Dividing gives 7, so the average rate of change is 7."
+ ],
+ "CALC-5#1": [
+  "The derivative at a point is the slope of the tangent line there. Find a formula for the derivative first.",
+  "From the limit definition (or the power rule) the derivative of x² is 2x.",
+  "Substitute x = 3 into the derivative: 2(3) = 6, so the slope at 3 is 6."
+ ],
+ "CALC-5#2": [
+  "A tangent line needs a point and a slope. The slope comes from the derivative at x = 3.",
+  "The point is (3, 9) because 3² = 9, and the slope is the derivative 2x at 3, which is 6.",
+  "Use point-slope form: y − 9 = 6(x − 3), which simplifies to y = 6x − 9.",
+  "The line crosses the y-axis at −9, so the y-intercept is −9."
+ ],
+ "CALC-5#3": [
+  "Velocity is the rate of change of position, so it is the derivative of the position function.",
+  "Differentiate the position with the power rule: the velocity is 10t.",
+  "Substitute t = 2 into the velocity: 10(2) = 20, so the velocity is 20 m/s."
+ ],
+ "CALC-6#0": [
+  "Use the power rule on each term: bring the exponent down in front and lower it by one.",
+  "The derivative of 4x³ is 12x² and the derivative of −5x is −5, so the derivative is 12x² − 5.",
+  "Substitute x = 2 into the derivative: 12(4) − 5 = 48 − 5 = 43, so the answer is 43."
+ ],
+ "CALC-6#1": [
+  "This is a product of two functions, x and eˣ, so the product rule is needed.",
+  "Product rule: the derivative is 1·eˣ + x·eˣ, the first times the derivative of the second plus the second times the derivative of the first.",
+  "At x = 0 this is e⁰ + 0·e⁰ = 1 + 0, so the answer is 1."
+ ],
+ "CALC-6#2": [
+  "This is one function divided by another, so use the quotient rule (or split the fraction first).",
+  "Quotient rule: the derivative is (2·x − (2x + 1)·1)/x², and the top simplifies to −1, giving −1/x².",
+  "Substitute x = 1 into the derivative: −1/1² = −1, so the answer is −1.",
+  "As a check, the function can be rewritten as 2 + 1/x, whose derivative −1/x² agrees."
+ ],
+ "CALC-6#3": [
+  "The slope of a curve at a point is the value of its derivative there.",
+  "The derivative of the natural log function ln x is 1/x.",
+  "Substitute x = 4: the slope of the curve there is 1/4."
+ ],
+ "CALC-7#0": [
+  "This is a power of an inside function, x² + 3, so use the chain rule.",
+  "Differentiate the outside power and multiply by the derivative of the inside: 4(x² + 3)³ · 2x.",
+  "At x = 1 the inside is 4, so the value is 4 · 4³ · 2 = 4 · 64 · 2.",
+  "Multiplying gives 512, so the derivative at x = 1 is 512."
+ ],
+ "CALC-7#1": [
+  "The sine has an inside function, 5x, so use the chain rule.",
+  "The derivative of the outside is cosine, and the derivative of the inside is 5, so the derivative is 5cos(5x).",
+  "At x = 0 this is 5 · cos 0 = 5 · 1, so the answer is 5."
+ ],
+ "CALC-7#2": [
+  "The exponent is 3x rather than x, so use the chain rule.",
+  "The exponential stays the same and is multiplied by the derivative of 3x, so the derivative is 3e^(3x).",
+  "At x = 0 this is 3 · e⁰ = 3 · 1, so the answer is 3."
+ ],
+ "CALC-7#3": [
+  "The slope is the derivative of tan x, which is sec²x, the same as 1/cos²x.",
+  "At the angle π/4 the cosine is √2/2, so its square is 1/2.",
+  "Dividing 1 by 1/2 gives 2, so the slope of the tangent curve there is 2."
+ ],
+ "CALC-8#0": [
+  "Differentiate both sides with respect to x. Because y depends on x, the y² term picks up a factor of dy/dx.",
+  "Differentiating gives 2x + 2y·dy/dx = 0, and solving for the slope gives dy/dx = −x/y.",
+  "Substitute the point (5, 12): the slope is −5/12."
+ ],
+ "CALC-8#1": [
+  "Differentiate both sides with respect to x. Because y depends on x, the y² term picks up a factor of dy/dx.",
+  "Differentiating both sides with the power rule gives 2y·dy/dx = 3x².",
+  "Divide by 2y to solve for the slope: dy/dx = 3x²/(2y).",
+  "Substitute the point (1, 1): 3(1)/(2·1) = 3/2, so the slope is 3/2."
+ ],
+ "CALC-8#2": [
+  "Write a formula linking the area and the side, then differentiate it with respect to time.",
+  "The area is A = s², so by the chain rule dA/dt = 2s·ds/dt.",
+  "Plug in s = 10 and ds/dt = 3: 2(10)(3) = 60, so the area grows at 60 cm²/s."
+ ],
+ "CALC-8#3": [
+  "Write a formula linking the area and the radius, then differentiate it with respect to time.",
+  "The area is A = πr², so by the chain rule dA/dt = 2πr·dr/dt.",
+  "Plug in the radius r = 4 and the rate dr/dt = 2: 2π(4)(2) = 16π in²/s.",
+  "The area is growing at 16π in²/s, which is about 50.3 in²/s."
+ ],
+ "CALC-9#0": [
+  "The Mean Value Theorem finds a point where the tangent slope equals the average rate of change over the interval.",
+  "The average rate of change is (36 − 0)/(6 − 0) = 6.",
+  "The derivative is 2x, so set 2c = 6 and solve.",
+  "Dividing by 2 gives c = 3, which lies inside the interval."
+ ],
+ "CALC-9#1": [
+  "A critical point is where the derivative is zero or undefined, so differentiate first.",
+  "The derivative is 2x − 8. Set it equal to zero: 2x − 8 = 0.",
+  "Adding 8 and dividing by 2 gives the critical point x = 4."
+ ],
+ "CALC-9#2": [
+  "On a closed interval, the absolute maximum is at a critical point inside the interval or at an endpoint.",
+  "The derivative −2x + 4 is zero at x = 2, which is inside the interval.",
+  "Evaluate the function at the critical point and at both endpoints: f(0) = 0, f(2) = −4 + 8 = 4, and f(5) = −25 + 20 = −5.",
+  "The biggest of these values is 4, so the absolute maximum value is 4."
+ ],
+ "CALC-9#3": [
+  "An inflection point is where the concavity changes, which is where the second derivative changes sign.",
+  "The first derivative is 3x² − 12x, so the second derivative is 6x − 12.",
+  "The second derivative is zero at x = 2, negative to the left and positive to the right, so the inflection point is at x = 2."
+ ],
+ "CALC-10#0": [
+  "Call the sides x and y. Use the perimeter to write the area with only one variable, then maximize it.",
+  "The perimeter gives 2x + 2y = 200, so y = 100 − x and the area is A = x(100 − x) = 100x − x².",
+  "Set the derivative to zero: 100 − 2x = 0 gives x = 50, so y is also 50.",
+  "The largest area is 50 × 50 = 2500 m², and the rectangle is a square."
+ ],
+ "CALC-10#1": [
+  "At rest means the velocity is zero, and velocity is the derivative of position.",
+  "The velocity is 2t − 4. Set it equal to zero: 2t − 4 = 0.",
+  "Adding 4 and dividing by 2 shows the particle is at rest at t = 2."
+ ],
+ "CALC-10#2": [
+  "Call one number x. The other is then 20 − x, so the product depends on x alone.",
+  "Multiplying the two numbers, the product is P = x(20 − x) = 20x − x².",
+  "Set the derivative to zero: 20 − 2x = 0 gives x = 10, so both numbers are 10.",
+  "So the largest possible product is 10 × 10 = 100."
+ ],
+ "CALC-10#3": [
+  "Acceleration is the derivative of velocity, and velocity is the derivative of position, so differentiate twice.",
+  "The velocity is 3t² − 3, so the acceleration is 6t.",
+  "Substitute t = 2 into the acceleration: 6(2) = 12, so the acceleration is 12."
+ ],
+ "CALC-11#0": [
+  "Split [0, 4] into 4 equal pieces. A left sum uses the height at the left end of each piece.",
+  "Each piece has width 1, and the left endpoints 0, 1, 2, 3 give heights 0, 1, 2, 3.",
+  "Add the heights and multiply by the width: (0 + 1 + 2 + 3) × 1 = 6, so the left sum is 6."
+ ],
+ "CALC-11#1": [
+  "Split [0, 4] into 4 equal pieces. A right sum uses the height at the right end of each piece.",
+  "Each piece has width 1, and the right endpoints 1, 2, 3, 4 give heights 1, 2, 3, 4.",
+  "Add the heights and multiply by the width: (1 + 2 + 3 + 4) × 1 = 10, so the right sum is 10."
+ ],
+ "CALC-11#2": [
+  "A definite integral of a function above the axis is the area under its graph. Sketch the line y = 2x from 0 to 4.",
+  "The region is a triangle with base 4 and height 2(4) = 8.",
+  "The area of the triangle is ½ × 4 × 8 = 16, so the integral is 16."
+ ],
+ "CALC-11#3": [
+  "A definite integral counts area below the x-axis as negative. Sketch the line y = x − 2 from 0 to 2.",
+  "The line runs from (0, −2) up to (2, 0), so the triangle sits below the axis, with base 2 and height 2. Its area is ½ × 2 × 2 = 2.",
+  "Area below the axis counts as negative, so the integral is −2."
+ ],
+ "CALC-12#0": [
+  "Use the Fundamental Theorem: find an antiderivative, then subtract its value at the lower limit from its value at the upper limit.",
+  "An antiderivative of 4x³ is x⁴, because the derivative of x⁴ is 4x³.",
+  "Evaluate at the limits: 1⁴ − 0⁴ = 1 − 0, so the integral is 1."
+ ],
+ "CALC-12#1": [
+  "Use the Fundamental Theorem: find an antiderivative, then subtract its value at the lower limit from its value at the upper limit.",
+  "An antiderivative of 2x is x², because the derivative of x² is 2x.",
+  "Evaluate at the limits: 3² − 1² = 9 − 1, so the integral is 8."
+ ],
+ "CALC-12#2": [
+  "Work backward from the derivative to the function, then use the known value to find the constant.",
+  "An antiderivative of 3x² is x³, so f(x) = x³ + C, and f(0) = 7 gives C = 7.",
+  "Substitute x = 2 into the formula x³ + 7: 8 + 7 = 15, so the value f(2) is 15."
+ ],
+ "CALC-12#3": [
+  "Use the Fundamental Theorem: find an antiderivative of sin x, then evaluate it at π and at 0.",
+  "An antiderivative of sin x is −cos x, because the derivative of cos x is −sin x.",
+  "Evaluate at the limits: −cos π − (−cos 0) = 1 + 1, so the integral is 2."
+ ],
+ "CALC-13#0": [
+  "The factor 3x² is the derivative of the inside function x³ + 1, so a substitution will work.",
+  "Let u = x³ + 1, so du = 3x² dx. The limits become u = 1 and u = 2, and the integral is that of u² from 1 to 2.",
+  "An antiderivative of u² is u³/3. Evaluating from 1 to 2 gives 8/3 − 1/3 = 7/3, so the integral is 7/3."
+ ],
+ "CALC-13#1": [
+  "The cosine has an inside function, 5x, so the antiderivative needs a factor to undo the chain rule.",
+  "An antiderivative of cos(5x) is (1/5) sin(5x), since differentiating it brings back the 5.",
+  "Evaluate at the limits: (1/5) sin(π/2) − (1/5) sin 0 = 1/5 − 0, so the integral is 1/5."
+ ],
+ "CALC-13#2": [
+  "Find where the two graphs cross, decide which is on top, then integrate top minus bottom.",
+  "Setting x² = 4 gives crossings at x = −2 and x = 2, and between them the line y = 4 is on top.",
+  "The area is the integral of (4 − x²) from −2 to 2, with antiderivative 4x − x³/3.",
+  "Evaluating gives (8 − 8/3) − (−8 + 8/3) = 32/3, so the area is 32/3."
+ ],
+ "CALC-13#3": [
+  "Decide which graph is on top on the interval, then integrate top minus bottom.",
+  "On (0, 1) the line y = x is above y = x³ (for example 0.5 is bigger than 0.125).",
+  "The integral of (x − x³) from 0 to 1 uses the antiderivative x²/2 − x⁴/4 and gives 1/2 − 1/4 = 1/4, so the area is 1/4."
+ ],
+ "CALC-14#0": [
+  "Revolving a region around the x-axis makes discs. The volume adds up the areas of the discs along the interval.",
+  "Every disc has radius 2, so each has area π × 2² = 4π.",
+  "The area is constant over a length of 5, so the volume is 4π × 5 = 20π, which is about 62.83."
+ ],
+ "CALC-14#1": [
+  "Revolving a region around the x-axis makes discs whose radius is the height of the curve, here y = x.",
+  "Each disc has area π × x², so the volume is π times the integral of x² from 0 to 2, which is π × 8/3.",
+  "The volume is 8π/3, which is about 8.38."
+ ],
+ "CALC-14#2": [
+  "For a solid with known cross-sections, the volume is the integral of the cross-section area.",
+  "The side of each square is the height of the region, which is x, so the area of a slice is x².",
+  "The integral of x² from 0 to 3 is 3³/3 = 27/3, so the volume is 9."
+ ],
+ "CALC-14#3": [
+  "The average value of a function on an interval is its integral divided by the length of the interval.",
+  "The integral of 2x from 0 to 4 uses the antiderivative x² and equals 16 − 0 = 16.",
+  "Divide by the length of the interval: 16/4 = 4, so the average value is 4."
+ ],
  "GEO-1#0": [
   "S lies between R and T, so the two shorter segments join to make the whole segment RT.",
   "Segment Addition gives RS + ST = RT, so add the two lengths: 9 + 14.",

@@ -25,16 +25,16 @@
     },
     {
       "level": "guide",
-      "text": "Divide that by $h$: $\\frac{-h}{2(2 + h) \\cdot h} = \\frac{-1}{2(2 + h)}$. Now let $h \\to 0$."
+      "text": "Divide the combined fraction by $h$, which cancels the $h$ on top: $\\frac{-h}{2(2 + h) \\cdot h} = \\frac{-1}{2(2 + h)}$. Now let $h \\to 0$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{-1}{2 \\cdot 2} = -\\frac{1}{4}$."
+      "text": "Letting $h \\to 0$ turns the fraction into $\\frac{-1}{2 \\cdot 2}$, so the derivative is $f'(2) = -\\frac{1}{4}$."
     }
   ],
   "explanation": [
-    "$f(2 + h) - f(2) = \\frac{1}{2 + h} - \\frac{1}{2} = \\frac{2 - (2 + h)}{2(2 + h)} = \\frac{-h}{2(2 + h)}$.",
-    "Divide by $h$: $\\frac{-1}{2(2 + h)}$.",
+    "Combine the fractions in the numerator over a common denominator: $f(2 + h) - f(2) = \\frac{1}{2 + h} - \\frac{1}{2} = \\frac{2 - (2 + h)}{2(2 + h)} = \\frac{-h}{2(2 + h)}$.",
+    "Divide by $h$, which cancels the $h$ on top and leaves $\\frac{-1}{2(2 + h)}$.",
     "Let $h \\to 0$: $f'(2) = \\frac{-1}{4}$. The tangent at $(2, \\frac{1}{2})$ slopes gently downward."
   ],
   "alternativeExplanations": [

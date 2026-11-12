@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Match the pattern $\\frac{f(a + h) - f(a)}{h}$. The piece $(5 + h)^3$ must be $f(a + h)$.",
+  "hint": "Match the pattern $\\frac{f(a + h) - f(a)}{h}$. The piece $(5 + h)^3$ must play the role of $f(a + h)$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Match the pattern $\\frac{f(a + h) - f(a)}{h}$. The piece $(5 + h)^3$ must be $f(a + h)$."
+      "text": "Match the pattern $\\frac{f(a + h) - f(a)}{h}$. The piece $(5 + h)^3$ must play the role of $f(a + h)$."
     },
     {
       "level": "guide",
-      "text": "If $f(a + h) = (5 + h)^3$, then $a = 5$ and $f$ cubes its input. Check: is $f(5) = 125$?"
+      "text": "If $f(a + h) = (5 + h)^3$, then $a = 5$ and $f$ cubes its input. Check that the subtracted number matches: is $f(5) = 125$?"
     },
     {
       "level": "reveal",
-      "text": "$5^3 = 125$, yes. So the limit is $f'(5)$ for $f(x) = x^3$: choice A. (Its value is $75$.)"
+      "text": "Yes, $5^3 = 125$. So the limit is $f'(5)$ for $f(x) = x^3$, which is choice A. (Its value is $75$.)"
     }
   ],
   "explanation": [
-    "Compare with $f'(a) = \\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h}$.",
-    "Here $f(a + h) = (5 + h)^3$, so $a = 5$ and $f(x) = x^3$; then $f(a) = 125$ matches the $125$ being subtracted.",
-    "Choice A. If you expand, $\\frac{75h + 15h^2 + h^3}{h} \\to 75$, the slope of $y = x^3$ at $x = 5$."
+    "Compare the given limit with the definition $f'(a) = \\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h}$.",
+    "Here $f(a + h) = (5 + h)^3$, so $a = 5$ and $f(x) = x^3$. Then $f(a) = 125$ matches the $125$ being subtracted.",
+    "That is choice A. If you expand, $\\frac{75h + 15h^2 + h^3}{h} \\to 75$, the slope of $y = x^3$ at $x = 5$."
   ],
   "alternativeExplanations": [
     {

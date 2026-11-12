@@ -10,25 +10,25 @@
   "primaryAnswer": "1096",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Net rate $=$ in $-$ out $= 20 - 2t$. The change in water is the integral of the net rate.",
+  "hint": "Water comes in and goes out at the same time. Combine the two rates into a net rate, and remember that integrating a rate gives a change.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Net rate $=$ in $-$ out $= 20 - 2t$. The change in water is the integral of the net rate."
+      "text": "Water comes in and goes out at the same time. Combine the two rates into a net rate, and remember that integrating a rate gives a change."
     },
     {
       "level": "guide",
-      "text": "$\\int_0^8 (20 - 2t) \\, dt = [20t - t^2]_0^8 = 160 - 64$."
+      "text": "The net rate is $20 - 2t$. The change in water is $\\int_0^8 (20 - 2t) \\, dt = [20t - t^2]_0^8 = 160 - 64$. Add this change to the starting amount."
     },
     {
       "level": "reveal",
-      "text": "Change $= 96$ m³, so the reservoir holds $1000 + 96 = 1096$ m³."
+      "text": "The change is $96$ cubic meters, so the reservoir holds $1000 + 96 = 1096$ cubic meters."
     }
   ],
   "explanation": [
-    "Net rate of change: $20 - 2t$ m³/h.",
-    "Net change over $[0, 8]$: $\\int_0^8 (20 - 2t) \\, dt = 160 - 64 = 96$ m³.",
-    "Final amount: $1000 + 96 = 1096$ m³. (The outflow $2t$ overtakes the inflow $20$ only at $t = 10$, so the level is still rising at $t = 8$, just more slowly.)"
+    "The net rate of change is inflow minus outflow, which is $20 - 2t$ cubic meters per hour.",
+    "The net change over $[0, 8]$ is $\\int_0^8 (20 - 2t) \\, dt = 160 - 64 = 96$ cubic meters.",
+    "The final amount is $1000 + 96 = 1096$ cubic meters. (The outflow $2t$ overtakes the inflow $20$ only at $t = 10$, so the level is still rising at $t = 8$, just more slowly.)"
   ],
   "alternativeExplanations": [
     {

@@ -10,24 +10,24 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "\"Marginal\" is economics-speak for \"derivative.\" Differentiate $R(x)$ with the power rule.",
+  "hint": "In economics, \"marginal\" means \"derivative\". Which rule lets you differentiate each term of $R(x)$?",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Marginal\" is economics-speak for \"derivative.\" Differentiate $R(x)$ with the power rule."
+      "text": "In economics, \"marginal\" means \"derivative\". Which rule lets you differentiate each term of $R(x)$?"
     },
     {
       "level": "guide",
-      "text": "$R'(x) = 50 - 0.4x$. Substitute $x = 100$."
+      "text": "The power rule gives $R'(x) = 50 - 0.4x$. Substitute $x = 100$ into this derivative and simplify."
     },
     {
       "level": "reveal",
-      "text": "$50 - 0.4(100) = 50 - 40 = 10$ dollars."
+      "text": "Substituting gives $50 - 0.4(100) = 50 - 40 = 10$, so the marginal revenue is $10$ dollars."
     }
   ],
   "explanation": [
-    "$R'(x) = 50 - 0.4x$.",
-    "$R'(100) = 50 - 40 = 10$.",
+    "Marginal revenue is the derivative of revenue, and the power rule gives $R'(x) = 50 - 0.4x$.",
+    "Evaluate the derivative at a sales level of $100$ jackets: $R'(100) = 50 - 40 = 10$.",
     "Selling the 101st jacket adds only about $10$ dollars of revenue, because the model assumes prices must drop to sell more."
   ],
   "alternativeExplanations": [

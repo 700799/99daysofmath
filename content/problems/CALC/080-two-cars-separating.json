@@ -10,11 +10,11 @@
   "primaryAnswer": "100",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Let $y$ be A's distance north, $x$ B's distance east, and $z$ the distance between them. Then $z^2 = x^2 + y^2$.",
+  "hint": "The two roads meet at a right angle, so the cars and the intersection form a right triangle. Which equation links the three distances?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Let $y$ be A's distance north, $x$ B's distance east, and $z$ the distance between them. Then $z^2 = x^2 + y^2$."
+      "text": "The two roads meet at a right angle, so the cars and the intersection form a right triangle. Which equation links the three distances?"
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Differentiate: $2z z' = 2x x' + 2y y'$, so $z' = \\frac{x x' + y y'}{z}$. Use $x' = 80$ and $y' = 60$."
+      "text": "With $x$ east, $y$ north and $z$ between the cars, $z^2 = x^2 + y^2$. Differentiate: $2z z' = 2x x' + 2y y'$, so $z' = \\frac{x x' + y y'}{z}$. Use $x' = 80$ and $y' = 60$."
     },
     {
       "level": "reveal",
-      "text": "$z' = \\frac{4(80) + 3(60)}{5} = \\frac{320 + 180}{5} = 100$ mph."
+      "text": "The distance grows at $z' = \\frac{4(80) + 3(60)}{5} = \\frac{320 + 180}{5} = 100$ miles per hour."
     }
   ],
   "explanation": [
-    "Set up: $z^2 = x^2 + y^2$ with $x = 4$, $x' = 80$, $y = 3$, $y' = 60$, and $z = \\sqrt{16 + 9} = 5$.",
+    "Set up the right triangle: $z^2 = x^2 + y^2$ with $x = 4$, $x' = 80$, $y = 3$, $y' = 60$, and $z = \\sqrt{16 + 9} = 5$.",
     "Differentiate with respect to time: $2z z' = 2x x' + 2y y'$, so $z' = \\frac{x x' + y y'}{z}$.",
-    "$z' = \\frac{4 \\cdot 80 + 3 \\cdot 60}{5} = \\frac{500}{5} = 100$ mph."
+    "Substituting the values gives $z' = \\frac{4 \\cdot 80 + 3 \\cdot 60}{5} = \\frac{500}{5} = 100$, so the cars separate at $100$ mph."
   ],
   "alternativeExplanations": [
     {

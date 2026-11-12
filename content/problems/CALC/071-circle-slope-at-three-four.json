@@ -12,25 +12,25 @@
     "-0.75"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Differentiate both sides with respect to $x$. Every time you differentiate a $y$-term, tack on a $\\frac{dy}{dx}$ — $y$ depends on $x$.",
+  "hint": "Differentiate both sides with respect to $x$. Because $y$ depends on $x$, every $y$-term picks up a factor of $\\frac{dy}{dx}$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Differentiate both sides with respect to $x$. Every time you differentiate a $y$-term, tack on a $\\frac{dy}{dx}$ — $y$ depends on $x$."
+      "text": "Differentiate both sides with respect to $x$. Because $y$ depends on $x$, every $y$-term picks up a factor of $\\frac{dy}{dx}$."
     },
     {
       "level": "guide",
-      "text": "$2x + 2y \\frac{dy}{dx} = 0$. Solve for $\\frac{dy}{dx}$, then put in $x = 3$ and $y = 4$."
+      "text": "Differentiating gives $2x + 2y \\frac{dy}{dx} = 0$. Solve for $\\frac{dy}{dx}$, then put in $x = 3$ and $y = 4$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{dy}{dx} = -\\frac{x}{y} = -\\frac{3}{4}$."
+      "text": "Solving gives $\\frac{dy}{dx} = -\\frac{x}{y}$, so the slope at the point is $-\\frac{3}{4}$."
     }
   ],
   "explanation": [
     "Differentiate $x^2 + y^2 = 25$ term by term: $2x + 2y \\, y' = 0$. The $y'$ appears because $y$ is a function of $x$ (chain rule).",
-    "Solve: $y' = -\\frac{x}{y}$.",
-    "At $(3, 4)$: $y' = -\\frac{3}{4}$. The tangent slopes downward, as it should in the first quadrant of a circle."
+    "Solve this equation for the slope by moving $2x$ across and dividing by $2y$: $y' = -\\frac{x}{y}$.",
+    "At $(3, 4)$ the slope is $y' = -\\frac{3}{4}$. The tangent slopes downward, as it should in the first quadrant of a circle."
   ],
   "alternativeExplanations": [
     {

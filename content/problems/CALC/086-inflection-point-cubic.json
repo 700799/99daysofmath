@@ -10,24 +10,24 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "An inflection point is where concavity changes, which is where $f''$ changes sign. Differentiate twice.",
+  "hint": "An inflection point is where concavity changes, which is where $f''$ changes sign. That means differentiating twice.",
   "hints": [
     {
       "level": "nudge",
-      "text": "An inflection point is where concavity changes, which is where $f''$ changes sign. Differentiate twice."
+      "text": "An inflection point is where concavity changes, which is where $f''$ changes sign. That means differentiating twice."
     },
     {
       "level": "guide",
-      "text": "$f'(x) = 3x^2 - 12x + 9$ and $f''(x) = 6x - 12$. Where is $f''$ zero?"
+      "text": "The derivatives are $f'(x) = 3x^2 - 12x + 9$ and $f''(x) = 6x - 12$. Find where $f''$ is zero and check that its sign changes there."
     },
     {
       "level": "reveal",
-      "text": "$6x - 12 = 0$ gives $x = 2$. Since $f''$ is negative left of $2$ and positive right of $2$, concavity really does flip there."
+      "text": "Solving $6x - 12 = 0$ gives $x = 2$. Since $f''$ is negative left of $2$ and positive right of $2$, concavity really does flip there."
     }
   ],
   "explanation": [
-    "$f'(x) = 3x^2 - 12x + 9$, so $f''(x) = 6x - 12$.",
-    "$f''(x) = 0$ at $x = 2$. For $x < 2$, $f'' < 0$ (concave down); for $x > 2$, $f'' > 0$ (concave up).",
+    "Differentiate twice with the power rule: $f'(x) = 3x^2 - 12x + 9$, so $f''(x) = 6x - 12$.",
+    "The second derivative is zero at $x = 2$. For $x < 2$ it is negative (concave down), and for $x > 2$ it is positive (concave up).",
     "Concavity changes, so $x = 2$ is the inflection point. (Its $y$-value is $f(2) = 8 - 24 + 18 + 2 = 4$.)"
   ],
   "alternativeExplanations": [

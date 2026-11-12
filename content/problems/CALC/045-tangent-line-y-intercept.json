@@ -10,25 +10,25 @@
   "primaryAnswer": "-8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Two jobs: find the slope with the limit, then write the line through the point $(3, f(3))$.",
+  "hint": "There are two jobs here: find the slope with the limit, then write the line through the point $(3, f(3))$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Two jobs: find the slope with the limit, then write the line through the point $(3, f(3))$."
+      "text": "There are two jobs here: find the slope with the limit, then write the line through the point $(3, f(3))$."
     },
     {
       "level": "guide",
-      "text": "$\\frac{(3 + h)^2 + 1 - 10}{h} = \\frac{6h + h^2}{h} = 6 + h \\to 6$. The point is $(3, 10)$. Use $y - 10 = 6(x - 3)$."
+      "text": "The quotient is $\\frac{(3 + h)^2 + 1 - 10}{h} = \\frac{6h + h^2}{h} = 6 + h$, which heads to $6$. The point is $(3, 10)$, so use $y - 10 = 6(x - 3)$ and solve for $y$."
     },
     {
       "level": "reveal",
-      "text": "$y = 6x - 18 + 10 = 6x - 8$. The $y$-intercept is $-8$."
+      "text": "The line is $y = 6x - 18 + 10 = 6x - 8$, so the $y$-intercept is $-8$."
     }
   ],
   "explanation": [
-    "Slope: $f'(3) = \\lim_{h \\to 0} \\frac{(3 + h)^2 + 1 - 10}{h} = \\lim_{h \\to 0} (6 + h) = 6$.",
-    "Point: $f(3) = 9 + 1 = 10$, so the line passes through $(3, 10)$.",
-    "Point-slope: $y - 10 = 6(x - 3)$, so $y = 6x - 8$. The $y$-intercept is $-8$."
+    "Find the slope from the limit: $f'(3) = \\lim_{h \\to 0} \\frac{(3 + h)^2 + 1 - 10}{h} = \\lim_{h \\to 0} (6 + h) = 6$.",
+    "Find the point of tangency: $f(3) = 9 + 1 = 10$, so the line passes through $(3, 10)$.",
+    "Point-slope form gives $y - 10 = 6(x - 3)$, so $y = 6x - 8$. The $y$-intercept is $-8$."
   ],
   "alternativeExplanations": [
     {

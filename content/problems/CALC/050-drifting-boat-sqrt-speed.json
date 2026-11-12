@@ -21,21 +21,21 @@
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up: $(\\sqrt{4 + h} - 2)(\\sqrt{4 + h} + 2) = (4 + h) - 4 = h$. The messy root turns into a plain $h$ — that is the whole trick."
+      "text": "Warm up: $(\\sqrt{4 + h} - 2)(\\sqrt{4 + h} + 2) = (4 + h) - 4 = h$. The messy root turns into a plain $h$, and that is the whole trick."
     },
     {
       "level": "guide",
-      "text": "After multiplying, the fraction is $\\frac{h}{h(\\sqrt{4 + h} + 2)} = \\frac{1}{\\sqrt{4 + h} + 2}$. Now let $h \\to 0$."
+      "text": "After multiplying by the conjugate, the fraction is $\\frac{h}{h(\\sqrt{4 + h} + 2)} = \\frac{1}{\\sqrt{4 + h} + 2}$. Now let $h \\to 0$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{\\sqrt{4} + 2} = \\frac{1}{4}$ km per hour."
+      "text": "The limit is $\\frac{1}{\\sqrt{4} + 2} = \\frac{1}{4}$, so the speed is $\\frac{1}{4}$ km per hour."
     }
   ],
   "explanation": [
-    "Multiply by the conjugate: $\\frac{(\\sqrt{4 + h} - 2)(\\sqrt{4 + h} + 2)}{h(\\sqrt{4 + h} + 2)} = \\frac{h}{h(\\sqrt{4 + h} + 2)}$.",
-    "Cancel $h$: $\\frac{1}{\\sqrt{4 + h} + 2}$.",
-    "As $h \\to 0$ this is $\\frac{1}{2 + 2} = \\frac{1}{4}$. The boat is drifting at $\\frac{1}{4}$ km/h at the $4$-hour mark — slowing, since $\\sqrt{t}$ flattens out."
+    "Multiply by the conjugate to remove the root from the top: $\\frac{(\\sqrt{4 + h} - 2)(\\sqrt{4 + h} + 2)}{h(\\sqrt{4 + h} + 2)} = \\frac{h}{h(\\sqrt{4 + h} + 2)}$.",
+    "Cancel the common factor $h$, which is not zero, to get $\\frac{1}{\\sqrt{4 + h} + 2}$.",
+    "As $h \\to 0$ this is $\\frac{1}{2 + 2} = \\frac{1}{4}$. The boat is drifting at $\\frac{1}{4}$ km/h at the $4$-hour mark, and it is slowing because $\\sqrt{t}$ flattens out."
   ],
   "alternativeExplanations": [
     {

@@ -18,17 +18,17 @@
     },
     {
       "level": "guide",
-      "text": "Parallel side $= 120 - 2x$. Area $A(x) = x(120 - 2x) = 120x - 2x^2$. Set $A'(x) = 0$."
+      "text": "The parallel side is $120 - 2x$, so the area is $A(x) = x(120 - 2x) = 120x - 2x^2$. Set the derivative $A'(x)$ equal to $0$ and solve for $x$."
     },
     {
       "level": "reveal",
-      "text": "$120 - 4x = 0$ gives $x = 30$. The pen is $30 \\times 60$, area $1800$ m²."
+      "text": "Solving $120 - 4x = 0$ gives $x = 30$. The pen is $30$ by $60$, so the maximum area is $1800$ square meters."
     }
   ],
   "explanation": [
-    "Fence constraint: $2x + y = 120$, so $y = 120 - 2x$.",
-    "Area: $A(x) = x(120 - 2x) = 120x - 2x^2$. Then $A'(x) = 120 - 4x = 0$ at $x = 30$; $A'' = -4 < 0$ confirms a maximum.",
-    "$y = 120 - 60 = 60$. Maximum area $= 30 \\cdot 60 = 1800$ m². The free barn side lets the pen be twice as long as it is deep."
+    "The fence gives the constraint $2x + y = 120$, so the side along the barn is $y = 120 - 2x$.",
+    "The area is $A(x) = x(120 - 2x) = 120x - 2x^2$. Then $A'(x) = 120 - 4x = 0$ at $x = 30$, and $A'' = -4 < 0$ confirms a maximum.",
+    "Then $y = 120 - 60 = 60$, and the maximum area is $30 \\cdot 60 = 1800$ square meters. The free barn side lets the pen be twice as long as it is deep."
   ],
   "alternativeExplanations": [
     {

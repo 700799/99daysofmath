@@ -18,7 +18,7 @@
     },
     {
       "level": "guide",
-      "text": "At $d = 10$, $F = 0.05$. At $d = 100$, $F = 0.0005$. Keep going."
+      "text": "Try some distances: at $d = 10$ the pull is $\\frac{5}{100} = 0.05$, and at $d = 100$ it is $\\frac{5}{10000} = 0.0005$. Decide where this pattern is heading."
     },
     {
       "level": "reveal",

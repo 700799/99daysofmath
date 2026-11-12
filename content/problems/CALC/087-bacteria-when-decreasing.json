@@ -32,24 +32,24 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Decreasing means $P'(t) < 0$. Find the derivative and factor it.",
+  "hint": "A function decreases where its derivative is negative. So find $P'(t)$ and work out its sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Decreasing means $P'(t) < 0$. Find the derivative and factor it."
+      "text": "A function decreases where its derivative is negative. So find $P'(t)$ and work out its sign."
     },
     {
       "level": "guide",
-      "text": "$P'(t) = 3t^2 - 18t + 24 = 3(t - 2)(t - 4)$. Where is this product negative?"
+      "text": "The derivative is $P'(t) = 3t^2 - 18t + 24 = 3(t - 2)(t - 4)$. Decide on which interval this product of two factors is negative."
     },
     {
       "level": "reveal",
-      "text": "Between the roots, $2 < t < 4$, one factor is negative and one positive, so $P' < 0$. Choice B."
+      "text": "Between the roots, $2 < t < 4$, one factor is negative and one positive, so $P' < 0$ there. That is choice B."
     }
   ],
   "explanation": [
-    "$P'(t) = 3t^2 - 18t + 24 = 3(t^2 - 6t + 8) = 3(t - 2)(t - 4)$.",
-    "Sign chart: $P' > 0$ on $(0, 2)$, $P' < 0$ on $(2, 4)$, $P' > 0$ on $(4, 6)$.",
+    "Differentiate and factor so the sign is easy to read: $P'(t) = 3t^2 - 18t + 24 = 3(t^2 - 6t + 8) = 3(t - 2)(t - 4)$.",
+    "A sign chart with the roots $2$ and $4$ shows $P' > 0$ on $(0, 2)$, $P' < 0$ on $(2, 4)$, and $P' > 0$ on $(4, 6)$.",
     "The population falls only between hours $2$ and $4$: choice B. It peaks at $t = 2$ with $P(2) = 8 - 36 + 48 + 10 = 30$ thousand and bottoms out at $t = 4$ with $P(4) = 26$ thousand."
   ],
   "alternativeExplanations": [

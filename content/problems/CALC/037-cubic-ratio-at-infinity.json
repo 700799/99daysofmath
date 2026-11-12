@@ -10,25 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the highest power on top and on the bottom. They match, so the answer is a ratio of leading coefficients.",
+  "hint": "Find the highest power of $x$ on top and on the bottom. When they match, the leading coefficients decide the limit.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the highest power on top and on the bottom. They match, so the answer is a ratio of leading coefficients."
+      "text": "Find the highest power of $x$ on top and on the bottom. When they match, the leading coefficients decide the limit."
     },
     {
       "level": "guide",
-      "text": "Divide every term by $x^3$: $\\frac{6 + \\frac{1}{x^2}}{2 - \\frac{5}{x}}$."
+      "text": "Divide every term by $x^3$ to get $\\frac{6 + \\frac{1}{x^2}}{2 - \\frac{5}{x}}$, then let the small fractions shrink to $0$."
     },
     {
       "level": "reveal",
-      "text": "The small pieces vanish: $\\frac{6}{2} = 3$."
+      "text": "The small pieces vanish and leave $\\frac{6}{2} = 3$, so the limit is $3$."
     }
   ],
   "explanation": [
-    "Both top and bottom have degree $3$.",
-    "Dividing by $x^3$ leaves $\\frac{6 + 1/x^2}{2 - 5/x} \\to \\frac{6 + 0}{2 - 0}$.",
-    "The limit is $3$."
+    "Both top and bottom have degree $3$, so neither one outgrows the other.",
+    "Dividing every term by $x^3$ leaves $\\frac{6 + 1/x^2}{2 - 5/x}$, which heads to $\\frac{6 + 0}{2 - 0}$ because the small fractions go to $0$.",
+    "The ratio of leading coefficients is $\\frac{6}{2}$, so the limit is $3$."
   ],
   "alternativeExplanations": [
     {

@@ -18,17 +18,17 @@
     },
     {
       "level": "guide",
-      "text": "$s(2 + h) = 5(4 + 4h + h^2) = 20 + 20h + 5h^2$ and $s(2) = 20$. Subtract, then divide by $h$."
+      "text": "Expand $s(2 + h) = 5(4 + 4h + h^2) = 20 + 20h + 5h^2$ and note that $s(2) = 20$. Subtract the two distances, then divide by $h$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{20h + 5h^2}{h} = 20 + 5h \\to 20$ m/s."
+      "text": "The quotient is $\\frac{20h + 5h^2}{h} = 20 + 5h$, which heads to $20$, so the velocity is $20$ meters per second."
     }
   ],
   "explanation": [
-    "$s(2 + h) - s(2) = 5(2 + h)^2 - 20 = 20h + 5h^2$.",
-    "Divide by $h$: $20 + 5h$.",
-    "As $h \\to 0$ the velocity is $20$ m/s."
+    "Find the change in distance by expanding the square: $s(2 + h) - s(2) = 5(2 + h)^2 - 20 = 20h + 5h^2$.",
+    "Divide by $h$ to get the average velocity over the window: $20 + 5h$.",
+    "As $h \\to 0$ the $5h$ term vanishes, so the instantaneous velocity is $20$ m/s."
   ],
   "alternativeExplanations": [
     {

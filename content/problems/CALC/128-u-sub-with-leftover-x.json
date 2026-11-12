@@ -13,30 +13,30 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "Let $u = x + 1$. Then $du = dx$, but there is a stray $x$ in front. Express it in terms of $u$: $x = u - 1$.",
+  "hint": "Let $u = x + 1$. Then $du = dx$, but there is a stray $x$ in front. Express it in terms of $u$ as $x = u - 1$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Let $u = x + 1$. Then $du = dx$, but there is a stray $x$ in front. Express it in terms of $u$: $x = u - 1$."
+      "text": "Let $u = x + 1$. Then $du = dx$, but there is a stray $x$ in front. Express it in terms of $u$ as $x = u - 1$."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up: $(u - 1)\\sqrt{u} = u^{3/2} - u^{1/2}$. Two power-rule terms — no roots of sums left."
+      "text": "Warm up: $(u - 1)\\sqrt{u} = u^{3/2} - u^{1/2}$. These are two power rule terms, with no roots of sums left."
     },
     {
       "level": "guide",
-      "text": "Limits: $x = 0 \\to u = 1$, $x = 3 \\to u = 4$. Compute $\\int_1^4 (u^{3/2} - u^{1/2}) \\, du = \\left[\\frac{2}{5}u^{5/2} - \\frac{2}{3}u^{3/2}\\right]_1^4$."
+      "text": "The limits become $u = 1$ and $u = 4$. Compute $\\int_1^4 (u^{3/2} - u^{1/2}) \\, du = \\left[\\frac{2}{5}u^{5/2} - \\frac{2}{3}u^{3/2}\\right]_1^4$ by evaluating at both limits."
     },
     {
       "level": "reveal",
-      "text": "At $u = 4$: $\\frac{64}{5} - \\frac{16}{3} = \\frac{112}{15}$. At $u = 1$: $\\frac{2}{5} - \\frac{2}{3} = -\\frac{4}{15}$. Difference: $\\frac{116}{15}$."
+      "text": "At $u = 4$ the value is $\\frac{64}{5} - \\frac{16}{3} = \\frac{112}{15}$, and at $u = 1$ it is $\\frac{2}{5} - \\frac{2}{3} = -\\frac{4}{15}$. The difference is $\\frac{116}{15}$."
     }
   ],
   "explanation": [
-    "Substitute $u = x + 1$, $x = u - 1$, $dx = du$, limits $1$ to $4$: $\\int_1^4 (u - 1)u^{1/2} \\, du = \\int_1^4 (u^{3/2} - u^{1/2}) \\, du$.",
-    "Antiderivative: $\\frac{2}{5}u^{5/2} - \\frac{2}{3}u^{3/2}$. At $u = 4$ ($u^{5/2} = 32$, $u^{3/2} = 8$): $\\frac{64}{5} - \\frac{16}{3} = \\frac{192 - 80}{15} = \\frac{112}{15}$. At $u = 1$: $\\frac{2}{5} - \\frac{2}{3} = -\\frac{4}{15}$.",
-    "Result: $\\frac{112}{15} + \\frac{4}{15} = \\frac{116}{15} \\approx 7.73$."
+    "Substitute $u = x + 1$, so $x = u - 1$ and $dx = du$, with limits $1$ to $4$. The integral becomes $\\int_1^4 (u - 1)u^{1/2} \\, du = \\int_1^4 (u^{3/2} - u^{1/2}) \\, du$.",
+    "The antiderivative is $\\frac{2}{5}u^{5/2} - \\frac{2}{3}u^{3/2}$. At $u = 4$ ($u^{5/2} = 32$, $u^{3/2} = 8$) it is $\\frac{64}{5} - \\frac{16}{3} = \\frac{192 - 80}{15} = \\frac{112}{15}$. At $u = 1$ it is $\\frac{2}{5} - \\frac{2}{3} = -\\frac{4}{15}$.",
+    "Subtracting the lower value from the upper value gives $\\frac{112}{15} + \\frac{4}{15} = \\frac{116}{15} \\approx 7.73$."
   ],
   "alternativeExplanations": [
     {

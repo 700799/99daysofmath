@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "As $x \\to 3$ the bottom goes to $0$ but the top goes to $4$. That is $\\frac{4}{\\text{tiny}}$ — enormous. The only question is the SIGN.",
+  "hint": "As $x \\to 3$ the bottom goes to $0$ while the top goes to $4$, so the quotient becomes enormous. The only question left is its sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "As $x \\to 3$ the bottom goes to $0$ but the top goes to $4$. That is $\\frac{4}{\\text{tiny}}$ — enormous. The only question is the SIGN."
+      "text": "As $x \\to 3$ the bottom goes to $0$ while the top goes to $4$, so the quotient becomes enormous. The only question left is its sign."
     },
     {
       "level": "guide",
-      "text": "From the right, $x$ is a bit more than $3$, so $x - 3$ is a tiny POSITIVE number. Positive top over tiny positive bottom gives what?"
+      "text": "From the right, $x$ is a bit more than $3$, so $x - 3$ is a tiny positive number. Decide the sign of a positive top over a tiny positive bottom."
     },
     {
       "level": "reveal",
-      "text": "Positive and huge: $\\lim_{x \\to 3^+} f(x) = +\\infty$."
+      "text": "The quotient is positive and grows without bound, so $\\lim_{x \\to 3^+} f(x) = +\\infty$, which is choice A."
     }
   ],
   "explanation": [
-    "At $x = 3.01$: $\\frac{4.01}{0.01} = 401$. At $x = 3.001$: $\\frac{4.001}{0.001} = 4001$.",
+    "Test values just right of $3$: at $x = 3.01$ the quotient is $\\frac{4.01}{0.01} = 401$, and at $x = 3.001$ it is $\\frac{4.001}{0.001} = 4001$.",
     "The top stays near $4$ (positive) while the bottom is a positive number shrinking to $0$.",
-    "The quotient grows without bound in the positive direction: $+\\infty$. (From the left it would be $-\\infty$.)"
+    "The quotient grows without bound in the positive direction, so the limit is $+\\infty$, choice A. From the left it would be $-\\infty$."
   ],
   "alternativeExplanations": [
     {

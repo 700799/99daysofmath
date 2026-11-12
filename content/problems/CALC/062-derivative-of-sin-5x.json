@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The derivative of $\\sin u$ is $\\cos u$ times $u'$. Here the inside is $u = 5x$.",
+  "hint": "The sine has an inside function, $5x$, rather than a plain $x$. Think about which rule deals with an inside function.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The derivative of $\\sin u$ is $\\cos u$ times $u'$. Here the inside is $u = 5x$."
+      "text": "The sine has an inside function, $5x$, rather than a plain $x$. Think about which rule deals with an inside function."
     },
     {
       "level": "guide",
-      "text": "Keep the inside unchanged in the cosine, then multiply by the inside's derivative, which is $5$."
+      "text": "By the chain rule, the derivative of $\\sin u$ is $\\cos u$ times $u'$. Keep the inside $5x$ unchanged in the cosine, then multiply by the derivative of the inside, which is $5$."
     },
     {
       "level": "reveal",
-      "text": "$y' = \\cos(5x) \\cdot 5 = 5\\cos(5x)$: choice A."
+      "text": "The derivative is $y' = \\cos(5x) \\cdot 5 = 5\\cos(5x)$, which is choice A."
     }
   ],
   "explanation": [
-    "Chain rule with outside $\\sin$ and inside $u = 5x$: $\\frac{dy}{dx} = \\cos(u) \\cdot \\frac{du}{dx}$.",
-    "$\\frac{du}{dx} = 5$, so $y' = 5\\cos(5x)$.",
-    "Choice B forgets the inside derivative; C has the sign of the derivative of cosine, not sine; D changes the inside, which the chain rule never does."
+    "Use the chain rule with outside $\\sin$ and inside $u = 5x$: $\\frac{dy}{dx} = \\cos(u) \\cdot \\frac{du}{dx}$.",
+    "The inside has derivative $\\frac{du}{dx} = 5$, so the answer is $y' = 5\\cos(5x)$, choice A.",
+    "Choice B forgets the inside derivative. C has the sign of the derivative of cosine, not sine. D changes the inside, which the chain rule never does."
   ],
   "alternativeExplanations": [
     {

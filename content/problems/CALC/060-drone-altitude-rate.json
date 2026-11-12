@@ -24,17 +24,17 @@
     },
     {
       "level": "guide",
-      "text": "$A'(t) = 6t + \\frac{1}{\\sqrt{t}}$. Substitute $t = 4$."
+      "text": "Putting the two terms together, the derivative is $A'(t) = 6t + \\frac{1}{\\sqrt{t}}$. Substitute $t = 4$ and add the two parts."
     },
     {
       "level": "reveal",
-      "text": "$6(4) + \\frac{1}{2} = 24.5$ meters per second."
+      "text": "The rate is $6(4) + \\frac{1}{2} = 24.5$, so the drone climbs at $24.5$ meters per second."
     }
   ],
   "explanation": [
-    "$\\frac{d}{dt}(3t^2) = 6t$ and $\\frac{d}{dt}(2t^{1/2}) = t^{-1/2} = \\frac{1}{\\sqrt{t}}$.",
-    "So $A'(t) = 6t + \\frac{1}{\\sqrt{t}}$.",
-    "$A'(4) = 24 + \\frac{1}{2} = 24.5$ m/s."
+    "Differentiate each term with the power rule: $\\frac{d}{dt}(3t^2) = 6t$ and $\\frac{d}{dt}(2t^{1/2}) = t^{-1/2} = \\frac{1}{\\sqrt{t}}$.",
+    "Adding the two pieces gives the climb rate $A'(t) = 6t + \\frac{1}{\\sqrt{t}}$.",
+    "At $t = 4$ the drone is climbing at $A'(4) = 24 + \\frac{1}{2} = 24.5$ m/s."
   ],
   "alternativeExplanations": [
     {

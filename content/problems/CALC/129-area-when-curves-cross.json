@@ -25,17 +25,17 @@
     },
     {
       "level": "guide",
-      "text": "Area $= \\int_0^1 (x - x^3) \\, dx + \\int_1^2 (x^3 - x) \\, dx$. Compute each piece."
+      "text": "The area is $\\int_0^1 (x - x^3) \\, dx + \\int_1^2 (x^3 - x) \\, dx$, with top minus bottom in each part. Compute each piece and add them."
     },
     {
       "level": "reveal",
-      "text": "First piece: $\\frac{1}{2} - \\frac{1}{4} = \\frac{1}{4}$. Second: $\\left(4 - 2\\right) - \\left(\\frac{1}{4} - \\frac{1}{2}\\right) = \\frac{9}{4}$. Total $= \\frac{10}{4} = 2.5$."
+      "text": "The first piece is $\\frac{1}{2} - \\frac{1}{4} = \\frac{1}{4}$ and the second is $\\left(4 - 2\\right) - \\left(\\frac{1}{4} - \\frac{1}{2}\\right) = \\frac{9}{4}$. The total area is $\\frac{10}{4} = 2.5$."
     }
   ],
   "explanation": [
-    "$x^3 = x \\Rightarrow x(x^2 - 1) = 0 \\Rightarrow x = 0, 1$ (and $-1$, outside the interval). The curves cross at $x = 1$.",
-    "On $[0, 1]$ the line is on top: $\\int_0^1 (x - x^3) \\, dx = \\left[\\frac{x^2}{2} - \\frac{x^4}{4}\\right]_0^1 = \\frac{1}{4}$. On $[1, 2]$ the cubic is on top: $\\int_1^2 (x^3 - x) \\, dx = \\left[\\frac{x^4}{4} - \\frac{x^2}{2}\\right]_1^2 = (4 - 2) - \\left(\\frac{1}{4} - \\frac{1}{2}\\right) = 2 + \\frac{1}{4} = \\frac{9}{4}$.",
-    "Total area $= \\frac{1}{4} + \\frac{9}{4} = \\frac{10}{4} = 2.5$."
+    "Solve $x^3 = x$: $x(x^2 - 1) = 0$ gives $x = 0, 1$ (and $-1$, outside the interval). The curves cross at $x = 1$.",
+    "On $[0, 1]$ the line is on top: $\\int_0^1 (x - x^3) \\, dx = \\left[\\frac{x^2}{2} - \\frac{x^4}{4}\\right]_0^1 = \\frac{1}{4}$. On $[1, 2]$ the cubic is on top: $\\int_1^2 (x^3 - x) \\, dx = \\left[\\frac{x^4}{4} - \\frac{x^2}{2}\\right]_1^2 = (4 - 2) - \\left(\\frac{1}{4} - \\frac{1}{2}\\right) = \\frac{9}{4}$.",
+    "Adding the two pieces gives the total area $\\frac{1}{4} + \\frac{9}{4} = \\frac{10}{4} = 2.5$."
   ],
   "alternativeExplanations": [
     {

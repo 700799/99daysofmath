@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Critical numbers are where $f'(x) = 0$ (or undefined). Differentiate first.",
+  "hint": "Critical numbers are where $f'(x) = 0$ or where the derivative is undefined. So the first job is to differentiate.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Critical numbers are where $f'(x) = 0$ (or undefined). Differentiate first."
+      "text": "Critical numbers are where $f'(x) = 0$ or where the derivative is undefined. So the first job is to differentiate."
     },
     {
       "level": "guide",
-      "text": "$f'(x) = 6x^2 - 6x - 12 = 6(x^2 - x - 2)$. Factor the quadratic."
+      "text": "The derivative is $f'(x) = 6x^2 - 6x - 12 = 6(x^2 - x - 2)$. Factor the quadratic and set each factor equal to zero."
     },
     {
       "level": "reveal",
-      "text": "$6(x - 2)(x + 1) = 0$ gives $x = 2$ and $x = -1$: choice A."
+      "text": "Setting $6(x - 2)(x + 1) = 0$ gives $x = 2$ and $x = -1$, which is choice A."
     }
   ],
   "explanation": [
-    "$f'(x) = 6x^2 - 6x - 12$.",
-    "Factor: $6(x^2 - x - 2) = 6(x - 2)(x + 1)$.",
-    "Zeros at $x = 2$ and $x = -1$. (Choice D is where $f'' = 0$, the inflection point — a different thing.)"
+    "Differentiate with the power rule to get $f'(x) = 6x^2 - 6x - 12$, which is defined everywhere.",
+    "Factor the derivative so its zeros can be read off: $6(x^2 - x - 2) = 6(x - 2)(x + 1)$.",
+    "The zeros are at $x = 2$ and $x = -1$, choice A. Choice D is where $f'' = 0$, the inflection point, which is a different thing."
   ],
   "alternativeExplanations": [
     {

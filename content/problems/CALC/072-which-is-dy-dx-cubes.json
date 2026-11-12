@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Differentiate each side. The derivative of $y^3$ is not just $3y^2$ — it is $3y^2 \\frac{dy}{dx}$.",
+  "hint": "Differentiate each side with respect to $x$. Remember that $y$ is a function of $x$, so $y^3$ needs the chain rule.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Differentiate each side. The derivative of $y^3$ is not just $3y^2$ — it is $3y^2 \\frac{dy}{dx}$."
+      "text": "Differentiate each side with respect to $x$. Remember that $y$ is a function of $x$, so $y^3$ needs the chain rule."
     },
     {
       "level": "guide",
-      "text": "$3x^2 + 3y^2 \\frac{dy}{dx} = 0$. Move $3x^2$ across and divide by $3y^2$."
+      "text": "The derivative of $y^3$ is $3y^2 \\frac{dy}{dx}$, so you get $3x^2 + 3y^2 \\frac{dy}{dx} = 0$. Move $3x^2$ across and divide by $3y^2$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{dy}{dx} = -\\frac{3x^2}{3y^2} = -\\frac{x^2}{y^2}$: choice A."
+      "text": "Solving gives $\\frac{dy}{dx} = -\\frac{3x^2}{3y^2} = -\\frac{x^2}{y^2}$, which is choice A."
     }
   ],
   "explanation": [
-    "Differentiate: $\\frac{d}{dx}(x^3) = 3x^2$ and $\\frac{d}{dx}(y^3) = 3y^2 \\, y'$ by the chain rule. The constant $9$ gives $0$.",
-    "So $3x^2 + 3y^2 y' = 0$, hence $y' = -\\frac{x^2}{y^2}$.",
-    "Choice B forgot that $y^3$ has a derivative at all; C dropped the sign; D flipped the fraction."
+    "Differentiate each term: $\\frac{d}{dx}(x^3) = 3x^2$ and $\\frac{d}{dx}(y^3) = 3y^2 \\, y'$ by the chain rule. The constant $9$ gives $0$.",
+    "So $3x^2 + 3y^2 y' = 0$, and solving for the slope gives $y' = -\\frac{x^2}{y^2}$, choice A.",
+    "Choice B forgot that $y^3$ has a derivative at all, C dropped the sign, and D flipped the fraction."
   ],
   "alternativeExplanations": [
     {

@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "This is a PRODUCT of two functions, so you cannot just multiply the two derivatives. Use the product rule: first times derivative of second, plus second times derivative of first.",
+  "hint": "This is a product of two functions, so you cannot just multiply the two derivatives. Which rule handles a product?",
   "hints": [
     {
       "level": "nudge",
-      "text": "This is a PRODUCT of two functions, so you cannot just multiply the two derivatives. Use the product rule: first times derivative of second, plus second times derivative of first."
+      "text": "This is a product of two functions, so you cannot just multiply the two derivatives. Which rule handles a product?"
     },
     {
       "level": "guide",
-      "text": "First $= x^2$ (derivative $2x$). Second $= e^x$ (derivative $e^x$). So $f'(x) = x^2 \\cdot e^x + e^x \\cdot 2x$."
+      "text": "Use the product rule with first factor $x^2$ (derivative $2x$) and second factor $e^x$ (derivative $e^x$). Write first times derivative of second plus second times derivative of first, then factor."
     },
     {
       "level": "reveal",
-      "text": "Factor out $e^x$: $f'(x) = (x^2 + 2x) e^x$. Choice A."
+      "text": "The product rule gives $x^2 e^x + 2x e^x$, and factoring out $e^x$ gives $f'(x) = (x^2 + 2x) e^x$, which is choice A."
     }
   ],
   "explanation": [
-    "Product rule: $(uv)' = u'v + uv'$ with $u = x^2$ and $v = e^x$.",
-    "$u' = 2x$ and $v' = e^x$, so $f'(x) = 2x e^x + x^2 e^x$.",
-    "Factor: $(x^2 + 2x) e^x$. Choice B is the trap of multiplying the derivatives; C forgot to differentiate at all."
+    "The function is a product, so use the product rule $(uv)' = u'v + uv'$ with $u = x^2$ and $v = e^x$.",
+    "The two derivatives are $u' = 2x$ and $v' = e^x$, so the rule gives $f'(x) = 2x e^x + x^2 e^x$.",
+    "Factoring out $e^x$ gives $(x^2 + 2x) e^x$, choice A. Choice B is the trap of multiplying the derivatives, and C forgot to differentiate at all."
   ],
   "alternativeExplanations": [
     {

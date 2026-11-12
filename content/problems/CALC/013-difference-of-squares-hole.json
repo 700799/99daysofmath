@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "Direct substitution gives $\\frac{0}{0}$, an indeterminate form.",
-    "Factor: $\\frac{(x - 4)(x + 4)}{x - 4} = x + 4$ for every $x \\ne 4$.",
-    "The limit only cares about $x \\ne 4$, so $\\lim_{x \\to 4} (x + 4) = 8$."
+    "Direct substitution gives $\\frac{0}{0}$, an indeterminate form, so the fraction must be simplified first.",
+    "Factor the top as a difference of squares: $\\frac{(x - 4)(x + 4)}{x - 4} = x + 4$ for every $x \\ne 4$.",
+    "A limit only looks at $x$-values near $4$, not at $4$ itself, so $\\lim_{x \\to 4} (x + 4) = 8$."
   ],
   "alternativeExplanations": [
     {

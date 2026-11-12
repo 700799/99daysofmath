@@ -14,25 +14,25 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.01,
-  "hint": "The rate of change is $H'(t)$. The $5$ is a constant, and $\\sin$ of an inside function $\\frac{\\pi}{6}t$ needs the chain rule.",
+  "hint": "The rate of change is $H'(t)$. The $5$ is a constant, and the sine of the inside function $\\frac{\\pi}{6}t$ needs the chain rule.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The rate of change is $H'(t)$. The $5$ is a constant, and $\\sin$ of an inside function $\\frac{\\pi}{6}t$ needs the chain rule."
+      "text": "The rate of change is $H'(t)$. The $5$ is a constant, and the sine of the inside function $\\frac{\\pi}{6}t$ needs the chain rule."
     },
     {
       "level": "guide",
-      "text": "$H'(t) = 2\\cos\\left(\\frac{\\pi}{6}t\\right) \\cdot \\frac{\\pi}{6} = \\frac{\\pi}{3}\\cos\\left(\\frac{\\pi}{6}t\\right)$. Substitute $t = 2$, so the angle is $\\frac{\\pi}{3}$."
+      "text": "The chain rule gives $H'(t) = 2\\cos\\left(\\frac{\\pi}{6}t\\right) \\cdot \\frac{\\pi}{6} = \\frac{\\pi}{3}\\cos\\left(\\frac{\\pi}{6}t\\right)$. Substitute $t = 2$, so the angle is $\\frac{\\pi}{3}$, and evaluate the cosine."
     },
     {
       "level": "reveal",
-      "text": "$\\cos\\frac{\\pi}{3} = \\frac{1}{2}$, so $H'(2) = \\frac{\\pi}{3} \\cdot \\frac{1}{2} = \\frac{\\pi}{6} \\approx 0.52$ m per hour."
+      "text": "Since $\\cos\\frac{\\pi}{3} = \\frac{1}{2}$, the rate is $H'(2) = \\frac{\\pi}{3} \\cdot \\frac{1}{2} = \\frac{\\pi}{6} \\approx 0.52$ meters per hour."
     }
   ],
   "explanation": [
     "The constant $5$ differentiates to $0$. For $2\\sin\\left(\\frac{\\pi}{6}t\\right)$, the outside gives $2\\cos\\left(\\frac{\\pi}{6}t\\right)$ and the inside derivative is $\\frac{\\pi}{6}$.",
-    "So $H'(t) = \\frac{\\pi}{3}\\cos\\left(\\frac{\\pi}{6}t\\right)$.",
-    "At $t = 2$: $\\frac{\\pi}{3}\\cos\\frac{\\pi}{3} = \\frac{\\pi}{3} \\cdot \\frac{1}{2} = \\frac{\\pi}{6} \\approx 0.52$. The tide is still rising at 2 a.m., about half a meter per hour."
+    "Multiplying the outside and inside pieces gives $H'(t) = \\frac{\\pi}{3}\\cos\\left(\\frac{\\pi}{6}t\\right)$.",
+    "At $t = 2$ this is $\\frac{\\pi}{3}\\cos\\frac{\\pi}{3} = \\frac{\\pi}{3} \\cdot \\frac{1}{2} = \\frac{\\pi}{6} \\approx 0.52$. The tide is still rising at 2 a.m., about half a meter per hour."
   ],
   "alternativeExplanations": [
     {

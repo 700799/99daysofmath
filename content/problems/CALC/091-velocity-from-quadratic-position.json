@@ -10,24 +10,24 @@
   "primaryAnswer": "-4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Velocity is the derivative of position: $v(t) = s'(t)$.",
+  "hint": "Velocity tells how fast position changes. Which operation turns a position function into a velocity function?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Velocity is the derivative of position: $v(t) = s'(t)$."
+      "text": "Velocity tells how fast position changes. Which operation turns a position function into a velocity function?"
     },
     {
       "level": "guide",
-      "text": "$v(t) = 2t - 6$. Substitute $t = 1$."
+      "text": "Velocity is the derivative of position, so $v(t) = s'(t) = 2t - 6$. Substitute $t = 1$ into this velocity function."
     },
     {
       "level": "reveal",
-      "text": "$v(1) = 2 - 6 = -4$ m/s. The particle is moving in the negative direction."
+      "text": "The velocity is $v(1) = 2 - 6 = -4$ m/s. The particle is moving in the negative direction."
     }
   ],
   "explanation": [
-    "$v(t) = s'(t) = 2t - 6$.",
-    "$v(1) = 2(1) - 6 = -4$.",
+    "Velocity is the derivative of position, so the power rule gives $v(t) = s'(t) = 2t - 6$.",
+    "Substitute the time $t = 1$ into the velocity: $v(1) = 2(1) - 6 = -4$.",
     "The velocity is $-4$ m/s: at that instant the particle moves left (toward smaller $s$) at $4$ m/s."
   ],
   "alternativeExplanations": [

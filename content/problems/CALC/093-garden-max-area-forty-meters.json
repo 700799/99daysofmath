@@ -10,25 +10,25 @@
   "primaryAnswer": "100",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Call the width $x$. Then the length is $20 - x$ (half the fence goes to one width plus one length). Write the area as a function of $x$.",
+  "hint": "Call the width $x$. The perimeter is fixed at $40$, so the length depends on $x$. Write the area as a function of $x$ alone.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Call the width $x$. Then the length is $20 - x$ (half the fence goes to one width plus one length). Write the area as a function of $x$."
+      "text": "Call the width $x$. The perimeter is fixed at $40$, so the length depends on $x$. Write the area as a function of $x$ alone."
     },
     {
       "level": "guide",
-      "text": "$A(x) = x(20 - x) = 20x - x^2$. Set $A'(x) = 20 - 2x = 0$."
+      "text": "One width plus one length is half the fence, so the length is $20 - x$ and $A(x) = x(20 - x) = 20x - x^2$. Set the derivative $A'(x) = 20 - 2x$ equal to $0$."
     },
     {
       "level": "reveal",
-      "text": "$x = 10$, so the garden is $10 \\times 10$ and the area is $100$ m²."
+      "text": "The derivative is zero at $x = 10$, so the garden is $10$ by $10$ and the largest area is $100$ square meters."
     }
   ],
   "explanation": [
-    "Constraint: $2x + 2y = 40$, so $y = 20 - x$. Area: $A(x) = x(20 - x) = 20x - x^2$.",
-    "$A'(x) = 20 - 2x = 0$ gives $x = 10$. Since $A'' = -2 < 0$, this is a maximum.",
-    "Maximum area: $A(10) = 10 \\cdot 10 = 100$ m² — a square."
+    "The fence gives the constraint $2x + 2y = 40$, so $y = 20 - x$. The area is then $A(x) = x(20 - x) = 20x - x^2$.",
+    "Setting $A'(x) = 20 - 2x = 0$ gives $x = 10$. Since $A'' = -2 < 0$, this is a maximum.",
+    "The maximum area is $A(10) = 10 \\cdot 10 = 100$ square meters, and the best rectangle is a square."
   ],
   "alternativeExplanations": [
     {

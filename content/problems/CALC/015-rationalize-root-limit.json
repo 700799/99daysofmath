@@ -14,25 +14,25 @@
   ],
   "acceptanceMode": "numeric-tolerance",
   "numericTolerance": 0.001,
-  "hint": "Substitution gives $\\frac{0}{0}$. With a square root on top, multiply top and bottom by the conjugate $\\sqrt{x} + 3$.",
+  "hint": "Substitution gives $\\frac{0}{0}$. When a square root sits in the numerator, which expression can you multiply by to clear it?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Substitution gives $\\frac{0}{0}$. With a square root on top, multiply top and bottom by the conjugate $\\sqrt{x} + 3$."
+      "text": "Substitution gives $\\frac{0}{0}$. When a square root sits in the numerator, which expression can you multiply by to clear it?"
     },
     {
       "level": "guide",
-      "text": "$(\\sqrt{x} - 3)(\\sqrt{x} + 3) = x - 9$, which cancels the bottom. You are left with $\\frac{1}{\\sqrt{x} + 3}$."
+      "text": "Multiply top and bottom by the conjugate $\\sqrt{x} + 3$. The top becomes $x - 9$, which cancels the bottom and leaves $\\frac{1}{\\sqrt{x} + 3}$. Now substitute $x = 9$."
     },
     {
       "level": "reveal",
-      "text": "At $x = 9$: $\\frac{1}{\\sqrt{9} + 3} = \\frac{1}{6}$."
+      "text": "At $x = 9$ the simplified fraction is $\\frac{1}{\\sqrt{9} + 3} = \\frac{1}{6}$, so the limit is $\\frac{1}{6}$."
     }
   ],
   "explanation": [
-    "Multiply by $\\frac{\\sqrt{x} + 3}{\\sqrt{x} + 3}$. The top becomes $x - 9$.",
-    "Now $\\frac{x - 9}{(x - 9)(\\sqrt{x} + 3)} = \\frac{1}{\\sqrt{x} + 3}$ for $x \\ne 9$.",
-    "Substitute $x = 9$: $\\frac{1}{3 + 3} = \\frac{1}{6}$."
+    "Multiply top and bottom by the conjugate $\\sqrt{x} + 3$. The top becomes $(\\sqrt{x})^2 - 3^2 = x - 9$, with no root left.",
+    "The factor $x - 9$ now cancels with the bottom: $\\frac{x - 9}{(x - 9)(\\sqrt{x} + 3)} = \\frac{1}{\\sqrt{x} + 3}$ whenever $x \\ne 9$.",
+    "The simplified form is continuous at $9$, so substitute: $\\frac{1}{3 + 3} = \\frac{1}{6}$ is the limit."
   ],
   "alternativeExplanations": [
     {

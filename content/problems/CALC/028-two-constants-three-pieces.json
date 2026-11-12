@@ -10,11 +10,11 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Continuity at $1$ means BOTH one-sided limits must equal $f(1) = 5$. That gives you two separate equations.",
+  "hint": "Continuity at $1$ means both one-sided limits must equal $f(1) = 5$. That gives you two separate equations.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Continuity at $1$ means BOTH one-sided limits must equal $f(1) = 5$. That gives you two separate equations."
+      "text": "Continuity at $1$ means both one-sided limits must equal $f(1) = 5$. That gives you two separate equations."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Left: $1^2 + a = 5$. Right: $b(1) + 2 = 5$. Solve each."
+      "text": "The left piece needs $1^2 + a = 5$ and the right piece needs $b(1) + 2 = 5$. Solve each equation, then add the two results."
     },
     {
       "level": "reveal",
-      "text": "$a = 4$ and $b = 3$, so $a + b = 7$."
+      "text": "The equations give $a = 4$ and $b = 3$, so $a + b = 7$."
     }
   ],
   "explanation": [
-    "Left-hand limit: $\\lim_{x \\to 1^-} (x^2 + a) = 1 + a$. Set equal to $f(1) = 5$: $a = 4$.",
-    "Right-hand limit: $\\lim_{x \\to 1^+} (bx + 2) = b + 2$. Set equal to $5$: $b = 3$.",
-    "So $a + b = 4 + 3 = 7$."
+    "The left-hand limit is $\\lim_{x \\to 1^-} (x^2 + a) = 1 + a$. Continuity makes it equal $f(1) = 5$, so $a = 4$.",
+    "The right-hand limit is $\\lim_{x \\to 1^+} (bx + 2) = b + 2$. It must also equal $5$, so $b = 3$.",
+    "Adding the two values gives the requested sum, $a + b = 4 + 3 = 7$."
   ],
   "alternativeExplanations": [
     {

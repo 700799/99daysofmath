@@ -12,25 +12,25 @@
     "-0.4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The term $xy$ is a product of two changing things, so it needs the product rule: $y + x y'$.",
+  "hint": "The term $xy$ is a product of two changing things, so it needs the product rule when you differentiate implicitly.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The term $xy$ is a product of two changing things, so it needs the product rule: $y + x y'$."
+      "text": "The term $xy$ is a product of two changing things, so it needs the product rule when you differentiate implicitly."
     },
     {
       "level": "guide",
-      "text": "Differentiating gives $y + x y' + 2y y' = 0$. Collect the $y'$ terms: $y'(x + 2y) = -y$."
+      "text": "Differentiating gives $y + x y' + 2y y' = 0$. Collect the $y'$ terms to get $y'(x + 2y) = -y$, then divide and substitute $x = 1$, $y = 2$."
     },
     {
       "level": "reveal",
-      "text": "$y' = \\frac{-y}{x + 2y} = \\frac{-2}{1 + 4} = -\\frac{2}{5}$."
+      "text": "The slope is $y' = \\frac{-y}{x + 2y} = \\frac{-2}{1 + 4}$, so $\\frac{dy}{dx} = -\\frac{2}{5}$ at the point."
     }
   ],
   "explanation": [
-    "Differentiate each term: $\\frac{d}{dx}(xy) = y + x y'$ (product rule), $\\frac{d}{dx}(y^2) = 2y y'$, $\\frac{d}{dx}(6) = 0$.",
-    "So $y + x y' + 2y y' = 0$. Factor: $y'(x + 2y) = -y$, giving $y' = -\\frac{y}{x + 2y}$.",
-    "At $(1, 2)$: $y' = -\\frac{2}{1 + 4} = -\\frac{2}{5}$."
+    "Differentiate each term with respect to $x$: $\\frac{d}{dx}(xy) = y + x y'$ (product rule), $\\frac{d}{dx}(y^2) = 2y y'$, $\\frac{d}{dx}(6) = 0$.",
+    "So $y + x y' + 2y y' = 0$. Factoring out the slope gives $y'(x + 2y) = -y$, so $y' = -\\frac{y}{x + 2y}$.",
+    "At the point $(1, 2)$ the slope is $y' = -\\frac{2}{1 + 4} = -\\frac{2}{5}$."
   ],
   "alternativeExplanations": [
     {

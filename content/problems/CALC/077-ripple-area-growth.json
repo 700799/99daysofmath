@@ -10,25 +10,25 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Start with $A = \\pi r^2$ and differentiate with respect to time. Remember the chain rule on $r^2$.",
+  "hint": "Start with the area formula for a circle and differentiate it with respect to time. Remember the chain rule on $r^2$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Start with $A = \\pi r^2$ and differentiate with respect to time. Remember the chain rule on $r^2$."
+      "text": "Start with the area formula for a circle and differentiate it with respect to time. Remember the chain rule on $r^2$."
     },
     {
       "level": "guide",
-      "text": "$\\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt}$. Substitute $r = 10$ and $\\frac{dr}{dt} = 3$."
+      "text": "From $A = \\pi r^2$ you get $\\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt}$. Substitute the radius $r = 10$ and the rate $\\frac{dr}{dt} = 3$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{dA}{dt} = 2\\pi(10)(3) = 60\\pi$, so $k = 60$."
+      "text": "The area grows at $\\frac{dA}{dt} = 2\\pi(10)(3) = 60\\pi$ square cm per second, so $k = 60$."
     }
   ],
   "explanation": [
-    "$A = \\pi r^2$, so $\\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt}$.",
-    "At the moment $r = 10$ with $\\frac{dr}{dt} = 3$: $\\frac{dA}{dt} = 2\\pi \\cdot 10 \\cdot 3 = 60\\pi$ cm²/s.",
-    "So $k = 60$. Unlike the circumference, the area's growth rate depends on the current radius — a bigger ripple sweeps out area faster."
+    "The area is $A = \\pi r^2$, so by the chain rule $\\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt}$.",
+    "At the moment $r = 10$ with $\\frac{dr}{dt} = 3$, the rate is $\\frac{dA}{dt} = 2\\pi \\cdot 10 \\cdot 3 = 60\\pi$ square cm per second.",
+    "So $k = 60$. Unlike the circumference, the growth rate of the area depends on the current radius: a bigger ripple sweeps out area faster."
   ],
   "alternativeExplanations": [
     {

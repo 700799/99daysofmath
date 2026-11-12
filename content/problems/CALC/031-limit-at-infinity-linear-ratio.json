@@ -10,25 +10,25 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "When $x$ is huge, the $+1$ and the $-2$ are crumbs. Only the leading terms matter.",
+  "hint": "When $x$ is huge, the $+1$ and the $-2$ barely matter. Which terms control the size of the top and the bottom?",
   "hints": [
     {
       "level": "nudge",
-      "text": "When $x$ is huge, the $+1$ and the $-2$ are crumbs. Only the leading terms matter."
+      "text": "When $x$ is huge, the $+1$ and the $-2$ barely matter. Which terms control the size of the top and the bottom?"
     },
     {
       "level": "guide",
-      "text": "Compare the leading terms: $\\frac{3x}{x}$."
+      "text": "Top and bottom both have degree one, so compare the leading terms $3x$ and $x$ and simplify the ratio $\\frac{3x}{x}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{3x}{x} = 3$, so the limit is $3$."
+      "text": "The ratio of leading terms is $\\frac{3x}{x} = 3$, so the limit is $3$."
     }
   ],
   "explanation": [
-    "Divide top and bottom by $x$: $\\frac{3 + \\frac{1}{x}}{1 - \\frac{2}{x}}$.",
-    "As $x \\to \\infty$, both $\\frac{1}{x}$ and $\\frac{2}{x}$ go to $0$.",
-    "The fraction heads to $\\frac{3}{1} = 3$."
+    "Divide top and bottom by $x$, the highest power, to get $\\frac{3 + \\frac{1}{x}}{1 - \\frac{2}{x}}$.",
+    "As $x \\to \\infty$, both small fractions $\\frac{1}{x}$ and $\\frac{2}{x}$ shrink and go to $0$.",
+    "The fraction heads to $\\frac{3}{1} = 3$, so the limit is $3$."
   ],
   "alternativeExplanations": [
     {

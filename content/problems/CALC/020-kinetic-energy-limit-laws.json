@@ -10,11 +10,11 @@
   "primaryAnswer": "54",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The limit laws let you handle products and powers piece by piece: limit of a product is the product of the limits, limit of a square is the square of the limit.",
+  "hint": "The limit laws let you handle products and powers piece by piece: the limit of a product is the product of the limits, and the limit of a square is the square of the limit.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The limit laws let you handle products and powers piece by piece: limit of a product is the product of the limits, limit of a square is the square of the limit."
+      "text": "The limit laws let you handle products and powers piece by piece: the limit of a product is the product of the limits, and the limit of a square is the square of the limit."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\lim K = \\frac{1}{2} \\cdot \\lim m \\cdot (\\lim v)^2 = \\frac{1}{2} \\cdot 3 \\cdot 36$."
+      "text": "Replace each changing quantity by its limit: the mass by $3$ and the speed by $6$. That gives $\\frac{1}{2} \\cdot 3 \\cdot 6^2$, which you still need to multiply out."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2} \\cdot 3 \\cdot 36 = 54$ joules."
+      "text": "Since $\\frac{1}{2} \\cdot 3 \\cdot 36 = 54$, the kinetic energy approaches $54$ joules."
     }
   ],
   "explanation": [
-    "Power law: $\\lim v(t)^2 = (\\lim v(t))^2 = 36$.",
-    "Product and constant laws: $\\lim K(t) = \\frac{1}{2} \\cdot 3 \\cdot 36$.",
-    "$= 54$ joules."
+    "By the power law, the limit of the squared speed is $\\lim v(t)^2 = (\\lim v(t))^2 = 6^2 = 36$.",
+    "By the product and constant multiple laws, $\\lim K(t) = \\frac{1}{2} \\cdot 3 \\cdot 36$.",
+    "Multiplying gives $54$, so the kinetic energy approaches $54$ joules."
   ],
   "alternativeExplanations": [
     {

@@ -10,20 +10,20 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The famous fact is $\\lim_{u \\to 0} \\frac{\\sin u}{u} = 1$. Make the bottom match the inside of the sine.",
+  "hint": "The key fact is $\\lim_{u \\to 0} \\frac{\\sin u}{u} = 1$. It only works when the bottom matches the inside of the sine exactly.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The famous fact is $\\lim_{u \\to 0} \\frac{\\sin u}{u} = 1$. Make the bottom match the inside of the sine."
+      "text": "The key fact is $\\lim_{u \\to 0} \\frac{\\sin u}{u} = 1$. It only works when the bottom matches the inside of the sine exactly."
     },
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Warm up with $\\frac{\\sin(2x)}{x}$: write it as $2 \\cdot \\frac{\\sin(2x)}{2x}$. The fraction heads to $1$, so the limit is $2$. Same move with $3$."
+      "text": "Warm up with $\\frac{\\sin(2x)}{x}$: write it as $2 \\cdot \\frac{\\sin(2x)}{2x}$. The fraction heads to $1$, so that limit is $2$. Make the same move with $3$."
     },
     {
       "level": "guide",
-      "text": "Multiply top and bottom by $3$: $\\frac{\\sin(3x)}{x} = 3 \\cdot \\frac{\\sin(3x)}{3x}$. Let $u = 3x$."
+      "text": "Multiply top and bottom by $3$ to get $\\frac{\\sin(3x)}{x} = 3 \\cdot \\frac{\\sin(3x)}{3x}$. Now let $u = 3x$ and use the key fact on the fraction."
     },
     {
       "level": "reveal",
@@ -31,9 +31,9 @@
     }
   ],
   "explanation": [
-    "Rewrite: $\\frac{\\sin(3x)}{x} = 3 \\cdot \\frac{\\sin(3x)}{3x}$.",
+    "Rewrite the fraction so the bottom matches the angle: $\\frac{\\sin(3x)}{x} = 3 \\cdot \\frac{\\sin(3x)}{3x}$.",
     "With $u = 3x$, the fraction is $\\frac{\\sin u}{u}$, which heads to $1$ as $u \\to 0$.",
-    "So the limit is $3 \\cdot 1 = 3$."
+    "The constant $3$ stays in front, so the limit is $3 \\cdot 1 = 3$."
   ],
   "alternativeExplanations": [
     {

@@ -12,25 +12,25 @@
     "81/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Rotating about the $y$-axis means slicing horizontally: discs stacked along $y$. Their radius is the $x$-distance to the curve, so solve $y = x^2$ for $x$.",
+  "hint": "Rotating about the $y$-axis means slicing horizontally, with discs stacked along $y$. The radius of each disc is the $x$-distance to the curve.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Rotating about the $y$-axis means slicing horizontally: discs stacked along $y$. Their radius is the $x$-distance to the curve, so solve $y = x^2$ for $x$."
+      "text": "Rotating about the $y$-axis means slicing horizontally, with discs stacked along $y$. The radius of each disc is the $x$-distance to the curve."
     },
     {
       "level": "guide",
-      "text": "$x = \\sqrt{y}$, so $r^2 = y$. $V = \\pi \\int_0^9 y \\, dy$."
+      "text": "Solve $y = x^2$ for $x$ to get the radius $x = \\sqrt{y}$, so $r^2 = y$. The volume is $V = \\pi \\int_0^9 y \\, dy$, which you still need to evaluate."
     },
     {
       "level": "reveal",
-      "text": "$\\pi \\left[\\frac{y^2}{2}\\right]_0^9 = \\frac{81\\pi}{2}$, so $k = 40.5$."
+      "text": "The volume of the solid is $\\pi \\left[\\frac{y^2}{2}\\right]_0^9 = \\frac{81\\pi}{2}$, so $k = 40.5$."
     }
   ],
   "explanation": [
     "For rotation about the $y$-axis, integrate with respect to $y$. The disc at height $y$ has radius $x = \\sqrt{y}$.",
-    "$V = \\pi \\int_0^9 (\\sqrt{y})^2 \\, dy = \\pi \\int_0^9 y \\, dy = \\pi \\cdot \\frac{81}{2}$.",
-    "$k = \\frac{81}{2} = 40.5$. The solid is a bowl (paraboloid) $9$ units deep with rim radius $3$."
+    "The disc method, with the radius squared equal to $y$, gives $V = \\pi \\int_0^9 (\\sqrt{y})^2 \\, dy = \\pi \\int_0^9 y \\, dy = \\pi \\cdot \\frac{81}{2}$.",
+    "So $k = \\frac{81}{2} = 40.5$. The solid is a bowl (paraboloid) $9$ units deep with rim radius $3$."
   ],
   "alternativeExplanations": [
     {

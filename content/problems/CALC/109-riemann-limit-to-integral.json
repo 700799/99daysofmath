@@ -32,11 +32,11 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Match the pieces of a right Riemann sum: $\\Delta x = \\frac{b - a}{n}$ and $x_k = a + k\\Delta x$.",
+  "hint": "Match the pieces of a right Riemann sum: the width $\\Delta x = \\frac{b - a}{n}$ and the sample point $x_k = a + k\\Delta x$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Match the pieces of a right Riemann sum: $\\Delta x = \\frac{b - a}{n}$ and $x_k = a + k\\Delta x$."
+      "text": "Match the pieces of a right Riemann sum: the width $\\Delta x = \\frac{b - a}{n}$ and the sample point $x_k = a + k\\Delta x$."
     },
     {
       "level": "nudge",
@@ -49,7 +49,7 @@
     },
     {
       "level": "reveal",
-      "text": "$a = 2$, $b = 5$, $f(x) = x^2$: $\\int_2^5 x^2 \\, dx$, choice A."
+      "text": "With $a = 2$, $b = 5$ and $f(x) = x^2$, the limit is $\\int_2^5 x^2 \\, dx$, which is choice A."
     }
   ],
   "explanation": [
