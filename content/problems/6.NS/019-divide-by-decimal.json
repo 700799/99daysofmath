@@ -10,28 +10,31 @@
   "primaryAnswer": "5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiply both numbers by $10$ to remove the decimal in the divisor.",
+  "hint": "A division keeps the same answer when both numbers are multiplied by the same amount. What could you multiply by to make the divisor a whole number?",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Rewrite the numbers in matching form (all fractions OR all decimals) before you operate."
+      "text": "Read the division as a counting question: how many groups of three tenths fit into fifteen tenths?"
     },
     {
       "level": "nudge",
-      "text": "Multiply both numbers by $10$ to remove the decimal in the divisor."
+      "text": "A division keeps the same answer when both numbers are multiplied by the same amount. What could you multiply by to make the divisor a whole number?"
     },
     {
       "level": "guide",
-      "text": "$1.5 \\div 0.3 = 15 \\div 3$."
+      "text": "Multiply both $1.5$ and $0.3$ by $10$. The problem becomes $15 \\div 3$, which has the same quotient."
     },
     {
       "level": "reveal",
-      "text": "$15 \\div 3 = 5$."
+      "text": "$15 \\div 3 = 5$, so the answer to $1.5 \\div 0.3$ is also $5$."
     }
   ],
   "explanation": [
-    "$1.5 \\div 0.3 = \\frac{15}{3} = 5$."
+    "Dividing by a decimal is easier after the divisor is turned into a whole number.",
+    "Multiply both numbers by $10$. This does not change the quotient, and it turns $1.5 \\div 0.3$ into $15 \\div 3$.",
+    "Now divide the whole numbers in the usual way: $15 \\div 3 = 5$.",
+    "So $1.5 \\div 0.3 = 5$. You can check by multiplying back: $0.3 \\times 5 = 1.5$."
   ],
   "tags": [
     "decimal",

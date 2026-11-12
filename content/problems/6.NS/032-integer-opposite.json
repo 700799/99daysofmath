@@ -13,7 +13,7 @@
     "+14"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find $a$ first, then $b$. The opposite of a positive number is negative.",
+  "hint": "Work in the order the problem gives. Find $a$ from the first sentence, then use that value of $a$ to find $b$. Each \"opposite\" just changes the sign.",
   "hints": [
     {
       "level": "nudge",
@@ -22,22 +22,22 @@
     },
     {
       "level": "nudge",
-      "text": "Step 1: opposite of $-7$ is $+7$, so $a = 7$. Step 2: opposite of $a$ flips it again."
+      "text": "Work in the order the problem gives. Find $a$ from the first sentence, then use that value of $a$ to find $b$. Each \"opposite\" just changes the sign."
     },
     {
       "level": "guide",
-      "text": "$a = -(-7) = 7$. $b = -(a) = -7$. So $a - b = 7 - (-7) = 7 + 7 = 14$."
+      "text": "The opposite of $-7$ is $7$, so $a = 7$. The opposite of $7$ is $-7$, so $b = -7$. Now set up $a - b = 7 - (-7)$ and remember that subtracting a negative means adding."
     },
     {
       "level": "reveal",
-      "text": "$a - b = 14$."
+      "text": "$7 - (-7) = 7 + 7 = 14$, so the value of $a - b$ is $14$."
     }
   ],
   "explanation": [
-    "The **opposite** of a number $n$ is $-n$ — same distance from $0$, flipped side.",
-    "Opposite of $-7$: $-(-7) = 7$. So $a = 7$.",
-    "Opposite of $a = 7$: $-(7) = -7$. So $b = -7$.",
-    "Compute $a - b = 7 - (-7) = 7 + 7 = 14$."
+    "The **opposite** of a number is the same distance from $0$ on the other side, so it has the other sign.",
+    "The opposite of $-7$ is $-(-7) = 7$, which means $a = 7$.",
+    "The opposite of $a = 7$ is $-7$, which means $b = -7$.",
+    "Now compute $a - b = 7 - (-7)$. Subtracting a negative is the same as adding, so this is $7 + 7 = 14$, and the answer is $14$."
   ],
   "tags": [
     "integer",

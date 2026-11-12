@@ -14,24 +14,26 @@
     "9.00"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Add carefully — line up decimals.",
+  "hint": "A total means adding all three prices. With money, keep the decimal points lined up so cents are added to cents.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Add carefully — line up decimals."
+      "text": "A total means adding all three prices. With money, keep the decimal points lined up so cents are added to cents."
     },
     {
       "level": "guide",
-      "text": "$4.75 + 3.20 = 7.95$."
+      "text": "Add two prices first, for example $4.75 + 3.20$. Then add $1.05$ to that result, carrying when a column passes $9$."
     },
     {
       "level": "reveal",
-      "text": "$7.95 + 1.05 = 9.00$."
+      "text": "$4.75 + 3.20 = 7.95$ and $7.95 + 1.05 = 9.00$, so the total is $9$ dollars."
     }
   ],
   "explanation": [
-    "$4.75 + 3.20 = 7.95$.",
-    "$7.95 + 1.05 = 9.00$."
+    "To find the total, add the three prices with their decimal points lined up.",
+    "Add the first two prices together: $4.75 + 3.20 = 7.95$.",
+    "Add the third price: $7.95 + 1.05$. The cents make $95 + 5 = 100$ cents, which is one more dollar.",
+    "So $7.95 + 1.05 = 9.00$, and the total cost is $9$ dollars."
   ],
   "tags": [
     "CA",

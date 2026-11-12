@@ -13,24 +13,26 @@
     "-30 ft"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Below\" sea level means negative.",
+  "hint": "Integers can show direction as well as size. Decide which direction from sea level counts as positive and which as negative.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Below\" sea level means negative."
+      "text": "Integers can show direction as well as size. Decide which direction from sea level counts as positive and which as negative."
     },
     {
       "level": "guide",
-      "text": "Sea level is $0$. Below is negative."
+      "text": "Sea level is $0$. Heights above it are positive and depths below it are negative, so attach the correct sign to $30$."
     },
     {
       "level": "reveal",
-      "text": "$-30$ feet."
+      "text": "The diver is below sea level, so the integer is $-30$."
     }
   ],
   "explanation": [
-    "Below sea level is negative.",
-    "Answer: $-30$ feet."
+    "Sea level is the reference point, so it is represented by the integer $0$.",
+    "Positions above sea level are positive and positions below sea level are negative.",
+    "The diver is $30$ feet below, so the size is $30$ and the sign is negative.",
+    "The integer that represents the diver's position is $-30$."
   ],
   "tags": [
     "integer",

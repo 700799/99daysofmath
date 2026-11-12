@@ -12,24 +12,25 @@
     "5 units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Same x-value means vertical.",
+  "hint": "The two points share a coordinate. See which one it is, because that tells you whether the segment is vertical or horizontal.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same x-value means vertical."
+      "text": "The two points share a coordinate. See which one it is, because that tells you whether the segment is vertical or horizontal."
     },
     {
       "level": "guide",
-      "text": "Subtract the y-values: $|7 - 2|$."
+      "text": "Both points have $x = 3$, so the segment is vertical. The distance is the difference of the $y$-values, $|7 - 2|$."
     },
     {
       "level": "reveal",
-      "text": "$|7 - 2| = 5$."
+      "text": "$|7 - 2| = 5$, so the distance is $5$ units."
     }
   ],
   "explanation": [
-    "Both points share $x = 3$ → vertical segment.",
-    "$|7 - 2| = 5$ units."
+    "Both points have $x = 3$, so they lie on the same vertical line.",
+    "For points on a vertical line, the distance is the absolute value of the difference of the $y$-values.",
+    "Compute it: $|7 - 2| = 5$. The distance is $5$ units."
   ],
   "tags": [
     "coordinate-plane",

@@ -10,23 +10,26 @@
   "primaryAnswer": "10",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$y$ is the same, so distance is the $x$ difference (absolute value).",
+  "hint": "Compare the coordinates of the two points. One of them is the same in both, which tells you the direction of the segment.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$y$ is the same, so distance is the $x$ difference (absolute value)."
+      "text": "Compare the coordinates of the two points. One of them is the same in both, which tells you the direction of the segment."
     },
     {
       "level": "guide",
-      "text": "$|6 - (-4)| = ?$"
+      "text": "Both points have $y = 1$, so the segment is horizontal and the distance is the gap between $x = -4$ and $x = 6$. Set up $|6 - (-4)|$."
     },
     {
       "level": "reveal",
-      "text": "$|10| = 10$."
+      "text": "$|6 - (-4)| = |6 + 4| = 10$, so the distance is $10$ units."
     }
   ],
   "explanation": [
-    "Same $y$, so distance $= |6 - (-4)| = 10$."
+    "Both points have the same $y$-coordinate, $1$, so they lie on a horizontal line.",
+    "On a horizontal line the distance is the absolute value of the difference of the $x$-values: $|6 - (-4)|$.",
+    "Subtracting $-4$ is the same as adding $4$, so the difference is $6 + 4 = 10$.",
+    "The distance between $(-4, 1)$ and $(6, 1)$ is $10$ units."
   ],
   "tags": [
     "coordinate",

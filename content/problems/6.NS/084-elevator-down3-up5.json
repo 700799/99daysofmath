@@ -13,25 +13,26 @@
     "2 floors up"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Down is negative, up is positive.",
+  "hint": "Give each movement a sign. Decide which direction is positive and which is negative, then combine the two moves.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Down is negative, up is positive."
+      "text": "Give each movement a sign. Decide which direction is positive and which is negative, then combine the two moves."
     },
     {
       "level": "guide",
-      "text": "$-3 + 5$."
+      "text": "Going down $3$ floors is $-3$ and going up $5$ floors is $+5$. The net change is the sum $-3 + 5$."
     },
     {
       "level": "reveal",
-      "text": "$+2$."
+      "text": "$-3 + 5 = 2$, so the net change is $2$ floors up."
     }
   ],
   "explanation": [
-    "Down $3 \\to -3$. Up $5 \\to +5$.",
-    "$-3 + 5 = 2$.",
-    "Net: $2$ floors up."
+    "Write each move as an integer: down $3$ floors is $-3$ and up $5$ floors is $+5$.",
+    "The net change is the sum of the moves: $-3 + 5$.",
+    "Going up $5$ cancels the $3$ floors down and leaves $2$ more, so $-3 + 5 = 2$.",
+    "The net change is $2$ floors up."
   ],
   "tags": [
     "integer",

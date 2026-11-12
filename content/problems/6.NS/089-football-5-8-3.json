@@ -10,30 +10,31 @@
   "primaryAnswer": "0",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Gains are $+$, losses are $-$.",
+  "hint": "Net yardage combines every play into one number. Decide what sign a gain should have and what sign a loss should have.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Plot each number on a quick number line. Distances and order get obvious right away."
+      "text": "Try only the first two plays: gaining $5$ and then losing $8$ leaves the team $3$ yards behind. Now include the last play."
     },
     {
       "level": "nudge",
-      "text": "Gains are $+$, losses are $-$."
+      "text": "Net yardage combines every play into one number. Decide what sign a gain should have and what sign a loss should have."
     },
     {
       "level": "guide",
-      "text": "$5 - 8 + 3$."
+      "text": "Write the gains as positive and the loss as negative: $5 - 8 + 3$. Work from left to right, or add the two gains first."
     },
     {
       "level": "reveal",
-      "text": "$0$."
+      "text": "$5 - 8 = -3$ and $-3 + 3 = 0$, so the net yardage is $0$ yards."
     }
   ],
   "explanation": [
-    "$5 - 8 = -3$.",
-    "$-3 + 3 = 0$.",
-    "Net: no change."
+    "Write each play as an integer: gains are positive and the loss is negative, giving $5 - 8 + 3$.",
+    "Combine the first two plays: $5 - 8 = -3$, so the team is $3$ yards behind where it started.",
+    "Add the last gain: $-3 + 3 = 0$, because a number plus its opposite is zero.",
+    "The net yardage is $0$, so the team ends where it started."
   ],
   "tags": [
     "MAP-practice",

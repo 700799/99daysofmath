@@ -12,30 +12,31 @@
     "12 days"
   ],
   "acceptanceMode": "normalized",
-  "hint": "You need the LCM of $4$ and $6$.",
+  "hint": "Ana's visit days are multiples of one number and Ben's are multiples of another. What do you call the first number that is a multiple of both?",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Rewrite the numbers in matching form (all fractions OR all decimals) before you operate."
+      "text": "Mark Ana's visit days and Ben's visit days on a calendar. The answer is the first day that gets both marks."
     },
     {
       "level": "nudge",
-      "text": "You need the LCM of $4$ and $6$."
+      "text": "Ana's visit days are multiples of one number and Ben's are multiples of another. What do you call the first number that is a multiple of both?"
     },
     {
       "level": "guide",
-      "text": "Smallest number that's a multiple of both $4$ and $6$."
+      "text": "Find the LCM of $4$ and $6$. Ana visits on days $4, 8, 12, \\ldots$ so list Ben's days and find the first match."
     },
     {
       "level": "reveal",
-      "text": "LCM$(4, 6) = 12$."
+      "text": "Ben visits on days $6, 12, \\ldots$ and day $12$ is in both lists, so they next visit together in $12$ days."
     }
   ],
   "explanation": [
-    "Ana: $4, 8, 12, \\ldots$",
-    "Ben: $6, 12, \\ldots$",
-    "Both on day $12$."
+    "Ana visits on days that are multiples of $4$: $4, 8, 12, \\ldots$",
+    "Ben visits on days that are multiples of $6$: $6, 12, \\ldots$",
+    "They are both at the park on a day that is in both lists, and the first such day is the LCM of $4$ and $6$.",
+    "The first shared day is $12$, so they both visit again in $12$ days."
   ],
   "tags": [
     "CA",

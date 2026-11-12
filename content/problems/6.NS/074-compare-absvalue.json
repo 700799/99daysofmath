@@ -14,24 +14,25 @@
     "7"
   ],
   "acceptanceMode": "exact",
-  "hint": "Absolute value = distance from $0$.",
+  "hint": "Absolute value is the distance from $0$. Find the value of each expression before you compare them.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Absolute value = distance from $0$."
+      "text": "Absolute value is the distance from $0$. Find the value of each expression before you compare them."
     },
     {
       "level": "guide",
-      "text": "$|-7| = 7$ and $|3| = 3$."
+      "text": "$-7$ is $7$ units from $0$, so $|-7| = 7$. Likewise $|3| = 3$. Now compare those two distances."
     },
     {
       "level": "reveal",
-      "text": "$7 > 3$, so $|-7| > |3|$."
+      "text": "$7 > 3$, so $|-7|$ is the greater value."
     }
   ],
   "explanation": [
-    "$|-7| = 7$ and $|3| = 3$.",
-    "$7 > 3$, so $|-7|$ is greater."
+    "Evaluate each absolute value first, since it stands for a distance from $0$.",
+    "$-7$ is $7$ units from $0$, so $|-7| = 7$. And $3$ is $3$ units from $0$, so $|3| = 3$.",
+    "Compare the results: $7 > 3$. So $|-7|$ is greater than $|3|$, even though $-7$ itself is less than $3$."
   ],
   "tags": [
     "absolute-value",

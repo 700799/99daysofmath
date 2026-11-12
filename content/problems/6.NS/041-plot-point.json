@@ -15,24 +15,26 @@
     "quadrant 4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$x$ positive, $y$ negative — which quadrant?",
+  "hint": "The signs of the coordinates decide the quadrant. Look at whether each coordinate of this point is positive or negative.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$x$ positive, $y$ negative — which quadrant?"
+      "text": "The signs of the coordinates decide the quadrant. Look at whether each coordinate of this point is positive or negative."
     },
     {
       "level": "guide",
-      "text": "Quadrant I is upper-right ($+,+$). Quadrant IV is lower-right ($+,-$)."
+      "text": "Here $x = 3$ is positive, so the point is right of the $y$-axis, and $y = -5$ is negative, so it is below the $x$-axis. Recall the quadrants are numbered counter-clockwise from the upper right."
     },
     {
       "level": "reveal",
-      "text": "Quadrant IV (or $4$)."
+      "text": "Right and below is the lower-right region, which is Quadrant IV, so the answer is $4$."
     }
   ],
   "explanation": [
-    "$x = 3 > 0$, $y = -5 < 0$ → lower-right.",
-    "Quadrant IV."
+    "The $x$-coordinate is $3$, which is positive, so the point lies to the right of the $y$-axis.",
+    "The $y$-coordinate is $-5$, which is negative, so the point lies below the $x$-axis.",
+    "Quadrants are numbered I to IV counter-clockwise starting from the upper right, so the lower-right region is the fourth.",
+    "The point $(3, -5)$ is in Quadrant IV, so the answer is $4$."
   ],
   "tags": [
     "coordinate"

@@ -10,29 +10,31 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Start at $-5$ on the number line and move $8$ right.",
+  "hint": "Adding a positive number means moving right on the number line. Think about where you start and which direction you travel.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Use the \"keep–change–flip\" trick whenever you see division by a fraction."
+      "text": "Think of money: you owe $5$ dollars and then earn $8$ dollars. After paying what you owe, how much is left?"
     },
     {
       "level": "nudge",
-      "text": "Start at $-5$ on the number line and move $8$ right."
+      "text": "Adding a positive number means moving right on the number line. Think about where you start and which direction you travel."
     },
     {
       "level": "guide",
-      "text": "You'll pass $0$ and end up at $3$."
+      "text": "Start at $-5$ and move $8$ steps right. The first $5$ steps bring you to $0$, so work out how many steps are left to take past $0$."
     },
     {
       "level": "reveal",
-      "text": "$-5 + 8 = 3$."
+      "text": "There are $8 - 5 = 3$ steps left after reaching $0$, so $-5 + 8 = 3$."
     }
   ],
   "explanation": [
-    "Start at $-5$, move $8$ right: $-5 \\to 0 \\to 3$.",
-    "Result: $3$."
+    "Adding $8$ means moving $8$ units to the right on the number line, starting from $-5$.",
+    "It takes $5$ of those units to get from $-5$ up to $0$.",
+    "The remaining $8 - 5 = 3$ units carry you to the right of $0$, landing on $3$.",
+    "So the sum $-5 + 8$ is equal to $3$."
   ],
   "tags": [
     "integer",

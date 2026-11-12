@@ -32,7 +32,7 @@
   "primaryAnswer": "D",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Quadrant III has signs $(-, -)$. Reflecting across the $y$-axis flips only the $x$-sign.",
+  "hint": "Each quadrant has its own pair of signs. A reflection across the $y$-axis moves a point left or right, so think about which sign that changes.",
   "hints": [
     {
       "level": "nudge",
@@ -41,22 +41,22 @@
     },
     {
       "level": "nudge",
-      "text": "Quadrant signs: I$(+,+)$, II$(-,+)$, III$(-,-)$, IV$(+,-)$. Reflection across $y$-axis flips just the $x$."
+      "text": "Each quadrant has its own pair of signs. A reflection across the $y$-axis moves a point left or right, so think about which sign that changes."
     },
     {
       "level": "guide",
-      "text": "$P$ in III has signs $(-, -)$. Reflect across $y$-axis → flip $x$-sign: $(+, -)$. That's Quadrant IV."
+      "text": "A point in Quadrant III has signs $(-, -)$. Reflecting across the $y$-axis changes only the sign of $x$. Write the new sign pair and match it to a quadrant."
     },
     {
       "level": "reveal",
-      "text": "$P'$ is in Quadrant IV."
+      "text": "The signs become $(+, -)$, which is the lower right, so $P'$ is in Quadrant IV (choice D)."
     }
   ],
   "explanation": [
-    "Quadrant III is where **both** coordinates are negative: $(-x, -y)$.",
-    "Reflection across the **$y$-axis** keeps $y$, negates $x$: $(x, y) \\to (-x, y)$.",
-    "Starting signs $(-, -)$ → after flip → $(+, -)$.",
-    "A point with signs $(+, -)$ — positive $x$, negative $y$ — lives in **Quadrant IV**."
+    "Quadrant III is the region where **both** coordinates are negative, so $P$ has signs $(-, -)$.",
+    "A reflection across the **$y$-axis** changes the sign of $x$ and keeps $y$: $(x, y) \\to (-x, y)$.",
+    "After the reflection the negative $x$ becomes positive, so the signs of $P'$ are $(+, -)$.",
+    "A point with positive $x$ and negative $y$ is in **Quadrant IV**, which is choice D."
   ],
   "tags": [
     "coordinate",

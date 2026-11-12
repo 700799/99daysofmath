@@ -13,28 +13,31 @@
     "5/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Set up: $\\frac{5}{6} \\div \\frac{1}{3}$.",
+  "hint": "You are asked how many pieces of one length fit into a longer length. Which operation counts how many times one amount fits into another?",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Plot each number on a quick number line. Distances and order get obvious right away."
+      "text": "Try a $\\frac{2}{3}$ meter ribbon first: exactly two $\\frac{1}{3}$ meter pieces fit. Now compare $\\frac{5}{6}$ with $\\frac{2}{3}$ by writing both in sixths."
     },
     {
       "level": "nudge",
-      "text": "Set up: $\\frac{5}{6} \\div \\frac{1}{3}$."
+      "text": "You are asked how many pieces of one length fit into a longer length. Which operation counts how many times one amount fits into another?"
     },
     {
       "level": "guide",
-      "text": "Flip: $\\frac{5}{6} \\times 3 = \\frac{15}{6}$."
+      "text": "Set up $\\frac{5}{6} \\div \\frac{1}{3}$ and multiply by the reciprocal: $\\frac{5}{6} \\times \\frac{3}{1} = \\frac{15}{6}$. Simplify, then think about how many **whole** pieces that is."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{15}{6} = 2.5$ pieces (so $2$ whole + half)."
+      "text": "$\\frac{15}{6} = 2\\frac{1}{2}$, so you get $2$ full pieces, with half a piece of ribbon left over."
     }
   ],
   "explanation": [
-    "$\\frac{5}{6} \\div \\frac{1}{3} = \\frac{5}{6} \\times \\frac{3}{1} = \\frac{15}{6} = \\frac{5}{2} = 2.5$."
+    "To count how many $\\frac{1}{3}$ meter pieces fit in $\\frac{5}{6}$ meter, divide: $\\frac{5}{6} \\div \\frac{1}{3}$.",
+    "Dividing by $\\frac{1}{3}$ is the same as multiplying by its reciprocal: $\\frac{5}{6} \\times \\frac{3}{1} = \\frac{15}{6}$.",
+    "Simplify the result and write it as a mixed number: $\\frac{15}{6} = \\frac{5}{2} = 2\\frac{1}{2}$.",
+    "So $2$ full pieces can be cut, and the leftover ribbon is only half of a piece. The answer is $2$ pieces."
   ],
   "tags": [
     "CA",

@@ -10,23 +10,26 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$x$ is the same, so the distance is just the $y$ difference (absolute value).",
+  "hint": "Look at what the two points have in common. A matching coordinate means the points sit on one vertical or horizontal line.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$x$ is the same, so the distance is just the $y$ difference (absolute value)."
+      "text": "Look at what the two points have in common. A matching coordinate means the points sit on one vertical or horizontal line."
     },
     {
       "level": "guide",
-      "text": "$|5 - (-3)| = ?$"
+      "text": "Both points have $x = 2$, so the distance is the gap between the $y$-values $5$ and $-3$. Set up $|5 - (-3)|$ and turn the subtraction into addition."
     },
     {
       "level": "reveal",
-      "text": "$|5 + 3| = 8$."
+      "text": "$|5 - (-3)| = |5 + 3| = 8$, so the points are $8$ units apart."
     }
   ],
   "explanation": [
-    "Same $x$, so distance $= |5 - (-3)| = |8| = 8$."
+    "Both points have the same $x$-coordinate, $2$, so they lie on a vertical line.",
+    "On a vertical line the distance is the absolute value of the difference of the $y$-values: $|5 - (-3)|$.",
+    "Subtracting a negative is the same as adding, so $|5 - (-3)| = |5 + 3| = 8$.",
+    "The distance between the points is $8$ units."
   ],
   "tags": [
     "coordinate",

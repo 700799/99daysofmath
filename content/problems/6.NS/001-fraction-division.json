@@ -14,12 +14,13 @@
     "6/4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Dividing by a fraction is the same as multiplying by its **reciprocal**. Flip the second fraction.",
+  "hint": "Dividing by a fraction gives the same result as multiplying by its **reciprocal**. Which fraction here needs to be flipped?",
   "explanation": [
-    "Rewrite $\\div \\frac{1}{2}$ as $\\times \\frac{2}{1}$.",
-    "So $\\frac{3}{4} \\div \\frac{1}{2} = \\frac{3}{4} \\times \\frac{2}{1}$.",
-    "Multiply: $\\frac{3 \\times 2}{4 \\times 1} = \\frac{6}{4}$.",
-    "Simplify: $\\frac{6}{4} = \\frac{3}{2} = 1\\frac{1}{2}$."
+    "Dividing by $\\frac{1}{2}$ asks how many halves fit into $\\frac{3}{4}$. That is the same as multiplying by the reciprocal, $\\frac{2}{1}$.",
+    "Rewrite the whole problem as a multiplication by that reciprocal: $\\frac{3}{4} \\div \\frac{1}{2} = \\frac{3}{4} \\times \\frac{2}{1}$.",
+    "Multiply the numerators together and the denominators together: $\\frac{3 \\times 2}{4 \\times 1} = \\frac{6}{4}$.",
+    "Both $6$ and $4$ divide by $2$, so the fraction simplifies to $\\frac{3}{2}$.",
+    "The answer is $\\frac{3}{2}$, which can also be written as $1\\frac{1}{2}$ or $1.5$."
   ],
   "alternativeExplanations": [
     {
@@ -48,15 +49,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "Dividing by a fraction is the same as multiplying by its **reciprocal**. Flip the second fraction."
+      "text": "Dividing by a fraction gives the same result as multiplying by its **reciprocal**. Which fraction here needs to be flipped?"
     },
     {
       "level": "guide",
-      "text": "Rewrite $\\div \\frac{1}{2}$ as $\\times \\frac{2}{1}$."
+      "text": "Keep $\\frac{3}{4}$, change $\\div$ to $\\times$, and flip $\\frac{1}{2}$ into $\\frac{2}{1}$. Now multiply the tops together and the bottoms together."
     },
     {
       "level": "reveal",
-      "text": "Simplify: $\\frac{6}{4} = \\frac{3}{2} = 1\\frac{1}{2}$."
+      "text": "$\\frac{3}{4} \\times \\frac{2}{1} = \\frac{6}{4}$, which simplifies to $\\frac{3}{2}$, the same as $1\\frac{1}{2}$ or $1.5$."
     }
   ]
 }

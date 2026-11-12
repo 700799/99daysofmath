@@ -10,23 +10,26 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$0.15 = 15\\%$.",
+  "hint": "The decimal $0.15$ can be split into a tenth and half of a tenth. Each part of $80$ is then easy to find.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$0.15 = 15\\%$."
+      "text": "The decimal $0.15$ can be split into a tenth and half of a tenth. Each part of $80$ is then easy to find."
     },
     {
       "level": "guide",
-      "text": "$10\\%$ of $80$ is $8$. $5\\%$ is $4$."
+      "text": "Write $0.15$ as $0.10 + 0.05$. One tenth of $80$ is $8$, and $0.05$ of $80$ is half of that. Add the two parts."
     },
     {
       "level": "reveal",
-      "text": "$8 + 4 = 12$."
+      "text": "The two parts add to $8 + 4 = 12$, so the product $0.15 \\times 80$ is $12$."
     }
   ],
   "explanation": [
-    "$0.15 \\times 80 = 12$."
+    "Split $0.15$ into $0.10 + 0.05$ so each part can be multiplied by $80$ mentally.",
+    "One tenth of $80$ is found by moving the decimal point one place: $0.10 \\times 80 = 8$.",
+    "$0.05$ is half of $0.10$, so $0.05 \\times 80$ is half of $8$, which is $4$.",
+    "Add the parts: $8 + 4 = 12$. So the product $0.15 \\times 80$ is $12$."
   ],
   "tags": [
     "decimal",

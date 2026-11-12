@@ -10,25 +10,26 @@
   "primaryAnswer": "565",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Stack and subtract right to left, regrouping as needed.",
+  "hint": "Stack the numbers by place value and subtract from the right. When the top digit is smaller than the bottom digit, regroup from the next column.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Stack and subtract right to left, regrouping as needed."
+      "text": "Stack the numbers by place value and subtract from the right. When the top digit is smaller than the bottom digit, regroup from the next column."
     },
     {
       "level": "guide",
-      "text": "Ones: regroup, $12 - 7 = 5$. Tens: $4 - 8$ regroup, $14 - 8 = 6$. Hundreds: $8 - 3 = 5$."
+      "text": "Ones: $2 - 7$ is not possible, so regroup a ten and use $12 - 7$. That leaves $4$ tens on top, so the tens column needs regrouping as well. Then subtract the hundreds that remain."
     },
     {
       "level": "reveal",
-      "text": "$565$."
+      "text": "The columns give $12 - 7 = 5$, $14 - 8 = 6$ and $8 - 3 = 5$, so the difference is $565$."
     }
   ],
   "explanation": [
-    "Subtract column by column with regrouping.",
-    "Ones: $12 - 7 = 5$. Tens: $14 - 8 = 6$. Hundreds: $8 - 3 = 5$.",
-    "Result: $565$."
+    "Stack the numbers by place value and subtract column by column from the right, regrouping when needed.",
+    "Ones: $2$ is less than $7$, so regroup one ten as ten ones and compute $12 - 7 = 5$.",
+    "Tens: only $4$ tens remain, which is less than $8$, so regroup one hundred and compute $14 - 8 = 6$.",
+    "Hundreds: $8$ hundreds remain, and $8 - 3 = 5$. The difference is $565$."
   ],
   "alternativeExplanations": [
     {

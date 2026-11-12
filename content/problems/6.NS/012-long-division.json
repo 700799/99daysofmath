@@ -13,7 +13,7 @@
     "279.00"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$31$ goes into $86$ about how many times? Try $2$ or $3$.",
+  "hint": "Long division works one digit at a time from the left. After each subtraction the remainder must be **less than** $31$ before you bring down the next digit.",
   "hints": [
     {
       "level": "nudge",
@@ -22,23 +22,23 @@
     },
     {
       "level": "nudge",
-      "text": "Bring down one digit at a time. After each step, check that your remainder is **less than** $31$."
+      "text": "Long division works one digit at a time from the left. After each subtraction the remainder must be **less than** $31$ before you bring down the next digit."
     },
     {
       "level": "guide",
-      "text": "$31 \\times 200 = 6200$, leaving $2449$. $31 \\times 70 = 2170$, leaving $279$. $31 \\times 9 = 279$ exactly. Total: $279$."
+      "text": "Start with $86$: $31$ goes in $2$ times, leaving $24$. Bring down the $4$ to make $244$, find how many times $31$ fits, subtract, then bring down the $9$ and repeat once more."
     },
     {
       "level": "reveal",
-      "text": "$8649 \\div 31 = 279$."
+      "text": "The quotient digits are $2$, $7$ and $9$ with no remainder, so $8{,}649 \\div 31 = 279$."
     }
   ],
   "explanation": [
-    "Estimate first: $8649 \\div 31 \\approx 8649 \\div 30 \\approx 288$. Expect a 3-digit answer near $280$.",
-    "$31$ into $86$: $31 \\times 2 = 62$, $31 \\times 3 = 93$ (too big). So digit = $2$. Subtract: $86 - 62 = 24$. Bring down the $4$ → $244$.",
-    "$31$ into $244$: $31 \\times 7 = 217$, $31 \\times 8 = 248$ (too big). Digit = $7$. Subtract: $244 - 217 = 27$. Bring down the $9$ → $279$.",
-    "$31$ into $279$: $31 \\times 9 = 279$ exactly. Digit = $9$. Remainder = $0$.",
-    "Quotient digits: $2$, $7$, $9$ → $8649 \\div 31 = 279$."
+    "Estimate first so you can check the result: $8649 \\div 30$ is close to $288$, so expect a three-digit answer near $280$.",
+    "Divide $31$ into $86$. Since $31 \\times 2 = 62$ fits and $31 \\times 3 = 93$ is too big, the first digit is $2$. Subtract to get $86 - 62 = 24$ and bring down the $4$ to make $244$.",
+    "Divide $31$ into $244$. Since $31 \\times 7 = 217$ fits and $31 \\times 8 = 248$ is too big, the next digit is $7$. Subtract to get $27$ and bring down the $9$ to make $279$.",
+    "Divide $31$ into $279$. Here $31 \\times 9 = 279$ exactly, so the last digit is $9$ and the remainder is $0$.",
+    "Reading the digits in order gives $8649 \\div 31 = 279$, which matches the estimate."
   ],
   "tags": [
     "long-division",

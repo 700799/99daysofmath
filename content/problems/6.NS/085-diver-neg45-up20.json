@@ -13,24 +13,26 @@
     "-25 ft"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Rising is positive.",
+  "hint": "Rising means moving up toward the surface. Decide whether that makes the position number larger or smaller.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Rising is positive."
+      "text": "Rising means moving up toward the surface. Decide whether that makes the position number larger or smaller."
     },
     {
       "level": "guide",
-      "text": "$-45 + 20$."
+      "text": "Start at $-45$ and add the rise of $20$: the expression is $-45 + 20$. The diver does not reach $0$, so the result is still negative."
     },
     {
       "level": "reveal",
-      "text": "$-25$."
+      "text": "$-45 + 20 = -25$, so the diver is now at $-25$ ft."
     }
   ],
   "explanation": [
-    "Start at $-45$. Add the rise: $-45 + 20 = -25$ ft.",
-    "Final answer: -25."
+    "The diver starts at $-45$ ft, and rising is a move in the positive direction, so add: $-45 + 20$.",
+    "On a number line, moving $20$ units right from $-45$ does not reach $0$, because $20$ is less than $45$.",
+    "The diver is still $45 - 20 = 25$ ft below the surface, so $-45 + 20 = -25$.",
+    "The new position is $-25$ ft, which is $25$ ft below sea level."
   ],
   "tags": [
     "integer",

@@ -10,24 +10,26 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "When numbers share no factors, LCM is their product.",
+  "hint": "Check whether $3$ and $5$ share any factor other than $1$. When two numbers share none, their least common multiple has a simple form.",
   "hints": [
     {
       "level": "nudge",
-      "text": "When numbers share no factors, LCM is their product."
+      "text": "Check whether $3$ and $5$ share any factor other than $1$. When two numbers share none, their least common multiple has a simple form."
     },
     {
       "level": "guide",
-      "text": "$3 \\times 5 = ?$"
+      "text": "Both numbers are prime, so the only common factor is $1$. In that case the LCM is the product of the two numbers: work out $3 \\times 5$."
     },
     {
       "level": "reveal",
-      "text": "$15$."
+      "text": "$3 \\times 5 = 15$, so the least common multiple is $15$."
     }
   ],
   "explanation": [
-    "$3$ and $5$ share no common factors.",
-    "LCM $= 3 \\times 5 = 15$."
+    "$3$ and $5$ are both prime, so they share no common factor other than $1$.",
+    "When two numbers share no factors, the smallest number both divide is their product.",
+    "Multiply to find it: $3 \\times 5 = 15$. The lists $3, 6, 9, 12, 15$ and $5, 10, 15$ confirm this.",
+    "So the least common multiple of $3$ and $5$ is $15$."
   ],
   "tags": [
     "lcm"

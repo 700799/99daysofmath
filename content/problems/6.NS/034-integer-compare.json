@@ -12,24 +12,25 @@
     "−3"
   ],
   "acceptanceMode": "normalized",
-  "hint": "On a number line, greater means further right.",
+  "hint": "On a number line, the greater number is always the one farther to the right. This is true for negative numbers as well.",
   "hints": [
     {
       "level": "nudge",
-      "text": "On a number line, greater means further right."
+      "text": "On a number line, the greater number is always the one farther to the right. This is true for negative numbers as well."
     },
     {
       "level": "guide",
-      "text": "$-3$ is to the right of $-8$."
+      "text": "Place $-3$ and $-8$ on a number line. $-3$ is $3$ steps left of $0$ and $-8$ is $8$ steps left. Decide which one ends up farther right."
     },
     {
       "level": "reveal",
-      "text": "$-3 > -8$."
+      "text": "$-3$ is to the right of $-8$, so $-3$ is the greater number."
     }
   ],
   "explanation": [
-    "On the number line, $-3$ is to the right of $-8$.",
-    "$-3$ is greater."
+    "Greater numbers are farther right on the number line, so compare the positions of the two numbers.",
+    "$-3$ is $3$ units left of $0$ and $-8$ is $8$ units left of $0$, which puts $-3$ to the right of $-8$.",
+    "So $-3 > -8$, and the greater number is $-3$."
   ],
   "tags": [
     "integer",

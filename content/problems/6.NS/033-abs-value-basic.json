@@ -10,24 +10,25 @@
   "primaryAnswer": "8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Absolute value is the distance from $0$ — always non-negative.",
+  "hint": "The bars mean absolute value, which is the distance from $0$ on a number line. Distances are never negative.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Absolute value is the distance from $0$ — always non-negative."
+      "text": "The bars mean absolute value, which is the distance from $0$ on a number line. Distances are never negative."
     },
     {
       "level": "guide",
-      "text": "How far is $-8$ from $0$?"
+      "text": "Find $-8$ on the number line and count how many units you travel to get back to $0$."
     },
     {
       "level": "reveal",
-      "text": "$8$ units."
+      "text": "$-8$ is $8$ units from $0$, so the absolute value is $8$."
     }
   ],
   "explanation": [
-    "$|{-8}|$ is the distance from $-8$ to $0$.",
-    "That distance is $8$."
+    "The expression $|{-8}|$ asks for the distance between $-8$ and $0$ on the number line.",
+    "$-8$ is $8$ units to the left of $0$, and the direction does not affect the distance.",
+    "So the absolute value of $-8$ is $8$."
   ],
   "tags": [
     "absolute-value"

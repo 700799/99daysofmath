@@ -13,24 +13,26 @@
     "9 degrees"
   ],
   "acceptanceMode": "normalized",
-  "hint": "\"Rose\" means add.",
+  "hint": "A temperature that rises is getting larger. Decide which operation matches a rise, starting from the morning temperature.",
   "hints": [
     {
       "level": "nudge",
-      "text": "\"Rose\" means add."
+      "text": "A temperature that rises is getting larger. Decide which operation matches a rise, starting from the morning temperature."
     },
     {
       "level": "guide",
-      "text": "$-3 + 12 = ?$"
+      "text": "Start at $-3$ and add $12$: the expression is $-3 + 12$. On a number line, $3$ of the $12$ steps bring you up to $0$, and the rest take you above it."
     },
     {
       "level": "reveal",
-      "text": "$-3 + 12 = 9$."
+      "text": "$-3 + 12 = 9$, so the noon temperature is $9°$F."
     }
   ],
   "explanation": [
-    "$-3 + 12 = 9$.",
-    "Noon temperature: $9°$F."
+    "A rise in temperature is an increase, so add the change to the starting temperature: $-3 + 12$.",
+    "On a number line, start at $-3$ and move $12$ to the right. The first $3$ steps reach $0$.",
+    "That leaves $12 - 3 = 9$ more steps to the right of $0$, so $-3 + 12 = 9$.",
+    "The temperature at noon is $9°$F, which is above zero."
   ],
   "tags": [
     "CA",

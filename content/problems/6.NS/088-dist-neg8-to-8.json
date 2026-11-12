@@ -10,29 +10,31 @@
   "primaryAnswer": "16",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Each opposite is $8$ from $0$.",
+  "hint": "The two numbers are on different sides of $0$. To get from one to the other you have to pass through zero.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Rewrite the numbers in matching form (all fractions OR all decimals) before you operate."
+      "text": "Subtract to find a distance: take the larger number minus the smaller one, and watch what happens with the double negative."
     },
     {
       "level": "nudge",
-      "text": "Each opposite is $8$ from $0$."
+      "text": "The two numbers are on different sides of $0$. To get from one to the other you have to pass through zero."
     },
     {
       "level": "guide",
-      "text": "$8 + 8$."
+      "text": "From $-8$ to $0$ is $8$ units, and from $0$ to $8$ is another $8$ units. Add the two parts: $8 + 8$."
     },
     {
       "level": "reveal",
-      "text": "$16$."
+      "text": "$8 + 8 = 16$, so the distance from $-8$ to $8$ is $16$ units."
     }
   ],
   "explanation": [
-    "$-8$ is $8$ from $0$ on the left; $8$ is $8$ from $0$ on the right.",
-    "Total distance: $8 + 8 = 16$."
+    "$-8$ and $8$ are opposites, so each one is $8$ units from $0$ on its own side.",
+    "To travel from $-8$ to $8$ you cover $8$ units to reach $0$ and then $8$ more units.",
+    "The total distance is $8 + 8 = 16$, which matches $|8 - (-8)| = 16$.",
+    "The distance from $-8$ to $8$ is $16$ units."
   ],
   "alternativeExplanations": [
     {

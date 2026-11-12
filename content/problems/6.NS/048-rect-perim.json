@@ -10,29 +10,31 @@
   "primaryAnswer": "16",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find length and width from coordinates.",
+  "hint": "Perimeter is the distance around the shape. You need the lengths of the sides, and the coordinates of the corners tell you those lengths.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Rewrite the numbers in matching form (all fractions OR all decimals) before you operate."
+      "text": "Sketch the four corners on a grid. Then count the unit steps along the bottom side and along one upright side."
     },
     {
       "level": "nudge",
-      "text": "Find length and width from coordinates."
+      "text": "Perimeter is the distance around the shape. You need the lengths of the sides, and the coordinates of the corners tell you those lengths."
     },
     {
       "level": "guide",
-      "text": "Width: $|5 - 1| = 4$. Height: $|6 - 2| = 4$."
+      "text": "The $x$-values go from $1$ to $5$, so the width is $|5 - 1| = 4$. The $y$-values go from $2$ to $6$, so the height is $|6 - 2| = 4$. Add up all four sides."
     },
     {
       "level": "reveal",
-      "text": "Perimeter $= 2(4 + 4) = 16$."
+      "text": "Perimeter $= 2(4 + 4) = 16$, so the distance around the rectangle is $16$ units."
     }
   ],
   "explanation": [
-    "Width: $4$. Height: $4$.",
-    "Perimeter $= 2(4) + 2(4) = 16$."
+    "The corners use only the $x$-values $1$ and $5$, so the horizontal sides have length $|5 - 1| = 4$.",
+    "The corners use only the $y$-values $2$ and $6$, so the vertical sides have length $|6 - 2| = 4$.",
+    "Perimeter is the sum of all four sides, which is two widths plus two heights: $2(4) + 2(4)$.",
+    "That gives $8 + 8 = 16$, so the perimeter is $16$ units."
   ],
   "tags": [
     "CA",

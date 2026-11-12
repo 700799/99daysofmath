@@ -13,24 +13,26 @@
     "5, 2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Flip the sign of $y$.",
+  "hint": "The $x$-axis is the mirror line, so the point moves straight up or down. Think about which coordinate that changes.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Flip the sign of $y$."
+      "text": "The $x$-axis is the mirror line, so the point moves straight up or down. Think about which coordinate that changes."
     },
     {
       "level": "guide",
-      "text": "$y = -2 \\to y = 2$."
+      "text": "Keep the $x$-coordinate $5$ the same. The point is $2$ units below the $x$-axis, so its image is $2$ units above: change $y = -2$ to its opposite."
     },
     {
       "level": "reveal",
-      "text": "$(5, 2)$."
+      "text": "The opposite of $-2$ is $2$, so the new point is $(5, 2)$."
     }
   ],
   "explanation": [
-    "Across $x$-axis: keep $x$, flip $y$.",
-    "$(5, -2) \\to (5, 2)$."
+    "Reflecting over the $x$-axis moves a point straight up or down, so the $x$-coordinate stays the same.",
+    "The $y$-coordinate changes to its opposite, because the image is the same distance from the axis on the other side.",
+    "For this point, $x$ stays $5$ and the value $y = -2$ becomes $2$.",
+    "So the reflected point has coordinates $(5, 2)$."
   ],
   "tags": [
     "coordinate"

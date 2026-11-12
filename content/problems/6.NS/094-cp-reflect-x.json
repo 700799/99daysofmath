@@ -14,24 +14,26 @@
     "3,5"
   ],
   "acceptanceMode": "exact",
-  "hint": "Across the x-axis: flip the sign of $y$.",
+  "hint": "A reflection across the x-axis moves a point straight up or straight down. Think about which coordinate stays the same.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Across the x-axis: flip the sign of $y$."
+      "text": "A reflection across the x-axis moves a point straight up or straight down. Think about which coordinate stays the same."
     },
     {
       "level": "guide",
-      "text": "$y = -5 \\to y = 5$."
+      "text": "Keep $x = 3$. The point is $5$ units below the x-axis, so its image is $5$ units above it: replace $y = -5$ with its opposite."
     },
     {
       "level": "reveal",
-      "text": "$(3, 5)$."
+      "text": "The opposite of $-5$ is $5$, so the new coordinates are $(3, 5)$."
     }
   ],
   "explanation": [
-    "Reflecting across the x-axis flips the sign of the y-coordinate.",
-    "$(3, -5) \\to (3, 5)$."
+    "Reflecting across the x-axis moves the point vertically, so the x-coordinate does not change.",
+    "The y-coordinate becomes its opposite, because the image is the same distance from the x-axis on the other side.",
+    "For the point $(3, -5)$, $x$ stays $3$ and the value $y = -5$ becomes $5$.",
+    "So the reflected point has coordinates $(3, 5)$."
   ],
   "tags": [
     "coordinate-plane",

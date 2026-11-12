@@ -14,24 +14,26 @@
     "8*(3+4)"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find GCF of $24$ and $32$ first.",
+  "hint": "To write a sum as a multiplication, pull out a factor that both numbers share. The greatest common factor is the best one to use.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find GCF of $24$ and $32$ first."
+      "text": "To write a sum as a multiplication, pull out a factor that both numbers share. The greatest common factor is the best one to use."
     },
     {
       "level": "guide",
-      "text": "GCF is $8$. So $24 = 8 \\times 3$ and $32 = 8 \\times 4$."
+      "text": "The GCF of $24$ and $32$ is $8$. Write each number as $8$ times something, then put the $8$ outside a set of parentheses."
     },
     {
       "level": "reveal",
-      "text": "$24 + 32 = 8(3 + 4)$."
+      "text": "Since $24 = 8 \\times 3$ and $32 = 8 \\times 4$, the sum can be written as $24 + 32 = 8(3 + 4)$."
     }
   ],
   "explanation": [
-    "GCF of $24$ and $32$ is $8$.",
-    "Factor: $24 + 32 = 8 \\times 3 + 8 \\times 4 = 8(3+4)$."
+    "Find the greatest common factor of $24$ and $32$. The largest number dividing both is $8$.",
+    "Rewrite each number using that factor: $24 = 8 \\times 3$ and $32 = 8 \\times 4$.",
+    "The distributive property says $8 \\times 3 + 8 \\times 4 = 8(3 + 4)$, so the shared $8$ can move outside.",
+    "So $24 + 32 = 8(3 + 4)$. Both sides equal $56$, which confirms the answer."
   ],
   "tags": [
     "CA",

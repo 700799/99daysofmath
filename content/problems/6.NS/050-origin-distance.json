@@ -10,23 +10,25 @@
   "primaryAnswer": "7",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Same $x$ — vertical distance.",
+  "hint": "Both points have the same $x$-coordinate, so they sit on the $y$-axis. Only the change in height matters here.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Same $x$ — vertical distance."
+      "text": "Both points have the same $x$-coordinate, so they sit on the $y$-axis. Only the change in height matters here."
     },
     {
       "level": "guide",
-      "text": "$|7 - 0| = ?$"
+      "text": "The distance is the gap between the $y$-values $0$ and $7$. Set up $|7 - 0|$, or count the units from the origin straight up to the point."
     },
     {
       "level": "reveal",
-      "text": "$7$."
+      "text": "$|7 - 0| = 7$, so the distance is $7$ units."
     }
   ],
   "explanation": [
-    "Distance from origin to $(0, 7)$ is $7$ units."
+    "Both points have $x = 0$, so they lie on the $y$-axis, which is a vertical line.",
+    "On a vertical line the distance is the difference of the $y$-values: $|7 - 0|$.",
+    "That difference is $7$, so the point $(0, 7)$ is $7$ units from the origin."
   ],
   "tags": [
     "coordinate",

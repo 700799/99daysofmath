@@ -12,29 +12,31 @@
     "28 sq units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the width and height first.",
+  "hint": "The area of a rectangle is its width times its height. Both lengths can be read from the coordinates of the corners.",
   "hints": [
     {
       "level": "nudge",
       "title": "🔁 Another angle",
-      "text": "Rewrite the numbers in matching form (all fractions OR all decimals) before you operate."
+      "text": "Count across in two parts: from $x = -3$ to the y-axis, then from the y-axis to $x = 4$. That total is the width."
     },
     {
       "level": "nudge",
-      "text": "Find the width and height first."
+      "text": "The area of a rectangle is its width times its height. Both lengths can be read from the coordinates of the corners."
     },
     {
       "level": "guide",
-      "text": "Width $= |4 - (-3)| = 7$. Height $= |5 - 1| = 4$."
+      "text": "The width is the gap between the $x$-values: $|4 - (-3)| = 7$. The height is the gap between the $y$-values: $|5 - 1| = 4$. Multiply them."
     },
     {
       "level": "reveal",
-      "text": "$7 \\times 4 = 28$."
+      "text": "$7 \\times 4 = 28$, so the area is $28$ square units."
     }
   ],
   "explanation": [
-    "Width: $|4 - (-3)| = 7$. Height: $|5 - 1| = 4$.",
-    "Area: $7 \\times 4 = 28$."
+    "The bottom side runs from $(-3, 1)$ to $(4, 1)$, so the width is $|4 - (-3)| = 4 + 3 = 7$.",
+    "The right side runs from $(4, 1)$ to $(4, 5)$, so the height is $|5 - 1| = 4$.",
+    "The area of a rectangle is width times height: $7 \\times 4$.",
+    "$7 \\times 4 = 28$, so the area is $28$ square units."
   ],
   "tags": [
     "MAP-practice",

@@ -10,24 +10,26 @@
   "primaryAnswer": "4.15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Line up the decimal points.",
+  "hint": "Digits can only be added when they have the same place value. What should line up when you stack these two decimals?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Line up the decimal points."
+      "text": "Digits can only be added when they have the same place value. What should line up when you stack these two decimals?"
     },
     {
       "level": "guide",
-      "text": "Rewrite $1.7$ as $1.70$ for the same place values."
+      "text": "Write $1.7$ as $1.70$ so both numbers have two decimal places, then stack $2.45$ over $1.70$ with the points lined up and add each column from the right."
     },
     {
       "level": "reveal",
-      "text": "$2.45 + 1.70 = 4.15$."
+      "text": "Adding the columns gives $2.45 + 1.70 = 4.15$, so the sum is $4.15$."
     }
   ],
   "explanation": [
-    "Align decimals: $2.45 + 1.70$.",
-    "Add column-by-column: $4.15$."
+    "Line up the decimal points so that tenths sit under tenths and hundredths under hundredths.",
+    "Write $1.7$ as $1.70$. Adding a zero at the end does not change its value and fills the empty hundredths place.",
+    "Add from the right: hundredths $5 + 0 = 5$, then tenths $4 + 7 = 11$, so write $1$ and carry $1$ to the ones.",
+    "Ones: $2 + 1 + 1 = 4$. Keeping the point in line, the sum is $4.15$."
   ],
   "tags": [
     "decimal"

@@ -12,29 +12,31 @@
     "6 baskets"
   ],
   "acceptanceMode": "normalized",
-  "hint": "You need GCF of $18$ and $24$.",
+  "hint": "Every basket gets the same number of apples and the same number of oranges. So the number of baskets must divide both totals evenly, and you want the largest such number.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Plot each number on a quick number line. Distances and order get obvious right away."
+      "text": "Try $4$ apples and $6$ oranges first. Two baskets work because $2$ divides both counts. The number of baskets must always divide both fruit counts."
     },
     {
       "level": "nudge",
-      "text": "You need GCF of $18$ and $24$."
+      "text": "Every basket gets the same number of apples and the same number of oranges. So the number of baskets must divide both totals evenly, and you want the largest such number."
     },
     {
       "level": "guide",
-      "text": "Find the largest factor that divides both $18$ and $24$."
+      "text": "Find the GCF of $18$ and $24$. Compare the factors $1, 2, 3, 6, 9, 18$ with $1, 2, 3, 4, 6, 8, 12, 24$."
     },
     {
       "level": "reveal",
-      "text": "GCF $= 6$. So $6$ baskets ($3$ apples + $4$ oranges each)."
+      "text": "The greatest common factor is $6$, so you can make $6$ baskets, each with $3$ apples and $4$ oranges."
     }
   ],
   "explanation": [
-    "GCF of $18$ and $24$ is $6$.",
-    "$6$ baskets, each with $3$ apples and $4$ oranges."
+    "Identical baskets with no fruit left over mean the number of baskets divides both $18$ and $24$.",
+    "The greatest number of baskets is therefore the greatest common factor of $18$ and $24$.",
+    "The factors of $18$ are $1, 2, 3, 6, 9, 18$ and the factors of $24$ are $1, 2, 3, 4, 6, 8, 12, 24$. The largest shared one is $6$.",
+    "You can make $6$ baskets, each holding $18 \\div 6 = 3$ apples and $24 \\div 6 = 4$ oranges."
   ],
   "tags": [
     "MAP-practice",

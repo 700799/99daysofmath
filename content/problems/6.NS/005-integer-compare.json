@@ -13,11 +13,12 @@
     "gt"
   ],
   "acceptanceMode": "exact",
-  "hint": "On a number line, numbers get smaller as you go **left**. $-5$ is to the **right** of $-8$.",
+  "hint": "Picture both numbers on a number line. The number farther to the **right** is always the greater one, even for negatives.",
   "explanation": [
-    "Picture a number line: $-8$ is farther left than $-5$.",
-    "Numbers farther right are **larger**.",
-    "So $-5 > -8$."
+    "On a number line, numbers get larger as you move right and smaller as you move left.",
+    "$-8$ is $8$ steps left of $0$ and $-5$ is only $5$ steps left, so $-8$ is farther left.",
+    "That puts $-5$ to the right of $-8$, which makes $-5$ the greater number.",
+    "The true statement is $-5 > -8$, so the symbol is $>$."
   ],
   "alternativeExplanations": [
     {
@@ -38,15 +39,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "On a number line, numbers get smaller as you go **left**. $-5$ is to the **right** of $-8$."
+      "text": "Picture both numbers on a number line. The number farther to the **right** is always the greater one, even for negatives."
     },
     {
       "level": "guide",
-      "text": "Picture a number line: $-8$ is farther left than $-5$."
+      "text": "Starting at $0$ and going left, you reach $-5$ before you reach $-8$. Decide which of the two sits farther right."
     },
     {
       "level": "reveal",
-      "text": "So $-5 > -8$."
+      "text": "$-5$ is to the right of $-8$, so $-5 > -8$ and the symbol is $>$."
     }
   ],
   "diagram": {

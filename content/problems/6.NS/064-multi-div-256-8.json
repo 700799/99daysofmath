@@ -10,24 +10,26 @@
   "primaryAnswer": "32",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Think: $8 \\times \\boxed{?} = 256$.",
+  "hint": "Division asks a multiplication question: what number times $8$ gives $256$? Start with an easy multiple of ten.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Think: $8 \\times \\boxed{?} = 256$."
+      "text": "Division asks a multiplication question: what number times $8$ gives $256$? Start with an easy multiple of ten."
     },
     {
       "level": "guide",
-      "text": "$8 \\times 30 = 240$. $256 - 240 = 16$, and $16 \\div 8 = 2$."
+      "text": "$8 \\times 30 = 240$ gets close to $256$. Subtract to see what is left, then divide that leftover amount by $8$ and add it to the $30$."
     },
     {
       "level": "reveal",
-      "text": "$30 + 2 = 32$."
+      "text": "$256 - 240 = 16$ and $16 \\div 8 = 2$, so the quotient is $30 + 2 = 32$."
     }
   ],
   "explanation": [
-    "$8$ goes into $25$ three times ($24$); bring down $6$ for $16$. $16 \\div 8 = 2$.",
-    "Quotient: $32$."
+    "Use long division. $8$ does not go into $2$, so start with the first two digits, $25$.",
+    "$8$ goes into $25$ three times because $8 \\times 3 = 24$. Subtract to get $1$, then bring down the $6$ to make $16$.",
+    "$8$ goes into $16$ exactly twice, with no remainder.",
+    "The quotient digits are $3$ and $2$, so $256 \\div 8 = 32$."
   ],
   "alternativeExplanations": [
     {

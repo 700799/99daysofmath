@@ -14,24 +14,26 @@
     "quadrant iv"
   ],
   "acceptanceMode": "exact",
-  "hint": "Check the signs of x and y.",
+  "hint": "Each quadrant has its own combination of signs. Look at the sign of each coordinate of this point.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Check the signs of x and y."
+      "text": "Each quadrant has its own combination of signs. Look at the sign of each coordinate of this point."
     },
     {
       "level": "guide",
-      "text": "x positive, y negative → bottom-right."
+      "text": "Here $x = 4$ is positive, so the point is right of the $y$-axis. And $y = -3$ is negative, so it is below the $x$-axis. Name the region that is right and below."
     },
     {
       "level": "reveal",
-      "text": "Quadrant IV."
+      "text": "Right and below is the bottom-right region, which is Quadrant IV."
     }
   ],
   "explanation": [
-    "$x = 4 > 0$ (right side); $y = -3 < 0$ (below the x-axis).",
-    "Bottom-right = Quadrant IV."
+    "The $x$-coordinate $4$ is positive, so the point is to the right of the $y$-axis.",
+    "The $y$-coordinate $-3$ is negative, so the point is below the $x$-axis.",
+    "The bottom-right region is the fourth one when counting counter-clockwise from the top right.",
+    "The point $(4, -3)$ is in Quadrant IV."
   ],
   "tags": [
     "coordinate-plane",

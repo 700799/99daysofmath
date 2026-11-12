@@ -12,24 +12,26 @@
     "−15"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Work the absolute value first, then take the opposite.",
+  "hint": "There are two different minus signs here, one inside the bars and one outside. The absolute value bars are worked out first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Work the absolute value first, then take the opposite."
+      "text": "There are two different minus signs here, one inside the bars and one outside. The absolute value bars are worked out first."
     },
     {
       "level": "guide",
-      "text": "$|-15| = 15$. The leading minus makes it $-15$."
+      "text": "Find $|-15|$, which is the distance from $-15$ to $0$. Then apply the minus sign that sits in front of the bars to that result."
     },
     {
       "level": "reveal",
-      "text": "$-15$."
+      "text": "$|-15| = 15$, and the minus sign in front makes the value $-15$."
     }
   ],
   "explanation": [
-    "Inside the bars: $|-15| = 15$.",
-    "The negative outside: $-(15) = -15$."
+    "Absolute value bars act like parentheses, so evaluate what is inside them first.",
+    "The distance from $-15$ to $0$ is $15$, so $|-15| = 15$.",
+    "The minus sign outside the bars means \"the opposite of\", and it is applied after the absolute value.",
+    "The opposite of $15$ is $-15$, so the value of $-|-15|$ is $-15$."
   ],
   "tags": [
     "absolute-value",

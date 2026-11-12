@@ -10,26 +10,26 @@
   "primaryAnswer": "912",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Multiply by tens and ones separately, then add.",
+  "hint": "A two-digit multiplier can be split into its tens and its ones. Multiply by each part separately and add the results.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply by tens and ones separately, then add."
+      "text": "A two-digit multiplier can be split into its tens and its ones. Multiply by each part separately and add the results."
     },
     {
       "level": "guide",
-      "text": "$38 \\times 20 = 760$. $38 \\times 4 = 152$."
+      "text": "Split $24$ into $20 + 4$. Work out $38 \\times 20$ and $38 \\times 4$, then add the two partial products."
     },
     {
       "level": "reveal",
-      "text": "$760 + 152 = 912$."
+      "text": "$38 \\times 20 = 760$ and $38 \\times 4 = 152$, so the product is $760 + 152 = 912$."
     }
   ],
   "explanation": [
-    "Break $24$ into $20 + 4$.",
-    "$38 \\times 20 = 760$.",
-    "$38 \\times 4 = 152$.",
-    "$760 + 152 = 912$."
+    "Break $24$ into $20 + 4$ so the distributive property can be used.",
+    "Multiply by the tens part: $38 \\times 20 = 760$, which is $38 \\times 2$ with a zero attached.",
+    "Multiply by the ones part in the same way: $38 \\times 4 = 152$.",
+    "Add the two partial products: $760 + 152 = 912$. So the answer is $38 \\times 24 = 912$."
   ],
   "alternativeExplanations": [
     {

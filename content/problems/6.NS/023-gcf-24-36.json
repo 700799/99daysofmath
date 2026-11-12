@@ -10,25 +10,26 @@
   "primaryAnswer": "12",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Try common factors of $24$ and $36$.",
+  "hint": "The GCF is the biggest number that divides both $24$ and $36$ exactly. Prime factorization is a reliable way to find it.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Try common factors of $24$ and $36$."
+      "text": "The GCF is the biggest number that divides both $24$ and $36$ exactly. Prime factorization is a reliable way to find it."
     },
     {
       "level": "guide",
-      "text": "Both are divisible by $12$."
+      "text": "Break each number into primes: $24 = 2^3 \\times 3$ and $36 = 2^2 \\times 3^2$. For each prime, take the smaller power that both numbers have and multiply those together."
     },
     {
       "level": "reveal",
-      "text": "$24 = 12 \\times 2$, $36 = 12 \\times 3$. GCF $= 12$."
+      "text": "The shared primes give $2^2 \\times 3 = 12$, so the GCF is $12$."
     }
   ],
   "explanation": [
-    "$24 = 2^3 \\times 3$.",
-    "$36 = 2^2 \\times 3^2$.",
-    "GCF $= 2^2 \\times 3 = 12$."
+    "Write $24$ as a product of prime numbers: $24 = 2 \\times 2 \\times 2 \\times 3 = 2^3 \\times 3$.",
+    "Write $36$ as a product of prime numbers too: $36 = 2 \\times 2 \\times 3 \\times 3 = 2^2 \\times 3^2$.",
+    "Both numbers share two $2$s and one $3$, so the common part is $2^2 \\times 3$.",
+    "Multiply to get $4 \\times 3 = 12$. The GCF of $24$ and $36$ is $12$, and indeed $24 = 12 \\times 2$ and $36 = 12 \\times 3$."
   ],
   "tags": [
     "gcf"

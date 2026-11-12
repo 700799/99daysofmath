@@ -10,23 +10,25 @@
   "primaryAnswer": "6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Subtracting a negative is adding.",
+  "hint": "There are two negative signs next to each other. Think about what taking away a negative amount does to a number.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Subtracting a negative is adding."
+      "text": "There are two negative signs next to each other. Think about what taking away a negative amount does to a number."
     },
     {
       "level": "guide",
-      "text": "$4 - (-2) = 4 + 2$."
+      "text": "Subtracting a number is the same as adding its opposite. The opposite of $-2$ is $2$, so rewrite the problem as $4 + 2$."
     },
     {
       "level": "reveal",
-      "text": "$6$."
+      "text": "$4 + 2 = 6$, so the value of $4 - (-2)$ is $6$."
     }
   ],
   "explanation": [
-    "$4 - (-2) = 4 + 2 = 6$."
+    "Subtracting a number gives the same result as adding its opposite.",
+    "The opposite of $-2$ is $2$, so $4 - (-2)$ becomes $4 + 2$.",
+    "Adding gives $4 + 2 = 6$, so the answer is $6$."
   ],
   "tags": [
     "integer"

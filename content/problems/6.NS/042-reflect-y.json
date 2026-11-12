@@ -14,7 +14,7 @@
     "(−5,3)"
   ],
   "acceptanceMode": "normalized",
-  "hint": "One reflection at a time. Reflecting across $x$-axis flips the **$y$-coord**; reflecting across $y$-axis flips the **$x$-coord**.",
+  "hint": "Each reflection changes the sign of exactly one coordinate. Think about which coordinate tells you the height above or below the $x$-axis.",
   "hints": [
     {
       "level": "nudge",
@@ -23,22 +23,22 @@
     },
     {
       "level": "nudge",
-      "text": "Reflecting across the $x$-axis negates the $y$-coordinate. Reflecting across the $y$-axis negates the $x$-coordinate."
+      "text": "Each reflection changes the sign of exactly one coordinate. Think about which coordinate tells you the height above or below the $x$-axis."
     },
     {
       "level": "guide",
-      "text": "$(5, -3) \\to_{x\\text{-axis}} (5, 3) \\to_{y\\text{-axis}} (-5, 3)$."
+      "text": "Reflecting across the $x$-axis changes the sign of $y$, so $(5, -3)$ becomes $(5, 3)$. Now reflect that point across the $y$-axis, which changes the sign of $x$ only."
     },
     {
       "level": "reveal",
-      "text": "Final point: $(-5, 3)$."
+      "text": "Changing the sign of $x$ in $(5, 3)$ gives the final point $(-5, 3)$."
     }
   ],
   "explanation": [
-    "Reflection across the **$x$-axis** keeps $x$, negates $y$: $(x, y) \\to (x, -y)$.",
-    "Apply to $(5, -3)$: $(5, -(-3)) = (5, 3)$.",
-    "Reflection across the **$y$-axis** negates $x$, keeps $y$: $(x, y) \\to (-x, y)$.",
-    "Apply to $(5, 3)$: $(-5, 3)$. **Final answer.**"
+    "A reflection across the **$x$-axis** flips a point up or down, so $x$ stays and $y$ changes sign: $(x, y) \\to (x, -y)$.",
+    "Apply this rule to $(5, -3)$. The $y$-coordinate $-3$ becomes $3$, giving $(5, 3)$.",
+    "A reflection across the **$y$-axis** flips a point left or right, so $x$ changes sign and $y$ stays: $(x, y) \\to (-x, y)$.",
+    "Apply this rule to $(5, 3)$. The $x$-coordinate becomes $-5$, so the final point is $(-5, 3)$."
   ],
   "tags": [
     "coordinate",

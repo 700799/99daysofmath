@@ -10,24 +10,26 @@
   "primaryAnswer": "0.8",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$48 \\div 6 = 8$. Now place the decimal.",
+  "hint": "Dividing a decimal by a whole number works like whole-number division. The decimal point in the answer stays above the point in the dividend.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$48 \\div 6 = 8$. Now place the decimal."
+      "text": "Dividing a decimal by a whole number works like whole-number division. The decimal point in the answer stays above the point in the dividend."
     },
     {
       "level": "guide",
-      "text": "$4.8 \\div 6$ — same as $48 \\div 6 = 8$ with one decimal place."
+      "text": "$4.8$ is $48$ tenths. Share $48$ tenths equally among $6$ groups by working out $48 \\div 6$, and remember the result is in tenths."
     },
     {
       "level": "reveal",
-      "text": "$4.8 \\div 6 = 0.8$."
+      "text": "$48 \\div 6 = 8$, so each group gets $8$ tenths and $4.8 \\div 6 = 0.8$."
     }
   ],
   "explanation": [
-    "$48 \\div 6 = 8$.",
-    "Keep decimal place: $0.8$."
+    "Think of $4.8$ as $48$ tenths so the division uses whole numbers.",
+    "Divide the tenths: $48 \\div 6 = 8$, so the answer is $8$ tenths.",
+    "Write $8$ tenths as a decimal, which is $0.8$.",
+    "Check by multiplying back: $0.8 \\times 6 = 4.8$, so the answer is $0.8$."
   ],
   "tags": [
     "decimal",

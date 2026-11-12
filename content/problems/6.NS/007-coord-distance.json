@@ -12,11 +12,12 @@
     "6 units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The two points have the **same** $x$-coordinate, so they lie on a vertical line. Find the difference in $y$-values.",
+  "hint": "Compare the two points before doing anything. One coordinate is the same in both, so the points lie on a straight vertical or horizontal line.",
   "explanation": [
-    "Both points have $x = 3$, so they're on a vertical line.",
-    "Subtract the $y$-values: $2 - (-4) = 2 + 4 = 6$.",
-    "The distance is $6$ units."
+    "Both points have $x = 3$, so they lie on the same vertical line and the distance is just the gap between their $y$-values.",
+    "Subtract the $y$-values: $2 - (-4)$. Subtracting a negative is the same as adding, so this is $2 + 4 = 6$.",
+    "You can check by counting: $2$ units from $y = 2$ down to the $x$-axis, then $4$ more down to $y = -4$.",
+    "The distance between the points is $6$ units."
   ],
   "alternativeExplanations": [
     {
@@ -45,15 +46,15 @@
   "hints": [
     {
       "level": "nudge",
-      "text": "The two points have the **same** $x$-coordinate, so they lie on a vertical line. Find the difference in $y$-values."
+      "text": "Compare the two points before doing anything. One coordinate is the same in both, so the points lie on a straight vertical or horizontal line."
     },
     {
       "level": "guide",
-      "text": "Both points have $x = 3$, so they're on a vertical line."
+      "text": "Both points have $x = 3$, so the segment is vertical and only the $y$-values matter. Find how far apart $2$ and $-4$ are by working out $2 - (-4)$."
     },
     {
       "level": "reveal",
-      "text": "The distance is $6$ units."
+      "text": "$2 - (-4) = 2 + 4 = 6$, so the points are $6$ units apart."
     }
   ]
 }

@@ -39,8 +39,10 @@
   "acceptanceMode": "exact",
   "hint": "Quadrants are numbered counter-clockwise starting from the top-right. The signs are I: (+,+), II: (−,+), III: (−,−), IV: (+,−).",
   "explanation": [
-    "The point $(-3, 2)$ has a **negative** $x$-coordinate and a **positive** $y$-coordinate.",
-    "That sign pattern (−, +) puts it in the **upper-left**, which is **Quadrant II**."
+    "The signs of the two coordinates tell you which quadrant a point is in, so look at each sign.",
+    "The point $(-3, 2)$ has a **negative** $x$-coordinate, so it is left of the $y$-axis.",
+    "Its $y$-coordinate is **positive**, so it is above the $x$-axis.",
+    "Left and above is the upper-left region, so the point is in **Quadrant II** (choice B)."
   ],
   "alternativeExplanations": [
     {

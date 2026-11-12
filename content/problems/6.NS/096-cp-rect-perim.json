@@ -12,29 +12,31 @@
     "16 units"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the side lengths.",
+  "hint": "Perimeter is the total distance around the rectangle. The coordinates of the corners tell you how long each side is.",
   "hints": [
     {
       "level": "nudge",
       "title": "🪜 Try a simpler one",
-      "text": "Plot each number on a quick number line. Distances and order get obvious right away."
+      "text": "Try the square with corners $(0, 0)$, $(1, 0)$, $(1, 1)$, $(0, 1)$ first. Each side is $1$ unit, so its perimeter is $4$. This rectangle works the same way with longer sides."
     },
     {
       "level": "nudge",
-      "text": "Find the side lengths."
+      "text": "Perimeter is the total distance around the rectangle. The coordinates of the corners tell you how long each side is."
     },
     {
       "level": "guide",
-      "text": "Length = $5 - 0 = 5$. Width = $3 - 0 = 3$."
+      "text": "The bottom side runs from $x = 0$ to $x = 5$, so the length is $5$. The right side runs from $y = 0$ to $y = 3$, so the width is $3$. A rectangle has two of each side."
     },
     {
       "level": "reveal",
-      "text": "Perimeter $= 2(5 + 3) = 16$."
+      "text": "Perimeter $= 2(5 + 3) = 16$, so the perimeter is $16$ units."
     }
   ],
   "explanation": [
-    "Length: $|5 - 0| = 5$. Width: $|3 - 0| = 3$.",
-    "Perimeter $= 2(L + W) = 2(8) = 16$."
+    "The side from $(0, 0)$ to $(5, 0)$ is horizontal, so its length is $|5 - 0| = 5$.",
+    "The side from $(5, 0)$ to $(5, 3)$ is vertical, so its length is $|3 - 0| = 3$.",
+    "Opposite sides of a rectangle are equal, so the perimeter is $2(5 + 3) = 2(8)$.",
+    "That gives $16$, so the perimeter is $16$ units."
   ],
   "tags": [
     "MAP-practice",

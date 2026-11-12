@@ -14,24 +14,26 @@
     "2,4"
   ],
   "acceptanceMode": "exact",
-  "hint": "Across the y-axis: flip the sign of $x$.",
+  "hint": "The y-axis is the mirror, so the point moves straight left or right. Think about which coordinate must change.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Across the y-axis: flip the sign of $x$."
+      "text": "The y-axis is the mirror, so the point moves straight left or right. Think about which coordinate must change."
     },
     {
       "level": "guide",
-      "text": "$x = -2 \\to x = 2$."
+      "text": "Keep $y = 4$. The point is $2$ units left of the y-axis, so its image is $2$ units to the right: replace $x = -2$ with its opposite."
     },
     {
       "level": "reveal",
-      "text": "$(2, 4)$."
+      "text": "The opposite of $-2$ is $2$, so the reflected point is $(2, 4)$."
     }
   ],
   "explanation": [
-    "Reflecting across the y-axis flips the sign of the x-coordinate.",
-    "$(-2, 4) \\to (2, 4)$."
+    "Reflecting across the y-axis moves the point horizontally, so the y-coordinate does not change.",
+    "The x-coordinate becomes its opposite, because the image is the same distance from the y-axis on the other side.",
+    "For the point $(-2, 4)$, the value $x = -2$ becomes $2$ and $y$ stays $4$.",
+    "So the reflected point has coordinates $(2, 4)$."
   ],
   "tags": [
     "coordinate-plane",
