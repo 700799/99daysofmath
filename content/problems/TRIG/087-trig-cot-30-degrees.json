@@ -15,25 +15,25 @@
     "sqrt(3)/1"
   ],
   "acceptanceMode": "normalized",
-  "hint": "$\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$ — cosine on top this time.",
+  "hint": "Cotangent is the upside-down version of tangent: $\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$, with cosine on top this time.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$ — cosine on top this time."
+      "text": "Cotangent is the upside-down version of tangent: $\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$, with cosine on top this time."
     },
     {
       "level": "guide",
-      "text": "$\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$ and $\\sin 30^\\circ = \\frac{1}{2}$."
+      "text": "Use the special values $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$ and $\\sin 30^\\circ = \\frac{1}{2}$, and divide the first by the second."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{\\sqrt{3}/2}{1/2} = \\sqrt{3}$."
+      "text": "$\\frac{\\sqrt{3}/2}{1/2} = \\sqrt{3}$, so the exact value of $\\cot 30^\\circ$ is $\\sqrt{3}$ (type sqrt(3))."
     }
   ],
   "explanation": [
-    "Cotangent is cosine over sine: $\\cot 30^\\circ = \\frac{\\cos 30^\\circ}{\\sin 30^\\circ}$.",
-    "Substitute the special values: $\\frac{\\sqrt{3}/2}{1/2}$.",
-    "The halves cancel, leaving $\\sqrt{3}$."
+    "Cotangent is cosine over sine, the reciprocal of tangent: $\\cot 30^\\circ = \\frac{\\cos 30^\\circ}{\\sin 30^\\circ}$.",
+    "Substitute the special values from the $30$-$60$-$90$ triangle to get $\\frac{\\sqrt{3}/2}{1/2}$.",
+    "The halves cancel, leaving $\\sqrt{3}$ as the exact value."
   ],
   "alternativeExplanations": [
     {

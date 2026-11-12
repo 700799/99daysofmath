@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The angle of depression from the top equals the angle of elevation from the boat — they are alternate interior angles across the horizontal.",
+  "hint": "The angle of depression from the top equals the angle of elevation from the boat, because they are alternate interior angles between two horizontal lines.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The angle of depression from the top equals the angle of elevation from the boat — they are alternate interior angles across the horizontal."
+      "text": "The angle of depression from the top equals the angle of elevation from the boat, because they are alternate interior angles between two horizontal lines."
     },
     {
       "level": "guide",
-      "text": "From the boat, the $120$ ft height is opposite the $25^\\circ$ angle and the distance $d$ is adjacent. Which ratio uses opposite and adjacent?"
+      "text": "From the boat, the $120$ ft height is opposite the $25^\\circ$ angle and the distance $d$ is adjacent. Pick the ratio that uses opposite and adjacent, with opposite on top."
     },
     {
       "level": "reveal",
-      "text": "Tangent: $\\tan 25^\\circ = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{120}{d}$."
+      "text": "Tangent is opposite over adjacent, so the equation is $\\tan 25^\\circ = \\frac{120}{d}$, choice A."
     }
   ],
   "explanation": [

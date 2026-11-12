@@ -15,19 +15,19 @@
     "5\\sqrt{3}"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The sides go $1 : \\sqrt{3} : 2$, and the shorter leg is the $1$.",
+  "hint": "The sides of a $30$-$60$-$90$ triangle go $1 : \\sqrt{3} : 2$, and the shorter leg is the $1$. Which part of the ratio is the longer leg?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The sides go $1 : \\sqrt{3} : 2$, and the shorter leg is the $1$."
+      "text": "The sides of a $30$-$60$-$90$ triangle go $1 : \\sqrt{3} : 2$, and the shorter leg is the $1$. Which part of the ratio is the longer leg?"
     },
     {
       "level": "guide",
-      "text": "The longer leg is always the shorter leg times $\\sqrt{3}$."
+      "text": "The longer leg is always the shorter leg times $\\sqrt{3}$, so multiply the given $5$ cm by $\\sqrt{3}$ and leave the root in place."
     },
     {
       "level": "reveal",
-      "text": "$5 \\times \\sqrt{3} = 5\\sqrt{3} \\approx 8.7$ cm."
+      "text": "$5 \\times \\sqrt{3} = 5\\sqrt{3}$, so the longer leg is $5\\sqrt{3}$ cm, about $8.7$ cm."
     }
   ],
   "explanation": [

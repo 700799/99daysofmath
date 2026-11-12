@@ -10,19 +10,19 @@
   "primaryAnswer": "15",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The longest day happens when the sine part is as large as it can be.",
+  "hint": "The longest day happens when the sine part of the model is as large as it can be. What is the largest value a sine can take?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The longest day happens when the sine part is as large as it can be."
+      "text": "The longest day happens when the sine part of the model is as large as it can be. What is the largest value a sine can take?"
     },
     {
       "level": "guide",
-      "text": "The largest value of any sine is $1$, so the most daylight is $12 + 3(1)$."
+      "text": "The largest value of any sine is $1$, whatever is inside it, so the most daylight is $12 + 3(1)$."
     },
     {
       "level": "reveal",
-      "text": "$12 + 3 = 15$ hours."
+      "text": "$12 + 3 = 15$, so the longest day has $15$ hours of daylight."
     }
   ],
   "explanation": [

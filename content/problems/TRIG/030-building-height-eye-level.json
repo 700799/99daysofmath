@@ -32,7 +32,7 @@
   ],
   "explanation": [
     "The right triangle has its horizontal leg $200$ ft and its vertical leg running from instrument height up to the roof.",
-    "Use tangent: $x = 200\\tan 55^\\circ \\approx 200(1.4281) \\approx 285.6$ ft.",
+    "The vertical leg $x$ is opposite the $55^\\circ$ angle and the $200$ ft is adjacent, so use tangent: $x = 200\\tan 55^\\circ \\approx 200(1.4281) \\approx 285.6$ ft.",
     "That is the height ABOVE the instrument, so add the instrument height: $285.6 + 5 = 290.6$ ft."
   ],
   "alternativeExplanations": [

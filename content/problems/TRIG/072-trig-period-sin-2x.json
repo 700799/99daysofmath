@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The period of $y = \\sin(Bx)$ is $\\frac{2\\pi}{B}$.",
+  "hint": "A number multiplying $x$ inside the sine changes how quickly the wave repeats. The usual period $2\\pi$ gets divided by that number.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The period of $y = \\sin(Bx)$ is $\\frac{2\\pi}{B}$."
+      "text": "A number multiplying $x$ inside the sine changes how quickly the wave repeats. The usual period $2\\pi$ gets divided by that number."
     },
     {
       "level": "guide",
-      "text": "Here $B = 2$, so compute $\\frac{2\\pi}{2}$."
+      "text": "The period of $y = \\sin(Bx)$ is $\\frac{2\\pi}{B}$. Here $B = 2$, so work out $\\frac{2\\pi}{2}$."
     },
     {
       "level": "reveal",
-      "text": "The period is $\\pi$ — the wave finishes a full cycle twice as fast."
+      "text": "The period is $\\frac{2\\pi}{2} = \\pi$, choice A, so the wave finishes a full cycle twice as fast."
     }
   ],
   "explanation": [
-    "For $y = \\sin(Bx)$ the period is $\\frac{2\\pi}{B}$.",
-    "With $B = 2$ the period is $\\frac{2\\pi}{2} = \\pi$.",
-    "A bigger $B$ squeezes the wave, so it repeats sooner, not later."
+    "For $y = \\sin(Bx)$ the period is $\\frac{2\\pi}{B}$, because the input reaches $2\\pi$ sooner when it is multiplied by $B$.",
+    "Here the number multiplying $x$ is $B = 2$, so the period is $\\frac{2\\pi}{2} = \\pi$.",
+    "A bigger $B$ squeezes the wave, so it repeats sooner, not later, and the period is $\\pi$."
   ],
   "alternativeExplanations": [
     {

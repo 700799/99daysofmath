@@ -16,23 +16,23 @@
     "4*cos(x)+1"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Build it piece by piece: $y = A\\cos(Bx) + D$.",
+  "hint": "Build the equation piece by piece from the general form $y = A\\cos(Bx) + D$. Each fact in the question fixes one of the letters.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Build it piece by piece: $y = A\\cos(Bx) + D$."
+      "text": "Build the equation piece by piece from the general form $y = A\\cos(Bx) + D$. Each fact in the question fixes one of the letters."
     },
     {
       "level": "guide",
-      "text": "Amplitude gives $A = 4$; midline gives $D = 1$; a period of $2\\pi$ means $B = 1$."
+      "text": "Amplitude gives $A = 4$, the midline gives $D = 1$, and a period of $2\\pi$ means $B = 1$. Cosine already peaks at $x = 0$, so no shift is needed."
     },
     {
       "level": "reveal",
-      "text": "$y = 4\\cos(x) + 1$."
+      "text": "Putting the pieces together, the equation is $y = 4\\cos(x) + 1$."
     }
   ],
   "explanation": [
-    "Amplitude $4$ means $A = 4$.",
+    "An amplitude of $4$ means the number in front of the cosine is $A = 4$.",
     "Midline $y = 1$ means the vertical shift is $D = 1$.",
     "Period $2\\pi$ is the ordinary cosine period, so $B = 1$ and no horizontal squeeze is needed.",
     "Cosine already peaks at $x = 0$, so no phase shift is needed either: $y = 4\\cos(x) + 1$."

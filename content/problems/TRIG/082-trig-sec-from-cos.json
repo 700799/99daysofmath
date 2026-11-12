@@ -10,24 +10,25 @@
   "primaryAnswer": "2",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Secant is the reciprocal of cosine.",
+  "hint": "Secant is one of the reciprocal functions. Which of sine, cosine and tangent is it the reciprocal of?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Secant is the reciprocal of cosine."
+      "text": "Secant is one of the reciprocal functions. Which of sine, cosine and tangent is it the reciprocal of?"
     },
     {
       "level": "guide",
-      "text": "$\\sec\\theta = \\frac{1}{\\cos\\theta}$, so flip $\\frac{1}{2}$ over."
+      "text": "Secant is the reciprocal of cosine, $\\sec\\theta = \\frac{1}{\\cos\\theta}$, so flip the fraction $\\frac{1}{2}$ upside down."
     },
     {
       "level": "reveal",
-      "text": "$\\sec\\theta = \\frac{1}{1/2} = 2$."
+      "text": "$\\sec\\theta = \\frac{1}{1/2} = 2$, so the secant of the angle is $2$."
     }
   ],
   "explanation": [
-    "By definition $\\sec\\theta = \\frac{1}{\\cos\\theta}$.",
-    "Substituting, $\\sec\\theta = \\frac{1}{1/2} = 2$."
+    "By definition secant is the reciprocal of cosine: $\\sec\\theta = \\frac{1}{\\cos\\theta}$.",
+    "Substituting the given cosine gives $\\sec\\theta = \\frac{1}{1/2}$, and dividing by a half is the same as multiplying by $2$.",
+    "So the value of the secant is $\\sec\\theta = 2$."
   ],
   "alternativeExplanations": [
     {

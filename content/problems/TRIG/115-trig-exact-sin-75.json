@@ -14,25 +14,25 @@
     "(√6+√2)/4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Use $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$ with $A = 45^\\circ$, $B = 30^\\circ$.",
+  "hint": "The angle $75^\\circ$ is not a special angle, but it is a sum of two that are. The sine sum formula turns it into known values.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Use $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$ with $A = 45^\\circ$, $B = 30^\\circ$."
+      "text": "The angle $75^\\circ$ is not a special angle, but it is a sum of two that are. The sine sum formula turns it into known values."
     },
     {
       "level": "guide",
-      "text": "That is $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2}$."
+      "text": "Use $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$ with $A = 45^\\circ$ and $B = 30^\\circ$, which gives $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2}$. Multiply out each product."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4} = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$."
+      "text": "The products are $\\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4}$, so the exact value is $\\frac{\\sqrt{6} + \\sqrt{2}}{4}$."
     }
   ],
   "explanation": [
-    "Split the angle: $\\sin 75^\\circ = \\sin(45^\\circ + 30^\\circ) = \\sin 45^\\circ\\cos 30^\\circ + \\cos 45^\\circ\\sin 30^\\circ$.",
-    "Substitute the special values: $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2} = \\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4}$.",
-    "Combine over the common denominator: $\\frac{\\sqrt{6} + \\sqrt{2}}{4}$."
+    "Split the angle and use the sine sum formula: $\\sin 75^\\circ = \\sin(45^\\circ + 30^\\circ) = \\sin 45^\\circ\\cos 30^\\circ + \\cos 45^\\circ\\sin 30^\\circ$.",
+    "Substitute the special values and multiply each pair: $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2} = \\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4}$.",
+    "Combine over the common denominator to get the exact value $\\frac{\\sqrt{6} + \\sqrt{2}}{4}$."
   ],
   "alternativeExplanations": [
     {

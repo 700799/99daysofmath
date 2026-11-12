@@ -15,24 +15,24 @@
     "2*pi"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The formula $s = r\\theta$ only works when $\\theta$ is in radians, so convert first.",
+  "hint": "The formula $s = r\\theta$ only works when $\\theta$ is in radians, so the angle has to be converted before anything else.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The formula $s = r\\theta$ only works when $\\theta$ is in radians, so convert first."
+      "text": "The formula $s = r\\theta$ only works when $\\theta$ is in radians, so the angle has to be converted before anything else."
     },
     {
       "level": "guide",
-      "text": "$30^\\circ = 30 \\times \\frac{\\pi}{180} = \\frac{\\pi}{6}$ radians. Now use $s = r\\theta$."
+      "text": "Convert the turn: $30^\\circ = 30 \\times \\frac{\\pi}{180} = \\frac{\\pi}{6}$ radians. Then put $r = 12$ and that angle into $s = r\\theta$."
     },
     {
       "level": "reveal",
-      "text": "$s = 12 \\times \\frac{\\pi}{6} = 2\\pi$ inches."
+      "text": "$s = 12 \\times \\frac{\\pi}{6} = 2\\pi$, so the gum travels $2\\pi$ inches along the rim."
     }
   ],
   "explanation": [
-    "Convert the angle to radians: $30^\\circ = \\frac{\\pi}{6}$.",
-    "Apply $s = r\\theta$ with $r = 12$: $s = 12 \\times \\frac{\\pi}{6}$.",
+    "The arc formula needs radians, so convert the angle first: $30^\\circ = \\frac{\\pi}{6}$.",
+    "Apply the arc length formula $s = r\\theta$ with radius $r = 12$: $s = 12 \\times \\frac{\\pi}{6}$.",
     "The 12 and the 6 reduce, leaving $s = 2\\pi$ inches (about 6.28 inches)."
   ],
   "alternativeExplanations": [

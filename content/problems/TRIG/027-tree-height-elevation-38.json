@@ -10,25 +10,25 @@
   "primaryAnswer": "39.1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The $50$ ft on the ground is adjacent to the angle, and the tree height is opposite it.",
+  "hint": "The $50$ ft along the ground is adjacent to the angle of elevation, and the tree height is opposite it. No hypotenuse is involved.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $50$ ft on the ground is adjacent to the angle, and the tree height is opposite it."
+      "text": "The $50$ ft along the ground is adjacent to the angle of elevation, and the tree height is opposite it. No hypotenuse is involved."
     },
     {
       "level": "guide",
-      "text": "Opposite and adjacent means tangent: $\\tan 38^\\circ = \\frac{h}{50}$."
+      "text": "Opposite and adjacent together mean tangent: write $\\tan 38^\\circ = \\frac{h}{50}$, then multiply both sides by $50$."
     },
     {
       "level": "reveal",
-      "text": "$h = 50\\tan 38^\\circ \\approx 50(0.7813) \\approx 39.1$ ft."
+      "text": "$h = 50\\tan 38^\\circ \\approx 50(0.7813) \\approx 39.1$, so the tree is about $39.1$ ft tall."
     }
   ],
   "explanation": [
     "Angle of elevation is measured up from horizontal, so the $50$ ft ground distance is the adjacent side.",
     "The tree height is opposite, so use tangent: $\\tan 38^\\circ = \\frac{h}{50}$.",
-    "Multiply: $h = 50\\tan 38^\\circ \\approx 39.1$ ft."
+    "Multiply both sides by $50$ to isolate the height: $h = 50\\tan 38^\\circ \\approx 39.1$ ft."
   ],
   "alternativeExplanations": [
     {

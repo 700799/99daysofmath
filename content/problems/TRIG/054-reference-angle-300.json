@@ -10,25 +10,25 @@
   "primaryAnswer": "60",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$300^\\circ$ is in Quadrant IV, closing in on a full turn.",
+  "hint": "Decide which quadrant holds the angle, then measure the acute gap between its terminal side and the nearest part of the $x$-axis.",
   "hints": [
     {
       "level": "nudge",
-      "text": "$300^\\circ$ is in Quadrant IV, closing in on a full turn."
+      "text": "Decide which quadrant holds the angle, then measure the acute gap between its terminal side and the nearest part of the $x$-axis."
     },
     {
       "level": "guide",
-      "text": "In Quadrant IV the reference angle is $360^\\circ$ minus the angle."
+      "text": "The angle $300^\\circ$ is in Quadrant IV, closing in on a full turn, so the reference angle is $360^\\circ$ minus the angle."
     },
     {
       "level": "reveal",
-      "text": "$360 - 300 = 60^\\circ$."
+      "text": "$360 - 300 = 60$, so the reference angle is $60$ degrees."
     }
   ],
   "explanation": [
-    "$300^\\circ$ falls between $270^\\circ$ and $360^\\circ$, so it is in Quadrant IV.",
+    "The angle $300^\\circ$ falls between $270^\\circ$ and $360^\\circ$, so it is in Quadrant IV.",
     "The nearest part of the $x$-axis is the $360^\\circ$ (same as $0^\\circ$) direction.",
-    "So the reference angle is $360^\\circ - 300^\\circ = 60^\\circ$."
+    "So the reference angle is the gap up to a full turn: $360^\\circ - 300^\\circ = 60^\\circ$."
   ],
   "alternativeExplanations": [
     {

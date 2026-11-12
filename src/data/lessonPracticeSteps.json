@@ -1362,5 +1362,293 @@
   "To predict from a regression line, substitute the x-value into the equation.",
   "Put x = 5 into the line and multiply before adding: 12.5 + 2.4 × 5 = 12.5 + 12.",
   "The line predicts a score of 24.5 for 5 hours."
+ ],
+ "TRIG-1#0": [
+  "Quadrants change every 90°, at 90°, 180°, 270° and 360°. Find which two of these the angle sits between.",
+  "The angle 315° is past 270° and short of 360°.",
+  "That is the last quarter of the turn, so 315° is in Quadrant IV."
+ ],
+ "TRIG-1#1": [
+  "Coterminal angles differ by full turns of 360°, so keep taking 360 away until the result is under 360.",
+  "Subtract one full turn: 800 − 360 = 440, which is still more than 360.",
+  "Subtract a second full turn: 440 − 360 = 80, which is now under 360.",
+  "The coterminal angle between 0° and 360° is 80°."
+ ],
+ "TRIG-1#2": [
+  "Adding a full turn of 360° does not move the terminal side, and it can make a negative angle positive.",
+  "Add one full turn to the angle: −120 + 360.",
+  "The sum is 240, so the positive coterminal angle is 240°."
+ ],
+ "TRIG-1#3": [
+  "The minute hand goes all the way around the clock, a full 360°, in one hour.",
+  "One hour is 60 minutes, so share the 360° equally: 360 ÷ 60.",
+  "360 ÷ 60 = 6, so the minute hand turns 6° each minute."
+ ],
+ "TRIG-2#0": [
+  "A half turn is 180° and also π radians, so degrees become radians when you multiply by π/180.",
+  "Multiply the angle by the factor: 60 × π/180 = 60π/180.",
+  "Divide top and bottom by 60 to simplify, which gives π/3 radians."
+ ],
+ "TRIG-2#1": [
+  "To go from radians to degrees, multiply by 180/π, or simply replace π with 180°.",
+  "Replacing π with 180° turns the angle π/4 into 180° divided by 4.",
+  "180 ÷ 4 = 45, so the angle is 45° in degrees."
+ ],
+ "TRIG-2#2": [
+  "When the angle is in radians, arc length is radius times angle: s = rθ.",
+  "Put in the radius 6 and the angle 3 radians: s = 6 × 3.",
+  "6 × 3 = 18, so the length of the arc is 18 m."
+ ],
+ "TRIG-2#3": [
+  "With the angle in radians, the area of a sector is A = ½r²θ.",
+  "Square the radius first, then substitute: A = ½ × 16 × 0.5.",
+  "Half of 16 is 8, and 8 × 0.5 = 4, so the area is 4 square units."
+ ],
+ "TRIG-3#0": [
+  "Sine compares two sides of a right triangle: the opposite side over the hypotenuse (SOH).",
+  "The opposite side is 3 and the hypotenuse is 5, so write 3 over 5.",
+  "So sin θ = 3/5, which is 0.6 as a decimal."
+ ],
+ "TRIG-3#1": [
+  "Cosine is the adjacent side over the hypotenuse (CAH), so decide which length plays each role.",
+  "The 5 m along the ground touches the angle, so it is adjacent, and the 13 m ladder is the hypotenuse.",
+  "Adjacent over hypotenuse gives the cosine of the angle: cos θ = 5/13."
+ ],
+ "TRIG-3#2": [
+  "Rise is opposite the angle and run is adjacent to it, and that pair of sides goes with tangent.",
+  "Opposite over adjacent gives the tangent of the angle: tan θ = 3/3 = 1.",
+  "The angle whose tangent is 1 is 45°, so the angle of elevation is 45°."
+ ],
+ "TRIG-3#3": [
+  "The unknown x is divided by 12, so find the value of sin 30° and then multiply both sides by 12.",
+  "The exact value is sin 30° = 0.5, so the equation reads 0.5 = x/12.",
+  "Multiplying both sides by 12 gives x = 12 × 0.5, so the answer is x = 6."
+ ],
+ "TRIG-4#0": [
+  "Use the 30-60-90 triangle, whose sides are 1, √3 and 2, and remember sine is opposite over hypotenuse.",
+  "The side opposite the 30° angle is 1 and the hypotenuse is 2.",
+  "Opposite over hypotenuse gives the exact value sin 30° = 1/2."
+ ],
+ "TRIG-4#1": [
+  "Tangent is opposite over adjacent, so think about the two legs of a 45-45-90 triangle.",
+  "Both legs of a 45-45-90 triangle are equal, for example 1 and 1.",
+  "Equal legs give tan 45° = 1/1, so the answer is 1."
+ ],
+ "TRIG-4#2": [
+  "In a 45-45-90 triangle the sides follow the pattern 1, 1, √2, so the hypotenuse is a leg times √2.",
+  "Each leg here is 9, so multiply 9 by √2 and leave the root as it is.",
+  "The exact hypotenuse is 9√2, which is about 12.7."
+ ],
+ "TRIG-4#3": [
+  "A 30-60-90 triangle has sides in the pattern 1, √3, 2, with the 1 opposite the 30° angle.",
+  "So the short leg, opposite 30°, is always half the hypotenuse: work out 20 ÷ 2.",
+  "20 ÷ 2 = 10, so the side opposite the 30° angle is 10."
+ ],
+ "TRIG-5#0": [
+  "On the unit circle cosine is the x-coordinate of the point, and it helps to change the angle to degrees.",
+  "The angle π/3 is 180° ÷ 3 = 60°, so you need cos 60°.",
+  "From the 30-60-90 triangle, cos 60° = 1/2, so cos(π/3) = 1/2."
+ ],
+ "TRIG-5#1": [
+  "On the unit circle sine is the y-coordinate, so find the point where the angle π/2 lands.",
+  "The angle π/2 is a quarter turn, which is the top of the circle at the point (0, 1).",
+  "The y-coordinate of that point is 1, so sin(π/2) = 1."
+ ],
+ "TRIG-5#2": [
+  "Sine is the y-coordinate of the point on the unit circle, so locate the point for the angle π.",
+  "The angle π is a half turn, which lands on the left of the circle at the point (−1, 0).",
+  "The y-coordinate there is 0, so sin(π) = 0."
+ ],
+ "TRIG-5#3": [
+  "Find the quadrant and the reference angle first; the reference angle gives the size and the quadrant gives the sign.",
+  "The angle 3π/4 is 135°, which is in Quadrant II with reference angle π/4 (45°).",
+  "The size is cos(π/4) = √2/2, and cosine is negative in Quadrant II because x is negative there.",
+  "So the exact value is cos(3π/4) = −√2/2."
+ ],
+ "TRIG-6#0": [
+  "A reference angle is the acute angle between the terminal side and the nearest part of the x-axis.",
+  "The angle 135° is in Quadrant II, so the nearest part of the x-axis is at 180°.",
+  "Subtract to get the gap: 180 − 135 = 45, so the reference angle is 45°."
+ ],
+ "TRIG-6#1": [
+  "Measure the acute gap between the terminal side and the x-axis, after finding the quadrant of the angle.",
+  "The angle 240° is in Quadrant III, just past the 180° mark on the x-axis.",
+  "Subtract 180 from the angle: 240 − 180 = 60, so the reference angle is 60°."
+ ],
+ "TRIG-6#2": [
+  "Tangent is sine divided by cosine, so its sign depends on the signs of both in that quadrant.",
+  "The angle 200° is in Quadrant III, where sine and cosine are both negative.",
+  "A negative divided by a negative is positive, so tan 200° is positive."
+ ],
+ "TRIG-6#3": [
+  "Use the reference angle for the size of the cosine and the quadrant for its sign.",
+  "The reference angle is 180 − 120 = 60°, and cos 60° = 1/2, so the size is 1/2.",
+  "The angle 120° is in Quadrant II, where x is negative, so cosine is negative there.",
+  "Putting size and sign together gives cos 120° = −1/2."
+ ],
+ "TRIG-7#0": [
+  "Amplitude is the height of the wave above its midline, set by the number in front of the sine.",
+  "In y = 5 sin(4x) the number in front is 5; the 4 inside only changes the period.",
+  "The amplitude is the size of that number, so it is 5."
+ ],
+ "TRIG-7#1": [
+  "A number b multiplying x inside the sine squeezes the wave, so the period is 2π divided by b.",
+  "Here the number inside is b = 4, so the period is 2π/4.",
+  "Simplifying 2π/4 gives π/2, so the wave repeats every π/2."
+ ],
+ "TRIG-7#2": [
+  "The midline is the horizontal line the wave swings around, set by the constant added at the end.",
+  "In y = 3 cos x − 2 the constant added on is −2, which moves the whole wave down 2.",
+  "So the midline is y = −2, and the value asked for is −2."
+ ],
+ "TRIG-7#3": [
+  "Amplitude is the distance from the midline to the peak, which is half the gap between highest and lowest.",
+  "Find the full gap between the maximum and the minimum: 15 − 9 = 6 hours.",
+  "Half of that gap is 6 ÷ 2 = 3, so the amplitude is 3 hours."
+ ],
+ "TRIG-8#0": [
+  "A number subtracted from x inside the function slides the graph sideways; this is the phase shift.",
+  "The inside is x − π/3, which is zero when x = π/3, so the cycle now starts at π/3.",
+  "Starting later means the graph slides right, so the phase shift is π/3 to the right."
+ ],
+ "TRIG-8#1": [
+  "A constant added outside the cosine moves the whole graph up or down without changing its shape.",
+  "In y = cos x + 6 the constant added outside is 6, and it is positive.",
+  "The whole wave rises 6 units, so the vertical shift is 6 (up 6)."
+ ],
+ "TRIG-8#2": [
+  "The period of a sine or cosine wave is 2π/b, so b is 2π divided by the period.",
+  "Put in the period given in the question: b = 2π ÷ 4π.",
+  "The π cancels and 2 ÷ 4 = 1/2, so the value of b is 1/2."
+ ],
+ "TRIG-8#3": [
+  "The midline lies halfway between the top and the bottom of the wave, so average the two values.",
+  "Add the maximum and the minimum, then halve: d = (9 + 1)/2.",
+  "(9 + 1)/2 = 10/2 = 5, so the midline of the wave is d = 5."
+ ],
+ "TRIG-9#0": [
+  "Tangent is sine divided by cosine, so compare the sine and cosine of 45°.",
+  "At 45° the sine and the cosine are equal; both are √2/2.",
+  "A number divided by itself is 1, so tan 45° = 1."
+ ],
+ "TRIG-9#1": [
+  "Secant is the reciprocal of cosine, so find the cosine of the angle first.",
+  "On the unit circle 0° is the point (1, 0), so cos 0° = 1.",
+  "The reciprocal of 1 is 1/1, so sec 0° = 1."
+ ],
+ "TRIG-9#2": [
+  "Cosecant is the reciprocal of sine, so start by finding the sine of the angle.",
+  "The angle π/2 is the top of the unit circle, where the height is 1, so sin(π/2) = 1.",
+  "The reciprocal of 1 is 1/1, so csc(π/2) = 1."
+ ],
+ "TRIG-9#3": [
+  "Tangent is sine over cosine, and both change sign after a half turn, so the quotient is back where it started.",
+  "That means tangent repeats every half turn, which is 180°.",
+  "A half turn is π radians, so the period of y = tan x is π."
+ ],
+ "TRIG-10#0": [
+  "Read arcsin(1/2) as a question: which angle between −90° and 90° has a sine of 1/2?",
+  "From the 30-60-90 triangle, sin 30° = 1/2, and 30° is inside the allowed range.",
+  "So arcsin(1/2) is 30°, and the number to enter is 30."
+ ],
+ "TRIG-10#1": [
+  "Read arccos(1/2) as a question: which angle between 0° and 180° has a cosine of 1/2?",
+  "From the 30-60-90 triangle, cos 60° = 1/2, and 60° is inside the range [0°, 180°].",
+  "So arccos(1/2) is 60°, and the answer is 60."
+ ],
+ "TRIG-10#2": [
+  "Read arctan(1) as a question: which angle between −90° and 90° has a tangent of 1?",
+  "Tangent is 1 when the opposite and adjacent sides are equal, which happens at 45°.",
+  "Since tan 45° = 1, the value of arctan(1) is 45°."
+ ],
+ "TRIG-10#3": [
+  "The inverse sine returns an angle between −90° and 90°, so look for the angle in that range whose sine is −1.",
+  "Sine is −1 at the bottom of the unit circle, and in this range that angle is written −90°.",
+  "The angle −90° is the endpoint of the arcsin range, so it is allowed and arcsin(−1) = −90°."
+ ],
+ "TRIG-11#0": [
+  "This sum of squares is one of the fundamental identities, and it comes from the unit circle.",
+  "The point (cos θ, sin θ) is 1 unit from the origin, so the Pythagorean theorem gives cos²θ + sin²θ = 1².",
+  "This is the Pythagorean identity, so the expression simplifies to 1."
+ ],
+ "TRIG-11#1": [
+  "Secant is a reciprocal function, so rewrite it using cosine and see what cancels.",
+  "Since sec θ = 1/cos θ, the product is cos θ × 1/cos θ.",
+  "The cosines cancel, so the product is 1."
+ ],
+ "TRIG-11#2": [
+  "Sine and cosine of one angle are linked by the Pythagorean identity sin²θ + cos²θ = 1.",
+  "Substitute the cosine and solve for the square of the sine: sin²θ = 1 − 9/25 = 16/25.",
+  "The square root of 16/25 is 4/5 or −4/5, and in Quadrant I sine is positive.",
+  "So sin θ = 4/5, which is 0.8 as a decimal."
+ ],
+ "TRIG-11#3": [
+  "Sine divided by cosine is one of the quotient identities, so it has a single-function name.",
+  "In a right triangle, dividing opposite/hypotenuse by adjacent/hypotenuse leaves opposite/adjacent.",
+  "Opposite over adjacent is tangent, so the expression simplifies to tan θ."
+ ],
+ "TRIG-12#0": [
+  "The pattern 2 sin θ cos θ is the double-angle formula for sine read backwards.",
+  "With θ = 30° the expression equals sin 2θ, which is sin 60°.",
+  "The exact value is sin 60° = √3/2, so the answer is √3/2."
+ ],
+ "TRIG-12#1": [
+  "The double-angle formula for sine uses both given values: sin 2θ = 2 sin θ cos θ.",
+  "Substitute the sine and the cosine: sin 2θ = 2(4/5)(3/5).",
+  "Multiply across: 2 × 12/25 = 24/25, so the answer is sin 2θ = 24/25, or 0.96."
+ ],
+ "TRIG-12#2": [
+  "The formula only needs the square of the sine, so square the given value before anything else.",
+  "Squaring the given sine value gives sin²θ = (1/2)² = 1/4.",
+  "Substitute that square into the formula: cos 2θ = 1 − 2(1/4) = 1 − 1/2.",
+  "Subtracting gives 1 − 1/2 = 1/2, so the answer is cos 2θ = 1/2."
+ ],
+ "TRIG-12#3": [
+  "Cosine times cosine plus sine times sine is the pattern of a cosine difference formula.",
+  "The plus sign means this is cos(A − B) with A = 40° and B = 10°.",
+  "So the expression equals cos(40° − 10°) = cos 30°.",
+  "The exact value of cos 30° is √3/2, so the answer is √3/2."
+ ],
+ "TRIG-13#0": [
+  "Sine is the y-coordinate on the unit circle, so ask where the height of the point is zero.",
+  "The height is 0 where the circle crosses the x-axis, on the right and on the left.",
+  "Those points are at θ = 0 and θ = π, and 2π is left out of the interval.",
+  "So the two solutions in the interval are 0 and π."
+ ],
+ "TRIG-13#1": [
+  "Cosine is the x-coordinate on the unit circle, so ask where the point is as far right as possible.",
+  "The x-coordinate reaches 1 only at the point (1, 0), which is the starting point of the circle.",
+  "That point is at θ = 0, and 2π is not in the interval, so the only solution is θ = 0."
+ ],
+ "TRIG-13#2": [
+  "Sine is the height on the unit circle, so ask in which quadrants the height is positive.",
+  "A positive sine such as 0.4 happens in Quadrant I and again in Quadrant II, once in each.",
+  "That makes 2 solutions in one full turn of the circle."
+ ],
+ "TRIG-13#3": [
+  "Get the sine by itself first, just as you would isolate x in a linear equation.",
+  "Divide both sides by 2, which gives sin θ = 1/2.",
+  "Between 0° and 90° the angle with sine 1/2 is 30°, so θ = 30°."
+ ],
+ "TRIG-14#0": [
+  "A side and its opposite angle are known, so use the Law of Sines: a/sin A = b/sin B.",
+  "Solve for the unknown side: b = a sin B / sin A = 5 × sin 90° / sin 30°.",
+  "Since sin 90° = 1 and sin 30° = 0.5, this is 5(1)/0.5.",
+  "Dividing 5 by 0.5 gives 10, so the side is b = 10."
+ ],
+ "TRIG-14#1": [
+  "With two sides and the angle between them, the area is ½ab sin C.",
+  "Substitute the two sides and the angle: Area = ½(10)(12) sin 30° = 60 × 0.5.",
+  "60 × 0.5 = 30, so the area is 30 square units."
+ ],
+ "TRIG-14#2": [
+  "Two sides and the included angle are known, so use the Law of Cosines: c² = a² + b² − 2ab cos C.",
+  "Substitute the values: c² = 9 + 16 − 2(3)(4)cos 90°, and cos 90° = 0, so the last term vanishes.",
+  "That leaves c² = 25, and the square root of 25 is 5, so c = 5."
+ ],
+ "TRIG-14#3": [
+  "With all three sides known, rearrange the Law of Cosines to cos C = (a² + b² − c²)/(2ab).",
+  "Substitute the squares of the sides: cos C = (25 + 64 − 49)/(2 × 5 × 8).",
+  "The top is 40 and the bottom is 80, so cos C = 40/80 = 1/2."
  ]
 }

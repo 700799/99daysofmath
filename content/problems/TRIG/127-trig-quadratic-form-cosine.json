@@ -10,26 +10,26 @@
   "primaryAnswer": "3",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Let $u = \\cos\\theta$. The equation becomes the ordinary quadratic $2u^2 - u - 1 = 0$.",
+  "hint": "The equation is a quadratic in disguise. Let $u = \\cos\\theta$ and it becomes the ordinary quadratic $2u^2 - u - 1 = 0$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Let $u = \\cos\\theta$. The equation becomes the ordinary quadratic $2u^2 - u - 1 = 0$."
+      "text": "The equation is a quadratic in disguise. Let $u = \\cos\\theta$ and it becomes the ordinary quadratic $2u^2 - u - 1 = 0$."
     },
     {
       "level": "guide",
-      "text": "It factors as $(2u + 1)(u - 1) = 0$, so $\\cos\\theta = -\\frac{1}{2}$ or $\\cos\\theta = 1$."
+      "text": "The quadratic factors as $(2u + 1)(u - 1) = 0$, so $\\cos\\theta = -\\frac{1}{2}$ or $\\cos\\theta = 1$. Count the angles in the interval for each of those equations."
     },
     {
       "level": "reveal",
-      "text": "$\\cos\\theta = -\\frac{1}{2}$ gives $120^\\circ$ and $240^\\circ$; $\\cos\\theta = 1$ gives $0^\\circ$. That is $3$ solutions."
+      "text": "$\\cos\\theta = -\\frac{1}{2}$ gives $120^\\circ$ and $240^\\circ$, and $\\cos\\theta = 1$ gives $0^\\circ$, so there are $3$ solutions."
     }
   ],
   "explanation": [
-    "Substitute $u = \\cos\\theta$ to see the quadratic: $2u^2 - u - 1 = 0$.",
-    "Factor it: $(2u + 1)(u - 1) = 0$, so $u = -\\frac{1}{2}$ or $u = 1$.",
+    "Substitute $u = \\cos\\theta$ to see the quadratic hiding in the equation: $2u^2 - u - 1 = 0$.",
+    "Factor it and set each factor to zero: $(2u + 1)(u - 1) = 0$, so $u = -\\frac{1}{2}$ or $u = 1$.",
     "Now translate back. $\\cos\\theta = -\\frac{1}{2}$ has two solutions in the interval, $120^\\circ$ and $240^\\circ$; $\\cos\\theta = 1$ has just one, $0^\\circ$.",
-    "In total there are $3$ solutions."
+    "Two solutions plus one solution make $3$ solutions in total."
   ],
   "alternativeExplanations": [
     {

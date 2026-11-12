@@ -10,25 +10,25 @@
   "primaryAnswer": "0",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Sine reads off the $y$-coordinate.",
+  "hint": "On the unit circle each trig function reads off one coordinate of the point. Which coordinate does sine read?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sine reads off the $y$-coordinate."
+      "text": "On the unit circle each trig function reads off one coordinate of the point. Which coordinate does sine read?"
     },
     {
       "level": "guide",
-      "text": "The point is $(1, 0)$, so what is its $y$-coordinate?"
+      "text": "Sine is the $y$-coordinate of the point. The point here is $(1, 0)$, so pick out its second number."
     },
     {
       "level": "reveal",
-      "text": "The $y$-coordinate is $0$, so $\\sin 0^\\circ = 0$."
+      "text": "The $y$-coordinate of the point is $0$, so the sine is zero: $\\sin 0^\\circ = 0$."
     }
   ],
   "explanation": [
     "On the unit circle, the point at angle $\\theta$ is $(\\cos \\theta,\\ \\sin \\theta)$, so sine is just the height.",
     "At $0^\\circ$ the point is $(1, 0)$, sitting right on the $x$-axis with no height at all.",
-    "Therefore $\\sin 0^\\circ = 0$ (and $\\cos 0^\\circ = 1$)."
+    "Therefore the sine is zero: $\\sin 0^\\circ = 0$ (and $\\cos 0^\\circ = 1$)."
   ],
   "alternativeExplanations": [
     {

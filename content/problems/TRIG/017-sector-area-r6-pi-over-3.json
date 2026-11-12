@@ -32,24 +32,24 @@
   "primaryAnswer": "B",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Sector area is $A = \\frac{1}{2}r^2\\theta$ — note the square and the one-half.",
+  "hint": "A slice is a sector, and sector area is $A = \\frac{1}{2}r^2\\theta$. Watch for the square on the radius and the one-half in front.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sector area is $A = \\frac{1}{2}r^2\\theta$ — note the square and the one-half."
+      "text": "A slice is a sector, and sector area is $A = \\frac{1}{2}r^2\\theta$. Watch for the square on the radius and the one-half in front."
     },
     {
       "level": "guide",
-      "text": "Substitute: $A = \\frac{1}{2}(6)^2\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{2}(36)\\left(\\frac{\\pi}{3}\\right)$."
+      "text": "Substitute the radius and the angle of this slice: $A = \\frac{1}{2}(6)^2\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{2}(36)\\left(\\frac{\\pi}{3}\\right)$. Take half of $36$ first, then divide by $3$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2}(36) = 18$, and $18 \\times \\frac{\\pi}{3} = 6\\pi$ square inches."
+      "text": "$\\frac{1}{2}(36) = 18$, and $18 \\times \\frac{\\pi}{3} = 6\\pi$, so the slice has area $6\\pi$ square inches, choice B."
     }
   ],
   "explanation": [
     "The area of a sector with the angle in radians is $A = \\frac{1}{2}r^2\\theta$.",
-    "Substitute $r = 6$ and $\\theta = \\frac{\\pi}{3}$: $A = \\frac{1}{2}(36)\\left(\\frac{\\pi}{3}\\right)$.",
+    "Substitute $r = 6$ and $\\theta = \\frac{\\pi}{3}$, squaring the radius first: $A = \\frac{1}{2}(36)\\left(\\frac{\\pi}{3}\\right)$.",
     "That gives $18 \\times \\frac{\\pi}{3} = 6\\pi$ square inches, about 18.8 square inches."
   ],
   "alternativeExplanations": [

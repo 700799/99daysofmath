@@ -10,11 +10,11 @@
   "primaryAnswer": "117.5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The largest angle always sits opposite the longest side, so aim at the side of length $20$.",
+  "hint": "The largest angle always sits opposite the longest side, so aim at the side of length $20$. With three sides known, the Law of Cosines gives the angle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The largest angle always sits opposite the longest side, so aim at the side of length $20$."
+      "text": "The largest angle always sits opposite the longest side, so aim at the side of length $20$. With three sides known, the Law of Cosines gives the angle."
     },
     {
       "level": "nudge",
@@ -23,16 +23,16 @@
     },
     {
       "level": "guide",
-      "text": "$\\cos C = \\frac{8^2 + 15^2 - 20^2}{2(8)(15)} = \\frac{64 + 225 - 400}{240}$."
+      "text": "Take $c = 20$ and use $\\cos C = \\frac{8^2 + 15^2 - 20^2}{2(8)(15)} = \\frac{64 + 225 - 400}{240}$. Simplify the fraction, then apply the inverse cosine."
     },
     {
       "level": "reveal",
-      "text": "$\\cos C = \\frac{-111}{240} = -0.4625$, so $C = \\arccos(-0.4625) \\approx 117.5^\\circ$."
+      "text": "$\\cos C = \\frac{-111}{240} = -0.4625$, so the largest angle is $C = \\arccos(-0.4625) \\approx 117.5^\\circ$."
     }
   ],
   "explanation": [
     "The largest angle faces the longest side, so let $c = 20$ and $a = 8$, $b = 15$.",
-    "Rearranged Law of Cosines: $\\cos C = \\frac{a^2 + b^2 - c^2}{2ab} = \\frac{64 + 225 - 400}{240} = \\frac{-111}{240} = -0.4625$.",
+    "The rearranged Law of Cosines gives $\\cos C = \\frac{a^2 + b^2 - c^2}{2ab} = \\frac{64 + 225 - 400}{240} = \\frac{-111}{240} = -0.4625$.",
     "A negative cosine means an obtuse angle: $C = \\arccos(-0.4625) \\approx 117.55^\\circ$, which rounds to $117.5^\\circ$."
   ],
   "alternativeExplanations": [

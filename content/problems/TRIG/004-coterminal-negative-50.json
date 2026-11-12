@@ -10,19 +10,19 @@
   "primaryAnswer": "310",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A negative angle turns clockwise, but it still stops somewhere a counterclockwise angle could reach.",
+  "hint": "A negative angle turns clockwise, but it still stops somewhere a counterclockwise angle could reach. What can you add to an angle without moving its terminal side?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A negative angle turns clockwise, but it still stops somewhere a counterclockwise angle could reach."
+      "text": "A negative angle turns clockwise, but it still stops somewhere a counterclockwise angle could reach. What can you add to an angle without moving its terminal side?"
     },
     {
       "level": "guide",
-      "text": "Add one full turn: $-50^\\circ + 360^\\circ$."
+      "text": "Adding one full turn keeps the terminal side in place and makes the angle positive: work out $-50^\\circ + 360^\\circ$."
     },
     {
       "level": "reveal",
-      "text": "$-50^\\circ + 360^\\circ = 310^\\circ$."
+      "text": "$-50^\\circ + 360^\\circ = 310^\\circ$, so the smallest positive coterminal angle is $310$ degrees."
     }
   ],
   "explanation": [

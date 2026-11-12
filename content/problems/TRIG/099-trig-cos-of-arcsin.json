@@ -13,11 +13,11 @@
     ".8"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Give the inner angle a name: let $\\theta = \\arcsin\\frac{3}{5}$, so $\\sin\\theta = \\frac{3}{5}$.",
+  "hint": "Give the inner angle a name, say $\\theta = \\arcsin\\frac{3}{5}$. That tells you a sine value, and a right triangle can turn it into a cosine.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Give the inner angle a name: let $\\theta = \\arcsin\\frac{3}{5}$, so $\\sin\\theta = \\frac{3}{5}$."
+      "text": "Give the inner angle a name, say $\\theta = \\arcsin\\frac{3}{5}$. That tells you a sine value, and a right triangle can turn it into a cosine."
     },
     {
       "level": "nudge",
@@ -26,7 +26,7 @@
     },
     {
       "level": "guide",
-      "text": "Draw a right triangle with opposite $3$ and hypotenuse $5$. What is the third side?"
+      "text": "Since $\\sin\\theta = \\frac{3}{5}$, draw a right triangle with opposite side $3$ and hypotenuse $5$. Find the third side with the Pythagorean theorem, then form adjacent over hypotenuse."
     },
     {
       "level": "reveal",
@@ -34,9 +34,9 @@
     }
   ],
   "explanation": [
-    "Let $\\theta = \\arcsin\\frac{3}{5}$, which means $\\sin\\theta = \\frac{3}{5}$ with $\\theta$ in $[-90^\\circ, 90^\\circ]$.",
+    "Name the inner angle: let $\\theta = \\arcsin\\frac{3}{5}$, which means $\\sin\\theta = \\frac{3}{5}$ with $\\theta$ in $[-90^\\circ, 90^\\circ]$.",
     "Sketch a right triangle with opposite side $3$ and hypotenuse $5$; the Pythagorean theorem gives the adjacent side $\\sqrt{25 - 9} = 4$.",
-    "So $\\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{4}{5} = 0.8$."
+    "Cosine is adjacent over hypotenuse, so $\\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{4}{5} = 0.8$."
   ],
   "alternativeExplanations": [
     {

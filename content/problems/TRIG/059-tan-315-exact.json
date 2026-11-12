@@ -10,11 +10,11 @@
   "primaryAnswer": "-1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Reference angle first: $360 - 315 = 45^\\circ$, and $\\tan 45^\\circ = 1$.",
+  "hint": "Split the job in two: the reference angle sets the size of the tangent, and the quadrant sets its sign.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Reference angle first: $360 - 315 = 45^\\circ$, and $\\tan 45^\\circ = 1$."
+      "text": "Split the job in two: the reference angle sets the size of the tangent, and the quadrant sets its sign."
     },
     {
       "level": "nudge",
@@ -23,16 +23,16 @@
     },
     {
       "level": "guide",
-      "text": "$315^\\circ$ is in Quadrant IV. Is tangent positive or negative there?"
+      "text": "The reference angle is $360 - 315 = 45^\\circ$, and $\\tan 45^\\circ = 1$. The angle $315^\\circ$ is in Quadrant IV, so decide whether $\\frac{y}{x}$ is positive or negative there."
     },
     {
       "level": "reveal",
-      "text": "Only cosine is positive in Quadrant IV, so tangent is negative: $\\tan 315^\\circ = -1$."
+      "text": "In Quadrant IV $y$ is negative and $x$ is positive, so tangent is negative: $\\tan 315^\\circ = -1$."
     }
   ],
   "explanation": [
-    "$315^\\circ$ lies in Quadrant IV with reference angle $360^\\circ - 315^\\circ = 45^\\circ$.",
-    "The magnitude comes from $\\tan 45^\\circ = 1$.",
+    "The angle $315^\\circ$ lies in Quadrant IV with reference angle $360^\\circ - 315^\\circ = 45^\\circ$.",
+    "The size of the answer comes from the reference angle: $\\tan 45^\\circ = 1$.",
     "In Quadrant IV, $x > 0$ and $y < 0$, so $\\tan\\theta = \\frac{y}{x}$ is negative: $\\tan 315^\\circ = -1$."
   ],
   "alternativeExplanations": [

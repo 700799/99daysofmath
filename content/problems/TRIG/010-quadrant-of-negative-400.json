@@ -32,11 +32,11 @@
   "primaryAnswer": "D",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "First find a positive coterminal angle by adding full turns of $360^\\circ$ — the minus sign matters the whole way.",
+  "hint": "First find a positive coterminal angle by adding full turns of $360^\\circ$. Keep the minus sign in view the whole way, because one turn may not be enough.",
   "hints": [
     {
       "level": "nudge",
-      "text": "First find a positive coterminal angle by adding full turns of $360^\\circ$ — the minus sign matters the whole way."
+      "text": "First find a positive coterminal angle by adding full turns of $360^\\circ$. Keep the minus sign in view the whole way, because one turn may not be enough."
     },
     {
       "level": "nudge",
@@ -45,16 +45,16 @@
     },
     {
       "level": "guide",
-      "text": "$-400 + 360 = -40$, still negative. Add another $360$."
+      "text": "One added turn gives $-400 + 360 = -40$, which is still negative, so add another turn and then see which multiples of $90^\\circ$ the result lies between."
     },
     {
       "level": "reveal",
-      "text": "$-40 + 360 = 320^\\circ$, and $270^\\circ < 320^\\circ < 360^\\circ$, so it lands in Quadrant IV."
+      "text": "$-40 + 360 = 320^\\circ$, and $270^\\circ < 320^\\circ < 360^\\circ$, so the angle ends in Quadrant IV, choice D."
     }
   ],
   "explanation": [
     "Add full turns until the angle is positive: $-400 + 360 = -40$, then $-40 + 360 = 320$.",
-    "So $-400^\\circ$ is coterminal with $320^\\circ$.",
+    "Adding full turns never moves the terminal side, so $-400^\\circ$ is coterminal with $320^\\circ$.",
     "Since $320^\\circ$ falls between $270^\\circ$ and $360^\\circ$, the terminal side is in Quadrant IV."
   ],
   "alternativeExplanations": [

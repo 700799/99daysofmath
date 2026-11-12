@@ -15,11 +15,11 @@
     "8\\sqrt{3}"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Find the short leg first: it is opposite the $30^\\circ$ angle, so it is half the hypotenuse.",
+  "hint": "Find the short leg first. It is opposite the $30^\\circ$ angle, and in this triangle the short leg is always half the hypotenuse.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the short leg first: it is opposite the $30^\\circ$ angle, so it is half the hypotenuse."
+      "text": "Find the short leg first. It is opposite the $30^\\circ$ angle, and in this triangle the short leg is always half the hypotenuse."
     },
     {
       "level": "nudge",
@@ -28,11 +28,11 @@
     },
     {
       "level": "guide",
-      "text": "Half of $16$ is $8$ — that is the ramp's height. The base is the LONGER leg, which is the short leg times $\\sqrt{3}$."
+      "text": "Half of $16$ is $8$, which is the ramp's height. The base is the LONGER leg, and the longer leg is the short leg times $\\sqrt{3}$."
     },
     {
       "level": "reveal",
-      "text": "Base $= 8\\sqrt{3} \\approx 13.9$ ft."
+      "text": "The base is $8 \\times \\sqrt{3} = 8\\sqrt{3}$ ft, which is about $13.9$ ft."
     }
   ],
   "explanation": [

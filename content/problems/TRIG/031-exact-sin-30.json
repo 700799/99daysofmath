@@ -13,25 +13,25 @@
     ".5"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Picture the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$.",
+  "hint": "Picture the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$. The shortest side sits across from the smallest angle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Picture the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$."
+      "text": "Picture the $30$-$60$-$90$ triangle with sides $1$, $\\sqrt{3}$, $2$. The shortest side sits across from the smallest angle."
     },
     {
       "level": "guide",
-      "text": "The side opposite $30^\\circ$ is $1$ and the hypotenuse is $2$."
+      "text": "The side opposite $30^\\circ$ is $1$ and the hypotenuse is $2$. Sine is opposite over hypotenuse, so write those two numbers as a fraction."
     },
     {
       "level": "reveal",
-      "text": "$\\sin 30^\\circ = \\frac{1}{2}$."
+      "text": "Opposite over hypotenuse gives $\\sin 30^\\circ = \\frac{1}{2}$, which is $0.5$ as a decimal."
     }
   ],
   "explanation": [
     "The $30$-$60$-$90$ triangle has sides in the ratio $1 : \\sqrt{3} : 2$, with $1$ opposite the $30^\\circ$ angle.",
-    "Sine is opposite over hypotenuse: $\\frac{1}{2}$.",
-    "So $\\sin 30^\\circ = \\frac{1}{2}$ exactly — no rounding needed."
+    "Sine is opposite over hypotenuse, and here that is the short side $1$ over the hypotenuse $2$.",
+    "So $\\sin 30^\\circ = \\frac{1}{2}$ exactly, with no rounding needed."
   ],
   "alternativeExplanations": [
     {

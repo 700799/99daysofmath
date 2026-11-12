@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Say the whole mnemonic out loud: SOH-CAH-TOA.",
+  "hint": "Say the whole mnemonic SOH-CAH-TOA out loud. Each three-letter piece names one ratio and the two sides it uses.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Say the whole mnemonic out loud: SOH-CAH-TOA."
+      "text": "Say the whole mnemonic SOH-CAH-TOA out loud. Each three-letter piece names one ratio and the two sides it uses."
     },
     {
       "level": "guide",
-      "text": "SOH is the first piece: Sine = Opposite / Hypotenuse."
+      "text": "The first piece, SOH, is the one about sine: the S stands for sine, and the O and H name the two sides in the fraction, top then bottom."
     },
     {
       "level": "reveal",
-      "text": "$\\sin A = \\frac{\\text{opposite}}{\\text{hypotenuse}}$."
+      "text": "Sine is opposite over hypotenuse, so $\\sin A = \\frac{\\text{opposite}}{\\text{hypotenuse}}$, choice A."
     }
   ],
   "explanation": [

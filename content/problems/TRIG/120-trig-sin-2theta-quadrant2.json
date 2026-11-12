@@ -13,11 +13,11 @@
     "-0.71"
   ],
   "acceptanceMode": "normalized",
-  "hint": "You need $\\cos\\theta$ before you can use $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$.",
+  "hint": "The double-angle formula for sine needs both the sine and the cosine of the angle. Only the sine is given, so the cosine has to be found first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You need $\\cos\\theta$ before you can use $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$."
+      "text": "The double-angle formula for sine needs both the sine and the cosine of the angle. Only the sine is given, so the cosine has to be found first."
     },
     {
       "level": "nudge",
@@ -26,17 +26,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\cos^2\\theta = 1 - \\frac{25}{169} = \\frac{144}{169}$, so $\\cos\\theta = \\pm\\frac{12}{13}$ — and in quadrant II cosine is negative."
+      "text": "From the Pythagorean identity, $\\cos^2\\theta = 1 - \\frac{25}{169} = \\frac{144}{169}$, so $\\cos\\theta = \\pm\\frac{12}{13}$. In quadrant II cosine is negative. Then use $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$."
     },
     {
       "level": "reveal",
-      "text": "$\\sin(2\\theta) = 2 \\cdot \\frac{5}{13} \\cdot \\left(-\\frac{12}{13}\\right) = -\\frac{120}{169}$."
+      "text": "With the negative cosine, the double angle has sine $\\sin(2\\theta) = 2 \\cdot \\frac{5}{13} \\cdot \\left(-\\frac{12}{13}\\right) = -\\frac{120}{169}$."
     }
   ],
   "explanation": [
-    "From the Pythagorean identity, $\\cos^2\\theta = 1 - \\left(\\frac{5}{13}\\right)^2 = \\frac{144}{169}$, so $\\cos\\theta = \\pm\\frac{12}{13}$.",
+    "The cosine is needed first. From the Pythagorean identity, $\\cos^2\\theta = 1 - \\left(\\frac{5}{13}\\right)^2 = \\frac{144}{169}$, so $\\cos\\theta = \\pm\\frac{12}{13}$.",
     "In the second quadrant cosine is negative, so $\\cos\\theta = -\\frac{12}{13}$.",
-    "Now $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta = 2 \\cdot \\frac{5}{13} \\cdot \\left(-\\frac{12}{13}\\right) = -\\frac{120}{169}$."
+    "Now apply the double-angle formula for sine: $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta = 2 \\cdot \\frac{5}{13} \\cdot \\left(-\\frac{12}{13}\\right) = -\\frac{120}{169}$."
   ],
   "alternativeExplanations": [
     {

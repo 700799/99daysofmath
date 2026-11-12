@@ -10,11 +10,11 @@
   "primaryAnswer": "280",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Keep subtracting $360^\\circ$ until what is left is between $0^\\circ$ and $360^\\circ$ — one subtraction may not be enough.",
+  "hint": "Coterminal angles differ by full turns. Keep removing $360^\\circ$ until what is left is between $0^\\circ$ and $360^\\circ$, and expect that one subtraction may not be enough.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Keep subtracting $360^\\circ$ until what is left is between $0^\\circ$ and $360^\\circ$ — one subtraction may not be enough."
+      "text": "Coterminal angles differ by full turns. Keep removing $360^\\circ$ until what is left is between $0^\\circ$ and $360^\\circ$, and expect that one subtraction may not be enough."
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "$1000 - 360 = 640$, which is still bigger than $360$. Subtract again."
+      "text": "The first subtraction gives $1000 - 360 = 640$, which is still bigger than $360$, so a second full turn has to come off: work out $640 - 360$."
     },
     {
       "level": "reveal",
-      "text": "$640 - 360 = 280$, and $280^\\circ$ is between $0^\\circ$ and $360^\\circ$, so that is the answer."
+      "text": "$640 - 360 = 280$, and $280^\\circ$ is between $0^\\circ$ and $360^\\circ$, so the answer is $280$ degrees."
     }
   ],
   "explanation": [
     "Coterminal angles differ by whole turns of $360^\\circ$, so subtract full turns until you land inside one lap.",
     "$1000 - 360 = 640$; that is still more than a full turn, so subtract again: $640 - 360 = 280$.",
-    "Since $0^\\circ \\le 280^\\circ < 360^\\circ$, the answer is $280^\\circ$."
+    "Now $280^\\circ$ is between $0^\\circ$ and $360^\\circ$, so no more turns can come off and the answer is $280^\\circ$."
   ],
   "alternativeExplanations": [
     {

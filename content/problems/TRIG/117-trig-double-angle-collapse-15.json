@@ -13,25 +13,25 @@
     ".5"
   ],
   "acceptanceMode": "normalized",
-  "hint": "This is a double-angle formula read from right to left.",
+  "hint": "This expression has the shape of a double-angle formula read from right to left. Which formula has a $2$, a sine and a cosine of the same angle?",
   "hints": [
     {
       "level": "nudge",
-      "text": "This is a double-angle formula read from right to left."
+      "text": "This expression has the shape of a double-angle formula read from right to left. Which formula has a $2$, a sine and a cosine of the same angle?"
     },
     {
       "level": "guide",
-      "text": "$2\\sin\\theta\\cos\\theta = \\sin(2\\theta)$, and here $\\theta = 15^\\circ$."
+      "text": "The formula is $2\\sin\\theta\\cos\\theta = \\sin(2\\theta)$, and here $\\theta = 15^\\circ$. Double the angle and evaluate the sine of the result."
     },
     {
       "level": "reveal",
-      "text": "So the expression is $\\sin 30^\\circ = \\frac{1}{2}$."
+      "text": "The expression is $\\sin 30^\\circ = \\frac{1}{2}$, so its exact value is one half."
     }
   ],
   "explanation": [
     "Recognise the shape $2\\sin\\theta\\cos\\theta$, which is the double-angle formula for sine.",
-    "With $\\theta = 15^\\circ$ the expression collapses to $\\sin(2 \\cdot 15^\\circ) = \\sin 30^\\circ$.",
-    "$\\sin 30^\\circ = \\frac{1}{2} = 0.5$."
+    "With $\\theta = 15^\\circ$ the expression collapses to a single sine: $\\sin(2 \\cdot 15^\\circ) = \\sin 30^\\circ$.",
+    "From the $30$-$60$-$90$ triangle, $\\sin 30^\\circ = \\frac{1}{2}$, so the value is $0.5$."
   ],
   "alternativeExplanations": [
     {

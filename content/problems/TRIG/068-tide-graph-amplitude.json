@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Amplitude is the distance from the MIDLINE to a peak, not from the bottom to the top.",
+  "hint": "Amplitude is the distance from the MIDLINE to a peak, not the whole distance from the bottom to the top.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Amplitude is the distance from the MIDLINE to a peak, not from the bottom to the top."
+      "text": "Amplitude is the distance from the MIDLINE to a peak, not the whole distance from the bottom to the top."
     },
     {
       "level": "guide",
-      "text": "Amplitude $= \\frac{\\text{max} - \\text{min}}{2} = \\frac{8 - 2}{2}$."
+      "text": "Take half of the gap between high and low tide: amplitude $= \\frac{\\text{max} - \\text{min}}{2} = \\frac{8 - 2}{2}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{6}{2} = 3$ ft."
+      "text": "$\\frac{6}{2} = 3$, so the amplitude is $3$ ft, which is choice A."
     }
   ],
   "explanation": [

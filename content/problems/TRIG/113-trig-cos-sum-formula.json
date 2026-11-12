@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "The cosine formula keeps the function names matched — cosine with cosine, sine with sine.",
+  "hint": "The cosine formula keeps the function names matched: cosine goes with cosine, and sine goes with sine. Rule out any choice that mixes them.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The cosine formula keeps the function names matched — cosine with cosine, sine with sine."
+      "text": "The cosine formula keeps the function names matched: cosine goes with cosine, and sine goes with sine. Rule out any choice that mixes them."
     },
     {
       "level": "guide",
-      "text": "The sign in the cosine formula is the OPPOSITE of the sign between $A$ and $B$."
+      "text": "Of the two matched choices, pick by sign. The sign in the cosine formula is the OPPOSITE of the sign between $A$ and $B$."
     },
     {
       "level": "reveal",
-      "text": "For $\\cos(A + B)$ you use a minus: $\\cos A\\cos B - \\sin A\\sin B$."
+      "text": "For $\\cos(A + B)$ you use a minus, so the answer is $\\cos A\\cos B - \\sin A\\sin B$, choice A."
     }
   ],
   "explanation": [
-    "The cosine sum formula is $\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$.",
+    "The cosine sum formula is $\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$, which matches choice A.",
     "Notice two things: the names stay matched, and the sign flips from the plus in $(A + B)$ to a minus.",
-    "Choice D is the SINE sum formula, and choice C is the classic false move of distributing cosine over addition."
+    "Choice D is the SINE sum formula, and choice C is the classic false move of distributing cosine over addition, so the answer is choice A."
   ],
   "alternativeExplanations": [
     {

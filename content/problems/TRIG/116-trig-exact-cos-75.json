@@ -13,24 +13,24 @@
     "(√6-√2)/4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Again split it as $45^\\circ + 30^\\circ$, but now use the COSINE sum formula.",
+  "hint": "Split the angle as $45^\\circ + 30^\\circ$ again, but this time the COSINE sum formula is the one to use.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Again split it as $45^\\circ + 30^\\circ$, but now use the COSINE sum formula."
+      "text": "Split the angle as $45^\\circ + 30^\\circ$ again, but this time the COSINE sum formula is the one to use."
     },
     {
       "level": "guide",
-      "text": "$\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$, so you get $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2}$."
+      "text": "The formula $\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$ gives $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2}$. Multiply out each product and keep the minus sign."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{\\sqrt{6}}{4} - \\frac{\\sqrt{2}}{4} = \\frac{\\sqrt{6} - \\sqrt{2}}{4}$."
+      "text": "The products are $\\frac{\\sqrt{6}}{4} - \\frac{\\sqrt{2}}{4}$, so the exact value is $\\frac{\\sqrt{6} - \\sqrt{2}}{4}$."
     }
   ],
   "explanation": [
-    "Write $\\cos 75^\\circ = \\cos(45^\\circ + 30^\\circ) = \\cos 45^\\circ\\cos 30^\\circ - \\sin 45^\\circ\\sin 30^\\circ$.",
-    "Substitute: $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2} = \\frac{\\sqrt{6}}{4} - \\frac{\\sqrt{2}}{4}$.",
+    "Write the angle as a sum and use the cosine sum formula: $\\cos 75^\\circ = \\cos(45^\\circ + 30^\\circ) = \\cos 45^\\circ\\cos 30^\\circ - \\sin 45^\\circ\\sin 30^\\circ$.",
+    "Substitute the special values and multiply: $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2} = \\frac{\\sqrt{6}}{4} - \\frac{\\sqrt{2}}{4}$.",
     "So $\\cos 75^\\circ = \\frac{\\sqrt{6} - \\sqrt{2}}{4} \\approx 0.259$, a small number as expected for an angle close to $90^\\circ$."
   ],
   "alternativeExplanations": [

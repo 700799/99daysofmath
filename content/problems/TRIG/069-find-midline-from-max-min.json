@@ -10,11 +10,11 @@
   "primaryAnswer": "4",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The midline runs exactly halfway between the top and the bottom of the wave.",
+  "hint": "The midline runs exactly halfway between the top and the bottom of the wave. How do you find the number halfway between two values?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The midline runs exactly halfway between the top and the bottom of the wave."
+      "text": "The midline runs exactly halfway between the top and the bottom of the wave. How do you find the number halfway between two values?"
     },
     {
       "level": "nudge",
@@ -23,17 +23,17 @@
     },
     {
       "level": "guide",
-      "text": "Average the two extremes: $k = \\frac{\\text{max} + \\text{min}}{2} = \\frac{12 + (-4)}{2}$."
+      "text": "Average the two extremes, keeping the negative sign on the minimum: $k = \\frac{\\text{max} + \\text{min}}{2} = \\frac{12 + (-4)}{2}$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{12 - 4}{2} = \\frac{8}{2} = 4$, so $k = 4$."
+      "text": "$\\frac{12 - 4}{2} = \\frac{8}{2} = 4$, so the midline value is $k = 4$."
     }
   ],
   "explanation": [
     "The wave rises the same distance above the midline as it falls below it, so the midline is the average of the max and the min.",
-    "$k = \\frac{12 + (-4)}{2} = \\frac{8}{2} = 4$.",
-    "Check: with midline 4 and amplitude $a = \\frac{12 - (-4)}{2} = 8$, the wave runs from $4 - 8 = -4$ to $4 + 8 = 12$. ✓"
+    "Average the two extreme values, adding the negative minimum carefully: $k = \\frac{12 + (-4)}{2} = \\frac{8}{2} = 4$.",
+    "Check: with midline 4 and amplitude $a = \\frac{12 - (-4)}{2} = 8$, the wave runs from $4 - 8 = -4$ to $4 + 8 = 12$, so $k = 4$ is right."
   ],
   "alternativeExplanations": [
     {

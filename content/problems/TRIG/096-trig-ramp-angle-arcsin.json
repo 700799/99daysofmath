@@ -10,25 +10,25 @@
   "primaryAnswer": "8.6",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The $20$ feet is the hypotenuse (the ramp itself) and the $3$ feet is the side opposite the angle.",
+  "hint": "The $20$ feet is the ramp itself, so it is the hypotenuse, and the $3$ feet of rise is the side opposite the angle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $20$ feet is the hypotenuse (the ramp itself) and the $3$ feet is the side opposite the angle."
+      "text": "The $20$ feet is the ramp itself, so it is the hypotenuse, and the $3$ feet of rise is the side opposite the angle."
     },
     {
       "level": "guide",
-      "text": "Opposite over hypotenuse is sine: $\\sin\\theta = \\frac{3}{20} = 0.15$."
+      "text": "Opposite over hypotenuse is sine, so $\\sin\\theta = \\frac{3}{20} = 0.15$. Use the inverse sine on a calculator to turn that ratio back into an angle."
     },
     {
       "level": "reveal",
-      "text": "$\\theta = \\arcsin(0.15) \\approx 8.6^\\circ$."
+      "text": "$\\theta = \\arcsin(0.15) \\approx 8.6^\\circ$, so the ramp makes an angle of about $8.6$ degrees with the ground."
     }
   ],
   "explanation": [
     "The ramp is the hypotenuse and the rise is the opposite side, so $\\sin\\theta = \\frac{3}{20} = 0.15$.",
-    "Undo the sine with its inverse: $\\theta = \\arcsin(0.15)$.",
-    "A calculator gives $8.627^\\circ$, which rounds to $8.6^\\circ$."
+    "Undo the sine with its inverse to get the angle: $\\theta = \\arcsin(0.15)$.",
+    "A calculator gives $8.627^\\circ$, which rounds to $8.6^\\circ$ for the ramp angle."
   ],
   "alternativeExplanations": [
     {

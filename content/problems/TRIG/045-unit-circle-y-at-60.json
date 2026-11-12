@@ -14,24 +14,24 @@
     "√3/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "The $y$-coordinate is $\\sin 60^\\circ$.",
+  "hint": "On the unit circle the $y$-coordinate of a point is the sine of its angle. So this question is asking for a sine value.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The $y$-coordinate is $\\sin 60^\\circ$."
+      "text": "On the unit circle the $y$-coordinate of a point is the sine of its angle. So this question is asking for a sine value."
     },
     {
       "level": "guide",
-      "text": "Use the $30$-$60$-$90$ triangle: the side opposite $60^\\circ$ is $\\sqrt{3}$ out of a hypotenuse of $2$."
+      "text": "You need $\\sin 60^\\circ$. Use the $30$-$60$-$90$ triangle: the side opposite $60^\\circ$ is $\\sqrt{3}$ and the hypotenuse is $2$."
     },
     {
       "level": "reveal",
-      "text": "$\\sin 60^\\circ = \\frac{\\sqrt{3}}{2} \\approx 0.866$."
+      "text": "$\\sin 60^\\circ = \\frac{\\sqrt{3}}{2} \\approx 0.866$, so the $y$-coordinate is $\\frac{\\sqrt{3}}{2}$ (type sqrt(3)/2)."
     }
   ],
   "explanation": [
     "On the unit circle, the $y$-coordinate of the point at angle $\\theta$ is $\\sin \\theta$.",
-    "From the $30$-$60$-$90$ triangle, $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.",
+    "From the $30$-$60$-$90$ triangle, opposite over hypotenuse gives $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.",
     "So the point at $60^\\circ$ is $\\left(\\frac{1}{2},\\ \\frac{\\sqrt{3}}{2}\\right)$, and the $y$-coordinate is $\\frac{\\sqrt{3}}{2} \\approx 0.87$."
   ],
   "alternativeExplanations": [

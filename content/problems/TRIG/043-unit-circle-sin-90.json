@@ -10,19 +10,19 @@
   "primaryAnswer": "1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$90^\\circ$ is a quarter turn, which lands on the positive $y$-axis.",
+  "hint": "An angle of $90^\\circ$ is a quarter turn counterclockwise from the positive $x$-axis. On which axis does that land?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$90^\\circ$ is a quarter turn, which lands on the positive $y$-axis."
+      "text": "An angle of $90^\\circ$ is a quarter turn counterclockwise from the positive $x$-axis. On which axis does that land?"
     },
     {
       "level": "guide",
-      "text": "The circle has radius 1, so that top point is $(0, 1)$."
+      "text": "A quarter turn lands on the positive $y$-axis, straight up. The circle has radius 1, so decide how far up from the origin that top point is."
     },
     {
       "level": "reveal",
-      "text": "The $y$-coordinate is $1$, so $\\sin 90^\\circ = 1$."
+      "text": "The top point is $(0, 1)$, so the $y$-coordinate is $1$ and $\\sin 90^\\circ = 1$."
     }
   ],
   "explanation": [

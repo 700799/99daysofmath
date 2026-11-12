@@ -14,11 +14,11 @@
     "√3"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Flip the secant to get the cosine first.",
+  "hint": "Secant is the reciprocal of cosine, so flip it to get the cosine first. Then you need the sine before you can form the tangent.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Flip the secant to get the cosine first."
+      "text": "Secant is the reciprocal of cosine, so flip it to get the cosine first. Then you need the sine before you can form the tangent."
     },
     {
       "level": "nudge",
@@ -27,17 +27,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\cos\\theta = -\\frac{1}{2}$. Now use $\\sin^2\\theta + \\cos^2\\theta = 1$, and remember that in the third quadrant sine is also negative."
+      "text": "Flipping gives $\\cos\\theta = -\\frac{1}{2}$. Now use $\\sin^2\\theta + \\cos^2\\theta = 1$ to find the sine, remembering that in the third quadrant sine is also negative."
     },
     {
       "level": "reveal",
-      "text": "$\\sin\\theta = -\\frac{\\sqrt{3}}{2}$, so $\\tan\\theta = \\frac{-\\sqrt{3}/2}{-1/2} = \\sqrt{3}$."
+      "text": "The sine is $\\sin\\theta = -\\frac{\\sqrt{3}}{2}$, so $\\tan\\theta = \\frac{-\\sqrt{3}/2}{-1/2} = \\sqrt{3}$ (type sqrt(3))."
     }
   ],
   "explanation": [
-    "From $\\sec\\theta = -2$ we get $\\cos\\theta = -\\frac{1}{2}$.",
+    "Secant is the reciprocal of cosine, so from $\\sec\\theta = -2$ we get $\\cos\\theta = -\\frac{1}{2}$.",
     "Then $\\sin^2\\theta = 1 - \\frac{1}{4} = \\frac{3}{4}$, so $\\sin\\theta = \\pm\\frac{\\sqrt{3}}{2}$; in the third quadrant sine is negative, so $\\sin\\theta = -\\frac{\\sqrt{3}}{2}$.",
-    "Therefore $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{-\\sqrt{3}/2}{-1/2} = \\sqrt{3}$."
+    "Therefore the two negatives cancel in the quotient: $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{-\\sqrt{3}/2}{-1/2} = \\sqrt{3}$."
   ],
   "alternativeExplanations": [
     {

@@ -16,11 +16,11 @@
     "+sqrt(2)/2"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Reference angle: $360 - 315 = 45^\\circ$, and $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$.",
+  "hint": "Use the reference angle for the size of the cosine and the quadrant for its sign. Cosine is the $x$-coordinate on the unit circle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Reference angle: $360 - 315 = 45^\\circ$, and $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$."
+      "text": "Use the reference angle for the size of the cosine and the quadrant for its sign. Cosine is the $x$-coordinate on the unit circle."
     },
     {
       "level": "nudge",
@@ -29,16 +29,16 @@
     },
     {
       "level": "guide",
-      "text": "Now the sign. $315^\\circ$ is in Quadrant IV — is the $x$-coordinate there positive or negative?"
+      "text": "The reference angle is $360 - 315 = 45^\\circ$, and $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$. The angle is in Quadrant IV, so check whether $x$-coordinates there are positive or negative."
     },
     {
       "level": "reveal",
-      "text": "Quadrant IV is to the RIGHT of the $y$-axis, so $x$ is positive: $\\cos 315^\\circ = \\frac{\\sqrt{2}}{2}$."
+      "text": "Quadrant IV is to the RIGHT of the $y$-axis, so $x$ is positive and $\\cos 315^\\circ = \\frac{\\sqrt{2}}{2}$."
     }
   ],
   "explanation": [
-    "$315^\\circ$ is in Quadrant IV, with reference angle $360^\\circ - 315^\\circ = 45^\\circ$.",
-    "The magnitude is $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$.",
+    "The angle $315^\\circ$ is in Quadrant IV, with reference angle $360^\\circ - 315^\\circ = 45^\\circ$.",
+    "The size of the answer comes from the reference angle: $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$.",
     "Cosine is the $x$-coordinate, and Quadrant IV lies to the right of the $y$-axis, so cosine stays POSITIVE: $\\cos 315^\\circ = \\frac{\\sqrt{2}}{2} \\approx 0.71$."
   ],
   "alternativeExplanations": [

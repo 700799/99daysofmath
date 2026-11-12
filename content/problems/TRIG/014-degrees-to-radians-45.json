@@ -15,24 +15,24 @@
     "pi / 4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Degrees to radians: multiply by $\\frac{\\pi}{180}$.",
+  "hint": "To change degrees into radians you multiply by a factor built from the fact that $180^\\circ$ equals $\\pi$ radians. Which way up does that factor go?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Degrees to radians: multiply by $\\frac{\\pi}{180}$."
+      "text": "To change degrees into radians you multiply by a factor built from the fact that $180^\\circ$ equals $\\pi$ radians. Which way up does that factor go?"
     },
     {
       "level": "guide",
-      "text": "$45 \\times \\frac{\\pi}{180} = \\frac{45\\pi}{180}$. Now reduce the fraction."
+      "text": "Multiply by $\\frac{\\pi}{180}$ to get $45 \\times \\frac{\\pi}{180} = \\frac{45\\pi}{180}$. Now reduce the fraction by finding how many times $45$ goes into $180$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{45}{180} = \\frac{1}{4}$, so the answer is $\\frac{\\pi}{4}$."
+      "text": "$\\frac{45}{180} = \\frac{1}{4}$, so the answer is $\\frac{\\pi}{4}$ radians (type pi/4)."
     }
   ],
   "explanation": [
-    "Multiply by $\\frac{\\pi}{180}$ to convert degrees into radians.",
-    "$45 \\times \\frac{\\pi}{180} = \\frac{45\\pi}{180}$.",
+    "Multiply by $\\frac{\\pi}{180}$ to convert degrees into radians, since $180^\\circ$ and $\\pi$ radians are the same turn.",
+    "This gives $45 \\times \\frac{\\pi}{180} = \\frac{45\\pi}{180}$, which still needs to be reduced.",
     "Divide top and bottom by 45 to get $\\frac{\\pi}{4}$."
   ],
   "alternativeExplanations": [

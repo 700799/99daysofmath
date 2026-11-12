@@ -10,25 +10,25 @@
   "primaryAnswer": "42.5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Sketch it: the two paths are sides of a triangle and the $70^\\circ$ sits between them.",
+  "hint": "Sketch the situation: the two paths from the port are sides of a triangle, and the $70^\\circ$ sits between them. The gap between the ships is the third side.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Sketch it: the two paths are sides of a triangle and the $70^\\circ$ sits between them."
+      "text": "Sketch the situation: the two paths from the port are sides of a triangle, and the $70^\\circ$ sits between them. The gap between the ships is the third side."
     },
     {
       "level": "guide",
-      "text": "Side-angle-side calls for the Law of Cosines: $d^2 = 30^2 + 42^2 - 2(30)(42)\\cos 70^\\circ$."
+      "text": "Side-angle-side calls for the Law of Cosines: $d^2 = 30^2 + 42^2 - 2(30)(42)\\cos 70^\\circ$. Evaluate the right side, then take the square root."
     },
     {
       "level": "reveal",
-      "text": "$d^2 = 2664 - 2520(0.34202) \\approx 1802.1$, so $d \\approx 42.5$ km."
+      "text": "$d^2 = 2664 - 2520(0.34202) \\approx 1802.1$, so the ships are about $d \\approx 42.5$ km apart."
     }
   ],
   "explanation": [
     "The port and the two ships form a triangle with sides $30$ and $42$ and an included angle of $70^\\circ$.",
-    "Law of Cosines: $d^2 = 30^2 + 42^2 - 2(30)(42)\\cos 70^\\circ = 900 + 1764 - 2520(0.34202)$.",
-    "$d^2 \\approx 2664 - 861.9 = 1802.1$, so $d \\approx 42.45$ km, which rounds to $42.5$ km."
+    "The Law of Cosines fits two sides and the included angle: $d^2 = 30^2 + 42^2 - 2(30)(42)\\cos 70^\\circ = 900 + 1764 - 2520(0.34202)$.",
+    "This gives $d^2 \\approx 2664 - 861.9 = 1802.1$, so $d \\approx 42.45$ km, which rounds to $42.5$ km."
   ],
   "alternativeExplanations": [
     {

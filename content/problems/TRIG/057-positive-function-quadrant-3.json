@@ -49,8 +49,8 @@
   ],
   "explanation": [
     "Quadrant III is down and to the left, so both $x$ and $y$ are negative there.",
-    "That makes $\\cos\\theta = x$ negative and $\\sin\\theta = y$ negative.",
-    "Tangent is $\\frac{\\sin\\theta}{\\cos\\theta} = \\frac{y}{x}$, and a negative divided by a negative is positive."
+    "That makes cosine, which is $x$, negative and sine, which is $y$, negative as well.",
+    "Tangent is $\\frac{\\sin\\theta}{\\cos\\theta} = \\frac{y}{x}$, and a negative divided by a negative is positive, so tangent is the positive one."
   ],
   "alternativeExplanations": [
     {

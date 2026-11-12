@@ -32,25 +32,25 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Start from $\\sin^2\\theta + \\cos^2\\theta = 1$.",
+  "hint": "The expression is a rearranged piece of the Pythagorean identity that links the squares of sine and cosine.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Start from $\\sin^2\\theta + \\cos^2\\theta = 1$."
+      "text": "The expression is a rearranged piece of the Pythagorean identity that links the squares of sine and cosine."
     },
     {
       "level": "guide",
-      "text": "Move $\\cos^2\\theta$ to the other side of that identity."
+      "text": "Start from $\\sin^2\\theta + \\cos^2\\theta = 1$ and move $\\cos^2\\theta$ to the other side by subtracting it from both sides."
     },
     {
       "level": "reveal",
-      "text": "$1 - \\cos^2\\theta = \\sin^2\\theta$."
+      "text": "The rearranged identity reads $1 - \\cos^2\\theta = \\sin^2\\theta$, which is choice A."
     }
   ],
   "explanation": [
-    "The Pythagorean identity is $\\sin^2\\theta + \\cos^2\\theta = 1$.",
-    "Subtracting $\\cos^2\\theta$ from both sides gives $\\sin^2\\theta = 1 - \\cos^2\\theta$.",
-    "So the expression simplifies to $\\sin^2\\theta$ — note that the square stays, so it is not just $\\sin\\theta$."
+    "The Pythagorean identity is $\\sin^2\\theta + \\cos^2\\theta = 1$, true for every angle.",
+    "Subtracting $\\cos^2\\theta$ from both sides of the identity gives $\\sin^2\\theta = 1 - \\cos^2\\theta$.",
+    "So the expression simplifies to $\\sin^2\\theta$. Note that the square stays, so it is not just $\\sin\\theta$."
   ],
   "alternativeExplanations": [
     {

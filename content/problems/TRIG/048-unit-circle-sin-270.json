@@ -10,19 +10,19 @@
   "primaryAnswer": "-1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "$270^\\circ$ is three quarter-turns, landing at the bottom of the circle.",
+  "hint": "Think of $270^\\circ$ as three quarter turns counterclockwise. Where on the circle does the third quarter turn stop?",
   "hints": [
     {
       "level": "nudge",
-      "text": "$270^\\circ$ is three quarter-turns, landing at the bottom of the circle."
+      "text": "Think of $270^\\circ$ as three quarter turns counterclockwise. Where on the circle does the third quarter turn stop?"
     },
     {
       "level": "guide",
-      "text": "The bottom point of the unit circle is $(0, -1)$, and sine reads the $y$-coordinate."
+      "text": "Three quarter turns land at the bottom of the unit circle, the point $(0, -1)$. Sine reads the $y$-coordinate of that point."
     },
     {
       "level": "reveal",
-      "text": "$\\sin 270^\\circ = -1$."
+      "text": "The $y$-coordinate of the bottom point is $-1$, so $\\sin 270^\\circ = -1$."
     }
   ],
   "explanation": [

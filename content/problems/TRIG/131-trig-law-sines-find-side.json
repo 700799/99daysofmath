@@ -10,25 +10,25 @@
   "primaryAnswer": "14.14",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "You have a matched pair — angle $A$ with side $a$ — so the Law of Sines applies.",
+  "hint": "You have a matched pair, angle $A$ with its opposite side $a$, and you want the side opposite another known angle. That is the setting for the Law of Sines.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You have a matched pair — angle $A$ with side $a$ — so the Law of Sines applies."
+      "text": "You have a matched pair, angle $A$ with its opposite side $a$, and you want the side opposite another known angle. That is the setting for the Law of Sines."
     },
     {
       "level": "guide",
-      "text": "$\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$, so $b = \\frac{10\\sin 45^\\circ}{\\sin 30^\\circ}$."
+      "text": "Write $\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$ and solve for the unknown side, which gives $b = \\frac{10\\sin 45^\\circ}{\\sin 30^\\circ}$. Evaluate the two sines."
     },
     {
       "level": "reveal",
-      "text": "$b = \\frac{10(0.7071)}{0.5} \\approx 14.14$."
+      "text": "$b = \\frac{10(0.7071)}{0.5} \\approx 14.14$, so side $b$ is about $14.14$ units long."
     }
   ],
   "explanation": [
-    "The Law of Sines says $\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$.",
-    "Substitute the known values: $\\frac{10}{\\sin 30^\\circ} = \\frac{b}{\\sin 45^\\circ}$.",
-    "Solve for $b$: $b = \\frac{10 \\times 0.70711}{0.5} \\approx 14.14$."
+    "The Law of Sines says each side divided by the sine of its opposite angle is the same: $\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$.",
+    "Substitute the known side and both angles: $\\frac{10}{\\sin 30^\\circ} = \\frac{b}{\\sin 45^\\circ}$.",
+    "Multiply both sides by $\\sin 45^\\circ$ to solve for the side: $b = \\frac{10 \\times 0.70711}{0.5} \\approx 14.14$."
   ],
   "alternativeExplanations": [
     {

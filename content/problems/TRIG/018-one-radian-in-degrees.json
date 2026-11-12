@@ -32,25 +32,25 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Start from $\\pi$ radians $= 180^\\circ$ and divide both sides by $\\pi$.",
+  "hint": "Start from the fact that $\\pi$ radians equals $180^\\circ$. What must you do to both sides to leave a single radian on one side?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Start from $\\pi$ radians $= 180^\\circ$ and divide both sides by $\\pi$."
+      "text": "Start from the fact that $\\pi$ radians equals $180^\\circ$. What must you do to both sides to leave a single radian on one side?"
     },
     {
       "level": "guide",
-      "text": "$1$ radian $= \\frac{180^\\circ}{\\pi}$. Now estimate with $\\pi \\approx 3.14$."
+      "text": "Dividing both sides by $\\pi$ gives $1$ radian $= \\frac{180^\\circ}{\\pi}$. Now estimate that quotient using $\\pi \\approx 3.14$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{180}{3.14} \\approx 57.3$, so 1 radian is about $57.3^\\circ$."
+      "text": "$\\frac{180}{3.14} \\approx 57.3$, so 1 radian is about $57.3^\\circ$, choice C."
     }
   ],
   "explanation": [
     "Since $\\pi$ radians $= 180^\\circ$, dividing both sides by $\\pi$ gives $1$ radian $= \\frac{180^\\circ}{\\pi}$.",
-    "Using $\\pi \\approx 3.14159$, that is about $57.3^\\circ$.",
-    "It is worth memorizing: a radian is a bit under $60^\\circ$."
+    "Using $\\pi \\approx 3.14159$, the quotient $\\frac{180}{\\pi}$ comes to about $57.3$.",
+    "So one radian is about $57.3^\\circ$, a bit under $60^\\circ$, which is worth memorizing."
   ],
   "alternativeExplanations": [
     {

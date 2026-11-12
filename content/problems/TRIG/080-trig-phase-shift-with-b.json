@@ -32,11 +32,11 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "You cannot read the shift straight off until the $x$ inside has a coefficient of $1$.",
+  "hint": "You cannot read the shift straight off until the $x$ inside has a coefficient of $1$. Something has to be factored out first.",
   "hints": [
     {
       "level": "nudge",
-      "text": "You cannot read the shift straight off until the $x$ inside has a coefficient of $1$."
+      "text": "You cannot read the shift straight off until the $x$ inside has a coefficient of $1$. Something has to be factored out first."
     },
     {
       "level": "nudge",
@@ -45,11 +45,11 @@
     },
     {
       "level": "guide",
-      "text": "Factor the $2$ out of the parentheses: $2x - \\frac{\\pi}{2} = 2\\left(x - \\frac{\\pi}{4}\\right)$."
+      "text": "Factor the $2$ out of the parentheses: $2x - \\frac{\\pi}{2} = 2\\left(x - \\frac{\\pi}{4}\\right)$. The number subtracted from $x$ is now the shift."
     },
     {
       "level": "reveal",
-      "text": "Now it reads as a shift right of $\\frac{\\pi}{4}$."
+      "text": "The factored form shows a shift of $\\frac{\\pi}{4}$ to the right, which is choice A."
     }
   ],
   "explanation": [

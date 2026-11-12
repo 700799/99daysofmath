@@ -32,24 +32,25 @@
   "primaryAnswer": "C",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The quadrants are marked off every $90^\\circ$: I ends at $90^\\circ$, II at $180^\\circ$, III at $270^\\circ$, IV at $360^\\circ$.",
+  "hint": "The quadrants are marked off every $90^\\circ$ as you sweep counterclockwise from the positive $x$-axis. Which two boundary angles does this angle sit between?",
   "hints": [
     {
       "level": "nudge",
-      "text": "The quadrants are marked off every $90^\\circ$: I ends at $90^\\circ$, II at $180^\\circ$, III at $270^\\circ$, IV at $360^\\circ$."
+      "text": "The quadrants are marked off every $90^\\circ$ as you sweep counterclockwise from the positive $x$-axis. Which two boundary angles does this angle sit between?"
     },
     {
       "level": "guide",
-      "text": "Is $200^\\circ$ between $180^\\circ$ and $270^\\circ$?"
+      "text": "Quadrant I ends at $90^\\circ$, Quadrant II at $180^\\circ$, Quadrant III at $270^\\circ$. Decide which of these the angle $200^\\circ$ has passed and which it has not reached."
     },
     {
       "level": "reveal",
-      "text": "Yes — $180^\\circ < 200^\\circ < 270^\\circ$, so the terminal side is in Quadrant III."
+      "text": "Since $180^\\circ < 200^\\circ < 270^\\circ$, the terminal side lands in Quadrant III, which is choice C."
     }
   ],
   "explanation": [
     "Starting from the positive $x$-axis and sweeping counterclockwise, you pass $90^\\circ$, $180^\\circ$, and $270^\\circ$ as you cross into each new quadrant.",
-    "Since $200^\\circ$ sits between $180^\\circ$ and $270^\\circ$, the terminal side is in the third quadrant."
+    "The angle $200^\\circ$ is $20^\\circ$ past $180^\\circ$, so the sweep has gone beyond the negative $x$-axis but has not reached $270^\\circ$.",
+    "Angles between $180^\\circ$ and $270^\\circ$ lie in the third quadrant, so the terminal side is in Quadrant III."
   ],
   "alternativeExplanations": [
     {

@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Cosine reaches its maximum of $1$ only at the very right of the unit circle.",
+  "hint": "Cosine is the $x$-coordinate on the unit circle. It reaches its maximum of $1$ only at the very right of the circle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Cosine reaches its maximum of $1$ only at the very right of the unit circle."
+      "text": "Cosine is the $x$-coordinate on the unit circle. It reaches its maximum of $1$ only at the very right of the circle."
     },
     {
       "level": "guide",
-      "text": "That happens once per full turn, so the solutions are spaced $360^\\circ$ apart."
+      "text": "The point at the far right is reached at $0^\\circ$ and then once per full turn, so the solutions are spaced $360^\\circ$ apart."
     },
     {
       "level": "reveal",
-      "text": "$\\theta = 0^\\circ, \\pm 360^\\circ, \\pm 720^\\circ, \\ldots$, which is $\\theta = 360^\\circ k$."
+      "text": "The solutions are $\\theta = 0^\\circ, \\pm 360^\\circ, \\pm 720^\\circ, \\ldots$, which is $\\theta = 360^\\circ k$, choice A."
     }
   ],
   "explanation": [

@@ -15,25 +15,25 @@
     "5 pi / 4"
   ],
   "acceptanceMode": "normalized",
-  "hint": "Multiply by $\\frac{\\pi}{180}$ and then reduce the fraction all the way.",
+  "hint": "Use the same degrees-to-radians factor as always, then reduce the fraction all the way. Look for a large number that divides both parts.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Multiply by $\\frac{\\pi}{180}$ and then reduce the fraction all the way."
+      "text": "Use the same degrees-to-radians factor as always, then reduce the fraction all the way. Look for a large number that divides both parts."
     },
     {
       "level": "guide",
-      "text": "$225 \\times \\frac{\\pi}{180} = \\frac{225\\pi}{180}$. Both numbers divide by 45."
+      "text": "Multiplying by $\\frac{\\pi}{180}$ gives $225 \\times \\frac{\\pi}{180} = \\frac{225\\pi}{180}$. Both $225$ and $180$ divide by 45, so reduce with that."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{225}{180} = \\frac{5}{4}$, so the answer is $\\frac{5\\pi}{4}$."
+      "text": "$\\frac{225}{180} = \\frac{5}{4}$, so the answer is $\\frac{5\\pi}{4}$ radians (type 5pi/4)."
     }
   ],
   "explanation": [
-    "Convert with the factor $\\frac{\\pi}{180}$: $225 \\times \\frac{\\pi}{180} = \\frac{225\\pi}{180}$.",
-    "Divide numerator and denominator by 45: $\\frac{225}{180} = \\frac{5}{4}$.",
-    "So $225^\\circ = \\frac{5\\pi}{4}$ radians."
+    "Convert with the factor $\\frac{\\pi}{180}$, which trades degrees for radians: $225 \\times \\frac{\\pi}{180} = \\frac{225\\pi}{180}$.",
+    "Divide numerator and denominator by 45 to reduce the fraction: $\\frac{225}{180} = \\frac{5}{4}$.",
+    "So $225^\\circ$ is the same angle as $\\frac{5\\pi}{4}$ radians."
   ],
   "alternativeExplanations": [
     {

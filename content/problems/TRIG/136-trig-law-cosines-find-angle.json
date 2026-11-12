@@ -10,25 +10,25 @@
   "primaryAnswer": "78.5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Three sides and no angles is the SSS case — rearrange the Law of Cosines to solve for the angle.",
+  "hint": "Three sides and no angles is the SSS case. The Law of Cosines can be rearranged to give an angle from the three sides.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Three sides and no angles is the SSS case — rearrange the Law of Cosines to solve for the angle."
+      "text": "Three sides and no angles is the SSS case. The Law of Cosines can be rearranged to give an angle from the three sides."
     },
     {
       "level": "guide",
-      "text": "$\\cos C = \\frac{a^2 + b^2 - c^2}{2ab} = \\frac{25 + 36 - 49}{2(5)(6)}$."
+      "text": "Let $c = 7$ be the side opposite the angle you want. Then $\\cos C = \\frac{a^2 + b^2 - c^2}{2ab} = \\frac{25 + 36 - 49}{2(5)(6)}$. Simplify and apply the inverse cosine."
     },
     {
       "level": "reveal",
-      "text": "$\\cos C = \\frac{12}{60} = 0.2$, so $C = \\arccos(0.2) \\approx 78.5^\\circ$."
+      "text": "$\\cos C = \\frac{12}{60} = 0.2$, so the angle opposite the side of length $7$ is $C = \\arccos(0.2) \\approx 78.5^\\circ$."
     }
   ],
   "explanation": [
-    "Put the side you want to face, $7$, in the role of $c$: $c^2 = a^2 + b^2 - 2ab\\cos C$.",
-    "Rearranged, $\\cos C = \\frac{a^2 + b^2 - c^2}{2ab} = \\frac{25 + 36 - 49}{60} = \\frac{12}{60} = 0.2$.",
-    "Then $C = \\arccos(0.2) \\approx 78.46^\\circ$, which rounds to $78.5^\\circ$."
+    "Put the side you want to face, $7$, in the role of $c$ in the Law of Cosines: $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+    "Rearranged to isolate the cosine, this is $\\cos C = \\frac{a^2 + b^2 - c^2}{2ab} = \\frac{25 + 36 - 49}{60} = \\frac{12}{60} = 0.2$.",
+    "Then the inverse cosine gives $C = \\arccos(0.2) \\approx 78.46^\\circ$, which rounds to $78.5^\\circ$."
   ],
   "alternativeExplanations": [
     {

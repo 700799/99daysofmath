@@ -10,15 +10,15 @@
   "primaryAnswer": "1260",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Each complete rotation is $360^\\circ$.",
+  "hint": "Each complete rotation of the wheel is $360^\\circ$. How do you count the degrees in several rotations?",
   "hints": [
     {
       "level": "nudge",
-      "text": "Each complete rotation is $360^\\circ$."
+      "text": "Each complete rotation of the wheel is $360^\\circ$. How do you count the degrees in several rotations?"
     },
     {
       "level": "guide",
-      "text": "Multiply: $3.5 \\times 360$."
+      "text": "The car makes $3.5$ rotations of $360^\\circ$ each, so multiply the two numbers: work out $3.5 \\times 360$."
     },
     {
       "level": "reveal",
@@ -26,9 +26,9 @@
     }
   ],
   "explanation": [
-    "One rotation is $360^\\circ$, so 3 rotations are $1080^\\circ$.",
-    "The half rotation adds another $180^\\circ$.",
-    "$1080 + 180 = 1260$, so the car turns $1260^\\circ$."
+    "One rotation is $360^\\circ$, so the 3 whole rotations are $3 \\times 360 = 1080^\\circ$.",
+    "The extra half rotation is half of $360^\\circ$, which adds another $180^\\circ$.",
+    "Adding the two parts gives $1080 + 180 = 1260$, so the car turns through $1260^\\circ$."
   ],
   "alternativeExplanations": [
     {

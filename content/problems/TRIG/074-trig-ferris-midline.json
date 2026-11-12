@@ -10,19 +10,19 @@
   "primaryAnswer": "20",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The rider circles evenly around the centre of the wheel, so the centre sits on the midline of the graph.",
+  "hint": "The rider circles evenly around the centre of the wheel, so the centre sits on the midline of the height graph.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The rider circles evenly around the centre of the wheel, so the centre sits on the midline of the graph."
+      "text": "The rider circles evenly around the centre of the wheel, so the centre sits on the midline of the height graph."
     },
     {
       "level": "guide",
-      "text": "The midline of $y = D + A\\sin(\\ldots)$ is $y = D$."
+      "text": "The midline of $y = D + A\\sin(\\ldots)$ is $y = D$, the constant added to the sine part. Find that constant in $h(t)$."
     },
     {
       "level": "reveal",
-      "text": "Here $D = 20$, so the centre is $20$ metres up."
+      "text": "Here $D = 20$, so the centre of the wheel is $20$ metres up."
     }
   ],
   "explanation": [

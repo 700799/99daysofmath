@@ -10,25 +10,25 @@
   "primaryAnswer": "30",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A reference angle is the acute angle between the terminal side and the $x$-axis — always measured to the nearest part of the $x$-axis.",
+  "hint": "A reference angle is the acute angle between the terminal side and the $x$-axis, always measured to the nearest part of the $x$-axis.",
   "hints": [
     {
       "level": "nudge",
-      "text": "A reference angle is the acute angle between the terminal side and the $x$-axis — always measured to the nearest part of the $x$-axis."
+      "text": "A reference angle is the acute angle between the terminal side and the $x$-axis, always measured to the nearest part of the $x$-axis."
     },
     {
       "level": "guide",
-      "text": "$150^\\circ$ is in Quadrant II, so measure back to the $180^\\circ$ mark: $180 - 150$."
+      "text": "The angle $150^\\circ$ is in Quadrant II, so the nearest part of the axis is the $180^\\circ$ mark. Measure back to it: work out $180 - 150$."
     },
     {
       "level": "reveal",
-      "text": "$180 - 150 = 30^\\circ$."
+      "text": "$180 - 150 = 30$, so the reference angle is $30$ degrees."
     }
   ],
   "explanation": [
     "The terminal side of $150^\\circ$ is in Quadrant II, leaning up and to the left.",
     "The reference angle is how far it sits from the horizontal axis, which here is the $180^\\circ$ direction.",
-    "$180^\\circ - 150^\\circ = 30^\\circ$."
+    "Subtracting gives $180^\\circ - 150^\\circ = 30^\\circ$, so the reference angle is $30^\\circ$."
   ],
   "alternativeExplanations": [
     {

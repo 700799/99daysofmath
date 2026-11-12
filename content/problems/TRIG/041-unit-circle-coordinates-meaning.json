@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Drop a right triangle from the point to the $x$-axis: the hypotenuse is the radius, which is $1$.",
+  "hint": "Drop a right triangle from the point straight down to the $x$-axis. Its hypotenuse is the radius of the circle, which is $1$.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Drop a right triangle from the point to the $x$-axis: the hypotenuse is the radius, which is $1$."
+      "text": "Drop a right triangle from the point straight down to the $x$-axis. Its hypotenuse is the radius of the circle, which is $1$."
     },
     {
       "level": "guide",
-      "text": "With hypotenuse $1$, $\\cos \\theta = \\frac{x}{1} = x$ and $\\sin \\theta = \\frac{y}{1} = y$."
+      "text": "With hypotenuse $1$, cosine is $\\frac{x}{1} = x$ and sine is $\\frac{y}{1} = y$. Match each coordinate with its trig function, keeping $x$ first."
     },
     {
       "level": "reveal",
-      "text": "So the point is $(\\cos \\theta,\\ \\sin \\theta)$ — cosine first, alphabetically."
+      "text": "The point is $(\\cos \\theta,\\ \\sin \\theta)$, cosine first and sine second, which is choice A."
     }
   ],
   "explanation": [

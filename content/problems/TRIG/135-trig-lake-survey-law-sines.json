@@ -10,25 +10,25 @@
   "primaryAnswer": "166.1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "Find the third angle first: the angles of a triangle add to $180^\\circ$.",
+  "hint": "Two angles are known, so the third comes from the fact that the angles of a triangle add to $180^\\circ$. You need it to get a matched side and angle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Find the third angle first: the angles of a triangle add to $180^\\circ$."
+      "text": "Two angles are known, so the third comes from the fact that the angles of a triangle add to $180^\\circ$. You need it to get a matched side and angle."
     },
     {
       "level": "guide",
-      "text": "$B = 180^\\circ - 62^\\circ - 48^\\circ = 70^\\circ$. Side $AB$ is opposite angle $C$, and side $AC$ is opposite angle $B$."
+      "text": "The third angle is $B = 180^\\circ - 62^\\circ - 48^\\circ = 70^\\circ$. Side $AB$ is opposite angle $C$, and the known side $AC$ is opposite angle $B$, so set up the Law of Sines with those pairs."
     },
     {
       "level": "reveal",
-      "text": "$AB = \\frac{210\\sin 48^\\circ}{\\sin 70^\\circ} \\approx 166.1$ m."
+      "text": "$AB = \\frac{210\\sin 48^\\circ}{\\sin 70^\\circ} \\approx 166.1$, so the distance $AB$ is about $166.1$ m."
     }
   ],
   "explanation": [
     "The three angles must total $180^\\circ$, so $B = 180^\\circ - 62^\\circ - 48^\\circ = 70^\\circ$.",
     "Match each side with the angle across from it: $AB$ faces angle $C$, and the known side $AC$ faces angle $B$.",
-    "Law of Sines: $\\frac{AB}{\\sin C} = \\frac{AC}{\\sin B}$, so $AB = \\frac{210 \\times 0.74314}{0.93969} \\approx 166.1$ m."
+    "The Law of Sines gives $\\frac{AB}{\\sin C} = \\frac{AC}{\\sin B}$, so $AB = \\frac{210 \\times 0.74314}{0.93969} \\approx 166.1$ m."
   ],
   "alternativeExplanations": [
     {

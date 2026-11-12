@@ -32,19 +32,19 @@
   "primaryAnswer": "A",
   "alternativeAnswers": [],
   "acceptanceMode": "exact",
-  "hint": "Work from the inside out: first find $\\sin 150^\\circ$.",
+  "hint": "Work from the inside out, starting with the value of $\\sin 150^\\circ$. The two functions do not simply cancel here.",
   "hints": [
     {
       "level": "nudge",
-      "text": "Work from the inside out: first find $\\sin 150^\\circ$."
+      "text": "Work from the inside out, starting with the value of $\\sin 150^\\circ$. The two functions do not simply cancel here."
     },
     {
       "level": "guide",
-      "text": "$\\sin 150^\\circ = \\frac{1}{2}$. Now ask what $\\arcsin\\left(\\frac{1}{2}\\right)$ is, remembering the range is $[-90^\\circ, 90^\\circ]$."
+      "text": "The inside is $\\sin 150^\\circ = \\frac{1}{2}$. Now ask what $\\arcsin\\left(\\frac{1}{2}\\right)$ is, remembering its outputs must lie in $[-90^\\circ, 90^\\circ]$."
     },
     {
       "level": "reveal",
-      "text": "$\\arcsin\\left(\\frac{1}{2}\\right) = 30^\\circ$, and $150^\\circ$ is not allowed as an output."
+      "text": "$\\arcsin\\left(\\frac{1}{2}\\right) = 30^\\circ$, choice A, because $150^\\circ$ is outside the allowed outputs."
     }
   ],
   "explanation": [

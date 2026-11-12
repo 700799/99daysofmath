@@ -15,11 +15,11 @@
     "-15\\sqrt{3}"
   ],
   "acceptanceMode": "normalized",
-  "hint": "On a circle of radius $r$, the coordinates are $(r\\cos\\theta,\\ r\\sin\\theta)$ — the unit circle values scaled up by $r$.",
+  "hint": "On a circle of radius $r$, the coordinates are $(r\\cos\\theta,\\ r\\sin\\theta)$. These are the unit circle values scaled up by the radius.",
   "hints": [
     {
       "level": "nudge",
-      "text": "On a circle of radius $r$, the coordinates are $(r\\cos\\theta,\\ r\\sin\\theta)$ — the unit circle values scaled up by $r$."
+      "text": "On a circle of radius $r$, the coordinates are $(r\\cos\\theta,\\ r\\sin\\theta)$. These are the unit circle values scaled up by the radius."
     },
     {
       "level": "nudge",
@@ -28,17 +28,17 @@
     },
     {
       "level": "guide",
-      "text": "$\\cos 150^\\circ = -\\frac{\\sqrt{3}}{2}$, so $x = 30 \\times \\left(-\\frac{\\sqrt{3}}{2}\\right)$."
+      "text": "The angle $150^\\circ$ is in Quadrant II with a $30^\\circ$ reference angle, so $\\cos 150^\\circ = -\\frac{\\sqrt{3}}{2}$. Multiply by the radius: $x = 30 \\times \\left(-\\frac{\\sqrt{3}}{2}\\right)$."
     },
     {
       "level": "reveal",
-      "text": "$30 \\times \\left(-\\frac{\\sqrt{3}}{2}\\right) = -15\\sqrt{3} \\approx -26$ m."
+      "text": "$30 \\times \\left(-\\frac{\\sqrt{3}}{2}\\right) = -15\\sqrt{3}$, so the rider's $x$-coordinate is $-15\\sqrt{3}$ m, about $-26$ m."
     }
   ],
   "explanation": [
     "For a circle of radius $r$, the point at angle $\\theta$ is $(r\\cos\\theta,\\ r\\sin\\theta)$.",
-    "$150^\\circ$ is in Quadrant II with a $30^\\circ$ reference angle, so $\\cos 150^\\circ = -\\frac{\\sqrt{3}}{2}$.",
-    "Multiply by the radius: $x = 30 \\times \\left(-\\frac{\\sqrt{3}}{2}\\right) = -15\\sqrt{3}$, about $-26$ m."
+    "The angle $150^\\circ$ is in Quadrant II with a $30^\\circ$ reference angle, so $\\cos 150^\\circ = -\\frac{\\sqrt{3}}{2}$.",
+    "Multiply by the radius to scale up to the real wheel: $x = 30 \\times \\left(-\\frac{\\sqrt{3}}{2}\\right) = -15\\sqrt{3}$, about $-26$ m."
   ],
   "alternativeExplanations": [
     {

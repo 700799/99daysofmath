@@ -10,24 +10,24 @@
   "primaryAnswer": "42.5",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "A minute of angle is $\\frac{1}{60}$ of a degree, exactly like a minute is $\\frac{1}{60}$ of an hour.",
+  "hint": "A minute of angle is $\\frac{1}{60}$ of a degree, exactly like a minute of time is $\\frac{1}{60}$ of an hour. What fraction of a degree are the minutes here?",
   "hints": [
     {
       "level": "nudge",
-      "text": "A minute of angle is $\\frac{1}{60}$ of a degree, exactly like a minute is $\\frac{1}{60}$ of an hour."
+      "text": "A minute of angle is $\\frac{1}{60}$ of a degree, exactly like a minute of time is $\\frac{1}{60}$ of an hour. What fraction of a degree are the minutes here?"
     },
     {
       "level": "guide",
-      "text": "Convert the 30 minutes: $\\frac{30}{60}$ of a degree."
+      "text": "Keep the $42$ whole degrees and convert only the $30$ minutes by dividing by $60$: work out $\\frac{30}{60}$ and add it on."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{30}{60} = 0.5$, so the angle is $42.5^\\circ$."
+      "text": "$\\frac{30}{60} = 0.5$, so the angle is $42 + 0.5 = 42.5$ degrees."
     }
   ],
   "explanation": [
-    "Minutes work like clock minutes: 60 of them make one degree.",
-    "So 30 minutes is $\\frac{30}{60} = 0.5$ of a degree.",
+    "Minutes of angle work like clock minutes: 60 of them make one degree.",
+    "So the $30$ minutes are $\\frac{30}{60} = 0.5$ of a degree, which is half a degree.",
     "Add that to the whole degrees: $42^\\circ 30' = 42.5^\\circ$."
   ],
   "alternativeExplanations": [

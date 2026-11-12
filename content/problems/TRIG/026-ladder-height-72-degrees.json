@@ -10,25 +10,25 @@
   "primaryAnswer": "17.1",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The ladder is the hypotenuse; the height on the wall is opposite the $72^\\circ$ angle.",
+  "hint": "The ladder is the slanted side, so it is the hypotenuse. The height on the wall is the side opposite the $72^\\circ$ angle.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The ladder is the hypotenuse; the height on the wall is opposite the $72^\\circ$ angle."
+      "text": "The ladder is the slanted side, so it is the hypotenuse. The height on the wall is the side opposite the $72^\\circ$ angle."
     },
     {
       "level": "guide",
-      "text": "Opposite and hypotenuse means sine: $\\sin 72^\\circ = \\frac{h}{18}$."
+      "text": "Opposite and hypotenuse together mean sine: write $\\sin 72^\\circ = \\frac{h}{18}$, then multiply both sides by $18$ to get the height alone."
     },
     {
       "level": "reveal",
-      "text": "$h = 18 \\sin 72^\\circ \\approx 18(0.9511) \\approx 17.1$ ft."
+      "text": "$h = 18 \\sin 72^\\circ \\approx 18(0.9511) \\approx 17.1$, so the ladder reaches about $17.1$ ft up the wall."
     }
   ],
   "explanation": [
     "The ladder itself is the hypotenuse, $18$ ft, and the wall height is opposite the $72^\\circ$ angle.",
-    "So $\\sin 72^\\circ = \\frac{h}{18}$, which gives $h = 18\\sin 72^\\circ$.",
-    "Since $\\sin 72^\\circ \\approx 0.9511$, the height is about $17.1$ ft."
+    "Opposite over hypotenuse is sine, so $\\sin 72^\\circ = \\frac{h}{18}$, and multiplying both sides by $18$ gives $h = 18\\sin 72^\\circ$.",
+    "Since $\\sin 72^\\circ \\approx 0.9511$, the product is $18 \\times 0.9511 \\approx 17.1$, so the ladder reaches about $17.1$ ft."
   ],
   "alternativeExplanations": [
     {

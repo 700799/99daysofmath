@@ -10,11 +10,11 @@
   "primaryAnswer": "654",
   "alternativeAnswers": [],
   "acceptanceMode": "normalized",
-  "hint": "The watered region is a sector: $A = \\frac{1}{2}r^2\\theta$, with $\\theta$ in radians.",
+  "hint": "The watered region is a sector of a circle, so use $A = \\frac{1}{2}r^2\\theta$. That formula needs $\\theta$ in radians, and the sweep is given in degrees.",
   "hints": [
     {
       "level": "nudge",
-      "text": "The watered region is a sector: $A = \\frac{1}{2}r^2\\theta$, with $\\theta$ in radians."
+      "text": "The watered region is a sector of a circle, so use $A = \\frac{1}{2}r^2\\theta$. That formula needs $\\theta$ in radians, and the sweep is given in degrees."
     },
     {
       "level": "nudge",
@@ -23,16 +23,16 @@
     },
     {
       "level": "guide",
-      "text": "Convert first: $120^\\circ = \\frac{2\\pi}{3}$ radians. Then $A = \\frac{1}{2}(25)^2\\left(\\frac{2\\pi}{3}\\right)$."
+      "text": "Convert the sweep first: $120^\\circ = \\frac{2\\pi}{3}$ radians. Then use the throw distance as the radius: $A = \\frac{1}{2}(25)^2\\left(\\frac{2\\pi}{3}\\right)$."
     },
     {
       "level": "reveal",
-      "text": "$\\frac{1}{2}(625)\\left(\\frac{2\\pi}{3}\\right) = \\frac{625\\pi}{3} \\approx 654.5$, so about $654$ square feet."
+      "text": "$\\frac{1}{2}(625)\\left(\\frac{2\\pi}{3}\\right) = \\frac{625\\pi}{3} \\approx 654.5$, so the sprinkler waters about $654$ square feet."
     }
   ],
   "explanation": [
-    "Convert the sweep to radians: $120^\\circ = 120 \\times \\frac{\\pi}{180} = \\frac{2\\pi}{3}$.",
-    "Use the sector area formula: $A = \\frac{1}{2}(25)^2\\left(\\frac{2\\pi}{3}\\right) = \\frac{625\\pi}{3}$.",
+    "The sector formula needs radians, so convert the sweep: $120^\\circ = 120 \\times \\frac{\\pi}{180} = \\frac{2\\pi}{3}$.",
+    "Use the sector area formula with radius $25$ ft: $A = \\frac{1}{2}(25)^2\\left(\\frac{2\\pi}{3}\\right) = \\frac{625\\pi}{3}$.",
     "Evaluate: $\\frac{625 \\times 3.14159}{3} \\approx 654.5$, which rounds to $654$ square feet."
   ],
   "alternativeExplanations": [

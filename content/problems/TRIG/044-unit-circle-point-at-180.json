@@ -49,8 +49,8 @@
   ],
   "explanation": [
     "Half a turn from the positive $x$-axis lands on the negative $x$-axis.",
-    "On a circle of radius 1, that point is $(-1, 0)$.",
-    "Reading off the coordinates: $\\cos 180^\\circ = -1$ and $\\sin 180^\\circ = 0$."
+    "On a circle of radius 1, that point is one unit left of the origin, at $(-1, 0)$.",
+    "Reading off the coordinates gives $\\cos 180^\\circ = -1$ and $\\sin 180^\\circ = 0$, so the point is $(-1, 0)$."
   ],
   "alternativeExplanations": [
     {
